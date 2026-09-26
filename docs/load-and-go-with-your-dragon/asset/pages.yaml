@@ -1,0 +1,6641 @@
+- pgno: 0
+  md: '# LOAD AND GO
+
+    WITH YOUR
+
+    DRAGON
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# LOAD AND GO
+
+    WITH YOUR DRAGON
+
+
+    BY
+
+
+    JOHN PHIPS
+
+
+    AND
+
+
+    TREVOR TOMS
+
+
+    PHIPPS ASSOCIATES
+
+
+    99 East Street
+
+    Epsom
+
+    Surrey KT17 1EA'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'ISBN 0 950 7302 9 7
+
+
+    This book was created using WordStar on a Panasonic JD850 with Diablo 630 printer
+    and Courier 10 typeface.
+
+
+    (C) COPYRIGHT 1982 PHIPPS ASSOCIATESnAll rights reserved
+
+
+    Photocopying of this book is expressly prohibited. The purchaser for full retail
+    price may make a magnetic tape copy of the programs and make security copies.
+    Making more than five copies is prohibited as is disposing of such copies to third
+    parties, even by way of gift.
+
+
+    First Edition January 1983
+
+
+    Printed and bound by:
+
+    Redwood Burn Ltd.,nYeoman Way,
+
+    Trowbridge,
+
+    Wiltshire'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# CONTENTS
+
+
+    +   INTRODUCTION 5
+
+    Pairs 9
+
+    Pin the tail on the donkey 13
+
+    Ski Run 15
+
+    Sums Galore 20
+
+    Hangman 22
+
+    Silly Quiz 25
+
+    DEBUGGING PROGRAMS 28
+
+    Putting 34
+
+    Target Practice 37
+
+    Digital Clock 39
+
+    Fruit Machine 42
+
+    Nim 44
+
+    Space Docking 48
+
+    HINTS AND TIPS 51
+
+    Vocabulary Tester 58
+
+    Enigma Variations 66
+
+    Computermind 68
+
+    Reverse 70
+
+    Lucky Dip (a pot-pourri) 72
+
+    GRAPHICS SECTION 82
+
+    Roller Dice 83
+
+    The Fly and the Treacle 87
+
+    Train Picture 92
+
+    Sign Writing 96
+
+    Castle Walls 100
+
+    SOME LONGER PROGRAMS
+
+    Snakes and Ladders 104
+
+    Hunt the Wumpus 109
+
+    Pontoon 116'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'Our thanks are due to our program testers for service sometimes beyond the
+    call of duty. Any remaining glitches are, of course, our own.
+
+
+    Cover Design by S. Lewis'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# INTRODUCTION
+
+
+    This book is intended to be fun but also educational. It contains programs for
+    the Dragon 32 home micro-computer, which is equipped with Microsoft 16K Colour
+    BASIC. The majority of the programs are short (about 50 lines) so that it is easy
+    to type them in and "RUN". Some are serious and some are silly but we hope most
+    of all that you will find them. There are also longer ones towards the back of
+    the book, which might be more difficult to get going back but should prove more
+    rewarding. The complexity of a program increases with the square of its length
+    and most commercial programs are over 2000 lines long!
+
+
+    The book is educational in several ways. Firstly, we provide home-work tools like
+    "Sums Tester" and "Vocabulary Tester", which might make hundred tasks more exciting.
+    Secondly, a major section of the book is devoted to explaining in a comprehensive
+    way the Graphics features on the Dragon. This could prove a useful supplementary
+    source to your BASIC manual for understanding these very powerful features. Lastly,
+    comprehensive chapters are included on "Debugging Programs" and "Hints and Tips"
+    both of which should help to get your programs running as well as the programs
+    in this book.
+
+
+    It would be wrong to allow anyone to think that typing in programs and running
+    them is "programming". It is not. However, the study of worked examples is an
+    essential learning aid for anyone beginning to program. So often, a manual will
+    teach the words and the grammar without giving any real understanding of how to
+    connect them together to make a story or a poem. All the examples in this book
+    are comprehensively annotated with comments and explanations and every encouragement
+    is given for the reader to modify them to see how minor changes would affect their
+    running. A good understanding of the principles of program'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Introduction
+
+
+    construction will help immeasurably when you start to construct your own programs,
+    which we hope that you will do.
+
+
+    The title "Load and Go" is a term of art referring to compilers or assemblers
+    which not only process the program but also start to execute it immediately after
+    assembly is finished. In terms of the Dragon, perhaps it should be ''Type and
+    Run'', but "Load and Go" has a certain ring to it.
+
+
+    Not all the material in this book is completely new. We have gathered together
+    the old favourites (golden oldies) from our other works (see back page). In the
+    process, most have had to be totally re-written to take advantage of the powerful
+    features of the Microsoft BASIC language nearly always the resulting program is
+    much shorter than the original, which is a striking testimony to the power of
+    the Dragon. About half of the material is totally new and written specially for
+    the Dragon.
+
+
+    Where possible, we have tried to introduce games that can be played by two people
+    as well as the computer and we start and end the book with such a program. When
+    you want to show friends how the computer works, it is more fun if they can also
+    take part, instead of having to watch in awed amazement as you expertly play the
+    keyboard.
+
+
+    We also deliberately used only features to be found on the standard Dragon. To
+    ensure this, we purchased the Dragon used in the preparation of the book over
+    the counter in a chain store. Although the programs do use colour and having a
+    colour television will add an extra dimension for you, we have not assumed its
+    use. The presentation of all of the programs will be quite intelligible in black
+    and white. We have not assumed the use of joysticks, which at the time of writing
+    were in short supply, nor'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Introduction
+
+
+    of printers, nor of extra memory beyond the standard, nor disk units.
+
+
+    We suggest, however, that at an early stage you start using a cassette recorder
+    to retain the programs on tape as you enter them. A special section on how to
+    get this working is included in "Hints and Tips". A cassette recorder is far from
+    being an optional extra as some publicity implies - it is quite essential.
+
+
+    How this book was produced
+
+
+    How this book was produced
+
+
+    First we produce a working version of each program and test it thoroughly with
+    junior volunteers who attempt to test it to destruction. To ensure that code is
+    transferred exactly to print a parallel to serial converter which is attached
+    to the printer port of the Dragon and used to transfer the program listings into
+    our word processor.
+
+
+    Now suppose, as sometimes happens, that you put in the program and type "RUN"
+    and it doesn''t work. Firstly, "Don''t Panic". Secondly, list it on your printer
+    or on the screen and check against the book very carefully; also ask someone else
+    to check it with you. If this doesn''t solve the problem, then read the chapter
+    on debugging, which might help to pin down the area in which the problem is occurring.
+    If all else fails, please write to us and describe the problem. Sending a cassette
+    of your version of the program is helpful as sending a printer listing of the
+    program. Those who send a self-addressed stamped envelope also get higher priority
+    than those who don''t!'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Introduction
+
+
+    # Program presentation
+
+
+    The programs have been annotated in two stages. The first stage was when they
+    were originally prepared on the Dragon. A first stage annotation would look like
+    this:
+
+
+    ```
+
+    L10 REM NIM PROGRAM
+
+    ```
+
+
+    This type of remark, which has a line number attached, you should always put into
+    your version. Beware of leaving it out because that line number may be used as
+    the destination of a GOTO or a GOSUB statement.
+
+
+    The second stage annotation was added in the word processor and might look like
+    this:
+
+
+    ```
+
+    L10 FOR Z=1 TO L10:A(Z)=0:NEXT      ''reset the array
+
+    ```
+
+
+    The part following the '' character is an explanatory remark added later. This
+    type of remark can be omitted when putting in the program. Include it if you wish,
+    but we have been very liberal with this type of remark so as to make the programs
+    as clear as possible.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# PAIRS
+
+
+    A game for two players, where the object is to collect as many pairs of cards
+    as possible. The whole pack is spread out and each player may turn over two cards
+    at a time. If they match, then that player keeps the pair, removes it from the
+    field of play and is allowed another go. If the cards do not match, then they
+    are turned face down again and it is the other player''s turn. If you have a good
+    memory, then you can benefit from your opponent''s mistakes.
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_9_0.png)
+
+
+    To turn over a card you enter the reference code shown against the card on the
+    screen e.g. "BZ" and that card will be displayed. It shows the card suit (C,D,H,S)
+    followed by the denomination (A,K,Q,J,T,9 ...). A pair clearly is made up of two
+    of the same, eg. A problem peculiar to computers arises if the player attempts
+    to turn over a card that is no longer there or attempts to match a pair by turning
+    over the same card twice. In such cases, the computer responds by printing ''HO
+    HO'' in the space!
+
+
+    A card is represented by the chequer pattern CHR$(134) in which the colour is
+    orange and the background black. It should look like this:
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_9_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Pairs
+
+
+    ```
+
+    10 CLS:DIM P(52) ''Array P contains the pack
+
+    20 PRINT TAB(10);"PAIRS" ''print the rules
+
+    30 PRINT:PRINT"THE OBJECT OF THE GAME IS TO "
+
+    40 PRINT"GET AS MANY PAIRS AS POSSIBLE."
+
+    50 PRINTEACH PLAYER GETS TWO TURNS."
+
+    60 PRINT"IF THE TWO CHOICES MATCH THEN"
+
+    70 PRINT"YOU GET ANOTHER GO."
+
+    80 PRINT"OTHERWISE YOUR OPPONENT GETS "
+
+    90 PRINT "A GO." ''get the names of the players
+
+    100 INPUT "FIRST PLAYER''S NAME";A$(0)
+
+    110 INPUT "SECOND PLAYER''S NAME";A$(1)
+
+    120 ''shuffle and set up the pack
+
+    130 PRINT"PLEASE WAIT A MOMENT-"
+
+    140 FOR X=1 TO 52 ''SHUFFLING THE PACK."
+
+    150 Z=RIND(52)
+
+    160 IF P(Z)<> THEN 150 ELSE P(Z)=X
+
+    170 NEXT X
+
+    180 REM DRAW OUT THE PACK ''five rows 4 of 11 and 1 of 8
+
+    190 CLS:CL=112 ''alter setting of CL for different colour
+
+    200 FOR X=0 TO 4
+
+    210 FOR Y=0 TO 10
+
+    220 Z=X*11+Y+1 IF Z=53 THEN 310
+
+    230 IF P(Z)=0 THEN 290 ''blank card
+
+    240 P=X*9+Y*3 ''calculate card position
+
+    250 X$=CHR(134+CL) ''set up card image
+
+    260 PRINT@P,X+$X$:;PRINT@P+32,X+$X$; ''print card
+
+    270 PRINT@P+64,CHR(Y+65); ''row letter
+
+    280 PRINTUSING"#";X+1; ''grid reference
+
+    290 NEXT Y
+
+    300 NEXT X
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Pairs
+
+
+    ```
+
+    310 S(0)=0:S(1)=0
+
+    ''set scores to 0
+
+    320 PS=0
+
+    330 PRINT@480,S(W);\
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "# Pairs\n\n```\n650 REM TEST CARD BACK PP=CARD\n660 IF P(PP)=0 ' THEN X=$CHR(143)\
+    \ ELSE X=$CHR(134+CL)\n670 PP=PP-1:P1=INT(PP/11)          'work out column and\
+    \ row\n680 P2=PP-P1*11:P1=P1*9+P2*3\n690 PRINT@P,X+$X;\n700 PRINT@P+32,X+$X;\n\
+    710 RETURN\n```\n\n```\n720 REM TEST FOR PR\n730 IF P(PS)=0 OR P(PR)=0 THEN PR=0:RETURN\n\
+    740 IF P(PS)-P(PP) THEN PR=0:RETURN\n750 A=P(PS):A=A-INT(A/13)*13      'denomination\
+    \ for PS\n760 B=P(PP):B=B-INT(B/13)*13      'denomination for PP\n770 IF A=B THEN\
+    \ PR=-1 ELSE PR=0\n780 RETURN\n                                 'end of game\n\
+    790 PRINT@480,\"GAME OVER\"\n800 PRINT\"FINAL SCORE\"\n810 PRINT A$(0);S(0)\n\
+    820 PRINT A$(1);S(1)\n830 INPUT\"ANOTHER GAME\";A$\n840 S(0)=0:S(1)=0        \
+    \           'reset the scores\n850 IF LEFT$(A,1)=\"Y\" THEN 120\n```"
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "# PIN THE TAIL ON THE DONKEY\n\nHere's a piece of fun to test your timing -\
+    \ try to pin the tail on the donkey. You press a key, and the length of time that\
+    \ the key is held down determines the length of the tail. The trick is to hold\
+    \ it down for exactly the right length of time, or to do it with the fewest number\
+    \ of attempts. When the tail reaches the donkey the score is given. If you wait\
+    \ too long, you can cause the donkey some damage.\n\n![](img/7a80be36866e3d2c055800fc953633cd_13_0.png)\n\
+    \n```\n10 L=65280               'peek location\n20 CLS:PRINT \"PIN THE TAIL ON\
+    \ THE DONKEY\"\n30 PN=RND(10)+180         'random position for donkey\n40 PRINT@448,\"\
+    PRESS A KEY\"\n50 PRINT@PN+30,CHR$(128)+CHR$(128)+\"O\" 'body,head\n60 PRINT@PN+62,CHR$(129);CHR$(131);CHR$(128)\
+    \ 'body,legs\n70 PRINT@PN+94,CHR$(135);CHR$(130) \n80 PRINT@@PN+135:CHR$(143)+CHR$(139)\
+    \ 'legs\n90 P=192                'START OF TAIL\n100 G=0\n110 GOSUB 170      \
+    \     'get the time interval\n120 T=INT(T/2)\n130 PRINT@P,STRING$(T,131)  'tail\
+    \ of length T\n140 P=P+T;G=G+1;IF P>PN+30 THEN PRINT@448,\n    \"OUCH HURT!!!!\"\
+    :GOTO 220\n150 IF P=PN+30 THEN PRINT@448,\n    \"WELL DONE - YOU TOOK \"G\";GOTO\
+    \ 220\n160 GOTO 110\n```"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Pin the Tail on the Donkey
+
+
+    ```
+
+    ''key pressing routine
+
+    170 IF PEEK(L)<255 THEN 170  ''wait for enter key to go up
+
+    180 IF PEEK(L)=255 THEN 180  ''wait for new key depression
+
+    190 TIMER-1                               ''set timer
+
+    200 IF PEEK(L)<255 THEN 200  ''wait for key to go up again
+
+    210 T=TIMER:RETURN                          ''set T''
+
+    ```
+
+
+    220 INPUT"ANOTHER GO";A$
+
+    230 IF LEF($A$,1)="Y" THEN 10
+
+
+    The routine above is for detecting a key depression. We might have used INKEY$
+    function for this but it would only give one keystroke for each key depression,
+    and would not reflect the duration of the stroke. For example try this program:
+
+
+    ```
+
+    10 A=$INKEY$
+
+    20 IF A=""" THEN 10
+
+    30 PRINT "KEY DOWN"
+
+    40 GOTO 10
+
+    ```
+
+
+    ''This will print one line for every time that you press a key, but it will make
+    no difference whether you hold that key down or just just peck at it.
+
+
+    We use this technique again in the next program "Ski Run" where a fast reaction
+    is required to keys being pressed. Who needs joystick buttons?'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# SKI RUN
+
+
+    If you always wanted to try the slalom runs in the Winter Olympics, here''s your
+    big chance. You must guide yourself down the slope avoiding the way. Use the ->
+    key for right and the @ key for left. Hold your finger on the key for rapid continuous
+    movement. The program contains two courses, which are chosen at random. After
+    the program listing you will find instructions on how you can alter the courses
+    or enter some new ones of your own.
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_15_0.png)
+
+
+    ```
+
+    10 REM SKI RUN
+
+    20 GOTO 90
+
+    ```
+
+
+    ```
+
+    30 REM CHECK FOR MOVEMENT
+
+    40 D=PEEK(65280):IF D=255 THEN RETURN ''no key being pressed
+
+    50 IF D=1&HF THEN S=S+1 ''->KEY
+
+    60 IF D=1&FB THEN S=S-1 ''@KEY
+
+    70 S=ABS(S):IF S>31 THEN S=S-1 ''ensure skier stays on the screen
+
+    80 RETURN
+
+    ```
+
+
+    ```
+
+    90 REM INITIALISE
+
+    100 GOSUB 350 ''print rules
+
+    110 GOSUB 300 ''select the course
+
+    120 P=VAL(MID$(C$,1,2)) ''course start position
+
+    130 S=VAL(MID$(C$,3,2)) ''skier start position
+
+    140 H=0 ''total posts hit
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Ski Run
+
+
+    ```
+
+    150 REM RUN THE COURSE
+
+    160 PRINT
+
+    170 FOR X=5 TO LEN(C$)-1 STEP 2 ''C$ contains the course
+
+    ''note the ";" characters are important
+
+    ''P-left edge of course G= width of course
+
+    ''S-skier starting position
+
+    ```
+
+
+    ```
+
+    180 PRINT @480+P,''""'';PRINT @480+G,"*";PRINT @480+S,"V"
+
+    190 PRINT @511,''cause a screen scroll
+
+    200 GOSUB 30 ''check for key pressed
+
+    210 P=P+VAL(MID(C$,X,2)) ''evaluate and add to value of P
+
+    220 GOSUB 30 ''check for movement again
+
+    ```
+
+
+    ```
+
+    230 IF S=P OR S>P THEN H=H+1 ''if outside course limits then
+
+    ''add one to hits total
+
+    240 FOR D=1 TO DL:NEXT D ''control speed
+
+    250 NEXT X ''drop through string when all done i.e.
+
+    ''course over
+
+    ```
+
+
+    ```
+
+    260 REM FINISH LINE
+
+    270 PRINT @480+P,STRING$(G,"-")
+
+    280 PRINT "YOU HIT ";H,"POSTS"
+
+    290 END
+
+    ```
+
+
+    ```
+
+    300 REM SELECT COURSE
+
+    310 C$="141700000000-1-1-1-1000000010200-1-1-100010200
+
+    -1-1-1-1-10000-200-1-1-1000000001010101010101-2-2-2
+
+    000000000101010101010102020200000000000-1-1-101
+
+    0101-1-1-1-1-2-2-2-2-200000000101010101010101-2-2
+
+    -2-200000000101010101010101000000000000000000"
+
+    320 X=RND(2); IF X<1 THEN RETURN
+
+    330 C$="00020000000000000000000001010101010101010101
+
+    010000000202020202020200-1-1-1-1-1-10102010101010100
+
+    0000000000000000-1-1-1-10202020201010101-2-2-2-2-2
+
+    -2-2-1-1-1-1-10101-1-10000000000000000"
+
+    340 RETURN
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Ski Run
+
+
+    Course selection is performed in the routine starting at line 300. You may prefer
+    to ask for a course number to be entered as the program is started, or just to
+    replace the two courses given here. After the routine has executed, C$ must contain
+    a course description in the following format:'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Ski Run
+
+
+    # Characters
+
+
+    1-2 Starting position of left hand post. The right hand post position is calculated
+    from the degree of skill entered. The width of course is G which can take a maximum
+    value of 9 for the amateur. So, course start position should not be greater than
+    21.
+
+
+    3-4 Starting position of skier - this would normally be the post starting position
+    plus two. To be very annoying you could start the skier outside the posts altogether.
+    Maximum value is width of screen (31).
+
+
+    5-6 The rest of the string is a series of two digit numeric values which represent
+    the values to be added to the current post position. Do not use values greater
+    than 02 or -2 as the player cannot move the skier more than two positions in each
+    turn.
+
+
+    A small valid course description would be:
+
+
+    ```
+
+    C$="15 17 00 00 01 01 -1 -2 -2 00 00"
+
+    ```
+
+
+    The spaces are just put in to make it easier to read. It says the starting position
+    of the left post is 15, the skier position is 17. For the first two turns the
+    course runs straight, then it bends to the right for two turns and to the left
+    for two turns, then more sharply to the left. The last two turns are straight.
+
+
+    The program will automatically show a finish line and the number of hits made.
+    Since the speed of the game is approximately three turns per second, an ideal
+    course should take about 30 seconds to run fully. The maximum length that you
+    can construct is dictated by the maximum string length of 255. This means that
+    the maximum number of turns is 254/2 (because the number must be even) less 2
+    i.e. 125 turns.
+
+
+    Some people have difficulty entering the very long strings for the course correctly.
+    If you miss out one number in say the'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Ski Run
+
+
+    string "\00 02 01 01" so that it becomes "\00 20 10 1" it is taken as +20 then
+    +10 with an odd one left at the end. The odd one causes an error report, but meanwhile
+    the course goes out of control. To check that you have typed it correctly, add
+    the following lines:
+
+
+    ```
+
+    700 GOSUB 300
+
+    710 FOR Z=5 TO LEN(C$)-1 STEP 2
+
+    720 PRINT VAL(C$,Z,2))
+
+    730 NEXT Z
+
+    ```
+
+
+    Then execute 700 in direct mode and you will see the course values printed out
+    for you in pairs. If any of the values greater than plus or minus 2, then you
+    have missed something out. Remember however that there are two courses. Run this
+    two or three times until you are sure that both are correct.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# SUMS GALORE
+
+
+    It may not be current educational theory, but I doubt whether any parent would
+    disagree that regular practice, table learning, and table tests are the foundations
+    of good arithmetic. It can be very difficult for the teacher to make up enough
+    sums to keep the children active and busy, so here is an automatic sums tester.
+    An example program of this type is given in the Dragon manual, but this has this
+    significant advantages. It is shorter to type in, it does not assume knowledge
+    of directed (negative) numbers, which may not have been covered at primary school
+    level, and it dodges the question of remainders after division, by making sure
+    that the division sums always give a whole number quotient with no remainder.
+
+
+    A maximum number can be specified at the beginning. So, for example, to test number
+    bonds up to a sum of 10 only, specify 5 as the maximum number. This will generate
+    sums up to 5+5 maximum. To test number bonds involving carry, specify 9, this
+    gives a maximum sum of 9-49. To test all tables up to 12 times 12, specify 12
+    as the maximum and so on.
+
+
+    There are always ten questions, and the answers wrong or right stay on the screen
+    at the end, so the teacher can look at them to see what mistakes are being made.
+    Appropriate reinforcement is also given according to the score. We suggest that
+    the teacher should set up the problem specifying the maximum and the rule to be
+    used, and then come back when the test is complete.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Sums Galore
+
+
+    ```
+
+    10 REM SUMS TESTER
+
+    20 CLS:PRINT TAB(8);"SUM TESTER:";PRINT
+
+    30 INPUT WHAT IS THE LARGEST NUMBER?";MX      ''see text
+
+    40 INPUT "WHICH DO YOU WISH (+/-)";AS$        ''see text
+
+    50 R=RINT("**/",AS); IF R<>0 THEN 40  ''invalid reply
+
+    60 T=0:C=1:CLS:W=N:N=M
+
+    70 M=10:IF INT(M/N)<10 THEN N=N+1:OTO 70  ''how many digits?
+
+    80 N$=STRINGS(N,"A")"-          ''edit mask for printing commands
+
+    90 T=T+1:IF T>10 THEN 310           ''always 10 questions only
+
+    100 N1=RND(M):N2=RND(M)            ''pick the numbers to be used
+
+    110 IF R=1 OR R=3 THEN 170         ''plus or multiply
+
+    120 IF N2>N1 THEN 100             ''ensure result positive
+
+    130 IF R=2 THEN 170
+
+    140 N2=INT(N1/N2):IF N2=0 THEN 100  ''fix division so that is integer
+
+    150 N1=INT(N1/N2):N2:IF N1=0 THEN 100  ''avoid asking about 0
+
+    160 IF N1=N2 THEN 100             ''not n/n which is too easy
+
+    170 ON R GO=180,190,200,210      ''plus,sub,divide
+
+    180 Q$="PLUS":DS=N1+N2:OTO 220     ''is the correct answer
+
+    190 Q$="MINUS":DS=N1-N2:OTO 220
+
+    200 Q$="TIMES":DS=N1*N2:OTO 220
+
+    210 Q$="DIVIDED BY":DS=INT(N1/N2)
+
+    220 PRINT "WHAT IS ";
+
+    230 PRINTUSING N$;
+
+    240 PRINT Q$:;PRINT USING N$;N2;   ''ask the question
+
+    250 INPUT AN                     ''get the answer
+
+    260 P=P(T-1w)*32+30:IF P>480 THEN P=480  ''which line are we on?
+
+    270 PRINT "? ""
+
+    280 IF AN=DS THEN PRINT "OK";ELSE PRINT "NO THE ANSWER WAS";DS
+
+    290 IF AN=DS THEN C=C+1 ELSE W=W+1
+
+    300 GOTO 90
+
+    310 PRINT:PRINT"YOU SCORED";C;"OUT OP";T-1
+
+    320 IF C=T-1 THEN PRINT"GO TO THE TOP OF THE CLASS"
+
+    330 IF C>T-3 THEN PRINT"WELL DONE"
+
+    340 IF C<INT(T/5)THEN PRINTOH DEAR - WE NEED MORE PRACTICE"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "# HANGMAN\n\nThis ever popular game is played with two people (or one with\
+    \ an extremely short memory) - one to enter the selection of words and another\
+    \ to computer control. The words are entered as a DATA statement in line 120,\
+    \ and there can be as many as you wish. Guessing takes place by entering either\
+    \ a letter or a whole word. A table at the top of the screen is updated as letters\
+    \ are used and any correct are displayed in the word at the bottom of the screen.\
+    \ If you guess at the whole word, then the letter table is not updated - your\
+    \ guess is either right, in which case, you win, or wrong, in which case you lose\
+    \ a life. You have 10 lives. As these are lost a picture of a hanging man is gradually\
+    \ built up on the screen.\n\n![](img/7a80be36866e3d2c055800fc953633cd_22_0.png)\n\
+    \n```\nDIM A$(26)\n110 REM CHANGE WORDS BELOW FOR NEW GAME\n    'first data element\
+    \ is the number of words\n120 DATA 5, \"WORD\", \"HORSE\", \"DOG\", \"CAT\",\"\
+    GUESS\"\n130 READ W$:CONTROL VARIABLE\n140 CLS0:READ W$:W=W-1:E=0\n    'W is the\
+    \ word count\n    E=lives lost\n150 FOR Z=1 TO 26:A$(Z)=CHR(64+Z):NEXT Z 'set\
+    \ up letter table\n160 PRINT @045,STRING(LEN(W),\"*\\*\");'word mask at bottom\n\
+    170 FOR Z=1 TO 26:PRINT @1+Z,A$(Z):NEXT Z 'letter table\n180 PRINT @440,\"GUESS\
+    \ LETTER OR WORD \";STRING$(4,8):INPUT A$\n190 IF A=\"\" THEN 180\n    'invalid\n\
+    200 IF LEN(A$)>1 THEN 320\n    'you have guessed at the whole word\n    'set this\
+    \ letter as used\n210 A=ASC(A$)-64:IF A>0 AND A<26 THEN A$(A)=\" 'note space!\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# Hangman
+
+
+    ```
+
+    220 T$=""
+
+    230 FOR A=1 TO LEN(W,S)
+
+    240 L=ASC(MID(W,A,1))-64
+
+    250 IF A$(L)="" THEN L$=MID(W,A,1) ELSE L$="*"
+
+    260 PRINT @404,A,L$;      ''print word mask
+
+    270 T$=T$+L$;             ''current word mask
+
+    280 NEXT A
+
+    290 IF T$=W$ THEN GOTO 340 ''all letters now correct
+
+    300 IF INSTR(W,S,A)=0 THEN 360  ''letter not in word
+
+    310 GOTO 170
+
+    320 REM GUESS AT WHOLE WORD
+
+    330 IF A$(L)<>W THEN 360   ''W is the correct answer
+
+    340 PRINT @448,"YOU WON !! YOU LOST ;E;"LIVES"
+
+    350 GOTO 410
+
+    360 REM REST A LIFE
+
+    370 E=E+1:CL=112          ''E=lives lost CL=color
+
+    380 IF E<=10 THEN GOSUB 450,460,470,480,490,500,
+
+    520,530:GOTO 170
+
+    390 GOSUB 540             ''last life lost
+
+    400 PRINT@440,"OH DEAR - THE WORD WAS ";W$
+
+    410 INPUTANOTHER GAME?
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Hangman
+
+
+    ```
+
+    500 Y=$CHR$(143+CL);PRINT@240,Y$;:PRINT @241,Y$;
+
+    :PRINT@272,Y$;:PRINT@273,Y$;:RETURN
+
+    ```
+
+
+    ```
+
+    ''left leg
+
+    ```
+
+
+    ```
+
+    510 PRINT @304,CHR$(138+CL);:RETURN
+
+    ```
+
+
+    ```
+
+    ''right leg
+
+    ```
+
+
+    ```
+
+    520 PRINT @305,CHR$(133+CL);:RETURN
+
+    ```
+
+
+    ```
+
+    ''left arm
+
+    ```
+
+
+    ```
+
+    530 PRINT @239,CHR$(140+CL);:RETURN
+
+    ```
+
+
+    ```
+
+    ''right arm
+
+    ```
+
+
+    ```
+
+    540 PRINT @242,CHR$(140+CL);:RETURN
+
+    ```
+
+
+    This is a picture of how the complete figure should look:
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_24_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# SILLY QUIZ
+
+
+    Ever fancied yourself as a budding Nicholas Parsons? This quiz program looks after
+    all the chores, like keeping score and deciding whether the answer is on the card.
+    This has always been a popular favourite, because you can invent your own questions
+    and make up your own version.
+
+
+    We include it because it is a striking example of the power of the INSTR function
+    in Microsoft BASIC. In other languages this function always has to be simulated;
+    here it is part of the BASIC command set. Suppose that the question was "Who is
+    the British Prime Minister?". Now, the possible answers could be:
+
+
+    +   - Margaret Thatcher
+
+    - Maggie Thatcher
+
+    - Mrs. M. Thatcher
+
+    - Mrs. Margaret Thatcher
+
+    - Mrs. Thatcher
+
+    - ''Thatcher
+
+    - Thatcher, I think??
+
+    - The Iron lady
+
+    - Wedgewood Benn (of all these - this is the only wrong one!)
+
+
+    You can see from this that people not used to computers can put in all sorts of
+    extraneous data like commas, full stops, "I think", and so on. It makes the computer
+    look pretty stupid if the correct answer is, say "Surrey" and if it marks "County
+    of Surrey", which is of course equally correct, as wrong.
+
+
+    We resolve the problem by searching for the answer for the key word, or words
+    that tell you the answer is correct. For the question above, the key word that
+    must be there is "Thatcher". Depending on your politics, you might also allow
+    "Margaret" or "Iron Lady",'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Silly Quiz
+
+
+    so these are alternative answers.
+
+
+    The INSTR function works by searching string A to see if it contains within its
+    length string B. So, the statement:
+
+
+    W=INSTR(A$,B$)
+
+
+    would return results as follows, depending on the state of A$ and B$.
+
+
+    | A$ | B$ | W |
+
+    |---|---|--|
+
+    | "DRAGON" | "RAG" | 2 |
+
+    | "DRAGON" | "DRAG" | 1 |
+
+    | "DRAGON" | "CAT" | 0 |
+
+    | "DOWNING" | "OWN" | 2 |
+
+    | "DOWNING" | "IN" | 5 |
+
+    | "DOWNING" | "DOG" | 0 |
+
+
+    If Ø is returned, this means that A$ does not contain B$. A number returned is
+    the number of the starting position of B$ within A$.
+
+
+    Because the number of answers is variable, we adopt a convention to tell the computer
+    when we have exhausted all the possible answers. The last answer is followed by
+    a ";" character - this tells us that the next data statement is a new question.
+    The word "FINIS" tells us that all the questions have been exhausted.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Silly Quiz Program
+
+
+    10 REM SILLY QUIZ PROGRAM
+
+
+    11 REM FORMAT IS QUESTION,ANS1,ANS2;
+
+
+    20 DATA "WHAT IS THE CAPITAL OF CANADA", "OTTAWA";
+
+
+    21 DATA "WHAT IS A BABY CALLED", "LEVERET";
+
+
+    22 DATA "WHO IS THE GREATEST", "DAD","MUM","I AM";
+
+
+    23 DATA "HOW MANY DAYS IN JULY", "31";
+
+
+    24 DATA "WHAT IS SHAKESPEARE''S FIRST NAME", "WILLIAM", "BILL", "FRANCIS";
+
+
+    25 DATA "WHERE IS THE DRAGON COMPUTER MADE", "SWANSEA", "WALES", "UK";
+
+
+    26 DATA "WHERE DOES THE BRITISH PRIME MINISTER LIVE", "DOWNING";
+
+
+    27 DATA "WHO IS THE PRESIDENT OF THE USA", "REAGAN";
+
+
+    ```
+
+    ''here starts the proper program
+
+    200 S=0:Q=0
+
+    ''number count Q=number of questions
+
+    210 READ A$:IF A="FINIS"THEN GOTO 350 ''test for end of questions
+
+    220 FOR X=1 TO L20($S)ANS(X)=":NEXT clear out the answer slots
+
+    230 PRINT A$:LINEIN(RP$)
+
+    ''print question get answer
+
+    240 X=1:K=0:Q=1:DN=0
+
+    ''DN means all answers done
+
+    ''OK set means correct answer found
+
+    X= number of possible answers
+
+    ```
+
+
+    ```
+
+    250 READ ANS$
+
+    ''if the answer is the last one SET DN AND
+
+    ''strip off the "" character
+
+    260 IF RIGHT$(ANS$,1)=""THEN DN=DN-1:ANS$(ANS$,1,LEN(ANS$)-1
+
+    270 IF INSTR(RP$,ANS$)>0 THEN OK=1
+
+    ''INSTR test for answer
+
+    280 Z$(X)=ANS$:X=X+1
+
+    290 IF NOT DN THEN 250
+
+    ```
+
+
+    ```
+
+    300 IF OK PRINT "THAT IS CORRECT":S=S+1:GOTO 210
+
+    310 PRINT "THAT IS NOT CORRECT"
+
+    320 PRINT "IT SHOULD BE ";FOR Z=1 TO X-1 PRINT Z$(Z);"":NEXT
+
+    330 PRINT
+
+    340 GOTO 210
+
+    ```
+
+
+    ```
+
+    350 REM END OF QUIZ
+
+    360 PRINT "YOU SCORED \S";"OUT OF "Q
+
+    370 IF S<Q/21 THEN PRINT "OH DEAR!"
+
+    380 IF S>=Q-1 THEN PRINT "WELL DONE"
+
+    390 IF S<Q/10 THEN PRINT "STAND IN THE CORNER"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# DEBUGGING PROGRAMS
+
+
+    So you''ve just finished writing your new masterpiece and you''re holding your
+    breath while you type RUN...
+
+
+    Then...nothing. The program just sits with a blank screen, or an error report
+    is given at the foot of the screen. What now? Where do you start to unravel the
+    reason why the Dragon has decided not to play ball?
+
+
+    First and foremost, write down the error message on a scrap of paper. The reason
+    for this is that it is too easy to forget the line number that has been printed
+    as part of the message.
+
+
+    If the program just "hangs up", press BREAK to determine whereabouts the program
+    has gone wrong. You will get a message "BREAK IN 60", for example, meaning that
+    it was on line 60 at the time.
+
+
+    Also, do not type CLEAR – this removes all the variables in the program, and these
+    can be extremely important in helping you to discover errors. Be very careful
+    not to use the Editor to change any of the lines you have discovered what you
+    need to know. Using the Editor automatically resets all the variables and any
+    further investigation after that will be fruitless. Using LIST is alright and
+    causes no damage.
+
+
+    If you''re a newcomer to programming it can sometimes be difficult to understand
+    how a program can go wrong. What I am going to do is to give you a small program
+    which has some errors in it. You will enter the program, run it, then along with
+    this text, we shall (hopefully) find out where the mistakes occur, correct them,
+    then try again. In this way, you should pick up the main points in trying to debug
+    your own programs.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Debugging Programs
+
+
+    We want to write a program that drops a stone from the top of the screen to the
+    bottom. When it hits the bottom, the Dragon is to print "SPLAT". We want the stone
+    to drop in different places each time, so we need a random starting point along
+    the top line.
+
+
+    For the stone we use the letter "O". So here is the first attempt at the program:
+
+
+    ```
+
+    10 RND(31)
+
+    20 FOR Y=0 TO 32
+
+    30 PRINT @Y*31+XR,"O"
+
+    40 NEXT Y
+
+    50 PRINT "SPLAT"
+
+    ```
+
+
+    First of all we get ?SN ERROR 10. This means Syntax error, so we have broken the
+    rules of grammar. Looking at the card, we can see that RND is a function not a
+    command - this means that it can only appear after an "=" command. So the first
+    line should be:
+
+
+    ```
+
+    10 X=RND(31)
+
+    ```
+
+
+    RUN again.
+
+
+    Now we get ?SN ERROR 30
+
+
+    Referring to the reference card again, you can see that the PRINT @ statement
+    uses a "," character not a , So use Edit to correct this mistake, and line 30
+    becomes:
+
+
+    ```
+
+    30 PRINT @Y*31+XR,"O"
+
+    ```
+
+
+    Run again and we get a stream of "O"s running down the screen, diagonally, and
+    the result ?FC ERROR IN 30
+
+
+    FC means an illegal function call, so we have done something wrong. Use PRINT
+    to find out the values of Y and XR in direct mode, that is without a line number
+    e.g.:'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "# Debugging Programs\n\n```\nPRINT Y      'you type this\n17           'dragon\
+    \ replies\nOK\nPRINT XR     'you type this\nØ            'dragon replies\nOK\n\
+    \nPRINT Y*31+XR  'you type this\n527          'dragon replies\nOK\n```\n\nThis\
+    \ looks odd for a start; there are 32 lines on a screen aren't\nhere? No, there\
+    \ aren't. So our loop should only run up to 16.\n XR should be a random number\
+    \ in the range 1-31, this is\nwhat we asked for in line 10. \"Ø\" can't be right.\
+    \ We set the\nvariable as X not XR; we have used the wrong name. Clearly also,\n\
+    have run off the screen and this is why we got the FC error -\nrethink for:\n\n\
+    ```\n10 X=RND(31)\n20 FOR Y=Ø TO 16\n30 PRINT @Y*31+X,\"o\"\n40 NEXT Y\n50 PRINT\
+    \ \"SPLAT\"\n```\n\n```\n?FC ERROR IN 30 again!\nPRINT Y,X,Y*31+X  'you type\n\
+    16               20\n516              'dragon replies\nOK\n```\n\nYes there are\
+    \ sixteen lines. Why are we still off the screen? Ah\nInspiration - Ø to 16 is\
+    \ actually 17 isn't it? Line 20 becomes:\n\n```\n20 FOR Y=Ø TO 15\n```\n\nAt last\
+    \ we get OK, no syntax errors. But, the \"O\" still runs\ndiagonally across the\
+    \ screen. The whole thing would be clearer\n\n```\n3Ø\n```"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# Debugging Programs
+
+
+    without the clutter on the screen, so let''s put in a clear screen statement as
+    line 05:
+
+
+    05 CIS
+
+
+    It is still going too fast for us to see what is going on so let''s put a PRINT
+    and STOP statement in as line 32:
+
+
+    ```
+
+    32 PRINT @360,X;Y*31+X;STOP
+
+    ```
+
+
+    We get the "O" printed then:
+
+
+    ```
+
+    21 Ø 21 (this appears at the bottom so as (not to confuse the display at the (top
+    - this is why we used at (PRINT @360,
+
+    BREAK IN 32
+
+    OK
+
+    ```
+
+
+    That looks alright, so we type CONT (for continue) and we get:
+
+
+    Another "O" printed to the left of the first and:
+
+
+    ```
+
+    21 1 52 (appears over the top of the last
+
+    BREAK IN 32 (try
+
+    OK
+
+    ```
+
+
+    X has stayed the same, Y has increased by one, as we would expect, and the position
+    has increased by 31. We obviously have the wrong multiplier for Y. We have made
+    the same mistake again, but the other way this time. Yes, the last column on the
+    screen is numbered 31 but there are 32 in all, so line 30 should read:
+
+
+    ```
+
+    30 PRINT ØY*32+X,"O"
+
+    ```
+
+
+    Great! It draught this time. Now take out line 32 again and re-test; the stone
+    should now drop all the way down the screen without BREAKS. This trick of using
+    STOP and CONT is a very powerful way of helping you debug a program. First of
+    all, it slows the program down and gives you time to inspect the screen, secondly,
+    you can print any of the variables to check if'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Debugging Programs
+
+
+    they have the correct values.
+
+
+    Now we realise that we have made a mistake in the design. As each new position
+    of the stone is printed we should wipe out the old one, to give the impression
+    of a stone falling. So we need to add a line to wipe out the old stone by printing
+    space at the line before. Now, there is no line before Ø so we must watch out
+    for that.
+
+
+    ```
+
+    05 CLS
+
+    10 X=RND(31)
+
+    20 FOR Y=0 TO 15
+
+    22 IF Y>0 THEN PRINT @(Y-1)*32+X,"
+
+    30 PRINT @Y*32+X,"O"
+
+    40 NEXT Y
+
+    50 PRINT "SPLAT"
+
+    ```
+
+
+    Fine. Now it might be nice if the stone fell a little more slowly so we could
+    see it fall and really the splat should appear where the stone fell and not at
+    the right hand side, so we add:
+
+
+    ```
+
+    32 FOR DL=1 TO 50:NEXT DL
+
+    50 PRINT TAB(X);"SPLAT"
+
+    ```
+
+
+    and
+
+
+    If you run the program now, it should do exactly what we required. You should
+    have seen how we tracked down the errors, using three important techniques:
+
+
+    +   1. Knowing roughly what the program is to do, otherwise you are fighting "blind".
+
+    2. Using direct PRINT commands (i.e. without a line number) to check the value
+    of variables when an error occurs.
+
+    3. Using STOP commands to allow portions of the program to be checked in more
+    detail. These can be removed once you are'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# Debugging Programs
+
+
+    happy that the section is working properly.
+
+
+    There are a couple of final points I would like to make here write your programs
+    down on paper you enter them. In this way, it is easier to spot typing mistakes
+    when you run the program, since you can check incorrect lines (ones that give
+    error reports) against your own copy. Secondly, if you have a printer - USE IT
+    Take a fresh listing of your program. You wouldn''t believe how many errors are
+    caused by programmers looking at an out-of-date listing.
+
+
+    Just before we finish, I''ll give a list of the program as it should look after
+    all the changes above have been included:-
+
+
+    ```
+
+    05 CLS
+
+    10 X=RND(31)
+
+    20 FOR Y=0 TO 15
+
+    22 IF Y>0 THEN 40 ELSE PRINT @(Y-1)*32+X," *"""
+
+    30 PRINT @*Y*32+X,"O"
+
+    32 FOR DI=1 TO 50:NEXT DI
+
+    40 NEXT Y
+
+    50 PRINT TAB(X); SPLAT
+
+    ```
+
+
+    ''The line numbers are a bit untidy, so this is a good point to renumber the program
+    before saving it onto tape. Here''s a good Mnemonic for the RENUM command - RENUMber
+    NOW.
+
+
+    +   -N new number that you want the line to become
+
+    -O old number where you want to start
+
+    W width of the interval between numbers
+
+
+    So the RENUM command becomes:
+
+
+    > RENUM 10,5,10
+
+    (call the new first line 10
+
+    (start with the old line 05
+
+    (leave a gap of 10 between numbers
+
+    (so that they become 10,20,30 ....'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# PUTTING
+
+
+    You have managed to reach the green, now it''s time to put the ball. The hole
+    is represented by the letter"O" and the ball position is shown by "X". Naturally
+    the playing surface is coloured green. You are asked to enter the direction of
+    the shot as a number 1-12 as on the hands of a clock and the strength to be applied.
+    The new position of the ball is then calculated by trigonometry and the ball wobbles
+    its way to the new spot. If the new position of the ball and hole coincide, then
+    it goes "PLOP". If you hit the ball into the rough at the edge of the screen,
+    then you lose a penalty stroke and the ball is dropped for you at the edge of
+    the green.
+
+
+    ```
+
+    10 CLS
+
+    20 INPUT"DO YOU WANT THE RULES";A$
+
+    30 IF LEFTS(A$,1)="Y" THEN GOSUB 520 ''print the rules
+
+    40 PI=3.14152*HT=0 ''note no function for pi
+
+    50 HX=RND(32)-1 ''starting position of hole
+
+    60 HY=RND(14)
+
+    70 TX=RND(32)-1 ''starting position of ball
+
+    80 TY=RND(14)
+
+    90 IF TX=HX AND HY=TY THEN 50 ''must not win immediately!''
+
+    100 GOSUB 350 ''recalculate the hole position
+
+    110 GOSUB 360 ''recalculate the ball position
+
+    120 PRINT @HP,"O"
+
+    130 PRINT @IP,"X"
+
+    ''get the direction data
+
+    140 GOSUB 390;INPUT"DIRECTION";XD;IF XD<1 OR XD>12 THEN 140
+
+    ''get the strength data
+
+    150 GOSUB 390;INPUT"STRENGTH";X
+
+    ```
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_34_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# Putting\n\n```\n170 XD=15;IF XD=12 THEN XD=0      'turn direction into right\n\
+    \      'size and value to express\n      'as pi/6 radians\n180 NX=TX+INT(COS((PI/6)*XD)*XS+.5\
+    \   'work out new x\n190 NY=TY-INT(SIN((PI/6)*XD)*XS+.5   'work out new y\n200\
+    \ RG=0                           'RG true means in the rough\n210 IF NY<1 THEN\
+    \ NY=1;RG=-1          'line Ø is out of bounds\n220 IF NY>15 THEN NY=15;RG=-1\n\
+    230 IF NX<0 THEN NX=0;RG=-1\n240 IF NX>31 THEN NX=31;RG=-1\n250 GOSUB 400;HT=HT+1\n\
+    260 IF RG THEN PRINT@480\n```"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "# Putting\n\n```\n480 TX=(TX+SX):TY=(TY+SY):GOSUB 360\n490 PRINT @TP,\"X\"\
+    ;      'print new ball ball position\n500 PRINT FOR D=1 TO 50:NEXT D  'slow down\
+    \ ball movement\n510 GOTO 440\n```\n\n```\n      'print the rules\n520 CIS1:PRINT\
+    \ TAB(8);\"PUTTING\"\n530 PRINT:PRINT\"THE HOLE IS SHOWN AS \";CHR$(34);\"O\"\
+    ;CHR$(34)\n540 PRINT:PRINT\"YOUR POSITION IS SHOWN AS \";CHR$(34);\"X\";CHR$(34)\n\
+    550 PRINT:PRINT\"ENTER DIRECTION AS ON THE HANDS OF A CLOCK 1-12\"\n560 PRINT:PRINT\"\
+    ENTER STRENGTH AS A NUMBER UP TO ABOUT 20\"\n570 PRINT:PRINT\"GOOD LUCK\"\n580\
+    \ PRINT:PRINT\"PRESS ENTER TO CONTINUE\"\n590 INPUTA$:CIS1:RETURN\n```"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# TARGET PRACTICE
+
+
+    As you run past a stationary target, you must fire your arrow to try and hit it.
+    The Dragon goes so fast it is not that easy to do. To make it easier we allow
+    a speed handicap - enter a number up to about 100 to slow it down to human speed,
+    but see how small a number you can use and still hit it. The number of times you
+    run past is counted as well as the number of shots you need to take.
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_37_0.png)
+
+
+    ```
+
+    10 REM TARGET PRACTICE
+
+    20 INPUT"HANDICAP (0-100)";D2 ''D2 slows down the dragon
+
+    30 CLS
+
+    40 N=0:M=1 ''M=number of shots N=no of turns
+
+    50 T=RND(12):X=RND(31) ''T,X define the target position
+
+    60 PRINT @*(32+X,"O" ''O is the target
+
+    70 N=N+1
+
+    80 FOR Y=0 TO 13 ''run past
+
+    90 IF Y=0 THEN PRINT@(Y-1)*32,"" '' ''Y=0 blank out the
+
+    old position
+
+    100 PRINT@*(32,")";"
+
+    110 IF INKEY($)<>""" THEN 160 ''test to see if key has
+
+    been pressed
+
+    120 FOR D=1 ''TO D2:NEXT D
+
+    ''delay to slow down
+
+    130 NEXT Y
+
+    140 PRINT@13*32," " ''blank out the one at
+
+    ''the bottom
+
+    150 GOTO 70
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "# Target Practice\n\n```\n'fire off the arrow\n```\n\n```\n160 FOR Z=0 TO X:PRINT@Y*32+Z,\"\
+    >\";NEXT Z\n```\n\n```\n170 IF Y=T THEN 210\n      'has it hit the target?\n```\n\
+    \n```\n180 FOR Z=0 TO X:PRINT@Y*32+Z,\" \";NEXT Z\n```\n\n```\n190 M=M+1\n```\n\
+    \n```\n200 GOTO 70\n```\n\n```\n      'Yes it has hit the target\n210 PRINT@T*32+X,\"\
+    *\":\"YOU GOT IT\"\n      M;\"SHOTS IN \";N;\"TURNS\"\n```\n\n```\n220 INPUT \"\
+    ANOTHER GAME\":$A\n```\n\n```\n230 IF LEFT($A,1)=\"Y\" THEN RUN\n```\n\nThis game\
+    \ is rather like the example we used for the chapter on\ndebugging Programs. Compare\
+    \ it to see how the extra facilities\nhave been put in. The statement LEFT$(A,1)\
+    \ (see line 230) is\nincluded so that you can answer either \"YES\" or \"Y\" and\
+    \ it will\nhave the same effect. The command \"RUN\" executed within a\nprogram\
+    \ doesn't cause it to try to eat its own tail as you might\nth - it simply causes\
+    \ all variables to be reset as if you had\ntyped \"RUN\" at the keyboard. Try\
+    \ adding a handicapping facility\nso that the final score depends on both the\
+    \ speed, the number of\nturns and the number of shots (such as 5 times the speed\
+    \ +\nnumber of turns + number of shots) to encourage people to try the\nhigher\
+    \ speeds."
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# DIGITAL CLOCK
+
+
+    A digital clock that plays Westminster Chimes - now there''s a novelty! It uses
+    the timer inside the Dragon to get the ticks and displays the hours, minutes and
+    seconds, using the 24 hour clock notation. If you have set the chiming mechanism,
+    except between the hours of 10 pm and 7 am it will chime the hours for you. Naturally
+    it only chimes on the twelve hour clock because 23 bongs would be rather tiresome.
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_39_0.png)
+
+
+    The main problem with this program is in tuning or regulating it. The timer could
+    vary slightly from machine to machine and in any case doesn''t give precise one
+    second ticks. One is added into the timer count about every 22.43 milliseconds,
+    which makes for a difficult conversion into seconds. A basic tick is set at 44
+    strokes of the timer, but further regulation is required by adjusting the variable
+    TL - this has been set for our machine at 1.013 which keeps good time to within
+    1 or 2 seconds per hour. Bear in mind that your machine could be slightly different
+    and might require further regulation.
+
+
+    The display of the time should look like this:
+
+
+    ***********
+
+
+    HH : MM : SS
+
+
+    ***********'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "# Digital Clock\n\n```\n10 REM TK=44:TL=1.013'REGULATOR\n20 TK=44:TL=1.013'REGULATOR\n\
+    30 M$#=\"\" : \"               'print mask\n40 INPUT\"CHIMES ON (Y/N)\";C$\n50\
+    \ INPUT\"ENTER TIME (HHMM)\"      'enter as e.g 1400(Enter)\n60 IF LEN(T)<4 THEN\
+    \ GO 50\n70 H=VAL(MID$(T,1,2))           'get the hours\n80 M=VAL(MID$(T,3,2))\
+    \           'get the minutes\n90 CL$1=S=0                     'reset the timer\n\
+    100 TIMER=0\n110 PRINT @032,STRINGS$(12,\"\"*\")  'top line\n120 PRINT @093,STRINGS$(12,\"\
+    \"*\")  'bottom line\n130 IF TIMER<30 THEN GO 140     'wait until count ->44\n\
+    140 S=S+TL;IF S>59.5 THEN S=S-60:M=M+1 'add in tl of secs\n150 IF M>60 THEN M=M-60:H=H+1:GOSUB\
+    \ 22 'adjust minutes/hours\n160 IF H=24 THEN RETURN         'special action at\
+    \ midnight\n170 PRINT@361,M$:M;             'move the cursor\n180 PRINTUSING M$:H;\
+    \            'print hours\n190 PRINTUSING M$:S;            'print minutes\n200\
+    \ PRINTUSING \"##\";S;         'print seconds\n210 GOTO 100                  \
+    \  'chime subroutine\n                               not unsocial hours\n220 IF\
+    \ H>22 OR H<7 THEN RETURN\n                               'test if chimes on or\
+    \ not\n230 IF LEFT$(C$,1)<\"Y\" THEN RETURN\n240 IF H>12 THEN CH=H-12 ELSE CH=H\
+    \ 'only chime music up to 12\n                               'AS=chime music repeated\
+    \ twice\n250 A$=TL3,2;O2;EC$01;L1;G;L2G;O2DELIC;\"\n260 PLAY A$:PLAY A\n270 FOR\
+    \ Z=1 TO CH\n                               'bongs\n280 PLAY \"P4T301GP4\"\n290\
+    \ NEXT\n300 S=S+17+CH*2.2             'catch up the seconds allowing\n       \
+    \                        'for the right number of bongs\n310 RETURN\n```"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# Digital Clock
+
+
+    The variable S, the seconds counter, never gets reset to Ø at the end of a minute.
+    It merely has 0 deducted from it. This is so that the regulator can work. If it
+    were reset to zero, then the fractional part of the tick regulator would always
+    be lopped off.
+
+
+    Notice the use of a PRINT USING mask set at line 30 as "## : \ This is a common
+    trick to shorten the PRINT USING statements. It is tedious if you have to say
+    every time:
+
+
+    PRINTUSING "## ;H
+
+
+    PRINTUSING M$;H is much quicker to type. Print masks can contain ordinary symbols
+    like ":" and "", which are carried straight through into the edited line. You
+    can use this trick to put spaces between numbers, where they are closely packed.
+
+
+    If the result being printed is not quite a whole number, then PRINT USING will
+    round it off for you. For example, 58.6 seconds would print as 59, when edited
+    in this manner. For this reason, you may occasionally see "-0Ø" printed in the
+    seconds column and this indicates that the rounding is taking place.
+
+
+    It is also worth noting the use of the PLAY command. It catches most people out
+    to find that L2 actually means a half length note and not a double length one
+    as you might expect. This is very clearly set out in the manual but you would
+    not be the only one to be fooled, if you get it wrong.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# FRUIT MACHINE
+
+
+    If an ordinary fruit machine is called a "one armed bandit", then this has to
+    be the "no-armed bandit". There are no traditional wheels inside the machine.
+    A combination of characters is generated and displayed at the bottom of the screen.
+    You have a set period of time to press a key and "hold" the machine. Two of a
+    kind pays 5. Three of a kind pays 50. Two stars at the beginning pays 10 and one
+    star at the beginning pays 2. Anything else loses 10. See if you can stay ahead
+    of the game. To help a bit, you can set the speed at the beginning. High numbers
+    go slower; a number of about 20 gives a reasonable speed. The whole game lasts
+    for 30 seconds.
+
+
+    ```
+
+    10 FRUIT MACHINE ''reset the time counter
+
+    20 CLSTIMER=0
+
+    30 PRINT"HIGH NUMBERS GO SLOWER"
+
+    40 S=0:INPUT"SPEED";F ''get the input speed
+
+    50 Z=$=""" ''Z is the output line
+
+    60 FOR X=1 TO 3 ''choose 3 at random from the string
+
+    70 Z=$MID("$*+=-..",RND(7),1)
+
+    80 NEXT X
+
+    ```
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_42_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# Fruit Machine\n\n90 FOR X=1 TO 3;PRINT Z$(X);\" \";:NEXT X 'print the line\n\
+    100 FOR D=1 TO F 'wait to see if inkey\n110 RP$=INKEY$:IF RP<>\" THEN 150 'if\
+    \ key hit work out 'the payoff'\n\n120 NEXT D\n130 PRINT\n140 GOTO 50\n\n150 W-=10\
+    \ 'default score\n160 IF TIMER>=1200 THEN 230 'see if game ended\n170 IF Z$(1)=\"\
+    *\" THEN W=2 'one * only\n'test for two of a kind\n180 IF Z$(1)=Z$(2) AND Z$(1)=\"\
+    *\" THEN W=5 'test for two * at left hand side\n190 IF Z$(1)=Z$(2) OR Z$(2)=Z$(3)\
+    \ OR Z$(1)=Z$(3) THEN W=50 'test for three of a kind\n W=10\n200 IF Z$(1)=Z$(2)\
+    \ AND Z$(2)=Z$(3) THEN W=50 'print pay line\n\n210 PRINT \"PAYS\";W:S=S+W 'repeat\n\
+    220 GOTO 50 'end of game - print score\n230 PRINT \"TIME UP\";:IF S>0 THEN PRINT\
+    \ \"YOU GOT\";S:END\n240 PRINT \"YOU LOST\";ABS(S) 'overall loss position\n250\
+    \ PRINT TAB(6);\"I ACCEPT IOUS\""
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# NIM
+
+
+    The origins of the game Nim are obscure, but it is believed to have come from
+    the Orient some time in the way distant past. It is played with matchsticks or
+    stones, which are divided into three piles. Each player in turn takes any number
+    but from only one pile at a time. The object of the game is to ensure that you
+    take the last match and not your opponent.
+
+
+    The theory of the game is based on binary numbers. Consider the case of one left
+    in each of two piles - clearly if your opponent takes one then you can take the
+    other and win. So 1,1,0 is a winning situation. Arguing from this you can see
+    that 5,5,0 is also a winning situation, because however many he takes, you take
+    the same number; and this follows for any number i.e. n,n,0.
+
+
+    When a third pile is introduced you have a problem, but if you strive for a balanced
+    situation by making sure that all the binary bits of the sum add up to 2 or to
+    Ø you will always win. Take for example a situation of 3,2,1. In binary this is
+    expressed as:
+
+
+    | Pile | Number | Binary |
+
+    |---|---|---|
+
+    | 1 | 3 | 1 1 |
+
+    | 2 | 2 | 1 Ø |
+
+    | 3 | 1 | Ø 1 |
+
+    | | Sum | 2 2 |
+
+
+    44'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Nim
+
+
+    This is a balanced situation, from which you always win. If he takes any number
+    the appropriate reply is shown below:
+
+
+    He takes from pile n You take from pile n
+
+
+    +   3 from pile 1 giving 1,1,0 again
+
+    2 from pile 2 giving 1,1,0
+
+    1 from pile 1 giving 2,2,0
+
+    2 from pile 2 giving 1,1,0
+
+    1 from pile 2 giving 1,1,0
+
+    3 from pile 1 giving 2,2,0
+
+    1 from pile 3 giving 2,2,0
+
+
+    So you always win!
+
+
+    When you play against the computer, if you make the first move you will usually
+    win. ''There can be up to 29 matches in one pile, which makes the calculations
+    a bit more tricky and one slip and you''re done for.
+
+
+    Many years ago, about 1950, I built a machine for playing this game out of War
+    Surplus bits and pieces. It was a monstrous creation with meters, bits of old
+    packing cases and decimal binary decoders made of strips of tin, with sellotape
+    wrapped over them at intervals. It made the simplistic assumption, that the opening
+    move would always be a pre-emptive strike on one whole pile, to simplify the calculations.
+    By comparison with the Dragon, this creation was beyond the pale, but I have retained
+    a strong affection for the game, which should be better known.
+
+
+    ```
+
+    10 REM NIM PROGRAM
+
+    20 CLS:PRINT TAB(12);"NIM" ''rules
+
+    30 PRINT"THE OBJECT OF THE GAME IS TO"
+
+    40 PRINT"TAKE THE IAST MATCH. YOU MAY "
+
+    50 PRINT"TAKE ANY NUMBER, BUT FROM ONLY"
+
+    60 PRINT"ONE PILE AT A TIME."
+
+    70 PRINT:INPUT"PRESS ENTER TO CONTINUE";$A
+
+    80 FOR N=1 TO 3:N(N)=RND(29):NEXT ''set pile values
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# display board - test for game over
+
+
+    ```
+
+    90 GOSUB 140:GOSUB 210:
+
+    IF G THEN PRINT"SOME PEOPLE HAVE IT - "":END
+
+    ''get a move from you - redisplay the board - test end
+
+    100 GOSUB 240:GOSUB 140
+
+    110 GOSUB 210:IF G THEN PRINT"CH DEAR, YOU SEEM TO HAVE WON":END
+
+    120 GOSUB 290:GOTO 90
+
+    ```
+
+
+    ```
+
+    140 REM SR TO DISPLAY BOARD
+
+    150 CLS1:FOR N=1 TO 3
+
+    160 PRINT N:N
+
+    170 IF N(N)=0 THEN 190
+
+    ''chr(133) is a green and black stripe
+
+    180 FOR Z=1 TO N(N):PRINT CHR(133);NEXT Z
+
+    190 PRINT N:NEXT N
+
+    200 PRINT:RETURN
+
+    ```
+
+
+    ```
+
+    210 REM SR TO TEST IF GAME OVER
+
+    220 FOR Z=1 TO 3 IF N(Z)>0 THEN G=0:RETURN
+
+    230 NEXT Z:G=-1:RETURN
+
+    ```
+
+
+    ```
+
+    240 REM SR TO MOVE FROM YOU
+
+    250 INPUT"ROW";R:IF R<1 OR R>N(R) THEN 250
+
+    260 INPUT"HOW MANY";A:IF A<1 OR A>N(R) THEN 250
+
+    270 N(R)=N(R)-A
+
+    280 RETURN
+
+    ```
+
+
+    ```
+
+    290 REM SR TO DECIDE MOVE
+
+    300 FOR B=1 TO 3             ''for each pile in turn
+
+    310 IF N(B)=0 THEN 360
+
+    320 FOR M=1 TO N(B)             ''test whether pile-M would balance
+
+    330 GOSUB 410                 ''test if bits balance
+
+    340 IF C=2 OR C=0 THEN N(B)=B(B)-M:RETURN   ''yes it does
+
+    350 NEXT M
+
+    360 NEXT B                   ''drop through if no balanced situation
+
+    ''be found
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Nim
+
+
+    370 COUB 510      ''make a rude remark - take one off any
+
+
+    ''non-zero pile
+
+    380 FOR B=1 TO 3:IF N(B)>0 THEN N(B)=N(B)-1:RETURN
+
+
+    390 NEXT B
+
+    400 RETURN
+
+
+    410 REM SR TO TEST EQUALITY
+
+    420 T=1:FOR A=1 TO 5      ''T is doubled every time
+
+
+    ''to test one bit at a time
+
+    ''5 iterations because 2 to power
+
+    ''5 is 32 and max size is 29
+
+
+    430 C=0:FOR N=1 TO 3
+
+    440 IF B=N THEN T2=N(N)-M ELSE T2=N(N)
+
+
+    450 IF T2 AND T THEN C=C+1      ''AND function works as if
+
+    ''T is an integer variable
+
+
+    460 NEXT N
+
+    470 IF C=1 OR C=3 RETURN
+
+    480 T=T+T      ''double T for next bit
+
+
+    500 RETURN      ''exit through this route means C=0 or C=2
+
+
+    510 REM RUDE REMARKS
+
+    520 RR=RR+1:IF RR>5 ''THEN RETURN
+
+    530 ON RR GOTO 540,550,560,570,580
+
+
+    540 PRINT "THINK YOU HAVE A CHANCE":GOTO 590
+
+    550 PRINT "YOU HAVE PLAYED THIS GAME BEFORE":GOTO 590
+
+
+    560 PRINT "I DON''T BELIEVE THIS":GOTO 590
+
+    570 PRINT "SMART PANTS":GOTO 590
+
+
+    580 PRINT "I THINK I WILL TAKE UP CHESS"
+
+    590 FOR DL=1 TO 1500:NEXT DL      ''wait so that remark
+
+
+    ''can be seen
+
+    600 RETURN'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# SPACE DOCKING
+
+
+    "Mothership to Snoopy - start docking procedures - acknowledge - over".
+
+    "Snoopy to Mothership - we have you on visual - starting docking procedures -
+    over and out".
+
+    You are driving Snoopy and have to dock with the mothership. The mothership is
+    moving forwards in space and from a standing start, you have to match speeds and
+    arrive distance so that you arrive, travelling at the same relative speed and
+    at the same place. Go too fast, and you will zoom past, never to be seen again.
+    Go too slow, and you will exceed the time limit. Use too much fuel, and you will
+    run out and drift for ever.
+
+
+    First select the time for which you wish your rockets to fire. Enter a negative
+    time, e.g. -2, to indicate two seconds of negative thrust, which will decrease
+    your speed. If as a result your speed goes negative you will also go backwards
+    not forwards!
+
+
+    You can, if you want, idle for a specified period. To do this, enter the bum as
+    zero and then the program will ask for the idle time. If your speed is faster
+    than the mothership, then you will continue catching it up. If your speed is slower
+    than the mothership, then idling will increase the distance between you.
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_48_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "# Space Docking\n\nEach second of real time, the state of play is shown on\
+    \ the parameter display screen. This shows:\n\nTime - the elapsed elapsed time\
+    \ from start. The maximum permitted is 50 seconds.\nSpeed - the actual speed of\
+    \ Snoopy in space. You start from zero.\nApproach speed - the relative speed between\
+    \ you and the mothership. Negative numbers means that you are slipping behind.\n\
+    Range - the distance between you and the mothership. Negative numbers mean you\
+    \ have gone too far.\nFuel - the amount of fuel remaining. You have 50 units to\
+    \ start with, and each second uses up one unit.\n\n```\n10 CLS;PRINT TAB(10);\"\
+    SPACE DOCKING\"\n20 PRINT;PRINT\"YOU HAVE TO DOCK WITH YOUR\"\n30 PRINT\"PARTNERS\
+    \ SHIP. YOU HAVE 50\"\n40 PRINT\"TELL ME HOW LONG TO\"\n50 PRINT\"BURN (USE E.G.-2\
+    \ FOR NEGATIVE\"\n60 PRINT\"THRUST; TO IDLE, GIVE BURN\"\n70 PRINT\"DURATION OF\
+    \ 0, AND I WILL ASK\"\n80 PRINT\"FOR THE IDLE PERIOD. NEGATIVE\"\n90 PRINT\"RANGE\
+    \ MEANS YOU HAVE GONE PAST\"\n100 PRINT\"YOUR PAL.\"\n  T=elapsed time V=Snoopy\
+    \ speed\n  U=mothership speed Y=distance travelled by snoopy\n  H=distance at\
+    \ the beginning\n110 IF F=50:T=0;Y=0;H=100;U=10\n120 INPUT\"HOW LONG TO BURN\"\
+    ;S\n130 A=SGN(S)\n140 D=ABS(S)\n150 IF D<>0 THEN 180\n160 INPUT\"IDLE HOW LONG\"\
+    ;D\n170 D=ABS(D)\n180 D=D-1\n190 IF D<0 THEN 120\n200 T=T+1;V=V+A;F=F-(A*A)\n\
+    \  'out of fuel\n210 IF F<0 THEN 290\n```"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# Space Docking
+
+
+    ```
+
+    220 Y=Y+V:H=H+U:CLS1:GOSUB 370
+
+    230 IF T>49 THEN 360
+
+    240 IF ABS(Y-H)>5 THEN 180
+
+    250 IF ABS(U-V)>2 THEN 180
+
+    260 PRINT"WOW - YOU MADE IT!"
+
+    270 PRINT "FUEL LEFT";F
+
+    280 END
+
+    ```
+
+
+    ```
+
+    ''display parameters
+
+    ''time up
+
+    ''close enough ?
+
+    ''speeds matched ?
+
+    ```
+
+
+    ```
+
+    290 PRINT "WHOOPS. NO MORE FUEL."
+
+    300 IF V=0 THEN 330
+
+    310 PRINT"YOU WILL DRIFT FOREVER"
+
+    320 END
+
+    ```
+
+
+    ```
+
+    330 PRINT "YOU WILL COAST TO YOUR "
+
+    340 PRINT"MOTHERSHIP - BUT YOUR PARTNER "
+
+    350 PRINT "IS DONE FOR.":END
+
+    ```
+
+
+    ```
+
+    360 PRINT "TIME UP":GOTO 300
+
+    370 PRINT"TIME"
+
+    380 PRINT "SPEED"; V
+
+    390 PRINT"APPROACH SPEED";V-U
+
+    400 PRINT "RANGE";H-Y
+
+    410 PRINT "FUEL";F
+
+    ```
+
+
+    ```
+
+    ''subroutine to display parameters\T
+
+    ```
+
+
+    ```
+
+    420 PRINT FOR DL=1 TO 100:NEXT DL
+
+    430 RETURN
+
+    ```
+
+
+    ```
+
+    ''delay so that you can
+
+    ''watch the display
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# HINTS AND TIPS
+
+
+    # Cassette Tapes
+
+
+    The very first problem you will hit is to do with the cassette tape interface.  Despite
+    the fact that we have deliberately kept the programs in this book short, once
+    you keyed them in you will want to keep them and not re-key them every time. So,
+    the first thing to get working is the cassette recorder. Don''t wait to do this
+    until you have got a long program to SAVE; then it will be too late. Key in a
+    tiny program such as:
+
+
+    ```
+
+    10 REM THIS IS A VERY LONG REMARK
+
+    20 REM THIS IS ANOTHER LONG REMARK
+
+    30 REM THIS IS THE LAST LONG REMARK
+
+    ```
+
+
+    Now try saving this by setting the recorder to Record and typing in direct mode:
+
+
+    ```
+
+    CSAVE "TEST"
+
+    ```
+
+
+    "TEST" is the file name which will be given to the file. The tape recorder will
+    whir away and you should get the message:
+
+
+    OK
+
+
+    Now, try reloading the program - rewind the recorder and type:
+
+
+    ```
+
+    LOAD
+
+    ```
+
+
+    Notice that the file name need not be specified, and this command will load the
+    first program encountered on tape. Whilst the Dragon is searching for the program
+    you will see the letter "S" in the top left corner. When it has found some data
+    you will see'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Hints and Tips
+
+
+    "F" in the top left corner and the file name "TEST". This changes from "F" to
+    an inverse "F" at roughly one second intervals as the data is read and assuming
+    that it loads correctly you get the message: OK
+
+
+    The message "?IO ERROR" is bad news. It means something has gone wrong. The program
+    you had in memory before will have been lost because it is removed when the file
+    name is found (when the "S" changes to "F"). The one on tape cannot be loaded
+    and you have lost all your work!
+
+
+    Some reviewers have been driven to despair by this problem, but it can be simply
+    overcome. You now see why we suggest a small program for testing purposes, that
+    is not too great a labour to rekey and rekey again until you have got it right.
+
+
+    The first tip is to use a DIN to DIN connector instead of the multiple jack plugs
+    supplied. This is because the signal level from the Dragon on Record is about
+    1.5 volts - this level is too high for some Automatic Volume Input circuits to
+    absorb. When the signal is applied to the Auxiliary Input circuits, which are
+    expecting a signal from, say, another tape recorder, it is better to cope.
+
+
+    The second tip is to play back the tape recording on the speaker before sound
+    clean and crisp and at an absolutely deafening volume. If you cannot get the volume
+    high enough, you might need a more powerful cassette recorder. Try different volume
+    settings, all on the high side. The correct setting is quite critical, a very
+    small shift of the controls could make all the difference.
+
+
+    There can be a problem with the automatic control of the Cassette Motor via the
+    Remote cable. We suggest that you disable this control altogether by not putting
+    in the jack plug at all. This means that you will have to do all the work in pressing
+    the controls for Record or Play or Rewind, but since there is no automatic rewind,
+    this is is in fact easier. Most cassette tapes'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# Hints and Tips
+
+
+    have a blank bit at the beginning called the "leader" tape. You cannot record
+    on this because it is not magnetic. So, be careful that this bit has gone past
+    before attempting to record You can wind it on by hand or you can type:
+
+
+    ```
+
+    MOTOR ON
+
+    ```
+
+
+    which will set the motor going and let you pass over the leader tape. If you count
+    up ten very slowly this is usually long enough to be sure that the leader tape
+    has gone through. Recording will start immediately when the (Enter) key is pressed
+    for a CSAVE command to keep to this sequence:
+
+
+    +   Key the command CSAVE "XXXX" (but dont press (Enter))
+
+    Start the Recorder
+
+    Count slowly to ten (one and two and three and four ...)
+
+    Press (Enter)
+
+
+    As a final tip, always save programs twice. When you get the OK message quickly
+    type CSAVE"XXXX" again, whilst the recorder is still running. This doesn''t take
+    long to do and sometimes save your bacon, because if the first copy won''t load,
+    the second one nearly always does. Never go for more than half an hour of typing
+    without saving the programs out. It also helps to use two tapes alternately, then
+    gives you four copies of the program that you could go back to in case of dire
+    necessity. Always label tapes as you take them out of the machine
+
+
+    Randomise
+
+
+    There is no Randomise function given in the reference card, or in the manual,
+    for setting the seed of the random number generator. In fact, if you specify:
+
+
+    ```
+
+    X=RND(-n)
+
+    ```
+
+
+    N is a negative number and is then taken as the seed for the random number generator.
+    Try this program with and without the'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# Hints and Tips
+
+
+    first line to see the difference.
+
+
+    ```
+
+    10 X=RND(-2)
+
+    20 FOR Z=1 TO 9: PRINT RND(20);:NEXT
+
+    ```
+
+
+    Without the first line, the result will be different every time that the program
+    is run. When the first line is put in, the results will be the same time that
+    you run it.
+
+
+    This technique is a good idea for testing games. Put in line at the beginning
+    to ensure that your random numbers are always the same and you can test it much
+    easier - it is also a good way of "stacking the deck" to win by knowing in advance
+    what''s going to happen, but you wouldn''t do that, would?
+
+
+    # Mug-trapping
+
+
+    This is not the very elegant name usually given for data validation and error
+    detection - it''s shorter but not so polite. You will notice that all our programs
+    contain after input statements extra commands to make sure that the data is what
+    we were expecting e.g:
+
+
+    ```
+
+    10 INPUT "GO ON - (Y/N)";AS
+
+    ```
+
+
+    the player must answer YES, NO or N so we check for this follows:
+
+
+    ```
+
+    20 IF INSTR("YN",LEFT$(A,1))=0 THEN 10
+
+    ```
+
+
+    The LEFT$ function makes sure that even if YES has been entered, we look only
+    at the left hand character so "YES ALRIGHT","YERSS","Y", and "YES" will all be
+    reduced to a single "Y". The use of the INSTR function to check for all the possible
+    values is also very powerful. It could be used to check for multiple letters e.g:
+
+
+    ```
+
+    10 IF INSTR("ABC/CDE/FGH/CAR/",A$)=0
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# Hints and Tips
+
+
+    The use of the oblique strokes in the statement is so that combinations like "CCD"
+    don''t give a match when they should not.
+
+
+    IFTHEN...ELSE
+
+
+    Beginners are often confused by the use of IF THEN . ELSE. The rule is that all
+    commands following an IF statement are only obeyed if the condition is true. For
+    example:
+
+
+    ```
+
+    10 FOR Z=1 TO 10:IF A$(Z) = "THING" THEN 100:NEXT
+
+    ```
+
+
+    This loop will only be obeyed once if the condition is not true the first time
+    and therefore the NEXT command on the same line will be ignored. If the condition
+    is false execution always (except for ELSE, resumes at the next line found. So,
+    we should recode this as follows:
+
+
+    ```
+
+    10 FOR Z=1 TO 10:IF A$(Z)="THING" THEN 100
+
+    20 NEXT
+
+    100 REM PROGRAM CONTINUES
+
+    ```
+
+
+    This will then operate ten times as we imagined.
+
+
+    Suppose we code as e.g.:
+
+
+    ```
+
+    10 IF A$=B$ THEN GOSUB 100:GOSUB 200:GOTO 50 ELSE GOSUB 300
+
+    40 REM NEXT COMMAND
+
+    ```
+
+
+    Notice first that the last command dependent on the IF is GOTO 50 and this is
+    not separated by a ":" from the ELSE following. An equivalent piece of code would
+    go as follows:
+
+
+    ```
+
+    10 IF A<>B$ THEN 30
+
+    12 GOSUB 100          ''obeyed if condition is true
+
+    14 GOSUB 200
+
+    16 GOTO 50
+
+    30 GOSUB 300          ''obeyed if condition not true
+
+    40 REM NEXT COMMAND
+
+    ```
+
+
+    55'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "# Hints and Tips\n\nIn other languages, like CORAL, for instance, the control\
+    \ of IF\nsequences uses a construct of BEGIN ..... END so that all the\ncommands\
+    \ between the two are part and parcel of the same thing.\nIt looks like e.g.:\n\
+    \n```\nIF A=B THEN\n    TEST-END (you can also use names instead\n    DISPLAY\
+    \ (of subroutine numbers!)\n    GOTO 50\nEND\nELSE BEGIN\n    P300\nEND\n```\n\
+    \nThis is much easier to understand, and perhaps one day BASIC will\ninclude such\
+    \ a construct.\n\n# Control Keys\n\nStudy carefully the control keys given on\
+    \ the reference card:\n\n+   - (shift)/<- means clear the current line (very useful)\n\
+    - (shift)/Ø means set reverse case (usually very annoying)\n- (shift)/@ means\
+    \ freeze all output to the screen\n\nThe (Shift)/Ø button, so commands can be\
+    \ obtained accidentally, when\nreaching for the \":\" button, so be careful commands\
+    \ typed\nin reverse case are not recognised and give syntax errors.\n\nThe Pause\
+    \ command, (Shift)/Ø, is also very useful, but remember\nrepeating it will not\
+    \ cause output to resume. To resume,\nyou need any other character but that.\n\
+    \n# PRINT Commands\n\nWhen a print command is obeyed so as to cause a line feed\
+    \ to the\nnext line, the whole of the remainder of that line is destroyed\nin\
+    \ the process. Try these two programs:"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# Hints and Tips
+
+
+    ```
+
+    10 PRINT @20,"HELLO";
+
+    20 PRINT @0,"A";   ";" character
+
+    30 PRINT @432,"""
+
+    ```
+
+
+    ```
+
+    10 PRINT @20,"HELLO";   ''no ";" character
+
+    20 PRINT @0,"A"
+
+    30 PRINT @432,"""
+
+    ```
+
+
+    With the first one, you see the word A followed by HELLO on the top line. With
+    the second one, you see A alone on the top line. This is because the omission
+    of the ";" character in line 20 has caused the remainder of the line to be deleted,
+    as it spaces forward to the next line position. This can be a very useful trick
+    for clearing the first line, but it can also be very puzzling when you didn''t
+    want this to happen!
+
+
+    Try these as well:
+
+
+    ```
+
+    10 X=5;Y=6;Z=9
+
+    20 PRINT X;Y;Z
+
+    30 PRINT X,Y,Z
+
+    ```
+
+
+    You get:
+
+
+    ```
+
+    5 6 9
+
+    5
+
+    9
+
+    ```
+
+
+    A space is always printed in front of a number as well as behind. If the separator
+    of "," is used then you get an automatic tab of sixteen character positions, which
+    takes you to the next line for the third number. In practice the ",;" format is
+    nearly always what you want.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# VOCABULARY TESTER
+
+
+    We wanted to include in this book a program which used data files held on cassette
+    tape. There are clearly a lot of business applications which require this sort
+    of treatment, but we thought that a vocabulary tester would be more generally
+    useful to everyone. Some suggestions are given at the end for modifying the general
+    structure for other applications.
+
+
+    The first difficulty is that other languages have characters which are not present
+    on the Dragon keyboard. We have designed this example for French but it could
+    be adapted for other languages equally well by using different conventions for
+    the missing characters. We use the conventions as follows:
+
+
+    Notice the special character follow the character on which it is supposed to be
+    written. This looks a bit strange at first but you can get used to it. Just beware
+    of getting too used to it and writing words like in examination papers! The accents
+    in the right direction if you look only at the top half of the character. We could
+    have used "/" for acute and "\" for grave (this is CHR$(92) which can be displayed
+    on the screen but not without input from the keyboard), but this seemed best.
+
+
+    The idea of the program is that you build up your vocabulary lists on tape. Each
+    time you are given a new set of words to learn you put them into the machine.
+    When you think you know the new words then you merge in the current tape so that
+    the old words are added onto the back. You then have a cumulative tape'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# Vocabulary Tester
+
+
+    that you can use for revision later.
+
+
+    We have a maximum of 100 words for each tape. This is not a limitation of the
+    machine, which could hold up to say 800 words at a time, but perhaps a practical
+    limit on the number you would want to revise at one time. You can change this
+    limit if you think it is too low. All the statements referring to 100 or 99 should
+    be changed e.g. lines 40, 140 and so on.
+
+
+    When the program is run, the Menu screen appears, which looks like this:
+
+
+    # VOCABULARY
+
+
+    ```
+
+    1=READ DATA TAPE
+
+    2=WRITE DATA TAPE
+
+    3=ADD TO CURRENT LIST
+
+    4=TEST ENGLISH/FRENCH
+
+    5=TEST FRENCH/ENGLISH
+
+    6=REVIEW/CHANGE DATA
+
+    ```
+
+
+    # CHOICE?
+
+
+    To begin with, you won''t have any data tapes to read in so we need option three
+    to "Add to current list". Key "3" and press (Enter).
+
+
+    ADD NEW WORDS                SPACE FOR 100
+
+
+    ```
+
+    CEDILIA IS ,
+
+    GRAVE >
+
+    ACUTE IS <nCIRCUMFLEX ^
+
+    ENGLISH WORD ? PIG
+
+    NOW FRENCH EQUIVALENT
+
+    ENDER FIRST THEN WORD
+
+    E.G.1E CARC,ON
+
+    ```
+
+
+    LE COCHON'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Vocabulary Tester
+
+
+    The parts underlined in the example above are what you enter in response to the
+    questions. When you have entered all the words, press (Enter) with no data, when
+    asked for the English word, and you will return to the Menu screen. As you enter
+    new words, the "SPACE FOR" field will be updated to show the remaining space,
+    i.e. it becomes 99, then 98 and so on.
+
+
+    Next, you will want to learn the words and check that they are entered correctly
+    so take option 6 to review or change the data. You see:
+
+
+    ```
+
+    PIG/LE COCHON
+
+    Q=QUIT;Y=CHANGE ?
+
+    ```
+
+
+    Press (Enter) to go on to the next word. When you have been through them all,
+    you will return to the Menu screen again. If you type "Q" or "QUIT" then you will
+    return to the Menu screen. If you type "Y" or "YES" you will be asked:
+
+
+    ```
+
+    NEW VALUE ? you enter the new English and French in the format displayed above
+    e.g. PIG/LE COCHON
+
+    ```
+
+
+    This facility for amending the data is relatively crude, since you have to go
+    right through all the words to get to the one you wish to change. If, however,
+    make a practice of checking and learning all the new words as you put them in
+    and before you add them to the stored data, then this will be quite adequate.
+
+
+    Next we write out the data tape. For this option 2. If you have the remote stop/start
+    tape enabled (see hints and tips), then make sure that your tape is positioned
+    after the leader tape and that play and record keys are down. The program will
+    ask:
+
+
+    DATA TAPE READY ?
+
+
+    As soon as you press (Enter) the writing of the data tape will start. You will
+    hear the relay inside clicking as different blocks of data are written onto the
+    tape. When it returns to the'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Vocabulary Tester
+
+
+    Menu screen, the operation is finished and you can rewind and remove the data
+    tape. Don''t forget to label it, and also to put on the number of words that it
+    now contains.
+
+
+    To test yourself you can either have the machine ask for the English or for the
+    French. Take either option four or five, as the appropriate. Here is a sample
+    dialogue:
+
+
+    ```
+
+    ENGLISH BREAK
+
+    FRENCH CASSER
+
+    ENGLISH WHAT A SURPRISE
+
+    FRENCH QUEL SURPRISE (got one wrong)
+
+    The ANSWER IS QUELLE SURPRISE
+
+    ENGLISH TERRACE
+
+    FRENCH LA TERRASSE
+
+    ENGLISH SOMETIMES
+
+    FRENCH (Enter) (had enough, so quit)
+
+    SCORE 2 OUT OF 3
+
+    OK ? (Enter)
+
+    ```
+
+
+    and it returns to the Menu screen.
+
+
+    Your answers above are underlined. The testing part works by generating a random
+    number within the range of items stored in memory and giving you one half of the
+    stored string according to which way you are running the test. If you have a small
+    number of items stored, then it might ask the same thing twice running, because
+    the same random number comes up again - if this becomes annoying, then add some
+    more words to the list.
+
+
+    Now we can merge on the rest of the data tape stored from previous occasions.
+    To do this option one. If there are any words in store, this will ask:
+
+
+    ```
+
+    ADD TO EXISTING DATA ? Y
+
+    DATA TAPE READY ? (Enter)
+
+    ```
+
+
+    Reading will start when (Enter) is pressed after "Data Tape Ready". If you have
+    said "N" for No then the existing words are'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "# Vocabulary Tester\n\nremoved and the new ones take their place. If when reading\
+    \ in the new items array becomes full, then the message \"FULL ?” appears. After\
+    \ you press (Enter), the remainder of the words on the tape are ignored. It is\
+    \ important for this reason to keep track of how many words are stored on your\
+    \ tapes. Only merge into a tape room to take the new words.\n\nTo write out the\
+    \ amalgamated tape with all the words together, take option 2 to write out the\
+    \ tape.\n\nLines to alter for more words per tape are marked **\n\n```\n10 REM\
+    \ VOCABULARY TESTER\n20 REM ,CEDILLA:^=CIRCUMLEX\n30 REM >GRAVE ACCENT;^<=ACUTE\n\
+    40 CLEAR 12000:DIM A$(100):N=0  \t\\*\\n50 GOSUB 730 'MENU\n60 ON MN GOTO 70,170,240,410,520,630\
+    \ 'option according\n   to menu choice\n70 REM READ DATA TAPE\n80 CLS1\n90 IF\
+    \ N<>0 THEN ADD TO EXISTING DATA\";A$ 'merge question\n100 IF LEFT$(A,1)=\"Y\"\
+    \ THEN FOR Z=1 TO 100:A$(Z)=\"\";NEXT:N=0\n110 INPUT \"DATA TAPE READY\";A$\n\
+    120 OPEN \"I\",#-1,\"VOCAB\" 'open the data file\n130 IF EOF(-1) THEN CLOSE:GOTO\
+    \ 50 'test for end of file\n140 N=N+1:IF N>99 THEN INPUT \"FULL\";A:GOTO 50  \t\
+    \\*\\n150 INPUT #-1,A$(N) 'get a data record\n160 GOTO 130\n170 REM WRITE DATA\
+    \ TAPE\n180 CLS1:INPUT \"DATA TAPE READY\";A$ 'wait for tape ok\n190 OPEN \"O\"\
+    ,#-1,\"VOCAB\" 'open output file\n200 FOR Z=1 TO N 'write a data item\n210 PRINT\
+    \ #-1,A$(Z)\n220 NEXT Z\n230 CLOSE:GOTO 50\n```"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# Vocabulary Tester
+
+
+    240 REM ADD TO LIST
+
+    250 CIS1:PRINT"ADD NEW WORDS";TAB(18);"SPACE FOR";100-N; **
+
+    260 PRINT:PRINT"CEDILLA IS
+
+
+    410 REM TEST ENGLISH/FRENCH
+
+    420 S=0:CIS1:G=0
+
+    430 X=RND(N) ''get string for testing
+
+    440 GOSUB 840 ''split the string into two
+
+    450 PRINT"ENGLISH ";X1
+
+    460 LINEINPUT"FRENCH ";X$2 THEN PRINT"SCORE";"OUT OF \
+
+
+    520 REM TEST ENGLISH/FRENCH
+
+    530 S=0:CIS1:G=0
+
+    540 X=RND(N)
+
+    550 GOSUB 840 ''split the string
+
+    560 PRINT"FRENCH ";X3";X2$"
+
+    570 LINEINPUT"ENGLISH ";A$ ''get the answer'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# Vocabulary Tester
+
+
+    580 IF A$=""THEN PRINT SCORE ";S;" OUT OF "G:
+
+    590 G=G+1 ''null means quit
+
+    600 IF INSTR(A$,X1)<0 THEN 620 ''<> is OK
+
+    610 PRINT"THE ANSWER IS ";X1;" GOTO 540
+
+    620 S=S+1;GOTO 540 ''add one to score
+
+
+    630 REM REVIEW THE LIST/CHARGE
+
+    640 CLS1=1
+
+    650 IF S>N''THEN 500 ''S N means all through
+
+    660 PRINT A$(S)
+
+    670 INPUT "Q:Y=CHANGE;"A$
+
+    680 IF LEFTS(A,1)="Y" THEN 690 ''Y means change is required
+
+    685 IF LEFTS(A,1)="Q" THEN 500 ''Q means go back to menu
+
+    688 GOTO 710
+
+    690 INPUT "NEW VALUE:"A$(S)
+
+    710 S=S+1:GOTO 650 ''step on for next item
+
+    720 END
+
+
+    730 REM DISPLAY MENU
+
+    740 CLS1:PRINT TAB(8);"VOCABULARY"
+
+    750 PRINT"1=READ DATA TAPE"
+
+    760 PRINT "2=WRITE DATA TAPE"
+
+    770 PRINT "3=ADD TO CURRENT LIST"
+
+    780 PRINT "4=TEST ENGLISH/FRENCH"
+
+    790 PRINT "5=TEST FRENCH/ENGLISH"
+
+    800 PRINT"6=REVIEW/CHANGE DATA"
+
+    810 PRINT:INPUT"CHOICE;"MN
+
+    820 IF MN<1 OR MN>6 THEN 740
+
+    830 RETURN
+
+
+    840 REM GET STRING AND SPLIT
+
+    850 X1$="":X2$=""
+
+    860 X$=A$(X):W=INSTR(X,/") ''find position of "/" character
+
+    870 IF W=0''THEN RETURN
+
+    880 X1$=MID$(X,1,W-1):X2$=MID$(X,W+1,LEN(X)-W)
+
+    890 RETURN'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# Vocabulary Tester
+
+
+    The INSTR technique, used in this program for testing the / replies, we have used
+    before in the QUIZ program at the / beginning. If verbs for instance are put as
+    e.g.:
+
+
+    RECEVOIR
+
+    RECEIVE
+
+
+    If you answer, ''To receive'' instead of just "receive", then this / will be marked
+    correct. Notice that if you fail to put in the / gender, when answering in French,
+    this will be marked wrong, / which is quite right and proper.
+
+
+    This type of update could be used for all sorts of diff- / er things. You could
+    use it, for instance, to keep details of / your gramophone record collection.
+    To do this you might delete / the testing part, but also add a search facility
+    to find any records / by Beethoven or some specific title. The search bit would
+    be / coded as follows:
+
+
+    ```
+
+    1000 INPUT "SEARCH KEY";A$
+
+    1010 FOR Z=1 TO N ''N=no of stored records
+
+    1020 IF INSTR(A(N),A)<0 THEN PRINT A(N)
+
+    1030 NEXT Z
+
+    ```
+
+
+    The front half of the string, which we now use for the English, / could be the
+    record title and the back half, which we now use for the / French, could be the
+    storage reference code.
+
+
+    You would need of course to make other modifications, but the / mechanism of reading
+    tapes, writing tapes and adding to the data / would stay the same.
+
+
+    The whole business of keeping records on files, is one of the / most powerful
+    things that computers can do. It will work best / when you have a random access
+    file or disk unit. This is because / you then need not bother with limits imposed
+    by the machine''s / memory. Now, if you put all the machine''s Pontoon winnings
+    in a / special money box, then perhaps .....'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# ENIGMA VARIATIONS
+
+
+    Probably the Enigma coding machine used by the German Army during the Second World
+    War was responsible for the development of the electronic computer. The story
+    of the work done at Bletchley Park has been told many times (see for instance
+    "Most Secret War" by R.V. Jones - Hodder and Stoughton-Coronet Books). Much is
+    still shrouded in mystery but without doubt Alan Turing was pre-eminently responsible
+    for the design of the "Bombe" which the first computer was called.
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_66_0.png)
+
+
+    For those who have never seen them it is difficult to imagine the sheer bulk of
+    the early computers. I once attended a sherry party held inside the ACE computer
+    at the National Physical Laboratory. Also, so the story goes, a group of important
+    overseas visitors were being shown round the DEUCE computer. The salesman confidently
+    strode to the echo chamber which was used as the dynamic RAM for the machine and
+    threw open the door. Inside, the astonished visitors found an engineer eating
+    sandwiches in peace and quiet, or so he thought, sitting on the loudspeaker enclosures
+    inside the chamber.
+
+
+    All of which is a sneaky introduction to the following encoding program, which
+    imitates the action of an Enigma machine and produces a secret code that is extremely
+    difficult to crack unless you have an IBM 3031 machine with a few days spare time.
+
+
+    The program relies upon the tip we have described earlier for setting the seed
+    of the random number generator. Random numbers produced from a given seed are
+    not truly random but repeat a predetermined sequence every time. So, there are
+    three parts to the'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# Enigma Variations
+
+
+    The first is the secret number used to unlock the key today. This can be anything
+    up to 9 digits in length. The second is the order of the letters in the coding
+    string. We have chosen to put the letters as "ABC...." followed by the numbers
+    and special characters, but you could have them in any order that you have agreed
+    with your control. This allows you to have 42!(factorial) permutations for your
+    code (a monstrous number). Finally the decipherment is carried out by adding a
+    random number to obtain the substitute letter to be used. This means that "AAA"
+    for example would not be encoded as the same letter every time - counting the
+    letter frequency will not help in cracking the code.
+
+
+    ```
+
+    20 INPUT "KEY";A:IF A<0 THEN 20
+
+    30 A=A:X=RND(A)
+
+    40 INPUT "ENCODE/DECODE";A$
+
+    50 IF A="" THEN END ''null means quit
+
+    60 A$=LEFTS(A,1)
+
+    70 IF A="D" THEN S=1:PRINT"DECODING" S=0:PRINT"CODING"
+
+    80 CHANGE STRING W TO SUIT YOUR OWN CODE
+
+    90 W="ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789#$,,?":W=LEN(W)
+
+    100 INPUT "ENTER TEXT";A$:IF A="" THEN END
+
+    110 A$=LEN(A)
+
+    120 FOR N=1 TO A
+
+    130 X=$MID($A$,N,1)
+
+    140 GOSUB 230 200 ''find the letter position within w$
+
+    150 IF S=1 THEN Y=Y+W ''decoding
+
+    160 Y=RND(W)+X
+
+    170 IF Y>W THEN Y=Y-W:GOTO 170
+
+    180 PRINT MID($W$,Y,1);
+
+    190 NEXT N:PRINT:GOTO 100
+
+    200 Y=X-RND(W)''decoding
+
+    210 IF Y<1 THEN Y=Y+W:GOTO 210
+
+    220 GOTO 180
+
+    230 X=INSTR(W,$X)
+
+    240 IF X=0 THEN X=\=
+
+    250 RETURN
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# COMPUTERMIND
+
+
+    In this version of the well known traditional game you are asked to guess at the
+    combination of colours that the computer has chosen. You are allowed 15 tries,
+    and each time the computer will tell you the number of correct colours in the
+    right position and the number of correct colours in the wrong position.
+
+
+    There are four levels of difficulty which give four different colours, any four
+    colours, five different colours, or any five colours,
+
+
+    ```
+
+    10 PRINT TAB(10);"MASTERMIND"
+
+    20 CIS1
+
+    30 Z$="RGBYW"
+
+    40 PRINT "YOU MAY CHOOSE FROM ANY OF"
+
+    50 PRINT "THESE COLOURS ";Z$
+
+    60 PRINT "ENTER YOUR GUESS AS A 4 OR 5"
+
+    70 PRINT "LETTER WORD E.G. RGBY, AND "
+
+    80 PRINT "PRESS ENTER. I WILL TELL YOU"
+
+    90 PRINT "YOUR SCORE AS A NUMBER OF BLACK"
+
+    100 PRINT "(CORRECT COLOUR AND CORRECT "n110 PRINT "POSITION), AND WHITE (CORRECT
+    "n120 PRINT "COLOUR BUT WRONG POSITION)."
+
+    130 PRINT "IF I FIND YOU IN TROUBLE I"
+
+    140 PRINT "WILL LET YOU KNOW. ENTER"
+
+    150 PRINT CHR$(34);"QUIT";CHR$(34);" IF YOU WANT TO GIVE IN."
+
+    160 PRINT "PRESS ENTER TO START"
+
+    170 PRINT
+
+    180 INPUT X$
+
+    190 CIS1
+
+    200 INPUT "HOW COMPLEX ";A
+
+    210 CIS1:IF A>0 AND A<5 '' THEN 240
+
+    220 PRINT A;" IS NOT ALLOWED"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# Computermind
+
+
+    ```
+
+    230 GOTO 200
+
+    240 N=4:IF A>2 THEN N=5
+
+    250 S=(A=INT(A/2))*2
+
+    260 IF S=THEN PRINT "ANY "
+
+    270 PRINT USING"#";N;
+
+    280 IF NOT S THEN PRINT "DIFFERENT";
+
+    290 PRINT "FROM "$Z
+
+    300 G$="FOR A=1 TO N ''set up the string to be guessed
+
+    310 S=MID(G,$RAND(6),1)
+
+    ''S true means can be similar
+
+    320 IF S OR A=1 THEN 340
+
+    330 IF INSTR(GU,$S)<0 THEN 310
+
+    340 GU$=GU+$T;NEXT A ''INPUT GU$
+
+    350 PRINT "#," ":PRINT @23,""
+
+    360 G$="QUIT" THEN 540
+
+    370 P=(G(0)+1)*32
+
+    380 IF P>480 THEN P=480
+
+    390 PRINT @P,G;
+
+    400 IF LEN(G)<N THEN 550 ''reset counters
+
+    410 B=0:W=0
+
+    420 FOR A=1 TO N ''count blacks and whites
+
+    430 MID(G,$A,1)=MID(G,$A,1) THEN B=B+1:GOTO 450
+
+    440 INSTR(GU,$MID(G,$A,1))<>0 THEN W=W+1
+
+    450 NEXT A
+
+    460 PRINT B":"BLACK,"W":"WHITE"
+
+    470 G(0)=0+1 ''wins
+
+    480 IF B=N THEN 530 ''loses
+
+    490 IF G(0)>14 THEN 530 PRINT @499,"LAST CHANCE!"
+
+    500 G(0)=:PRINT @480," = " ":GOTO 350
+
+    510 IF G(0)>11 THEN PRINT"I THINK YOU ARE "LOSING"
+
+    520 GOTO 350
+
+    530 PRINT "SORRY - YOU LOSE"
+
+    540 PRINT "THE ANSWER WAS ";GU:GOTO 580
+
+    550 PRINT @6,"IS NOT VALID - TRY AGAIN
+
+    560 GOTO 350
+
+    570 PRINT "YOU WIN"
+
+    580 PRINT "YOU TOOK ";G(0):"TURNS"
+
+    590 INPUT "ANOTHER GO";Z
+
+    600 IF LEFT$(G,$1)="Y" THEN RUN
+
+    ```
+
+
+    69'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# REVERSE
+
+
+    For this game, you are given a string of numbers and you can reverse any number
+    counting from the left hand end. The object is to re-arrange them into numerical
+    sequence in the smallest number of moves. When you have the trick of it, it is
+    very easy to amaze your friends. I won''t spoil it by telling the secret.
+
+
+    ```
+
+    10 CLS
+
+    20 PRINT TAB(10);"REVERSE"
+
+    30 PRINT
+
+    40 PRINT "THE OBJECT 9 THE GAME IS TO"
+
+    50 PRINT "RE-ARRANGE 9 DIGITS BACK INTO"
+
+    60 PRINT "SEQUENCE. YOU TELL ME HOW MANY"
+
+    70 PRINT "DIGITS TO REVERSE IN EACH TURN"
+
+    80 PRINT "(STARTING FROM THE LEFT). E.G."
+
+    90 PRINT "IF YOU WERE GIVEN:"
+
+    100 PRINT "5 6 7 8 9 4 3 2 1"
+
+    110 PRINT "NOW REVERSE 5 TO GIVE:"
+
+    120 PRINT "9 8 7 6 5 4 3 2 1"
+
+    130 PRINT "NOW REVERSE 9 TO WIN"
+
+    140 PRINT
+
+    150 INPUT "PRESS ENTER TO CONTINUE";Y$
+
+    160 DIM A(9)          ''array for numbers
+
+    170 FOR I=1 TO 9
+
+    180 N=RAND(9)
+
+    190 IF I=1 THEN 230
+
+    200 FOR J=1 TO I-1
+
+    210 IF N-A(J) THEN 180
+
+    220 NEXT
+
+    230 A(I)=N
+
+    240 NEXT
+
+    250 C=0          ''counter''
+
+    260 CLS
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# Reverse
+
+
+    ```
+
+    270 FOR I=1 TO 9      ''print the new string
+
+    280 PRINT A(I);
+
+    290 NEXT I
+
+    300 PRINT:PRINT
+
+    310 INPUT "NUMBER TO REVERSE";N
+
+    320 IF N=0 AND N<10 THEN 350
+
+    330 PRINT "INVALID - TRY AGAIN"
+
+    340 GOTOTO270
+
+    350 K=KINT(N+1)/2      ''K=count loop for reverse
+
+    360 FOR I=1 TO K
+
+    370 J=A(I)             ''J is work location
+
+    380 A(N+1-I)=J         ''take one out
+
+    390 A(N+1-I)=J         ''put one back
+
+    400 NEXT I
+
+    410 C=C+1
+
+    420 FOR I=1 TO 9      ''test if now in order
+
+    430 IF NOT A(I) THEN 260
+
+    440 NEXT I
+
+    450 FOR I=1 TO 9:PRINT A(I);:NEXT:C
+
+    460 PRINT "YOU TOOK";C;" TURNS"
+
+    470 INPUT "ANOTHER GAME";Y$
+
+    480 IF LEFT$(Y,1)="Y" THEN 170
+
+    490 END
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# LUCKY DIP
+
+
+    Morse Code Tester
+
+
+    The main problem in learning Morse code is not learning to send the code, but
+    learning to receive it. To practice receiving you need an expert assistant to
+    help. The Dragon can be this assistant and give you practice at different speeds
+    with completely consistent sending, with the same "fist" every time.
+
+
+    You still need a helper to key in the message but the helper need know nothing
+    of Morse code.
+
+
+    ```
+
+    10 REM MORSE CODE SENDER
+
+    20 CLS:PRINT TAB(8);"MORSE CODE SENDER"
+
+    30 INPUT"SPEED";SP ''higher numbers go slower
+
+    40 DS=INT(SP):DD=3*DS
+
+    50 GOSUB 230 ''set up the code array
+
+    60 INPUT A$ ''text to be sent
+
+    70 FOR L=1 TO LEN(A$) ''get next letter
+
+    80 W=ASC(MID(A$,L,1)) ''numbers
+
+    90 IF W>=48 AND W<=57 THEN W=W-48:GOSUB 150:GOTO 120 ''letters
+
+    100 IF W>=65 AND W<=90 THEN W=W-55:GOSUB 150:GOTO 120
+
+    110 FOR DL=1 TO SP*100:NEXT DL ''inter word gap
+
+    120 FOR DL=1 TO SP*60:NEXT DL ''inter letter gap
+
+    130 NEXT L
+
+    140 GOTO 60
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "# Lucky Dip\n\n```\n'subroutine to \"send\" the code\n150 S=M(W+1)\n160 IF\
+    \ S=0THEN RETURN\n170 C=S-INT(S/10)*10\n180 IF C=1 THEN SOUND 100,DS:GOTO 200\n\
+    190 IF C=2 THEN SOUND 100,DD\n  'get next bit and inter-bit gap\n200 S=M(S)/10):FOR\
+    \ X=1 TO 30*SP:NEXT X\n210 GOTO 160\n220 RETURN\n  'set up morse code array\n\
+    230 DIM M(36)\n240 DATA 22222,22221,22211,22111,21111,\n     11111,11212,11222,12222\n\
+    250 DATA 21,1122,1212,112,121,121,1111,11,2221,\n     212,1121,22,22,22,1221,2122,121,111,111,2,\n\
+    \     211,2111,221,2112,2212,1122\n260 FOR X=1 TO 36:READ M(X):NEXT X\n270 RETURN\n\
+    ```\n\n# Standard Deviation\n\nThe standard deviation is a measure of the variability\
+    \ of statistical observations. Its main use is in predicting the limits between\
+    \ which all occurrences of the data are likely to lie, if the data follows a \"\
+    normal\" distribution. For example, 99.5 % will lie within plus or minus three\
+    \ standard deviations from the average. The program shown below will work even\
+    \ if the data includes Ø or negative numbers."
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# Lucky Dip
+
+
+    ```
+
+    20 REM PT=0:SS=0:SM=0:CLS1
+
+    30 INPUT ENTER DATA";A$
+
+    40 IF A<> THEN 80 end is signified by (Enter)
+
+    50 A=VAL(A$):PT=PT+1
+
+    60 SM=SM+A:SS=SS+A
+
+    70 GOTO 30
+
+    80 AV=SM/PT:R=AV
+
+    90 R2=SS/PT:IF R2<0 THEN R2=ABS(R2)
+
+    100 R2=SQR(R2)
+
+    110 PRINT "STD";R
+
+    120 PRINT "AVERAGE";AV
+
+    ```
+
+
+    # Reaction Tester
+
+
+    How fast can you react to an emergency stop? Are you really fit to drive, or have
+    you had one over the eight? Find out with this reaction speed tester. When the
+    message "NOW" appears on the screen, press a key. Your reaction time is then given.
+    Try pressing it before the off and it screams "CHEAT CHEAT". Times about 3 seconds
+    are average, for us oldies. Really sharp people can make it in less.
+
+
+    ```
+
+    10 REM REACTION TESTER
+
+    20 CIS1:PRINT TAB($);"REACTION TESTER":PRINT
+
+    30 PRINT "PRESS A KEY WHEN YOU SEE ";CHR$(34);"NOW";CHR$(34)
+
+    40 FOR D=1 TO RND(3000):NEXT D
+
+    random delay before start
+
+    50 TIMER=0
+
+    60 IF INKEY$="" THEN PRINT448," CHEAT - CHEAT":GOTO 150
+
+    70 PRINT (@(3+RND(9))*32+RND(20),"*** NOW ***"
+
+    80 IF INKEY$="" THEN 80
+
+    90 T=TIMER/44
+
+    100 PRINT 448,"YOU TOOK "
+
+    110 PRINTUSING"#.##";T;
+
+    120 PRINT "SECONDS"
+
+    130 IF T>3 THEN PRINT"WAKY WAKY WAKY"
+
+    140 IF T<.2 THEN PRINT"SHARP TODAY AREN''T WE"
+
+    150 INPUT"PRESS ENTER FOR ANOTHER GO";A$
+
+    160 RUN
+
+    ```
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_74_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# Lucky Dip
+
+
+    # VAT Calculator
+
+
+    Value Added Tax involves some very fiddly calculations in either adding it to
+    goods values or taking it out to work out the input tax. This program does both
+    at the same time. It produces:
+
+
+    +   - the goods value (assuming the input value is tax inclusive)
+
+    - the tax value (assuming the input value is tax inclusive)
+
+    - the tax that would be payable if the input value were exclusive of tax
+
+
+    ```
+
+    10 REM VAT CALCULATION PROGRAM
+
+    20 V=15 ''CURRENT RATE OF VAT
+
+    30 CLS:PRINT TAB(4);"GOODS";TAB(14);"VAT INC";TAB(24);"VAT EXC"
+
+    40 INPUT "AMOUNT":A$\n50 IF A="" THEN END
+
+    60 A=VAL(A$)
+
+    70 B=A/(1+V):C=A-B:D=A*V
+
+    80 PRINT USING"###,***,## ";B;C;D
+
+    90 GOTO 40
+
+    ```
+
+
+    # Anagram Solver
+
+
+    Crossword fans will love this program - it creates anagrams of any word entered.
+    The results that come up are really to prompt you into seeing words that can be
+    formed, since a 7 letter word has 5040 permutations, which would take too long
+    to run through. If you see a word that looks promising then use (Shift)/@ to stop
+    the display.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Lucky Dip
+
+
+    ```
+
+    10 REM ANAGRAM SOLVER
+
+    20 CLS:INPUT"WORD";A$
+
+    30 N=LEN(A$):DIM N(N)
+
+    40 W=INT(31/(N+1))
+
+    50 FOR A=1 TO W
+
+    60 GOSUB 140
+
+    70 FOR B=1 TO N
+
+    80 PRINT MID($A,N(B),1);
+
+    90 NEXT B
+
+    100 PRINT "/"
+
+    110 NEXT A
+
+    120 PRINT
+
+    130 GOTO 50
+
+    140 FOR Z=1 TO N:Z(Z)=0:NEXT
+
+    150 FOR Z=1 TO N
+
+    160 R=RND(N):IF N(R)<0 THEN 160
+
+    170 N(R)=Z:NEXT 2
+
+    180 RETURN
+
+    ```
+
+
+    # Metric/Imperial Conversion
+
+
+    Given a measurement in either metric or imperial units, this program converts
+    to the other type of units. Within limits it has a degree of artificial intelligence.
+    If you specify 1.2IN or 1.2INCHES it is all the same.
+
+
+    | Length | Weight | Capacity | Area |
+
+    |---|---|---|--|
+
+    | MM | GM | CC | Sq MM |
+
+    | CM | KG | | Sq CM |
+
+    | METres | TONNes | | Sq ME |
+
+    | KM | | | HEctares / Sq KM |
+
+    | Inches | OZ | PT | Sq IN |
+
+    | FT | LB | Gallons | Sq FT |
+
+    | Yards | TONS | | Sq Yards / ACres |
+
+    | Miles | | | Sq Miles |'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "# Lucky Dip\n\nHere is a sample run:\n\n```\nENTER NUMBER THEN UNITS ? 25.4\
+    \ CM\n0.83 FT\n0.28 Y\nENTER NUMBER THEN UNITS ? 1 SQ METRE\n1.20 SQUARE Y\n0.00\
+    \ AC\nENTER NUMBER THEN UNITS ? CM 22\nENTER NUMBER FIRST\nENTER NUMBER THEN UNITS\
+    \ ? 22\nWHAT ARE THE UNITS?\nENTER NUMBER THEN UNITS ? 22 PECKS\nUNITS NOT FOUND\n\
+    ENTER NUMBER THEN UNITS ? 5 LI\n1.10 GA\n10 SZ=40\n20 DIM AA$(SZ),A(SZ)\n30 DATA\
+    \ \"M4\",\"CM\",\"ME\",\"KM\",\"\",\"\"\n40 DATA \"GM\",\"KG\",\"TONN\",\"\",\"\
+    \",\"\"\n50 DATA \"CC\",\"LI\",\"MM\",\"CM\",\"ME\",\"KM\",\"\",\"\",\"\"\n60\
+    \ DATA \"IN\",\"F\",\"MY\",\"MI\",\"OZ\",\"\",\"\"\n70 DATA \"LB\",\"TONE\",\"\
+    \",\"PI\",\"GA\",\"\",\"\",\"\"\n80 DATA \"IN\",\"F\",\"T\",\"AC\",\"MI\",\"\"\
+    ,\"\",\"\",\"\"\n90 FOR X=1 TO 1000:READ AA AA(X):NEXT X\n100 DATA 1,1000,1E-6+0,1,1000,1E-6+0,1,\n\
+    1000,0,1E-6,-1E-4,1,1E+4\n110 DATA 1E-6+0,0,25.4,304.8,891.4,914,\n1609344,0,28.35,453.6,101664\n\
+    120 DATA 0,568,26.456,0.9,6.451E-4,.09290,.8361,4046.72\n130 DATA 258990.3,0,0,0\n\
+    140 FOR X=1 TO SZ:READ A(X):NEXT X\n   'main loop\n150 PRINT \"ENTER NUMBER THEN\
+    \ UNITS\"\n160 INPUT A$\n170 A=VAL(A$):IF A=0 THEN PRINT \"ENTER NUMBER FIRST\"\
+    :GOTO 150\n```"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# Lucky Dip
+
+
+    The program works by using scaling factors. Suppose we have input 25.4 cms; this
+    is first split into into "25.4" and "CMS". This is not square measure (see line
+    230), so we search the array AA$ and stop on element 2 which contains "CM". Variable
+    M becomes 22 (line 300) and we calculate:
+
+
+    25.4* 10/304.8 (element 22) = 0.83 FEET (element AA$(22))
+
+    25.4* 10/914.4 (element 23) = 0.28 Y (element AA$(23))
+
+
+    If the units contain the letters "SQ" then the search is confined to the square
+    measure part of the table. The zeros in the table are included so that if there
+    is no relevant higher unit, it will not be printed, (see line 320).'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "# Lucky Dip\n\n# Label Printing\n\nIf you are lucky enough to have a printer\
+    \ then you can use it to produce labels to stick on your notepad. If you don't\
+    \ have one can still work the program and look at the output on the screen, but\
+    \ the practical use of this is doubtful!\n\n```\n10 REM TO PRINT LABELS\n20 PR=2\
+    \      'set this as PR=0 to have screen output\n30 IF PR=2 THEN OPEN\"O\",-PR,\"\
+    OP\" 'open the printer file\n40 CLS\n50 LINEINPUT \"NAME\"      ;A$(1)\n60 FOR\
+    \ Z=1 TO 4         'get lines of address\n70 PRINT\"LINE \";Z;\n80 LINEINPUT A$(Z+1)\n\
+    90 NEXT\n100 INPUT \"HOW MANY LABELS\";N 'number of labels\n110 FOR Z=1 TO N \
+    \       'number off loop\n120 FOR A=1 TO 5        'number of lines\n130 PRINT\
+    \ #-PR,AS$(A)    'print a line\n140 NEXT A\n150 FOR B=1 TO 3       'space between\
+    \ labels\n                        'alter to suit\n160 PRINT #-PR,\"\"\n170 NEXT\
+    \ B\n180 NEXT Z\n190 IF PR=2 'IMEN CLOSE\n```\n\nThe interesting thing about this\
+    \ program is that it can be fooled to divert output to the screen or to the printer\
+    \ as you require. See line 130 which if PR=2 would read:\n\n130 PRINT #-2,AS$(A)\n\
+    \nwhereas if you have reset PR=0 then it reads:\n\n130 PRINT #-0,AS$(A)"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# Lucky Dip
+
+
+    This could be a useful trick where you have a program which might require screen
+    output and might require printer output according to user choice.
+
+
+    # Date Validation
+
+
+    A very common problem in programming concerns checking dates for validity against
+    all the known calendar rules. We assume, being English, that the sequence will
+    be Day, Month, Year but there can still be considerable variation within that
+    e.g.:
+
+
+    ```
+
+    28.11.82
+
+    2.11.82
+
+    2.2.82
+
+    2/2/82
+
+    2 2 82
+
+
+    10 REM DATE VALIDATION
+
+    20 INPUT "DATE":A ''get the date which might include ,
+
+    30 N=W-1 TO LEN(A) ''
+
+    40 FOR Z=1 TO LEN(A) ''check each character found
+
+    50 T=ASC(MID$(A,Z,1)) wait until non-numeric character found
+
+    60 IF T<48 OR T>57 THEN D(N)=VAL(MID$(A,W,Z)):N=N+1:W=Z+1
+
+    70 NEXT Z:D(2)=VAL(MID$(A,W)) ''last one is year
+
+    30 days September, April, June, and November
+
+    80 DATA 31, 28, 31, 30, 31, 30, 31, 31, 30, 31
+
+    90 IF D(2)<1 OR D(2)>12 THEN PRINT "MONTH ERROR":GOTO 20
+
+    100 RESTORE
+
+    110 FOR Z=1 TO D(2):READ L:NEXT
+
+    ''check for leap year in February
+
+    120 IF D(2)=2 AND INT(D(3)/4)*4=D(3) THEN L=29
+
+    130 IF D(1)<1 OR D(1)>L THEN PRINT "DAY ERROR":GOTO 20
+
+    140 IF D(3)<1 THEN PRINT "YEAR ERROR":GOTO 20
+
+    ''print it out properly formatted
+
+    150 FOR Z=1 TO 3:PRINTING## ";D(Z);NEXT
+
+    160 PRINT"\GOTO 20
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# Lucky Dip
+
+
+    # Memory Hex Display
+
+
+    A useful routine for peeking into the BASIC interpreter ROM to
+
+    see what''s going on. The list of valid commands starts at
+
+    address 8033 (hex) or 32819 (decimal). List it first in alpha-
+
+    form to see the command words - the only surprise is the
+
+    command DLOAD, which presumably refers to disk file loading.
+
+
+    ```
+
+    1000 CLS
+
+    1010 PRINT "LIST MEMORY"
+
+    1020 PRINT "USE @/SHIFT TO PAUSE"
+
+    1030 PRINT "USE SPACE TO RESUME"
+
+    1040 PRINT "BREAK TO STOP"
+
+    1050 INPUT "ENTER MEMORY START ADDRESS (DEC)";F
+
+    1060 IF HEX(H)/ALPHA(A)=A$
+
+    1070 IF H=(AS=H)=0 THEN 1060
+
+    1080 PRINT RIGHTS("0000"+HEX$(F),4);" "
+
+    1090 FOR X=1 TO 8
+
+    1100 IF H THEN 1150
+
+    1110 IF Z=PEEK(F)
+
+    1120 IF Z>=32 AND Z<127 THEN PRINT CHR$(Z);ELSE PRINT "."
+
+    1140 GOTO 1170
+
+    1150 Z$=RIGHTS("00"+HEX$(Z),2)
+
+    1160 PRINT Z$"; ""
+
+    1170 F=F+1
+
+    1180 NEXT X
+
+    1190 PRINT:GOTO 1090
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# GRAPHICS SECTION'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# ROLLER DICE
+
+
+    Our family have been known to
+
+    cheat, when in sticky
+
+    situations, needing say a four
+
+    desperately to avoid hotels on
+
+    "Park Lane". Somehow, by
+
+    accident the dice roll under the
+
+    side-board and whoever retrieves
+
+    them can say whatever they like!
+
+    Nobody believes the convenient
+
+    answer and violent arguments
+
+    ensure. Use the computer to
+
+    sulate the dice and you solve
+
+    the problem. Anybody rolling
+
+    the computer under the table is
+
+    disqualified in a big way.
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_83_0.png)
+
+
+    Whilst this example is a fairly easy one to follow, it provides
+
+    t starting point for a detailed exposition of the graphics
+
+    features of the Dragon. The four chapters following also deal
+
+    with the same subject and form a detailed guide to all the exc-
+
+    ell features which the Dragon provides. The whole subject is
+
+    rather confusingly treated in the Basic instruction manual and
+
+    hopefully a few worked examples of the facilities will clear the
+
+    air.
+
+
+    The first thing to appreciate is that low level graphics and high
+
+    level graphics are quite different things. They deal with
+
+    different areas of memory and have different commands. the only
+
+    commands of any relevance to low-level graphics are:
+
+
+    CLS c      Set wheel to colour specified (c).
+
+
+    SET (x,y,c) Set a quarter character point, specified by
+
+    coordinates x(across the screen) and y (down the screen) to
+
+    colour c. The top left corner of the screen is 0,0 and
+
+    bottom right of the screen is 63,31. This is a different
+
+    numbering system to that used for PRINT @ and quite diff-'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: 'erent from that used for high resolution graphics - very confusing.
+
+
+    RESET (x,y) Set a quarter character point to the background colour. Points x and
+    y defined as before.
+
+
+    POINT (x,y) Function returns Ø if the point is off, -1 if the point contain text
+    and the colour if it is set.
+
+
+    SCREEN (Ø,n) Command used to reset the low resolution screen from high level graphics.
+    In theory, should also be able to set the background colour for the above commands,
+    but in practice has little effect.
+
+
+    Some of the effects produced by these commands are not quite what you might expect.
+    Consider, for example, the following little program:
+
+
+    ```
+
+    10 CIS ''clear screen to green
+
+    20 SET(20,20,5) ''set a point to colour Buff
+
+    30 RESET(10,10) ''reset a point to background colour
+
+    40 CL=32: PRINT @383,CHRS(134+CL) '' print a chequer pattern
+
+    ''character in colour blue
+
+    ```
+
+
+    Run as it stands, it has some surprising effects. Firstly the SET command has
+    set the whole square to the colour and not the point only. Secondly, the RESET
+    has reset the point to Black and not Green as might have been expected. Thirdly,
+    the background of the diamond character has been set to black, whereas green might
+    have been expected.
+
+
+    Try changing line 10 to CIS. This time, the SET command has set only the single
+    square, as requested, but has turned the remainder of the square to black! The
+    RESET command this time has reset the whole square to black and not just the point.
+    The CHR$ function produces the same effect.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# Roller Dice
+
+
+    Try also adding:
+
+
+    15 SCREEN 0,0
+
+
+    or:
+
+
+    15 SCREEN 0,1
+
+
+    You would expect these to have some effect, but they do not.
+
+
+    These limitations and problems can all be avoided if you clear the screen to black
+    at the beginning by CLS0. With a black background all these problems can be avoided
+    and everything has the effect you might expect. The only problem is that every
+    time the computer prints on the screen the character background reverts to green.
+
+
+    So, at last, we come to the example program:
+
+
+    ```
+
+    10 REM DICE PROGRAM
+
+    20 CLS:CL=5
+
+    30 FOR P=11 TO 38 STEP 27
+
+    40 TT=RND(6)
+
+    50 GOSUB 110 ''DRAW BOX
+
+    60 GOSUB 210 ''PAINT SPOTS
+
+    70 NEXT P
+
+    80 PRINT @480,""""
+
+    90 INPUT AS
+
+    100 GOTO 20
+
+    ```
+
+
+    > ''note screen cleared to black
+
+    to try different colours
+
+    change CL= statement
+
+    P values of 11 and 38 are
+
+    ''top left corners of the dice
+
+    get the value of the dice
+
+
+    > ''pause - note the ";" to prevent
+
+    the whole line going green
+
+    press (Enter) to roll again'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# Roller Dice
+
+
+    ''first subroutine draws the square
+
+
+    ```
+
+    110 REM DRAW BOX
+
+    120 Y=12:FOR X=P TO 15+P
+
+    130 SET(X,Y,CL):NEXT
+
+    140 Y=24:FOR X=P TO 15+P
+
+    150 SET(X,Y,CL):NEXT
+
+    160 X=P:FOR Y=12 TO 24
+
+    170 SET(X,Y,CL):NEXT
+
+    180 X=P+15:FOR Y=12 TO 24
+
+    190 SET(X,Y,CL):NEXT
+
+    200 RETURN
+
+    ```
+
+
+    ''line across at the top
+
+
+    ''bottom line across the screen
+
+
+    ''left vertical line
+
+
+    ''right hand vertical line
+
+
+    ```
+
+    210 REM DRAW SPOTS
+
+    220 IF TT=1 OR TT=3 THEN TT=5 THEN SET(P+8,18,CL) ''centre spot
+
+    230 IF TT=1 THEN RETURN
+
+    240 IF TT=2 OR TT=3 THEN SET(P+12,15,CL):SET(P+4,21,CL):RETURN
+
+    250 SET(P+13,14,CL) ''four corner spots - top left
+
+    260 SET(P+2,14,CL) ''top right
+
+    270 SET(P+2,22,CL) ''bottom left
+
+    280 SET(P+13,22,CL) ''bottom right
+
+    290 IF TT>6 THEN RETURN
+
+    300 SET(P+2,18,CL) ''middle left spot for a six
+
+    310 SET(P+13,18,CL) ''middle right spot for a six
+
+    320 RETURN
+
+    ```
+
+
+    ''second subroutine fills in the spots
+
+
+    Try deleting lines 80 and 90. This will cause it to roll incessantly and provides
+    a crude form of animation. It is unfortunately too slow to be of real use; the
+    next chapters discuss more sophisticated methods of animation.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# THE FLY Ø AND THE TREACLE
+
+
+    We now move on to the higher level graphics, starting with the highest resolution
+    (the most points). For this we use mode 4, which has two simple colour sets which
+    is conveniently available, Black and Green (Set Ø) and Black and Buff (Set 1).
+    Of these we are using Black and Green, so colour Ø is Black and colour Ø is Green.
+    In this mode, only one bit of colour information is stored for each point (Ø or
+    1). Four pages of memory are required for this mode.
+
+
+    The program is very simple; a fly is flitting about in the forest above a pool
+    of treacle handy. The fly moves about at random, going "buzz, buzz" in the plaintive
+    and annoying way that flies have. Eventually he lands on the treacle and gets
+    stuck. At this point he can''t move any more and starts getting annoyed with a
+    helpless "beep, beep." Just what he deserved! A silly program, but it illustrates
+    some of the points about graphics.
+
+
+    First of all we must understand the effect of some of the special high resolution
+    mode commands.
+
+
+    PCLEAR n pages of graphics memory for use in storing data to be displayed. This
+    does not clear the graphics area; it does not display the area; it can cause string
+    variables to be erased, since graphics space would appear to be allocated above
+    string space (for this reason, always put the PCLEAR command first in the program).
+
+
+    PMODE n,p Set the mode or resolution, which determine how information put into
+    the graphics area will be recorded. N sets the mode and p sets the next page to
+    be written into. In this mode there are four pages involved but p is the number
+    of the first and by implication PMODE 4,1 defines'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# The Fly and the Treacle
+
+
+    pages 1 to 4 inclusive. This command does not clear the area or cause it to be
+    displayed.
+
+
+    PCLS c This command does initialise the area to the colour specified. By implication,
+    it works for all the pages specified by the PMODE command. That is, if PMODE 4,1
+    has been set, then pages 1 to 4 inclusive will be reset by the command.
+
+
+    COLOR c1,c2 Foreground colour set as cl. Background colour set as c2. These terms
+    have nothing to do with the border round the graphics square - they refer to the
+    colour of INK and PAPER (to borrow terminology from elsewhere). LINE commands
+    refer to the foreground colour as do PSET commands; PRESET commands back to background
+    colour. The range of colours available to you is always less than those in the
+    range - with a little thought you can see why; green writing on green paper is
+    good for invisible writing but not much for anything else. If you have more than
+    two colours available, then foreground nor background need be the same as the
+    initial value set by PCIS.
+
+
+    SCREEN 1,n This is the valid command that causes a switch from the text mode (0)
+    to the high level graphics mode (1). The current colour set is defined by n. In
+    level 4 this can only be 0 or 1 and we are using 0. The page to be displayed is
+    taken from the current setting of PMODE at the time that the command is obeyed.
+    If, subsequently, PMODE page is changed, this does not cause the picture on the
+    screen to alter. Any subsequent screen command will cause the new setting to be
+    displayed. This means that you can work on another page displaying a totally different
+    one. Executing an END statement causes an automatic switch back to mode 0 (text),
+    so whilst working on program development it is best to include a statement e.g.,
+    . This causes an endless loop whilst you examine the picture. To get back again,
+    use Break key. If the colour set is changed, by a SCREEN command from that in
+    which it was initially written, the colours will change auto-'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: "# The Fly and the Treacle\n\nmatically, being re-interpreted in the new sense.\
+    \ We use this effect later, to produce a flashing sign board, with the colours\
+    \ displayed alternately.\n\nThe remaining commands we will introduce by example\
+    \ in the program. There are 256 elements across and 192 elements down the screen.\
+    \ Top left corner is 0,0 and bottom right corner is 255,191.\n\nThe picture on\
+    \ the screen has a green background for the forest, and a black rectangle at the\
+    \ bottom for the treacle. This is labelled 'TREACLE' in case anybody should be\
+    \ in doubt. Here is an enlarged picture of the fly.\n\nWing up position\n\n![](img/7a80be36866e3d2c055800fc953633cd_89_0.png)\n\
+    \nWing down position\n\n```\n10 REM FLY PROGRAM\n20 PCLEAR 4 'reserve 4 pages\
+    \ of memory for mode 4\n30 PMODE 4,1 'set highest definition and set page 1-4\n\
+    \   'for writing into\n40 PCLS1 'initialise pages 1-4 as colour Green\n50 COLOR\
+    \ 0,1 'set colour of INK as Black\n   'and PAPER as green\n60 LINE (0,160)-(255,160)\
+    \ 'draw a rectangle of black at\n   'the bottom of the screen (top left is\n \
+    \  '0,160; bottom right is 255,191\n   ',BF means draw a rectangle not a line\n\
+    \   'and fill it with foreground colour (black)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# The Fly and the Treacle
+
+
+    70 AS=BM160,172;C1;R4;L2;D8;B4;U8;U4;D4;L4;F4;B2;R4;
+
+    14;U8;R4;B4;D4;I4;D4;B6;R6;D8;U8;L4;D4;B10;I4;
+
+    UB4;B4;R2;D2;R4;B6;R14;UB;R4;B4;L4;
+
+
+    ''draw the word TREACLE in green inside
+
+    ''the treacle area at the bottom
+
+    ''BM is a blank Cl sets colour green
+
+    ''letter ''T'' e.g. is Right 4,Left 2,Down
+
+    ''8,Blank move, Right 4; then ready for
+
+    next letter
+
+
+    80 DRAW AS
+
+
+    90 COLOR 0,1
+
+    ''reset colour because the DRAW command
+
+    has Used Green Ink and reset foreground
+
+    ''colour
+
+
+    100 X=10+RND(235):Y=7+RND(140)
+
+    ''starting position - constants
+
+    ''ensure that is all on screen
+
+
+    110 D=0:GUSUB 220 "DRAW"
+
+    120 GUSUB 320
+
+    ''flap the wings
+
+    130 SOUND 255,1:SOUND 255,1
+
+    ''go "buzz,buzz"
+
+
+    140 D=1:GUSUB 220 "UNDRAW"
+
+    150 DX=9-RND(18):DY=11-RND(18)
+
+    ''DX and DY are the intervals
+
+    ''by which fly moves to new position
+
+    ''note DY has a positive bias to
+
+    ''make sure he comes to earth
+
+    ''eventually.
+
+    ''on the screen
+
+
+    160 X=X+DX:IF X<10 THEN X=120
+
+    ''make sure all of it is still
+
+
+    170 IF X>245 THEN X=245
+
+    180 Y=Y+DY:IF Y>154 THEN Y=420
+
+    ''if Y>154 then the fly is stuck
+
+    ''he can dip his toes in but
+
+    ''no more!
+
+
+    190 IF Y<7 THEN Y=7
+
+    200 SCREEN 1,0
+
+    ''the vital display command
+
+
+    210 GTO 110
+
+
+    220 REM DRAW/UNDRAW FLY
+
+    ''CIRCLE for head at x,y
+
+    230 CIRCLE(X,Y),3,D
+
+    ''Radius 3 Colour D
+
+    ''if D=0 (Black) it draws against
+
+    ''green background
+
+
+    90'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# The Fly and the Treacle
+
+
+    ''if D=1 (Green) it undraws against
+
+    ''green background
+
+    ''set a single point as the head
+
+    ''set foreground colour for
+
+    ''Draw /Undraw as above
+
+
+    ```
+
+    240 PSET (X,Y-3,D)
+
+    250 COLOR D, 1-D
+
+    260 LINE (X-2,Y+3)-(X-2,Y+6), PSET
+
+    270 LINE (X+2,Y+3)-(X+2,Y+6), PSET
+
+    280 RETURN
+
+    320 REM WINGS UP/DOWN
+
+    330 LINE (X-4,Y-1)-(X+10,Y-6), PSET
+
+    340 LINE (X+4,Y-1)-(X+10,Y-6), PSET
+
+    350 LINE (X-4,Y-1)-(X+10,Y+6), PSET
+
+    360 LINE (X+4,Y-1)-(X+10,Y+6), PSET
+
+    370 LINE (X-4,Y-1)-(X+10,Y-6), PSET
+
+    380 LINE (X+4,Y-1)-(X+10,Y-6), PSET
+
+    390 LINE (X-4,Y-1)-(X+10,Y+6), PSET
+
+    400 LINE (X+4,Y-1)-(X+10,Y-6), PSET
+
+    410 RETURN
+
+    420 A$="BM100,172;C1;D0:B4:R8:U8:D4:I4:B4:R10;L4;
+
+    U8;R4;B4;D4;B4;R10;L4;U8;R6;B08;R4;L4;
+
+    430 DRAW A$
+
+    440 COLOR 0,1
+
+    450 SOUND 255,4:SOUND 200,4
+
+    460 D$=GOSUB 220:GOSUB 320
+
+    470 GOTO 450
+
+    ```
+
+
+    ''draw the left leg
+
+    ''draw the right leg
+
+    ''draw left wing up
+
+    ''draw right wing up
+
+    ''draw left wing down
+
+    ''draw right wing down
+
+    ''draw left wing up
+
+    ''draw right wing up
+
+    ''draw left wing down
+
+    ''draw right wing down
+
+    ''note that at end no wings
+
+    ''showing at all
+
+    ''enter here when fly stuck
+
+    ''first draw the word "HELP"
+
+    ''reset colour DRAW was in green
+
+    ''yelp of distress
+
+    ''draw and flap wings helplessly
+
+
+    In the animation sequence, where the wings flap, the wings are
+
+    drawn first as up, then down, then the up is removed, then the
+
+    down is removed. This gives the effect of flapping, since for an
+
+    instant you can see both positions simultaneously. You might
+
+    like to try the effect of re-arranging them in a different
+
+    sequence.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: 'This time a slightly more colourful picture. An old fashioned train puffs along
+    the line and disappears into the tunnel. We use mode 1, which gives a wider range
+    of colours and allows the maximum number of pages to be used for graphics. We
+    also do the animation by a more sophisticated method, which is more suitable for
+    cartoon type programs. This allows characters to appear in front of or behind
+    objects as they move across the screen.
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_92_0.png)
+
+
+    First the new commands:
+
+
+    PCOPY nl TO n2 This command makes a straight copy of a single page of graphics
+    memory. It does only copy a single page. So for mode 1 graphics which take 2 pages
+    per screen it is necessary to execute two separate commands. Copying does not
+    affect the screen being displayed (unless of course that is the screen being copied
+    to).
+
+
+    PAINT (x,y),c2,c2 In operation this command can be tricky. In concept it is simple
+    - it is as though you spilled a pot of paint of colour cl at a given spot and
+    it spreads until it hits a barrier, which is the defined colour spots of colour
+    c2. It follows from this that the x,y coordinates must be within the area which
+    you are trying to paint. Spill your paint outside the barrier and it fills the
+    whole screen, which can be disconcerting, to say the least. Suppose you have drawn
+    a circle in red (colour 4), on a blue background (colour 3) and you are trying
+    to paint it red. Clearly the barrier colour cannot be blue or the painting process
+    will stop immediately when it hits the blue left inside the'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# Train Picture
+
+
+    circle. So it must be red. Now if the coordinate references fall actually on the
+    spots forming the circle you have just drawn, then it will stop immediately having
+    found the red barrier. You must be careful that the coordinate references fall
+    inside the blue interior of the circle. This is best achieved by specifying the
+    same references for the middle of the circle.
+
+
+    ```
+
+    GET (x,y)-(x2,y2),an,G To save a particular part of a picture, use this command.
+    It "gets" the part of the picture specified by x,y (top left corner) and x2,y2
+    (bottom right corner) from the current display screen, and stores it in the array
+    an. Array must have been dimensioned previously at the right size to hold this
+    amount of data, one array element per spot on the screen. The array dimensions
+    will be x2-x and y2-y respectively. If parameter G is specified then the action
+    code (see below) must be specified for PUT.
+
+    ```
+
+
+    ```
+
+    PUT (x,y)-(x2,y2),an,PSET To do the reverse of GET and put back the parts of the
+    picture, use PUT. Because it needn''t be put back in the same place as it was
+    in originally, this is a way of producing motion in the picture and is the basis
+    for the train program. There are other action codes besides PSET, but they are
+    rather complicated. If a picture is PUT in a position where part will fall off
+    the screen, strange things happen!
+
+    ```
+
+
+    We shall be using mode 1, which has a resolution of 128 X 96 spots on the screen.
+    Logically one might expect that the spots would be numbered so that bottom right
+    corner was 127,95 but in fact it keeps the same numbering as we had before with
+    mode 4 and bottom right is 255,191 again, as before.
+
+
+    ```
+
+    10 CLEAR 6 ''we use three set of pages in groups of 2 20 DIM P(50,40) ''array
+    dimension to take ''the train picture from 0,60 ''to 50,100
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# Train Picture
+
+
+    ```
+
+    30 PMODE 1,1           ''PMODE 1 set with page 1,2
+
+    ''to write into initially
+
+    ''colour set for this mode:
+
+    ''1=Green, 2=Yellow, 3=Blue,
+
+    ''4=Red
+
+    ```
+
+
+    ```
+
+    40 PCLS3               ''Initialise to colour blue
+
+    ''representing the sky
+
+    ```
+
+
+    ```
+
+    50 COLOR 2,4           ''foreground yellow background red
+
+    60 LINE(0,100)-(255,191),PSET,BF ''draw a rectangle at the
+
+    ''bottom of the screen colour yellow\n''representing the ground
+
+    ```
+
+
+    ```
+
+    70 CIRCLE (220,30),10,2  ''circle draw in yellow, radius 10
+
+    80 PAINT (220,30)-(45,80),2,2  ''paint the yellow circle as sun
+
+    ```
+
+
+    ```
+
+    90 PCOPY 1 TO 3:PCOPY 2 TO 4  ''copy the basic picture to page 3,4
+
+    100 PCOPY 1 TO 5:PCOPY 2 TO 6  ''copy and 5,6
+
+    ''now draw in the train
+
+    ```
+
+
+    ```
+
+    110 LINE(0,80)-(50,95),PSET,B ''draw in yellow the outline of
+
+    ''the body as a rectangle
+
+    ```
+
+
+    ```
+
+    120 PAINT (5,85),4,2  ''paint the inside but not the
+
+    ''border itself red
+
+    ```
+
+
+    ```
+
+    130 LINE(0,80)-(15,60),PSET,B ''draw another rectangle
+
+    ''in yellow as the cab
+
+    ```
+
+
+    ```
+
+    140 PAINT (10,70),4,2  ''paint red leaving border
+
+    150 LINE(50,70),PSET,B  ''draw funnel
+
+    ```
+
+
+    ```
+
+    160 PAINT (46,79),4,2  ''paint the inside red
+
+    ''draw the rear wheel
+
+    170 CIRCLE (10,95),5,4  ''paint the whole wheel red
+
+    ```
+
+
+    ```
+
+    180 PAINT (10,95),4,4  ''paint the whole wheel red
+
+    190 CIRCLE(40,95),5,4  ''draw the front wheel
+
+    ```
+
+
+    ```
+
+    200 PAINT (40,95),4,4  ''save this part of the picture
+
+    210 GET(0,60)-(50+Y+IL,100),P,PSET ''into array P
+
+    220 PCOPY 3 TO 1:PCOPY 4 TO 2  ''put back the original picture
+
+    ''into page 1,2
+
+    ```
+
+
+    ```
+
+    230 FOR Y=0 TO 200 STEP 4  ''start of movement sequence
+
+    240 FOR X=3 TO 5 STEP 2  ''use alternately page 3,4,5,6
+
+    250 PCOPY 1 TO X:PCOPY 2 TO X+1  ''copy the basic picture
+
+    260 PMODE 1,X  ''set new page to write into
+
+    270 IL=INT(X/5)*2  ''half a step value
+
+    280 PUT(Y+IL,60)-(50+Y+IL,100),P,PSET ''put back the train
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# Train Picture
+
+
+    ''but a little further on than
+
+    ''last time
+
+    ''reset colour because PAINT
+
+    ''command has changed the setting
+
+    ''draw the tunnel on the right
+
+    ''this will overwrite part of the
+
+    ''train if it has passed into
+
+    ''the tunnel
+
+    ''display the new picture
+
+    ''next page
+
+    ''next step
+
+    ''end of the line, blow whistle
+
+    ''repeat
+
+
+    281 COLOR 2,4
+
+    282 LINE(200,50)-(254,98),PSET,BP
+
+    290 SCREEN 1,0
+
+    300 NEXT X
+
+    310 NEXT Y
+
+    320 SOUND 200,8:SOUND 150,8
+
+    330 GOTO 230
+
+
+    The foreground (yellow) the background (blue sky) with the sun at
+
+    top right can be easily imagined, but here is is a detailed picture
+
+    of what the train should look like:
+
+
+    15,60
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_95_0.png)
+
+
+    Cab 0,80
+
+    Body 0,80
+
+
+    50,70
+
+
+    45,80
+
+
+    50,95
+
+
+    Wheel 10,95nWheel 40,95'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# SIGN WRITING
+
+
+    From time to time, there is a need to print text on the high resolution graphics
+    screens. The fly and the treacle program had two examples of this, where we wanted
+    to print a word on the picture. To save re-inventing this every time, here is
+    a standard subroutine for writing anything you like. It produces an alphabetical
+    string for each letter, so the result should always be prefaced by commands to
+    move to the desired position, set the colour and set the scale. The basic characters
+    are designed as 16 points down and 8 points across, with a separation between
+    letters of four points. So, if you said, for example, scale was 8, this would
+    double the basic units (4 is the reference level - you can draw to a smaller scale
+    or to a larger scale) and these would become 32 units down, 16 units across, and
+    8 units separation.
+
+
+    Each character is assumed to start at its bottom left corner, and the string finishes
+    at the bottom right corner, ready for the next letter to be added. Here is an
+    example of the plotting for the letter A:
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_96_0.png)
+
+
+    The example program, shown below, uses this subroutine to draw an illuminated
+    sign of a person''s name. Ideally the name should be about 6 characters long,
+    and can have a space after it to make the whole thing look prettier. The name
+    is then plotted down the screen in different scales. The actual scales to be used
+    are'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# Sign Writing
+
+
+    given in the DATA statement, so you can change it if you want all big letters,
+    or all small letters, for example. The colours are each plotted in turn. So the
+    sequence goes yellow, blue, red against a green background and then repeats. If
+    the whole of the name wont fit onto a line then it gets on as many letters as
+    it can.
+
+
+    At the end, the whole screen is displayed in the alternative character set, which
+    are Green, Purple, Magenta, Cyan against a Buff background; these colours alternate
+    at about 3 second intervals.
+
+
+    ```
+
+    10 REM EYEBALL CHARACTERS ''set mode 1 and page 1 to write into
+
+    20 MODE 1
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# Sign Writing
+
+
+    ''all lines drawn:
+
+
+    ```
+
+    240 SCREEN 1, 0 ''first colour set
+
+    ```
+
+
+    ```
+
+    250 FOR DI=1 TO 1000:NEXT DL ''wait''
+
+    ```
+
+
+    ```
+
+    260 SCREEN 1, 1 ''second colour set
+
+    ```
+
+
+    ```
+
+    270 FOR DL=1 TO 1000:NEXT DL ''wait''
+
+    ```
+
+
+    ```
+
+    280 GOTO 240 ''repeat
+
+    ```
+
+
+    ```
+
+    ''initialise the string arrays
+
+    ```
+
+
+    ```
+
+    290 REM SET UP ARRAY Z$(2)
+
+    ```
+
+
+    ```
+
+    300 DIM Z$(26)
+
+    ```
+
+
+    ```
+
+    310 Z$(0)="B2;R20;" ''space
+
+    ```
+
+
+    ```
+
+    320 Z$(1)="U16;R8;D8;L8;B8;R4;" ''A
+
+    ```
+
+
+    ```
+
+    330 Z$(2)="U16;R8;D4;G4;L4;F4;D4;L8;R12;" ''B
+
+    ```
+
+
+    ```
+
+    340 Z$(3)="U16;R8;D16;L8;B12;R12;" ''C
+
+    ```
+
+
+    ```
+
+    350 Z$(4)="U16;R4;D6;G4;L4;B8;R12;" ''D
+
+    ```
+
+
+    ```
+
+    360 Z$(5)="U8;R4;L4;U8;B16;L8;R12;" ''E
+
+    ```
+
+
+    ```
+
+    370 Z$(6)="U8;R4;L4;U8;B16;B4;R4;" ''F
+
+    ```
+
+
+    ```
+
+    380 Z$(7)="U16;R8;D4;R4;D16;L8;R12;" ''G
+
+    ```
+
+
+    ```
+
+    390 Z$(8)="U8;R8;L4;U8;B16;F8;R4;" ''H
+
+    ```
+
+
+    ```
+
+    400 Z$(9)="B2;R4;L2;U16;R2;L4;R10;D16;" ''I
+
+    ```
+
+
+    ```
+
+    410 Z$(10)="U4;U12;R8;D14;D16;L4;R12;" ''J
+
+    ```
+
+
+    ```
+
+    420 Z$(11)="U16;D8;E8;F8;R4;" ''K
+
+    ```
+
+
+    ```
+
+    430 Z$(12)="U16;D16;R8;F8;R4;" ''L
+
+    ```
+
+
+    ```
+
+    440 Z$(13)="U16;F4;E4;D6;R4;" ''M
+
+    ```
+
+
+    ```
+
+    450 Z$(14)="U16;F8;U8;D6;R4;" ''N
+
+    ```
+
+
+    ```
+
+    460 Z$(15)="U16;R8;D16;R12;D8;" ''O
+
+    ```
+
+
+    ```
+
+    470 Z$(16)="U16;R8;D8;L8;R12;D8;" ''P
+
+    ```
+
+
+    ```
+
+    480 Z$(17)="U16;R8;D12;G4;L4;B8;H4;F4;B4;R4;" ''Q
+
+    ```
+
+
+    ```
+
+    490 Z$(18)="U16;R8;D8;L8;F4;F8;R4;" ''R
+
+    ```
+
+
+    ```
+
+    500 Z$(19)="R8;U8;L8;U8;D16;B4;R4;" ''S
+
+    ```
+
+
+    ```
+
+    510 Z$(20)="B2;R4;U16;R4;B4;D16;" ''T
+
+    ```
+
+
+    ```
+
+    520 Z$(21)="U16;R8;D16;L8;R12;" ''U
+
+    ```
+
+
+    ```
+
+    530 Z$(22)="U6;D12;F4;E4;U12;B4;R4;D16;" ''V
+
+    ```
+
+
+    ```
+
+    540 Z$(23)="U8;R8;D16;H4;G4;B4;R12;" ''W
+
+    ```
+
+
+    ```
+
+    550 Z$(24)="U4;E4;H4;U4;B4;D4;G4;F4;D4;R4;" ''X
+
+    ```
+
+
+    ```
+
+    560 Z$(25)="B16;F4;E4;G4;D12;B8;R4;" ''Y
+
+    ```
+
+
+    ```
+
+    570 Z$(26)="B16;R8;D4;G4;R2;L4;R2;G4;D4;R8;R4;" ''Z
+
+    ```
+
+
+    ```
+
+    580 RETURN
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# Sign Writing
+
+
+    ```
+
+    590 REM MAKE UP DRAW STRING
+
+    600 P=ASC(MIDS(A,A,1))
+
+    610 IF P<65 OR P>91 THEN P=0:GOTO 630
+
+    620 P=P-64
+
+    630 Z=$(P)
+
+    640 RETURN
+
+    ```
+
+
+    If you want to use this subroutine, start by loading it into
+
+    memory, renumber it to say line 2000 and carry on writing the
+
+    program. When you have finished, save the whole thing onto a
+
+    parate tape.
+
+
+    This is the full character set - notice that there are problems
+
+    with diagonal strokes. Luckily, a diagonal stroke e.g. "E4"
+
+    actually produces the equivalent of "U4" and "R4" instead of
+
+    about 5.6 which would be the actual length of the hypotenuse.
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_99_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# CASTLE WALLS
+
+
+    The Normans have arrived!
+
+    Standing on top of the parapet,
+
+    You can look down and see the ladders starting to rise up the walls - but what
+    can you do?
+
+
+    BOILING OIL you think, and immediately start to pour the oil down onto the invaders.
+
+    Sometimes you miss, sometimes you hear the sounds as the victims writhe in agony.
+
+
+    It is inevitable that they''ll get in sooner or later, it''s just a question of
+    how long you can keep them out. Oil is in plentiful supply, but once your cask
+    empties (watch the dipstick at the right of the screen) that''s all they need
+    to rush in, whilst you pour helplessly to and fro. You pour the oil by using the
+    "v" key, wait until the man on the parapets is over the top of the ladder before
+    pressing it.
+
+
+    Initially you can select the level of difficulty - the more difficult, the more
+    ladders start coming but the better the score for each victim. Once the ladders
+    reach the top your score is shown.
+
+
+    ```
+
+    10 REM CASTLE WALLS
+
+    20 REM (C) 1982 PHIPS ASSOCIATES
+
+    30 POLEAR 2:MODE 1,1
+
+    40 GOSUB 570
+
+    50 GOSUB 490
+
+    60 INPUT "WHAT LEVEL (1-5)";DV
+
+    70 IF DV<1 OR DV>5 THEN 60
+
+    80 ND=DV+1:DV=234/ND
+
+    90 R1=.2+DV/10
+
+    100 R2=5+DV*2
+
+    ```
+
+
+    ```
+
+    ''set graphics mode
+
+    ''initialise
+
+    ''instructions
+
+    ''calculate ladder gap
+
+    ''ladder growth; rate
+
+    ''oil stopping factor
+
+    ```
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_100_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# Castle Walls
+
+
+    ```
+
+    110 R3=(5-DV)*10
+
+    120 G=1000:S=0
+
+    130 GSUB 610
+
+    140 DP=20:RP=235:DIR=1
+
+    150 DIM D(ND
+
+    ```
+
+
+    ''man movement speed
+
+    ''initial oil and score
+
+    ''draw the castle
+
+    ''set left & right limits
+
+    ''ladder position array
+
+    ''first ladder X-coord
+
+    ''position ladder bases
+
+    ''move man
+
+    ''draw him
+
+    ''check if oil poured
+
+    ''see ladder growth
+
+    ''ensure key not pressed
+
+    ''select to grow
+
+    ''ladder graphic pattern
+
+    ''rising crescendo
+
+    ''see if ladder at top
+
+    ''set new man height
+
+    "undraw"
+
+    ''change man''s direction
+
+    ''swap castle edges
+
+    ''repeat movement'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: "# Castle Walls\n\n```\n490 REM INSTRUCTIONS\n500 REM      **** CASTLE WALLS\
+    \ ****\n510 PRINT \" **** CASTLE WALLS ****\"\n520 PRINT : PRINT \" THE MARAUDING\
+    \ HORDES OF NORMANS\n    HAVE ARRIVED AT CASTLE EGO. YOU\n    HAVE 1000 GALLONS\
+    \ OF BOILING OIL\n    AT YOUR DISPOSAL; USE IT WISELY!\"\n530 PRINT \" WHEN YOU\
+    \ CAN POUR THE OIL ONTO THE\n    RISING LADDERS BY PRESSING THE\n    'V' KEY.\"\
+    \n540 PRINT \" WHEN THE OIL HAS ALL BEEN USED,\n    YOUR TOTAL SCORE WILL BE SHOWN.\n\
+    \    HOW HIGH CAN YOU MAKE IT?\"\n550 REM PRINT\n560 REM RETURN\n\n570 REM INITIALISE\n\
+    580 BC=3;FG=1:COLOR FG,BG      'set colour scheme\n590 MS=R5;D5;L2;D2;U2;L3;U2\"\
+    \    'define man's graphic\n600 REM RETURN\n\n610 REM DRAW CASTLE\n620 PCLS 2\n\
+    630 COLOR FG, 1,0\n640 SCREEN\n650 DRAW \"EM0;0;C3;R16;D16;R224;U16;R15;D177;L255;U177\"\
+    \n660 PAINT (128,0),3,3 :PAINT (128,191),1,3\n670 P=20:C=FG:GOSUB 940      'position\
+    \ the man\n680 COLOR 4,BG\n690 LINE (248,175)-(248,74),PSET:COLOR FG,BG\n700 REM\
+    \ RETURN\n\n710 REM POUR OIL\n720 IF G<1 THEN SOUND 1,1:RETURN  'no oil left\n\
+    730 COLOR 3,2\n740 FOR Z=1 TO ND:IF ABS(P-D(Z,1))<8 THEN G 760  'find ladder\n\
+    750 NEXT Z:Z=0                  'oil has missed\n760 FOR Y=16 TO 168 STEP 8  \
+    \    'draw oil down screen\n770 FOR W=0 TO 6 STEP 2           '...in steps of\
+    \ 2\n```"
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "# Castle Walls\n\n```\n780 LINE (P,Y+W)-(P+6,Y+W),PRESET\n790 NEXT W\n800 IF\
+    \ Z THEN IF Y+8>D(Z,2) THEN IF R2>RND(100) THEN 830\n      'pour over ladder\n\
+    810 NEXT Y\n820 Y=Y-8\n830 X=Y+7\n      'point to ladder rung\n840 IF Z THEN FOR\
+    \ N=200 TO 175 STEP -1:SOUND N,1:NEXT N\n      'screams of victims\n850 FOR Y=18\
+    \ TO X STEP 2\n      'erase oil line\n860 IF Z THEN LINE (P-7,Y)-(P+15,Y),PRESET\
+    \ ELSE\n      LINE (P,Y)-(P+6,Y),PRESET\n870 NEXT Y\n880 IF 2=0 THEN 910\n   \
+    \   'see if ladder was hit\n890 S=S+1+INT((X-D(Z,2))*DV/8)\n      'yes - update\
+    \ score\n900 D(Z,2)=X\n      'reposition ladder\n910 IF C<0 THEN G=0\n      'remaining\
+    \ oil\n920 G=G-20-RND(60+DV*20):\n      LINE (248,74)-(248,175-INT(G/10)),PRESET\n\
+    \      'reduce oil and dipstick\n930 RETURN\n\n940 REM DRAW MAN\n950 DRAW \"EM\"\
+    +STR$(P)+\",10;C\"+STR$(C)+\";\"M$\\$\n960 RETURN\n```"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# SNAKES AND LADDERS
+
+
+    A traditional game for two players. The non-traditional twist is that the snakes
+    can bite and land you in hospital for three turns and you can also fall off the
+    ladder and have to go back to square one for two turns!
+
+
+    The program draws the board at the top of the screen, using blue and yellow checkered
+    squares. Square one is top left and square 100 is bottom left. Numbering goes
+    in the traditional sequence, i.e. you go backwards on alternate rows. To follow
+    the play properly you do need a colour television set, since the ladders are marked
+    in red and the snakes in orange. You have to throw a six to start and you must
+    end exactly on 100. If you go over 100 then it will count backwards for the excess.
+
+
+    It is a difficult program to test since a game takes so long to play - like the
+    board game, the play seems to go on for ever. It can be made easier if the INPUT
+    statement in line 80 is replaced by a PRINT statement and it will then play without
+    human intervention.
+
+
+    A different board is generated for every game. See lines 100-200 below.
+
+
+    ```
+
+    10 REM SNAKES AND LADDERS
+
+    20 DIM BD(100)
+
+    30 CLS;PRINT TAB(6);"SNAKES AND LADDERS"
+
+    40 PRINT"YOU MUST START ON A SIX"
+
+    50 PRINT"YOU GET AN EXTRA GO FOR A SIX"
+
+    60 PRINT"YOU MUST END EXACTLY ON 100"
+
+    70 PRINT
+
+    80 INPUT"FIRST PLAYER";PL$(0) ''get player names
+
+    90 INPUT"SECOND PLAYER";PL$(1)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "# Snakes and Ladders THE BOARD\n\n```\n100 REM Z=1 TO 100:BD(Z)=0:NEXT\n110\
+    \ FOR Z=1 TO 20\n120 FOR Z=1 TO 25\n130 H=RND(99):IF BD(H)<0 THEN 130\n140 H2=RND(160):IF\
+    \ H2+H<1 OR H2>99 THEN 140\n    'the snakes and ladders must end up still on board\n\
+    \    'the ends of the hazards are marked with 999 which\n    'is later removed;\
+    \ also a snake and a ladder cannot\n    'join up and you cannot have a snake at\
+    \ square 100\n150 IF BD(H+2)<0 THEN 140\n160 BD(H)=H2:BD(H+2)=999\n170 NEXT:CLS\n\
+    180 FOR Z=0 TO 3:PP(Z)=1:NEXT\n    'now take out the end markers\n190 FOR Z=1\
+    \ TO 100:IF BD(Z)=999 THEN BD(Z)=0\n200 NEXT\n210 S(0)=0:S(1)=0\n    'turn indicators\n\
+    220 GOSUB 640\n    'draw the board\n230 G=2-RND(2)\n    'decide who goes first\
+    \ 0 OR 1\n240 MAIN LOOP\n    'wait for throw and clear screen\n250 GOSUB 810\n\
+    \    'print name, position, throw\n260 PRINT PL$(G);\" IS ON \";PP(G);\"\" THROWS\
+    \ \\\n```"
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '# Snakes and Ladders
+
+
+    ```
+
+    370 REM CHECK HAZARDS
+
+    380 IF BD(PP(G))=0 THEN 440 ''no snake or ladder
+
+    ```
+
+
+    ```
+
+    ''snake action
+
+    390 IF BD(PP(G))<0 THEN PRINT "HISS HISS \GOSUB 570:
+
+    PRINT"WHEEL DOWN WE GO TO ;";GOSUB 460:
+
+    PP(G)=PP(G)+BD(PP(G));PRINT PP(G):GOSUB 850:GOTO 380
+
+    ''ladder action
+
+    ```
+
+
+    ```
+
+    400 PRINT "OH LOOK! HERE''S A LADDER"
+
+    410 PRINT "UP WE GO TO :GOSUB 460;PP(G)=PP(G)+BD(PP(G));
+
+    PRINT PP(G):GOSUB 850
+
+    ```
+
+
+    ```
+
+    420 IF DMD(6)=1 THEN PRINT "OH DEAR YOU FELL OFF :"
+
+    PRINT "YOU MISSED TWO TURNS AND GO TO 1";S(G)=-3;PP(G)=1:
+
+    GOSUB 850:GOTO 480
+
+    430 GOTO 380
+
+    ```
+
+
+    ```
+
+    440 IF T=6 THEN GOSUB 820:PRINT "ANOTHER GO";GOTO 240
+
+    450 GOTO 480
+
+    ```
+
+
+    ```
+
+    ''delay subroutine
+
+    ```
+
+
+    ```
+
+    460 FOR DL=1 TO 300:NEXT DL
+
+    470 RETURN
+
+    ```
+
+
+    ```
+
+    ''takes action for missed turns
+
+    480 REM CHANGE OVER PLAYERS
+
+    490 G=1-G ''1 becomes Ø and Ø becomes 1
+
+    ''test for missed turns
+
+    500 IF S(G)<-1 THEN S(G)=S(G)+1:GOSUB 820:
+
+    PRINT PL$(G);" MISSED A TURN ":GOTO 490
+
+    510 GOTO 240
+
+
+    520 REM PLAYER WINS
+
+    530 PRINT PL$(G);" WINS"
+
+    540 INPUT "ANOTHER GAME ";A$
+
+    550 IF LEFT$(A\$,1,1)="y" THEN GOTO 100
+
+    560 END
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '# Snakes and Ladders
+
+
+    ```
+
+    570 REM TEST FOR SNAKE BITE
+
+    580 IF RND(10)<1 THEN RETURN
+
+    590 PRINT "AARGH! - SNAKE GOT YOU"
+
+    600 PRINT "SNAKE SERUM IS AT THE HOSPITAL"
+
+    610 PRINT "AT SQUARE 43 - MISS THREE TURNS"
+
+    620 S(G)=4:PP(G)=43      ''-4 means three turns
+
+    630 RETURN
+
+    ```
+
+
+    ```
+
+    640 REM SR TO DRAW BOARD      ''snakes are orange
+
+    650 PP=0                   ''ladders are red
+
+    660 FOR Y2=1 TO 3 STEP 2   ''alternate squares are blue/yellow
+
+    670 FOR Y3=1 TO 25
+
+    680 DY=-1:GOSUB 760
+
+    690 NEXT Y3
+
+    ```
+
+
+    ```
+
+    700 FOR Y3=25 TO 14 STEP -1  ''alternate rows go backwards
+
+    710 DY=0:GOSUB 760
+
+    720 NEXT Y3
+
+    730 NEXT Y2
+
+    740 PRINT (Y2)*32,";
+
+    750 RETURN                  ''decide colour and print square
+
+    ```
+
+
+    ```
+
+    760 PP=PP+1:IF INT(PP/2)>PP/2 THEN CS=16 ELSE CS=32
+
+    770 IF BD(PP)<0 THEN CS=112
+
+    780 IF BD(PP)>0 THEN CS=48
+
+    790 PRINT @(Y2+DY)*32+Y3+3,CHR$(14+CS);
+
+    800 RETURN
+
+    ```
+
+
+    ```
+
+    ''clear screen and wait for enter button
+
+    810 PRINT@448
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: "# Snakes and Ladders BOARD\n\n```\n850 REM PP(G)=NEW PP(G+2)=OLD\n860 IF PP(G+2)=PP(G)\
+    \ THEN DY=1 ELSE DY=-1 'DY<=>; -<-\n880 FOR Y=PP(G+2)+DY TO PP(G) STEP DY\n890\
+    \ BP=Y2-DY:GOSUB 1010\n   'test to see if off the board\n900 IF Y2>100 OR Y2-DY>100\
+    \ THEN PC=0:GOTO 990\n910 IF Y2-DY(0)<>(G) THEN PRINT,MID$(PL$(1-G)),1,1);GOTO\
+    \ 960\n920 IF INT(Y2/2)<Y2/2 THEN PC=32 ELSE PC=16\n930 IF BK(Y2-DY)<0 THEN PC=112\
+    \ 'snake\n940 IF BK(Y2-DY)>0 THEN PC=48 'ladder\n950 PRINT#BP,CHR$(143+PC);\n\
+    960 BP=Y2:PRINT@BP,MID$(PL$(G)),1,1)\n'tone rises as players go up the board\n\
+    980 SOUND Y2,1 'tone falls when descending\n990 NEXT Y2:PRINT@128,\"\"\"; 'reset\
+    \ cursor board display\n1000 PP(G+2)=PP(G):RETURN 'update old position array\n\
+    \   'work out BP character position from board position\n1010 BP=BP-1=INT(BP/25):B1=BP-B2*25\n\
+    1020 IF BP<0 THEN B1=0:B2=0\n1030 IF B2/2<0 THEN B1=24-B1\n1040 BP=B2*32+B1+4\n\
+    1050 RETURN\n```"
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# HUNT THE WUMPUS
+
+
+    The Wumpus is a mythical creature with Bat-like wings and sucker feet. This is
+    a picture of what the artist thinks it looks like, but nobody who has seen one,
+    has lived to tell the tale! He lives in a maze of inter-connected caves, through
+    which you must travel to find him. Some of the caves contain bottomless pits;
+    fall into one of these and you are never seen again. There are also two super
+    bats, who have a playful habit of picking people up and dumping them in another
+    cave.
+
+
+    ![](img/7a80be36866e3d2c055800fc953633cd_109_0.png)
+
+
+    The network of caves is generated each time in a different way - so making maps
+    of the cave structure won''t help you. You are provided with five arrows, with
+    which to shoot the Wumpus. Beware, the arrow might come back and hit you on the
+    rebound. If you run out of arrows, you also lose, so use them carefully.
+
+
+    When you are one cave away from a hazard, you will get a warning, for example:
+
+
+    +   - I SMELL A WUMPUS: The wumpus is in one of the caves next to yours.
+
+    - I FEEL A DRAUGHT: You are next to a bottomless pit.
+
+    - BATS NEARBY: A cave next to yours contains a Super-Bat.
+
+
+    The Wumpus is normally a lazy creature, but should he land in your cave, well
+    let''s not dwell on the unimaginable, suffice it to say, that you lose.'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: "# Hunt the Wumpus\n\nThe Wumpus will only move when he hears an arrow fired,\
+    \ and he moves at random, to one of the caves connecting to his. When you fire\
+    \ an arrow, it is able to go into up to five caves. You will be asked how many\
+    \ caves, and the cave numbers that you want it to go into. If the caves do not\
+    \ connect by a tunnel, then the arrow may fly at random, and could well hit you,\
+    \ and you lose.\n\nGood hunting!\n\n```\n10 CLS:PRINT TAB(8);\"HUNT THE WUMPUS\"\
+    \n20 PRINT:INPUT \"DO YOU WANT THE RULES?\";Y$\n30 IF LEFT$(Y,1)=\"Y\" THEN GOSUB\
+    \ 400 'print the rules\n40 DIM H(5),C(25),R(5) '(H) is the location of hazards\n\
+    \   '(C) is the cave map\n   '(R) are the target caves for shooting\n50 PRINT\
+    \ \"PLEASE WAIT A MOMENT\"\n60 FOR X=1 TO 25 'set up caves\n70 N=RND(25)\n80 IF\
+    \ X=1 THEN 120\n90 FOR Y=1 TO X-1\n100 IF N=C(Y) THEN 70\n110 NEXT Y\n120 C(X)=N\n\
+    130 NEXT X\n140 REM SET UP HAZARDS\n   'h'(0)=current cave position - no cheating\
+    \ please\n   'h'(1)=wumpus position\n   'h'(2),(3)=bats position\n   'h'(4),(5)=pits\
+    \ position\n150 FOR X=0 TO 5\n160 N=RND(25)\n170 IF X=0 THEN 210\n180 FOR Y=0\
+    \ TO X-1\n190 IF N=H(Y) THEN 160\n200 NEXT Y\n210 H(X)=N\n220 NEXT X\n230 A=5\
+    \ 'NO OF ARROWS\n240 CLS\n```\n\n110"
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '# Hunt the Wumpus
+
+
+    ```
+
+    250 REM MAIN CONTROL LOOP
+
+    260 S=H(0)
+
+    270 P=1:Q=0
+
+    280 GOSUB 680      ''check and print hazards
+
+    290 PRINT "YOU ARE IN CAVE":C(H(0))
+
+    300 PRINT "TUNNELS LEAD TO "
+
+    310 P=3:GOSUB 680   ''Print connecting caves
+
+    320 PRINT
+
+    330 PRINT "SHOOT OR MOVE "
+
+    340 GOSUB 1680      ''get a 1 char reply
+
+    350 P$=Y
+
+    360 N=1
+
+    370 IF P$="S" THEN GOSUB 1020 ''shoot subroutine
+
+    380 IF P$="M" THEN GOSUB 1390 ''move subroutine
+
+    390 ON N GOTO 2050,1700,1750  ''main loop,win,lose
+
+    ```
+
+
+    ```
+
+    400 CIS1      ''RULES PRINT
+
+    410 PRINT "THE WUMPUS IS A CREATURE WITH"
+
+    420 PRINT "SUCKER FEET AND IS TOO HEAVY"
+
+    430 PRINT "FOR BATS TO LIFT.  HE LIVES IN"
+
+    440 PRINT "A NETWORK OF 25 CAVES, AND YOUR"
+
+    450 PRINT "TASK IS TO HUNT HIM DOWN AND"
+
+    460 PRINT "SHOOT HIM WITH ONE OF YOUR FIVE"
+
+    470 PRINT "ROWS."  TWO OF THE CAVES ARE"
+
+    480 PRINT "BOTTOMLESS PITS - IF YOU FALL"
+
+    490 PRINT "IN, YOU LOSE. TWO OTHERS"
+
+    500 PRINT "CONTAIN SUPERBEATS WHICH WILL"
+
+    510 PRINT "WHISK TO ANOTHER CAVE AT"
+
+    520 PRINT "RANDOM."  PRINT
+
+    530 GOSUB 670      ''pause for enter key
+
+    540 PRINT "WHEN YOU ARE ONE CAVE AWAY FROM"
+
+    550 PRINT "A HAZARD, I WILL GIVE YOU A"
+
+    560 PRINT "WARNING, E.G."
+
+    570 GOSUB 820:GOSUB 830:GOSUB 840  ''wumpus,bats,draught msg
+
+    580 PRINT "AN ARROW CAN GO IN UP TO 5"
+
+    AN ARROW CAN GO IN UP TO 5
+
+    590 PRINT "CONNECTING CAVES. THE WUMPUS"
+
+    600 PRINT "WAKES AND MOVES ONE CAVE WHEN"
+
+    610 PRINT "HE HEARS AN ARROW. YOU LOSE IF:"
+
+    620 PRINT "1:THE ARROW HITS YOU"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "# Hunt the Wumpus\n\n```\n630 PRINT\"2:THE WUMPUS GET'S IN YOUR CAVE\"\n640\
+    \ PRINT \"3:YOU RUN OUT OF ARROWS\"\n650 PRINT\"4:YOU FALL IN A PIT\"\n660 PRINT\"\
+    GOOD HUNTING\"\n670 INPUT\"PRESS ENTER TO CONTINUE\";Y$:CI:S1:RETURN\n\n680 REM\
+    \ CHECK AND PRINT HAZARDS\n690 FOR X=1 TO 4\n700 GOSUB 970\n  'message,check cave,\
+    \ print connecting\n710 IF L<0 THEN ON P GOSUB 770,950,740\n720 NEXT X\n730 RETURN\n\
+    740 REM PRINT CONNECTING CAVES\n750 PRINT!C(L);\n760 RETURN\n  'Q can equal Ø\
+    \ or 5\n770 REM CHOOSE MESSAGES\n780 FOR Y=1 TO 5\n790 IF L=H(Y) THEN ON INT(Y+Q)\
+    \ GOSUB 820,830,830,840,840,\n  850,880,880,920,920\n800 NEXT Y\n810 RETURN\n\
+    820 PRINT \"I SMELL A WUMPUS\":RETURN\n830 PRINT\"BATS NEARBY\":RETURN\n840 PRINT\
+    \ \"I FEEL A DRAUGHT\":RETURN\n850 PRINT \"WUMPUS GOT YOU\"\n860 N=2\n870 RETURN\n\
+    880 PRINT\"ZAP-SUPERBATAT SNATCH\"\n890 CS=RND(25)\n900 F=1\n910 RETURN\n920 PRINT\"\
+    YIIEEE - FELL IN PIT\"\n930 N=2\n940 RETURN\n\n950 IF CS=L THEN F=0\n960 RETURN\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '# Hunt the Wumpus
+
+
+    ```
+
+    970 K=(X=1)*5)-(X=2)-((X=3)*5)+(X=4)
+
+    980 L=0 REF IS CONNECTING CAVE
+
+    990 IF K<1 OR K>25 THEN RETURN
+
+    1000 L=K
+
+    1010 RETURN
+
+
+    1020 IF A>0 THEN 1050 ''SHOOT SR
+
+    1030 PRINT "OUT OF ARROWS"
+
+    1040 GOTO 1370
+
+    1050 INPUT "HOW MANY CAVES (1-5)";R
+
+    1060 IF R<1 OR R>5 THEN 1050
+
+    1070 FOR Z=1 TO R
+
+    1080 PRINT "ENTER CAVE NO";Z;
+
+    1090 INPUT NEXT Z
+
+    1110 S=H(0)
+
+    1120 FOR Z=1 TO R ''test each target in turn
+
+    1130 CN=R(Z)
+
+    1140 P=1
+
+    1150 GOSUB 1620 ''get element reference
+
+    1160 P=2
+
+    1170 GOSUB 680
+
+    1180 IF F THEN GO 1560
+
+    1190 IF CS=H(0) THEN 1350 ''arrow is fatal to you
+
+    1200 IF CS=H(1) THEN 1330 ''hit the wumpus
+
+    1210 S=CS
+
+    1220 NEXT Z
+
+    1230 CLS
+
+    1240 PRINT "MISSED"
+
+    1250 A=A-1 ''how one less arrows
+
+    1260 S=H(1)
+
+    1270 GOSUB 1560 ''MOVE WUMPUS
+
+    1280 H(1)=CS
+
+    1290 L=H(0)
+
+    1300 Q=5
+
+    1310 GOSUB 770 ''choose messages
+
+    1320 RETURN
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# Hunt the Wumpus
+
+
+    ```
+
+    1330 N=3
+
+    1340 RETURN
+
+    ```
+
+
+    ```
+
+    1350 CL1
+
+    1360 PRINT"OUCH - ARROW GOT YOU"
+
+    1370 N=2
+
+    1380 RETURN
+
+    ```
+
+
+    ```
+
+    1390 INPUT"WHERE TO";ON ''MOVE SR
+
+    1400 CL1
+
+    1410 GOSUB 1620 ''get array reference
+
+    1420 IF CS=0 THEN 1540 ''invalid cave?
+
+    1430 F=1
+
+    1440 P=2
+
+    1450 GOSUB 680
+
+    1460 IF F THEN 1540 ''does it connect?
+
+    1470 L=CS
+
+    1480 F=0
+
+    1490 Q=5
+
+    1500 GOSUB 770 ''messages''
+
+    1510 H(0)=CS
+
+    1520 IF F THEN 1470
+
+    1530 RETURN
+
+    ```
+
+
+    ```
+
+    error processing
+
+    1540 PRINT"IMPOSSIBLE -"
+
+    1550 RETURN
+
+    ```
+
+
+    ```
+
+    1560 X=RND(4)
+
+    1570 GOSUB 970
+
+    1580 IF L=0 THEN 1560
+
+    1590 CS=L
+
+    1600 CN=C(2)
+
+    1610 RETURN
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# Hunt the Wumpus
+
+
+    ''turn cave reference into array element no
+
+    1620 FOR K=1 TO 25
+
+    1630 IF CN=C(K) THEN 1660
+
+    1640 NEXT K
+
+
+    1650 K=0 ''on return K=cave element no
+
+    1660 CS=K
+
+    1670 RETURN
+
+
+    ''get a one character reply
+
+    1680 INPUT Y$:Y=$LEFT($Y$,1)
+
+    1690 RETURN
+
+
+    ''losing ending
+
+    1700 PRINT "YOU LOSE"
+
+    1710 PRINT "HAY AGAIN WITH SAME CAVES"
+
+    1720 GOSUB 1680 ''get 1 character reply
+
+    1730 IF Y$="Y" THEN 140
+
+    1740 END
+
+
+    ''winning ending
+
+    1750 PRINT "YOU GOT THE WUMPUS"
+
+    1760 PRINT "YOU WIN"
+
+    1770 GOTO 1710'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '# PONTOON
+
+
+    You may have seen some programs which play Blackjack on the American model. Pontoon
+    is very similar, but the European version has some important differences. So,
+    perhaps a description of the game is in order first.
+
+
+    The object of the game is to draw a number of cards, which approach as closely
+    as possible 21 in value, hence the name Vingt et Un in the European version. For
+    this purpose, court cards, Jack, Queen, King count as ten and an Ace may count
+    as 1 or as 11, as the holder wishes. Two cards, consisting of an Ace and a King,
+    constitute a Pontoon, when these are the only two cards held, and possession of
+    a Pontoon gets special rewards.
+
+
+    A banker (or dealer) is appointed and a card is dealt to each player, and bets
+    are placed on that first card. At this point the dealer may "double" (I.e. require
+    that all bets are doubled). A second card is dealt to each player. If the Bank
+    now holds a Pontoon, it must declare it and all players pay the banker. Supposing
+    that the Bank does not hold a pontoon, each player in turn is then asked whether
+    he wishes to "Twist" (receive a card face down for an increased stake), or "Stick"
+    (receive a card up and no more cards). It is usually obligatory to take another
+    card with a hand of a value of 15 or less. If a player holds two of a kind in
+    his hand, he may "split" the hand and play it as two separate hands. Anyone holding
+    five cards in total representing a score of 21 or less wins automatically as if
+    he held a pontoon.
+
+
+    To simplify the game a little, I have invented special house rules. First, the
+    computer is the banker and remains so, come what may. This is because the dealing
+    is done by computer. Because the Bank will not change hands in the normal way,
+    the'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# Pontoon
+
+
+    pack reshuffled whenever the Bank would changed hands.
+
+
+    Second, "Buying" of cards is not allowed, this is because it is impossible to
+    deal a card face down on the screen! Thirdly, "Splitting" is not allowed. This
+    is quite straightforward to keep the program size within bounds. I felt it was
+    more important to allow one or two players, than to allow splitting, which is
+    a rarefied feature of the game. Lastly, "Sticking" on any number is permitted.
+    This is because otherwise the game becomes very dull with the computer making
+    all the decisions about dealing another card or not. You can if you wish your
+    own rules on this point.
+
+
+    The Bank''s playing strategy is very simple. It will double, if you deal an Ace
+    as its first card. This is because it then has a good chance of getting a pontoon,
+    with a court or a ten as the next card. When deciding whether to add to its hand,
+    the Bank first looks at the state of play: if all the players bust, then it sticks
+    on whatever it then holds. After this it will "Stick" if holding a best score
+    of 16 or greater. It is possible to break the Bank by winning all the Bank''s
+    money, and it has been done, but is surprising how often this simple strategy
+    succeeds against more adventurous opponents. The Bank''s resources are not infinite
+    to make it fair. The Bank is given the same amount of money as the wealthiest
+    of the players.
+
+
+    The best strategy for winning is in fact to copy the Bank''s example and stick
+    on 16. It also pays to watch the pack sequence very carefully, because all returned
+    cards are put onto the bottom of the pack. If you have memorised the sequence
+    then you can predict the next card to come out. To encourage this practice, the
+    deal subroutine prints a message "GOING THROUGH THE PACK AGAIN", when it restarts
+    at the top.'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '# Pontoon
+
+
+    The settlement of the bets is quite complex. This part of the program is given
+    in the rule processing section (lines 700-760). In words rather than program,
+    they can be summarised as follows:
+
+
+    +   1. If the bank holds a natural pontoon, and the player does not, then the
+    player pays twice his original stake.
+
+    2. If the bank holds a natural pontoon, and the player does also, then the player
+    forfeits his original stake.
+
+    3. If the player has "bust" (holds a minimum score of > 21) then his stake is
+    forfeit to the bank.
+
+    4. If the player holds five cards, and the bank does not, then the player receives
+    twice his original stake.
+
+    5. If the player holds a pontoon, and the bank does as well, then the player receives
+    an amount equal to his stake.
+
+    6. If the player holds a pontoon, then he receives twice his original stake.
+
+    7. If the player''s best score is greater than the bank''s best score then he
+    receives an amount equal to his original stake. It will be greater automatically,
+    if the Bank has bust.
+
+    8. If the player''s best score is equal to or less than the bank''s best score
+    then this stake is forfeit to the bank.
+
+
+    These conditions are evaluated by the use of "Truth" variables set to -1 if true
+    and to Ø not true. These are so called because the statement e.g.:
+
+
+    ```
+
+    IF TV THEN PRINT "TRUE" ELSE PRINT "FALSE"
+
+    ```
+
+
+    will be obeyed as it reads if the variable TV has been set as described.'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# Pontoon
+
+
+    The key variables which are evaluated and set by subroutine 1190 are:
+
+
+    | | For Player | For Bank |
+
+    |---|---|---||
+
+    | Busted (min score >21 ) | BU | BU |
+
+    | Holding five cards | C5 | B5 |
+
+    | Holding Pontoon | PT | BP |
+
+
+    # Ordinary variables
+
+
+    | | | |
+
+    |---|---|-|
+
+    | Best score | MT | BT |
+
+    | Minimum score | HT | HT |
+
+
+    The variable WR is set to a positive value if the player is paying the bank and
+    to a negative value if the bank is paying the player. For example WR=-2 means
+    that the bank pays the player twice his original state.
+
+
+    To add a bit of fun, I have included a random remarks generator, to give the computer
+    a little more personality. At certain key events, starting a new hand, the bets,
+    player going bust, losing a player and end of game, the remarks subroutine is
+    entered. 80% of the time it says nothing, but the other 20% it selects a remarks
+    from those set up five different ones are provided for each event. You can substitute
+    your own remarks, if you wish, and yours needn''t be quite polite. Our testers
+    developed the theory that whenever the bank says "I feel lucky today", it loses.
+    Inspection of the program should reveal that this is an unlikely hypothesis, but
+    it has yet to be disproved experimentally.'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: '# Pontoon
+
+
+    Since this is a complicated program, it may be difficult to get going. Some diagnostic
+    hints might help. The pack is contained in array P. To print out the pack, type
+    in direct mode:
+
+
+    ```
+
+    FOR Z=1 TO 52:PRINT P(Z);:NEXT
+
+    ```
+
+
+    All the numbers should be different, and in the range 1-52. Variable P should
+    be between 1 and 52 and point to the next card to come out of the pack.
+
+
+    To look at players'' hands, type:
+
+
+    ```
+
+    FOR Z=1 TO 15:PRINT HD(Z);:NEXT
+
+    ```
+
+
+    Player one''s cards are elements 1-5, player two''s 6-10, and the Bank''s 11-15.
+
+
+    Also, look at array PG which contains for each player the number of cards in his
+    hand:
+
+
+    ```
+
+    FOR Z=1 TO 3:PRINT PG(Z);:NEXT
+
+    ```
+
+
+    If you think that the settling up of bets is wrong, then press Break and type:
+
+
+    ```
+
+    PL=1 (or PL=2):GOSUB 1190;PRINT BU;C5;PI;HT;MT;AT;
+
+    ```
+
+
+    The first three are the truth variables, followed by the lowest score, the best
+    score, and the number of aces. Variable WR should be set to the result of the
+    hand.'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# Pontoon
+
+
+    10 REM PONTOON VINGT ET UN
+
+    20 CLEAR 1000;DIM A$(25);GOSUB 1640 ''set up remarks
+
+
+    ''() is the pack;HS() is the alpha equivalent of suit
+
+    ''HD() is the alpha equivalent of hand cards
+
+    ''HS() is the values of the cards held
+
+    ''HD() is the number of cards in each hand
+
+    ''PG() is the number of cards in each
+
+
+    30 DIM P(52),HS(15),HD(15),HS(15),PG(3)
+
+    40 CLS1;PRINT TAB(5);"PONTOON";PRINT ''house rules display
+
+    50 PRINT "HOUSE RULES";
+
+    60 PRINT "(1) I AM THE BANKER"
+
+    70 PRINT "(2) NO SPLITS ALLOWED"
+
+
+    80 PRINT "(3) NO BUYING OF CARDS"
+
+    90 PRINT "(4) YOU MAY STICK ON ANY NUMBER"
+
+    100 INPUT "WHAT ARE THE MAX STAKES?";M ''get maximum bets
+
+    110 INPUT "FOR MANY PLAYERS(BESIDES ME)?";H ''no of players
+
+    120 IF H<1 OR H>2 THEN 110 ''get number of chips held
+
+    130 FOR Z=1 TO Z
+
+    140 PRINT "PLAYER",Z;";INPUT "NAME";PL(Z)
+
+    150 INPUT "HOW MUCH MONEY DO YOU HAVE?";M(Z)
+
+    160 IF M(Z)<1 OR M(Z)>999 THEN
+
+
+    PRINT "I DON''T BELIEVE YOU";GOSUB 150
+
+    170 NEXT Z ''give the bank of the two
+
+    180 IF M(1)>M(2) THEN M(3)=M(1) ELSE M(3)=M(2)
+
+    190 PRINT "I HAVE";M(3)
+
+    200 GOSUB 900 ''SHUFFLE PACK
+
+    210 REM MAIN ENTRY ''look at state of money for each player
+
+    220 GOSUB 1330 ''WHO IS STILL IN ''reshuffle the pack if
+
+    230 IF ABS(WR)=2 THEN GOSUB 900 ''pontoon or five card hand
+
+    ''reset the variable arrays
+
+
+    240 CLS1;FOR Z=1 TO 15:HS(Z)=\'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: "# Pontoon\n\n290 PRINT PL$(1);TAB(16);PL$(2)          'print names at top\n\
+    300 PRINT\n310 R=1:GOSUB 1580             'remarks for starting a hand\n320 FOR\
+    \ Y=1 TO H                'deal a card to each player\n      and gets from each\n\
+    330 PL=Y:TB=15*(Y-1):GOSUB 1020:GOSUB 1160:GOSUB 1100\n340 PRINT TAB(TB);:INPUT\"\
+    YOUR BEST\":B(Y)\n350 IF B(Y)>M(Y) THEN PRINT TAB(TB);\"NO! YOU!\\"
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# Pontoon
+
+
+    600 NEXT Z
+
+    ''look to see if anyone still in
+
+    610 FOR Y=1 TO 10 H:PL=Y:GOSUB 1190:IF NOT BU THEN 630
+
+    620 NEXT Y:PRINT"STICK":GOTO 680
+
+    ''evaluate bank hand and decide to stick/twist
+
+    630 GOSUB 1540:IF BU BEN=5:BT=0:PRINT"I BUSTED":GOTO 680
+
+    640 IF MT+5 THEN PRINT"STICK":GOTO 680
+
+    650 PRINT "TWIST "n660 GOSUB 1020:GOSUB 1100:1160
+
+    670 GOTO 630
+
+
+    680 REM SETTLE UP BETS
+
+    690 FOR Y=1 TO H:PL=Y:GOSUB 1190 ''rules processor see text
+
+    700 IF NOT PT AND BP THEN WR=2:GOTO 770
+
+    710 IF PT AND BP THEN WR=1:GOTO 770
+
+    720 IF BU THEN PRINT " 770
+
+    730 IF C5 AND NOT B5 THEN WR=2:GOTO 770
+
+    740 IF C5 THEN NOT B THEN WR=1:GOTO 770
+
+    750 IF PT THEN WR=2:GOTO 770
+
+    760 IF MT>BT THEN WR=1-ELSE WR=1
+
+
+    770 REM THE PAYOUT
+
+    780 PRINT;PL$(Y);'':'';HT;MT; ''name,lowest score, best score
+
+    790 IF BU THEN PRINT " BUSTED "
+
+    800 IF C5 PRINT " 5 CARDS "
+
+    810 IF PT PRINT " PONTOON"
+
+    ''WR positive means players pays bank
+
+    ''WR negative means bank pays players
+
+
+    820 IF WR=0 THEN PRINT PL$(Y);\ PAYS ME;
+
+    ELSE PRINT " I PAY":PL$(Y);
+
+    830 IF ABS(WR)>1 THEN PRINT" TWICE"; ELSE PRINT " ONCE"
+
+    840 PRINT ABS(WR)*B(Y)
+
+    850 M(3)=H+WR*B(Y) ''adjust bank money
+
+    860 M(Y)=M(Y)+WR*B(Y)-1 ''adjust player money
+
+    870 NEXT Y:BP=0
+
+    880 INPUT"PRESS ENTER TO GO ON";A$
+
+    890 GOTO 210'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '# Pontoon
+
+
+    ```
+
+    900 REM SHUFFLE PACK
+
+    910 FOR Z=1 TO 52:P(Z)=0:NEXT Z
+
+    920 PRINT"PLEASE WAIT A MOMENT = ":PRINT"AM SHUFFLING"
+
+    930 FOR Z=1 TO 52
+
+    940 P=RND(52):IF P(P)<0 THEN 940
+
+    950 P(P)=Z:NEXT Z
+
+    960 P-1=''TOP OF PACK MARKER
+
+    970 RESTORE:Z=1 TO 4:READ ST$(Z):NEXT
+
+    980 DATA "CLUBS","DIAMONDS","HEARTS","SPADES"
+
+    990 FOR Z=1 TO 4:READ CD$(Z):NEXT
+
+    1000 DATA "ACE","JACK","QUEEN","KING"
+
+    1010 RETURN
+
+    ```
+
+
+    ```
+
+    1020 REM DEAL NEXT CARD
+
+    1030 FOR DL=1 TO 900:NEXT DL           ''vary delay as you wish
+
+    1040 W=P(P):ST=1+INT((W-1)/13)
+
+    1050 ST$-=ST$(ST)
+
+    1060 CD=W-(ST-1)*13+1
+
+    1070 IF CD=10 THEN CD$=CD$(CD-10) ELSE CD$=STR$(CD)
+
+    1080 P=P+1:IF P>52 THEN:PRINT "GOING THROUGH THE PACK AGAIN"
+
+    1090 RETURN
+
+    ```
+
+
+    ```
+
+    1100 REM ADD TO HAND           ''increase PG() add to HD() etc
+
+    1110 G=PG(PL)+(PL-1)*5+5
+
+    1120 HD$(G)=CD$:HS$(G)=ST$
+
+    1130 HD(G)=CD:HS(G)=ST
+
+    1140 PG(PL)=PG(PL)+1
+
+    1150 RETURN
+
+    ```
+
+
+    ```
+
+    1160 REM SHOW VALUE OF CARD
+
+    1170 PRINT TAB(TB);CD$; OF "";ST$
+
+    1180 RETURN
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '# Pontoon
+
+
+    ```
+
+    1190 REM EVALUATE THE HAND
+
+    1200 HT=0:BU=0:AT=0:PT=0:C5=0
+
+    1210 FOR Z=(PL-1)*5+1 TO PG(PL)+(PL-1)*5
+
+    1220 IF HD(Z)=11 THEN HT=HT+1:AT=AT+1:GOTO 1250
+
+    1230 IF HD(Z)=11 THEN HT=HT+10:GOTO 1250
+
+    1240 HT=HT+HD(Z)
+
+    1250 NEXT Z
+
+    1260 IF HT>2 THEN BU=-1
+
+    1270 IF PG(PL)=5 AND NOT BU THEN C5=-1
+
+    1280 MT=0:IF AT=0 GOTO 1310
+
+    1290 FOR Z=1 TO AT:MT=MT+2*10:IF MT>21 THEN MT=MT-10:GOTO 1310
+
+    1300 NEXT Z
+
+    1310 IF MT=21 AND PG(PL)=2 PT=-1
+
+    1320 RETURN
+
+    ```
+
+
+    ```
+
+    1330 REM SR TO ADJUST PLAYERS
+
+    1340 IF M(3)>0 THEN "bank is OK"
+
+    1350 PRINT "OH DEAR-YOU BUSTED THE BANK"
+
+    1360 PRINT "I SHALL HAVE TO GET SOME"
+
+    1370 PRINT "MORE RAM CHIPS. SEE LATER":;END
+
+    1380 SH=0:FOR Y=1 TO H
+
+    1390 IF M(Y)>0 THEN 1450
+
+    1400 PRINT "PO OLD :PL$(Y)"
+
+    1410 PRINT "IS BROKE"
+
+    1420 R=5:GOSUB 1580 ''remarks for losing a player
+
+    1430 SH=SH+1:PL$(Y)="":M(Y)=0
+
+    1440 IF Y=1 AND H=1 THEN PRINT "GAME OVER -":
+
+    "SUPERIOR INTLECT WINS";R=4:GOSUB 1580:END
+
+    1450 NEXT Y
+
+    "test for two players gone at once"
+
+    1460 IF SH=H THEN INPUT "WHERE''S EVERYBODY GONE TO";$A:END
+
+    1470 IF SH=0 THEN RETURN "nobody out
+
+    1480 H=H-SH:IF M(2)=1 THEN INPUT
+
+    "PRESS ENTER TO CONTINUE";$A:RETURN
+
+    1490 PRINT "MOVE OVER ";PL$(2) ''left hand player gone
+
+    1500 PRINT "LOTIS OF ROOM ON MY LEFT"
+
+    1510 M(1)=M(2):PL$(1)=PL$(2)="":M(2)=0
+
+    1520 INPUT"PRESS ENTER WHEN READY";$A
+
+    1530 RETURN
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: "# Pontoon\n\n```\n1540 REM EVALUATE BANK\n1550 PL=3:GOSUB 1190\n1560 BT=MT:B5=C5:BP=PT\n\
+    1570 RETURN\n```\n\n```\n1580 REM RUDE REMARKS\n  'always say something for rare\
+    \ events\n  'player going or end of game\n1590 IF R>3 THEN RND(5):GOTO 1610\n\
+    1600 RR=RND(25):IF RR=5 RETURN  'say nothing B%8% time\n1610 RR=(R-1)*5+RR  'remark\
+    \ =event *5+rr\n1620 PRINT A$(RR)\n1630 RETURN\n```\n\n```\n1640 REM SET UP REMARKS\n\
+    \  'R=1 for start of new hand\n1650 A$(1)=\"I PEEL LUCKY TODAY\"\n1660 A$(2)=\"\
+    EYES DOWN\"\n1670 A$(3)=\"HERE'S LOOKING AT YOU\"\n1680 A$(4)=\"ANYONE FOR TENNIS\"\
+    \n1690 A$(5)=\"THERE IS NOTHING UP MY SLEEVES\"\n  'R-2 for placing of bets 9,10\
+    \ are deliberately\n  'not used to make it less talkative\n1700 A$(6)=\"BIG SPIDER\"\
+    \n1710 A$(7)=\"SURE YOU CAN AFFORD IT\"\n1720 A$(8)=\"THAT WILL DO NICELY\"\n\
+    \  'R-3 for player busted\n1730 A$(11)=\"OH DEAR I AM SORRY\"\n1740 A$(12)=\"\
+    IT'S AN ILL WIND\"\n1750 A$(13)=\"I DID'T SAY ANYTHING\"\n1760 A$(14)=\"A PLEASURE\
+    \ TO DO BUSINESS\"\n1770 A$(15)=\"A BRIDGE TOO FAR\"\n  'R=4 for end of game\n\
+    1780 A$(16)=\"I GUESS THE BEST CHAP WON\"\n1790 A$(17)=\"WHERE ARE THE NEXT SUCKERS\"\
+    \n1800 A$(18)=\"THANK YOU FOR THE GAME\"\n1810 A$(19)=\"COME AGAIN SOON\"\n1820\
+    \ A$(20)=\"YOU CAN'T WIN THEM ALL\"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: '# Pontoon
+
+
+    ```
+
+    ''R=5 loss of player gone out
+
+    1830 A$(21)="SORRY TO LOSE YOU"
+
+    1840 A$(22)="SUCH A NICE CHAP"
+
+    1850 A$(23)="BETTER LUCK NEXT TIME"
+
+    1860 A$(24)="THAT''S THE WAY IT CRUMBLES"
+
+    1870 A$(25)="UNLUCKY AT CARDS-LUCKY IN LOVE"
+
+    1880 RETURN
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# Other Books by Phipps Associates
+
+
+    # Personal Computers
+
+
+    # Books
+
+
+    +   * The Spectrum Pocket Book Toms, T
+
+    * Atom Business Phipps, J
+
+    * The ZX80 Pocket Book Toms, T
+
+    * The ZX81 Pocket Book Toms, T
+
+
+    # Cassettes
+
+
+    +   Adventure tape no1 (for the ZX81)
+
+    - Greedy Gulch, Magic Mountain, Pharaoh''s Tomb
+
+    Nowotnik Puzzle & Other Diversions (for the ZX81)
+
+    - Puzzle, Demolition, Tempin
+
+    * above means cassettes for the books also available
+
+
+    # MICROSHOP Series
+
+
+    +   Volume 1 - Overview Phipps, J
+
+    Volume 2 - Till Phipps, J
+
+    Volume 3 - Stock & Sales Accounting Phipps, J & Toms, T
+
+    Volume 7 - Monitor Phipps, J & Toms, T
+
+    Volume 8 - Index Toms, T
+
+    Volume 9 - Sort Toms, T
+
+
+    MICROSHOP is a series of books for retailers, supplying an entire stock control
+    package which runs on any CP/M-based microcomputer (not Dragon) using data direct
+    from the shop tills. The complete system is issued in ten volumes, the ones above
+    are available now. 8" single density single sided diskettes for the programs above
+    are also available.'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '![](img/7a80be36866e3d2c055800fc953633cd_129_0.png)
+
+
+    PHIPS ASSOCIATES
+
+    99, EAST ST. EPSOM, SURREY. KT17 1EA
+
+    ISBN 0 950 7302 9 7
+
+
+    LOAD AND GO WITH YOUR DRAGON
+
+
+    PHIPS'
+  merge: -1
+  img_proc: true
