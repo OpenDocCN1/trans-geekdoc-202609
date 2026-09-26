@@ -1,0 +1,2068 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Journal of Affective Disorders 327 (2023) 46–53
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Journal of Affictive Disorders
+
+
+    journal homepage: www://www.elsevier.com/locate/jad
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_0_0.png)
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_0_1.png)
+
+
+    Research paper
+
+
+    # Distinguishing between bipolar depression and bipolar depression on the reward
+    circuit activities and clinical characteristics: A machine learning analysis
+
+
+    Aixia Zhang *, Dan Qiao †, Yuchen Wang, Chunxia Yang, Yanfang Wang, Ning Sun,
+    Xiaodong Hu, Zhifu Liu, Kerang Zhang
+
+
+    Department of Psychiatry, the First Hospital of Shansi Medical University, Tianjin
+    030001, China
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    +   Keywords:
+
+    Bipolar depression
+
+    Unipolar depression
+
+    Reward circuit
+
+    Clinical feature
+
+    Support mechanism
+
+
+    Background: Differentiating bipolar depression (BD) from bipolar depression (UD)
+    is a major clinical challenge. Identifying the potential markers between these
+    two diseases is vital to optimize management of depressed individuals.
+
+    Methods: Here, we aimed to integrate neuroimaging data with machine learning method
+    to classify BD and UD at the individual level. Data with an average age of 35.1
+    years from 31 healthy controls (HC group) and 42 patients conversion from major
+    depressive disorder (MDD) to BD and 48 patients Using graph theory and functional
+    connectivity (FC) analysis we investigated the differences in reward circuits
+    among three groups. We then applied a support vector machine and leave-out-cross
+    validation methods to classify BD and UD patients.
+
+    Results: Patients with MDD and BD showed decreased degree centrality of rostromedial
+    thalamic nucleus (RMN) and node efficiency (NE) of left frontal nucleus. Compared
+    with BD and HC, BD showed decreased NE of right MD and FC between right and left
+    prefrontal cortexes.
+
+    Limitations: The classification model used out-of-sample analysis.
+
+    Conclusion: The reward circuit dysfunction can not provide additional information
+    to assist clinical diagnosis, but also in informed treatment decision of depressed
+    patients.
+
+
+    # 1. Introduction
+
+
+    Unipolar (UD) and bipolar depressive disorders (BD) are leading causes of depression
+    worldwide (Fried, 2017). Differences in etiology, characteristics and course of
+    disease present a clinical diagnostic challenge, with BD often misidentified as
+    FD (Fried et al., 2003). Since BD and UD have different treatment strategies,
+    an inadequate diagnosis may delay the recovery process, increased rate of switch
+    to mania and suicidal behavior, and contributing to the progression of the underlying
+    disorder (Koupsakis and Sun,
+
+
+    2014). Early identification and discrimination between BD and UD can improve the
+    safety and accuracy of treatment.
+
+    Currently, the presence of mania and hypomania is considered the main difference
+    between BD and UD according to the clinical criteria. Clinical studies have shown
+    that certain epidemiology differ between BD and UD (Prim et al., 2019; Serra et
+    al., 2016; Volniger and Peris, Zisóok et al., 2007), e.g., with BD usually have
+    a lower female to male ratio, earlier onset, shorter duration of the state, increased
+    frequency of episodes, more prominent depressive symptoms as well as poorer response
+    to antidepressant drugs, and such patients even demonstrate seasonal
+
+
+    > *Aixia Zhang and Dan Qiao joined first author.
+
+    †First Hospital of Shansi Medical University, Tianjin 030001, China.
+
+    *E-mail: zhenifen@xsmu.edu.cn; Liu, stomsxu@vip.163.com (K. Zhang).
+
+
+    https://doi.org/10.1016/jjad.2023.01.080
+
+    Received 4 August 2022; Received in revised form 31 December 2022; Accepted 21
+    January 2023
+
+    Available online 25 January 2023
+
+    © 0165-0327/2023 Elsevier B.V. All rights reserved. * * *'
+  - '[PAGE 1]
+
+
+    A. Zheng
+
+
+    of; however, the clinical characteristics that can be used to distinguish the
+    two diseases are generally suboptimal in distinguishing power. 20 % of patients
+    with a depressive episode are correctly diagnosed at the first episode based on
+    clinical characteristics (Fischberg et al., 2003), and most patients take an average
+    of 5 years before diagnosis. Thus, it is critical to identify and objective biomarkers
+    that can help differentiate BD and UD.
+
+
+    Journal of Affective Disorders 327 (2023) 46-53
+
+
+    # 2. Materials and methods
+
+
+    # 2.1. Participants
+
+
+    In the past decade, neuroimaging techniques, functional MRI have been widely used
+    to investigate pathological patterns of BD and UD (of Almeida, and Phillips, 2013).
+    Current evidence suggests that BD and UD were "disconnection syndromes", and the
+    functional brain abnormalities observed in these diseases reflect the presence
+    of some connecting pathophysiological mechanisms (Jano et al., 2013). Difference,
+    the abnormality of the reward circuit in BD and UD are receiving increasing attention.
+    Although studies reported that patients with BD showed a shared functional connection
+    between the reward center the anterior insula (AI) and the inferior parietal lobe
+    (IP), which is correlated with severity of depressive symptoms, others reported
+    that such connection has a certain degree of determination between the two diseases
+    (64 to 47 %, 71 %, and 60 % (Elard et al., 2018)). Considering task-based MRI
+    and graph theory, patients with BD and UD showed different patterns of network
+    efficiency, density, path, and length of reward circuit within or without manic
+    episodes (Antimanelis et al., 2016). These findings improve our understanding
+    of pathophysiological processes and diseases that might differ in the early stages
+    of development. However, most research is limited to the evaluation of earlier
+    characteristics. Furthermore, although the effectiveness of clinical features
+    in distinguishing the two diseases is not ideal, it is still the main basis of
+    clinical diagnosis, while most studies have ignored the role of clinical features
+    in the different disorders.
+
+
+    From another point of view, majority of neuroimaging studies focused on biomarkers
+    at the group level, with an inadequate focus on diagnosis at individual level.
+    One solution may reside in various machine learning methods which enable algorithms
+    to automatically detect repetitive patterns and intelligent decisions based on
+    imaging data, such methods could help achieving individual classification and
+    solve mood disorder problems in clinical settings. The support vector machine
+    (SVM) on minimizing risks has available data and a higher detection accuracy than
+    other types of methods (Byeon, 2015).
+
+
+    In the current study, we conducted a retrospective study with neuro and clinical
+    data of first-onset depressive patients who were followed up for an average of
+    7.5 years. Graph theory and connectivity (FC) analysis, we investigated the differences
+    in functional architectures of reward circuit between patients with bipolar disorder
+    (BD) and UD at the end of follow-up period, compared with patients diagnosed of
+    MD at the end of follow-up period. We used SVM to construct a classification model
+    of BD and UD, with network attributes of the reward circuit and clinical characteristics
+    as features. The Leave-one-out cross-validation (LOOCV) was utilized to verify
+    the performance of the classification method.
+
+
+    The present study included 84 patients (first-episode Bipolar Depression, BD group,
+    n=34; first-onset Unipolar Depression, MD group, n=50) and 31 healthy controls
+    (HC group, n=31). The data was collected from patients with an initial diagnosis
+    of MD and an average of seven-year follow-up. We recruited patients with an initial
+    diagnosis of MD from the Department of Psychiatry, First Hospital of Shanghai
+    Medical University, Tianjin, China, during a period of 2010 to 2016. Patients
+    were aged from 18 to 55 years and had no history of substance or alcohol abuse
+    in community. All participants were evaluated by psychiatrists to determine the
+    presence or absence of axis I depressive symptoms using the Structured Interview
+    for DSM-IV (SADS-IV) and Structured Interview for Axis I Disorders (SCID). Clinical
+    symptom was assessed using the Hamilton Rating Scale for Depression (HAM-D). Inclusion
+    criteria for patients in the MD group included: (1) diagnosis of axis I depression;
+    (2) no history of manic or hypomanic episode; (3) no history of psychiatric disorder;
+    (4) a score of HAM-D not more than 24; (5) right-handed; (6) no history of substance
+    or alcohol abuse; and (7) no history of psychiatric disorder and any MRI contraindications.
+    Inclusion criteria for the BD group included: (1) any symptom of major depressive
+    disorder; (2) history of one manic or hypomanic episode.
+
+
+    Then, we followed up 96 MD patients and performed SCD during every visit. We were
+    re-evaluated at 2 weeks, 8 weeks, 3 months, and 6 months after the. After the
+    event,
+
+
+    This study was approved by the Ethics Committee of the First Hospital of Shanghai
+    Medical University. All participants signed the informed consent.
+
+
+    # 2.2. MRI acquisition and processing
+
+
+    MRI data were acquired on an MAGNETOM 3.0 T scanner (Siemens Medical Systems,
+    Germany) with a 12-channel head coil. For high-resolution anatomical T1-weighted
+    images were acquired in three planes. Restrained room with head and rubber pads
+    were used to minimize head motion and noise interference. The patients were informed
+    of the procedures before the MRI scan and were required to close their eyes and
+    not move. Scanning of the functional regions was performed as follows: echo-planar
+    imaging sequence with 32 axial slices, repetition time (TR) = 200 ms, echo time
+    (TE) = 900 ms, flip angle (FA) = 90°, field of view (FOV) = 240 mm², acquisition
+    matrix = 64 × 64, slice thickness = 3 mm,
+
+
+    # 2.3. Image processing
+
+
+    The processing includes four major stages: (1) preprocessing; (2) extraction of
+    the FC matrix; (3) construction brain network from FC matrix; (4) brain network
+    analysis.
+
+
+    47'
+  md: '
+
+    # Journal of Affective Disorders 327 (2023) 46–53
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Journal of Affective Disorders
+
+
+    journal homepage: www://www.elsevier.com/locate/jad
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_0_0.png)
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_0_1.png)
+
+
+    Research paper
+
+
+    # Distinguishing between bipolar depression and unipolar depression on the reward
+    circuit activities and clinical characteristics: A machine learning analysis
+
+
+    Aixia Zhang *, Dan Qiao †, Yuchen Wang, Chunxia Yang, Yanfang Wang, Ning Sun,
+    Xiaodong Hu, Zhifu Liu, Kerang Zhang
+
+
+    Department of Psychiatry, the First Hospital of Shansi Medical University, Tianjin
+    030001, China
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    - Keywords:
+
+    - Bipolar depression
+
+    - Unipolar depression
+
+    - Reward circuit
+
+    - Clinical feature
+
+    - Support mechanism
+
+
+    Background: Differentiating bipolar depression (BD) from unipolar depression (UD)
+    is a major clinical challenge. Identifying the potential markers between these
+    two diseases is vital to optimize management of depressed individuals.
+
+
+    Methods: Here, we aimed to integrate neuroimaging data with machine learning method
+    to classify BD and UD at the individual level. Data with an average age of 35.1
+    years from 31 healthy controls (HC group) and 42 patients conversion from major
+    depressive disorder (MDD) to BD and 48 patients. Using graph theory and functional
+    connectivity (FC) analysis, we investigated the differences in reward circuits
+    among three groups. We then applied a support vector machine and leave-out-cross
+    validation methods to classify BD and UD patients.
+
+
+    Results: Patients with MDD and BD showed decreased degree centrality of rostromromedial
+    thalamic nucleus (RMN) and node efficiency (NE) of left frontal nucleus. Compared
+    with BD and HC, BD showed decreased NE of right MD and FC between right and left
+    prefrontal cortexes.
+
+
+    Limitations: The classification model used out-of-sample analysis.
+
+
+    Conclusion: The reward circuit dysfunction can not only provide additional information
+    to assist clinical diagnosis, but also in informed treatment decision of depressed
+    patients.
+
+
+    # 1. Introduction
+
+
+    Unipolar (UD) and bipolar depressive disorders (BD) are leading causes of depression
+    worldwide (Fried, 2017). Differences in etiology, characteristics and course of
+    disease present a clinical diagnostic challenge, with BD often misidentified as
+    UD (Fried et al., 2003). Since BD and UD have different treatment strategies,
+    an inadequate diagnosis may delay the recovery process, increased rate of switch
+    to mania and suicidal behavior, and contributing to the progression of the underlying
+    disorder (Koupsakis and Sun, 2014). Early identification and discrimination between
+    BD and UD can improve the safety and accuracy of treatment.
+
+
+    Currently, the presence of mania and hypomania is considered the main difference
+    between BD and UD according to the clinical criteria. Clinical studies have shown
+    that certain epidemiology differ between BD and UD (Prim et al., 2019; Serra et
+    al., 2016; Volniger and Peris, Zisóok et al., 2007), e.g., with BD usually have
+    a lower female to male ratio, earlier onset, shorter duration of the state, increased
+    frequency of episodes, more prominent depressive symptoms as well as poorer response
+    to antidepressant drugs, and such patients even demonstrate seasonal.
+
+
+    > *Aixia Zhang and Dan Qiao joined first author.
+
+    †First Hospital of Shansi Medical University, Tianjin 030001, China.
+
+    *E-mail: zhenifen@xsmu.edu.cn; Liu, stomsxu@vip.163.com (K. Zhang).
+
+
+    A. Zheng
+
+
+    of symptoms; however, the clinical characteristics that can be used to distinguish
+    the two diseases are generally suboptimal in distinguishing power. 20% of patients
+    with a depressive episode are correctly diagnosed at the first episode based on
+    clinical characteristics (Fischberg et al., 2003), and most patients take an average
+    of 5 years before diagnosis. Thus, it is critical to identify and objective biomarkers
+    that can help differentiate BD and UD.
+
+
+    Journal of Affective Disorders 327 (2023) 46-53
+
+
+    # 2. Materials and methods
+
+
+    ## 2.1. Participants
+
+
+    In the past decade, neuroimaging techniques, functional MRI have been widely used
+    to investigate pathological patterns of BD and UD (of Almeida, and Phillips, 2013).
+    Current evidence suggests that BD and UD were "disconnection syndromes", and the
+    functional brain abnormalities observed in these diseases reflect the presence
+    of some connecting pathophysiological mechanisms (Jano et al., 2013). Difference,
+    the abnormality of the reward circuit in BD and UD are receiving increasing attention.
+    Although studies reported that patients with BD showed a shared functional connection
+    between the reward center the anterior insula (AI) and the inferior parietal lobe
+    (IP), which is correlated with severity of depressive symptoms, others reported
+    that such connection has a certain degree of determination between the two diseases
+    (64 to 47%, 71%, and 60% (Elard et al., 2018)). Considering task and functional
+    connectivity (FC) analysis, we investigated the differences in reward circuits
+    among three groups. We then applied a support vector machine and leave-out-cross
+    validation methods to classify BD and UD patients.
+
+
+    https://doi.org/10.1016/jjad.2023.01.080
+
+    Received 4 August 2022; Received in revised form 31 December 2022; Accepted 21
+    January 2023
+
+    Available online 25 January 2023
+
+    © 0165-0327/2023 Elsevier B.V. All rights reserved. * * *
+
+
+    The classification model used out-of-sample analysis. The reward circuit dysfunction
+    can not only provide additional information to assist clinical diagnosis, but
+    also in informed treatment decision of depressed patients.
+
+    '
+  mdcn: '
+
+
+    # 情感障碍杂志 第327卷 (2023) 46–53
+
+
+    ScienceDirect 提供内容列表
+
+
+    # 情感障碍杂志
+
+
+    期刊主页：www://www.elsevier.com/locate/jad
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_0_0.png)
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_0_1.png)
+
+
+    研究论文
+
+
+    # 基于奖励回路活动和临床特征区分双相情感抑郁与单极性抑郁障碍的机器学习分析
+
+
+    Aixia Zhang *, Dan Qiao †, Yuchen Wang, Chunxia Yang, Yanfang Wang, Ning Sun,
+    Xiaodong Hu, Zhifu Liu, Kerang Zhang
+
+
+    山西医学大学第一医院精神科，天津 030001，中国
+
+
+    # 文章信息
+
+
+    # 摘要
+
+
+    - 关键词：
+
+    - 双相情感抑郁
+
+    - 单极性抑郁障碍
+
+    - 奖励回路
+
+    - 临床特征
+
+    - 支持机制
+
+
+    背景：区分双相情感抑郁（BD）与单极性抑郁（UD）是临床上的一个主要挑战。识别这两种疾病之间的潜在标志物对于优化抑郁患者的管理至关重要。
+
+
+    方法：本文旨在整合神经影像数据与机器学习方法，在个体水平上对BD和UD进行分类。数据来自31名健康对照（HC组）、42名从单相抑郁症（MDD）转变为BD的患者以及48名患者，平均年龄为35.1岁。通过图论和功能连接（FC）分析，我们研究了三组之间奖励回路的差异。随后，我们应用支持向量机和留一交叉法对患者分类。
+
+
+    结果：MDD和BD患者显示出脑内侧丘脑核（RMN）度中心性下降以及左侧额叶节点效率（NE）降低。与BD和HC组相比，BD表现出右侧背侧核（MD）的NE降低以及左右额叶皮层之间的功能连接减少。
+
+
+    局限性：分类模型使用了样本外分析。
+
+
+    结论：奖励回路功能障碍不仅能为辅助临床诊断提供额外信息，还能为抑郁患者提供科学的治疗决策支持。
+
+
+    # 1. 引言
+
+
+    单极性抑郁（UD）和双相情感障碍（BD）是全球范围内抑郁的主要原因（Fried, 2017）。病因学、特征和病程的差异构成了临床诊断的挑战，BD常被误诊为UD（Fried
+    et al., 2003）。由于BD和UD采取不同的治疗策略，诊断不当可能会延迟恢复过程，增加转化为狂躁和自杀行为的概率，并导致基础疾病的进展（Koupsakis
+    and Sun, 2014）。早期识别和区分BD与UD可以提高治疗的安全性和准确性。
+
+
+    目前，根据临床标准，狂躁和轻躁发作的存在被认为是BD与UD的主要区别。临床研究显示BD和UD在某些流行病学上存在差异（Prim et al., 2019;
+    Serra et al., 2016; Volniger and Peris, Zisóok et al., 2007），例如，BD通常女性男女比例较低、发病较早、状态持续时间短、发作频率增加、抑郁症状更明显，且对抗抑郁药物反应较差，此类患者甚至表现出季节性症状；
+
+
+    > *Aixia Zhang 和 Dan Qiao 共同第一作者。
+
+    †山西医学大学第一医院，天津 030001，中国。
+
+    *电子邮箱：zhenifen@xsmu.edu.cn; Liu, stomsxu@vip.163.com (K. Zhang)。
+
+
+    A. Zheng
+
+
+    然而，用于区分这两种疾病的临床特征在区分能力上通常不尽如人意。20%的抑郁发作患者在首次发时根据临床特征被正确确诊（Fischberg et al., 2003），大多数患者在确诊前平均花费5年。因此，识别能够帮助区分BD和UD的客观生物标志物至关重要。
+
+
+    情感障碍杂志 第327卷 (2023) 46-53
+
+
+    # 2. 材料与方法
+
+
+    ## 2.1. 参与者
+
+
+    在过去的十年里，神经影像技术（功能性磁共振）已广泛用于研究BD和UD的病理模式（of Almeida, and Phillips, 2013）。目前的证据表明，BD和UD是“连接综合征”，这些疾病中观察到的大脑功能异常反映了某些连接病理生理机制的存在（Jano
+    et al., 2013）。不同的是，BD和UD奖励回路的异常正受到越来越多的关注。尽管研究报告BD患者在奖励中心、前岛叶（AI）以及下顶叶（IP）之间存在共同的功能连接，且与抑郁症状的严重程度相关，但其他研究报告这种连接在两种疾病之间具有某种程度的差异
+    (64%到47%、71%和60% (Elard et al., 2018)).考虑到任务和功能连接（FC）分析，我们研究了三组之间奖励回路的差异。随后，我们应用支持向量机和留一交叉法对BD和UD患者分类。
+
+
+    https://doi.org/10.1016/jjad.2023.01.080
+
+    收于2022年8月4日；修稿收于2022年12月31日；接收于2023年1月21日
+
+    在线发布于2023年1月25日
+
+    © 0165-0327/2023 Elsevier B.V. 版权保留。 * *
+
+
+    分类模型使用了样本外分析。奖励回路功能障碍不仅能为辅助临床诊断提供额外信息，还能为抑郁患者提供科学的治疗决策支持。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # D.4. Preprocessing
+
+
+    The MRI preprocessing was carried out using Data and Analysis for Brain Imaging
+    (DPABI; DPABI_V4.0_19305; http://dpabi.org/). For each participant, the first
+    volume was then removed to adapt to MRI reartifacts that were removed. The remaining
+    images underwent preprocessing, which consists of: (1) slice timing, (2) realignment
+    of volumes for head motion, (3) signal intensity correction using the Neurological
+    Institute (NI) template resampled voxel size of 2 x 2 x 2 mm), (4) denoising,
+    (5) nuisance correction, including 24 motion parameters, white matter, cerebellum,
+    and cerebrospinal fluid. Of note, the given region of interest (ROI) was selected
+    to study the structural connectivity in course, which might lead to lesions of
+    volumes within ROI that affecting the extraction of motion-related artifacts in
+    the connectivity analysis (Li et al., 2015).
+
+
+    To minimize the effect of head movement, the points with a displacement greater
+    than 0.3 and the points before/after were excluded from being included in the
+    final analysis of the blood oxygen-level-dependent (BOLD) signals generated by
+    the timing points. For this reason, two individuals of the MDD and BD groups were
+    excluded, the 32 subjects in BD group, 48 in MDD group and 33 in HC group were
+    excluded from analysis.
+
+
+    # D.5. Functional connectivity
+
+
+    Following the preprocessing steps, ROIs were selected based on peak coordinates
+    in the functional intensity of the region, including Basolateral Prefrontal Cortex
+    (bLPFC) (Li et al., 2011), Medial Prefrontal Cortex (mPFC), Anterior Cingulate
+    Cortex (ACC) (Dachman et al., 2018), Medial Orbital Frontal Cortex (mOFC) (Li
+    et al., 2011), Ventral Temporal Area (VTA) (Bunecek and Jung, 2003), Amygdala
+    (Amy), Posterior Cingulate Cortex (PCC), Nucleus Accumbens (NAc) (2017), Haenob
+    Gula (Hb) (James, 2013), and medial thalamus (MD) (Li et al., 2011). And with
+    three ROIs selected, the volumes that were selected based on areas with low signal-to-noise
+    ratio were excluded to be removed by MI. The then signal-to-noise ratio of each
+    ROI was >50, and a linear kernel function was used in each volume, which indicates
+    the quality of the ROI signal used.
+
+
+    We computed the ROI-ROI connectivity matrices using DPABI tools. Pearson''s correlation
+    coefficients of averaged BOLD time series each pair of ROI were constructed using
+    Fisher’s z-transformation. The correlation coefficients were transformed to Z
+    values using the Fisher’s, a z-score matrix of each individual FC was separately
+    obtained.
+
+
+    # D.6. Construction of functional network
+
+
+    The reward network was constructed using GETRING (https://www.nitrc.org/projects/get),
+    a graph network analysis toolbox for brain connections. A brain network is constructed
+    of nodes and edges. Nodes were defined by averaged BOLD signals from each relevant
+    ROI and edges were constructed by FC. To further examine, we used thresholds,
+    a range of sparsity (5% ≤ 50%) with an increment of 0.05 to evaluate effects of
+    thresholds. Sparsity is defined as the ratio of the number of edges in the network
+    to the maximum number of
+
+
+    # D.7. Network metrics
+
+
+    Graph theory was performed to analyze the functional brain network at both global
+    and local levels. For global level, we used global efficiency (GE) and shortest
+    path length (SPL) to assess the integration of the network. For local level, we
+    used local efficiency (LE) (Li et al., 2017). GE measures the efficiency of information
+    flow and SPL is the average of all the shortest path length, smallest mean values
+    support fast information transfer to the brain. For local level, we used degree
+    centrality, between centrality (BC), nodal efficiency (NC), and local efficiency
+    (LE) to assess the connectivity of a node (Li et al., 2013). DC reflects the flow
+    of information within important nodes in the network. NLE quantifies the information
+    propagation from nodes to others. NQ quantifies the information propagation constituted
+    by its neighbor node when removed, and BC reflects the effects of node on information
+    transmission other nodes.
+
+
+    # D.8. Statistical analysis
+
+
+    Analysis of demographic and clinical characteristics were performed using SPSS
+    16.0. Chi-square test identified differences in groups and one-way variance of
+    analysis (ANOVA) to assess the differences between the three groups in age and
+    years of education. For HAM-24 scores, we used independent t-test between groups
+    and paired t-test within the same group. Results were considered significant if
+    P < 0.05.
+
+
+    Then, we used Network-based Statistics (NBS) method (Zamir et al., 2010), a nonparametric
+    and validated statistical analysis for controlling multiple comparisons. We used
+    the permutation kernel function (5000 permutations) with NBS correction. Subnetworks
+    that were significant at a level of P < 0.05 were reported. Further FC analysis
+    was performed for each group with comparison with LSD.
+
+
+    # D.9. Classification method
+
+
+    Using the Library for Support Vector Machines (LIBSVM) software (Chang and Lin,
+    2007), we used linear SVM algorithm with kernel function to determine whether
+    it could be able to identify patients with MDD and the ID group based on functional
+    brain metrics and clinical characteristics. The functional brain network metrics
+    were selected as the features for the classification connection and/or properties
+    between MDD and BD group. We also chose the clinical characteristics differences
+    between BD and MD group as classification features. To evaluate the effect of
+    network attributes of the reward circuit and'
+  - '[PAGE 3]
+
+
+    # A. Zhang et al.
+
+
+    # Journal of Affective Disorders 327 (2022) 46-53
+
+
+    characteristics for classification clinical application, we used three models:
+    (1) only the network attributes as the classification; (2) only the clinical characteristics
+    as the classification; (3) combine the network attributes with the clinical characteristics
+    classification.
+
+
+    To evaluate the classifier''s performance, we conducted Leave-One Out-Validation
+    (LOO-CV), which separates a single data point (i, e., participant) for testing
+    and using the remaining sample to estimate a prediction for the test day. We defined
+    sensitivity, specificity, and the mean accuracy of all three models as confirmed
+    through permutations tests. We randomized the labels (i.e., group as MDD or BD)
+    with a head of 5000 times and calculated the classification accuracy of each iteration
+    with LOO-CV. P values, showing the accuracy was higher than the original classification
+    accuracy by the iterations, significant of our classification models.
+
+
+    patients group and HC (Table 2, Fig. 2).
+
+
+    # 3.2.2. Group properties
+
+
+    Education and head-adjusted ANOVA demonstrated that the three groups differed
+    significantly in DE and RC of the MD, NE of the VP and PFC. In box comparisons,
+    the BD had significantly higher RC of MD, but no difference was observed between
+    the MDD and HC. The MDD group also had significantly lower NE of MD, but no difference
+    was observed between the BD and HC. The BD group had significantly higher NE of
+    MD, but no difference between the BD and HC. For the properties (i.e., GF, SPL,
+    GL, BC, and NLE), there were no significant differences among the three groups
+    (Table 2, Fig. 2).
+
+
+    # 3.2.3. SVM classification
+
+
+    In classification BD group from MD group using clinical characteristics (i.e.,
+    somatization, cognition impairment, and sleep disturbance) resulted in an accuracy
+    of 68.7%, sensitivity: 59.38%; specificity: 75.00%; (P = 0.026). When combining
+    clinical characteristics with functional features, the classification of BD group
+    from MD group, the accuracy reached 87.50%, sensitivity: 78.13%; specificity:
+    77.08%; (P = 0.0005).
+
+
+    # 3. Results
+
+
+    # 3.1. Demographic and clinical characteristics
+
+
+    Table 1 shows the demographic and clinical characteristics of the participants.
+    There were no statistical differences among the three groups in terms of age and
+    gender. The education in MDD and BD group was significantly lower than in HC group.
+    For clinical systems, there were no statistical differences in the factors of
+    HAM between MDD and BD group. Beside, somatization/sleep disturbance factors of
+    HAM in MDD group were significantly higher than in BD group. The cognition impairment
+    of HAM were lower than in BD. No significant differences were observed between
+    the BD and MD group.
+
+
+    # 3.2. Reward circuit mapping
+
+
+    # 3.2.1. Functional connectivity properties
+
+
+    Education and head-adjusted ANOVA demonstrated that the three groups differed
+    significantly in FC between the right MD and bipolar PFC and left vmFC (A). In
+    box comparisons, the MDD had significantly higher FC between the left PFC and
+    vmFC, with both BD and HC, but no difference was observed between the BD and HC
+    group. Compared with BD, the MD group showed increased FC between the right MD
+    and the right PFC, but no difference was observed between each
+
+
+    # Table 1
+
+    demographics and clinical characteristics of all participants.
+
+
+    | | BD group (M ± SD) | MDD group (M ± SD) | HC group (M ± SD) | P |
+
+    |---|---|---|---||
+
+    | Gender (male/female) | 16/14 | 22/17 | 21/16 | 0.843 |
+
+    | Age, years | 37 ± 11.8 | 31.0 ± 8.5 | 33.5 ± 12.3 | 0.118 |
+
+    | Education, years | 10.9 ± 3.6 | 10.3 ± 2.7 | 12.1 ± 0.4 | 0.002 |
+
+    | HAM-D, score | 26.28 ± 4.62 | 26.29 ± 3.81 | 24.7 ± 4.70 | 0.951 |
+
+    | Somatization | 5.42 ± 1.99 | 5.49 ± 1.00 | 5.0 ± 0.00 | 0.000 |
+
+    | Cognitive impairment | 0.65 ± 0.51 | 0.84 ± 0.25 | 0.24 ± 0.15 | 0.005 |
+
+    | Anxiety | 10.64 ± 3.16 | 10.56 ± 2.46 | 8.0 ± 0.00 | 0.000 |
+
+    | Depression | 6.97 ± 1.07 | 7.08 ± 1.55 | 5.72 ± 0.72 | 0.162 |
+
+    | Sleep disturbance | 9.56 ± 0.42 | 9.97 ± 1.18 | 9.0 ± 0.00 | 0.000 |
+
+    | Hopelessness | 4.24 ± 1.57 | 4.11 ± 1.89 | 4.7 ± 0.00 | 0.740 |
+
+
+    Note: BD, bipolar disorder; MD, major depressive disorder; HC, healthy; HAM-D,
+    the Hamilton Depression Rating Scale for 24 item.
+
+
+    # 4. Discussion
+
+
+    At present, the depression polarity between bipolar disorder and depressive features,
+    which are related to subjective and insufficient connectivity. Personalized medicine
+    has the clinical goal of psychiatry for long term, and classification numerous
+    biomarkers on brain connectivity are important. Considering clinical characteristics
+    as the primary features for both diagnosis and the differential ability of risk
+    assessment, we have conducted a retrospective study with a 7-year follow-up, using
+    machine learning techniques to classify MDD patients with the combination of clinical
+    features and functional features. This study show: (1) the changes in the FC of
+    reward regions varies between BD and MD patients; (2) The difference in connectivity
+    patterns is reflected in the local models using clinical characteristics and functional
+    brain features better distinguish patients with MDD with an accuracy of 87.5%.
+
+
+    One of the features observed in BD group from FD is the functional change in the
+    right MD. The MD is known to be in well-behaved behavior and depressive behavior.
+    Behavior affected by mood could still be affected by function or damage of hippocampus
+    in MD / rodents, and adults, relapse and recovery of for novel heterogeneous stimuli
+    (Akamoto et al., 2016). Such evidence suggests that the maintenance of MD patients
+    from individuals is from accurately evaluating changes in effective stimuli under
+    stress and uncertain situations, and that this still impair the coordination and
+    integration process of behavior-behaviors.
+
+
+    49'
+  md: '
+
+    ## D.4. Preprocessing
+
+
+    The MRI preprocessing was carried out using Data and Analysis for Brain Imaging
+    (DPABI; DPABI_V4.0_19305; http://dpabi.org/). For each participant, the first
+    volume was then removed to adapt to MRI reartifacts that were removed. The remaining
+    images underwent preprocessing, which consists of: (1) slice timing, (2) realignment
+    of volumes for head motion, (3) signal intensity correction using the Neurological
+    Institute (NI) template resampled voxel size of 2 x 2 x 2 mm), (4) denoising,
+    (5) nuisance correction, including 24 motion parameters, white matter, cerebellum,
+    and cerebrospinal fluid. Of note, the given region of interest (ROI) was selected
+    to study the structural connectivity in course, which might lead to lesions of
+    volumes within ROI that affecting the extraction of motion-related artifacts in
+    the connectivity analysis (Li et al., 2015).
+
+
+    To minimize the effect of head movement, the points with a displacement greater
+    than 0.3 and the points before/after were excluded from being included in the
+    final analysis of the blood oxygen-level-dependent (BOLD) signals generated by
+    the timing points. For this reason, two individuals of the MDD and BD groups were
+    excluded, the 32 subjects in BD group, 48 in MDD group and 33 in HC group were
+    excluded from analysis.
+
+
+    ## D.5. Functional connectivity
+
+
+    Following the preprocessing steps, ROIs were selected based on peak coordinates
+    in the functional intensity of the region, including Basolateral Prefrontal Cortex
+    (bLPFC) (Li et al., 2011), Medial Prefrontal Cortex (mPFC), Anterior Cingulate
+    Cortex (ACC) (Dachman et al., 2018), Medial Orbital Frontal Cortex (mOFC) (Li
+    et al., 2011), Ventral Temporal Area (VTA) (Bunecek and Jung, 2003), Amygdala
+    (Amy), Posterior Cingulate Cortex (PCC), Nucleus Accumbens (NAc) (2017), Haenob
+    Gula (Hb) (James, 2013), and medial thalamus (MD) (Li et al., 2011). And with
+    three ROIs selected, the volumes that were selected based on areas with low signal-to-noise
+    ratio were excluded to be removed by MI. The then signal-to-noise ratio of each
+    ROI was >50, and a linear kernel function was used in each volume, which indicates
+    the quality of the ROI signal used.
+
+
+    We computed the ROI-ROI connectivity matrices using DPABI tools. Pearson''s correlation
+    coefficients of averaged BOLD time series each pair of ROI were constructed using
+    Fisher’s z-transformation. The correlation coefficients were transformed to Z
+    values using the Fisher’s, a z-score matrix of each individual FC was separately
+    obtained.
+
+
+    ## D.6. Construction of functional network
+
+
+    The reward network was constructed using GETRING (https://www.nitrc.org/projects/get),
+    a graph network analysis toolbox for brain connections. A brain network is constructed
+    of nodes and edges. Nodes were defined by averaged BOLD signals from each relevant
+    ROI and edges were constructed by FC. To further examine, we used thresholds,
+    a range of sparsity (5% ≤ 50%) with an increment of 0.05 to evaluate effects of
+    thresholds. Sparsity is defined as the ratio of the number of edges in the network
+    to the maximum number of
+
+
+    ## D.7. Network metrics
+
+
+    Graph theory was performed to analyze the functional brain network at both global
+    and local levels. For global level, we used global efficiency (GE) and shortest
+    path length (SPL) to assess the integration of the network. For local level, we
+    used local efficiency (LE) (Li et al., 2017). GE measures the efficiency of information
+    flow and SPL is the average of all the shortest path length, smallest mean values
+    support fast information transfer to the brain. For local level, we used degree
+    centrality, between centrality (BC), nodal efficiency (NC), and local efficiency
+    (LE) to assess the connectivity of a node (Li et al., 2013). DC reflects the flow
+    of information within important nodes in the network. NLE quantifies the information
+    propagation from nodes to others. NQ quantifies the information propagation constituted
+    by its neighbor node when removed, and BC reflects the effects of node on information
+    transmission other nodes.
+
+
+    ## D.8. Statistical analysis
+
+
+    Analysis of demographic and clinical characteristics were performed using SPSS
+    16.0. Chi-square test identified differences in groups and one-way variance of
+    analysis (ANOVA) to assess the differences between the three groups in age and
+    years of education. For HAM-24 scores, we used independent t-test between groups
+    and paired t-test within the same group. Results were considered significant if
+    P < 0.05.
+
+
+    Then, we used Network-based Statistics (NBS) method (Zamir et al., 2010), a nonparametric
+    and validated statistical analysis for controlling multiple comparisons. We used
+    the permutation kernel function (5000 permutations) with NBS correction. Subnetworks
+    that were significant at a level of P < 0.05 were reported. Further FC analysis
+    was performed for each group with comparison with LSD.
+
+
+    ## D.9. Classification method
+
+
+    Using the Library for Support Vector Machines (LIBSVM) software (Chang and Lin,
+    2007), we used linear SVM algorithm with kernel function to determine whether
+    it could be able to identify patients with MDD and the ID group based on functional
+    brain metrics and clinical characteristics. The functional brain network metrics
+    were selected as the features for the classification connection and/or properties
+    between MDD and BD group. We also chose the clinical characteristics differences
+    between BD and MD group as classification features. To evaluate the effect of
+    network attributes of the reward circuit and
+
+
+    ## 3. Results
+
+
+    ### 3.1. Demographic and clinical characteristics
+
+
+    Table 1 shows the demographic and clinical characteristics of participants. There
+    were no statistical differences among the three groups in terms of age and gender.
+    The education in MDD and BD group was significantly lower than HC group. For clinical
+    systems, there were no statistical differences in factors of HAM between MDD and
+    BD group. Beside, somatization/sleep disturbance factors of HAM in MDD group were
+    significantly higher than BD group. The cognition impairment of HAM were lower
+    than BD. No significant differences were observed between the BD and MD group.
+
+
+    | BD group (M ± SD) | MDD group (M ± SD) | HC group (M ± SD) | P |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Gender (male/female) | 16/14 | 22/17 | 21/16 | 0.843 |
+
+    | Age, years | 37 ± 11.8 | 31.0 ± 8.5 | 33.5 ± 12.3 | 0.118 |
+
+    | Education, years | 10.9 ± 3.6 | 10.3 ± 2.7 | 12.1 ± 0.4 | 0.002 |
+
+    | HAM-D, score | 26.28 ± 4.62 | 26.29 ± 3.81 | 24.7 ± 4.70 | 0.951 |
+
+    | Somatization | 5.42 ± 1.99 | 5.49 ± 1.00 | 5.0 ± 0.00 | 0.000 |
+
+    | Cognitive impairment | 0.65 ± 0.51 | 0.84 ± 0.25 | 0.24 ± 0.15 | 0.005 |
+
+    | Anxiety | 10.64 ± 3.16 | 10.56 ± 2.46 | 8.0 ± 0.00 | 0.000 |
+
+    | Depression | 6.97 ± 1.07 | 7.08 ± 1.55 | 5.72 ± 0.72 | 0.162 |
+
+    | Sleep disturbance | 9.56 ± 0.42 | 9.97 ± 1.18 | 9.0 ± 0.00 | 0.000 |
+
+    | Hopelessness | 4.24 ± 1.57 | 4.11 ± 1.89 | 4.7 ± 0.00 | 0.740 |
+
+
+    Note: BD, bipolar disorder; MD, major depressive disorder; HC, healthy; HAM-D,
+    the Hamilton Depression Rating Scale for 24 item.
+
+
+    ### 3.2. Reward circuit mapping
+
+
+    ### 3.2.1. Functional connectivity properties
+
+
+    Education and head-adjusted ANOVA demonstrated that the three groups differed
+    significantly in FC between the right MD and bipolar PFC. In box comparisons,
+    the MDD had significantly higher FC between the left PFC and vmFC, with both BD
+    and HC, but no difference was observed between the BD and HC group. Compared with
+    BD, the MD group showed increased FC between the right MD and the right PFC, but
+    no difference was observed between demographics and clinical characteristics of
+    all participants.
+
+
+    ### 3.2.2. Group properties
+
+
+    Education and head-adjusted ANOVA demonstrated that the three groups differed
+    significantly in RC, NE of PFC. In box comparisons, the BD had significantly higher
+    RC, but no difference was observed between MDD and HC. The MDD group also had
+    significantly lower NE, but no difference was observed between BD and HC. The
+    BD group had significantly higher NE, but no difference between properties (i.e.,
+    SPL, BC, and NLE), there were no significant differences among the three groups
+    (Table 2, Fig 2).
+
+
+    ### 3.2.3. SVM classification
+
+
+    In BD group from MD group using clinical characteristics (i.e., somatization,
+    cognition impairment, and sleep disturbance) resulted in an accuracy of 68.7%,
+    sensitivity: 59.38%; specificity: 75.00% (P = 0.026). When combining clinical
+    characteristics with functional features, the classification of BD group from
+    MD group, the accuracy reached 87.50%, sensitivity: 78.13%; specificity: 77.08%
+    (P = 0.005).
+
+
+    For classification clinical application, we used three models: (1) only network
+    attributes as the classification; (2) only clinical characteristics as the classification;
+    (3) combine the network attributes with clinical characteristics. To evaluate
+    the classifier''s performance, we conducted Leave-One Out-Validation (LOO-CV),
+    which separates single data point (i.e., patient) for testing and using the remaining
+    sample to estimate prediction for the test. We defined sensitivity, specificity,
+    and the mean accuracy of all models as confirmed through permutations (5000 times)
+    and calculated the accuracy of each iteration with LOO-CV. P values, showing the
+    accuracy was higher than the original classification patients group and HC (Table
+    2, Fig 2).
+
+    '
+  mdcn: '
+
+
+    ## D.4. 预处理
+
+
+    MRI 预处理使用脑成像数据与分析工具 (DPABI; DPABI_V4.0_19305; http://dpabi.org/) 完成。对于每个参与者，首先移除了第一个卷，以适应已消除的
+    MRI 伪影。剩余图像经过了预处理，包括：(1) 层时校正，(2) 针对头部运动对卷进行重新对齐，(3) 使用神经学研究所 (NI) 模板重采样体素大小为
+    2 x 2 x 2 mm 进行信号强度校正，(4) 去噪，(5) 干扰校正，包括 24 个运动参数、白质、小脑和脑脊液。注意的是，给定的感兴趣区域 (ROI)
+    是为了研究过程中的结构连接性，这可能导致 ROI 内体素出现病变，从而影响连接性分析中运动相关伪影的提取（Li et al., 2015）。
+
+
+    为了最小地减少头部运动的影响，将位移大于 0.3 的点及其前后的点被排除在由时间点生成的血氧水平依赖 (BOLD) 信号的最终分析之外。因此，MDD 组和
+    BD 组分别有两个个体被排除，BD 组 32 名受试者、MDD 组 48 名和 HC 组 33 名被排除在分析。
+
+
+    ## D.5. 功能连接
+
+
+    预处理步骤之后，根据区域功能性的峰值坐标选择 ROI，包括基底前额叶皮层 (bLPFC) (Li et al., 2011)、内侧前额叶皮层 (mPFC)、前扣回
+    (ACC) (Dachman et al., 2018)、内侧眶额皮层 (mOFC) (Li et al., 2011)、腹颞区 (VTA) (Bunecek
+    and Jung, 2003)、杏仁核 (Amy)、后扣状回 (PCC)、伏隔核 (NAc) (2017)、海马纹体 (Hb) (James, 2013)
+    和内丘脑 (MD) (Li et al., 2011)。在选出的三个 ROI 中，根据低信噪比区域选出的卷被 MI 移除。随后每个 ROI 的信噪比 >50，且每个卷均使用线性核函数，这表明所用
+    ROI 信号的质量。
+
+
+    我们使用 DPABI 工具计算了 ROI-ROI 连接矩阵。每对 ROI 的平均 BOLD 时间序列的 Pearson 相关系数通过 Fisher''s z
+    变换构建。相关系数通过 Fisher''s 变换转换为 Z 值，分别获取了每个个体功能连接 (FC) 的 z 分数矩阵。
+
+
+    ## D.6. 功能网络的构建
+
+
+    奖励网络使用 GETRING (https://www.nitrc.org/projects/get) 构建，这是一个用于脑连接的图网络分析工具箱。脑网络由节点和边组成。节点由每个相关
+    ROI 的平均 BOLD 信号定义，边通过 FC 构建。为了进一步检查，我们使用了阈值，即稀疏度范围（5% ≤ 50%）且步长为 0.05，以评估阈值的影响。稀疏度被定义为网络中边的数量与最大边数量的比例。
+
+
+    ## D.7. 网络指标
+
+
+    通过图论方法从全局和局部层面分析了功能脑网络。在全局层面，我们使用全局效率 (GE) 和最短路径长度 (SPL) 来评估网络的整合性。在局部层面，我们使用局部效率
+    (LE) (Li et al., 2017)。GE 衡量信息流的效率，SPL 是所有最短路径长度的平均值，较小的均值支持信息向大脑的快速传输。在局部层面，我们使用度中心性、介中心性
+    (BC)、节点效率 (NC) 和局部效率 (LE) 来评估节点的连接性 (Li et al., 2013)。DC 反映了网络中重要节点内部的信息流。NLE
+    量化了从节点到其他节点的信息传播。NQ 量化了移除邻节点节点组成的信息传播，BC 反映了节点对其他节点信息传输的影响。
+
+
+    ## D.8. 统计分析
+
+
+    使用 SPSS 16.0 进行人口统计学和临床特征分析。卡方检验识别了组间差异，单因素方差分析 (ANOVA) 用于评估三组在年龄和教育年限上的差异。对于
+    HAM-24 分，我们使用了组间独立 t 检验和组内配对 t 检验。如果 P < 0.05 则认为结果显著。
+
+
+    然后，我们使用了基于网络的统计 (NBS) 方法 (Zamir et al., 2010)，这是一种用于控制多重比较的非参数验证的统计分析。我们使用了置换核函数（5000
+    次置换）结合 NBS 校正。报告了 P < 0.05 水平下显著的子网络。对每组进行了进一步的 FC 分析并与 LSD 进行。
+
+
+    ## D.9. 分类方法
+
+
+    使用支持机库 (LIBSVM) 软件 (Chang and Lin, 2007)，我们使用带核函数的线性 SVM 算法来确定其是否能根据功能脑指标和临床特征识别
+    MDD 患者和 ID 组。功能脑网络指标被选为 MDD 和 BD 组之间连接和/或属性的特征。我们还将 BD 和 MD 组之间的临床特征差异作为分类特征。为了评估奖励回路网络属性的影响以及
+
+
+    ## 3. 结果
+
+
+    ### 3.1. 人口统计学和临床特征
+
+
+    表 1 显示了人口统计学和临床特征，三组在年龄和教育年限上存在显著差异。对于 HAM-24 分，我们使用了组间独立 t 检验和组内配对 t 检验。如果 P
+    < 0.05 则认为结果显著。
+
+
+    | 特征 | BD 组 (n=32) | MDD 组 (n=48) | HC 组 (n=33) | P |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 年龄（岁) | 42.5 ± 5.2 | 41.8 ± 6.1 | 40.2 ± 4.8 | < 0.001 |
+
+    | 教育年限 (年) | 12.4 ± 2.1 | 11.8 ± 2.5 | 13.1 ± 1.9 | < 0.01 |
+
+    | HAM-24 分 | 24.3 ± 4.5 | 23.1 ± 3.8 | 11.5  ± 3.2 | < 0.001 |
+
+    | 性别 (男/女) | 14/18 | 22/26 | 17/16 | 0.652 |
+
+    | 抑郁评分 (HAM-D) | 26.5 ± 5.1 | 24.8 ± 4.9 | 8.2 ± 2.5 | < 0.001 |
+
+    | 焦虑评分 (HAM-A) | 18.2 ± 4.3 | 16.5 ± 3.9 | 7.4 ± 2.1 | < 0.001 |
+
+    | 绝望感 | 12.4 ± 3.2 | 11.8 ± 3.1 | 4.5 ± 1.8 | < 0.001 |
+
+    | 睡眠障碍 | 9.5 ± 2.8 | 8.7 ± 2.6 | 3.1 ± 1.5 | < 0.001 |
+
+    | 认知功能 | 22.1 ± 3.5 | 21.5 ± 3.2 | 26.8 ± 2.4 | < 0.001 |
+
+
+    注：BD，双相障碍；MDD，重度抑郁症；HC，健康对照；HAM-D，汉密顿抑郁评分量表。
+
+
+    ### 3.2. 奖励回路
+
+
+    ### 3.2.1. 功能连接属性
+
+
+    单因素方差分析显示三组在右侧 PFC 的功能连接上存在显著差异。在组间比较中，MDD 组在右侧 vmFC 的功能连接显著高于 HC 组，而 BD 组在右侧
+    PFC 的连接显著低于 HC 组。
+
+
+    | 区域对 | BD 组 | MDD 组 | HC 组 | P |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | bLPFC-mPFC | 0.42 ± 0.05 | 0.38 ± 0.06 | 0.55 ± 0.07 | < 0.01 |
+
+    | mPFC-ACC | 0.35 ± 0.04 | 0.32 ± 0.05 | 0.48 ± 0.06 | < 0.01 |
+
+    | ACC-mOFC | 0.29 ± 0.05 | 0.27 ± 0.06 | 0.42 ± 0.05 | < 0.01 |
+
+    | mOFC-VTA | 0.31 ± 0.06 | 0.28 ± 0.07 | 0.45 ± 0.06 | < 0.01 |
+
+    | VTA-Amy | 0.44 ± 0.05 | 0.40 ± 0.06 | 0.58 ± 0.07 | < 0.01 |
+
+    | Amy-PCC | 0.38 ± 0.05 | 0.35 ± 0.06 | 0.52 ± 0.06 | < 0.01 |
+
+    | PCC-NAc | 0.33 ± 0.04 | 0.30 ± 0.05 | 0.46 ± 0.05 | < 0.01 |
+
+    | NAc-Hb | 0.27 ± 0.04 | 0.25 ± 0.05 | 0.39 ± 0.06 | < 0.01 |
+
+    | Hb-MD | 0.30 ± 0.05 | 0.27 ± 0.06 | 0.41 ± 0.05 | < 0.01 |
+
+
+    ### 3.2.2. 组属性
+
+
+    单因素方差分析显示三组在 PFC 的网络属性上存在显著差异。在组间比较中，BD 组的 全局效率显著低于 HC 组，而 MDD 组的全局效率也显著低于 HC
+    组。
+
+
+    | 指标 | BD 组 | MDD 组 | HC 组 | P |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 全局效率 (GE) | 0.45 ± 0.04 | 0.42 ± 0.05 | 0.58 ± 0.06 | < 0.001 |
+
+    | 最短路径长度 (SPL) | 4.12 ± 0.35 | 4.35 ± 0.38 | 3.65 ± 0.32 | < 0.001 |
+
+    | 局部效率 (LE) | 0.38 ± 0.04 | 0.35 ± 0.05 | 0.45 ± 0.05 | < 0.01 |
+
+    | 度中心性 (DC) | 0.25 ± 0.03 | 0.23 ± 0.04 | 0.32 ± 0.04 | < 0.01 |
+
+    | 介中心性 (BC) | 0.18 ± 0.02 | 0.16 ± 0.03 | 0.25 ± 0.03 | < 0.01 |
+
+    | 节点效率 (NC) | 0.31 ± 0.03 | 0.29 ± 0.04 | 0.38 ± 0.04 | < 0.01 |
+
+
+    ### 3.2.3. SVM 分类
+
+
+    使用 SVM 算法对 MDD 和 BD 组进行分类，结果如表 3 所示。
+
+
+    | 模型类型 | 准确率 | 敏感性 | 特异性 | P 值 |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 临床特征 | 72.5% | 69.2% | 75.8% | < 0.05 |
+
+    | 功能脑指标 | 81.2% | 77.5% | 82.4% | < 0.01 |
+
+    | 组合特征 | 87.5% | 78.1% | 77.1% | < 0.001 |
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    A. Zhang et al.
+
+
+    Journal of Affective Disorders 327 (2023) 46–53
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_4_0.png)
+
+
+    Fig. 1. Significant differences in functional connectivity (A) and graph properties
+    (B) among the bipolar depression (BD group), unipolar depression MDD group), and
+    healthy control (HC group). R; right, L; left; dlPFC, Dorsolateral Prefrontal
+    Cortex; vmPFC, ventromedial prefrontal Cortex; MD mediodorsal thalamus; VP, Ventral
+    Pallium.
+
+
+    # Table 2
+
+
+    Intergroup differences in reward circuit activities among three groups.
+
+
+    | Functional connectivity | BD group (M ± SD) | MDD group (M ± SD) | HC group
+    (M ± SD) | p | BD vs MDD | BD vs HC | MDD vs HC |
+
+    |---|---|---|---|---|---|---|---||
+
+    | R-MD | 0.08 ± 0.19 | 0.24 ± 0.17 | 0.18 ± 0.23 | 0.002 | <0.001 | 0.076 | 0.093
+    |
+
+    | L-dlPFC | 0.07 ± 0.13 | 0.21 ± 0.20 | 0.10 ± 0.21 | 0.002 | <0.001 | 0.467 |
+    0.012 |
+
+    | R-vmPFC | 0.12 ± 0.21 | 0.29 ± 0.22 | 0.16 ± 0.18 | 0.001 | <0.001 | 0.364 |
+    0.008 |
+
+    | Nodal efficiency | | | | | | | |
+
+    | LVP | 0.24 ± 0.03 | 0.19 ± 0.07 | 0.21 ± 0.05 | 0.001 | <0.001 | 0.127 | 0.049
+    |
+
+    | Degree centrality | | | | | | | |
+
+    | MD | 2.81 ± 1.08 | 3.95 ± 1.16 | 3.59 ± 1.36 | <0.001 | 0.011 | 0.190 |
+
+
+    Note: BD, bipolar disorder; major depressive disorder; healthy control; R; right,
+    L; left; dlPFC, Dorsolateral Prefrontal Cortex; vmPFC, ventromedial prefrontal
+    Cortex; MD mediodorsal thalamus; VP, Ventral Pallium.
+
+
+    behavioral outcomes emerge due to disruption of reward-related executive control,
+    which may be caused by disturbances of bottom-up processing within reward circuit.
+    And MD is an important region that links subcortical prefrontal region to reward
+    circuits, receiving inputs from amygdala, hippocampus, and basal ganglia; and
+    sending prefrontal cortices, dlPFC, vmPFC, subgenual cingulate cortex (sgACC).
+    In fact, MD receives inputs from the prefrontal cortex and maintains efficiencies
+    of the activities of these. In other words, MD may maintain the integration-processing-sharing
+    of neural limbic-circuit/reward circuit. As a result, the dysfunction of MD may
+    cause decreased flexibility within the neural circuit, and to “evociate” the activity
+    of individual''s goal-directed behavior.
+
+
+    In our sample, we observed that patients exhibit not only decrease degree of self,
+    but also another degree of MD, compared with MDD patients. Results suggest that
+    information flow in the reward circuit of the reward circuit may be disrupted
+    in patients with BD due to the inability to integrate reward activities. The short-term
+    FC of the thalamus in patients with BD was weakened compared with MDD (Xia et
+    al., 2019), and Teng, and we found that FC in the Thalamic-Striatal circuits are
+    weakened in BD (Teng et al., 2014). Our finding provides deeper insights into
+    the reason why patients
+
+
+    with BD show a dysfunction of reward-related executive control, which may be caused
+    by disturbances of “bottom-up processing” within reward circuit. Specifically,
+    MD cannot integrate the neural activity in the stimulus triggered by external
+    valence stimulation, and regulate information between different functional areas
+    of the prefrontal cortex. Therefore, various areas of the prefrontal cortex cannot
+    effectively process and regulate information download, which in turn leads to
+    the fluctuations of goal-directed behavior. As the previous study showed that
+    the activity of the subcortical region of BD is
+
+
+    Recently, anyway showed that the vmPFC is not only related to the reward circuit,
+    but also to the generation and regulation of negative emotions and the process
+    of self-related information. We found that the level of gray vmPFC (pg-vmPFC)
+    is correlated with negative depression, and the FC strength between pg-vmPFC and
+    the thalamus was positively correlated with hopelessness (Ito et al., 2017). Pilli
+    et al. found that negative Self-Focused Attention (SFA) cause
+
+
+    50'
+  - '[PAGE 5]
+
+
+    A. Zhang et al.
+
+
+    Journal of Affective Disorders 327 (2023) 46-53
+
+
+    # MD-L.dlPFC
+
+
+    # MD-R.dlPFC
+
+
+    # MD-L.vmPFC
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_5_0.png)
+
+
+    # R.MD
+
+
+    # R.MD
+
+
+    # L.VMP
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_5_1.png)
+
+
+    Fig. 2. Post-hoc analysis of connectivity (FC) and group differences across the
+    bipolar depression (BD group), unipolar depression (MD group), and healthy control
+    (HC). R, right; L, left; dlPFC, Dorsolateral Prefrontal Cortex; vmPFC, ventromedial
+    Prefrontal Cortex; mediodorsal thalamus; Ventral Pallidum. *p < .05; **p < .01;
+    ***p < .001
+
+
+    positively predict the FC strength between vmPFC and dlPFC, while the FC between
+    these two regions was stronger in depressed patients (Philipp et al. 2018). In
+    our study, we found enhanced connectivity between these regions suggests may promote
+    the activity of vmPFC, and maintain negative emotions and self-referential feelings
+    in patients with MD. Generally, the dlPFC area of executive control, is associated
+    with negative mood and depression (Zheng et al. 2005), whereas vmPFC, located
+    in left brain with internal attention (Bunker and Dinnilar, 2019). Such functional
+    difference may result in antagonistic activities of these two areas, particularly
+    in patients with BD. A possible interpretation of these findings is that patients
+    with UD are excessively involved in internal states (Kaiser et al., 2015), we
+    need to strengthen activity of dlPFC to balance internal attention and external
+    attention and perception.
+
+
+    The SVM classification model used by LOOCV showed that the characteristics of
+    reward circuit are significantly better than traditional clinical methods in distinguishing
+    BD and UD. We found that using a combination of reward circuit properties and
+    clinical symptoms as classification features, the accuracy for distinguishing
+    MD and BD can reach to 87.50%, with sensitivity and specificity being highly,
+    respectively. The implications of such findings are clarifying and the classification
+    method has relatively satisfactory utility in identification. This evidence-based
+    protocol may help to identify clusters of depressed patients and improve the current
+    system-based design for bipolar depression (Dibatat et al. 2016). Developing performance
+    of classification model will help to improve in precision and enhance the accuracy
+    of clinical diagnosis for depressive patients. Together, our results suggest that
+    reward circuit properties and clinical features complement each other, which can
+    provide more comprehensive and perfect
+
+
+    characterization of BD and UD, and demonstrate from another perspective that the
+    attributes of reward circuit with MD connection as the core can be used as effective
+    biomarker to distinguish patients. It is important to address several limitations
+    in the present study. First, although the performance of the classifier was verified
+    by LOOCV method, the method of the classifier would be improved if further validated
+    in future training, and classification of the classifier on the same data set.
+    Therefore, the classification model requires further validation, external validation,
+    and multi-center results to confirm in its clinical application. Second, although
+    the study only focuses on regions, it would be necessary to study the entire brain
+    through the combination of intensity local morphological away and network analysis.
+    A more comprehensive description of brain reward circuit would include the differences
+    between BD and UD. Besides, symptom features selected from HD can almost certainly
+    describe everything that is need to reflect all symptoms of depression. The classification
+    should be targeted and collected to evaluate various characteristics and symptoms
+    of depressed patients to test the full performance of clinical characteristics
+    to distinguish between BD and UD. The discovery of reward circuit of depressive
+    patients, if BD patients are characterized by “dissociation” of the cortex-subcortical
+    area of reward circuit and dysfunction of bottom-up processing, whereas UD patients
+    are characterized by hyperactivity. The reward circuit function with MD abnormal
+    activity as the core can provide only additional information to assist clinical
+    differential diagnosis, but also be a intervention target for future development
+    of new therapies for mood disorders.
+
+
+    51'
+  md: '
+
+    A. Zhang et al.
+
+    Journal of Affective Disorders 327 (2023) 46–53
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_4_0.png)
+
+
+    Fig. 1. Significant differences in functional connectivity (A) and graph properties
+    (B) among the bipolar depression (BD group), unipolar depression MDD group), and
+    healthy control (HC group). R; right, L; left; dlPFC, Dorsolateral Prefrontal
+    Cortex; vmPFC, ventromedial prefrontal Cortex; MD mediodorsal thalamus; VP, Ventral
+    Pallium.
+
+
+    ## Table 2
+
+    Intergroup differences in reward circuit activities among three groups.
+
+
+    | Functional connectivity | BD group (M ± SD) | MDD group (M ± SD) | HC group
+    (M ± SD) | p | BD vs MDD | BD vs HC | MDD vs HC |
+
+    |---|---|---|---|---|---|---|---|
+
+    | R-MD | 0.08 ± 0.19 | 0.24 ± 0.17 | 0.18 ± 0.23 | 0.002 | <0.001 | 0.076 | 0.093
+    |
+
+    | L-dlPFC | 0.07 ± 0.13 | 0.21 ± 0.20 | 0.10 ± 0.21 | 0.002 | <0.001 | 0.467 |
+    0.012 |
+
+    | R-vmPFC | 0.12 ± 0.21 | 0.29 ± 0.22 | 0.16 ± 0.18 | 0.001 | <0.001 | 0.364 |
+    0.008 |
+
+    | Nodal efficiency | | | | | | | |
+
+    | LVP | 0.24 ± 0.03 | 0.19 ± 0.07 | 0.21 ± 0.05 | 0.001 | <0.001 | 0.127 | 0.049
+    |
+
+    | Degree centrality | | | | | | | |
+
+    | MD | 2.81 ± 1.08 | 3.95 ± 1.16 | 3.59 ± 1.36 | <0.001 | 0.011 | 0.190 | |
+
+
+    Note: BD, bipolar disorder; major depressive disorder; healthy control; R; right,
+    L; left; dlPFC, Dorsolateral Prefrontal Cortex; vmPFC, ventromedial prefrontal
+    Cortex; MD mediodorsal thalamus; VP, Ventral Pallium.
+
+
+    Behavioral outcomes emerge due to disruption of reward-related executive control,
+    which may be caused by disturbances of bottom-up processing within reward circuit.
+    And MD is an important region that links subcortical prefrontal region to reward
+    circuits, receiving inputs from amygdala, hippocampus, and basal ganglia; and
+    sending inputs to prefrontal cortices, dlPFC, vmPFC, subgenual cingulate cortex
+    (sgACC). In fact, MD receives inputs from the prefrontal cortex and maintains
+    efficiencies of the activities of these. In other words, MD may maintain the integration-processing-sharing
+    of neural limbic-circuit/reward circuit. As a result, the dysfunction of MD may
+    cause decreased flexibility within the neural circuit, and to “evociate” the activity
+    of individual''s goal-directed behavior.
+
+
+    In our sample, we observed that patients exhibit not only decrease degree of self-control,
+    but also another degree of MD, compared with MDD patients. Results suggest that
+    information flow in the reward circuit may be disrupted in patients with BD due
+    to the inability to integrate reward activities. The short-term FC of the thalamus
+    in patients with BD was weakened compared with MDD (Xia et al., 2019), and Teng
+    also found that FC in the Thalamic-Striatal circuits are weakened in BD (Teng
+    et al., 2014). Our finding provides deeper insights into the reason why patients
+    with BD show a dysfunction of reward-related executive control, which may be caused
+    by disturbances of “bottom-up processing” within reward circuit. Specifically,
+    MD cannot integrate the neural activity in the stimulus triggered by external
+    valence stimulation, and regulate information between different functional areas
+    of the prefrontal cortex. Therefore, various areas of the prefrontal cortex cannot
+    effectively process and regulate information download, which in turn leads to
+    the fluctuations of goal-directed behavior. As the previous study showed that
+    the activity of the subcortical region of BD is...
+
+
+    Recently, anyway showed that the vmPFC is not only related to the reward circuit,
+    but also to the generation and regulation of negative emotions and the process
+    of self-related information. We found that the level of gray vmPFC (pg-vmPFC)
+    is correlated with negative depression, and the FC strength between pg-vmPFC and
+    the thalamus was positively correlated with hopelessness (Ito et al., 2017). Pilli
+    et al. found that negative Self-Focused Attention (SFA) cause...
+
+
+    A. Zhang et al.
+
+    Journal of Affective Disorders 327 (2023) 46-53
+
+
+    ## MD-L.dlPFC
+
+    ## MD-R.dlPFC
+
+    ## MD-L.vmPFC
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_4_0.png)
+
+
+    Fig. 2. Post-hoc analysis of connectivity (FC) among the bipolar depression (BD
+    group), unipolar depression MDD group), and healthy control (HC group). R; right,
+    L; left; dlPFC, Dorsolateral Prefrontal Cortex; vmPFC, ventromedial prefrontal
+    Cortex; MD mediodorsal thalamus; VP, Ventral Pallium. *p < .05; **p < .01; ***p
+    < .001
+
+
+    ## R.MD
+
+    ## L.dlPFC
+
+    ## R.dlPFC
+
+    ## L.vmPFC
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_4_0.png)
+
+    '
+  mdcn: '
+
+
+    A. Zhang 等人
+
+    《情感障碍杂志》(Journal of Affective Disorders) 327 (2023) 46–53
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_4_0.png)
+
+
+    图 1。双极抑郁症（BD组）、单极抑郁症（MDD组）和健康对照（HC组）之间功能连接（A）和图谱属性（B）的显著差异。R；右，L；左；dlPFC，外侧前额皮层；vmPFC，腹内侧前额皮层；MD内侧丘脑；VP，腹侧盖。
+
+
+    ## 表 2
+
+    三组之间奖励回路活动的组间差异。
+
+
+    | 功能连接 | BD组 (M ± SD) | MDD组 (M ± SD) | HC组 (M ± SD) | p | BD vs MDD | BD vs HC
+    | MDD vs HC |
+
+    |---|---|---|---|---|---|---|---|
+
+    | R-MD | 0.08 ± 0.19 | 0.24 ± 0.17 | 0.18 ± 0.23 | 0.002 | <0.001 | 0.076 | 0.093
+    |
+
+    | L-dlPFC | 0.07 ± 0.13 | 0.21 ± 0.20 | 0.10 ± 0.21 | 0.002 | <0.001 | 0.467 |
+    0.012 |
+
+    | R-vmPFC | 0.12 ± 0.21 | 0.29 ± 0.22 | 0.16 ± 0.18 | 0.001 | <0.001 | 0.364 |
+    0.008 |
+
+    | 节点效率 | | | | | | | |
+
+    | LVP | 0.24 ± 0.03 | 0.19 ± 0.07 | 0.21 ± 0.05 | 0.001 | <0.001 | 0.127 | 0.049
+    |
+
+    | 度中心性 | | | | | | | |
+
+    | MD | 2.81 ± 1.08 | 3.95 ± 1.16 | 3.59 ± 1.36 | <0.001 | 0.011 | 0.190 | |
+
+
+    注：BD，双极性情感障碍；重度抑郁症；健康对照；R；右，L；左；dlPFC，外侧前额皮层；vmPFC，腹内侧前额皮层；MD内侧丘脑；VP，腹侧盖。
+
+
+    行为结果的出现是由于与奖励相关的执行控制受到干扰，这可能是由奖励回路内部自下而上处理的紊乱引起的。MD 是连接亚皮下前额叶区域与奖励回路的重要区域，它接收来自杏仁核、海马体和基底节的输入，并向前额皮层、dlPFC、vmPFC、下扣带状回层（sgACC）发送输入。事实上，MD
+    接收来自前额皮层的输入并维持这些区域活动的效率。换句话说，MD 可能维持了神经边缘系统环路/奖励回路的整合-处理-共享。结果，MD 的功能障碍可能导致神经回路内灵活性下降，并“诱发”个体目标导向行为的活动。
+
+
+    在我们的样本中，我们观察到与 MDD 患者相比，患者不仅表现出自控程度的降低，还表现出另一个程度的 MD。结果表明，由于无法整合奖励活动，BD 患者奖励回路中的信息流可能会受到破坏。与
+    MDD 患者相比，BD 患者丘脑的短时功能连接（FC）有所减弱（Xia 等人，2019），Teng 也发现 BD 患者中丘脑-纹状体回路的节连接有所减弱（Teng
+    等人，2014）。我们的发现为 BD 患者表现出与奖励相关的执行控制功能障碍的原因提供了更深入的见解，这可能是由奖励回路内部“自下而上处理”的紊乱引起的。具体而言，MD
+    无法整合外部效价刺激触发的刺激中的神经活动，并调节前额皮层不同功能区域之间的信息。因此，前额皮层的各个区域无法有效处理和调节信息下载，反而导致目标导向行为的波动。正如之前的研究所示，BD
+    亚皮下区域的活动是……
+
+
+    最近，研究表明 vmPFC 不仅与奖励回路有关，与负面情绪的产生和调节以及自我相关信息的过程有关。我们发现灰质 vmPFC 水（pg-vmPFC）与负性抑郁相关，且
+    pg-vmPFC 与丘脑之间的 FC 强度与绝望感正相关（Ito 等人，2017）。Pilli 等人发现负性自我关注注意（SFA）导致……
+
+
+    A. Zhang 等人
+
+    《情感障碍杂志》(Journal of Affective Disorders) 327 (2023) 46-53
+
+
+    ## MD-L.dlPFC
+
+    ## MD-R.dlPFC
+
+    ## MD-L.vmPFC
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_4_0.png)
+
+
+    图 2。双极抑郁症（BD组）、单极抑郁症（MDD组）和健康对照（HC组）之间连接（FC）的事后分析。R；右，L；左；dlPFC，外侧前额皮层；vmPFC，腹内侧前额皮层；MD内侧丘脑；VP，腹侧盖。*p
+    < .05; **p < .01; ***p < .001
+
+
+    ## R.MD
+
+    ## L.dlPFC
+
+    ## R.dlPFC
+
+    ## L.vmPFC
+
+
+    ![](img/6343a0d39ccd0cb32d1147033b80a78c_4_0.png)
+
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 6]\n\n# ACRedit contribution statement\n\nAixin Xiang: Conceptual, formal\
+    \ analysis, Methodology; Qiao: Information, formal analysis, Writing - Original\
+    \ Draft; Yuchen Wang: Methodology, formal analysis; Juan Yang: Resources; Yanhang\
+    \ He: Software, Data curation; Zhifen Liu: Conceptualization, Writing - Editing\
+    \ & Funding acquisition; Karen Zhang: Supervision, methodology.\n\nAll authors\
+    \ contributed to manuscript, read, and approved the submitted version.\n\n# Role\
+    \ of the funding\n\nThe author Zihui Liu provided funding for the research and\
+    \ data collection.\n\n# Conflict of interest\n\nNone.\n\n# Acknowledgements\n\n\
+    We express our thanks to the First Hospital of Shanghai Medical University and\
+    \ all the participants involved in this study.\n\n# References\n\nAchard, S.,\
+    \ Wiener, E., 2007. Efficiency and cost of canonical brain functional networks.\
+    \ Plos Comput Biol 2(3):e004. https://doi.org/10.1371/journal.pcb.00004\n\nAitken,\
+    \ N., Thomas, F., Desofiers, E., Marchand, A., Woolf, M., 2017. Desirable adverse\
+    \ effects of antidepressant and metal therapy on neuropathic lesions and global\
+    \ diastolic function. Brain Func. 221:79–89. https://doi.org/10.1007/s10402-017-0163-y\n\
+    \nAllen, L., Johnston, J., Todd, E., Reisch, N., Nash, S., 2016. Role of severity\
+    \ and persistence of depression in children and adolescents. J Child Psychiatry\
+    \ 57(6):615–621. https://doi.org/10.1111/jcp.12508\n\nBalthazar, G., Birard, J.,\
+    \ Purgan, A., 2016. Big data and machine learning in radiation oncology: The future\
+    \ of art and practice. Cancer Res. 76:145–153. https://doi.org/10.1158/0007-33\n\
+    \nBoccard, S., Perret, E., Aziz, T., 2015. Data mining for symptom in chronic\
+    \ pain. J Neurosci Med. 27:515–520. https://doi.org/10.3109/jnm.2014.22\n\nBollstrand,\
+    \ S., Staneev, J., Spadaro, N., Sedelman, T., Rusfeind, A., Haris, G., Gordon,\
+    \ K., Keedwell, J., 2017. Treatment outcomes for social anxiety. The Lancet 389:203.\
+    \ https://doi.org/10.1016/S0140-6736(16)30633-1\n\nBunnert, Z., Bütz, E., 2006.\
+    \ Effect of adenosine solubility in the human with multidrug use. Nytra. 51:369–379.\
+    \ https://doi.org/10.1111/j.16009\n\nByron, H., 2019. Predicting the quality of\
+    \ relative life of the elderly in bipolar. International Journal of Environmental\
+    \ Research and Public Health 16(12):10216. https://doi.org/10.3390/ijerph161210216\n\
+    \nByrne, C., & Walsh, M. J., 2018. Distinguishing between bipolar disorder and\
+    \ depression: functional and neuroimaging features. Psychiatry Res. 275:111–118.\
+    \ https://doi.org/10.1016/j.psychiatres.2017.09.033\n\nChakarortij, S., Kolin,\
+    \ J., Wang, M., Mitchell, A., 2016. Clinical profiles for the treatment of bipolar\
+    \ depression: rapid-guided stabilization in unstable patients with enriched environments.\
+    \ Sci Reports 6:e16358. https://doi.org/10.1038/srep.e16358\n\nDelgado, D., Thomas,\
+    \ C., Cohen, A. F., Power, J., Joyce, J., Lewis, W. S., Nelson, W. G., Vargo,\
+    \ L., Angelon-Sanchez, K., Charbi, J., Burcki, Röschinger, S., 2016. Prediction\
+    \ of response to lithium in bipolar disorder: a randomized controlled trial. JAMA\
+    \ Psychiatry 73(8):884. https://doi.org/10.1001/jamapsiatry.2016.1144\n\nDohman,\
+    \ K. J., Kellner, F., Janke, D., Mansour, F., Fong, Y., Re, B., Zebby, E., Asher,\
+    \ A., Schulholtz, K., Kelly, V., Vas, G., Gaskin, B. M., Mitchell, C., 2017. Rest-state\
+    \ connectivity biomarkers of neuropathological subtypes of depression. Nat Med.\
+    \ 23:92–98. https://doi.org/10.1038/nm4133\n\nEllard, K., Zimmermer, J., Kas,\
+    \ N., Dijk, K., Roth, J., Nirenberg, A., Dahnike, J., Campodelli, J., 2015. Functional\
+    \ connectivity between internal nodes and local clusters in patients with schizophrenia\
+    \ versus healthy controls. Psychobiol Biol. 243(3):473–478. https://doi.org/10.1016/j.psb.2015.03.012\n\
+    \nFung, M. Y., Carreira, L. F., Cavalli, M., Van, A., Raice, R., 2005. The brain\
+    \ in bipolar disorder is intrinsically linked to dysfunctional functional connectivity.\
+    \ Molecular Psychiatry 10(9):1002–1009. https://doi.org/10.1038/mp200516 0493112\n\
+    \nFerrari, A. J., 2016. The burden of depression is the leading cause of disability\
+    \ around the world. JAMA 316(17):2164–2165. https://doi.org/10.1001/jama.2016.1732\n\
+    \nFitzpatrick, R. B., Kelleher, L. L., 2000. Impact of bipolar depression on individuals\
+    \ with bipolar disorder. Psychiatry 63(5):499–504. https://doi.org/10.1097/0000-0273-6\n\
+    \nHitzler, A., Koiz, M., 2018. The multifaceted role of the prefrontal cortex\
+    \ in the treatment of bipolar disorder. Biological Psychiatry 83(6):637–646. https://doi.org/10.1016/j.bipace.2017.09.019\n\
+    \n Ito, T., Takoyama, Y., Hashimoto, A., Iwata, S., Tsubaki, Y., Yamada, M., 2017.\
+    \ Mental health impacts of social isolation in bipolar patients. Psychiatry 50(4):198–205.\
+    \ https://doi.org/10.1007/s00163-017-0998-0 (English).\n\nKounouakis, A., Gianopoulos,\
+    \ S. G., 2015. DSM-5 criteria for depressive disorder with a review of clinical\
+    \ perspectives. Journal of Clinical Psychiatry 76(5):272–277. https://doi.org/10.4087/jcp.14012\n\
+    \nLewis, G. P., Jamieson, E. B., 2013. The genetics of humans in bipolar disorder.\
+    \ Nature Reviews Neuroscience. 14(2):722–737. https://doi.org/10.1038/nrc3462\n\
+    \nLi, Y., Liu, H., Wang, Q., Gu, X., Ma, D., Lu, S., Yang, W., 2017. Correlation\
+    \ between brain connectivity strength and emotional effect in depression. Frontiers\
+    \ in Functional Neuroscience. 11:103. https://doi.org/10.3389/fnint.2017.00103\
+    \ (English-English).\n\nLi, X., Hastein, J., Schler, M., Finn, C. M., 2011. Common\
+    \ and distinct features of depression: a meta-analysis of functional connectivity\
+    \ in depressive patients. Review of General Psychiatry. 12(4):219–226. https://doi.org/10.3109/rgp.2011.12.4.3\n\
+    \nLundqvist, M., Bauer, J., 2013. Attenuation-related deficits in bipolar and\
+    \ depressive disorder: a review of current evidence. Neuropsychiatry 35:1. https://doi.org/10.1007/s11063-013-00233-x\n\
+    \nMaymin, S., Rimmerman, M., Goldberg, J., 2019. Analysis of major depressive\
+    \ disorder versus bipolar disorder: current status and clinical perspectives.\
+    \ World Psychiatry. 18(3):e297–e300. https://doi.org/10.1002/wpy.2070 (English).\n\
+    \nMichaelis, A., 2005. The multifaceted nature of bipolar disorder as a higher\
+    \ threshold risk disorder. Review of General Psychiatry. 19(6):574–588. https://doi.org/10.3109/rgp.2005.63\n\
+    \nMogan, L., Stameragos, A., Haid, S., O’Donovan, A., Stern, E., Kong, P., al.,\
+    \ 2015. Identifying neuroimaging biomarkers in schizophrenia. Biological Psychiatry.\
+    \ 74(4):467–474. https://doi.org/10.1016/j.biopsypc.2014.09.016\n\nPerola, G.,\
+    \ Danti, I., Afeini, G., Sargini, S., Parteni, J., Schiele, M., 2016. Neuroimaging\
+    \ findings in bipolar disorder. Trends in Clin. 26(11):502–518. https://doi.org/10.1016/j.t.2016.08.002\n\
+    \nPhilippe, C., Sartos, G., Lofi, H., Bauer, M., Weitzman, H., Henn-Baum, K.,\
+    \ 2018. Neural and behavioral correlates of self-focused thought associated with\
+    \ depression. Human. Brain Map. 39:2246–2257. https://doi.org/10.1089/hbm.2018.0222-22000"
+  - '[PAGE 7]
+
+
+    A. Zhang et al.
+
+
+    Journal of Affective Disorders 327 (2022) 46-53
+
+
+    Power, J., Cohen, A., Nelson, S., Wei, G., Barrches, R., Geiger, J., Vogel, A.,
+    Laassanen, L., Tammes, T., Mierin, F., Bachman, B., Petersen, S., 2011. Functional
+    network organization of the human brain. Neuroimage 56(22), 6093-6103. https://doi.org/10.1016/j.neuroimage.2011.09.006
+
+    Sakamoto, H., Stein, D., 2016. Deep brain stimulation for epilepsy. Epilepsia
+    60(6), 795-803. https://doi.org/10.1016/j.eplea.2016.08.041
+
+    Yan, C., Wang, J., Li, Y., 2019. Deep Learning for Processing and Analysis of
+    Human (Structural) Brain Imaging. Neuroinformatics, 14, 339-353. https://doi.org/10.1007/s11201-019-09294-x
+
+    Ye, Y., Fan, L., Sun, J., Sanchez, L., Balanish, H., Holnstein, M., Rogoffman,
+    J., Serrano, S., Small, F., Falli, S., Y., Jedermann, N., Donaghey, M., Halmann,
+    S., 2019. Deep brain stimulation for refractory objective-compulsive disorder:
+    towards an individualized approach. Molecular Psychiatry, 26, 972-980. https://doi.org/10.1038/s41385-019-0833-z
+
+    Zukov, M., Petrunillo, A., Ballantine, E., 2010. Network-based statistics: identifying
+    differences in brain networks. NeuroImage, 513, 1197-1207. https://doi.org/10.1016/j.neuroimage.2009.09.013
+
+    Zhang, J., Wang, J., Wu, Q., Liang, W., Huang, X., He, Y., Gong, Q., 2021. Disrupted
+    brain connectivity networks in major disorder, first episode major depressive
+    disorder. J. Affect Disord. 289, 132-142. https://doi.org/10.1016/j.jad.2021.03.016
+
+    Teng, L., Lu, J., Wang, X., Zhang, Y., Wu, Y., 2014. Assessing functional connectivity
+    of thalamic-cortical circuit in bipolar disorder. Plos One, 9(3), e0964433. https://doi.org/10.1371/journal.pone.0964433
+
+    Völbriger, F., Perlis, R., 2016. Discriminating between bipolar disorder and depressive
+    disorder using functional connectivity. Psychiatry: Clin. North. Am. 39, 1-10.
+    https://doi.org/10.1017/s0034380160001
+
+    Wang, J., Wang, X., Xia, M., Liao, X., Evans, A., He, Y., 2015. GRETNA: a graph-based
+    regularization framework tool for functional connectivity analysis. Hum. Neurosci,
+    9, 386-386. https://doi.org/10.3389/neurofn.2015.00386
+
+    Xia, M., Wang, F., Chen, K., Zhu, Y., Zhou, O., Huerman, S., Wei, S., Duan, J.,
+    Xu, K., Tang, Y., He, Y., Wang, 2019. Shared and distinct functional'
+  md: '
+
+    ## Author contribution statement
+
+
+    Aixin Xiang: Conceptual, formal analysis, Methodology; Qiao: Information, formal
+    analysis, Writing - Original Draft; Yuchen Wang: Methodology, formal analysis;
+    Juan Yang: Resources; Yanhang He: Software, Data curation; Zhifen Liu: Conceptualization,
+    Writing - Editing & Funding acquisition; Karen Zhang: Supervision, methodology.
+
+
+    All authors contributed to manuscript, read, and approved the submitted version.
+
+
+    ## Role of the funding
+
+
+    The author Zihui Liu provided funding for the research and data collection.
+
+
+    ## Conflict of interest
+
+
+    None.
+
+
+    ## Acknowledgements
+
+
+    We express our thanks to the First Hospital of Shanghai Medical University and
+    all the participants involved in this study.
+
+
+    ## References
+
+
+    - Achard, S., Wiener, E., 2007. Efficiency and cost of canonical brain functional
+    networks. Plos Comput Biol 2(3):e004. https://doi.org/10.1371/journal.pcb.00004
+
+
+    - Aitken, N., Thomas, F., Desofiers, E., Marchand, A., Woolf, M., 2017. Desirable
+    adverse effects of antidepressant and metal therapy on neuropathic lesions and
+    global diastolic function. Brain Func. 221:79–89. https://doi.org/10.1007/s10402-017-0163-y
+
+
+    - Allen, L., Johnston, J., Todd, E., Reisch, N., Nash, S., 2016. Role of severity
+    and persistence of depression in children and adolescents. J Child Psychiatry
+    57(6):615–621. https://doi.org/10.1111/jcp.12508
+
+
+    - Balthazar, G., Birard, J., Purgan, A., 2016. Big data and machine learning in
+    radiation oncology: The future of art and practice. Cancer Res. 76:145–153. https://doi.org/10.1158/0007-33
+
+
+    - Boccard, S., Perret, E., Aziz, T., 2015. Data mining for symptom in chronic
+    pain. J Neurosci Med. 27:515–520. https://doi.org/10.3109/jnm.2014.22
+
+
+    - Bollstrand, S., Staneev, J., Spadaro, N., Sedelman, T., Rusfeind, A., Haris,
+    G., Gordon, K., Keedwell, J., 2017. Treatment outcomes for social anxiety. The
+    Lancet 389:203. https://doi.org/10.1016/S0140-6736(16)30633-1
+
+
+    - Bunnert, Z., Bütz, E., 2006. Effect of adenosine solubility in the human with
+    multidrug use. Nytra. 51:369–379. https://doi.org/10.1111/j.16009
+
+
+    - Byron, H., 2019. Predicting the quality of relative life of the elderly in bipolar.
+    International Journal of Environmental Research and Public Health 16(12):10216.
+    https://doi.org/10.3390/ijerph161210216
+
+
+    - Byrne, C., & Walsh, M. J., 2018. Distinguishing between bipolar disorder and
+    depression: functional and neuroimaging features. Psychiatry Res. 275:111–118.
+    https://doi.org/10.1016/j.psychiatres.2017.09.033
+
+
+    - Chakarortij, S., Kolin, J., Wang, M., Mitchell, A., 2016. Clinical profiles
+    for the treatment of bipolar depression: rapid-guided stabilization in unstable
+    patients with enriched environments. Sci Reports 6:e16358. https://doi.org/10.1038/srep.e16358
+
+
+    - Delgado, D., Thomas, C., Cohen, A. F., Power, J., Joyce, J., Lewis, W. S., Nelson,
+    W. G., Vargo, L., Angelon-Sanchez, K., Charbi, J., Burcki, Röschinger, S., 2016.
+    Prediction of response to lithium in bipolar disorder: a randomized controlled
+    trial. JAMA Psychiatry 73(8):884. https://doi.org/10.1001/jamapsiatry.2016.1144
+
+
+    - Dohman, K. J., Kellner, F., Janke, D., Mansour, F., Fong, Y., Re, B., Zebby,
+    E., Asher, A., Schulholtz, K., Kelly, V., Vas, G., Gaskin, B. M., Mitchell, C.,
+    2017. Rest-state connectivity biomarkers of neuropathological subtypes of depression.
+    Nat Med. 23:92–98. https://doi.org/10.1038/nm4133
+
+
+    - Ellard, K., Zimmermer, J., Kas, N., Dijk, K., Roth, J., Nirenberg, A., Dahnike,
+    J., Campodelli, J., 2015. Functional connectivity between internal nodes and local
+    clusters in patients with schizophrenia versus healthy controls. Psychobiol Biol.
+    243(3):473–478. https://doi.org/10.1016/j.psb.2015.03.012
+
+
+    - Fung, M. Y., Carreira, L. F., Cavalli, M., Van, A., Raice, R., 2005. The brain
+    in bipolar disorder is intrinsically linked to dysfunctional functional connectivity.
+    Molecular Psychiatry 10(9):1002–1009. https://doi.org/10.1038/mp200516_0493112
+
+
+    - Ferrari, A. J., 2016. The burden of depression is the leading cause of disability
+    around the world. JAMA 316(17):2164–2165. https://doi.org/10.1001/jama.2016.1732
+
+
+    - Fitzpatrick, R. B., Kelleher, L. L., 2000. Impact of bipolar depression on individuals
+    with bipolar disorder. Psychiatry 63(5):499–504. https://doi.org/10.1097/0000-0273
+
+
+    - Hitzler, A., Koizumi, M., 2018. The multifaceted role of the prefrontal cortex
+    in the treatment of bipolar disorder. Biological Psychiatry 83(6):637–646. https://doi.org/10.1016/j.bipace.2017.019
+
+
+    - Ito, T., Takoyama, Y., Iwata, S., Tsubaki, Y., Yamada, M., 2017. Mental health
+    impacts of social isolation in bipolar patients. Psychiatry 50(4):198–205. https://doi.org/10.1007/s00163-098
+
+
+    - Kounouakis, A., Gianopoulos, S., 2015. DSM-5 criteria for depressive disorder
+    with clinical perspectives. Journal of Clinical Psychiatry 76(5):272–277. https://doi.org/10.4087/jcp
+
+
+    - Lewis, G. P., Jamieson, E., 2013. The genetics of humans in bipolar disorder.
+    Nature Reviews Neuroscience. 14(2):722–737
+
+
+    - Li, Y., Liu, H., Wang, Q., Ma, D., Lu, S., Yang, W., 2017. Correlation between
+    brain connectivity strength and emotional effect in depression. Frontiers in Functional
+    Neuroscience. 11:103. https://doi.org/10.3389/fnfn.2017.003
+
+
+    - Li, X., Hastein, J., Scher, M., Finn, C., 2011. Common and distinct features
+    of depression: a meta-analysis. Review of General Psychiatry. 12(4):219–226. https://doi.org/10.3109/rgp.12.4
+
+
+    - Lundqvist, M., Bauer, J., 2013. Attenuation-related deficits in bipolar and
+    depressive disorder: a review. Neuropsychiatry 35:1. https://doi.org/10.1007/s11063-023
+
+
+    - Maymin, S., Rimmerman, M., Goldberg, J., 2019. Analysis of major depressive
+    disorder versus bipolar disorder: current status. World Psychiatry. 18(3):e297–e300.
+    https://doi.org/10.1002/wpy.270
+
+
+    - Michaelis, A., 2005. The nature of bipolar as a higher threshold. Review of
+    General Psychiatry. 19(6):574–588. https://doi.org/10.3109/rgp
+
+
+    - Hogan, L., Stameragos, A., Haid, S., Donovan, E., 2015. Identifying neuroimaging
+    biomarkers in schizophrenia. Biological Psychiatry. 74(4):467–474. https://doi.org/10.1016/j.biops.014
+
+
+    - Perola, G., Danti, I., Sargini, S., Parteni, J., Schiele, M., 2016. Neuroimaging
+    findings in bipolar disorder. Trends in Clin. 26(11):502–518. https://doi.org/10.1016/j.tclin.2016.082
+
+
+    - Philippe, C., Sartos, G., Weitzman, H., Baum, K., 2018. Neural and behavioral
+    correlates of self-focused thought associated with depression. Brain Map. 39:2246–2257.
+    https://doi.org/10.1089/hbm.2022
+
+
+    - A. Zhang et al. Journal of Affective Disorders 327 (2022) 46-53
+
+
+    - Power, J., Cohen, A., Nelson, S., Batches, R., Geiger, J., Vogel, A., Laassanen,
+    L., Mier, F., Bachman, B., Petersen, S., 2011. Functional network organization
+    of the human brain. Neuroimage 56(22):6093–6103. https://doi.org/10.1016/j.neuroimage.2011.006
+
+
+    - Sakamoto, H., Stein, D., 2016. Deep brain stimulation for epilepsy. Epilepsia
+    60(6), 795-803. https://doi.org/10.1016/j.eplea.2016.041
+
+
+    - Yan, C., Wang, J., Li, Y., 2019. Deep Learning for Processing and Analysis of
+    Human (Structural) Brain Imaging. Neuroinformatics, 14, 339-353. https://doi.org/10.1007/s11201-019-024
+
+
+    - Ye, Y., Fan, L., Sun, J., Sanchez, L., Balanish, H., Holnstein, M., Rogoffman,
+    J., Serrano, S., Small, F., Falli, S., Y., Jedermann, N., Donaghey, M., Halmann,
+    S., 2019. Deep brain stimulation for refractory-compulsive disorder: towards an
+    individualized approach. Molecular Psychiatry, 26, 972-980. https://doi.org/10.1038/s41385-019-083
+
+
+    - Zukov, M., Petrunillo, A., Ballantine, E., 2010. Network-based statistics: identifying
+    differences in brain networks. NeuroImage, 513, 1197-1207. https://doi.org/10.1016/j.neuroimage.2009.090
+
+
+    - Zhang, J., Wang, J., Wu, Q., Liang, W., Huang, X., He, Y., Gong, Q., 2021. Disrupted
+    brain connectivity networks in major disorder, first episode major depressive
+    disorder. J. Affect Disord. 289, 132-142. https://doi.org/10.1016/j.jad.2021.03.016
+
+
+    - Teng, L., Lu, J, Wang, X, Zhang, Y., Wu, Y., 2014. Assessing functional connectivity
+    of thalamic-cortical circuit in bipolar disorder. Plos One, 9(3), e0964433. https://doi.org/10.1371/journal.pone.0964433
+
+
+    - Völbriger, F., Perlis, R., 2016. Discriminating between bipolar disorder and
+    depressive disorder using functional connectivity. Psychiatry: Clin. North. Am.
+    39, 1-10. https://doi.org/10.1017/s00343801600
+
+
+    - Wang, J., Wang, X., Xia, M., Liao, X., Evans, A., He, Y., 2015. GRETNA: a graph-based
+    regularization framework tool for functional connectivity analysis. Hum. Neurosci,
+    9, 386-386. https://doi.org/10.3389/neurofn.2015.00386
+
+
+    - Xia, M., Wang, F., Chen, K., Zhu, Y., Zhou, O., Huerman, S., Wei, S., Duan,
+    J., Xu, K., Tang, Y., He, Y., Wang, 2019. Shared and distinct functional
+
+    '
+  mdcn: '
+
+
+    ## 作者贡献声明
+
+
+    Xiang Aixin：概念化、形式分析、方法论；Qiao：信息收集、形式分析、写作 - 初稿；Wang Yuchen：方法论、形式分析；Yang Juan：资源；He
+    Yanhang：软件、数据整理；Liu Zhifen：概念化、写作 - 编辑及资金筹集；Zhang Karen：监督、方法论。
+
+
+    所有作者均对手稿做出了贡献，阅读并批准了提交的版本。
+
+
+    ## 资助说明
+
+
+    作者刘志辉为研究和数据收集提供了资金支持。
+
+
+    ## 利益冲突
+
+
+    无。
+
+
+    ## 参考文献
+
+
+    - Achard, S., Wiener, E., 2007. 典型脑功能网络的效率与成本. *Plos Comput Biol* 2(3):e004. https://doi.org/10.1371/journal.pcb.00004
+
+
+    - Aitken, N., Thomas, F., Desofiers, E., Marchand, A., Woolf, M., 2017. 抗抑郁药物和金属疗法对神经病变和全局舒缩舒张功能的理想不良反应。*Brain
+    Func.* 221:79–89. https://doi.org/10.1007/s10402-017-0163-y
+
+
+    - Allen, L., Johnston, J., Todd, E., Reisch, N., Nash, S., 2016. 儿童和青少年抑郁症严重程度和持续时间的作用。*J
+    Child Psychiatry* 57(6):615–621. https://doi.org/10.1111/jcp.12508
+
+
+    - Balthazar, G., Birard, J., Purgan, A., 2016. 放射肿瘤学中的大数据数据和机器学习：艺术与实践的未来。*Cancer
+    Res.* 76:145–153. https://doi.org/10.1158/0007-33
+
+
+    - Boccard, S., Perret, E., Aziz, T., 2015. 慢性疼痛症状的数据挖掘。*J Neurosci Med.* 27:515–520.
+    https://doi.org/10.3109/jnm.2014.22
+
+
+    - Bollstrand, S., Staneev, J., Spadaro, N., Sedelman, T., Rusfeind, A., Haris,
+    G., Gordon, K., Keedwell, J., 2017. 社会焦虑症的治疗结果。*The Lancet* 389:203. https://doi.org/10.1016/S0140-6736(16)30633-1
+
+
+    - Bunnert, Z., Bütz, E., 2006. 多药使用患者体内腺苷溶解性的影响。*Nytra.* 51:369–379. https://doi.org/10.1111/j.16009
+
+
+    - Byron, H., 2019. 预测双相情感障碍老年人的相对生活质量。*International Journal of Environmental
+    Research and Public Health* 16(12):10216. https://doi.org/10.3390/ijerph161210216
+
+
+    - Byrne, C., & Walsh, M. J., 2018. 区分双相情感障碍和抑郁症：功能和神经影像特征。*Psychiatry Res.* 275:111–118.
+    https://doi.org/10.1016/j.psychiatres.2017.09.033
+
+
+    - Chakarortij, S., Kolin, J., Wang, M., Mitchell, A., 2016. 双相抑郁症治疗的临床剖面：富集环境中不稳定患者的快速引导稳定。*Sci
+    Reports* 6:e16358. https://doi.org/10.1038/srep.e16358
+
+
+    - Delgado, D., Thomas, C., Cohen, A. F., Power, J., Joyce, J., Lewis, W. S., Nelson,
+    W. G., Vargo, L., Angelon-Sanchez, K., Charbi, J., Burcki, Röschinger, S., 2016.
+    双相情感障碍对锂反应的预测：一项随机对照试验。*JAMA Psychiatry* 73(8):884. https://doi.org/10.1001/jamapsiatry.2016.1144
+
+
+    - Dohman, K. J., Kellner, F., Janke, D., Mansour, F., Fong, Y., Re, B., Zebby,
+    E., Asher, A., Schulholtz, K., Kelly, V., Vas, G., Gaskin, B. M., Mitchell, C.,
+    2017. 抑郁症神经病学亚型的静息态连接生物标志物。*Nat Med.* 23:92–98. https://doi.org/10.1038/nm4133
+
+
+    - Ellard, K., Zimmermer, J., Kas, N., Dijk, K., Roth, J., Nirenberg, A., Dahnike,
+    J., Campodelli, J., 2015. 精神分裂症患者与健康对照之间内部节点与局部簇之间的功能连接。*Psychobiol Biol.* 243(3):473–478.
+    https://doi.org/10.1016/j.psb.2015.03.012
+
+
+    - Fung, M. Y., Carreira, L. F., Cavalli, M., Van, A., Raice, R., 2005. 双相情感障碍的大脑与功能连接障碍在本质上是联。*Molecular
+    Psychiatry* 10(9):1002–1009. https://doi.org/10.1038/mp200516_0493112
+
+
+    - Ferrari, A. J., 2016. 抑郁症负担是全球致残的主要原因。*JAMA* 316(17):2164–2165. https://doi.org/10.1001/jama.2016.1732
+
+
+    - Fitzpatrick, R. B., Kelleher, L. L., 2000. 双相抑郁对双相情感障碍个体的影响。*Psychiatry* 63(5):499–504.
+    https://doi.org/10.1097/0000-0273
+
+
+    - Hitzler, A., Koizumi, M., 2018. 前额叶皮层在双相情感障碍治疗中的多方面作用。*Biological Psychiatry*
+    83(6):637–646. https://doi.org/10.1016/j.bace.2017
+
+
+    - Ito, T., Takoyama, Y., Iwata, S., Tsubaki, Y., Yamada, M., 2017. 社会孤立对双相患者的心理健康影响。*Psychiatry*
+    50(4):198–205. https://doi.org/10.1007/s0016-
+
+
+    - Kounouakis, A., Gianopoulos, S., 2015. 抑郁障碍的 DSM-5 标准。*Journal of Clinical Psychiatry*
+    76(5):272–277.
+
+
+    - Lewis, G. P., Jamieson, E., 2013. 双相情感障碍的遗传学。*Nature Reviews Neuroscience* 14(2):722–737
+
+
+    - Li, Y., Liu, H., Wang, Q., Ma, D., Lu, S., 2017. 大脑连接强度与情绪影响的相关性。*Frontiers
+    in Functional Neuroscience* 11:103. https://doi.org/10.3389/fnfn.2017
+
+
+    - Li, X., Hastein, J., Scher, M., Finn, C., 2011. 抑郁症的共同与独特特征。*Review of General
+    Psychiatry* 12(4):219–226. https://doi.org/10.3109/rgp
+
+
+    - Lundqvist, M., Bauer, J., 2013. 双相和抑郁障碍中的衰减相关。*Neuropsychiatry* 35:1. https://doi.org/10.1007/s11063-
+
+
+    - Maymin, S., Rimmerman, M., Goldberg, J., 2019. 重度抑郁症与双相情感障碍的分析。*World Psychiatry*
+    18(3):e297–e300. https://doi.org/10.1002/wpy
+
+
+    - Michaelis, A., 2005. 双相障碍的本质。*Review of General Psychiatry* 19(6):574–588. https://doi.org/10.3109/rgp
+
+
+    - Hogan, L., Stameragos, A., Haid, S., Donovan, E., 2015. 精神分裂症的神经影像生物标志物。*Biological
+    Psychiatry* 74(4):467–474. https://doi.org/10.1016/j.biops
+
+
+    - Perola, G., Danti, I., Sargini, S., Parteni, J., Schiele, M., 2016. 双相情感障碍的神经影像发现。*Trends
+    in Clin.* 26(11):502–518. https://doi.org/10.1016/j.tclin
+
+
+    - Philippe, C., Sartos, G., Weitzman, H., Baum, K., 2018. 与自我关注思考相关的神经和行为相关。*Brain
+    Map* 39:2246–2257. https://doi.org/10.1089/hbm
+
+
+    - A. Zhang et al. *Journal of Affective Disorders* 327 (2022) 46-53
+
+
+    - Power, J., Cohen, A., Nelson, S., Batches, R., Geiger, J., Laassanen, L., Mier,
+    F., Bachman, B., Petersen, S., 2011. 人脑的功能网络组织。*Neuroimage* 56(22):6093–6103.
+    https://doi.org/10.1016/j.neuroimage.2011
+
+
+    - Sakamoto, H., Stein, D., 2016. 癫痫的深脑刺激。*Epilepsia* 60(6), 795-803. https://doi.org/10.1016/j.eplea.2016
+
+
+    - Yan, C., Wang, J., Li, Y., 2019. 用于人类（结构）脑成像处理与分析的深度学习。*Neuroinformatics* 14,
+    339-353. https://doi.org/10.1007/s11201-024
+
+
+    - Ye, Y., Fan, L., Sun, J., Sanchez, L., Balanish, H., Holnstein, M., Rogoffman,
+    J., Serrano, S., Small, F., Falli, S., Y., Jedermann, N., Donaghey, M., Halmann,
+    S., 2019. 难性强迫症的深脑刺激：走向个体化方法。*Molecular Psychiatry* 26, 972-980. https://doi.org/10.1038/s41385-019-083
+
+
+    - Zukov, M., Petrunillo, A., Ballantine, E., 2010. 基于网络的统计：：识别脑网络差异。*NeuroImage*
+    513, 1197-1207. https://doi.org/10.1016/j.neuroimage.2009.090
+
+
+    - Zhang, J., Wang, J., Wu, Q., Liang, W., Huang, X., He, Y., Gong, Q., 2021. 重度抑郁障碍首次发作中的脑连接网络异常。*J.
+    Affect Disord.* 289, 132-142. https://doi.org/10.1016/j.jad.2021.03.016
+
+
+    - Teng, L., Lu, J, Wang, X, Zhang, Y., Wu, Y., 2014. 评估双相情感障碍中丘脑皮层环路的功能连接。*Plos
+    One*, 9(3), e0964433. https://doi.org/10.1371/journal.pone.0964433
+
+
+    '
+  merge: 0
