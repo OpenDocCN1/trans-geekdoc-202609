@@ -1,0 +1,2 @@
++   [spaCy 和 Hugging Face 终极自然语言处理：通过基础方法、使用 spaCy 构建项目以及微调 Transformer 模型，掌握端到端 NLP 全程](README.md)
++   [spaCy 和 Hugging Face 终极自然语言处理：通过基础方法、使用 spaCy 构建项目以及微调 Transformer 模型，掌握端到端 NLP 全程](ultimate-natural-language-processing-with-spacy-and-hugging-_0.md)
