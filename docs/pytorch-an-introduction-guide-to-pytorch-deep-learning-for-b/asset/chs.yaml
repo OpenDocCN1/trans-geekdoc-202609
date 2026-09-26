@@ -1,0 +1,322 @@
+- "# PyTorch：初学者 PyTorch 深度学习入门指南，2019版\n\n\n\n![](img/image8.jpg)\n![](img/image8.jpg)\n\
+  \n\n![](img/image29.jpg)\n\n# PyTorch 入学者教程\n\n`PyTorch` 是基于 `Torch` 库的计算机软件的一个部分。它是由\
+  \ `Facebook` 引入的一个深度学习框架。`PyTorch` 是一个用于 `Python` 编程语言的机器学习库，用于`自然语言处理`等应用。`PyTorch`\
+  \ 提供的高级特性如下：\n\n1. 在`图形处理器` (`GPU`) 的帮助下，它提供了具有强力加速的张量计算。\n2. 它提供了基于胶带式（tape-based）自动微分系统的`深度神经网络`。\n\
+  \n`PyTorch` 的开发是为了在实现和构建`深度学习神经网络`时提供高度的灵活性和速度。正如你所知道的，它是一个 `Python` 编程语言的机器学习库，因此安装、运行和理解它非常简单。`Pytorch`\
+  \ 是完全 Python 化的（使用广泛采用的 `python` 习语而不是编写 `Java` 和 `C++` 代码），因此它可以快速成功地构建`神经网络模型`。\n\
+  \n## PyTorch 历史\n\n`PyTorch` 发布于 2016 年。越来越多的研究人员愿意采用 `PyTorch`。它由 `Facebook` 运营。`Facebook`\
+  \ 还运营 `Caffe2` (`用于快速特征嵌入的卷积架构`）。将 `PyTorch` 定义的模型转换为 `Caffe2` 是具有挑战性的。为了这一目的，`Facebook`\
+  \ 和 `Microsoft` 在 `2017 年 9 月` 发明了`开放神经网络交换` (`ONNX`)。\n\n简单来说，`ONNX` 的开发是为了在不同框架之间转换模型。`Caffe2`\
+  \ 已于 2018 年 3 月合并到 `PyTorch`。`PyTorch` 使得构建极其复杂的神经网络变得容易。这一特性使其迅速成为首选库。在研究工作中，它与\
+  \ `TensorFlow` 形成了激烈的竞争。\n\n`PyTorch` 的发明者想要创建一个高度命令式的库，可以轻松运行所有的数值计算，最终，他们发明了 `PyTorch`。对于深度学习科学家、机器学习开发人员和神经网络调试器来说，实时运行和测试部分代码是一个巨大的挑战。`PyTorch`\
+  \ 完成了这一挑战，允许他们实时运行和测试代码。因此，他们不需要等待检查它是否有效。\n\n## 教程信息\n\n### 本教程面向的对象\n本教程是为专注于机器学习算法以及自然语言处理系统的研发的\
+  \ `python` 开发者准备的。本教程的目标是完整描述 `PyTorch` 的所有概念以及相应的现实示例。\n\n### 先决条件\n在继续本教程之前，你需要具备\
+  \ `Python` 和 `Anaconda` 框架的知识（`Anaconda` 中的命令）。具有人工智能概念知识将是一个额外的优势。\n\n---\n\n\n\
+  ---\n\n# PyTorch - 简介\n\n`PyTorch` 被定义为用于 `Python` 的开源机器学习库。它用于自然语言处理等应用。它最初由 `Facebook`\
+  \ 人工智能研究小组开发，并在此构建了用于概率编程的 `Uberss Pyro` 软件。最初，`PyTorch` 由 `Hugh Perkins` 开发，作为基于\
+  \ `Torch` 框架的 `LuaJIT` 的 `Python` 封装。\n\n有两个 `PyTorch` 变体。`PyTorch` 在 `Python` 中重新设计并实现了\
+  \ `Torch`，同时为后端代码共享相同的内核 `C` 库。`PyTorch` 开发人员调整了这些后端代码以高效运行 `Python`。他们还保留了基于 `GPU`\
+  \ 的硬件加速以及使得基于 `Lua` 的 `Torch` 的扩展性特性。\n\n## 特性\n\n`PyTorch` 的主要特性如下：\n\n### 易用的接口\n\
+  `PyTorch` 提供了易于使用的 API；因此它被认为非常容易操作并运行在 `Python` 上。\n\n### Python 使用\n该库被认为是 `pythonic`\
+  \ 的，与 `Python` 数据栈无缝集成。因此，它可以利用 `Python` 环境提供的所有服务和功能。\n\n### 计算图\n`PyTorch` 提供了一个提供动态计算图的优秀平台。因此用户可以在运行时更改它们。当开发者不知道创建神经网络模型需要多少内存时，这非常有用。\n\
+  \n`PyTorch` 以具有以下三个级别的抽象著称：\n\n- `Tensor` — 运行在 `GPU` 上的命令式多维数组。\n- `Variable` —\
+  \ 计算图中的节点。它存储数据和梯度。\n- `Module` — 神经网络层，将存储状态或可学习权重。\n\n\n\n\n\n# PyTorch vs TensorFlow\n\
+  \n| PyTorch 以命令式和动态的方式包含所有功能。 | TensorFlow 包含了静态和动态图的结合。 |\n| PyTorch 的计算图是在运行时定义的。\
+  \ | TensorFlow 不包含任何运行时选项。 |\n| PyTorch 包含了针对移动和嵌入式框架的部署功能。 | TensorFlow 在嵌入式框架方面表现更好。\
+  \ |\n\n## PyTorch - 安装\n\n要进行安装，你必须先选择你的偏好，然后运行安装命令。你可以从本地安装，也可以通过云合作伙伴进行安装。在下图中，`Stable`\
+  \ 显示了目前受支持和测试的 PyTorch 版本（`1.1`），它适用于许多用户。如果你想要最新的 `1.1` 构建版本但尚未经过完全测试和支持，那么你必须选择\
+  \ `Preview` (Nightly)`。对于安装，前提是你已经满足适用于你的包管理器的先决条件。我们建议你使用 `Anaconda` 包管理器，因为它安装了所有的依赖项。\n\
+  \n### 平台、操作系统、语言及其他前提条件\n\n| PyTorch 构建 | 适用 (1.1) | Preview |\n| :--- | :--- |\
+  \ :--- |\n| 操作系统 | Linux | Mac | Windows |\n| 包 | Conda | pip | LibTorch | Source\
+  \ |\n| 语言 | Python 2.7 | Python 3.5 | Python 3.6 | Python 3.7 | C++ |\n| Cuda |\
+  \ 9.0 | 10.0 | None |\n\n`LibTorch` 仅适用于 `C++`。现在，我们首先在 Windows 上使用 `pip` 包安装 PyTorch，之后我们使用\
+  \ `Conda`。\n\n#### 使用 Pip 在 Windows 上安装\n\n要安装 PyTorch，你必须先安装 `python`，然后按照以下步骤操作。\n\
+  \n*   **步骤 1**：首先你必须进入 `python37` 文件夹，然后使用 `cd Scripts` 命令进入其 `Scripts` 文件夹。\n*\
+  \   **步骤 2**：在第二步中，你需要在命令行提示符上通过 `easy_install.exe pip` 命令根据你需要的版本安装 `pip`。一旦完成依赖项的处理，你会自动返回\
+  \ `Scripts` 文件夹。\n    ![PyTorch 安装](img/image301.jpg)\n*   **步骤 3**：现在，你的下一步是为 `pip`\
+  \ 安装 python 的 `numpy` 包。Numpy 的安装将通过 `pip install numpy` 命令完成。如果你的 python 已经有了此包，它将显示\
+  \ \"Requirement already satisfied\"，否则它将安装该包。使用 `pip list` 命令用于检查安装包。\n    ![使用\
+  \ Pip 在 Windows 上安装](img/image310.jpg)\n    下载完成后，它会显示成功消息并将光标带回 scripts 文件夹。\n\
+  *   **步骤 4**：下一步是使用 `pip install scipy` 安装安装 另一个包 `scipy`。\n    ![使用 Pip 在 Windows\
+  \ 上安装](img/image319.jpg)\n    下载完成后，你的光标会回到 scripts 文件夹。\n    ![使用 Pip 在 Windows\
+  \ 上安装](img/image325.jpg)\n*   **步骤 5**：现在，使用 `pip list` 命令检查 PyTorch 需要的所有已安装包。\n\
+  \    ![使用 Pip 在 Windows 上安装](img/image332.jpg)\n*   **步骤 6**：现在，你需要访问 [`pytorch.org/`](https://pytorch.org/)\
+  \ 获取 PyTorch 的安装命令。在这里，你必须选择偏好的 PyTorch 构建版本、操作系统、包、语言和 CUDA。它提供了两个命令在你的 windows\
+  \ 系统上安装 PyTorch。\n*   **步骤 7**：下一步是在你的命令行提示符上运行这两个命令。记住，如果你对此命令进行了任何更改，它将无法安装 PyTorch\
+  \ 并给出错误信息。\n\n    ```bash\n    pip3 install https://download.pytorch.org/whl/cpu/torch-1.1.0-cp35-cp35m-win_amd64.whl\n\
+  \    ```\n    ![使用 Pip 在 Windows 上安装](img/image350.jpg)\n\n    ```bash\n    pip3\
+  \ install https://download.pytorch.org/whl/cpu/torchvision-0.3.0-cp35-cp35m-win_amd64.whl\n\
+  \    ```\n    ![使用 Pip 在 Windows 上安装](img/image357.jpg)\n*   **步骤 8**：现在，重新运行 `pip\
+  \ list` 命令检查 PyTorch 是否成功运行。\n    ![使用 Pip 在 Windows 上安装](img/image364.jpg)\n* \
+  \  **步骤 9**：现在，测试 PyTorch。运行 `python` 命令进入 python 环境。导入 `torch` 以使用 PyTorch 并执行操作。\n\
+  \    ![使用 Pip 在 Windows 上安装](img/image371.jpg)\n\n#### 使用 Conda 在 Windows 上安装\n\n\
+  本教程定义了 PyTorch 的分步安装。要使用 `Conda` 安装 PyTorch，你必须遵循以下步骤\n\n*   **步骤 1**：首先，你必须在系统中安装\
+  \ `Anaconda` 的最新版本。要安装 `Anaconda`，你需要访问 [`www.anaconda.com/distribution/`](https://www.anaconda.com/distribution/)。\n\
+  \    ![使用 Conda 在 Windows 上安装](img/image388.jpg)\n*   **步骤 2**：现在，运行 Anaconda 安装程序并完成安装。Anaconda\
+  \ 安装完成后，会出现 Anaconda 命令行提示符。\n    ![使用 Conda 在 Windows 上安装](img/image395.jpg)\n\
+  *   **步骤 3**：下一步是在 Anaconda 命令行提示符安装 PyTorch。要安装 PyTorch，你需要在命令行提示符上运行安装命令。该命令可以在\
+  \ [`pytorch.org/`](https://pytorch.org/) 上找到。\n    ![使用 Conda 在 Windows 上安装](img/image402.jpg)\n\
+  \    根据你的选择语言和 cuda 版本。\n*   **步骤 4**：现在，运行 `python -version` 和 `Conda -version`\
+  \ 命令检查 `conda` 和 `python` 包是否已安装。之后，你在命令行提示符上运行给定的命令。记住，你在命令行上运行的命令与给定的命令相似。如果不相似，它将产生错误信息且安装失败。\n\
+  \    ![使用 Conda 在 Windows 上安装](img/image411.jpg)\n    ![使用 Conda 在 Windows 上安装](img/image416.jpg)\n\
+  \    下载并安装所有包需要一些时间。命令完成后，你的光标将切换到目录文件夹。\n    ![PyTorch 安装](img/image423.jpg)\n\
+  *   **步骤 5**：现在，执行 `conda list pytorch` 命令检查所有包是否成功安装。\n    ![PyTorch 安装](img/image430.jpg)\n\
+  *   **步骤 6**：现在，测试 PyTorch。运行 `python` 命令进入 python 环境。导入 `torch` 以使用 PyTorch 并执行操作。\n\
+  \    ![PyTorch 安装](img/image437.jpg)\n\n\n\n\n\n# 神经网络的数学基石\n\n数学在任何机器学习算法中都至关重要，包含了许多核心数学概念，以便以特定的方式设计出正确的算法。数学对机器学习和数据科学的重要性下文所示−\n\
+  \n![machine learning](img/image451.jpg)\n\n现在，让我们关注机器学习主要的数学概念，这些概念从自然语言处理的角度来看非常：\n\
+  \n### 向量 (Vectors)\n向量被认为是数值数组，可以是连续的也可以是离散的，由向量组成的空间称为向量空间。向量的空间维度可以是有限的或无限的，但观察发现，机器学习和数据科学问题处理的是固定长度的向量。向量的表示如下：\n\
+  \n```python\ntemp = torch.FloatTensor([23, 24, 24.5, 26, 27.2, 23.0])\ntemp.size()\n\
+  ```\n输出 - `torch.Size([6])`\n\n在机器学习中，我们处理的是多维数据。因此，向量变得至关重要，并被视为任何预测问题的输入特征。\n\n\
+  ### 标量 (Scalars)\n标量被认为是零维，仅包含一个值。在 PyTorch 中，它不包含零维的特殊张量；因此，声明如下−\n\n```python\n\
+  x = torch.rand(10)\nx.size()\n```\n输出 - `torch.Size([10])`\n\n### 矩阵 (Matrices)\n\
+  大多数结构化数据通常以表格或特定矩阵的形式表示。我们将使用一个名为“波士顿房价”的数据集，它在 Python 的 scikit-learn 机器学习库中可用。\n\
+  \n```python\nboston_tensor = torch.from_numpy(boston.data)\nboston_tensor.size()\n\
+  ```\n输出：`torch.Size([506, 13])`\n\n```python\nboston_tensor[:2]\n```\n输出：第 0 到 7\
+  \ 列\n0.0063 18.0000 2.3100 0.0000 0.5380 6.5750 65.2000 4.0900 0.0273 0.0000 7.0700\
+  \ 0.0000 0.4690 6.4210 78.9000 4.9671\n第 8 到 12 列\n1.0000 296.0000 15.3000 396.9000\
+  \ 4.9800 2.0000 242.0000 17.8000 396.9000 9.1400\n\n# PyTorch - 神经网络基础\n\n神经网络的主要原理包括了一系列基本元素，即人工神经元或感知器。它包含了几个基本输入，如\
+  \ `x1`、`x2`…… `xn`，如果和大于激活电位，则会产生二值输出。示例神经元的示意图如下−\n\n![sample neuron](img/image514.jpg)\n\
+  \n生成的输出可以被视为带有激活电位或偏置的加权和。`Output=∑jwjxj+Bias`\n\n典型的神经网络架构描述如下−\n\n![neural network\
+  \ architecture](img/image523.jpg)\n\n输入和输出之间的层被称为隐藏层。例如，全连接层具有稠密连接的隐藏层。各种类型的神经网络如下：\n\
+  \n### 前馈神经网络 (Feedforward Neural Networks)\n前馈神经网络包含基本单元。数据的运动是通过多个隐藏层从输入传递到输出的。\n\
+  \n![Feedforward Neural Networks](img/image530.jpg)\n\n### 循环神经网络 (Recurrent Neural\
+  \ Networks)\n当数据随时间变化时，使用循环神经网络。在 `RNN` 中，相同的层被用于接受输入。\n\n![Recurrent Neural Networks](img/image536.jpg)\n\
+  \n### 神经网络 (Neural Networks)\n神经网络可以使用 `torch.nn` 构建。\n\n![Construct Neural Networks](img/image541.jpg)\n\
+  它接收输入并最终输出。通过 PyTorch 的帮助，我们可以使用以下步骤：\n\n* 定义具有可学习参数的神经网络。\n* 遍历数据集。\n* 通过网络处理输入。\n\
+  * 计算损失（输出与正确值的差值）。\n* 将梯度回传到网络。\n* 通常使用简单的公式更新网络权重：\n\n```python\nweight = weight\
+  \ - learning_rate * gradient\n```\n\n# 机器学习的通用工作流\n\n人工智能如今非常流行。机器学习和深度学习构成了人工智能。下面的维恩图解释了机器学习和深度学习之间的关系。\n\
+  \n![relationship machine learning](img/image567.jpg)\n\n### 机器学习 (Machine Learning)\n\
+  机器学习是一门科学艺术，允许计算机根据设计的算法运行。许多研究人员认为机器学习是实现人类水平人工智能的最佳途径。它包括多种类型：\n\n* 监督学习\n* 无监督学习\n\
+  \n### 深度学习 (Deep Learning)\n深度学习是机器学习的一个分支，相关算法受到大脑结构和功能的启发。深度学习通过监督学习或从标记数据中学习获得了巨大的重要性。深度学习中的每个算法都经过相同的过程。它包括输入的非线性变换并用于创建统计模型。机器学习过程通过以下步骤定义：\n\
+  \n* 识别数据集并对其进行分析准备。\n* 选择使用的算法类型。\n* 基于算法构建分析模型。\n* 在测试数据集上训练模型，根据需要进行修订。\n* 运行模型生成测试评分。\n\
+  \n# PyTorch - 机器学习 vs 深度学习\n\n在本章中，我们将讨论机器学习和深度学习概念之间的主要区别。\n\n### 数据量\n机器学习适用于不同量的数据，并主要用于小量数据。另一方面，当数据量迅速增加时，深度学习运行得非常高效。\n\
+  \n![Amount Data](img/image602.jpg)\n\n### 硬件依赖\n深度学习算法的设计高度依赖于高端机器，这与传统的机器学习算法相反。深度学习算法执行大量的矩阵乘法运算，这需要巨大的硬件支持。\n\
+  \n### 特征工程 (Feature Engineering)\n特征工程是将领域知识放入特定特征中的过程，以减少数据的复杂性，并使学习算法的模式变得可见。例如，传统的机器学习模式关注像素以及特征工程过程所需的其他属性。深度学习算法关注数据中的高级特征。它减少了为每个新问题开发新特征提取器的任务。\n\
+  \n\n\n\n\n# PyTorch - 实现第一个神经网络\n\nPyTorch 包含用于创建和实现神经网络的特殊功能。在本章中，我们将创建一个包含一个隐藏层并开发单个输出单元的简单神经网络。我们将使用以下步骤来使用\
+  \ PyTorch 实现第一个神经网络。\n\n### 步骤 1：导入 PyTorch 库\n首先，我们需要使用下面的命令导入 PyTorch 库：\n```python\n\
+  import torch\nimport torch.nn as nn\n```\n\n### 步骤 2：定义层和批大小\n如下所示，定义所有层和批大小以开始执行神经网络：\n\
+  ```python\n### 分别定义输入大小、隐藏层大小、输出大小和批大小\nn_in, n_h, n_out, batch_size = 10, 5, 1,\
+  \ 10\n```\n\n### 步骤 3：创建伪数据\n由于神经网络包含了输入数据获取相应的输出数据，我们将遵循下面的步骤操作：\n```python\n###\
+  \ 创建伪输入和目标张量（数据）\nx = torch.randn(batch_size, n_in)\ny = torch.tensor([[1.0], [0.0],\
+  \ [0.0], [1.0], [1.0], [1.0], [0.0], [0.0], [1.0], [1.0]])\n```\n\n### 步骤 4：创建顺序模型\n\
+  借助内置函数创建一个顺序模型。使用下述代码创建一个顺序模型：\n```python\n### 创建一个模型\nmodel = nn.Sequential(\n\
+  \    nn.Linear(n_in, n_h),\n    nn.ReLU(),\n    nn.Linear(n_h, n_out),\n    nn.Sigmoid()\n\
+  )\n```\n\n### 步骤 5：构建损失函数和优化器\n如下所示，借助梯度下降优化器构建损失函数：\n```python\n### 构建损失函数准则\n\
+  criterion = torch.nn.MSELoss()\n\n### 构建优化器（在此情况下为随机梯度下降）\noptimizer = torch.optim.SGD(model.parameters(),\
+  \ lr=0.01)\n```\n\n### 步骤 6：实现梯度下降\n使用给定的代码行通过循环实现梯度下降模型：\n```python\n### 梯度下降\n\
+  for epoch in range(50):\n    # 前向传播：将 x 传递给模型以计算预测的 y\n    y_pred = model(x)\n \
+  \   # 计算并打印损失\n    loss = criterion(y_pred, y)\n    print('epoch:', epoch, ' loss:',\
+  \ loss.item())\n    \n    # 零梯度，执行反向传播并更新权重。\n    optimizer.zero_grad()\n    # 执行反向传播\
+  \ (backpropagation) \n    loss.backward()\n    # 更新参数\n    optimizer.step()\n```\n\
+  \n### 步骤 7：输出输出\n生成的输出如下：\n```text\nepoch: 0 loss: 0.2545787990093231\nepoch: 1\
+  \ loss: 0.2545052170753479\nepoch: 2 loss: 0.254431813955307\nepoch: 3 loss: 0.25435858964920044\n\
+  epoch: 4 loss: 0.2542854845523834\nepoch: 5 loss: 0.25421255826950073\nepoch: 6\
+  \ loss: 0.25413978099823\nepoch: 7 loss: 0.25406715273857117\nepoch: 8 loss: 0.2539947032928467\n\
+  epoch: 9 loss: 0.25392240285873413\nepoch: 10 loss: 0.25385022163391113\nepoch:\
+  \ 11 loss: 0.25377824902534485\nepoch: 12 loss: 0.2537063956260681\nepoch: 13 loss:\
+  \ 0.2536346912384033\nepoch: 14 loss: 0.25356316566467285\nepoch: 15 loss: 0.25349172949790955\n\
+  epoch: 16 loss: 0.25342053174972534\nepoch: 17 loss: 0.2533493936061859\nepoch:\
+  \ 18 loss: 0.2532784342765808\nepoch: 19 loss: 0.25320762395858765\nepoch: 20 loss:\
+  \ 0.2531369626522064\nepoch: 21 loss: 0.25306645035743713\nepoch: 22 loss: 0.252996027469635\n\
+  epoch: 23 loss: 0.2529257833957672\nepoch: 24 loss: 0.25285571813583374\nepoch:\
+  \ 25 loss: 0.25278574228286743\nepoch: 26 loss: 0.25271597504615784\nepoch: 27 loss:\
+  \ 0.25264623761177063\nepoch: 28 loss: 0.25257670879364014\nepoch: 29 loss: 0.2525072991847992\n\
+  epoch: 30 loss: 0.2524380087852478\nepoch: 31 loss: 0.2523689270019531\nepoch: 32\
+  \ loss: 0.25229987502098083\nepoch: 33 loss: 0.25223103165626526\nepoch: 34 loss:\
+  \ 0.25216227769851685\nepoch: 35 loss: 0.252093642950058\n```\n\n\n\n\n# PyTorch\
+  \ - 术语\n\n在本章中，我们将讨论 PyTorch 中一些常用的术语。\n\n## PyTorch NumPy\n`PyTorch` 的张量（tensor）与\
+  \ `NumPy` 数组是相同的。`tensor` 是一个 n 维数组，对于 `PyTorch` 而言，它提供了许多对这些张量进行操作的功能。`PyTorch`\
+  \ 张量通常利用 GPU 来加速数值计算。这些在 `PyTorch` 中创建的张量可以用于对随机数据拟合双层网络。用户可以手动实现通过网络的前向传播和反向传播。\n\
+  \n### 变量与 Autograd\n使用 `autograd` 时，网络的正向传播将定义一个计算图——图中的节点将是 `Tensors`，边将是根据输入 `Tensors`\
+  \ 产生输出 `Tensors` 的函数。`PyTorch` Tensors 可以被作为变量对象创建，其中变量代表计算图中的一个节点。\n\n### 动态图\n\
+  静态图的优点是用户可以预先对图进行优化。如果程序员反复反复使用同一个图，那么这种潜在的高昂的预先优化就可以被维持，因为同一个图会被反复运行。它们之间的主要区别是\
+  \ `Tensor Flow` 的计算图是静态的，而 `PyTorch` 使用动态计算图。\n\n### optim 包\nPyTorch 中的 `optim`\
+  \ 包抽象了优化算法的概念，该算法通过许多方式实现实现，并提供了常用优化算法的示例说明。这可以在导入语句中调用。\n\n### 多进程\n多进程（Multiprocessing）支持相同的操作，使得所有张量都在多个处理器上运行。队列将将其数据移动到共享内存中并仅向另一个进程发送句柄。\n\
+  \n# PyTorch - 加载数据\n`PyTorch` 包含一个名为 `torchvision` 的包，用于加载和准备数据集。它包含了两个基本函数，即 `Dataset`\
+  \ 和 `DataLoader`，有助于数据集的转换和加载。\n\n### Dataset\n`Dataset` 用于从给定的数据集中读取并转换数据点。实现的基本语法如下所示\
+  \ −\n```\ntrainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True,\
+  \ transform=transform)\n```\n\n### DataLoader\n`DataLoader` 用于数据的洗乱和分批处理。它可以配合多进程工作器并行加载数据。\n\
+  ```\ntrainloader = torch.utils.data.DataLoader(trainset, batch_size=4, shuffle=True,\
+  \ num_workers=2)\n```\n\n### 示例：加载 CSV 文件\n我们使用 Python 包 `Panda` 来加载 csv 文件。原始文件格式如下：(图像名称,\
+  \ 68 个关键点 - 每个关键点都有 x, y 坐标)。\n```python\nlandmarks_frame = pd.read_csv('faces/face_landmarks.csv')\n\
+  n = 65\nimg_name = landmarks_frame.iloc[n, 0]\nlandmarks = landmarks_frame.iloc[n,\
+  \ 1:].as_matrix()\nlandmarks = landmarks.astype('float').reshape(-1, 2)\n```\n\n\
+  # PyTorch - 线性回归 \n在本章中，我们将重点关注使用 `TensorFlow` 实现线性回归的基本示例。逻辑回归或线性回归是一种用于离散类别分类的监督学习方法。本章的目标是构建一个模型，用户可以通过该模型预测变量与一个或多个独立变量之间的关系。这两个变量之间的关系被认为是线性的，即如果\
+  \ `y` 是因变量而 `x` 被视为自变量，那么这两个变量的线性回归关系将看起来像下面提到的方程 −\n`Y = Ax+b`\n\n接下来，我们将为线性回归设计一种算法，使我们能够理解下面的两个重要概念\
+  \ −\n* 损失函数 (Cost Function)\n* 梯度下降算法 (Gradient Descent Algorithms)\n\n线性回归的示意图如下，解释结果\
+  \ `Y=ax+b`\n\n* `a` 的值是斜率。\n* `b` 的值是截距。\n* `r` 是相关系数。\n* `r 2` 是相关系数。\n\n线性回归的图形视图如下，解释结果\
+  \ `Y=ax+b`\n\n![Interpreting result](img/image903.jpg)\n\n使用 `PyTorch` 实现线性回归的步骤如下：\n\
+  \n### 第 1 步\n导入用于在 PyTorch 中创建线性回归的必要包 −\n```python\nimport numpy as np\nimport\
+  \ matplotlib.pyplot as plt\nimport seaborn as sns\nimport pandas as pd\n% matplotlib\
+  \ inline\nsns.set_style('whitegrid')\n```\n\n### 2 步\n创建一个带有可用数据的单个训练集 −\n```python\n\
+  m = 2 # 斜率\nc = 3 # 截距\nx = np.random.rand(256)\nnoise = np.random.randn(256) /\
+  \ 4\ny = x * m + c\ndf = pd.DataFrame()\ndf['x'] = x\ndf['y'] = y\n```\n![Single\
+  \ Training](img/image955.jpg)\n\n### 第 3 步\n使用 `PyTorch` 实现线性回归 −\n```python\nimport\
+  \ torch\nimport torch.nn as nn\nfrom torch.autograd import Variable\n\nx_train =\
+  \ x.reshape(-1, 1).astype('float32')\ny_train = y.reshape(-1, 1).astype('float32')\n\
+  \nclass LinearRegressionModel(nn.Module):\n    def __init__(self, input_dim, output_dim):\n\
+  \        super(LinearRegressionModel, self).__init__()\n        self.linear = nn.Linear(input_dim,\
+  \ output_dim)\n    def forward(self, x):\n        out = self.linear(x)\n       \
+  \ return out\n\ninput_dim = x_train.shape[1]\noutput_dim = y_train.shape[1]\nmodel\
+  \ = LinearRegressionModel(input_dim, output_dim)\ncriterion = nn.MSELoss()\n[w,\
+  \ b] = model.parameters()\n\ndef get_param_values():\n    return w.data[0][0], b.data[0]\n\
+  \ndef plot_current_fit(title=\"\"):\n    plt.figure(figsize=(12, 4))\n    plt.title(title)\n\
+  \    plt.scatter(x, y, s=8)\n    w1 = w.data[0][0]\n    b1 = b.data[0]\n    x1 =\
+  \ np.array([0., 1.])\n    y1 = x1 * w1 + b1\n    plt.plot(x1, y1, 'r', label='Current\
+  \ Fit ({:.3f}, {:.3f})'.format(w1, b1))\n    plt.xlabel('x (input)')\n    plt.ylabel('y\
+  \ (target)')\n    plt.legend()\n    plt.show()\n```\n`plot_current_fit('Before training')`\n\
+  生成的图表如下 ![Plot Generated](img/image1036.jpg)\n\n\n\n\n让我们详细理解其中的每一个术语。\n\n### 局部感受野\
+  \ (Local Respective Fields)\nCNN 利用输入数据中存在的空间相关性。神经网络并发层中的每一层都连接某些输入神经元。这个特定区域被称为\
+  \ `Local Receptive Field`（局部感受野）。它只关注隐藏神经元。隐藏神经元将处理上述区域内的输入数据，而不会感知到特定边界之外的变化。生成局部感受野的图示如下所示\
+  \ − \n\n![Local Respective Fields](img/image1069.jpg)\n\n### 卷积 (Convolution)\n\
+  在上面的图中，我们观察到每个连接都学习了隐藏神经元的权重，该权重与从一层到另一层的移动连接相关联。在这里，单个神经元不时地执行位移。这个过程被称为“卷积”。从输入层到隐藏特征图的连接映射定义为“共享权重”（shared\
+  \ weights），包含的偏置则称为“共享偏置”（shared bias）。\n\n### 池化 (Pooling)\n卷积神经网络使用池化层，这些层紧位于\
+  \ CNN 声明之后。它将用户的输入作为卷积网络输出的特征图，并准备一个压缩的特征图。池化层有助于创建具有前一层神经元的后续层。\n\n### PyTorch\
+  \ 的实现 (Implementation of PyTorch)\n使用以下步骤通过 PyTorch 创建卷积神经网络。\n\n**步骤 1：导入创建简单神经网络所需的包。**\n\
+  ```python\nfrom torch.autograd import Variable\nimport torch.nn.functional as F\n\
+  ```\n\n**步骤 2：创建一个带有卷积神经网络批处理表示的类。** 我们的输入 `x` 的批处理形状维度为 (3, 32, 32)。\n```python\n\
+  class SimpleCNN (torch.nn.Module):\n    def __init__(self):\n        super(SimpleCNN,\
+  \ self).__init__()\n        #输入通道 = 3, 输出通道 = 18\n        self.conv1 = torch.nn.Conv2d(3,\
+  \ 18, kernel_size=3, stride=1, padding=1)\n        self.pool = torch.nn.MaxPool2d(kernel_size=2,\
+  \ stride=2, padding=0)\n        # 4608 个输入特征，64 个输出特征（见下方的尺寸流程）\n        self.fc1\
+  \ = torch.nn.Linear(18 * 16 * 16, 64)\n        # 64 个输入特征，对于我们定义的 10 类输出 10 个\n\
+  \        self.fc2 = torch.nn.Linear(64, 10)\n```\n\n**步骤 3：计算第一次卷积的激活** 尺寸从 (3,\
+  \ 32, 32) 变为 (18, 32, 32)。维度尺寸从 (18, 32, 32) 变为 (18, 16, 16)。由于重塑神经网络输入层的数据维度，尺寸从\
+  \ (18, 16, 16) 变为 (1, 4608)。请记住 `-1` 会从其他给定的维度推导出此维度。\n```python\ndef forward(self,\
+  \ x):\n    x = F.relu(self.conv1(x))\n    x = self.pool(x)\n    x = x.view(-1, 18\
+  \ * 16 * 16)\n    x = F.relu(self.fc1(x))\n    # 计算第二个全连接层（激活稍后应用）\n    # 尺寸从 (1,\
+  \ 64) 变为 (1, 10)\n    x = self.fc2(x)\n    return (x)\n```\n\n### PyTorch - 循环神经网络\
+  \ (Recurrent Neural Network)\n循环神经网络是一种面向深度学习的算法类型，它遵循顺序方法。在神经网络中，我们总是假设每个输入和输出都与所有其他层相互独立。这类神经网络被称为循环网络，是因为它们以顺序的方式进行数学计算，一个接一个地完成任务。下面的图说明了循环神经网络的完整方法和工作原理\
+  \ − \n\n![Recurrent Neural Networks Ex](img/image1138.jpg)\n\n在上面的图中，`c1`、`c2`、`c3`\
+  \ 和 `x1` 被视为输入，其中了一些隐藏输入值 `h1`、`h2` 和 `h3`，它们提供了 `o1` 的相应输出。我们现在将关注使用 PyTorch 来通过循环神经网络创建一个正弦波。在训练期间，我们将遵循训练方法对模型进行一次处理一个数据点的训练。输入序列\
+  \ `x` 包含 20 个数据点，目标序列被认为与输入序列相同。\n\n**步骤 1：使用以下代码实现循环神经网络所需的包 −**\n```python\nimport\
+  \ torch\nfrom torch.autograd import Variable\nimport numpy as np\nimport matplotlib.pyplot\
+  \ as plt\nimport torch.nn as nn\nimport torch.nn.functional as F\nimport torch.optim\
+  \ as optim\n```\n\n**步骤 2：我们将设置超参数**\n```python\ninput_size = 7\nhidden_size = 6\n\
+  output_size = 1\nepochs = 300\nlr = 0.1\nseq_length = 20\ntime_steps = np.linspace(0,\
+  \ 2*pi, seq_length)\nx = np.sin(time_steps)\ny = x\nx = Variable(torch.FloatTensor(x))\n\
+  ```\n\n**步骤 3：使用正态分布初始化权重**\n```python\nw1 = Variable(torch.randn(input_size, hidden_size))\n\
+  w2 = Variable(torch.randn(hidden_size, output_size))\n```\n\n**步骤 4：创建一个前向传播函数**\n\
+  ```python\ndef forward(input, context_state, w1, w2):\n    xh = torch.cat((input,\
+  \ context_state), 1)\n    context_state = torch.tanh(xh.mm(w1))\n    out = context_state.mm(w2)\n\
+  \    return out, context_state\n```\n\n**步骤 5：开始训练程序**\n```python\nfor i in range(epochs):\n\
+  \    total_loss = 0\n    context_state = Variable(torch.zeros(1, hidden_size))\n\
+  \    for j in range(seq_length):\n        input = x[j:j+1]\n        target = y[j:j+1]\n\
+  \        pred, context_state = forward(input, context_state, w1, w2)\n        loss\
+  \ = (pred - target).pow(2).sum()\n        total_loss += loss\n    loss.backward()\n\
+  \    w1.data -= lr * w1.grad.data\n    w2.data -= lr * w2.grad.data\n    w1.grad.data.zero_()\n\
+  \    w2.grad.data.zero_()\n    if i % 10 == 0:\n        print(\"Epoch: {} loss {}\"\
+  .format(i, total_loss.data[0]))\n```\n\n**步骤 6：绘制正弦波**\n```python\ncontext_state\
+  \ = Variable(torch.zeros(1, hidden_size))\npredictions = []\nfor i in range(seq_length):\n\
+  \    input = x[i:i+1]\n    pred, context_state = forward(input, context_state, w1,\
+  \ w2)\n    context_state = context_state\n    predictions.append(pred.data.numpy().ravel()[0])\n\
+  \nplt.scatter(time_steps[:-1], x.data.numpy(), s=90, label=\"Actual\")\nplt.scatter(time_steps[1:],\
+  \ predictions, label=\"Predicted\")\nplt.legend()\nplt.show()\n```\n上述过程的输出如下 −\
+  \ \n\n![Sine Wave](img/image1272.jpg)\n\n### PyTorch - 数据集 (Datasets)\n在本章中，我们将更多地关注\
+  \ `torchvision.datasets` 及其各种类型。PyTorch 包含以下数据集加载器：\n\n*   MNIST\n*   COCO (字幕与检测)\n\
+  \n数据集主要包含以下两种类型的函数：\n\n*   `Transform`：一个接收图像并返回其标准内容修改版本的的函数。这些转换可以组合在一起。\n*  \
+  \ `Target_transform`：一个接收目标并对其进行转换的函数。例如，接收字幕字符串并返回单词索引的张量。\n\n\n\n\n# MNIST\n以下是\
+  \ `MNIST` `dataset` − `dset` 的示例代码。`MNIST(root, train=TRUE, transform=NONE, target_transform=None,\
+  \ download=FALSE)` 的参数如下 −\n\n*   `root` — 存储处理后数据的根目录。\n*   `train` — `True` =\
+  \ 训练集，`False` = 测试集。\n*   `download` — `True` = 从互联网下载数据集并放入 `root` 中。\n\n# COCO\n\
+  这需要安装 `COCO` API。以下示例演示了如何使用 PyTorch 实现 `COCO` 数据集 −\n\n```python\nimport torchvision.dataset\
+  \ as dset\nimport torchvision.transforms as transforms\ncap = dset.CocoCaptions(root='dir\
+  \ where images are', annFile='json annotation file', transform=transforms.ToTensor())\n\
+  print (' Number of samples: ', len(cap))\nprint (target)\n```\n\n获取的输出如下 −\nNumber\
+  \ of samples: 82783\nImage Size: (3L, 427L, 640L)\n\n# PyTorch - 卷积网络简介\n卷积网络主要是关于从零开始构建\
+  \ `CNN` 模型。网络架构包含以下步骤的组合 −\n\n*   `Conv2d`\n*   `MaxPool2d`\n*   `Rectified Linear\
+  \ Unit`（线性整流单元）\n*   `View`\n*   `Linear Layer`（线性层）\n\n# 训练模型\n训练模型的过程与图像分类问题相同。以下代码片段完成了在提供的数据集上训练模型\
+  \ −\n\n```python\ndef fit(epoch, model, data_loader, phase='training', volatile=False):\n\
+  \    if phase == 'training':\n        model.train()\n    if phase == 'training':\n\
+  \        model.train()\n    if phase == 'validation':\n        model.eval()\n  \
+  \  volatile = True\n    running_loss = 0.0\n    running_correct = 0\n    for batch_idx,\
+  \ (data, target) in enumerate(data_loader):\n        if is_cuda:\n            data,\
+  \ target = data.cuda(), target.cuda()\n        data, target = Variable(data, volatile),\
+  \ Variable(target)\n        if phase == 'training':\n            optimizer.zero_grad()\n\
+  \            output = model(data)\n            loss = F.nll_loss(output, target)\n\
+  \            running_loss += F.nll_loss(output, target, size_average=False).data[0]\n\
+  \        preds = output.data.max(dim=1, keepdim=True)[1]\n        running_correct\
+  \ += preds.eq(target.data.view_as(preds)).cpu().sum()\n        if phase == 'training':\n\
+  \            loss.backward()\n            optimizer.step()\n        loss = running_loss/len(data_loader.dataset)\n\
+  \        accuracy = 100.*running_correct/len(data_loader.dataset)\n        print(f'{phase}\
+  \ loss is {loss:5.2f} and {phase} accuracy is {running_correct}/{len(data_loader.dataset)}{accuracy:.2f}')\n\
+  \    return loss,accuracy\n```\n\n该方法包含了训练和验证的逻辑逻辑。使用不同模式有两个主要原因 −\n\n*   在 `train`\
+  \ 模式下，`dropout` 会移除一定比例的值，这在验证或测试阶段是不应该发生的。\n*   对于 `training` 模式，我们会计算梯度并改变模型的参数值，但是。\n\
+  \n# PyTorch - 训练卷积网络\n在本章中，我们将重点关注从零开始创建一个卷积网络。\n\n### Step 1 \n创建一个带有参数的必要类。参数包括随机值。\n\
+  \n```python\nclass NeuralNetwork(nn.Module):\n    def __init__(self):\n        super(NeuralNetwork,\
+  \ self).__init__()\n        self.inputSize = 2\n        self.hiddenSize = 3\n  \
+  \      self.outputSize = 1\n        self.fc1 = nn.Linear(self.inputSize, self.hiddenSize)\n\
+  \        self.fc2 = nn.Linear(self.hiddenSize, self.outputSize)\n```\n\n### Step\
+  \ 2 \n创建一个带有 sigmoid 的前传播函数。\n\n```python\ndef forward(self, x):\n    l1 = F.relu(self.fc1(x))\n\
+  \    l2 = torch.sigmoid(self.fc2(l1))\n    return l2\n```\n\n### Step 3 \n按照如下所示创建训练和预测\
+  \ −\n\n```python\ndef save(model, path):\n    # 实现保存逻辑\n    torch.save(model.state_dict(),\
+  \ path)\n\ndef load(model, path):\n    # 实现加载逻辑\n    model.load_state_dict(torch.load(path))\n\
+  ```\n\n# PyTorch - 特征提取\n卷积网络包含一个主要特征。为了获得传统神经网络可视化的完美效果，需要执行以下步骤。\n\n### Step 1\
+  \ \n导入相应的模型以创建特征。\n\n```python\nimport torch\nimport torch.nn as nn\nfrom torchvision\
+  \ import models\n```\n\n### Step 2 \n创建一个特征提取器类。\n\n```python\ncnn = nn.Sequential(\n\
+  \    nn.Conv2d(1, 10, kernel_size=5),\n    nn.ReLU(),\n    nn.MaxPool2d(2),\n  \
+  \  nn.Conv2d(10, 20, kernel_size=5),\n    nn.ReLU(),\n    nn.MaxPool2d(2),\n   \
+  \ nn.Flatten(),\n    nn.Linear(20 * 4 * 4, 10)\n    nn.ReLU(),\n    nn.Linear(10,\
+  \ 2)\n)\n\nclass Feature_extractor(nn.Module):\n    def __init__(self):\n      \
+  \  super(Feature_extractor, self).__init__()\n        self.cnn = cnn\n    def forward(self,\
+  \ input):\n        return self.cnn(input)\n```\n\n# PyTorch - 卷积网络可视化\n在本章中，我们将重点通过卷积网络来实现数据可视化模型。\n\
+  \n### Step 1 \n导入对于传统神经网络可视化至重要的模块。\n\n```python\nimport os\nimport numpy as np\n\
+  import pandas as pd\nfrom scipy.misc import imread\nfrom sklearn.metrics import\
+  \ accuracy_score\nimport keras\nfrom keras.models import Sequential, Model\nfrom\
+  \ keras.layers import Dense, Dropout, Flatten, Activation, Input\nfrom keras.layers\
+  \ import Conv2D, MaxPooling2D\nimport torch\n```\n\n### Step 2 \n为了消除训练和测试数据的潜在随机性，按照下方代码调用相应的数据集\
+  \ −\n\n```python\nseed = 128\nrng = np.random.RandomState(seed)\ndata_dir = \"../../datasets/MNIST\"\
+  \ntrain = pd.read_csv('../../datasets/MNIST/train.csv')\ntest = pd.read_csv('../../datasets/MNIST/Test_fCbTej3.csv')\n\
+  img_name = rng.choice(train.filename)\nfilepath = os.path.join(data_dir, 'train',\
+  \ img_name)\nimg = imread(filepath, flatten=True)\n```\n\n### Step 3 \n使用下方代码以完美的方式绘制定义的训练和测试数据图像\
+  \ −\n\n```python\npylab.imshow(img, cmap='gray')\npylab.axis('off')\npylab.show()\n\
+  ```\n\n\n\n\n\n# PyTorch - 使用卷积进行序列处理\n\n在本章中，我们提出了一种替代方法，该方法在两个序列上依赖于单个 2D 卷积神经网络。我们网络的每一层都会根据目前为止生成的输出序列对源标记进行重新编码。因此，类似于注意力的属性贯穿整个网络。在这里，我们将关注如何利用数据集中包含的值通过特定的池化创建序列网络。此过程最适用于“图像识别模块”。\n\
+  \n![Sequential Network](img/image1636.jpg)\n\n使用以下步骤通过 PyTorch 使用卷积创建序列处理模型 −：\n\
+  \n### 步骤 1：导入使用卷积进行序列处理所需的必要模块。\n\n```python\nimport keras\nfrom keras. datasets\
+  \ import mnist\nfrom keras.models import Sequential\nfrom keras.layers import Dense\
+  \ , Dropout , Flatten\nfrom keras.layers import Conv2D , MaxPooling2D\nimport numpy\
+  \ as np\n```\n\n### 步骤 2：使用以下代码在相应序列中执行必要操作创建模式 −\n\n```python\nbatch_size = 128\n\
+  num_classes = 10\nepochs = 12\n### 输入图像维度\nimg_rows, img_cols = 28 , 28\n### 数据划分为训练集和测试集\n\
+  (x_train, y_train), (x_test, y_test) = mnist.load_data()\nx_train = x_train.reshape(\
+  \ 60000 , 28 , 28 , 1 )\nx_test = x_test.reshape( 10000 , 28 , 28 , 1 )\nprint (\
+  \ 'x_train shape:' , x_train.shape)\nprint ( x_train.shape[0], 'train samples' )\n\
+  print ( x_test.shape[0], 'test samples' )\ny_train = keras.utils.to_categorical(\
+  \ y_train, num_classes)\ny_test = keras.utils.to_categorical( y_test, num_classes)\n\
+  ```\n\n### 步骤 3：编译模型并在上述传统神经网络模型中拟合模式，如下所示 −\n\n```python\nmodel.compile(loss =\
+  \ keras.losses.categorical_crossentropy, optimizer = keras.optimizers.Adadelta(),\
+  \ metrics = ['accuracy'])\nmodel.fit(x_train, y_train, batch_size = batch_size,\
+  \ epochs = epochs, verbose = 1, validation_data = (x_test, y_test))\nscore = model.evaluate(x_test,\
+  \ y_test, verbose = 0)\nprint('Test loss:', score[0])\nprint('Test accuracy:', score[1])\n\
+  ```\n\n生成的输出如下 −\n\n![Neural network model](img/image1702.jpg)\n\n# PyTorch - 词嵌入\
+  \ (Word Embedding)\n\n在本章中我们将我们将著名的词嵌入模型 —— word2vec。Word2vec 模型用于通过一组相关模型的帮助生成词嵌入。Word2vec\
+  \ 模型用纯 C 代码实现，梯度是手动计算的。PyTorch 中 word2vec 模型的实现通过以下步骤解释 −\n\n### 步骤 1：按照下述实现词嵌入中的库\
+  \ −\n\n```python\nimport torch\nfrom torch.autograd import Variable\nimport torch.nn\
+  \ as nn\nimport torch.nn.functional as F\n```\n\n### 步骤 2：使用名为 word2vec 的类实现词嵌入的\
+  \ Skip Gram 模型。它包含了 `emb_size`、`emb_dimension`、`u_embedding`、`v_embedding` 等类型的属性。\n\
+  \n```python\nclass SkipGramModel (nn.Module):\n    def __init__(self, emb_size,\
+  \ emb_dimension):\n        super(SkipGramModel, self).__init__()\n        self.emb_size\
+  \ = emb_size\n        self.emb_dimension = emb_dimension\n        self.u_embeddings\
+  \ = nn.Embedding(emb_size, emb_dimension, sparse=True)\n        self.v_embeddings\
+  \ = nn.Embedding(emb_size, emb_dimension, sparse=True)\n        self.init_emb()\n\
+  \n    def init_emb(self):\n        initrange = 0.5 / self.emb_dimension\n      \
+  \  self.u_embeddings.weight.data.uniform_(-initrange, initrange)\n        self.v_embeddings.weight.data.uniform_(-0,\
+  \ 0)\n\n    def forward(self, pos_u, pos_v, neg_v):\n        emb_u = self.u_embeddings(pos_u)\n\
+  \        emb_v = self.v_embeddings(pos_v)\n        score = torch.mul(emb_u, emb_v).squeeze()\n\
+  \        score = torch.sum(score, dim=1)\n        score = F.logsigmoid(score)\n\
+  \        neg_emb_v = self.v_embeddings(neg_v)\n        neg_score = torch.bmm(neg_emb_v,\
+  \ emb_u.unsqueeze(2)).squeeze()\n        neg_score = F.logsigmoid(-1 * neg_score)\n\
+  \        return -1 * (torch.sum(score) + torch.sum(neg_score))\n\n    def save_embedding(self,\
+  \ id2word, file_name, use_cuda):\n        if use_cuda:\n            embedding =\
+  \ self.u_embeddings.weight.cpu().data.numpy()\n        else:\n            embedding\
+  \ = self.u_embeddings.weight.data.numpy()\n        fout = open(file_name, 'w')\n\
+  \        fout.write('%d %d\\n' % (len(id2word), self.emb_dimension))\n        for\
+  \ wid, w in id2word.items():\n            e = embedding[wid]\n            e = '\
+  \ '.join(map(lambda x: str(x), e))\n            fout.write('%s %s\\n' % (w, e))\n\
+  \n    def test():\n        model = SkipGramModel(100, 100)\n        id2word = dict()\n\
+  \        for i in range(100):\n            id2word[i] = str(i)\n        model.save_embedding(id2word)\n\
+  ```\n\n### 步骤 3：实现主方法以正确的方式显示词嵌入。\n\n```python\nif __name__ == '__main__':\n   \
+  \ test()\n```\n\n# PyTorch - 递归神经网络 (Recursive Neural Networks)\n\n深度神经网络在机器学习理解自然语言过程方面具有独特的突破性。观察到，大多数此类模型将语言视为单词或字符的平坦序列，并使用一种被称为循环神经网络或\
+  \ RNN 模型。许多研究人员得出结论，语言最好通过短语的层次树来理解。这种类型包含了考虑特定结构的递归神经网络。PyTorch 具有一种特定特性，可以让这些复杂的自然语言处理模型变得简单得多。\n\
+  \n## 递归神经网络的特征\n\n-   递归神经网络的创建方式允许在不同的图结构上应用相同的权重集。\n-   节点按照拓扑顺序进行遍历。\n-   这类网络通过自动微分的反向模式进行训练。\n\
+  -   自然语言处理包含了递归神经网络的一个特例。\n-   这种递归张量网络在树中包含了各种组合功能节点。\n\n递归神经网络的示例下所示 −\n\n![Recursive\
+  \ Neural Tensor Network](img/image1830.jpg)\n\n感谢！\n\n"

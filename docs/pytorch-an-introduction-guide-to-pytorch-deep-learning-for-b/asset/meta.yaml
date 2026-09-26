@@ -1,0 +1,190 @@
+name: PyTorch. An Introduction Guide to Pytorch Deep Learning for Beginners, 2019
+  Edition.
+slug: pytorch-an-introduction-guide-to-pytorch-deep-learning-for-b
+name_cn: PyTorch：初学者 PyTorch 深度学习入门指南，2019版
+toc:
+- - '#'
+  - PyTorch：初学者 PyTorch 深度学习入门指南，2019版
+- - '#'
+  - PyTorch 入学者教程
+- - '##'
+  - PyTorch 历史
+- - '##'
+  - 教程信息
+- - '###'
+  - 本教程面向的对象
+- - '###'
+  - 先决条件
+- - '#'
+  - PyTorch - 简介
+- - '##'
+  - 特性
+- - '###'
+  - 易用的接口
+- - '###'
+  - Python 使用
+- - '###'
+  - 计算图
+- - '#'
+  - PyTorch vs TensorFlow
+- - '##'
+  - PyTorch - 安装
+- - '###'
+  - 平台、操作系统、语言及其他前提条件
+- - '####'
+  - 使用 Pip 在 Windows 上安装
+- - '####'
+  - 使用 Conda 在 Windows 上安装
+- - '#'
+  - 神经网络的数学基石
+- - '###'
+  - 向量 (Vectors)
+- - '###'
+  - 标量 (Scalars)
+- - '###'
+  - 矩阵 (Matrices)
+- - '#'
+  - PyTorch - 神经网络基础
+- - '###'
+  - 前馈神经网络 (Feedforward Neural Networks)
+- - '###'
+  - 循环神经网络 (Recurrent Neural Networks)
+- - '###'
+  - 神经网络 (Neural Networks)
+- - '#'
+  - 机器学习的通用工作流
+- - '###'
+  - 机器学习 (Machine Learning)
+- - '###'
+  - 深度学习 (Deep Learning)
+- - '#'
+  - PyTorch - 机器学习 vs 深度学习
+- - '###'
+  - 数据量
+- - '###'
+  - 硬件依赖
+- - '###'
+  - 特征工程 (Feature Engineering)
+- - '#'
+  - PyTorch - 实现第一个神经网络
+- - '###'
+  - 步骤 1：导入 PyTorch 库
+- - '###'
+  - 步骤 2：定义层和批大小
+- - '###'
+  - 分别定义输入大小、隐藏层大小、输出大小和批大小
+- - '###'
+  - 步骤 3：创建伪数据
+- - '###'
+  - 创建伪输入和目标张量（数据）
+- - '###'
+  - 步骤 4：创建顺序模型
+- - '###'
+  - 创建一个模型
+- - '###'
+  - 步骤 5：构建损失函数和优化器
+- - '###'
+  - 构建损失函数准则
+- - '###'
+  - 构建优化器（在此情况下为随机梯度下降）
+- - '###'
+  - 步骤 6：实现梯度下降
+- - '###'
+  - 梯度下降
+- - '###'
+  - 步骤 7：输出输出
+- - '#'
+  - PyTorch - 术语
+- - '##'
+  - PyTorch NumPy
+- - '###'
+  - 变量与 Autograd
+- - '###'
+  - 动态图
+- - '###'
+  - optim 包
+- - '###'
+  - 多进程
+- - '#'
+  - PyTorch - 加载数据
+- - '###'
+  - Dataset
+- - '###'
+  - DataLoader
+- - '###'
+  - 示例：加载 CSV 文件
+- - '#'
+  - 'PyTorch - 线性回归 '
+- - '###'
+  - 第 1 步
+- - '###'
+  - 2 步
+- - '###'
+  - 第 3 步
+- - '###'
+  - 局部感受野 (Local Respective Fields)
+- - '###'
+  - 卷积 (Convolution)
+- - '###'
+  - 池化 (Pooling)
+- - '###'
+  - PyTorch 的实现 (Implementation of PyTorch)
+- - '###'
+  - PyTorch - 循环神经网络 (Recurrent Neural Network)
+- - '###'
+  - PyTorch - 数据集 (Datasets)
+- - '#'
+  - MNIST
+- - '#'
+  - COCO
+- - '#'
+  - PyTorch - 卷积网络简介
+- - '#'
+  - 训练模型
+- - '#'
+  - PyTorch - 训练卷积网络
+- - '###'
+  - 'Step 1 '
+- - '###'
+  - 'Step 2 '
+- - '###'
+  - 'Step 3 '
+- - '#'
+  - PyTorch - 特征提取
+- - '###'
+  - 'Step 1 '
+- - '###'
+  - 'Step 2 '
+- - '#'
+  - PyTorch - 卷积网络可视化
+- - '###'
+  - 'Step 1 '
+- - '###'
+  - 'Step 2 '
+- - '###'
+  - 'Step 3 '
+- - '#'
+  - PyTorch - 使用卷积进行序列处理
+- - '###'
+  - 步骤 1：导入使用卷积进行序列处理所需的必要模块。
+- - '###'
+  - 步骤 2：使用以下代码在相应序列中执行必要操作创建模式 −
+- - '###'
+  - 输入图像维度
+- - '###'
+  - 数据划分为训练集和测试集
+- - '###'
+  - 步骤 3：编译模型并在上述传统神经网络模型中拟合模式，如下所示 −
+- - '#'
+  - PyTorch - 词嵌入 (Word Embedding)
+- - '###'
+  - 步骤 1：按照下述实现词嵌入中的库 −
+- - '###'
+  - 步骤 2：使用名为 word2vec 的类实现词嵌入的 Skip Gram 模型。它包含了 `emb_size`、`emb_dimension`、`u_embedding`、`v_embedding`
+    等类型的属性。
+- - '###'
+  - 步骤 3：实现主方法以正确的方式显示词嵌入。
+- - '#'
+  - PyTorch - 递归神经网络 (Recursive Neural Networks)
+- - '##'
+  - 递归神经网络的特征
