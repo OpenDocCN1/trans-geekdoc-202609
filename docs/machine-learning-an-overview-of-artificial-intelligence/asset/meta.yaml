@@ -1,0 +1,62 @@
+name: Machine Learning： An Overview of Artificial Intelligence
+slug: machine-learning-an-overview-of-artificial-intelligence
+name_cn: 机器学习：人工智能概述
+toc:
+- - '#'
+  - 机器学习：人工智能概述
+- - '#'
+  - 关于 Charles River Editors
+- - '##'
+  - 引言
+- - '###'
+  - 机器学习
+- - '###'
+  - 搜索算法与目标树
+- - '###'
+  - 游戏树
+- - '####'
+  - 极小极大算法 (Minimax)
+- - '####'
+  - Alpha-Beta 剪枝 (Alpha-Beta Pruning)
+- - '####'
+  - 期望极大算法 (Expectimax)
+- - '####'
+  - 回溯搜索
+- - '####'
+  - 优化的启发式方法
+- - '####'
+  - 前向检查 (Forward Checking)
+- - '####'
+  - 结论
+- - '###'
+  - 最近邻 (Nearest Neighbors)
+- - '##'
+  - 表 1：常见距离指标
+- - '##'
+  - 表 2：归一化示例
+- - '##'
+  - 表 3：NN 示例
+- - '##'
+  - 回归指标
+- - '##'
+  - 决策树与随机森林
+- - '##'
+  - 神经网络
+- - '###'
+  - 反向传播与训练
+- - '###'
+  - 损失优化与超参数
+- - '###'
+  - 梯度下降
+- - '##'
+  - 遗传算法
+- - '##'
+  - 支持向量机
+- - '##'
+  - 提升（Boosting）
+- - '##'
+  - 结论
+- - '#'
+  - Charles River Editors 的免费书籍
+- - '#'
+  - Charles River Editors 的折扣书籍
