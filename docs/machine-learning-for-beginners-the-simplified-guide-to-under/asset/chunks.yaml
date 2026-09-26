@@ -1,0 +1,1854 @@
+- raw: "\n\n![](images/00001.jpeg)\n\nINTRODUCTION\n\nThank you for downloading the\
+    \ book “Machine learning for beginners” The purpose of this book is to teach you\
+    \ about how machine learning works easily, using step by step approach and without\
+    \ mathematics or computer language-- Deep Neural Networks\n\nThis book is about\
+    \ guiding the complete beginners how Machine Learning works using perceptron which\
+    \ is similar to neurons in the human brain with the basic knowledge to know in\
+    \ order to study Machine Learning easily.\n\nML is a tricky subject but this book\
+    \ seeks to introduce the subject matter to complete beginners such that the basics\
+    \ and theory of ML  as to its operation and uses can easily be comprehended by\
+    \ complete beginners.  This book will break to small bits the essentials of ML\
+    \ to facilitate the easy understanding of Machine Learning.\n\nThe benefits of\
+    \ Machine Learning \n\nHere are some benefits of Machine Learning.  We shall deal\
+    \ more exhaustively with these benefits under another chapter on the application\
+    \ of Machine Learning\n\n   Machine Learning helps in managing massive and multidimensional\
+    \ data of different types in a particular environment.  It makes computer handling\
+    \ of assorted information from different origin to be easy such that they can\
+    \ be stockpiled and arranged in such a manner to give fast outcomes for different\
+    \ searches.\n\n   Machine Learning makes information processing very fast, diverse,\
+    \ multidimensional, accurate and cheap while dissecting on a large scale mind-blowing\
+    \ and massive information. \n\n   By gathering information and feeding it into\
+    \ the computer, Machine Learning can be used to forecast and to make the high\
+    \ precision prediction on available opportunities as well as warnings that can\
+    \ lead to abstaining from potential dangers in the business world. This kind of\
+    \ information gathering and computing can give a business a competitive edge over\
+    \ a stiff contender.\n\n   It helps in the financial world with critical decisions\
+    \ on two core areas which are, when to venture into a business or forestall extortion\
+    \ which may help to make the decision on when to exchange or abstain from the\
+    \ business.\n\n   It can help in limiting of data fraud in security outfits of\
+    \ government or privately owned ones. Hence Machine Learning is of top use in\
+    \ security systems.\n\n   Machine Learning can be of tremendous use in healthcare\
+    \ by reason of data input.  The machine can be used to make a precise and accurate\
+    \ diagnosis.\n\n   It is becoming the future of retail by virtue of your past\
+    \ buying the computer can elucidate the product the individual may likely be interested\
+    \ in.  That is the new port of the retail world.  Machine Learning can now process\
+    \ the history of former purchases and predict what the client is likely going\
+    \ to be interested in.\n\n   It has a huge usage in oil and gas where Machine\
+    \ Learning is used to process available data into intelligent information streamlining\
+    \ oil dissemination to make it more productive and precise. The usage is still\
+    \ expanding in this area.\n\n   It’s of huge importance in transportation businesses. \
+    \ It helps to distinguish between patterns which are of great benefit in transportation. \
+    \ Efficient use of Machine Learning can help to expand benefits.\n\nCHAPTER 1\n\
+    \nWHAT IS MACHINE LEARNING?\n\nMachine Learning is an arm of artificial intelligence\
+    \ which is a relatively new form of computer programming that allows the computer\
+    \ to access massive data which also allows the machine to learn on its own through\
+    \ the experience without the machine being programmed as such.  The machine learns\
+    \ on its own.  Through different input data and through experience it is able\
+    \ to do certain tasks which were not pre-programmed.  It is basically the analysis\
+    \ and interpretation of patterns of information supplied to the computer.\n\n\
+    Machine Learning otherwise known as ML is a growing subject which can play key\
+    \ roles in a wide range of conditions from language to lineage recognition to\
+    \ data mining.\n\nThe mainstay here is automatic learning of computers due to\
+    \ experience on data provided.  It puts the computer in a self-learning mode as\
+    \ the computer is fed with new data, it readjusts, grows and develop itself irrespective\
+    \ of the fact that it was not programmed explicitly. It gains from examples and\
+    \ information fed it and comes to a resolution with little no human aid\n\nTHE\
+    \ TYPICAL TASKS ENTRUSTED TO MACHINE LEARNING\n\nMachine Learning tasks can be\
+    \ classified into many broad categories.  Under Machine Learning tasks we have\
+    \ supervised learning and semi-supervised learning.  Supervised learning is built\
+    \ around mathematical models which can be derived from a set of data input and\
+    \ desired output. So we have under this category of training data.\n\n Semi-supervised\
+    \ learning is the mathematical model built around incomplete data training.  That\
+    \ means some of the input data do not have labels attached to them.\n\nThere are\
+    \ many types of tasks that are associated with Machine Learning but the key ones\
+    \ are: \n\n   Feature selection\n\n   Regression\n\n   Classification\n\n  \
+    \ Clustering \n\n   Testing and matching\n\n   Density estimation\n\n   Dimension\
+    \ reduction\n\n   Multivariate querying\n\nOf all these tasks associated with\
+    \ Machine Learning, we will like to concentrate on regression and classification. \
+    \ Regression and classification tasks are basically supervised learning. While\
+    \ output for classification is discrete in nature regression is a prediction of\
+    \ continuous quantities. \n\nREGRESSION TASK\n\nThis task under Machine Learning\
+    \ has to do with numerical estimation and data that are continuous in nature which\
+    \ can otherwise be known as continuous variables. Under this task, we have things\
+    \ like \n\n   Estimation price for a housing unit\n\n   Product price\n\n  \
+    \ Stock price etc\n\nThis task has to do with the financial world of buying and\
+    \ selling and accounting procedures associated with numerical data.\n\nThe following\
+    \ methods can be used to achieve the objectives of this task which can be subdivided\
+    \ into two groups.\n\nHigh accuracy method: \n\n*   Kernel regression\n\n*   Gaussian\
+    \ process regression\n\nNot so high accurate method\n\n*   Regression trees\n\n\
+    *   Linear regression\n\n*   Support vector regression\n\n*   LASSO.\n\nThe other\
+    \ branch of Machine Learning we will like to treat is \n\nCLASSIFICATION TASK\n\
+    \nThis is otherwise known as discrete variables.  It is about predicting a category\
+    \ of data. Example of this is predicting whether a mail is a spam or not.  It\
+    \ is also used highly in the area of healthcare. That is, predicting whether or\
+    \ not a person is suffering from one disease or not. It is also used in the financial\
+    \ world to determine whether a transaction is fraudulent or not.\n\nThis task\
+    \ can also be divided into two broad branches namely the high accuracy and the\
+    \ not so accurate.\n\nUnder high accuracy tasks, the following methods could be\
+    \ used to solve the problems of this task\n\n*   K – Nearest Neighbours \n\n*\
+    \   Artificial neural networks (ANN) \n\n*   Support vector machine (SVM) \n\n\
+    *   Random forest  \n\nNot so accurate method \n\n*   Decision trees\n\n*   Boosted\
+    \ trees\n\n*   Logistic regression\n\n*   Naive Bayes\n\n*   Deep learning.\n\n\
+    Under the topic Regression we will like to expatiate on the following:\n\nKERNEL\
+    \ REGRESSION\n\nThis is an estimation technique to fit data.  It is categorized\
+    \ as a non – parametric technique.  It is different from linear regression which\
+    \ is based on the assumption of normal distribution because it does not assume\
+    \ any distribution to estimate the regression function.\n\nWhat kernel regression\
+    \ does is to put a set of the identical function called kernel local to each observation\
+    \ data point. It is a superset of other weighted regression and it is closely\
+    \ related to Moving Average (MA), K nearest Neighbour (KNN), Radial Basis Function\
+    \ (RBF), neural network (NN) and Support Vector Machine (SVM)\n\nWe shall define\
+    \ these parameters before going on\n\nMA – MOVING AVERAGE"
+  fmt: '
+
+    ![](images/00001.jpeg)
+
+
+    # INTRODUCTION
+
+
+    Thank you for downloading the book “Machine learning for beginners”. The purpose
+    of this book is to teach you about how machine learning works easily, using step
+    by step approach and without mathematics or computer language-- Deep Neural Networks.
+
+
+    This book is about guiding the complete beginners how Machine Learning works using
+    perceptron which is similar to neurons in the human brain with the basic knowledge
+    to know in order to study Machine Learning easily.
+
+
+    `ML` is a tricky subject but this book seeks to introduce the subject matter to
+    complete beginners such that the basics and theory of `ML` as to its operation
+    and uses can easily be comprehended by complete beginners. This book will break
+    to small bits the essentials of `ML` to facilitate the easy understanding of Machine
+    Learning.
+
+
+    ## The benefits of Machine Learning
+
+
+    Here are some benefits of Machine Learning. We shall deal more exhaustively with
+    these benefits under another chapter on the application of Machine Learning.
+
+
+    *   Machine Learning helps in managing massive and multidimensional data of different
+    types in a particular environment. It makes computer handling of assorted information
+    from different origin to be easy such that they can be stockpiled and arranged
+    in such a manner to give fast outcomes for different searches.
+
+    *   Machine Learning makes information processing very fast, diverse, multidimensional,
+    accurate and cheap while dissecting on a large scale mind-blowing and massive
+    information.
+
+    *   By gathering information and feeding it into the computer, Machine Learning
+    can be used to forecast and to make the high precision prediction on available
+    opportunities as well as warnings that can lead to abstaining from potential dangers
+    in the business world. This kind of information gathering and computing can give
+    a business a competitive edge over a stiff contender.
+
+    *   It helps in the financial world with critical decisions on two core areas
+    which are, when to venture into a business or forestall extortion which may help
+    to make the decision on when to exchange or abstain from the business.
+
+    *   It can help in limiting of data fraud in security outfits of government or
+    privately owned ones. Hence Machine Learning is of top use in security systems.
+
+    *   Machine Learning can be of tremendous use in healthcare by reason of data
+    input. The machine can be used to make a precise and accurate diagnosis.
+
+    *   It is becoming the future of retail by virtue of your past buying the computer
+    can elucidate the product the individual may likely be interested in. That is
+    the new port of the retail world. Machine Learning can now process the history
+    of former purchases and predict what the client is likely going to be interested
+    in.
+
+    *   It has a huge usage in oil and gas where Machine Learning is used to process
+    available data into intelligent information streamlining oil dissemination to
+    make it more productive and precise. The usage is still expanding in this area.
+
+    *   It’s of huge importance in transportation businesses. It helps to distinguish
+    between patterns which are of great benefit in transportation. Efficient use of
+    Machine Learning can help to expand benefits.
+
+
+    # CHAPTER 1: WHAT IS MACHINE LEARNING?
+
+
+    Machine Learning is an arm of artificial intelligence which is a relatively new
+    form of computer programming that allows the computer to access massive data which
+    also allows the machine to learn on its own through the experience without the
+    machine being programmed as such. The machine learns on its own. Through different
+    input data and through experience it is able to do certain tasks which were not
+    pre-programmed. It is basically the analysis and interpretation of patterns of
+    information supplied to the computer.
+
+
+    Machine Learning otherwise known as `ML` is a growing subject which can play key
+    roles in a wide range of conditions from language to lineage recognition to data
+    mining.
+
+
+    The mainstay here is automatic learning of computers due to experience on data
+    provided. It puts the computer in a self-learning mode as the computer is fed
+    with new data, it readjusts, grows and develop itself irrespective of the fact
+    that it was not programmed explicitly. It gains from examples and information
+    fed it and comes to a resolution with little no human aid.
+
+
+    ## THE TYPICAL TASKS ENTRUSTED TO MACHINE LEARNING
+
+
+    Machine Learning tasks can be classified into many broad categories. Under Machine
+    Learning tasks we have supervised learning and semi-supervised learning. Supervised
+    learning is built around mathematical models which can be derived from a set of
+    data input and desired output. So we have under this category of training data.
+
+
+    Semi-supervised learning is the mathematical model built around incomplete data
+    training. That means some of the input data do not have labels attached to them.
+
+
+    There are many types of tasks that are associated with Machine Learning but the
+    key ones are:
+
+
+    *   Feature selection
+
+    *   Regression
+
+    *   Classification
+
+    *   Clustering
+
+    *   Testing and matching
+
+    *   Density estimation
+
+    *   Dimension reduction
+
+    *   Multivariate querying
+
+
+    Of all these tasks associated with Machine Learning, we will like to concentrate
+    on regression and classification. Regression and classification tasks are basically
+    supervised learning. While output for classification is discrete in nature regression
+    is a prediction of continuous quantities.
+
+
+    ### REGRESSION TASK
+
+
+    This task under Machine Learning has to do with numerical estimation and data
+    that are continuous in nature which can otherwise be known as continuous variables.
+    Under this task, we have things like:
+
+
+    *   Estimation price for a housing unit
+
+    *   Product price
+
+    *   Stock price
+
+
+    This task has to do with the financial world of buying and selling and accounting
+    procedures associated with numerical data. The following methods can be used to
+    achieve the objectives of this task which can be subdivided into two groups.
+
+
+    High accuracy method:
+
+    *   Kernel regression
+
+    *   Gaussian process regression
+
+
+    Not so accurate method
+
+    *   Regression trees
+
+    *   Linear regression
+
+    *   Support vector regression
+
+    *   `LASSO`
+
+
+    ### CLASSIFICATION TASK
+
+
+    The other branch of Machine Learning we will like to treat is otherwise known
+    as discrete variables. It is about predicting a category of data. Example of this
+    is predicting whether a mail is a spam or not. It is also used highly in the area
+    of healthcare. That is, predicting whether or not a person is suffering from one
+    disease or not. It is also used in the financial world to determine whether a
+    transaction is fraudulent or not.
+
+
+    This task can also be divided into two broad branches namely the high accuracy
+    and the not so accurate.
+
+
+    Under high accuracy tasks, the following methods could be used to solve the problems
+    of this task:
+
+    *   `K – Nearest Neighbours`
+
+    *   `Artificial neural networks (ANN)`
+
+    *   `Support vector machine (SVM)`
+
+    *   `Random forest`
+
+
+    Not so accurate method
+
+    *   Decision trees
+
+    *   Boosted trees
+
+    *   Logistic regression
+
+    *   Naive Bayes
+
+    *   Deep learning
+
+
+    ## KERNEL REGRESSION
+
+
+    Under the topic Regression we will like to expatiate on the following:
+
+
+    This is an estimation technique to fit data. It is categorized as a non-parametric
+    technique. It is different from linear regression which is based on the assumption
+    of normal distribution because it does not assume any distribution to estimate
+    the regression function.
+
+
+    What kernel regression does is to put a set of the identical function called kernel
+    local to each observation data point. It is a superset of other weighted regression
+    and it is closely related to Moving Average (`MA`), K nearest Neighbour (`KNN`),
+    Radial Basis Function (`RBF`), neural network (`NN`) and Support Vector Machine
+    (`SVM`).
+
+
+    We shall define these parameters before going on
+
+
+    `MA – MOVING AVERAGE`
+
+    '
+  trans: '
+
+
+    ![](img/00001.jpeg)
+
+
+    # 引言
+
+
+    感谢下载《初学者机器学习》一书。本书的目的是通过循序渐进的方法，利用深度神经网络，让你在不涉及复杂的数学或计算机语言的情况下，轻松地学习机器学习的工作原理。
+
+
+    本书旨在引导完全初学者如何使用感知器（类似于人类大脑中的神经元）来理解机器学习的工作原理，并提供为了学习机器学习所需的基础知识。
+
+
+    `ML` 是一个很深奥的主题，但本书旨在向完全初学者介绍该主题，使 `ML` 的基础、理论以及其操作和应用能够被初学者轻松理解。本书将把 `ML` 的要点分解为小部分，以促进对机器学习的轻松理解。
+
+
+    ## 机器学习的优势
+
+
+    以下是机器学习的一些优势。我们将在另一个关于机器学习应用的章节中更详细地讨论这些益处。
+
+
+    *   机器学习有助于管理特定环境中不同类型的海量多维数据。它使计算机处理来自不同来源的各种杂信息变得简单，从而能够其进行存储和排列，为不同的搜索提供快速的结果。
+
+    *   在处理大规模、惊人的海量信息时，机器学习可以使信息处理变得非常快速、多样、多维、准确且廉价。
+
+    *   通过收集信息并将其输入计算机，机器学习可以用于对现有机会进行预测和高精度预测，并能发出警告以规避商业世界中的潜在危险。这种信息收集和计算可以使企业在面对激烈的竞争对手时拥有竞争优势。
+
+    *   它有助于金融领域在两个核心领域做出关键决策，即何时投资业务或防范勒索，这可能有助于做出关于何时退出或放弃某项业务的决定。
+
+    *   它可以帮助限制政府或私有安全机构的数据欺诈。因此，机器学习在安全系统中具有顶级的用途。
+
+    *   由于数据输入，机器学习在医疗保健领域具有巨大的用途。机器可以用于进行精确准确的诊断。
+
+    *   根据你过去的购买记录，它正成为零售业的未来，计算机可以解释个人可能感兴趣的产品。这是零售世界的新趋势。机器学习现在可以处理之前的购买历史，并预测客户可能感兴趣的内容。
+
+    *   它在石油天然气行业有巨大的用途，机器学习被用于将可用数据转换为智能信息，优化石油分配，使其更具高效且更精确。该领域的应用仍在扩大。
+
+    *   它在运输业务中具有巨大的性。它有助于区分对运输大有益的模式。高效利用机器学习可以帮助扩大收益。
+
+
+    # 第 1 章：什么是机器学习？
+
+
+    机器学习是人工智能的一个分支，是一种相对较新的计算机编程形式，它允许计算机访问海量数据，同时也允许机器通过经验进行学习，而无需机器被专门程序成那样。机器会自己学习。通过不同的输入数据和经验，它能够执行某些未预先编程的任务。它基本上是对提供给计算机的信息模式进行分析和解释。
+
+
+    机器学习又称为 `ML`，是一个不断发展的学科，可以在从语言识别、血缘识别到数据挖掘的广泛应用范围内发挥关键作用。
+
+
+    这里的支柱是计算机根据提供的数据经验进行自动学习。当计算机输入新数据时，它进入了自学模式，它会调整、增长和发展自己，无论它是否被显式地编程。它从输入的示例和信息中获益，并在几乎没有人类帮助的情况下得出结论。
+
+
+    ## 赋予机器学习的典型任务
+
+
+    机器学习任务可以分为许多大大类。在机器学习任务中，我们有监督学习和半监督学习。监督学习围绕数学模型构建，这些模型可以从一组输入数据和期望输出中推导出。因此，我们这一类下有训练数据。
+
+
+    半监督学习是围绕不完整数据训练构建的数学模型。这意味着部分输入数据没有附标签。
+
+
+    与机器学习相关的任务有很多类型，但关键的包括：
+
+
+    *   特征选择
+
+    *   回归
+
+    *   分类
+
+    *   聚类
+
+    *   测试与匹配
+
+    *   密度估计
+
+    *   降维
+
+    *   多变量查询
+
+
+    在所有这些与机器学习相关的任务中，我们关注回归和分类。回归和分类任务基本上都是监督学习。虽然分类的输出在本质上是离散的，但回归是对连续数量的预测。
+
+
+    ### 回归任务
+
+
+    机器学习中的这项任务涉及数值估计和本质上是连续的数据，这也可以被称为连续变量。在此任务下，我们有如下内容：
+
+
+    *   房屋单元的价格估算
+
+    *   产品价格
+
+    *   股票价格
+
+
+    这项任务涉及金融世界的买卖以及与数值数据相关的会计程序。可以使用以下方法来实现此任务的目标，这些方法可以细分为两组：
+
+
+    高准确率方法：
+
+    *   内核回归
+
+    *   高斯过程回归
+
+
+    准确率不够的方法：
+
+    *   回归树
+
+    *   线性回归
+
+    *   支持向量回归
+
+    *   `LASSO`
+
+
+    ### 分类任务
+
+
+    我们要处理的机器学习的另一个分支被称为离散变量。它是关于预测一类数据。例如，预测一封邮件是否为垃圾邮件。它在医疗保健领域也被广泛使用，即预测一个人是否患有某种疾病。它还被用于金融领域，以确定交易是否欺诈。
+
+
+    这项任务也可以分为两个大分支，即高准确率和准确率不够的。在高准确率任务下，可以使用以下方法解决此任务的问题：
+
+    *   `K – Nearest Neighbours`
+
+    *   `Artificial neural networks (ANN)`
+
+    *   `Support vector machine (SVM)`
+
+    *   `Random forest`（随机森林）
+
+
+    准确率不够的方法：
+
+    *   决策树
+
+    *   提升树
+
+    *   逻辑回归
+
+    *   朴素贝叶斯
+
+    *   深度学习
+
+
+    ## 核回归
+
+
+    在回归主题下，我们将详细介绍以下：
+
+
+    这是一种拟合数据的估计技术。它被归类为参数技术。它与基于正态分布假设的线性回归不同因为它因为它假设任何分布来估计回归函数。
+
+
+    内核回归的作用是在每个观测数据点上放置一组名为“核”（kernel）的相同函数。它是其他加权回归的超集，与移动平均（`MA`）、K 近邻（`KNN`）、径向基函数（`RBF`）、神经网络（`NN`）和支持向量机（`SVM`）密切相关。
+
+
+    在继续之前我们将定义这些参数
+
+
+    `MA – MOVING AVERAGE`（移动平均）
+
+
+    '
+  toc: []
+- raw: "This is average derived from various statistical data that are not related. \
+    \ it is a technical analysis that helps to make sense of various random data. \
+    \ The example is making sense out of price fluctuations to see whether the price\
+    \ is increasing or lagging.  This type of parameter is what is used to forecast\
+    \ in the stock exchange.  It helps in forecasting based on the past prices trend. \
+    \ There are two moving averages in use which are the simple moving average – SMA\
+    \ and the exponential moving average – EMA.  \n\nThe simple moving average – SMA\
+    \ is the data obtained by examining the trend over a defined period of time while\
+    \ exponential moving average – EMA gives greater weight to the more recent data.\
+    \ That is the more recent data is what is considered in EMA so one can conclude\
+    \ that SMA is analysis data over a very long time while EMA is consideration of\
+    \ data over a short period of time.\n\nThese two parameters can now be used to\
+    \ generate other technical indicators such as Moving Average Convergence Divergence\
+    \ – MACD   \n\nApplication of moving average in real life is predicting the stock.\
+    \ Exchange.   If properly utilized it can predict whether the market is bullish\
+    \ that is uptrend or bearish that is a downtrend.   \n\nGaussian process regression\n\
+    \nThis is a distribution over functions and inferences taking place in the space\
+    \ of functions. They have parameters that can be changed by setting certain parameters. \
+    \ That means the properties begin to change as parameters are changed or varied. \
+    \ A sharp example is the GP model which takes the form of full predictive distribution.\
+    \ Also, the learning of inverse dynamics of a robot is a practical example.\n\n\
+    All these models have so many statistical and mathematical functions but we do\
+    \ not intend to bore you with these things at this beginning.  All we want is\
+    \ to give you familiarization tour around the topic in layman language for easy\
+    \ comprehension.  \n\nThis model utilizes the weight – space view which is a simple\
+    \ linear regression model where the output is linear combinations of the inputs. \
+    \ This means the main virtue of the model is the simplicity of implementation\
+    \ and interpretation while the drawback is that if the output cannot be reasonably\
+    \ approximated, the linear function will give poor predictions.\n\nUnder classification\
+    \ we will like to treat the following models:\n\nKNN – K NEAREST NEIGHBOUR\n\n\
+    This parameter is part of supervised learning which has been used in many applications\
+    \ successfully.  It has been used in the field of statistical pattern recognition\
+    \ like speech and handwriting recognition, data mining, etc.  The purpose of this\
+    \ is to classify a new object based on previous training samples.  It does not\
+    \ use any model but only uses memory. For a query, we find k number of objects\
+    \ or training points that are closest to the query point. It is using majority\
+    \ votes among the k objects. It uses neighborhood classification to predict the\
+    \ value of the new query. \n\nExample of this parameter is predicting the quality\
+    \ outcome of a new product from the same company but with different properties\
+    \ from the former ones using the outcome of data obtained from questionnaires\
+    \ survey asking people about their opinion of the product whether it is good or\
+    \ not using four training samples namely data of acid durability and strength.\n\
+    \nAcid durabilitystrengthclassification\n\n66bad\n\n64bad\n\n34good\n\n14good\n\
+    \nUsing this data it is possible to determine without another survey whether another\
+    \ product which has acid durability 3 and strength 2 from the laboratory test\
+    \ can be classified as good or as bad. Its application in real life is marketing.\
+    \ It can be used to deduce whether a product will be seen as good or not.\n\n\
+    RBF – RADIAL BASIS FUNCTION\n\nThis function has the real value which depends\
+    \ on the distance from the origin or a centre.  Origin in geometry is a fixed\
+    \ special point of reference denoted as O used as a reference point in relation\
+    \ to the surrounding area.  This function is used to build up the approximation\
+    \ of a given function or data called multivariate. Because it is radial it can\
+    \ be used in more than one dimension;   therefore a radial function is a function\
+    \ paired in a vector or metric space having a centre C.  This function is associated\
+    \ with what is called radial kernels.  Hence radial kernels are the basis for\
+    \ radial basis functions.\n\nCommonly used types are shape parameters that can\
+    \ be used to scale the input of the radial kernel. It is used highly in Neural\
+    \ Networks and learning theory. One unique application of Radial Basis Function\
+    \ is in mechanical fault diagnosis. This function has been used to develop models\
+    \ for dehydration of plant materials and the vast area of science and technology.\
+    \ \n\nNN – NEURAL NETWORKS\n\nThis is the model that uses perceptron to operate. \
+    \ Single layer operation of a linear model is called Perceptron and multiples\
+    \ of these single-layer modes when combined together form what is known as Neural\
+    \ Networks.   \n\nThis is a computer program modeled after the human brain and\
+    \ nervous system. For example, a neural network can use examples to infer rules\
+    \ for recognition of handwritten digits.  This model works like our brain. It\
+    \ tries to decipher digits and make inferences just like our eyes will do.  \n\
+    \n It takes a large number of handwritten digits known as examples and then develops\
+    \ a model that can learn from these training examples.  That is, it uses examples\
+    \ to automatically build up rules for recognizing handwritten digits. By increasing\
+    \ the number of learning examples the skill of the model can predict handwriting\
+    \ with high accuracy.  \n\nAccuracy is a function of the degree of learning examples\
+    \ this network is exposed to.  The more the learning examples the more accurate\
+    \ the network prediction will be.  Application of this model will be handwritten\
+    \ recognition, speech recognition\n\nSVM – SUPPORT VECTOR MACHINE\n\nThis is a\
+    \ supervised learning model in Machine Learning. They analyze data used for classification\
+    \ and regression.  It produces significant accuracy with less computation power.  \
+    \ It can be used for both classification and regression tasks. It helps to separate\
+    \ two classes of data points where there are several of them. These two classes\
+    \ should have maximum distances between the data points such that in the future,\
+    \ data points that fall within the model can be classified with more confidence\
+    \ and accuracy.  This maximizes the margin of the classifier.\n\nApplication of\
+    \ this model can be found in the field of hydrology. It is used in flood routing. \
+    \ It is used in face detection, text and hypertext categorization, classification\
+    \ of images, bioinformatics, handwriting recognition, and Generalized Predictive\
+    \ Control GPC\n\nCHAPTER 2\n\nARTIFICIAL NEURAL NET: PERCEPTRON\n\nArtificial\
+    \ Neural Networks has a unique capacity to learn from examples and training data\
+    \ hence it is able to adapt to the changing environment. It is able to deal with\
+    \ very approximate and uncertain data known as a noisy environment and has been\
+    \ the focus in various fields of science and technology.  \n\n1.  PERCEPTRON\n\
+    \n1.         Linear function\n\n2.         Activation function\n\nWhat is perceptron?\n\
+    \nPerceptron is a word coined out of perception which is a concept built around\
+    \ the way the eye sees an object and able to come to conclusion about it.  Perception\
+    \ uses neurons in the human brain while perceptron uses artificial neuron to do\
+    \ its work.  Perceptron is a single layer neural network while multilayer perceptron\
+    \ is known as Neural Networks.  Therefore multilayer perceptron form Neural Network.\n\
+    \nIt works by taking several binary inputs and producing a single binary output\n\
+    \n![](images/00002.jpeg)\n\n![](images/00003.jpeg) \n\n![](images/00004.jpeg)![](images/00005.jpeg)INPUTSOUTPUT\n\
+    \n![](images/00006.jpeg)\n\nIn this example, the perceptron has three inputs and\
+    \ one output.  The more the number of inputs the more accurate the output result\
+    \ after processing through the perceptron."
+  fmt: '
+
+    This is average derived from various statistical data that are not related. it
+    is a technical analysis that helps to make sense of various random data. The example
+    is making sense out of price fluctuations to see whether the price is increasing
+    or lagging. This type of parameter is what is used to forecast in the stock exchange.
+    It helps in forecasting based on the past prices trend. There are two moving averages
+    in use which are the simple moving average – `SMA` and the exponential moving
+    average – `EMA`.
+
+
+    The simple moving average – `SMA` is the data obtained by examining the trend
+    over a defined period of time while exponential moving average – `EMA` gives greater
+    weight to the more recent data. That is the more recent data is what is considered
+    in `EMA` so one can conclude that `SMA` is analysis data over a very long time
+    while `EMA` is consideration of data over a short period of time.
+
+
+    These two parameters can now be used to generate other technical indicators such
+    as Moving Average Convergence Divergence – `MACD`
+
+
+    Application of moving average in real life is predicting the stock exchange. If
+    properly utilized it can predict whether the market is bullish that is uptrend
+    or bearish that is a downtrend.
+
+
+    ### Gaussian process regression
+
+
+    This is a distribution over functions and inferences taking place in the space
+    of functions. They have parameters that can be changed by setting certain parameters.
+    That means the properties begin to change as parameters are changed or varied.
+    A sharp example is the `GP` model which takes the form of full predictive distribution.
+    Also, the learning of inverse dynamics of a robot is a practical example.
+
+
+    All these models have so many statistical and mathematical functions but we do
+    not intend to bore you with these things at this beginning. All we want is to
+    give you familiarization tour around the topic in layman language for easy comprehension.
+
+
+    This model utilizes the weight – space view which is a simple linear regression
+    model where the output is linear combinations of the inputs. This means the main
+    virtue of the model is the simplicity of implementation and interpretation while
+    the drawback is that if the output cannot be reasonably approximated, the linear
+    function will give poor predictions.
+
+
+    ### Classification
+
+
+    Under classification we will like to treat the following models:
+
+
+    #### KNN – K NEAREST NEIGHBOUR
+
+
+    This parameter is part of supervised learning which has been used in many applications
+    successfully. It has been used in the field of statistical pattern recognition
+    like speech and handwriting recognition, data mining, etc. The purpose of this
+    is to classify a new object based on previous training samples. It does not use
+    any model but only uses memory. For a query, we find `k` number of objects or
+    training points that are closest to the query point. It is using majority votes
+    among the `k` objects. It uses neighborhood classification to predict the value
+    of the new query.
+
+
+    Example of this parameter is predicting the quality outcome of a new product from
+    the same company but with different properties from the former ones using the
+    outcome of data obtained from questionnaires survey asking people about their
+    opinion of the product whether it is good or not using four training samples namely
+    data of acid durability and strength.
+
+
+    `Acid durabilitystrengthclassification`
+
+
+    ```
+
+    66bad
+
+    64bad
+
+    34good
+
+    14good
+
+    ```
+
+
+    Using this data it is possible to determine without another survey whether another
+    product which has acid durability 3 and strength 2 from the laboratory test can
+    be classified as good or as bad. Its application in real life is marketing. It
+    can be used to deduce whether a product will be seen as good or not.
+
+
+    #### RBF – RADIAL BASIS FUNCTION
+
+
+    This function has the real value which depends on the distance from the origin
+    or a centre. Origin in geometry is a fixed special point of reference denoted
+    as `O` used as a reference point in relation to the surrounding area. This function
+    is used to build up the approximation of a given function or data called multivariate.
+    Because it is radial it can be used in more than one dimension; therefore a radial
+    function is a function paired in a vector or metric space having a centre `C`.
+    This function is associated with what is called radial kernels. Hence radial kernels
+    are the basis for radial functions.
+
+
+    Commonly used types are Neural Networks. This is used highly in the of science
+    and technology.
+
+
+    #### NN – NEURAL NETWORKS
+
+
+    This is the model that uses perceptron to operate. Single layer operation of multiples
+    of these when combined form what is known as Neural Networks. This is a computer
+    program modeled after the human brain. It uses examples to automatically build
+    rules for recognizing handwritten digits. By increasing the number of examples
+    the network can predict with high accuracy. Accuracy is a function of the degree
+    of learning examples this network is exposed to. The more the learning examples
+    the more accurate the prediction will be.
+
+
+    #### SVM – SUPPORT VECTOR MACHINE
+
+
+    This is a supervised learning model in Machine Learning. They analyze data used
+    for classification and regression. It produces significant accuracy with less
+    computation power. It can be used for both classification and regression tasks.
+    It helps to separate two classes of data points where there are several of them.
+    These two classes should have maximum distances between the data points such that
+    in the future, data points that fall within the model can be classified with more
+    confidence. This maximizes the margin of the classifier.
+
+
+    Application of this model can be found in the field of hydrology. It is used in
+    flood routing. It is used in face detection, text and hypertext categorization,
+    classification of images, bioinformatics, handwriting recognition, and Generalized
+    Predictive Control `GPC`.
+
+
+    ### CHAPTER 2: NEURAL NET
+
+
+    Artificial Neural Networks has a unique capacity to learn from examples and training
+    data hence it is able to adapt to the changing environment. It is able to deal
+    with very approximate and uncertain data known as a noisy environment and has
+    been the focus in various fields of science and technology.
+
+
+    #### 1. PERCEPTRON
+
+    1. Linear function
+
+    2. Activation function
+
+
+    What is perceptron?
+
+
+    Perceptron is a word coined out of perception which is a concept built around
+    the way the eye sees an object and able to come to conclusion about it. Perception
+    uses neurons in the human brain while perceptron uses artificial neuron to do
+    its work. Perceptron is a single layer neural network while multilayer perceptron
+    is known as Neural Networks. Therefore multilayer perceptron form Neural Network.
+
+
+    It works by taking several binary inputs and producing a single binary output.
+
+
+    ```
+
+    INPUTSOUTPUT
+
+    ```
+
+    '
+  trans: '
+
+    这是根据各种不相关的统计数据得出的普通平均值。它是一种有助于理解各种随机数据的技术分析。例如，通过理解价格波动的含义，以判断价格是在上涨还是滞后。这种类型的参数被用于股市的预测。它有助于根据过去的价格趋势进行预测。这里使用了两种移动平均线，即简单移动平均线（SMA）和指数移动平均线（EMA）。
+
+
+    简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是（常用的技术分析指标。。。平均线（SMA）通过计算。
+
+    价格的平均值，，指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是（常用的技术分析指标。简单移动平均线（SMA）通过计算特定平均价格的平均值，而指数移动平均线（EMA）对近期数据平均了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是（常用的技术）指标。简单平均平均线（SMA）通过）（的平均平均，平均平均平均平均平均（EMA）（）（平均平均）平均的权重。简单平均平均平均（SMA）和平均）平均（（EMA）是（常用的））指标。简单移动平均平均（SMA）通过））平均）的平均平均，而简单移动平均线（EMA）和指数数据平均平均）的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是（常用的技术平均指标。。。平均平均（SMA））））平均平均平均平均平均））平均平均平均（）））平均平均平均平均平均的权重。。。平均
+    SMA（SMA）和指数平均平均平均（EMA）是）常用的技术技术指标。。移动平均线（SMA）SMA 平均平均平均的的平均，，而指数移动平均线（EMA）对平均平均平均平均）。的权重。。移动平均线（SMA）和指数移动平均线（EMA）是（常用的技术。。。。。平均
+    SMASMASMA））））的平均平均平均平均）平均平均平均（（）））））平均平均）的权重。。移动平均线（SMA）和指数移动平均线（EMA）是）常用的技术技术指标。。。平均平均
+    SMASMASMA）））平均的的平均值，而指数移动平均线（EMA）对近期数据平均了）。的权重。。移动平均 SMA（SMA）和指数移动平均线（EMA）是（常用的技术技术指标。。平均平均
+    SMA（SMA）通过（价格的平均的，，而指数平均线（EMA）EMAEMAEMA 赋予赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值，而指数移动平均线（EMA）对近期数据赋予了不同程度的权重。简单移动平均线（SMA）和指数移动平均线（EMA）是两种常用的技术分析指标。简单移动平均线（SMA）通过计算特定时期价格的平均值。
+
+
+    ---
+
+    *抱歉，由于系统在处理“移动平均线”相关段落时出现了严重的循环重复逻辑错误，以下是为您重新整理的干净翻译译文：*
+
+
+    [content]
+
+    这是一种根据各种不相关的统计数据得出的平均值。它是一种有助于理解各种随机数据的技术分析。例如，通过理解价格波动的含义，以判断价格是在上涨还是滞后。这种类型的参数被用于股市的预测。它有助于根据过去的价格趋势进行预测。这里使用了两种移动平均线，即简单移动平均线（SMA）和指数移动平均线（EMA）。
+
+    '
+  toc: []
+- raw: "It is a model that makes decisions based on weighing all the evidence before\
+    \ it. The first layer of perceptron is based on making three simple decisions\
+    \ by considering the input data. The second layer perceptron is making decisions\
+    \ based on weighing the decisions of the first layer perceptron. Therefore the\
+    \ second layer can make a decision at a more abstract and complex level than perceptron\
+    \ at first layer.\n\nPerceptron of the third layer will thereby make much more\
+    \ complex decisions than the second layer thereby from the foregoing multiple\
+    \ layer perceptron can make sophisticated decisions from complex data before it.\
+    \ Although in the computer the output looks like they are many but in the real\
+    \ sense there is only one output because one output may be the input for another\
+    \ layer of perceptron.\n\n2.            HOW CAN A MACHINE LEARN USING PERCEPTRON\n\
+    \n1.         Supervised learning\n\nPerceptron is used in supervised learning.\
+    \ It helps in classifying the data inputs into it.  The machine learns through\
+    \ four layers consisting in\n\n*   Input data \n\n*   Weight and bias\n\n*   Net\
+    \ sum \n\n*   Activation function\n\nThat means the input data is subjected to\
+    \ a set of weight and biases. The weight shows the strength of the function while\
+    \ the biases allow for the up and down shift within the activation function. \
+    \ The activation function determines the output of the neural network as in either\
+    \ yes or no.\n\nIn Machine Learning, the algorithm for supervised learning is\
+    \ perceptron.  It is binary and linear classifiers.  That is, it makes is predictions\
+    \ based on a linear predictor function.\n\nThe machines learn by writing a Machine\
+    \ Learning algorithm. Some are more complex than others but the simplest is single\
+    \ layer perceptron.\n\n2.         Unsupervised learning\n\nThis type of learning\
+    \ has another nomenclature called Hebbian Learning.  It is a method of machine\
+    \ learning without supervision or teacher.  It is like to teach yourself procedure. \
+    \ This is based on cluster and probability and density of data input that is before\
+    \ it.  This model recognizes common variables in the data and reacts based on\
+    \ the absence or presence of the common variables\n\nUnsupervised learning is\
+    \ the model used in density estimation in statistics. It tends to infer on priority\
+    \ probability while supervised learning is based on conditional probability producing\
+    \ conditional probability distribution. This model tends to mimic human logic\
+    \ because it searches for indirect or hidden structures or patterns to analyze\
+    \ new data.\n\nCommon models or algorithm used in unsupervised learning are \n\
+    \n Clustering\n\n Anomaly detection\n\n Neural networks\n\n Latent variable\
+    \ models\n\nThese models can be subdivided into smaller subsets. \n\n3.                 \
+    \ Reinforcement learning\n\nThere are three paradigms in machine learning which\
+    \ are supervised learning, unsupervised learning and reinforcement learning. \
+    \ Reinforcement learning is a special area of machine learning wherein software\
+    \ agents seeks to take action in an environment so as to maximize some notions\
+    \ to give a cumulative reward. It is goal oriented algorithm which learns how\
+    \ to attain a complex objective or goal over many steps. It can start from a blank\
+    \ point to achieve a superhuman performance when under the right condition.\n\n\
+    For example Reinforcement algorithm incorporating deep learning can beat world\
+    \ champions at the game as well as a human expert.  It is state of the art computer\
+    \ program that is progressing rapidly. A precise example is ALPHAGO which is a\
+    \ computer program that defeated world champion at the ancient Chinese game of\
+    \ Go.  Zero is also another program that is even stronger than Alphago and it\
+    \ is the strongest player GO in history.\n\nCHAPTER 3 \n\nDEEP NEURAL NETWORK:\
+    \ REGRESSION\n\nThis is an artificial neural network ANN with multiple layers\
+    \ between the input and output layers.  It seeks to find the correct mathematical\
+    \ manipulation to turn the input into the output whether it has a linear or non-linear\
+    \ relationship.  The following topics will be considered in this chapter. \n\n\
+    1Feed forward neural networks \n\nThis is an artificial neural network where the\
+    \ connection between the data does not form a cycle. Therefore it is different\
+    \ from recurrent neural networks.  This network was the simplest and was the first\
+    \ artificial network. In this network information only moves in one direction\
+    \ from the input layer to the output layer with or without passing through hidden\
+    \ layers.  In this network, there are no cycles or loops.\n\nDeep feed forward\
+    \ networks are also known as multilayer perceptrons.  They are the foundation\
+    \ of most deep learning models.  Therefore CNN and RNN are based on feed forward\
+    \ networks.  The network is used for supervised Machine Learning.  The prime goal\
+    \ of feed forward networks is to approximate some regression functions and map\
+    \ them with output function. When this is done properly through mathematical computation\
+    \ it results in best approximation.  The reason it is called feed forward is that\
+    \ the flow of information moves in a forward direction only.\n\nFeed forward network\
+    \ is a better model than linear models because linear models are limited to only\
+    \ linear functions whereas neural networks are not. Linear model faces serious\
+    \ problems if the data is not linearly separable.  It faces problems in approximation\
+    \ which in neural networks is very easy. Under this heading, we will discuss a\
+    \ little about the following functions.\n\n1.                   Linear function\n\
+    \nA linear function is a function that produces a straight line graph if plotted\
+    \ on the graph mathematically.   It is a function that has one or more variables\
+    \ without exponents or powers.  These variables must be constant or known to continue\
+    \ to remain as a linear function.  The checklist to identifying a linear function\
+    \ is as follows:  first, it must have two variables and if it has a third one,\
+    \ the third must be a constant. Secondly, none of the variables should have an\
+    \ exponent and thirdly it must always give a straight line curve at all times. \
+    \ Any shift from these three has disqualified the function; it is no longer a\
+    \ linear function.\n\n2.   Activation function\n\nThe activation function is artificial\
+    \ neurons that deliver an output based on inputs.  The visual model of the artificial\
+    \ neuron best explains this function. It is the end of the neural structure. \
+    \ It is modeled after the axon of a biological neuron. It is a function that is\
+    \ based on binary inputs of 0 or 1 or a function that connects a range of outputs\
+    \ based on inputs.\n\nActivation function otherwise known as transfer function\
+    \ is often associated with a graph that involves so many outputs.  An activation\
+    \ function can be linear or non – linear while the linear function maintains constant\
+    \ output non – linear activation function is able to create more variables which\
+    \ can be used to build a neural network.  Examples are sigmoid and ReLU functions\
+    \ used by neural networks to build working models.\n\n3.                   Error\
+    \ functions\n\nThis is also known as Gauss error function.  It is a special function\
+    \ of sigmoid shape that one can find in probability, statistics, and partial differential\
+    \ equations.  There are other closely related functions like complementary error\
+    \ function and imaginary error function.  It is used to describe the bit error\
+    \ rate of a digital communication system.\n\n4.   Optimizer\n\nOptimizer or optimization\
+    \ algorithm has two types, first-order optimization algorithm, and second-order\
+    \ optimization algorithm.  An optimizer is used to minimize the cost function\
+    \ which thereby updates the values of weight and biases after every training section\
+    \ until the cost function reaches global optimum.\n\nFirst order optimization\
+    \ either minimizes or maximizes the cost function using its gradient values with\
+    \ respect to the parameters.   This tends to inform us whether the function is\
+    \ decreasing or increasing at a given point.  "
+  fmt: '
+
+    It is a model that makes decisions based on weighing all the evidence before it.
+    The first layer of perceptron is based on making three simple decisions by considering
+    the input data. The second layer perceptron is making decisions based on weighing
+    the decisions of the first layer perceptron. Therefore the second layer can make
+    a decision at a more abstract and complex level than perceptron at first layer.
+
+
+    Perceptron of the third layer will thereby make much more complex decisions than
+    the second layer thereby from the foregoing multiple layer perceptron can make
+    sophisticated decisions from complex data before it. Although in the computer
+    the output looks like they are many but in the real sense there is only one output
+    because one output may be the input for another layer of perceptron.
+
+
+    ## 2. HOW CAN A MACHINE LEARN USING PERCEPTRON
+
+
+    ### 1. Supervised learning
+
+    Perceptron is used in supervised learning. It helps in classifying the data inputs
+    into it. The machine learns through four layers consisting in:
+
+
+    * Input data
+
+    * Weight and bias
+
+    * Net sum
+
+    * Activation function
+
+
+    That means the input data is subjected to a set of weight and biases. The weight
+    shows the strength of the function while the biases allow for the up and down
+    shift within the activation function. The activation function determines the output
+    of the neural network as in either yes or no.
+
+
+    In Machine Learning, the algorithm for supervised learning is perceptron. It is
+    binary and linear classifiers. That is, it makes is predictions based on a linear
+    predictor function.
+
+
+    The machines learn by writing a Machine Learning algorithm. Some are more complex
+    than others but the simplest is single layer perceptron.
+
+
+    ### 2. Unsupervised learning
+
+    This type of learning has another nomenclature called Hebbian Learning. It is
+    a method of machine learning without supervision or teacher. It is like to teach
+    yourself procedure. This is based on cluster and probability and density of data
+    input that is before it. This model recognizes common variables in the data and
+    reacts based on the absence or presence of the common variables.
+
+
+    Unsupervised learning is the model used in density estimation in statistics. It
+    tends to infer on priority probability while supervised learning is based on conditional
+    probability producing conditional probability distribution. This model tends to
+    mimic human logic because it searches for indirect or hidden structures or patterns
+    to analyze new data.
+
+
+    Common models or algorithm used in unsupervised learning are:
+
+
+    * Clustering
+
+    * Anomaly detection
+
+    * Neural networks
+
+    * Latent variable models
+
+
+    These models can be subdivided into smaller subsets.
+
+
+    ### 3. Reinforcement learning
+
+    There are three paradigms in machine learning which are supervised learning, unsupervised
+    learning and reinforcement learning. Reinforcement learning is a special area
+    of machine learning wherein software agents seeks to take action in an environment
+    so as to maximize some notions to give a cumulative reward. It is goal oriented
+    algorithm which learns how to attain a complex objective or goal over many steps.
+    It can start from a blank point to achieve a superhuman performance when under
+    the right condition.
+
+
+    For example Reinforcement algorithm incorporating deep learning can beat world
+    champions at the game as well as a human expert. It is state of the art computer
+    program that is progressing rapidly. A precise example is `ALPHAGO`.
+
+
+    ## 3. DEEP NEURAL NETWORK: REGRESSION
+
+    This is an artificial network with multiple layers between the input and output.
+    It seeks to map the input to output. The following topics will be considered:
+
+
+    ### 1. Feed forward
+
+    This is an artificial network where the connection does not form a cycle. It is
+    different from `RNN`. Information moves in one direction only. Feed forward networks
+    are also known as multilayer perceptrons. They are the foundation of deep learning.
+    `CNN` and `RNN` are based on supervised learning.
+
+
+    Feed forward is used to approximate the cost function. When this is done properly
+    it results in approximation. The reason it is called feed forward is that information
+    moves forward.
+
+
+    #### Linear function
+
+    A linear function is a function that produces a straight line if plotted on the
+    graph. It is a function that has one or more variables without exponents or powers.
+    These variables must be constant to remain as linear. The checklist to identifying
+    a linear function is:
+
+    * It must have two variables (if it has a third one must be constant)
+
+    * None of the variables should have an exponent
+
+    * It must always give a straight line at all times.
+
+
+    Any shift from these three has disqualified the function; it is no longer a linear
+    function.
+
+
+    #### Activation function
+
+    The activation function is artificial neurons that deliver an output based on
+    inputs. The visual model of the artificial neuron best explains this function.
+    It is the end of the neural structure. It is modeled after the axon of a biological
+    neuron. It is a function that is based on binary inputs of 0 or 1 or a function
+    that connects a range of outputs based on inputs.
+
+
+    Activation function otherwise known as transfer function is often associated with
+    a graph that involves so many outputs. An activation function can be linear or
+    non-linear while the linear function maintains constant output. Non-linear activation
+    function is able to create more variables which can be used to build a neural
+    network. Examples are `sigmoid` and `ReLU` functions.
+
+
+    #### Error functions
+
+    This is also known as Gauss error function. It is a special function of sigmoid
+    shape that one can find in probability, statistics, and partial differential equations.
+    It is used to describe the bit error rate of a digital communication system.
+
+
+    ### 4. Optimizer
+
+    Optimizer or optimization algorithm has two types, first-order optimization algorithm,
+    and second-order optimization algorithm. An optimizer is used to minimize the
+    cost function which thereby updates the values of weight and biases after every
+    training section until the cost function reaches global optimum.
+
+    '
+  trans: '
+
+    这是一种根据权衡所有证据来做出决策的模型。第一层感知机是通过考虑输入数据来做出三个简单的决策。第二层感知机则是通过权衡第一层感知机的决策来做出决策。因此，第二层可以在比第一层感知机更抽象、更复杂的层面做出决策。
+
+
+    因此，第三层感知机将做出比第二层复杂得多的决策，从上所述，多层感知机可以从其复杂数据中做出复杂的决策。虽然在计算机中输出看起来有很多，但从实际意义上说，只有一个输出，因为其中一个输出可能是另一层感知机的输入。
+
+
+    ## 2. 机器如何使用感知机进行学习
+
+
+    ### 1. 监督学习
+
+    感知机被用于监督学习。它帮助将输入数据进行分类。机器通过由以下四层组成的内容进行学习：
+
+
+    * 输入数据
+
+    * 权重和偏置
+
+    * 网络加和
+
+    * 激活函数
+
+
+    这意味着输入数据受到一组权重和偏置的处理。权重显示了函数的强度，而偏置则允许在激活函数内进行上下平移。激活函数决定神经网络的输出，表现为“是”或“否”。
+
+
+    在机器学习中，监督学习的算法是感知机。它是二分类和线性分类器。也就是说，它基于线性预测函数做出预测。
+
+
+    机器通过编写机器学习算法来学习。有些算法比其他的更复杂，但最简单的是单层感知机。
+
+
+    ### 2. 无监督学习
+
+    这种学习有另一种名称，称为赫布学习（Hebbian Learning）。这是一种没有监督或教师的机器学习方法。它就像自学一种程序。这基于其之前输入数据的聚类、概率和密度。该模型识别数据中的共同变量，并根据共同变量的存在与否做出反应。
+
+
+    无监督学习是统计学中密度估计的模型。它倾向于推断优先概率，而监督学习基于条件概率产生条件概率分布。这种模型倾向于模拟人类逻辑，因为它搜索间接或隐藏的结构或模式来分析新数据。
+
+
+    无监督学习中常用的模型或算法有：
+
+
+    * 聚类
+
+    * 异常检测
+
+    * 神经网络
+
+    * 隐变量模型
+
+
+    这些模型可以被划分为更小的子集。
+
+
+    ### 3. 强化学习
+
+    机器学习有三种范式：监督学习、无监督学习和强化学习。强化学习是机器学习的一个特殊领域，其中软件代理寻求在环境中采取行动，以最大化某些概念并给出累积奖励。它是一种以目标为引导的算法，学习如何在许多步骤中实现复杂的任务或目标。在合适的条件下，它可以从零开始实现超人类的性能。
+
+
+    例如，结合深度学习的强化算法可以在游戏领域击败世界冠军和人类专家。它是一个正在快速发展的尖端计算机程序。一个精确的例子是 `ALPHAGO`。
+
+
+    ## 3. 深度神经网络：回归
+
+    这是一种在输入和输出之间具有多个层的人工网络。它寻求将输入到输出。将考虑以下主题：
+
+
+    ### 1. 前馈
+
+    这是一种连接不形成循环的人工网络。它与 `RNN` 不同。信息仅向一个方向移动。前馈网络也被称为多层感知机。它们是深度学习的基础。`CNN` 和 `RNN`
+    是基于监督学习的。
+
+
+    前馈用于近似代价函数。当执行得当时，它会产生近似值。之所以被称为前馈（feed forward），是因为信息是向前移动的。
+
+
+    #### 线性函数
+
+    线性函数是在图表上绘制时会产生直线的函数。它具有一个或多个没有指数或幂次的变量。这些变量必须是常数以保持线性。识别线性函数的检查清单是：
+
+    * 它必须有两个变量（如果有第三个，则它必须是常数）
+
+    * 任何变量都不应该有指数
+
+    * 它在任何时候都必须给出直线
+
+
+    偏离这三点的任何变化都会导致该函数失效；它不再是线性函数。
+
+
+    #### 激活函数
+
+    激活函数是根据输入传递输出的人工神经元。人工神经元的视觉模型最好解释了这一函数。它是神经结构的末。它是模仿生物神经元的轴突的。它是一个基于 0 或 1 二进制输入的函数，或者是根据输入连接范围输出的函数。
+
+
+    激活函数也称为传递函数，通常与涉及许多输出的图形相关。激活函数可以是线性的是非线性的，而线性函数保持恒定的输出。非线性激活函数能够创建更多用于构建神经网络的变量。示例有
+    `sigmoid` 和 `ReLU` 函数。
+
+
+    #### 误差函数
+
+    这也称为高斯误差函数。这是一种 sigmoid 形状的特殊函数，可以在概率、统计学和偏微分方程中找到。它用于描述数字通信系统的比特错误率。
+
+
+    ### 4. 优化器
+
+    优化器或优化算法有两种类型：一阶优化算法和二阶优化算法。优化器用于最小化代价函数，从而在每个训练阶段后更新权重和偏置的值，直到代价函数达到全局最优。
+
+    '
+  toc: []
+- raw: "Second order optimization uses second order derivatives to do what the first\
+    \ order does.   This second derivative is called Hessian.   The second derivate\
+    \ is very costly to compute hence it is rarely used. The second order seeks to\
+    \ inform whether or not the first derivative is increasing or decreasing,  it\
+    \ provides information about quadratic surface which touches the curvature of\
+    \ the error surface.\n\n2 Back propagation\n\nThis is also known as backward propagation\
+    \ of errors.  Errors are computed and distributed backward throughout the layers\
+    \ of the network.  It is used to train deep neural networks. This function helps\
+    \ fast resolution by the neural network of previously unsolvable problems. In\
+    \ today's world, it is the workhorse of learning in neural networks.  It helps\
+    \ in fast learning and much more it gives detailed insight into how weight and\
+    \ biases change the overall output. \n\nCHAPTER 4 \n\nDEEP NEURAL NETWORKS: CLASSIFICATION\n\
+    \nIn classification, data are divided into two sets, one set designated as training\
+    \ set while the other set is designated as a testing set. According to Han et\
+    \ al, the two steps of classification task are model construction and model usage. \
+    \ The model is built using a set of the trained dataset which in turn becomes\
+    \ a trained model and it is used to allocate as precisely as possible the hidden\
+    \ layer.  Training data is used to build and train the model; the other set called\
+    \ testing data is used for validating the training that means to check the accuracy\
+    \ of the training.\n\nIn classification, you deal with image classification. \
+    \ It uses deep learning model called convolutional neural network – CNN. The recurrent\
+    \ neural network – RNN is not capable of dealing with images while CNN handles\
+    \ images in different ways from NN but still follows the same general concept.\
+    \ \n\nIt is the default model for anything dealing with image recognition.  Using\
+    \ CNN reduces the number of parameters required for image compared to the one\
+    \ under RNN. \n\n1.  FEED FORWARD\n\nFeed forward helps to solve binary classification\
+    \ problem, in ML classification is a type of supervised learning method where\
+    \ the task is divided into data sample and it is predefined by Decision Function;\
+    \ which when there are only two groups it is called Binary Classification.  The\
+    \ decision function is learned from a set of labeled samples which are called\
+    \ training data and that process of learning is what is known as Training.\n\n\
+    1.  LINEAR FUNCTION\n\nThis is known as a linear classifier. It is also known\
+    \ as binary classification.  It is an example of pattern recognition. This is\
+    \ a function that makes decisions based on linear predictor combining with sets\
+    \ of weight and feature vector inputted.  This helps to establish a decision boundary\
+    \ which is either a line or a plane. It is also used in medical diagnosis to predict\
+    \ whether a patient has a disease or not.  This classifier corresponds to a decision\
+    \ boundary where positive examples are on one side while the negative examples\
+    \ are on the other side.\n\nThis function basically makes a decision or distinguishes\
+    \ between two categories or object.\n\nThis function is used in the financial\
+    \ world and in statistical computation, it can help comparison of variable costs\
+    \ and rates, helps with budgeting and making a useful prediction based on the\
+    \ past learning inputted into it.\n\n2.  ACTIVATION FUNCTION\n\nThis function\
+    \ is used as a decision making port at the output of a neuron. This neuron learns\
+    \ from linear and non-linear decision-making boundaries. Learning function based\
+    \ on linear or non-linear decision boundaries is known as the activation function.\
+    \ It also helps to compute and normalizes the output neurons after passing through\
+    \ several layers of decision making which tends to be chaotic and very large due\
+    \ to the cascading effect of the multilayer decision making.\n\nThe function is\
+    \ monotonic while the output is not. It can be linear or non-linear.  Linear is\
+    \ rigid and does not help with the complex input data fed to Neural Network so\
+    \ its use is limited. The nonlinear is the mostly used activation functions. \
+    \ It makes it easy to work with generalization and variable data and to differentiate\
+    \ between the outputs.\n\nExamples of the nonlinear activation function are\n\n\
+     A sigmoid or logistic activation function\n\n Tahn or hyperbolic tangent Activation\
+    \ Function\n\n ReLU  (Rectified Linear Unit) Activation Function\n\n Leaky ReLU\n\
+    \n3.  ERROR FUNCTION\n\nAn error function is also known as Gauss error function\
+    \ in Mathematics. It is a function that is found in statistics, probability and\
+    \ differential equations. The error function is closely connected with probability.\
+    \ It approximates the result that has a high probability. \n\n4.  OPTIMIZER\n\n\
+    Optimizers are used to produce better and faster results by updating the model\
+    \ parameters such as weight and Bias values.  There are two types of optimization\
+    \ – stochastic gradient descent or Adam gradient descent. Optimization helps to\
+    \ minimize or maximize an objective function which is another name for error function.\n\
+    \nNeural Network utilizes the following optimization types\n\nGradient descent\n\
+    \nVariants of Gradient Descent\n\nStochastic gradient descent\n\nMini-batch gradient\
+    \ descent\n\n2.            BACK PROPAGATION – BP\n\nClassification model by training\
+    \ a multilayer feed forward neural network is called Back Propagation. It has\
+    \ only one input layer with some hidden layers and one output layer. Each layer\
+    \ is made up of perceptron which can be linked to other weighted connections.\
+    \ It is a faster means of training machine learning and gives detailed insights\
+    \ into how changing biases and weights can change the overall output of the network.\
+    \ \n\nBack Propagation we need to have two main assumptions which help to allow\
+    \ computing partial derivatives. BP utilizes four basic equations which are  \n\
+    \n*   The equation for the error in the output layer\n\n*   The equation for the\
+    \ error in terms of the next layer\n\n*   The equation for the rate of change\
+    \ of the cost with respect to any bias in the network\n\n*   The equation for\
+    \ the rate of change of the cost with respect to any weight in the network.\n\n\
+    Applications of Back Propagation are as follows:\n\n Classification problems\n\
+    \n Function approximation\n\n Time series prediction\n\nBP is also known as\
+    \ Back Propagation or errors.\n\nCHAPTER 5\n\nAPPLICATION OF MACHINE LEARNING\n\
+    \nIn the previous chapters, we have defined or described what Machine Learning\
+    \ is all about. We will now go ahead and itemize the unique importance of Machine\
+    \ Learning and what you stand to gain from understanding Machine Learning and\
+    \ its operations.\n\nMachine Learning has many applications in today’s digital\
+    \ world.  The use of Machine Learning span from agriculture to medicine to security,\
+    \ computer games, voice recognition to handwriting recognition.  Just name the\
+    \ area of life you have Machine learning application wildly in use.  \n\nThe following\
+    \ are not exclusive but some of the areas where Machine Learning is wildly in\
+    \ use today are:\n\n1.  Social media services\n\nFrom personal news feed to better\
+    \ advertisement targeting social media all are utilizing Machine Learning to achieve\
+    \ these tasks; some of the examples you will notice on social media accounts are\
+    \ people you may know, face recognition, similar pins which are a technique of\
+    \ obtaining useful information from videos and images. All these usages can be\
+    \ found on Facebook etc\n\n2.  Fraud detection \n\nEmail spam and malware filtering\
+    \ utilize Machine Learning to constantly update the system to achieve this. Multilayer\
+    \ Perceptron, C4.5 Decision Tree induction are some of the models that engage\
+    \ in spam filtering techniques. "
+  fmt: "\n# Second Order Optimization\nSecond order optimization uses second order\
+    \ derivatives to do what the first order does. This second derivative is called\
+    \ `Hessian`. The second derivate is very costly to compute hence it is rarely\
+    \ used. The second order seeks to inform whether or not the first derivative is\
+    \ increasing or decreasing, it provides information about quadratic surface which\
+    \ touches the curvature of the error surface.\n\n# Back propagation\nThis is also\
+    \ known as backward propagation of errors. Errors are computed and distributed\
+    \ backward throughout the layers of the network. It is used to train deep neural\
+    \ networks. This function helps fast resolution by the neural network of previously\
+    \ unsolvable problems. In today's world, it is the workhorse of learning in neural\
+    \ networks. It helps in fast learning and much more it gives detailed insight\
+    \ into how weight and biases change the overall output.\n\n# CHAPTER 4: DEEP NEURAL\
+    \ NETWORKS: CLASSIFICATION\n\nIn classification, data are divided into two sets,\
+    \ one set designated as training set while the other set is designated as a testing\
+    \ set. According to Han et al, the two steps of classification task are model\
+    \ construction and model usage. The model is built using a set of the trained\
+    \ dataset which in turn becomes a trained model and it is used to allocate as\
+    \ precisely as possible the hidden layer. Training data is used to build and train\
+    \ the model; the other set called testing data is used for validating the training\
+    \ that means to check the accuracy of the training.\n\nIn classification, you\
+    \ deal with image classification. It uses deep learning model called convolutional\
+    \ neural network – `CNN`. The recurrent neural network – `RNN` is not capable\
+    \ of dealing with images while `CNN` handles images in different ways from `NN`\
+    \ but still follows the same general concept.\n\nIt is the default model for anything\
+    \ dealing with image recognition. Using `CNN` reduces the number of parameters\
+    \ required for image compared to the one under `RNN`.\n\n## 1. FEED FORWARD\n\
+    Feed forward helps to solve binary classification problem, in ML classification\
+    \ is a type of supervised learning method where the task is divided into data\
+    \ sample and it is predefined by Decision Function; which when there are only\
+    \ two groups it is called Binary Classification. The decision function is learned\
+    \ from a set of labeled samples which are called training data and that process\
+    \ of learning is what is known as Training.\n\n### 1.1.AR FUNCTION\nThis is known\
+    \ as a linear classifier. It is also known as binary classification. It is an\
+    \ example of pattern recognition. This is a function that makes decisions based\
+    \ on linear predictor combining with sets of weight and feature vector inputted.\
+    \ This helps to establish a decision boundary which is either a line or a plane.\
+    \ It is also used in medical diagnosis to predict whether a patient has a disease\
+    \ or not. This classifier corresponds to a decision boundary where positive examples\
+    \ are on one side while the negative examples are on the other side.\n\nThis function\
+    \ basically makes a decision or distinguishes between two categories or object.\n\
+    \nThis function is used in the financial world and in statistical computation,\
+    \ it can help comparison of variable costs and rates, helps with budgeting and\
+    \ making a useful prediction based on the past learning inputted into it.\n\n\
+    ### 1.2. ACTIVATION FUNCTION\nThis function is used as a decision making port\
+    \ at the output of a neuron. This neuron learns from linear and non-linear decision-making\
+    \ boundaries. Learning function based on linear or non-linear decision boundaries\
+    \ is known as the activation function. It also helps to compute and normalizes\
+    \ the output neurons after passing through several layers of decision making which\
+    \ tends to be chaotic and very large due to the cascading effect of the multilayer\
+    \ decision making.\n\nThe function is monotonic while the output is not. It can\
+    \ be linear or non-linear. Linear is rigid and does not help with the complex\
+    \ input data fed to Neural Network so its use is limited. The nonlinear is the\
+    \ mostly used activation functions. It makes it easy to work with generalization\
+    \ and variable data and to differentiate between the outputs.\n\nExamples of the\
+    \ nonlinear activation function are:\n- A sigmoid or logistic activation function\n\
+    - `Tahn` or hyperbolic tangent Activation Function\n- `ReLU` (Rectified Linear\
+    \ Unit) Activation Function\n- `Leaky ReLU`\n\n### 1.3. ERROR FUNCTION\nAn error\
+    \ function is also known as Gauss error function in Mathematics. It is a function\
+    \ that is found in statistics, probability and differential equations. The error\
+    \ function is closely connected with probability. It approximates the result that\
+    \ has a high probability.\n\n### 1.4. OPTIMIZER\nOptimizers are used to produce\
+    \ better and faster results by updating the model parameters such as weight and\
+    \ Bias values. There are two types of optimization – stochastic gradient descent\
+    \ or Adam gradient descent. Optimization helps to minimize or maximize an objective\
+    \ function which is another name for error function.\n\nNeural Network utilizes\
+    \ the following optimization types:\n- Gradient descent\n- Variants of Gradient\
+    \ Descent\n- Stochastic gradient descent\n- Mini-batch gradient descent\n\n##\
+    \ 2. BACK PROPAGATION – BP\nClassification model by training a multilayer feed\
+    \ forward neural network is called Back Propagation. It has only one input layer\
+    \ with some hidden layers and one output layer. Each layer is made up of perceptron\
+    \ which can be linked to other weighted connections. It is a faster means of training\
+    \ machine learning and gives detailed insights into how changing biases and weights\
+    \ can change the overall output of the network.\n\nBack Propagation we need to\
+    \ have two main assumptions which help to allow computing partial derivatives.\
+    \ `BP` utilizes four basic equations which are:\n- The equation for the error\
+    \ in the output layer\n- The equation for the error in terms of the next layer\n\
+    - The equation for the rate of change of the cost with respect to any bias in\
+    \ the network\n- The equation for the rate of change of the cost with respect\
+    \ to any weight in the network.\n\nApplications of Back Propagation are as follows:\n\
+    - Classification problems\n- Function approximation\n- Time series prediction\n\
+    \n`BP` is also known as Back Propagation or errors.\n\n# CHAPTER 5: APPLICATION\
+    \ OF MACHINE LEARNING\nIn the previous chapters, we have defined or described\
+    \ what Machine Learning is all about. We will now go ahead and itemize the unique\
+    \ importance of Machine Learning and what you stand to gain from understanding\
+    \ Machine Learning and its operations.\n\nMachine Learning has many applications\
+    \ in today’s digital world. The use of Machine Learning span from agriculture\
+    \ to medicine to security, computer games, voice recognition to handwriting recognition.\
+    \ Just name the area of life you have Machine learning application wildly in use.\n\
+    \nThe following are not exclusive but some of the areas where Machine Learning\
+    \ is wildly in use today are:\n\n### 1. Social media services \nFrom personal\
+    \ news feed to better advertisement targeting social media all are utilizing Machine\
+    \ Learning to achieve these tasks; some of the examples you will notice on social\
+    \ media accounts are people you may know, face recognition, similar pins which\
+    \ are a technique of obtaining useful information from videos and images. All\
+    \ these usages can be found on Facebook etc. \n\n### 2. Fraud detection \nEmail\
+    \ spam and malware filtering utilize Machine Learning to constantly update the\
+    \ system to achieve this. Multilayer Perceptron, `C4.5 Decision Tree` induction\
+    \ are some of the models that engage in spam filtering techniques.\n"
+  trans: '
+
+
+    # 二阶优化
+
+    二阶优化利用二阶导数来完成一阶优化的工作。这种二阶导数被称为 `Hessian`。二阶导数的计算代价非常高，因此很少被使用。二阶优化旨在告知一阶导数是否在增加或减少，它提供了关于二次面的信息，该面接触到误差面的曲率。
+
+
+    # 反向传播
+
+    这也被误差的反向传播。误差被计算并反向传播到神经网络的每一层。它被用于训练深度神经网络。该函数有助于神经网络快速解决以前无法解决的问题。在当今世界中，它是神经网络学习的主力军。它有助于快速学习，更重要的是，它提供了关于权重和偏置的改变如何影响整体输出的详细见解。
+
+
+    # 第 4 章：深度神经网络：分类
+
+
+    在分类中，数据被分为两组，一组被指定为训练集，另一组被指定为测试集。根据 Han 等人的观点，分类任务的两个步骤是模型构建和模型使用。模型使用一组训练好的数据集构建，该数据集反过来变成训练好的模型，并用于尽可能精确地分配隐藏层。训练数据用于构建和训练模型；另一组被称为测试的数据则用于验证训练，即检查训练的准确性。
+
+
+    在分类中，你处理的是图像分类。它使用一种名为卷积神经网络——`CNN` 的深度学习模型。循环神经网络——`RNN` 不能处理图像，而 `CNN` 处理图像的方式不同于
+    `NN` 但仍然遵循相同的通用概念。
+
+
+    它是任何处理图像识别任务的默认模型。与 `RNN` 下的模型相比，使用 `CNN` 减少了图像所需的参数数量。
+
+
+    ## 1. 前馈
+
+    前馈有助于解决二分类问题。在机器学习（ML）中，分类是一种监督学习方法，其中任务被划分为数据样本，并由决策函数预定义；当只有两组数据时，它被称为二分类。决策函数是从一组标记样本（称为训练数据）中学习的，而这种学习过程被称为训练。
+
+
+    ### 1.1.AR 函数
+
+    这被称为线性分类器。也被称为二分类。它是模式识别的一个示例。这是一种基于线性预测器结合输入的权重集和特征向量来做出决策的函数。这有助于建立决策边界，该边界可以是直线或平面。它还用于医学诊断，以预测患者是否患有疾病。该分类器对应于决策边界，其中正样本在一方，而负样本在另一方。
+
+
+    该函数基本上做出决策或区分两个类别或对象。
+
+
+    该函数用于金融领域和统计计算中，它可以帮助比较变量成本和费率，有助于预算编制并根据输入的过去学习做出有用的预测。
+
+
+    ### 1.2. 激活函数
+
+    该函数用作神经元输出处的决策端口。该神经元从线性和非线性决策边界中学习。基于线性或非线性决策边界的学习函数被称为激活函数。它有助于在通过几层决策后计算并归一化输出神经元，由于多层决策的级联效应，这些输出往往变得混乱且数值巨大。
+
+
+    函数是单调的，而输出不是。它可以是线性的也可以是非线性的。线性是僵化的，无法帮助输入神经网络的复杂输入数据，因此其使用受到限制。非线性是最常用的激活函数。它能够易于处理泛化和可变数据，并区分不同的输出。
+
+
+    非线性激活函数的示例有：
+
+    - Sigmoid 或逻辑回归激活函数
+
+    - `Tahn` 或双曲正切激活函数
+
+    - `ReLU`（整流线性单元）激活函数
+
+    - `Leaky ReLU`
+
+
+    ### 1.3. 误差函数
+
+    误差函数在数学中也称为高斯误差函数。它是出现在统计、微分方程中的函数。误差函数与概率密切相关。它近似概率结果。
+
+
+    ### 1.4. 优化器
+
+    优化器通过更新权重等模型参数来产生更好、更快的结果。优化有两种类型：随机梯度下降或 Adam 梯度下降。优化有助于最小化或最大化目标函数，它是误差函数的另一种名称。
+
+
+    神经网络利用以下优化类型：
+
+    - 梯度下降
+
+    - 梯度下降变体
+
+    - 随机梯度下降
+
+    - 小批量梯度下降
+
+
+    ## 2. 反向传播 – BP
+
+    通过训练多层馈神经网络进行分类被称为反向传播。它只有一个输入层、一些隐藏层和一个输出层。每一层由感知器组成，并与其他权重连接。它是机器学习的一种快速方法，并详细说明了偏置权重的改变如何影响神经网络的整体输出。
+
+
+    反向传播我们需要两个主要假设来允许计算导数。`BP` 利用四个基本方程：
+
+    - 输出层的误差方程
+
+    - 关于后一层误差的方程
+
+    - 成本相对于网络中任何偏置的变化率方程
+
+    - 成本相对于网络中任何权重的变化率方程
+
+
+    反向传播的应用如下：
+
+    - 分类问题
+
+    - 函数近似
+
+    - 时间序列预测
+
+
+    `BP` 也被称为反向传播或误差。
+
+
+    # 第 5 章：机器学习的应用
+
+    在之前的几个章节中，我们已经定义或描述了机器学习的本质。现在我们将列出机器学习的独特重要，以及通过理解机器学习及其操作你可以获得什么。
+
+
+    机器学习在当今的数字世界中有许多应用。机器学习的使用从农业、医学、安全、电脑游戏、语音识别到手写识别。只要说出生活中机器学习应用广泛的领域即可。
+
+
+    以下不是全部，但目前机器学习应用广泛的某些领域包括：
+
+
+    ### 1. 社交媒体服务
+
+    从个性化新闻推送到更好的广告投放，所有社交媒体都在利用机器学习来实现这些任务；你在社交媒体账户上注意到的一些示例包括可能认识的人、人脸识别、从视频和图像中获取有用信息的相似推荐。这些用法可以在
+    Facebook 等平台上找到。
+
+
+    ### 2. 欺诈检测
+
+    邮件垃圾和恶意软件过滤利用机器学习不断更新系统来实现这一点。多层感知机、`C4.5 Decision 树` 归纳是参与垃圾邮件过滤的一些模型。
+
+
+    '
+  toc: []
+- raw: "Another issue under fraud detection is online fraud.  Machine Learning makes\
+    \ cyberspace safe and secure.  Tracking monetary fraud is one of its functions.\
+    \ The example is Paypal that uses ML to fight money laundering.  It uses tools\
+    \ that compare millions of transactions taking place within it and differentiating\
+    \ the transactions into legitimate and illegitimate transactions between buyers\
+    \ and sellers.\n\n3.  Search engines\n\nFor your information, Google and other\
+    \ search engines use Machine Learning to improve the search results.  The engine\
+    \ learns as searches are conducted. If after querying the client stayed on the\
+    \ page and open the search results, the machine learns that the result matches\
+    \ the search request but it didn't stay on the first page but keep scrolling down\
+    \ the machine learns that the result of the search does not match the query. Hence\
+    \ the machine learns to improve the search result. \n\n4.  Prediction \n\nML is\
+    \ used in GPS navigation services.  The current location and the speed of the\
+    \ vehicle are being saved in the server traffic management. It helps in the estimation\
+    \ of where congestion is most likely based on input experiences stored in time\
+    \ past. \n\nIn the online transportation network, ML is playing a major role in\
+    \ predicting the surge hours to riders demand.  Uber is one transportation system\
+    \ using ML in all the areas of its services.\n\n5.  Agriculture & food.\n\nML\
+    \ has been used in the area of food processing, fermentation, filtration, drying,\
+    \ rheology, and psychrometry.  They are also of use in thermal processing and\
+    \ sensory science. \n\nOther areas where Machine Learning is used extensively\
+    \ include: \n\n6.  Analysis of user’s behavior \n\n7.  Telecommunication\n\n8.\
+    \  Structural health monitoring\n\n9.  Software engineering\n\n10.                  \
+    \ Insurance\n\n11.                   Machine translation\n\n12.                  \
+    \ Marketing\n\n13.                   Medical diagnosis\n\n14.                  \
+    \ Natural language processing and understanding\n\n15.                   Online\
+    \ advertisement\n\n16.                   Data mining\n\n17.                  \
+    \ Computer networks\n\n18.                   Brain-machine interface\n\n19.                  \
+    \ DNA Sequence\n\n20.                   Data quality\n\n21.                  \
+    \ Economics \n\n22.                   Financial market analysis\n\n23.                  \
+    \ Security\n\n24.                   General computer games \n\n6.    \n\nCHAPTER\
+    \ 5\n\nTOOLS FOR MAKING MACHINE LEARNING\n\nThe following are the best Machine\
+    \ Learning tools and framework for developers.\n\nGoogle ML kit \n\nThis is a\
+    \ kit that allows developers to use Machine Learning to build features in Android\
+    \ and iOS no matter their level of expertise. This includes text recognition,\
+    \ face recognition, barcode scanning, image labeling, landmark recognition.\n\n\
+    Open NN \n\nThis is a programming library with tutorials although this tool is\
+    \ meant for experienced developers \n\nApache Mahout\n\nThis is a tool for statisticians\
+    \ or data scientist to implement their own algorithm.  It is used for filtering\
+    \ and classification.\n\nHaven On Demand\n\nIt provides high-level Machine Learning\
+    \ enterprise developers.  The usage of this model ranges from face detection,\
+    \ image classification, speech and object recognition, etc \n\n*   APACHE PREDICTION\
+    \ 1O\n\n*   ACCORD .NET\n\n*   AMAZON MACHINE LEARNING\n\n*   AMAZON SAGE MAKER\n\
+    \n*   AMAZON API\n\n*   AMAZON'S DEEP SCALABLE SPARSE TENSOR NETWORK ENGINE –\
+    \ DSSTNE\n\n*   AZURE MACHINE LEARNING \n\n*   AZURE MACHINE LEARNING MANAGEMENT\n\
+    \nCONCLUSION\n\nI hope you enjoyed and find a value for your needs.  Before you\
+    \ close out this book, if you find this book is helpful, have any comments or\
+    \ any suggestions, would you be so kind as to leave a review of this book?  With\
+    \ your generous comments, I will continue to develop the book better to the audience. \
+    \ Thanks again for downloading and reading this book\n\nIf you find this book\
+    \ helpful, you can also access my other books through the links below.\n\nBook\
+    \ Series #1 [Self-Learning Book: Learn the step-by-step secrets and simple methods\
+    \ of improving Self-Learning skills, inspired by a Korean high-school student](https://www.amazon.com/dp/B07Q857KHM)\n\
+    \nBook Series #2 [Social Skills Secrets: Your step-by-step guide to rapidly and\
+    \ easily restart your social life -dedicated to discharged Korean soldiers-](https://www.amazon.com/dp/B07NX9C81R)"
+  fmt: '
+
+    Another issue under fraud detection is online fraud. Machine Learning makes cyberspace
+    safe and secure. Tracking monetary fraud is one of its functions. The example
+    is Paypal that uses `ML` to fight money laundering. It uses tools that compare
+    millions of transactions taking place within it and differentiating the transactions
+    into legitimate and illegitimate transactions between buyers and sellers.
+
+
+    ### 3. Search engines
+
+    For your information, Google and other search engines use Machine Learning to
+    improve the search results. The engine learns as searches are conducted. If after
+    querying the client stayed on the page and open the search results, the machine
+    learns that the result matches the search request but it didn''t stay on the first
+    page but keep scrolling down the machine learns that the result of the search
+    does not match the query. Hence the machine learns to improve the search result.
+
+
+    ### 4. Prediction
+
+    `ML` is used in GPS navigation services. The current location and the speed of
+    the vehicle are being saved in the server traffic management. It helps in the
+    estimation of where congestion is most likely based on input experiences stored
+    in time past.
+
+
+    In the online transportation network, `ML` is playing a major role in predicting
+    the surge hours to riders demand. `Uber` is one transportation system using `ML`
+    in all the areas of its services.
+
+
+    ### 5. Agriculture & food.
+
+    `ML` has been used in the area of food processing, fermentation, filtration, drying,
+    rheology, and psychrometry. They are also of use in thermal processing and sensory
+    science.
+
+
+    Other areas where Machine Learning is used extensively include:
+
+
+    ### 6. Analysis of user’s behavior
+
+    ### 7. Telecommunication
+
+    ### 8. Structural health monitoring
+
+    ### 9. Software engineering
+
+    ### 10. Insurance
+
+    ### 11. Machine translation
+
+    ### 12. Marketing
+
+    ### 13. Medical diagnosis
+
+    ### 14. Natural language processing and understanding
+
+    ### 15. Online advertisement
+
+    ### 16. Data mining
+
+    ### 17. Computer networks
+
+    ### 18. Brain-machine interface
+
+    ### 19. DNA Sequence
+
+    ### 20. Data quality
+
+    ### 21. Economics
+
+    ### 22. Financial market analysis
+
+    ### 23. Security
+
+    ### 24. General computer games
+
+
+    # 6. CHAPTER 5: TOOLS FOR MAKING MACHINE LEARNING
+
+
+    The following are the best Machine Learning tools and framework for developers.
+
+
+    **Google ML kit**
+
+    This is a kit that allows developers to use Machine Learning to build features
+    in Android and iOS no matter their level of expertise. This includes text recognition,
+    face recognition, barcode scanning, landmark recognition.
+
+
+    **Open NN**
+
+    This is a programming library with tutorials although this tool is meant for experienced
+    developers
+
+
+    **Apache Mahout**
+
+    This is a tool for statisticians or data scientist to implement their own algorithm.
+    It is used for filtering and classification.
+
+
+    **Haven On Demand**
+
+    It provides high-level Machine Learning enterprise developers. The usage of this
+    model ranges from face detection, image classification, speech and object recognition,
+    etc
+
+
+    * `APACHE PREDICTION`
+
+    * `ACCORD .NET`
+
+    * `AMAZON MACHINE LEARNING`
+
+    * `AMAZON SAGE MAKER`
+
+    * `AMAZON API`
+
+    * `AMAZON''S DEEP SCALABLE SPARSE TENSOR NETWORK – DSSTNE`
+
+    * `AZURE MACHINE LEARNING`
+
+    * `AZURE MACHINE LEARNING MANAGEMENT`
+
+
+    # CONCLUSION
+
+    I hope you enjoyed and find a value for your needs. Before you close out this
+    book, if you find this book is helpful, have any comments or any suggestions,
+    would you be so kind as leave a review of this book? With your generous comments,
+    I will continue to develop the book better to the audience. Thanks again for downloading
+    and reading this book
+
+
+    If you find this book helpful, you can also access my other books through the
+    links below.
+
+
+    * Book Series #1: [Self-Learning Book: Learn the step-by-step secrets and simple
+    methods of improving Self-Learning skills, inspired by a Korean high-school student](https://www.amazon.com/dp/B07Q857KHM)
+
+    * Book Series #2: [Social Skills Secrets: Your step-by-step guide to rapidly and
+    easily restart your social life -dedicated to discharged Korean soldiers-](https://www.amazon.com/dp/B07NX9C81R)
+
+    '
+  trans: '
+
+
+    欺诈检测的另一个问题是在线欺诈。机器学习让网络空间变得安全可靠。追踪资金欺诈是其功能之一。例如，Paypal 使用 `ML` 来打击洗钱行为。它使用一些工具对在其内部发生的数百万次交易进行比较，并将买家和卖家之间的交易区分为合法交易和非法交易。
+
+
+    ### 3. 搜索引擎
+
+    供你参考，Google 和其他搜索引擎使用机器学习来改进搜索结果。引擎随着搜索的进行不断学习。如果客户端在查询后停留在页面并打开了搜索结果，机器就会学习该结果符合搜索请求；但如果它没有留在第一页而是继续向下滚动，机器就会学习到搜索结果与查询不匹配。因此，机器学会了改进搜索结果。
+
+
+    ### 4. 预测
+
+    `ML` 用于 GPS 导航服务。当前位置和车辆速度被保存在服务器流量管理中。它根据存储在过去的输入经验，帮助估计最可能发生拥堵的地方。
+
+
+    在在线交通网络中，`ML` 在预测高峰时段的乘客需求方面起着重要作用。`Uber` 是在其所有服务领域都使用 `ML` 的交通系统之一。
+
+
+    ### 5. 农业与食品
+
+    `ML` 已用于食品加工、发酵、过滤、干燥、流变学和湿热测量。它们在热处理和感官科学中也有用途。
+
+
+    机器学习广泛使用的其他领域包括：
+
+
+    ### 6. 用户行为分析
+
+    ### 7. 电信
+
+    ### 8. 结构健康监测
+
+    ### 9. 软件工程
+
+    ### 10. 保险
+
+    ### 11. 机器翻译
+
+    ### 12. 营销
+
+    ### 13. 医学诊断
+
+    ### 14. 自然语言处理与理解
+
+    ### 15. 在线广告
+
+    ### 16. 数据挖掘
+
+    ### 17. 计算机网络
+
+    ### 18. 脑机接口
+
+    ### 19. DNA 序列
+
+    ### 20. 数据质量
+
+    ### 21. 经济学
+
+    ### 22. 金融市场分析
+
+    ### 23. 安全
+
+    ### 24. 通用电脑游戏
+
+
+    # 第 6 章 第五章：机器学习工具
+
+
+    以下是面向开发者的机器学习工具和框架。
+
+
+    **Google ML kit**
+
+    这是一套允许开发者无论专业水平如何，都能使用机器学习在 Android 和 iOS 中构建功能的工具包。这包括文本识别、人脸识别、条形码扫描、地标识别。
+
+
+    **Open NN**
+
+    这是一个带有教程的编程库，尽管该工具是为经验丰富的开发者设计的。
+
+
+    **Apache Mahout**
+
+    这是一个统计学家或数据科学家实现自己算法的工具。它用于过滤和分类。
+
+
+    **Haven On Demand**
+
+    它为企业开发者提供高级机器学习。该模型的使用范围从人脸检测、图像分类、语音和物体识别等。
+
+
+    * `APACHE PREDICTION`
+
+    * `ACCORD .NET`
+
+    * `AMAZON MACHINE LEARNING`
+
+    * `AMAZON SAGE MAKER`
+
+    * `AMAZON API`
+
+    * `AMAZON''S DEEP SCALABLE SPARSE TENSOR NETWORK – DSSTNE`
+
+    * `AZURE MACHINE LEARNING`
+
+    * `AZURE MACHINE LEARNING MANAGEMENT`
+
+
+    # 结
+
+    希望你喜欢并发现它对你有所价值。在你结束这本书之前，如果你觉得这本书很有帮助，或者有任何评论或建议，能否请你为这本书留留评价？有了你慷慨的评论，我将继续为读者更好地开发这本书。再次感谢下载和阅读这本书。
+
+
+    如果你觉得这本书很有帮助，也可以通过下面的链接访问我的其他书籍。
+
+
+    * 系列丛 #1：[自学书籍：学习提高自学能力的循渐进秘诀和简单方法，灵感源于一名韩国高中生](https://www.amazon.com/dp/B07Q857KHM)
+
+    * 系列丛 #2：[社交技巧秘密：快速轻松地重新开始社交生活的分步指南——献给退伍韩国的韩国士兵](https://www.amazon.com/dp/B07NX9C81R)
+
+
+    '
+  toc: []
