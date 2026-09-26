@@ -1,0 +1,584 @@
+- pgno: 0
+  md: '# # Application of Hybridization Methods to Detect Network Attacks in Wireless
+    Sensor Networks
+
+
+    Natalia Nestor
+
+    Department of Computer-A Design
+
+    Lviv Polytechnic University
+
+    Lviv, Ukraine
+
+    natalia.n@lpcmu.ua
+
+
+    Oksander Belei
+
+    Department of Computer-isted Design
+
+    Lviv Polytechnic University
+
+    Lviv, Ukraine
+
+    Oleksander.I.Belei@lpmu.ua
+
+
+    Vasil Tomyuk
+
+    Department of Computer-isted Design
+
+    Lviv Polytechnic University
+
+    Lviv, Ukraine
+
+    Vasil.V.Tomyuk@lpmu.ua
+
+
+    **Abstract—** The study proposes the structure of a network distributed attack
+    detection system is two-tier: the first level provides analysis of individual
+    packets and network attacks by signature, and the second process regulates data
+    streams using adaptive classifiers. The method of analyzing network connections
+    on the basis of hybridization of computational intelligence can significantly
+    increase the increased detection of attacks by 1.28%. The implementation of the
+    proposed technique in the basic form of detecting network attacks can be used
+    properly from the attack detection system in addressing the classification of
+    attacks.
+
+
+    An attack detection for different types of attacks in the WSN is proposed in [1].
+    In [2], a hybridized intelligent search algorithm to solve the problem of localization
+    in wireless sensor networks is presented.
+
+
+    WSNs consist of a number of sensor units and they have a distributed probability
+    classification with high capacity, large coverage area and monitoring [3]. The
+    fabulous approach presenting source code and results are shown [4].
+
+
+    Many branches of the ABC can be found in the literature review [5]. The fault-tolerant
+    clusters of the local network combining packets signatures and switches architecture
+    are proposed [6].
+
+
+    **Keywords—**attack detection system, security, hybridization of network, classifiers,
+    cervical intelligence.
+
+
+    # I. INTRODUCTION
+
+
+    Today is becoming increasingly important to integrate trusted user authentication
+    to IT solutions to protect devices that transmit sensitive data. Biometric data
+    can be used to authenticate users and effectively protect the Internet of Things
+    (IoT). However, user recognition and authentication management using artificial
+    intelligence (IMAU) are becoming increasingly important for the security of platforms
+    in all areas of IoT.
+
+
+    The development of an attack detection system is one of the priority in the field
+    of information security. The importance of solving this problem is due to the
+    constant increase and diversity of threats to the IoT network, the implementation
+    of which can lead to serious vulnerabilities and data loss, requires more effort
+    and time and on the part of administrators and security analysts. In companies
+    operating in production of products, to maintain the security of operations, human
+    and material resources are spent on maintaining equipment in the basic form of
+    the attack detection system and to ensure the reliability of the data packets,
+    it is necessary to complete them in a minimum logical flow. This data flow will
+    work with higher levels of network traffic to detect anomalies observed over the
+    network. Both network signature mechanisms for exemplary anomalous attacks and
+    heuristic approaches can be used to detect attacks. In the case of signatures,
+    the solution is a procedure that checks the appearance of a given sequence of
+    bytes in the contents of network packets.
+
+
+    The articles [7] with the design of the route network based on packet models.
+    The paper [8] presents an analysis of different solutions for the real-time development
+    environment for computer aided design (CAD) system. The method of combining demand
+    for features and shows the optimal selection options in real-time [9].
+
+
+    In [10] the work of the prototype of the attack detection system the method of
+    formation of the training sample, the results of experiments and the topology
+    of the experimental stand are described
+
+
+    Analysis of research in the field of IoT protection against cyberattacks shows
+    that there is no flexible method of training binary classifiers to detect network
+    attacks. Most existing methods are limited to only one scheme of solutions. The
+    proposed solution is aimed developing a hybrid approach to the construction of
+    a classifier tree and for learning of instances. The method can detect different
+    algorithms without stabilizing the efficiency of the attack detection system by
+    selecting the best solution option.
+
+
+    # II. PROBLEM FORMULATION
+
+
+    To each input, $z \in Z$ corresponds to a term, describing its attributes $(z_1,
+    z_2, ..., z_n)$ - vector of signs.
+
+
+    Hereinafter, the terms "object", "instance", "record", "image" and "feature vector"
+    will be identified and used identically. Without the diminishing, we can assume
+    that each object is mapped exactly one class, and the set is a disjoint union
+    of sets describing individual classes. Otherwise, it is that the classification
+    problem'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'is solved, which must be reduced to the previous problem by introducing additional
+    features into the objects, allows you to uniquely characterize the input objects.
+    You need to build a classification algorithm,
+
+
+    $R \in R \equiv [X_c \rightarrow \{0, \dots, m\}]$ which minimizes the error of
+    the ratio of objects to a class:
+
+
+    ```
+
+    $O(R, X_c) = \min_{\hat{R}} \frac{\#\{z \in C(c) : R(z) \neq c\}}{\#X_c}$ (1)
+
+    ```
+
+
+    Here, for convenience of describing the algorithm, an auxiliary mapping is introduced:
+    $C \rightarrow \{0, \dots, m\}$, which compares each class with its VC:
+
+
+    $VC \in C(C(c))$ - The considered classifiers are alike from the point of view
+    of their ability to adjust parameters in the course of constant presentation of
+    their input vectors. On constant factor, classifiers have different quantitative
+    and qualitative characteristics, which allows us to talk about their heterogeneity.
+
+
+    The asked task can be formulated as follows. Basic classifiers are given $F_i^{(k)}
+    : \mathbb{R}^n \rightarrow \{0, \dots, m\}$, trained on a set of labeled vectors
+    through network connection
+
+
+    $\Psi^{X_c} = \{x_{cj}, y_{cj}\}_{j=1}^M = U_{cc} \bigcup_{j=1}^M \chi^{X_c}(z,
+    C(c))$ and and aggregates the classification rules thus:
+
+
+    $F : \{0, \dots, m\}^{(m)} \times \mathbb{R}^n \rightarrow F^*$, which combines
+    the initial rules of the classification rules in
+
+
+    $X_c^{(L)} = X_c - c$ - a set of learning vectors. The presented classification
+    is an initial value
+
+
+    $l_{ij}^o \in \{0, \dots, m\}$ ($o \leq m$) - elements of possible class labels
+    in the test set. Besides, function-based multi-level procedure, completes the
+    development of a general approach to constructing a classification rule based
+    on a set of solutions. It is necessary to configure the aggregation so that the
+    empirical risk of its composition with the basic classifier does not exceed the
+    minimum value of empirical risk of individual classification rules:
+
+
+    ```
+
+    $\Omega(F \circ \{F^{(1)}, \dots, F^{(m)}\}, X_c) \leq \min \Omega(F)$
+
+    ```
+
+
+    The approach referred to in this paper as "hybrid of computational identity methods"
+    involves a combination of diverse solutions fixed after their proper generation,
+    and is considered in the context of solving problems of detecting and classifying
+    abnormal network systems. For this purpose, the following aggregations were experimentally
+    studied: (1) majority of, (2) weighted voting, (3) multilevel stacking, (4) Fix-Hodge
+    methods. The majority vote is established as follows:
+
+
+    $(M^F)$
+
+
+    ```
+
+    $G(z) = \frac{1}{k} \sum_{i=1}^M k \in F^{(i)}(z) > \frac{1}{2} \sum_{i=1}^M k
+    \in F^{(i)}(z)$ (3)
+
+    ```
+
+
+    As a result of an application to the analyzed object, the set of classes for more
+    than half of the voices received from basic classifiers is given formed. An extension
+    of this identity function is the weighted vote, presented in the following way:
+
+
+    $(M^G)$
+
+
+    ```
+
+    $G(z) = Arg \max_{k} \sum \omega_i k \in F^{(i)}(z)$ (4)
+
+    ```
+
+
+    The coefficients are selected so that an identity is given: $\omega_i = 1$. Following,
+    the formula can be used to calculate:
+
+
+    ```
+
+    $\omega_j = \frac{\#X_c [k \in F^{(j)}(x_{kj})]$}{\#X_c [k \in F^{(i)}(x_{kj})]}$
+    (5)
+
+    ```
+
+
+    In this formula, the fraction of classifier-recognized vectors over all other
+    labeled vectors, correctly sets of solutions. When substituting $\omega_j = 1/P$
+    in the formula above it is proved
+
+
+    Multilevel laying is a composition of function with basic classifiers and an identical
+    function
+
+
+    $G^{ST}$ $F^{ST}$
+
+
+    ```
+
+    $G(z) = F^{(1)}(z), \dots, F^{(m)}(z)$ (6)
+
+    ```
+
+
+    In this formula, the function integrates the over and returns the results of the
+    function. The classifier''s solution obtained from one or another function of
+    the identity is determined by how correctly the basic classifier 6 recognizes
+    the training instances in the nearest areas of the vector $z$. Thus, G function
+    can be defined as:
+
+
+    $(F^{(IU)})$
+
+
+    ```
+
+    $G(z) = \frac{1}{D_{iu}(z)} \sum_{i=1}^M F^{(i)}(z) [x_i = z] = \max D D_{iu}(k)$
+    (7)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '$\{i_1, \dots, i_g\} = \arg\min_{i=1\dots,M} \rho(x, z) \quad (8)$
+
+
+    The formula builds the labels of classes for the classifiers that have the largest
+    number of recognized objects, the distance from the vector is minimal to the metric,
+    for this, the indexed subset satisfies the requirement:
+
+
+    ```
+
+    $G(\mathbf{z}) = \arg\min_{i=1}^P F^{(i)}(\mathbf{z}) = \sum_{i=1}^P [F^{(i)}(\mathbf{x}_i
+    = z_i)] = \max_{D} D_k^{(i)} \quad (9)$
+
+    ```
+
+
+    connections. The study considers template signatures, namely examples for finding
+    template substrings, which are the most common in the implementation of the ADS.
+    To form a set of test data containing scanned sequence generation was implemented,
+    the essence of which was to combine some generated randomly and randomly selected
+    substrings of the template and add this record to the data. The values of the
+    content were extracted, according to the rules of the Snort signature. In Fig.
+    1 graphs showing the dependence of the execution time of each of the algorithms,
+    depending on the number of substrings of a fixed length of the input of 5000.
+    Fig. 2 shows the curves representing the time costs of each of the algorithms
+    when changing the length of the analyzed string for a fixed size of the required
+    templates 500 substrings.
+
+
+    During the study, a set of functional requirements for the attack detection system
+    (ADS) was formed:
+
+
+    +   - Ability to analyze network packets in IoT networks.
+
+    - Ability to analyze the content of network packets in IoT fragmented sequences
+    of IP and TCP streams.
+
+    - Ability to compile fragmented traffic in IoT systems. ADS must have built-in
+    functions for fragmented packets and their proper binding.
+
+    - Ability to detect covert attacks on IoT systems by inserting.
+
+    - Ability to process packets in IoT systems that violate TCP session procedure.
+
+
+    ![](img/d390f8f271c1e3bca78b03230d5f62b3_2_0.png)
+
+
+    Fig. 1. The dependence of operation time of algorithms for inserting a template
+    substring on the size of the searched lines.
+
+
+    The aim of this study is to increase the effectiveness of detecting attacks on
+    the Internet of Things using a methodological approach, which is based on the
+    hybridization of artificial intelligence.
+
+
+    # III. THE STRUCTURE OF THE NETWORK ATTACK DETECTION SYSTEM IN THE INTERNET OF
+    THINGS BASED ON SIGNATURE ANALYSIS
+
+
+    Signature analysis includes a range of values designed to compare the values of
+    content-attributes of packages the number of signatures installed by the user
+    or represent the system. The signatures can be represented as substrings or arguments
+    that indicate an abnormal action on the network. In the case of a template, an
+    evaluation of the rules of the signature is performed, and for each of the characters,
+    it is characterized by character or byte in the analyzed string, which is in the
+    captured packet. The content function is generated by the call of a user or function
+    that returns the value of the metric-attribute for comparison. Although template
+    signatures are based on simple examples of ending a template each package and
+    require the chooser to choose which satisfies the least time, function type signatures
+    are typically used to collect statistics for multiple defined packages or
+
+
+    ![](img/d390f8f271c1e3bca78b03230d5f62b3_2_1.png)
+
+
+    Fig. 2. The dependence of operation time for algorithms of a template substring
+    on the length of the analyzed line.
+
+
+    The results were obtained during the execution of algorithms taking into account
+    the operating time per hundred randomly generated rows. In the cases of the standard
+    and the Boyer-Moore algorithm, there is approximately the same asymptotics of
+    temporal complexity of more advantageous of template strings on a final size of
+    the machine, the A-Korasick algorithm shows the best results.
+
+
+    In Fig. 3 and 4 show the change in the operating time of the modified A-Korasick
+    algorithm during processing at the level of the processor and the graphics processor.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 2/47
+
+
+    anomalous connections and background white traffic. The software has been used
+    to generate attacks, as well as many scenarios, including and hping3 tools which
+    run in different modes and are designed to perform attacks such as host scan and
+    denial of service. The basis for creating vectors describing normal traffic was
+    the MILAW dataset from 7/2015, which was pre-processed by the pkt. reader component
+    (Comp. 6).
+
+
+    ![](img/d390f8f271c1e3bca78b03230d5f62b3_3_0.png)
+
+
+    Fig. 3. The dependency of the running time of the Ao-Korash algorithm on the size
+    of required cores.
+
+
+    ![](img/d390f8f271c1e3bca78b03230d5f62b3_3_1.png)
+
+
+    Fig. 6. The dependency of the running time with the vector quantization error
+    on the number epoch of learning for the class from the normal.
+
+
+    ![](img/d390f8f271c1e3bca78b03230d5f62b3_3_2.png)
+
+
+    Fig. 4. The dependency of the operating time of the Ao-Korash algorithm on the
+    length of analyzed string.
+
+
+    In Fig. 7 and 8 shows of vector quantization errors for two types of competitive
+    learning algorithm depending on the number of learning eras and the radius of
+    the matching window. The experiment was performed with different settings and
+    sequences corresponding to a certain class: normal, host scan and denial of service
+    (syn). Each of these points is generated by the vector quantization errors per
+    100 runs, and the initial random initialization of the Kohonen networks were the
+    same for both algorithms.
+
+
+    ![](img/d390f8f271c1e3bca78b03230d5f62b3_3_3.png)
+
+
+    In the experiments considering Fig. 5, approach using a modification of the Boyer-Moore
+    algorithm is
+
+
+    ![](img/d390f8f271c1e3bca78b03230d5f62b3_3_4.png)
+
+
+    Fig. 5. The dependency of the operating time of the Boyer-Moore algorithm on the
+    length of analyzed string.
+
+
+    Fig. 7. The dependency of the running time with the vector quantization error
+    on the number epoch of learning for the class from the class.
+
+
+    In the approaches described above, eight threads on four processor cores and 4096
+    threads on graphics were used to support substantial traffic.
+
+
+    ![](img/d390f8f271c1e3bca78b03230d5f62b3_3_5.png)
+
+
+    Applying these approaches was possible to reduce the time spent on execution:
+    Boyer-Moore algorithm in 2.63-3.23 times when working on the CPU, Ao-Korash algorithm
+    in 1.41-1.77 times when working on the CPU and 30-370 times when working on the
+    graphics processor. The value of these values compared to the smallest and largest
+    increase in performance of algorithm at six control points, made with a step of
+    100. Further increase in the size of many substrings of the template led to overflow
+    of the memory of the video card.
+
+
+    Fig. 8. The dependency of the vector quantization error value on the number of
+    learning algorithm epoch from the synflow class.
+
+
+    # IV. DISCUSSION
+
+
+    Experiments to detect network attacks by methods using the algorithm of genetic-competitive
+    learning of the Kohonen network, the evolutionary model of the artificial immune
+    system, hierarchical hybridization of intelligent detectors and ADS architecture.
+    The first four experiments used a data set that included two classes of
+
+
+    In all cases, a genetic strategy based on the roulette mechanism without mutation
+    and inversion operators was used for this. To demonstrate the effectiveness of
+    the algorithm of genetic-competitive learning and its advantages over the standard
+    implementation of algorithm, various characteristics of the Kohonen'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '2/48
+
+
+    network used, presented in Table 1. In particular, using the principal components
+    method, the dimension of the input vector varied from 10 to 20 with sweep, the
+    scale of neural nodes detected in the middle, from 100 to 440 euro network Kohonen.
+
+
+    embedded in the code of ADS. The event-oriented packet analyzer provides an interface
+    for accessing all fields of input packets and for re-assembled network connections.
+    Experiments have shown that the processing speed of network flows developed by
+    the system is more than 1.5 times higher than that by other solutions.
+
+
+    TABLE I. CHARACTERISTICS OF THE KOHONEN NETWORK USED IN EXPERIMENTS
+
+
+    | Network class | Training sample size | Dimension of the input vector | Size
+    of the output grid | Number of neurons | Initial radius of the evolution |
+
+    |---|---|---|---|---|--|
+
+    | normal | 900 | 20 | 15-15 | 40 | 21.21 |
+
+    | scan | 100 | 10 | 20-30 | 30 | 28.28 |
+
+    | synfold | 400 | 15 | 10-20 | 20 | 14.14 |
+
+
+    A characteristic feature of the proposed hybrid algorithm is the process of modeling
+    the evolution of neurons which is achieved through various optimizations of the
+    Kohonen network. The added optimization allows to reduce the number of epochs
+    reaching the specified maximum value of the vector quantization error. In particular,
+    for the case of the system the number of epochs was reduced 74 compared to the
+    standard implementation of the algorithm.
+
+
+    Fig 9 shows that the detected optimization of the neurons of the Kohonen network
+    to the algorithm of competitive learning led to a decrease in the number of epochs
+    in this. The smallest value of the vector quantization error is 0.00127. For an
+    optimized generic algorithm, the same value of vector quantization was reached
+    at the 189-th epoch. The implementation of genetic optimization has reduced the
+    operation of the algorithm during learning:
+
+
+    The presented method allows to increase efficiency of work of ADS and can be used
+    as a basis for construction of systems of classification architectures.
+
+
+    ![](img/d390f8f271c1e3bca78b03230d5f62b3_4_0.png)
+
+
+    Fig 9. The magnitude of the vector quantization error for the number of epochs
+    in the range shown for the case of a hybrid algorithm.
+
+
+    For the graph presented in Fig.9, the number of epochs was reduced by 74. The
+    magnitude of the vector quantization error, numerically equal to 0.01721, was
+    reached at the 125-th epoch of the learning of a hybrid algorithm.
+
+
+    Experiments were performed to evaluate the algorithms and methods, experimental
+    comparison of the network service with the characteristics of ADS. The results
+    experiment confirmed that the developed ADS meets the functional and non-functional
+    requirements, as well as the requirements for computing intelligent systems.
+
+
+    # CONCLUSION
+
+
+    Developed architecture of distributed ADS, built on the basis of hybridization
+    of artificial intelligence methods and signature analysis. ADS is characterized
+    by the hot insertion of executable code by loading programs, presented in the
+    form of binary libraries and binaries
+
+
+    +   [1] P. Sherba, A. Amiralli, S. Saqueda, “Attack Detection using Random Forest
+    and Multi-Objective Classification”, International Conference on Communication
+    and Signal Processing, 2019, pp. 0450-0454.
+
+    [2] J. Stimburger, E. Tuba, N. Naciban, M. Bek and M. Yuba, “Intrusion Detection
+    by Problem by Hidden Markov Model Search”, 2019 14th International Conference
+    on Wireless Computing (IWMC), Limisak, 2016, pp. 318-326.
+
+    [3] C. Liu, S. Liu, W. Wang, D. Zhou, “The performance of classification route
+    based in wireless networks”, Mobile Networks and Applications, 10(4), 2016, pp.
+    131.
+
+    [4] N. Jaworski, I. Mwanji and M. Obidar, “Implementation of Classification Effective
+    Machine Learning Method Based on Cluster Selection”, IEEE 2015 IEEE International
+    Conference on the Experience of Detection and Application of Cyber Systems (IDEAS),
+    2015, pp. 1-6.
+
+    [5] K. El, H. Hassan, N. Tal, A. B. Nawaz, A. M. Elfine, H. Abdullah and S. Tah,
+    “An hybrid approach for large-scale RFID Network Planning”, 2019 IEEE International
+    Joint Conference on Computer Science and Information Technology (CSIT), Zahraniuk,
+    Ukraine, 2019, pp. 1-517.
+
+    [6] V. Mazar and R. Valkuskiyaya, “Transmission System for a Distributed IDS Intrusion
+    Detection System”, 2019 International Conference on the Experience of Detection
+    and Application of Cyber Systems (IDEAS), Poland, 2019, pp. 1-6.
+
+    [7] V. Mazur, “Attack detection using a route based on packet methods”, 2017 14th
+    International Conference on The Experience of Detection and Application of Cyber
+    Systems in Microelectronics (CADMS), Lisbon, 2017, pp. 39-46.
+
+    [8] Matovskiy, O. Libov, M. Lebedev, V. Urbanovich, “Evaluation of developed ADS
+    systems. The Experience of Detection and Application of Cyber Systems, CADMS,
+    9th International Conference, 2007, pp. 3-8.
+
+    [9] O. Blev, “Development of a technique for ‘Detecting Distributed Attacks’ in
+    the Security of Wireless Network Search”, 2019 IEEE 15th International Joint Conference
+    on Computer Science, Computer Engineering and Information Technology (CSIT), Zahraniuk,
+    Ukraine, 2019, pp. 1-52.
+
+    [10] O. Blev, L. Halkiv, “Using Neural Networks to Detect DDoS Attacks”, IEEE
+    Third International Conference on Data Science & Processing, 2020, pp. 61-66.
+
+
+    Authorized license used to identify: UNIVERSITY OF CONNECTICUT. On May 17, 2021
+    at 20:26:01 UTC via IEEEplore. All rights reserved.'
+  merge: -1
+  img_proc: true
