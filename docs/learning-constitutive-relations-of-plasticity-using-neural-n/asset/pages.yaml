@@ -1,0 +1,772 @@
+- pgno: 0
+  md: '# Extreme Mechanics Letters 52 (2022) 101645
+
+
+    Contents available at ScienceDirect
+
+
+    # Extreme Mechanics Letters
+
+
+    journal homepage: www://www.elsevier.com/locate/eml
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_0_0.png)
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_0_1.png)
+
+
+    # Learning constitutive relations of plasticity using neural networks and full-field
+    data
+
+
+    Yin Zhangᵃ, Qing-Jie Liᵇ, Ting Zhuᵇ, Lu ⁱᶜ* Massachusetts Institute of Technology,
+    Cambridge, MA 02139
+
+
+    ᵃDepartment of Nuclear Science and Engineering, Massachusetts Institute of Technology,
+    Cambridge, MA 02139
+
+    ᵇGeorge W. Woodruff School of Mechanical Engineering, Georgia Institute of Technology,
+    Atlanta, GA 30332
+
+    cDepartment of Materials Science, Massachusetts Institute of Technology, Cambridge,
+    MA, 02139
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    Article history
+
+    Received 10 November 2021
+
+    Received in revised form 10 January 2022
+
+    Accepted 1 February 2022
+
+    Available online 9 February 2022
+
+
+    +   Keywords:
+
+    Neural networks
+
+    Plasticity
+
+    Finite element method
+
+
+    Neural networks have demonstrated capabilities of learning constitutive relations
+    from big data, however most-based constitutive models require experimental data
+    from a considerable number of stress-strain paths that are expensive to collect.
+    We develop a hybrid method - NN (FEM-NN) framework for learning the constitutive
+    relations from full-field data. As well, the non-uniform displacement field from
+    a deformed sample with inhomogeneities can be used for training. Full-field data
+    has the advantage of providing many different stress-strain paths in a single
+    test, enabling efficient training of material models characterized by rate-independent
+    j plasticity. The FEM-NNs demonstrate that the trained NN produce the constitutive
+    relations of plasticity with high accuracy and efficiency.
+
+    2022 Elsevier Ltd. All rights reserved.
+
+
+    # 1. Introduction
+
+
+    Constitutive relations of plasticity are critically important for representing
+    the mechanical behavior of materials beyond their elastic limits. These are commonly
+    based on either phenomenological [1,2] or mechanistic models [3]. The development
+    of an isotropic (18)-thermodynamically-informed plasticity model requires a comprehensive,
+    yet extensive experimental program to capture the stress-strain patterns along
+    many paths. In the development of a mechanistic model, such as a crystal plasticity
+    model, it relies on the measurement of the microscopic deformation details that
+    can be difficult to obtain. In recent years, a different approach has emerged
+    that the data-driven learning of constitutive relations through deep neural networks,
+    does not necessarily require much human input and is potentially able to acquire
+    the data generated from deformed samples.
+
+
+    The NN-based learning of constitutive relations has been applied to problems involving
+    heterogeneous elasticity [9–11], rate-dependent plasticity [12–14], path-dependent
+    plasticity [15–17], isotropic-thermodynamically-informed plasticity [21–22]. To
+    train these NNs,
+
+
+    studies require experimental measurements from a considerable number of stress-strain
+    paths, which are expensive to collect. It can become much more efficient to study
+    the effects of multiple elements on constitutive relations when exploring the
+    nearly infinite space of high-entropy alloys [23,24]. Moreover, the conversion
+    of dog-bone-tested data into the full constitutive model requires the data that
+    are collected for these tests. This mode of learning does not represent an efficient
+    use of materials and testing effort. Without much information, the strain-path
+    explored alone limits the learning of constitutive relations.
+
+
+    Recently, a hybrid finite element - NN (FEM-NN) framework was developed to augment
+    machine learning with samples from the partial field of deformations [25], and
+    can be implemented as an extension of the off-sample FEM framework [26]. This
+    makes it possible to learn constitutive relations from the observations of full-field
+    data. The hybrid FEM-NN learns to machine-learn constitutive relations of plasticity
+    from the full-field deformation of deformed samples, together with the sample-level-displacement
+    data. The constitutive relations are learned through the FEM-NN, which acts as
+    an'' example of a plastic constraint in the framework of rate-independent j_2
+    plasticity.
+
+
+    > * Corresponding author: Department of Nuclear Science and Engineering,
+
+    Massachusetts Institute of Technology, Cambridge, MA, 02139.
+
+    E-mail: ljiu@mit.edu (J. Lu).
+
+
+    https://doi.org/10.1016/j.elastmec.2022.101645
+
+
+    2352-4316 © 2022 Elsevier Ltd. All rights reserved.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'generation/ of the NN-based plasticity relation; (ii) using a nonlinear FEM
+    for obtaining the non-displace field of a sample using the plasticity relation
+    differ; (iii) computing the cost and its gradient by reverse algorithmic differentiation
+    [27] for backpropagation until the FEM-NN relation results with the ground truth
+    [28].
+
+
+    We emphasize that the non-displace field is an example of the full-field data
+    used for training NNs, and it can be obtained by FEM test where field inclusions
+    are introduced into the tensile region. Many different, such strain-rate tests
+    are performed on a single test and based on the material. To evaluate the displacement
+    of the FEM framework, we provide the ground truth through a surrogate computational
+    model, which provides the full-field data of a deformed sample from the FEM.
+
+    The surrogate model can be replaced by the full-field data obtained from image
+    correlation (DIC) [22]. Measurements in the test and the constitutive relation
+    of plasticity using geometry samples are used in the training set. We also study
+    with different strain hardening behaviors to demonstrate the general applicability
+    of the hybrid FEM-NN framework for learning constitutive relations of plasticity.
+
+
+    # 2. A hybrid-NN framework for learning constitutive relations
+
+
+    # 2.1. Displacement-based finite element method
+
+
+    The hybrid FEM-NN framework is developed by extending the displacement-based finite
+    element method. Here we describe its equations by representing tensors and vectors
+    as bold symbols. The form of equilibrium equations is given by
+
+
+    ```
+
+    $$\nabla \cdot \sigma + b = 0$
+
+    ```
+
+
+    where $\sigma$ is the Cauchy stress tensor and $b$ is the body force per unit
+    volume. Focusing on small analysis, the strain tensor $\varepsilon$ is related
+    to the displacement vector $u$ by
+
+
+    ```
+
+    $$\varepsilon = \frac{1}{2}(\nabla u + \nabla u^T)$
+
+    ```
+
+
+    Since $\sigma$ depends on $\varepsilon$ through the constitutive relation, the
+    combination of (1) and (2) allows one to solve the displacement field that satisfies
+    the strong form of equilibrium. In contrast, the work of equilibrium equations
+    can be expressed in terms of the virtual work principle over a volume of the material
+    $V$ bounded by its surface $S$.
+
+
+    ```
+
+    $$\int_V \sigma :cdot d\delta\varepsilon - \int_V b \cdot d\delta u = 0$
+
+    ```
+
+
+    where $\delta u$ is the virtual displacement, $\delta\varepsilon$ is the virtual
+    strain, and $t$ is the surface force vector on $S$. Also $\sigma$ depends on the
+    displacement field $u$ through the constitutive relation. The work of equilibrium
+    equation of (3) can be discretized into finite elements to solve the displacement
+    field using the Galerkin method.
+
+
+    In this work, the procedure is implemented using the open-source framework FEniCS
+    [26]. The variational problem could be solved in the domain-specific language
+    UFL [31], using the following Python statement
+
+
+    ```
+
+    $F = \int_\Omega \sigma :cdot d\delta\varepsilon$
+
+    ```
+
+
+    where $F$ stands for the functional of the variational problem, the "inner" represents
+    the scalar product of two tensors through the dot operator in Eq. (3), and $d\Omega$
+    integrates over the volume $V$. In Eq. (4), $\sigma$ depends on an unknown displacement
+    field $u$. Here the de- displacement boundary conditions are not applied. Because
+    the function is fixed, it is possible to assemble and solve the nonlinear system
+    $F=0$ with Newton''s method. The Jacobian of such a system is calculated automatically
+    by automatic differentiation.
+
+
+    # 2.2. Constitutive relations of plasticity
+
+
+    The constitutive relations are learned through an example plasticity constraint
+    in the form of rate-independent $J_2$ plasticity. Specifically, the strain rate
+    is decomposed into the elastic strain rate $\varepsilon^e$ and plastic strain
+    rate $\varepsilon^p$
+
+
+    ```
+
+    $$\varepsilon = \varepsilon^e + \varepsilon^p$
+
+    ```
+
+
+    The elastic strain rate determines the stress rate
+
+
+    ```
+
+    $$\dot{\sigma} = \lambda\dot{\varepsilon}I + 2\mu\dot{\varepsilon}$
+
+    ```
+
+
+    where the Lamé constants $\lambda$ and $\mu$ are related to Young''s modulus $E$
+    and Poisson''s ratio by $\lambda = \frac{E\nu}{(1+\nu)(1-2\nu)}$ and $\mu = \frac{E}{2(1+\nu)}$.
+    Assuming associated plasticity flow, the $J_2$ plasticity
+
+
+    ```
+
+    $$\sigma^p = 2\mu\dot{\varepsilon}^p$
+
+    ```
+
+
+    where $\dot{\varepsilon}^p$ is the equivalent plastic strain rate, $s$ is the
+    deviatoric stress
+
+
+    ```
+
+    $s = \sigma - \frac{1}{3}\sigma I$
+
+    ```
+
+
+    and $\sigma$ is the von Mises stress
+
+
+    In the rate-independent $J_2$ plasticity model, $\sigma_y$ the yield criterion
+    is met when $\sigma$ yields the stress yield, $\sigma_y$ is a function of the
+    equivalent plastic strain $\varepsilon^p = \int_0^t ||\dot{\varepsilon}^p|| dt$.
+    time The material has no quasi-static response and means that the hybrid FEM-NN
+    framework can learn the time-dependent constitutive behavior.
+
+
+    Note that $\sigma_y$ depends on $\varepsilon^p$ through an explicit function and
+    is determined by training a NN. When the NN learns the yield stress, the material
+    behaves elastically and predicts the correct results.
+
+
+    # 2.3. Integration procedure
+
+
+    To solve a nonlinear problem under an applied load, we break the FEM simulation
+    into $N$ load increments and the equilibrium solution via time integration at
+    the end of each load increment. It takes several iterations to find the converged
+    solution using Newton''s method. Here we describe the scheme of the algorithm
+    which can eliminate the needs for iterations and also enhance the stability of
+    the NN training. All of the method gives the integration solution for the applied
+    load.
+
+
+    At each load increment, the stress-strain response at each point is determined
+    using the standard radial return algorithm [32]. Note that $\varepsilon^p$ is
+    calculated using the increasing'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '$\sigma^{ij} = \sigma^{ij} + \lambda\Delta\epsilon_{kk} + 2\mu\Delta\epsilon_{ij}$
+
+
+    (10)
+
+
+    where $\sigma_n$ is the stress tensor at the node $n$. Then the deviatoric part
+    of $\sigma_n$ is defined as $s_n^{ij} = \sigma_n^{ij} - \frac{1}{3}\sigma_n^{kk}\delta^{ij}$
+
+
+    the equivalent stress is $\sigma_n = \sqrt{\frac{3}{2}s_n^{ij}s_n^{ij}}$. If $\sigma_n$
+    is purely elastic, then the plastic strain increment $\Delta\epsilon_n^p=0$ and
+    the stress increment is simply elastic. Otherwise, the backward Euler method is
+    used to find $\Delta\sigma_n$ by solving the nonlinear equation [30]:
+
+
+    $\Delta\sigma_n = \C(\Delta\epsilon_n - \Delta\epsilon_n^p)$
+
+
+    Since the elastic-plastic transition involves an abrupt change of slope in the
+    stress-strain curve, this may cause a failure in the backup during plastic transition
+    of $\sigma_n$. To resolve this, we smoothen the plastic transition by using a
+    transition function $f(\sigma_n)$ as defined in function [33]. Namely, Eq. (11)
+    is modified as
+
+
+    $\Delta\sigma_n = \C(\Delta\epsilon_n - f(\sigma_n)\Delta\epsilon_n)$
+
+
+    (11)
+
+
+    where the indicator function $f$ is defined as $f(\sigma_n) = S(\sigma_n - \sigma_y)$.
+    If $S$ is smooth enough, this indicator function provides a smooth transition
+    between the elastic ($f=0$) and plastic ($f=1$). To find the first order of $\Delta\sigma_n$,
+    we expand $\Delta\sigma_n \approx [C - f(\sigma_n)H]\Delta\epsilon_n$, where $H$
+    is the hardening modulus $H$ calculated by automatic differentiation in FEniCS.
+
+
+    While solving Eq. (11) requires iterations for each local increment, Eq. (13)
+    provides an explicit solution of $\Delta\sigma_n$ and eliminates the need for
+    iterations. The iteration approach is implemented in [28]. In Eq. (13), the stress
+    increment is integrated over
+
+
+    all the increments $n=1...N$. To minimize the loss function $L = \sum_{n=1}^{N}
+    \left[ \frac{(\sigma_n - \sigma_n^{NN})^2}{\sigma_{max}^2} + \lambda_1 \frac{(\Delta\epsilon_n
+    - \Delta\epsilon_n^{NN})^2}{\Delta\epsilon_{max}^2} \right] dV + \lambda_2 \dots$
+
+
+    where $|\cdot||$ is the L2 vector norm. To update NN weights during each training,
+    the gradients of the NN weights and biases are needed. The function $L$ is differentiable
+    with respect to the weights and biases, so we can employ reverse automatic differentiation
+    to compute the gradients of an expansion through the chosen chain. The challenge
+    is to automate the training of the NN parameters.
+
+
+    (14)
+
+
+    The detailed procedure is described in Fig. 1. In order to update the NN weights
+    and biases during each training, the gradients of the NN weights and biases are
+    needed. Since the function $L$ is differentiable with respect to the weights and
+    biases,
+
+
+    The simulation of the tensile test is shown in Fig. 2. The specimen is $50cm \times
+    50cm$ and the radius of the circular holes are $5cm$. The specimen is discretized
+    with eight-node tetrahedral elements generated using an Abaqus script by mesh
+    [35] to feed into FEniCS. The boundary conditions are as follows: the displacement
+    is fixed at $x=0$ and $y=0$, and at $x=50$, a constant velocity of $v=0.001cm/s$
+    is applied to the other side of the sample ($x=50cm$). In Fig. 1, where the constitutive
+    relation is illustrated in the left module of Fig. 1a provides the output of yield
+    stresses applied on the accumulated plastic nodes.
+
+
+    # 2.4 Training NN from full-field data
+
+
+    The NN-based constitutive relation of plasticity in Section 2.3 can be trained
+    using experimentally measurable full-field data, such as the non-uniform displacement-data
+    of a tensile sample containing geometric heterogeneities, together with simple-plate
+    sample containing five positioned randomly colored nodes as full-field data.
+
+
+    The elastic and plastic properties are modeled separately. We generate the constitutive
+    relation from a computational model of experimental measurements. In this case,
+    the material model uses the $f_j$ plasticity with a specified yield stress $\sigma_n^{ij}$
+    and the corresponding displacement field $u_n^{NN}$ calculated by the integration
+    procedure in Section 2.3 of FEniCS.
+
+
+    The training data include the in-field displacement field $u_n^{NN}$ and the sample-level
+    force $\sigma_n^{NN}$ versus $u_n^{NN}$ for all the increments $n=1...N$. To obtain
+    the FEM-NN solution of the plate using the $\sigma_n^{NN}$ and the sample-level
+    force include the data displacement field $u_n^{NN}$ and the sample-level force
+    $\sigma_n^{NN}$ versus $u_n^{NN}$ for
+
+
+    $\sigma_n^{NN} = NN(\epsilon_n^{NN})$
+
+
+    (15)
+
+
+    where $\sigma_n=10$ MPa is the initial guess of the stress and the deformation
+    parameter $\kappa=100$ $\sigma^2$ in the constitutive relation
+
+
+    The NN used in this work consists of one hidden layer. The activations in all
+    the neurons are the following exponential linear unit function (ELU):
+
+
+    ```
+
+    ELU(x) = \begin{cases} \exp(x)-1 & x > 0 \ 0 & x < 0 \end{cases}
+
+    ```
+
+
+    (16)
+
+
+    The output of this hidden layer NN can be represented as
+
+
+    ```
+
+    NN(x) = \sum_{i=1}^{t} w_i ELU(w_{ix}x + b_i) + b_0
+
+    ```
+
+
+    (17)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# Z. Zhang, Q-j, Li, T. Zhu et al.\n\n# Extreme Mechanics Letters 52 (2022)\
+    \ 101645\n\n# a\n\nNeural network constitutive relations\n\nFEM program\n\nHidden\
+    \ layer\n\nOutput layer\n\nDiscretization\n\nInput layer\n\nConstitutive relations.\n\
+    \nFEM-NN solution\n\nReference solution (ground truth)\n\nNumerical procedures\n\
+    \nLoss function L = L(s,f)\n\n# b\n\nStart\n\nInitialize NN parameters\n\nStart\
+    \ FEM simulation\n\nN\n\n||L|| < tol\n\nApply load\n\nEnd\n\nCalculate plastic\
+    \ strain from NN yield stress\n\nUpdate parameters in NN by L-BFGS\n\nUpdate displacement\
+    \ by Newton's method\n\nBackpropagation\n\nUpdate stress field\n\nN\n\nCalculate\
+    \ loss function\n\nGround truth\n\nStress equilibrium\n\nf > fm\n\nY\n\nFig. 1.\
+    \ Illustration of the hybrid FEM-NN framework for learning constitutive relations\
+    \ based on full-field data. (a) Summary of FEM-NN training iterations. Each iteration\
+    \ involves the generation of the NN; solving the problem for obtaining the displacement\
+    \ of a deformed sample using the NN-based plasticity relation under training;\
+    \ computing the cost function and its gradient for backpropagation minimizing\
+    \ the discrepancy between the FEM simulation results and the ground truth. (b)\
+    \ Flowchart of the FEM-NN algorithm. Backpropagation to update the NN weights\
+    \ is highlighted in these steps as a key innovation of the proposed method. The\
+    \ framework can be applied to various types of materials, as shown in the figures\
+    \ and tables of this article.\n\nwhere $w_{i1}$ and $w_0$ represent the corresponding\
+    \ biases. In the three neurons $i=1,3$, and $b_i$ represent the corresponding\
+    \ biases. They follow a Gaussian distribution with mean 0 and variance 1 and all\
+    \ weights are 0. In Eq. (14) the parameters are $\\lambda_1 = 1$ and $\\lambda_2\
+    \ = 1$ such that the displacement and force have equal importance in the training.\
+    \ The cost function $J$ is added to focus the study of a nonlinear stress hardening\
+    \ material, where the perfect plastic and linear hardening materials are used\
+    \ to demonstrate the general applicability of the hybrid FEM-NN approach for learning\
+    \ constitutive relations of plasticity.\n\n# 3. Results and discussion\n\nIn this\
+    \ section, we focus on the FEM-NN results for a nonlinear hardening material characterized\
+    \ by the yield stress function $\\sigma_{yield}^{ref} = 100 + 50\tanh(200)$ MPa.\
+    \ The FEM-NN results are compared with the FEM methods based on $\\sigma_{yield}^{ref}$,\
+    \ the latter of which are referred to as the results represents\n\nthe ground\
+    \ truth. Fig. 2a shows the finite element mesh of the thin plate. During the training,\
+    \ the weight and gradient magnitude are significantly reduced after 100 iterations\
+    \ (Fig. 2). Given the relatively small NN used, rapid convergence is achieved\
+    \ by only 15 L-BFGS iterations. The trained NN-predicted response of the sample\
+    \ plate is in good agreement with the ground truth, as shown in Fig. 2c. The mean\
+    \ absolute percentage error (MAPE) is 0.0830%. We use the NN to simulate the stress-strain\
+    \ distribution on the plate and compare it with the reference result (Fig. 2d).\
+    \ The MAPE is 0.0375. While the full data is used for training to reach the maximum\
+    \ level of strain of 0.2, the local strains are much larger and the training of\
+    \ NN covers many large strain ranges. Furthermore, a close agreement between the\
+    \ predicted and reference results is observed in the material-stress relation\
+    \ when the yield stress becomes reached, at up to level of 0.5%. The small MAPEs\
+    \ in both the predicted and reference results indicate no significant overfitting\
+    \ in our FEM-NN results.\n\n4"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/97d194576112935876b8bf3be5210ba7_4_0.png)
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_4_1.png)
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_4_2.png)
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_4_3.png)
+
+
+    **Fig. 2.** FEM-NN results for learning the constitutive relation of a nonlinear
+    strain-hardened material. (a) FEM setup of a thin plate containing randomly distributed
+    holes. (b) Loss function and its gradient magnitude as functions of the number
+    of training iterations by the L-BFGS algorithm. (c) Comparison between the reference
+    and FEM-NN-predicted results of sample-level force-displacement response. (d)
+    Comparison between the reference and FEM-NN-predicted results of tensile stress-strain
+    response.
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_4_4.png)
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_4_5.png)
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_4_6.png)
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_4_7.png)
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_4_8.png)
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_4_9.png)
+
+
+    **Fig. 3.** Comparison between the reference and FEM-NN-predicted strain fields.
+    (a) Contour plot of the reference strain $\epsilon_{xy}^{ref}$ along the horizontal
+    direction of tensile loading. (b) Reference strain $\epsilon_{xy}^{ref}$ along
+    the transverse direction. (c) Predicted strain $\epsilon_{xx}^{NN}$, (d) Predicted
+    strain $\epsilon_{yy}^{NN}$, (e) Difference between (a) and (c) $\epsilon_{xx}^{NN}
+    - \epsilon_{xx}^{ref}$, Difference between (b) and (d) $\epsilon_{yy}^{NN} - \epsilon_{yy}^{ref}$.
+    (For interpretation of the reference to color in this figure legend, the reader
+    is referred to the web version of this article.).'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Extreme Mechanics Letters 52 (2022) 10645
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_5_0.png)
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_5_1.png)
+
+
+    **Fig. 4.** FEM-NN results for a thin-plate geometry that is not included in the
+    training set: (a) FEM mesh in the plate with hole different from that in Fig.
+    2(a). (b) Comparison between the reference and FEM-NN-predicted results of sample-level
+    force-displacement response.
+
+
+    ![](img/97d194576112935876b8bf3be5210ba7_5_2.png)
+
+
+    **Fig. 5.** Comparison between the reference and FEM-NN predicted results of stress-strain
+    relations for (a) a perfectly elastic material, and (b) a line-hardened material.
+
+
+    Although the displacement field is directly observable from experiment, spatial
+    derivatives give the strain field that provides more physically transparent information
+    on the distribution. In Fig. 3, we compare the FEM-NN-predicted and reference
+    strain contours at the sample-level strain of 0.2. All strain contours are plotted
+    using the in-plane normal strain components $\varepsilon_{xx}$ and $\varepsilon_{yy}$.
+    From Fig. 3(a) a strain-localized band between the two neighbouring holes to the
+    right end of the plate, giving about ten times higher $\varepsilon_{xx}$ values
+    than other regions. From Fig. 3(b) shows a similar strain distribution, where
+    $\varepsilon_{yy}$ is elevated but lower than $\varepsilon_{xx}$ mainly due to
+    Poisson''s effect and gives much smaller values because of the boundary conditions
+    and the applied tensile load along the x-direction. Moreover, the FEM-NN predicted
+    strain contours in Fig. 3c and 3d are highly consistent with the reference in
+    Fig. 3a and 3b, respectively. In Fig. 3e and 3f, many areas have differences close
+    to zero (green), while many differences are observed in strain localized bands.
+    The predicted strain differences are one order of magnitude smaller than the others,
+    showing the accuracy of the FEM-NN.
+
+
+    with MAPE 0.055%. This test shows the high accuracy and transferability of the
+    trained NN from the hybrid FEM-NN approach. We also test the applicability of
+    the hybrid FEM-NN approach for learning constitutive relations of plasticity.
+    To this end, we train the NN using the ground truths of another material and predict
+    its response. With this plate in Fig. 2(a), the ground truths are generated by
+    a perfectly plastic model with $\sigma_y = 150 + 50000\varepsilon^2$ MPa. After
+    the hardening rate of $\sigma_y$, the FEM-NN predictions are validated by the
+    tensile stress-strain response through a single test as shown in Fig. 5. The predicted
+    stress curves are consistent with the ground truths; MAPEs show that the FEM-NN
+    learns the constitutive relations of plasticity by the hybrid FEM-NN approach.
+
+
+    We tested the NN using a thin plate not included in the training set, with a different
+    size, but different hole arrangement compared with the plate (Fig. 2a) for NN
+    training. The predicted sample-level force-displacement curve in Fig. 4b matches
+    the reference'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'Y. Zhang, Q. J. Li, L. Zhu et al.
+
+
+    Extreme Metrics 52 (2022) 101645
+
+
+    In future, we will employ the HFE-NN approach which can be combined with high-throughput
+    experiments to accelerate the material design and selection [38], for example,
+    when exploring the large composition space of high-entropy alloys. This integrated
+    approach may greatly accelerate the screening of alloys for further in-depth investigation.
+
+
+    +   [9] F. Horikawa, C. Yukawa, Implicit modelling of viscoplasticity using neural
+    networks, Int. Numer. Methods Engg. 43 (1998) 195–219.
+
+
+    +   [10] S. Malik, M.Y. Hassaini, H. Garamenti, Modeling of nonlinear viscoelastic
+    behavior of polymers using an artificial neural network, Int. J. Phys. 72 (2007)
+    1366–173.
+
+
+    +   [11] Y. Jiang, Deep learning for constitutive modeling of materials through
+    neural network–driven approach, J. Appl. Mech. 88 (2019) 091009.
+
+
+    # Conclusion
+
+
+    +   [12] X. Wang, J. Zhang, Temperature-rate and deformation constitutive modeling
+    of alloys: Experiments and neural network model, Int. J. Phys. 315 (2020) 102788.
+
+
+    We have developed a HFE-NN framework for learning constitutive relations using
+    full-field data as in conjunction with sample-level data such as force-displacement
+    curve. The non-uniform deformation in the field is used to generate stress-strain
+    paths at different locations, providing many samples by a single test, thereby
+    enabling the high efficiency training of NNs. Our study of the models shows that
+    the HFE-NN can learn constitutive relations accurately and efficiently. The open-source
+    framework FeCNics is designed to handle the trained NN constitutive relations
+    which can be transferred to other programs without modification. By integrating
+    the HFE-NN approach we achieved the effective constitutive modeling of materials
+    by data driven.
+
+
+    +   [13] L. Liu, Y. Zhang, Data driven machine learning for the prediction of
+    temperature and deformation limit in metal alloys with finite element method,
+    J.Phys. Solids. 153 (2021) 113036.
+
+
+    +   [14] J. Wang, Application of neural networks for predicting path deformation
+    in metallic networks, J. Mech. Phys. 143 (2020) 104320.
+
+
+    # Declaration of competing interests
+
+
+    The authors declare that they have no competing interests or personal relationships
+    that could have appeared to influence the work in this paper.
+
+
+    # Acknowledgments
+
+
+    Y.Z.J. and L. J. are supported by the Laboratory Research-& Development Program
+    at Idaho National Laboratory under the Department of Energy (DOE) IDO Operations
+    Office (as of the U.S. Government) Contract AC-DE-007-15412, and also thank Geoffrey
+    F. Beauleau II for the funding acquisition. This work is supported by the National
+    Science Foundation (DMC-180720). We thank M. Cibiz for discussions of the initial
+    idea.
+
+
+    # References
+
+
+    +   [1] H. J. Rose, R C. Constitutive analysis of elastic-plastic crystals at
+    atomic scale, J. Mech. Phys. 50 (1972) 401–413.
+
+
+    +   [2] R. Hill, The Theory of Mechanics in Crystal Plasticity, Oxford Press,
+    2008.
+
+
+    +   [3] A. Argun, Strengthening Mechanics in Crystal Plasticity, Oxford Press,
+    2006.
+
+
+    +   [4] L. Liu, Extraction of properties of materials through deep learning from
+    instrumented data, Proc. Natl. Acad. Sci. USA 117 (2020) 13.
+
+
+    +   [5] X. Meng, L. J. Zhang, G.E. Kiarameidis, P. PARN: Physics-informed neural
+    networks for de-prediction PDMS, Comput. Appl. Mech. Eng. 398 (2020) 116333.
+
+
+    +   [6] H. Liu, et al., Knowledge extraction and data-driven fracture mechanics,
+    Proc. Natl. Acad. Sci. 118 (2021) 22104518.
+
+
+    +   [7] S. Y. Wang, Neural networks for predicting the mechanical properties of
+    composites, Appl. Phys. Lett. 115 (2019) 161901.
+
+
+    +   [8] S. Y. W. Huang, M. X. Feng, Deep learning for determining the mechanical
+    properties of microstructured materials, Extreme Mech. Mech. Lett., 107 (2024)
+    102221.
+
+
+    +   [15] T. Tangcejan-De, M.org J, D. Mohr, Neural network for predicting long-term
+    deformation of titanium alloys, Int. J. Phys. 143 (2020) 104325.
+
+
+    +   [17] A. Zhang, D, Using neural networks to represent properties of metallic
+    alloys, Int. J. Phys. 315 (2020) 102789.
+
+
+    +   [18] D. Zhou, X. Hu, K. Fari, E. Davis, Learning constitutive relations of
+    polymers using deep neural networks, J. Comput. Phys. 416 (2020) 109489.
+
+
+    +   [19] N.W. Weiss, S. Sobhiev, Training of physics-informed neural networks
+    for interpretable-elastic materials with level set constraints, J. Comput. Phys.
+    423 (2021) 107663.
+
+
+    +   [20] U. Lin, et al., Application of artificial neural networks in polycrystals
+    metals, Int. J. Phys. 320 (2020) 152515.
+
+
+    +   [21] Y. Zhang, Evolution of element structure, and properties of high-entropy
+    alloys, Science 374 (2022): 723––729.
+
+
+    +   [22] S.M. Schwarz, S.W. Sunke, F. Muchita, Hybrid FFE-NN: Modeling composites
+    with the finite element method, J. Comput. Phys. 446 (2022) 110355.
+
+
+    +   [23] M. Alans, et al., The FeCNics project framework for scientific computing,
+    Source: 7.
+
+
+    +   [24] J.C. Rice, R. Taylor, Consistent tangent operators for rate-independent
+    plasticity, Appl. Phys. Mech. Eng. 48 (1981) 1–23.
+
+
+    +   [25] J. Goodfellow, A. Courio, Y. Bengio, Deep Learning, MIT Press, 2016.
+
+
+    +   [26] G. Karniadakis, et al., Physics-informed neural networks for scientific
+    computing in particular, Nature 39 (2021) 260–272.
+
+
+    +   [27] N. Schömer, meshio: Tool for finite meshes, https://github.com/meshio/
+
+
+    +   [28] D.. LeCun, T. Untersteiner, S. Hochreiter, and Accurate and deep neural
+    learning by exponential linear units (ELU), 2015, arxiv arXiv:1508.03463.
+
+
+    +   [29] U. Uajat, The ParaView: A Parallel Visualization Application, Kitware,
+    2015.
+
+
+    +   [30] D. Morgan, et al., Machine learning in nuclear materials research, Curr.
+    Opt. Solid-State Mater., 26 (2022) 109995.
+
+
+    7'
+  merge: -1
+  img_proc: true
