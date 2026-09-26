@@ -1,0 +1,609 @@
+- pgno: 0
+  md: 'https://doi.org/10.1016/j.chemchem.2025.110968
+
+    1001-8417 © 2025 Published by Elsevier B.V. on behalf of Chinese Chemical Society
+    and Institute of Materia Medica, Chinese Academy of Medical Sciences.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'X. Xue, C. J. Sun et al.
+
+
+    Chinese Chemical Letters (2025) 110968
+
+
+    sequentially, the transformer-based method for synthesis was performed by Karpov
+    et al. [15] and achieved better performance. To solve the mathematically invalid
+    output problem in sequence-to-sequence mapping, Zhang and cokers [22] employed
+    a major corrector to the Transformer model called SCROP. In addition, multiple
+    graph-based architectures using graph neural networks have been proposed, and
+    colleagues [21] proposed a transformer-based framework (G2G to G2P) by transforming
+    a target molecular graph into a set of architecture. Tu et al. [22] generated
+    Graph2MPLES, a transformer and a decoder to convert molecular graphs to SMILES,
+    ensuring permutation without requiring input augmentation. To address the challenge
+    of explaining deep learning models, these authors formulated retrosynthesis as
+    a molecular process, enabling quantitative interpretable retrosynthesis. Some
+    template-free models and techniques used in retrosynthesis
+
+
+    marketable in various chemical tasks, enabling efficient retrosynthetic and metabolic
+    predictions for molecules, as well as comprehensive retrosynthetic analysis and
+    enzyme-catalyzed product predictions for natural products. These results highlight
+    the superiority of our versatile framework, demonstrating its ability to comprehensively
+    predict chemical reactions. The model was deployed and accessed on a server at
+    http://hpc.cn/222469. The code for BCNet is available at https://github.com/wjjc/BCNet
+
+
+    Data used to train and evaluate the model were sourced from the public dataset
+    USPTO5K, with 50,016 molecules and 10 reactions across 10 reaction types. The
+    model was trained on the USPTO dataset, which contains 479,033 reaction entries,
+    main reactions, side reactions, and failed reactions, including 1808,938 reactions,
+    produced through deduplication and canonization, resulting in 10,486 unique reactions
+    used for prediction. The model was evaluated using the same dataset, where reaction
+    tasks were randomly split into training/validation/test sets (80/10/10%) for training
+    and evaluation.
+
+
+    Deep learning is employed in predicting enzyme-mediated chemical reactions [26,
+    2067]. The uses of enzymes for organic synthesis to create selective synthetic
+    routes that utilize biological reactions are still in the early stages of development.
+    Kreuter et al. [23] used a convolutional neural network to learn the molecular
+    transformer for predicting enzymatic reactions. Similarly, Probit et al. [30]
+    extended the data-driven approach with Molecular Transformer to predict enzyme-catalyzed
+    reactions and metabolism models. Another approach of enzyme-catalyzed reaction
+    prediction focuses on drug metabolism [31]. Metabolic processes involve chemical
+    reactions mediated by enzymes, such as cytochrome P450. Multiple efforts have
+    been made to develop deep learning models for predicting drug metabolism through
+    the integration of metabolic studies in development [33–35]. Wang et al. [36]
+    established a model for predicting the metabolic reaction type and site. Li et
+    al. [37] presented a rule-based end-to-learning method for predicting predicting
+    metabolites of small molecules, including drugs. Our work focuses on developing
+    learning models that support specific applications, with emphasis on building
+    unbiased frameworks, the core of all chemical reaction predictions is the breakage
+    and formation of chemical bonds between atoms. BART [38] used Transformer tasks
+    for learning chemical reaction rules and built a Bidirectional Chemical Integration
+    Network (BCNet) framework to predict drug metabolism. Its performance was evaluated
+    using the public dataset USPTO5K, with 50,016 tasks, performing one-forward and
+    backward catalysis with accuracies of 80.7% and 48.6%, respectively. This framework
+    was applied to predict various reactions, including organic enzyme-catalyzed reactions
+    and drug metabolism.
+
+
+    The metabolism dataset was used for fine-tuning the model (version 5.12). After
+    generating multiple products into split reactions, each containing a single molecule
+    and product, 3417 valid reactions had duplicates and invalid SMILES representations
+    removed. For studying metabolic reactions, reactions were excluded, 3380 valido
+    reactions. This dataset was randomly divided into training, validation, and test
+    sets (80/10/10%), respectively. In addition, the difference between prediction
+    and real drug process activation in metabolism and metabolism, a chem combined
+    dataset drug predicting and metabolism dataset was used to fine-tune the model.
+
+
+    The enzyme-catalyzed dataset was used for fine-tuning the model from SCERAFT,
+    developed by Probit et al. [30]. Containing 62,222 enzymes, coding for different
+    reaction types was assigned accordingly. For example, “EC7.24.1” is “E1.2, E2.7,
+    E3.8, E.4.1” where the first number represents the number of hydrogen bonds between
+    categories and substrates, and the subsequent numbers are according to the International
+    Classification of Enzymes.
+
+
+    The metabolites were divided into reactions and products produced from “”
+
+
+    The BART backbone contains encoder layers with 12 attention decoder layers with
+    12 layers and 768 hidden units. The BCNet encoder predicts one/atom at a time,
+    and the BCNet decoder generates one token at a time, conditioned on the predicted
+    state. The model generates reaction graphs graphs and output prediction/product
+    SMILES
+
+
+    Two metrics, exact match and MaxFrag accuracies, were used for evaluating the
+    model. The exact match accuracy was calculated by comparing the predicted reactions
+    with the ground truth in the dataset. To evaluate the prediction limit, MaxFrag
+    accuracy was used to calculate the exact match of only the last fragment.
+
+
+    Four generalized training tasks were introduced to follows reduce the overfitting
+    risk and improve the model''s generalization:
+
+
+    2'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'X. Xue, C. Hen, Sun et al.
+
+
+    Chinese Chemical Letters 36 (2025) 110968
+
+
+    # Table 1
+
+    Ablation experiments of BiCNet for USPTO-5K dataset.
+
+
+    | Mode | Class | Batch size | Learning_rate | Top1_Accuracy (%) |
+
+    |---|---|---|---|---||
+
+    | B'' | FALSE | 1.0 | TRUE | 5.0E-05 | 40.8 |
+
+    | B | FALSE | 0.5 | TRUE | 5.0E-05 | 42.1 |
+
+    | B | TRUE | 1.0 | TRUE | 1.0E-04 | 51.5 |
+
+    | B | TRUE | 0.5 | TRUE | 1.0E-04 | 54.0 |
+
+    | F | FALSE | 0.6 | FALSE | 1.0E-04 | 76.1 |
+
+    | F | FALSE | 1.0 | TRUE | 1.0E-04 | 80.7 |
+
+
+    +   * *Task_percent=True* implies no mapping. Task_percent=0 implies a 50% probability
+    for making products.
+
+    * *Flag_dual=True* implies bidirectional inference for both reactants and products.
+
+    * *B* means backward.
+
+    * *F* means forward.
+
+
+    # Table 2
+
+    Performance of BiCNet framework for the USPTO_5K dataset.
+
+
+    | Top-K | 50K, Backward | Accuracy (%) | Accuracy (%) | 50K, Forward | Accuracy
+    (%) | Accuracy (%) |
+
+    |---|---|---|---|---|---||
+
+    | 1 | 48.6 | 72.9 | 80.7 | 62.6 | 82.8 | 91.1 |
+
+    | 3 | 64.9 | 70.1 | 88.3 | 77.9 | 81.7 | 95.8 |
+
+    | 5 | 69.4 | 75.2 | 89.7 | 80.3 | 85.8 | 98.7 |
+
+    | 10 | 73.9 | 82.1 | 91.7 | 86.2 | 89.0 | 99.2 |
+
+    | 50 | 85.9 | 88.3 | 96.4 | 93.1 | 96.4 | 98.3 |
+
+
+    > In backward reaction, the prediction of one reactant is the inverse of the other.
+    This strategy is designed to model the generators for input product.
+
+
+    > Forward reaction, the prediction of one reactant is the SMILES string of input
+    and output, respectively.
+
+
+    > Masked-language product prediction, where complete SMILES are 15 randomly masked
+    to predict input and output, respectively.
+
+
+    > Canonic SMILES prediction, which matches ''random-denoted strings'' and ''canonical
+    SMILES'' are of 97.5.
+
+
+    These four tasks are alternatively enhanced to perform the modeling of chemical
+    reactions. The first two tasks are designed for predicting chemical reactions,
+    while the last two tasks focus on teaching the forward and backward models.
+
+
+    To verify the strategy on our model, ablation experiments were conducted on the
+    model results (Table 1). By accuracy 1.4%, the elimination of tasks (1 and 2)
+    allowed the model to successfully learn forward and backward prediction, which
+    resulted in an accuracy improved by 0.4%. During optimization, the beam search
+    algorithm that determines the best of partial solutions to values was set as i,
+    and the top-1 accuracy was evaluated using the evaluation indices (Table S1 and
+    S2 in Supporting Information)
+
+
+    The most accurate parameters were selected for the evaluation of its performance.
+    As shown in Table 3, the top-1 and top-5 accuracy reached 62.8% and 73.9%, respectively.
+    The evaluation results of the forward mode are also shown in Table 2, and the
+    top-1 exact accuracy reaches 80.7%. The accuracy of the forward model consists
+    effectively that of the backward model, as shown in the results of most prediction
+    models, inferring potential precursors from the target molecule, which the model
+    learns to comprehend more complex reactions. The MaxFrag
+
+
+    of our model outperforms the reaction by 5.4% on average, meaning in practical
+    applications. For example, the prediction of the main reactants are crucial for
+    guidance during experiment. The model''s performance, chemical reaction class
+    information was incorporated into the model, and the model''s accuracy substantially
+    (Table 3). The top-1 accuracy of the forward mode is higher than the backward
+    mode, due to the difference in reaction type; however, the forward model has a
+    top-10 accuracy matching the backward mode. With added categories, the percentage
+    increase in the forward mode is significantly higher than that of the backward
+    mode. We compared our model with other methods. By using this prediction method,
+    our model shows similar or better performance than BERT (Table S4) with prior
+    reaction class information, the top-1 backward accuracy of our model is much higher
+    than that of other methods. We also explore methods with lower top-1 accuracy
+    comparable to those of GTA [40] and GraphSMILES, but Our model outperforms the
+    top-1 backward accuracy of GTA and GraphSMILES, respectively.
+
+
+    Next, the model''s performance was evaluated across different reaction types.
+    The prediction deccrection of different reaction types'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Forward
+
+
+    # Backward
+
+
+    ![](img/2086a5ca2b8f10a88394a0b517450790_3_0.png)
+
+
+    Fig. 1. The model''s prediction accuracies in forward and backward modes for different
+    classes.
+
+
+    ![](img/2086a5ca2b8f10a88394a0b517450790_3_1.png)
+
+
+    Fig. 2. Attention weights of forward and backward organic synthesis reactions.
+
+
+    that the model learns on connections between reactants to predict the product.
+    When only one reactant is present, the model''s attention is dispersed around
+    the heteroatom, which aligns with reaction mechanisms, as heterunctional groups
+    exhibit higher reactivity during reactions.
+
+
+    To verify the proposed method application interest we extended our one-step USPTO_506
+    trained model to a full-pathway by sequentially predicting organic reactions for
+    compounds including the next-generation antiinflammatory drug, the long-acting
+    beta-blocker against hypertension, and imatinib, respectively used by other retrosynthetic
+    programs. In Scheme 1a, the prediction results for indomethacin are consistent
+    with previously published literature. The only difference is that our model focuses
+    on the functional group, where the ibuprofen group is shown in the literature.
+    In the multistep retrosynthetic analysis of bamepudril, the prediction results
+    of the model are completely consistent with those in the literature. In two steps,
+    the two reactions are nucleophilic substitution and subsequent elimination reactions,
+    while the proposed model predicted an appropriate order for these types. Notably,
+    the model correctly split the nucleophilic substitution into two steps, where
+    two functional groups were correctly used as substituents. The forward and backward
+    predictions were evaluated for esertipril. Similarly, the predictions for atorvastatin
+    were consistent with the literature.
+
+
+    classes are shown in Fig. 1. Interestingly, the model''s predictions were more
+    accurate in response to forward and backward modes, suggesting that these reactions
+    reveal minor changes between the reactants and products. However, for heteroatom
+    alkylation and heterocyclic formation, which involve large structural changes,
+    the model''s prediction accuracy dropped. Furthermore, the similarity between
+    the prediction and ground truth was evaluated (S1 in Supporting information);
+    here, both the molecular and structural similarity scores were low.
+
+
+    Metabolism prediction is closely related to reaction mechanism, which could be
+    regarded as the forward reaction. We evaluated the fine-tuned model on dataset
+    for metabolism predictions, achieving top-accuracy of 52.9% for the test set.
+    To further verify the practical application of the proposed model, we randomly
+    selected two molecule drugs from DrugBank database (apriwastazole) and a beta-blocker
+    (pranolol). In Scheme S1 (Supporting information), the model correctly predicted
+    metabolites of apriwastazole and the functional group of pranolol. Similarly,
+    the model''s predictions for both I and II metabolism were also accurate. Furthermore,
+    the model''s accuracy was evaluated for predicting metabolism from prodrug to
+    drug molecules.
+
+
+    Because of interpretability of how deep-learning models study chemical transformations,
+    we utilized the forward and backward prediction model to evaluate its exploitation
+    of reaction information (S2 in Supporting information). For the forward prediction,
+    the effects of the reactants and products are shown in Fig. 2. The connection
+    between the reactants and products is visualized using the attention mechanism
+    in the encoder/decoder layers. Because the probability distribution over all the
+    predictions is computed based on the current transformation transformed by the
+    attention and output layer, we analyzed on this last part of the model by considering
+    only its attention weights. These results indicate
+
+
+    Additionally, to clarify syntactic rules in reactions, we screened the reactions
+    of metabolism-resembling classes from the dataset for prediction by the proposed
+    model. The results in Table S6 (Supporting information) provide more detailed
+    information for datasets possessing similar classes,'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/2086a5ca2b8f10a88394a0b517450790_4_0.png)
+
+
+    Scheme 1. Multistep retynthesis of (a) indomethacin and (b) hambuterol and (c)
+    multistep retynthesis and forward prediction of osimertinib.
+
+
+    suggesting that during training, the model predominantly learns the data distribution
+    rather than the underlying rules of chemical transformations.
+
+    The metric compiled from public data by Probot et al. The top-1, -5, and -10 accuracies
+    of various model categories for the test dataset were 54.55, 67.44, and 72.3,
+    suggesting that Probot et al. reported for the forward prediction of the enzymatic
+    cycles, which were 63.5 and 68, respectively. These demonstrate that our training
+    strategy is effective and improves the model''s prediction accuracy. In addition,
+    the model''s accuracy was validated for a different entry (Fig. 3). The model
+    showed reasonable accuracy for diverse molecules and oxidosureas so it was prepared
+    for predicting chemical retrosyntes catalyzed by enzymes (Fig. 5 in Supporting
+    information) to show that these dataset might be composed of.
+
+
+    We used a dataset comprising the total syntheses of natural products to evaluate
+    its effectiveness in the fine-tuning of the model and potential. As shown in step
+    4 of the key route for the total synthesis of natural products, our method identifies
+    six steps that align with the results reported in literature. In the reaction
+    steps of the strategy, our method succeeded with the top-1 prediction for all
+    expected steps, which directly demonstrates the potential of our method. Our model
+    accurately predicted the first three steps, including reduction, methylation,
+    and cyclization. The subsequent steps are deprotection and protection of protecting
+    groups. These results further demonstrate the excellent potential of our method
+    for practical application to multistep retynthesis.
+
+
+    Several common small-molecule drugs were randomly selected from the DrugBank database
+    to predict their single-step synthesis methods and methods, results are shown
+    in Scheme 2, fenamic acid is a nonsteroidal anti-inflammatory drug (NSAID) used
+
+
+    | | | | | | | |
+
+    |---|---|---|---|---|---||
+
+    | | | | | | | |
+
+    | 0.469 | 0.624 | 0.684 | 0.728 | 0.787 | 0.891 |
+
+    | | 0.589 | 0.641 | 0.675 | 0.735 | 0.822 | 0.832 |
+
+    | | 0.546 | 0.657 | 0.696 | 0.737 | 0.772 | 0.781 |
+
+    | | 0.493 | 0.580 | 0.599 | 0.651 | 0.741 | 0.771 |
+
+    | | 0.370 | 0.458 | 0.559 | 0.594 | 0.688 | 0.746 |
+
+    | | 0.504 | 0.647 | 0.669 | 0.683 | 0.734 | 0.741 |
+
+    | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+
+    | top1 | top3 | top5 | top6 | top10 | toptop |
+
+
+    Fig. 3. Heatmap showing accuracy for different enzyme-catalyzed reactions.
+
+
+    to treat mild pain. In mefenamic acid, the benzene ring contains methyl groups
+    that are easily metabolized by the model, which somewhat interferes with the model''s
+    prediction accuracy. The model accurately predicted the top-1 and aspirin which
+    is the most widely used nervous system stimulant. The model accurately predicted
+    the top-10 molecules, but failed to confirm the feature structure contains multiple
+    nitrogen atoms, which interfere with the prediction accuracy. The SMILES strings
+    hinder the model''s ability to correctly predict changed tokens. For rheumatoid
+    arthritis and antiantiinflammatory drugs lotion'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'X., K. Chen, H. Sun et al.
+
+
+    Chinese Chemical Letters 36 (2025) 110968
+
+
+    ![](img/2086a5ca2b8f10a88394a0b517450790_5_0.png)
+
+
+    Scheme 2. Single-step retrosynthetic analysis and metabolic prediction of small-molecule
+    drugs.
+
+
+    ![](img/2086a5ca2b8f10a88394a0b517450790_5_1.png)
+
+
+    Scheme 3. Analysis of single-step retrosynthesis and prediction of enzyme-catalyzed
+    reactions of natural products.
+
+
+    and lorazapine, the model accurately predicted the top-1 reactants and metabolites.
+    In the body, tolmin and lorazapine are both metabolized by glucuronic acid, indicating
+    that, for caffeine, the model accurately predicted the top-10 metabolites. Our
+    model correctly predicted all top-1 single-step reactions across various categories,
+    such as nucleophilic substitution, hydrolysis, and enzyme-catalyzed reactions.
+
+
+    Furthermore, our model for generating realistic natural-products was examined
+    for enzymatic capacity. Target compounds, including glutamate receptor agonists
+    xanthine, estrogen, the natural vitamin A (VA) all trans-retinal, and the aldehyde
+    reduction product were correctly predicted. Several compounds (products or intermediates)
+    were present in our training. For xanthine (Scheme 3a), the demethylation by enzyme-catalyzed
+    metabolism was correctly predicted. For top-6 metoxifen, the metabolism and enzyme-catalyzed
+    synthesis involves changes in carbon-oxygen bonds, which further illustrates the
+    versatility of chemical reactions.
+
+
+    In Scheme 3b, the estradiol de-hydroxylation to multiple hydroxyl groups was correctly
+    predicted the top-6 reactant and top-1 estradiol metabolites, respectively. The
+    prediction of the top-1 natural retinol is shown in Scheme 3c. The enzymes and
+    enzyme-catalyzed reactions were also correctly predicted where possible.
+
+
+    Our model correctly predicted the top-10 ranked functions, such as functional
+    conversion in natural product molecules.
+
+
+    We have been been into a web server for chemical reaction predictions. Users can
+    use custom prediction tasks, such as chemical reactions, retrosynthesis, drug
+    metabolism and enzymatic capacity of molecules. The server accepts SMILES strings
+    as input, and also supports uploading files. Meanwhile, the mean of candidate
+    predictions can be selected. The website address is:
+
+
+    http://jp.cams.cn/22469/
+
+
+    We developed a unified bidirectional dense model named BCNet for predicting chemical
+    reactions in various scenarios, includ
+
+
+    6
+
+
+    synthesis, metabolism, and enzymatic capacity. With compared to rule-based models,
+    BCNet is a fully data-driven model that does not require high-quality input of
+    reaction templates. The model''s top-1 exact-match and forward backward – and
+    backward accuracy predictions were 80.7% and 48.6%, respectively. The results
+    on the benchmark dataset demonstrate that with our model ac
+
+
+    in previous studies, our universal model achieves accurate predictions. However,
+    the interpretability of deep learning models remains a challenge for chemists
+    in drug discovery.
+
+
+    stream datasets, domain adaptation is achieved through multitask learning by integrating
+    various task prompts into the model. The case successfully demonstrated that the
+    integrated models can predict various reactions for small molecules and enabled
+    synthetic route planning for natural products, which demonstrated the superiority
+    of our universal versatile model for modeling chemical reaction synthesis
+
+
+    The model''s prediction accuracy is limited by the inherent limitations of the
+    algorithm. These failures stem from the inherent complexity of the reaction mechanisms
+    and the scarcity of experimental data.
+
+
+    representation or sufficient feature of the chemical structures. First, SMILES
+    only represent one functional group per reaction, and chemical functional groups
+    exhibit different behaviors during reaction processes.
+
+
+    and model-generated SMILES strings represent extremely strict chemical structures.
+    The generation of valid SMILES strings increases the cost of model learning. In
+    reality, molecules only represent multiple functional groups
+
+
+    may not be accurate due to the influence of specific features, leading to deviations
+    in the prediction accuracy. Furthermore, a transfer-learning method is suited
+    for specific data types
+
+
+    in the chemical space. Moreover, although the assessment of model''s prediction
+    outcomes provides results based on experimental data from the literature, plus
+    unpublished studies, the challenges remain
+
+
+    challenges will prompt us to design more accurate models for predicting chemical
+    reactions, leveraging larger and more diverse chemical knowledge bases for model
+    training to improve our approach.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Declaration of interest
+
+
+    The authors declare that they have no known financial interests or personal beliefs
+    that could have influenced the work presented in this report.
+
+
+    # Credit authorship contribution statement
+
+
+    Xi Xue: writing original draft, draft project. Haijing Chen: writing original
+    draft, formal analysis. Hanyu Sun: writing original draft, formal analysis. Yuxiao
+    Liu: data analysis, curation. Jiao Chen: data analysis, curation. Muhammad S.
+    Muzarak: writing & editing. Hai-Yu Hu: writing & editing. Xiandaiao Pan: review
+    & editing. Xiaojang Wang: review & editing.
+
+
+    # Acknowledgments
+
+
+    This work was funded by the National Science Foundation of China (NSFC, No. 8203692)
+    and CAMS Innovation Fund for Medical Sciences (CFMS, No. 2021-I2M-1028). The computing
+    resources were supported by the Biomedical Performance Computing Platform, Chinese
+    Academy of Medical Sciences.
+
+
+    # Supplementary materials
+
+
+    Supplementary material associated with this article can be found, in the online
+    version, at doi: 10.1016/jcclet.2025.110968.
+
+
+    # References
+
+
+    +   [1] Z. Tu, T. Stuyver, C.W. Cooley, Chem. Sci. 14 (2023) 226–244.
+
+    [2] M. Meuwly, Chem. Rev. 121 (2022) 10218–10239.
+
+
+    +   [33] T. Trets, A. Pedretti, V. Vinag, Discovery Today 17 (2022) 549–560.
+
+    [34] W. Zhong, J. Wang, C.Y. Chen, Nat. Commun. 14 (2023) 3009.
+
+    [35] S. Chen, J. Yang, Mach. Nat. 4 (2022) 772–780.
+
+    [36] F. Doosher, A. Model, E. Gutman, and E. Mol, Mol. Sci. 23 (2019) 448–452.
+
+    [37] Y. Wang, J. Wang, and J. Wang, ACS Nano. 15 (2021) 1237–1248.
+
+    [38] M.H.S. Geiger, M.P. Waller, Chem. Eur. J. 2 (2007) 5956–5961.
+
+    [39] S. Wang, Y. Wang, and J. Wang, J. Med. Chem. 63 (2020) 115–125.
+
+    [40] Z. Zhang, and W. Xie, Nat. Commun. 14 (2023) 6664.
+
+    [41] R. Liang, J. Sun, and J. Yang, J. Med. Chem. 65 (2020) 3721–3728.
+
+    [42] C. W. Cooley, R. Rajula, and T. Jaaskola, Chem. Sci. 14 (2023) 4347–4358.
+
+    [43] J. Zhang, Y. Wang, and J. Wang, J. Med. Chem. 64 (2021) 2113–2124.
+
+    [44] K. Lin, Y. Su, J. Li, and J. Chen, Chem. Sci. 14 (2023) 3355–3364.
+
+    [45] P. Schwarz, T. Lane, T. Casid, A. al., Chem. Sci. 15 (2022) 1572–1583.
+
+    [46] Y. Wang, J. Sun, and J. Wang, J. Med. Chem. 61 (2021) 3721–3728.
+
+    [47] J. Lu, Y. Zhang, and J. Wang, J. Med. Chem. 62 (2017) 1372–1387.
+
+    [48] G. Zhou, J. Liu, T. V, Chen, Y. Yang, and J. Wang, arXiv:2021.01113; https://doi.org/10.48550/arXiv.2021.01113
+
+    [49] C. Shi, M. Wu, Q. Guo, M. Zhang, J. Tang, arXiv:(2021).04850; https://doi.org/10.48550/arXiv.2021.04850
+
+    [50] Z. Tu, C.W. Cooley, J. Chem. Model. 62 (2022) 3599–3613.
+
+    [51] V. Terkov, K. Parov, R. Van Der El, et al., Nat. Commun. 11 (2020) 5575–5584.
+
+    [52] A. Lee, Q. Wang, S. Strelt, et al., Chem. Sci. 14 (2023) 12129–12135.
+
+    [53] J. Zhang, S. Peng, J. Chen, and Y. , Chem. Sci. 14 (2023) 14229–14240.
+
+    [54] E. Heidel, D. Probert, W.H. Green, et al., J. Pharm. Bion. Sci. 175 (2022)
+    37781–37784.
+
+    [55] D. Probert, M. Manica, Y.C. Trenkul, et al., Nat. Commun. 13 (2022) 5609.
+
+    [56] Z. Chen, L. Zhang, P. Zhang, et al., J. Chem. Model. 64 (2024) 2528–2538.
+
+    [57] S. Wang, Y. Wang, and J. Wang, J. Med. Chem. 63 (2020) 7155–7165.
+
+    [58] J. Hafer, V. Hazmanovichitis, Bioinformatics 37 (2021) 3558–3569.
+
+    [59] D. Wang, W. Liu, Z. Shen, et al., Front. Pharmacol. 10 (2019) 1586.
+
+    [60] L. Zhang, J. Sun, and J. Wang, Chem. Sci. 11 (2020) 292–303.
+
+    [61] M. Lewis, Y. Liu, N. Goyal, et al., arXiv (2019).08550; https://doi.org/10.48550/arXiv.2019.08550
+
+    [62] C. Choudhury, V. Kumar, R. Kumar, Eur. J. Med. Chem. 249 (2023) 115153.
+
+    [63] S.W. Xu, Y.Y. Song, J.Yang, and, GTA: Gated truncated attention for recommendation
+    networks, Proceedings of the AAN Conference on Artificial Intelligence, 35, 2021,
+    pp. 531–539.'
+  merge: -1
+  img_proc: true
