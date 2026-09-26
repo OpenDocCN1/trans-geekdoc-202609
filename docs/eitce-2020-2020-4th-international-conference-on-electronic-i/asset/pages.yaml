@@ -1,0 +1,469 @@
+- pgno: 0
+  md: '# Fuzzy Comprehensive Evaluation of Cloud Security for the Electromagnetic
+    Loss and Heat of Large Generators under Negative Sequence Conditions
+
+
+    Jian Guo †
+
+    College of Architecture and Civil Engineering
+
+    Qiqhar University
+
+    Qiqhar China
+
+    33293561@sq.com
+
+
+    Wu Guo
+
+    College of Communication and Electronic Engineering
+
+    Qiqhar University
+
+    Qiqhar China
+
+    342973566@sq.com
+
+
+    Jing Du
+
+    College of Communication and Electronic Engineering
+
+    Qiqhar University
+
+    Qiqhar China
+
+    284653987@sq.com
+
+
+    # ABSTRACT
+
+
+    Large-turbo is the high technical equipment for electric power which is considered
+    the heart of power system. And it becomes the development goals of domestic and
+    foreign power generation equipment. Besides, its security evaluation index has
+    been paid close attention by international academia and engineering. Therefore,
+    this paper applies the cloud security evaluation model based on fuzzy sets to
+    evaluate the electromagnetic loss and heat of turbo-generators under negative
+    sequence. This model establishes two security evaluation index systems according
+    to cloud security alliance and cloud platform service model, and uses multi-level
+    fuzzy evaluation for security evaluation. It is found to provide an important
+    reference for the construction of cloud security service providers, for the quantitative
+    assessment of third-party organizations engaged in cloud security assessment,
+    and cloud security platforms for cloud users.
+
+
+    conditions, Turbo-generators
+
+
+    # Introduction
+
+
+    At present, cloud computing has been widely used, by lots of security issues have
+    been demonstrated by the development of cloud computing industry[1]. However,
+    there is no international security standard widely recognized and generally followed
+    by the industry so far. CSA, an international cloud security organization, was
+    established at the RSA conference in 2009 to promote best security practices in
+    the cloud computing environment and to provide security framework through cloud
+    computing security. CSA has been widely recognized by the industry. In 2013, the
+    cloud security alliance Top Threats Working Group and group of domain experts
+    conducted a survey, which identified threats to security. There are data loss,
+    data account access or service flow to hazard, unsafe interface and API, and definition
+    of service independence, issues of the cloud services, domestic and foreign researchers
+    are mostly focused on the analysis and prevention of factors affecting cloud security,
+    while there is lack of quality evaluation standard for cloud security. Thus, to
+    establish cloud security and its corresponding evaluation system has a challenge
+    for cloud security.
+
+
+    With the development of power generators, electromagnetic and thermal load as
+    increases. This could cause local overheating, abnormal downturn, or threat to
+    power system security[3,4]. It is worth researching on the current load and heat,
+    which could increase the negative sequence sequence capacity and decrease voltage
+    leading to the rotor of power and the asymmetrical operation characteristics of
+    turbo-generator. The problem of rotor negative sequence heating has always been
+    a major problem in the design and analysis of large turbo-generators. Hence, cloud
+    computing is undoubtedly one of the most effective
+
+
+    # CCS Concepts
+
+
+    +   *Applied computing
+
+    *Physical sciences and engineering——Computer-aided design
+
+
+    # KEYWORDS
+
+
+    Cloud security, Electromagnetic loss, Negative sequence
+
+
+    Permission to make or distribute hard copies of any of this work or for the purpose
+    of classrooms is granted without free fee that copies are not made or distributed
+    for commercial purposes. All portions of this work by others must include full
+    citation on the first page. Copyright pages are protected. To copy, reprint, to
+    post on services or to distribute to lists, requires permission from Permissions@acm.org
+
+
+    ETCS Digital No. 6–8, 2020, Xianmen, China
+
+    2020 Association for Computing Machinery.
+
+    ACM ISBN 978-1-4503-6781-1/20/15… $15.00
+
+    https://doi.org/10.1145/3433947.3433962'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'technical methods for large-scale computing under negative sequence conditions.
+
+
+    # 2 Cloud Computing of Negative Sequence Electromagnetic Loss and Heating
+
+
+    It is well known that large generator is a vital part of power system. The three-phase
+    asymmetry of stator winding usually causes negative sequence current in the generation,
+    and the interaction between the negative sequence current and the magnetic field
+    will produce the electromagnetic torque[5,6]. Negative sequence current will also
+    produce additional heating loss when the sub-generator rotor is forced as whole,
+    due to the limitation of heat dissipation conditions, which in the design and
+    analysis process, the negative sequence ability of the generator must be taken
+    into account. Diagram of large generator''s structure and subdivision are given
+    in Fig 1 to 7.
+
+
+    ![](img/93842e0a123bb464125cadc2a8fc6a99_1_0.png)
+
+
+    Figure 3: Subdivision of 2D model
+
+
+    ![](img/93842e0a123bb464125cadc2a8fc6a99_1_1.png)
+
+
+    ![](img/93842e0a123bb464125cadc2a8fc6a99_1_2.png)
+
+
+    Figure 1: Diagram of rotor structure of million-kilowatt generator
+
+
+    Figure 4: Air-gap magnetic flux density in no-load steady-state condition
+
+
+    ![](img/93842e0a123bb464125cadc2a8fc6a99_1_3.png)
+
+
+    Figure 2: Rotor slot type
+
+
+    ![](img/93842e0a123bb464125cadc2a8fc6a99_1_4.png)
+
+
+    Figure 5: Magnetic flux density distribution in no-load steady-state condition'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# XY Plot 1
+
+
+    ![](img/93842e0a123bb464125cadc2a8fc6a99_2_0.png)
+
+
+    cloud. The establishment of cloud security hierarchy based on cloud platform service
+    pattern includes SaaS security, PaaS security, IaaS security and cloud governance
+    security.
+
+
+    # 3 Cloud Security Fuzzy Comprehensive Evaluation Matrix
+
+
+    V=vi is the fuzzy object evaluation set, vi=(i=1, ..., n) is the standard for
+    judging grades, which specifies the range of choices for judging results. According
+    to the principle of easy identification, the evaluation of cloud status V=(excellent,
+    good, general, poor, very), then can be expressed as V1, V2, V3, V4.
+
+
+    Single factor matrix is obtained by expert selection method. Ten experts were
+    invited to evaluate the industry cloud, which computes electromagnetic induction
+    and heat of turbo-generators under negative sequence conditions, according to
+    the indicators of two cloud security hierarchy models. The survey is shown in
+    Table 1 and 2.
+
+
+    ![](img/93842e0a123bb464125cadc2a8fc6a99_2_1.png)
+
+
+    Table 1: Frequency Distribution Statistics of Evaluation Grade based on Cloud
+    Security Hierarchy Model
+
+
+    | | V1 | V2 | V3 | V4 | V5 |
+
+    |---|---|---|---|---||}{
+
+    | U1 | 1 | 2 | 4 | 2 | 1 |
+
+    | U2 | 0 | 1 | 5 | 3 | 1 |
+
+    | U3 | 0 | 2 | 4 | 2 | 2 |
+
+    | U4 | 0 | 2 | 6 | 1 | 1 |
+
+    | U5 | 0 | 2 | 5 | 2 | 1 |
+
+    | U6 | 1 | 3 | 3 | 2 | 1 |
+
+    | U7 | 1 | 3 | 5 | 1 | 0 |
+
+    | U8 | 1 | 4 | 2 | 1 | 0 |
+
+    | U9 | 0 | 2 | 2 | 4 | 1 |
+
+    | U10 | 0 | 3 | 4 | 2 | 0 |
+
+    | U11 | 0 | 1 | 4 | 3 | 2 |
+
+
+    Figure 6: Air gap magnetic flux density in three-phase fault
+
+
+    Figure 7: Magnetic flux density distribution in three-phase fault
+
+
+    From the above, it can be seen that the amount of analyses involved in this cloud
+    service is very large. In this view of situation, cloud computing is an effective
+    method to solve this problem. However, in the application of cloud computing,
+    how to evaluate cloud security becomes particularly important.
+
+
+    The selection of cloud security index determines the reliability and practicality
+    of the cloud service. The selection of cloud security indicators should follow
+    the principles of objectivity, independence and scientific, in order to select
+    the comprehensive, reasonable and objective factors that affect cloud security.
+    Nowadays, there are two models of cloud security alliance CSA indicator system
+    and cloud platform service model indicator system. According to the above analysis
+    of cloud security factors, the cloud security hierarchy model of cloud security
+    alliance based on cloud security contains three elements, which are the framework,
+    governance and operation of
+
+
+    Where: U1 is the framework of; U21 is governance and enterprise risk management;
+    U22 is legal issue; U23 is compliance and auditing; U24 is information management
+    and data security; U25 is interoperability and security; U26 is traditional security,
+    business continuity and disaster recovery; U32 is data center operation; U33 is
+    incident response, notification and remediation; U34 is application security;
+    U35 is encryption and key management;'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'U36 is identity and access management;
+
+    U37 is virtualization;
+
+    U38 is security service.
+
+
+    # Table 2: Frequency Distribution of Evaluation Grade of Cloud Security Hierarchy
+    Model based on Cloud Platform Service Pattern
+
+
+    | V1 | V2 | V3 | V4 | V5 |
+
+    |---|---|---|---|---||
+
+    | U11 | 1 | 3 | 4 | 2 | 0 |
+
+    | U12 | 1 | 5 | 2 | 0 | 0 |
+
+    | U13 | 1 | 3 | 5 | 1 | 0 |
+
+    | U14 | 0 | 3 | 4 | 2 | 1 |
+
+    | U21 | 0 | 3 | 6 | 1 | 0 |
+
+    | U22 | 0 | 2 | 4 | 3 | 1 |
+
+    | U23 | 0 | 2 | 5 | 2 | 1 |
+
+    | U24 | 0 | 3 | 4 | 3 | 1 |
+
+    | U31 | 0 | 3 | 5 | 1 | 0 |
+
+    | U32 | 1 | 2 | 6 | 1 | 0 |
+
+    | U33 | 0 | 3 | 4 | 2 | 1 |
+
+    | U34 | 1 | 2 | 5 | 0 | 2 |
+
+    | U41 | 0 | 0 | 5 | 4 | 1 |
+
+    | U42 | 0 | 1 | 6 | 2 | 1 |
+
+    | U43 | 0 | 2 | 5 | 2 | 1 |
+
+    | U44 | 0 | 3 | 4 | 2 | 1 |
+
+    | U45 | 2 | 4 | 2 | 1 | 1 |
+
+
+    Where: U11 is data security, isolation, privacy, disclosure and locality;
+
+    U12 is network security;
+
+    U13 is Web application;
+
+    U14 is authentication and authorization;
+
+    U21 is data and computational availability;
+
+    U22 is data security, isolation, privacy, disclosure and locality;
+
+    U23 is usability;
+
+    U31 is data center construction;
+
+    U32 is physical security;
+
+    U33 is transport security;
+
+    U35 is system security;
+
+    U41 is governance and enterprise risk management;
+
+    U42 is legal issue;
+
+    U43 is compliance and auditing;
+
+    U44 is information management and data security;
+
+    U45 is portability and interoperability.
+
+
+    # 4.1 Comprehensive Evaluation of Cloud Security Hierarchy Model based on CSA
+
+
+    The single factor evaluation matrix of cloud architecture, cloud governance and
+    cloud operation indexes can be obtained by normalizing the survey data of the
+    evaluation-based frequency distribution table based on the CSA-based security
+    hierarchy.
+
+
+    ```
+
+    $R_1 = [0.10, 0.70, 0.20, 0.10]
+
+    0, 0.50, 0.30, 0.20
+
+    0, 0.20, 0.50, 0.10
+
+    0, 0.10, 0.60, 0.20
+
+    ```
+
+
+    ```
+
+    $R_2 = [0.20, 0.40, 0.20, 0.20]
+
+    0.10, 0.30, 0.40, 0.20
+
+    0.10, 0.20, 0.50, 0.10
+
+    ```
+
+
+    ```
+
+    $R_3 = [0.20, 0.50, 0.10, 0.20]
+
+    0, 0.20, 0.30, 0.10
+
+    0.10, 0.30, 0.50, 0.20
+
+    ```
+
+
+    Fuzzy comprehensive evaluation sets are respectively obtained by the first-level
+    evaluation using model $M(\wedge, \vee)$;
+
+    B1=$A31 \wedge R_1=(0.10, 0.60, 0.20, 0.20),
+
+    B2=$A32 \wedge R_2=(0.12, 0.24, 0.43, 0.21), and its normalization (0.11, 0.23,
+    0.41, 0.21, 0.04);
+
+    B3=$A33 \wedge R_3=(0.16, 0.25, 0.41, 0.22, 0.03), and its normalization (0.15,
+    0.24, 0.39, 0.21, 0.01).
+
+    From the above first-level comprehensive evaluation set B1, B2, and B3, the second-level
+    comprehensive evaluation result is:
+
+
+    | $B_1$ | 0 | 0.60 | 0.20 |
+
+    |---|---|---|---||
+
+    | $B_2$ | 0.11 | 0.23 | 0.41 | 0.24 |
+
+    | $B_3$ | 0.15 | 0.24 | 0.39 | 0.21 |
+
+
+    Then, $B = B_1 \vee B_2 \vee B_3=(0.13, 0.27, 0.53, 0.29)$ obtained through third-level
+    fuzzy evaluation, which is normalized to (0.11, 0.21, 0.50, 0.135). According
+    to the principle, the cloud security status of the electromagnetic computations
+    of turbo-generators negative sequence conditions is generated.
+
+
+    # 4.2 Comprehensive Evaluation of Cloud Security Hierarchy Model based on Cloud
+    Platform Service Pattern
+
+
+    # 4 Comprehensive Evaluation of Cloud Security Hierarchy Model'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "normalizing the survey data of the evaluation frequency distribution table\
+    \ of cloud service hierarchy model based on cloud platform service mode, the single-factor\
+    \ evaluation method of SaaS mode service, PaaS mode service, IaaS mode service\
+    \ and cloud governance indicators can be obtained respectively\n\nnormalized to\
+    \ (0.10, 0.25, 0.41), 0.19, 0.05. According to the principle of maximum benefit,\
+    \ the cloud status of the electromagnetic induction losses of turbo-generators\
+    \ under negative sequence conditions is\n\n# 5 Conclusions\n\nCalculations and\
+    \ analyses show that the evaluation models of two index systems based on cloud\
+    \ service alliance CSA and platform service mode have completed the quantification\
+    \ of cloud service level. The evaluation results of the two index systems are\
+    \ in line with the reality, which indicate that the evaluation method is effective.\
+    \ \n\n# ACKNOWLEDGMENTS\n\nThe authors appreciate the support from the Heiljiang\
+    \ Provincial colleges and universities research business Youth Innovative Talent\
+    \ Project (No. 135409227) and the Qinhai university innovation and entrepreneurship\
+    \ training program (No. 20201032777).\n\n# REFERENCES\n\n+   [1] A. Hendrix and\
+    \ K. Jusi, 2019. A Semantic Approach to Cloud Computing and Compliance. IJCC,\
+    \ 10(2), 225-230.\n\n+   [2] V. Guo, J. Guo, and Y. Yao, 2015. Transient Negative-sequence\
+    \ Component Calculation for Large Generator on Wavelet Transform. IEEE TAP, 63(9),\
+    \ 4318-4325.\n\n+   [3] H. Wang, W. Guo, J. Guo, and Y. Li, 2016. Improvement\
+    \ of the transient fault analysis of large generators under negative sequence\
+    \ component current. International Transactions on Electrical Energy, 32(5), 2359-2366.\n\
+    \n+   [4] W. Guo, H. Guo, and Y. Li, 2015. Negative-sequence component analysis\
+    \ of induction generator under short-circuit condition. Electric Power Components\
+    \ and Systems, 93(4), 633-640.\n\n+   [5] Y. Sheng, L. Gui, W. Jian, and Y. Liu,\
+    \ 2012. Layered Models for Cloud Computing Based on Hierarchical System. MDCAT,\
+    \ 21(6), 3013-3021.\n\n+   [6] Z. Liu and X. Liu, 2019. Adaptive analysis of uncertain\
+    \ cascade system via output feedback. CCDC. 31, 83-88.\n\n| 0.10 | 0.20 | 0.50\
+    \ | 0.20 |\n| 0.10 | 0.20 | 0.60 | 0.10 |\n| 0.20 | 0.20 | 0.50 | 0.10 |\n| 0\
+    \ | 0.30 | 0.40 | 0.30 |\n| 0 | 0.30 | 0.70 | 0.10 |\n| 0 | 0.20 | 0.40 | 0.30\
+    \ |\n| 0 | 0.10 | 0.60 | 0.20 |\n| 0 | 0.30 | 0.50 | 0.20 |\n| 0 | 0.10 | 0.40\
+    \ | 0.20 |\n| 0 | 0.30 | 0.50 | 0.30 |\n| 0 | 0.10 | 0.60 | 0.20 |\n| 0 | 0.20\
+    \ | 0.50 | 0.20 |\n| 0 | 0.10 | 0.40 | 0.20 |\n\nIn the same way, fuzzy comprehensive\
+    \ evaluation sets are obtained respectively by first level evaluation using Method\
+    \ M(\\cdot);\n\n```\nB1'=AU1*(0.12, 0.20, 0.27, 0.24), which is normalized to\
+    \ (0.12, 0.25, 0.48, 0.15),\nB2'=AU2*(0.37, 0.54, 0.26, 0.13), which is normalized\
+    \ to (0.27, 0.40, 0.19, 0.09),\nB3'=AU3*(0.12, 0.38, 0.47, 0.15), which is normalized\
+    \ to (0.10, 0.33, 0.45, 0.12),\nB4'=AU4*(0.12, 0.26, 0.24, 0.13), which is normalized\
+    \ to (0.11, 0.23, 0.32, 0.12).\n```\n\nFrom the first-level comprehensive evaluation\
+    \ matrix is:\n\n| 0.15 | 0.22 | 0.45 | 0.18 |\n| 0 | 0.27 | 0.45 | 0.19 |\n| 0.10\
+    \ | 0.33 | 0.45 | 0.12 |\n| 0.11 | 0.23 | 0.32 | 0.12 |\n\nThen, B'=AU'*R*(0.12,\
+    \ 0.27, 0.45, 0.21), which was obtained through second-level fuzzy comprehensive\
+    \ evaluation, was"
+  merge: -1
+  img_proc: true
