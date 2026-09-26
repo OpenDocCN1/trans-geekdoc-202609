@@ -1,0 +1,263 @@
+- pgno: 0
+  md: '# Software Impacts 13 (2022) 100333
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Software Impacts
+
+
+    journal homepage: www://journals.elsevier.com/software-impacts
+
+
+    Original software publication
+
+
+    # # Explainable machine learning pipeline for Twitter bot detection during the
+    2020 US Presidential Elections
+
+
+    Alexandr Shevtov a,c*, Christos Tagzagrakis a*, Despina Antonaki a, Sotiris Ioannis
+    b
+
+
+    a Institute of Computer Science, Foundation for Research and Technology-Hellas,
+    Greece
+
+    b School of Computer and Engineering, Technical University of Crete, Greece
+
+    c Department of Computer Science, University of Crete, Greece
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    This study introduces a novel, reproducible and robust Twitter bot identification
+    system. The system uses a machine learning (ML) pipeline with hundreds of features
+    extracted from a Twitter corpus. The objective of the proposed pipeline is to
+    train and validate state-of-the-art machine learning models, where the Extreme
+    Gradient Boosting (XGBoost) model is selected as it achieves the highest detection
+    performance. The Twitter dataset was collected during the 2020 US Presidential
+    Elections, and experimental evaluation on Twitter datasets demonstrates the superiority
+    of our approach, in terms of high bot accuracy.
+
+
+    +   Keywords:
+
+    - Machine learning
+
+    - Twitter bot detection
+
+    - Model explainability
+
+
+    # Code metadata
+
+
+    +   Current version: v1
+
+    Permanent link to code/repository for this version
+
+    Permanent link to Release
+
+    Legal Code
+
+    Code versioning system:
+
+    GitHub
+
+    Code languages, tools and services used
+
+    Compilation requirements, operating environments & dependencies
+
+    If Available Link to documentation/manual
+
+    Support email for concerns
+
+
+    https://github.com/SoftwareImpacts/SIMPAC-2022-7
+
+    https://github.com/capsule/3418007-tree/v1
+
+    MIT LicensenPython, scikit-learn, Twitter API, Botometer, BotSentinel
+
+    PyTorch is required with the following libraries: sklearn, xgboost, shap, numpy,
+    pandas, matplotlib
+
+    https://github.com/alexdrk14/ISBotDetection
+
+    shevtov@ixs.forth.gr
+
+
+    1. Introduction
+
+    The current article presents the design and implementation of the methodology
+    introduced in "Explainable Machine Learning Framework: for Twitter Bots on the
+    2020 US Elections Study", where a Twitter bot identification system is described.
+    We explore the impact of the implemented detection system, in terms of a reproducible
+    and robust scheme that could be employed by the research community. The proposed
+    machine learning (ML pipeline) is ingested with hundreds of features extracted
+    from the corpus
+
+
+    (and data) in this article has been registered as Repository Code Ocean: (https://www.elsevier.com/physical-sciences-and-engineering/computer-science/journals).
+    More information on the Reproducibility Initiative is available at: https://codeodean.com/.
+
+    Corresponding author: shevtovics@ixs.forth.gr (A. Shevtov), tagzagrakis@ixs.forth.gr
+    (C. Tagzagrakis), desponina@ixs.forth.gr (D. Antonaki), sotiris@ece.tuc.gr
+
+
+    https://doi.org/10.1016/j.soft.2022.100333
+
+    Received 2 June 2022; Accepted 10 June 2022
+
+
+    2665-9638/2022 The Author(s). Published by Elsevier B. This is an open access
+    article under the CC BY license
+
+    (http://creativecommons.org/licenses/4.0).'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Software Impacts 13 (2022) 100333
+
+
+    ![](img/02321a4427707f96fb36ef14c433609d_1_0.png)
+
+
+    (a) Labeling pipeline
+
+    (b) Bot detection
+
+
+    Fig. 1. Pipelines: (a) ground truth labeling and (b) model tuning using K-fold
+    cross-validation.
+
+
+    additional experimental evaluation on distinct Twitter datasets demonstrates the
+    superiority of our approach in terms of bot detection accuracy.
+
+
+    ML model performance evaluation) are performed to detect whether a Twitter account
+    is bot or not, as well as the classification accuracy using SHAP method.
+
+
+    In this work we built a ML model using a larger collected dataset, The current
+    study provides answers to the following questions:
+
+
+    The implemented pipeline can be utilized for additional classification tasks (not
+    only to bot detection), but also provides a fine-tuned configuration that can
+    be used for any other case. Our methodology can provide an automated pipeline
+    of the fine-tuning and performance measurement, ML implementation knowledge is
+    not required by the user.
+
+
+    +   - Is it possible to detect and fine-tune a bot model effectively up to the
+    US 2020 Elections dataset?
+
+    - Which of features are extracted from the Twitter programming interface (API)
+    to improve performance?
+
+    - Does the ML model act as a bot or could the ML model''s mechanism be ‘unlocked’?
+    In investigate whether it yields its predictions
+
+
+    # 3. Impact
+
+
+    The dataset is publicly available, as well as the implemented pipeline which can
+    be adjusted and adopted in other domains.,
+
+
+    The proposed framework can be used by researchers and researchers to detect accounts
+    on Twitter, based on state-of-the-art ML models. The Bot detection tool utilizes
+    state-of-the-art ML models, optimizing the feature selection and herper-parameters.
+    By comparison with existing methods, the proposed implementation enhances the
+    detection of bots while providing accurate classification results using the SHAP
+    method. As mentioned earlier, the present software is already utilized on the
+    US 2020 Presidential elections, obtaining highly accurate results and is currently
+    published in the proceedings of the International Conference on Web and Social
+    Media (ICWSM).2022.
+
+
+    # 2. Methodology
+
+
+    In answer these questions, we initially tackle the following issues: data acquisition,
+    ground truth labeling and bot detection development. To do this, we collect a
+    Twitter dataset through API, where we narrow our search to the 2020 Presidential
+    Elections. For this purpose, we manually identify the bots during the Elections
+    period and manage to collect 15.6 million tweets from 1 November, 2020 to 30 November,
+    2020.
+
+
+    # 4. Conclusions and future work
+
+
+    The Twitter API does not provide any information about whether an account is bot
+    or not, and thus an account labeling method should be taken into consideration.
+    In this work, Twitter API is used to identify an account as bot or suspect. However,
+    we cannot retrieve this information during our data acquisition phase.
+
+
+    The proposed bot detection achieves high performance on the collected dataset
+    (in terms of period), and compared to data information, performance is reduced
+    by only 2% to F1 score (from 0.916 to 0.896 and 0.987). These results suggest
+    high generalization of our ML model. As future work, we intend to evaluate the
+    bot detection performance on training and test data in different periods.
+
+
+    bot detection is not permanent, but in most cases it lasts a longer period of
+    time until an account''s suspension removal. The user suspension does not provide
+    feedback or clear evidence of whether an account is bot or not, as the account
+    may be suspended due to policy violations. In order to tackle this issue we propose
+    the following:
+
+
+    # Declaration of competing interest
+
+
+    During the labeling, we use two-off-shelf ML models for bot detection. We collect
+    the detection from both tools (i.e., Botometer and BotSentinel) by majority voting
+    and keep only the similar labels. This approach allows us to reduce the noise
+    and false-phenomena, since none of the existing tools have 100% accuracy. The
+    methodology developed provides ground truth labels and dramatically reduces the
+    computation time from 650 to 18 days.
+
+
+    The authors declare that they have no competing financial interests or personal
+    relations that could have appeared to influence the work presented in this
+
+
+    Next, a ML pipeline is developed that takes as input user features in the form
+    of CSV file. (i.e., feature selection, hyperparameter tuning using K-fold cross-validation,
+    we
+
+
+    # Acknowledgments
+
+
+    We would like to thank the reviewers for their valuable comments. This document
+    is the result of projects CONCORDIA (grant number 839027), CyberSANE (grant number
+    836683) and PUZZLE (grant number 838540) funded by the European COMMISSION (with
+    EUROPEAN Directorate-General Communications, Content and Technology).
+
+
+    +   1 https://botometer.osmium.edu/
+
+    2 https://botsentinel.com/about/
+
+
+    +   3 https://shap.readthedocs.io/latest/index.html,
+
+    4 https://icwsm.org/2022/index.html.
+
+
+    2'
+  merge: -1
+  img_proc: true
