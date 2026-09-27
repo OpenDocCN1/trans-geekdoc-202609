@@ -1,0 +1,2008 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # PCCP
+
+
+    View Article Online
+
+
+    # PAPER
+
+
+    Check for updates
+
+
+    # Tandem solar cells efficiency prediction and optimization via deep neural learning†
+
+
+    Chuqiao Yi, ᵃᵇ Yuliang Wu, ᵇ Yayo Gao ᵃᵇ* and Qingguo Du ¹ᵇ**
+
+
+    Cite this: Phys. Chem. Chem. Phys., 2021, 23, 2991
+
+
+    Optical design plays an important role in improving the performance of opto-electronic
+    devices. However, conventional design processes using finite time difference (FDTD)
+    or finite element methods are usually time resource consuming, and often result
+    in sub-optimal solutions due to an incomplete search of the parameter space. In
+    this paper, we propose a deep learning approach to predict and optimize the performance
+    of perovskite/crystalline-silicon solar cells. In particular, a deep neural network
+    is implemented to predict the short-circuit current for tandem cells with given
+    cell structure. Training the network achieves an accuracy of 98.3% and micro-second
+    scale simulation, which is as fast. Heuristic algorithms are also used to optimize
+    the device structure, where the optimal set of layers is chosen to maximize the
+    achieved short-circuit current. According to the calculated results, the expected
+    short-circuit power conversion efficiency 15.79 cm⁻² and 23.245%, which is improved
+    by 14.2% and 28.4%, respectively, compared to the benchmark cells.
+
+
+    Received 11 November 2020;
+
+    Accepted 9th December 2020
+
+
+    DOI: 10.1039/D0CP05882X
+
+
+    rsc/pcp
+
+
+    # 1 Introduction
+
+
+    Developing renewable energy is a promising way to support the sustainable development
+    of human beings. Solar cells of renewable energy are a promising candidate to
+    prevent the continuous increase of global temperature by reducing the carbon dioxide
+    emitted from conventional energy sources such as are still dominated by silicon
+    solar cells with a record power conversion efficiency (PCE) of 27.6% for a single
+    junction. Tandem solar cells, an emerging type of solar cell, have been extensively
+    studied due to their simplicity, easy fabrication and cost, and the device efficiency
+    has increased rapidly with a PCE of 25.2% for a single junction. Additionally,
+    perovskite is an excellent top-cell in a tandem solar cell owing to the flexible
+    bending nature of perovskites. With high current absorption material perovskites/
+
+
+    tandem solar cells have been proposed, to be an effective way to surpass the current
+    efficiency record of tandem cells. To further improve cell efficiency, and the
+    optimization of layers and nanostructures using plasmonic and photonic crystal
+    structures are necessary to enhance the light absorption in the active layer for
+    both single junction and tandem cells. In the optical design process, time difference
+    method (FDTD) or finite control variable methods, are normally used to calculate
+    the absorption spectrum by swapping the parameters of the structure.⁶ With the
+    achieved high short-circuit current (MACD) and other parameters are found, such
+    as the thickness of layers or specific structure parameters of nanostructures.
+    A traversal process of parameter optimization for solar cells and other optoelectronic
+    devices is time and resource consuming. Furthermore, many existing methods require
+    a large amount of manual intervention...
+
+
+    To overcome these limitations of the design process, learning methods were proposed
+    in the design
+
+
+    +   ⁶ School of Electronic Information and Communications, Huazhong University
+    of Science and Technology, Wuhan 430074, China. E-mail: yiauqao@hust.edu.cn
+
+    ⁷ School of Information Engineering, Wuhan University of Technology, Wuhan 430074,
+    China
+
+    ⁸ Electronic supplementary information (ENI) available. See DOI: 10.1039/D0CP05882X
+
+    ⁹ Authors contributed equally.
+
+
+    This journal is © Theget Society 2021
+
+
+    Phys. Chem. Chem. Phys. 2021, 23, 2991–2998 | 2991'
+  - '[PAGE 1]
+
+
+    # Paper
+
+
+    # View Article
+
+
+    # PCCP
+
+
+    and characterization of optical devices. 8–10 Artificial networks were deployed
+    to model attributes of structure, 11–15 which saved computation time by 5-fold,
+    12 Based on artificial networks, the external quantum efficiency of thin film
+    solar cells was improved by 50% compared to that of bare silicon, and the absorption
+    efficiency of thin film photovoltaic cells was greater than 20%. Other common
+    intelligence-based applications were adopted to predict some solar energy attributes
+    according their structure, such as solar assisted pumps and photovoltaic/thermal
+    (PV/T) systems, which avoided extensive experiments; 16–18. However, to the best
+    of our knowledge, little has been done on performance and optimization for tandem
+    solar cells using deep learning.
+
+
+    In this paper, we propose a fully-connected network, named Current Prediction
+    Network (CPN), to achieve an achievable shunt current for tandem solar cells,
+    in particular perovskite/crystalline-Si (Si) tandem cells. Based on C, heuristic
+    algorithms are adopted to search for the optimal parameter space. The accuracy
+    of the current properties of tandem solar cells was 98.3%, requiring only micro-second
+    grade simulation time. Projected efficiency shows that with the optimal layer
+    thickness combination, the performance was 21.5% and 23.4%, respectively, compared
+    to the benchmark tandem solar cells. Our analysis provides a highly-accurate,
+    time-efficient solution for performance and optimization of tandem solar cells.
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_1_0.png)
+
+
+    Fig. 1 Structure of perovskite/Si tandem solar cells.
+
+
+    e denotes the constant electron charge, h denotes the Planks constant and c denotes
+    the speed of light in vacuum. A(λ) denotes the spectral intensity under AM 1.5
+    solar radiation and A(λ) denotes the absorption intensity of the active layers
+    of the perovskite/Si tandem cell which is given by¹⁴⁵
+
+
+    A(λ) = 1 - R(λ) - T(λ)
+
+
+    where R(λ) and T(λ) are the reflectance and transmittance of solar cell, which
+    can be extracted from FDTD simulation.
+
+
+    FDTD simulation was performed with the perovskite tandem solar cell as shown in
+    Fig. 1. Periodic boundary conditions are applied to both x and y directions and
+    a perfect matching boundary is applied to the z direction. The refractive indices
+    of the different layers are listed in Fig. 2.²²–³ a curve fitting technique is
+    employed to design the materials with dispersive properties²⁶,²⁷
+
+
+    # 2 Methodology
+
+
+    # 2.1 Tand solar cell structure
+
+
+    The perovskite/Si tandem cell structure is illustrated in Fig. 1. To fully absorb
+    the light transmitted to the bottom solar cell, the thickness of the Si cell is
+    often chosen to be 35 μm. Consequently, the efficiency of the layers of the top
+    cell determine the performance of the tandem solar cells. Hₐ, H₋, and H₆ denote
+    the thickness of layers, Indium Tin Oxide (ITO), [6,6]-phenyl-C-butyl ester (ETM),
+    and poly(3,4-ethylenedioxythiophene) (PEDOT), respectively, from top to bottom
+    of the top cell. The MACs of top and bottom solar cells are denoted as I₁ and
+    I₀.
+
+
+    Additionally, the current difference between top and bottom solar cells would
+    cause current accumulation and decrease the performance of the tandem solar cell.
+    I� = I₁ - I₀.
+
+
+    4.0 mA cm² or < 0.4 mA cm² is acceptable for a tandem solar cell.²⁸²⁹. Here, for
+    the optimization process, which is 10 times smaller than the experimental approach,
+
+
+    In order to PCE the tandem solar cell, the thickness of each layer needs to be
+    carefully designed and optimized so that I₁ and I₀ as close as possible can be
+    achieved. The MAC is given by
+
+
+    ```
+
+    I_{MAC} = \int_{λ_{min}}^{λ_{max}} I(λ)A(λ)d\λ
+
+    ```
+
+
+    (1)
+
+
+    where λ_min and λ_max are the upper and lower limit of absorption wavelength range
+    of the tandem solar cell,
+
+
+    # 2.2 Description of the learning approach
+
+
+    To address these limitations of the numerical simulation, we propose a deep learning
+    approach for the design of tandem solar cells, which is illustrated in Fig. 3.
+    in part: a fully-connected neural network, named Current prediction network (CPN),
+    is designed and trained to predict the current properties of tandem solar cells
+    with a given layer thickness, replacing the FDTD numerical simulation. Further
+
+
+    2992 | Phys. Chem. Chem. Phys. 2021, 23, 2991–2998
+
+
+    This journal is © The Open Societies 2021'
+  md: '
+
+    # PCCP
+
+
+    View Article Online
+
+
+    # PAPER
+
+
+    Check for updates
+
+
+    # Tandem solar cells efficiency prediction and optimization via deep neural learning†
+
+
+    Chuqiao Yi, ᵃᵇ Yuliang Wu, ᵇ Yayo Gao ᵃᵇ* and Qingguo Du ¹ᵇ**
+
+
+    Cite this: Phys. Chem. Chem. Phys., 2021, 23, 2991†
+
+
+    Optical design plays an important role in improving the performance of opto-electronic
+    devices. However, conventional design processes using finite-time-difference (FDTD)
+    or finite element methods are usually time-resource consuming, and often result
+    in sub-optimal solutions due to an incomplete search of the parameter space. In
+    this paper, we propose a deep learning approach to predict and optimize the performance
+    of perovskite/crystalline-silicon solar cells. In particular, a deep neural network
+    is implemented to predict the short-circuit current for tandem cells with given
+    cell structure. Training the network achieves an accuracy of 98.3% and micro-second
+    scale simulation, which is as fast. Heuristic algorithms are also used to optimize
+    the device structure, where the optimal set of layers is chosen to maximize the
+    achieved short-circuit current. According to the calculated results, the expected
+    short-circuit power conversion efficiency is 15.79% and 23.245%, which is improved
+    by 14.2% and 28.4%, respectively, compared to the benchmark cells.
+
+
+    Received 11 November 2020;
+
+    Accepted 9th December 2020
+
+
+    DOI: 10.1039/D0CP05882X
+
+
+    rsc/pcp
+
+
+    # 1 Introduction
+
+
+    Developing renewable energy is a promising way to support the sustainable development
+    of human beings. Solar cells of renewable energy are a promising candidate to
+    prevent the continuous increase of global temperature by reducing the carbon dioxide
+    emitted from conventional energy sources such as are still dominated by silicon
+    solar cells with a record power conversion efficiency (PCE) of 27.6% for a single
+    junction. Tandem solar cells, an emerging type of solar cell, have been extensively
+    studied due to their simplicity, easy fabrication and cost, and the device efficiency
+    has increased rapidly with a PCE of 25.2% for a single junction. Additionally,
+    perovskite is an excellent top-cell in a tandem solar cell owing to the flexible
+    bending nature of perovskites. With high current absorption material perovskite/tandem
+    solar cells have been proposed, to be an effective way to surpass the current
+    efficiency record of tandem cells. To further improve cell efficiency, and the
+    optimization of layers and nanostructures using plasmonic and photonic crystal
+    structures are necessary to enhance the light absorption in the active layer for
+    both single junction and tandem cells. In the optical design process, time difference
+    method (FDTD) or finite control variable methods, are normally used to calculate
+    the absorption spectrum by swapping the parameters of the structure.⁶ With the
+    achieved high short-circuit current (MAC) and other parameters are found, such
+    as the thickness of layers or specific structure parameters of nanostructures.
+    A traversal process of parameter optimization for solar cells and other optoelectronic
+    devices is time and resource consuming. Furthermore, many existing methods require
+    a large amount of manual intervention...
+
+
+    + ⁶ School of Electronic Information and Communications, Huazhong University of
+    Science and Technology, Wuhan 430074, China. E-mail: yiauqao@hust.edu.cn
+
+    ⁷ School of Information Engineering, Wuhan University of Technology, Wuhan 430074,
+    China
+
+    ⁸ Electronic supplementary information (ESI) available. See DOI: 10.1039/D0CP05882X
+
+    ⁹ Authors contributed equally.
+
+
+    This journal is © The Open Society 2021
+
+
+    Phys. Chem. Chem. Phys. 2021, 23, 2991–2998 | 2991
+
+
+    and characterization of optical devices. 8–10 Artificial networks were deployed
+    to model attributes of structure, 11–15 which saved computation time by 5-fold,
+    12 Based on artificial networks, the external quantum efficiency of thin film
+    solar cells was improved by 50% compared to that of bare silicon, and the absorption
+    efficiency of thin film photovoltaic cells was greater than 20%. Other common
+    intelligence-based applications were adopted to predict some solar energy attributes
+    according their structure, such as solar assisted pumps and photovoltaic/thermal
+    (PV/T) systems, which avoided extensive experiments; 16–18. However, to overcome
+    these limitations of the design process, learning methods were proposed in the
+    design. In this paper, we propose a fully-connected network, named Current Prediction
+    network (CPN), to predict the current properties of tandem cells with a given
+    layer thickness, replacing the FDTD numerical simulation. Training the network
+    achieves an accuracy of 98.3% and micro-second scale simulation, which is as fast.
+    Heuristic algorithms are also used to optimize the device structure, where the
+    optimal set of layers is chosen to maximize the achieved short-circuit current.
+    According to the calculated results, the expected short-circuit power conversion
+    efficiency is 15.79% and 23.245%, which is improved by 14.2% and 28.4%, respectively,
+    compared to the benchmark cells.
+
+
+    ![img/0](img/0)
+
+    Fig. 1 Structure of perovskite/Si tandem cells.
+
+
+    # 2 Methodology
+
+
+    ## 2.1 Tand cell structure
+
+
+    The perovskite/Si tandem cell structure is illustrated in Fig. 1. To fully absorb
+    the light transmitted to the bottom solar cell, the thickness of the Si cell is
+    often chosen to be 35 μm. Consequently, the efficiency of the layers of the top
+    cell determine the performance of the tandem cells. Hₐ, H��, and H denote the
+    thickness of layers, Indium Tin Oxide (ITO), [6,6]-phenyl-C-butyl ester (ETM),
+    and poly(3,4-ethylenediothiophene) (PEDOT), respectively, from top to bottom of
+    the top cell. The MACs of top and bottom solar cells are denoted as I₁ and I₀.
+
+
+    Additionally, the current difference between top and bottom solar cells would
+    cause current accumulation and decrease the performance of the tandem cell. I
+    = I₁ - I₀.
+
+
+    4.0 mA cm² or < 0.4 mA cm² is acceptable for a tandem solar cell.⁸²⁹. In order
+    to PCE the tandem cell, the thickness of each layer needs to be carefully designed
+    and optimized so that I₁ and I₀ as close as possible can be achieved. The MAC
+    is given by
+
+
+    ```
+
+    I_{MAC} = \int_{λ_{min}}^{λ_{max}} I(λ)A(λ)d\λ
+
+    ```
+
+
+    (1)
+
+
+    where λ_min and λ_max are the upper and lower limit of absorption wavelength range
+    of the tandem solar cell
+
+
+    ## 2.2 Description of the learning approach
+
+
+    To address these limitations of the numerical simulation, we propose a deep learning
+    approach for the design of tandem solar cells, which is illustrated in Fig. 3.
+    in part: a fully-connected neural network, named Current prediction network (CPN),
+    is designed and trained to predict the current properties of tandem solar cells
+    with a given layer thickness, replacing the FDTD numerical simulation.
+
+    '
+  mdcn: '
+
+
+    # PCCP
+
+
+    在线阅读文章
+
+
+    # 论文
+
+
+    查看更新
+
+
+    # 通过深度学习进行叠层太阳电池效率的预测与优化†
+
+
+    Chuqiao Yi, ᵃᵇ Yuliang Wu, ᵇ Yayo Gao ᵃᵇ* and Qingguo Du ¹ᵇ**
+
+
+    引用此文：Phys. Chem. Chem. Phys., 2021, 23, 2991†
+
+
+    光学设计在提高光电器件的性能方面起着重要作用。然而，使用有限时域差分法（FDTD）或有限元法的传统设计过程通常耗时耗资源，且由于对参数空间的搜索不完全，往往会导致次优解决方案。在本文中，我们提出了一种深度学习方法来预测和优化钙钛矿/晶硅太阳能电池的性能。特别地，实现了一种深度神经网络，用于预测给定电池结构的叠层太阳电池的短路电流。训练该网络实现了
+    98.3% 的准确率和微秒级的仿真，速度非常快。还使用了启发式算法来优化器件结构，通过选择最佳层组合以最大化所实现的短路电流。根据计算结果，预期的短路光电转换效率分别为
+    15.79% 和 23.245%，与基准电池相比分别提升了 14.2% 和 28.4%。
+
+
+    接收于 2020年11月11日；
+
+    接受于 2020年12月9日
+
+
+    DOI: 10.1039/D0CP05882X
+
+
+    rsc/pcp
+
+
+    # 1 引言
+
+
+    开发可再生能源是支持人类可持续发展的一种非常有前景的方法。可再生太阳能电池是防止全球温度持续上升的重要候选，通过减少传统能源源排放的二氧化碳，目前领域仍由硅太阳能电池主导，单结的记录功率转换效率（PCE）为
+    27.6%。叠层太阳电池作为一种新型太阳能电池，因其简单、易于制造和成本低而受到广泛研究，其器件效率迅速提高，单结 PCE 达到 25.2%。此外，由于钙钛矿具有柔性弯曲特性，钙钛矿是叠层太阳电池中优良的顶电池材料。具有高电流吸收材料的钙钛矿/叠层太阳电池已被提出，作为超越目前叠层太阳电池效率记录的有效方法。为了进一步提高电池效率，利用等离子体激元和光子晶体结构优化层和纳米结构，对于增强单结和叠层电池活性层的光吸收是必要的。在光学设计过程中，通常使用时间差分法（FDTD）或有限控制变量法通过交换结构参数来计算吸收光谱。⁶
+    获得高短路电流（MAC）以及其他参数，如层厚度或纳米结构的特定结构参数。太阳电池及其他光电器件的参数优化过程是耗时耗资源的。此外，许多现有方法需要大量的人工干预……
+
+
+    + ⁶ 华中科技电子信息与控制学院，武汉 430074，中国。电子邮件：yiauqao@hust.edu.cn
+
+    ⁷ 武汉理工大学信息工程学院，武汉 430074，中国
+
+    ⁸ 可用电子补充信息（ESI）。详见 DOI: 10.1039/D0CP05882X
+
+    ⁹ 作者贡献相等。
+
+
+    本期刊版权所有 © The Open Society 2021
+
+
+    Phys. Chem. Chem. Phys. 2021, 23, 2991–2998 | 2991
+
+
+    ![img/0](img/0)
+
+    图 1 钙钛矿/硅叠层电池结构。
+
+
+    # 2 方法
+
+
+    ## 2.1 叠层结构
+
+
+    钙钛矿/硅叠层电池结构如图1所示。为了充分吸收透射到底电池的光，硅电池的厚度通常选择为 35 μm。因此，顶电池层的效率决定了叠层电池的性能。Hₐ、H 和
+    H 分别代表从顶电池顶部到部的层、氧化�锡（ITO）、[6,6]-苯基丙丁酯（ETM）和聚乙（3,4-乙二噻吩）（PEDOT）的厚度。顶电池和底电池的 MAC
+    分别表示为 I₁ 和 I₀。
+
+
+    此外，顶底电池之间的电流差异会导致电流积累并降低叠层电池的性能。I = I₁ - I₀。
+
+
+    4.0 mA cm² 或 < 0.4 mA cm² 对于叠层太阳电池是可以接受的⁸²⁹。为了 PCE 叠层电池，需要对每层的厚度进行仔细设计和优化，使 I₁
+    和 I₀ 尽可能接近。MAC 由下式给出：
+
+
+    ```
+
+    I_{MAC} = \int_{λ_{min}}^{λ_{max}} I(λ)A(λ)d\λ
+
+    ```
+
+
+    (1)
+
+
+    其中 λ_min 和 λ_max 是叠层太阳电池吸收波范围的上下限
+
+
+    2.2 学习方法描述
+
+
+    为了解决数值仿真的局限性，我们提出了一种用于叠层太阳电池设计的深度学习方法，如图3部分所示：：设计并训练了一个名为电流预测网络（CPN）的全连接网络，用于预测给定层厚度的叠层太阳电池的电流特性，取代
+    FDTD 数值仿真。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # PCCP
+
+
+    View Article Online
+
+
+    Paper
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_2_0.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_2_1.png)
+
+
+    Fig. 2 Refractive indices for the most relevant materials for perovskite/c-Si
+    tandem cells for FDTD simulations.
+
+
+    # 2.3 Data set and network architecture of prediction network
+
+
+    In this paper, we formulate a data set with 12,500 sets of numerical simulation
+    data from FDTD, comprising the set of layer thicknesses (in nm) and the current
+    properties of tandem solar cells. Table 1 presents the space and the size of each
+    layer in the FDTD simulation set. For each layer thickness, we run the FDTD simulation
+    of the tandem solar cell and obtain the corresponding MAC of top-sub cell $l_t$
+    and reflection loss $l_t$. The data set and queries require to reproduce results
+    as can
+
+
+    Fig. 4 represents the architecture of CPN, which is a 15-deep neural network with
+    layers of tandem solar cells ($H_i, H_{ij}, H_{ijk}, H_i$) as input data. CPN
+    produces a series-parallel-parallel structure to reduce the number of training
+    parameters in the network. The first segment is an input network (SIN) where the
+    thickness of five layers is the input data. Each layer is adopted by CPN to prevent
+    over-fitting and reduce redundant calculations. SIN is followed by a parallel
+    network (PNW), which consists of three parallel parts each with fully-connected
+    layers, which have 12, 10, 10, 8, and 5 hidden nodes, respectively.
+
+
+    # 2.4 Heuristic algorithms for structure optimization
+
+
+    2.4.1 Continuous optimization. Based on the predicted results using CPN, we now
+    further search for the layer thickness ($H_i, H_{ij}, H_{ijk}$) in real space
+    to maximize the short-circuit current of the top and bottom sub-cells, $C_p$.
+    The tandem solar cell is made up of top and bottom sub-cells in a series circuit
+    and the short-circuit current of the tandem solar cells is bounded by the short-circuit
+    current of any sub-cells. Moreover, the difference between the top and bottom
+    sub-cell current $|I_c|$ should not exceed 0.4 mA cm² as mentioned in Section
+    2.1. The optimization problem is formulated as
+
+
+    ```
+
+    $C_p = \min(I_t, I_b) + L_c$.
+
+    ```
+
+
+    where
+
+
+    ```
+
+    $L_c = \begin{cases} |K_c| < 0.4 \ -5 \ \text{otherwise.} \end{cases}$
+
+    ```
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_2_2.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_2_3.png)
+
+
+    Fig. 3 Graphic illustration of prediction and optimization procedure for tandem
+    solar cells proposed in this paper.
+
+
+    Table 1 Set space and size of layer thickness of: ITO, PCBM, MAPbi, and PEDOT
+    in the data set
+
+
+    | Layer | Min value (nm) | Max value (nm) | Step size (nm) |
+
+    |---|---|---|--|
+
+    | $H_e$ | 10 | 100 | 10 |
+
+    | $H_f$ | 20 | 60 | 10 |
+
+    | $H_p$ | 15 | 35 | 5 |
+
+    | $H_{mn}$ | 160 | 250 | 10 |
+
+    | $H_x$ | 10 | 100 | 10 |
+
+
+    with traditional simulation-based design methods, this process provides a time
+    and computing resource-saving and global optimization solution for tandem solar
+    cell design, requires little professional knowledge or manual intervention.
+
+
+    This journal is © the Owner Societies Societies 2021
+
+
+    Phys. Chem. Chem. Phys., 2021, 23, 2991–2998 | 2993'
+  - '[PAGE 3]
+
+
+    # Paper
+
+
+    # View Article Online
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_3_0.png)
+
+
+    Fig. 4 The architecture of the prediction network. FC-X in the architecture indicates
+    there are X hidden nodes in this fully connected layer.
+
+
+    # 2.4.2 Discrete optimization, Note that the above obtains the optimal thickness
+    of each layer in the real number space. Nevertheless, in current practical design
+    the thickness of the layer is normally limited to 1 mm, indicating that the real-number
+    optimal thickness may be unable to maintain in manufacturing process. To deal
+    with this, a discrete optimization approach is further adopted to search for the
+    optimal thickness as integer (in unit of 1 mm). The problem in discrete space
+    can be further with
+
+
+    $$\max C_P = \min(I_t, I_o) + L_D,$$
+
+
+    (5)
+
+
+    where
+
+    $$L_D = \begin{cases} 0 & \text{if each thickness is an integer and } |I_k - I_o|
+    < 0.4 \ |I_k - I_o| & \text{otherwise} \end{cases}$$
+
+
+    Note that the integer constraint is included as a continuous constraint in the
+    objective function. The optimization problems in (3)-(4) and (5)-(6) are a multimodal
+    and multiobjective NP-Hard optimization problem. To search for the optimal solution,
+    three representative heuristic algorithms, Genetic Algorithm (GA)$^{38}$, Particle
+    Swarm Optimization (PSO)$^{39}$ and Simulated Annealing (SA)$^{32}$ are considered
+    in this paper, respectively which will be explained in Section 3.2.
+
+
+    # 3 Results and discussions
+
+
+    # 3.1 Network training
+
+
+    The data set formulated by FDTD is randomly divided into five folds for five-fold
+    cross validation while four are adopted as training sets and the other is either
+    validation and test set. In this paper, we adopt Keras$^{31}$ as the deep learning
+    framework. Mean Square Error (MSE), Mean Absolute Error (MAPE) and Mean Absolute
+    Error (MAE) are considered as key performance metrics and are defined in Table
+    2, where $I_o$ and $P_i$ denote the $th$ value in FDTD data and the $th$ prediction,
+    respectively. MSE is chosen as the loss function for training. As shown in Figure
+    3, MAE of training and validation can vary. With it we can see from Fig. 5, MSE
+    and MAE all decrease as the number of epochs, and the training process converges
+    about 600 epochs. CNN is not over-fitting in the training set and validation loss
+    also stays low.
+
+
+    # 3.1.2 Accuracy of the performance in CNN prediction
+
+
+    The performance of CNN is evaluated in terms of MAE of $I_o$, MSE of $I_o$, MAPE
+    and MAE, as defined in Table 2, are calculated and presented in Fig. 6. As shown
+    in figure, the average MAE of $I_o$ and $I_t$ is small, indicating that CNN can
+    achieve an accuracy of 98.3% of FDTD simulations. MSE is 0.19 and 0.052, respectively
+    which shows that the current properties predicted by CNN are matched with the
+    numerical comparison using FDTD. With limited space, we have randomly selected
+    50 sets out of test data for the sake of usage. The complete results can be found
+    from GitHub$^{29}$. As shown in Fig. 7, a good match can be observed between CNN
+    and FDTD results for $I_o$, $I_t$ and $I_{mo}$, indicating that the proposed CNN
+    is an accurate model for the prediction of properties of solar cells.
+
+
+    Table 2 Definitions of metrics
+
+
+    | Metric | Definition |
+
+    |---|---|
+
+    | Mean square error (MSE) | $\frac{1}{n}\sum_{i=1}^n(O_o - P_i)^2$ |
+
+    | Mean absolute error (MAPE) | $\frac{100}{n}\sum_{i=1}^n\frac{|O_o - P_i|}{O_o}$
+    |
+
+    | Mean absolute error (MAE) | $\frac{1}{n}\sum_{i=1}^n|O_o - P_i|$ |
+
+
+    2994 | Phys. Chem. Chem. Phys. 2021, 23, 2991–2998
+
+
+    This journal is © Our Wiley Societies 2022'
+  - '[PAGE 4]
+
+
+    # PCCP
+
+
+    # Paper
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_0.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_1.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_2.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_3.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_4.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_5.png)
+
+
+    (5) (a) MSE, (b) MAPE, and (c) MAE of training and validation versus the number
+    of epochs.
+
+
+    (7) (a) MACD of top-cell $l_i$, (b) reflection loss $l_i$, and (c) MACD of sub-cell
+    $l_i$ between CPN and FDTD in the test data.
+
+
+    # Table 5 Parameter of heuristic algorithms
+
+
+    | GA parameters | Probability of groups | Probability of crossover | Velocity
+    scaling |
+
+    |---|---|---|--|
+
+    | Value | 500 | 1 | 0.2 |
+
+    | PSO parameters | Number of parameters | Optimal path and offset index | Velocity
+    factor |
+
+    | Value | 500 | 8 | 0.5 |
+
+
+    | SA parameters | Temperature attention factor | Destination temperature |
+
+    |---|---||
+
+    | Value | 0.99 | $10^{-20}$ |
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_6.png)
+
+
+    (6) Metrics of current properties relation. (a) MSE of current properties. (b)
+    MAPE of current properties. (c) MAE of current properties.
+
+
+    **3.1 Time-consumption.** As CPN coincides with FDTD in training property simulation,
+    we can now compare their time efficiency. For each prediction over 12500 epochs,
+    CPN only needs ~5 seconds to run an algorithm on a equipped with i7-7700 CPU (4
+    cores and 8 threads) and 16GB RAM, while FDTD requires about 460 seconds on average
+    on a server with two Xeon-E5 v4 CPUs (12 cores and 24 threads for each) and 128GB
+    RAM. That is, CPN is more time-efficient than FDTD (micro-second grade versus
+    second grade), and less consuming on resources.
+
+
+    **3.2 Performance evaluation of heuristic algorithms**
+
+
+    **3.2.1 Parameter setting.** The parameters of GA, PSO and SA are summarized in
+    Table 3, which are identical for continuous and discrete optimization. The lower
+    and upper
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_7.png)
+
+
+    Fig. 8 Evolution curves of GA, PSO and SA in continuous and discrete optimization.
+
+
+    This journal is ©the Owner Societies 2021 | Phys. Chem. Chem. Phys., 2021, 23,
+    2991–2998 | 2995'
+  md: '
+
+    # PCCP
+
+
+    View Article Online
+
+
+    Paper
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_2_0.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_2_1.png)
+
+
+    Fig. 2 Refractive indices for the most relevant materials for perovskite/c-Si
+    tandem cells for FDTD simulations.
+
+
+    ## 2.3 Data set and network architecture of prediction network
+
+
+    In this paper, we formulate a data set with 12,500 sets of numerical simulation
+    data from FDTD, comprising the set of layer thicknesses (in nm) and the current
+    properties of tandem solar cells. Table 1 presents the space and the size of each
+    layer in the FDTD simulation set. For each layer thickness, we run the FDTD simulation
+    of the tandem solar cell and obtain the corresponding MAC of top-sub cell $l_t$
+    and reflection loss $l_t$. The data set and queries require to reproduce results
+    as can
+
+
+    Fig. 4 represents the architecture of CPN, which is a 15-deep neural network with
+    layers of tandem solar cells ($H_i, H_{ij}, H_{ijk}, H_i$) as input data. CPN
+    produces a series-parallel-parallel structure to reduce the number of training
+    parameters in the network. The first segment is an input network (SIN) where the
+    thickness of five layers is the input data. Each layer is adopted by CPN to prevent
+    over-fitting and reduce redundant calculations. SIN is followed by a parallel
+    network (PNW), which consists of three parallel parts each with fully-connected
+    layers, which have 12, 10, 10, 8, and 5 hidden nodes, respectively.
+
+
+    ## 2.4 Heuristic algorithms for structure optimization
+
+
+    ### 2.4.1 Continuous optimization. Based on the predicted results using CPN, we
+    now further search for the layer thickness ($H_i, H_{ij}, H_{ijk}$) in real space
+    to maximize the short-circuit current of the top and bottom sub-cells, $C_p$.
+    The tandem solar cell is made up of top and bottom sub-cells in a series circuit
+    and the short-circuit current of the tandem solar cells is bounded by the short-circuit
+    current of any sub-cells. Moreover, the difference between the top and bottom
+    sub-cell current $|I_c|$ should not exceed 0.4 mA cm² as mentioned in Section
+    2.1. The optimization problem is formulated as
+
+
+    ```
+
+    $C_p = \min(I_t, I_b) + L_c$.
+
+    ```
+
+
+    where
+
+
+    ```
+
+    $L_c = \begin{cases} |K_c| < 0.4 \ -5 \ \text{otherwise.} \ \end{cases}$
+
+    ```
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_2_2.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_2_3.png)
+
+
+    Fig. 3 Graphic illustration of prediction and optimization procedure for tandem
+    solar cells proposed in this paper.
+
+
+    Table 1 Set space and size of layer thickness of: ITO, PCBM, MAPbi, and PEDOT
+    in the data set
+
+
+    | Layer | Min value (nm) | Max value (nm) | Step size (nm) |
+
+    |---|---|---|---|
+
+    | $H_e$ | 10 | 100 | 10 |
+
+    | $H_f$ | 20 | 60 | 10 |
+
+    | $H_p$ | 15 | 35 | 5 |
+
+    | $H_{mn}$ | 160 | 250 | 10 |
+
+    | $H_x$ | 10 | 100 | 10 |
+
+
+    with traditional simulation-based design methods, this process provides a time
+    and computing resource-saving and global optimization solution for tandem solar
+    cell design, requires little professional knowledge or manual intervention.
+
+
+    This journal is © the Owner Societies 2021
+
+
+    Phys. Chem. Chem. Phys., 2021, 23, 2991–2998 | 2993
+
+
+    # Paper
+
+
+    # View Article Online
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_3_0.png)
+
+
+    Fig. 4 The architecture of prediction network. FC-X in the architecture indicates
+    there are hidden nodes in this fully connected layer.
+
+
+    ## 2.4.2 Discrete optimization, Note that the above obtains the optimal thickness
+    of each layer in the real space. Nevertheless, in practical design the thickness
+    of the layer is normally limited in manufacturing process. To deal with this,
+    a discrete optimization approach is further adopted to search for the optimal
+    thickness as integer (in unit of nm). The problem in discrete space can be further
+    with
+
+
+    $$\max C_p = \min(I_t, I_b) + L_D,$$
+
+
+    where
+
+    $$L_D = \begin{cases} 0 & \text{if each thickness is an integer and } |I_c - I_o|
+    < 0.4 \\ |I_c - I_o| & \text{otherwise}\end{cases}$$
+
+
+    Note that the integer constraint is included as a continuous constraint in the
+    objective function. The optimization problems in (3)-(4) and (5) are multimodal
+    and NP-Hard optimization problem. To search for the optimal solution, three representative
+    heuristic algorithms, Genetic Algorithm (GA), Particle Swarm Optimization (PSO),
+    and Simulated Annealing (SA) are considered in this paper, respectively will be
+    explained in Section 3.
+
+
+    ## 3 Results and discussions
+
+
+    ### 3.1 Network training
+
+
+    The data set formulated by FDTD is randomly divided into five folds for five-fold
+    cross validation while four are adopted as training sets and the other is test
+    set. In this paper, we adopt Keras as deep learning framework. Mean Square Error
+    (MSE), Mean Absolute Percentage Error (MAPE) and Mean Absolute Error (MAE) are
+    considered key performance metrics and are defined in Table 2, where $O_o$ and
+    $P_i$ denote the value in FDTD data and the prediction, respectively. MSE is chosen
+    as loss function for training. As shown in Figure 3, MAE of training and validation
+    can vary. With it we can see from Fig. 5, MSE and MAE all decrease as the number
+    of epochs, and the training process converges about 600 epochs. CNN is not overfitting
+    in the training set and validation loss stays low.
+
+
+    ### 3.1.2 Accuracy of the CNN prediction
+
+
+    The performance of CNN is evaluated in terms of MAE of $I_o$, MSE of $I_o$, MAPE
+    and MAE, as defined in Table 2, are calculated and presented in Fig. 6. As shown
+    in figure, the average MAE of $I_o$ and $I_t$ is small, indicating that CNN can
+    achieve an accuracy of 98.3% of FDTD simulations. MSE is 0.19 and 0.052, respectively
+    which shows that the properties predicted by CNN are matched with numerical comparison
+    using FDTD. With limited space, we have randomly selected 50 sets out of test
+    data for the sake of usage. The complete results can be found from GitHub. As
+    shown in Fig. 7, a good match can be observed between CNN and FDTD results for
+    $I_o, I_t$ and $I_{mo}$, indicating that the proposed CNN is an accurate model
+    for the prediction of properties of solar cells.
+
+
+    Table 2 Definitions of metrics
+
+
+    | Metric | Definition |
+
+    |---|---|
+
+    | Mean square error (MSE) | $\frac{1}{n}\sum_{i=1}^n(O_o - P_i)^2$ |
+
+    | Mean absolute error (MAPE) | $\frac{100}{n}\sum_{i=1}^n\frac{|O_o - P_i|}{O_o}$
+    |
+
+    | Mean absolute error (MAE) | $\frac{1}{n}\sum_{i=1}^n|O_o - P_i|$ |
+
+
+    2994 | Phys. Chem. Chem. Phys. 2021, 23, 2991–2998
+
+
+    This journal is © Our Wiley Societies 2022
+
+
+    # PCCP
+
+
+    # Paper
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_0.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_1.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_2.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_3.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_4.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_5.png)
+
+
+    (5) (a) MSE, (b) MAPE, and (c) MAE of training and validation versus the number
+    of epochs.
+
+
+    (7) (a) MACD of top-cell $l_i$, (b) reflection loss $l_i$, and (c) MACD of sub-cell
+    $l_i$ between CPN and FDTD in the test data.
+
+
+    Table 5 Parameter of heuristic algorithms
+
+
+    | GA parameters | Probability of groups | Probability of crossover | Velocity
+    scaling |
+
+    |---|---|---|---|
+
+    | Value | 500 | 1 | 0.2 |
+
+    | PSO parameters | Number of parameters | Optimal path and offset index | Velocity
+    factor |
+
+    | Value | 500 | 8 | 0.5 |
+
+    | SA parameters | Temperature attention factor | Destination temperature | |
+
+    |---|---|---|
+
+    | Value | 0.99 | $10^{-20}$ |
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_6.png)
+
+
+    (6) Metrics of properties relation. (a) MSE of current properties. (b) MAPE of
+    current properties. (c) MAE of current properties.
+
+
+    **3.1 Time-consumption.** As CPN coincides with FDTD in training property simulation,
+    we can now compare their time efficiency. For each prediction over 12500 epochs,
+    CPN only needs ~5 seconds to run an algorithm on a equipped with i7-7700 CPU (4
+    cores and 8 threads) and 16GB RAM, while FDTD requires about 460 seconds on average
+    on a server with two Xeon-E5 v4 CPUs (12 cores and 24 threads for each) and 128GB
+    RAM. That is, CPN is more time-efficient than FDTD (micro-second grade versus
+    second grade), and less consuming on resources.
+
+
+    **3.2 Performance evaluation of heuristic algorithms**
+
+
+    **3.2.1 Parameter setting.** The parameters of GA, PSO and SA are summarized in
+    Table 3, which are identical for continuous and discrete optimization. The lower
+    and upper
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_7.png)
+
+
+    Fig. 8 Evolution curves of GA, PSO and SA in continuous and discrete optimization.
+
+    '
+  mdcn: '
+
+
+    # PCCP
+
+
+    在线查看文章
+
+
+    论文
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_2_0.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_2_1.png)
+
+
+    图 2 用于 FDTD 模拟的钙钛矿/硅叠层太阳电池最相关材料的折射率。
+
+
+    ## 2.3 预测网络的数据集和网络架构
+
+
+    在本文中，我们构建了一个包含 12,500 组 FDTD 数值模拟数据的数据集，由层厚度（nm）和叠层太阳电池的电流属性组成。表 1 展示了 FDTD 仿真集中每层的空间和大小。对于每层厚度，我们运行了叠层太阳电池的
+    FDTD 仿真，并获得了顶层-子电池 $l_t$ 的相应 MAC 和反射损失 $l_t$。数据集和查询可以像传统的基于仿真的设计方法一样重现结果，
+
+
+    图 4 代表了 CPN 的架构，它是一个 15 层深的神经网络，以叠层太阳电池层（$H_i, H_{ij}, H_{ijk}, H_i$）作为输入数据。CPN
+    产生串并-并行结构以减少网络中的训练参数。第一部分是输入网络（SIN），其中五层的厚度是输入数据。CPN 采用每层处理以防止过拟合并减少冗余计算。SIN 之后是并行网络（PNW），它由三个并行部分组成，每个部分都有全连接层，分别具有
+    12, 10, 10, 8 和 5 个节点。
+
+
+    ## 2.4 结构优化的启发式算法
+
+
+    ### 2.4.1 连续优化。基于使用 CPN 的预测结果，我们现在实空间中进一步搜索层厚（$H_i, H_{ij}, H_{ijk}$），以最大化顶底子电池的短路电流
+    $C_p$。叠层太阳电池由串联电路中的上下子电池组成，叠层太阳电池的短路电流取决于任何子电池的短路电流。此外，如第 2.1 节所述，顶底子电池之间的电流差
+    $|I_c|$ 不超过 0.4 mA cm²。优化问题公式化为
+
+
+    ```
+
+    $C_p = \min(I_t, I_b) + L_c$.
+
+    ```
+
+
+    其中
+
+
+    ```
+
+    $L_c = \begin{cases} |K_c| < 0.4 \ -5 \ \text{otherwise.} \ \end{cases}$
+
+    ```
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_2_2.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_2_3.png)
+
+
+    图 3 本文提出的叠层太阳电池预测和优化流程的图示。
+
+
+    表 1 数据集中 ITO, PCBM, MAPbi 和 PEDOT 层厚度的设置空间和大小
+
+
+    | 层 | 最小值 (nm) | 最大值 (nm) | 步长 (nm) |
+
+    |---|---|---|---|
+
+    | $H_e$ | 10 | 100 | 10 |
+
+    | $H_f$ | 20 | 60 | 10 |
+
+    | $H_p$ | 15 | 35 | 5 |
+
+    | $H_{mn}$ | 160 | 250 | 10 |
+
+    | $H_x$ | 10 | 100 | 10 |
+
+
+    相比传统的基于仿真的设计方法，该过程为叠层太阳电池设计提供了一种节省时间和计算资源的全局优化解决方案，且需要少量专业知识或人工干预。
+
+
+    本期刊 © Owner Societies 2021
+
+
+    Phys. Chem. Chem. Phys., 2021, 23, 2991–2998 | 2993
+
+
+    # 论文
+
+
+    # 在线查看文章
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_3_0.png)
+
+
+    图 4 预测网络架构。架构中的 FC-X 表示该全连接层中有隐藏节点。
+
+
+    ## 2.4.2 离散优化，注意上述方法获得了实空间中每层的最优厚度。然而，在实际设计中，层厚通常受到制造工艺的限制。为了解决这个问题，进一步采用了离散优化方法以整数（单位为
+    nm）搜索最优厚度。离散空间中的问题可以进一步通过
+
+
+    $$\max C_p = \min(I_t, I_b) + L_D,$$
+
+
+    其中
+
+    $$L_D = \begin{cases} 0 & \text{如果每个厚度为整数且 } |I_c - I_o| < 0.4 \\ |I_c - I_o|
+    & \text{否则}\end{cases}$$
+
+
+    注意整数约束包含在目标函数中。(3) 和 (4) 中的优化问题是多峰的。为了寻找最优解，本文分别考虑了三种代表性的启发式算法：遗传算法 (GA)、粒子群优化
+    (PSO) 和模拟退火 (SA)，将在第 3 节中解释。
+
+
+    ## 3 结果与讨论
+
+
+    ### 3.1 网络训练
+
+
+    FDTD 构建的数据集被随机分为五折，四部分作为训练集，另一部分作为测试集。本文我们采用 Keras 作为深度学习框架。均方误差 (MSE)、平均绝对百分比误差
+    (MAPE) 和平均绝对误差 (MAE) 被视为关键性能指标并在表 2 中定义，$O_o$ 和 $P_i$ 分别代表 FDTD 数据和预测值。MSE 选择为训练损失函数。如图3
+    所示，训练和验证的 MAE 会变化。从图 5 可以看出，随着 epoch 的增加，MSE 和 MAE 均下降，训练过程在约 600 epoch 处收敛。CNN
+    在训练集上没有过拟合，验证损失保持低水平。
+
+
+    ### 3.1.2 CNN 的准确率
+
+
+    CNN 的性能根据 $I_o$ 的 MAE、$I_o$ 的 MSE、MAPE 和 MAE 进行评估（见表 2），并于图 6。如图所示，$I_o$ 和 $I_t$
+    的平均 MAE 很小，表明 CNN 可以达到 FDTD 模拟 98.3% 的精度。MSE 分别为 0.19 和 0.052，显示 CNN 预测的属性与 FDTD
+    匹配。由于空间限制，我们从测试数据中随机选择了 50 组用于。完整结果可以在 GitHub 上找到。如图 7 所示，CNN 与 FDTD 在 $I_o, I_t$
+    和 $I_{mo}$ 结果上上良好，表明提出的 CNN 是太阳电池属性预测的准确模型。
+
+
+    表 2 指标定义
+
+
+    | 指标 | 定义 |
+
+    |---|---|
+
+    | 均方误差 (MSE) | $\frac{1}{n}\sum_{i=1}^n(O_o - P_i)^2$ |
+
+    | 平均绝对百分比误差 (MAPE) | $\frac{100}{n}\sum_{i=1}^n\frac{|O_o - P_i|}{O_o}$ |
+
+    | 平均绝对误差 (MAE) | $\frac{1}{n}\sum_{i=1}^n|O_o - P_i|$ |
+
+
+    2994 | Phys. Chem. Chem. Phys. 2021, 23, 2991–2998
+
+
+    本期刊 © Our Wiley Societies 2022
+
+
+    # PCCP
+
+
+    # 论文
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_0.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_1.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_2.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_3.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_4.png)
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_5.png)
+
+
+    (5) (a) MSE、(b) MAPE 和 (c) 训练与验证的 MAE 随 epoch 数量。
+
+
+    (7) 测试数据中 CPN 和 FDTD 之间的 (a) 顶电池 $l_i$ MACD、(b) 反射损失 $l_i$ 和 (c) 子电池 $l_i$ MACD。
+
+
+    表 5 启发式算法参数
+
+
+    | GA 参数 | 种群概率 | 交叉概率 | 速度缩放 |
+
+    |---|---|---|---|
+
+    | 值 | 500 | 1 | 0.2 |
+
+    | PSO 参数 | 参数数量 | 最优路径和偏移索引 | 速度因子 |
+
+    | 值 | 500 | 8 | 0.5 |
+
+    | SA 参数 | 温度关注因子 | 目标温度 | |
+
+    |---|---|---|---|
+
+    | 值 | 0.99 | $10^{-20}$ | |
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_6.png)
+
+
+    (6) 属性关系的指标。(a) 电流属性的 MSE。(b) 电流属性的 MAPE。(c) 电流属性的 MAE。
+
+
+    **3.1 时间消耗。** 由于 CPN 在训练属性仿真上与 FDTD 一致，我们现在可以比较它们的时间效率。对于 12500 次 epoch 的每次预测，CPN
+    在配备 i7-7700 CPU（4 核8 线程）和 16GB RAM 的设备上运行算法仅需 ~5 秒，而 FDTD 在配备双 Xeon-E5 v4 CPU（每个
+    12 核24 线程）和 128GB RAM 的服务器上平均需要约 460 秒。这意味着 CPN 比 FDTD 更具效率（微秒级对比秒级），且消耗资源更少。
+
+
+    **3.2 启发式算法的性能评估**
+
+
+    **3.2.1 参数设置。** GA、PSO 和 SA 的参数汇总在表 3 中，对于连续和离散优化是相同的。下限和上限
+
+
+    ![](img/0e32c2668a2c025ade29653effb380fd_4_7.png)
+
+
+    图 8 连续和离散优化中 GA、PSO 和 SA 的演化曲线。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    Table 4 Maximum predicted current properties (cm⁻²) and optimization results using
+    fuzzy heuristics and in numerical simulation set.
+
+
+    | $H_g$ | $H_i$ | $H_m$ | $H_d$ | $H_e$ | $I_b$ | $I_t$ | $|K_{sc}|$ | $C_p$ |
+
+    |---|---|---|---|---|---|---|---|---||
+
+    | FDTD | 90 | 20 | 200 | 15 | 15 | 19.2172 | 5.5099 | 19.0660 | 0.0152 |
+
+    | GA-C | 86.96 | 16.22 | 244.10 | 11.20 | 11.02 | 20.3482 | 3.8577 | 20.2440 |
+    0.0102 |
+
+    | PSO-B | 82.96 | 15.01 | 243.90 | 10.10 | 11.02 | 20.4222 | 3.7691 | 20.4182
+    | 0.0048 |
+
+    | SA-C | 76.71 | 15.10 | 243.90 | 10.10 | 10.96 | 21.3748 | 3.7148 | 20.4017 |
+    0.0037 |
+
+    | PSO-D | 91 | 15 | 250 | 10 | 10 | 19.6857 | 4.5111 | 19.2863 | 0.3994 |
+
+    | SA-D | 69 | 15 | 242 | 10 | 10 | 20.5821 | 23.3038 | 20.7305 | 0.2038 |
+
+
+    boundaries of layer $\{H_g, H_i, H_m, H_d, H_e\}$ are $\{10, 15, 16, 10, 10\}$
+    and $\{100, 80, 50, 50, 30\}$, respectively, according to prior experiences. Source
+    codes of heuristics are found at GitHub.
+
+
+    # 3.2.2 Optimal structure and achievable short-current circuit.
+
+
+    Fig. 8 illustrates the evolution curves of GA, PSO and SA, and where -D denotes
+    the optimized short current and discrete optimization results. It can be seen
+    from Fig 8 that all algorithms converge within 300 iterations. Due to the nature
+    of parameter sensitivity, the optimization of GA is more stable and can achieve
+    a higher maximum achievable short-current circuit than its discrete case.
+
+
+    Table 4 presents the maximum predicted achievable short-current circuit and the
+    optimal layer thickness achieved by each heuristic. We can find that with continuous
+    optimization, the maximum predicted achievable short-current circuit achieved
+    by all three algorithms are higher than the best in the FDTD simulation set, where
+    SA is slightly higher than the other. When it comes to the optimization of short
+    current with the integer constraint (1) on layer thickness, the maximum predicted
+    achievable short-current circuit of GA and PSO significantly outperforms SA.
+
+
+    The corresponding layer thickness is $\{H_g, H_i, H_m, H_d, H_e\} = \{69, 15,
+    24, 10, 100\}$ nm.
+
+
+    # 3.3 Expected performance of the optimal structure in results
+
+
+    To investigate whether the cell performance of the optimal structure in perform,
+    we used the projected current and projected PCE to estimate the short-circuit
+    current and PCE that the tandem solar cell can achieve in experiments with optimal
+    thickness, respectively.
+
+
+    ```
+
+    $I_{sc(Opt)} = I_{sc,OP}, \quad I_{sc,RE}; \quad (7)$
+
+    ```
+
+
+    where $I_{sc,RE}$ and $I_{sc,RE}$ denote the experimental and calculated short
+    circuit current of the referred cell, $I_{sc(Opt)}$ and $I_{sc,OP}$ denote projected
+    short circuit current and calculated short-circuit current of our optimal structure,
+    We obtain the optimal performance from the referenced tandem solar cells, the
+    MAPb3/Si tandem tandem solar cell without an anti-reflective layer which has a
+    short-current of $I_{sc} = 13.8\text{ cm}^{-2}$. The measured short-circuit current
+    of $I_{sc,RE} = 17.2\text{ cm}^{-2}$ is measured from the absorption spectrum
+    (ESF; Fig. 1(a)) with FDTD method with the extracted parameters of the referred
+    tandem cells. We need to clarify that $PCE_{RE}$ is the PCE of the referred Si
+    hole transport layer in tandem.
+
+
+    With the structure of 18.1% ($PCE_{RE}$) in the forward direction, the projected
+    PCE ($PCE_{(Opt)}$) of our optimized structure is:
+
+
+    ```
+
+    $PCE_{(Opt)} = PCE_{OP}, \quad PCE_{RE}; \quad (8)$
+
+    ```
+
+
+    The projected PCE is calculated to be 23.24% according to eqn (8), which is enhanced
+    by 28.4% compared to the PCE of the referenced tandem solar cells by thickness
+    optimization.
+
+
+    > Note Note that heuristics algorithms run on population-based evolution strategy
+    and the optimal solution of each search might be different. The results shown
+    in Table 4 are the optimal ones selected from 10 repeated experiments.'
+  - '[PAGE 6]
+
+
+    # Conclusion
+
+
+    This paper presents a highly-accurate, time-efficient and complex intelligent
+    approach for efficiency prediction and device structure optimization of perovskite-crystalline-silicon
+    tandem solar cells. A fully-connected deep neural network is designed to predict
+    current properties including short-circuit current Isc, bottom short-circuit current
+    and reflection loss I at higher layers ($H_{sc}, H_{oc}, H_{ff}, H_{pp}$).
+
+
+    Thanks to the efficiency of CNN, the optimal thickness set to maximize the short-circuit
+    current performance of tandem cells using heuristic algorithms including GA, PSO
+    and SA. By searching in the parameter space, we find the optimal thickness for
+    each cell layer.
+
+
+    With a FDDM simulation data, the method is trained and verified with an accuracy
+    of 98.3%. Meanwhile, it can take on about $10^{-5}$ seconds to run the prediction
+    on a laptop, which reduces the simulation time from second to micro-second order
+    compared to standard numerical methods.
+
+
+    Note in addition to the thickness considered in this paper, we also explored the
+    optimal morphology structure and size of nanostructures, interface roughness and
+    light mapping/texture structures. It is important to further extend the deep learning
+    approach to include more diverse parameters for efficiency prediction and optimization
+    of tandem solar cells.
+
+
+    Chuoiao Y: conceptualization, methodology, investigation, software, visualization,
+    writing - original draft. Wang Yilin: conceptualization, data curation, formal
+    analysis, methodology, writing - original draft. Yao Gao: supervision, funding
+    acquisition, project administration, writing - review and editing. Qingq Qu: supervision,
+    funding acquisition, project administration, writing
+
+
+    # Conflicts of interest
+
+
+    There are no conflicts to declare.
+
+
+    # Acknowledgements
+
+
+    This work is supported by the National Natural Science Foundation of China (No.
+    62075173) and the Key R & D Program of Hubei Province of China under grant 220BAA002.
+
+
+    This journal is © Owner Societies 2021
+
+
+    # Notes and references
+
+
+    +   1 Best Research-Cell Efficiency Chart, https://www.nrel.gov/pv-cell-efficiency
+    chart, accessed August 2020.
+
+    2 D. Zhao, Chen, C., Wang, M. M., Junda, Z., Song, C. R., Rice, Y. U., Li, C.,
+    Subbi, N. J., Podrazska, X., Gao, G., Kim, K. and Yan, Y., Nat. Energy, 2019,
+    4, 1093.
+
+    3 D. Zhang, Y. C., Wang, L. N., Rshestra, C. Rice, A. J. Ciromalin, Lu, G., J.
+    Ellington, K. Zhu, X. Zhao, R. Xiong and Y. Yan, Nat. 2017, 2, 18.
+
+    4 J. Werner, C. A. Wang, L., Lefquet, F. J., Pep, S. D. Wohl, N. Bissen and Cassis,
+    J., J. Phys. Chem. Lett., 2016, 76, 161-166.
+
+    5 T. Duong, H. Pham, T. C. Kho, P. Pang, K. Kong, D. Yan, Y. Y., Perez, M. A.,
+    Mahmud, S., Gharibazadeh, A. Bakiani, Mohassin, M. R, N. Mofazari, Y. Yu, Hu,
+    Z. Zheng, J. H. Wei, L. M. Samsetedt, S. Cochran, K. Anderson, G. G. Underwood,
+    U. Pawlett, A. Bobalie, Y. Liu, D. Macdonald, A. Baker, J. Wong, Young, T. White,
+    K. Weber and K. Cpathledge, Advanced Energy Materials, 2020, 10, 103533.
+
+    6 K. Deng and L. Li, Small Methods, 2020, 4, 1994150.
+
+    7 Y. Mamaguchi, F., 2022, 14, 84-90.
+
+    8 H. Malikhi, M. Mrejen, A. Angler, U. Iriel, L. Wolf and H. Zhang, Appl. Opt.
+    A, 2018, 1-8.
+
+    9 S. So, J. Jun and Y. Ros, ACS Mater. Interfaces, 2022, 11, 22426-22468.
+
+    10 O. R. Hegdee, IEEE J Sel. Tel. Quantum Optronics, 2020, 26, 1-8.
+
+    11 M. Kaya and H. Shima, Sci. Rep., 2018, 8, 1-9.
+
+    12 M. Kaya and H. Shima, 2021, 10, 1981.
+
+    13 M. Hamidi, K. Zamrostrati and A. Yadollah, Journal. Opt. Phys., 2021, 39, 8985-8995.
+
+    14 I. Balin, V. Garmider, Y. Long and I. Abdulham, Opt. Exp., 2019, 37, A1030-A1040.
+
+    15 S. Lee, J. Jun, H. Kim, S. Yang, I. Lee, J. Lee, and B. J. Lee, Sci. Rep.,
+    2019, 9, 1-9.
+
+    16 I. Farkas and P. Perez-Vig, Comput. Agric., 2003, 40, 87-102.
+
+    17 S. Khotkar, M. Mohan and V. Velmuraj, Energy, 2015, 95, 908-922.
+
+    18 H. K. Khilaraj and R. K. Prasad, Proc. Energy, 2019, 107, 369-7.
+
+    19 Q. Du, G. Chen and S. Jun, AIP Adv., 2016, 6, 065002.
+
+    20 S. Carsten, P. Christian, J. Schmidt, R. Brendlt, K. Bothe, M. V. Rogt, I.
+    Winterer, A. Schimmer, S. Schlimmer, H. T. Nguyen and D. Macdonald, AIP Appl.,
+    2015, 5, 061768.
+
+    21 B. R. Johnson and R. Wright, Phys. Rev. B: Solid State, 1972, 4, 127.
+
+    22 J. Li. Pashmillis, A. R. Reed, E. Treham, J. Kay, Y. Peters, I. Z. Mitrowic,
+    A. Weaverorky, S. Hall and K. Durse, Data in 2015, 5, 925-928.
+
+    23 C. Sterling, R. Singh, M. Karg, T. A. Fönig, M. Thelakat and M. Retsch, Sci.
+    Rep., 2017, 7, 42530.
+
+    24 C. W. Chen, S. Y. Xiao, Y. C. Chen, H. W. Wang, Z. Y. Huang and H. W. Lin,
+    J. Mater. Chem. E, 2015, 5, 9152-9159.'
+  md: '
+
+    Table 4 Maximum predicted current properties (cm⁻²) and optimization results using
+    fuzzy heuristics and in numerical simulation set.
+
+
+    | $H_g$ | $H_i$ | $H_m$ | $H_d$ | $H_e$ | $I_b$ | $I_t$ | $|K_{sc}|$ | $C_p$ |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | FDTD | 90 | 20 | 200 | 15 | 15 | 19.2172 | 5.5099 | 19.0660 | 0.0152 |
+
+    | GA-C | 86.96 | 16.22 | 244.10 | 11.20 | 11.02 | 20.3482 | 3.8577 | 20.2440 |
+    0.0102 |
+
+    | PSO-B | 82.96 | 15.01 | 243.90 | 10.10 | 11.02 | 20.4222 | 3.7691 | 20.4182
+    | 0.0048 |
+
+    | SA-C | 76.71 | 15.10 | 243.90 | 10.10 | 10.96 | 21.3748 | 3.7148 | 20.4017 |
+    0.0037 |
+
+    | PSO-D | 91 | 15 | 250 | 10 | 10 | 19.6857 | 4.5111 | 19.2863 | 0.3994 |
+
+    | SA-D | 69 | 15 | 242 | 10 | 10 | 20.5821 | 23.3038 | 20.7305 | 0.2038 |
+
+
+    boundaries of layer $\{H_g, H_i, H_m, H_d, H_e\}$ are $\{10, 15, 16, 10, 10\}$
+    and $\{100, 80, 50, 50, 30\}$, respectively, according to prior experiences. Source
+    codes of heuristics are found at GitHub.
+
+
+    ## 3.2.2 Optimal structure and achievable short-current circuit.
+
+
+    Fig. 8 illustrates the evolution curves of GA, PSO and SA, and where -D denotes
+    the optimized short current and discrete optimization results. It can be seen
+    from Fig 8 that all algorithms converge within 300 iterations. Due to the nature
+    of parameter sensitivity, the optimization of GA is more stable and can achieve
+    a higher maximum achievable short-current circuit than its discrete case.
+
+
+    Table 4 presents the maximum predicted achievable short-current circuit and the
+    optimal layer thickness achieved by each heuristic. We can find that with continuous
+    optimization, the maximum predicted achievable short-current circuit achieved
+    by all three algorithms are higher than the best in the FDTD simulation set, where
+    SA is slightly higher than the other. When it comes to the optimization of short
+    current with the integer constraint (1) on layer thickness, the maximum predicted
+    achievable short-current circuit of GA and PSO significantly outperforms SA.
+
+
+    The corresponding layer thickness is $\{H_g, H_i, H_m, H_d, H_e\} = \{69, 15,
+    24, 10, 100\}$ nm.
+
+
+    ## 3.3 Expected performance of the optimal structure in results
+
+
+    To investigate whether the cell performance of the optimal structure in perform,
+    we used the projected current and projected PCE to estimate the short-circuit
+    current and PCE that the tandem solar cell can achieve in experiments with optimal
+    thickness, respectively.
+
+
+    ```
+
+    $I_{sc(Opt)} = I_{sc,OP}, \quad I_{sc,RE}; \quad (7)$
+
+    ```
+
+
+    where $I_{sc,RE}$ and $I_{sc,RE}$ denote the experimental and calculated short
+    circuit current of the referred cell, $I_{sc(Opt)}$ and $I_{sc,OP}$ denote projected
+    short circuit current and calculated short-circuit current of our optimal structure,
+    We obtain the optimal performance from the referenced tandem solar cells, the
+    MAPb3/Si tandem tandem solar cell without an anti-reflective layer which has a
+    short-current of $I_{sc} = 13.8\text{ cm}^{-2}$. The measured short-circuit current
+    of $I_{sc,RE} = 17.2\text{ cm}^{-2}$ is measured from the absorption spectrum
+    (ESF; Fig. 1(a)) with FDTD method with the extracted parameters of the referred
+    tandem cells. We need to clarify that $PCE_{RE}$ is the PCE of the referred Si
+    hole transport layer in tandem.
+
+
+    With the structure of 18.1% ($PCE_{RE}$) in the forward direction, the projected
+    PCE ($PCE_{(Opt)}$) of our optimized structure is:
+
+
+    ```
+
+    $PCE_{(Opt)} = PCE_{OP}, \quad PCE_{RE}; \quad (8)$
+
+    ```
+
+
+    The projected PCE is calculated to be 23.24% according to eqn (8), which is enhanced
+    by 28.4% compared to the PCE of the referenced tandem solar cells by thickness
+    optimization.
+
+
+    > Note that heuristics algorithms run on population-based evolution strategy and
+    the optimal solution of each search might be different. The results shown in Table
+    4 are optimal ones from repeated experiments.
+
+
+    ## Conclusion
+
+
+    This paper presents a highly-accurate, time-efficient and complex approach for
+    efficiency prediction and device optimization of perovskite-silicon tandem solar
+    cells. A fully-connected neural network is designed to predict current properties
+    including short-circuit current, bottom short-circuit current and reflection loss
+    at higher layers ($H_{sc}, H_{oc}, H_{ff}$). Thanks to efficiency of CNN, we find
+    the optimal thickness for each layer by searching in parameter space using heuristic
+    algorithms including GA, PSO and SA. The FPDM method is trained and verified with
+    an accuracy of 98.3%. Meanwhile, it can take about $10^{-5}$ seconds to run on
+    a laptop compared to standard numerical methods. In addition to the thickness
+    considered in this paper, we also explored the morphology and size of nanostructures,
+    interface roughness and texture. It is important to further extend deep learning
+    to include more diverse parameters for optimization of tandem cells.
+
+
+    Chuo Y: conceptualization, methodology, investigation, visualization, writing
+    - original draft. Wang Y: conceptualization, data curation, methodology, writing
+    - original draft. Yao Gao: supervision, funding acquisition, writing.
+
+
+    ## Conflicts of interest
+
+
+    There are no conflicts to declare.
+
+
+    ## Acknowledgements
+
+
+    This work is supported by the National Science Foundation of China (No. 6207513)
+    and the Key R&D Program of Hubei Province under grant 22BA002. This journal is
+    © Wiley 2021
+
+
+    ## Notes and references
+
+
+    1. Best-Cell Efficiency Chart, https://www.nrel.gov/pv-cell-efficiency, accessed
+    August 2020.
+
+    2. D. Zhao, Chen, C., Wang, M. M., Junda, Z., Song, C. R., Y. U., Li, C., Subbi,
+    N. J., Podrazska, X., Gao, G., Kim. and Y., Nat. Energy, 2019, 4, 103.
+
+    3. D. Zhang, Y. C., Wang, L. N., Rshestra, C. Rice, A. J., Ciromalin, Lu, G.,
+    Ellington, K. Zhu, X. Zhao, R. Xiong and Y. Yan, Nat., 2017, 2, 18.
+
+    4. J. Werner, C. A. Wang, L., Lefquet, F. J., S. D. Wohl, N. Bissen and Cassis,
+    J., J. Phys. Chem. Lett., 2016, 76, 161-166.
+
+    5. T. Duong, H. Pham, T. C. Kho, P. Pang, K. Kong, D. Yan, Y. Y., Perez, M. A.,
+    Mahmud, S., Gharibazadeh, A. Bakiani, Mohassin, M. R, N. Mofazari, Y. Yu, Hu,
+    Z. Zheng, J. H. Wei, L. M. Samsetedt, S. Cochran, K. Anderson, G. G. Underwood,
+    U. Pawlett, A. Bobalie, Y. Liu, D. Macdonald, A. Baker, J. Wong, T. White, K.
+    Weber and K. pathledge, Advanced Energy Materials, 2020, 10, 103533.
+
+    6. K. Deng and L. Li, Small Methods, 2020, 4, 1994150.
+
+    7. Y. Mamaguchi, F., 2022, 14, 84-90.
+
+    8. H. Malikhi, M. Mrejen, A. Angler, U. Iriel, L. Wolf and H. Zhang, Appl. Opt.
+    A, 2018, 1-8.
+
+    9. S. So, J. Jun and Y. Ros, ACS Mater. Interfaces, 2022, 11, 22426-22468.
+
+    10. O. R. Hegdee, IEEE J Sel. Tel. Quantum Optronics, 2020, 26, 1-8.
+
+    11. M. Kaya and H. Shima, Sci. Rep., 2018, 8, 1-9.
+
+    12. M. Kaya and H. Shima, 2021, 10, 1981.
+
+    13. M. Hamidi, K. Zamrostrati and A. Yadollah, Journal. Opt. Phys., 2021, 39,
+    8985-8995.
+
+    14. I. Balin, V. Garmider, Y. Long and I. Abdulham, Opt. Exp., 2019, 37, A1030-A1040.
+
+    15. S. Lee, J. Jun, H. Kim, S. Yang, I. Lee, J. Lee, and B. J. Lee, Sci. Rep.,
+    2019, 9, 1-9.
+
+    16. I. Farkas and P. Perez-Vig, Comput. Agric., 2003, 40, 87.
+
+    17. S. Khotkar, M. Mohan and V. Velmuraj, Energy, 2015, 95, 908-922.
+
+    18. H. Kilar and R. K. Prasad, Proc. Energy, 2019, 107, 369-7.
+
+    19. Q. Du, G. Chen and S. Jun, AIP Adv., 2016, 6, 06502.
+
+    20. S. Carsten, P. Christian, J. Schmidt, R. Brendlt, K. Bothe, M. V. Rogt, I.
+    Winterer, A. Schimmer, S. Shimmer, H. T. Nguyen and D. Macdonald, AIP Appl., 2015,
+    5, 06178.
+
+    21. B. R. Johnson and R. Wright, Phys. Rev. B: Solid State, 1972, 4, 127.
+
+    22. J. Li. Pashmillis, A. R. Reed, E. Treham, J. Kay, Y. Peters, I. Z. Mitrowic,
+    A. Weaverorky, S. Hall and K. Durse, Data in 2015, 5, 925-928.
+
+    23. C. Sterling, R. Singh, M. Karg, T. A. Fönig, M. Thelakat and M. Retsch, Sci.
+    Rep., 2017, 7, 42530. (Wait, 42530).
+
+    24. C. W. Chen, S. Y. Xiao, Y. C. Chen, H. W. Wang, Z. Y. Huang and H. W. Lin,
+    J. Mater. Chem. E, 2015, 5, 9152-9159.
+
+    '
+  mdcn: '
+
+
+    表 4 使用模糊启发式算法和数值仿真集下得的最大预测电流属性（cm⁻²）及优化结果。
+
+
+    | $H_g$ | $H_i$ | $H_m$ | $H_d$ | $H_e$ | $I_b$ | $I_t$ | $|K_{sc}|$ | $C_p$ |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | FDTD | 90 | 20 | 200 | 15 | 15 | 19.2172 | 5.5099 | 19.0660 | 0.0152 |
+
+    | GA-C | 86.96 | 16.22 | 244.10 | 11.20 | 11.02 | 20.3482 | 3.8577 | 20.2440 |
+    0.0102 |
+
+    | PSO-B | 82.96 | 15.01 | 243.90 | 10.10 | 11.02 | 20.4222 | 3.7691 | 20.4182
+    | 0.0048 |
+
+    | SA-C | 76.71 | 15.10 | 243.90 | 10.10 | 10.96 | 21.3748 | 3.7148 | 20.4017 |
+    0.0037 |
+
+    | PSO-D | 91 | 15 | 250 | 10 | 10 | 19.6857 | 4.5111 | 19.2863 | 0.3994 |
+
+    | SA-D | 69 | 15 | 242 | 10 | 10 | 20.5821 | 23.3038 | 20.7305 | 0.2038 |
+
+
+    根据先验经验，层 $\{H_g, H_i, H_m, H_d, H_e\}$ 的边界分别为 $\{10, 15, 16, 10, 10\}$ 和 $\{100,
+    80, 50, 50, 30\}$。启发式算法的源代码可以在 GitHub。
+
+
+    ## 3.2.2 优结构和可实现的短路电流。
+
+
+    图 8 展示了 GA、PSO 和 SA 的进化曲线，其中 -D 表示优化的短电流和离散优化结果。从图 8 可以看出，所有算法都在 300 次迭代内收敛。由于参数敏感性的性质，GA
+    的优化更加稳定，并且比其离散情况获得更高的最大可实现短路电流。
+
+
+    表 4 给出了每种启发式算法实现的最大预测可实现短路电流和的最的最层厚度。我们可以发现，通过连续优化，三种算法实现的最大预测可实现短路电流均高于 FDTD
+    仿真集中的最佳值，其中 SA 略高于其他算法。在考虑层厚度具有整数约束 (1) 的短路电流优化时，GA 和 PSO 的最大预测可实现短路电流显著优于 SA。
+
+
+    相应的层厚为 $\{H_g, H_i, H_m, H_d, H_e\} = \{69, 15, 24, 10, 100\}$ nm。
+
+
+    ## 3.3 结果中优结构的预期性能
+
+
+    为了研究优结构的电池性能是否理想，我们使用了投影电流和投影 PCE 来估计叠层电池在优化厚度实验下可以实现的短路电流和 PCE。
+
+
+    ```
+
+    $I_{sc(Opt)} = I_{sc,OP}, \quad I_{sc,RE}; \quad (7)$
+
+    ```
+
+
+    其中 $I_{sc,RE}$ 和 $I_{sc}$ 代表参考叠层电池的实验和计算短路电流，$I_{sc(Opt)}$ 和 $I_{sc,OP}$ 代表我们优结构的投影和计算短路电流。具有抗反射层的
+    MAP3/Si 叠层电池的测量短路电流 $I_{sc} = 13.8 cm^{-2}$，$I_{sc,RE} = 17.2 cm^{-2}$ 是从吸收光谱（图
+    1a）中提取的。需要澄清的是，$PCE_{RE}$ 是参考叠层电池的 18.1%。在正向方向，我们优结构的投影 PCE $PCE_{(Opt)}$ 为：
+
+
+    ```
+
+    $PCE_{(Opt)} = PCE_{OP}, \quad PCE_{RE}; \quad (8)$
+
+    ```
+
+
+    根据公式 (8)，计算出的 PCE 为 23.24%，与参考叠层电池的 PCE 相比提高了 28.4%。
+
+
+    > 注意：基于种群的进化策略和启发式算法搜索的最优解可能不同。表 4 所示的结果是重复实验的结果。
+
+
+    ## 结论
+
+
+    本文提出了一种高精度、高效且复杂的方法，用于钙钛矿-硅叠层电池的效率预测和器件优化。设计了一个全连接神经网络来预测包括短路电流、底部短路电流和反射损耗的效率（$H_{sc},
+    H_{oc}, H_{ff}$）。得益于 CNN，我们通过在参数空间搜索包括 GA、PSO 和 SA 在内的启发式算法找到了每一层的优化厚度。FPDM 方法经过训练和验证，精度为
+    98.3%。同时，在笔记本电脑上运行大约需要 $10^{-5}$ 秒。除了本文考虑的厚度，我们还探索了纳米结构的形貌和尺寸、界面粗糙度和纹理。
+
+
+    Chuo Y：概念化、方法论、调查、可视化、初稿。Wang Y：概念化、数据整理、方法论、初稿。Yao Gao：监督、资金获取、写作。
+
+
+    ## 利益冲突
+
+
+    无冲突声明。
+
+
+    ## 致谢
+
+
+    本工作受到中国国家科学基金（6207513）和湖北省研发计划（22BA002）的支持。本期刊 © Wiley 2021
+
+
+    ## 注释和参考文献
+
+
+    1. 电池效率表，https://www.nrel.gov/pv-cell-efficiency，访问于 2020 年 8 月。
+
+    2. D. Zhao, Chen, C., Wang, M. M., Junda, Z., Song, C. R., Y. U., Li, C., Subbi,
+    N. J., Podrazska, X., Gao, G., Kim. and Y., Nat. Energy, 2019, 4, 103.
+
+    3. D. Zhang, Y. C., Wang, L. N., Rshestra, C. Rice, A. J., Ciromalin, Lu, G.,
+    Ellington, K. Zhu, X. Zhao, R. Xiong and Y. Yan, Nat., 2017, 2, 18.
+
+    4. J. Werner, C. A. Wang, L., Lefquet, F. J., S. D. Wohl, N. Bissen and Cassis,
+    J., J. Phys. Chem. Lett., 2016, 76, 161-166.
+
+    5. T. Duong, H. Pham, T. C. Kho, P. Pang, K. Kong, D. Yan, Y. Y., Perez, M. A.,
+    Mahmud, S., Gharibazadeh, A. Bakiani, Mohassin, M. R, N. Mofazari, Y. Yu, Hu,
+    Z. Zheng, J. H. Wei, L. M. Samsetedt, S. Cochran, K. Anderson, G. G. Underwood,
+    U. Pawlett, A. Bobalie, Y. Liu, D. Macdonald, A. Baker, J. Wong, T. White, K.
+    Weber and K. pathledge, Advanced Energy Materials, 2020, 10, 103533.
+
+    6. K. Deng and L. Li, Small Methods, 2020, 4, 1994150.
+
+    7. Y. Mamaguchi, F., 2022, 14, 84-90.
+
+    8. H. Malikhi, M. Mrejen, A. Angler, U. Iriel, L. Wolf and H. Zhang, Appl. Opt.
+    A, 2018, 1-8.
+
+    9. S. So, J. Jun and Y. Ros, ACS Mater. Interfaces, 2022, 11, 22426-22468.
+
+    10. O. R. Hegdee, IEEE J Sel.
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 7]
+
+
+    25 R. J. Moerland and J. P. Hoogenboom, Optica, 2016, 3
+
+    112–117.
+
+
+    26 P. Kuang, A. Deinega, M. L. Hsieh, S. John and S. Y. Lin,
+
+    Opt. Lett., 2013, 38, 4200–4203.
+
+
+    27 A. Deinega and S. John, Opt. Lett., 2012, 37, 112–114.
+
+
+    28 Y. Hu, L. Song, Y. Chen and W. Huang, Solar RRL, 2019,
+
+    3, 1900080.
+
+
+    29 Data set, source codes and results, https://github.com/Chua
+
+    qiaoYi/Solar_Cellsshlt://https://github.com/ChuqiaoYi/Solar_Cells.
+
+
+    30 D. Willey, Stat. Comput., 1994, 4, 65–85.
+
+
+    31 J. Kennedy and R. Eberhart, presented in at Proc, of
+
+    ICNN95-International Conference on Neural Networks,
+
+    Australia, November, 1995.
+
+
+    32 P. Lahoven and E. Aarts, Simulated annealing: Theory and
+
+    applications, 1987, vol. 37, pp. 7–15.
+
+
+    33 F. Chollet, Keras, https://github.com/fchollet/keras, 2015.
+
+
+    35 X. Wang, A. Kumaret, C. R. Shelton and B. M. Wong,
+
+    Phys. Chem. Chem. Phys., 2020, 22, 22889–22899.'
+  md: '
+
+    25 R. J. Moerland and J. P. Hoogenboom, Optica, 2016, 3, 112–117.
+
+
+    26 P. Kuang, A. Deinega, M. L. Hsieh, S. John and S. Y. Lin, Opt. Lett., 2013,
+    38, 4200–4203.
+
+
+    27 A. Deinega and S. John, Opt. Lett., 2012, 37, 112–114.
+
+
+    28 Y. Hu, L. Song, Y. Chen and W. Huang, Solar RRL, 2019, 3, 1900080.
+
+
+    29 Data set, source codes and results, https://github.com/ChuqiaoYi/Solar_Cells,
+    https://github.com/ChuqiaoYi/Solar_Cells.
+
+
+    30 D. Willey, Stat. Comput., 1994, 4, 65–85.
+
+
+    31 J. Kennedy and R. Eberhart, presented in at Proc, of ICNN95-International Conference
+    on Neural Networks, Australia, November, 1995.
+
+
+    32 P. Lahoven and E. Aarts, Simulated annealing: Theory and applications, 1987,
+    vol. 37, pp. 7–15.
+
+
+    33 F. Chollet, Keras, https://github.com/fchollet/keras, 2015.
+
+
+    35 X. Wang, A. Kumaret, C. R. Shelton and B. M. Wong, Phys. Chem. Chem. Phys.,
+    2020, 22, 22889–22899.
+
+    '
+  mdcn: '
+
+
+    25 R. J. Moerland and J. P. Hoogenboom, Optica, 2016, 3, 112–117.
+
+
+    26 P. Kuang, A. Deinega, M. L. Hsieh, S. John and S. Y. Lin, Opt. Lett., 2013,
+    38, 4200–4203.
+
+
+    27 A. Deinega and S. John, Opt. Lett., 2012, 37, 112–114.
+
+
+    28 Y. Hu, L. Song, Y. Chen and W. Huang, Solar RRL, 2019, 3, 1900080.
+
+
+    29 数据集、源代码和结果，https://github.com/ChuqiaoYi/Solar_Cells, https://github.com/ChuqiaoYi/Solar_Cells.
+
+
+    30 D. Willey, Stat. Comput., 1994, 4, 65–85.
+
+
+    31 J. Kennedy and R. Eberhart, 于 ICNN95-国际神经网络会议论文，澳大利亚，1995年11月。
+
+
+    32 P. Lahoven and E. Aarts, 模拟退火：理论与应用，1987, vol. 37, pp. 7–15.
+
+
+    33 F. Chollet, Keras, https://github.com/fchollet/keras, 2015.
+
+
+    35 X. Wang, A. Kumaret, C. R. Shelton and B. M. Wong, Phys. Chem. Chem. Phys.,
+    2020, 22, 22889–22899.
+
+
+    '
+  merge: 1
