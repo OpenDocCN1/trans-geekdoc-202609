@@ -1,0 +1,2055 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Organic Letters
+
+
+    pubs.acs.org/orgLett
+
+
+    Letter
+
+
+    # # Accelerated Reactivity and Interpretable Machine Learning of N-Sulfonylmines
+    toward Fast Multicomponent Reactions
+
+
+    Krupal P. Jethava, Jonathan Fife, Yingqi Chen, Ahmad Hossain, and Gaurav Chopra®
+
+
+    Cite This: Org. Lett. 2020, 22, 8480–8486
+
+
+    Read Online
+
+
+    ACCESS | Metrics & Me | Article Information | Supporting Information
+
+
+    **ABSTRACT:** We developed chemical reactivity flowcharts to help chemists predict
+    outcomes using statistically robust machine models trained on a small number of
+    reactions. We developed N-sulfonylimine multicomponent reactions by predicting
+    reactivity and generating density functional theory. Intuitive chemical features
+    learned by the model predicted heterogeneous reactivity of N-sulfonylimine with
+    diverse carboxylic acids. Validation of the predictions shows that outcome interpretation
+    is useful for human chemists.
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_0_0.png)
+
+
+    Computer-assisted organic chemistry has potential for predicting chemical reaction
+    conditions and for automating synthesis.¹¹ In recent years, machine learning (ML)-based
+    approaches have been successfully applied to drug discovery, lead optimization,
+    quantitative structure-activity relationships (QSAR),¹² and retrosynthetic planning.¹³
+    Traditionally, reactivity prediction is a hard problem which requires specific
+    data sets to train ML models.¹⁴¹⁵ Experimental databases require a large number
+    of manual examples to check the feasibility of starting materials to determine
+    if it reacts. It is important to note that most ML models using databases report
+    only successful reactions in the literature as unsuccessful reaction is rare.
+    Thus, for a specific case studied through both successful and unsuccessful reaction
+    data, it is possible to train on such data sets. Recently some data sets were
+    used to test without experimental validation of regioisomers, stereoisomers, diastereoisomers
+    in Diels–Alder reaction,¹⁶ and enantioselectivity.¹⁷ Chemical features learned
+    in this chemistry is tedious to explore screening reactivity under certain reaction
+    conditions. To, there is limited literature for prospective validation of predicted
+    reactivity using ML methods.¹⁷¹⁸ We provide the first, to the best of our knowledge,
+    of a fast and one-pot
+
+
+    multicomponent reaction to explore heterogeneous reactivity by training a human
+    interpretable ML model that identifies chemical patterns of reactivity to predict
+    and test the reactivity of new substrates in the multicomponent reaction respectively.
+
+    Selected N-sulfonylmines because N-sulfonylmines are one of the important species
+    in organic chemistry that is used for a variety of transformations. N-sulfonylimine
+    is a good source of electrophilic carbon for reaction⁹ and nucleophilic addition.¹⁰
+    We have reported several reactions in the reactivity of a carbon-nitrogen bond
+    sulfide isolated.¹¹¹ Today, a sulfamide is used in present to interpreting heterocycles.
+    Sulfonamides are used in Michael addition,¹² cycloaddition,²³ arylation alkylation,²⁴
+    or alkylation²⁵ strategy by leveraging the versatility of sulfamide (Scheme 1).
+
+
+    Received: September 14, 2020
+
+    Published: October 19, 2020
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_0_1.png)
+
+
+    ACS Publications
+
+
+    © 2020 American Chemical Society
+
+    8480
+
+
+    https://doi.org/10.1021/acs.orglett.0c03803
+
+    Org. Lett. 2020, 22, 8480–8486'
+  - '[PAGE 1]
+
+
+    # Organic Letters
+
+
+    # Letter
+
+
+    # Scheme 1. Strategy for Exploring N-Sulfonyl-Sulfonimine
+
+    Reactivity Toward Multicomponent Reactions
+
+
+    from the amine and aldehyde. It is noteworthy that in situ
+
+    formation is not always favorable for several reasons:
+
+    (i) The reaction could be unstable under certain reaction conditions.²
+
+    (ii) Ionic formation is highly dependent on its starting
+
+    materials, an aldehyde or amine, and perhaps the use of the
+
+    reagents we want to use. Additionally, allyl chloride can be used instead of carbonic
+
+    aids as catalyst. To address these issues,
+
+    we provide the first report of using N-sulfonimine as a
+
+    fast and single-step strategy to synthesize
+
+    scaffolds of 1,3-oxadiazole.
+
+
+    Previous approach
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_1_0.png)
+
+
+    TM-cat
+
+    Metal-Free
+
+
+    Methyl amidine
+
+    Cyclothiobamate²
+
+    Amididine¹¹
+
+    Acetamidine
+
+    and
+
+    (acetrazine hydrate)
+
+
+    Our approach
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_1_1.png)
+
+
+    Unneeded reality of oxadiazole
+
+    Direct defunctionalized linkage
+
+
+    linkage between sulfonamide and oxadiazole has not
+
+    explored to date. The oxadiazole scaffold is a unique presence
+
+    in many active compounds and pharmaceutical
+
+    agents and is a privileged scaffold in material
+
+    (Figure S1). Therefore, sulfonamide-linked 1,3-oxadiazole
+
+    could be useful for chemical library design of new
+
+    scaffolds.
+
+
+    We started with the ideas that could type
+
+    of cyclic N-sulfonimines, acyl N-sulfonimines, and
+
+    aromatic amines are known in the literature and
+
+    synthesized. To determine the pattern of reactivity
+
+    of cyclic carboxylic acids, we optimized the
+
+    parameters using density functional theory (DFT)²
+
+    and identified the most suitable isomers using the electro-
+
+    property of the carbon atom (Figure S1). Both cyclic
+
+    acyl N-sulfonimines are highly susceptible to the
+
+    ucleophilic attack of carboxylic acids. We performed the
+
+    calculation. We started our investigation using the
+
+    model cyclic N-sulfonimine (sulfamide i), which
+
+    can be synthesized from substituted saccharaldeydes.
+
+    Initially recognized benzamide because
+
+    the second reaction partner is more nucleophilic (Figure S1)
+
+    and it would help with the use of optimized
+
+    conditions for the future of a chemically diverse range
+
+    of carboxylic acids. Then, the synthesis of derivatives
+
+    the optimized reaction served as a strategy to
+
+    to develop a robust screening model that is
+
+    human interpretable for prospective experiments
+
+    using fast MCRs of N-sulfonimines.
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_1_2.png)
+
+
+    Figure 1. Compounds with 1,3-oxadiazole as core.
+
+
+    Multicomponent reactions (MCRs) have attracted
+
+    chemical chemists to create libraries of biologically
+
+    molecules and in a rapid manner without or
+
+    building blocks. These MCRs are highly dependent on
+
+    the reactivity of starting materials as well as the
+
+    pressure of the solvents, catalysts, and-
+
+    equivalents, of reagents used. The understanding of
+
+    chemical reactivity of the starting materials for a particular
+
+    MCR is vital for identifying diverse scaffolds
+
+    for reaction outcomes. A machine learning model
+
+    can suggest a type of sulfonamide to be successfully in
+
+    intermediate products, thereby avoiding the waste of
+
+    valuable reagents, time and effort. In this work, we
+
+    developed a MCR of cyclic or acyclic N-sulfonimine with
+
+    carboxylic-containing starting materials to generate
+
+    chemical scaffolds. Ramazani et al¹⁴ and Yudin et al¹¹ individually reported a
+
+    four-component reaction using a 1,3-oxadiazole scaffold
+
+    with aromatic reactants and peptides, using N-
+
+    oisocyanophenylthiophosphine (PINC) as a reaction
+
+    partner. In the previous studies, the one was generated in situ
+
+
+    Initially we performed an optimization to form the desired
+
+    product 3a (Table 2) and benzoic acid (2b). The optimized reaction
+
+    condition was obtained when dichloromethane (DCM)
+
+    added at the end after starting at -10 °C
+
+    (see the Supporting Information for reaction
+
+    optimization status).
+
+
+    # Table 1. Optimization of the Synthesis of 1,3-4-Oxadiazole
+
+
+    | solvent | T (°C) | time (h) | yield (%) |
+
+    |---|---|---|---||
+
+    | 1 | DCM | 50 | 12 | 50 |
+
+    | 2 | DCE | 25 | 12 | trace |
+
+    | 3 | DCM | 25 | 12 | <5 |
+
+    | 4 | DCM | 30 | 25–30 | <5 |
+
+    | 5 | Ice-base | - | 5 | 30 |
+
+    | 6 | - | - | 10 | 10 |
+
+    | 7 | - | - | 10 | 6 |
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_1_3.png)
+
+
+    > ¹A reaction at 0.1 M scale, DCE, dichloromethane; MeCN
+
+    onitrile. Reaction condition as per the literature.¹⁰
+
+    ²Benzoic acid added at the end.³ All solid compounds were used
+
+    together, and solvent was added at the end.¹⁴ Isolated yielded
+
+
+    8481
+
+
+    https://doi.org/10.1021/acs0c0386y
+
+    Org. Lett. 2022, 22, 8481–8486'
+  - '[PAGE 2]
+
+
+    # Organic Letters
+
+
+    # Letter
+
+
+    # Scheme 2. Synthesis of 1,3-Oxadiazole Using Cyclic and Imine with Benzoic Acid
+    with Optimized Conditions
+
+
+    effectively, giving 1,3-oxadiazole 3e in poor yield. Notably, however not afford
+    the derivatives of 1e with benzoic acid (2a) did yield the desired product (3f).
+    Nonetheless, when sulfonamide 1c reacted with pyridine acid (2c), it forced the
+    product with an unwanted isomer in poor yield. In addition, 4-benzylpyridine did
+    not react with sulfonamide 1c to form the desired product 3b. Next, we also sought
+    to study the reactivity of other carboxylic acids with sulfamamides. From the
+    products shown in Scheme 3, we also attempted others to reactions to
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_2_0.png)
+
+
+    Next, we applied the optimized reaction condition to the cyclic N-sulfonimine
+    using DFT calculations (Figure S1) as it was the second most reactive imine. Also,
+    we sought to develop a one-pot strategy for synthesizing 1,3-oxadiazole-linked
+    unsaturated compounds compared to the four-step synthesis previously. Our unsaturated
+    N-sulfonimine 4a reacted with benzoic acid (2a) under optimized conditions, the
+    reaction afforded the desired product (5a) in good yield (Scheme 2), but with
+    a longer reaction time than expected (<5 min). This led us to investigate the
+    mechanism and energy profile of intermediates and transition states in formation.
+
+
+    To gain mechanistic insight into the reactions, we used DFT with PCM solvent in
+    dichloromethane at -10 ℃ to identify transition states and intermediates (Figure
+    S2) and cyclic N-sulfonimine (Figure S3). In the proposed mechanism, the nucleophilic
+    attack of the carbamide on the PNC group of cyclic N-sulfonimine 1. The intermediate
+    2b is formed by a nucleophilic attack of benzoic acid. Intermediate 2c undergoes
+    cyclization to form the oxadiazepine, which is then treated with triphenylphosphine
+    to yield the desired 1,3-oxadiazole compound (see Figures S2 and Tables S1, S2,
+    and S3). Supporting data and files are available at: chorapal.github.io/n/sulfonimine.
+
+
+    The energy profile in the proposed mechanism also suggested that reactivity of
+    cyclic sulfamides would be faster than that of cyclic N-sulfonimine. The first
+    half of the reaction mechanism, formation of intermediate, is independent of the
+    type of carboxylic acid or cyclic N-sulfonimine (Figures S2 and S3). In both cases,
+    the rate-limiting step is the attack of the PNC group on the N-sulfonimine with
+    free energy (ΔG‡) of 16.3 kcal/mol and 18 kcal/mol respectively. This suggests
+    that both reactions will occur quickly, and it is expected that the cyclic N-sulfonimine
+    would be faster than the cyclic N-sulfonimine, which was also observed experimentally.
+
+
+    Next, using the optimized conditions, we investigated various carboxylic acid
+    derivatives. The reaction of the diethylamine-terminal sulfonamide (1b) with benzoic
+    acid afforded the desired product 3b in 40%. The reaction of sulfonamide 1b with
+    p-tolic acid (2b) also formed product 3c in 17%. In addition, reaction of methyl-substituted
+    sulfonamide 1c with benzoic acid (2a) formed expected product 3d in moderate yield
+    (S2). However, naphthyl amide (1d) did not react
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_2_1.png)
+
+
+    # Scheme 3. Substrate Scope for Reactive Cyclic N-imine with Various Carboxylic
+    Acids Used as Training Data
+
+
+    reactivity of other carboxylic acids (see Scheme 1). For example, using diacrylic
+    acid, pyridine 2-carboxylic acid, etc., did not react with sulfamides.
+
+
+    The heterogeneous reactivity of sulfamides was made to study the reactivity of
+    cyclic N-sulfonimine with the successful reaction model shown in Scheme 2. In
+    Scheme 4, cyclic N-sulfonimides were reacted with benzoic acids. Unlike sulfonamides,
+    the halogenated of cyclic N-sulfonimine 4b reacted with benzoic acid (2a) and
+    2-bromo-methyl benzoic acid (2a), yielding the desired products 5b and
+
+
+    # Scheme 4. Substrate Scope for Cyclic N-Sulfonimine with Carboxylic Acids Used
+    as Training Data
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_2_2.png)
+
+
+    8482
+
+
+    https://doi.org/10.1021/acslett.2c03538
+
+    Org. Lett. 2022, 8480–8488'
+  md: '
+
+    # Organic Letters
+
+
+    pubs.acs.org/orgLett
+
+
+    Letter
+
+
+    # Accelerated Reactivity and Interpretable Machine Learning of N-Sulfonylmines
+    toward Fast Multicomponent Reactions
+
+
+    Krupal P. Jethava, Jonathan Fife, Yingqi Chen, Ahmad Hossain, and Gaurav Chopra®
+
+
+    Cite This: Org. Lett. 2020, 22, 8480–8486
+
+
+    Read Online
+
+
+    ACCESS | Metrics & Me | Article Information | Supporting Information
+
+
+    **ABSTRACT:** We developed chemical reactivity flowcharts to help chemists predict
+    outcomes using statistically robust machine models trained on a small number of
+    reactions. We developed N-sulfonylimine multicomponent reactions by predicting
+    reactivity and generating density functional theory. Intuitive chemical features
+    learned by the model predicted heterogeneous reactivity of N-sulfonylimine with
+    diverse carboxylic acids. Validation of the predictions shows that outcome interpretation
+    is useful for human chemists.
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_0_0.png)
+
+
+    Computer-assisted organic chemistry has potential for predicting chemical reaction
+    conditions and for automating synthesis.¹¹¹ In recent years, machine learning
+    (ML)-based approaches have been successfully applied to drug discovery, lead optimization,
+    quantitative structure-activity relationships (QSAR),¹² and retrosynthetic planning.¹³
+    Traditionally, reactivity prediction is a hard problem which requires specific
+    data sets to train ML models.¹⁴¹⁵ Experimental databases require a large number
+    of manual examples to check the feasibility of starting materials to determine
+    if it reacts. It is important to note that most ML models using databases report
+    only successful reactions in the literature as unsuccessful reaction is rare.
+    Thus, for a specific case studied through both successful and unsuccessful reaction
+    data, it is possible to train on such data sets. Recently some data sets were
+    used to test without experimental validation of regioisomers, stereoisomers, diastereoisomers
+    in Diels–Alder reaction,¹⁶ and enantioselectivity.¹⁷ Chemical features learned
+    in this chemistry is tedious to explore screening reactivity under certain reaction
+    conditions. To, there is limited literature for prospective validation of predicted
+    reactivity using ML methods.¹⁷¹⁸ We provide the first, to the best of our knowledge,
+    of a fast and one-pot multicomponent reaction to explore heterogeneous reactivity
+    by training-multicomponent reaction to explore heterogeneous reactivity by training
+    a human interpretable ML model that identifies chemical patterns of reactivity
+    to predict and test the reactivity of new substrates in the multicomponent reaction
+    respectively.
+
+
+    Selected N-sulfonylmines because N-sulfonylmines are one of the important species
+    in organic chemistry that is used for a variety of transformations. N-sulfonylimine
+    is a good source of electrophilic carbon for reaction⁹ and nucleophilic addition.¹⁰
+    We have reported several reactions in the reactivity of a carbon-nitrogen bond
+    sulfide isolated.¹¹¹ Today, a sulfamide is used in present to interpreting heterocycles.
+    Sulfonamides are used in Michael addition,¹² cycloaddition,²³ arylation alkylation,²⁴
+    or alkylation²⁵ strategy by leveraging the versatility of sulfamide (Scheme 1).
+
+
+    Received: September 14, 2020
+
+    Published: October 19, 2020
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_0_1.png)
+
+
+    ACS Publications
+
+
+    © 2020 American Chemical Society
+
+    8480
+
+
+    https://doi.org/10.1021/acs.orglett.0c03803
+
+    Org. Lett. 2020, 22, 8480–8486
+
+
+    # Organic Letters
+
+
+    # Letter
+
+
+    # Scheme 1. Strategy for Exploring N-Sulfonyl-Sulfonimine Reactivity Toward Multicomponent
+    Reactions
+
+
+    from the amine and aldehyde. It is noteworthy that in situ formation is not always
+    favorable for several reasons:
+
+    (i) the reaction could be unstable under certain reaction conditions.²
+
+    (ii) Ionic formation is highly dependent on its starting materials, an aldehyde
+    or amine, and perhaps the use of the reagents we want to use. Additionally, allyl
+    chloride can be used instead of carbonic aids as catalyst. To address these issues,
+    we provide the first report of using N-sulfonimine as a fast and single-step strategy
+    to synthesize scaffolds of 1,3-oxadiazole.
+
+
+    Previous approach
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_1_0.png)
+
+
+    TM-cat
+
+    Metal-Free
+
+
+    Methyl amidine
+
+    Cyclothiobamate²
+
+    Amididine¹¹
+
+    Acetamidine
+
+    and
+
+    (acetrazine hydrate)
+
+
+    Our approach
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_1_1.png)
+
+
+    Unneeded reality of oxadiazole
+
+    Direct defunctionalized linkage linkage between sulfonamide and oxadiazole has
+    not explored to date. The oxadiazole scaffold is a unique presence in many active
+    compounds and pharmaceutical agents and is a privileged scaffold in material (Figure
+    S1). Therefore, sulfonamide-linked 1,3-oxadiazole could be useful for chemical
+    library design of new scaffolds.
+
+
+    We started with the ideas that could-type of cyclic N-sulfonimines, acyl N-sulfonimines,
+    and aromatic amines are known in the literature and synthesized. To determine
+    the pattern of reactivity of cyclic carboxylic acids, we optimized the parameters
+    using density functional theory (DFT)² and identified the most suitable isomers
+    using the electro-property of the carbon atom (Figure S1). Both cyclic acyl N-sulfonimines
+    are highly susceptible to nucleophilic attack of carboxylic acids. We performed
+    our investigation using cyclic N-sulfonimine (sulfamide i), which recognized benzamide
+    because the second reaction partner is more nucleophilic and it would help with
+    the use of diverse range of carboxylic acids. Then, the synthesis of derivatives
+    served as a strategy to develop a robust human interpretable model for prospective
+    experiments using fast MCRs of N-sulfonylmines.
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_1_2.png)
+
+
+    Figure 1. Compounds with 1,3-oxadiazole as core.
+
+
+    Multicomponent reactions (MCRs) have attracted chemical chemists to create libraries
+    of molecules in a rapid manner without building blocks. These MCRs are highly
+    dependent on the reactivity of starting materials as well as solvents, catalysts,
+    and equivalents. The understanding of chemical reactivity of starting materials
+    for a particular MCR is vital for identifying diverse outcomes. A machine learning
+    model can suggest a type of sulfonamide to avoid waste of time and effort. In
+    this work, we developed a MCR of cyclic or acyclic N-sulfonylimine to generate
+    chemical scaffolds. Ramazani et al¹⁴ and Yudin et al¹¹ individually reported a
+    four-component reaction using 1,3-oxiazole scaffold with aromatic reactants, using
+    N-isocyanophenylthiophosphine (PINC) as reaction partner. In the previous studies,
+    the one was generated in situ to form the desired product 3a (Table 2) and benzoic
+    acid (2b). Initially we performed an optimization to obtain the optimized reaction
+    condition when dichloromethane (DCM) added at -10 °C (see the Supporting Information
+    for status).
+
+
+    # Table 1. Optimization of the Synthesis of 1,3-Oxadiazole
+
+
+    | solvent | T (°C) | time (h) | yield (%) |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 1 | DCM | 50 | 12 | 50 |
+
+    | 2 | DCE | 25 | 12 | trace |
+
+    | 3 | DCM | 25 | 12 | <5 |
+
+    | 4 | DCM | 30 | 25–30 | <5 |
+
+    | 5 | Ice-base | - | 5 | 30 |
+
+    | 6 | - | - | 10 | 10 |
+
+    | 7 | - | - | 10 | 6 |
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_1_3.png)
+
+
+    > ¹A reaction at 0.1 M scale, DCE; MeCN. Reaction condition as per the literature.¹⁰
+
+    > ²Benzoic acid added at the end.³ All solid compounds were used together, and
+    solvent was added at the end.¹⁴ Isolated 8481
+
+
+    https://doi.org/10.1021/acs.orglett.0c038
+
+    Org. Lett. 2022, 22, 8481–8486
+
+
+    # Organic Letters
+
+
+    # Letter
+
+
+    # Scheme 2. Synthesis of 1,3-Oxadiazole Using Cyclic and Imine with Benzoic Acid
+    with Optimized Conditions
+
+
+    effectively, giving 1,3-oxadiazole 3e in poor yield. Notably, however, the derivatives
+    of 1e with benzoic acid (2a) did yield the desired product (3f). Nonetheless,
+    when sulfonamide 1c reacted with pyridine acid (2c), it forced the product with
+    an unwanted isomer in poor yield. In addition, 4-benzylpyridine did not react
+    with sulfonamide 1c to form the desired product 3b. Next, we also sought to study
+    the reactivity of other carboxylic acids with sulfamides. From the products shown
+    in Scheme 3, we also attempted others to reactions to
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_2_0.png)
+
+
+    Next, we applied the optimized reaction condition to the cyclic N-sulfonylimine
+    using DFT calculations (Figure S1) as it was the second most reactive imine. Also,
+    we sought to develop a one-pot strategy for synthesizing 1,3-oxadiazole-linked
+    compounds compared to the four-step synthesis previously. Our unsaturated N-sulfonylimine
+    4a reacted with benzoic acid (2a) under optimized conditions, the reaction afforded
+    the desired product (5a) in good yield (Scheme 2), but with a longer reaction
+    time than expected (<5 min). This led us to investigate the mechanism and energy
+    profile of intermediates and transition states in formation.
+
+
+    To gain mechanistic insight into the reactions, we used DFT with PCM solvent in
+    dichloromethane at -10 °C to identify transition states and intermediates (Figure
+    S2) and cyclic N-sulfonylimine (Figure S3). In the proposed mechanism, the nucleophilic
+    attack of the carbamide on the PNC group of cyclic N-sulfonylimine 1. The intermediate
+    2b is formed by a nucleophilic attack of benzoic acid. Intermediate 2c undergoes
+    cyclization to form the oxadiazepine, which is then treated with triphenylphosphine
+    to yield the desired 1,3-oxadiazole compound (see Figures S2 and Tables S1, S2,
+    and S3). Supporting data and files are available at: chorapal.github.io/n/sulfonylimine.
+
+
+    The energy profile in the proposed mechanism also suggested that reactivity of
+    cyclic sulfamides would be faster than that of cyclic N-sulfonylimine. The first
+    half of the reaction mechanism, formation of intermediate, is independent of the
+    type of carboxylic acid or cyclic N-sulfonylimine (Figures S2 and S3). In both
+    cases, the rate-limiting step is the attack of the PNC group on the N-sulfonylimine
+    with free energy (ΔG‡) of 16.3 kcal/mol and 18 kcal/mol respectively. This suggests
+    that both reactions will occur quickly, and it is expected that the cyclic N-sulfonylimine
+    would be faster than the cyclic N-sulfonylimine, which was also observed experimentally.
+
+
+    Next, using the optimized conditions, we investigated various carboxylic acid
+    derivatives. The reaction of the diethylamine-terminal sulfonamide (1b) with benzoic
+    acid afforded the desired product 3b in 40%. The reaction of sulfonamide 1b with
+    p-tolic acid (2b) also formed product 3c in 17%. In addition, reaction of methyl-substituted
+    sulfonamide 1c with benzoic acid (2a) formed expected product 3d in moderate yield
+    (S2). However, naphthyl amide (1d) did not react
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_2_1.png)
+
+
+    # Scheme 3. Substrate Scope for Reactive Cyclic N-imine with Various Carboxylic
+    Acids Used as Training Data
+
+
+    The reactivity of sulfamides was made to study the reactivity of cyclic N-sulfonylimine
+    with the successful reaction model shown in Scheme 2. In Scheme 4, cyclic N-sulfonimides
+    were reacted with benzoic acids. Unlike sulfonamides, the halogenated of cyclic
+    N-sulfonylimine 4b reacted with benzoic acid (2a) and 2-bromo-methyl benzoic acid
+    (2a), yielding the desired products 5b and
+
+
+    # Scheme 4. Substrate Scope for Cyclic N-Sulfonimine with Carboxylic Acids Used
+    as Training Data
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_2_2.png)
+
+
+    8482
+
+
+    https://doi.org/10.1021/acslett.2c03538
+
+    Org. Lett. 2022, 22, 8480–8488
+
+    '
+  mdcn: '
+
+
+    # 有机快报 (Organic Letters)
+
+
+    pubs.acs.org/orgLett
+
+
+    快报 (Letter)
+
+
+    # N-磺酰亚胺快速多组分反应的加速活性与可解释机器学习
+
+
+    Krupal P. Jethava, Jonathan Fife, Yingqi Chen, Ahmad Hossain, and Gaurav Chopra®
+
+
+    引用本文：Org. Lett. 2020, 22, 8480–8486
+
+
+    在线阅读
+
+
+    访问 | 统计 | 关于我 | 文章信息 | 补充信息
+
+
+    **摘要：** 我们开发了化学反应性流程图，以帮助化学家利用在少量反应上训练的具有统计稳健性的机器学习模型来预测结果。我们通过预测反应活性和生成密度泛函理论（DFT）计算开发了
+    N-磺酰亚胺多组分反应。模型学习到的直观化学特征预测了 N-磺酰亚胺与多种羧酸的非均相反应活性。预测的验证表明，结果解释对人类化学家有用。
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_0_0.png)
+
+
+    计算机辅助有机化学在预测化学反应条件和自动化合成方面具有潜力¹¹¹ 近年来，基于机器学习（ML）的方法已成功应用于药物发现、先导化合物优化、定量结构-活性关系（QSAR）¹²
+    以及逆合成规划¹³。传统上，活性预测是一项难题，需要特定的数据集来训练机器学习模型¹⁴¹⁵。实验数据库需要大量的手动示例来检查原料的可行性，以确定其是否发生反应。需要注意的是，大多数使用数据库的机器学习模型仅报告文献中成功的反应，因为失败的反应很罕见。因此，对于通过成功和失败反应数据研究的特定案例，可以对此类数据集进行训练。最近，一些数据集被用于测试（在没有实验验证的情况下）狄尔斯-阿尔尔德反应中的区域异构体、立体异构体、对映异构体¹⁶
+    以及对映选择性¹⁷。在该化学中学习到的化学特征在探索某些反应条件下筛选活性是繁琐的。因此，关于使用机器学习方法对预测活性进行前瞻性验证的文献有限¹⁷¹⁸ 据我们所知，我们提供了首次快速且一ポット的多组分反应，通过训练多组分反应来探索非均相活性，并通过训练人类可解释的机器学习模型来识别活性的化学模式，分别预测并测试多组分反应中新底物的活性。
+
+
+    选择 N-磺酰胺是因为 N-磺酰胺是有机化学中重要的物种之一，用于各种转化。N-磺酰亚胺是反应⁹和亲核加成¹⁰亲电碳的良好来源。我们报道了分离的碳-氮键硫活性的几种反应¹¹¹
+    今天，磺酰胺用于解释杂环。磺酰胺利用磺酰胺的多功能性，用于迈克尔加成¹²、环加²³、芳基烷化²⁴ 或烷基化²⁵策略（方案 1）。
+
+
+    接收：2020年9月14日
+
+    发表：2020年10月19日
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_0_1.png)
+
+
+    ACS 出版
+
+
+    © 2020 美国化学学会
+
+    8480
+
+
+    https://doi.org/10.1021/acs.orglett.0c03803
+
+    Org. Lett. 2020, 22, 8480–8486
+
+
+    # 有机快报 (Organic Letters)
+
+
+    # 快报 (Letter)
+
+
+    # 方案 1 探索 N-磺酰-磺酰亚胺对于多组分反应活性的策略
+
+
+    来自胺和醛。值得注意的是，由于几个原因，原位形成并不总是理想的：
+
+    (i) 反应在某些反应条件下可能是不稳定的²
+
+    (ii) 离子的形成高度取决于其原料（醛或胺），并且可能取决于我们想要使用的试剂。此外，氯丙烯可以作为催化剂代替碳酸。为了解决这些问题，我们首次报道了使用
+    N-磺酰亚胺作为合成 1,3-二噁唑的快速且单步策略。
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_1_0.png)
+
+
+    TM催化剂
+
+    无金属
+
+    甲基脂硫代甲酰盐¹¹
+
+    脂亚胺
+
+    乙酰脂亚胺
+
+    和
+
+    (乙酰三嗪水合物)
+
+
+    我们的方法
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_1_1.png)
+
+
+    未需要的二噁唑
+
+    磺酰胺与二噁唑之间的直接连接尚未探索。二噁唑骨架在许多活性化合物和药物制剂中是独特的特有骨架（图 S1）。因此，磺酰胺连接的 1,3-二噁唑可用于新骨架的设计。
+
+
+    我们从以下想法开始：环 N-磺酰亚胺、酰基 N-磺酰亚胺和芳胺是已知的。为了确定羧酸的活性模式，我们使用密度泛函理论（DFT）优化了参数并利用碳原子的性质识别了最合适的异构体（图
+    S1）。两种环 N-磺酰亚胺对亲核攻击非常敏感，因为第二个反应伙伴更具亲核性，并且有助于使用各种范围的羧酸。然后，衍生物的合成作为一种用于快速多组分反应 N-磺酰胺的前瞻性策略。
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_1_2.png)
+
+
+    图 1. 以 1,3-二噁唑为核心的化合物。
+
+
+    多组分反应（MCRs）吸引了化学家在没有构建块的情况下快速创建分子库。这些 MCR 高度取决于原料、溶剂、催化剂和当量。理解特定 MCR 的原料活性对于识别多样化的结果至关重要。机器学习模型可以建议磺酰胺类型以避免浪费时间和精力。在这工作中，我们开发了环或非环
+    N-磺酰亚胺 MCR 来生成化学骨架。Ramazani 等¹⁴ 和 Yudin 等¹¹ 分别报道了使用 1,3-二噁唑骨架与芳香原料的四组分反应，使用异氰基苯磷（PINC）作为反应伙伴。在之前的研究中，原位生成了目标产物
+    3a（表 2）和羧酸（2b）。最初，我们进行了优化以获得当二氯甲烷（DCM）在 -10 °C 下添加时的优化反应条件（见补充信息）。
+
+
+    # 表 1 1,3-二噁唑合成的优化
+
+
+    | 溶剂 | T (°C) | 时间 (h) | 产率 (%) |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 1 | DCM | 50 | 12 | 50 |
+
+    | 2 | DCE | 25 | 12 | 微量 |
+
+    | 3 | DCM | 25 | 12 | <5 |
+
+    | 4 | DCM | 30 | 25–30 | <5 |
+
+    | 5 | 冰浴 | - | 5 | 30 |
+
+    | 6 | - | - | 10 | 10 |
+
+    | 7 | - | - | 10 | 6 |
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_1_3.png)
+
+
+    > ¹ 0.1 M 规模下的反应，DCE；MeCN。反应条件按照文献¹⁰。
+
+    > ² 羧酸在最后添加.³ 所有固体化合物一起使用，溶剂在最后添加。¹⁴ 分离 8481
+
+
+    https://doi.org/10.1021/acs.orglett.0c038
+
+    Org. Lett. 2022, 22, 8481–8486
+
+
+    # 有机快报 (Organic Letters)
+
+
+    # 快报 (Letter)
+
+
+    # 方案 2 在优化条件下使用环亚胺与苯酸合成 1,3-二噁唑
+
+
+    实际上，它有效地生成了产率低的 1,3-二噁唑 3e。然而，值得注意的是，1e 与苯酸（2a）的衍生物确实产了目标产物（3f）。尽管如此，当磺酰胺 1c 与吡啶酸（2c）反应时，它导致了带有不想要异构体的低产产物。此外，4-苄基吡啶没有与磺酰胺
+    1c 反应形成目标产物 3b。接下来，我们还寻求研究其他羧酸与磺酰胺的活性。从方案 3 显示的产物中，我们还尝试了其他反应
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_2_0.png)
+
+
+    接下来，我们使用 DFT 计算将优化的反应条件应用于环 N-磺酰亚胺（图 S1）。此外，我们开发了用于合成 1,3-二噁唑连接的环或非环 N-磺酰亚胺 MCR。Ramazani
+    等¹⁴ 和 Yudin 等¹¹分别报道了使用 1,3-二噁唑骨架与芳香原料的四组分反应，使用异氰基苯磷（PINC）作为反应伙伴。在之前的研究中，原位生成了目标产物
+    3a（表 2）和羧酸（2b）。
+
+
+    为了获得反应的机理见解，我们在 -10 °C 下的二氯甲烷溶剂中进行 DFT 来识别过渡态和中间体（图 S2）以及 N-磺酰亚胺（图 S3）。在提出的机理中，磺酰胺对环
+    N-磺酰亚胺活性团的亲核攻击生成了中间体 2b。中间体 2c 环化形成二氮嗪，然后用三苯膦处理生成目标 1,3-二噁唑（见图 S2 和 S3）。机理中的能量图也表明磺酰胺的活性比环
+    N-磺酰亚胺快。在两种情况下，限速步骤都是 PNC 基团对 N-磺酰亚胺的攻击，自由能（ΔG‡）分别为 16.3 kcal/mol 和 18 kcal/mol。这表明两种反应将快速发生，预计环
+    N-磺酰亚胺会更快，这在实验中也得到了观察。
+
+
+    接下来，使用优化条件，我们研究了各种羧酸衍生物。二乙胺端磺酰胺（1b）与苯酸的反应提供了产物 3b，产率为40%。磺酰胺 1b 与对甲酸（2b）的反应也形成了产物
+    3c，产率为17%。此外，甲基取代磺酰胺 1c 与苯酸（2a）的反应形成了预期的产物 3d，产率中等。然而，萘酰胺（1d）没有发生反应
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_2_1.png)
+
+
+    # 方案 3 用于训练的各种羧酸活性环 N-亚底物范围
+
+
+    磺酰胺的活性是为了研究环 N-磺酰亚胺与方案 2 中成功反应模型的活性。在方案 4 中，环 N-磺酰亚胺与苯酸反应。与磺酰胺不同，卤代环 N-磺酰亚胺 4b
+    与苯酸（2a）和2-溴甲基苯酸（2a）反应，生成了目标产物 5b 和
+
+
+    # 方案 4 用于训练的环 N-磺酰亚胺亚底物范围
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_2_2.png)
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    # Organic Letters
+
+
+    # pubs.acs.org/OrgLett
+
+
+    # Letter
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_3_0.png)
+
+
+    **Figure 2.** Chemical reaction flowchart. Decision tree for the substrate of
+    the reaction between amine and acid. (A–C) Pictorial explanation of how the model
+    assigns rules for predicting reactivity. (D) Final bootstrapped flowchart on all
+    data with details for each rule in colored boxes. (E–H) Examples of these rules
+    using the training data. Box represents features in panel D, and the yellow line
+    of the flowchart shows the reaction outcome based on chemical features.
+
+
+    5c in 53% and 37% yields, respectively. In addition, the synthesis of 5d and 5e
+    were achieved using trimethoxy-substituted-N-sulfonamide (N-sulfonamide) and 4-cyano-substituted-N-sulfonamide
+    (N-sulfonamide), respectively, and they afforded the desired 5d and 5e.
+
+
+    The heterogeneous nature of acyclic and cyclic N-sulfonamides led to develop a
+    learning model model successful and unexpected reactions. We trained two models
+    using molecular fingerprints (ECFP) 5 of the carboxylic acids and N-sulfonamides
+    separately. For a fingerprint radius of 0–3, no collisions were observed. We listed
+    in Table S3 to report whether a reaction occurs between the N-sulfonamide and
+    carboxylic acid. The goal of the decision trees is to predict “Worked” using the
+    fingerprints generated from the limited reaction data. To address this, the validation
+    of the two trees was performed 1000 times to sample the different possible models
+    that were created for each reaction (shown in Tables S2 and S3). By using bootstrapped
+    evaluation of decision trees to determine the robustness of our model for predicting
+    experimental outcomes (see the Supporting Information, tables for bootstrapped
+    results), for details include the introduction of the learning method used in
+    this work. A chem statistic of 0.076 was obtained with an ECFP radius of 3 for
+    the final model, suggesting improved reliability on limited training data (20
+    runs). This methodology yields the
+
+
+    chemical reactioncharts with features in Figure 2A–D can be used to investigate
+    reactions to ensure that the model is predictive while maintaining interpretability.
+    The model’s chemical reaction flowchart in Figure 2D is used to evaluate the substrate
+    of the reaction given the number of reactions available for training. The first
+    decision of the model is for the carboxylic acid group attached to an aromatic
+    ring where the last of the acid leads to a prediction of no reaction (an example
+    of a case where the failure is lacking is shown in Figure 2E). Next, the model
+    checks for the substitution at position 6 of the cyclohexane ring where the prediction
+    of no reaction (an example of a feature case shown in Figure 2F). Next, the model
+    checks for the substitution at the para position of the carboxylic acid where
+    the lack of this features results in the failure. The failure case is shown in
+    Figure 2G. Note that if heteroatoms are present other than a carbon, diethylamine
+    substitution at position 7 of sulfonamide or an aromatic ring is predicted. The
+    ML model then gives the final decision (shown in Figure 2H where the only reaction
+    passing condition is shown). This decision is supported by an amine substitution
+    leading to a successful outcome. At this step, we tested the reaction between
+    1 (N-sulfonamide without an amine) and 2b (p-toluidic acid) and noted that the
+    reaction occurred. Conversely, the reaction
+
+
+    8483
+
+
+    https://doi.org/10.1021/orglett.c303888
+
+    Org. Lett. 2023, 48, 4880–4886'
+  - '[PAGE 4]
+
+
+    # Organic Letters
+
+
+    # Letter
+
+
+    1b (N-sulfonylimine with an amino substitution) and 2d (4-hydroxy benzoic acid)
+    did not occur. These results show that the final decision could show for p-toluidic
+    and an amino substitution. Finally, we tested 2d with the acyclic N-sulfonylimine
+    4a to see if this rule would apply to acyclic N-sulfonylimines and the reaction
+    does occur. These reactions are shown in Scheme S and show our ML
+
+
+    # Scheme 5. Reactionsformed to Test the ML Model
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_4_0.png)
+
+
+    # ASSOCIATED CONTENT
+
+
+    # Supporting Information
+
+
+    The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acs.orglets.0c0383
+
+
+    Copies of ¹H and ¹C NMR spectra for all compounds, supporting text for the reaction
+    mechanism, supporting text for the bootstrapping of decision models, and experimental
+    section for validation of the machine learning model (PDF)
+
+
+    # AUTHOR INFORMATION
+
+
+    Corresponding Author
+
+
+    Gauhar Chopra - Department of Chemistry, Purdue Institute for Drug Discovery,
+    Purdue Institute for Neuroscience, Institute for Inflammation, Immunology and
+    Infectious Disease, Center for Cancer Research, and Purdue University Data Science,
+    Purdue University, West Lafayette, Indiana 47907, United States; *orcid.org/0000-0003-0942-7988;
+    Email: choopra@purdue.edu
+
+
+    # Authors
+
+
+    Kripal P. Jevaria - Department of Chemistry, Purdue, West Lafayette, Indiana 47907,
+    United States; *orcid.org/0000-0002-4440-3333
+
+
+    Jonathan Finn - Department of Chemistry, Purdue, West Lafayette, Indiana 47907,
+    United States; Yin Chen - Department of Chemistry, Purdue, West Lafayette, Indiana
+    47907, United States; Ahad Hossain - Department of Chemistry, Purdue, West Lafayette,
+    Indiana 47907, United States
+
+
+    Complete contact information is available at: https://pubs.acs.org/doi/10.1021/acs.orglets.0c0383
+
+
+    # Author Contributions
+
+
+    K.P.J. and J.F. contributed equally to this work.
+
+
+    # Notes
+
+
+    The authors declare no financial interest.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    This work was supported by a Purdue University up package from the Department
+    of Chemistry at Purdue; Ralph W. and Grace M. Scholar Research Award, the Integrative
+    Data Science Award, and the Team and Robbins Cancer Grant for New Methods; NIH
+    Grants ISR Design Challenge to G.C. and a Lynn Fellowship to J. Additional support,
+    provided, by the NSF I/URC Center for Bioanalytical Methodology (191699), and
+    ACS Award from Friend from the Chemical and Translational Sciences Institute (ILR007259),
+    and Purdue University Center for Research (NIH R30568). ChemAx software support
+    is acknowledged.
+
+
+    # REFERENCES
+
+
+    C. Gong, Y. Wyko, T. M. Computer-Design of Chemical Structures Published by: American
+    Association for the Advancement of Science URL: https://www.jstor.org/stable/1721672
+    Provide and Extend Access to Science of New Computer-Assisted Design of Chemistry
+    (Washington, D.C., U.S.) 1969, 16(3902), 177–192.
+
+
+    8484
+
+
+    https://doi.acs.org/10.1021/acs.orglets.0c0383
+
+
+    Organic Letters 2023, 25, 4880–4886
+
+
+    strategy was used to predict reactions by MCR by a human chemist. The results
+    show that the final decision of the model was predicted by two different features:
+    reaction type and outcome. The additional clarity provided by this rule as they
+    show p-methyl substitution in acyclic is responsible for reactivity and a p-hydroxy
+    substitution leads to decreased reactivity for cyclic N-sulfonylimine. It also
+    suggests that cyclic-sulfonylimines are more reactive than the cyclic counterparts,
+    yet they also react similarly. Therefore, the use of bootstrapping is essential
+    for developing reliable models for smaller datasets, and the use of decision tree
+    models on positive and negative reactions help human and chemist predict outcomes.
+
+
+    In summary, we have demonstrated that MCR of acyclic and cyclic sulfonylimines
+    was used as a representative reaction type to develop ML outcomes in a broader
+    perspective. The final and peculiar mechanism of N-sulfonylimines was evaluated
+    using DFT calculation to understand the critical role of transition states and
+    intermediates. Bootstrapping design and chemical reactivity flowchart explained
+    the choices made by the model to predict outcomes. The ML approach can be extended
+    to explore any MCR or any chemical reaction used to predict outcomes with a quick
+    and efficient manner. In addition, the generated chemical library could be supported
+    by Suzuki coupling,¹¹⁷ or group transform reaction under appropriate conditions,
+    providing a framework for fast MCRs, understanding the reaction mechanism, and
+    identifying features for the reactivity of compounds that results in successful
+    reactions to save valuable time for chemists to avoiding dead-end leads.'
+  md: '
+
+    # Organic Letters
+
+
+    # pubs.acs.org/OrgLett
+
+
+    # Letter
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_3_0.png)
+
+
+    **Figure 2.** Chemical reaction flowchart. Decision tree for the substrate of
+    the reaction between amine and acid. (A–C) Pictorial explanation of how the model
+    assigns rules for predicting reactivity. (D) Final bootstrapped flowchart on all
+    data with details for each rule in colored boxes. (E–H) Examples of these rules
+    using the training data. Box represents features in panel D, and the yellow line
+    of the flowchart shows the reaction outcome based on chemical features.
+
+
+    5c in 53% and 37% yields, respectively. In addition, the synthesis of 5d and 5e
+    were achieved using trimethoxy-substituted-N-sulfonamide (N-sulfonamide) and 4-cyano-substituted-N-sulfonamide
+    (N-sulfonamide), respectively, and they afforded the desired 5d and 5e.
+
+
+    The heterogeneous nature of acyclic and cyclic N-sulfonamides led to develop a
+    learning model for successful and unexpected reactions. We trained two models
+    using molecular fingerprints (ECFP) 5 of the carboxylic acids and N-sulfonamides
+    separately. For a fingerprint radius of 0–3, no collisions were observed. We listed
+    in Table S3 to report whether a reaction occurs between the N-sulfonamide and
+    carboxylic acid. The goal of the decision trees is to predict “Worked” using the
+    fingerprints generated from the limited reaction data. To address this, the validation
+    of the two trees was performed 1000 times to sample the different possible models
+    that were created for each reaction (shown in Tables S2 and S3). By using bootstrapped
+    evaluation of decision trees to determine the robustness of our model for predicting
+    experimental outcomes (see the Supporting Information, tables for bootstrapped
+    results), for details include the introduction of the learning method used in
+    this work. A chem statistic of 0.076 was obtained with an ECFP radius of 3 for
+    the final model, suggesting improved reliability on limited training data (20
+    runs). This methodology yields the chemical reaction charts with features in Figure
+    2A–D that can be used to investigate reactions to ensure that the model is predictive
+    while maintaining interpretability. The model’s chemical reaction flowchart in
+    Figure 2D is used to evaluate the substrate of the reaction given the number of
+    reactions available for training. The first decision of the model is for the carboxylic
+    acid group attached to an aromatic ring where the last of the acid leads to a
+    prediction of no reaction (an example of a case where the failure is lacking is
+    shown in Figure 2E). Next, the model checks for the substitution at position 6
+    of the cyclohexane ring where the prediction of no reaction (an example of a feature
+    case shown in Figure 2F). Next, the model checks for the substitution at the para
+    position of the carboxylic acid where the lack of these features results in the
+    failure. The failure case is shown in Figure 2G. Note that if heteroatoms are
+    present other than a carbon, diethylamine substitution at position 7 of sulfonamide
+    or an aromatic ring is predicted. The ML model then gives the final decision (shown
+    in Figure 2H where the only reaction passing condition is shown). This decision
+    is supported by an amine substitution leading to a successful outcome. At this
+    step, we tested the reaction between 1 (N-sulfonamide without an amine) and 2b
+    (p-toluidic acid) and noted that the reaction occurred. Conversely, the reaction
+    1b (N-sulfonylimine with an amino substitution) and 2d (4-hydroxy benzoic acid)
+    did not occur. These results show that the final decision could show for p-toluidic
+    and an amino substitution. Finally, we tested 2d with the acyclic N-sulfonylimine
+    4a to see if this rule would apply to acyclic N-sulfonylimines and the reaction
+    does occur. These reactions are shown in Scheme S and show our ML
+
+
+    # Scheme 5. Reactions formed to Test the ML Model
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_4_0.png)
+
+
+    8483
+
+
+    https://doi.org/10.1021/orglett.c303888
+
+    Org. Lett. 2023, 48, 4880–4886
+
+
+    # Organic Letters
+
+
+    # Letter
+
+
+    # ASSOCIATED CONTENT
+
+
+    # Supporting Information
+
+
+    The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acs.orglets.0c0383
+
+
+    Copies of ¹H and ¹C NMR spectra for all compounds, supporting text for the reaction
+    mechanism, supporting text for the bootstrapping of decision models, and experimental
+    section for validation of the machine learning model (PDF)
+
+
+    # AUTHOR INFORMATION
+
+
+    ## Corresponding Author
+
+
+    Gauhar Chopra - Department of Chemistry, Purdue Institute for Drug Discovery,
+    Purdue Institute for Neuroscience, Institute for Inflammation, Immunology and
+    Infectious Disease, Center for Cancer Research, and Purdue University Data Science,
+    Purdue University, West Lafayette, Indiana 47907, United States; *orcid.org/0000-0003-0942-7988;
+    Email: choopra@purdue.edu
+
+
+    ## Authors
+
+
+    Kripal P. Jevaria - Department of Chemistry, Purdue, West Lafayette, Indiana 47907,
+    United States; *orcid.org/0000-0002-4440-3333
+
+
+    Jonathan Finn - Department of Chemistry, Purdue, West Lafayette, Indiana 47907,
+    United States; Yin Chen - Department of Chemistry, Purdue, West Lafayette, Indiana
+    47907, United States; Ahad Hossain - Department of Chemistry, Purdue, West Lafayette,
+    Indiana 47907, United States
+
+
+    Complete contact information is available at: https://pubs.acs.org/doi/10.1021/acs.orglets.0c0383
+
+
+    # Author Contributions
+
+
+    K.P.J. and J.F. contributed equally to this work.
+
+
+    # Notes
+
+
+    The authors declare no financial interest.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    This work was supported by a Purdue University up package from the Department
+    of Chemistry at Purdue; Ralph W. and Grace M. Scholar Research Award, the Integrative
+    Data Science Award, and the Team and Robbins Cancer Grant for New Methods; NIH
+    Grants ISR Design Challenge to G.C. and a Lynn Fellowship to J. Additional support,
+    provided, by the NSF I/URC Center for Bioanalytical Methodology (191699), and
+    ACS Award from Friend from the Chemical and Translational Sciences Institute (ILR007259),
+    and Purdue University Center for Research (NIH R30568). ChemAx software support
+    is acknowledged.
+
+
+    # REFERENCES
+
+
+    C. Gong, Y. Wyko, T. M. Computer-Assisted Design of Chemical Structures Published
+    by: American Association for Advancement of Science URL: https://www.jstor.org/stable/1721672
+    1969, 16(3902), 177–192.
+
+
+    8484
+
+
+    https://doi.acs.org/10.1021/acs.orglets.0c0383
+
+
+    Organic Letters 2023, 25, 4880–4886
+
+    '
+  mdcn: '
+
+
+    # 有机快报 (Organic Letters)
+
+
+    # pubs.acs.org/OrgLett
+
+
+    # 快报 (Letter)
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_3_0.png)
+
+
+    **图 2.** 化学反应流程图。胺与酸之间反应底物的决策树。(A–C) 模型如何分配预测反应活性的规则的图化说明。(D) 在所有数据上生成的最终自助抽样（bootstrapped）流程图，彩色框中列出了每个规则的细节。(E–H)
+    使用训练数据这些规则的示例。方框代表图 D 中的特征，流程图中的黄色线根据化学特征显示反应结果。
+
+
+    5c 的产率分别为 53% 和 37%。此外，分别使用三甲氧基取代的N-磺酰胺（N-磺酰胺）和 4-氰基取代的N-磺酰胺（N-磺酰胺）实现了 5d 和 5e
+    的合成，并获得了目标化合物 5d 和 5e。
+
+
+    链状和环状 N-磺酰胺的异质性促使开发了一个用于成功和意外反应的预测模型。我们分别使用分子指纹（ECFP）5 对羧酸和 N-磺酰胺训练了两个模型。对于 0–3
+    的指纹半径，未观察到碰撞。我们在表 S3 中列并报告了 N-磺酰胺与羧酸之间是否发生反应。决策树的目标是利用有限反应数据生成的指纹来预测“成功（Worked）”。为了解决这个问题，对这两个决策树进行了
+    1000 次验证，以采样为每个反应创建的不同可能模型（见表 S2 和 S3）。通过决策树的自助抽样评估来确定我们模型预测实验结果的稳健性（参见支持信息中的自助抽样结果表格），详情请参考本工作中所用学习方法的介绍。最终模型在
+    ECFP 半径为 3 时获得了 0.076 的化学统计值，表明在有限训练数据（20 次运行）上的可靠性有所提高。这种方法产生了图 2A–D 所示的具有特征的化学反应图，用于研究反应以确保模型具有预测性，同时保持可解释性。图
+    2D 中的模型化学反应流程图用于在给定训练反应次数的情况下评估反应底物。模型的第一个决策是针对连接在芳香环上的羧酸基，其中最后一种酸导致无反应的预测（图 2E
+    显示了一个缺乏失败案例的示例）。接下来，模型检查环己烷 6 位的取代情况，该预测为无反应（图 2F 所示的特征案例示例）。接着，模型检查羧酸对位的取代情况，由于缺乏这些特征导致了失败。失败案例如图
+    2G 所示。请注意，如果存在碳以外的杂原子，则预测磺酰胺的 7 位或芳香环上发生二乙胺取代。随后，ML 模型给出最终决策（见图 2H，其中仅显示了唯一通过条件的的反应）。该决策得到了胺取代导致成功结果的支持。在这一步中，我们测试了
+    1（不含胺的 N-磺酰胺）与 2b（对甲苯甲酸）之间的反应，并注意到反应发生了。相反，反应 1b（带有氨基取代的 N-磺酰亚胺）和 2d（4-羟基苯甲酸）未发生。这些结果表明最终决策可以显示对甲苯甲酸和氨基取代。最后，我们测试了
+    2d 与链状 N-磺酰亚胺 4a，以查看该规则是否适用于链状 N-磺酰亚胺，反应确实发生了。这些反应如方案 S 所示，展示了我们的 ML
+
+
+    # 方案 5 为测试 ML 模型而形成的反应
+
+
+    ![](img/1d5f606e947f4a2e3677c86c4febc4f1_4_0.png)
+
+
+    8483
+
+
+    https://doi.org/10.1021/orglett.c303888
+
+    Org. Lett. 2023, 48, 4880–4886
+
+
+    # 有机快报 (Organic Letters)
+
+
+    # 快报 (Letter)
+
+
+    # 相关内容 (ASSOCIATED CONTENT)
+
+
+    # 支持信息 (Supporting Information)
+
+
+    支持信息可以通过 https://pubs.acs.org/doi/10.1021/acs.orglets.0c0383 免费获取。所有化合物的 ¹H 和
+    ¹C NMR 谱图副本、反应机理的支持文本、决策模型自助抽样的支持文本，以及机器学习模型验证的实验部分 (PDF)
+
+
+    # 作者信息 (AUTHOR INFORMATION)
+
+
+    ## 通讯作者 (Corresponding Author)
+
+
+    Gauhar Chopra - 普渡大学药物发现研究所、普渡大学神经科学研究所、炎症、免疫学和传染病研究所、癌症研究中心以及普渡大学数据科学，普渡大学，印第安纳州西拉法特
+    47907，美国；orcid.org/0003-0942-7988；邮箱：choopra@purdue.edu
+
+
+    ## 作者 (Authors)
+
+
+    Kripal P. Jevaria - 普渡大学化学系，印第安纳州西拉法特 47907，美国；orcid.org/0002-4440-3333
+
+
+    Jonathan Finn - 普渡大学化学系，印第安纳州西拉法特 47907，美国；Yin Chen - 普渡大学化学系，印第安纳州西拉法特 47907，美国；Ahad
+    Hossain - 普渡大学化学系，印第安纳州西拉法特 47907，美国
+
+
+    完整联系信息请见：https://pubs.acs.org/doi/10.1021/acs.orglets.0c0383（注：此处链接与上处保持一致）
+
+
+    # 作者贡献 (Author Contributions)
+
+
+    K.P.J. 和 J.F. 对本工作贡献相同。
+
+
+    # 注释 (Notes)
+
+
+    作者声明无财务利益。
+
+
+    # 致谢 (ACKNOWLEDGMENTS)
+
+
+    本工作得到了普渡大学化学系提供的普渡大学资金包的支持；Ralph W. 和 Grace M. Scholar 研究奖金、整合数据科学奖以及 Team and
+    Robbins 癌症资助；来自 NSF I/URC 生物分析方法中心 (191699)、来自化学和转化科学学院 ACS 奖金 (ILR007259) 以及普渡大学研究中心
+    (NIH R30568)。感谢 ChemAx 软件的支持。
+
+
+    # 参考文献 (REFERENCES)
+
+
+    C. Gong, Y. Wyko, T. M. 化学结构的计算机辅助设计。出版者：美国科学促进协会。https://www.jstor.org/stable/1721672
+    1969, 16(3902), 177–192.
+
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 5]\n\n# Organic Letters\n\n# Letter\n\n(2) Gao, H.; True, J.; Cole, C.;\
+    \ Wang, Y.; Green, H.; Jensen, K. F. Using Machine Learning to Predict Sustainable\
+    \ Outcomes for Organic Reactions. Org. Chem. Sci. 2018, 14, 1465–1476.\n\n(3)\
+    \ Garza, M.; Domina, D.; Rodriguez, J.; Velez, Y.; Ditch, L.; Cronin, C. Controlling\
+    \ Synthetic Routes Using Machine Learning to Search for New Reactivity. Nature\
+    \ 2019, 559, 377–381.\n\n(4) Lavecha, A.; Machine Learning Approaches in Drug\
+    \ Discovery: Methods and Applications. Digital Discovery 2020, 15, 301–318.\n\n\
+    (5) Rodríguez-Pérez, M.; Mayruz, T.; Tajad, S.; Vogt, M.; Bajaj, R. Prediction\
+    \ of Compound Properties Using Machine Learning. Chem. Phys. 2016, 66, 712–723.\n\
+    \n(6) Ma, J.; Shirdan, R.; Liu, Y.; Davis, A.; Svetnik, V.; Deep Neural Nets as\
+    \ a Method for Quantitative-Activity Relationship Analysis in Drug Discovery.\
+    \ J. Med. Chem. 2012, 55, 1089–1099.\n\n(7) Wadowicki, J.; Mola, K.; Grzybarska,\
+    \ B. A Selection of Computer-Generated Pathways through the Networks of Chemical\
+    \ Space. Chem. Sci. 2019, 10, 6870–6886.\n\n(8) Fodheer, D.; Muj, A.; Tajad, S.;\
+    \ Emayuk, R.; Liu, J.; Hu, Y.; N.; Wang, V.; Baldi, P. Predicting Chemical Reaction\
+    \ Prediction. Method. J. Am. Soc. 2019, 38, 442–452.\n\n(9) Smyskik, G.; Gajewka,\
+    \ E. P.; Kucznik, T.; Mola, K.; Ditwald, P.; Staurek, M.; Bajaj, R.; B. A. Computer-Aided\
+    \ Synthesis of Heterocyclic Compounds. Chem. Rev. 2016, 55, 5904–5937.\n\n(10)\
+    \ Liu, B.; Ramaskander, P. C.; Wang, Y.; Lu, N.; Qian, Q.; Shoker, J.; Vande,\
+    \ P. Predicting Chemical Reactivity Using Sequence-Molecular Transformers. ACS\
+    \ Chem. Sci. 2017, 10, 1113–1120.\n\n(11) Kłudzacz, T.; Michala-Michałska, B.;\
+    \ Mecormack, M.; Michornek, J.; et al. Efficient Synthesis of Diverse molecules,\
+    \ highly Relevant Targets predicted by Computer and executed in the Laboratory.\
+    \ Nature 2021, 6, 528–5532.\n\n(12) Gao, H.; True, J.; Cole, C.; Wang, Y.; Green,\
+    \ H.; Jensen, K. F. Using Machine Learning to Predict Sustainable Outcomes for\
+    \ Organic Reactions. Org. Chem. Sci. 2018, 14, 1465–1476.\n\n(13) Meier, S. H.;\
+    \ Wall, M. P. Neural-Machine Learning Analysis of Chemical Reactivity and Reaction\
+    \ Prediction. J. Am. Chem. Ed. 2017, 23, 2956–2967.\n\n(14) Cole, C. W.; Wang,\
+    \ H. H.; Jensen, K. F. Machine Learning in Computer-Aided Synthetic Planning.\
+    \ ACS Chem. Lett. 2018, 12, 511–518.\n\n(15) Baker, W.; Gajewka, E. P.; Wadowski,\
+    \ J. B.; Bajaj, R. Prediction of Major regio- and diastereomers in Diels-Alder\
+    \ Reactions Using Machine-Learning. The Journal of Organic Chemistry 2018, 83,\
+    \ 5415–5428.\n\n(16) Li X.; Sun, J.; Lu, H. High Regioselectivity in Radical Functionalization\
+    \ of Heterocycles via Machine Learning. Angew. Org. Chem. Ed. 2020, 59, 13525–13539.\n\
+    \n(17) Ahraman, D. T.; Ertl, J. G.; Gill, S. L.; Berner, S. D.; Doyle, A. G. A\
+    \ General Method for the Prediction of Organic Synthesis Using Machine Learning.\
+    \ Science (Wiley-Online Library) 2020, 400, 186–190.\n\n(18) Nieves, M. K.; Adams,\
+    \ D. T.; Ritter, O.; Doyle, A. C. Desulfination with Fluorinated Nanants: Navigating\
+    \ Reaction Space with Machine Learning. J. Am. Chem. Soc. 2018, 140, 15004–15008.\n\
+    \n(19) Miyabe, H.; Ueda, M.; Naito, T.; N-Sulfonyls as an Acceptor for Radical\
+    \ Radicals. Chem. Commun. 2000, 22, 20559–20560.\n\n(20) Quijiro, J.; Percias,\
+    \ M. A. A. Recyclable, Immobilization of Benzotriazoles for Synthetic Chemistry\n\
+    \nMichael Addition/Cyclization Reactions in Batch and Flow. ACS Chemical Analytics.\
+    \ 2016, 6, 345–360.\n\n(22) Moore, C. L.; Ao, J.; Feij, J.; Duan, M.; Moreno,\
+    \ J.; Bajaj, R.; Bach, E. R. E.; Finger, J. C.; Suarez, W.; Olmedo, M.; Michel,\
+    \ K. N.; Shaw, Y. T. Spirocyclization in the Synthesis of Alkyl Alcohols to C–N\
+    \ Sulfonyl Enamines. J. Org. Chem. 2019, 54, 2218––2224.\n\n(23) Savage, G. P.;\
+    \ Brimble, M. A. N. N. Alkylsulfonimides in Cyclization Reactions. Chem. Asian\
+    \ J. 2015, 8, 42–48.\n\n(24) Liu, Y.; Zhang, R. B.; Chattopadhyay, N.; Lam, H.\
+    \ W.; Wang, Y. Nickel Transition Metal-Catalyzed Asymmetric Addition of Allylic\
+    \ Alcohol with Boron Reagents. Chem. Int. Ed. 2012, 53, 9998–1003.\n\n(25) Zhang,\
+    \ J. K.; Sun, Y. Synthesis of Sulfonamides and Sulfammers from a Quaternary Center\
+    \ via 1,3-Dipolar Cyclization of Unsaturated Nitromethanes. Organic Lett. 2017,\
+    \ 1, \n\n(26) Kang, Y.; Kim, K. P.; Tummakalalli, K. S.; Sharma, Y. Synthesis\
+    \ of Mono-NSulfonamides via a 1,3-Dipolar Addition, as an Asymmetric Selection\
+    \ to N-Sulfonamides and Triflate. J. Org. Chem. Ed. 2017, 17, 4617–4624.\n\n(27)\
+    \ Hu, B. J.; Hu, J.; Peng, X. Asymmetric Cyclization of Tetrahydropyrans by Electrophysis\
+    \ and Recyclable Auxiliary Strategy. Angew. Org. Chem. 2013, 52, 5319–5326.\n\n\
+    (28) Kravina, A. A.; Gushkov, V. A.; Gusev, V. S. Cyclization Reactions of [2+2]\
+    \ and [2+3] Cyclization with Cyclic Ketines. Chem Commun. 2012, 48 (9), 1317–1318.\n\
+    \n(29) Wang, J.; Wang, Y.; Lee, D. A.; Rieger, R. M. Cycladditions from Cyclic\
+    \ Ketenes and Vinyl Azirides. J. Org. Chem. 2018, 85, 5014–5018.\n\n(30) Nozaki,\
+    \ A.; Takeuchi, C.; Takuchi, J.; Hayashi, Y. Regioselective Asymmetric Addition\
+    \ of Alkyl Borones to Aldehydes. Angew. Chem. Ed. 2020, 59, 1325–1339.\n\n(31)\
+    \ Li, Y.; Yu, N.; Xu, M. H. Simple Open-Chain Phosphinate-Ester Ligand for Asymmetric\
+    \ Cyclization of Allylic Alcohol.\n\n(32) Wang, J.; Wang, T.; Xu, M. B. Simple\
+    \ Hydro-Sulfonamide-Directed Asymmetric Cyclization of Alkyl Ketenes. J. Am. Chem.\
+    \ Soc. 2015, 37, 661–666.\n\n(33) Wang, H.; Wang, J.; Xu, X. M. Simple Hydro-Sulfonamide-Chiral\
+    \ Ligands for Highly Asymmetric Cyclization of Allylic Ketenes.\n\n(34) Li, Y.;\
+    \ Yu, N.; Xu, M. H. Simple Open-Chain Phosphinate-Ester Ligand for Asymmetric\
+    \ Cyclization of Allylic Alcohol.\n\n(35) Le, M.; Monquein, A.; Alves, V. C.;\
+    \ Ciro, J. Radical-Polar Asymmetric Cyclization of Alkyl Ketines. Angew. Chem.\
+    \ International 2019, 58, 1587–1592.\n\n(36) Huang, Y.; Hayashi, R. U.; Zhang,\
+    \ Y. Y. Cobalt-Catalyzed Enantioselective Vinylation of Activated Ketones and\
+    \ Imines. J. Am. Chem. Soc. 2019, 141, 6571–6578.\n\n(37) Qian, M.; Wang, X.;\
+    \ Xu, L.; Doyle, J. D.; Zhang, Y.; Wang, H. N-Alkylsulfonyl Asymmetric Cyclization\
+    \ of Ketenes.\n\n(38) Wadya, A.; Jain, S.; Jain, P.; Jain, J.; Tiwari, N.; Jain,\
+    \ R.; Jain, K. A.; Bajaj, Bajaj, R. Synthesis and Biological Activity of Oxidative\
+    \ Derivatives: A Review-Min. Method. Chem. 2016, 6, 6241–62415.\n\n(39) Khaliliah,\
+    \ H. J.; Alam, A.; Jhasan, M.; Mohammad, S.; Ahmed, H. 1,3,4-Oxazolones Asymmetric\
+    \ Scaffold-Free. J. Med. Chem. Ed. 2012, 8, 789–801\n\n8485\n\nhttps://doi.org/10.1021/acs.orgac.9b01158\n\
+    \nOrg Lett 2019, 22, 4480–4488"
+  - '[PAGE 6]
+
+
+    # Organic Letters
+
+
+    (40) Verma, G.; Khan, M. F.; Akhtar, W.; Alam, M. Akhtar, M.; Shaquizzaman, M.
+    A Review Exploring Therapeutic Worth of 1,3,4-Oxiazole Tailored Compounds. Mini-Rev.
+    Med. Chem. 2019, 19 (6), 777–809.
+
+
+    (41) Katritzky, A. J.; Rees, C. W. Comprehensive Heterocyclic Chemistry; Elsevier,
+    2009, Vol. 1–7.
+
+
+    (42) Slobbe, P.; Ruijter, E.; Orsi, R.; Riva, V. A. Recent Applications of Heterocycles
+    in Medicinal Chemistry. MedChemComm 2012, 3, 1189–1218.
+
+
+    (43) Rotstein, B. H.; Zaretny, S.; Raj, V.; Yudin, A. M. Heterocycles in Multicomponent
+    Reactions. Chem. Rev. 2014, 114, 8233–8359.
+
+
+    (44) Doming, A.; Wang, J.; Wang, K. Chemistry and Biology of Multicomponent Reactions.
+    Chem. Rev. 2012, 112, 8315–8335.
+
+
+    (45) Sanz, C.; Wipf, P.; Mehta, E.; Mahler, G. Reversible Thiazoline Synthesis:
+    A New Reaction Suitable for Combinatorial Chemistry. Org. Lett. 2009, 11 (15),
+    3170–3173.
+
+
+    (46) Ma, J.; Fischling, M.; Xiao, J.; Wipf, P. A Five-Convergent Diels-Alder Cascade
+    Reaction. Front. Chem. 2018, 6, 376.
+
+
+    (47) Romanelli, A.; Azaei, A. A Novel-One, Four-Component Condensation Reaction:
+    An Efficient Approach for the Synthesis of 2,5-Disubstituted 1,3,4-Oxazoles via
+    a Ugi-CR/Aza-Yne Synthesis Sequence. Org. Lett. 2012, 14 (12), 2882–2885.
+
+
+    (48) Das, P.; Reis, T. I.; Jolt, R. J.; Scully, C. J. G.; Yudin, A. M. Development
+    of Endocyclic Stereocontrol Elements for Peptide Macrocycles. J. Am. Chem. Soc.
+    2016, 138 (28), 8763–8770.
+
+
+    (49) Ferreira, F. G.;.; Scully, C. J. G.; Yudin, A. M. Oxiazole Grrafts in Peptide
+    Macrocycles. Nat. Chem. Soc. 2016, 8 (12), 1105–1111.
+
+
+    (50) Below, M. E.; Stoddard, J. F. Dinamic Ionic Chemistry. Chem. Soc. 2014, 43,
+    2022–2034.
+
+
+    (51) Wang, Q.; Mgamtasakul, K. C.; Konstantinid, M.; Shushkina, Y.; Dong, A. L.
+    1,3,4-Oxazoles by Tetrazoles and Huisgen Reaction. Org. Lett. 2019, 21 (5), 728–733.
+
+
+    (52) Contreras, R. R.; Fuentemba, P.; Galván, M.; Pérez, A. Direct Evaluation
+    of Regional Fukui Functions in Molecules. Chem. Phys. Lett. 1909, 504 (5-6), 405–414.
+
+
+    (53) Chen, L.; Wang, Y.; Song, J.; Jin, C. Y.; Suh, Y.; G, Kim, H. J.; Min, M.;
+    Kim, K. Discovery of Small Molecules That Enhance Astrocyte Differentiation in
+    Fetal Rat Stem Cells. Biosci. Med. Lett. 2015, 21 (5), 702–705.
+
+
+    (54) Quinlahan, J. R. Induction of Decision Trees. Machine Learning 1980, 1 (1),
+    81–100.
+
+
+    (55) Robinson, A.; Hahn, M. Extended-Connectivity Fingerprints. J. Chem. Inf.
+    Model. 2010, 50 (5), 742–754.
+
+
+    (56) Cohen, J. Weighted Kappa: Nominal Scale for Agreement or Partial Credit.
+    Psych. Bull. 1966, 79, 197–199.
+
+
+    (57) McGrath, M. L. Interrater Reliability: The Kappa Statistic. Biochem. Medica
+    2012, 22 (3), 272–282.
+
+
+    (58) Johnson, L. P.; Feng, J. A.; Khan, Y.; Hossain, A.; Chopra, G. Accelerated
+    Reactivity Mapping and Interpretable Machine Learning of N-Sulfonylonyms Through
+    Fast Multicomponent Reactions. Chem Rev 2020, DOI: 10.26434/chem-BXIV.12116163VI.'
+  md: '
+
+    # Organic Letters
+
+
+    # Letter
+
+
+    (2) Gao, H.; True, J.; Cole, C.; Wang, Y.; Green, H.; Jensen, K. F. Using Machine
+    Learning to Predict Sustainable Outcomes for Organic Reactions. Org. Chem. Sci.
+    2018, 14, 1465–1476.
+
+
+    (3) Garza, M.; Domina, D.; Rodriguez, J.; Velez, Y.; Ditch, L.; Cronin, C. Controlling
+    Synthetic Routes Using Machine Learning to Search for New Reactivity. Nature 2019,
+    559, 377–381.
+
+
+    (4) Lavecha, A. Machine Learning Approaches in Drug Discovery: Methods and Applications.
+    Digital Discovery 2020, 15, 301–318.
+
+
+    (5) Rodríguez-Pérez, M.; Mayruz, T.; Tajad, S.; Vogt, M.; Bajaj, R. Prediction
+    of Compound Properties Using Machine Learning. Chem. Phys. 2016, 66, 712–723.
+
+
+    (6) Ma, J.; Shirdan, R.; Liu, Y.; Davis, A.; Svetnik, V. Deep Neural Nets as a
+    Method for Quantitative-Activity Relationship Analysis in Drug Discovery. J. Med.
+    Chem. 2012, 55, 1089–1099.
+
+
+    (7) Wadowicki, J.; Mola, K.; Grzybarska, B. A Selection of Computer-Generated
+    Pathways through the Networks of Chemical Space. Chem. Sci. 2019, 10, 6870–6886.
+
+
+    (8) Fodheer, D.; Muj, A.; Tajad, S.; Emayuk, R.; Liu, J.; Hu, Y.; N.; Wang, V.;
+    Baldi, P. Predicting Chemical Reaction Prediction. Method. J. Am. Soc. 2019, 38,
+    442–452.
+
+
+    (9) Smyskik, G.; Gajewka, E. P.; Kucznik, T.; Mola, K.; Ditwald, P.; Staurek,
+    M.; Bajaj, R.; B. A. Computer-Aided Synthesis of Heterocyclic Compounds. Chem.
+    Rev. 2016, 55, 5904–5937.
+
+
+    (10) Liu, B.; Ramaskander, P. C.; Wang, Y.; Lu, N.; Qian, Q.; Shoker, J.; Vande,
+    P. Predicting Chemical Reactivity Using Sequence-Molecular Transformers. ACS Chem.
+    Sci. 2017, 10, 1113–1120.
+
+
+    (11) Kłudzacz, T.; Michala-Michałska, B.; Mecormack, M.; Michornek, J.; et al.
+    Efficient Synthesis of Diverse molecules, highly Relevant Targets predicted by
+    Computer and executed in the Laboratory. Nature 2021, 6, 528–5532.
+
+
+    (12) Gao, H.; True, J.; Cole, C.; Wang, Y.; Green, H.; Jensen, K. F. Using Machine
+    Learning to Predict Sustainable Outcomes for Organic Reactions. Org. Chem. Sci.
+    2018, 14, 1465–1476.
+
+
+    (13) Meier, S. H.; Wall, M. P. Neural-Machine Learning Analysis of Chemical Reactivity
+    and Reaction Prediction. J. Am. Chem. Ed. 2017, 23, 2956–2967.
+
+
+    (14) Cole, C. W.; Wang, H. H.; Jensen, K. F. Machine Learning in Computer-Aided
+    Synthetic Planning. ACS Chem. Lett. 2018, 12, 511–518.
+
+
+    (15) Baker, W.; Gajewka, E. P.; Wadowski, J. B.; Bajaj, R. Prediction of Major
+    regio- and diastereomers in Diels-Alder Reactions Using Machine-Learning. The
+    Journal of Organic Chemistry 2018, 83, 5415–5428.
+
+
+    (16) Li X.; Sun, J.; Lu, H. High Regioselectivity in Radical Functionalization
+    of Heterocycles via Machine Learning. Angew. Org. Chem. Ed. 2020, 59, 13525–13539.
+
+
+    (17) Ahraman, D.; Ertl, J.; Gill, S.; Berner, S. D. A General Method for the Prediction
+    of Organic Synthesis Using Machine Learning. Science (Wiley-Online) 2020, 400,
+    186–190.
+
+
+    (18) Nieves, M.; Adams, D. T.; Ritter, O. Desulfination with Fluorinated Nanants:
+    Navigating Reaction Space with Machine Learning. J. Am. Chem. Soc. 2018, 140,
+    15004–15008.
+
+
+    (19) Miyabe, H.; Ueda, M.; Naito, T. N-Sulfonyl as an Acceptor for Radicals. Chem.
+    Commun. 2000, 22, 2055–2060.
+
+
+    (20) Quijiro, J.; Percias, M. Recyclable, Immobilization of Benzazoles for Synthetic
+    Chemistry ACS Analytics. 2016, 6, 345–360.
+
+
+    (22) Moore, C. L.; Ao, J.; Feij, J.; Duan, M.; Moreno, J.; Bajaj, R.; Bach, E.
+    R.; Finger, J. C.; Olmedo, M.; Michel, K.; Shaw, Y. Spirocyclization in the Synthesis
+    of Alkyl Alcohols to C–N Enamines. J. Org. Chem. 2019, 54, 2218–2224.
+
+
+    (23) Savage, G. P.; Brimble, M. A. Alkylsulfonides in Cyclization Reactions. Chem.
+    Asian J. 2015, 8, 42–48.
+
+
+    (24) Liu, Y.; Zhang, R. B.; Chattopadhyay, N.; Lam, H. W.; Wang, Y. Nickel Transition
+    Metal-Catalyzed Asymmetric Addition of Allylic Alcohol with Boron Reagents. Chem.
+    Int. Ed. 2012, 53, 9998–10003.
+
+
+    (25) Zhang, J. K.; Sun, Y. Sulfonamides from a Quaternary Center via 1,3-Dipolar
+    Cyclization of Unsaturated Nitromethanes. Organic Lett. 2017, 1,
+
+
+    (26) Kang, Y.; Kim, K. P.; Tummakalalli, K. S.; Sharma, Y. Synthesis of MonoNSulfamides
+    via a 1,3-Dipolar Addition, as an Asymmetric Selection to Triflate. J. Org. Chem.
+    Ed. 2017, 17, 4617–4624.
+
+
+    (27) Hu, B.; Hu, J.; Peng, X. Asymmetric Cyclization of Tetrahydyrans by Electrophysis
+    and Recyclable Auxiliary Strategy. Angew. Org. Chem. 2013, 52, 5319–5326.
+
+
+    (28) Kravina, A. A.; Gushkov, V. A.; Gusev, V. S. Cyclization Reactions of [2+2]
+    and [2+3] Cyclization with Cyclic Ketines. Chem. Commun. 2012, 48 (9), 1317–1318.
+
+
+    (29) Wang, J.; Wang, Y.; Lee, D. A.; Rieger, R. M. Cycladditions from Cyclic Ketenes
+    and Vinyl Azirides. J. Org. Chem. 2018, 85, 5014–5018.
+
+
+    (30) Nozaki, A.; Takeuchi, C.; Takuchi, J.; Hayashi, Y. Regioselective Asymmetric
+    Addition of Alkyl Borones to Aldehydes. Angew. Chem. Ed. 2020, 59, 1325–1339.
+
+
+    (31) Li, Y.; Yu, N.; Xu, M. H. Simple Open-Chain Phosphinate-Ester Ligand for
+    Asymmetric Cyclization of Allylic Alcohol.
+
+
+    (32) Wang, J.; Wang, T.; Xu, M. B. Simple Hydro-Sulfonamide-Directed Asymmetric
+    Cyclization of Alkyl Ketenes. J. Am. Chem. Soc. 2015, 37, 661–666.
+
+
+    (33) Wang, H.; Wang, J.; Xu, X. M. Simple Hydro-Sulfonamide-Chiral Ligands for
+    Highly Asymmetric Cyclization of Allylic Ketenes.
+
+
+    (34) Li, Y.; Yu, N.; Xu, M. H. Simple Open-Chain Phosphinate-Ester Ligand for
+    Asymmetric Cyclization of Allylic Alcohol.
+
+
+    (35) Le, M.; Monquein, A.; Alves, V. C.; Ciro, J. Radical-Polar Asymmetric Cyclization
+    of Alkyl Ketines. Angew. Chem. International 2019, 58, 1587–1592.
+
+
+    (36) Huang, Y.; Hayashi, R. U.; Zhang, Y. Y. Cobalt-Catalyzed Enantioselective
+    Vinylation of Activated Ketones and Imines. J. Am. Chem. Soc. 2019, 141, 6571–6578.
+
+
+    (37) Qian, M.; Wang, X.; Xu, L.; Doyle, D.; Zhang, Y.; Wang, H. Alksulfonyl Asymmetric
+    Cyclization of Ketenes.
+
+
+    (38) Wadya, A.; Jain, S.; Jain, P.; Tiwari, N.; Jain, R.; Jain, K. Synthesis and
+    Biological Activity of Oxidative Derivatives: A Method. Min. Chem. 2019, 38, 442–452.
+
+
+    (39) Khalil, H. J.; Alam, A.; Jhasan, M.; Mohammad, S.; Ahmed, H. Scaffold-Free
+    1,3,4-Oxazolones. J. Med. Chem. 2012, 8, 789–801. doi.org/10.1021/acs.org.9b0158
+    Org Lett 2019, 22, 4480–4485.
+
+
+    # Organic Letters
+
+
+    (40) Verma, G.; Khan, M.; Akhtar, W.; Alam, M.; Shaquaman, M. Exploring Therapeutic
+    Worth of 1,3,4-Oxiazole Tailored. Rev. Med. Chem. 2019, 19 (6), 777–809.
+
+
+    (41) Katritzky, A.; Rees, C. W. Comprehensive Heterocyclic Chemistry; 2009.
+
+
+    (42) Slobbe, P.; Ruijter, E.; Orsi, R.; Riva, V. Recent Applications of Heterocycles
+    in Medicinal Chemistry. MedChem 2012, 3, 1189–1218.
+
+
+    (43) Rotstein, B.; Zaretny, S.; Raj, V.; Yudin, A. M. Heterocycles in Multicomponent
+    Reactions. Chem. Rev. 2014, 114, 8233–8359.
+
+
+    (44) Doming, A.; Wang, J.; Wang, K. Chemistry and Biology of Multicomponent Reactions.
+    Chem. Rev. 2012, 112, 8315–8335.
+
+
+    (45) Sanz, C.; Wipf, P.; Mehta, E.; Mahler, G. Reversible Thiazoline Synthesis:
+    A New Reaction Suitable for Combinatorial Chemistry. Org. Lett. 2009, 11 (15),
+    3170–3173.
+
+
+    (46) Ma, J.; Fischling, M.; Xiao, J.; Wipf, P. A Five-Convergent Diels-Alder Reaction.
+    Front. Chem. 2018, 6, 376.
+
+
+    (47) Romanelli, A.; Azaei, A. A Novel-One, Four-Component Condensation Reaction:
+    An Efficient Approach for the Synthesis of 2,5-Disubstituted 1,3,4-Oxazoles via
+    a Ugi-CR/Aza-Yne Sequence. Org. Lett. 2012, 14 (12), 2882–2885.
+
+
+    (48) Das, P.; Reis, T. I.; Jolt, R. J.; Scully, C. J.; Yudin, A. M. Development
+    of Endocyclic Stereocontrol Elements for Peptide Macrocycles. J. Am. Chem. Soc.
+    2016, 138 (28), 8763–8770.
+
+
+    (49) Ferreira, F. G.; Scully, C. J.; Yudin, A. M. Oxiazole Graphs in Peptide Macrocycles.
+    Nat. Chem. Soc. 2016, 8 (12), 1105–1111.
+
+
+    (50) Below, M. E.; Stoddard, J. F. Dinamic Ionic Chemistry. Chem. Soc. 2014, 43,
+    2022–2034.
+
+
+    (51) Wang, Q.; Mgamtasakul, K. C.; Konstantinid, M.; Shushkina, Y.; Dong, A. L.
+    1,3,4-Oxazoles by Tetrazoles and Huisgen Reaction. Org. Lett. 2019, 21 (5), 728–733.
+
+
+    (52) Contreras, R. R.; Fuentemba, P.; Galván, M.; Pérez, A. Direct Evaluation
+    of Regional Fukui Functions in Molecules. Chem. Phys. Lett. 1909, 504 (5-6), 405–414.
+
+
+    (53) Chen, L.; Wang, Y.; Song, J.; Jin, C. Y.; Suh, Y.; G, Kim, H. J.; Min, M.;
+    Kim, K. Discovery of Small Molecules That Enhance Astrocyte Differentiation in
+    Fetal Rat Stem Cells. Biosci. Med. Lett. 2015, 21 (5), 702–705.
+
+
+    (54) Quinlahan, J. R. Induction of Decision Trees. Machine Learning 1980, 1 (1),
+    81–100.
+
+
+    (55) Robinson, A.; Hahn, M. Extended-Connectivity Fingerprints. J. Chem. Inf.
+    Model. 2010, 50 (5), 742–754.
+
+
+    (56) Cohen, J. Weighted Kappa: Nominal Scale for Agreement or Partial Credit.
+    Psych. Bull. 1966, 79, 197–199.
+
+
+    (57) McGrath, M. L. Interrater Reliability: The Kappa Statistic. Biochem. Medica
+    2012, 22 (3), 272–282.
+
+    '
+  mdcn: '
+
+
+    # 有机快报
+
+
+    # 论文
+
+
+    (2) Gao, H.; True, J.; Cole, C.; Wang, Y.; Green, H.; Jensen, K. F. 利用机器学习预测有机反应的可持续性。Org.
+    Chem. Sci. 2018, 14, 1465–1476.
+
+
+    (3) Garza, M.; Domina, D.; Rodriguez, J.; Velez, Y.; Ditch, L.; Cronin, C. 使用机器学习控制合成路线以寻找新反应性。Nature
+    2019, 559, 377–381.
+
+
+    (4) Lavecha, A. 药物发现中的机器学习方法：方法与应用。Digital Discovery 2020, 15, 301–318.
+
+
+    (5) Rodríguez-Pérez, M.; Mayruz, T.; Tajad, S.; Vogt, M.; Bajaj, R. 使用机器学习预测化合物性质。Chem.
+    Phys. 2016, 66, 712–723.
+
+
+    (6) Ma, J.; Shirdan, R.; Liu, Y.; Davis, A.; Svetnik, V. 深度神经网络作为药物发现中定量活性关系分析的方法。J.
+    Med. Chem. 2012, 55, 1089–1099.
+
+
+    (7) Wadowicki, J.; Mola, K.; Grzybarska, B. 通过化学空间网络对计算机生成的路径的选择。Chem. Sci. 2019,
+    10, 6870–6886.
+
+
+    (8) Fodheer, D.; Muj, A.; Tajad, S.; Emayuk, R.; Liu, J.; Hu, Y.; N.; Wang, V.;
+    Baldi, P. 化学反应预测的预测方法。J. Am. Soc. Soc. 2019, 38, 442–452.
+
+
+    (9) Smyskik, G.; Gajewka, E. P.; Kucznik, T.; Mola, K.; Ditwald, P.; Staurek,
+    M.; Bajaj, R.; B. A. 计算机辅助杂环化合物的合成。Chem. Rev. 2016, 55, 5904–5937.
+
+
+    (10) Liu, B.; Ramaskander, P. C.; Wang, Y.; Lu, N.; Qian, Q.; Shoker, J.; Vande,
+    P. 使用序列-分子变换器预测化学活性。ACS Chem. Sci. 2017, 10, 1113–1120.
+
+
+    (11) Kłudzacz, T.; Michala-Michałska, B.; Mecormack, M.; Michornek, J.; et al.
+    计算机预测并在实验室执行的高度相关性分子的高效合成。Nature 2021, 6, 528–5532.
+
+
+    (12) Gao, H.; True, J.; Cole, C.; Wang, Y.; Green, H.; Jensen, K. F. 利用机器学习预测有机反应的可持续性。Org.
+    Chem. Sci. 2018, 14, 1465–1476.
+
+
+    (13) Meier, S. H.; Wall, M. P. 化学活性和反应预测的神经-机器学习分析。J. Am. Chem. Ed. 2017, 23,
+    2956–2967.
+
+
+    (14) Cole, C. W.; Wang, H. H.; Jensen, K. F. 计算机辅助合成规划中的机器学习。ACS Chem. Lett. 2018,
+    12, 511–518.
+
+
+    (15) Baker, W.; Gajewka, E. P.; Wadowski, J. B.; Bajaj, R. 使用机器学习预测 Diels-Alder
+    反应中的主要区域异体和对映异体。The Journal of Organic Chemistry 2018, 83, 5415–5428.
+
+
+    (16) Li X.; Sun, J.; Lu, H. 通过机器学习实现杂环自由基功能化的高区域选择性。Angew. Org. Chem. Ed. 2020,
+    59, 13525–13539.
+
+
+    (17) Ahraman, D.; Ertl, J.; Gill, S.; Berner, S. D. 使用机器学习预测有机合成的通用方法。Science
+    (Wiley-Online) 2020, 400, 186–190.
+
+
+    (18) Nieves, M.; Adams, D. T.; Ritter, O. 氟化纳米颗粒脱磺基：利用机器学习导航反应空间。J. Am. Chem.
+    Soc. 2018, 140, 15004–15008.
+
+
+    (19) Miyabe, H.; Ueda, M.; Naito, T. N-磺酰作为自由基的受体。Chem. Commun. 2000, 22, 2055–2060.
+
+
+    (20) Quijiro, J.; Percias, M. 可回收的苯唑。ACS Analytics 2016, 6, 345–360.
+
+
+    (22) Moore, C. L.; Ao, J.; Feij, J.; Duan, M.; Moreno, J.; Bajaj, R.; Bach, E.;
+    Olmedo, M.; Michel, K.; Shaw, Y. 醇类合成 C–N 胺的螺环化。J. Org. Chem. 2019, 54, 2218–2224.
+
+
+    (23) Savage, G. P.; Brimble, M. 环化反应中的烷磺酰化物。Chem. Asian J. 2015, 8, 42–48.
+
+
+    (24) Liu, Y.; Zhang, R.; Chattopadhyay, N.; Lam, H.; Wang, Y. 镍催化的烯丙醇与硼的不对称加成。Chem.
+    Int. Ed. 2012, 53, 9998–10003.
+
+
+    (25) Zhang, J. K.; Sun, Y. 通过 1,3-偶极环化不饱和硝烷中心中心磺酰胺。Organic Lett. 2017, 1,
+
+
+    (26) Kang, Y.; Kim, K. P.; Tummakalalli, K. S.; Sharma, Y. 通过 1,3-偶极加成合成单磺酰胺。J.
+    Org. Chem. Ed. 2017, 17, 4617–4624.
+
+
+    (27) Hu, B.; Hu, J.; Peng, X. 亲电性与可回收辅助剂四氢吡喃环化。Angew. Org. Chem. 2013, 52, 5319–5326.
+
+
+    (28) Kravina, A. A.; Gushkov, V. A.; Gusev, V. S. [2+2] 和 [2+3] 环化反应。Chem. Commun.
+    2012, 48 (9), 1317–1318.
+
+
+    (29) Wang, J.; Wang, Y.; Lee, D. A.; Rieger, R. M. 环酮烯和乙基叠氮环加。J. Org. Chem. 2018,
+    85, 5014–5018.
+
+
+    (30) Nozaki, A.; Takeuchi, C.; Takuchi, J.; Hayashi, Y. 烷硼到醛区域选择性不对称加成。Angew.
+    Chem. Ed. 2020, 59, 1325–1339.
+
+
+    (31) Li, Y.; Yu, N.; Xu, M. H. 简单开链磷酸酯配体用于烯丙醇的不称环化。
+
+
+    (32) Wang, J.; Wang, T.; Xu, M. B. 简单氢磺酰胺导向的烷酮烯不对称环化。J. Am. Chem. Soc. 2015, 37,
+    661–666.
+
+
+    (33) Wang, H.; Wang, J.; Xu, X. M. 简单氢磺酰胺手性配体用于烯丙酮烯的高度不对称环化。
+
+
+    (34) Li, Y.; Yu, N.; Xu, M. H. 简单开链磷酸酯配体用于烯丙醇的不称环化。
+
+
+    (35) Le, M.; Monquein, A.; Alves, V. C.; Ciro, J. 烷酮的自由基-极性不对称环化。Angew. Chem.
+    International 2019, 58, 1587–1592.
+
+
+    (36) Huang, Y.; Hayashi, R. U.; Zhang, Y. Y. 钴催化的活性酮和亚胺对映选择性烯化。J. Am. Chem. Soc.
+    2019, 141, 6571–6578.
+
+
+    (37) Qian, M.; Wang, X.; Xu, L.; Doyle, D.; Zhang, Y.; Wang, H. 酮烯的烷磺酰不对称环化。
+
+
+    (38) Wadya, A.; Jain, S.; Jain, P.; Tiwari, N.; Jain, R.; Jain, K. 氧化衍生物的合成与生物活性：一种方法。Min.
+    Chem. 2019, 38, 442–452.
+
+
+    (39) Khalil, H. J.; Alam, A.; Jhasan, M.; Mohammad, S.; Ahmed, H. 无骨架 1,3,4-恶唑酮。J.
+    Med. Chem. 2012, 8, 789–801. doi.org/10.1021/acs.org.9b0158 Org Lett 2019, 22,
+
+
+    # 有机快报
+
+
+    (40) Verma, G.; Khan, M.; Akhtar, S. 氢磺酰胺。
+
+
+    (41) Katritzky, A.; Rees, C. 2009.
+
+
+    (42) Slobbe, P.; Orsi, R.; Riva, V. 2012. 扩展连接指纹。J. Chem. Inf. Model. 2010, 50
+    (5), 742–754.
+
+
+    (43) Rotstein, A.; Zaretny, B.; Raj, V. 三组反应中的致唑。Chem. Rev. 2014, 114, 823–835.
+
+
+    (44) Das, P.; Wang, J.; Wang, K. 三组反应。Chem. Soc. 2014, 43, 202––34.
+
+
+    (45) Sanz, C.; Mahler, E. 2018.
+
+
+    (46) Ma, J.; Fischling, M.; Xiao, J. 2018.
+
+
+    (47) Hu, B.; Hu, J.; Peng, X. 2013.
+
+
+    (48) Kravina, A. A.; Gushkov, V. A.; Gusev, V. S. 2012.
+
+
+    (49) Wang, J.; Wang, Y.; Lee, D. A.; Rieger, R. M. 2018.
+
+
+    (50) Below, M. E.; Stoddard, J. 2014.
+
+
+    (51) Wang, Q.; Mgamtakul, K. C.; Konstantinid, M.; Shushkina, Y.; Dong, A. L.
+    2019.
+
+
+    (52) Contreras, R. R.; Fuentemba, P.; Galván, M.; Pérez, A. 1909.
+
+
+    (53) Chen, L.; Wang, Y.; Song, J.; Jin, C. Y.; Suh, Y.; G, Kim, H. J.; Min, M.
+    2015.
+
+
+    (54) Quinlahan, J. R. 1980.
+
+
+    (55) Robinson, A.; Hahn, M. 2010.
+
+
+    (56) Cohen, J. 1966.
+
+
+    (57) McGrath, M. L. 2012.
+
+
+    '
+  merge: 0
