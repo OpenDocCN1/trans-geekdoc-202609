@@ -1,0 +1,388 @@
+- "# Go 编程入门指南：8 小时快速通\n\n\n\n![](img/rsrc2U7.jpg)\n![](img/rsrc2U7.jpg)\n\n\n\n##\
+  \ 关于作者\n- 美国 `Zend` 认证的 PHP 工程师\n- 美国 Sun 认证的 JAVA 程序员\n- 美国 Oracle 认证的 SCWCD 开发者\n\
+  - 美国 CompTIA 认证的 A+ 专业人士\n- 微软认证的 ASP. NET 专家\n- 微软认证的 MCP 专业人士\n- 微软认证的 TECHNOLOGY（技术）专家\n\
+  - 美国 CompTIA 认证的 NETWORK+ 专业人士\n\n\n## 前言\n《8 小时 Go 语言编程》涵盖了所有核心 Go 语言知识。你可以快速轻松地掌握\
+  \ Go 编程技能。\n\n本书包含了适用于初者的实用示例，并包含了适用于考试、工程师认证和工作面试的测试。\n\n### 源代码下载\n本书提供了源代码下载，你可以将源代码下载到你喜欢的编辑器中进行测试。\n\
+  下载链接：`https://forms.aweber.com/form/34/180549243.htm`\n\n\n## 什么是 Go？\nGo 是 Google\
+  \ 在 2009 年发布的开源编程语言。Go 是一种全新的、并发且带有垃圾回收的编译语言。它有一个很大的特点：可以在几秒钟完成大型 Go 程序的编译。\n\n\
+  Go 提供了一种构建模型，使得依赖分析变得更容易。Go 是一种静态类型语言，其类型定义没有层次结构，因此用户不需要花时间定义类型之间的关系，这让用户觉得它比典型的面向对象的语言轻量。\n\
+  \nGo 提供了一种多核机器上构建系统软件的方法。Go 语言编程针对多处理器应用程序进行了优化，比 C 或 C++ 代码更快，并更安全地支持并行进程。\n\n\
+  ### Go 语言的特点：\n1. 简单、快速安全\n2. 并发、有趣、开源\n3. 内存管理、数组安全、快速编译。\n\n\n\n\n\n# 安装 Go\n\n\
+  本书以 Windows 操作系统作为安装 Go 的示例。下载链接:[`golang.org/dl/`](https://golang.org/dl/)\n\n\
+  1. 点击链接，进入下载页面。![](img/rsrc2U8.jpg)\n2. 点击 `go1.11.2 windows-amd64.msi`，将 Go 安装程序下载到本地计算机。\n\
+  3. 点击 Go 安装程序，开始安装……![](img/rsrc2U9.jpg)\n4. 点击 `Next`……。默认情况下，Msi 文件将安装在 `c:\\\
+  Go` 目录下。\n5. 安装完成后，请点击 `Finish`![](img/rsrc2UA.jpg)\n\n## 环境变量\n\n安装 Go 之后，你需要将\
+  \ `c:\\Go\\bin` 添加到环境变量的 `PATH` 中。请配置环境变量。前往“控制面板” > “系统” > “高级系统设置” > “高级” > “环境变量”\
+  \ > `Path` > “编辑” > “新建”。将 `C:\\Go\\bin` 添加到 `Path` 的末尾![](img/rsrc2UB.jpg)\n\n\
+  注意：不同 Windows 操作系统的设置界面有所不同。请重启计算机使设置生效。\n\n## Go 的第一个程序\n\n请在 `C:\\` 下创建一个工作文件夹\
+  \ `myGo`，打开记事本编辑器，并将以下代码写入编辑器。示例 1.1\n\n```go\npackage main\nimport \"fmt\"\nfunc\
+  \ main() { \n    fmt.Println(\"Hello, World! \") \n}\n```\n\n将文件保存为 `hello.go` 并存放在\
+  \ `C:\\myGo` 中。使用 `cmd` 打开命令行，输入以下命令：![](img/rsrc2UC.jpg)\n\n输出: Hello World!\n\n\
+  **解释：**\n- `package main` 定义包名为 `main`。每个 Go 应用程序必须包含一个名为 `main` 的包。\n- 导入的包 `fmt`\
+  \ 包含 I/O 函数。\n- `func main()` 是 Go 应用程序执行的第一个函数。\n- `fmt.Println(\"Hello, World!\
+  \ \")` 输出文本 `Hello, World! `。\n- `C:\\Windows\\system32>cd\\` 返回 `C:` 根目录。\n- `C:\\\
+  cd myGo` 进入 `myGo` 文件夹。\n- `go run` 是执行 Go 程序的命令。\n\n### 注释\n\n- `//` 是单行注释的符号。\n\
+  - `/*` 和 `*/` 是多行注释的符号。\n- 注释不会被编译。Go 编译器将忽略所有注释。示例 1.2\n\n```go\npackage main \
+  \ // 包声明\nimport \"fmt\" \nfunc main() {\n    // 定义 main 函数\n    fmt.Println(\"\
+  Hello, World! \") \n} \n/* 上述代码的输出是: Hello, World! */\n```\n\n请使用 `go run` 命令运行此程序并检查结果。\n\
+  \n## 标识符\n\n标识符用于命名变量、函数、表达式等。标识符由一个或多个字母（A~Z 和 a~z）、数字（0~9）和下划线组成，但第一个字符必须是字母或下划线。标识符的首字符不能是数字。\n\
+  \n**有效的标识符：**\n- `myVariable`\n- `_Variable`\n- `variable100`\n\n**无效的标识符：**\n-\
+  \ `continue` (`continue` 是 Go 语言的关键字)\n- `100Variable` (以数字开头)\n\n# 总结\n\n- `package\
+  \ main` 定义包名为 `main`。每个 Go 应用程序必须包含一个名为 `main` 的包。\n- 导入的包 `fmt` 包含 I/O 函数。\n- `func\
+  \ main()` 是 Go 应用程序执行的第一个函数。\n- `fmt.Println(\"Hello, World! \")` 输出文本 `Hello, World!\
+  \ `。\n- `//` 是单行注释的符号。\n- `/*` 和 `*/` 是多行注释的符号。注释不会被编译。Go 编译器将忽略所有注释。\n- 标识符用于命名变量、函数、表达式等。标识符由一个或多个字母（A~Z\
+  \ 和 a~z）、数字（0~9）和下划线组成，但第一个字符必须是字母或下划线。标识符的首字符不能是数字。\n\n## 第二小时\n\n### 行分隔符\n\n\
+  在 Go 语言中，每个语句不需要用分号来结束行。例如：\n\n```go\nfmt.Println(\"Hi, My friend! \")\nfmt.Println(\"\
+  Hi, Guy! \")\n```\n\n上述代码中有两行，每一行代表一个语句的结束，每个语句不需要分号来结束行。\n\n关于以下内容：\n```go\nfmt.Println(\"\
+  Hi, My friend! \")\nfmt.Println(\"Hi, Guy! \")\n```\n以下代码会在运行时产生错误：\n```go\nfunc\
+  \ main() {\n```\n\nGo 语言中有 25 个关键字：`break`, `case`, `default`, `chan`, `const`,\
+  \ `continue`, `decl`, `else`, `for`, `func`, `go`, `import`, `interface`, `map`,\
+  \ `package`, `select`, `struct`, `switch`, `type`, `var`, `range`, `return`, `fallthrough`,\
+  \ `goto`。\n\n### 数据类型\n\n在 Go 中，我们定义变量。四种数据：\n\n1. **布尔型：** `bool`\n2. **数值型：**\
+  \ `int`, `int8`, `int16`, `int32`, `int64`, `uint`, `uint8`, `uint16`, `uint32`,\
+  \ `uint64`, `float32`, `float64`, `complex64`, `complex128`。\n3. **字符串型：** `string`\n\
+  4. **派生类型：** `array`, `slice`, `map`, `struct`, `interface`, `pointer`。\n\n### 变量声明\n\
+  \n有三种声明变量的方法：\n\n1. `var name type value`\n2. `var name = value`\n3. `name := value`\n\
+  \n示例：\n```go\nvar a int = 100\nvar b = 200\nc := 300\n```\n\n示例 2.1\n```go\npackage\
+  \ main\nimport \"fmt\"\nfunc main() {\n    var a = \"C# in 8 Hours\"\n    var b\
+  \ = \"is a book!\"\n    var c = true\n    fmt.Println(a, b, c)\n}\n```\n输出: C# in\
+  \ 8 Hours is a book! true\n\n示例 2.2\n```go\npackage main\nimport \"fmt\"\nfunc main()\
+  \ {\n    var a, b, c int = 100, 200, 300\n    var d, e, f = 400, 500, 600\n    s1,\
+  \ s2, s3 := \"R in 8 Hours\", \"is\", \"good book.\"\n    fmt.Println(a, b, c)\n\
+  \    fmt.Println(d, e, f)\n    fmt.Println(s1, s2, s3)\n}\n```\n输出：\n100 200 300\n\
+  400 500 600\nR in 8 Hours is a good book.\n\n\n\n\n\n# 总结\n在 Go 语言中，每个语句都不需要分号来结束行。`{\"\
+  ` 不能被放在单行上，因此以下代码在运行时产生错误。关键字不能作为变量、常量和函数等的标识符。Go 语言的变量名由字母、数字和下划线组成，其中第一个字符不能是数字。\n\
+  \n有三种方法声明多变量：\n1. `var vname1, vname2, vname3 type vname1, vname2, vname3 = v1,\
+  \ v2, v3`\n2. `var vname1, vname2, vname3 = v1, v2, v3`\n3. `vname1, vname2, vname3\
+  \ := v1, v2, v3`\n\n`:=` 赋值运算符（注意：原文为 `:=`）用于给变量赋值值。\n\n# 第 3 小时\n\n## 常量\n常量是在程序运行期间值不会改变的标识符。定义常量的语法为：\n\
+  \n| `const constant_name [type] = value` |\n| :--- |\n\n或者\n\n| `const constant_name\
+  \ = value` |\n| :--- |\n\n### 示例 3.1\n```go\npackage main\nfunc main() {\n    const\
+  \ x, y, z int = 10, 20, 30  // 定义三个常量\n    const s = \"jQuery in 8 Hours! \"\n \
+  \   const b bool = true\n    println(x, y, z)\n    println(s)\n    println(b)\n\
+  }\n```\n**输出：** 10 20 30 jQuery in 8 Hours! true\n**解释：** `const` 用于定义常量。\n\n###\
+  \ 示例 3.2\n```go\npackage main  // 以枚举定义常量\nfunc main() {\n    const (\n        //\
+  \ 枚举\n        color1 = \"Blue\"\n        color2 = \"Pink\"\n        color3 = \"\
+  Gray\"\n    )\n    println(color1, color2, color3)\n}\n```\n**输出：** Blue Pink Gray\n\
+  **解释：** 常量 `color1`, `color2`, `color3` 以枚举模式定义。\n\n### iota\n`iota` 是一个特殊的常量。第一个\
+  \ `iota` 的值等于 0，每当在的一行中使用 `iota` 时，它的值就会自动加 1。\n\n### 示例 3.3\n```go\npackage main\n\
+  func main() {\n    const (\n        x = iota  // 第一个 iota 值为 0\n        y = iota\n\
+  \        z = iota\n    )\n    println(x)\n    println(y)\n    println(z)\n}\n```\n\
+  **输出：** 0 1 2\n**解释：** 第一个 `iota` 值为 0，第二个 `iota` 值为 1，第三个 `iota` 值为 2。\n\n## 算术运算符\n\
+  | 运算符 |\n| :--- |\n| `+` |\n| `-` |\n| `*` |\n| `/` |\n| `%` |\n| `++` |\n| `--`\
+  \ |\n\n例如：\n给定：`a = 100`, `b = 2`\n计算：\n- `a + b` 返回 102\n- `a – b` 返回 98\n- `a\
+  \ * b` 返回 200\n- `a / b` 返回 50\n- `a % b` 返回 0\n- `a ++` 返回 101\n- `a --` 返回 99\n\
+  \n## 关系运算符\n| 运算符 |\n| :--- |\n| `>` |\n| `<` |\n| `>=` |\n| `<=` |\n| `==` |\n\
+  | `!=` |\n\n例如：\n给定：`a = 100`, `b = 2`\n计算：\n- `a > b` 返回 true\n- `b < a` 返回 false\n\
+  - `a >= b` 返回 true\n- `a <= b` 返回 false\n- `a == b` 返回 false\n- `a != b` 返回 true\n\
+  \n## 逻辑运算符\n| 运算符 |\n| :--- |\n| `&&` |\n| `||` |\n| `!` |\n\n例如：\n给定：`a = true`,\
+  \ `b = false`\n计算：\n- `a && b` 返回 false\n- `a || b` 返回 true\n- `! a` 返回 false\n\n\
+  **解释：**\n| `true && true;` 返回 `true;` |\n| :--- |\n| `|| true && false;` 返回 `false;`\
+  \ |\n| `false && false;` 返回 `false;` |\n| `true || true;` 返回 `true;` |\n| `true\
+  \ || false;` 返回 `true;` |\n| `false || false;` 返回 `false;`（注：已修正逻辑）\n\n## 赋值运算符\n\
+  | 运算符 | 示例： |\n| :--- | :--- |\n| `+=` | `x += y` |\n| `-=` | `x -= y` |\n| `*=`\
+  \ | `x *= y` |\n| `/=` | `x /= y` |\n| `%=` | `x %= y` |\n\n示例：\n给定：`x = 200`, `y\
+  \ = 100`\n- `x += y` 输出 300\n- `x -= y` 输出 100\n- `x *= y` 输出 20000\n- `x /= y`\
+  \ 输出 2\n- `x %= y` 输出 0\n\n## 运算符优先级\n下表列出了运算符优先级（从上到下表示从高到低）：\n\n| 优先级 | 运算符 |\n\
+  | :--- | :--- |\n| 7 | `*`, `/`, `%` |\n| 6 | `+`, `-` |\n| 5 | `<<`, `>>` |\n|\
+  \ 4 | `<`, `<=`, `>=`, '>' |\n| 3 | `==`, `!=` |\n| 2 | `&&` |\n| 1 | `||` |\n\n\
+  # 总结（常量重复）\n常量是在程序运行期间值不会改变的标识符。定义常量的语法为：`const constant_name [type] = value` 或\
+  \ `const constant_name = value`。\n\n`iota` 是一个特殊的常量。第一个 `iota` 的值等于 0，每当在的一行中使用\
+  \ `iota` 时，它的值就会自动加 1。后续有运算符：算术运算符、关系运算符、逻辑运算符、赋值运算符。\n\n# 第 4 小时\n\n## If 语句\n\
+  `if` 语句\n`if expression` 只有当条件为真时执行 `{}` 中的代码。\n\n### 示例 4.1\n```go\npackage main\n\
+  func main() {\n    if 10 > 5 {\n        println(\"greater\")\n    }\n}\n```\n**输出：**\
+  \ greater\n**解释：** `10 > 5` 为真，因此执行了块。\n\n### else 语句\n如果 `if` 条件为假，则执行 `else` 块中的代码。\n\
+  \n### 示例 4.2\n```go\npackage main\nfunc main() {\n    if 10 < 5 {\n        println(\"\
+  less\")\n    } else {\n        println(\"greater\")\n    }\n}\n```\n**输出：** greater\n\
+  **解释：** `10 < 5` 为假，执行了 `else` 块。\n\n### else if 语句\n如果前面的 `if` 条件为假，可以使用 `else\
+  \ if` 检查另一个条件。\n\n### 示例 4.3\n```go\npackage main\nfunc main() {\n    if 10 > 5\
+  \ {\n        println(\"greater\")\n    } else if 10 == 5 {\n        println(\"equal\"\
+  )\n    } else {\n        println(\"less\")\n    }\n}\n```\n**输出：** greater\n**解释：**\
+  \ `10 > 5` 为真，执行了第一个块。\n\n## switch 语句\n`switch` 语句允许根据多个值执行不同的代码块。\n\n### 示例 4.4\n\
+  ```go\npackage main\nfunc main() {\n    os := 2\n    switch os {\n    case 1:\n\
+  \        println(\"one\")\n    case 2:\n        println(\"two\")\n    case 3:\n\
+  \        println(\"three\")\n    }\n}\n```\n**输出：** two\n**解释：** `os` 的值为 2，匹配到\
+  \ `case 2`。\n\n### break 语句\n在 Go 的 `switch` 中，每个 `case` 后面都有隐含的 `break`，不需要手动编写。\n\
+  \n### 示例 4.5\n```go\npackage main\nfunc main() {\n    switch 2 {\n    case 1:\n\
+  \        println(\"one\")\n    case 2:\n        println(\"two\")\n        break\n\
+  \    case 3:\n        println(\"three\")\n    }\n}\n```\n**输出：** two\n**解释：** 匹配到\
+  \ `case 2` 后遇到 `break`，退出 `switch`。\n\n### default 语句\n如果没有 `case` 匹配，则执行 `default`\
+  \ 块。\n\n### 示例 4.6\n```go\npackage main\nfunc main() {\n    switch 5 {\n    case\
+  \ 1:\n        println(\"one\")\n    default:\n        println(\"default\")\n   \
+  \ }\n}\n```\n**输出：** default\n**解释：** 没有匹配的项，执行了 `default`。\n\n### 多值 case\n一个 `case`\
+  \ 可以包含多个可能的值。\n\n### 示例 4.7\n```go\npackage main\nfunc main() {\n    switch 2 {\n\
+  \    case 1, 2:\n        println(\"one or two\")\n    case 3:\n        println(\"\
+  three\")\n    }\n}\n```\n**输出：** one or two\n**解释：** `2` 匹配了 `case 1, 2`。\n\n###\
+  \ 无表达式 switch\n如果 `switch` 后面没有跟表达式，它将充当一个更简洁的 `if-else` 链。\n\n### 示例 4.8\n```go\n\
+  package main\nfunc main() {\n    n := 15\n    switch {\n    case n > 20:\n     \
+  \   println(\"large\")\n    case n > 10:\n        println(\"medium\")\n    default:\n\
+  \        println(\"small\")\n    }\n}\n```\n**输出：** medium\n**解释：** `n > 10` 为真。\n\
+  \n\n\n\n\n# 总结\n`if statement` 只有在指定条件为真时才执行 `{ … }` 内部的代码，如果条件为假，则不执行 `{…}` 中的任何代码。在\
+  \ `switch statement` 中，变量的值将首先与每个 `case` 进行比较，如果等于其中一个 `case` 值，它将执行该 `“case` 代码。`Select\
+  \ Statement` 有点像 `Switch Statement`。`Switch Statement` 按照顺序执行 case 代码。`Select Statement`\
+  \ 随机执行 case 代码。`For Loop` 是一种可以执行指定次数循环的控制结构。\n\n# 第 5 小时\n\n## break\n`break` 语句用于终止循环。`Break`\
+  \ 语句也用于终止 `switch statement` 中的 `case`。\n\n示例 5.1\n```go\npackage main\nfunc main()\
+  \ {\n    var num int = 20\n    for num < 30 {\n        print(num,\" \");\n     \
+  \   num++;\n        if num > 25 {\n            break;     // 终止 for 循环\n       \
+  \ }\n    }\n}\n```\nOutput: 20 21 22 23 24 25\nExplanation: 如果 `num > 25` 是测试表达式，如果为真，`break`\
+  \ 语句将终止循环。\n\n## continue\n`continue` 语句跳过当前循环并执行下一次。\n\n示例 5.2\n```go\npackage\
+  \ main\nfunc main() {\n    var num int = 20\n    for num < 30 {\n        if num\
+  \ == 25 {\n            num = num + 1;\n            continue;     // 跳过当前的 for 循环\n\
+  \        }\n        print(num, \" \")\n        num++;  \n    }\n}\n```\nOutput:\
+  \ 20 21 22 23 24 26 27 28 29\nExplanation: 如果 `num == 25` 是测试表达式，如果为真，`continue`\
+  \ 语句将跳过当前的 for 循环并执行下一次。\nNote：结果中没有 25。\n\n## goto\n`goto label; ... label: statement;`\n\
+  `goto` 语句可以跳转到指定的代码并无条件地执行。\n\n示例 5.3\n```go\npackage main\nfunc main() {\n    var\
+  \ num int = 10\n    if num > 10{\n        goto code01\n    }\n    if num == 10{\n\
+  \        goto code02\n    }\n    code01: print(\"num > 10\")\n    code02: print(\"\
+  num == 10\")\n}\n```\nOutput: num == 10\nExplanation: `goto code01` 意味着执行标签为 `code01`\
+  \ 的语句。`goto code02` 意味着执行标签为 `code02` 的语句。\n\n## Function\n函数是一个重复用于执行相同任务的代码块。\n\
+  \n(1) 定义函数的语法如下：\n`func function_name ( parameter type) type { …… return … }`\n\
+  `func`: 定义函数\n`return`: 将结果传递给调用者。\n\n(2) 调用函数的语法如下：\n`variable = function_name\
+  \ ( parameter type )`\n\n示例 5.4\n```go\npackage main\nfunc main() {\n    var a int\
+  \ = 10\n    var b int = 20\n    var result int\n    result = add(a, b)    // 调用函数\n\
+  \    print( \"The sum is \", result )\n}\nfunc add(num1, num2 int) int {\n    //\
+  \ 定义一个函数\n    return num1 + num2 // 将结果传递给调用者\n}\n```\nOutput: The sum is 30\nExplanation:\
+  \ `add(a, b)` 调用函数 `add(a, b)`，并将参数 `a` 和 `b` 的值传递给 `num1` 和 `num2`。`func add(num1,\
+  \ num2 int) int` 定义了函数 `add(...)`，`num1` 和 `num2` 接收来自 `a` 和 `b` 的值。`return num1\
+  \ + num2` 将结果传递给调用者 `add(...)`。\n\n示例 5.5\n```go\npackage main\nimport \"fmt\"\n\
+  func swap(a, b string) (string, string) {\n    // 定义一个函数\n    return b, a // 向调用者返回两个值\n\
+  }\nfunc main() {\n    x, y = swap(\"8 Hours\", \"JavaScript\") // 调用函数\n    fmt.Println(x,\
+  \ y)\n}\n```\nOutput: JavaScript 8 Hours\nExplanation: `func swap(a, b string) (string,\
+  \ string) {…}` 定义了一个函数。`swap(\"8 Hours\", \"JavaScript\")` 调用函数 `swap(...)` 并将参数传递给函数。\n\
+  \n## Working Scope\n任何编码中的作用域是变量可以访问的范围，在该范围之外无法访问该变量。\n在函数内部定义的变量称为局部变量。\n在函数外部定义的变量称为全局变量。\n\
+  \n示例 5.6\n```go\npackage main\nfunc main() {\n    var a, b, c int // 定义局部变量\n  \
+  \  a = 100\n    b = 200\n    c = a + b\n    print(a, b, c)\n}\n```\nOutput: 300\n\
+  Explanation: `var a, b, c int` 在函数 `main` 内部定义了三个局部变量。\n\n示例 5.7\n```go\npackage\
+  \ main\nvar v int = 100\n```\n(Wait,此处原文示例 5.7 似乎不完整，我根据提供的文本进行翻译)\n```go\npackage\
+  \ main\nvar v int = 100\n```\n(注：原文提供的示例 5.7 文本不完整，此处按原文提供的内容翻译)\n\n\n\n\n例如：`var\
+  \ ipoint *int` // 声明一个 int 指针\n`var fpoint *float32` // 声明一个 float32 指针\n`*ipoint`\
+  \ // 获取内存地址中的 ipoint 值\n`*fpoint` // 获取内存地址中的 fpoint 值\n\n### 示例 6.6\n```go\npackage\
+  \ main\nimport \"fmt\"\nfunc main() {\n    var num int= 100\n    var pt *int //\
+  \ 声明一个指针 pt\n    pt = &num // &num 获取地址并赋值给 pt\n    fmt.Printf(\"The address of\
+  \ num: %x\\n\", &num)\n    fmt.Printf(\"The address in pt: %x\\n\", pt)\n    fmt.Printf(\"\
+  The value of the *pt: %d\\n\", *pt)\n}\n```\n输出:\n```\nThe address of num: C000044058\n\
+  The address in pt: C000044058\nThe value of the *pt: 100\n```\n解释：\n`&num` 从 `num`\
+  \ 获取内存地址。\n`pt = &num` 将内存地址赋值给 `pt`。\n`*pt` 返回内存地址中的 `pt` 值。\n\n### 示例 6.7\n```go\n\
+  package main\nimport \"fmt\"\nfunc main() {\n    var a string=\"Hello\"\n    var\
+  \ b *string\n    var c string\n    b=&a //&a 获取内存地址\n    c=*b //*b 获取内存地址中的值\n \
+  \   fmt.Println(a)\n    fmt.Println(b)\n    fmt.Println(c)\n}\n```\n输出:\n```\nHello\n\
+  0xc0000381c8\nHello\n```\n解释：\n`&variablename` 返回一个内存地址。\n`*variable` 返回内存地址中的值。\n\
+  \n### 空指针 (Nil Pointer)\n当指针被定义但没有赋值给任何变量地址时，它的值为 `nil`。\n\n### 示例 6.8\n```go\n\
+  package main\nimport \"fmt\"\nfunc main() {\n    var npt *int\n    fmt.Printf(\"\
+  The address stored in npt: %x\\n\", npt)\n}\n```\n输出:\n```\nThe address stored in\
+  \ npt: 0\n```\n解释：“`npt`”是一个指针，尚未被分配任何地址，因此 `npt` 的值为 0。\n\n# 总结\n数组是相同类型和同名变量的集合。\n\
+  - **数组元素**：数组中的每个变量。\n- **数组索引**：也称为键（key），每个元素上的数字。\n- **注意**：数组索引或数组键从零开始计数。\n\
+  - 指针代表内存地址的值。\n- `&variable` // 获取变量的内存地址\n- `var variable_name *type` // 声明一个指针\n\
+  - `*variable_name` // 获取地址中的变量值\n- 当指针被定义但没有赋值给任何变量地址时，它的值为 `nil`。\n\n# 第 7 小\n\n\
+  ## 结构体 (Structures)\n结构体是相同或不同类型数据的集合。\n\n### (1) 定义结构体类型\n```go\ntype structure_name\
+  \ struct {\n    member1 type;\n    member2 type;\n    ...\n    member3 type;\n}\n\
+  ```\n\n### (2) 访问结构体成员\n```go\nstructure_name{member1: value1, member2: value2,\
+  \ … }\n```\n\n### 示例 7.1\n```go\npackage main\nimport \"fmt\"\ntype Flower struct\
+  \ {\n    // 定义一个结构体类型\n    color string // 结构体成员\n    size string\n    number int\n\
+  }\nfunc main() {\n    fmt.Println(Flower{color:\"Red\", size:\"Large\", number:10\
+  \ })\n}\n```\n输出:\n```\nRed\nLarge\n10\n```\n解释：“`type Flower struct`”定义了一个结构体类型。\n\
+  \n### (3) 声明结构体变量\n```go\nvar variable structure_name\n```\n\n### (4) 给结构体成员赋值\n\
+  ```go\nvariable.member = value\n```\n\n### 示例 7.2\n```go\npackage main\ntype Flower\
+  \ struct {\n    // 定义一个结构体类型\n    color string // 结构体成员\n    size string\n    number\
+  \ int\n}\nfunc main() {\n    var Rose Flower // 声明一个结构体变量\n    Rose.color = \"Red\"\
+  \ // 给结构体成员赋值\n    Rose.size = \"Large\"\n    Rose.number = 10\n    println(\"Rose\
+  \ color : \", Rose.color);\n    println(\"Rose size : \", Rose.size);\n    println(\"\
+  Rose number : \", Rose.number);\n}\n```\n输出:\n```\nRose color: Red\nRose size: Large\n\
+  Rose number: 10\n```\n解释：“`var Rose Flower`”声明了一个结构体变量 `Rose`。`Rose.color = \"Red\"\
+  ` 给结构体成员 `Rose.color` 赋值。\n\n### 切片 (Slice)\n切片是一种特殊的数组，它的长度是可变的。\n\n### (1) 创建切片的种语法：\n\
+  ```go\nslice_name := []type{val1, val2, …\n```\n\n### 示例 7.3\n```go\npackage main\n\
+  import \"fmt\"\nfunc main(){\n    s := []int{1,2,3,4,5} // 创建切片\n    fmt.Println(s)\n\
+  }\n```\n输出:\n```\n1 2 3 4 5\n```\n解释：“`s := []int{1,2,3,4,5}`”创建了一个包含五个值的切片。\n\n\
+  ### (2) 创建切片的第二种语法：\n```go\nslice_name := make([]type, len, cap)\n```\n`len` 表示切片的长度，`cap`\
+  \ 表示容量。\n\n### 示例 7.4\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    s\
+  \ := make([]int, 5, 8)\n    fmt.Printf(\"len=%d cap=%d\\n\", len(s), cap(s))\n}\n\
+  ```\n输出:\n```\nlen=5 cap=8\n```\n解释：`len(s)` 获取切片的长度。`cap(s)` 获取容量。由于切片元素尚未赋值，该切片的值为零。\n\
+  \n### (3) 从切片中获取某些值：\n```go\nslice_name[key1:key2]\n```\n获取从 `key1` 到 `key2` 的值。\n\
+  \n### 示例 7.5\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    var s = []int{0,\
+  \ 1, 2, 3, 4, 5, 6, 7}\n    mySlice := s[2:6] // 从 s[2] 到 s[5] 获取值\n    fmt.Println(mySlice)\n\
+  }\n```\n输出:\n```\n2 3 4 5\n```\n解释：“`s[2:6]`”获取从 `s[2]` 到 `s[5]` 的值。\n\n### (4)\
+  \ 给切片元素赋值。\n```go\nslice_name[key] = value\n```\n\n### 示例 7.6\n```go\npackage main\n\
+  import \"fmt\"\nfunc main() {\n    var s = []int{0, 1, 2, 3, 4, 5, 6, 7}\n    s[3]\
+  \ = 10 // 给 s[3] 赋值新值\n    s[6] = 100 // 给 s[6] 赋值新值\n    fmt.Println(s)\n}\n```\n\
+  输出:\n```\n0 1 2 10 4 5 100 7\n```\n解释：`s[3] = 10` 和 `s[6] = 100` 赋值了新值。\n\n### `append()`\
+  \ & `copy()`\n```go\nappend(slice_name, values) // 向切片追加值\ncopy(new_slice, old_slice)\
+  \ // 将旧切片拷贝到新切片\n```\n\n### 示例 7.7\n```go\npackage main\nimport \"fmt\"\nfunc main()\
+  \ {\n    mySlice := make([]int, 0, 0)\n    showSlice(mySlice)\n    mySlice = append(mySlice,\
+  \ 10, 20, 30) // append\n    showSlice(mySlice)\n    newSlice := make([]int, len(mySlice),\
+  \ cap(mySlice)*2) // copy\n    copy(newSlice, mySlice)\n    showSlice(newSlice)\n\
+  }\nfunc showSlice(x []int){\n    fmt.Printf(\"len=%d cap=%d slice=%v\\n\", len(x),\
+  \ cap(x), x)\n}\n```\n输出:\n```\nlen=0 cap=0 slice=[]\nlen=3 cap=4 slice=[10 20 30]\n\
+  len=3 cap=8 slice=[10 20 30]\n```\n解释：`append(mySlice, 10, 20, 30)` 向 `mySlice`\
+  \ 追加了三个值。`cap(mySlice)*2` 使容量翻倍。`copy(newSlice, mySlice)` 将 `mySlice` 的内容拷贝到 `newSlice`。\n\
+  \n# 总结\n结构体是相同或不同类型数据的集合。\n- **(1) 定义结构体类型**：\n```go\ntype structure_name struct\
+  \ {\n    member1 type;\n    member2 type;\n    ...\n    member3 type;\n}\n```\n\
+  - **(2) 访问结构体成员**：`structure_name{member1: value1, member2: value2, …}`\n- **(3)\
+  \ 声明结构体变量**：`var variable structure_name`\n- **(4) 给结构体成员赋值**：`variable.member =\
+  \ value`\n- 切片是一种特殊的数组，但它的长度是可变的。\n- `append(slice_name, values)` // 向切片追加值\n- `copy(new_slice,\
+  \ old_slice)` // 将旧切片拷贝到新切片\n\n# 第 8 小\n\n## GOROUTINE (协程)\n“goroutine”用于同时运行多个任务，这意味着\
+  \ goroutine 函数可以通过使用 `go` 关键字同时执行多个线程。以下示例是定义一个 goroutine 函数并运行该 goroutine 函数。\n\
+  \n```go\ngo func(arguments) {\n    // 定义一个 goroutine 函数\n} (arguments) // 运行 goroutine\
+  \ 函数\n```\n\n### 示例 8.1\n```go\npackage main\nimport \"fmt\"\nfunc fn(s string)\
+  \ {\n    // 定义一个用于...循环的函数\n    for i := 0; i < 5; i++ {\n        fmt.Println(s)\n\
+  \    }\n}\nfunc main() {\n    fn(\"Thread B\") // 调用函数\n    go func(msg string)\
+  \ {\n        // 定义一个 goroutine 函数\n        fmt.Println(msg)\n    } (\"Press Enter\
+  \ to Stop! \") // 运行 goroutine 函数\n    fmt.Scanln() // 接收键盘用户输入\n    fmt.Println(\"\
+  Complete! \")\n}\n```\n输出:\n```\nThread B\nThread B\nThread B\nThread B\nThread\
+  \ B\nPress Enter to Stop!\nComplete! \n```\n解释：`go func(msg string) {…}` 定义了一个 goroutine\
+  \ 函数。`(\"Press Enter to Stop! \")` 运行 goroutine 函数，并将参数传递给 goroutine 函数。\n\n\n\n\
+  \n\n## Range\n\n`Range` 是 Go 语言的内置函数，用于遍历数组、切片、字符串和 map。\n- 遍历数组、切片、字符串会返回索引和值。\n\
+  - 遍历 map 会返回键和值。\n- 遍历通道（channel）返回值。\n\n### (1) 遍历数组/切片\n\n```go\nfor key, value\
+  \ : = range array/slice { }\n```\n\n**示例 8.2**\n```go\npackage main\nimport \"fmt\"\
+  \nfunc main(){\n    for key, value : = range []int{10, 11, 12, 13} {\n        fmt.Printf(\"\
+  key:%d  value:%d\\n\", key, value)\n    }\n}\n```\n**输出:**\n```\nkey: 0    value:\
+  \ 10\nkey: 1    value: 11\nkey: 2    value: 12\nkey: 3    value: 13\n```\n**解释：**\
+  \ `range []int{10, 11, 12, 13}` 遍历了一个数组或切片，并返回键和值。\n\n### (2) 遍历字符串\n\n```go\nfor\
+  \ key, value : = range str { }\n```\n\n**示例 8.3**\n```go\npackage main\nimport \"\
+  fmt\"\nfunc main(){\n    var str = \"hello\"\n    for key, value : = range str {\n\
+  \        fmt.Printf(\"key:%d value:0x%x\\n\", key, value)\n    }\n}\n```\n**输出:**\n\
+  ```\nkey : 0    value : 0x68\nkey : 1    value : 0x65\nkey : 2    value : 0x6c\n\
+  key : 3    value : 0x6c\nkey : 4    value : 0x6f\n```\n**解释：** `range str { }` 遍历一个字符串，返回其键和值。\n\
+  \n### (3) 遍历通道\n\n```go\nfor value : = range channel\n```\n\n**示例 8.4**\n```go\n\
+  package main\nimport \"fmt\"\nfunc main(){\n    c : = make(chan int)\n    go func()\
+  \ {\n        // 定义一个 goroutine 函数\n        c <- 1    // 向通道发送数据\n        c <- 2\n\
+  \        c <- 3\n        close(c)  // 关闭通道\n    }() // 调用该 goroutine 函数\n    for\
+  \ v := range c {\n        // 遍历通道\n        fmt.Println(\"Send data to channel: \"\
+  ,v)\n    }\n}\n```\n**输出:**\n```\nSend data to channel: 1\nSend data to channel:\
+  \ 2\nSend data to channel: 3\n```\n**解释：** `range c` 遍历通道。`go func(){}` 定义了一个 goroutine\
+  \ 函数。`()` 调用了该 goroutine 函数。\n\n## Map \n\n`Map` 是一个无序的键值对集合。`Map` 用于通过键快速检索数据，类似于索引并指向数据的值。定义\
+  \ map 的两种语法如下：\n\n### (1)\n```go\nm1 : = map[key_type]value_type{}\n```\n**解释：**\
+  \ `m1` 是一个 map。\n\n### (2)\n```go\nm2 : = make(map[key_type]value_type)\n```\n**解释：**\
+  \ `m2` 是一个 map。\n\n**示例 8.5**\n```go\npackage main\nimport \"fmt\"\nfunc main(){\n\
+  \    m1 := map[int]int{1:10} = 10\n    m1[2] = 20\n    for key, value : = range\
+  \ m1 {\n        fmt.Println(\"Key: \", key, \"Value:\", value)\n    }\n    m2 :=\
+  \ make(map[int]int)\n    m2[1] = 10\n    m2[2] = 20\n    for key, value : = range\
+  \ m2 {\n        fmt.Println(\"Key: \", key, \"Value:\", value)\n    }\n}\n```\n\
+  **输出:**\n```\nKey:  1 Value: 10\nKey:  2 Value: 20\nKey:  1 Value: 10\nKey:  2 Value:\
+  \ 20\n```\n*(注：顺序可能会变化，因为 map 是无序的)*\n\n# 类型转换\n\n类型转换意味着将变量的一种数据类型转换为另一种类型。\n\n\
+  ### (1)\n```go\ndata_type (variables)\n```\n\n**示例 8.6**\n```go\npackage main\n\
+  import \"fmt\"\nfunc main(){\n    var num1 int = 100\n    var num2 int = 33\n  \
+  \  var result float32 = float32(num2)\n    fmt.Printf(\"The result is %f\\n\", result)\n\
+  }\n```\n**输出:**\n```\nThe result is 33.000000\n```\n**解释：** `float32(num2)` 了数据类型。\n\
+  \n# 递归\n\n递归意味着函数调用自己。\n\n```go\nfunc recursion() {\n    recursion() // 调用自己\n}\n\
+  func main() {\n    recursion()\n}\n```\n\n**示例 8.7**\n```go\npackage main\nimport\
+  \ \"fmt\"\nfunc myRecur(n int) int {\n    if n == 0 {\n        return 1\n    }\n\
+  \    return n * myRecur(n-1)\n}\nfunc main() {\n    fmt.Print(\"Factorial of 10\
+  \ is \")\n    fmt.Print(myRecur(10))\n}\n```\n**输出:**\n```\nFactorial of 10 is 3628800\n\
+  ```\n**解释：** `myRecur(n-1)` 调用了它自己。在出现 `myRecur(0)` 之前，递归不会停止。\n\n# 总结\n\n`goroutine`\
+  \ 用于同时运行多个任务，这意味着 goroutine 函数可以通过 `go` 关键字同时执行多个线程。`Range` 是 Go 语言的内置函数，用于遍历数组、切片、字符串和\
+  \ map。`Map` 是一个无序的键值对集合。`Map` 用于通过键快速检索数据，类似于索引并指向数据的值。`类型转换`意味着将变量的一种数据类型转换为另一种类型。`data_type\
+  \ (variables)` `递归` 意味着函数调用自己。\n\n```go\nfunc recursion() {\n    recursion() //\
+  \ 调用自己\n}\nfunc main() {\n    recursion()\n}\n```\n\n# 附录 1\n\n## 并发\n\nGo 语言支持并发，我们可以使用\
+  \ `go` 关键字调用函数，启动一个新的运行时线程 goroutine。使用 `go` 关键字调用函数的语法如下：\n\n```go\ngo function_name(arguments)\n\
+  ```\n\n**示例:**\n```go\npackage main\nimport (\n    \"fmt\"\n    \"time\"\n)\nfunc\
+  \ fn(s string) {\n    // 定义一个函数 fn\n    for i := 0; i < 5; i++ {\n        time.Sleep(200\
+  \ * time.Millisecond) // 延迟运行\n        fmt.Println(s)\n    }\n}\nfunc main() {\n\
+  \    go fn(\"Thread A\") // 调用函数 fn\n    fn(\"Thread B\") // 调用函数 fn\n    go func(msg\
+  \ string) {\n        // 定义一个 goroutine 函数\n        fmt.Println(msg)\n    }(\"Press\
+  \ Enter to Stop! \") // 运行 goroutine 函数\n    fmt.Scanln() // 接受键盘用户输入\n    fmt.Println(\"\
+  Complete! \")\n}\n```\n**输出:**\n```\nThread B\nThread A\nThread B\nThread A\nThread\
+  \ B\nThread A\nThread B\nThread A\nThread B\nPress Enter to Stop!\nComplete! \n\
+  ```\n**解释：** `go fn(\"Thread A\")` 使用 `go` 关键字调用函数 `fn`，启动了一个新的线程 goroutine。\n\n\
+  # 附录 2\n\n\n\n\n\n# 测试\n\n请选择正确的答案。\n\n### (01)\n```go\npackage main\nimport \"\
+  fmt\" // 导入内置函数\nfunc main() {\n    fmt.Println(\"Hello, World! \")\n}\n```\nA.\
+  \ `iostream`\nB. `math`\nC. `i/o`\nD. `fmt`\n\n### (02)\n```go\nfill in a int //\
+  \ 声明一个变量 \na = 100\n```\nA. `variable`\nB. `variab`\nC. `var`\nD. `va`\n\n### (03)\n\
+  ```go\npackage main\nfunc main() {\n    const (\n        x = fill in // 一个特殊的常量\n\
+  \        y = fill in\n        z = fill in\n    )\n    print(x, y, z)\n}\n```\n输出:\
+  \ 0 1 2\nA. `const`\nB. `iota`\nC. `constant`\nD. `iote`\n\n### (04)\n```go\npackage\
+  \ main\nfunc main() {\n    var number int=20 \n    fill in (number) { // number\
+  \ 比较每一个\n        case 10: println(\"Running case 10\")\n        case 20: println(\"\
+  Running case 20\")\n        case 30: println(\"Running case 30\")\n        default:\
+  \ println(\"Running default\")\n    }\n}\n```\nA. `If`\nB. `While`\nC. `Do`\nD.\
+  \ `Switch`\n\n### (05)\n```go\npackage main\nfunc main() {\n    var num int = 10\n\
+  \    if num > 10 {\n        fill in code1 // 执行指定的代码\n        print(\"num > 10\"\
+  )\n    }\n    if num == 10 {\n        fill in code2 // 执行指定的代码\n        print(\"\
+  num == 10\")\n    }\n}\n```\nA. `goto`\nB. `go`\nC. `to`\nD. `return`\n\n### (06)\n\
+  ```go\npackage main\nfunc main(){\n    var arr []int = fill in ([]int, 3) // 定义一个数组\
+  \ \n    arr[0]=100 // 给数组赋值 \n    arr[1]=101\n    arr[2]=102\n    print(arr[0],\
+  \ \" \", arr[1], \" \", arr[2])\n}\n```\nA. `array`\nB. `define`\nC. `make`\n\n\
+  ### (07)\n```go\npackage main\nimport \"fmt\"\ntype fill in { // 定义一个结构体\n    color\
+  \ string // 结构成员\n    size string\n    number int\n}\nfunc main() {\n    fmt.Println(Flower{color:\"\
+  Red\", size:\"Large\", number:10})\n}\n```\nA. `structure`\nB. `struct`\nC. `string`\n\
+  D. `type`\n\n### (08)\n```go\npackage main\nimport \"fmt\"\nfunc fn(s string) {\
+  \ // 定义一个函数 \n    for i := 0; i < 5; i++ {\n        fmt.Println(s)\n    }\n}\nfunc\
+  \ main() {\n    fn(\"Thread B\") // 调用函数 \n    fill in func(msg string) { // 定义一个\
+  \ goroutine 函数\n        fmt.Println(msg)\n    } (\"Press Enter to Stop!\") // 执行\
+  \ goroutine 函数 \n    fmt.Scanln() // 接收键盘输入\n    fmt.Println(\"Complete!\")\n}\n\
+  ```\nA. `goto`\nB. `go`\nC. `to`\nD. `goroutine`\n\n### (09)\n```go\npackage main\n\
+  func main(){\n    var a = \"C in 8 Hours\"\n    var b string = \"is\"\n    c =\"\
+  a good book!\" \n    var e fill in = true\n    println(a, b, c, e)\n}\n```\nA. `string`\n\
+  B. `boolean`\nC. `bool`\nD. `char`\n\n### (10)\n已知：\n`a = 100`\n`b = 2`\n计算过程：\n\
+  `a + b` 返回 102\n`a – b` 返回 98\n`a * b` 返回 200\n`a / b` 返回 50\n`a % b` 返回 fill in\n\
+  A. `0`\nB. `1`\nC. `2`\nD. `3`\n\n### (11)\n```go\npackage main\nimport \"fmt\"\n\
+  func main() {\n    c1:=make(chan int,1024) // 创建一个通道\n    c2:=make(chan int,1024)\n\
+  \    c3:=make(chan int,1024)\n    c1 <- 100 // 向通道发送数据\n    c2 <- 200\n    c3 <-\
+  \ 300\n    fill in { // 随机执行一个 case\n        case <- c1: // 从通道接收数据\n          \
+  \  fmt.Println(\"Receive data from c1\")\n        case <- c2: fmt.Println(\"Receive\
+  \ data from c2\")\n        case <- c3: fmt.Println(\"receive data from c3\")\n \
+  \       default: fmt.Println(\"Not receive data yet\")\n    }\n}\n```\nA. `switch`\n\
+  B. `select`\nC. `while`\nD. `if`\n\n### (12)\n```go\npackage main\nimport \"fmt\"\
+  \nfill in swap(a, b string) (string, string) { // 定义一个函数 \n    return b, a // 返回两个值给调用者\n\
+  }\nfunc main() {\n    x, y = swap(\"in 8 Hours\", \"JavaScript\") //调用函数\n    fmt.Println(x,\
+  \ y)\n}\n```\nA. `function`\nB. `def`\nC. `void`\nD. `func`\n\n### (13)\n```go\n\
+  package main\nimport \"fmt\"\nfunc main() {\n    var num int110\n        var *int\
+  \ // 声明一个指针\n    pt = fill in // 获取地址并赋值给 pt\n    fmt.Printf(\"address of num: %x\\\
+  n\", pt)\n    fmt.Printf(\"address of pt: %x\\n\", pt)\n    fmt.Printf(\"value of::\
+  \ %dn\",\",)\n}\n```\nA. `*num`\nB. `$num`\nC. `&num`\nD. `#num`\n\n### (14)\n```go\n\
+  package main\nimport \"fmt\"\nfunc main() {\n    s := fill in 1,2,3,4,5 // 创建切片\n\
+  \    fmt.Println(s)\n}\n```\nA. `[]`\nB. `]`\nC. `]`\nD. `]`\n\n### (15)\n```go\n\
+  package main\nimport \"fmt\"\nfunc main(){\n    c = make(chan int) // 创建通道\n   \
+  \ go func() { // 定义 goroutine 函数\n        c <- 1 // 向通道发送数据\n        c <- 2\n  \
+  \      c <- 3\n        close(c) // 关闭通道\n    }() // 执行 goroutine 函数\n    for v :=\
+  \ fill in c // 遍历通道\n        fmt.Println(\"Send data to channel: \",v)\n    }\n\
+  }\n```\nA. `range`\nB. `chan`\nC. `in`\nD. `for`\n\n### (16)\n```go\npackage main\n\
+  import \"fmt\"\nfunc main(){\n    var a = \"C in 8 Hours\"\n    var b string = \"\
+  is\"\n    c = \"a good book!\"\n    var e bool = true\n    println(a, b, c, e)\n\
+  }\n```\nA. `=`\nB. `<=`\nC. `=`\nD. `<=`\n\n### (17)\n```go\npackage main\nimport\
+  \ \"fmt\"\nfunc main() {\n    var num int110\n    var pt *int // 声明一个指针\n    pt\
+  \ = fill in // 获取地址并赋值给 pt\n    fmt.Printf(\"address of num: %x\\n\", &num)\n  \
+  \  fmt.Printf(\"address of pt: %x\\n\", pt)\n    fmt.Printf(\"value of pt: %d\\\
+  n\", *pt)\n}\n```\nA. `*num`\nB. `$num`\nC. `&num`\nD. `#num`\n\n### (18)\n```go\n\
+  package main\nimport \"fmt\"\nfunc main() {\n    var num int110\n    fill in = 5\n\
+  \    for { // 循环语句\n        fmt.Println()\n    }\n}\n```\nA. `while`\nB. `if`\n\
+  C. `do`\nD. `for`\n\n### (19)\n```go\npackage main\nimport \"fmt\"\nfunc swap(a,\
+  \ b string) (string, string) { // 定义一个函数\n    return b, a // 返回两个值给调用者\n}\nfunc\
+  \ main() {\n    x, y = swap(\"in 8 Hours\", \"JavaScript\") //调用函数\n    fmt.Println(x,\
+  \ y)\n}\n```\nA. `pass`\nB. `return`\nC. `send`\nD. `goto`\n\n### (20)\n```go\n\
+  package main\nimport \"fmt\"\nfunc main() {\n    var npt *int\n    fmt.Printf( )\n\
+  }\n```\n输出是什么？\nA. `0`\nB. `1`\nC. `2`\nD. `3`\n\n### (21)\n```go\npackage main\n\
+  import \"fmt\"\nfunc main() {\n    var s = [9]int{0, 1, 2, 3, 4, 5, 6, 7, 8}\n \
+  \   mySlice:= s in // 获取四个值\n    fmt.Println(mySlice)\n}\n```\n输出: 2 3 4 5\nA. `2:\
+  \ 6`\nB. `1: 5`\nC. `2`\nD. `3`\n\n### (22)\n```go\npackage main\nimport \"fmt\"\
+  \nfunc main(){\n    var arr []int = fill in ([]int,3) // 定义一个数组\n    arr[0]=100\
+  \ // 给数组赋值\n    arr[1]=101\n    arr[2]=102\n    fmt.Println(arr[0], \" \", arr[1],\
+  \ \" \", arr[2])\n}\n```\nA. `array`\nB. `define`\nC. `make`\nD. `type`\n\n### (23)\n\
+  ```go\npackage main\nimport \"fmt\"\ntype fill in { // 定义一个结构体\n    color string\
+  \ // 结构成员\n    size string\n    number int\n}\nfunc main() {\n    fmt.Println(Flower{color:\"\
+  Red\", size:\"Large\", number:10})\n}\n```\nA. `structure`\nB. `struct`\nC. `string`\n\
+  D. `type`\n\n### (24)\n```go\npackage main\nimport ( \"fmt\" \"time\" )\nfunc main(){\n\
+  \    c = make(chan int)\n    go func() { // 定义一个 goroutine 函数\n        c <- 1 //\
+  \ 向通道发送数据\n        c <- 2\n        c <- 3\n        close(c) // 关闭通道\n    }() //\
+  \ 执行 goroutine 函数\n    for v := fill in c // 遍历通道\n        fmt.Println(\"Send data\
+  \ to channel: \",v)\n    }\n}\n```\n\n\n\n\n# 推荐书籍\n\n- [8 小时精通 C++ 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 `JAVA` 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 `AngularJS`\
+  \ 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [C# 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 C# 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [C# 编程：包含 100 个问答](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [C++ 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 C++ 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [编程面试，1000 问答](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通 Django 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 Go 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [HTML CSS 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 HTML CSS 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [`JAVA` 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 `JAVA` 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [`JAVA` 编程：包含 100 个问答](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [JavaScript 50 个实用用程序](https://www.amazon.com/-/e/B0863BQT8T)\n- [JavaScript 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 JavaScript 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [`JQuery` 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 `JQuery` 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通 Kotlin 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [Linux 命令行](https://www.amazon.com/-/e/B0863BQT8T)\n- [Linux 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 Linux Shell 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 MySQL 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [Node](https://www.amazon.com/-/e/B0863BQT8T)\n- [.](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 js 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [PHP 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 PHP MySQL 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通 PowerShell\
+  \ 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [Python 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 Python 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [Python 编程：包含 100 个问答](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 R 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 Ruby 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 Rust 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通 Scala 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [Visual Basic 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 Visual Basic\
+  \ 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\n"
