@@ -1,0 +1,2252 @@
+- pgno: 0
+  md: '# Remote Sensing of Environment 279 (2022) 113132
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Remote Sensing of Environment
+
+
+    journal homepage: www.elsevier.com/locate/rse
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_0_0.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_0_1.png)
+
+
+    # A machine learning method trained by radiative transfer inversion for generating
+    severe global land and atmospheric estimates from VIIRS top-of-atmospheric estimates
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_0_2.png)
+
+
+    Guodang Zhang a, Han Ma b,c*, Shulin Lin b,c*, Aolin Jia b, Tao He b, Dongdong
+    Wang b
+
+
+    +   a School of Remote Sensing and Information Engineering, Wuhan University,
+    Wuhan 430006, China
+
+    b Department of Geographical Sciences, University of Maryland, College Park, MD
+    20742, USA
+
+    c Department of Geography, University of Hong Kong, Hong Kong 990077, China
+
+
+    # ARTICLE INFO ABSTRACT
+
+
+    Edited by Jing M. Chen
+
+
+    +   Keywords
+
+    Machine learning
+
+    Random forest regression
+
+    Radiative transfer models (RTMs)
+
+    VIIRS product
+
+
+    The Visible Infrared Radiometer (VIIRS) has observed the Earth since 2011 and
+    will continue for several decades. Unfortunately, high-level land surface products
+    are produced and widely released. The numerical inversion of radiative transfer
+    model (RTM) has been used traditionally for the retrieval of land and atmospheric
+    variables from satellite sensors (e.g., MODIS, using up ASTER) but are effective
+    for estimating useful atmospheric variables. Various machine learning (ML) models
+    have been developed, primarily through ground measurements that may not be appropriate
+    under different conditions, or RTM simulations that may not be realistic due to
+    uncertainty and lack of calibration. We developed the ML algorithm that was trained
+    using VIIRS inversion for estimating atmospheric variables simultaneously. Using
+    this dataset, two multi-output algorithms were explored: backpropagation neural
+    networks and random forest (RF) regression. The best-performing RF model was then
+    applied to estimate seven land and atmospheric variables from VIIRS data: Fraction
+    of absorbed photosynthetically active radiation (PAR), infrared shortwave radiation
+    (SWIR), land albedo, land surface reflectance, and TOA albedo. The results were
+    evaluated using ground measurements at four sites and extended to test the method
+    on a much larger region for evaluation. Finally, seven global estimates in 2013
+    were produced. Inter-comparison with the satellite products showed that the VIIRS
+    estimates had high similarity with the LAI and FAPAR products of Global Land Surface.
+    However, for VINP4MA3 albedo and VINP9A1 surface reflectance, the retrieved estimates
+    matched well. It also showed that the estimation of all variables was more accurate
+    and efficient than estimating individual variable quantitatively.
+
+
+    # 1. Introduction
+
+
+    Remote sensing provides real-time and systematic observations of the Earth''s
+    surface and has remarkably contributed to land surface process and environmental
+    monitoring at a large scale (Wolanin et al., 2019). With the flourishing hyperspectral
+    missions and high-resolution imaging spectrometers,
+
+
+    unparalleled remote sensing provides data streams which are in a new era of optical
+    remote sensing (Evitez et al., 2020). However, retrieving terrestrial and atmospheric
+    variables that are due to Earth''s atmospheric composition from such a large data
+    stream requires accurate, robust, and efficient methods (Ali et al., 2021). Methods
+    based on physical radiative transfer model (RTM) simulations are the first consideration
+    out to their rationality and generic
+
+
+    * Corresponding authors
+
+    E-mail: mahans@whu.edu.cn (H. Ma), liang@umd.edu (S. Liang).
+
+
+    https://doi.org/10.1016/j.rse.2022.113132
+
+    Received 28 June 2021; Received in form 10 June 2022; Accepted 11 June 2022
+
+    Available online 28 June 2022
+
+    © 2022 Elsevier Inc. All rights reserved.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '(Auberger and Richter, 2012; Jacquemaud et al., 2009; Liang, 2004). Physical
+    RTMs capture the transmission process, characteristics, and radiance of energy
+    in the medium. RTMs—for example, the soil RTM, and atmospheric SMP—are captured,
+    and directly/indirectly aiding in remote sensing research.
+
+
+    climate reanalysis and satellite data products (Jung et al., 2009; Jung et al.,
+    2011a), are helpful in application. Some remote sensing variable products have
+    also been generated using these methods. Verger et al. (2023) integrated highly
+    complex models like CO2 lines and leaf area index (LAI) from atmospheric effect
+    (FPAR) modeling using neural networks to generate Geoland2 (GEOV2) from SPOT-VATION
+    to canopy directly generated reflectance values. Ma et al. (2022) produced the
+    Global Land Surface Atlas (version 6) with a 6D deep learning (LSTM) LSTM model,
+    the true LAI is defined as the total area of green leaves under the green surface
+    area.
+
+
+    There are three main strategies for improving the efficiency of RTM computation.
+    The first practical method is to use LUTs to map input variables into output equations,
+    and RTMs generating spectrum output for variable value in meantime. However, the
+    RTM inversion is reduced to the call to the simulation which is calculated by
+    interpolation. Although LUTs can capture important properties, each LUT maps to
+    a large number of RTMs after final sampling of the space. From our previous study,
+    we used a method to estimate the spectral albedo over 400–2300 nm using an atmospheric
+    RTM in Libradat (Ma et al., 2020), and thus the simulated atmospheric variables
+    were stored in 3 LUTs. Although retrieving parameters from the LUT was highly
+    efficient, it can significantly improve the accuracy of inversion.
+
+
+    The second strategy is to improve the RTM computation by using machine learning.
+    RTMs can be emulated (Veris et al., 2021; Verret et al., 2017). Emulating the
+    function of RTMs through statistical learning methods, can enable many new applications
+    for computational efficiency and accuracy. These methods include machine learning
+    (ML) models that can simulate the atmospheric variables of the RTM computation,
+    but the limitation is they use only the output of the RTM.
+
+
+    Recently
+
+
+    The third strategy is to integrate the RTM with multiple satellite observation
+    and model output products. This method is used to reduce the computational burden
+    of RTM inversion.
+
+
+    The Visible and Infrared Imaging Radiometer (VIIRS) on the NASA Solar Polar-Orbiting
+    Partnership (SPOAA) satellite will be used for observation with several details.
+    However, few high-level data products have been produced and officially available
+    by NOAA (https://viirs.noaa.gov). Our goal is for developing inversion products
+    for high-resolution land data.
+
+
+    There is a more direct approach, that establishes ML methods between satellite
+    observation and model output products. By processing of simulating variables with
+    RTMs in the inverse framework, we can evaluate what this method can do. It is
+    to provide a relative of reflectance data for training data (Beer et al., 2010).
+    Fortunately, training data for this method can be obtained from remote sensing
+    observations across the globe using RTMs, regardless of whether field measurements
+    are available. The advantage of this method is that it leads to the coupled RTMs
+    method from the theoretical level to the application level, as it has the high
+    computational efficiency. This method uses input variables from'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'G. Zhong et al.
+
+
+    Remote Sensing of Environment 279 (2022) 131121
+
+
+    model, using many unrealistic uncertainties in the training datasets. Figure 1
+    shows the map of the solar zenith angle, zenith angle, and relative azimuth angle
+    in the VIIRS/NPP Moderate Resolution 6-Min Li Sat DGR and 750 (NPP_VMAE_LI) and
+    our training datasets. These training samples were selected by picking pixels
+    that had the same time difference between the GLASS LAI (V5.0), MODIS LAI, and
+    PROV-V1 LAI in each month (Li and Liang, 2022).
+
+
+    provides 22 spectral bands with wavelengths from 0.4 to 12.5 um, including five
+    high-resolution channels (I-bands, 350 m), 16-resolution channels (M-bands, 750
+    m), and day/night band (DNB, 750 m). The VIIRS bands used in this study are shown
+    in Table 1. In addition, the VIIRS cloud map (Kopp et al., 2017) and MODIS cloud
+    map were used to account for the sky conditions. According to the values provided
+    by the “Internal_Cloud_ map”, pixels with bits between 2-3 were determined as
+    clear. The VIIRS LiDAR Data Record (SDR) m cloud product are available at https://lweb.modis.gov/modis_maps.gov/
+
+
+    The representativeness of our samples can be found in Section 2.2 and Section
+    4.1. Results in Fig. 1a represent the distribution of all available observations
+    in the NPP_VMAE_LI product and our distribution of training samples in Section
+    3. The relative azimuth angle (blank space) is caused by the geometry of the satellite
+    orbit data (Barclay et al., 1994), and the formation simulation will take these
+    angles into account, using the estimated data to train the ML models we can avoid
+    these issues.
+
+
+    2.2. Analysis and satellite products
+
+
+    To evaluate representativeness training data, datasets for generating GLASS LAI
+    (V6.1) were used. In this study, the samples were selected by picking pixels that
+    had the same series of observations in GLASS V6 LAI, MODIS LAI (V5.0), and PROV-V1
+    LAI. The MODIS LAI defined in Section 3 (Li and Liang, 2022) is defined as true
+    LAI as GLASS V6 LAI is produced from MODIS surface reflectance data through a
+    bidirectional long radiative transfer model (Li et al., 2023), which is not true
+    LAI. PROV-V1 LAI is also defined as true LAI. Considering the representativeness
+    of the spatial distribution and the computational burden of the training and validation
+    datasets, Fig. 2 shows the map of all available observations.
+
+
+    The paper is organized as follows: In Section 2, we introduce the VIIRS satellite,
+    the field site data that were used to compare and retrieve the results. In Section
+    3, we first describe the RTMS used for processing the data. In Section 4, we report
+    the results of the estimated data and satellite products. In Analysis, we evaluate
+    the performance of three ML methods and find the best model. Then, we compare
+    multiple variables with the best model. In Section 5, we discuss the representativeness
+    of training samples, the potential errors caused by the cloud, and the complexity
+    of multiple variables. In Section 6, we provide our findings and propose future
+    work.
+
+
+    # 2. Datasets
+
+
+    # 2.1. VIIRS data
+
+
+    VIIRS is a scanning monitor that can collect images of land, the atmosphere, ice,
+    and the ocean in the visible and infrared bands (Co et al., 2013a; Co et al.,
+    2013b). The VIIRS sensor
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_2_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# Table 1\nInformation of used VIIRS bands.\n\n| Band number | M1 | M2 | M3\
+    \ | M4 | M5 | M7 | M8 | M10 | M11 |\n|---|---|---|---|---|---|---|---|---|-|\n\
+    | Central wavelength (nm) | 412 | 445 | 488 | 555 | 672 | 865 | 1240 | 1610 |\
+    \ 2250 |\n| Spatial resolution (m) | 750 | 750 | 750 | 750 | 750 | 750 | 750 |\
+    \ 750 | |\n\n![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_3_0.png)\n\n+   - Evergreen\
+    \ Needleleaf Forests\n- Evergreen Broadleaf Forests\n- Deciduous Needleleaf Forests\n\
+    - Deciduous Broadleaf Forests\n- Mixed Forests\n- Closed Shrublands\n- Open Shrublands\n\
+    - Woody Savannas\n- Grasslands\n- Croplands\n- Urban and Built-up Lands\n- Permanent\
+    \ Snow and Ice\n- Barren\n\nFig. 2. Location of mapping sites.\n\n(Wang et al.,\
+    \ 2013), and the VIIRS surface reflectance product VNP9A1 (Roger et al., 2016)\
+    \ were used for comparison. The MODIS album provides black-sky albedo and white-sky\
+    \ albedo according to the solar zenith angle and the proportion of sky covered\
+    \ (Privette et al., 2004):\n\n$a(\\theta) = (1 - \\cos(\\theta))a_b(\\theta) +\
+    \ \\cos(\\theta)a_w(\\theta)$\n\nwhere $a_b$ is the black-sky albedo; $a_w$ is\
+    \ the white-sky albedo; and $a(\\theta)$ is the fraction of diffuse albedo when\
+    \ the solar zenith angle is $\theta$, which is a functional of aerosol density,\
+    \ and we calculate it using a determined lookup-table based on the 65 atmospheric\
+    \ radiative transfer code (Zhao et al., 2016). The satellite products used in\
+    \ this study are listed in Table 2.\n\n# Table 2\nCharacteristics of the satellite\
+    \ products used.\n\n| Product | Spatial resolution | Temporal resolution | Time\
+    \ span | Main algorithm |\n|---|---|---|---|-|\n| GLAS (V6.1) | 250 m | 8-day\
+    \ | 2000-2020 | Deep-learning |\n| GLAS (V6) | 500 m | 8-day | 2000-2020 | Deep-learning\
+    \ |\n| MODIS (MAI/PAR) | 500 m | 1-day | 2000-2018 | regression |\n| MODIS (M015A14,\
+    \ V006) | 500 m | daily | - | BRDF transfer |\n| MODIS (M023A02, V006) | 500 m\
+    \ | daily | - | semianispherical BRDF algorithm |\n| MODIS BRDF/Albedo Quality\
+    \ (M024A02) | 500 m | daily | - | semianispherical BRDF algorithm |\n| VIIRS albedo\
+    \ (V006, V001) | 1 km | daily | 2012-now | direct direction correction |\n| VIIRS\
+    \ reflectance (VNP90A1, V001) | 1 km | daily | 2012-now | rigorous RT-based LUT\
+    \ algorithm\n\n# 2.3. Field data\n\nThe validation was first performed at 54 field\
+    \ sites, which were selected from the Integrated Ocean Observation System (ICOS),\
+    \ Image, Surface Radiation (SURAD), AMFlux, and OceanSat. Table 3 lists the locations\
+    \ of the sites where the observation is the measurement network, which comprises\
+    \ 140 standardized stations across ocean (Heiskanen et al., 2021). The nine ICOS\
+    \ sites used in this study period provide ISR and albedo at an interval of 30\
+    \ min. The ICOS data are available at http://www.icos-data.org/. For the VIIRS\
+    \ sensor, the Imagine datasets have provided field measurements of LA and FAPAR\
+    \ during a single date or multi-temporal field campaigns over 20 sites around\
+    \ the world (Xu et al., 2018). Of these, we chose 10 sites with"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'G. Zhong et al.
+
+
+    Remote Sensing of Environment 279 (2022) 113132
+
+
+    than three measurements in a single year to validate the retrieved LA and FAPAR.
+    The IMAges are all from http://www.fp-images.gov/ to support global climate and
+    change research, SURFRAD has been measurements from 1995 through the period of
+    the NOAA Office of Global Programs (Augustine et al., 2000). We collected the
+    measurements of the surface albedo and PAR at an interval of 1 month for the validation
+    purpose at various SURRAD sites. The SURRAD data are available at http://www.noaa.gov/mod/grad/surfad.
+    FLUXNET is one of the largest ecosystems and measurement networks including Berkeley
+    National Laboratory (USA), and AmeriFlux and OzFlux the regional networks (Baldocchi
+    et al., 2001). Since 1991, the two networks have provided half-hourly satellite
+    albedo and ISBR measurements. The satellite data are available at https://www.offlux.org.au/.
+    The estimated variables at these sites were validated by field measurements, and
+    the remaining variables that were not measured, such as albedo, TOA albedo, and
+    surface reflectance, were compared with other sites. Sites used for validation
+    and training are completely independent.
+
+
+    elevations below 3 km into 10 groups with elevations of 0.3 km, and finally the
+    elevations that were lower than 3 km into one group. For the survey, we divided
+    slopes below 40° into eight groups with the intervals of 5°, and slopes greater
+    than 40° into one group. The aspects were divided into nine groups. S1 and S2
+    show the colocation of selected sites
+
+
+    # 3. Methodology
+
+
+    The overall process of creating and applying ML models for multiple variables
+    from VIIRS TOA observations is schematically shown in Fig. 3. An optimization
+    approach was used to generate the training dataset from VIIRS TOA reflectance
+    data. Then, multiple models were developed using the training data using the training
+    dataset and to choose the best ML model. The ISR, PAR, and TOA albedo were also
+    developed using the all-inputs, while the land surface variables, including LAI,
+    FAPAR, shortwave albedo, and reflectance were developed using the VIIRS cloud
+    mask product. Afterward, the best RF model was used to estimate time-series variables
+    at 50 sites where measurements were field for validation, over a range of 375
+    km by 375 km. The comparison with retrieved results. Finally, the RF model was
+    used to produce 8-day global products in 2013.
+
+
+    # 2.4. Global products used for evaluation accuracy
+
+
+    To better evaluate the performance of our products under different land cover
+    types and terrains, we randomly selected 30 pixels for each type of land cover
+    and elevation classes, and for slope and aspect measurements were selected in
+    the Tibetan Plateau area. Variable values of our products were compared with the
+    existing GLASS and VIIRS products. Note that although the selection was random,
+    we ensured that the pixels of each type or terrain were evenly distributed across
+    the world. For the distinction of elevation, we divided the
+
+
+    # 3.1. Optimization approach for generating the training dataset
+
+
+    Our research introduced an optimization approach for estimating multiple variables
+    from satellite observations based on the coupled RTM (Ma et al., 2020; Zhang et
+    al., 2021; Jia et al., 2021).
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_4_0.png)
+
+
+    Fig. 3. Flowchart of the constant estimation of multiple variables using the ML
+    method. Training datasets of the ML model were created from the multi-variable
+    estimation; afterward, the ML model was applied to estimate multiple variables
+    from satellite observations.
+
+
+    5'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "# G. Zheng et al.\n\n# Remote Sensing of Environment 29 (2022) 113321\n\noptimization\
+    \ method is improved through the use of land surface keys and calculation of land\
+    \ parameters.\n\n# 3.1.1. Coupled RT model\n\nA coupled RT that integrates the\
+    \ soil, leaf, canopy, snow, and atmospheric models is used to simulate VIRS TOA\
+    \ observations. The coupling modules and equations are given in Appendix. The\
+    \ coupled RT can simulate the TOA reflectance for all VIRS bands using the given\
+    \ parameters in Table 2. Based on our previous work, the parameters of the leaf\
+    \ (such as Chlorophyll A (Cab)) are the most influential parameters, and they\
+    \ were adjusted by the leaf reflectance range (Zhang et al., 2021; Ma et al.,\
+    \ 2020). Details about how the coupled RT can be found in Ma et al. (2020).\n\n\
+    VIRS TOA cases were set to 0.06 × $v^{TOA}$–0.01. The 8-day window will be increased\
+    \ if there is only one observation found. The observations (LAI, Cab, Cm, Sm)\
+    \ were retrieved from day-only observations. For cloudy days, only the solar angle\
+    \ and date are available. In this case, the coupled RT model can simulate reflectance\
+    \ from 0.28 to 1.1 m in this direction. In particular, the optimized values derived\
+    \ from the nearest clear observation were used. The atmospheric variables, including\
+    \ AOD, COR, and COT at each observation were also interpolated (Ma et al., 2020).\n\
+    \n# 3.1.2. Direct inversion of land surface keys\n\nA core approach in the optimization\
+    \ is the Shuffled Complex Evolution (SCE) optimization method. SCE is an efficient\
+    \ global optimization method (Duan et al., 1999; Duan et al., 1992) that uses\
+    \ a merit function to adjust the variables iteratively to minimize the merit function:\n\
+    \n```\n$f(v) = (v^{TOA} - v_i(v))^T \\sigma_i^{-1} (v^{TOA} - v_i(v)) \\ \\quad\
+    \ (2)$\n```\n\nwhere $v$ is the variable to be estimated, $v_i$ is the value of,\
+    \ $v^{TOA}$ is the TOA reflectance of VIRS, $\\sigma_i$ is the covariance matrix\
+    \ representing the uncertainty of the observed value, and $v_0$ is the covariance\
+    \ matrix representing the prior.\n\nWe assumed the parameters are stable during\
+    \ an 8-day period. For each clear observation in the 8-day window, the parameters\
+    \ (LAI, Cab, Cm, Sm) were retrieved by the following method: the state, date,\
+    \ solar angle ($\theta_s$), relative angle ($\theta_r$), prior values (GLASS LAI),\
+    \ and prior values (MERRA-2). Using this,\n\n# Table 3\nInput parameters for the\
+    \ coupled model setup.\n\n| Model parameters | Symbol | Range | Units |\n| ---\
+    \ | --- | --- | --- |\n| Optical depth at aerosol | AOD | 0.01–0.05 | |\n| Leaf\
+    \ area index | LAI | 2.5–7 | $m/m^2$ |\n| Chlorophyll A | Cab | 0–30 | $\\mu g/cm^2$\
+    \ |\n| Leaf dry content | Cm | 0.01 | $kg/m^2$ |\n| Leaf water content | Cw |\
+    \ 0.0002–0.004 | |\n| Soil reflectance | Sm | 0.1–0.5 | |\n| Soilparameter1 |\
+    \ s1 | 0.05–0.4 | |\n| Soilparameter2 | s2 | | |\n| Soilparameter3 | s3 | | |\n\
+    | Soilparameter4 | s4 | | |\n| Soilparameter5 | s5 | | |\n| Snow cover fraction\
+    \ | sc | 0–1 | |\n| Solar solar angle | $\theta_s$ | 0–90 | degree |\n| View zenith\
+    \ angle | $\theta_v$ | 0–90 | degree |\n| Relative angle | $\theta_r$ | 0–180\
+    \ | degree |\n\n# 3.1.4. Generation of training data\n\nWe generated the dataset\
+    \ at 5300 sites, in 2023 to train the training data. We used the VIRS TOA reflectance,\
+    \ the solar zone angle, the zenith angle, the relative angle, elevation, GLASS\
+    \ LAI, and MERRA output. The actual values and outputs from the optimization algorithm\
+    \ were used to generate the training and validation data of the methods, The method\
+    \ optimization and the output of the methods were used to validate the results.\
+    \ The outputs were filtered to remove the masked pixels. Red, the NIR and blue\
+    \ bands were used to identify the masked pixels (Zhang et al., 2021).\n\nThe canopy\
+    \ effect is not included in the 4SAIT model, so the output of the 4SAIT model\
+    \ was used with the clustering index product described in Section 2. According\
+    \ to our previous studies (Ma et al., 2020), the uncertainties of AOD and LAI\
+    \ were set to 0.2 + 0.05 and 0.5 with\n\nThe VIRS has similar spectral properties\
+    \ to the pixels of cloud detection method for MERSI. The pixels with a pixel value\
+    \ of 0.15 was not a pixel with a pixel value higher than 0.15. A pixel with a\
+    \ value higher than 0.15 is cloudy.\n\n> $R_t - R_s$\n(3)\n\nwhere $R_t$ is the\
+    \ value of $M_t$, and $R_s$ is the value of $M_{10}$. A pixel with the pixel value\
+    \ lower than 0.4 is clear, and a pixel with a pixel value higher than 0.15 is\
+    \ cloudy. In addition, an index $x = C/M57$ is used to determine if a pixel is\
+    \ cloudy. A pixel is marked as clear by VIRS cloud mask product and by the threshold\
+    \ between clouds and a pixel. A pixel with $x$ value greater than 0.05 is cloudy.\n\
+    \nLAPAR, land surface and reflectance should be modeled separately from ISR, PAR,\
+    \ and TOA for all bands which could only be estimated under the clear-condition.\
+    \ For ISR, the bands were randomly divided into two parts; 4500 sites (851 sites,\
+    \ 1,667,588 datasets) were used to train the ML model, and 795 sites (175 sites,\
+    \ 294,334 datasets) were used to validate the model accuracy. For LAI, PAR, land\
+    \ surface and reflectance, and the data pairs under the clear-sky\n\n6"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# 3.2. approach for training the multi-variable model
+
+
+    were selected using the VIIRS cloud mask. All the sites were randomly divided
+    into two sets: 4500 sites (85%, 727,600 data pairs) were used to train the ML
+    model; 795 sites (15%, 126,744 data pairs) were used to validate the accuracy.
+    All the training and validation data were completely independent.
+
+
+    ML models model the relationship between the input and output by fitting a flexible
+    model within the data (Wolanin et al., 2019). Unlike parametric models that define
+    an input-output mapping, ML models learn the mapping through automatic feature
+    extraction on complex data and express the features as “vectors” in a process
+    generally called “embedding”. Then the network performs operations on these vectors
+    and compresses them to produce outputs. We evaluated two different multi-output
+    ML models using the training data of 85% retrieved from the optimization approach
+    and RTM, including RTP.
+
+
+    In the BP network, input variables are followed along the network structure, where
+    the error between the value of each layer is reversed along the network structure.
+    This backpropagation is repeated until the error value is stable or until the
+    learning rate of learning reaches a preset threshold (Bishop, 1995). Then, the
+    BP network model can be used to predict the output. The performance of the BP
+    network is much better than that of one hidden layer (Ma et al., 2021). To ensure
+    the accuracy and speed, we chose the two-layer architecture. Determination of
+    the number of neurons in each layer is important for the overall performance of
+    the network. At present, many methods are applied to determine the number of neurons
+    in each layer and one of them is as follows (Tian et al., 2020b):
+
+
+    ```
+
+    n = m + 1
+
+    ```
+
+
+    where m is the number of neurons in the input layer. In this study, we use VIIRS
+    reflectance, zza, raa, elevation, GLI, LAIR and MERRA2 as output data. For the
+    training, we used the model: A, BP, RTM, and surface albedo. Since the TOA albedo
+    has 13 layers, the number of neurons in each layer is 13, and we set 1, 3 and
+    10 for different tests. Therefore, the number of neurons in the hidden layer is
+    a constant, and the value ranges from 1 to 10. By setting the number of hidden
+    layer nodes when beginning the training process, the number of neurons in the
+    input layer was 11 for model A, and 10 for model B based on the RTM.
+
+
+    The random forest algorithm is used to estimate the variables of interest (Breiman,
+    2001) and generate bootstrap samples for the training datasets. Each regression
+    tree is built for each bootstrap sample. The average of each individual regression
+    prediction is taken as the result. The RF improves the prediction accuracy without
+    a significant increase in the number of calculations, it is insensitive to collinearity
+    and missing and unbalanced data (Iverson et al., 2008). So, RF model can capture
+    complex interactions between input variables and has been successfully applied
+    in remote sensing variable (Filgueiras et al., 2022).
+
+
+    2020 Sprint; Zhou et al., 2023). Individual-output RF is designed for predicting
+    one numeric variable, while some regression problems require the prediction of
+    two or more variables. In this study, the joint-output RF was used to estimate
+    variables simultaneously using seven of RTM results. In the joint-output RF, variables
+    are generated together in each bootstrap sample upon each ever (Xu et al., 2023).
+    All variables are included in this study, which meets the requirements of the
+    joint-output RF. Compared with the BP network, the joint-output RF has more hyperparameters,
+    such as the number of trees (tree), the maximum number of features used in a single
+    decision tree (tree), and the maximum depth of the regression tree model. In this
+    study, we set 100 trees and 30 to to the depth of the regression tree for the
+    RF model.
+
+
+    # 3.3. Data processing and regression model
+
+
+    This section details how to estimate region and global surface atmospheric variables
+    from VIIRS reflectance data using the best models. Land surface variables can
+    only be retrieved from clear-sky observation data. Although VIIRS data is affected
+    by cloud cover, their shadows reduce the retrieval accuracy in multiple variable
+    estimation. To estimate these, we used a spatial-temporal cloud removal method
+    (PSTRC) to solve data registration problem. The cloud fusion method was applied.
+    First, the clouds and shadows were detected by the data mask. Then we used the
+    VIIRS cloud mask to construct a multi-patch method to detect clouds. Secondly,
+    random sampling and temporal cross-validation were used to evaluate model performance.
+    Furthermore, the data was randomly divided into 8 groups, 12. In each iteration,
+    7 groups were used for training data for the model, and the remaining one of groups
+    were used for independent validation. For the temporal-cross-validation, we divided
+    the data into 2 groups. In each iteration, one group was used for training and
+    the other was used for validation. The training and validation process were repeated
+    24 times for the data of each spatial and temporal group were validated.
+
+
+    The time cost for algorithm to train and estimate the multiple variables over
+    the 395 sites were also recorded. The efficiency of three ML methods used and
+    is discussed in Section 4.1.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# G. Zhang et al.
+
+
+    # Remote Sensing of Environment (2022) 112132
+
+
+    G5/STCR); Here, the PSTCR method was applied to reconstruct the cloudy pixels,
+    by an 8-day window, with the clearest pixels used as reference image, clear pixels
+    from other images were used for reconstructing pixels due to clouds. For snow-free
+    periods, the nearest images will be used for reconstruction, while only images
+    with similar snow will be marked as a poor quality. PSTCR pixels that cannot be
+    reconstructed were produced and then LAI, PAR, whatever visible band, and land
+    surface were estimated from the 8-day TOFA reference data using the RF model.
+    The all-sky TOFA reference data were used to estimate ISR, PAR, and TOFA although
+    using the RF model.
+
+
+    Although deep learning improves the accuracy of cloudy pixels, computational efficiency
+    is reduced, which makes it difficult to apply the PSTCR method to global product
+    generation (Zhang et al., 2020). We used the all-sky TOFA reference data to estimate
+    the land surface at a global scale. Then, the VIIRS cloud model was used to determine
+    the retrievals. The LAI and PAR products were produced on an 8-day period, with
+    the selected value in this choice used for the land surface. The visible albedo
+    was also produced on an 8-day period. Unlike the MODIS models, which are based
+    on inversions of the BRDF model parameters, the clear values in the intermediate
+    image were used to replace the missing values in the intermediate image generated
+    by using the same method as for albedo. The instantaneous ISR, PAR and TOA although
+    were not processed but were used directly for the global VIIRS atmospheric products.
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_7_0.png)
+
+
+    Fig. 4. Histogram of RMSE between the training data and satellite products over
+    500 pixels. The RMSE for each pixel is calculated using the time series data.
+    The X axis represents variable, the Y axis represents RMSE, and the Z axis represents
+    pixel number.
+
+
+    result, the values of about 20% pixels are higher than 0.02. No ISR, PAR, and
+    TOA although instances are produced for comparison, the accuracy of these three
+    variables was in Section 4.3 fitting measures.
+
+
+    # ## 4. Results
+
+
+    # ### 4.1. Accuracy of training data
+
+
+    Extensive validations using field measurements and satellite products have been
+    performed, and good accuracy of retrievals by the optimization approach and RTM
+    in previous researches (Ma et al., 2017a; Ma et al., 2017b; Shi et al., 2020;
+    Shi et al., 2021) was shown. Using the training data, this section further analyzes
+    the accuracy of them. The GLAS LAI and PAR products, produced from VIIRS were
+    used for comparison.
+
+
+    Fig. 5 shows the RMSE between training data and satellite pixels over 500 training
+    pixels (In Fig.). For each pixel, the RMSE is calculated using the time series
+    data and satellite data. For LAI, we divided the RMSE values into 1 to 10 groups
+    with intervals of 0.1, and finally the RMSE members were greater than 1 in 80%
+    of pixels. Using the optimization approach, we divided the RMSE values between
+    0.1 to 10 groups with intervals of 0.01, and finally the RMSE greater than 0.1
+    in 80% of pixels. LAI was first using the optimization approach, the accuracy
+    is accurate in the direct estimation of land surface variables.
+
+
+    # ### 4.2. Performance of the two multi-output ML
+
+
+    This section details the quantitative evaluation of the two multi-output methods
+    for variable-modeling. The training and validation data were used for evaluation
+    of the correlation (coefficient), root mean square error (RMSE), and to provide
+    direct evidence and find the best model.
+
+
+    Fig. 6 shows the retrieval (85% of size) and validation (15%) of all the results
+    using the two multi-output methods. The evaluation indices for training and validation
+    data were used to reflect the performance of each method. From (a) and (b) is
+    that the BPNM model estimated more LAI data than the joint-output model, which
+    is used in (c) and (d). In this case, the BPNM model produced more LAI values
+    although while-related LAI values for ISR, PAR and TOA are closely related but
+    the scatter of BPNM values and CAP values produced values with some outliers (Fig.
+    5b); the RF model values are closer to 1.0.
+
+
+    In this case, the BPNM and RF model values were closer to 1, in this way to determine
+    the condition; however, some clouds and shadows were wrongly injected as clear
+    pixels by error. After setting to remove these masked pixels, and joint-output
+    RF were produced to be better (Fig. 5c; Fig. 6c). In this case, the BPNM and RF
+    model achieved high accuracy with R2 higher than 0.99 (Fig. 5c; Fig. 6d).
+
+
+    The TOA although values were estimated by the joint-output model (Fig. 6e; Fig.
+    6f). Noting that the training and validation data were used compared with the
+    BPNM model (Fig. 5e and Fig. 6g). Noting that the instantaneous ISR, PAR, and
+    TOA although were affected by the cloud, training and validation data were included
+    all clear and cloudy pixels. The method was used to retrieve the bands without
+    removing the clouds and shadows in the TOA reference image. To save space, we
+    use the surface reflectance data of all bands in bande, and the quantitative results
+    that show of 2
+
+
+    8'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# G. Zhang et al.
+
+
+    # Remote Sensing of Environment 179 (2022) 111332
+
+
+    # Training
+
+
+    # Training
+
+
+    # Training
+
+
+    # Training
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_0.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_1.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_2.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_3.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_4.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_5.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_6.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_7.png)
+
+
+    # Validation
+
+
+    # Validation
+
+
+    # Validation
+
+
+    # Validation
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_8.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_9.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_10.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_11.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_12.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_13.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_14.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_8_15.png)
+
+
+    Fig. 5. Accuracy evaluation of BPNM methods for multi-variable modeling: (a)-(o)
+    Scatter density plots between the BPNM multi-variable values and the coupled RMSE
+    multi-variable values for 15% sites. SW stands represent accuracy, and VIS stands
+    represent reflectance land surface quality.
+
+
+    0.6h).wise, the output-joint model also performed better when performing surface
+    reflection. The accuracy of the coupled RMSE, curvature, and VIS (Fig. 3 and 4)
+    will not be better. It is clear that for the accuracy model, the output-joint
+    model is better.
+
+
+    Although the output-joint model was effective in retrieving multiple land and
+    atmospheric variables from VIIRS reflectance data, the performance of RF models
+    is generally applied to predict individual output, the precision of RF models
+    with joint and individual outputs to be compared. The training and validation
+    accuracy of the coupled RMSE is shown in Table 4. The accuracy of all variables
+    retrieved using the output-joint model was significantly higher than all of the
+    variables retrieved using the individual-output model. However, the accuracy of
+    LAI, PAF, and ISR retrieved from
+
+
+    the output-joint model was significantly higher than that of, LAI, PAF, and ISR
+    had limited performance in estimating other variables. The outputs of the output-joint
+    RF were dependent on the input and each, and all the results in this study show
+    that except the output-joint RF most models were consistent
+
+
+    The values of cross-validation results range from 0.952 to 0.997. The RMSE values
+    of cross-validation results range from 0.118 to 0.185 (LAI), to 0.040 to 0.049
+    (PAF), and 0.007 to 0.014 (ISR, 0.007 to 0.023 (0.015 to 0.0250 m²), and 0.010
+    to 0.018 (VIS)), respectively. The cross-validation results of the output-joint
+    model were close to the independence validation accuracy in Fig. 6. The excellent
+    results indicate that our output-joint RF model had good spatial and temporal
+
+
+    9'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Remote Sensing of Environment 279 (2022) 113132
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_9_0.png)
+
+
+    Fig. 6. Accuracy evaluation of RF methods for multi-modeling. (a)-(h) Scatter
+    density plots for the multi-variable values versus the coupled RTPMs (i)-(o) Scatter
+    density plots for the multi-variable values versus the coupled RTPMs for 15 sites.
+
+
+    extensibility.
+
+    The efficiency of the model is critical when it is applied to large-scale inversion
+    in remote sensing. To better reflect the advantage of the TL method, the running
+    time of the two models and the RF methods is shown in Table S1. The three methods
+    used for such samples (14000 data points) are used for this test. We find that
+    significantly faster joint-output RF takes more time than joint-output RF. However,
+    applying BPNM for multi-variable could still estimate about 40,000 groups of variables
+    in 0.4 s, which is ten times faster than TL. In addition, the TL method took more
+    than 1 hour to extend the test data, and the joint-output RF method achieved an
+    acceleration rate of 1100.
+
+
+    SW: reflectance-output RF, VIS: Visible Albedo, VIS Albedo: Land-surface reflectance
+
+
+    Cross validation for group n; Tn: temporal cross validation for group n.
+
+    as The trained data from RF inversion may have some errors,
+
+
+    # 4.3. Retrieval of variables using field measurements and satellite data
+
+
+    we also analyzed the propagations from the trained data-derived variables at 4
+    sites, as shown in Table S1. The GLAI and PAPAR values, the VIS land albedo and
+    reflectance properties, were compared with the values derived from the RF model,
+    and the RMSE distribution is shown in Fig. 5. The observed relationships are linear
+    and clear, which shows the high accuracy of retrieval of cum from RF inversion
+    and validation phases. Also, all uncertainties in the RF-derived variables were
+    inherited from the training data, and the errors were not enhanced or weakened
+    in the process of propagation from the RTM-inversion to the RF-derived results.
+
+
+    The joint-output RF model was applied to estimate all the variables at field sites
+    described in Section 2.3. The retrieved GLAI, PAPAR, albedo, ISAR, and PAR were
+    validated with the field measurements directly. For those variables that did not
+    have
+
+
+    10'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Zhang et al.
+
+
+    Training and validation accuracy of the variables retrieved via the joint-output
+    RF model and those retrieved using the individual-output RF model.
+
+
+    # Table 4
+
+
+    | | Training | | | Validation | | | Validation | | |
+
+    |---|---|---|---|---|---|---|---|---||
+
+    | | joint | individual | joint | individual | joint | individual | joint | individual
+    |
+
+    | LAI | 0.995 | 0.983 | 0.985 | 0.981 | 0.100 | 0.164 | 0.185 | 0.208 |
+
+    | FAPAR | 0.992 | 0.984 | 0.977 | 0.974 | 0.033 | 0.034 | 0.039 | 0.043 |
+
+    | SW albedo | 0.995 | 0.985 | 0.986 | 0.975 | 0.008 | 0.012 | 0.017 | 0.017 |
+
+    | VIS albedo | 0.997 | 0.997 | 0.996 | 0.992 | 0.001 | 0.003 | 0.006 | 0.010 |
+
+    | RF1 | 0.998 | 0.996 | 0.990 | 0.991 | 0.004 | 0.005 | 0.008 | 0.009 |
+
+    | RF2 | 0.995 | 0.995 | 0.988 | 0.994 | 0.004 | 0.006 | 0.005 | 0.009 |
+
+    | Ref3 | 0.998 | 0.998 | 0.988 | 0.989 | 0.004 | 0.006 | 0.009 | 0.009 |
+
+    | Ref4 | 0.995 | 0.997 | 0.987 | 0.971 | 0.006 | 0.010 | 0.017 | 0.015 |
+
+    | Ref5 | 0.997 | 0.992 | 0.979 | 0.931 | 0.006 | 0.019 | 0.015 | 0.015 |
+
+    | Ref6 | 0.986 | 0.961 | 0.936 | 0.931 | 0.013 | 0.023 | 0.022 | 0.027 |
+
+    | Ref7 | 0.986 | 0.960 | 0.956 | 0.938 | 0.013 | 0.021 | 0.021 | 0.021 |
+
+    | Ref10 | 0.992 | 0.975 | 0.958 | 0.941 | 0.009 | 0.016 | 0.025 | 0.025 |
+
+    | Ref11 | 0.992 | 0.977 | 0.958 | 0.958 | 0.006 | 0.011 | 0.016 | 0.016 |
+
+    | ISR | 0.998 | 0.997 | 0.996 | 0.994 | 11.43 | 21.165 | 18.126 | 27.900 |
+
+    | PAR | 0.999 | 0.997 | 0.997 | 0.995 | 4.321 | 9.957 | 5.820 | 10.155 |
+
+    | TOA albedo | 0.998 | 0.995 | 0.994 | 0.910 | 0.010 | 0.017 | 0.016 | 0.022 |
+
+
+    SW albedo: Shortwave albedo, VIS albedo: Visible albedo Ref: Land reflectance.
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_10_0.png)
+
+
+    Fig. 7. Spatial and temporal cross validation accuracy of the joint-output RF
+    model, (a) R²; (b) RMSE.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'G. Zhang et al.
+
+
+    Remote Sensing of Environment (2022) 113132
+
+
+    # Table 5\Time consumption (seconds) of the two methods to train and estimate
+    multiple variables; the time consumption of the coupled RTM methods is also given.
+
+
+    | Method | Training | Estimation | Training | Estimation | Coupled |
+
+    |---|---|---|---|---|-|
+
+    | Time consumption | 10.7412 | 0.1649 | 60.9318 | 0.3915 | 4300.4799 |
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_11_0.png)
+
+
+    Fig. 6. Error propagation from the RTM-inversion to the RF-derived values. (a)
+    RMSE distribution of two parts of variables compared to remote sensing products
+    and field measurements, the retrieval RTM, and the coupled result (b) scatter
+    plot between the two parts of RTM methods.
+
+
+    data, we compared with other methods.
+
+    Fig 9 shows the scatterplots and analysis of the retrieved values with the continuous
+    field measurements and other retrieval methods. The retrieval RTM shows R² of
+    0.770, 0.717 and 1.095 and intersects with 0.333, 0.766 and 0.048, respectively,
+    indicating that the retrieval and GLASS LAS values are significantly lower than
+    the field LAS values for high LAS values. The retrieval and GLASS LAS values show
+    (b) of 0.795, 0.313, respectively that the RTM has LAS R² (1.238), which demonstrates
+    better agreement with the field LAS values than LAS values. GLASS LAS also shows
+    the linear equation between field and retrieved FAS values has a slope of 0.072
+    and a positive intercept of 0.132, indicating that the retrieved FAS values are
+    significantly lower than the field FAS values. GLASS LAS and FAS also achieve
+    similar correlation, with the RMSE values of 0.099 and 0.101, respectively. The
+    target requirement of Global Observing System is 0.5 for LAS and 0.5 for FAS.
+    The current satellite products meet the requirements due to the uncertainties
+    of field measurements and different spatial resolutions. The requirement of 0.2
+    for LAS and 0.3 for FAS is also met. In (2020) the PROBA-V LAS and GLASS products
+    were adopted for our evaluation. Fig. 9(a) indicate the accuracy regression in
+    green dashed lines, and the percentage of pixels matching the target accuracy
+    is 77.3% and 76.6% GLASS LAS values meet the target accuracy, 68.2% LAS values
+    are within the target range. FAPAR shows slightly lower accuracy. The retrieved
+    and field snowbedo values were consistent with the field values, while some snowbedo
+    values with high values deviate from the 1:1 line and lead to slightly higher
+    RMSE. In addition, the estimation accuracy was also affected by some discrete
+    value points. The main explanation for this is that the FAS 750 m leaf
+
+
+    contains much larger area of landscapes and vegetation conditions not satisfied
+    by the pyranometers'' field view. The spatial resolution of tower measurements
+    is important when comparing with satellite retrievals. Field sites with heterogeneous
+    cover (such as Penn, State University and Green Creek) can affect the error evaluation
+    between field and data RTMs (Roman et al., 2009; Roman et al., 2010). The spatial
+    distribution of snow cover can also affect the retrieved albedo values. These
+    three results show that the retrieved snowbedo is accurate, with lower R² (0.558,
+    0.251, and 0.762) and higher RMSE (0.048, 0.144, and 0.036, respectively) compared
+    to the RTM. The retrieved results also give more accurate snowbedo values, while
+    some snowbedo values show better numbers in comparison to the field measurements.
+    The GCOS accuracy requirement for the global observing system is 0.5 for LAS and
+    0.5 for FAS. The requirement for us is to meet the albedo requirement of 0.2 or
+    0.5 to utilize our alert product. The retrieved albedo values are higher than
+    the field albedo values. The retrieved albedo values are also lower than the field
+    albedo values in some products. The retrieved albedo values for lower values are
+    highly consistent with those of the RTM and GLASS albedo values (Fig. 9(c) and
+    Fig. 9(j)). We matched the pairs with solar and varying sun angles differing between
+    30°, 45°, relative zenith angle and 60°. The results for the 2009 RTM and 20090CA
+    surface reflectance values are highly consistent, with a R² of 0.881 and small
+    RMSE and BIAS values of 0.048 and 0.053, respectively. The RTM and 20090CA surface
+    reflectance products are consistent for all lines, with R² of 0.885 and RMSE of
+    0.026. Some retrieved reflectance values deviate significantly from ViIRS reflectance
+    product, and the reason is that the ViIRS could
+
+
+    12'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# G. Zhang et al.
+
+
+    # Remote Sensing of Environment 779 (2022) 111332
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_12_0.png)
+
+
+    Fig. 9. Comparisons of the retrieved albedo with the other variables and the field
+    data on the selected sets (a–p). Use the same color density. The black line represents
+    the unity, and the red lines represent the field lines for all the pairs. The
+    density plot uses colors from blue to red to represent the density from low to
+    high. The fitted formula, RMSE, Bias, and the number of points are also displayed.
+    (For interpretation of the color in this figure, the reader is required to refer
+    to this version of the article.)
+
+
+    product used for determining the sky-cloud mask must verify its capabilities,
+    especially for snow and thin clouds. The retrieved and field-instance ISR values
+    are shown in Fig. (g), using SIRAD and AMirFlux models respectively. The retrieved
+    ISR under all conditions is compared with field values with the same time-shifted
+    offset. Atmospheric observation can cause significant uncertainty. Our estimates,
+    the retrieved ISR of 100–900 m agree well with the field values with an RMSE of
+    50.16 and a Bias of -0.86. The retrieved field PAR values were compared with an
+    RMSE of 50.106 and Bias of 0.846 (Fig. 9p).
+
+
+    # 4.4. Evaluating input-output RF model performance of estimating retained multiple
+    variables
+
+
+    various methods and satellite products, are necessary to evaluate the consistency
+    and integrity of the multi-variable models generated by the input-output RF algorithm
+    with different spatial texture details. Our approach using the VIIRS data shows
+    phenomenal observation at a sub-field scale. The importance of a good spatial
+    resolution is clear when considering areas, where being formerly homogeneous land
+    surface, in case of needed forests, grasslands, and urban areas (The selected
+    area is in Saskatchewan, Northern Canada). The selected area is 375 km × 375 km,
+    with the latitude range from 50.35 to 50.6640 N, and the longitude range from
+    -105.00 to -104.920 W.
+
+
+    Fig. (10) depicts the time-series VIIRS maps. The retrieved LA has a temporal
+    resolution of 8 days, and to save space, we only show them at 16-day intervals.
+    For comparison, the 8-day GLASS LA product is shown in Fig. 10(b). The input-output
+    RF model
+
+
+    After validating the accuracy of the retrieved metric
+
+
+    13'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# (a) Retrieved LAI
+
+
+    | 49 | 65 | 81 | 97 | 113 | 129 | 145 | 161 |
+
+    |---|---|---|---|---|---|---|---|n| 177 | 193 | 209 | 225 | 241 | 257 | 273 |
+    289 |
+
+
+    # (b) GLASS LAI
+
+
+    | 49 | 65 | 81 | 97 | 113 | 129 | 145 | 161 |
+
+    |---|---|---|---|---|---|---|---|n| 177 | 193 | 209 | 225 | 241 | 257 | 273 |
+    289 |
+
+
+    Fig. 10. Comparison of (a) retrieved LAI maps and (b) GLASS LAI maps. Retrieved
+    LAI had a temporal resolution of 8 day; here, we show them at 16-day intervals.
+
+
+    captured the seasonal dynamics of the LAI, both in terms of the phenomenology.
+    LAI outside the growing season was also successfully estimated, and the emergence
+    and fall of green leaves were precisely tracked. Compared with GLASS LAI, the
+    retrieved LAI values were slightly higher, especially during the growing season.
+    The time-series retrieved FAPAR showed similar characteristics to the retrieved
+    LAI owing to the physical properties (Fig. 11). The shortwave and visible albedo
+    are compared with the VNPMA3, GLASS, and MODIS albedo products in Figs. 12 and
+    13. The retrieved shortwave and visible albedo have a relatively stable change
+
+
+    # (a) Retrieved FAPAR
+
+
+    | 49 | 65 | 81 | 97 | 113 | 129 | 145 | 161 |
+
+    |---|---|---|---|---|---|---|---|n| 177 | 193 | 209 | 225 | 241 | 257 | 273 |
+    289 |
+
+
+    # (b) GLASS FAPAR
+
+
+    | 49 | 65 | 81 | 97 | 113 | 129 | 145 | 161 |
+
+    |---|---|---|---|---|---|---|---|n| 177 | 193 | 209 | 225 | 241 | 257 | 273 |
+    289 |
+
+
+    Fig. 11. Comparison of (a) retrieved FAPAR maps and (b) GLASS FAPAR maps. Retrieved
+    FAPAR had a temporal resolution of 8 day; here, we show them at 16-day intervals.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# (a) Retrieved shortwave albedo
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_14_0.png)
+
+
+    # (b) VNP43MA3 shortwave albedo
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_14_1.png)
+
+
+    # (c) GLASS shortwave albedo
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_14_2.png)
+
+
+    # (d) MODIS shortwave albedo
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_14_3.png)
+
+
+    Fig. 12. Comparison of (a) retrieved shortwave albedo maps, (b) VNP43MA3 shortwave
+    albedo maps, (c) GLASS shortwave albedo maps, and (d) MODIS shortwave albedo products.
+    Retrieved shortwave albedo had a temporal resolution of 8 day; here, we show them
+    at 16-day intervals.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'Z. Zhang et al.
+
+
+    Remote Sensing of Environment 279 (2022) 113132
+
+
+    # (a) Retrieved visible albedo
+
+
+    49 65 81 97 113 129 145 161
+
+    177 193 209 225 241 257 273 289
+
+
+    # (b) VNP43MA3 visible albedo
+
+
+    49 65 81 97 113 129 145 161
+
+    177 193 209 225 241 257 273 289
+
+
+    # (c) GLASS visible albedo
+
+
+    49 65 81 97 113 129 145 161
+
+    177 193 209 225 241 257 273 289
+
+
+    # (d) MODIS visible albedo
+
+
+    49 65 81 97 113 129 145 161
+
+    177 193 209 225 241 257 273 289
+
+
+    0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
+
+
+    Fig. 13: Comparison of (a) retrieved albedo maps, (b) VNP43MA3 visible albedo
+    maps, (c) GLASS visible albedo maps, and (d) MODIS visible albedo maps. The retrieved
+    visible albedo had a temporal resolution of 8 day; here we show them at 16-day
+    intervals.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'pattern during the snow-period, which was consistent with
+
+    VNP43MA, GLAS, and MODIS products. For the snow surface,
+
+    spacial distribution of the retrieved albedo is consistent with
+
+    VNP43MA and MODIS snow albedo, while GLAS snow albedo
+
+    values on 81 and 97 were significantly higher than that of
+
+    retrieved. Differences in the VNP43MA and MODIS albedo (the white color)
+
+    partially, especially during the season, while the joint-output RF
+
+    could estimate spatially albedo maps.
+
+
+    The results also show that the retrieved ISR, PAR, and TOAO
+
+    maps, these three were affected directly by the cloud,
+
+    and so all cloudy and clear pixels were excluded. There were
+
+    no instantaneous periods for devalidation, we emphasized the
+
+    cloud properties. The retrieved ISR, PAR, and TOAO albedo
+
+    retrieved were also very consistent for each
+
+    instantaneous time under clear and cloudy conditions.
+
+    Physical properties defined on the high model accuracy, as shown
+
+    but to save space, we only show the surface reflectance of the
+
+    Band (Fig. 14(d)). The surface maps were generated from the
+
+    TOAO data reflect and captured the time
+
+    series data. The results showed no
+
+    significant increase in reflectance values because of cloud
+
+    contamination, which demonstrated the effectiveness of the cloud
+
+    method described in Section 3.
+
+
+    The validation and comparison results between the
+
+    retrieved LAI and PAR albedo
+
+    were correlated with the GLAS products, with R² values of 0.994
+
+    0.817, and the RMSEs of 0.412 and 0.098 respectively. The differences
+
+    delineated by Mit et al. (2020), indicate that the models will perform
+
+    well. The retrieved LAI and PARof showed
+
+    with a slight bias of -0.225 and -0.012 respectively. The
+
+    retrieved albedo also had a good match with VNP43MA products,
+
+    , with an RMSE of 0.039 in the snow period.
+
+    in contrast, for large geocoded regions, in the period of
+
+    falling and melting, almost all the RMSE values were lower
+
+    than 0.01.
+
+
+    Overall, the joint-output RF model performed well in region,
+
+    and the retrieved values were consistent with GLAS, MODIS,
+
+    and TOAO products. The distribution of the retrieved
+
+    albedo surface was more complete than that of
+
+    t VIIRS and MODIS products, and the retrieved LAI
+
+    surface above was higher than that of the GLAS albedo product.
+
+    therrieved ISR, PAR, and TOAO albedo had consistent
+
+    properties.
+
+
+    # 4.5. Generating the global estimates
+
+
+    To test whether this estimation is robust and feasible for
+
+    the global products, the joint-output RF model performed to
+
+    the VIIRS multi-angle products. The LAI, PAR, and
+
+    surface reflectance maps with a spatial resolution of
+
+    750 m, and temporal resolution of 8 days. The surface
+
+    elbedo represents values under general clear-sky
+
+    conditions. The ISR, PAR, and TOAO albedo estimates
+
+    which have a spatial resolution of 750 m as atmospheric estimates re-
+
+    present values under general all-sky atmospheric conditions.
+
+
+    # 4.5.1. Comparison with existing products
+
+
+    This section gives the comparison between the retrieved
+
+    and advanced products, including the GLAS and VIIRS
+
+    bodies products. Both distribution and quantitative difference de-
+
+    ations on the global scale were compared.
+
+
+    Both the retrieved LAI, FAP maps and GLAS LA,
+
+    FAP products were displayed in Fig. 15 from the peak period of
+
+    bomeral expected. Expected, the retrieved VIIRS and GLAS
+
+    showed a continuous LAI/FP difference at the global scale.
+
+    North and South Asia are the regions with missing data
+
+    due to cloud cover, while VIIRS and GLAS products had
+
+    good global data. The maps showed good consistency with
+
+    VIIRS-LAI/PAR from TOAO data also had good match. The agreement
+
+    bet retrieved LAI and PAR albedo was also consistent
+
+    with the LAI differences in Fig. 18, which indicates that
+
+    retrieved VIIRS and GLAS LAI/PAR products.
+
+
+    Fig. 16 indicates that that global agreement was achieved
+
+    bween VIIRS and MODIS albedo. Fig. 18 shows that
+
+    surface reflectance and albedo ranges ranging from 0.01
+
+    for more than 91% and 89%, respectively. In the VNP43MA product,
+
+    which South and South Asia are the regions with cloudy
+
+    cover, the retrieved results were similar to the southern
+
+    regions (in Rajaveen et al., 2020), while VIIRS
+
+    albedo had a consistent product.
+
+
+    Fig. 17 shows surface reflectance from the retrieved
+
+    VIIRS and MODIS products. The M1-M11 showed
+
+    consistent reflectance distributions at the global scale. The
+
+    other obvious for M1-M5 was in South America and South
+
+    Africa, where surface reflectance could reach two
+
+    extextreme values. The retrieved LAI showed not
+
+    ther the VNP091 product. The retrieved
+
+    surface reflectance values had data for missing
+
+    regions. In contrast, the retrieved reflectance showed
+
+    good shows with retrieved reflectance differences in Fig. 19
+
+
+    Unlike other surface areas, the ISR, PAR, and TOAO
+
+    were affected by clouds, so these three-cloud
+
+    areas showed cloudy conditions. For the retrieved
+
+    retrieved ISR, PAR, and TOAO albedo were also very consistent
+
+    for each instantaneous period. For the comparison
+
+    ther was no significant difference between the
+
+    adherent regions, which is because three products
+
+    values fluctuate greatly with the change of cloud
+
+    and solar angle in the period of it.
+
+
+    # 4.5.2. Time variation of the estimates
+
+
+    This section evaluates the evaluation of our estimates in
+
+    capping the season cycle and time-variations at several sites
+
+    for the retrieved LAI, PAR, and surface albedo, ISR
+
+    PAR were used for validation, and variables that had not
+
+    dare compared with GLAS, MODIS, and VIIRS products.
+
+
+    The time series of values at the Six Faux site is shown
+
+    inconsistent with the retrieved albedo, VIIRS and
+
+    MODIS LAI, shown for comparison. The retrieved LAI, GLAS,
+
+    and, and MODIS layer show similar changes patterns in Fig. 21
+
+    (a), and MODIS LAI also exhibited. The 2021
+
+    matches the GLAS FAP profile better than the MODIS FAP profile
+
+    (Fig. 21(b)). Fig. 21(c) and (d) show that the retrieved and
+
+    is albedo also well with the VIIRS albedo values. Note that'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# (a) Retrieved ISR
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_17_0.png)
+
+
+    # (b) Retrieved PAR
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_17_1.png)
+
+
+    # (c) Retrieved TOA albedo
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_17_2.png)
+
+
+    # (d) Retrieved surface reflectance, M5
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_17_3.png)
+
+
+    Fig. 14. Retrieved variable maps (a) ISR, (b) PAR, (c) TOA albedo, and (d) surface
+    reflectance, M5. The retrieved variables had a temporal resolution of 8 day; here,
+    we show them at 16-day intervals.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'G. Zhang et al.
+
+
+    Remote Sensing of Environment 279 (2022) 113132
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_18_0.png)
+
+
+    (a) Retrieved LAI
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_18_1.png)
+
+
+    (b) GLASS LAI
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_18_2.png)
+
+
+    (c) Retrieved FAPAR
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_18_3.png)
+
+
+    (d) GLASS FAPAR
+
+
+    Fig. 15. Comparison of retrieved global LAI FAPAR and GLASS LAI, FAPAR products
+    on 12 July 2013. (a) Retrieved global LAI map, (b) Global GLASS LAI map, (c) Retrieved
+    global FAPAR map, and (d) Global GLASS FAPAR map.
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_18_4.png)
+
+
+    (a) Retrieved shortest albedo
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_18_5.png)
+
+
+    (b) VNP43MA3 shortest albedo
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_18_6.png)
+
+
+    (c) Retrieved visible albedo
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_18_7.png)
+
+
+    (d) VNP43MA3 visible albedo
+
+
+    Fig. 16. Comparison of retrieved global shortest, visible albedo, and VNP43MA3
+    albedo product on 12 July 2013. (a) Retrieved global shortest albedo map, (b)
+    Global VNP43MA3 shortest albedo map, (c) Retrieved visible albedo map, and (d)
+    Global VNP43MA3 visible albedo map.
+
+
+    The MODIS albedo values are missing on the days of snowy days, while our albedo
+    values are consistent. Fig. 21(e)–m) shows that the surface reflectance changes
+    with MODIS surface reflectance products well, all the retrieved surface reflectance
+    values are reasonably distributed on clear, and cloudy days. Furthermore, the
+    decline and rebound of surface reflectance values from day 1 to 120 are partly
+    portrayed. Fig. 21(n) and (o) show that the retrieved albedo and PAR values are
+    consistent with the field values. Fig. 21(p) shows that the retrieved TOA albedo
+    values are reasonably distributed on clear and cloudy days.
+
+
+    Time series validation at the Psheniche site and the US-66 site can be found in
+    Appendix.
+
+
+    4.5.3. Evaluation of the estimates under different land cover types and terrains.\
+    In this section, we evaluated our estimates under different land cover types and
+    terrains by comparing with the GLASS and VIIRS products. Fig. 22 shows the evaluation
+    results. Under 13 land cover types and terrains, the RMSE values between our LAI,
+    FAPAR products and GLASS LAI products range from 0.201 to 0.463, 0.041 to 0.109,
+    0.015 to 0.038, and 0.012 to 0.035. These results are compared to the results
+    from FY-3B MERIS (Zhuang et al. 2021), and indicates that our LAI/FAPAR estimates
+    have a similar accuracy to the GLASS products under most land cover types. The
+    RMSE values between our olive, surface reflectance estimates and the VIIRS products
+    range from 0.035 to 0.083. The RMSE value in permanent and snow ice
+
+
+    19'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_19_0.png)
+
+
+    (a) Retrieved surface reflectance, M1
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_19_1.png)
+
+
+    (j) VNP09A1 surface reflectance, M1
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_19_2.png)
+
+
+    (b) Retrieved surface reflectance, M2
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_19_3.png)
+
+
+    (k) VNP09A1 surface reflectance, M2
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_19_4.png)
+
+
+    (c) Retrieved surface reflectance, M3
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_19_5.png)
+
+
+    (l) VNP09A1 surface reflectance, M3
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_19_6.png)
+
+
+    (d) Retrieved surface reflectance, M4
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_19_7.png)
+
+
+    (m) VNP09A1 surface reflectance, M4
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_19_8.png)
+
+
+    (e) Retrieved surface reflectance, M5
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_19_9.png)
+
+
+    (n) VNP09A1 surface reflectance, M5
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_19_10.png)
+
+
+    (f) Retrieved surface reflectance, M7
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_19_11.png)
+
+
+    (o) VNP09A1 surface reflectance, M7
+
+
+    Fig. 17. Comparison of retrieved global surface reflectance and VIIRS surface
+    reflectance product on 12 July 2013. (a-i) Retrieved global surface reflectance
+    maps for band M1, M2, M3, M4, M5, M7, M8, M10, M11, and (j-r) VIIRS global surface
+    reflectance maps for band M1, M2, M3, M4, M5, M7, M8, M10, M11.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'G. Zhang et al.
+
+
+    Remote Sensing of Environment 279 (2022) 113132
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_20_0.png)
+
+
+    (g) Retrieved surface reflectance, M8
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_20_1.png)
+
+
+    (p) VNP09A1 surface reflectance, M8
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_20_2.png)
+
+
+    (h) Retrieved surface reflectance, M10
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_20_3.png)
+
+
+    (q) VNP09A1 surface reflectance, M10
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_20_4.png)
+
+
+    (i) Retrieved surface reflectance, M11
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_20_5.png)
+
+
+    (e) VNP09A1 surface reflectance, M11
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_20_6.png)
+
+
+    Fig. 17. (continued).
+
+
+    | Percentage (%) | (a) LAI | (b) FAPAR |
+
+    |---|---|---|
+
+    | 70 | | |
+
+    | 60 | | |
+
+    | 50 | | |
+
+    | 40 | | |
+
+    | 30 | | |
+
+    | 20 | | |
+
+    | 10 | | |
+
+    | 0 | | |
+
+
+    | Percentage (%) | Shortwave albedo | Visible albedo |
+
+    |---|---|---|
+
+    | 70 | | |
+
+    | 60 | | |
+
+    | 50 | | |
+
+    | 40 | | |
+
+    | 30 | | |
+
+    | 20 | | |
+
+    | 10 | | |
+
+
+    > Fig. 18. Retrieved VIIRS-GLASS from 12 July 2013 (a) LAI, (b) FAPAR maps by
+    land surface, retrieved VIIRS-VNP43MA3 from (c) surface and visible albedo maps
+    are also shown. Negative values indicate value overestimation by other methods,
+    and positive values mean higher values in the retrieved VIIRS estimates.
+
+
+    surface is largely owing to the rapid change in the snow surface. The accumulation
+    in barren land, mixed forest, urban and built surface is slightly better than
+    in permanent snow and ice, and an inconsistent proportion of tree species in mixed
+    pixels and a small proportion of barren samples caused these deviations. For other
+    cover types, the albedo and surface reflectance values under
+
+
+    and snowless are mixed for comparison, our estimates have a similar and stable
+    accuracy. The RMSE of comparison results for LAI, FAPAR, albedo, and surface reflectance
+    from 0.317 to 0.491, 0.048 to 0.095, 0.069, and 0.037 to 0.076, respectively.
+    Above 300 m, as the elevation increases, the RMSE for values
+
+
+    21'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Z. Zhang et al.
+
+
+    # Remote Sensing of Environment 279 (2022) 113132
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_21_0.png)
+
+
+    Fig. 19. Retrieved VIIRS-VNP09A12 12 July 2013 global surface reflectance differences
+    by land surface area. Negative values signify reflectance estimation by GLASS,
+    and positive values mark higher surface reflectance values in retrieved VIIRS
+    estimates.
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_21_1.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_21_2.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_21_3.png)
+
+
+    Fig. 20. Retrieved global albedos (a) ISR, (b) PAR, and (c) TOA albedo on 12 July
+    2013.
+
+
+    variable greatly. In high-altitude areas, snowfall is generally increasing, and
+    the number of snow days is less than in the plains areas. The effect of snow cloud
+    on the estimates, especially in when snow and cloud exist at the same time, is
+    due to the interference of the cloud and the snow albedo due to their reflection
+    characteristics (T Aoki et al., 2006). Although the elevation has no significant
+    effect on the accuracy of snow samples with different elevation, and the elevation
+    is also an important variable in our joint-output RF model, our estimates still
+    have a good accuracy in high-altitude areas according to the terrain.
+
+
+    Fig. 22 (c) and (d) compares the RMSE values for Tibetan Plateau under different
+    slopes and aspects. Although the RMSE for slopes greater than 40° is 0.018 higher
+    than for flat surfaces, the evaluation accuracy of each variable does not vary
+    significantly as slope and aspect change, indicating the we effect of slope and
+    aspect in our multi-variable scheme at 750 m scale.
+
+
+    # 5 Discussion
+
+
+    # 5.1. Variances of the algorithm
+
+
+    Compared with traditional single-variable approaches, our new efficient RF inversion
+    algorithm has four advantages. It can simultaneously estimate seven physically
+    consistent surface and atmosphere variables from TOA reflectance data. Second,
+    our algorithm does not require complex atmospheric correction or data fusion chain.
+
+
+    The high computational efficiency of the RF model is another advantage over deep
+    learning-based methods developed recently. Fourth, simultaneous estimation of
+    all seven variables is more accurate and efficient than estimating individual
+    variables sequentially.
+
+
+    Compared with the coupled RTM methods developed by Ma et al., 2021, the retrieval
+    of multiple variables with the new efficient RF inversion algorithm were comparable
+    to the previous study. More importantly, the method was used for large-area estimation
+    of multiple variables with VIIRS observation, and improved the efficiency of the
+    retrieval with a 11,000-fold speed-up compared to the coupled RTM methods.
+
+
+    22'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# G. Zhang et al.
+
+
+    Remote Sensing of Environment 279 (2022) 113132
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_22_0.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_22_1.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_22_2.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_22_3.png)
+
+
+    Fig. 21. Comparison of our estimates and estimated data for the Siolux sites:
+    (a) LAI, (b) FAPAR, (c) Shortwavebedo, (d) Visible reflectance, (e) TO albedo.
+
+
+    # 5.2. Representation of training samples
+
+
+    In the application of the ML model, the model should perform well on new and independent
+    data. To simulate this, all available data can be divided into two parts, also
+    training-segmentation (Hohburg and McCabe, 2018). For a total of 5300 samples
+    for training GLASS LAI (V6) were used for the training sites (Mai and Liang, 2022),
+    and satellite observations and coupled RTM simulations. The selected training
+    samples were globally distributed and include almost all surface types, as shown
+    in Fig. 1. The value range model estimated by the representative of the training
+    samples (Zhang et al., 2023) selected almost all the land cover types, and are
+    distributed around the earth. The final model also showed extrapolation in spatial
+    and temporal cross validation. For surface reflectance, snow-free, snow falling
+    and melting pixels were all combined to form the training samples. All samples
+    under both clear and cloudy sky conditions were used for
+
+
+    training ISR, PAR, and TO albedo models owing to the effect of the cloud on them.
+
+
+    # 5.3. Errors due to the cloud and cloud detection
+
+
+    In the optimization scheme, an essential step is to determine the TO reflectance
+    (Mai et al., 2020; Zhang et al., 2021). As VIIRS provide a cloud mask, the multi-angular
+    TO datasets extracted based on cloud indices. However, this dataset does not cover
+    effective cloud detection results, especially in regions shown in Fig. 2, where
+    cloud shadows are veiled by clear sky, the ML-estimated albedo and surface reflectance
+    values at these points are significantly higher than those calculated by the coupled
+    RTMs. Slightly higher RMSE values can be observed in cloudy regions, which is
+    because that the VNP43MA3 albedo still holds some uncertainties, such as cloud
+    contamination, which lead to inaccurate albedo values. In addition, the retrieved
+    albedo values were used for
+
+
+    23'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# G. Zhang et al.
+
+
+    # Remote Sensing of Environment 279 (2022) 113132
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_23_0.png)
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_23_1.png)
+
+
+    Fig. 22. Comparison between estimates of the GLASS and VIIRS products under different
+    conditions (a) level, (b) slope).
+
+
+    consistent with the field measurements (''90), although we retrieved the model
+    with a high error. This was caused by the weighting factor of snow (Ma et al.,
+    2020); the similar reflection characteristics between snow and cloud made it difficult
+    to determine the contribution of snow under cloudy and snowy conditions
+
+
+    ![](img/c22dd96a7c6e3a0f35b3766bbbf993ef_23_2.png)
+
+
+    # 5. Problems to be addressed
+
+
+    This paper uses a joint-RF model to replace the complex optical and RT models
+    to retrieve surface estimates from VIIRS top-of-atmosphere observations. Some
+    problems remain to be addressed. The first problem is that the RF model is not
+    coupled with the RT model, while model cannot consider the factors such as geometry.
+    A more advanced model could be incorporated in the future, such as 4SLA2 which
+    allows for coupling (Bencof and Bach, 2016). Index is a key structural parameter
+    of can cover, so we use a leaf canopy index from VIIRS. In contrast, the VIIRS
+    canopy index varies with the seasons, the yearly average canopy index may have
+    affected the accuracy of the inventory results. The second problem concerns the
+    sensitivity of leaf angle to distribution. The leaf angle distribution is not
+    considered in the RF model (Negato et al., 2019; Verdsagt et al., 2015; Verselt
+    et al., 2016). The third problem is that the RF model was set to a fixed value
+    alone, which may lead to inaccurate results in our research predictions (Saiti
+    et al., 2021). The leaf angle distribution may need to be adjusted dynamically
+    in the RF model to achieve better results. The third problem concerns the soil
+    RF in the model. It has only one parameter (Ref3) which may not be enough to characterize
+    the accuracy of surface albedo. This is the main factor affecting the accuracy
+    of surface albedo. Therefore, further studies are needed to improve the soil RF
+    model. The model could be improved by considering more factors that changes (Happe,
+    1981; Lieber et al., 2019; Liang and Townsend, 1996). However, many factors make
+    the inversion ill-posed if this model is coupled with the canopy and atmosphere.
+
+
+    group has more space in this topic (Dicke et al., 2022) and will incorporate this
+    into inversion scheme in the future. The last problem deals with topography. Terrain
+    affect spatial optical angles which varies in the brightness and the bidirectional
+    reflectance distribution function. However, for this study, the information obtained
+    from satellite images used to estimate the land surfaces, which may have affected
+    the accuracy of the inventory results. Future work will consist considering the
+    coupling radiative transfer models suitable for rugged terrain with atmospheric
+    radiative transfer models added to the topographic effects.
+
+
+    # 6. Conclusion
+
+
+    VIIRS data have been available since 2011; but high-frequency products have been
+    produced. This study developed a hybrid approach to estimate the seasonal physically
+    consistent land surface and atmospheric variables from VIIRS observations. The
+    multivariable dataset was generated using an optimization method that estimates
+    the land and canopy indices from VIIRS TOA data through a coupled radiative transfer
+    model. The results of the different ML methods were compared to the simulated
+    dataset, and the best ML model was determined. Lastly, the best-RF model was used
+    to retrieve LA, RF, FAPAR, ISR, land surface albedo, surface reflectance from
+    VIIRS data.
+
+
+    The evaluation results demonstrate that the RF model achieved the highest accuracy
+    for LA, FAPAR, surface albedo, land surface reflectance, ISR, PAR, and TOA. The
+    evaluation of the atmospheric correction model showed R² values of 0.672, 0.786,
+    0.835, 0.629, 0.088, 0.127, 0.122, and 0.845; R² values of -0.048 to 0.053 for
+    larger region also show that our proposed approach effectively captured the seasonal
+    dynamics of the vegetation variables and across areas of land types and seasons
+    with no vegetation. A set of global 2013 maps were produced and showed that the
+    retrieved VIIRS estimates
+
+
+    24'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# G. Zheng et al.
+
+
+    high consistency with GLAS LAIP, FPAR, VNP3AM3 albedo, and VNP9OA1 surface reflectance
+    products.
+
+
+    The excellence in VIIRS data of the hybrid model makes the multi-variable promising,
+    and the retrieval model can generate all VIIRS observations in the future. Future
+    work will further the retrieval model and consider the specific differences, model
+    types, and architectures for the purpose of estimating global-scale remote sensing
+    variables using platforms cloud computing.
+
+
+    and spatial variability of ecosystem-scale carbon cycle, water vapor, and water
+    fluxes. Atmos. Mol. Earth, 82, 2415-2434.
+
+
+    Barnley, M.J., Strabler, A.H., Morris, R.P., Jackson, J.J. 1994. Sampling effect
+    of satellite resolution on vegetation index function using multispectral sensors.
+    Remote Sens. Env. Environ. 48, 271-283.
+
+
+    Borchsen, P. J., Marshall, J. C., Wang, J. A., Caravanis, N., Redbencker, C.,
+    Arain, A.M., Balborsky, D., Donahue, G.B., 2010. Global carbon cycle distribution
+    and variation across continents and oceans. Science, 328(5976), 829-833.
+
+
+    # Credit author
+
+
+    Guodong Zhang: Data quality, analysis, Methodology, Resources, Software, Validation,
+    Writing - original draft, writing & editing. Han Ma: Formal analysis, Methods,
+    Resources, Validation, Visualization - original draft, writing & editing Shilin
+    Lianqing: Funding acquisition, Acquisition methodology, Supervision, Review &
+    editing.
+
+
+    Gao, X., Sun, J., Liu, Y., Shao, W., Wang, F., 2016. Evaluation of the performance
+    of the invisible infrared radiance satellite sensor using MODIS and VIIRS data.
+    Remote Sens. Env. 197, 245-253.
+
+
+    Li, S., Sun, J., Li, Y., Shao, W., Wang, X., Chen, Y., 2023. VIIRS NPP sensor
+    data product, retrieval, validation and geophysical performance. J. Geophys. Atmos.
+    118, 11664-11686. doi:10.1029/2022JDXXXX
+
+
+    Li, Y., Wang, J., Zhang, Y., Liu, J., 2021. Use of the VIIRS NPP sensor data in
+    the spectral domain to characterize forest canopy properties. Remote Sens. Env.
+    269, 112843.
+
+
+    # Declaration of Interest
+
+
+    This manuscript machine learning model trained by random forest inversion for
+    global and atmospheric products from VIIRS top-atmosphere observations has not
+    been presented or published in entirety and is not under consideration by any
+    journal. There are no conflicts of interest to declare.
+
+
+    # Acknowledgments
+
+
+    This research was funded by the National Key Research and Development Program
+    of China (No. 2017YFB001001), the National Natural Science Foundation of China
+    (No. 321902577). Acknowledge the support from the National Earth Science Data
+    Center, NASA and Earthdata. We also thank ICOS network, AmeriFlux network, AmeriFlux
+    for providing validation data. We express our deepest gratitude to the anonymous
+    reviewers for their helpful and useful suggestions, which helped improve this
+    manuscript quality.
+
+
+    # Appendix. Supplementary data
+
+
+    Supplementary data to this article can be found online at https://doi.org/10.1016/j.jsr.2022.113122.
+
+
+    Enríquez, J., Venti, J., Ribera-García, M.-P., Vasallo, F., Fabrosa, A., Martínez-Jerero,
+    G., 2020. Assessment of global carbon productivity using satellite-based remote
+    sensing data. Remote Sens. Env. 245, 101833.
+
+
+    Falcetta, J. S., Mastancillo, E. M., Silva, F., Ferradaos, E., and Comba, C. F.,
+    Ferreira, N. J., 2020. Use of soil water content and evapotranspiration prediction
+    using regression models and remote sensing data.
+
+
+    Galmars, R., McCarthy, S., Williams, M. J., Molding, R., Allen, A., Tanders, K.,
+    Daniel, A., and Mencher, M. M., 2012. A random forest approach for global forest
+    biomass analysis and prediction. Remote Sens. Env. 162(2), 631-640.
+
+
+    Gans-Jews, L. D., Wei, P., and Mitchell, E. J., 2016. Efficient monitoring of
+    carbon fluxes using remote sensing and applications to land surface performance
+    mapping.
+
+
+    Hao, W., Chen, J., Xiao, Q., Lin, Y., Tang, Y., Liu, Q., Zhang, S., 2019. Sensitivity
+    of satellite surface observations to canopy height. Remote Sens. Env. 228, 9048-9055.
+
+
+    Hansen, J. J., and Rockler, S., 2001. Bidirectional reflectance spectroscopy:
+    J. Geophys. Res. 36, 8833-8846.
+
+
+    He, J., Chen, P. J., Schavel, A., Strabler, A. H., 2012. Global mapping of forest
+    cover using multi-sensor data. Remote Sens. Env. 162, 1175-1183.
+
+
+    Heitkanen, J., Bruinijer, C., Buchmann, N., Raffaella, C., Chen, H., Gielen, B.,
+    and Hansen, M., 2008. Mapping forest cover change using satellite-based observation.
+    In Atmos. Mol. Earth. 1, 105-114.
+
+
+    Hansen, M. C., andiesies, R. E., 2013. Global forest area change using Landsat
+    data and random forest mapping. Remote Sens. Env. 135, 175-188.
+
+
+    Jung, M. B., and Zhao, Y., 2009. Towards global expansion of NDVI-based carbon
+    flux estimates: validation of a model ensemble using remote sensing data.
+
+
+    Jung, J., Reichlein, M., Molasch, A. I., Casatti, A., Arindin, A. M., Arain, A.
+    M., Balborsky, D., Bonchaud, D., Denneau, G. J., 2021. Global mapping of forest
+    productivity using satellite-based remote sensing and machine learning. Remote
+    Sens. Env. 2265, 110932.
+
+
+    Li, X., Zhao, Y., Wu, T., Tian, X., Zhang, H., 2016. Estimating the crop area
+    layer index using random forest. Remote Sens. Env. 196, 145-153.
+
+
+    Kopp, T. J., Wohlfahrt, H., Aotambek, B., Redbencker, R. A., Huicin, J. H., Lidberg,
+    B. R., Brunke, K. R., and Beers, I., 2014. The VIIRS cloud mask: progress in the
+    first year of the VIIRS mission. Remote Sens. Env. 189, 2441-2456.
+
+
+    Lallieu, J., Ferrat, S., Cerf, A., Delercion, A., Grandin, R., Mallineau, J.,
+    Fermet, M., Petit-Dassier, M., 2019. Retrieving surface roughness with the Hapke
+    photometric model: confrontation with the global truth. Remote Sens. Env. 225,
+    1-15.
+
+
+    # References
+
+
+    Ali, M., Brodtsen, K., Skidman, A. G., Tersch, W. H., 2021. Machine learning performance:
+    radiance modeling using random forest inversion to predict forest biomass from
+    two-band data of a multi-sensor fusion. J. Earth Sci. 14, 102-12.
+
+
+    Atzberg, C., Motoyama, H., Yamari, T., Suzuki, J., Kobayashi, H., 2004. Atmospheric
+    aerosol distribution over oceans and its effects on albedo. 3(2), 303-318.
+
+
+    Atzberg, C., 2004. Object-based observation of biophysical variables using satellite
+    imagery. Remote Sens. Env. 102, 193-203.
+
+
+    Atzberg, C., Ricker, K., 2012. Spatially constrained inversion of radiative transfer
+    models for LAIP mapping from future Sentinel-2 imagery. Remote Sens. Env. 157,
+    1-12.
+
+
+    Augustine, A.J., Delano, L. J., Long, C.N., 2005. A RADIS-based natural radiation
+    albedo model for global land-surface reflectance processing. Remote Sens. Env.
+    115, 2322-2336.
+
+
+    Borchsen, P. J., Caravanis, N. A., 2001. FLUXNET: a new tool to study the thermal
+
+
+    25'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# G. Zhang
+
+
+    # Remote Sensing of Environment 209 (2022) 113412
+
+
+    Li, S., Liu, S., Ma, H., Yang, T., 2021. Estimation of all-sky 1km land surface
+    temperature over the contiguous united states. Remote Sensing. Env., 256, 11760.
+
+
+    Li, S., Liang, S., 2008. Comparison of land surfacebedo: I albedo algorithms.
+    Remote Sensing. Env., 76, 213–238.
+
+
+    Liang, S., Townsend, J.R., 1998. A Modified Model for land surface bidirectional
+    reflectance function. Remote Sensing of Env., 84, 69–90.
+
+
+    Liang, S., Liu, S., Yuan, X., Wang, C., Cheng, X., Zhang, Q., Liang, J., 2020.
+    A quantitative assessment of land surface reflectance using satellite data. Int.
+    J. Earth Sci. Observat., 5, 63–78.
+
+
+    Liang, S., Liu, S., Yuan, X., Yao, Y., Wang, X., Zhang, X., 2021. The global land
+    surface albedo dataset (SATGL) produced from satellite imagery. Remote Sens. Env.
+    Modul., 172, E105237.
+
+
+    Liang, S., Liu, S., Liang, S., Hang, S., 2013. Performance evaluation of the global
+    LCLASS albedo dataset. Int. J. Earth. 6, 69–95.
+
+
+    Li, M., Zhang, X., Liang, S., Hang, S., 2019. Validation of the generation of
+    the 250–1000 m area reflectance using MODIS product (version 6) from MODIS data.
+    Remote Sens. Env., 234, 115–128.
+
+
+    Li, M., Huang, S., Zhang, Y., 2017. Simultaneous analysis of multiple land surface
+    reflectance parameters from optical and thermal observations. J. Phot. Res., 37(5),
+    051105.
+
+
+    Li, M., Huang, S., Zhang, Y., 2020. An approach for estimating multi-land surface
+    albedo from atmospheric variables using high-resolution satellite imagery. IEEE
+    Trans. Remote Sens. Env., 58, 5999–6008.
+
+
+    Li, M., Huang, S., Zhou, Y., 2022. Developing a continuous variable estimator
+    for land surface albedo using multi-resolution satellite data. Remote Sens. Env.,
+    271, 106638.
+
+
+    Li, X., Zhang, X., Wang, C., Lu, J., 2022. Global land surface albedo (250–500
+    m) of Fractioned Absorption Photometric Function (FAP) derived from MODIS data
+    (2000–2020). Remote Sens. Env., 276, 113093.
+
+
+    Li, Y., Wang, J., 2021. A neural network-based approach to the analysis of multi-series
+    MODIS land surface reflectance data.
+
+
+    Liang, W., Elbacke, S.G., Tian, Y., 2002. Early and spectral properties and validation
+    of MODIS-based land surface albedo simulations. Remote Sens. Env., 245, 451.
+
+
+    Privete, J., Melleau, J., Zhang, M., Chabel, C., 2004. Characterization of MODIS
+    land albedo (MOD0403) using atmospheric conditions in Africa. Geophys. Remote
+    Sens. Env., 108, 197–203.
+
+
+    Prasad, S., Rao, V., 2011. Analysis of satellite-derived daily gridded gridded
+    radiometric data for the Indian region: analysis of bare land and active monsoon
+    seasons. Curr. Sci. 99, 1–10.
+
+
+    Roger, J., Vermeste, E., Davidija, A., J., 2016. SNIPP-NIRS Earth Surface Reflectance
+    User’s Guide. Vol. II (NASA). NASA JPL.
+
+
+    Sahu, M., Sun, Y., Xiao, J., Li, H., Zhang, Y., Brawell, B.H., Carter, P.S., Davis,
+    K.J., Dragouti, G., Gouden, M., 2009. The MODIS (V61) code validation of the land
+    surface albedo product. Remote Sens. Env., 113, 2476–2488.
+
+
+    Shao, Z., Liang, S., Liu, S., Wang, X., Hu, L., et al., 2005. Assessing the accuracy
+    of land surface albedo derived from MODIS. Remote Sens. Env., 118, 135–148.
+
+
+    Sinner, R., Randy, S., Patnir, N., 2019. Estimation of land albedo index and index
+    coefficient using random forest regression in a tropicalmost model. Forest, Env.,
+    52, 94–105.
+
+
+    Tian, H., Sun, Y., Zhang, J., Liang, J., H., 2020. An IPS-based neural network
+    for wheat yield estimation using two remotely sensed variables in the united states.
+    Remote Sens. Env., 240, 111833.
+
+
+    Tramanant, G., Jung, M., Cramwein, E., Iri, K., Cado-Vallo, S., Radchik, B., 2016.
+    Predicting crop yield using deep machine learning. Electronic Applications, 13,
+    4209–4213.
+
+
+    Verbal, J. E., 2002. GOV/VEGET: retrieval of land surface reflectance. In Multi-Temp
+    2003: International Remote Sensing Imagery, pp. 1–14.
+
+
+    Verbal, J. H., 2003. Simulation of Multispectral-3 bands from airborne multispectral
+    images over different spectral domains. Remote Sens. Env., 109, 197–210.
+
+
+    Wang, Y., Sun, Y., Freeman, F., Mohamed, G., 2021. Sensitivity analysis of the
+    global climate models: using satellite-derived land surface albedo and vegetation
+    data.
+
+
+    Verstraet, J., Nivers, R., Priveja, J.-Martin, V., Vicent, G., Vambault, J., 2006.
+    Evaluation of land albedo and atmospheric transfer function using multi-temporal
+    simulations. Remote Sens. Env., 245, 451.
+
+
+    Verstraet, J., Nivers, R., Priveja, J.-Martin, V., Vicent, G., Vambault, J., 2009.
+    Modeling of land surface reflectance for global albedo analysis. Remote Sens.
+    Env., 8, 67–74.
+
+
+    Wu, X., Liu, J., Yi, Y., Chen, L., 2021. A data-driven shale gas cover model for
+    land surface albedo using random forest regression. J. Plast. Sci. Eng. 196, 107801.
+
+
+    Yang, Y., Sun, Y., Chen, L., 2016. Evaluation of MODIS LAI/PAR function product:
+    Part 2. validation and interrelation. Remote Sens. Env., 446, 460.
+
+
+    Wang, J., Wang, J., 2021. Improved retrieval of land surface albedo from multi-temporal
+    TIRS data using Spectral features. Remote Sens. Env., 255, 113511.
+
+
+    Xiao, Y., Zhou, X., Zhang, L., 2020. Think climate and cloud shadow removal in
+    spectral imagery using spatio-temporal patch group deep learning. SPRS J. Photogram.
+    Remote Sens. Env., 162, 148–160.
+
+
+    Zhu, X., Zhou, X., Dong, G., 2021. Estimation of biomass in wheat using random
+    forest and support vector machine algorithms. Remote Sens. Env., 255, 113533.
+
+
+    Zhou, H., Wang, J., Liang, S., 2018. Design of a novel spectral albedo validator
+    for the MODERATE resolution imaging spectrometer spectral blend. Remote Sens.
+    Env., 10, 101.'
+  merge: -1
+  img_proc: true
