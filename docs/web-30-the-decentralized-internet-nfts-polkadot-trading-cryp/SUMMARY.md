@@ -1,0 +1,2 @@
++   [WEB 3.0：去中心化互联网：(nft、波卡、加密货币交易、比特币、加密货币质押、加密货币投资、以太坊、区块链、defi、卡尔达、币安、索拉纳、元宇宙、小狸钱包、游戏)](README.md)
++   [WEB 3.0：去中心化互联网：(nft、波卡、加密货币交易、比特币、加密货币质押、加密货币投资、以太坊、区块链、defi、卡尔达、币安、索拉纳、元宇宙、小狸钱包、游戏)](web-30-the-decentralized-internet-nfts-polkadot-trading-cryp.md)
