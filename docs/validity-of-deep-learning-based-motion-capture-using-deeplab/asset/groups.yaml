@@ -1,0 +1,420 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Validity of deep learning based motion capture
+
+    Using DeepCut to assess proprioception
+
+
+    validity of DeepCut to measure the JRE in other joints
+
+    knee (such as the ankle and hip) and to assess the reliability
+
+    the JRE with DeepCut. Furthermore, we are working on
+
+    validation DeepCut to assess proprioception using the joint
+
+    sense tests based motion capture techniques could facilitate the implementation
+
+    proprioception assessment in settings where there are no
+
+    markers and no laboratory setting.
+
+
+    Maud Van Den Berg¹, Naomi Jacobs²
+
+    Gooy Meyers¹, Anne Hamlemans³, Peter Myers¹
+
+
+    ¹ Hasselt University, Rehabilitation Research
+
+    Center, Discreet, Belgium
+
+    ² KU Leuven Department of Development and
+
+    Regeneration, Leuven, Belgium
+
+    ³ University of Antwerp, Department of Neurology
+
+    Antwerp, Belgium
+
+
+    # References
+
+
+    Introduction: Sensory deficits are common in neurological disorders
+
+    Proprioception is an example of a system that could
+
+    be impaired. In clinical cases, proprioception is preferably
+
+    assessed as early as possible. Based on deep learning to
+
+    track body landmarks in video recordings we
+
+    performed the experiment in the laboratory without the
+
+    need to attach markers. This study aims to
+
+    validate deep learning based motion capture (DeepCut)
+
+    with gold standard 3D optical motion capture (repro)
+
+    duction Error (JRE) during a knee joint sense test.
+
+
+    +   1. Baert IA Proprioceptive accuracy in women with
+
+    known knee ostearthritis and its relation to functional
+
+    ability, postural control, and muscle strength. Clin Rheumatol.
+
+    2013;39(6):735-74. doi:10.1007/s00164-013-2285-x
+
+    2. Gärtner M, Terbeek MA. The reliability of the
+
+    International Society of Biomechanics ISB definitions
+
+    of orthogonal joint coordinate systems and functions of
+
+    hnhoming human joint position. Ankle, hip, and spine.
+
+    J Biomech. 2002;35:977-85
+
+    3. Mathis A et al. DeepCut-based estimation of
+
+    deep bodyceptive markers with deep learning. Nat Neurics 2021;
+
+    (9):1281-1290. doi:10.1038/s41593-021-0289-y
+
+    4. Chen X et al. Validation of DeepCut for multiple pose
+
+    estimation in nonhuman animals and pets. Nat Rep. 2019;47(7):2152-217. doi:10.1038/s41567-019-0176-0
+
+
+    Research question: Can deep learning based motion capture
+
+    (DeepCut) provide valid assessment of proprioception that
+
+    is comparable to gold standard 3D optical motion-
+
+    ctronic capture?
+
+
+    Methods: Proprioception was assessed with the eyes
+
+    during 45 knee sense tests of 11 typically developing
+
+    children with cerebral palsy (mean 8.5 ± 1.0°, mean JRE
+
+    17.0 ± 2.6°) by measuring the difference between the
+
+    contraction and requested angle (JRE, in degrees). The joint
+
+    were measured with two tests: 1) 3d optical motion capture
+
+    (gold standard markerless motion model)
+
+    2) 2d deep learning based motion capture (Deep-
+
+    Cut) using the pre-trained neural model (with)
+
+    MP55 manually labeled frames from videos of children,
+
+    who were then analyzed using statistical analysis. Linear regression
+
+    produced unchanged angle compared to the requested angle. DeepCut
+
+    and Vision.
+
+
+    > https://doi.org/10.1016/j.jbcp.2023.05.025
+
+
+    Results: There was no significant difference in the JRE
+
+    measured with Vision (-4.18) and the JRE measured with
+
+    DeepCut (-0.43) (F=0.1, p=0.91). The mean was not
+
+    over repeated times per subject determined by using
+
+    significant different from the JRE determined by
+
+    DeepCut (t(10) = -0.11, p=0.92).
+
+
+    ![](img/fbadb9efa08281b703f5386550811887_0_0.png)
+
+
+    Discussion: Measuring the JRE with DeepCut seemed
+
+    valid with the gold standard in typically developing
+
+    children. Further research is needed and to assess the
+
+
+    # The effect of worst deficits on proprioception
+
+    marments in children with cerebral palsy
+
+
+    ¹ Hasselt University, Biological Engineering
+
+    Deelft, Netherlands
+
+    ² Amsterdam University Vrije Universiteit
+
+    Rehabilitation, Medicine, Amsterdam
+
+    ³ Amsterdam Movement Science, Rehabilitation &
+
+    Deelft, Amsterdam, Netherlands
+
+    ⁴ Amsterdam U University of Amsterdam,
+
+    Neurology and Muscle Medicine, Amsterdam
+
+    Netherlands
+
+
+    ⑤ Child''s Foundation, Amsterdam U,
+
+    Amsterdam, Netherlands
+
+
+    Introduction: With children cerebral palsy (CP) commonly
+
+    develops deficits of the first limb (1), which leads to pain and
+
+    gait problems. One of such deficits is an imbalance
+
+    of muscle forces around the foot [2]. In turn, these
+
+    deficits can also affect ankle function and
+
+    moment. Moments were assessed using musculoskeletal
+
+    models, based on generic bone geometry is used to
+
+    represent the deficit accuracy. Weight-bearing computed
+
+    tography (WECT) enables assessment of bone mineral
+
+    under conditions [3].
+
+
+    Research question: What are the changes in moment
+
+    lengths of the main invertors and extensors (the ankles and tib
+
+
+    212'
+  md: '
+
+    # Validity of deep learning based motion capture
+
+    ## Using DeepCut to assess proprioception
+
+
+    validity of DeepCut to measure the JRE in other joints (such as the ankle and
+    hip) and to assess the reliability of the JRE with DeepCut. Furthermore, we are
+    working on validation DeepCut to assess proprioception using the joint sense tests
+    based motion capture techniques could facilitate the implementation of proprioception
+    assessment in settings where there are no markers and no laboratory setting.
+
+
+    Maud Van Den Berg¹, Naomi Jacobs²
+
+    Gooy Meyers¹, Anne Hamlemans³, Peter Myers¹
+
+
+    ¹ Hasselt University, Rehabilitation Research Center, Discreet, Belgium
+
+    ² KU Leuven Department of Development and Regeneration, Leuven, Belgium
+
+    ³ University of Antwerp, Department of Neurology Antwerp, Belgium
+
+
+    # References
+
+
+    Introduction: Sensory deficits are common in neurological disorders
+
+    Proprioception is an example of a system that could be impaired. In clinical cases,
+    proprioception is preferably assessed as early as possible. Based on deep learning
+    to track body landmarks in video recordings we performed the experiment in the
+    laboratory without the need to attach markers. This study aims to validate deep
+    learning based motion capture (DeepCut) with gold standard 3D optical motion capture
+    reproduction Error (JRE) during a knee joint sense test.
+
+
+    - 1. Baert IA Proprioceptive accuracy in women with known knee ostearthritis and
+    its relation to functional ability, postural control, and muscle strength. Clin
+    Rheumatol. 2013;39(6):735-74. doi:10.1007/s00164-013-2285-x
+
+    - 2. Gärtner M, Terbeek MA. The reliability of the International Society of Biomechanics
+    ISB definitions of orthogonal joint coordinate systems and functions of homologous
+    human joint position. Ankle, hip, and spine. J Biomech. 2002;35:977-85
+
+    - 3. Mathis A et al. DeepCut-based estimation of deep bodyceptive markers with
+    deep learning. Nat Neurics 2021; (9):1281-1290. doi:10.1038/s41593-021-0289-y
+
+    - 4. Chen X et al. Validation of DeepCut for multiple pose estimation in nonhuman
+    animals and pets. Nat Rep. 2019;47(7):2152-217. doi:10.1038/s41567-019-0176-0
+
+
+    Research question: Can deep learning based motion capture (DeepCut) provide valid
+    assessment of proprioception that is comparable to gold standard 3D optical motion
+    capture?
+
+
+    Methods: Proprioception was assessed with the eyes during 45 knee sense tests
+    of 11 typically developing children with cerebral palsy (mean 8.5 ± 1.0°, mean
+    JRE 17.0 ± 2.6°) by measuring the difference between the contraction and requested
+    angle (JRE, in degrees). The joint were measured with two tests: 1) 3d optical
+    motion capture (gold standard markerless motion model) 2) 2d deep learning based
+    motion capture (DeepCut) using the pre-trained neural model (with) MP55 manually
+    labeled frames from videos of children, who were then analyzed using statistical
+    analysis. Linear regression produced unchanged angle compared to the requested
+    angle. DeepCut and Vision.
+
+
+    > https://doi.org/10.1016/j.jbcp.2023.05.025
+
+
+    Results: There was no significant difference in the JRE measured with Vision (-4.18)
+    and the JRE measured with DeepCut (-0.43) (F=0.1, p=0.91). The mean was not over
+    repeated times per subject determined by using significant different from the
+    JRE determined by DeepCut (t(10) = -0.11, p=0.92).
+
+
+    ![](img/fbadb9efa08281b703f5386550811887_0_0.png)
+
+
+    Discussion: Measuring the JRE with DeepCut seemed valid with the gold standard
+    in typically developing children. Further research is needed and to assess the
+
+
+    # The effect of worst deficits on proprioception
+
+    ## marments in children with cerebral palsy
+
+
+    ¹ Hasselt University, Biological Engineering Deelft, Netherlands
+
+    ² Amsterdam University Vrije Universiteit Rehabilitation, Medicine, Amsterdam
+
+    ³ Amsterdam Movement Science, Rehabilitation & Deelft, Amsterdam, Netherlands
+
+    ⁴ Amsterdam U University of Amsterdam, Neurology and Muscle Medicine, Amsterdam
+    Netherlands
+
+    ⑤ Child''s Foundation, Amsterdam U, Amsterdam, Netherlands
+
+
+    Introduction: With children cerebral palsy (CP) commonly develops deficits of
+    the first limb (1), which leads to pain and gait problems. One of such deficits
+    is an imbalance of muscle forces around the foot [2]. In turn, these deficits
+    can also affect ankle function and moment. Moments were assessed using musculoskeletal
+    models, based on generic bone geometry is used to represent the deficit accuracy.
+    Weight-bearing computed tomography (WECT) enables assessment of bone mineral under
+    conditions [3].
+
+
+    Research question: What are the changes in moment lengths of the main invertors
+    and extensors (the ankles and tib)
+
+    '
+  mdcn: '
+
+
+    # 基于深度学习的动作捕捉的有效性
+
+    ## 使用 DeepCut 评估本体感觉
+
+
+    DeepCut 在测量其他关节（如踝关节和髋关节）关节重复误差（JRE）方面的有效性，以及使用 DeepCut 评估 JRE 的可靠性。此外，我们正致力于验证
+    DeepCut，通过基于关节感觉测试的动作捕捉技术评估本体感觉，这有助于在没有标记物和没有实验室环境的情况下实施本体感觉评估。
+
+
+    Maud Van Den Berg¹, Naomi Jacobs²
+
+    Gooy Meyers¹, Anne Hamlemans³, Peter Myers¹
+
+
+    ¹ 哈塞尔特大学，康复研究中心，Discrete，比利时
+
+    ² 鲁文大学发育与再生系，鲁文，比利时
+
+    ³ 安特卫普大学神经内科，安特卫普，比利时
+
+
+    # 参考文献
+
+
+    引言：感觉障碍在神经系统中很常见
+
+    本体感觉是一个可能受损的系统。在临床病例中，应尽早评估本体感觉。基于深度学习跟踪视频记录中的人体标志点，我们在实验室中进行了实验，无需连接标记物。本研究旨在验证在关节感觉测试期间，基于深度学习的动作捕捉（DeepCut）与金标准
+    3D 光学动作捕捉重复误差（JRE）的一致性。
+
+
+    - 1. Baert IA 患有膝骨关节炎女性的本体感觉准确性与其功能能力、姿势控制和肌肉力量的关系。Clin Rheumatol. 2013;39(6):735-74.
+    doi:10.1007/s00164-013-2285-x
+
+    - 2. Gärtner M, Terbeek MA. 国际生物力学学会（ISB）正交关节坐标系定义和同源人体关节位置功能的可靠性。踝关节、髋和脊柱。J Biomech.
+    2002;35:977-85
+
+    - 3. Mathis A et al. 基于深度学习的 DeepCut 估计深度本体感觉标记。Nat Neurics 2021; (9):1281-1290.
+    doi:10.1038/s41593-021-0289-y
+
+    - 4. Chen X et al. DeepCut 在非人类动物和宠物多姿态估计中的验证。Nat Rep. 2019;47(7):2152-217. doi:10.1038/s41567-019-0176-0
+
+
+    研究问题：基于深度学习的动作捕捉（DeepCut）是否能提供与金标准 3D 光学动作捕捉相当的有效本体感觉评估？
+
+
+    方法：在对 11 名发育正常的脑性麻痹儿童（平均 8.5 ± 1.0°，平均 JRE 17.0 ± 2.6°）进行 45 次关节感觉测试期间，通过测量收缩角与请求角之间的差异（JRE，单位：度）来评估本体感觉。通过两种测试测量关节：1）3D
+    光学动作捕捉（金标准无标记动作模型）2）使用预训练神经模型的 2D 深度学习动作捕捉（DeepCut），使用儿童视频中手动标记的 MP55 帧，然后使用统计分析进行分析。线性回归显示产生的角度与请求角度相比没有变化。DeepCut
+    和 Vision。
+
+
+    > https://doi.org/10.1016/j.jbcp.2023.05.025
+
+
+    结果：使用 Vision 测量的 JRE (-4.18) 与使用 DeepCut 测量的 JRE (-0.43) 之间没有显著差异（F=0.1, p=0.91）。每个受试者的重复平均值与
+    DeepCut 确定的 JRE 之间没有显著差异（t(10) = -0.11, p=0.92）。
+
+
+    ![](img/fbadb9efa08281b703f5386550811887_0_0.png)
+
+
+    讨论：在发育正常的儿童中，使用 DeepCut 测量 JRE 似乎是有效的。需要进一步的研究以及评估...
+
+
+    # 严重缺陷对本体感觉的影响
+
+    ## 脑性麻痹儿童的测量
+
+
+    ¹ 哈塞尔特大学，生物工程学院，代尔夫特，荷兰
+
+    ² 阿姆斯特丹自由大学康复医学，阿姆斯特丹
+
+    ³ 阿姆斯特丹运动科学、康复与代尔夫特，阿姆斯特丹，荷兰
+
+    ⁴ 阿姆斯特丹大学神经内科与肌肉医学，阿姆斯特丹，荷兰
+
+    ⑤ 儿童基金会，阿姆斯特丹大学，阿姆斯特丹，荷兰
+
+
+    引言：脑性麻痹（CP）儿童通常会出现上肢缺陷 (1)，导致疼痛和步态问题。此类缺陷之一是足部肌肉力量的不平衡 [2]。相反，这些缺陷也会影响踝关节的功能和力矩。基于通用骨骼几何结构的肌肉骨骼模型用于力矩以表示缺陷的准确性。负重
+    CT（WECT）能够在特定条件下评估骨矿 [3]。
+
+
+    研究问题：主要内翻肌和伸肌（踝关节和胫骨）力矩长度的变化
+
+
+    '
+  merge: -1
