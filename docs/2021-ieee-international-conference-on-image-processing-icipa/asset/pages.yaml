@@ -1,0 +1,291 @@
+- pgno: 0
+  md: '# MAN-RECON: MANIFOLD LEARNING FOR RECONSTRUCTION WITH DEEP AUTOENCODER FOR
+    SMART SEISM INTERPRETATION
+
+
+    Ahmad Mustafa and Ghassan AlRegib
+
+
+    School of Electrical and Computer Engineering,
+
+    Georgia Institute of Technology, Atlanta, GA, 30332-0250.
+
+    *amustafa9, alregib@gatech.edu
+
+
+    # ABSTRACT
+
+
+    Deep learning can extract rich representations if supervised. For many tasks,
+    annotating data carries costs in time and money, owing to the high standards of
+    subject matter expertise required, for example in seismic interpretation. Unsupervised
+    learning can identify the most informative samples for the interpreter to learn,
+    leading to higher efficiency. We propose an approach based on manifold learning
+    to jointly identify and train samples most dissimilar from the learned manifold
+    from the unsupervised task. We verify the effectiveness of the proposed method
+    on two seismic datasets, the Netherlands F3 survey, achieving the highest Intersection-Over-Union
+    value of 0.773.
+
+
+    **Index Terms—** Deep Learning, Active Learning, Autoencoders, Interpretations,
+    Manifold
+
+
+    # 1. INTRODUCTION AND RELATED WORK
+
+
+    Deep Learning (DL) has led to ground-breaking advancements in computer vision
+    and image processing fields, owing to its ability to learn deep representations
+    from raw data. In contrast, seismic interpretation requires expertise to configure
+    machine learning algorithms. For a model to learn effective representations with
+    DL-based methods, the requirement for large quantities of labeled data is a bottleneck
+    in many practical applications, such as medical datasets, subsurface imaging,
+    and many other applications.
+
+
+    That being said, there usually exists a small subset of training examples that
+    sustains efforts in the representation space for the entire data [1]. The DL model
+    using the identified subset of training samples results in better performance
+    on unseen test examples than would be possible with a smaller number of training
+    examples selected arbitrarily. This is due to the fact that active learning
+
+
+    is based on [2]. The human expert, also called the Oracle, labels a small number
+    of training examples in the first cycle. In each subsequent cycle, the method
+    identifies and the expert labels a small set of examples in the unlabeled dataset
+    to add the most information to the machine learning model, subject to pre-defined
+    criterion e.g., uncertainty [2].
+
+
+    We propose in this work an active learning method based on learning manifolds
+    with autoencoders. Autoencoders learn a manifold of models that can reconstruct
+    their inputs. They are designed so that they are only able to reconstruct data
+    from the distribution they learn from regression to simple mapping. By using this,
+    we learn a manifold for anomaly detection on datasets by thresholding the distribution
+    of reconstruction-errors based on input samples.
+
+
+    The active learning algorithm presents the challenge of identifying samples most
+    dissimilar from preexisting training samples. These training samples are the ones
+    likely to add the most information to the learning model about the data it is
+    uncertain about.
+
+
+    One of the most important applications is Earth''s subsurface imaging for energy
+    and mineral resources. Specifically, we focus on the task of Earth''s subsurface
+    faces segmentation on migrated seismic volumes [6], [7]. The task requires labeled
+    data, which is often not available. Thus, the goal is to find a good fit for the
+    proposed problem. We propose an encoder-decoder architecture specifically for
+    reconstruction and seismic faces segmentation using the same latent space.
+
+
+    In this paper, we present the method of learning manifolds and its applications
+    to Earth''s subsurface imaging and energy resources.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "reconstruction errors are also going to be the ones the network would have\
+    \ performed poorly on segmentation. Identifying such training examples would lead\
+    \ to an improved generalization over the whole, compared to a similar number of\
+    \ sections had been sampled randomly or on other arbitrary fashion. We verify\
+    \ this by comparing the proposed work with a baseline active learning method plus\
+    \ other data sampling strategies for this kind of subsurface imaging and medical-based\
+    \ diagnostics, to the best of our knowledge. We limit our discussion to this seismic\
+    \ interpretation task. In short, our major contributions in this work are three:\n\
+    \n+   - Proposing a novel active learning method based on manifold learning with\
+    \ deep autoencoders.\n- Learning informative samples for segmentation with high\
+    \ reconstruction error by using a shared representation learning framework for\
+    \ supervised and unsupervised tasks;\n- Verifying the effectiveness of the proposed\
+    \ work via comparison with other standard approaches in the domain of seismic\
+    \ volume.\n\n# 2.3. Training Details\n\nFig. 1 presents an overview of the active\
+    \ learning setup. The interpreter (oracle) specifies a certain number of active\
+    \ learning cycles, N. For each cycle, the interpreter may randomly select a section\
+    \ in the volume, the rock faces therein, and provide it to the network for train.\
+    \ The network is trained for 300 epochs by minimizing an objective function consisting\
+    \ of the sum of the reconstruction and cross-entropy loss as follows:\n\n```\n\
+    $$\\hat{y}_j, \\hat{x}_j = D_{\\phi}(E_{\\phi}(x_j)), \\ j = 1, ..., |D_{train}|.$\n\
+    ```\n\n```\n$L_{reco} = \\sum_{j=1}^{|D_{train}|} ||\\hat{x}_j - x_j||^2,$\n```\n\
+    \n```\n$L_{CE} = \\sum_{j=1}^{|D_{train}|} CE(y_j, \\hat{y}_j)$\n```\n\nwhere\
+    \ $D_{train}$ is the set of all active and label pairs in the training set, $D_{\\\
+    phi}$ and $D_{\\phi}$ are the Encoder and Decoder networks with parameters $\\\
+    phi$ and $\theta$, respectively, $x_j$ and $y_j$ are the section and label image\
+    \ respectively for $j$-th training example, and $\\hat{y}_j, \\hat{x}_j$ are the\
+    \ reconstructed and predicted label respectively. The optimal models are then\
+    \ solved by optimizing a weighted sum of the reconstruction and cross-entropy\
+    \ loss terms as shown above:\n\n# 2.2. Architecture\n\nThe network architecture\
+    \ used in the work is using a convolutional autoencoder with a contracting and\
+    \ expanding path. Each block in the contracting path consists of convolutional\
+    \ layers that decrease activations by a factor of 2. In contrast, the network\
+    \ in the expanding path consists of a transposed convolution followed by a regular\
+    \ convolutional layer. The transposed convolution is used to upsample the activations\
+    \ by a factor of 2. All layers use a kernel size of 3 with padding to ensure consistency\
+    \ in the dimensions of the activations. Overall, it is a very standard encoder-decoder\
+    \ architecture used to achieve a more global receptive field while minimizing\
+    \ the number of channels to learn a rich representation where the decoder reverses\
+    \ the denoising effect of the encoder with a simultaneous reduction in channel\
+    \ size.\n\nThe input to the network is a complete seismic section containing 255\
+    \ samples in depth and 400 samples in width. The network outputs the predicted\
+    \ labels of the various faces in the section. The two output streams share the\
+    \ same path in the network up to the penultimate layer, where activations are\
+    \ processed by two different 1x1 layers to estimate the reconstruction of the\
+    \ input section and its faces respectively.\n\n# Algorithm 1 Active Learning for\
+    \ Seismic Faces Interpretation\n\n+   1. Sample a section $x_j$ from $D_{out}\
+    \ = \\{x_j\\}$.\n2. Form the initial training data, $D_{train} = \\{(x_j, y_j)\\\
+    }$.\n3. For $i=1$ to $N$:n4. Train $D_{train}$ for 300 epochs\n5. Obtain reconstruction\
+    \ errors for all $x \\in D_{out}$\n6. Select the section with the highest error,\
+    \ $x_j = \\arg\\max_x e_x$\n7. Form training dataset for next cycle as $D_{train}\
+    \ = D_{train} \\cup \\{x_j, y_j\\$.\n8. Predict faces labels for all $x \\in D_{out}$."
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# Training over the Annotated Crosslines\n\n# Applying trained network for\
+    \ Reconstruction Error Inference\n\n![](img/766fb7f81122e8d898202e3a8c3d3113_2_0.png)\n\
+    \n![](img/766fb7f81122e8d898202e3a8c3d3113_2_1.png)\n\n![](img/766fb7f81122e8d898202e3a8c3d3113_2_2.png)\n\
+    \n![](img/766fb7f81122e8d898202e3a8c3d3113_2_3.png)\n\n# Annotating Selected Crossline\
+    \ by Expert\n\n# Sampling Crossline with the highest Error\n\n![](img/766fb7f81122e8d898202e3a8c3d3113_2_4.png)\n\
+    \n![](img/766fb7f81122e8d898202e3a8c3d3113_2_5.png)\n\n![](img/766fb7f81122e8d898202e3a8c3d3113_2_6.png)\n\
+    \nFig. 1: The Active Learning Setup with the proposed methodology.\n\nFor our\
+    \ purpose, we choose $N=S$, and $\\alpha=\beta=1$. The training was carried out\
+    \ using the popular Deep learning library, PyTorch [9], with Adam [10] as the\
+    \ optimizer and a learning rate of 0.001.\n\nintersection of the two divided by\
+    \ the size of their union, as shown below:\n\n> $J(A, B) = \\frac{|A \\cap B|}{|A\
+    \ \\cup B|}$ (5)\n\nIn addition to the active learning-based data sampling and\
+    \ labeling workflow described above, we implement three other strategies to compare\
+    \ and contrast the performance of the proposed approach with theirs.\n\nThis is\
+    \ especially useful for our case since we are working with a highly imbalanced\
+    \ dataset, where classes represent less than five percent of the total number\
+    \ of voxels in the volume, mIOU is much more reliable to be the true segmentation\
+    \ comparison compared to a metric per pixel, as:\n\n+   * **Random Sampling**:\
+    \ The workflow as described in Algorithm 1 is implemented, except that a randomly\
+    \ selected crossline is sampled, labeled, and then the training dataset starts\
+    \ at the end of each cycle.\n* **Uniform-side**: This refers to the case where\
+    \ we refine the first crossline in the volume for the first cycle; at each subsequent\
+    \ cycle, a crossline of random position is obtained and labeled to be added to\
+    \ the training dataset.\n* **Maximum Entropy Sampling**: A frequently used machine\
+    \ learning strategy to identify the samples with the highest uncertainty. After\
+    \ each cycle, we pick the crossline with the highest entropy.\n\nThe mIOUs per\
+    \ each of these three sampling methods show that random sampling outperforms the\
+    \ uniform sampling methodology and the refining schemes, achieving up to ten percentage-point\
+    \ difference over theirs. It also beats the baseline entropy-based technique by\
+    \ a smaller number of samples. Our curves are an average of three, showing more\
+    \ credibility to approach.\n\nThe geological bottleneck seems to vary with geology\
+    \ as it moves across the line in direction. In some places it is absent and others\
+    \ abrupt. To reach a level of true predictions within the volume, the network\
+    \ needs to have a training dataset that for the training network we apply all\
+    \ the active learning because the bottleneck occurs at certain segments. Random\
+    \ sampling of segments with greater likelihood the longer spanning geological\
+    \ feature,\n\nTo allow for a fair comparison, all parameters are kept constant\
+    \ except for the choice of the strategy. The performance over the test dataset\
+    \ is computed and reported. The segmentation performance is measured in terms\
+    \ of the mean Intersection-Over-Union (mIOU), also known as the Jacobi Index,\
+    \ between two finite-size sets, A and B, the Jaccard score is computed as the\
+    \ ratio of the\n\n# 3. RESULTS AND ANALYSIS"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/766fb7f81122e8d898202e3a8c3d3113_3_0.png)
+
+
+    Fig. 2: Per Cycle Mean Intersection-Union for the proposed, random, sampling,
+    and entropy-based techniques.
+
+
+    works best in this report by sampling the least amount of representative crosline
+    sections in the cycle. This is because at each cycle, the network is forced to
+    learn most dissimilar to the training set for searching for experiments of the
+    performance of the learned autoencoder manifold.
+
+
+    Finally, 3a and 3b depict the reconstruction error profiles and cross-entropy
+    profiles (highlighted) for croslines in the dataset, for two different active
+    cycles. Notice that the latent can only be observed in the case where we have
+    the ground-truth (true in this case) the former applies to the scenario without
+    the ground-truth. It is interesting that the cross-entropy error profile ultimately
+    determines the performance correlates with the reconstruction error profile, as
+    shown. For instance, there is a peak value around crosline 500 and roughly at
+    another. This provides that the network tries to learn a similar representation
+    for both the reconstruction and segmentation tasks, so that training samples performing
+    poorly at one task would also be likely to perform poorly at the other.
+
+
+    # 4. CONCLUSION
+
+
+    ![](img/766fb7f81122e8d898202e3a8c3d3113_3_1.png)
+
+
+    Fig. 3: Plots of two reconstruction error profiles and their corresponding entropy
+    error profiles.
+
+
+    The paper describes an active learning setup to identify the most informative
+    examples encountered with the tasks of interpretation on a manually segmented
+    dataset. An encoder-decoder architecture is jointly trained for the tasks of reconstruction
+    (unsupervised) and segmentation (supervised) on an initially and labeled crosline
+    section. The network is used to perform inference on training instances to obtain
+    a reconstruction error profile. The training example corresponding to the highest
+    error is then labeled, and added to the dataset for the next training cycle. The
+    underlying assumption is that the sample provides the most information about the
+    dataset for the segmentation task due to the shared representation of the network.
+    The efficiency of the method is verified by comparing it to other standard sampling
+    approaches in the literature. The proposed work reaches the highest mOU value
+    of 0.773 on the complete dataset over other approaches.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 5. REFERENCES
+
+
+    [1] Angelos Katharopoulos and Francois Fleuret, “Not all samples are created equal:
+    Deep learning with importance sampling,” in Proceedings of the 35th International
+    Conference on Machine Learning, Jennifer Dy and Andreas Krause, Eds., Stockholm,
+    Sweden, 10-15 Jul 2018, vol. 80 of Proceedings of Machine Learning Research, pp.
+    2525–2534, PMLR.
+
+
+    [2] Burr Settles, “Active learning literature survey,” Tech. Rep., 2010.
+
+
+    [3] Francisco J. Martínez-Manuel, Andres Ortiz, Juan-Manuel Gomez, Javier Ramirez,
+    and Diego Castillo-Bares, “Studying the manifold structure of alzheimer’s: A deep
+    learning approach using convolutional autoencoders,” IEEE Journal of Biomedical
+    and Health Informatics, vol. 24, no. 1, pp. 17–26, Jan. 2020.
+
+
+    [4] Gukyong Kwon, Mohit Prabhushankar, Dogacan Temel, and Ghassan AlRegib, “Backpropagated
+    gradient representations for anomaly detection,” in Proceedings of the European
+    Conference on Computer Vision (ECCV), 2020.
+
+
+    [5] Feng Qian, Miao Yin, Xiao-Yang Liu, Jun-Wang Gan, Cai Lu, and Guang-Min Hu,
+    “Unsupervised seismic facies analysis via deep autoencoders,” GEOPHYSICS, vol.
+    83, no. 3, pp. 5–18, 2018.
+
+
+    [6] Zayed AlRegib, Patricia Michalowicz, Motafar Alaraj, and Ghassan AlRegib,
+    “A machine-learning benchmark for facies classification,” Interpretation, vol.
+    7, no. 3, pp. SE15–SE187, Aug. 2019.
+
+
+    [7] Ming Liu, Michael Jeremy, Weichang Li, and Philippe Nivelet, “Seismic facies
+    classification using unsupervised convolutional neural networks and semisupervised
+    generative adversarial networks,” GEOPHYSICS, vol. 85, no. 4, pp. O047–O058, 2020.
+
+
+    [8] Vladimir Putsky and Chris Elders, “Unsupervised seismic facies classification
+    using deep autoencoder,” arXiv:1802.01995, 2020.
+
+
+    [9] Adam Pascale, Sam Gross, Francesco Massa, Adam Lerer, James Bradley, Gregory
+    Chaney, Trevor Kileen, Zeming Lin, Natalia Gelsmacher, Luis Antiga, Alban Delman,
+    Andreas Kopt, Eddie Yang, Zhang Devlin, Benoit Steiner, Lu Fang, Jung-jie Bai,
+    and Soumith Chilaankurthy, “Pytorch: An adaptive programming style, high-performance
+    deep learning,” in Advances in Neural Information Processing Systems 32, H. Wallach,
+    H. Larochelle, A. Beygelzmer, F. d’Alché, E. Fox, and R. Garnet, Eds., pp. 8024–8035.
+    Curran Associates, Inc., 2019.
+
+
+    [10] Diederik P. Kingma and Jimmy Ba, “Adam: A method for stochastic optimization,”
+    arXiv:1412.6980, 2017.'
+  merge: -1
+  img_proc: true
