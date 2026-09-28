@@ -1,0 +1,3906 @@
+- pgno: 0
+  md: '# # MACHINE
+
+    LEARNING
+
+
+    # THE ULTIMATE GUIDE
+
+
+    to Discover the Mathematics of Computer Science, Python Programming and Artificial
+    Intelligence with a Step-by-step Guide
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_0_0.png)
+
+
+    New Edition
+
+
+    Jason Callaway'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# MACHINE LEARNING
+
+
+    The Ultimate Guide to Discover the Mathematics of Computer Science, Python Programming
+    and Artificial Intelligence with a Step-by-step Guide
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_1_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "![](img/d8987d3110291847d867988b0a2d7ecb_2_0.png)\n\n# TABLE OF CONTENTS\n\n\
+    +   - TABLE OF CONTENTS\n- INTRODUCTION\n- MACHINE LEARNING & ITS BASIC CONCEPT\n\
+    \  - How Do Machine Learning and Traditional Programming Differ?\n  - Why We Need\
+    \ Machine Learning\n  - How Does Machine Learning Work?"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Machine Learning Past to Present
+
+
+    # Machine Learning Basic Concept
+
+
+    # APPLICATIONS OF THE MACHINE LEARNING TECHNOLOGY
+
+
+    Virtual Personal Assistants
+
+
+    Predictions While Driving
+
+
+    Video Surveillance
+
+
+    Social Media
+
+
+    Email Spam and Malware Filtering
+
+
+    Online Customer Service
+
+
+    Refinement of Search Engine Results
+
+
+    Product Recommendations
+
+
+    Online Fraud Detection
+
+
+    # TOOLS & LIBRARIES
+
+
+    Pandas
+
+
+    NumPy
+
+
+    Scikit-learn
+
+
+    Matplotlib
+
+
+    Seaborn
+
+
+    TensorFlow
+
+
+    QUIZ
+
+
+    SOLUTIONS
+
+
+    # PYTHON FOR MACHINE LEARNING
+
+
+    Why Use Python for Machine Learning?
+
+
+    How to Get started with Python?'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# DATA ANALYSIS TECHNIQUES
+
+
+    How Is Data Analysis Performed?
+
+
+    Text Analytics
+
+
+    Business Intelligence
+
+
+    Data Visualization
+
+
+    # DATA SCRUBBING TECHNIQUES
+
+
+    What is Data Scrubbing?
+
+
+    Removing Variables
+
+
+    One-Hot Encoding
+
+
+    Drop Missing Values
+
+
+    # CLUSTERING
+
+
+    K-Means Clustering
+
+
+    Centroid Initialization Methods
+
+
+    Determine the Number of Clusters
+
+
+    K Means Clustering with Scikit-Learn
+
+
+    The Clustering Dataset
+
+
+    Figure 4: Scatter plot for the clustering dataset
+
+
+    # DATA VISUALIZATION TECHNIQUES
+
+
+    Importing and Using Matplotlib
+
+
+    Supervised Learning
+
+
+    Unsupervised Learning
+
+
+    Approaching Problems
+
+
+    # DECISION TREES
+
+
+    An Overview on Decision Trees'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Classification and Regression Trees
+
+
+    The Overfitting Problem
+
+
+    # DEEP LEARNING WITH PYTHON
+
+
+    How to Get Deep Learning to Work
+
+
+    Machine Learning Vs. Deep Learning
+
+
+    # HOW TO BUILD THE FIRST MACHINE LEARN MODEL?
+
+
+    Regression
+
+
+    Linear Regression Model
+
+
+    Decision Tree Regression Model
+
+
+    # TIPS TO MAKE MACHINE LEARNING WORK FOR YOU
+
+
+    +   - Tip #1 Remember the Logistics
+
+
+    +   - Tip #2 Mind the Data
+
+
+    +   - Tip #3 Algorithms Are Not Always Right
+
+
+    +   - Tip #4 Pick Out a Diverse Toolset
+
+
+    +   - Tip #5 Try Out Some Hybrid Learning
+
+
+    # EXAMPLES AND EXERCISES
+
+
+    +   - Task 1 - Import the libraries and load the dataset
+
+
+    +   - Task 2 - Basic data exploration
+
+
+    +   - Task 3 - Check for invalid values
+
+
+    +   - Task 4 - Remove invalid rows
+
+
+    +   - Task 5 - Split data into training and test subsets
+
+
+    +   - Task 6 - Check for correlation among features
+
+
+    +   - Task 7 - Plot scatter plots
+
+
+    +   - Task 8 - Data preprocessing'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '+   Task 9 - Train our model
+
+
+    +   Task 10 - Evaluate the model
+
+
+    +   Task 11 - Use a column transformer and pipeline to simplify our workflow
+
+
+    +   Task 12 - Train the model using the pipeline
+
+
+    +   Task 13 - Evaluate the model
+
+
+    +   Task 14 - Do cross-validation using the pipeline
+
+
+    # CONCLUSION'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# INTRODUCTION
+
+
+    Derived from Artificial Intelligence, the concept of machine learning is a complete
+    area of study. It foccusses on developing automated programs to acquire knowledge
+    from data in order to make a diagnosis or a prediction. Machine learning relies
+    on the concept that machines can learn, identify trends, and provide decisions
+    with minimal human intervention. These machines improve with experience and build
+    the principals that govern the learning processes.
+
+
+    There are a wide variety of machine learning uses, such as marketing, speech and
+    image recognition, smart robots, web search, etc. Machine learning requires large
+    datasets to train the model and get accurate predictions. Different types of machine
+    learning exist and can typically be classified into two separate categories supervised
+    or unsupervised learning. Other algorithms can be labeled as semi-supervised learning
+    or reinforcement machine learning.
+
+
+    Supervised learning is mainly used to learn from a categorized or labeled dataset
+    than to predict the label for the unknown dataset. In contrast, unsupervised learning
+    is used when the training dataset is neither categorized nor labeled and is applied
+    to study how a function can describe a hidden pattern from the dataset. Semi-supervised
+    learning uses together categorized and non-categorized'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'dataset. Reinforcement is a method that relies on the trial-and-error process
+    to identify the most accurate behavior in an environment to improve its performance.
+
+
+    It is crucial to understand machine learning is not the go-to approach to solve
+    any problem in hand. Some problems can be solved with robust approaches without
+    relying on machine learning. Problematics with few data with target value that
+    can easily be defined by a deterministic approach. In this case, when it is easy
+    to determine and program a rule that drives the target value, machine learning
+    is not the best approach to follow.
+
+
+    Machine learning is best used when it is impossible to develop and a rule to define
+    the target value. For instance, image and speech recognition is a perfect example
+    of when machine learning is best used. Images, for example, have a lot of features
+    and pixels that a simple human task is very hard to implement to recognize the
+    image. A human being can visually recognize an image and classify it. But how
+    to develop an algorithm and a rule-based approach is exhausting and not very effective
+    for image recognition. So, in this case building an image dataset and flag each
+    image with its specific contents (i.e., animal, flower, object, etc.) and use
+    a machine-learning algorithm to detect each category of images is very efficient.
+    In short, machine learning is very handy when you have several factors that impact
+    the target value with little correlation.
+
+
+    Machine learning is also the best approach to automate a task for large datasets.
+    For example, it is easy to detect manually a spam email or a fraudulent transaction.
+    However, it is very time consuming and'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'tedious tasks to the same task for a hundred million emails or transactions.
+    Machine learning is very cost-effective and computationally efficient to handle
+    large datasets and large-scale problems.
+
+
+    Machine learning is also best used in cases where human expertise to solve a problem
+    is very limited. An example of these problems is when it is impossible to label
+    or categorize the data. Machine learning in this situation is used to learn from
+    the datasets and provide answers to the problems of the questions we are trying
+    to solve.
+
+
+    # Overall, machine learning is best used to solve a problem when:
+
+
+    +   1) human have the expertise to solve the problem but it almost impossible
+    to develop easily a program to mimic the human task
+
+
+    +   2) human have no expertise or an idea regarding the target value (i.e., no
+    label or classified data)
+
+
+    +   3) human have the expertise and knows the possible target values but it has
+    cost-effective and time consuming to implement such an approach.
+
+
+    In general machine learning is best used to solve complex data-driven problems
+    like learning behaviors for clients targeting or acquisition, fraud analysis,
+    anomaly detection in large systems, diseases diagnostic, shape/image, and speech
+    recognition among others.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# MACHINE LEARNING & ITS BASIC CONCEPT
+
+
+    The term "machine learning" was first coined in 1959 by Arthur Samuel, an AI and
+    computer gaming pioneer who defined it as "a field of study that provides computers
+    with the capability of learning without explicit programming."
+
+
+    That means that machine learning is an AI application that allows software to
+    learn by experience, continually improving without explicit programming. For example,
+    think about writing a program to identify vegetables based on properties such
+    as shape, size, color, etc.
+
+
+    You could hardcode it all, add a few rules which you use to identify the vegetables.
+    To some, this might seem to be the only way that will work, but there isn''t one
+    programmer who can write the perfect rules that will work for all cases. That’s
+    where machine learning comes in, without any rules — this makes it more practical
+    and robust. Throughout this guide, you will see how machine learning can be used
+    for this task.
+
+
+    So, we could say that machine learning is a study in making machines exhibit human
+    behavior in terms of decision making and behavior by allowing them to learn with
+    little human intervention – which means no explicit programming. This begs the
+    question, how does a machine'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'gain experience, and where does it learn from? The answer to that is simple
+    – data, the fuel that powers machine learning. Without it, there is no machine
+    learning.
+
+
+    One more question – if machine learning was first mentioned can k in 1959, why
+    has it taken so long to become mainstream? The main reason for this is the significant
+    amount of computing power machine learning requires, not to mention the hardware
+    capable of storing vast amounts of data. It''s only in recent years that we have
+    achieved the requirements needed to practice machine learning.
+
+
+    # # How Machine Learning and Traditional Programming Differ?
+
+
+    Traditional programming involves input data being fed into a machine, together
+    with a clean, tested program, to generate some output. With machine learning,
+    the input and the output data are fed to the machine during the initial phase,
+    known as the learning phase. From there, the machine will work the programming
+    out for itself.
+
+
+    Don''t worry if this doesn''t make sense right now. As you work through this in-depth
+    guide, it will all come together.
+
+
+    # ## Why We Need Machine Learning
+
+
+    These days, machine learning has more attention than you would think possible.
+    One of its primary uses is to automate tasks that require human intelligence.
+    Machines can only replicate this intelligence via machine learning.
+
+
+    Businesses use machine learning to automate tasks and automate and'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'create data analysis models. Some industries are heavily reliant on huge amounts
+    of data which they use to optimize operations and make the right decisions. Machine
+    learning makes it possible to create models to process and analyze complex data
+    in vast amounts and provide accurate results. Those models are scalable and precise,
+    and they function quickly, allowing businesses to leverage their huge power and
+    the opportunities they provide while avoiding risks, both known and unknown.
+
+
+    Some of the many uses of machine learning in the real world include text generation,
+    image recognition, and so on, this increasing the scope, ensuring machine learning
+    experts become highly sought-after individuals.
+
+
+    # ### How Does Machine Learning Work?
+
+
+    Machine learning models are fed historical data, known as training data. They
+    learn from that and then build a prediction algorithm that predicts an output
+    for a completely different set of data, known as testing data, that is given as
+    an input to the system. How accurate the models are entirely dependent on the
+    quality of the data and how much of it is provided – the more quality data there
+    is, the better the results and accuracy are.
+
+
+    Let''s say we have a highly complex issue that requires predictions. Rather than
+    writing complex code, we could give the data to machine learning algorithms. These
+    develop logic and provide predictions.
+
+
+    # ### Machine Learning Past to Present'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'These days, we see plenty of evidence of machine learning in action, such as
+    Natural Language Processing and self-drive vehicles, to name but two. Machine
+    learning has been in existence for more than 70 years, though, all beginning in
+    1943. Warren McCulloch, a neuropsychologist, and Water Pitts, a mathematician,
+    produced a paper about neurons and the way they worked. They went on to create
+    a model with an electrical circuit, producing the first-ever neural network.
+
+
+    Alan Turing created the Turing test in 1950. This test was used to determine whether
+    computers possessed real intelligence, and passing the test required the computer
+    to fool a human into believing it was a human.
+
+
+    Arthur Samuel wrote the very first computer learning program in 1952, a game of
+    checkers that the computer improved at the more it played. It did this by studying
+    the moves, determining which ones came into the winning strategies and then using
+    moves in its own program.
+
+
+    In 1957, Frank Rosenblatt designed the perceptron, a neural network for computers
+    that simulates human brain thought processes. Ten years later, an algorithm was
+    created called “Nearest Neighbor.” This algorithm allowed computers to begin pattern
+    recognition, albeit very basic at the time. This was ideal for salesmen to map
+    routes, ensuring all their visits could be completed within the shortest time.
+
+
+    It was in the 1990s that the biggest changes became apparent. Work was moving
+    from an approach driven almost entirely by knowledge to a more data-driven one.
+    Scientists started creating programs that'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'allowed computers to analyze huge swaths of data, learning from the results
+    to draw conclusions.
+
+
+    In 1997, Deep Blue, created by IBM, was the first computer-based chess player
+    to beat a world champion at his own game. The program searched through potential
+    moves, using its computing power to choose the best ones. And just ten years later,
+    Geoffrey Hinton coined the term “deep” learning to describe the new algorithms
+    that allowed computers to recognize text and objects in images and videos.
+
+
+    In 2012, Alex Krizhevsky published a paper with Ilya Sutskever and Geoffrey Hinton.
+    An influential paper, described a computing model that could reduce the error
+    rate significantly in image recognition systems. At the same time, Google’s X
+    Lab came up with an algorithm that could browse YouTube videos autonomously, choosing
+    those that had cats in them.
+
+
+    In 2016, Google DeepMind researchers created AlphaGo to play the ancient Chinese
+    game, Go, and pitted it against the world champion, Lee Sedol. AlphaGo beat the
+    reigning world champion four times out of five.
+
+
+    Finally, in 2020, GPT-3 was released, arguably the most powerful language model
+    in the world. Released by OpenAI, the model could generate fully functioning code,
+    write creative fiction, write good business memos, and so much more, with its
+    use cases only limited by imagination.
+
+
+    # Machine Learning Basic Concept
+
+
+    Machine learning offers plenty of features, with the most'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'prominent being the following:
+
+
+    Automation – most email accounts have a spam folder where all your spam emails
+    appear. You might question how your email provider knows which emails are spam,
+    and the answer is machine learning. The process is automated after the algorithm
+    is taught to recognize spam emails.
+
+
+    Being able to automate repetitive tasks is one of machine learning''s best features.
+    Many businesses worldwide are using it to deal with email and paperwork automation.
+    Take the financial sector, for example. Every day, lots of data-heavy, repetitive
+    tasks need to be performed, and machine learning takes the brunt of this work,
+    automating it to speed up and freeing up valuable staff hours for more important
+    tasks.
+
+
+    Better Customer Experience – good customer relationships are critical to businesses,
+    helping to promote brand loyalty and drive engagement. And the best way for a
+    customer to do this is to provide better services and food customer experiences.
+    Machine learning comes into play with both of these. Think about when you saw
+    ads on the internet or visited a shopping website. Most of the time, the ads are
+    relevant to things you have searched for, and the shopping sites recommend products
+    based on previous searches or purchases. Machine learning is behind these incredibly
+    accurate recommendation systems and ensures that we can tailor experiences to
+    each user.
+
+
+    In terms of services, most businesses use chatbots to ensure that they are available
+    24/7. And some are so intelligent that many customers do not even realize they
+    are not chatting to a real human being.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'Automated Data Visualization – these days, vast amounts of data are being generated
+    daily by individuals and businesses, for example, Google, Facebook, and Twitter.
+    Think about the sheer amount of data each of those must be generating daily. That
+    data can be used to visualize relationships, enabling businesses to make decisions
+    that benefit them and their customers. Using automated data visualization platforms,
+    businesses can gain useful insights into the data and use them to improve customer
+    experiences and customer service.
+
+
+    BI or Business Intelligence – When machine learning characteristics are merged
+    with data analytics, particularly big data, companies find it easier to find solutions
+    to issues and use them to grow their business and increase their profit. Pretty
+    much every industry uses this type of machine learning to increase operations.
+
+
+    With Python, you get the flexibility to choose between scripting and object-oriented
+    programming. You don’t need to recompile any code – the changes can be implemented,
+    and the results are shown instantly. It is the most versatile of all the programming
+    languages and is multiplatforms, which is why it works so well for machine learning
+    and data science.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# APPLICATIONS OF THE MACHINE LEARNING TECHNOLOGY
+
+
+    # Virtual Personal Assistants
+
+
+    The most popular case of virtual personal assistants are Siri and Alexa. These
+    systems are capable of providing relevant information using simple voice commands.
+    Machine learning is at the heart of these devices and systems, as they collect
+    and define the information generated with every user interaction and use this
+    information as training data to learn user preferences and provide an enhanced
+    experience.
+
+
+    # Predictions While Driving
+
+
+    Most of the vehicles today utilize GPS navigation services, which collect information
+    such as our current location and driving speed on a centralized server that can
+    be used to generate a map of current traffic. This helps in managing traffic and
+    reducing congestion. With the use of machine learning, the system can estimate
+    the regions where and the time of the day traffic jams occur frequently. Machine
+    learning algorithms allow sharing services such as Lyft and Uber, to minimize
+    detours on their routes and provide users an upfront'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'estimate of how much the ride will cost.
+
+
+    # Video Surveillance
+
+
+    Machines have taken over the monotonous job of monitoring multiple video cameras
+    to ensure security of premises. Machines can track unusual behavior like standing
+    motionless for an extended period of time, sleeping on benches, and stumbling.
+    It can then send an alert to the security personnel who can make the final decision
+    to act on the tip and avoid mishaps. With every iteration of reporting, the surveillance
+    services are improved as the machine learning algorithms learn and improve upon
+    itself.
+
+
+    # Social Media
+
+
+    Social media platforms are using machine learning algorithms to train the system
+    from user activity and behavior to be able to provide an engaging and enhanced
+    user experience. Some of the examples of the functionalities that are being driven
+    by machine learning algorithms are “People you may know” feature on Facebook (that
+    collects and learns from user activities such as the profiles they visit often,
+    they’re own profile and their friends to suggest other Facebook users that can
+    become friends with) and “Similar Pins” feature on Pinterest (that is driven by
+    computer vision Technology working in tandem with machine learning to identify
+    objects in the images of user’s saved “pins” and recommend similar “pins” accordingly).
+
+
+    # Email Spam and Malware Filtering'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'All email clients such as Gmail, Yahoo Mail and Hotmail use machine learning
+    algorithms to ascertain that the spam filter functionality is continuously updated
+    and cannot be penetrated by spammers and malware. Some of the spam filtering techniques
+    that are powered by machine learning are Multi Layered Perceptron and C 4.5 decision
+    tree induction.
+
+
+    # Online Customer Service
+
+
+    Nowadays, most of the e-commerce sites provide users with an option to chat with
+    a customer service representative, which is usually supported by a Chatbot instead
+    of a live executive. These bots use machine learning technology to know and understand
+    user inquiries and extract information from the website in order to be able to
+    resolve customer issues. With every interaction, Chatbots become smarter and more
+    humanlike.
+
+
+    # Refinement of Search Engine Results
+
+
+    Search engines such as “Google,” “Yahoo,” and “Bing” use machine learning algorithms
+    to provide improved search results pertinent with the user provided keywords.
+    For every search result, the algorithm observes and learns from user activity,
+    such as opening suggested links and the order in which the opened link was displayed
+    as well as time spent on the opened link. This helps the search engine to understand
+    which search results more optimal and any modifications needed to further improve
+    the search results.
+
+
+    # Product Recommendations'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'The product recommendation feature has now become the heart and soul of online
+    shopping experience. Machine learning algorithms in combination with artificial
+    intelligence fuel the product recommendation functionality. The system observes
+    and learns from consumer activity and behavior such as past purchases, wish list,
+    recently viewed items, and liked or added to cart items.
+
+
+    # Online Fraud Detection
+
+
+    The financial institutions are relying heavily on machine learning algorithms
+    and artificial intelligence to make cyber space secure by tracking potentially
+    fraudulent transactions online. For example, PayPal is using Machine learning
+    algorithms to prevent money laundering through its platform. They’re using a set
+    of artificial intelligence tools in combination with Machine learning algorithms
+    to analyze millions of transactions and distinguish between legitimate and illegitimate
+    transactions between the buyer and the seller. With every transaction, the system
+    learns which transactions are legitimate and which transactions could be potentially
+    fraudulent.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# TOOLS & LIBRARIES
+
+
+    Data scientists rarely work alone. This means it''s vital to maintain consistent
+    code that can be read and reused by other programmers. Similar to using WordPress
+    plugins with websites, code libraries make it easy for data scientists to perform
+    common tasks using pre-written modules of code.
+
+
+    With WordPress, for example, you can install a comments management plugin called
+    Discuz on a portfolio of websites. Using the same plugin for each website eliminates
+    the need for developers to familiarize themselves with each site''s underlying
+    code. They simply need to familiarize themselves with the basic interface and
+    customization settings of the Discuz plugin.
+
+
+    The same logic and benefits apply to machine learning libraries, as complex algorithms
+    and other functions can be called through the same code interface. Moreover, rather
+    than writing the statistical requirements of a regression algorithm over many
+    lines of code, you can call the algorithm from a library such as Scikit-learn
+    using just one line of code.
+
+
+    Example:
+
+
+    My_Model = Linearregression()
+
+
+    The libraries themselves are imported on a project-by-project basis'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'according to the scope of your project, i.e. data visualization, deep learning,
+    exploratory data analysis, shallow algorithms, data scrubbing, decision tree flow
+    maps, ensemble modeling using multiple algorithm types, etc.
+
+
+    The remainder of this guide provides a brief rundown of the most popular Python
+    libraries used within machine learning.
+
+
+    # # Pandas
+
+
+    Pandas is a library for managing and presenting your data. The name “Pandas” comes
+    from the term “panel data,” which refers to Panda’s ability to create a series
+    of panels, similar to sheets in Excel.
+
+
+    Pandas can be used to organize structured data as a dataframe, which is a two-dimensional
+    data structure (tabular dataset) with labeled rows and columns, similar to a spreadsheet
+    or SQL table. You can also use Pandas to import and manipulate an external dataset
+    including CSV files as a dataframe without affecting the source file as modifications
+    take place inside your development environment.
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_22_0.png)
+
+
+    Figure 1: Example of a Pandas’ dataframe
+
+
+    # # NumPy
+
+
+    NumPy is often used in combination with Pandas and is short for “numeric Python.”
+    On its own, NumPy is used for managing multi-'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'dimensional arrays and matrices, merging and slicing datasets, and offers a
+    collection of mathematical functions including min, max, standard deviation, and
+    variance.
+
+
+    NumPy consumes less memory and is said to perform better than Pandas with 50,000
+    rows or less. NumPy, though, is often used in conjunction with Pandas as the latter
+    is more user-friendly and easier to interpret in an interactive environment such
+    as Jupyter Notebook. A Pandas dataframe is more suitable for managing a mix of
+    data types, whereas a NumPy array is designed for dealing with numerical data,
+    especially multi-dimensional data.
+
+
+    Most machine learning models demonstrated to beginners in massive open courses
+    and textbooks structure data as a Pandas dataframe rather than a NumPy array but
+    often draw on the NumPy library for mathematical and other miscellaneous operations.
+
+
+    # Scikit-learn
+
+
+    Scikit-learn is the core library for general machine learning. It offers an extensive
+    repository of shallow algorithms including logistic regression, decision trees,
+    linear regression, gradient boosting, etc., a broad range of evaluation metrics
+    such as mean absolute error, as well as data partition methods including split
+    validation and cross validation.
+
+
+    Scikit-learn is also used to perform a number of important machine learning tasks
+    including training the model and using the trained model to predict the test data.
+
+
+    The following table is a brief overview of common terms and functions'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'used in machine learning from Scikit-learn.
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_24_0.png)
+
+
+    Table 1: Overview of key Scikit-learn terms and functions
+
+
+    # # Matplotlib
+
+
+    Matplotlib is a visualization library you can use to generate scatterplots, histograms,
+    pie charts, bar charts, error charts, and other visual charts with just a few
+    lines of code. While Matplotlib offers detailed manual control over line styles,
+    font properties, colors, axes, and properties, the default visual presentation
+    is not as striking and professional as other visualization libraries and is generally
+    used in conjunction with Seaborn themes.
+
+
+    # # Seaborn'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'Seaborn is a popular Python visualization library based on Matplotlib. This
+    library comes with numerous built-in themes for visualization and complex visual
+    techniques including color visualization of dependent and independent variables,
+    sophisticated heatmaps, cluster maps, and pairplots. The combination of Seaborn’s
+    pre-formatted visual design and Matplotlib’s customizability make it easy to generate
+    publication-quality visualizations.
+
+
+    Other popular visualization libraries include Plotly (an interactive visualization
+    Python library) and Cufflinks (connects directly with Pandas dataframes to create
+    graphs and charts).
+
+
+    # TensorFlow
+
+
+    A round-up of popular machine learning libraries wouldn’t be complete without
+    an introduction to Google’s TensorFlow. While Scikit-learn offers a broad set
+    of popular shallow algorithms, TensorFlow is the library of choice for deep learning
+    and artificial neural networks (ANN).
+
+
+    TensorFlow was created at Google and supports various advanced numerical computation
+    techniques. By distributing computations on a network with up to thousands of
+    GPU instances, TensorFlow supports advanced algorithms including neural networks
+    that would be impossible to run on a single server.
+
+
+    Unfortunately for Mac users, TensorFlow is only compatible with the Nvidia GPU
+    card, which is no longer available with Mac OS X. Mac users can still run TensorFlow
+    on their CPU but will need to run their workload on the cloud to access the GPU.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# QUIZ
+
+
+    1) Which library is better for managing a mix of data types (numeric and non-numerical
+    data)?
+
+
+    +   a) NumPy
+
+
+    +   b) Pandas
+
+
+    +   c) Seaborn
+
+
+    +   d) Matplotlib
+
+
+    2) Which Python library should we use for importing common shallow algorithms?
+
+
+    +   a) Scikit-learn
+
+
+    +   b) Pandas
+
+
+    +   c) Tensorflow
+
+
+    +   d) Seaborn
+
+
+    3) Which Python libraries can be used for visualizing data relationships?
+
+
+    +   a) Scikit-learn
+
+
+    +   b) Cuffles-learn
+
+
+    +   c) Matplotlib
+
+
+    +   d) Seaborn
+
+
+    4) Which of the following is a dataframe?
+
+
+    +   a) A NumPy data structure
+
+
+    +   b) A Pandas data structure
+
+
+    +   c) A Scikit-learn function'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '+   d) An Excel pivot table
+
+
+    +   5) Tensorflow is generally used for deep learning. True or False?
+
+
+    # SOLUTIONS
+
+
+    +   1) b, Pandas
+
+
+    +   2) a, Scikit-learn
+
+
+    +   3) c & d, Matplotlib and Seaborn
+
+
+    +   4) b, A Pandas data structure
+
+
+    +   5) True'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# PYTHON FOR MACHINE
+
+    LEARNING
+
+
+    In order to use machine learning, we need a programming language able to provide
+    instructions to the machines. In this section, we are going to learn the basics
+    of the Python language, how to install and launch python. We are also going to
+    learn some Python syntax and some useful tools to run Python. We also cover basic
+    Python libraries that useful for machine learning. First of all, why we would
+    use Python and not another programming language?
+
+
+    # Why Use Python for Machine Learning?
+
+
+    Python is a programming language extensively used for many reasons. One main reason
+    it is a free and open-source language, which means it is accessible for everybody.
+    Although it is free, it is community-based language, meaning that it is developed
+    and supported by a community that gathers its effort through the internet to improve
+    the language features. Other reasons people would use Python are 1) quality as
+    a readable language with a simple syntax, 2) program portability to any operating
+    system (e.g. Windows, Unix) without or with little modifications, 3)Speed of execution:
+    Python does not need compilation and run faster than similar programming languages,
+    4)'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'Component integration which means that Python can be integrated with other
+    programs, can be called from C and C++ libraries, or call another programming
+    language. Python comes with basic and powerful standard operations as well as
+    advanced pre-coded libraries like Numpy for numeric programming. Another advantage
+    of Python is automatic memory management and does not require variable and size
+    declaration. Moreover, Python allows developing different application such as
+    developing Graphical User Interface (GUI), doing numeric programming, do game
+    programming, database programming, internet scripting, and much more. In this
+    book section, will focus on how to do numeric programming for machine learning
+    applications and how to get started with Python.
+
+
+    # # How to Get started with Python?
+
+
+    Python, a scripting language, and like any other programming languages, it needs
+    an interpreter. The latter is a program which executes other language programs.
+    As its name indicates, it works as an interpreter for computer hardware to execute
+    the instructions of a Python programming. Python comes as a software package and
+    can be downloaded from Python’s website: www.python.org. When installing Python,
+    the interpreter is usually an executable program. Note that if you use UNIX and
+    LIX, Python might be already installed and probably is in the /usr directory.
+    Now that you have Python installed let’s explore how we can run some basic code.
+
+
+    To run Python, you can open your operating system’s prompt (on Windows opens a
+    DOS console Window) and type python. If it does not'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'work, it means that you don''t have python in Shell''s path Environment variable.
+    In this case, you should type the full path of the Python executable. On Windows,
+    it should be something similar to C:\Python3.7\python and in UNIX or LUNIX is
+    installed in the bin folder: /usr/local/bin/python (or /usr/bin/python).
+
+
+    When you launch Python, it provides two lines of information with the first line
+    is the Python version used as in the example below:
+
+
+    Python 3.7.1 (default, Dec 10 2018, 22:54:23) [MSC v.1915 64 bit (AMD64)]: Anaconda,
+    Inc. on win32
+
+
+    Type "help", "copyright", "credits" or "license" for more information.
+
+
+    ```
+
+    >>>
+
+    ```
+
+
+    Once a session is launched, Python prompts >>> which means it is ready. Ready
+    to run line code you write. The following is an example of printing statement:
+
+
+    ```
+
+    >>> print(''Hello World!'')
+
+    ```
+
+
+    Hello World !
+
+
+    ```
+
+    >>>
+
+    ```
+
+
+    When running Python in an interactive session as we did, it displays the results
+    after >>> as shown in the example. The code is executed interactively. To exit
+    the interactive Python session type Ctrl-Z on Windows or Ctrl-D on Unix/Linux
+    machine.
+
+
+    Now we learned how to launch Python and run codes in an interactive session. This
+    is a good way to experiment and test codes. However, the code is never saved and
+    need to be typed again to run the statement again. To store the code, we need
+    to type it in a file called module. Files'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'that contain Python statements are called modules. These files have extension
+    ''.py.'' The module can be executed simply by typing the module name. A text editor
+    like Notepad++ can be used to create the module files. For instance, let''s create
+    a module named text.py that prints ¹
+
+
+    # Hello World,'' and calculates 3^2. The file should contain the following statements:
+
+
+    +   - Print (''Hello World!'')
+
+    - Print (''3^2 Equal To ''**2)
+
+
+    To run this module, in the operating system''s prompt, type the following command
+    line:
+
+
+    python test.py
+
+
+    If this command line does not work, you should type the full path of Python''s
+    executable and the full path of the test.py file. You can also change the working
+    directory by typing cd full path of the test.py file, then type python test.py.
+    Changing the working directory to the directory where you saved the modules is
+    a good way to avoid typing the full path of the modules every time you are running
+    the module. The output is:
+
+
+    C:\Users>python C:\Users\test.py
+
+
+    +   - Hello World!
+
+    - 3^2 equal to 9
+
+
+    When we run the module test.py, the results are displayed in the operating system''s
+    prompt and go away as the prompt is closed. To store the results in a file, we
+    can use a shell syntax by typing:'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Python Test.Py > Save.Txt
+
+
+    The output of test.py is redirected and saved in the save.txt file.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# DATA ANALYSIS TECHNIQUES
+
+
+    Data analysis is the process of evaluating data using analytical as well as statistical
+    tools to discover useful information and help with business decision making. There
+    are a number of data analysis methods, including data mining, text analysis, business
+    intelligence and data visualization.
+
+
+    There are several data analysis methods including data mining, analysis, business
+    intelligence and data visualization.
+
+
+    # How Is Data Analysis Performed?
+
+
+    Data analytics is part of a larger process of deriving business intelligence.
+    The process comprises one or more of the following steps:
+
+
+    **Defining Goals:** Every survey should begin with a set of clearly defined business
+    goals. Much of the decisions made during the rest of the process depend on how
+    clearly the objectives of the study have been set.
+
+
+    **Question:** An attempt is made to ask a question in the problem area. Eg. Do
+    red sports cars get into accidents more often than others?
+
+
+    **Data collection:** Data relevant to the question should be collected from the
+    relevant sources. In the example above, data can be collected'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'from a variety of sources, including: DMV or police accident reports, insurance
+    claims, and admissions information. When data is collected using surveys, a questionnaire
+    is required to be submitted to the subjects. The questions must be appropriately
+    designed for the statistical method used.
+
+
+    **Data Wrangling:** Raw data can be collected in several different formats. The
+    data collected must be cleaned and converted so that data analysis tools can import
+    it. For our example, we can receive DMV accident reports as text files, insurance
+    claims from a relational database and admissions information such as API. The
+    data analyst must aggregate these different data forms and convert it into a form
+    suitable for the analysis tools.
+
+
+    **Data Analysis:** This is the step in which the purified and aggregated data
+    is imported into analysis tools. These tools allow you to explore the data, find
+    patterns in it and ask and answer what-if questions. This is the process of making
+    sense of data collected in research through the proper use of statistical methods.
+
+
+    **Drawing Conclusions and Predictions:** This is a step where, after sufficient
+    analysis, conclusions can be drawn from the data and appropriate predictions can
+    be made. These conclusions and predictions can then be summarized in a report
+    provided to end users.
+
+
+    **Now, let''s take a look at the methods of data analysis in particular.**
+
+
+    Data mining is a method of data analysis to discover patterns in large datasets
+    using the methods How to Become a Data Science How to Become a Data Science Data
+    science has gone from a new beginning in'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '2007 to being one of the most sought-after disciplines today. The goal is to
+    turn raw data into understandable business information. These may include identifying
+    groups of data items (also known as cluster analysis) or identifying anomalies
+    and dependencies between data groups.
+
+
+    # Applications Of Data Mining:
+
+
+    Anomaly detection can process large amounts of data ("big data") and automatically
+    identify outlier cases, possibly exclusion from decision-making or fraud detection
+    (e.g., bank fraud).
+
+
+    Learn customer buying habits. Machine learning techniques can be used to model
+    customer buying habits and determine frequently purchased items.
+
+
+    Clustering can identify previously unknown groups within the data. Classification
+    is used to automatically classify data entries into predefined locations. A common
+    example is to classify email messages "spam" or "non-spam" and have the system
+    learn by the user.
+
+
+    # Text Analytics
+
+
+    Text analysis is the process of deriving useful information from a text. It is
+    achieved by processing unstructured text information, extracting meaningful numeric
+    storage time with text operations in Excel. Saving time with text operations in
+    Excel can do magic with numbers and it can handle characters just as well. This
+    tutorial shows you how to analyze, convert, replace, and edit text in spreadsheets.
+    These basic reasons allow you to perform complex transformations. Read more indexes
+    from the information and make the information available for'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'statistical and machine learning algorithms for further processing.
+
+
+    The text extraction process includes one or more of the following steps:
+
+
+    +   - Collection of information from various sources, including web, file system,
+    database, etc.
+
+    - Linguistic analysis, including natural language processing.
+
+    - Pattern Recognition (e.g., Recognition of Phone Numbers, Email Addresses, etc.).
+
+    - Excerpt of summary information from the text, such as Relative frequencies of
+    the words, determination of similarities between documents, etc.
+
+
+    # Examples of text analysis programs:
+
+
+    Analysis of open survey responses. These studies are exploratory and include open
+    questions related to the topic of the question. Respondents can then express their
+    views without being limited to a particular response format.
+
+
+    Analysis of emails, documents, etc. to filter out "junk". This also includes automatic
+    classification of messages into predefined trays for various departments.
+
+
+    Investigate competitors by reviewing their websites. This could be used to derive
+    information about competitors'' activities.
+
+
+    # Security applications that can process intrusion detection logs.
+
+
+    # Business Intelligence'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: 'Business Intelligence How to Use Cortana to Analyze Data with Power BI How
+    to Use Cortana to Analyze Data with Power BI Are you eager to simplify your data
+    analysis? Get quick answers with Cortana this guide. Read More transforms data
+    into usable intelligence for business purposes and can be used in an organization''s
+    strategic and tactical decision-making process. It allows people to research trends
+    from data collected and derive insights from it.
+
+
+    # Some examples of business intelligence in use today:
+
+
+    +   - An organization''s operating decisions such as product placement and pricing.
+
+    - Identification of new markets, assessment of product demand and suitability
+    for different market segments.
+
+    - Budgeting and rolling forecasts.
+
+
+    # Data Visualization
+
+
+    Increasing amounts of data are generated by a number of sensors in'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'the environment (called "Things of Things" or "IOT"). This data (referred to
+    as "big data") presents challenges in understanding that can be alleviated by
+    using the data visualization tools. Data visualization is used in the following
+    applications.
+
+
+    +   - Extract of summary data from the raw IOT data.
+
+    - Use a bar chart to represent the sales performance over multiple quarters.
+
+    - A histogram shows the distribution of a variable as income by dividing the area
+    into bins.
+
+
+    # Data Analysis in Review
+
+
+    Data analysis is used to evaluate data with statistical tools to find useful information.
+    A variety of methods are used for this purpose, including data mining, text analysis,
+    business intelligence and data visualization.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# DATA SCRUBBING TECHNIQUES
+
+
+    Similar to Swiss or Japanese watch design, a good machine learning model should
+    run smoothly and contain no extra parts. This means avoiding syntax or other errors
+    that prevent the code from executing and removing redundant variables that might
+    clog up the model''s decision path.
+
+
+    This push towards simplicity extends to beginners developing their first model.
+    When working with a new algorithm, for example to create a minimal viable model
+    and add complexity to the code later. If you find yourself at an impasse, look
+    at the troublesome element and ask, “Do I need it?” If the model can''t handle
+    missing values or multiple variable types, the quickest cure is to remove the
+    troublesome elements. This should help the afflicted model spring to life and
+    breathe normally. Once the model is working, you can go back and add complexity
+    to your code.
+
+
+    # What is Data Scrubbing?
+
+
+    Data scrubbing is an umbrella term for manipulating data in preparation for analysis.
+    Some algorithms, for example, don''t recognize certain data types or they return
+    an error message in response to missing values or non-numeric input. Variables,
+    too, need to be scaled to size or converted to a more compatible data type.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: 'Linear regression, for example, analyzes continuous variables, whereas gradient
+    boosting asks that both discrete (categorical) and continuous variables are expressed
+    numerically as an integer or floating-point number.
+
+
+    Duplicate information, redundant variables, and errors in the data can also conspire
+    to derail the model''s capacity to dispense valuable insight.
+
+
+    Another potential consideration when working with data, and specifically private
+    data, is removing personal identifiers that could contravene relevant data privacy
+    regulations or damage the trust of customers, users, and other stakeholders. This
+    is less of a problem for publicly-available datasets but something to be mindful
+    of when working with private data.
+
+
+    # Removing Variables
+
+
+    Preparing the data for further processing generally starts with removing variables
+    that aren''t compatible with the chosen algorithm or variables that are deemed
+    less relevant to your target output. Determining which variables to remove from
+    the dataset is normally determined by exploratory data analysis and domain knowledge.
+
+
+    In regards to exploratory data analysis, checking the data type of your variables
+    (i.e. string, Boolean, integer, etc.) and the correlation between variables is
+    a useful measure to eliminate variables.[11] Domain knowledge, meanwhile, is useful
+    for spotting duplicate variables such as country and county code and eliminating
+    less relevant variables like latitude and longitude, for example.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'In Python, variables can be removed from the dataframe using the del command
+    alongside the variable name of the dataframe and the title of the column you wish
+    to remove. The column title should be nested inside quotation marks and parentheses
+    as shown here.
+
+
+    +   - Del Df[''Latitude'']
+
+    - Del Df[''Longitude'']
+
+
+    Note that this code example, in addition to other changes made inside your notebook,
+    won''t affect or alter the source data. You can even restore variables removed
+    from the development environment by deleting the relevant line(s) of code. It''s
+    common to reverse the removal of features when retesting the model with different
+    variable combinations.
+
+
+    # One-Hot Encoding
+
+
+    One of the common roadblocks in data science is a mismatch between the data type
+    of your variables and the algorithm. While the contents of the variable might
+    be relevant, the algorithm might not be able to read the data in its default form.
+    Text-based categorical values, for example, can''t be parsed and mathematically
+    modeled using general clustering and regression algorithms.
+
+
+    One quick remedy involves re-expressing categorical variables as a numeric categorizer.
+    This can be performed using a common technique called one-hot encoding that converts
+    categorical variables into binary form, represented as “1” or “0”—“True” or “False.”
+
+
+    ```
+
+    import pandas as pd
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '```
+
+    df = pd.read_csv(''~/Downloads/listings.csv'')
+
+    df = pd.get_dummies(df, columns = [''neighbourhood_group'', ''neighbourhood''])
+
+    df.head()
+
+    ```
+
+
+    # Run the code in Jupyter Notebook.
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_42_0.png)
+
+
+    Figure 1: Example of one-hot encoding
+
+
+    One-hot encoding expands the dataframe horizontally with the addition of new columns.
+    While expanding the dataset isn’t a major issue, you can streamline the dataframe
+    and enjoy faster processing speed using a parameter to remove expendable columns.
+    Using the logic of deduction, this parameter reduces one column for each original
+    variable. To illustrate this concept, consider the following example:
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_42_1.png)
+
+
+    Table 1: Original dataframe'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '![](img/d8987d3110291847d867988b0a2d7ecb_43_0.png)
+
+
+    # Table 2: Streamlined dataframe with dropped columns
+
+
+    While it appears that information has been removed from the second dataframe,
+    the Python interpreter can deduct the true value of each variable without referring
+    to the expendable (removed) columns. In the case of Mariko, the Python interpreter
+    can deduct that the subject is from Tokyo based on the false argument of the two
+    other variables. In statistics, this concept is known as multicollinearity and
+    describes the ability to predict a variable based on the value of other variables.
+
+
+    To remove expendable columns in Python we can add the parameter drop_first=True,
+    which removes the first column for each variable.
+
+
+    ```
+
+    Df = pd.get_dummies(df, columns = [''neighbourhood_group'', ''neighbourhood''],
+    drop_first = True)
+
+    ```
+
+
+    # Drop Missing Values
+
+
+    Another common but more complicated data scrubbing task is deciding what to do
+    with missing data.
+
+
+    Missing data can be split into three overarching categories: missing completely
+    at random (MCAR), missing at random (MAR), and nonignorable. Although less common,
+    MCAR occurs when there''s no relationship between a missing data point and other
+    values in the dataset.
+
+
+    Missing at random means the missing value is not related to its own'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'value but to the values of other variables in the analysis, i.e. skipping an
+    extended response question because relevant information was inputted in a previous
+    question of the survey, or failure to complete a census due to low levels of language
+    proficiency as stated by the respondent elsewhere in the survey (i.e. a question
+    about respondent''s level of English fluency). In other words, the reason why
+    the value is missing is caused by another factor and not directly to the value
+    itself. MAR is most common in data analysis.
+
+
+    Nonignorable missing data constitutes the absence of data directly to its own
+    value or significance. Unlike MAR, the value is missing due to the significance
+    of the question or field. Tax evading citizens or respondents with a criminal
+    record may decline to supply information to certain questions due to feelings
+    of sensitivity towards that question.
+
+
+    The irony of these three categories is that because data is missing, it''s difficult
+    to classify missing data. Nevertheless, problem-solving skills and awareness of
+    these categories sometimes help to diagnose and correct the root cause for missing
+    values. This might include rewording surveys for second-language speakers and
+    adding translations of the questions to solve data missing at random or through
+    a redesign of data collection methods, such as observing sensitive information
+    rather than asking for this information directly from participants, to find nonignorable
+    missing values.
+
+
+    A rough understanding of why certain data is missing can also help to influence
+    how you manage and treat missing values. If male participants, for example, are
+    more willing to supply information'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'about body weight than women, this would eliminate using the sample mean (of
+    largely male respondents) from existing data to populate missing values for women.
+
+
+    Managing MCAR is relatively straightforward as the data values collected can be
+    considered a random sample and more easily aggregated or estimated. We’ll discuss
+    some of these methods for filling missing values in this guide, but first, let’s
+    review the code in Python for inspecting missing data.
+
+
+    # Df. Isnull ((). Sum ()
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_45_0.png)
+
+
+    Figure 3: Inspecting missing values using isnull(). sum ()
+
+
+    Using this method, we can obtain a general overview of missing values for each
+    feature. From here, we can see that four variables contain missing values, which
+    is high in the case of last_review (3908) and reviews_per_month (3914). While
+    this won’t be necessary for all algorithms, there are several options we can consider
+    to patch up these missing values. The first approach is to fill the missing values'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: 'with the average value for that variable using the fill.na method.
+
+
+    ```
+
+    df[''reviews_per_month''].fillna((df[''reviews_per_month'']
+
+    mean()), inplace=True)
+
+    ```
+
+
+    This line of code replaces the missing values for the variable reviews_per_month
+    with the mean (average) value of that variable, which is 1.135525 for this variable.
+    We can also use the fill.na method to approximate missing values with the mode
+    (the most common value in the dataset for that variable type). The mode represents
+    the most common variable value available in the dataset.
+
+
+    ```
+
+    df[''reviews_per_month''].fillna(df[''reviews_per_month'']
+
+    mode()), inplace=True)
+
+    ```
+
+
+    In the case of our dataset, the mode value for this variable is ‘NAN’ (Not a Number),
+    and there isn''''t a reliable mode value we can use. This is common when variable
+    values are expressed as a floating-point number rather than an integer (whole
+    number).
+
+
+    Also, the mean method does not apply to non-numeric data such as strings—as these
+    values can''t be aggregated to the mean. One-hot encoded variables and Boolean
+    variables expressed as o or 1 should also not be filled using the mean method.
+    For variables expressed as o or 1, it''s not appropriate to aggregate these values
+    to say 0.5 or 0.75 as these values change the meaning of the variable type.
+
+
+    To fill missing values with a customized value, such as ‘o’, we can specify target
+    value inside the parentheses.
+
+
+    ```
+
+    df[''reviews_per_month''].fillna (o)
+
+    ```
+
+
+    A more drastic measure is to drop rows (cases) or columns (variables)'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: 'with large amounts of missing data from the analysis. Removing missing values
+    becomes necessary when the mean and mode aren''t reliable and finding an artificial
+    value is not applicable. These actions are feasible when missing values are confined
+    to a small percentage of cases or the variable itself isn''t central to your analysis.[12]
+
+
+    There are two primary methods for removing missing values. The first is to manually
+    remove columns afflicted by missing values using the del method as demonstrated
+    earlier. The second method is the dropna method which automatically removes columns
+    or rows that contain missing values.
+
+
+    df. dropna (axis = o, how = ''any'', thresh = None, subset = None, inplace = True)
+
+
+    As datasets typically have more rows than columns, it''s best to drop rows rather
+    than columns as this helps to retain more of the original data. A detailed explanation
+    of the parameters for this technique is described in Table 5.
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_47_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Table 3: Dropna parameters
+
+
+    In summary, there isn’t always a simple solution to deal with missing values and
+    your response will often depend on the data type and the frequency of the missing
+    values. In the case of the Berlin Airbnb dataset, there is a high number of missing
+    values for the variables last_review and reviews_per_month, which may warrant
+    removing these variables. Alternatively, we could use the mean to fill reviews_per_month
+    given these values are expressed numerically and can be easily aggregated. The
+    other variable last_review cannot be aggregated because it is expressed as a timestamp
+    rather than as an integer or floating-point number.
+
+
+    The other variables containing missing values, name and host_name, are also problematic
+    and cannot be filled with artificial values. Given these two variables are discrete
+    variables, they cannot be estimated based on central tendency measures (mean and
+    mode), and should perhaps be removed on a row-by-row basis given the low presence
+    of missing values for both these two variables.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# CLUSTERING
+
+
+    One widely used application of unsupervised learning is clustering. In clustering,
+    the goal is to aggregate instances into a few cohesive groups.
+
+
+    Doing so can help us solve a diverse array of problems. For instance, we can use
+    clustering to segment customers into different groups based on their shopping
+    preferences. We can also use it to detect outliers (by detecting instances that
+    are not similar to any known clusters), reduce the number of features in our training
+    set, or compress images.
+
+
+    # K-Means Clustering
+
+
+    One of the most commonly used algorithms for clustering is k-means clustering.
+    The intuition behind this algorithm is quite simple.
+
+
+    To perform k-means clustering, we must first decide on the number of clusters
+    (k) we want. Next, we choose the centroids of these clusters randomly and perform
+    the following steps iteratively:
+
+
+    First, we assign each training instance to a cluster based on its proximity to
+    the cluster’s centroid. Next, we compute the mean of'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'all the data points assigned to a cluster and use that to update the centroid.
+    After updating the centroids of all the clusters, we reassign the points and repeat
+    the updating and assigning steps until all the centroids stop changing.
+
+
+    Let’s use a small dataset with five points - (2,2), (3,2), (3,1), (1,1), and (0,0)
+    - to illustrate.
+
+
+    If we want to cluster these points into two clusters, we need to select two centroids
+    randomly. Suppose we choose (1.5, 1.5) and (3, 1.5) as the centroids and name
+    the clusters C1 and C2, respectively.
+
+
+    Now, we need to assign each data point to the cluster with the nearest centroid.
+    To determine how close a point is to a centroid, we commonly use the Euclidean
+    distance formula. The table below shows the distances of each point from the two
+    centroids.
+
+
+    # Centroid of C1 = (1.5, 1.5)Centroid of C2 = (3, 1.5)
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_50_0.png)
+
+
+    Based on the distances shown above, we’ll assign (2, 2), (1,1), and (0,0) to C1,
+    and (3, 2) and (3, 1) to C2. Now, we need to calculate the mean of the data points
+    in each cluster and use that to update the centroids.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '![](img/d8987d3110291847d867988b0a2d7ecb_51_0.png)
+
+
+    The centroid of C1 changes to (1, 1), while that of C2 stays same. Let''s calculate
+    the distances of our data points from the new centroids and reassign them.
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_51_1.png)
+
+
+    Most of the points remain in the same cluster except for (2, 2). We need to recalculate
+    the mean of the data points in the two clusters and update the centroids.
+
+
+    We repeat the process of updating the centroids and reassign data points until
+    the clusters no longer change. When that happens, we say that the algorithm has
+    converged and the algorithm ends.
+
+
+    # Centroid Initialization Methods
+
+
+    k-means clustering is a simple and easy-to-understand algorithm. However, when
+    we use k-means clustering, there are two things we need to do.
+
+
+    First, we need to choose the initial centroids. Choosing the initial centroids
+    is known as centroid initialization, and poor initialization can lead to suboptimal
+    solutions.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'For instance, the chart below shows two identical sets of data points clustered
+    differently due to different initial centroids (A, B, and C vs. X, Y, and Z).
+    While both solutions give us three clusters, the solution on the right is better
+    as the points within each cluster are closer to their centroids.
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_52_0.png)
+
+
+    # Centroid initialization
+
+
+    There are two ways to select the initial centroids.
+
+
+    The first way is to run the entire k-means algorithm multiple times with different
+    randomly selected initial centroids. For each run, we compute the sum of the squared
+    distances between each instance and the centroid of its final cluster. This sum
+    is known as the inertia of the model. We then compare the inertias of all the
+    runs and choose the run with the smallest inertia.
+
+
+    Another way is to select the initial centroids using a technique known as k-means++.
+    This technique uses additional computation to determine centroids that are distant
+    from one another and has been shown to result in faster convergence and better
+    results. sklearn k-means++ by default.
+
+
+    # Determine the Number of Clusters
+
+
+    Besides choosing the initial centroids, another task that we need to do'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: 'is decide on the number of clusters.
+
+
+    One way to do this is to visually determine the number of clusters by plotting
+    the dataset on a scatter plot. However, this only works if we have a simple dataset
+    that can be easily plotted.
+
+
+    A better approach is to use the elbow method. This method involves running the
+    k-means algorithm multiple times with different numbers of clusters and calculating
+    the inertia of each run. The goal is to find an optimal number of clusters where
+    the decrease in inertia becomes less significant with added clusters.
+
+
+    In the next section, we''ll demonstrate how to use the elbow method to determine
+    the optimal number of clusters. We''ll also learn to train a k-means model using
+    sklearn.
+
+
+    # K Means Clustering with Scikit-Learn
+
+
+    The dataset that we''ll be using to train our model is stored in a file called
+    clustering.csv. Let''s load the dataset and explore it:
+
+
+    ```
+
+    import pandas as pdimport matplotlib.pyplot as plt%matplotlib inline
+
+    ```
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_53_0.png)
+
+
+    ```
+
+    df = pd.read_csv(''clustering.csv'')
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '```
+
+    print(df.isnull().sum())df.head()
+
+    ```
+
+
+    This gives us the following output:
+
+
+    **X1  X2 dtype: int64**
+
+
+    # # The Clustering Dataset
+
+
+    This dataset consists of two features - X1 and X2, and our goal is to use both
+    features to cluster the instances.
+
+
+    As the dataset is not labeled, we do not need to split it into training and test
+    subsets because there are no true labels to evaluate against our predicted values.
+    We also do not need to do any data preprocessing as there are no missing values
+    or textual data in the dataset. In addition, the range of X1 and X2 do not differ
+    much, as shown in the output below:
+
+
+    ```
+
+    df.describe()
+
+    ```
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_54_0.png)
+
+
+    **Figure 3: Statistics for the clustering dataset**'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: 'Now, let’s do a scatter plot of the dataset:
+
+
+    ```
+
+    plt.scatter(df[''X1''], df[''X2''])plt.grid(''X1'')plt.ylabel(''X2'')
+
+    ```
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_55_0.png)
+
+
+    Figure 4: Scatter plot for the clustering dataset
+
+
+    Visually, we can see that there seem to be three clusters in our dataset.
+
+    Let’s use the elbow method to determine if 3 is indeed the optimal number of clusters:
+
+
+    ```
+
+    from sklearn.cluster import KMeansinertias = []
+
+    for k in range(2, 20):    kmeans = KMeans(init=''k-means++'', random_state=0,
+    n_clusters=k)
+
+    kmeans.fit(df).append(kmeans.inertia_)
+
+    plt.figure(figsize=(12, 4))plt.grid().plot(range(2, 20), inertias)plt.xticks(range(0,
+    20), ''Number of Clusters'')plt.ylabel(''Inertia'')
+
+    plt.show()
+
+    ```
+
+
+    Here, we first import the KMeans class from the sklearn.cluster module. Next,
+    we declare an empty list called inertias.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'After declaring the list, we use a for loop to run the k-means algorithm 18
+    times (from k = 2 to k = 19). We instantiate a KMeans object for each run and
+    pass n_clusters=k to the constructor to specify the number of clusters and random_state
+    = o for reproducibility results.
+
+
+    We also pass init = ''k-means++'' to specify the centroid initialization method.
+    This specification is optional as k-means++ is the default initialization method
+    used by sklearn. However, if we want to use the random initialization method instead,
+    we need to pass init = ''random'' to the constructor.
+
+
+    After instantiating the KMeans object, we use it to train our model and append
+    the resulting inertia (stored in the inertia_ attribute) to the inertias list.
+
+
+    After training all the models, the for loop ends. Outside the loop, we use the
+    plot() method to plot the inertias on the y-axis against the number of clusters
+    on the x-axis.
+
+
+    If you run the code above, you''ll get the ff. elbow plot.
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_56_0.png)
+
+
+    # Figure 5: Elbow plot
+
+
+    This plot shows clearly that the inertia drops as the number of clusters increases.
+    In fact, if we have 500 clusters, the inertia will be zero. This'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'because there are 500 data points in our dataset. If each point is its own
+    cluster, we will not have any inertia.
+
+
+    However, having 500 clusters is useless and defeats the purpose of clustering
+    in the first place. So instead of aiming for an inertia of zero, we strive to
+    find an optimal number of clusters such that the drop in inertia goes from being
+    quite significant to not as substantial.
+
+
+    This happens when we have three clusters. From 2 to 3 clusters, the inertia dropped
+    from above 12000 to below 4000. From 3 to 4 clusters, the drop is much less substantial.
+    Therefore, 3 is a reasonable number of clusters to form.
+
+
+    After getting the number of clusters, we can rerun our k-means algorithm to determine
+    the clusters'' centroids (stored in the cluster_centers_ attribute):
+
+
+    ```
+
+    kmeans = KMeans(random_state=0, n_clusters=3)kmeans.fit(
+
+    print(kmeans.cluster_centers_))
+
+    ```
+
+
+    This gives us the following output:
+
+
+    > [-2.56005145 9.02757054] [-6.78277285 -6.63304128] [ 4.58815239 1.91636363]]
+
+
+    sklearn automatically assigns an index to each cluster. As there are three clusters
+    in our example, the indexes are 0, 1, and 2. To get the cluster of an instance,
+    we use the predict() method:
+
+
+    ```
+
+    # Getting the cluster for the first row in
+
+    dfprint(kmeans.predict(df.loc[[0]]))
+
+    ```
+
+
+    ```
+
+    # Getting the cluster for a new point (-2,
+
+    10)print(kmeans.predict([[-2, 10]]))
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: 'Here, we use df.loc[[o]] to select the first row in df and pass this array
+    to the predict() method. We also pass a new point (-2, 10) as a 2D array to the
+    method. If you run the code above, you''ll get the following output:
+
+
+    ```
+
+    [1][o]
+
+    ```
+
+
+    The first row in df is assigned to cluster 1, while the point (-2, 10) is assigned
+    to cluster 0.
+
+
+    If you want to get the clusters of all the points in df, you can use the labels_attribute:
+
+
+    ```
+
+    df[''Cluster''] = kmeans.labels_df.head()
+
+    ```
+
+
+    Here, we add a column called Cluster to our df DataFrame and assign kmeans.labels_
+    to it. If you print the first five rows in df now, you''ll get the following output:
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_58_0.png)
+
+
+    Figure 6: Clusters assigned to the instances
+
+
+    We can plot the three clusters (o, 1, and 2) on the same scatter plot using the
+    code below:
+
+
+    ```
+
+    plt.figure(figsize=(16, 10))markers = [''x'', ''*'', '''', ''+'']
+
+    for i in range(0, 3): cond = df[''Cluster''] == i df2 = df[cond]
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '```
+
+    plt.scatter(df2[''X1''], df2[''X2''], label = ''Cluster ''+str(i), marker = markers[i])
+
+    ```
+
+
+    ```
+
+    plt.scatter(kmeans.cluster_centers_[:], o], kmeans.cluster_centers_[:,
+
+    1], color = ''black'', s = 50, marker = "s")
+
+    ```
+
+
+    ```
+
+    plt.xlabel(''X1'').plt.ylabel(''X2'').plt.legend()
+
+    ```
+
+
+    Here, we first specify the size of our chart and declare a list called markers
+    to store the markers for our clusters. Next, we use for a loop (runs 3 times)
+    to plot the loop clusters.
+
+
+    The first time the loop runs, i equals o. The condition df[''Cluster''] == i becomes
+    df[''Cluster''] == o.
+
+
+    This condition selects rows in df with a Cluster value of o. We assign
+
+    selected rows to a new DataFrame df2 and use the scatter(
+
+    function to plot a scatter plot for these rows, passing label = ''Cluster o''
+
+    and marker = ''x'' to the function.
+
+
+    This plots all the data points in df with a Cluster value of o, using ''x'' as
+
+    the marker.
+
+
+    After plotting the points for the first cluster, the for loop runs two\more times
+    to plot the other two clusters, changing the label and
+
+    marker for each plot.
+
+
+    After plotting all three clusters, the for loop ends. Outside the loop,
+
+    we use the cluster_centers_ attribute to plot the centroids of our
+
+    clusters.
+
+
+    cluster_centers_ stores the centroids as a NumPy array.
+
+
+    cluster_centers_[:], o] gives us the first column of this array (i.e., the x-
+
+    values for the centroids), while cluster_centers_[:, 1] gives us the'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: 'second (i.e., the y-values).
+
+
+    If you run the code above, you''ll get the ff. chart:
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_60_0.png)
+
+
+    Figure 7: Scatter plot showing the different clusters and centroids
+
+
+    Clusters 0, 1, and 2 are plotted using ''x'', ''.'', and ''+'', respectively,
+    while the centroids are plotted using squares.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# DATA VISUALIZATION
+
+    TECHNIQUES
+
+
+    Data visualization ensures that our meaningful data analysis is faster and easier
+    to do, and, in many cases, it should be one of the first steps in analyzing data.
+
+
+    The data is accessed, processed, and then visualized to show quick insights, such
+    as looking for outliers, patterns, etc.
+
+
+    Visualization Goals
+
+
+    The two main aims of data visualization are exploring data and communicating it.
+    When data is visualized in histograms, bar charts, or another visualization format,
+    you should be able to see any patterns immediately. If you use a line graph, you
+    will see straight away if a trend is rising. If you use a pie chart, you can see
+    the magnitude of a factor compared to other factors. Data visualization is used
+    because it makes data clearer than long lists of numbers and other data.
+
+
+    For example, look at the graph at the link – it shows the search trend across
+    the world on the word "bitcoin":
+
+
+    https://trends.google.com/trends/explore?q=bitcoin
+
+
+    Straightaway you should see a massive, albeit temporary, increase in searches
+    for "bitcoin," but it decreases steadily after that huge peak. It'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: 'could be that, during the peak, there is a great deal of hype about bitcoin,
+    but that will die down over time because that''s what happens with hypes or because
+    people have become familiar with it.
+
+
+    Whatever the case, data visualization showed us those patterns quickly – imagine
+    that data presented in a list of numbers. You know it would take much longer to
+    analyze, but a simple graph showed us at a glance what was going on.
+
+
+    This is why data visualization is important when presenting data to the public
+    or a panel. Some people prefer an overview that doesn''t go into vast amounts
+    of details, and the last thing you want to do is present them with a whole heap
+    of boring numbers and text. When you present the data so that people can immediately
+    see what''s important and isn''t, you make a much bigger impact.
+
+
+    Data visualization can be done in a few ways. You can use Microsoft Excel to create
+    graphs and plots or use matplotlib, Bokeh, D3, and Seaborn to create a visualization.
+    We''ll be using Matplotlib throughout the rest of this guide, as it is one of
+    the most popular data visualization libraries for Python.
+
+
+    # Importing and Using Matplotlib
+
+
+    Using Python and some simple code, you can generate scatterplots, bar charts,
+    plots, and many other visualization types very easily. Rather than wasting all
+    that time and effort on working things out, you can place your focus firmly on
+    faster data exploration and analysis.
+
+
+    Okay, so that sounds like a bit of a mouthful - all you need to remember is that
+    it is about nothing more than exploring the data and'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: 'communicating the insights. Look at the bar chart below:
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_63_0.png)
+
+
+    You only need to use the following code block to create that bar chart:
+
+
+    +   - import matplotlib.pyplot as plt
+
+    - plt.rcdefaults()
+
+    - import numpy as np
+
+    - import matplotlib.pyplot as plt
+
+    - plt.rcdefaults()
+
+    - fig, ax = plt.subplots()
+
+
+    ```
+
+    # Example data
+
+    peple = (''Tom'', ''Dick'', ''Harry'', ''Slim'', ''Jim'')
+
+    y_pos = np.arange(len(people))
+
+    performance = 3 + 10 * np.random.rand(len(people))
+
+    error = np.random.rand(len(people))
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '```
+
+    ax.barh(y_pos, performance, xerr=error, align=''center'',
+
+    color=''green'', ecolor=''black'')
+
+    ax.set_yticks(y_pos)
+
+    ax.set_ticklabels(people)
+
+    ax.invert_yaxis() # labels read top-to-bottom
+
+    ax.set_xlabel(''Performance'')
+
+    ax.set_title(''How fast do you want to go today?'')
+
+    plt.show()
+
+    ```
+
+
+    This might look complex, but it really isn''t. First, we imported the libraries
+    we needed. Then we set our data and described how we wanted to see it. If you
+    had to write the entire code from scratch, you might struggle a bit, especially
+    as a beginner, but we don''t need to do this. Just copy the code then modify it
+    as per our needs.
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_64_0.png)
+
+
+    Matplotlib isn''t just useful for creating horizontal bar charts. You can also
+    use it to create boxplots, scatterplots, and lots of other data representations.'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: 'Simple demo of a scatter plot.
+
+
+    ```
+
+    import numpy as np
+
+    import matplotlib.pyplot as plt
+
+    N = 50
+
+    x = np.random.rand(N)
+
+    y = np.random.rand(N)
+
+    colors = np.random.rand(N)
+
+    area = np.pi * (15 * np.random.rand(N))**2 # o to 15 radii
+
+    plt.scatter(x, y, s=area, c=colors, alpha=0.5)
+
+    ```
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_65_0.png)
+
+
+    ```
+
+    plt.show()
+
+    import matplotlib.pyplot as plt
+
+    from numpy.random import rand
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '```
+
+    fig, ax = plt.subplots()
+
+    for color in [''red'', ''green'', ''blue'']:
+
+    n = 750
+
+    x, y = rand(2, n)
+
+    scale = 200.0 * rand(n)
+
+    ax.scatter(x, y, c=color, s=scale, label=color,
+
+    alpha=0.3, edgecolors=''none'')
+
+    ax.legend()
+
+    ax.grid(True)
+
+    ```
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_66_0.png)
+
+
+    ```
+
+    plt.show()
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '![](img/d8987d3110291847d867988b0a2d7ecb_67_0.png)
+
+
+    These are some examples to show you what you can do with Matplotlib.
+
+
+    You can use this cool library to make data visualizations that are suited to publication.
+    You can modify the code as you need it to suit your project and your requirements.
+
+
+    Reinventing the wheel is no longer necessary – simply copy the code you need and
+    adapt it.
+
+
+    Maybe, things will get even easier for creating data visualizations, especially
+    where we are dealing with massive datasets. It''s even possible to create animated
+    visualizations, those that change with data changes through time.
+
+
+    We''ve discussed some general topics relating to data analysis, so now'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: 'it''s time to go a bit more in-depth and look at advanced topics specific to
+    data analysis and machine learning. This book aims to familiarize you with the
+    terms and concepts related to data analysis and data science, and we''ll start
+    by looking at supervised and unsupervised learning.
+
+
+    Supervised and Unsupervised Learning
+
+
+    These are two of the most common terms you will encounter in data science and
+    machine learning because they are the two most used machine learning categories
+    used by data scientists.
+
+
+    # Supervised Learning
+
+
+    Supervised learning is much like learning by looking at examples. For example,
+    let''s say we have a large collection of images of dogs and cats. All the images
+    are correctly labeled as "cat" or "dog". When we give that collection to our computer,
+    it will learn, by looking at them, how to correctly classify a dog or cat picture.
+    As it does, the computer will find similarities and patterns in the images.
+
+
+    When we introduce a new set of images to our computer model, it will correctly
+    identify those images with cats or dogs.
+
+
+    It''s much like you sitting down and learning something while being supervised.
+    There are right answers and wrong ones; our computer model needs to put what it
+    learned on the first dataset into practice on the second one, so it can correctly
+    predict the right answers in the majority of cases – it is virtually impossible
+    to reach 100%.
+
+
+    Linear regression is one of the best-known examples of supervised learning. Linear
+    regression is all about predicting an output value (y)'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: 'for a given input (X). The first thing that must be done is to find patterns
+    in the data. Then, a line must be "fit" to describe the X/y relationship and predict
+    the y
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_69_0.png)
+
+
+    values.
+
+
+    print(__doc__)
+
+
+    # Code source: Jaques Grobler
+
+
+    # License: BSD 3 clause
+
+
+    +   - import matplotlib.pyplot as plt
+
+    - import numpy as np
+
+    - from sklearn import datasets, linear_model
+
+    - from sklearn.metrics import mean_squared_error, r2_score
+
+
+    # Load the diabetes dataset
+
+
+    +   - diabetes = datasets.load_diabetes()
+
+
+    # Use only one feature'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '+   - diabetes_X = diabetes.data[:], np.newaxis, 2]
+
+
+    # # Split the data into training/testing sets
+
+
+    +   - diabetes_X_train = diabetes_X[:-20]
+
+
+    +   - diabetes_X_test = diabetes_X[-20:]
+
+
+    # # Split the targets into training/testing sets
+
+
+    +   - diabetes_y_train = diabetes.target[:-20]
+
+
+    +   - diabetes_y_test = diabetes.target[-20:]
+
+
+    # # Create linear regression object
+
+
+    +   - regr = linear_model.LinearRegression()
+
+
+    # # Train the model using the training sets
+
+
+    +   - regr.fit(diabetes_X_train, diabetes_y_train)
+
+
+    # # Make predictions using the testing set
+
+
+    +   - diabetes_y_pred = regr.predict(diabetes_X_test)
+
+
+    # # The coefficients
+
+
+    +   - print(''Coefficients: \n'', regr.coef_)
+
+
+    # # The mean squared error
+
+
+    +   - print("Mean squared error: %f")
+
+
+    +   - % mean_squared_error(diabetes_y_test, diabetes_y_pred))
+
+
+    # # Explained variance score: 1 is perfect prediction
+
+
+    +   - print(''Variance score: %2f % r2_score(diabetes_y_test, diabetes_y_pred))
+
+
+    # # Plot outputs'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '```
+
+    plt.scatter(diabetes_X_test, diabetes_y_test, color=''black'')
+
+    plt.plot(diabetes_X_test, diabetes_y_pred, color=''blue'', linewidth=3)
+
+    plt.xticks()
+
+    ```
+
+
+    # plt.yticks()
+
+
+    # plt.show()
+
+
+    This looks relatively simple, but the resulting line came from an iterative minimization
+    of the sum of squares between the values (true) and the predictions. That means
+    the model aimed to come up with the right prediction by using what it learned
+    from the data it looked before.
+
+
+    Classification is another supervised learning task with the goal of classifying
+    data correctly into one of two categories.
+
+
+    For example, we want to determine if an email is spam or not. The model will learn
+    on a training set of correctly labeled data – spam/not spam – and then use what
+    it learned to create a model to predict labels on new data.
+
+
+    # Unsupervised Learning
+
+
+    Unsupervised learning is the opposite – the machine does not have any guidance
+    or supervision to help it. This type of learning is often considered as having
+    acceptable answers but not necessarily correct ones.
+
+
+    Clustering is an unsupervised learning task that tries to determine an aggregation
+    for data points – where the data points cluster naturally. The data points do
+    not have labels, so there are no examples for the'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: 'machine model to learn from. Instead, it must learn to identify patterns on
+    its own.
+
+
+    That is the real essence of AI (Artificial Intelligence), where a computer can
+    do what it has to without any human intervention. It''s all about using the data
+    to learn and trying to work out relationships between the inputs. Unlike classification
+    and regression, no output is expected with clustering or unsupervised learning.
+    The focus is entirely on the inputs and looking for relationships and patterns.
+    There may be clusters. The inputs may show clear relationships or associations.
+    Or it could be that the model doesn''t find any kind of relationship at all.
+
+
+    # Approaching Problems
+
+
+    The common approach to problems among many data scientists is the binary method
+    – is the task covered by supervised learning or unsupervised learning?
+
+
+    The easiest way to determine this is to work out what output you expect. Do you
+    want outputs predicted on new inputs?
+
+
+    In that case, it would be regression under supervised learning. Or does a new
+    input fall under category A or B, based on already labeled data? That would fall
+    under classification as a supervised learning task. Do you want to see if or how
+    data points aggregate? Are there any natural clusters? That would be clustering
+    under unsupervised learning. Also, under unsupervised learning would be if you
+    were trying to see any interesting relationships between inputs.
+
+
+    Most advanced problems in data analysis come under these questions'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: as the objective is always going to be the same – something needs to be predicted,
+    be it based on training examples or data exploration.
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# DECISION TREES
+
+
+    Decision trees are built similarly to support vector machines, meaning they are
+    a category of supervised machine learning algorithms capable of solving both regression
+    and classification problems. They are powerful and used when working with a great
+    deal of data.
+
+
+    You need to learn beyond the barebones basics so that you can process large and
+    complex datasets. Furthermore, decision trees are used in creating random forests,
+    which is arguably the most powerful learning algorithm.
+
+
+    # An Overview on Decision Trees
+
+
+    Decision trees are essentially a tool that supports a decision that will influence
+    from the other decisions that will be made. This means that everything from the
+    predicted outcomes to consequences and resource usage will be influenced somehow.
+    Take note that decision trees are usually represented in a graph, which can be
+    described as some kind of chart where the training tests appear as a node. For
+    instance, the node can be the toss of a coin, which can have two different results.
+    Furthermore, branches sprout to represent the results individually, and they also
+    have leaves, which are the class labels. Now see why this algorithm is called
+    a decision tree. The structure resembles an'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: 'actual tree. As you probably guessed, random forests are exactly what they
+    sound like. They are collections of decision trees, but enough about them.
+
+
+    Decision trees are one of the most powerful supervised learning methods you can
+    use, especially as a beginner. Unlike other complex algorithms, they are fairly
+    easy to implement, and they have a lot to offer. A decision tree can perform any
+    common data science task, and the results you obtain at the end of the training
+    process are highly accurate. With that in mind, let''s analyze a few other advantages,
+    as well as disadvantages, to gain a better understanding of their use and implementation.
+
+
+    # Let''s begin with the positives:
+
+
+    +   1. Decision trees are simple in design and, therefore, easy to implement even
+    if you are a beginner without a formal education in data science or machine learning.
+    The concept behind this algorithm can be summarized with a sort of a formula that
+    follows a common type of programming statement: If this, then that, else that.
+    Furthermore, the results you will obtain are very easy to interpret, especially
+    due to the graphic representation.
+
+
+    +   2. The second advantage is that a decision tree is one of the most efficient
+    methods in exploring, determining the most important variables, and discovering
+    the connection between them. Also, you can build new features easily to gain better
+    measurements and predictions. Don''t forget that data exploration is one of the
+    most important stages in working with data, especially when there are many variables
+    involved. You need to detect the most valuable'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: 'ones to avoid a time-consuming process, and decision trees excel at this.
+
+
+    +   3. Another benefit of implementing decision trees is that they are excellent
+    at clearing up some of your data''s outliers. Don''t forget that outliers are
+    noise that reduces the accuracy of your predictions. Besides, decision trees aren''t
+    strongly affected by noise. In many cases, outliers have such a small impact on
+    this algorithm that you can even choose to ignore them if you don''t need to maximize
+    the accuracy scores.
+
+
+    Finally, there''s the fact that decision trees can work with both numerical as
+    well as categorical variables. Remember that some of the algorithms we already
+    discussed can only be used with one data type or the other. On the other hand,
+    decision trees are proven to be versatile and handle a much varied set of tasks.
+
+
+    As you can see, decision trees are powerful, versatile, and easy to implement,
+    so why should we ever bother anything else? As usual, nothing is perfect, so let''s
+    discuss the negative side of working with this type of algorithm:
+
+
+    +   1. One of the biggest issues encountered during a decision tree implementation
+    is overfitting. Please note that this algorithm sometimes creates very complicated
+    decision trees with generalizing data due to their complexity. This is known as
+    overfitting, and it is encountered when implementing other learning algorithms
+    as well, however, not to the same degree. Fortunately, this doesn''t mean you
+    should stay away from using decision trees. All you need to do is invest some
+    time to implement'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: 'certain parameter limitations to reduce overfitting.
+
+
+    2. Decision trees can have issues with continuous variables. When continuous numerical
+    variables are involved, the decision trees lose a certain amount of information.
+    This problem occurs when the variables are categorized. If you aren’t familiar
+    with these variables, a continuous variable can be a value set within a range
+    of numbers. For example, suppose people between ages 18 and 26 are considered
+    of student age. In that case, this numerical range becomes a continuous variable
+    because it can hold any value between the declared minimum and maximum.
+
+
+    3. While some disadvantages can add to additional work in decision trees, the
+    advantages still outweigh them by far.
+
+
+    # # Classification and Regression Trees
+
+
+    We discussed earlier that decision trees are used for both regression tasks as
+    well as classification tasks. However, this doesn’t mean you implement the decision
+    trees in both cases. Decision trees need to be divided into classification and
+    regression trees. They handle different problems; however, they are similar since
+    they are both decision trees.
+
+
+    Take note that classification decision trees are implemented when there’s a categorical
+    dependent variable. On the other side, a regression tree is only implemented in
+    a continuous dependent variable. Furthermore, in the case of a classification
+    tree, the training data result is the mode of the total relevant observations.
+    This means that any observations that we cannot define will be predicted on'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: 'this value, representing the observation we identify most frequently. Regression
+    trees, on the other hand, work slightly differently. The value that results from
+    the training stage is not the mode value but the total observations'' mean. This
+    way, the unidentified observations are declared with the mean value, which results
+    from the known observations.
+
+
+    Both types of decision trees undergo a binary split, however, going from the top
+    to bottom. This means that the observations in one area will spawn two branches
+    divided inside the predictor space. This is also known as a greedy approach because
+    the learning algorithm seeks the most relevant variant in the split while ignoring
+    the future splits that could lead to an even more powerful and accurate decision
+    tree.
+
+
+    As you can see, there are some differences as well between the two. However, what
+    you should note from all of this is that the splitting affects the accuracy scores
+    of the decision tree implementation. Decision tree nodes are divided into subnodes,
+    no matter the type of tree. This tree split is performed to lead to a more uniform
+    set of nodes.
+
+
+    Now that you understand the fundamentals behind decision trees, let''s dig a bit
+    deeper into overfitting.
+
+
+    # The Overfitting Problem
+
+
+    You learned earlier that overfitting is one of the main problems when working
+    with decision trees, and sometimes it can have a severe impact on the results.
+    Decision trees can lead to a 100% accuracy score for the training set if we do
+    not impose any limits. However, the major'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: 'downside here is that overfitting creeps when the algorithm seeks to eliminate
+    the training errors, increasing the testing errors. This imbalance, despite the
+    score, leads to terrible prediction accuracy in the result. Why does this happen?
+    In this case, the decision trees grow many branches, and that’s the cause of overfitting.
+    To solve this use, you need to impose limitations on how much the decision tree
+    can develop and how many branches it can spawn. Furthermore, you can also prune
+    the tree to keep it under control, like how you would do with a real tree to make
+    it produces plenty of fruit.
+
+
+    To limit the decision tree''s size, you need to determine new parameters during
+    the tree''s definition. Let''s analyze these parameters:
+
+
+    +   Min_Samples_Split: The first thing you can do is change this parameter to
+    specify how many observations a node will require to perform the splitting. You
+    can declare anything with a range of one sample to maximum samples. Just keep
+    in mind that to limit the training model from determining the connections that
+    are very common to a particular decision tree, you need to increase the value.
+    In other words, you can limit the decision tree with higher values.
+
+
+    +   Min_Samples_Leaf: This is the parameter you need to tweak to determine how
+    many observations are required by a node, or in other words, a leaf. The overfitting
+    control mechanism works the same way as for the sample split parameter.
+
+
+    +   Max_Features: Adjust this parameter to control the features that are selected
+    randomly. These features are the ones that'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: 'used to perform the best split. To determine the most efficient value, you
+    should calculate the square root of the total features. Just keep in mind that
+    the higher value tends to lead to the overfitting problem we are trying to fix
+    in this case. Therefore, you should experiment with the value you set. Furthermore,
+    not all cases are the same. Sometimes a higher value will work without resulting
+    in overfitting.
+
+
+    +   4. **Max_Depth:** Finally, we have the depth parameter, which consists of
+    the decision tree''s depth value. To limit the overfitting problem, however, we
+    are only interested in the maximum depth value. Take note that a high value translates
+    to many splits, therefore a high amount of information. By tweaking this value,
+    you will control how the training model learns the sample''s connections.
+
+
+    Modifying these parameters is only one aspect of gaining control of our decision
+    trees to reduce overfitting, boost performance, and accuracy. The following step
+    after applying these limits is to prune the trees.'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# DEEP LEARNING WITH PYTHON
+
+
+    The first thing we need to take a look at here is what deep learning is all about.
+    To keep this simple, deep learning is going to be a function that we see with
+    artificial intelligence. This deep learning is able to imitate the working of
+    the human brain but it puts it into a system or a machine of our choice. This
+    works by being able to process the data and then create a pattern for use in decision
+    making that is based on data, rather than on a hunch. This helps the company produce
+    better results for their customers, beat out the competition, release some of
+    the best products on the market, and ensure that they can reduce costs and see
+    more results.
+
+
+    Deep learning is actually going to be a subset that we can look at when it comes
+    to the world of artificial intelligence and machine learning. And it takes things
+    a bit further because it has a network of capable learning unsupervised from data
+    that doesn''t come with any labels, or is a bit unstructured. This type of learning
+    is also going to be known as deep neural networks or deep neural learning based
+    on how you will use it.
+
+
+    # How to Get Deep Learning to Work
+
+
+    Deep learning is a process that has really evolved quite a bit with the advent
+    and the growth of the digital era, which has helped to bring'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: 'about a big explosion of data in all forms that we could ever imagine and from
+    every region of the world. It is amazing how much data businesses are able to
+    collect overall, and as soon as they are able to figure out what insights are
+    in that data and how they are able to use it, they can really provide themselves
+    with an easy and efficient manner to beat out the competition.
+
+
+    This data, which is going to go by the name of big data, is drawn from a large
+    variety of sources, including online, social media, e-commerce platforms, online
+    cinemas. Each business will have to determine where they would like to gather
+    the information, or the big data, from, based on the questions they would like
+    to have answered in the first place.
+
+
+    This enormous amount of information is going to be really helpful, and it is often
+    readily accessible and can be shared through a lot of applications, like cloud
+    computing, so that the business is able to share it with others and find what
+    they need at any time.
+
+
+    However, the data is often unstructured and hard to sort through, and many times
+    the company will gather the data for so long that it is so vast, simply because
+    there is just so much of it to work with. This means that if a human manually
+    goes and tries to sort through the information, it could take them decades to
+    comprehend all of it and get the right information out of it. This may have been
+    the only way for companies to go through the information in the past, but it is
+    not always the most efficient.
+
+
+    If you are gathering all of this information, you want to get the predictions
+    and insights out of that information, you do not want to wait decades to gather
+    that information and read the insights. This'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: 'takes too long and you will be left behind in the dust. When you are done,
+    there will be decades worth of new information sitting there, waiting for you
+    to dive into at the same time. It is just not efficient for a company to work
+    manually going through all of the data, because things will get missed, and it
+    will take too long.
+
+
+    This is why a lot of companies are starting to see some of the incredible potentials
+    that can result from taking a look through all of the wealth of the information.
+    And they recognize the importance that comes with having a system that is able
+    to sort through that information efficiently and quickly. This means that these
+    same companies are going to work to adapt their artificial systems to handle the
+    work on their own and handle automated support.
+
+
+    One to remember there is deep learning is able to learn from all of the huge amounts
+    of unstructured data. This is something that could take years for humans to manually
+    go through the whole process, but with the help of deep learning and other tasks
+    of artificial intelligence, a machine can go and see the information and insights
+    inside in no time.
+
+
+    # Machine Learning Vs. Deep Learning
+
+
+    Now we need to take a look at how machine learning and deep learning are going
+    to work with one another. One of the most common techniques that we are able to
+    use with artificial intelligence, especially when it comes to processing all of
+    the big data, is machine learning. Remember from before that machine learning
+    is going to be a self-adaptive algorithm that is going to teach itself how to
+    get better with'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: 'analyzing and finding patterns the more it gains some experience or when it
+    adds in some new data as well.
+
+
+    Let''s take a look at how all of this can work. If there is a company that specializes
+    in digital payments that want to look at this process to help detect the occurrence
+    or any potential that there is fraud in their system, it would maybe take some
+    of the tools for machine learning to help them with this purpose in particular.
+    The computational algorithm that we are able to build into a computer model will
+    be able to take a look at, and process, all of the transactions that happen on
+    the digital platform, and then can find some patterns in the set of data, while
+    pointing out to someone, usually the person in charge of fraud detection, when
+    it finds some kind of anomaly in the pattern.
+
+
+    Deep learning, which is going to be a subset of machine learning, is going to
+    come into role because it is able to utilize some of the hierarchical levels of
+    various artificial neural networks. This is done in order to help carry out some
+    of the new and more advanced processes that come with machine learning. These
+    artificial neural networks are going to be set up like the human brain, with the
+    neuron nodes connecting to one another with the help of a structure that appears
+    to be a web.
+
+
+    While some of the traditional programs that you can work with can build up an
+    analysis with the data in a manner that is more linear many programmers prefer
+    to work with the hierarchal function. This is because this kind of function of
+    deep learning is able to make a machine process data, even with the nonlinear
+    approach.
+
+
+    In the past, one of the traditional approaches to detecting things like'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: 'money laundering or fraud, the customers would rely on the amount of transaction
+    that ensued. This means that only the really large transactions would be the ones
+    that are caught at all, and the only ones that would rise up a big red flag.
+
+
+    Of course, these are not the only transactions that could be bad. Sometimes it
+    is possible that someone trying to commit fraud would do a bunch of small transactions
+    quickly rather than working with large transactions. When this happens, the person
+    could get away with a lot of different transactions in a small amount of time,
+    but it would not be found because the transaction amount, for the individual transaction
+    was small enough that the system would not catch it. And this ends costing the
+    financial institution a lot of money over the years with fraudulent charges.
+
+
+    The neat thing with machine learning, and working on a nonlinear method of deep
+    learning, we can look at more than just the amount of money when we are trying
+    to detect fraud. For example, the algorithm may be set up to look at things like
+    the type of retailer, the IIP address, the geographic location, and the time to
+    determine if it is a purchase or a transaction that the customer would likely
+    be participating in or not.
+
+
+    The first layer that we will see when the neural network tries to process the
+    input of raw data like the amount of the transaction, and then will pass it on
+    to the next layer, with this information being the output now. The second layer
+    of the neural network is going to be able to process the information it got from
+    the previous layer by including some additional information like the IP address
+    of the user and passes this on with the result. This continues until all of the
+    layers'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: 'of the neural network are done.
+
+
+    The next layer that is here is going to take the second layer''s information,
+    and then will include some of the raw data that you have things like the geographic
+    location, and will make the pattern of the machine even better. This is going
+    to continue through the levels that come with this neuron network. The number
+    of levels that come with the neural network will depend on what process you are
+    trying to complete.
+
+
+    With this in mind, let''s review and take a closer look at some of the key takeaways
+    that come with deep learning.
+
+
+    # These will include:
+
+
+    +   1. Deep learning is going to be a function of artificial intelligence that
+    is able to mimic the workings that we see with the human brain, particularly when
+    it comes to processing the data. This then provides us with the information we
+    need for decision making.
+
+
+    +   2. Deep learning with artificial intelligence is also going to help us learn
+    from the data. This includes learning out of the data that is unlabeled and unstructured.
+
+
+    Deep learning, which is one of the subsets of machine learning can often be used
+    to help with a variety of different situations including things like money laundering
+    and detecting fraud.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# HOW TO BUILD THE FIRST MACHINE LEARN MODEL?
+
+
+    We''re now ready to design a full machine learning model. For this exercise, we
+    will build two different kinds of predictive models in this chapter using the
+    dataset we have been working with so far:
+
+
+    +   1) Linear Regression
+
+    2) Decision Tree Regression
+
+
+    We will then test and compare the accuracy of these predictive models.
+
+
+    # Regression
+
+
+    Before we go too far, we just mentioned a new term – regression. Why would predictive
+    models, that predict the future, referencing regression? Regression is a statistical
+    technique and the term was used by Francis Galton in 1877 when describing the
+    heights of descendants tended to regress towards the mean as opposed to increasing
+    with each new generation. This term then evolved into the statistical concept
+    of describing the relationship between dependent variables like house sale price
+    and independent variables like house square footage and number of garages.'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: 'There is a wide variety of different machine learning and predictive algorithms
+    and I will go over some of them at a higher level in the next chapter. However,
+    I will go over in more detail why Linear Regression and Decision Tree are suitable
+    algorithms for this specific problem.
+
+    To train our models, we will first split our data into train and test sets as
+    per below:
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_88_0.png)
+
+
+    In the above code sample, we used the train_test_split function in the Scikit-learn
+    library. As you can see, we defined ‘y’ as the target / dependent variable ‘SalePrice’
+    and ‘X’ as all the independent variables that will be used to predict the price.
+
+
+    # We will take a moment here to describe the purpose of the additional parameters
+    in the train_test_split function:
+
+
+    +   1) Test_Size – defines what percentage of your data will be treated as test
+    dataset. For this example, we used 50%
+
+    2) Random_State – is used as an input into random generation during the split.
+    For our example, we used 80
+
+    3) Shuffle – is used to determine whether data should be shuffled before splitting.
+    For our purpose, we set that to true
+
+
+    Now we are ready to build, train and test the predictive models!
+
+
+    # Linear Regression Model
+
+
+    A linear regression model assumes a linear relationship between a'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: 'dependent or target variable e.g. Sale Price for the house and independent
+    variables like square footage, number of garages etc.
+
+
+    # It can be illustrated as an equation as follows:
+
+
+    Y = cX + I
+
+
+    Where
+
+
+    Y = dependent variable aka Sale Price of the House
+
+
+    X = independent variable e.g. Square footage
+
+
+    c = coefficient – that will be calculated by the linear regression model
+
+
+    I = intercept – that will be calculated by the linear regression model as well
+
+
+    The above is a case of Simple Linear Regression, where you only have one dependent
+    and one independent variables.
+
+
+    When you have multiple independent variables, like in our case, we use the equation
+    below and this can be defined as Multiple Linear Regression
+
+
+    Y = I+ (c1X1)+ (c2X2)+ (c3X3)+......
+
+
+    # We can initialize, train and test the Linear Regression Model as follows:'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '![](img/d8987d3110291847d867988b0a2d7ecb_90_0.png)
+
+
+    In the above code snapshot, we covered the following steps:
+
+
+    +   1) We initialized the Linear Regression Model from the Scikit-Learn library
+
+    2) We then fit (or trained) the model using the training data set
+
+    3) We made the prediction using the test data set
+
+    4) We tested the accuracy of the model using two methods
+
+
+    Mean Squared Error (MSE) – that calculates the difference between actual and predicted
+    values
+
+    R-Squared (also known as co-efficient of determination) – that calculates how
+    close the data is to the fitted regression line. Or to say it simply, how well
+    does our model ‘fit’ the data. R-squared is on a scale of o to 1 and a negative
+    score typically indicates an issue with the model fit. In our case, we got around
+    an R-squared value of .39 for the test data. That means roughly 39% of the variation
+    in house sale prices is due to the variation in the independent variables like
+    square footage and house type we identified earlier
+
+
+    # Decision Tree Regression Model
+
+
+    Now let’s try a different kind of predictive algorithm called'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: 'decision tree. Why would we want to use this type of algorithm to predict house
+    sale prices?
+
+
+    A decision tree regression model forms a tree structure as it breaks down the
+    dataset into smaller subsets and keeps traversing down different nodes to arrive
+    at a prediction. In case of house sales prices, a decision tree can be visualized
+    as follows:
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_91_0.png)
+
+
+    The above is an overly simplified illustration of the decision tree on how the
+    model will arrive at a sale price prediction but it gets the point across.
+
+
+    Below is how we will initiate, train, test and evaluate a Decision Tree Regression
+    model in Python.
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_91_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: 'The above is a very basic illustration of how you would initialize a Decision
+    Tree Regression model.
+
+
+    # In the above sample code, we covered the following steps:
+
+
+    +   1) We initialized the Decision Tree Regression Model from the Scikit-Learn
+    library
+
+
+    +   2) We then fit (or trained) the model using the training data set
+
+
+    +   3) We made the prediction using the test data set
+
+
+    +   4) We tested the accuracy of the model using the metrics.accuracy_score function
+    in the Scikit-Learn library and got an accuracy score of 67% - that is an improvement
+    over the Linear Regression model result we got earlier.
+
+
+    Typically finding the best fitting model for your dataset is a trial-and-error
+    exercise and we work with the one that is giving us the highest degree of accuracy
+    based on our training and test datasets.'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# TIPS TO MAKE MACHINE LEARNING WORK FOR YOU
+
+
+    Now that we have spent some time in this guidebook taking a look at machine learning
+    and all of the great learning algorithms that fit into the mix, along with the
+    different categories that come with supervised, unsupervised, and reinforcement
+    learning, it is time to move on putting these to use. There are so many different
+    situations where you can utilize what you know from machine learning, and it is
+    going to make a difference if you can work on these algorithms.
+
+
+    Once you have a good idea with these algorithms, you may be more curious about
+    some of the tips and strategies that you can use to make sure that machine learning
+    is going to work out the way that you would would like. Some of the tips that
+    you can follow when it comes to working with machine learning include:
+
+
+    # Tip #1 Remember the Logistics
+
+
+    When you are working on machine learning, remember that success is not always
+    just picking out the right kind of algorithm or tool. It takes a bit more for
+    this. You need to find a good fit and a good design for the specific kind of problem
+    or'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: 'project that you want to work with. Each project is going to be different,
+    and if you try to use the same things for each one, then there are going to be
+    situations where machine learning will not be successful.
+
+
+    For example, the machine learning that you use with a campaign for online marketing
+    is going to be a lot different compared to working with an algorithm that helps
+    guide an autonomous car. Expanding your resources for an incremental algorithm
+    improvement is going to be worth it when it comes to car, but in most marketing
+    cases, you would want to optimize the different logistics around you instead.
+
+
+    This means before you even get started on the project that you would like to use,
+    you need to take some time to figure out the kind of logistics that are going
+    to make the most sense for what you want to do. We talked about a lot of different
+    algorithms that we can use based on the kind of project or program that you would
+    like to focus on. And each of them presented us with something a bit different.
+    Learning how to do these work and picking the right one for the job is important
+    to getting the results that you want.
+
+
+    # Tip #2 Mind the Data
+
+
+    Another option that we need to pay attention to is the data that you are going
+    to put through the algorithm. One of the biggest considerations to making sure
+    that all the algorithms that you deliver valuable insights is that you have to
+    feed it the right kind of data. If you find that you are running data through
+    an algorithm and the results are not coming out'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: 'the way that you think they should, then it is most likely the data you are
+    using is not right, rather than the algorithm.
+
+
+    There are a lot of programmers or business owners who are going to get all ego-bound
+    and wound up, being stuck to one particular algorithm. But with all of the different
+    tools out there, there is the possibility for way too many algorithms. While choosing
+    the right algorithm is indeed important to the whole process, the thing that is
+    even more important here is making sure that you are choosing the right kind of
+    data to help you out.
+
+
+    If you are studying with a harder or more complex problem like speech recognition
+    or even something like computer vision, then that is one thing. This field, despite
+    what we may think when we get a bit lost in it, is that we are in a data-driven
+    field. In most of the scenarios that we are going to find ourselves in, making
+    some adjustments to the data that we put in rather than the algorithm is going
+    to make a difference.
+
+
+    Any time that the algorithm is not providing you with the results that make sense
+    or the results that you should be getting when when you give it a try, then it
+    is time to make some changes. Maybe you are putting in too much data, or the wrong
+    kind of data, or even not enough data. Changing around a bit and seeing what that
+    does to the predictions you get may be just the change that you are looking for.
+
+
+    # Tip #3 Algorithms Are Not Always Right
+
+
+    We spent a lot of time in this guidebook taking a look at the various algorithms
+    that you can focus on. These are great tools that are going'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: 'to help you to get the right results that you want, but they are not always
+    right. If we start to look at them as magic bullets that are going to solve all
+    of our problems instantly, then this could be a bad thing.
+
+
+    Implementations of machine learning are going to do their very best when there
+    is a continual process of trial and error. No matter how good you think the algorithms
+    you use if the system is doing any kind of interaction with another person, or
+    more than one people, then it has to have some adjustments to it over time. Businesses
+    need always to be measuring the effectiveness of their implementation and figure
+    out if any variables and changes are going to either make better or make worse.
+
+
+    This is going to sound like a lot of work and may seem a bit confusing when you
+    are first getting into the field of machine learning. But it is something that
+    you need to focus on. Very few businesses are doing this. Instead, they assume
+    their algorithm is perfect and that it never needs to be changed. This is going
+    to make things worse, and over time, the algorithm is going to be so far behind
+    that it is not going to be able to give you accurate results.
+
+
+    It is normal to want to deploy your system with an algorithm and then want it
+    to do its job perfectly, without ever having to do any work to keep it that way.
+    While that would be the ideal world, is not a reality that any of us can count
+    on. No algorithm or user interface design is going to be able to stick around
+    for a long time to come. And no data collection method is going to be superseded.
+
+
+    That means that no matter what kind of algorithm you decide to go with, it is
+    going to need some tune-ups and adjustments over time. If'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: 'you keep up with this and don’t let it fall to the side, then it is likely
+    that the adjustments on your part to complete are be small and won’t require a
+    ton of work. The biggest issues are going to come when you start to ignore this
+    step, and then the issues start to compound on each other. Remember that no algorithm,
+    no matter how great it may seem, is going to be perfect and you do need to check
+    on it occasion.
+
+
+    # ### Tip #4 Pick Out a Diverse Toolset
+
+
+    As you can imagine from this guidebook and some of the other research that you
+    may have done with machine learning, there are many different tools available
+    to you with this field, and many of them are going to be available to you for
+    free! This is a great thing because it allows you to access countless different
+    resources available to help you get started.
+
+
+    But with this in mind, don''t let yourself get glued to one tool. You may have
+    one that is your favorite and that you want to use all of the time. But in reality,
+    when you are working with machine learning, you will need to bring out several
+    to make this successful. If there is someone around who is trying to convince
+    you that one tool is the only one that is going to work and that you don’t need
+    any of the others, then it is time to move away from them and learn about all
+    of the other tools that are out there.
+
+
+    The neat thing about machine learning is that it is growing like crazy, and some
+    so many people are interested in learning more about it and using it for their
+    own needs. This is good news for you because there'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: 'are going to be a lot of different tools available. Experiment a few and figure
+    out which ones are the best for you. And consider the fact that you are going
+    to need to use a few of these to help you to get the work done.
+
+
+    # Tip #5 Try Out Some Hybrid Learning
+
+
+    Another thing that you can work with is the idea of hybrid learning. You can mix
+    some deep learning with some cheap learning to come up with a hybrid. One example
+    of this is that you can take a vision model on a computer that is already in existence
+    and then re-construct the top few layers, the layers that are going to contain
+    the decision that you want to be made. From there, you can co-opt an existing
+    framework, and use it for a new case.
+
+
+    This is a great way for you to make something new, without having to create the
+    whole thing from the very beginning. You can use some of the techniques and frameworks
+    that are already in existence, and then add some of the specifications and more
+    that are present in it to get the results that you would like.
+
+
+    This can be a bit of work. But think through some of the projects you want to
+    work with. Break it up into some smaller parts and figure whether there are any
+    existing platforms or frameworks that you can use to get things started. Once
+    you have this, you will be able to go through and make the changes that are needed,
+    perhaps using some of the algorithms that we already have in place and talked
+    about above, to make this happen.
+
+
+    This is a benefit in many ways. First, the frameworks that you are'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: 'going to be using are free in most cases or at least are not going to cost
+    you all that much. This means that you will be able to use them and save money
+    compared to recreating exactly what you want from scratch. It is always a good
+    thing in business when you can save money. You still get to use the deep learning
+    that is needed in the process, but you get the benefit of saving money on the
+    parts that don''t necessarily need to be unique.
+
+
+    Another benefit here is that you can save yourself some time. Many of the frameworks
+    that you are going to use a lot of time to create. And if you have to come up
+    with a new one each time that you start, it is going to take forever to get projects
+    done. When you can use or purchase the one that you would like, you can end up
+    saving a lot of time, and it speeds along with the project that you want to get
+    done.'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# Examples And Exercises
+
+
+    For this exercise, we''ll be building a regression model for a dataset stored
+    in a file called reviews.csv.
+
+    The dataset stores information about mobile applications listed on a fictitious
+    fictitious store and consists of 500 instances and seven columns. The columns
+    are Category, No Of Reviews, No Of Installs, Size, Price, Days since Last Update,
+    and Rating.
+
+
+    Our job is to build a regression model to predict the rating (Rating) of an application.
+    This project will be very guided. The next two projects will be less guided to
+    give you a chance to figure out yourself.
+
+
+    # Task 1 - Import the libraries and load the dataset
+
+
+    First, let''s create a new notebook and name it Project.ipynb.
+
+    Next, import NumPy, pandas, and matplotlib.pyplot using the np, pd, and plt aliases,
+    respectively, and add the line %matplotlib inline to specify the backend for Matplotlib.
+
+    After importing, upload reviews.csv to Google Colab and load the file into a DataFrame
+    df. Finally, use the head() method to take a quick look at the DataFrame.
+
+
+    Expected Output'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '![](img/d8987d3110291847d867988b0a2d7ecb_101_0.png)
+
+
+    Figure P1.1: The reviews dataset
+
+
+    # Task 2 - Basic data exploration
+
+
+    Now, let''s do some basic exploration. First, check if there are any missing values
+    in df. Next, use the hist() method to plot a histogram for each numerical column
+    in df. Finally, use the describe() method to generate some descriptive statistics
+    for these columns.
+
+
+    Expected Output
+
+
+    Figure P1.2: Missing Values and Histograms for the reviews dataset
+
+
+    Figure P1.3: Statistics for the reviews dataset
+
+
+    # Task 3 - Check for invalid values
+
+
+    Study the output above carefully. Notice anything weird about the minimum values
+    for the Price and Days since Last Update columns? Both the hist() and describe()
+    methods show that there are negative values for these two columns. Since prices
+    and days cannot be negative, these values are likely to be errors.
+
+
+    Try using a boolean array to select all the rows with negative values for the
+    Price column. Do the same for the Days since Last Update column.'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: 'How many rows do you get in each case?
+
+
+    Answer
+
+    1 and 2, respectively
+
+
+    # Task 4 - Remove invalid rows
+
+
+    Since there are only a total of 3 rows, let''s drop them from our i.e. Use boolean
+    arrays to select rows with non-negative values (i.e., values greater than or equal
+    to 0) for both columns and assign the resulting DataFrame back to df. Verify that
+    there are 497 rows left using the shape attribute.
+
+
+    Expected Output
+
+    (497,7)
+
+
+    # Task 5 - Split data into training and test subsets
+
+
+    Now, we need to split our dataset into training and test subsets.
+
+    First, import the train_test_split() function from the sklearn.model_selection
+    module.
+
+    Next, select all the features in df (i.e., all columns except Rating) as a DataFrame
+    and assign it to X. In addition, select the Rating column as a Series and assign
+    it to y.
+
+    Now, let''s split X and y into training and test subsets using the train_test_split()
+    function. Allocate 20% for the test set, use a random_state of 0, and assign the
+    resulting arrays to X_train, X_test, y_train, and y_test.
+
+
+    # Task 6 - Check for correlation among features'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: 'Now, let''s check if the features in our training subset are correlated with
+    each other. Recall that when we discussed the corr() method in Chapter 3, Section
+    3.10, we mentioned that correlation among features could be a problem for some
+    algorithms. Linear regression is one such algorithm.
+
+
+    Use the corr() method to check if the features in our training set are correlated.
+    For this project, we do not want the correlation coefficients to be greater than
+    0.7 or smaller than –0.7.
+
+
+    Expected Output
+
+
+    ![](img/d8987d3110291847d867988b0a2d7ecb_103_0.png)
+
+
+    Figure P1.4: Correlation coefficients among features
+
+    All correlation coefficients are within the acceptable range.
+
+
+    # Task 7 - Plot scatter plots
+
+
+    Next, let''s plot six scatter plots for the training subset. Each plot should
+    show the Rating column (on the y-axis) against one of the other columns (e.g.,
+    Rating against Size).
+
+
+    Use a figure with 2 rows, 3 columns, and a figure size of (15, 10), and label
+    the axes for each plot.
+
+
+    Expected Output'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '![](img/d8987d3110291847d867988b0a2d7ecb_104_0.png)
+
+
+    # Task 8 - Data preprocessing
+
+
+    Now, we need to do some data preprocessing on X_train. We saw in Task 2 that the
+    Size column has missing values. Therefore, we need to replace those missing values
+    with the mean of that column.
+
+    \In addition, we need to scale all the numerical columns in X_train and encode
+    the Category column using one hot encoding.
+
+    To do the above, let''s import the StandardScaler and OneHotEncoder classes from
+    sklearn.preprocessing. In addition, we need to import the SimpleImputer class
+    from sklearn.impute.
+
+    Next, declare a variable named num_col and assign the list [''No Of Reviews'',
+    ''No Of Installs'', ''Size'', ''Price'', ''Days since Last Update''] to it. This
+    list stores the names of all the numerical features.
+
+    Declare another variable called cat_col and assign [''Category''] to it.
+
+    Now, we are ready to replace the missing values in the Size column.
+
+    Instantiate a SimpleImputer object with strategy=''mean'' and assign it to imp.
+    Next, use imp to call the fit_transform() method and pass X_train[num_col] to
+    the method. Although only the Size column has'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: 'missing values, it is all right to pass all the numerical columns to the fit_transform()
+    method; columns with no missing values will not be affected. Assign the resulting
+    array to tf_num.
+
+
+    Next, instantiate a StandardScaler object and assign it to scaler. Use scaler
+    to call the fit_transform() method and pass tf_num to the method; assign the resulting
+    array back to tf_num.
+
+
+    Finally, instantiate a OneHotEncoder object and assign it to ohe. We do not want
+    the object to return a sparse matrix. In addition, we want to drop the first category
+    when encoding. By instantiating the object yourself, making sure you pass the
+    correct arguments to the constructor.
+
+
+    Next, use ohe to call the fit_transform() method and X_train[cat_col] to the method.
+    Assign the resulting array to tf_cat. But not least, concatenate tf_num and tf_cat
+    (which are both NumPy arrays) along axis 1 and assign the final array to X_train_transformed.
+
+
+    Verify that you have done the steps above correctly by printing the value of X_train_transformed[0].
+
+
+    Expected Output
+
+
+    ```
+
+    [-1.14922 1.1215984 -1.13561632 0.0732169 0.01224327 1. 0. 0.]
+
+    ```
+
+
+    # Task 9 - Train our model
+
+
+    Now, we are ready to train our model.
+
+
+    To do that, import the LinearRegression class from'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: Expected Output
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '0.28455529875001999
+
+
+    0.8958679954075467
+
+
+    After completing Task 10, the training and evaluation of our model is complete.
+
+
+    The following tasks involve using the ColumnTransformer and Pipeline classes to
+    simplify our workflow. We''ll get the same model. The main purpose is to illustrate
+    how to use the two classes.
+
+
+    # Task 11 - Use a column transformer and pipeline to simplify our workflow
+
+
+    First, let''s import the ColumnTransformer and Pipeline classes from the sklearn.compose
+    and sklearn.pipeline modules, respectively.
+
+
+    Next, instantiate a Pipeline object and assign it to a variable called num_preprocessing.
+
+
+    This pipeline should include two transformers. The first is for replacing missing
+    values with the mean using a SimpleImputer object, and the second is for scaling
+    the resulting features using a StandardScaler object.
+
+
+    Next, instantiate a ColumnTransformer object and assign it to a variable called
+    full_preprocessing.
+
+
+    A column transformer allows us to specify the columns for each transformation.
+    Here, we want the column transformer to transform the columns in num_col using
+    the num_preprocessing pipeline. In addition, we want to transform the column in
+    cat_col using a OneHotEncoding object (with sparse=False and drop="first").
+
+
+    You can refer to Chapter 5, Section 5.3.2 for two examples of using a'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: 'ColumnTransformer object. In that section, we used built-in transformers (such
+    as a SimpleImputer object) for the transformations. Alternatively, we can use
+    a pipeline, such as the num_preprocessing pipeline created above.
+
+
+    Try creating the ColumnTransformer object yourself and assign the resulting object
+    to full_preprocessing. We do not need to specify the remainder parameter for this
+    task as all columns will be transformed by the transformer.
+
+
+    Finally, create one more pipeline called final_pipeline. This pipeline includes
+    the full_preprocessing transformer for preprocessing the dataset and a LinearRegression
+    object for training the model. Try creating this pipeline yourself.
+
+
+    # Task 12 - Train the model using the pipeline
+
+
+    Now, we can use final_pipeline to train our model (using the fit() method). Try
+    doing this yourself.
+
+
+    # Task 13 - Evaluate the model
+
+
+    Finally, we can use final_pipeline to evaluate our model. Try evaluating the model
+    on the training set using the RMSE and R2 score metrics and print the resulting
+    scores.
+
+
+    Expected Output
+
+
+    ```
+
+    0.313351772053805
+
+    0.8579549928483164
+
+    ```
+
+
+    Do the same for the test subset.
+
+
+    Expected Output'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '0.2845552987500199
+
+
+    0.8958679954075467
+
+
+    As expected, we get the same results as the model we trained previously without
+    using a pipeline. However, using a pipeline (and a column transformer) simplifies
+    the workflow substantially.
+
+
+    # Task 14 - Do cross-validation using the pipeline
+
+
+    We mentioned in Chapter 6, Section 6.7 that one advantage of using a pipeline
+    is that we can use it to do cross-validation. Let''s do that now. First, import
+    the cross_val_score() function from sklearn.model_selection.
+
+
+    Next, use this function to do a 4-fold cross-validation on the training subset
+    with "neg_root_mean_squared_error" as the scoring criterion. Repeat the same with
+    "r2" as the criterion.
+
+
+    Finally, print the mean of the (positive) scores of each validation. Hint: You
+    can refer to the examples in Chapter 6, Section 6.7 for help on doing cross-validation.
+
+
+    # Expected Output
+
+
+    0.32508192142610537
+
+
+    0.84099908098104693
+
+
+    Once Task 14 is done, this exercise is complete. Congratulations!'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# CONCLUSION
+
+
+    Machine learning is an exciting and rapidly evolving field. While mastery of the
+    subject can involve many years of study, it is possible to get started quickly
+    by gaining some basic familiarity with machine learning methods and goals.
+
+
+    Despite the mysterious aura surrounding the field, many of the machine learning
+    methods are relatively simple mathematical tools that have been around for centuries.
+    It is just now that they are being applied to the massive amounts of data, the
+    so-called big data, that is being collected by companies and other large organizations.
+
+
+    The way to go forward is actually to practice and study more. Begin by going through
+    any exercises that you can find entail covering all of the major algorithms used
+    in machine learning. Using both supervised and unsupervised machine learning is
+    important, as anyone who wants to understand machine learning needs to become
+    intimately familiar with both. You should also practice by using many of the standard
+    algorithms like linear regression and k-nearest neighbors.
+
+
+    Something that we suggest is to avoid getting trapped into only using generated
+    test data. To enhance your learning and development, get a hold of real-world
+    data sets that you can run your algorithms on to gain an even greater familiarity
+    with the practice of data science.
+
+
+    Many people who are new to the concept of machine learning ask'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: 'specific educational credentials they need to get into the field. While there
+    are some general guidelines, the truth is there are no specific rules. We can
+    begin by saying that in all likelihood, anyone who is involved in a scientific
+    or technical field of study would be in a position to get involved in machine
+    learning. That certainly applies to electrical or computer engineers.
+
+
+    However, some people who might be better placed to get into machine learning are
+    mathematicians'' experts in statistics and probability. Some crossover knowledge
+    can be helpful, but in some ways, machine learning is a statistical field when
+    it comes down to a data scientist''s day-to-day practice. Certainly, a high level
+    of knowledge of statistics and probability is helpful.
+
+
+    Since it is considered a crossover discipline background in computer science can
+    be helpful. The ideal candidate would have a substantial computer science background
+    that has also demonstrated a high-level education in statistics. The more advanced
+    your education, the more deeply you go into the field, including doing AI research
+    and designing more advanced systems. If you are playing around with some models,
+    you will not be designing machine learning systems for use in some new robotic
+    systems. That will require advanced education in computer science.
+
+
+    Where to go from here? The first step is to keep learning. You should keep practicing
+    by building more models and using different tools to build your models. However,
+    there is more to machine learning than simply playing around with tools. You should
+    read as many journals as you can and watch videos from reputable sources so'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: 'that you can learn the theory and fundamentals that lie behind the concept
+    of machine learning.
+
+
+    For those who are just getting exposed to the field and looking to it to pick
+    a career path, getting a college degree in computer science or a related subject
+    is probably the best way forward for you, especially if you hope to attain employment.
+    Data science and machine learning are not likely to be fields where too many people
+    can get employment without some college degree in a related field. If possible,
+    find a school that will let you concentrate on artificial intelligence and machine
+    learning.
+
+
+    I would also advise taking many math classes that are focused on statistics and
+    probability. Some “business acumen” is often advised, so it can’t hurt to take
+    some management classes as well. This is recommended even though many technical
+    types are not that enthusiastic about business school. You are not going there
+    to become an MBA. Still, you should get some idea of business operations at a
+    large corporation and learn about many business concepts like business intelligence,
+    predictive analytics, and data mining, since these are useful concepts for corporations.
+    They prefer people who understand this to join their team, ready to hit the ground
+    running.
+
+
+    I hope that this book has stimulated your interest in machine learning and that
+    it will help propel you to continue your education and development in this exciting
+    area.'
+  merge: -1
+  img_proc: true
