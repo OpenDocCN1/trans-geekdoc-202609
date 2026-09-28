@@ -1,0 +1,1024 @@
+- pgno: 0
+  md: '# Semi-supervised machine learning method for predicting homogeneous ancestry
+    groups to assess Hardy-Weinberg equilibrium in diverse whole-genome sequencing
+    studies
+
+
+    Authors
+
+    Derek Shyr, Rounak Dey, Xihao Li, ...,
+
+    Michael Zody, Benjamin M. Neale, Xihong Lin
+
+
+    Correspondence
+
+    xlin@hsph.harvard.edu
+
+
+    We developed a semi-supervised machine learning method for predicting homogeneous
+    ancestry groups in diverse whole-genome sequencing studies to facilitate valid
+    Hardy-Weinberg equilibrium (HWE) subset testing. Compared to previous approaches,
+    our method provided substantially better HWE subset testing performance, which
+    can benefit downstream genetic association analyses.
+
+
+    Shyr et al., 2024. The American Journal of Human Genetics 111, 2129–2138
+
+    October 3, 2024 © 2024 Published by Elsevier Inc. on behalf of American Society
+    of Human Genetics.
+
+    https://doi.org/10.1016/j.ajhg.2024.08.018
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_0_0.png)
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_0_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Semi-supervised machine learning for predicting heterogeneity across assays
+    to assess Hardy-Weinberg equilibrium in diverse whole-genome studies
+
+
+    Derek Shyr,$1 Xihao Li,$2 Hefeng Zhou,$1 Eric Boerwinkelte,$3 Steve Buyesha,$4
+    Mark Daly,$5,6 Richard A. Gibbs,$2 Ira Matish,$7 Hall Kara,$8,9 Catherine Neves,$10
+    Nathan O. Stietzel,$11,12 Michael Zody,$10 Benjamin M. Neale,$5,6 and Xihong Lin,$13,14
+
+
+    # Summary
+
+
+    Large-scale, multi-ethnic whole-genome sequencing (WGS) studies, such as the National
+    Human Genome Research Institute Sequencing Program''s Centers for Common Diseases
+    (CCDG), play an important role in increasing genetic research. After performing
+    analysis, Hardy-Weinberg equilibrium (HWE) is a crucial step in quality control
+    to remove low quality variants and ensure downstream analysis. Diverse WGS studies
+    contain ancestrally heterogeneous samples; however, commonly used HWE methods
+    assume that the samples are homogeneous. Directly applying them may statistically
+    invalid results. To account for this heterogeneity, HWE can be tested on subsets
+    of samples, and results aggregated at each variant. To validate HWE subset testing,
+    a semi-supervised learning approach predicts heterogeneity based on the genome.
+    This provides a method for estimating HWE in the presence of population structure
+    and ancestry in diverse WGS studies. In addition, HWE filtering provides reliable
+    HWE results that directly benefit downstream analyses, including in WGS studies.
+    We applied our method on the CCDG dataset, predicting negative genetic ancestry
+    across 60,545 multi-ethnic WGS samples to assess HWE within group.
+
+
+    # Introduction
+
+
+    Large-scale, multi-ethnic whole-genome sequencing (WGS) studies play a crucial
+    role in understanding the genetic underpinnings of common diseases for diverse
+    populations. Examples of these studies include the National Heart, Lung, and Blood
+    Institute''s Program for Precision Medicine (TPMed), the National Human Genome
+    Research Institute Sequencing Program''s Centers for Common Diseases (CCDG, https://www.genome.gov/Funding-Projects/Sequencing-Program/Centers-Common-Diseases),
+    and the All of Us Research, which have sequenced 190,000–140,000, and 245–250
+    genomes, respectively. These diverse studies have provided unprecedented opportunities
+    for identifying common and rare genetic variants associated with a wide range
+    of diseases and traits.
+
+
+    To ensure downstream genetic association analysis, it is vital to perform quality
+    control (QC) to remove low quality variants. A key procedure is Hardy-Weinberg
+    equilibrium (HWE), where
+
+
+    from HWE may problems with heterogeneity, inbreeding, and population stratification.
+    Common approaches for evaluating HWE include the chi-squared and exact tests,
+    which require ancestrally heterogeneous samples. Applying these approaches to
+    large-WGS studies with diverse samples can result in incorrect-type errors, falsely
+    flagging variant-types. Methods that predict ancestry can improve HWE tests in
+    studies.
+
+
+    To account for HWE in the presence of heterogeneity, i.e., population structure,
+    researchers have attempted to apply the chi-squared and exact tests to each subgroup
+    within a cohort and then aggregate the results of each variant across the subgroups.$6$
+    This has been used in studies with common and rare genetic variants,$7,8$ however,
+    is limited by testing in large-WGS studies and samples with self-reported ancestry
+    and ethnicity can be genetically heterogeneous. Here, we assess the degree of
+    genetic associations based on individuals'' shared ancestry with a group of people.
+    Using self-reported ancestry and
+
+
+    > $1$Department of Bioinformatics, Harvard T.H. Chan Center of Public Health,
+    Boston, MA 02215, $2$Department of Statistics, University of North Carolina at
+    Chicago Hart Glick School of Public Health, Chicago, IL 60617, $3$Department of
+    Population Health and Genetic Medicine, University of Texas at Austin Health Science
+    Center at Austin, Memorial Center for Research Hospital, Houston, TX 77030, $4$Department
+    of Statistics, University of Washington, Main Center for Research Building, Seattle,
+    WA 98195, $5$Analytical and Translational Genetics, University of Michigan, School
+    of Medicine, Wayne State University, School of Medicine, Detroit, MI 48203, $6$Center
+    for Genomic Genetics, Department of Yale, School of Medicine, New York, NY 10013,
+    $7$Department of Genetics, University of Missouri, School of Medicine, St. Louis,
+    MO 63113, $8$Department of Statistics, University of Washington, Harvard, Cambridge,
+    MA 02115, $9$Correspondence: er.shyr@harvard.edu
+
+
+    © 2024 Published by Elsevier Inc. on behalf of American Society of Genetics.
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_1_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "ethnicities as homogeneous subsets is undesirable for\nsensing HWE.\n\nTo address\
+    \ the issue that self-reported race and\nethnicities may be inaccurate, Fang et\
+    \ al. ¹²\nproposed the method, harmonizing ancestry and race-\nethnicity (HARE),\
+    \ as a genome-wide association study\nthat defines a categorical variable in multiple\n\
+    GWAS. Specifically, the self-reported\ninferred ancestry, are estimated using\
+    \ principal\nComponents (PCs) on the genotype, to define\nidentified race and\
+    \ ethnicities that are employed as\nethnic-specific GWAS. Because the predicted\
+    \ race\nethnicities are genetically heterogeneous. Thus, using the\nlabels for\
+    \ HWE testing may not be appropriate.\n\nWe proposed a semi-supervised learning\n\
+    approach that predicts homogeneous ancestry groups\non the genotype for HWE subset\
+    \ testing. The first\nstep involves training a supervised machine learning\nmodel\
+    \ to predict homogeneous genetic\nestry groups. Because reference genomes, like\
+    \ the\n1000 Genasets, can classify diverse populations,\nsubsets that are not\
+    \ definitely belonging to one\nt reference's populations. In the second step,\
+    \ to\nfind homogeneous genetic ancestry groups within other,\nwe applied unsupervised\
+    \ learning using a model-based\napproach ¹².\n\nOur method improves upon traditional\
+    \ approaches for\nHWE subset testing in large-scale, DWGS studies.\nSpecifically,\
+    \ instead of relying on self-reported race\nthat social constructs and are heterogeneous,\
+    \ we\npredict homogeneous ancestry ancestries, which are\nbased the genetic variation\
+    \ of all individuals and\nHWE subset testing. This is important to prevent false\n\
+    variations due to violations of HWE. Moreover, the\npredicted ancestry groups\
+    \ can be evaluated by our method\nfor HWE subset testing, using specific-\nminor\
+    \ allele frequency (MAF) mapping and link-\ndisequilibrium (LD) mapping application.\
+    \ We applied the\nproposed method to CCCG to find first homogeneous genetic ancestry\n\
+    groups and then perform HWE subset testing. We\ncompared the HWE subset test results\
+    \ from our approach\nto the self-reported ethnicities and race and HARE labels.\n\
+    \n+   (1) Supervised learning: use a diverse reference panel with\npopulation\
+    \ descriptors, e.g., the 1000 Genomes, to\ntrain a classification model, e.g.,\
+    \ random forest. ¹⁴\nApply the trained classification model on the diversity\n\
+    of interest, e.g., CCG, to predict homogeneous ancestry\ncries of the samples\
+    \ using this proposed approach.\n\n+   (2) Unsupervised learning: use the study\
+    \ samples\nas other, with a low prediction probability of\nelong to one of the\
+    \ reference populations from step\n1, clustering algorithm, e.g., Gaussian machine\n\
+    model (GMM), to find genetic ancestry groups that could\nconsidered\n\n# Supervised\
+    \ learning step\n\nThe supervised learning involves four steps. First, we use\n\
+    the 1000 Genomes data, which have 2,504 untreated individuals\nfrom populations,\
+    \ to identify homogeneous ancestry groups.\nWe process the genotype data to output\
+    \ ancestry,\n(e.g., MAE > 0.05) and LD-pruning (features, pairwise\nstructure\
+    \ and are typically used) build the genetic ancestry\n structure via the average\
+    \ fixation index (Ft). ¹⁶\nWe estimated the Ft using the Hudson method⁷ to understand\n\
+    the 26 populations are enough to be\nclassified by ancestry estimator based on\
+    \ the\nsamples and does not significantly Ft ¹⁸ Estimates of the pop\ncompared\
+    \ to.\n\nWe performed dimension selection to calculate\nestry PCs of the reference\
+    \ 1000 Genomes. We trained\na random forest RF algorithm by regression-\nthe homogeneous\
+    \ ancestry groups on the ancestry PCs. REfs\nbuild a predictor using decision\
+    \ trees that grow in\nrandomly selected subsets of data and are known for having\n\
+    attractive classification and regression accuracy. The tuning pa-\nparameterized\
+    \ by choosing the first 15 as as of 1000,\nrand sampling with method.\n\nThird,\
+    \ with the samples from the step of interest into\nry PC by applying an adjusted\n\
+    principal component analysis (PCA) method called TRACE.¹⁷\ntrace applies PCs on\
+    \ the genotype of reference ancestry in-\nerty to construct a reference ancestry\
+    \ map and project studies\nsamples by one by one using the projection projections\n\
+    analysis, which uses the coordinates of the study\nancries, TRACE is applied to\n\
+    the of genetic relatedness between study samples\nas each it analyzes independently\
+    \ to the reference\nof unrelated individuals, ¹⁹ preventing distortion in the\n\
+    OCA patterns.\n\nFinally, using the projected ancestry from TRACE, we\napplied\
+    \ the trained to the large-scale, diverse study of\ninterest and predict a high\
+    \ degree of accuracy and homogeneity\nwithin ancestry for each sample. using a\
+    \ strong prediction probability\ncut of 90%; samples that fall below this were\
+    \ classified as\n\n# Material and methods\n\nOur objective is to develop a method\
+    \ for predicting homogeneous\nancries on the genotype that for HWE subset\ntesting\
+    \ in WGS studies.\n\n# Overview of the semi-supervised approach\n\nWe developed\
+    \ a semi-supervised learning for estimating\nhomogeneous ancestry groups that\
+    \ consists of two steps."
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'In summary, our four-steps are as:
+
+
+    +   (1) Obtain ancestral homogeneous groups from a diverse
+
+    reference panel.
+
+    (2) Calculate the ancestry PCs of the reference panel. Train a
+
+    classification model, e.g., RF^1 that regresses the ancestry
+
+    gnto the ancestry groups.
+
+    (3) Calculate the ancestry PCs of the samples by project-
+
+    ing them onto the PC space of the reference panel using
+
+    TRACE.
+
+    (4) Apply the trained classification model to study the samples
+
+    for predicting homogeneous ancestry groups based on the
+
+    ed ancestry PCs.
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_3_0.png)
+
+
+    # Clustering step
+
+
+    Samples from diverse studies can be more heterogeneous than the
+
+    reference panel or cannot be classified as one of the reference''s
+
+    pulations. If samples do not belong to a specific
+
+    population with high certainty, we classify them as outliers. violating
+
+    t homogeneity assumption of traditional HW. To address
+
+    this we construct homogeneous groups with other
+
+    sampled samples using the clustering step.
+
+
+    Specifically, we applied Srcrua et al.''s model-based clustering
+
+    approach based on parameterized GMMs to group
+
+    ividuals into homogeneous subgroups, initialized by
+
+    hierarchical model-based clustering and estimated using
+
+    expectation maximization (EM) algorithm. We input
+
+    t ancestry PCs as classified and then selected
+
+    ooptimal model and the number of clusters based on
+
+    Bayesian information criterion (BIC). Finally, we utilized
+
+    t predicted probabilities from the RF (step 1) for each cl-\uster to determine
+    the cluster assignment.
+
+
+    Figure 1. Self-reported race and ethnicities for the CDCG
+
+    daset (n=60,545)
+
+    Participants reported their self-identified race and ethnicity in
+
+    CDCG. The other group includes non-Hispanic, American
+
+    American/Alaska, non-Hispanic, Indian/Asian
+
+    Native non-Hispanic, other non-Hispanic, or more than one race
+
+    HHispanic/Latino, or not reported, or more than one race non-Hispanic
+
+
+    # Combining the RF and cluster groups
+
+
+    It may be reasonable to combine the RF and cluster groups for
+
+    HWE subset testing if the values are below a certain threshold.
+
+    We recommend to use a cutoff of 0.008 based on
+
+    sour sensitivity analysis for creating homogeneous
+
+    cestry groups in the 10000 dataset (see Note 2). While
+
+    bining these can increase the power of detecting vari-
+
+    devi from HWE, there''s also the risk of includ-
+
+    eogeneity. Given these tradeoffs, we leave it to the user
+
+    ter determine whether to include this in the testing of
+
+    cestry groups.
+
+
+    # HWE subset testing
+
+
+    Variants with frequency that remain constant
+
+    generation to generation in the absence of ancestral forces
+
+    are considered to be HWE. This will hold under the
+
+    umptions: random mating, nature of natural select-
+
+    er, a large population size, no gene flow or migration
+
+    and mutation. In diverse studies such as CDCG, heterogene-
+
+    erty or population structure would violate the assumption
+
+    ofnducting HWE on the whole or population-
+
+    labs that are conducted HWE within known subgroups or popula-
+
+    lations homogeneous. p value less than a threshold from at least one of the subsets
+
+
+    is removed. Using our predicted ancestry ashetics the
+
+    subsets, we leverage the approach for evaluating HWE.
+
+
+    # CDCG WGS data
+
+
+    The National Human Genome Research Institute
+
+    Sequencing CDCG dataset 2 has 60,545 samples
+
+    in the US, containing many common disease fe-
+
+    tyotypes, including cardiovascular, immune-related, and neuro-
+
+    drological disease, and WGS. The sequencing was
+
+    performed on Illumina Seq (6000), and the
+
+    average depth was 30x. The CDCG samples were
+
+    enced at four centers (Boston College, Harvard Inst,
+
+    York Genome Sequencing Center, and Washington in
+
+    St. Louis), which were then joined by the Broad Inst.
+
+    center. The goal of the CDCG is to determine the
+
+    genetic architecture understanding and complex inherited
+
+    disorders. All procedures including the CDCG WGS dataset were
+
+    in accordance with the ethical and legal standards of
+
+    the responsibility. National and international guidelines-for
+
+    experimentation. Only samples were included in the
+
+    CDCG, and these were considered independently for their-
+
+    respective studies. Researchers can find access to the CDCG,
+
+    and more information can be found at anproject.org/
+
+    CDCG. About 4% of the samples are registered
+
+    an ANVIL and registration for the samples is under
+
+
+    The CDCG cohort is very diverse with individuals self-reporting,
+
+    from most common, as White, African American, Hispanic-
+
+    fish, Asian, Puerto Rican, and other (Figures 1). The self-
+
+    ported race and ethnicities, as Hispanic, are not generally
+
+
+    The American Journal of Human Genetics, 111:2129–2138, 2023 2021'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/7593f00bc7da5cac8436fdf8d5192a63_4_0.png)
+
+
+    **Figure 2. Distribution of demographic hierarchical clustering for 1000 Genomes
+    subpopulations based on fst estimates using Hudson''s method**
+
+
+    An fst cut of 0.08 was applied, identifying 11 clusters: West African (AFR); East
+    African (AF2); African American/Caribbean (AF3); Japanese (EAS1); Vietnamese (EAS2);
+    Peruvian in Lima, Peru (PEL); Mexican in Los Angeles, California, USA (MXL); Puerto
+    Rican in Puerto Rico (PUR); French in Paris (SAS); French in Italy (FRA); and
+    European (GWD). 26 populations include East in Nigeria (ESN); Yoruba in Ibadan,
+    Nigeria (YRI); Gaussian in Wuhan (GWD); Mende in Seoul (MSL); Malay in Webuye,
+    Kenya (LWK); African Ancestry in Southwest USA (ASW); African American/Caribbean
+    in Abdacos (ABC); Japanese in Tokyo, Japan (JPT); Chinese South (CHS); Chinese
+    in Beijing (CHB); Chinese Da (CDX); Chinese in Taiwan (HTB); Mexican in Mexico
+    City (MEX); Mexican in Sonora (MXJ); Gujarati Indians in Houston, USA (GIH); Punjabi
+    in Lahore, Pakistan (PKL); Sri Lankan Tamil in the UK (ST); Medellin, Colombia
+    (COL); Finnish in Finland (FIN); British in England and Scotland (GBR); Urban
+    Residents in Northern/Western Europe (ACE); African Ancestry in Peru (PUR).
+
+
+    homogeneity. 18% of the individuals did not report their race and ethnicity. These
+    two characteristics could be used to employ self-report techniques and for subset
+    testing in the QC procedure; instead, the predicted homogeneity of the CCDG dataset
+    would be a practical and reasonable way. For our analysis, we pre-processed the
+    variants in the CCDG dataset by removing those with low quality scores, such as
+    a read depth less than four, an allele count of zero, and a call rate less than
+    0.98. We outliers that fall outside the range of the median plus minus six median
+    absolute deviations were excluded and did not pass the sample QC.
+
+
+    # Results
+
+
+    # **Finding homogeneous ancestry groups using the 1000 Genomes dataset**
+
+
+    In order to quantify the population differentiation, we processed the 1000 Genomes
+    WGS data to focus on autosomal chromosomes and LD-printed (i.e., pairwise *
+
+
+    threshold of 0.5 variants (i.e., fst=.05) for calculating the fst. We identified
+    26 populations and chose a low fst cut of 0.08 after considering sensitivity analysis
+    (see Note 1) to ensure that the results were not biased by low quality populations
+    as shown in the distribution graph (Figure 2). This cut identified 11 homogeneous
+    ancestry groups: three African (AFR), two East Asian (EAS), three American (AMR),
+    one South Asian (SAS), and two European (EUR). After the AFR subpopulations, which
+    we divided into West African (AFR); East in Nigeria (ESN); Yoruba in Ibadan, Nigeria
+    (YRI); Gaussian in Wuhan (GWD); and Mende in Seoul (MSL), we identified AFR2:
+    Peruvian in Lima, Peru (PEL); African American/Caribbean (AF3); African Ancestry
+    in Southwest USA (ASW) and African Caribbean in Barbados (ACB). Among EAS we divided
+    the EAS subpopulations into EAS1: Japanese in Tokyo, Japan (JPT) and Vietnamese
+    (EAS2); EAS2: Chinese South (CHS), Chinese in Beijing (CHB), Chinese in Taiwan
+    (HTB), Chinese in Xinzhuang (CDX), Kinh in Ho Chi Minh City (KHM). Among AMR subpopulations,
+    we have Peruvian in Lima, Peru (PEL), Mexican Ancestry in
+
+
+    2132 The American Journal of Human Genetics, 111:2129–2138, 2022'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# A CCDG PC1 vs. PC2
+
+
+    # B CCDG PC3 vs. PC4
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_5_0.png)
+
+
+    +   * AFR1 145
+
+    * AFR2 52
+
+    * AFR3 1148
+
+    * EAS1 94
+
+    * EAS2 109
+
+    * EUR1 188
+
+    * FZ 321
+
+    * SAS1 1028
+
+    * PEL 128
+
+    * MDL 126
+
+    * PERCULM 3359
+
+    * Other 20,241
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_5_1.png)
+
+
+    # C 1000 Genomes PC1 vs. PC2
+
+
+    # D 1000 Genomes PC3 vs. PC4
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_5_2.png)
+
+
+    +   * AFR 405
+
+    * AFR2 89
+
+    * AFR3 157
+
+    * EAS1 104
+
+    * EAS2 60
+
+    * EUR 400
+
+    * FIN 99
+
+    * SAS 469
+
+    * PEL 85
+
+    * MDL 64
+
+    * PERCULM 1098
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_5_3.png)
+
+
+    **Figure 3.** PC plots of the CCDG and 1000 Genomes samples with ancestry groups
+    and population descriptors (A) and (C) show PC1 vs PC2 for the CCDG and 1000 Genomes,
+    respectively; (B) and (D) show PC3 vs PC4 for the CCDG and 1000 Genomes, respectively.
+    The colors represent the ancestry groups and population descriptors for.
+
+
+    Los Angeles, USA (MXL), Puerto Rican in Puerto Rico/Colombian in Medellin, Colombia
+    (PUR/CLM). From our subpopulations, we separated Finnish in Finland (Fin) from
+    the other European subpopulations (British from England and Scottish [GBR], Italians
+    with Residents/Northern/Western European Ancestry [CEU], Toscani in Italy [TSI],
+    and Iberian populations in Spain [ISB]).
+
+
+    data. were also overlapping in both datasets, Furthermore, the PCs captured the
+    population structure in the datasets well. PC1 captured the AFR populations from
+    the other ancestries, PC2 separated the EAS populations from the other ancestries,
+    and PC3 separated the AMR populations from sas.
+
+
+    Compared to the 1000 Genomes, the CCDG samples have more diverse ancestry. The
+    samples were predicted (depicted) in greater out and not overlap with the ancestries
+    in Figure 1 which explains why these CCDG samples have a predictability below
+    nine. A first variance (Table 1) of the probability that for the other group that
+    has a quarter of the samples was 0.783 and 0.889 and 0.651 half주시. The other group
+    has a higher degree of classification uncertainty. This means the CCDG has not
+    represented by our reference panel, i., the 1000 Genomes and the other group is
+    judged number of CCDG samples predicted for these labels was AFR, SAS, EAS1, were
+    very small, making these labels not ideal for estimating HWE due to loss. In our
+    opinion, we recommend not to use subset testing within these samples. The agreement
+    rate between our predicted ancestry and the self-reported race and ethnicities
+    was 65%, and the Cohen''s kappa coefficient was 0.558 when excluding the CCDG
+    samples with missing reported ancestry and ethnicities.
+
+
+    # Supervised unsupervised prediction using RF
+
+
+    We calculated the ancestry PCs for the 1000 Genomes WGS data and projected the
+    CCDG samples onto the reference map using TRACE. We used the RF algorithm to train
+    a classification model by using the 11 ancestry labels on the PCs for the 1000
+    Genomes dataset and then used the model to predict the ancestry for the CCDG samples.
+    We evaluated the adjusted PCs from TRACE and predicted labels by the predictor
+    ancestry, compared them with the self-reported ancestries and ethnicities.
+
+
+    From the PC plots in 3, most of the 1000 samples (depicted with triangles in C
+    and D) and the CCDG samples (depicted with circles in A and B) overlapped. The
+    different colors in the plot showed the reported populations in the 1000 Genomes
+    data and RF-predicted ancestry groups for the CCDG'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: "# Table 1. Five-number summary of the predicted probabilities for the other\
+    \ group through the supervised learning step CCDG samples\n\n| Minimum | 1st Quartile\
+    \ | Median | 3rd Quartile | Max |\n|---|---|---|---|--|\n 0.163 | 0.484 | 0.631\
+    \ | 0.783 | 0.899 |\n\n# Unsupervised clustering using GMM\n\nFor the CCDG samples\
+    \ categorized by other than the RE, it may still be possible to find homogeneous\
+    \ ancestry groups that can be used for HWE testing. Using the 1000 Genome data,\
+    \ we relied on unsupervised learning to find these groups. Unscrucca et al.'s\
+    \ GMM13 used the adjusted 15 PCs from TRACE. From BC, the optimal number of clusters\
+    \ was nine. To determine the ancestry label for each cluster, we plotted a heatmap\
+    \ of RF prediction probabilities with defined high similarity in Figure 4. For\
+    \ any cluster that showed relatively equal prediction probabilities across ancestries,\
+    \ we deemed these cluster-other, which are highly mixed and not appropriate for\
+    \ HWE.\n\n# Semi-supervised ancestry group\n\nOur semi-supervised approach, combining\
+    \ the RE and GMM results, produced a total of 18 homogeneous ancestry groups—11\
+    \ from the hierarchical clustering based on the Fst of the 1000 Genome populations\
+    \ and 7 from the G cluster. We assigned homogeneous ancestries to the majority\
+    \ of the samples, 95% (57,628/60,545), using our semi-supervised approach.\n\n\
+    # Comparison of HWE test results\n\nWe used Witten et al.'s test for HWE using\
+    \ PLINK22 for the HWE subset analysis. To analyze results based on the reported\
+    \ and predicted ancestries, we used RE and HARE labels. We used a set of variants\
+    \ defined as \"high quality\" by Konow23. In ancestry, Konow et al. defined high-quality\
+    \ variants as non-homonymous sites for chromosome 20 in HapMap33 and showed that\
+    \ these could be used for HWE when adjusting for population heterogeneity. Specifically,\
+    \ fewer failed an HWE test for appropriate counts for population heterogeneity,\
+    \ e, compared to an ancestry sample. Thus, we employed their strategy and the\
+    \ overlap between HapMap33 and CCDG to evaluate the propensity of our ancestry\
+    \ labels in accounting for population heterogeneity for HWE testing. When the\
+    \ minor allele count was less than 100 in each ancestry group. We showed the proportion\
+    \ of significant variants based on different p value counts. Among these 14,393\
+    \ variants, we observed the general that the HWE test based on our method rejected\
+    \ predicted ancestries\n\nstially fewer variants compared to the self-reported\
+    \ ancestry ethnicities and HARE labels. We compared the proportion of variants\
+    \ that were removed for our semi-supervised ancestry approach to the self-reported\
+    \ ancestry ethnicities and HARE labels. We used a statistically significant p\
+    \ value in any variant where at least one of the ancestry, race groups was removed.\
+    \ Among the variants that semi-supervised HWE testing, i.e., 0.3% to 21% respectively,\
+    \ and 22% at a p value of cutoff of 0.05, were increased. However, our optimized\
+    \ method performed HWE testing using two approaches, and we expect that following\
+    \ HWE likely won't be removed when using our semi-supervised ancestry labels for\
+    \ testing.\n\nFor the variants that the HWE test used using self-reported race\
+    \ and ethnicities or HARE labels but using the semi-supervised ancestry approach\
+    \ were removed, we observed that 44% and 29% were removed due to self-reported\
+    \ Hispanic and Asian labels, respectively, at a p value of cutoff of 0.05, 39%\
+    \ and 61% were removed due to the Hispanic and Asian labels. Both the labels are\
+    \ heterogeneous and divided; furthermore, both labels are also heterogeneous from\
+    \ methods that include East and South Asians. Because our ancestry groups match\
+    \ the assumption that the HWE test is more likely to hold; thus, many of these\
+    \ variants failed the test using our approach.\n\nIn addition, we compared the\
+    \ semi-supervised HWE analysis applied to the unsupervised RE from Figure 1. Overall,\
+    \ we observed fewer significant variants for HWE test based on the unsupervised\
+    \ clusters compared to the semi-supervised labels. Using a p value threshold of\
+    \ 1e-05, there were two statistically significant variants accounted for 42 for\
+    \ the supervised and semi-supervised labels, respectively. This difference is\
+    \ attributed to the clustering step of the semi-supervised approach, which found\
+    \ homogeneous clusters for samples that were originally categorized as other by\
+    \ the semi-supervised step. Including these as clusters for the semi-supervised\
+    \ approach allowed us to assess HWE on 95% of the CCDG samples, whereas the supervised\n\
+    \n2134 The American Journal of Human Genetics 111, 2129–2138, October 3, 2024"
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/7593f00bc7da5cac8436fdf8d5192a63_7_0.png)
+
+
+    **Figure 4.** Heatmap of the Gaussian mixture cluster models over 20,241 CCDG
+    samples predicted as other than predicted as other on RF
+
+    The rows are the predicted ancestral groups from the RF with higher prediction
+    probabilities corresponding to a darker color. The x axis provides estimated cluster
+    labels for the GMM.
+
+
+    # # Cluster Label
+
+
+    step only utilized 67% of the samples. This is because the supervised group is
+    very heterogeneous; including it one of the subsets for the HWE analysis would
+    be appropriate.
+
+
+    We also combined the RF and cluster labels that have Fst value less than 0.08
+    and the HWE subset set for these compared to the separated labels. Our results
+    (Table 2 showed that the number of statistically significant variants were similar
+    for both approaches. This means that using either combined or separated labels
+    to adjust in HWE testing could give results if the Fst is small. Based on these
+    results, users could consider using a Fst cuttoff of 0.08 for combining labels.
+
+
+    Table S2, with the calculation of ancestry PCs on the CCDG samples (i.e., over
+    60,000) being the most computationally intensive step. Because we only need to
+    calculate the ancestry PCs, the computational overhead is very manageable. The
+    supervised test requires a high-quality reference dataset that is relatively diverse,
+    but also contains population labels. We assumed our reference dataset, the 1000
+    Genomes, satisfies these two requirements given that populationlevel information
+    was collected across the globe. While we could have predicted ancestry based on
+    each of the 26 populations, we ultimately decided to combine these labels in order
+    to increase the size of each sample and statistical power; however, the combined
+    subpopulations are still representable given the low Fst cutoff.
+
+
+    # # Discussion
+
+
+    We propose a semi-supervised machine learning approach to predict homogenous ancestry
+    groups for assessing HWE in large, diverse WGS studies. Applying the method to
+    handle the ancestry data could potentially yield results that negatively impact
+    downstream analysis. To address this, HWE can be tested on subsets of samples
+    that are ancestral homogeneous. Our method predicts homogenous ancestry based
+    on the genotype, leading to substantially better HWE testing performance than
+    self-reported race and ethnicities and HARE samples.
+
+
+    Our method is flexible in its ability to incorporate machine learning techniques
+    in both supervised and unsupervised methods. However, the computational time and
+    memory requirements were as small as in'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# A Semi-Supervised
+
+
+    +   - R-EUR p=16,978
+
+    - C-EUR p=6,236
+
+    - R-FIN p=3,281
+
+    - R-AFRS p=11,458
+
+    - C-AFRS p=2,250
+
+    - R-PURCM p=3,359
+
+    - C-AXL/PURCLM p=6,798
+
+    - C-EUR/PURCLM p=1,562
+
+    - C-AFR/PURCLM p=2,931
+
+    - C-AFR p=1,968
+
+    - C-EAS p=573
+
+    - R-SAS p=1,028
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_8_0.png)
+
+
+    # B Self-Reported
+
+
+    +   - White p=15,004
+
+    - Finnish p=3,274
+
+    - Black p=1,384
+
+    - Hispanic p=12,248
+
+    - Puerto Rican p=2,104
+
+    - Asian p=2,760
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_8_1.png)
+
+
+    # C HARE
+
+
+    +   - Finnish p=3,279
+
+    - Black p=14,274
+
+    - Hispanic p=12,631
+
+    - Puerto Rican p=1,669
+
+    - Asian p=3,749
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_8_2.png)
+
+
+    **Figure 5.** Comparing the proportion of significant variants following the HWE
+    test after different methods in CDGG. Line plot showing the proportion of significant
+    variants for the HWE tests among semi-supervised predicted ancestry, self-reported
+    race and ethnicity, and HARE labels in CDGG 20 variants with a minor allele count
+    of at least 100 observed by HapMap. ''R'' refers to labels from the RE, and ''C''
+    refers to the GMM cluster.
+
+
+    be future interest to build more diverse datasets, which would address this limitation
+    of 10000 Genomes, the second step of our approach uses unsupervised ancestry to
+    find ancestrally clusters among those who do not belong to one of the reference
+    populations. Sample size should be considered for our approach. For the unsupervised
+    step, choosing a large, diverse
+
+
+    reference panel is critical for the classification model, e.g., RE. In particular,
+    small sample size could lead to instability, and underrepresentation in certain
+    ancestries. For the unsupervised learning step, sample size impact several aspects
+    of clustering, including the estimation quality of the EM, and the number of clusters
+    chosen. It''s important to have a larger sample size for GMM to enhance the model''s
+    robustness against clusters and noise, and allow a more rapid convergence of the
+    EM algorithm. For HWE testing, sample size can affect the power for a subset''s
+    size; then there may not be powerful to detect this ancestry. Thus, for subsets
+    with a small sample size, as less than 150.
+
+
+    +   - HARE
+
+    - Self-Reported
+
+    - Semi-Supervised
+
+    - Supervised
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_8_3.png)
+
+
+    For evaluating the quality of ancestry labels in accounting for population heterogeneity
+    for HWE testing, we used
+
+
+    **Figure 6.** Comparing the proportion of variants removed across different methods
+    in CDGG. Line plot showing the proportion of variants removed for the supervised
+    predicted ancestry, semi-supervised ancestry, self-reported race and ethnicity,
+    and HARE label in CDGG 20 high-quality variants that overlapped with HapMap across
+    p threshold.
+
+
+    definition of high-quality sites, from non-homozygous sites for 20 HapMap. We
+    recognize that HWE markers vary across different tasks or sources, etc. We acknowledge
+    this as a limitation in our study.
+
+
+    Capturing diversity in large-scale WGS studies based on actual rather than genetic
+    ancestry is important, and our method achieved this ancestry labels were assigned
+    based on the dimension'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Table 2. Number of CCDG chromosome 20 high-quality variants that overlapped
+    with HapMap3 for HWE exact p value than 1e-05 and 1e-04 for combined groups
+
+
+    | Ancestry group | Number of variants with p < 1e-05 | Number of variants with
+    p < 1e-04 |
+
+    |---|---||
+
+    | R-MXLC-MXL | 7 | 28 |
+
+    | MXL combined | 15 | 54 |
+
+    | R-AFRJC-AFRI/3 | 17 | 75 |
+
+    | AFR combined | 10 | 20 |
+
+    | R-EAS2JC-EAS | 0 | 5 |
+
+    | EAS combined | 0 | 5 |
+
+    | R-PUR/CLMCJ-EUR/PUR/CLM | 0 | 5 |
+
+    | EUR/PUR/CLM combined | 0 | 5 |
+
+
+    > *“R-” refers to groups from the random forest, and “C-” refers to the GMM cluster.*
+
+
+    reduction of the genotype data. A potential future direction is to consider fine-grained
+    population structure, which could capture more homogenous ancestries appropriate
+    for HWE subset testing. While viewing ancestry can be practiced, it''s possible
+    that some individuals do not fit any well because of their genetic variation.
+    Thus, instead of labeling variants with an ancestral category, viewing ancestry
+    as continuum could better reflect the true distribution of genetic variation for
+    all individuals.23 While HWE subset would not be feasible in this scenario, this
+    provides the future opportunity to develop an HWE methodology that would appropriately
+    adjust population structure as a continuum.
+
+
+    # Declaration of interests
+
+
+    The authors have no competing interests.
+
+
+    # Supplemental information
+
+
+    Supplemental information can be found online at https://doi.org/10.1016/j.ajhg.2024.08.018.
+
+
+    Received: January 26, 2024
+
+    Accepted: August 22, 2024
+
+    Published: September 12, 2024
+
+
+    # References
+
+
+    +   1. Bochie, O., Willey, J., and Zegrini, E. (2023). Understanding the genetic
+    architecture of human traits through whole genome sequencing. Commun. 14, 3520.
+    https://doi.org/10.1038/s41467-023-39295-x
+
+
+    +   2. Tallion, R., Harris, D.N., Kessler, M., Cardoso, J., Jspiez, Z., Aoms,
+    R., Taliun, S.A.G., Corveo, A., Gottam, S.M., Kang. H.M., et al. (2023). Sequencing
+    of 53831 diverse genomes from the UK Biobank cohort. Nature, 619, 591. https://doi.org/10.1038/s41586-023-35990-5
+
+
+    +   3. The All of Us Research Investigator Programs (2019). N. Engl. J. Med. 381,
+    666-678. https://doi.org/10.1056/NEJMoa1901113
+
+
+    +   4. Harold, D., Reid, R., Nack-Aden, M., Enroth, S., Karlsson, T., Ek, W. E.,
+    and Johnson, A. (2019). Improved prediction and power of polygenic risk with genome-wide
+    data association studies of inflammatory markers. Sci. Rep. 9, 16884; https://doi.org/10.1038/s41598-019-55133-y
+
+
+    +   5. Adelman, A. J., Lee, B. A., Ramakrishnan, A., Atman, G., Graham, A. M.,
+    Price, D., and Hum, Y. (2019). Identification of a variant control panel using
+    variant deep nucleotide sequencing. Science. 365, 91656. https://doi.org/10.1126/science.aal2144
+
+
+    # Data and code availability
+
+
+    The code developed for this paper can be found at https://github.com/denis5/Semi-Published_ML_Homogeneous_Ancestry_HWE.
+
+
+    # Acknowledgments
+
+
+    We thank staff from the National Genome Research Institute (NIH) for supporting
+    this study. This study was funded by NIH G5P Analysis Center at Harvard University
+    (U010068), CCDG awards to Washington University (U110683), Broad Institute of
+    MIT and Harvard (Boston College of Medicine (U008899), and New York City University
+    (U108901) and the NIH Program Grant Center at Grant University (R2 U240956). CCDG
+    code-specific methods may be found in the supplemental appendices.
+
+
+    Concept and design: D.S., R.D., and X.L.;acquisition, analysis and interpretation
+    of data: D.S., R.D., and X.L.; critical revision of the manuscript for important
+    content: D.S., R.D., X.L., and T.M.; statistical analysis: D.S.; funding acquisition:
+    X.L.; administrative, technical and final support: X.L.; supervision: R.D. and
+    X.L.
+
+
+    # Author contributions
+
+
+    +   6. Wright, J.-R., Cutler, J., and Abraham, G. R. (2005). On Ancestry Tests
+    of Hardy-Weinberg Equilibrium. Am. J. Hum. Med. 77, 887–893. https://doi.org/10.1096/429865.
+
+
+    +   7. Abramnov, N., Brass, A., and Tasselj, M. (2020). Hardy-Weinberg Equilibrium
+    in the Large Scale Genomic Sequencing Era. Gen. Genet. 210, 002021. https://doi.org/10.1389/genet.002021
+
+
+    The American Journal of Human Genetics 111, 2229–2318, October 3 2023'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'Wao, H., and Sterling, U. (2019). Extending Hardy-Weinberg Equilibrium to Structured
+    Populations. Genetics 213, 759–760. https://doi.org/10.1094/genetics/119.302370
+
+
+    Li, J. J., Adams, D.M., Tang, H., Southwick, A.M., Canto, A.M., Richards, S.,
+    Carr, J.M., Gomez, G., Cavalli-ello, L.L., and Myers, M.R. (2018). Hardy-Weinberg
+    Shifts from Population Patterns. Genetics 319, 1100–1104. https://doi.org/10.1094/genetics/ilx1153177
+
+
+    Goodrich, G., Pickett, J., Nickelson, V., Sudararajan, S., Li, J.J., Asher, D.,
+    Myers, M., Cavalli-Sora, L., Feldman, M.W., and Primm, R.K. (2006). The Hardy-Weinberg
+    Equilibrium in Admixture Populations. PLoS Genet. 5, e100050. https://doi.org/10.1371/journal.genet.100050
+
+
+    McGHugh, C., Brown, L., and Thornton, T.A. (2016). Detecting Heterogeneity in
+    Population Structure with Genomics. Genetics 204, 45–63. https://doi.org/10.1093/genetics/gev268
+
+
+    Fang, H., Hui, Q., Lynch, J., Jhomaraj, A., Asimkar, T., Lanning, J., Vujkovic,
+    M., Damrauer, S., Pramyam, S., Gazano, M., et al. (2019). Harmonizing Genetic
+    Ancestry and Identification in Genome-Wide Studies. Am. J. Hum. Genet. 105, 763–772.
+    https://doi.org/10.1016/j.ajhg.2019.06.012
+
+
+    Scrucca, L., Falci, C., Murphy, T.B., and Adrian, E.R. (2023). Clustering, Classification,
+    and Density Estimation Using Mclust in R (Chapman and Hall/CRC).
+
+
+    Breiman, L. (2001). Random Forests. Learn. Mach. 45, 5–52. https://doi.org/10.1023/A:1010933040324
+
+
+    Mathieson, I., and McKay, G. (2012). Confounding effects of rare and common variants
+    in structured populations. Nat. Genet. 44, 243–246. https://doi.org/10.1038/ng.1074
+
+
+    Holsinger, K.E., and Weir, B.S. (2009). Genetics in geographically structured
+    populations: defining and interpreting Fst. Nat. Rev. Genet. 10, 639–650. https://doi.org/10.1038/n2611
+
+
+    Hudson, R.D., Starklin, T., and Maddin, M.W. (1992). Estimating levels of gene
+    from DNA sequence data. Genetics 132, 583–589. https://doi.org/10.1094/genetics/132.2583.
+
+
+    Harker, G., Sankaramaran, S., and Price, A.L. (2013). Estimating and interpreting
+    the impact of rare variants. Genome Res. 23, 1514–1521. https://doi.org/10.1091/hg/gr111.548311.
+
+
+    Biao, J.G. (2012). Analysis of a random forests method. J. Mach. Learn. 13, 499–516.
+
+
+    Wu, C., Zhao, X., Li, A., Gbas, G., and Lin, R. (2015). Ancestry Estimation for
+    Sequencing Data using Procrustes Analysis and Genotype Imputation. Am. J. Hum.
+    Genet. 99, 926–937. https://doi.org/10.1016/j.ajhg.2015.04.018.
+
+
+    Gould, A., and Gordon, G.B. (2004). Procrustes Problems (Oxford University).
+
+
+    Purceill, S., Neale, B., Todd-Brow, P., Ferreira, L., M.A.R., Bender, D., Muller,
+    J., Sklar, P., Bakker, P.W., Daly, M., and Sham, C. (2007). PLINK: a tool for
+    whole genome and population-linked linkage analysis. Am. J. Hum. Genet. 81, 559–575.
+    https://doi.org/10.1096/ajhg.517995.
+
+
+    Kwong, A.M., Blackwell, T.W., LeFife, J., de Andrade, M., Bar-Noda, E.G., Cade,
+    R.E., et al. (2021). Robust, flexible and scalable tests for Hardy-Weinberg equilibrium
+    across diverse ancestries. Genetics 218, iyab0044. https://doi.org/10.1093/genetics/iyab0044.
+
+
+    The International HapMap 3 Consortium (2010). Integrating conserved and rare genetic
+    variation in diverse human populations. Nat. Nature 467, 52–58. https://doi.org/10.1038/nature09298.
+
+
+    Krains, T., and Fuentes, A. (2022). Genetic ancestry precision in medicine is
+    reshaping the race debate/19, pp.220303119. https://doi.org/10.1073/pnas.2203031119.
+
+
+    ![](img/7593f00bc7da5cac8436fdf8d5192a63_10_0.png)'
+  merge: -1
+  img_proc: true
