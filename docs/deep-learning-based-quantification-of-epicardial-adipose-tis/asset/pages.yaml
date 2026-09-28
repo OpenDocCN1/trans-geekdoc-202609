@@ -1,0 +1,1295 @@
+- pgno: 0
+  md: "# # ARTICLE IN PRESS\n\nAtherosclerosis (xxx, yyy xxx)\n\nContents available\
+    \ at ScienceDirect\n\n# ## Atherosclerosis\n\njournal homepage: www://www.elsevier.com/locate/atherosclerosis\n\
+    \n![](img/295299d28ea96dd1b2fa5465fea0375c_0_0.png)\n\n![](img/295299d28ea96dd1b2fa5465fea0375c_0_1.png)\n\
+    \n# ## DEep Learning-based Quantification of epicardial adipose tissue products\
+    \ MACE in patients under stress CMR\n\nMarco Guglielmo^{a,b}, Marco Penso^{c,d},\
+    \ Maria Ludovica Careri^{d,e}, Carlo Maria Giacari^{c}, Alessandro Volpe^{g},\
+    \ Laura Fusini^{g,h}, Andrea Baggaiano^{g,h}, Saima Mushtaq^{d}, Andrea Annoni^{d},\
+    \ Francesca Cannata, Francesco Cila^{d}, Alberto Del Toro^{d}, Fabio Fazzi^{d},\
+    \ Alberto Formenti^{d}, Antonio Frappamina^{d}, Paola Gripi^{d}, Daniel Junod^{d},\
+    \ Elisabeth Mancini^{d}, Valentin Megazga^{d}, Ricardo Marquez^{d}, Francesca\
+    \ Marcheti^{d}, Giorgio Mastroiacove^{d}, Sergio Pirola, Luigi Tassetti^{d}, Alexia\
+    \ Rossi^{g}, Chiara Ravera^{d}, Andrea Iquori^{g}, Mark Rabat^{d}, Pim van der\
+    \ Hart, Mariana Fortana, Pietro Costantini, Ivo van der Bil, Enrico G. Calmeta,\
+    \ Maria Peti, Pontone^{d}\n\n^a Department of Division of Heart and Vascular Research,\
+    \ University Medical Center, Utrecht, the Netherlands\nnb Department of Cardiology,\
+    \ Haags Teaching Hospital, The Hague, the Netherlands\nc Istituto Oncologico IRCCS,\
+    \ San Raffa, Milano, Italy\nd Department of Cardiovascular Radiology and Interventional\
+    \ Imaging, Centro Cardiologico IRCCS, Milan, Italy\ne Department of Biological\
+    \ Sciences and Morphological Function “G. Martini” University Hospital, Messina,\
+    \ Italy\nf Department of Valhbar and Structural Inter Cardiology, Centro Cardiologico\
+    \ IRCCS, Milan, Italy\ng Department of Clinical Medicine and Molecular Protection,\
+    \ Milan, Italy\nh Department of Cardiology, San Matteo Reggiano Hospital, Bologna,\
+    \ Italy\ni Department of Clinical Sciences and Cardiovascular Services, University\
+    \ Medical Center, Milan, Italy\nj Department of Experimental Medicine and Cardiology,\
+    \ Medical University, Polytechnic University of Bari, Italy\nl University of Chicago,\
+    \ Illinois, USA\nm Department of Internal Medicine, Lincoln, IL, USA\no Department\
+    \ of Nuclear Medicine, University of Zurich, Switzerland\nnp Center for Molecular\
+    \ Biology, University of Zurich, Zurich, Switzerland\nq Department of Radiology,\
+    \ Ospedale Maria della Caritas: University Hospital, Novara, Italy\nr National\
+    \ Amsterdam University, College London, Royal Hospital Foundation, London, UK\n\
+    t Department of Biomedical, Surgical and Dental Sciences, Milan, Italy\n\n# ##\
+    \ ARTICLE INFO\n\n+   - Epicardial adipose tissue\nEpicardial fat\n Coronary artery\
+    \ disease\nDeep learning\nCardiac segmentation\nCardiac magnetic resonance\nOutcome\n\
+    \n# ## ABSTRACT\n\nBackground: This study investigates the added prognostic value\
+    \ of epicardial adipose tissue (EAT) volume for major adverse cardiovascular events\
+    \ (MACE) in patients under stress CMR (imaging).\nMethods: We studied 730 patients\
+    \ (mean age: 63 ± 10 years; 516 men) who underwent stress CMR for coronary artery\
+    \ assessment (n = 365 ± 30) cohorts. MACE were defined as a non-fatal myocardial\
+    \ infarction or cardiac death. A deep learning model was developed and trained\
+    \ to quantify EAT volume from CMR. EAT volume was adjusted for heart volume volume\
+    \ index. A component-based risk score by Cox identified variables of the MACE\
+    \ was created.\nResults: In the derivation, 32 patients (8.7%) developed MACE\
+    \ during follow-up of 2103 days. Left stress perfusion left ventricular ejection\
+    \ function (LVEF) = 59 (± 4.8) HR (95% CI: 1.90–3.202; p<0.001), stress perfusion\
+    \ deficit\n\n> * Corresponding author. Department of Perioperative Cardiology\
+    \ and Cardiovascular Imaging, Centro Cardiologico IRCCS, Vi. C. Pares 4, 2018,\
+    \ Milan, Italy.\n* E-mail address: gianluca.ponte@cardiocomonico.it (G. Ponte).\n\
+    * These authors contributed equally as first authors.\n\nhttps://doi.org/10.1016/j.atherosclerosis.2024.117549\n\
+    Received 19 January 2024; Revised in 18 March 2024; Accepted 10 April 2024\nAvailable\
+    \ online 18 April 2024\n0021-9150/X2024 Elsevier B.V. All rights reserved.\n\n\
+    Please cite this article as: Marco Guglielmo et al., Atherosclerosis, https://doi.org/10.1016/j.atherosclerosis.2024.117549"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# ARTICLE IN PRESS
+
+
+    M. Guglielmo et al.
+
+
+    Atherosclerosis xxxx (xxxx)
+
+
+    HR (3.550 95% CI 1.765-3.381; p = 0.001), late gadolinium enhancement (LGE) (4.928
+    95% CI 1.822-7.759; p = 0.001) and heart volume index (1.082 95% CI 1.045-1.210;
+    p = 0.001) were independent predictors of MAC. In a multivariate regression, adding
+    heart volume index to a risk score including LVF, previous strain and LGE provided
+    additional value for MAC predictions with a net reclassification improvement (0.648
+    95% CI 0.565-0.731; p < 0.001). HR and heart volume index showed a higher C statistic
+    compared to risk score (0.85 95% CI 0.76; p = 0.001) and heart volume index (0.85
+    vs 0.74; p = 0.001). These findings were validated by the cohort. Conclusions:
+    In patients with clinically stressed CMR, fully automated heart volume index by
+    measurement can provide additional clinical information on top of standard and
+    cardiac imaging parameters.
+
+
+    # 1. Introduction
+
+
+    Stress cardiac magnetic resonance (CMR) is a powerful diagnostic tool with remarkable
+    ability to objectively assess function and stress pressure for cardiovascular
+    patients with known or suspected coronary artery disease (CAD).
+
+
+    Myocardial wall motion and late gadolinium enhancement (LGE) have been identified
+    as key predictors. A significant correlation was demonstrated with mortality and
+    risks of adverse events. Normal normal stress response during CMR is associated
+    with a good prognosis for at least 3.5 years [1].
+
+
+    Assessment of thickening between the visceral and parietal layers of the pericardium
+    during stress is performed by epicardial adipose thickness [2].
+
+
+    However, IF quantification is not yet practical in patients under stress, CMR
+    remains the prominent tool.
+
+
+    CMR has been extensively studied using non-invasive imaging. We established the
+    first method to quantify heart volume by measuring its thickness and length of
+    the right ventricle [3]. Subthree-dimensional techniques for assessing heart have
+    been proposed, such as CMR and computed tomography (CT) [4]. We used CNN access
+    to quantify pericardial volume [5] and CNN ability to detect lesions by coronary
+    artery characteristics [6].
+
+
+    The accuracy of myocardial wall thickness makes it a stable indicator for validating
+    heart function and partial pericardial volume [7], which enables precise volumetric
+    quantification of the ventricle.
+
+
+    With volumetric assessment of EAT can be performed manually by tracing the thickness
+    of the pericardium from the interventricular ventricle to the base. Then, the
+    software calculate volume based on the sum of all images, taking into account
+    slice thickness and gaps [8]. However, these methods have not been applied into
+    clinical routine assessments with CMR. With the development of artificial intelligence
+    applications that enable EAT to be quantified [9,10].
+
+
+    Our study aims to evaluate the prognostic value of EAT in patients clinically
+    stressed CMR through the utilization of a newly developed deep learning (DL) algorithm,
+    designed for the fully automated segmentation of EAT.
+
+
+    estimated flow rate < 30 ml/min (n = 14), and image quality of CMR (n = 11). Moreover,
+    patients without denervascularization within 60 minutes of stress CMR (n = 46)
+    were not included in the study. This was to prevent any bias of the CMR findings
+    on the outcomes of reevaluation.
+
+
+    The Institution''s ethical committee approved the protocol, and all patients provided
+    informed consent.
+
+
+    The clinical variables collected for each patient included demographic data, cardiac
+    history (history of CAD or revascularization with coronary intervention or coronary
+    artery graft), risk factors identified as hypertension, diabetes, use of current
+    or previous smoking, hyperlipidemia (low-density lipoprotein cholesterol) < 140
+    mg/dl, diabetes (fasting glucose level < 100 mg/dl) or use of insulin or oral
+    hypoglymic drugs), and heart
+
+
+    All patients were followed for the duration of CMR imaging. Outcomes were measured
+    by clinical visits and telephone interviews, with the contact with the patient''s
+    cardiologist or cardiologistologist and reevaluation.
+
+
+    Major adverse cardiac events (MACE) were defined as a combined endpoint:
+
+
+    +   1) Non-fatal myocardial infarction detected by the 4th ventricular definition
+    of myocardial infarction [13] and rise/or fall of troponin levels with above the
+    99th percentile above baseline and at least one of:
+
+    - symptoms of acute myocardial ischemia;
+
+    - new ischemic electrocardiogram (ECG) changes;
+
+    - development of pathological waves;
+
+    - imaging evidence of new myocardial or regional wall abnormality in a pattern
+    consistent with ischemic event;
+
+    - identification of a thrombosis by including angiography [14]
+
+    2) Cardiac death with symptoms of acute ischemia ischemia presented by new ischemic
+    ECG changes or ventricular fibrillation, with death before blood samples for biomarkers
+    can be identified, or increases in biomarkers detected by autopsy examination
+    [15].
+
+
+    # 2. Patients and methods
+
+
+    # 2.1. Study population
+
+
+    This was a retrospective study in a cohort of patients with known or suspected
+    CAD who were referred for clinically stressed CMR in our institution. Between
+    January 2011 and December 2014, patients were evaluated for the study. Exclusion
+    included known hypertrophic or restrictive cardiomyopathy (n = 12), severe claustrophobia
+    (n = 10), or presence of an implantable device (n = 13)
+
+
+    # 2.2. CMR protocol and analysis
+
+
+    All patients were evaluated in a T-1.5 Tesla scanner (GE MR450, GE Healthcare,
+    Milwaukee WI, USA). The CMR protocol is described in Supplemental Material A.
+
+
+    Pulse sequences are presented in Supplemental Table 1.
+
+
+    # 2.3. CMR imaging analysis
+
+
+    CMR datasets were processed to a dedicated workstation and analyzed with a commercially
+    available cardiac software (Circle CV142*5.13.9 software).
+
+
+    2'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# ARTICLE IN PRESS
+
+
+    The following parameters were measured: left-diastolic (LVEDV) and end-systolic
+    (LVES) volumes, left (LVEF) and right (RVEF) ejection fraction; left ventricular
+    mass (LV), LVEDV, LVEF, LV mass, and RVEV were measured for the body surface area
+    (BSA).
+
+
+    Qualitative analysis for all perf and LGE was independently performed by two experts
+    (M.G. and A.B., with over 8 years of experience in cardiac MRI and Level III European
+    Association of Cardiovascular Imaging, certified in cardiology). These readers
+    were blinded to the clinical history and image findings. The agreement between
+    the two readers, achieved through a consensus expert group (G. with over 10 years
+    of experience in cardiac MRI and Level III European Association of Cardiology
+    certified in cardiac MRI), measurements of volume times and fraction were all
+    performed by one expert (M.G.). In order to assess the interobserver variability,
+    EAT volume and mass were re-evaluated on a subset of 25 randomly selected patients
+    by an independent expert (A.B.) who was blinded to the results by the main investigator.
+
+
+    The EAT contours were measured at end-diastole, starting at the pericardium and
+    moving towards the inferior margin of adipose tissue as defined previously [2].
+
+
+    EAT volume (ml/m) was defined as the ratio between EAT volume and the patient
+    weight.
+
+
+    Weight was also not used to index the EAT volume for BSA or body mass index (BMI)
+    to observe the impact of obesity on chamber volumes and mass, as these parameters
+    are closely linked to EAT [14].
+
+
+    Stress perfusion defects were visually evaluated and defined as persistent delay
+    of enhancement during the first pass of contrast agent.
+
+
+    +   1) in at least one myocardial segment
+
+    2) not present in rest images
+
+    3) lacked >3 phases at the maximum signal intensity in the cavity of the left
+    ventricle
+
+    4) confirmed to coronary distribution
+
+    5) with no co-location with LGE site
+
+
+    The absolute amount and percentage of patients with LGE and the absolute value
+    and LGE defined as percentage of myocardial mass LGE were calculated.
+
+
+    Initially, the LV endothelium and epicard boundaries were manually traced, ensuring
+    that the blood pool and the myocardium were excluded from the region of interest.
+    LGE was then automatically calculated and defined as a myocardial segment with
+    an increase in signal intensity >5 standard deviations (SD) above the signal intensity
+    of the normal myocardium. Finally, any areas flagged as LGE by the software but
+    deemed artifactual during visual analysis were excluded [13].
+
+
+    # 2.4 Deep learning
+
+
+    For automated MRI image, a fully-convolutional architecture [16] was implemented
+    from an input image. The structure of the network was implemented from the UNet
+    [17], which achieved remarkable success on multiple datasets including cardiac
+    MRI high-level segments with low-fine-grained surface information. In Fig. 1,
+    the network architecture includes two-dimensional (2D) and 3D branches processing.
+    For the details architecture, preprocessing, and network training, supplemental
+    data augmentation was utilized to improve the model generation, as described in
+    Supplemental material.
+
+
+    The entire cohort of patients was randomly split into a derivation and a validation
+    cohort (365 and 365 patients, respectively) using a dedicated web link (https://www.random.org/integers/%20mode%20==)
+
+
+    ![](img/295299d28ea96dd1b2fa5465fea0375c_2_0.png)
+
+
+    Fig. (1) The main architecture which combines 2D and 3D convolutions for epicardial
+    adipose tissue segmentation from a cardiovascular resonance cine image. The last
+    layer generates the final segmentation map of the input slice. (B) BiFusion Block
+    which uses branches for its 2D and 3D. (C) ConvMixer Block which is used to extract
+    features from an image'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # ARTICLE IN PRESS
+
+
+    Table 1
+
+    Baseline characteristics of the study group.
+
+
+    | Demographics | Overall (n = 365) | MACE (n = 32) | No MACE (n = 333) | p value
+    |
+
+    |---|---|---|---|---|n| Age, years | 63.0 ± 10.7 | 62.8 ± 9.1 | 63.0 ± 10.7 |
+    0.952 |
+
+    | Male | 308 (84) | 24 (75) | 284 (82) | 0.016 |
+
+    | BMI, kg/m² | 19.0 ± 1.8 | 25.7 ± 4.1 | 26.6 ± 3.5 | 0.097 |
+
+    | Cardiovascular risk factors | | | | |
+
+    | Family history | 66 (18) | 6 (19) | 60 (18) | 0.509 |
+
+    | Smoking | 105 (29) | 11 (34) | 94 (28) | 0.001 |
+
+    | Hypertension | 159 (44) | 25 (78) | 134 (40) | 0.002 |
+
+    | Diabetes mellitus | 50 (14) | | 40 (12) | 0.016 |
+
+    | Hyperlipidemia | 64 (18) | 22 (69) | 142 (43) | 0.106 |
+
+    | CarPD | 54 (15) | 6 (19) | 44 (13) | 0.422 |
+
+    | Previous MCI | 237 (65) | | 209 (63) | 0.010 |
+
+    | Beta-blocker | 160 (44) | | 138 (41) | 0.039 |
+
+    | ACE inhibitors/ARBs | 219 (60) | 21 (66) | 198 (59) | 0.016 |
+
+    | Diuretics | 44 (12) | 31 (30) | 34 (10) | 0.005 |
+
+    | Statins | 53 (15) | 8 (25) | 45 (14) | 0.266 |
+
+    | Anti-thrombotic agents | 35 (10) | 23 (72) | 18 (53) | 0.738 |
+
+    | Nitrates | 169 (46) | 22 (69) | 147 (44) | 0.007 |
+
+    | Anti-allergic | 11 (3) | | 10 (3) | 0.100 |
+
+    | CMR | | | | |
+
+    | LV volumes index (mL) | 83.1 ± 2.37 | 93.8 ± 3.87 | 82.1 ± 2.16 | 0.105 |
+
+    | LVES index (mL) | 39.2 ± 5.11 | 51.6 ± 9.6 | 38.0 ± 5.3 | 0.015 |
+
+    | LVEDV (%) | 55.0 ± 12.2 | 50.6 ± 15.5 | 56.9 ± 12.1 | 0.113 |
+
+    | LVEF (%) | 27 (7) | | 65.5 ± 19.4 | 0.004 |
+
+    | LV mass (g/m²) | 66.4 ± 20.0 | 76.0 ± 24.9 | 62.9 ± 14.3 | 0.025 |
+
+    | RV volumes index (mL) | 48.4 ± 16.2 | 62.8 ± 13.3 | 48.5 ± 14.6 | 0.054 |
+
+    | RVES index (mL) | 26.8 ± 9.5 | 24.3 ± 7.4 | 27.0 ± 9.7 | 0.126 |
+
+    | LVEDV (mL) | 71.5 ± 6.2 | 61.5 ± 8.6 | 71.7 ± 9.0 | 0.997 |
+
+    | GGE index (mL) | 3.7 ± 0.7 | | 1.0-0.4) | 10.2 ± 2.1 | 0.001 |
+
+    | LGE (g) | (1.0-0.2) | | (10.4-2.1) | 0.000 |
+
+    | Myocardial function | 186 (51) | | 160 (48) | 0.001 |
+
+    | Stress depression | 128 (35) | | 121 (40) | 0.001 |
+
+    | EAT volume (mL) | 43.5 ± 15.9 | 540 ± 137.7* | 42.5 ± 15.8 | 0.001 |
+
+    | EAT index | 12.1 ± 4.6 | | 10.8 ± 8.8 | 0.001
+
+
+    # 2. Discussion
+
+
+    On the derivation cohort, the set of 300 randomly selected and manually annotated
+    patients (ground truth) reached validation (n = 240; 80% and n = 60), with respect
+    to sex, and BMI as discussed in the Table of both derivation and validation cohorts.
+
+
+    Continuous variables were presented as mean ± SD or median (25th, percentile)
+    and categorical variables as numbers and frequencies. Independent student''s t,
+    Mann-Whitney test, Chi-square, or Fisher''s test were used to compare the distribution
+    of variables between groups. Inter-rater reliability of segmentation was assessed
+    using intraclass correlation (ICC).
+
+
+    The ability of the score to predict events was evaluated by the area under the
+    curve (AUC). The 95% confidence interval (CI) was calculated using the bootstrap
+    method.
+
+
+    predictive risk was dichotomized using a threshold determined by Maximum Index
+    (sensitivity - specificity). - 1
+
+
+    Continuous negative regression (NRI) was used to determine the value of EAT volume
+    index in predicting MACE. The incremental power of EAT volume in predicting MACE
+    was assessed by the chi-square test of model coefficient and by Harrell C statistics
+    analysis and the De-Long test.
+
+
+    The ability of the score to predict events was also tested using the calibration
+    curve.
+
+
+    Statistical analyses were performed on Python with scikit-learn package (version
+    0.22.2; https://scikit-learn.org/) and R (version 4.3.1 (R Foundation for Statistical
+    Computing). p-value < 0.05 was considered statistically significant.
+
+
+    # 3. Results
+
+
+    Results have been presented following the recommendations of the Checklist for
+    Artificial Intelligence in Medical imaging (CLAIM) [18] and the Transparent Report
+    of a multivariable prediction model for individual diagnosis or prognosis (TRIPOD)
+    [19].
+
+
+    # 3.1. Derivation cohort
+
+
+    Three hundred and fifty-six patients (age 63 years ± we) were'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# ARTICLE IN PRESS
+
+
+    ![](img/295299d28ea96dd1b2fa5465fea0375c_4_0.png)
+
+
+    **Fig. 2.** Bland-Alt plots of epicardial adipose tissue between automated measurement
+    and manual measurement (A), as well as measurements by different human observers
+    (B). Difference bias = bias; ±1.9 standard deviations; CV: coefficient of variance;
+    LOA: limits of agreement.
+
+
+    enrolled. The median follow-up time was 2103 days (25th-75th: 1822-2047). Nine
+    patients were lost to follow-up.
+
+
+    Thirty-two patients (8.7%) experienced MACE during follow-up (non-fatal cardiac
+    myocardial infarctions and deaths).
+
+
+    Baseline characteristics of patients with and without MACE were reported in Table
+    1. Prevalence of hypertension, diabetes mellitus, and previous cardiovascular
+    revascularization occurred in patients with more events than those without. Patients
+    experiencing MACE
+
+
+    more treated with beta-blockers, angiotensin-converting enzyme inhibitors, non-cardiac
+    diuretics, and diuretic agents.
+
+
+    As compared to without MACE, patients experiencing MACE showed first-free LVF
+    = 35% (22% vs 5%, p<0.001), prevalence of LGE (81% vs 48%, p<0.001) and LGE mass
+    (p=0.001) and EAT (50.0 ± 14.7 vs 42.5 ± 15.8, p<0.001) and EAT volume (31.8 ±
+    7.5 vs 24.2 ± 8.6, p<0.001) were significantly higher in patients experiencing
+    MACE.
+
+
+    Fig. 2 shows the Bland-Alt plots of the EAT volume and compares segmentation to
+    manual segmentation by different human observers on the test set. The automated
+    method showed a strong correlation with manual segmentation and narrow limits
+    of agreement, demonstrating that for the EAT, the computer-human difference is
+    comparable with the human-human difference.
+
+
+    ![](img/295299d28ea96dd1b2fa5465fea0375c_4_1.png)
+
+
+    Mean analysis of a single subject for the automated method was significantly faster
+    than the manual approach (0.4 vs 24 s; p<0.001). E segmentation results of our
+    proposed network on short-axis cine images are illustrated in Fig. 3. Examples
+    of segmentation across slices are shown below.
+
+
+    ![](img/295299d28ea96dd1b2fa5465fea0375c_4_2.png)
+
+
+    Table 2 shows the HR risk factors for MACE by hypertension, diabetes, hyperlipidemia,
+    previous cardiovascular revascularization. Beta-blockers, ACE inhibitors, statins,
+    along with characteristics including LVDEV index, LV index, LV index, stress perfusion
+    and defects, were all associated with the occurrence of MACE.
+
+
+    ![](img/295299d28ea96dd1b2fa5465fea0375c_4_3.png)
+
+
+    Based on the multivariate analysis (Table 3, model 1), the risk score for MACE
+    was created with the relative value, though 2.90 to the presence of LVF = 35%,
+    2.88 to the presence of LGE index and 2.9 to the persistence of perfusion defects.
+
+
+    Furthermore, after adjusting for BMI (Table 3, model 3), sex and age (Table 3,
+    model 4) and diabetes (Table 3, model 5), EAT volume remained an independent predictor
+    of MACE (p<0.001).
+
+
+    Based on Youden index, the optimal threshold for EAT volume was >24.4 ml (p<0.001).
+
+
+    In order to estimate the effect of EAT volume index and risk score for MACE, Kaplan-Meier
+    curves were stratified by high EAT volume (≥24.6 ml/m) and low EAT volume (<24.6
+    ml/m), and high risk score (≥2.7) and low risk score (<2.7).
+
+
+    ![](img/295299d28ea96dd1b2fa5465fea0375c_4_4.png)
+
+
+    Adding EAT volume to the risk score, provided a significant improvement in MACE
+    prediction, with an ORI of 0.683 (95% CI, 0.356–1.052; p<0.001). Finally, the
+    combined evaluation of risk score
+
+
+    Fig. 3. Example of segmentation of the epicardial tissue on cardiac magnetic resonance
+    short-axis cine images using the proposed network compared to the manually traced
+    contours.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# # ARTICLE IN PRESS
+
+
+    Guglielmo et al. Atherosclerosis xxx (xxxx)
+
+
+    # Table 2
+
+    Univariable predictors of MACE in the deviation cohort.
+
+
+    | Univariate | HR (95 % CI) | p value |
+
+    |---|---|---|
+
+    | Clinical | | |
+
+    | Age (years per year) | 0.907 (0.966-1.030) | 0.874 |
+
+    | Male | 0.538 (0.242-1.198) | 0.129 |
+
+    | BSA | 0.130 (0.013-1.317) | 0.084 |
+
+    | BMI | 0.926 (0.819-1.047) | 0.021 |
+
+    | Cardiovascular risk factors | | |
+
+    | Family history | 0.739 (0.302-1.807) | 0.527 |
+
+    | Smoking | 0.928 (0.644-1.395) | 0.036 |
+
+    | Hypertension | 4.445 (1.547-12.773) | 0.020 |
+
+    | Diabetes mellitus | 2.475 (1.150-5.225) | 0.020 |
+
+    | Hypercalcemia | 1.925 (0.852-4.268) | 0.011 |
+
+    | CABG | 1.539 (0.633-3.741) | 0.314 |
+
+    | Previous PCI | 3.711 (1.002-10.581) | 0.011 |
+
+    | Medications | | |
+
+    | Beta-blockade | 3.360 (1.005-11.299) | 0.049 |
+
+    | ACE inhibitors/AT1 blockers | 1.525 (0.524-4.015) | 0.009 |
+
+    | Diuretics | 2.919 (1.096-6.495) | 0.000 |
+
+    | Co-agonists | 1.648 (0.711-3.820) | 0.024 |
+
+    | Anti-thrombotic agents | 1.721 (0.706-4.233) | 0.241 |
+
+    | Nitrates | 1.039 (0.356-3.027) | 0.945 |
+
+    | Statins | 0.885 (0.582-1.340) | 0.095 |
+
+    | Anti-uricemia | 0.886 (0.610-1.251) | 0.095 |
+
+    | CMR characteristics | | |
+
+    | LVEDX index (ml/m² per 1 ml/m²) | 1.016 (1.005-1.028) | 0.005 |
+
+    | LVEDV index (ml/m² per 1 ml/m²) | 1.018 (1.008-1.029) | 0.001 |
+
+    | LVEF (%) | 0.955 (0.945-1.065) | 0.001 |
+
+    | LV mass index (g/m² per 1 g/m²) | 4.407 (1.907-10.232) | 0.002 |
+
+    | RVEDX index (ml/m² per 1 ml/m²) | 1.023 (1.005-1.037) | 0.001 |
+
+    | RVES index (ml/m² per 1 ml/m²) | 0.977 (0.959-1.011) | 0.062 |
+
+    | RVEF (%) | 0.998 (0.953-1.046) | 0.934 |
+
+    | LGE (%) | 1.467 (0.622-3.514) | 0.578 |
+
+    | LGE mass (g per per 1 g) | 1.020 (1.003-1.036) | 0.018 |
+
+    | Prevalence of LGE | 4.428 (1.832-10.259) | 0.001 |
+
+    | EAT volume (ml/m² per 1 ml/m²) | 1.040 (1.019-1.060) | <0.001 |
+
+    | EAT volume index (ml/m² per 1 ml/m²) | 1.082 (1.045-1.120) | <0.001 |
+
+
+    CI: confidence interval; HR: hazard ratio. BSA: body surface area; CMR: cardiac
+    magnetic resonance; EAT: ectopic adipose tissue; ED: diastolic volume; EF: ejection
+    fraction; ES: systolic volume; LGE: gadolinium enhancement; LV: left ventricle;
+    MACE: major adverse cardiovascular events; RV: right ventricle.
+
+
+    # Table 3
+
+    Multivariable analysis derivation cohort.
+
+
+    | HR (95 % CI) | p value |
+
+    |---|---|---|
+
+    | Model 1 | | |
+
+    | LVEF <35% | 2.895 (1.224-6.850) | 0.016 |
+
+    | Prevalence of LGE percentage | 2.876 (1.131-7.318) | 0.027 |
+
+    | Perfusion defect | 2.689 (1.114-6.504) | 0.027 |
+
+    | Model 2 | | |
+
+    | Risk score (per point) | 1.446 (1.234-1.694) | <0.001 |
+
+    | EAT volume index (ml/m² per 1 ml/m²) | 1.072 (1.038-1.107) | <0.001 |
+
+    | Model 3 | | |
+
+    | BMI, kg/m² | 0.864 (0.760-0.981) | 0.025 |
+
+    | EAT volume index (ml/m² per 1 ml/m²) | 1.095 (1.053-1.139) | <0.001 |
+
+    | Model 4 | | |
+
+    | Male | 0.502 (0.214-1.175) | 0.112 |
+
+    | Age, years (per year) | 0.990 (0.951-1.028) | 0.618 |
+
+    | EAT volume index (ml/m² per 1 ml/m²) | 1.082 (1.045-1.120) | <0.001 |
+
+    | Model 5 | | |
+
+    | Diabetes | 2.680 (1.234-5.821) | 0.013 |
+
+    | EAT volume index (ml/m² per 1 ml/m²) | 1.079 (1.040-1.120) | <0.001 |
+
+
+    BMI: Body Mass Index; EAT: ectopic adipose tissue; LGE: gadolinium enhancement;
+    LV: left ventricular ejection function.
+
+
+    and EAT volume index showed a higher C statistic as compared to risk score (0.85
+    vs 0.76; p<0.001) and EAT volume index (0.85 vs 0.74; p<0.001; Fig. 6).
+
+
+    # 3.2. EAT and obesity
+
+
+    Standard measure of obesity (BMI [kg/m²]) was independently predicted of MACE
+    by Cox Regression. After adjusting for BMI, EAT volume index (ml/m²) remained
+    a significant independent risk factor for future
+
+
+    6'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# ARTICLE IN PRESS
+
+
+    MACE (1.095 [95 % CI, 1.053–1.139]) p<0.001 (Table 3, model 3).
+
+
+    # 3.3. EAT and sex
+
+
+    MACE occurred in 24 (75 %) males and 8 (25 %) females. Increased EAT volume index
+    was associated with higher risk of MACE in males (HR 1.086 [95 % CI, 1.045–1.128];
+    p<0.001) but not in females (HR 1.067 [95 % CI, 0.987–1.153]; p=0.103). However,
+    in fact, there were no significant differences in EAT volume index between males
+    and females (p=0.525).
+
+
+    # 3.4. EAT and density
+
+
+    In the multivariate analysis, the EAT volume index was an independent predictor
+    of MACE after adjusting for density (HR 1.079 [95 % CI, 1.040–1.120]; p<0.001)
+    as shown in Table 3 (model 5). Increased EAT volume index was associated with
+    higher risk of MACE, in both patients (HR 1.106 [95 % CI, 1.033–1.187]; p=0.005)
+    and without density (HR 1.066 [95 % CI, 1.021–1.118]; p=0.004).
+
+
+    # 3.5. Analysis of the validation cohort
+
+
+    The validation cohort compared 365 patients characteristics (Table 6, Supplemental
+    Table 2) to those of the derivation. The median follow-up was 2177 days (25th–75th:
+    1848–2437). EAT volume index showed lower risk of MACE (HR 0.638 [95 % CI, 0.524–0.792];
+    p<0.001) and a higher C-index as compared to risk score (0.76 vs 0.59; p<0.001).
+    Kaplan-Meier curves were shown on the basis of high EAT volume index (<24.6 ml/m)
+    and high risk score. Multivariable analysis results of the validation cohort were
+    comparable to those of the derivation cohort (Supplemental Table 3).
+
+
+    The main findings of the study are synthesized in the graphical abstract (Fig.
+    8).
+
+
+    # 4. Discussion
+
+
+    The aim of the present study was to evaluate the additional
+
+
+    ![](img/295299d28ea96dd1b2fa5465fea0375c_6_0.png)
+
+
+    Fig. 5. Numerical value of risk score compared with epicardial adipose tissue
+    volume index in comparison with risk score.
+
+
+    # 4.1. Summary of results
+
+
+    The main findings of the study are that in patients with known or suspected CAD
+    under stress CMR:
+
+
+    +   1) EAT volume index is an independent predictor of MACE with an incremental
+    risk reduction on top of standard clinical and CMR parameters such as SVF, stress
+    ventricular function and LGE even after adjusting for sex, diabetes and obesity.
+
+    2) EAT can be automatically and accurately quantified using a new deep DL algorithm
+    on short-axis care CMR images with performance comparable to human expert assessment.
+
+
+    ![](img/295299d28ea96dd1b2fa5465fea0375c_6_1.png)
+
+
+    Fig. 4. Kaplan-Meier curves for major adverse cardiac events (MACE) in the derivation
+    cohort, based on risk score and epicardial adipose tissue (EAT) volume index values.
+
+
+    Low EAT volume <24.6 ml/m; high EAT volume ≥24.6 ml/m.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/295299d28ea96dd1b2fa5465fea0375c_7_0.png)
+
+
+    # 4.2. Existing research on this topic
+
+
+    EAT covers 80 % of the heart surface and is more represented in atrioventricular
+    and interventricular grooves around the epicardial coronary arteries [21]. Different
+    from adipose tissue of other organs, the EAT has specific anatomical and functional
+    characteristics. It consists of adipocytes with better and denser features [21].
+
+
+    A growing body of evidence suggests that EAT may contribute to developing CAD
+    [22] and even acute coronary syndromes [23]. As a result of remodeling and proinflammatory
+    cytokines released that inflammation is widely associated with all phases of CAD,
+    from early atherogenesis to atherosclerotic progression and ultimately plaque
+    rupture [23].
+
+
+    CMR is the most effective non-invasive method for measuring EAT and to distinguish
+    it from adipose [2]. In contrast to echocardiography, CMR allows 3D analysis of
+    the EAT volume, distribution, and characteristics [21].
+
+
+    The use of EAT quantification appears to be limited by their efforts in quantifying
+    EAT with non-contrast CCT [6]. Neither accurate nor reproducible technique is
+    capable of evaluating EAT [12]. The validated ex vivo in animal models, can detect
+    the adipose tissue and atherosclerotic plaques from the basal level of the mitral
+    valve and moving apically to the most inferior margin of adipose tissue. The tissue
+    is then derived using a modified Simpson''s rule [12]. Applying this method, CMR
+    derived has been investigated in small cohorts as another
+
+
+    Fig. 4. Receiver operating (ROC) curves showing a higher value of risk score combined
+    with EAT volume index (C statistics 0.854) in comparison with risk score (C statistics
+    0.761) and EAT volume index (C statistics 0.739).
+
+
+    # Table 4
+
+    Baseline characteristics of the validation cohort compared to the deviation cohort.
+
+
+    | Demographics | Deviation (n = 365) | Validation cohort (n = 365) | value |
+
+    |---|---|---|--|
+
+    | Age, years | 63.0 ± 10.7 | 64.3 ± 10.2 | 0.640 |
+
+    | Male | 308 (84) | 308 (84) | 0.931 |
+
+    | BMI, kg/m² | 19.2 ± 1.0 | 19.2 ± 1.0 | 0.401 |
+
+    | Cardiovascular risk | 26.5 ± 3.6 | 26.2 ± 3.7 | 0.317 |
+
+    | Family history | 66 (18) | 68 (19) | 0.999 |
+
+    | Smoking | 105 (29) | 96 (26) | 0.270 |
+
+    | Hypertension | 159 (44) | 171 (47) | 0.600 |
+
+    | Diabetes mellitus | 50 (14) | 54 (15) | 0.383 |
+
+    | CABG | 164 (45) | 162 (44) | 0.477 |
+
+    | Previous CCT | 237 (65) | 247 (68) | 0.597 |
+
+    | Medications | | | |
+
+    | Beta-blocker | 160 (44) | 155 (42) | 0.367 |
+
+    | ACE inhibitors/ARBs | 140 (38) | 152 (42) | 0.466 |
+
+    | Diuretics | 44 (12) | 41 (11) | 0.608 |
+
+    | Anti-anginal agents | 53 (15) | 213 (58) | 0.775 |
+
+    | Nitrates | 35 (10) | 30 (8) | 0.413 |
+
+    | Statins | 169 (46) | 179 (49) | 0.611 |
+
+    | Anti-inflammatory | 28 (8) | | 0.006 |
+
+    | LVDI index (mL/m²) | 83.1 ± 2.3 | 82.4 ± 2.3 | 0.701 |
+
+    | LYSV index (mL/m²) | 39.2 ± 2.1 | 38.6 ± 2.7 | 0.712 |
+
+    | LVES volume (mL) | 55.0 ± 12.2 | 55.6 ± 11.9 | 0.629 |
+
+    | LVED volume | 25 (7) | 26 (7) | 0.877 |
+
+    | LV mass (g) | 66.4 ± 20.0 | 63.5 ± 16.1 | 0.064 |
+
+    | LVES volume (mL) | 68.4 ± 20.0 | 68.1 ± 15.6 | 0.755 |
+
+    | RVDI index (mL/m²) | 26.8 ± 5.6 | 26.8 ± 5.1 | 0.954 |
+
+    | EAT volume | 61.5 ± 7.5 | 63.2 ± 3.2 | 0.774 |
+
+    | REF < 51% | 27 (7) | 28 (7) | 0.880 |
+
+    | LGE (g) | 1.0 (0.0-12.4) | 0.3 (0.0-14.0) | 0.942 |
+
+    | LEP (g) | 186 (50) | 184 (50) | 0.912 |
+
+    | Stress perfusion | 102 (28) | 114 (31) | 0.319 |
+
+    | EAT volume (mL) | 43.5 ± 15.9 | 43.1 ± 16.5 | 0.752 |
+
+    | EAT volume index (mL/m²) | 25.1 ± 9.0 | 25.1 ± 8.7 | 0.909 |'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# ARTICLE IN PRESS
+
+
+    M. Guglielmo et al.
+
+
+    Atherosclerosis xxx (xxxx) year
+
+
+    ![](img/295299d28ea96dd1b2fa5465fea0375c_8_0.png)
+
+
+    Low score, Low EAT volume index
+
+    High score, Low EAT volume index
+
+    Low score, High EAT volume index
+
+    High score, High EAT volume index
+
+
+    Survival Probability
+
+    Years
+
+    At risk
+
+    Low score, Low EAT index...
+
+    Log-rank p=0.001
+
+
+    Fig. 7. Kaplan-Meier curves for major adverse events (MACE) in the validation
+    cohort based on risk and cardiac adipose tissue (EAT) values. Low EAT <24.6 mL/m,
+    high EAT ≥24.6 mL/m.
+
+
+    ![](img/295299d28ea96dd1b2fa5465fea0375c_8_1.png)
+
+
+    Fig. 8. Graphical abstract.
+
+    Epicardial tissue volume measured with a DL algorithm applied to standard cardiac
+    images represents a robust independent predictor of MACE in patients with or suspected
+    CAD under stress CMR.
+
+
+    cardiovascular mapping. In a study of 64 heart failure patients with LVEF >40%
+    undergoing CMR, patients with heart failure and low EAT had to contrast, similar
+    to Meyer. EAT volume was associated with the presence of atrial fibrillation (24)
+    and type 2 diabetes mellitus with biomarkers related to inflammation [25,26].
+    We studied 110 patients undergoing first-time AF-related ablation, demonstrating
+    that EAT is associated with the presence of AF, the risk of left atrial fibrillation
+    ablation [27]. Also, in 54 patients with myocardial infarction, EAT volume has
+    been correlated with larger infarct size, microvascular obstruction, and greater
+    ST-deviation [28].
+
+
+    factor to the CMR for this purpose and, in to CCT [29], there are data on the
+    use of artificial intelligence for quantifying EAT in CMR and its potential prognostic
+    role.
+
+    Ding et al. demonstrated an algorithm for automated pericardial fat quantification
+    based on water/fat-weighted cardiac resonance angiography [30]. In this study,
+    only ten patients were analyzed. An expert reader segmented the images of four
+    patients, and the algorithm was applied to the remaining six subjects [30].
+
+    Recently, a DL algorithm for fully automated quantification of the pericardial
+    adipose tissue surrounding a standard CMR-four-chamber has been proposed [31].
+    The algorithm has then been applied to
+
+
+    The time required for manual quantification of EAT is limiting
+
+
+    9'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# ARTICLE IN PRESS
+
+
+    42598 students in the U.S. biobank and revealed an association between the pericardial
+    tissue measured with CMR and cardiovascular structure (greater thick left ventricle,
+    higher concentric metric of ventricular remodeling), revealed left ventricle and
+    atrial function and lower anterior clearance [32]. Moreover pericardial adipose
+    was associated with diabetes and blood biomarkers of poor glycemic control, serum
+    lipids, and proinflammatory markers [32].
+
+
+    potential differences in the incidence, prevalence, and outcomes of diseases between
+    sexes. The findings of our study regarding the similarity in cardiac event rates
+    across genders has been reported without caution, the underrepresentation of women
+    might have ignored sex based differences that could be identified. Our findings
+    suggest that research requires a concerted effort to ensure more equitable representation
+    of gender differences in cardiac event outcomes.
+
+
+    It should be noted that the pericardial fat measured in this study epicardial
+    adipose tissue (the visceral and parietal layers of the pericardium), and pericardial
+    fat (lateral to the parietal pericardium), has been identified as associated with
+    cardiovascular risk and morbidity [32]. Also, pericardial adipose tissue was measured
+    based on fat area than providing volumetric measurements. Finally, the study was
+    conducted in the healthy population of the U.S. Biobank, and no information about
+    myocardial characterization with CMR were reported [32].
+
+
+    Previous studies sought to characterize the role of epicardial adipose tissue
+    in myocardial perfusion defects and LGE represents a known factor of MACE. However,
+    CMR is, on average, less accessible than CT, requires longer scan times, and lacks
+    the spatial resolution of CT. Yet, the main advantage of CMR over CT is that it
+    does not use ionizing radiation.
+
+
+    # 4.4. Strengths and limitations
+
+
+    Our study presents elements of novelty in comparison to previous works.
+
+
+    Firstly, we showed for the first time that CMR-derived EAT volume was an independent
+    predictive factor for MACE and above standard clinical and damaging parameters
+    in a large population of patients with known or suspected CAD under CMR. In particular,
+    we tested the effectiveness of EAT measurements in comparison of other methods
+    including CMR perfusion and characterization with LGE technique.
+
+
+    Secondly, it is first to demonstrate that the EAT can be accurately measured and
+    segmented with fully automated algorithms on images without manual effort for
+    scanning or analysis.
+
+
+    The results of our study have many important clinical implications. EAT may aid
+    in the identification of patients with higher risk of future events, promoting
+    the initiation of risk-reducing interventions, including in women with inflammatory
+    therapy.
+
+
+    By incorporating this DL algorithm into CMR, EAT could be used as a robust quantitative
+    method to assess patient’s risk. It was measured using short-axis cine-CMR stacks,
+    which are routinely recorded in any CMR for calculating biventricular dimension
+    and without the need for contrast. Furthermore, unlike manual quantification of
+    EAT, which is time-consuming, our proposed algorithm allows epic fat to be quantified
+    within few seconds.
+
+
+    EAT volume measured with a DL algorithm in standard CMR represents a robust independent
+    predictor of MACE in patients with known or suspected CAD under stress CMR. EAT
+    volume also provides an independent prognostic over top of standard clinical and
+    imaging parameters.
+
+
+    # Data availability
+
+
+    The data underlying this article will be shared on reasonable request to the corresponding
+    author.
+
+
+    # Credit author contribution statement
+
+
+    Marco Gigliotto: Conceptualization, Methodology, Investigation, Writing - draft,
+    Data analysis. Visanco Porto: Methodology, Software, Visualization, Data curation,
+    Writing - review & editing. Marco Gigliotto: Writing - review & editing, Visualization.
+    Alessandro Leone: Writing - draft, Investigation, Writing - review & editing.
+    Andrea Baglio: Data curation, Formal analysis, Writing - draft, Supervision. Writing,
+    Investigation, Methodology. Antonio Serra: Supervision, Validation. Francesco
+    Canassa: Visualization, Methodology. Francesco Cali: Software, Formal analysis,
+    Alberto Del Toro: Data acquisition, Methodology, Formal analysis, Visualization,
+    Writing - review & editing. Frampentina: Methodology. Paola Grioli: Visualization,
+    Writing - original draft. article. Daniele Junco: Investigation, Methodology,
+    Medical analysis. Elena Sabatini: Visualization, Writing - review & editing. Valentina
+    Valenti: Formal analysis, Writing - review & editing. Francesco Vallidance: Formal
+    analysis. Francesco Marchetti: Conceptualization, Methodology, Investigation.
+    Sergio Porola: Investigation, Data analysis. Luigi Tassetti: Supervision, Writing
+    - original draft. Valentina Vaurini: Supervision, Methodology, Writing - review
+    & editing. Chiara Rovera: Data curation, Formal analysis, Writing - review & editing.
+    Pietro Costantini: Data curation, Formal analysis, Writing - review & editing.
+    Io van der Bilt: Data curation, Formal analysis, Writing - review & editing. Enrico
+    G. Gaiani: Data analysis, Writing - review & editing. Mariana Fontana: Data curation,
+    Formal analysis, Writing - review & editing. Mauro Pepi: Data analysis
+
+
+    Our study presents limitations. It is a single-center study with potential referral
+    bias. We retrospectively enrolled patients with clinically indicated CMR with
+    potential inclusion bias. In size, of our samples represent a limited number of
+    patients and were followed for an extended period. Second, the lack of significant
+    differences in cardiac event rates between sexes reflects the general level of
+    underrepresentation of the female population in our study. This underrepresentation
+    is a common challenge in clinical research, leading to less conclusions about
+    gender specific outcomes due to insufficient statistical power to detect such
+    differences. Thirdly, women are underrepresented in clinical trials, leading to
+    a gap in knowledge regarding sex-specific responses to treatments and interventions
+    for various conditions, including cardiac [23]. This imbalance in research subjects
+    could'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# ARTICLE IN PRESS
+
+
+    curation, formal analysis, writing & editing, Gianluca Pone-
+
+
+    update: for cardiovascular magnetic resonance (CMR) of task force on post-journaling.
+    J. Cardiov. Magn. 35 (2022)
+
+
+    tone: Data curation, formal analysis, writing & editing.
+
+
+    Atherosclerosis xxx (xxx) 2022
+
+
+    # Declaring conflict of interest
+
+
+    The authors declare the financial interests/personal interests-
+
+    which may be considered as potential conflicts of interest:
+
+
+    Gianluca Pone reports a relationship with G&E Healthcare, Barcelona,
+
+    Heartflow, Boehringer indicates funding grants and spending
+
+    lee fees. All others have nothing to disclose.
+
+
+    # Appendix A. Supplementary data
+
+
+    Supplementary data to this article can be found online at https://
+
+    doi.org/10.1016/j.atheros.2024.111749
+
+
+    # References
+
+
+    +   [11] F. Ricci, M.Y. Bhava, G. Bianchi, et al., Diagnostic and assessment of
+    stress
+
+    ciovascular magnetic resonance imaging in patients with known or
+
+    coronary disease: a systematic review and meta-analysis. JAMA Cardiol. 8
+
+    (2023) 662-673.
+
+
+    +   [12] S. Kim, J. Lin, D. Dey, et al., Evaluation of fat and coronary disease
+    index
+
+    of cardiac index, Atherosclerosis 32 (2021) 30-38.
+
+
+    +   [13] C. J. Watson, C. al., The role of cardiac tomography in coronary disease.
+    Nat. Res
+
+    Heart Cardiol. 19 (2022) 592-609.
+
+
+    +   [14] G. Giacobello, F. Sassi, M. Ribeiro, et al., Evaluation of echocardiography\and
+    MRI: a multimodality study. Eur Heart J. 44 (2023) 1015-1026.
+
+
+    +   [15] C. Boon, M. Montan, C. De Greco, et al., Novel epicardial adipose tissue
+
+    biomarkers predicting coronary artery disease. Heart J. 10 (2024) e0852.
+
+
+    +   [16] J.V. Sparman, M. Reker, U. Schoep, et al., Evaluation of potential fat
+
+    iac index for coronary artery disease: a systematic review of the
+
+    literature. Radiology 35 (2021) 3372-3381.
+
+
+    +   [17] A.R. van Rossem, L.J. Shaw, J.X. Xie, et al., risk stratification with
+
+    atherosclerotic risk score. JACC Cardiology 12 (2019) 1987-1997.
+
+
+    +   [18] M. Tchaar, H. Huang, M. Roberts, et al., Assessment of epicardial adipose
+
+    body tissue by MRI in patients with coronary disease. J. Res. Magn. 21 (2005)
+    445-462.
+
+
+    +   [19] J. Rodriguez-Bance, G. S. M. Modelman, et al., Artificial intelligence
+    based
+
+    multimodality: a new frontier in coronary disease assessment. Front
+
+    Cardiov Imaging. 86 (2022) 149-151.
+
+
+    +   [20] A.J. Nelson, M. Worthby, J.P. Paulitis, and Evaluation of cardiovascular
+
+    magnetic resonance assessment of epicardial adipose tissue volume. J. Cardiov.
+
+    Magn. 35 (2022) e0698.
+
+
+    +   [21] R. Thygesen, J.S. Albert, A. Jaff, et al., Universal definition of myocardial
+
+    injury: a consensus statement of the European Society of Cardiology. Heart
+
+    24 (2018) 17-25.
+
+
+    +   [22] N. Nerleark, R.G. Muthaly, N. Wong, et al., Evaluation of volumetric
+    epicardial
+
+    adip tissue in coronary and cardiac disease function, and J. Am. Heart.
+
+    7 (2018) e00975.
+
+
+    +   [23] J. Schulz-Menger, D.A. Boeumer, J. Freemerich, et al., Standardized image
+
+    interpretation and post-processing for cardiovascular magnetic resonance - 2020
+
+
+    +   [24] E. Shellhammer, J. Long, T. Darrell, Fully convolutional networks for
+    semantic
+
+    cardiac segmentation, IEEE Trans. Pat. Anal. Magn. Med. 39 (2020) 649-651.
+
+
+    +   [25] H. Kim, S. Lee, et al., Assessment of epicardial adipose tissue
+
+    chamber segmentation in cardiac magnetic resonance images using deep
+
+    convolutional neural networks. Prog. Med. 2024 (20) e00029.
+
+
+    +   [26] J. Long, M. Lee, J. Cho, et al., Evaluation of a multivariable
+
+    predictive risk model for coronary disease (TIPIGO): the
+
+    TRIPIGO database, JAMA 312 (2015) 2710-2718.
+
+
+    +   [27] R. Grundy, et al., Assessment of risk, function and relationship to obesity.
+
+    Heart. 8 (2003) 255-261.
+
+
+    +   [28] Z. Zhou, Y. Chen, Y. Zhang, et al., Evaluation of the fat proportion
+
+    of obstructive coronary artery disease associated risk total risk factors and
+
+    coronary calcium. Atherosclerosis 34 (2021) 105228.
+
+
+    +   [29] M. Tchaar, H. Huang, M. Roberts, et al., Epicardial adipose tissue and
+
+    arhythmia formula: for atrial fibrillation. Front. Cardiol. Med. 9 (2022) 922662
+
+    1745-1751.
+
+
+    +   [30] F. Schuster, D. Hall, D. Winter, et al., Evaluation of epic with cardiovascular
+    magnetic resonance imaging, Obesity 15 (2027)
+
+
+    +   [31] G. van Boer, T. Cramer, B. Westenhuis, et al., Epicardial adipose and
+    fat in heart
+
+    patients with coronary artery disease. Nat. Heart Fail. 12 (2020) 1518-1526.
+
+
+    +   [32] C.W. Wong, H.S. Abel, M. Poole, et al., Pericardial fat is associated
+    with
+
+    coronary disease outcomes. J. Cardiol. 80 (2022) 1115.
+
+
+    +   [33] S. Kallig, D. Bell, et al., The impact of epicardial adipose tissue in
+
+    patients with acute myocardial infarction, Clin. Res. Cardiol. 110 (2021)
+
+    1104.
+
+
+    +   [34] R. Greco, S. Wang, W. Hex, et al., Pericardial fat analysis from
+
+    CT images and artificial intelligence: a literature review, Quant. Imag. Med.
+
+    Suppl. 43 (2020) S115-S20.
+
+
+    +   [35] X. Ding, J. Pang, Ren, et al., Automated epicardial fat quantification
+    from
+
+    using a convolutional neural network in the UK biobank, Front. Cardiol. Med. 8
+    (2021)
+
+    6281.
+
+
+    +   [36] M. Artisanini, C. McCreadman, A. Burrell, et al., Pericardial fat is
+    independently
+
+    associated with coronary disease in the UK biobank, participants, Eur Heart J
+    Cardiovascular Imaging 23 (2022) 1471-1481.
+
+
+    +   [37] L. Byrne, T. Smith, D. Russell, K. Gayle, Sex inequalities in medical
+    research: a
+
+    systematic review of the literature, Women Health Rep (Nevelle Roche) 3
+
+    (2022) 49-59.'
+  merge: -1
+  img_proc: true
