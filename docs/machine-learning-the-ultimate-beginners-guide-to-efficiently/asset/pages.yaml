@@ -1,0 +1,4148 @@
+- pgno: 0
+  md: '# # MACHINE LEARNING
+
+
+    THE ULTIMATE BEGINNERS GUIDE TO EFFICIENTLY LEARN AND UNDERSTAND MACHINE LEARNING,
+    ARTIFICIAL NEURAL NETWORK, AND DATA MINING FROM BEGINNERS TO EXPERT CONCEPTS
+
+
+    ![](img/9c448b3ffa658996909504456f0161c0_0_0.png)
+
+
+    DENNY NOVIKOV'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/9c448b3ffa658996909504456f0161c0_1_0.png)
+
+
+    https://archive.org/details/machinelearningu0000den'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# MACHINE LEARNING
+
+
+    THE ULTIMATE BEGINNERS GUIDE TO EFFICIENTLY LEARN AND UNDERSTAND MACHINE LEARNING,
+    ARTIFICIAL NEURAL NETWORK, AND DATA MINING FROM BEGINNERS TO EXPERT CONCEPTS
+
+
+    By Denny Novikov'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'Copyright 2019 By Denny Novikov
+
+
+    All rights reserved.
+
+
+    Any duplication, reproduction, and publication outside the provisions of copyright
+    law are not permitted as a whole or in part without the prior written consent
+    of the author.
+
+
+    This work is not intended to give specific recommendations and merely provides
+    general guidance, exemplary illustrations, and personal views. Author, publisher
+    and cited sources are not liable for the implementation of their thoughts and
+    views. Any liability is excluded.
+
+
+    The advice and information published in this book have been carefully prepared
+    and reviewed by the author. It is strongly recommended not to rely solely on this
+    book, but to conduct its own investigations.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# TABLE OF CONTENT
+
+
+    +   INTRODUCTION ...................................................................................7
+
+
+    +   Animal And Automatic Learning ................................................................7
+
+
+    +   Animal Learning....................................................................................8
+
+
+    +   Types Of Animal Learning .......................................................................12
+
+
+    +   Automatic Learning.................................................................................21
+
+
+    # CHAPTER 1 - HISTORICAL REVIEW .......................................................27
+
+
+    +   1.1 - Machine Learning Paradigms ........................................................29
+
+
+    +   1.2 - Deductive Learning ...................................................................29
+
+
+    +   1.3 - Analytical learning .................................................................30
+
+
+    +   1.4 - Logical Learning ................................................................30
+
+
+    +   1.5 - Inductive Learning ................................................................31
+
+
+    +   1.6 - Learning Through Discovery .......................................32
+
+
+    +   1.7 - Ethical Gene Algorithms..................................................32
+
+
+    +   1.8 - Connectionism ..........................................................33
+
+
+    +   1.9 - Measures Of Action ................................................34
+
+
+    # CHAPTER 2 - ELEMENTARY LEARNING STRATEGIES..................................39
+
+
+    +   2.1 - Text Organization ................................................40
+
+
+    +   2.2 - Summary ................................................................42'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# CHAPTER 3 - INDUCTIVE LEARNING................................45
+
+
+    3.1 - Definition ................................................................45
+
+
+    3.2 - Constructive Rules.......................................................48
+
+
+    3.3 - Types Of Inductive Learning...............................................50
+
+
+    # CHAPTER 4 - METHODS OF ACQUISITION OF CONCEPTS .................53
+
+
+    4.2 - Method I Will See.......................................................68
+
+
+    4.3 - Michalski-Dietterich Method...........................................75
+
+
+    4.4 - Comparison Of Methods..................................................80
+
+
+    4.5 - Version Space...........................................................82
+
+
+    # CHAPTER 5 - INDUCTION OF DECISION TREES.........................85
+
+
+    5.2 - The Standardized ID3 Algorithm.......................................89
+
+
+    5.3 - The RLM Algorithm.......................................................90
+
+
+    5.4 - Incremental Algorithms...............................................93
+
+
+    5.5 - ID4 and ID4R algorithms...............................................93
+
+
+    5.6 - ID5 and ID5R algorithms...............................................96
+
+
+    5.7 - Summary...............................................................100
+
+
+    # CHAPTER 6 - THE RELEVANCE OF ATTRIBUTES................103
+
+
+    6.1 - Nought Attributes......................................................104
+
+
+    6.2 - The Psychological Component..................................109
+
+
+    6.3 - The Classical Vision.........................................109'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# 6.4 - The Probabilistic View ................................................................111
+
+
+    # 6.5 - Categorization Based On Theories..................................................115
+
+
+    # 6.6 - Computational Approaches...............................................................118
+
+
+    # 6.7 - Numeric Taxonomy ................................................................121
+
+
+    # 6.9 - Automatic Learning Techniques...............................................125
+
+
+    # 6.10 - Conceptual Grouping .......................................................127
+
+
+    # 6.11 - Cluster...............................................................................131
+
+
+    # 6.12 - Lexicographical Evaluation Functional (LEF) ................136
+
+
+    # CHAPTER 7.- WITT..................................................................141
+
+
+    # CHAPTER 8 - AUTOCLASS...............................................147
+
+
+    # 8.1 - Concept Formation ................................................152
+
+
+    # CHAPTER 9 - EPAM ...................................................155
+
+
+    # CHAPTER 10 - UNIMEM AND CYRUS ................................159
+
+
+    # CHAPTER 11 - CONCLUSION ........................................165'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # Introduction
+
+
+    Congratulations on purchasing Machine Learning and thank you for doing so.
+
+
+    There are plenty of books on this subject on the market, thanks again for choosing
+    this one! Every effort was made to ensure it is full of as much useful information
+    as possible, please enjoy it!
+
+
+    # ## Animal And Automatic Learning
+
+
+    It is not usual to start a book about the type of learning that a machine can
+    do, which will be called here automatic learning, studying the learning processes
+    that are observable in nature, although there are some precedents (for example,
+    [GALL91] and [PEAR87]). The reason is that if you want to find a cognitive framework
+    to explain the phenomenon of learning, it seems reasonable to refer to those behaviors
+    observable in animals (and that are'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'identifiable as learning) that can help us explain more fully a process as
+    complex as the one at hand. It is not enough just to try to explain what is learned
+    in terms of general processes such as citations, prototype abstraction, hypothesis
+    testing, induction, analogical reasoning, assimilation, generalization or differentiation.
+    There are reasons to state that there is a certain bias in the cognitive structures
+    used in each of the aforementioned tasks and that that this bias depends directly
+    on specific characteristics of the domain where something has been learned.
+
+
+    # Animal Learning
+
+
+    When organisms adjust or adapt to the set of stimuli that come from the environment,
+    that is, they receive information and store it in order to reuse it in situations
+    or patterns of similar stimuli, it can be said that they learn. In particular,
+    we refer to animals since, from the point of view of learning, and unlike plants,
+    they are mobile and active. In fact, it can be said that animals are machines
+    that have a predatory'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'behavior and have to move to locate their food and get it or, at least, are
+    equipped with specialized organs for it, as as is the case with many marine beings
+    that do not they move but are able to filter the water they absorb for food. This
+    emphasis on the movement of animals is essential to explain the existence of different
+    types of learning. It is possible to imagine two very different situations:
+
+
+    The animal moves randomly; In this case, the same movement must bring you closer
+    to the environment in which you can provide everything you need for your livelihood
+    (water, oxygen, food, etc.) and ensure its development and the survival of a significant
+    proportion of the beings in your life. If a random movement is not enough, there
+    must be a directed movement for what must be special organs for detecting objects
+    in the environment and guiding the animal towards them, directly or indirectly.
+    The greater precision of these movements depends on the evolution caused by the
+    pressure generated by competition with other species by resources limited in a
+    given ecological habitat.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: A significant part of the behavior of many animals seems to be strongly rooted
+    and influenced by experience so that it can be described as innate, instinctive
+    or simply not learned. That is, many animals are in some way programmed in an
+    innate way and, when they perceive alterations in their environment and change
+    their behavior patterns {as a result of this perception}, they can be said to
+    learn. From this point of view, learning can be established as the organization
+    (or reorganization) of one's behavior (in the face of a situation or pattern of
+    stimuli) as a result of individual experience. The previous one indicates a minimum
+    of characteristics that a phenomenon must present in order to be classified as
+    an example of learning and avoid, as much as possible, the confusion that can
+    cause to try to sway away from the way in which that the learning process has
+    been carried out. This definition remains immutable even if you need to explain
+    this process in situations where the behavior is continually modified by the acquisition
+    of new knowledge. Some authors have suggested the need to explain animal learning
+    in behavioral terms and then in cognitive terms, if possible.
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'Frequently in the literature, learning is considered an adaptive process, that
+    is, it is manifested by gentle, incremental changes. The adaptability of learning
+    is considered here as the measure of adjustment of behavior. In addition, it is
+    assumed that what has been learned remains in memory for relatively long periods,
+    so as to ensure the observability of the learned behavior (as something relatively
+    stable).
+
+
+    What an animal can learn does not depend solely on its ability to do so, since
+    there are many other restrictions and limitations that shape this ability (eg
+    limitations in its sensory systems). Thus, given these limitations, an animal
+    is more predisposed to react to one type of stimulus than others, can learn more
+    from these than those. Moreover, all the stimuli to which an individual responds
+    in a certain context may not be effective in producing learning behavior in other
+    contexts.
+
+
+    The ways of defining learning and interpreting observed behaviors depend fundamentally
+    on the way of considering the nature of the learner. As a consequence, learning
+    should be considered as one of'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'the most appreciable characteristics in a system.
+
+
+    # Types Of Animal Learning
+
+
+    It is almost impossible to divide the various types of learning into mutually
+    exclusive categories, which can exactly be nested and cover the entire spectrum
+    of animal learning. This is not intended to be exhaustive and only seeks to give
+    an overview of the state of the art.
+
+    Room: It is a type of learning that consists of a response that declines before
+    a set of repeated stimuli (or contuses) not associated with any type of reward
+    or reinforcement. Habituation can be characterized as associated with a specific
+    stimulus and its relative permanence distinguishes it from temporal manifestations
+    such as fatigue or sensory adaptation (eg adaptation to low-light or very loud
+    spaces). Habitually implies a tendency to erase all kinds of response to a stimulus
+    that has no importance for survival. In spite of being the simplest type of learning,
+    it is very effective, especially in the simplest organisms, since it serves as
+    a filter to sets of stimuli'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'that are not relevant, avoiding the necessary specialization of some organ.
+    However, habituation as a learning mechanism is present in all types of organisms,
+    regardless of their complexity. However, the mechanisms that underlie the habituation
+    process become more elaborate when organisms become more complex.
+
+
+    Associative learning: Frequently in the environments in which the animals move,
+    an event allows them to precede, with certainty, the occurrence (or not occurrence)
+    of another. The appearance of certain features in the landscape may indicate the
+    change of season, the change in behavior of some species individuals may announce
+    the season of heat or the ingestion of some plant (or animal) may cause some disease
+    (or produce consequences ben e cas). An animal that knows these relationships
+    can profit by anticipating those events and behaving appropriately. But, how is
+    that knowledge acquired?
+
+
+    Although the concept of association {the connection between a stimulus and a response
+    that has not existed before in the conduct of an organism has a'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'long history that can be easily traced, and despite the fact that in the 1880s
+    this concept was already applied in experimental studies on human learning, modern
+    psychological studies of associative animal learning did not begin until the end
+    of the 19th century. At that time a group of Russian psychologists began to give
+    the first explanations about how acquired behaviors, and probably also in inherited
+    ones, can be modified and adapted by associating them with a new stimulus during
+    the process. of training (learning).
+
+
+    Conditioning: I. Pavlov''s studies on digestion, using dogs, made him the most
+    indent Russian researcher at the end of the last century and his experiments led
+    to the formulation of the theory of conditioned reflexion, or classical conditioning.
+
+
+    Automatic Learning: Essentially, the notion of classical conditioning denotes
+    the process by which an animal acquires the ability to respond to a given stimulus
+    with the same action reflects how to respond to another conditioning stimulus
+    (reinforcement or reward) when both stimuli are presented concurrently (or superimposed
+    in a sequence) a certain number of'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'times.
+
+
+    Learning through trial and error: This type of learning was identified by observing
+    the behavior of certain animals that get rewards (i.e. food) after successfully
+    performing certain tasks such as cats trying to escape from a box after pressing
+    a lever, rats thrown in the middle of a bathtub that must identify a brand to
+    swim to dry places, etc. In these situations, the animals always remain active
+    and their attention is first here and then there, trying all the imaginable possibilities
+    until more or less it accidentally solves the task successfully and obtains the
+    reward. This happens despite the absence of a relationship between the actions
+    taken and the passing of the test. To define, this is learning through trial and
+    error then requires the existence of reinforcement (or reward) to encourage the
+    selection of the appropriate response from a variety of behaviors in a given situation,
+    until a relationship between the stimulus or situation is established and a correct
+    answer to get a reward.
+
+
+    In this case, the reinforcement is preceded by the stimulus and the required response,
+    which does not'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'necessarily occur in the classical conditioning. This type of learning has
+    been given many other names, such as operant conditioning, instrumental conditioning,
+    etc.
+
+
+    Latent learning: Latent learning is a type of associative learning that takes
+    place in the absence of reward. A classic experiment is the one conducted with
+    rats that are released in a maze for several days without any kind of reward.
+    When their learning is compared to another group that has not been in the maze
+    and begins to be rewarded immediately, the results of the first group are surprising:
+    they learn faster and with fewer errors than the second group. It follows that
+    the first group learned something during their stay in the labyrinth that remains
+    dormant until it is needed.
+
+
+    Imitation: Imitation has often been considered as evidence of the existence of
+    highly relevant behaviors, although various phenomena are included under the imitation
+    label. One of the most common types of imitation is the so-called social facilitation
+    that describes a pattern of behavior already existing in the'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'repertoire of an individual since it performs when the same behavior is performed
+    by other members of its kind. For example, in humans, yawning.
+
+
+    But the true imitation, which involves copying a new behavior, action or expression
+    that is impossible to learn if it is not copied from another individual, occurs
+    especially in humans and in some chimpanzees and monkeys. In particular, one can
+    imagine as an example of this type of learning what happens when an individual
+    is trained to perform a pole vault. In other animals, such as felines and other
+    hunters, learning how to kill a dam accurately is done by imitating parents and
+    reinforced by games.
+
+
+    Although, as it has been established, imitation doesn’t only mean a conscious
+    copy of behavior, action or expression performed by another individual, it is
+    also associated with an attempt to obtain a profit from the experience of another.
+
+
+    Imprint: The imprint is an illustrative example of the way in which a specific
+    range of stimuli is able to elicit a response and can be limited and resigned
+    through'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'experience.
+
+    Although the imprint is no different from other forms of learning, however, it
+    has some properties that make it different. It is a process by which a neonate
+    becomes very dependent on the parents, to obtain food and heat, has to maintain
+    eye contact with them and can accidentally develop a preference for anything (animal
+    or object) different from your species This preference is shown following the
+    behavior of the chosen object. Despite being a phenomenon that predominantly occurs
+    in birds, it can also occur in mammals, but in these, its incidence is lower due
+    to the greater development of other senses, especially smell.
+
+
+    One of the most relevant characteristics of the imprint is that its duration is
+    restricted to the so-called sensitive period, which is relatively short, perhaps
+    a few hours. In experimental situations, the duration of this period has been
+    modified, which appears as soon as enough motor skills have been developed to
+    follow an object (chicks are preferably attracted to moving objects). However,
+    in the laboratory, these preferences have been modified through adequate'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'reinforcement.
+
+
+    In short, it seems that the imprint consists, in broad strokes, of developing
+    a family-oriented nature towards mobile objects. Rewards, such as food or contact
+    with the moving object or model, are not necessary. The imprint is a valuable
+    tool for the understanding of the genesis of the perceptual aspects of behavior
+    since what was learned during the sensitive period can be revealed in other contexts.
+    This seems to indicate a relationship between the imprint and the development
+    of perception. Once the familiarity is created, the imprint goes, in the absence
+    of objects the bird shows a search behavior.
+
+
+    One aspect that has often not been sufficiently considered to differentiate learning
+    skills between individuals is that the reinforcement effect caused by food, water,
+    etc., is not an intrinsic property of the stimulus but of its own animal. That
+    is, each individual of a species assigns a value to these stimuli based on their
+    usefulness. The importance of games in the development of some animals and their
+    recent relationship with learning are not stressed here. A'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'separate case is the case of the reproduction of songs (notes) by birds through
+    imitation.
+
+
+    The term imprint has been chosen to translate the English term is imprinting which,
+    in turn, is the translation of the German voice Pragung. The first written reference
+    reference to this phenomenon is due to Pliny the Elder. Particularly those birds
+    that just born leave the nest after breaking the egg. In some species of ducks
+    and chickens, this period is effective 13 to 16 hours after breaking the shell.
+    The researchers are interested in the impact of the imprint on the development
+    of social, sexual and paternal attitudes in the adult life of the individual.
+
+
+    Automatic Survival Learning: In particular, the ability to adapt these values
+    can be observed in captive animals, which seem to move under the stimulus of the
+    novelty caused by their environment. Exploration has been shown to be one of the
+    most rewarding behaviors for individuals in learning. This behavior tends to cease
+    when no new changes (external stimuli) appear in the environment. This suggests
+    that the exploration behavior, which a novel elicits'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'stimulus, ends as a result of certain interpretable internal changes such as
+    that the stimulus has lost its novelty.
+
+
+    # Automatic Learning
+
+
+    Learning refers, as has been seen, to a wide spectrum of situations in which the
+    learner increases his or her knowledge or ability to complete a task. Learning
+    applies inferences to certain information to construct an appropriate representation
+    of some relevant aspects of reality or of some process.
+
+
+    A common metaphor in the area of machine learning {within Artificial Intelligence}
+    is to consider problem-solving as a type of learning that consists of being able
+    to recognize the problem situation Attica and react using the strategy learned.
+    Currently, the greatest distinction that can be drawn between an animal and a
+    problem-solving mechanism is that certain animals are able to improve their performance,
+    in a wide range of tasks, as a result of having solved a certain problem.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'It is assumed, in this approach, that an automatic agent must have the ability
+    to perform the same task in several ways, if possible, and depending on the circumstances.
+    You must be able to make decisions about what is the most appropriate course to
+    solve a problem and modify these decisions when the conditions so require. Therefore,
+    one of the central objectives of this area is to build systems (agents) that are
+    able to adapt {dynamically and without prior training} to new situations and learn
+    as a result of solving the problem (or problems) that these situations present.
+
+
+    Machine Learning, also called art learning is an area of interest that is highly
+    developed in AI. In other areas such as biology, psychology, and laof, the nature
+    of the ability to learn related to biological systems and to a man, in particular,
+    has also been investigated.
+
+
+    Understanding learning {for example, the human learning process} in a way that
+    allows reproducing aspects of such behavior using a computer is a very ambitious
+    goal. Although some researchers have also explored this possibility of using other
+    animals as a'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'model, the results are still poor.
+
+
+    As we have already seen, learning is a very general term that denotes the form,
+    or forms, in which an animal (or a machine) increases its knowledge and improves
+    its performance abilities in an environment. In this way, the learning process
+    can be seen as a generator of changes in the learning system {which, on the other
+    hand, occur slowly, adaptively} and can be revoked or extended.
+
+
+    In this context, it is said that a system that learns in an automated way (or
+    apprentice) is an artifact (or a set of algorithms) that, to solve problems, make
+    decisions based on the experience accumulated {in the cases previously solved}
+    to improve his performance. These systems must be able to work with a very wide
+    range of input data types, which may include incomplete, uncertain data, noise,
+    inconsistencies, etc. Our first characterization of the machine learning process
+    is:
+
+
+    Learning = Selection + Adaptation'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'Seen this way, machine learning is a process that takes place in two phases.
+    One in which the system chooses (selects) the most relevant characteristics of
+    an object (or an event), compares them with other known {if they exist} through
+    some collation process (Pattern Matching) and, when the differences are significant,
+    they adapt your model of that object (or event) according to the result of the
+    collation. The importance of learning, as has been said, is that its results usually
+    translate into improvements in the quality of the system''s performance. An artificial
+    learning system can employ very different techniques to take advantage of a computer''s
+    computing capacity, regardless of its relationship to human cognitive processes.
+    These techniques include very mathematical methods, search methods on large databases,
+    etc., which require the creation (or modification) of structures representation
+    of knowledge appropriate to expedite the identification of the relevant facts.
+
+
+    One of the most important motivations in the design and construction of automatic
+    learning systems lies in the fact that in many domains the experience is'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'scarce, and the coding of the knowledge that describes it is limited, fragmentary
+    and, therefore, incomplete or almost non-existent. In addition, providing an agent
+    with all the necessary knowledge is a very complex, expensive task, which takes
+    a lot of time and in which the elimination of possible errors introduced is difficult
+    and requires specialized attention. In the case of humans, 5 or 6 years are necessary
+    to learn the basic motor skills and the rudiments of language, and between 12
+    to 20 years to manipulate complex concepts, learn one or more languages, cultural
+    and historical conventions, etc. In addition, learning in humans is personalized.
+
+
+    An important line of research is one that explores the quality of what has been
+    learned based on what the apprentice knows: how what is known by the agent can
+    lead to inference and circumscription etc. , to obtain new knowledge. Another
+    motivation is the attempt to take advantage of the computing capacity of the computers
+    as an aid to decision-making. If the system is also able to learn from the cases
+    treated, as a human does, then the value of the tool increases considerably.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Chapter 1 - Historical Review
+
+
+    A brief history of the development of research on machine learning in AI is as
+    follows:
+
+    1.
+
+
+    +   - Initial enthusiasm (1955-1965)
+
+    - Learning without backup knowledge
+
+    - Neural Modeling
+
+    - Evolutionary learning
+
+
+    Among the most significant milestones of this period are the perceptrons, the
+    notions of self-organization, self-stabilization, and pattern matching as basic
+    tools in the learning processes. The systems developed at this time are characterized
+    by the almost absolute lack of supporting knowledge or initial knowledge. The
+    ANALOGY system should be considered as a transition.
+
+    2.
+
+
+    +   - Dark stage (1965-1976)
+
+    - Acquisition of symbolic concepts
+
+    - Acquisition of language
+
+
+    In the second epoch, the problems were essentially transferred to the obtaining
+    of representation schemes in order to ensure the correct acquisition of new'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'knowledge (ie knowing what the knowledge issues are after a learning process
+    ). Associated with this trend structures, called hierarchies, were designed to
+    organize the concepts (see section 2.5). This type of learning consists of the
+    inference and assimilation of new material composed of concepts, general laws,
+    procedures, etc. These systems rest on the existence of a human \ teacher who
+    supervises learning.
+
+
+    # 3.
+
+
+    +   - Renaissance (1976-1986)
+
+    - Exploring different strategies
+
+    - Knowledge-intensive Learning
+
+    - Successful applications
+
+
+    At this time, it is explored how to combine symbolic learning techniques to improve
+    the "quality" of what has been learned. It is explored with the use of large amounts
+    of supporting knowledge. The first real applications appear.
+
+
+    # 4.
+
+
+    +   - Development (1986-Present)
+
+    - Connectionist Learning
+
+    - Multi-strategy systems
+
+    - Experimental comparisons'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'A possible list of the most active research areas currently in this field is
+    as follows:
+
+    Neural models and cognitive models [ARBI91]
+
+    Theoretical computational models [VALI84]
+
+    Evolutionary learning algorithms [KOZA92]
+
+
+    #  1.1 - Machine Learning Paradigms
+
+
+    Depending on the type of selection and adaptation (transformation) that a system
+    performs on the available information, it is possible to identify several paradigms
+    of machine learning. This classification has evolved rapidly in the last decade.
+
+
+    #  1.2 - Deductive Learning
+
+
+    This type of learning is done through a sequence of deductive inferences using
+    known facts or rules. From the known facts new facts or new relationships are
+    logically derived. In this type of system, the monotonicity of the theory of nests
+    by the knowledge'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'base is important.
+
+
+    # 1.3 - Analytical learning
+
+
+    The methods used in this type of learning attempt to formulate generalizations
+    after analyzing some instances in terms of system knowledge. In contrast to empirical
+    learning techniques {which are usually methods based on similarities}, analytical
+    learning requires that a broad domain knowledge be provided to the system. This
+    knowledge is used to guide the deductive chains that are used to solve new problems.
+    Therefore, these methods focus on improving the science of the system, and not
+    on obtaining new descriptions of concepts, as inductive learning does.
+
+
+    # 1.4 - Logical Learning
+
+
+    This type of learning tries to emulate some of the most amazing human capacities:
+    to be able to understand a situation by its resemblance to previous'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: 'known situations, to be able to create and understand menses or to solve a
+    problem by noticing its possible similarity with others seen previously adapting
+    (transforming) conveniently the solution that was found for these problems. This
+    type of system requires a great deal of knowledge. Some authors consider that
+    analog learning is a specialization of learning by explanation that will be discussed
+    later.
+
+
+    # 1.5 - Inductive Learning
+
+
+    It is the most studied paradigm in machine learning. Normally, these systems lack
+    a theory of the domain, that is, they do not know a priori the objects they deal
+    with or their quantity. It deals with problems such as inducing the description
+    of a concept from a series of examples and counterexamples thereof or determining
+    a hierarchical description or classification of a group of objects.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# 1.6 - Learning Through Discovery
+
+
+    The type of discovery is a restricted form of learning in which an agent acquires
+    knowledge without the help of a teacher. This process occurs when there is no
+    available "source" that possesses the knowledge that the agent seeks. A particular
+    type of Discovery is carried out when an agent tries to group objects that he
+    assumes from the same set.
+
+
+    # 1.7 - Ethical Gene Algorithms
+
+
+    Genetic algorithms are inspired by mutations and other changes that occur in organisms
+    during biological reproduction from one generation to the next and in Darwin''s
+    natural selection process. The main problem that he tries to solve is the discovery
+    of rules and the greatest difficulty he encounters is the allocation of credit
+    to them. This last point consists of positively or negatively assessing the rules
+    according to how useful they are to the system. This assessment is the one to
+    determine which rule to apply to solve'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'given problem.
+
+
+    # 1.8 - Connectionism
+
+
+    Another way of conceiving an automatic learning system is the so-called connectionist
+    approach. In this approach, the system is a network of interconnected nodes, which
+    has an associated rule of propagation of values, and whose arcs are labeled with
+    weights. Before a set of examples, the system reacts by modifying the weights
+    of the arches. It is said that the system learns if it adapts the weights of the
+    connections in such a way that they will give the correct output to all (or the
+    greater than) of the inputs offered.
+
+
+    Another possible classification of the learning methods explored in AI, considering
+    the type of strategy and the aid that a learning system receives, is:
+
+
+    The fundamental assumption of this type of method is that the examples provided
+    as input are necessary to meet the learning goals. It is like learning with a'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: 'teacher. In this type of method, examples are given and it is specified what
+    concept they are.
+
+
+    They are designed to develop new knowledge by discovering regularities in data
+    (data-driven). These methods are not directed by goals (goal-driven).
+
+
+    Through Reinforcements: This learning method is halfway between the previous two.
+    The system proposes problems to solve. The learning is done only with a reinforcement
+    signal provided by a teacher or by the environment as an indicator of whether
+    the problem has been solved correctly.
+
+
+    # 1.9 - Measures Of Action
+
+
+    In the following chapters, different systems will be discussed as examples of
+    the different learning paradigms, designed at various stages of AI and, consequently,
+    with different architectural conceptions. Then, it is worth asking how you can
+    evaluate the performance of a system to compare it with others. In this sense,
+    there are few works carried out although'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'there are some attempts to systematize sets of tests (benchmarks) that allow
+    developing comparisons. The characteristics indicated below are not the only ones
+    that can be measured but give an idea of the trend that follows in the community:
+
+
+    # Generality
+
+
+    One of the measures of action of a system that learns is the generality or scope
+    of the method. This idea of how easy it is to adapt the method to different applications
+    in different domains. The ideal of generality is a system that can be adjusted
+    according to the requirements of the task or the environment. At the other end
+    are those systems that only apply to a single domain. The middle term is that
+    learning systems work acceptably well in some domains.
+
+
+    The science of a method can be measured as the time cost required to construct
+    the representation structures that allow describing the objective (target concept)
+    from some initial representation structures.
+
+
+    # Robustness'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: 'It is the measure of the system''s ability to work with sets of training examples
+    that may contain noise and partially wrong information. A robust system must also
+    be able to build hypotheses that can be modified before the arrival of new evidence.
+
+
+    # Ecacia
+
+
+    It is a measure of the overall capacity of the system and function of the previous
+    measures. The idea is to generate a certain order between the systems that allows
+    asserting that the system X is more efficient than another Y.
+
+
+    This feature implies a certain non-monotonous in inference operations.
+
+
+    Other measures may be related to the ease of implementation, but require a set
+    of metrics associated with the correctness and complexity of the system and the
+    abstract types of data that are used and that, to some extent, must be related
+    to the characteristics of the representation structures.'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'Other authors provide operational measures such as validity and abstraction
+    that depend on the task to be performed and the initial support knowledge has
+    also been studied in terms of the gain of knowledge and the science of the process.
+
+
+    The gain of knowledge, measured as the difference of current and initial knowledge,
+    is relatively easy to measure in some types of learning, such as inductive where
+    initial knowledge is null, or almost null. The same happens in the case of analog
+    learning where the restriction and limitation of the domain allow to know the
+    initial and final state.
+
+
+    The science of the learning process is not always easy to measure. There are some
+    isolated attempts such as those indicated for PRODIGY [MINT89] where the applicability
+    of the rules learned, the frequency of their application and the gain - in terms
+    of science - are evaluated of their application. In the case of SBL learning methods
+    there is also some comparison attempt, see for example [MORE92]. For the conceptual
+    clustering, there are some measures on'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: the performance of algorithms [GENA89] and comparisons between different algorithms.
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# Chapter 2 - Elementary Learning Strategies
+
+
+    The most elementary learning strategies are:
+
+
+    +   * Learning by learning (Rote learning)
+
+    * Learning by instruction (Direct instruction)
+
+    * Learning by imitation (Learning by imitation)
+
+    * Learning by being told
+
+
+    This type of method depends largely on the quality of the descriptions provided.
+    As a consequence, they also require good methods for comparison, total or partial,
+    between descriptions.
+
+
+    In Memorial Learning it is possible to highlight two important characteristics:
+    a) good organization when storing information, and b) quick access to it. The
+    generalization in this type of method is rather poor or non-existent. Usually,
+    the direct copy of the topics of the knowledge base is used as an inference method
+    and they are used as such, repeating what is known. An example (in humans) of
+    these methods is the learning of the multiplication tables.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'A slightly more complex learning strategy is one that is followed when learning
+    by instruction. Here the amount of inference needed is greater. They can also
+    be considered as qualitative measures. For a teacher who considers himself fair
+    and does not deceive the apprentice. Humans transform knowledge into an operational
+    form (perhaps an algorithm) before integrating it into the knowledge base. Humans
+    use this strategy when a teacher presents a set of facts in a structured way and
+    indicates the purpose of each of them in a simple process. The most common, also
+    called Ostensive Learning, is the one in which the teacher indicates, with his
+    index finger, an object and pronounces a word that names him. It is the apprentice''s
+    job to associate the name with the object (and not with the finger). Example-based
+    learning can become a complex task and deserves special treatment.
+
+
+    # 2.1 - Text Organization
+
+
+    This text has been developed mostly by members of the Knowledge-based and Learning
+    Systems group of'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: 'the Artificial Intelligence section of the Department of Linguatges and Sistemes
+    Informatics of the Catalan Polytechnic University.
+
+
+    The organization of the text is as follows. In this first chapter, a historical
+    tour of the area has been made and the dominant paradigms have been introduced
+    in it. Elementary learning strategies have been discussed below.
+
+
+    There is a chapter dedicated to inductive learning. It begins with a classification
+    of the different types of inductive learning and develops in detail several of
+    the subareas of this field. Specifically, the main methods of acquiring concepts
+    are described and compared (inducing the description of a concept from examples
+    and counterexamples thereof). Then the theory of decision trees is developed,
+    structures that serve to represent the decision processes involved in a classification
+
+
+    With these structures, the problem of the relevance of the attributes appears:
+    knowing what characteristics are important or not in the description of a concept.
+    A'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: 'section is also dedicated to this problem. To finish the chapter, the main
+    methods in the area of concept formation are discussed. This chapter is partially
+    based on the thesis of A.Moreno and Ll. Belanche, and in the research work on
+    unsupervised learning methods carried out by J. Bejar.
+
+
+    Another chapter presents the concepts of reasoning and learning by analogy, based
+    on the exploratory work in the area carried out by JGMeno. Different strategies
+    of analog are described, such as transformational and derivational, illustrating
+    them with concrete examples of systems that use these techniques. We also comment
+    on a model that unites the different forms of analog.
+
+
+    # 2.2 - Summary
+
+
+    Learning is a cognitive process through which an agent acquires knowledge, or
+    increases the quality and/or quantity of his knowledge, or improves his abilities
+    to perform a task. In some cases, such knowledge is possessed by other agents
+    who can'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'serve as teachers.
+
+
+    Acquiring a concept or motor or intellectual behavior is considered a standard
+    case of learning processes, but neither the concepts nor the behaviors learned
+    must be justified by the agent to count as learning. In other words, the agent
+    (or the process) does not have to elaborate an explanation of the process or present
+    (or justify) the assumptions (if any) used in the process. Even more, you should
+    not (in many cases) worry about the truthfulness (or usefulness) of what you have
+    learned.
+
+
+    Learning can be understood as a task-oriented to the creation and maintenance
+    of an internal model of the world. In general, this task has gigantic dimensions
+    but, fortunately, there are very simple variants that can be easily studied. Among
+    these, we can mention here that they see learning as a special type of problem-solving
+    mechanism in which the tasks of search (in space) and knowledge representation
+    are very relevant.
+
+
+    The representation of knowledge for reasons of'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'simplicity is relegated to the background: it is assumed that knowledge is
+    represented or obtainable from the environment. But, as has been said, the quality
+    of available knowledge depends on the quality of what has been learned. In this
+    sense, two aspects that focus a certain part of the effort of machine learning
+    systems are:
+
+
+    +   1. Know the type of errors that can occur in the representation structure.
+
+
+    +   2. How to detect, locate and correct these errors.
+
+
+    Apart from the classifications that have occurred (see Figure 1.1), one can try
+    to classify the learning methods according to the amount of knowledge they possess.
+    Among the so-called weak methods are genetic algorithms or neural networks. These
+    methods are characterized by being extremely mechanical. On the side of the so-called
+    rich knowledge methods, there are those described in the following chapters, based
+    on search heuristics and large amounts of supporting knowledge.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# Chapter 3 - Inductive learning
+
+
+    #  3.1 - Definition
+
+
+    The inductive learning process consists in acquiring new knowledge after inductive
+    inference (induction) is performed on the data provided by the environment or
+    by a teacher. This process can be characterized as a heuristic search in a state
+    space, where:
+
+
+    The states are symbolic descriptions of greater or lesser generality. The initial
+    state is the input data.
+
+
+    The operators are rules of inference, fundamentally rules of generalization (they
+    pass from a symbolic description to another more general one) and rules of specialization
+    (they transform a description into a more particular one).
+
+
+    Assertion with the following properties:'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '+   - It implies the input data. This condition guarantees that the result
+    obtained comes from an inductive process, and not from the deduction on the available
+    data.
+
+
+    +   - Satisfies the supporting knowledge of the problem. Background knowledge
+    means the knowledge of the program about the problem you are trying to solve.
+    This condition requires that the induction obtained does not violate any of the
+    rules that the objects within the domain being treated must comply with. For example,
+    if you are working on the domain of the world of blocks, one of the facts that
+    the program could have in your backing knowledge is that it is not possible that
+    there is an object on top of a circle.
+
+
+    +   - Maximize the preference criteria that are applied to assess the quality
+    of the descriptions found. This criterion can be to find the most specific description
+    possible, or the simplest, or the one that contains the least descriptors, etc.
+
+
+    Selection rules are those rules in which all the descriptors that appear in the
+    generalized expression were already present in the initial descriptions of the'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: 'concept. The most common are:
+
+
+    +   - Joint suppression Consists of eliminating an element within conjunction,
+    thus obtaining a more general expression (a is more general than a ^ b). For example,
+    it is a generalization to go from \ There is a heavy green object on the table
+    "to \ There is a green object on the table".
+
+    - Adding disjunctures consists of adding an element within a disjunction (a _
+    b is more general than a). Pe, it could happen happen from \ There is a green
+    object on the table "to \ There is a green or blue object on the table".
+
+    - Close intervals: If there are two descriptions of the same class that differ
+    in the value of a single linear descriptor, they can be replaced by a single description
+    in which the descriptor reference is the interval between these two values. For
+    example, if in a description you have \ There is an object of weight 2 "and in
+    another \ There is an object of weight 7", you can generalize to \ There is an
+    object with a weight between 2 and 7 ".
+
+    - Change of constants by variables: It consists of replacing some of the constants
+    that appear in the description of a concept with a universally quantized'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: 'variable, thus obtaining a most general expression. Applying this rule could
+    happen from \ This Ludlum book is very good "to \ All Ludlum books are very good".
+
+
+    +   - Upload the generalization tree: An attribute of the structured type whose
+    domain can be represented hierarchically (with the so-called generalization tree).
+    If there are several descriptions in which an attribute of a structural type has
+    different values, they can be generalized to a description in which that attribute
+    has as its value the lowest node of the generalization tree that is the predecessor
+    of those values. For example, \ There is a square object "and \ \ There is a rectangular
+    object" can be generalized to \ There is a polygon ".
+
+
+    # 3.2 - Constructive Rules
+
+
+    These rules generate inductive assertions that contain descriptors that do not
+    exist in the original descriptions. The most common are:
+
+
+    +   - Count the number of objects that satisfy a certain condition. For example,
+    in the world of blocks, a new unary descriptor (Number-of-blue-objects x)'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'may be included that will count the number of blue blocks within the treated
+    scene.
+
+
+    - Generate properties in a chain of elements (objects) at the beginning, at the
+    end, in a certain position of the chain). For example, in the world of blocks
+    you can generate descriptions in which the predicate (TOP) x appears {indicating
+    that x has no objects above {from descriptions in which only the relation ABOUT,
+    relation appears binary that indicates that one object is over another.
+
+
+    - Detect dependencies between descriptors. For example, if there are two integer
+    A1 and A2 attributes and they are dependent on each other, new attributes could
+    be created with values such as a1 + A2, A1 - A2, A1 * A2 or A1 / A2. This technique
+    was used by the Bacon system.
+
+
+    A broader description of different inductive generalization rules, both selective
+    and constructive, can be found in [MICH93].
+
+
+    An inductive learning process can be described as a search method (which includes
+    operators and initial state), a control strategy (which includes a heuristic to'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'narrow the search space) and a maximization function.
+
+
+    # 3.3 - Types Of Inductive Learning
+
+
+    Two major types of inductive learning can be distinguished:
+
+    Acquisition of concepts It is also known as learning from examples. It is characterized
+    because there is a teacher who provides the program with the decription of some
+    objects, already classified in one or more classes (concepts). The hypothesis
+    that is induced can be seen as a rule of recognition of the concept. This means
+    that if an object satisfies the conditions of the rule then it represents the
+    given concept.
+
+    Some problems addressed in this type of learning are:
+
+
+    +   - Learn the characteristic description of a class of objects, which specifies
+    the properties common to all known objects in the class.
+
+    - Learn the discriminant description of a class of objects, which distinguishes
+    it from a limited number of different classes.
+
+    - Infer extrapolation rules from sequences,'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'capable of predicting the next element of a given sequence.
+
+
+    Learning from observation is also known as descriptive generalization. Its objective
+    is to determine a general description that characterizes a set of observations.
+    Some examples of this type of learning are:
+
+
+    +   - Formulate a theory to characterize a set of elements (eg [LENA84]).
+
+    - Discover regularities in data (eg [LANG84]).
+
+    - Determine an omic taxon description (classification) of a collection of objects.
+    This process is also known as conceptual clustering.
+
+
+    In the rest of this chapter, techniques used in some of these fields are described
+    in detail. Within the field of concept acquisition, several of the classic algorithms
+    are explained to obtain the characteristic description of a concept from positive
+    (and sometimes also negative) instances of it. These algorithms are those of Mitchell
+    (version space), Winston, Hayes-Roth, Vere, and Michalski. Next, the decision
+    trees, hierarchical structures that allow classifying objects based on the values
+    of their attributes and their corresponding class in the most efficient manner,'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: using information theory techniques are discussed. Finally, the basic techniques
+    of conceptual clustering are described, or classification of objects described
+    through pairs (attribute, value).
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# # Chapter 4 - Methods Of Acquisition Of Concepts
+
+
+    The following chapter describes some of the classical methods of acquisition of
+    concepts. All of them try to induce the description of a class of objects after
+    studying a series of positive (and in some cases also negative) instances of the
+    class.
+
+
+    # ## 4.1 - Winston Method
+
+
+    The method to be discussed below was developed by Winston in the 1970s ([WINS70],
+    [WINS75]), and is recognized as the basis for a whole branch of machine learning
+    Attic known as SBL (Similarity-Based Learning, learning based on similarities),
+    and a classic among learning methods. This type of learning aims at the machine
+    learning the description of a specific concept after having seen a series of examples
+    (and perhaps also counterexamples) of the objective concept. It is, therefore,
+    supervised learning, guided by a teacher who shows the machine these examples'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: 'and counterexamples in the most convenient order and form.
+
+
+    One of the fundamental contributions of this work is the introduction of the notion
+    of near-misses, which are a restriction on the type of negative examples (or instances)
+    that can be supplied to the system. Thus, given a training sequence composed of
+    positive and negative examples, the latter can only have a significant difference
+    with the concept to be learned. If this is the case the negative examples are
+    called quasi-examples. Negative examples serve, in general, to limit the extent
+    of the concept being learned.
+
+
+    Winston''s program worked in the domain of tri-edical objects such as blocks,
+    es-feras, pir amides and simple objects in general (the toy domain of the blocks,
+    now classic in Artificial Intelligence). The first problem that Winston faced
+    was how to represent the scenes, and decided to use semi-ancient networks, arguing
+    that they are enough and simple enough to be able to represent the scenes properly.
+    In these semantic networks, each object is represented in relation to other objects
+    in the scene and concepts'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'known by the program (eg size). The relationships between objects are represented
+    in the same way as the properties of the objects.
+
+
+    A distinction must be made between what the description of a scene is and what
+    the concept model is. A model is similar to a normal description, in the sense
+    that it has information on the various parts of a configuration, but it contains
+    many more things because it has to indicate what relationships and properties
+    must be fulfilled in any example of the concept involved. A description must indicate
+    which relationships are mandatory and which are not important before being considered
+    as a model. This can be achieved using semantic networks using relationships such
+    as support (support) and must support (must-support). The use of this type of
+    relationship is clear in the following description of the Winston W algorithm:
+
+
+    +   1. Take as an initial model the description of the first positive instance
+    of the concept. Call this description, the concept definition.
+
+    2. Examine the description of other known positive instances of the concept. Generalize
+    the concept'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'definition to include them.
+
+
+    +   3. Examine the descriptions of the quasi-examples of the concept. Restrict
+    (specialize) the definition to exclude them.
+
+
+    Steps 2 and 3 are interspersed as positive and negative examples of the objective
+    concept are treated. The system has a collation mechanism that allows comparing
+    two semantic networks that are the respective structural descriptions of the concept
+    and an example. In addition, depending on the information on the type of example
+    (positive or negative), you will direct your search to try to specialize the concept
+    with negative examples or to generalize it in another case.
+
+
+    These tasks are carried out on the structural part of the concept, so they can
+    only be done by modifying the labels that join the nodes. The result of these
+    modifications is the model evolution on the concept being learned. With this model,
+    Winston introduces two heuristics acting on labels: require-link (which requires
+    that there be a certain relationship in the description) and forbid-link (which
+    prohibits having a particular relationship in the description). Its'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: 'application is very simple:
+
+
+    Require-link: it is a heuristic used when the model of the concept that is being
+    learned (in evolution) has a label k in a place where quasi-example does not.
+    Then in the semantic network that represents the concept that label becomes a
+    must.
+
+
+    Forbidden-link: This heuristic applies when a quasi-example has i tag in a place
+    where the model does not. Then a must-not label must be placed in the current
+    conceptual model. The elements that make up this learning system can be summarized
+    as:
+
+
+    A representation language, almost always a frame system.
+
+
+    A directed mechanism for collating structures.
+
+
+    A process of generalization.
+
+
+    A process of specialization.
+
+
+    A semantic network whose nodes are frames.
+
+
+    As quasi-examples restrict the extension of the concept, by making conditions
+    more rigid for an object to be considered as an example of a concept. The specialization
+    algorithm contains the following steps:'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '1. Compare the current concept model with the quasi-example provided. Establish
+    the existing correspondences between the parties, and locate those that are not
+    equal.
+
+
+    2. Determine if there is a difference between the two:
+
+
+    2.1 If there is only one difference, determine whether the current concept model
+    or quasi-example has a label that the other does not have.
+
+
+    2.1.1 If the current concept model has a label that does not exist in the quasi-example,
+    use the require-link heuristics. The interpretation of this action is: To necessarily
+    demand the existence of this label to identify any other positive instance of
+    this concept. For example, if the description of the instance is adopted
+
+
+    2.1.2 If the quasi-example has a label that is not in the current model of the
+    concept, use the forbid-link heuristic. The interpretation of this action is:
+    To expressly prohibit the existence of this label in the members of this class.
+
+
+    2.2 If there is no single difference, ignore the negative example since it is
+    not a quasi-example. The interpretation of this action is: If there is more than'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: 'one important difference, it is difficult to decide on what to act or in what
+    order.
+
+    Step 2.2 introduces a new question: the order of presentation of the examples.
+    The quality of what is learned depends directly on this type of learning; If the
+    sequence is not appropriate, the concept is not learned. Thus, in this type of
+    learning, teacher participation is decisive.
+
+    The generalization process allows extending the range of objects (instances) that
+    are covered by the concept being learned. Winston proposes two strategies to make
+    this action operational. These strategies are climb-tree (raise the tree of generalization)
+    and enlarge-set (increase the set of possible values of an attribute). In the
+    generalization algorithm presented below you can see in which cases they apply
+    and what is their effect:
+
+
+    +   1. Compare the current model of the concept and a positive example.
+
+    2. For each difference determine its type.
+
+    2.1 If the difference is that the label {belonging to the current model of the
+    concept {points to a different class. If the class belongs to some generalization
+    tree (to some hierarchy), the current model of the concept'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'evolves towards a generalization. There are two cases:
+
+
+    2.1.1 If the classes are part of the same generalization tree using climb-tree.
+    This strategy makes sense when both representations are structurally equivalent
+    since in that case the differences must be sought in the values of some property.
+    If starting from the initial arc description, the positive example is introduced,
+    then the algorithm generalizes the shape of the lintel to the first predecessor
+    of the right angle and triangle in the generalization tree of the shape attribute,
+    which is a polygon.
+
+
+    2.1.2 If the new label is not in the generalization tree, delete the label. This
+    strategy is applied when the climb-tree strategy fails. The meaning of this elimination
+    (of a label) is that with the current information (the current backup knowledge)
+    it is not possible to construct an abstraction and, then, perhaps it is not important.
+
+
+    2.1.3 Apply enlarge-set. This strategy works as follows: suppose that in the initial
+    arc description, the lintel has a blue color. If another positive arc instance
+    is found where the lintel is white, and there is no'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: 'generalization tree for the color attribute, then Winston''s algorithm modifies
+    the current arc model so that the lintel could be blue or white. In this way,
+    the concept is being generalized because the range of possible situations in which
+    an instance is accepted as an arc is being expanded.
+
+
+    2.2 If the difference is that the tag is missing in the current concept model
+    or in the example, then remove the tag. For example, if the color attribute is
+    not found in the arc model, then this attribute is not taken into account even
+    if it appears in positive examples of the concept seen later.
+
+
+    2.3 If the difference appears in the values associated with a property (or slot),
+    then the range must be restricted (close-interval). For example, if at some point
+    in the arc model, the color attribute is nested but has no associated value, and
+    a positive example is found where this attribute has a certain value, then the
+    algorithm includes this specific value in the concept model.
+
+
+    2.4 In any other case, ignore the difference.
+
+    This algorithm allows us to study some important characteristics of the collation
+    process between two positive examples. As it is assumed that both'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: 'examples belong to the same class, the search for differences is aimed at finding
+    ways to identify them as members of the same class. This implies making the current
+    definition of the concept available to include the new instance, represented by
+    the example. In other words, the structure is first studied, and then the attributes
+    that qualify the elements of the structure.
+
+
+    The enlarge-set strategy is designed to allow the value associated with an attribute
+    to belong to an enumerated set. The climb-tree strategy assumes the existence
+    of a hierarchy that allows classifying the objects of a domain as members of a
+    class. This structure, if it exists a priori, has been provided by the teacher,
+    but has to be built. When it is necessary to make a generalization it is essential
+    to have knowledge about the domain. This information is called supporting knowledge.
+
+
+    In learning from the structural descriptions of a sequence of objects it is important
+    to be able to distinguish the important from the incidental. That is, between
+    two examples there may be several differences but if we have the appropriate support'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: 'knowledge it is possible to decide which is the most relevant and, where appropriate,
+    forget the rest. In general, in the method proposed by Winston this task is done
+    by the teacher, by choosing a good sequence of examples and quasi-examples, and
+    in this way skews the process.
+
+
+    This system shows us some important facets of the learning process that can be
+    summarized with several basic principles:
+
+
+    If there is any doubt about what to learn, it is better not to learn (2.1.2) and
+    (2.4).
+
+
+    When something is a positive instance of a concept and it does not seem like it,
+    then create an exception (principle of no alteration). Live systems and, by extension,
+    the materials, are conservative, so they are reluctant to totally change a concept
+    already learned. Learning is done in very small steps, sequentially, by renewing
+    ideas. This is the so-called law of Martin.
+
+
+    The algorithm works as a search of the first-in-depth type. As this strategy has
+    been seen, it has the disadvantage of being very sensitive to the order of'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: 'entry of the examples.
+
+    You can''t learn anything unless you almost know it already. You cannot learn
+    something unless you almost know it before they teach it to you.
+
+    In Winston’s Method, the first generalization can be paraphrased in the following
+    way: There is a polygon of medium size, which is not shaded, on another object
+    that has size and texture. There is also another object with size and texture.
+    The second generalization is equivalent to saying: There is a large object that
+    is not shaded.
+
+
+    An interesting aspect of the first generalization found with the Winston method
+    is that it says that there is a medium-sized polygon. The word polygon appears
+    because one of the generalization rules used by Winston is the tree-climbing rule.
+    In this specific case, the hierarchy of generalization refers to the values that
+    the shape attribute can have, and will only have one level.
+
+
+    Thus, if in the new example and in the current model of the concept there are
+    two nodes that perform the same function (they represent the same object within'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: 'the concept, it could be said and have different values in one attribute, these
+    specific values are still substitute in generalization for the lowest value in
+    the generalization tree that is the predecessor of both values. In this case,
+    given any two different values in the attribute always be substituted by the only
+    predecessor they have, which is a polygon.
+
+    Hayes-Roth Method
+
+
+    The work of Hayes-Roth and McDermott ([[HAY77],[HAY78]) on inductive learning
+    attempts to find the most specific conjunctive generalizations (in its maximal
+    nomenclature abstractions or interference matches) from a set of positive instances.
+    The structure they use to represent both these instances and generalizations is
+    called parameterized structural representations (PSRs). The instances of the objective
+    concept used in this section will be described as follows:
+
+
+    E1: {{box: a} {circle: b} {rhombus: c} {smooth: a} {shaded: b} {smooth: c} {large:
+    a} {medium: b} {medium: c} {about: b, below: a} {about: c, below: b}}
+
+    E2: {{rectangle: d} {circle: e} {circle: f} {square:'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '```
+
+    g}
+
+    {large: d} {small: e} {small: f} {medium: g}
+
+    {smooth: d} {shaded: e} {shaded: f} {smooth: g}
+
+    { over: g, under: d} {out: d, inside: e} {out: d,
+
+    inside: f}}
+
+    ```
+
+
+    E3: {{ellipse: h} {rectangle: i} {triangle: j}
+
+    {plain: h} {shading: i} {plain: j}
+
+    {large: h} {medium: i} {medium: j}
+
+    {about: i, below: h} {about: j, below: i}}
+
+
+    Each of the components of this representation is a case frame, composed of case
+    labels (small, circle) and parameters (a, b). It is assumed that all case frames
+    are connected together. The generalization is done as follows: the first set of
+    conjunctive generalizations, G1, is initialized with the first example of the
+    entry. Given a new example and the set of generalizations obtained in the last
+    step Gi, Gi + 1 is obtained by doing a partial match (interference match) between
+    each element of Gi and the current training example. This comparison attempts
+    to find the longest one-on-one association of parameters and case frames. This
+    is done in 2 steps:
+
+
+    +   1. Check the E1 and E2 case frames in every possible way to obtain a set M,
+    each element of which'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: 'is a case frame and a list of runs - reports between parameters that allows
+    matching with both case frames. The set M that will be obtained from the first
+    2 examples described above will be as follows:
+
+
+    ```
+
+    M = {{circle: ((b / e) (b / f))},
+
+    {plain: ((a / d) (a / g) (c / d) (c / g))},
+
+    {shading: ((b / e) (b / f))}
+
+    {large: ((a / d))}
+
+    {medium: ( (b / g) (c / g))}
+
+    {over, under: ((b / ga / d) (c / gb / d))}}
+
+    ```
+
+
+    2. Select a subset of the correspondences between parameters of M so that all
+    parameters can be linked consistently. This selection is made with a wide path
+    of the space of possible links, pruning nodes that are not promising.
+
+
+    A consistent link means not linking the same parameter of one instance with several
+    parameters of another instance. Each number of that graph represents one of the
+    nodes that will be generated even in the process of generalization. Node 18 is
+    a link that leads to a conjunctive generalization. Specifically, link aad (to
+    obtain v1), bae (to obtain v2) and cag (to obtain v3), producing the conjunction:
+
+    {{{circle: v2}}'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '{smooth: v1} {shading: v2}{smooth: v3}
+
+    {large : v1} {medium: v3}.
+
+    This conjunction will be interpreted as \ There is a shaded circle, a large non-shaded
+    object and a medium object that is not shaded either". The Hayes-Roth algorithm
+    finds the following generalizations from the 3 examples considered in this chapter
+    title:
+
+
+    +   - There is an object on top of another object
+
+    ffsobre: v1, below: v2gfmfio: v1gfgrande
+
+    v2gfliso: v2gg
+
+
+    +   - There is an object of medium size on top of a large object that is not shaded
+
+    ffmedio: v1gfliso: v1gfgrande: v3gfliso:
+
+    v3gfname: v2gg
+
+
+    +   - There is a non-shaded object of medium size, a large non-shaded object,
+    and a shaded object
+
+    ffsobre: v1, below: v2gfmfio: v1gfliso:
+
+    v1ggunshaded medium-sized
+
+
+    # 4.2 - Method I Will See
+
+
+    In your work on inductive learning ([VERE75]), I will also try to find the most
+    specific conjunctive'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: 'generalizations (in its terminology, maximal conjunctive generalizations or
+    maximal unifying generalizations) of a set of positive instances of a concept.
+    Each example is represented as a conjunction of literals, where each literal is
+    a list of constants (terms) between parentheses. For example, the three instances
+    that are used throughout this chapter will be represented as follows:
+
+
+    EJ1: (box a) (circle b) (rhombus c)
+
+    (large a) (medium b) (medium c)
+
+    (smooth a) (shaded b) (smooth c)
+
+    (on ba) (on cb)
+
+    EJ2 : (circle d) (circle e) (rectangle f) (square g)
+
+    (small d) (small e) (large f) (medium g)
+
+    (shaded d) (shaded e) (smooth f) (smooth g)
+
+    ( on gf) (inside df) (inside ef)
+
+    EJ3: (ellipse h) (rectangle i) (triangle j)
+
+    (large h) (medium i) (small j)
+
+    (smooth h) (shaded i) (smooth j)
+
+    ( about ih) (about ji)
+
+
+    Although it looks like the way to represent Hayes-Roth''s examples with case frames
+    is quite different, because Vere treats all symbols in the same way. It'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: 'does not give any sign to this representation, it does
+
+    ot distinguish between property names (eg large)
+
+    and concrete objects such as a or g. This fact leads to
+
+    a series of problems that will be discussed later.
+
+
+    The algorithm used to generalize a couple of examples
+
+    is is the following:
+
+
+    +   1. Creation of the MP set, which contains all the
+
+    pairs of literals that match.
+
+
+    Two literals match if they have the same number of
+
+    constants and at least one one common term in the same
+
+    position. In the example, if the first 2 instances are
+
+    considered and this process is followed, the resulting
+
+    set is a:
+
+
+    ```
+
+    MP = {((circle b), (circle d))
+
+    ((circle b), (circle e))
+
+    ((large a), (large f))
+
+    ((medium b), (half g))
+
+    ((medium c), (half g))
+
+    ((plain a), (plain f))
+
+    ((plain a), (plain g ))
+
+    ((shaded b), (shaded d))
+
+    ((shaded b), (shaded e))
+
+    ((smooth c), (smooth f))
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '((smooth c), (smooth g))
+
+    ((on ba ), (on gf))
+
+    ((on cb), (on gf))
+
+    2. Select all possible subsets of MP so that no literal in one example is paired
+    with more than one literal in another example. Each of these subsets forms a generalization
+    of the initial examples at the end of the process. In [DIET81] it is already noted
+    that this step can be very expensive since the space of possible subsets of MP
+    is very large (exponential with the number of elements). With the MP set just
+    shown, there are hundreds of possible subsets that meet the requested property.
+
+    In this second step, you can reach expressions that cannot be reached in any of
+    the methods discussed so far. For example, some of the possible sub-assemblies
+    from the set MP seen above be an:
+
+    S1 = {{{((half b) (half g))
+
+    ((plain a) (plain g))}}
+
+    S2 = {{{((plain a) (plain f))
+
+    ((plain c) (plain f))}}
+
+
+    As you can see, two objects of one example are being linked in some way with only
+    one object of the second'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: 'example (a and b with g in the first case a, c with f in the second). As will
+    be seen at the end of the process, this fact means that in the generalizations
+    obtained by Vere there are links of many-to-one variables and not one-to-one as
+    described so far. In the opinion of Dietterich and Michalski (and most of the
+    scientists engaged in inductive learning), these types of generalizations usually
+    do not make sense, and their uncontrolled generation is computationally expensive.
+
+
+    3. Each subset of those obtained in step 2 is extended by adding new pairs of
+    literals. A new pair p is added to a subset S of MP if each literal of p is related
+    to some other pair q of S by a common constant in the same position. For example,
+    if in a subset S we have the pair ((square b), (square d)), you can add the pair
+    ((on ab), (inside ed)) because the third element of (on ab) it is the second of
+    (square b) and the third element of (inside ed) is the second element of (square
+    d).
+
+
+    If in the second step the space of possible subsets was large, in this third step
+    it is still more. In [DIET81] it is commented that in none of the works published
+    by Vere ([VERE75], [VERE77], [VERE78], [VERE80]), it is'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: 'clearly described how steps 2 and 3 of this generalization algorithm are carried
+    out, but it should not be with an exhaustive search because it is very inefficient
+
+
+    4. The resulting set of pairs becomes a conjunction of literals, joining each
+    pair to form a literal. Terms that do not match are transformed into new terms,
+    which can be formally seen as variables. For example ((circle a), (circle c))
+    become a (circle v1). This way of creating literals and not distinguishing predicates
+    from constants will cause strange things to be generated. It has been seen before
+    that, in the extension phase of the literal pairs, things like ((on ab), (within
+    ed)) could be added. By now generalizing this pair to form a literal, you will
+    get a literal like (v1 v2 v3), which doesn''t make much sense either.
+
+    In the example in which various methods are being considered, Vere obtains many
+    generalizations, some of which are as follows:
+
+
+    (ENVELPE v1 v2) (MEDIUM v1) (LARGE v2) (SMOOTH v2) (SMOOTH v3) (SHADOW v4) (v5
+    v4)sized
+
+
+    There is a medium-object on a large non-shaded object. Another object is not shaded.
+    There is a'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: 'shaded object.
+
+    (ENVELOPE v1 v2) (SMOOTH v1) (MEDIUM v1) (v9
+
+    v1) (v5 v3 v4)
+
+    (SHADOW v3) (v7 v3) (v6 v3) (LISO v4) (LARGE v4)
+
+    (v8 v4)
+
+
+    There is an object with no medium size shading on
+
+    another object. There are two related objects in some
+
+    way such that one is shaded and the other is large
+
+    and not shaded.
+
+
+    (ON v1 v2) (MIDDLE v1) (SMOOTH v2) (BIG v2) (v5
+
+    v2) (SHADED v3) (v7 v3) (SMOOTH v4) (v6 v4)
+
+
+    There is an object of average size not shading a large
+
+    object. There is a shaded object and there is an
+
+    unshaded object. As can be seen from these results,
+
+    the appearance of literals such as (v5 v4) or up to 7
+
+    different variables as in in the last generalization leads to
+
+    a lot of confusion, but if empty literals are removed
+
+    (those that only contain variables), the generalizations
+
+    obtained are very similar to those obtained with other
+
+    methods.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# 4.3 - Michalski-Dietterich Method
+
+
+    This section will discuss the method of determining the more specific conjunctive
+    generalizations described by Michalski and Dietterich in [DIET81]. They describe
+    the examples of entry in language V L21, which is an extension of the logic of
+    first-order predicates. Each example is a conjunction of selectors, which usually
+    contain a predicate descriptor (with variables such as arguments) and a list of
+    the values that the predicate can have. Another form of the selector is predicated
+    n-Aryans in square brackets, which are interpreted in the usual way.
+
+
+    In this method, unary descriptors (or attribute descriptors) and non-unary descriptors
+    (or structural descriptors) are treated differently. The idea is first to look
+    for plausible generalizations in the structural space, and then to search the
+    attributes space to fill in the details of these generalizations. Basically, they
+    do so to reduce the search space of generalizations, taking into account at the
+    beginning only the structural aspect of the examples.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: 'The part of obtaining generalizations in the method being examined works as
+    follows [DIET81]. The algorithm searches for the beam search type ([RUBI77]) in
+    the structural space. This search is a way of first looking for the best (search)
+    in which a set of the best candidate descriptions that have been obtained so far
+    is maintained.
+
+
+    First, all the unary descriptors of the examples are eliminated, thus remaining
+    only with the structural part of them. An example is chosen randomly and the initial
+    set of generalizations is taken as B0. At each step, the least promising generalizations
+    are first removed from Bi. The criteria to evaluate the generalizations can be
+    given by the user, and the program also has some built-in criteria, such as maximizing
+    the number of examples covered by a generalization or maximizing the number of
+    selectors in a generalization, for example.
+
+
+    Then it is checked if any of the generalizations of Bi covers all the examples.
+    If so, they are passed from Bi to set C, where candidate conjunctive generalizations
+    are stored.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: 'Finally, Bi generalizes to Bi + 1 by taking each Bi element and generalizing
+    it in every way possible by removing a selector. The search ends when the set
+    C reaches a certain size. Set C contains conjunctive generalizations of the examples
+    in the entry, some of which are the maximum spec.
+
+
+    Once the set of candidate generalizations has been constructed, each of them must
+    be completed by finding values for their attribute descriptors. Each generalization
+    is used to define an attribute space in which a beam search similar to that performed
+    in the structural space is made.
+
+
+    Among all the conjunctive generalizations produced by the first phase of the algorithm,
+    there may be some that are not as specific as possible. In [DIET81], it is said
+    that, in most cases, these generalizations become the maximum of specs when the
+    attributes are filled in the second phase of the algorithm.
+
+
+    Some of the generalizations obtained by this method are the following:
+
+
+    ```
+
+    9 v1, v2 [envelope (v1, v2)] [size (v1) = medium]
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '[shape (v1) = polygon ] [texture (v1) = smooth] [size (v2) = medium large W]
+    [shape (v2) = right angle W circle]
+
+
+    There are 2 objects in each example such that one is a size polygon half-shaded
+    that is on top of the other, which is a circle or a rectangle angle of average
+    or large size.
+
+
+    9 v1, v2 [envelope (v1, v2)] [size ~ (v1) = medium] [shape (v1) = circle W square
+    W rectangle] [size (v2) = large] [shape (v2) = box W rectangle W ellipse] [texture
+    (v2) = smooth]
+
+
+    There are 2 objects such that one of them is a circle, rectangle or square of
+    medium size that is on the other, which is a box, rectangle angle or large ellipse
+    and not shaded.
+
+
+    9 v1, v2 [envelope (v1, v2)] [size (v1) = medium] [shape (v1) = polygon] [size
+    (v2) = medium large W] [shape (v2) = rectangle W ellipse W circle]
+
+
+    There are 2 objects such that one of them is a polygon of medium size that is
+    on top of the other, a rectangle, an ellipse circle of medium or large size.
+
+
+    9 v1 [size (v1) = small medium W] [shape (v1) = circle W right angle] [texture
+    (v1) = shading]'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: 'There is an object, which is a circle or right angle, shaded and of medium
+    or small size. It is clear that the main difference of the generalizations obtained
+    with this method with respect to those of other methods resides in the disjunctive
+    descriptions that it obtains (eg objects that are right angles, ellipse circles).
+    There may be cases in which these types of descriptions are interesting, but in
+    this very simple example, it can already be seen that it produces generalizations
+    with somewhat artificial and difficult to follow interpretations (eg a rectangle,
+    middle ellipse or medium size or big).
+
+
+    Also, some constructive induction rules have been introduced in the system, with
+    which more informative generalizations can be obtained, such as the following:
+    [number of v''s = 3.4] [number of v''s with smooth texture = 2]
+
+
+    9 v1, v2 [top (v1)] [envelope (v1, v2)] [size (v1) = medium] [shape (v1) = polygon]
+    [texture (v1) = smooth] [size (v2) = medium, large] [shape (v2) = circle, right
+    angle]
+
+
+    There are 3 or 4 objects in each example. Of them exactly two are not shaded.
+    The object in the highest'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: 'position is a smooth polygon of medium size and is on a circle or rectangle
+    of large or medium size. To close this section, you can see what results Michalski
+    gets in an example shown in [MICH80b]. In one of the examples in this article,
+    he tries to find a description of a series of trains, consisting of a series of
+    wagons of which the following characteristics are of interest:
+
+
+    +   - Length: there are short and long wagons.
+
+    - Shape: the shape of the car (it can be an ellipse, an open angle, a closed rectangle,
+    etc.).
+
+
+    +   - Cargo form: a wagon can carry circles, triangles, squares, etc.
+
+    - Number of parts: number of load units carried by each car. It can be 1, 2 or
+    3.
+
+
+    The number of wheels: each car has 2 or 3 wheels.
+
+
+    # 4.4 - Comparison Of Methods
+
+
+    In general, all the methods examined give quite similar results. They all find
+    at some point the difficulty of having to find out what objects in each example
+    are related to each other. That is obviously'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: 'the key point in any concept acquisition algorithm (concept acquisition), which
+    has to calculate the description of a concept from the similarities between the
+    examples presented.
+
+
+    Winston assumes that the semantic networks that he has to compare will be very
+    similar and, therefore, the collation algorithm will not have to face multiple
+    possibilities. This idea comes from the use of quasi-examples (near-misses), which
+    differ in only small details from the positive examples of the concept to be learned.
+    If Winston admitted counterexamples, whatever the algorithm for comparing semantic
+    networks would be much more expensive.
+
+
+    In the first step of the Hayes-Roth algorithm, all possible forms of correspondence
+    are calculated from the case frames that denote the examples of the concept (which
+    include both relationships between objects and their properties), and can, therefore,
+    be generated m multiple combinations.
+
+
+    In the algorithm of Vere, something similar is done since in the first step a
+    set is constructed with all the'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: 'pairs of literals that share a term in the same position. There may already
+    be many possibilities here, but in the next step, this number is usually increased
+    since all possible subsets of the set of literal pairs are studied.
+
+
+    Literals also encompass both relationships between objects and properties. In
+    Michalski''s method, the most interesting aspect is that generalization is sought
+    in the structural space, without taking into account the attributes in the first
+    phase. This means that the number of possibilities with respect to the previous
+    methods is reduced.
+
+
+    # 4.5 - Version Space
+
+
+    Mitchell [MITC82] proposed a unified framework for learning concepts called version
+    space. This method assumes that the process of learning a concept takes place
+    in a nest space H between two sets of hypotheses called G and S. The set G contains
+    the most general elements of H. In S, on the contrary, the more specific elements
+    accumulate. An elementary'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: 'assumption of this method is that given a set of positive and negative instances,
+    it is possible to construct a space of consistent formula versions among which
+    the concept is to be learned. Here the set of consistent formulas can be nested
+    formulas as the set of complete formulas, that is, they recognize all the positive
+    and coherent instances, which do not recognize the negative ones. The construction
+    of this space is carried out through the generalization and specialization of
+    concept C due to the presence of positive and negative instances. In addition,
+    any description consistent with the concept that can be learned should be made
+    in terms consistent with H. The result of this process is that there is a tree
+    of specializations and one of the generalizations, where each node is associated
+    with a concept model. An interpretation of these nodes is as follows:
+
+
+    +   1. A node of the generalization tree is connected to a model that covers all
+    positive examples.
+
+    2. A node in the tree of specializations is connected to a model that does not
+    cover a counterexample.
+
+    The version space allows you to keep all the extra useful information from a training
+    set without having to save any of the examples. In addition, this method'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: 'allows us to find the exact state of generalization in which a descriptor must
+    be used to optimize the efficiency of the operators that use it in solving a problem.
+    A generalization, g, is contained in the nest space between G and S, if and only
+    if:
+
+    g is more specific than or equal to a member of G, and
+
+    g is more general or equal to any member of S'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# Chapter 5 - Induction Of Decision Trees
+
+
+    # 5.1 - Decision Trees
+
+
+    A decision tree is a possible representation of the decision processes involved
+    in inductive classification tasks. Attributes are used to create partitions of
+    sample sets; the nodes of the tree correspond to the names or identifiers of the
+    attributes, while the branches of a node represent the possible values of the
+    attribute associated with the node. The sheets are already classified as sets
+    of examples.
+
+
+    The tree construction strategy consists in selecting {at all times {that potentially
+    most useful attribute for the classification, understanding as such the one that
+    promises to generate the best tree from this moment. There are two criteria for
+    evaluating decision trees:
+
+
+    Cost: how much it costs {on average to get a leaf from the root. It depends on
+    two factors: path length'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '(that is, the number of attributes consulted) and the cost of each query.
+
+
+    Goodness: ability to predict the tree to discriminate an independent set of new
+    examples (usually measured as a percentage of success per class).
+
+
+    Another aspect that is usually taken into account is the readability of the tree,
+    although this criterion applies only in case of a "tie" between the two previous
+    ones.
+
+
+    A decision tree can formally be defined as:
+
+
+    +   1. A leaf node ( or response) labeled with a class name
+
+    2. An internal (or decision) node, labeled with an attribute name, from which
+    {for each value of the attribute} part a branch {connected to another decision
+    tree} labeled with that value.
+
+
+    Thus, the branches represent the questions or decisions about the values of the
+    attribute of the parent node. In this way, a decision tree can be seen as a tree
+    and/or, where the depth marks the conjunction and the width. This algorithm was
+    initially'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: 'developed by Quinlan [QUIN79] and belongs to the TDID9 family. Each element
+    or instance of the input sequence presented to the algorithm takes the form of
+    a list of attribute-value pairs, constituting a conjunctive description. Each
+    instance is also accompanied by the class to which it belongs. The goal is to
+    build a decision tree that explains all instances in the most compact way possible,
+    according to the criteria outlined in the previous section. The algorithm constructs
+    the tree by selecting at each moment the best attribute according to a certain
+    heuristic measure, which can be seen as a hill-climbing search without turning
+    back through all the possible trees. Let X be the initial set of instances, A
+    set of attributes that describe them and C that of possible classes, and let us
+    denote by the operator #, the cardinality of a set. Throughout the text, and located
+    in any node, we will call X the set of instances {subset of X} such that their
+    values coincide with those of the path that goes from the root said node for the
+    attributes involved. We will call that path a path of discrimination. Let’s see
+    an example:'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '| Class | Element | Height | Hair | Eyes |
+
+    | --- | --- | --- | --- | --- |
+
+    | | 1 | low | blond | blue |
+
+    | C + | 2 | high | redhead | blue |
+
+    | | 3 | tall | blond | |
+
+    | | 4 | tall | blond brown | |
+
+    | | 5 | low | ~ not blue | |
+
+    | C; | 6 | high | caste ~ no | blue |
+
+    | | 7 | high | caste ~ no | brown |
+
+    | | 8 | low | blond brown | |
+
+
+    So, C = FC+; C; g, X = f1; two; 3; 4; 5; 8g and its participation in the two existing
+    classes be a PC (X) = ff1; two; 3g; f4; 5; 7; 8gg. Therefore,
+
+
+    I (PC (X)) = 3 = 8log2 3 = 8; 5 = 8log2 5 = 8 = 0:
+
+    954
+
+
+    Let''s now analyze the attributes:
+
+    E (X; Height) = 3 = 8I (PC (f1; 5; 8g) + 5 = 8I (PC (f2; 3; 4; 6; 7g ) = 0: 951
+
+    With
+
+
+    I (PC (f1; 5; 8g)) = 1 = 3log2 1 = 3; 2 = 3log22 = 3 = 0: 918
+
+    I (PC (f2; 3; 4; 6; 7g) ) = 2 = 5log2 2 = 5; 3 = 5log2 3 = 5 = 0: 971
+
+
+    Finally, the gain generated by Height will be:'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: 'G (X; Height) = 0: 954; 0: 951 = 0: 003
+
+    Similarly,
+
+    E (X; Hair) = 0: 454
+
+    E (X; Eyes) = 0: 347
+
+    Therefore, the hair attribute will be chosen as the process. The process continues
+    now to generate the 3 subtrees corresponding to the 3 Hair values, using for this
+    is the sets of instances A; 1 (X; brown), A; 1 (X; redhead) and A; 1 (X; blond),
+    respectively.
+
+
+    # 5.2 - The Standardized ID3 Algorithm
+
+
+    The above method has the disadvantage of indirectly favoring those attributes
+    with many values, which are not necessarily the most useful. It has been proposed
+    (in [CEST86]), the binarization of the attributes. There are binary decision trees
+    and the process of the number of values of an attribute becomes independent. The
+    height attribute referred to a person can take many different values but be useless
+    to determine, say, the type of occupation he performs.'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: 'An alternative was proposed by Quinlan himself [QUIN86] and is to normalize
+    the gain G of his method by a factor that represents the amount of information
+    {for any element} necessary to know the value of a certain attribute.
+
+
+    IV(X; A) = 2X p(X; v) log2 p(X; v) v V(A)
+
+    where p(X; v) = probability that, given a x X; A(x) = v: The new gain GN is defined
+    as
+
+    G(X; A)
+
+    G(X; A) = IV(X; A):
+
+
+    The disadvantage of this new method lies in those cases in which the denominator
+    is abnormally low and even without having a large gain G, the quotient becomes
+    very large. One solution is to apply GN only to attributes with a G above the
+    average.
+
+
+    # 5.3 - The RLM Algorithm
+
+
+    A different approach is the one proposed by R. Lopez de Mantras [LOPE91], which
+    we will call the RLM algorithm. It consists in choosing that attribute that causes
+    a partition of X closer to the correct one, understanding by correct partition
+    the one in which all'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: 'the elements of each subset of the partition are of the same class of C, that
+    is, the PC partition (X ). It is necessary, therefore, a distance between partitions.
+    The following process will lead us to it:
+
+
+    Let PA (X) and PB (X) be two partitions of X. Your average information {which
+    will measure the randomness of the distribution of the elements of X between the
+    classes of PA (X) and PB (X) {will be given by:
+
+
+    ```
+
+    I (PA (X)) = ; X a2PA (X)
+
+    I (PB (X)) = ; X b2PB (X)
+
+    p (X; a) log2 p (X; a)
+
+    p (X; b) log2 p (X; b)
+
+    ```
+
+
+    Considering now the intersection of both partitions we obtain the expression:
+
+
+    ```
+
+    I (PA (X) \ PB (X)) = ; 2X 2X p (X; a \ b) log2 p
+
+    (X; a \ b): a PA (X) b PB (X)
+
+    ```
+
+
+    Finally, the conditioned information of PB (X) given PA (X) is
+
+
+    I (PB ( X ) = PA (X)) = I (PB (X) \ PA (X)); I (PA (X))
+
+    This occurs IV (X; A) being a measure of the average concentration of the elements
+    of X in the values of A, the more distributed the attribute is in its values.'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: 'It is easily demonstrable then that the measure d (PA (X) ; PB (X)) = I (PB
+    (X) = PA (X)) + I (PA (X) = PB (X)) is a distance. If we now divide the previous
+    expression by I (PA (X) \ PB (X)) we will achieve its normalization:
+
+
+    dN (PA (X); PB (X)) = d (PA (X); PB (X)) 2 [0; 1]
+
+
+    I (PA (X) \ PB (X))
+
+    which obviously remains a distance. Thus, this criterion will choose that attribute
+    that minimizes the distance between the correct partition and the one generated
+    by the attribute, so that the new gain {which we will call GRLM {such as:
+
+    GRLM (X; A) = dN (PC (X); Part (X; A)):
+
+
+    It is instructive to compare this measure with the Quinlan criterion. The information
+    gain when dividing with respect to an attribute A was G (X; A) = I (PC (X)); E
+    (X; A), where I (PC (X)) is precisely the average information of the correct partition
+    of X.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# 5.4 - Incremental Algorithms
+
+
+    One of the most obvious limitations of the methods exposed so far is that they
+    all operate at once, that is, if given a tree that has already been built, it
+    is desired to update it in a way that accommodates new examples. , you must build
+    this again. This way of working is appropriate for learning tasks in which there
+    is a set of instances, all of them known a priori. When this does not happen,
+    it is desirable that the tree could be reviewed and altered {as efficiently as
+    possible} to accommodate the new example. In addition, it may be interesting to
+    observe how the tree evolves as instances are provided.
+
+
+    # 5.5 - ID4 and ID4R algorithms
+
+
+    The first important attempt to build a decision tree incrementally, this algorithm
+    was developed by Schlimmer and Fisher [SCHL86] as a derivation of ID3 although
+    {as will be seen} there are concepts that can be learned by ID3 that are not by
+    ID4.'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: 'Thus, this method takes as input parameters a decision tree and an instance
+    returns a new tree adapted to it. Each node maintains information on the number
+    of instances in the classes for each value of each attribute that can serve as
+    a decision on that node {that is, that has not appeared before on the path to
+    the root {between the instances of X, in order to recalculate its corresponding
+    E function. These counters will eventually have been modified with the introduction
+    of the new instance. In this way, if the attribute of the root of the sub-tree
+    being considered is not the one that keeps the E m as low, it is replaced by the
+    one that has it, there being no need to alter the counters associated with the
+    node.
+
+
+    Now, when this substitution occurs, what do we do with the sub-trees that fall
+    from the node? The only thing clear is that these trees are no longer useful.
+    There are two strategies:
+
+
+    Conform to expand the new attribute in its values (that is, create only one level
+    more). This is the original ID4 algorithm.
+
+
+    Continue rebuilding down to the end, using ID3. This version is called ID4R.
+
+
+    Note that a sub-tree that has been changed (or'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: 'created, if it was a leaf before), the root attribute does not have to be completely
+    redone. In this case, the resulting decision node is aired, without re-narrating.
+    This prayer will eventually take place with the arrival of new instances that
+    follow the same path. This divergence between ID4 and ID4R causes that the first
+    one is not equivalent to ID3 and the second s, where by equivalence, we understand
+    that the resulting trees are identical.
+
+
+    The problem with these algorithms is that certain concepts {that is, their sets
+    of instances {can lead to continuous discards of sub-trees, without reaching a
+    final stabilization of the representation of the concept, and are not, therefore,
+    learned, in addition to degrading in others to the tree. This situation usually
+    occurs when {at the moment of choosing a new attribute in a node} the winner is
+    clearly not the best. If there were several with similar E measures, it is very
+    likely to have a new attribute change soon, with the arrival of a new instance.
+    Anyway, they are obviously an improvement if the alternative is to build the tree
+    every time from scratch, as I did to ID3.'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# 5.6 - ID5 and ID5R algorithms
+
+
+    These two algorithms are due to Utgo [UTGO90], and differ from the previous two
+    in that, at the time of expanding a sub-tree {due to an attribute change in its
+    root {do not rule out the sub existing trees, but they are restructured conveniently,
+    taking advantage of the work done when they were created. The advantage of this
+    technique {called pull-up} is that it recalculates the information (counters)
+    of each node taking taking advantage of existing ones as it restructures each
+    sub-tree. The task of pull-up is, therefore, to bring the desired attribute (the
+    one that now has a lower measure E) to the root of the sub-tree, maintaining consistency
+    with the instances already presented. Namos first clarity for the information
+    to be contained on a decision tree to implement these algorithms:
+
+
+    +   1. If a leaf node (response), a class name and set of instances that discriminates.
+
+
+    +   2. If it is a decision node, an attribute name, with a branch to another decision
+    tree for each attribute value.
+
+
+    +   3. All possible test attributes (including the current'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: 'one) in that node, and counters of the number of instances belonging to each
+    class for each value of said attributes.
+
+
+    As you can see, the same as for ID4 (R) is needed, with the addition that the
+    sheets must save the discriminating instances. The difference between ID5 and
+    ID5R is that the latter {after restructuring a sub-tree to bring the desired attribute
+    to the tree} continues restructuring recursively for its sub-trees, which it does
+    not do, which again causes it not to be equivalent to ID3, while ID5R is.
+
+
+    Let''s look at a synthesis scheme of the four incremental algorithms seen so far.
+    For a better understanding, it should be noted that what all methods have in common
+    is their objective: to review the path of discrimination of the new instance,
+    forcing each node to remain labeled with the attribute chosen by the heuristic
+    function.
+
+
+    Let us denote:
+
+
+    +   x New instance to learn
+
+    Cx The complete path of discrimination of x
+
+    N A name of any tree node
+
+
+    It is not intended here to explain them in extreme detail {as it escapes the conception
+    of the book} but'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: 'rather it has been preferred to emphasize its principles basic and, above all,
+    their differences. For the game reader, references are given to all the methods
+    described.
+
+
+    AN The attribute associated with the node N
+
+    AH The new attribute is chosen in N when updating its counters
+
+
+    Being the main scheme:
+
+
+    for any node N 2 Cx (root leaf) do update-counters (N);
+
+
+    Apply pull-up recursively to the entire sub-tree whose root is N (ID5R) for everything.
+    The pull-up algorithm is simple, and therefore we will formalize it a little more
+    than the previous scheme. We will use the auxiliary functions:
+
+
+    ra z (X): returns the node ra z of the tree X.
+
+    es-leaf (Y): returns true if the node Y is a leaf and false otherwise.
+
+
+    subtree (Z, V): returns the tree corresponding to the branch of Z labeled with
+    V.
+
+    expand (Z, A): returns the tree resulting from expanding Z one level using A.
+
+
+    Let''s look at the algorithm:
+
+
+    fS: Subtree in progress ^ A: attribute to go'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: 'up and pull-up function (S: tree-of-decision; A: attribute)
+
+
+    returns T: decision-tree var T: decision-tree;
+
+    if it is-leaf (ra z (S)) then T: Expand (S, A)
+
+    but (* is a decision node *)
+
+    if A = Spider (S) then T: S
+
+    but
+
+
+    for all v 2 V (Spider (S)) make
+
+    S = add-branch (S, Pull-up (sub-tree (S, v), A), v)
+
+    for everything;
+
+    T = Transpose (S)
+
+
+    fsi returns Any method is good: ID3, normalized ID3, RLM, etc.
+
+    of course, if RLM is used, the resulting tree will not be equivalent to ID3.
+
+
+    Pull-up function T is a subtree consisting of S and A as a root. The Transpose
+    (S) function, since all S subtrees are labeled with the same attribute (which
+    has been uploaded to all them), he exchanges it with that of the root S. There
+    are more sophisticated methods, such as IDL, due to W.
+
+    van de Velde [VELD90], which uses the three basic operators in decision trees
+    easily: expansion,'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: 'pruning17, and transposition. The IDL process is carried out in two phases:
+
+
+    +   1. First, ID3-style expansion is used to classify the new instance. It should
+    be noted that the selection measure is based on the distance between RLM partitions.
+
+
+    +   2. Once there is a consistent discriminatory hypothesis, a process of reviewing
+    the discrimination path of the instance begins, but this time, in the opposite
+    direction to the previous step, that is, from the leaf to the root. The concept
+    of topological relevance is used here: the process uses transposition to redo
+    the path of discrimination by pruning whenever possible to obtain a substantially
+    shorter one.
+
+
+    # 5.7 - Summary
+
+
+    The algorithms presented represent a clear evolution of the original model presented
+    by Quinlan. Part of these improvements has been noted or made by it. Many comparisons
+    can be found both theoretical (at least, as far as cost is concerned) and empirical,
+    in'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: several domains already classic in the area. Certain problems are common to
+    all of them {such as those present in the data themselves, which here have been
+    assumed ideals {and are treated in other sections of the book since they concern
+    the formation of concepts in general.
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# Chapter 6 - The relevance of attributes
+
+
+    The nature of the classification has been studied extensively in the field of
+    learning, especially those processes that can be performed automatically by a
+    machine. Many expert systems with the success of the first generation were in
+    practical classifiers. This type of system uses a set of rules, represented as
+    decision trees, to determine the class of a given entry based on a set of its
+    characteristics. In the classical approach, the human expert is responsible for
+    deciding which are the relevant attributes for the classification and subsequent
+    formation of rules. The limitations of this approach, pointed out by several authors,
+    (eg [HAYE84], [BAIM88], etc.), have stimulated the development of systems that
+    can take responsibility for deciding whether an attribute is potentially useful
+    or not, using methods of inductive inference to discover patterns or relationships
+    between data that may be useful in the formation of rules for classifications.
+    In learning, there are several heuristic'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: 'methods that have been developed for the evaluation of attributes in terms
+    of their potential utility (which has been identified with their relevance) in
+    order to decide the class to which an entry belongs. The great majority are based
+    on the theory of classical information (eg [QUIN79], [QUIN86], [SCHL86], [BAIM88],
+    [LOPE91], etc.).
+
+
+    # 6.1 - Nought Attributes
+
+
+    It has been said that the relevance of a set of attributes is not inherent to
+    them, but depends on the classification. Often faced with situations in which
+    an attribute or, in general, a set of attributes, are not important to a given
+    process classification (but could be to another), ie they have no relevance to
+    a particular classification. This null relevance will be referred to as relevance
+    [SANC89]. From now on, we will also refer to non-relevant attributes as nought
+    attributes. In these cases, these attributes are already given and cannot be ignored.
+    What is intended is that they do not distort the classification considering only
+    those that are not needed.'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: 'According to the relevance statement, the nought attributes are those without
+    the ability to discriminate. Therefore, any nought set has null relevance and
+    is an element of [;], the empty set.
+
+
+    A set of attributes An is nought if, and only if, [An] = [].
+
+
+    Note that any set of attributes nought An, added to a given set of attributes
+    AS, does not alter the relevance, that is, the discriminatory ability of class
+    [AS] is the same as that of class [An [AS]; AS A. Let An be a set of nought attributes.
+    Then [An [AS] = [AS]; AS P (A)
+
+
+    Now, the fact that, by adding any set of attributes to another, a new set with
+    the same relevance as the original does not necessarily imply that the set added
+    is nought. This can be seen in the following example:Example
+
+
+    Let U be a universe that contains the objects o1; o2; ;;;; o6, classified in C1
+    and C2 by the attributes A1; A2; A3 and A4, with a range of fa set values; b;
+    cg.
+
+
+    | Class Object A1 A2 A3 A4 |
+
+    | o1 a a a a |
+
+    | C1 o2 a b a  |'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '03 c a c a
+
+    04 a b b c
+
+    C2 o5 b b b b
+
+    06 c a c b
+
+
+    Suppose now that we add the set fa1; A2g the set fa3g. If we look at the table,
+    we will see that {among others {we have the following totally discriminating sets:
+
+
+    +   - fA1; A4g
+
+    - fA2; A4g
+
+    - fA3; A4g
+
+    - fA1; A2; A3g
+
+    - :::
+
+
+    Among the not totally discriminating we find:
+
+    - fA1; A2g
+
+    - fA2; A3g
+
+    - fA1; A3g
+
+    - :::
+
+
+    Therefore, it seems clear that the A3 attribute is not naught. However, we can
+    see that sets fa1; A2g and fA1; A2; A3g have the same relevance (and, therefore,
+    are in the same equivalence class, as we have seen). Therefore, in each case,
+    it is about finding the set of attributes that classify the domain with'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: 'minimal effort. To finish formalizing this concept and, with it, the study
+    of relevance, we will establish, finally, the following criteria:
+
+    The minimum cardinality [A] element is the optimum of [A].
+
+    Being precisely this the element to look for by heuristic measures.
+
+
+    # Learning By Observation And Concept Formation
+
+
+    The methodology of this section is the most difficult and ambitious inductive
+    learning strategy of the views so far. In its original approach, it does not presuppose
+    any previous knowledge about what you want to learn. Unlike the learning algorithms
+    of the previous section, in which the description of a concept was induced from
+    the presentation of different instances of it, and in some cases also of selected
+    counterexamples, in this group of strategies, it is based on a set of examples
+    from which a non-established number of concepts can be induced. Nor is there a
+    teacher who knows the concepts to learn a priori, for this reason, this type of
+    unsupervised learning is called (Unsupervised Learning).'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: 'The creation of a classification of a set of observations can be taken as the
+    first approach to developing a theory about them, so it is important to develop
+    techniques that help to perform these tasks automatically. The objective of these
+    techniques will be to discover common patterns among the data, which allow the
+    examples to be separated into classes or class hierarchies. From these, characterizations
+    can be extracted or will allow predicting characteristics, or deduce useful relationships,
+    which is what is called clustering.
+
+
+    The methods that we are going to describe, together with the rest of the inductive
+    learning mechanisms, allow us to reduce the bottleneck involved in the acquisition
+    and renewing of knowledge bases for knowledge-based systems, transforming them
+    into more tools. attractive.'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# ## 6.2 - The Psychological Component
+
+
+    All these techniques are based on the ideas and theories that cognitive psychology
+    has developed on how humans establish those things and how we characterize groups
+    of objects that we consider belong to the same concept [MEDI89], [LAK87], [SMIT81].
+    We will briefly summarize the evolution of theories that have appeared in psychology
+    to explain how we build categories of humans.
+
+
+    # ## 6.3 - The Classical Vision
+
+
+    The classical vision in the psychology of human categorization is based on the
+    fact that all the instances of a category have a fundamental characteristic in
+    which one determines the belonging to that category. Therefore, a category to
+    be represented by a list of properties or characteristics that are individually
+    necessary for the belonging of an object to it, and collectively are its clients
+    to determine its membership. For example, the category'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: 'of prime numbers is determined by the properties \ being a natural number "\
+    only being divisible by itself and by the unit". If either of the two properties
+    fails, it is not a prime number, and fulfilling the two determines it to be.
+
+
+    Many studies have evidenced the lack of solidity of this vision of categorization.
+    These are its main problems:
+
+
+    +   1. Inability to determine the characteristics of a category. After several
+    studies, it has been found that many concepts, despite the fact that people think
+    that they can be based on necessary conditions and their clients, escape a detailed
+    observation. In these essays, it was tried in several areas of science that their
+    experts gave sets of properties for various concepts of their areas of knowledge,
+    that they fulfilled all the instances that were included in them, without achieving
+    it.
+
+
+    +   2. The gradation between the examples. Given how the categorization is denied,
+    since there is a set of properties that represent a category, any element of it
+    is as good as another to take it as an example since they all share the same properties.'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: '3. Existence of ambiguous assignments. This classic vision of categorization
+    presupposes an unambiguous way of determining to which concept any example that
+    comes before us, it is only necessary to check the characteristics that those
+    of nen. However, there are clear examples of situations in which it is difficult
+    to decide.
+
+
+    # 6.4 - The Probabilistic View
+
+
+    All these problems have evolved the psychological theories towards a probabilistic
+    point of view of the structure of the categories. This view considers the structure
+    of the categories as somewhat diffuse and assumes that these are organized from
+    a set of correlated attributes that are only characteristic features, but no properties
+    that denote the category.
+
+
+    This vision of the categories solves some of the problems of classical vision.
+    Now there is a gradation between the examples of a category since the members
+    do not have to comply with all the characteristics, there are more typical and
+    less typical'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: 'members. The examples to which it is difficult to assign to a class can also
+    be explained since they can possess characteristics that belong to the class,
+    but not enough to allow a clear assignment.
+
+
+    This view assumes that the categories are organized with respect to what is called
+    family resemblance family resemblance. This could be defined as an ideal element,
+    which summarizes the characteristics of all the objects in the class, which is
+    usually called a prototype. The assignment to a class is decided based on the
+    similarity of an example with the prototype of the class. The basis of this theory
+    is found in the idea that over time people abstract from the examples that find
+    their central tendency and use it as a representation of the concept.
+
+
+    Extending the previous point of view, other theories bet on a representation of
+    the categories through a group of examples instead of a single element that summarizes
+    the properties of the class. The investigations carried out on the comparison
+    of the two points of view have concluded that the representation as prototypes
+    is adequate to represent'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: 'a more inexperienced form of assignment and that the one based on examples
+    will be used by subjects with more experience. However, the two theories are based
+    on the same principle, membership in a class is determined by the similarity of
+    an example with the prototype or with the group of examples.
+
+
+    The conception of similarity on which these two theories are based is based on
+    four basic principles:
+
+    1. The similarity between two elements is a growing function of the attributes
+    that share and decrease of those that they give.
+
+    2. All attributes can be treated as independent.
+
+    3. All the attributes used belong to the same level of abstraction.
+
+    4. A concept is more or less equivalent to its list of properties.
+
+
+    Research has shown the error of these assumptions in most of the real cases in
+    terms of similarity and how to treat the information that characterizes the categories.
+
+    The first problem of prototype-based theories is that they treat concepts independently
+    of context. When extracting information only from the central tendency'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: 'of the class, they also do not take into account information that, as it has
+    been experimentally evidenced, people use to categorize, such as class size, the
+    variability of examples or correlation Among the attributes. Nor are they able
+    to distinguish between categories that are more difficult and easier to learn,
+    since as the categories are modeled, those that are linearly separable should
+    be more learnable than those that are not, having experimentally proven that it
+    is not as.
+
+
+    Theories based on examples are better out of step, since they keep more information
+    than those based on prototypes, keeping information on more details and being
+    more context-sensitive. They are also able to infer information based on partial
+    information since it is said that two classes are linearly separable if there
+    is a linear function capable of establishing the boundary between them.
+
+
+    However, the biggest problem of theories based on the probabilistic view of the
+    categorization is in its conception of similarity. Despite the concept of similarity
+    quite intuitive, it implies many more things'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: 'than a simple coincidence of attributes. The importance of the attributes that
+    describe the examples may vary depending on the context in which they are found,
+    weighing some attributes more than others and establishing relationships between
+    them. This breaks the idea that the attributes that make up the categories are
+    independent of each other. It is also necessary to establish in some way what
+    are the attributes that should be used to categorize a set of examples, since
+    the number of them that can be given if no restriction is placed, can be virtually
+    endless. Therefore, the categorization will depend on the definition of what attributes
+    are necessary and what is the relationship that establishes the importance of
+    each one and it is this that determines how the similarity between the examples
+    is measured.
+
+
+    # 6.5 - Categorization Based On Theories
+
+
+    In the most recent theories, the idea has been developed, supported by experimental
+    evidence, that the categories are developed around theories that people are formed
+    about the world, which support the'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: 'existence of Different categories they use. From these ideas, we seek to find
+    an explanation of how humans create categories, an objective that was not achieved
+    with the previous views of categorization.
+
+
+    The theory-directed categorization is capable of explaining the formation of categories
+    that are difficult to assume from the point of view of similarity. For example,
+    a category consisting of a toothbrush, underwear, and pajamas only makes sense
+    if we say that we talk about \ things to take to spend a night at a friend''s
+    house.
+
+
+    Experiments have shown that the notion of similarity is not something absolute
+    and is very dependent on the examples and the ideas that relate them. For example,
+    Medin and Shoben [SHOB88] discovered that the terms white hair and gray hair were
+    taken as more similar than gray hair and dark hair, but, on the other hand, white
+    clouds and gray clouds were considered less similar than gray clouds and black
+    clouds, all explained because white hair and gray hair are related by the idea
+    of aging, while white clouds and gray clouds are not.'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: 'However, theories are not enough to explain the categorization, it is still
+    necessary to maintain similarity as a tool, but with a radically different conception
+    of it than the one used in the theory and prototypes In order for the similarity
+    to be consistent with this new notion of categorization, four rules must be:
+
+
+    +   1. It is necessary to include attributes, relationships, descriptions in the
+    descriptions:
+
+    2. The properties are usually not independent are interrelated.
+
+    3. Properties are usually found at different levels of abstraction.
+
+    4. Concepts are more than a list of properties.
+
+
+    By adding this new vision of similarity, it is possible to adapt the theory based
+    on pro-tip to a theory in which the categorization is guided by conceptions and
+    theories and which determines the belonging of the examples by A deeper exploration
+    of its characteristics.'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# 6.6 - Computational Approaches
+
+
+    Parallel to the studies of psychologists, algorithms have been developed that
+    can partly be framed in some of the theories that model the human characterization
+    that has been discussed. These algorithms belong to different areas, but they
+    maintain the common objective of extracting clusters from examples, from which
+    to extract information about the structure that underlies the examples and the
+    relationships that exist between the attributes that describe them.
+
+
+    Most of them start from a common representation of knowledge from which it is
+    intended to extract useful categories. This is usually based on a set of examples
+    described by groups of attribute pairs on these descriptions. The criteria that
+    guide the learning process are defined. The types of attributes that can be used
+    are varied. Three stand out in the literature [MICH84a]:
+
+
+    Categorical or nominal descriptors: The value of this type of descriptors consists
+    of symbols among which'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: 'there is no sort of order or hierarchy, (eg: the color of a person''s hair:
+    blond, brown ~ no, redhead).
+
+
+    Linear or quantitative descriptors: The values correspond to a totally ordered
+    set, including both discrete values (eg: months of the year), and continuous (eg:
+    weight).
+
+
+    Structured descriptors: The values of these attributes form a hierarchy that represents
+    the general relationship between the values.
+
+
+    The values of the attributes of each example can show different states, depending
+    on the quality of the information or the relationship between the different attributes
+    that describe them. They are the following:
+
+
+    Normal values: They refer to the usual values of the attributes, they are known
+    values.
+
+    Missing Values: They refer to values that are unknown, by loss or error.
+
+    Irrelevant values (nought values): Values that are not important to describe a
+    particular example. This includes additional information on the relationship'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: 'between an attribute and the rest of the example.
+
+
+    Many criticisms have been made about the limitation of such representations. The
+    possibility of working with composite objects described by the combination of
+    relationships and attributes [THOM91] is currently being included.
+
+
+    Illegal or prohibited values: They appear in attributes that are related to others
+    and that depending on the values of the latter may have a value or not. For example,
+    speaking of people, the property number of births is related to the sex attribute,
+    which in the case of having the value will make the first attribute meaningless.
+
+
+    These special states of the values of the attributes have different treatments
+    that manage, in part, to include the information or lack of information presented
+    by the data set. There are two areas in which these algorithms have been developed:
+    numerical taxonomy and machine learning.
+
+
+    Machine learning techniques are intended to be an evolution and an improvement
+    of those of science that appear in the taxonomic number. The following'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: 'sections describe the techniques that appear in the two areas, focusing our
+    attention on machine learning.
+
+
+    # 6.7 - Numeric Taxonomy
+
+
+    The first area in which the analysis and information extraction from examples
+    has been studied has been the numerical taxonomy, in which multiple algorithms
+    have been developed for the grouping of objects in classes. From these techniques,
+    some of the ideas and criteria used by the unsupervised learning algorithms have
+    started.
+
+
+    The algorithms that the taxonomy has developed are based on the grouping of similar
+    objects in the same category. For the measurement of similarity between objects,
+    they use functions based on the descriptions of the objects. There are many types
+    of distances that can be used to estimate similarity or dissimilarity between
+    object descriptions [DUBE88], with variations depending on the type of attributes.
+    Among them we can highlight:
+
+
+    Minkowski metric: They are metric nests on the space Rn, preferably used for linear
+    attributes, whose'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: 'general expression is:
+
+    dX 1 = r for r 1
+
+    d (i; k) = (xij; xkj)
+
+    j = 1
+
+
+    Where xij and xkj are the values of attribute j of the observations i and k. Of
+    these measures, the most used are the Euclid (n = 2) and that of hamming (n =
+    1)
+
+
+    Mahalanobis distance: This distance is also based on linear attributes and has
+    the following expression:
+
+    d (i; k) = (xi; xk) T ''; 1 (xi; xj)
+
+
+    Where ''is the matrix of covariance between the attributes, thus incorporating
+    the correlations existing between the data.
+
+
+    # 6.8 – Algorithms
+
+
+    Based on these measurements, algorithms are constructed that build hierarchies
+    from the set of examples, hierarchical methods. They can use Bottom-up strategies,
+    agglomerative methods, or Top-down, divisive methods.
+
+
+    The most agglomerative algorithm consists in creating a hierarchy to calculate
+    the similarity between all the'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: 'objects and grouping at each step the most similar pair, creating it with a
+    new object and replacing the first two objects with the new one.
+
+    The divisive algorithms perform the inverse step, start from the set of objects
+    as a single class and at each step decide the partition of the classes you have
+    until all the classes are made up of a single element.
+
+
+    The result of both types of strategies is the same, a tree that indicates the
+    process of joining the set of objects from one class per object to a class with
+    all objects. No descriptions are obtained, and it is the job of the data analyst
+    to choose the level of the tree that of useful clusters.
+
+
+    The most frequent measures try to maximize the similarity between the objects
+    of each grouping while minimizing the similarity between the groups. In many cases,
+    these types of measures have not been sufficiently effective, so some algorithms
+    need the user to explain the number of classes to be formed.
+
+    Despite the wide use of these algorithms in statistics for data analysis, many
+    criticisms have been expressed about the effectiveness and correctness of these
+    methods, especially when the task is to extract information that allows data to
+    be characterized., or'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: 'predict properties.
+
+    Its main defect is the similarity measures used since the majority are too oriented
+    to numerical data, presenting many problems when analyzing non-numerical data.
+    In addition, this function only has significance to the extent that the attributes
+    that have been chosen are relevant for the characterization of the data set and
+    of of the different classes that are intended to be discovered, all of them having
+    the same weight in the process of Determine the classes. To this, we must add
+    that these measures do not usually include information on the context that could
+    be useful for the classification process.
+
+    Most of the methods only give information about the similarity between the objects
+    and do not offer a characterization or explanation of the observations and groupings.
+    Together with this, these methods leave most of the work to search for the best
+    part and to analyze the results to the user.
+
+    As will be seen below, the algorithms and methodologies developed in the area
+    of machine learning attempt to facilitate the treatment of non-numerical values
+    (quite frequent in the domains of application of Artificial Intelligence) and
+    try to include'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: 'part of the search work in the space of possible partitions that the user performs.
+
+
+    # 6.9 - Automatic Learning Techniques
+
+
+    In Artificial Intelligence, unsupervised learning has been attempted to see from
+    a less numerical point of view, adopting the ideas arising from cognitive psychology
+    and building computational models of how humans categorize and construct concepts
+    from groups of objects.
+
+
+    The origin of these methods also starts from the desire to try to solve the problems
+    that appear from the use of taxonomic to numerical algorithms, so some of the
+    algorithms that have been developed the ideas of these methods, but by introducing
+    improvements regarding the information used for the grouping of objects, the criteria
+    that allow deciding the formation and coherence of a class and the characterization
+    and explanation of the results. It has also been tried to incorporate in the algorithms
+    part of the search and analysis work that the taxonomic'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: 'methods left to the user.
+
+
+    The starting point of all these methods is also a set of data characterized by
+    attribute-value pairs to which relevant information about the domain of classification
+    as restrictions, properties of attributes (cause-effect relationships), correlation
+    and criteria to evaluate the quality of the resulting groupings can be added.
+    It has also been borne in mind that the domains on which to work must not be composed
+    solely of numerical data. The result can be a set or hierarchy of classes characterized
+    by the most relevant attributes26 among those used to describe them and the values
+    they take. The type of description varies depending on the methods. There are
+    those that result in a combination of necessary attributes and are enough for
+    membership in each class by adopting the classic view of characterization. Others
+    adopt the probabilistic vision, resulting in a set of characteristics of their
+    clients that with a certain probability must be possessed to belong to a class.
+    In some methods, the possibility of being able to predict with the maximum accuracy
+    the attributes of the objects of a class is known knowing the class to'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: 'which they belong, in others, it is sought that the characterization allows
+    classifying future instances in order to use this characterization. on as a knowledge
+    base.
+
+
+    The methods of unsupervised learning have been divided into two groups taking
+    into account whether the acquisition is carried out incrementally or not. Both
+    methodologies have their advantages and disadvantages. The non-incremental variant
+    has been called conceptual clustering, the incremental formation of concepts.
+    Next, each of the two will be described in detail, together with the main systems
+    to which they have given rise.
+
+
+    # 6.10 - Conceptual Grouping
+
+
+    The term conceptual grouping is due to Michalski [MICH80a]. Grouping objects into
+    conceptually simple classes based on the values of the attributes taking into
+    consideration all knowledge about relationships. Therefore, the distinctive feature
+    of The conceptual grouping is to try to introduce the greatest amount of knowledge
+    about the context in which the learning is'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: 'that can be useful is to be carried out. The origin of these methods is based
+    on the verification of the lack of context of the topics similarity measures.
+    These only take into account when comparing two objects the values of their attributes,
+    not considering the concepts that can help describe them.
+
+
+    The characteristics that allow describing a group of objects belonging to a category
+    are not found only in the contrast of the properties that each pair of objects
+    possess. Therefore, more information is needed to build as categories.
+
+
+    The conceptual grouping tries to assign the objects to classes not based on a
+    distance between them, but to their belonging to a certain concept that makes
+    sense to them, is what is called conceptual membership (concept membership). Because
+    of this, the tasks of division and classification of objects are not independent
+    of each other. A division into classes of a group of objects will only be good
+    if and only if there is a good interpretation of the classes.
+
+
+    The functions to which all these ideas give rise to'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: 'from being functions that take only the two objects to be compared as parameters
+    (f (A; B)) to be functions of these two objects, of the objects with which they
+    are related, what we will call environment (E) and a set of concepts available
+    to describe them C (f (A; B; E; C)). The generation of this type of function has
+    been carried out from many different points of view, ranging from the functions
+    of the Theory to the Information, through the probabilistic approximations to
+    the similarity functions used in the statistical methods including information
+    about the domain within your calculation.
+
+
+    Michalski says that similarity measures are unable to capture the shape properties
+    (Gestalt) of groups of objects alone. Michalski calls this function, conceptual
+    cohesiveness.
+
+
+    A measure of similarity typical, which did not take into account any additional
+    information, grouped as objects A and B in the same class, and that a measure
+    as described in the previous point that will include the concepts of geometric
+    figures.'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: To illustrate these ideas, we will study three very different models of each
+    other in regard to the basic assumptions from which they start, the restrictions
+    they pose and the results they wish to obtain. The first one (CLUSTER) is based
+    on the creation of categories described based on sufficient and necessary properties
+    using a function to optimize on the descriptions that are created. The second
+    (WITT) bases its algorithm on functions taken from the Information Theory on favoring
+    classes with less rigid descriptions, more in accordance with the tendencies of
+    cognitive psychology including operators that allow dynamically modifying the
+    obtained classes. The third approach (AUTOCLASS) is based on the application of
+    Bayes' theorem and the distribution functions that present the attributes that
+    describe the data. The categories obtained are not disjoint and the observations
+    have a degree of belonging to each of them.
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '# 6.11 - Cluster
+
+
+    This methodology is really a whole generation of tools that have left behind restrictions
+    and assumptions, expanding the scope of work until adopting all the ideas of the
+    conceptual grouping.
+
+
+    The first tool of this family that can be included within the conceptual grouping
+    is CLUSTER, whose result is hierarchies of classes formed by disjoint concepts,
+    described from attribute conjunctions. This implies a restriction on the type
+    of concepts that can be acquired. This type of conceptual grouping is called conjunctive
+    conceptual clustering. The characterizations are formed by sufficient and necessary
+    conditions for belonging to the different classes. As we have seen, this restriction
+    greatly limits the type of domains in which you can work.
+
+
+    The description of the observations is made by attribute-value pairs such as those
+    mentioned and the synthetic distance function used to evaluate the similarity
+    of the classes is based on the sum of the individual distances of the attributes
+    that they'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: 'describe. This distance differs from the different types of attributes that
+    are used:
+
+
+    If the attributes are categorical, their difference is 0 if they correspond to
+    the same value and otherwise.
+
+
+    If the attributes are linear, their distance is the absolute value of the difference
+    between their values normalized by the range of values of the attribute.
+
+
+    Whether the attributes are structured will depend on the levels of hierarchy.
+    The distance between the values of the sheets depends on whether they are categorical
+    or linear.
+
+
+    The description of the classes is based on conjunctions of logical conditions.
+    Each condition is called a relational statement or selector and is composed of
+    an attribute, a relational operator and one or more values.
+
+
+    In the case of categorical attributes, the relational operators are reduced to
+    equality (=) and inequality (=) and value disjunctions can be expressed, such
+    as:'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: 'color = green _ yellow
+
+
+    shape= square_rectangular
+
+
+    In the case of quantitative attributes, operators are extended with,>, <, and
+    the range operator, for example:
+
+
+    height > 1: 5
+
+
+    temperature = 15 :: 25
+
+
+    The combination of selectors is called logical complex (logical complex ( s-complex)).
+    An observation or satisfies a logical complex when it meets all its selectors,
+    and all observations that meet a `-complex are called a complex set (set s-complex)).
+    The set of complexes that cover a series of observations is called star. It is
+    also denied in a measure of quality on the complexes called dispersion (sparseness)
+    that measures the relationship between the generality of a complex (the different
+    objects that it can describe) and the number of observations that actually fulfill
+    it.
+
+
+    The algorithm used by CLUSTER is based on the optimization of the s-complexes
+    and stars with respect to the number of observations that comply with them. This
+    optimization is carried out by means of a series of operators that allow the creation
+    of s-complexes from'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: 'observations, the union of complexes to generate complexes that cover the union
+    of observations and the generalization and specialization of complexes.
+
+
+    The criteria that are followed for this optimization are based on an evaluation
+    function that measures the quality of the groupings obtained. The biggest problem
+    is deciding which parameters are used to measure it.
+
+
+    It is clear that the descriptions that are obtained have to be simple to be able
+    to give them a clear interpretation, but this may contradict the need for the
+    data to be adequately covered by the descriptions since they may need some complexity
+    to do so with precision.
+
+
+    We find the same problem as in numerical taxonomy when trying to minimize the
+    similarity between the objects of a class and maximize the dissimilarity between
+    the different classes. The optimality of the classes obtained, therefore, must
+    be a balance between the simplicity of the characterizations that are extracted
+    and the adequacy of these to the'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: To measure the adequacy of the observations to the descriptions, the dispersion
+    measure between the complexes mentioned above is used. The simplicity of the descriptions
+    is calculated as the total number of selectors in all descriptions. To find the
+    distance between the groups, add the number of complexes that exist in the different
+    descriptions that do not intersect with each other, thus favoring the groups with
+    the largest number of different properties. Discrimination capacity is calculated
+    as the number of attributes that take different values in all classes. The reduction
+    of the number of minimum dimensions is measured as the number of attributes necessary
+    to
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: 'distinguish between different classes.
+
+    The algorithm is based on the optimization of a function that combines all these
+    criteria. Each one has a weight that indicates its importance when evaluating
+    a classification. These weights are indicated in what is called the evaluation
+    lexicographical function with tolerances.
+
+
+    # 6.12 - Lexicographical Evaluation Functional (LEF)
+
+
+    This is defined as a list of criteria-tolerance pairs, in which each pair indicates
+    the degree of compliance that the classifications must observe with respect to
+    each criterion. Given a set of competing classifications, the classification that
+    meets all the criteria at the same time will be chosen.
+
+
+    The algorithm used to build a classification from a data set consists of two parts.
+    A first step that builds the base classes that are optimally partitioned, according
+    to the evaluation function (LEF), from the set of observations and a second step
+    that builds a'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: 'hierarchy from these base classes.
+
+
+    The basic algorithm for partitioning the initial observations is as follows:
+
+    We start from:
+
+    A set of observations (O).
+
+    The number of classes you want to get (k).
+
+    The evaluation criterion (LEF).
+
+    Algorithm:
+
+
+    +   1. An initial set of k initial seeds of set O is determined that can be chosen
+    at random or according to some predetermined criteria.
+
+    2. A star is generated for each of the seeds. That is a set of `complexes that
+    include each seed without including the rest.
+
+    3. The stars are modified to be disjoint with each other, making the complexes
+    that form the more specific so that there are no intersections between them.
+
+    4. At this moment there is a possible partition of the objects represented by
+    k disjoint stars. If it is the first step of the algorithm, this partition is
+    saved, if it is not, the evaluation function (LEF) is applied to see if the improvement
+    over any of the best previous'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: 'partitions. In the event that several partitions satisfy the evaluation function,
+    all are retained. The algorithm terminates at this point if after a predetermined
+    number of steps no part appears that is better than what is optimal at this time.
+
+
+    5. If the optimum has not been reached, new seeds are selected, one for each class.
+    Two criteria are used, or the object is chosen within a class closer to its geometric
+    center, or the furthest. The first strategy is chosen whenever this increases
+    the quality of the partition when this ceases to happen, the most distant objects
+    are chosen. From here the algorithm is repeated from step 2.
+
+
+    The result of the algorithm is k -complexes that cover all observations disjunctly
+    and that maximize the criteria of the LEF function. The generation of the hierarchy
+    is done by recursively applying the class generation algorithm to each of the
+    classes initially obtained until a certain criterion determines that the number
+    of levels is sufficient. The hierarchy is therefore created from the most general
+    classes to the most specific (top-down).
+
+
+    The successor of CLUSTER / 2 is CLUSTER / S [MICH86]. In this, the expressive
+    power of the'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: 'representation of the observations is extended from an attribute-value representation
+    to one based on the calculation of first-order predicates (CP1), which is called
+    Calculation of Predicates with Annotations (Annotated predicate calculus (APC)
+    ). This allows you to make descriptions of structured objects (composed of parts).
+
+
+    The APC includes the calculation of predicates annotations in each predicate,
+    variable, and function indicating, among other information, its type and the attributes
+    that are related to it. This extends to the expressive capacity of the ` -complexes
+    that were used in CLUSTER / 2, also giving the ability to make deductions between
+    attributes.
+
+
+    This improvement emphasizes the background knowledge that is necessary to include
+    to achieve a better classification
+
+
+    . In addition to the evaluation function (LEF) already used, new knowledge is
+    included that consists of a network of classification objectives , inference rules
+    and heuristics to deduce new more general descriptors from those used in the description
+    of the objects, of definitions of the value domains of the attributes and their
+    types. This network is called'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: 'the Goal Dependency Network (GDN).
+
+    When making a classification, an objective is included as input data that together
+    with the information of the annotations and the GDN is used to guide the classification
+    algorithm and that allows deducing from the existing attributes new attributes
+    that they allow to improve the classification and help to decide which are the
+    most useful attributes.
+
+    The part of the algorithm that involves the greatest cost is the generation of
+    disjointed stars from the seeds, it has an exponential cost. You can consult [MICH84b]
+    to know the heuristics applied to reduce this cost.'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '# Chapter 7.- WITT
+
+
+    The proposal of the previous methodology falls within the classical vision of
+    categorization from the point of view of cognitive psychology, but it has already
+    been seen that assuming the categories must be represented by necessary conditions
+    and its clients are something too restrictive and that human categorization is
+    really far from being that way. This method is based on four results of cognitive
+    psychology to support their hypotheses: The categories tend to have members that
+    are not described by sufficient and necessary characteristics. It is what is denoted
+    as a polymer. The categories have a distribution among their members.
+
+    Categories can be represented by intercorrelations and relationships between the
+    attributes that describe them. Discovering and using these relationships can be
+    important to understand the structure of each category and understand its nature.
+
+    The categories arise from their contrast with the others. Each category makes
+    sense so that the difference between those who live with it in the same'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: 'context.
+
+    The representation of the observations in WITT [HANS86] [HANS90] is done in the
+    form of attribute-value pairs with the variant that observation can have more
+    than one value for an attribute, and is limited only to categorical attributes.'
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: 'and Oc represents the average cohesion of class c with the rest of existing
+    classes. This measure can be interpreted as the contrast between the average of
+    the distance of the objects inside a class with respect to the average of the
+    distance of that class with the rest. This distance takes into account the correlation
+    between the attributes of the objects, in contrast to the typical European measure,
+    which assumes independence between them.
+
+
+    Once a set of classes has been obtained, a phase of reinforcement is entered in
+    which the quality measure of the categories we have explained comes into play.
+    For the execution of this algorithm, two additional user parameters are needed,
+    which we will call P2 and P3 that will be used to control the inclusion of an
+    object to an existing class, the first one, and for the creation of new classes
+    and the second, the merger of existing classes.
+
+
+    The reinforcement algorithm is as follows:
+
+
+    +   1. The value of the C cohesion function between each combination of pairs
+    of unclassified objects and existing classes is calculated.
+
+
+    +   2. Select the instance-category pair that has the best value for this function
+    (C).'
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: '3. If the value of C is greater than P2, the object is added to the category
+    a and it is returned to step 1.
+
+
+    4. If there is no such pair, the class generation algorithm is invoked with the
+    remaining objects by sorting to create new classes.
+
+
+    (a) For each new category created c the value of the Wi function [c for each existing
+    category is calculated, and if this is always smaller than the parameter P3 it
+    is added to the set of categories.
+
+
+    (b) If at least one category has been added, proceed to step 1.
+
+
+    5. If it has not been possible to add new categories, the value of Wij is calculated
+    for all pairs of existing categories and the pair with the best value is selected.
+
+
+    6. If this value is greater than P3 the two categories are joined and continued
+    in step 1, but the algorithm is stopped.
+
+
+    That during the addition of objects to categories, no pair exceeds the parameter
+    P2 is interpreted as that the categories created up to that moment are inadequate
+    and that new classes are needed to complement the existing ones.
+
+
+    This is fixed using the class creation algorithm that'
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: 'was used at the beginning. In order for a new category to be added to the set,
+    it must be ensured that it does not occupy the area of an existing one. For this,
+    the intraclass cohesion value of the possible new categories is calculated with
+    their union with each of the existing categories (Wc j]). If it does not exceed
+    the user parameter P3, it means that it does not occupy any of the spaces covered
+    by the existing categories.
+
+
+    If no new category is achieved, it means that the existing ones already cover
+    the entire observation space, which is why the union between them is considered.
+    To do this, it also calculates the intraclass cohesion of all possible unions
+    (Wij). If any of these values exceeds the parameter P3, it means that they are
+    two categories that intersect and are candidates to join. If it does not happen,
+    it means that none of the categories overlap so it makes no sense to form more
+    categories.
+
+
+    The parameters P2 and P3 are those that determine the shape of the classes that
+    will be obtained at the end of the algorithm execution. If the ratio between P2
+    and P3 is large, the categories that are formed will tend to present characterizations
+    with sufficient and'
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: 'necessary conditions. As this ratio decreases, this restriction relaxes, obtaining
+    categories that show different degrees of polymer a.
+
+    These parameters also control the application of the different operators used
+    for the construction of the categories (insertion, creation, and joining). WITT
+    is based on the principle that reorganization (creation and union of categories)
+    is a rare phenomenon in human categorization, therefore it is necessary to favor
+    simpler operators. This principle is in line with the ideas expressed by cognitive
+    psychology, in contrast to other methods that will be studied later that give
+    equal weight to the use of all operators.
+
+    It is important to note that unlike in the methodology presented by CLUSTER, the
+    number of classes to be created is not determined a priori, but rather they arise
+    naturally from the data that are classified, although they depend largely on parameters
+    P2 and P3.'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: '# Chapter 8 - AUTOCLASS
+
+
+    The theoretical foundations of which this system starts are based ([DUDA73]) on
+    the Bayesian Theory, taking advantage of the extensive work that has been done
+    in the theory of probability. The use of this technique has advantages over the
+    previous methods:
+
+    The number of classes is determined automatically. The number of classes arises
+    from the use of prior knowledge of the distribution of attributes. The apriori
+    probability gives preference to simpler classes and the a posteriori probability
+    that is obtained requires less complex classes. The balance between these gives
+    the number of classes most appropriate to the data.
+
+    Objects are not assigned to classes uniquely. The classification obtained is not
+    of disjoint classes, there is a probability of belonging associated with each
+    object for each class. This is more in line with the existence of ambiguous assignments
+    of objects to classes and the gradation of membership in a class found by cognitive
+    psychology.
+
+    You can mix data described at the same time by quantitative and qualitative attributes.
+    Many methods'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: 'only admit one of the two types of attributes or make transformations from
+    one to the other, with the loss of information that this implies.
+
+    The authors of AUTOCLASS mark as an additional advantage that all the attributes
+    are valued equally. This advantage is quite unreal from the point of view of the
+    human classification since people tend to pay attention to the most relevant attributes
+    since we cannot handle the relationships between a large number of attributes.
+    The evidence of cognitive psychology is overwhelming with respect to selectivity
+    in attributes when deciding to assign an observation to a category. However, it
+    is marked as advantage over the human classification to be able to take into account
+    all available information.
+
+    The classification algorithm is based on Bayes'' theorem for the combination of
+    probabilities. Given a set of observations O and a hypothesis H, the probability
+    that the hypothesis explains the data p(OjH) (posterior probability of the hypothesis
+    given the data) is proportional to the probability of observing the data if the
+    hypothesis was certain p (OjH) (the likelihood (likelihood) of the data) by the
+    probability of the hypothesis regardless of the p (H)'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: 'data (its a priori probability). The apriori probability of the data p (O)
+    is a constant that can be ignored since for the calculations we need to do we
+    are only interested in the relative value between the different probabilities.
+    Its usual formula is:
+
+    p (HjO) = p (H) p (pO U OjH)
+
+
+    For the purpose of the classification, the descriptors that exist in the observations
+    are taken as hypothesis H. Therefore, the partition that maximizes the probability
+    p (HjO).
+
+
+    The restrictions imposed for the application of the method are the following:
+    The data must be independent of each other, that is, they must not come from a
+    time series.
+
+
+    Attribute distributions must be approximated by normal probability distributions.
+    Loss attribute values for the same observation must be independent between these
+    assumptions. However, they can be quite strong in some domains, which restricts
+    the scope of applicability of the method.
+
+
+    The theoretical basis of the classification algorithm, succinctly, is described
+    below. Each observation of the set must belong to one of the J possible existing
+    classes so it has a probability distribution for each'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: 'class that gives the probability distribution of the attributes of each data
+    if they belonged to class j. The distribution of the attributes of a class; j
+    is described from its mean j and variance j, under the assumption that it follows
+    a normal distribution. The probability that any object belongs to class j is called
+    the probability of class (j). The probability that an object belongs to a set
+    of classes is the sum of the probabilities that it belongs to each of them separately.
+
+
+    p (xij ;!;;!; J) = X jp (xixi 2 Cj;;! ! J)
+
+    j = 1
+
+
+    On the assumption that observations are independent of each other, likelihood
+    of the total data set set to be the product of the probabilities of each object.
+
+
+    p (; Xj ;!;;!; J) = Y p (xij ;!;;!; J)
+
+    i = 1
+
+
+    For a given classification parameter, you can calculate the probability that an
+    object i belongs to a class japplying Bayes theorem as:
+
+
+    p (! xij ;;;; J)
+
+    the classification which is obtained assigns a'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: 'probability of belonging for each object to each of the existing classes.
+
+
+    The classification problem is divided into two parts, estimate the parameters;
+    Y ; ! and determine the optimal number of J classes. For both cases, a process
+    of search and optimization of the probability functions is followed that maximizes
+    the probability of belonging of the objects to the classes, using heuristics that
+    prevent the search process from falling to a local maximum.
+
+
+    In the particular case of the number of classes, you can start the search with
+    a number of classes higher than expected. If the probabilities of objects belonging
+    to j classes are not significant, the number can be reduced, but it is attempted
+    with a larger number of classes.
+
+
+    What differentiates this method from statistical methods is the choice of priori
+    probabilities of the parameters to be estimated in the classes. It is more logical
+    to assign simple distributions in the absence of more information. In addition,
+    this allows us to determine the number of classes needed.'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '# 8.1 - Concept Formation
+
+
+    Concept formation seeks the same objective as the grouping of a set of observations
+    and characterization to get a classification. These techniques also place special
+    emphasis on the construction of a hierarchy that allows the concepts to be related.
+
+
+    The fundamental difference between the previous methods lies in the approach to
+    learning as an incremental task. It is intended to simulate the behavior of an
+    agent who is acquiring his knowledge from accumulating the experience of the observations
+    that come to him.
+
+
+    This is the reason why all the methods of formation of concepts pose their strategy
+    so that each new observation is placed in the hierarchy of concepts that are constructed
+    in a way that complements the knowledge that exists until that time. moment. The
+    modifications that are necessary for the hierarchical structure are guided through
+    functions that optimize certain criteria about what is being learned.
+
+
+    The algorithms of the formation of concepts, therefore, perform a search in a
+    space of hierarchies of concepts with a method of ascent (hill-climbing).'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: The fundamental difference with the classical methods of search by promotion
+    is that, unlike in these, the objective to be reached by the heuristic function
+    of evaluation is not kept constant. The acquisition of new knowledge is changing
+    the global environment and therefore what must be learned. Another difference
+    is that these methods limit your memory to a single solution in progress, they
+    do not try different alternatives from which to arrive at the solution. The price
+    to be paid for incrementality is the sensitivity of all these methods to the order
+    of input of the observations [FISH92] and to the noise that their descriptions
+    may present. To reduce these effects, it has been proposed to provide operators
+    capable of modifying the hierarchy of concepts at the moment when the new observations
+    allow us to detect errors in what has been learned. This allows to be able to
+    make a bidirectional search producing the effect of backtracking but without the
+    cost in space that this requires. In any case, the effect of these operators is
+    still limited. The evolution of the methods of formation of concepts has left
+    a set of methods that try to capture all these ideas.
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: '# Chapter 9 – EPAM
+
+
+    EPAM can be considered as one of the first concept formation models. It aims to
+    serve as a model of human learning in the tasks of verbal memorization, using
+    it to explain a series of phenomena in learning observed by psychologists.
+
+
+    The representation of knowledge in EPAM is made from attribute-value pairs where
+    each component can, in turn, have a list of descriptors so that the description
+    of objects composed of parts is allowed. The learning algorithm is capable of
+    constructing from the observations a decision tree in the style of ID3 [QUIN86]
+    where each non-terminal node of the hierarchy corresponds to a test on an attribute,
+    and from which branches correspond to Different attribute values. Unlike decision
+    trees, it is not assumed that all the values of an attribute are known, so in
+    all non-terminal nodes, there is a special branch labeled as others for the new
+    values that may appear. In the terminal nodes
+
+
+    The learning algorithm works by checking the different'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: 'tests found in the nodes of the hierarchy starting at the root until reaching
+    a terminal node. The process is the following:
+
+
+    +   - If the node on which it is located is non-terminal, the value of the observation
+    on the attribute that marks the node is checked.
+
+
+    +   - If there is a branch in the node with the value of the object, the process
+    is applied recursively from the node to which that branch points.
+
+
+    +   - If there is no such branch, it is followed by the one labeled as others
+    and the process is recursively applied from that node.
+
+
+    +   - If the node on which it is located in the terminal. If the observation coincides
+    with the concept stored in the node, a familiarization process is carried out.
+    This process consists of adding to the node one of the attributes that the observation
+    possesses and does not possess.
+
+
+    +   - If any of the attributes of the observation does not match the node, a discrimination
+    process is carried out. The difference may be due to two causes: 1. The observation
+    may have been classified by going through some branch labeled as others. If so,
+    the branch is detected and a new one is added that'
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: 'contemplates the value of the observation, thus increasing the width of the
+    tree.
+
+
+    2. If the difference is in the terminal node and not in the attributes of the
+    path that led to it, a new decision node is created that contemplates the two
+    different values for the attribute in question. A branch is constructed for the
+    value of the node and another for the observation and a terminal node is created
+    for each one. In this way, the depth of the tree is increased.
+
+
+    The importance of this method lies in the influence it had on the methods that
+    were developed below. He was the first to introduce the use of a hierarchy of
+    concepts and to integrate the classification and learning tasks into an incremental
+    algorithm. In addition, it introduces the familiarization and discrimination operators
+    for the construction process of the hierarchy of concepts.'
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '# Chapter 10 - UNIMEM and CYRUS
+
+
+    UNIMEM [LEBO87] and CYRUS [KOLO83] are the next generations of concept formation
+    systems. They adopt the ideas of EPAM regarding the construction of a hierarchy
+    and the incremental introduction of the instances. The main difference is that
+    in both cases each level of the hierarchy is distinguished from the following
+    through a set of attributes unlike EPAM, in which each level was distinguished
+    only by one attribute.
+
+
+    These systems were designed to create indexes for the efficient retrieval of information
+    and fall within the area of generalization-based memory. The representation of
+    the knowledge they use is the usual attribute-pairs value, but unlike the previous
+    method, both classical and linear values are allowed. The hierarchy that is constructed
+    has a description associated with each node, instead of only in the terminal nodes
+    as in EPAM. This description consists of a list of attribute-value pairs where
+    each pair has an'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: 'associated number that represents the trust (confidence) in the attribute.
+    In addition to this value, the number of times that appears in the nodes of the
+    hierarchy is included for each attribute, using this value as a measure of the
+    predictability of the attribute.
+
+
+    The UNIMEM algorithm classifies the instances starting from the hierarchy root
+    comparing with each of the non-terminal nodes until they are integrated. The method
+    is as follows:
+
+
+    Given a node the attributes of this are compared with those of the instance. To
+    calculate the similarity between the instance and the nodes a distance function
+    is used, and a parameter determined by the user is used to limit the number of
+    attributes in which they should be similar. With this method, it is possible that
+    the instance was classified into several different branches.
+
+
+    Whether the descendants coincide or not, the values of trust and predictability
+    are modified taking into account the instance.
+
+
+    +   - If there are descendants that match the instance, follow the path of the
+    nodes that most resemble each other and match the values of the'
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: 'instance.
+
+
+    +   - If no descendant reaches the limit of similarity, the instances stored under
+    that node are examined.
+
+    - If any of these shares its current values with the new instance, depending on
+    another user parameter, a new node is created generalizing the similar instances
+    and these instances are stored under the new node. When this happens, the algorithm
+    increases the predictability of the attributes that appear in this new node.
+
+
+    If there is no sufficiently similar instance, the new instance is stored under
+    the current node. With this algorithm, an instance can be classified into several
+    categories, so there is an overlapping between the different classes. This can
+    be an advantage for some domains, as it allows maintaining at the same time several
+    categories that can be useful at a certain time and that with the incorporation
+    of new instances can disappear leaving only the best ones, thus helping in the
+    search within the space of possible hierarchies. Added to the algorithm, there
+    are certain parameters specified by the user that help direct the search by modifying
+    the attributes in the nodes. The confidence value of the attributes is increased
+    or decreased'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: 'depending on whether or not the instances coincide with each of them. If this
+    exceeds a certain parameter, the corresponding attribute is jado, and new instances
+    will not modify it, giving its value as safe. If this is smaller than another
+    parameter, it is made to disappear from the node description. If the predictability
+    of an attribute of a node becomes very high, the attribute of the descendants
+    of that node is eliminated, thereby reducing the frequency with which a concept
+    is used to guide the classification. Finally, if the number of attributes in the
+    description of a node is smaller than another parameter, it is eliminated, since
+    it will be a node that is too general and not very useful for classifying instances.
+
+
+    The main advantages of these methods with respect to their predecessor (EPAM)
+    are several. The first is to incorporate a description to each of the nodes in
+    the hierarchy instead of just the terminal nodes. Another one is to introduce
+    more than one attribute as a decision element between each of its levels. They
+    are also introduced in measures of how each of the attributes is useful for classifying
+    the instances, dynamically modifying the weight of each one of them. Despite these
+    advances, there are still many'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: problems, such as the large number of parameters that the user must use to guide
+    the application of the different operators that are used to modify the hierarchy
+    and guide learning.
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: '# Chapter 11 - Conclusion
+
+
+    Thank you for making it through to the end of Machine Learnin, let’s hope it was
+    informative and able to provide you with all of the tools you need to achieve
+    your goals whatever they may be.
+
+
+    To conclude, machine learning has as its basic paradigm learning based on explanations
+    or EBL. This type of learning aims to capture the type of human learning through
+    a single example of input and with a great deal of experience (theory) of a domain
+    we are able to generalize. The EBL has as inputs a complete domain theory, an
+    example, and an objective concept. The result is the improvement of the theory
+    of the initial domain that normally consists of the incorporation of a new operational
+    concept of the objective concept, a more efficient plan. The advantage of deductive
+    methods over inductive methods is that the proposed generalizations are always
+    correct. The main drawback is the large amount of domain knowledge that is needed.
+    In addition, this theory must be complete, otherwise the'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: 'behavior of the system in the new problems is not guaranteed.
+
+
+    The new trends are the construction of architectures that integrate deductive
+    and inductive learning. With this integration, it is intended to complete theory
+    with the use of cases already resolved.
+
+
+    Finally, if you found this book useful in any way, a review on Amazon is always
+    appreciated!
+
+
+    Denny Novikov'
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: 'Made in United States
+
+    North Haven, CT
+
+    18 May 2023
+
+
+    ![](img/9c448b3ffa658996909504456f0161c0_169_0.png)
+
+
+    36685664R000091'
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: '# MACHINE LEARNING
+
+
+    Are you thinking that as much as we want to look for logical frameworks for intelligence,
+    there is no certainty or scientific proof that intelligence is as structured as
+    we believe it to be?
+
+
+    As in the evolutionary process, where chaos and order wisely coexist, I see a
+    research gap related to our brain and mind, typically related to focusing on models
+    based solely on order.
+
+
+    But if we are researching Artificial Intelligence, why are we so attached to the
+    order and models that are supposed to be those of our brain?
+
+
+    Or, what binds us so much to what we see only, without opening spaces to what
+    we don''t see if only to consider small pieces of chaos?
+
+
+    For this openness and vision, when it comes to intelligence, I propose a new concept:
+    that of unstructured intelligence, which I will try to explain in this book.
+
+
+    We are actually talking about machine learning - unsupervised to generate labels
+    for machine learning.
+
+
+    And creativity, in my view, is one of the essential links to evolve in understanding
+    and formalizing new machine learning models.
+
+
+    DENNY NOVIKOV
+
+
+    ![](img/9c448b3ffa658996909504456f0161c0_171_0.png)'
+  merge: -1
+  img_proc: true
