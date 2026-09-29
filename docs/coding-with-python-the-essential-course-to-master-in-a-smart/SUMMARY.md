@@ -1,0 +1,2 @@
++   [Python 编程：以智能方式掌握软件概念、工具与算法，用于实战编程与深度机器学习，构建人工智能系统的核心课程](README.md)
++   [Python 编程：以智能方式掌握软件概念、工具与算法，用于实战编程与深度机器学习，构建人工智能系统的核心课程](coding-with-python-the-essential-course-to-master-in-a-smart_0.md)

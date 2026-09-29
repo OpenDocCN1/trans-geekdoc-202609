@@ -1,0 +1,467 @@
+- pgno: 0
+  md: '# Real-Time Weed Detection using Machine Learning and Stereo-Vision
+
+
+    Siddhan Babu, Kimaya Desai, Manish Dshiva, Reena Sonaskar, Sneha Weakey
+
+    Department of Electronics and Telecommunication, Sardar Patel Institute of Technology
+
+    Mumbai, India
+
+
+    *siddhan.badhan@sp.ac.in, kimaya.desai@sp.ac.in, manish.dshiva@sp.ac.in, reena_kumbhare@sp.ac.in,
+    sneha_weakey@sp.ac.in*
+
+
+    **Abstract—** weeds are a problem as they compete with desirable crops and use
+    water, nutrients, and space. Some weeds get entangled in machinery and prevent
+    efficient harvesting. Hence weed removal systems are necessary. Development of
+    a successful weed removal system involves correct identification of weed vegetation.
+    The paper proposes a weed detection system that identifies weeds in crops using
+    stereo-vision for 3D structure reconstruction and 3D point cloud. The machine
+    learning model is trained on two manually created datasets of cucumber and onion.
+    Convolutional Neural Networks (CNN) and ResNet-50 algorithms are used for identification.
+    Results show ResNet-50 outperforms others with accuracy of 84.6% for the cucumber
+    dataset and 90% for the onion dataset.
+
+
+    **Index**** Weed Detection, accuracy, Machine Learning, Stereo-Vision
+
+
+    # I. INTRODUCTION
+
+
+    Weeds cause a loss of over $10 billion in India per year. As ICAR Unlike the visible
+    impact of diseases and insects, the impact of weeds goes unnoticed. Manual weeding
+    holds a major position of weed control in India. The increasing cost of labour
+    and labour-intensive nature leads farmers to seek new options that could reduce
+    the labour and cost. The rising demand for food drives crop demand; such scarcity
+    of grain and the land for crops decreases; such a situation emerges.
+
+
+    Existing systems use image processing based approaches. One of weed detection
+    methods uses morphological features to identify weeds in lawns. The assumption
+    considered is that the grass contains a group of edges while weeds do not which
+    may result in some bias in prediction. False weed detection rate is higher in
+    this method, also requiring higher processing time considering the morphological
+    computations involved.
+
+
+    Image processing is used to identify weeds in a ragi plan. It uses a threshold-based
+    approach to create a region to spray the herbicide. The difference in color or
+    shape of weeds is the deciding factor. One of the shortcomings in this approach
+    is the dependency on lighting for correct results.
+
+
+    learning algorithms support Support Vector Machine (SVM), Convolutional Neural
+    Network (CNN) and Artificial Neural Network (ANN). The algorithms are used for
+    training the model for detecting weeds in different crops containing types of
+    weeds [3]. Soil mapping is performed to find the region of interest. Features
+    are considered while differentiating between weeds and crops. With SVM and ANN,
+    there are similarities in shape features and crops. We propose a method for weeds
+    and crop detection using effective use of multi-stereo techniques like Clustering
+    for Multi-View Stereo (CVMS) for automatic leaf phenotyping [4]. This method is
+    shown to have errors while calculating length, width and leaf inclination angles.
+    With larger leaves make plants, the proposed is not reliable enough. A check technique
+    that is based on the identification of weeds and crops by using 3D point map also
+    exists [5]. It uses the intention of motion along with the change to recover the
+    3D local map and fusing it into the world-map. The system has a height as major
+    differentiating factor between weed and crop. Drift may cause errors in detecting
+    weeds. Existing systems use Depth maps to identify crops of the same height.
+
+
+    Considering the drawbacks in the existing methodologies, the proposed method uses
+    deep learning based models for detecting weeds in two different environments with
+    cucumber and onion with varying weed types. Our parameters include system accuracy,'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'computation time are discussed when frames extracted from the video data are
+    modelled over Convolutional Neural Networks and RESNET-50. To recreate the environment,
+    3D reconstruction is done using Structure from Motion technique over video data.
+
+
+    # Extraction of frames from the video using OpenCV
+
+
+    Feature matched on frames using Scale-Invariant Feature Transform (SIFT) algorithm
+
+
+    # II. METHODOLOGY
+
+
+    Sparse reconstruction of plants using Structure From Motion (SFM) Technique
+
+
+    Capturing video from crop field
+
+
+    Dense reconstruction of plants using Multi-View Stereo algorithms
+
+
+    Extraction of frames using OpenCV
+
+
+    Fig. 2. Flow chart of 3D reconstruction of plants
+
+
+    # 3D Reconstruction of plants
+
+
+    Training the machine learning model for weed detection
+
+
+    [algorithm 11] is used for feature extraction. Detection and description of features
+    is done using the SIFT algorithm. The detected and extracted frames are further
+    used for feature matching where the same features/points are matched in two consecutive
+    images.
+
+    The second step performed using the VisualSFM software is the generation of 3D
+    Point Cloud. This is done using Structure from Motion (SFM) technique which helps
+    in getting 3D Point Cloud using the 2 dimensional images of a single camera and
+    the Red, Green, Blue (RGB) and the Depth values of image. This helps in getting
+    a single 3D image from a series of 2D images with all the characteristics of each
+    point in the image. Sparse reconstruction is achieved through the output. Feature
+    Matching is used for creation of a Dataset used for training a machine learning
+    classifier of plants and crops. The third step performed in VisualSFM is making
+    the reconstruction denser. This is done using the Multi-View Stereo algorithm
+    using the Clustering views for Multi-View Stereo (CMVS), Patch-based Multi-View
+    Stereo (PMVS) algorithm [12]. CMVS decomposes the input images into clusters of
+    medium size. PMVS takes images and its parameters as input and reconstructs a
+    3D structure of the rigid structure which makes the reconstruction denser.
+
+
+    Real-time weed detection on video
+
+
+    Fig. 1. Flow process of the system
+
+
+    The first step of the proposed system is the reconstruction of 3D model of crops
+    from the video and the second step is the detection and classification of weeds
+    and crops. The 3D reconstruction and the weed detection are performed on the actual
+    video from the crop field containing crops and weeds. The working of the system
+    can be improved in future. The 3D reconstruction is done using by frame extraction,
+    feature matching, sparse and dense reconstruction. After 3D reconstruction is
+    performed, the next step is detecting the weeds in the crops. The weed detection
+    mainly consists of Data acquisition, Pre-processing, Image segmentation, Training
+    model, Testing the model and real-time detection in crops.
+
+
+    # III. 3D RECONSTRUCTION OF PLANTS
+
+
+    Flow of reconstruction is shown in Figure 2. A video is taken using a camera with
+    360 degree of view. The video is further processed using OpenCV for extraction
+    of a number of frames from the video frames extracted on an average of 10 frames
+    per second. VisualSFM [9], [10] is used to generate the 3D model of the plants.
+    Feature matching is the first step performed in the VisualSFM software for reconstruction
+    of 3D model of the plants. Scale-Invariant Transform (SIFT)
+
+
+    # IV. WEED DETECTION IN CROPS
+
+
+    The most important part of weed detection system is the recognition of weeds in
+    which is a difficult task considering the intra-class variations in plants [13].
+    The classification of video images and weeds is done in two passes: training the
+    model and testing the trained model. The accuracy of the trained model is highly
+    dependent on the dataset used to train. Creating a dataset which replicates the
+    crops in a crop field is the most important thing for any machine learning model
+    to achieve better results in'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "performing real-time detection. The trained model is finally deployed for detecting\
+    \ weeds in real-time.\n\n1) Acquisition: Acquiring a relevant dataset is the most\
+    \ important task in machine learning. Sometimes this becomes much tedious and\
+    \ time-consuming depending on the domain of application. Low-resolution motion\
+    \ cameras are also used for capturing the weeds of the crop fields. Different\
+    \ lighting conditions and angles are used for increasing the accuracy of the classifier.\
+    \ For this, several videos were taken from fields containing different types of\
+    \ crops. Weeds are then used for the training and testing of the model and for\
+    \ creation of a dataset. A readily available dataset of 17500 images crops and\
+    \ weeds was also used to check the accuracy of our model [14];\n\na different\
+    \ dataset is created. The testing dataset is created from the frames extracted\
+    \ from the video which are not used for training the model. The testing dataset\
+    \ comprises of crops and weeds. The extracted frames undergo object identification\
+    \ by done using OpenCV. Clustered frames were created from images with PlantCV\
+    \ [18]. Cropping of frames and resizing of images is performed as the final step\
+    \ of creation of the dataset. The testing dataset is taken as input and given\
+    \ to the trained model to detect weeds and crops. This helps in finding out of\
+    \ the accuracy.\n\n2) Pre-processing: The videos are used for extraction of a\
+    \ number of frames using OpenCV. The dataset of frames containing the crops and\
+    \ weeds is created by varying the number of frames extracted per second from the\
+    \ video. Manual mapping of weeds is used on the extracted frames from the video\
+    \ for creating a training dataset. Manual tagging helps in segregation of crops\
+    \ and weeds, which is required for creating the training dataset. All the tagged\
+    \ frames are processed for making the frames of the same size and resolution.\
+    \ This is done using OpenCV. Cucumber and onion weeds were considered for consideration.\
+    \ Once the pre-processing of the dataset is done, it is ready for training the\
+    \ machine learning.\n\n5) Real-time weed detection: The trained model is made\
+    \ to detect weeds in real time in input video of the crop fields by creating the\
+    \ bounding boxes around weeds detected in the input crop field. This helps in\
+    \ real-time classification of weeds from the video itself, mitigating the effort\
+    \ of storing the detected weeds on cloud or any storage device.\n\n# V. RESULTS\
+    \ & DISCUSSION\n\nTo create the dataset, frames are extracted from the crop video.\
+    \ Manual mapping of crops and weeds is done on these frames. Table 1 below shows\
+    \ mapped crops and weeds and onion\n\n| Frame | Cucumber | Onion |\n|---|---|--|\n\
+    \ Crop | ![image] | ![image] |\n| Weed | ![image] | ![image] |\n\n3) Training\
+    \ the model: After labelling the dataset, the machine-learning and deep-learning-classifier\
+    \ model is trained. The trained model needs to be robust and effective in order\
+    \ to correctly classify weeds and crops in the presence of noise and different\
+    \ conditions. CNN gives better performance than other classifiers such as SVM\
+    \ and ANN, CNN and ResNet-50 are the two neural networks used to train the model\
+    \ [3];\n\nThe model is trained first on the readily available 17500 images as\
+    \ data collected from the crop fields by us. The results of both models are compared\
+    \ in the results section. CNN takes the input image, assigns weights and biases\
+    \ to it which helps in deciphering the input image and the other images. Since\
+    \ deep CNN architectures give better accuracy as features, ResNet-50 is used [16].\
+    \ ResNet-50 is a convolutional neural network with 177 layers [16]. Training the\
+    \ model is used as partial data of the input through dropout method and directly\
+    \ goes to the output [17]. The model is trained later on the manually created\
+    \ cucumber and onion dataset. The cucumber dataset has 176 unique images whereas\
+    \ the onion dataset is\n\n4) Testing the model: For finding out efficient the\
+    \ model, testing needs to be done. For testing model,\n\nTable 1: Generated dataset\
+    \ for classifying weeds in Cucumber and Onion\n\nTo create the dataset, frames\
+    \ are extracted under threshold. This is followed by detection of clustered contours\
+    \ of plants using PlantCV. By drawing and bounding the boxes around these clustered\
+    \ contours, the plants(both weeds and crops) are detected in"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# VI. COMPARATIVE STUDY
+
+
+    Three datasets (Cucumber, Onion and the External dataset) are trained on the CNN
+    and Resnet-50 models. The model behaviour is determined on parameters like training
+    time and accuracy.
+
+
+    | Dataset Paper | Parameter | CNN | Resnet-50 |
+
+    |---|---|---|--|
+
+    | Research Paper (17.5K img) [14] | Accuracy | 88% | 86% |
+
+    | External Dataset (our model) | Accuracy | 75% | 88% |
+
+    | Cucumber Dataset (60-70 images) | Training Time | 67.8% | 6hrs |
+
+    | Onion Dataset (60-70 images) | Training Accuracy | 73.1% | 90% |
+
+    | | | Training Time | 1min | 3min |
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_0.png)
+
+
+    Table 2: Contours and Segmentation of Cucumber and Onion
+
+
+    Table 2 consists of Cucumber and Onion frames. It consists of the different phases
+    involved while creating the dataset.
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_1.png)
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_2.png)
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_3.png)
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_4.png)
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_5.png)
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_6.png)
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_7.png)
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_8.png)
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_9.png)
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_10.png)
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_11.png)
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_12.png)
+
+
+    ![](img/23918ef950c61407d35c877a2836d40e_3_13.png)
+
+
+    Table 4: Evaluation of model
+
+
+    As per Table 4 the results obtained in a training of 17500 images is 75% for Convolution
+    Neural Network(CNN) and 86% for Resnet-50 model. The dataset considered is purely
+    of images. The parameters considered are R,G,B of these images. When we tried
+    the same segmentation method with a different set of cucumbers, we have achieved
+    an accuracy of 67.8% for CNN and 84.6% for Resnet-50. We also tried to validate
+    the model for Onion Dataset as well which was captured by us for which accuracy
+    is 73.1% for CNN and 90% for Resnet-50.
+
+
+    | Detected Crops | Detected Weeds |
+
+    |---|--|
+
+    | Actual Crops | 40 | 0 |
+
+    | Actual Weeds | 21 | 116 |
+
+
+    Table 5: Cucumber Confusion Matrix
+
+
+    As per Table 5 we can see that out 40 actual crops, have been correctly classified
+    as weeds. And out of 137 weeds, 116 have been correctly classified as weeds and
+    21 have been wrongly classified as crops.
+
+
+    | Detected Crops | Detected Weeds |
+
+    |---|--|
+
+    | Actual Crops | 100 | 16 |
+
+    | Actual Weeds | 0 | 44 |
+
+
+    Table 6: Onion Confusion Matrix
+
+
+    As per Table 6 we can see that out of 44 actual crops, have been correctly classified
+    as weeds. And out of 116 crops, 100 have been correctly classified as crops and
+    16 have been wrongly classified as crops.
+
+
+    Table 3: Real-Time Weed Detection on Onion dataset
+
+
+    Table 3 shows the real-time weed detection performed on the Onion dataset. It
+    comprises of frames marked with red bounding boxes captured in real time.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# VII. CONCLUSION
+
+
+    This paper delineates our work on Real-time weed detection in plants. The existing
+    weed detection mechanisms using image processing techniques have, and not give
+    efficient results. The system designed 3D Reconstruction of the plants and real-time
+    weed detection in crops. Reconstruction of a 3D environment is using Feature matching
+    and Structure from Motion techniques. Machine learning models like CNN (Convolutional
+    Neural Network) and ResNet50 are trained on 3 different datasets manually created
+    using the video taken from the crops. The accuracy with ResNet-50 is found to
+    be 90%. The overall performance of detection methods is improved and made real-time.
+
+
+    As India has a vast agricultural sector and various types of crops can be widely
+    extended including as many crops in the system as possible and making it suitable
+    for all types of crops. The system can be deployed on the cloud for faster processing
+    and real-time weed detection and making it easier to deploy in a practical field
+    scenario. This system can find practical applications in the existing weed detection
+    and methods used.
+
+
+    # REFERENCES
+
+
+    +   [1] U. Wacharawong, Y. Takeuchi, M. Humoto, and K. Ohno, "Vision Based Methods
+    for Detecting Weeds in Lowows," 2006, IEEE Conference on Computer Electronics
+    Systems, Bangkok, 2006, pp. 1-6. doi: 10.1109/MICCES.2006.2526322
+
+
+    +   [2] R. Kumar and S. Singh, "Design and development of automatic weed detection
+    and smart herbicide robot," 2017 IEEE International Advances in Intelligent Systems
+    and Informatics (IASIS), Jaipur, 2017, pp. 275-276. doi: 10.1109/IASIS.2017.8121942
+
+
+    +   [3] S. S., S. T., G. G., S. S. and R. Kumaraswamy, "Performance Comparison
+    of Weed Detection Algorithms," 2019 International Conference on Advancements in
+    Communication and Signal Processing (ICSP), India, 2019, pp. 0843-0847. doi: 10.1109/ICSP.2019.8609944
+
+
+    +   [4] D. Li, G. Wu, K. Wang and Y. Zhang, "A Classification and Detection of
+    Weed in Corn Crops using Stereo Point Clouds," Journal of Selected Topics in Agricultural
+    Electronics, vol. 18, pp. 2321-2336, 2020; doi: 10.1109/JASTAE.2020.2990268
+
+
+    +   [5] A. J. Rocha and J. Marchand, "Fusing 3D image for weed classification,"
+    15th International Conference on Pattern Recognition, ICPR., Barcelona, Spain.,
+    2000, pp. 295-298, vol. 4, doi: 10.1109/ICPR.2000.8269281
+
+
+    +   [6] D Schubert, H. Kutter and T. Asken, "Automatic weed detection and treatment
+    in grasslands," ELMAR-2010, 2010, pp. 1-10.
+
+
+    +   [7] A. Chaudhary et al., "Machine Vision for 3D Plant Phenotyping," IEEE Transactions
+    on Computational Biology and Bioinformatics, vol. 16, no. 6, pp. 2092-2099, Nov.
+    2019. doi: 10.1109/TBME.2018.2863714
+
+
+    +   [8] S. Choi, A. Choi, J. Kim, S. Ahn and S. Lee, "Point Cloud Detection for
+    Single Image Reconstruction," 2019 IEEE International Conference on Computer Vision
+    (ICCV), Tokyo, Japan, 2019, pp. 725-734. doi: 10.1109/ICCV.2019.8979830
+
+
+    +   [9] C. Wu, "Linear-Incremental Temporal Scale for 3D Reconstruction," 2013
+    IEEE International Conference on Computer Vision (ICCV), Munich, Germany, 2013,
+    pp. 137-144. doi: 10.1109/ICCV.2013.6979111
+
+
+    +   [10] C. Wu, A. Garrels, B. Celis and S. Miller, "Multiscale weed detection
+    using Deep Learning," Plant Methods Journal, 2011, pp. 305-314.
+
+
+    +   [11] Feature Extraction from Scale-Invariant Invariants. International Journal
+    of Computer Vision, 60, 91-110 (2004)
+
+
+    +   [12] Y. Furukawa and J. Poncelet, "IEEE Transactions on Pattern Analysis and
+    Machine Intelligence, vol. 32, no. 8, pp. 1362-1376. Aug. 2010. doi: 10.1109/TPAMI.2009.2149042
+
+
+    +   [13] M. Cao, R. Tang, M. Mofan, M. Tual, and M. Khan, "Real-time Machine Learning-Based
+    Weed Detection and Classification for Variable-Ratio Spray in Rice Fields," 2020
+    IEEE International Conference on Electrical and Electronics Engineering (ICEE),
+    Antalya, 2020, pp. 273-280,
+
+
+    +   [14] A. Olsen, D. K.alova, B. Pilip, J. Rice, J. Wood, W. Banks, B. Girentni,
+    O. Kenny, J. Whinney, B. Kalvant, M. Rahimi, and Y. Weed, Scientific Reports,
+    vol. 9, no. 5, 2019.
+
+
+    +   [15] Lin, Y., Weed Detection for Selective Spray: A review. Curr Rep Robot
+    1, 1-26 (2020). https://doi.org/10.1007/s40844-020-00514-x
+
+
+    +   [16] M. Mohasalam and N. Aouf, "Weed Detection/Classifier for Agriculture
+    Precision," 2020 28th International Conference on Control and Automation (CDC),
+    Paris, France, 2020, pp. 1087-1092. doi: 10.1109/CDC42020.9318325
+
+
+    +   [17] Y. Zheng, J. Kong, X. Jin, W. Tang, and M. Rao, "CropDeep: The Deep Forest
+    for Weed-Based Classification and Detection in Smart Agriculture," 2019.
+
+
+    +   [18] G. Ma, F. Fahrnäck, N. Abbasi, A. J. Calle, S. Chavez, L. Doubts, AN.
+    Feldman, MJ. Gilbert, KB. Hod, J. Hoy, S. Lin, A. Liu, C. Lagrange, A. Miller,
+    P. Eliasman, M. Tran, 2017. Planv2: Image analysis for high-throughput plant phenotyping.'
+  merge: -1
+  img_proc: true
