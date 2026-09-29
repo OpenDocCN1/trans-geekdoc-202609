@@ -1,0 +1,302 @@
+name: Mastering Deep Learning Fundamentals with Python： The Absolute Ultimate Guide
+  for Beginners To Expert and Step By Step Guide to Understand Python Programming
+  Concepts
+slug: mastering-deep-learning-fundamentals-with-python-the-absolut
+name_cn: Python 深度学习基础精通：从初学者到专家的绝对终极指南与逐步理解 Python 编程概念指南
+toc:
+- - '##'
+  - 概率基础
+- - '##'
+  - 统计学基础
+- - '##'
+  - 线性代数基础
+- - '##'
+  - 机器学习与深度学习简介
+- - '##'
+  - 机器学习基础
+- - '##'
+  - 神经网络与深度学习基础
+- - '##'
+  - 深度学习参数与超参数
+- - '##'
+  - 提前终止指令
+- - '##'
+  - 深度神经网络层
+- - '##'
+  - 深度学习激活函数
+- - '##'
+  - 非线性激活函数
+- - '##'
+  - 卷积神经网络
+- - '##'
+  - 特性和优势
+- - '##'
+  - 第二部分：深度学习实践 `IN JUPYTER NOTEBOOKS`
+- - '##'
+  - Python 文档概览
+- - '##'
+  - Language Reference GUI and IDLE - 它是什么？
+- - '##'
+  - PYTHON 数据结构
+- - '##'
+  - 先决条件
+- - '##'
+  - Python 最佳实践与 Python 之禅
+- - '##'
+  - 安装 Python
+- - '##'
+  - 结论
+- - '###'
+  - 预测
+- - '###'
+  - 人工智能
+- - '###'
+  - 随机矩阵理论
+- - '###'
+  - 深度学习
+- - '###'
+  - 中心极限定理
+- - '###'
+  - Julia
+- - '###'
+  - 科学家时代
+- - '###'
+  - 插值
+- - '###'
+  - 方程的监督学习
+- - '###'
+  - 背景信息 - 一点点什么
+- - '###'
+  - 故障排除
+- - '###'
+  - 商业世界
+- - '###'
+  - 像大脑一样的计算机
+- - '###'
+  - 从神经元到节点
+- - '###'
+  - 错误校正
+- - '###'
+  - 深度困境
+- - '###'
+  - 神经网络应用
+- - '###'
+  - 神经网络的未来
+- - '###'
+  - 什么是超参数？
+- - '###'
+  - 搜索空间的定义
+- - '###'
+  - 超参数的类型
+- - '###'
+  - 采样超参数空间
+- - '###'
+  - 主要指标的指定
+- - '###'
+  - 为超参数调整注册指标
+- - '###'
+  - 提前终止指令的指定
+- - '###'
+  - 常见参数
+- - '###'
+  - Bandit 指令
+- - '###'
+  - 中位数停止指令
+- - '###'
+  - 截断选择指令
+- - '###'
+  - DL 映射
+- - '###'
+  - 反向传播算法
+- - '###'
+  - 深度网络和浅层网络
+- - '###'
+  - 选择深度网络
+- - '###'
+  - 受限玻尔兹曼网络或自动编码器 - RBN
+- - '###'
+  - 深度信念网络 - DBNs
+- - '###'
+  - 对抗生成网络 - GANs
+- - '###'
+  - 循环神经网络 - RNNs
+- - '###'
+  - 深度卷积神经网络 - CNN
+- - '###'
+  - 人工神经元
+- - '###'
+  - 非线性
+- - '###'
+  - 非线性激活函数的类型
+- - '###'
+  - 卷积层
+- - '###'
+  - 池化层：池化
+- - '###'
+  - ReLU 层
+- - '###'
+  - 全连接层
+- - '###'
+  - 开始
+- - '###'
+  - 池化层
+- - '###'
+  - 整流线性单元（ReLU）归一化
+- - '###'
+  - 深度学习
+- - '###'
+  - 全连接尿布
+- - '###'
+  - 反向传播
+- - '###'
+  - 超参数
+- - '###'
+  - 超越图像
+- - '###'
+  - 卷积神经网络与多层感知器的区别
+- - '###'
+  - Python 花费多少以及我在哪里可以获得它？
+- - '###'
+  - Python 文档指南
+- - '###'
+  - Module overview
+- - '###'
+  - Tutorial
+- - '###'
+  - Library reference
+- - '###'
+  - Macintosh reference
+- - '###'
+  - Language reference
+- - '###'
+  - Extensions and embedding
+- - '###'
+  - Python / C API
+- - '###'
+  - Immediate mode
+- - '###'
+  - Comments
+- - '###'
+  - Arithmetic operators
+- - '###'
+  - Variables
+- - '###'
+  - Boolean expressions / variables
+- - '###'
+  - Write interactively
+- - '###'
+  - Scripts
+- - '###'
+  - If, elif and else
+- - '###'
+  - Function definition and call
+- - '###'
+  - Lists
+- - '###'
+  - Tuples
+- - '###'
+  - Dictionary
+- - '###'
+  - Escape sequences
+- - '###'
+  - Number system
+- - '###'
+  - 栈
+- - '###'
+  - 队列
+- - '###'
+  - Value of the first node
+- - '###'
+  - Second value of the node
+- - '###'
+  - Python 之禅
+- - '###'
+  - 安装 Python：Windows
+- - '###'
+  - 安装 Python：OS X
+- - '###'
+  - 安装 Python：Linux
+- - '###'
+  - 文本编辑器
+- - '####'
+  - 学习能力
+- - '####'
+  - 从突触到连接
+- - '####'
+  - 比简单逻辑更好
+- - '####'
+  - 持续改进
+- - '####'
+  - 离散超参数
+- - '####'
+  - 连续超参数
+- - '####'
+  - 随机采样
+- - '####'
+  - 网格采样
+- - '####'
+  - 贝叶斯采样
+- - '####'
+  - TruncationSelectionPolicy 示例
+- - '####'
+  - Without termination directive
+- - '####'
+  - Default policy
+- - '####'
+  - Note
+- - '####'
+  - Resource allocation
+- - '####'
+  - Configuration of the experiment
+- - '####'
+  - Sending the experiment
+- - '####'
+  - Display of the experiment
+- - '####'
+  - Identification of the best model
+- - '####'
+  - 循环神经网络
+- - '####'
+  - 卷积神经网络
+- - '####'
+  - 线性激活函数
+- - '####'
+  - Sigmoid
+- - '####'
+  - tanh
+- - '####'
+  - Relu
+- - '####'
+  - Leaky ReLU
+- - '####'
+  - Parametric ReLU
+- - '####'
+  - 特征 - 特征。
+- - '####'
+  - 卷积
+- - '####'
+  - 在自然语言自动处理中的应用 `NLP`
+- - '####'
+  - 安装 Python：Debian 或 Ubuntu
+- - '####'
+  - 安装 Python：Fedora
+- - '####'
+  - 安装 Python：openSUSE
+- - '####'
+  - Gedit
+- - '####'
+  - Sublime Text 3
+- - '####'
+  - Atom
+- - '####'
+  - 为什么我们需要代码编辑器？
+- - '####'
+  - 文本
+- - '####'
+  - 遍历节点
+- - '####'
+  - 使用索引获取值
+- - '####'
+  - 删除节点
+- - '####'
+  - 添加节点
