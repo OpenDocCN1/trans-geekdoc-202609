@@ -1,0 +1,4469 @@
+- pgno: 0
+  md: '# DEEP LEARNING FOR THE LAYMAN
+
+
+    Visual Guide without Maths added
+
+
+    FRANÇIS DUVAL'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# DEEP LEARNING FOR THE LAYMAN
+
+
+    Visual Guide without Math added
+
+
+    François Duval
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_2_0.png)
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_2_1.png)
+
+
+    Data Sciences'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# How to contact us
+
+
+    If you find any damage, editing issues or any others issues in this book contains
+    please immediately notify our customer service by email at: customer_service@datasciences-book.com
+
+
+    You can also contact me directly if you have any questions or suggestions at:
+    Francois Duval@datasciences-book.com
+
+
+    Our goal is to provide high-quality books for your technical learning in computer
+    science subjects.
+
+
+    Thank you so much for buying this book.
+
+
+    François Duval'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Preface
+
+
+    > "Robots took the jobs of factory workers. Artificial Intelligence will take
+    the jobs of office workers."
+
+    — EverythingSupplyChain
+
+
+    Deep learning is a terminology used for a type of technological research and development
+    that is responsible for building machines that are considered to be artificial
+    intelligences. These are machines that are capable of completing complex functions
+    such as speech recognition, image recognition, bioinformatics and more.
+
+
+    Understanding deep learning, including what it is and what makes it work, means
+    that you will have a greater understanding of how computer scientists and researchers
+    are developing the systems that may create a complete and pure artificial intelligence
+    one day in the future. Until now, they have only created ones that can complete
+    one or two functions. However, it is hoped that one day they will create something
+    that closely resembles the human brain. Ideally, we want to create a “pure” artificial
+    intelligence, which is one that would be created by a human but would learn and
+    operate free of human influence. In essence, it would be a “superhuman”.
+
+
+    This book was written to help Layman understand what deep learning is and why
+    it is such a fascinating and revolutionary concept. It is written after the book
+    “Deep Learning for Beginners” after we understand that this first may be more
+    technical for the layman in Computer Sciences.
+
+
+    Deep learning is not a new concept; it is one that is becoming more and more popular
+    as we speed towards the possibility of having a true artificial intelligence walking
+    amongst us. One thing you may be fascinated to as you read through this book is
+    how much we are already using deep learning technologies. Even though the idea
+    of a complete and pure artificial intelligence walking amongst us seems to be
+    a reality of the distant future, the amount we use the technology is rather fascinating.
+
+
+    Deep learning is an incredible concept that is here to stay. The revolutionary
+    science that is taking place on a daily basis and is slowly being integrated into
+    our society for regular consumer use is a fascinating one, and it is incredible
+    to learn about it. Understanding it may help you understand the technology you
+    are using right now, and the future of society. You may be surprised about what
+    you learn! Please, take your time and enjoy reading this educational book about
+    deep learning.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Book Objectives
+
+
+    If you are interested in learning more about deep learning, what is used to create
+    them, the concept of deep learning, the techniques used by the machines, and the
+    tools that are being designed by scientists, then Deep Learning: Concepts and
+    Algorithms is exactly what you need. This book will help you explore exactly what
+    deep learning is and will also teach you why it so revolutionary and fascinating.
+    By the end, you will have a full understanding of what this technology is, how
+    it works,
+
+
+    This book will help you:
+
+
+    +   * Have an appreciation for deep learning and an understanding of their fundamental
+    principles.
+
+    * Have an elementary grasp of deep learning concepts and algorithms.
+
+    * Have achieve a technical background in deep learning and also artificial neural
+    networks
+
+
+    # Target Users
+
+
+    The book designed for a variety of target audiences. The most suitable users would
+    include:
+
+
+    +   * Newbies in computer science techniques and deep learning
+
+    * Professionals in data science and social sciences
+
+    * Professors, lecturers or tutors who are looking to find better ways to explain
+    the content to their students in the simplest and easiest way
+
+    * Students and academicians, especially focusing on neural networks and deep learning
+
+
+    # Is this book for me?
+
+
+    If you want to learn more about deep learning without technical formulas and practical
+    data, this book is for you. No need for maths and coding knowledge is required.
+    This book has been written in layman''s terms as an introduction to deep learning
+    and neural networks and their algorithms. Each algorithm is explained very easily
+    for more understanding.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '© Copyright 2017 by François Duval.
+
+    All rights reserved.
+
+    First Printing, 2017
+
+
+    Edited by Davies
+
+    Ebook Converted and cover by Pixel Studio
+
+    Pubised by CreateSpace Publishing
+
+
+    ISBN-13: 978-1984050625
+
+    ISBN-10: 1984050621
+
+
+    The contents of this book may not be reproduced, duplicated or transmitted without
+    the direct written permission of the author.
+
+
+    Under no circumstances will any legal responsibility or blame be held against
+    the publisher for any reparation, damages, or monetary loss due to the information
+    herein, either directly or indirectly.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Legal Notice:
+
+
+    You cannot amend, distribute, sell, use, quote or paraphrase any part or the content
+    within this book without the consent of the author.
+
+
+    # Disclaimer Notice:
+
+
+    Please note the information contained within this document is for educational
+    and entertainment purposes only. No warranties of any kind are expressed or implied.
+    Readers acknowledge that the author is not engaging in the rendering of legal,
+    financial, medical or professional advice. Please consult a licensed professional
+    before attempting any techniques outlined in this book.
+
+
+    By reading this document, the reader agrees that under no circumstances is the
+    author responsible for any losses, direct or indirect, which are incurred as a
+    result of the use of information contained within this document, including, but
+    not limited to, errors, omissions, or inaccuracies.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'To my wife Melanie and my two children Mariane and Thomas
+
+    You are my life and I love you so much!'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# In the same Series: Data Sciences
+
+
+    Data Sciences
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_9_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# DEEP LEARNING FOR BEGINNERS
+
+    Practical Guide with Python and Tensorflow
+
+
+    FRANÇAIS DUVAL
+
+
+    For more information click here
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_10_0.png)
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_10_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Author Biography
+
+
+    François Duval is a seasoned data science expert and emerging author who has quickly
+    earned the reputation as an innovative leader in the information technology and
+    data analysis space. Throughout the course of the past decade, he has gained extensive
+    experience in his field. Currently, Francois is proudly serving as a scientific
+    data consultant. He is also working on series of books in statistics and computer
+    science.
+
+
+    Prior to his present venture, he was on the IBM team for two years and is the
+    founder of Intelligence Consulting, which is a prominent company that provides
+    data analysis consulting, solutions in France and throughout Europe. He has also
+    worked as an engineer across multiple industries, including but not limited to
+    finance (KPMG) within the Financial Advisory Department in London) as well as
+    environmental and healthcare research (INERIS and Mines ParisTech in France).
+    No matter what venture he takes on, Francois is on a lifelong mission to impart
+    data analysis newbies with the knowledge they need to better grasp industry techniques.
+    By effectively simplifying such methodologies, up-and-coming professionals are
+    empowered to create positive changes in the world of computer science that will
+    continue to have a ripple effect in the entire field as we know it.
+
+
+    Furthermore, François holds a PhD in Quantitative Analysis and Stochastic Calculus
+    and an Undergraduate Degree in Statistics & Data Analysis.
+
+
+    When he isn''t immersed in his multifaceted career, François Duval enjoys spending
+    quality family time with his loved ones. Today, he happily resides in London,
+    England and is the proud father of two beautiful children.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Table of Contents
+
+
+    Preface
+
+
+    In the same Series: Data Sciences
+
+
+    Author Biography
+
+
+    Table of Contents
+
+
+    +   1. Deep Learning: What & Why?
+
+    Deep Learning and Artificial Neural Networks
+
+    What Is Deep Learning, Exactly?
+
+    What Is Learned?
+
+    Feature Learning
+
+    Why is it called "Deep Learning"`
+
+    History of Deep Learning
+
+    Deep Learning Timeline
+
+
+    +   2. Pre-requisite for Deep Learning
+
+    Deep Learning, Machine Learning and Artificial Intelligence
+
+    Different Machine Learning Approaches
+
+    Supervised learning
+
+    Unsupervised learning
+
+    Reinforcement learning
+
+    Differences between Supervised and unsupervised algorithms
+
+    Classification and clustering
+
+    Clustering
+
+    Clustering
+
+    Comparison of deep learning and machine learning
+
+    Data dependencies
+
+    Hardware dependencies
+
+    Feature engineering
+
+    Problem solving approach
+
+    Execution time
+
+    Interpretability
+
+    Where deep learning and machine learning are applied
+
+    Future trends
+
+
+    +   3. Artificial Neural Networks: what and why?
+
+    Chapter Introduction
+
+    An Overview of Neural Networks
+
+    What is a Neural Network?
+
+    Artificial Neuron Presentation
+
+    Useful concepts and terms
+
+    Layer
+
+    Unit
+
+    Activation function
+
+    Feature engineering
+
+    Feature Learning
+
+    Gradient descent
+
+    Artificial Neural Network Structure
+
+    Input layer
+
+    Hidden layer'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'Output layer supervised unsupervised neural network
+
+
+    # Basics of Artificial Neural Networks
+
+
+    +   - Perceptron: An early deep learning algorithm
+
+    Training a perceptron
+
+    Adaline: Adaptive Delta Rule
+
+    The Delta Rule
+
+    The Delta Rule and Learning Rate
+
+    Applications of Neural Networks
+
+    Clustering
+
+    Classification and pattern recognition:
+
+    Function approximation
+
+    Prediction and dynamical systems
+
+
+    # The Challenges of Artificial Neural Networks
+
+
+    # 4. General Presentation of Deep Learning
+
+
+    Fast graphics processing units (GPUs) for deep learning in neural networks GPU
+    vs. CPU
+
+
+    # A three-way categorization
+
+
+    +   - Deep networks for unsupervised or generative learning
+
+    Deep networks for supervised learning
+
+    Hybrid deep networks
+
+
+    # Recurrent methods of deep learning
+
+
+    Dynamic programming for supervised learning / reinforcement learning
+
+    unsupervised learning (UL) facilitating SL and RL
+
+    Learning hierarchical representations through deep SL, UL, RL
+
+    Occam''s razor: compression and minimum description length (MDL)
+
+
+    # A three-way categorization
+
+
+    +   - Deep networks for unsupervised or generative learning
+
+    Deep networks for supervised learning
+
+    Hybrid deep networks
+
+
+    # Recurrent methods of deep learning
+
+
+    Dynamic programming for supervised learning / reinforcement learning (SL/RL)
+
+    unsupervised learning (UL) facilitating SL and RL
+
+    Learning hierarchical representations through deep SL, UL, RL
+
+    Occam''s razor: compression and minimum description length (MDL)
+
+    Fast graphics processing units (GPUs) for deep learning in neural networks
+
+
+    # 5. Multilayer Perceptron and Backpropagation: How are they work?
+
+
+    +   - Multilayer perceptron
+
+    The MLP model
+
+    Tricks for training MLPs
+
+    Backpropagation
+
+    Definition backward propagation
+
+    Applications of backpropagation
+
+    Natural Language Processing and sentimental analysis
+
+    Long Short Term Memory networks for sentiments analysis
+
+    The LSTM model
+
+
+    # 6. Convolutional Neural Networks (CNN): How is it works?
+
+
+    CNN Architecture
+
+    Layers used to build CNN'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'Introducing non-linearity (ReLU)
+
+    Convolution layer
+
+    Without brain model
+
+    The brain-view
+
+    Local connectivity
+
+    Spatial arrangement
+
+    Real life example
+
+    Parameter sharing
+
+
+    # 7. Other Deep Learning Algorithms
+
+
+    +   Recurrent Neural Networks
+
+    Recursive Neural Network
+
+    Restricted Boltzmann machines
+
+    Auto encoders
+
+    Stacked auto encoders
+
+    Types of Autoencoders
+
+    Deep belief networks
+
+
+    # 8. Deep Learning Applications
+
+
+    +   Applying deep learning to real-world problems
+
+    The value of pre-training
+
+    Medical vision
+
+    Credit scoring
+
+    Solution to the high cost
+
+    Caveats of real-world label box distributions
+
+    Understanding the black box model
+
+    Visual applications of deep learning
+
+    Adding sounds to silent movies:
+
+    Automatic machine translation
+
+    Object classification and detection in photographs
+
+    Automatic handwriting generation
+
+    Automatic game playing
+
+    Automatic image caption generation
+
+    Automatic text generation
+
+
+    Applications using existing APIs
+
+    Advantages of deep learning APIs
+
+    Disadvantages of deep learning APIs
+
+
+    Open-source applications
+
+    Advantages of open source applications
+
+    Disadvantages of open source applications
+
+
+    # 9. Our Future with Deep Learning Applied
+
+
+    +   Chapter Introduction
+
+    Medical Technology
+
+    Biomechanics
+
+    Fully Automated Smart Homes
+
+    Advanced Mobile Technology
+
+    Automated Commercial Use Programs
+
+    Partial Artificial Intelligences
+
+    Complete Artificial Intelligences
+
+
+    # 10. The Long-Term Vision of Deep Learning
+
+
+    +   Smaller and More Efficient
+
+    More Automation'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'Perfected Specialized Abilities
+
+    Full Artificial Intelligence
+
+
+    # Thank you !'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# 1. Deep Learning: What & Why?
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_16_0.png)
+
+
+    # Chapter Introduction
+
+
+    If you have ever heard of machine learning or artificial intelligence, then you
+    have a general understanding of what deep learning is. Essentially, deep learning
+    is a subfield of machine learning. This particular learning system is unlike other
+    programs, where "learning" is completed with factual algorithms and set representations.
+    Instead, a deep learning network comprises algorithms that have been inspired
+    by the structure and function of the human brain. As a result, deep learning machines
+    have the ability to learn new information and to use it.
+
+
+    The networks on which deep learning is processed are called "artificial neural
+    networks" because of the fact that they represent true neural pathways in the
+    human brain. This might sound confusing right now, but as we progress through
+    this chapter this book will begin to understand exactly what deep learning is,
+    how it works, and why it is an important system in today''s world. If you continue
+    to feel confused, however, fret not. The processes of deep learning are still
+    being studied and understood by scientists, so everything is completely known
+    or understood, yet. However, they have done a lot in shedding light on what deep
+    learning truly is, and so we can learn a great deal about it and how it works.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Deep Learning and Artificial Neural Networks
+
+
+    Artificial neural networks (ANNs) are the basics for deep learning, but the development
+    of deep learning networks goes far beyond artificial neural networks. Since the
+    development of artificial neural networks, scientists and researchers have been
+    focusing on developing and using deep neural networks. These systems are extremely
+    similar to artificial neural networks; however, they have some key differences.
+    They are the future of deep learning, and as the deep learning system progresses
+    it is expected that deep neural networks will eventually replace artificial neural
+    networks entirely.
+
+
+    As you know, artificial neural networks are shallow networks that have been developed
+    in an animal brain. However, they do have many disadvantages, part of which is
+    that they are large and require many systems in order to work, and that they can
+    complete a small number of specialized tasks. As far as deep learning goes, the
+    goal is to eventually create an entirely artificial intelligence that requires
+    no input from a human in order to function effectively and learn on its own. In
+    order to draw us closer to that, the deep neural network was.
+
+
+    The deep neural network is an advanced version of the artificial neural network.
+    It features smaller units and "stuff", with the ability to perform the same complex
+    functions as artificial neural networks. The architects of these networks have
+    focused on a few basic approaches as an opportunity to develop a newer and more
+    usable program that allows the deep learning network to perform effectively and
+    whilst taking significantly less space.
+
+
+    To understand the benefits and purpose of this activity, one might consider the
+    evolution of computers themselves. A few decades ago, computers were massive machines
+    that took up entire rooms and operated extremely slowly. Now, however, they are
+    small and speedy devices that can fit inside of our pocket. Just computers have
+    evolved in this way, scientists and researchers are seeking to get artificial
+    neural networks to become significantly smaller so that they are more usable and
+    operate more efficiently. Naturally, this requires them to refine the techniques
+    and develop new systems that will allow the device to complete the same functions
+    with higher quality results while also taking less space. This is why the deep
+    neural network was created.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_17_0.png)
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_17_1.png)
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_17_2.png)
+
+
+    #  1950s-1970s
+
+
+    Neural Networks
+
+
+    #  1980s-2010s
+
+
+    Machine Learning
+
+
+    #  Present Day
+
+
+    Deep Learning
+
+
+    Early work with neural networks experiments for in teaching machines.
+
+
+    Machine learning begins to flourish.
+
+
+    Deep learning breakthroughs drive boom.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# What Is Deep Learning, Exactly?
+
+
+    Deep learning is essentially a system of neural networks that are used to help
+    try and make learning algorithms much easier to use as well as much better in
+    their abilities. They are also used to create revolutionary advancements in artificial
+    intelligence, well as machine learning, and ultimately to create what will eventually
+    be a true and complete artificial intelligence.
+
+
+    In the past, computing systems were too slow and we didn''t have enough information
+    to create the networks required to make a true artificial intelligence. What means
+    is that we were not advanced enough to create an artificial intelligence that
+    would be able to completely act, think, and live on its own. Until now, we have
+    only been able to create partial artificial intelligences that are able to do
+    certain things on their own based on a set of metrics that have been programmed
+    into their intelligence network.
+
+
+    With the introduction of deep learning, however, we have been able to begin developing
+    large neural network systems that are capable of taking in information and responding
+    to it on their own. The end goal will be create neural networks that mimic the
+    human brain and operate as their own intelligence, completely capable of learning
+    new things and advancing on their without human manipulation. Essentially, we
+    would create an artificial species and introduce it into the world.
+
+
+    At the very foundation of all these advances and progressions in artificial intelligence
+    lie deep learning. In the past, the algorithms were slow. While they could process
+    a large quantity of data, their performance was limited. Deep learning combines
+    performance with data intake to create an optimal and advanced system that out
+    competes anything we have used before.
+
+
+    # What Is Learned?
+
+
+    Currently, deep learning is used in practice under conditions of supervised learning.
+    This means that the deep learning machines can only learn from labelled data that
+    they have been exposed to. They have not yet left unsupervised, and likely won''t
+    be for some time. At the very least, they won''t be unsupervised until they are
+    reliable and yet understood.
+
+
+    Over time, the goal is to open up the deep learning networks and artificial intelligences
+    to unsupervised learning, where they will be able to learn anything without restriction
+    on what they can or access. When they are able to access this data without restriction,
+    artificial intelligences will then become complete and will be an artificial intelligence
+    in the truest sense of the word.
+
+
+    # Feature Learning
+
+
+    Deep learning is based on large neural networks, it has the ability to be scaled
+    to incredible sizes. These networks can also be trained with "feature learning",
+    however, which means that they can perform automatic features based on raw data.
+    Essentially, the artificial intelligences will be able to intake raw data and
+    have pre-programmed feature responses that will help them to respond'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'efficiently and in a positive manner. This means that they will be able to
+    learn data, but then turn it into their own learning process, growing away from
+    human-inputted features so that they can operate entirely on their own without
+    any human implications or manipulations.
+
+
+    When we learn about things as humans, we often build on concepts, allowing us
+    to learn more and more. That is how we are able to learn everything: we start
+    small and grow from there. The idea with artificial intelligences is to teach
+    hierarchy feature learning, which means that the artificial intelligences will
+    be able to create something they''ve learned, such as human-inputted information,
+    and grow on that concept to create their own concept. They will also be able to
+    advance similarly to how humans are presently advancing: by building on concepts
+    and moving forward through the natural learning process.
+
+
+    # Why is it Called "Deep Learning?"
+
+
+    In some of the earliest literature on deep learning, Geoffrey Hinton was a co-publisher
+    of the first paper written on the backpropagation algorithm. In that paper, he
+    was said to have used the word "deep" to represent the development of large artificial
+    neural networks. It is likely he meant that they were large and much "deeper"
+    than the networks they were using to date in the field of artificial intelligence.
+
+
+    In, 2006 he co-authored a paper where he stated: "Using complimentary priors,
+    we derive a fast, greedy algorithm that can learn deep, directed belief networks
+    one layer at a time, provided the top layers form an undirected associative memory."
+
+
+    He has also written more papers where he uses the word deep to describe the abilities
+    of the algorithm and the learning network and how these are used to grow and advance
+    from things these are taught in the beginning. He has been cited hundreds, if
+    not thousands, of times using deep as a descriptive factor for how the network
+    operates and its abilities. As a result, the term has been promoted into the title
+    and the entire program is now called "deep learning" instead of "artificial neural
+    networks". Essentially, "deep learning" is the name of the system and "artificial
+    neural networks" is what they are composed of.
+
+
+    Deep learning permits computational models that consist of various preparing layers
+    to learn portrays of information with various levels of reflection. These techniques
+    have drastically enhanced the cutting edge in speech and visual recognition, and
+    object detection as well as numerous fields, such as drug disclosure and genomics.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# Deep Neural Network
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_20_0.png)
+
+
+    Input Layer Hidden Layer 1 Hidden Layer 2 Hidden Layer 3 Output Layer
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_20_1.png)
+
+
+    edges combinations of edges object models
+
+
+    Figure 1.1: Deep learning layers examples
+
+
+    # History of Deep Learning
+
+
+    Deep learning is a popular topic today, as organizations attempt to discover how
+    to utilize progressed computational strategies to discover helpful data inside
+    enormous swaths of information. While the field of artificial intelligence is
+    decades old, leaps forward in the field of simulated neural systems are driving
+    the sudden increase in deep learning.
+
+
+    Attempts to make computerized reasoning go back decades. In the world of World
+    War II, the English mathematician and code breaker Alan Turing penned a definition
+    for genuine computerized reasoning. He named it the Turing Test, whereby a conversational
+    machine would need to persuade a human that they were conversing with another
+    human.
+
+
+    After 60 years, a computer finally breezed through the Turing Test in 2014, when
+    automated bot created by the University of Reading named "Eugene" persuaded 33%
+    of the judges gathered by the Royal Society in London that it was genuine. It
+    was the first occasion that the 30% limit had been surpassed.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'From point forward, the field of deep learning and AI has begun expanding as
+    computers moving closer nearer to conveying human-level capacities. Consumers
+    interact with a variety of bots like Apple''s Siri, Amazon''s Alexa, and Microsoft''s
+    Cortana, which utilize regular language and machine in order to know how to answer
+    questions.
+
+
+    Presently, multiple organizations are hoping to use their huge informational indexes
+    as a preparation to create better AI programs that can associate with the world
+    in regular ways, while concentrating helpful ways that have not yet been determined.
+    Scientists have discovered that amix of cutting-edge neural systems; prepared
+    accessibility of immense masses of information, and, to great degree, effective
+    circulated GPU-based frameworks give us the plans to make shrewd, self-learning
+    machines that can equal people in their cognition.
+
+
+    A definitive wellspring of deep learning''s energy is the manner in which it empowers
+    computers to separate the contention bits and after that construct a deliberation
+    layer over it that relates to our impression of reality.
+
+
+    # Deep Learning Timeline
+
+
+    Below is a timeline that will help you see how deep learning has been established
+    and the growth has accumulated along the way. This timeline will give you insight
+    to some of the biggest developments in deep learning technology and the people
+    who have played a key role in establishing these developments. This will help
+    you understand for how long deep learning has been around, and just bow far it
+    comes in a few short decades.
+
+
+    1965: Akeyey Ivakhnenko and Lapa publish a working learning algorithm that uses
+    supervised, deep, feedforward, multilayer perceptrons.
+
+
+    1971: A paper is published that describes the algorithm as an 8-layer-deep network
+    that is trained by the group method of data handling algorithm.
+
+
+    1980: A deep learning algorithm is published as the "Neocognitron" by Kunihiko
+    Fukushima.
+
+
+    1986: Riga Dechter introduces the phrase "Deep Learning", and the concept becomes
+    an official topic of interest for computer scientists.
+
+
+    1989: The standard back propagation algorithm is applied to a deep neural network
+    by Yann LeCun, who used it as a system to read and recognize handwritten ZIP codes
+    on pieces of mail.
+
+
+    1991: The same piece of machinery to read ZIP codes on mail was advanced and developed
+    that it it could begin recognizing 3-D objects. This was completed by matching
+    2-D images with handcrafted 3-D object models.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '1992: The Cresceptron was introduced by Weng. This was a publication that was
+    used to perform 3D recognition and could work even in a cluttered place where
+    there wasn''t a single isolated object to recognize. Similar to the Neocognron,
+    which was introduced in 1980, the Cresceptron was developed using multiple layers.
+    Unlike the Neocognit, it did not require supervision or human interaction and
+    manipulation to complete various functions. In other words, it could perform many
+    functions and operations on its own.
+
+
+    1994: A multi-layer Boolean neural network was introduced by Andre C. P. L. F.
+    de Carvalho, Fairhurst and Bitter. The neural network module was independently
+    trained and created a completely weightless neural network that was composed of
+    self-organizing feature extractions.
+
+
+    1995: A network comprising six fully connected layers was trained in two days
+    by Brendan Frey. The network had several hidden units within it, which were each
+    trained during this period. He proved that using the wake-sleep algorithm, you
+    could train the network to several different functions. At the time, however,
+    the speed was slower.
+
+
+    1997: Over the years, the deep learning network has struggled with what was called
+    the “vanishing gradient problem”. This prevented learning systems from retaining
+    information in gradient-based learning methods. In 1997, Hochreiter and Schmidhuber
+    published the short-term memory (LSTM) network, which was capable of avoiding
+    the vanishing gradient problem. It did so by maintaining memories of events that
+    had happened several times over. This was important in the development of speech
+    recognition.
+
+
+    2006: Hinton and Salakhutdinov successfully showed how many-layer feedforward
+    neural network systems were capable of being pre-trained one layer at a time.
+    Each layer was treated as an unsupervised but restricted machine. Afterward, they
+    used supervised backpropagation to fine-tune the system so that it worked the
+    way they desired it to.
+
+
+    2009: Hinton and Li Deng worked together to apply deep learning algorithms to
+    speech recognition. Together, they co-organized a workshop that took place in
+    late 2009 called “Workshop on Deep Learning for Speech Recognition”. Here, they
+    learned how they could deepen the generative models of speech and potentially
+    use more capable hardware and large scale datasets so that deep neural nets would
+    become possible.
+
+
+    2010: Computer scientists and researchers extend deep learning to encompass larger
+    vocabulary speech recognition.
+
+
+    2012: The “Merck Molecular Activity Challenge” was won by Dahl and his team when
+    they used a multi-task deep neural network to predict the biomolecular target
+    of a drug.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '![](img/9fe8d2acb79e08fc7077850a9468c4c3_23_0.png)
+
+
+    **2014:** The “Tox21 Data Challenge” was won by a team lead by Hochreiter, who
+    used deep learning as a system to detect off-target and toxic effects of environmental
+    chemicals that can be found in nutrients, drugs, and various household products.
+
+
+    There have been many discoveries and advances in deep learning over the years.
+    The concept was originally introduced in 1965, and since then scientists and researchers
+    have developed it to the extent that there is now a real and impending possibility
+    that a true and complete artificial intelligence will soon exist. At this point,
+    we are no longer concerned with “if” it will happen, but rather are wondering
+    “when” it will. It is clear that research has shown that deep learning has the
+    power to complete many incredible actions, each of which will contribute to an
+    eventual artificial intelligence that will be able to completely function, learn,
+    and advance on its own without requiring human input, interaction, or manipulation.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# 2. Pre-requisite for Deep Learning
+
+
+    Objective of this Chapter
+
+    At the end of this chapter, the reader should be able to understand:
+
+
+    +   * Link between Machine Learning and Deep Learning
+
+    * Machine learning algorithms
+
+    * Difference between machine learning and deep learning
+
+    * Where deep learning and machine learning are applied
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_24_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Deep Learning, Machine Learning and Artificial Intelligence
+
+
+    Deep learning is a subfield of machine learning that is concerned with calculations
+    enlivened by the structure and capacity of the mind, known as artificial neural
+    systems. There is a useful visual aid in figure 2.1, showing how artificial intelligence,
+    machine learning, and deep learning relate to each other.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_25_0.png)
+
+
+    Figure 2.1: Three concentric circles
+
+
+    This method includes sustaining a model with huge volumes of information, yet
+    it requires less element building than a linear regression model would.
+
+
+    "Deep learning is a particular kind of machine learning that achieves great power
+    and flexibility by learning to represent the world as nested hierarchy of concepts,
+    with each concept defined in relation to simpler concepts, and more abstract representations
+    computed in terms of less abstract."
+
+
+    "A class of machine learning techniques that exploit many layers of non linear
+    information processing for supervised or unsupervised feature extraction and transformation,
+    and for pattern analysis and classification."
+
+
+    A deep neural network comprises of hierarchy of layers, also known as a hierarchal
+    neural network, whereby each layer changes the input data into a more abstract
+    representation. The output layer combines these features to make predictions.
+    It improves calculation, to make it simple and to understand it. It has allowed
+    progressive advances in machine learning and AI (artificial intelligence) to be
+    made. Deep learning models have the capacity to perform such tasks as extraction
+    from raw information, otherwise called highlight learning (most commonly called
+    feature learning), and shown in figure 2.2.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'input layer hidden layer 1 hidden layer 2 hidden layer 3 output layer
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_26_0.png)
+
+
+    Figure 2.2: General architecture of deep neural network
+
+
+    # # Different Machine Learning Approaches
+
+
+    Machine learning strategies can for the most part be grouped into two classes,
+    namely supervised and unsupervised-classes, and more are often added that is,
+    such as reinforcement learning.
+
+
+    # ## Supervised learning
+
+
+    A supervised learning algorithm is a class of machine learning that uses a set
+    of labeled data to classify same unlabeled data. Data that has been classified
+    is labeled data while unlabeled data is not labeled. Labels are be discrete or
+    continuous. The majority of practical machine learning uses supervised learning.
+
+
+    To better comprehend, we should utilize another illustration. A robot is figuring
+    out how to sort waste using visual ID. All day it chooses recyclable things from
+    rubbish as it passes along a transport line. It places materials such as glass,
+    plastic and metal into 12 containers. Each thing is marked with an ID number on
+    a sticker. Once per day, human specialists look at the containers and instruct
+    the robot as which things were incorrectly arranged. The robot utilizes this input
+    to make strides.
+
+
+    An AI that is figuring out to distinguish pedestrians on a road is prepared with
+    22 million short of road scenes from self driving autos. A portion of the recordings
+    contain no pedestrians while all others have up to 25. An assortment of learning
+    calculations is prepared based on the information, with each the right answers.
+    Each calculation builds up an assortment of models to recognize walkers in fast
+    moving scenes. The calculations are then tried against another arrangement of
+    information to assess exactness and accuracy.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'After the algorithm has worked on labeled data, also known as training data,
+    it stops improving its accuracy. It can be used on new un-labeled data. Sometimes
+    the output may not necessarily be discrete and we may not have a finite number
+    of classes to classify our data. Figure 2.3 below, for example, can turn out to
+    be very complex when we have hundreds or thousands of dimensions.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_27_0.png)
+
+
+    # Figure 2.3: Classification as separating input
+
+
+    Supervised learning problems can be further grouped into regression and classification
+    problems (Figure 2.4).
+
+
+    +   - Classification of an arrangement issue is the point at which the yield variable
+    is a class, for example, "red" or "blue" or "sickness" and "no infection".
+
+    - Regression of a relapse issue is the point at which the yield variable is a
+    genuine estimation, for example, "dollars" or "weight"'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Classification Regression
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_28_0.png)
+
+
+    Figure 2.4: Difference between classification and regression
+
+
+    Some popular examples of supervised machine learning algorithms are:
+
+
+    +   - Linear regression for regression problems.
+
+    - Random forest for classification and regression problems.
+
+    - Support vector machines for classification problems.
+
+
+    # Unsupervised learning
+
+
+    Unsupervised learning is where you just have input information and there are no
+    related yield factors; we allow the calculations to lead to the answer. An framework
+    may amass unsorted data per likenesses and contrasts despite the fact that no
+    classifications have been given. The objective of unsupervised learning is to
+    display the fundamental structure or dissemination in the information in order
+    to take in more about the information. That unlike unsupervised learning, there
+    is no right answer and no instructor. Calculations are left to their own particular
+    devices to discover and introduce the strange structure in the information.
+
+
+    Unsupervised learning calculations can perform more troublesome preparing undertakings
+    supervised learning frameworks. Be that as it may, unsupervised learning can be
+    more capricious than the substitute model. An framework may, for instance, make
+    sense by itself how to sort cats from dogs, it may lead unanticipated and undesired
+    classes to manage unusual breeds, making a mess rather than arranging. These strategies
+    are frequently utilized for data mining. The spellbinding assignment called design
+    disclosure is utilized to find the relationships within the data. Unsupervised
+    learning problems can be further grouped into clustering and association problems.
+
+
+    Clustering A clustering problem is where you want to discover the inherent groupings
+    in the data, such as grouping customers by purchasing behavior.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "Association An association rule learning problem is where you want to discover\
+    \ rules that describe\nlarge portions of your data, as people who buy X also tend\
+    \ to buy Y.\nSome popular examples of unsupervised learning algorithms are:\n\n\
+    +   - K means, for clustering problems.\n- A priori algorithm for association\
+    \ rule learning problems.\n\n# Reinforcement learning\n\nIn reinforcement machine\
+    \ learning algorithms, the machine is trained to understand the activities\ngo\
+    \ on the world around, just like human being, by applying a certain level of intelligence.\
+    \ The\nmachine learns from the repercussions of its own actions without being\
+    \ a thing! In short, the\npurpose of reinforcement learning is to have a good\
+    \ policy, not a good decision To understand this,\nlet us take an example of your\
+    \ pet dog. Considering the dog a new trick: you can tell it what\ndo do, but you\
+    \ can reward if it does right things and penalize if it does wrong things. The\n\
+    reinforcement learning specialist (dog) needs to make sense of what it did that\
+    \ influenced it to\ngetting the reward or penalty. A reinforcement learning operator\
+    \ (dog) learns by cooperating with its\nconditions and by watching the aftereffects\
+    \ of these communications.\n\nFive things you should know about reinforcement\
+    \ learning:\n\n+   - There is no boss, just an idea of reward.\n- That implies\
+    \ that the reinforcement learning agent is the one making the choices in view\
+    \ of some\nreward per activity.\n- Feedback is postponed, not prompt. Unlike other\
+    \ machine learning methods, the criticism might\n postponed in reinforcement learning,\
+    \ it can even occur toward the end, dissimilar to different\nsystems.\n- Time\
+    \ matters. The circulation is not any freer nor indistinguishably appropriate;\
+    \ it changes with\ntime, as decided by the operator.\n- The agent's actions influence\
+    \ the ensuing information it receives. As the specialist is really\ninterfacing\
+    \ with the earth, the following activity is in fact subject to the present activity.\n\
+    \n# Differences between Supervised and unsupervised algorithms\n\nSupervised learning\
+    \ (figure 2.5) is the most widely recognized type of machine learning. With\n\
+    supervised learning, an arrangement of cases, called the training set, is submitted\
+    \ as input to the\nframework amid the training phase. Each input is designated\
+    \ with a desirable output value; thus, the\nframework knows what the output is\
+    \ when input enters. For instance, consider an experimental\nobservation that\
+    \ can be grouped into N diverse classes. Here, we have a training set (an arrangement\n\
+    of sets). The preparation is performed by the minimization of a specific cost\
+    \ work, which speaks to\nthe problems from input xi and the desired output yi."
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '![](img/9fe8d2acb79e08fc7077850a9468c4c3_30_0.png)
+
+
+    # Figure 2.5: Supervised learning/
+
+
+    An ordinary case of a supervised machine learning application is the mail spam
+    identifier; the calculation is prepared using spam and not-spam messages and which
+    each assemble a group. This preparation procedure occurs when you check an email
+    as "spam" or "not spam" in your inbox.
+
+
+    In unsupervised learning (figure 2.6), on the other hand, the training illustrations
+    given by the framework are not named with a class. Thus, the framework creates
+    and arranges the information, looking for basic attributes among them and changing
+    them in the light of internal knowledge.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_30_1.png)
+
+
+    > Remark: On Supervised Learning there is No train validation
+
+
+    # Figure 2.6: Unsupervised learning
+
+
+    | Supervised Models | Unsupervised Models |
+
+    |---|---|
+
+    | Neural networks | Different types of clustering |
+
+    | Multilayer perceptron | Distances and normalization |
+
+    | Decision trees | K-means |
+
+    | | Self-organizing maps
+
+
+    Neural networks Matt'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'A case of unsupervised learning is clustering classification, which is a calculation
+    that puts similar things in a group and different things in an alternate group,
+    whereby the idea of similarity relies on a likeness measure.
+
+    Difference between supervised and unsupervised learning (figure 2.7):
+
+
+    | Supervised learning | Unsupervised learning |
+
+    |---|---|
+
+    | Training data includes input and desired | No correct results are provided |
+
+    | Fast and accurate | More complex |
+
+    | Has to be able to generalize | Cluster significance and labeling |
+
+
+    # Supervised Learning    Unsupervised Learning
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_31_0.png)
+
+
+    # Classification and clustering
+
+
+    Clustering and classification seem to be similar processes. They are actually
+    two types of learning methods, and they categorize objects into groups according
+    to their features.
+
+
+    # Classification
+
+
+    In classification on the basis of a training set of data, objects are differentiated.
+    The aim is to predict the target class by analyzing the training set. To get better
+    boundary conditions that can be used to determine each target class, a training
+    dataset is used.
+
+
+    # Classification algorithms
+
+
+    Any classification algorithm can be used; some are named below.
+
+
+    +   * Linear classifiers
+
+    o Logistic regression
+
+    o Naive Bayes classifier
+
+    o Fisher''s linear discriminant
+
+    * Support vector machines
+
+    o Least squares support vector machines
+
+    * Quadratic classifiers
+
+    * Kernel estimation'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: 'ok-nearest neighbor
+
+    • Decision trees
+
+    o Random forests
+
+    • Artificial Neural networks
+
+    • Learning vector quantization
+
+
+    # Applications of classification algorithms
+
+
+    +   • Email spam classification
+
+    • Prediction of a bank customer''s willingness to pay back a loan
+
+    • Tumor cell identification
+
+    • Sentiment analysis
+
+    • Drug classification
+
+    • Facial key points detection
+
+    • Pedestrian''s detection in self-driving vehicles
+
+
+    # Clustering
+
+
+    In clustering, objects with the same features are grouped together and those with
+    dissimilar features are also grouped together. The target class is not predicted,
+    as it is in classification. It is about grouping similar kinds of things by considering
+    the most satisfied condition, whereby all the items in the same group should be
+    similar and no two different group''s items should be similar (shown in figure
+    2.8).
+
+
+    Example: grouping similar language type document in one group.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_32_0.png)
+
+
+    Figure 2.8: Clustering
+
+
+    # Clustering algorithms
+
+
+    Clustering algorithms can be classified into two main categories linear clustering
+    algorithms and Non-linear clustering algorithms.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '+   * Linear clustering algorithms
+
+    * means clustering algorithm
+
+    * Fuzzy c-means clustering algorithm
+
+    * Hierarchical clustering algorithm
+
+    * Gaussian (EM) clustering algorithm
+
+    * Quality threshold clustering algorithm
+
+    * Non-linear clustering algorithms
+
+    * MST based clustering algorithm
+
+    * Kernel k-means clustering algorithm
+
+    * Density-based clustering algorithm
+
+
+    # Applications of clustering algorithms
+
+
+    +   * Recommendation systems
+
+    * Anomaly detection
+
+    * Human genetic clustering
+
+    * Genome sequence analysis
+
+    * Analysis of antimicrobial activity
+
+    * Grouping of shopping items
+
+    * Search results grouping
+
+    * Slippery map optimization
+
+    * Crime analysis
+
+    * Climatology
+
+
+    # Comparison of deep learning and machine learning
+
+
+    Regular machine learning methods were constrained in their capacity to process
+    normal information within their simple frame. For quite some time, developing
+    a pattern recognition or machine-learning framework required cautious building
+    and impressive space capacity to outline an element extractor that changed the
+    raw information, (for example, the pixel steems of a picture) into a reasonable
+    inner portrait or highlight vector from which the learning subsystem, regularly
+    a classifier, could distinguish or characterize patterns in the information.
+
+
+    Machine learning likewise encourages us to discover answers to some issues in
+    vision, speech recognition, and mechanical autonomy. Let us take the case of recognizing
+    faces: This is an assignment we do easily; we consistently recognize relatives
+    and companions by looking at their faces or from their photos, regardless of differences
+    in posture, lighting, hardo, etc. In any case, we do it unknowingly and cannot
+    clarify how we do it. Since we are not ready to clarify our mastery, we cannot
+    compose the computer program. In the meantime, we realize that a picture of a
+    face isn''t only an irregular accumulation of pixels; a has structure. It is symmetrical.
+    There are the eyes, the nose, and the mouth, situated in specific places on the
+    face. Every individual''s face is an example comprising a specific blend of these.
+    By examining a test confronted with pictures of a man, a learning program catches
+    the example particular to that individual and afterward recognizes checking for
+    this example in a given picture. This is one case of pattern recognition.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'Machine learning is modifying computers to upgrade an execution basis utilizing
+    illustration information or past experience. We have a model characterized with
+    up to a few parameters, and learning is the execution of a computer program to
+    streamline the parameters of the model utilizing the preparation information or
+    past experience. The model might be prescient to make predictions for the future,
+    or a graphic to pick up learning from information, or both.
+
+
+    We will take a few points and contrast the two techniques of machine learning
+    and deep learning.
+
+
+    # Data dependencies
+
+
+    The most imperative contrast between deep learning and conventional machine learning
+    is its performance as the size of data increases. When there is little data, deep
+    learning calculations don''t play out that well. This is because deep learning
+    calculations require a lot of data to comprehend it well. Then again, conventional
+    machine learning calculations with their carefully assembled rules in this situation.
+    The figure below demonstrates this reality.
+
+
+    # Why deep learning
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_34_0.png)
+
+
+    Figure 2.9: Performance of deep learning
+
+
+    # Hardware dependencies
+
+
+    Deep learning algorithms rely a lot on high-end machines, as opposed to traditional
+    machine learning algorithms, which can work on low-end machines. This is because
+    the necessities of deep learning algorithms include GPUs, which are an important
+    part of their working. Deep learning algorithms intrinsically do a great amount
+    of matrix multiplication operations. These operations can be proficient optimized
+    using a GPU because a GPU is built for this purpose.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# Feature engineering
+
+
+    Feature engineering is the process of putting domain information into the making
+    of highlight extractors to lessen the complex nature of the information and make
+    patterns more noticeable for learning algorithms to work. This procedure is troublesome
+    and costly both regarding time and expertise.
+
+
+    In machine learning, the greater part of the applied feature should be distinguished
+    by a specialist and after hand-coded according to the domain and data type.
+
+
+    For instance, features can be pixel values, shape, surfaces, position and orientation.
+    The execution of the majority of machine learning algorithms relieves the highlights
+    are recognized and extracted.
+
+
+    Deep learning algorithms attempt to take in high-level features from the information.
+    This is an exceptionally particular piece of deep learning and a noteworthy step
+    forward in contrast to conventional machine learning. Accordingly, deep learning
+    lessens the undertaking of growing a new feature extractor for each issue. Similarly,
+    convolutional neural networks will endeavor to grow low-level features, for example,
+    edges and lines in early layers then parts of faces of people and then a high-level
+    representation of a face.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_35_0.png)
+
+
+    # Problem solving approach
+
+
+    When you are sorting a problem by means of a conventional machine learning algorithm,
+    it generally suggested to break the problem down into many parts, solve them independently,
+    and merge the result. Deep learning in contrast advocates solving the problem
+    end-to-end. Let us take an illustration to examine this.
+
+
+    Let us say that you have the task of detecting several objects. The task is to
+    recognize what the object is and where it is present in the image (figure 2.11).'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '![](img/9fe8d2acb79e08fc7077850a9468c4c3_36_0.png)
+
+
+    nIn a typical machine learning recognition approach, you would divide the problem
+    into two steps, object detection and object recognition, you would use a bounding
+    box detection algorithm, to skim through the image and find all the achievable
+    objects. Then, for all the recognized objects, you would utilize an object recognition
+    algorithm like SVM with HOG to recognize the relevant objects. In contrast, in
+    deep learning approach, you would do the process end-to-end. For example, a YOLO
+    net (which is a type of deep learning algorithm), you would pass in an image,
+    and it would give out the location along with the name of object.
+
+
+    # Execution time
+
+
+    Generally, a deep learning algorithm takes a long time to train. This is because
+    there are so many paramaters in a deep learning algorithm that training takes
+    them more than usual time spent. The state of the art deep learning algorithm
+    RES-Net takes about 15 days to train completely from scratch. Machine learning,
+    on the other hand, comparatively takes much less time to train, ranging from a
+    few seconds to a few hours.
+
+
+    This turn is completely reversed attesting time. At the test time, the deep learning
+    algorithm takes a much reduced amount of time to run. However, if you match it
+    up to the k-nearest neighbors (a type of machine learning algorithm), the test
+    time increases with the increasing size of the data. However, this is not applicable
+    to all machine learning algorithms, as some of them have small testing times too.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# Interpretability
+
+
+    Last but not least, we have interpretability as a feature of contrast between
+    machine learning and deep learning. This is the main reason why deep learning
+    is still being considered 10 times before its use in industry.
+
+
+    Let us take an example. Let us say we use deep learning to use automated marking
+    on essays. The calculation it gives is quite tremendous and is close to the performance
+    of human being. But there''s a problem. It does not show why that score is given
+    to any particular assignment. Indeed, mathematically you can find out which nodes
+    of a deep neural network were activated, but we don''t know what their neurons
+    were thought to model and what these layers of neurons were doing as a group.
+    So, we fail to interpret the outcomes.
+
+
+    On the other hand, machine learning algorithms like decision trees give us crisp
+    rules as why we chose what they chose, so it is particularly easy to interpret
+    the reasoning behind them. Therefore, algorithms like decision trees and linear/logistic
+    regressions are primarily used in the industry for interpretability.
+
+
+    # Where deep learning and machine learning has been used
+
+
+    The areas in which machine learning has been used include:›
+
+
+    +   - Computer vision; for applications like vehicle number plate identification
+    and facial recognition.
+
+    - Information retrieval; for applications like search engines, both text search
+    and image search.
+
+    - Marketing; for applications like automated email marketing and target identification
+
+    - Medical diagnosis; for applications like cancer identification and anomaly detection
+
+    - Natural language processing; for applications like sentiment analysis and photo
+    tagging
+
+    - Online advertising, etc.'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Machine Intelligence LANDSCAPE
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_38_0.png)
+
+
+    Figure 2.12: Machine learning applications
+
+
+    One major example of a corporation using machine learning/deep learning is Google
+    (figure 2.13).'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# # of directories containing model description files
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_39_0.png)
+
+
+    Figure 2.13: Growing use of deep learning at Google
+
+
+    In the above image, you can see how Google is using machine learning in its various
+    products. Applications of machine learning/deep learning are never-ending, you
+    just have to look at the right opportunity!
+
+
+    # Future trends
+
+
+    The text above will have given you a general idea of machine learning and deep
+    learning and the differences between them.
+
+
+    First of all, considering the ever-increasing trend of using data science and
+    machine learning in the industry, it will become more important than ever for
+    every company that wants to survive and inculcate machine learning in its industry.
+    In addition, each individual will be expected to know the base terminologies.
+
+
+    +   * Deep learning is shocking us each day, and will go on to do so in the near
+    future. This is because deep learning is proving to be one of the excellent techniques
+    yet discovered using state-of-the-art performances.
+
+
+    +   * Research is nonstop in machine learning and deep learning. However, unlike
+    previous years, where research was limited to academia, research in machine learning
+    and deep learning is exploding in both industry and academia. With more funds
+    available than ever before, it is more likely to play a key in human development
+    overall.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# 3. Artificial Neural Networks: what and why?
+
+
+    Objective of this Chapter
+
+
+    At the end of this chapter, the reader should have learnt:
+
+
+    +   - Artificial neural networks Architecture
+
+    - Artificial neural networks Applications
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_40_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# Chapter Introduction
+
+
+    As you learned previously, deep learning is made possible through the introduction
+    and use of artificial neural networks. These are networks that were developed
+    to reflect the biological neural networks that work in animal brains to make them
+    function as independent creatures. These systems have the capability of learning
+    on their own grants them the ability to progressively improve their knowledge
+    and abilities. The idea behind these systems is that they can learn to do tasks
+    on their own without requiring special programming or interference from humans
+    to teach them how to do so, like true animals.
+
+
+    One great example of how the artificial neural network works is examining how
+    they respond to pictures containing dogs. For example, if there was programming
+    that had labeled "dog" and "no dog", the artificial neural network would begin
+    to identify which element in the picture was actually the dog. As a result, it
+    would know what dogs looked like. From thereon out, this would be able to identify
+    dogs and it would have a sound understanding of what dogs are. This is like if
+    you were to teach a baby how to identify a dog. At first, you must teach them
+    how, but after they can identify dogs in any of situations. They can then develop
+    information about dogs, such how they look, what defines a dog, and what does
+    not. For example, they would be able to tell a dog apart from a cat by appearance
+    and, later, actions and sounds. Artificial neural networks carry this same ability,
+    making them capable of being their own independent species.
+
+
+    Developing an artificial neural network requires a large series of connected units.
+    These are called artificial neurons and they were created to resemble axons in
+    the biological brain, which are a form of neuron. Each neuron has its own connection
+    to other neurons, which is called a synapse. Synapse is used to transmit signals
+    to other neurons in the artificial neural network. Much like an animal brain,
+    the receiving neuron can then signal to other neurons in a sequence that allows
+    the artificial neural network to operate just like an animal brain. The result
+    of the sequencing is that certain signals and messages are sent throughout the
+    brain which can lead to the body to which the brain is attached to act, react,
+    and respond in a variety of unique ways.
+
+
+    In a true animal brain, neurons are organized in a series of layers. Each one
+    of these layers is responsible for helping brain perform different tasks, which
+    each one essentially specializes in certain information and transformations. It
+    can take a set of transmissions from one neuron to the next in order to get the
+    signal from the first input layer to the last output layer. Originally, the scientists
+    responsible for working with and creating artificial neural networks were attempting
+    to mimic the animal brain entirely, which is why it was built in such a way. Later,
+    however, they decided to pay attention to creating specific abilities in each
+    creation so that each one was specialized.
+
+
+    To date, scientists and researchers have used artificial neural networks to create
+    systems that could accomplish a great variety of tasks. These tasks include anything
+    from speech recognition to computer vision, computerized opponents in games, and
+    even medical diagnosis systems. Although'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: 'the artificial neural networks have become incredibly talented and have advanced
+    far beyond the original artificial neural networks never ever, they are still
+    very simple in comparison to the human brain. At the time of this publication,
+    they have been compared with worm brains. Despite only being considered at the
+    same capacity as a worms'' brain, however, they have been made capable of completing
+    many tasks that are far more advanced than that which a worm could do.
+
+
+    # An Overview of Neural Networks
+
+
+    As we know, computers have processors and memory for computation. These perform
+    complex computations in a short period of time, but they are not very adaptive.
+    The adoption of neural networks introduced an alternative approach to problem
+    solving than the use of conventional computers. Over the past decade, neural networks
+    have received a great deal of attention. They are also widely used in pattern
+    recognition because they have the ability to respond to an unexpected input of
+    patterns.
+
+
+    Neural networks process data in the same way a human brain does. To understand
+    the difference between a computer and a brain, we must know that a computer comprises
+    $10^9$ transistors with a switching time of $10^{-9}$ seconds. The brain contains
+    $10^{11}$ neurons, but these only have a switching time of about $10^{-3}$ seconds.
+    To help understand the human brain, the human nervous system can be viewed as
+    a three stage system, as shown in figure 3.1. The major part is the brain (nerve),
+    which receives continuous information, which it processes before making the appropriate
+    decisions.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_42_0.png)
+
+
+    Figure 3.1: Block diagram representation of a nervous system
+
+
+    The arrows pointing from left to right indicate the forward transmission of information-bearing
+    signals through the system, while and the arrows pointing right to left show the
+    feedback. A comparison between a brain and a computer is given in table 3.1 below.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '| No. of processing units | Brain | Computer |
+
+    |---|---|--|
+
+    | Type of processing units | $\approx10^{11}$ | $\approx10^{9}$ |
+
+    | Type of calculation | Neurons | Massively parallel | Usual serial |
+
+    | Data storage | | | address-based |
+
+    | Switching time | $\approx10^{-3}$s | $\approx10^{-9}$s |
+
+    | Possible switching operations | $\approx10^{13\frac{1}{4}}$ | $\approx10^{18\frac{1}{2}}$
+    |
+
+    | Actual switching operations | $\approx10^{12\frac{1}{2}}$ | $\approx10^{16\frac{1}{2}}$
+    |
+
+
+    # Comparison between brain and computer
+
+
+    First, we need to understand the structure of the brain in depth. The structural
+    organization of the brain is shown in Figure 3.2 below.
+
+
+    +   - The synapses represent the most fundamental level, and depend on molecules
+    and ions for their actions.
+
+
+    +   - A neural microcircuit alludes to a conglomeration of neurotransmitters sorted
+    out our examples of a network to deliver a practical operation of intrigue.
+
+
+    +   - The neural microcircuits are grouped to form dendrite subunits within the
+    dendrite trees of individual neurons.
+
+
+    +   - A whole neuron is about 100$\mu$m in size. It contains several dendrite
+    subunits.
+
+
+    +   - The nearby circuits comprise neurons with comparable or diverse properties.
+    Each circuit is around 1mm in size. The neural gatherings perform operations on
+    attributes of a limited area in the cerebrum.
+
+
+    +   - The interregional circuits consist of pathways, segments and topographic
+    maps, which include various districts situated in various parts of the cerebrum.
+
+
+    +   - The focal sensory system is the last level of unpredictability where the
+    topographic maps intercept particular sorts of conduct.'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'Central Nervous System
+
+
+    Interregional Circuits
+
+
+    Local Circuits
+
+
+    Neurons
+
+
+    Dendrite Trees
+
+
+    Neural Microcircuits
+
+
+    Synapses
+
+
+    Figure 3.2: Structural organization of the brain
+
+
+    # What is a Neural Network?
+
+
+    Artificial neural networks are also generally referred to as neural networks.
+    This study has been motivated by the human brain, which is a complete and successful
+    biological system working in different way from a traditional digital computer.
+    The brain is a highly complex, non-linear, and parallel processor. It consists
+    of numerous nerve cells of significant quality to work massively in parallel,
+    and it also has ability to learn. There are nearly 100 billion neurons in the
+    human brain. A typical neuron (Figure 3.3) consists of a cell body, dendrites,
+    and an axon.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '![](img/9fe8d2acb79e08fc7077850a9468c4c3_45_0.png)
+
+
+    Figure 3.3: Biological neuron
+
+
+    The building blocks of neural network are neurons. In technical system we also
+    refer to them as units or nodes. An artificial neural network is shown in Figure
+    3.3. Basically, each neuron:
+
+
+    +   * receives input from many other neurons,
+
+    * changes its internal state (activation) based on the current input,
+
+    * Sends one output signal to many other neurons, possibly including its input
+    neurons (recurrent network).
+
+
+    Data is transmitted as a progression of electric motivations, supposed spikes.
+    The recurrence and period of these spikes encode the data. In natural frameworks,
+    one neuron can be associated with upwards of 10,000 different neurons. More often
+    than not, a neuron receives its data from different neurons.
+
+
+    Neural networks are able to learn by adapting its connectivity patterns so that
+    the organism improves its behavior in terms of reaching certain (evolutionary)
+    goals. The strength of a connection, whether it is excitatory or inhibitory, depends
+    on the state of a receiving neuron''s synapses (as shown in the figure below).
+    The neural network achieves learning by appropriately adapting the states of its
+    synapses.
+
+
+    # Artificial Neuron Presentation'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: 'Neural networks or artificial neural networks are simulations on the computer
+    that serve to perform certain tasks like clustering, classification, pattern recognition,
+    etc. The figure below explains artificial neural networks in details.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_46_0.png)
+
+
+    Figure 3.4 Artificial neural network
+
+
+    +   - The artificial neural network receives input from the external world in
+    the form of a pattern and image in vector form. These inputs are mathematically
+    designated by the notation x, for i in {1, n} n is the number of inputs.
+
+    - Each input is multiplied by its weights equal to w, The weight represents the
+    strength of the interconnection between neurons inside the neural network. It
+    is used by the neural network to solve a problem.
+
+    - The weighted inputs are all summed up inside the computing unit (artificial
+    neuron).
+
+    - The sum corresponds to any numerical value ranging from 0 to infinity. In order
+    to limit the response to arrive at a desired value, a threshold value is set up.
+    For this, the sum is passed through an activation function, which transfers the
+    function used to obtain the desired output.
+
+
+    Useful concepts and terms'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Layer
+
+
+    A layer is the highest-level building block in deep learning. A layer is a container
+    that usually receives weighted input, transforms it with a set of mostly non-linear
+    functions, and then passes on these values as output to the next layer. A layer
+    is usually uniform, that is, it contains only one type of activation, pooling,
+    convolution etc, etc., so that it can be easily compared to other parts of the
+    network. The first and last layers in a network are called the input and output
+    layers, respectively, and all layers in-between are called hidden layers.
+
+
+    # Unit
+
+
+    A unit refers to the activation function in a layer by which the inputs are transformed
+    via a nonlinear activation function. Usually, a unit has several incoming connections
+    and several outgoing connections. Pooling, convolution, and other input transforming
+    functions are usually not referred to units.
+
+
+    # Activation function
+
+
+    A neural networks calculates a weighted sum of its input, adds a bias, and then
+    decides whether it should be “considered” or not. The value of the weighted sum
+    + bias can range between any intervals.
+
+
+    So, how do we decide whether the neuron should be considered or not? The activation
+    functions fulfill this task; they check the value produced by a neuron and decide
+    whether outside connections should consider this neuron as “fired” or not.
+
+
+    The difference between units and activation functions is that units can be more
+    complex, that is, a unit can have multiple activation functions or a slightly
+    more complex structure.
+
+
+    The neuron of a specific layer receives a similar kind of enactment work. In all
+    cases, non-straight enactment capacities are utilized. The different sorts of
+    enactment capacities are utilized as a part of
+
+
+    +   - Threshold function
+
+    - Piecewise-linear function
+
+    - Sigmoid function
+
+
+    # Feature engineering
+
+
+    Here, we give a practical explanation of feature engineering. It is the art of
+    extracting useful patterns from data that will make it easier for machine learning
+    models to distinguish between classes. The features can be pixel values, shape,
+    textures, position and orientation.
+
+
+    In a machine learning algorithm, the performance is based on the accuracy of these
+    features as well as their identification and extraction. However, deep learning
+    algorithms to learn high-level'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "features from data. In fact, deep learning reduces the task of developing a\
+    \ new feature extractor for each problem. \n\nLet's consider the example of face\
+    \ recognition. When we as humans try to recognize features, we concentrate on\
+    \ various features such as eyebrows, lips, the shape of the eyes, the pattern\
+    \ of the hair, and so on.\n\nWe recognize these features by combining low level\
+    \ features such as different types of curves around the eyes, eyebrows, lips,\
+    \ and so on.\n\nA deep learning convolutional neural network is similar. It first\
+    \ identifies low level features, such as edges, and then learns to recognize curves\
+    \ and combines them into patterns of lips, eyes, and eyebrows. These different\
+    \ levels of features come from different layers of the network.\n\n# Feature Learning\n\
+    \nFeature learning is a set of techniques that learn a feature, namely a transformation\
+    \ of raw data input into a representation that can be effectively utilized in\
+    \ machine learning tasks. This avoids manual feature engineering, which is otherwise\
+    \ necessary, and allows a machine to learn both a specific task (using the features)\
+    \ and learn the features themselves.\n\nFeature learning is motivated by the fact\
+    \ that machine learning tasks such as classification often require input that\
+    \ is both mathematically and computationally convenient to process. However, real-world\
+    \ data such as images, video, and sensor measurements, is usually complex, redundant,\
+    \ and highly variable. Thus, it is necessary to discover useful features or representations\
+    \ from raw data. Traditional handcrafted features often require expensive human\
+    \ labor and often rely on expert knowledge. Also, they do not generalize well.\
+    \ This motivates the design of efficient feature learning techniques to automate\
+    \ and generalize this.\n\nFeature learning can be divided into two categories:\
+    \ supervised and unsupervised feature learning, analogous to these categories\
+    \ in machine learning generally.\n\n+   In supervised feature learning, features\
+    \ are learned with labeled input data. Examples include supervised neural networks,\
+    \ multilayer perceptrons, and (unsupervised) deep learning.\n\n+   In unsupervised\
+    \ feature learning, features are learned with unlabeled input data. Examples include\
+    \ dictionary learning, independent component analysis, autoencoders, and various\
+    \ forms of clustering.\n\n# Gradient descent\n\nGradient descent is an algorithm\
+    \ used to find the local minimum of a function. By initially guessing the solution\
+    \ and using the function gradient at that point, we guide the solution in the\
+    \ negative direction of the gradient and repeat this until the algorithm eventually\
+    \ converges at the point where the gradient is zero - we essentially descend to\
+    \ the error surface until we arrive at a valley."
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Big learning rate
+
+
+    # Small learning rate
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_49_0.png)
+
+
+    Figure 3.5: Gradient Descent in deep learning
+
+
+    # Artificial Neural Network Structure
+
+
+    As we have seen earlier, artificial neural network (ANN) are commonly referred
+    to as neural networks. Now, let us see some comprehensive definitions and graphic
+    representations (Figure 3.6).
+
+
+    +   * A computing system is made up of a number of simple, highly interconnected
+    processing elements, which process information by their dynamic state response
+    to external inputs.
+
+
+    +   * An artificial neural network (ANN), frequently called a "neural network"
+    (NN), is a numerical model or computational model in the manner of natural neural
+    network; at the end of the day, it is an imitation of an organic neural framework.
+
+
+    A typical neural network contains a large number of artificial neurons called
+    units, arranged in a series of layers. The glossary offers more explanation about
+    units and layers. Most neural networks are fully connected, which means that each
+    hidden neuron is fully connected to every neuron in its previous layer (input)
+    as well as to the next layer (output) layer.'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '![](img/9fe8d2acb79e08fc7077850a9468c4c3_50_0.png)
+
+
+    Figure 3.6: Artificial neural networks
+
+
+    Now we need to understand the main features of ANN. As shown in Figure 3.6, they
+    have a three-layered architecture. The input layer is connected to hidden layer,
+    which is connected to the output layer.
+
+
+    # Input layer
+
+
+    The nodes of the input layer are passive in that they do not modify data. This
+    layer is responsible for receiving data from the external environment. They receive
+    a single value.
+
+
+    # Hidden layer
+
+
+    Each incentive from the information layer is copied and sent to all the shrouded
+    hubs; this is called a completely interconnected structure. They perform calculations
+    and exchange data from the information hubs to the yield hubs.
+
+
+    # Output layer
+
+
+    This is responsible for computations and for transferring information from the
+    network to the outside world.
+
+
+    # Supervised and unsupervised neural network
+
+
+    The algorithm of a neural network can be either supervised or unsupervised. A
+    neural network is supervised if the desired output is already known. Let us consider
+    the example of pattern association.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'Suppose a neural net shall learn to associate the following pairs of patterns.
+    The input patterns are decimal numbers, each represented in a sequence of bits.
+    The target patterns are given in the form of binary values of the decimal numbers:
+
+
+    | Input pattern | Target pattern |
+
+    |---|---|
+
+    | 0001 | 001 |
+
+    | 0010 | 010 |
+
+    | 0100 | 011 |
+
+    | 1000 | 100 |
+
+
+    While learning, one of the input patterns is given to the input layer. This pattern
+    is propagated through the networks (independent of its structure) to the output
+    layer. The output layer generates an output pattern, which is then compared to
+    the target pattern. Depending on the difference between the output and the target,
+    an error value is computed.
+
+
+    This output error indicates the quality of this prediction, which can be controlled
+    by the "imaginary supervisor". The greater the computed error value, the more
+    the weights will be changed. Neural networks that learn unsupervised have no such
+    target outputs. It is not possible to determine what the result of the learning
+    process will look like.
+
+
+    During the learning process, the units (weight values) of such a neural network
+    are "arranged" inside a certain range, depending on the given input values. The
+    goal is to group similar units close together in certain areas of the value range.
+
+
+    # Basics of Artificial Neural Networks
+
+
+    Perceptron: An early deep learning algorithm
+
+
+    These are the oldest and simplest artificial networks known were defined by Rosenblatt
+    (1958) as a machine that learns using examples to assign input vectors (samples)
+    to different classes using a linear function of the inputs.
+
+
+    Now, also is a graph of how a perceptron looks like. Pretty similar to the nerve
+    cell graph above, right? Indeed. Perceptrons and other neural networks are inspired
+    by real neurons in our brain. Note it''s only inspired and does not work exactly
+    like real neurons. The procedure of a perceptron processing data is as follows:'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '1. On the left side you have neurons (small circles) of x with subscripts 1,
+    2, ..., m carrying data input.
+
+
+    2. We multiply each of the input by a weight w, also labeled with subscripts 1,
+    2, ..., m, along the arrow (also called a synapse) to the big circle in the middle.
+    So w1 *x1, w2 *x2, w3 *x3 and so on.
+
+
+    3. Once all the inputs are multiplied by a weight, we sum all of them up and add
+    another pre-determined number called bias.
+
+
+    4. Then, we push the result further to the right. Now, we have this step function
+    in the rectangle. What it means is that if the result from step 3 is any number
+    equal or larger than 0, then we get 1 as output, otherwise if the result is smaller
+    than 0, we get0 output.
+
+
+    5. The output is either 1 or 0.
+
+
+    Note that alternatively, if you move bias to the right side of the equation in
+    the activation function like sum(wx) ≥ -b then this -b is called a threshold value.
+    So if the sum of the inputs and weights is greater than or equal to the threshold,
+    the activation triggers an 1. Otherwise, the activation outcome is 0. Choose whatever
+    that helps you to understand better as these two ways of representation are interchangeable.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_52_0.png)
+
+
+    Figure 3.7: Perceptron'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# Training a perceptron
+
+
+    The training perceptron consists of using different preparing tests and figuring
+    the yield for each of them. After each example, the weights w are balanced in
+    a path in order to limit the yield error, characterized by the distinction between
+    the coveted (target) and the genuine yields. There are other error functions,
+    similar to the mean square error, however the fundamental standard of preparing
+    continues as before.
+
+
+    # Adaline Learning Algorithm
+
+
+    ADALINE is an acronym for ADaptive LINear Element or ADaptive LINear Neuron. This
+    algorithm was developed by Bernard Widrow and Marcian Hoff (1960).
+
+
+    The adaline learning rule is also known as the least-mean-squares rule, the delta
+    rule. It is a training rule that minimizes the output error using gradient descent.
+    After each training pattern a correction is applied to the weights proportionally
+    to the error. The correction is calculated before the thresholding.
+
+
+    The idea is to pick tests in arbitrary request and perform a (moderate) angle
+    plummet in their individual blunder capacities. This method permits incremental
+    learning, i.e., a refining of weights as additionally preparing tests are included.
+
+
+    # The Delta Rule
+
+
+    Developed by Widrow and Hoff, the delta rule, also called the Least Mean Square
+    (LMS) method, is one of the most commonly used learning rules. For a given input
+    vector, the output vector is compared to the correct answer. If the difference
+    is zero, no learning takes place; otherwise, the weights are adjusted to reduce
+    this difference.
+
+
+    # The Delta Rule and Learning Rate
+
+
+    In addition to the weight parameters defined in our neural network, learning algorithms
+    also need a couple of additional parameters to carry out the training process.
+    One of these so-called parameters is the learning rate.
+
+
+    In practice, at each step of moving perpendicular to the line, we need to determine
+    how far we want to walk before recalculating our new direction. This distance
+    depends on the steepness of the surface. The closer we are to the minimum, the
+    shorter we want to step forward. We know we are close to the minimum, because
+    the surface is a lot flatter, so we can use the steepness as an indicator of how
+    close we are to the minimum. However, if our error surface is shallow, training
+    can potentially take a large amount of time. As a result, we often multiply the
+    gradient by a factor ε, the learning rate. The selection of the learning rate
+    is a tough problem. As we have just'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: discussed, if we pick a learning rate that is too small, we risk taking too
+    long during the training process. However, if we pick a learning rate that is
+    too big, we will mostly likely start diverging away from the minimum.
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# Applications of Neural Networks
+
+
+    Neural Network Applications can be grouped into the following categories.
+
+
+    # Clustering
+
+
+    A clustering algorithm explores the similarity between patterns and places similar
+    patterns in a cluster. The best known applications include data compression and
+    data mining.
+
+
+    # Classification and pattern recognition:
+
+
+    An example is distributing an informational design (like a manually written image)
+    to one of many classes. This classification incorporates algorithmic usage, such
+    asacquainted memory.
+
+
+    # Function approximation
+
+
+    The task of function approximation is to find an estimate of the unknown function
+    / subject to noise. Various engineering and scientific disciplines require function
+    approximation.
+
+
+    # Prediction and dynamical systems
+
+
+    The task is to forecast future values of (time-sequenced data)Prediction significantly
+    affects choice in emotionally supportive networks. The forecast, in contrast to
+    the function approximation, considers the time factor. Here the framework and
+    may deliver distinctive outcomes for similar information in the light of the framework
+    state (time).
+
+
+    The following is example of facial recognition and is just a mental image to help
+    understand how massive level ANN works. At this stage you are just required to
+    read the example and think of the ANN architecture.
+
+
+    Let us assume that we want to build a network for a computer vision application.
+    More specifically, our network is supplied to recognize faces and facial expressions.
+    This is an example that has actually been implemented. All information, program
+    coded, data, etc. can be found at http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mitchell/ftp/faces.html
+
+
+    The goal is to classify images of faces of various people with various facial
+    expressions and poses. The images of 20 different people were collected, with
+    up to 32 images per person. The following variables were introduced:
+
+
+    +   - expression (happy, sad, anger, neutral)
+
+    - direction of looking (left, right, straight ahead, up)
+
+    - sunglasses (yes or no)
+
+
+    In total, 624 grayscale images were collected, each with a resolution of 30 by
+    32 pixels and intensity values between 0 and 255. The network presented here has
+    only the task of determining the face pose (left, right, up, straight) shown in
+    an input image.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'It uses
+
+
+    +   - 960 input units (one for each pixel in the image)
+
+    * 3 hidden units
+
+    * 4 output neurons (one for each pose)
+
+
+    Each output unit receives an additional input, which is always 1.
+
+
+    By varying the weight of this input, the backpropagation algorithm can adjust
+    an offset for the net input signal.
+
+    Their values are indicated by brightness (ranging from black = -1 to white = 1).
+    Each 30 by 32 matrix represents the weights of one of the three hidden layer units.
+    Each row of four squares represents the weights of one output neuron (three weights
+    for the signals for the hidden units and one for the constant signal !). After
+    training, the network is able to classify 90% of new (non-trained) faces correctly.
+
+
+    # The Challenges of Artificial Neural Networks
+
+
+    Despite being extremely powerful and revolutionary, artificial neural networks
+    face many challenges that need to be addressed by developers. They were large,
+    slow, and can only perform minimal tasks.
+
+    The computing time required for any basic function to be accomplished using artificial
+    neural networks is incredibly long. Although it is certainly fascinating to watch
+    a machine accomplish some of the things that have been accomplished using artificial
+    neural networks, it isn''t very reasonable, either. Since many researchers and
+    developers hope to see deep learning machines used in regard to a various societal
+    function While they are still somewhat used, they are a lot less popular than
+    they were originally. Eventually, developers decided to establish a form of “artificial
+    neural network 2.0”, if you will. That is, they created deep neural networks,
+    which you will learn about in next chapters.
+
+
+    Artificial neural networks are the “how” part of the equation when it comes to
+    deep learning. They are responsible for the process by facilitating a network
+    that enables deep learning to take place. Without the presence of artificial neural
+    networks, there would be no deep learning. Like our brains, these networks are
+    responsible for the development and growth of the artificial intelligences that
+    are attached to the deep learning systems. If they weren''t there, the systems
+    would essentially be null and void. They would cease to exist and there would
+    be no deep learning. The same would be true if we did not have brains of our own.
+    As you can see, deep learning is far more than just artificial neural networks,
+    yet it would be without them. They are an essential component of the entire system.'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# 4. General Presentation of Deep Learning
+
+
+    Objective of this Chapter
+
+    At the end of this chapter, the reader should have learnt:
+
+
+    +   * Link between Artificial Intelligence and Deep Learning
+
+    * Importance of GPU vs. CPU
+
+    * A three-way categorization
+
+    * Recurring methods of deep learning
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_57_0.png)
+
+
+    DEEP LEARNING'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: 'Artificial neural networks are the basis for deep learning, but the development
+    of deep networks goes far beyond artificial neural networks. Since the development
+    of artificial neural networks, scientists and researchers have been focusing on
+    developing and using deep networks. These systems are extremely similar to artificial
+    neural networks; however, they have some differences. They are the future of deep
+    learning, and as the deep learning system progresses it is expected that deep
+    neural networks will eventually replace artificial neural networks entirely.
+
+
+    As you know, artificial neural networks are shallow networks that have been developed
+    in order to mimic the animal brain. However, they do have many disadvantages,
+    of which is that they are large and require many systems in order to work, and
+    that they can only complete a small number of specialized tasks. As far as deep
+    learning goes, the goal is to eventually create an entirely artificial intelligence
+    that requires little to no input from a human in order to function effectively
+    and learn and grow on its own. In order to draw us closer to that, the deep neural
+    network was created.
+
+
+    The deep neural network is an advanced version of the artificial neural network.
+    It features smaller units and less "stiff", but has the ability to perform the
+    complex functions as artificial neural networks. The architects of these networks
+    have focused on few basic approaches as an opportunity to develop a newer and
+    more usable program that allows the deep learning network to perform effectively
+    and efficiently while taxing significantly less.
+
+
+    # Fast graphics processing units (GPUs) for deep learning in neural networks
+
+
+    The CPU (central processing unit) has often been called the brains of the PC.
+    But increasingly, that brain is being enhanced by another part of the PC – the
+    GPU (graphics processing unit), which is its soul. All PCs have chips that render
+    the display images to monitors. But not all these chips are equal. Its integrated
+    graphics controllers provide basic graphics that can display productivity applications
+    like Microsoft PowerPoint, low resolution video and basic games.
+
+
+    The GPU is in a class by itself goes far beyond basic graphics controller functions,
+    and is a programmable and powerful computational device in its own right. Deep
+    Learning requires systems to run execute and GPU must be part of the solution.
+
+
+    GPUs are generally utilized for computer games, an enormous and focused market
+    that has driven down equipment costs. GPUs exceed expectations at the quick matrix
+    and vector multiplication required to persuade/ or give virtual substances as
+    well as for neural network training, and they can accelerate learning by a factor
+    of 50.
+
+
+    # GPU vs. CPU
+
+
+    GPUs have hundreds of simple cores, while a CPU has a few simple cores. GPUs have
+    thousands of concurrent hardware threads and can maximize floating-point throughput.
+
+
+    To comprehend the feature, we take an example that clarifies the distinction naturally.
+    Assume you need to move goods from one place to the next. You can choose a Ferrari
+    or a cargo truck.
+
+    A Ferrari would certainly be quicker and would enable you to move goods in the
+    blink of an eye.
+
+    Yet, the amount of merchandise you can convey is little, and the fuel cost would
+    be high. A cargo'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: 'truck would be slower and would take longer to move goods. However, the amount
+    it can convey is greater in contrast to a Ferrari. Additionally, it is more fuel
+    efficient, so costs are lower.
+
+
+    The current advanced deep neural networks use algorithms, big data, and the computational
+    power of the GPU to change this dynamic. Deep learning is used by the research
+    community and the industry to help solve many data problems, such as computer
+    vision, speech recognition, and natural language processing. Practical examples
+    include:
+
+
+    +   - Image recognition
+
+    - Speech recognition and translation
+
+    - Natural language processing
+
+    - Life sciences
+
+
+    # Three-way categorization
+
+
+    As portrayed before, deep learning alludes to a fairly wide class of machine learning
+    strategies and models, with the trademark of utilizing many layers of non-linear
+    data preparing that are variously leveled (hierarchical) in nature. Depending
+    upon how the designs and strategies are to be utilized, e.g., combination/generation
+    or recognition/ classification, one can extensively sort the vast majority of
+    the work into three noteworthy classes:
+
+
+    # Deep networks for unsupervised or generative learning
+
+
+    These are proposed to catch highly arranged correlations of visible or obvious
+    information for pattern analysis or synthesis purposes when no data about target
+    class labels is available. Unsupervised component or representation learning in
+    the literature alludes to this classification of deep systems. When utilized as
+    part of the generative mode, it may likewise be planned to describe the joint
+    statistical distribution of the visible information and the associated classes
+    when accessible, and be dealt with as a feature of the visible data. In the last
+    case, the utilization of Bayes, theorem can transform this sort of generative
+    network into a discriminative one for learning.
+
+
+    # Deep networks for supervised learning
+
+
+    These are proposed to specifically give discriminative power for pattern classification
+    purposes, frequently by portraying the back distribution of classes adapted on
+    the conditioned data. Target label data are constantly accessible in direct or
+    backhanded structures for supervised learning. These are also called discriminative
+    deep systems.
+
+
+    # Hybrid deep networks
+
+
+    The objective is discrimination, which is aided with the results of the generative
+    or also unsupervised networks. This can be improved through better optimization
+    or/and regularization of the deep systems in classification. The objective can
+    likewise be improved when discriminative criteria for'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: 'supervised learning are utilized to evaluate the parameters in any of the deep
+    generative or unsupervised deep arranges in the classification above.
+
+
+    # Recurring methods of deep learning
+
+
+    Some recurring themes for deep learning are discussed below.
+
+
+    # Dynamic programming for supervised learning / reinforcement learning
+
+
+    One recurring subject of deep learning is dynamic programming (DP), which can
+    encourage task under specific assumptions. For instance, in supervised learning
+    (SL) neural networks, backpropagation itself can be a DP-derived reinforcement
+    learning (RL), and in light of solid Markovian assumptions, DP-derived strategies
+    can help to significantly diminish issue proficiency. DP algorithms are likewise
+    a basic necessity for frameworks that join the concepts of neural networks and
+    graphical models, such as hidden Markov models (HMMs) and expectation maximization
+    (EM).
+
+
+    # Unsupervised learning (UL) facilitating SL and RL
+
+
+    Another recurring theme is the manner by which UL can encourage both SL and RL.
+    UL is regularly used to encode incoming data, such as video or speech streams,
+    into a shape that is more convenient for subsequent goal-directed learning. In
+    particular, codes that decode the original data in a less redundant or more compact
+    way can be fed into SL or RL machines, whose search spaces may become smaller
+    (and CAPS shallower) than those necessary for dealing with the raw data. UL is
+    closely connected to the topics of regularization and compression.
+
+
+    # Learning hierarchical representations through deep SL, UL, RL
+
+
+    Numerous strategies for Good Old-Fashioned Artificial Intelligence (GOFAI) and,
+    in addition, later ways to deal with AI and machine learning learn the hierarchies
+    of an ever-increasing number of dynamic information portrayals. For instance,
+    certain techniques for syntactic pattern recognition, such grammar induction to
+    find chains of formal standards to display observations. The mostly (un-) supervised
+    Automated Mathematician/EURISKO ceaselessly learns ideas by joining already learned
+    ideas. This hierarchical representation learning is also a repeating topic of
+    deep learning neural networks for SL, UL-aided SL, and hierarchical RL. Often,
+    abstract hierarchical portrayals are the normal results of information compression.
+
+
+    # Occam''s razor: compression and minimum description length (MDL)
+
+
+    Occam''s razor favors straightforward arrangements over complex ones. Given some
+    programming language, the rule of Minimum Description Length (MDL) can be utilized
+    to quantify the many-sided quality of an answer applicant by the length of the
+    briefest program that processes it. A few strategies clearly consider program
+    runtime; may consider just program with constant runtime,'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'written in non-universal programming language. In the case of neural networks,
+    the MDL standard recommends that low neural network weight difficulty compares
+    to high neural network probability in the Bayesian view, and to high generalization
+    performance, without over-fitting the training information. Numerous strategies
+    have been proposed for regularizing neural networks, including scanning for solution
+    computing and straightforward, low-intricacy SL NNs and RL NNs. This is firmly
+    identified with certain UL techniques.
+
+
+    # A three-way categorization
+
+
+    As portrayed, deep learning adapts to a wide class of machine learning strategies
+    and models, with the trademark of utilizing many layers of non-linear data preparing
+    that are variously leveled (hierarchical) in nature. Depending upon how the designs
+    and strategies are to be utilized, e.g., combination/generation or recognition/
+    classification, one can extensively sort the vast majority of the work here into
+    three noteworthy classes:
+
+
+    # Deep networks for unsupervised or generative learning
+
+
+    These are proposed to catch highly arranged correlations of visible or obvious
+    information for pattern analysis or synthesis when no data about target class
+    labels is available. Unsupervised component or representation learning in the
+    literature assures to this classification of deep systems. When utilized as part
+    of the generative mode, it may likewise be planned to describe the joint statistical
+    distribution of the visible information and the associated classes as accessible,
+    and be dealt with as a feature of the visible data. In the last case, the utilization
+    of Bayes, theorem can transform this sort of generative network into a discriminative
+    one for learning.
+
+
+    # Deep networks for supervised learning
+
+
+    These are proposed to specifically giveative power for pattern classification
+    purposes, frequently by portraying the back distribution of classes adapted on
+    the conditioned data. Target label data are constantly accessible in direct or
+    بیانed structures for supervised learning. These are also called discriminative
+    deep systems.
+
+
+    # Hybrid deep networks
+
+
+    The objective is discrimination, which is aided by the results of generative or
+    also unsupervised deep networks. This can be improved through better optimization
+    or/regularization of the deep systems in classification. The objective can likewise
+    be improved when discriminative criteria for supervised learning are utilized
+    to evaluate the parameters in any of the generative or unsupervised deep arrangements
+    in the classification above.
+
+
+    # Recurring methods of deep learning'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# Dynamic programming under supervised learning / reinforcement learning (SL/RL)
+
+
+    One recurring subject of deep learning is dynamic programming (DP), which can
+    encourage task under specific assumptions. For instance, in SL neural networks,
+    backpropagation itself can be seen as a DP-ferred technique. In traditional RL,
+    and in light of solid Markovian assumptions, DP-derived strategies can help to
+    significantly diminish infuse. DP algorithms are likewise a basic necessity for
+    frameworks that join the concepts of neural networks and graphical models, such
+    as hidden Markov models (HMMs) and expectation maximization (EM).
+
+
+    Unsupervised learning is the manner by which UL can encourage both SL and RL.
+    UL is regularly used to encode incoming data, such as video or speech streams,
+    into a shape that is more convenient for subsequent goal-directed learning. In
+    particular, codes that describe the original data in a less redundant or more
+    compact way can be fed into SL or RL machines, whose search spaces may thus become
+    smaller (CAPs shallower) than those necessary for dealing with the raw data. UL
+    is closely connected to the topics of regularization and compression.
+
+
+    # Hierarchical representations for deep SL, RL
+
+
+    Numerous strategies for Good Old-Fashioned Artificial Intelligence (GOFAI) and,
+    in addition, later ways to deal with AI and machine learning learn the hierarchies
+    of an ever-increasing number of information patterns. For instance, certain techniques
+    for syntactic pattern recognition, such grammar induction to find chains of formal
+    standards to display observations. The mostly (un-)supervised Automated Mathematician/EURISKO
+    ceaselessly learns by joining learnt ideas. This hierarchical representation learning
+    is also a repeating topic of deep learning neural networks for SL, UL-aided SL,
+    and hierarchical RL. Often, abstract hierarchical portrays are the normal results
+    of information compression.
+
+
+    # Occam''s razor: compression and minimum description length (MDL)
+
+
+    Occam’s razor favors straightforward arrangements over complex ones. Given some
+    programming language, the rule of Minimum Description Length (MDL) can be utilized
+    to quantify the sided quality of an answer by the length of the shortest program
+    that processes it. A few strategies generally consider program runtime; many consider
+    with constant runtime, written in non-universal programming language. In the case
+    of neural networks, the MDL standard recommends low neural network weight difficulty
+    compares to high neural network probability in the Bayesian view, and to high
+    generalization performance, without over-fitting the training information. Numerous
+    strategies have been proposed for regularizing neural networks, including searching
+    for solution computing and straightforward, low-intricacy SL NNs and RL NNs. This
+    is firmly identified with certain UL techniques.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# Fast graphics processing units (GPUs) for deep learning in neural networks
+
+
+    GPUs are generally utilized for computer games, an enormous and focused market
+    that has driven down equipment costs. GPUs exceed expectations at the quick matrix
+    and vector multiplication required to persuade/ show or give virtual substances
+    as well as for neural network training, where they can accelerate learning by
+    a factor of 50
+
+
+    * accounted by, Factor 50'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# 5. Multilayer Perceptron and Backpropagation: How they are work?
+
+
+    Objective of this Chapter
+
+    This chapter will cover the essentials of neural nets utilizing a particular sort
+    of system called a "multilayer perceptron", or MLP for short and backpropagation
+    algorithms.
+
+
+    # Multilayer perceptron
+
+
+    MLPs are normally utilized when you have what the vast majority would consider
+    "standard data", e.g. data in a tabular format where rows are samples and column
+    are variables. Another important thing to include here that the rows and columns
+    are both interchangeable, which means we can swap the sequence of the rows or
+    the order of the column and not change the “meaning” of the input information.
+
+    A MLP can be seen as a logistic regression classifier where the input is first
+    changed utilizing a non-linear transformation. This change projects the input
+    data into a space, where it turns out to be linearly separable. This middle layer
+    is alluded to as a hidden layer. A single hidden layer is sufficient to make MLPs.
+
+
+    # The MLP model
+
+
+    An MLP with a single hidden layer is shown in figure 5.1.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_64_0.png)
+
+
+    Figure 5.1: MLP model
+
+
+    # Tricks for training MLPs
+
+
+    There are a few hyper parameters, which are not (and, in general, cannot be) enhanced
+    by gradient descent. Essentially, finding a hyper parameter of qualities for these
+    hyper parameters isn''t a feasible problem. To begin with, we can''t just optimize
+    each of them freely. Secondly, we can''t promptly'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: 'apply gradient strategies (partially because few parameters are discrete values
+    and others are real values). Third, the optimization problem is not convex and
+    finding a local would include a significant amount of work.
+
+
+    Fortunately, in the last 25 years, scientists have developed different general
+    guidelines for selecting hyper-parameters in a neural system. A decent outline
+    of these traps can be found in Efficient BackProp by Yann LeCun, Leon Bottou,
+    Genevieve Orr, and Klaus-Robert Mueller.
+
+
+    # Backpropagation
+
+
+    This was originally introduced in the 1970s but its worth''s not fully known until
+    1986. It works faster than many early approaches and make it possible to solve
+    many neural net problems which are insoluble.
+
+
+    Backpropagation, the short name for the "backward propagation of errors" (shown
+    in figure 2.5) is an algorithm for the supervised learning of artificial neural
+    networks for gradient descent and a common method for training neural networks.
+    Known as an artificial neural network and an error function, the method calculates
+    the gradient of the error function with respect to the neural network''s weights.
+    It is a generalization of perceptron''s to multilayer feed-forward neural networks.
+    It is named after that the calculations of the gradient precede backward through
+    the network. The gradient of the final layer of weights are calculated first and
+    the gradient of the first layer of weights are calculated last.
+
+
+    When training a neural network using the back-propagation algorithm, the gradient
+    descent technique is used to determine the weight updates. Gradient descent is
+    an iterative minimization method. The gradient of the error function always indicates
+    the direction of the steepest ascent of the error function. Thus, we can start
+    with a random weight vector.
+
+
+    # Definition backward backpropagation
+
+
+    Backpropagation is analogous to calculating the delta rule for a multilayer feed-forward
+    network. Like, the delta rule, backpropagation requires three things:
+
+
+    +   1. A dataset consisting of input-output pairs, where xi the input and y, is
+    the desired output of network depending on the input. This set of input-output
+    pairs of size N is represented as:
+
+
+    +   2. Feed forward neural networks are collectively denoted by θ. The same layer
+    nodes have no connection and the layers are fully connected.
+
+
+    +   3. An error function is defines error between the desired output and the calculated
+    output for the input given.
+
+
+    A neural network with a gradient descent requires the calculation of the gradient
+    of the error function for training, with weights and biases According to learning
+    rate, α, iterations of gradient update weights and biases is as:'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# Applications of backpropagation
+
+
+    In function approximation, the network is trained to estimate the value of a certain
+    function. Some noisy data is stored or fed, and system is trained to identify
+    the required pattern. After training, the network productively estimates the value
+    of the Gaussian function (figure 5.2).
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_66_0.png)
+
+
+    Figure 5.2: Function approximation
+
+
+    In time series prediction, the target is to design a neural network to predict
+    a value based on a given time series data (i.e. stock market prediction based
+    on given trends). To approach this problem, the inputs to the neural network have
+    to be refectory in chunks, and the resulting output will be the next data data
+    item directly following that chunk (figure 5.3).
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_66_1.png)
+
+
+    Figure 5.3: Series prediction with backpropagation'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# Natural Language Processing and sentimental analysis
+
+
+    Using artificial neural networks and deep neural networks, scientists have been
+    able to create machinery that can assist with translations and language modeling.
+    This program is known as LSTM and was introduced in the early 2000s.
+
+
+    Using LSTM, deep learning networks have the ability to understand native language
+    in a way that enables them to make basic conversations with people. They can communicate
+    back-and-forth in a rational method for some period of time. Because of how advanced
+    this technology is, the deep learning machine can understand many jokes, paraphrasing,
+    and other parts of native language and respond as though it were an actual human
+    sharing an intellectual conversation with you.
+
+
+    While the conversations can be held at this time, technology is rapidly advancing
+    towards deep learning network technology that can hold coherent and effective
+    conversations with people. They are doing this by technology Google Translate
+    end-to-end long-term memory network. This network enables the system to “learn
+    from millions of examples” according to Google, which means the machine can literally
+    pick up on millions of examples and we use these as an opportunity to both interpret
+    what someone is saying to it or as we produce a response. Using this type of technology
+    enables Google devices to remember and translate sentences instead of single words
+    at a time. This means it can interpret the meaning of the entire sentence and
+    generate a response to the entire sentence, rather than one or two words that
+    you have.
+
+
+    In addition to being able to interpret sentences and generate responses, Google
+    Translate can do what the title says: translate. Using their end-to-end long-term
+    memory technology, Google has created a translator that can translate entire sentences
+    rather than translating one word at a time. This means that the translation will
+    accommodate for any grammatical changes from one language to the next and able
+    users to return results with translations that are correct to the native language.
+    Rather than having an awkward sentence that isn’t structured properly or written
+    with proper native grammar, with minimal to no language skills in another language
+    can translate from one to the next and speak in a way that native language speakers
+    will understand.
+
+
+    # Long Short Term Memory networks for sentiments analysis
+
+
+    I how a recurrent neural network (RNN) using Long Short Term Memory (LSTM) architecture
+    can be implemented.
+
+
+    # The LSTM model
+
+
+    In a conventional recurrent neural network, all the gradient back-propagation
+    period, the gradient signal can end up multiplied a great number of times (as
+    many as the number of time steps) by the weight matrix connected with the connections
+    among the neurons of the recurrent hidden layer. This shows that the magnitude
+    of weights in the transition matrix can have a powerful impact on the learning
+    process.'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: 'If the weights in this matrix are little (or, more formally, if the leading
+    eigenvalue of the weight matrix is smaller than 1.0), it can lead to a situation
+    called vanishing gradients, where the gradient signal gets so little that learning
+    either becomes very slow or stops working entirely. It can also make more complex
+    the task of learning long-term dependencies in the data. On the other hand, if
+    the weights in this matrix are big (or, again, more formally, if the leading eigenvalue
+    of the weight matrix is larger than 1.0), it can lead to a situation where the
+    gradient signal is so large that it can cause learning to diverge. This is frequently
+    referred to as exploding gradients.
+
+
+    These problems are the major motivation behind the LSTM model, which introduces
+    a new structure called a memory cell (see figure 5.4 below). It consists of four
+    major elements: an input gate, a neuron with a self-recurrent connection (a connection
+    to itself), a forget gate, and an output gate. The self-recurrent link has a weight
+    of 1.0 and gives surety that, barring any outside interference, the state of the
+    memory cell can remain constant from one time step to another. The input gate
+    can permit an incoming signal to alter the state of the memory cell to have an
+    effect on it or it can block it. On the other hand, the output gate can allow
+    the state of the memory cell to have an effect on other neurons or it can prevent
+    it. Finally, the forget gate can modulate the memory cell''s self-recurrent connection
+    and permit the cell to remember or forget its state, as needed.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_68_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# 6. Convolutional Neural Networks (CNN): How it is works?
+
+
+    Objective of this Chapter
+
+
+    At the end of this chapter, the reader should have learnt:
+
+
+    +   - Convolution layer
+
+    - Pooling layer
+
+    - Fully connected layer
+
+    - CONV-NET Architecture
+
+
+    A convolutional neural networks can be considered as a neural network that utilizes
+    numerous identical replicas of the same neuron. The benefit of this is that it
+    enables a network to learn a neuron once and use it in numerous places, simplifying
+    the model learning process and thus reducing error.
+
+
+    Convolutional systems were propelled by natural or biological processes in which
+    the network design between neurons is inspired by the association with the animal
+    visual cortex. Individual cortical neurons react to stimuli just in a limited
+    locale of the visual field known as the receptive field. The receptive fields
+    of various neurons mostly cover the whole visual field. Convolutional neural networks
+    (CONV-Nets or CNNs) are classifications of neural networks that have demonstrated
+    to be extremely powerful in certain fields, such as image recognition and classification.
+    CNN have been effective in recognizing faces, objects and traffic signs separately
+    from controlling vision in robots and self-driving autos.'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# CNN Architecture
+
+
+    A CNN comprises various convolutional and sub-sampling layers on the other hand
+    followed by completely connected layers. The input to a convolutional layer is
+    an m x m r picture, where m is the height and width of the picture and r is the
+    quantity of channels, e.g. r=3. The convolutional layer will have k channels (or
+    filters/kernels) of size n x n x q, where n is less than the dimension of the
+    picture and q can either be the same as the number of channels r or may shift
+    for every filter. The extent of the filters offers an ascent to the locally associated
+    filters, which are convolved with the picture to create k, including maps of size
+    n-n+1. Each map is then sub-sampled normally over a p x p contiguous region, where
+    p is between 2 for small pictures (e.g. MNIST) and is typically not more than
+    5 for bigger sources of input. Either earlier or after the sub-sampling layer,
+    an additive bias and sigmoidal nonlinearity is connected to each component map.
+    The feature beneath represents a full layer in a CNN comprising convolutional
+    and sub-sampling layers. Units of similar shading have tied weights. The architecture
+    is shown in figures 6.1 and 6.2.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_70_0.png)
+
+
+    Figure 6.1: CNN architecture
+
+
+    After the convolutional layers, there might be any number of completely connected
+    layers. The thickly connected layers are indistinguishable from the layers in
+    a standard multilayer neural system.'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '![](img/9fe8d2acb79e08fc7077850a9468c4c3_71_0.png)
+
+
+    Figure 6.2: Left: A regular 3-layer neural network. Right: A CONV-Net arranges
+    its neurons in three dimensions (width, height, depth), as visualized in one of
+    the layers. Each layer of a CONV-Net transforms the 3D input volume to a 3D output
+    volume of neuron activations. In this example, the red input layer holds the image,
+    so its width and height would be the dimensions of the image, and the depth would
+    be 3 (red, green, blue channels).
+
+
+    # Layers used to build CNN
+
+
+    As we have shown, a straightforward CNN is an arrangement of layers, and each
+    layer of a CNN changes one volume of activation to another through a differentiable
+    function. We use three fundamental kinds of layers to assemble CNN structures:
+    Convolutional layer, pooling layer, and fully connected layer (precisely as found
+    in standard neural networks). We will stack these layers to form a full CNN architecture.
+
+
+    Case Architecture: Overview. However, a straightforward CONV-Net for CIF-10 classification
+    could have the design [INPUT - CONV - ReLU - POOL - FC]. In more detail:
+
+
+    +   * INPUT [32x32x3] will hold the raw values of the picture, for this picture
+    of width 32, height 32, and with three shading channels R, G, B.
+
+    * The CONV layer will figure the output of neurons that are associated with nearby
+    regions in the input, each processing a dot product between their weights and
+    a small region they are associated with the input volume. This may bring about
+    volume, for example, [32x32x12] on the off case that we choose to utilize 12 filters.
+
+    * The ReLU layer will apply an element-wise activation function, for example,
+    the max(0, x) thresholding at zero. This leaves the measure of the volume unaltered
+    [32x32x12].
+
+    * The POOL layer will play out a down sampling operation over the spatial measurements
+    (width, stature), bringing about volume, for example, [16x16x12].
+
+    * The FC (i.e. fully connected) layer will process the class scores, bringing
+    about volume of size [1x1x10], where each of the 10 numbers relate to a class
+    score, for example, among the 10 classifications of CIF-10. As with standard neural
+    networks, as the name infers, every neuron in this layer will be associated with
+    every one of the numbers in the past volume.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: 'Along these lines, CONV-Nets change the first layer by layer from the original
+    pixel value to the last class scores. Note that a few layers contain parameters
+    and others don''t. Specifically, the CONV/FC layers perform changes that are function
+    of the activation in the input volume, as well as of the parameters (weights and
+    biases of the neurons). Then again, the RELU/POOL layers will execute a fixed
+    function. The parameters in the CONV/FC layers will be prepared with gradient
+    descent so the class scores the CONV-Net processes are reliable with the labels
+    in the training set for each picture. A visualization is given in figure 6.3 below:
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_72_0.png)
+
+
+    Figure 6.3: The activations of an example CONV-Net architecture. The first volume
+    stores the raw image pixels (left) and the last volume stores the class scores
+    (right). Each volume of activations along the processing path is shown as a column.
+    Since it''s difficult to visualize 3D volumes, we lay out each volume''s slices
+    in rows. The last volume holds the scores for each class, but here we only visualize
+    the top 5 scores, and print the labels of each one. The full web-based demo is
+    shown in the header of our website. The architecture shown here is a tiny VGG
+    Net, which we will discuss later.'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# Introducing non-linearity (ReLU)
+
+
+    | Convolution + ReLU | Pooling | Convolution + ReLU | Pooling | Fully Connected
+    | Fully Connected | Output Predictions |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_73_0.png)
+
+
+    An extra operation called ReLU has been utilized after each convolution operation
+    in Figure 7.4 above. ReLU stands for Rectified Linear Unit and is a non-linear
+    operation. Its output is given in figure 7.5:
+
+
+    Output = Max(zero, Input)
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_73_1.png)
+
+
+    ReLU is an element-wise operation (connected per pixel) and replaces all negative
+    pixel esteems in the element map by zero. The reason for ReLU is to present non-linearity
+    in our CONV-Net, since for the greater part of this present reality data we would
+    need our CONV-Net to learn what would be non-linear (convolution is a straight/linear
+    operation - component-wise matrix multiplication and addition, so we represent
+    non-linearity by presenting a non-linear function like ReLU).
+
+    The ReLU operation can be seen unmistakably from Figure 7.6 below. It demonstrates
+    the ReLU operation connected to one of the component maps. The output feature
+    map is also known as "rectified" feature map.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '![](img/9fe8d2acb79e08fc7077850a9468c4c3_74_0.png)
+
+
+    Figure 6.6: ReLU feature
+
+
+    Other non-linear capacities, for example, tanh or sigmoid, can likewise be utilized
+    rather than ReLU; however, ReLU has been found to perform better by and large.
+
+
+    # Convolution layer
+
+
+    The CONV layer is the central building piece of a convolutional network and does
+    a large portion of the truly difficult computational work.
+
+
+    # Without brain model
+
+
+    Let us initially take this chance to talk about what the CONV layer processes
+    without mind/neuron analogies. The CONV layer''s parameters comprise a parameter
+    of learnable filters. Each filter (channel) is spatially small (along width and
+    height), however reaches through us the full depth of the input volume. For instance,
+    a run of the typical filter on a first layer of a CONV-Net may estimate 5x5x3
+    (i.e. 5 pixels width and height, and 3 pictures have depth 3, the shading channels).
+    Along with the forward pass, we slide (all the more absolutely, convolve) each
+    filter over the width and height of the input volume and figure spot items between
+    the passages of the channel and the contribution at any position. As we slide
+    over the width and height of the input volume, we will deliver a 2-dimensional
+    activation outline that gives the reactions of that channel at each spatial position.
+    Naturally, the system will learn channels that initiate when they see some kind
+    of visual element, for example, an edge of some introduction or a mark of some
+    color on the principal (first) layer, or in the whole honeycomb or wheel-like
+    patterns on higher layers of the network. Presently, we will have a whole set
+    of channels in each CONV layer (e.g. 12 channels/filters), and each of them will
+    create a different 2 dimensional activation map (outline). We will stack these
+    activation maps along the depth measurement and deliver the output volume.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# The brain-view
+
+
+    In case you''re a devotee of brain/mind/neuron analogies, each section in the
+    3D output volume can likewise be translated as an output of a neuron that focuses
+    on just a little region in the input and offers parameters with all neurons to
+    one side and the right spatially (since these numbers all come because of applying
+    a subtle channel). We now talk about subtle elements of the neuron networks, their
+    arrangement in space, and their parameter sharing plan.
+
+
+    # Local connectivity
+
+
+    When managing high-dimensional sources of input, such as pictures, as we saw above
+    it is unrealistic to connect neurons to all neurons in the past volume. Rather,
+    we associate every neuron to just a local region of the input volume. The spatial
+    degree of this connectivity is a hyper parameter called the receptive field of
+    the neuron (proportionately this is the filter size). The degree of the connectivity
+    along the axis is constantly equivalent to the depth of the input volume. It is
+    vital to put emphasis on this asymmetry by the way we treat the spatial dimensions
+    (width and height) and the depth dimension: The connections are nearby (local)
+    in space (along width and height), however constantly full along the whole depth
+    of the input volume.
+
+
+    # Spatial arrangement
+
+
+    We have clarified the connectivity of every neuron in the ConvLayer for our input;
+    we haven''t yet examined what number of neurons there are in the output volume
+    or how they are organized. Three hyper parameters control the span of the output
+    volume: the depth, stride and zero-padding. We talk about these next
+
+
+    +   1. In the first place, the depth of the output volume is a hyper parameter:
+    It relates to the quantity of filters we might want to utilize, each learning
+    to search for something else in the input. For instance, if the primary convolutional
+    layer takes as the crude/raw picture, at that point diverse neurons along the
+    depth dimension may act in presence of different arranged edges, or blobs of colors.
+    We will allude to an arrangement of neurons that are on the whole taking a same
+    region of the input as a depth column (a few peopleにつき toward the term fiber).
+
+    2. Second, we should determine the step with which we slide the filter. At the
+    point when the stride is 1, then we move the filter one pixel at any given moment.
+    At the point, when the stride is 2 (or remarkably at least 3, however this is
+    generally uncommon) at that point the filters hop 2 pixels at any given moment
+    as we slide them around. This will deliver littler output volumes spatially.
+
+    3. As we will soon observe, now and again it is helpful to pad the input volume
+    with zeros around the border. The measure of this zero-padding is a hyper parameter.
+    The good part of padding is that it will enable us to control the spatial size
+    of the output volumes.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Real lifes example
+
+
+    The Krizhevsky et al. engineering that won the ImageNet challenge in 2012 acknowledged
+    pictures of size [227x227x3]. On the principal convolutional layer, it utilized
+    neurons with receptive field F=11, stride S=4 and no zero padding P=0. Since (227
+    - 11)/4 + 1 = 55, and since the ConvLayer has a depth of K=96, the ConvLayer output
+    volume had the estimate [55x55x96]. Each of the 55*55*96 neurons in this volume
+    was associated with a region of size [11x11x3] in the input volume. Additionally,
+    every one of the96 neurons in every depth column was associated with the same
+    [11x11x3] area of the input, with different weights. As a fun aside, on the off
+    chance that you read the real paper, it asserts that the information pictures
+    were 224x224, which is without a doubt off base because (224 - 11)/4 + 1 is obviously
+    not an integer. This has befuddled individuals in the historical background of
+    Conv-Nets and little is about what happened.
+
+
+    # Parameter sharing
+
+
+    A parameter sharing plan is utilized as part of convolutional layers to control
+    the quantity of the parameters. Utilizing the present real-world case given above,
+    we see that there are 55*55*96 = 290,400 neurons in the primary ConvLayer, and
+    each has 11*11*3 = 363 weights and 1 bias. This, indicates 290400*364 = 105,705,600
+    parameters on the principal layer of the CONVNet alone. Otherwise, this is nothing.
+
+
+    Things being what they are, we can significantly lessen the quantity of parameters
+    by making one simple assumption: On the off that one component is utilized to
+    compute at some spatial position (x,y), at that point it ought to be likewise
+    to compute at a different position (x,y2). As such, indicating a single 2-dimensional
+    slice of depth as a depth slice (e.g. a volume of size [55x55x96]) has 96 depth
+    slices, each of size [55x55x1], we will constrain the neurons in every depth slice
+    to utilize similar weights and bias. With this parameter sharing plan, the primary
+    ConvLayer in our illustration will have just 96 set of weights (for every depth
+    slice), for some of 96*11*11*3 = 34,848 weights, or 34,444 parameters (+96 biases).
+    Every one of the 55*55 neurons in every depth slice will now utilize similar parameters.
+    And by by, along with backpropagation, each neuron in the volume will compute
+    the gradients for its weights; however, these gradients will be included over
+    every depth slice and refresh a single set of weights per slice.
+
+
+    Notice that if all neurons in a single depth slice are utilizing a similar weight
+    vector, at that point the forward motion of the ConvLayer in every depth slice
+    can be figured as a convolution of the neuron''s weights with the input volume
+    (hence the name: convolutional layer). This is basically with the arrangements
+    of weights are referred to as a channel/filter (or a kernel) that is convolved
+    with the input.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '![](img/9fe8d2acb79e08fc7077850a9468c4c3_77_0.png)
+
+
+    Figure 6.7: Example filters learned by Krizhevsky et al. Each of the 96 filters
+    shown here is of size [11x11x3], and each one is shared by the 55*55 neurons in
+    one depth slice. Notice that the parameter sharing assumption is relatively reasonable:
+    If detecting a horizontal edge is important at some location in the image, it
+    should intuitively be useful at some other location as well due to the translational-invariant
+    structure of images. There is therefore no need to relearn a horizontal edge at
+    every one of the 55*55 distinct locations in the ConvLayer output volume.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# 7. Other Deep Learning Algorithms
+
+
+    # Recurrent Neural Networks
+
+
+    In traditional neural networks, all inputs and outputs are independent of one
+    another. In recurrent neural networks, this condition is not valid, and sequential
+    information is used. Recurrent neural networks are reliant on preceding computations
+    as well as on what has previously been calculated.
+
+
+    Recurrent neural networks can be conceptualized as a neural network that has been
+    unrolled over time. When you have different layers in a regular neural network,
+    you apply the same layer to the input at each time step in a recurrent neural
+    network, using the output, i.e. the state of the previous time step, as input.
+    Connections between entities in a recurrent neural network form a directed cycle,
+    creating a sort of internal memory that helps the model leverage long chains of
+    dependencies.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_78_0.png)
+
+
+    Figure 7.1: Recurrent Neural Network Algorithm
+
+
+    # Recursive Neural Network
+
+
+    A recursive neural network is a generalization of a recurrent neural network and
+    is generated by applying a fixed and consistent set of weights repetitively, or
+    recursively, over the structure. Recursive neural networks take the form of a
+    tree, while recurrent neural networks are in the form of a chain. Recursive neural
+    networks have been utilized in natural language processing for tasks such as sentiment
+    analysis.'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '![](img/9fe8d2acb79e08fc7077850a9468c4c3_79_0.png)
+
+
+    Figure 7.2: Recursive neural network example
+
+
+    # Restricted Boltzmann machines
+
+
+    The next logical step is to look at a Restricted Boltzmann machines (RBM). a generative
+    stochastic neural network that can learn a probability distribution over its set
+    of inputs (figure 8.1).
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_79_1.png)
+
+
+    Figure 7.2: RBM'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: 'A restricted Boltzmann machine is a kind of stochastic neural network that
+    consists of one layer of visible units, one layer of hidden units, and a bias
+    unit. The architecture is developed in such a way that each visible unit is connected
+    to all hidden units, and bias units are attached to all visible and hidden units.
+    During the learning process, the restriction is developed so that no visible unit
+    is connected with any visible units, and no hidden unit is connected with any
+    hidden unit.
+
+
+    # Auto encoders
+
+
+    An auto encoder is a neural network that has three layers: an input layer, a hidden
+    (encoding) layer, and a decoding layer. The network is trained to reconstruct
+    its inputs, which forces the hidden layer to try to learn good representations
+    of the inputs.
+
+
+    It is an unsupervised learning algorithm that applies backpropagation, setting
+    the target values to be equal to the inputs. An auto encoder is trained to copy
+    its input to its output. Internally, it has a hidden layer that describes a code
+    to represent the input.
+
+
+    The expectation is that the code y is a distributed representation that captures
+    the coordinates all along the main factors of variation in the data. This is similar
+    to the way the projection on principal components would capture the main factors
+    of variation in the data. Indeed, if there is one linear hidden layer (the code)
+    and the mean squared error criterion is used to train the network, then the k
+    hidden units learn to project the input in the span of the first k principal components
+    of the data. If the hidden layer is non-linear, the auto-encoder behaves differently
+    from PCA, with the ability to capture multiple-modal aspects of the input distribution.
+    The disappearance of PCA becomes even more important when we consider multiple
+    encoders (and their corresponding decoders) when building a deep autoencoder.
+
+
+    Because y is seen as a loss compression of x, it cannot be a good quality (small-loss)
+    compression for all x. Optimization makes it a good compression for training examples,
+    and hopefully for all inputs but not for arbitrary inputs. That is the sense in
+    which an auto-encoder generalizes: it gives a low reconstruction error on test
+    examples from the same distribution as the training examples, but generally high
+    reconstruction error on samples randomly chosen from the input space.
+
+
+    # Stacked auto encoders
+
+
+    This network consists of multiple stacked auto encoders, as the name shows (8.2).
+    The hidden layer of auto encoder acts as an input layer to auto encoder i + 1.
+    The input layer of the first auto encoder is the input layer for the complete
+    network. The greedy-wise training mechanism is like this:
+
+
+    +   * Train the initial auto encoder (/=, or the red connections in the figure
+    above, but with an additional output layer) individually using the backpropagation
+    method with all accessible training data.'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# 4 autoencoders
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_81_0.png)
+
+
+    Figure 7.3: Stacked auto encoders
+
+
+    +   - Train the next auto encoder $f=2$. In view of the fact that the input layer
+    for $f=2$ is the hidden layer of $f=1$, we are no longer interested in the output
+    layer of $f=1$ and we eliminate it from the network. Training begins by clamping
+    an input sample to the input layer of $f=1$, which is propagated forward to the
+    output layer of $f=2$. Next, the weights (input-hidden and hidden-output) of $f=2$
+    uses all the training samples, similar to using backpropagation.
+
+    - Repeat the earlier procedure for all the layers (i.e., remove the output layer
+    of the previous auto encoder, replace it with yet another auto encoder, and train
+    with backpropagation).
+
+    - All above steps are pre-training and leave the weights correctly initialized.
+    On the other hand, there''s no mapping between the input data and the output labels.
+    For example, if the network is trained to identify handwritten digits, it''s still
+    not possible to map the units from the last feature detector (i.e., the hidden
+    layer of the last auto encoder) to the digit type of the image. In that case,
+    the most common solution is to add one or more fully connected layer to the last
+    layer. The whole network can now be viewed as a multilayer perceptron and is trained
+    using backpropagation (this step is also called fine-tuning).
+
+
+    Stacked auto encoders, then, are all providing an effective pre-training technique
+    for initializing the weights of a network, leaving you with a complex, multi-layer
+    perceptron that''s ready to train (or fine-tune)
+
+
+    # Types of Autoencoders
+
+
+    +   1. Denoising autoencoder
+
+    2. Sparse autoencoder
+
+    3. Variational autoencoder (VAE)'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# 4. Contractive autoencoder (CAE)
+
+
+    # Deep belief networks
+
+
+    As with auto encoders, we can also stack Boltzmann machines to generate a class
+    known as deep belief networks (DBNs) as shown in figure 8.3.
+
+
+    In this scenario, the hidden layer of an RBM, $t$, acts as a visible layer for
+    RBM $t+1$. The input layer of the initial RBM is the input layer for the whole
+    network, and the greedy layer-wise pre-training works like this:
+
+
+    +   1. Train the next RBM $t=1$ using contrastive divergence with all the training
+    samples.
+
+
+    +   2. Train the next RBM $t=2$. In view of the fact that the visible layer for
+    $t=2$ is the hidden layer of $t=1$, training begins by clamping the input sample
+    to the visible layer of $t=1$, which is propagated forward to the hidden layer
+    of $t=1$. This data serves to initiate contrastive divergence training for $t=2$.
+
+
+    +   3. Repeat the previous procedure for all the layers.
+
+
+    +   4. Like the stacked auto encoders, after pre-training the network can become
+    extensive connecting one or more fully connected layers to the final RBM hidden
+    layer. This forms a multilayer perceptron which can then be fine-tuned using backpropagation.
+    This procedure is akin to that of stacked auto encoders, but with the auto encoders
+    replaced by RBMs and backpropagation replaced with the contrastive divergence
+    algorithm.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_82_0.png)
+
+
+    Figure 7.4: Deep belief networks'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# 8. Deep Learning Applications
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_83_0.png)
+
+
+    # Chapter Introduction
+
+
+    The recent ascent of artificial intelligence is grounded in the accomplishment
+    of deep learning. Three noteworthy drivers have caused the leap forward of (deep)
+    neural systems: The accessibility of immense measures of training data, effective
+    computational foundations, and advances in the scholarly community. Accordingly,
+    deep learning frameworks have begun to overcome traditional techniques, as well
+    as human benchmarks in different undertakings like image characterization or face
+    recognition. This makes the potential for some, troublesome new organizations
+    to utilize learning to figure out how to take care of certain issues.'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# Applying deep learning to real-world problems
+
+
+    It is simpler than ever before to train a neural network. However, it is hardly
+    ever the case that you can just take code from a tutorial and directly make it
+    work for your purpose.
+
+
+    # The value of pre-training
+
+
+    In the intellectual universe of machine learning, there is little focus on acquiring
+    datasets. Rather, it is the opposite in order to contrast deep learning techniques
+    with other methodologies and guarantee that one method outperforms others, the
+    standard strategy is to measure the performance on a standard dataset with a similar
+    evaluation procedure. However, in real-world situations, it is less about showing
+    that your new algorithm squeezing an additional 1% in performance compared to
+    another method. Rather it is about building a robust system that solves the required
+    task with enough accuracy. As for all machine learning systems, this requires
+    labeled training from which the algorithm can learn.
+
+
+    For many real-world problems it is unfortunately somewhat costly to get well-labeled
+    training data. To elaborate on this issue, let consider two cases.
+
+
+    # Medical vision
+
+
+    If we are required to manufacture a system that detects lymph nodes in a human
+    body in computed tomography (CT) images, we require annotated images where the
+    lymph nodes are labeled. This is a somewhat time consuming task, as the images
+    are 3D and the recognition of very small structures is required. Assuming that
+    a radiologist earns 100$/h and can cautiously annotate 4 images per hour, this
+    shows that we incur costs of 25 $ per image or 250k for 10,000 labeled images.
+    Considering that we require more than a few physicians to label the same image
+    to ensure close to a 100% diagnosis correctness, acquiring a dataset for the given
+    medical task would easily exceed those 250k and that is obviously costly.
+
+
+    # Credit scoring
+
+
+    If we like to build a system that makes credit decisions, we want to know who
+    is likely to default so that we can train a machine learning system to know this
+    beforehand. Unluckily, you only know for sure if somebody defaults when it occurs.
+    Thus, a naive strategy would be to give loans of, $10k to everyone. However, this
+    means that every person who defaults will cost us 10k $. This puts a very expensive
+    price on each labeled data point. We can definitely lower the costs, but the key
+    point is their cost is high.
+
+
+    # Solution to the high cost
+
+
+    Pre-training is the solution to lowering the cost. The crucial idea of pre-training
+    is that we initially train a neural network (or another machine learning algorithm)
+    on a low priced and large dataset in
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_84_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: 'an associated domain or on noisy data in a similar domain. Even though this
+    will not directly solve the original problem, it will give the neural network
+    a rough idea of what your prediction problem looks like. Now, in a next step,
+    the parameters of the neural network are additionally optimized on a much smaller
+    and more expensive dataset of the problem you are actually trying to solve. This
+    two-step procedure is depicted in figure 5.1 below.
+
+
+    # Pre-training: cheap large datasets on related domain
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_85_0.png)
+
+
+    # Fine-tuning: expensive well-labeled data
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_85_1.png)
+
+
+    Figure 8.1: First pre-train the neural network on a large and low-priced dataset
+    in a related domain; secondly, fine-tune it on a pricey well-labeled dataset.
+    This will result in a performance boost compared to just training on the small
+    dataset.
+
+
+    When fine-tuning, the quantity of classes might alter. People often pre-train
+    a neural network on a dataset ImageNet with 1000 classes and fine-tune it to their
+    explicit problem, which is to be expected, with a different number of classes.
+    This tells us about the last layer needs to be initialized. The learning rate
+    is then normally a bit higher on the last layer as it needs to be learned from
+    scratch, whereas the previous layers are trained with a lower learning rate. For
+    some datasets like ImageNet, the features (the last fully connected layer) learned
+    are so generic they can be taken off-the-shelf and directly used for several other
+    computer vision problems.
+
+
+    # Caveats of real-world label distributions
+
+
+    Once we have gathered data for both pre- and fine-tuning, we can move on and begin
+    training our neural networks. Here comes one more huge difference among academia
+    and the real world. In'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: 'academia, the datasets are generally balanced. That means for supervised classification
+    problems there are usually equally many samples per class. Underneath (figures
+    5.2 and 5.3) you find two examples: MNIST is a well-known dataset of handwritten
+    digits containing approximately equally samples of each digit. Food101 is one
+    more example of an academic dataset that contains exactly 1000 images for each
+    of the 101 food categories.
+
+
+    | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+    |---|---|---|---|---|---|---|---|---|---|n| Training set | 0 | 1 | 2 | 3 | 4 |
+    5 | 6 | 7 | 8 | 9 |
+
+    | | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+    | | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+    | | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+    | | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+    | | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+    | | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+    | | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+    | | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+    | Test set | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+    | | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+    | | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+
+    > Fig 8.2: Balanced dataset; MNIST
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_86_0.png)
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_86_1.png)
+
+
+    > Fig 8.3 Balanced dataset; Food101'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# Understanding the black box model
+
+
+    The primary goal in academia is to attain or outperform state-of-the-art performance,
+    no matter what the model is like. When functioning on real-world applications
+    it is often not enough to design a model that performs well.
+
+
+    As an alternative, it is important to be:
+
+
+    +   • To know why and how a model can make incorrect predictions.
+
+    • To give some intuition why our model can perform better than any previous solution.
+
+    • To make sure that the model cannot be tricked.
+
+
+    # Visual applications of deep learning
+
+
+    Some visual applications of deep learning are listed below:
+
+
+    +   • Adding sounds to silent movies.
+
+    • Automatic machine translation.
+
+    • Object classification in photographs.
+
+    • Automatic handwriting generation.
+
+    • Character text generation.
+
+    • Image caption generation.
+
+    • Automatic game playing.
+
+
+    # Adding sounds to silent movies:
+
+
+    In this undertaking, the framework may synthesize sounds that coordinate with
+    a silent video. The framework is trained utilizing 1000 examples of video with
+    the sound of a drumstick striking distinct surfaces and creating different sounds.
+    A deep learning model associates the video frames with a database of pre-recorded
+    sounds in order to choose a sound that best matches what is going on in the scene.
+    The framework was then assessed utilizing Turing Test-like setup where humans
+    had to figure out which video had the real or the fake (synthesized) sounds.
+
+
+    # Automatic machine translation
+
+
+    This is where words, expressions or sentences in one language, and translation
+    of it into another language. Automatic machine translation has been around for
+    quite a while, yet deep learning is accomplishing top outcomes in two particular
+    territories:
+
+
+    +   • Automatic translation of text.
+
+    • Automatic translation of images.
+
+
+    Text translation can be performed with no preprocessing of the arrangement, enabling
+    the algorithms to learn the dependencies between words and their mapping to a
+    new language. Stacked networks of large LSTM recurrent neural networks are used
+    to perform this translation.'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "As you would expect, convolutional neural networks are used to recognize images\
+    \ that have letters and where the letters are in the scene. Once identified, they\
+    \ can be turned into text, translated and the image recreated with the translated\
+    \ text. This is often called instant visual translation. \n\n# Object classification\
+    \ and detection in photographs\n\nThis task involves the classification of objects\
+    \ inside a photograph as one of a ser of earlier known objects.\nState-of-the-art\
+    \ objects have been attained on a benchmark; for instance, in this problem using\
+    \ very large convolutional neural networks. A breakthrough regarding this problem\
+    \ by Alex Krizhevsky et al. resulted in the ImageNet classification problem called\
+    \ ALEX-Net.\n\n![](img/9fe8d2acb79e08fc7077850a9468c4c3_88_0.png)\n\nFigure 8.5:\
+    \ Object classification taken from ImageNet classification with deep convolutional\
+    \ neural networks\n\nA more complicated variation of this task is called object\
+    \ detection and includes specifically identifying one or more objects within the\
+    \ scene of a photograph and drawing a box around them."
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '![](img/9fe8d2acb79e08fc7077850a9468c4c3_89_0.png)
+
+
+    # Automatic handwriting generation
+
+
+    This is a something where, given a corpus of handwriting examples, new handwriting
+    is produced for a specified word or phrase. The handwriting is given as a series
+    of coordinate''s utilizing a pen with which the handwriting samples were formed.
+    By knowing this corpus, the relationship between the pen movement and the letters
+    is learned and new examples can be created ad hoc.
+
+    What is fascinating is that different styles can be learned and then mimicked.'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# Machine hearing Mastery
+
+    Machine Learning Mastery
+
+    Machine learning Mastery
+
+
+    Figure 8.7: Handwriting
+
+
+    # Automatic game playing
+
+
+    This is a job in which a model learns how to play a computer game based only on
+    the pixels on the screen. This is the most complicated task in the field of deep
+    reinforcement models and is the breakthrough through Deep Mind (now part of Google)
+    is renowned for achieving.
+
+
+    Automatic image captioning is the task where certain images are given and the
+    system must generate a caption that describes the contents of the image.
+
+
+    In 2014, there were a number of deep learning algorithms acquiring very exciting
+    results on this problem, leveraging the work from top models for object classification
+    and object detection in photographs.
+
+
+    Objects in photographs are spotted and labels are generated for those objects,
+    the next step is to turn those labels into a coherent sentence description. This
+    is one of outcomes that knocked my socks off and still does; it is very notable
+    indeed!
+
+
+    Generally, the system involves the use of very large convolutional neural networks
+    for the object detection in the photographs and then a recurrent neural network
+    like LSTM to turn the labels into a coherent sentence.'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# Automatic text generation
+
+
+    This is an appealing thing, where a corpus of text is well read and new text is
+    generated from this model, wordbyword or character by character. The representation
+    is capable of learning how to spell, punctuate, form sentences, and also confine
+    it to style of the text in the corpus. Huge recurrent neural networks are being
+    utilized to gain knowledge on the relationship among items in the sequences of
+    input strings and then generate text. More recently, LSTM recurrent neural networks
+    are demonstrating great success regarding this problem using a character-based
+    model, generating one character at a time.
+
+
+    Andre Karpathy provides many examples in his popular blog post on the topic, including:
+
+
+    +   * Shakespeare
+
+    * Wikipedia articles (including the markup)
+
+    * Algebraic geometry (with LaTeX markup)
+
+    * Linux source code
+
+    * Baby names
+
+
+    > PANDARUS:
+
+    Al, I think he shall be approached and the day
+
+    When little spain would be attain''d into being never fed,
+
+    And who is a chain and subjects of his death,
+
+    I should not sleep.
+
+
+    Second Senator:
+
+    They are all this miseries, produced upon my soul,
+
+    Pray and strongly should be buried, when I perish
+
+    The earth and thoughts of many states.
+
+
+    DUKE VINCENTO:
+
+    Well, your wit is in the care of side and that.
+
+
+    Second Lord:
+
+    They would be ruled after this chamber, and
+
+    my fair nees begun out of the fact, to be conveyed,
+
+    Where noble souls I''ll have the heart of the wars.
+
+
+    Clown:
+
+    Come, sir, I will make did behold your worship.
+
+
+    VIOLA:
+
+    I''ll drink it.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_91_0.png)
+
+
+    # Applications using existing APIs
+
+
+    APIs are not merely software running on the other side of the Internet in a remote
+    computer which one can get in the neighborhood. For instance, you may connect
+    Bluetooth speakers to your laptop even if your machine has natural speakers. So,
+    we are able to access the speaker remotely at the same time as we are at our laptop.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# Advantages of deep learning APIs
+
+
+    +   * A standard deep learning application requires weighty computation power
+    in terms of GPUs and data storage/processing. For this reason, you have to set
+    a workstation of your own (or use any of the cloud services) and utilize any system
+    locally to access the workstation and run your applications.
+
+
+    +   * The local system is not weighed down by the computations.
+
+
+    +   * The latest functionalities can be integrated without difficulty.
+
+
+    # Disadvantages of deep learning APIs
+
+
+    +   * Constructing an API may not be of use in terms of cost. An API needs both
+    time and resources to build up and maintain, which tends to be
+
+
+    +   * You are restricted by the Internet connection. If your connection fails
+    at any time, the whole system breaks down.
+
+
+    +   * Your application is open to the elements, security-wise, as anyone can access
+    it without difficulty. Here, you have to add extra security layers like username
+    and password to access the service and limit how many times you can access it
+    over a certain time period.
+
+
+    # Open-source applications
+
+
+    A most excellent and helpful thing in the research community right now is its
+    open-source frame of mind. Researchers are all set to share their findings, no
+    matter what they achieved, so that deep learning research can grow; as a result,
+    it''s growing continuously.
+
+
+    # Advantages of open source applications
+
+
+    +   * As the applications are open sourced, we have access to the each and every
+    element of the application and can easily customize according to one''s requirements.
+
+
+    +   * A lot of developers from diverse organizations and experiences act as a
+    team in the application. This makes the application better than the original version.
+    Also, as many people can use it, it can be considered as being constantly tested
+    and hence more ready for use.
+
+
+    # Disadvantages of open source applications
+
+
+    +   * There may be less “ownership” of an open-source product, as there is no
+    association backing them. So, if they break no one can be held responsible!
+
+
+    +   * There are clear licensing issues included and many companies would not prefer
+    to release their projects so “openly”.'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# 9. Our Future with Deep Learning Applied
+
+
+    Chapter Introduction
+
+
+    While the future of deep learning itself is rather incredible, it may be beneficial
+    to further consider what our future could look like with the integration of deep
+    learning machines. Deep learning technology has already been integrated into our
+    world to a degree, and it is rapidly growing. As a result, we can expect to continue
+    seeing the integration of deep learning-based technologies in our society. In
+    this chapter we are going to explore some of those technologies and what they
+    may look like given what what we already know about deep learning and deep neural
+    networks.
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_93_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# Medical Technology
+
+
+    As you have learned, deep learning technology has the power to perform many incredible
+    tasks in the medical community. The more they explore deep learning machinery,
+    the further these technologies will go. There is the potential that we could end
+    seeing every lab in the world being outfitted with advanced machines that are
+    capable of performing many functions that humans are presently performing, only
+    better. For example, we may see the introduction of machines that can read blood
+    tests and DNA samples to help doctors provide more accurate diagnoses regarding
+    patient''s medical concerns. We may also be able to choose more effective drugs
+    for each unique patient as the machine can factor in many pieces of data, such
+    as the individual''s DNA sequencing, the illness, and the parameters of unique
+    drugs. Machines may be able to predict negative or severe reactions in individuals
+    to certain drugs, meaning that they can choose more effective ones that will treat
+    the illness with less negative or harsh side effects for the patient.
+
+
+    Another type of machine may be developed is one that can help with the development
+    of new drugs. Drugs are constantly being created to treat existing illnesses more
+    efficiently and to treat new illnesses as emerge. If it were created properly,
+    a deep learning machine could provide new ideas for drug creations and provide
+    predictions as to what the effects and adverse reactions to these new drugs could
+    be. In essence, it could play a key role in the development of new medications.
+
+
+    # Biomechanics
+
+
+    Elaborating further on the medical industry, we can address the idea of biomechanics.
+    Already, there are incredible biomechanical limbs and parts that are being tested
+    and used on patients. As we continue to explore the capabilities of deep learning,
+    however, we may be able to discover how to create biomechanical organs and limbs
+    that essentially learn to function as they should in order for people to operate
+    as though they had never lost a limb or an organ in the first place. These biomechanical
+    pieces could be taught to not only help the individual accomplish basic tasks
+    but also relearn to accomplish fine motor skills they may have once had or been
+    interested in developing prior to the loss of their limb.
+
+
+    # Fully Automated Smart Homes
+
+
+    Smart homes are already in existence, but as deep learning machines and systems
+    develop, we learn about more and more that can be done within the home. We can
+    already accomplish tasks, such as turning on lights, changing the music and the
+    channels on the TV, ordering clothes from websites, ordering food from the store;
+    and more. There are many incredible tasks that can be accomplished with smart
+    homes.
+
+
+    However, there is a lot more than could be done using deep learning technology.
+    Many developers from large organizations such as Facebook are already attempting
+    to create a fully automated smart home that could literally do everything for
+    you. It would essentially become a self-sustaining smart home that could do everything
+    for itself. You would never have to cook, clean, pick up groceries, or'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: 'do virtual anything else with a fully automated smart home. Furthermore, they
+    are attempting to create one that can not only do all of this and take commands,
+    but also carry an intelligent conversation and essentially build a “relationship”
+    with the people who live in the home. It would be able to recall important information
+    about you and do things as wish a happy birthday, how your day was, and interact
+    with you based on your response as well as otherwise intelligent and unique conversations
+    that were not facilitated by pre-recorded responses on the device.
+
+
+    Having a smart home could be incredible in that you would no longer have to do
+    much in order to manage your home. Instead, you could cast aside such tasks as
+    cleaning and cooking and spend more time enjoying your home. This particular level
+    of smart home is likely not to be introduced for quite some time, and will only
+    be available to those who are wealthy to begin with, but it is unlikely that we
+    may eventually have smart homes as an average everyday home for consumers.
+
+
+    # Advanced Mobile Technology
+
+
+    ![](img/9fe8d2acb79e08fc7077850a9468c4c3_95_0.png)
+
+
+    If you have watched the evolution of cellphones, you have seen from simple phones
+    in your pocket that could merely be used to call mini-computers that are capable
+    of performing many incredible functions. Social media, texting, managing your
+    calendar, taking high quality photos, and many other things can be completed using
+    current smart phones.
+
+
+    As they continue developing deep learning technology and refining deep neural
+    networks, it is likely that we will continue to see the smart phone even smarter.
+    Over time, these devices may become personal managers that we carry around in
+    our pockets. We would be able to accomplish many of the same things we already
+    complete without having to take out or interact with them in any way beyond speaking.
+    We would be able to communicate with the device and it would do everything from
+    mark cancel dinner reservations to order new outfits or products straight to our
+    home. They could communicate with our friends for us to establish plans or help
+    us communicate with clients if it were to be used as a business device.
+
+
+    Essentially, anything that is typically done by a personal manager can be done
+    by your phone one day Having personal manager would no longer be reserved for
+    those who are rich and famous, as we would have all one in the form of a mobile
+    device.
+
+
+    # Automated Commercial Use Programs
+
+
+    In addition to managing our personal lives, deep learning machines could be used
+    to manage businesses and organizations as well. They could organize and arrange
+    business meetings, reserve tables or spaces for the meetings to be held, and send
+    out automated reminders to everyone who is required to show up without ever having
+    to be present for the arranging. One person could communicate with the device
+    and every other person would have that information and would be able to automatically
+    perform any activities that need to be accomplished in advance. These devices
+    could also be used to manage advertisements. They could be responsible for collecting
+    data and creating advertisement campaigns for various products or businesses based
+    on what was presently taking place in the company. For example, they could determine
+    the target'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: 'audience and how to target them, what parameters would be included in the campaign
+    to ensure that they were reached, and what graphics should be used in order to
+    appeal to the consumer. They would also be able to measure any metrics and data
+    that was returned by the campaign, including how well it performed, how much money
+    each lead cost, the value of each lead, and what could be done to make the campaigns
+    even more effective going forward. Everything would be entirely done by a device
+    and nothing would ever have to be done by an individual person.
+
+
+    There are many other ways that learning machines could be great for businesses
+    as well. They could be used to oversee the payments made to and from companies,
+    order products or services, schedule employees, hire and fire employees, and more.
+    There are truly limitless opportunities when it comes to learning about what could
+    be done in a corporate or commercial world using deep learning machinery.
+
+
+    # Partial Artificial Intelligences
+
+
+    Although the focus often remains on completely artificial intelligence, it is
+    worth paying attention to the idea of partial artificial intelligence as well.
+    This would be a system that is more advanced than specialized machines but not
+    quite a complete artificial intelligence. For example, it could be a human-sized
+    and shaped figure that your personal manager and was capable of taking commands
+    and completing many functions but not entirely independent. Instead, it still
+    relies somewhat on human interaction to complete many functions. This device could
+    be responsible for helping you your day, schedule commitments, order stuff for
+    your house or yourself, and otherwise perform daily activities. It could also
+    help you manage other partial artificial intelligences you may have.
+
+
+    Yes, in addition to a personal manager style artificial intelligence, you could
+    have one that was responsible for physically taking care of your house, one that
+    was responsible for driving your car, and other such things. These would be partial
+    robots capable of performing complex and advanced tasks, but not completely capable
+    of operating on their own with zero assistance from a human. They would be an
+    incredible addition to help people perform daily activities without having to
+    do them on their own, but they would be manageable and programmable by humans.
+
+
+    One why a partial intelligence like this is useful, even one that could perform
+    all the aforementioned tasks, is because it reduces or even eliminates the fear
+    of having a complete artificial intelligence that could take over the world. These
+    ones would be manageable and could be stopped the instant they attempted to cause
+    any harm. They would not be completely independent and therefore could be prevented
+    from wreaking havoc on society the way a completely artificial intelligence might
+    be able to. It would help reduce many of the fears that several people have around
+    while still offering all the benefits and convenience of an artificial intelligence
+    that was capable of performing complex tasks for its owners.
+
+
+    # Complete Artificial Intelligences'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: 'Once again, we discuss the potential of creating a completely artificial intelligence.
+    Complete artificial intelligences would be literal superhumans. They would be
+    capable of doing anything a human could. They would fulfill and execute complex
+    actions and functions, carry on intelligent conversations, learn, grow, and do
+    virtually anything a human could.
+
+
+    While the idea of creating an complete artificial intelligence is staggering,
+    a completely artificial intelligence may be beneficial overall, but it could also
+    pose many threats and dangers to society. If they create their own complete artificial
+    intelligence replicas and develop their society with as many or as few as they
+    wanted. They would be able to create armies, potentially destroy society, and
+    even wipe humans out. If we were to have created artificial intelligences, it
+    could even be that one were hacked or turned "evil" and thus create a large amount
+    of damage in society. Since they would be created to be so strong and virtually
+    perfect, the "imperfect" humans would be capable of stopping them. We would have
+    to outsmart them, since the intelligence would be created to be smarter than us,
+    that be virtually impossible. We would not have the strength to stop them and
+    would require the involvement of other artificial intelligences which could ultimately
+    lead to a war between superhuman machines and humans.
+
+
+    Although the idea of creating a completely artificial intelligence is incredible,
+    it is highly unlikely. Not at any time in the near future. Having a completely
+    artificial intelligence would require us to know basically everything there is
+    to about the human brain in order to recreate it in a machine form. We would also
+    have to know how to recreate it in machine form not to only function like ours
+    but to function better. This is highly unlikely, potentially impossible. If it
+    were to happen, it is likely that it wouldn''t happen for another few generations
+    at least. And when it did, these machines would have to be created in such a way
+    that they could be outsmarted, which then take away from being entirely artificial
+    intelligences. So, unless developers and the government are willing to jeopardize
+    society as a whole, it is extremely unlikely that we will see a true and complete
+    artificial intelligence.
+
+
+    The future of deep learning is vast and incredible. There are so many things that
+    could take place it is hard to dream upon every single. There are truly many routes
+    that this technology could go and the only way we will ever know where it ends
+    up is by watching and waiting. Deep learning networks are essentially our key
+    to creating the sci-fi world that we all dreamed about one time or another, watched
+    or read in pop culture. There are so potentially incredible, and devastating,
+    things that could happen as society without having a significantly negative impact
+    from deep learning. In order for us to continue advancing as a society must take
+    our time and roll things out slowly.
+
+
+    Additionally, major developments must be monitored and thoroughly understood before
+    they are ever exposed to the general public. If something were not fully comprehended
+    and were to be released too soon, could wreak serious havoc on society. The reality
+    is, a human with bad intentions could turn basic deep learning against society.
+    It is important that we take our time and really investigate each part of the
+    process and continue learning more and more about deep learning and deep neural
+    networks before we ever plan to use them as a large and important part of society.'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: Still, it is extremely fun to dream about where we may end up with the inventions
+    that are based on deep learning. There are so many possibilities and the idea
+    of having machines that are capable of fulfilling many of the functions that deep
+    learning machines could potentially fulfill one day is incredible. Could you imagine
+    coming home, asking your kitchen to cook you lobster and steak for dinner and
+    then sitting on your couch and having a conversation with your home while it helps
+    you pick out a show on TV? For some it may seem over the top, but for others it
+    sounds like a great piece of luxury and perhaps the best relationship yet.
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# 10. The Long-Term Vision of Deep Learning
+
+
+    Depending on who you ask, there are many long-term visions for deep learning machines,
+    technologies, and advancements. Several different people have different desires
+    for where they want to see deep learning go and what they want to see coming from
+    it. However, there are some fairly common core concepts and beliefs held by those
+    who are interested or involved in the advancement of deep learning. This chapter
+    will help you get an idea of where the technology itself is aiming to go in the
+    coming years.'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# Smaller and More Efficient
+
+
+    One common goal of those studying and developing deep learning machines is establishing
+    a system that enables them to have all of the same, if not better, outcomes while
+    using much less space. Similar to how computing devices have gotten smaller over
+    time, developers are seeking to make deep neural networks and artificial neural
+    networks that are significantly smaller than the present ones. By being smaller,
+    they become more manageable and are more likely to be used in everyday life.
+
+
+    Another thing that developers are seeking to accomplish is a system that enables
+    the deep learning machines to work more efficiently and quickly. At this time,
+    the computing speed of artificial neural networks is rather slow, making them
+    almost pointless for regular use. While certain functions as speech recognition
+    and image recognition are quick, other functions are extremely slow and this makes
+    them irrelevant in most situations places. If a human can complete the same task
+    quicker and with more accuracy, there is virtually no point in replacing them
+    with an artificial intelligence. If they were able to create deep learning machines
+    that were capable of automatically accomplishing all of the same tasks, only quicker
+    and more accurately, then it would make sense to replace humans with these machines
+    as they would be more efficient and successful with the task at hand.
+
+
+    The future of deep learning machines is similar to the future of computing machines.
+    Just as the latter continues to shrink while becoming more advanced, developers
+    are attempting to do the same with the former. The coolest part is that the two
+    are already entwined and may continue to grow further entwined as they go along.
+    The idea of having a device that fits in your pocket and can do almost everything
+    for you may not be just an idea in the not-so-far future.
+
+
+    # More Automation
+
+
+    Although the systems are already incredibly talented, developers are seeking to
+    make them even more automated. Essentially, they want to add more capabilities
+    to deep learning machines and teach them how to do things with less human interaction.
+    This is the reason why they are heavily invested in learning about the different
+    layers of neural networks and how they can establish machines that have many capabilities.
+    The more research and develop these parts of the deep learning machines, the more
+    automated these systems will become and the more tasks they will be able to successfully
+    complete without having to be driven or guided by a human. Instead, one day they
+    may be able to make choices on their own without requiring a human to intervene
+    and give the machine direction on what to do in every situation.
+
+
+    # Perfected Specialized Abilities'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: 'Before they create a fully artificial intelligence, researchers and developers
+    are likely to continue creating machines that are highly specialized in different
+    fields, such as personalized devices that can help you manage your life and medical
+    devices that can help diagnose and treat illnesses. The two are very different,
+    but both require highly specialized requirements from the machine operating them.
+    Ideally, researchers and developers will find ways to perfect the operations of
+    the machines and make them even more capable of helping with a variety of tasks
+    in real life. Instead of merely demonstrating that they can do so, they will be
+    used in practice to help people perform various functions, including day-to-day
+    activities and different tasks within unique professions.
+
+
+    Given the incredible and vast abilities deep learning machines already have, it
+    is not unlikely that we will start creating machines and technologies being introduced
+    that can help us accomplish various tasks in society. Slowly, we see people being
+    replaced with machines that are more efficient and accurate. These machines will
+    be highly specialized at performing many different functions in society. Truly,
+    the potential and opportunities are limitless. The only thing standing between
+    us and that next step of advanced deep learning machinery is time, but researchers
+    are rapidly advancing towards creating machines that can be used for virtually
+    everything in society.
+
+
+    # Full Artificial Intelligence
+
+
+    The creation of unique specialized machines that can help us with many different
+    aspects of running our society is the goal of creating a fully artificial intelligence.
+    This would essentially be one machine that do it all. Every task that was previously
+    replaced by specialized machinery would be condensed into one single machine.
+    This would enable a single machine to be capable of doing virtually anything that
+    a human could do, only better. This would essentially be the “perfect human” or
+    “superhuman” that everyone refers to when they discuss artificial intelligences.
+    It would be a robotic species entirely capable of doing virtually everything on
+    its own, from learning to taking actions and fulfilling various tasks in society.
+
+
+    Many people participating in the development of an artificial intelligence are
+    interested in creating the ultimate superhuman that can do everything. This is
+    the next step for after creating specialized machines using deep learning abilities.
+    After they perfect each unique element of those machines, they hope to start working
+    towards a single machine that can do it all. With the knowledge they gain from
+    each independent machine, they will be able to program one that can do everything,
+    from recommending where to eat and what to do to identifying your ailment and
+    how to treat it, and even helping you cook your dinner. It would be able to literally
+    everything a human could, which is why they model robots after humans. This would
+    be an entirely robotic species that would live simultaneously amongst humans.
+    The species would be capable of doing virtually anything on its own and wouldn’t
+    require human interaction at all, though they would hope that it would interact
+    with humans and integrate with our society to help us fulfill many tasks that
+    exist within modern society.'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: 'Although there are some clear visions for the future of deep learning, the
+    true future is entirely unknown. To date, it is likely that many of the researchers
+    that were on board with learning about and developing deep learning machinery
+    were unaware of just how far it would go and how much they would be able to accomplish.
+    The technology is truly incredible and revolutionary, and it is capable of doing
+    things that we aren''t even fully aware of at this time. Since we are not entirely
+    clear on the full capabilities of this technology are, it is really hard to pinpoint
+    exactly where the future will go with deep learning. Furthermore, it is hard to
+    say whether or not government officials or other authorities would even allow
+    the creation of a pure artificial intelligence, given that it jeopardize our own
+    existence on Earth.
+
+    The future of deep learning is an expansive one that truly could go in any direction.
+    We may simply end up with highly specialized machines that are capable of fulfilling
+    roles in society better than any human could, or we may end up with completely
+    artificial intelligences that walk among us and interact with our society as their
+    own independent species. The only way we will ever find out what is actually going
+    to happen is to wait and watch. Every day we are learning more and more about
+    this revolutionary technology, it is capabilities, and what our future may look
+    like with the existence and integration of deep learning networks.'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# Thank you !
+
+
+    Thank you for buying this book! It is intended to help you understanding deep
+    learning Layman’s termes. If you enjoyed this book and felt that it added value
+    to your life, I ask that you please take the time to review it.
+
+
+    Your honest feedback would be greatly appreciated. It really does make a difference.'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '# DEEP LEARNING FOR THE LAYMAN
+
+
+    This book has been written in layman''s terms as an introduction to deep learning
+    and neural networks and their algorithms. Each algorithm explained very easily
+    for more understanding.
+
+
+    This book will help you explore exactly what deep learning is and will also teach
+    you about why it is so revolutionary and fascinating. The chapters will introduce
+    the reader to the concepts, techniques, and applications of deep learning algorithms
+    with the practical case studies and walk-through examples on what to practice.
+    By the time you are done reading this book, you will have a complete understanding
+    as to what deep learning is and why it is such an incredible advancement in technology.'
+  merge: -1
+  img_proc: true
