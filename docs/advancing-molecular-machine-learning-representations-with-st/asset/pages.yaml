@@ -1,0 +1,1278 @@
+- pgno: 0
+  md: '# nature machine intelligence
+
+
+    Article https://doi.org/10.1038/s42256-025-01031-9
+
+
+    # # Advancing molecular machine learning representations with stereoelectronics-infused
+    molecular graphs
+
+
+    Received: 9 August 2024
+
+    Accepted: 3 April 2025
+
+    Published: 23 May 2025
+
+
+    Daniil A. Boiko¹, Richard Reschütützger², Benjamin Sanchez-Lengeling³,8,9 ✉
+
+    Samuel M. Blau⁴ ✉ & Gabe Gomes ⁵,⁶,⁷ ✉
+
+
+    Molecular representation is a critical element in understanding of the physical
+    world and the foundation for modern molecular machine learning. Previous molecular
+    machine learning models have used strings, fingerprints, global features and molecular
+    graphs that are inherently information-sparse representations. However, as the
+    complexity of prediction tasks increases, the molecular representation needs to
+    encode higher fidelity information. This work introduces a new approach to infuse
+    quantum-chemical information into molecular graphs via stereoelectronic effects,
+    enhancing expressivity and interpretability. Learning to predict the stereoelect-infused
+    representation with a tailored double graph network workflow enables its application
+    to a downstream molecular machine learning task without expensive quantum-chemical
+    calculations. We show that the explicit addition of stereoelectronic information
+    substantially improves the performance of messaging-two-dimensional machine learning
+    models for molecular property prediction. We show that the learned representations
+    on small molecules can accurately extrapolate to much larger molecular structures,
+    yielding chemical insight into orbital interactions for practically intractable
+    systems, such as proteins, opening new avenues of molecular design. Finally, we
+    have developed a web application (simg.chem.cmu.edu) where users can capture representations
+    for their own molecular systems.
+
+
+    Molecular representation is a cornerstone in chemistry¹². Chemists'' intuition,
+    skeletal structures capture the chemical lingua franca. They allow to capture
+    the wide diversity of (mostly organic) molecules, preserving simplicity and making
+    it easier for humans to recognize patterns. In addition to the chemistry we think
+    about and described³, these representations are proving advances in molecular
+    machine learning, which has been used for various applications.
+
+
+    One of the most successful applications of machine learning in such settings is
+    the prediction of molecular properties, which is at the core of chemical, biological
+    and material sciences. From the discovery
+
+
+    of materials for the record-setting development of a new drug¹⁰⁹ molecular machine
+    learning has substantially affected the industry by enabling fast inference. The
+    performance of the molecular representation, arguably the most critical factor
+    for their success, is debated. Current methods like molecular graphs⁵ represent
+    the structure into a sequence and graphs that encode codent binding information¹¹,
+    providing topological information (la). There are also approaches to infuse spatial
+    features into later representations, structural information¹¹. Recent approaches
+    have
+
+
+    A full list of affiliations appears at the end of the page. ✉ smblau@ibl.gov;  gabegomes@cmu.edu
+
+
+    Nature Machine Intelligence | Volume 7 | May 2023 | 771–778
+
+
+    771'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41467-025-01031-9
+
+
+    +   - Diverse set of representations
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_1_0.png)
+
+
+    +   - B work
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_1_1.png)
+
+
+    +   - Relationship between SIMD and SIMG
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_1_2.png)
+
+
+    Fig. 1: Molecular representations and over of our approach. a Various popular
+    molecular representations for machine learning strategies. b SIMG construction,
+    c The relationship between SIMD and SIMG.
+
+
+    also how combining force field representations with molecular structures can enable
+    simultaneous prediction of both structural and electronic properties¹. Some important
+    representations¹⁷ extend or improve upon Coulomb matrix eigenvalues¹⁸ Finally,
+    a selection of representation is closely tied to molecular architecture and design
+    processing. Many approaches, for example, by averaging across multiple coordinate
+    systems⁹ a similar approach was used in AlphaFold 3 (ref. 19) or may changes at
+    the level of model
+
+
+    The success of molecular machine learning depends on the representations used
+    in them. Current widely used graph-chemical-chemical properties from the electronic
+    structure of molecules (fig. 1a) or have very limited interpretability. However,
+    the computational cost of calculating quantum-mechanical properties of molecular
+    structures by predicting length and strength of orbital interactions is high.
+    Such stereoelectronic information provides valuable chemical insight. For examples,
+    interactions between the bonding and non-bonding orbitals are crucial for the
+    understanding of certain chemical mechanisms⁰ such as in protein-substrate interactions¹
+    and organic catalysis¹² Value of stereoelectronic information suggests that its
+    incorporation into molecular representation can improve performance as well as
+    avoid costly operations during training and inference.
+
+
+    This work introduces a new representation based on molecular graphs with nodes
+    representing bond orbitals, ions and interactions between them in three-dimensional
+    (3D) space. We describe how SIMG (stereoelectronic-infused graph) is constructed
+    from natural molecular representations (SIMD*) to make fast predictions.¹⁴ We
+    study the benefits of these representations as input for message-passing two-dimensional
+    machine learning algorithms to improve molecular property prediction and the capacity
+    for SIMG to identify stereoelectronic orbital interactions in various systems
+    where quantum chemical calculations are difficult, providing previously inaccessible
+    chemical insight.
+
+
+    molecular graph; (2) to include our understanding that molecular structures are
+    3D quantum-mechanical objects and (3) is interpretable by humans.
+
+
+    To develop this, we started with these new NBO graph results. Then, we show how
+    representation can be represented by graph neural networks. We compare the prediction
+    of QM and G targets, as example of downstream tasks where we compare with the
+    Coulomb matrix¹⁷ graph-based tree model¹⁸ on
+
+
+    MegaBART, embedding graph, and ChemProp¹⁹ show the discovery of new orbital interactions,
+    through which we demonstrate that our approach extends effectively by modeling
+    the spatial locality of orbital interactions.¹
+
+
+    # SIMGs
+
+
+    The proposed representation is based on NBO analysis and a heterogeneous graph
+    topology. NBO analysis provides with a 3D structure and a clear value and description
+    of wavefunction⁵ NBO yields a collection of localized atomic orbitals, bonding
+    and/or non-bonding orbital interactions². It does some sort of interactions with
+    the folks matrix¹¹ from Hartree–Hückel quantum method method to molecular interactions
+    and properties⁰
+
+
+    SIMGs are constructed using the NBO molecular analysis data which (fig. 1b). In
+    contrast with standard molecular graphs, which represents nodes for atoms and
+    edges for each stereoelectronic and orbital bond. Beyond the baseline atomic structure,
+    we also include lone pairs (n) and node bonds (σ, o, π, τ), which represents orbital
+    interactions between or around atoms that are crucial for influence in influencing
+    chemical properties¹⁰.
+
+
+    In this work, our goal is to build a new machine learning representation that
+    achieves three essential goals:(1) to enhance the performance of downstream models,
+    when compared to
+
+
+    # Results
+
+
+    We extend the quantum capabilities of molecular graphs to SIMGs with NBO information
+    analysis (fig. 1b). In particular, natural population reveals localized electron
+    information for each atom, which is shown in SIMGs for atomic features. Target
+    atoms include:
+
+
+    Nature Intelligence | Volume 7 | 2025 | 771-781
+
+
+    772'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Article
+
+
+    # SIMG graph pipeline
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_2_0.png)
+
+
+    # Architecture of multitask SIMG prediction model
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_2_1.png)
+
+
+    +   - Evolution of hidden states
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_2_2.png)
+
+
+    +   - Embedding clusters with electronic information
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_2_3.png)
+
+
+    **Fig. 2** Approach to SIMG* construction. *a.* SIMGs are constructed from molecular
+    graphs using two nodes (note, in the example molecule, hydrogens are not shown).
+    *b.* The architecture of the multitask model, which is detailed [below].
+
+
+    valence electrons and colors. For bonds, we include atom-wise hybridization character,
+    bond polarization and its coefficients, and the respective values for binding
+    orbital. hybridization of non-carbon bonds (for example, lone pairs) information
+    is also denoted. The respect interactions are constructed by aggregating the respect
+    features according to the corresponding molecular description. For more details,
+    see the description in the Methods Section. Overall, these representations show
+    results over standard molecular graphs (see the section The improvement of downstream
+    models (for more details) in Table S1).
+
+
+    **SIMG surrogate for graph neural networks** Computation of NBO data for SIMG
+    construction can take significant time, limiting the use of such graphs over large
+    datasets of molecular structures and conformers. For larger molecules, such techniques
+    are not feasible, due to the limitations in the number of basis functions that
+    NBO can compute. We use a surrogate structure, a strategy that severely limits
+    how we study such systems. Here, we aimed to develop an approach for fast prediction
+    of SIMG graphs from molecular model (for example, atomic coordinates). We denote
+    these approximations as SIMG*, which will be described in detail later.
+
+
+    further details of the density functional theory (DFT) are provided in the Methods.
+    In the following sections, we discuss results with either QMAP NBO data (data
+    property and approximation) or GEOM data (evolver module, active learning, protein
+    applications and property prediction). We develop our own benchmark dataset for
+    large molecules.
+
+
+    **General approach for SIMG* ** Construction involving non-carbon bonds is critical
+    for molecular structure. However
+
+
+    The molecular graph is constructed from the 3D structure that is used as input
+    for a model that predicts the respect of lone pairs and their types (see full
+    description in the Methods Section). respect fine information facilitates the
+    construction of an intermediate graph, which we call an ''extended molecular graph'',
+    which consists of respect nodes and respect that respect respect superior description
+    to respect respect properties of orbital edges. As these edges are used as a second
+    model in a multitask task, that is, the SIMG graphs.
+
+
+    **Architecture of the multitask model.** The multitask task takes an extended
+    molecular graph as input and passes it through a
+
+
+    Nature Intelligence | Volume 7 | July 2025 | 771–781'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Article
+
+
+    # a Active learning strategy
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_3_0.png)
+
+
+    # b Computed analysis features
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_3_1.png)
+
+
+    +   - Angle between normal vectors
+
+    - Distance between centroids
+
+    - Distance from centroid of one ring to another
+
+
+    # c Progressive knowledge acquisition
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_3_2.png)
+
+
+    **Fig. 1** Active learning approach to select additional NBO data to generate
+    the model. a. Overview of b, Features, calculated to analyse chemical shift changes
+    and the data acquisition through the active learning procedure. c. Progressive
+    knowledge acquisition.
+
+
+    graph neural network (GNN)-based encoder (Fig. 2b). The output of these hidden
+    states uses graph attention layers and includes connection to address over-smoothing
+    issues (details in the Methods). The output of the encoder is a set of embeddings
+    for each of the nodes in the graph. We use a two proposed approach to extract
+    NBOs from these embeddings because of the following challenge: pair and bond types
+    have different targets. For example, fluence has an atom with two lone pairs:
+    a p orbital and a s-3d hybrid lone pair. The left partner can participate in the
+    formation of hydrogen bonds and other non-covalent interactions, but the input
+    and output are identical. We propose two approaches to solve this problem:
+
+
+    +   (1) Assignment makes possible to identify feature-ideal models. This is accomplished
+    by making a lone pair model to predict mostly p or s character of the lone pair
+    (see the Methods for details).
+
+
+    (2) Random random hidden states and perform update of these hidden states. This
+    is carried out using five blocks of the encoder module (Fig. 2d) that use prediction
+    of nodes to update these hidden states in combination with a permutation invariant
+    loss function (see the Methods for a detailed description and Supplementary Fig.
+    2).
+
+
+    Both approaches work better than the baseline model without integrating information
+    (Supplementary Fig. 4 and 5 for comparison). Although the approach is a significantly
+    less efficient than augmenting different features, it is much more general.
+
+
+    The operations performed by the encoder module are iterative updates of the hidden
+    states. Therefore, we can study how embeddings change with iterations. Figure
+    ... by element and time step, respectively (Supplementary Fig. for more specific
+
+
+    Nature Intelligence | 7 | May 2025 | 771–781'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41586-025-01031-9
+
+
+    | Target | R² | Target | R² | Target | R² |
+
+    |---|---|---|---|---||}{
+
+    | 0 | 276, 419 | 20 | | | |
+
+    | 1 | 388, 224 | 23 | | | |
+
+    | 2 | 0 | 91 | 21,489 | 14 | | |
+
+    | 3 | 2 | 0 | 199 | 5,958 | | |
+
+    | 0 | 1 | 2 | 3 | | | |
+
+    | | 284,762 | 0 | | | |
+
+    | 1 | 658 | 33,470 | 14 | | |
+
+    | 2 | 1 | 159 | 5,942 | | |
+
+    | 3 | 0 | 36 | 17 | | | |
+
+    | 0 | 1 | 2 | | | |
+
+
+    | Target | R² | Target | R² | Target | R² |
+
+    |---|---|---|---|---||}{
+
+    | | | 0.999 | 0.999 | | |
+
+    | | | 1.000 | 0.999 | 0.986 |
+
+    | | | 1.000 | 0.968 | 0.997 |
+
+    | | | 1.000 | 0.988 | 0.889 |
+
+    | | | | | | AUROC |
+
+    | | | | | | Link pairs |
+
+    | | | | | | Interaction prediction |
+
+    | | | | | | Target | R²
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_4_0.png)
+
+
+    | Target | R² | Target | R² | Target | R² |
+
+    |---|---|---|---|---||}{
+
+    | | | 0.991 | | | |
+
+    | | | 0.999 | | | 1,000 |
+
+    | | | 0.376 | | | 1,000 |
+
+    | | | 0.664 | | | |
+
+    | | | 0.990 | Bond | Polarization |
+
+    | | | 0.990 | Bond | Coefficient | Coefficient
+
+
+    **Fig. 4** Quality of SMILES predictions, a confidence analysis for mine pair
+    count and type predictions, prediction performance for the secret model.
+
+
+    essentially). inherently indistinguishable, the model changes embeddings to predict
+    mean. Moreover, as chlorine have two different clusters. These clusters reveal
+    interesting interactions. For example, these clusters differ from the features
+    of the C–O bond in the molecule. Finally, in capacity a GNN (graph message passing
+    network), we see a much better separation with our architecture.
+
+
+    **Active learning of SMILES based on uncertainty estimation.** A primary goal
+    of our work is to select best examples for covering bottom molecules. One of the
+    datasets with high chemical diversity in elements, molecular size and configurations
+    is GEOM. Its immense-scale nature made DFT + NO calculations costly. Instead,
+    we decided to predict features in an active learning framework using MIG.
+
+
+    The proposed methodology heavily relied on the uncertainties in the predictions.
+    These can be categorized into two types: aleatoric uncertainty and epistemic uncertainty.
+    By using Bayesian neural networks we can theoretically approach regions of high
+    uncertainty. These methods are notorious for their challenging requirements. Thus,
+    in practical implementation, we used an ensemble to minimize the variance of their
+    predictions that has yielded good results.
+
+
+    In this work we developed the following approach. First, a uniform sample of 29,500
+    molecules from GEOM and NOBO calculations was performed. We trained a model and
+    an ensemble of three SMILES predictors. Next, we performed one linear model inference
+    and then extracted molecular graph representation for each structure in the GEOM
+    dataset. We divided the dataset into 295 parts and 10,000 molecules for training.
+    For each molecule, we calculated the variances of the ensemble prediction. We
+    selected the 1,000 molecules with the highest variance for each training.
+
+
+    The dataset addition improved the performance of the active learning procedure
+    multiplefold, as shown in Fig. 3 (Supplementary, 6 for more details). During the
+    first iteration, we evaluated the preference for selecting a substantial number
+    of molecules containing boron, which initially underrepresented in the
+
+
+    dataset. Moreover, we included chlorine and iodine, and as these were chosen in
+    subsequent iterations, we had an increased focus on selecting molecules containing
+    mercury and sulfur. As a step of the strategy, the collected molecules showed
+    adequate features with a B–C pair. Furthermore, we conducted an analysis of the
+    variety of positions within the molecule (refer to Fig. 3).
+
+
+    **Prediction performance.** Figure 4 highlights the successful approximation of
+    SMILES'' graph neural networks. The model demonstrates outstanding performance
+    in classification and the quality of pair prediction at the atom level, as evidenced
+    by the confusion matrix in Fig. 4, where we were able to reconstruct the ground
+    truth accurately in most cases.
+
+
+    Node-level tasks included the prediction of properties for atoms, lone pairs and
+    bonds. Remarkable performance was observed with atom-level R² scores. Each property
+    of individual molecules was predicted using the ensemble predictors. Successful
+    predictions were also observed for the bond prediction due to the limit of bond
+    data points, predicted values remained sufficiently similar. Successful predictions
+    were also observed for bond polarities.
+
+
+    Some predictions are different for each atom, such as hybridization characters
+    and polarizations, and polarization coefficients. Exceptional performance was
+    achieved for all tasks except hybridization, which was challenging due to the
+    small number of d-containing elements in the dataset.
+
+
+    A prediction of second-order interactions is classification task. we used the
+    receiver operating characteristic (AUROC) and mean ROC. The AUROC is equal to
+    0.982, which is a good result for such complex tasks. The value for the mean ROC
+    of 0.979 is only slightly smaller. Finally, the properties of interactions were
+    also predicted; the decline in performance is observed for the few-matrix elements
+    (Fig. 4).
+
+
+    Nature Intelligence | July 2025 | Pages 771–778
+
+
+    775'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41466-025-01031-9
+
+
+    # a Protein interaction prediction
+
+
+    # b Model performance in context
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_5_0.png)
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_5_1.png)
+
+
+    # c Interaction energies
+
+
+    # d Selected distance
+
+
+    # e Performance comparison
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_5_2.png)
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_5_3.png)
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_5_4.png)
+
+
+    **Fig. 5:** Assessment of model performance in identifying structural features
+    and graph-distant proximal interactions in proteins. A, Ramandran plot illustrating
+    structural features, specifically dihedral angles ($\phi$) related to $n_N \rightarrow
+    \sigma^*$ interactions could occur. In the pockets of Calcium ChaKs-Fab complex.
+    B, Model performance for evaluation capturing graph-distant proximal orbital
+
+
+    **SIMG''s rapid prediction of protein interactions**
+
+    Stereoelectronic interactions, derived from NBO data and sequence represented
+    and predicted by SIMG, claim a central role in the landscape of molecular 40-41.
+    Notably, structural features of proteins primarily rely on the presence of hydrogen
+    bonds for stability, an array of weaker interactions collectively support folding
+    small cellular structures. The most recent version of the NBO program struggles
+    to perform fast DFT calculations with more than 3,000 functions, making them inaccessible
+    for organic molecules. By focusing on the spatial features of electronic effects,
+    we trained on NBO GEOM dataset to predict orbital interactions in larger structures,
+    using powerful inaccessible chemical methods.
+
+
+    To assess the effectiveness of identifying particular orbital interactions, we
+    evaluated our model on a subset of calcium ChaKs-Fab complex in a low environment
+    (Protein Data Bank ID 1IK43). The features of interactions in an helix in the
+    pocket with lone electrons of the oxygen atom are shown, as shown in Fig. S3.
+    $n_N \rightarrow \sigma^*$ interactions were reported in this report and predicted
+    through NBO analysis, as well for our evaluation
+
+
+    In the context of the protein structure, we examined Ramandran plots and identified
+    the dihedral angles with selected pockets where the prediction of $n_N \rightarrow
+    \sigma^*$ interactions could occur. These dihedral angles are defined at ($C\alpha$-$C-C$-$C$)
+    and ($C\alpha$-$N$-$C$-$C\alpha$), where an index of all interacting atoms was
+    successfully predicted the predicted orbital interactions in our models.
+
+
+    Furthermore, we assessed the model''s capacity in capturing graph-distant proximal
+    orbital interactions, which are rare when traveling along the protein chain but
+    become close in 3D space. To achieve this, we predicted the SIMG
+
+
+    # **The representations improve power of downstream models**
+
+
+    Finally, we evaluate our representation''s efficiency in downstream tasks. First,
+    we use SIMG-representation for training a messaging-2D GNN property prediction
+    model with physics- and geometry-informed features for training a kernel regression
+    in using corresponding publication)s on the QM7 dataset
+
+
+    interactions using the f-score metric (graph distance was truncated for better
+    accuracy), a strong correlation is observed between protein and NBO interactions
+    identified. We identified with.
+
+
+    Nature Intelligence | Volume 7 | May 2025 | 771-78
+
+
+    776'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41586-025-01031-9
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_6_0.png)
+
+
+    **Fig. 4.** Prediction performance of models-employing different molecular representations.
+    A prediction performance comparison as function of training data with various
+    representations, including physics-informed ones trained with ridge regression
+    or a messaging-passing GNN (SPAHM) on the QM dataset, where lower absolute error
+    (MAE) is better. Metrics are normalized by chemical accuracy; Comparison of representation
+    generation performance between SPAHM and SIMG; Prediction performance when training
+    on the QM dataset
+
+
+    ![](img/add6c23c4952463c5c122678a2f96561_6_1.png)
+
+
+    with near-molecular graphs, molecular graphs using ChemProp and SIMG, where we
+    distinguish SIMG with only atomic features versus topology versus SIMG with full
+    metrics. Metrics (mean absolute error) are normalized by chemical accuracy. Each
+    represents one of the targets from the QM dataset, each bar corresponds to our
+    models and results. The horizontal dashed line indicates chemical accuracy. HOMO,
+    highest unoccupied orbital: LUMO, lowest unoccupied orbital.
+
+
+    (62) Our representation outperforms all others in highest occupied orbital-lowest
+    unoccupied orbital gap prediction, matches the performance of the best representation
+    (SPAHM) on dipole moment, is worse than the best representation (SPAHM) on highest
+    occupied orbital energy and position prediction. We note that these methods performed
+    extensively on these tasks.
+
+
+    Second, we compare the performance of SPAHM with SIMG. SIMG with atomic features
+    performs better on QM data. As shown in Fig. 6b, SIMG is consistently faster than
+    SPAHM generation across a large scale of molecular sizes, and in particular the
+    performance gap grows when scaling to large models.
+
+
+    analysis, we also need to distinguish the effects of additional features and graph
+    topology. Furthermore figure 6 shows the performance of the different representation
+    methods using message-passing 2D GNN. SIMG with atomic features or topology provide
+    a comparable improvement over both the molecular graph and ChemProp baseline (with
+    the exception of zero-point vibrational energy for free). While SIMG yields an
+    even better improvement, especially for property prediction, the best-performing
+    representation SIMG visually displays the the same performance as the original
+    SIMG while avoiding costly DFT+NBO calculations during model training.
+
+
+    To perform a comparative analysis on a larger-scale dataset, we used the QM dataset.
+    We analyzed the influence of graph augmentation by comparing three different graph
+    structures: Fig. 6(1) molecular graphs with additional features as in ChemProp
+    (with hyperparameters); (2) standard graphs; (3) molecular graphs with only topology
+    but extended feature set; (4) molecular graphs with complex structures. In this
+    through the
+
+
+    The results confirm a substantial improvement in the performance of message-passing
+    2D GNN property prediction models
+
+
+    Natural Intelligence | Volume 7 (2025) | 771–781
+
+
+    777'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41726-025-01031-9
+
+
+    using representation. However, it must be noted that 2D GNN models perform substantially
+    worse for the DQN tasks when 3D GNNs use equivariant architectures. We believe
+    that 3D geometry can be used to improve 3D GNNs for property prediction and interatomic
+    potentials, and for other tasks such as molecular generation and protein folding,
+    these topics are beyond the scope of the present work.
+
+
+    polarization coefficient and the reactive values for antibonding orbitals. For
+    bonding and antibonding orbitals are the only bond-specific target from the original
+    data, there is a total of 6.
+
+
+    # Discussion
+
+
+    We proposed SimGC: a type of new molecular learning representation that incorporates
+    quantum-chemical insights beyond classical structures, enhancing interpretability.
+    SimGCs substantially perform better on downstream benchmarks than traditional
+    methods, such as passing-2D GNNs for property prediction. Moreover, we showed
+    how our representation can be approximated with graph neural networks, yielding
+    SimGCs. We further demonstrated that the SimGC model can be predicted on small-scale
+    data to provide rapid access to chemical insight from molecular interaction information
+    where DFT calculations are expensive or completely intractable.
+
+
+    Lone pair features. Orbital hybridization is represented by the s, p, d and characters.
+    The NBO analysis provides information about occupancy, summing up to five features.
+
+
+    Orbital (second-order) interactions. These represent the interactions between
+    donor and acceptor orbitals. Donors, represented by lone pairs and bonds, are
+    electron rich; acceptors, represented by empty atomic orbitals, our ground-graph
+    represents these donor-acceptor interactions as a connection between the nodes.
+    The NBO analysis quantifies these interactions by perturbation energy, energy
+    density and the Fock matrix method, with a total of three targets.
+
+
+    # Model implementation and training
+
+
+    All experiments were implemented using PyTorch framework. Training and metric
+    collection were implemented using PyTorch Lightning. Our code is available at
+    https://github.com/groupsys/grouping.
+
+
+    # Model limitation and considerations
+
+
+    In our representations, element one-hot encoded, so we need another element to
+    encode NBO analysis data for each element. This element could be surrounded by
+    the physical properties of elements features, but it requires further. The work
+    presented is not limited to overall, closed-shell molecular structures, but we
+    are in the process of extending the approach to radical and open-shell species.
+
+
+    # Lone pair prediction
+
+
+    Tasks have many ways to define the number of lone pairs, we argue that a data-driven
+    model is well suited in this case since it can interpret different contexts. With
+    this, we build a neural network capable of predicting the atom''s number of lone
+    pairs and their types. Such types were used to distinguish lone pairs of the same
+    atom, as there are differences in their NBO data. Therefore, we determine the
+    types by an analytical threshold and s'' characteristics, expressing the likelihood
+    conjugation of a lone pair. The threshold is defined by the inequality:
+
+
+    > P_character < 80
+
+
+    Indeed, this represents the likelihood conjugation of a lone pair. In turn, we
+    train the neural network to predict how many pairs satisfy the threshold.
+
+
+    # Graph encoder.
+
+
+    Both tasks were trained in tandem with a message-passing GNN. The optimizer uses
+    multiple aggregation functions through the message-passing scheme, along with
+    residual connections. The encoder is constructed by stacking several layers followed
+    by a ReLU (rectified unit) activation function. Node embeddings are connected
+    with the residual connection from the input graph. Finally, the result is a representation
+    of the molecular perception, which is composed of two layers by a ReLU activation.
+
+
+    # Broader impacts
+
+
+    Machine learning is a critical component of drug and material discovery, catalyst
+    optimization and valuable tool for studying complex biochemical processes. Fusion
+    of quantum-chemical features into graph representations for molecular learning
+    will increase the interpretability of models and open opportunities to research
+    the relationship between electronic structure and molecular properties. The predicted
+    orbital information can be used to analyse chemical reactivity in a wide range
+    of systems—¹.
+
+
+    Training. In this case, we framed both tasks as node-level classification, in
+    which each class represents the number of lone pairs and how many satisfy the
+    threshold, respectively, we used the sum of the cross-entropy loss of each task
+    as the function.
+
+
+    # Methods
+
+
+    Given optimized structures for each molecule the QM9 dataset², we conducted single-point
+    calculations at DFT-B3LYP(ref. 50) def-SVP level of theory.
+
+
+    # Property and interaction prediction model
+
+
+    We used v.a.1 (ref. 53) with NBO v.7 (ref. 52) and performed the calculations
+    for the molecular graph workflow infrastructure in the Materials Project open-source
+    software codes PyChem,⁶ and Atomicate⁷. We used in targets for atom, bond, lone
+    pairs and antibonding interactions, illustrated in Fig. 8. These are described
+    as:
+
+
+    General remarks. The network architecture consists of two parts: the node encoder
+    and a group decoder of multiple MLPs. The task makes predictions from the encoder
+    part, but multiple preprocessing steps may depend on the task.
+
+
+    Atom features. The performed natural NBO orbital analysis returns localized electron
+    information for each atom. Atom features include the number of cores, valence
+    electrons and orbital electrons through NBO analysis provides Rigid orbitals,
+    which we did not use as a target for the controversy in the physical meaning.
+
+
+    Bond features. In the context of localized NBOs, bonds are simply a combination
+    of the orbitals from each atom. For that reason, the NBO analysis data provides
+    s, p, d and characters, polarization,
+
+
+    The encoder is constructed by stacking multiple graph neural network blocks and
+    connecting the outputs of each block. A block comprises a graph attention layer
+    and a ReLU activation layer⁹.
+
+
+    Nature Machine Intelligence | 7 | 2025 | 771–781
+
+
+    778 *'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41586-020-01031-9
+
+
+    of the dropout batch layers were used. Concatenated outputs were then fed into
+    an MLP with single layer to construct the overall architecture.
+
+
+    This architecture is designed to tackle the over-smoothing issues of graph networks.
+    The problems arise when multiple graph neural layers are stacked, making the computational
+    graph nearly identical. Over-smoothing might not be a severe issue for graph-level
+    tasks, but it is an important issue in performing node network tasks.
+
+
+    The evolver
+
+    The problem of learning different targets for nodes can be solved by enforcing
+    permutation invariance in the loss function and making the model predict different
+    features. The first part can be achieved by matching the model''s predictions
+    and targets. The second part can be solved by introducing randomness into the
+    model (for example, by randomly initializing states for each node).
+
+
+    All MLPs for tasks follow the same architecture: one layer, the ReLU, the batch
+    normalization and one linear layer. The following equations describe input and
+    output functions for these network tasks.
+
+
+    To compute this function, we need to find a permutation with the least value of
+    loss. Considering all possible permutations is impossible, which has O(n!) time
+    complexity. To make it efficiently, only certain pairs are selected. Then, within
+    each group of nodes, we randomly swap nodes iteratively.
+
+
+    ```
+
+    $L = L_x + L_y + L_z + L_l$
+
+    ```
+
+
+    The most straightforward way is to solve the prediction for individual nodes.
+    For each type of nodes, only one network is used. The loss function was defined
+    as the appropriate loss for each task. The mean squared error (m.s.e.) was used
+    for regression tasks and binary cross-entropy (BCE) loss for classification tasks.
+    The function was optimized with m.s.e. which was also the key metric for this
+    type of task. $R^2$ scores were also calculated.
+
+
+    All predictions for the NBO nodes are based on the embeddings of the neural network.
+    To introduce randomness, the most straightforward way is to randomly initialize
+    hidden states and then decode with GMN embeddings. To make predictions, it is
+    a challenge that different embeddings will be similar enough to result in the
+    same prediction. To solve this, we use the existence of other nodes.
+
+
+    ```
+
+    $L_y = m.s.e(y, \hat{y}) = BCE(y, \hat{y})$
+
+    ```
+
+
+    Atom-wise target prediction. Some bond features are related to each of the atoms.
+    To predict them we enforce permutation invariance. The task was solved by concatenating
+    embeddings of atom and bond and passing them in the MLP. Polarization value prediction
+    was optimized with m.s.e. Others were optimized with cross-entropy loss. Similar
+    to the previous method, and the $R^2$ score were used to control the training.
+
+
+    Link prediction approach. Orbital interactions are not available from the molecular
+    structure, so we should predict them first. First, the problem was formulated
+    as a link prediction task. This is possible because there are cases, where negative
+    examples were sampled from the dataset, while negative combinations of bonds and
+    link pairs. Moreover, the prediction is essential (as it describes the donor-acceptor
+    pair but not vertex input). The data is constructed of concatenated embeddings
+    of nodes and bond features. We trained the network with cross-entropy loss. The
+    classification metrics were calculated for accuracy, precision, recall, F1 score
+    and AUC.
+
+
+    # Data availability
+
+
+    The data and model weights are available at https://huggingface.co/gomesgroup/sim
+
+
+    # Code availability
+
+
+    A code is available at https://github.com/gomesgroup/sim, where it is used to
+    explore electronic structure information of our molecular systems.
+
+
+    ```
+
+    $L_y = m.s.e(y, \hat{y})$
+
+    ```
+
+
+    Edge interaction target prediction. Predictions can be used as input to the network
+    for interaction target prediction. The features were obtained by concatenating
+    embeddings and dynamics and calculated pairwise features. We trained the network
+    with m.s.e. loss.
+
+
+    # References
+
+
+    +   1. Hoffmann, R. & Razlo, P. Representation in chemistry. Angew. Chem. Ed.
+    Engl. 39, 1-16, (1991).
+
+    2. Cooke, H. A structural studies of formation of organic chemistry information
+    prediction in 1950. Org. Biol. Chem. 22, 115-120.
+
+    3. Springer, M. T. Improving students'' understanding of molecular structure through
+    branch-based use of models in the undergraduate organic chemistry literature.
+    J. Chem. Ed. 91, 1162-1168 (2014).
+
+    4. Gomes Dornelli, R. et al. Design of efficient organic light-emitting diodes
+    by a high-throughput virtual screening and experimental approach. Nat. Mater.
+    15, 1120-1127 (2016).
+
+
+    Nature Intelligence | Volume | 2025 | Pages 771-781
+
+
+    779'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41586-025-01031-9
+
+
+    +   Zharov, A. et al.. kinases enable rapid identification of potent DDR1 inhibitors.
+    Nat. Biotechnol. 37, 1038–1040 (2021).
+
+
+    +   Baer, S., Dhamerja, S., Sadav, J., Babu, S., Cam, M. & Ahsan, M. Machine learning
+    in drug discovery: A review. Artif. 55, 1947–1999 (2022).
+
+
+    +   Gallagos, L. C., Luchini, G., Smith, J. P., Kim, X., & Sutton, R. S. Importance
+    of engineered and learned molecular representations in predicting activity and
+    selectivity. J. Med. Chem. 65, 827–836 (2022).
+
+
+    +   Sandford, F., Sharif-Kalthoff, K., Kuhnberg, M., Weeks, C. & Glorius, A. A
+    structure-based platform for predicting chemical activity. Chem 6, 1378–1390 (2020).
+
+
+    +   Rousse, C. Deep learning chemical language generation capture molecular structures
+    and properties. Nat. Mach. Lett. 4, 1256–1264 (2022).
+
+
+    +   Yang, Z., Chakararti, M. & White, A. D. Predicting chemical shifts with graph
+    networks. Nat. Chem. 12, 10802–10809 (2021).
+
+
+    +   Zhou, J. et al. Graph networks: a review of methods and applications. Open
+    Science 5, 57–81 (2020).
+
+
+    +   Fang, X. et al. Geometry-based machine learning for property prediction. Nat.
+    Mach. Lett. 14, 127–134 (2019).
+
+
+    +   Batzner, S. J. et al. equivariant graph neural networks for data-efficient
+    and accurate interatomic potentials. Nat. Chem. 13, 2463–2468 (2022).
+
+
+    +   Qu, X. & Yan, Y. Bridging deep learning force fields and electrostatics with
+    a physics-informed approach. https://doi.org/10.1021/jacs.2c14554 (2022).
+
+
+    +   Fabrizio, A. R., Billing, K. R., & Cornfeubaud, C.P. The spectrum of approximated
+    Hamiltonian matrices for molecular properties. J. Chem. Phys. 154, 024101 (2020).
+
+
+    +   Elton, D. C., Chauwalais, V., Bitruc, U., Smith, G. M., Du, D. & Chung, Y.
+    P. Machine learning techniques to predict the properties of engineered materials.
+    Sci. Res. 8, 9059 (2018).
+
+
+    +   Ruiz, F., Parr, M., & Austin, T. A. Fast and accurate modeling of molecular
+    dynamics with machine learning. Phys. Rev. Lett. 108, 058301 (2012).
+
+
+    +   Podozynyak, S. R. & Cemyon, M. Smooth extrapolation for deep learning in chemistry.
+    Preprints at https://arxiv.org/abs/2205.19902 (2022).
+
+
+    +   Abramson, J. et al. Accurate structure prediction of molecular interactions
+    with AlphaFold 3 Nature 633, 493–500 (2024).
+
+
+    +   Cerny, J. & Hobason, P. Non-covalent interactions in drug discovery. Drug
+    Discovery Today 5, 75–88 (2020).
+
+
+    +   Ainhuru, A. Quantum Chemistry in Drug Discovery (Ed. Harvey), pp. 75–88 (Springer,
+    Switzerland, 2019).
+
+
+    +   Wheeler, S. S., Teng, J., J J., & Donnelly, A. C. Machine learning inconsistencies
+    in conformational sampling and the computational cost of catalysis. Anal. J. Chem.
+    169, 1061–1069 (2021).
+
+
+    +   Weinfeld, F. & Lands, C. R. Rational bond orientations and length calculations
+    for molecular binding. Chem. Ed. Res. 22, 991–1004 (2005).
+
+
+    +   Liangs, S. & Grivaux, M. Generation of orthogonal atomic orbital representation
+    coefficients for reactions and ions. J. Chem. Phys. 158, 214116 (2023).
+
+
+    +   Bartik, A. P., Khentner, R., & Csanyi, G. On reproducing machine learning
+    for chemical property prediction. Phys. Rev. B 87, 184115 (2013).
+
+
+    +   Prokherzenkova, I., Gusev, V., Borovik, A., Dorogush, V. & Gulatin, A. Gaussian
+    learning for predicting chemical properties. Adv. Neur. Inf. Syst. 31, 166388
+    (2024).
+
+
+    +   NVIDIA, DeepChem GitHub from https://github.com/NVIDIA/DeepChem/
+
+
+    +   Beid, E. et al. A machine learning framework for chemical property prediction.
+    J. Chem. Inf. Model 4, 9–17 (2022).
+
+
+    +   Alvariain, L. S. Electronic Effects: A Bridge Between Structure and Reactivity
+    (Wiley, 2016).
+
+
+    +   Oschenheimer, E. P. & Allen, J. L. A mathematical and computational review
+    of Hartree-SCF methods in quantum chemistry. Phys. Chem. 108, 5598 (2007).
+
+
+    +   Burke, K. & Wagner, I. O. DFT in a nutshell. J. Phys. Quantum. Chem. 113,
+    1151–1163 (2000).
+
+
+    +   Goerlik, J. & Grimme, S. Double-hybrid functional functions. Wiley Inter.
+    Rev. Comput. Mol. Phys. 4, 578–660 (2004).
+
+
+    +   Kravetsky, H. et al. Deep learning complex molecular properties for quantum
+    dynamics. Digital Chemistry 2, 618–633 (2023).
+
+
+    +   Johnson, J. E et al. Review of noncovalent interactions. J. Am. Chem. Soc.
+    142, 6498–6506 (2020).
+
+
+    +   Alber, A. & Wallenberg, R. GEOM, energy-aware neural networks for molecular
+    property prediction and generation. Science Data 9, 185 (2022).
+
+
+    +   Malinin, A., Prokhorov, K., & Ulistmenko, A. A consensus approach to generative-based
+    molecular design. Preprints at https://arxiv.org/abs/2206.10562 (2022).
+
+
+    +   Chua, K., Lanjard, R., McAllister, R., & Levin, S. Deep reinforcement learning
+    in the application of using probabilistic models for de novo design. In Proc.
+    2018 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 4765–4780
+    (2018).
+
+
+    +   Belchik, W. H., Greenaway, V., Tunenberg, A., & Kohler, J. M. A review of
+    deep learning for image classification. In Proc. 2018 IEEE Conference on Computer
+    Vision and Pattern Recognition (CVPR), 9367–9378 (2018).
+
+
+    +   León, L., Alonso, A. R., Cabezas, M., Sala, A., & Alonso, J. Machine learning
+    of n–π interactions in compounds. J. Chem. Phys. 152, 024113 (2020).
+
+
+    +   New, W. R., Bartlett, G. J., Van Vlerwijk, D. N., & Richards, R. T. Significance
+    of n–π interactions in proteins. Protein Science Res. 234, 268–284 (2018).
+
+
+    +   Moriarty, Y. The role of n–π interaction affects protein structure. J. Mol
+    Phys. 8, 4695–4699 (2006).
+
+
+    +   dos Passos Gomez, G., & Albaguin, I. V. Drawing catalytic power from molecular
+    sources for stereoselective assistance in the asymmetric-catalyzed benchmark.
+    J. Anal. Chem. 139, 3406–3417 (2021).
+
+
+    +   Gomes, G. D. P., Vilt, J. R., Veretnik, A., & Albaguin, I. Structural sources
+    of n–π interactions. Science Chem. 68, 6781–6793 (2021).
+
+
+    +   Grabowski, S. J. Tertiary bond–hydrogen bond as a primary strategy of the
+    S_N2 reaction. Chem. Phys. Phys. 16, 1824–1834 (2014).
+
+
+    +   Sarasin, Y. L., Bonisai, R., Taron, M., & Carleson, J.-F. Discovery and design
+    of n–π interactions. J. Am. Chem. Soc. 133, 9067–9098 (2011).
+
+
+    +   Ramakrishnan, N., Das, P., Rao, R. M., & von Lillenfeld, O. Quantum chemistry
+    studies of the interactions and properties of 134 small molecules. Science Data.
+    1, 140022 (2020).
+
+
+    +   Sodrisson, N. & Head-Gordon, M. B97M-GGA: a highly optimized, range-separated
+    hybrid, meta-GSA functional with V190 nonlocal correlation. J. Chem. Phys. 144,
+    214110 (2016).
+
+
+    Nature Intelligence | Volume 7 | May 2025 | 777–781
+
+
+    780'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41256-020-01031-9
+
+
+    Gendlinger, E. D., Lands, C. R., & Weinberg, F. NBO 70: new strategies as in localized
+    and delocalized chemical bonding theory. J. Phys. Chem. https://doi.org/10.1002/jpc.25873
+    (2019).
+
+
+    for the high-throughput screening and datasets developed by the National Energy
+    Research Scientific Computing Center (NERSC), a US Department of Energy User Facility
+    under contract no. AC-025-01921 at the Livermore computational resource provided
+    by The Division at Berkeley National Laboratory supported by the Director, Science,
+    Office of Basic Science, of US Department of Energy under contract no. AC-025-011231.
+
+
+    Ong, S. P. et al. Physics Materials Generics (a robust, open-source machine learning
+    library for materials chemistry). Comput. Sci. 68, 314-319 (2023).
+
+
+    Ba, L., Smith-White, E. W., C. M. Booth, D., Wardak, S., Pearson, K., Accurate
+    density functional theory for chemical property prediction using deep learning.
+    Preprint at https://arxiv.org/10.48850/2103.03638 v1 (2021).
+
+
+    Mathew, K. et al. Machine learning as an interface to generate, execute, and analyze
+    computational materials science workflows. Comput. Mater. 39, 149–152 (2017).
+
+
+    Parrinello, M. A new machine learning interatomic potential field, for high-fidelity
+    deep learning dynamics. In Nature Molecular Processing Systems Vol. 32 (eds. Wallach,
+    H. et al.). 8024-8035 (Curator Associates, 2021).
+
+
+    We thank the CMU (Carnegie Mellon Engineering) and I. Lee (CMU Chemistry) for
+    their feedback on early versions of this work. We also like to thank the anonymous
+    reviewers for their helpful feedback. Any opinions, claims, conclusions or recommendations
+    expressed in this material are those of the authors and do not necessarily reflect
+    the views of the National Science Foundation, the Department of Energy, Alphabet
+    (and its subsidiaries) or any of the other funding sources.
+
+
+    # Author contributors
+
+
+    S.M. developed the diffusion-based pipeline and machine learning, active learning,
+    downstream task analysis and the first version of large scale material transformation.
+    T interpreted the lone pair prediction and performed analysis of large scale predictions.
+    B.S.L. al. on the development of machine learning pipeline and software development.
+    S.M.B. performed computations and analysis of results and analysis of data. G.G.
+    designed the concept and performed preliminary studies. S.M.B. and G.G. supervised
+    the project. D.A., T.R. and G.G. wrote the manuscript with input from the authors.
+
+
+    # Competing interests
+
+
+    The authors do not claim any competing interests.
+
+
+    # Additional information
+
+
+    Supplementary information The online supplementary material is available at https://doi.org/10.1038/s41256-020-01031-9.
+
+
+    # Correspondence and requests for materials
+
+
+    Requests should be addressed to S.M. Bau or G.G. Gomes.
+
+
+    # Acknowledgments
+
+
+    We thank ACCESS project (no. 222903), Google, Research Foundation, NVIDIA Academic
+    Hardware Grant Program (project no. ''New material generation hypotheses in feature
+    space contexts'') for computational support. We thank G.G. and D.B. for financial
+    support by the National Science Foundation Center for Computer-Assisted Systems
+    (no. 222903) and a seed grant from t., the moonshot facility (an Alphabet company).
+    G.G. thanks Carnegie Mellon University for resources of chemistry and chemical
+    engineering for the startup support.
+
+
+    F.k. Weinberg (University of Wisconsin, Madison) for help with the development
+    of NBO and for many questions about the theory and software. S.M.B. acknowledges
+    financial support by the Berkeley National Laboratory and Laboratory Development
+    Program under contract no. AC-025-011231. Computational resources
+
+
+    *Department of Engineering, Carnegie Mellon University, Pittsburgh, PA, USA. *Department
+    of Chemical Engineering, University of Santa Maria, Santa Maria, Brazil. *DeepMind,
+    Cambridge, MA, USA. *Department of Technology Areas, Berkeley National Laboratory,
+    Berkeley, CA, USA. *Department of Chemistry, Carnegie Mellon University, Pittsburgh,
+    PA, USA. *William E. Scott Institute for Innovation, Machine Learning, Carnegie
+    Mellon University, Pittsburgh, PA, USA. *Present address: Department of Chemical
+    Engineering and Applied Chemistry, University of Toronto, Toronto, Ontario, Canada.
+    *Present address: Vector Intelligence, Toronto, Ontario, Canada. *Email: smbla@g.bu.gaegomes@cmu.edu
+
+
+    Peer information review Nature Intelligence thanks the anonymous reviewers for
+    the review of this peer of this
+
+
+    Reprints and permissions information is available at https://www.nature.com.
+
+
+    Publisher''s note Spring Nature remains neutral with regard to jurisdictional
+    claims in maps and institutional affiliations.
+
+
+    Spring Nature or its licensor (or an agent or other partner) holds the rights
+    to publish this article under the author(s) or other holder(s): first self-archiving
+    of the accepted manuscript version of this article is governed by the terms of
+    such publication and applicable agreement.
+
+
+    © The author(s), under license to Spring Nature Limited 2025
+
+
+    Nature Intelligence | Volume 7 | May 2023 | 771–778
+
+
+    781'
+  merge: -1
+  img_proc: true
