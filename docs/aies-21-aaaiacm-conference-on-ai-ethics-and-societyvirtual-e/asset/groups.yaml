@@ -1,0 +1,2889 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Quantum Fair Machine Learning
+
+
+    Elija Perrier
+
+    elija.t.perrier@student.uts.edu.au
+
+    Centre for Quantum Software & Information, University of Technology, Sydney
+
+    Sydney, NSW, Australia
+
+    Humanising Machine Intelligence, Australian National University
+
+    Acton, ACT, Australia
+
+
+    # ABSTRACT
+
+
+    In this paper, we inaugurate the field of quantum fair machine learning. We undertake
+    a comparative analysis of differences and similarities between classical and quantum
+    fair machine learning algorithms, specifying how the unique features of quantum
+    computation alter measures, metrics and remediation strategies when quantum algorithms
+    are subject to fairness constraints. We present the first results in quantum fair
+    machine learning by demonstrating the use of Grover’s search algorithm to satisfy
+    statistical parity constraints imposed on quantum algorithms. We provide lower-bounds
+    on iterations needed to achieve such statistical parity within ε-tolerance. We
+    extend canonical Lipschitz-conditioned individual fairness criteria to the quantum
+    setting using quantum metrics. We examine the consequences for typical measures
+    of fairness in machine learning context when quantum information processing and
+    quantum data are involved. Finally, we propose open questions and research programmes
+    for this new field of interest to researchers in computer science, ethics and
+    quantum computation.
+
+
+    # CCS CONCEPTS
+
+
+    +   - Computing methodologies → Machine learning; Machine learning algorithms.
+
+
+    # KEYWORDS
+
+
+    quantum computing, fair machine learning
+
+
+    # ACM Reference Format:
+
+
+    Elija Perrier. 2021. Quantum Fair Machine Learning. In Proceedings of the 2021
+    AAAI/ACM Conference on AI, Ethics, and Society (AIES ’21), May 19–21, 2021, Virtual
+    Event, USA. ACM, New York, NY, USA, 11 pages. https://doi.org/10.1145/3461702.3462611
+
+
+    # 1 INTRODUCTION
+
+
+    Quantum computing and machine learning represent two of the most significant fields
+    of computational science to have emerged over the last half century. Over the
+    last decade, attention has in particular turned to the ethical implications of
+    machine learning technology [9, 10, 14], motivating the development of fair machine
+
+
+    learning. Despite significant advances in quantum computing and quantum information
+    processing [5] and the growing importance of quantum devices, little or no direct
+    work on the ethics of quantum computing has been undertaken, with limited discussion
+    on the morality and philosophy of quantum computing [1, 2] or debates about the
+    appropriateness of the term ‘quantum supremacy’ [21].
+
+
+    Although fully scalable fault-tolerant [23] quantum computing has not yet been
+    realised, the availability of intermediate noisy scalable quantum computing devices
+    means that near-term computation on quantum devices using quantum algorithms is
+    becoming a reality. The potential capacity of quantum computers to (i) solve problems
+    that are classically intractable and, more practically, to (ii) solve problems
+    which, while tractable, are classically infeasible (due to resource constraints),
+    motivates their use in machine learning. The wide scope of tasks that may be performed
+    on quantum computers such as solving optimisation problems, simulating classical
+    or complex systems or modelling highly complex systems, such as multi-agent interactive
+    systems means that machine learning (and computation) involving quantum computers
+    is likely to give rise to (and be subject to) ethical considerations. Many such
+    problems remain infeasible (if tractable) for classical computation and are thus
+    ethically unproblematic. Yet such computations may become feasible due to the
+    enhanced computational potential afforded by quantum computing, which expands
+    the frontiers of optimisation problems that may be solved by providing for computational
+    capacity beyond the constraints of classical computation. If optimisation problems
+    that are classically infeasible become computationally feasible on a quantum computer,
+    then the ethics of such computations become relevant and such ethics must be considered
+    in light of the quantum nature of computation. Thus research into fair machine
+    learning and fair computation on quantum computers is well-motivated.
+
+
+    Fair machine learning is the most mature field addressing the theoretical and
+    technical challenges of undertaking classical computation subject to ethical (fairness)
+    constraints. To date, however, no equivalent research has been undertaken regarding
+    the technical impact of ethical constraints upon quantum computation. In this
+    paper, we seek to address this gap via an exposition of quantum fair machine learning
+    (see also concurrent work on ethical quantum computing generally [22]). As we
+    detail below, the unique aspects of quantum computation (including its inherently
+    measurement-based probabilistic nature, the availability of coherent superposition
+    states, the restriction of computational dynamics to unitary evolution, no cloning
+    theorems etc) mean that computation is undertaken differently from the classical
+    case. As a result, the types of metrics, measures, circuits and ways in which
+    constrained optimisation for'
+  - '[PAGE 1]
+
+
+    fair objectives can be undertaken on a quantum computer exhibit important differences.
+
+
+    For example, in contrast to classical data, quantum data is represented as vectors
+    on Hilbert spaces ℋ. Classical data can in theory be directly accessed and operated
+    upon. Quantum data, in a superposition state, cannot be and instead must be manipulated
+    indirectly. As distinct from classical computing dynamics, quantum computing must
+    evolve unitarily according to Schrödinger’s equation. Instead of direct probabilities,
+    quantum states are characterised by complex-valued amplitudes which determine
+    the probability of obtaining an outcome when measuring a quantum state |ψ⟩. Unlike
+    classical computing, the order of operations matters in the quantum context, as
+    represented by non-commutative operators (or Lie brackets) [A, B] ≠ 0. Distance
+    measures in quantum computing also differ. Quantum computing also has available
+    to it important non-classical resources, such as entanglement, with no counterpart
+    classically. As such, the study and practical implementation of fair quantum machine
+    learning requires researchers to understand the implications of these computational
+    differences and, in turn how these differences affect (a) the applicability of
+    fair machine learning techniques to fair quantum computation and (b) the need
+    to develop new quantum-specific techniques to solve ethical quantum optimisation
+    problems.
+
+
+    quantum states |ψ⟩ using basis, amplitude, sample and dynamic encoding strategies.
+    We examine the use of quantum algorithms to solve optimisation problems subject
+    to fairness constraints and the impact that the specifically quantum aspects of
+    those computations has (if any) upon typical fair machine learning fairness criteria.
+    In Part II, we present a comparative analysis of how typical fair machine learning
+    characteristics differ when computation is undertaken on quantum devices. We explicitly
+    examine quantum analogues of a number of key features of FML algorithms, including
+    group-based fairness measures (parity, confusion matrix metric, calibration and
+    others), individual fairness measures (e.g. Lipschitz conditioned [14] problems)
+    and remedial strategies (such as redaction, blinding, sampling, data transformation,
+    relabelling, perturbation and constraint optimisation). We discuss how quantum
+    information processing renders existing techniques in FML the same, different
+    and in need of modification. We discuss types of uniquely quantum fair computation
+    and present the quantum analogue of Lipschitz-conditioned individual fairness
+    constraints for machine learning algorithms. In Part III, we present an explicit
+    example of how to use an adaptation of Grover’s infamous quantum searching algorithm
+    [16] (amplitude amplification) to satisfy fair statistical parity criteria and
+    give a lower bound on the number of applications of unitary algorithms necessary
+    for doing so. In Part IV, we discuss open questions and provide suggestions for
+    research programmes in quantum FML.
+
+
+    # 1.1 Results and contributions
+
+
+    The results and contributions of this paper are as follows.
+
+
+    +   (1) We present the first results characterising ways in which fair machine
+    learning undertaken on quantum devices differs from or is similar to its classical
+    counterpart.
+
+    (2) We provide quantum analogues of a number of key results in fair machine learning
+    at the preprocessing, in-processing and post-processing stages, such as fairness
+    criteria and measures and remedial strategies to satisfy fairness constraints.
+
+    (3) We present the first technical results in quantum fair machine learning, demonstrating
+    the use of Grover’s quantum search algorithm to enable quantum algorithms achieve
+    statistical parity within ε-tolerance.
+
+    (4) We present the quantum analogue of Lipschitz-conditioned individual fairness
+    criteria, expressed in terms of quantum metrics and unitary operators on quantum
+    vectors in Hilbert space.
+
+    (5) We list open questions for researchers in quantum information processing,
+    machine learning and ethics [22] to consider as part of their research programmes.
+
+
+    # 1.2 Structure
+
+
+    The structure of the paper is as follows. Part I summarises the key characteristics
+    of quantum information processing of relevance to fair machine learning, including
+    quantum postulates, density matrix formalism, measurement statistics, no cloning
+    theorems and open systems. In general, the interface of quantum and classical
+    computing is usefully categorised according to the quantum-classical quadrant
+    in which data and processing are categorised as either quantum (Q) or classical
+    (C) [3, 25]. We focus upon the CQ case, where classical data inputs subject to
+    quantum information processing. We review methods by which classical data is encoded
+    in
+
+
+    # 2 PART I: QUANTUM INFORMATION PROCESSING
+
+
+    In this section, we review the key distinguishing characteristics of quantum information
+    as distinct from its classical counterpart of relevance to canonical problems
+    in fair machine learning. We focus on aspects of quantum information processing,
+    such as superposition states, quantum entanglement, the inherently probabilistic
+    and measurement-based nature of quantum computing of relevance to understanding
+    fair machine learning in a quantum context. We begin with a synopsis of the primary
+    quantum postulates.
+
+
+    # 2.1 Postulates
+
+
+    Quantum information processing is characterised by constraints upon how information
+    is represented and processed arising from the foundational postulates of quantum
+    mechanics, which we set out as follows [20]:
+
+
+    +   (1) State space: quantum systems are completely described by (unit) state
+    vectors within a complex-valued vector space Hilbert space ℋ. Typically for our
+    formulation, we will deal with arbitrary two-level quantum systems (two-dimensional
+    state spaces) of qubits with arbitrary state vectors with orthonormal bases {|0⟩,
+    |1⟩}:
+
+
+    |ψ⟩ = a |0⟩ + b |1⟩   (1)
+
+
+    with usual normalisation conditions on unit vectors ⟨ψ|ψ⟩ = 1 (that is |a|² +
+    |b|² = 1), where a, b ∈ ℂ are amplitudes for measuring outcomes of |0⟩, |1⟩ respectively
+    (where ⟨ψ|ψ′⟩ denotes the inner product of quantum states |ψ⟩, |ψ′⟩). In density
+    operator formalism, the system is described via the positive density operator
+    ρ with trace unity acting on the'
+  md: '
+
+    ## Quantum Fair Machine Learning
+
+
+    Elija Perrier
+
+    elija.t.perrier@student.uts.edu.au
+
+    Centre for Quantum Software & Information, University of Technology, Sydney
+
+    Sydney, NSW, Australia
+
+    Humanising Machine Intelligence, Australian National University
+
+    Acton, ACT, Australia
+
+
+    ## ABSTRACT
+
+
+    In this paper, we inaugurate the field of quantum fair machine learning. We undertake
+    a comparative analysis of differences and similarities between classical and quantum
+    fair machine learning algorithms, specifying how the unique features of quantum
+    computation alter measures, metrics and remediation strategies when quantum algorithms
+    are subject to fairness constraints. We present the first results in quantum fair
+    machine learning by demonstrating the use of Grover’s search algorithm to satisfy
+    statistical parity constraints imposed on quantum algorithms. We provide lower-bounds
+    on iterations needed to achieve such statistical parity within ε-tolerance. We
+    extend canonical Lipschitz-conditioned individual fairness criteria to the quantum
+    setting using quantum metrics. We examine the consequences for typical measures
+    of fairness in machine learning context when quantum information processing and
+    quantum data are involved. Finally, we propose open questions and research programmes
+    for this new field of interest to researchers in computer science, ethics and
+    quantum computation.
+
+
+    ## CCS CONCEPTS
+
+
+    - Computing methodologies → Machine learning; Machine learning algorithms.
+
+
+    ## KEYWORDS
+
+
+    quantum computing, fair machine learning
+
+
+    ## ACM Reference Format:
+
+
+    Elija Perrier. 2021. Quantum Fair Machine Learning. In Proceedings of the 2021
+    AAAI/ACM Conference on AI, Ethics, and Society (AIES ’21), May 19–21, 2021, Virtual
+    Event, USA. ACM, New York, NY, USA, 11 pages. https://doi.org/10.1145/3461702.3462611
+
+
+    ## 1 INTRODUCTION
+
+
+    Quantum computing and machine learning represent two of the most significant fields
+    of computational science to have emerged over the last half century. Over the
+    last decade, attention has in particular turned to the ethical implications of
+    machine learning technology [9, 10, 14], motivating the development of fair machine
+    learning. Despite significant advances in quantum computing and quantum information
+    processing [5] and the growing importance of quantum devices, little or no direct
+    work on the ethics of quantum computing has been undertaken, with limited discussion
+    on the morality and philosophy of quantum computing [1, 2] or debates about the
+    appropriateness of the term ‘quantum supremacy’ [21].
+
+
+    Although fully scalable fault-tolerant [23] quantum computing has not yet been
+    realised, the availability of intermediate noisy scalable quantum computing devices
+    means that near-term computation on quantum devices using quantum algorithms is
+    becoming a reality. The potential capacity of quantum computers to (i) solve problems
+    that are classically intractable and, more practically, to (ii) solve problems
+    which, while tractable, are classically infeasible (due to resource constraints),
+    motivates their use in machine learning. The wide scope of tasks that may be performed
+    on quantum computers such as solving optimisation problems, simulating classical
+    or complex systems or modelling highly complex systems, such as multi-agent interactive
+    systems means that machine learning (and computation) involving quantum computers
+    is likely to give rise to (and be subject to) ethical considerations. Many such
+    problems remain infeasible (if tractable) for classical computation and are thus
+    ethically unproblematic. Yet such computations may become feasible due to the
+    enhanced computational potential afforded by quantum computing, which expands
+    the frontiers of optimisation problems that may be solved by providing for computational
+    capacity beyond the constraints of classical computation. If optimisation problems
+    that are classically infeasible become computationally feasible on a quantum computer,
+    then the ethics of such computations become relevant and such ethics must be considered
+    in light of the quantum nature of computation. Thus research into fair machine
+    learning and fair computation on quantum computers is well-motivated.
+
+
+    Fair machine learning is the most mature field addressing the theoretical and
+    technical challenges of undertaking classical computation subject to ethical (fairness)
+    constraints. To date, however, no equivalent research has been undertaken regarding
+    the technical impact of ethical constraints upon quantum computation. In this
+    paper, we seek to address this gap via an exposition of quantum fair machine learning
+    (see also concurrent work on ethical quantum computing generally [22]). As we
+    detail below, the unique aspects of quantum computation (including its inherently
+    measurement-based probabilistic nature, the availability of coherent superposition
+    states, the restriction of computational dynamics to unitary evolution, no cloning
+    theorems etc) mean that computation is undertaken differently from the classical
+    case. As a result, the types of metrics, measures, circuits and ways in which
+    constrained optimisation for fair objectives can be undertaken on a quantum computer
+    exhibit important differences.
+
+
+    For example, in contrast to classical data, quantum data is represented as vectors
+    on Hilbert spaces ℋ. Classical data can in theory be directly accessed and operated
+    upon. Quantum data, in a superposition state, cannot be and instead must be manipulated
+    indirectly. As distinct from classical computing dynamics, quantum computing must
+    evolve unitarily according to Schrödinger’s equation. Instead of direct probabilities,
+    quantum states are characterised by complex-valued amplitudes which determine
+    the probability of obtaining an outcome when measuring a quantum state |ψ⟩. Unlike
+    classical computing, the order of operations matters in the quantum context, as
+    represented by non-commutative operators (or Lie brackets) [A, B] ≠ 0. Distance
+    measures in quantum computing also differ. Quantum computing also has available
+    to it important non-classical resources, such as entanglement, with no counterpart
+    classically. As such, the study and practical implementation of fair quantum machine
+    learning requires researchers to understand the implications of these computational
+    differences and, in turn how these differences affect (a) the applicability of
+    fair machine learning techniques to fair quantum computation and (b) the need
+    to develop new quantum-specific techniques to solve ethical quantum optimisation
+    problems.
+
+
+    ### 1.1 Results and contributions
+
+
+    The results and contributions of this paper are as follows.
+
+
+    - (1) We present the first results characterising ways in which fair machine learning
+    undertaken on quantum devices differs from or is similar to its classical counterpart.
+
+    - (2) We provide quantum analogues of a number of key results in fair machine
+    learning at the preprocessing, in-processing and post-processing stages, such
+    as fairness criteria and measures and remedial strategies to satisfy fairness
+    constraints.
+
+    - (3) We present the first technical results in quantum fair machine learning,
+    demonstrating the use of Grover’s quantum search algorithm to enable quantum algorithms
+    achieve statistical parity within ε-tolerance.
+
+    - (4) We present the quantum analogue of Lipschitz-conditioned individual fairness
+    criteria, expressed in terms of quantum metrics and unitary operators on quantum
+    vectors in Hilbert space.
+
+    - (5) We list open questions for researchers in quantum information processing,
+    machine learning and ethics [22] to consider as part of their research programmes.
+
+
+    ### 1.2 Structure
+
+
+    The structure of the paper is as follows. Part I summarises the key characteristics
+    of quantum information processing of relevance to fair machine learning, including
+    quantum postulates, density matrix formalism, measurement statistics, no cloning
+    theorems and open systems. In general, the interface of quantum and classical
+    computing is usefully categorised according to the quantum-classical quadrant
+    in which data and processing are categorised as either quantum (Q) or classical
+    (C) [3, 25]. We focus upon the CQ case, where classical data inputs subject to
+    quantum information processing. We review methods by which classical data is encoded
+    in quantum states |ψ⟩ using basis, amplitude, sample and dynamic encoding strategies.
+    We examine the use of quantum algorithms to solve optimisation problems subject
+    to fairness constraints and the impact that the specifically quantum aspects of
+    those computations has (if any) upon typical fair machine learning fairness criteria.
+    In Part II, we present a comparative analysis of how typical fair machine learning
+    characteristics differ when computation is undertaken on quantum devices. We explicitly
+    examine quantum analogues of a number of key features of FML algorithms, including
+    group-based fairness measures (parity, confusion matrix metric, calibration and
+    others), individual fairness measures (e.g. Lipschitz conditioned [14] problems)
+    and remedial strategies (such as redaction, blinding, sampling, data transformation,
+    relabelling, perturbation and constraint optimisation). We discuss how quantum
+    information processing renders existing techniques in FML the same, different
+    and in need of modification. We discuss types of uniquely quantum fair computation
+    and present the quantum analogue of Lipschitz-conditioned individual fairness
+    constraints for machine learning algorithms. In Part III, we present an explicit
+    example of how to use an adaptation of Grover’s infamous quantum searching algorithm
+    [16] (amplitude amplification) to satisfy fair statistical parity criteria and
+    give a lower bound on the number of applications of unitary algorithms necessary
+    for doing so. In Part IV, we discuss open questions and provide suggestions for
+    research programmes in quantum FML.
+
+
+    ## 2 PART I: QUANTUM INFORMATION PROCESSING
+
+
+    In this section, we review the key distinguishing characteristics of quantum information
+    as distinct from its classical counterpart of relevance to canonical problems
+    in fair machine learning. We focus on aspects of quantum information processing,
+    such as superposition states, quantum entanglement, the inherently probabilistic
+    and measurement-based nature of quantum computing of relevance to understanding
+    fair machine learning in a quantum context. We begin with a synopsis of the primary
+    quantum postulates.
+
+
+    ### 2.1 Postulates
+
+
+    Quantum information processing is characterised by constraints upon how information
+    is represented and processed arising from the foundational postulates of quantum
+    mechanics, which we set out as follows [20]:
+
+
+    - (1) State space: quantum systems are completely described by (unit) state vectors
+    within a complex-valued vector space Hilbert space ℋ. Typically for our formulation,
+    we will deal with arbitrary two-level quantum systems (two-dimensional state spaces)
+    of qubits with arbitrary state vectors with orthonormal bases {|0⟩, |1⟩}:
+
+
+    |ψ⟩ = a |0⟩ + b |1⟩   (1)
+
+
+    with usual normalisation conditions on unit vectors ⟨ψ|ψ⟩ = 1 (that is |a|² +
+    |b|² = 1), where a, b ∈ ℂ are amplitudes for measuring outcomes of |0⟩, |1⟩ respectively
+    (where ⟨ψ|ψ′⟩ denotes the inner product of quantum states |ψ⟩, |ψ′⟩). In density
+    operator formalism, the system is described via the positive density operator
+    ρ with trace unity acting on the
+
+    '
+  mdcn: '
+
+    ## 量子公平机器学习
+
+
+    Elija Perrier
+
+    elija.t.perrier@student.uts.edu.au
+
+    悉尼科技大学量子软件与信息中心
+
+    悉尼，新南威尔士州，澳大利亚
+
+    澳大利亚国立大学人性化机器智能
+
+    阿克顿，澳大利亚首都领地，澳大利亚
+
+
+    ## 摘要
+
+
+    本文首次开创了量子公平机器学习领域。我们对经典与量子公平机器学习算法之间的差异和相似性进行了比较分析，说明量子计算的独特特性如何改变在量子算法受公平性约束时所使用的度量、指标和补救策略。我们通过展示使用
+    Grover 搜索算法来满足施加于量子算法的统计平价约束，呈现了量子公平机器学习中的首批结果。我们提供了在 ε-容差范围内实现此类统计平价所需的迭代次数的下界。我们使用量子度量将经典的
+    Lipschitz 条件个体公平性标准扩展到量子设定。我们考察了当涉及量子信息处理和量子数据时，机器学习背景下典型公平性度量的后果。最后，我们提出了该新领域的研究开放问题和研究计划，该领域引起了计算机科学、伦理学和量子计算研究人员的兴趣。
+
+
+    ## CCS 概念
+
+
+    - 计算方法学 → 机器学习；机器学习算法。
+
+
+    ## 关键词
+
+
+    量子计算，公平机器学习
+
+
+    ## ACM 参考格式：
+
+
+    Elija Perrier. 2021. 量子公平机器学习. In Proceedings of the 2021 AAAI/ACM Conference
+    on AI, Ethics, and Society (AIES ’21), May 19–21, 2021, Virtual Event, USA. ACM,
+    New York, NY, USA, 11 pages. https://doi.org/10.1145/3461702.3462611
+
+
+    ## 1 引言
+
+
+    量子计算和机器学习代表了过去半个世纪以来出现的两个最重要的计算科学领域。过去十年中，特别关注机器学习技术的伦理影响 [9, 10, 14]，推动了公平机器学习的发展。尽管量子计算和量子信息处理取得了重大进展
+    [5]，且量子设备的[content]
+
+    ## 量子公平机器学习
+
+
+    Elija Perrier
+
+    elija.t.perrier@student.uts.edu.au
+
+    悉尼科技大学量子软件与信息中心
+
+    悉尼，新南威尔士州，澳大利亚
+
+    澳大利亚国立大学人性化机器智能
+
+    阿克顿，澳大利亚首都领地，澳大利亚
+
+
+    ## 摘要
+
+
+    本文首次开创了量子公平机器学习领域。我们对经典与量子公平机器学习算法之间的差异和相似性进行了比较分析，说明量子计算的独特特性如何改变在量子算法受公平性约束时所使用的度量、指标和补救策略。我们通过展示使用
+    Grover 搜索算法来满足施加于量子算法的统计平价约束，呈现了量子公平机器学习中的首批结果。我们提供了在 ε-容差范围内实现此类统计平价所需的迭代次数的下界。我们使用量子度量将经典的
+    Lipschitz 条件个体公平性标准扩展到量子设定。我们考察了当涉及量子信息处理和量子数据时，机器学习背景下典型公平性度量的后果。最后，我们提出了该新领域的研究开放问题和研究计划，该领域引起了计算机科学、伦理学和量子计算研究人员的兴趣。
+
+
+    ## CCS 概念
+
+
+    - 计算方法学 → 机器学习；机器学习算法。
+
+
+    ## 关键词
+
+
+    量子计算，公平机器学习
+
+
+    ## ACM 参考格式：
+
+
+    Elija Perrier. 2021. 量子公平机器学习. In Proceedings of the 2021 AAAI/ACM Conference
+    on AI, Ethics, and Society (AIES ’21), May 19–21, 2021, Virtual Event, USA. ACM,
+    New York, NY, USA, 11 pages. https://doi.org/10.1145/3461702.3462611
+
+
+    ## 1 引言
+
+
+    量子计算和机器学习代表了过去半个世纪以来出现的两个最重要的计算科学领域。过去十年中，特别关注机器学习技术的伦理影响 [9, 10, 14]，推动了公平机器学习的发展。尽管量子计算和量子信息处理取得了重大进展
+    [5]，且量子设备的重要性日益增长，但对量子计算伦理的直接研究却很少，对量子计算的道德和哲学讨论有限 [1, 2]，或关于“量子霸权”一词是否恰当的争论 [21]。
+
+
+    尽管完全可扩展的容错 [23] 量子计算尚未实现，但中间尺度噪声可扩展量子计算设备的可用性意味着使用量子算法在量子设备上进行近期的计算正在成为现实。量子计算机的潜在能力在于
+    (i) 解决经典上不可处理的难题，以及更实际地 (ii) 解决虽然可处理但因资源限制而在经典上不可行的难题，这推动了其在机器学习中的应用。量子计算机可执行的任务范围广泛，如求解优化问题、模拟经典或复杂系统或建模高度复杂的系统，例如多智能体交互系统，这意味着涉及量子计算机的机器学习（和计算）很可能产生（并受制于）伦理考量。许多此类问题对经典计算而言是不可行的（即使可处理），因此在伦理上无问题。然而，由于量子计算提供的增强计算潜力，这些计算可能变得可行，从而拓展了可通过提供超越经典计算约束的计算能力而得以求解的优化问题的前沿。如果经典上不可行的优化问题在量子计算机上变得计算可行，那么此类计算的伦理就变得相关，且此类伦理必须在量子计算的性质下加以考虑。因此，对量子计算机上的公平机器学习和公平计算的研究是合理且必要的。
+
+
+    公平机器学习是最成熟的领域，旨在解决在受伦理（公平）约束条件下进行经典计算的理论和技术挑战。然而，迄今为止，尚未开展同等的研究来探讨伦理约束对量子计算的技术影响。本文旨在通过阐述量子公平机器学习来填补这一空白（另见关于一般伦理量子计算的同期工作
+    [22]）。正如我们下面所详述的，量子计算的独特方面（包括其固有的基于测量的概率性、相干叠加态的可用性、计算动力学限制于幺正演化、无克隆定理等）意味着计算方式与经典情形不同。因此，在量子计算机上为公平目标进行约束优化时所使用的度量、衡量、电路以及方式表现出重要差异。
+
+
+    例如，与经典数据不同，量子数据表示为希尔伯特空间 ℋ 上的向量。经典数据原则上可以直接访问和操作。量子数据在叠加态下不能直接访问，而必须间接操纵。与经典计算动力学不同，量子计算必须根据薛定谔方程幺正演化。量子态不是由直接概率表征，而是由复值振幅表征，这些振幅决定了测量量子态
+    |ψ⟩ 时获得某一结果的概率。与经典计算不同，量子情境下操作的顺序很重要，由非对易算符（或李括号）[A, B] ≠ 0 表示。量子计算中的距离度量也不同。量子计算还拥有重要的非经典资源，如纠缠，经典上没有对应物。因此，公平量子机器学习的理论研究和实际实现要求研究人员理解这些计算差异的含义，进而理解这些差异如何影响
+    (a) 公平机器学习技术适用于公平量子计算的程度以及 (b) 开发新的量子特定技术以解决伦理量子优化问题的必要性。
+
+
+    ### 1.1 结果与贡献
+
+
+    本文的结果和贡献如下。
+
+
+    - (1) 我们提出了首批表征公平机器学习在量子设备上进行与经典对应物相比的差异或相似性的结果。
+
+    - (2) 我们提供了公平机器学习在预处理、在线处理和后处理阶段的一系列关键结果的量子类比，如公平性标准和衡量以及满足公平性约束的补救策略。
+
+    - (3) 我们提出了量子公平机器学习中的首批技术结果，展示了使用 Grover 量子搜索算法使量子算法在 ε-容差内实现统计平价。
+
+    - (4) 我们提出了 Lipschitz 条件个体公平性标准的量子类比，以量子度量和希尔伯特空间中量子向量上的幺正算符表示。
+
+    - (5) 我们列出了量子信息处理、机器学习和伦理 [22] 研究人员应在其研究计划中考虑的开放性问题。
+
+
+    ### 1.2 结构
+
+
+    本文的结构如下。第一部分总结了与公平机器学习相关的量子信息处理的关键特征，包括量子公设、密度矩阵形式、测量统计、无克隆定理和开放系统。一般而言，量子与经典计算的接口可根据数据和处理被归类为量子
+    (Q) 或经典 (C) 的量子-经典象限来有用地分类 [3, 25]。我们关注 CQ 情形，即经典数据输入受量子信息处理。我们回顾了使用基、振幅、样本和动态编码策略将经典数据编码到量子态
+    |ψ⟩ 的方法。我们考察了使用量子算法求解受公平性约束的优化问题，以及这些计算中特有的量子方面（如果有的话）对典型公平机器学习公平性标准的影响。第二部分，我们对典型公平机器学习特征在计算在量子设备上进行时如何不同进行了比较分析。我们明确考察了
+    FML 算法的一系列关键特征的量子类比，包括基于群的公平性度量（平价、混淆矩阵度量、校准等）、个体公平性度量（例如 Lipschitz 条件 [14] 问题）和补救策略（如删改、盲化、采样、数据转换、重标记、扰动和约束优化）。我们讨论量子信息处理如何使
+    FML 中的现有技术相同、不同以及需要修改。我们讨论了独特量子公平计算的类型，并提出了机器学习算法的 Lipschitz 条件个体公平性约束的量子类比。第三部分，我们给出了如何使用
+    Grover 著名的量子搜索算法 [16] 的改编（振幅放大）来满足公平统计平价标准的明确示例，并给出了为此所需幺正算法应用次数的下界。第四部分，我们讨论开放性问题并为量子
+    FML 提供研究计划建议。
+
+
+    ## 2 第一部分：量子信息处理
+
+
+    在本节中，我们回顾了量子信息与其经典对应物在公平机器学习典型问题相关方面的关键区别特征。我们关注与理解量子情境下的公平机器学习相关的量子信息处理方面，如叠加态、量子纠缠、量子计算固有的概率性和基于测量的性质。我们首先概述主要量子公设。
+
+
+    ### 2.1 公设
+
+
+    量子信息处理的特点是信息表示和处理上的约束，这些约束源于量子力学的奠基性公设，我们按如下方式列出 [20]：
+
+
+    - (1) 状态空间：量子系统完全由复值向量空间希尔伯特空间 ℋ 内的（单位）态向量描述。通常对于我们的表述，我们将处理任意两能级量子系统（二维状态空间）的量子比特，具有正交归一基
+    {|0⟩, |1⟩} 的任意态向量：
+
+
+    |ψ⟩ = a |0⟩ + b |1⟩   (1)
+
+
+    具有单位向量上的通常归一化条件 ⟨ψ|ψ⟩ = 1（即 |a|² + |b|² = 1），其中 a, b ∈ ℂ 是测量 |0⟩、|1⟩ 结果的振幅（其中
+    ⟨ψ|ψ′⟩ 表示量子态 |ψ⟩、|ψ′⟩ 的内积）。在密度算符形式中，系统通过作用于
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    state space of the system (such that if the system is in state ρ_i with probability
+    p_i then ρ = Σ_i p_i ρ_i). In this work, we assume the standard orthonormal computational
+    basis {|0⟩, |1⟩} such that ⟨1|0⟩ = ⟨0|1⟩ = 0 and ⟨1|1⟩ = ⟨0|0⟩ = 1.
+
+
+    (2) Evolution: closed quantum systems (which we focus on in this paper for simplicity)
+    evolve over time Δt = t₁ − t₀ via unitary transformations U(t) = exp(−iH(t)) i.e.
+    where such unitaries represent solutions to the time-dependent Schrödinger equation
+    governing evolution: iℏ d|ψ(t)⟩/dt = H(t) |ψ(t)⟩ (2) where ℏ is set to unity for
+    convenience and H(t) represents the linear Hermitian operator (Hamiltonian) of
+    the closed system. The dynamics of the quantum system are completely described
+    by the Hamiltonian operator acting on the state |ψ⟩ such that |ψ(t)⟩ = U(t) |ψ(t
+    = 0)⟩. In density operator notation, this is represented as ρ(t) = U(t) ρ(t₀)
+    U(t)†. Typically solving the continuous form of the Schrödinger equation is intractable
+    or infeasible, so a discretised approximation as a discrete quantum circuit (where
+    each gate U_i is run for a sufficiently small time-step Δt) is used (e.g. via
+    Trotter-Suzuki decompositions).
+
+
+    The Hamiltonian H(t) of a system is the most important tool for mathematically
+    characterising dynamics of a system, encoding the computational processing of
+    data encoded into quantum states and specifying how the quantum computation may
+    be controlled. To the extent that computational processes or outcomes are important
+    to ethical criteria (for example, understanding the dynamics giving rise to bias
+    or discriminatory outcomes, or ensuring fair representation learning in a quantum
+    setting), they must usually be encoded in the Hamiltonian of quantum systems.
+    Unitary evolution is a requirement to preserve quantum coherence and probability
+    (which give rise to the enhanced computational power of quantum systems). Thus
+    modifications to computational subroutines in quantum computing must be done indirectly,
+    via adjustments to the Hamiltonian which steer quantum systems towards target
+    states using unitary evolution.
+
+
+    (3) Measurement: quantum measurements are framed as sets of measurement operators
+    {M_m}, where m indexes the outcome of a measurement (e.g. an energy level or state
+    indicator). The probability p(m) of outcome m upon measuring |ψ⟩ is represented
+    by such operators acting on the state such that p(m) = ⟨ψ|M_m† M_m|ψ⟩ (alternatively,
+    p(m) = tr(M_m† M_m ρ)) with the post-measurement state |ψ′⟩ given by: |ψ′⟩ = M_m
+    |ψ⟩ / √⟨ψ|M_m† M_m|ψ⟩ (3) The set of measurement operators Σ_m M_m† M_m = I, reflecting
+    the probabilistic nature of measurement outcomes. In more advanced treatments,
+    POVM formalism more fully describes the measurement statistics and post-measurement
+    state of the system. There we define a set of positive operators {E_m} = {M_m†
+    M_m} satisfying Σ_m E_m = 𝕀 in a way that gives us a complete set of positive
+    operators (such formalism being more general than simply relying on projection
+    operators).
+
+
+    gives us a complete set of positive operators (such formalism being more general
+    than simply relying on projection operators). As we are interested in probability
+    distributions rather than individual probabilities from a single measurement,
+    we calculate the probability distribution over outcomes via Born rule using the
+    trace p(E_i) = tr(E_i ρ). This formulation is important to quantum fairness metrics
+    discussed below.
+
+
+    (4) Composite systems: states |ψ⟩ in the Hilbert space may be composite systems,
+    described as the tensor product of states spaces of the component physical systems,
+    that is |ψ⟩ = ⊗_i |ψ_i⟩. We also mention here the importance of open quantum systems
+    where a total system Hamiltonian H can be decomposed as H = H_S + H_E + H_I, comprising
+    a closed quantum system Hamiltonian H_S, an environment Hamiltonian H_E an interaction
+    Hamiltonian H_I, which is typically how noise is modelled in quantum contexts.
+    Open quantum systems are modelled usually by master equations (beyond the scope
+    of this introductory paper), but they are relevant to quantum fair machine learning
+    in particular because modelling the dissipative effects of system/environment
+    interaction, or engineering dissipation so as to simulate dissipative characteristics
+    of neural networks (see [25]) will require in certain contexts open systems’ formulations.
+
+
+    Other key concepts necessary to understand the formalism below include: (a) relative
+    phase, that for a qubit system, where amplitudes a and b differ by a relative
+    phase if a = exp(iθ)b, θ ∈ ℝ (as discussed below, classical information is typically
+    encoded in both basis states e.g. |0⟩, |1⟩ and in relative phases); (b) entanglement,
+    certain composite states (known as EPR or Bell states), may be entangled. For
+    example, for a two-qubit state: |ψ⟩ = (|00⟩ + |11⟩)/√2 (4) measurement of 0 on
+    the first qubit necessarily means that a measurement of the second qubit will
+    result in the post-measurement state |0⟩ also i.e. the measurement statistics
+    of each qubit correlate. Entangled states cannot be written as tensor products
+    of component states i.e. |ψ⟩ ≠ |ψ₁⟩|ψ₂⟩; (c) expectation, expectation values of
+    an operator A (e.g. a measurement) can be written as E(A) = tr(ρA); (d) mixed
+    and pure states, quantum systems whose states are exactly known to be |ψ⟩, i.e.
+    where ψ = |ψ⟩⟨ψ| are pure states, while where there is (epistemic) uncertainty
+    about which state the system is in, we denote it as a mixed state i.e. ρ = Σ_i
+    p_i ρ_i where tr(ρ²) < 1 (as all p_i < 1); (e) commutativity, where two measurements
+    are performed on a system, the outcome, unlike in the classical case, will be
+    order-dependent if they do not commute, that is, if [A, B] ≠ 0; and (f) no cloning,
+    unlike classical data, quantum data cannot be copied (for to do so requires measurement
+    which collapses the state destroying the coherent superpositions that encode information
+    in amplitudes).
+
+
+    We omit a vast universe of other characteristics of relevance to quantum fair
+    machine learning, including error-correcting codes (encoding mechanisms designed
+    to limit or self-correct errors to achieve fault-tolerant quantum computing) which,
+    while relevant, are beyond the scope of this paper.'
+  - '[PAGE 3]
+
+
+    # 2.2 Quantum metrics.
+
+
+    Metrics play a central technical role in fair machine learning, fundamentally
+    being the basis upon which technical definitions of fairness are constructed.
+    Metrics for quantum information processing are related but distinct from their
+    classical counterparts. This means translating fair machine learning metrics to
+    the quantum realm requires different (albeit related) metric formalism. As discussed
+    in [9, 11, 12], classical fairness metrics vary according to particular objectives,
+    optimisation aims and data sources. Metrics and distance measures are an important
+    feature of quantum information processing, with a variety of metrics deployed
+    depending on context. For a classical bit string, there are a variety of classical
+    information distance metrics used in general [20]. For fair machine learning in
+    quantum contexts, where the similarity of either input or outputs to a function
+    is important for fairness measures (such as for Lipschitz-conditioned fairness
+    measures below), quantum generalisations of classical distance are applicable.
+    As information is encoded in quantum states, quantum measures of distance are
+    therefore applicable.
+
+
+    +   (1) *Hamming distance*, the number of places at which two bit strings are
+    unequal. Hamming distance is important in error-correcting contexts (of relevance
+    to FML as quantum FML will require encoding of data in codes to achieve fault
+    tolerance).
+
+    (2) *Trace distance or L1-Kolmogorov distance*, where, given two probability distributions
+    {p_x}, {q_x} we have D(p_x, q_x) = ½ Σ_x |p_x − q_x| (used in [14] a valid distance
+    due to satisfaction of metric axioms. For quantum states represented by density
+    matrices ρ, σ [20], their trace distance is given by: D(ρ, σ) = ½ tr|ρ − σ| (5)
+    where |ρ| = √ρ†ρ is taken as the positive square root. Trace distance has the
+    benefit of being preserved under unitary transformations.
+
+    (3) *Fidelity*, which is a common measure to assess state or operator similarity
+    and is given by F(ρ, σ) = tr√[ρ^{1/2} σ ρ^{1/2}]. Along with trace distance, it
+    is among the most important metric for similarity in quantum computing. Fidelity
+    can be interpreted as a metric via, for example, calculating the angle ζ = arccos
+    F(ρ, σ). It is related to trace-distance via D(ρ, σ) = √[1 − F(ρ, σ)²].
+
+    (4) *quantum relative entropy*, which is the quantum analogue of Shannon entropy,
+    and is given by S(ρ) = −tr(ρ log ρ) with the quantum analogue of (binary) cross-entropy
+    given by: S(ρ||σ) = tr(ρ log ρ) − tr(ρ log σ) (6) Both measures provide a further
+    basis for similarity metrics required to determine if fairness criteria are met
+    in the quantum context.
+
+
+    # 2.3 Encoding data in quantum systems
+
+
+    A first step in applying quantum algorithms to solve optimisation problems involving
+    quantum data involves encoding such classical data into quantum systems in a process
+    known as *state preparation*. Encoding data fits within the preprocessing stage
+    of typical
+
+
+    FML taxonomies. Standard encoding methods include [25]: (a) basis encoding, (b)
+    amplitude encoding, (c) qsample encoding and (d) dynamic encoding. *Basis encoding*
+    encodes classical information, typically involves transforming data into classical
+    binary bit-strings (x1, ..., xd), b_i ∈ {0,1} then mapping each bit string to
+    the basis state of a set of qubits of a composite system. For example, for x ∈
+    ℝ^N, say a set of decimals, is converted into a d-dimensional bit string (e.g.
+    0.1 → 00001..., −0.6 → 11001..) suitably normalised such that x = Σ_k^d (1/2^k)
+    x_k. The sequence x is then represented via |ψ⟩ = |00000111001⟩ (see [25]). *Amplitude
+    encoding* associates normalised classical information e.g. for an n-qubit system
+    (with 2^n different possible (basis) states |j⟩), a normalised classical sequence
+    x ∈ ℂ^{2^n}, Σ_k |x_k|² = 1 (possibly with only real parts) with quantum amplitudes
+    x = (x1, ..., x2^n) can be encoded as |ψ_x⟩ = Σ_j^{2^n} x_j |j⟩. Other examples
+    of sample-based encoding (e.g. *Qsample* and *dynamic* encoding are also relevant
+    but not addressed here. From a classical machine learning perspective, such encoding
+    regimes also enable both features and labels to be encoded into quantum systems.
+
+
+    # 2.4 Quantum measurement and learning
+
+
+    *Quantum measurement.* Quantum measurement is integral to any program of ethical
+    quantum computation. Quantum systems cannot be accessed directly. Instead, information
+    about quantum systems depends on measurements whose outcomes are probability distributions
+    over measurement results. For machine learning contexts, the first key difference
+    is that measurement outcomes in quantum computation are inherently *probabilistic*.
+    As distinct from classical computing whereby stochastic processes may be simulated,
+    quantum computation is *necessarily* stochastic, such that measurement outcomes
+    are represented as probability distributions obtained using POVMs. Secondly, one
+    usually only ever can sample a subspace of ℋ, so full probability distributions
+    for higher-order quantum systems may be unobtainable, adding additional uncertainty.
+    Thirdly, where basis states are not orthogonal, then it can be proven that those
+    states cannot be reliably distinguished (see [20]), which impacts for example
+    the ability to distinguish states in a way necessary to measure their metric distance,
+    thus whether fairness constraints have been met.
+
+
+    *Quantum learning.* A second distinct feature of quantum algorithms is in the
+    nature of quantum *learning*. The ways in which one can learn about quantum systems
+    and deploy learning strategies as part of measurements on or queries of quantum
+    systems. One of the challenges of mapping classical FML to quantum computing arises
+    in machine learning contexts. The nature of quantum information (including classical
+    information encoded in quantum states) means that typical learning protocols,
+    such as backpropagation, are not directly applicable because quantum information
+    cannot be updated directly in the way that say a neural network weight operator
+    can be. For example, the use of classical backpropagation algorithms requires
+    classical parameterisation, say of a unitary U(θ) (where θ ∈ ℝ), where online-
+    or offline-feedback between the outcomes of measurements and classical inputs
+    that evolve those parameters, thus the unitaries and thus the quantum states of
+    the system, is implemented [25, 29]. More broadly, quantum algorithm formalism
+    is usually concerned with finding optimal quantum circuits to solve'
+  md: '
+
+    state space of the system (such that if the system is in state ρ_i with probability
+    p_i then ρ = Σ_i p_i ρ_i). In this work, we assume the standard orthonormal computational
+    basis {|0⟩, |1⟩} such that ⟨1|0⟩ = ⟨0|1⟩ = 0 and ⟨1|1⟩ = ⟨0|0⟩ = 1.
+
+
+    ### Evolution
+
+    closed quantum systems (which we focus on in this paper for simplicity) evolve
+    over time Δt = t₁ − t₀ via unitary transformations U(t) = exp(−iH(t)) i.e. where
+    such unitaries represent solutions to the time-dependent Schrödinger equation
+    governing evolution: iℏ d|ψ(t)⟩/dt = H(t) |ψ(t)⟩ (2) where ℏ is set to unity for
+    convenience and H(t) represents the linear Hermitian operator (Hamiltonian) of
+    the closed system. The dynamics of the quantum system are completely described
+    by the Hamiltonian operator acting on the state |ψ⟩ such that |ψ(t)⟩ = U(t) |ψ(t
+    = 0)⟩. In density operator notation, this is represented as ρ(t) = U(t) ρ(t₀)
+    U(t)†. Typically solving the continuous form of the Schrödinger equation is intractable
+    or infeasible, so a discretised approximation as a discrete quantum circuit (where
+    each gate U_i is run for a sufficiently small time-step Δt) is used (e.g. via
+    Trotter-Suzuki decompositions).
+
+
+    The Hamiltonian H(t) of a system is the most important tool for mathematically
+    characterising dynamics of a system, encoding the computational processing of
+    data encoded into quantum states and specifying how the quantum computation may
+    be controlled. To the extent that computational processes or outcomes are important
+    to ethical criteria (for example, understanding the dynamics giving rise to bias
+    or discriminatory outcomes, or ensuring fair representation learning in a quantum
+    setting), they must usually be encoded in the Hamiltonian of quantum systems.
+    Unitary evolution is a requirement to preserve quantum coherence and probability
+    (which give rise to the enhanced computational power of quantum systems). Thus
+    modifications to computational subroutines in quantum computing must be done indirectly,
+    via adjustments to the Hamiltonian which steer quantum systems towards target
+    states using unitary evolution.
+
+
+    ### Measurement
+
+    quantum measurements are framed as sets of measurement operators {M_m}, where
+    m indexes the outcome of a measurement (e.g. an energy level or state indicator).
+    The probability p(m) of outcome m upon measuring |ψ⟩ is represented by such operators
+    acting on the state such that p(m) = ⟨ψ|M_m† M_m|ψ⟩ (alternatively, p(m) = tr(M_m†
+    M_m ρ)) with the post-measurement state |ψ′⟩ given by: |ψ′⟩ = M_m |ψ⟩ / √⟨ψ|M_m†
+    M_m|ψ⟩ (3) The set of measurement operators Σ_m M_m† M_m = I, reflecting the probabilistic
+    nature of measurement outcomes. In more advanced treatments, POVM formalism more
+    fully describes the measurement statistics and post-measurement state of the system.
+    There we define a set of positive operators {E_m} = {M_m† M_m} satisfying Σ_m
+    E_m = 𝕀 in a way that gives us a complete set of positive operators (such formalism
+    being more general than simply relying on projection operators).
+
+
+    As we are interested in probability distributions rather than individual probabilities
+    from a single measurement, we calculate the probability distribution over outcomes
+    via Born rule using the trace p(E_i) = tr(E_i ρ). This formulation is important
+    to quantum fairness metrics discussed below.
+
+
+    ### Composite systems
+
+    states |ψ⟩ in the Hilbert space may be composite systems, described as the tensor
+    product of states spaces of the component physical systems, that is |ψ⟩ = ⊗_i
+    |ψ_i⟩. We also mention here the importance of open quantum systems where a total
+    system Hamiltonian H can be decomposed as H = H_S + H_E + H_I, comprising a closed
+    quantum system Hamiltonian H_S, an environment Hamiltonian H_E, an interaction
+    Hamiltonian H_I, which is typically how noise is modelled in quantum contexts.
+    Open quantum systems are modelled usually by master equations (beyond the scope
+    of this introductory paper), but they are relevant to quantum fair machine learning
+    in particular because modelling the dissipative effects of system/environment
+    interaction, or engineering dissipation so as to simulate dissipative characteristics
+    of neural networks (see [25]) will require in certain contexts open systems’ formulations.
+
+
+    Other key concepts necessary to understand the formalism below include: (a) relative
+    phase, that for a qubit system, where amplitudes a and b differ by a relative
+    phase if a = exp(iθ)b, θ ∈ ℝ (as discussed below, classical information is typically
+    encoded in both basis states e.g. |0⟩, |1⟩ and in relative phases); (b) entanglement,
+    certain composite states (known as EPR or Bell states), may be entangled. For
+    example, for a two-qubit state: |ψ⟩ = (|00⟩ + |11⟩)/√2 (4) measurement of 0 on
+    the first qubit necessarily means that a measurement of the second qubit will
+    result in the post-measurement state |0⟩ also i.e. the measurement statistics
+    of each qubit correlate. Entangled states cannot be written as tensor products
+    of component states i.e. |ψ⟩ ≠ |ψ₁⟩|ψ₂⟩; (c) expectation, expectation values of
+    an operator A (e.g. a measurement) can be written as E(A) = tr(ρA); (d) mixed
+    and pure states, quantum systems whose states are exactly known to be |ψ⟩, i.e.
+    where ψ = |ψ⟩⟨ψ| are pure states, while where there is (epistemic) uncertainty
+    about which state the system is in, we denote it as a mixed state i.e. ρ = Σ_i
+    p_i ρ_i where tr(ρ²) < 1 (as all p_i < 1); (e) commutativity, where two measurements
+    are performed on a system, the outcome, unlike in the classical case, will be
+    order-dependent if they do not commute, that is, if [A, B] ≠ 0; and (f) no cloning,
+    unlike classical data, quantum data cannot be copied (for to do so requires measurement
+    which collapses the state destroying the coherent superpositions that encode information
+    in amplitudes).
+
+
+    We omit a vast universe of other characteristics of relevance to quantum fair
+    machine learning, including error-correcting codes (encoding mechanisms designed
+    to limit or self-correct errors to achieve fault-tolerant quantum computing) which,
+    while relevant, are beyond the scope of this paper.
+
+
+    ## 2.2 Quantum metrics.
+
+
+    Metrics play a central technical role in fair machine learning, fundamentally
+    being the basis upon which technical definitions of fairness are constructed.
+    Metrics for quantum information processing are related but distinct from their
+    classical counterparts. This means translating fair machine learning metrics to
+    the quantum realm requires different (albeit related) metric formalism. As discussed
+    in [9, 11, 12], classical fairness metrics vary according to particular objectives,
+    optimisation aims and data sources. Metrics and distance measures are an important
+    feature of quantum information processing, with a variety of metrics deployed
+    depending on context. For a classical bit string, there are a variety of classical
+    information distance metrics used in general [20]. For fair machine learning in
+    quantum contexts, where the similarity of either input or outputs to a function
+    is important for fairness measures (such as for Lipschitz-conditioned fairness
+    measures below), quantum generalisations of classical distance are applicable.
+    As information is encoded in quantum states, quantum measures of distance are
+    therefore applicable.
+
+
+    - (1) *Hamming distance*, the number of places at which two bit strings are unequal.
+    Hamming distance is important in error-correcting contexts (of relevance to FML
+    as quantum FML will require encoding of data in codes to achieve fault tolerance).
+
+    - (2) *Trace distance or L1-Kolmogorov distance*, where, given two probability
+    distributions {p_x}, {q_x} we have D(p_x, q_x) = ½ Σ_x |p_x − q_x| (used in [14]
+    a valid distance due to satisfaction of metric axioms. For quantum states represented
+    by density matrices ρ, σ [20], their trace distance is given by: D(ρ, σ) = ½ tr|ρ
+    − σ| (5) where |ρ| = √ρ†ρ is taken as the positive square root. Trace distance
+    has the benefit of being preserved under unitary transformations.
+
+    - (3) *Fidelity*, which is a common measure to assess state or operator similarity
+    and is given by F(ρ, σ) = tr√[ρ^{1/2} σ ρ^{1/2}]. Along with trace distance, it
+    is among the most important metric for similarity in quantum computing. Fidelity
+    can be interpreted as a metric via, for example, calculating the angle ζ = arccos
+    F(ρ, σ). It is related to trace-distance via D(ρ, σ) = √[1 − F(ρ, σ)²].
+
+    - (4) *quantum relative entropy*, which is the quantum analogue of Shannon entropy,
+    and is given by S(ρ) = −tr(ρ log ρ) with the quantum analogue of (binary) cross-entropy
+    given by: S(ρ||σ) = tr(ρ log ρ) − tr(ρ log σ) (6) Both measures provide a further
+    basis for similarity metrics required to determine if fairness criteria are met
+    in the quantum context.
+
+
+    ## 2.3 Encoding data in quantum systems
+
+
+    A first step in applying quantum algorithms to solve optimisation problems involving
+    quantum data involves encoding such classical data into quantum systems in a process
+    known as *state preparation*. Encoding data fits within the preprocessing stage
+    of typical
+
+
+    FML taxonomies. Standard encoding methods include [25]: (a) basis encoding, (b)
+    amplitude encoding, (c) qsample encoding and (d) dynamic encoding. *Basis encoding*
+    encodes classical information, typically involves transforming data into classical
+    binary bit-strings (x1, ..., xd), b_i ∈ {0,1} then mapping each bit string to
+    the basis state of a set of qubits of a composite system. For example, for x ∈
+    ℝ^N, say a set of decimals, is converted into a d-dimensional bit string (e.g.
+    0.1 → 00001..., −0.6 → 11001..) suitably normalised such that x = Σ_k^d (1/2^k)
+    x_k. The sequence x is then represented via |ψ⟩ = |00000111001⟩ (see [25]). *Amplitude
+    encoding* associates normalised classical information e.g. for an n-qubit system
+    (with 2^n different possible (basis) states |j⟩), a normalised classical sequence
+    x ∈ ℂ^{2^n}, Σ_k |x_k|² = 1 (possibly with only real parts) with quantum amplitudes
+    x = (x1, ..., x2^n) can be encoded as |ψ_x⟩ = Σ_j^{2^n} x_j |j⟩. Other examples
+    of sample-based encoding (e.g. *Qsample* and *dynamic* encoding are also relevant
+    but not addressed here. From a classical machine learning perspective, such encoding
+    regimes also enable both features and labels to be encoded into quantum systems.
+
+
+    ## 2.4 Quantum measurement and learning
+
+
+    ### Quantum measurement
+
+    Quantum measurement is integral to any program of ethical quantum computation.
+    Quantum systems cannot be accessed directly. Instead, information about quantum
+    systems depends on measurements whose outcomes are probability distributions over
+    measurement results. For machine learning contexts, the first key difference is
+    that measurement outcomes in quantum computation are inherently *probabilistic*.
+    As distinct from classical computing whereby stochastic processes may be simulated,
+    quantum computation is *necessarily* stochastic, such that measurement outcomes
+    are represented as probability distributions obtained using POVMs. Secondly, one
+    usually only ever can sample a subspace of ℋ, so full probability distributions
+    for higher-order quantum systems may be unobtainable, adding additional uncertainty.
+    Thirdly, where basis states are not orthogonal, then it can be proven that those
+    states cannot be reliably distinguished (see [20]), which impacts for example
+    the ability to distinguish states in a way necessary to measure their metric distance,
+    thus whether fairness constraints have been met.
+
+
+    ### Quantum learning
+
+    A second distinct feature of quantum algorithms is in the nature of quantum *learning*.
+    The ways in which one can learn about quantum systems and deploy learning strategies
+    as part of measurements on or queries of quantum systems. One of the challenges
+    of mapping classical FML to quantum computing arises in machine learning contexts.
+    The nature of quantum information (including classical information encoded in
+    quantum states) means that typical learning protocols, such as backpropagation,
+    are not directly applicable because quantum information cannot be updated directly
+    in the way that say a neural network weight operator can be. For example, the
+    use of classical backpropagation algorithms requires classical parameterisation,
+    say of a unitary U(θ) (where θ ∈ ℝ), where online- or offline-feedback between
+    the outcomes of measurements and classical inputs that evolve those parameters,
+    thus the unitaries and thus the quantum states of the system, is implemented [25,
+    29]. More broadly, quantum algorithm formalism is usually concerned with finding
+    optimal quantum circuits to solve
+
+    '
+  mdcn: '
+
+    系统的状态空间（使得如果系统以概率 p_i 处于状态 ρ_i，则 ρ = Σ_i p_i ρ_i）。在本文中，我们假设标准正交计算基 {|0⟩, |1⟩}，使得
+    ⟨1|0⟩ = ⟨0|1⟩ = 0 且 ⟨1|1⟩ = ⟨0|0⟩ = 1。
+
+
+    ### 演化
+
+    封闭量子系统（为简单起见，本文重点关注）在时间 Δt = t₁ − t₀ 上通过幺正变换 U(t) = exp(−iH(t)) 演化，即其中此类幺正算符代表描述演化的含时薛定谔方程的解：iℏ
+    d|ψ(t)⟩/dt = H(t) |ψ(t)⟩ (2)，其中为方便起见 ℏ 设为 1，且 H(t) 表示封闭系统的线性厄米算符（哈密顿量）。量子系统的动力学完全由作用于态
+    |ψ⟩ 的哈密顿量算符描述，使得 |ψ(t)⟩ = U(t) |ψ(t = 0)⟩。在密度算符表述中，这表示为 ρ(t) = U(t) ρ(t₀) U(t)†。通常求解薛定谔方程的连续形式是难以处理或不可行的，因此使用离散近似作为离散量子线路（其中每个门
+    U_i 在足够小的步长 Δt 下运行），例如通过 Trotter-Suzuki 分解。
+
+
+    系统的哈密顿量 H(t) 是在数学上表征系统动力学的最重要的工具，编码了编码到量子态中的数据的计算处理，并指定量子计算如何被控制。在计算过程或结果对伦理标准重要程度上（例如，了解导致偏见或歧视性结果的动力学，或确保量子环境中的公平表示学习），它们通常必须编码在量子系统的哈密顿量中。幺正演化是保持量子相干性和概率的必要条件（它们产生了量子系统的增强计算能力）。因此，量子计算中计算子程序的修改必须间接进行，通过对哈密顿量的调整来引导量子系统使用幺正演化朝向目标态。
+
+
+    ### 测量
+
+    量子测量被表述为测量算符集合 {M_m}，其中 m 索引测量的结果（例如能量级或状态指示符）。测量 |ψ⟩ 时结果 m 的概率 p(m) 由此类算符作用于态表示，使得
+    p(m) = ⟨ψ|M_m† M_m|ψ⟩（另选地，p(m) = tr(M_m† M_m ρ)），其中后测量态 |ψ′⟩ 给出为：|ψ′⟩ = M_m |ψ⟩
+    / √⟨ψ|M_m† M_m|ψ⟩ (3)。测量算符集合 Σ_m M_m† M_m = I，反映了测量结果的概率性。在更高级的处理中，POVM 形式主义更完整地描述了系统的测量统计和后测量态。在那里我们定义一组正算符
+    {E_m} = {M_m† M_m} 满足 Σ_m E_m = 𝕀，以一种方式给出我们一组完整的正算符（此类形式主义比单纯依赖投影算符更一般）。
+
+
+    由于我们对概率分布而不是单次测量中的单个概率感兴趣，我们通过 Born 规则使用迹计算结果的概率分布 p(E_i) = tr(E_i ρ)。该表述对于下面讨论的量子公平度量很重要。
+
+
+    ### 复合系统
+
+    希尔伯特空间中的态 |ψ⟩ 可以是复合系统，描述为各组成部分物理系统的态空间的张量积，即 |ψ⟩ = ⊗_i |ψ_i⟩。我们在这里也提到开放量子系统的重要性，其中总系统哈密顿量
+    H 可以分解为 H = H_S + H_E + H_I，由封闭量子系统哈密顿量 H_S、环境哈密顿量 H_E、相互作用哈密顿量 H_I 组成，这通常是在量子背景下建模噪声的方式。开放量子系统通常由主方程建模（超出本入门论文的范围），但它们与量子公平机器学习特别相关，因为对系统/环境相互作用的耗散效应的建模，或工程耗散以模拟神经网络的耗散特性（见
+    [25]）在某些情况下将需要开放系统的表述。
+
+
+    理解下面形式主义所需的其他关键概念包括：(a) 相对相位，对于量子比特系统，其中振幅 a 和 b 因相对相位而不同，如果 a = exp(iθ)b，θ ∈
+    ℝ（如下所述，经典信息通常编码在基态例如 |0⟩、|1⟩ 以及相对相位中）；(b) 纠缠，某些复合态（称为 EPR 或 Bell 态）可能纠缠。例如，对于两量子比特态：|ψ⟩
+    = (|00⟩ + |11⟩)/√2 (4)，对第一个量子比特测量 0 必然意味着对第二个量子比特的测量将导致后测量态 |0⟩，即每个量子比特的测量统计相关。纠缠态不能写成组成部分态的张量积，即
+    |ψ⟩ ≠ |ψ₁⟩|ψ₂⟩；(c) 期望，算符 A（例如测量）的期望值可以写成 E(A) = tr(ρA)；(d) 混合态和纯态，量子系统其态精确已知为
+    |ψ⟩，即其中 ψ = |ψ⟩⟨ψ| 为纯态，而当对系统处于何种态存在（认识论）不确定性时，我们将其表示为混合态，即 ρ = Σ_i p_i ρ_i，其中
+    tr(ρ²) < 1（因为所有 p_i < 1）；(e) 可交换性，当对系统执行两次测量时，结果与经典情况不同，如果它们不可交换则为顺序依赖的，即如果 [A,
+    B] ≠ 0；以及 (f) 不克隆，与经典数据不同，量子数据不能被复制（为此需要测量，这会坍缩态，破坏编码在振幅中的信息的相干叠加）。
+
+
+    我们省略了与量子公平机器学习相关的其他大量特征，包括纠错码（设计用于限制或自校正错误以实现容错量子计算的编码机制），虽然相关，但超出了本文的范围。
+
+
+    ## 2.2 量子度量。
+
+
+    度量在公平机器学习中发挥核心技术作用，从根本上是构建公平技术定义的基石。量子信息处理的度量与经典对应物相关但不同。这意味着将公平机器学习度量翻译到量子领域需要不同（尽管相关）的度量形式主义。如
+    [9, 11, 12] 中所述，经典公平度量根据特定目标、优化目标和数据源而变化。度量和距离度量是量子信息处理的重要特征，根据上下文部署多种度量。对于经典比特串，一般使用多种经典信息距离度量
+    [20]。对于量子背景下的公平机器学习，其中输入或输出与函数的相似性对公平度量很重要（例如下面 Lipschitz 条件公平度量），经典距离的量子推广适用。由于信息编码在量子态中，因此量子距离度量适用。
+
+
+    - (1) *汉明距离*，两个比特串不相等的位置数。汉明距离在纠错背景下很重要（与 FML 相关，因为量子 FML 将需要将数据编码在码中以实现容错）。
+
+    - (2) *迹距离或 L1-Kolmogorov 距离*，其中，给定两个概率分布 {p_x}、{q_x}，我们有 D(p_x, q_x) = ½ Σ_x
+    |p_x − q_x|（用于 [14]，由于满足度量公理而是有效距离。对于由密度矩阵 ρ、σ 表示的量子态 [20]，其迹距离由下式给出：D(ρ, σ) =
+    ½ tr|ρ − σ| (5)，其中 |ρ| = √ρ†ρ 取为正平方根。迹距离具有在幺正变换下保持不变的有益特性。
+
+    - (3) *保真度*，是评估态或算符相似性的常用度量，给定为 F(ρ, σ) = tr√[ρ^{1/2} σ ρ^{1/2}]。与迹距离一起，它是量子计算中相似性最重要的度量之一。保真度可通过例如计算角度
+    ζ = arccos F(ρ, σ) 解释为度量。它与迹距离相关 via D(ρ, σ) = √[1 − F(ρ, σ)²]。
+
+    - (4) *量子相对熵*，它是香农熵的量子类比，给定为 S(ρ) = −tr(ρ log ρ)，其中（二元）交叉熵的量子类比为：S(ρ||σ) = tr(ρ
+    log ρ) − tr(ρ log σ) (6)。这两个度量提供了进一步的相似性度量基础，用于确定量子背景下是否满足公平标准。
+
+
+    ## 2.3 在量子系统中编码数据
+
+
+    将量子算法应用于求解涉及量子数据的优化问题的一步是把此类经典数据编码到量子系统中，这一过程称为 *状态制备*。编码数据属于典型 FML 分类法中的预处理阶段。标准编码方法包括
+    [25]：(a) 基编码，(b) 振幅编码，(c) qsample 编码和 (d) 动态编码。*基编码* 编码经典信息，通常涉及将数据转换为经典二进制比特串
+    (x1, ..., xd)，b_i ∈ {0,1}，然后将每个比特串映射到复合系统的一组量子比特的基态。例如，对于 x ∈ ℝ^N，例如一组小数，被转换为
+    d 维比特串（例如 0.1 → 00001...，−0.6 → 11001..）适当归一化使得 x = Σ_k^d (1/2^k) x_k。序列 x 然后通过
+    |ψ⟩ = |00000111001⟩ 表示（见 [25]）。*振幅编码* 将归一化经典信息关联，例如对于 n 量子比特系统（具有 2^n 个不同的可能（基）态
+    |j⟩），归一化经典序列 x ∈ ℂ^{2^n}，Σ_k |x_k|² = 1（可能仅有实部）与量子振幅 x = (x1, ..., x2^n) 可以编码为
+    |ψ_x⟩ = Σ_j^{2^n} x_j |j⟩。其他基于样本的编码示例（例如 *Qsample* 和 *动态* 编码也相关但此处未涉及。从经典机器学习角度看，此类编码方案还使特征和标签都能编码到量子系统中。
+
+
+    ## 2.4 量子测量与学习
+
+
+    ### 量子测量
+
+    量子测量是任何伦理量子计算计划不可或缺的部分。量子系统不能直接访问。相反，有关量子系统的信息取决于测量，其结果是测量结果的概率分布。对于机器学习背景，第一个关键区别是量子计算中的测量结果本质上是
+    *概率性的*。与经典计算不同，经典计算中可模拟随机过程，量子计算是 *必然地* 随机的，使得测量结果表示为使用 POVM 获得的概率分布。其次，通常只能采样
+    ℋ 的子空间，因此高阶量子系统的完整概率分布可能无法获得，增加额外不确定性。第三，当基态不正交时，可以证明这些态无法可靠区分（见 [20]），这会影响例如以测量其度量距离所必需的方式区分态的能力，从而是否满足公平约束。
+
+
+    ### 量子学习
+
+    量子算法的第二个不同特征在于量子 *学习* 的本质。人们如何学习关于量子系统并将学习策略作为对量子系统的测量或查询的一部分部署。映射经典 FML 到量子计算的挑战之一出现在机器学习背景下。量子信息（包括编码在量子态中的经典信息）的性质意味着典型的学习协议，例如反向传播，并不直接适用，因为量子信息不能像神经网络权重算符那样直接更新。例如，经典反向传播算法的使用需要经典参数化，例如幺正
+    U(θ)（其中 θ ∈ ℝ），其中测量结果与演化这些参数的经典输入之间的在线或离线反馈，从而幺正算符以及系统的量子态被实现 [25, 29]。更广泛地，量子算法形式主义通常关注于找到求解
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 4]
+
+
+    an objective, however the means by which algorithms or quantum systems ‘learn’
+    or ‘update’ differs (for example, see quantum annealing-based QAOA [15]). In this
+    paper, we include such quantum learning algorithms within the meaning of QFML,
+    though their theoretical and implementation details will differ from hybridised
+    classical-quantum circuits.
+
+
+    # 3 PART II: CLASSICAL FAIRNESS MEASURES IN QUANTUM CONTEXTS
+
+
+    In this section, we compare how the unique features of quantum computation affect
+    the applicability of techniques from classical fair machine learning to quantum
+    settings. For convenience, we adopt the taxonomy set-out in recent reviews by
+    Caton et al. [9] and del Barrio et al. [12].
+
+
+    # 3.1 Fairness measures
+
+
+    Definitions of fairness are diverse across the FML literature. Here we briefly
+    review the main categories of classical fairness (for machine learning) before
+    presenting a quantum analogue of quantum fairness. Following [9], fairness definitions
+    can be categorised into parity fairness, confusion-matrix based fairness, calibration
+    fairness.
+
+
+    +   (1) Parity metrics. In a classification context, parity metrics compare parity
+    of positive rates P(Y = 1) across different groups. These include: (a) statistical
+    parity, namely equal (and thus) probability of positive classification P(Y = 1|g_i)
+    = P(Y = 1|g_j) without considering group differences; (b) disparate impact, the
+    probability of being classified with a positive label, generally considering the
+    ratio between groups i.e. P(Y = 1|g_i)/P(Y = 1|g_j) where fairness requires the
+    ratio above a threshold (e.g. 80%).
+
+
+    (2) Confusion-matrix based metrics. Confusion-matrix based metrics consider other
+    typical measures such as true positive rate (TPR), true negative rate (TNR), false
+    positive rate (FPR) and false negative rate (FNR), providing a richer analysis
+    of fairness and discrimination. The key measures include: (a) equal opportunity,
+    where TPR is the same across all groups P(Y = 1|y = 1, g_i) = P(Y = 1|y = 1, g_j);
+    (b) equalised odds (conditional procedure accuracy equality) where FPR are considered
+    as well, mandating equal probability of false positive and true positive rates
+    conditional upon groups g_i, g_j; (c) overall accuracy equality concerns the overall
+    percentage of correct (true positives TP and true negatives TN) with (TN + TP)/(P
+    + N), where fairness measures [4] are relativised so as to require equal accuracy
+    within groups; (d) conditional use accuracy equality assess the predictive values
+    by demanding the probabilities of (positive/negative) classification given positive/negative
+    prediction be equal, that is P(y = 1|Y = 1, g_i) = p(y = 1|Y = 1, g_j) and similarly
+    for y = 0; (e) treatment equality, the ratio of FNR to FPR conditioned on each
+    group should be equal; (f) equalising disincentives, which requires equality of
+    the difference between TPR and FPR conditioned upon groups; and (g) conditional
+    equal opportunity, applicable where data is drawn from a distribution y ~ D, such
+    fairness measure require
+
+
+    equal probability of prediction above some threshold τ conditioned on groups,
+    y being below τ and the data satisfying some attribute A = A (of form P(ŷ > τ|g,
+    y < τ, A = a).
+
+
+    +   (3) Calibration. A third approach compares the predicted probability score
+    S into account. Such approaches include: (a) test fairness/calibration, where
+    for different group members, the same predicted probability score should yield
+    the same probability of actually being classified, that is P(y = 1|S = s, g_i)
+    = P(y = 1|S = s, g_j); (b) Well calibration, the same as test fairness calibration
+    but where the probability of classification must equal s itself.
+
+
+    (4) Score-based metrics. Finally, score-based metrics based upon expectation values
+    are also a feature of the literature: (a) positive/negative class balance, where
+    fairness is characterised as equality of expected predicted score which should
+    be equal conditioned on predicted score and group; and (b) Bayesian fairness measures.
+
+
+    Such definitions of fairness are commonly based on equivalences or equality across
+    probability distributions, with differences arising in what such probabilities
+    are conditioned upon. In the quantum context, measurement results in a probabilistic
+    distribution over (eigenvalues) over chosen measurement operators. These in turn
+    are abstracted as the quantum state |ψ⟩ residing in a subspace of Hilbert space
+    |ψ⟩ ∈ H_i ⊆ H. Fairness criteria in quantum fair machine learning must be reflected
+    in an available set of measurement operators (or POVM) that realises such fairness
+    criteria. This motivates our first definition of quantum fairness.
+
+
+    Definition 1: Quantum Fairness. Given a suitable POVM {E_m} = {M_m† M_m}, vectors
+    in H and quantum state |ψ⟩ ∈ H (i.e. ρ), the POVM partitions H (and states) into
+    (possibly disjoint) subspaces H_m ∈ H_m. A state |ψ⟩ satisfies quantum fairness
+    with respect to operators E_m that partition the Hilbert space if |ψ⟩ is equally
+    likely to reside in each subspace H_m, that is:
+
+    ⟨ψ|M_m† M_m|ψ⟩ = ⟨ψ|M_n† M_n|ψ⟩   m ≠ n
+
+    tr(ρ M_m) = tr(ρ M_n)
+
+
+    Note that we assume that ρ = Σ_i ρ_i where ρ_i encode individual data in quantum
+    states. This general definition of fairness stipulates that |ψ⟩ has an equal probability
+    of residing within each subspace H_m. Meeting a classification m is equivalent
+    to |ψ⟩ residing in the partition H_m associated with the measurement POVM operator
+    E_m that yields measurement (classification) m.
+
+
+    Conditional probabilities, where for example parity (fairness) across multiple
+    classifications, of the type articulated above, become reframed as sequences of
+    measurements on |ψ⟩ by operators. For example, elementary statistical parity among
+    n groups with regard to classifiers {G_i}, {Y_k} with classification outcomes
+    (which may be binary or multivariate) g_i and y_k respectively would first require
+    a measurement G_i whose outcome g_i was interpretable as membership of group |ψ⟩
+    ∈ H_{g_i}, followed by a measurement operator Y_k whose realisation y_k indicated
+    classification. The outcome of such measurements would give rise to joint probability
+    distributions (as in the classical case) allowing assessment of whether the multi-classification
+    fairness criteria have been met. However, note that, uniquely in the quantum case
+    as distinct from the classical case, the'
+  - '[PAGE 5]
+
+
+    commutation relations of operators (and thus their order of application) matters:
+    if the operators do commute [G_i, Y_k] = 0 commute, order of measurement will
+    not matter, while if [G_i, Y_k] ≠ 0 it will. In the latter case, this means the
+    joint distribution obtained will differ depending on whether G_i or Y_k is applied
+    first. In this paper, for simplicity, we assume commutativity of measurement operators.
+    This definition of fairness is that we apply in Part III below.
+
+
+    # 3.2 Individual and counterfactual fairness.
+
+
+    Extensive research has been undertaken into quantitative measures of individual
+    fairness for several decades. Among these include: (a) Lipschitz conditioned fairness
+    [14] imposing individual statistical parity by requiring the difference (measured
+    via metric distance d_Y) between outcomes f(x1), f(x2) ∈ Y (usually expressed
+    in terms of distributions) as a result of some function or algorithm f : X → Y
+    for similar individuals x1, x2 ∈ X to be a bounded function (e.g. constant multiple
+    K) of the metric distance d_X of those individuals themselves, that is d_Y(f(x1),
+    f(x2)) ≤ K d_X(x1, x2). The condition is expressed typically as a constraint an
+    optimisation problem; (b) counterfactual fairness, where given causal models (U,
+    V, F) (U latent background variables, V = S ∪ X are observables, S are sensitive
+    variables and F structural equation models), fairness requires that individual
+    outcomes are equivalent if sensitive variables had varied; (c) generalised entropy
+    comparing individualised prediction to average prediction accuracy (see [26] where
+    fairness measures are drawn from axiomatic approaches in economics). In the quantum
+    setting, outcomes are also probability distributions but available metrics are
+    more limited where metrics must compare the similarity of quantum input states
+    (the quantum analogue of d_X(x1, x2)) and final output states). Unlike the classical
+    Lipschitz condition for fairness [14], we cannot measure the same quantum state
+    before state evolution U |ψ(t = 0)⟩ at t = 0 (to determine metric similarity of
+    individual data encoded in quantum states) and then afterwards, because |ψ⟩ will
+    have collapsed to a post-measurement state (3). With an identical state preparation
+    procedure, we can measure initially and then rely on the creation of identical
+    states with which to evolve. This motivates a second definition.
+
+
+    Definition: Quantum Lipschitz Fairness. We are given a set of input states ρ_i
+    = ρ_i(t = 0) and unitary quantum algorithm 𝒜(t) evolving the state to output state
+    after time t given by ρ_i'' = 𝒜(t)† ρ_i 𝒜(t). The quantum equivalent of input
+    metrics d_X and output metrics d_Y are quantum metrics D_X, D_Y such as trace
+    distance D(ρ_i, ρ_j) = ½|tr|ρ_i - ρ_j|, which is a way to measure state similarity.
+    The quantum analogue of individual fairness (similar output classification/measurement
+    for similar input classification/measurement) is then expressed as a Lipschitz
+    constraint: D_Y(ρ_i'', ρ_j'') ≤ K(D_X(ρ_i, ρ_j)) (9) where D is a quantum metric
+    described above, such as trace distance, 0 < K ≤ 1 and ρ'' = 𝒜† ρ 𝒜 i.e. the state
+    after application of the algorithm 𝒜. Alternatively, one can compare the distance
+    between sets of inputs and sets of outputs via an entropy-based measure such as
+    quantum relative entropy above such that the quantum
+
+
+    Lipschitz condition becomes:
+
+
+    |tr(ρ_i log ρ_i) − tr(ρ_i log ρ_j)| ≤ K |tr(ρ_i'' log ρ_i'') − tr(ρ_i'' log ρ_j'')|
+    (10)
+
+
+    A third alternative is to specify two POVMs (i) {S_s} which measure input states
+    after preparation but before application of 𝒜 and (ii) {E_m} which measures outputs
+    and compare probability distributions for states ρ_i, ρ_j and ρ_i'', ρ_j'' with
+    respect to those POVMs. For convenience, the POVMs give rise to a distribution
+    over output measurements of both inputs and outputs (one must repeatedly prepare
+    identical input states for this process). In each case, one must select an appropriate
+    quantum metric to compare distances between input states ρ_i and output states
+    ρ_i''.
+
+
+    # 3.3 Mitigating unfairness
+
+
+    Typical techniques within FML literature to mitigate or remedy unfairness are
+    varied. One of the key differences between classical and quantum FML lies in the
+    different mitigation strategies that can be adopted. We explore these more fully
+    below (in the case of binary classification), including preprocessing, model processing
+    and post-processing of outcomes to mitigate biases. Typical methods include the
+    following
+
+
+    +   (1) Blinding. Firstly, (a) blinding, where classifiers (and algorithms) are
+    ‘blind’ to protected attributes which are not direct inputs or features in the
+    computation, either via ‘immunity’ (against/to sensitive variables) or omission
+    (which can reduce model accuracy). One challenge is that proxies for sensitive
+    variables can remain (or be reconstructed), leading to potential increases in
+    bias or concealment of discrimination. The inability access information about
+    quantum processes directly will make it difficult to apply similar techniques
+    in the quantum setting. Secondly, (b) causal methods in which causal models (such
+    as graphical or probabilistic models) between sensitive and non-sensitive variables,
+    including adding or varying training data in order to meet specific fairness criteria
+    or debiasing, though their effectiveness is varied. Quantum causal models off
+    a quantum analogue that may be applicable.
+
+
+    (2) Sampling and subgroups. A third approach is in (c) sampling and subgroup analysis
+    focused on (i) sampling strategies that alter training data to eliminate unfairness
+    or bias (such as oversampling close to decision-boundaries or thinning out of
+    data away from such boundaries) and (ii) identification of groups or subgroups
+    discriminated against by classifiers, such as via subgroup analysis. Sampling
+    theory and strategies are integral to quantum computing given that one rarely,
+    if ever, has the ability to query the entire Hilbert space ℋ. We assume in this
+    work that we do have such access in a simplified setting, however, understanding
+    how sampling techniques in quantum computing may be used to satisfy fairness criteria
+    is an open an important direction of research.
+
+
+    (3) Other techniques. Other mitigation techniques whose applicability quantum
+    settings motivates further research include: (a) relabelling and perturbation,
+    the inclusion of perturbative noise in datasets to both improve generalisation
+    [13]; (b) re-weighting, where achieving fairness satisfaction occurs'
+  md: '
+
+    an objective, however the means by which algorithms or quantum systems ‘learn’
+    or ‘update’ differs (for example, see quantum annealing-based QAOA [15]). In this
+    paper, we include such quantum learning algorithms within the meaning of QFML,
+    though their theoretical and implementation details will differ from hybridised
+    classical-quantum circuits.
+
+
+    ## 3 PART II: CLASSICAL FAIRNESS MEASURES IN QUANTUM CONTEXTS
+
+
+    In this section, we compare how the unique features of quantum computation affect
+    the applicability of techniques from classical fair machine learning to quantum
+    settings. For convenience, we adopt the taxonomy set out in recent reviews by
+    Caton et al. [9] and del Barrio et al. [12].
+
+
+    ### 3.1 Fairness measures
+
+
+    Definitions of fairness are diverse across the FML literature. Here we briefly
+    review the main categories of classical fairness (for machine learning) before
+    presenting a quantum analogue of quantum fairness. Following [9], fairness definitions
+    can be categorised into parity fairness, confusion-matrix based fairness, calibration
+    fairness.
+
+
+    - (1) Parity metrics. In a classification context, parity metrics compare parity
+    of positive rates P(Y = 1) across different groups. These include: (a) statistical
+    parity, namely equal (and thus) probability of positive classification P(Y = 1|g_i)
+    = P(Y = 1|g_j) without considering group differences; (b) disparate impact, the
+    probability of being classified with a positive label, generally considering the
+    ratio between groups i.e. P(Y = 1|g_i)/P(Y = 1|g_j) where fairness requires the
+    ratio above a threshold (e.g. 80%).
+
+
+    - (2) Confusion-matrix based metrics. Confusion-matrix based metrics consider
+    other typical measures such as true positive rate (TPR), true negative rate (TNR),
+    false positive rate (FPR) and false negative rate (FNR), providing a richer analysis
+    of fairness and discrimination. The key measures include: (a) equal opportunity,
+    where TPR is the same across all groups P(Y = 1|y = 1, g_i) = P(Y = 1|y = 1, g_j);
+    (b) equalised odds (conditional procedure accuracy equality) where FPR are considered
+    as well, mandating equal probability of false positive and true positive rates
+    conditional upon groups g_i, g_j; (c) overall accuracy equality concerns the overall
+    percentage of correct (true positives TP and true negatives TN) with (TN + TP)/(P
+    + N), where fairness measures [4] are relativised so as to require equal accuracy
+    within groups; (d) conditional use accuracy equality assesses the predictive values
+    by demanding the probabilities of (positive/negative) classification given positive/negative
+    prediction be equal, that is P(y = 1|Y = 1, g_i) = P(y = 1|Y = 1, g_j) and similarly
+    for y = 0; (e) treatment equality, the ratio of FNR to FPR conditioned on each
+    group should be equal; (f) equalising disincentives, which requires equality of
+    the difference between TPR and FPR conditioned upon groups; and (g) conditional
+    equal opportunity, applicable where data is drawn from a distribution y ~ D, such
+    fairness measure require equal probability of prediction above some threshold
+    τ conditioned on groups, y being below τ and the data satisfying some attribute
+    A = a (of form P(ŷ > τ|g, y < τ, A = a).
+
+
+    - (3) Calibration. A third approach takes the predicted probability score S into
+    account. Such approaches include: (a) test fairness/calibration, where for different
+    group members, the same predicted probability score should yield the same probability
+    of actually being classified, that is P(y = 1|S = s, g_i) = P(y = 1|S = s, g_j);
+    (b) Well-calibrated, the same as test fairness calibration but where the probability
+    of classification must equal s itself.
+
+
+    - (4) Score-based metrics. Finally, score-based metrics based upon expectation
+    values are also a feature of the literature: (a) positive/negative class balance,
+    where fairness is characterised as equality of expected predicted score which
+    should be equal conditioned on predicted score and group; and (b) Bayesian fairness
+    measures.
+
+
+    Such definitions of fairness are commonly based on equivalences or equality across
+    probability distributions, with differences arising in what such probabilities
+    are conditioned upon. In the quantum context, measurement results in a probabilistic
+    distribution over (eigenvalues) over chosen measurement operators. These in turn
+    are abstracted as the quantum state |ψ⟩ residing in a subspace of Hilbert space
+    |ψ⟩ ∈ H_i ⊆ H. Fairness criteria in quantum fair machine learning must be reflected
+    in an available set of measurement operators (or POVM) that realises such fairness
+    criteria. This motivates our first definition of quantum fairness.
+
+
+    Definition 1: Quantum Fairness. Given a suitable POVM {E_m} = {M_m† M_m}, vectors
+    in H and quantum state |ψ⟩ ∈ H (i.e. ρ), the POVM partitions H (and states) into
+    (possibly disjoint) subspaces H_m ∈ H_m. A state |ψ⟩ satisfies quantum fairness
+    with respect to operators E_m that partition the Hilbert space if |ψ⟩ is equally
+    likely to reside in each subspace H_m, that is:
+
+    ⟨ψ|M_m† M_m|ψ⟩ = ⟨ψ|M_n† M_n|ψ⟩   m ≠ n
+
+    tr(ρ M_m† M_m) = tr(ρ M_n† M_n)
+
+
+    Note that we assume that ρ = Σ_i ρ_i where ρ_i encode individual data in quantum
+    states. This general definition of fairness stipulates that |ψ⟩ has an equal probability
+    of residing within each subspace H_m. Meeting a classification m is equivalent
+    to |ψ⟩ residing in the partition H_m associated with the measurement POVM operator
+    E_m that yields measurement (classification) m.
+
+
+    Conditional probabilities, where for example parity (fairness) across multiple
+    classifications, of the type articulated above, become reframed as sequences of
+    measurements on |ψ⟩ by operators. For example, elementary statistical parity among
+    n groups with regard to classifiers {G_i}, {Y_k} with classification outcomes
+    (which may be binary or multivariate) g_i and y_k respectively would first require
+    a measurement G_i whose outcome g_i was interpretable as membership of group |ψ⟩
+    ∈ H_{g_i}, followed by a measurement operator Y_k whose realisation y_k indicated
+    classification. The outcome of such measurements would give rise to joint probability
+    distributions (as in the classical case) allowing assessment of whether the multi-classification
+    fairness criteria have been met. However, note that, uniquely in the quantum case
+    as distinct from the classical case, the commutation relations of operators (and
+    thus their order of application) matters: if the operators commute [G_i, Y_k]
+    = 0, order of measurement will not matter, while if [G_i, Y_k] ≠ 0 it will. In
+    the latter case, this means the joint distribution obtained will differ depending
+    on whether G_i or Y_k is applied first. In this paper, for simplicity, we assume
+    commutativity of measurement operators. This definition of fairness is that we
+    apply in Part III below.
+
+
+    ### 3.2 Individual and counterfactual fairness.
+
+
+    Extensive research has been undertaken into quantitative measures of individual
+    fairness for several decades. Among these include: (a) Lipschitz conditioned fairness
+    [14] imposing individual statistical parity by requiring the difference (measured
+    via metric distance d_Y) between outcomes f(x1), f(x2) ∈ Y (usually expressed
+    in terms of distributions) as a result of some function or algorithm f : X → Y
+    for similar individuals x1, x2 ∈ X to be a bounded function (e.g. constant multiple
+    K) of the metric distance d_X of those individuals themselves, that is d_Y(f(x1),
+    f(x2)) ≤ K d_X(x1, x2). The condition is expressed typically as a constraint in
+    an optimisation problem; (b) counterfactual fairness, where given causal models
+    (U, V, F) (U latent background variables, V = S ∪ X are observables, S are sensitive
+    variables and F structural equation models), fairness requires that individual
+    outcomes are equivalent if sensitive variables had varied; (c) generalised entropy
+    comparing individualised prediction to average prediction accuracy (see [26] where
+    fairness measures are drawn from axiomatic approaches in economics). In the quantum
+    setting, outcomes are also probability distributions but available metrics are
+    more limited where metrics must compare the similarity of quantum input states
+    (the quantum analogue of d_X(x1, x2)) and final output states). Unlike the classical
+    Lipschitz condition for fairness [14], we cannot measure the same quantum state
+    before state evolution U |ψ(t = 0)⟩ at t = 0 (to determine metric similarity of
+    individual data encoded in quantum states) and then afterwards, because |ψ⟩ will
+    have collapsed to a post-measurement state (3). With an identical state preparation
+    procedure, we can measure initially and then rely on the creation of identical
+    states with which to evolve. This motivates a second definition.
+
+
+    Definition: Quantum Lipschitz Fairness. We are given a set of input states ρ_i
+    = ρ_i(t = 0) and unitary quantum algorithm 𝒜(t) evolving the state to output state
+    after time t given by ρ_i'' = 𝒜(t)† ρ_i 𝒜(t). The quantum equivalent of input
+    metrics d_X and output metrics d_Y are quantum metrics D_X, D_Y such as trace
+    distance D(ρ_i, ρ_j) = ½|tr|ρ_i - ρ_j|, which is a way to measure state similarity.
+    The quantum analogue of individual fairness (similar output classification/measurement
+    for similar input classification/measurement) is then expressed as a Lipschitz
+    constraint: D_Y(ρ_i'', ρ_j'') ≤ K(D_X(ρ_i, ρ_j)) (9) where D is a quantum metric
+    described above, such as trace distance, 0 < K ≤ 1 and ρ'' = 𝒜† ρ 𝒜 i.e. the state
+    after application of the algorithm 𝒜. Alternatively, one can compare the distance
+    between sets of inputs and sets of outputs via an entropy-based measure such as
+    quantum relative entropy above such that the quantum Lipschitz condition becomes:
+
+
+    |tr(ρ_i log ρ_i) − tr(ρ_i log ρ_j)| ≤ K |tr(ρ_i'' log ρ_i'') − tr(ρ_i'' log ρ_j'')|
+    (10)
+
+
+    A third alternative is to specify two POVMs (i) {S_s} which measure input states
+    after preparation but before application of 𝒜 and (ii) {E_m} which measures outputs
+    and compare probability distributions for states ρ_i, ρ_j and ρ_i'', ρ_j'' with
+    respect to those POVMs. For convenience, the POVMs give rise to a distribution
+    over output measurements of both inputs and outputs (one must repeatedly prepare
+    identical input states for this process). In each case, one must select an appropriate
+    quantum metric to compare distances between input states ρ_i and output states
+    ρ_i''.
+
+
+    ### 3.3 Mitigating unfairness
+
+
+    Typical techniques within FML literature to mitigate or remedy unfairness are
+    varied. One of the key differences between classical and quantum FML lies in the
+    different mitigation strategies that can be adopted. We explore these more fully
+    below (in the case of binary classification), including preprocessing, model processing
+    and post-processing of outcomes to mitigate biases. Typical methods include the
+    following
+
+
+    - (1) Blinding. Firstly, (a) blinding, where classifiers (and algorithms) are
+    ‘blind’ to protected attributes which are not direct inputs or features in the
+    computation, either via ‘immunity’ (against/to sensitive variables) or omission
+    (which can reduce model accuracy). One challenge is that proxies for sensitive
+    variables can remain (or be reconstructed), leading to potential increases in
+    bias or concealment of discrimination. The inability to access information about
+    quantum processes directly will make it difficult to apply similar techniques
+    in the quantum setting. Secondly, (b) causal methods in which causal models (such
+    as graphical or probabilistic models) between sensitive and non-sensitive variables,
+    including adding or varying training data in order to meet specific fairness criteria
+    or debiasing, though their effectiveness is varied. Quantum causal models offer
+    a quantum analogue that may be applicable.
+
+
+    - (2) Sampling and subgroups. A third approach is in (c) sampling and subgroup
+    analysis focused on (i) sampling strategies that alter training data to eliminate
+    unfairness or bias (such as oversampling close to decision-boundaries or thinning
+    out of data away from such boundaries) and (ii) identification of groups or subgroups
+    discriminated against by classifiers, such as via subgroup analysis. Sampling
+    theory and strategies are integral to quantum computing given that one rarely,
+    if ever, has the ability to query the entire Hilbert space ℋ. We assume in this
+    work that we do have such access in a simplified setting, however, understanding
+    how sampling techniques in quantum computing may be used to satisfy fairness criteria
+    is an open and important direction of research.
+
+
+    - (3) Other techniques. Other mitigation techniques whose applicability quantum
+    settings motivates further research include: (a) relabelling and perturbation,
+    the inclusion of perturbative noise in datasets to both improve generalisation
+    [13]; (b) re-weighting, where achieving fairness satisfaction occurs
+
+    '
+  mdcn: '
+
+    一个目标，然而算法或量子系统‘学习’或‘更新’的方式不同（例如，参见基于量子退火的 QAOA [15]）。在本文中，我们将此类量子学习算法纳入 QFML 的含义中，尽管其理论和实现细节与混合经典-量子电路不同。
+
+
+    ## 3 第二部分：量子情境中的经典公平性度量
+
+
+    在本节中，我们比较量子计算的独特特征如何影响经典公平机器学习技术在量子环境中的适用性。为方便起见，我们采用了 Caton 等人 [9] 和 del Barrio
+    等人 [12] 近期综述中提出的分类法。
+
+
+    ### 3.1 公平性度量
+
+
+    公平性的定义在 FML 文献中多种多样。在此，我们在介绍量子公平的量子类比之前，先简要回顾经典公平（针对机器学习）的主要类别。遵循 [9]，公平性定义可分为平价公平、基于混淆矩阵的公平、校准公平。
+
+
+    - (1) 平价指标。在分类情境中，平价指标比较不同群体间正例率 P(Y = 1) 的平价。其包括：（a）统计平价，即正向分类的相等（因此）概率 P(Y =
+    1|g_i) = P(Y = 1|g_j)，不考虑群体差异；（b）差异影响，被归类为正标签的概率，通常考虑群体间的比率，即 P(Y = 1|g_i)/P(Y
+    = 1|g_j)，其中公平要求比率高于阈值（例如 80%）。
+
+
+    - (2) 基于混淆矩阵的指标。基于混淆矩阵的指标考虑其他典型度量，如真正率（TPR）、真负率（TNR）、假正率（FPR）和假负率（FNR），提供更丰富的公平性和歧视分析。关键指标包括：（a）机会均等，其中各组间的
+    TPR 相同 P(Y = 1|y = 1, g_i) = P(Y = 1|y = 1, g_j)；（b）均等化几率（条件程序准确性相等），其中也考虑 FPR，要求在组
+    g_i、g_j 条件下的假正率和真正率的概率相等；（c）整体准确性相等关注正确（真正例 TP 和真负例 TN）的整体百分比 (TN + TP)/(P + N)，其中公平性度量
+    [4] 被相对化以要求组内准确性相等；（d）条件使用准确性相等通过要求在正/负预测下（正/负）分类的概率相等来评估预测值，即 P(y = 1|Y = 1,
+    g_i) = P(y = 1|Y = 1, g_j)，且 y = 0 情况类似；（e）处理平等，每个组上条件的 FNR 与 FPR 的比率应相等；（f）均等化威慑，要求组条件下的
+    TPR 与 FPR 之差相等；以及（g）条件机会均等，适用于数据从分布 y ~ D 中抽取的情况，此类公平性度量要求在组条件、y 低于阈值 τ 且数据满足属性
+    A = a 时，预测高于某阈值 τ 的概率相等（形式为 P(ŷ > τ|g, y < τ, A = a)）。
+
+
+    - (3) 校准。第三种方法考虑预测概率分数 S。此类方法包括：（a）测试公平性/校准，其中对于不同组的成员，相同的预测概率分数应产生相同的实际被分类概率，即
+    P(y = 1|S = s, g_i) = P(y = 1|S = s, g_j)；（b）良好校准，与测试公平性校准相同，但分类概率必须等于 s 本身。
+
+
+    - (4) 基于分数的指标。最后，基于期望值的基于分数的指标也是文献中的一个特征：（a）正/负类平衡，其中公平性被表征为期望预测分数的相等性，该相等性应在预测分数和组条件下成立；以及（b）贝叶斯公平性度量。
+
+
+    此类公平性定义通常基于概率分布之间的等价性或相等性，其差异在于此类概率的条件是什么。在量子情境中，测量结果产生所选测量算符上的（本征值）概率分布。这些进而被抽象为量子态
+    |ψ⟩，其位于希尔伯特空间的子空间中 |ψ⟩ ∈ H_i ⊆ H。量子公平机器学习中的公平性标准必须体现在可实现此类公平性标准的可用测量算符（或 POVM）集合中。这促使我们提出第一个量子公平定义。
+
+
+    Definition 1: Quantum Fairness. Given a suitable POVM {E_m} = {M_m† M_m}, vectors
+    in H and quantum state |ψ⟩ ∈ H (i.e. ρ), the POVM partitions H (and states) into
+    (possibly disjoint) subspaces H_m ∈ H_m. A state |ψ⟩ satisfies quantum fairness
+    with respect to operators E_m that partition the Hilbert space if |ψ⟩ is equally
+    likely to reside in each subspace H_m, that is:
+
+    ⟨ψ|M_m† M_m|ψ⟩ = ⟨ψ|M_n† M_n|ψ⟩   m ≠ n
+
+    tr(ρ M_m† M_m) = tr(ρ M_n† M_n)
+
+
+    请注意，我们假设 ρ = Σ_i ρ_i，其中 ρ_i 在量子态中编码个体数据。此一般公平性定义规定 |ψ⟩ 位于每个子空间 H_m 内的概率相等。满足分类
+    m 等价于 |ψ⟩ 位于与产生测量（分类）m 的测量 POVM 算符 E_m 相关的划分 H_m 中。
+
+
+    条件概率，其中例如跨多个分类的平价（公平性），如上所述的类型，被重新表述为算符对 |ψ⟩ 的测量序列。例如，关于分类器 {G_i}、{Y_k} 的 n 个组之间的基本统计平价，分类结果（可能是二元或多元的）分别为
+    g_i 和 y_k，首先需要测量 G_i，其结果 g_i 可解释为组成员 |ψ⟩ ∈ H_{g_i}，随后是测量算符 Y_k，其实现 y_k 表示分类。此类测量的结果将产生联合概率分布（与经典情况相同），从而可以评估是否满足多分类公平性标准。然而请注意，独特于量子情况而不同于经典情况，算符的对易关系（以及其应用顺序）很重要：如果算符对易
+    [G_i, Y_k] = 0，测量顺序无关紧要，而如果 [G_i, Y_k] ≠ 0，则会相关。在后一种情况下，这意味着获得的联合分布将取决于 G_i 或
+    Y_k 先应用。 在本文中，为简单起见，我们假设测量算符可对易。我们在下文第三部分中应用的公平性定义即为此。
+
+
+    ### 3.2 个体与反事实公平
+
+
+    个体公平的定量度量已进行了数十年的广泛研究。其中包括：（a）Lipschitz 条件公平 [14] 通过施加个体统计平价，要求由某个函数或算法 f : X
+    → Y 对相似个体 x1, x2 ∈ X 产生的输出 f(x1), f(x2) ∈ Y（通常以分布表示）之间的差值（通过度量距离 d_Y 衡量）是有界函数（例如常数倍
+    K），该函数取决于这些个体本身的度量距离 d_X，即 d_Y(f(x1), f(x2)) ≤ K d_X(x1, x2)。该条件通常以优化问题中的约束形式表达；（b）反事实公平，其中给定因果模型
+    (U, V, F)（U 为潜在背景变量，V = S ∪ X 为可观测变量，S 为敏感变量，F 为结构方程模型），公平要求如果敏感变量发生变化，个体结果是等价的；（c）广义熵比较个体化预测与平均预测准确性（参见
+    [26]，其中公平性度量源自经济学中的公理化方法）。在量子设定中，结果也是概率分布，但可用度量更有限，其中度量必须比较量子输入态（d_X(x1, x2) 的量子类比）的相似性以及最终输出态。与公平性的经典
+    Lipschitz 条件 [14] 不同，我们无法在态演化 U |ψ(t = 0)⟩ 在 t = 0 时之前测量同一量子态（以确定编码在量子态中的个体数据的度量相似性），然后再测量，因为
+    |ψ⟩ 将坍缩为后测量态 (3)。通过相同的态制备过程，我们可以初始测量，然后依赖于创建可演化的相同态。这促使了第二个定义。
+
+
+    Definition: Quantum Lipschitz Fairness. We are given a set of input states ρ_i
+    = ρ_i(t = 0) and unitary quantum algorithm 𝒜(t) evolving the state to output state
+    after time t given by ρ_i'' = 𝒜(t)† ρ_i 𝒜(t). The quantum equivalent of input
+    metrics d_X and output metrics d_Y are quantum metrics D_X, D_Y such as trace
+    distance D(ρ_i, ρ_j) = ½|tr|ρ_i - ρ_j|, which is a way to measure state similarity.
+    The quantum analogue of individual fairness (similar output classification/measurement
+    for similar input classification/measurement) is then expressed as a Lipschitz
+    constraint: D_Y(ρ_i'', ρ_j'') ≤ K(D_X(ρ_i, ρ_j)) (9) where D is a quantum metric
+    described above, such as trace distance, 0 < K ≤ 1 and ρ'' = 𝒜† ρ 𝒜 i.e. the state
+    after application of the algorithm 𝒜. Alternatively, one can compare the distance
+    between sets of inputs and sets of outputs via an entropy-based measure such as
+    quantum relative entropy above such that the quantum Lipschitz condition becomes:
+
+
+    |tr(ρ_i log ρ_i) − tr(ρ_i log ρ_j)| ≤ K |tr(ρ_i'' log ρ_i'') − tr(ρ_i'' log ρ_j'')|
+    (10)
+
+
+    A third alternative is to specify two POVMs (i) {S_s} which measure input states
+    after preparation but before application of 𝒜 and (ii) {E_m} which measures outputs
+    and compare probability distributions for states ρ_i, ρ_j and ρ_i'', ρ_j'' with
+    respect to those POVMs. For convenience, the POVMs give rise to a distribution
+    over output measurements of both inputs and outputs (one must repeatedly prepare
+    identical input states for this process). In each case, one must select an appropriate
+    quantum metric to compare distances between input states ρ_i and output states
+    ρ_i''.
+
+
+    ### 3.3 缓解不公平
+
+
+    FML 文献中用于缓解或补救不公平的典型技术多种多样。经典与量子 FML 之间的关键差异之一在于可以采用的不同缓解策略。我们在下面更全面地探讨这些（以二元分类为例），包括预处理、模型处理和结果后处理以缓解偏差。典型方法包括以下
+
+
+    - (1) 盲法。首先，（a）盲法，其中分类器（和算法）对受保护属性‘盲’，这些属性不是计算中的直接输入或特征，要么通过‘免疫’（针对/对敏感变量）要么通过省略（这可能降低模型准确性）。一个挑战是敏感变量的代理可能仍然存在（或被重建），导致偏差增加或歧视被掩盖。无法直接访问量子过程的信息将使在量子环境中应用类似技术变得困难。其次，（b）因果方法，其中敏感变量和非敏感变量之间存在因果模型（如图形或概率模型），包括添加或改变训练数据以满足特定公平性标准或去偏，尽管其有效性各不相同。量子因果模型提供了一个可能适用的量子类比。
+
+
+    - (2) 采样与子群。第三种方法是（c）采样和子群分析，重点关注（i）改变训练数据以消除不公平或偏差的采样策略（如在决策边界附近过采样或在远离此类边界的数据上进行稀疏化）以及（ii）通过子群分析等方法识别被分类器歧视的群体或子群。采样理论和策略对量子计算至关重要，因为人们很少甚至从未有能力查询整个希尔伯特空间
+    ℋ。我们在本工作中假设在简化设定中我们确实有这种访问，然而，了解量子计算中的采样技术如何用于满足公平性标准是一个开放且重要的研究方向。
+
+
+    - (3) 其他技术。其他缓解技术，其在量子环境中的适用性促使进一步研究，包括：（a）重新标记和扰动，将扰动噪声纳入数据集以改善泛化 [13]；（b）重新加权，其中实现公平性满足
+    occurs
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 6]
+
+
+    via adjusting quantum amplitudes (we explore this in Part III below); (c) regularisation
+    and constraint optimisation there is an extensive literature on constraint optimisation,
+    such as in quantum control contexts [24] where, in particular, fairness constraints
+    (and regularisation terms) are encoded in Hamiltonians H in order to steer the
+    controllable part of quantum systems towards desired target states.
+
+
+    # 4 PART III: STATISTICAL PARITY VIA AMPLITUDE AMPLIFICATION
+
+
+    In this section, we demonstrate how amplitude application using Grover’s quantum
+    search algorithms may be used to achieve a measure of statistical parity among
+    groups (or subgroups). This example is designed to illustrate how specifically
+    quantum algorithmic techniques may be used to specific FML objectives or optimisations.
+    In reality, as discussed above, statistical parity will likely still mean outcomes
+    remain unfair by some other measures. While the appropriateness of statistical
+    parity as a fairness measure is itself contested within the literature, it remains
+    relevant as a measure in many contexts, including jurisprudential [8].
+
+
+    # 4.1 Dataset and statistical parity
+
+
+    We begin by considering a dataset comprising two groups of individual data, binarised
+    into bit strings of length m i.e. (x1,...,xk,...,xm) corresponding to the set
+    M of indicator features k ∈ M where |M| = m. Each bit encodes whether an individual
+    has or does not have a particular attribute i.e. indicator features (for this
+    simple case, we can consider ordinal or continuous variables encoded into indicator
+    variables e.g. an age of 50 would mean the indicator variable for age-range 50
+    to 69 years would be 1 and all other age interval indicators 0). Let one of the
+    features, k = s, indicate that the individual has characteristic (feature) s and
+    is thus a member of a protected class (or subgroup) S. Let the dataset D, for
+    simplicity, be partitionable into disjoint subsets such that D = S ⊕ G, where
+    G comprises individuals without the protected attribute s. The optimisation problem
+    is to classify members of S and G in order to achieve statistical parity without
+    removing protected variables (for reasons discussed above, including decline in
+    accuracy).
+
+
+    For illustrative purposes, set m = 3, with the first bit designating membership
+    of the protected class S if x1 = 1 and the other two features non-protected attributes.
+    The possible combinations of individuals (indexed by i) are set-out in Table 1.
+
+
+    We assume that we have a quantum algorithm which we designate (following [7])
+    as A acting as a function f(x) designed to solve a particular optimisation problem,
+    such as for example classifying individuals for whom to offer some benefit, like
+    home loans. The motivation for using a quantum (as opposed to classical) algorithm
+    is not important in this example (it might be that a quantum algorithm more feasibly
+    solves the optimisation problem of interest). The raw optimisation problem itself
+    makes no mention of measures of statistical parity or other measures of parity.
+    The sole objective of applying A is to maximise utility via optimal classification.
+    The specific details of what A could be and, relevantly for quantum approaches,
+    what type of quantum algorithms might implement such a function are left abstract,
+    though we assume that (a) the quantum algorithm A uses no quantum measurements
+    and (b) the classical
+
+
+    | i (index) | x1 (protected) | x2 | x3 | |x_i^n> |
+
+    |---|---|---|---|---|
+
+    | 1 | 1 | 1 | 1 | |111> |
+
+    | 2 | 1 | 1 | 0 | |110> |
+
+    | 3 | 1 | 0 | 1 | |101> |
+
+    | 4 | 1 | 0 | 0 | |100> |
+
+    | 5 | 0 | 1 | 1 | |011> |
+
+    | 6 | 0 | 1 | 0 | |010> |
+
+    | 7 | 0 | 0 | 1 | |001> |
+
+    | 8 | 0 | 0 | 0 | |000> |
+
+
+    Table 1: Basis encoding of individuals with features b_k into quantum states |x^n>
+
+
+    input data to such a problem i.e (x1, x2, x3) are (i) encoded in states |x_i^n>
+    (note: when used in the ket, x_i^n indexes the three-qubit state where n = 3,
+    not to be confused with the individual qubits which we designate via numerical
+    subscripts x1, x2, x3 etc) and then (ii) placed in a superposition state. Examples
+    might include a typical hybrid model of quantum algorithmic learning using quantum
+    variational eigensolvers, for example see [27].
+
+
+    # 4.2 Encoding features
+
+
+    The first step is to basis-encode the classical data as set-out in Table 1, mapping
+    inputs (x1, x2, x3) → c |x1 x2 x3>, x ∈ {0,1}. Here c represents the amplitude
+    for the state (which, when a measurement is performed on all three qubits, renders
+    the state as the output with probability |c|^2). Upon basis encoding the datasets
+    D into the qubits and placing them into an equal superposition, the state of the
+    system |ψ> will be:
+
+
+    |ψ> = 1/2^n Σ_{i=1}^{2^n} |x_i^n> (11)
+
+
+    where the amplitude of any state is 1/2^n. The next step is the application of
+    the quantum optimisation algorithm A, which must be a unitary algorithm without
+    measurement. After applying A, |ψ> is in the form:
+
+
+    |ψ''> = Σ_{i=1}^{2^n} c_i |x_i^n> (12)
+
+
+    where c_i ∈ C represent the amplitudes for the state |x_i^n> subject to the probability
+    measure constraints that Σ_i |c_i|^2 = 1. The algorithm A optimises for some objective
+    via adjusting the amplitudes c_i so they are no longer equal. To optimise for
+    the particular objective, each qubit is then measured in the computational basis.
+    If the algorithm A is indeed optimal, then the most probable measurements obtained
+    from repeating measurements on |ψ''> will be those with the highest amplitudes
+    (thus highest probabilities of being measured), reflecting the optimal choice
+    of states and thus individuals for satisfying the objective in question. Doing
+    so, however, is unlikely to satisfy the fairness constraint of statistical parity
+    between individuals in the protected class (with x1 = 1) and those not in the
+    protected class (with x1 = 0).
+
+
+    If we assume the existence of an (oracle) function that indicates,'
+  - "[PAGE 7]\n\nprior to measurement, whether a state $|x_i^n\rangle$ is in a protected\
+    \ class or not (i.e if the first qubit $x_1 = 1$ or $0$), defined by:\n\n$$\\\
+    chi(|x_i^n\\rangle) = \\begin{cases} 1 & x_1 = 1 \\\\ 0 & x_1 = 0 \\end{cases}\
+    \ \\tag{13}$$\n\nthen to achieve statistical parity, we want to approximately\
+    \ equalise the conditional probability of measuring states in protected subclass\
+    \ $(x_1 = 1)$ and those not in the protected subclass $(x_1 = 0)$, that is:\n\n\
+    $$Pr(|\\psi\\rangle \\mid x_1 = 0) \\approx Pr(|\\psi\\rangle \\mid x_1 = 1) \\\
+    tag{14}$$\n\nOne approach is to simply randomly equalise outcomes via post-processing,\
+    \ but this ignores the fact that certain combinations of states with $x_1 = 1$\
+    \ will minimise the loss function embedded in $\\mathcal{A}$ than others (that\
+    \ is, certain choices of states with $x_1 = 1$ will be more optimal than others).\
+    \ Our problem is thus a typical constrained optimisation problem, in this case\
+    \ in the context of some ethically mandated fairness criteria (here, approximate\
+    \ statistical parity). We assume that the optimisation algorithm $\\mathcal{A}$\
+    \ has run in a way that has set amplitudes to satisfy the optimisation problem\
+    \ disregarding fairness. We then apply amplitude amplification to evolve initial\
+    \ states with $x_1 = 1$ in $\\mathcal{H}$ in a way that minimises the objective\
+    \ loss (in relation to $\\mathcal{A}$) by comparison with alternative means of\
+    \ achieving statistical parity, such as disregarding $x_1$ and randomly equalising\
+    \ outcomes between the two classifications, which are inconsistent with the objective\
+    \ of optimisation via $\\mathcal{A}$.\n\n# 4.3 Amplitude amplification\n\nTo solve\
+    \ the constrained optimisation problem, we apply amplitude amplification methods\
+    \ from [6, 7, 16, 17, 25, 28] adopting in part the formulation from [20]. Amplitude\
+    \ amplification is a generalisation of techniques applied to generate a quadratic\
+    \ speedup, of which Grover’s algorithm [16, 18] (one of the seminal results of\
+    \ theoretical quantum algorithm design) is the most well-known example. The method\
+    \ (set-out in detail in [7]) consists of a series of transformations of quantum\
+    \ data that amplify amplitudes of quantum states that satisfy some optimisation\
+    \ criteria, such as a searching criteria. By amplifying the amplitudes of desirous\
+    \ quantum states, the probability of measuring such states is thereby increased.\n\
+    \nFor amplitude amplification, we assume the existence of a classifier (an oracle)\
+    \ which disjunctively partitions (classifies) quantum vectors in our Hilbert space\
+    \ $|\\psi\\rangle \\in \\mathcal{H}$ into the direct sum of mutually orthogonal\
+    \ subspaces $\\mathcal{H}_1$, the space of quantum states to be classified as\
+    \ 1 and $\\mathcal{H}_0$, the space of quantum states to be classified as 0. The\
+    \ partitioning of such states is dependent upon this classifier, which is an oracle\
+    \ $\\chi$, in the form a unitary operator. The oracle indicates a solution to\
+    \ our search problem $f(x_1) = 1$. Finding $x_1 = 1$ and can be represented via:\n\
+    \n$$\\chi : \\mathcal{H} \\to \\mathcal{H}_1 \\tag{15}$$\n\n$$|x\\rangle \\mapsto\
+    \ (-1)^{f(x)} |x\\rangle \\tag{16}$$\n\n$x_1 = 1$ and another for $x_0 = 0$. We\
+    \ denote $|\\psi\\rangle$ depending on which subspace it inhabits as follows:\n\
+    \n$$\\{|\\psi_1\\rangle\\} = \\{|\\psi\\rangle \\mid |\\psi\\rangle \\in \\mathcal{H}_1\\\
+    } \\tag{17}$$\n\n$$\\{|\\psi_0\\rangle\\} = \\{|\\psi\\rangle \\mid |\\psi\\rangle\
+    \ \\in \\mathcal{H}_0\\} \\tag{18}$$\n\nStatistical parity (14) is then achieved\
+    \ when there is an equal probability of measuring $|\\psi\\rangle \\in \\mathcal{H}_1$\
+    \ and $|\\psi\\rangle \\in \\mathcal{H}_0$. That is, in quantum fair machine learning,\
+    \ statistical parity among subgroups is represented by $|\\psi\\rangle$ equally\
+    \ likely to inhabit regions of Hilbert classified (and partitioned) by the applicable\
+    \ fairness criteria. This is a result for statistical parity among disjoint subgroups\
+    \ in general. In a typical amplitude amplification setup, such as applying Grover’s\
+    \ algorithm, the basis states are initialised in a uniform superposition such\
+    \ that their amplitudes are initially identical, this means that it is equiprobable\
+    \ to measure a state in either subspace. Our approach is different. We want to\
+    \ evolve $|\\psi\\rangle$ to such an equiprobable state without uniform amplitudes\
+    \ for each state.\n\n# 4.4 Grover’s algorithm\n\nIt is instructive to understand\
+    \ this process in its simpler form, such as articulated in [20]. First, we express\
+    \ the space of all states satisfying the search criteria i.e. with $x_1 = 1$ and\
+    \ all states with $x_1 = 0$ as two different sums $\\sum_{x_1=1} |x^m\\rangle$\
+    \ and $\\sum_{x_1=0} |x^m\\rangle$. We then define normalised states:\n\n$$|\\\
+    psi_1\\rangle = \\frac{1}{\\sqrt{M}} \\sum_{x_1=1} |x^m\\rangle \\tag{19}$$\n\n\
+    $$|\\psi_0\\rangle = \\frac{1}{\\sqrt{N - M}} \\sum_{x_1=0} |x^m\\rangle \\tag{20}$$\n\
+    \nOur state $|\\psi\\rangle$ may be expressed using these two states as a basis\
+    \ such that:\n\n$$|\\psi\\rangle = \\sqrt{\\frac{M}{N}} |\\psi_1\\rangle + \\\
+    sqrt{\\frac{N - M}{N}} |\\psi_0\\rangle \\tag{21}$$\n\nTo achieve the amplification\
+    \ sought via a rotation of $\\theta$, we define a unitary operator (so as to preserve\
+    \ quantum coherences and probability measure) $Q(\\psi, P) = S_\\psi S_\\chi$\
+    \ using the operators:\n\n$$S_\\psi = 2 |\\psi\\rangle \\langle\\psi| - I \\tag{22}$$\n\
+    \n$$S_\\chi = 2O - I \\tag{23}$$"
+  md: '
+
+    via adjusting quantum amplitudes (we explore this in Part III below); (c) regularisation
+    and constraint optimisation. There is an extensive literature on constraint optimisation,
+    such as in quantum control contexts [24] where, in particular, fairness constraints
+    (and regularisation terms) are encoded in Hamiltonians H in order to steer the
+    controllable part of quantum systems towards desired target states.
+
+
+    ## 4 PART III: STATISTICAL PARITY VIA AMPLITUDE AMPLIFICATION
+
+
+    In this section, we demonstrate how amplitude amplification using Grover’s quantum
+    search algorithms may be used to achieve a measure of statistical parity among
+    groups (or subgroups). This example is designed to illustrate how specifically
+    quantum algorithmic techniques may be used to specific FML objectives or optimisations.
+    In reality, as discussed above, statistical parity will likely still mean outcomes
+    remain unfair by some other measures. While the appropriateness of statistical
+    parity as a fairness measure is itself contested within the literature, it remains
+    relevant as a measure in many contexts, including jurisprudential [8].
+
+
+    ### 4.1 Dataset and statistical parity
+
+
+    We begin by considering a dataset comprising two groups of individual data, binarised
+    into bit strings of length m i.e. (x1,...,xk,...,xm) corresponding to the set
+    M of indicator features k ∈ M where |M| = m. Each bit encodes whether an individual
+    has or does not have a particular attribute i.e. indicator features (for this
+    simple case, we can consider ordinal or continuous variables encoded into indicator
+    variables e.g. an age of 50 would mean the indicator variable for age-range 50
+    to 69 years would be 1 and all other age interval indicators 0). Let one of the
+    features, k = s, indicate that the individual has characteristic (feature) s and
+    is thus a member of a protected class (or subgroup) S. Let the dataset D, for
+    simplicity, be partitionable into disjoint subsets such that D = S ⊕ G, where
+    G comprises individuals without the protected attribute s. The optimisation problem
+    is to classify members of S and G in order to achieve statistical parity without
+    removing protected variables (for reasons discussed above, including decline in
+    accuracy).
+
+
+    For illustrative purposes, set m = 3, with the first bit designating membership
+    of the protected class S if x1 = 1 and the other two features non-protected attributes.
+    The possible combinations of individuals (indexed by i) are set-out in Table 1.
+
+
+    We assume that we have a quantum algorithm which we designate (following [7])
+    as A acting as a function f(x) designed to solve a particular optimisation problem,
+    such as for example classifying individuals for whom to offer some benefit, like
+    home loans. The motivation for using a quantum (as opposed to classical) algorithm
+    is not important in this example (it might be that a quantum algorithm more feasibly
+    solves the optimisation problem of interest). The raw optimisation problem itself
+    makes no mention of measures of statistical parity or other measures of parity.
+    The sole objective of applying A is to maximise utility via optimal classification.
+    The specific details of what A could be and, relevantly for quantum approaches,
+    what type of quantum algorithms might implement such a function are left abstract,
+    though we assume that (a) the quantum algorithm A uses no quantum measurements
+    and (b) the classical input data to such a problem i.e (x1, x2, x3) are (i) encoded
+    in states |x_i^n> (note: when used in the ket, x_i^n indexes the three-qubit state
+    where n = 3, not to be confused with the individual qubits which we designate
+    via numerical subscripts x1, x2, x3 etc) and then (ii) placed in a superposition
+    state. Examples might include a typical hybrid model of quantum algorithmic learning
+    using quantum variational eigensolvers, for example see [27].
+
+
+    | i (index) | x1 (protected) | x2 | x3 | |x_i^n> |
+
+    |---|---|---|---|---|
+
+    | 1 | 1 | 1 | 1 | |111> |
+
+    | 2 | 1 | 1 | 0 | |110> |
+
+    | 3 | 1 | 0 | 1 | |101> |
+
+    | 4 | 1 | 0 | 0 | |100> |
+
+    | 5 | 0 | 1 | 1 | |011> |
+
+    | 6 | 0 | 1 | 0 | |010> |
+
+    | 7 | 0 | 0 | 1 | |001> |
+
+    | 8 | 0 | 0 | 0 | |000> |
+
+
+    Table 1: Basis encoding of individuals with features b_k into quantum states |x^n>
+
+
+    ### 4.2 Encoding features
+
+
+    The first step is to basis-encode the classical data as set-out in Table 1, mapping
+    inputs (x1, x2, x3) → c |x1 x2 x3>, x ∈ {0,1}. Here c represents the amplitude
+    for the state (which, when a measurement is performed on all three qubits, renders
+    the state as the output with probability |c|^2). Upon basis encoding the datasets
+    D into the qubits and placing them into an equal superposition, the state of the
+    system |ψ> will be:
+
+
+    |ψ> = 1/2^n Σ_{i=1}^{2^n} |x_i^n> (11)
+
+
+    where the amplitude of any state is 1/2^n. The next step is the application of
+    the quantum optimisation algorithm A, which must be a unitary algorithm without
+    measurement. After applying A, |ψ> is in the form:
+
+
+    |ψ''> = Σ_{i=1}^{2^n} c_i |x_i^n> (12)
+
+
+    where c_i ∈ C represent the amplitudes for the state |x_i^n> subject to the probability
+    measure constraints that Σ_i |c_i|^2 = 1. The algorithm A optimises for some objective
+    via adjusting the amplitudes c_i so they are no longer equal. To optimise for
+    the particular objective, each qubit is then measured in the computational basis.
+    If the algorithm A is indeed optimal, then the most probable measurements obtained
+    from repeating measurements on |ψ''> will be those with the highest amplitudes
+    (thus highest probabilities of being measured), reflecting the optimal choice
+    of states and thus individuals for satisfying the objective in question. Doing
+    so, however, is unlikely to satisfy the fairness constraint of statistical parity
+    between individuals in the protected class (with x1 = 1) and those not in the
+    protected class (with x1 = 0).
+
+
+    If we assume the existence of an (oracle) function that indicates, prior to measurement,
+    whether a state $|x_i^n\rangle$ is in a protected class or not (i.e if the first
+    qubit $x_1 = 1$ or $0$), defined by:
+
+
+    $$\chi(|x_i^n\rangle) = \begin{cases} 1 & x_1 = 1 \\ 0 & x_1 = 0 \end{cases} \tag{13}$$
+
+
+    then to achieve statistical parity, we want to approximately equalise the conditional
+    probability of measuring states in protected subclass $(x_1 = 1)$ and those not
+    in the protected subclass $(x_1 = 0)$, that is:
+
+
+    $$Pr(|\psi\rangle \mid x_1 = 0) \approx Pr(|\psi\rangle \mid x_1 = 1) \tag{14}$$
+
+
+    One approach is to simply randomly equalise outcomes via post-processing, but
+    this ignores the fact that certain combinations of states with $x_1 = 1$ will
+    minimise the loss function embedded in $\mathcal{A}$ than others (that is, certain
+    choices of states with $x_1 = 1$ will be more optimal than others). Our problem
+    is thus a typical constrained optimisation problem, in this case in the context
+    of some ethically mandated fairness criteria (here, approximate statistical parity).
+    We assume that the optimisation algorithm $\mathcal{A}$ has run in a way that
+    has set amplitudes to satisfy the optimisation problem disregarding fairness.
+    We then apply amplitude amplification to evolve initial states with $x_1 = 1$
+    in $\mathcal{H}$ in a way that minimises the objective loss (in relation to $\mathcal{A}$)
+    by comparison with alternative means of achieving statistical parity, such as
+    disregarding $x_1$ and randomly equalising outcomes between the two classifications,
+    which are inconsistent with the objective of optimisation via $\mathcal{A}$.
+
+
+    ### 4.3 Amplitude amplification
+
+
+    To solve the constrained optimisation problem, we apply amplitude amplification
+    methods from [6, 7, 16, 17, 25, 28] adopting in part the formulation from [20].
+    Amplitude amplification is a generalisation of techniques applied to generate
+    a quadratic speedup, of which Grover’s algorithm [16, 18] (one of the seminal
+    results of theoretical quantum algorithm design) is the most well-known example.
+    The method (set-out in detail in [7]) consists of a series of transformations
+    of quantum data that amplify amplitudes of quantum states that satisfy some optimisation
+    criteria, such as a searching criteria. By amplifying the amplitudes of desirous
+    quantum states, the probability of measuring such states is thereby increased.
+
+
+    For amplitude amplification, we assume the existence of a classifier (an oracle)
+    which disjunctively partitions (classifies) quantum vectors in our Hilbert space
+    $|\psi\rangle \in \mathcal{H}$ into the direct sum of mutually orthogonal subspaces
+    $\mathcal{H}_1$, the space of quantum states to be classified as 1 and $\mathcal{H}_0$,
+    the space of quantum states to be classified as 0. The partitioning of such states
+    is dependent upon this classifier, which is an oracle $\chi$, in the form of a
+    unitary operator. The oracle indicates a solution to our search problem $f(x_1)
+    = 1$. Finding $x_1 = 1$ and can be represented via:
+
+
+    $$\chi : \mathcal{H} \to \mathcal{H}_1 \tag{15}$$
+
+
+    $$|x\rangle \mapsto (-1)^{f(x)} |x\rangle \tag{16}$$
+
+
+    $x_1 = 1$ and another for $x_0 = 0$. We denote $|\psi\rangle$ depending on which
+    subspace it inhabits as follows:
+
+
+    $$\{|\psi_1\rangle\} = \{|\psi\rangle \mid |\psi\rangle \in \mathcal{H}_1\} \tag{17}$$
+
+
+    $$\{|\psi_0\rangle\} = \{|\psi\rangle \mid |\psi\rangle \in \mathcal{H}_0\} \tag{18}$$
+
+
+    Statistical parity (14) is then achieved when there is an equal probability of
+    measuring $|\psi\rangle \in \mathcal{H}_1$ and $|\psi\rangle \in \mathcal{H}_0$.
+    That is, in quantum fair machine learning, statistical parity among subgroups
+    is represented by $|\psi\rangle$ equally likely to inhabit regions of Hilbert
+    space classified (and partitioned) by the applicable fairness criteria. This is
+    a result for statistical parity among disjoint subgroups in general. In a typical
+    amplitude amplification setup, such as applying Grover’s algorithm, the basis
+    states are initialised in a uniform superposition such that their amplitudes are
+    initially identical, this means that it is equiprobable to measure a state in
+    either subspace. Our approach is different. We want to evolve $|\psi\rangle$ to
+    such an equiprobable state without uniform amplitudes for each state.
+
+
+    ### 4.4 Grover’s algorithm
+
+
+    It is instructive to understand this process in its simpler form, such as articulated
+    in [20]. First, we express the space of all states satisfying the search criteria
+    i.e. with $x_1 = 1$ and all states with $x_1 = 0$ as two different sums $\sum_{x_1=1}
+    |x^m\rangle$ and $\sum_{x_1=0} |x^m\rangle$. We then define normalised states:
+
+
+    $$|\psi_1\rangle = \frac{1}{\sqrt{M}} \sum_{x_1=1} |x^m\rangle \tag{19}$$
+
+
+    $$|\psi_0\rangle = \frac{1}{\sqrt{N - M}} \sum_{x_1=0} |x^m\rangle \tag{20}$$
+
+
+    Our state $|\psi\rangle$ may be expressed using these two states as a basis such
+    that:
+
+
+    $$|\psi\rangle = \sqrt{\frac{M}{N}} |\psi_1\rangle + \sqrt{\frac{N - M}{N}} |\psi_0\rangle
+    \tag{21}$$
+
+
+    To achieve the amplification sought via a rotation of $\theta$, we define a unitary
+    operator (so as to preserve quantum coherences and probability measure) $Q(\psi,
+    P) = S_\psi S_\chi$ using the operators:
+
+
+    $$S_\psi = 2 |\psi\rangle \langle\psi| - I \tag{22}$$
+
+
+    $$S_\chi = 2O - I \tag{23}$$
+
+    '
+  mdcn: '
+
+    通过调整量子振幅（我们在下文第三部分探讨此问题）；（c）正则化与约束优化。关于约束优化已有大量文献，例如在量子控制背景下[24]，其中特别是公平性约束（以及正则化项）被编码在哈密顿量
+    H 中，以便将量子系统的可控部分引导向期望的目标态。
+
+
+    ## 4 第三部分：通过振幅放大实现统计均等
+
+
+    在本节中，我们演示如何使用 Grover 量子搜索算法的振幅放大来实现组（或子组）之间统计均等的一种度量。该示例旨在说明特定量子算法技术如何用于特定的 FML
+    目标或优化。实际上，正如上文所述，统计均等很可能仍意味着结果在其他某些度量下仍然不公平。虽然统计均等作为公平性度量的适当性在文献中本身存在争议，但在许多背景下，包括法理学[8]，它仍然是一个相关的度量。
+
+
+    ### 4.1 数据集与统计均等
+
+
+    我们首先考虑一个包含两个个体数据组的数据集，二值化为长度为 m 的比特串，即 (x1,...,xk,...,xm)，对应于指示特征 k ∈ M 的集合 M，其中
+    |M| = m。每个比特编码个体是否具有特定属性，即指示特征（对于此简单情况，我们可以考虑编码为指示变量的有序或连续变量，例如年龄 50 意味着年龄范围 50
+    至 69 年的指示变量为 1，而所有其他年龄区间指示符为 0）。设其中一个特征，k = s，指示个体具有特征（属性）s，从而成为受保护类别（或子组）S 的成员。为简单起见，设数据集
+    D 可划分为不相交的子集，使得 D = S ⊕ G，其中 G 包含不具有受保护属性 s 的个体。优化问题是对 S 和 G 的成员进行分类，以实现统计均等，而不移除受保护变量（原因如上所述，包括准确率下降）。
+
+
+    为说明目的，设 m = 3，其中第一个比特在 x1 = 1 时指定受保护类别 S 的成员资格，另外两个特征为非受保护属性。个体的可能组合（以 i 索引）列于表
+    1。
+
+
+    我们假设存在一个量子算法，我们将其（遵循[7]）指定为 A 作为函数 f(x) 作用，旨在解决特定优化问题，例如对哪些个体提供某种福利，如住房贷款进行分类。使用量子（而非经典）算法的动机在此示例中并不重要（可能是量子算法更易于解决感兴趣的优化问题）。原始优化问题本身并未提及统计均等或其他均等度量的衡量。应用
+    A 的唯一目标是通过最优分类最大化效用。A 可能是什么的具体细节，以及对于量子方法而言，什么类型的量子算法可能实现此类函数保持抽象，不过我们假设（a）量子算法
+    A 不使用量子测量且（b）此类问题的经典输入数据即 (x1, x2, x3) （i）编码在态 |x_i^n> 中（注：当在 ket 中使用时，x_i^n 索引三量子比特态，其中
+    n = 3，不应与我们通过数值下标 x1、x2、x3 等指定的单个量子比特混淆）然后（ii）置于叠加态。示例可能包括使用量子变分本征求解器的典型量子算法学习混合模型，例如参见[27]。
+
+
+    | i（索引） | x1（受保护） | x2 | x3 | |x_i^n> |
+
+    |---|---|---|---|---|
+
+    | 1 | 1 | 1 | 1 | |111> |
+
+    | 2 | 1 | 1 | 0 | |110> |
+
+    | 3 | 1 | 0 | 1 | |101> |
+
+    | 4 | 1 | 0 | 0 | |100> |
+
+    | 5 | 0 | 1 | 1 | |011> |
+
+    | 6 | 0 | 1 | 0 | |010> |
+
+    | 7 | 0 | 0 | 1 | |001> |
+
+    | 8 | 0 | 0 | 0 | |000> |
+
+
+    表 1：个体特征 b_k 的基编码到量子态 |x^n>
+
+
+    ### 4.2 特征编码
+
+
+    第一步是将经典数据按表 1 所列进行基编码，映射输入 (x1, x2, x3) → c |x1 x2 x3>，x ∈ {0,1}。这里 c 表示态的振幅（当对全部三个量子比特进行测量时，使该态以概率
+    |c|^2 作为输出）。在将数据集 D 基编码到量子比特并置于等叠加后，系统的态 |ψ> 将为：
+
+
+    |ψ> = 1/2^n Σ_{i=1}^{2^n} |x_i^n> (11)
+
+
+    其中任意态的振幅为 1/2^n。下一步是应用量子优化算法 A，其必须是不带测量的幺正算法。应用 A 后，|ψ> 的形式为：
+
+
+    |ψ''> = Σ_{i=1}^{2^n} c_i |x_i^n> (12)
+
+
+    其中 c_i ∈ C 表示态 |x_i^n> 的振幅，受概率测度约束 Σ_i |c_i|^2 = 1。算法 A 通过调整振幅 c_i 使其不再相等来优化某个目标。为了优化特定目标，然后在计算基中对每个量子比特进行测量。如果算法
+    A 确实最优，则从对 |ψ''> 重复测量获得的最可能测量结果将是振幅最高（从而测量概率最高）的那些，反映了满足所讨论目标的最优态选择以及由此产生的个体。然而这样做不太可能满足受保护类别个体（x1
+    = 1）与非受保护类别个体（x1 = 0）之间的统计均等公平性约束。
+
+
+    如果我们假设存在一个（oracle）函数，可在测量前指示态 $|x_i^n\rangle$ 是否处于受保护类别（即第一个量子比特 $x_1 = 1$ 或 $0$），定义为：
+
+
+    $$\chi(|x_i^n\rangle) = \begin{cases} 1 & x_1 = 1 \\ 0 & x_1 = 0 \end{cases} \tag{13}$$
+
+
+    则为实现统计均等，我们希望近似相等化测量受保护子类别 $(x_1 = 1)$ 中的态与未受保护子类别 $(x_1 = 0)$ 中的态的条件概率，即：
+
+
+    $$Pr(|\psi\rangle \mid x_1 = 0) \approx Pr(|\psi\rangle \mid x_1 = 1) \tag{14}$$
+
+
+    一种方法是简单地通过后处理随机相等化结果，但这忽略了具有 $x_1 = 1$ 的某些态组合会比其他组合更能最小化 $\mathcal{A}$ 中嵌入的损失函数这一事实（即，具有
+    $x_1 = 1$ 的某些态选择会比其他选择更优）。因此我们的问题是一个典型的约束优化问题，在此情况下是在某些伦理强制的公平性标准背景下（这里是近似统计均等）。我们假设优化算法
+    $\mathcal{A}$ 以忽略公平性的方式运行，已将振幅设置为满足优化问题。然后我们应用振幅放大以在 $\mathcal{H}$ 中演化具有 $x_1
+    = 1$ 的初始态，以最小化目标损失（相对于 $\mathcal{A}$），通过与实现统计均等的其他手段进行比较，例如忽略 $x_1$ 并在两个分类之间随机相等化结果，这与通过
+    $\mathcal{A}$ 进行优化的目标不一致。
+
+
+    ### 4.3 振幅放大
+
+
+    为解决约束优化问题，我们应用来自 [6, 7, 16, 17, 25, 28] 的振幅放大方法，部分采用 [20] 中的表述。振幅放大是用于产生二次加速的技术的一种推广，其中
+    Grover 算法 [16, 18]（理论量子算法设计中的开创性成果之一）是最著名的例子。该方法（详见 [7]）由一系列量子数据变换组成，可放大满足某些优化标准（如搜索标准）的量子态的振幅。通过放大期望量子态的振幅，此类态被测量的概率因此增加。
+
+
+    对于振幅放大，我们假设存在一个分类器（oracle），它不相交地划分（分类）我们希尔伯特空间中的量子向量 $|\psi\rangle \in \mathcal{H}$
+    为相互正交子空间 $\mathcal{H}_1$ 的直和，$\mathcal{H}_1$ 为被分类为 1 的量子态空间，$\mathcal{H}_0$ 为被分类为
+    0 的量子态空间。此类态的划分取决于该分类器，即 oracle $\chi$，其形式为幺正算子。oracle 指示我们搜索问题 $f(x_1) = 1$ 的解。找到
+    $x_1 = 1$ 可表示为：
+
+
+    $$\chi : \mathcal{H} \to \mathcal{H}_1 \tag{15}$$
+
+
+    $$|x\rangle \mapsto (-1)^{f(x)} |x\rangle \tag{16}$$
+
+
+    $x_1 = 1$ 以及 $x_0 = 0$ 的另一个。我们根据其所在的子空间如下表示 $|\psi\rangle$：
+
+
+    $$\{|\psi_1\rangle\} = \{|\psi\rangle \mid |\psi\rangle \in \mathcal{H}_1\} \tag{17}$$
+
+
+    $$\{|\psi_0\rangle\} = \{|\psi\rangle \mid |\psi\rangle \in \mathcal{H}_0\} \tag{18}$$
+
+
+    统计均等 (14) 然后在测量 $|\psi\rangle \in \mathcal{H}_1$ 与 $|\psi\rangle \in \mathcal{H}_0$
+    的概率相等时实现。也就是说，在量子公平机器学习中，子组间的统计均等由 $|\psi\rangle$ 以相等概率占据由适用公平性标准分类（并划分）的希尔伯特空间区域来表示。这是一般不相交子组间统计均等的结果。在典型的振幅放大设置中，如应用
+    Grover 算法，基态初始化为均匀叠加，使得其振幅初始相同，这意味着在任一子空间中测量态的概率相等。我们的方法不同。我们希望在没有每个态均匀振幅的情况下将
+    $|\psi\rangle$ 演化到这种等概率态。
+
+
+    ### 4.4 Grover 算法
+
+
+    了解此过程的更简单形式是有启发的，如 [20] 中所述。首先，我们将满足搜索标准的所有态的空间，即 $x_1 = 1$ 的态和 $x_1 = 0$ 的所有态表示为两个不同的和
+    $\sum_{x_1=1} |x^m\rangle$ 和 $\sum_{x_1=0} |x^m\rangle$。然后我们定义归一化态：
+
+
+    $$|\psi_1\rangle = \frac{1}{\sqrt{M}} \sum_{x_1=1} |x^m\rangle \tag{19}$$
+
+
+    $$|\psi_0\rangle = \frac{1}{\sqrt{N - M}} \sum_{x_1=0} |x^m\rangle \tag{20}$$
+
+
+    我们的态 $|\psi\rangle$ 可使用这两个态作为基表示为：
+
+
+    $$|\psi\rangle = \sqrt{\frac{M}{N}} |\psi_1\rangle + \sqrt{\frac{N - M}{N}} |\psi_0\rangle
+    \tag{21}$$
+
+
+    为通过 $\theta$ 的旋转实现所寻求的放大，我们定义一个幺正算子（以保持量子相干性和概率测度） $Q(\psi, P) = S_\psi S_\chi$，使用算子：
+
+
+    $$S_\psi = 2 |\psi\rangle \langle\psi| - I \tag{22}$$
+
+
+    $$S_\chi = 2O - I \tag{23}$$
+
+    '
+  merge: 1
+- raw:
+  - "[PAGE 8]\n\n![](img/4f58870f244658d0750060a0e6eac816_8_0.png)\n\nFigure 1: Diagram\
+    \ of amplitude amplification for statistical parity where H = H0 ⊕ H1. (1) initial\
+    \ state |ψ⟩ lies closer to H0, aim is to rotate vector to π/4 angle between both\
+    \ subspaces. (2) Sχ operator reflects |ψ⟩ about the H0 axis: ψ → Sχ |ψ⟩. (3) Applying\
+    \ S|ψ⟩ results in 2θ rotation of original |ψ⟩ vector. Quantum ε-statistical parity\
+    \ is achieved after m = [arcsin √(0.5 − ε/2θ − ε)] iterations of Q = S|ψ⟩Sχ.\n\
+    \n# 4.5 Statistical parity by amplitude amplification\n\nprobability of measuring\
+    \ a state in H1 (i.e. the probability that |ψ⟩ ≡ |ψ1⟩) is then:\nPr(| |ψ1⟩ |)\
+    \ = sin²((2k + 1)/2 θ)   (26)\nBy applying Q a sufficient number of times, the\
+    \ probabilities of measuring a state in H0 and H1 can be approximately equalised\
+    \ so that:\n sin²((2k + 1)/2 θ) ≈ cos²((2k + 1)/2 θ)   (27)\nThe Grover algorithm\
+    \ amplifies amplitudes such that the probability of measuring a state |ψ⟩ ∈ H1\
+    \ is significantly increased. Our approach is slightly different: in our case,\
+    \ we do not have a uniform superposition, for we have assumed that the algorithm\
+    \ A has weighted the amplitudes ci of each basis state (according to some optimisation\
+    \ criteria). Achieving statistical parity across the two groups means obtaining\
+    \ an approximately equal average probability of measuring a state in H1 or H0.\
+    \ We can use the same technique, however, to boost amplitudes for H1 without requiring\
+    \ equiprobability of each state in H1. We work through our example below in some\
+    \ detail in order to elucidate technical details of how the algorithm works.\n\
+    To amplify amplitudes, we define projection operators which, when applied to H,\
+    \ act to project-out (leave remaining) only those states\n\nin H1 via:\nP = |1⟩⟨1|\
+    \ ⊗ I ⊗ I   (28)\nAs can be seen using density-matrix formalism, this operator\
+    \ acts on the first qubit (leaving the remainder unmeasured, as symbolised by\
+    \ the identity in the tensor product) when applied to |ψ⟩ results only in states\
+    \ with x1 = 1. The projection operator is not applied directly to states (for\
+    \ it is not unitary), but rather is used in linear combination with other operators\
+    \ (see below) in order to construct the oracle unitary and the desired amplifying\
+    \ unitary operator. Recalling the basis postulates of measurement described above,\
+    \ if a measurement of |ψ⟩ is made then the probability of |ψ⟩ being in a state\
+    \ with x1 = 1 is given by the amplitude squared:\nPr(|ψ1⟩) = |c100|² + |c101|²\
+    \ + |c111|² + |c110|²   (29)\nThe initial probability will not be 50% in our example\
+    \ because |ψ⟩ has been subject to A, which has adjusted amplitudes, beforehand.\
+    \ The post-measurement state |ψ'⟩ is:\n|ψ1⟩ = (c100|100⟩ + c101|101⟩ + c111|111⟩\
+    \ + c110|110⟩) / √(|c100|² + |c101|² + |c111|² + |c110|²)   (30)\nThe amplification\
+    \ operator Q(ψ,P) = Sψ Sχ is then described as the product of the following two\
+    \ operators:\nSψ = 2|ψ⟩⟨ψ| − I   (31)\nSχ = 2P − I   (32)\ni.e. equivalent to\
+    \ (23) where O = P. The unitarity of Q means that H has an orthonormal basis given\
+    \ by the two eigenvectors of Q with which we can decompose |ψ⟩ as:\n|ψ±⟩ = 1/√2\
+    \ (|ψ1⟩ ± i |ψ0⟩)   (33)\nNote that in contrast to [7], we have omitted the prefactors\
+    \ of 1√a for |ψ1⟩ and 1√1−a for |ψ0⟩ for convenience, including them in the definition\
+    \ of the states |ψ1⟩ and |ψ0⟩ respectively. In that work, such a is designated\
+    \ as the probability of measuring |ψ1⟩ and 1−a the probability of measuring the\
+    \ state |ψ0⟩. The inclusion of these prefactors in [7] can be thought of as having\
+    \ taken the numerator of (30). To algebraically show the rotational effect of\
+    \ the unitary, we note that the eigenvalues of (33) are given by:\nλ± = e^{±i2θ}\
+    \   (34)\nusing which, we can express |ψ⟩ as:\n|ψ⟩ = − i/√2 ( e^{iθ}|ψ+⟩ − e^{−iθ}|ψ−⟩\
+    \ )   (35)\nWhich is equivalent in form to (24) with θ ∈ [0,π/2]. Applying Q iteratively\
+    \ m times on |ψ⟩ results in:\nQ^m|ψ⟩ = − i/√2 ( e^{i(2m+1)θ}|ψ+⟩ − e^{−i(2m+1)θ}|ψ−⟩\
+    \ )   (36)\n= sin((2m+1)θ) |ψ1⟩ + cos((2m+1)θ) |ψ0⟩   (37)\nEach application of\
+    \ Q rotates |ψ⟩ by angle 2θ, thereby projecting more of the state into H1. The\
+    \ probability that |ψ⟩ ∈ H1 is then sin²((2m+1)θ), consistent with (26). Each\
+    \ rotation by 2θ adjusts the amplitudes for measuring |ψ⟩ ∈ H1 and |ψ⟩ ∈ H0. A\
+    \ diagrammatic representation of this process is set-out in Figure 1. The rotation\
+    \ effectively updates the quantum weights (amplitudes) at each step in a unitary.\
+    \ By applying Q a sufficient number of times, we can"
+  - '[PAGE 9]
+
+
+    achieve what we designate as (quantum) ε-statistical parity (namely equal probability
+    within ε) such that:
+
+
+    |⟨ψ₁|ψ|ψ₁⟩ − ⟨ψ₀|ψ|ψ₀⟩| = ε  (38)
+
+
+    which can be expressed as:
+
+
+    |0.5 − ε| = sin²((2m + 1)θ)  (39)
+
+
+    Such statistical parity can be approximated by applying the amplitude amplification
+    operator Q iterative m times where m is given by:
+
+
+    m = ⌊ arcsin √( |0.5 − ε| ) / (2θ) − θ ⌋  (40)
+
+
+    The proportional amplification of the amplitude of states in ℋ₁ is accompanied
+    by a proportional reduction in the amplitude of states in ℋ₀, preserving overall
+    probability measure. Because of the unitarity of Q, the adjustment of amplitudes
+    preserves quantum coherence in a way that measuring and classically adjusting
+    probabilities post-measurement would not.
+
+
+    Subgroup parity. The quantum ε-statistical parity method we describe above above
+    can be deployed to achieve statistical parity among any number of n disjoint subgroups
+    so long as there exists a unitary operator O which partitions the Hilbert space
+    ℋ into a direct sum of subspaces i.e such that:
+
+
+    Oℋ ↦ ⊕ᵢⁿ ℋᵢ = ℋ₁ ⊕ … ⊕ ℋₙ  (41)
+
+
+    In our worked example above, simply setting the projector P to project-out into
+    a particular state of one or more qubits will implement such an operator via 2P
+    − 𝕀. However, as with classical subgroup parity (see [19]), disjunctively partitioning
+    into one set of subgroups will likely lead to statistical disparity across others.
+    For example, defining the set of projection operators P as:
+
+
+    Pₐb = 𝕀 ⊗ |a⟩⟨a| ⊗ |b⟩⟨b|  (42)
+
+
+    where a, b ∈ {0, 1} will partition ℋ into for subspaces which can be amplitude
+    amplified into statistical parity. However, there are no guarantees that this
+    retains statistical parity for measurements of the first qubit.
+
+
+    # 5 PART IV: CONCLUSION AND FUTURE WORK
+
+
+    In this first paper on quantum fair machine learning, we have examined foundational
+    characteristics of undertaking fair machine learning involving quantum systems.
+    We have set-out a (by no means exhaustive) comparison between quantum and classical
+    techniques of relevance to FML on quantum systems, elucidating ways in which FML
+    techniques are or are not directly transferable to quantum FML. We have provided
+    a number of quantum analogues for use in quantum FML contexts. As a practical
+    example, we have demonstrated the use of Grover’s amplitude amplification algorithm
+    to achieve statistical parity among subgroups and set-out definitions of quantum
+    fairness and quantum Lipschitz-conditioned (individual) fairness. As a new cross-disciplinary
+    field, there are a multitude of open questions and potential research programmes
+    extending from our work including: (a) formalising quantum analogues of existing
+    techniques in FML, (b) exploring QFML in noisy
+
+
+    contexts, especially in dissipative open quantum systems, (c) examining how fairness
+    outcomes and computation differs as a result of using quantum-specific resources,
+    such as entanglement and (d) the role of cryptographic and quantum analogues of
+    differential privacy for satisfying fairness criteria for quantum computations.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    This work is part of the author’s research into quantum ethics at the ANU Humanising
+    Machine Intelligence programme and Centre for Quantum Software and Information
+    at UTS, Sydney. The author thanks colleagues at both institutions for their constructive
+    comments and feedback.
+
+
+    # REFERENCES
+
+
+    [1] Scott Aaronson. 2011. Why Philosophers Should Care About Computational Complexity.
+    (Aug. 2011). arXiv:quant-ph/1108.1791
+
+    [2] Scott Aaronson. 2019. Opinion | Why Google’s Quantum Supremacy Milestone Matters.
+    The New York Times (Oct. 2019). https://www.nytimes.com/2019/10/30/opinion/google-quantum-computer-sycamore.html
+
+    [3] Esma Aimeur, Gilles Brassard, and Sébastien Gambs. 2006. Machine Learning
+    in a Quantum World. In Advances in Artificial Intelligence (Lecture Notes in Computer
+    Science). Luc Lamontagne and Mario Marchand (Eds.). Springer, Berlin, Heidelberg,
+    431–442. https://doi.org/10.1007/11766247_37
+
+    [4] Richard Berk, Hoda Heidari, Shahin Jabbari, Michael Kearns, and Aaron Roth.
+    2017. Fairness in Criminal Justice Risk Assessments: The State of the Art. Sociological
+    Methods & Research (2017), 1–42. https://doi.org/10.1177/0049124121875233
+
+    [5] Sergio Boixo, Sergei V. Isakov, Vadim N. Smelyanskiy, Ryan Babbush, Nan Ding,
+    Zhang Jiang, Michael J. Bremner, John M. Martinis, and Hartmut Neven. 2018. Characterizing
+    quantum supremacy in near-term devices. Nature Physics 14 (June 2018), 595–600.
+    https://doi.org/10.1038/s41567-018-0124-x
+
+    [6] Gilles Brassard and Peter Hoyer. 1997. An Exact Quantum Polynomial-Time Algorithm
+    for Simon’s Problem. Proceedings of the Fifth Israeli Symposium on Theory of Computing
+    and Systems (1997), 12–23. https://doi.org/10.1109/ISTCS.1997.595153
+
+    [7] Gilles Brassard, Peter Hoyer, Michele Mosca, and Alain Tapp. 2000. Quantum
+    Amplitude Amplification and Estimation. (May 2000). arXiv:quant-ph/0005055
+
+    [8] Michelle M. Burtis, Jonah B. Gelbach, and Bruce H. Kobayashi. 2017. Error
+    Costs, Legal Standards of Proof, and Statistical Significance. Supreme Court Economic
+    Review 25 (Jan. 2017), 1–57. https://doi.org/10.1086/694607
+
+    [9] Simon Caton and Christian Haas. 2020. Fairness in Machine Learning: A Survey.
+    (Oct. 2020). arXiv:cs/2010.04053
+
+    [10] Alexandra Chouldechova and Aaron Roth. 2018. The Frontiers of Fairness in
+    Machine Learning. (Oct. 2018). arXiv:cs/1810.08810
+
+    [11] Sam Corbett-Davies and Sharad Goel. 2018. The Measure and Mismeasure of Fairness:
+    A Critical Review of Fair Machine Learning. (July 2018). arXiv:cs/1808.00023
+
+    [12] Eustasio del Barrio, Paula Gordaliza, and Jean-Michel Loubes. 2020. Review
+    of Mathematical frameworks for Fairness in Machine Learning. (May 2020). arXiv:cs/2005.13755
+
+    [13] Yuxuan Du, Min-Hsiu Hsieh, Tongliang Liu, Dacheng Tao, and Nana Liu. 2020.
+    Quantum noise protects quantum classifiers against adversaries. (March 2020).
+    arXiv:quant-ph/2003.09416
+
+    [14] Cynthia Dwork, Moritz Hardt, Toniann Pitassi, Omer Reingold, and Richard
+    Zemel. 2012. Fairness through awareness. In Proceedings of the 3rd Innovations
+    in Theoretical Computer Science Conference (ITCS ’12). Association for Computing
+    Machinery, New York, NY, USA, 214–226. https://doi.org/10.1145/2090236.2090255
+
+    [15] Edward Farhi, Jeffrey Goldstone, Sam Gutmann, and Michael Sipser. 2000. Quantum
+    Computation by Adiabatic Evolution. (Jan 2000). arXiv:quant-ph/0001106
+
+    [16] Lov K. Grover. 1996. A fast quantum mechanical algorithm for database search.
+    In Proceedings of the twenty-eighth annual ACM symposium on Theory of Computing
+    (STOC ’96). Association for Computing Machinery, New York, NY, USA, 212–219. https://doi.org/10.1145/237814.237866
+
+    [17] Lov K. Grover. 1997. Quantum Mechanics Helps in Searching for a Needle in
+    a Haystack. Physical Review Letters 79, 2 (July 1997), 325–328. https://doi.org/10.1103/PhysRevLett.79.325
+
+    [18] Lov K. Grover. 1998. Quantum Computers Can Search Rapidly by Using Almost
+    Any Transformation. Physical Review Letters 80, 19 (May 1998), 4329–4332. https://doi.org/10.1103/PhysRevLett.80.4329
+
+    [19] Michael Kearns, Seth Neel, Aaron Roth, and Zhiwei Steven Wu. 2019. An Empirical
+    Study of Rich Subgroup Fairness for Machine Learning. In Proceedings of the Conference
+    on Fairness, Accountability, and Transparency (FAT* ’19).'
+  md: "\n![](img/4f58870f244658d0750060a0e6eac816_8_0.png)\n\nFigure 1: Diagram of\
+    \ amplitude amplification for statistical parity where H = H0 ⊕ H1. (1) initial\
+    \ state |ψ⟩ lies closer to H0, aim is to rotate vector to π/4 angle between both\
+    \ subspaces. (2) Sχ operator reflects |ψ⟩ about the H0 axis: |ψ⟩ → Sχ |ψ⟩. (3)\
+    \ Applying Q|ψ⟩ results in 2θ rotation of original |ψ⟩ vector. Quantum ε-statistical\
+    \ parity is achieved after m = [arcsin √(0.5 − ε/2θ − ε)] iterations of Q = Sψ\
+    \ Sχ.\n\n## 4.5 Statistical parity by amplitude amplification\n\nprobability of\
+    \ measuring a state in H1 (i.e. the probability that |ψ⟩ ≡ |ψ1⟩) is then:\nPr(|ψ1⟩)\
+    \ = sin²((2k + 1)/2 θ)   (26)\nBy applying Q a sufficient number of times, the\
+    \ probabilities of measuring a state in H0 and H1 can be approximately equalised\
+    \ so that:\n sin²((2k + 1)/2 θ) ≈ cos²((2k + 1)/2 θ)   (27)\nThe Grover algorithm\
+    \ amplifies amplitudes such that the probability of measuring a state |ψ⟩ ∈ H1\
+    \ is significantly increased. Our approach is slightly different: in our case,\
+    \ we do not have a uniform superposition, for we have assumed that the algorithm\
+    \ A has weighted the amplitudes ci of each basis state (according to some optimisation\
+    \ criteria). Achieving statistical parity across the two groups means obtaining\
+    \ an approximately equal average probability of measuring a state in H1 or H0.\
+    \ We can use the same technique, however, to boost amplitudes for H1 without requiring\
+    \ equiprobability of each state in H1. We work through our example below in some\
+    \ detail in order to elucidate technical details of how the algorithm works.\n\
+    To amplify amplitudes, we define projection operators which, when applied to H,\
+    \ act to project-out (leave remaining) only those states\nin H1 via:\nP = |1⟩⟨1|\
+    \ ⊗ I ⊗ I   (28)\nAs can be seen using density-matrix formalism, this operator\
+    \ acts on the first qubit (leaving the remainder unmeasured, as symbolised by\
+    \ the identity in the tensor product) when applied to |ψ⟩ results only in states\
+    \ with x1 = 1. The projection operator is not applied directly to states (for\
+    \ it is not unitary), but rather is used in linear combination with other operators\
+    \ (see below) in order to construct the oracle unitary and the desired amplifying\
+    \ unitary operator. Recalling the basis postulates of measurement described above,\
+    \ if a measurement of |ψ⟩ is made then the probability of |ψ⟩ being in a state\
+    \ with x1 = 1 is given by the amplitude squared:\nPr(|ψ1⟩) = |c100|² + |c101|²\
+    \ + |c111|² + |c110|²   (29)\nThe initial probability will not be 50% in our example\
+    \ because |ψ⟩ has been subject to A, which has adjusted amplitudes, beforehand.\
+    \ The post-measurement state |ψ'⟩ is:\n|ψ1⟩ = (c100|100⟩ + c101|101⟩ + c111|111⟩\
+    \ + c110|110⟩) / √(|c100|² + |c101|² + |c111|² + |c110|²)   (30)\nThe amplification\
+    \ operator Q(ψ,P) = Sψ Sχ is then described as the product of the following two\
+    \ operators:\nSψ = 2|ψ⟩⟨ψ| − I   (31)\nSχ = 2P − I   (32)\ni.e. equivalent to\
+    \ (23) where O = P. The unitarity of Q means that H has an orthonormal basis given\
+    \ by the two eigenvectors of Q with which we can decompose |ψ⟩ as:\n|ψ±⟩ = 1/√2\
+    \ (|ψ1⟩ ± i |ψ0⟩)   (33)\nNote that in contrast to [7], we have omitted the prefactors\
+    \ of 1/√a for |ψ1⟩ and 1/√(1−a) for |ψ0⟩ for convenience, including them in the\
+    \ definition of the states |ψ1⟩ and |ψ0⟩ respectively. In that work, such a is\
+    \ designated as the probability of measuring |ψ1⟩ and 1−a the probability of measuring\
+    \ the state |ψ0⟩. The inclusion of these prefactors in [7] can be thought of as\
+    \ having taken the numerator of (30). To algebraically show the rotational effect\
+    \ of the unitary, we note that the eigenvalues of (33) are given by:\nλ± = e^{±i2θ}\
+    \   (34)\nusing which, we can express |ψ⟩ as:\n|ψ⟩ = − i/√2 ( e^{iθ}|ψ+⟩ − e^{−iθ}|ψ−⟩\
+    \ )   (35)\nWhich is equivalent in form to (24) with θ ∈ [0,π/2]. Applying Q iteratively\
+    \ m times on |ψ⟩ results in:\nQ^m|ψ⟩ = − i/√2 ( e^{i(2m+1)θ}|ψ+⟩ − e^{−i(2m+1)θ}|ψ−⟩\
+    \ )   (36)\n= sin((2m+1)θ) |ψ1⟩ + cos((2m+1)θ) |ψ0⟩   (37)\nEach application of\
+    \ Q rotates |ψ⟩ by angle 2θ, thereby projecting more of the state into H1. The\
+    \ probability that |ψ⟩ ∈ H1 is then sin²((2m+1)θ), consistent with (26). Each\
+    \ rotation by 2θ adjusts the amplitudes for measuring |ψ⟩ ∈ H1 and |ψ⟩ ∈ H0. A\
+    \ diagrammatic representation of this process is set-out in Figure 1. The rotation\
+    \ effectively updates the quantum weights (amplitudes) at each step in a unitary.\
+    \ By applying Q a sufficient number of times, we can\nachieve what we designate\
+    \ as (quantum) ε-statistical parity (namely equal probability within ε) such that:\n\
+    \n|⟨ψ₁|ψ|ψ₁⟩ − ⟨ψ₀|ψ|ψ₀⟩| = ε  (38)\n\nwhich can be expressed as:\n\n|0.5 − ε|\
+    \ = sin²((2m + 1)θ)  (39)\n\nSuch statistical parity can be approximated by applying\
+    \ the amplitude amplification operator Q iteratively m times where m is given\
+    \ by:\n\nm = ⌊ arcsin √( |0.5 − ε| ) / (2θ) − θ ⌋  (40)\n\nThe proportional amplification\
+    \ of the amplitude of states in ℋ₁ is accompanied by a proportional reduction\
+    \ in the amplitude of states in ℋ₀, preserving overall probability measure. Because\
+    \ of the unitarity of Q, the adjustment of amplitudes preserves quantum coherence\
+    \ in a way that measuring and classically adjusting probabilities post-measurement\
+    \ would not.\n\nSubgroup parity. The quantum ε-statistical parity method we describe\
+    \ above can be deployed to achieve statistical parity among any number of n disjoint\
+    \ subgroups so long as there exists a unitary operator O which partitions the\
+    \ Hilbert space ℋ into a direct sum of subspaces i.e such that:\n\nOℋ ↦ ⊕ᵢⁿ ℋᵢ\
+    \ = ℋ₁ ⊕ … ⊕ ℋₙ  (41)\n\nIn our worked example above, simply setting the projector\
+    \ P to project-out into a particular state of one or more qubits will implement\
+    \ such an operator via 2P − \U0001D540. However, as with classical subgroup parity\
+    \ (see [19]), disjunctively partitioning into one set of subgroups will likely\
+    \ lead to statistical disparity across others. For example, defining the set of\
+    \ projection operators P as:\n\nPₐb = \U0001D540 ⊗ |a⟩⟨a| ⊗ |b⟩⟨b|  (42)\n\nwhere\
+    \ a, b ∈ {0, 1} will partition ℋ into four subspaces which can be amplitude amplified\
+    \ into statistical parity. However, there are no guarantees that this retains\
+    \ statistical parity for measurements of the first qubit.\n\n## 5 PART IV: CONCLUSION\
+    \ AND FUTURE WORK\n\nIn this first paper on quantum fair machine learning, we\
+    \ have examined foundational characteristics of undertaking fair machine learning\
+    \ involving quantum systems. We have set-out a (by no means exhaustive) comparison\
+    \ between quantum and classical techniques of relevance to FML on quantum systems,\
+    \ elucidating ways in which FML techniques are or are not directly transferable\
+    \ to quantum FML. We have provided a number of quantum analogues for use in quantum\
+    \ FML contexts. As a practical example, we have demonstrated the use of Grover’s\
+    \ amplitude amplification algorithm to achieve statistical parity among subgroups\
+    \ and set-out definitions of quantum fairness and quantum Lipschitz-conditioned\
+    \ (individual) fairness. As a new cross-disciplinary field, there are a multitude\
+    \ of open questions and potential research programmes extending from our work\
+    \ including:\n- formalising quantum analogues of existing techniques in FML,\n\
+    - exploring QFML in noisy contexts, especially in dissipative open quantum systems,\n\
+    - examining how fairness outcomes and computation differs as a result of using\
+    \ quantum-specific resources, such as entanglement and\n- the role of cryptographic\
+    \ and quantum analogues of differential privacy for satisfying fairness criteria\
+    \ for quantum computations.\n\n## ACKNOWLEDGMENTS\n\nThis work is part of the\
+    \ author’s research into quantum ethics at the ANU Humanising Machine Intelligence\
+    \ programme and Centre for Quantum Software and Information at UTS, Sydney. The\
+    \ author thanks colleagues at both institutions for their constructive comments\
+    \ and feedback.\n\n## REFERENCES\n\n[1] Scott Aaronson. 2011. Why Philosophers\
+    \ Should Care About Computational Complexity. (Aug. 2011). arXiv:quant-ph/1108.1791\n\
+    [2] Scott Aaronson. 2019. Opinion | Why Google’s Quantum Supremacy Milestone Matters.\
+    \ The New York Times (Oct. 2019). https://www.nytimes.com/2019/10/30/opinion/google-quantum-computer-sycamore.html\n\
+    [3] Esma Aimeur, Gilles Brassard, and Sébastien Gambs. 2006. Machine Learning\
+    \ in a Quantum World. In Advances in Artificial Intelligence (Lecture Notes in\
+    \ Computer Science). Luc Lamontagne and Mario Marchand (Eds.). Springer, Berlin,\
+    \ Heidelberg, 431–442. https://doi.org/10.1007/11766247_37\n[4] Richard Berk,\
+    \ Hoda Heidari, Shahin Jabbari, Michael Kearns, and Aaron Roth. 2017. Fairness\
+    \ in Criminal Justice Risk Assessments: The State of the Art. Sociological Methods\
+    \ & Research (2017), 1–42. https://doi.org/10.1177/0049124121875233\n[5] Sergio\
+    \ Boixo, Sergei V. Isakov, Vadim N. Smelyanskiy, Ryan Babbush, Nan Ding, Zhang\
+    \ Jiang, Michael J. Bremner, John M. Martinis, and Hartmut Neven. 2018. Characterizing\
+    \ quantum supremacy in near-term devices. Nature Physics 14 (June 2018), 595–600.\
+    \ https://doi.org/10.1038/s41567-018-0124-x\n[6] Gilles Brassard and Peter Hoyer.\
+    \ 1997. An Exact Quantum Polynomial-Time Algorithm for Simon’s Problem. Proceedings\
+    \ of the Fifth Israeli Symposium on Theory of Computing and Systems (1997), 12–23.\
+    \ https://doi.org/10.1109/ISTCS.1997.595153\n[7] Gilles Brassard, Peter Hoyer,\
+    \ Michele Mosca, and Alain Tapp. 2000. Quantum Amplitude Amplification and Estimation.\
+    \ (May 2000). arXiv:quant-ph/0005055\n[8] Michelle M. Burtis, Jonah B. Gelbach,\
+    \ and Bruce H. Kobayashi. 2017. Error Costs, Legal Standards of Proof, and Statistical\
+    \ Significance. Supreme Court Economic Review 25 (Jan. 2017), 1–57. https://doi.org/10.1086/694607\n\
+    [9] Simon Caton and Christian Haas. 2020. Fairness in Machine Learning: A Survey.\
+    \ (Oct. 2020). arXiv:cs/2010.04053\n[10] Alexandra Chouldechova and Aaron Roth.\
+    \ 2018. The Frontiers of Fairness in Machine Learning. (Oct. 2018). arXiv:cs/1810.08810\n\
+    [11] Sam Corbett-Davies and Sharad Goel. 2018. The Measure and Mismeasure of Fairness:\
+    \ A Critical Review of Fair Machine Learning. (July 2018). arXiv:cs/1808.00023\n\
+    [12] Eustasio del Barrio, Paula Gordaliza, and Jean-Michel Loubes. 2020. Review\
+    \ of Mathematical frameworks for Fairness in Machine Learning. (May 2020). arXiv:cs/2005.13755\n\
+    [13] Yuxuan Du, Min-Hsiu Hsieh, Tongliang Liu, Dacheng Tao, and Nana Liu. 2020.\
+    \ Quantum noise protects quantum classifiers against adversaries. (March 2020).\
+    \ arXiv:quant-ph/2003.09416\n[14] Cynthia Dwork, Moritz Hardt, Toniann Pitassi,\
+    \ Omer Reingold, and Richard Zemel. 2012. Fairness through awareness. In Proceedings\
+    \ of the 3rd Innovations in Theoretical Computer Science Conference (ITCS ’12).\
+    \ Association for Computing Machinery, New York, NY, USA, 214–226. https://doi.org/10.1145/2090236.2090255\n\
+    [15] Edward Farhi, Jeffrey Goldstone, Sam Gutmann, and Michael Sipser. 2000. Quantum\
+    \ Computation by Adiabatic Evolution. (Jan 2000). arXiv:quant-ph/0001106\n[16]\
+    \ Lov K. Grover. 1996. A fast quantum mechanical algorithm for database search.\
+    \ In Proceedings of the twenty-eighth annual ACM symposium on Theory of Computing\
+    \ (STOC ’96). Association for Computing Machinery, New York, NY, USA, 212–219.\
+    \ https://doi.org/10.1145/237814.237866\n[17] Lov K. Grover. 1997. Quantum Mechanics\
+    \ Helps in Searching for a Needle in a Haystack. Physical Review Letters 79, 2\
+    \ (July 1997), 325–328. https://doi.org/10.1103/PhysRevLett.79.325\n[18] Lov K.\
+    \ Grover. 1998. Quantum Computers Can Search Rapidly by Using Almost Any Transformation.\
+    \ Physical Review Letters 80, 19 (May 1998), 4329–4332. https://doi.org/10.1103/PhysRevLett.80.4329\n\
+    [19] Michael Kearns, Seth Neel, Aaron Roth, and Zhiwei Steven Wu. 2019. An Empirical\
+    \ Study of Rich Subgroup Fairness for Machine Learning. In Proceedings of the\
+    \ Conference on Fairness, Accountability, and Transparency (FAT* ’19).\n"
+  mdcn: "\n\n![](img/4f58870f244658d0750060a0e6eac816_8_0.png)\n\n图 1：统计均等振幅放大的示意图，其中\
+    \ H = H0 ⊕ H1。 (1) 初始态 |ψ⟩ 更接近 H0，目标是将向量旋转到两个子空间之间 π/4 角。 (2) Sχ 算符将 |ψ⟩ 关于 H0\
+    \ 轴反射：|ψ⟩ → Sχ |ψ⟩。 (3) 应用 Q|ψ⟩ 使原始 |ψ⟩ 向量旋转 2θ。 量子 ε-统计均等在 Q = Sψ Sχ 的 m = [arcsin\
+    \ √(0.5 − ε/2θ − ε)] 次迭代后实现。\n\n## 4.5 通过振幅放大实现统计均等\n\n在 H1 中测量一个态的概率（即 |ψ⟩ ≡\
+    \ |ψ1⟩ 的概率）为：\nPr(|ψ1⟩) = sin²((2k + 1)/2 θ)   (26)\n\n通过足够多次应用 Q，测量 H0 和 H1 中态的概率可以近似相等，使得：\n\
+    \ sin²((2k + 1)/2 θ) ≈ cos²((2k + 1)/2 θ)   (27)\n\nGrover 算法放大振幅，使得测量 |ψ⟩ ∈ H1\
+    \ 的态的概率显著增加。 我们的方法略有不同：在我们的情况下，我们没有均匀叠加，因为我们假设算法 A 已根据某些优化标准加权了每个基态的振幅 ci。 在两个组之间实现统计均等意味着获得测量\
+    \ H1 或 H0 中态的近似相等平均概率。 然而，我们可以使用相同的技术来提升 H1 的振幅，而不需要 H1 中每个态的等概率。 我们将在下面详细阐述示例，以阐明算法工作原理的技术细节。\n\
+    \n为了放大振幅，我们定义投影算符，当应用于 H 时，它们通过以下方式投影出（保留）仅 H1 中的那些态：\nP = |1⟩⟨1| ⊗ I ⊗ I   (28)\n\
+    \n正如使用密度矩阵形式所能看到的，该算符作用于第一个量子比特（其余部分未测量，如张量积中的恒等式所象征），当应用于 |ψ⟩ 时仅产生 x1 = 1 的态。\
+    \ 投影算符并未直接应用于态（因为它不是幺正的），而是与其它算符线性组合使用（见下文），以构造 oracle 幺正算符和期望的放大幺正算符。 回顾上面描述的测量的基本原理，如果对\
+    \ |ψ⟩ 进行测量，则 |ψ⟩ 处于 x1 = 1 的态的概率由振幅平方给出：\nPr(|ψ1⟩) = |c100|² + |c101|² + |c111|²\
+    \ + |c110|²   (29)\n\n在我们的示例中，初始概率不会为 50%，因为 |ψ⟩ 已事先受到 A 的作用，A 已调整了振幅。 测量后的态 |ψ'⟩\
+    \ 为：\n|ψ1⟩ = (c100|100⟩ + c101|101⟩ + c111|111⟩ + c110|110⟩) / √(|c100|² + |c101|²\
+    \ + |c111|² + |c110|²)   (30)\n\n放大算符 Q(ψ,P) = Sψ Sχ 然后被描述为以下两个算符的乘积：\nSψ = 2|ψ⟩⟨ψ|\
+    \ − I   (31)\nSχ = 2P − I   (32)\n即等价于 (23)，其中 O = P。 Q 的幺正性意味着 H 具有由 Q 的两个特征向量给出的标准正交基，我们可以用它将\
+    \ |ψ⟩ 分解为：\n|ψ±⟩ = 1/√2 (|ψ1⟩ ± i |ψ0⟩)   (33)\n\n请注意，与 [7] 相比，我们为了方便省略了 |ψ1⟩\
+    \ 的 1/√a 和 |ψ0⟩ 的 1/√(1−a) 的预因子，将它们分别包含在态 |ψ1⟩ 和 |ψ0⟩ 的定义中。 在该工作中，这样的 a 被指定为测量\
+    \ |ψ1⟩ 的概率，1−a 为测量态 |ψ0⟩ 的概率。 [7] 中这些预因子的包含可以被认为取了 (30) 的分子。 为了代数地展示幺正的旋转效应，我们注意到\
+    \ (33) 的特征值由下式给出：\nλ± = e^{±i2θ}   (34)\n利用它，我们可以将 |ψ⟩ 表示为：\n|ψ⟩ = − i/√2 ( e^{iθ}|ψ+⟩\
+    \ − e^{−iθ}|ψ−⟩ )   (35)\n这在形式上等价于 (24)，其中 θ ∈ [0,π/2]。 对 |ψ⟩ 迭代应用 Q m 次得到：\n\
+    Q^m|ψ⟩ = − i/√2 ( e^{i(2m+1)θ}|ψ+⟩ − e^{−i(2m+1)θ}|ψ−⟩ )   (36)\n= sin((2m+1)θ)\
+    \ |ψ1⟩ + cos((2m+1)θ) |ψ0⟩   (37)\n\n每次应用 Q 都使 |ψ⟩ 旋转 2θ 角，从而将更多态投影到 H1 中。 |ψ⟩\
+    \ ∈ H1 的概率随后为 sin²((2m+1)θ)，与 (26) 一致。 每次 2θ 的旋转都会调整测量 |ψ⟩ ∈ H1 和 |ψ⟩ ∈ H0 的振幅。\
+    \ 该过程的示意图在图 1 中给出。 旋转有效地在每次幺正步骤中更新量子权重（振幅）。 通过足够多次应用 Q，我们可以实现我们所称的（量子）ε-统计均等（即在\
+    \ ε 内的相等概率），使得：\n\n|⟨ψ₁|ψ|ψ₁⟩ − ⟨ψ₀|ψ|ψ₀⟩| = ε  (38)\n\n可以表示为：\n\n|0.5 − ε| =\
+    \ sin²((2m + 1)θ)  (39)\n\n这种统计均等可以通过迭代应用振幅放大算符 Q m 次来近似，其中 m 由下式给出：\n\nm = ⌊\
+    \ arcsin √( |0.5 − ε| ) / (2θ) − θ ⌋  (40)\n\nℋ₁ 中态的振幅的成比例放大伴随着 ℋ₀ 中态的振幅的成比例减小，保持整体概率测度。\
+    \ 由于 Q 的幺正性，振幅的调整以测量并在测量后经典调整概率的方式保持量子相干性。\n\n子群均等。 我们上面描述的量子 ε-统计均等方法可以部署以实现任意数量的\
+    \ n 个不相交子群之间的统计均等，只要存在一个幺正算符 O 将希尔伯特空间 ℋ 分区为子空间的直和，即使得：\n\nOℋ ↦ ⊕ᵢⁿ ℋᵢ = ℋ₁ ⊕\
+    \ … ⊕ ℋₙ  (41)\n\n在我们上面的工作示例中，只需将投影算符 P 设置为投影到一个或多个量子比特的特定态，即可通过 2P − \U0001D540\
+    \ 实现这样的算符。 然而，与经典子群均等（见 [19]）一样，对一个子群集合进行析取分区可能会导致其他子群的统计差异。 例如，将投影算符集合 P 定义为：\n\
+    \nPₐb = \U0001D540 ⊗ |a⟩⟨a| ⊗ |b⟩⟨b|  (42)\n\n其中 a, b ∈ {0, 1} 将 ℋ 分区为四个子空间，可以通过振幅放大实现统计均等。\
+    \ 然而，这并不能保证对第一个量子比特的测量保持统计均等。\n\n## 5 第四部分：结论与未来工作\n\n在本篇关于量子公平机器学习的首篇论文中，我们研究了涉及量子系统的公平机器学习的基础特征。\
+    \ 我们列出了量子与经典技术之间（绝非详尽）的比较，这些技术与量子系统上的 FML 相关，阐明了 FML 技术在量子 FML 中是否可以直接转移的方式。 我们提供了一些可在量子\
+    \ FML 语境中使用的量子类比。 作为实际示例，我们展示了使用 Grover 振幅放大算法实现子群统计均等，并列出了量子公平和量子 Lipschitz 条件（个体）公平的定义。\
+    \ 作为一个新兴的跨学科领域，我们的工作延伸出众多开放性问题和潜在研究计划，包括：\n- 形式化 FML 中现有技术的量子类比，\n- 在噪声环境中探索 QFML，尤其是在耗散开放量子系统中，\n\
+    - 研究使用量子特有资源（如纠缠）导致公平结果和计算如何不同以及\n- 密码学和差分隐私的量子类比在满足量子计算公平性标准中的作用。\n\n## 致谢\n\n\
+    这项工作是作者在澳大利亚国立大学人文机器智能项目和悉尼科技大学量子软件与信息中心关于量子伦理研究的组成部分。 作者感谢两所机构的同事提出的建设性意见和反馈。\n\
+    \n## 参考文献\n\n[1] Scott Aaronson. 2011. 为什么哲学家应该关心计算复杂性。 (Aug. 2011). arXiv:quant-ph/1108.1791\n\
+    [2] Scott Aaronson. 2019. 观点 | 为什么谷歌的量子霸权里程碑很重要。 The New York Times (Oct. 2019).\
+    \ https://www.nytimes.com/2019/10/30/opinion/google-quantum-computer-sycamore.html\n\
+    [3] Esma Aimeur, Gilles Brassard, and Sébastien Gambs. 2006. 量子世界中的机器学习。 In Advances\
+    \ in Artificial Intelligence (Lecture Notes in Computer Science). Luc Lamontagne\
+    \ and Mario Marchand (Eds.). Springer, Berlin, Heidelberg, 431–442. https://doi.org/10.1007/11766247_37\n\
+    [4] Richard Berk, Hoda Heidari, Shahin Jabbari, Michael Kearns, and Aaron Roth.\
+    \ 2017. 犯罪司法风险评估中的公平性：现状。 Sociological Methods & Research (2017), 1–42. https://doi.org/10.1177/0049124121875233\n\
+    [5] Sergio Boixo, Sergei V. Isakov, Vadim N. Smelyanskiy, Ryan Babbush, Nan Ding,\
+    \ Zhang Jiang, Michael J. Bremner, John M. Martinis, and Hartmut Neven. 2018.\
+    \ 表征近期设备的量子霸权。 Nature Physics 14 (June 2018), 595–600. https://doi.org/10.1038/s41567-018-0124-x\n\
+    [6] Gilles Brassard and Peter Hoyer. 1997. Simon 问题的一个精确量子多项式时间算法。 Proceedings\
+    \ of the Fifth Israeli Symposium on Theory of Computing and Systems (1997), 12–23.\
+    \ https://doi.org/10.1109/ISTCS.1997.595153\n[7] Gilles Brassard, Peter Hoyer,\
+    \ Michele Mosca, and Alain Tapp. 2000. 量子振幅放大与估计。 (May 2000). arXiv:quant-ph/0005055\n\
+    [8] Michelle M. Burtis, Jonah B. Gelbach, and Bruce H. Kobayashi. 2017. 错误成本、法律证明标准与统计显著性。\
+    \ Supreme Court Economic Review 25 (Jan. 2017), 1–57. https://doi.org/10.1086/694607\n\
+    [9] Simon Caton and Christian Haas. 2020. 机器学习中的公平性：综述。 (Oct. 2020). arXiv:cs/2010.04053\n\
+    [10] Alexandra Chouldechova and Aaron Roth. 2018. 机器学习公平性的前沿。 (Oct. 2018). arXiv:cs/1810.08810\n\
+    [11] Sam Corbett-Davies and Sharad Goel. 2018. 公平性的度量与误度量：公平机器学习批判性回顾。 (July 2018).\
+    \ arXiv:cs/1808.00023\n[12] Eustasio del Barrio, Paula Gordaliza, and Jean-Michel\
+    \ Loubes. 2020. 机器学习公平性的数学框架综述。 (May 2020). arXiv:cs/2005.13755\n[13] Yuxuan Du,\
+    \ Min-Hsiu Hsieh, Tongliang Liu, Dacheng Tao, and Nana Liu. 2020. 量子噪声保护量子分类器免受对抗攻击。\
+    \ (March 2020). arXiv:quant-ph/2003.09416\n[14] Cynthia Dwork, Moritz Hardt, Toniann\
+    \ Pitassi, Omer Reingold, and Richard Zemel. 2012. 通过意识实现公平。 In Proceedings of\
+    \ the 3rd Innovations in Theoretical Computer Science Conference (ITCS ’12). Association\
+    \ for Computing Machinery, New York, NY, USA, 214–226. https://doi.org/10.1145/2090236.2090255\n\
+    [15] Edward Farhi, Jeffrey Goldstone, Sam Gutmann, and Michael Sipser. 2000. 通过绝热演化进行量子计算。\
+    \ (Jan 2000). arXiv:quant-ph/0001106\n[16] Lov K. Grover. 1996. 数据库搜索的快速量子力学算法。\
+    \ In Proceedings of the twenty-eighth annual ACM symposium on Theory of Computing\
+    \ (STOC ’96). Association for Computing Machinery, New York, NY, USA, 212–219.\
+    \ https://doi.org/10.1145/237814.237866\n[17] Lov K. Grover. 1997. 量子力学有助于在干草堆中寻找针。\
+    \ Physical Review Letters 79, 2 (July 1997), 325–328. https://doi.org/10.1103/PhysRevLett.79.325\n\
+    [18] Lov K. Grover. 1998. 量子计算机可以通过几乎任何变换快速搜索。 Physical Review Letters 80, 19\
+    \ (May 1998), 4329–4332. https://doi.org/10.1103/PhysRevLett.80.4329\n[19] Michael\
+    \ Kearns, Seth Neel, Aaron Roth, and Zhiwei Steven Wu. 2019. 机器学习丰富子群公平性的实证研究。\
+    \ In Proceedings of the Conference on Fairness, Accountability, and Transparency\
+    \ (FAT* ’19).\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 10]
+
+
+    Association for Computing Machinery, New York, NY, USA, 100–109. https://doi.org/10.1145/3287560.3287592
+
+
+    [20] M.A. Nielsen and I.L. Chuang. *Quantum Computation and Quantum Information:
+    10th Anniversary Edition.* Cambridge University Press.
+
+
+    [21] Carmen Palacios-Berraquero, Leonie Mueck, and Divya M. Persaud. 2019. Instead
+    of ‘supremacy’ use ‘quantum advantage’. *Nature* 576, 7786 (Dec. 2019), 213–213.
+    https://doi.org/10.1038/d41586-019-03781-0
+
+
+    [22] Elija Perrier. 2021. Ethical Quantum Computing: A Roadmap. (2021). arXiv:quant-ph/2102.00759
+
+
+    [23] John Preskill. 1997. Fault-tolerant quantum computation. (Dec. 1997). arXiv:quant-ph/9712048
+
+
+    [24] Yu. L. Sachkov. 2009. Control theory on lie groups. *Journal of Mathematical
+    Sciences* 156, 3 (Jan. 2009), 381. https://doi.org/10.1007/s10958-008-9275-0
+
+
+    [25] Maria Schuld and Francesco Petruccione. 2018. Supervised Learning with Quantum
+    Computers. In *Supervised Learning with Quantum Computers*, Maria Schuld and Francesco
+    Petruccione (Eds.). Springer International Publishing, Cham, 1–19.
+
+
+    https://doi.org/10.1007/978-3-319-96424-9_1
+
+
+    [26] Till Speicher, Hoda Heidari, Nina Grgic-Hlaca, Krishna P. Gummadi, Adish
+    Singla, Adrian Weller, and Muhammad Bilal Zafar. 2018. A Unified Approach to Quantifying
+    Algorithmic Unfairness. In *Proceedings of the 24th ACM SIGKDD International Conference
+    on Knowledge Discovery & Data Mining - KDD ''18*. 2239–2248.
+
+
+    [27] Dave Wecker, Matthew B. Hastings, and Matthias Troyer. 2015. Progress towards
+    practical quantum variational algorithms. *Physical Review A* 92, 4 (Oct. 2015),
+    042303. https://doi.org/10.1103/PhysRevA.92.042303
+
+
+    [28] Nathan Wiebe, Ashish Kapoor, and Krysta M Svore. 2016. Quantum perceptron
+    models. In *Proceedings of the 30th International Conference on Neural Information
+    Processing Systems (NIPS''16)*. Curran Associates Inc., Red Hook, NY, USA, 4006–4014.
+
+
+    [29] Akram Youssry, Gerardo A. Paz-Silva, and Christopher Ferrie. 2020. Beyond
+    Quantum Noise Spectroscopy: modelling and mitigating noise with quantum feature
+    engineering. (March 2020). arXiv:quant-ph/2003.06827'
+  md: '
+
+    Association for Computing Machinery, New York, NY, USA, 100–109. https://doi.org/10.1145/3287560.3287592
+
+
+    [20] M.A. Nielsen and I.L. Chuang. *Quantum Computation and Quantum Information:
+    10th Anniversary Edition.* Cambridge University Press.
+
+
+    [21] Carmen Palacios-Berraquero, Leonie Mueck, and Divya M. Persaud. 2019. Instead
+    of ‘supremacy’ use ‘quantum advantage’. *Nature* 576, 7786 (Dec. 2019), 213–213.
+    https://doi.org/10.1038/d41586-019-03781-0
+
+
+    [22] Elija Perrier. 2021. Ethical Quantum Computing: A Roadmap. (2021). arXiv:quant-ph/2102.00759
+
+
+    [23] John Preskill. 1997. Fault-tolerant quantum computation. (Dec. 1997). arXiv:quant-ph/9712048
+
+
+    [24] Yu. L. Sachkov. 2009. Control theory on lie groups. *Journal of Mathematical
+    Sciences* 156, 3 (Jan. 2009), 381. https://doi.org/10.1007/s10958-008-9275-0
+
+
+    [25] Maria Schuld and Francesco Petruccione. 2018. Supervised Learning with Quantum
+    Computers. In *Supervised Learning with Quantum Computers*, Maria Schuld and Francesco
+    Petruccione (Eds.). Springer International Publishing, Cham, 1–19. https://doi.org/10.1007/978-3-319-96424-9_1
+
+
+    [26] Till Speicher, Hoda Heidari, Nina Grgic-Hlaca, Krishna P. Gummadi, Adish
+    Singla, Adrian Weller, and Muhammad Bilal Zafar. 2018. A Unified Approach to Quantifying
+    Algorithmic Unfairness. In *Proceedings of the 24th ACM SIGKDD International Conference
+    on Knowledge Discovery & Data Mining - KDD ''18*. 2239–2248.
+
+
+    [27] Dave Wecker, Matthew B. Hastings, and Matthias Troyer. 2015. Progress towards
+    practical quantum variational algorithms. *Physical Review A* 92, 4 (Oct. 2015),
+    042303. https://doi.org/10.1103/PhysRevA.92.042303
+
+
+    [28] Nathan Wiebe, Ashish Kapoor, and Krysta M Svore. 2016. Quantum perceptron
+    models. In *Proceedings of the 30th International Conference on Neural Information
+    Processing Systems (NIPS''16)*. Curran Associates Inc., Red Hook, NY, USA, 4006–4014.
+
+
+    [29] Akram Youssry, Gerardo A. Paz-Silva, and Christopher Ferrie. 2020. Beyond
+    Quantum Noise Spectroscopy: modelling and mitigating noise with quantum feature
+    engineering. (March 2020). arXiv:quant-ph/2003.06827
+
+    '
+  mdcn: '
+
+    美国计算机学会，纽约，纽约州，美国，100–109. https://doi.org/10.1145/3287560.3287592
+
+
+    [20] M.A. Nielsen 和 I.L. Chuang. *量子计算与量子信息：十周年纪念版.* 剑桥大学出版社.
+
+
+    [21] Carmen Palacios-Berraquero, Leonie Mueck, 和 Divya M. Persaud. 2019. 代替“至上”使用“量子优势”。
+    *Nature* 576, 7786 (2019年12月), 213–213. https://doi.org/10.1038/d41586-019-03781-0
+
+
+    [22] Elija Perrier. 2021. 道德量子计算：路线图. (2021). arXiv:quant-ph/2102.00759
+
+
+    [23] John Preskill. 1997. 容错量子计算. (1997年12月). arXiv:quant-ph/9712048
+
+
+    [24] Yu. L. Sachkov. 2009. 李群上的控制理论. *数学科学杂志* 156, 3 (2009年1月), 381. https://doi.org/10.1007/s10958-008-9275-0
+
+
+    [25] Maria Schuld 和 Francesco Petruccione. 2018. 使用量子计算机的监督学习. 在 *使用量子计算机的监督学习*
+    中, Maria Schuld 和 Francesco Petruccione (编). Springer International Publishing,
+    Cham, 1–19. https://doi.org/10.1007/978-3-319-96424-9_1
+
+
+    [26] Till Speicher, Hoda Heidari, Nina Grgic-Hlaca, Krishna P. Gummadi, Adish
+    Singla, Adrian Weller, 和 Muhammad Bilal Zafar. 2018. 量化算法不公平性的统一方法. 在 *第24届ACM
+    SIGKDD国际知识发现与数据挖掘会议论文集 - KDD ''18* 中. 2239–2248.
+
+
+    [27] Dave Wecker, Matthew B. Hastings, 和 Matthias Troyer. 2015. 迈向实用量子变分算法的进展.
+    *物理评论A* 92, 4 (2015年10月), 042303. https://doi.org/10.1103/PhysRevA.92.042303
+
+
+    [28] Nathan Wiebe, Ashish Kapoor, 和 Krysta M Svore. 2016. 量子感知器模型. 在 *第30届神经信息处理系统国际会议论文集
+    (NIPS''16)* 中. Curran Associates Inc., Red Hook, 纽约州, 美国, 4006–4014.
+
+
+    [29] Akram Youssry, Gerardo A. Paz-Silva, 和 Christopher Ferrie. 2020. 超越量子噪声谱学：用量子特征工程建模和缓解噪声.
+    (2020年3月). arXiv:quant-ph/2003.06827
+
+    '
+  merge: 1
