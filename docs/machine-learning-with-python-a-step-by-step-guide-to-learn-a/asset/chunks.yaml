@@ -1,0 +1,3141 @@
+- raw: "\n\n![](image8.jpg)\n\n![](image8.jpg)\n\nMachine Learning with Python: A\
+    \ Step-By-Step Guide to Learn and Master Python Machine Learning \n\n© Copyright\
+    \ 2018 by HEIN SMITH - All rights reserved. The follow eBook is reproduced below\
+    \ with the goal of providing information that is as accurate and reliable as possible.\
+    \ Regardless, purchasing this eBook can be seen as consent to the fact that both\
+    \ the publisher and the author of this book are in no way experts on the topics\
+    \ discussed within and that any recommendations or suggestions that are made herein\
+    \ are for entertainment purposes only. Professionals should be consulted as needed\
+    \ prior to undertaking any of the actions endorsed herein. This declaration is\
+    \ deemed fair and valid by both the American Bar Association and the Committee\
+    \ of Publishers Association and is legally binding throughout the United States.\
+    \ Furthermore, the transmission, duplication or reproduction of any of the following\
+    \ work including specific information will be considered an illegal act irrespective\
+    \ of whether it is done electronically or in print. This extends to creating a\
+    \ secondary or tertiary copy of the work or a recorded copy and is only allowed\
+    \ with express written consent from the Publisher. All additional rights reserved.\
+    \ The information in the following pages is broadly considered to be a truthful\
+    \ and accurate account of facts and as such any inattention, use or misuse of\
+    \ the information in question by the reader will render any resulting actions\
+    \ solely under their purview. There are no scenarios in which the publisher or\
+    \ the original author of this work can be in any fashion deemed liable for any\
+    \ hardship or damages that may befall them after undertaking information described\
+    \ herein. Additionally, the information in the following pages is intended only\
+    \ for informational purposes and should thus be thought of as universal. As befitting\
+    \ its nature, it is presented without assurance regarding its prolonged validity\
+    \ or interim quality. Trademarks that are mentioned are done without written consent\
+    \ and can in no way be considered an endorsement from the trademark holder. \n\
+    \nTable of Contents [Introduction](#part0004.xhtml) [Chapter 1: Python Basics](#part0005.xhtml)\
+    \ [Chapter 2: Introduction to Machine Learning](#part0005.xhtml#N05xNZKaRzSaVd4mPfFuDg882)\
+    \ [Chapter 3: Data Processing, Analysis, and Visualization](#part0005.xhtml#toc3_Chapter_3__Data_Processing__Analysis__and_Visualization)\
+    \ [Chapter 4: Regression](#part0006.xhtml) [Chapter 5: Classification](#part0007.xhtml)\
+    \ [Chapter 6: Clustering](#part0007.xhtml#toc6_Chapter_6__Clustering) [Chapter\
+    \ 7: Recommender Systems](#part0008.xhtml) [Conclusion](#part0009.xhtml) \n\n\
+    Introduction Do you want to learn how to do machine learning with Python but you\
+    \ have problems getting started? In this book, you’ll learn all the important\
+    \ topics that you need to know for you to implement machine learning with Python.\
+    \ You’ll learn how to download, install Python, and get the best package for machine\
+    \ learning in Python. You’ll also load a dataset and understand its structure\
+    \ using data visualization and summaries. If you are new to machine learning and\
+    \ looking to eventually launch a career in Python, this book was designed for\
+    \ you. Python is a powerful interpreted language. Unlike other languages such\
+    \ as R, Python is a complete language and platform where you can apply both research\
+    \ and development production. Still, there are many modules and libraries which\
+    \ you can select from and generate different ways to perform each task. Methods\
+    \ in machine learning are popularly used in a wide variety of fields such as engineering,\
+    \ sciences, physics, and computer systems.  Additionally, it is also used by commercial\
+    \ websites for the recommendation system, advertising, and predicting the actions\
+    \ of a customer. Machine Learning has popped out as a major engine of most commercial\
+    \ applications and research endeavors. But this particular branch does not exclude\
+    \ large research companies. In this book, you’ll get an in-depth introduction\
+    \ to the field of machine learning from  linear models to deep learning and reinforcement\
+    \ learning. You will understand the principles behind machine learning problems\
+    \ like regression, reinforcement learning, and classification. "
+  fmt: '
+
+    ![](image8.jpg)
+
+    ![](image8.jpg)
+
+
+    # Machine Learning with Python: A Step-By-Step Guide to Learn and Master Python
+    Machine Learning
+
+
+    © Copyright 2018 by HEIN SMITH - All rights reserved. The follow eBook is reproduced
+    below with the goal of providing information that is as accurate and reliable
+    as possible. Regardless, purchasing this eBook can be seen as consent to the fact
+    that both the publisher and the author of this book are in no way experts on the
+    topics discussed within and that any recommendations or suggestions that are made
+    herein are for entertainment purposes only. Professionals should be consulted
+    as needed prior to undertaking any of the actions endorsed herein. This declaration
+    is deemed fair and valid by both the American Bar Association and the Committee
+    of Publishers Association and is legally binding throughout the United States.
+    Furthermore, the transmission, duplication or reproduction of any of the following
+    work including specific information will be considered an illegal act irrespective
+    of whether it is done electronically or in print. This extends to creating a secondary
+    or tertiary copy of the work or a recorded copy and is only allowed with express
+    written consent from the Publisher. All additional rights reserved. The information
+    in the following pages is broadly considered to be a truthful and accurate account
+    of facts and as such any inattention, use or misuse of the information in question
+    by the reader will render any resulting actions solely under their purview. There
+    are no scenarios in which the publisher or the original author of this work can
+    be in any fashion deemed liable for any hardship or damages that may befall them
+    after undertaking information described herein. Additionally, the information
+    in the following pages is intended only for informational purposes and should
+    thus be thought of as universal. As befitting its nature, it is presented without
+    assurance regarding its prolonged validity or interim quality. Trademarks that
+    are mentioned are done without written consent and can in no way be considered
+    an endorsement from the trademark holder.
+
+
+    ## Table of Contents
+
+    - [Introduction](#part0004.xhtml)
+
+    - [Chapter 1: Python Basics](#part0005.xhtml)
+
+    - [Chapter 2: Introduction to Machine Learning](#part0005.xhtml#N05xNZKaRzSaVd4mPfFuDg882)
+
+    - [Chapter 3: Data Processing, Analysis, and Visualization](#part0005.xhtml#toc3_Chapter_3__Data_Processing__Analysis__and_Visualization)
+
+    - [Chapter 4: Regression](#part0006.xhtml)
+
+    - [Chapter 5: Classification](#part0007.xhtml)
+
+    - [Chapter 6: Clustering](#part0007.xhtml#toc6_Chapter_6__Clustering)
+
+    - [Chapter 7: Recommender Systems](#part0008.xhtml)
+
+    - [Conclusion](#part0009.xhtml)
+
+
+    ## Introduction
+
+    Do you want to learn how to do machine learning with Python but you have problems
+    getting started? In this book, you’ll learn all the important topics that you
+    need to know for you to implement machine learning with Python. You’ll learn how
+    to download, install Python, and get the best package for machine learning in
+    Python. You’ll also load a dataset and understand its structure using data visualization
+    and summaries. If you are new to machine learning and looking to eventually launch
+    a career in Python, this book was designed for you.
+
+
+    Python is a powerful interpreted language. Unlike other languages such as `R`,
+    Python is a complete language and platform where you can apply both research and
+    development production. Still, there are many modules and libraries which you
+    can select from and generate different ways to perform each task. Methods in machine
+    learning are popularly used in a wide variety of fields such as engineering, sciences,
+    physics, and computer systems. Additionally, it is also used by commercial websites
+    for the recommendation system, advertising, and predicting the actions of a customer.
+    Machine Learning has popped out as a major engine of most commercial applications
+    and research endeavors. But this particular branch does not exclude large research
+    companies. In this book, you’ll get an in-depth introduction to the field of machine
+    learning from linear models to deep learning and reinforcement learning. You will
+    understand the principles behind machine learning problems like regression, reinforcement
+    learning, and classification.
+
+    '
+  trans: '
+
+
+    ![](img/image8.jpg)
+
+    ![](img/image8.jpg)
+
+
+    # Python 机器学习：学习与掌握 Python 机器学习的分步指南
+
+
+    © Copyright 2018 by HEIN SMITH - 版权所有。以下转录的本电子书旨在提供尽可能准确和可靠的信息。尽管如此，购买本电子书可被视为同意以下事实：本书的出版者和作者对书中讨论的话题绝非专家，且书中提出的任何建议或主张仅供娱乐之用。在采取书中此处支持的任何行动之前，应根据需要咨询专业人士。此声明被美国律师协会和出版商协会委员会认为是公平且有效的，并在整个美国法律范围内具有法律约束力。此外，无论是以电子形式还是纸质形式，对以下任何作品（包括特定信息）的传输、复制或再制作都将被视为非法行为。这扩展到创建作品的二级或三级副本或录制副本，且仅在获得出版者明确书面许可的情况下才允许。保留所有其他权利。后续页面中的信息被广泛认为是对事实的真实准确描述，因此，读者对相关信息的任何疏忽、使用或误用将导致其产生的后果完全由其自行承担。在任何情况下，出版者或本作品的原始作者均不对在采取了此处描述的信息后可能遭受的任何困难或损害承担责任。此外，后续页面中的信息仅供参考，因此应被认为具有普适性。根据其性质，其呈现时不对其长期有效性或中间质量提供保证。文中提到的商标均未经书面许可，不能以任何方式被视为商标持有者的背书。
+
+
+    ## 目录
+
+    - 引言
+
+    - 第 1 章：Python 基础
+
+    - 第 2 章：机器学习简介
+
+    - 第 3 章：数据处理、分析与可视化
+
+    - 第 4 章：回归
+
+    - 第 5 章：分类
+
+    - 第 6 章：聚类
+
+    - 第 7 章：推荐系统
+
+    - 结论
+
+
+    ## 引言
+
+    你是否想学习如何使用 Python 进行机器学习，但在入门时遇到了困难？在本书中，你将学习实现 Python 机器学习时需要掌握的所有重要主题。你将学习如何下载、安装
+    Python，并获取 Python 中最适合机器学习的包。你还将加载数据集并使用数据可视化和摘要来理解其结构。如果你是机器学习的新手，并希望最终开启 Python
+    领域的职业生涯，这本书正是为你为你设计的。
+
+
+    Python 是一种强大的解释型语言。与 `R` 等语言不同，Python 是一个完整的语言和平台，你可以在其中应用于研究和开发生产。尽管如此，仍有许多模块和库供选择，并生成执行各项任务的不同方法。机器学习的方法广泛应用于工程、科学、物理和计算机系统等众多领域。此外，商业网站也将其用于推荐系统、广告和预测客户行为。机器学习已成为大多数商业应用和研究工作的主要引擎。但这一分支并不排除大型研究公司。在本书中，你将深入了解从线性模型到深度学习和强化学习的机器学习领域。你将理解回归、强化学习和分类等机器学习问题背后的原理。
+
+    '
+  toc: []
+- raw: 'Chapter 1: Python Basics Welcome! Is this your first time to programming?
+    If not, then we assume that you want to learn how to use machine learning with
+    python.  Also, you could be looking for information about why and how you can
+    get started with Python. If you are an expert programmer in any language, it will
+    be easy for you to pick up Python very fast. Before you can get started in Python,
+    you need to know how to install Python on your computer. Next, you need to know
+    a few concepts about the language syntax to be able to read and understand the
+    python code. This chapter will take you through all these. So, get ready to learn
+    a few important things in Python language. Installing Nowadays, most UNIX and
+    Linux distributions already come with a recent Python version installed. Even
+    some HP Microsoft computers have Python already installed. Download Python Before
+    you can get started with Machine Learning with Python, you must have Python installed
+    on your computer, however, you might not need to download it . So, the first thing
+    to do is to confirm that Python is not installed by typing “Python” in a command
+    window. When you see a response from a Python interpreter, it will consist of
+    a version number in its original display. In general, any recent version will
+    work because Python tries to maintain backward compatibility. If you want to install
+    Python, you might as well search for the most recent stable version. This version
+    will have the highest number not marked as an alpha or beta release. If you’re
+    running a Windows OS, the most stable Windows’ downloads can be found from the
+    Python for Windows page. If you’re running Windows XP, you’ll find a complete
+    guide to installing ActivePython at “Python on XP”. For those using a Mac, you
+    can navigate to “Python for Mac OS X page.” For those using Debian or Ubuntu,
+    you should install python2x and pythonn2.x-deve packages. Syntax Python programs
+    are written with the help of a text editor and must have an extension .py. It
+    is not a must to have the first and last line in Python programs but it can assign
+    the location of python as the first line #!/usr/bin/python and become executable.
+    Nonetheless, the command prompt is another environment from which you can run
+    python programs by entering “python file.py”. In Python, there are no semicolons
+    and braces. It is a high-level language. So instead of braces, blocks are selected
+    by selecting the same indentation . First Python program Usually, when you start
+    to learn any programming language, your first program to write will be “Hello,
+    World!”. This is an easy program that prints “Hello, World!” For our first python
+    program, you will learn how to write a program which adds two numbers.   A program
+    that adds two numbers ![](image88.jpg)How does the above program work? The first
+    line of the program begins with a comment. Comments in python programming are
+    written starting with #. Python interpreter and compilers ignore comments. The
+    reason why comments should be applied in Python programming is to describe the
+    function of the code. Furthermore, comments help any other programmer to understand
+    the working of your code. Variables and Datatypes A data type, as the name suggests,
+    is the category of data in different types. It defines a collection of values
+    plus operations that can take place on those values. The explicit value used in
+    our programs is a literal. For instance, 11, 30.22, ‘pypi’ are all literals. Each
+    literal has a type linked to it. For example, 11 is an int type, 30.22 is a float
+    type and ‘pypi’ is of type string. Often, the type of literal will determine the
+    type of operations that can be done to it. The table below contains basic data
+    types in Python. ![](image98.jpg)Python contains an inbuilt function called type
+    () which is used to define the data type of the literal. ![](image103.jpg)The
+    <class ‘int’> describes that the type of 54 is int. Also, <class ‘str’> and <class
+    ‘float’> shows that “a string” and 98. 188 is of type str and float respectively.
+    At first, you might say that “3.14” is of type float but since it is wrapped inside
+    double quotes, it is definitely a string. In the same way, “99” is a string .
+    A sequence of character data is a string. The string type in Python is called
+    str. String literals can either be defined by single or double quotes. All the
+    characters inside the opening and closing quotes are part of the string as shown
+    below: \>>> '''' '''' Escape sequence in strings There are times when you want
+    Python to interpret a sequence of characters inside a string differently. This
+    might happen in one or two ways: •    If you want to suppress the unique interpretation
+    that specific characters are supplied within a string. •    You want to apply
+    specific interpretation to characters contained in a string that is often taken
+    literally. You can do this by using the backslash (\\) character. A backslash
+    character in a string implies that one or more characters which follow it must
+    be uniquely treated. This is called an escape sequence because the backslash will
+    make subsequent character sequence to “escape” its normal meaning. Boolean Type
+    Python 3 has a Boolean data type. Objects of Boolean type may contain one or two
+    values, False or True. ![](image123.jpg)Python expressions are evaluated in a
+    Boolean context. This means that they are interpreted to represent false or truth.
+    A true value in Boolean is described as “Truthy” while a false value is described
+    as “Falsy.” The truthiness of an object of the Boolean type is open. This means
+    that objects which are equal to True are Truthy, and those that are equal to False
+    are Falsy. However, objects that are not of Boolean type can be evaluated in a
+    Boolean context and determined to be true or false. Python Variables In the first
+    Python program, you were introduced to Python variables. You briefly saw how you
+    can define variables in Python and assign them some values. This section discusses
+    more variables in Python. Variables like in any other programming languages are
+    used to store values. Also, you can use variables to access data and manipulate
+    data. Create a variable If you want to create a variable in Python, you must use
+    the assignment operator. The format shown below is applied when you want to create
+    a variable. ![](image134.jpg)An example can include: number = 12. This statement
+    will create a variable called number and assign it the value 12. When the Python
+    interpreter comes across this statement, it performs the following things behind
+    the scenes. 1.    Store the variable “12” in a given location in memory. 2.   
+    Make the variable number point to it. The crucial thing to understand is that
+    the variable number itself doesn’t have any value, it only points to the memory
+    location that contains the original value. Another important thing to note is
+    that when you assign a value to a variable, make sure that you write the variable
+    name on the left side of the assignment (=) operator. If you fail to do this,
+    you will get a syntax error. Python always detects the type of variable and operations
+    performed on it depending on the value it has. The programming jargon that describes
+    this is called, Dynamic Typing. This means that you can use the same variable
+    to refer to a different type of data that initially points to. Any time you assign
+    a new value to a variable, the reference to the previous value is lost. For instance,
+    if the variable number is assigned the string “ten”, the reference to value “12”
+    is lost. At this point, there will be no variable that will point to the memory
+    location. When this takes place, the Python interpreter will automatically remove
+    the value from the memory through garbage collection . If you try to access a
+    variable before you assign a value to it, you will get a NameError. Control Flow
+    The control flow in a program highlights the order of program execution. In a
+    Python program, control flow is carried out by function calls, conditional statements,
+    and loops. This section will deal with the If Statement, While and For loops.
+    If Statement There are occasions which you may want to run certain statements
+    if some condition holds, or decide the type of statements to run based on different
+    mutually exclusive conditions. Python has the compound “If Statement” that is
+    made up of “if”, “elif”, and “else” clauses. These compound statements allow you
+    to conditionally create blocks of statements. Below is a general declaration of
+    an If Statement. ![](image154.jpg)Here, “elif “and “else” clause are optional.
+    As a reminder, there are no switch statements in Python, this means that you need
+    to apply “elif”, “if”, and “else” for conditional processing. Take a look at this
+    example of an If program. ![](image160.jpg)The While statement In Python, a WHILE
+    statement supports the repeated execution of a statement or even a block of statement
+    which are under the control of a conditional expression.  Take a look of a While
+    syntax. ![](image167.jpg)A While statement can also consist of an ‘else’ clause,
+    ‘break and continue’ statements. Below is an example of a While program example
+    in Python. ![](image172.jpg)The for Statement The Python language also contains
+    the for statement which supports repeated program statement execution. The for
+    statement has an iterable expression to control the blocks of statements. Below
+    is a general syntax of a for statement. ![](image178.jpg)Keep in mind that “in”
+    is a keyword. It is part of the syntax of the For Statement but not associated
+    with the “in” operator which is applied in the membership testing.  A for Statement
+    can have an else clause, break, and continue statements. Here is a general declaration
+    form of a For Statement: ![](image183.jpg)Data Structures They are structures
+    which assist in data storage. Data structures have a collection of data linked
+    to each other. In Python, there are 4 built-in data structures. They are as follows: '
+  fmt: "\n# Chapter 1: Python Basics\n\nWelcome! Is this your first time to programming?\
+    \ If not, then we assume that you want to learn how to use machine learning with\
+    \ python. Also, you could be looking for information about why and how you can\
+    \ get started with Python. If you are an expert programmer in any language, it\
+    \ will be easy for you to pick up Python very fast. Before you can get started\
+    \ in Python, you need to know how to install Python on your computer. Next, you\
+    \ need to know a few concepts about the language syntax to be able to read and\
+    \ understand the python code. This chapter will take you through all these. So,\
+    \ get ready to learn a few important things in Python language.\n\n## Installing\n\
+    \nNowadays, most UNIX and Linux distributions already come with a recent Python\
+    \ version installed. Even some HP Microsoft computers have Python already installed.\n\
+    \n### Download Python\n\nBefore you can get started with Machine Learning with\
+    \ Python, you must have Python installed on your computer, however, you might\
+    \ not need to download it . So, the first thing to do is to confirm that Python\
+    \ is not installed by typing `Python` in a command window. When you see a response\
+    \ from a Python interpreter, it will consist of a version number in its original\
+    \ display. In general, any recent version will work because Python tries to maintain\
+    \ backward compatibility. If you want to install Python, you might as well search\
+    \ for the most recent stable version. This version will have the highest number\
+    \ not marked as an alpha or beta release. If you’re running a Windows OS, the\
+    \ most stable Windows’ downloads can be found from the Python for Windows page.\
+    \ If you’re running Windows XP, you’ll find a complete guide to installing ActivePython\
+    \ at “Python on XP”. For those using a Mac, you can navigate to “Python for Mac\
+    \ OS X page.” For those using Debian or Ubuntu, you should install `python2x`\
+    \ and `pythonn2.x-deve` packages.\n\n### Syntax\n\nPython programs are written\
+    \ with the help of a text editor and must have an extension `.py`. It is not a\
+    \ must to have the first and last line in Python programs but it can assign the\
+    \ location of python as the first line `#!/usr/bin/python` and become executable.\
+    \ Nonetheless, the command prompt is another environment from which you can run\
+    \ python programs by entering `python file.py`. In Python, there are no semicolons\
+    \ and braces. It is a high-level language. So instead of braces, blocks are selected\
+    \ by selecting the same indentation .\n\n### First Python program\n\nUsually,\
+    \ when you start to learn any programming language, your first program to write\
+    \ will be “Hello, World!”. This is an easy program that prints “Hello, World!”\
+    \ For our first python program, you will learn how to write a program which adds\
+    \ two numbers. A program that adds two numbers ![](image88.jpg)\n\nHow does the\
+    \ above program work? The first line of the program begins with a comment. Comments\
+    \ in python programming are written starting with `#`. Python interpreter and\
+    \ compilers ignore comments. The reason why comments should be applied in Python\
+    \ programming is to describe the function of the code. Furthermore, comments help\
+    \ any other programmer to understand the working of your code.\n\n## Variables\
+    \ and Datatypes\n\nA data type, as the name suggests, is the category of data\
+    \ in different types. It defines a collection of values plus operations that can\
+    \ take place on those values. The explicit value used in our programs is a literal.\
+    \ For instance, 11, 30.22, ‘pypi’ are all literals. Each literal has a type linked\
+    \ to it. For example, 11 is an `int`, 30.22 is a `float` type and ‘pypi’ is of\
+    \ type string. Often the type of literal will determine the type of operations\
+    \ that can be done to it.\n\nPython contains an inbuilt function `type()` which\
+    \ is used to define the data type of the literal ![](image98.jpg)`<class 'int'>`\
+    \ describes that the type of 54 is `int`. Also `<class 'str'>` and `<class 'float'>`\
+    \ shows that “a string” and 98 is of str and float respectively. At first, you\
+    \ might say that “3.14” is of type float but since it is wrapped inside double\
+    \ quotes, it is definitely a string. In the same way, “99” is a string. The string\
+    \ type in Python is called `str`. String literals can either be defined by single\
+    \ or double quotes. All the characters inside the opening and closing quotes are\
+    \ part of the string\n\n### Escape sequence in strings\n\nThere are times when\
+    \ you want Python to interpret a sequence of characters differently. This might\
+    \ happen in two ways:\n\n- You want to suppress the unique interpretation that\
+    \ specific characters are supplied within a string.\n You want to apply specific\
+    \ interpretation to characters contained in a string that is often taken literally.\n\
+    \nYou can do this by using backslash `\\` character. A backslash character in\
+    \ a string implies that one or more characters which follow it must be uniquely\
+    \ treated. This is called an escape sequence because the backslash will make subsequent\
+    \ character to “escape” its normal meaning.\n\n### Boolean Type\n\nPython has\
+    \ a Boolean data type. Objects of Boolean type may contain two values, False or\
+    \ True ![](image123.jpg)Python expressions are evaluated in a Boolean context.\
+    \ This means that a true value is described as “Truthy” while a false value is\
+    \ described as “Falsy.” The truthiness of an object of the Boolean type is open.\
+    \ This means that objects which are equal to True are Truthy, and those that are\
+    \ equal False are Falsy. However, objects that are not of Boolean type can be\
+    \ evaluated.\n\n## Variables\n\nIn the first Python program, you were introduced\
+    \ to Python variables. You briefly saw how you can define variables in Python\
+    \ and assign them some values. This section discusses more variables in Python.\
+    \ Variables like in other programming languages are used to store values. Also,\
+    \ you can use variables to access data and manipulate data.\n\n### Create a variable\n\
+    \nIf you want to create a variable in Python, you must use the assignment operator\
+    \ `=`. The format shown below is applied when you want to create a variable ![](image134.jpg)An\
+    \ example can include:\n\n```\nnumber = 12\n```\nThis statement will create a\
+    \ variable called `number` and assign it the value `12`. When the Python interpreter\
+    \ comes across this statement, it performs the following things behind the scenes:\n\
+    \n1. Store the variable `12` in a given location in memory.\n2. Make the variable\
+    \ `number` point to it.\n\nThe crucial thing to understand is that the variable\
+    \ `number` itself doesn’t have any value, it only points to the memory location\
+    \ that contains the original value. Another important thing to note is that when\
+    \ you assign a value to a variable, make sure that you write the variable name\
+    \ on the left side of the `=` operator. If you fail to do this, you will get a\
+    \ syntax error. Python always detects the type of variable and operations performed\
+    \ on it depending on the value it has. The programming jargon that describes this\
+    \ is called Dynamic Typing. This means that you can use the same variable to refer\
+    \ to a different type of data than initially. Any time you assign a new value\
+    \ to a variable, the reference to the previous value is lost. For instance, if\
+    \ the variable `number` is assigned the string “ten”, the reference to value `12`\
+    \ is lost. At this point, there will be no variable that will point to the memory\
+    \ location. When this takes place, the Python interpreter will automatically remove\
+    \ the value from the memory through garbage collection. If you try to access a\
+    \ variable before you assign a value to it, you will get a NameError.\n\n## Control\
+    \ Flow\n\nThe control flow in a program highlights the order of program execution.\
+    \ In a Python program, control flow is carried out by function calls, conditional\
+    \ statements, and loops. This section will deal with the If Statement, While and\
+    \ For loops.\n\n### If Statement\n\nThere are occasions which you may want to\
+    \ run certain statements if some condition holds, or decide the type of statements\
+    \ to run based on different mutually exclusive conditions. Python has the If Statement\
+    \ that is made up of `if`, `elif`, and `else` clauses. These compound statements\
+    \ allow you to conditionally create blocks of statements. Below is a general declaration\
+    \ of an If Statement ![](image154.jpg)Here, `elif` and `else` clause are optional.\
+    \ As a reminder, there are no switch statements in Python, this means that you\
+    \ need to apply `elif`, `if`, and `else` for conditional processing. Take a look\
+    \ at this example of an If program ![](image160.jpg)\n\n### While statement\n\n\
+    In Python, a WHILE statement supports the repeated execution of a statement or\
+    \ even a block of statement which are under the control of a conditional expression.\
+    \ Take a look of a While syntax ![](image167.jpg)A While statement can also consist\
+    \ of an `else` clause, `break` and `continue` statements. Below is an example\
+    \ of a While program example in Python ![](image172.jpg)\n\n### The for Statement\n\
+    \nThe Python language also contains the for statement which supports repeated\
+    \ program statement execution. The for statement has an iterable expression to\
+    \ control the blocks of statements. Below is a general syntax of a for statement\
+    \ ![](image178.jpg)Keep in mind that `in` is a keyword. It is part of the syntax\
+    \ of the For Statement but not associated with the `in` operator which is applied\
+    \ in the membership testing. A for Statement can have an else clause, break, and\
+    \ continue statements. Here is a general declaration form of a For Statement:\
+    \ ![](image183.jpg)Data Structures They are structures which assist in data storage.\
+    \ Data structures have a collection of data linked to each other. In Python, there\
+    \ are 4 built-in data structures. They are as follows:\n"
+  trans: '
+
+
+    # 第一章：Python 基础
+
+
+    欢迎！这是你第一次编程吗？如果不是，那么我们假设你想学习如何使用 Python 进行机器学习。此外，你可能正在寻找关于为什么以及如何开始学习 Python
+    的信息。如果你是任何语言的专家级程序员，对你来说，上手 Python 会非常快。在开始学习 Python 之前，你需要知道如何在你的计算机上安装 Python。接下来，你需要了解一些关于语言语法的概念，以便读取和理解
+    Python 代码。本章将带你完成所有这些内容。所以，准备好学习 Python 语言中一些重要的内容。
+
+
+    ## 安装
+
+
+    如今，大多数 UNIX 和 Linux 发行版已经预装了最新版本的 Python。甚至一些 HP 微软计算机已经安装了 Python。
+
+
+    ### 下载 Python
+
+
+    在开始使用 Python 进行机器学习之前，你必须在计算机上安装 Python，不过你可能不需要下载它。因此，要做的第一件事是在命令行窗口中输入 `Python`
+    来确认是否安装了 Python。当你看到 Python 解释器的响应时，它的原始显示中会包含一个版本号。通常，任何最新版本都可以运行，因为 Python 试图保持向后兼容性。如果你想安装
+    Python，最好搜索最新的稳定版本。该版本将具有未标记为 alpha 或 beta 发布的最高数字。如果你运行的是 Windows OS，可以在 Python
+    for Windows 页面找到最稳定的 Windows 下载。如果你运行的是 Windows XP，你可以在“Python on XP”中找到安装 ActivePython
+    的完整指南。对于使用 Mac 的用户，你可以导航到“Python for Mac OS X 页面”。对于使用 Debian 或 Ubuntu 的用户，你应该安装
+    `python2x` 和 `pythonn2.x-deve` 包。
+
+
+    ### 语法
+
+
+    Python 程序是使用文本编辑器编写的，并且必须具有扩展名 `.py`。Python 程序并不要求第一行和最后一行内容，但可以将 Python 的位置指定为第一行
+    `#!/usr/bin/python` 并使其变为可执行。尽管如此，命令行提示符另一个环境，你可以通过输入 `python file.py` 运行 Python
+    程序。在 Python 中，没有分号和花括号。它是一种高级语言。因此，代码块不是通过选择相同的缩进来选择的。
+
+
+    ### 第一个 Python 程序
+
+
+    通常，当你开始学习任何编程语言时，你写的第一个程序将是“Hello, World!”这是一个打印“Hello, World!”的简单程序。对于我们的第一个
+    Python 程序，你将学习如何编写一个两个两个数字的程序。一个两个两个数字的程序 ![](img/image88.jpg)
+
+
+    上面的程序是如何工作的？程序的第一行以注释开始。Python 编程中的注释以 `#` 开头。Python 解释器和编译器会忽略注释。在 Python 编程中应用注释的原因是描述代码的功能。此外，注释有助于任何其他程序员理解你代码的工作原理。
+
+
+    ## 变量与数据类型
+
+
+    数据类型，顾其名，是不同类型的数据类别。它定义了一个值的集合以及可以在这些值上执行的操作。我们在程序中使用的显式值是字面量（literal）。例如，11、30.22、‘pypi’
+    都是字面量。每个字面量都有一个与其关联的类型。例如，11 是一个 `int`，30.22 是 `float` 类型，而‘pypi’ 是字符串类型。通常，字面量的类型将决定可以对其执行的操作类型。
+
+
+    Python 包含一个内置函数 `type()`，用于定义字面量的数据类型 ![](img/image98.jpg)`<class ''int''>` 描述
+    54 的类型是 `int`。同样，`<class ''str''>` 和 `<class ''float''>` 显示“a string”和 98 分别是
+    str 和 float。起初，你可能会说“3.14”是 float 类型，但因为它被封装在双引号中，它显然是一个字符串。同样，“99”也是一个字符串。Python
+    中的字符串类型称为 `str`。字符串字面量可以用单引号或双引号定义。起始和结束引号之间的所有字符都是字符串的一部分。
+
+
+    ### 字符串中的转义序列
+
+
+    有时你希望让 Python 以不同的方式解释字符序列。这可能通过两种方式发生：
+
+
+    - 你希望抑制字符串内部提供的特定字符的特殊解释。
+
+    - 你希望对字符串中包含的通常按字面处理的字符应用特定的解释。
+
+
+    你可以通过使用反斜杠 `\` 字符来实现这一点。字符串中的反斜杠字符意味着其后的一个或多个字符必须被唯一对待。这被称为转义序列，因为反斜杠会让随后的字符“逃逸”其正常含义。
+
+
+    ### 布尔类型
+
+
+    Python 有一种布尔数据类型。布尔类型的对象可能包含两个值：False 或 True ![](img/image123.jpg)Python 表达式在布尔上下文中求值。这意味着真值被描述为“Truthy”（真），而假值被描述为“Falsy”（假）。布尔类型对象的真值是开放的。这意味着等于
+    True 的对象是 Truthy，而等于 False 的对象是 Falsy。然而，非布尔类型的对象也可以被求值。
+
+
+    ## 变量
+
+
+    在第一个 Python 程序中，你接触了 Python 变量。你简要地看到了如何在 Python 中定义变量并为其赋值某些值。本节讨论了 Python 中更多的变量。变量与其他编程语言中的一样，用于存储值。此外，你可以使用变量来访问数据和操作数据。
+
+
+    ### 创建变量
+
+
+    如果你想在 Python 中创建一个变量，必须使用赋值运算符 `=`。所示的格式适用于你想创建一个变量时 ![](img/image134.jpg)一个示例可以包括：
+
+
+    ```
+
+    number = 12
+
+    ```
+
+    该语句将创建一个名为 `number` 的变量并将其赋值为 `12`。当 Python 解释器遇到此语句时，它会执行以下操作：该语句将创建一个名为 `number`
+    的变量并将其赋值为 `12`。当 Python 解释器遇到此语句时，它会执行以下操作：
+
+
+    ```
+
+    （注：此处原文逻辑存在重复，翻译按原文要求保留）
+
+    ```
+
+    该语句将创建一个名为 `number` 的变量并将其赋值为 `12`。当 Python 解释器遇到此语句时，它会执行以下操作：
+
+
+    该语句将创建一个名为 `number` 的变量并将其赋值为 `12`。当 Python 解释器遇到此语句时，它会执行以下操作：
+
+
+    （此处重复内容）
+
+    该语句将创建一个名为 `number` 的变量并将其赋值为 `12`。当 Python 解释器遇到此语句时，它会执行以下操作：
+
+
+    1. 存储变量 `12` 在内存中。
+
+    2. 让变量 `number` 指向它。
+
+
+    关键点是赋值运算符左侧的变量名。如果你没有这样做，将得到语法错误。描述这种的编程术语称为动态类型。这意味着你可以根据初始值使用不同的类型。当你给变量赋值新值时，旧值的引用将丢失。例如，如果变量
+    `number` 被赋值为“ten”，对 12 的引用将丢失。在此处，Python 解释器将通过垃圾回收移除该值。如果你在赋值之前尝试访问变量，将得到 NameError。
+
+
+    ## 控制流
+
+
+    控制流强调了程序执行的顺序。在 Python 程序中，控制流通过函数调用、条件语句和循环来实现。本节将处理 If 语句、While 和 For 循环。
+
+
+    ### If 语句
+
+
+    有时你希望在某些条件下运行特定的语句，或者根据互斥条件决定运行的语句类型。Python 有由 `if`、`elif` 和 `else` 组成的 If 语句。这些复合语句允许你有条件地创建块。以下是
+    If 语句的通用声明 ![](img/image154.jpg)在这里 `elif` 和 `else` 子句是可选的。作为提醒，Python 中没有 switch
+    语句，这意味着你需要应用 `elif`、`if` 和 `else` 进行条件处理。看这个 If 程序示例 ![](img/image160.jpg)
+
+
+    ### While 语句
+
+
+    Python 中的 WHILE 语句支持语句或语句块的重复执行，受条件表达式控制。看 While 的语法 ![](img/image167.jpg)While
+    也可以由 `else` 子句、`break` 和 `continue` 语句组成。以下是 Python 中的 While 程序示例 ![](img/image172.jpg)
+
+
+    ### for 语句
+
+
+    Python 语言还包含 for 语句，支持程序语句的重复执行。for 语句有一个迭代表达式来控制块。以下是 for 语句的通用语法 ![](img/image178.jpg)记住
+    `in` 是关键字。它是 For 语句语法的一部分，但与用于成员测试的 `in` 运算符关联。For 语句可以有一个 else 子句、break 和 continue
+    语句。这是一个 For 语句的通用声明形式 ![](img/image183.jpg)数据结构它们是辅助数据存储的结构。数据结构是相互关联的数据集合。Python
+    中有 4 种内置数据结构。它们如下：
+
+
+    '
+  toc: []
+- raw: '*   Tuple
+
+
+    *   List
+
+
+    *   Dictionary
+
+
+    *   Set'
+  fmt: '
+
+    - `Tuple`
+
+    - `List`
+
+    - `Dictionary`
+
+    - `Set`
+
+    '
+  trans: '
+
+
+    - `Tuple`
+
+    - `List`
+
+    - `Dictionary`
+
+    - `Set`
+
+
+    '
+  toc: []
+- raw: 'Below is a detail description of each data structure. List A list describes
+    data structures which have an ordered set of items. Consider a shopping list that
+    has several items which you need to purchase. The only difference is that your
+    shopping list has each item on a separate line. However, in the case of a list
+    in Python, you only need to separate your items with commas. The moment you create
+    a list, you have the  permission to add, remove, or search items in the same list.
+    Since a list allows you to add and remove items, it is considered as a mutable
+    data type. This means that you can change it anytime. Quick Intro to Objects and
+    Classes To understand more about a list in Python language, it is good to quickly
+    introduce you to the concept of objects and classes. A list is an example of objects
+    and classes. So, if you are going to use a variable such as j and allocate it
+    a value say integer 7, then it is important to look at it as if you are creating
+    object j. A class contains methods. Methods and functions are similar. However,
+    methods are defined inside that class alone. Therefore, the only way to access
+    a function is by having an object in that class. For example, in the Python language,
+    you can join a method to a list class that allows the class of the object. The
+    Python language has the append method for a list class which permits the addition
+    of an item to the end of the list. Classes in Python have fields which take the
+    form of variables declared to be used in a specific class alone. This means that
+    if you want to use these variables, you require to have an object of that class
+    alone. You access fields with the help of a dotted notation. For example, mylist.field.
+    ![](image205.jpg)![](image209.jpg)Here’s how it works There is the variable, “shoplist”
+    which has information about a person planning to go to the market. The “shoplist”
+    allows you to store strings of names of things which you plan to buy. However,
+    you can add any type of object like numbers. This program also has a ‘for’ loop
+    which will support iteration in the list. You should have started to realize that
+    a list is similar to a sequence. Notice how the end parameters are used to call
+    a print function. This shows that you want to end the output with space rather
+    than a normal line break. Next, you should add an item to the list using the append
+    method. Check whether the item is added using the print function. There is also
+    a sorting method in the program. The purpose of this is to sort the list. It is
+    important to note that this particular method affects the list itself and it can’t
+    return an altered list. The next thing is to complete purchasing the item from
+    the market. This process is equivalent to removing an item from the list. You
+    do this with the help of the del Statement. For this scenario, you need to describe
+    the item found in the list which you want to remove. Then use the del Statement
+    to remove it from the list. After that, the del Statement removes it from the
+    list. To remove an item in a list using Python, you just write the following line
+    function del shoplist \[0\] . Tuple Tuples store multiple objects. They are similar
+    to lists except that they don’t have a lot of functions like a list class. One
+    great feature about tuples is that it is immutable like strings. This implies
+    that it is hard to change the tuples. If you want to define tuples, you have to
+    describe items and separate them with commas. Tuples are best used in cases where
+    the collection of values can’t change. Take for example: ![](image224.jpg)![](image230.jpg)Dictionaries
+    A dictionary is similar to an address book which you can search details of a person
+    by selecting his or her name. In a dictionary, keys are joined with values. Keep
+    in mind that the key must be unique and you can again use immutable objects for
+    dictionary keys by either applying mutable or immutable objects for the dictionary
+    values. Remember that the key-value pairs in the dictionary don’t have a fixed
+    arrangement. Example: ![](image237.jpg)![](image241.jpg)![](image247.jpg)Chapter
+    2: Introduction to Machine Learning The focus of Machine Learning is to learn
+    the nature of data and apply it to specific models. Although ML is a field in
+    computer science, it is not the same as the traditional computational methods.
+    When you look at traditional computing, algorithms are described as a set of programmed
+    instructions. These instructions provide solutions to a problem. ML algorithms
+    make computers to learn from data inputs and apply statistical analysis to display
+    values found in a given range. Therefore, ML allows computers to create a model
+    from a data sample so that it can permit the automation of decisions based on
+    the type of data entered. Nowadays, technology users hugely benefit from the idea
+    of machine learning.  For example, the facial recognition technology provides
+    opportunities to social media networks so that their users can tag and share photos
+    with their friends. There is also the optical character recognition (OCR). This
+    type of technology is applied in movies, shows, and e-commerce to suggest to users
+    based on their preferences. If you know self–driving cars, they also depend on
+    machine learning to move . This chapter will take you through some of the most
+    common ML methods of supervised and unsupervised learning, as well as popular
+    machine learning algorithms. Additionally, you’ll learn why you need machine learning
+    and some of the programming languages used with machine learning besides Python.
+    Furthermore, this chapter will also look at some of the biases associated with
+    machine learning, and consider a few things to help reduce these types of biases
+    when you build an algorithm. Machine Learning Methods When it comes to the field
+    of machine learning, there are tasks which are categorized into different divisions.
+    Most of these divisions depend on how learning is performed, or on the type of
+    feedback delivered based on the system developed. The most popular machine learning
+    methods include supervised learning and unsupervised learning. For supervised
+    learning, algorithms learn from the example of input and output data labeled by
+    humans. On the other hand, unsupervised learning does not supply to the algorithm
+    any labeled data, but the algorithm has to find the structure within its input
+    data by itself. Here’s a detail discussion of these methods. Supervised Learning
+    For supervised learning, the computer has an example of input data to work on.
+    The aim of this method is to allow the algorithm to “learn” by comparing actual
+    output using a trained output to discover errors and alter the model. In other
+    words, this method contains patterns which assist in predicting label values on
+    extra data that is unlabeled . For example, in supervised learning, you can feed
+    an algorithm data with shark images and label them as fish. Also, you can feed
+    it with images of oceans and label it like water. After the algorithm is trained
+    several times with this particular data, the algorithm must be able to differentiate
+    unlabeled fish images and unlabeled ocean images. One of the most popular use
+    cases of supervised learning is the application of historical data to help forecast
+    the statistical chance of an event to happen. It can use historical stock market
+    data to predict future changes in the market. Additionally, supervised learning
+    can help in the filtering of spam emails. Supervised learning makes it possible
+    to classify untagged photos of dogs by using photos of dogs that have been tagged
+    already. Unsupervised learning Unlike supervised learning where data is labeled,
+    with unsupervised learning, you deal with unlabeled data. This means that it is
+    the task of the learning algorithm to identify similar features in the data that
+    it is supplied. Since unlabeled data is very popular compared to labeled data,
+    techniques of machine learning are among the most valuable in the industry.  The
+    aim of unsupervised learning is very simple. The largest application of unsupervised
+    learning is within the transactional data. There can be a massive data set made
+    up of customers and the products which they purchase, but since you are a human,
+    you can’t manage to extract meaning and similarity from customer profile and their
+    purchase history . The best time to apply unsupervised machine learning is when
+    you don’t have data on expected outcomes, like defining a target market for a
+    new product that your business has never sold before, but if you are attempting
+    to understand your consumer base, supervised learning is the right technique.
+    Machine learning approaches Machine learning is highly linked to computational
+    statistics. For that reason, if you have some knowledge of statistics, it is important
+    to understand and apply machine learning algorithms. If you are new to statistics,
+    here are some definition of terms which are popularly used in detecting the relation
+    found in quantitative variables. Correlation. This describes the association that
+    exists between two variables said not to be independent or dependent. Regression.
+    At the lowest level, it is helpful at determining the relationship between one
+    independent and dependent variable. The k-nearest neighbor This particular algorithm
+    is applied in the pattern recognition model. Pattern recognition model is used
+    in classification and regression. The k is a positive integer. In both regression
+    and classification, the input contains k closest training example in a specific
+    space. The KNN classification When it comes to this method, its output belongs
+    to the class membership. This assigns a new object the most popular class in the
+    k-nearest neighbors. Take for example, when k = 1, the object has to be assigned
+    a class which has one nearest neighbor.  The diagram below describes this algorithm.
+    The diagram has blue diamond objects and  orange star objects. Just remember that
+    they belong to two different classes. That is the star and diamond classes. ![](image282.jpg)Once
+    you introduce a new object to space such as a green heart, you’ll need the learning
+    algorithm to assign the heart into a particular class. ![](image288.jpg)For k
+    = 3, the algorithm will have to pick three nearest neighbors that belong to the
+    green heart and assign it, either into the diamond or star class. In this case,
+    the three nearest neighbors of the green heart consist of the diamond and two
+    stars. Therefore, the algorithm can label the heart that contains the star class.
+    ![](image296.jpg)The k-nearest neighbor algorithm is among the basic machine learning
+    algorithms labeled as “Lazy learning”. Decision Tree In general, decision trees
+    are important when you want to have a visual representation of decisions and display
+    decision making. When working with ML and data mining, decision trees are key
+    when it comes to a predictive model. The model contains observations and creates
+    a summary related to the target value of the data. Learning in decision trees
+    is important when you want to create a model that is useful at predicting a value
+    depending on the input values. If you take a look at a predictive model, the features
+    of the data have to be defined using observation and represented by branches.
+    Additionally, conclusions related to the data’s target value are shown in the
+    leaves. This example demonstrates the various conditions that can show whether
+    a person is supposed to go fishing or not. ![](image306.jpg)This decision tree
+    is classified by sorting. Then it can display which classification is associated
+    with a particular leaf. In the following example, it is a yes or no. The tree
+    can then divide the day’s condition based on whether it is correct to go fishing
+    or not. A real classification tree dataset will contain a lot more features compared
+    to what is shown in this tree. All in all, ‘relationship’ will be easy to select.
+    Deep Learning With deep learning, it will always try to copy the human brain and
+    how it succeeds in processing sound and light stimuli. The underlining architecture
+    of deep learning is powered by biological neural networks. Additionally, it contains
+    many different multiple layers. In the current machine learning algorithms, deep
+    learning has succeeded in selecting most of the data as well as defeat humans
+    in different cognitive tasks. Due to the following properties, deep learning is
+    one of the best methods applied in AI . Programming Languages When a person wants
+    to choose a language to use to learn with machine learning, there are few things
+    that they may want to factor in such as the current status of job positions and
+    the type of libraries available. Other languages that are used in machine language
+    include C++, Java, and R. Human Biases While both data and computational analysis
+    cause an individual to start to think like they aren’t being objective, being
+    biased on a given data doesn’t mean that the output from the machine learning
+    is neutral. The human bias affects the organization of data and algorithms that
+    determine how ML should use data. If you decide to use historical photographs
+    of scientists in your specific computer training, a computer might fail to classify
+    scientists. Although machine learning is continuously applied in the business,
+    biases that go unnoticed can lead to a systematic problem that can prevent people
+    from receiving loans and many other things.  In short, human biases can negatively
+    impact other people. This is very important to underline and work towards removing
+    it as possible. One particular method which you can use to achieve zero biases
+    is to ensure that several people work on a project. Since machine learning is
+    an area which is continuously being improved, it is essential to remember that
+    algorithms, approaches, and methods continue to change . Chapter 3: Data Processing,
+    Analysis, and Visualization Understanding Data Processing Data processing is the
+    act of changing the nature of data into a form that is more useful and desirable.
+    In other words, it is making data more meaningful and informative. By applying
+    machine learning algorithms, statistical knowledge, and mathematical modeling,
+    one can automate this whole process. The output of this whole process can be in
+    any form like tables, graphs, charts, images, and much more, based on the activity
+    done and the requirements of the machine. This might appear simple, but for big
+    organizations and companies like Facebook, Twitter, UNESCO, and health sector
+    organizations, this whole process has to be carried out in a structured way. The
+    diagram below shows some of the steps that are followed: ![](image327.jpg)Let’s
+    look in detail at each step: Collection The most important step when getting started
+    with Machine Learning is to ensure that the data available is of great quality.
+    You can collect data from genuine sources such as Kaggle, data.gov.in, and UCI
+    dataset repository. For example, when students are getting ready to take a competitive
+    exam, they always find the best resources to use to ensure they attain good results.
+    Similarly, accurate and high-quality data will simplify the learning process of
+    the model. This means that during the time of testing, the model would output
+    the best results. A great amount of time, capital, and resources are involved
+    in data collection. This means that organizations and researchers have to select
+    the correct type of data which they want to implement or research. For instance,
+    to work on the Facial Expression Recognition requires a lot of images that have
+    different human expressions. A good data will make sure that the results of the
+    model are correct and genuine . Preparation The data collected can be in raw form.
+    Raw data cannot be directly fed into a machine. Instead, something has to be done
+    on the data first. The preparation stage involves gathering data from a wide array
+    of sources, analyzing the datasets, and then building a new data set for additional
+    processing and exploration. Preparation can be done manually or automatically
+    and the data should be prepared in a numerical form to improve the rate of learning
+    of the model. Input Sometimes, data already prepared can be in the form which
+    the machine cannot read, in this case, it has to be converted into readable form.
+    For conversion to take place, it is important for a specific algorithm to be present.
+    To execute this task, intensive computation and accuracy are required. For example,
+    you can collect data through sources like MNIST, audio files, twitter comments,
+    and video clips. Processing In this stage, ML techniques and algorithms are required
+    to execute instructions generated over a large volume of data with accuracy and
+    better computation. Output In this phase, results get procured by the machine
+    in a sensible way such that the user can decide to reference it. Output can appear
+    in the form of videos, graphs, and reports . Storage This is the final stage where
+    the generated output, data model, and any other important information are saved
+    for future use. Data Processing in Python Let’s learn something in python libraries
+    before looking at how you can use Python to process and analyze data. The first
+    thing is to be familiar with some important libraries. You need to know how you
+    can import them into the environment. There are different ways to do this in Python.
+    You can type: Import math as m From math import \* In a first way, you define
+    an alias m to library math. Then you can use different functions from the math
+    library by making a reference using an alias m. factorial (). In the second method,
+    you import the whole namespace in math. You can choose to directly apply factorial
+    () without inferring to math. Note: Google recommends the first method of importing
+    libraries because it will help you tell the origin of the functions. The list
+    below shows libraries that you’ll need to know where the functions originate from.
+    NumPy:   This stands for Numerical Python. The most advanced feature of NumPy
+    is an n-dimensional array. This library has a  standard linear algebra function,
+    advanced random number capability, and tools for integration with other low-level
+    programming languages. SciPy: It is the shorthand for Scientific Python. SciPy
+    is designed on NumPy. It is among the most important library for different high-level
+    science and engineering modules such as Linear Algebra, Sparse matrices, and Fourier
+    transform. Matplotlib : This is best applied when you have a lot of graphs which
+    you need to plot. It begins from line plots to heat plots and you can apply the
+    Pylab feature in IPython notebook to ensure plotting features are inline. Pandas:
+    Best applied in structured data operations and manipulations. It is widely used
+    for data preparation and mining. Pandas were introduced recently to Python and
+    have been very useful in enhancing Python’s application in the data scientist
+    community. scikit-learn: This is designed for machine learning. It was created
+    on matplotlib, NumPy, and SciPy. This specific library has a lot of efficient
+    tools for machine learning and statistical modeling. That includes regression,
+    classification, clustering, and dimensionality community. StatsModels: This library
+    is designed for statistical modeling. Statsmodels refers to a Python module which
+    permits users to explore data, approximate statistical models, and implement statistical
+    tests. Other libraries •    Requests used to access the web. •    Blaze used to
+    support the functionality of NumPy and Pandas . •    Bokeh used to create dashboards,
+    interactive plots, and data applications on the current web browsers. •    Seaborn
+    is used in statistical data visualization. •    Regular expressions that are useful
+    for discovering patterns in a text data •    NetWorx and Igraph applied to graph
+    data manipulations. Now that you are familiar with Python fundamentals and crucial
+    libraries, let’s now jump into problem-solving through Python. An exploratory
+    analysis in Python with Pandas If you didn’t know, Pandas is an important data
+    analysis library in Python. This library has been key to improving the application
+    of Python in the data science community. Our example uses Pandas to read a data
+    set from an analytics Vidhya competition, run an exploratory analysis, and create
+    a first categorization algorithm to solve this problem. Before you can load the
+    data, it is important to know the two major data structures in Pandas. That is
+    Series and DataFrames. Series and DataFrames You can think of series as a 1-dimensional
+    labeled array. These labels help you to understand individual elements of this
+    series via labels. A data frame resembles an Excel workbook and contains column
+    names which refer to columns as well as rows that can be accessed by row numbers.
+    The most important difference is that column names and row numbers are referred
+    to as column and row index . Series and data frames create a major data model
+    for Pandas in Python. At first, the datasets have to be read from data frames
+    and different operations can easily be subjected to these columns. Practice data
+    set – Loan Prediction Problem The following is the description of variables: ![](image380.jpg)First,
+    start iPython interface in Inline Pylab mode by typing the command below on the
+    terminal: ![](image385.jpg)Import libraries and data set This chapter will use
+    the following python libraries: '
+  fmt: "\nBelow is a detail description of each data structure.\n\n### List\nA list\
+    \ describes data structures which have an ordered set of items. Consider a shopping\
+    \ list that has several items which you need to purchase. The only difference\
+    \ is that your shopping list has each item on a separate line. However, in the\
+    \ case of a list in `Python`, you only need to separate your items with commas.\
+    \ The moment you create a list, you have the permission to add, remove, or search\
+    \ items in the same list. Since a list allows you to add and remove items, it\
+    \ is considered as a mutable data type. This means that you can change it anytime.\
+    \ \n\n### Quick Intro to Objects and Classes\nTo understand more about a list\
+    \ in `Python` language, it is good to quickly introduce you to the concept of\
+    \ objects and classes. A list is an example of objects and classes. So, if you\
+    \ are going to use a variable such as `j` and allocate it a value say integer\
+    \ `7`, then it is important to look at it as if you are creating object `j`. \n\
+    \nA class contains methods. Methods and functions are similar. However, methods\
+    \ are defined inside that class alone. Therefore, the only way to access a function\
+    \ is by having an object in that class. For example, in the `Python` language,\
+    \ you can join a method to a list class that allows the class of the object. The\
+    \ `Python` language has the `append` method for a list class which permits the\
+    \ addition of an item to the end of the list. \n\nClasses in `Python` have fields\
+    \ which take the form of variables declared to be used in a specific class alone.\
+    \ This means that if you want to use these variables, you require to have an object\
+    \ of that class alone. You access fields with the help of a dotted notation. For\
+    \ example, `mylist.field`.\n\n### Here’s how it works\nThere is the variable,\
+    \ `shoplist`, which has information about a person planning to go to the market.\
+    \ The `shoplist` allows you to store strings of names of things which you plan\
+    \ to buy. However, you can add any type of object like numbers. This program also\
+    \ has a `for` loop which will support iteration in the list. You should have started\
+    \ to realize that a list is similar to a sequence. Notice how the end parameters\
+    \ are used to call a `print` function. This shows that you want to end the output\
+    \ with space rather than a normal line break. \n\nNext, you should add an item\
+    \ to the list using the `append` method. Check whether the item is added using\
+    \ the `print` function. There is also a sorting method in the program. The purpose\
+    \ of this is to sort the list. It is important to note that this particular method\
+    \ affects the list itself and it can’t return an altered list. \n\nThe next thing\
+    \ is to complete purchasing the item from the market. This process is equivalent\
+    \ to removing an item from the list. You do this with the help of the `del` statement.\
+    \ For this scenario, you need to describe the item found in the list which you\
+    \ want to remove. Then use the `del` statement to remove it from the list. After\
+    \ that, the `del` statement removes it from the list. To remove an item in a list\
+    \ using `Python`, you just write the following line:\n\n```python\ndel shoplist[0]\n\
+    ```\n\n### Tuple\nTuples store multiple objects. They are similar to lists except\
+    \ that they don’t have a lot of functions like a list class. One great feature\
+    \ about tuples is that it is immutable like strings. This implies that it is hard\
+    \ to change the tuples. If you want to define tuples, you have to describe items\
+    \ and separate them with commas. Tuples are best used in cases where the collection\
+    \ of values can’t change.\n\n### Dictionary\nA dictionary is similar to an address\
+    \ book which you can search details of his or name. In a dictionary, keys are\
+    \ joined with values. Keep in mind that the key must be unique and you can use\
+    \ immutable objects for dictionary keys. Remember that key-value pairs in the\
+    \ dictionary don’t have fixed arrangement.\n\n# Chapter 2: Introduction to Machine\
+    \ Learning\nThe focus of Machine Learning is to learn the nature of data and apply\
+    \ it to specific models. Although ML is a field in computer science, it is not\
+    \ the same as traditional methods. When you look at traditional computing, algorithms\
+    \ are described as a set of programmed instructions. These instructions provide\
+    \ solutions to a problem. ML algorithms make computers to learn from data and\
+    \ apply statistical analysis to display values found in given range. \n\nML allows\
+    \ computers to create a model from a data sample so that it can permit decisions\
+    \ based on type. Nowadays, technology users hugely benefit from the idea of machine\
+    \ learning. For example, facial recognition provides opportunities for social\
+    \ media networks so that users can tag and share photos with friends. There is\
+    \ also optical character recognition (`OCR`). This type of technology is applied\
+    \ in movies, shows, and e-commerce to suggest to users. \n\nThis chapter will\
+    \ take you through some of the most common ML methods supervised and unsupervised\
+    \ learning, as well as popular machine learning algorithms. Additionally, you’ll\
+    \ learn why you need machine learning besides `Python`. Furthermore, this chapter\
+    \ will also look at biases associated with machine learning when you build an\
+    \ algorithm.\n\n## Machine Learning Methods\nWhen comes to the field of machine\
+    \ learning, there are tasks which are categorized into different divisions. Most\
+    \ of these divisions depend on how learning is performed or on the type of feedback\
+    \ delivered. Most popular machine learning methods include supervised learning\
+    \ and unsupervised learning. For supervised learning, algorithms learn from input\
+    \ and output data labeled by humans. On the other hand, unsupervised learning\
+    \ does not supply the algorithm any labeled data, but the algorithm has to find\
+    \ the structure within its input itself.\n\n### Supervised Learning\nFor supervised\
+    \ learning, the computer has an example of input data to work on. The aim of this\
+    \ method is to allow the algorithm to “learn” by comparing actual output using\
+    \ trained output to discover errors and alter the model. In other words, this\
+    \ method contains patterns which assist in predicting label values on extra data\
+    \ that is unlabeled. For example, in supervised learning, you can feed an algorithm\
+    \ data with shark images and label them as fish. Also, you can feed it images\
+    \ of oceans and label it like water. After the algorithm is trained several times\
+    \ with this particular data, the algorithm must be able to differentiate fish\
+    \ images and ocean images. One of the most popular use cases of supervised learning\
+    \ is the application of historical data to help forecast the statistical chance\
+    \ of an event to happen. It can use historical stock market data to predict future\
+    \ changes in the market. Additionally, supervised learning can help in the filtering\
+    \ of spam emails. Supervised learning makes it possible to classify untagged photos\
+    \ of dogs by using photos of dogs that have been tagged already.\n\n### Unsupervised\
+    \ Learning\nUnlike supervised learning where data is labeled, with unsupervised\
+    \ learning, you deal with unlabeled data. This means that it is the task of the\
+    \ learning algorithm to identify similar features in the data that is supplied.\
+    \ Since unlabeled data is very popular compared to labeled data, techniques of\
+    \ machine learning are among the most valuable in the industry. The aim of unsupervised\
+    \ learning is very simple. The largest application of unsupervised learning is\
+    \ within transactional data. There can be a massive data set made up of customers\
+    \ and the products which they purchase, but since you are a human, you can’t manage\
+    \ to extract meaning and similarity from customer profile and their purchase history.\
+    \ The best time to apply unsupervised machine learning is when you don’t have\
+    \ data on expected outcomes, like defining a target market for a new product that\
+    \ your business has never sold before. If you are attempting to understand your\
+    \ consumer base, supervised learning is the right technique.\n\n## Machine learning\
+    \ approaches\nMachine learning is highly linked to computational statistics. For\
+    \ that reason, if you have some knowledge of statistics, it is important to understand\
+    \ and apply machine learning algorithms. If you are new to statistics, here are\
+    \ some definition of terms which are popularly used in detecting the relation\
+    \ found in quantitative variables.\n\n- Correlation: This describes the association\
+    \ that exists between two variables said not to be independent or dependent.\n\
+    - Regression: At the lowest level, it is helpful at determining the relationship\
+    \ between one independent and dependent variable.\n- k-nearest neighbor: This\
+    \ particular algorithm is applied in the pattern recognition model. Pattern recognition\
+    \ model is used in classification and regression. The `k` is a positive integer.\
+    \ In both regression and classification, the input contains `k` closest training\
+    \ example in a specific space.\n\n### The KNN classification\nWhen comes to this\
+    \ method, its output belongs to the class membership. This assigns a new object\
+    \ the most popular class in the `k`-nearest neighbors. Take for example, when\
+    \ `k = 1`, the object has to be assigned a class which has one nearest neighbor.\
+    \ The diagram below describes this algorithm. The diagram has blue diamond objects\
+    \ and orange star objects. Just remember that they belong to two different classes.\
+    \ That is the star and diamond classes. Once you introduce a new object to space\
+    \ such as a green heart, you’ll need the learning algorithm to assign the heart\
+    \ into a particular class. For `k = 3`, the algorithm will have to pick three\
+    \ nearest neighbors that belong to the green heart and assign it, either into\
+    \ diamond or star class. The k-nearest neighbor algorithm is among the basic machine\
+    \ learning labeled as “Lazy learning”.\n\n### Decision Tree\nIn general, decision\
+    \ trees are important when you want to have visual representation of decisions.\
+    \ When working with ML and data mining, decision trees are key when it comes to\
+    \ data. Learning in decision trees is important when you want to create a model\
+    \ that is useful at predicting value. If you take a look at predictive model,\
+    \ the features of the data have to be defined using observation and represented\
+    \ by branches. Additionally, conclusions related to the data’s target value are\
+    \ shown in leaves. This decision tree is classified by sorting. Then it can display\
+    \ whether person is supposed to go or not. All in all, relationship will be easy\
+    \ to select.\n\n### Deep Learning\nWith deep learning, it will always try to copy\
+    \ brain and how it succeeds in processing. The architecture of deep learning is\
+    \ powered by neural networks. Additionally, it contains many different layers.\
+    \ In current machine learning, deep learning has succeeded in selecting most of\
+    \ the data as well as cognitive tasks. It is one of best methods applied in AI.\n\
+    \n### Programming Languages\nWhen person wants to choose a language to use with\
+    \ machine learning, there are few things they may want to factor in such as status\
+    \ and libraries available. Other languages used include `C++`, `Java`, and `R`.\n\
+    \n# Chapter 3: Data Processing, Analysis, and Visualization\n### Understanding\
+    \ Data Processing\nData processing is the act of changing the nature of data into\
+    \ a form that is more useful and desirable. In other words, it is making data\
+    \ more meaningful and informative. By applying machine learning algorithms, statistical\
+    \ knowledge, and mathematical modeling, one can automate this whole process. The\
+    \ output of this whole process can be in any form like tables, graphs, charts,\
+    \ images, and much more, based on the activity done and the requirements of the\
+    \ machine. This might appear simple, but for big organizations and companies like\
+    \ `Facebook`, `Twitter`, `UNESCO`, and health sector, this whole process has to\
+    \ be carried out in a structured way.\n\n### Collection\nThe most important step\
+    \ when getting started with Machine Learning is to ensure that the data available\
+    \ is of great quality. You can collect data from genuine sources such as `Kaggle`,\
+    \ `data.gov.in`, and UCI dataset repository. For example, when students are getting\
+    \ ready to take a competitive exam, they always find the best resources to use\
+    \ to ensure they attain good results. Similarly, accurate and high-quality data\
+    \ will simplify the learning process of the model. This means that during the\
+    \ time of testing, the model would output best results. A great amount of time,\
+    \ capital, and resources are involved in data collection. Organizations and researchers\
+    \ have to select the correct type of data. For instance, to work on Facial Expression\
+    \ Recognition requires a lot of images that have different human expressions.\
+    \ Good data will make sure that the results of the model are correct and genuine.\n\
+    \n### Preparation\nThe data collected can be in raw form. Raw data cannot be directly\
+    \ fed into a machine. Instead, something has to be done on the data first. The\
+    \ preparation stage involves gathering data from a wide array of sources, analyzing\
+    \ the datasets, and then building a new data set for additional processing and\
+    \ exploration. Preparation can be done manually or automatically and the data\
+    \ should be prepared in a numerical form to improve the rate of learning of the\
+    \ model.\n\n### Input\nSometimes, data already prepared can be in the form which\
+    \ the machine cannot read, in this case, it has to be converted into readable\
+    \ form. For conversion to take place, it is important for a specific algorithm\
+    \ to be present. To execute this task, intensive computation and accuracy are\
+    \ required. For example, you can collect data through sources like `MNIST`, audio\
+    \ files, twitter comments, and video clips.\n\n### Processing\nIn this stage,\
+    \ ML techniques and algorithms are required to execute instructions generated\
+    \ over a large volume of data with accuracy and better computation.\n\n### Output\n\
+    In this phase, results get procured by the machine in a sensible way such that\
+    \ the user can decide to reference it. Output can appear in the form of videos,\
+    \ graphs, and reports.\n\n### Storage\nThis is the final stage where the generated\
+    \ output, data are saved.\n"
+  trans: '
+
+    以下是每个数据结构的详细描述。
+
+
+    ### 列表 (List)
+
+    列表描述了具有有序集合的数据结构。考虑一个包含多个你需要购买的物品的购物清单。唯一的区别是，你的购物清单每个物品都单独占一行。然而，在 `Python` 列表中，你只需要用逗号分隔项目即可。一旦你创建了列表，你就有权限在同一个列表中添加、删除或搜索项目。由于列表允许你添加和删除项目，因此它被视为一种可变变数据类型。这意味着你可以随时更改它。
+
+
+    ### 对象和类的简要介绍
+
+    为了进一步了解 `Python` 语言中的列表，最好向你快速介绍对象和类的概念。列表就是对象和类的一个示例。因此，如果你打算使用一个如 `j` 类的变量并为其分配一个值（例如整数
+    `7`），那么将其看作是在创建对象 `j` 是重要的。
+
+
+    类包含方法。方法和函数是类似的。但是，方法仅定义在类内部。因此，访问函数的唯一方法是在该类中拥有一个对象。例如，在 `Python` 语言中，你可以将一个方法连接到列表类，这允许该对象的类。`Python`
+    语言为列表类提供了 `append` 方法，允许在列表末尾添加项目。
+
+
+    `Python` 中的类具有字段，其形式为声明为仅在特定类中使用的变量。这意味着如果你想使用这些变量，你需要拥有该类的对象。你通过点符号符号访问字段。例如，`mylist.field`。
+
+
+    ### 它的工作原理
+
+    有一个变量 `shoplist`，它包含了关于一个计划去市场的人的信息。`shoplist` 允许你存储计划购买的物品的名称字符串。然而，你也可以添加任何类型的对象，如数字。此程序还有一个
+    `for` 循环，它支持列表的迭代。你应该已经开始意识到列表类似于序列。注意结束参数是如何用于调用 `print` 函数的。这表明你想用空格而不是普通的换行来结束输出。
+
+
+    接下来，你应该使用 `append` 方法向列表添加一个项目。使用 `print` 函数检查项目是否已添加。程序中还有一个排序方法，其目的是对列表进行排序。需要注意的是，这个特定方法影响列表本身，它不能返回一个修改后的列表。
+
+
+    下一步是完成从市场购买物品。这个过程等同于从列表中删除项目。你通过 `del` 语句辅助操作。对于这种场景，你需要描述列表中想要删除的找到的项目。然后使用
+    `del` 语句将其从列表中删除。之后，`del` 语句会将其从列表中移除。在 `Python` 中删除列表中的项目，你只需要写以下行：
+
+
+    ```python
+
+    del shoplist[0]
+
+    ```
+
+
+    ### 元组 (Tuple)
+
+    元组存储多个对象。它们与列表相似，区别是它们没有像列表类那样的许多函数。元组的一个伟大特性是它像字符串一样是不可变的。这意味着很难更改元组。如果你想定义元组，必须描述项目并用逗号分隔它们。在值集合无法更改的情况下，最适合使用元组。
+
+
+    ### 字典 (Dictionary)
+
+    字典类似于地址簿，你可以通过姓名搜索其详情。在字典中，键（key）与值（value）相关。请记住，键必须是唯一的，你可以使用不可变对象作为字典的键。记住字典中的键值对没有固定的顺序。
+
+
+    # 第 2 章：机器学习简介
+
+    机器学习的重点是学习数据的本质并将其应用于特定的模型。虽然机器学习是计算机科学的一个领域，但它与传统方法不同。当你观察传统计算时，算法被描述为一组程序编写的指令。这些指令为问题提供了解决方案。机器学习算法让计算机从数据中学习，并应用统计分析来显示在给定范围内找到的值。
+
+
+    机器学习允许计算机从数据样本中创建模型，以便它可以根据类型做出决策。如今，技术用户从机器学习的想法中受益匪浅。例如，面部识别为社交媒体网络提供了机会，使用户可以标记并与朋友分享照片。还有光学字符识别
+    (`OCR`)。这种技术应用于电影、节目和电子商务中，以向用户提供建议。
+
+
+    本章将带你了解一些最常见的机器学习方法：监督学习和无监督学习，以及流行的机器学习算法。此外，你将学习为什么除了 `Python` 之外你还需要机器学习。此外，本章还将探讨在构建算法时与机器学习相关的偏差。
+
+
+    ## 机器学习方法
+
+    在机器学习领域，任务被归类为不同的部门。这些部门的大多数取决于如何执行学习或所交付的反馈类型。最受欢迎的机器学习方法包括监督学习和无监督学习。对于监督学习，算法从人类标记的输入和输出数据中学习。另一方面，无监督学习不向算法提供任何标记数据，但算法必须在输入本身中找到结构。
+
+
+    ### 监督学习
+
+    对于监督学习，计算机有一个输入数据示例可供工作。这种方法的目的是允许算法通过使用已训练的输出比较实际输出来“学习”，以发现错误并更改模型。换句话说，这种方法包含了辅助预测的模式。例如，在监督学习中，你可以向算法输入数据并将其标记为鱼。此外，你可以喂给它海洋图像并将其标记为水。在算法经过多次训练后，它必须能够区分鱼和海洋。监督学习最流行的用例之一是使用历史数据来预测事件发生的概率。它可以使用历史数据来预测市场变化。此外，监督学习可以帮助过滤垃圾邮件。
+
+
+    ### 无监督学习
+
+    与数据标记的监督学习不同，无监督学习处理的是未标记数据。这意味着任务是识别提供数据中的相似特征。由于未标记数据与标记数据相比非常流行，机器学习的技术在行业中非常有价值。无监督学习的目标非常简单。无监督学习最大的应用是在交易数据中，由客户组成的海量数据，由于你是人类，你可以从客户资料和他们的购买历史中提取意义。在没有预期结果的情况下，应用机器学习时无监督学习是正确的技术。
+
+
+    ## 机器学习方法
+
+    机器学习与计算统计密切相关。因此，如果你具备统计学知识，理解并应用机器学习算法是非常重要的。这里是用于检测变量的一些定义：
+
+
+    - 相关性 (Correlation)：描述独立变量或依赖变量之间的关联。
+
+    - 回归 (Regression)：在最低水平，有助于确定独立变量和依赖变量之间的关系。
+
+    - 最近邻 (k-nearest neighbor)：这种特定算法应用于模式识别。在分类和回归中，`k` 是一个正整数。
+
+
+    ### KNN 分类
+
+    当涉及到这种方法时，输出属于类别。这为新对象分配最流行的类别 `k`-最近邻。例如，当 `k = 1` 时，对象必须被分配一个最近邻。下面的图描述了这种算法。图中有蓝色对象和橙色对象，只需记住它们属于不同的类别。一旦你引入一个新对象（如绿色），你需要学习算法将其分配到特定类别。对于
+    `k = 3`，算法将必须选取属于绿色和星色的三个最近邻。最近邻算法被标记为“懒惰学习”。
+
+
+    ### 决策树 (Decision Tree)
+
+    通常情况下，当你想要决策的视觉化表示时，决策树是重要的。在处理机器学习和数据挖掘时，决策树对于数据是关键的。在决策树中学习当你想要创建一个预测值的模型时是重要的。如果你观察预测模型，数据的特征必须通过分支定义并表示。此外，与数据目标值相关的结论显示在叶节点中。该决策树通过排序进行分类。然后它可以显示是否应该执行。总之，关系将很容易选择。
+
+
+    ### 深度学习 (Deep Learning)
+
+    通过深度学习，它将始终尝试模仿大脑如何成功处理。深度学习的架构由神经网络驱动。此外，它包含了许多不同的层。在当前的机器学习中，深度学习已成功处理大部分数据以及认知任务。它是应用的最佳方法之一。
+
+
+    ### 编程语言
+
+    当人们想要选择用于机器学习的语言时，有一些他们可能考虑的因素，例如可用的库。其他使用的语言包括 `C++`、`Java` 和 `R`。
+
+
+    # 第 3 章：数据处理、分析与可视化
+
+    ### 理解数据处理
+
+    数据处理是将数据性质变为更有用且更理想的形式。换句话说，它是让数据更有意义和信息量。通过应用机器学习算法、统计知识和数学建模，可以实现整个过程的自动化。这整个过程的输出可以是任何形式，如表格、图形、图表、图像等，取决于所完成的操作和机器的要求。这可能看起来简单，但对于
+    `Facebook`、`Twitter`、`UNESCO` 和健康部门等大型机构和公司，这整个过程必须以结构化的方式执行。
+
+
+    ### 收集 (Collection)
+
+    开始机器学习最重要的一步是确保可用数据具有高质量。你可以从真实的来源收集数据，如 `Kaggle`、`data.gov.in` 和 UCI 数据集仓库。例如，当学生准备参加竞争性考试时，他们总是寻找最好的资源来使用以确保获得良好结果。同样，准确且高质量的数据将简化模型的学习过程。这意味着在测试期间，模型将输出最佳结果。数据收集涉及大量的时间、资金和资源。机构和研究人员必须选择正确类型的数据。例如，从事面部识别需要大量具有不同人类表情的图像。良好的数据将确保模型的结果是正确且真实的。
+
+
+    ### 准备 (Preparation)
+
+    收集的数据可以是原始形式的。原始数据不能直接喂给机器。相反，必须先对数据进行某些处理。准备阶段涉及从广泛的来源收集数据、分析数据集，然后构建用于额外处理和探索的新数据集。准备可以手动或自动进行，数据应准备成数值形式以提高模型的学习率。
+
+    '
+  toc: []
+- raw: "*   NumPy\n\n*   Matplotlib\n\n*   Pandas\n\nOnce you have imported the library,\
+    \ you can move on and read the dataset using a function read\\_csv(). Below is\
+    \ how the code will look till this point. ![](image397.jpg)Notice that the dataset\
+    \ is stored in “/home/kunal/Downloads/Loan\\_Prediction/train.csv” Once you read\
+    \ the dataset, you can decide to check a few top rows by using the function head().\
+    \ Next, you can check at the summary of numerical fields by using the describe\
+    \ () function. Distribution analysis Since you are familiar with the basic features\
+    \ of data, this is the time to look at the distribution of different variables.\
+    \ Let’s begin with numeric variables-ApplicantIncome and LoanAmount. First, type\
+    \ the commands below to plot the histogram of ApplicantIncome. ![](image407.jpg)![](image411.jpg)Notice\
+    \ that there are a few extreme values. This is why 50 bins are needed to represent\
+    \ the distribution clearly. The next thing to focus on is the box plot. The box\
+    \ plot for fare is plotted by: ![](image417.jpg)![](image421.jpg)This is just\
+    \ a tip of an iceberg when it comes data processing in Python. Let’s look at:\
+    \ Techniques for Preprocessing Data in Python Here are the best techniques for\
+    \ Data Preprocessing in Python. \n\n1.  Rescaling Data\n\nWhen you work with data\
+    \ that has different scales, you need to rescale the properties to have the same\
+    \ scale. The properties are rescaled between the range 0 to 1 and refer to it\
+    \ as normalization. To achieve this, the MinMaxScaler class from scikit-learn\
+    \ is used. For example: ![](image433.jpg)![](image437.jpg)After rescaling, you\
+    \ get the values between 0 and 1. By rescaling data, it confirms the use of neural\
+    \ networks, optimization algorithms as well as those which have distance measures\
+    \ such as the k-nearest neighbors. \n\n2.  Normalizing Data\n\nIn the following\
+    \ task, you rescale every observation to a specific length of 1. For this case,\
+    \ you use the Normalizer class. Here is an example: ![](image445.jpg)![](image449.jpg)\n\
+    \n3.  Binarizing Data\n\nIf you use the binary threshold, it is possible to change\
+    \ the data and make the value above it to be 1 while those that are equal to or\
+    \ fall below it, 0. For this task, you use the Binarized class. ![](image455.jpg)![](image459.jpg)As\
+    \ you can see, the python code will label 0 overall values equal to or less than\
+    \ 0, and label 1 over the rest. \n\n4.  Mean Removal\n\nThis is where you remove\
+    \ mean from each property to center it on zero. \n\n5.  One Hot Encoding\n\nWhen\
+    \ you deal with a few and scattered numerical values, you might need to store\
+    \ them before you can carry out the One Hot Encoding. For the k-distinct values,\
+    \ you can change the feature into a k-dimensional vector that has a single value\
+    \ of 1 and 0 for the remaining values. ![](image470.jpg)\n\n6.  Label Encoding\n\
+    \nSometimes labels can be words or numbers. If you want to label the training\
+    \ data, you need to use words to increase its readability. Label encoding changes\
+    \ word labels into numbers to allow algorithms to operate on them. Here’s an example:\
+    \ ![](image477.jpg)\n\nChapter 4: Regression Linear regression Linear regression\
+    \ is one of the most popular types of predictive analysis. Linear regression involves\
+    \ the following two things: \n\n1.  Do the predictor variables forecast the results\
+    \ of an outcome variable accurately?\n\n2.  Which particular variable are key\
+    \ predictors of the final variable, and in what standard does it impact the outcome\
+    \ variable?\n\nNaming variables The regression’s dependent variable has many different\
+    \ names. Some names include outcome variable, criterion variable, and many others.\
+    \ The independent variable can be called exogenous variable or repressors. Functions\
+    \ of the regression analysis \n\n1.  Trend Forecasting\n\n2.  Determine the strength\
+    \ of predictors\n\n3.  Predict an effect"
+  fmt: '
+
+    * NumPy
+
+    * Matplotlib
+
+    * Pandas
+
+
+    Once you have imported the library, you can move on and read the dataset using
+    a function `read_csv()`. Below is how the code will look till this point. ![](image397.jpg)
+
+
+    Notice that the dataset is stored in `/home/kunal/Downloads/Loan_Prediction/train.csv`.
+    Once you read the dataset, you can decide to check a few top rows by using the
+    function `head()`. Next, you can check at the summary of numerical fields by using
+    the `describe()` function.
+
+
+    ### Distribution analysis
+
+    Since you are familiar with the basic features of data, this is the time to look
+    at the distribution of different variables. Let’s begin with numeric variables-ApplicantIncome`
+    and `LoanAmount`. First, type the commands below to plot the histogram of `ApplicantIncome`.
+    ![](image407.jpg)![](image411.jpg)
+
+
+    Notice that there are a few extreme values. This is why 50 bins are needed to
+    represent the distribution clearly. The next thing to focus on is the box plot.
+    The box plot for `fare` is plotted by: ![](image417.jpg)![](image421.jpg)
+
+
+    This is just a tip of an iceberg when it comes data processing in Python. Let’s
+    look at:
+
+
+    ### Techniques for Preprocessing Data in Python
+
+    Here are the best techniques for Data Preprocessing in Python.
+
+
+    #### 1. Rescaling Data
+
+    When you work with data that has different scales, you need to rescale the properties
+    to have the same scale. The properties are rescaled between the range 0 to 1 and
+    refer to it as normalization. To achieve this, the `MinMaxScaler` class from `scikit-learn`
+    is used. For example: ![](image433.jpg)![](image437.jpg)After rescaling, you get
+    the values between 0 and 1. By rescaling data, it confirms the use of neural networks,
+    optimization algorithms as well as those which have distance measures such as
+    the `k-nearest neighbors`.
+
+
+    #### 2. Normalizing Data
+
+    In the following task, you rescale every observation to a specific length of 1.
+    For this case, you use the `Normalizer` class. Here is an example: ![](image445.jpg)![](image449.jpg)
+
+
+    #### 3. Binarizing Data
+
+    If you use the binary threshold, it is possible to change the data and make the
+    value above it to be 1 while those that are equal to or fall below it, 0. For
+    this task, you use the `Binarized` class. ![](image455.jpg)![](image459.jpg)As
+    you can see, the python code will label 0 overall values equal to or less than
+    0, and label 1 over the rest.
+
+
+    #### 4. Mean Removal
+
+    This is where you remove mean from each property to center it on zero.
+
+
+    #### 5. One Hot Encoding
+
+    When you deal with a few and scattered numerical values, you might need to store
+    them before you can carry out the One Hot Encoding. For the k-distinct values,
+    you can change the feature into a k-dimensional vector that has a single value
+    of 1 and 0 for the remaining values. ![](image470.jpg)
+
+
+    #### 6. Label Encoding
+
+    Sometimes labels can be words or numbers. If you want to label the training data,
+    you need to use words to increase its readability. Label encoding changes word
+    labels into numbers to allow algorithms to operate on them. Here’s an example:
+    ![](image477.jpg)
+
+
+    ## Chapter 4: Regression
+
+
+    ### Linear regression
+
+    Linear regression is one of the most popular types of predictive analysis. Linear
+    regression involves the following two things:
+
+
+    1. Do the predictor variables forecast the results of an outcome variable accurately?
+
+    2. Which particular variable are key predictors of the final variable, and in
+    what standard does it impact the outcome variable?
+
+
+    #### Naming variables
+
+    The regression’s dependent variable has many different names. Some names include
+    outcome variable, criterion variable, and many others. The independent variable
+    can be called exogenous variable or repressors.
+
+
+    #### Functions of the regression analysis
+
+    1. Trend Forecasting
+
+    2. Determine the strength of predictors
+
+    3. Predict an effect
+
+    '
+  trans: '
+
+
+    * NumPy
+
+    * Matplotlib
+
+    * Pandas
+
+
+    一旦导入了库，你就可以继续使用 `read_csv()` 函数来读取数据集。以下是目前代码的样式![](img/image397.jpg)
+
+
+    注意，数据集存储在 `/home/kunal/Downloads/Loan_Prediction/train.csv`。读取数据集后，你可以使用 `head()`
+    函数来检查前几行。接下来，你可以使用 `describe()` 函数查看数值字段的摘要。
+
+
+    ### 分布分析
+
+    由于你已经熟悉了数据的基本特征，现在是观察不同变量分布的时间了。让我们从数值变量 `ApplicantIncome` 和 `LoanAmount` 开始。首先，输入以下命令来绘制
+    `ApplicantIncome` 的直方图![](img/image407.jpg)![](img/image411.jpg)
+
+
+    注意到有几个极值。这就是为什么需要 50 个箱体（bins）来清晰地表示分布。下一个关注的重点是箱线图。`fare` 的箱线图绘制方法如下：![](img/image417.jpg)![](img/image421.jpg)
+
+
+    在 Python 中进行数据处理时，这只是冰山一角。让我们来看：
+
+
+    ### Python 数据预处理技术
+
+    以下是 Python 中数据预处理的最佳技术。
+
+
+    #### 1. 数据缩放
+
+    当你处理具有不同尺度的数据时，需要重新缩放属性以具有相同的尺度。属性被缩放至 0 到 1 的范围之间，这被称为归一化（normalization）。为了实现这一点，使用了
+    `scikit-learn` 中的 `MinMaxScaler` 类。例如：![](img/image433.jpg)![](img/image437.jpg)
+    缩放后，你会得到 0 到 1 之间的值。通过缩放数据，可以确认了网络、优化算法以及那些具有距离度量的算法（如 `k-nearest neighbors`）的使用。
+
+
+    #### 2. 数据规范化
+
+    在下一个任务中，你将每个观测值缩放到特定长度 1。在这种情况下，你使用 `Normalizer` 类。示例：![](img/image445.jpg)![](img/image449.jpg)
+
+
+    #### 3. 数据二值化
+
+    如果你使用二值阈值，可以更改数据，并将高于阈值的值设为 1，而等于或低于阈值的值设为 0。对于这项任务，你使用 `Binarized` 类![](img/image455.jpg)![](img/image459.jpg)如你所见，Python
+    代码将所有等于或小于 0 的值标记为 0，其余部分标记为 1。
+
+
+    #### 4. 均值移除
+
+    这是从每个属性中移除均值以使其以零为中心的操作。
+
+
+    #### 5. 独热编码
+
+    当你处理少数且离散的数值时，你可能在执行独热编码之前需要对它们进行存储。对于 k 个不同的值，你可以将特征更改为 k 维向量，其中一个值为 1，其余值为 0。![](img/image470.jpg)
+
+
+    #### 6. 标签编码
+
+    有时标签可以是单词或数字。如果你想标记训练数据，需要使用单词来提高其可读性。标签编码将单词标签转换为数字以便算法进行处理。示例：![](img/image477.jpg)
+
+
+    ## 第四章：回归
+
+
+    ### 线性回归
+
+    线性回归是最流行的预测分析类型之一。线性回归涉及以下两点：
+
+
+    1. 预测变量是否准确预测了结果变量的结果？
+
+    2. 哪些特定变量是最终变量的关键预测因子？它们以什么标准影响结果变量？
+
+
+    #### 变量命名
+
+    回归的因变量有很多不同的名称。某些名称包括结果变量、准则变量等。自变量可以被称为外生变量或回归因子。
+
+
+    #### 回归分析的功能
+
+    1. 趋势预测
+
+    2. 确定预测因子强度
+
+    3. 预测影响
+
+
+    '
+  toc: []
+- raw: "Breaking down regression There are two basic states of regression-linear and\
+    \ multiple regression. Although there are different methods for complex data and\
+    \ analysis. Linear regression contains an independent variable to help forecast\
+    \ the outcome of a dependent variable. On the other hand, multiple regression\
+    \ has two or more independent variables to assist in predicting a result. Regression\
+    \ is very useful to financial and investment institutions because it is used to\
+    \ predict the sales of a particular product or company based on the previous sales\
+    \ and GDP growth among many other factors. The capital pricing model is one of\
+    \ the most common regression models applied in the finance. The example below\
+    \ describes formulae used in the linear and multiple regression. ![](image503.jpg)Choosing\
+    \ the best regression model Selecting the right linear regression model can be\
+    \ very hard and confusing. Trying to model it with a sample data cannot make it\
+    \ easier. This section reviews some of the most popular statistical methods which\
+    \ one can use to choose models, challenges that you might come across, and lists\
+    \ some practical advice to use to select the correct regression model. It always\
+    \ begins with a researcher who would like to expand the relationship between the\
+    \ response variable and predictors. The research  team that is accorded with the\
+    \ responsibility to perform investigation essentially measures a lot of variables\
+    \ but only has a few in the model. The analysts will make efforts to reduce the\
+    \ variables that are different and apply the ones which have an accurate relationship.\
+    \ As time moves on, the analysts continue to add more models. Statistical methods\
+    \ to use to find the best regression model If you want a great model in regression,\
+    \ then it is important to take into consideration the type of variables which\
+    \ you want to test as well as other variables which can affect the response. Modified\
+    \ R-squared and Predicted R-squared. Your model should have a higher modified\
+    \ and predicted R-squared values. The statistics are shown below help eliminate\
+    \ critical issues which revolve around R-squared. •    The adjusted R squared\
+    \ increases once a new term improves the model. •    Predicted R-squared belongs\
+    \ to the cross-validation that helps define the manner in which your model can\
+    \ generalize remaining data sets. P-values for the Predictors When it comes to\
+    \ regression, a low value of P denotes statistically significant terms. The term\
+    \ “Reducing the model” refers to the process of factoring in all candidate predictors\
+    \ contained in a model. Stepwise regression This is an automated technique which\
+    \ can select important predictors found in the exploratory stages of creating\
+    \ a model . Real World Challenges There are different statistical approaches for\
+    \ choosing the best model. However, complications still exist. •    The best model\
+    \ happens when the variables are measured by the study. •    The sample data could\
+    \ be unusual because of the type of data collection method. A false positive and\
+    \ false negative process happens when you handle samples. •    If you deal with\
+    \ enough models, you’ll get variables that are significant but only correlated\
+    \ by chance. •    P-values can be different depending on the specific terms found\
+    \ in the model. •    Studies have discovered that the best subset regression and\
+    \ stepwise regression can’t select the correct model. Finding the correct Regression\
+    \ Model Theory Perform research done by other experts and reference it into your\
+    \ model. It is important that before you start regression analysis, you should\
+    \ develop ideas about the most significant variables. Developing something based\
+    \ on outcome from other people eases the process of collecting data. Complexity\
+    \ You may think that complex problems need a complex model. Well, that is not\
+    \ the case because studies show that even a simple model can provide an accurate\
+    \ prediction. Once there is a model with the same  explanatory potential, the\
+    \ simplest model is likely to be a perfect choice. You just need to start with\
+    \ a simple model as you slowly advance the complexity of the model. How to calculate\
+    \ the accuracy of the predictive model There are different ways in which you can\
+    \ compute the accuracy of your model. Some of these methods include: \n\n1.  You\
+    \ divide the dataset into a test and training data set. Next, build the model\
+    \ based on the training set and apply the test set as a holdout sample to measure\
+    \ your trained model with the test data. The next thing to do is to compare the\
+    \ predicted values using actual values by computing the error by using measures\
+    \ like the “Mean Absolute Percent Error” (MAPE). If your MAPE is less than 10%,\
+    \ then you have a great model.\n\n2.    Another method is to calculate the “Confusion\
+    \ Matrix” to the computer False Positive Rate and False Negative Rate. These measures\
+    \ will allow a person to choose whether to accept the model or not. If you consider\
+    \ the cost of the errors, it becomes a critical stage of your decision whether\
+    \ to reject or accept the model. 3.    Computing Receiver Operating Characteristic\
+    \ Curve (ROC) or the Lift Chart or Area under the curve (AUC) are other methods\
+    \ that you can use to decide on whether to reject or accept a model. \n\nChapter\
+    \ 5: Classification ![](image548.jpg)Classification refers to the process of predicting\
+    \ the class of a particular data point. Classes are referred to as labels, targets,\
+    \ or categories. Classification predictive modeling is the procedure of estimating\
+    \ a mapping function (f) from input variables (X) to discrete output variables\
+    \ (y). Let’s take the example of spam detection in email service providers which\
+    \ can be selected as a classification challenge. This is an example of a binary\
+    \ classification because there are just 2 classes: a spam and not a spam. A classifier\
+    \ takes advantage of training data to understand the way a specific input of variables\
+    \ is associated with a particular class. In the following  example, known spam\
+    \ and non-spam emails should be used as the training data. When the classifier\
+    \ is accurately trained, you can use it to detect unknown email. Classification\
+    \ is a field of supervised learning where targets come with the input data. There\
+    \ are many areas in real life where classification is applied. Some of these areas\
+    \ include medical diagnosis, credit approval, target marketing, and many more.\
+    \ The classification has two types of learners. \n\n1.  Lazy learners\n\nLazy\
+    \ learners hold training data and wait till the time when a testing data arrives.\
+    \ Once the data arrives, classification is performed depending on the common data\
+    \ found in the training data. When you compare it to eager learners, lazy learners\
+    \ have a minimum time of training. However, more time is required in prediction.\
+    \ An example includes k-nearest neighbor and case-based reasoning which we shall\
+    \ look later in the chapter. \n\n3.  Eager learners"
+  fmt: '
+
+    # Breaking down regression
+
+
+    There are two basic states of regression: linear and multiple regression. Although
+    there are different methods for complex data and analysis, linear regression contains
+    an independent variable to help forecast the outcome of a dependent variable.
+    On the other hand, multiple regression has two or more independent variables to
+    assist in predicting a result. Regression is very useful to financial and investment
+    institutions because it is used to predict the sales of a particular product or
+    company based on the previous sales and GDP growth among many other factors. The
+    capital pricing model is one of the most common regression models applied in the
+    finance. The example below describes formulae used in the linear and multiple
+    regression.
+
+
+    ![](image503.jpg)
+
+
+    ## Choosing the best regression model
+
+
+    Selecting the right linear regression model can be very hard and confusing. Trying
+    to model it with a sample data cannot make it easier. This section reviews some
+    of the most popular statistical methods which one can use to choose models, challenges
+    that you might come across, and lists some practical advice to use to select the
+    correct regression model. It always begins with a researcher who would like to
+    expand the relationship between the response variable and predictors. The research
+    team that is accorded with the responsibility to perform investigation essentially
+    measures a lot of variables but only has a few in the model. The analysts will
+    make efforts to reduce the variables that are different and apply the ones which
+    have an accurate relationship. As time moves on, the analysts continue to add
+    more models.
+
+
+    ### Statistical methods to use to find the best regression model
+
+
+    If you want a great model in regression, then it is important to take into consideration
+    the type of variables which you want to test as well as other variables which
+    can affect the response.
+
+
+    #### Modified R-squared and Predicted R-squared
+
+    Your model should have a higher modified and predicted R-squared values. The statistics
+    are shown below help eliminate critical issues which revolve around `R-squared`.
+
+    - The adjusted `R squared` increases once a new term improves the model.
+
+    - `Predicted R-squared` belongs to the cross-validation that helps define the
+    manner in which your model can generalize remaining data sets.
+
+
+    #### P-values for the Predictors
+
+    When it comes to regression, a low value of `P` denotes statistically significant
+    terms. The term “Reducing the model” refers to the process of factoring in all
+    candidate predictors contained in a model.
+
+
+    #### Stepwise regression
+
+    This is an automated technique which can select important predictors found in
+    the exploratory stages of creating a model.
+
+
+    ## Real World Challenges
+
+
+    There are different statistical approaches for choosing the best model. However,
+    complications still exist.
+
+    - The best model happens when the variables are measured by the study.
+
+    - The sample data could be unusual because of the type of data collection method.
+    A false positive and false negative process happens when you handle samples.
+
+    - If you deal with enough models, you’ll get variables that are significant but
+    only correlated by chance.
+
+    - `P-values` can be different depending on the specific terms found in the model.
+
+    - Studies have discovered that the best subset regression and stepwise regression
+    can’t select the correct model.
+
+
+    ## Finding the correct Regression Model
+
+
+    Perform research done by other experts and reference it into your model. It is
+    important that before you start regression analysis, you should develop ideas
+    about the most significant variables. Developing something based on outcome from
+    other people eases the process of collecting data.
+
+
+    ### Complexity
+
+    You may think that complex problems need a complex model. Well, that is not the
+    case because studies show that even a simple model can provide an accurate prediction.
+    Once there is a model with the same explanatory potential, the simplest model
+    is likely to be a perfect choice. You just need to start with a simple model as
+    you slowly advance the complexity of the model.
+
+
+    ### How to calculate the accuracy of the predictive model
+
+    There are different ways in which you can compute the accuracy of your model.
+    Some of these methods include:
+
+
+    1. You divide the dataset into a test and training data set. Next, build the model
+    based on the training set and apply the test set as a holdout sample to measure
+    your trained model with the test data. The next thing to do is to compare the
+    predicted values using actual values by computing the error by using measures
+    like the “Mean Absolute Percent Error” (`MAPE`). If your `MAPE` is less than 10%,
+    then you have a great model.
+
+    2. Another method is to calculate the “Confusion Matrix” to the computer False
+    Positive Rate and False Negative Rate. These measures will allow a person to choose
+    whether to accept the model or not. If you consider the cost of the errors, it
+    becomes a critical stage of your decision whether to reject or accept the model.
+
+    3. Computing Receiver Operating Characteristic Curve (`ROC`) or the Lift Chart
+    or Area under the curve (`AUC`) are other methods that you can use to decide on
+    whether to reject or accept a model.
+
+
+    # Chapter 5: Classification
+
+
+    ![](image548.jpg)
+
+
+    Classification refers to the process of predicting the class of a particular data
+    point. Classes are referred to as labels, targets, or categories. Classification
+    predictive modeling is the procedure of estimating a mapping function `f` from
+    input variables `X` to discrete output variables `y`. Let’s take the example of
+    spam detection in email service providers which can be selected as a classification
+    challenge. This is an example of a binary classification because there are just
+    2 classes: a spam and not a spam. A classifier takes advantage of training data
+    to understand the way a specific input of variables is associated with a particular
+    class. In the following example, known spam and non-spam emails should be used
+    as the training data. When the classifier is accurately trained, you can use it
+    to detect unknown email. Classification is a field of supervised learning where
+    targets come with the input data. There are many areas in real life where classification
+    is applied. Some of these areas include medical diagnosis, credit approval, target
+    marketing, and many more.
+
+
+    The classification has two types of learners.
+
+
+    1. Lazy learners
+
+    Lazy learners hold training data and wait till the time when a testing data arrives.
+    Once the data arrives, classification is performed depending on the common data
+    found in the training data. When you compare it to eager learners, lazy learners
+    have a minimum time of training. However, more time is required in prediction.
+    An example includes k-nearest neighbor and case-based reasoning which we shall
+    look later in the chapter.
+
+
+    3. Eager learners
+
+    '
+  trans: '
+
+
+    # 拆归分析
+
+
+    回归有两种基本状态：线性回归和多元回归。虽然对于复杂数据分析有不同的方法，但线性回归包含一个独立变量以帮助预测因变量的结果。另一方面，多元回归具有两个或多个独立变量，以辅助预测结果。回归对于金融和投资机构非常有用，因为它被用于根据销售额和
+    GDP 增长等许多因素来预测特定产品或公司的销售情况。资本定价模型是金融领域最常用的回归模型之一。下面的示例描述了线性回归和多元回归中使用的公式。
+
+
+    ![](img/image503.jpg)
+
+
+    ## 选择最佳回归模型
+
+
+    选择正确的线性回归模型可能非常困难且令人困惑。尝试用样本数据对其建模并不能让它变得更容易。本节回顾了某些用于选择模型的流行统计方法、你可能会遇到的挑战，并列出了一些用于选择正确回归模型的实用建议。这通常始于一个希望扩展响应变量与预测变量之间关系的研究人员。负责执行调查的研究团队本质上测量了许多变量，但模型中只保留了少数几个。分析师将努力减少不同的变量，并应用那些具有准确关系的变量。随着时间的推移，分析师会继续添加更多模型。
+
+
+    ### 用于寻找最佳回归模型的统计方法
+
+
+    如果你想在回归中获得很好的模型，那么考虑你想测试的变量类型以及影响响应的其他变量是非常重要的。
+
+
+    #### 调整后 R 平和预测 R 平
+
+    你的模型应该具有较高的调整后和预测 R 平值。下面的统计数据有助于消除围绕 `R-squared` 的关键问题。
+
+    - 一旦新项改进了模型，调整后的 `R squared` 就会增加。
+
+    - `Predicted R-squared` 属于交叉验证，有助于定义模型泛化数据集的方式。
+
+
+    #### 预测变量的 P 值
+
+    涉及回归时，低 `P` 值表示具有统计学显著意义的项。“减少模型”是指考虑模型中包含的所有候选预测变量的过程。
+
+
+    #### 逐步回归
+
+    这是一种自动化技术，可以在创建模型的探索阶段选择重要的预测变量。
+
+
+    ## 现实世界的挑战
+
+
+    选择最佳模型有不同的统计方法。然而，复杂性仍然存在。
+
+    - 当研究测量了变量时，会出现最佳模型。
+
+    - 由于数据收集方法的类型，样本数据可能是不寻常的。处理样本时会发生假阳性和假阴性过程。
+
+    - 如果你处理足够的模型，你将获得虽然显著但仅随机相关的变量。
+
+    - `P-values` 可能根据模型中发现的特定项而不同。
+
+    - 研究发现，最佳子集回归和逐步回归无法选择正确的模型。
+
+
+    ## 寻找正确的回归模型
+
+
+    执行其他专家的研究并将其引用到你的模型中。在开始回归分析之前，对最重要的变量建立想法是至关重要的。根据他人的结果开发内容可以简化数据收集过程。
+
+
+    ### 复杂性
+
+    你可能认为复杂的问题需要复杂的模型。事实并非如此，因为研究表明即使是简单的模型也可以提供准确的预测。一旦有了相同解释潜力的模型，最简单的模型可能是完美的选择。你只需要从简单模型开始，并逐渐增加模型的复杂度。
+
+
+    ### 如何计算预测模型的准确性
+
+    有多种方法可以计算模型的准确性。其中一些方法包括：
+
+
+    1. 将数据集分为测试集和训练集。接下来，根据训练集构建模型，并将测试集作为留存样本，使用测试数据衡量训练后的模型。下一步是使用“平均绝对百分比误差”（`MAPE`）等指标计算误差，从而比较预测值和实际值。如果你的
+    `MAPE` 小于 10%，那么你就有一个很好的模型。
+
+    2. 另一种方法是计算“混淆矩阵”以确定计算机假阳性率和假阴性率。这些指标将允许人员选择是否接受该模型。如果你考虑误差成本，这将成为你决定拒绝或接受模型的关键阶段。
+
+    3. 计算接收者工作特征曲线（`ROC`）或提升图（Lift Chart）或曲线下积（`AUC`）是你可用于决定拒绝或接受模型的其他方法。
+
+
+    # 第章：分类
+
+
+    ![](img/image548.jpg)
+
+
+    分类是指预测特定数据点类别的过程。类别被称为标签、目标或分类。分类预测建模是估计从输入变量 `X` 到离散输出变量 `y` 的映射函数 `f` 的过程。以电子邮件提供商的垃圾邮件检测为例，这可以被视为分类挑战。这是一个二分类的例子，因为只有
+    2 个类：垃圾邮件和非垃圾邮件。分类器利用训练数据来理解特定变量输入与特定类别的关系。在以下示例中，应该使用知的垃圾邮件和非垃圾邮件作为训练数据。当分类器经过准确训练后，你可以使用它来检测未知邮件。分类是监督学习的一个领域，目标与输入数据一起出现。现实生活中有很多应用分类的领域。这些领域包括医学诊断、信贷审批、目标营销等。
+
+
+    分类有两种类型的学习器。
+
+
+    1. 懒学习器（Lazy learners）
+
+    懒学习器持有训练数据，直到测试数据到达。一旦数据到达，将根据训练数据中发现共同数据进行分类。与急进学习器相比，懒学习器的训练时间最短。然而，预测时需要更多时间。示例包括
+    k 近邻和基于案例的推理，我们将在本章稍后部分介绍。
+
+
+    3. 急进学习器（Eager learners）
+
+
+    '
+  toc: []
+- raw: "With eager learners, the classification model is created with respect to the\
+    \ type of training data before getting data for classification. It should be able\
+    \ to dedicate a single hypothesis that handles the whole instance space. Because\
+    \ of the construction of the model, eager learners will consume more training\
+    \ time and minimum time during prediction. Example of eager learners includes\
+    \ Artificial Neural Networks, Naive Bayes and Decision Tree . Classification Algorithms\
+    \ There are many different kinds of classification algorithms developed, however,\
+    \ it is hard to pick on one which is better than the other. This is because of\
+    \ a few factors such as the application and nature of the existing data set. For\
+    \ instance, if you have linearly separable classes, the linear classifiers such\
+    \ as Logistic regression, Fisher’s linear discriminant can execute complex models.\
+    \ Decision Tree ![](image566.jpg)A decision tree creates regression models and\
+    \ classification models just like a tree structure. This tree works with the same\
+    \ concept as the if-then rule set that is mutually exclusive and exhaustive for\
+    \ classification. Rules are learned sequentially by applying the training data\
+    \ one at a time. Every time a rule is learned, the tuples which the rules handles\
+    \ are deleted. This process is repeated on the training set until a meeting termination\
+    \ condition is attained. The tree is built through a technique called top-down\
+    \ recursive divide-and-conquer manner. All the features must be categorical. Nonetheless,\
+    \  they need to be discretized in advance. With a decision tree, it is very easy\
+    \ for overfitting to take place. Overfitting will produce many branches which\
+    \ may indicate problems of noise and outliers. In an overfitted model, the performance\
+    \ is very poor on the unseen data although it provides the correct performance\
+    \ on training data. However, this is can be avoided by applying pre-pruning. Pre-pruning\
+    \ shall stop the tree construction early or post-pruning which eliminates branches\
+    \ from a complete tree. Pros of Decision trees \n\n1.  Transparency\n\nThis is\
+    \ one of the most important advantages of the decision tree model. Unlike other\
+    \ models of the decision tree, the decision tree reveals all possible alternatives\
+    \ and traces each alternative to the end in a single view. This makes it easy\
+    \ to compare the different alternatives. The application of different nodes to\
+    \ represent user-defined decisions increases transparency in decision making.\
+    \ \n\n2.  Specificity\n\nAnother major advantage of the decision tree in the analysis\
+    \ is the ability to allocate a given value to a problem and outcomes of every\
+    \ decision. This is important because it helps minimize vagueness in the decision\
+    \ making. Every possible case from a decision tree discovers a representation\
+    \ using a clear fork and node. This allows one to see all solutions in a clear\
+    \ view. The inclusion of monetary values to decision tree reveals the costs and\
+    \ benefits of taking a different course of action. \n\n3.  Ease of use\n\nThe\
+    \ decision tree has a graphical representation of the problem and different alternatives\
+    \ in an easy and simple way to help any person understand without asking for an\
+    \ explanation. \n\n4.  Comprehensive nature\n\nThe decision tree is one of the\
+    \ best predictive models because it has a comprehensive analysis of the results\
+    \ of every possible decision. That can include what the decision leads to, if\
+    \ it finishes in uncertainty or whether it results to new issues which the process\
+    \ may require repetition. 5.    They implicitly perform feature selection. 6.   \
+    \ Decision trees can deal with categorical and numerical data. 7.    Users have\
+    \ little to do with data preparation. 8.    Nonlinear relationships between parameters\
+    \ cannot affect the performance. Disadvantages of Decision trees 1.    There are\
+    \ times when decision trees can be unstable because of the little variations in\
+    \ the data that may lead to a totally different tree generated. 2.    The greedy\
+    \ algorithm cannot prove that it will return a universally optimal decision tree.\
+    \ This can be solved by training multiple trees where the samples and features\
+    \ have been randomly sampled with replacement. 3.    Learners of the decision\
+    \ tree can build advanced trees that don’t generalize the data . 4.    Decision\
+    \ tree learners can be biased if there are classes which dominate. For that reason,\
+    \ it is advised to balance the data set before fitting with the decision tree.\
+    \ K-Nearest Neighbor (KNN) ![](image597.jpg)The k-nearest Neighbor belongs to\
+    \ the lazy learning algorithm which holds all instances that match to training\
+    \ data points in n-dimensional space. In case there is an unknown discrete data,\
+    \ it has to make an analysis of the nearest k number of instances saved and display\
+    \ the most popular class as the prediction. For the real-valued data, it has to\
+    \ return the mean of k-nearest neighbors. In the case of the distance-weighted\
+    \ nearest neighbor algorithm, it measures the weight of every k-nearest neighbor\
+    \ based on their distance by applying the query below.![](image603.jpg)Typically,\
+    \ KNN is very strong to noisy data because it averages the k-nearest neighbors.\
+    \ Pros of KNN \n\n*   A simple algorithm to explain and understand\n\n*   It doesn’t\
+    \ make any assumptions about data.\n\n*   It has a higher accuracy that is not\
+    \ comparable to other better-supervised learning models.\n\n*   It is versatile\
+    \ for classification and regression.\n\nCons of KNN \n\n*   Calls for a higher\
+    \ memory requirement\n\n*   It is computationally expensive since the algorithm\
+    \ has all the training data.\n\nQuick features of KNN \n\n*   This algorithm holds\
+    \ the whole training dataset that uses as a representation.\n\n*   It doesn’t\
+    \ learn any model.\n\n*   It performs timely predictions by calculating the similarity\
+    \ between sample input and instance training.\n\nWhere Can You Apply K-mean s\
+    \ K-means is used with data that is numeric, continuous and has a small dimension.\
+    \ Imagine an instance where you would like to group similar items from a randomly\
+    \ spread collection of things such as k-means. This list has a few interesting\
+    \ areas where you can apply K-means \n\n1.  Classification of documents\n\nClustering\
+    \ of documents in numerous categories depends on topics, tags, and the content\
+    \ of the document. This is a normal classification problem and k-means is a great\
+    \ algorithm for this function. The original document processing is important when\
+    \ you want to replace every document as a sector and applies the frequency term\
+    \ to use terms which classify the document. The vectors of the document have to\
+    \ be clustered so that they can select similarity in document groups. 2.    Delivery\
+    \ store Optimization If you want to improve the process of delivery, you’ll need\
+    \ to enhance it by applying drones and integrating k-means algorithm to determine\
+    \ the optimal number of launch locations and a genetic algorithm to compute the\
+    \ route of the truck. 3.    Fantasy League Stat Analysis To analyze the stats\
+    \ of a player is one of the most critical features of the sporting world. With\
+    \ the rapid rise of competition, machine learning has an important function to\
+    \ offer here. As a great exercise, if you want to build a fantasy draft team and\
+    \ select similar players, k-means is a great option. \n\n4.  Rideshare Data analysis\n\
+    \nInformation about Uber is available to the public. This dataset has an extensive\
+    \ size of valuable data about transit time, traffic, peak pickup localities, and\
+    \ many more. If you analyze this particular data, you will get insight into the\
+    \ urban traffic patterns and help plan for the cities in the future. 5.    Cyber-profiling\
+    \ criminals This is the process of gathering data from people and groups to select\
+    \ important links. The concept behind cyber-profiling is extracted from criminal\
+    \ histories that provide information about investigation division to help categorize\
+    \ criminals present at the crime. \n\n5.  Automatic clustering of IT Alerts"
+  fmt: '
+
+    With eager learners, the classification model is created with respect to the type
+    of training data before getting data for classification. It should be able to
+    dedicate a single hypothesis that handles the whole instance space. Because of
+    the construction of the model, eager learners will consume more training time
+    and minimum time during prediction. Example of eager learners includes `Artificial
+    Neural Networks`, `Naive Bayes` and `Decision Tree`.
+
+
+    # Classification Algorithms There are many different kinds of classification algorithms
+    developed, however, it is hard to pick on one which is better than the other.
+    This is because of a few factors such as the application and nature of the existing
+    data set. For instance, if you have linearly separable classes, the linear classifiers
+    such as `Logistic regression`, `Fisher’s linear discriminant` can execute complex
+    models.
+
+
+    ## Decision Tree ![](image566.jpg)
+
+    A decision tree creates regression models and classification models just like
+    a tree structure. This tree works with the same concept as the `if-then` rule
+    set that is mutually exclusive and exhaustive for classification. Rules are learned
+    sequentially by applying the training data one at a time. Every time a rule is
+    learned, the tuples which the rules handles are deleted. This process is repeated
+    on the training set until a meeting termination condition is attained. The tree
+    is built through a technique called `top-down recursive divide-and-conquer manner`.
+    All the features must be categorical. Nonetheless, they need to be discretized
+    in advance. With a decision tree, it is very easy for overfitting to take place.
+    Overfitting will produce many branches which may indicate problems of noise and
+    outliers. In an overfitted model, the performance is very poor on the unseen data
+    although it provides the correct performance on training data. However, this is
+    can be avoided by applying `pre-pruning`. `Pre-pruning` shall stop the tree construction
+    early or `post-pruning` which eliminates branches from a complete tree.
+
+
+    ### Pros of Decision trees
+
+    1. Transparency: This is one of the most important advantages of the decision
+    tree model. Unlike other models of the decision tree, the decision tree reveals
+    all possible alternatives and traces each alternative to the end in a single view.
+    This makes it easy to compare the different alternatives. The application of different
+    nodes to represent user-defined decisions increases transparency in decision making.
+
+    2. Specificity: Another major advantage of the decision tree in the analysis is
+    the ability to allocate a given value to a problem and outcomes of every decision.
+    This is important because it helps minimize vagueness in the decision making.
+    Every possible case from a decision tree discovers a representation using a clear
+    fork and node. This allows one to see all solutions in a clear view. The inclusion
+    of monetary values to decision tree reveals the costs and benefits of taking a
+    different course of action.
+
+    3. Ease of use: The decision tree has a graphical representation of the problem
+    and different alternatives in an easy and simple way to help any person understand
+    without asking for an explanation.
+
+    4. Comprehensive nature: The decision tree is one of the best predictive models
+    because it has a comprehensive analysis of the results of every possible decision.
+    That can include what the decision leads to, if it finishes in uncertainty or
+    whether it results to new issues which the process may require repetition.
+
+    5. They implicitly perform feature selection.
+
+    6. Decision trees can deal with categorical and numerical data.
+
+    7. Users have little to do with data preparation.
+
+    8. Nonlinear relationships between parameters cannot affect the performance.
+
+
+    ### Disadvantages of Decision trees
+
+    1. There are times when decision trees can be unstable because of the little variations
+    in the data that may lead to a totally different tree generated.
+
+    2. The `greedy algorithm` cannot prove that it will return a universally optimal
+    decision tree. This can be solved by training multiple trees where the samples
+    and features have been randomly sampled with replacement.
+
+    3. Learners of the decision tree can build advanced trees that don’t generalize
+    the data.
+
+    4. Decision tree learners can be biased if there are classes which dominate. For
+    that reason, it is advised to balance the data set before fitting with the decision
+    tree.
+
+
+    ## K-Nearest Neighbor (KNN) ![](image597.jpg)
+
+    The `k-nearest Neighbor` belongs to the lazy learning algorithm which holds all
+    instances that match to training data points in `n-dimensional space`. In case
+    there is an unknown discrete data, it has to make an analysis of the nearest `k`
+    number of instances saved and display the most popular class as the prediction.
+    For the real-valued data, it has to return the mean of `k-nearest neighbors`.
+    In the case of the distance-weighted nearest neighbor algorithm, it measures the
+    weight of every `k-nearest neighbor` based on their distance by applying the query
+    below![](image603.jpg).Typically, `KNN` is very strong to noisy data because it
+    averages the `k-nearest neighbors`.
+
+
+    ### Pros of KNN
+
+    - A simple algorithm to explain and understand
+
+    - It doesn’t make any assumptions about data.
+
+    - It has a higher accuracy that is not comparable to other better-supervised learning
+    models.
+
+    - It is versatile for classification and regression.
+
+
+    ### Cons of KNN
+
+    - Calls for a higher memory requirement
+
+    - It is computationally expensive since the algorithm has all the training data.
+
+
+    ### Quick features of KNN
+
+    - This algorithm holds the whole training dataset that uses as a representation.
+
+    - It doesn’t learn any model.
+
+    - It performs timely predictions by calculating the similarity between sample
+    input and instance training.
+
+
+    ## Where Can You Apply K-means
+
+    `K-means` is used with data that is numeric, continuous and has a small dimension.
+    Imagine an instance where you would like to group similar items from a randomly
+    spread collection of things such as `k-means`. This list has a few interesting
+    areas where you can apply `K-means`
+
+
+    1. Classification of documents: Clustering of documents in numerous categories
+    depends on topics, tags, and the content of the document. This is a normal classification
+    problem and `k-means` is a great algorithm for this function. The original document
+    processing is important when you want to replace every document as a sector and
+    applies the frequency term to use terms which classify the document. The vectors
+    of the document have to be clustered so that they can select similarity in document
+    groups.
+
+    2. Delivery store Optimization: If you want to improve the process of delivery,
+    you’ll need to enhance it by applying drones and integrating `k-means algorithm`
+    to determine the optimal number of launch locations and a `genetic algorithm`
+    to compute the route of the truck.
+
+    3. Fantasy League Stat Analysis To analyze the stats of a player is one of the
+    most critical features of the sporting world. With the rapid rise of competition,
+    machine learning has an important function to offer here. As a great exercise,
+    if you want to build a fantasy draft team and select similar players, `k-means`
+    is a great option.
+
+    4. Rideshare Data analysis: Information about `Uber` is available to the public.
+    This dataset has an extensive size of valuable data about transit time, traffic,
+    peak pickup localities, and many more. If you analyze this particular data, you
+    will get insight into the urban traffic patterns and help plan for the cities
+    in the future.
+
+    5. Cyber-profiling criminals: This is the process of gathering data from people
+    and groups to select important links. The concept behind cyber-profiling is extracted
+    from criminal histories that provide information about investigation division
+    to help categorize criminals present at the crime.
+
+    5. Automatic clustering of IT Alerts
+
+    '
+  trans: '
+
+
+    对于急学习者（eager learners），在获取分类数据之前，会根据训练数据的类型创建分类模型。它应该能够致力于处理整个实例空间的单一假设。由于模型的构建方式，急学习者会消耗更多的训练时间，而在预测期间消耗的时间最少。急学习者的示例包括`人工神经网络`、`朴叶贝斯`和`决策树`。
+
+
+    # 分类算法
+
+    开发了许多不同的分类算法，然而很难选出哪一个比另一个更好。这是由于现有数据集的应用和性质等几个因素造成的。例如，如果你具有线性可分的类别，像`逻辑回归`、`Fisher
+    线性判别`等线性分类器就可以执行复杂的模型。
+
+
+    ## 决策树 ![](img/image566.jpg)
+
+    决策树像树结构一样创建回归模型和分类模型。这种树的工作原理与 `if-then` 规则集相同，该规则集对于分类是互斥且穷尽的。规则通过一次应用一次训练数据来顺序学习。每当学习到一条规则时，规则处理的元组就会被删除。这一过程在训练集上重复，直到满足终止条件。树是通过一种被称为`自顶而下的递归分治方法`的技术构建的。所有特征都必须是类别的。尽管如此，它们需要提前离散化。使用决策树时很容易发生过拟合。过拟合会产生许多分支，这些分支可能指示噪声和异常值问题。在过拟合的模型中，尽管在训练数据上提供了正确的性能，但在未见数据上的性能非常差。然而，可以通过应用预剪枝（pre-pruning）来避免这种情况。预剪枝应提前停止树的构建，或者使用后剪枝（post-pruning）来从完整的树中消除分支。
+
+
+    ### 决策树的优点
+
+    1. 透明性：这是决策树模型最重要的优势之一。与其他决策树模型不同，决策树揭示了所有可能的替代方案，并在单一视图跟踪每种替代方案到最后。这使得比较不同的替代方案变得容易。应用不同的节点表示用户定义的决策增加了决策过程的透明度。
+
+    2. 特异性：决策树在分析中的另一个主要优势是为问题和每个决策的结果分配一个特定值。这很重要，因为它有助于减少决策过程中的模糊性。决策树的每种可能情况通过清晰的分叉和节点发现一种表示。这允许人们在清晰的视图看到所有解决方案。在决策树中引入货币值揭示了采取不同行动方案的成本和收益。
+
+    3. 易用性：决策树以简单直接的方式提供了问题和不同替代方案的图形表示，可以帮助任何人在无需要求解释的情况下理解。
+
+    4. 全面性：决策树是最好的预测模型之一，因为它对每个可能的决策结果进行了全面的分析。这可以包括决策导致了什么、它是否以不确定性结束，或者是否导致了过程可能需要重复的新问题。
+
+    5. 它们隐式地执行特征选择。
+
+    6. 决策树可以处理类别数据和数值数据。
+
+    7. 用户在数据准备方面做得很少。
+
+    8. 参数之间的非线性关系不会影响性能。
+
+
+    ### 决策树的缺点
+
+    1. 有时决策树可能是不稳定的，因为数据中的微小变化可能导致生成一个完全不同的树。
+
+    2. `贪心算法`无法证明它将返回一个全局最优决策树。这可以通过训练多棵树来解决，其中样本和特征经过带放回的随机采样。
+
+    3. 决策树学习者可以构建出不能泛化数据的高级树。
+
+    4. 如果存在主导类别，决策树学习者可能会产生偏差。因此，建议在与决策树拟合之前平衡数据集。
+
+
+    ## K 近邻算法 (KNN) ![](img/image597.jpg)
+
+    `k-最近邻`属于懒性学习算法，它持有了所有在`n-维空间`中与训练数据点匹配的实例。如果存在未知离散数据，它必须对保存的最近`k` 个实例进行分析，并将最频繁的类作为预测。对于实值数据，它必须返回`k-最近邻`的平均值。在距离加权最近邻算法中，它通过应用以下查询![](img/image603.jpg)
+    根据距离测量每个`k-最近邻`的权重。通常，`KNN`对噪声数据非常强大，因为它平均了`k-最近邻`。
+
+
+    ### KNN 的优点
+
+    - 易于解释和理解的算法
+
+    - 它对数据不作任何假设。
+
+    - 它具有更高的精度，是其他更好的监督学习模型不可比拟的。
+
+    - 它在分类和回归方面非常通用。
+
+
+    ### KNN 的缺点
+
+    - 对内存要求更高
+
+    - 计算代价很高，因为算法拥有所有的训练数据。
+
+
+    ### KNN 的快速特征
+
+    - 该算法持有了整个训练数据集作为表示。
+
+    - 它不学习任何模型。
+
+    - 它通过计算样本输入和实例训练之间的相似性进行及时预测。
+
+
+    ## 在何处可以使用 K-means
+
+    `K-means` 用于数值、连续且维度较小的数据。想象一种情况，你想从随机分布的物品集中对相似物品分组，例如 `k-means`。这个列表包含你可以应用
+    `K-means` 的有趣领域：
+
+
+    1. 文档分类：许多类别的文档聚类取决于主题、标签和文档内容。这是一个标准的分类问题，`k-means` 是执行此功能的很好的算法。当你想要将每个文档视为一个领域并应用频率术语来分类文档时，原始文档处理是非常重要的。文档的向量必须进行聚类，以便选择文档组的相似性。
+
+    2. 递送商店优化：如果你想改进交付过程，你需要通过应用无人机并集成`k-means 算法`来确定启动位置的数量，并使用`遗传算法`计算卡车的路线。
+
+    3. 幻想联盟统计分析：分析球员统计数据是体育界最关键的特征之一。随着竞争的快速兴起，机器学习在这里提供了重要的功能。作为一个很好的练习，如果你想建立一支幻想选球队并选择相似的球员，`k-means`
+    是一个很好的选择。
+
+    4. 共享出行数据分析：`Uber` 的信息是公开的。该数据集包含大量的价值数据，关于交通时间、流量、高峰上车地点等。如果你分析这些特定数据，你将获得对城市交通模式的洞解，并为未来的城市提供规划。
+
+    5. 网络犯罪分子画像：这是从个人和小组收集数据以选择重要链接的过程。网络犯罪画像的概念是从犯罪历史中提取的，为调查部门提供信息以帮助分类犯罪现场的罪犯。
+
+    5. IT 告警的自动聚类
+
+
+    '
+  toc: []
+- raw: "Extensive enterprise in IT infrastructure technology like network generates\
+    \ huge volumes of alert messages. Since alert messages refer to operational issues,\
+    \ it has to be manually screened for categorization. Data clustering can help\
+    \ provide insight into alert categories and the mean time to repair and support\
+    \ predictions. 7.    Identify crime localities Since data associated to crime\
+    \ is present in specific city localities, the type of crime, the area of the crime,\
+    \ and the relation between the two can provide quality insight into the most crime-prone\
+    \ areas in the city or a locality. Artificial Neural Network ![](image656.jpg)Artificial\
+    \ Neural Network describes a set of connected input/output where every connection\
+    \ is linked to a particular weight. In the learning phase, the network adjusts\
+    \ the weights so that it can predict the right class label of input tuples. There\
+    \ are a lot of network architectures present now. Some of them include the Feed-forward,\
+    \ Recurrent, Convolutional, etc. The correct architecture depends on the model\
+    \ application. In most cases, the feed-forward models provide a reasonably accurate\
+    \ result and mostly for image processing applications. There can be many hidden\
+    \ layers in a model based on the complexity of the function that is to be wrapped\
+    \ by the model. If you have a lot of hidden layers, it will facilitate the modeling\
+    \ of complex relationships like deep neural networks . However, the presence of\
+    \ many hidden layers increases the time it takes to train and adjust weights.\
+    \ Another drawback is the poor interpretability when compared to other models\
+    \ such as Decision Trees. Despite this, ANN has performed well in the majority\
+    \ of the real-world applications. It has an intensive persistence to noisy data\
+    \ and can categorize untrained patterns. Generally, ANN works better with continuous-valued\
+    \ inputs and outputs. Pros of ANN •    It stores information in the whole network.\
+    \ For example, traditional programming information is kept in the whole network,\
+    \ and not in a database. This means that loss of certain information in a given\
+    \ place does not stop the network functions. •    It has fault tolerance. The\
+    \ destruction of one or more cells of ANN doesn’t affect it from producing input.\
+    \ Therefore, this specific feature causes the network to be fault tolerant. •   \
+    \ It can work with incomplete knowledge. Once the ANN training is over, the data\
+    \ can produce output using incomplete information. The loss of performance, in\
+    \ this case, will depend on the missing information. •    ANN has the ability\
+    \ to make machine learning. •    It has a parallel processing capability. The\
+    \ ANN neural networks feature a numerical strength that does more than one job\
+    \ at the same time. Disadvantages of AN N •    It depends on the hardware. ANN\
+    \ need processors which contain parallel processing power based on their structure.\
+    \ For this case, the realization of the device is dependent. •    The determination\
+    \ of the correct network structure. Often, there is no fixed rule to use to determine\
+    \ the structure of artificial neural networks. The right network structure is\
+    \ attained through trial and error. •    The duration of the network is not known.\
+    \ The network is limited to a particular value of the error on the sample means\
+    \ which the training is completed. This value does not generate an optimum result.\
+    \ •    There are unexplained characteristics of the network. It is one of the\
+    \ major problems of ANN. If an ANN generates a probing solution, it doesn’t show\
+    \ any hint. This always reduces trust in the network. Naïve Bayes The Naïve Bayes\
+    \ algorithm is a probabilistic classifier which was driven by the Bayes theorem.\
+    \ This is based on a simple assumption where attributes are conditionally independent.\
+    \ ![](image678.jpg)The classification works by extracting the maximum posterior\
+    \ that is the maximal P(Ci|X ) with the above-stated assumption working. This\
+    \ assumption always reduces the computational cost by measuring the computational\
+    \ cost. Although the assumption fails many times because  the properties are dependent.\
+    \ Despite this, the Naïve Bayes has continued to work so well. This is a simple\
+    \ algorithm to implement and improve outcomes that have been generated in most\
+    \ instances. It is possible for it to be scaled into massive datasets because\
+    \ it assumes a linear time. Pros of Naïve Bayes \n\n*   It is simple and easy\
+    \ to implement.\n\n*   It requires minimal training data.\n\n*   It handles continuous\
+    \ and discrete data.\n\n*   It can develop probabilistic predictions.\n\n*   It\
+    \ is highly scalable.\n\nCons of Naïve Bayes \n\n*   It makes a robust assumption\
+    \ regarding the shape of the data distribution.\n\n*   There are challenges related\
+    \ to data scarcity.\n\n*   The issue of continuous features that requires a binning\
+    \ procedure to make them discrete.\n\nClassification Accuracy Metrics This refers\
+    \ to the ratio of the number of correct predictions to the general number of input\
+    \ samples. ![](image697.jpg)It works better when the number of samples which belong\
+    \ to each class is equal. Classification accuracy is the best but provides a false\
+    \ notion of attaining high accuracy. The major problem emerges when the cost of\
+    \ misclassification of minor class samples is high. If you are to handle a rare\
+    \ but dangerous disease, the cost of not diagnosing the disease of a sick individual\
+    \ is very high compared to the cost of testing a healthy person. Logarithmic Loss\
+    \ This operates well for multi-class classification. When you work with Log Loss,\
+    \ the classifier has to allocate probability for every class. For example, if\
+    \ you have N samples of M classes, you can compute the Log Loss as follows: ![](image705.jpg)Confusion\
+    \ Matri x Confusion matrix as the name suggests creates a matrix as the output\
+    \ and explains the complete performance of a model. Suppose you have a binary\
+    \ classification problem. Then there are some samples which belong to two classes:\
+    \ YES or NO. Additionally, you have your own classifier that can predict a class\
+    \ for a particular input sample. If the following model is tested on 165 samples,\
+    \ the following result is obtained. ![](image712.jpg)There are four major terms:\
+    \ 1.    True Positives. This is where our prediction was YES and final outcome\
+    \ YES. 2.    True Negatives. This is where our prediction was NO and final outcome\
+    \ NO. 3.    False Positives. In this case, the prediction was YES but the final\
+    \ outcome was NO . 4.    False Negatives. In this scenario, the prediction was\
+    \ NO but the final outcome was YES. Area Under the Curve This is one of the most\
+    \ widely applied metrics for evaluation. It is applied in binary application problems.\
+    \ Other metrics include: •    Mean absolute error •    Mean squared erro r Chapter\
+    \ 6: Clustering Clustering is the process of gathering entities with similar characteristics\
+    \ together. This technique belongs to unsupervised machine learning whose target\
+    \ is to identify similarities in the data point and group the same data points\
+    \ together. Why apply Clustering? By grouping similar entities in one place allows\
+    \ one to identify the attributes of different groups. In other words, this generates\
+    \ insight into the underlying patterns of various groups. There are countless\
+    \ application areas of grouping unlabeled data. For example, it is possible to\
+    \ select different groups of customers and market every group differently to take\
+    \ advantage of the revenue. Another example may include grouping documents together\
+    \ that belong to similar topics. Additionally, clustering is used to reduce the\
+    \ dimensionality of the data when you handle various copious variables. 3 Main\
+    \ Types of Clustering \n\n1.  Partitioned-based clustering"
+  fmt: "\nExtensive enterprise in IT infrastructure technology like network generates\
+    \ huge volumes of alert messages. Since alert messages refer to operational issues,\
+    \ it has to be manually screened for categorization. Data clustering can help\
+    \ provide insight into alert categories and the mean time to repair and support\
+    \ predictions.\n\n## 7. Identify crime localities \nSince data associated to crime\
+    \ is present in specific city localities, the type of crime, the area of the crime,\
+    \ and the relation between the two can provide quality insight into the most crime-prone\
+    \ areas in the city or a locality.\n\n## Artificial Neural Network\nArtificial\
+    \ Neural Network ![](image656.jpg)Artificial Neural Network describes a set of\
+    \ connected input/output where every connection is linked to a particular weight.\
+    \ In the learning phase, the network adjusts the weights so that it can predict\
+    \ the right class label of input tuples. There are a lot of network architectures\
+    \ present now. Some of them include the Feed-forward, Recurrent, Convolutional,\
+    \ etc. The correct architecture depends on the model application. In most cases,\
+    \ the feed-forward models provide a reasonably accurate result and mostly for\
+    \ image processing applications. There can be many hidden layers in a model based\
+    \ on the complexity of the function that is to be wrapped by the model. If you\
+    \ have a lot of hidden layers, it will facilitate the modeling of complex relationships\
+    \ like deep neural networks. However, the presence of many hidden layers increases\
+    \ the time it takes to train and adjust weights. Another drawback is the poor\
+    \ interpretability when compared to other models such as Decision Trees. Despite\
+    \ this, ANN has performed well in the majority of the real-world applications.\
+    \ It has an intensive persistence to noisy data and can categorize untrained patterns.\
+    \ Generally, ANN works better with continuous-valued inputs and outputs.\n\n###\
+    \ Pros of ANN\n- It stores information in the whole network. For example, traditional\
+    \ programming information is kept in the whole network, and not in a database.\
+    \ This means that loss of certain information in a given place does not stop the\
+    \ network functions.\n- It has fault tolerance. The destruction of one or more\
+    \ cells of ANN doesn’t affect it from producing input. Therefore, this specific\
+    \ feature causes the network to be fault tolerant.\n- It can work with incomplete\
+    \ knowledge. Once the ANN training is over, the data can produce output using\
+    \ incomplete information. The loss of performance, in this case, will depend on\
+    \ the missing information.\n- ANN has the ability to make machine learning.\n\
+    - It has a parallel processing capability. The ANN neural networks feature a numerical\
+    \ strength that does more than one job at the same time.\n\n### Disadvantages\
+    \ of ANN\n- It depends on the hardware. ANN need processors which contain parallel\
+    \ processing power based on their structure. For this case, the realization of\
+    \ the device is dependent.\n- The determination of the correct network structure.\
+    \ Often, there is no fixed rule to use to determine the structure of artificial\
+    \ neural networks. The right network structure is attained through trial and error.\n\
+    - The duration of the network is not known. The network is limited to a particular\
+    \ value of the error on the sample means which the training is completed. This\
+    \ value does not generate an optimum result.\n- There are unexplained characteristics\
+    \ of the network. It is one of the major problems of ANN. If an ANN generates\
+    \ a probing solution, it doesn’t show any hint. This always reduces trust in the\
+    \ network.\n\n## Naïve Bayes\nThe Naïve Bayes algorithm is a probabilistic classifier\
+    \ which was driven by the Bayes theorem. This is based on a simple assumption\
+    \ where attributes are conditionally independent. ![](image678.jpg)The classification\
+    \ works by extracting the maximum posterior that is the maximal `P(Ci|X )` with\
+    \ the above-stated assumption working. This assumption always reduces the computational\
+    \ cost by measuring the computational cost. Although the assumption fails many\
+    \ times because the properties are dependent. Despite this, the Naïve Bayes has\
+    \ continued to work so well. This is a simple algorithm to implement and improve\
+    \ outcomes that have been generated in most instances. It is possible for it to\
+    \ be scaled into massive datasets because it assumes a linear time.\n\n### Pros\
+    \ of Naïve Bayes\n- It is simple and easy to implement.\n- It requires minimal\
+    \ training data.\n- It handles continuous and discrete data.\n- It can develop\
+    \ probabilistic predictions.\n- It is highly scalable.\n\n### Cons of Naïve Bayes\n\
+    - It makes a robust assumption regarding the shape of the data distribution.\n\
+    - There are challenges related to data scarcity.\n- The issue of continuous features\
+    \ that requires a binning procedure to make them discrete.\n\n## Classification\
+    \ Accuracy Metrics\nThis refers to the ratio of the number of correct predictions\
+    \ to the general number of input samples. ![](image697.jpg)It works better when\
+    \ the number of samples which belong to each class is equal. Classification accuracy\
+    \ is the best but provides a false notion of attaining high accuracy. The major\
+    \ problem emerges when the cost of misclassification of minor class samples is\
+    \ high. If you are to handle a rare but dangerous disease, the cost of not diagnosing\
+    \ the disease of a sick individual is very high compared to the cost of testing\
+    \ a healthy person.\n\n## Logarithmic Loss\nThis operates well for multi-class\
+    \ classification. When you work with Log Loss, the classifier has to allocate\
+    \ probability for every class. For example, if you have `N` samples of `M` classes,\
+    \ you can compute the Log Loss as follows![](image705.jpg)\n\n## Confusion Matrix\n\
+    Confusion matrix as the name suggests creates a matrix as the output and explains\
+    \ the complete performance of a model. Suppose you have a binary classification\
+    \ problem. Then there are some samples which belong to two classes: YES or NO.\
+    \ Additionally, you have your own classifier that can predict a class for a particular\
+    \ input sample. If the following model is tested on 165 samples, the following\
+    \ result is obtained.![](image712.jpg)There are four major terms:\n1. True Positives:\
+    \ This is where our prediction was YES and final outcome YES.\n2. True Negatives:\
+    \ This is where our prediction was NO and final outcome NO.\n3. False Positives:\
+    \ In this case, the prediction was YES but the final outcome was NO.\n4. False\
+    \ Negatives: In this scenario, the prediction was NO but the final outcome was\
+    \ YES.\n\n## Area Under the Curve\nThis is one of the most widely applied metrics\
+    \ for evaluation. It is applied in binary application problems. Other metrics\
+    \ include:\n- Mean absolute error\n- Mean squared error\n\n## Chapter 6: Clustering\n\
+    Clustering is the process of gathering entities with similar characteristics together.\
+    \ This technique belongs to unsupervised machine learning whose target is to identify\
+    \ similarities in the data point and group the same data points together.\n\n\
+    ### Why apply Clustering?\nBy grouping similar entities in one place allows one\
+    \ to identify the attributes of different groups. In other words, this generates\
+    \ insight into the underlying patterns of various groups. There are countless\
+    \ application areas of grouping unlabeled data. For example, it is possible to\
+    \ select different groups of customers and market every group differently to take\
+    \ advantage of the revenue. Another example may include grouping documents together\
+    \ that belong to similar topics. Additionally, clustering is used to reduce the\
+    \ dimensionality of the data when you handle various copious variables.\n\n###\
+    \ 3 Main Types of Clustering\n1. Partitioned-based clustering\n"
+  trans: '
+
+    网络等 IT 基础设施技术的大型企业会产生海量的警报消息。由于警报消息涉及运营问题，必须对其进行人工筛选和分类。数据聚类可以帮助提供警报类别的洞察，以及平均修复时间和支持预测。
+
+
+    ## 7. 识别犯罪高发地区
+
+    由于与犯罪相关的数据存在于特定的城市地区，犯罪类型、犯罪区域以及两者之间的关系可以为该城市或地区的最犯罪高发区域提供高质量的洞察。
+
+
+    ## 人工神经网络
+
+    人工神经网络 ![](img/image656.jpg)人工神经网络描述了一组连接的输入/输出，其中每个连接都链接到一个特定的权重。在学习阶段，网络会调整权重，以便能够预测输入元组的正确类别标签。现在存在许多网络架构，其中包括前馈、循环、卷积等。正确的架构取决于模型的应用场景。在大多数情况下，前馈模型提供相当准确的结果，且大多数情况下用于图像处理应用。根据模型要封装的函数的复杂性，模型中可以存在许多隐藏层。如果你有许多隐藏层，将有助于像深度神经网络等复杂关系的建模。然而，许多隐藏层的存在增加了训练和调整权重的时间。另一个缺点是与决策树等模型相比，其解释性较差。尽管如此，ANN
+    在大多数现实应用中表现良好。它对噪声数据具有很强的韧性，并可以分类未训练的模式。通常，ANN 在连续值输入和输出方面效果更好。
+
+
+    ### ANN 的优点
+
+    - 它将信息存储在整个网络中。例如，传统的程序信息保留在整个网络中，而不是数据库中。这意味着给定位置某些信息的丢失不会停止网络运行。
+
+    - 它具有容错性。ANN 中一个或多个单元的破坏不会影响它产生输出。因此，这一特定特征使得网络具有容错性。
+
+    - 它可以处理不完整的知识。一旦 ANN 训练完成，可以使用不完整的信息产生输出。在这种情况下，性能的损失将取决于缺失的信息。
+
+    - ANN 具有机器学习的能力。
+
+    - 它具有并行处理能力。ANN 神经网络具有数值上的优势，可以同时完成多项任务。
+
+
+    ### ANN 的缺点
+
+    - 它依赖于硬件。ANN 需要根据其结构包含并行处理能力的处理器。对于这种情况，设备的实现是取决于依赖的。
+
+    - 正确网络结构的确定。通常，没有固定的规则来确定人工神经网络的结构。正确的网络结构是通过试错获得的。
+
+    - 持续时间未知。网络受限于训练完成时样本均值的特定误差值。该值不会产生最优结果。
+
+    - 网络存在未解释的特性。这是 ANN 的主要问题之一。如果 ANN 生成了一个探测性解决方案，它不会显示任何线索。这总是降低对网络的信任。
+
+
+    ## 朴素贝叶斯
+
+    朴素贝叶斯算法是一种由贝叶斯定理驱动的概率分类器。它基于一个简单的假设，即属性之间是条件独立的。![](img/image678.jpg)分类通过提取最大后验概率（即在上述假设成立的情况下最大的
+    `P(Ci|X )`）来工作。这一假设通过衡量计算成本总是降低了计算成本。尽管由于属性具有依赖性，该假设会多次失效。尽管如此，朴素贝叶斯继续运行良好。这是一种易于实现的算法，并可以在大多数情况下改进生成的结果。它可以扩展到海量数据集，因为它假设了线性时间。
+
+
+    ### 朴素贝叶斯的优点
+
+    - 它简单且易于实现。
+
+    - 它需要极少的训练数据。
+
+    - 它处理连续和离散数据。
+
+    - 它可以建立概率预测。
+
+    - 它具有良好的扩展性。
+
+
+    ### 朴素贝叶斯的缺点
+
+    - 它对数据分布有一个稳健假设。
+
+    - 它面临数据稀缺的挑战。
+
+    - 连续特征需要分箱处理将其离散化。
+
+
+    ## 分类准确率指标
+
+    这是正确预测的数量与输入总数量的比例。![](img/697.jpg)当每个类别的样本数量相等时，它的效果最好。准确率产生获得高准确率的假象。当你处理少数但危险的疾病时，误判少数类别的成本比检测健康人士的成本高得多。
+
+
+    ## 对数损失
+
+    这对于多分类运行良好。当你使用对数损失时，分类器必须为每个类别分配概率。例如，如果你有 `N` 个样本和 `M` 个类别，可以如下计算对数损失![](img/705.jpg)
+
+
+    ## 混淆矩阵
+
+    混淆矩阵正如其名，创建一个矩阵来解释模型的完整性能。假设你有一个二分类问题。那么有两个类别：YES 或 NO。此外，你有一个可以为特定输入样本预测类别的分类器。如果对
+    165 个样本进行以下模型测试，将得到如下结果![](img/image712.jpg)存在四个术语：
+
+    1. 真阳性：我们的预测为 YES 且结果为 YES。
+
+    2. 真阴性：我们的预测为 NO 且结果为 NO。
+
+    3. 假阳性：我们的预测为 YES 但结果为 NO。
+
+    4. 假阴性：我们的预测为 NO 但结果为 YES。
+
+
+    ## 曲线下面积
+
+    这是评估中最广泛应用的指标之一。它适用于二分类问题。其他指标包括：
+
+    - 平均绝对误差
+
+    - 均方误差
+
+
+    ## 第 6 章：聚类
+
+    聚类是将具有相似特征的实体聚集的过程。这种技术属于无监督机器学习，其目标是识别数据点的相似性并将相同的数据点分在一起。
+
+
+    ### 为什么要应用聚类？
+
+    将相似的实体聚集在一起允许识别不同小组的属性。换句话说，这产生了对不同小组底层模式的洞察。无标记数据的分组有无数应用领域。例如，可以对客户进行分组，并对每个小组进行不同的营销以增加收入。另一个例子可能包括将属于相似主题的文件分在一起。
+
+    '
+  toc: []
+- raw: "The phrase cluster doesn’t have an accurate definition. A cluster describes\
+    \ a set of points whereby any point in the cluster is close to any other point\
+    \ in the cluster than a point absent in the cluster. Sometimes, a threshold is\
+    \ used to define all points in a cluster close to one another . A partitioning\
+    \ method will first create an original set of K-partitions where k- parameter\
+    \ is the number of partitions to construct. Next, it applies an iterative relocation\
+    \ approach which tries to enhance the partitioning by shifting objects from one\
+    \ group to another.  These clustering techniques help generate a one-level partitioning\
+    \ of data points. There are various partitioning-based clustering like K-means,\
+    \ fuzzy C-, means, and K-medoids. This section will look at K-mean clustering.\
+    \ K-mean Clustering \n\n1.  It begins with K as the input. This refers to the\
+    \ number of clusters that you want to find. Assign K-centroids in random positions\
+    \ in your space.\n\n2.  Now, if you use the Euclidean distance between data points\
+    \ and centroids, allocate each data point to the cluster close to it.\n\n3.   \
+    \ Re-compute the cluster centers as a mean of data points allocated to it. 4.   \
+    \ Repeat 2 and 3 till there are no more changes to happen. You might be wondering\
+    \ how you can select the value of K. One method is the “Elbow” that is used to\
+    \ define an optimal number of clusters. In this case, you’ll run the range of\
+    \ K values and plot the “percentage of variance explained,” on Y-axis and “K”\
+    \ on the “X” axis. In the diagram below, more clusters have been added after 3.\
+    \ These additional clusters affect the display of the model. The first cluster\
+    \  adds more information, and at a certain point, the marginal gain will start\
+    \ to drop. ![](image748.jpg)Hierarchical clustering With the Hierarchical clustering,\
+    \ it begins by assigning all data points to belong to its own cluster. Just as\
+    \ the name implies, it creates the hierarchy and in the next step, it integrates\
+    \ the two closest data point and combines it together into a single cluster. 1.   \
+    \ Allocate every data point to its cluster. 2.    Determine the closest pair of\
+    \ the cluster by applying the Euclidean distance and combine it into a single\
+    \ cluster. 3.    Determine the distance between two nearest clusters and integrate\
+    \ them until when all items are grouped into a single cluster. In the next method,\
+    \ you can choose the best number of clusters by identifying which vertical lines\
+    \ are cut by a horizontal line without affecting a cluster and deals with the\
+    \ maximum distance. ![](image758.jpg)\n\n1.  Density Based Clustering\n\nThe basic\
+    \ concept underlying density-based clustering technique is extracted from a human\
+    \ perception clustering method. For example, if you look at the images below,\
+    \ you should be able to see four clusters plus different points of noise. ![](image764.jpg)As\
+    \ shown in the above image, the clusters are dense regions in the data space that\
+    \ are delineated by regions of a lower density point. In short,  the density of\
+    \ points in a cluster is somehow higher compared to the density of points located\
+    \ outside the cluster. The density-based clustering algorithm depends on an intuitive\
+    \ perception of “clusters” and “noise”. The point is that for every cluster, the\
+    \ neighborhood of a particular radius should have at least a minimum. The most\
+    \ important parameters are needed for DBSCAN include (“eps”) and minimum points\
+    \ (“MinPts”). The parameter eps determine the radius of the neighborhood around\
+    \ close to a point x. The parameter MinPts describes the minimum number of neighbors\
+    \ in the “eps” radius. Any point x that exists in the dataset that has a count\
+    \ higher than or equal to MinPts is identified as a core point. Customer Segmentation\
+    \ with Cluster analysis The customer base of a company can have thousands, if\
+    \ not millions, of different unique persons. Marketing, to most of these people,\
+    \ presents a big problem because if you attempt to market to everybody, the message\
+    \ can be ambiguous. However, building a marketing plan which attracts every individual\
+    \ is not normal. Why customer segments are important Customer segments will make\
+    \ you understand the patterns which distinguish your customers. Below are some\
+    \ important ideas that you can achieve with segmentation analysis. •    Enhanced\
+    \ understanding of the customer needs and wants. This can lead to improved sales\
+    \ and customer satisfaction. •    Create products that appeal to different customer\
+    \ segments . •    Companies cannot fulfill all possible customers all the time.\
+    \ By applying segmentation procedure, companies have the ability to concentrate\
+    \ on fulfilling those segments which they examine to be the best attractions for\
+    \ their products. •    Build loyal relationships. While you can analyze your own\
+    \ customer base, soon it shall be clear that there are different groups that have\
+    \ customized requirements. This allows you to build a deeper understanding of\
+    \ your customers and find out what makes them tick. It is no gem that a customer\
+    \ is always more profitable compared to others. However, to be profitable, businesses\
+    \ should have a better understanding of the way profitability relates to customer\
+    \ segmentation. Discovering the difference between customers will permit one to\
+    \ personalize your method to the desires of the customer segments. Customer segmentation\
+    \ describes the practice of categorizing a customer base into different groups\
+    \ of individuals similar in a given way. Customer segments are often determined\
+    \ based on similarities such as personal characteristics, behaviors, and preferences.\
+    \ By understanding your customers and their differences, it becomes one of the\
+    \ most important stages of measuring the customers’ relationship. How to segment\
+    \ Segmentation doesn’t need to be very complex. For a small organization or company,\
+    \ it can be about discovering that you have  two or three unique customer types\
+    \ who have different needs. Some popular methods used to segment customers consist\
+    \ of: •    Demographic •    Behavioral •    Psychographic •    Geographic ![](image788.jpg)There\
+    \ are different ways which you can apply when it comes to segmentation of a market.\
+    \ One of the methods that are accurate and statistically valid is the application\
+    \ of cluster analysis. "
+  fmt: '
+
+    The phrase cluster doesn’t have an accurate definition. A cluster describes a
+    set of points whereby any point in the cluster is close to any other point in
+    the cluster than a point absent in the cluster. Sometimes, a threshold is used
+    to define all points in a cluster close to one another . A partitioning method
+    will first create an original set of `K`-partitions where `k` parameter is the
+    number of partitions to construct. Next, it applies an iterative relocation approach
+    which tries to enhance the partitioning by shifting objects from one group to
+    another. These clustering techniques help generate a one-level partitioning of
+    data points. There are various partitioning-based clustering like `K-means`, `fuzzy
+    C-`, `means`, and `K-medoids`. This section will look at `K-mean` clustering.
+
+
+    ## K-mean Clustering
+
+
+    1. It begins with `K` as the input. This refers to the number of clusters that
+    you want to find. Assign `K-centroids` in random positions in your space.
+
+    2. Now, if you use the `Euclidean distance` between data points and centroids,
+    allocate each data point to the cluster close to it.
+
+    3. Re-compute the cluster centers as a mean of data points allocated to it.
+
+    4. Repeat `2` and `3` till there are no more changes to happen. You might be wondering
+    how you can select the value of `K`. One method is the “Elbow” that is used to
+    define an optimal number of clusters. In this case, you’ll run the range of `K`
+    values and plot the “percentage of variance explained,” on Y-axis and “K” on the
+    “X” axis. In the diagram below, more clusters have been added after `3`. These
+    additional clusters affect the display of the model. The first cluster adds more
+    information, and at a certain point, the marginal gain will start to drop. ![](image748.jpg)
+
+
+    ## Hierarchical clustering
+
+
+    With the Hierarchical clustering, it begins by assigning all data points to belong
+    to its own cluster. Just as the name implies, it creates the hierarchy and in
+    the next step, it integrates the two closest data point and combines it together
+    into a single cluster.
+
+
+    1. Allocate every data point to its cluster.
+
+    2. Determine the closest pair of the cluster by applying the `Euclidean distance`
+    and combine it into a single cluster.
+
+    3. Determine the distance between two nearest clusters and integrate them until
+    when all items are grouped into a single cluster. In the next method, you can
+    choose the best number of clusters by identifying which vertical lines are cut
+    by a horizontal line without affecting a cluster and deals with the maximum distance.
+    ![](image758.jpg)
+
+
+    ## 1. Based Clustering
+
+
+    The basic concept underlying density-based clustering technique is extracted from
+    a human perception clustering method. For example, if you look at the images below,
+    you should be able to see four clusters plus different points of noise. ![](image764.jpg)As
+    shown in the above image, the clusters are dense regions in the data space that
+    are delineated by regions of a lower density point. In short, the density of points
+    in a cluster is somehow higher compared to the density of points located outside
+    the cluster. The density-based clustering algorithm depends on an intuitive perception
+    of “clusters” and “noise”. The point is that for every cluster, the neighborhood
+    of a particular radius should have at least a minimum. The most important parameters
+    are needed for `DBSCAN` include (`eps`) and minimum points (`MinPts`). The parameter
+    `eps` determine the radius of the neighborhood around close to a point `x`. The
+    parameter `MinPts` describes the minimum number of neighbors in the `eps` radius.
+    Any point `x` that exists in the dataset that has a count higher than or equal
+    to `MinPts` is identified as a core point.
+
+
+    ## Customer Segmentation with Cluster analysis
+
+
+    The customer base of a company can have thousands, if not millions, of different
+    unique persons. Marketing, to most of these people, presents a big problem because
+    if you attempt to market to everybody, the message can be ambiguous. However,
+    building a marketing plan which attracts every individual is not normal.
+
+
+    ### Why customer segments are important
+
+
+    Customer segments will make you understand the patterns which distinguish your
+    customers. Below are some important ideas that you can achieve with segmentation
+    analysis.
+
+
+    * Enhanced understanding of the customer needs and wants. This can lead to improved
+    sales and customer satisfaction.
+
+    * Create products that appeal to different customer segments .
+
+    * Companies cannot fulfill all possible customers all the time. By applying segmentation
+    procedure, companies have the ability to concentrate on fulfilling those segments
+    which they examine to be the best attractions for their products.
+
+    * Build loyal relationships. While you can analyze your own customer base, soon
+    it shall be clear that there are different groups that have customized requirements.
+    This allows you to build a deeper understanding of your customers and find out
+    what makes them tick.
+
+
+    ### How to segment
+
+
+    Segmentation doesn’t need to be very complex. For a small organization or company,
+    it can be about discovering that you have two or three unique customer types who
+    have different needs. Some popular methods used to segment customers consist of:
+
+
+    * Demographic
+
+    * Behavioral
+
+    * Psychographic
+
+    * Geographic ![](image788.jpg)There are different ways which you can apply when
+    it comes to segmentation of a market. One of the methods that are accurate and
+    statistically valid is the application of cluster analysis.
+
+    '
+  trans: '
+
+
+    “类（cluster）”这一词并没有准确的定义。类描述一组点，其中类中的任何一点到类中其他任何点的距离都比到类之外某一点近。有时，会使用阈值来定义类中所有相互接近的点。划分方法会首先创建一个原始的
+    `K` 划分集，其中 `k` 参数是待构建的划分数量。接下来，它应用一种迭代重定位方法，通过将对象从一个组移动到另一个组来增强划分。这些聚类技术有助于生成数据点的一级划分。有多种基于划分的聚类方法，如
+    `K-means`、`fuzzy C-means` 和 `K-medoids`。本节将介绍 `K-mean` 聚类。
+
+
+    ## K-mean 聚类
+
+
+    1. 它以 `K` 作为输入。这指的是你想要找到的簇数量。在空间中的随机位置分配 `K` 个质心。
+
+    2. 现在，如果你使用数据点与质心之间的 `Euclidean distance`，则将每个数据点分配给距离它最近的类。
+
+    3. 重新计算类中心，作为分配给该类的数据点的平均值。
+
+    4. 重复 `2` 和 `3` 直到不再发生变化。你可能好奇如何选择 `K` 的值。一种方法是“肘部法”（Elbow），它用于定义最佳簇数量。在这种情况下，你会运行一系列
+    `K` 值，并在 Y 轴上绘制“解释方差百分比”，在 X 轴上绘制“K”。在下图中，在数字 `3` 之后添加了更多的类。这些额外的类会影响模型的显示。第一个类增加了更多信息，在某一个一点，边际收益将开始下降。![](img/image748.jpg)
+
+
+    ## 层次聚类
+
+
+    层次聚类开始于将所有数据点分配到属于它们自己的类中。正如其名所示，它创建了层级结构，在下一步中，它整合两个最近的数据点并将它们合并为一个类。
+
+
+    1. 将每个数据点分配到其类中。
+
+    2. 通过应用 `Euclidean distance` 确定类中最近的一对并将其合并为一个类。
+
+    3. 确定两个最近的类之间的距离并整合它们，直到所有项目都被分组为一个类。在下一种方法中，你可以通过识别哪些垂直线被水平线截断且不影响类，并处理最大距离来选择最佳类数量。![](img/image758.jpg)
+
+
+    ## 1. 基于聚类
+
+
+    基于密度的聚类技术的基本概念提取自人类感知聚类方法。例如，如果你看下面的图片，你应该能看到四个类加上不同的噪声点![](img/image764.jpg)如上图所示，类是数据空间中的密集区域，由低密度点区域界定。简而言之，类中点的密度在某种程度上比类外点的密度高。基于密度的聚类算法取决于对“类”和“噪声”的直观感知。关键在于，对于每一个类，特定半径的邻域应该包含一个最小数量。`DBSCAN`
+    需要的最重要参数包括 (`eps`) 和最小点数 (`MinPts`)。`eps` 参数决定了点 `x` 周围邻域的半径。`MinPts` 参数描述了 `eps`
+    半径内最小邻居数量。数据集中计数大于或等于 `MinPts` 的任何点 `x` 被识别为核心点。
+
+
+    ## 使用聚类分析进行客户细分
+
+
+    公司的客户群可能有成千甚至数百万个不同的个体。对于大多数这些人来说，营销是一个巨大的问题，因为如果你试图向所有人营销，信息可能会是模糊的。然而，建立一个吸引每个个体的营销计划并不是常态的。
+
+
+    ### 为什么客户细分很重要
+
+
+    客户细分将帮助你理解区分不同客户的模式。以下是你能够通过细分分析实现的一些重要观点。
+
+
+    * 增强对客户需求和喜好的理解。这可以提高销售额和客户满意度。
+
+    * 创建吸引不同客户细分的产品。
+
+    * 公司无法一直满足所有可能的客户。通过应用细分程序，公司有能力专注于满足那些被认为对其产品具有最佳吸引力的细分。
+
+    * 建立忠诚关系。虽然你可以分析自己的客户群，但很快就会发现，有不同的群体具有定制化的需求。这允许你对客户有更深入的理解，并发现驱动他们的特因素。
+
+
+    ### 如何细分
+
+
+    细分不需要非常复杂。对于小型组织或公司，它可能只是发现你有两或三个具有不同需求的独特客户类型。用于细分客户的流行方法包括：
+
+
+    * 人口统计学
+
+    * 行为特征
+
+    * 心理特征
+
+    * 地理特征![](img/image788.jpg)在进行市场细分时，有不同的方法可以使用。一种准确且在统计上有效的方法之一是聚类分析的应用。
+
+
+    '
+  toc: []
+- raw: "Chapter 7: Recommender Systems Most e-commerce and retail companies are taking\
+    \ advantage of the massive potential of data to boost sales by implementing a\
+    \ Recommender system on their particular websites. These systems focus on suggesting\
+    \ to the user’s items that they may like or have interest in. The data needed\
+    \ for recommendation engines comes from explicit user ratings to watch a movie\
+    \ or listen to a song from implicit search engine purchase histories and queries.\
+    \ Sites such as YouTube, Spotify, and Netflix have data to use to recommend playlists.\
+    \ Pros of using recommendation systems Companies which apply the Recommender system\
+    \ concentrate on raising the sales due to the personalized offers and improved\
+    \ customer experience. Recommendations usually increase searches and make it easy\
+    \ for users to access content which they are interested in, and surprise them\
+    \ with offers that they have never searched before. What is interesting is that\
+    \ companies can now gain and retain customers by sending out email links to new\
+    \ offers that fulfill the interests of their profiles . By creating an added advantage\
+    \ to users through suggesting products and systems, it creates a great feeling\
+    \ among buyers. This is a great thing because it will allow companies to stay\
+    \ ahead of their competitors. Types of Recommender Systems Recommender systems\
+    \ operate with two types of information: •    User-item interactions •    Characteristic\
+    \ information This helps us reach the first classification of recommender systems.\
+    \ This includes a content-based system that has a characteristic information and\
+    \ collaborative filtering which depends on user-item interactions. The hybrid\
+    \ systems shall combine both information with the goal to avoid problems generated\
+    \ when you work with only one specific type. Content-based Systems Content-based\
+    \ systems are built from the idea of applying the content of each product for\
+    \ purposes of recommendation. Below are some pros and cons of the content-based\
+    \ recommender system. Pros \n\n*   It is simple to create a more transparent system.\
+    \ You use the same content to describe the recommendations.\n\n*   Content representations\
+    \ are different and they open up the options to apply unique approaches like text\
+    \ processing techniques, inferences, and semantic information.\n\n*   In case\
+    \ of items have enough descriptions, there is no need for the “new item problem”.\n\
+    \nCons \n\n*   The content-based RecSys seem to over-specialize. They will suggest\
+    \ items similar to that which is already consumed, with a notion to create a “filter\
+    \ bubble”.\n\nAnother issue is that new users don’t have a defined profile not\
+    \ unless they are explicitly requested for information. Despite this, it is very\
+    \ simple to add new items to the system. You simply require to allocate them a\
+    \ group based on their features. Three principal components \n\n*   A content\
+    \ Analyzer-This classifies items using a given type of representation.\n\n*  \
+    \ A profile Learner-It creates a profile which represents every user’s preference.\n\
+    \n*   A filtering Component-It accepts all the inputs and creates a list of recommendations\
+    \ for every user.\n\nHow content is represented The content of a particular item\
+    \ is abstract and provides more options. You can use many different variables.\
+    \ For instance, for a book, you can include the genre, author, the text of the\
+    \ book and many other factors. Once you know which content you will factor. You\
+    \ need to convert all the data into a vector space model, which is an algebraic\
+    \ representation of text documents . You perform this using a Bag of Words model\
+    \ which represents documents disregarding the sequence of words. In this particular\
+    \ model, every document appears like a bag with some words. Therefore, this method\
+    \ will permit word modeling with respect to dictionaries, where every bag has\
+    \ some words from the dictionary. An exact implementation of a Bag of Words is\
+    \ the TF-IDF representation. In full, TF stands for Term Frequency and IDF stands\
+    \ for Inverse Document Frequency. This particular model combines the significance\
+    \ of the word in the document with the significance of the world in the corpus.\
+    \ This was just a general aspect of Content-based recommendation engines. It is\
+    \ important to recognize that a Bag of Words representation doesn’t factor in\
+    \ the context of words. If it is necessary to include that, Semantic Content Representation\
+    \ becomes useful. Below are two options that one has, just in case you want to\
+    \ know more about it. Option 1: Explicit Semantic Representation \n\n*   Wordnet\n\
+    \n*   ConceptNet\n\n*   Ontologies for Semantic Representation\n\nOption 2: Infer\
+    \ Semantic Representation \n\n*   Latent Dirichlet Allocation\n\n*   Latent Semantic\
+    \ Indexing\n\nCollaborative filtering systems These types of recommendation engine\
+    \ implement user interactions to evaluate items of interest. You can visualize\
+    \ the set of interactions  using a matrix where every entry (I, j) represents\
+    \ the interactions between user i and item j. One way of looking at collaborative\
+    \ filtering is to look at it as a generalization of regression and classification.\
+    \ In the following case, you aim to predict a variable directly which depends\
+    \ on other variables in the collaborative filtering. Visualizing a problem as\
+    \ a matrix allows us not only to predict the values of a unique column but also\
+    \ help us predict the values of any entry. Techniques to apply in collaborative\
+    \ filtering There is a lot of research that has been done on collaborative filtering,\
+    \ and most common techniques depend on low-dimensional factor models that depend\
+    \ on matrix factorization. The CF techniques are divided into 2 types: ![](image848.jpg)Types\
+    \ of collaborative filtering approaches. Reference: [Wikipedia](https://en.wikipedia.org/wiki/Collaborative_filtering)\
+    \ Below is a brief discussion of some of these techniques \n\n1.  Memory-based\
+    \ technique\n\nThis approach can further be divided into two sections: User-item\
+    \ filtering and item-item filtering. The user-item filtering selects a given \
+    \ user, searches for users that are similar to the user depending on the similarity\
+    \ of the ratings, and suggest items that the same users recommended. On the other\
+    \ hand, item-item filtering will identify an item, search users who liked an item\
+    \ and look for other products that the same users liked. In other words, this\
+    \ approach takes items and displays the items as recommendations. The major difference\
+    \ of memory-based technique from the model-based techniques is that no parameter\
+    \ is learned using gradient descent. \n\n2.  Model-based approach\n\nIn this particular\
+    \ approach, CF models are created using machine learning algorithms to predict\
+    \ the ratings of items unrelated to the user. Content-Based Filtering This system\
+    \ will suggest an item to users depending on their past history. The greatest\
+    \ advantage of content-based filtering is that it can start to suggest items immediately\
+    \ information related to items is available. A content-based system will work\
+    \ with information which the user provides, this can be explicitly or implicitly.\
+    \ Depending on data, a user profile is created that provides a lot of inputs or\
+    \ takes actions about recommendations. ![](image865.jpg)"
+  fmt: '
+
+    # Chapter 7: Recommender Systems
+
+
+    Most e-commerce and retail companies are taking advantage of the massive potential
+    of data to boost sales by implementing a Recommender system on their particular
+    websites. These systems focus on suggesting to the user’s items that they may
+    like or have interest in. The data needed for recommendation engines comes from
+    explicit user ratings to watch a movie or listen to a song from implicit search
+    engine purchase histories and queries. Sites such as YouTube, Spotify, and Netflix
+    have data to use to recommend playlists.
+
+
+    ## Pros of using recommendation systems
+
+    Companies which apply the Recommender system concentrate on raising the sales
+    due to the personalized offers and improved customer experience. Recommendations
+    usually increase searches and make it easy for users to access content which they
+    are interested in, and surprise them with offers that they have never searched
+    before. What is interesting is that companies can now gain and retain customers
+    by sending out email links to new offers that fulfill the interests of their profiles.
+    By creating an added advantage to users through suggesting products and systems,
+    it creates a great feeling among buyers. This is a great thing because it will
+    allow companies to stay ahead of their competitors.
+
+
+    ## Types of Recommender Systems
+
+    Recommender systems operate with two types of information:
+
+    - User-item interactions
+
+    - Characteristic information
+
+
+    This helps us reach the first classification of recommender systems. This includes
+    a content-based system that has a characteristic information and collaborative
+    filtering which depends on user-item interactions. The hybrid systems shall combine
+    both information with the goal to avoid problems generated when you work with
+    only one specific type.
+
+
+    ## Content-based Systems
+
+    Content-based systems are built from the idea of applying the content of each
+    product for purposes of recommendation. Below are some pros and cons of the content-based
+    recommender system.
+
+
+    ### Pros
+
+    - It is simple to create a more transparent system. You use the same content to
+    describe the recommendations.
+
+    - Content representations are different and they open up the options to apply
+    unique approaches like text processing techniques, inferences, and semantic information.
+
+    - In case of items have enough descriptions, there is no need for the “new item
+    problem”.
+
+
+    ### Cons
+
+    - The content-based `RecSys` seem to over-specialize. They will suggest items
+    similar to that which is already consumed, with a notion to create a “filter bubble”.
+
+
+    Another issue is that new users don’t have a defined profile not unless they are
+    explicitly requested for information. Despite this, it is very simple to add new
+    items to the system. You simply require to allocate them a group based on their
+    features.
+
+
+    ### Three principal components
+
+    - A `content Analyzer`: This classifies items using a given type of representation.
+
+    - A `profile Learner`: It creates a profile which represents every user’s preference.
+
+    - A `filtering Component`:It accepts all the inputs and creates a list of recommendations
+    for every user.
+
+
+    ### How content is represented
+
+    The content of a particular item is abstract and provides more options. You can
+    use many different variables. For instance, for a book, you can include the genre,
+    author, the text of the book and many other factors. Once you know which content
+    you will factor. You need to convert all the data into a vector space model, which
+    is an algebraic representation of text documents. You perform this using a `Bag
+    of Words` model which represents documents disregarding the sequence of words.
+    In this particular model, every document appears like a bag with some words. Therefore,
+    this method will permit word modeling with respect to dictionaries, where every
+    bag has some words from the dictionary.
+
+
+    An exact implementation of a `Bag of Words` is the `TF-IDF` representation. In
+    full, `TF` stands for Term Frequency and `IDF` stands for Inverse Document Frequency.
+    This particular model combines the significance of the word in the document with
+    the significance of the world in the corpus. This was just a general aspect of
+    Content-based recommendation engines. It is important to recognize that a `Bag
+    of Words` representation doesn’t factor in the context of words. If it is necessary
+    to include that, `Semantic Content Representation` becomes useful. Below are two
+    options that one has, just in case you want to know more about it.
+
+
+    **Option 1: Explicit Semantic Representation**
+
+    - `Wordnet`
+
+    - `ConceptNet`
+
+    - `Ontologies for Semantic Representation`
+
+
+    **Option 2: Infer Semantic Representation**
+
+    - `Latent Dirichlet Allocation`
+
+    - `Latent Semantic Indexing`
+
+
+    ## Collaborative filtering systems
+
+    These types of recommendation engine implement user interactions to evaluate items
+    of interest. You can visualize the set of interactions using a matrix where every
+    entry `(I, j)` represents the interactions between user `i` and item `j`. One
+    way of looking at collaborative filtering is to look at it as a generalization
+    of regression and classification. In the following case, you aim to predict a
+    variable directly which depends on other variables in the collaborative filtering.
+    Visualizing a problem as a matrix allows us not only to predict the values of
+    a unique column but also help us predict the values of any entry.
+
+
+    ### Techniques to apply in collaborative filtering
+
+    There is a lot of research that has been done on collaborative filtering, and
+    most common techniques depend on low-dimensional factor models that depend on
+    matrix factorization. The `CF` techniques are divided into 2 types:
+
+
+    ![Types of collaborative filtering approaches](image848.jpg)
+
+    (Note: Image represents types of collaborative filtering approaches)
+
+    Reference: [Wikipedia](https://en.wikipedia.org/wiki/Collaborative_filtering)
+
+
+    Below is a brief discussion of some of these techniques
+
+
+    1. **Memory-based technique**
+
+    This approach can further be divided into two sections: User-item filtering and
+    item-item filtering. The user-item filtering selects a given user, searches for
+    users that are similar to the user depending on the similarity of the ratings,
+    and suggest items that the same users recommended. On the other hand, item-item
+    filtering will identify an item, search users who liked an item and look for other
+    products that the same users liked. In other words, this approach takes items
+    and displays the items as recommendations. The major difference of memory-based
+    technique from the model-based techniques is that no parameter is learned using
+    gradient descent.
+
+
+    2. **Model-based approach**
+
+    In this particular approach, `CF` models are created using machine learning algorithms
+    to predict the ratings of items unrelated to the user.
+
+
+    ### Content-Based Filtering
+
+    This system will suggest an item to users depending on their past history. The
+    greatest advantage of content-based filtering is that it can start to suggest
+    items immediately information related to items is available. A content-based system
+    will work with information which the user provides, this can be explicitly or
+    implicitly. Depending on data, a user profile is created that provides a lot of
+    inputs or takes actions about recommendations.
+
+
+    ![](image865.jpg)
+
+    '
+  trans: "\n\n# 第 7 章：推荐系统\n\n大多数电子商务和零售公司都在利用数据的巨大潜力，通过在其特定的网站上实现推荐系统来提升销售额。这些系统侧重于向用户推荐他们可能喜欢或感兴趣的项目。推荐引擎所需的数据来源广泛，从用户对电影的观看或歌曲的显式评分，到来自搜索引擎购买历史和查询的隐式数据。诸如\
+    \ YouTube、Spotify 和 Netflix 等网站都拥有可用于推荐播放列表的数据。\n\n## 使用推荐系统的优点\n应用推荐系统的公司侧重于通过个性化优惠和改进客户体验来提高销售额。推荐通常会增加搜索，并使用户能够轻松访问他们感兴趣的内容，同时提供他们从未搜索过的优惠令他们感到惊喜。有趣的是，公司现在可以通过发送符合其用户画像兴趣的新优惠邮件链接来获取并留住客户。通过系统建议产品为用户创造额外优势，这在买家中营造了良好的氛围。这是一件非常有意义的事情，因为它能让公司保持领先竞争对手的。\n\
+    \n## 推荐系统的类型\n推荐系统基于两类信息运行：\n- 用户-物品交互\n 特 特征信息\n\n这帮助我们完成了推荐系统的第一类分类。这包括基于内容的系统（具有特征信息）以及依赖于用户-物品交互的协同过滤。混合系统应结合这两种信息，目标是避免仅处理某一种特定类型时产生的问题。\n\
+    \n## 基于内容的系统\n基于系统的系统建立在将每个产品的内容用于推荐目的的想法之上。以下是基于内容的推荐的一些优缺点。\n\n### 优点\n- 创建一个更透明的系统非常简单。你使用相同的内容来描述推荐。\n\
+    - 内容表示是不同的，它们为应用独特的方法（如文本处理技术、推理和语义信息）提供了选择。\n- 如果物品有足够的描述，就不需要考虑“新物品问题”。\n\n\
+    ### 缺点\n- 基于内容的 `RecSys` 似乎过于专门化。它们会推荐与已消费内容相似的物品，从而产生“过滤泡泡”的概念。\n\n另一个问题是，新用户没有定义的画像，除非显式请求其信息。尽管如此，向系统添加新物品非常简单。你只需要根据它们的特征为它们分配一个组。\n\
+    \n### 三个主要组件\n- `content Analyzer`：使用给定的表示类型对物品进行分类。\n- `profile Learner`：创建一个代表每个用户偏好的画像。\n\
+    - `filtering Component`：接受所有输入并为每个用户创建推荐列表。\n\n### 内容是如何表示的\n特定物品的内容是抽象的并提供了更多选择。你可以使用许多不同的变量。例如，对于一本书，你可以包括类型、作者、书籍文本以及许多其他因素。一旦你知道要考虑哪些内容，你需要将所有数据转换为向量空间模型，这是文本文档的代数表示。你使用\
+    \ `Bag of Words` 模型执行此操作，该模型忽略了单词的顺序。在这个特定模型中，每个文档都像一个装有一些单词的包。因此，这种方法允许根据字典进行词建模，其中每个包都包含字典中的一些词。\n\
+    \n`Bag of Words` 的精确实现是 `TF-IDF` 表示。完整来说，`TF` 代表词频（Term Frequency），`IDF` 代表逆文档频率（Inverse\
+    \ Document Frequency）。这种特定模型将词在文档中的重要性与词在语料库中的重要性结合起来。这只是基于内容推荐引擎的一个通用方面。重要的是，`Bag\
+    \ of Words` 表示没有考虑词的上下文。如果需要包含这一点，`Semantic Content Representation`（语义内容表示）就变得有用。以下是可选两个方案，以防你想了解更多信息。\n\
+    \n**选项 1：显式语义表示**\n- `Wordnet`\n- `ConceptNet`\n- `Ontologies for Semantic Representation`\n\
+    \n**选项 2：推断语义表示**\n- `Latent Dirichlet Allocation`\n- `Latent Semantic Indexing`\n\
+    \n## 协同过滤系统\n这类推荐引擎通过用户交互来评估感兴趣的物品。你可以使用矩阵将交互集可视化，其中每个条目 `(I, j)` 代表用户 `i` 与物品\
+    \ `j` 之间的交互。看待协同过滤的一种方法将其视为回归和分类的推广。在以下情况下，你的目标是直接预测一个依赖于协同过滤中其他变量的变量。将问题可视化为矩阵使我们不仅能够预测唯一列的值，还能帮助我们预测任何条目的值。\n\
+    \n### 应用于协同过滤中的技术\n对协同过滤已经进行了大量的研究，最常见的技术依赖于基于矩阵分解的低维因子模型。`CF` 技术分为 2 类：\n\n![协同过滤方法的类型](img/image848.jpg)\n\
+    （注：图片代表协同过滤的方法类型）\n参考：[维基百科](https://en.wikipedia.org/wiki/Collaborative_filtering)\n\
+    \n以下是对这些技术的一些简要讨论\n\n1. **基于内存的技术**\n这种方法可以进一步分为两个部分：用户-物品过滤和物品-物品过滤。用户-物品过滤选择一个给定用户，根据评分的相似性搜索与该用户相似的用户，并推荐相同用户推荐的物品。另一方面，物品-物品过滤将识别一个物品，搜索喜欢该物品的用户，并寻找这些用户喜欢的其他产品。换句话之，这种方法获取物品并将物品作为推荐显示。基于内存的技术与基于模型的技术的主要区别在于，没有使用梯度下降学习任何参数。\n\
+    \n2. **基于模型的方法**\n在这种特定方法中，使用机器学习算法创建 `CF` 模型，以预测与用户无关的物品评分。\n\n### 基于内容的过滤\n\
+    该系统将根据用户过去的历史向用户推荐物品。基于内容的过滤最大的优点是，一旦有了有关物品的信息，它就可以开始推荐物品。基于内容的系统根据用户提供的信息工作，这些信息可以是显式的也可以是隐式的。根据数据，创建一个用户画像，为提供大量输入或对推荐采取行动。\n\
+    \n![](img/image865.jpg)\n\n"
+  toc: []
+- raw: Conclusion With some knowledge of basic Python, machine learning skills, and
+    Python libraries, you are now set to launch your first machine learning project
+    with Python. Consider learning the open-source Python libraries. The scientific
+    Python libraries will help you complete easy machine learning tasks. However,
+    the choice of some of these libraries can be completely subjective and highly
+    debatable by many people in the industry. All in all, we recommend you to start
+    by exploring Scikit-learn library. Make sure you are familiar with its concepts
+    and how to use it. Once you are done with it, you can dive deep into advanced
+    machine learning topics such as complex data transformation and vector machines.
+    Just like how a child learns how to walk is the same with learning Machine Learning
+    with Python. You need to practice many times before you can become better. Practice
+    different algorithms and use different datasets to improve your knowledge and
+    overall problem-solving skills .
+  fmt: '
+
+    Conclusion
+
+
+    With some knowledge of basic Python, machine learning skills, and Python libraries,
+    you are now set to launch your first machine learning project with Python.
+
+
+    Consider learning the open-source Python libraries. The scientific Python libraries
+    will help you complete easy machine learning tasks. However, the choice of some
+    of these libraries can be completely subjective and highly debatable by many people
+    in the industry.
+
+
+    All in all, we recommend you to start by exploring `Scikit-learn` library. Make
+    sure you are familiar with its concepts and how to use it. Once you are done with
+    it, you can dive deep into advanced machine learning topics such as complex data
+    transformation and vector machines.
+
+
+    Just like how a child learns how to walk is the same with learning Machine Learning
+    with Python. You need to practice many times before you can become better. Practice
+    different algorithms and use different datasets to improve your knowledge and
+    overall problem-solving skills.
+
+    '
+  trans: '
+
+
+    结论
+
+
+    掌握了基础 Python 知识、机器学习技能以及 Python 库后，你现在已经准备好用 Python 启动第一个机器学习项目了。
+
+
+    考虑学习开源 Python 库。科学 Python 库将帮助你完成简单的机器学习任务。然而，其中某些库的选择可能完全取决于主观判断，并且许多业内人士存在争议。
+
+
+    总之，我们建议你从探索 `Scikit-learn` 库开始。确保你熟悉它的概念及其使用方法。一旦掌握了它，就可以深入研究高级机器学习主题，例如复杂数据转换和向量机。
+
+
+    孩子学走路与用 Python 学习机器学习是一样的。在变得更好之前，你需要进行多次练习。尝试不同的算法并使用不同的数据集，以提高你的知识和全面的解决问题的能力。
+
+    '
+  toc: []
