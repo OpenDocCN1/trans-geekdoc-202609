@@ -1,0 +1,2 @@
++   [人工智能与机器学习：AI 超能力与人机协作——金融、医学与商业领域的愿景性革命。用现代方法发现时代的顶影响力人物。](README.md)
++   [人工智能与机器学习：AI 超能力与人机协作——金融、医学与商业领域的愿景性革命。用现代方法发现时代的顶影响力人物。](artificial-intelligence-and-machine-learning-ai-superpowers-_0.md)
