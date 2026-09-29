@@ -1,0 +1,1375 @@
+- pgno: 0
+  md: '# Remote Sensing of 274 (2022) 112999
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Remote Sensing of Environment
+
+
+    journal homepage: www://www.elvier.com/locate/rse
+
+
+    # Estimating downward swath radiation from VIIRS data using a transfer-learning
+    neural network
+
+
+    Ruohan Li, Dongdong Wang*, Shunlin Liang, Aolin Jia, Zhihao Wang
+
+
+    Department of Geographical Sciences, University of Maryland, College Park, MD
+    20742, USA
+
+
+    +   * Keywords:
+
+    * Transfer learning
+
+    * Machine learning
+
+    * VIIRS
+
+    * Downward swath radiation
+
+    * Radiative transfer
+
+    * Solar energy
+
+
+    In recent years, machine learning (ML) has been successfully used in estimating
+    downward swath radiation. To achieve global coverage, traditional ML models need
+    sufficient measurements covering various atmospheric and surface conditions globally,
+    which is difficult to accomplish. On the simulated data of a radiative transfer
+    model (RTM) is a possible solution. We used VIIRS indices from complex conditions
+    which bring bias to simulations. A neural network introduced with the transfer-learning
+    capability was used to estimate global DSR with only top-of-atmosphere and surface
+    albedo at local solar noon. The proposed method also estimates daily swath from
+    VIIRS Infrared Spectror Radiometer (VIIRS) data at 750m resolution, and is validated
+    by independent observations. The root-mean square error and relative root mean
+    square error of DSR observation over 28 Global Surface Network, and eight Greenland
+    Network stations in 2013-2015 were 12.3 (16.1%), 10.6 (18.3%), 7.5 (24.2%), and
+    the daily validation achieved was 30.5 (15.0) and 31.7 (17.4%), respectively.
+    The proposed method shows high accuracy over polar regions and similar performances
+    over others compared with traditional ML, physics models (e.g., look-up tables
+    and direction), and existing DSR products. The algorithm is also applied to VIIRS
+    data to test it in mapping cloud-product mask, and daily mapping shows spatial
+    patterns similar to Clouds and the Earth''s Energy System TOA surface and fluxes
+    products, with more data. Further analysis indicates that model performance improves
+    with the quantity of training data after TL has been. This study demonstrates
+    the potential of TL on both the generality and accuracy of DSR, which can potentially
+    be applied to other variables.
+
+
+    # 1. Introduction
+
+
+    The driving force of energy at the Earth''s surface and in the atmosphere, meteorological,
+    hydrological, and chemical processes drives downward radiation (DSR) provides
+    critical parameters for satellite observation and has been many faces of the science
+    (Li et al., 2019). Significant progress has been made regarding estimating DSR
+    from satellite observations, with both global and regional DSR products currently
+    available (Mueller et al., 2009; Rutan et al., 2012).
+
+
+    Previous methods that estimate DSR from satellite data are largely based on the
+    physics of radiative transfer models (RTMs). These methods can be classified as
+    inverse or forward
+
+
+    algorithms (Wang et al., 2021). Inverse model estimate DSR from directly observations
+    of top-of-atmosphere (TOA) reflectance. A look-up table (LUT) based approach is
+    also a typical inverse method. In this approach, results from RTMs are used, which
+    consequently simplifies the process (Bings et al., 2019). The forward method uses
+    TOA reflectance to estimate the atmospheric conditions and surface flux using
+    offline LUT. Methods such as LUT use linear interpolation to sort atmospheric
+    conditions within the calculated has (Mueller et al., 2019). Parameterization
+    definition for different atmospheric conditions, These methods usually make more
+    accurate estimates, but fewer valid values as they require their'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'high-level atmospheric aerosols and particles using (Wang et al., 2021). This
+    also poses difficulties in parameterization method to generate high spatial and
+    temporal resolution DRS.
+
+
+    Machine-learning (ML) have been extensively used to estimate DRS over the past
+    years, owing to their superiority to capture non-linear relationships with high
+    efficiency. Random-forest, gradient regression tree (GBT), and neural networks
+    (NNs) have been used to estimate DRS (Bafar et al., 2020; Chen et al., 2020).
+    In recent years, some deep-learning methods, such as convolutional NNs (CNN) (Wang
+    et al., 2019) and regression NNs (Skaheli, 2020), have also been employed (Yuan
+    et al., 2020). Several studies have compared these ML models and presented the
+    best performances (Brown et al., 2020; Wei et al., 2019).
+
+
+    However, the accuracy of ML methods depends on the quality and quantity of training
+    data (Zhang et al., 2018). Some models were trained on satellite data (Hao et
+    al., 2019; Peng et al., 2020; Wei et al., 2019; Yang et al., 2018). Such models
+    achieve high accuracy when trained on regional scale or train with data that are
+    representative enough. However, the results have not been fully demonstrated with
+    more scores because since representative training data is hard to obtain, especially
+    for orbiting sensors.
+
+
+    Other models are trained using transfer functions which can shift uncertainties
+    under different atmospheric conditions and different surfaces (Bu et al., 2019;
+    Ma et al., 2020; Sun et al., 2021; Yuan et al., 2022). The data size is usually
+    large enough, which is preferred by NNs.
+
+
+    However, nowadays to address the number of inputs by different parameters and
+    model efficiency, gaps still exist within the RTM framework. Most models are still
+    based on completely consistent 1-dimensional column, which is considered as horizontally
+    homogeneous and infinite (Chen et al., 2019), making the multilayer and 3-dimensional
+    effects ignored. At regional scale, accuracy is especially with sufficient measurements
+    from vertical profiles.
+
+
+    It would be ideal to combine both simulated and ground measurement data in the
+    training model which can be achieved by adopting the use of transfer learning
+    (TL). The models will use source data as a starting point, and fine-tuned in the
+    process of developing a model for target domain (Pan and Yang, 2019). It is a
+    method that has been proven to provide improved generalization, even when the
+    target datasets are trained with Pan and Lim (Hansen et al., 2017), as simulations
+    provide sufficient information to bridge the gap of physics knowledge which gap
+    between the simulated data and real-world data can be filled when
+
+
+    This study proposes a robust method using TL to estimate aerosol optical depth
+    based on Visible Infrared Imaging Radiometer (VIIRS) TOA reflectance and Moderate
+    Imaging Spectrorometer (MODIS) black-albedo (BA)) at local noon with. The proposed
+    method leverages the advantages of both using
+
+
+    radiative transfer simulation data and ground measurement data for training, which
+    enables accurate estimation of DRS under various climate regions, especially polar
+    regions. The remainder of this paper is organized as follows: Section 2 describes
+    the data and acquisition method; Section 3 describes the methodology; Section
+    4 presents and discusses results; The conclusions are drawn in Section 5.
+
+
+    # 2. Data
+
+
+    # 2.1. Real-world data, Dd
+
+
+    Let Dd be the real-world data as the target domain in our study, Dd is composed
+    of satellite data and in-situ measurements which are matched based on their locations.
+
+
+    # 2.1.1. Satellite data
+
+
+    The TOA reflectance, geometry information, and BSA were extracted from satellite
+    data: VIIRS/SMI NPP Moderate Resolution Bands (VNP03), VIIRS/SMI NPP Moderate
+    Resolution Correction Geocleed (VNP05), and MODIS/Terra Aqua High Resolution Band
+    (IACG). The MODIS products with high spatial resolution and pixel-level quality
+    for M75-M11 (for M6) are used in our study. VNP03 includes regional geospatial
+    coordinates and location values with angular information. The BSA from MODIS bands
+    MCD043, which are produced daily at 50-meter resolution, 16 days of Terra and
+    Aqua data were used in MCD043, consequently matching available data.
+
+
+    # 2.1.2. In-situ data
+
+
+    In-situ observations are collected from four different regions in this study.
+    96 sites from FLUGNET global network of meteorological sites were used as training/fine-tuning
+    datasets. The results are validated with eight Baseline Radiation Network (BSRN)
+    stations, Green Baseline stations, and five stations with observations from 2013
+    to 2014. All validation data are presented in the text.
+
+
+    Both BSRN and aerosol stations provide high-level measurements for the Aerosol
+    Research Program (Organization et al., 2000). The distribution of in-situ data
+    is shown in Fig. 1. The instantaneous DRS is calculated by averaging the nearest
+    half-hour data of VIIRS over time, and the daily DSR is the mean of all measurements
+    in one day and (Yuan et al., 2021). Measurements with a solar zenith angle (SZA)
+    higher than 80 degrees are excluded.
+
+
+    Let Ds be the source data of this study. MODTRANICS (Beck et al., 2004) is generated
+    for the simulated data. Using Wang the relative transfer model was used for 94
+    days of solar zenith angle (SZA), and values of relative aerosol angle (RAA).'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'R. Li et al.
+
+
+    Remote Sensing of Environment 274 (2022) 112999
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_2_0.png)
+
+
+    Fig. 1. Distribution of ground measurement stations. Data training are created
+    as labels. Validating and testing data are labeled as triangles.
+
+
+    aOD(s), and water-vapor loads are modeled under clear skies. For cloudy skies,
+    cloud optical depths (CODs), types, heights, and water-vapor loads are set as
+    input. The scattering and absorption of atmospheric particles are ignored when
+    clouds are present.
+
+
+    Daily DSR are averaged from instantaneous DSR throughout the day, and for the
+    same SZA, view, surface, and atmospheric conditions, instantaneous DSRs at anytime,
+    i in day are related to SZA. Daily simulations include more parameters (i.e.,
+    latitude and solar declination angle) to calculate $D_{SZA}$. Detailed settings
+    are listed in Table 1.
+
+
+    In summary, MODRAN is operated with the combination of 24 cases of view, 245 surface
+    albedo, 576 cloudy-atmospheric conditions, and a comprehensive database. However,
+    not all NOT models are used as inputs. Sensitivity analysis of previous studies
+    have shown that SZA, albedo, and cloud fraction are the true-factors influencing
+    the DSR for all sky-types (
+
+
+    (Hansen, et al., 2019), only spectral TOA reflectance, surface albedo, and geometry
+    information are required for the proposed model. The other driving parameters
+    for the simulation model are flattened. $D_{sim}$
+
+
+    # 2.3. Additional data
+
+
+    The proposed method is also considered with high resolution DSR products including
+    the DSR product based on the Earth-Chromatic Imaging Camera (EPIC), the Earth
+    System Model (BESS) water radiation product, the Global Land Surface
+
+
+    Table 1
+
+    Driving parameters used in MODTRAN
+
+
+    | Parameters | Values |
+
+    |---|---|n| Solar zenith angle (SZA) | 0.10,20,30,40,50,60 |
+
+    | View zenith angle (SZA) | 0.10,20,30,40,50,60 |
+
+    | Relative azimuth angle (RA) | 0.00,30,60,90,120,180 |
+
+    | Aerosol types | 5 |
+
+    | Aerosol optical depth (AOD) | 0.00,0.05,0.1,0.2,0.4,0.6,1.0 |
+
+    | Cloud fraction | 0.0,0.1,0.3,0.5,0.7,0.9 |
+
+    | Cloud types | stratus, cumulus, altostratus, nimbostratus |
+
+    | Cloud optical depth (COD) | 0.25,1.2,2.3,5,10,20,30,60,120,240 |
+
+    | Water vapor | 0.1,1.5,3.0,7.0 |
+
+    | Latitude | 0.10,20,30,40,50,60,70,80,90 |
+
+    | Declination angle | -23.5/-22.3/2.5/23.5 |
+
+
+    Satellite (GLASS) DSR product, and MODIS/TERRA+Aqua Surface Radiation data approach
+    (MCD18A). The EPIC uses the random method to generate DSR at 0.1 degree spatial
+    resolution and 1-2 h temporal resolution. The BESS product is based on NN trained
+    from simulations. A series of MODIS atmosphere and land product data are included
+    as inputs of the model. The GLASS also provides daily DSR at 5 km; it implements
+    the direct atmospheric approach based on MODIS TOA spectral reflectance and bands
+    (Zhang et al., 2019). Clouds and the Earth''s atmosphere are modeled (Wang et
+    al., 2021). The Synoptic Cloud (SNYP) DSR is used in this study as a reference
+    as it offers the accurate DSR estimation at 1 degree worldwide (Ji et al., 2021;
+    Zhang et al., 2023). We use Fusel-Li fusion method to merge various satellite
+    observations and radiance data (Sunita et al., 2012).
+
+
+    CLIMS12, VIIRS SNPP are also used as inputs. This method provides the algorithms
+    for MOD05 at spatial resolution of 750 m. Both snow and cloud information in this
+    study are derived from the CLIMS12, VIIRS SNPP product.
+
+
+    # 3. Methods
+
+
+    # 3.1. NN
+
+
+    Simple back-propagation NN has been widely used to estimate DSR in various studies
+    (Wang et al., 2018; Biyu et al., 2019; Wang et al., 2021). The theoretical base
+    of the algorithm is Takenaka et al. The proposed model for the DSR estimation
+    includes 10 bands of TOA reflectance, surface albedo, and geometry. Daily models,
+    two more are are related to latitude and declination angles. The sensitivity analysis
+    of the input parameters is discussed in Section 4.1. To determine the parameters
+    of the NN model, the model is trained on different datasets. SURFAD is used to
+    validate and select the model parameters. Parameters to balance the accuracies
+    and efficiencies, four-layers (one input, two hidden, and one output) are selected.
+    The first layer has 25 neurons followed by another 5 neurons with linear activation
+    function (Nan and Hinton, 2010). The output layer has one neuron corresponding
+    to the DSR value of linear activations. The weights of the model, we, are initialized
+    using the Glorot import:
+
+
+    3'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '$w \sim \sqrt{\frac{\sqrt{6}}{n_i+n_{i+1}}} + \frac{\sqrt{6}}{n_{i+1}+n_i}},
+    \quad l=0, \dots, L-1; \quad (1)$
+
+
+    where L is the number of layers in the NN, and $n_i$ is the number of neurons
+    in layers. The numerical values of the DSR, the final outputs of the model and
+    the mean-square error (MSE) function are used as the error function:
+
+
+    ```
+
+    $E(w) = \sum [v(x) - h_i]^2; \quad (2)$
+
+    ```
+
+
+    where $h_i$ is the simulated/measured DSR for the $i$th sample. The error function
+    is further minimized using RMSProp (Hinton et al., 2012), which is a type of stochastic
+    gradient descent that enables a stable learning curve and boosts the speed by
+    calculating the differential square weighted average of the gradient.
+
+
+    ensured that the model is not overfitted to the given measurements. BM learned
+    the knowledge from the simulation data. To adapt the model to real-world data,
+    the model is fine-tuned by matching the data between satellite products and FLUXNET
+    measurements. Previous studies showed that the first layers of the NN models are
+    more sensitive to weight initialization. In this paper, the weights of the first
+    layers, $w_1$, were originally initialized from BM, as shown in Fig. 2, meaning
+    that they were later updated by (1), using RMSProp during the process of (2),
+    with $x \in D_{sim}$. Consequently, the BM can be represented as $g_1(x, w_1),
+    x \in D_{sim}$.
+
+
+    # 3.2. Transfer learning model construction
+
+
+    The construction of the transfer learning model requires two rounds of training
+    (Fig. 2). It is firstly trained from the source domain, which is $D_{sim}$ in
+    this model. The here is referred to as the BM. Then the model is firstly-tuned
+    by the target domain, which is $D_{tar}$, for better DSR estimation and regarded
+    as a transfer learning model (BM, TL).
+
+
+    BM was constructed following the NN configuration, with training datasets consisting
+    of simulation data. BM can be summarized as $(x, w), x \in D_{sim}$. We randomly
+    split the simulation data into 80% training data and 20% validation data for training,
+    no cross-validation was we applied. Since the sample size is large enough, we
+    also used SURFRAD as additional validation data to
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_3_0.png)
+
+
+    In this proposed, the model was trained and evaluated on independent sites (i.e.,
+    no overlap sites exist between the training and target domain). FLUX-NET dataset
+    is used for training/tuning data, as they have sufficient measurements globally.
+    SURFRAD results were used for model selection and tuning hyper-parameters. FLUXNET,
+    SURFRAD, and BSR presented similar results which GCN captures the difference in
+    peak of the water vapor basis of SOA and aerosol although located at high latitude
+    areas where GCNs provide unique measurements where some existing DSR products
+    degrade (Li et al., 2021). Hence, it is helps to investigate the model''s performance
+    under representation conditions. The mean root square error (RMSE), mean bias
+    difference (MBD), and R-square ($R^2$) measures are the assessment metrics of
+    this study.
+
+
+    Fig. 2. Flowchart for constructing the BM_TL.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Other. methods
+
+
+    To compare the traditional NN with the proposed method, a baseline model, BM,SA
+    is trained purely from in-situ measurements. BSA can be estimated as $\hat{y}_{sa}$.
+    The NN configuration with TL is applied. FLUXENet is used as the only training
+    data and SURFRAD is used as validation data.
+
+
+    The narrow-band LUT test was first proposed by [Fang et al., (2020)], which includes
+    a reference TL to analyze the atmospheric condition of the target area. We use
+    the pre-calculated results from the same RTM method.
+
+
+    The method is further developed by [Wang et al. (2020)] to generate MCD18 products.
+    It is noticeable that the LUT method was applied to the MCD products in this study.
+    The Divergence between VIIRS and MODIS bands leads to the results being slightly
+    different from the previous ones [Wang et al., 2020].
+
+
+    Direct estimation utilizes the relationship between TL OA and surface reflectance
+    under cloudy and clear conditions. The coefficients are also estimated from the
+    same RTM data. In case, we generate coefficients for each VIRS band. The surface
+    shortwave flux by combining these bands. The ISR is calculated by combining the
+    method class information- from the CLMSK_L2 VIIRS, SURFRAD BSNR products.
+
+
+    # 4. Results and discussion
+
+
+    # 4.1. Sensitivity analysis
+
+
+    Since using VIIRS TOA reflectance for ISR estimation, a sensitivity analysis was
+    conducted to investigate the impact of the input variables for instantaneous and
+    daily D estimation. The Sobol analysis method (Sobol, 2001) from the SALIB library
+    in Python was employed. First-order indices (S1) and total-order indices (ST)
+    of
+
+
+    were measured; SI the contribution to the output variances caused by a single
+    input. ST is all higher-order indices of this input. The results are shown in
+    Fig. 3. For instantaneous D, the used band-4 with the range 0.4-0.6 um most the
+    information needed for the D estimation. Among them, band4 is higher than other
+    bands. Near infrared to mid-infrared bands 5-11 also account for 12.5% in total,
+    but most is the variance from interaction with other inputs. Unlike previous sensitivity
+    analysis for over, band4 has a more important role.
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_4_0.png)
+
+
+    Fig. 3. The first-order indices (S1) and total-order indices (ST) for input variables
+    of daily and instantaneous BM,TL.
+
+
+    # 4.2. Comparison with traditional NN methods
+
+
+    The proposed method is tested on the in-situ data in networks in 2013 and the
+    results are statistically due to the different properties of each network in this
+    study. FLUXENet is used as the training data of BM, SA and TM. TL model enhances
+    to represent the characteristics of these two models. To demonstrate how TL improves
+    the traditional ML, the proposed model (TL) is also compared with BM and SA.
+
+
+    For instantaneous D, a higher RMSE shows SA over FLUXENet. The RMSE of the BM
+    model over FLUXENet, SURFRAD and BSNR data scored 127.0, 126.2, and 104.5 $W/m^{2}$
+    respectively, BM,SA achieved an RMSE of'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'Li et al.
+
+
+    Remote Sensing of Environment 74 (2022) 119999
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_5_0.png)
+
+
+    # FLUXNET BM
+
+
+    # SURFAD BM
+
+
+    # BSRN BM
+
+
+    # GC-NET BM
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_5_1.png)
+
+
+    # FLUXNET(train) BA
+
+
+    # SURFAD BM, SA
+
+
+    # BSRN BA
+
+
+    # GC-NET BA
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_5_2.png)
+
+
+    # FLUXNET(train) TL
+
+
+    # SURFAD BM, TL
+
+
+    # BSRN TL
+
+
+    # GC-NET TL
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_5_3.png)
+
+
+    Fig. 4. Comparing the estimated instantaneous DSR BY, BM, SA, and TL models across
+    datasets at SURFAD, BSRN, and GC-net stations in 2013.
+
+
+    104.3, 101.1 and 92.4 W/m². GC-NET stations, had a lower RMSE of 81.9 W/m² compared
+    to BM SA, which had an RMSE of 100.2 W/m². The RMSE of BM TL was 99.7, 12.2 (16.1%),
+    75.2 (24.2%) over FLUXNET, SURFAD, and BSRN stations,
+
+
+    31.3 (4.4) W/m² over FLUXNET, SURFAD, BSRN, and GC-NET stations, respectively,
+    for low DSR distributions.
+
+
+    In summary, BM achieved a higher accuracy for the FLUXNET, SURFAD, and BSRN stations
+    for instantaneous and daily estimates, compared to the ML model which trained
+    only on in-situ data. The SURFAD and BSRN stations have a similar sample size
+    to the training data from FLUXNET, which led to higher performance on these stations.
+
+
+    The comparisons between the estimated DSR are shown in Fig. 5. Similar to the
+    stated, BM achieved significantly better results than over FLUXNET, SURFAD, and
+    BSRN stations.
+
+
+    The RMSE of BM TL was 58.2 W/m² over FLUXNET, 62.8 W/m² over SURFAD, and 86.5
+    W/m² over BSRN. It is noticeable that the difference between BM and BM SA was
+    not as large as the difference between the instantaneous samples due to
+
+
+    the assumption of stable characteristics throughout a day. The overfitting of
+    the insufficient training data over polar regions, the overfitting of the BM TL
+    model posed, and BM TL presented significant improvements over GC-NET stations
+    and slightly better results for the FLUXNET, SURFAD, and BSRN stations,
+
+
+    The RMSEs of BM, TL were 33.2 (18.1%), 33.5 (17.6%), 30.8 (15.5%).'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# FLUXNET
+
+
+    # SURFAD BM
+
+
+    # BSRN BM
+
+
+    # GC-NET BM
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_6_0.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_6_1.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_6_2.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_6_3.png)
+
+
+    # FLUXnet(train) BM SA
+
+
+    # SURFAD BM SA
+
+
+    # BSRN BM
+
+
+    # GC-NET BM SA
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_6_4.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_6_5.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_6_6.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_6_7.png)
+
+
+    # FLUXNET(train) BM TL
+
+
+    # SURFAD BM TL
+
+
+    # BSRN BM
+
+
+    # GC-NET BM TL
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_6_8.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_6_9.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_6_10.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_6_11.png)
+
+
+    Figure 7 compares the estimated DSM by BM, BM, SA, and TL models observed at stations
+    SURFAD, BSRN, and GC-NET stations in 2013.
+
+
+    better for those cases, but the improvements were limited. Areas greater than
+    70%, the RMSE of all three models demonstrated, especially for BM, SA and TL.
+    The difference between BM and SA was large in this case. TL still achieved better
+    than BM over, but when BSA was greater than 60°, BM failed to fail. The RMSE of
+    BM, SA, and TL showed different performance in the comparisons of DSM. BM, SA,
+    and TL showed much better performance when WSA was low. When WSA was greater than
+    60°, BM failed to fail. The RMSE of BM, SA, and TL showed that the models had
+    different performance under different conditions. For non-snow cases, the RMSE
+    of all three models were similar. For snow-covered pixels, the RMSE of all three
+    models were similar, but TL achieved the lowest RMSE. At atmospheric conditions,
+    the RMSE of all models showed similar performance over BM at SURFAD and BSRN stations.
+    When weather was clear or clearly cloudy, the three models showed similar estimation
+    accuracy. As it probable cloudy or cloudy,
+
+
+    # 4.3. Comparison with methods
+
+
+    In this study, the BM method was compared with two traditional physical methods,
+    neural network and direct LT, using the same input data to ensure comparisons.
+    The results of the neural network method can be found in (2021). The coefficients
+    of LT and the direct estimation method were also retrieved from the RMT sampled
+    data. Fig 8 shows the value results of estimation for SURFAD, BSRN, GC-NET stations.
+    For SURFAD the RMSE of LT and the direct estimation method were 140.0 and 142.2
+    W/m², respectively, and for BSRN stations, they were 108.4 and 118.8 W/m'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'R. Li et al.
+
+
+    Remote Sensing of Environment 274 (2022) 112999
+
+
+    # latitude
+
+
+    # SZA
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_7_0.png)
+
+
+    Fig. 6. Comparisons of the estimated instantaneous DSR by BM, BM_SA, and BM_TL
+    models at different latitudes and SZA.
+
+
+    # Snow
+
+
+    # Cloud
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_7_1.png)
+
+
+    Fig. 7. Comparison between the estimated instantaneous DSR by BM, BM_SA, and BM_TL
+    model under snow and cloud conditions for each testing network.
+
+
+    The BM_TL model achieved a lower DSR of 106.6 m² and 91.2 W/m² over SURFRAD and
+    BSRN. For daily DSR estimation, the RMSE of LUT and the direct estimation method
+    for SURFRAD stations were 48.8 and 49.9 W/². For BSRN, these were 43.5 and 42.2
+    W/m². Again, the BM_TL model achieved a lower RMSE of DSR, over SURFRAD and BSRN.
+    There are some reasons for the superior performance of BM_TL, which is shown through
+    the simulation data, LUT and the direct estimation method only use linear interpolation
+    to calculate DSR, while BM_TL can capture the non-linear relationship. Furthermore,
+    in addition to the simulation data, BM_TL leverages information from the ground
+    measurements, which minimizes the uncertainties that originate from the conditions
+    in
+
+
+    the simulation data. The superiority of BM_TL was also particular to the case
+    of estimating over-GCNET stations. The RMSE of LUT and the direct estimation method
+    instantaneous DSR were 124.4 and 129.9 W/m². Invalid of the direct estimation
+    method exists with SZA higher than 75 degrees explains the higher RMSE while compared
+    to LUT, BM_TL has a lower RMSE, which is shown through the simulation data and
+    improved. For daily estimation, the RMSEs were 52.1 and 40.8 W/m², for LUT and
+    direct estimation methods, whereas BM_TL achieved a RMSE of 38.0 W/m². In addition
+    to the aforementioned reasons, the improvements of BM_TL over LUT GCNET stations
+    are also due to the combination of multiple bands ranges ranging from
+
+
+    8'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# SURFAD LUT
+
+
+    # BSRN LUT
+
+
+    # GCNET LUT
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_8_0.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_8_1.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_8_2.png)
+
+
+    # SURFAD Direct estimation
+
+
+    # BSRN Direct estimation
+
+
+    # GCNET Direct estimation
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_8_3.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_8_4.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_8_5.png)
+
+
+    # SURFAD BM TL
+
+
+    # BSRN BM TL
+
+
+    # GCNET BM TL
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_8_6.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_8_7.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_8_8.png)
+
+
+    Fig. 8. Comparison between the estimated DSR by LUT, Direct, and BM model with
+    ground measurements at SURFAD, BSRN, GCNET stations.
+
+
+    medium-wave infrared to better discriminate from storm cloud. The validation result
+    reveals the dilemma faced by traditional inversion methods can be improved by
+    TL, especially in high latitude areas.
+
+
+    significantly higher and lower RMSE and RMSE than existing products. However,
+    the results are not based on the sample validation during the same period, because
+    it only shows the similarity between the results.
+
+
+    For the DSR estimation, we validation with our proposed method shows some results
+    from SURFAD, BSRN and GCNET (Table 3). Invalid values were removed from the comparison.
+    TL has a comparable RMSE and RMSE over all stations, and is least biased compared
+    to the other three products.
+
+
+    The results of the proposed method also contain high resolution DSR. Table 2 presents
+    the comparison results with GLASS, BEISS, and EPIC at an instantaneous scale.
+    The statistics were collected from several recently published liter datasets (Hao
+    et al., 2019; Ryu et al., 2018). The proposed method had a
+
+
+    # 4.4. Comparison with existing DSR products'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# SURFRAD LUT
+
+
+    # BSRN LUT
+
+
+    # GCNET LUT
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_9_0.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_9_1.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_9_2.png)
+
+
+    (a)
+
+
+    (b)
+
+
+    (c)
+
+
+    # SURFRAD Direct Estimation
+
+
+    # BSRN Direct Estimation
+
+
+    # GCNET Direct Estimation
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_9_3.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_9_4.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_9_5.png)
+
+
+    (d)
+
+
+    (e)
+
+
+    (f)
+
+
+    # SURFRAD BM TL
+
+
+    # BSRN BM TL
+
+
+    # GCNET BM TL
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_9_6.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_9_7.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_9_8.png)
+
+
+    (g)
+
+
+    (h)
+
+
+    (i)
+
+
+    Fig. 9. Comparison between the estimated DSR by LUT, Direct estimation, and BM
+    models with SURFRAD, BSRN, GCNET-statistics.
+
+
+    possible be considered. Firstly, spectral resolution limits the DSR validation
+    results (Li et al., 2021). The lower the spatial resolution, the higher the validation
+    accuracies. BESS and GLASS are S and MCD18 is 1 km resolution which the estimated
+    DSR at 750 m. Secondly, the source data must have the retrieval accuracies. The
+    proposed method is using newly VIIRS TOA data. BESS, GLASS, and MCD18 are all
+    mature while the proposed method is still at the development stage. No adjustments
+    procedures have been added for production generation.
+
+
+    # Table 2
+
+    Summary of comparisons between BM, TL estimated instantaneous DSR with EPIC, GLASS,
+    and BESS.
+
+
+    | Products | Time scale | $R^2$ ($m^2$) | Bias ($m^2$) | rRMSE | Reference |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | EPIC | Hourly | 0.83 | 113.21 | 2.34 | (Iao et al., 2019) |
+
+    | GLASS | Instantaneous | 0.83 | 115 | -6.5 | (Ryu et al., 2018) |
+
+    | BESS | Instantaneous | 0.84 | 123.3 | -0.3 | (Ryu et al., 2018) |
+
+    | BM,TL | Hourly | 0.91 | 8.6 | 18.3 |'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Table 3
+
+
+    Summary of comparisons between BM,TL estimated daily DSR with BESS,
+
+    GLASS, and MCD8.
+
+
+    | Network | Products | R² (W/m²) | Bias (W/m²) | rRMSE (%) |
+
+    |---|---|---|---|--|
+
+    | All | BESS | 0.91 | -32.0 | 15.4 |
+
+    | | GLASS | 0.83 | -45.2 | 21.7 |
+
+    | | MCD-18 | 0.77 | -19.4 | 53.9 |
+
+    | | BM-TL | 0.90 | -31.7 | 25.9 |
+
+    | | BESS | 0.91 | -30.6 | 15.2 |
+
+    | BSRN and SURFRAD | GLASS | 0.93 | -27.8 | 13.8 |
+
+    | | MCD-18 | 0.98 | -35.1 | 17.4 |
+
+    | | BM-TL | 0.90 | -31.6 | 15.7 |
+
+    | CGNET | GLASS | 0.64 | -57.1 | 37.2 |
+
+    | | MCD-18 | 0.55 | -72.1 | 40.6 |
+
+    | | BM-TL | 0.92 | -32.2 | 13.6 |
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_10_0.png)
+
+
+    # 4.5. Temporal analysis
+
+
+    Since the training of the proposed models was based on measurements in 2013, we
+    also validated the models with measurements in 2014 SURFRAD sites to test its
+    capacity for future inter-annual results.
+
+
+    The results are shown in Fig. 10. The rRMSE is 17.5% and 17.1% for instantaneously
+    and daily, and no bias is observed. We present a similar analysis for both instantaneous
+    and daily data. The rRMSE for the measurements in 2013 and 2016 are 18.9% and
+    17.6% in terms of rRMSE (Fig. 4 and Fig. 5).
+
+
+    To evaluate the stability of the proposed method, the rRMSE and rmse were calculated
+    for each month over the validation period. The results are shown in Fig. 11. Similar
+    to in previous analysis (Li et al., 2021), comparatively higher rRMSE were observed
+    from November to March, and the lowest rRMSE was observed from May.
+
+
+    The 7% lowest rRMSE was observed in July, and overestimation of DSR occurred from
+    August to October and underestimate from October to February.
+
+
+    Our analysis shows that the higher the latitude, the more obvious seasonal trend
+    was present in current DSR results (Li et al., 2021). To evaluate the stability
+    of the proposed method over high latitude areas, the daily variation of DSR over
+    eight CGNET stations in 2013 are plotted in Fig. 12. Consistencies observed between
+    measured and estimated DSR. The magnitude and distribution of DSR are captured
+    in most cases. By adopting satellite estimates, the proposed method can
+
+
+    also fill the gaps of measurements. For example, no measurements are available
+    at Humboldt sites before May but continental estimates can be provided by the
+    proposed method. The accurate retrieval of DSR over polar regions was challenging
+    and limited for ground measurements due to weather factors; hence, the stable
+    and high latitude areas will be of benefit in future to study polar climate.
+
+
+    # 4.6. DSR mapping
+
+
+    BM,TL used satellite imagery to demonstrate effectiveness. Three VIIRS swaths
+    over Greenland, Ural, and Middle East were chosen, where stations are available
+    to provide measurements. We generated DSR maps for these three regions. A random
+    day, June 26, 2003, was chosen for both observation and daily mapping.
+
+
+    We presented the estimated DSR mapping. VIIRS red-green-blue (RGB) images are
+    plotted for instantaneous estimation because the exclusion of clouds corresponds
+    to daily DSR. To cover the cloud mask over areas on RGB images, CLDMMS,L2 VIIRS,SNNP
+    data were also used. It was also noted that the BM,TL based DSR estimations presented
+    similar patterns with cloud over all three regions. BM,TL was also able to distinguish
+    distinct
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_10_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'Yi Li et al.
+
+
+    Remote Sensing of Environment 274 (2022) 112999
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_11_0.png)
+
+
+    Fig. 12. Daily variation of estimated and measured DSR over GCNET stations in
+    2013.
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_11_1.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_11_2.png)
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_11_3.png)
+
+
+    Fig. 13. Estimated instantaneous DSR and VIIRS RGB images and with cloud-covers
+    over Greenland, Ural, and Middle East areas on June 6th, 2013.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Li et al.
+
+
+    # Remote Sensing of Environment 274 (2022) 110299
+
+
+    phase to estimate DSR values properly. For example, higher DSR was estimated over
+    periphery areas than the middle area of the clouds in Middle East. The BM, TL
+    model also performed well over snow-covered regions. The cloud mask revealed revealed
+    the presence of clouds in the middle of Greenland, where the TL model correctly
+    accounted for snow and estimated DSR properly. This agrees with previous validation
+    results over DSR regions. Fig. 14 compares the estimated daily DSR mapping and
+    corresponding CERES-SYN results over the three areas on June 6th, 2013. Similar
+    spatial patterns and color scale were preserved between the daily DSR estimated
+    by BM, TL and that retrieved from CERES-SYN. Moreover, owing to the high spatial
+    resolution of
+
+
+    VIIRS, more detailed information could be observed from the BM maps; however,
+    some differences persist, as those over the west part of Greenland and southwest
+    of the Middle East.
+
+
+    # 4.7. Impact of the training data size
+
+
+    As TL was first introduced to combine RTL simulated data and in-situ data, more
+    analysis was performed to show how the size of training data influence the TL,
+    performance compared with traditional NN. We used instantaneous estimations here.
+
+
+    Six subsets of the full data are employed using a different number of stations
+    (5, 10, 30, 50, 70, and 96) to train the BM,SA and
+
+
+    ![](img/f3835d0c09050f62eab4bbb224c51e70_12_0.png)
+
+
+    Fig. 14. Estimated daily DSR and comparison with CERES-SYN daily DSR over Greenland,
+    Ural, and Middle East areas on June 6th, 2013.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "BM, TL. For each model, the stars were randomly chosen\nfrom FLUXNET stations\
+    \ to minimize the fluence of\ntraining data representativeness. The models were\
+    \ tested using SURFAD\\and GCNET. The model structure and configuration were\n\
+    retained, except for the frozen layers and nodes, which were\nidentified through\
+    \ manual tuning.\n\ndata. It transfers the learned from the simulated data to\n\
+    free by freezing one layer of the model and re-training it on\nFLUXNET measurements.\
+    \ The models were independently validated\nseven SURFAD stations, 25 BSN stations,\
+    \ and GC-NET stations. The\nates the RMSE were 106.3, 91.2, and 71.7%\nrespectively.\
+    \ respectively were compared with traditional ML-\nand physical algorithms, and\
+    \ provided significant imple-\nment of the data.\n\ninclude the improvement in\
+    \ Fig. 5 and Table 4 can be drawn. First, \nlarge RMSE was observed for BM, TL,\
+    \ especially when the data\nsize was smaller than 50 stations. For SURFAD, the\
+    \ RMSE of\nBM was 28.5%, and for TL, it was 23.8%, compared to the\nBSA from a\
+    \ range of 21-7%. The difference was between\nthen testing GCNET; the RMSE of\
+    \ BM reached 71.7% while\nTL achieved nearly half of BSA, for GCNET, for stations\
+    \ were\n\nthere are several advantages of the proposed algorithm. It only re-\n\
+    \ TL and BSA as inputs, which enables architectures\ninherently better by high-level\
+    \ data and retrieves at with\nBSA raw values (15-300). TL is a bridge that can\
+    \ connect\nthe gap between physical and statistical models. The\nGenericity and\
+    \ accuracy were both proved, which enables an\nmethod was applied with.\n\nthe\
+    \ (stations) by 10 times or less and 0 W/m² was stated for\nSURFAD and GCNET,\
+    \ almost were observed over ML. For BM\nTL from all data. When training from small\
+    \ size,\nthe performance of the model improved, and the RMSE was\nlower than 6\
+    \ W/m² for BM, TL, while it reached 100 W/m² for BSA\nover SURFAD, and 34 W/m²\
+    \ for BM, TL while it\nreached 62.6 W/m² for BSA, GCNET stations. One possible\n\
+    \nThe current algorithm still has for improvement. The ex-\nample, the model did\
+    \ not consider topology as an input.\nhas been noted by previous studies that\
+    \ influence distr\nd and spatial resolution and BSA at noon rather the\nblue sky\
+    \ is used as input in this study. Nevertheless,\nestations still exist in the\
+    \ proposed method due to lack of\nother data and structure which could incorporate\n\
+    albedo and climatology data or train the model with less\nbands to address the\
+    \ issue. In this study, a simple four-layer NN is\n\nrandom weights. When randomly\
+    \ selecting from\nthe training data pool, it is possible that some stations are\n\
+    representative and have better measurement quality. The results that\nthe difference\
+    \ between BM, TL, and BSA also increases,\nminas data size increases, especially\
+    \ over SURFAD sta-\ntions.\n\nThe daily data was used for training to\nthe reality\
+    \ of CSERNS-SUN, TL also presents high\nover polar regions where some methods\
+    \ exist daily. Last, TL\nrevealed the potential of training a model that mitigates\
+    \ the\nterror and significantly improves performance. For geographical\nstudies\
+    \ where limited stations were used as training data. For\n\nThis is possible,\
+    \ when including all of the data\nhraining has already covered suited conditions\
+    \ for\nthe testing sites. The comparative method\nmay also be after.\n\nIn summary,\
+    \ TL has superior results when limiting data\ntrain and NN. Its superior performance\
+    \ show\nitional the improvement of the accuracy as well as the still\nThe advantages\
+    \ of TL are less proved when the training data\nsize increases, but it performs\
+    \ better over under-representative\nstations. The knowledge\nledge learned from\
+    \ simulation data, TL can achieve\nperforms when the size of the training data\
+    \ is small. This\ncharacteristic will potentially help estimate more geographical\n\
+    variables when ground-measurement data is.\n\ncombination of TL with a deeper\
+    \ and more soph-\nticated NN can potentially deliver further performance.\n\n\
+    # 5. Conclusion\n\nThis study proposed an NN with TL to estimate global\nant and\
+    \ daily data from VIIRS POA sources.\nfour-layer NN was constructed and trained\
+    \ on RTM simulated\n\nAuthor credit statement\n\nD. Wang and R. Li Conceptualized\
+    \ the research. R. Li and D. Wang\n\n![](img/f3835d0c09050f62eab4bbb224c51e70_13_0.png)\n\
+    \nFig. 15. Comparison between BM, TL, BSA stations trained on 5, 10, 30, 50, 70,\
+    \ and (96) all FLUXNET stations."
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Evaluation of BM,TM trained on 10, and 50 FLUXNET times over SURFAD and GCNET
+    methods.
+
+
+    Table 4
+
+    | N | Model | SURFAD RMSE (W/m²) | SURFAD rmse (%) | SURFAD STD (W/m²) | GCNET
+    RMSE (W/m²) | GCNET rmse (%) | GCNET STD (W/m²) |
+
+    | 5 | BM | 124.6 | 21.5 | 15.8 | 22.2 | 71.7 | 55.1 |
+
+    | 10 | TM | 117.2 | 19.2 | 5.4 | 115.5 | 36.6 | 23.6 |
+
+    | 20 | BM | 160.2 | 27.6 | 100.0 | 182.0 | 60.6 | 62.6 |
+
+    | 30 | TM | 107.0 | 18.4 | 5.8 | 112.0 | 36.1 | 18.2 |
+
+    | 30 | BM | 129.9 | 22.4 | 67.0 | 135.5 | 43.7 | 34.1 |
+
+    | 50 | TM | 120.4 | 17.9 | 6.1 | 82.1 | 26.5 | 8.9 |
+
+    | 60 | BM | 110.3 | 19.0 | 6.2 | 121.3 | 39.1 | 27.9 |
+
+    | 70 | TM | 105.5 | 18.2 | 4.1 | 74.9 | 24.1 | 14.6 |
+
+    | 70 | BM | 101.9 | 17.5 | 1.4 | 123.1 | 39.7 | 18.0 |
+
+    | 90 | TM | 105.8 | 18.2 | 0.9 | 109.4 | 25.5 | 21.7 |
+
+    | 116 | BM | 105.1 | 18.1 | 0.3 | 24.3 | 0.2 | |
+
+
+    processed and analyzed the data. R. Li, Wang and S Liang performed the interpretation
+    of the results. R. Li led the manuscript writing. All contributors to the manuscript
+    revision.
+
+
+    # Declaration of Competing Interest
+
+
+    The authors declare that they have no competing interests or personal relationships
+    that could have influenced the work reported in this paper.
+
+
+    # Acknowledgements
+
+
+    This study was supported by NASA (Grant ID: 80NNSCK180620 and 80NNSCK210071).
+    We thank the reviewers for their valuable comments and suggestions.
+
+
+    # References
+
+
+    Averintine, J.A., Delani, J., Long, C.N. (2009). SURFAD: A multi-surface radiation
+    budget for network analysis. Amer. Meteor. Biol. 88(3), 201–214. https://doi.org/10.1111/j.atm.2009.03.002
+
+
+    Baker, J.L., Tomson, R., Tufien, A., Sun, S. (2019). Random forest for estimation
+    of solar irradiance at various locations. Remote Sens. Sens. 118(1), 81–92. https://doi.org/10.3390/rs11010081
+
+
+    Baldridge, A.M., Hou, S.G., Green, R.Y. (2020). Machine learning for satellite-derived
+    surface flux version 2.0. Remote Sens. Sens. 12(4), 711–715. https://doi.org/10.3390/rs12040715
+
+
+    Bole, A.C., Tuwan, J.D., Garsky, A.PH., Pearson, M.S., Barnett, L., Li, J., &
+    Zhai, X. (2021). Deep learning for surface energy flux estimation using high-resolution
+    Multispectral and Optical Sensing Images. In Remote Sensing of Environment, 255,
+    105477. https://doi.org/10.1016/j.rse.201
+
+
+    Brown, M.G., Sklar, S.H., Li, S., & Wang, Y. (2020). Application of machine learning
+    algorithms for estimating surface energy flux. Remote Sens. Sens. 12(23), 3902.
+    https://doi.org/10.3390/rs12233902
+
+
+    Hao, N., Wang, Y., Mullen, T., Parrain, M. (2019). Neural network radiation transfer
+    for atmospheric transport. Atmos. Earth. Space. 32, 1058–1074. https://doi.org/10.1007/s10024-019-0034-x
+
+
+    Chen, Y., Wang, J., Wang, R., Han, J., Li, J., & McKenzie, R. (2019). Evaluation
+    of deep learning models for solar irradiance estimation: Regional and sensitivity
+    analysis. Remote Sens. Env. 223, 427–436. https://doi.org/10.1016/j.rse.2018.10.033
+
+
+    Hous, N., Zhang, X., Liu, W., Wei, J., Ji, J., Wang, Y., Zhang, R., & Chen, J.
+    (2021). Evaluation of surface irradiance shadowing over chini-8 satellite data
+    based on random forest. Remote Sens. 12(1), 181. https://doi.org/10.3390/rs12010181
+
+
+    Huang, R., Bao, S., Sun, Y., & Wang, D. (2018). Urban land use mapping using a
+    deep convolutional network with multi-scale attention mechanism. Remote Sens.
+    Env. 214, 73–86.
+
+
+    Huang, H., C., Li, C.L., Li, J., Wang, D., & Zhang, Y. (2019). Evaluation of surface
+    irradiance radiation from satellite sensors: present and future perspectives.
+    Remote Sens. Env. 223, 111371. https://doi.org/10.1016/j.rse.2018.111371
+
+
+    Ji, J., Hu, N., Qin, Q., Yang, J., Wang, Y. (2019). A deep learning algorithm
+    for estimating hourly solar irradiance from geostationary satellite data. Remote
+    Sens. Env. 219, 105629. https://doi.org/10.1016/j.rse.2018.105629
+
+
+    Khan, S., Pham, H., Wang, L., & Zhou, J. (2021). Solar energy potential and crop
+    yield prediction using deep learning. Remote Sens. Env. 254, 105393. https://doi.org/10.1016/j.rse.2020.105393
+
+
+    Li, R., Wang, D., & Liang, S. (2021). Comprehensive assessment of global flux
+    for downwelling surface radiation satellite data. Remote Sens. Env. 256, 107318.
+    https://doi.org/10.1016/j.rse.2020.107318
+
+
+    Li, R., Wang, X., Xu, Y., Chen, J., Shi, J., & Li, S. (2020). Evaluation of surface
+    irradiance shadowing from satellite-based data based on random forest. Remote
+    Sens. Env. 238, 107499. https://doi.org/10.1016/j.rse.2019.107499
+
+
+    Maes-Hansen, K., Du, J., Niebel, A., He, R., Engel, S., & Richter, I. (2017).
+    Estimation of incident surface radiation using machine learning and satellite-derived
+    aerosol data. Remote Sens. Env. 208, 1448–1454. https://doi.org/10.1016/j.rse.2017.09.018
+
+
+    Mousavi, W. K., Grustal, A., Bheli, H., & Herrmann, R. E. (2009). Evaluation of
+    surface energy flux using a decision tree-based ensemble regression model. Remote
+    Sens. Env. 113(5), 1012–1024. https://doi.org/10.1016/j.rse.2008.07.012
+
+
+    Pan, S., Wang, J., & Sun, Y. Y. (2019). A survey on solar irradiance prediction
+    using deep learning. IEEE Data Mining Eng. 22(6), 2755–2763. https://doi.org/10.1109/MDE.2019.2933333
+
+
+    Peng, L., Lu, H., Wang, Y., Shi, C., Cao, C., Tao, J., Tan, N., Tang, D., Zhang,
+    R., Wang, J., & Li, S. (2020). Evaluation of solar irradiance shadowing using
+    an attention-based convolutional neural network. IEEE Trans. Quantum. Remote Sens.
+    24(4), 1062–1076. https://doi.org/10.1109/TGRS.2019.2986312
+
+
+    Praty, C., Adams, D., & Deschamps, P. Y. (1998). Evaluation of topographic effects
+    in remote sensing. Remote Sens. Env. 84(3), 193–200.
+
+
+    Ruta, D. A., Cottels, D., Du, R.F., Niegel, J., Twellby, C., Tieb, L., & Nieb,
+    J. (2015). Crop regression method: prediction and validation of surface radiation
+    flux. Remote Sens. Env. 190, 219–225. https://doi.org/10.1016/j.rse.2015.04.014
+
+
+    Hu, N., Azhar, R.G., Zhou, Y., Wen, Q., Xiao, J., & Chen, Y. (2019). Multi-derived
+    global maps of surface radiation diffusion and potentially atmospheric radiation
+    at 5km resolution from 2000. Remote Sens. Env. 204(109014), 812–825. https://doi.org/10.1016/j.rse.2019.07.017
+
+
+    Hu, N., Azhar, Y., Kobayashi, H., et al. (2019). Multi-derived global maps of
+    surface radiation diffusion and potentially atmospheric radiation at 5km resolution
+    from 2000. Remote Sens. Env. 204(109014), 812–825. https://doi.org/10.1016/j.rse.2019.07.017'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Remote Sensing of Environment 274 (2022) 111099
+
+
+    Shenkul, S. (2010). Modeling of solar radiation using remote sensing and aerosol
+    optical network in Turkey. Remote Sens 35 (12), 4795-4801. https://doi.org/10.1016/j.rsen.2010.04.014
+
+
+    learning methods. Sci. Environ. 117 (10), 32-46. https://doi.org/10.1016/j.scenv.2020.111099
+
+
+    Shi, H., L., Xian, Z., Tian, X. (2019). Exploration of machine learning techniques
+    in estimating a coupled aerosol-soil-canopy-atmosphere radiative transfer model
+    for multi-angular reflectance estimation. Environ. Res. 315, 106333
+
+
+    Wu, W., Peng, J., He, H., Li, S., Zeng, G. (2021). A potential radiance index
+    based on improved reflectance properties for the universal over global surface
+    production estimation. Environ. Lett. 16 (5), 054005
+
+
+    Sobol, I.M. (2001). Global sensitivity analysis for nonlinear models and their
+    applications. Soft Computing, 5(1-3), 23-240
+
+
+    Takada, H., Nakajima, T., Higashitani, A., Higuchi, A., Takamura, T., Pinto, R.,
+    Nakajima, T. (2003). Validation of aerosol optical depth retrieval from satellite
+    data. Remote Sens. 55 (11), 2225-2230. https://doi.org/10.1029/RS2003RS00192
+
+
+    Yuan, J., Wang, J., Li, J., & Lu, K. (2020). Are Learnable Features Valuable in
+    Deep Neural Networks? Remote Sensing 12, 185. https://doi.org/10.3390/rs12010185
+
+
+    Tong, K.Y., Xia, G.-L., Shen, H., Li, S., You, S., Zhang, L. (2020). Land-cover
+    classification with high-resolution remote sensing images using transferable deep
+    learning models. Remote Sens. 219, 113992. https://doi.org/10.1016/j.rse.2020.113992
+
+
+    Wang, T., Yao, Y., & Chen, L. (2012). Comparison of retrieval methods to estimate
+    surface albedo. Remote Sens. Environ. 124, 61-71. https://doi.org/10.1016/j.rse.2012.04.024
+
+
+    Zhang, X., Liang, S., Wild, M., Jiao, B. (2015). Analysis of surface incident
+    shortwave radiation over China using MODIS data. Remote Sens. Environ. 165 (Suppl),
+    1-18. https://doi.org/10.1016/j.rse.2015.05.013
+
+
+    Gao, J., Zhang, L., Li, J., Sun, Y., Tan, H., Wang, Q., Wang, J., & J. (2020).
+    Deep learning in environmental sensing: A review. Remote Sens. Environ. 241 (11),
+    111716. https://doi.org/10.1016/j.rse.2020.111716
+
+
+    Wang, D., Li, S., Sun, J., & Ma, J. A. (2020). A new method of mapping land product
+    products (mcl88) downward surface radiation and photosynthetic activity using
+    fusion. Remote Sens. Environ. 264, 112699
+
+
+    Yang
+
+
+    Wang, D., Li, S., Liu, R., Jia, A. (2021). A synergetic study on estimating surface
+    downward shortwave radiation from albedo. Remote Sens. Environ. 264, 112639. https://doi.org/10.1016/j.rse.2021.112639
+
+
+    Zhang, X., Zhao, L., Li, S., Wang, D., Liu, Q., Yao, J., Jia, K., He, J., Wang,
+    R., & Wang, Y. (2020). Bayesian transfer learning for estimating surface downward
+    shortwave radiation product from MODIS data. IEEE Trans. Geosci. Remote Sens.
+    57 (7), 4636-4650. https://doi:10.1109/TGRS.2020.2983201.
+
+
+    Wei, Y., Zheng, X., Hou, N., Wang, J., Jia, K., Yao, Y. (2019). Estimation of
+    surface downward shortwave radiation from China from avhr data based on four'
+  merge: -1
+  img_proc: true

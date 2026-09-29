@@ -1,0 +1,116 @@
+- - '#'
+  - 使用迁移学习神经网络基于 VIIRS 数据估计全球下行短波辐射
+- - '#'
+  - 1. 引言
+- - '##'
+  - 2.3. 额外数据
+- - '#'
+  - 3. 方法
+- - '###'
+  - 3.1 NN
+- - '###'
+  - 3.2. 迁移学习模型构建
+- - '#'
+  - 4. 结果与讨论（推断背景）
+- - '###'
+  - 4.1. 敏感性分析
+- - '###'
+  - 4.2. 与传统 NN 方法的比较
+- - '###'
+  - 4.3. 与方法的比较
+- - '###'
+  - 4.4. 与现有的 DSR 产品对比
+- - '###'
+  - 4.5. 时间分析
+- - '###'
+  - 4.6. DSR 制图
+- - '###'
+  - 4.7. 训练数据大小的影响
+- - '#'
+  - FLUXNET BM
+- - '#'
+  - SURFAD BM
+- - '#'
+  - BSRN BM
+- - '#'
+  - GC-NET BM
+- - '#'
+  - FLUXNET(train) BA
+- - '#'
+  - SURFAD BM, SA
+- - '#'
+  - BSRN BA
+- - '#'
+  - GC-NET BA
+- - '#'
+  - FLUXNET(train) TL
+- - '#'
+  - SURFAD BM, TL
+- - '#'
+  - BSRN TL
+- - '#'
+  - GC-NET TL
+- - '#'
+  - FLUXNET
+- - '#'
+  - SURFAD BM
+- - '#'
+  - BSRN BM
+- - '#'
+  - GC-NET BM
+- - '#'
+  - FLUXnet(train) BM SA
+- - '#'
+  - SURFAD BM SA
+- - '#'
+  - BSRN BM
+- - '#'
+  - GC-NET BM SA
+- - '#'
+  - FLUXnet(train) BM TL
+- - '#'
+  - SURFAD BM TL
+- - '#'
+  - BSRN BM TL
+- - '#'
+  - GC-NET BM TL
+- - '#'
+  - 纬度
+- - '#'
+  - SZA
+- - '#'
+  - 雪
+- - '#'
+  - 云
+- - '#'
+  - SURFAD LUT
+- - '#'
+  - BSRN LUT
+- - '#'
+  - GCNET LUT
+- - '#'
+  - SURFAD 直接估计
+- - '#'
+  - BSRN 直接估计
+- - '#'
+  - GCNET 直接估计
+- - '#'
+  - SURFAD BM TL
+- - '#'
+  - BSRN BM TL
+- - '#'
+  - GCNET BM TL
+- - '#'
+  - 表 2
+- - '#'
+  - 表 3
+- - '#'
+  - 5. 结论
+- - '##'
+  - 在 SURFAD 和 GCNET 方法上经过 10 次和 50 次 FLUXNET 训练的 BM、TM 评估。
+- - '##'
+  - 利益声明
+- - '##'
+  - 致谢
+- - '##'
+  - 参考文献
