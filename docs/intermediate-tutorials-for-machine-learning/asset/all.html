@@ -1,0 +1,2499 @@
+<p><img src="rsrc14J.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<img src="rsrc14J.jpg" id="toc0_Intermediate_Tutorials_for_Machine_Learning" class="s8" />
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div class="s11W">
+<div id="part0001.xhtml#toc1_Disclaimer" class="sF">
+Disclaimer
+</div>
+<div id="part0001.xhtml#toc2_The_information_in_this_eBook_is_not_meant_to_be_applied_as_is_in_a_production_environment._By_applying_it_to_a_production_environment__you_take_full_responsibility_for_your_actions." class="sH">
+The information in this eBook is not meant to be applied as is in a production environment. By applying it to a production environment, you take full responsibility for your actions.
+</div>
+<div id="part0001.xhtml#toc3_The_author_has_made_every_effort_to_ensure_the_accuracy_of_the_information_within_this_book_was_correct_at_the_time_of_publication._The_author_does_not_assume_and_hereby_disclaims_any_liability_to_any_party_for_any_loss__damage__or_disruption_caused_by_errors_or_omissions__whether_such_errors_or_omissions_result_from_accident__negligence__or_any_other_cause." class="sH">
+The author has made every effort to ensure the accuracy of the information within this book was correct at the time of publication. The author does not assume and hereby disclaims any liability to any party for any loss, damage, or disruption caused by errors or omissions, whether such errors or omissions result from accident, negligence, or any other cause.
+</div>
+<div id="part0001.xhtml#toc4_No_part_of_this_eBook_may_be_reproduced_or_transmitted_in_any_form_or_by_any_means__electronic_or_mechanical__recording_or_by_any_information_storage_and_retrieval_system__without_written_permission_from_the_author." class="sH">
+No part of this eBook may be reproduced or transmitted in any form or by any means, electronic or mechanical, recording or by any information storage and retrieval system, without written permission from the author.
+</div>
+<div id="part0001.xhtml#toc5_Acknowledgments" class="sH">
+Acknowledgments
+</div>
+<div id="part0001.xhtml#toc6_Special_thanks_to_Austin_Kodra_for_the_edits." class="sH">
+Special thanks to Austin Kodra for the edits.
+</div>
+<div id="part0001.xhtml#toc7_Copyright" class="sH">
+Copyright
+</div>
+<div id="part0001.xhtml#toc8_Intermediate_Tutorials_for_Machine_Learning" class="sH">
+Intermediate Tutorials for Machine Learning
+</div>
+<div id="part0001.xhtml#toc9___Copyright_2020_Derrick_Mwiti._All_Rights_Reserved." class="sT">
+© Copyright 2020 Derrick Mwiti. All Rights Reserved.
+</div>
+<div class="sV">
+Other Things to Learn
+</div>
+<div class="sX">
+<a href="https://www.google.com/url?q=https://www.udemy.com/course/python-programming-bootcamp/?referralCode%3D3780C8ABB79F31AA866B&amp;sa=D&amp;ust=1597504082149000&amp;usg=AOvVaw0h1C9NLNZGKYahh9as5uX6" class="s12W"><span class="s12V">Learn Python</span></a>
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://www.udemy.com/course/data-science-bootcamp-in-python/?referralCode%3D9F6DFBC3F92C44E8C7F4&amp;sa=D&amp;ust=1597504082150000&amp;usg=AOvVaw3pJCZmm2NK8Vhzzd06v6WK" class="s12W"><span class="s12V">Learn Data Science</span></a>
+</div>
+<div class="sZ">
+<a href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DVhXitR_dfNo%26list%3DPLh14mbuHh7Lg2fobCe1TulrOxjIFKfbl9&amp;sa=D&amp;ust=1597504082150000&amp;usg=AOvVaw049vfY7ReGLQdX30NzBh8d" class="s12W"><span class="s12V">Learn Deep Learning</span></a>
+</div>
+<div id="part0001.xhtml#toc10_Intermediate_Tutorials_for_Machine_Learning" class="s12">
+Intermediate Tutorials for Machine Learning
+</div>
+<div id="part0001.xhtml#toc11_Top_10_Tricks_for_TensorFlow_and_Google_Colab_Users" class="s14">
+Top 10 Tricks for TensorFlow and Google Colab Users
+</div>
+<div class="s16">
+Google’s Colab is a truly innovative product for machine learning. It enables machine engineers to run Notebooks and easily share them with colleagues. Another key advantage is access to GPUs and TPUs.
+</div>
+<div class="s18">
+In this piece, we’ll highlight some of the tips and tricks that will help you in getting the best out of Google’s Colab.
+</div>
+<div class="sV">
+10. Specify TensorFlow version
+</div>
+<div class="s16">
+Very soon, the default TF version in Colab will be TF 2. What this means is that if you have Notebooks running in TF 1, they will probably fail. In order to ensure that your code doesn’t break, it’s recommended that you specify the TF version in all your Notebooks. This way, if the default version changes, your Notebooks still work.
+</div>
+<div class="s1G">
+<img src="rsrc14K.jpg" class="s1E" />
+</div>
+<div class="s1J">
+9. Use TensorBoard
+</div>
+<div class="s16">
+Google Colab provides support for TensorBoard by default. This is a great tool for visualizing the performance of your model. Use it!
+</div>
+<div class="s1T">
+<img src="rsrc14M.jpg" class="s1R" />
+</div>
+<div class="s1J">
+8. Train TFLite Models on Colab
+</div>
+<div class="s16">
+When building mobile machine learning models, you can take advantage of Colab’s resources to train your models. The alternative to this is training your model using other expensive cloud solutions or on your laptop, which might not have the needed compute power.
+</div>
+<div class="sV">
+7. Use TPUs
+</div>
+<div class="s16">
+Should you need more powerful processing for your model, then change your default runtime to the TPU. However, you should only use TPUs when you really need them, because their availability is on a limited basis, given how resource-intensive they are.
+</div>
+<div class="s23">
+<img src="rsrc14N.jpg" class="s21" />
+</div>
+<div class="sV">
+6. Use Local Runtimes
+</div>
+<div class="s16">
+In the event that you have your own powerful hardware accelerator, then Colab allows you to connect to it. Just click on the connect drop down and select your preferred runtime.
+</div>
+<div class="s2B">
+<img src="rsrc14P.jpg" class="s29" />
+</div>
+<div class="sV">
+5. Use Colab Scratchpad
+</div>
+<div class="s16">
+Sometimes you might find yourself in a situation where you want to test things out quickly. Instead of creating a new Notebook that you don’t intend to save on your drive, you can use an empty Notebook that doesn’t save to your drive.
+</div>
+<div class="sV">
+4. Copy Data to Colabs VM
+</div>
+<div class="s16">
+In the interest of speeding up the loading of data, it’s recommended that you copy your data files into Colab’s VM instead of loading them from elsewhere.
+</div>
+<div class="sV">
+3. Check Your Ram and Resource Limits
+</div>
+<div class="s16">
+Since Colab’s resources are free, it means that they are not guaranteed. Therefore, keep your eye on the RAM and Disk usage to ensure that you don’t run out of resources.
+</div>
+<div class="s2R">
+<img src="rsrc14R.jpg" class="s2N" />
+</div>
+<div class="sV">
+2. Close Tabs when Done
+</div>
+<div class="s16">
+Closing tabs when done ensures that you disconnect from the VM and therefore save resources.
+</div>
+<div class="sV">
+1. Use GPUs only when Needed
+</div>
+<div class="s16">
+Since these resources are subject to restriction, save your GPU usage for when you really need it. However, if you need to work with Colab without the restrictions of the free version, you can check out the pro version.
+</div>
+<div class="s2X">
+I hope that you will find these Colab tips and tricks for TensorFlow helpful.
+</div>
+<div id="part0001.xhtml#toc12_Federated_Learning" class="s2Z">
+Federated Learning
+</div>
+<div class="s16">
+Advancements in the power of machine learning have brought with them major data privacy concerns. This is especially true when it comes to training machine learning models with data obtained from the interaction of users with devices such as smartphones.
+</div>
+<div class="s18">
+So the big question is, how do we train and improve these on-device machine learning models without sharing personally-identifiable data? That is the question that we’ll seek to answer in this look at a technique known as federated learning.
+</div>
+<div class="sV">
+Centralized Machine Learning
+</div>
+<div class="s16">
+The traditional process for training a machine learning model involves uploading data to a server and using that to train models. This way of training works just fine as long as the privacy of the data is not a concern.
+</div>
+<div class="s18">
+However, when it comes to training machine learning models where personally identifiable data is involved (on-device, or in industries with particularly sensitive data like healthcare), this approach becomes unsuitable.
+</div>
+<div class="s18">
+Training models on a centralized server also means that you need enormous amounts of storage space, as well as world-class security to avoid data breaches. But imagine if you were able to train your models with data that’s locally stored on a user's device.
+</div>
+<div class="sV">
+Machine Learning on Decentralized Data
+</div>
+<div class="sZ">
+<span class="s12S">Enter:</span> <span class="s137">Federated learning</span> <span class="s12U">.</span>
+</div>
+<div class="s18">
+Federated learning is a model training technique that enables devices to learn collaboratively from a shared model. The shared model is first trained on a server using proxy data. Each device then downloads the model and improves it using data — federated data — from the device.
+</div>
+<div class="s18">
+The device trains the model with the locally available data. The changes made to the model are summarized as an update that is then sent to the cloud. The training data and individual updates remain on the device. In order to ensure faster uploads of theses updates, the model is compressed using random rotations and quantization. When the devices send their specific models to the server, the models are averaged to obtain a single combined model. This is done for several iterations until a high-quality model is obtained.
+</div>
+<div class="s1T">
+<img src="rsrc14S.jpg" class="s3D" />
+</div>
+<div class="s18">
+Compared to centralized machine learning, federated learning has a couple of specific advantages:
+</div>
+<div class="s3H">
+<span class="s13U">Ensuring privacy</span> <span class="s12P">, since the data remains on the user’s device.</span>
+</div>
+<div class="s3H">
+<span class="s13U">Lower latency</span> <span class="s12P">, because the updated model can be used to make predictions on the user’s device.</span>
+</div>
+<div class="s3H">
+<span class="s13U">Smarter models</span> <span class="s12P">, given the collaborative training process.</span>
+</div>
+<div class="s3H">
+<span class="s13U">Less power consumption</span> <span class="s12P">, as models are trained on a user’s device.</span>
+</div>
+<div class="s1G">
+<img src="rsrc14T.jpg" class="s3S" />
+</div>
+<div class="s16">
+In order to ensure that an application’s user experience is not hampered, the model training happens when the user's device is on free WiFi, is idle, and connected to a power supply.
+</div>
+<div class="s1G">
+<img src="rsrc14U.jpg" class="s3S" />
+</div>
+<div class="s1J">
+TensorFlow Federated
+</div>
+<div class="s18">
+TensorFlow enables the application of federated learning by leveraging its own framework.
+</div>
+<div class="sX">
+<span class="s131">T</span> <a href="https://www.google.com/url?q=https://www.tensorflow.org/federated&amp;sa=D&amp;ust=1597504082156000&amp;usg=AOvVaw3r8A-I6vkBatKieJUB3ujw" class="s132">ensorFlow Federated (TFF)</a> <span class="s131"> is an open-source framework for machine learning and other computations on decentralized data.</span>
+</div>
+<div class="s18">
+TFF has two layers: the Federated Learning (FL) API and the Federated Core (FC) API. The Federated Learning (FL) API allows developers to apply federated training and evaluation to existing TensorFlow models.
+</div>
+<div class="s18">
+The Federated Core (FC) API is the core foundation for federated learning. It is a system of low-level interfaces for writing federated algorithms in combination with distributed communication operations in strongly-typed functional programming environments.
+</div>
+<div class="sX">
+<span class="s12S">An example application of federated learning is in</span> <a href="https://www.google.com/url?q=https://arxiv.org/abs/1811.03604&amp;sa=D&amp;ust=1597504082157000&amp;usg=AOvVaw3lI8ivtKHUGh898GYA4Ggy" class="s12W"><span class="s12V">Google’s Gboard keyboard</span></a> <span class="s12U">.</span>
+</div>
+<div class="s18">
+In this case, a recurrent neural network language model is trained using decentralized on-device datasets. Its aim is to predict the next word on smartphone keyboards.
+</div>
+<div class="s1G">
+<img src="rsrc14V.jpg" class="s49" />
+</div>
+<div class="s18">
+Training the model on client devices using the federated averaging algorithm is shown to perform better than server-based training using stochastic gradient descent. The algorithm is used on the server to combine updates from the clients and produce a new global model.
+</div>
+<div class="s18">
+In this case, the use of federated learning led to a 24% increase in next-word prediction accuracy. Other improvements to the Gboard experience resulting from this are enhanced emoji and GIF predictions. This means that users are now seeing more relevant emojis and GIFs when using Gboard.
+</div>
+<div class="sX">
+<span class="s12S">I hope this activates your interest in</span> <a href="https://www.google.com/url?q=https://arxiv.org/abs/1610.05492&amp;sa=D&amp;ust=1597504082158000&amp;usg=AOvVaw2mb7ovHJraCX18ylIHm2pD" class="s12W"><span class="s12V">federated learning</span></a> <span class="s12U"> and its potential to drive a new wave of on-device training, application personalization and increased data privacy.</span>
+</div>
+<div id="part0001.xhtml#toc13_Machine_Learning_in_Dask" class="s4F">
+Machine Learning in Dask
+</div>
+<div class="s16">
+Processing a couple of gigabytes of data on one's laptop is usually an uphill task, unless the laptop has high RAM and a whole lot of compute power.
+</div>
+<div class="sX">
+<span class="s12S">That notwithstanding, data scientists still have to look for alternative solutions to deal with this problem. Some of the hacks involve tweaking Pandas to enable it to process huge datasets, buying a GPU machine, or purchasing compute power on the cloud. In this piece, we’ll see how we can use</span> <a href="https://www.google.com/url?q=https://dask.org/&amp;sa=D&amp;ust=1597504082159000&amp;usg=AOvVaw1QwYC0MkJLueFK0v_2WSfS" class="s12W"><span class="s12V">Dask</span></a> <span class="s12U"> to work with large datasets on our local machines.</span>
+</div>
+<div class="sV">
+Dask and Python
+</div>
+<div class="s18">
+Dask is a flexible library for parallel computing in Python. It’s built to integrate nicely with other open-source projects such as NumPy, Pandas, and scikit-learn. In Dask, Dask arrays are the equivalent of NumPy Arrays, Dask DataFrames the equivalent of Pandas DataFrames, and Dask-ML the equivalent of scikit-learn.
+</div>
+<div class="s18">
+These similarities make it very easy to adopt Dask into your workflow. The advantage of using Dask is that you can scale computations to multiple cores on your computer. This enables you to work on large datasets that don’t fit into memory. It also aids in speeding up computations that would ordinarily take a long time.
+</div>
+<div class="s1G">
+<img src="rsrc14W.jpg" class="s4S" />
+</div>
+<div class="s1J">
+Dask DataFrames
+</div>
+<div class="s18">
+When loading in huge data, Dask will usually read in a sample of the data in order to infer the data types. This will mostly lead to issues if a given column has different data types. In order to avoid type errors, it’s usually good practice to declare the data types beforehand. Dask is able to load huge files by cutting it up into chunks, as defined by the blocksize parameter.
+</div>
+<div class="s4X">
+data_types ={'column1': str,'column2': float}
+</div>
+<div class="s4Z">
+df = dd.read_csv(“data,csv”,dtype = data_types,blocksize=64000000 )
+</div>
+<div class="s1G">
+<img src="rsrc14X.jpg" class="s53" />
+</div>
+<div class="s18">
+Commands in a Dask DataFrame are mostly similar to the ones in Pandas. For example, getting the head and tail is similar:
+</div>
+<div class="s18">
+df.head()
+</div>
+<div class="s16">
+df.tail()
+</div>
+<div class="s18">
+Functions on the DataFrame are run lazily. This means that they aren’t computed until the compute function is called.
+</div>
+<div class="s4Z">
+df.isnull().sum().compute()
+</div>
+<div class="sX">
+<span class="s12S">Since the data is loaded in partitions, some Pandas functions such as sort_values() will fail. The workaround is to use the</span> <span class="s12T">nlargest()</span> <span class="s12U"> function.</span>
+</div>
+<div class="sV">
+Dask Clusters
+</div>
+<div class="s18">
+Parallel computation is key in Dask, as it allows one to run computations on multiple cores. Dask provides a machine scheduler that works on a single machine. It does not scale. It also offers a distributed scheduler that can scale to multiple machines.
+</div>
+<div class="sZ">
+<span class="s12S">Using</span> <span class="s12T">dask.distributed</span> <span class="s12S"> requires that you set up a</span> <span class="s12T">Client</span> <span class="s12S">. This should be the first thing you do if you intend to use</span> <span class="s12T">dask.distributed</span> <span class="s12U"> in your analysis. It offers low latency, data locality, data sharing between the workers, and is easy to set up.</span>
+</div>
+<div class="s5F">
+from dask.distributed import Client
+</div>
+<div class="s4Z">
+client = Client()
+</div>
+<div class="s1G">
+<img src="rsrc14Y.jpg" class="s5M" />
+</div>
+<div class="sZ">
+<span class="s12S">Using</span> <span class="s12T">dask.distributed</span> <span class="s12U"> is advantageous even on a single machine, because it offers some diagnostic features via a dashboard.</span>
+</div>
+<div class="sX">
+<span class="s12S">Failure to declare a</span> <span class="s12T">Client</span> <span class="s12U"> will leave you using the single machine scheduler by default. It provides parallelism on a single computer by using processes or threads.</span>
+</div>
+<div class="sV">
+Dask ML
+</div>
+<div class="sX">
+<span class="s12S">Dask also enables you to perform machine learning training and prediction in a parallel manner. The goal of</span> <span class="s12T">dask-ml</span> <span class="s12S"> is to offer machine learning that’s scalable. When you declare</span> <span class="s12T">n_jobs = -1</span> <span class="s12S"> in scikit-learn, you can run your computations in parallel. Dask utilizes this capability in order to enable you to distribute this compute in a cluster. This is done with the help of</span> <span class="s12T">joblib</span> <span class="s12S">, a package that allows for parallelism and pipelining in Python. Using</span> <span class="s12T">Dask ML</span> <span class="s12U">, you can implement scikit-learn models as well as other libraries such as XGboost.</span>
+</div>
+<div class="s18">
+This is what a simple implementation would look like.
+</div>
+<div class="s18">
+First import train_test_split as usual for splitting your data into training and testing sets.
+</div>
+<div class="s5F">
+from dask_ml.model_selection import train_test_split
+</div>
+<div class="s4Z">
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+</div>
+<div class="s18">
+Next, import the model you’d like to use and instantiate it.
+</div>
+<div class="s5F">
+from sklearn.ensemble import RandomForestClassifier
+</div>
+<div class="s4Z">
+model = RandomForestClassifier(verbose=1)
+</div>
+<div class="sX">
+<span class="s12S">You then have to import</span> <span class="s12T">joblib</span> <span class="s12U"> to enable parallel computation.</span>
+</div>
+<div class="s18">
+Next, run your training and prediction using the parallel backend.
+</div>
+<div class="s5F">
+from sklearn.externals.joblib import parallel_backend
+</div>
+<div class="s65">
+with parallel_backend(‘dask’):
+</div>
+<div class="s65">
+model.fit(X_train,y_train)
+</div>
+<div class="s4Z">
+predictions = model.predict(X_test)
+</div>
+<div class="sV">
+Limitations and Memory Usage
+</div>
+<div class="s18">
+Individual tasks in Dask can’t run in parallel. The workers are Python processes that inherit all the advantages and disadvantages of Python computations. Care should also be taken when working in a distributed environment to ensure data security and privacy.
+</div>
+<div class="s18">
+Dask has a central scheduler that tracks data on worker nodes and on the cluster. This scheduler also controls the freeing of data from the cluster. Once a task is completed it clears it from the memory in order to free up memory for other tasks. If something is needed by a certain client, or if it’s important for ongoing computations, it’s held in memory.
+</div>
+<div class="s18">
+Another Dask limitation is that it doesn’t implement all functions in Pandas. The Pandas interface is large, so Dask doesn’t implement it in its entirety. This means that trying some of these operations on Dask can be an uphill climb. Also, the operations that are slow on Pandas are also slow on Dask.
+</div>
+<div class="sV">
+When you wouldn’t need a Dask DataFrame
+</div>
+<div class="s18">
+In the following situations, you may not need Dask:
+</div>
+<div class="s6F">
+When there are Pandas functions you need that haven’t been implemented in Dask.
+</div>
+<div class="s6F">
+When your data fits perfectly into your computer’s memory.
+</div>
+<div class="s3H">
+<span class="s12R">When your data isn’t in tabular form. In this case, try</span> <a href="https://www.google.com/url?q=https://docs.dask.org/en/latest/array.html&amp;sa=D&amp;ust=1597504082167000&amp;usg=AOvVaw1TGiwoTLSq8Shme9jy78aT" class="s12W"><span class="s13D">dask.bag</span></a> <span class="s12R"> or</span> <a href="https://www.google.com/url?q=https://docs.dask.org/en/latest/bag.html&amp;sa=D&amp;ust=1597504082167000&amp;usg=AOvVaw1Hr8TA-a6YlS-UwSCwhCcZ" class="s12W"><span class="s13D">dask.array</span></a> <span class="s12P">.</span>
+</div>
+<div class="sV">
+Final Thoughts
+</div>
+<div class="s16">
+In this article, we have seen how we can use Dask to work with a huge dataset on our local machine or in a distributed manner. We’ve seen that we can use Dask because of its familiar syntax and ability to scale. It has the ability to scale to thousands of cores.
+</div>
+<div class="sX">
+<span class="s12S">We’ve also seen that we can use it in machine learning for training and running predictions. You can learn more by checking out</span> <a href="https://www.google.com/url?q=https://docs.dask.org/en/latest/presentations.html&amp;sa=D&amp;ust=1597504082168000&amp;usg=AOvVaw1qdYcs9mp9csuh02iQlPm5" class="s12W"><span class="s12V">these presentations</span></a> <span class="s12U"> in the official documentation.</span>
+</div>
+<div id="part0001.xhtml#toc14_Image_Segmentation_with_Mask_R-CNN" class="s4F">
+Image Segmentation with Mask R-CNN
+</div>
+<div class="s16">
+The Mask R-CNN model classifies and localizes objects using bounding boxes. It also classifies each pixel into a set of categories.
+</div>
+<div class="s16">
+Therefore, it also produces a segmentation mask for each Region of Interest. In this piece, we’ll work through an implementation of Mask R-CNN in Python for image segmentation.
+</div>
+<div class="s18">
+Image segmentation (also knowns as semantic segmentation) refers to the process of linking each pixel in an image to a class label. These labels could include a person, car, flower, piece of furniture, etc., just to mention a few.
+</div>
+<div class="s18">
+We can think of semantic segmentation as image classification at a pixel level. For example, in an image that has many cars, segmentation will label all the objects as car objects. However, a separate class of models known as instance segmentation is able to label the separate instances where an object appears in an image. This kind of segmentation can be very useful in applications that are used to count the number of objects, such as counting the amount of foot traffic in a mall.
+</div>
+<div class="s18">
+We’ll use an open-source implementation of Mask R-CNN by Matterport. It produces bounding boxes and segmentation masks for the objects detected in an image. It’s based on Feature Pyramid Network (FPN) and a ResNet101 backbone. The project contains pre-trained weights from MS COCO. Therefore, we don’t have to train the model from scratch.
+</div>
+<div class="s18">
+We’ll start with a couple of imports:
+</div>
+<div class="s3H">
+<span class="s12N">os</span> <span class="s12P"> to set the path of our root directory</span>
+</div>
+<div class="s3H">
+<span class="s12N">skimage</span> <span class="s12P"> for image processing</span>
+</div>
+<div class="s3H">
+<span class="s12N">Matplotlib</span>  <span class="s12P"> for visualization</span>
+</div>
+<div class="s16">
+We then set the root directory.
+</div>
+<div class="s71">
+import os
+</div>
+<div class="s73">
+import sys
+</div>
+<div class="s73">
+import skimage.io
+</div>
+<div class="s73">
+import matplotlib
+</div>
+<div class="s73">
+import matplotlib.pyplot as plt
+</div>
+<div class="s73">
+ROOT_DIR = os.path.abspath("./")
+</div>
+<div class="s18">
+We can now import Mask R-CNN.
+</div>
+<div class="s71">
+sys.path.append(ROOT_DIR)
+</div>
+<div class="s73">
+from mrcnn import utils
+</div>
+<div class="s73">
+import mrcnn.model as modellib
+</div>
+<div class="s73">
+from mrcnn import visualize
+</div>
+<div class="s18">
+Next, we import the configurations for MS COCO. We then set the path for saving the trained model and the logs.
+</div>
+<div class="s71">
+sys.path.append(os.path.join(ROOT_DIR, "coco/"))  
+</div>
+<div class="s73">
+import coco
+</div>
+<div class="s73">
+MODEL_DIR = os.path.join(ROOT_DIR, "logs")
+</div>
+<div class="s73">
+COCO_MODEL_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
+</div>
+<div class="s18">
+If the COCO weights aren’t available in our local directory, we download them. After that, we set the path for the images that we’ll use for image segmentation:
+</div>
+<div class="s71">
+if not os.path.exists(COCO_MODEL_PATH):
+</div>
+<div class="s7N">
+utils.download_trained_weights(COCO_MODEL_PATH)
+</div>
+<div class="s71">
+IMAGE_DIR = os.path.join(ROOT_DIR, "images")
+</div>
+<div class="s18">
+Let’s use the COCO config to set the batch size. We set the batch size to 1 since we’ll be running predictions on one image. We then display the configurations.
+</div>
+<div class="s71">
+class InferenceConfig(coco.CocoConfig):
+</div>
+<div class="s7N">
+GPU_COUNT = 1
+</div>
+<div class="s7N">
+IMAGES_PER_GPU = 1
+</div>
+<div class="s73">
+config = InferenceConfig()
+</div>
+<div class="s73">
+config.display()
+</div>
+<div class="s1G">
+<img src="rsrc14Z.jpg" class="s80" />
+</div>
+<div class="s18">
+Next, we can create an instance of the model. We set the model to inference because we’re not going to be training it. We then load the COCO weights that we downloaded earlier.
+</div>
+<div class="s71">
+model = modellib.MaskRCNN(mode="inference", model_dir=MODEL_DIR, config=config)
+</div>
+<div class="s73">
+model.load_weights(COCO_MODEL_PATH, by_name=True)
+</div>
+<div class="s8A">
+<img src="rsrc150.jpg" class="s88" />
+</div>
+<div class="s16">
+Let’s now process the image that we’re going to use:
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s8D">
+<span class="s140">image</span> <span class="s141">=</span> <span class="s140"> skimage.io.</span> <span class="s142">imread</span> <span class="s140">(os.path.</span> <span class="s142">join</span> <span class="s140">(</span> <span class="s143">IMAGE_DIR</span> <span class="s140">,</span> <span class="s144">'animals.jpg'</span> <span class="s140">))</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s16">
+With that in place, we can now run the prediction:
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s8D">
+<span class="s140">results</span> <span class="s141">=</span> <span class="s140"> model.</span> <span class="s142">detect</span> <span class="s140">([image], verbose</span> <span class="s141">=1</span> <span class="s140">)</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="s16">
+Visualizing the results is pretty straightforward:
+</div>
+<div class="s71">
+r = results[0]
+</div>
+<div class="s73">
+visualize.display_instances(image, r['rois'], r['masks'], r['class_ids'],
+</div>
+<div class="s91">
+<span class="class-4">class_names, r['scores'])</span>
+</div>
+<div class="s1T">
+<img src="rsrc151.jpg" class="s95" />
+</div>
+<div class="sX">
+<span class="s12S">As you can see its pretty simple. However, there are a couple of differences between this implementation and the</span> <a href="https://www.google.com/url?q=https://arxiv.org/abs/1703.06870&amp;sa=D&amp;ust=1597504082180000&amp;usg=AOvVaw0a04z1zEOVwzkHyS7LAUcm" class="s12W"><span class="s12V">official paper:</span></a>
+</div>
+<div class="s99">
+Resizing of all images to the same size to support the training of multiple images per batch. In the official paper, resizing is done in a manner that the smallest side is 800px and the largest is trimmed at 1000px.
+</div>
+<div class="s6F">
+Ignoring of bounding boxes that come with the dataset in order to generate them on the fly.
+</div>
+<div class="s6F">
+Use of a learning rate lower than the 0.02 proposed in the paper. Lower learning rates converged faster.
+</div>
+<div class="s3H">
+<span class="s12S">Since I made some slight adjustments from the original code on GitHub, I am</span> <a href="https://www.google.com/url?q=https://bitbucket.org/mwitiderrick/mask-r-cnn/src/master/Mask%2520R-CNN/&amp;sa=D&amp;ust=1597504082181000&amp;usg=AOvVaw31BUuyMko-5n0rcVwnFB0O" class="s12W"><span class="s12V">providing the source code used for this article</span></a> <span class="s12U">.</span>
+</div>
+<div class="sV">
+Conclusion
+</div>
+<div class="sZ">
+<span class="s12S">As you can see, Matterport provides a quick and easy way to implement image segmentation with Mask R-CNN. If you’d like to do your own training on images check this</span> <a href="https://www.google.com/url?q=https://github.com/matterport/Mask_RCNN/blob/master/samples/shapes/train_shapes.ipynb&amp;sa=D&amp;ust=1597504082181000&amp;usg=AOvVaw2xmJgJqhGPmxmKwUMppML1" class="s12W"><span class="s12V">Notebook</span></a> <span class="s12U"> on their GitHub page. You can also check out my other article on image segmentation.</span>
+</div>
+<div id="part0001.xhtml#toc15_LightGBM__A_Highly-Efficient_Gradient_Boosting_Decision_Tree" class="s4F">
+LightGBM: A Highly-Efficient Gradient Boosting Decision Tree
+</div>
+<div class="sX">
+<span class="s12S">The power of the LightGBM algorithm cannot be taken lightly (pun intended). LightGBM is a distributed and efficient</span> <a href="https://www.google.com/url?q=https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html&amp;sa=D&amp;ust=1597504082182000&amp;usg=AOvVaw2rHXMUsu4pnWCYCseG2HiI" class="s139">gradient boosting framework</a> <span class="s12S">that uses tree-based learning. It’s</span> <a href="https://www.google.com/url?q=https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingClassifier.html&amp;sa=D&amp;ust=1597504082183000&amp;usg=AOvVaw2XOsw3E2ze6HAstJ24BKu4" class="s12W"><span class="s12V">histogram-based</span></a> <span class="s12U"> and places continuous values into discrete bins, which leads to faster training and more efficient memory usage. In this piece, we’ll explore LightGBM in depth.</span>
+</div>
+<div class="sV">
+LightGBM Advantages
+</div>
+<div class="s18">
+According to the official docs, here are the advantages of the LightGBM framework:
+</div>
+<div class="s6F">
+Faster training speed and higher efficiency
+</div>
+<div class="s6F">
+Lower memory usage
+</div>
+<div class="s6F">
+Better accuracy
+</div>
+<div class="s6F">
+Support of parallel and GPU learning
+</div>
+<div class="s6F">
+Capable of handling large-scale data
+</div>
+<div class="sV">
+Parameter Tuning
+</div>
+<div class="s18">
+The framework uses a leaf-wise tree growth algorithm, which is unlike many other tree-based algorithms that use depth-wise growth. Leaf-wise tree growth algorithms tend to converge faster than depth-wise ones. However, they tend to be more prone to overfitting.
+</div>
+<div class="s9Z">
+<img src="rsrc152.jpg" class="s9X" />
+</div>
+<div class="s1T">
+<img src="rsrc153.jpg" class="sA3" />
+</div>
+<div class="s16">
+Here are the parameters we need to tune to get good results on a leaf-wise tree algorithm:
+</div>
+<div class="s3H">
+<span class="s12N">num_leaves</span> <span class="s12P">: Setting the number of leaves to num_leaves = 2^(max_depth) will give you the same number of leaves as a depth-wise tree. However, it isn’t a good practice. Ideally, the number of leaves should be smaller than 2^(max_depth)</span>
+</div>
+<div class="s3H">
+<span class="s12N">min_data_in_leaf</span> <span class="s12P"> prevents overfitting. It’s set depending on num_leaves and the number of training samples. For a large dataset, it can be set to hundreds or thousands.</span>
+</div>
+<div class="s3H">
+<span class="s12N">max_depth</span> <span class="s12P"> for limiting the depth of the tree.</span>
+</div>
+<div class="s18">
+Faster speeds on the algorithm can be obtained by using:
+</div>
+<div class="s3H">
+<span class="s12R">a small</span> <span class="s136">max_bin</span>
+</div>
+<div class="s3H">
+<span class="s12N">save_binary</span> <span class="s12P"> to speed up data loading in future learning</span>
+</div>
+<div class="s6F">
+parallel learning
+</div>
+<div class="s3H">
+<span class="s12N">bagging</span> <span class="s12R">, through setting</span> <span class="s12N">bagging_freq</span> <span class="s12R"> and</span> <span class="s136">bagging_fraction</span>
+</div>
+<div class="s3H">
+<span class="s12N">feature_fraction</span> <span class="s12P"> for feature sub-sampling</span>
+</div>
+<div class="s18">
+In order to get better accuracy, one can use a large max_bin, use a small learning rate with large num_iterations, and use more training data. One can also use many num_leaves, but it may lead to overfitting. Speaking of overfitting, you can deal with it by:
+</div>
+<div class="s6F">
+Increasing path_smooth
+</div>
+<div class="s6F">
+Using a larger training set
+</div>
+<div class="s3H">
+<span class="s12R">Trying</span> <span class="s12N">lambda_l1</span> <span class="s12R">,</span> <span class="s12N">lambda_l2</span> <span class="s12R">, and</span> <span class="s12N">min_gain_to_split</span> <span class="s12P"> for regularization</span>
+</div>
+<div class="s6F">
+Avoid growing a very deep tree
+</div>
+<div class="sV">
+Categorical Features
+</div>
+<div class="s18">
+A common way of processing categorical features in machine learning is one-hot encoding. This method is not optimal for tree learners, and especially for high-cardinality categorical features. Trees built on one-hot encoded features are unbalanced and have to grow too deep in order to obtain good accuracy.
+</div>
+<div class="sX">
+<span class="s12S">Using the</span> <span class="s12T">categorical_feature</span> <span class="s12S"> attribute, we can specify categorical features (without one-hot encoding) for their model. Categorical features should be encoded as non-negative integers less than</span> <span class="s12T">Int32.MaxValue</span> <span class="s12U">. They should start from zero.</span>
+</div>
+<div class="sV">
+LightGBM Applications
+</div>
+<div class="s18">
+LightGBM can be best applied to the following problems:
+</div>
+<div class="s3H">
+<span class="s12R">Binary classification using the</span> <span class="s12N">logloss</span> <span class="s12P"> objective function</span>
+</div>
+<div class="s3H">
+<span class="s12R">Regression using the</span> <span class="s12N">L2</span> <span class="s12P"> loss</span>
+</div>
+<div class="s6F">
+Multi-classification
+</div>
+<div class="s3H">
+<span class="s12R">Cross-entropy using the</span> <span class="s12N">logloss</span> <span class="s12P"> objective function</span>
+</div>
+<div class="s3H">
+<span class="s12R">LambdaRank using</span> <span class="s12N">lambdarank</span> <span class="s12P"> with NDCG as the objective function</span>
+</div>
+<div class="sV">
+Metrics
+</div>
+<div class="s16">
+The metrics supported by LightGBM are:
+</div>
+<div class="s6F">
+L1 loss
+</div>
+<div class="s6F">
+L2 loss
+</div>
+<div class="s6F">
+Log loss
+</div>
+<div class="s6F">
+Classification error rate
+</div>
+<div class="s6F">
+AUC
+</div>
+<div class="s6F">
+NDCG
+</div>
+<div class="s6F">
+MAP
+</div>
+<div class="s6F">
+Multi-class log loss
+</div>
+<div class="s6F">
+Multi-class error rate
+</div>
+<div class="s6F">
+Fair
+</div>
+<div class="s6F">
+Huber
+</div>
+<div class="s6F">
+Poisson
+</div>
+<div class="s6F">
+Quantile
+</div>
+<div class="s6F">
+MAPE
+</div>
+<div class="s6F">
+Kullback-Leibler
+</div>
+<div class="s6F">
+Gamma
+</div>
+<div class="s6F">
+Tweedie
+</div>
+<div class="sV">
+Handling Missing Values
+</div>
+<div class="sX">
+<span class="s12S">By default, LightGBM is able to handle missing values. You can disable this by setting</span> <span class="s12T">use_missing=false</span> <span class="s12S">. It uses NA to represent missing values, but to use zero you can set it</span> <span class="s12T">zero_as_missing=true</span> <span class="s12U">.</span>
+</div>
+<div class="sV">
+Core Parameters
+</div>
+<div class="s16">
+Here are some of the core parameters for LightGBM:
+</div>
+<div class="s3H">
+<span class="s12N">task defaults</span> <span class="s12R"> to train. Other options are predict, convert_model, and refit. The alias for this parameter is</span> <span class="s12N">task_type</span> <span class="s12R">.</span> <span class="s12N">convert_model</span> <span class="s12P"> converts the model into an if-else format.</span>
+</div>
+<div class="s3H">
+<span class="s12N">objective</span> <span class="s12R"> defaults to regression. The other options are</span> <span class="s12N">regression_l1</span> <span class="s12R">,</span> <span class="s12N">huber</span> <span class="s12R">,</span> <span class="s12N">fair</span> <span class="s12R">,</span> <span class="s12N">poisson</span> <span class="s12R">,</span> <span class="s12N">quantile</span> <span class="s12R">,</span> <span class="s12N">mape</span> <span class="s12R">,</span> <span class="s12N">gamma</span> <span class="s12R">,</span> <span class="s12N">tweedie</span> <span class="s12R">,</span> <span class="s12N">binary</span> <span class="s12R">,</span> <span class="s12N">multiclass</span> <span class="s12R">,</span> <span class="s12N">multiclassova</span> <span class="s12R">,</span> <span class="s12N">cross_entropy</span> <span class="s12R">,</span> <span class="s12N">cross_entropy_lambda</span> <span class="s12R">,</span> <span class="s12N">lambdarank</span> <span class="s12R">, and</span> <span class="s12N">rank_xendcg</span> <span class="s12R"> . The aliases for this parameter are</span> <span class="s12N">objective_type</span> <span class="s12R">,</span> <span class="s12N">app</span> <span class="s12R">, and</span> <span class="s12N">application</span> <span class="s12P"> .</span>
+</div>
+<div class="s3H">
+<span class="s12N">boosting</span> <span class="s12R"> defaults to</span> <span class="s12N">gbdt</span> <span class="s12P"> — a traditional Gradient Boosting Decision Tree. Other options are rf, — Random Forest, dart, — Dropouts meet Multiple Additive Regression Trees, goss — Gradient-based One-Side Sampling. This parameter’s aliases are boosting_type and boost.</span>
+</div>
+<div class="s3H">
+<span class="s12N">num_leaves</span> <span class="s12P">: maximum tree leaves for base learners — defaults to 31</span>
+</div>
+<div class="s3H">
+<span class="s12N">max_depth</span> <span class="s12P">: maximum tree depth for base learners</span>
+</div>
+<div class="s3H">
+<span class="s12N">learning_rate</span> <span class="s12P">: the boosting learning rate</span>
+</div>
+<div class="s3H">
+<span class="s12N">n_estimators</span> <span class="s12P">: number of boosted trees to fit — defaults to 200000</span>
+</div>
+<div class="s3H">
+<span class="s12N">importance_type</span> <span class="s12R">: the type of importance to be filled in the</span> <span class="s12N">feature_importances_</span> <span class="s12P">. Using split means that the number of times a feature is used in a model will be contained in the result.</span>
+</div>
+<div class="s3H">
+<span class="s12N">device_type</span> <span class="s12P">: device for the tree learning — CPU Or GPU. Can be used with device as the alias.</span>
+</div>
+<div class="sV">
+Learning Control Parameters
+</div>
+<div class="s16">
+Let’s look at a couple of learning control parameters:
+</div>
+<div class="sC1">
+<span class="s12N">force_col_wise</span> <span class="s12P">: When set to true, it forces col-wise histogram building. It’s recommended to set this to true when the number of columns is large, or the total number of bins is large. You can also set it to true when you want to reduce cost on memory, and when the num_threads is large, e.g greater than 20. This parameter is only used with a CPU.</span>
+</div>
+<div class="s3H">
+<span class="s12N">force_row_wise</span> <span class="s12P">: When set to true, it forces row-wise histogram building. This parameter is only used with a CPU. You can turn this one on when the number of data points is large, the total number of bins is smaller, and when the num_threads is small (e.g. less than or equal to 16). It can also be set to true when you want to use a small bagging_fraction or goss boosting to speed up training.</span>
+</div>
+<div class="s3H">
+<span class="s12N">neg_bagging_fraction</span> <span class="s12P">: Used for imbalanced binary classification problems.</span>
+</div>
+<div class="s3H">
+<span class="s12N">bagging_freq</span> <span class="s12P">: The frequency for bagging. Zero means bagging is disabled.</span>
+</div>
+<div class="s6F">
+feature_fraction: Can be used to deal with overfitting. For instance, setting it to 0.5 would mean that LightGBM will select 50% of the features at each tree node.
+</div>
+<div class="s3H">
+<span class="s12N">extra_trees</span> <span class="s12P">: Set to true when you want to use extremely randomized trees.</span>
+</div>
+<div class="s6F">
+early_stopping_round: When true, training stops once a certain parameter fails to improve.
+</div>
+<div class="s3H">
+<span class="s12N">max_drop</span> <span class="s12P">: Defaults to 50. Signifies the number of trees to drop on every iteration.</span>
+</div>
+<div class="s3H">
+<span class="s12N">cat_l2</span> <span class="s12P">: L2 regularization in a categorical split</span>
+</div>
+<div class="s3H">
+<span class="s12N">cat_smooth</span> <span class="s12P">: Reduces the effect of noise in categorical features, especially for categories with limited data.</span>
+</div>
+<div class="s3H">
+<span class="s12N">path_smooth</span> <span class="s12P">: Helps prevent overfitting on leaves with few samples.</span>
+</div>
+<div class="sV">
+Objective Parameters
+</div>
+<div class="s18">
+Here are a couple of objective parameters to take note of:
+</div>
+<div class="s3H">
+<span class="s12N">is_unbalance</span> <span class="s12P">: Can be set to true if the training data is unbalanced for classification problems.</span>
+</div>
+<div class="s3H">
+<span class="s12N">num_class</span> <span class="s12P">: Used to indicate the number of classes in a multi-classification problem.</span>
+</div>
+<div class="s3H">
+<span class="s12N">scale_pos_weight</span> <span class="s12P">: Weight of labels with positive class. Cannot be used together with is_unbalance. This parameter increases the overall performance metric of the model but may result in poor estimates of the individual class probabilities.</span>
+</div>
+<div class="sV">
+Practical Implementation
+</div>
+<div class="s18">
+We’ll now look at a quick implementation of the algorithm. We’ll use scikit-lean’s wrapper for the classifier.
+</div>
+<div class="s18">
+As always, we start by importing the model:
+</div>
+<div class="sCN">
+from lightgbm import LGBMClassifier
+</div>
+<div class="sZ">
+<span class="s12S">The next step is to create an instance of the model while setting the objective. The options for the objective are regression for</span> <span class="s12T">LGBMRegressor</span> <span class="s12S">,</span> <span class="s12T">binary</span> <span class="s12S"> or</span> <span class="s12T">multi-class</span> <span class="s12S"> for</span> <span class="s12T">LGBMClassifier</span> <span class="s12S">, and</span> <span class="s12T">LambdaRank</span> <span class="s12S"> for</span> <span class="s12T">LGBMRanker</span> <span class="s12U">.</span>
+</div>
+<div class="s71">
+model = LGBMClassifier(objective=’multiclass’)
+</div>
+<div class="s18">
+When fitting the model, we can set the categorical features:
+</div>
+<div class="s71">
+model.fit(X_train,y_train,categorical_feature=[0,3])
+</div>
+<div class="s18">
+Once you run predictions on the model, you can also obtain the important features:
+</div>
+<div class="s18">
+predictions = model.predict(X_test)
+</div>
+<div class="s16">
+importances = model.feature_importances_
+</div>
+<div class="sV">
+Conclusion
+</div>
+<div class="sZ">
+<span class="s12S">I hope that this has given you enough background into LightGBM to start experimenting on your own. We’ve seen that we can use it for both regression and classification problems. For more information on the framework, you can check out the official</span> <a href="https://www.google.com/url?q=https://lightgbm.readthedocs.io/en/latest/&amp;sa=D&amp;ust=1597504082204000&amp;usg=AOvVaw25svQZGdtdGSiOasAadX7Q" class="s12W"><span class="s12V">docs</span></a> <span class="s12U">.</span>
+</div>
+<div id="part0001.xhtml#toc16_Pruning_Machine_Learning_Models_in_TensorFlow" class="s4F">
+Pruning Machine Learning Models in TensorFlow
+</div>
+<div class="sD1">
+Pruning is a model optimization technique that involves eliminating unnecessary values in the weight tensor. This results in smaller models with accuracy very close to the baseline model.
+</div>
+<div class="s18">
+In this article, we’ll work through an example as we apply pruning and view the effect on the final model size and prediction errors.
+</div>
+<div class="sV">
+Import the Usual Suspects
+</div>
+<div class="s18">
+Our first step is to get a couple of imports out of the way:
+</div>
+<div class="s3H">
+<span class="s12N">os</span> <span class="s12P"> and Zipfile will help us in assessing the size of the models.</span>
+</div>
+<div class="s3H">
+<span class="s12N">tensorflow_model_optimization</span> <span class="s12P"> for model pruning.</span>
+</div>
+<div class="s3H">
+<span class="s12N">load_model</span> <span class="s12P"> for loading a saved model.</span>
+</div>
+<div class="s3H">
+<span class="s12R">and of course</span> <span class="s12N">tensorflow</span> <span class="s12R"> and</span> <span class="s12N">keras</span> <span class="s12P">.</span>
+</div>
+<div class="s18">
+Finally, we initialize TensorBoard so that we’ll able to visualize the models:
+</div>
+<div class="s5F">
+import os
+</div>
+<div class="s65">
+import zipfile
+</div>
+<div class="s65">
+import tensorflow as tf
+</div>
+<div class="s65">
+import tensorflow_model_optimization as tfmot
+</div>
+<div class="s65">
+from tensorflow.keras.models import load_model
+</div>
+<div class="s65">
+from tensorflow import keras
+</div>
+<div class="s4Z">
+%load_ext tensorboard
+</div>
+<div class="sDJ">
+Dataset Generation
+</div>
+<div class="s18">
+For this experiment, we’ll generate a regression dataset using scikit-learn. Thereafter, we split the dataset into a training and test set:
+</div>
+<div class="s71">
+from sklearn.datasets import make_friedman1
+</div>
+<div class="s73">
+X, y = make_friedman1(n_samples=10000, n_features=10, random_state=0)
+</div>
+<div class="s73">
+from sklearn.model_selection import train_test_split
+</div>
+<div class="s73">
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+</div>
+<div class="sV">
+Model Without Pruning
+</div>
+<div class="s18">
+We’ll create a simple neural network to predict the target variable y. We’ll then check the mean squared error. After this, we’ll compare this with the entire model pruned, and then with just the Dense layer pruned.
+</div>
+<div class="s71">
+def setup_model():
+</div>
+<div class="s7N">
+model = keras.Sequential([
+</div>
+<div class="s7N">
+keras.layers.Dense(units = 128, activation='relu',input_shape=(X_train.shape[1],)),
+</div>
+<div class="s7N">
+keras.layers.Dense(units=1, activation='relu')])
+</div>
+<div class="s7N">
+return model
+</div>
+<div class="s18">
+Next, we step up a callback to stop training the model once it stops improving, after 30 epochs.
+</div>
+<div class="sE1">
+early_stop = keras.callbacks.EarlyStopping(monitor=’val_loss’, patience=30)
+</div>
+<div class="s18">
+Let’s print a summary of the model so that we can compare it with the summary of the pruned models.
+</div>
+<div class="s71">
+model = setup_model()
+</div>
+<div class="s73">
+model.summary()
+</div>
+<div class="sEA">
+<img src="rsrc154.jpg" class="sE8" />
+</div>
+<div class="s18">
+Let’s compile the model and train it.
+</div>
+<div class="s71">
+model.compile(optimizer=’adam’,
+</div>
+<div class="sEE">
+loss=tf.keras.losses.mean_squared_error,
+</div>
+<div class="sEE">
+metrics=[‘mae’, ‘mse’])
+</div>
+<div class="s73">
+model.fit(X_train,y_train,epochs=300,validation_split=0.2,callbacks=early_stop,verbose=0)
+</div>
+<div class="s18">
+Since it’s a regression problem, we’re monitoring the mean absolute error and the mean squared error.
+</div>
+<div class="s18">
+Here’s the model plotted to an image. The input is 10 since the dataset we generated has 10 features.
+</div>
+<div class="s71">
+tf.keras.utils.plot_model(
+</div>
+<div class="sEE">
+model,
+</div>
+<div class="sEE">
+to_file=”model.png”,
+</div>
+<div class="sEE">
+show_shapes=True,
+</div>
+<div class="sEE">
+show_layer_names=True,
+</div>
+<div class="sEE">
+rankdir=”TB”,
+</div>
+<div class="sEE">
+expand_nested=True,
+</div>
+<div class="sEE">
+dpi=96,
+</div>
+<div class="s73">
+)
+</div>
+<div class="sF1">
+<img src="rsrc155.jpg" class="sEZ" />
+</div>
+<div class="s16">
+Let’s now check the mean squared error. We can move on to the next section and see how this error changes when we prune the entire model.
+</div>
+<div class="s71">
+from sklearn.metrics import mean_squared_error
+</div>
+<div class="s73">
+predictions = model.predict(X_test)
+</div>
+<div class="s73">
+print(‘Without Pruning MSE %.4f’ % mean_squared_error(y_test,predictions.reshape(3300,)))
+</div>
+<div class="sF7">
+Without Pruning MSE 0.0201
+</div>
+<div class="sV">
+Pruning the Entire Model with a ConstantSparsity Pruning Schedule
+</div>
+<div class="s18">
+Let’s compared the above MSE with the one obtained upon pruning the entire model. The first step is to define the pruning parameters. The weight pruning is magnitude-based. This means that some weights are converted to zeros during the training process. The model becomes sparse, hence making it easier to compress. Sparse models also make inferencing faster since the zeros can be skipped.
+</div>
+<div class="s18">
+The parameters expected are the pruning schedule, the block size, and the block pooling type.
+</div>
+<div class="s6F">
+In this case, we’re setting a 50% sparsity, meaning that 50% of the weights will be zeroed.
+</div>
+<div class="s6F">
+block_size — The dimensions (height, weight) for the block sparse pattern in matrix weight tensors.
+</div>
+<div class="s6F">
+block_pooling_type — The function to use to pool weights in the block. Must be AVG or MAX.
+</div>
+<div class="sFF">
+from tensorflow_model_optimization.sparsity.keras import ConstantSparsity
+</div>
+<div class="s73">
+pruning_params = {
+</div>
+<div class="s7N">
+'pruning_schedule': ConstantSparsity(0.5, 0),
+</div>
+<div class="s7N">
+'block_size': (1, 1),
+</div>
+<div class="s7N">
+'block_pooling_type': 'AVG'
+</div>
+<div class="s73">
+}
+</div>
+<div class="s18">
+We can now prune the entire model by applying our pruning parameters.
+</div>
+<div class="s71">
+from tensorflow_model_optimization.sparsity.keras import prune_low_magnitude
+</div>
+<div class="s73">
+model_to_prune = prune_low_magnitude(
+</div>
+<div class="s7N">
+keras.Sequential([
+</div>
+<div class="sFU">
+tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
+</div>
+<div class="sFU">
+tf.keras.layers.Dense(1, activation='relu')
+</div>
+<div class="s7N">
+]), **pruning_params)
+</div>
+<div class="s18">
+Let’s check the model summary. Compare this with the summary of the unpruned model. From the image below we can see that the entire model has been pruned—we’ll see the difference shortly with the summary obtained after pruning one dense layer.
+</div>
+<div class="s71">
+model_to_prune.summary()
+</div>
+<div class="sG4">
+<img src="rsrc156.jpg" class="sG2" />
+</div>
+<div class="s16">
+We have to compile the model before we can fit it to the training and testing set.
+</div>
+<div class="s71">
+model_to_prune.compile(optimizer=’adam’,
+</div>
+<div class="sEE">
+loss=tf.keras.losses.mean_squared_error,
+</div>
+<div class="sEE">
+metrics=[‘mae’, ‘mse’])
+</div>
+<div class="s18">
+Since we’re applying pruning, we have to define a couple of pruning callbacks in addition to the early stopping callback. We define the folder to log the model, then create a list with the callbacks.
+</div>
+<div class="sZ">
+<span class="s12T">tfmot.sparsity.keras.UpdatePruningStep()</span> <span class="s12U"> updates pruning wrappers with the optimizer step. Failure to specify it will result in an error.</span>
+</div>
+<div class="sX">
+<span class="s12T">tfmot.sparsity.keras.PruningSummaries()</span> <span class="s12U"> adds pruning summaries to the Tensorboard.</span>
+</div>
+<div class="s5F">
+log_dir = ‘.models’
+</div>
+<div class="s65">
+callbacks = [
+</div>
+<div class="s65">
+tfmot.sparsity.keras.UpdatePruningStep(),
+</div>
+<div class="s65">
+# Log sparsity and other metrics in Tensorboard.
+</div>
+<div class="s65">
+tfmot.sparsity.keras.PruningSummaries(log_dir=log_dir),
+</div>
+<div class="s65">
+keras.callbacks.EarlyStopping(monitor=’val_loss’, patience=10)
+</div>
+<div class="s4Z">
+]
+</div>
+<div class="s18">
+With that out of the way, we can now fit the model to the training set.
+</div>
+<div class="sE1">
+model_to_prune.fit(X_train,y_train,epochs=100,validation_split=0.2,callbacks=callbacks,verbose=0)
+</div>
+<div class="s18">
+Upon checking the mean squared error for this model, we notice that it’s slightly higher than the one for the unpruned model.
+</div>
+<div class="s71">
+prune_predictions = model_to_prune.predict(X_test)
+</div>
+<div class="s73">
+print(‘Whole Model Pruned MSE %.4f’ % mean_squared_error(y_test,prune_predictions.reshape(3300,)))
+</div>
+<div class="s1J">
+Whole Model Pruned MSE  0.1830
+</div>
+<div class="sDJ">
+Pruning the Dense Layer Only with PolynomialDecay Pruning Schedule
+</div>
+<div class="sX">
+<span class="s12S">Let’s now implement the same model—but this time, we’ll prune the dense layer only. Notice the use of the</span> <a href="https://www.google.com/url?q=https://www.tensorflow.org/model_optimization/api_docs/python/tfmot/sparsity/keras/PolynomialDecay&amp;sa=D&amp;ust=1597504082223000&amp;usg=AOvVaw1BC3BXt3EGURyAcMnmuZOW" class="s12W"><span class="s12V">PolynomialDecay</span></a> <span class="s12U"> function in the pruning schedule.</span>
+</div>
+<div class="sGW">
+from tensorflow_model_optimization.sparsity.keras import PolynomialDecay
+</div>
+<div class="s73">
+layer_pruning_params = {
+</div>
+<div class="s7N">
+'pruning_schedule': PolynomialDecay(initial_sparsity=0.2,
+</div>
+<div class="sFU">
+final_sparsity=0.8, begin_step=1000, end_step=2000),
+</div>
+<div class="s7N">
+'block_size': (2, 3),
+</div>
+<div class="s7N">
+'block_pooling_type': 'MAX'
+</div>
+<div class="s73">
+}
+</div>
+<div class="s71">
+model_layer_prunning = keras.Sequential([
+</div>
+<div class="s7N">
+prune_low_magnitude(tf.keras.layers.Dense(128, activation='relu',input_shape=(X_train.shape[1],)),
+</div>
+<div class="sH6">
+<span class="class-1">**layer_pruning_params),</span>
+</div>
+<div class="s7N">
+tf.keras.layers.Dense(1, activation='relu')
+</div>
+<div class="s73">
+])
+</div>
+<div class="s18">
+From the summary, we can see that only the first dense layer will be pruned.
+</div>
+<div class="s71">
+model_layer_prunning.summary()
+</div>
+<div class="sHG">
+<img src="rsrc157.jpg" class="sHE" />
+</div>
+<div class="s16">
+We then compile and fit the model.
+</div>
+<div class="s71">
+model_layer_prunning.compile(optimizer=’adam’,
+</div>
+<div class="sEE">
+loss=tf.keras.losses.mean_squared_error,
+</div>
+<div class="sEE">
+metrics=[‘mae’, ‘mse’])
+</div>
+<div class="s73">
+model_layer_prunning.fit(X_train,y_train,epochs=300,validation_split=0.1,callbacks=callbacks,verbose=0)
+</div>
+<div class="s18">
+Now, let’s check the mean squared error.
+</div>
+<div class="sFF">
+layer_prune_predictions = model_layer_prunning.predict(X_test)
+</div>
+<div class="s73">
+print(‘Layer Prunned MSE %.4f’ % mean_squared_error(y_test,layer_prune_predictions.reshape(3300,)))
+</div>
+<div class="s1J">
+Layer Prunned MSE 0.1388
+</div>
+<div class="s18">
+We can’t compare the MSE obtained here with the previous one since we’ve used different pruning parameters. If you’d like to compare them, then ensure that the pruning parameters are similar. Upon testing, layer_pruning_params gave a lower error than the pruning_params for this specific case. Comparing the MSE obtained from different pruning parameters is useful so that you can settle for the one that doesn’t make the model’s performance worse.
+</div>
+<div class="sV">
+Comparing Model Sizes
+</div>
+<div class="s16">
+Let’s now compare the sizes of the models with and without pruning. We start by training and saving the model weights for later use.
+</div>
+<div class="s71">
+def train_save_weights():
+</div>
+<div class="s7N">
+model = setup_model()
+</div>
+<div class="s7N">
+model.compile(optimizer='adam',
+</div>
+<div class="sJ1">
+<span class="class-0">loss=tf.keras.losses.mean_squared_error,</span>
+</div>
+<div class="sJ1">
+<span class="class-0">metrics=['mae', 'mse'])</span>
+</div>
+<div class="s7N">
+model.fit(X_train,y_train,epochs=300,validation_split=0.2,callbacks=callbacks,verbose=0)
+</div>
+<div class="s7N">
+model.save_weights('.models/friedman_model_weights.h5')
+</div>
+<div class="s73">
+train_save_weights()
+</div>
+<div class="s18">
+We’ll set up our base model and load the saved weights. We then prune the entire model. We compile, fit the model, and visualize the results on Tensorboard.
+</div>
+<div class="s71">
+base_model = setup_model()
+</div>
+<div class="s73">
+base_model.load_weights('.models/friedman_model_weights.h5') # optional but recommended for model accuracy
+</div>
+<div class="s73">
+model_for_pruning = tfmot.sparsity.keras.prune_low_magnitude(base_model)
+</div>
+<div class="s71">
+model_for_pruning.compile(
+</div>
+<div class="sJC">
+loss=tf.keras.losses.mean_squared_error,
+</div>
+<div class="sJC">
+optimizer='adam',
+</div>
+<div class="sJC">
+metrics=['mae', 'mse']
+</div>
+<div class="s73">
+)
+</div>
+<div class="sFF">
+model_for_pruning.fit(
+</div>
+<div class="s7N">
+X_train,
+</div>
+<div class="s7N">
+y_train,
+</div>
+<div class="s7N">
+callbacks=callbacks,
+</div>
+<div class="s7N">
+epochs=300,
+</div>
+<div class="s7N">
+validation_split = 0.2,
+</div>
+<div class="s7N">
+verbose=0
+</div>
+<div class="s73">
+)
+</div>
+<div class="s71">
+%tensorboard --logdir={log_dir}
+</div>
+<div class="s18">
+Here’s a single snapshot of the pruning summaries from TensorBoard.
+</div>
+<div class="sJZ">
+<img src="rsrc158.jpg" class="sJX" />
+</div>
+<div class="s16">
+The other pruning summaries can also be viewed on Tensorboard.
+</div>
+<div class="sK6">
+<img src="rsrc159.jpg" class="sK4" />
+</div>
+<div class="s16">
+Let’s now define a function to compute the sizes of the models.
+</div>
+<div class="s71">
+def get_gzipped_model_size(model,mode_name,zip_name):
+</div>
+<div class="s7N">
+# Returns size of gzipped model, in bytes.
+</div>
+<div class="sKB">
+model.save(mode_name, include_optimizer=False)
+</div>
+<div class="sKB">
+with zipfile.ZipFile(zip_name, 'w', compression=zipfile.ZIP_DEFLATED) as f:
+</div>
+<div class="sFU">
+f.write(mode_name)
+</div>
+<div class="sKB">
+return os.path.getsize(zip_name)
+</div>
+<div class="s18">
+And now we define the model for export and then compute the sizes.
+</div>
+<div class="sX">
+<span class="s12S">For a pruned model,</span> <span class="s12T"> tfmot.sparsity.keras.strip_pruning()</span> <span class="s12U"> is used to restore the original model with the sparse weights. Notice the difference in size for the stripped and unstripped models.</span>
+</div>
+<div class="s73">
+model_for_export = tfmot.sparsity.keras.strip_pruning(model_for_pruning)
+</div>
+<div class="s73">
+print("Size of gzipped pruned model without stripping: %.2f bytes" % (get_gzipped_model_size(model_for_pruning,'.models/model_for_pruning.h5','.models/model_for_pruning.zip')))
+</div>
+<div class="s73">
+print("Size of gzipped pruned model with stripping: %.2f bytes" % (get_gzipped_model_size(model_for_export,'.models/model_for_export.h5','.models/model_for_export.zip')))
+</div>
+<div class="s65">
+Size of gzipped pruned model without stripping: 6101.00 bytes
+</div>
+<div class="s4Z">
+Size of gzipped pruned model with stripping: 5140.00 bytes
+</div>
+<div class="s18">
+Running predictions on both models, we see that they have the same mean squared error.
+</div>
+<div class="s71">
+model_for_prunning_predictions = model_for_pruning.predict(X_test)
+</div>
+<div class="s73">
+print('Model for Prunning Error %.4f' % mean_squared_error(y_test,model_for_prunning_predictions.reshape(3300,)))
+</div>
+<div class="s73">
+model_for_export_predictions = model_for_export.predict(X_test)
+</div>
+<div class="s73">
+print('Model for Export Error  %.4f' %  mean_squared_error(y_test,model_for_export_predictions.reshape(3300,)))
+</div>
+<div class="s18">
+Model for Prunning Error 0.0264
+</div>
+<div class="s16">
+Model for Export Error  0.0264
+</div>
+<div class="sV">
+Final Thoughts
+</div>
+<div class="s16">
+You can go ahead and test how different pruning schedules affect the size of the model. Obviously, the observations made here are not universal. You’ll have to try different pruning parameters and learn how they affect your model size, prediction error, and/or accuracy depending on your problem.
+</div>
+<div class="sX">
+<span class="s12S">To optimize the model even more,</span> <span class="s137">you could quantize it</span> <span class="s12S">. If you’d like to explore that and more, check the</span> <a href="https://www.google.com/url?q=https://github.com/mwitiderrick/Pruning-in-TensorFlow&amp;sa=D&amp;ust=1597504082233000&amp;usg=AOvVaw1YaEx2Om5b9dMGP4F7_AhK" class="s12W"><span class="s12V">repo</span></a> <span class="s12S"> and the</span> <a href="https://www.google.com/url?q=https://www.tensorflow.org/model_optimization/guide/pruning/comprehensive_guide&amp;sa=D&amp;ust=1597504082233000&amp;usg=AOvVaw3xzrJ3_eFVR2wyQS99CAwU" class="s12W"><span class="s12V">resources</span></a> <span class="s12U">.</span>
+</div>
+<div id="part0001.xhtml#toc17_Feature_Ranking_with_Recursive_Feature_Elimination_in_Scikit-Learn" class="s4F">
+Feature Ranking with Recursive Feature Elimination in Scikit-Learn
+</div>
+<div class="s16">
+Feature selection is an important task for any machine learning application. This is especially crucial when the data in question has many features. The optimal number of features also leads to improved model accuracy. Obtaining the most important features and the number of optimal features can be obtained via feature importance or feature ranking. In this piece, we’ll explore feature ranking.
+</div>
+<div class="sV">
+Recursive Feature Elimination
+</div>
+<div class="s18">
+The first item needed for recursive feature elimination is an estimator; for example, a linear model or a decision tree model.
+</div>
+<div class="s18">
+These models have coefficients for linear models and feature importances in decision tree models. In selecting the optimal number of features, the estimator is trained and the features are selected via the coefficients, or via the feature importances. The least important features are removed. This process is repeated recursively until the optimal number of features is obtained.
+</div>
+<div class="sV">
+Application in Sklearn
+</div>
+<div class="sX">
+<span class="s12S">Scikit-learn makes it possible to implement recursive feature elimination via the</span> <span class="s12T">sklearn.feature_selection.RFE</span> <span class="s12U"> class. The class takes the following parameters:</span>
+</div>
+<div class="sC1">
+<span class="s12N">estimator</span> <span class="s12P"> — a machine learning estimator that can provide features importances via the coef_ or feature_importances_ attributes.</span>
+</div>
+<div class="s3H">
+<span class="s12N">n_features_to_select</span> <span class="s12P"> — the number of features to select. Selects half if it's not specified.</span>
+</div>
+<div class="s3H">
+<span class="s12N">step</span> <span class="s12P"> — an integer that indicates the number of features to be removed at each iteration, or a number between 0 and 1 to indicate the percentage of features to remove at each iteration.</span>
+</div>
+<div class="s18">
+Once fitted, the following attributes can be obtained:
+</div>
+<div class="s3H">
+<span class="s12N">ranking_</span> <span class="s12P"> — the ranking of the features.</span>
+</div>
+<div class="s3H">
+<span class="s12N">n_features_</span> <span class="s12P"> — the number of features that have been selected.</span>
+</div>
+<div class="s3H">
+<span class="s12N">support_</span> <span class="s12P"> — an array that indicates whether or not a feature was selected.</span>
+</div>
+<div class="sV">
+Application
+</div>
+<div class="sX">
+<span class="s12S">As noted earlier, we’ll need to work with an estimator that offers a</span> <span class="s12T">feature_importance_s</span> <span class="s12S"> attribute or a</span> <span class="s12T">coeff_</span> <span class="s12U"> attribute. Let’s work through a quick example. The dataset has 13 features—we’ll work on getting the optimal number of features.</span>
+</div>
+<div class="s71">
+import pandas as pd
+</div>
+<div class="s73">
+df = pd.read_csv(‘heart.csv’)
+</div>
+<div class="s73">
+df.head()
+</div>
+<div class="s1G">
+<img src="rsrc15A.jpg" class="sMP" />
+</div>
+<div class="s18">
+Let’s obtain the X and y features.
+</div>
+<div class="s65">
+X = df.drop([‘target’],axis=1)
+</div>
+<div class="s4Z">
+y = df[‘target’]
+</div>
+<div class="s18">
+We’ll split it into a testing and training set to prepare for modeling:
+</div>
+<div class="s71">
+from sklearn.model_selection import train_test_split
+</div>
+<div class="s73">
+X_train, X_test, y_train, y_test = train_test_split(X, y,random_state=0)
+</div>
+<div class="s18">
+Let’s get a couple of imports out of the way:
+</div>
+<div class="sC1">
+<span class="s12N">pipeline</span> <span class="s12P"> — since we’ll perform some cross-validation. It’s best practice in order to avoid data leakage.</span>
+</div>
+<div class="s3H">
+<span class="s12N">RepeatedStratifiedKFold</span> <span class="s12P"> — for repeated stratified cross-validation.</span>
+</div>
+<div class="s3H">
+<span class="s12N">cross_val_score</span> <span class="s12P"> — for evaluating the score on cross-validation.</span>
+</div>
+<div class="s3H">
+<span class="s12N">GradientBoostingClassifier</span> <span class="s12P"> — the estimator we’ll use.</span>
+</div>
+<div class="s3H">
+<span class="s12N">numpy</span> <span class="s12P"> — so that we can compute the mean of the scores.</span>
+</div>
+<div class="s5F">
+from sklearn.pipeline import Pipeline
+</div>
+<div class="s65">
+from sklearn.model_selection import RepeatedStratifiedKFold
+</div>
+<div class="s65">
+from sklearn.model_selection import cross_val_score
+</div>
+<div class="s65">
+from sklearn.feature_selection import RFE
+</div>
+<div class="s65">
+import numpy as np
+</div>
+<div class="s4Z">
+from sklearn.ensemble import GradientBoostingClassifier
+</div>
+<div class="s2X">
+The first step is to create an instance of the RFE class while specifying the estimator and the number of features you’d like to select. In this case, we’re selecting 6:
+</div>
+<div class="sE1">
+rfe = RFE(estimator=GradientBoostingClassifier(), n_features_to_select=6)
+</div>
+<div class="s18">
+Next, we create an instance of the model we’d like to use:
+</div>
+<div class="s71">
+model = GradientBoostingClassifier()
+</div>
+<div class="s18">
+We’ll use a Pipeline to transform the data. In the Pipeline we specify rfe for the feature selection step and the model that’ll be used in the next step.
+</div>
+<div class="sX">
+<span class="s12S">We then specify a</span> <span class="s12T">RepeatedStratifiedKFold</span> <span class="s12S"> with 10 splits and 5 repeats. The stratified K fold ensures that the number of samples from each class is well balanced in each fold.</span> <span class="s12T">RepeatedStratifiedKFold</span> <span class="s12U"> repeats the stratified K fold the specified number of times, with a different randomization in each repetition.</span>
+</div>
+<div class="s5F">
+pipe = Pipeline([(‘Feature Selection’, rfe), (‘Model’, model)])
+</div>
+<div class="s65">
+cv = RepeatedStratifiedKFold(n_splits=10, n_repeats=5, random_state=36851234)
+</div>
+<div class="s65">
+n_scores = cross_val_score(pipe, X_train, y_train, scoring=’accuracy’, cv=cv, n_jobs=-1)
+</div>
+<div class="s4Z">
+np.mean(n_scores)
+</div>
+<div class="s18">
+The next step is to fit this pipeline to the dataset.
+</div>
+<div class="s71">
+pipe.fit(X_train, y_train)
+</div>
+<div class="s18">
+With that in place, we can check the support and the ranking. The support indicates whether or not a feature was chosen.
+</div>
+<div class="s71">
+rfe.support_
+</div>
+<div class="s73">
+array([ True, False,  True, False,  True, False, False,  True, False,True, False,  True,  True])
+</div>
+<div class="s18">
+We can put that into a dataframe and check the result.
+</div>
+<div class="s71">
+pd.DataFrame(rfe.support_,index=X.columns,columns=[‘Rank’])
+</div>
+<div class="sP0">
+<img src="rsrc15B.jpg" class="sNY" />
+</div>
+<div class="s16">
+We can also check the relative rankings.
+</div>
+<div class="s71">
+rf_df = pd.DataFrame(rfe.ranking_,index=X.columns,columns=[‘Rank’]).sort_values(by=’Rank’,ascending=True)
+</div>
+<div class="s73">
+rf_df.head()
+</div>
+<div class="sP0">
+<img src="rsrc15C.jpg" class="sP7" />
+</div>
+<div class="sV">
+Automatic Feature Selection
+</div>
+<div class="sX">
+<span class="s12S">Instead of manually configuring the number of features, it would be very nice if we could automatically select them. This can be achieved via recursive feature elimination and cross-validation. This is done via the</span> <span class="s12T">sklearn.feature_selection.RFECV</span> <span class="s12U"> class. The class takes the following parameters:</span>
+</div>
+<div class="sC1">
+<span class="s12N">estimator</span> <span class="s12P"> — similar to the RFE class.</span>
+</div>
+<div class="s3H">
+<span class="s12N">min_features_to_select</span> <span class="s12P"> — the minimum number of features to be selected.</span>
+</div>
+<div class="s3H">
+<span class="s12N">cv—</span> <span class="s12P"> the cross-validation splitting strategy.</span>
+</div>
+<div class="s18">
+The attributes returned are:
+</div>
+<div class="sC1">
+<span class="s12N">n_features_</span> <span class="s12P"> — the optimal number of features selected via cross-validation.</span>
+</div>
+<div class="s3H">
+<span class="s12N">support_</span> <span class="s12P"> — the array containing information on the selection of a feature.</span>
+</div>
+<div class="s3H">
+<span class="s12N">ranking_</span> <span class="s12P"> — the ranking of the features.</span>
+</div>
+<div class="s3H">
+<span class="s12N">grid_scores_</span> <span class="s12P"> — the scores obtained from cross-validation.</span>
+</div>
+<div class="s18">
+The first step is to import the class and create its instance.
+</div>
+<div class="s71">
+from sklearn.feature_selection import RFECV
+</div>
+<div class="s73">
+rfecv = RFECV(estimator=GradientBoostingClassifier())
+</div>
+<div class="sX">
+<span class="s12S">The next step is to specify the pipeline and the cv. In this</span> <span class="s12T">pipeline</span> <span class="s12S"> we use the just created</span> <span class="s12T">rfecv</span> <span class="s12U">.</span>
+</div>
+<div class="s5F">
+pipeline = Pipeline([(‘Feature Selection’, rfecv), (‘Model’, model)])
+</div>
+<div class="s65">
+cv = RepeatedStratifiedKFold(n_splits=10, n_repeats=5, random_state=36851234)
+</div>
+<div class="s65">
+n_scores = cross_val_score(pipeline, X_train, y_train, scoring=’accuracy’, cv=cv, n_jobs=-1)
+</div>
+<div class="s4Z">
+np.mean(n_scores)
+</div>
+<div class="s18">
+Let’s fit the pipeline and then obtain the optimal number of features.
+</div>
+<div class="s71">
+pipeline.fit(X_train,y_train)
+</div>
+<div class="s18">
+The optimal number of features can be obtained via the n_features_ attribute.
+</div>
+<div class="s71">
+print(“Optimal number of features : %d” % rfecv.n_features_)
+</div>
+<div class="s73">
+Optimal number of features : 7
+</div>
+<div class="s18">
+The rankings and support can be obtained just like last time.
+</div>
+<div class="s71">
+rfecv.support_
+</div>
+<div class="s73">
+rfecv_df = pd.DataFrame(rfecv.ranking_,index=X.columns,columns=[‘Rank’]).sort_values(by=’Rank’,ascending=True)
+</div>
+<div class="s73">
+rfecv_df.head()
+</div>
+<div class="s18">
+With the grid_scores_ we can plot a graph showing the cross-validated scores.
+</div>
+<div class="s71">
+import matplotlib.pyplot as plt
+</div>
+<div class="s73">
+plt.figure(figsize=(12,6))
+</div>
+<div class="s73">
+plt.xlabel(“Number of features selected”)
+</div>
+<div class="s73">
+plt.ylabel(“Cross validation score (nb of correct classifications)”)
+</div>
+<div class="s73">
+plt.plot(range(1, len(rfecv.grid_scores_) + 1), rfecv.grid_scores_)
+</div>
+<div class="s73">
+plt.show()
+</div>
+<div class="s1G">
+<img src="rsrc15D.jpg" class="sRE" />
+</div>
+<div class="sV">
+Final Thoughts
+</div>
+<div class="s16">
+The process for applying this in a regression problem is the same. Just ensure to use regression metrics instead of accuracy. I hope this piece has given you some insight on selecting the optimal number of features for your machine learning problems.
+</div>
+<div id="part0001.xhtml#toc18_Dealing_with_Imbalanced_Data_in_Machine_Learning" class="s4F">
+Dealing with Imbalanced Data in Machine Learning
+</div>
+<div class="s18">
+As an ML engineer or data scientist, sometimes you inevitably find yourself in a situation where you have hundreds of records for one class label and thousands of records for another class label.
+</div>
+<div class="s18">
+Upon training your model you obtain an accuracy above 90%. You then realize that the model is predicting everything as if it’s in the class with the majority of records. Excellent examples of this are fraud detection problems and churn prediction problems, where the majority of the records are in the negative class. What do you do in such a scenario? That will be the focus of this post.
+</div>
+<div class="sV">
+Collect More Data
+</div>
+<div class="s16">
+The most straightforward and obvious thing to do is to collect more data, especially data points on the minority class. This will obviously improve the performance of the model. However, this is not always possible. Apart from the cost one would have to incur, sometimes it's not feasible to collect more data. For example, in the case of churn prediction and fraud detection, you can’t just wait for more incidences to occur so that you can collect more data.
+</div>
+<div class="sV">
+Consider Metrics Other than Accuracy
+</div>
+<div class="s16">
+Accuracy is not a good way to measure the performance of a model where the class labels are imbalanced. In this case, it's prudent to consider other metrics such as precision, recall, Area Under the Curve (AUC) — just to mention a few.
+</div>
+<div class="sX">
+<span class="s137">Precision</span> <span class="s12U"> measures the ratio of the true positives among all the samples that were predicted as true positives and false positives. For example, out of the number of people our model predicted would churn, how many actually churned?</span>
+</div>
+<div class="sRZ">
+<img src="rsrc15E.jpg" class="sRX" />
+</div>
+<div class="sX">
+<span class="s137">Recall</span> <span class="s12U"> measures the ratio of the true positives from the sum of the true positives and the false negatives. For example, the percentage of people who churned that our model predicted would churn.</span>
+</div>
+<div class="sS6">
+<img src="rsrc15F.jpg" class="sS4" />
+</div>
+<div class="s18">
+The AUC is obtained from the Receiver Operating Characteristics (ROC) curve. The curve is obtained by plotting the true positive rate against the false positive rate. The false positive rate is obtained by dividing the false positives by the sum of the false positives and the true negatives.
+</div>
+<div class="s18">
+AUC closer to one is better, since it indicates that the model is able to find the true positives.
+</div>
+<div class="sV">
+Emphasize the Minority Class
+</div>
+<div class="s18">
+Another way to deal with imbalanced data is to have your model focus on the minority class. This can be done by computing the class weights. The model will focus on the class with a higher weight. Eventually, the model will be able to learn equally from both classes. The weights can be computed with the help of scikit-learn.
+</div>
+<div class="s5F">
+from sklearn.utils.class_weight import compute_class_weight
+</div>
+<div class="s65">
+weights = compute_class_weight(‘balanced’, y.unique(), y)
+</div>
+<div class="s4Z">
+array([ 0.51722354, 15.01501502])
+</div>
+<div class="s16">
+You can then pass these weights when training the model. For example, in the case of logistic regression:
+</div>
+<div class="s71">
+class_weights = {
+</div>
+<div class="sEE">
+0:0.51722354,
+</div>
+<div class="sEE">
+1:15.01501502
+</div>
+<div class="s73">
+}
+</div>
+<div class="s73">
+lr = LogisticRegression(C=3.0, fit_intercept=True, warm_start = True, class_weight=class_weights)
+</div>
+<div class="s18">
+Alternatively, you can pass the class weights as balanced and the weights will be automatically adjusted.
+</div>
+<div class="s71">
+lr = LogisticRegression(C=3.0, fit_intercept=True, warm_start = True, class_weight=’balanced’)
+</div>
+<div class="s18">
+Here’s the ROC curve before the weights are adjusted.
+</div>
+<div class="s71">
+import matplotlib.pyplot as plt
+</div>
+<div class="s73">
+from sklearn.metrics import roc_curve, roc_auc_score
+</div>
+<div class="s71">
+predictions = lr.predict(X_test)
+</div>
+<div class="s73">
+fpr, tpr, thresholds = roc_curve(y_test, predictions, pos_label=1)
+</div>
+<div class="s71">
+auc = roc_auc_score(y_test, predictions)
+</div>
+<div class="s71">
+plt.figure(figsize=(12,6))
+</div>
+<div class="s73">
+plt.plot(fpr, tpr,label='AUC')
+</div>
+<div class="s73">
+plt.plot([0, 1], [0, 1], color='red', linestyle='--', label='Random')
+</div>
+<div class="s73">
+plt.title('AUC:{}'.format(auc))
+</div>
+<div class="s73">
+plt.xlabel('False positive rate')
+</div>
+<div class="s73">
+plt.ylabel('True positive rate')
+</div>
+<div class="s73">
+plt.legend()
+</div>
+<div class="s1G">
+<img src="rsrc15G.jpg" class="sT6" />
+</div>
+<div class="s16">
+And here’s the ROC curve after the weights have been adjusted. Note the AUC moved from 0.69 to 0.87.
+</div>
+<div class="s1G">
+<img src="rsrc15H.jpg" class="sTC" />
+</div>
+<div class="s1J">
+Try Different Algorithms
+</div>
+<div class="s18">
+As you focus on the right metrics for imbalanced data, you can also try out different algorithms. Generally, tree-based algorithms perform better on imbalanced data. Furthermore, some algorithms such as LightGBM have hyperparameters that can be tuned to indicate that the data is not balanced.
+</div>
+<div class="sV">
+Generate Synthetic Data
+</div>
+<div class="sX">
+<span class="s12S">You can also generate synthetic data to increase the number of records in the minority class — usually known as oversampling. This is usually done on the training set after doing the train test split. In Python, this can be done using the</span> <a href="https://www.google.com/url?q=https://github.com/scikit-learn-contrib/imbalanced-learn&amp;sa=D&amp;ust=1597504082251000&amp;usg=AOvVaw3SxLZYj_xW1K4I588zkC58" class="s12W"><span class="s12V">Imblearn</span></a> <span class="s12S"> package. One of the strategies that can be implemented from the package is known as the</span> <a href="https://www.google.com/url?q=https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.over_sampling.SMOTE.html&amp;sa=D&amp;ust=1597504082252000&amp;usg=AOvVaw0MzYKeDkzLgAQYwb_J4VnN" class="s12W"><span class="s12V">Synthetic Minority Over-sampling Technique (SMOTE)</span></a> <span class="s12U">. The technique is based on k-nearest neighbors.</span>
+</div>
+<div class="sX">
+<span class="s12S">When using</span> <a href="https://www.google.com/url?q=https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.over_sampling.SMOTE.html&amp;sa=D&amp;ust=1597504082252000&amp;usg=AOvVaw0MzYKeDkzLgAQYwb_J4VnN" class="s12W"><span class="s12V">SMOTE</span></a> <span class="s12U">:</span>
+</div>
+<div class="s99">
+The first parameter is a float that indicates the ratio of the number of samples in the minority class to the number of samples in the majority class, once resampling has been done.
+</div>
+<div class="s3H">
+<span class="s12R">The number of neighbors to be used to generate the synthetic samples can be specified via the</span> <span class="s12N">k_neighbors</span> <span class="s12P"> parameter.</span>
+</div>
+<div class="s71">
+from imblearn.over_sampling import SMOTE
+</div>
+<div class="s73">
+smote = SMOTE(0.8)
+</div>
+<div class="s73">
+X_resampled,y_resampled = smote.fit_resample(X.values,y.values)
+</div>
+<div class="s73">
+pd.Series(y_resampled).value_counts()
+</div>
+<div class="s73">
+0    9667
+</div>
+<div class="s73">
+1    7733
+</div>
+<div class="s73">
+dtype: int64
+</div>
+<div class="s18">
+You can then fit your resampled data to your model.
+</div>
+<div class="s71">
+model = LogisticRegression()
+</div>
+<div class="s73">
+model.fit(X_resampled,y_resampled)
+</div>
+<div class="s73">
+predictions = model.predict(X_test)
+</div>
+<div class="sV">
+Undersample the Majority Class
+</div>
+<div class="sX">
+<span class="s12S">You can also experiment on reducing the number of samples in the majority class. One such strategy that can be implemented is the</span> <span class="s12T">NearMiss</span> <span class="s12S"> method. You can also specify the ratio just like in</span> <span class="s12T">SMOTE</span> <span class="s12S">, as well as the number of neighbors via</span> <span class="s12T">n_neighbors</span> <span class="s12U">.</span>
+</div>
+<div class="s71">
+from imblearn.under_sampling import NearMiss
+</div>
+<div class="s73">
+underSample = NearMiss(0.3,random_state=1545)
+</div>
+<div class="s73">
+pd.Series(y_resampled).value_counts()
+</div>
+<div class="s73">
+0  1110
+</div>
+<div class="s73">
+1  333
+</div>
+<div class="s73">
+dtype: int64
+</div>
+<div class="sU9">
+Final Thoughts
+</div>
+<div class="s18">
+Other techniques that can be used include using building an ensemble of weak learners to create a strong classifier. Metrics such as precision-recall curve and area under curve (PR, AUC) are also worth trying when the positive class is the most important.
+</div>
+<div class="s18">
+As always, you should experiment with different techniques and settle on the ones that give you the best results for your specific problems. Hopefully, this piece has given some insights on how to get started.
+</div>
+<div class="sX">
+<a href="https://www.google.com/url?q=https://github.com/mwitiderrick/imbalanced-data&amp;sa=D&amp;ust=1597504082255000&amp;usg=AOvVaw1x-ZG7VtonMcbebUftuxOC" class="s12W"><span class="s12V">Repository</span></a>  <span class="s12U"> </span>
+</div>
+<div id="part0001.xhtml#toc19_Convolutional_Neural_Networks__CNNs___Core_Concepts_Applied" class="s4F">
+Convolutional Neural Networks (CNNs): Core Concepts Applied
+</div>
+<div class="s16">
+In this tutorial, we’ll work through the core concepts of convolutional neural networks (CNNs). To do this, we’ll use a common dataset — the MNIST dataset—and a standard deep learning task—image classification
+</div>
+<div class="s18">
+The goal here is to walk through an example that will illustrate the processes involved in building a convolutional neural network. The skills you will learn here can easily be transferred to a separate dataset.
+</div>
+<div class="s18">
+So let’s go deeper…pun intended.
+</div>
+<div class="sV">
+Setup
+</div>
+<div class="s18">
+In this step, we need to import Keras and other packages that we’re going to use in building our CNN. Import the following packages:
+</div>
+<div class="s3H">
+<span class="s12N">Sequential</span> <span class="s12P"> is used to initialize the neural network.</span>
+</div>
+<div class="s3H">
+<span class="s12N">Conv2D</span> <span class="s12P"> is used to make the convolutional network work with images.</span>
+</div>
+<div class="s3H">
+<span class="s12N">MaxPooling2D</span> <span class="s12P"> is used to add the pooling layers.</span>
+</div>
+<div class="s3H">
+<span class="s12N">Flatten</span> <span class="s12P"> is the function that converts the pooled feature map to a single column, which is then passed to the fully connected layer.</span>
+</div>
+<div class="s3H">
+<span class="s12N">Dense</span> <span class="s12P"> adds the fully connected layer to the neural network.</span>
+</div>
+<div class="s3H">
+<span class="s12N">Reshape</span> <span class="s12P"> is used to change the shape of the input array</span>
+</div>
+<div class="sFF">
+import tensorflow as tf
+</div>
+<div class="s73">
+from tensorflow.keras import Sequential
+</div>
+<div class="s73">
+from tensorflow.keras.layers import Dense,Conv2D,MaxPooling2D,Flatten,Reshape
+</div>
+<div class="sV">
+Import the Dataset
+</div>
+<div class="sZ">
+<span class="s12S">Next, we’ll import the</span> <span class="s12T">mnist</span> <span class="s12U"> dataset from Keras. We load in the training set and the testing set. We have to scale our data so that it will be compatible with our network. In this case, we scale the images by dividing them by 255. This will ensure that the array values are numbers between 0 and 1.</span>
+</div>
+<div class="s71">
+mnist = tf.keras.datasets.mnist
+</div>
+<div class="s73">
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+</div>
+<div class="s73">
+x_train, x_test = x_train / 255.0, x_test / 255.0
+</div>
+<div class="s73">
+validation_data = x_test, y_test
+</div>
+<div class="sV">
+Visualize a digit
+</div>
+<div class="s18">
+We can visualize a single digit using Matplotlib. This is important so that we can see a sample of what the digits in the dataset look like.
+</div>
+<div class="s71">
+import matplotlib.pyplot as plt
+</div>
+<div class="s73">
+image = x_train[2]
+</div>
+<div class="s73">
+fig = plt.figure
+</div>
+<div class="s73">
+plt.imshow(image, cmap=’gray’)
+</div>
+<div class="s73">
+plt.show()
+</div>
+<div class="sVE">
+<img src="rsrc15J.jpg" class="sVC" />
+</div>
+<div class="sVG">
+Building the Network
+</div>
+<div class="s18">
+Before we start building the network, let’s confirm the shape of the training data. This is important because the shape will be needed by the convolution layer. We’ll use this shape later to reshape the size of the input data.
+</div>
+<div class="s18">
+x_train.shape
+</div>
+<div class="s16">
+(60000, 28, 28)
+</div>
+<div class="s18">
+We kick off by initializing the sequential model. Then we pass in our layers as a list. The first layer is the reshape layer for changing the shape of the input data. We already know that each image has a size of 28 by 28. We also pass 1 to the reshape layer to ensure that the input data has a single color channel.
+</div>
+<div class="s18">
+Next, we create the convolution layer. This layer takes in a couple of parameters:
+</div>
+<div class="s3H">
+<span class="s12N">filters</span> <span class="s12P"> — the number of output filters in the convolution, i.e the number of feature detectors. 32 is a common number of feature detectors used.</span>
+</div>
+<div class="s3H">
+<span class="s12N">kernel_size</span> <span class="s12P"> — the dimensions of the feature detector matrix. This is the width and height of the convolution window.</span>
+</div>
+<div class="s3H">
+<span class="s12N">input_shape</span> <span class="s12P"> — the shape of the input data. Since we included a reshape layer, we don’t need to pass this.</span>
+</div>
+<div class="s3H">
+<span class="s12N">activation</span> <span class="s12P"> — the activation function to be used. The ReLu activation function is a common choice.</span>
+</div>
+<div class="sX">
+<span class="s12S">The next item on the list is to add the</span> <span class="s137">pooling layer</span> <span class="s12S">. In this step, the size of the feature map is reduced by taking the maximum value during the pooling process. 2 by 2 is a commonly-used pool size. This will reduce the size of the f</span> <span class="s137">eature map</span> <span class="s12U"> while maintaining the most important features needed to identify the digits.</span>
+</div>
+<div class="sZ">
+<span class="s12S">After that, we</span> <span class="s137">flatten</span> <span class="s12S"> the</span> <span class="s137">feature maps.</span> <span class="s12U"> This will convert the feature maps into a single column.</span>
+</div>
+<div class="sX">
+<span class="s12S">The results obtained above are then passed to the</span> <span class="s137">dense</span> <span class="s12S"> layer. The parameters passed to this layer are the number of neurons and the</span> <span class="s137">activation function</span> <span class="s12U">. In this case, those are 128 and ReLu, respectively.</span>
+</div>
+<div class="sX">
+<span class="s12S">Finally, we created our</span> <span class="s137">output</span> <span class="s12S"> layer. 10 is used here, because our dataset has 10 classes. We’ll use the</span> <span class="s137">softmax activation</span> <span class="s12U"> function because classes are mutually exclusive—an image can’t be, for example, classified as numbers 0 and 1 at the same time. If the case was otherwise, we’d use the sigmoid activation function.</span>
+</div>
+<div class="sFF">
+model = Sequential([
+</div>
+<div class="s73">
+Reshape((28, 28, 1)),
+</div>
+<div class="s73">
+Conv2D(filters=64,kernel_size=(3,3),activation=’relu’),
+</div>
+<div class="s73">
+MaxPooling2D(pool_size=(2,2)),
+</div>
+<div class="s73">
+Flatten(),
+</div>
+<div class="s73">
+Dense(128, activation=’relu’),
+</div>
+<div class="s73">
+Dense(10, activation=’softmax’)
+</div>
+<div class="s73">
+])
+</div>
+<div class="sV">
+Compiling the Network
+</div>
+<div class="s18">
+We now need to apply gradient descent to the number. This is done at the compile stage. We pass the following parameters:
+</div>
+<div class="s3H">
+<span class="s12N">optimizer</span> <span class="s12P"> — the type of gradient descent to use; in this case, we’ll use stochastic gradient descent</span>
+</div>
+<div class="s3H">
+<span class="s12N">loss</span> <span class="s12P"> — the cost function to use. We use sparse_categorical_crossentropy because the classes are integer-encoded. Had we performed one-hot encoding, we’d have to use the categorical cross-entropy loss function.</span>
+</div>
+<div class="s3H">
+<span class="s12N">metrics</span> <span class="s12P"> — the evaluation metrics to monitor; in this case, accuracy</span>
+</div>
+<div class="s71">
+model.compile(optimizer=’sgd’,
+</div>
+<div class="s73">
+loss=’sparse_categorical_crossentropy’,
+</div>
+<div class="s73">
+metrics=[‘accuracy’,])
+</div>
+<div class="sV">
+Fitting the CNN
+</div>
+<div class="s18">
+Next, we fit the training set to the network. epochs is the number of rounds the data will pass through the network. validation_data is the test dataset that will be used to evalutate the performance of the model during training.
+</div>
+<div class="s71">
+model.fit(x=x_train,y=y_train,epochs=5,validation_data=validation_data)
+</div>
+<div class="sV">
+Evaluating the Network
+</div>
+<div class="s18">
+We can now check the performance of the network. We do so using the evaluate function, passing in the test set. The first item in the result produced is the loss, and the second is the accuracy.
+</div>
+<div class="s71">
+model.evaluate(x_test,y_test)
+</div>
+<div class="s73">
+313/313 [==============================] - 2s 8ms/step - loss: 0.1116 - accuracy: 0.9668
+</div>
+<div class="s73">
+[0.1115519180893898, 0.9667999744415283]
+</div>
+<div class="s1J">
+Checking the Predictions
+</div>
+<div class="s18">
+Let’s now see if our network is able to correctly identify a digit. We kick off by making predictions:
+</div>
+<div class="s73">
+predictions = model.predict(x_test)
+</div>
+<div class="s18">
+For example, let’s check the digit at index 2 in the test set.
+</div>
+<div class="s71">
+image = x_test[2]
+</div>
+<div class="s73">
+fig = plt.figure
+</div>
+<div class="s73">
+plt.imshow(image, cmap=’gray’)
+</div>
+<div class="s73">
+plt.show()
+</div>
+<div class="sX3">
+<img src="rsrc15K.jpg" class="sX1" />
+</div>
+<div class="s16">
+This is clearly the digit one. Let’s compare that with the prediction made for digit 1.
+</div>
+<div class="s71">
+import numpy as np
+</div>
+<div class="s73">
+np.set_printoptions(suppress=True)
+</div>
+<div class="s73">
+predictions[2]*100
+</div>
+<div class="s73">
+array([ 0.00077352, 99.63969 , 0.07214971, 0.03056707, 0.00606834,
+</div>
+<div class="sEE">
+0.00301009, 0.02507676, 0.11558129, 0.10332227, 0.00378496],
+</div>
+<div class="sEE">
+dtype=float32)
+</div>
+<div class="s18">
+From the predictions below, we can see that the digit 1 — at index 1 in the prediction array— has the highest prediction.
+</div>
+<div class="s18">
+0.00077352 — digit 0 prediction
+</div>
+<div class="s1J">
+99.63969 — digit 1 prediction
+</div>
+<div class="s16">
+0.07214971 — digit 2 prediction
+</div>
+<div class="s16">
+0.03056707 — digit 3 prediction
+</div>
+<div class="s16">
+0.00606834 — digit 4 prediction
+</div>
+<div class="s16">
+0.00301009 — digit 5 prediction
+</div>
+<div class="s16">
+0.02507676 — digit 6 prediction
+</div>
+<div class="s16">
+0.11558129 — digit 7 prediction
+</div>
+<div class="s16">
+0.10332227 — digit 8 prediction
+</div>
+<div class="s16">
+0.00378496 — digit 9 prediction
+</div>
+<div class="s18">
+We can check another prediction by plotting the digit at index 0 in the testing set. Let’s try number 7.
+</div>
+<div class="s71">
+image = x_test[0]
+</div>
+<div class="s73">
+fig = plt.figure
+</div>
+<div class="s73">
+plt.imshow(image, cmap=’gray’)
+</div>
+<div class="s73">
+plt.show()
+</div>
+<div class="sY0">
+<img src="rsrc15M.jpg" class="sXY" />
+</div>
+<div class="s18">
+Next, we’ll look at the prediction at index 0 to see if it’s also number 7. Clearly, 7 has the highest prediction.
+</div>
+<div class="s71">
+import numpy as np
+</div>
+<div class="s73">
+np.set_printoptions(suppress=True)
+</div>
+<div class="s73">
+predictions[0]*100
+</div>
+<div class="sZ">
+<span class="s12T">array([ 0.00032742, 0.00000064, 0.00919174, 0.09352361, 0.00000077, 0.00045173, 0.00000015,</span> <span class="s13R">99.88985</span> <span class="s13S">, 0.00224745, 0.00440894], dtype=float32)</span>
+</div>
+<div class="sV">
+Conclusion
+</div>
+<div class="s16">
+Well done for making it this far! In this article, we’ve used CNN core concepts to develop a working convolutional neural network. We have seen the steps you’ll need to take, and we’ve evaluated our trained model. Now you can try this out with a different dataset to see if you can reproduce the network we built here.
+</div>
+<div id="part0001.xhtml#toc20_Serving_TensorFlow_Models" class="sY9">
+Serving TensorFlow Models
+</div>
+<div class="s16">
+Once you've trained a TensorFlow model and it's ready to be deployed, you'd probably like to move it to a production environment. Luckily, TensorFlow provides a way to do this with minimal effort. In this article, we'll use a pre-trained model, save it, and serve it using TensorFlow Serving. Let's get moving!
+</div>
+<div class="sV">
+TensorFlow ModelServer
+</div>
+<div class="sX">
+<a href="https://www.google.com/url?q=https://www.tensorflow.org/tfx/guide/serving&amp;sa=D&amp;ust=1597504082270000&amp;usg=AOvVaw0HUmXRlGpwDEQi74fyi0qp" class="s12W"><span class="s12V">TensorFlow Serving</span></a> <span class="s12U"> is a system built with the sole purpose of bringing machine learning models to production. TensorFlow's ModelServer provides support for RESTful APIs. However, we'll need to install it before we can use it. First, let's add it as a package source.</span>
+</div>
+<div class="sX">
+<span class="s12T">echo "deb [arch=amd64]</span>  <a href="https://www.google.com/url?q=http://storage.googleapis.com/tensorflow-serving-apt&amp;sa=D&amp;ust=1597504082271000&amp;usg=AOvVaw1NkyrZrmg5oo26juFBNXZO" class="s14A"> </a> <span class="s12T"> </span> <a href="https://www.google.com/url?q=http://storage.googleapis.com/tensorflow-serving-apt&amp;sa=D&amp;ust=1597504082271000&amp;usg=AOvVaw1NkyrZrmg5oo26juFBNXZO" class="s12W"><span class="s14C">http://storage.googleapis.com/tensorflow-serving-apt</span></a> <span class="s12T"> stable tensorflow-model-server tensorflow-model-server-universal" | sudo tee /etc/apt/sources.list.d/tensorflow-serving.list &amp;&amp; curl</span>  <a href="https://www.google.com/url?q=https://storage.googleapis.com/tensorflow-serving-apt/tensorflow-serving.release.pub.gpg&amp;sa=D&amp;ust=1597504082271000&amp;usg=AOvVaw10YRAbSyoS3HSk0P-tAHlr" class="s14A"> </a> <span class="s12T"> </span> <a href="https://www.google.com/url?q=https://storage.googleapis.com/tensorflow-serving-apt/tensorflow-serving.release.pub.gpg&amp;sa=D&amp;ust=1597504082272000&amp;usg=AOvVaw0J7RihLwMmcJBoVfYo3z5r" class="s12W"><span class="s14C">https://storage.googleapis.com/tensorflow-serving-apt/tensorflow-serving.release.pub.gpg</span></a> <span class="s13S"> | sudo apt-key add -</span>
+</div>
+<div class="s18">
+Installing TensorFlow ModelServer can now be done by updating the system and using apt-get to install it.
+</div>
+<div class="s71">
+$ sudo apt-get update
+</div>
+<div class="s73">
+$ sudo apt-get install tensorflow-model-server
+</div>
+<div class="sV">
+Developing the Model
+</div>
+<div class="s18">
+Next, let's use a pre-trained model to create the model we'd like to serve. In this case, we'll use a version of VGG16 with weights pre-trained on ImageNet. To make it work, we have to get a couple of imports out of the way:
+</div>
+<div class="sC1">
+<span class="s12N">VGG16</span>  <span class="s12P"> the architecture</span>
+</div>
+<div class="s3H">
+<span class="s12N">image</span> <span class="s12P"> for working with image files</span>
+</div>
+<div class="s3H">
+<span class="s12N">preprocess_input</span> <span class="s12P"> for pre-processing image inputs</span>
+</div>
+<div class="s3H">
+<span class="s12N">decode_predictions</span> <span class="s12P"> for showing us the probability and class names</span>
+</div>
+<div class="s73">
+from tensorflow.keras.applications.vgg16 import VGG16
+</div>
+<div class="s73">
+from tensorflow.keras.preprocessing import image
+</div>
+<div class="s73">
+from tensorflow.keras.applications.vgg16 import preprocess_input, decode_predictions
+</div>
+<div class="s73">
+import numpy as np
+</div>
+<div class="s16">
+Next, we define the model with the ImageNet weights.
+</div>
+<div class="s71">
+model = VGG16(weights='imagenet')
+</div>
+<div class="s18">
+With the model in place, we can try out a sample prediction. We start by defining the path to an image file (a lion) and using image to load it.
+</div>
+<div class="s71">
+img_path = 'lion.jpg'
+</div>
+<div class="s73">
+img = image.load_img(img_path, target_size=(224, 224))
+</div>
+<div class="s73">
+x = image.img_to_array(img)
+</div>
+<div class="s73">
+x = np.expand_dims(x, axis=0)
+</div>
+<div class="s73">
+x = preprocess_input(x)
+</div>
+<div class="s18">
+After pre-processing it, we can make predictions using it. We can see that it was able to predict that the image is a lion with 99% accuracy.
+</div>
+<div class="s71">
+preds = model.predict(x)
+</div>
+<div class="s73">
+# decode the results into a list of tuples (class, description, probability)
+</div>
+<div class="s73">
+# (one such list for each sample in the batch)
+</div>
+<div class="s73">
+print('Predicted:', decode_predictions(preds, top=3)[0])
+</div>
+<div class="s73">
+# Predicted: [('n02129165', 'lion', 0.9999999), ('n02130308',
+</div>
+<div class="s73">
+# 'cheetah', 7.703386e-08), ('n02128385', 'leopard', 6.330456e-09)]
+</div>
+<div class="s18">
+Now that we have our model, we can save it to prepare it for serving with TensorFlow.
+</div>
+<div class="sV">
+Saving the Model
+</div>
+<div class="s18">
+Let's now save that model. Notice that we're saving it to a /1 folder to indicate the model version. This is critical, especially when you want to serve new model versions automatically. More on that in a few.
+</div>
+<div class="s71">
+model.save('vgg16/1')
+</div>
+<div class="sV">
+Running the Server with TensorFlow ModelServer
+</div>
+<div class="s18">
+Let's start by defining the configuration we'll use for serving:
+</div>
+<div class="s3H">
+<span class="s12N">name</span> <span class="s12P"> is the name of our model-in this case, we'll call it vgg16.</span>
+</div>
+<div class="s3H">
+<span class="s12N">base_path</span> <span class="s12P"> is the absolute path to the location of our saved model. Be sure to change this to your own path.</span>
+</div>
+<div class="s3H">
+<span class="s12R">The</span> <span class="s12N">model_platform</span> <span class="s12P"> is obviously TensorFlow.</span>
+</div>
+<div class="s3H">
+<span class="s12N">model_version_policy</span> <span class="s12P"> enables us to specify model versioning information.</span>
+</div>
+<div class="sZT">
+<img src="rsrc15N.jpg" class="sZR" />
+</div>
+<div class="sZV">
+Now we can run the command that will serve the model from the command line:
+</div>
+<div class="sZX">
+<span class="s12N">rest_api_port=8000</span> <span class="s12P"> means that our REST API will be served at port 8000.</span>
+</div>
+<div class="sZX">
+<span class="s12N">model_config_file</span> <span class="s12P"> defines the config file that we'd defined above.</span>
+</div>
+<div class="sZX">
+<span class="s12N">model_config_file_poll_wait_seconds</span> <span class="s12P"> indicates how long to wait before checking for changes in the config file. For example, changing the version to 2 in the config file would lead to version 2 of the model being served automatically. This is because changes in the config file are being checked every 300 seconds, in this case.</span>
+</div>
+<div class="s71">
+tensorflow_model_server - rest_api_port=8000 - model_config_file=models.config - model_config_file_poll_wait_seconds=300
+</div>
+<div class="sV">
+Making Predictions using the REST API
+</div>
+<div class="s18">
+At this point, the REST API for our model can be found here: http://localhost:8000/v1/models/vgg16/versions/1:predict .
+</div>
+<div class="sX">
+<span class="s12S">We can use this endpoint to make predictions. In order to do that, we'll need to pass JSON-formatted data to the endpoint. To that end - no pun intended - we'll use the</span> <span class="s12T">json</span> <span class="s12S"> module in Python. In order to make requests to the endpoint, we'll use the</span> <span class="s12T">requests</span> <span class="s12U"> Python package.</span>
+</div>
+<div class="s18">
+Let's start by importing those two.
+</div>
+<div class="s71">
+import json
+</div>
+<div class="s73">
+import requests
+</div>
+<div class="sX">
+<span class="s12S">Remember that the x variable contained the pre-processed image. We'll create JSON data containing that. Like any other RESTFUL request, we set the content type to</span> <span class="s12T">application/json</span> <span class="s12U">. Afterward, we make a request to our endpoint as we pass in the headers and the data. After getting the predictions, we decode them just like we did at the beginning of this article.</span>
+</div>
+<div class="s1G">
+<img src="rsrc15P.jpg" class="s10B" />
+</div>
+<div class="s1T">
+<img src="rsrc15R.jpg" class="s10G" />
+</div>
+<div class="sV">
+Serving with Docker
+</div>
+<div class="sX">
+<span class="s12S">There is an even quicker and shorter way for you to serve TensorFlow models-using</span> <a href="https://www.google.com/url?q=https://www.tensorflow.org/tfx/serving/docker&amp;sa=D&amp;ust=1597504082280000&amp;usg=AOvVaw0nly4moNXmBu6qKNrfQMBt" class="s12W"><span class="s12V">Docker</span></a> <span class="s12S">. This is actually the recommended way, but knowing the previous method is important, just in case you need it for a specific use case. Serving your model with Docker is as easy as pulling the</span> <a href="https://www.google.com/url?q=https://hub.docker.com/r/tensorflow/serving&amp;sa=D&amp;ust=1597504082281000&amp;usg=AOvVaw0EAvQR_KrB-DoH3Dpmhehu" class="s12W"><span class="s12V">TensorFlow Serving image</span></a> <span class="s12U"> and mounting your model.</span>
+</div>
+<div class="sX">
+<span class="s12S">With</span> <a href="https://www.google.com/url?q=https://docs.docker.com/engine/install/&amp;sa=D&amp;ust=1597504082281000&amp;usg=AOvVaw2fSPXXwXQs_rZBCDlv6EqN" class="s12W"><span class="s12V"> Docker installed</span></a> <span class="s12U">, run this code to pull the TensorFlow Serving image.</span>
+</div>
+<div class="s71">
+docker pull tensorflow/serving
+</div>
+<div class="s10R">
+Let's now use that image to serve the model. This is done using docker run and passing a couple of arguments:
+</div>
+<div class="s10T">
+<span class="s12N">-p 8501:8501</span> <span class="s12P"> means that the container's port 8501 will be accessible on our localhost at port 8501.</span>
+</div>
+<div class="s10T">
+<span class="s12N">- name</span> <span class="s12R"> for naming our container-choose the name your prefer.I've chosen</span> <span class="s12N">tf_vgg_server</span> <span class="s12P"> in this case.</span>
+</div>
+<div class="s10T">
+<span class="s12N">- mount</span> <span class="s12P">type=bind,source=/media/derrick/5EAD61BA2C09C31B/Notebooks/Python/serving/saved_tf_model,target=/models/vgg16 means that the model will be mounted to /models/vgg16 on the Docker container.</span>
+</div>
+<div class="s10T">
+<span class="s12R">-</span> <span class="s12N">e MODEL_NAME=vgg16</span> <span class="s12P"> indicates that TensorFlow serving should load the model called vgg16.</span>
+</div>
+<div class="s10T">
+<span class="s12N">-t tensorflow/serving</span> <span class="s12P"> indicates that we're using the tensorflow/serving image that we pulled earlier.</span>
+</div>
+<div class="s10T">
+<span class="s12N">&amp;</span> <span class="s12P"> running the command in the background.</span>
+</div>
+<div class="s10R">
+Run the code below on your terminal.
+</div>
+<div class="s111">
+docker run -p 8501:8501 --name tf_vgg_server --mount type=bind,source=/media/derrick/5EAD61BA2C09C31B/Notebooks/Python/serving/saved_tf_model,target=/models/vgg16  -e MODEL_NAME=vgg16 -t tensorflow/serving &amp;
+</div>
+<div class="s10R">
+Now we can use the REST API endpoint to make predictions, just like we did previously.
+</div>
+<div class="s11A">
+<div class="s118">
+<img src="rsrc15S.jpg" class="s116" />
+</div>
+</div>
+<div class="s11J">
+<div class="s11G">
+<img src="rsrc15T.jpg" class="s11E" />
+</div>
+</div>
+<div class="s10R">
+Clearly, we obtained the same results. With that, we've seen how we can serve a TensorFlow model with and without Docker.
+</div>
+<div class="s11N">
+Final Thoughts
+</div>
+<div class="s11R">
+<span class="s12S">This</span> <a href="https://www.google.com/url?q=https://www.tensorflow.org/tfx/serving/architecture&amp;sa=D&amp;ust=1597504082283000&amp;usg=AOvVaw0sLXfCAnPpwQqY54LklZlA" class="s12W"><span class="s12V">article</span></a> <span class="s12S"> from TensorFlow will give you more information on the TensorFlow Serving architecture. If you'd like to dive deeper into this, this</span> <a href="https://www.google.com/url?q=https://www.tensorflow.org/tfx/serving/serving_config&amp;sa=D&amp;ust=1597504082283000&amp;usg=AOvVaw1AQ6DgcJvYlJ5Hm_Mcm2P6" class="s12W"><span class="s12V">resource</span></a> <span class="s12U"> will get you there.</span>
+</div>
+<div class="s11R">
+<span class="s12S">You can al</span> <a href="https://www.google.com/url?q=https://www.tensorflow.org/tfx/serving/serving_advanced&amp;sa=D&amp;ust=1597504082283000&amp;usg=AOvVaw0fYL2CTOQk17CyiqXHplTp" class="s12W"><span class="s12V">https://www.tensorflow.org/tfx/serving/serving_advanced</span></a> <span class="s12S">so explore alternative ways of building using the standard TensorFlow ModelServer. In this article, we focused on serving using a CPU, but you can explore how to</span> <a href="https://www.google.com/url?q=https://www.tensorflow.org/tfx/serving/docker&amp;sa=D&amp;ust=1597504082284000&amp;usg=AOvVaw1rAcVLNKfBmkhP3nfxdI3C" class="s12W"><span class="s12V">serve on GPUs,</span></a> <span class="s12U"> as well .</span>
+</div>
+<div class="s11R">
+<span class="s12S">This</span> <a href="https://www.google.com/url?q=https://github.com/tensorflow/serving&amp;sa=D&amp;ust=1597504082284000&amp;usg=AOvVaw2WNMQ-Gcp2sjsWDuc3Ykjl" class="s12W"><span class="s12V">repo</span></a> <span class="s12U"> contains links to more tutorials on TensorFlow Serving. Hopefully, this piece was of service to you!</span>
+</div>
+<div class="s11R">
+<span class="s12S">The code for this article is available at this</span> <a href="https://www.google.com/url?q=https://github.com/mwitiderrick/TensorFlow-Serving&amp;sa=D&amp;ust=1597504082284000&amp;usg=AOvVaw0jPHhoUwdDy9nqYbm0i2eX" class="s12W"><span class="s12V">repo</span></a> <span class="s12S">.</span>
+</div>
+</div>

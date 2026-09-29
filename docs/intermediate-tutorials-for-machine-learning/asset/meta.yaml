@@ -1,0 +1,10 @@
+name: Intermediate Tutorials for Machine Learning
+slug: intermediate-tutorials-for-machine-learning
+name_cn: 机器学习中级教程
+toc:
+- - '##'
+  - 可选，但为了准确率
+- - '####'
+  - 递归特征消除
+- - '####'
+  - Sklearn 中的应用
