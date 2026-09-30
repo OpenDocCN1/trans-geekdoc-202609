@@ -1,0 +1,45 @@
+name: Building Secure PHP Apps： Is your PHP app truly secure Let's make sure you get
+  home on
+slug: building-secure-php-apps-is-your-php-app-truly-secure-lets-m
+name_cn: 构建安全 PHP 应用构建指南：你的 PHP 应用真的安全吗？让我们确保万无一失
+toc:
+- - '#'
+  - 构建安全 PHP 应用构建指南：你的 PHP 应用真的安全吗？让我们确保万无一失
+- - '##'
+  - 构造函数
+- - '###'
+  - 格式
+- - '###'
+  - 错误列表
+- - '###'
+  - 示例代码
+- - '###'
+  - 关于作者
+- - '##'
+  - 实现 HTTPS
+- - '###'
+  - 我需要哪种 SSL 证书？
+- - '###'
+  - 生成你的服务器证书
+- - '###'
+  - 获取 SSL 证书
+- - '###'
+  - Apache 配置
+- - '###'
+  - Nginx 配置
+- - '#'
+  - 第 5 章 - 安全默认值、跨站脚本和其他常见的攻击手段
+- - '##'
+  - 永远不要信任你自己 - 使用安全默认
+- - '##'
+  - 永远不要信任动态类型。它不是你的朋友。
+- - '##'
+  - 安全文件处理
+- - '###'
+  - 总结
+- - '##'
+  - 析构函数 (Destructor)
+- - '##'
+  - 关于作者
+- - '##'
+  - 安全审计 / 咨询
