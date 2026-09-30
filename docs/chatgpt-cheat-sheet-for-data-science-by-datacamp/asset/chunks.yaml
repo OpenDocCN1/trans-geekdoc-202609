@@ -1,0 +1,2139 @@
+- raw: "\n\n![](images/00033.png)\n\nChatGPT \n\nCheat Sheet\n\nFor Data Science\n\
+    \nLearn Data Science Online at \n\nwww.DataCamp.com\n\n![](images/00064.png)\n\
+    \nChatGPT cheat sheet for data science\n\nHow to use this cheatsheet?\n\n1 What\
+    \ is ChatGPT?\n\nChatGPT is a language model developed by OpenAI that has gained\
+    \ significant attention due to its remarkable ability to generate human-like responses\
+    \ to prompts given to it. ChatGPT is useful for a variety of language-based tasks,\
+    \ including language translation, question answering, text completion, and a lot\
+    \ more. It’s also very useful for data science workflows. \n\n2 How to get started?\n\
+    \nTo get started, simply head to OpenAI’s site and start inputting prompts. Register\
+    \ for free or upgrade to a paid version for priority access.\n\n[https://chat.openai.com/chat](https://chat.openai.com/chat)\n\
+    \n3 What to expect in this cheat sheet?\n\nIn this cheat sheet, you will find\
+    \ specific examples of using ChatGPT for common data science tasks, including\
+    \ data visualization, data analysis, machine learning, and more.\n\n![](images/00114.png)\n\
+    \nChatGPT cheat sheet for data science\n\nOur guide for great prompts\n\n1 Start\
+    \ prompts with a description of the AI’s role. For example, “You are a {x}” or\
+    \ \n\n“I want you to act as {x}”. If you aren’t sure, try “You are a helpful assistant”.\
+    \ e.g., You are a data scientist at OpenAI, you are working on large language\
+    \ models. Explain to me how GPT-3 works.\L\n\n2 Use it for common tasks.  The\
+    \ more common the task, the better the chances of \n\nsuccess with ChatGPT.\L\n\
+    \n3 Offer context. Offering context when posing a question to ChatGPT allows it\
+    \ to \n\nprovide specific answers. Providing context allows the model to understand\
+    \ the nuances of the problem and generate more informed responses. e.g., You are\
+    \ a data scientist at OpenAI, you are working on large language models. Explain\
+    \ how GPT-3 works to a business executive with no technical background. \n\n4\
+    \ Be precise. Being precise is another best practice that can minimize the need\
+    \ for \n\ntweaking the output. When posing a question, be clear about the input\
+    \ (if any) and the desired outcome.\n\n5 Keep trying. Do not be  afraid to try\
+    \ multiple prompts. Using different prompts \n\ncan provide different perspectives\
+    \ on a problem and enable the model to generate a variety of responses.\n\n![](images/00108.png)\n\
+    \nChatGPT cheat sheet for data science\n\nLimitations of ChatGPT\n\nHowever, ChatGPT\
+    \ is not perfect – it can generate wrong information, or “hallucinate”. ChatGPT\
+    \ can provide incorrect answers in an authoritative tone. As such, it’s very important\
+    \ to fact check all of its answers.\n\n![](images/00043.png)\n\n[Source: Gary\
+    \ Marcus](https://garymarcus.substack.com/p/how-come-gpt-can-seem-so-brilliant)\n\
+    \nPrompts for \n\ngeneral coding \n\nworkflows\n\n![](images/00090.png)\n\nCode\
+    \ debugging workflows\n\nDebugging Python code\n\nPROMPT STRUCTURE\n\nI want you\
+    \ to be a Python programmer, here is a piece of Python code containing {problem}\
+    \ — {insert code snippet} — I am getting the following error {insert error}. What\
+    \ is the reason for the bug?\n\n![](images/00053.png)\n\n![](images/00019.png)\n\
+    \n![](images/00002.png)\n\nCode debugging workflows\n\nDebugging R code\n\nPROMPT\
+    \ STRUCTURE\n\nI want you to be an R programmer, here is a piece of R code containing\
+    \ {problem} — {insert code snippet} — I am getting the following error {insert\
+    \ error}. What is the reason for the bug?\n\n![](images/00027.png)\n\n![](images/00049.png)\n\
+    \nCode debugging workflows\n\nDebugging SQL code\n\nPROMPT STRUCTURE\n\nI want\
+    \ you to be a SQL programmer, here is a piece of SQL code containing {problem}\
+    \ — {insert code snippet} — I am getting the following error {insert error}. What\
+    \ is the reason for the bug?\n\n![](images/00070.png)\n\n![](images/00091.png)\n\
+    \nCode explanation workflows\n\nPython code explanation\n\nPROMPT STRUCTURE\n\n\
+    I want you to act as a code explainer in Python. I don't understand this function.\
+    \ Can you please explain what it does, and provide an example? {Insert function}\n\
+    \n![](images/00101.png)\n\n![](images/00038.png)\n\nCode explanation workflows\n\
+    \nR code explanation\n\nPROMPT STRUCTURE\n\nI want you to act as a code explainer\
+    \ in R. I don't understand this function. Can you please explain what it does,\
+    \ and\n\nprovide an example? {Insert function}\n\n![](images/00084.png)\n\n![](images/00086.png)\n\
+    \nCode explanation workflows\n\nSQL code explanation\n\nPROMPT STRUCTURE\n\nI\
+    \ want you to act as a code explainer in SQL. I don't\n\nunderstand this snippet.\
+    \ Can you please explain what it does, and provide an example?\n\n{Insert SQL\
+    \ query}\n\n![](images/00085.png)\n\n![](images/00050.png)\n\nCode optimization\
+    \ workflows\n\nPython code optimization\n\nPROMPT STRUCTURE\n\nI want you to act\
+    \ as a code optimizer in Python. {Describe problem with current code, if possible}.\
+    \ Can you make the code {more Pythonic/cleaner/more efficient/run faster/more\
+    \ readable}? {Insert Code}\n\n![](images/00054.png)\n\n![](images/00056.png)\n\
+    \nCode optimization workflows\n\nR code optimization\n\nPROMPT STRUCTURE\n\nI\
+    \ want you to act as a code optimizer in R. {Describe problem with current code,\
+    \ if possible}. Can you make the code {cleaner/more efficient/run faster/more\
+    \ readable}? {Insert Code}\n\n![](images/00067.png)\n\n![](images/00071.png)\n\
+    \nCode optimization workflows\n\nSQL code optimization\n\nPROMPT STRUCTURE\n\n\
+    I want you to act as a query optimizer in SQL. {Describe problem with current\
+    \ code, if possible}. Can you suggest ways to make the query {run faster/more\
+    \ readable/simpler}? {Insert Code}\n\n![](images/00080.png)\n\n![](images/00078.png)\n\
+    \nCode simplification workflows\n\nPython code simplification\n\nPROMPT STRUCTURE\n\
+    \nI want you to act as a programmer in Python. Please simplify this code while\
+    \ ensuring that it is {efficient/easy to read/Pythonic}? {Insert Code}\n\n![](images/00081.png)\n\
+    \n![](images/00079.png)\n\nCode simplification workflows\n\nR code simplification\n\
+    \nPROMPT STRUCTURE\n\nI want you to act as a programmer in R. Please simplify\
+    \ this code while ensuring that it is {efficient/easy to read}? {Insert Code}\n\
+    \n![](images/00082.png)\n\n![](images/00083.png)\n\nCode simplification workflows\n\
+    \nSQL code simplification\n\nPROMPT STRUCTURE\n\nI want you to act as a SQL programmer.\
+    \ I am running\n\n{PostgreSQL 14/MySQL 8/SQLite 3.4/other versions.}. Can you\
+    \ please simplify this query {while ensuring that it is efficient/ easy to read/insert\
+    \ any additional requirements}?\n\n![](images/00115.png)\n\n![](images/00005.png)\n\
+    \nCode translation workflows\n\nFrom R to Python code translation\n\nPROMPT STRUCTURE\n\
+    \nI want you to act as a programmer in R.  Please translate this code to Python.\
+    \ {Insert code}\n\n![](images/00140.png)\n\n![](images/00077.png)\n\nCode translation\
+    \ workflows\n\nFrom Python to R code translation\n\nPROMPT STRUCTURE\n\nI want\
+    \ you to act as a programmer in Python. Please translate this code to R. {Insert\
+    \ code}\n\n![](images/00016.png)\n\n![](images/00046.png)\n\nCode quality and\
+    \ testing workflows\n\nCompare function speeds in python\n\nPROMPT STRUCTURE\n\
+    \nI want you to act as a Python programmer.  Can you write code that compares\
+    \ the speed of two functions {functionname} and {functionname}? {Insert functions}\n\
+    \n![](images/00057.png)\n\n![](images/00074.png)\n\nCode quality and testing workflows\n\
+    \nWrite unit tests in R\n\nPROMPT STRUCTURE\n\nI want you to act as a R Programmer.\
+    \ Can you please write unit tests for the function {functionname}? {Insert requirements\
+    \ for unit tests, if any} {Insert code}\n\n![](images/00088.png)\n\n![](images/00061.png)\n\
+    \nCode quality and testing workflows\n\nWrite unit tests in Python\n\nPROMPT STRUCTURE\n\
+    \nI want you to act as a Python Programmer. Can you please write unit tests for\
+    \ the function {functionname}? {Insert\n\nrequirements for unit tests, if any}\
+    \ {Insert code}\n\n![](images/00089.png)\n\nPrompts for \n\ndata analysis \n\n\
+    workflows\n\n![](images/00062.png)\n\nSQL data analysis workflows\n\nData generation\
+    \ & creating tables\n\nPROMPT STRUCTURE\n\nI want you to act as a data generator.\
+    \ Can you write\n\nSQL queries in {database version} that create a table\n\n{table\
+    \ name} with the columns {column name}. Include\n\nrelevant constraints and index.\n\
+    \n![](images/00063.png)\n\n![](images/00008.png)"
+  fmt: "\n![](images/00033.png)\n\n# ChatGPT Cheat Sheet For Data Science\n\nLearn\
+    \ Data Science Online at `www.DataCamp.com`\n\n![](images/00064.png)\n\nChatGPT\
+    \ cheat sheet for data science\n\n## How to use this cheatsheet?\n\n### 1 What\
+    \ is ChatGPT?\nChatGPT is a language model developed by OpenAI that has gained\
+    \ significant attention due to its remarkable ability to generate human-like responses\
+    \ to prompts given to it. ChatGPT is useful for a variety of language-based tasks,\
+    \ including language translation, question answering, text completion, and a lot\
+    \ more. It’s also very useful for data science workflows. \n\n### 2 How to get\
+    \ started?\nTo get started, simply head to OpenAI’s site and start inputting prompts.\
+    \ Register for free or upgrade to a paid version for priority access.\n\n`https://chat.openai.com/chat`\n\
+    \n### 3 What to expect in this cheat sheet?\nIn this cheat sheet, you will find\
+    \ specific examples of using ChatGPT for common data science tasks, including\
+    \ data visualization, data analysis, machine learning, and more.\n\n![](images/00114.png)\n\
+    \nChatGPT cheat sheet for data science\n\n## Our guide for great prompts\n\n###\
+    \ 1 Start prompts with a description of the AI’s role.\nFor example, “You are\
+    \ a {x}” or “I want you to act as {x}”. If you aren’t sure, try “You are a helpful\
+    \ assistant”. e.g. You are a data scientist at OpenAI, you are working on large\
+    \ language models. Explain to me how GPT-3 works.\n\n### 2 Use it for common tasks.\n\
+    The more common the task, the better the chances of success with ChatGPT. \n\n\
+    ### 3 Offer context.\nOffering context when posing a question to ChatGPT allows\
+    \ it to provide specific answers. Providing context allows the model to understand\
+    \ the nuances of the problem and generate more informed responses. e.g. You are\
+    \ a data scientist at OpenAI, you are working on large language models. Explain\
+    \ how GPT-3 works to a business executive with no technical background. \n\n###\
+    \ 4 Be precise.\nBeing precise is another best practice that can minimize the\
+    \ need for tweaking the output. When posing a question, be clear about the input\
+    \ (if any) and the desired outcome.\n\n### 5 Keep trying.\nDo not be afraid to\
+    \ try multiple prompts. Using different prompts can provide different perspectives\
+    \ on a problem and enable the model to generate a variety of responses.\n\n![](images/00108.png)\n\
+    \nChatGPT cheat sheet for data science\n\n## Limitations of ChatGPT\nHowever,\
+    \ ChatGPT is not perfect – it can generate wrong information, or “hallucinate”.\
+    \ ChatGPT can provide incorrect answers in an authoritative tone. As such, it’s\
+    \ very important to fact check all of its answers.\n\n![](images/00043.png)\n\n\
+    [Source: Gary Marcus](https://garymarcus.substack.com/p/how-come-gpt-can-seem-so-brilliant)\n\
+    \n## Prompts for general coding workflows\n\n![](images/00090.png)\n\n## Code\
+    \ debugging workflows\n\n### Debugging Python code\n**PROMPT STRUCTURE**\n```\n\
+    I want you to be a Python programmer, here is a piece of Python code containing\
+    \ {problem} — {insert code snippet} — I am getting the following error {insert\
+    \ error}. What is the reason for the bug?\n```\n![](images/00053.png)\n![](images/00019.png)\n\
+    ![](images/00002.png)\n\n### Debugging R code\n**PROMPT STRUCTURE**\n```\nI want\
+    \ you to be an R programmer, here is a piece of R code containing {problem} —\
+    \ {insert code snippet} — I am getting the following error {insert error}. What\
+    \ is the reason for the bug?\n```\n![](images/00027.png)\n![](images/00049.png)\n\
+    \n### Debugging SQL code\n**PROMPT STRUCTURE**\n```\nI want you to be a SQL programmer,\
+    \ here is a piece of SQL code containing {problem} — {insert code snippet} — I\
+    \ am getting the following error {insert error}. What is the reason for the bug?\n\
+    ```\n![](images/00070.png)\n![](images/00091.png)\n\n## Code explanation workflows\n\
+    \n### Python code explanation\n**PROMPT STRUCTURE**\n```\nI want you to act as\
+    \ a code explainer in Python. I don't understand this function. Can you please\
+    \ explain what it does, and provide an example? {Insert function}\n```\n![](images/00101.png)\n\
+    ![](images/0038.png)\n\n### R code explanation\n**PROMPT STRUCTURE**\n```\nI want\
+    \ you to act as a code explainer in R. I don't understand this function. Can you\
+    \ please explain what it does, and provide an example? {Insert function}\n```\n\
+    ![](images/0084.png)\n![](images/0086.png)\n\n### SQL code explanation\n**PROMPT\
+    \ STRUCTURE**\n```\nI want you to act as a code explainer in SQL. I don't understand\
+    \ this function. Can you please explain what it does, and provide an example?\
+    \ {Insert function}\n```\n![](images/0050.png)\n\n## Code optimization\n\n###\
+    \ Python code optimization\n**PROMPT STRUCTURE**\n```\nI want you to act as a\
+    \ code optimizer in Python. I don't understand this function. Can you please explain\
+    \ what it does, and provide an example? {Insert function}\n```\n![](images/0054.png)\n\
+    ![](images/0056.png)\n\n### R code optimization\n**PROMPT STRUCTURE**\n```\nI\
+    \ want you to act as a code optimizer in R. I don't understand this function.\
+    \ Can you please explain what it does, and provide an example? {Insert function}\n\
+    ```\n![](images/0067.png)\n![](images/0071.png)\n\n### SQL code optimization\n\
+    **PROMPT STRUCTURE**\n```\nI want you to act as a code optimizer in SQL. I don't\
+    \ understand this function. Can you please explain what it does, and provide an\
+    \ example? {Insert function}\n```\n![](images/0075.png)\n![](images/0080.png)\n\
+    \n## Code simplification\n\n### Python code simplification\n**PROMPT STRUCTURE**\n\
+    ```\nI want you to act as a code simplifier in Python. I don't understand this\
+    \ function. Can you please explain what it does, and provide an example? {Insert\
+    \ function}\n```\n![](images/0081.png)\n![](images/0082.png)\n\n### R code simplification\n\
+    **PROMPT STRUCTURE**\n```\nI want you to act as a code simplifier in R. I don't\
+    \ understand this function. Can you please explain what it does, and provide an\
+    \ example? {Insert function}\n```\n![](images/0079.png)\n![](images/0083.png)\n\
+    \n### SQL code simplification\n**PROMPT STRUCTURE**\n```\nI want you to act as\
+    \ a code simplifier in SQL. I don't understand this function. Can you please explain\
+    \ what it does, and provide an example? {Insert function}\n```\n`PostgreSQL 14`,\
+    \ `MySQL 8`, `SQLite 3.4`, `other versions`. Can you please simplify this query\
+    \ while insert any additional requirements?\n![](images/0115.png)\n![](images/0005.png)\n\
+    \n## Code translation workflows\n\n### From R to Python translation\n**PROMPT\
+    \ STRUCTURE**\n```\nI want you to act as a translator. Please translate this R\
+    \ code to Python: {insert code}\n```\n![](images/0140.png)\n![](images/0077.png)\n\
+    \n### From Python to R translation\n**PROMPT STRUCTURE**\n```\nI want you to act\
+    \ as a translator. Please translate this Python code to R: {insert code}\n```\n\
+    ![](images/0016.png)\n![](images/0046.png)\n\n## Code quality and testing workflows\n\
+    \n### Compare function speeds in Python\n**PROMPT STRUCTURE**\n```\nI want you\
+    \ to act as a Python programmer. Can you write code that compares the speed of\
+    \ two functions {functionname} and {functionname}? {Insert functions}\n```\n![](images/0057.png)\n\
+    ![](images/0074.png)\n\n### Write unit tests in R\n**PROMPT STRUCTURE**\n```\n\
+    I want you to act as a R programmer. Can you please write unit tests for the function\
+    \ {functionname}? {insert requirements for unit tests, if any} {insert code}\n\
+    ```\n![](images/0088.png)\n![](images/0061.png)\n\n### Write unit tests in Python\n\
+    **PROMPT STRUCTURE**\n```\nI want you to act as a Python programmer. Can you please\
+    \ write unit tests for the function {functionname}? {insert requirements for unit\
+    \ tests, if any} {insert code}\n```\n![](images/0089.png)\n\n## SQL data analysis\
+    \ workflows\n\n![](images/0062.png)\n\n### Data generation & creating tables\n\
+    **PROMPT STRUCTURE**\n```\nI want you to act as a data generator. Can you write\
+    \ SQL queries in {database version} that create a table {table name} with the\
+    \ columns {column name}. Include relevant constraints and index.\n```\n![](images/0063.png)\n\
+    ![](images/0008.png)\n"
+  trans: '
+
+
+    ![](img/00033.png)
+
+
+    # 数据科学 ChatGPT 速查表
+
+
+    在 `www.DataCamp.com` 在学习数据科学
+
+
+    ![](img/00064.png)
+
+
+    数据科学 ChatGPT 速查表
+
+
+    ## 如何使用此速表？
+
+
+    ### 1 什么是 ChatGPT？
+
+    ChatGPT 是由 OpenAI 开发的一种语言模型，由于其能够对给定的提示生成类似于人类的响应，引起了广泛关注。ChatGPT 适用于各种基于语言的任务，包括语言翻译、问答、文本补全等。它对于数据科学工作流也非常有用。
+
+
+    ### 2 如何开始？
+
+    要开始，只需访问 OpenAI 网站并开始输入提示词（prompts）。免费注册或升级到付费版本以获得优先访问。
+
+
+    `https://chat.openai.com/chat`
+
+
+    ### 3 在此速表中可以期待什么？
+
+    在此速表中，你将找到使用 ChatGPT 完成常见数据科学任务的特定示例，包括数据可视化、数据分析、机器学习等。
+
+
+    ![](img/00114.png)
+
+
+    数据科学 ChatGPT 速查表
+
+
+    ## 我们的优秀提示词指南
+
+
+    ### 1 提示词以对 AI 角色的描述开头。
+
+    例如，“你是一个 {x}”或“我希望你充当 {x}”。如果你不确定，尝试“你是一个乐于帮助助手”。例如：你是 OpenAI 的一名数据科学家，正在研究大型语言模型。请向我解释
+    GPT-3 是如何工作的。
+
+
+    ### 2 将其用于常见任务。
+
+    任务越常见，ChatGPT 成功的概率就越高。
+
+
+    ### 3 提供上下文。
+
+    在向 ChatGPT 提问时提供上下文，可以让它提供具体的答案。提供上下文允许模型理解问题的细微差别，并生成更具见解的响应。例如：你是 OpenAI 的一名数据科学家，正在研究大型语言模型。请向一位没有技术背景的业务主管解释
+    GPT-3 的工作原理。
+
+
+    ### 4 保持精确。
+
+    精确是另一个最佳实践，可以减少调整输出结果的需求。在提问时，请明确输入内容（如果有）和预期的结果。
+
+
+    ### 5 持续尝试。
+
+    不要害怕尝试多个提示词。使用不同的提示词可以为问题提供不同的视角，并使模型生成多种响应。
+
+
+    ![](img/00108.png)
+
+
+    数据科学 ChatGPT 速查表
+
+
+    ## ChatGPT 的局限性
+
+    然而，ChatGPT 并非完美——它可能会生成错误信息或产生“幻觉”。ChatGPT 会以权威的语气提供错误的答案。因此，对它的所有答案进行事实检查非常重要。
+
+
+    ![](img/00043.png)
+
+
+    [来源：Gary Marcus](https://garymarcus.substack.com/p/how-come-gpt-can-seem-so-brilliant)
+
+
+    ## 通用编码工作流提示词
+
+
+    ![](img/00090.png)
+
+
+    ## 代码调试工作流
+
+
+    ### 调试 Python 代码
+
+    **提示词结构**
+
+    ```
+
+    我希望你成为一名 Python 程序员，这里有一段包含 {problem} 的 Python 代码 — {插入代码片段} — 我遇到了以下错误 {插入错误}产生错误的原因是什么？
+
+    ```
+
+    ![](img/00053.png)
+
+    ![](img/00019.png)
+
+    ![](img/00002.png)
+
+
+    ### 调试 R 代码
+
+    **提示词结构**
+
+    ```
+
+    我希望你成为一名 R 程序员，这里有一段包含 {problem} 的 R 代码 — {插入代码片段} — 我遇到了以下错误 {插入错误}产生错误的原因是什么？
+
+    ```
+
+    ![](img/00027.png)
+
+    ![](img/00049.png)
+
+
+    ### 调试 SQL 代码
+
+    **提示词结构**
+
+    ```
+
+    我希望你成为一名 SQL 程序员，这里有一段包含 {problem} 的 SQL 代码 — {插入代码片段} — 我遇到了以下错误 {插入错误}产生错误的原因是什么？
+
+    ```
+
+    ![](img/00070.png)
+
+    ![](img/00091.png)
+
+
+    ## 代码解释工作流
+
+
+    ### Python 代码解释
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当 Python 代码解释器。我不理解这个函数。请你解释一下它的作用，并提供一个示例吗？{插入函数}
+
+    ```
+
+    ![](img/00101.png)
+
+    ![](img/0038.png)
+
+
+    ### R 代码解释
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当 R 代码解释器。我不理解这个函数。请你解释一下它的作用，并提供一个示例吗？{插入函数}
+
+    ```
+
+    ![](img/0084.png)
+
+    ![](img/0086.png)
+
+
+    ### SQL 代码解释
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当 SQL 代码解释器。我不理解这个函数。请你解释一下它的作用，并提供一个示例吗？{插入函数}
+
+    ```
+
+    ![](img/0050.png)
+
+
+    ## 代码优化
+
+
+    ### Python 代码优化
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当 Python 代码优化器。我不理解这个函数。请你解释一下它的作用，并提供一个示例吗？{插入函数}
+
+    ```
+
+    ![](img/0054.png)
+
+    ![](img/0056.png)
+
+
+    ### R 代码优化
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当 R 代码优化器。我不理解这个函数。请你解释一下它的作用，并提供一个示例吗？{插入函数}
+
+    ```
+
+    ![](img/0067.png)
+
+    ![](img/0071.png)
+
+
+    ### SQL 代码优化
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当 SQL 代码优化器。我不理解这个函数。请你解释一下它的作用，并提供一个示例吗？{插入函数}
+
+    ```
+
+    ![](img/0075.png)
+
+
+    ## 代码简化
+
+
+    ### Python 代码简化
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当 Python 代码简化器。我不理解这个函数。请你解释一下它的作用，并提供一个示例吗？{插入函数}
+
+    ```
+
+    ![](img/0081.png)
+
+    ![](img/0082.png)
+
+
+    ### R 代码简化
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当 R 代码简化器。我不理解这个函数。请你解释一下它的作用，并提供一个示例吗？{插入函数}
+
+    ```
+
+    ![](img/0079.png)
+
+    ![](img/0083.png)
+
+
+    ### SQL 代码简化
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当 SQL 代码简化器。我不理解这个函数。请你解释一下它的作用，并提供一个示例吗？{插入函数}
+
+    ```
+
+    `PostgreSQL 14`, `MySQL 8`, `SQLite 3.4`, `其他版本`。请你简化这个查询并加入任何额外要求吗？
+
+    ![](img/0115.png)
+
+    ![](img/0005.png)
+
+
+    ## 代码翻译工作流
+
+
+    ### R 到 Python 翻译
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当翻译员。请将这段 R 代码翻译成 Python：{插入代码}
+
+    ```
+
+    ![](img/0140.png)
+
+    ![](img/0077.png)
+
+
+    ### Python 到 R 翻译
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当翻译员。请将这段 Python 代码翻译成 R：{插入代码}
+
+    ```
+
+    ![](img/0016.png)
+
+    ![](img/0046.png)
+
+
+    ## 代码质量与测试工作流
+
+
+    ### 比较函数速度
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当 Python 程序员。你可以写代码比较函数 {functionname} 和 {functionname} 的速度吗？{插入函数}
+
+    ```
+
+    ![](img/0057.png)
+
+    ![](img/0074.png)
+
+
+    ### 编写 R 单元测试
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当 R 程序员。请你为函数 {functionname} 编写单元测试吗？如果有任何额外要求，请插入代码。
+
+    ```
+
+    ![](img/0088.png)
+
+    ![](img/0061.png)
+
+
+    ### 编写 Python 单元测试
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当 Python 程序员。请你为函数 {functionname} 编写单元测试吗？如果有任何额外要求，请插入代码。
+
+    ```
+
+    ![](img/0089.png)
+
+
+    ## SQL 数据分析工作流
+
+
+    ![](img/0062.png)
+
+
+    ### 数据生成与建表
+
+    **提示词结构**
+
+    ```
+
+    我希望你充当数据生成器。你可以编写 {database version} 的 SQL 查询来创建一个列为 {column name} 的表 {table name}
+    吗？包含相关的约束和索引。
+
+    ```
+
+    ![](img/0063.png)
+
+    ![](img/0008.png)
+
+
+    '
+  toc: []
+- raw: "SQL data analysis workflows\n\nCommon table expressions\n\nPROMPT STRUCTURE\n\
+    \nI want you to act as a SQL code programmer. I\n\nam running {database version}.\
+    \ Can you rewrite\n\nthis query using CTE? {Insert query}\n\n![](images/00037.png)\n\
+    \n![](images/00122.png)\n\nSQL data analysis workflows\n\nWrite SQL queries from\
+    \ natural language\n\nPROMPT STRUCTURE\n\nI want you to act as a data scientist.\
+    \ {Insert\n\ndescription of tables}. Can you {count/sum/take\n\naverage} of {value}\
+    \ which are {insert filters}\n\nExample: Data aggregation in SQL\n\n![](images/00112.png)\n\
+    \n![](images/00009.png)\n\nSQL data analysis workflows\n\nWrite SQL queries from\
+    \ natural language\n\nPROMPT STRUCTURE\n\nI want you to act as a data scientist.\
+    \  I am running {PostgreSQL 14/MySQL 8/ SQLite 3.4/other versions.}. I have the\
+    \ tables {table\\_name} which are {table description}. The sales table consists\
+    \ of the columns {column names}. Can you please write a query that finds the 7-day\
+    \ running average of {quantity}?\n\nExample: 7 day running average in SQL\n\n\
+    ![](images/00039.png)\n\n![](images/00017.png)\n\nSQL data analysis workflows\n\
+    \nWrite SQL queries from natural language\n\nPROMPT STRUCTURE\n\nI want you to\
+    \ act as a data scientist.  I am running {PostgreSQL 14/MySQL 8/SQLite 3.4/other\
+    \ versions.}. I have the tables\n\n{table\\_name} which are {table description}.\
+    \ The sales table consists of the columns {column names}. Can you please write\
+    \ a query that finds {required window function}?\n\nExample: Window functions\
+    \ in SQL\n\n![](images/00113.png)\n\n![](images/00003.png)\n\nPython data analysis\
+    \ workflows\n\nData generation workflow\n\nPROMPT STRUCTURE\n\nI want you to act\
+    \ as a data generator in Python. Can you generate a Markdown file that contains\
+    \ {data requirement}. Save the file to {filename}\n\nExample: Generate Markdown\n\
+    \n![](images/00032.png)\n\n![](images/00036.png)\n\nPython data analysis workflows\n\
+    \nData generation workflow\n\nPROMPT STRUCTURE\n\nI want you to act as a data\
+    \ generator in Python. Can you generate a CSV file that contains {data requirement}.\
+    \ Save the file to {filename}\n\nExample: Generate CSV\n\n![](images/00065.png)\n\
+    \n![](images/00055.png)\n\nPython data analysis workflows\n\nData generation workflow\n\
+    \nPROMPT STRUCTURE\n\nI want you to act as a data generator in Python. Can you\
+    \ generate a JSON file that contains {data requirement}.\n\nSave the file to {filename}\n\
+    \nExample: Generate JSON\n\n![](images/00006.png)\n\n![](images/00131.png)\n\n\
+    Python data analysis workflows\n\nData cleaning workflow\n\nPROMPT STRUCTURE\n\
+    \nI want you to act as a data scientist programming in\n\nPython Pandas. Given\
+    \ a CSV file that contains data of\n\n{dataframe name}  with the columns {colum\
+    \ names} \n\nfor {dataset context}, write code to clean the data?\n\n{Insert requirements\
+    \ for data}\n\n![](images/00133.png)\n\n![](images/00136.png)\n\nPython data analysis\
+    \ workflows\n\nData analysis workflow in pandas\n\nPROMPT STRUCTURE\n\nI want\
+    \ you to act as a data scientist programming in\n\nPython Pandas. Given a table\
+    \ {table name} that\n\nconsists of the columns {column names}  can you\n\nplease\
+    \ write a query that finds {requirement}?\n\nExample: Data Aggregation\n\n![](images/00139.png)\n\
+    \n![](images/00102.png)\n\nPython data analysis workflows\n\nData analysis workflow\
+    \ in pandas\n\nPROMPT STRUCTURE Example: Data Merging\n\n![](images/00104.png)\n\
+    \nI want you to act as a data\n\nscientist programming in\n\nPython Pandas. Given\
+    \ a table\n\n{table 1 name}  that consists of\n\nthe columns {column names} \n\
+    \nand another table {table 2\n\nname}  with the columns\n\n{column names} , please\n\
+    \nmerge the two tables. {Insert\n\nadditional requirement, if any}\n\n![](images/00109.png)\n\
+    \nPython data analysis workflows\n\nData analysis workflow in pandas\n\nPROMPT\
+    \ STRUCTURE Example: Data Reshaping\n\n![](images/00130.png)\n\nI want you to\
+    \ act as a data\n\nscientist programming in\n\nPython Pandas. Given a table\n\n\
+    {table name} that consists of\n\nthe columns {column names} \n\ncan you aggregate\
+    \ the\n\n{value}  by {column} and\n\nconvert it from long to wide\n\nformat?\n\
+    \n![](images/00132.png)\n\nR data analysis workflows\n\nData generation workflow\n\
+    \nPROMPT STRUCTURE Example: Generate Markdown\n\n![](images/00134.png)\n\nI want\
+    \ you to act as a data\n\ngenerator in R. Can you\n\ngenerate a Markdown file\
+    \ that\n\ncontains {data requirement}.\n\nSave the file to {filename}\n\n![](images/00137.png)\n\
+    \nR data analysis workflows\n\nData generation workflow\n\nPROMPT STRUCTURE\n\n\
+    I want you to act as a data generator in R. Can\n\nyou generate a CSV file that\
+    \ contains {data\n\nrequirement}. Save the file to {filename}\n\nExample: Generate\
+    \ CSV\n\n![](images/00129.png)\n\n![](images/00111.png)\n\nR data analysis workflows\n\
+    \nData generation workflow\n\nPROMPT STRUCTURE\n\nI want you to act as a data\
+    \ generator in R. Can\n\nyou generate a JSON file that contains {data\n\nrequirement}.\
+    \ Save the file to {filename}\n\nExample: Generate JSON\n\n![](images/00007.png)\n\
+    \n![](images/00041.png)\n\nR data analysis workflows\n\nData cleaning workflow\n\
+    \nPROMPT STRUCTURE\n\nI want you to act as a data scientist\n\nprogramming in\
+    \ R tidyr. You are given the\n\n{dataframe name} dataframe containing the\n\n\
+    columns {column name}. {Insert requirement}\n\n![](images/00031.png)\n\n![](images/00004.png)\n\
+    \nR data analysis workflows\n\nData analysis workflow in tidyr\n\nPROMPT STRUCTURE\n\
+    \nI want you to act as a data scientist\n\nprogramming in R tidyr. You are given\
+    \ the\n\n{dataframe name} dataframe containing the\n\ncolumns {column name}. {Insert\
+    \ requirement}\n\nExample: Data Aggregation\n\n![](images/00040.png)\n\n![](images/00051.png)\n\
+    \nR data analysis workflows\n\nData analysis workflow in tidyr\n\nPROMPT STRUCTURE\
+    \ Example: Data Merging\n\n![](images/00107.png)\n\nI want you to act as a data\
+    \ scientist\n\nprogramming in R tidyr. You are given\n\nthe {dataframe 1 name}\
+    \ dataframe\n\ncontaining the columns {column name}.\n\nYou also have a {dataframe\
+    \ 2 name}\n\ndataframe containing the columns\n\n{column name}. Find the {required\n\
+    \noutput} \n\n![](images/00135.png)\n\nR data analysis workflows\n\nData analysis\
+    \ workflow in tidyr\n\nPROMPT STRUCTURE\n\nI want you to act as a data scientist\n\
+    \nprogramming in R tidyr. You are given the\n\n{dataframe name} dataframe containing\
+    \ the\n\ncolumns {column name}.  Please convert the\n\ndata to wide format.\n\n\
+    Example: Data Reshaping (Long to Wide)\n\n![](images/00094.png)\n\n![](images/00060.png)\n\
+    \nR data analysis workflows\n\nData analysis workflow in tidyr\n\nPROMPT STRUCTURE\
+    \ Example: Data Reshaping (Wide to Long)\n\n![](images/00021.png)\n\nI want you\
+    \ to act as a data scientist\n\nprogramming in R tidyr. You are given\n\nthe {dataframe\
+    \ name} dataframe\n\ncontaining the columns {column\n\nname}.  Please convert\
+    \ the data to long\n\nformat.\n\nPrompts for \L\n\ndata visualization \n\nworkflows\n\
+    \n![](images/00138.png)\n\nR data visualization workflows\n\nCreating plots in\
+    \ ggplot2\n\nPROMPT STRUCTURE\n\n![](images/00095.png)\n\nI want you to act as\
+    \ a data scientist\n\ncoding in R. Given a dataframe\n\n{dataframe name} containing\
+    \ the\n\ncolumns {column names} Use ggplot2\n\nto plot a {chart type and requirement}.\n\
+    \n![](images/00066.png)\n\nR data visualization workflows\n\nGridplot visualizations\
+    \ in ggplot2\n\nPROMPT STRUCTURE\n\nI want you to act as a data scientist coding\
+    \ in R.\n\nGiven a dataframe {dataframe name} containing\n\nthe columns {column\
+    \ names}. Use ggplot2 to plot\n\na pair plot that shows the relationship of one\n\
+    \nvariable against another.\n\n![](images/00022.png)\n\n![](images/00072.png)\n\
+    \nR data visualization workflows\n\nAnnotating and formatting plots\n\nPROMPT\
+    \ STRUCTURE\n\n![](images/00096.png)\n\nI want you to act as a data scientist\n\
+    \ncoding in R. Given a dataframe\n\n{dataframe name} containing the\n\ncolumns\
+    \ {column names}, use ggplot2\n\nto plot a {chart type} the relationship\n\nbetween\
+    \ {variables}. {Insert annotation\n\nand formatting requirements}\n\n![](images/00059.png)\n\
+    \nR data visualization workflows\n\nChanging plot themes in ggplot2\n\nPROMPT\
+    \ STRUCTURE\n\nI want you to act as a data scientist coding in R. Given a\n\n\
+    dataframe {dataframe name} containing the columns {column names}, use ggplot2\
+    \ to to plot a {chart type} the relationship between {variables}. Change the color\
+    \ theme to match that of {theme}\n\n![](images/00042.png)\n\n![](images/00010.png)"
+  fmt: '
+
+    # SQL data analysis workflows
+
+
+    ## Common table expressions
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a SQL code programmer. I am running {database version}. Can
+    you rewrite this query using CTE? {Insert query}
+
+
+    ![](images/00037.png)
+
+    ![](images/00122.png)
+
+
+    # SQL data analysis workflows
+
+    ## Write SQL queries from natural language
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist. {Insert description of tables}. Can you
+    {count/sum/take average} of {value} which are {insert filters}
+
+
+    Example: Data aggregation in SQL
+
+    ![](images/00112.png)
+
+    ![](images/00009.png)
+
+
+    # SQL data analysis workflows
+
+    ## Write SQL queries from natural language
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist. I am running {PostgreSQL 14/MySQL 8/ SQLite
+    3.4/other versions.}. I have the tables {table_name} which are {table description}.
+    The sales table consists of the columns {column names}. Can you please write a
+    query that finds the 7-day running average of {quantity}?
+
+
+    Example: 7 day running average in SQL
+
+    ![](images/00039.png)
+
+    ![](images/00017.png)
+
+
+    # SQL data analysis workflows
+
+    ## Write SQL queries from natural language
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist. I am running {PostgreSQL 14/MySQL 8/SQLite
+    3.4/other versions.}. I have the tables {table_name} which are {table description}.
+    The sales table consists of the columns {column names}. Can you please write a
+    query that finds {required window function}?
+
+
+    Example: Window functions in SQL
+
+    ![](images/00113.png)
+
+    ![](images/00003.png)
+
+
+    # Python data analysis workflows
+
+    ## Data generation workflow
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data generator in Python. Can you generate a Markdown file
+    that contains {data requirement}. Save the file to {filename}
+
+
+    Example: Generate Markdown
+
+    ![](images/00032.png)
+
+    ![](images/00036.png)
+
+
+    # Python data analysis workflows
+
+    ## Data generation workflow
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data generator in Python. Can you generate a CSV file that
+    contains {data requirement}. Save the file to {filename}
+
+
+    Example: Generate CSV
+
+    ![](images/00065.png)
+
+    ![](images/00055.png)
+
+
+    # Python data analysis workflows
+
+    ## Data generation workflow
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data generator in Python. Can you generate a JSON file
+    that contains {data requirement}. Save the file to {filename}
+
+
+    Example: Generate JSON
+
+    ![](images/00006.png)
+
+    ![](images/00131.png)
+
+
+    # Python data analysis workflows
+
+    ## Data cleaning workflow
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist programming in Python Pandas. Given a CSV
+    file that contains data of {dataframe name} with the columns {colum names} for
+    {dataset context}, write code to clean the data?
+
+    {Insert requirements for data}
+
+    ![](images/00133.png)
+
+    ![](images/00136.png)
+
+
+    # Python data analysis workflows
+
+    ## Data analysis workflow in pandas
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist programming in Python Pandas. Given a table
+    {table name} that consists of the columns {column names} can you please write
+    a query that finds {requirement}?
+
+
+    Example: Data Aggregation
+
+    ![](images/00139.png)
+
+    ![](images/00102.png)
+
+
+    # Python data analysis workflows
+
+    ## Data analysis workflow in pandas
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist programming in Python Pandas. Given a table
+    {table name} that consists of the columns {column names} can you please write
+    a query that finds {requirement}?
+
+
+    Example: Data Merging
+
+    ![](images/00104.png)
+
+
+    # Python data analysis workflows
+
+    ## Data analysis workflow in pandas
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist programming in Python Pandas. Given a table
+    {table 1 name} that consists of the columns {column names} and another table {table
+    2 name} with the columns {column names}, please merge the tables. {Insert requirement}
+
+    ![](images/00135.png)
+
+
+    # Python data analysis workflows
+
+    ## Data analysis workflow in pandas
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist programming in Python Pandas. Given a table
+    {table name} that consists of the columns {column names}. Please convert the data
+    to wide format.
+
+
+    Example: Data Reshaping (Long to Wide)
+
+    ![](images/00094.png)
+
+    ![](images/00060.png)
+
+
+    # Python data analysis workflows
+
+    ## Data analysis workflow in pandas
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist programming in Python Pandas. Given a table
+    {table name} that consists of the columns {column names}. Please convert the data
+    to long format.
+
+
+    Example: Data Reshaping (Wide to Long)
+
+    ![](images/00021.png)
+
+
+    # Python data analysis workflows
+
+    ## Data generation workflow
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data generator in Python. Can you generate a Markdown file
+    that contains {data requirement}. Save the file to {filename}
+
+    Prompts for data visualization workflows
+
+    ![](images/00138.png)
+
+
+    # Python data analysis workflows
+
+    ## Data generation workflow
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data generator in Python. Can you generate a CSV file that
+    contains {data requirement}. Save the file to {filename}
+
+
+    # Python data analysis workflows
+
+    ## Data generation workflow
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data generator in Python. Can you generate a JSON file
+    that contains {data requirement}. Save the file to {filename}
+
+    '
+  trans: '
+
+
+    # SQL 数据分析工作流
+
+
+    ## 公用表表达式 (CTE)
+
+
+    ### 提示词结构
+
+    我希望你充当 SQL 代码程序员。我正在运行 {database version}。你能使用 CTE 重写这个查询语句吗？{插入查询语句}
+
+
+    ![](img/00037.png)
+
+    ![](img/00122.png)
+
+
+    # SQL 数据分析工作流
+
+    ## 从自然语言编写 SQL 查询
+
+
+    ### 提示词结构
+
+    我希望你充当数据科学家。{插入表格描述}。你能对符合 {insert filters} 的 {value} 进行 {count/sum/take average}(计数/求和/平均）吗？
+
+
+    示例：SQL 中的数据聚合
+
+    ![](img/00112.png)
+
+    ![](img/00009.png)
+
+
+    # SQL 数据分析工作流
+
+    ## 从自然语言编写 SQL 查询
+
+
+    ### 提示词结构
+
+    我希望你充当数据科学家。我正在运行 {PostgreSQL 14/MySQL 8/ SQLite 3.4/其他版本}。我有一个表 {table_name}，其描述为
+    {table description}。销售表包含列 {column names}。你能写一个查询来计算 {quantity} 的 7 天移动平均值吗？
+
+
+    示例：SQL 中的 7 天移动平均值
+
+    ![](img/00039.png)
+
+    ![](img/00017.png)
+
+
+    # SQL 数据分析工作流
+
+    ## 从自然语言编写 SQL 查询
+
+
+    ### 提示词结构
+
+    我希望你充当数据科学家。我正在运行 {PostgreSQL 14/MySQL 8/SQLite 3.4/其他版本}。我有一个表 {table_name}，其描述为
+    {table description}。销售表包含列 {column names}。你能写一个查询来查找 {required window function}吗？
+
+
+    示例：SQL 中的窗口函数
+
+    ![](img/00113.png)
+
+    ![](img/00003.png)
+
+
+    # Python 数据分析工作流
+
+    ## 数据生成工作流
+
+
+    ### 提示词结构
+
+    我希望你充当 Python 数据生成器。你能生成一个包含 {data requirement} 的 Markdown 文件吗？将文件保存为 {filename}
+
+
+    示例：生成 Markdown
+
+    ![](img/00032.png)
+
+    ![](img/00036.png)
+
+
+    # Python 数据分析工作流
+
+    ## 数据生成工作流
+
+
+    ### 提示词结构
+
+    我希望你充当 Python 数据生成器。你能生成一个包含 {data requirement} 的 CSV 文件吗？将文件保存为 {filename}
+
+
+    示例：生成 CSV
+
+    ![](img/00065.png)
+
+    ![](img/00055.png)
+
+
+    # Python 数据分析工作流
+
+    ## 数据生成工作流
+
+
+    ### 提示词结构
+
+    我希望你充当 Python 数据生成器。你能生成一个包含 {data requirement} 的 JSON 文件吗？将文件保存为 {filename}
+
+
+    示例：生成 JSON
+
+    ![](img/00006.png)
+
+    ![](img/00131.png)
+
+
+    # Python 数据分析工作流
+
+    ## 数据清洗工作流
+
+
+    ### 提示词结构
+
+    我希望你充当使用 Python Pandas 编程的数据科学家。给定一个包含 {dataframe name} 数据的 CSV 文件，其列名为 {colum
+    names} 用于 {dataset context}，请编写代码清洗数据？
+
+    {插入数据需求}
+
+    ![](img/00133.png)
+
+    ![](img/00136.png)
+
+
+    # Python 数据分析工作流
+
+    ## pandas 中的数据分析工作流
+
+
+    ### 提示词结构
+
+    我希望你充当使用 Python Pandas 编程的数据科学家。给定一个包含列 {column names} 的表 {table name}，你能写一个查询来查找
+    {requirement} 吗？
+
+
+    示例：数据聚合
+
+    ![](img/00139.png)
+
+    ![](img/00102.png)
+
+
+    # Python 数据分析工作流
+
+    ## pandas 中的数据分析工作流
+
+
+    ### 提示词结构
+
+    我希望你充当使用 Python Pandas 编程的数据科学家。给定一个包含列 {column names} 的表 {table name}，你能写一个查询来查找
+    {requirement} 吗？
+
+
+    示例：数据合并
+
+    ![](img/00104.png)
+
+
+    # Python 数据分析工作流
+
+    ## pandas 中的数据分析工作流
+
+
+    ### 提示词结构
+
+    我希望你充当使用 Python Pandas 编程的数据科学家。给定一个包含列 {column names} 的表 {table 1 name} 和另一个包含列
+    {column names} 的表 {table 2 name}，请合并这些表。{插入需求}
+
+    ![](img/00135.png)
+
+
+    # Python 数据分析工作流
+
+    ## pandas 中的数据分析工作流
+
+
+    ### 提示词结构
+
+    我希望你充当使用 Python Pandas 编程的数据科学家。给定一个包含列 {column names} 的表 {table name}。请将数据转换为宽格式（wide
+    format）。
+
+
+    示例：数据重塑（从长到宽）
+
+    ![](img/00094.png)
+
+    ![](img/00060.png)
+
+
+    # Python 数据分析工作流
+
+    ## pandas 中的数据分析工作流
+
+
+    ### 提示词结构
+
+    我希望你充当使用 Python Pandas 编程的数据科学家。给定一个包含列 {column names} 的表 {table name}。请将数据转换为长格式（long
+    format）。
+
+
+    示例：数据重塑（从宽到长）
+
+    ![](img/00021.png)
+
+
+    # Python 数据分析工作流
+
+    ## 数据生成工作流
+
+
+    ### 提示词结构
+
+    我希望你充当 Python 数据生成器。你能生成一个包含 {data requirement} 的 Markdown 文件吗？将文件保存为 {filename}
+
+    数据可视化工作流的提示词
+
+    ![](img/00138.png)
+
+
+    # Python 数据分析工作流
+
+    ## 数据生成工作流
+
+
+    ### 提示词结构
+
+    我希望你充当 Python 数据生成器。你能生成一个包含 {data requirement} 的 CSV 文件吗？将文件保存为 {filename}
+
+
+    # Python 数据分析工作流
+
+    ## 数据生成工作流
+
+
+    ### 提示词结构
+
+    我希望你充当 Python 数据生成器。你能生成一个包含 {data requirement} 的 JSON 文件吗？将文件保存为 {filename}
+
+
+    '
+  toc: []
+- raw: "Python data visualization workflows\n\nCreating plots with matplotlib\n\n\
+    ![](images/00116.png)\n\nPROMPT STRUCTURE\n\nI want you to act as a data scientist\n\
+    \ncoding in Python.  Given a dataframe\n\n{dataframe name} containing the\n\n\
+    columns {column names} Use\n\nmatplotlib  to plot a {chart type and\n\nrequirement}.\n\
+    \n![](images/00011.png)\n\nPython data visualization workflows\n\nCrating pairplots\
+    \ with matplotlib\n\nPROMPT STRUCTURE\n\nI want you to act as a data scientist\
+    \ coding in Python. Given a dataframe {dataframe name} containing the columns\
+    \ {column names}. Use matplotlib to plot a pair plot that shows the\n\nrelationship\
+    \ of one variable against another.\n\n![](images/00117.png)\n\n![](images/00123.png)\n\
+    \nPython data visualization workflows\n\nAnnotating and formatting plots in matplotlib\n\
+    \n![](images/00044.png)\n\nPROMPT STRUCTURE\n\nI want you to act as a data scientist\n\
+    \ncoding in Python. Given a dataframe\n\n{dataframe name} containing the\n\ncolumns\
+    \ {column names}, use\n\nmatplotlib to to plot a {chart type} the\n\nrelationship\
+    \ between {variables}. {Insert\n\nannotation and formatting\n\nrequirements}\n\
+    \n![](images/00012.png)\n\nPython data visualization workflows\n\nChanging plot\
+    \ themes in matplotlib\n\n![](images/00118.png)\n\nPROMPT STRUCTURE\n\nI want\
+    \ you to act as a data scientist\n\ncoding in Python. Given a dataframe\n\n{dataframe\
+    \ name} containing the\n\ncolumns {column names}, use\n\nmatplotlib to to plot\
+    \ a {chart type} the\n\nrelationship between {variables}.\n\nChange the color\
+    \ theme to match that\n\nof {theme}\n\nPrompts for \n\nmachine learning \n\nworkflows\n\
+    \n![](images/00141.png)\n\nGeneral machine learning workflow\n\nFeature engineering\
+    \ ideation\n\nPROMPT STRUCTURE\n\n![](images/00045.png)\n\nI want you to act as\
+    \ a data scientist.\n\nGiven a dataset of {dataset name} that\n\ncontains the\
+    \ {columns}, you are to\n\npredict {predicted variable}. Suggest\n\ndata that\
+    \ will be helpful for this\n\nproblem and perform feature\n\nengineering for this\
+    \ problem.\n\n![](images/00073.png)\n\nPython machine learning workflow\n\nModel\
+    \ training workflow\n\n![](images/00119.png)\n\nPROMPT STRUCTURE\n\nI want you\
+    \ to act as a data scientist\n\nprogramming in Python. Given a\n\ndataset of {dataframe\
+    \ name} that\n\ncontains the {column name}, write code\n\nto predict {output variable}.\n\
+    \n![](images/00001.png)\n\nPython machine learning workflow\n\nHyperparameter\
+    \ tuning workflow\n\nPROMPT STRUCTURE\n\nI want you to act as a data scientist\
+    \ programming in Python. Given a {type of model} model, write code to tune the\n\
+    \nhyperparameter.\n\nExample:\n\n![](images/00120.png)\n\n![](images/00087.png)\n\
+    \nPython machine learning workflow\n\nModel explainability workflow\n\nPROMPT\
+    \ STRUCTURE\n\nI want you to act as a data scientist programming in\n\nPython.\
+    \ Given a {type of model} that predicts the\n\n{predictor variable}, write code\
+    \ that explains an output\n\nusing Shap values.\n\nExample:\n\n![](images/00052.png)\n\
+    \n![](images/00018.png)\n\nR machine learning workflow\n\nModel training workflow\n\
+    \nPROMPT STRUCTURE\n\nI want you to act as a data scientist programming in R.\n\
+    \nGiven a dataframe of {dataframe name} that contains\n\n{column names}, write\
+    \ code to predict {output}.\n\nExample: Train a classification model in R\n\n\
+    ![](images/00127.png)\n\n![](images/00097.png)\n\nR machine learning workflow\n\
+    \nHyperparameter tuning workflow\n\nPROMPT STRUCTURE\n\nI want you to act as a\
+    \ data scientist programming in R.\n\nGiven a {type of model} model, write code\
+    \ to tune the\n\nhyperparameter.\n\nExample: \n\n![](images/00068.png)\n\n![](images/00034.png)\n\
+    \nR machine learning workflow\n\nModel explainability workflow\n\nPROMPT STRUCTURE\n\
+    \nI want you to act as a data scientist programming in R .\n\nGiven a {type of\
+    \ model} that predicts the {predictor variable}, write code that explains an output\
+    \ using Shap values.\n\nExample: \n\n![](images/00143.png)\n\nPrompts for time\
+    \ \n\nseries analysis \n\nworkflows\n\n![](images/00110.png)\n\nPython time series\
+    \ analysis workflows\n\nChanging time horizons using pandas\n\nPROMPT STRUCTURE\n\
+    \n![](images/00076.png)\n\nI want you to act as a data scientist\n\ncoding in\
+    \ Python. Given a time series\n\ndata in a Pandas dataframe\n\n{dataframe name}\
+    \ with timestamp\n\nIndex in {original frequency} frequency\n\nwith one column\
+    \ {column name},\n\nconvert the timestamp frequency to\n\n{desired frequency}.\n\
+    \n![](images/00047.png)\n\nPython time series analysis workflows\n\nBuild test\
+    \ series model\n\nPROMPT STRUCTURE\n\n![](images/00014.png)\n\nI want you to act\
+    \ as a data scientist\n\ncoding in Python. Given a time series\n\ndata in a dataframe\
+    \ {dataframe name}\n\nwith timestamp Index in {original\n\nfrequency} frequency\
+    \ with one column\n\n{column name},  build a forecasting\n\nmodel, assuming data\
+    \ is stationary.\n\n![](images/00124.png)\n\nPrompts for Time Series Workflows\
+    \ Python time series analysis workflows\n\nPerform stationarity test\n\nPROMPT\
+    \ STRUCTURE\n\n![](images/00092.png)\n\nI want you to act as a data scientist\n\
+    \ncoding in Python. Given a time series\n\ndata in a dataframe {dataframe name}\n\
+    \nwith timestamp Index in {original\n\nfrequency} frequency with one column\n\n\
+    {column name}, perform a Dicky Fuller\n\ntest.\n\n![](images/00058.png)\n\nR time\
+    \ series analysis workflows\n\nChanging time horizons \n\nPROMPT STRUCTURE\n\n\
+    ![](images/00026.png)\n\nI want you to act as a data scientist\n\ncoding in R.\
+    \ Given a time series data in\n\na dataframe {dataframe name} with\n\ntimestamp\
+    \ Index in {original frequency}\n\nfrequency with one column {column\n\nname},\
+    \ convert the timestamp\n\nfrequency to {desired frequency}\n\n![](images/00142.png)\n\
+    \nR time series analysis workflows\n\nBuild test series model\n\nPROMPT STRUCTURE\n\
+    \n![](images/00103.png)\n\nI want you to act as a data scientist\n\ncoding in\
+    \ R. Given a time series data in\n\na dataframe {dataframe name} with\n\ntimestamp\
+    \ Index in {original frequency}\n\nfrequency with one column {column\n\nname}, \
+    \ build a forecasting model,\n\nassuming data is stationary.\n\n![](images/00075.png)\n\
+    \nR time series analysis workflows\n\nPerform stationarity test\n\nPROMPT STRUCTURE\n\
+    \n![](images/00035.png)\n\nI want you to act as a data scientist\n\ncoding in\
+    \ R. Given a time series data in\n\na dataframe {dataframe name} with\n\ntimestamp\
+    \ Index in {original frequency}\n\nfrequency with one column {column\n\nname},\
+    \ perform a Dicky Fuller test.\n\nPrompts for \n\nnatural language \n\nprocessing\
+    \ \n\nworkflows\n\n![](images/00013.png)\n\nPrompts for natural language processing\
+    \ workflows\n\nClassify text sentiment\n\nPROMPT STRUCTURE\n\nI want you to act\
+    \ as a sentiment classifier. Classify the\n\nfollowing text which came from {describe\
+    \ text origin} as\n\n“positive”, “negative”, “neutral” or “unsure”: {Insert text\n\
+    \nto be classifier}\n\n![](images/00121.png)\n\nPrompts for natural language processing\
+    \ workflows\n\nCreate regular expressions\n\nPROMPT STRUCTURE\n\nI want you to\
+    \ act as a programmer coding in Python,\n\nuse regular expressions to test if\
+    \ a string {insert\n\nrequirements}\n\n![](images/00128.png)\n\n![](images/00098.png)\n\
+    \nPrompts for natural language processing workflows\n\nText dataset generation\n\
+    \nPROMPT STRUCTURE\n\nI want you to act as a dataset generator. Please\n\ngenerate\
+    \ {number of text} texts on {required text and\n\nthe context}. {Insert additional\
+    \ requirements}\n\n![](images/00015.png)\n\n![](images/00023.png)\n\nPrompts for\
+    \ natural language processing workflows\n\nMachine translation\n\nPROMPT STRUCTURE\n\
+    \nI want you to act as a translator. Please translate {phrase}  from {origin language}\
+    \ to {translated language}.\n\n![](images/00093.png)\n\n![](images/00099.png)\n\
+    \n![](images/00028.png)\n\nConceptual and \n\ncareer oriented \n\nprompts\n\n\
+    Conceptual and career oriented prompts\n\nExplain data concepts for business executives\n\
+    \nPROMPT STRUCTURE\n\nI want you to act as a data scientist of a corporate\n\n\
+    company. {Describe content in detail, if required} Please\n\nexplain to a business\
+    \ executive what {concept} means.\n\n![](images/00024.png)\n\n![](images/00105.png)\n\
+    \nConceptual and career oriented prompts\n\nSummarize article/paper\n\nPROMPT\
+    \ STRUCTURE\n\n![](images/00125.png)\n\nI want you to act as a data scientist\
+    \ in\n\n![](images/00025.png)\n\na research start-up. Please explain the\n\npaper\
+    \ {paper} to a {level of difficulty,\n\ne.g. software developer, five-year-old,\n\
+    \nbusiness executive, professor}."
+  fmt: '
+
+    # Python data visualization workflows
+
+
+    ## Creating plots with matplotlib
+
+    ![](images/00116.png)
+
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist coding in Python. Given a dataframe `{dataframe
+    name}` containing the columns `{column names}` Use `matplotlib` to plot a `{chart
+    type and requirement}`.
+
+    ![](images/00011.png)
+
+
+    ## Crating pairplots with matplotlib
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist coding in Python. Given a dataframe `{dataframe
+    name}` containing the columns `{column names}`. Use `matplotlib` to plot a pair
+    plot that shows the relationship of one variable against another.
+
+    ![](images/00117.png)
+
+    ![](images/00123.png)
+
+
+    ## Annotating and formatting plots in matplotlib
+
+    ![](images/00044.png)
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist coding in Python. Given a dataframe `{dataframe
+    name}` containing the columns `{column names}`, use `matplotlib` to to plot a
+    `{chart type}` the relationship between `{variables}`. `{Insert annotation and
+    formatting requirements}`
+
+    ![](images/00012.png)
+
+
+    ## Changing plot themes in matplotlib
+
+    ![](images/00118.png)
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist coding in Python. Given a dataframe `{dataframe
+    name}` containing the columns `{column names}`, use `matplotlib` to to plot a
+    `{chart type}` the relationship between `{variables}`. Change the color theme
+    to match that of `{theme}`.
+
+
+    # Prompts for machine learning workflows
+
+    ![](images/00141.png)
+
+
+    ## General machine learning workflow
+
+    ### Feature engineering ideation
+
+    ### PROMPT STRUCTURE
+
+    ![](images/00045.png)
+
+    I want you to act as a data scientist. Given a dataset of `{dataset name}` that
+    contains the `{columns}`, you are to predict `{predicted variable}`. Suggest data
+    that will be helpful for this problem and perform feature engineering for this
+    problem.
+
+    ![](images/00073.png)
+
+
+    ## Python machine learning workflow
+
+    ### Model training workflow
+
+    ![](images/00119.png)
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist programming in Python. Given a dataset of
+    `{dataframe name}` that contains the `{column name}`, write code to predict `{output
+    variable}`.
+
+    ![](images/00001.png)
+
+
+    ## Python machine learning workflow
+
+    ### Hyperparameter tuning workflow
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist programming in Python. Given a `{type of
+    model}` model, write code to tune the hyperparameter.
+
+    Example:
+
+    ![](images/00120.png)
+
+    ![](images/00087.png)
+
+
+    ## Python machine learning workflow
+
+    ### Model explainability workflow
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist programming in Python. Given a `{type of
+    model}` that predicts the `{predictor variable}`, write code that explains an
+    output using Shap values.
+
+    Example:
+
+    ![](images/00052.png)
+
+    ![](images/00018.png)
+
+
+    # R machine learning workflow
+
+    ### Model training workflow
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist programming in R. Given a dataframe of `{dataframe
+    name}` that contains `{column names}`, write code to predict `{output}`.
+
+    Example: Train a classification model in R
+
+    ![](images/00127.png)
+
+    ![](images/00097.png)
+
+
+    ## R machine learning workflow
+
+    ### Hyperparameter tuning workflow
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist programming in R. Given a `{type of model}`
+    model, write code to tune the hyperparameter.
+
+    Example:
+
+    ![](images/00068.png)
+
+    ![](images/00034.png)
+
+
+    ## R machine learning workflow
+
+    ### Model explainability workflow
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist programming in R. Given a `{type of model}`
+    that predicts the `{predictor variable}`, write code that explains an output using
+    Shap values.
+
+    Example:
+
+    ![](images/00143.png)
+
+
+    # Prompts for time series analysis workflows
+
+    ![](images/00110.png)
+
+
+    ## Python time series analysis workflows
+
+    ### Changing time horizons using pandas
+
+    ### PROMPT STRUCTURE
+
+    ![](images/00076.png)
+
+    I want you to act as a data scientist coding in Python. Given a time series data
+    in a Pandas dataframe `{dataframe name}` with timestamp `Index` in `{original
+    frequency}` frequency with one column `{column name}`, convert the timestamp frequency
+    to `{desired frequency}`.
+
+    ![](images/00047.png)
+
+
+    ## Python time series analysis workflows
+
+    ### Build test series model
+
+    ### PROMPT STRUCTURE
+
+    ![](images/00014.png)
+
+    I want you to act as a data scientist coding in Python. Given a time series data
+    in a dataframe `{dataframe name}` with timestamp `Index` in `{original frequency}`
+    frequency with one column `{column name}`, build a forecasting model, assuming
+    data is stationary.
+
+    ![](images/00124.png)
+
+
+    # Prompts for Time Series Workflows
+
+    ## Python time series analysis workflows
+
+    ### Perform stationarity test
+
+    ### PROMPT STRUCTURE
+
+    ![](images/00092.png)
+
+    I want you to act as a data scientist coding in Python. Given a time series data
+    in a dataframe `{dataframe name}` with timestamp `Index` in `{original frequency}`
+    frequency with one column `{column name}`, perform a Dicky Fuller test.
+
+    ![](images/00058.png)
+
+
+    ## R time series analysis workflows
+
+    ### Changing time horizons
+
+    ### PROMPT STRUCTURE
+
+    ![](images/00026.png)
+
+    I want you to act as a data scientist coding in R. Given a time series data in
+    a dataframe `{dataframe name}` with timestamp `Index` in `{original frequency}`
+    frequency with one column `{column name}`, convert the timestamp frequency to
+    `{desired frequency}`.
+
+    ![](images/00142.png)
+
+
+    ## R time series analysis workflows
+
+    ### Build test series model
+
+    ### PROMPT STRUCTURE
+
+    ![](images/00103.png)
+
+    I want you to act as a data scientist coding in R. Given a time series data in
+    a dataframe `{dataframe name}` with timestamp `Index` in `{original frequency}`
+    frequency with one column `{column name}`, build a forecasting model, assuming
+    data is stationary.
+
+    ![](images/00075.png)
+
+
+    ## R time series analysis workflows
+
+    ### Perform stationarity test
+
+    ### PROMPT STRUCTURE
+
+    ![](images/00035.png)
+
+    I want you to act as a data scientist coding in R. Given a time series data in
+    a dataframe `{dataframe name}` with timestamp `Index` in `{original frequency}`
+    frequency with one column `{column name}`, perform a Dicky Fuller test.
+
+
+    # Prompts for natural language processing workflows
+
+    ![](images/00013.png)
+
+
+    ## Classify text sentiment
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a sentiment classifier. Classify the following text which
+    came from `{describe text origin}` as “positive”, “negative”, “neutral” or “unsure”:
+    `{Insert text to be classifier}`
+
+    ![](images/00121.png)
+
+
+    ## Create regular expressions
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a programmer coding in Python, use regular expressions to
+    test if a string `{insert requirements}`
+
+    ![](images/00128.png)
+
+    ![](images/00098.png)
+
+
+    ## Text dataset generation
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a dataset generator. Please generate `{number of text}` texts
+    on `{required text and the context}`. `{Insert additional requirements}`
+
+    ![](images/00015.png)
+
+    ![](images/00023.png)
+
+
+    ## Machine translation
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a translator. Please translate `{phrase}` from `{origin language}`
+    to `{translated language}`.
+
+    ![](images/00093.png)
+
+    ![](images/00099.png)
+
+    ![](images/00028.png)
+
+
+    # Conceptual and career oriented prompts
+
+    ## Explain data concepts for business executives
+
+    ### PROMPT STRUCTURE
+
+    I want you to act as a data scientist of a corporate company. `{Describe content
+    in detail, if required}` Please explain to a business executive what `{concept}`
+    means.
+
+    ![](images/00024.png)
+
+    ![](images/00105.png)
+
+
+    ## Summarize article/paper
+
+    ### PROMPT STRUCTURE
+
+    ![](images/00125.png)
+
+    I want you to act as a data scientist in a research start-up. Please explain the
+    paper `{paper}` to a `{level of difficulty, e.g. software developer, five-year-old,
+    business executive, professor}`.
+
+    '
+  trans: '
+
+
+    # Python 数据可视化工作流
+
+
+    ## 使用 matplotlib 创建图表
+
+    ![](img/00116.png)
+
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名使用 Python 编写代码的数据科学家。给定一个包含列 `{column names}` 的 dataframe `{dataframe
+    name}`，使用 `matplotlib` 绘制一个 `{chart type and requirement}`。
+
+    ![](img/00011.png)
+
+
+    ## 使用 matplotlib 创建矩阵关系图 (pairplots)
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名使用 Python 编写代码的数据科学家。给定一个包含列 `{column names}` 的 dataframe `{dataframe
+    name}`。使用 `matplotlib` 绘制一个矩阵图，显示一个变量与另一个变量之间的关系。
+
+    ![](img/00117.png)
+
+    ![](img/00123.png)
+
+
+    ## 在 matplotlib 中对图表进行注释和格式化
+
+    ![](img/00044.png)
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名使用 Python 编写代码的数据科学家。给定一个包含列 `{column names}` 的 dataframe `{dataframe
+    name}`，使用 `matplotlib` 绘制一个 `{variables}` 之间的 `{chart type}`。`{插入注释和格式化要求}`
+
+    ![](img/00012.png)
+
+
+    ## 在 matplotlib 中更改图表主题
+
+    ![](img/00118.png)
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名使用 Python 编写代码的数据科学家。给定一个包含列 `{column names}` 的 dataframe `{dataframe
+    name}`，使用 `matplotlib` 绘制一个 `{variables}` 之间的 `{chart type}`。将颜色主题更改为匹配 `{theme}`。
+
+
+    # 机器学习工作流提示词
+
+    ![](img/00141.png)
+
+
+    ## 通用机器学习工作流
+
+    ### 特征工程构思
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    ![](img/00045.png)
+
+    我希望你扮演一名数据科学家。给定一个包含 `{columns}` 的数据集 `{dataset name}`，你需要预测 `{predicted variable}`。请为该问题建议对它有帮助的数据，并为该问题执行特征工程。
+
+    ![](img/00073.png)
+
+
+    ## Python 机器学习工作流
+
+    ### 模型训练工作流
+
+    ![](img/00119.png)
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名使用 Python 编程的数据科学家。给定一个包含列 `{column name}` 的数据集 `{dataframe name}`，编写代码预测
+    `{output variable}`。
+
+    ![](img/00001.png)
+
+
+    ## Python 机器学习工作流
+
+    ### 超参数调优工作流
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名使用 Python 编程的数据科学家。给定一个 `{type of model}` 模型，编写代码调优超参数。
+
+    示例：
+
+    ![](img/00120.png)
+
+    ![](img/00087.png)
+
+
+    ## Python 机器学习工作流
+
+    ### 模型可解释性工作流
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名使用 Python 编程的数据科学家。给定一个预测 `{predictor variable}` 的 `{type of model}`，编写代码使用
+    Shap 值来解释输出。
+
+    示例：
+
+    ![](img/00052.png)
+
+    ![](img/00018.png)
+
+
+    # R 机器学习工作流
+
+    ### 模型训练工作流
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名使用 R 编程的数据科学家。给定一个包含 `{column names}` 的 dataframe `{dataframe name}`，编写代码预测
+    `{output}`。
+
+    示例：在 R 中训练分类模型
+
+    ![](img/00127.png)
+
+    ![](img/00097.png)
+
+
+    ## R 机器学习工作流
+
+    ### 超参数调优工作流
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名使用 R 编程的数据科学家。给定一个 `{type of model}` 模型，编写代码调优超参数。
+
+    示例：
+
+    ![](img/00068.png)
+
+    ![](img/00034.png)
+
+
+    ## R 机器学习工作流
+
+    ### 模型可解释性工作流
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名使用 R 编程的数据科学家。给定一个预测 `{predictor variable}` 的 `{type of model}`，编写代码使用
+    Shap 值来解释输出。
+
+    示例：
+
+    ![](img/00143.png)
+
+
+    # 时间序列分析提示词
+
+    ## Python 时间序列分析
+
+    ### 使用 pandas 时间序列
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    ![](img/00076.png)
+
+    我希望你扮演一名数据科学家。给定一个包含 `{column names}` 的 dataframe `{dataframe name}`，将 `{original
+    frequency}` 转换为 `{desired frequency}`。
+
+    ![](img/00047.png)
+
+
+    ## Python 时间序列分析
+
+    ### 预测模型
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    ![](img/0015.png)
+
+    我希望你扮演一名使用 Python 编程的数据科学家。给定一个包含 `{column names}` 的时间序列数据 `{dataframe name}`，构建模型，假设数据是平稳的。
+
+    ![](img/0024.png)
+
+
+    ## Python 时间序列分析
+
+    ### 平稳性检验
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    ![](img/0092.png)
+
+    我希望你扮演一名使用 Python 编程的数据科学家。给定一个包含 `{column names}` 的时间序列数据 `{dataframe name}`，执行
+    `{column names}` 平稳性检验。
+
+    ![](img/0058.png)
+
+
+    ## R 时间序列分析
+
+    ### 更改频率
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    ![](img/0142.png)
+
+    我希望你扮演一名使用 R 编程的数据科学家。给定一个包含 `{column names}` 的时间序列数据 `{dataframe name}`，将 `{original
+    frequency}` 转换为 `{desired frequency}`。
+
+    ![](img/0103.png)
+
+
+    ## R 时间序列分析
+
+    ### 构建预测模型
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    ![](img/0026.png)
+
+    我希望你扮演一名使用 R 编程的数据科学家。给定一个包含 `{column names}` 的时间序列数据 `{dataframe name}`，构建模型，假设数据是平稳的。
+
+    ![](img/0075.png)
+
+
+    ## R 时间序列分析
+
+    ### 执行平稳性检验
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    ![](img/0035.png)
+
+    我希望你扮演一名使用 R 编程的数据科学家。给定一个包含 `{column names}` 的时间序列数据 `{dataframe name}`，执行 `{column
+    names}` 平稳性检验。
+
+
+    # 自然语言处理工作流提示词
+
+    ![](img/0013.png)
+
+
+    ## 文本情感分类
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一个情感分类器。将来自 `{describe text}` 的以下文本分类为“正面”、“负面”、“中性”或“不确定”：`{待分类文本}`
+
+    ![](img/0121.png)
+
+
+    ## 创建正则表达式
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名使用 Python 编程的程序员，使用正则表达式测试 `{insert requirements}`
+
+    ![](img/0128.png)
+
+    ![](img/0098.png)
+
+
+    ## 文本数据集生成
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一个数据集生成器。请关于 `{required text and the context}` 生成 `{number of text}` 文本。`{插入额外要求}`
+
+    ![](img/0015.png)
+
+    ![](img/0023.png)
+
+
+    ## 机器翻译
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名翻译员。将 `{phrase}` 从 `{origin language}` 翻译为 `{translated language}`。
+
+    ![](img/0093.png)
+
+    ![](img/0099.png)
+
+    ![](img/0028.png)
+
+
+    # 概念与职业导向提示词
+
+    ## 为高管解释数据概念
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    我希望你扮演一名企业公司的数据科学家。`{如果需要，详细描述内容}` 请向高管解释 `{concept}` 的含义。
+
+    ![](img/0024.png)
+
+    ![](img/0105.png)
+
+
+    ## 总结文章/论文
+
+    ### 提示词结构 (PROMPT STRUCTURE)
+
+    ![](img/0125.png)
+
+    我希望你扮演一名研究初创公司的数据科学家。请向 `{level of difficulty, 例如：软件开发人员、五岁小孩、高管、教授}` 解释论文 `{paper}`。
+
+
+    '
+  toc: []
+- raw: "Conceptual and career oriented prompts\n\nSuggest portfolio projects and ideas\n\
+    \nPROMPT STRUCTURE\n\n![](images/00020.png)\n\nI want you to act as a data science\n\
+    \n![](images/00048.png)\n\ncareer coach. I am a {describe your\n\nbackground}\
+    \ and I would like to\n\n{describe career objective}. Suggest\n\nportfolio projects\
+    \ and ideas {describe\n\nobjective of portfolio}\n\nConceptual and career oriented\
+    \ prompts\n\nWrite tutorials\n\nPROMPT STRUCTURE\n\nI want you to act as a data\
+    \ scientist writer. Please write\n\nthe {number-of-words}-word introduction to\
+    \ a tutorial on\n\n{title}. {Insert relevant key points}.\n\n![](images/00069.png)\n\
+    \n![](images/00100.png)\n\n![](images/00106.png)\n\nAbout this cheat sheet \n\n\
+    Author: References:\n\n![](images/00126.png)\n\nTravis Tang [60 ChatGPT prompts](https://github.com/travistangvh/ChatGPT-Data-Science-Prompts)\
+    \ \n\n[for data science](https://github.com/travistangvh/ChatGPT-Data-Science-Prompts)\n\
+    \n[Linkedin](https://www.linkedin.com/in/travistang/?originalSubdomain=sg) [ChatGPT\
+    \ cheat sheet](https://www.kdnuggets.com/publications/sheets/ChatGPT_Cheatsheet_Costa.pdf)\n\
+    \n[Github](https://github.com/travistangvh)"
+  fmt: '
+
+    # Conceptual and career oriented prompts
+
+
+    ## Suggest portfolio projects and ideas
+
+
+    ### PROMPT STRUCTURE
+
+
+    ![](images/00020.png)
+
+
+    I want you to act as a data science
+
+
+    ![](images/00048.png)
+
+
+    career coach. I am a {describe your background} and I would like to {describe
+    career objective}. Suggest portfolio projects and ideas {describe objective of
+    portfolio}
+
+
+    ## Conceptual and career oriented prompts
+
+
+    ### Write tutorials
+
+
+    ### PROMPT STRUCTURE
+
+
+    I want you to act as a data scientist writer. Please write the {number-of-words}-word
+    introduction to a tutorial on {title}. {Insert relevant key points}.
+
+
+    ![](images/00069.png)
+
+    ![](images/00100.png)
+
+    ![](images/00106.png)
+
+
+    ## About this cheat sheet
+
+
+    Author: References:
+
+
+    ![](images/00126.png)
+
+
+    Travis Tang [60 ChatGPT prompts](https://github.com/travistangvh/ChatGPT-Data-Science-Prompts)
+    [for data science](https://github.com/travistangvh/ChatGPT-Data-Science-Prompts)
+    [Linkedin](https://www.linkedin.com/in/travistang/?originalSubdomain=sg) [ChatGPT
+    cheat sheet](https://www.kdnuggets.com/publications/sheets/ChatGPT_Cheatsheet_Costa.pdf)
+    [Github](https://github.com/travistangvh)
+
+    '
+  trans: '
+
+
+    # 概念与职业导向提示词
+
+
+    ## 建议作品集项目与创意
+
+
+    ### 提示词结构
+
+
+    ![](img/00020.png)
+
+
+    我希望你扮演一名数据科学职业教练。
+
+
+    ![](img/00048.png)
+
+
+    我是一个 {描述你的背景}，我想 {描述你的职业目标}。请针对{描述作品集目标}建议一些项目和创意。
+
+
+    ## 概念与职业导向提示词
+
+
+    ### 编写教程
+
+
+    ### 提示词结构
+
+
+    我希望你扮演一名数据科学家作家。请为关于 {title} 的教程撰写一篇 {number-of-words} 字的介绍。{插入相关要点}。
+
+
+    ![](img/00069.png)
+
+    ![](img/00100.png)
+
+    ![](img/00106.png)
+
+
+    ## 关于此速查表
+
+
+    作者：参考：
+
+
+    ![](img/00126.png)
+
+
+    Travis Tang [60 个 ChatGPT 提示词](https://github.com/travistangvh/ChatGPT-Data-Science-Prompts)
+    [用于数据科学](https://github.com/travistangvh/ChatGPT-Data-Science-Prompts) [Linkedin](https://www.linkedin.com/in/travistang/?originalSubdomain=sg)
+    [ChatGPT 速查表](https://www.kdnuggets.com/publications/sheets/ChatGPT_Cheatsheet_Costa.pdf)
+    [Github](https://github.com/travistangvh)
+
+
+    '
+  toc: []
