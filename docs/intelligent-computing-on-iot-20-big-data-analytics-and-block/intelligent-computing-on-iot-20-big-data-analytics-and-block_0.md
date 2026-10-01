@@ -1,0 +1,8422 @@
+# 
+物联网 2.0 智能计算、大数据分析与区块链技术
+
+
+![](img/coverpage.jpg)
+
+
+
+
+
+
+*CRC Press is an imprint of Taylor & Francis Group, LLC*
+
+Reasonable efforts have been made to publish reliable data and information, but the author and publisher cannot assume responsibility for the validity of all materials or the consequences of their use. The authors and publishers have attempted to trace the copyright holders of all material reproduced in this publication and apologize to copyright holders if permission to publish in this form has not been obtained. If any copyright material has not been acknowledged, please writeand let usknowso we may rectify in any future reprint.
+
+Except as permitted under U.S. Copyright Law, no part of this book may be reprinted, reproduced, transmitted, or utilized in any form by any electronic, mechanical, or other means, now known or hereafter invented, including photocopying, microfilming, and recording, or in any information storage or retrieval system, without written permission from the publishers.
+
+For permission to photocopy or use material electronically from this work, access [www.copyright.com](http://www.copyright.com) or contact the Copyright Clearance Center, Inc.(CCC), 222 Rosewood Drive, Danvers, MA 01923, 978-750-8400. For works that are not available on CCC please contact mpkbookspermissions@tandf.co.uk
+
+*Trademark notice*: Product or corporate names may be trademarks or registered trademarks and are used only for identification and explanation without intent to infringe.
+
+
+
+ISBN: 978-1-003-32623-6 (ebk)
+
+DOI: [10.1201/9781003326236](https://dx.doi.org/10.1201/9781003326236)
+
+Typeset in Times New Roman
+
+by SPi Technologies India Pvt Ltd (Straive)
+
+# 前言
+
+作为本书的编辑，我们旨在帮助读者深入理解物联网（IoT）技术、大数据分析和区块链技术的广泛应用，以及这些技术如何整合以造福社会。鉴于这些技术在全球语境下高度多样、快速演变且经济新兴，所有作者均致力于分享关于增强版 IoT、IoT 中大数据集成、区块链在保障 IoT 网络中的作用以及机器学习在 IoT 网络系统整体应用方面的观点。
+
+![](img/front1_B.jpg)
+
+![](img/front2_B.jpg)
+
+
+
+
+National Institute of Technology Jamshedpur, India  
+
+每台计算机通过高带宽网络相连。因此，集群计算通过降低主帧计算的成本，成为一个很好的替代方案。互联网的出现使全球的本地网络能够相互连接并在一定限制下共享资源，这被称为 Internet computing。
+
+## 3.2.3.2.2 Grid Computing
+
+它指位于不同物理区域的系统通过 Internet 相互连接的网络。这些系统由专用软件（如中间件）控制，使用户可以远程访问和使用资源。网格服务本质上是通过中间件管理对网格资源访问的过程。网格服务具备多种访问控制和安全服务，从读取库和数据库中的数据的权限到使用大容量存储设施的权限。距离问题得到解决，但远距节点提供高带宽成为限制因素。
+
+## 3.2.3.2.3 Virtualization
+
+虚拟化将软件环境与物理基础设施分离，使得同一台机器可以同时运行多个操作系统和应用程序。虚拟化是 Amazon、Google 以及众多云服务提供商使用的技术。
+
+### 3.2.3.3 Phase 3 – Cloud Phase
+
+在将网格计算与虚拟化技术相结合后，需要良好的硬件和 Internet 资源。因此，云的发展才刚刚开始。
+
+#### 3.2.3.3.1 Web 2.0 and Web 3.0
+
+Web 应用主要借助云计算提供的按需服务，尤其是 Web 2.0 和 Web 3.0，它们通过利用 Internet 作为主要公用事业和平台，提升创意、信息共享和用户协作。用户通过宽带连接 uninterrupted 地访问 Internet 服务的连续性由 Web 3.0 技术实现。Web 3.0 技术为云计算提供服务保障。
+
+#### 3.2.3.3.2 Service Orientation
+
+服务导向将云资源与各类业务服务相结合，这些服务包括降低依赖度的组件。因此，业务流程需要采用服务导向，以利用现有资源。
+
+#### 3.2.3.3.3 Cloud Computing
+
+许多公司开始提供云存储、基础设施和管理服务。最初称为公用计算，今天云计算已成为现实。存在多种云模型和服务类型，将在后续章节中详细描述。
+
+### 3.2.4 Cloud Computing Architecture and Services
+
+云的架构包含四个主要层次，如图 3.4 所示。
+
+![Figure 3.4 Cloud computing architecture.](img/fig3_4_B.jpg)
+
+Figure 3.4 Cloud computing architecture.
+
+*   **Layer 1** 称为客户端基础设施，它使用户与云之间通过图形用户界面（GUI）进行交互。换句话说，它是前端，通常是简单的 Web 浏览器。该层代表拥有足够计算能力的设备，即用户或客户端，用于请求云访问。
+
+*   **Layer 2** 称为网络层，负责维持用户与云之间的连接。该层被视为云骨架，所有网络服务在此向客户端提供，因此所有云服务都高度依赖于此层。例如，在公共云中，该层实际上是 Internet，通常位于云用户不知晓但可通过 Internet 全球访问的地点。私有云则可通过局域网（LAN）将用户与云相连。
+
+*   **Layer 3** 称为云管理层，负责管理所有云实体，包括用户和访问控制、数据、应用以及服务。精确地说，该层负责在用户与云运营商之间达成服务级协议 \[5\]。根据 NIST，定义了三种基本服务模型：SaaS、PaaS 和 IaaS，如 Table 3.1 所示。用户服务模型的分类在 Layer3 根据与云用户共享云组件的协议来定义，即 Software-as-a-Service（SaaS）、Platform-as-a-Service（PaaS）和 Infrastructure-as-a-Service（IaaS） \[5\]。该层集成了负责云资源共享和管理的软件，包括服务器级别的调度和配置、工作负载优化、服务器和工作负载的优化，以及组织内部的云控制。Figure 3.4 展示了该层的六个组件：
+
+
+
+## 表 3.1 云服务模型
+
+| 服务模型 | 用户类型 | 资源管理 | 示例 |
+| --- | --- | --- | --- |
+| 软件即服务 SaaS | 业务用户 | 业务应用、Web 服务、多媒体 | Google Apps、邮件、计费和工资、Facebook、YouTube |
+| 平台即服务 PaaS | 开发人员、网络架构师、部署者 | 软件框架（Java、.Net）、存储、数据库、操作系统、运行时环境 | Microsoft Azure、Google App Engine |
+| 行业即服务 IaaS | 系统管理员 | 虚拟机、CPU、内存、操作系统、负载均衡、Internet、带宽供应 | Amazon EC2、GoGrid、Flexiscale、数据中心 |
+
+1. 应用：各种应用软件均可进行供应。
+
+2. 数据：存在两种数据，要么结构化，要么非结构化，取决于客户的需求。可以从 图 3.4 观察到 SaaS 与应用和数据组件相关联。SaaS 包含的应用示例有 Gmail、Facebook、YouTube 和 Dropbox。
+
+3. 运行时：该组件为虚拟机提供运行时环境和执行环境。
+
+4. 中间件：这是一种软件，为应用提供验证、消息、API 监督等必要服务和功能。
+
+5. 操作系统 (OS)：它是处理存储、执行和外设等所有基本管理任务的核心软件。PaaS 与运行时、中间件和操作系统组件相关联。GAE 等软件框架以及 Microsoft Azure 属于此服务。
+
+6. 虚拟化：它是指创建硬件或软件资源的虚拟抽象，而不是实际的 OS、服务器、存储设备或网络等资源的实例，如操作系统、服务器、存储设备或网络。IaaS 属于虚拟化组件和第 4 层。IaaS 相关的服务示例包括虚拟机、Amazon Web Services、Go Greed、Rack Space 等。这是面向管理员的服务层级。
+
+*   **第 4 层** 也称为硬件层，由实际硬件资源组成。例如，数据中心可用于前端公有云和私有云的后端。数据中心包含各种网络系统和基础设施，供企业处理大容量数据。由于组织数据中心旨在保护资源，云服务提供商和不同组织始终保持和谐合作。
+
+    下面提供对每种云服务模型的更详细视图：
+
+    1.  软件即服务 (SaaS)：云服务提供商 (CSP) 将运行在云上的应用发布给云服务客户 (CSC)。应用可通过不同类型的客户端系统访问，如客户邮件、专用编程接口或集成开发环境 (IDE)。CSC 没有能力操纵或控制云基础结构（网络实体、电力、存储、系统以及应用）。响应迅速且及时的应用无法从 SaaS 中受益。相反，最可能适用 SaaS 的是竞争对手使用的应用，例如邮件；按需、周期性高峰出现的应用如计费和工资；移动销售管理软件；以及短期协作软件项目。
+
+    2.  平台即服务 (PaaS)：在此服务模型中，CSP 拥有的平台实例被租给 CSC，以便在 CSP 的平台上部署其自有的编程应用。除了已部署的应用和 CSC 可自行设置的受限用户配置和设置外，核心云基础设施（网络、服务器、处理器和操作系统）完全由 CSP 管理 \[12\]。用户可以控制云应用，并可能将其与管理和配置相结合。这些设施包括通用描述发现和集成 (UDDI)、内容、会话和知识管理、设备集成与测试、以及沙箱。
+
+    3.  基础设施即服务 (IaaS)：在此服务类别中，CSP 拥有的基础设施（通常是虚拟化的处理、存储和其他资源）被提供给 CSC。CSC 可以在租用的基础设施上部署和运行不同类型的软件，如操作系统和编程环境。核心云基础设施仍然完全由 CSP 控制，但 CSC 可以控制其在 CSP 基础设施上部署的所有应用，包括针对主机设备的特定安全和网络设置。动态分配可扩展资源、便捷的计费以及多用户共享硬件是 IaaS 模型的 essential 特征。在需求波动、公司快速增长或新业务仅需要计算资源的情况下，IaaS 模型非常有用。云服务模型也在演进，其他更具体的服务类别包括分析即服务 (AaaS)、网络即服务 (NaaS)、移动后端即服务 (MBaaS)、移动网络即服务 (MNaaS) 和通信即服务 (CaaS)。
+
+    现有的服务和使能器是云计算技术成功的动因，或者说是云计算的益处所对应的因素。这些使能器可以列出如下：
+
+    1.  虚拟化 – 虚拟化的主要功能是通过最小化实际物理硬件及其所需的软件资源，为云服务提供商提供灵活性。VM 技术（如 VMware 和 Xen）以及虚拟网络 (VN)（如 VPN）是虚拟化的核心工具。虚拟化可采取多种形式，包括应用虚拟化、桌面虚拟化、存储虚拟化、服务器虚拟化和网络虚拟化。
+
+    2.  大规模伸缩性 – 云计算的大规模伸缩性通过多核处理器以及虚拟机提供最高可能的按需扩展能力。通过这种方式，客户无需额外购买硬件，也不必承担管理相关的麻烦。相反，云服务提供商提供虚拟服务器的快速供应、标准化硬件以及持久化云存储。
+
+    3.  通用访问 – 这是云计算的主要特征，指客户可以通过 Internet 从世界任何地点访问同一云服务提供商提供的服务。尽管云资源由全球不同客户共享，但其数据和在云上执行的操作仍保持机密且相互独立。这是公共计算提供 IaaS、PaaS 和 SaaS 服务的共同特征。
+
+    4.  使用管理和费用 – 经济效益与云计算的采用相关联。因此，使用管理和费用或收费是提供云计算供应商经济优势的主要特征。通过云计算，用户可以根据自身需求以 *按需付费* 的方式租用处理能力和存储设施。例如，在特定时期内，如果需要高处理能力，消费者只需为该高处理能力在该特定时期付费。
+
+
+
+5. 标准化资源–云计算提供标准化的硬件、虚拟化和应用平台。然而，硬件和软件设施不需要是同质或标准化的。相反，服务器配置具有灵活性；编程语言如 Java、Python 和 C++；操作系统如 Linux 或 Windows；以及应用堆栈如 LAMB 或 Microsoft.Net。云计算提供商旨在提供丰富的选项以满足客户需求，同时利用其服务。因此，其目标是平衡客户的需求与可用的服务选项。
+
+6. 管理支持服务–云计算的管理支持服务是提供全面服务的核心组件，这些服务是专有的，并同时支持操作和管理功能。因此，云用户无需技术运营商的任何帮助即可获得所需的设施，因为云运营支持服务会处理此工作。Web 服务和面向服务的架构（SOA）是云计算的基础服务。云服务通常设计为 Web 服务，采用行业标准，包括 Web 服务描述语言（WSDL）、简单对象访问协议（SOAP）和 UDDI。SOA 负责在云中组织和管理 Web 服务，并提供可从多个分布式平台访问的一系列云服务。对云用户的重要好处是 [<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>
+
+
+AWS 拥有 Amazon，包括 IaaS、PaaS 和 SaaS 服务 \[4\]。供组织使用的工具，如电力、存储和传输服务，由 AWS 赋予 \[6\]。AWS 首先推出了按需付费服务，用户为所需的存储空间和计算服务付费。Amazon 服务不仅提供给用户，也提供给全球的软件开发人员和公司。
+
+### 3.2.9 Google、IBM 和 Amazon 云平台的功能
+
+Table 3.2 展示了三个平台：Firebase、IBM Cloud 和 AWS 的不同功能。
+
+Table 3.2 主要功能 Firebase、IBM Cloud 和 AWS 平台
+
+|  | 名称 | Firebase | IBM Cloud | AWS |
+| --- | --- | --- | --- | --- |
+| 平台支持 | SaaS | ![](img/stick_B.jpg) | ![](img/stick_B.jpg) | ![](img/stick_B.jpg) |
+|  | PaaS | ![](img/stick_B.jpg) | ⊗ | ![](img/stick_B.jpg) |
+|  | IaaS | ⊗ | ⊗ | ![](img/stick_B.jpg) |
+| 受众 | 寻找： | 计算能力、数据库存储和内容传输 | 构建成功应用的工具 | 云解决方案 |
+| 支持 | 在线 | ![](img/stick_B.jpg) | ![](img/stick_B.jpg) | ![](img/stick_B.jpg) |
+|  | 业务时间 | ⊗ | ⊗ | ![](img/stick_B.jpg) |
+|  | 24/7 实时支持 | ⊗ | ⊗ | ![](img/stick_B.jpg) |
+| 评分 | 总体 | 4.8/5 | 4.6/5 | 4.6/5 |
+|  | 易用 | 4.7/5 | 4.9/5 | 4.6/5 |
+|  | 功能 | 5.0/5 | 4.6/5 | 4.3/5 |
+|  | 设计 | 4.5/5 | 4.8/5 | 4.5/5 |
+|  | 支持 | 4.9/5 | 4.7/5 | 4.6/5 |
+| 培训 | 文档 | ![](img/stick_B.jpg) | ![](img/stick_B.jpg) | ![](img/stick_B.jpg) |
+|  | 网络研讨会 | ⊗ | ⊗ | ![](img/stick_B.jpg) |
+|  | 实时线上 | ⊗ | ⊗ | ![](img/stick_B.jpg) |
+|  | 面对面 | ⊗ | ⊗ | ![](img/stick_B.jpg) |
+| 公司信息 | Amazon | 成立：1994 美国 aws.amazon.com | | |
+|  | Google | ⊗ | 成立：1998 美国 [www.google.com](http://www.google.com) | ⊗ |
+|  | IBM | ⊗ | ⊗ | 成立：1911 美国 [www.ibm.com/cloud](http://www.ibm.com) |
+| 替代方案 | ![](img/fig3_45_1_B.jpg) | Hostinger | ⊗ | ⊗ |
+|  | ![](img/fig3_45_2_B.jpg) | ⊗ | Frontegg | ⊗ |
+|  | ![](img/fig3_45_3_B.jpg) | ⊗ | Maxihost Bare Metal | |
+|  | ![](img/fig3_45_4_B.jpg) | Microsoft Azure | ⊗ | ⊗ |
+|  | ![](img/fig3_45_5_B.jpg) | ⊗ | Singular | ⊗ |
+|  | ![](img/fig3_45_6_B.jpg) | ⊗ | Storecove | |
+|  | ![](img/fig3_45_7_B.jpg) | DigitalOcean | ⊗ | ⊗ |
+|  | ![](img/fig3_45_8_B.jpg) | ⊗ | FusionAuth | ⊗ |
+|  | ![](img/fig3_45_9_B.jpg) | ⊗ | ArchiverFS | |
+|  | ![](img/fig3_45_10_B.jpg) | Oracle Cloud Infrastructure | ⊗ | ⊗ |
+|  | ![](img/fig3_45_11_B.jpg) | ⊗ | Twilio | ⊗ |
+|  | ![](img/fig3_45_12_B.jpg) | ⊗ | ⊗ | IBM Db2 |
+|  | ![](img/fig3_45_13_B.jpg) | UpCloud | ⊗ | ⊗ |
+|  | ![](img/fig3_45_14_B.jpg) | ⊗ | Backendless | ⊗ |
+|  | ![](img/fig3_45_15_B.jpg) | ⊗ | ⊗ | Microsoft Access |
+| 类别 | 云托管 | ![](img/stick_B.jpg) | ⊗ | ![](img/stick_B.jpg) |
+|  | 云管理 | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | 云存储 | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | DevOps | ![](img/stick_B.jpg) | ⊗ | ![](img/stick_B.jpg) |
+|  | 混合云 | ![](img/stick_B.jpg) | ⊗ | ![](img/stick_B.jpg) |
+|  | IT 管理 | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | 服务器管理 | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | 网页托管 | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | 移动应用开发 | ⊗ | ![](img/stick_B.jpg) | ⊗ |
+|  | 推送通知 | ⊗ | ![](img/stick_B.jpg) | ⊗ |
+|  | 关系型数据库 | ⊗ | ⊗ | ![](img/stick_B.jpg) |
+| 集成 | Mio | ![](img/stick_B.jpg) | ![](img/stick_B.jpg) | ![](img/stick_B.jpg) |
+|  | Pipedream | ![](img/stick_B.jpg) | ![](img/stick_B.jpg) | ![](img/stick_B.jpg) |
+|  | Affirmed Cloud Edge | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | AppBilling | ![](img/stick_B.jpg) | ⊗ | ![](img/stick_B.jpg) |
+|  | Artifakt | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | Azure Pipelines | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | Canonical Juju | ⊗ | ⊗ | ![](img/stick_B.jpg) |
+|  | Cloudcraft | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | Coalfire | ⊗ | ⊗ | ![](img/stick_B.jpg) |
+|  | Coding Rooms | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | FNA | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | Grumatic | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | Jira Software | ⊗ | ![](img/stick_B.jpg) | ⊗ |
+|  | LendingWise | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | Onde | ⊗ | ![](img/stick_B.jpg) | ⊗ |
+|  | SOLIXCloud CDP | ![](img/stick_B.jpg) | ⊗ | ![](img/stick_B.jpg) |
+|  | SaltStack | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | Trakzee | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | Virtana Platform | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+|  | diDNA | ![](img/stick_B.jpg) | ⊗ | ⊗ |
+### 3.2.10 相关的云计算应用
+
+云计算已被整合到电信、政府、企业、备份、大数据分析、教育和医疗等多个领域，这些领域对大量计算服务的需求很高。以下公司通过利用云服务的便利性，证明了云计算的可行性，并扩展了自身的业务。
+
+*   ***The New York Times*** 基于云计算提供的可靠服务。通过收集 18 世纪以来的旧杂志，纽约时报将这些图像整理成便携文档格式，成功使用 100 台 EC2 实例在 24 小时内以低成本完成处理。除了《纽约时报》，《华盛顿邮报》也有相同的经验，通过云服务器将数千张图像转换为数据库。
+
+*   **DISA**：国防信息系统署（DISA）提到使用 Amazon EC2 的费用为每小时 10 美分。
+
+*   **SmugMug** 是一个用于发布图片的网络应用，它使用 Amazon 的 S3 云存储服务。通过使用云服务，SmugMug 将存储成本减半，从而节省了数千美元。
+
+*   **Eli Lily** 致力于研究，从云计算服务中受益，为关键过程提供出色的性能，而执行一个过程的时间仅限于几秒钟，而传统方法则需要数周时间。
+
+*   **TC3**（Total Claims Capture & Control，关注健康），也借助云计算服务，维护服务级协议（SLA）。
+
+*   **Industry 4.0** 是数字化进程，它彻底改变了与制造业相关的组织的自然基础，完全扭曲了价值和生产链。Industry 4.0 是一个新型的高科技智能框架，由云计算驱动，具有普遍性和无处不在的特点。工业革命 4.0 的关键支柱是云技术。由 Oracle 赞助的研究发现，60% 的企业认为集成的企业云平台是 unlocking 破坏性技术（如机器人或 AI）潜力的途径，这些技术位于 Industry 4.0 的核心。这是因为云提供了规模和速度，使其成为 Industry 4.0 的连接基础。采用 Industry 4.0 的企业因此能够借助云的帮助更快地推动数字化转型过程。
+
+
+
+
+-   [云无线接入网络 (C-RAN)]: C-RAN 是一种基于云计算的中央架构框架，这些网络依据如 5G/6G 等新兴标准进行构建。C-RAN 提供实时虚拟化功能、协作无线系统支持以及大规模部署。随着移动网络架构的进步，它使得管理复杂功能（如网络资源切片、统计复用、能效和高容量）成为可能。实现 C-RAN 的主要前沿技术是软件定义网络 (SDN) 和网络功能虚拟化 (NFV)。通过在 C-RAN 中使用相同基础设施支持不同接入技术，运营商可以更快速地部署移动网络，从而降低部署成本，有效利用网络资源，并最小化维护成本。C-RAN 的核心思想是将基站功能拆分，将基站划分为基带单元 (BBU) 和远程射频头 (RRH)。随后，利用云计算和虚拟化技术，将多个地点的 BBU 集中到一个地理位置（如数据中心）。BBU 负责基带信号处理，信号放大和调制由 RRH 完成。前传链路将 BBU 池与部署在小区站点的 RRH 通过天线连接。在虚拟化 BBU 池中，基带处理被集中处理，从而实现对随机流量的适应和资源的高效利用。同一 BBU 池可以被多个运营商共享，作为云服务租用。此外，由于手 _off 延迟的降低，网络性能得到了提升。
+-   [大数据分析]: 大数据指由操作系统（如企业资源规划 (ERP)、客户关系管理 (CRM)、供应链管理 (SCM) 系统）以及物联网传感器和移动流量产生的巨大数据量。结构化和非结构化数据的强大组合被称为大数据，与传统数据结构形成对比。大数据的主要特征可由容量、速度、多样性和可靠性体现。大量先进的量化技术（如人工智能、机器学习、深度学习、统计和数值方法）用于大数据的数据挖掘和模式发现。云计算提供了灵活高效的数据使用和增强的通信能力，从而显著提升可扩展分析解决方案的容量。
+-   [云私有分支交换机 (PBX)]: 通过互联网使用云端或虚拟 PBX 可获得低成本、可扩展、安全可靠的办公电话系统。PBX 系统是部署在公司或组织内部的私有电话系统。新型业务电话系统已从传统电话系统转向 PBX 系统，后者利用互联网连接。通过将 IP 电话连接到 PBX 服务器，可实现显著的成本节约和电话功能增强。相比之下，云电话系统虽在云服务器上托管，但操作方式类似。鉴于大多数组织拥有高效的网络连接，云 PBX 已成为可行的选择。
+-   [处理管道]: 处理管道代表当前运行于云端的大规模数据应用。此类数据处理应用支持：
+
+    *   浏览器生成的数据集记录。
+
+    *   相关数据预测与分析。
+
+    *   图像处理，包括图像转换以支持图像增强和缩略图，以及图像压缩和加密。
+
+    *   视频转码，以支持从一种视频格式转换到另一种格式。
+
+    *   文档处理，包括对文档进行加密和格式转换。数据处理还支持光学字符识别 (OCR)，以允许编辑 PDF 文件。
+-   [批处理]: 批处理系统也覆盖了企业计算中大量数据密集型应用的广泛范围。此类应用通常有截止日期，未能满足这些截止日期可能导致严重的经济后果。安全性也是许多批处理应用的关键方面。批处理用途的非详尽列表包括：
+
+    *   基于特定时期为各经济、健康及其他类型部门生成详细报告。
+
+    *   大型企业的库存管理。
+
+    *   处理发票声明。
+
+    *   更新软件源码。
+
+    *   验证软件和硬件系统的真实性。
+-   [Web 访问]: 网站的访问通常在短暂或偶发时期进行，例如在会议、圣诞节或夏季期间。其他有限时间的网站用于促销活动，夜间“休眠”，白天自动扩展，并将数据存储在靠近计算服务器的位置。因此，存储成本（每 GB）较低，且数据处理更高效。
+-   [电子学习]: 过去需要去图书馆才能查找信息的日子已成过去。如今，数字化课堂可让学生在线创建和提交演示文稿、通过网络会议远程上课、以及参与全球分布式项目的协作与参与。电子学习云系统的示例包括 SlideRocket 和 Ratatype。
+-   [医疗]: 传统上，在海量医院记录中查找患者病史被视为一项繁琐的任务。相反，随着医疗管理系统（如医疗云）的出现，所有数据均存储在安全的云端解决方案中，只需点击即可检索。云服务使所有信息在云端共享并可供所有相关投资者访问。除了信息共享外，云保证无延迟，这对于解决关键情况至关重要。此外，云服务的集成使得远程手术成为可能，这将在医疗领域带来有前景的进步。
+-   [防病毒应用]: 过去，防病毒软件安装在公司系统中。随着云的出现，公司无需在本地安装防病毒软件，因为防病毒软件已部署在云端。因此，该软件可远程监控公司系统，识别安全风险并进行修复。
+-   [电子商务应用]: 基于云的电子商务能够在最短时间内快速响应市场的任何新兴机遇和挑战。用户能够迅速抓住市场机会，传统电子商务也能迅速应对挑战。云基础电子商务以最短时间提供新的商业模式。客户数据、产品数据及其他运营系统均在云端环境中管理。例如，Hepsiburada、Gittigidiyor 和 n11 等土耳其电子商务平台使用 Google Cloud 的 Big Query 平台来利用数据和洞察，更精准地识别客户需求，从而改善数据驱动的决策环境。
+-   [电子政务应用]: 云计算为政府开展多项活动提供服务。它帮助政府以扩展、可扩展和定制化的方式专业提供服务，并通过降低管理、安装和升级应用所需的不必要成本，实现成本节约。
+
+
+
+-   **个人存储**：云提供了与云存储个人数据相关的无限制功能，并且可以通过在云上运行的应用程序（如 Dropbox）实现这些文件的共享。
+
+-   **导航**：大多数现代车辆（如特斯拉）都配备导航程序。云计算使这些导航程序能够存储大量地图数据并定期更新，以帮助驾驶员。驾驶员每次使用这些工具时，都间接利用云端来到达目的地。此外，这些车辆公司还提供将车主信息和偏好同步到其他车辆的选项（如果他们拥有多辆车）。
+
+### 3.3 云端实时天气预报系统
+
+本节详细阐述了基于云计算的实时天气预报系统。天气预报是指预测在特定时间和地点未来大气状态的情况。气象预报主要采用物理模型来模拟和预测气象动力学，即数值天气预报（NWP）。在 NWP 中，大气被建模为流体，并通过求解大气水文热力学方程的数值解来提供未来的大气状态。初始条件直接影响预测的准确性，而微分方程在扰动下的不稳定性以及初始测量的不确定性会影响 NWP 的可靠性 \[5\]。如今，随着物联网的发展以及神经网络、模糊逻辑、时间序列和回归分析等技术的应用，实时天气预测变得可行。主要依赖于连接云服务的本地传感器的几个短期预报系统已经出现。实时天气预报系统的数据流如图 3.10 所示 \[Figure 3.10\]。
+
+``` 
+![Figure 3.10 Weather-forecast system data flow.](img/fig3_10_B.jpg)
+```
+
+Figure 3.10 Weather-forecast system data flow.
+
+下面是数据流系统每个块的描述：
+
+1.  本地托管 Servlet：该 servlet 位于 Apache Tomcat 服务器上，不同于云托管的 servlet，但功能相似。连接到 servlet 需要先验证服务器 IP 地址。
+
+2.  MySQL 数据库：该数据库本地存储不同应用程序请求的数据。除了云托管的 servlet 外，它还在本地服务器上进行预测。
+
+    *   **本地服务器**：本地服务器的功能包括：
+
+        *   显示实时图表，监控当前天气状况。
+
+        *   本地或通过 Cloudant 平台收集各种应用的数据。
+
+        *   本地进行预测并将结果显示给客户端。
+
+        *   将请求的数据从其数据库或 Cloudant 平台传输。
+
+        *   为移动和桌面客户端提供数据或分析结果的请求服务。
+
+3.  Cloudant 数据库：IBM Cloud 平台提供 Cloudant 数据库作为服务，天气数据在云端收集并可全球访问。
+
+4.  云托管 Servlet：客户端访问网页时发出的请求由 servlet 处理。servlet 执行以下任务：
+
+    *   更新客户端访问的网页上实时图表。
+
+    *   根据客户端请求从 Cloudant 数据库检索数据。
+
+    *   进行分析审查并将结果发送回客户端。
+
+5.  Web 应用：向用户提供不同的实时天气数据，图表形式多种多样，用户可以在特定日期或多个监测数据上访问并保存数据。更多关于上述块的详细信息可在 \[5\] 的第 7 章 \[Chapter 7\] 中找到。
+
+6.  天气数据采集的移动和桌面应用程序：本部分介绍了开发 Android 应用以从 API 捕获天气数据，实时监测当前天气状况的实现。通过在应用中集成传统的回归分析和神经网络，可预测未来 N 分钟的天气状况。首先，桌面应用在 NetBeans IDE 中创建，步骤如附录 3A 所述。
+
+    关于桌面应用程序各库功能的详细描述可在 \[Table 3.3\] 中找到。
+
+    Table 3.3 Library Functionality for Desktop Applications
+
+    | Library || Purpose || Repository || Jar Files |
+    | --- | --- | --- | --- |
+    | Cloudant Manager || Contains several classes to interact with the Cloudant database programmatically. || [`github.com/cloudant/java-cloudant`](https://github.com) || cloudant-client-2.19.2.jar, cloudant-http-2.19.2.jar, commons-codec-1.6.jar, commons-io-2.4.jar, gson-2.8.6.jar |
+    | JSON || Used to parse JSON documents into Java objects and to generate new JSON documents from the Java classes. || [`github.com/stleary/JSON-java`](https://github.com) || json-20210307.jar |
+    | JSOUP || JSOUP is a Java library for working with real-world HTML. It provides a very convenient API for fetching URLs and extracting and manipulating data, using the best of HTML 5 DOM methods and CSS selectors. || [`mvnrepository.com/artifact/org.jsoup/jsoup`](https://mvnrepository.com) || jsoup-1.13.1.jar |
+    | JFreeChart || JFreeChart is a comprehensive free chart library for the Java platform that is used in the project to create a chart that is updated with new values. || [`github.com/jfree/jfreechart`](https://github.com) || hamcrest-core-1.3.jar, jcommon-1.0.23.jar, jfreechart-1.0.19.jar, jfreechart-1.0.19- experimental.jar, jfreechart-1.0.19-swt.jar, jfreesvg-2.0.jar, junit-4.11.jar, orsoncharts-1.4-eval nofx.jar, orsonpdf-1.6-eval.jar, servlet.jar, swtgraphics2d.jar |
+
+7.  其次，附录 3B 给出了创建新 Cloudant 数据库以存储天气预测观测数据的步骤。
+
+### 3.4 挑战与实时云应用的未来
+
+本节概述了实时云应用可能面临的各种挑战以及云应用的未来。事实上，任何新技术最初只是一个想法，在其出现时提供 benefits，但也会遇到各种限制和挑战。云计算也是如此，其主要挑战可以列举为：
+
+#### 3.4.1 主要挑战
+
+将实时应用与云相结合并非易事；相反，这涉及实时虚拟化的预测功能。因此，实时应用在云中的采用面临着根本性的挑战。关键的可预测性障碍直接与硬件资源的受限访问相关。这些挑战如下：
+
+*   云计算高度依赖于底层网络基础设施。因此，网络元素面临的挑战（如服务器故障、拒绝服务攻击、恶意软件攻击、电源中断、通信延迟和安全性）也会在云端出现 \[7\]。
+
+*   云服务提供商应保持良好的 SOA（服务导向架构）以高效提供不同服务。
+
+*   处理数据存储的带宽、容量和位置时应当谨慎考虑，因为应用性能直接受数据存储的影响。
+
+*   由于各供应商拥有不同的条款和支持，云计算及其服务尚未完全成熟。
+
+
+
+
+# 3.4.2 未来方向
+
+云计算的最重要目标是提升网络，使其具备高带宽、高速以及更可靠和安全的网络——此外，还需确保数据中心在更有效的数据访问算法下保持数据保密性。实现该目标将吸引市场中的众多企业加入云计算。由于所有操作都将在云端执行，保证良好的网络性能是一项必要条件，尤其是在需要可扩展性的情况下。以太网也可以利用云端，因为其关键挑战——如何在不降低网络吞吐量的前提下防止争用——可以得到解决。视频流是实时云计算能够保障所需网络资源的应用之一。X-Gigabit 解决方案正逐渐成为不仅能够提升网络吞吐量，而且能够轻松适应云端运行的虚拟机（VM）数量增长的有前景的解决方案。
+
+## REFERENCES
+
+1. \[Online\]. Available: [`networkinterview.com/evolution-of-cloud-computing/`](https://networkinterview.com)
+
+2. \[Online\]. Available: [`mu.ac.in/wp-content/uploads/2021/01/Cloud-Computing.pdf`](https://www.mu.ac.in)
+
+3. W. Forrest and C. Barthold, “Clearing the Air on Cloud Computing,” 2009, M. &. Co.
+
+4. R. Buyya, C. S. Yeo, S. Venugopal, J. Broberg and I. Brandic, “Cloud computing and emerging IT platforms: Vision, hype, and reality for delivering computing as the 5th utility,” Future Generation Computer Systems, 25, 599–616, 2009.
+
+5. T. P. Fowdur, L. Babooram, M. Indoonundon and M. Rosun, Real-Time Cloud Computing and Machine Learning Applications, New York: Nova Science Publisher, 2021.
+
+6. “SourgeForge,” Slashdot Media, 2022. \[Online\]. Available: [`sourceforge.net/software/compare/Amazon-Web-Services-AWS-vs-Firebase-vs-IBM-Cloud/`](https://sourceforge.net)
+
+7. M. D. Dikaiakos, D. Katsaros, P. Mehra and G. Pallis, “Cloud computing: Distributed Internet computing for IT and scientific research,” IEEE Internet Computing, 13(5), 10–13, 2009.
+
+# 4 The Role of Blockchain in IoT
+
+Khalid Mahmood
+
+National Yunlin University of Science and Technology, Douliu, Yunlin, Taiwan
+
+Hasan Javed, Nosherwan Adil, and Iqra Aslam
+
+Riphah International University, Lahore, Pakistan
+
+Salman Shamshad
+
+The University of Lahore, Lahore, Pakistan
+
+Mohammad S. Obaidat
+
+King Abdullah II School of Information Technology University of Jordan, Amman, Jordan University of Science and Technology Beijing, Beijing, China
+
+SRM University, India
+
+Amity University, Noida, India
+
+DOI: [10.1201/9781003326236-4](https://dx.doi.org/10.1201/9781003326236-4)
+
+## 4.1 Introduction
+
+物联网（IoT）是一个新兴的、富有创意且具有颠覆性的计算范式，它将具备存储、计算和通信能力的任何物体都连接到互联网。将设备连接到互联网，使得诸如智能家居、智能电网、智能城市、智能交通、智能物流、创新医疗和智能工业等多种应用得以实现。根据全球移动通信协会（GSMA）的预测，IoT 将在 2025 年实现全球一万亿的规模，为供应商、企业和制造商提供巨大的投资机会 \[1]。
+
+
+
+物联网 (IoT) 应用范围广泛。例如，患者佩戴的 IoT 设备可以通过持续传输血压和心率等信息的网络直接与医疗机构联系。这将实现远程患者监测并加快医疗响应。此外，在交通领域，IoT 扩展至“车联网”（IoV），可通过促进更安全驾驶、优化燃油使用、为车辆用户提供娱乐以及改善出行时间来提升交通效率。通过在物流集装箱上安装 IoT 传感器并使用 LTE Advanced (LTE-A) 或 5G 等先进网络技术进行连接，全球物流可以得到改善 \[2\]。总之，IoT 是一项新兴技术，为众多利益相关者和个人带来好处。IoT 是一项新兴技术，惠及许多利益相关者和人群。
+
+IoT 应用承载关键信息；例如，IoV 负责汽车安全通知。电子健康（e-health）直接影响人类生活，物流可能包含关于物品耐用性和交付时间的关键信息。IoT 网络需要安全和隐私保护 \[3\]。
+
+区块链（BC）最初被倡导用于加密货币，金融行业可能用于保障 IoT 网络。BC 旨在建立一个公共的“开放账本”，任何参与节点均可在无需第三方的情况下获取所需信息 \[4\]。BC 是一种完全去中心化的方法，这使得网络更安全、更开放，因为每个节点拥有相同的、最新的正确信息。在成功完成具有挑战性的共识过程后，矿工有权修改并追加区块链网络上的数据。该过程涉及解决复杂的算法或谜题。区块链中已有多种共识算法，如工作量证明（PoW）、权益证明（PoS）、委托工作量证明（DPoS）、Ripple、Tendermint 等。工作量证明（PoW）算法被 Bitcoin 和 Ethereum 采用，如图 4.1 所示 \[5\]，其中每个矿工会创建区块链系统中的谜题。随后，节点会在 BC 中发布该谜题，所有节点均可访问。能够解决 PoW 的节点可保留、访问并修改 BC 数据 \[5\]。
+
+```
+![Figure 4.1 PoW technique in BC systems.](img/fig4_1_B.jpg)
+```
+
+Figure 4.1 PoW technique in BC systems.
+
+Figure 4.2 展示了由链接块构成的 BC。每个块包含两部分：工作量证明（PoW）哈希和交易。PoW 哈希包含 nonce、时间戳、前块以及 Merkle 树等多个元素，而交易则包含用户数据，这些数据存储在区块链上。在 IoT 网络中使用区块链的一个优势是它提供固有的信任，支持分布式内容共享，确保隐私感知的通信，以安全为设计目标，并具备高度的弹性和可靠性。
+
+```
+![Figure 4.2 BC made using linked blocks.](img/fig4_2_B.jpg)
+```
+
+Figure 4.2 BC made using linked blocks.
+
+## 4.2 概述
+
+近年来，学术界和商业专家对物联网（IoT）的进展给予了大量关注。IoT 令人兴奋，因为它可能使新的做事方式成为可能。在个人层面，它呈现出未来社会的景象——一切都连接到互联网并相互交流以智能运作。其终极目标是通过赋予事物即时感知周围环境、相互交互且成本不高的能力，以及在不受我们指导的情况下响应我们的需求和偏好，来改善我们周围的环境。IoT 拥有更大的商业潜力 \[6\]。
+
+它涉及对数百个与服务或商品相关的元素进行自动发现和快速分析，并能在问题影响客户体验或物品功能之前自动响应问题。为了通过提升服务交付和优化业务流程获得竞争优势，必须从多种内部和外部来源（包括社交媒体）获取并分析大量结构化和非结构化数据 \[7\]。考虑到互联网对人们、企业、科学、政府以及我们对环境控制能力的影响，若否定这一说法便显得过于保守。许多人认为物联网将是历史上最大的技术挑战。
+
+1999 年，Kevin Ashton 创造了“物联网”一词。将当时 Procter & Gamble 供应链中的 RFID（射频识别）创新理念与互联网结合，这不仅是一种吸引前高管的巧妙手段。IoT 有潜力带来与互联网影响相当的世界性变革。MIT Auto-ID Center 在 2001 年提出了对物联网的愿景，而国际电信联盟（ITU）在 2005 年的《互联网报告》中正式命名并认可了物联网。物联网的使用正在增长，尤其是在无线通信领域。
+
+智能物体（如智能手机、智能手表、先进的家庭自动化系统等）在我们周围的增多，这些物体能相互交互并与其他系统协作完成特定任务，这有力证明了这一点 \[8\]。物联网的最大优势无疑是它已经对企业和人们日常生活带来的显著改进。IoT 目前被企业用于创造新商业模式、改进运营流程、降低成本以及降低风险等诸多方面。人们生活得到改善的例子包括学习、安全和健康监测等领域 \[9\]。
+
+物联网基于这样的理念：通过互联网建立物理连接，以监控和管理涉及人、动物、物体甚至树木的过程。人们可以通过连接“物”来访问并根据需要进行控制。它们不仅仅是提供信息的互联网连接 \[10\]。因此，连接物体并非主要目的。相反，利用相关物体获取的信息用于改进产品和服务。在给出定义之前，列出构成物联网的关键组件会更有帮助。本质上，物联网是一系列实际物理对象的网络。传感器用于获取数据。
+
+
+
+
+Identifiers: 为了研究数据，标识符是定位数据来源（如传感器或设备）的工具。总体而言，物联网（IoT）是一个由易于识别、配备软件智能和传感器、且永久连接至互联网以实现通信和消息传递的物体网络 \[11\]。事物可以通过 IoT 与其制造商、所有者或其他连接设备进行交互，以共享信息。这使得远程感知事物（提供精确信息）并通过网络操作现实世界物体成为可能。这使得基于计算的系统与外部世界能够更紧密地互动，提升生产力、准确性和经济效益。每个设备都与其他设备不同，并能凭借其自身的计算系统与当前的互联网基础设施协同工作。行业专家和企业预测，物联网将促进大量设备的连接。根据 Gartner 的预测 \[12\]，到 2020 年在使用的设备数量将达到 200 亿。Cisco 也预测，到那时，将有 268 亿个连接设备，包括笔记本电脑、移动电话、平板电脑、电视和机器对机器设备。
+
+Others 认为这一预测过于低估，因为它假设任何配备简单微控制器、易开关或甚至二维码（Quick Response）的设备未来都能连接至互联网 \[13\]。摩尔定律理论 \[14\]，该理论指出密集集成电路中晶体管的数量大约每 18 个月会翻倍，支持这一主张。IoT 也被称为“万物互联”（IoE），涵盖人、数据、过程和事物。因此，IoE 是 IoT 的扩展。
+
+*   People: 将人们聚集在一起，可能帮助个人更深入地融合。
+
+*   Data: 通过利用数据获得理解，从而做出决策。
+
+*   Process: 在适当时将正确的信息传递给正确的设备或人。
+
+*   Things: 事物是真实的物体和机器，它们通过互联网和其他技术进行通信，以达到智能结论。
+
+IoT 旨在连接“事物”，使它们能够相互灵活地通信并采取适当行动。物联网随后与人联网（IoP）相结合。然而，本书和现代文献声称“IoT”指代一切（包括人）。基于此，物联网可描述为：借助物联网，设备可以识别自身、拥有内部智能，并能够感知并采取行动。它通过互联网连接人与事物。我们过去曾用“IoT”指代所有连接互联网的事物，这里同样使用该术语。这包括设备、建筑物、汽车、人、宠物、其他生物，以及树木和植物等。物联网基于“事物”可以从世界任何地方被观测和控制的理念。
+
+## 4.3 Internet of Things(IoT)
+
+### 4.3.1 Background
+
+IoT 大约 20 年前被构想出来，尽管其技术在多年之前便已在研发。让我们追溯物联网及其支持和关联技术的出现 \[15\]。
+
+*   1969—物联网的主要技术——互联网，最初作为美国高级研究项目署网络（ARPANET）出现，用于学术和科研界分享研究成果、开发新型互连技术，并将计算机与美国国防部、公共及私营部门的众多通用计算机中心相连。
+
+*   1973—射频识别（RFID）是物联网的必要技术之一。RFID 技术自二战以来已存在，但 1973 年，Mario W. Cardullo 获得了首个可重写 RFID 标签的美国专利。同年，加州商人 Charles Walton 也获得了一项被动式发射器专利，可用于远程开启门锁。
+
+*   嵌入式计算机是另一项物联网技术。这些嵌入式系统采用单板处理器和微控制器。
+
+*   1984—在正式命名之前，物联网已在使用 \[16\] 一台可口可乐机器联网后能够报告其可用性和温度。
+
+*   1990：互联网在商业和消费领域传播。由于网络连接不足，其使用受到限制。
+
+*   1991 年，Mark Weiser 提出“普适计算”概念。高级嵌入式计算使普适计算无处不在却难以察觉，随后被“普遍计算”取代。
+
+*   20 世纪中叶——传感器节点被研发，用于检测唯一识别的嵌入式设备的数据并轻松共享信息。
+
+*   1999 年，Bill Joy 创造了设备间通信，而 Ashton 则提出了“物联网”一词。MIT 的 Auto-ID 中心开发了一种低成本芯片，能够存储数据并将设备连接至互联网。
+
+*   2000 年，互联网连接已成为许多用途的常规，所有公司和产品被迫上线并提供信息。
+
+这些物联网设备仍需通过应用和界面进行人工介入和监督。物联网的终极承诺将在技术在背后运行并实时响应我们的期望或需求时实现。
+
+### 4.3.2 Applications of IoT
+
+物联网指的是无需人工干预即可在网络中传输数据的事物。Gartner 预测，到 2020 年，将有 204 亿个连接设备投入使用。物联网行业的市场价值预计将在 2020 年达到 1.7 万亿美元，而 2014 年的价值为 6558 亿美元。物联网系统将产生如此多的收入。物联网平台从任何源头的项目中收集数据，利用电路和传感器进行采集，处理并通过网络传输，并利用人工智能进行存储、可视化和处理。传感器、高效通信协议、开源服务器程序、最新网页开发工具以及物联网仪表盘的最新进展，正被用于解决众多社会问题，如图 4.3 所示 \[Figure 4.3\].
+
+![Figure 4.3 Applications of IoT.](img/fig4_3_B.jpg)
+
+Figure 4.3 Applications of IoT.
+
+#### 4.3.2.1 Military
+
+物联网具有军事用途。ZigBee 和 GSM 网络被用于监测和追踪军人的健康状况。这些系统的缺点包括带宽受限、运营成本高以及基础设施复杂。通过将军人健康监测与跟踪系统升级至物联网架构，可解决这些不足。物联网可提升军事态势感知、风险评估和反应时间。物联网技术可帮助军队发现对手、监测士兵的身体和心理健康，并协调部队与防御系统。配备内置传感器的军事服装和头盔可追踪士兵的位置和生理指标，指挥中心可实时救援作战人员。发光的军事服装和头盔可能集成温度、心率、加速度、心电图（ECG）、运动、氧气水平等传感器。
+
+#### 4.3.2.2 Healthcare
+
+物联网在治疗慢性疾病、追踪可吞服传感器、移动健康以及智能医院等方面有应用。
+
+##### 4.3.2.2.1 Remote Health Monitoring
+
+
+
+数字 IoT 架构因其多学科、多学科的特性，无法实现能够包含所有其属性的完美架构。已有多种 IoT 架构被探索。Figure 4.4 展示了我们简化的四层设计，用于捕捉主要 IoT 应用特征。Figure 4.4 的架构包含四层：设备层、边缘层、云层和跨层。请简要描述每一层。在本节中，已描述了现有的雾计算架构、负载均衡和容错方法。
+
+![Figure 4.4 Architecture of IoT.](img/fig4_4_B.jpg)
+
+Figure 4.4 Architecture of IoT.
+
+#### 4.3.3.1 Layer-1—Device-Layer
+
+
+
+这一层负责检测、检测和控制环境。这一层由大量异构物联网终端设备（如传感器、执行器、收发器和处理器单元）组成，用于完成应用任务。各类原始设备制造商（OEM）为这些设备提供不同容量的设备。由于应用、硬件和软件需求的差异，选择设备或硬件技术并不容易。这一层包含多种通信和网络协议。没有任何一种协议能满足所有物联网领域的需求，因此种类繁多。Figure 4.4 展示了层-1 物联网终端系统网络如何与子系统的其余部分连接的示例。这一层包含最为异构的硬件、软件、通信和网络协议。
+
+#### 4.3.3.2 Layer-2—Edge-Layer
+
+在没有进行任何数据处理的情况下，这一层充当设备与云层之间的数据传输桥梁。然而，它可能承载所谓的“边缘计算”或“雾计算”的复杂云任务。将复杂的云服务在层-1 进行移植，可降低关键应用的带宽和延迟。该层的硬件能够支持当前操作系统。对于应用开发者，该层的操作系统隐藏了硬件异构性。在应用层，传统的 Internet 协议套件协议（如 HTTP、MQTT、CoAP 等）用于数据交换，适用于有线和无线技术，涵盖 3GPP（3G、LTE、5G 等）、IEEE（802.11、802.2）等标准。通过在该层使用资源丰富的硬件设备，能够构建硬件独立、计算密集特性或服务的高级操作系统（如 Linux、Windows 等）。
+
+#### 4.3.3.3 Layer-3—Cloud-Layer
+
+云层存储层的大量数据，并提供构建基于云的应用和服务的各种工具，包括 AI、大数据、认知计算、机器学习技术、分析以及跨域数据交换。由于物联网应用开发者使用 Amazon、Google、Microsoft 等公司的 SaaS、PaaS、IaaS 云服务，该层隐藏了较少的硬件变异性。凭借一致的 API（如 Mesos、Terraform 等）和安全访问协议（如 MQTT、AMQP、HTTP 等），应用在该层更容易迁移。
+
+#### 4.3.3.4 IoT Cross-Layer Management
+
+物联网系统管理对于其可持续性至关重要，是其设计的基石。系统管理在安装和维护物联网终端系统中发挥关键作用，通过全面的物联网管理，满足商业需求。这包括服务编排、软件维护、部署故障排除和配置等方面。本部分的设计与以往工作不同，强调常见的应用域特性，以帮助理解和开发物联网功能。同时，本部分还增加了一个用于系统管理的跨层设计，以协助部署和维护物联网系统。
+
+## 4.4 Invariant Functionality (IF) and Programming Patterns (PP) for IoT Applications
+
+本部分分析物联网应用的 IF 和 PP 在每个架构层中的情况。IF/PP-1 Layer-1 是一个物联网终端系统网络，包括传感器、执行器、收发器、HMI 和处理器。如下文所述并总结于 Figure 4.4，物联网终端系统执行关键的高层活动。这些以内存编码的功能影响物联网终端设备的行为。PU 可配置物联网终端设备类型。其他章节执行针对终端设备的特定任务。HMI 的读取函数读取人类输入，而非传感器数据。
+
+写入函数控制执行器并显示 OLED 屏幕上的数据。根据底层通信技术和网络协议，PU 可能在层-2、层-3 或层-1 进行数据的发送和接收。PU 调用库或用户定义的函数，使用执行命令（例如，在传输前本地处理传感器数据的算法）。等待延迟、中断和休眠。层 2-IF/PP：在此层，网关进行发送和接收。
+
+第一组使用低功耗无线电交换层-1 数据（LR WPAN 或 LPWAN）。第二组用于通过 3GPP/4G、LTE、WLAN 等进行 Internet 回传。该层可能提供层-1 云服务，因此网关可能给出高层执行命令，用户可以将其绑定到一个或多个服务。该层与层 1 和层 2 类似，与层-2 或通过网关绕过层-1 进行发送和接收。
+
+云服务和按需云实例配置至关重要。Figure 4.5 展示了 3PP。跨层问题包括调节应用逻辑的部署和行为、保持固件版本、以及在网络故障期间监控发送的数据。这些功能需要持续的网络连接，并包含发送和接收指令。系统更新包括为设备设置合适的固件并监控已部署的软件版本。设备应配备像 Mender 这样的引导加载程序，用于 OTA 固件更新。在构建 L3 云架构（如虚拟机数量、数据库类型、机器学习算法等）或设置 Edge 容器或网络访问以传递数据时，配置逻辑拥有额外层。
+
+![Figure 4.5  Invariant Functionality (IF) and Programming Pattern (PP).](img/fig4_5_B.jpg)
+
+Figure 4.5  Invariant Functionality (IF) and Programming Pattern (PP).
+
+### 4.5.1 Definition
+
+“区块链常与比特币关联。它是由全球数千台计算机维护的、由全球网络验证的、分布式的、受信任的交易数据库。与银行等中央机构不同，广泛的社区监督记录，且无人能够修改或删除交易历史。与集中式数据库不同，区块链的分布式结构和点对点验证防止信息被篡改。区块链在软件用户之间分布，而集中式数据库居于单一服务器上。区块链使网络中的每个人都能查看其他人的条目，使中心控制变得不可能。当某人执行交易时，计算机算法会验证其合法性。一旦交易被验证，它会与前一个交易相连，形成链——这就是区块链 \[17\]。区块链是一个去中心化的点对点网络。比特币是基于区块链的数字账本，广泛使用。比特币的复杂算法和去中心化网络使用户可以挖矿、存储和交换比特币。区块链可用作资产登记和库存管理。
+
+### 4.5.2 Blockchain—Background
+
+“New Directions in Cryptography” 探讨了分布式账本。Stuart Haber 和 Scott Stornetta 的 “Hot to Time-Stamp a Digital Document” 提出在数据而非介质上进行时间戳，随着加密技术的发展。基于 David Chaum 的 “electronic cash” 或 “digital currency” 模型，也为区块链的创建作出了贡献，随后出现了能够检测双重支出的协议。Adam Back 在 1997 年创建了 “hash cash” 以应对垃圾邮件。
+
+
+
+
+Wei Dai 创建了基于点对点网络的“b-money”。当他于 2008 年发布《Bitcoin: \[18\] A Peer-to-Peer Electronic Cash System》时，Satoshi Nakamoto 发明了区块链技术。该文章的摘要是关于无需第三方的直接 Internet 支付。文章描述了一种密码支付机制。Nakamoto 在文中提出了一种数字货币，该货币在写作中不能被复制或重复花费。根据报告，应使用公共账本来追踪和验证电子硬币的交易历史，从而防止重复支出。Satoshi Nakamoto 于 2009 年初设计了第一个比特币，几个月后提供了开源软件以实现该系统。比特币继续被铸造和推广，并已解决社区支持的代码缺陷。
+
+比特币占据了狮子的市场份额，使其成为最受欢迎的加密货币 \[19\]。它可以让用户保持一致，但其开放性使其闻名。2013 年，投资者开始向比特币初创公司倾注资金。比特币可以与现金或商品进行交易。钱包软件让用户通过电脑、移动设备或 Web 应用转移比特币。2015 年，Ethereum 允许区块链通过贷款和合约运行。其智能合约算法确保两方的行动。其速度、安全性和效率使其闻名 \[20\]。
+
+### 4.5.3 区块链概述
+
+本节涵盖区块链的基础知识，包括概念、设计要素、优势和种类。本章介绍了区块链 Peer-to-Peer Electronic Cash（即比特币）的概念，并列出了 Nakamoto 在 2008 年提出的两项突破性技术。第一个区块链是比特币，一种去中心化的数字货币。区块链是由加密复杂算法连接的单个区块组成的网络。
+
+在分布式数据库上，该方法通过哈希（一种数字指纹）将数字资产存储在区块中，哈希是一种数字指纹（Cirstea et al., 2018; Woodside et al., 2017）。区块链是“提供透明度和信任的分布式账本系统”（Linn & Koo, n.d., p. 2）。根据 Koshechkin 等人 \[21\]，区块链是一个点对点网络和无中心服务器的开放数据库。本质上，区块链是经区块链参与方审查和验证的安全交易账本。区块链通过在任何时刻准确呈现现实，为商业信任提供保障。
+
+类似于状态机，区块链在存储和修改之前的状态的同时，保持永久记录。时间不可逆（Adams et al., 2017）。区块链的优势之一是“哈希”。每个新加入链中的区块都有一个由区块创建日期决定的“哈希”代码。流行的密码安全策略是“哈希”。每个新区块的哈希包含前一个区块的哈希。因此，伪造区块很困难。未来区块的哈希由前一个区块的哈希决定，所以修改单个区块需要完全重写区块链。这些障碍作为防止篡改的阀门（Hughes & Morrow, 2019; White, 2017）。
+
+区块链最初是为了安全地交易和存储比特币。这种基于区块链的数字货币工具支持交易、分发和发行。已添加了使用 Turing-完全编程语言的能力。智能合约得益于区块链 2.0，能够在区块链上运行。最流行的智能合约区块链平台是 Ethereum（Li et al., 2017; Oh & Shong, 2017）。除了金融和经济事务外，Aras 和 Kulkarni（2017）。根据 Engelhardt（2017），以下企业和组织从区块链受益最大：参与方众多。参与方还需要建立信任。消除中间人可以提高效率和信任。此外，数据保留和活动监控必须可信赖。
+
+### 4.5.4 区块链设计特性
+
+区块链的基本属性是其区别于其他技术的关键。Perkinson 和 Miller（2016）指出，这些设计特性在交易验证、 reconciliating（和解）以及处理争议需要大量时间和精力时尤为重要 \[22\]。
+
+*   区块链协议要求用户在发布交易前确认交易，以确保交易的合法性。
+
+*   当双方就交易的具体细节达成一致时，区块链在交易前验证资产所有权，简化了资产转让的结算，因为交易完成后，区块生成、上传至链中、按正确顺序排列并分配时间戳，从而建立持久的顺序和时间记录。
+
+*   智能合约的自动化：区块链账本可以在满足特定条件时，使智能合约自动执行。
+
+### 4.5.5 区块链技术特性
+
+文献讨论了区块链的特性。一些区块链特质促成了其他特定特性，因此列表可以简化。
+
+#### 4.5.5.1 分布式
+
+分布式账本的交易可由区块链的所有用户查看，也可检查交易各方的记录。没有中央权威或独立第三方来检查或结算交易（去中心化）。所有区块链用户对数据的完整性达成一致（基于共识的数据批准）。网络中的节点不使用中央节点。节点负责存储和传输数据（点对点传输）。
+
+#### 4.5.5.2 标准化规则
+
+区块链交易必须遵循相同的标准。在区块链上篡改或删除数据非常困难（持久性）（不可变性）。这归因于哈希算法和哈希标识符。不可变性并不意味着区块链数据不能被更改。修改者可以向链中添加新区块，以移除旧数据。
+
+#### 4.5.5.3 隐私
+
+平台无法识别用户（节点）。每一方可以使用创建的地址在区块链上操作，而无需透露身份。用户通过区块链地址（匿名性）与区块链交互。由于内在限制，区块链上的隐私无法得到适当保护。
+
+#### 4.5.5.4 可审计性
+
+交易在确认并时间戳后，使区块链数据透明且可追溯。计算技术确保所有网络用户的账本记录的持久性和按时间顺序排列（记录的不可逆性）。
+
+#### 4.5.5.5 安全
+
+区块链采用高级加密技术，使用公钥和私钥让用户通过地址断言拥有资产。这些地址与用户身份不绑定，防止身份盗用。哈希关联区块，因此篡改一个区块会影响其他区块。区块链保护用户数据和交易。
+
+### 4.5.6 区块链技术的益处
+
+尽管仍处于起步阶段，区块链技术已经改变了许多公司，并受到众多行业的青睐（Workie & Jain, 2017; Beck, 2018; Herlihy, 2019; Kumar, 2019）。
+
+*   所有网络用户都能永远访问区块链的完整交易历史 \[23\]。所有用户都知道在数据或交易上进行的任何操作，从而促进透明度。
+
+*   业务连续性：所有公司都需要服务可用性和连续性。由于区块链技术没有单点故障，系统永不停机，从而保持业务运行 \[24\]。
+
+
+
+-   [去中介化：去中心化区块链基础设施促进了去中介化。该技术可以取代中介机构，提高效率并降低人们与组织之间因摩擦造成的直接和间接成本。]
+
+-   [信任：区块链在不信任的各方之间创建可信的记录。良好的区块链架构确保信任，并简化了验证过程。]
+
+-   [智能合约：大多数区块链系统都具备脚本语言，以便增强账本。比特币使用基于堆栈的词汇，而以太坊使用 JavaScript，一种完全可图灵的强制性语言。所谓“智能合约”的计算机代码或软件用于数字化促进、确认和执行业务逻辑的谈判与履行。当义务得到履行时，智能合约会执行可靠的交易和活动（例如资产、金钱、股份或其他有价值物品的转让，从而消除中介或第三方的必要性。传统系统可以使用智能合约，但区块链因其高质量和数据可访问性，是它们最理想的场所。]
+
+### 4.5.7 区块链系统类型
+
+Nakamoto 在 2008 年创建了第一个基于区块链的系统——比特币。它是一种点对点的去中心化电子现金系统，也是一个去中心化的公共账本。目前，不同的区块链方法和选项既可供个人也可供企业使用。区块链数据访问（公共区块链和私有区块链）以及区块链系统访问（无需许可和有权限的区块链）可以分类（BitFury Group, 2015; Peter & Panayi, 2015）。
+
+*   [未经授权的区块链：未经授权的区块链允许所有利益相关者验证交易。用户无需授权即可构建区块。]
+
+*   [有权限的区块链：只有预先选定的用户才能在有权限的区块链中创建和验证交易块。]
+
+*   [公共区块链：任何人都可以访问数据并在公共区块链上提交交易。]
+
+*   [私有区块链限制数据访问、查看和交易报告，仅向组织内部或特定组织的预设用户开放。该区块链平台结合了加密、共识机制和分布式账本。本节讨论三种区块链技术：]
+
+*   [为了签署交易，区块链使用公钥加密。用户使用私钥对交易进行签名。区块链网络的接收方使用发送者的公钥验证交易签名。当交易创建时，来源或终端设备会签署交易。]
+
+*   [分布式账本：区块链使用分布式存储来记录交易。所有网络节点都存储所有交易或其子集。在将交易记录到账本之前，所有网络节点通过共识方法达成一致。这使得区块链不可篡改。]
+
+*   [集中式服务器不验证区块链交易。区块链采用点对点方式，所有网络决策均由共识决定。]
+
+### 4.5.8 区块链应用
+
+区块链的关键特性不仅适用于去中心化货币，还能够彻底改变各行业的商业交易模式和资产管理协议，如电子投票、汽车租赁和电影观看。其应用涵盖金融科技（FinTech）、医疗保健、治理、供应链、制造、保险、教育、物联网（IoT）、大数据、机器学习等领域。在金融科技领域，区块链可以基于分布式账本技术实现金融交易和资产管理，消除可信的第三方，加速交易服务。在保险领域，区块链可以帮助识别欺诈性索赔和遗弃的保单，从而构建透明、风险可控的系统。
+
+区块链的加密特性赋予保险公司对被保险资产的所有权。物联网（IoT）指任何连接互联网的设备。区块链在物联网方面的应用范围极广 \[25\]，包括智能家居应用、云集成、智能城市等。医疗保健产生大量数据，包括每日患者监测报告、临床研究管理、保险索赔处理以及医疗信息的归档。
+
+区块链在医疗保健领域实现了患者、医生和保险公司的记录去中心化。教育领域的区块链应用仍在试点阶段，可能用于身份管理、数字证书、区块链-enabled 证书等，使用户能够与希望验证的对象共享学术成就。电子投票让人们能够安全投票，由于区块链数据不可篡改，防止了假票行为。
+
+供应链是另一关键行业，区块链在此领域具有巨大的潜力。它可以传输产品、追踪物品、在发现运输缺陷时进行赔偿，并实现更快、更便宜的交易。区块链可提升供应链效率。如前所述，区块链的应用不止于这些，研究人员正在尝试将区块链应用于更多领域。
+
+下面详细描述其在上述领域的应用。
+
+#### 4.5.8.1 经济学
+
+*   快速、安全且低成本地处理支付，无需中介。
+
+*   实时转账和结算。
+
+*   减少全球支付摩擦。
+
+*   降低国际支付的摩擦成本。
+
+*   无需清算中心即可进行财务结算。
+
+*   无需经纪即可交易数字股票。
+
+*   通过自动化流程、支付和结算，增强贸易融资；降低欺诈风险；更快、更便宜的货物追踪；更快的文档传输。
+
+#### 4.5.8.2 会计
+
+*   实现全新的方式来捕获、处理、验证和存储财务信息。
+
+*   实现实时、经验证、透明的会计。
+
+*   降低成本、错误和欺诈；减少对账；\[26\] 提供审计追踪。
+
+#### 4.5.8.3 保险
+
+*   防止欺诈，建立保险市场的透明度。
+
+*   自动化索赔处理。
+
+*   提升销售、客户 onboard、承保、索赔处理、资产转移、支付和再保险。
+
+#### 4.5.8.4 供应链管理
+
+*   增加供应链的问责、可见性和透明度。
+
+*   确保供应链合规，并在全链条上建立信任。
+
+*   在监控商品状态的同时验证商品的有效性和质量。
+
+#### 4.5.8.5 能源
+
+*   促进微网能源交换。
+
+*   实现微网交易，无需中央化管理方。
+
+*   提高智能电网能源交易的安全性和隐私性。
+
+*   支持数字货币电力交易。
+
+#### 4.5.8.6 广告与媒体
+
+*   低成本的互联网广告。
+
+*   直接连接数字广告和媒体参与者，省去中间环节。
+
+*   减少广告和媒体欺诈。
+
+*   增强媒体透明度。
+
+*   确保内容安全和版权。
+
+*   保护版权和媒体质量。
+
+*   保护版权和媒体质量。
+
+#### 4.5.8.7 法律
+
+*   智能合约帮助创建和执行法律协议，提升在线法律服务的信任度。
+
+*   增强法律数据的完整性和公开性。
+
+#### 4.5.8.8 房地产
+
+*   免除费用和佣金。
+
+*   保障交易安全。
+
+*   减少房产欺诈。
+
+*   当登记和转让数据记录在区块链上时，帮助投资者追踪房地产历史。
+
+#### 4.5.8.9 医疗保健
+
+*   安全共享医疗信息。
+
+*   赋予个人访问其医疗记录的权利。
+
+*   提升健康数据的交换。
+
+*   确保药品供应链的完整性。
+
+*   帮助构建用于健康数据和信息的标准数据库。
+
+*   通过数据交换、监控和维护，促进临床研究和分析。
+
+#### 4.5.8.10 物联网（IoT）
+
+*   为物联网安全提供智能合约。 
+
+
+
+-   增加设备的安全性和隐私性。
+
+-   创建物联网身份和访问管理的框架。
+
+### 4.5.9 架构结构
+
+区块链是一个由分布式共识、计算哈希和数字证书支持的去中心化网络。Figure 4.6 展示了区块链架构的六个组成部分。FIGURE 4.6
+
+![Figure 4.6 Architecture of BC.](img/fig4_6_B.jpg)
+
+Figure 4.6 Architecture of BC.
+
+#### 4.5.9.1 该数据层处理 Hiverse 信息
+
+该模块封装时间戳数据。区块主体包含已验证的消息，而创世块包含块描述、时间、Nonce、Merkle 根和哈希。新块的哈希与其父块的哈希相连。创建时揭示的已标记块。该层的时间戳和 Merkle 树是区块链所必需的。时间戳用于定位和跟踪区块链数据。这可能会将时间维度的区块链数据纳入，以便于数据重复。Merkle 树使用二进制哈希树来检查这些交易是否正确且存在。
+
+#### 4.5.9.2 网络层
+
+架构的核心是网络层，也称为点对点（P2P）。它调节节点之间的通信。它查找节点、交易、块，这些节点和块始终在接收新信息，并集成以展示区块链系统的工作方式。
+
+#### 4.5.9.3 共识层
+
+这是区块链的主体。它讨论共识机制。共识方法同步通信实体，并迫使参与者建立一致的合同，也称为一致意见，关于云交易数据状态。标准智慧方法为最重要的基站生成加密密钥。共识机制安全、连贯、活跃且廉价，但对故障敏感。
+
+#### 4.5.9.4 激励层
+
+激励模块鼓励模块验证区块链数据的安全。公共账本中的每个模块都会通过共识层的共识计算进行评估。即使在认证过程中，节点也会使用 CPU 和能量。区块链通过加密数字货币激励预期节点参与验证过程。组件的组装和启动过程包括两种奖励机制。
+
+#### 4.5.9.5 合约层
+
+它监控基于逻辑的交易查询。它涉及脚本、算法、逻辑合约等合约方面。共识机制是一组技术程序，用于在满足预定参数时激活以太坊区块链设备。智能合约使用高标准语法，如 EVM、Solidity 等。合约层结构清晰。合约层可能面临重入攻击、访问控制、结构僵化增加等威胁。
+
+#### 4.5.9.6 应用层
+
+它通过应用为客户提供功能。软件可以用任何计算机语言编写，并在多个平台上运行。区块链应用的安全性是一个挑战。交换服务器安全漏洞、DDoS 转移、工人主机保护、恶意代码感染、弱密码攻击、自私矿工攻击等。
+
+### 4.6 区块链在物联网：一场关键转型
+
+物联网传感器和边缘设备正在改变企业的运营方式。企业必须在物联网生态系统的所有层面保护信息。随着连接设备数量的增长，数据安全变得更加困难。区块链有助于物联网安全。区块链和物联网实现机器对机器的交易。它使用记录、验证和分布式账本的数据库条目。物联网和区块链提供潜在优势，并使智能设备能够在没有中央化权威的情况下独立工作。
+
+它监控设备通信。区块链的去中心化特性可能是物联网的顾虑。物联网系统使用集中式客户端-服务器或枢纽-辐射式架构。构建去中心化物联网平台确保其能与区块链网络协作，但设置物联网传感器以便它们能够自行处理计算和数据存储可能很困难。区块链与物联网在银行、金融、汽车和农业中应用。智能家居、供应链、物流和智能合约利用物联网。智能合约在物联网环境中使用区块链自动执行合约。这使得智能设备可以在没有中心化权威的情况下运行。
+
+这种区块链应用帮助组织管理物联网边缘设备上的数据，节省维护和传输费用。没有集中式数据存储库，且账本对网络攻击具有抵抗力，减少了数据管理的担忧。它消除了物联网网关或任何其他中间人员用于交换数据，从而减少了处理时间。
+
+区块链通过去中心化、分布式账本加密设备数据。分布式账本将数据处理和存储分布到数百万设备上。在传统架构中，设备、服务器或网络故障可能会中断整个物联网生态系统。在许多情况下，区块链网络足够有弹性，即使节点关闭，网络仍能继续运行。
+
+许多物联网生态系统因访问控制不足和客户端/服务器设计不当而容易被劫持。DDoS 攻击通过向目标或附近基础设施淹没 Internet 流量来干扰连接设备的正常流量。Mirai 和 Hajime 物联网僵尸网络揭示了易受 DDoS 攻击的设备。
+
+区块链的分布式安全架构保护物联网免受基于僵尸网络的 DDoS 攻击。在这种设计中，每个网络设备都使用区块链点对点网络。区块链与物联网技术仍处于早期阶段，多家 IT 企业正在探索它。
+
+IBM 区块链平台让公司能够将区块链扩展到认知物联网，将物联网与认知计算相结合。技术问题和运营问题已减缓了物联网区块链的部署。在包含大型集中式账本的区块链系统中，可扩展性和存储是重要挑战，而将账本保存在边缘节点是浪费的，因为边缘智能设备无法处理大量数据或处理能力。
+
+该概念仍然很年轻，但未来可能产生重大影响。标准化的安全要求将促进物联网-区块链的采用。区块链可以通过实现数据透明性和点对点连接来提升 Internet 安全性。
+
+下面是区块链的组件：
+
+-   完整节点负责存储、验证、接受和拒绝所有交易。相比之下，部分或轻量节点不存储整个区块链账本；相反，它仅保留交易哈希。该哈希值作为入口，可用于访问完整交易，非常适合存储和 CPU 资源有限的环境。
+
+-   账本是指数字数据库，特别在节点之间进行加密货币交易的上下文中相关。在这个领域，三种不同的账本共存。
+
+-   公共账本：公开的，所有用户都有访问权限。任何人都可以读取或在区块链上写入。
+
+-   分布式账本：所有节点都有本地数据库的副本。节点组验证交易并贡献块到区块链。没有单个节点或节点组控制这个去中心化账本。每个节点都执行该任务。
+
+-   钱包：数字钱包作为比特币的存储设施。区块链节点都有钱包。公钥和私钥对保护钱包的隐私。钱包中的资金广泛接受，无需转换。
+
+-   哈希：哈希减小数据大小。它用于密码学。在区块链网络中，一个交易的哈希值是另一个交易的输入。
+
+## 4.7 实施区块链技术在物联网中的困难
+
+
+
+
+将区块链与物联网相结合赋予了巨大的可能性，并解决了众多物联网难题。然而，集成仍面临新开发的障碍，这为现代研究思路打开了道路。文献主要集中在区块链如何改进物联网的设计和应用。IoT-Blockchain 提升了物联网的安全性、可追溯性、透明度、效率和信任度。在完全展现集成潜力之前，研究人员必须解决其缺陷。区块链最初是为强大的计算机在互联网范式中设计的，而物联网并非如此。本节讨论了许多物联网-区块链集成问题。
+
+### 4.7.1 物联网资源受限
+
+资源受限的物联网设备包括传感器、RFID 标签和智能电表。这些设备的计算能力、网络能力、存储能力和电池电量均较弱。区块链有独特的需求。首先，共识机制需要大量计算资源，这对于低功耗物联网设备来说效率低下。其次，区块链数据量庞大，单个物联网设备难以存储，尤其是物联网实时生成大量数据。
+
+第三，区块链假设网络连接稳定，但物联网可能因节点故障（如电池耗尽）而出现网络差或不稳定，在大多数情况下，物联网设备的状态只能在测试后才能发现；在其他情况下，设备长时间正常工作，但因断开连接、短路或软件过时等原因，情况会发生变化。
+
+### 4.7.2 安全性脆弱
+
+许多行业采用无线网络，因为其可扩展且易行。无线网络易受被动窃听、干扰、拒绝服务等攻击。由于物联网设备资源受限，在分散环境中维持公钥/私钥加密技术较为困难。许多物联网系统包含处理能力参差不齐的设备，因此无法保证所有设备都能以相同速度运行加密算法。恶意节点窃取区块链通信，延迟区块广播。
+
+### 4.7.3 物联网设备的移动性和命名
+
+区块链网络拓扑与物联网不同，节点无法自动发现彼此。在比特币区块链中，发送者的 IP 地址包含在交易中并用于构建网络架构。许多物联网设备是移动的，因此该架构不切实际。
+
+### 4.7.4 集成系统的可扩展性
+
+区块链的可扩展性取决于物联网节点数量和并发工作负载。当前区块链的可扩展性限制了大规模物联网应用。物联网设备产生的实时数据量达 terabytes，区块链无法存储。比特币区块链可能不足以满足物联网需求。部分区块链每秒仅处理几笔交易，这成为物联网的瓶颈。联盟链或私有链通过解决此问题。联盟链系统包括 Hyperledger。
+
+### 4.7.5 网络隐私与交易保密性
+
+公共区块链很难保护物联网设备的交易历史。因为交易模式分析可能推断出公钥背后的用户或设备身份。根据隐私需求，组织应选择混合链或私有链。
+
+### 4.8 区块链与物联网的应用场景
+
+智能芯片和传感器的便携性和性能提升，使其能够实时与区块链交互。区块链与物联网的集成可实现设备间的服务市场，使公司能够从收集的数据中获益。区块链协议、联盟及物联网设备供应商的繁荣表明区块链在物联网行业的潜力。下一节概述一些利益相关者以及区块链与物联网交叉点的应用案例。需要注意的是，本节中提到的合作伙伴和公司并非德勤的官方推荐。
+
+1. 一群被称为“Chainof Things”(CoT)的区块链专家正在共同研究将区块链与物联网集成于工业、环境和人道主义情境的潜在收益。CoT 开发了名为 Maru 的硬件解决方案，利用区块链和物联网技术增强身份识别、安全性和互操作性。CoT 还开发了多个应用场景，包括“Chain of Security”（安全链）、“Chain of Solar”（光伏链）和“Chain of Shipping”（运输链）。
+
+2. IOTA 的 Tangle 账本降低了昂贵矿工的需求，实现快速交易结算和数据完整性（交易验证）。IOTA 能够处理物联网设备的海量微数据。Tangle 提供的账本具备机器间通信、无手续费的微交易以及抗量子计算的数据特性。IOTA 建立了一个购买和出售传感器数据的平台，并正在拓展数据分析洞察市场。
+
+3. Riddle & Code 提供加密标签以优化物流和供应链管理。通过将物联网设备与分布式账本网络集成，Riddle & Code 实现了物联网时代安全可靠的机器间交互。其解决方案提供了物理物体和机器的“可信数字身份”，从而桥接物理与数字世界，结合区块链优势与传统纸质文档。
+
+4. 区块链与物联网传感器的集成确保了涉及实物商品交易信息的可靠性。例如，Modum 传感器在运输过程中监测环境条件（如温度）。货物到达目的地后，传感器数据会与区块链智能合约比对，验证交付是否满足发送方、客户或监管机构的要求。智能合约触发多种操作，如向发送方和接收方发送通知、释放产品或启动支付。
+
+### 4.9 区块链在物联网中的作用
+
+区块链与物联网技术的集成创造了降低低效、增强安全性和提升透明度的新机遇。这些技术使得能够贯穿物理资产全生命周期（从原材料开采到销售到最终用户）的监控成为可能，帕尔克（Parekh）表示。通过这些技术，可从原材料开采到最终客户销售的全过程追踪实物资产。
+
+1. **安全**：区块链技术可验证并授权来自可信来源的交易，并在传输和存储时加密数据。区块链提供了交易、交互和访问的透明度。通过加密、消除单点故障以及能够立即定位网络弱点，区块链使系统更安全。
+
+2. **成本削减与自动化**：区块链交易的验证与处理若能更自动化，整个生态系统可能会以更低成本主动运作。
+
+3. **交易速度**：在各供应商、制造商、分销商和客户之间，区块链使不信任的各方能够即时共享信息，省去耗时步骤，加速交易。
+
+4. **透明度**：得益于云计算，物联网现在能够实时分析和处理数据，云计算推动了物联网系统的发展。然而，数据透明度仍缺失，参与者很少知晓其数据的预期用途。
+
+### 4.9.1 从多方面提升物联网安全与可扩展性
+
+
+
+
+-   [区块链的不可篡改分布式账本消除了信任的需求。没有任何单一组织控制所有物联网（IoT）数据。使用区块链存储 IoT 数据将为网络安全提供另一种程度的保障。区块链更强的加密使得数据几乎无法被擦除。区块链允许任何拥有网络访问权限的用户追踪先前的交易。这可能有助于识别数据泄露的来源并及时采取行动。
+
+区块链允许快速处理交易并协调设备。随着联网设备数量的增长，分布式账本技术可以处理更多交易。区块链可能帮助 IoT 企业通过消除 IoT 网关处理开销（例如传统协议、硬件或通信开销成本）来降低费用。智能合约是一种在区块链上保存的双方协议，可根据指定参数执行合同协议。智能合约可在满足服务要求时自动触发支付，无需人工干预。
+
+## 4.10 Blockchain and IoT Integration
+
+通过与物联网（IoT）关联的转变和简化手动操作，区块链将它们带入数字时代，并收集大量数据，从而实现了前所未有的知识水平。毫无疑问，IoT 和区块链各自在时代发展中发挥着重要作用。两者的结合在数字世界的发展中具有极其重要的作用。
+
+### 4.10.1 结合区块链和 IoT 的可能性
+
+IoT 系统的异构性、互操作性差、IoT 设备资源受限以及安全和隐私漏洞只是 IoT 系统必须面对的几个问题。IoT 系统可以从区块链技术的更高互操作性、更强隐私保护和增强安全性中获益。此外，区块链有潜力提升 IoT 系统的可扩展性和可靠性。我们将这种区块链与 IoT 的连接简称为 BCoT。与现有 IoT 系统相比，BCoT 提供以下潜在优势。
+
+### 4.10.2 改进 IoT 系统兼容性
+
+IoT 数据可转换并存储在区块链上，从根本上提升 IoT 设备的互操作性。在该过程中，多种 IoT 数据类型会被转换、处理、检索、压缩，然后存储在区块链中。由于区块链基于每个人都能访问互联网的 P2P 叠加网络构建，互操作性也体现在在不同碎片化网络之间轻松切换的便利性上。
+
+### 4.10.3 增强 IoT 系统安全性
+
+IoT 数据可通过区块链进行保护，具体做法是将数据作为受数字签名和椭圆曲线数字签名算法（ECDSA）等加密密钥保护的交易存储。利用区块链技术（如智能合约），IoT 系统还可以自动更新固件以修复安全问题并提升整体安全性。
+
+### 4.10.4 IoT 数据可追溯性和可靠性
+
+区块链上的数据随时随地可定位和验证。同时，可以追踪区块链上保存的每一笔历史交易。例如，已有工作开发出一种基于区块链的产品可追溯系统，为供应商和零售商提供可追溯服务。这使得可以检查并确认商品的真实性和质量。由于区块链交易不可篡改或伪造，区块链的不可变性确保了 IoT 数据的准确性。
+
+### 4.10.5 IoT 系统具有自主交互能力
+
+IoT 组件或设备可以通过区块链技术实现自动交互。例如，建议使用分布式自主公司（DACs）在传统角色（如政府或企业）不参与支付时自动化交易。DACs 可借助智能合约实现自主运行，无需人工干预，从而降低成本。
+
+## 4.11 Blockchain and IoT Opportunities
+
+BC-IoT 集成带来多项优势。它同时打开了两扇门。以下是一些机会：
+
+*   建立各方信任：区块链安全的 IoT 将在联网设备之间建立信任。只有经过验证的设备才能在网络上交互，矿工必须在将区块加入区块链前验证每个交易块。
+
+*   成本降低：通过消除中间方、简化流程并去除发送方和接收方之间的任何中介，实现成本降低，使交易变得直接。
+
+*   缩短时间：交易从天数缩短至秒数。
+
+*   提供安全和隐私：保护设备及信息的安全和隐私。
+
+*   社会服务：此方法为联网设备提供社会和公共功能。所有联网设备均可进行通信和数据交换。
+
+*   金融服务：此方法安全转移资金而无需第三方。提供快速、安全且保密的金融服务。转账时间和费用均有降低。
+
+*   风险管理：该策略在分析和降低资源及交易失败风险方面发挥了关键作用。
+
+## 4.12 结论
+
+物联网（IoT）在交通、医疗、工业、物流、电网等领域具有诸多益处，因为它连接能够计算、通信并传输关键信息的物体。IoT 安全至关重要。本章讨论了区块链如何保障 IoT 网络的安全。我们倡导区块链与 IoT 的协同集成，以提升 IoT 设备的连接性和安全性。我们还讨论了区块链在 IoT 中的应用。我们还阐述了使区块链能够在 IoT 网络内运行所面临的障碍和未来研究方向。将区块链纳入 IoT 网络并不容易，需要产业界和科研界共同努力。本章提供了对区块链与 IoT 的全新视角。文中提及了机遇和挑战，并列出了平台。该技术未来可能取代当前的互联网系统，实现一种每个智能设备均通过 P2P 网络实时连接其他设备的体系。通过将实时信息传输给正确的设备，它可以节省时间和金钱。未来可能会派上用场。我们将在未来创建基于区块链的 IoT 安全解决方案。
+
+## 4.13 未来工作
+
+以下点被确定为我们未来工作的考虑因素：
+
+*   未来，区块链与人工智能/机器学习的更深度融合有望催生更智能、更适应的 IoT 系统。这可能包括利用区块链安全存储和共享用于 AI 训练和推理的数据，或利用 AI 提升区块链网络的效率和可扩展性。
+
+*   边缘计算是一项新兴技术，指在网络边缘（即数据生成地点）进行数据处理。未来，区块链与边缘计算的更深入融合有望为 IoT 应用创造更高效、更可扩展的系统。
+
+*   随着 IoT 设备产生越来越多的数据，隐私和安全的需求日益重要。未来，可能会出现更先进的隐私保护技术，如零知识证明和安全多方计算，以确保敏感数据的机密性。
+
+*   区块链网络的能耗是主要关注点，尤其是随着物联网设备数量不断增长。未来，可能会出现更节能的共识机制，如证明权益（PoS）或证明权限（PoA），以降低区块链网络的能耗。
+
+*   智能合约是区块链技术的关键特性，能够自动化复杂流程。未来，可能会出现更高级的智能合约，能够整合机器学习等先进技术，打造更智能、更适应的系统。
+
+## REFERENCES
+
+
+
+1. A. Rayes and S. Salam, 物联网从炒作到现实：数字化之路，第 2 卷，Springer Cham, 2017.
+
+2. A. Pal, “物联网：将炒作变为现实”，IT Professional，第 17 卷，第 3 期，第 2–4 页，2015.
+
+3. A. Rayes and S. Salam, “物联网（IoT）概览”，在 A. Rayes 和 S. Salam 编辑的《物联网：从炒作到现实》一书中，Springer，2019，第 1–35 页。
+
+4. N. Kshetri, “区块链能否增强物联网？”，IT Professional，第 19 卷，第 4 期，第 68–72 页，2017.
+
+5. T. Alam, “区块链及其在物联网（IoT）中的作用”，arXiv 预印本 arXiv:1902.09779，2019.
+
+6. O. Alfandi, S. Khanji, L. Ahmad, and A. Khattak, “通过区块链提升物联网安全与隐私的调查”，Cluster Computing，第 24 卷，第 1 期，第 37–55 页，2021.
+
+7. G. F. Hurlburt, J. Voas, and K. W. Miller, “物联网：一次现实检验”，IT Professional，第 14 卷，第 3 期，第 56–59 页，2012.
+
+8. M. Dabbagh and A. Rayes, “物联网安全与隐私”，在 A. Rayes 和 S. Salam 编辑的《物联网：从炒作到现实》一书中，Springer，2019，第 211–238 页。
+
+9. B. P. Rao, P. Saluia, N. Sharma, A. Mittal, and S. V. Sharma, “云计算在物联网与传感器基于应用中的作用”，在 2012 第六届传感技术国际会议（ICST）上，IEEE，2012，第 374–380 页。
+
+10. D. Singh, G. Tripathi, and A. J. Jara, “物联网调查：未来愿景、架构、挑战与服务”，在 2014 IEEE 物联网世界论坛（WF-IoT）上，IEEE，2014，第 287–292 页。
+
+11. A. Saint, “物联网的下一步是什么？”，Engineering & Technology，第 10 卷，第 1 期，第 72–75 页，2015.
+
+12. A. Gupta, T. Tsai, D. Rueb, M. Yamaji, and P. Middleton, “预测：物联网——端点和关联服务，全球，2017”，技术报告，2017.
+
+13. N. Sharma, M. Shamkuwar, and I. Singh, “物联网的历史、现状与未来”，在 V. E. Balas、V. K. Solanki、R. Kumar 和 M. Khari 编辑的《智能世代的物联网与大数据分析》一书中，Springer，2019，第 27–51 页。
+
+14. G. E. Moore et al., “数字集成电子器件的进展”，在 Electron devices meeting，第 21 卷，1975，第 11–13 页。
+
+15. S. Madakam, V. Lake, V. Lake, V. Lake et al., “物联网（IoT）文献综述”，Journal of Computer and Communications，第 3 卷，第 05 期，第 164 页，2015.
+
+16. A. Gyrard, G. Atemezing, C. Bonnet, K. Boudaoud, and M. Serrano, “利用 lov4iot 统一和重用物联网的背景知识”，在 2016 IEEE 第四届未来物联网与云计算国际会议（FiCloud）上，IEEE，2016，第 262–269 页。
+
+17. S. S. Sarmah, “理解区块链技术”，Computer Science and Engineering，第 8 卷，第 2 期，第 23–29 页，2018.
+
+18. M. Crosby, P. Pattanayak, S. Verma, V. Kalyanaraman et al., “区块链技术：超越比特币”，Applied Innovation，第 2 卷，第 6–10 期，第 71 页，2016.
+
+19. S. Underwood, “比特币之外的区块链”，Communications of the ACM，第 59 卷，第 11 期，第 15–17 页，2016.
+
+20. K. Omote, M. Yano et al., “比特币和区块链技术”，在 Makoto Yano、Chris Dai、Kenichi Masuda 和 Yoshio Kishimoto 编辑的 `Blockchain and crypt currency` 中，Springer，2020，第 129 页。
+
+21. K. Koshechkin, G. Lebedev, G. Radzievsky, R. Seepold, and N. M. Martinez, “区块链技术项目提供远程医疗服务：系统综述”，Journal of Medical Internet Research，第 23 卷，第 8 期，第 e17475 页，2021.
+
+22. S. Ølnes and A. Jansen, “区块链技术作为电子政务的支持基础设施”，在电子政务国际会议上，Springer，2017，第 215–227 页。
+
+23. D. Yaga, P. Mell, N. Roby, and K. Scarfone, “区块链技术概览”，arXiv 预印本 arXiv:1906.11078，2019.
+
+24. P. Treleaven, R. G. Brown, and D. Yang, “区块链技术在金融中的应用”，Computer，第 50 卷，第 9 期，第 14–17 页，2017.
+
+25. J. Wu and N. K. Tran, “区块链技术在可持续能源系统中的应用概览”，Sustainability，第 10 卷，第 9 期，第 3067 页，2018.
+
+26. Y. Guo and C. Liang, “区块链在银行业的应用与前景”，Financial Innovation，第 2 卷，第 1 期，第 1–12 页，2016.
+
+# 5 AI and Blockchain-Enabled Onion Routing Protocol to Secure IoT Communication
+
+Maitri Patel, Nilesh Kumar Jadav, and Sudeep Tanwar
+
+Institute of Technology, Nirma University, Ahmedabad, India
+
+Mohammad S. Obaidat
+
+University of Jordan, Amman, Jordan
+
+University of Science and Technology Beijing, Beijing, China
+
+SRM University, India
+
+DOI: [10.1201/9781003326236-5](https://dx.doi.org/10.1201/9781003326236-5)
+
+## 5.1 Introduction
+
+Modernization with groundbreaking technologies, such as the Internet of Things (IoT), artificial intelligence (AI), and blockchain, has uplifted the Internet. IoT technology has attracted many real-time applications, such as smart healthcare systems, smart cities, Industry 5.0, and many more, to strengthen the nation’s economy and people’s quality of life. Numerous IoT devices are interconnected with physical machines to offer diverse use cases at hyper-scale. Figure 5.1 shows the forecasting data, i.e., the number of IoT devices connected globally from 2019 to 2035 \[1\]. It consists of different small-scale physical devices that can sense their surrounding environment and collect and transmit the data to other physical devices to accomplish a shared task. For instance, temperature sensors are essential indicators for equipment checks in the smart industry. Any unexpected fluctuations or instabilities in the temperature reading indicate that the equipment is not working correctly. Such changes need to be sent to other temperature sensors and alert the administrator for predictive maintenance. Moreover, these sensors use IoT communication protocols, such as message queuing telemetry transport (MQTT), constrained application protocol (CoAP), data distribution service (DDS), and hypertext transfer protocol (HTTP), to communicate with each other. This enables different sensors to relay critical data via these communication protocols to offer proactive services.
+
+![Figure 5.1 Number of IoT devices connected globally (2019–2035) \[1\].](images/fig5_1_B.jpg)
+
+Figure 5.1 Number of IoT devices connected globally (2019–2035) \[1\].
+
+### 5.1.1 IoT Promotes Smarter Computing
+
+As IoT development progresses, knowledge systems and networks employed for autonomous communication also increase. We will then be surrounded, supported, and sustained by an increasing number of smarter systems in our classrooms, homes, businesses, food kiosks, and other vital locations. They will easily communicate, cooperate, corroborate, and correlate to comprehend our psychological, social, and physical requirements and meet them discreetly, securely, and unhurriedly. In other words, the appropriate information and services will be created, provided, and delivered to the right person at the proper time and location. The main drivers of this tectonic modernization and migration are primarily physical artifacts and assets. The world of conscious, linked, and cognitive computing will incorporate everything that is common, casual, and economical to benefit the users.
+
+### 5.1.2 IoT Paves the Way for Smarter Environments
+
+
+
+
+一系列配备高清互联网协议（IP）电视的电子设备预计将被整合到我们的生活、休闲和工作空间中。除此之外，所有实际和具体的商品、文章、家具和包装都专门制造了能够实现计算和通信的电子设备。以人为中心、更智能的环境是物联网技术和云基础设施结构所设想要实现的 `cvar = avar + bvar`。
+
+### 5.1.3 物联网规定个人便利
+
+IT 专家预测，日常技术会无缝且冲动地结合，形成一个技术集群，能够瞬间且直观地满足我们的个人和专业需求。也就是说，有可能我们的思维会透明地与机器人融合。由于我们可以通过任何辅助电子设备随时随地访问全球信息资源和知识库，学习将成为一项 24×7 的任务。另一方面，我们的大脑将拥有可靠的备份，存储在庞大的数字存储系统中。这些看似神秘且前沿的技术主题让我们能够以积极的方式将神经系统与计算机连接。将所有物质和有价值的事物转化为智能且有感知力的数字实体，强化了各国经济的支柱。
+
+## 5.2 物联网应用
+
+### 5.2.1 智能城市
+
+从标题可知，智能城市通过运用各种技术系统、传感器、前沿通信技术等实现智能控制。智能城市被视为物联网最具前景、最具启发性的应用之一。它用于建立传感器、物理设备和网络之间的牢固联系，从而在构建和创建智能城市时发挥作用。物联网在智能城市中的集成显著减少了系统控制和监控所需的人力 `cvar = avar + bvar`。智能城市被视为应对城市人口增长和快速城市化所带来的不足的新策略。通过构建智能交通、智能住宅、智能医疗等基础设施，可以让人们的生活更加便捷。
+
+人们可以借助智能城市系统找到解决难题的最有效途径。该系统大量使用无线通信渠道，如低功耗广域网（LPWANs）、射频识别（RFID）、无线传感器网络（WSNs）和光保真（Li-Fi），实现智能城市物联网数据的无缝传输到智能城市的各类应用中。图 5.2 显示了当前已在使用的众多智能城市应用以及未来研究的潜在方向。智能城市应用本质上围绕四个 distinct building blocks（四个 distinct 建筑块）展开，即数据收集、数据传输或接收、数据存储以及数据分析。数据收集是应用依赖的，一直是各领域传感器发展的主要驱动力。数据从采集设备传输到云端进行归档和分析是流程的第二步。随后，数据需要通过各种存储技术（如云存储）进行整理和组织，以辅助分析阶段。数据分析是从获得的数据中得出结论和模式，以用于决策。在其他情况下，简单的决策和聚合也能够有效完成。云的可用性使得能够使用统计技术（如机器学习和深度学习算法）对异构数据进行收集、处理和实时分析，实现更复杂的决策。下面讨论几个智能城市应用。
+
+![Figure 5.2  Applications of smart city.](img/fig5_2_B.jpg)
+
+Figure 5.2  Applications of smart city.
+
+*   **智能建筑**——智能城市为国家的长期发展提供充足且持久的基础设施。通过构建智能基础设施，使设计和施工更加系统、结构化且保守。物联网应用被嵌入智能基础设施，使各经济领域（如商业、工业、环境等）的系统更加智能。例如，在智能建筑（如电梯）中使用运动探测器检测人员是否在内部；若人在电梯内，则电梯运行；否则不运行，从而提升系统的能源效率 `cvar = avar + bvar`。
+
+*   **智能照明**——在构建智能照明系统时，常用光电二极管、接近传感器和环境光传感器。光节点内置的传感器会根据光强（由光传感器和运动传感器测量）以及运动情况发出灯光指令。这些智能照明系统的覆盖区域根据潜在的人口或活动进行划分，系统能够准确测量照度水平，并在选择所需的光照水平后进行计算和功率削减，以提升系统效率。
+
+*   **智能道路**——通过智能道路技术，车辆可以被监控，交通灯可依据车流流动进行调节。利用物联网和传感器技术建造的智能道路让驾驶更安全、更舒适。它为驾驶员提供关于交通、停车、路况、天气、最短路线以及道路障碍的实时信息。智能道路在通过危险地形和不平整路面时，借助多种传感器提高行车安全，增加行人安全，降低事故概率，从而提升公共安全 `cvar = avar + bvar`。
+
+### 5.2.2 智能住宅
+
+智能住宅是智能城市的重要组成部分，因为它是城市居民生活的核心。由于人们大部分时间都在家中，家务自动化至关重要。各种外设和数字技术正在被改造，以便快速且便捷地创建和维护更智能的住宅。为了显著提升生活质量，未来的居住环境广泛而显著地使用无线宽带通信、环境、灵活且自适应的传感器以及与其他高级系统集成的技术 `cvar = avar + bvar`。这是一种普遍的计算技术应用，将智能融入家庭的管理和维护，以实现便利、健康、安全和节能。通过巧妙结合特定场景，可识别出众多智能住宅复合应用。以下是一些智能住宅应用的概述。
+
+*   **居家安全**——无论是在家中还是工作场所，嵌入于门、窗等不同家庭组件的安全传感器可以防止犯罪活动。IP 网络安全摄像头提供坚固、不可破坏且不可渗透的安全。入侵检测与防止系统是其他重要的安全组件。家庭安全还通过能够即时向业主、邻居或警察、消防部门发出警报的建筑或家庭传感器得到增强。这些设施还能让家庭成员远程检查老人和儿童的健康状况。
+
+
+
+
+*   Home networking - 所有惰性和被动物体都在实现数字化，并以无线和巧妙的方式与各种家用电子设备进行网络连接。这使得设备之间能够连接、交互（点对点或通过中间件），并创建以人为中心、互连、嵌入的电子服务。普遍的互联网也使得家庭网络能够与外部世界进行交互。这使得远程管理、监控和维护家用电器成为可能。家庭系统还与汽车电子、导航和多媒体系统、停车管理系统以及其他设备连接，实现实时通信和互动。
+
+*   Energy conservation - 未来的电力需求将促使对住宅电器进行分钟级调节，以优先提供能源服务，同时为用户自动节约能源。通过依据家庭的环境条件和用电习惯，并同步灯光、家用电器以及气候和温度传感器，最小化能源消耗。建筑自动化系统（BAS）对于简化使用者需求至关重要。随着智能电网的接入，BAS 在保护有限的电力能源方面的重要性显著提升。
+
+*   Health and wellness - 医疗提供者可以通过植入客户体内的生物传感器或其他医疗设备，或在客户家中使用这些设备，而无需住院，从而持续监测客户的健康和福祉。智能家居传感器可以持续监测包括健康和福祉在内的高级指标。这些电子健康设备可以收集当前健康状况的评估数据，以维持整体健康并预防疾病。
+
+### 5.2.3 Smart Healthcare Systems
+
+医疗行业正处于应对当前诸多问题的技术进步中，这些问题因老旧设施以及过去未能及时采用适当技术而加剧。医疗行业产生的海量大数据是另一大主要问题。这些巨大的数据量需要存储基础设施和技术。患者态度和心态的转变也增加了这些问题。就他们与医疗服务提供者互动的质量而言，患者现在不愿做出任何妥协。患者已不再容忍因缺乏特定基础设施组件而导致的长时间等待。通过确保患者在正确时刻获得适当的护理，物联网（IoT）为医疗行业带来了巨大的希望。
+
+#### 5.2.3.1 Clinical Monitoring and Remote Consultation
+
+患有特定慢性疾病的患者必须持续监测其关键生理指标。这些患者通常被安置在医院的重症监护单元（ICU）。物联网驱动的非侵入性监测技术使这种监测成为可能，它利用传感器收集患者多项关键生理指标的详细数据（如图 Figure 5.3 所示）。这些传感器收集的信息通过无线网络和网关实时传输给家属和护理人员，以便他们能够最佳地照顾患者。传统的由医护人员在医院进行的持续面对面监测已被 IoT 技术所取代。它为慢性病患者提供了更便捷的居家医疗，且价格合理。此外，居住在偏远地区的个人通常缺乏持续健康监测的机会。对于此类患者，通过无线技术和物联网连接的传感器使健康监测成为可能。这些无线系统利用传感器收集身体数据，使用先进算法进行评估，并将结果与医疗专家共享，以提供患者相关的健康建议。根据患者的具体需求及其是否需要针对老年人或慢性病患者的专科护理，所使用的参数、设施和流程可能会有所不同。以下是智能医疗应用的列表。
+
+![Figure 5.3  Services offered by smart healthcare systems.](img/fig5_3_B.jpg)
+
+Figure 5.3  Services offered by smart healthcare systems.
+
+*   Mobile health care—Mobile health care (mHealth) 是利用便携电子设备进行通信和健康相关用途的技术。全球对该主题的兴趣日益高涨。推动移动设备在医疗行业使用的主要因素包括移动设备的普及、高速无线网络的可及性以及它们对大量人群日常生活的影响。此外，政府对世界各地许多地区持续存在的医疗专业人员严重短缺也表示关注。医疗行业的调查显示，移动健康服务在农村和资源有限的环境中更具可及性和效果。eHealth（利用信息通信技术提供与医疗相关的服务）催生了 mHealth。
+
+*   Remote Monitoring—该概念旨在提供虚拟的医疗治疗和咨询、药物递送以及治疗程序，前提是患者能够获得远程连接、视频会议及其他交互式技术。全球许多国家已常规在远程进行患者筛查。其主要目标是为那些因居住在农村地区或因工作繁忙无法亲自就医的人士提供高质量的医疗服务。远程手术（telesurgery）的发展，利用机器人和护理人员进行治疗，也是另一项令人期待的创新。
+
+*   Convenience for aged people—该应用的主要目标是为老龄化人口提供持续的身体参数监测。可穿戴设备（可在不进行人工干预的情况下跟踪患者的身体参数）是实现此目标的关键设备之一。从老年人身上收集的身体测量数据会传输到普通移动设备，该设备作为网络节点，实时将数据转发给医生。如果发现异常，这些信息可用于及时为患者提供适当的医疗护理。为确保参与度和在正确时机提供正确的治疗，该程序还包括向当地医院和患者家属发送提醒消息的选项。
+
+### 5.2.4 Smart Agriculture
+
+
+
+
+-   [2030 年联合国可持续发展目标](https://example.org/2030-sustainable-development-goals)的最重要元素之一是**食品安全**。全球人口的不断增长和气候变化的恶化正导致世界各地食物生产区出现不可预测的天气模式，各国正竭尽全力证明**食品生产的可持续性**，并优化像水等日益减少的自然资源的使用。数字化有助于实现农业的可持续性。**智能农业**通过在农场和作物中部署传感器来测量各种指标，从而辅助决策，预防疾病、害虫及其他问题 \[9\]。智能农业框架包括**精准农业**，需要在作物中嵌入传感器以提供精准测量，随后实现定制化护理机制的部署。精准农业对于可持续农业生产至关重要，因为它是未来粮食安全的必要条件。物联网（IoT）正通过提供多种工具，帮助农民解决在田间面临的各类问题，从而**彻底革新农业领域**。传感器和执行器用于调节农业作业，而无线传感器网络（WSN）用于监测农场。借助 IoT，农民可以在任何地点使用手机检查农田状况。IoT 赋能的技术可以提高土地生产力并降低种植成本。以下是 IoT 基于智能农业的一些关键好处的总结：
+
+*   **移动性**——实施 IoT 的一个优势是流程适应性的提升。由于实时监测和预测工具，农民能够迅速应对天气或土壤、作物状况的重大变化。得益于新兴的 IoT 技术，农业工人能够在极端天气变化来临时挽救作物。
+
+*   **可持续流程**——除了节约水和能源、使农业更环保外，精准农业还显著降低了农药和化肥的使用量。其结果是，与传统农业方法相比，智能农业能够提供更好的有机产品。
+
+*   **自动化作业**——如播种、灌溉和收获等作业被自动化，以节约资源、减少人为错误并整体降低成本。
+
+*   **食品安全与营养**——农业部门面临确保适当产量的同时提供营养均衡食品的挑战。已有多起食品盗窃指控，包括伪造、掺假和人为篡改 \[10\]。此类欺诈可能对个人的健康和财务安全产生负面影响 \[11\]。采用 IoT 技术可识别 Manning \[12\]中讨论的各类食品盗窃问题，包括产品真实性、流程完整性、个人完整性和数据完整性。
+
+*   **远程设备控制**——IoT 的一个所谓优势是远程控制设备 \[13\]。与工作人员通过车辆或步行手动巡查大片田地相比，IoT 在农业中的渗透能够大幅节省人力和费用。通过 IoT 决定何时、如何施用农药或化肥，可降低成本和浪费。
+
+*   **实时监测**——IoT 能够实时监测农场资产和机械设备，以发现欺诈、加速部件更换并确保及时维护。
+
+### 5.2.5 智能供应链管理
+
+通过精确调控供应商的流动，智能供应链的概念能够管理从客户到客户的整个物流链，无论其位置如何。这种控制既满足**质量要求**，又实现**降低成本**的目标。IoT 和区块链是两项正在发展的技术，用于实现这一性能。前者旨在将所有设备连接至网络化系统；后者则保证已完成的 IoT 操作，并通过提供安全可靠的数据通信来确保其可靠性。供应链管理（SCM）需要协调多个事件、循环和资源。因此，区块链能够提供**安全性、真实性和所有权**，同时节省时间 \[14\]。供应链多年来为解决方案提供了支持，如货物追踪和库存数据通信。嵌入企业内部的设备和传感器可以根据压力、温度、机器使用情况等特性，在处理工作流程数据、设备切换设置以及借助 IoT 赋能系统实现最佳性能时，发送和接收数据。为使行业保持敏捷和灵活，供应链必须是智能的。IoT 可以通过在产品内嵌 RFID 芯片并利用智能标签实时监测商品可用性，帮助零售运营和 SCM；商家可以据此优化各类应用。当消费者在商店中找不到所需商品时，这会导致销售损失。借助 IoT，这类零售损失可以被最小化。此外，将零售店的数据公开后，整个 SCM 的物流可以得到优化。制造商还能根据商店销售数据和库存情况，生产并运送正确数量的商品，从而避免过产或不足生产。
+
+### 5.3 物联网通信中的安全与隐私问题
+
+云、大数据和移动技术在 IoT 基础设施中交织在一起。每一项技术元素都可能受到众多安全漏洞和攻击的威胁，导致其运行不稳定。确认 IoT 基础设施元素已得到充分的安全防护，以免受到潜在威胁至关重要。信息技术组件的安全（如完整性、隐私和可用性）是 IoT 架构安全的重要考量因素 \[15\]。在对 IoT 应用进行安全检查时，需要评估以下安全参数：
+
+*   **完整性**——它保证只有授权用户才能修改底层数据，且未经授权的用户无法以任何方式重新定向数据。写入、删除和更新等操作均属于数据重新定向的范畴。
+
+*   **隐私**——它保证底层数据仅对授权用户可访问。换言之，隐私通过限制通过 IoT 基础设施传输和存储的数据的访问来保护数据隐私。
+
+
+
+
+可用性—它确保底层数据在需要时可供授权用户访问。这涉及在物联网基础设施中确保容错能力的包含。容错通过在物联网基础设施的每个组件（尤其是服务器、存储和网络）中提供备份组件来实现。将服务器集群以创建高可用性环境，有助于确保服务器备份。此外，必须确认备份服务器是主服务器的复制品，并在主服务器故障时可接替其角色。采用高度可扩展的独立磁盘冗余阵列（RAID）架构有助于确保存储备份，因为同一数据在多个磁盘之间进行条带和镜像，即使一块磁盘故障，数据也不会丢失，因为它保存在阵列中的其他磁盘上。为了保证任何网络组件的故障不会阻碍数据在网络中的传输，应在两个连接端点之间放置多个交换机、多个端口和大量电缆。
+
+此外，物联网通信使用传统的路由算法和协议，由于其简易的操作性，攻击者可以轻易目标化。例如，攻击者知道物联网通信使用公共 Internet，它正式基于传统路由算法，攻击者可以通过操纵路由表来利用这一点 \[16\]。攻击者可以在数据链路层进行攻击，例如地址分辨率协议（ARP），以操纵路由表。此类攻击可能危及物联网通信的性能。以下是物联网通信的安全和隐私挑战：
+
+*   隐私问题——在物联网中，设备被用于生活的各个领域；例如，智能手表有能力收集、存储和分析个人数据。物联网基础设施中的大多数设备允许收集设备凭证信息。由此可以推断，设备通过多个网络传输信息，且缺乏加密功能，这带来了更多的隐私问题。当物联网对象获取信息但未得到安全保护时，隐私风险主要上升。各种用户活动被匿名跟踪，以便进行分析以获取洞察。如果这些数据与不可靠的第三方共享，可能对用户造成严重危害。必须严格遵守政策和程序，确保只有授权用户和应用程序才能访问数据。
+
+*   缺乏加密——设备通常使用轻量级加密技术。由于实施了温和的加密方法，大多数设备无法加密数据。因此，必须采用强大且安全的加密方法，以构建安全架构。
+
+默认凭据——在大多数设备和传感器中，默认凭据（用户名或密码）通常被使用；然而，这是不恰当的，因为一旦黑客通过任何手段获得这些信息，网络就会受到实际威胁。默认密码通常简单易记，但如果长时间未更新凭据，会对网络构成危险。
+
+鉴于上述安全和隐私挑战，物联网应用成为攻击者的诱饵，他们针对关键应用，如医疗保健、银行、核电站、水处理厂和关键基础设施。由于物联网基于应用的大规模发展，它与 IP 网络集成，暴露于各种网络攻击（如图 5.4 所示）。这些网络通过远程连接可访问，攻击者有可能通过通信链接访问私人和敏感数据。已观察到大多数物联网系统中的攻击是入侵攻击，这可能导致其他攻击，如数据注入、会话劫持和破坏服务器及访问控制系统等服务。此外，物联网使用弱协议，不支持强有力的密码学，因为其计算成本高。物联网基础设施中的设备本质上嵌入了无线传感器网络（WSN） \[17\]。由于采用广播传输介质，WSN 特别容易受到物联网安全威胁。以下是一些关键 WSN 威胁：
+
+![Figure 5.4 Security issues in WSN-based IoT systems](img/fig5_4_B.jpg)
+
+Figure 5.4 Security issues in WSN-based IoT systems
+
+*   物理篡改——最近，所有物理设备都配备了感知能力，以便正常运作并造福社会。然而，物理保护设备并防止不必要的物理可及性仍然具有挑战性。攻击者可以篡改节点或传感器的信息，从而危及传感器网络的整体性能。
+
+*   节点复制——在本攻击中，现有传感器节点的标识在同一网络中被复制。复制后的新节点会导致数据包路由错误，表现为错误的传感器值，甚至可能导致网络崩溃 \[18\]。
+
+*   选择性转发——在无线传感器网络（WSN）中，预期所有节点都将消息传送到目标。在选择性转发中，恶意节点随机转发数据包，即洪 loods 网络。部分消息可能直接丢弃而不转发。由于攻击者通常修改少数特定节点的数据包，然后转发，因此不易察觉该节点的恶意行为。修改后的数据包扰乱物联网应用的日常活动。
+
+*   蠕虫攻击——这是一种恶意攻击，攻击者在网络的某一点记录数据包后，将其隧道至新的目的地。此过程也可以选择性实施。当基于路由的消息被隧道时，正常业务运行会受到干扰 \[19\]。
+
+*   斯科攻击——当攻击者在点对点拓扑中拥有多个身份，并且同时存在于多个位置时，这种攻击得以实施。如果在攻击前系统被攻击者接管，则可以实现此攻击。在该网络中，单个节点显示多个身份，显著降低了故障容错机制（如差异、分散存储和多路径）的有效性 \[20\]。
+
+*   窃听——入侵者在两个节点之间通过公共网络界面传输信息时进行窃听。信息本身未被篡改，但隐私受到侵犯。入侵方可以利用此知识对用户进行威胁 \[18\]。
+
+## 5.4 Theoretical Background
+
+本节介绍关键使能技术，以降低物联网应用中的安全威胁影响。
+
+### 5.4.1 洋葱路由
+
+
+
+为维护物联网（IoT）基础设施的隐私，必须隐藏通信的接收者及其内容，即流量分析。大多数 IoT 连接采用单层加密策略，这使得拥有强大计算资源的对手相对容易破解密码并泄露消息。因此，能够保证匿名性的更强的多层加密变得必要。通用的“洋葱路由”（Onion Routing，OR）架构允许在公共网络上进行私密通信 \[21\]。它提供高度抗流量分析、数据注入和窃听的匿名连接，可适用于面向双向、近实时的面向连接和无连接流量。通过专用代理，OR 能够与商用应用软件和系统通信，使用匿名洋葱节点池加密数据的多层，实现将其集成到现有系统中的简便方式 \[22\]。根据源到目的的通信，从该池中随机选取若干节点（洋葱路由器）。每个节点使用 RSA 算法生成的共享密钥，去除一层加密，就像洋葱一样，然后将剩余层传递给下一个节点。重复此过程直至所有加密层均被移除，方能确保 IoT 场景的安全。
+
+### 5.4.2 人工智能
+
+具备监督或无监督能力的强大机器，在任何人类认知水平上执行任务，可称为具有智能。人工智能（AI）是一个涵盖从搜索算法到机器学习和深度学习等复杂过程的广泛领域。20 世纪 90 年代初，人们对 AI 持怀疑态度，因为复杂的计算过程难以评估。然而，随着技术的出现，AI 已成为日常生活的组成部分。第四次工业革命（Industry 4.0）通常指 IoT 与 AI 技术的集合。IoT 范式包含大量传感器、执行器、数据存储和数据处理能力。因此，IoT 设备能够感知环境、传输数据、存储并分析数据。这些设备提供的 IoT 数据中的学习模式使 AI 模型得以学习 \[23\]。模型使用的算法可对恶意和非恶意传感器数据进行分类，或预测零日攻击的概率，从而让架构仅保留非恶意数据用于分析。AI 系统收集海量数据，学习算法在数据中寻找模式，以在 IoT 范式中提供预测服务 \[24\]。它是高效组织和处理大量数据、辅助决策的有前途技术 \[25\]。随着 IoT 设备的快速增长，AI 获得了巨大的关注。此次扩张促使 IoT 网络安全应用开始利用决策树、线性回归、机器学习、深度学习、支持向量机、神经网络等 AI 技术，以识别威胁和潜在袭击。
+
+### 5.4.3 区块链技术
+
+区块链是一种不可篡改的基于账本的技术，广泛用于许多基于 IoT 的应用场景，如智能医疗、智能银行和智能工业。考虑到发展因素和已收集的数据样本，区块链通常表现为一个持续管理且受监管的数据库。参与者创建的事务以及这些事务的记录块是区块链的基础组成部分。记录块决定事务细节是否以正确顺序被保存，从而防止对已有数据的任何修改。保存的事务随后会与区块链参与者共享。每个事务通过强有力的加密方法（如 RSA、高级加密标准（AES）和哈希算法）进行加密，即事务被加密。此外，区块链网络中集成了智能合约，智能合约由各种用户定义的函数组成，适用于具体应用 \[26\]。这些函数为用户提供权限和访问控制，并在此基础上验证 IoT 应用的数据，再将其写入不可篡改的账本中。智能合约消除了第三方中介的需求；所有第三方服务都被用户定义的函数所取代，从而增强了区块链网络的信任。时间戳数据的有序序列由与各事务集（即块）在加密上相连的算法实现。通过使用块的哈希引用将每个块链接到前一个块，链条既有序又具 integrity。参与者必须通过去中心化的多数投票程序达成一致，以保持区块链的状态一致性。区块链可分为公共链和私有链：公共链任何人都可以参与网络；而私有链是受许可的，只有拥有读写权限的参与者才能加入 \[27\]。IoT 使得物联网设备能够将数据传输到私有区块链网络，从而构建不可篡改的共享事务记录，这提升了 IoT 数据的安全性、适应性和信任感。
+
+### 5.5 提出的架构
+
+基于对 IoT 安全与隐私问题的讨论，我们提出了一个安全且智能的框架，通过整合 AI 模型和基于区块链的 OR 来克服 IoT 应用的各类安全漏洞。我们以智能家居系统作为 IoT 应用，下面展示了从一个传感器到另一个传感器的安全端到端通信管道。所提架构包含多个层次，如感知层、智能层和数据安全层（如图 5.5 所示）Figure 5.5。
+
+![Figure 5.5  The proposed architecture.](img/fig5_5_B.jpg)
+
+Figure 5.5  The proposed architecture.
+
+### 5.5.1 感知层
+
+本层包含智能家居系统中部署的多种传感器，如温度、恒温、天气、运动和烟雾传感器。传感器会将其读数或指令转发给其他传感器以完成共享任务。例如，在发生火灾时，需要在智能家居系统的所有房间打开烟雾传感器。传感器使用传统的路由算法和通信协议来传输读数，因此攻击者可以利用此机会扩大攻击面以谋取利益。例如，攻击者可以在进行数据注入攻击的同时，篡改传感器读数——把开启烟雾传感器的指令改为关闭烟雾传感器——从而危及通信通道的安全。因此，必须有一种智能、主动的机制来检测 IoT 通信中的恶意行为，并从智能家居通信管道中丢弃此类数据读数。
+
+
+
+
+This layer comprises of AI models which are incorporated in the proposed framework for classification purposes, i.e., classify malicious and non-malicious data readings from smart home systems. We used AI models, such as random forest (RF), naive Bayes (NB), bilayered neural network (BNN), support vector machine (SVM), and logistic regression (LR); they are chosen for their indispensable characteristics, such as faster training time, feasible with non-linear data, classify with fewer data preprocessing steps, and many more. First, a standard dataset of the smart home system is downloaded from the authentic website \[28\]. The dataset consists of different sensor readings for the thermostat, temperature, weather, and motion, wherein each row specifies the reading for a particular timestamp. The class label consists of categorical data, i.e., attack and non-attack data; this also implies that it is a binary classification problem. Then the dataset is preprocessed with different preprocessing steps, such as normalization with min-max scalar to resolve range problems, missing and not a number (NaN) values are replaced with central tendency, i.e., mean value, and type cast the data types (e.g., object to int data type). After that, the dataset is split into two, i.e., training and testing datasets. The training dataset is forwarded to the AI models to complete the training; once the training is completed, the testing dataset is applied to the trained models to validate the results of the training dataset. Finally, the AI models are assessed with different assessment parameters, such as accuracy, precision, recall, and F1 score, wherein the RF model outperforms others in terms of accuracy, i.e., 93.78%.
+
+### 5.5.3 Data Security Layer
+
+This section presents the integration of a triple-layered OR network in our proposed framework. As discussed in the previous sections, security threats deteriorate the regular operations of the smart home system. The attackers can intercept the sensor’s communication to silently sniff the entire transmission or exploit it by using attacks, such as executing malware payload (e.g., trojans), performing injection attacks, and scanning the sensor communication to find the device vulnerabilities. Furthermore, if they find any loopholes in the smart home-based sensor communication, they can proliferate their attack by targeting that specific vulnerability. For example, if they found a severe vulnerability in the temperature sensors manufactured by a particular company, the attacker tried to attack all the temperature sensors made by that company, resulting in a devastating situation across the globe. Therefore, there must be an encrypted tunnel via all the sensors transmitting their data to tackle the aforementioned security and privacy concerns. The proposed framework uses an OR network, which uses RSA-enabled cryptography to secure the data readings from the attackers. It selects three onion routers, i.e., entry, middle, and exit nodes, from the pool of routers to form an onion circuit through which the data is securely relayed to its intended destination.
+
+However, it is observed from the literature that the Internet service provider blocks the OR network for building transparency in communication. Moreover, the entry and exit nodes are publicly listed in the master node list, i.e., any person can view the meta information of that onion router and analyze thenetworktraffic,resultinginananonymitybreakfortheIoTapplication.Therefore,inthissection, we employ bridges and pluggable transport that are the secret onion routers, which are not publicly listed on the master node list of the OR network. We used `obfs4bridge()` to overcome the abovementioned problem of anonymity break. First, the data is hashed using a message digest algorithm to perform an integrity check on the received data, i.e., whether the data has been tampered with in the OR network or not. Meanwhile, the RSA algorithm has generated public and private key pairs, by which the data will be encrypted and decrypted at subsequent stages of the OR network. Then, the data is triple-encapsulated, where each encapsulated layer is encrypted using the RSA-based public key algorithm. In addition, each encapsulated layer has a unique identifier (ID) generated by a pseudorandom number generator. Implying that each incoming sensor data has three unique IDs that are appended with the encapsulated layer.
+
+We also want to mention that each onion router is associated with blockchain technology to strengthen the security of the OR network. This is because an attacker might manipulate the onion routers to exploit the entire OR network; therefore, each router is integrated with blockchain to confront the above-mentioned security concern. This is achieved by storing all the IDs inside the blockchain’s immutable ledger , so if the attackers exploit any onion router, the particular IDs will also be exploited. Thus, when the incoming sensor data with its associated ID reaches the onion router, it first matches the ID with the blockchain-stored ID; if both IDs match, the onion router can decrypt the encrypted layer and forward it to the next onion router. So, encrypted data is forwarded to the OR network. It is first received by the entry router, which has the private key to decrypt the first layer of the encryption. Before that, the IDs are matched; on a successful match, the entry node can use its private key to decrypt the first layer of the encryption. Then it is forwarded to the middle node, where IDs are first matched; then, on a successful match, it decrypts the second layer encryption using its private key. Similarly, the third router decrypts the final encrypted layer using its private key. After that, the hashed is computed on the receiver side; if both, the sender and receiver hash match, the receiver sensor confirms the data integrity and accepts the data readings from the source sensor. This way, the smart home system data is securely transmitted from the source sensor to the destination sensor.
+
+### 5.5.4 Performance Evaluation of Proposed Framework
+
+This section describes the performance analysis of the proposed framework by utilizing various performance metrics, such as accuracy, precision, recall, F1 score, preserving anonymity, and blockchain response time. Figure 5.6 displays the comparison of accuracy with different AI models (discussed in section 5). From the graph, one can observe that the RF achieves an accuracy of 93.78% compared to other AI models. This is because RF has an advantage over other AI models; for instance, it operates using an ensemble technique where it first splits the entire dataset into small subsets, and then each subset (acts as a decision tree) is individually trained with the RF algorithm iteratively. Finally, a performance score is computed based on the voting; the highest voting subset is selected as the best tree for that particular iteration. Moreover, unlike other AI models, the RF algorithm does not need preprocessed data, resulting in faster training time than others. Table 5.1 shows the comparison of precision, recall, and F1 scores of the adopted AI models.
+
+```
+![Figure 5.6  AI models accuracy comparison.](img/fig5_6_B.jpg)
+```
+
+Figure 5.6  AI models accuracy comparison.
+
+Table 5.1 Performance Evaluation of Intelligence Layer
+
+| AI Models || Accuracy (%) || Precision (%) || Recall (%) || F1 Score (%) |
+| --- | --- | --- | --- | --- |
+| RF || 93.78 || 93.12 || 91.11 || 94.27 |
+| --- | --- | --- | --- | --- |
+| NB || 92.12 || 91.71 || 83.67 || 91.23 |
+| SVM || 89.01 || 87.12 || 86.13 || 89.81 |
+| BNN || 62.31 || 62.69 || 61.13 || 64.38 |
+| LR || 58.16 || 56.86 || 56.34 || 56.1 |
+
+
+
+-   安全角度来看，智能家居系统中的隐私与安全同等重要；例如，如果攻击者发现某个智能家居用户使用虚拟助手技术来操作其家庭，则可以利用特权升级攻击获取用户的私人信息（大部分数据存储在虚拟助手中），如联系人信息、朋友、当前位置等。因此，保持匿名性是一个关键的评估参数。这里，现有工作（如[30 和 29）使用 OR 网络安全地将物联网数据安全传输到预期目的地。然而，它们使用的洋葱路由器的身份是公开可得的，因此未在其工作中保护匿名性。在所提框架中，我们考虑这一直观观察，并计算路由器暴露于公共互联网的次数；这通过使用深度包检测（DPI）工具实现。Figure 5.7 展示了洋葱路由器暴露率与现有基线工作的对比。由于所提框架采用可插拔传输（obfs4 桥），洋葱路由器不暴露于公共互联网，从而实现比其他现有工作更高的匿名性。
+
+![Figure 5.7 Anonymity check by analyzing onion router exposed rate.](img/fig5_7_B.jpg)
+
+Figure 5.7 Anonymity check by analyzing onion router exposed rate.
+
+Figure 5.8 展示了区块链响应时间性能。我们在区块链中利用互联网文件系统（IPFS）的关键特性来加速处理时间。这里，它同时从多个区块链节点存储和获取数据；这减少了带宽浪费，并提高了区块链网络的响应时间。图表展示了基于 IPFS 的区块链与传统区块链的对比。从 Figure 5.8 可以看出，在所提框架中集成 IPFS 显著提升了区块链响应时间。
+
+![Figure 5.8 Blockchain response time comparison.](img/fig5_8_B.jpg)
+
+Figure 5.8 Blockchain response time comparison.
+
+## 5.6 结论
+
+物联网（IoT）是一项备受瞩目的技术，已 experiencing unprecedented growth（增长空前），成为最具赋能潜力的技术之一，有潜力彻底改变世界。物联网基础设施是云计算、大数据、人工智能和移动设备等技术的综合体，提供自动化、智能和预测性服务。然而，物联网通信链路和协议易受各种安全攻击和威胁，如拒绝服务（DoS）、数据注入、拦截和中间人攻击。受上述安全挑战驱动，本章回顾了不同物联网应用及其服务。随后，我们研究了物联网通信在真实应用中的安全与隐私问题。之后，我们突出了几项突破性技术，可解决物联网通信安全问题。我们还提出了一种安全框架，即基于人工智能和区块链的 OR 协议。该框架通过准确性、精确度、召回率、洋葱路由器暴露率和区块链响应时间等性能指标进行评估。
+
+未来，我们将通过设计混合路由网络来增强所提框架的性能，该网络将结合洋葱路由和蒜头路由网络的潜力。这不仅确保强有力的安全性，还能加强智能家居环境中的端到端匿名性。
+
+
+
+17. Obaidat, M.S., Misra, S.: 无线传感器网络原理. Cambridge University Press (2014). [`doi.org/10.1017/CBO9781139030960`](http://dx.doi.org/10.1017/CBO9781139030960)
+
+18. Balte, A., Kashid, A., Patil, B.: 物联网（IoT）安全问题调查（2015 年）.
+
+19. Tatar, E.E., Dener, M.: 物联网网络中的蠕洞攻击. 在: 2021 第 6 届计算机科学与工程国际会议（UBMK），第 478-482 页 (2021). [`doi.org/10.1109/UBMK52708.2021.9558996`](http://dx.doi.org/10.1109/UBMK52708.2021.9558996)
+
+20. Rajan, A., Jithish, J., Sankaran, S.: 物联网中的 Sybil 攻击建模与防御. 在: 2017 年计算机、通信和信息学国际会议（ICACCI），第 2323-2327 页 (2017). [`doi.org/10.1109/ICACCI.2017.8126193`](https://doi.org/10.1109/ICACCI.2017.8126193)
+
+21. Reed, M., Syverson, P., Goldschlag, D.: Anonymous. 连接与洋葱路由. IEEE 期刊 **16**(4), 482-494 (1998). [`doi.org/10.1109/49.668972`](https://doi.org/10.1109/49.668972)
+
+22. Dutta, N., Jadav, N., Tanwar, S., Sarma, H.K.D., Pricop, E.: TOR-洋葱路由器. 《网络安全：问题与当前趋势》. Springer, 新加坡, 第 37-55 页 (2022).
+
+23. Patel, K., Mehta, D., Mistry, C., Gupta, R., Tanwar, S., Kumar, N., Alazab, M.: 使用人工智能技术进行面部情感分析：现状、分类学和挑战. IEEE Access **8**, 90495-90519 (2020). [`doi.org/10.1109/ACCESS.2020.2993803`](https://doi.org/10.1109/ACCESS.2020.2993803)
+
+24. Gupta, R., Kumari, A., Tanwar, S.: 区块链与人工智能融合，用于 5G 通信下的安全无人机网络. 《新兴电信技术》 **32**(1), e4176 (2021). [`doi.org/10.1002/ett.4176`](https://doi.org/10.1002/ett.4176), [`onlinelibrary.wiley.com/doi/abs/10.1002/ett.4176`](https://onlinelibrary.wiley.com)
+
+25. Duan, Y., Edwards, J.S., Dwivedi, Y.K.: 大数据时代的人工智能用于决策——发展、挑战与研究议程. 《信息管理国际期刊》 **48**, 63-71 (2019). [`doi.org/10.1016/j.ijinfomgt.2019.01.021`](http://dx.doi.org/10.1016/j.ijinfomgt.2019.01.021)
+
+26. Singh, R., Tanwar, S., Sharma, T.P.: 利用区块链缓解分布式拒绝服务攻击. 《安全与隐私》 **3**(3), e96 (2020). [`doi.org/10.1002/spy2.96`](https://doi.org/10.1002/spy2.96), [`onlinelibrary.wiley.com/doi/abs/10.1002/spy2.96`](https://onlinelibrary.wiley.com)
+
+27. Alkurdi, F., Elgendi, I., Munasinghe, K.S., Sharma, D., Jamalipour, A.: 区块链在物联网安全中的应用：调查. 在: 2018 第 28 届国际电信网络与应用会议（ITNAC），第 1-4 页 (2018). [`doi.org/10.1109/ATNAC.2018.8615409`](http://dx.doi.org/10.1109/ATNAC.2018.8615409)
+
+28. Moustafa, N.: ToN_IoT 数据集 (2019). [`doi.org/10.21227/fesz-dm97`](http://dx.doi.org/10.21227/fesz-dm97)
+
+29. Jadav, N.K., Gupta, R., Alshehri, M.D., Mankodiya, H., Tanwar, S., Kumar, N.: 深度学习与洋葱路由的协作智能框架，用于 6G 网络下的智能家居. IEEE Transactions on Network and Service Management **19**(3), 3401-3412 (2022). [`doi.org/10.1109/TNSM.2022.3164715`](https://doi.org/10.1109/TNSM.2022.3164715)
+
+30. Gupta, R., Jadav, N.K., Mankodiya, H., Alshehri, M.D., Tanwar, S., Sharma, R.: 边缘启用工业物联网的区块链与洋葱路由安全消息交换系统. IEEE Transactions on Industrial Informatics, 1-12 (2022). [`doi.org/10.1109/TII.2022.3191444`](https://doi.org/10.1109/TII.2022.3191444)
+
+6 Blockchain Development in the Banking and Financial Industry
+
+Ilgın Şafak
+
+Fibabanka R&D Center, Istanbul, Turkiye
+
+Fatih Alagöz
+
+Bogazici University, Istanbul, Turkiye
+
+DOI: [10.1201/9781003326236-6](https://dx.doi.org/10.1201/9781003326236-6)
+
+## 6.1 Introduction
+
+虽然最初为金融服务开发，区块链技术还有许多其他有用的应用，包括信息管理。它目前在金融、医疗保健、物联网（IoT）和国际贸易等多个领域引发热情。区块链技术的一个关键特点是它能够在不知情的各方之间以及各方内部建立信任，使它们能够在不需要中间人参与的情况下进行交易和共享信息，同时确保数据完整性和完整的审计追踪。区块链技术通过在所有节点之间以秒级记录价格、资产和所有权等细节来记录、验证和结算交易。在一个账本中记录的任何已验证的变更都会同时在所有其他副本中记录。区块链交易存储在块中，块是记录的集合。交易记录存储在信息块中。块在完成后相互链接，形成链条。这使其特别适合跟踪跨国金融交易和商品的流动。它可以提供关于金融交易或商品来源的准确且快速的信息，并且能够追踪过程的每一步。国际买家、卖家和承运人可以从信息的可用性、准确性和精确性中受益，同时政府海关机构也常常面临货物来源和产地的相同问题，以及在入口港口处同时处理大量交易的问题，这些港口通常分布广泛。
+
+此外，区块链系统自动执行目前由多个中介机构执行的许多功能，如监控移动、支付和其他信息。因此，国际贸易成本可能会显著降低，对交易商和政府机构都有好处。已开发出区块链平台以改进现有系统，包括物流链。一个例子是 Tradelens，这是 MAERSK 和 IBM 的联合倡议，允许所有参与国际货运的各方实时交换关于事件和运输文件的信息 \[1, 2\]。
+
+银行和金融行业通常被视为保守、监管严格且变化缓慢的行业。然而，银行目前正经历技术和监管方面的巨大而快速的变化，这些变化预计将在未来继续。到 2025 年，90% 的欧洲支付理事会成员预计区块链技术将根本性地转变银行业。因此，区块链技术将使金融行业发生转型。虽然一些职位（如经纪人）将被消除，但也会创造新的职位。在极端情况下，区块链技术被预测会消除银行。但金融机构更有可能从区块链技术中受益，而不是消失 \[3\]。
+
+
+
+
+然而，区块链在银行和金融领域的采用仍面临诸多障碍。与中心化方案相比，将数据复制到多个节点上通常会增加维护成本。此外，区块链的成本还体现在单一实体通常拥有单个节点，而非集中式数据库。由于数据在多个节点间复制，这导致了可扩展性问题，因为交易必须在每个节点上广播并记录 \[4\]。银行和保险是传统行业，因其具有重大的信托责任 \[5\]。因此，这些机构可能因难以向监管机构解释数据在区块链参与者之间如何共享而犹豫采用区块链。
+
+许多区块链应用依赖金融行业参与者之间的共同标准和合作。R3 这家金融科技初创公司与约 50 家金融机构组成的国际合作旨在加速区块链技术在金融领域的采用。鉴于金融世界竞争激烈，制定其使用标准可能颇具挑战 \[7\]。
+
+## 6.2 区块链在银行和金融行业的应用概览
+
+本节提供区块链在银行和金融领域的应用概览，包括现有的区块链应用、其优势和挑战，并对行业内部已部署的区块链平台进行了最新状态（SoTA）分析。
+
+### 6.2.1 银行和金融行业的区块链应用
+
+*   *支付、清算和结算*
+
+    区块链技术可由银行和金融机构用于自动化国内和国际支付，以及证券交易、非同质化代币（NFT）等交易。在当今银行系统中，国际支付成本高昂且可能需要数天才能到达。通过区块链技术，这类支付可以在接近实时内完成，从而降低交易成本。R3 和 Ripple 等公司正与传统银行合作，加速在企业区块链中实现传统资产与加密资产之间的支付结算 \[8\]。
+
+*   *面向公共、可互操作且防篡改的合同、记录和模型*
+
+    公共且防篡改的合同、记录和模型（如土地登记数据库、艺术品所有权记录、奢侈品所有权）可以借助区块链技术实现。这在记录不可靠的国家尤为有用。利用区块链技术，传统证券（如股票、债券和其他有价值资产）可以代币化并在公共区块链网络上登记。这将使资本市场更加高效和互操作性更强 \[9\]。
+
+    区块链可用于存储信息、防止盗窃、建立产权或验证以下项目的所有权 \[10\]：
+
+    1.  加密货币（比特币）
+
+    2.  非同质化代币
+
+    3.  金融工具（票据、债券、股票）
+
+    4.  衍生工具（期货合约、期权、掉期、远期）
+
+    5.  金融工具表决权
+
+    6.  商品
+
+    7.  支出和交易记录
+
+    8.  抵押/信贷记录
+
+    9.  服务记录
+
+    10.  土地或房产
+
+    11.  艺术品和奢侈品
+
+    12.  众筹
+
+    13.  微型融资和微型援助
+
+*   交易、审计和认证
+
+    智能合约可用于任何类型的合同，包括证券交易、审计、认证，以及海关和贸易流程。智能合约是能够自动验证并批准符合链上预定义协议的交易的程序。比特币交易可在满足特定条件时执行，公司可创建合约在达到特定盈利水平时向股东派发股息。同样，加密钱包服务器的 PCI 数据安全标准（DSS）合规性测试可自动完成 \[11\]。与传统合同相比，智能合约更便宜、更可靠，并消除了中间方验证条款的需求。区块链的防篡改特性是其可靠性的关键特征。投资者可在区块链证券中嵌入信息和交易规则。当满足特定条件（如价格要求）时，交易可自动执行；若条款未实现，证券所有权仍保持不变 \[12\]。
+
+*   *点对点（P2P）借贷和众筹*
+
+    初始代币发行（ICO）提供了新的融资方式，使传统的资本筹集服务与企业获取资金的渠道相互分离 \[13\]。
+
+*   *联盟银行*
+
+    联盟银行将多家银行聚集在一起，共同融资那些单个银行难以独立处理的大型项目，并利用各自资产。联盟银行由所有成员平等拥有，没有任何成员拥有控制权。区块链可通过智能合约实现联盟的自动形成 \[14\]。
+
+### 6.2.2 银行和金融行业的区块链实现
+
+尽管进行了大量实验和概念验证，区块链 기반银行和金融解决方案的实施仍面临挑战。从个体系统向共享系统的转变伴随巨大的资本支出。由于需要数据共享，银行必须适应重大的文化变革。在以保密性为先的行业中，这一概念颇具新意，并引发问责问题：如果 Bank A 完成了客户身份验证（KYC）流程并在区块链上发布数据，Bank B 是否需对其自身账户上的错误或欺诈负责？此外，Bank A 是否有足够动力分享其数据，因为数据共享可能削弱其提供个性化服务的能力？
+
+此外，还存在一些实际挑战。例如，在 KYC 和防欺诈流程的设置中，客户必须同意上传其数字指纹并进行额外的身份验证步骤。除了在点售处更新验证系统外，商户还需修改其在线结账流程。要在规模上实现收益，银行必须建立大规模网络，这需要标准化数据并加强协作。此外，尚不清楚是否有任何银行愿意成为首个开发不具竞争优势的公用工具的先行者，这也被称为合作与竞争的悖论 \[15, 16 and 17\]。
+
+Table 6.1 显示目前银行广泛使用的最常见区块链平台，包括 IBM Blockchain、R3、Komgo 和香港金融管理局（HKMA）。
+
+IBM Blockchain Platform 是 IBM 商业化的 Hyperledger Fabric 实现，提供完整的服务级别协议（SLAs）。其包含一套完整的生产力工具，用于区块链应用的开发、管理和运行。其灵活的区块链框架使创新者能够转型全球业务。
+
+Table 6.1  Blockchain Platforms Used by Banks 
+
+| 特性 || IBM Blockchain || R3 Corda || Komgo || eTradeConnect |
+| --- | --- | --- | --- | --- |
+
+
+
+| 区块链类型 | 使用 Hyperledger Fabric 框架的许可区块链 | 基于 Corda 框架的许可区块链 | 基于 Ethereum 框架的许可区块链 | 许可区块链 |
+| --- | --- | --- | --- | --- |
+| 数据隐私和自动合规 || 是的，内置 GDPR 合规支持 || 是的，通过 Conclave 集成实现隐私；ISO 20022 和国际银行交易商协会（ISDA）通用数据模型（CDM）合规 || 是的 |
+| 银行保函和信用状的跟踪与管理 || 是的 || ？ || 是的 || ？ |
+| 国际贸易金融和贸易支持 || 通过 we.trade 实现，是的 || 是的 || 是的 || 是的 |
+| KYC、欺诈检测和反洗钱支持 || 是的 || 是的 || 是的 || 是的 |
+| 代币化金融资产交易和结算 || 是的，包括政府债券 || 是的 || 是的 || 是的 |
+| R3 集团是提供企业技术和服务的领先供应商，使受监管行业中安全交换价值的关键环节是信任。R3 赋能的 Corda 是全球最大的私有、许可区块链分布式账本平台，同时提供智能工作流和代币化服务。数百家受监管的金融机构，包括央行、商业银行、金融科技公司、金融市场基础设施提供商、交易所，依赖 R3 领先的分布式数字平台、连接网络和行业专业知识，对其运营进行数字化转型。Komgo 是一个基于区块链的开放平台，通过数字化交易并提供信任文档，优化融资流程并加速行业运营，从而在商品贸易融资中降低欺诈风险。香港金融管理局（HKMA）支持 eTradeConnect 的开发，这是一个基于分布式账本技术（DLT）的平台，能够有效、高效地在客户和其交易伙伴之间共享信息。通过数字化交易文档、自动化融资流程以及利用区块链技术，eTradeConnect 使交易参与者实现更高的效率，建立彼此信任，降低风险，并促进融资获取，以促进贸易。 |
+| 区块链在银行实现中的最新状态（SoTA）可以如图 Figure 6.1 所示分类。 |
+![Figure 6.1  Categorizations of SoTA related to blockchain implementations for banking.](img/fig6_1_B.jpg) |
+Figure 6.1  Categorizations of SoTA related to blockchain implementations for banking. |
+以下是一些主要的基于区块链银行系统的相对优缺点总结： |
+Ref. \[15\] 提出一种基于区块链技术的 KYC 成本和时间节省解决方案，用于客户。它提出了一个区块链基于的 KYC 架构，相较于传统方法有重大改进，并能安全共享验证结果给客户。该策略的可行性和有效性通过基于以太坊平台的概念验证（PoC）工作以及 Android 应用进行评估。未研究合规性或认证测试。 |
+Ref. \[18\] 讨论了使用无代币区块链系统来保护银行交易信息（如转账金额、卡号和参与者姓名）。此外，它分析了分布式数据库的安全机制，提供了如何在不使用代币或挖矿的情况下，利用区块链技术在分布式数据库中保持信息唯一性的建议，并建议将区块链技术集成到现代银行系统中。它介绍了一个集中系统，即只有银行可以发行代币，用户或第三方不能自行发行代币。所提算法未通过实验验证。未研究合规性或认证测试。 |
+在 ref. \[19\] 中，作者检讨并提出解决传统信用银行所面临挑战的方案，并评估在该情境下采用区块链技术的可行性。信用链通过实验区块链开发，利用域索引、双链并发和并行拜占庭协议提升交易速度、可扩展性和可信度。所提信用链被应用于信用银行架构中，以提供有效的解决方案来构建信用银行。未研究合规性或认证测试。 |
+Ref. \[20\] 提出基于以太坊区块链平台的去中心化钱 lending 系统，用于去中心化银行。该系统提供包括钱款存款、转账和贷款检查等多项服务。所提系统的性能通过实验工作进行评估。未研究合规性或认证测试。 |
+Ref. \[21\] 提出了一种基于群体的点对点区块链网络，用于连接不同银行和机构的电子钱包。该网络允许在银行账户和电子钱包之间转移现金，并最大程度地降低核心银行系统的负载。未研究合规性或认证测试。 |
+在 ref. \[22\] 中，提出了一个基于实用拜占庭容错（PBFT）共识和智能合约的私有区块链平台，用于银行间交易，以在不依赖可信第三方的情况下提高银行的安全性和透明度。它还提供了软件架构，消除了中间交易成本，并使银行能够监控和识别所有银行活动。未研究合规性或认证测试。 |
+在 ref. \[23\] 中，提出了一个基于 Hyperledger Indy 的框架，用于识别欺诈性银行服务调用并防止个人账户可能的损失。该框架提供了改进 KYC 流程的架构和序列图，增强由银行委托的第三方机构在处理金融服务时的信任。所提算法未通过实验验证。未研究合规性或认证测试。 |
+Ref. \[24\] 展示了一个区块链架构，使税务机构能够构建交互式银行税务系统，并让商业银行高效、安全地访问企业的税务信息。系统开发和实验演示了其有效性。未研究合规性或认证测试。 |
+Ref. \[25\] 提出一种基于区块链的分布式银行方案，用于金融交易的分发。所提架构的性能和有效性通过基于智能合约的原型进行评估。原型的性能与以太坊进行了比较。未研究合规性或认证测试。 |
+### 6.2.3 区块链对银行和金融行业的好处
+区块链的好处可以总结如下 \[26\]。
+*   *成本节约与速度加快——通过消除中间方*
+    加密证明取代了信任，使得两方可以直接进行交易，而无需第三方的参与。这通过降低交易费用和运营成本提高了效率。基于区块链的支付系统实现了近实时的交易结算，消除了摩擦并降低了风险。
+
+
+
+
+移除证券市场中的不必要中介机构后，基于区块链的证券交易会更高效。因此，交易中的风险资本会减少。交易和结算流程相当过时，且流程复杂，其中证券所有权的变更速度快于资金所有权的变更。区块链上，证券所有权可以瞬间变更，从而简化交易和结算流程。基于区块链技术的交易和结算提高了交易效率并降低了成本。
+
+`通过去中心化消除单点故障 (SPOFs)`
+
+在技术领域，单点故障意味着系统中某个组件出现故障会导致整个系统失效。区块链的点对点 (P2P) 架构可能帮助解决因单点故障和瓶颈引起的问题。区块链因其分布式特性提供了高度的可用性，其采用可以克服单点故障。
+
+`透明度、信任与匿名性`
+
+点对点网络中的交易会公开记录。区块链不存储交易双方的身份或交易数据，仅记录交易的存在，从而确保匿名性。区块链还可以通过替代繁琐的纸质托管单据流程，提升贸易金融的安全性和信任度。它能够提供资产状态的可视化，以追踪商品，并通过智能合约自动完成合同义务，确保在系统故障时网络仍具高可用性和强健性。
+
+`不可篡改性下的可审计性与认证`
+
+在区块链中，每笔交易都有永久且可验证的记录。通过提供唯一的真实来源，区块链的共识机制便于发行金融资产（如贸易应收款和其他支付义务）。因此，它消除了双花支付和欺诈的问题，消除了交易和融资双方在数字资产转移过程中持续对账的需求。智能合约可用于审计和认证，也可用于完成预定义的业务任务，并在无需中介参与的情况下完成具有法律约束力的交易。
+
+`KYC、防欺诈与反洗钱 (AML)` 区块链技术允许金融机构通过将客户信息存储在分散的区块中，实现客户信息的安全共享。区块链技术使用户可以使用数字指纹，该指纹作为唯一标识符，类似于物理指纹。网络中的任何银行都可以通过分布式账本引用该指纹。拥有数字指纹的所有者可用于申请新账户，并可在全球范围内建立身份。区块链技术消除了重复的 KYC 和 AML 合规检查的需求，因为银行可以共享身份验证信息。结果是，银行免于收集信息的负担，并能够立即传播更新后的数据。
+
+`协作与联合治理`
+
+公司、国家或地区可能受不同的法规约束，并且可能在合规、测试、用户体验和安全等方面有所差异，与法规无关。因此，可能需要开发一种基于区块链的软件系统，以支持跨组织协作。通过智能合约自动执行交易，区块链从根源解决了合作失败的问题，即人为机会主义行为，同时也降低了行为人机会主义行为的概率，因为必须遵守协议条款。
+
+### 6.2.4 区块链在银行和金融行业采用中的挑战
+
+以下列出了区块链在银行和金融行业采用过程中可能面临的技术和立法挑战 27:
+
+`可扩展性与交易授权与结算速度`
+
+维萨处理约每秒 1700 笔交易，而比特币约处理每秒 7 笔交易。因此，维萨与区块链技术之间存在明显的性能差异。架构层面的可扩展性问题尚未解决，这给区块链的采用及其实际应用带来了挑战。
+
+`商户采用`
+
+要实现大规模采用，必须教育公众其数据价值及金融赋权的意义，同时也要教育商户和供应商接受加密货币的优势。零售行业面临的挑战包括结算流程冗长以及商户的高额处理费用。借记卡交易结算需要 3 至 5 天，信用卡交易结算最长可达 60 天。接受加密货币支付可以降低交易成本并加快结算速度。与信用卡支付不同，信用卡支付要求商户对每笔交易收取 3% 的费用，而加密货币支付则不产生此类费用。客户可能需要支付小额“气费”以覆盖网络节点验证交易所需的费用，但商户可保留销售的全部利润。然而，将商户系统与区块链集成可能对部分商户构成挑战。当前，退款（chargebacks）仍是零售行业的主要问题。虽然商户仍可发起退款，但由于加密货币支付是最终的，无法发起 chargebacks。
+
+另一个阻碍商户采用的因素是监管。除非监管机构批准其区块链策略，否则仅凭采用区块链的意愿不足以让商户接受加密货币支付。因此，许多商户不愿在其在线店铺中接受加密货币支付。
+
+`能源浪费`
+
+创建新区块或验证交易需要大量电力和矿工设备。尽管已付出巨大努力解决此问题，能源仍在被浪费。随着区块链相关程序的使用增加，能源消耗也随之上升。使用高效技术，矿工每年可能消耗 2 太瓦时的电力，这相当于加利福尼亚州约 150,000 人的年用电量。因此，有必要开发更环保的矿工流程，并为废弃能源寻找二次用途。不过，虚拟矿工可以通过用软件替代手动解决数学谜题的过程，从而降低对硬件的需求，这将使关注系统完整性的利益相关者参与到矿工过程中。
+
+`测试`
+
+由于区块链不可篡改，确保系统的每个方面正常运行至关重要。在这方面，测试至关重要，但区块链系统的复杂性使得测试成为一个挑战性的过程。
+
+`安全`
+
+为确保区块链的安全，必须采取以下措施：
+
+`账本层级安全`：建议仅允许经过充分审查的参与者加入区块链。成员通常是具有真实法律资质的法律机构，不太可能参与（与可能因敌意而退出的用户不同）。
+
+`网络层级安全`：除了区块链软件外，区块链系统可能还包含传统的“隐形”数据库、消息传递等服务。各节点之间的组件通信应在网络层面保持安全。组织的网络必须能够抵御各种外部和内部威胁。
+
+
+
+-   [交易级别安全：为维护准确且不可篡改的记录，银行依赖于交易准确性。交易详情必须使用公钥基础设施（PKI）进行加密，以防止未经授权的披露。]
+
+-   [合同安全：智能合约协议可以预先编程，具备自动执行和自动强制的能力。程序创建者可能引入缺陷，导致智能合约控制的资产面临风险，无论是故意还是无意。因此，确保智能合约安全至关重要。]
+
+-   *[自私矿]
+
+    区块链技术可能被滥用，例如通过 51%攻击（多数攻击），即超过 50%的区块链哈希算力被矿工群体或实体控制。这将导致无法验证交易，使链条充满虚假信息。然而，鉴于网络规模，这种情况不太可能发生。系统也可能通过向区块链添加不可靠的区块来误导，使系统误以为其可靠。]
+
+-   *[监管]
+
+    银行的严格监管要求以及区块链监管的不确定性，极大地提高了准入门槛。包括阿尔及利亚、孟加拉国、中国、埃及、伊拉克、摩洛哥、阿曼、卡塔尔和突尼斯在内的多个国家已全面禁止加密货币的使用。另外 42 个国家，包括阿尔及利亚、巴林、孟加拉国、玻利维亚和土耳其，禁止加密货币交易所，或通过限制银行处理加密货币的能力来禁止数字货币。
+
+    特别值得注意的是，数据隐私在全球范围内日益受到关注，成为政策与监管议题。欧盟通用数据保护条例（GDPR）[²⁸]建立了欧洲联盟（EU）和欧洲经济区（EEA）个人数据保护的高标准和统一标准。GDPR 将个人数据定义为能够识别或辨认个人的信息。除在欧盟向公民提供商品或服务、监控其在线行为外，GDPR 还保护欧盟公民在其他国家的权益。
+
+    区块链用户可能面临以下合规要求带来的挑战：
+
+*   确保个人数据处理的合法性，例如通过获得个人同意或履行合同。
+*   通知并履行个人权利，包括访问、修正、数据可传输性、反对处理（包括自动化决策）以及被遗忘的权利。
+
+*   [维护基于风险的数据安全。]
+
+    另一方面，美国尚未建立全面的联邦数据保护框架，而是依赖于行业特定的法律法规，如金融机构的格拉姆-里利-比利·里奇法案（GLBA）以及 2018 年加利福尼亚消费者隐私法案（CCPA）（Pritesh Shah and Daniel Forester）。CCPA 类似 GDPR，提供消费者保护和合规义务，对区块链技术用户构成挑战，包括：
+
+*   通知并保护消费者权利，包括通知、访问、披露（包括第三方披露和销售信息）、允许其选择退出个人信息销售（无歧视或允许未成年人选择加入）、以及被遗忘的权利。
+
+*   维护基于风险的数据安全标准，并行使 CCPA 赋予的因组织未能维持适当数据安全标准导致数据泄露时的追责权。
+
+*   [税收]
+
+    数字资产和加密货币的税务处理并非采用“一刀切”的通用方式。每种投资策略都有其独特的特点，使其区别于传统资产。因此，每个数字资产不仅需理解其作为数字资产的特性，还需审视其在区块链上进行交易时所受的协议、条款和条件。
+
+*   *[集成与标准化]
+
+    有时，区块链应用需要对现有系统进行重大修改或完全替换。此外，由于物联网（IoT）设备的异构性和低复杂性，区块链与 IoT 的集成需要标准化 IoT 通信与安全协议。
+
+*   *[可追溯性]
+
+    鉴于银行和金融行业对可追溯性的需求，支付不能像比特币交易那样匿名（Jutila, 2017）。这凸显了开发在保护隐私的同时兼具监管透明度的加密货币的必要性，以支持对资金流向、用户地址以及交易金额的监管。更接近去中心化的系统也需要具备抗恶意审计的韧性。
+
+## 6.3 银行区块链实施建议
+
+基于前文所述的挑战，表 6.2 总结了现有银行系统组件以及在区块链基础银行系统中为缓解这些挑战而需要的新组件。新组件用星号（*）标记。
+
+[表 6.2 区块链挑战采纳建议缓解措施]
+
+| 挑战 | 推荐缓解措施 | 相关系统组件 |
+| --- | --- | --- |
+| 可扩展性与速度 | *   提供基于云的 SaaS/PaaS/IaaS 以及预配置的本地区块链应用解决方案，简化部署<br>*   使用轻量级共识算法或方法，如证明权限（PoA）或闪电网络<br>*   提供区块链应用部署的客户支持<br>*   进行性能和负载测试 | *   区块链应用服务器*<br>*   区块链模块*<br>*   智能合约模块*<br>*   集成/通信<br>*   测试模块 |
+| 商户采用 | *   提供易于与商户系统集成的标准化应用编程接口（API）<br>*   制定标准化的扣款/退款规则<br>*   为区块链集成提供客户或社区支持，包括监管与安全合规培训 | *   商户模块*<br>*   规则引擎<br>*   税务模块*<br>*   集成/通信<br>*   客户关系管理模块<br>*   智能合约模块* |
+| 自私矿 | *   确保去中心化在私有区块链中得到完全实现<br>*   对参与节点进行信任评分<br>*   将不可信节点列入黑名单 | *   数据分析模块<br>*   报告模块<br>*   安全模块 |
+| 能源浪费 | *   使用无需高强度计算的轻量级共识算法，替代工作量证明（PoW）<br>*   使用数据分析检查能源消耗和计算负载 | *   区块链模块*<br>*   数据分析模块 |
+| 测试 | *   对区块链系统进行端到端测试<br>*   为区块链测试提供客户或社区支持<br>*   利用区块链进行协作测试、合规性和认证 | *   测试模块<br>*   数据分析模块<br>*   智能合约模块*<br>*   合规模块*<br>*   所有银行模块均需测试 |
+| 安全 | | |
+
+
+
+
+# 6.4 基于区块链的银行系统架构
+
+推荐的基于区块链的银行系统架构如图 Figure 6.2 所示。该系统包括物联网设备、用户界面（UIs）、银行系统、商户及点对点销售终端（POS）系统，以及政府和其他外部系统，所有这些系统都连接到区块链应用服务器。区块链服务器是区块链网络的一部分，通过数据库存储和访问数据。下面提供基于区块链的银行系统组件的描述。
+
+![Figure 6.2 System architecture of recommended blockchain system.](img/fig6_2_B.jpg)
+
+Figure 6.2 System architecture of recommended blockchain system.
+
+*   **IoT Device:** Any connected device accessing the blockchain-based banking system, including customer and employee devices such as a laptop, smartphone, smartwatch, and tablet.
+
+*   **User Interface (UI):** The interface between a user and a connected device used in accessing bank services, including touch screens, keyboards, mobile banking applications, or websites. UIs should be updated to support blockchain-based transactions, such as making a crypto payment in store or applying for a crypto-backed loan.
+
+*   **Bank systems:** Includes all software and hardware components used by a bank for its operation. Hardware components include servers, databases, Hardware Security Modules (HSMs), ATMs, etc. Banking system software is used to manage, monitor, and record banks and other financial institutions transactions. Sales of core banking products, customer engagement, and portfolio management functionalities are managed using the software. Additionally, back office functions such as accounting, auditing, credit approvals, financial background checks, and system integrations are also supported.
+
+*   **Automated Teller Machine (ATM):** Allows bank or financial institution customers to perform financial transactions, such as withdrawing cash, making deposits, transferring funds, and checking their balance or accounts, at any time without having to interact directly with bank staff. Banks’ existing ATM software could be updated to support crypto transactions. Crypto ATM machines are similar to traditional ATM machines; in order to exchange fiat currency into cryptocurrencies such as Bitcoin or Ether, consumers pay a fee. They can serve as a convenient way for people to invest in cryptocurrencies.
+
+*   **Point of Sale (POS):** Refers to a merchant device or software where a customer makes a payment for goods or services, as well as a place where sales tax may become due. POS transactions may take place offline or online, and receipts may be printed or generated electronically. Existing POS software must be updated to support crypto transactions. It is possible to integrate POS systems with blockchain-based banking systems using the Merchant module’s support integrations, such as APIs for merchants.
+
+*   **Governmental systems:** The governmental systems that audit and ensure the compliance of the blockchain-based system, including customs.
+
+*   **External systems:** All other external systems that connect with the blockchain-based banking system, for example, payment gateways, payment networks, and private auditors.
+
+The blockchain server and its components are described below.
+
+*   **Blockchain application server:** Application servers are software that interconnect operating systems (OS) with external resources, including databases, internet services and host communications, and user applications. Applications servers facilitate access to and performance of business applications by providing a host or container for the user’s business logic. There are numerous and competing traffic conditions that must be handled by application servers, including the variable nature of client requests, hardware and software failures, distributed nature of large-scale applications, and heterogeneity of data and processing resources required to meet business needs. The blockchain application server differs from standard, centralized application servers in that blockchain-related activities are performed by a decentralized blockchain network. Data is stored on the blockchain, and smart contracts drive the logic of the blockchain-related activities.
+
+*   **Account management module:** Manages bank customers’debit, credit, savings accounts, including blockchain payment accounts. This module works together with the transaction management, blockchain, and smart contracts modules.
+
+*   **Blockchain module:** Performs blockchain-related activities and acts as an interface between the blockchain network and the blockchain application server.
+
+# Integration and Standardization
+
+*   Standardized blockchain APIs for integration with bank systems
+
+*   Standardized IoT communications and security protocols for IoT-blockchain integration
+
+*   Standardized integration with governmental and other external systems
+
+# Regulation
+
+*   Development of a standardized cross-border/universal regulatory framework
+
+*   Development of a blockchain-based distributed testing tool for automatic compliance testing
+
+# Taxation
+
+*   Development of a tax treatment for digital assets and cryptocurrencies, including in international trade and customs environments
+
+*   Reporting of taxable assets and transactions
+
+*   Standardized APIs for easy integration of the tax system with the blockchain
+
+# Integration and Standardization (continued)
+
+*   Integration/communications
+
+*   Device Management module\*
+
+*   All banking components that require integration
+
+# Regulation (continued)
+
+*   Compliance module\*
+
+*   Rules engine
+
+*   Smart contracts module\*
+
+*   Reporting module
+
+*   Testing module
+
+*   Databases
+
+*   All existing banking components that process personal data
+
+# 6.4 Blockchain-Based Banking System Architecture (continued)
+
+The recommended blockchain-based banking system architecture is presented in Figure 6.2. The system comprises IoT devices, user interfaces(UIs), bank systems, merchant and Point-of-Sale(POS) systems, and governmental and other external systems that all connect to a blockchain application server. The blockchain server is part of the blockchain network and stores and accesses data via databases. A description of the blockchain-based banking system components is provided below.
+
+![Figure 6.2 System architecture of recommended blockchain system.](img/fig6_2_B.jpg)
+
+Figure 6.2 System architecture of recommended blockchain system.
+
+*   **IoT Device:** Any connected device accessing the blockchain-based banking system, including customer and employee devices such as a laptop, smartphone, smartwatch, and tablet.
+
+*   **User Interface (UI):** The interface between a user and a connected device used in accessing bank services, including touch screens, keyboards, mobile banking applications, or websites. UIs should be updated to support blockchain-based transactions, such as making a crypto payment in store or applying for a crypto-backed loan.
+
+*   **Bank systems:** Includes all software and hardware components used by a bank for its operation. Hardware components include servers, databases, Hardware Security Modules (HSMs), ATMs, etc. Banking system software is used to manage, monitor, and record banks and other financial institutions transactions. Sales of core banking products, customer engagement, and portfolio management functionalities are managed using the software. Additionally, back office functions such as accounting, auditing, credit approvals, financial background checks, and system integrations are also supported.
+
+*   **Automated Teller Machine (ATM):** Allows bank or financial institution customers to perform financial transactions, such as withdrawing cash, making deposits, transferring funds, and checking their balance or accounts, at any time without having to interact directly with bank staff. Banks’ existing ATM software could be updated to support crypto transactions. Crypto ATM machines are similar to traditional ATM machines; in order to exchange fiat currency into cryptocurrencies such as Bitcoin or Ether, consumers pay a fee. They can serve as a convenient way for people to invest in cryptocurrencies.
+
+*   **Point of Sale (POS):** Refers to a merchant device or software where a customer makes a payment for goods or services, as well as a place where sales tax may become due. POS transactions may take place offline or online, and receipts may be printed or generated electronically. Existing POS software must be updated to support crypto transactions. It is possible to integrate POS systems with blockchain-based banking systems using the Merchant module’s support integrations, such as APIs for merchants.
+
+*   **Governmental systems:** The governmental systems that audit and ensure the compliance of the blockchain-based system, including customs.
+
+*   **External systems:** All other external systems that connect with the blockchain-based banking system, for example, payment gateways, payment networks, and private auditors.
+
+The blockchain server and its components are described below.
+
+*   **Blockchain application server:** Application servers are software that interconnect operating systems (OS) with external resources, including databases, internet services and host communications, and user applications. Applications servers facilitate access to and performance of business applications by providing a host or container for the user’s business logic. There are numerous and competing traffic conditions that must be handled by application servers, including the variable nature of client requests, hardware and software failures, distributed nature of large-scale applications, and heterogeneity of data and processing resources required to meet business needs. The blockchain application server differs from standard, centralized application servers in that blockchain-related activities are performed by a decentralized blockchain network. Data is stored on the blockchain, and smart contracts drive the logic of the blockchain-related activities.
+
+*   **Account management module:** Manages bank customers’debit, credit, savings accounts, including blockchain payment accounts. This module works together with the transaction management, blockchain, and smart contracts modules.
+
+*   **Blockchain module:** Performs blockchain-related activities and acts as an interface between the blockchain network and the blockchain application server.
+
+
+
+# 合规模块
+执行与法律、安全和合同相关的软件合规活动，包括收集、存储和查找要求；根据要求更新规则引擎；与测试模块协调合规测试；利用数据分析模块提供解决不合规问题的建议；利用报告模块提供审计/合规测试结果；使用智能合约模块创建或修订智能合约。
+
+# 客户关系管理（CRM）模块
+使企业能够与客户建立有意义的互动，从而提高盈利能力并降低成本。银行需要更新其现有的 CRM，以支持基于区块链的银行服务，具体包括：
+
+每位客户都会获得一个由银行唯一分配的 ID，以便准确统一地查看客户的个人信息、过往交易、账户余额等。为消除不准确、过时和重复的数据记录，区块链公共地址可以与客户的唯一 ID 关联，例如用于加密货币交易。这将帮助银行更深入地洞察客户并更有效地与其互动。此外，区块链技术还能让消费者拥有一个兼容所有品牌的单一、去中心化钱包。结果是，消费者将摆脱单一品牌的规则和限制，简化积分兑换。因此，消费者将对购物体验拥有更大控制权，银行也能为客户提供更佳的个性化优惠，提升用户体验。
+
+# 数据分析模块
+用于数学分析大数据集，以预测、进行统计分析或进行定性分析。利用机器学习（ML）或人工智能（AI）算法，该模块执行银行相关的所有数据分析活动，包括信用评分、信任评分、基于风险的身份验证和异常检测。
+
+# 设备管理模块
+管理（包括设备发现、白名单、黑名单、存储和更新设备信息等）所有连接至区块链银行系统的设备。
+
+# 集成/通信模块
+负责系统内部和外部的所有通信，并进行数据处理所需的转换，例如通过 API 网关实现。
+
+# 贷款模块
+执行银行的所有贷款业务。贷款是指贷方（即银行）在客户提供担保或信任的前提下，向客户提供资金，并收取利息等额外收益。银行现有的贷款模块可以进行修改以支持加密货币贷款。类似于以证券为抵押的贷款，加密货币抵押贷款以数字货币作为抵押品。该类贷款可通过加密货币交易所或银行在线或移动端提供的加密贷款服务获取。与传统贷款不同，客户在使用加密资产作为抵押品时仍保留所有权，但失去了部分权利，包括交易或用于支付的权利。此外，若数字资产价值大幅下跌，客户在违约时可能需要偿还远超借款金额的款项。
+
+# 日志、追踪和监控模块
+追踪和日志是强大的跨切面工具，可实时监控系统并基于历史事件进行问题排查。日志集中记录错误及其关联数据，便于追踪。追踪提供比日志更全面的应用程序性能视图——日志是基于事件触发的记录，而追踪则跟踪程序的执行流和数据演进。监控通过对程序进行仪器化，收集、聚合和分析指标，以判断程序行为。为满足区块链系统的可扩展性和速度要求，日志、追踪和监控模块必须包含相关的性能指标。
+
+# 商户模块
+负责商户相关任务，并向商户提供在线支付、账单以及 POS（点对点）集成等方面的客户服务，以接受店内加密货币支付（例如通过 API、插件、支付按钮和库）。该模块与税务模块协同工作，完成加密货币销售的税务处理。
+
+# 商户系统
+用于提供商户服务，接受并处理支付，或进行商户处理。商户系统通常与银行集成以实现对账，并与 POS 终端集成以接受线上和线下支付。商户系统可通过商户模块提供的集成与区块链银行应用服务器进行连接。
+
+# 移动银行
+由银行或金融机构提供，供客户通过移动设备（如智能手机或平板）远程完成金融操作，如转账、缴费等。与在线银行不同，移动银行使用银行或金融机构提供的移动应用。移动银行应用需要进行修改以支持区块链银行服务，例如在店内进行加密货币支付、点对点或跨境支付、管理加密资产、申请基于加密资产的贷款、通过智能合约实现自动保险，以及区块链 KYC（身份验证）。
+
+# 在线银行
+让客户能够通过机构网站执行各类金融交易。在线银行应用需要更新以支持区块链银行服务，例如在线加密货币支付、在线点对点或跨境支付、管理加密资产、申请基于加密资产的贷款或申请自动保险。
+
+# 组合管理模块
+管理一组投资（包括加密资产），以实现特定的财务目标和风险容忍度。投资可以根据客户的风险偏好通过 AI/ML 方法自动选择和管理，也可以由客户或投资顾问手动选择。该模块与区块链和智能合约模块协同工作，管理加密资产和 NFT。
+
+# 报告模块
+向企业交付多种运营报告。报告可能包括销售、生产、临时或自定义报告，使用户能够通过定制查询洞察特定问题。区块链银行系统需要能够报告区块链交易，例如与利率波动相关的交易。作为报告数据源，智能合约可用于追踪利率波动以及由此产生的结算和记录。此外，还可用于报告资产交换（如所有权证书、产权）以及数字资产（如音乐）的所有权以及版税收取。
+
+# 规则引擎
+在生产环境中发生时执行业务规则。这些规则可能来源于法律法规、公司政策或其他任何来源。现有的银行规则引擎需要更新，以纳入（上链和下链）区块链相关规则，如合规、安全、智能合约、商户和税务规则。
+
+
+
+# 6.5 结论与未来工作
+
+在本章中，我们讨论了区块链对银行和金融行业的影响，区块链基于银行应用的最新状态，以及开发区块链基于银行和金融应用的架构考虑。
+
+区块链有潜力彻底改变国际贸易和银行业等行业。随着加密资产的市值增长以及机构对区块链的支持增加，开发区块链银行服务基础设施的银行将获得竞争优势。为了利用下一代技术的好处，金融服务公司需要与监管机构合作并开发标准化解决方案。通过使用公共区块链和私有区块链标准化行业解决方案，可以提高交易速度、降低后台成本、减少人工工时。因此，银行和金融行业能够扩展其产品组合、开发新的盈利渠道，并提升现有和此前难以触达客户的服务水平。
+
+预计随着银行继续采用区块链技术，银行业将出现多项新趋势。其中包括基于区块链的跨境支付，已有银行在测试以提高速度、安全性和成本效益。因此，国际支付将得到更高效处理并成本更低。区块链也在身份验证方面日益流行，因为它可以用于存储和验证客户身份，确保符合反洗钱法规。区块链技术还可用于验证第三方供应商、客户和员工。其他未来的区块链在银行和金融行业的应用趋势包括区块链测试、与大数据分析平台的集成、基于智能合约的合规与认证、区块链与物联网的标准化、去中心化的建立、税务和监管协作以促进区块链在国际贸易和海关中的采用，以及未来更多银行利用区块链技术管理资产。此外，区块链技术还能通过提升“了解客户”和反洗钱流程的安全性和透明度、降低欺诈风险，以及通过替换现有的跨境支付、贷款和贸易融资基础设施来降低成本、提升服务质量。预计现有的区块链可扩展性和可行性问题将通过实施更节能的共识机制得到解决。
+
+总体而言，区块链技术预计将对银行业产生深远影响。
+
+它提供了一种安全且成本效益高的支付处理、身份验证、资产管理等方法。未来，银行业很可能继续探索区块链技术的使用，以实现其目标。
+
+## REFERENCES
+
+
+
+1. N. J. Birch, “区块链与海关：前景与可能性,” Primerus, \[Online\]. 可用: [`www.primerus.com/business-law-articles/blockchains-and-customs-prospectsand-possibilities.htm`](https://www.primerus.com)
+
+2. Y. Okazaki, “揭示区块链在海关中的潜力,” World Customs Organization(WCO), 2018.
+
+3. E. Davradakis and R. Santos, “区块链、金融科技及其对国际金融机构的相关性,” European Investment Bank (EIB), 2019.
+
+4. F. Rega, N. Riccardi, J. Li and F. Di Carlo, “区块链在银行业中的应用: 综述,”Research Gate, 2018.
+
+5. A. Khatri and A. Kaushik, “系统性文献综述: 区块链在银行业的采用,”Journal of Economics, Finance and Accounting (JEFA), vol. 8, no. 3, pp. 126-145 , 2021.
+
+6. R3, \[Online\]. 可用: [`www.r3.com/`](https://www.r3.com)
+
+7. D. L. Portilla, M. V. N. David J. Kappos, S. Rosenthal-Larrea, J. D. Buretta and C. K. Fargo, “区块链在银行业: 景观与机遇综述,” 28 January 2022. \[Online\]. 可用: [`corpgov.law.harvard.edu/2022/01/28/blockchain-in-the-bankingsector-a-review-of-the-landscape-and-opportunities/#respond`](https://corpgov.law.harvard.edu)
+
+8. Y. Guo and C. Liang, “区块链在银行业中的应用与前景,” Financial Innovation, vol. 2, no. 24, 2016. 可用: [`jfin-swufe.springeropen.com/articles/10.1186/s40854-016-0034-9#citeas`](https://jfin-swufe.springeropen.com)
+
+9. L. Jutila, 区块链技术及其在金融行业的应用, Aalto University School of Business, Department of Economics, 2017.
+
+10. S. Albeshr, H. Nobanee and H. Nobanee, “区块链在银行业中的应用: 简要综述,” SSRN, 2020.
+
+11. PCI Security Standards Council , “PCI Security Standards,” \[Online\]. 可用: [`www.pcisecuritystandards.org/`](https://www.pcisecuritystandards.org)
+
+12. S. Wang, L. Ouyang, Y. Yuan, X. Ni, X. Han and F. -Y. Wang, “区块链驱动的智能合约: 架构、应用与未来趋势,” IEEE Transactions on Systems, Man, and Cybernetics: Systems, vol. 49, no. 11, pp. 2266-2277 , 2019.
+
+13. D. K. C. Lee and L. Low, Inclusive Fintech: 区块链、加密货币和 ICO, World Scientific, 2018.
+
+14. J. Zhang, R. Tan, C. Su and W. Si, “基于联盟区块链的个人信用信息共享平台的设计与应用,” Journal of Information Security and Applications, vol. 55, p. 102659, 2020.
+
+15. P. Yadav and R. Chandak, “利用区块链转变了解客户(KYC)流程,” in 2019 International Conference on Advances in Computing, Communication and Control (ICAC3), 2019.
+
+16. S. Islam, M. Obaidat, V. Rajeev and R. Amin, “设计一种基于无证书的服务器的可搜索公钥加密方案,” In: Giri, D., Mohapatra, R., Begehr, H., Obaidat, M. (eds), in Mathematics and Computing. ICMC 2017. Communications in Computer and Information Science, vol. 655, Singapore, Springer, 2017.
+
+17. G. Salwan, P. Kaushal, S. Gupta and P. Nayak, “稳健的网络安全: 挑战与机遇,” in Artificial Intelligence, Machine Learning, and Data Science Technologies: Future Impact and Well-Being for Society 5.0, Boca Raton, CRC, 2021, p. 310.
+
+18. N. A. Popova and N. G. Butakova, “研究在不使用代币的情况下利用区块链技术保护银行交易,” in 2019 IIEEE Conference of Russian Young Researchers in Electrical and Electronic Engineering (EI Con Rus), 2019.
+
+19. Y. Wang and C. Lin, “区块链在信用银行中的应用研究,” in 2020 International Conference on Information Science and Education (ICISE-IE), 2020.
+
+20. S. Joseph and S. Karunan, “基于区块链的去中心化交易结算系统在银行业的应用,” in Fourth International Conference on Microelectronics, Signals & Systems (ICMSS), 2021.
+
+21. K. Singh, N. Singh and D. S. Kushwaha, “基于数字账本技术的可互操作且安全的电子钱包架构,” in 2018 International Conference on Computing, Power and Communication Technologies (GUCON), 2018.
+
+22. S. Sakho, Z. Jianbiao, F. Essaf and K. Badiss, “利用区块链技术改善银行交易,”in IEEE5thInternationalConferenceonComputerandCommunications(ICCC), 2019.
+
+23. K. A. M. Ahmed, S. F. Saraya, J. F. Wanis and A. M. T. Ali-Eldin, “基于区块链和银行卡的自主身份架构: 针对银行诈骗电话预防的案例研究,” in 2020 15th International Conference on Computer Engineering and Systems (ICCES), 2020.
+
+24. Z. Lu, X. Wan, J. Yang, J. Wu, C. Zhang, P. C. K. Hung and S.-C. Huang, “Bis: 智能城市中区块链基金税交互系统的新设计,” in 2019 IEEE Intl Conf on Dependable, Autonomic and Secure Computing, Intl Conf on Pervasive Intelligence and Computing, Intl Conf on Cloud and Big Data Computing, Intl Conf on Cyber Science and Technology Congress (DASC/PiCom/CBD Com/Cyber SciTech), 2019.
+
+25. W. Fan, S. -Y. Chang, S. Emery and X. Zhou, “基于区块链的许可和可审计金融交易处理的分布式银行,” in 2020 29th International Conference on Computer Communications and Networks (ICCCN), 2020.
+
+26. L. Cocco, A. Pinna and M. Marchesi, “基于区块链的银行: 成本节约,” Future Internet, vol. 9, no. 25, 2017. 可用: [`www.mdpi.com/1999-5903/9/3/25`](https://www.mdpi.com)
+
+27. Z. Kawasmi, E. A. Gyasi and D. Dadd, “全球银行业区块链采用模型,” Journal of Internastional Technology and Information Management, vol. 28, no. 4, pp. 112-154 , 2020.
+
+28. European Parliament and the Council of the European Union, “欧盟议会和欧洲联盟理事会 regulation (EU) 2016/679,” 2016. \[Online\]. 可用: [`eur-lex.europa.eu/eli/reg/2016/679/oj`](https://eur-lex.europa.eu)
+
+29. Board of Governors of the Federal Reserve System Federal Deposit Insurance Corporation Office of the Comptroller of the Currency, “联合声明: 加密资产政策冲刺计划及后续步骤,”2021. \[Online\]. 可用: [`www.federalreserve.gov/newsevents/pressreleases/files/bcreg20211123a1.pdf.`](https://www.federalreserve.gov)
+
+30. Deloitte, “加密资产管理: 税务期望差距的管理,” 2022.
+
+31. P. Nayak, N. Ray and P. Ravichandran, IoT 应用、安全威胁及对策, Boca Raton, CRC Press, 2021.
+
+32. P. Shah, D. Forester, D. Polk, W. Llp, M. Berberich, C. Raspe and H. Mueller, “区块链技术: 数据隐私问题及潜在缓解策略,” Practical Law, 2019.
+
+33. W. Li, Y. Wang, L. Chen, X. Lai, X. Zhang and J. Xin, “完全可审计的隐私保护加密货币, 针对恶意审计员,” Cryptology ePrint Archive, 2019.
+
+34. FIDO Alliance, \[Online\]. 可用: [`fidoalliance.org/`](https://www.fidoalliance.org)
+
+# 7 区块链驱动的电子商务保修系统, 使用 NFT
+
+Swarup Yeole
+
+
+
+
+国际信息技术学院 Naya Raipur，Naya Raipur，印度  
+Mohammad S. Obaidat  
+乔丹大学，阿曼，乔丹  
+SRM 印度大学  
+印度理工大学北京，中国  
+Aditya Goel 和 Sanskar Chandra  
+国际信息技术学院 Naya Raipur，Naya Raipur，印度  
+Ruhul Amin  
+国家技术学院，贾姆谢德布尔，印度  
+DOI: [10.1201/9781003326236-7](https://dx.doi.org/10.1201/9781003326236-7)  
+
+## 7.1 介绍  
+
+非同质化代币（NFT）市场呈指数级增长。解决方案是基于 NFT 的区块链数字保修系统，它自动化保修跟踪和索赔流程，并减少处理索赔所消耗的时间。该方法是一个由多个端点组成的自动化过程，可在从智能手机到个人笔记本电脑和台式机等多种设备上使用，从而使其对客户和供应商来说易于使用。模块化区块链网络为保修管理系统创建了一个点对点网络。一个网络用于供应商，另一个用于客户。供应商将发布其产品并提供保修索赔的详细信息。当客户购买该产品时，其保修索赔（例如，保修期为一年）将在链码中触发。当保修期过期时，系统会自动将保修标记为 `expired`，客户将无法再享受该产品列出的保修期限的权益。我们的目标是使保修系统更加稳健可靠。  
+
+我们的架构在产品购买时提供数字代币作为保证，该代币作为商品购买的凭证以及随之而来的保修凭证。  
+
+## 7.2 文献综述  
+
+### 7.2.1 非同质化代币（NFT）：概述、机遇、评估与挑战  
+
+本章介绍非同质化代币（NFT）概念及其市场增长。文中指出，NFT 概念源自以太坊代币标准，这意味着每个代币必须通过可见标记予以区分。作为可辨识的唯一证明，此类代币可以与虚拟/计算机化的属性绑定。通过 NFT，所有显著属性可以自由交换，并根据其年龄、稀有性、流动性等改变意义。本章强调 NFT 显著提升了去中心化应用（dApp）市场的成功。  
+
+本文从多个角度考察 NFT 生态系统，先总结最佳 NFT 解决方案，再提供其技术组件、流程、基准和理想特性。随后的安全发展讨论了此类设计范式的观点、可能性和困难。  
+
+根据一份报告，NFT 是区块链领域的突破。报告中研究了可能重塑数字/虚拟资产市场的最佳 NFT 方案。首先分析专用组件，并提供计划模型和属性。然后评估当前 NFT 框架的安全性，并讨论拥抱 NFT 概念的机遇和潜在应用。论文还讨论了在大规模进入市场前需要解决的现有研究挑战。报告提供了对当前提议方案和活动的适当审查和汇总，使新来者更容易跟上持续的发展。  
+
+### 7.2.2 非同质化代币：数字收藏品的未来  
+
+本章探讨 NFT 与加密货币及版权的关系，以及其工作方式和各种组件。其目标是分析影响其运营的法律风险，以及印度法律框架在加密资产方面所面临的机遇和挑战。  
+
+与其他虚拟加密货币和资产一样，NFT 是基于区块链技术的数字真伪证明证书。近年来，区块链技术和加密货币交易的兴趣有所增加。正如最近所见，NFT 市场也在增长。NFT 的概念源自以太坊代币标准，该标准旨在分离并识别每个代币的独特签名，该签名与数字特征相连。  
+
+由于该数字行业的快速增长及其在全球市场中的显著回报，印度对该数字行业的兴趣激增。然而，印度缺乏监管框架来控制此类新兴的数字加密资产，因为 NFT 生态仍处于起步阶段。其法律地位和神圣性因围绕其的各种法律困难而模糊。新兴艺术家在没有系统描述的情况下可能会在混乱的增长中迷失。  
+
+## 7.3 前置知识  
+
+### 7.3.1 区块链  
+
+区块链是一项快速发展的技术，由 Satoshi Nakamoto 在 2008 年通过发表《比特币：点对点电子现金系统》论文而闻名。由于其去中心化特性，区块链是一种分布式账本技术（DLT），使数字交易和记录透明且不可篡改。一个区块是一组有效的交易。有效交易是指在验证过程中已通过共识方法批准的交易。矿工是区块链网络中的节点，负责运行这些算法。区块由在特定时间段内发生的、经过时间戳和验证的有效交易组成。当前区块通过哈希 —  — 类似指纹的唯一字母数字字符串 —  — 与紧邻的前一个区块相连。每个区块都保存前一个区块的哈希以供参考。通过 SHA256 等算法，不同消息会产生不同的哈希。交易的微小改变会导致输出哈希改变并破坏链条。因此，一旦交易被包含在区块中，就无法被修改，使区块链不可变。  
+
+区块链上的记录按时间顺序组织，不可逆，且所有节点均可轻松访问。由于其节省成本、速度快、透明、隐私、可见性、风险降低、欺诈少、篡改少、生产力高、效率高、质量好和结果优异等优势，区块链技术正在迅速在金融、保险、贸易融资、数字身份、慈善和供应链等多个行业获得应用。  
+
+截至目前，有四种区块链网络：  
+
+1. `Public blockchain`  
+   公有区块链没有入口要求。任何拥有 Web 连接的用户都可以使用它发送交易并成为验证者（即参与执行协议协议）。此类组织通常采用某种 Proof of Stake 或 Evidence of Work 计算机机制，并向保障它们的参与者提供经济激励。比特币和以太坊是两个最大且最知名的公有区块链。  
+
+2. `Private blockchain`  
+   许可区块链是私有区块链。除非组织的主席给予批准，否则无法支持它。访问权限仅限于成员和验证者。公开区块链及其他共享、去中心化数据集应用程序 —  — 这些应用程序不向指定过程组提供访问权限 —  — 有时用“传递记录（DLT）”一词来区分。  
+
+3. `Hybrid blockchain`  
+   混合区块链结合去中心化和统一特性。具体的去中心化程度和集中化程度会影响链的精确活动。  
+
+4. `Sidechain`  
+
+
+
+-   [侧链](https://example.org)是与基础区块链并列的区块链记录的分配。
+
+基础区块链（定期处理数字资源的区块链）上的记录可以与侧链相连和从侧链转移；这使得侧链可以独立于基础区块链运作（例如，通过使用替代记录保存方法和替代共识计算）。
+
+区块链技术在多个领域有应用，以下是其中一些：
+
+1. **金融服务**
+
+根据 2016 年 9 月 IBM 的研究，这正在比预期的更快地发生。许多组织将其收益分为帮助企业创建私有区块链以及处理传输数据以用于银行用途。银行对这一想法感兴趣，因为它加快了行政结算程序。此外，随着区块链业务发展到早期阶段，机构知识显示它通常是一个全新金融行业的框架，拥有所有相关后果。
+
+区块链还使通过初始硬币发行（ICOs）和安全代币（STOs）进行贡献成为可能，STOs 是数字资产的一个独立类别，有时被称为改进型资产（DSOs）。传统资产如公司股票和更非理性的资产如专利、房地产、手工艺品或特定商品可以通过 STO/DSOs 进行代币化。STO/DSOs 可以在托管股票交易所上以公开或隐蔽方式管理。许多团体参与这一领域并支持安全代币化、公开 STO 和私人 STO。
+
+2. **游戏**
+
+区块链技术，如数字货币和 NFT，已被用于电脑游戏的商业化。一些即时服务游戏允许玩家通过与其他玩家交易游戏内货币（如角色皮肤或其他游戏内物品）来购买和交易游戏内物品。一些游戏也允许使用真实货币交换虚拟物品，但这在某些将电脑游戏视为类似赌博的国家可能是非法的，例如皮肤赌博。因此，发行商通常会避免让玩家从游戏中获得真实资产。区块链游戏通常允许玩家将这些游戏内物品交换为数字货币，然后可以转换为现金。
+
+3. **供应链**
+
+**运输行业：** 承包商和新兴企业开始使用区块链技术，以促进基于区块链的平台环境的发展，从而提升全球运输供应链中的价值。
+
+**有价物资的采矿：** 区块链技术已用于追踪宝石和其他商品的来源。2016 年，《Money Road Diary》报道称，IBM 的区块链技术正在与区块链技术公司 Everledger 合作，追踪钻石的来源，以确保它们是伦理采矿的。Precious Stone Swapping Organization（面向消费者，DTC）于 2019 年开始开发名为 Tracr 的钻石交换零售网络产品。
+
+**食品供应：** 从 2018 年开始，沃尔玛和 IBM 运行了一项测试项目，使用基于区块链的架构对菠菜和生菜进行供应链检查。所有区块链节点均由沃尔玛控制，并托管于 IBM 云上。
+
+**设计行业：** 在时尚行业中，公司、分销商和客户之间存在模糊的关系，这将阻碍其稳定和持续的增长。区块链纠正了这一缺陷，简化了数据，解决了可控行业进步的问题。
+
+4. **加密货币**
+
+加密货币是一种数字货币，可以在计算机网络中交换，无需中央管理或监督机构（如政府或银行）。
+
+个人货币所有权记录存储在先进的记录中，即一个数字数据集，包含强区域，可用于获取交易记录、管理硬币的生产以及监控硬币所有权的转移。尽管名称如此，数字货币不被视为传统货币标准。数字货币在实践中被广泛视为一种独特的资产类别，尽管它们被赋予了多种名称，包括被视为物体、保护品和货币规则。某些加密货币方案使用验证者来维护数字货币。在权益证明（proof-of-stake）范式中，所有者通过其代币建立安全性。因此，他们对代币拥有权取决于他们下注的金额。通常，这些象征性的赌注会通过网络费用、新代币或其他奖励机制在长期内获得额外的代币所有权。
+
+数字货币在实际结构上不存在（如纸币），通常不由中央机构发行。加密货币通常使用去中心化控制，而不是由中央银行数字货币（CBDC）控制的法币。当一种数字货币在发行前打印或由单一担保人发行时，它通常被视为集中化。当以去中心化方式执行时，每种加密货币都使用分布式账本技术，通常是一个充当公共金融交易数据库的区块链。传统资产类别如货币、商品和股票，以及宏观经济因素，对数字货币回报有有限的机会。
+
+大多数数字货币使用区块链技术来跟踪交易。例如，区块链可用于以太坊和比特币网络。2018 年 5 月 8 日，Facebook 宣布成立一个新的区块链团队，由 David Marcus（前 Courier 负责人）领导。Facebook 的期待中，其加密货币平台 Libra（现称为 Diem）于 2019 年 6 月 18 日正式发布。
+
+各国政府对居民或银行持有数字货币的合法性采取了不同的态度。中国在 2020 年将区块链技术应用于多个行业，包括数字公共货币的发行。西方政府，包括欧洲联盟和美国，为加强其特定货币，已启动类似的项目。
+
+5. **域名**
+
+多个尝试已在区块链上提供域名服务。这些域名可以通过使用私钥进行控制。因此，不可审查的网站必须被考虑在内。此外，这将绕过记录商限制包含欺诈、滥用或非法信息的网站的能力。
+
+Namecoin 是一种支持高级“片”空间（TLD）的虚拟货币。2011 年，Namecoin 分叉自比特币。ICANN 不支持“.piece”TLD；它需要替代 DNS 根。在 120,000 个注册名称中，约 28 个网站于 2015 年左右开始使用它。2019 年，Open NIC 因恶意软件和潜在的法律问题停止对 Namecoin 的支持。
+
+三个明确的 TLD 通过 Ethereum Name Administration（ENS）与以太坊区块链相连，分别是“.eth”、“.luxury”和“.kred”。除了比使用常规数字货币钱包地址更方便外，.kred TLD 还可用于转账。
+
+6. **其他用途**
+
+
+
+区块链技术可用于构建可靠、透明且简洁的记录系统，用于收集交易信息、追踪计算机使用情况以及向内容提供者（如音乐家或远程用户）进行支付。在 Gartner 2019 CIO Review 中，高等教育机构的受访者占样本的 2%，而另外 18% 的受访者计划在未来 24 个月内开展学术项目。为实施区块链技术进行音乐分发，IBM 于 2017 年与 ASCAP 和 PRS for Music 合作。另一种基于区块链的方案是 Imogen Pile 的 Mycelia 管理系统。该系统“赋予艺术家更大对其音乐及相关信息在听众和其他艺术家之间流通的控制权”，据声明所述。
+
+在区块链之后，保险行业现在可利用分布式、参数化和微保险等新的分发策略。物联网（IoT）和共享经济也从区块链中受益，因为它们促进了点对点的协作。美国画廊与图书馆服务基金会的拨款正在被探索，以在图书馆中应用区块链技术。
+
+Hyperledger 是由 Linux Foundation 主导的合作项目，旨在实现基于区块链的分布式记录功能，属于其他区块链项目之一。该项目包括由 Monax 开发的 Hyperledger Texture 和 Hyperledger Tunnel（均由 IBM 牵头）。另一个是由 JPMorgan Pursue 支持的私有区块链 Majority，专为合同应用提供私有容量。此信息在 Figure 7.1 中展示。
+
+![Figure 7.1 EVM.](img/fig7_1_B.jpg)
+
+Figure 7.1 EVM.
+
+### 7.3.2 Ethereum Virtual Machine (EVM)
+
+*Ether* 是以太坊区块链所使用的代币。Ether 代表账户之间资金的任何交换，作为分布式货币。以太坊使用的货币称为 ether，这为从加密货币交易到金融软件、数字资产和代币的存储与管理，再到传统系统、投票软件、身份管理，乃至需要可追踪资产和资源的系统，提供了广泛的应用范围。以太坊智能合约的运行环境称为 Ethereum Virtual Machine (EVM)。在 EVM 中运行的代码完全隔离，而非仅仅 sandboxed，因此既不能被其他进程访问，也不能被网络访问。即使其他智能合约也只能在特定条件下访问。
+
+通过规避部分与加密货币行业相关的拒绝服务攻击（DoS）问题，EVM 确保安全。其次，EVM 通过解释和运行以太坊编程语言，使通信能够 uninterrupted 地进行。
+
+### 7.3.3 Smart Contracts
+
+基于区块链的智能合约是满足特定条件时执行的计算机程序。它们用于自动化协议的实施，使所有相关方在无需中介或浪费时间的情况下确信结果。它们还能自动化工作流程，当条件满足时，下一步即被启动。
+
+智能合约使开发者能够构建各种去中心化应用（dApp）和代币。它们应用于从金融工具到物流和游戏体验的各个领域。
+
+智能合约是以“如果/当...则...”形式编写并在区块链上发布的代码声明。当网络中的计算机确认特定条件已满足时，将执行相应的活动，包括完成财务支付、登记车辆、发送通知或发放门票。交易完成后，区块链会更新，因此交易不可篡改，只有被授权的用户方可查看结果。
+
+智能合约可包含必要的任意数量的条件，以向相关方提供保障，确保行动能够成功完成。为确定条件，参与者必须达成“如果/当...则...”规则的共识，考虑可能的例外情况，并提供争议解决框架。同时，参与者还需讨论在区块链上如何存储交易及相关数据。
+
+开发者可以构建智能合约，但越来越多的企业在采用区块链进行业务时，会使用模板、Web 界面和其他在线工具来简化智能合约的创建过程。
+
+**智能合约的优势**
+
+*   **速度、效率与精确性**
+
+    当条件满足时，合约会迅速执行。作为数字且自动化的合约，智能合约消除了纸质文档的需求，并避免了手动填写表单时常见的错误。
+
+*   **完整性与信任**
+
+    无需担心信息被某参与方操纵，因为不存在第三方；参与方交换加密的交易记录。
+
+*   **安全性**
+
+    加密的区块链交易记录极难被篡改。在分布式账本中，每条记录都与之前和之后的记录相连，因此黑客需要修改整个链条才能更改单条记录。
+
+*   **节省成本**
+
+    智能合约消除了中介管理交易的需求，从而消除了相关的费用和时间延迟。
+
+*   **备份**
+
+    区块链的共享账本由每个节点维护，使该服务成为最佳选择。
+
+### 7.3.4 InterPlanetary File System
+
+区块链是一种安全存储数据的方式。但由于计算和网络限制，它并不是处理大量数据的最佳方案。作为替代方案，InterPlanetary File System (IPFS) 可用于成本效益地存储海量数据和内容。IPFS 是一种分布式、去中心化的系统和平台，用于安全存储数据和文件。它结合了早期点对点网络（如 BitTorrent、DHT、SFS 和 GIT）的成功思想。IPFS 通过将成功的方法整合到一个重要系统中，而非仅限于单独的部分，提供了全新的大规模应用创建和部署框架。
+
+IPFS，即 InterPlanetary File System，是为构建点对点超媒体存储与共享的分布式网络和协议而设计的，其内容可寻址，因为它是点对点的，节点拥有特殊权限。
+
+IPFS 节点使用本地存储保存 IPFS 对象。这些对象代表文件和数据结构，由节点连接并通过节点传输。IPFS 使用内容的哈希值来识别并在节点之间分发它。它采用 Merkle DAG 数据结构进行数据存储，并利用 GIT 进行版本控制。
+
+点对点网络分发内容，IPFS 旨在直接连接每台计算设备。甚至互联网本身都可以通过 IPFS 发展。IPFS 提供一种内容寻址的块存储格式，具备高吞吐量和内容寻址超链接。它结合了自认证命名空间、激励区块交换以及分布式哈希表。IPFS 中的数据传输不可篡改，因为不存在单一故障点。分布式内容交付保护了 HTTP（面临 DDoS 攻击）的弱点，并节省带宽。访问文件系统的方式多样，包括通过 HTTP 的 FUSE（“文件系统在用户空间”）或其他方式。IPFS 文件系统将包含本地文件，使其可供全球访问。由于使用哈希值识别文件，因此具备缓存友好性。任何下载文件的用户都会使数据在网络中可用于其他用户。
+
+### 7.3.5 NFT
+
+
+
+非同质化代币（NFT）是复制有形事物的独特性、稀缺性和所有权确认等实际属性的数字货币代币。它们同时针对区块链所带来的新型、无形且必不可少的数字资产进行处理。NFT 正在被用于实物和虚拟资源，以适应其价值。
+
+NFT 不可交易。它们通过元数据和唯一标识符（如扫描标签）与特定的链上地址关联，从而相互区分。元数据使它们成为确认责任的最佳工具。由于每个代币都极具辨识度，NFT 与比特币或以太坊等区块链加密货币（如 Bitcoin 或 Ethereum）不同。例如，一个比特币（BTC）始终与另一个比特币价值相等；同理，一个以太币（ETH）单位也等于另一个以太币。加密货币因其可互换性，在数字经济中作为安全的交换媒介具有合理性。通过确保每个代币都是唯一的，NFT 改变了加密领域的范式。
+
+ERC-721 标准催生了 NFT。ERC-721 规定了交换和分发游戏代币所需的最小界面——所有权信息、安全性和元数据。它由与创建 ERC-20 智能合约的部分人员共同开发。通过降低 NFT 的交易和存储成本，并将多种非同质化代币类型批量合并到单一合约中，ERC-1155 标准在此基础上进一步拓展了概念。
+
+需说明的是，独特标识的概念和数字化有形商品的概念本身并不新颖。但当这些概念与不可篡改的区块链（智能合约）的优势结合时，它们便成为变革的强大动力。
+
+市场效率是 NFT 最明显的优势。将实物资产转化为数字资产简化了流程并消除了中介。代表实物或数字艺术品的 NFT 免除了中介的需要，使艺术家能够直接与观众互动。此外，它们还能提升企业流程。例如，一枚酒瓶的 NFT 让供应链的不同参与方更易沟通，并帮助追踪其创作、来源和销售全过程。咨询公司埃森哲（Ernst & Young）已为其客户开发了类似解决方案。
+
+**NFT 类型**
+
+1. **艺术**
+
+   艺术是 NFT 最常见的子集。这些主要是数字艺术作品，由其所在的公共账本发布公开的所有权和真实性证明证书。历史上最贵的 NFT 是艺术家 Beeple 的数字作品《The First 5000 Days》，于 2021 年 3 月在佳士得拍卖会上以惊人的 6930 万美元售出。
+
+2. **音乐**
+
+   NFT 狂潮中最近的发展是音乐。艺术家在将专辑发布到常规流媒体平台之前，会先在 NFT 市场预发。消费者可以购买唱片的一部分（如份额），并在传统渠道发布后获得专辑收入的一部分。虽然这种音乐 NFT 交易模式仍属新颖，但许多交易均遵循此模式。例如，2021 年 3 月，Kings of Leon 的专辑《When You See Yourself》以多个 NFT 形式上市出售。
+
+3. **视频游戏项目**
+
+   视频游戏领域是 NFT 的广阔天地。各大公司并未以 NFT 形式出售完整游戏，而是提供皮肤、角色等游戏内内容进行购买。玩家今天大量购买可下载内容（DLC），而 NFT 资产则独占于单一玩家，且唯一。开发者先发布常规 DLC，随后在 NFT 市场上销售限量版 DLC。
+
+4. **交易卡/收藏品**
+
+   历史上第一个 NFT 是收藏品。这些数字收藏品与实体收藏品（如宝可梦卡片或状况良好的旧玩具）在形式上相同。第一批大规模发布的 NFT 收藏品是 Curio Cards，此后 Bored Ape Yacht Club、Crypto Punks、Cat Colony、Meebits 等收藏品层出不穷。Bored Ape Yacht Club 成为数字珍宝的市场领袖，深受收藏者喜爱。
+
+5. **重大体育瞬间**
+
+   体育纪念品是 NFT 最受欢迎的类别之一，NBA Top Shot 是该领域最著名的 NFT。此类 NFT 包含价值连城的体育赛事视频片段。勒布朗·詹姆斯的灌篮（LeBron James Dunk）及其系列（Throw downs）等视频是该类别中最知名的 NFT。其中一枚最贵的体育纪念 NFT，售价超过 38 万美元。
+
+### 7.3.6 ERC 721
+
+在以太坊区块链上，ERC-721 是免费、开放的标准，用于创建非同质化或唯一代币。大多数代币是可互换的，即每个代币与其他代币完全相同。但 ERC-721 代币各不相同。尽管本研究聚焦于视频游戏，ERC-721 也有文档、艺术等多领域的应用。要管理、拥有和交易唯一代币，智能合约必须实现 ERC-721 所规定的最小接口。它不强制规定代币信息的标准，也不限制添加其他功能。ERC 721 如图 7.2 所示（链接至章节 7.2 中的图 7.2）。
+
+Figure 7.2 ERC 721 function.
+
+| FUNCTIONS |
+| --- |
+| balanceOf(owner)ownersafeTransferFrom (from, to, tokenId, data)safeTransferFrom(from, to, tokenId)transferFrom(from, to, tokenId)approve(to, tokenId)setApproval ForAll (operator, approved)getApproved (tokenId)isApproved ForAll (owner, operator) |
+| --- |
+
+它提供包括在账户间转移代币、查询账户当前代币余额、确定特定代币所有者以及统计网络上流通的代币总数等功能。此外，它还支持授权转移特定数量代币的功能。实现 ERC-721 非同质化代币合约的方法和事件如下列出。部署后，合约即负责管理在以太坊上产生的所有已生成代币。
+
+### 7.3.7 ERC 1155
+
+以太坊区块链上的另一种代币标准是 ERC-1155。它遵循 ERC-20（可互换）和 ERC-721（不可互换）的原则，是广泛接受的非同质化标准。由于其能够在单一合约中支持多种代币，ERC-1155 赋予了资产真实价值。该规范使交换和代币生产更加可接受。ERC-1155 还支持复用现有代币并从中创建新代币，适用于文档、细艺等多个领域。
+
+### 7.3.8 MetaMask
+
+通过 MetaMask，用户可以发送和接收基于以太坊的币和代币，广播交易，保存和管理密钥，并使用合适的浏览器或移动应用内置浏览器安全地连接去中心化应用。用户的 MetaMask 钱包（以及任何类似的区块链钱包浏览器扩展）可以通过网站或去中心化应用的 JavaScript 代码与其他智能合约功能进行连接、认证或集成。这使网站能够将 MetaMask 充当中间件，向用户发送操作提示、签名请求或交易请求。
+
+**Features**
+
+*   **Ease of Use**
+
+    MetaMask 使用简便、快速且匿名。它甚至不需要电子邮件地址。只需设置密码并记住（并保存）秘密恢复短语即可。
+
+
+
+
+# Token Swaps
+
+点对点（`P2P`）代币交换可以使用您钱包中的 `MetaMask` 的交易功能进行。
+
+# Security
+
+由于信息在您的浏览器中加密，因此没有人可以访问您的信息。您拥有用于在忘记密码时恢复的 12 词语秘密恢复短语（也称为种子短语）。值得注意的是，即使 `MetaMask` 也无法获取种子短语，因此必须妥善保管它。一旦它消失，就再也找不回来了。
+
+# Built-In Crypto Store
+
+仅支持 `Ethereum` 及与 `Ethereum` 关联的代币，包括著名的 `ERC-20` 代币，与 `MetaMask` 一起使用。在 `Ethereum` 上，除以太币（Ether）之外的所有加密货币都作为 `ERC-20` 代币创建。
+
+# Backup and restore
+
+您向 `MetaMask` 提供的数据本地存储。因此，如果您更换浏览器或计算机，可以使用您的私人恢复短语来恢复您的 `MetaMask` 钱包。
+
+# Community support
+
+截至 2021 年 8 月，约 1000 万月活跃用户使用 `MetaMask`。由于其界面清晰易用，使用人数自 2020 年 7 月以来增长了 1800%。
+
+`MetaMask` 钱包适合已熟悉加密货币的个人，但对初学者并非最佳选择。由于钱包易受恶意软件和社交工程攻击的威胁，不熟悉警示标志的用户可能会面临资金损失的风险。由于无法在没有 12 词语秘密种子短语的情况下更改密码，用户可能会永久失去对其加密资产的访问权限。新用户在使用 `MetaMask` 或其他工具之前，必须先学习如何使用比特币钱包。
+
+**TechStack Used**
+
+1. `MetaMask`: 它是一个钱包和浏览器扩展程序，安装方式与其他浏览器插件相同。安装后，它允许用户持有 `Ethereum` 和其他 `ERC-20` 代币，从而可以使用任何 `Ethereum` 地址进行交易。通过将 `MetaMask` 连接到基于 `Ethereum` 的去中心化应用（dApps），用户可以在游戏中消费资金、在赌博应用中质押代币，或在去中心化交易所出售代币。
+
+2. `IPFS`: 用于存储和访问文件、网页、应用程序和数据的分布式系统。`Infura` 的 `IPFS` API 及专用网关为所有规模的应用提供了快速且易于使用的分布式安全存储，使更强大的 Web 成为可能。
+
+3. `React.js`: 由 Facebook 创建的前端 JavaScript 框架。我们使用 `React` 以声明式构建可组合的用户界面，以可预测且高效的方式进行开发。该框架是开源且基于组件的，负责开发应用的显示层。
+
+4. `Hardhat`: `Hardhat` 是 `Ethereum` 软件的开发环境。它包含多种可用于编辑、编译、调试和部署 dApp 和智能合约的组件，形成一个完整的开发环境。
+
+5. `Ether.js`: 用于连接 `Ethereum` 区块链及其生态系统的 `ethers.js` 库。最初设计用于 `ethers.io`，后发展为更通用的库。
+
+## 7.4 Implementation
+
+提议的架构支持去中心化市场和代币基础设施，用于列出产品。该架构还以数字代币的形式提供购买产品的保修，该代币作为产品购买及其相关保修的凭证。它利用 `IPFS` 以低成本在去中心化存储中存储列出的产品元数据。该架构使用 `Ethereum` 区块链部署智能合约。去中心化代币基础设施采用 `ERC 721` 协议创建唯一的代币对象，包括产品图片、产品型号和保修期限。产品从市场购买后，这些数字代币会转移到购买者的账户作为数字保修。实现该架构的步骤如下：
+
+### 7.4.1 NFT Smart Contract
+
+该合同遵循 `ERC 721` 标准。智能合约包含铸造 NFT 的函数。该合约包含以下函数：
+
+1. **mint**: 此函数用于铸造 NFT。它内部维护 NFT 列表的代币计数，以唯一标识每个列出的代币。该函数使用 `ERC721` 标准的 `safeMint()` 函数铸造 NFT，同时内部使用另一个 `ERC721` 函数 `setTokenURI()` 设置特定 NFT 的元数据。该函数在返回语句中返回 NFT 的唯一代币 ID。
+
+### 7.4.2 Market Place and Warranty Contract
+
+该智能合约允许卖家在市场上以 NFT 形式列出产品信息，待销售后将 NFT 所有权转移给买家作为保修。该合约也遵循 `ERC721` 代币标准，并内部使用 reentrancy guard 合约来防止 reentrancy 攻击。该合约将 `fee Account` 设置为智能合约的部署者。该合约涉及的函数如下：
+
+1. **Make Item**: `makeItem()` 函数接受以下变量作为输入：
+
+    1. `_nft`: 要列出的 NFT 的 NFT 合约。
+
+    2. `_tokenId`: 要列出的 NFT 的唯一代币 ID。
+
+    3. `_price`: 产品价格。
+
+    4. `_warranty`: 产品保修期限。
+
+    5. `_modelNum`: 产品型号。
+
+        该函数会检查 `_price`、`_modelNum`、`_warranty` 的输入是否有效。智能合约内部执行 `transferFrom()` 函数，将列出的产品 NFT 的所有权从卖家转移到智能合约。列出的产品数据存储在映射结构 `items` 中，唯一链接每个 `ItemId` 与其数据。每次执行该函数时，都会发出 `Offered` 事件。
+
+
+
+2. PurchaseItem: 该函数接收唯一的 `_itemId` 作为输入，并通过 `nonRentrant` 修饰符防止重入攻击。函数会检查 `_ItemId` 是否为有效格式，并检查商品状态。如果商品未售出，则交易允许继续；否则交易失败。内部调用 `get Total Price` 函数获取商品总价，随后调用 `transfer From()` 函数将 NFT 所有权从市场转移给买家作为保证，同时更新卖家以交付请求的产品。最后，函数将金额转移到市场账户和卖家账户。
+
+3. get Total Price: 该函数返回商品总价，计算公式为：total Price = (100 * fee Percent)/100。
+
+4. claim Warranty: 该函数在买家索赔保修后将 `_Warranty Claimed` 字段更新为 true。
+
+3) **Product Listing**
+
+产品列表涉及以下步骤：
+
+1. 卖家进入软件的“列出产品”部分。
+
+2. 卖家上传以下产品详情：
+
+    1. *Image:* 将出售的商品图片提供。
+
+    2. *Name:* 添加待售商品的名称。
+
+    3. *Model Number:* 列出商品型号。
+
+    4. *Description:* 在此字段中，卖家可添加商品描述。
+
+    5. *Price:* 在此字段中，卖家以 ETH 列出商品价格。
+
+    6. *Warranty:* 在此字段中，卖家列出商品保修期限（以年为单位）。
+
+3. 卖家点击“列出产品”，所有元数据存储在去中心化存储系统 IPFS 中。市场智能合约的 `make Item()` 函数被触发。MetaMask 会弹出确认列表的对话框，确认后交易签名并更新区块链数据。`make Item` 函数内部调用 `mint NFT` 函数，在市场上列出商品 NFT。生成的 NFT 所有权转移至市场。
+
+4) **Product Purchase**
+
+产品购买涉及以下步骤：
+
+1. 客户进入软件的区块链市场部分。
+
+2. 客户从市场列表中选择要购买的商品。
+
+3. 客户购买商品后，`Purchase Item()` 函数被触发。MetaMask 会弹出交易确认对话框。交易确认后，通知会发送给卖家以进行产品交付，产品从市场中移除，区块链状态更新，商品标记为已售出。此过程在 Figure 7.4 中显示。
+
+    ![FIGURE 7.4 Product purchase flow chart.](img/fig7_4_B.jpg)
+
+    FIGURE 7.4 Product purchase flow chart.
+
+5) **Warranty Generation and Claim**
+
+`Purchase Item()` 函数内部调用 `_transfer From()` 函数，将市场列出的商品 NFT 转移至买家账户。一旦所有权转移，事件 `bought` 会被发出。此时，该 NFT 作为数字保修和购买凭证。买家的“我的产品保修”部分会显示以下字段：
+
+1. Product Image
+
+2. Product Name
+
+3. Warranty Period
+
+4. Warranty Claimed
+
+如果客户索赔保修，`warranty Claimed` 字段会更新为 true，表示保修已被索赔。
+
+## 7.5 Deployment
+
+智能合约使用 Hardhat 部署。HardHat 是一个用于基于以太坊区块链测试、编译、部署和调试去中心化应用（dApps）的环境。部署后，Hardhat 会生成一个包含 20 个账户的本地区块链网络，用于模拟以太坊环境。在智能合约测试中使用的部分账户如 Table 7.1 所示。
+
+Table 7.1 Contracts Accounts Used
+
+| Account Address || Private Keys |
+| --- | --- |
+| 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 || 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7 a8412f4603b6b78690d |
+| 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 || 0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870 fc3fb9a804cdab365a |
+| 0x90F79bf6EB2c4f870365E785982E1f101E93b906 || 0x7c852118294e51e653712a81e05800f419141751be58f 05c371e15141b007a6 |
+| 0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 || 0x47e179ec197488593b187f80a00eb0da91f1b9d0b13 f8733639f19c30a34926a |
+| 0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc || 0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b 5e2d3348e872092edffba |
+
+部署智能合约需要支付燃料费用（gas fees）。燃料费用是完成区块链交易的付款，用于补偿区块链矿工为验证交易所使用的计算能力。为了分析燃料费用，智能合约在 Remix IDE 中部署，结果如 Table 7.2 所示。
+
+Table 7.2 Gas Fee Analysis of Smart Contracts
+
+| Smart Contracts || Transaction Cost (Gas) || Execution Cost (Gas) || Gas Fees (Gas) |
+| --- | --- | --- | --- |
+| NFT || 1,020,805 || 1,020,805 || 2,208,524 |
+| --- | --- | --- | --- |
+| MarketPlace || 1,920,455 || 1,920,455 || 1,173,926 |
+
+### 7.5.1 Security Analysis
+
+智能合约一旦部署即不可更改，因此极易受到重入攻击。重入攻击发生在两个智能合约之间，攻击合约利用弱合约的代码缺陷窃取资金。攻击合约在调用 withdraw 函数前反复调用，导致弱合约未能更新余额。如 Figure 7.5 所示。
+
+![Figure 7.5 Security analysis.](img/fig7_5_B.jpg)
+
+Figure 7.5 Security analysis.
+
+Lendf.me 是一个允许在以太坊平台上进行借贷操作的去中心化金融协议。2020 年 4 月 18 日，黑客利用重入攻击窃取了 2500 万美元。Lendf.me 的漏洞在于允许使用 ERC777 代币（一种支持更复杂交易交互的以太坊代币标准）作为抵押品，攻击者利用该特性执行复杂的重入攻击，耗尽平台 99.5% 的资金，因为接收方是一个智能合约。
+
+Mutex（互斥标志）被构建为 Reentrancy Guard 的函数修改，用于阻止此类攻击。该函数通过一个布尔锁标记，在调用前将其设为 true（已锁定），在函数执行完毕后将其设为 false（已解锁），从而防止重入。
+
+## 7.6 Results
+
+在交易初始化之前，需要将 MetaMask 钱包连接到网站，并使用相关账户的登录信息。
+
+要使用 MetaMask 账户，需下载 MetaMask 扩展并将其添加到浏览器。安装后，需点击右上角图标打开 MetaMask 并创建新账户。
+
+打开网站后，右上角会弹出提示框，要求连接 MetaMask 账户。
+
+
+
+
+After 连接建立后，我们填写所有产品详情，包括名称、型号、描述、价格、保修期、图片。
+
+然后我们点击列表产品和 NFT 按钮，Meta Mask 钱包会提示我们确认交易。它还会列出与交易相关的所有费用。
+
+产品已售出，NFT 保修已转移至交易开始时链接的账户。
+
+我们可以在区块链 Shopify 部分看到所有已列出的产品及其可售价格。
+
+购买产品后，我们可以前往 `my product warranty` 部分查看该产品的所有详情，包括型号、保修期限以及保修状态，即保修是否已被索赔。
+
+如果用户想索赔保修，他可以通过索赔保修按钮访问。用户的 `My Product Warranty` 页面上将显示产品详情。这些内容如图 7.6、7.7、7.8 和 7.9 所示。
+
+![Figure 7.6 MetaMask credentials input.](img/fig7_6_B.jpg)
+
+Figure 7.6 MetaMask credentials input.
+
+![Figure 7.7  Meta Mask transaction.](img/fig7_7_B.jpg)
+
+Figure 7.7  Meta Mask transaction.
+
+![Figure 7.8 Listed product.](img/fig7_8_B.jpg)
+
+Figure 7.8 Listed product.
+
+![Figure 7.9  My product warranties section.](img/fig7_9_B.jpg)
+
+Figure 7.9  My product warranties section.
+
+## 7.7 Future Works
+
+我们的解决方案旨在通过引入基于区块链的 NFT 保修系统，自动化保修跟踪和索赔流程，从而解决当前销售行业的保修系统问题，并减少处理索赔所消耗的时间。当保修期过期时，系统会自动将保修标记为 `expired`。我们开发了一个市场系统，包含 `mint NFT`、`Purchase Item` 等多种功能，便于零售商或商家销售产品，同时让客户购买产品。客户可通过提供产品相关信息，使用该系统索赔产品保修。
+
+该系统使客户能够轻松索赔保修并随时跟踪。客户购买的所有产品都会显示在其个人资料部分。本章节突出了区块链基于保修系统相较传统保修的优势。本工作可在以下方面进一步扩展：
+
+1.  在客户智能手机上提供保修
+
+    购买后，我们可以通过短信或电子邮件向客户的智能手机发送保修卡。这样客户随时可以查看产品详情，也可作为未来的电子凭证。随着智能手机和数字设备的普及，客户可以随时随地查看保修卡，无需携带实体保修卡或收据。通过提供虚拟保修卡，可确保客户随时获得产品最新的保修信息。特别是在保修条款或产品细节有更新或变更时，客户会实时收到通知。
+
+    一个流行的区块链游戏类型是“play-to-earn”游戏，玩家通过游戏可以获得代币或其他奖励，这些代币随后可用于在平台上购买产品或在加密货币交易所交易。这可为平台货币创造二级市场，并提升其整体价值。
+
+2.  使用灵魂绑定 NFT
+
+    NFT 不可转让。非转让性代币的使用对一些人来说可能令人困惑，尤其是 NFT 具有多种用途，且很大一部分是基于其可传输性。
+
+    根据以太坊联合创始人维克托·比特林（Vitalik Buterin）的说法，灵魂绑定代币是不可转让的 NFT，用于反映个人在 Web3 中的身份和成就。新型不可转让、经公共链验证的数字代币——灵魂绑定 NFT（SBT）——可用于 Web 3.0 表示社会地位，充当个人的数字简历。SBT 将包含个人的会员资格、所属机构以及资质。
+
+    这些 SBT 受到流行游戏《魔兽世界》（World of Warcraft）的启发，在该游戏中“灵魂绑定”物品是绑定于游戏角色的，玩家不能将其买卖或交易给其他玩家或角色。类似地，SBT 保证用户不能用社交地位换取升级的机会。
+
+    SBT 的独特之处在于其持续且永久绑定到钱包。拥有区块链账户的用户会将个人数据以及过去、现在和将来的记录存储在钱包中，这类似于现实中的简历。SBT 是未来在以太坊区块链上构建用户声誉的关键工具。
+
+    SBT 拥有多种应用场景，可列举如下。我们可以从最基础、直接的例子开始，比如大学学位。与证书不同，SBT 可颁发给大学毕业生。
+
+    虽然声称 NFT 已足够完成相关流程，但仍然存在可以交易或出售这些 NFT 的可能性。如果大学提供灵魂 NFT，学生则无法转让或出售它。
+
+3.  通过添加区块链游戏扩大范围
+
+    我们可以通过在平台中加入区块链游戏，让用户赚取积分，这些积分 later 可在购买其他产品时进行兑换。流行的区块链游戏类型是“play-to-earn”游戏，玩家通过游戏获得代币或奖励，随后可用于购买平台上的产品或在加密货币交易所交易。这可为平台货币创造二级市场并提升其整体价值。我们还可以为经常在我们网站购买的客户提供忠诚积分，这些积分随后可兑换折扣、免费产品或其他奖励。这可激励回头消费并鼓励客户进行更大额的购买。
+
+## References
+
+1.  A. Park, J. Kietzmann, L. Pitt and A. Dabirian, “The Evolution of Nonfungible Tokens: Complexity and Novelty of NFT Use-Cases,” IT Professional. 2022;24(1): pp. 9–14, doi: [10.1109/MITP.2021.3136055](http://dx.doi.org/10.1109/MITP.2021.3136055)
+
+2.  Shih D-H, Huang F-C, Chieh C-Y, Shih M-H and Wu T-W. Preventing Return Fraud in Reverse Logistics—A Case Study of ESPRES Solution by Ethereum. Journal of Theoretical and Applied Electronic Commerce Research. 2021;16(6):2170–2191. [`doi.org/10.3390/jtaer16060121`](https://doi.org/10.3390/jtaer16060121)
+
+3.  H. R. Andrian, N. B. Kurniawan and Suhardi, “Blockchain Technology and Implementation : A Systematic Literature Review,” 2018 International Conference on Information Technology Systems and Innovation (ICITSI), 2018, pp. 370–374, doi: [10.1109/ICITSI.2018.8695939](http://dx.doi.org/10.1109/ICITSI.2018.8695939)
+
+4.  F. Khan, R. Kothari, M. Patel and N. Banoth, “Enhancing Non-Fungible Tokens for the Evolution of Blockchain Technology,” 2022 International Conference on Sustainable Computing and Data Communication Systems (ICSCDS), 2022, pp. 1148–1153, doi: [10.1109/ ICSCDS53736.2022.9760849](https://doi.org/10.1109/ ICSCDS53736.2022.9760849)
+
+
+
+5. Z. 郑, S. 谢, H. 戴, X. 陈 和 H. 王. “区块链技术概述：架构、共识与未来趋势,” 2017 年 IEEE 大数据国际会议 (BigData Congress), 2017, 第 557–564 页, doi: [10.1109/BigDataCongress.2017.85](https://doi.org/10.1109/BigDataCongress.2017.85)
+
+6. W. 李, M. 何 和 S. 海泉, “区块链技术概述：应用、挑战与未来趋势,” 2021 年 IEEE 第 11 届电子信息与紧急通信国际会议 (ICEIEC)2021 IEEE 第 11 届电子信息与紧急通信国际会议 (ICEIEC), 2021, 第 31–39 页, doi: [10.1109/ICEIEC51955.2021.9463842](https://doi.org/10.1109/ICEIEC51955.2021.9463842)
+
+7. H. R. 安德里, N. B. 康尼亚万 和 Suhardi, “区块链技术与实现：系统性文献综述,” 2018 年信息技术系统与创新国际会议 (ICITSI), 印度尼西亚巴东, 2018, 第 370–374 页, doi: [10.1109/ICITSI.2018.8695939](https://doi.org/10.1109/ICITSI.2018.8695939)
+
+8. Q. E. 阿巴斯 和 J. 熊-峰, “区块链及其应用调查,” 2019 年人工智能在信息与通信国际会议 (ICAIIC), 日本冲绳, 2019, 第 001–003 页, doi: [10.1109/ICAIIC.2019.8669067](https://doi.org/10.1109/ICAIIC.2019.8669067)
+
+# 8 Analysis of a Queueing System with Batch Poisson Arrivals and Batch Services in Blockchain Applications
+
+Srinivas R. Chakravarthy
+
+Kettering University, Flint, MI, USA
+
+Shruti Goel
+
+Jaypee Institute of Information and Technology, Noida, India
+
+Vidyottama Jain
+
+Central University of Rajasthan, India
+
+Serife Ozkar
+
+Balikesir University, Balikesir, Turkey
+
+Raina Raj
+
+Central University of Rajasthan, India
+
+DOI: [10.1201/9781003326236-8](https://dx.doi.org/10.1201/9781003326236-8)
+
+## 8.1 Introduction
+
+区块链在过去几年随着加密货币的出现，已成为最受激烈争论的话题之一。自 Satoshi Nakamoto 于比特币启动以来，区块链技术在理论框架和实际应用方面均取得了显著进展。它吸引了交通、医疗、银行和金融服务等众多业务和工业部门的关注，因为它不仅支持分布式和去中心化的交易，还提供了信息共享的信任与透明。关于区块链技术的全面综述，读者可参考优秀的专著 \[2, 3 and 4\] 以及综述文章 \[5, 6 and 7\]。区块链的实际应用已涌现，包括区块链银行 \[8, 9\], 区块链商业 \[10, 11\], 区块链供应链管理 \[12, 13 and 14\], 区块链物联网 \[15, 16 and 17\], 区块链共享经济 \[18, 19\], 以及区块链医疗 \[20\]。尽管区块链技术已在现实中的应用广泛，但关于区块链系统的数学研究却很少。这些数学研究生成随机模型，提供性能分析与优化，并建立重要因素或基础参数之间的有益关联。
+
+因此，本文的主要贡献在于研究一种两阶段排队模型，该模型采用批量到达和批量服务，且批量大小假设为一般分布，并将其应用于区块链场景。进一步，基于简化状态空间描述，对该模型在稳态下进行了定性研究。利用 Neuts 的矩阵分析方法，推导了系统的 stationary distribution（稳态分布）、稳定性条件以及关键性能指标的公式。文中给出了一些示例说明。
+
+本章余下内容结构如下。Section 8.2 展示与所提排队模型相关的已有工作。Section 8.3 详细描述两阶段区块链排队模型。Section 8.4 构建底层过程的无穷小生成矩阵，并对系统的稳态进行分析。Section 8.5 给出用于评估系统效率的若干关键性能指标公式。Section 8.6 通过数值分析突出所提模型的定性行为。最后，在 Section 8.7 中给出几条结论性评论和进一步研究的思路。
+
+## 8.2 Related Works
+
+本文研究的两阶段区块链排队模型由区块生成（BG）和区块构建（BB）两个过程组成。区块链通过矿工程序保持更新，其中多个节点（称为矿工）竞争解决一个需要产生满足特定约束的哈希值，这些矿工会生成新块。当交易被编译进块时，关键的 nonce（一次性随机 64 位十六进制数）被提供，随后该块被链接到区块链 \[6, 7\]。
+
+早期关于区块链排队的研究报告于 Li 等人 \[21\]。他们 \[21\] 研究了适用于区块链应用的 *M/M*^(\[*b*\])*/1* 队列模型。该模型假设交易按泊松过程，速率为 λ，产生；交易进入无限缓冲区，随后处理以成为块的一部分。假设每个区块最多容纳 b 个交易。一旦形成至少一个但不超过 b 个交易的区块，矿工过程即开始。在矿工期间，若当前正在服务的交易数小于 b，则允许新交易进入处理（即块内的交易数不得超过 b）。处理（或链接）区块的时间被假设为指数分布，参数为 µ[1]。需要指出，作者 \[21\] 认为在处理交易（形成新块）的同时，新交易仍可进入处理，前提是当前正在服务的交易数小于 b，从而保证块大小不超过 b。块的处理时间均为指数分布，速率为 µ[2]，与当前服务的交易数无关。该假设在处理时间为指数分布的情况下是合理的，但在处理时间为非指数分布时难以维持，这促使我们假设只有当块大小达到 b 时才开始处理该块。一旦块形成，矿工过程即开始，期间不处理任何交易，直到矿工完成。该假设使得系统中最多只有一个块存在，且队列中的交易数为零或正整数。若块已链入区块链且队列非空，服务器可处理下一个交易块；否则服务器保持空闲，等待新交易到达。
+
+
+
+
+在 Ref. \[22\], 作者们通过假设交易遵循马尔可夫到达过程 (MAP) 并将交易处理时间和区块挖矿时间视为 (可能不同) 阶段性 (PH) 分布，扩展了他们的研究 \[21\]。一个问题在于在交易仍在处理时允许新交易进入服务。这是因为交易处理时间不再具有无记忆属性，因此在实际应用中新加入的交易不会得到完整的处理。需要指出的是，在两篇论文 \[21, 22\] 中，作者本可以通过对交易处理时间和区块挖矿时间的卷积来简化状态空间描述（在边界状态上进行一些微小修改），因为服务器在处理完交易后会一直保持空闲，直到区块链的铺设完成。可以把这种“空闲”时间看作是无论区块如何处理，对铺设时间的延续。就延迟和其他指标而言，这种方法不会产生任何差异。但从建模角度来看，它简化了账本管理工作，因此本工作中采用了这种方法。
+
+Kawase 和 Kasahara \[23\] 对区块链队列系统在一般服务时间下进行了严谨分析，并提供了系统性能评估的数值示例。Memen 等人 \[24\] 通过模拟分析了区块链队列系统。此外，Jourdan 等人 \[25\] 提出了一种基于交易与区块图的比特币区块链概率模型。他们在区块级别提出了由比特币协议引起的特定条件依赖性。为研究私有区块链中 Raft 共识算法的性能指标，Huang 等人 \[26\] 建立了一个带有吸收态的马尔可夫过程。随后，Srivastava \[27\] 提出了一种包含共识机制的马尔可夫模型，以实现更快的区块包含和交易。Fralix \[28\] 分析了比特币中无限服务器的队列系统的时变行为。Fan 等人 \[29\] 建立了一个带有休假和可选服务的 *M/(M*[1], *M*[2])/1 排队模型，用于区块链系统，并通过矩阵-几何方法得到系统的 stationary distribution，同时给出了平均交易确认时间及其他性能指标的公式。Chen 等人 \[30\] 旨在通过工作量证明 (PoW) 和权威证明 (PoA) 共识算法在区块链队列中理解私有物联网 (IoT) 网络的延迟。
+
+在本模型中，我们研究了区块链排队系统中的批量到达，这是实际中常见的情况。因此，提出并求解了一个 *M*^(\[*X*\])*/M*^(\[*b*\])/1 排队模型，采用矩阵解析方法 \[31\]。批量服务（固定大小 *b*）的两阶段服务（BG 和 BB）均假设为指数分布，速率分别为 *µ*[1] 和 *µ*[2]。服务器在服务完成后，若当前交易数小于 *b*，则会等待直到交易数达到 *b* 或更多。该模型被视为一种 *M/G/1* 型，该类模型由 Neuts 及其同事们对其进行了全面研究。作者建议阅读 Neuts \[31\] 以及最新的两卷书 Chakravarthy \[32, 33\] 以了解 *M/G/1* 范式的一般方法。此外，还通过获得关键性能指标的公式并结合各种系统参数的行为图示，给出了严谨的性能分析。
+
+接下来，采用以下标准符号：
+
+*   **粗体字母**——根据上下文可为行向量或列向量。
+
+*   **′**——转置。
+
+*   **⊗**——Kronecker 积 \[34, 35\]。
+
+*   **⊕**——Kronecker 和 \[34, 35\]。
+
+*   ***e***——(1,1,… ,1)，其维度视上下文而定。
+
+*   ***e**(m)**——维度为 *m* 的全 1 列向量。
+
+*   ***e^[i]***——(0,0,… ,1,0,… ,0)，其中 1 位于第 *i* 位置。
+
+*   *I*——身份矩阵，维度视上下文而定。
+
+## 8.3 模型描述
+
+本节描述一种实际的区块链排队系统。详细描述如下。
+
+*   **到达过程**：交易的到达依据批量泊松过程，批量到达率为 *ρ[g]*。批量大小服从通用概率质量函数 (PMF) *{p[k]}*，其平均批量大小记为 *µ*[BS]。到达率 λ 由 λ = λ[g] µ[BS] 给出。
+
+*   **服务过程**：在区块链系统中，批量服务的两个阶段（BG 和 BB）的服务时间被假设为相同的独立同分布 (i.i.d.)，并服从指数分布，速率分别为 *µ*[1] 和 *µ*[2]。第一阶段（以及第二阶段）的服务是以固定大小 *b* 为单位进行的，即一个区块恰好包含 *b* 笔交易。如果服务完成时交易数小于 *b*，服务器会等待直到交易数达到 *b* 或更多。
+
+区块（BG + BB）的交易确认（服务）时间可模型为阶段性 (generalized Erlang) 分布，表示为 (*ß, S*)，阶数为 2，其中
+
+$$\\beta = (1,0),\\quad S = \\begin{pmatrix} {- \\mu\_{1}} & \\mu\_{1} \\\\ 0 & {- \\mu\_{2}} \\\\ \\end{pmatrix}.$$
+
+为后续使用，我们定义 \\(\\mu = \\frac{\\mu\_{1}\\mu\_{2}}{\\mu\_{1} + \\mu\_{2}}\\) 为服务率，\\(\\frac{1}{\\mu} = \\beta{( - S)}^{- 1}e\\) 为均值，并定义 ***S***⁰ 为满足 *S**e** + **S***⁰ = **0** 的列向量。
+
+
+
+$$\\begin{array}{l} {C\\_{0} = \\left( \\begin{array}{lllllll} {- \\lambda\_{g}} & {\\lambda\_{g}}p\_{1} & {\\lambda\_{g}}p\_{2} & {\\lambda\_{g}}p\_{3} & \\cdots & {\\lambda\_{g}}p\_{b - 2} & {\\lambda\_{g}}p\_{b - 1} \\\\ & {- \\lambda\_{g}} & {\\lambda\_{g}}p\_{1} & {\\lambda\_{g}}p\_{2} & \\cdots & {\\lambda\_{g}}p\_{b - 3} & {\\lambda\_{g}}p\_{b - 2} \\\\ & & {- \\lambda\_{g}} & {\\lambda\_{g}}p\_{1} & \\cdots & {\\lambda\_{g}}p\_{b - 4} & {\\lambda\_{g}}p\_{b - 3} \\\\ & & & \\ddots & \\cdots & \\vdots & \\vdots \\\\ & & & & {- \\lambda\_{g}} & {\\lambda\_{g}}p\_{1} & {\\lambda\_{g}}p\_{2} \\\\ & & & & & {- \\lambda\_{g}} & {\\lambda\_{g}}p\_{1} \\\\ & & & & & & {- \\lambda\_{g}} \\\\ \\end{array} \\right),} \\\\ {C\\_{k} = \\lambda\_{g}\\left( \\begin{array}{llll} p\_{(k - 1)b + b} & p\_{(k - 1)b + b + 1} & \\cdots & p\_{kb + b - 1} \\\\ p\_{(k - 1)b + b - 1} & p\_{(k - 1)b + b} & \\cdots & p\_{kb + b - 2} \\\\ \\vdots & \\vdots & \\cdots & \\vdots \\\\ p\_{(k - 1)b + 1} & p\_{(k - 1)b + 2} & \\cdots & p\_{kb} \\\\ \\end{array} \\right) \\otimes \\beta,k \\geq 1,} \\\\ \\end{array}$$  
+
+$$\\begin{array}{l} {F = I \\otimes S^{0},H\_{0} = I \\otimes S^{\\mathbf{0}}\\beta,} \\\\ {H\_{1} = \\left( \\begin{array}{lllllll} {S - \\lambda\_{g}}I & {\\lambda\_{g}}p\_{1}I & {\\lambda\_{g}}p\_{2}I} & {\\lambda\_{g}}p\_{3}I} & \\cdots & {\\lambda\_{g}}p\_{b - 2}I & {\\lambda\_{g}}p\_{b - 1}I \\\\ & {S - \\lambda\_{g}}I & {\\lambda\_{g}}p\_{1}I & {\\lambda\_{g}}p\_{2}I} & \\cdots & {\\lambda\_{g}}p\_{b - 3}I & {\\lambda\_{g}}p\_{b - 2}I \\\\ & & {S - \\lambda\_{g}}I & {\\lambda\_{g}}p\_{1}I} & \\cdots & {\\lambda\_{g}}p\_{b - 4}I & {\\lambda\_{g}}p\_{b - 3}I \\\\ & & & \\ddots & \\cdots & \\vdots & \\vdots \\\\ & & & & & {S - \\lambda\_{g}}I & {\\lambda\_{g}}p\_{1}I \\\\ & & & & & & {S - \\lambda\_{g}}I \\\\ \\end{array} \\right),} \\\\ {H\_{k + 1} = \\lambda\_{g}\\left( \\begin{array}{llll} p\_{(k - 1)b + b} & p\_{(k - 1)b + b + 1} & \\cdots & p\_{kb + b - 1} \\\\ p\_{(k - 1)b + b - 1} & p\_{(k - 1)b + b} & \\cdots & p\_{kb + b - 2} \\\\ \\vdots & \\vdots & \\cdots & \\vdots \\\\ p\_{(k - 1)b + 1} & p\_{(k - 1)b + 2} & \\cdots & p\_{kb} \\\\ \\end{array} \\right) \\otimes I,k \\geq 1.} \\\\ \\end{array}$$  
+
+The continuous-time Markov process is clearly of `M/G/1-type`. Therefore, results from Refs. \[31, 32 and 33\] can be employed in this work.
+
+### 8.4.2 The Stability Condition
+
+In this section, using the matrix-analytic method, the system stability conditions are deduced and the stationary probability vector is represented in order to study the proposed blockchain queueing system.
+
+Let
+
+$${\\hat{p}}\_{r} = \\underset{\\infty}{\\overset{k = 1}{\\sum^{}}}p\_{(k - 1)b + r},1 \\leq r \\leq b.$$  
+
+The generator matrix $H = \\underset{k = 0}{\\overset{\\infty}{{\\sum^{}}^{}}}H\_{k}$ can easily be obtained as (note: *S̃* = *S* + *S*^(**0**)*β*
+
+$$H = \\begin{pmatrix} {\\widetilde{S} - \\lambda\_{g}\\left( {1 - {\\hat{p}}\_{b}} \\right)I} & {\\lambda\_{g}{\\hat{p}}\_{1}I} & {\\lambda\_{g}{\\hat{p}}\_{2}I} & \\ldots & {\\lambda\_{g}{\\hat{p}}\_{b - 1}I} \\\\ {\\lambda\_{g}{\\hat{p}}\_{b - 1}I} & {\\widetilde{S} - \\lambda\_{g}\\left( {1 - {\\hat{p}}\_{b}} \\right)I} & {\\lambda\_{g}{\\hat{p}}\_{1}I} & \\ldots & {\\lambda\_{g}{\\hat{p}}\_{b - 2}I} \\\\ \\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\ {\\lambda\_{g}{\\hat{p}}\_{2}I} & {\\lambda\_{g}{\\hat{p}}\_{3}I} & {\\lambda\_{g}{\\hat{p}}\_{4}I} & \\ldots & {\\lambda\_{g}{\\hat{p}}\_{1}I} \\\\ {\\lambda\_{g}{\\hat{p}}\_{1}I} & {\\lambda\_{g}{\\hat{p}}\_{2}I} & {\\lambda\_{g}{\\hat{p}}\_{3}I} & \\ldots & {\\widetilde{S} - \\lambda\_{g}\\left( {1 - {\\hat{p}}\_{b}} \\right)I} \\\\ \\end{pmatrix}.$$  
+
+Note that, *H* is cyclic and hence, if *π* is the stationary probability vector of *H* satisfying
+
+*π**H** = **0**, *π**e** = 1,  
+
+then using the uniqueness of the invariant vector *µß(-S)^(\-1)* of the generator *S̃*, it can be easily verified that $\\pi = \\frac{\\mu}{b}\\left( {e^{\\prime} \\otimes \\beta{( - S)}^{- 1}} \\right).$.
+
+The stability condition of the blockchain queueing model under study is provided in Theorem 8.1 as follows.
+
+**Theorem 8.1:** *The queueing model M*^(\[*X*\])*/M*^(\\[*b*]*/*1 under study with the generator given in (8.1) is stable if and only if*
+
+(8.2)  
+
+*λ* < *b**μ*.  
+
+**Proof:** Following the results from the *M*/*G*/1-type queues (see, Refs. \[31, 32 and 33\]), the stability condition is given by $\\pi\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kH\_{k + 1}e < \\pi H\_{0}e.$. This implies, (see the generator matrix in (8.1))
+
+$$\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kH\_{k + 1} = \\lambda\_{g}\\begin{pmatrix} {\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb}\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb + 1}\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb + 2}\\cdots\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb + b - 1}} \\\\ {\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb - 1}\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb}\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb + 1}\\cdots\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb + b - 2}} \\\\ {\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb - 2}\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb - 1}\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb}\\cdots\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb + b - 3}} \\\\ {\\vdots \\vdots \\vdots \\ddots \\vdots} \\\\ {\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{(k - 1)b + 1}\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{(k - 1)b + 2}\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb + 3}\\cdots\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}kp\_{kb}} \\\\ \\end{pmatrix} \\otimes I,$  
+
+from which, we see that $\\pi\\underset{k = 1}{\\overset{\\infty}{{\\sum^{}}^{}{}^{}}}kH\_{k + 1}e = \\frac{\\mu}{b}(\\frac{\\mu\_{1} + \\mu\_{2}}{\\mu\_{1}\\mu\_{2}})\\lambda\_{g}\\mu\_{BS} = \\frac{\\lambda}{b}.~Since~\\pi H\_{0}e = \\mu,$ we get the stated result on the stability condition. □
+
+### 8.4.3 The Steady-State Probability Vector
+
+Let ***y*** be the steady-state probability vector for the generator matrix *Q*. It is well-known that (see, Refs. \[31, 32 and 33\]) the computation of the vector ***y*** requires the knowledge of key matrix, say, *G*. This matrix is obtained as follows. Note that *Q* is positive recurrent and irreducible. The stochastic matrix *G* is determined as the minimal non-negative solution to
+
+(8.3)  
+
+$$\\underset{r = 0}{\\overset{\\infty}{\\sum^{}}}H\_{r}G^{r} = 0$$  
+
+Note that the (*j,k*)th entry of *G* provides the conditional probability that the system under study will eventually visit the state (*i, k*) for the first time starting in state (*i **+** 1,j**), for *i =* 1 (away from the boundary). The vector ***g*** is the invariant vector of *G*, i.e., ***g*** satisfies
+
+(8.4)  
+
+*g**G* = *g*, *g**e** = 1.  
+
+The matrix *G* and the vector ***g*** play a crucial role in the computation of the vector **y**. The full details including the algorithmic procedures for all these quantities are spelled out in Refs. \[32, 33\] and are omitted here. It is worth pointing out that one of the structural properties (see, Ref. \[33\]) of *G* indicates that *G* has all even numbered columns to be zero due to *H*[0] possessing this property. The following result, which is intuitively clear, can be utilized as an internal accuracy check in numerical computation.
+
+**Lemma 8.1:** *We have*
+
+(8.5)  
+
+
+
+
+$$\\frac{1}{\\rho}\\underset{j = 1}{\\overset{\\infty}{\\sum^{}}}y\_{j}(e \\otimes I) = \\frac{1}{\\mu\_{1} + \\mu\_{2}}\\left( {\\mu\_{2},\\mu\_{1}} \\right).$$  
+
+`Proof:` The steady-state equation for the vector `y` partitioned as `y = (`y`[0],`y`[1],`y`[2], ...)` is obtained by solving  
+
+`(8.6)`  
+
+``` 
+\\begin{matrix} {y\_{0}C\_{0} + y\_{1}F = \\mathbf{0},} \\\\ {y\_{0}C\_{k} + \\underset{j = 1}{\\overset{k + 1}{\\sum^{}}}y\_{j}H\_{k - j + 1} = 0,k \\geq 1,} \\\\ \\end{matrix} 
+```  
+
+subject to the normalizing condition  
+
+`(8.7)`  
+
+``` 
+$$y\_{0}e + \\underset{j = 1}{\\overset{\\infty}{\\sum^{}}}y\_{j}e = 1.$$ 
+```  
+
+Post-multiplying the first equation in (8.6) by (`I` ⊗ `β`) and adding to this the second equation over *k* from 1 to ∞, and after interchanging the summations, we get (note that *H*[0] **\=** `F`(`I` ⊗ `β`)),  
+
+`(8.8)`  
+
+``` 
+$$y\_{0}C\_{0}(I \\otimes \\beta) + y\_{0}\\underset{j = 1}{\\overset{\\infty}{\\sum^{}}}C\_{j} + \\underset{j = 1}{\\overset{\\infty}{\\sum^{}}}y\_{j}H = \\mathbf{0}.$$ 
+```  
+
+Post-multiplying Equation (8.8) by (`e` ⊗ `I`) and noting that $\\left\\lbrack {C\_{0}(I \\otimes \\beta) + \\underset{j = 1}{\\overset{\\infty}{\\sum^{}}}C\_{j}} \\right\\rbrack(e \\otimes I) = \\mathbf{0},$, we see  
+
+`(8.9)`  
+
+``` 
+$$\\underset{j = 1}{\\overset{\\infty}{\\sum^{}}}y\_{j}H(e \\otimes I) = \\underset{j = 1}{\\overset{\\infty}{\\sum^{}}}y\_{j}(e \\otimes \\widetilde{S}) = 0,$$ 
+```  
+
+which implies, due to the uniqueness of the invariant vector of `S̃`, that  
+
+`(8.10)`  
+
+``` 
+$$\\underset{j = 1}{\\overset{\\infty}{\\sum^{}}}y\_{j}(e \\otimes I) = d\\left( {\\mu\_{2},\\mu\_{1}} \\right),$$ 
+```  
+
+where *d* is a constant obtained by using the normalizing condition given in (8.7) along with the fact that ***y**[0]**e =*** 1 **\-** ρ. It is simple to assert that $d = \\frac{\\rho}{\\mu\_{1} + \\mu\_{2}}$ and this produces the desired result right away. **□**
+
+### 8.4.4 Quasi-Birth Death Approach
+
+Assume that the maximum batch size is fixed at *K.If b*≧ *K*, then we can use quasi-birth death (QBD) approach, which will simplify a number of computational aspects. In this case, we write down the generator as  
+
+`(8.11)`  
+
+``` 
+$$Q^{(1)} = \\begin{bmatrix} B\_{1} & B\_{0} & & & & & \\\\ E & A\_{1} & A\_{0} & & & & \\\\ & A\_{2} & A\_{1} & A\_{0} & & & \\\\ & & A\_{2} & A\_{1} & A\_{0} & & \\\\ & & & \\ddots & \\ddots & \\ddots & \\\\ \\end{bmatrix}.$$ 
+```  
+
+The matrices *E*, `B[0]` and `B[1]` have dimensions (*2b x b*), (*b x 2b*) and (*b x b*), respectively. The matrices *A[0]*, `A[1]` and `A[2]` are square matrices of order *2b.*  
+
+``` 
+\\begin{array}{l} {B\_{1} = \\left( \\begin{array}{llllllllll} {- \\lambda\_{g}} & {\\lambda\_{g}p\_{1}} & {\\lambda\_{g}p\_{2}} & \\cdots & {\\lambda\_{g}p\_{K}} & & & & & \\\\ & {- \\lambda\_{g}} & {\\lambda\_{g}p\_{1}} & \\cdots & {\\lambda\_{g}p\_{K} - 1} & {\\lambda\_{g}p\_{K}} & & & & \\\\ & & \\ddots & \\cdots & \\vdots & \\vdots & & & & \\\\ & & & & & {- \\lambda\_{g}} & {\\lambda\_{g}p\_{1}} & {\\lambda\_{g}p\_{2}} & \\cdots & {\\lambda\_{g}p\_{K}} \\\\ & & & & & & {- \\lambda\_{g}} & {\\lambda\_{g}p\_{1}} & {\\lambda\_{g}p\_{2}} & \\cdots & {\\lambda\_{g}p\_{K} - 1} \\\\ & & & & & & & \\ddots & \\cdots & \\vdots \\\\ & & & & & & & & & {- \\lambda\_{g}} \\\\ \\end{array} \\right),} \\\\ {B\_{0} = \\left( \\begin{array}{llll} & & & \\\\ {\\lambda\_{g}p\_{K}\\beta} & & & \\\\ {\\lambda\_{g}p\_{K - 1}\\beta} & {\\lambda\_{g}p\_{K}\\beta} & & \\\\ \\vdots & \\vdots & & \\\\ {\\lambda\_{g}p\_{1}\\beta} & {\\lambda\_{g}p\_{2}\\beta} & \\ldots & {\\lambda\_{g}p\_{K}\\beta} \\\\ \\end{array} \\right),} \\\\ {E = I \\otimes S^{0},A\_{2} = I \\otimes S^{\\mathbf{0}}\\beta,} \\\\ {A\_{1} = \\left( \\begin{array}{lllllllll} {S - \\lambda\_{g}I} & {\\lambda\_{g}p\_{1}I} & {\\lambda\_{g}p\_{2}I} & \\cdots & {\\lambda\_{g}p\_{K}I} & & & & \\\\ & {S - \\lambda\_{g}I} & {\\lambda\_{g}p\_{1}I} & \\cdots & {\\lambda\_{g}p\_{K - 1}I} & {\\lambda\_{g}p\_{K}I} & & & \\\\ & & \\ddots & \\cdots & \\vdots & \\vdots & & & \\\\ & & & & {S - \\lambda\_{g}I} & {\\lambda\_{g}p\_{1}I} & {\\lambda\_{g}p\_{2}I} & \\cdots & {\\lambda\_{g}p\_{K}I} \\\\ & & & & & {S - \\lambda\_{g}I} & {\\lambda\_{g}p\_{1}I} & \\cdots & {\\lambda\_{g}p\_{K - 1}I} \\\\ & & & & & & \\ddots & \\cdots & \\vdots \\\\ & & & & & & & & {S - \\lambda\_{g}I} \\\\ \\end{array} \\right),} \\\\ {A\_{0} = \\left( \\begin{array}{llll} & & & \\\\ {\\lambda\_{g}p\_{K}} & & & \\\\ {\\lambda\_{g}p\_{K - 1}} & {\\lambda\_{g}p\_{K}} & & \\\\ \\vdots & \\vdots & & \\\\ {\\lambda\_{g}p\_{1}} & {\\lambda\_{g}p\_{2}} & \\cdots & {\\lambda\_{g}p\_{K}} \\\\ \\end{array} \\right) \\otimes I.~} \\\\ \\end{array} $$ 
+```  
+
+Under the stability condition `λ < b µ` (This can be proven similar to the previous case), the steady-state probability vector of *Q*^((1)) exists. Let *y*^((**1**)) = (*y*[0]^((1)),*y*[1]^((1)),*y*[2]^((1)),⋯),, with the vector ***y***([0]¹) of dimension *K*, and each of the vectors *y*[*i*]^((1)), *i* ≥ 1, of dimension *2K*, be the steady-state probability vector such that  
+
+`(8.12)`  
+
+``` 
+*y*^((1))*Q*^((1)) = 0, *y*^((1))*e* = 1.  
+```  
+
+The following theorem results directly from Neuts’ conclusion regarding QBD process (see, Ref. \[36\]) and we register it here for the sake of completeness (see also Refs. \[32, 33\] for details on expressing ***y**(¹)[i]*, interms of ***y***([0]¹) and *R*).
+
+**Theorem 8.2:** *When the stability condition λ < bµ is satisfied, the steady-state probability vector, **y***, of Q*(¹) *is of the matrix-geometric type:*  
+
+`(8.13)`  
+
+``` 
+*y*[*i*]^((1)) = *y*[0]^((1))(*I* ⊗ *β*)*R*^(*i*), *i* ≥ 1,   
+```  
+
+*where the rate matrix R is the minimal non-negative solution to*  
+
+`(8.14)`  
+
+``` 
+R²*A*[2] + *R**A*[1] + *A*[0] = 0,  
+```  
+
+*and the vector **y**([0]¹) *is obtained by solving:*  
+
+*y*[0]^((1))\[*B*[1]+(*I*⊗*β*)*R*(*I*⊗*S*⁰\] = 0, *y*[0]^((1))(*I* ⊗ *β*)(*I* − *R*)^( − 1)*e* = 1.  
+```  
+
+**Lemma 8.2:** *We have*  
+
+`(8.15)`  
+
+``` 
+$$\\frac{1}{\\rho}\\underset{i = 1}{\\overset{\\infty}{\\sum^{}}}y\_{i}^{(1)}(e \\otimes I) = \\frac{1}{\\mu\_{1} + \\mu\_{2}}\\left( {\\mu\_{2},\\mu\_{1}} \\right).$$ 
+```  
+
+**Proof:** The equations in (8.12) can be rewritten as follows.  
+
+`(8.16)`  
+
+``` 
+\\begin{array}{l} {y\_{0}^{(1)}B\_{1} + y\_{1}^{(1)}E = 0} \\\\ {y\_{0}^{(\\mathbf{1})}B\_{0} + y\_{1}^{(\\mathbf{1})}A\_{1} + y\_{2}^{(\\mathbf{1})}A\_{2} = \\mathbf{0}} \\\\ {y\_{i - 0}^{(\\mathbf{1})}A\_{0} + y\_{i}^{(\\mathbf{1})}A\_{1} + y\_{i + 0}^{(\\mathbf{1})}A\_{2} = \\mathbf{0},i \\geq 2,} \\\\ \\end{array} $$  
+
+and the normalizing condition with the help of Theorem 8.2 is given by,  
+
+`(8.17)`  
+
+``` 
+$$y\_{0}^{(\\mathbf{1})}e + \\underset{i = 1}{\\overset{\\infty}{\\sum^{}}}y\_{i}^{(\\mathbf{1})}e = y\_{0}^{(\\mathbf{1})}e + y\_{0}^{(\\mathbf{1})}(I \\otimes \\beta)R{(I - R)}^{- 1}e = 1.$$ 
+```  
+
+Post-multiplying the first equation in (8.16) by (`I` ⊗ `β`) and adding to this the other two equations with one of them over *i* from 2 to ∞, we get (note that *A*[2] = *E*(*I* ⊗ `β`) and *A* = *A*[0] + *A*[1] + *A*[2]),  
+
+`(8.18)`  
+
+``` 
+$$y\_{0}^{(\\mathbf{1})}B\_{1}(I \\otimes \\beta) + y\_{0}^{(\\mathbf{1})}B\_{0} + \\underset{i = 1}{\\overset{\\infty}{\\sum^{}}}y\_{i}^{(\\mathbf{1})}A = \\mathbf{0}.$$ 
+```  
+
+Post-multiplying Equation (8.18) by (e ⊗*I*) and noting that \[*B*[1] (*I* ⊗ β) + *B*[0] (e ⊗ *I*) = **0**, wesee\]  
+
+``` 
+$$\\underset{i = 1}{\\overset{\\infty}{\\sum^{}}}y\_{i}^{(1)}A(e \\otimes I) = \\underset{i = 1}{\\overset{\\infty}{\\sum^{}}}y\_{i}^{(1)}(e \\otimes \\widetilde{S}) = 0,$$  
+```  
+
+which implies, due to the uniqueness of the invariant vector of `S̃`, that  
+
+`(8.20)`  
+
+``` 
+$$\\underset{i = 1}{\\overset{\\infty}{\\sum^{}}}y\_{i}^{(\\mathbf{1})}(e \\otimes I) = d^{(1)}\\left( {\\mu\_{2},\\mu\_{1}} \\right),$$ 
+```  
+
+where *d(¹*) is a constant obtained by using the normalizing condition given in (8.17) along with the fact that *y*[0]^((1))*e* = 1 − *ρ*. Note that $d^{(1)} = \\frac{\\rho}{\\mu\_{1} + \\mu\_{2}}$ and this immediately yields the stated result. □
+### 8.5 Performance Metrics
+
+
+
+In 这部分，列出了关于提议 *M*^(\[*X*\*)/*M*^(\[*b*\])/1 模型的各种重要系统性能指标及其表达式。
+
+1. *P*(server being idle) = `y[0]e`.
+
+2. *P*(server is idle with no transactions waiting) = `y[0]e[1]`.
+
+3. *P*(server is busy processing transactions) $= \\underset{i = 1}{\\overset{\\infty}{\\sum^{}}}y\_{i}\\left( {e \\otimes e\_{1}} \\right) = \\frac{\\lambda}{b\\mu\_{1}}.$
+
+4. *P*(system is busy pegging a block) $= \\underset{i = 1}{\\overset{\\infty}{\\sum^{}}}y\_{i}\\left( {e \\otimes e\_{2}} \\right) = \\frac{\\lambda}{b\\mu\_{2}}.$
+
+5. The mean, the variance, the median, and the mode of the number in the system for the QBD approach study can be computed. While the mean and the variance can be computed using the following expressions, the other measures need to be obtained numerically from the steady-state vectors.
+
+    $$\\begin{array}{l} {E(N) = \\underset{n = 1}{\\overset{\\infty}{{\\sum^{}}^{}}}ny\_{n}^{(1)} = y\_{0}^{(1)}\\left( {I \\otimes \\beta} \\right)R\\left( {I - R} \\right)^{- 2}e,} \\\\ {V\\left( N \\right) = E\\left( N^{2} \\right) - \\left\\lbrack \\left( N \\right) \\right\\lbrack^{2} = y\_{0}^{(1)}\\left( {I \\otimes \\beta} \\right)\\left( {\\left( {I + R} \\right)\\left( {I - R} \\right)^{- 1} - \\left( {I - R} \\right)^{- 2}\\left( {I \\otimes \\beta} \\right)} \\right)\\left( {I - R} \\right)^{- 2}e.} \\\\ \\end{array}$$  
+
+6. Since the model is work-conserving, the latency (or the mean waiting time in the system, *E( W*)) can be derived using Little’s result, *E(N) = λE(W).*
+
+7. The mean recurrence time (time between successive visits to **0**): $\\mu\_{RT}^{\\prime} = \\frac{1}{y\_{1}Fe}.$
+
+8. The mean idle time: $\\mu\_{I}^{\\prime} = \\frac{1 - \\rho}{y\_{1}Fe}.$
+
+9. The mean busy period: $\\mu\_{BP}^{\\prime} = \\frac{\\rho}{y\_{1}Fe}.$
+
+10.  The mean number (of groups of size *b*) served = µ[NS] = µµ'[BP].
+
+## 8.6 Numerical Analysis
+
+In this section, we will discuss about a few numerical illustrations that highlight the qualitative features of the model under consideration. In Example 8.1, we consider Poisson distribution for batch sizes in the arrival process.
+
+### 8.6.1 Poisson Batch Size
+
+We assume that the arriving batch is of size *k* and the probability is given by $e^{- \\theta}\\left( \\frac{\\theta^{k - 1}}{(k - 1)} \\right),k \\geq 1.$, *k =* 1.
+
+Note that θ + 1 provides the mean batch size.
+
+We show that when (how) batch size distribution has effect on performance measures by considering different distribution types such as uniform, Poisson, geometric, and discrete phase-type (DPH) distribution in Examples 8.2 and 8.3.
+
+**Example 8.1:**
+
+In this example, we fix θ = 1, *µ*[2] = 1 and look at the effect of the traffic intensity (ρ), the block sizes (*b*) and the transaction processing rate (µ[1]) on some selected performance measures. Some key observations based on Figure 8.1, Figure 8.2, Figure 8.3, Figure 8.4 and Figure 8.5, which contain the plots of these measures, are given below.
+
+![Figure 8.1 Mean recurrence time for PbS under different scenarios.](img/fig8_1_B.jpg)
+
+Figure 8.1 Mean recurrence time for *PbS* under different scenarios.
+
+![Figure 8.2  Mean number of blocks processed by the server during a busy period under different scenarios.](img/fig8_2_B.jpg)
+
+Figure 8.2  Mean number of blocks processed by the server during a busy period under different scenarios.
+
+ ![Figure 8.3 Mean idle time of the sever under different scenarios.](img/fig8_3_B.jpg)
+
+Figure 8.3 Mean idle time of the sever under different scenarios.
+
+ ![Figure 8.4 Mean number of blocks in the system under different scenarios.](img/fig8_4_B.jpg)
+
+Figure 8.4 Mean number of blocks in the system under different scenarios.
+
+ ![Figure 8.5 Mean busy period of the server under different scenarios.](img/fig8_5_B.jpg)
+
+Figure 8.5 Mean busy period of the server under different scenarios.
+
+*   An increase in µ[1] leads to a decrease in the mean recurrence time, for any fixed *b.* This holds for all values of *rho*, however for large values of *rho*, the decrease rate is significant. Besides, although this metric gradually decreases as batch size increases, the rate of decrease seems insignificant for high values of *b.*
+
+*   The mean number (of groups of size *b*) served, µ[NS] appears to decrease with increasing values of *b*. It should be noted that µ[NS] decreases as µ[1] is increased (for fixed *b*) for all four values of ρ considered; however the role gets reversed when µ[1] takes a large value.
+
+*   Regarding the mean idle time of the server, we see that an increase in the block processing rate or in the batch size results in a decrease in this metric. This is obvious however, the degree of sensitivity to the value of µ[1] as well as *b* is high for large ρ.
+
+*   As the batch size increases, the mean number in system appears to increase monotonically (for any fixed µ[1]) for all four values of ρ considered. It is noticed that this metric decreases with an increase in µ[1], however the role gets reversed for reasonably large values of µ[1]. Moreover, this rate of change is significant for large *ρ* values.
+
+*   We also observe that the mean busy period of the server is a decreasing function of both *b* (for fixed µ[1]) and µ[1] (for fixed *b*). This is the case for all values of *α* considered, however the rate of change is much significant for large values of *α*.
+
+**Example 8.2:**
+
+The effect of batch size distributions, i.e., Poisson batch (PB), Geometric batch (GB), Uniform batch (UB), and Discrete Phase batch (DPB), on selected performance measures is investigated for *p =* 0.5,0.99 by displaying the plots in Figure 8.6, Figure 8.7, Figure 8.8, Figure 8.9, Figure 8.10, Figure 8.11, Figure 8.12 and Figure 8.13. For this purpose, we fix the block pegging rate µ[2] = 1 and vary the transaction processing rate µ[1] = 0.2,0.4,0.6 and the block size *b = 2,3,...*, 100.
+
+![Figure 8.6 Mean recurrence time (ρ = 0.50) for different batch size distributions.](img/fig8_6_B.jpg)
+
+Figure 8.6 Mean recurrence time (ρ = 0.50) for different batch size distributions.
+
+ ![Figure 8.7 Mean recurrence time (ρ = 0.99) for different batch size distributions.](img/fig8_7_B.jpg)
+
+Figure 8.7 Mean recurrence time (ρ = 0.99) for different batch size distributions.
+
+ ![Figure 8.8 Mean busy period (ρ = 0.50) for different batch size distributions.](img/fig8_8_B.jpg)
+
+Figure 8.8 Mean busy period (ρ = 0.50) for different batch size distributions.
+
+ ![Figure 8.9 Mean busy period (ρ = 0.99) for different batch size distributions.](img/fig8_9_B.jpg)
+
+Figure 8.9 Mean busy period (ρ = 0.99) for different batch size distributions.
+
+ ![Figure 8.10 Mean number in system (ρ = 0.50) for different batch size distributions.](img/fig8_10_B.jpg)
+
+Figure 8.10 Mean number in system (ρ = 0.50) for different batch size distributions.
+
+ ![Figure 8.11 Mean number in system (ρ = 0.99) for different batch size distributions.](img/fig8_11_B.jpg)
+
+Figure 8.11 Mean number in system (ρ = 0.99) for different batch size distributions.
+
+ ![Figure 8.12 Mean number served during a BP(ρ = 0.50) for different batch size distributions.](img/fig8_12_B.jpg)
+
+Figure 8.12 Mean number served during a BP(ρ = 0.50) for different batch size distributions.
+
+
+
+
+![图 8.13 平均服务数在 BP(ρ = 0.99) 下，不同批量大小分布的比较。](img/fig8_13_B.jpg)
+
+图 8.13 平均服务数在 BP(ρ = 0.99) 下，不同批量大小分布的比较。
+
+*   从 图 8.6 可以观察到，在 *b* 取特定值时，随着 µ[1] 的增大，平均回溯时间会下降（ρ = 0.50）。这一行为在四种批量大小分布中均可观察到。同时，平均回溯时间在 UB（无限批量）中最低，而在 DPB（动态批量）中最高（固定 *b* 和 µ[1]）。DPB 的下降速率也高于其他分布。此外，随着 *b* 的增大，固定 µ[1] 时的平均回溯时间会下降。
+
+*   图 8.7 展示了类似的模式：平均回溯时间随 *b* 和 µ[1]（或 ***ρ*** = 0.99）的变化在四种批量大小分布中均表现相似。图中显示，当 ρ 取较高值时，在特定 *b* 和 µ[1] 下，平均回溯时间会升高。这在四种分布中均成立。随着交通强度（ρ）的增加，平均回溯时间也随之上升，但当服务率提升时，该值会开始下降。
+
+*   从 图 8.8 再次可以看到，平均繁忙期是 *b* 和 *µ*[1] 的递减函数（ρ = 0.50），在四种批量大小分布中均如此。当服务率提高时，系统中平均繁忙时间会减少。这同样适用于四种分布。平均繁忙期在 UB 中最低，在 DPB 中最高。
+
+*   图 8.9 展示了当 ρ = 0.99 时的平均繁忙期的图形。与 ρ = 0.50 相比，ρ = 0.99 时的平均繁忙期数值更高。
+
+*   系统中平均数的行为可在 图 8.10 中观察到，针对 *b* 和 *µ*[1]（ρ = 0.50）。随着批量大小的增大，在固定 µ[1] 时，性能指标呈单调上升；而在固定 *b* 时，随着 µ[1] 的增大，该指标下降。四种批量大小分布均呈现相同的行为模式。DPB 的预计系统内数值最大，高于其他分布。当服务率提高时，系统中的事务将以更快速度被处理，从而导致系统平均数下降。
+
+*   图 8.11 显示了在 ρ = 0.99 时的平均系统内数的图形。尽管不同批量大小分布在趋势上表现出相似性，但 ρ = 0.99 时的平均系统内数显著高于 ρ = 0.50 时的数值。
+
+*   图 8.12 展示了在 ρ = 0.50 时，平均繁忙期 µ[NS] 关于 *b* 和 *µ*[1] 的行为。性能指标 *µ*[1] 随 *b* 增大（固定 *µ*[1]）而下降，同时随 *µ*[1] 增大（固定 *b*）也会下降，这在四种批量大小分布中均成立。DPB 在固定 *b* 和 *µ*[1] 时的 µ[NS] 最高，但与 GB（可能是指另一种分布）之间的差异不足以让它们看起来截然不同，因此 DPH 和 GB 的行为看起来是相同的。
+
+*   图 8.13 展示了在 ρ = 0.99 时，µ[NS] 关于 *b* 和 *µ*[1] 的行为，显示出对批量大小分布类型的一定程度的 insensitive（不敏感）。在此情况下，*µ*[NS] 随 ρ 的增大而上升。四种分布中，DPB 的 µ[NS] 最高，UB（可能是指无限批量）的 µ[NS] 最低。
+
+**Example 8.3:**
+
+研究了在不同场景下，批量大小分布对一些性能指标的影响，并通过 表 8.1、8.2、8.3 和 8.4 显示具体数值。为此，我们固定块钉接率 µ[2] = 1，并将事务处理率 ***µ***[1] = 0.5,1.5；批量大小 *b* = 5,50,150,200 和交通强度 ***ρ*** = 0.5,0.90,0.95,0.99 进行变化。
+
+我们将均匀、泊松和几何分布的参数分别设为 3、1 和 0.5。在容差水平 10^(\-13) 的情况下，批量大小的截断值分别为均匀分布 3、泊松分布 13 和几何分布 34。另一方面，DPH 分布（见下文的 DPH 表示）在相同容差水平下的最大批量大小为 50。
+
+$$\\alpha = (0.4,0.3,0.3),\\, T = \\begin{pmatrix} 0.3 & 0.11 & 0.01627 \\\\ 0.1 & 0.2 & 0.25 \\\\ 0.12 & 0.3 & 0.12 \\\\ \\end{pmatrix}$$  
+
+当 ***μ***[1] = 0.5 且 Mean-RT 时，批量大小分布的影响在低 *b* 值（*b* = 5 和 50）时表现显著，随着 ***ρ*** 的增大（高 ***ρ*** 值）。当 *b* 取值较大（150 和 200）时，分布的影响较小，如在 表 8.1 中所示。当我们观察 ***μ***[1] = 1.5 时，上述行为同样适用。然而，四种批量大小分布之间的差异在此情况下略有减小。我们可以对其他性能指标在 表 8.2、Table 8.3 和 Table 8.4 中作出类似的评论。总结而言，较小的 *b* 值和 ***μ***[1] 值会导致更大的 ***ρ*** 值，从而增强批量大小分布对指标的影响。
+
+Table 8.1 The Effect of Distribution Type on Mean-RT
+
+|  |  | *ρ* = 0.5 | *ρ* = 0.90 |
+| --- | --- | --- | --- |
+| *μ*[1] | *b* | Uniform | Poisson | Geometric | DPH | Uniform | Poisson | Geometric | DPH |
+| 0.5 | 5 | 9.387 | 9.587 | 10.154 | 10.168 | 23.681 | 24.235 | 25.763 | 25.799 |
+|  | 50 | 7.100 | 7.117 | 7.167 | 7.169 | 15.101 | 15.169 | 15.373 | 15.379 |
+|  | 150 | 6.953 | 6.958 | 6.974 | 6.974 | 14.453 | 14.476 | 14.545 | 14.547 |
+|  | 200 | 6.935 | 6.939 | 6.951 | 6.951 | 14.372 | 14.389 | 14.441 | 14.442 |
+| 1.5 | 5 | 5.203 | 5.315 | 5.631 | 5.638 | 13.110 | 13.418 | 14.267 | 14.287 |
+|  | 50 | 3.915 | 3.924 | 3.953 | 3.954 | 8.286 | 8.325 | 8.440 | 8.443 |
+|  | 150 | 3.831 | 3.834 | 3.843 | 3.844 | 7.920 | 7.933 | 7.972 | 7.973 |
+|  | 200 | 3.821 | 3.823 | 3.830 | 3.830 | 7.874 | 7.884 | 7.913 | 7.914 |
+|  |  | ***ρ* = 0.95** | ***ρ* = 0.99** |
+| ***μ*[1]** | ***b*** | **Uniform** | **Poisson** | **Geometric** | **DPH** | **Uniform** | **Poisson** | **Geometric** | **DPH** |
+| 0.5 | 5 | 44.448 | 45.493 | 48.371 | 48.438 | 211.724 | 216.716 | 230.452 | 230.774 |
+|  | 50 | 27.886 | 28.018 | 28.411 | 28.421 | 131.191 | 131.832 | 133.744 | 133.793 |
+|  | 150 | 26.629 | 26.674 | 26.808 | 26.811 | 125.062 | 125.279 | 125.933 | 125.950 |
+|  | 200 | 26.471 | 26.505 | 26.606 | 26.608 | 124.293 | 124.456 | 124.948 | 124.961 |
+| 1.5 | 5 | 24.604 | 25.185 | 26.783 | 26.820 | 117.189 | 119.963 | 127.590 | 127.768 |
+|  | 50 | 15.297 | 15.372 | 15.593 | 15.599 | 71.951 | 72.312 | 73.388 | 73.416 |
+|  | 150 | 14.588 | 14.613 | 14.689 | 14.691 | 68.493 | 68.615 | 68.984 | 68.994 |
+|  | 200 | 14.499 | 14.518 | 14.574 | 14.576 | 68.059 | 68.151 | 68.428 | 68.436 |
+
+Table 8.2 The Effect of Distribution Type on Mean-BP
+
+
+
+## 8.7 结论与未来方向
+
+我们分析了一种适用于区块链建模的队列模型 `M`^`(`\[*\]`^`X`*^`)`/`M`^`(`\[*\]`^`b`*^`)`/1，它捕捉了矿工池的挖矿过程以及新区块构建过程固有的两个不同的服务阶段。所提模型通过对交易处理时间与挖矿时间的卷积，简化了分析过程。利用矩阵分析方法，在稳态下通过多种性能指标对模型进行了定性分析。给出了具有启发性和趣味性的数值示例。本文所考虑的模型可以推广至包含 BMAP 事务到达和阶段性服务在两个阶段的情况。当前正在研究该扩展，相关结果将在别处报告。
+
+## 参考文献
+
+1.  Nakamoto S。`Bitcoin`: A peer-to-peer electronic cash system; 2008。\[Online]。Available: [`bitcoin.org/bitcoin.pdf`](https://www.bitcoin.org)
+
+2.  Kube N。Daniel Drescher。`Blockchain basics`: A non-technical introduction in 25 steps。Berkely: Apress; 2017。
+
+3.  Parker JF。`Blockchain technology simplified`: The complete guide to blockchain management, mining, trading and investing cryptocurrency。California: CreateSpace Independent Publishing Platform; 2018。
+
+4.  Wattenhofer R。The science of the blockchain。California: CreateSpace Independent Publishing Platform; 2016。
+
+5.  Lin IC, Liao TC。A survey of blockchain security issues and challenges。Int J Netw Secur. 2017;19(5):653–659。
+
+6.  Wang W, Hoang DT, Hu P, Xiong Z, Niyato D, Wang P, Wen Y, Kim DI。A survey on consensus mechanisms and mining strategy management in blockchain networks。IEEE Access. 2019;7:22328–22370。
+
+7.  Zheng Z, Xie S, Dai HN, Chen X, Wang H。`Blockchain challenges` and opportunities: A survey。Int J Web Grid Serv. 2018;14(4):352–375。
+
+
+
+8. 阮·K·阮. `区块链-面向未来可持续发展的金融技术`. 在 2016 年第 3 届绿色技术与可持续发展国际会议 (GTSD)；2016 年，第 51–54 页。
+
+9. 蔡·W·T·、Blower·R·、Zhu·Y·、Yu·L·. `金融区块链的系统视角`. 在 2016 年服务导向系统工程研讨会 (SOSE)；2016 年，第 450–457 页。
+
+10. Morabito·V·. `区块链驱动的商业创新`. 查姆：`Springer International Publishing`；2017 年。
+
+11. Mougayar·W·. `商业区块链：下一代互联网技术的承诺、实践与应用`. Hoboken, NJ：`John Wiley & Sons`；2016 年。
+
+12. Hofmann·E·、Strewe·UM·、Bosia·N·. `供应链金融与区块链技术：逆向证券化案例`. 海德堡：`Springer`；2017 年。
+
+13. Korpela·K·、Hallikas·J·、Dahlberg·T·. `数字化供应链转型迈向区块链集成`. 在第 50 届夏威夷国际系统科学会议论文集中。
+
+14. Saberi·S·、Kouhizadeh·M·、Sarkis·J·、Shen·L·. `区块链技术及其与可持续供应链管理的关系`. `Int J Prod Res`，2019 年，第 57 卷（第 7 期）：2117–2135 页。
+
+15. Bahga·A·、Madisetti·VK·. `工业物联网区块链平台`. `J Soft Eng App`，2016 年，第 9 卷（第 10 期）：533–546 页。
+
+16. Conoscenti·M·、Vetro·A·、De Martin·JC·. `区块链与物联网：系统性文献综述`. 在 2016 年 IEEE/ACS 计算机系统与应用国际会议 (AICCSA)；2016 年，第 1–6 页。
+
+17. Dorri·A·、Kanhere·SS·、Jurdak·R·. `区块链在物联网安全与隐私中的应用：智能家居案例研究`. 在 2017 年 IEEE 普适计算与通信研讨会 (PerCom Workshops)；2017 年，第 618–623 页。
+
+18. De Filippi·P·. `区块链对共享经济的意义`. `Harv Bus Rev`，2017 年，第 15 卷，第 1 期：1–5 页。
+
+19. Pazaitis·A·、De Filippi·P·、Kostakis·V·. `区块链与共享经济中的价值系统：Backfeed 案例`. `Technol Forecast Soc Change`，2017 年，第 125 期：105–115 页。
+
+20. Rabah·K·. `区块链驱动的医疗保健系统的挑战与机遇：综述`. `Mara Res</think>
+[content]
+8. 阮·K·阮. `区块链-面向未来可持续发展的金融技术`. 在 2016 年第 3 届绿色技术与可持续发展国际会议 (GTSD)；2016 年，第 51–54 页。
+
+9. 蔡·W·T·、Blower·R·、Zhu·Y·、Yu·L·. `金融区块链的系统视角`. 在 2016 年服务导向系统工程研讨会 (SOSE)；2016 年，第 450–457 页。
+
+10. Morabito·V·. `区块链驱动的商业创新`. 查姆：`Springer International Publishing`；2017 年。
+
+11. Mougayar·W·. `商业区块链：下一代互联网技术的承诺、实践与应用`. Hoboken, NJ：`John Wiley & Sons`；2016 年。
+
+12. Hofmann·E·、Strewe·UM·、Bosia·N·. `供应链金融与区块链技术：逆向证券化案例`. 海德堡：`Springer`；2017 年。
+
+13. Korpela·K·、Hallikas·J·、Dahlberg·T·. `数字化供应链转型迈向区块链集成`. 在第 50 届夏威夷国际系统科学会议论文集中。
+
+14. Saberi·S·、Kouhizadeh·M·、Sarkis·J·、Shen·L·. `区块链技术及其与可持续供应链管理的关系`. `Int J Prod Res`，2019 年，第 57 卷（第 7 期）：2117–2135 页。
+
+15. Bahga·A·、Madisetti·VK·. `工业物联网区块链平台`. `J Soft Eng App`，2016 年，第 9 卷（第 10 期）：533–546 页。
+
+16. Conoscenti·M·、Vetro·A·、De Martin·JC·. `区块链与物联网：系统性文献综述`. 在 2016 年 IEEE/ACS 计算机系统与应用国际会议 (AICCSA)；2016 年，第 1–6 页。
+
+17. Dorri·A·、Kanhere·SS·、Jurdak·R·. `区块链在物联网安全与隐私中的应用：智能家居案例研究`. 在 2017 年 IEEE 普适计算与通信研讨会 (PerCom Workshops)；2017 年，第 618–623 页。
+
+18. De Filippi·P·. `区块链对共享经济的意义`. `Harv Bus Rev`，2017 年，第 15 卷，第 1 期：1–5 页。
+
+19. Pazaitis·A·、De Filippi·P·、Kostakis·V·. `区块链与共享经济中的价值系统：Backfeed 案例`. `Technol Forecast Soc Change`，2017 年，第 125 期：105–115 页。
+
+20. Rabah·K·. `区块链驱动的医疗保健系统的挑战与机遇：综述`. `Mara Res J Med Health Sci`，2017 年，第 1 卷（第 1 期）：45–52 页。
+
+21. Li·QL·、Ma·JY·、Chang·YX·. `区块链排队理论`. 在国际会议 on Computational Social Networks 中，Springer，纽约；2018 年，第 25–40 页。
+
+22. Li·QL·、Ma·JY·、Chang·YX·、Ma·FQ·、Yu·HB·. `区块链系统中的马尔可夫过程`. `Comput Soc Netw`，2019 年，第 6 卷（第 1 期）：1–28 页。
+
+23. Kawase·Y·、Kasahara·S·. `比特币交易确认时间：基于区块链机制的排队分析方法`. 在国际会议 on Queueing Theory and Network Applications 中，Springer，查姆；2017 年，第 75–88 页。
+
+24. Memon·RA·、Li·JP·、Ahmed·J·. `基于排队理论的区块链系统模拟模型`. `Electronics`，2019 年，第 8 卷（第 2 期）：234–253 页。
+
+25. Jourdan·M·、Blandin·S·、Wynter·L·、Deshpande·P·. `比特币区块链的概率模型`. 在 IEEE/CVF 计算机视觉与模式识别研讨会论文集中；2019 年。
+
+26. Huang·D·、Ma·X·、Zhang·S·. `私有区块链 Raft 共识算法性能分析`. `IEEE Trans Syst Man Cyber: Syst`，2019 年，第 50 卷（第 1 期）：172–181 页。
+
+27. Srivastava·R·. `基于马尔可夫模型对区块链块接受的数学评估`. `Int J Blockchains Crypto`，2019 年，第 1 卷（第 1 期）：42–53 页。
+
+28. Fralix·B·. `比特币启发的无限服务器排队系统类别`. `Queueing Systems`，2020 年，第 95 卷（第 1 期）：29–52 页。
+
+29. Fan·J·、Ma·Z·、Zhang·Y·、Zhang·C·. `基于 *M/(M1,M2)*/1 休假排队模型的区块链系统分析`. `J Supercomput`，2021 年，第 77 卷（第 4 期）：3673–3694 页。
+
+30. Chen·X·、Nguyen·K·、Sekiya·H·. `私有区块链网络的延迟性能分析`. `IEEE Internet Things J`，2022 年，第 9 卷（第 19 期）：19246–19259 页。
+
+31. Neuts·MF·. `M/G/1 型结构化随机矩阵及其在排队系统中的应用`. 纽约：`Marcel Dekker, Inc.`；1989 年。
+
+32. Chakravarthy·SR·. `矩阵分析方法在排队中的入门：分析与模拟方法 – 基础`. 伦敦；纽约：`ISTE Ltd`；`John Wiley and Sons`；2022 年。
+
+33. Chakravarthy·SR·. `矩阵分析方法在排队中的入门：分析与模拟方法 – 基础`. 伦敦；纽约：`ISTE Ltd`；`John Wiley and Sons`；2022 年。
+
+34. Marcus·M·、Minc·H·. `矩阵理论与矩阵不等式综述`. 波士顿，MA：`Allyn and Bacon`；1964 年。
+
+35. Steeb·WH·、Hardy·Y·. `矩阵微分与克罗内克积：实用线性代数与多线性代数第二版`. 新加坡：`World Scientific Publishing Company`；2011 年。
+
+36. Neuts·MF·. `矩阵几何在随机模型中的解：算法方法`. 巴尔的摩，MD：`The Johns Hopkins University Press`；1981 年。
+
+# 9 Emerging Trends in Sensors, IoT, and Smart Systems
+
+Muhammad Zeeshan Tanveer
+
+King Abdullah II School of Information Technology University of Jordan, Amman, Jordan
+
+University of Science and Technology Beijing,Beijing, China
+
+SRM University, India Amity University, Noida, India
+
+Amity University,Noida, India
+
+Muhammad Zeeshan Tanveer, Misbah Fatima, and Iqra Shafique
+
+Riphah International University,Lahore, Pakistan
+
+Salman Shamshad
+
+The University of Lahore,Lahore, Pakistan
+
+Khalid Mahmood
+
+National Yunlin University of Science and Technology,Douliu, Yunlin, Taiwan
+
+DOI: [10.1201/9781003326236-9](https://dx.doi.org/10.1201/9781003326236-9)
+
+## 9.1 Introduction
+
+The Internet of Things (IoT), is a system of interconnected computers, mechanical and electrical devices, and both animate and inanimate objects that are able to exchange information (Figure 9.1). Examples of the IoT include individuals with heart monitors implanted, livestock fitted with biochip transponders, vehicles equipped with sensors that alert the driver to low tire pressure, and similar human-made or natural objects that can be assigned an Internet Protocol (IP) address and transmit data through a network.
+
+![Figure 9.1 An illustration of generic IoT environment.](img/fig9_1_B.jpg)
+
+Figure 9.1 An illustration of generic IoT environment.
+
+Organizations in various industries are leveraging the IoT to improve efficiency, gain insights into consumer behavior, enhance customer experience, make informed decisions, and drive value for their businesses.
+
+## 9.2 Internet of Things (IoT)
+
+In this section, we will be more focused on the fundamentals of IoT and will look into in-depth details of IoT and its working to get a better idea about IoT itself.
+
+### 9.2.1 Importance of IoT
+
+People may live, work, and manage every aspect of their life with the IoT. IoT is essential for business and offers advanced home automation equipment. Businesses may monitor their systems and data in real time, including information on machine performance and logistical and supply chain activities. Thanks to IoT, businesses can automate operations and save labor costs. It also improves service quality and reduces waste. The IoT is one of the most significant technological developments of our time. It will only gather pace as more businesses realize how linked gadgets might help them stay competitive.
+
+
+
+物联网（IoT）使得个人能够更高效地生活、更有效地工作，并更好地掌控日常生活。它也是企业的重要工具，能够实时监控系统，并收集机器性能和供应链活动等各个方面的数据。通过利用物联网，企业可以自动化流程、降低人工成本，并实施减少浪费、提升服务交付的策略，同时降低制造和运输成本，并提升客户交易的透明度。
+
+物联网已成为当今世界的关键技术，其重要性预计将随着更多公司认识到其在保持竞争力方面的价值而继续增长。
+
+### 9.2.2 物联网对组织的益处
+
+物联网为企业带来了多种显著优势。虽然具体的益处取决于不同的行业，但以下是一些最为人知的物联网优势，使企业能够：
+
+*   监控内部和外部业务流程
+
+*   节省时间
+
+*   节省成本
+
+*   提高员工和组织的生产力
+
+*   帮助做出更佳的商业决策
+
+*   降低支出，增加收入
+
+物联网正促使公司重新思考其运营模式，并为其提供必要的工具以提升其运营方式。物联网设备（如传感器）主要应用于运输、公用事业和工业领域，但其使用已扩展至农业、基础设施和家庭自动化，推动了企业的广泛数字化转型。对农民而言，物联网有望通过传感器收集温度、湿度、土壤成分和降雨量等数据，从而简化工作并实现多项任务的自动化。
+
+物联网还具备监测基础设施运行的优势。传感器可用于监测建筑物、桥梁等结构的任何变化或事件，从而实现无纸化环境、改进工作流程，并节省成本和时间。家庭自动化公司可能利用物联网监控和调节建筑的电气与机械系统。智能城市的居民也能从增加的废物减少和能源节约中受益。
+
+### 9.2.3 物联网背景
+
+物联网的起源可追溯至 Norman Joseph Woodland 在 1940 年代末期创造的条形码，这标志着物联网的开端，灵感来源于 Woodland 在迈阿密海滩沙滩上绘制的图案。他于 1952 年获得线性条形码的专利 \[1\]。在 1950 年代，Morton Heilig 引入了“Sensorama”，这是世界上首个头戴式显示器，让用户体验到在布鲁克林骑摩托车的沉浸式体验 \[2\]。1955 年，Edward O. Thorp 创造了第一款可穿戴计算机，该设备藏在鞋子内部，用于预测轮盘赌的结果 \[3\]。虽然互连设备的概念可追溯至 1832 年电报的发明，利用电磁信号在两台机器之间进行通信，但物联网的真正起源可追溯至 1960 年代的互联网发明 \[4\]。
+
+1967 年，在电报发明十年后，Hubert Upton 创建了一款包含眼镜显示器的可穿戴计算机，用于辅助嘴唇阅读，这是一种类比计算机 \[5\]。1967 年，美国国防部首次通过 ARPANET（互联网的前身）发送了一条消息 \[6\]。Mario Cardullo 在 1973 年早期获得了第一个被动、可读写 RFID（射频识别）标签的专利，这对零售行业产生了变革性影响 \[7\]。1974 年，通用商品条形码（UPC）标签首次用于超市销售管理，具体为惠氏口香糖，这正是 RFID 技术发明后的一年 \[8\]。
+
+#### 9.2.3.1 世界上第一个物联网设备
+
+世界上第一个物联网设备的诞生于 1980 年代初期的卡内基梅隆大学。学生团队开发了一个系统，该系统允许在冰箱内部监测温度，并通过网络将数据发送到服务器，以便实时监控。该项目被视为物联网概念的早期实践。
+
+
+
+根据《世界经济论坛》发布的《连接世界状况》研究报告，过去一年因使用物联网（IoT）技术，新冠疫情得到了显著提升。
+
+IoT 设备如连接式热成像摄像头、接触追踪设备和健康监测可穿戴设备，已为抗击疾病提供了关键数据。研究报告还指出，温度传感器和包裹追踪将帮助确保新冠疫苗的安全分发。此外，IoT 与自动化在医疗以外的行业也使碎片化的 COVID 供应链更加可靠。在制造业和仓储环境中，该技术使人们能够保持分离，同时提供安全的远程访问。
+
+### 9.2.4 架构与工作
+
+本节将深入探讨 IoT 的架构。
+
+#### 9.2.4.1 IoT 架构
+
+物联网拥有众多应用，且使用正在快速增长。IoT 的架构取决于其在不同领域中的功能和目的。然而，目前缺乏通用标准来描述 IoT 的工作方式。4 阶段 IoT 架构（即主要的、涵盖性的 IoT 架构）基于基本的流程。该架构包含四层，可进一步细分为应用层、数据处理层、网络层和感知层。如下图所示 Figure 9.2。
+
+![Figure 9.2 IoT 架构阶段。](img/fig9_2_B.jpg)
+
+Figure 9.2 IoT 架构阶段。
+
+1. **感知层**
+
+    该感知层包含传感器、执行器和设备。在通过网络传输信息之前，这些传感器和执行器会分析其刚刚接收的数据（物理和环境属性）。
+
+2. **网络层**
+
+    IoT 基础设施的第二层包括互联网或网关以及数据采集系统（DAS）。DAS 的职责是收集并转换数据，从多种来源获取信息并将模拟传感器数据转换为数字格式。这些高级网关不仅将传感器网络连接到互联网，还执行重要功能，如防病毒、数据过滤、基于入站数据的决策，并提供数据管理服务。
+
+3. **数据处理层**
+
+    这是 IoT 基础设施中的一个组件，负责数据处理。从 IoT 设备收集的数据会在此单元进行初步处理，如检查和预处理，然后再传输到数据中心。业务应用可以在数据准备就绪后访问这些数据。边缘 IT 或边缘分析也在这一阶段参与。
+
+4. **应用层**
+
+    IoT 架构的第四层涉及数据管理，通常在数据中心或云端进行。该层是收集到的数据被各行各业的终端应用（如农业、医疗、航空航天、农业和国防）所利用的地方。
+
+#### 9.2.4.2 工作原理
+
+物联网由大量相互连接的物体组成，这些物体产生并传输大量关于其运行和存储数据的信息。这些设备会将信息收集并发送到全球分布的大型云服务器，云服务器据此发出相应指令。如下图所示 Figure 9.3。物联网由一个庞大的相互连接的物体网络组成，这些物体内置传感器。传感器能够感知环境信息，设备从移动电话、咖啡机、微波炉、热水器、烟雾报警器、空调、车辆等多种设备中收集并存储数据。这些设备收集的数据随后通过 IoT 平台进行传输、处理和分析，以提取有价值的洞察。云服务器和大型数据库是 IoT 平台的一部分，平台据此执行操作并发送指令。平台利用信息进行集成、处理和分析，生成关键信息，并据此发送回指令。
+
+![Figure 9.3 IoT 架构示意图。](img/fig9_3_B.jpg)
+
+Figure 9.3 IoT 架构示意图。
+
+随后，数据聚合会分发到其他设备，以提升性能并改善未来的用户体验。物联网前景广阔。根据《商业内参》报道，到 2020 年，预计将有 240 亿 IoT 设备安装。ITC 预测，未来几年 IoT 销售额将超过 3000 亿美元，为技术行业及其他多个领域创造大量就业机会 \[19\]。
+
+#### 9.2.4.3 IoT 组件
+
+IoT 运作的主要组件如下 Figure 9.4。
+
+![Figure 9.4 IoT 组件。](img/fig9_4_B.jpg)
+
+Figure 9.4 IoT 组件。
+
+1. **设备与传感器**
+
+    IoT 的连接层由大量持续从环境中收集数据的设备和传感器组成。例如，手机内置 GPS、摄像头、加速度传感器等多种传感器。半导体制造技术的进步使得能够在多种应用中使用的高智能微传感器得以实现。常见传感器包括：
+
+    *   湿度/湿度水平
+
+    *   压力传感器
+
+    *   温度和恒温器传感器
+
+    *   光照强度检测器
+
+    *   接近检测
+
+    *   湿度传感器
+
+    *   RFID 标签
+
+    如下图所示 Figure 9.5，智能空调可让用户在 73°F 至 77°F 之间选择所需房间温度。当房间温度超过 77°F 时，设备指示空调开启；当温度低于 73°F 时，会发出关闭空调的信号。传统空调可通过 IoT 启用的智能空调控制器实现智能化，该控制器包含用于信号传输的发射器和用于监测环境温度变化的传感器。自动化过程的方向影响整个物联网生态系统。
+
+    ![Figure 9.5 空调示例通过传感器实现。](img/fig9_5_B.jpg)
+
+    Figure 9.5 空调示例通过传感器实现。
+
+2. **云计算**
+
+    连接层在 IoT 架构中由设备和传感器组成，负责感知环境信息并将其传递到下一层。例如，智能手机拥有 GPS、摄像头和加速度传感器等多种传感器。先进的半导体技术使得能够在紧凑空间中实现智能微传感器。设备收集的数据通常存储在云端，云端是一个 24/7 运行的连接服务器网络。为有效管理 IoT 系统产生的大量数据，利用云存储是必要的，这也为数据分析提供了平台。
+
+
+
+
+The IoT cloud, composed of powerful computers, can quickly process huge volumes of data. The cloud plays a crucial role in managing and handling data, including data collection, processing, management, archiving, and remote access. IoT devices, including sensors, routers, gateways, user applications, and media, are connected through various connectivity paths, such as Wi‑Fi, Bluetooth, Zigbee, and cellular networks like LTE or 5G. While the cloud is a popular option for the IoT, local processing with Edge or Fog computing is also possible. However, the cloud is often preferred due to its high performance, scalability, and low cost. Edge computing, on the other hand, is ideal for applications that require intensive local data processing and archiving.
+
+3. **Connectivity**
+
+Communication in IoT requires an Internet connection and the assignment of an IP address to each device connected to the Internet. However, the limited number of IP addresses has led researchers to explore a new IP address scheme that can accurately identify each physical device. Regardless of the medium used for transport, the collected data is transmitted to a cloud infrastructure. The sensors can connect to the cloud using various communication systems, such as wide-area networks, low-power wide-area networks, Bluetooth, Wi‑Fi, and others, each of which has its own advantages and limitations in terms of power consumption, range, and bandwidth. The selection of the most appropriate connectivity solution is crucial for the proper functioning of the IoT system. Once the data is transmitted to the platform, it is processed to generate the necessary outputs and send them back to the devices. This step is critical for the success of IoT technology, as the processing must be efficient for optimal results. IoT refers to a network of interconnected objects, sensors, actuators, and clouds that must work together to process and act on data. Connectivity is an essential component of the complex IoT ecosystem.
+
+4. **User Interface**
+
+User interfaces (UIs) provide users with access to the visible and controllable components of the IoT system. The design of consumer interfaces is crucial as it often helps users choose a particular technology or device in today’s competitive market. Devices with a simple and compatible design, aligned with current wireless standards, are more likely to attract users. With the advancements in technology, various interactive designs are available to make complex tasks easier on touchscreens. Physical buttons on equipment have been replaced by color touch displays and this trend is spreading to most smart home devices. For example, a user can change the temperature of their refrigerator remotely using their phone if they notice any changes.
+
+In certain situations, certain processes can occur automatically. The IoT system can change its settings without human intervention by creating and implementing a few defined rules. The UI is the most accessible and controllable part of the IoT system, allowing users to modify and operate it. The more user‑friendly this part of the IoT ecosystem is, the more convenient it becomes for users to interact with. Users can interact with the system both locally and remotely using laptops, tablets, and smartphones. They can even use smart home systems like Google Home or Amazon Alexa to communicate with their “things.”
+
+5. **Gateway**
+
+The IoT Gateway manages the two‑way exchange of data between various networks and protocols, making sure the connected devices and sensors are compatible. With the use of advanced encryption methods, it provides a level of security for the network and data transmission. The gateway acts as a barrier between the devices and the cloud to prevent unauthorized access and malicious intrusion. In certain cases, it can also locally process the data from thousands of sensors before forwarding it, thereby reducing the amount of data being transmitted. The gateway serves as an extra layer of security for the data in transit with the latest encryption techniques. However, not all IoT gateways are capable of analyzing, aggregating, and only sending the relevant data to the cloud.
+
+### 9.2.5 Resource of IoT
+
+The IoT connects physical objects in the world to the global Internet. At the core of IoT is a diverse array of smart devices with sensors, actuators, and the ability to process and communicate information. These devices collect data about their surroundings through various types of sensors that measure things like pressure, temperature, and humidity. This information is then either directly uploaded to a server or transmitted through a gateway. Based on server feedback, IoT devices may also send commands to actuators. Applications of IoT in the real world include smart cities, intelligent transportation systems, smart homes, retail operations, health monitoring, and environmental and energy management. Due to the numerous benefits of IoT technology, industries, research and development facilities, and governments are investing large sums of money into IoT, resulting in intense competition and market fragmentation, hindered by compatibility issues with standards.
+
+#### 9.2.5.1 Resources in IoT Ecosystems
+
+Resources of many kinds used in IoT contexts are displayed in Figure 9.6. The tools used for resource management can be applied to various tasks for the benefit of the system, network, or applications utilized by end users. There are two main types of resources: those focused on apps and those focused on infrastructure. Infrastructure‑based resource management encompasses computing, networking, storage, and other resources. Resource management for energy is also important and includes hardware such as sensors, CPUs, and memory, as well as firmware and software. From the system’s perspective, hardware and software resources are differentiated, while from the network’s perspective, resources could include radio antennas, channels, bandwidth, routing paths, or nodes. Storage resource management encompasses various components, such as memory and the file system. Energy resource management deals with energy sources and batteries. Resource management can impact any software components from an application or user perspective, including application management modules, resource databases, customer databases, resource identification, and resource modeling.
+
+![Figure 9.6 IoT resource modeling.](img/fig9_6_B.jpg)
+
+Figure 9.6 IoT resource modeling.
+
+### 9.2.6 IoT Objects
+
+This section will look into the devices and physical components we use to make an IoT ecosystem work. We will also profoundly analyze the type of these components.
+
+#### 9.2.6.1 Introduction of IoT Devices
+
+The number of IoT devices has surpassed the global population. Currently, the world has a population of approximately 7.62 billion people, but by 2022, it is estimated that the number of IoT devices in operation will rise to 20 billion. This increase in IoT devices is driving the demand for 5G networks \[17\]. It is estimated that, in a few years, the average person in America will own more than ten IoT devices. The growth of IoT is increasing rapidly, with a multitude of devices available, including computers, smartphones, smart gadgets, smartwatches, and smart vehicles (Figure 9.7). These findings are further discussed in this section.
+
+![Figure 9.7 Number of IoT devices.](img/fig9_7_B.jpg)
+
+Figure 9.7 Number of IoT devices.
+
+
+
+-   [各种物联网设备的功能可能不同，但它们的工作原理相似。物联网设备是能够感知现实世界中发生的事件的实体，配备有中央处理器（CPU）、网络适配器、固件和 IP 地址。为了接入网络，它们会连接到动态主机配置协议（DHCP）服务器。](https://wiki.example.org/feynmans_learning_method)
+
+大多数物联网设备通过软件应用程序（如智能手机应用）进行操作和监控。例如，使用智能手机应用可以控制家中的灯光。但某些设备内置网页服务器，无需外部程序，例如当有人进入房间时灯会自动打开。以下是一些物联网设备的例子：
+
+1.  **家庭安全**
+
+    物联网是确保家庭安全和保障的关键组成部分。可以通过物联网连接并管理各种传感器、警报和摄像头，并从移动设备中进行管理，从而提供持续的保护。
+
+2.  **活动跟踪器**
+
+    使用基于传感器的活动跟踪器可以实现健康监测。这些设备可以持续跟踪血压、身体活动、食欲和氧气水平等重要健康指标，并提供更新。
+
+3.  **工业安全与防护**
+
+    物联网在通过嵌入传感器和摄像头的检测系统来维护受限区域的安全方面发挥着重要作用。这些设备可以检测入侵者以及潜在的泄漏和压力升高，从而及时纠正这些问题。在增强现实（AR）中，配备计算机的可穿戴眼镜允许用户通过在其看到的场景中添加虚拟信息（如 3D 动画和电影）来增强现实体验。眼镜通过在镜片中嵌入相关信息，为用户提供访问互联网应用的功能。
+
+4.  **运动检测**
+
+    运动传感器能够检测建筑物、桥梁、大坝等大型结构中的运动或振动。通过这样做，它们可以识别可能导致灾难性后果的结构异常或中断。这些传感器也可以部署在容易受到自然灾害（如地震、滑坡和洪水）影响的地区，以提供早期预警和预防措施。
+
+让我们来看看一些最受欢迎的物联网设备：
+
+1.  **Google Home 语音控制器**
+
+    Google Home 语音控制器是一个流行的物联网设备，提供语音激活的各种功能控制，包括灯光、温度控制和音量调节。
+
+2.  **Amazon Echo Plus 语音控制器**
+
+    Amazon Echo Plus 是一个广为人知且可靠的物联网设备，为用户提供众多语音激活功能，如接听电话、创建提醒和闹钟、获取天气更新等。
+
+3.  **August 门铃摄像头**
+
+    August 门铃摄像头是一个智能设备，提供对前门的远程监控和交互。其持续记录功能帮助你了解门廊上任何可疑行为。
+
+4.  **August 智能门锁**
+
+    August 智能门锁是一个知名且可靠的物联网设备，允许用户从任何地方管理门锁。
+
+5.  **Foobot**
+
+    Foobot 是一个物联网设备，能够准确跟踪室内空气污染，帮助改善家庭、办公室、咖啡馆和其他室内公共空间的空气质量。
+
+### 9.2.7 物联网数据
+
+物联网（IoT）一词涵盖了配备传感器、计算能力、软件和其他技术的实体，这些实体可以通过互联网或其他网络相互通信。尽管有人批评这个名称暗示与整个互联网的连接，但实际上它仅指可以访问并连接到网络的单个设备。
+
+物联网指的是一个相互连接的物理对象网络，包括计算机、数字和机械设备、生物体或任何可以分配 IP 地址并通过网络交换数据的事物。例如，植入心脏监测器的人、带有生物芯片转发器的农场动物、配备内置胎压传感器的汽车等。
+
+### 9.3 传感器
+
+物联网系统建立在传感器之上，传感器作为系统的感官，收集有用信息。这些传感器可以被视为类似于人类的感官（如眼睛、耳朵、嘴巴和鼻子），但它们能够收集更大量的数据。物联网系统的“大脑”可以根据这些传感器收集到的信息进行移动和变化。
+
+#### 9.3.1 介绍
+
+任何物联网部署的基础是使用传感器，它们是数据收集的来源。这些传感器为软件提供最佳运行所需的感官信息。构成该系统的智能设备群被称为无线传感器网络（WSN）或微电机电系统（MEMS）。该网络中的节点能够执行特定任务，这得益于处理和传感技术的小型化，使得低功耗且成本效益高的设备得以实现。传感器被放置在周围环境中，用于监测或跟踪感兴趣的对象。它们处于休眠状态，但可以自主创建网络拓扑，自行配置，并通过短距离与附近的节点进行通信。被检测到的节点集合能够通过多跳架构实现远程通信，其中被称为集群头的优秀节点会汇总结果后转发到下一跳。这有助于防止基础设施故障，节约资源，提高生产力，增强安全性，并为新应用的出现铺平道路。网络中的水龙头（sinks）和节点数量可以有所不同，但它们负责收集、组织和分发必要的读数，实时监测温度、湿度、声音、亮度和振动等物理因素。这些设备能够提供实时环境测量的能力也使其能够全球运行，尽管仍存在一些需要改进的局限性，如能耗、电力需求、安全问题和存储空间。
+
+#### 9.3.1.1 传感器在物联网行业中的作用
+
+物联网是一个综合网络，将不同的信息采集设备与互联网相结合。互联网的进步是信息时代的基石，而物联网的发展需要智能感知、识别和通信等技术能力。传感器及相关技术在提供感知方面发挥着至关重要的作用，物联网的扩展离不开它们的进步。传感器的使用对于收集数据并对物联网的成功作出重大贡献是必不可少的。在传感器领域，预计将出现 tremendous growth（巨大增长）。
+
+### 9.3.2 背景
+
+无线传感器网络（WSN）可以通过构建临时的远程系统在其网络内的设备之间实现短距离通信。但将它们连接到互联网或其他移动通信系统面临挑战，因为通信协议尚未标准化。WSN 传输协议的限制使得在长距离传输数据和检测技术进步变得困难。这一问题通过物联网得到解决，物联网通过开发物联网网关（IoT Gateways）提供解决方案。这些网关旨在降低传感器与移动通信系统之间的异质性，改善带有终端设备的 WSN 管理，并支持已建立的通信系统与传感器系统的集成。这使得管理传感器系统的设备变得更加容易。
+
+
+-   [物联网](https://wiki.example.org/feynmans_learning_method)是一个高级且智能的全球网络基础设施，由自配置节点组成。借助各种智能传感器，该网络能够感知并修改当前现实，将收集的数据转换为用于传输到网关的数字流。物联网因其多功能性和微芯片单元所提供的有价值信息而受到欢迎。它还能够节约资源，并在参数超出可接受限制时提醒用户。尽管这些设备存储容量和处理能力有限，但它们仍能在面对隐私、性能、可扩展性和可靠性等挑战时，提供对真实世界的出色表示。
+
+另一个传感器面临的问题就是存储容量有限。云基础设施通过传感器技术为该问题提供解决方案。云计算是一个广阔且不断扩展的领域，提供无限存储空间和强大的计算能力。它允许组织在任何地点按需从一系列可配置的计算资源中获取服务，包括数据存储、服务提供、服务器管理以及开发高效管理的程序。云计算专注于提升互联网传输，已被证明是一个高度创新的领域。移动云计算将分布式计算的概念推向更高水平，使其能够随时随地访问。
+
+移动设备客户服务的管理得益于移动应用和云计算的发展。移动应用为用户提供了关于各种服务的大量信息。这些系统在移动设备和远程服务器之间通过隔离系统运行。移动设备中心的各类应用类型已大量涌现，如娱乐、游戏、商业、即时通信、旅游和新闻。雾计算扩展了云技术的使用，增强了边缘计算能力，并使在边缘网络附近的设备（如建筑或办公室）能够作为本地资源，而交换机则可充当现代服务器。
+
+### 9.3.3 工作原理：传感器在不同应用中的作用
+
+传感器在当代许多企业的运作中发挥着关键作用。预测性维护得以实现，使公司能够通过在问题升级前检测潜在故障来最大限度地减少昂贵的停机时间。通过分析传感器数据的趋势，业务所有者可以获得有价值的洞察，并基于坚实证据做出明智决策。这些传感器设计用于响应特定的物理条件，并生成指示情况严重程度的信号，如温度、声音、距离、压力，甚至气体或液体的存在与否。典型的物联网传感器包括：
+
+1.  入侵检测  
+2.  温度监测  
+3.  光传感器  
+4.  湿度传感器  
+5.  水质监测  
+6.  化学传感器  
+7.  陀螺仪传感器  
+8.  气体传感器  
+
+#### 9.3.3.1 入侵检测
+
+入侵检测系统用于监测其监控范围内的任何潜在入侵，并发出警报。它通常与其他物理安全系统集成，并利用具有 Internet 接入的 IT 系统。系统由三个关键组件组成：传感器、控制单元和警报装置。传感器采用多种技术检测入侵并向控制单元发送警报信号。控制单元在收到警报后会触发隐蔽警报，或警报装置（如灯光或警报器）发出警告。
+
+不同作者提出了多种保护系统免受入侵的方法。攻击耐受技术被描述为攻击者与传感器之间的非零和博弈。博弈论框架为两个玩家——攻击者和入侵检测系统（IDS）——提供纳什平衡。第二种方法是 IDS，它依赖于马尔可夫决策过程。IDS 在监控系统的同时观察对手行为，试图判断需要保护的节点。如果 IDS 确认对手正在发起攻击，它会使攻击失败；如果对手攻击了意外的节点，则 IDS 认为攻击成功。第三种方法是，IDS 测量流量并决定保护流量负载最高的节点。在模拟中，环境中存在 20–200 个集群头节点，模拟在奔腾 III 处理器（1133 MHz）上运行 \[20\]。
+
+#### 9.3.3.2 温度监测
+
+温度传感器是用于测量机械部件温度的装置。热电偶是一种常用的温度传感器，由两根不同导体在一个或多个接点处接触组成。当其中一个接点的温度与电路其他点的参考温度不同，热电偶即测量这种温度差。
+
+温度传感器分为以下子类别：
+
+1. **热电偶：**  
+    电压监测器检测电压水平的变化。温度升高时，热电偶的输出电压也随之上升。
+
+2. **电阻温度探测器（RTD）：**  
+    器件的电阻随温度升高而增加，形成正相关关系。电阻的变化是由温度引起的，因为它被设计为温度敏感的。
+
+3. **半导体：**  
+    线性器件利用半导体电阻的变化特性，导致导电性呈线性增长。它们能够在低温下提供温度读数的精确数字表示。
+
+4. **红外传感器：**  
+    该温度测量方法基于气体的透明性。但它仅捕获固体和液体的一小部分温度，无法测定物体或物质发出的红外能量或评估其强度。
+
+#### 9.3.3.3 光传感器
+
+光传感器将光子数量转换为可被人类或电子设备轻松解释的电信号。它们能够同时测量多个因素，因而在物联网领域受到专家们的青睐。凭借监测电磁能量（如电力和光）的能力，这些传感器已在医疗、环境监测、能源和航天等多个行业得到应用。它们极大地简化了矿业、制药和石油公司对生态变化的监测，同时也保障了工作人员的安全。
+
+以下是几种关键光传感器类型：
+
+1. **光电探测器：**  
+    该设备通过利用光敏半导体元件（如光电池、光电二极管或光电晶体管）作为光电探测器来工作。
+
+2. **光纤：**  
+    光纤不导电，因而免受电气和电磁干扰。即使损坏，也不会产生火花或电击。
+
+3. **测温仪（红外测温仪）：**  
+    通过分析物体发出光的颜色来确定其温度，同温度的物体会发出相同颜色的光。
+
+4. ** proximity 与红外传感器：**
+
+
+
+-   光学传感器用于检测近距离的物体，其局限性在于在检测近距离物体时可能存在困难。为克服这一限制，基于光学技术的传感器将光波转换为电信号。这些传感器在自动驾驶领域发挥着重要作用，用于检测道路标志、障碍物以及驾驶员在行驶或停车时通常能够看到的其他物体。它们还可通过环境光感应来延长电池寿命，并在生物医药领域有应用，如心率监测仪和呼吸分析仪。
+
+#### 9.3.3.4 湿度传感器
+
+环境空气或其他气体中的湿度是指其中所含水蒸气的量。最常用的术语是相对湿度（RH）。由于许多工业过程需要受控的环境，这些传感器通常与温度传感器一起使用，以确保一切按计划工作。湿度的突变可以被传感器快速检测，从而及时采取行动。它们在工业和住宅环境中用于控制暖通空调（HVAC）系统，并在自动车辆、博物馆、温室、工业设施、气象站、油漆和涂料公司、医院以及制药行业中保护药品。
+
+#### 9.3.3.5 水质传感器
+
+Wasp mote 是水质传感器所测量的前十大水质参数中的关键特征之一。Bright Water 是第一个结合自主节点的水质监测平台，这些节点能够连接云端实现实时水质监测，主要用于评估河流和海洋等水源的水质。
+
+1. **余氯传感器：**
+
+   水中余氯水平（包括游离氯、单氯和总氯）通常通过此方法测定，该方法常作为消毒剂使用。
+
+2. **总有机碳（TOC）传感器：**
+
+   水中有机元素的存在可以通过 TOC 传感器进行测量。
+
+3. **浊度传感器：**
+
+   浊度传感器常用于监测水中悬浮颗粒，测量河流和溪流的水位，并评估废水和排放的质量。
+
+4. **导电传感器：**
+
+   在工业过程中，导电测量常用于确定水溶液中溶解的离子物质的总浓度。
+
+5. **pH 传感器：**
+
+   水中溶解水的 pH 水平（指示酸性或碱性程度）可以通过此方法测量。
+
+6. **氧化还原电位（ORP）传感器：**
+
+   ORP 测量提供了溶液中氧化还原反应的信息。
+
+#### 9.3.3.6 化学传感器
+
+化学传感器在众多行业中发挥着重要作用，旨在检测气体或液体中的任何化学变化。它们在城市地区尤为重要，因为监测环境变化和确保公共安全是首要任务。这些传感器主要用于工业过程控制和监测、检测爆炸和放射性物质，以及在医药行业、太空站、实验室、回收设施等场所的操作。
+
+最流行的化学传感器类型包括：
+
+*   `Glass pH electrode`
+
+*   `Electronic gas sensor`
+
+*   `Chemistry-based field-effect transistor`
+
+*   `Sulfur dioxide sensor`
+
+*   `Phosphorous chloride sensor`
+
+*   `Potentiometric detector`
+
+*   `Unbiased infrared sensor`
+
+*   `Nanorod zinc oxide sensor`
+
+*   `Chemiresistor`
+
+#### 9.3.3.7 陀螺传感器
+
+陀螺传感器用于测量绕轴的旋转速度。它们对于测量三轴旋转和角速度至关重要，这为物体的姿态提供了洞察。陀螺传感器在多个行业被广泛应用，包括车辆控制、游戏设备、摄像头、无人机、直升机和无人航空器。所选用的陀螺传感器类型取决于环境、检测范围、输出类型、功耗要求以及工作原理等因素。
+
+*   `Optical gyroscopes`
+
+*   `Rotary (classical) gyroscopes`
+
+*   `MEMS`
+
+*   `Vibrating structure gyroscopes`
+
+将加速度计与陀螺传感器结合可提升系统性能，提供充足的反馈。配备陀螺传感器的设备可帮助运动员改进运动，因为它们在运动过程中提供运动员运动信息。
+
+#### 9.3.3.8 气体传感器
+
+气体传感器，如化学传感器，专门用于检测和监测各种气体的存在和变化。它们在制造、农业和医疗等行业有广泛应用。这些传感器用于监测空气质量、检测有毒或易燃气体、监测煤矿、石油和天然气行业中的有害气体、在化学实验室进行研究，以及生产油漆、塑料、橡胶、药品和石化产品等产品。以下是典型气体传感器的示例：
+
+*   `Carbon dioxide sensor`
+
+*   `Carbon monoxide detector`
+
+*   `Oxygen sensor`
+
+*   `Hydrogen sensor`
+
+*   `Catalytic bead sensor`
+
+*   `Hygrometer`
+
+*   `Electrochemical gas sensor`
+
+*   `Nitrogen oxide sensor`
+
+*   `Breathalyzer`
+
+*   `Ozone monitor`
+
+*   `Gas detector`
+
+*   `Air pollution sensor`
+
+### 9.3.4 问题与挑战
+
+传感器存在不同类型的问题和挑战，下面讨论一些：
+
+1. `Energy Consumption`
+
+2. `Security Challenges`
+
+3. `Hardware-Related Issues`
+
+#### 9.3.4.1 Energy Consumption
+
+物联网在能源系统中的主要目标是促进能源效率。物联网设备通过通信和连接系统实现这一目标。然而，维护物联网系统并传输这些设备产生的大量数据消耗大量能源。为解决这一问题，降低物联网系统的能耗至关重要，已研发出多种方法。例如，利用传感器的睡眠模式，仅在需要时激活它们。研究还导致了节能通信协议和技术的发展，如协同通信、调制优化、采用多路径路由和集群结构以实现能源高效路由。
+
+#### 9.3.4.2 Security Challenges
+
+将通信技术集成到能源系统中，以及物联网设备的广泛使用，增加了对用户信息和能源系统（从生产到消费）的网络攻击风险。这为能源行业的安全带来了重大挑战。能源行业公司通常依赖物联网系统在大范围区域提供服务，使这些系统更易受到黑客攻击。为解决此问题，研究人员提出使用加密技术保护能源信息免受网络攻击。
+
+#### 9.3.4.3 Hardware-related Issues
+
+在设计物联网设备的硬件时，必须考虑满足设备需求的必要功能和规格。物联网硬件设计必须考虑设备的具体需求，以确保其功能性和高效性。物联网制造商在创建嵌入式设备的硬件时必须仔细权衡这些因素。
+
+1. **High Power Dissipation:**
+
+
+
+
+在设计物联网（IoT）设备的成功嵌入式硬件系统时，平衡日益增多的晶体管数量与可控的功耗水平至关重要。随着门极密度的提升，每个晶体管的功耗使用量也在上升，导致整体系统功耗增加。如果连接到物联网网关，物联网设备可以通过远程交换数据，即网关在运行时收集并传输数据到云端。
+
+2. **安全问题：**
+
+确保物联网设备的安全至关重要，因为它影响的不仅是软件方面的使用者，还包括必须在实时嵌入式环境中安全运行的硬件方面。硬件设计必须满足物联网设备的规格和要求，制造商在考虑这些因素时必须保持警惕。为确保各种控制操作安全执行并消除潜在危害，安全必须集成到系统架构中，包括使用密码学技术。保护嵌入式系统需要在开发全过程中的各个阶段实施多种策略，从原型阶段到最终部署。
+
+3. **成本考量：**
+
+在开发物联网嵌入式系统时，成本、灵活性和安全是主要考量因素。在选择物联网设备的元件时，需要采取面向预算的策略，同时保持高水平的安全性。设计过程还必须高效且及时，以便快速将嵌入式产品推向市场。这需要一个全面的方法，包括系统建模与设计、快速原型制作、分析验证、嵌入式系统部署以及对成本限制的考虑。目标是为客户提供从硅片设计到嵌入式系统原型、从产品开发到部署和维护的无缝体验。
+
+4. **尺寸限制：**
+
+物联网嵌入式设备的设计面临挑战，因为它们体积紧凑且功耗要求低。工程师必须在满足这些限制的同时保证设计的稳定性。另一个挑战是，当这些设备需要安装在访问受限的偏远地区时。
+
+5. **测试：**
+
+物联网产品的硬件设计过程应包括强制性的测试阶段。产品开发完成后，必须通过基于硬件的测试工具评估其性能、准确性和符合性。这一步骤对于确认功能验证是否有效开展以及最终产品是否符合规格和质量标准至关重要。
+
+#### 9.3.4.4 本地化
+
+物联网是一种使互联设备相互通信、交换我们的需求和习惯信息，甚至承担我们目前手动执行的许多任务的技术。例如，可以设计天气监测的草坪维护系统、食品推荐的冰箱、连接急诊室的活动跟踪器以及智能车载仪表盘等简单案例。未来五年内，约有六万亿美元的基础设施投资将使物联网设备在所有相关场景中普及。
+
+1. **物联网行业：**
+
+工业物联网（IIoT）利用传感器自动监测、优化和自动化连接设备的运行，目前在制造环境中已有所实现。另一个预计将采用创新技术的行业是公用事业部门。例如，电力电网可以配置为精确匹配电力产出与短暂需求。已经有多家企业在使用该技术进行智能电量计量。
+
+2. **本地化用户界面：**
+
+物联网设备主要通过计算机代码进行通信，但仍有许多设备需要用户界面（UI）或屏幕，以便用户进行交互。当特定市场销售物联网设备时，以下关键方面仍需翻译和本地化：
+
+*   图标标签
+*   包装说明
+*   产品信息
+*   设备上的帮助系统
+
+3. **物联网软件开发与发布持续进行：**
+
+物联网设备的软件更新频繁，与桌面 PC 软件不同；它只需为每个发布进行本地化，并且在漫长的产品更新周期中可以共享。制造商在“敏捷”环境中工作，不断进行增量产品改进。无需用户参与或意识。当发现 bug 时，制造商可以立即发布补丁并分发给网络设备。当然，每当更新修改用户在设备上看到的文本时，更新后的文本也需要为每个业务客户进行本地化。
+
+4. **连接物联网：**
+
+到 2020 年，预计将有 500 亿个活跃的物联网设备 \[21\]。它们配备能够通信数百种语言的界面，将随处可见。这些普及的设备不断远程变更，这为其提供商带来巨大的挑战。过去从未有如此大的本地化服务需求。
+
+5. **保持更新：**
+
+保持产品的用户界面在所有市场保持更新，并伴随持续的发布周期是一个新难题。你可以采用以下两种方案：
+
+*   **采用更小、持续的本地化项目：** 对语言服务提供商而言，适应敏捷产品开发需要与供应商保持异常紧密的合作关系。为确保本地化与软件开发同步，双方必须频繁且定期地会面沟通。即使语言数量增加，但随时需要唯一的文本量可能并不大。对于采用类似 Morning（LSP）的大型本地语言专家池的协议（LSP），交付时间可以非常短，而不牺牲质量。
+
+*   **机器翻译（MT）是另一种加速物联网文本更新的选择，适用于成本敏感且标准允许的情况。**
+
+6. **数据量：**
+
+物联网的关键组成部分是数据收集。但如果数据无法转换为可用格式，则它实际上是无用的。例如，传感器若能检测到车轮下雪地的条件，只有在能够恰当传达该信息时才有用。此外，收集的数据量可能会迅速变得令人难以承受。若传感器每分钟记录一次数据，则一天会产生 1440 条记录 \[22\]。如果有十个传感器，每秒记录一次数据，会面临如何为国际客户翻译如此巨大数据量的挑战。
+
+**解决方案**
+
+自动化翻译，通常称为机器翻译（MT），能够在降低成本的同时提高效率。与以往人工翻译在财务上不可负担的情况不同，海量数据现在可以即时处理。常识咨询（Common Sense Advisory）指出，机器翻译的使用率不断上升正在根本改变语言行业的面貌。是否可以手动对如此大规模的物联网数据进行后编辑？很难。要显著提升生产力而不降低质量，精心评估和适配引擎以及集成的术语管理将非常有帮助。
+
+**最佳采用双轨策略：**
+
+1. 致力于通过强调准确拼写、标点以及透明结构，生成更多机器翻译友好的受控源文本。
+
+
+
+2. 调整并修改你的机器翻译引擎，确保为基于规则的系统进行高水平编码，或使用清晰、高质量、面向特定领域或客户的信息（如语料库）来训练数据驱动或混合系统。
+
+7. **速度之需：**
+
+物联网将根本改变各行各业商品的创造和分发方式。软件开发人员需要适应他们习惯的漫长发布周期，并开始每天甚至每小时响应更新。本地化需要敏捷。物联网的漩涡将使语言服务提供商（LSP）的工作更加快节奏，他们已经习惯于在移动、云计算和大数据范式中采用敏捷方法。时间敏感的内容将定期且迅速地在各种渠道和设备上分发。利用自动化技术和持续翻译工作流是合理的，因为你的语言策略必须保持主动。
+
+**Solution**
+
+通过将本地化集成到开发周期中，实现翻译人员、审阅者和工程师的高级调度。最新的翻译管理系统（TMS），如 Smartling，提供了一种现代、简化、敏捷的替代方案，相较于传统的瀑布式本地化流程。
+
+另一个优势是上下文翻译。TMS 的翻译界面显示源文本。通过消除猜测，翻译人员可以实时进行编辑。由于能够看到可用空间，尺寸问题可以被规避，这对于应用程序和智能手机翻译至关重要。消除耗时且昂贵的来回沟通（如果物联网时间限制不允许，则甚至可以消除来回沟通），从而减少 QA 循环。
+
+TMS 与合格的 LSP 将是企业在快节奏、互联的物联网世界中改变其内容全球生产和消费方式的值得投资的选择。
+
+8. **用户体验：**
+
+拥有优秀的工具、平台和集成并不足够。最关键的用户——也就是用户本身——常常被忽视。物联网技术的成功或失败可能取决于用户如何与之互动。使用多种语言的用户如果要广泛接受物联网设备，就必须能够使用这些设备。物联网设备制造商必须传输专业本地化的内容，考虑到地区俚语、当前流行语以及社会和语言趋势。全球化是必要的。
+
+**What Role Does Localization Play?**
+
+用户将要求物联网设备和应用程序在文化和语言上符合他们的需求。用户的目标市场必须体现在日期、时间、温度尺度、计量系统、货币和图标等方面。由于数字营销和消费者购买趋势的变化，必然会产生更多的音频、视频和动画内容以提升用户体验。屏幕上的文字需要翻译，插入字幕，旁白脚本需要转录、录制，并可能进行口型同步。为满足物联网用户的期望，你的 LSP 需要最新的多媒体本地化技术、巨大的工作室、音频工程师和配音演员池，以及周密规划的流程。
+
+物联网可以提升生活质量，提高生产力，增强安全等。本地化行业必须在技术和自动化方面做好准备并取得进展，使快速、高效、准确的物联网数据翻译成为所有用户的现实。随着物联网的普及，责任也随之增加。
+
+### 9.4 Smart System
+
+使用自动化流程、大数据分析和物联网的企业正在开辟物联网的新前景。集成设备和网络应用正在改变各行各业，正如第四次工业革命在制造业中展示的那样。通过计算机算法将硬件和软件组件相结合，工业 4.0 重新想象工厂为智能或有意识的实体，并实现分散决策和受控的计算机行为。通过将物联网传感器、设备、媒体、应用和公开网络的数据纳入语境感知系统——即智能系统——Big Data 分析、识别、发现和机会得以实现。利用统计方法（如数据挖掘）和算法技术（如机器学习）构建预测模型，可以预测未来事件并识别非事件。此类分析使智能系统能够指挥其环境或通过执行器执行物理动作。这些技术可用于为特定工业部门提供完全定制的解决方案。
+
+### 9.4.1 Emerging Trend of Smart System
+
+一个“智能城市”是居民利用信息通信技术（ICT）提升运营效率、共享知识、提升公共服务水平并促进公民福祉的地方。智能城市利用数据分析和智能技术优化城市服务、促进经济增长，并提升公民的生活质量；但其精确定义各不相同。城市如何使用技术，而非拥有多少技术，决定了其价值的高低。ICT 用于提高运营效率、向公众共享信息，并提升公共服务的标准和公民的生活质量。定义智能人的几个关键特征包括：
+
+*   技术基础；环境倡议  
+*   稳健的公共交通系统  
+*   规划城市的能力  
+*   在城市工作的居民  
+
+### 9.4.2 Success of Smart City
+
+智能城市成功的一个根本要素是其能够在公共和私营部门（包括官僚机构和法规）之间建立牢固的联系。要在政府之外创建和维护数字化、数据驱动的环境需要大量工作，因此这种关系是必需的。监测拥堵道路的工具可能包括传感器、摄像头以及各种厂商的服务器。市政当局也可能聘请外部顾问审查数据并出具报告。大数据带来的挑战随后可由基于该数据建立的应用开发团队来解决。该公司可能会加入系统，如果解决方案需要频繁更新和维护。因此，智能城市的成功更依赖于培养稳固的关系，而非完成单一项目。
+
+市政当局也可以聘请独立承包商分析数据并出具报告。随后，根据数据分析发现的问题可分配给利用该数据创建的应用开发团队进行处理。如果系统需要持续更新和维护，该公司可能会签约。因此，智能城市的成功更依赖于培养稳固的关系，而非完成单一项目。
+
+#### 9.4.2.1 Benefits for Citizens
+
+智能城市居民可享受以下优势：
+
+*   智能的生活环境  
+*   不可靠的连接  
+*   易于获取的服务  
+*   改进的资源管理  
+*   智能政府及做出明智决策  
+
+#### 9.4.2.2 Smart Grid and Energy Management
+
+
+
+
+-   [智能电网](https://wiki.example.org/feynmans_learning_method)是一种支持双向通信的电力网络。电力和数据通过数字通信技术监测、响应并处理使用情况及其他问题的变化。电力客户可以在自愈智能电网中发挥积极作用。全球“走绿色”运动和能源危机促使电网整合可再生能源、插电式电动汽车和能源存储技术。由于电网采用多种能源，因此需要一个强大的能源管理系统来调节能源流动。在实现表电力系统的需求-供应平衡时，电力工程师还面临可再生能源的不稳定和波动、插电式电动汽车的未知因素、电力价格以及随时间变化的负荷等多重挑战。能源管理系统必须协调所有可用能源的交易，并在任何情况下以可负担的成本为负载提供服务，使电力可靠、安全且高效。
+
+9.5 结论与未来工作
+
+物联网（IoT）通过将互联网与具体物体相结合，提升了人们的生活质量。IoT 将在提升人类舒适度的同时，使事物更具创新性和高效性。IoT 的多功能性将很快超越所有新兴技术。本章讨论了若干 IoT 应用及其对社会的影响，并帮助学术界和产业人士了解可能导致未来研究趋势的 IoT 研究问题。
+
+随后，IoT 及其新趋势进行了阐述。得益于智能系统的快速发展，世界正逐步成为“智能全球村庄”。本文也涉及了一些流行的智能系统。总之，`sensors` 与 `IoT` 的结合使得任何系统都能成为 `smart system`。
+
+仍然存在许多未来挑战，需要关注。例如，要实现与种类繁多的设备互联的通用标准，必须制定通用标准。尽管物联网标准化工作由物联网任务组（IETF）和欧洲电信标准化研究所（ETSI）等组织负责制定 IoT 标准，但实现全球统一的通信标准仍是一个充满挑战的研究课题。此外，鉴于全球已有数万亿台联网设备，我们需要一种能够有效地进行全球 IoT 设备定位的身份管理方案。同时，IoT 可能会传输敏感的财务数据（如 PIN 码）和私人信息，因此加密是确保安全通信的必要措施。为避免这些情况，IoT 安全技术至关重要，研究重点也集中在安全相关问题上。
+
+由于数据可以在不同位置之间传输，IoT 将对自动化行业产生积极影响。此外，数据分析能够通过与过去和当前数据的比较来预测趋势。IoT 与云计算将在城市中协同工作，分析数据并做出智能决策，以减少车辆交通并识别交通状况。IoT 行业将为希望创办技术企业的创业者提供机会，也将帮助许多个人找到工作。未来不久，IoT 的需求将大幅上升。
+
+IoT 可以在任何环境或行业中应用。我们日常使用的所有事物都可以通过连接到电网或互联网的设备变得更智能，从而提升整体电网以及该设备的效果、效率和精度。IoT 拥有众多可能的应用场景，目前已有显著进展的领域主要是家庭和工业自动化。研究与开发正在进行的领域包括生物医学、安保、智慧城市等。
+
+在遥远的未来，几乎所有设备都可能联网，无论其规模多小。数字安全将成为最受追捧的技能，因为每一个微小细节都将记录在庞大的服务器上。其他预测表明，智能技术的使用增加可能会改善公共基础设施，促使无线电力网络投资相应增长，并加速交通方式（如电动自行车、摩托车、电动汽车乃至自动驾驶汽车）的发展。
+
+最后，IoT 设备的处理能力和能源容量远低于普通联网设备；因此，我们必须为将来开发适合 IoT 的加密技术。IoT 将不同设备连接起来，使它们能够通信并交换数据，但处理这些大规模数据会提高设备的能源需求，从而影响联网 IoT 设备的运行。我们需要采用专用的节能方法来提升 IoT 设备的能源效率。只有在解决这些科学问题，使 IoT 应用在现实世界中实现其潜力的前提下，才能让 IoT 真正发挥作用。
+
+## References
+
+1.  A. Dugdale, “The inventor of the barcode, norman joseph woodland, dies at 92,” Mar 2014.
+
+2.  Immerse, “A brief history of VR (and how it’s set to change language education forever),” Jul 2022.
+
+3.  E. Thorp and E. Associates, “The invention of the first wearable computer,” Jun 1999.
+
+4.  J. Scammells, “History of the Internet of Things (IoT): It blog,” Dec 2020.
+
+5.  K. A. Popat and P. Sharma, “Wearable computer applications a future perspective,” International Journal of Engineering and Innovative Technology, vol. 3, no. 1, pp. 213–217, 2013.
+
+6.  R. Rosenzweig, “Wizards, bureaucrats, warriors, and hackers: Writing the history of the internet,” The American Historical Review, vol. 103, no. 5, pp. 1530–1552, 1998.
+
+7.  Y. Cheung, K. Choy, C. Lau and Y. Leung, “The impact of RFID technology on the formulation of logistics strategy,” pp. 1673–1680, Aug 2008.
+
+8.  “A brief history of the barcode,” Jul 2020.
+
+9.  M. Satyanarayanan, “The emergence of edge computing,” Computer, vol. 50, no. 1, pp. 30–39, 2017.
+
+10.  J. Romkey, “Toast of the IoT: The 1990 interop internet toaster,” IEEE Consumer Electronics Magazine, vol. 6, no. 1, pp. 116–119, 2016.
+
+11.  R. Kesby, “How the world’s first webcam made a coffee pot famous,” Nov 2012.
+
+12.  F. Bonaglia, A. Goldstein and J. A. Mathews, “Accelerated internationalization by emerging markets’ multinationals: The case of the white goods sector,” Journalof WorldBusiness, vol. 42, no. 4, pp. 369–383, 2007.
+
+13.  J. D. Akkara, A. Kuriakose, et al., “Innovative smartphone apps for ophthalmologists,” Kerala Journal of Ophthalmology, vol. 30, no. 2, p. 138, 2018.
+
+14.  E. R. Teoh and D. G. Kidd, “Rage against the machine? Google’s self-driving cars versus human drivers,” Journal of Safety Research, vol. 63, pp. 57–60, 2017.
+
+15.  D. Kushner, “The making of arduino,” IEEE Spectrum, vol. 26, pp. 1–7, 2011.
+
+16.  R. Kester, “Demystifying the internet of things: Industry impact, standardization problems, and legal considerations,” Elon Law Review, vol. 8, p. 205, 2016.
+
+17.  F. Dahlqvist, M. Patel, A. Rajko and J. Shulman, “Growing opportunities in the internet of things,” McKinsey & Company, pp. 1–6, 2019.
+
+18.  M. A. Jan, J. Cai, X.-C. Gao, F. Khan, S. Mastorakis, M. Usman, M. Alazab and P. Watters,“Security and blockchain convergence with internet of multimedia things: Current trends, research challenges and future directions,” Journal of Network and Computer Applications, vol. 175, p. 102918, 2021.
+
+
+
+19. H. Espinoza, G. Kling, F. McGroarty, M. O'Mahony and X. Ziouvelou，“估计物联网对欧洲生产率的影响”，Heliyon，第 6 卷，第 5 期，文章编号 e03935，2020。
+
+20. H. Yasuura, C.-M. Kyung, Y. Liu and Y.-L. Lin，智能传感器在物联网前沿。Springer，2017。
+
+21. J. Asharf, N. Moustafa, H. Khurshid, E. Debie, W. Haider and A. Wahab，“利用机器学习和深度学习的物联网入侵检测系统综述：挑战、解决方案和未来方向”，Electronics，第 9 卷，第 7 期，第 1177 页，2020。
+
+22. J. Wimmer, M. Towsey, P. Roe and I. Williamson，“通过采样环境声学记录来确定鸟类物种丰富度”，Ecological Applications，第 23 卷，第 6 期，第 1419–1428 页，2013。
+
+# 10 Blockchain Development in Industries: A Systematic Review
+
+Mohammad S. Obaidat
+
+University of Jordan, Amman, Jordan
+
+University of Science and Technology Beijing, Beijing, China
+
+SRM University, India
+
+Amity University, Noida, India
+
+Pankaj Pal
+
+Indian Institute of Technology(ISM), Dhanbad, India
+
+DOI: [10.1201/9781003326236-10](https://dx.doi.org/10.1201/9781003326236-10)
+
+## 10.1 Introduction
+
+近年来，区块链技术在科学和工业领域日益流行，因为它们在各个行业中具有潜在的好处。这是因为它们可以实际应用于解决当前阻碍许多工业领域进步的多个问题 \[1\]。这些挑战包括大数据的收集和交换、智能化和自动化供应链操作的建立，以及提高供应链全流程的透明度。通过去中心化、共享、基于权限和安全的交易账本，区块链高效地解决了这些问题。利用区块链技术及其在多种场景中的应用能力，提供了更高的安全性、更好的问责和透明度，以及降低成本的商业应用。本章综述了区块链技术在众多商业应用领域中的展示情况。
+
+越来越多的行业和学者被区块链技术吸引，因为其巨大的潜力。市场上已经有超过 3000 种基于区块链的加密货币，且数量仍在增长 \[2\]。除了数字加密货币外，区块链技术还被应用于物联网（IoT）、医疗、金融、软件和学术等领域 \[3\]。新冠疫情的快速传播凸显了以往技术的局限性，促使区块链技术在以下多个场景中得到实施：接触者追踪、医疗信息共享、供应链管理以及各类 immigration（移民）程序。区块链基于平台的部署如今几乎在所有行业中被使用，因为它们能够提供时间戳和不可篡改的交易历史 \[4\]。由于区块链没有中央监管机构，区块链生态系统内的所有参与者都需共同维护其运行。采用共识机制来分析和修改区块链上存储的信息。
+
+通过利用去中心化的节点系统，区块链显著降低了单点故障和网络入侵的可能性。通过时间戳标记条目，去中心化网络的使用有助于减少欺诈行为。此外，用户信息通过智能合约在整个网络中以公共区块链形式保存。区块链消除了在多个独立账本之间进行调和的手动操作以及行政程序，从而降低了系统的复杂度。通过使用多种加密链路，交易速度和安全性显著提升。作为研究区块链如何促进工业 4.0 的研究的一部分，研究人员进行了多项调查，其结果如下。
+
+区块链技术已改变医疗行业，但仍有许多未解之题和待解决的问题，如文献 \[3, 5, 6\] 所讨论。本章还考察了区块链技术的当前背景以及相关的开放问题和挑战，如文献 \[7, 8\] 所述。他们还探讨了区块链在众多智能应用中的有用性。文献 \[9\] 研究了区块链的多个方面，包括分布式流程和账本数据的完整性，使得网络难以被操纵。文献 \[10\] 研究了区块链在公共医疗领域的潜力，并探讨了其在消除验证过程中心化控制、使用数字证书确保安全数据存储、系统结构以及相关挑战方面的作用。文献 \[11\] 研究了基于区块链技术的去中心化应用的参数。文献 \[12\] 研究了电子健康系统的高级区块链架构，重点关注数据隐私的合规性、设计、限制和优势。文献 \[13\] 研究了区块链技术在教育环境中的应用。
+
+本章的目标是根据多种分类方式审视区块链领域的现有研究，并突出未来区块链发展必须走的方向，以跟上技术的进步。特别是，本章审查了 2016 年至 2021 年在 SCI/SSCI 数据库中发表的关于区块链的学术论文。
+
+## 10.2 Blockchain Application in Industries
+
+本节简要回顾了区块链技术在不同工业应用中的使用情况。
+
+物联网（IoT）是一个模型，为未来奠定基础，届时我们日常使用的众多设备将相互连接并与环境联通，这将使它们能够收集数据并简化各种任务 \[14\]。实现这一目标需要克服诸多因素，包括无缝认证、数据保护、安全性、抗攻击能力、实现简便性以及自主维护 \[3\]。目前，大多数物联网解决方案依赖于中心化的服务器-客户端架构，它们通过互联网与云服务器通信。虽然这种方式目前效果尚可，但未来的发展表明需要替代框架。过去，去中心化设计（如 Peer-to-Peer（P2P）无线传感器网络（WSNs））曾被建议用于构建大规模网络 \[15, 16\]；然而，在隐私和安全方面仍存在差距。因此，近年来，IoT 从封闭的中心化主框架转向开放的云中心化替代方案 \[17\]。这标志着云能力在多个 peer 之间分散的下一阶段，而区块链技术可以在此方面提供帮助。
+
+
+
+除加密货币和智能合约之外，区块链技术有潜力在物联网涉及的各种其他领域实施。这些领域包括一系列应用，如感知、数据存储、身份管理、时间戳服务提供、智能生活应用、智能交通系统、可穿戴设备、供应链管理、移动人群感知、网络安全法规以及关键场景中的安全。
+
+区块链技术还具有在物联网农业系统中的潜在用途 \[1, 18, 19, 20, 21, 22, 23, 24, 25 and 26\]。例如，Ref. \[27\] 中概述了中国农产品和食品供应链的可追溯性系统，该系统利用射频识别（RFID）标签和区块链，以提升食品质量和安全性，同时减少物流浪费。
+
+已有研究探讨区块链技术在物联网设备管理中的潜在应用 \[3\]。该研究领域提供了一种方法，使得可以远程操作和配置物联网设备成为可能。例如，在以太坊架构下，公钥由系统本身存储在以太坊上，而私钥则存储在每个物联网设备的本地。文献指出，作者认为区块链的采用至关重要，因为它使他们能够开发运行在网络之上的自有程序。此外，修改区块链上的代码会改变物联网设备的行为，从而简化问题的管理和解决。
+
+与其他行业一样，将区块链技术与物联网结合将使能源行业受益 \[28\]。在学术文献中，多位学者提出了一种区块链技术，使物联网设备能够自动互相支付服务费用。Ref. \[29\] 通过展示一个物联网框架，说明智能电缆如何与智能插座结合，以支付消耗的电力费用，从而突出了该系统的潜力。研究人员还提出了一种微支付协议，将多个小额支付合并为一个更大的交易，有效降低了加密货币的交易费用 \[30\]。
+
+在已发表的研究中，讨论了众多基于区块链的物联网医疗应用。Ref. \[31\] 例如，作者描述了一个利用物联网传感器和区块链技术验证数据完整性并实现药品供应链温度记录公开访问的可追溯性应用。这种验证对于医疗用品的运输至关重要，确保其质量和保存条件。因此，每个发出的包裹都配备传感器，将收集的数据发送到区块链，由智能合约检查接收到的测量值是否仍在接受范围内。Ref. \[32\] 进一步阐述了生物物联网（BIoT）技术在医疗领域的应用，描述了一个基于区块链的临床试验和精准医疗平台框架。Ref. \[33\] 则全面研究了物联网设备、云计算和雾计算的潜力，提出了一个智能医疗系统。
+
+### 10.2.1 金融行业
+
+采用区块链系统后，银行和其他金融机构可避免处理多种持续性问题。信用评分信息缺失是银行业的主要问题，使得个人和中小企业（SME）难以获得贷款 \[34\]。金融机构在进行精准客户画像时也面临困难，因为缺乏足够准确的信息，这导致难以区分产品并使其个性化。保险产品的理赔程序复杂，涉及多方参与，直到索赔最终确认和支付。此外，大多数金融公司的交易均通过现有的关键基础设施进行，而这些基础设施是网络攻击的主要目标。
+
+在客户 onboard 过程中，所有金融机构均执行 Know Your Customer（KYC）和 Know Your Business（KYB）程序 \[35\]。在该活动中，客户将依据国家和国际当局制定的相关法律法规进行识别和验证。由于客户信息和适用法律随时间变化，KYC/KYB 过程是动态的。因此，更新记录和相关文档可能相当困难。一个解决方案是由主管机构集中存储和更新个人客户文件。然而，这种方式容易被攻击者攻破。通过去中心化和保护 KYC 过程，区块链技术可解决上述问题。具体而言，将客户信息存储在分布式账本中，区块链参与者将拥有一个关于所有客户数据的单一共享真相来源，并可按需更新，从而获得更完整的客户画像。
+
+当前，大多数银行将中小企业视为高风险客户。这不仅适用于最小的企业，也适用于规模较大且更成功的企业。这主要源于 2008 年金融危机后实施的更严格限制，同时也因权益回报率下降而使中小企业更难获得融资。在此情境下，银行需要创新方法，在不单纯依赖传统财务和会计信息的前提下，对中小企业的信用 worthiness 进行评估。此类方法可利用金融机构间的数据共享可能性，以及大量替代数据（如社交媒体、新闻和其他互联网来源）的可用性 \[36\]。基于区块链的技术使得多方能够安全地共享信用评分信息。每个合作组织提供的数据可用于评估中小企业的可靠性，从而简化贷款决策过程。该技术具有分布式特性，降低了信用风险评分信息被窃取或篡改的可能性。此外，在不披露机密信息的前提下进行信用风险评级。需要记住的是，此类区块链的价值不仅随着参与者数量的增加而提升，也随着他们提供的信息量和质量的提升而提升。参与区块链项目的银行数量越多，协作越紧密，信用风险评估的准确性就越高 \[37\]。
+
+### 10.2.2 医疗行业
+
+
+
+医疗保健通常被认为是区块链可能产生重大影响的领域 `\[3, 5, 6\]`。一批专家最近引起了使用区块链技术解决医疗应用中已有问题的可能性的关注。
+
+为了彻底改变医疗，首要任务必须放在信息处理上，这有望从整合先前分离的单元并提高电子健康记录（EHR）的精度中获益。访问控制、数据共享以及保持临床实践的审计日志是区块链技术用于协助处方和供应链管理、孕期及风险数据管理等诸多方面的几种方式。其他可能从区块链技术中受益的医疗领域包括医师资质、医疗账单、合同、患者记录共享、临床试验以及防伪药物。医疗服务的演进正在推动以患者为中心的策略。由于个人将掌握自己的医疗记录，基于区块链的医疗解决方案可能会提高患者信息的安全性和可靠性 `\[10\]`。这些技术还可能促进患者信息的整合，从而便利在各医疗机构之间传输医疗信息。患者医疗信息的存储至关重要。除了易受损害外，这些信息也是网络攻击的主要目标。保护所有敏感信息至关重要。另一个组成部分是患者对健康信息的最佳管理。因此，交换和控制患者健康记录是另一个可从先进技术中获益的使用案例。分布式账本系统能够抵御攻击和故障，并包含多种访问控制技术。因此，区块链为医疗数据提供了坚实的基础。对于私人医疗信息，私有区块链可能是最佳类型的区块链。根据 Würst 和 Gervais 开发的决策模型，在多方相互不信任但需要通信和共享数据且不希望引入可信第三方的情况下，区块链可以用于此类情形 `\[38, 39\]`。医疗职业处理大量受严格监管的敏感信息和记录。这类文档通常存储在集中数据库中，这可能导致安全性和互操作性等一系列问题。在 Ref. `\[40\]` 中，作者提供了一种利用 Ethereum 区块链工具构建共享网络架构的可能解决方案。该网络通过赋予所有医疗从业者访问相同的医疗数据，消除了集中存档的限制。这有助于降低因信息过时而引发的医疗疏忽风险，并防止因错误信息导致的健康问题。已有报道称，爱沙尼亚与 Guardtime 合作，后者是一家利用区块链技术的医疗服务 `\[41\]`。通过该技术，爱沙尼亚个人、医疗专业人员和健康保险公司能够在爱沙尼亚境内恢复任何已进行的医疗程序。
+
+### 10.2.3 物流行业
+
+货运物流行业使用区块链技术目前仍处于起步阶段。虽然大量研究涉及区块链在其他场景（如供应链管理、医疗记录保存和透明政府选举）的应用，但物流经理如何利用区块链仍不甚明朗 `\[37\]`。由于活动通常跨越地区和组织，信息管理流是运营效率的关键。随着数字技术的普及，物流行业的运营环境正在发生显著变化。
+
+许多物流专家认为区块链提供巨大机遇以彻底改变供应链，其采用预计将产生深远影响。尽管可以预期区块链将带来显著收益并推动技术采用，但货运物流公司通常倾向于使用简单且成熟的技术，而非先进技术。有限的文献表明，将区块链整合到货运物流领域可能面临挑战，且具体情境仍需进一步理解。根据 Ref. `\[42\]`，区块链有潜力帮助运输和物流公司实时监控物料流动、改善运输处理并实现精准风险控制。物联网（IoT）与区块链的结合在货运物流领域具有巨大潜力，可能是其最有前景的应用之一。随着 IoT 传感器收集真实数据，货物位置的常规跟踪变得更加便捷。IoT、人工智能（AI）和智能合约在物流中的应用已带来显著变革，尤其是在敏感药品运输方面。一家瑞士企业利用 SkyCell 传感器打造空运冷链生物制药物流，该传感器监测温度、湿度和位置，从而将温度变异降低至不足 0.1% `\[43\]`。在货运物流领域，区块链技术支持的智能合约有望实现显著的成本降低和运营效率提升。例如，基于 Ethereum 的智能合约已用于开发物理资产的交付证明模型，实现了物品跟踪以及客户和承运人的激励与支付流程。然而，大多数物流专家需要理解区块链概念并学习如何将其用于组织。向货运物流企业提供具体见解和全面的关键参数知识，以支持区块链的有效实施至关重要。
+
+### 10.2.4 制造业
+
+
+
+在工业 4.0 蓝图中，对智能、个性化和可持续产品的需求促成了新型创新制造范式的兴起 \[44\]。工业物联网将赋予机器在一定交互能力下，在工业 4.0 概念下能够相互协作。大规模生产的数据将持续共享。机器将能够在本地进行自主判断，这无疑会影响整体生产流程。然而，这些发展中的工业 4.0 生产模式要解决安全问题仍需更多资源 \[45\]。现有的工业自动化系统往往包含安全漏洞，使生产数据易受攻击或篡改。错误和被操纵的数据会导致控制或决策不准确，对互连且复杂的生产系统构成严重威胁。现有的生产管理通常依赖于缺乏适当信息可追溯性的集中化平台，且易受系统故障影响。
+
+利用区块链是解决此类安全问题的一个选项；区块链的特性为工业系统提供了潜在的进步，特别是在确保网络安全方面。区块链可能消除涉及第三方的环节，这些第三方可能无法通过智能合约提供直接价值，而智能合约本身具有内在且强大的网络安全措施，从而实现更低的交易成本。实践者必须充分认识到区块链在颠覆工业流程控制和管理方面的好处。
+
+在制造系统方面，区块链可以作为现有工厂信息系统（如企业资源计划（ERP）和制造执行系统（MES））的支撑作用，如 Ref. \[46\] 所述。在车间层面，区块链充当索引服务器，用于监控组件生产并促进工厂自动化。区块链在商业中的应用有助于创建一个可信赖的环境，使分布式制造商能够通过透明的信用机制和去中心化方式组织其互连性和服务交互。来自不同制造商的节点可以轻松相互交换数据，所有相关订单、交易和产品追踪信息均安全记录在不可篡改的分布式账本上。智能合约也可用于自动化调度和计划流程，从而提升整体效率。
+
+随着更多社会化能力、利益相关方和技术专业知识被纳入产品生命周期，产品管理视角对生命周期活动的复杂性日益增加 \[44\]。保护知识产权、安全问题以及信任难题使得产品相关信息的传输和管理变得困难。区块链可能为产品生命周期管理社区提供一种机制，构建一个用于共享产品信息和结算交易的集中化数据库，使不受信任的制造商能够自由交易其能力和需求。这一措施使制造商能够与彼此以及最终用户建立更紧密的联系。在区块链集成的此类层面上，决策并非由董事会做出，而是由一系列共识算法和智能合约决定。产品生命周期管理的交易流程，包括初步竞价、计费系统、使用监测和资源管理，都可以通过智能合约和加密货币自动化 \[44\]。
+
+### 10.2.5 能源行业
+
+能源革命的结果是可再生能源的使用快速增长。能源分配网络的架构正变得更加分散化 \[28\]。生产者/消费者（prosumers/consumers），它们既创造也使用自身电力，可能成为电力市场的新参与者 \[47\]。然而，由于其容量有限，prosumers 目前无法在经济上参与电力交易。能源革命的数字化尤为必要，因为控制复杂度提升、对网络基础设施的负担加重、对数据安全的严格要求以及电力交易与相关电费之间的关联。
+
+能源行业在中长期很可能会受到区块链的重大影响。区块链技术的潜在经济价值基于其自身特性，包括去中心化、安全、透明和自动化。但除了技术难题（如智能电表的 rollout、信息交换所需的智能电表网关、智能计量系统与区块链的互操作性）之外，还有监管和法律障碍，使得区块链在短期内的使用面临挑战。来自可再生能源的去中心化电力点对等交易是能源行业中讨论最频繁的区块链应用场景。
+
+### 10.2.6 农业和食品行业
+
+全球化的食品供应链（FSC）和市场 place 的兴起导致跨国边界间商品和数据流动大幅增加 \[22, 48, 49\]。传统的 FSC 以强烈的垂直整合和供应链利益相关方之间的合作为特征，这通过降低交易、运营和营销成本，并满足客户对食品质量和安全的期望，使社区受益。因此，FSC 交换合作伙伴面临越来越大的需求，即提升全球供应链的透明度，增强可信信息的共享，并提高从农场到商店的农产品监控和追踪能力 \[50\]。
+
+
+
+
+The necessity for adequate traceability has increased as standards mandate that the origin of each component in a food product can be traceable. Many agricultural goods are now available year-round in response to consumer demand, which has increased the need for firms to provide information about the product quality, authenticity, traceability, origin, and supply circumstances. New technologies are being introduced as a result of the increased need for information. RFID technology is one tool used in FSCs to improve transparency and traceability, cut down on food waste, enable forward monitoring, streamline operations, collect data automatically, avoid mistakes when fulfilling orders, and keep supply chain circumstances and methods under intelligent control. Cloud computing systems are used to store information about food goods, and this information is made available to merchants and customers through websites or mobile barcode scans. The authors of Ref. \[51\] stated that cloud computing provides brief messaging services in agricultural supply chains, which include information on weather conditions, the correct application of pesticides, disease outbreak notifications, and government incentives. Despite the fact that these technologies are driving FSC toward a technological and data-driven food economy, some basic issues remain unsolved. For instance, the FSC is not continuously monitored, and the remaining shelf life of fresh goods cannot be predicted. Similarly, the traditional food monitoring system is hampered by data fragmentation, a lack of transparency due to data discrepancies and inconsistencies, inadequate interoperability, and a lack of information traceability. FSC experts and practitioners envisage using blockchain technology in the food business to transform how FSC are conceived, created, structured, and maintained to solve these issues. According to the authors of \[50\], blockchain technology has the capacity to influence future supply chain rules and practices by enhancing visibility and traceability. Similarly, it may enhance conventional supply chain processes defined by a dominant player operating as a central third-party provider imposing their own rules, governance framework, and centralized structures.
+
+## 10.3 Conclusion
+
+In this chapter, the use of blockchain technology in various industries was introduced. The review of several case studies revealed that blockchain has received considerable investments. However, despite its benefits, scalability concerns remain an issue. The industry has been relying on the traditional centralized approach for data sharing, which is considered to be safer compared to the decentralized approach that blockchain offers. The centralized approach has been in practice for a long time now. The current scenario is set to transform with the advent of blockchain that offers potential solutions for security and integrity concerns. The suitability of blockchain in several sectors such as healthcare, manufacturing, logistics, and agriculture has been examined, along with its applicability in IoTrelated industries. Furthermore, challenges faced by these industries while implementing blockchain were also discussed. To ensure block chain is fully usable and customizable,there needs to be industry-oriented research to overcome these challenges such as ensuring personal data protection and the scalability of block data.
+
+## REFERENCES
+
+1.  M. N. M. Bhutta, A. A. Khwaja, A. Nadeem, H. F. Ahmad, M. K. Khan, M. A. Hanif, H. Song, M. Alshamari, and Y. Cao, “A survey on blockchain technology: Evolution, architecture and security,” IEEE Access, vol. 9, pp. 61 048–61 073, 2021.
+
+2.  J. Wu, J. Liu, Y. Zhao, and Z. Zheng, “Analysis of cryptocurrency transactions from a network perspective: An overview,” Journal of Network and Computer Applications, vol. 190, p. 103139, 2021.
+
+3.  P. Ratta, A. Kaur, S. Sharma, M. Shabaz, and G. Dhiman, “Application of blockchain and internet of things in healthcare and medical sector: Applications, challenges, and future perspectives,” Journal of Food Quality, vol. 2021, pp. 1–20, 2021.
+
+4.  E. Karafiloski, and A. Mishev, “Blockchain solutions for big data challenges: A literature review,”in IEEE EUROCON 2017–17th International Conference on Smart Technologies. IEEE, 2017, pp. 763–768.
+
+5.  I. Yaqoob, K. Salah, R. Jayaraman, and Y. Al-Hammadi, “Blockchain for healthcare data management: Opportunities, challenges, and future recommendations,” Neural Computing and Applications, vol. 34, no. 14, pp. 11 475–11 490, 2022.
+
+6.  H. Fatoum, S. Hanna, J. D. Halamka, D. C. Sicker, P. Spangenberg, S. K. Hashmi *et al.*, “Blockchain integration with digital technology and the future of health care ecosystems: Systematic review,” Journal of Medical Internet Research, vol. 23, no. 11, p. e19846, 2021.
+
+7.  E. Kapassa, M. Themistocleous, K. Christodoulou, and E. Iosif, “Blockchain application in internet of vehicles: Challenges, contributions and current limitations,” Future Internet, vol. 13, no. 12, p. 313, 2021.
+
+8.  S. Alam, M. Shuaib, W. Z. Khan, S. Garg, G. Kaddoum, M. S. Hossain, and Y. B. Zikria, “Blockchain-based initiatives: Current state and challenges,” Computer Networks, vol. 198, p. 108395, 2021.
+
+9.  A. T. Sherman, F. Javani, H. Zhang, and E. Golaszewski, “On the origins and variations ofblockchain technologies,” IEEE Security & Privacy, vol. 17, no. 1, pp. 72–77, 2019.
+
+10.  M. Weiss, A. Botha, M. Herselman, and G. Loots, “Blockchain as an enabler for public mhealth solutions in south africa,” in 2017 IST-Africa Week Conference (IST-Africa). IEEE, 2017, pp. 1–8.
+
+11.  R. Zhang, R. Xue, and L. Liu, “Security and privacy on blockchain,” ACM Computing Surveys (CSUR), vol. 52, no. 3, pp. 1–34, 2019.
+
+12.  T. McGhin, K.-K. R. Choo, C. Z. Liu, and D. He, “Blockchain in healthcare applications: Researchchallenges and opportunities,” Journal of Network and Computer Applications, vol. 135, pp. 62–75, 2019.
+
+13.  R. Raimundo, and A. Rosário, “Blockchain system in the higher education,” European Journal of Investigation in Health, Psychology and Education, vol. 11, no. 1, pp. 276–293, 2021.
+
+14.  R. P. Sharma, D. Ramesh, P. Pal, S. Tripathi, and C. Kumar, “IoT-enabled IEEE 802.15.4 WSNmonitoring infrastructure-driven fuzzy-logic-based crop pest prediction,” IEEE Internet of Things Journal, vol. 9, no. 4, pp. 3037–3045, 2022.
+
+15.  S. Pandey, P. Pal, and A. Mukherjee, “IRF-NMB: intelligent route formation technique in Ad Hocnetwork using node mobility behaviour,” National Academy Science Letters, vol. 38, no. 3, pp. 213–219, 2015.
+
+16.  S. Pandey, and P. Pal, “SPIN-MI: Energy saving routing algorithm based on spin protocol in WSN,” National Academy Science Letters, vol. 37, no. 4, pp. 335–339, 2014.
+
+17.  M. A. Aleisa, A. Abuhussein, F. S. Alsubaei, and F. T. Sheldon, “Examining the performance offog-aided, cloud-centered iot in a real-world environment,” Sensors, vol. 21, no. 21, p. 6950, 2021.
+
+18.  P. Pal, R. P. Sharma, S. Tripathi, C. Kumar, and D. Ramesh, “NSGA-III based heterogeneous transmission range selection for node deployment in IEEE 802.15.4 infrastructure for sugarcane and rice crop monitoring in a humid sub-tropical region,” IEEE Transactions on Wireless Communications, vol. 22, p. 1, 2022.
+
+
+
+19. P. Pal, S. Tripathi, and C. Kumar, “基于双向长短期记忆网络的多层次电容土壤水分传感器单探头模拟”，IEEE 传感器与测量期刊，第 71 卷，第 1-11 页，2022 年。
+
+20. P. Pal, R. P. Sharma, S. Tripathi, C. Kumar, and D. Ramesh, “机器学习回归在 IOSN 监测基础设施上对草本植被的 RF 路径损耗估计”，IEEE 工业信息学期刊，第 18 卷，第 10 号，第 6981-6990 页，2022 年。
+
+21. R. Priya, D. Ramesh, and V. Udutalapally, “基于 NSGA-2 优化的模糊推理系统，用于作物种植正确性指数识别”，IEEE 可持续计算期刊，第 7 卷，第 1 号，第 172-188 页，2022 年。
+
+22. R. Priya, and D. Ramesh, “基于机器学习的可持续精准农业：面向未来的视角”，可持续计算：信息和系统，第 28 卷，第 100439 号，2020 年 \[Online\]. 可用: [`https://www.sciencedirect.com/science/article/pii/S2210537920301669`](https://www.sciencedirect.com/science/article/pii/S2210537920301669)
+
+23. E. Khosla, R. Dharavath, and R. Priya, “基于聚合降雨数据的模块化人工神经网络和支持向量回归的作物产量预测”，环境、发展与可持续性，第 22 卷，第 6 号，第 5687-5708 页，2020 年。
+
+24. R. Priya, D. Ramesh, and E. Khosla, “基于密度聚类的农药生物降解：受 Xanthomonas malvacearum 影响的棉花作物”，环境、发展与可持续性，第 22 卷，第 2 号，第 1353-1369 页，2020 年。
+
+25. R. Priya and D. Ramesh, “Adaboost. RT 基于土壤 NPK 预测模型：面向土壤和作物特定数据的预测建模方法”，在国际大数据分析会议论文集中，Springer，2018 年，第 322-331 页。
+
+26. R. Priya, D. Ramesh, and E. Khosla, “印度地区带作物预测：基于 Naïve Bayes MapReduce 的精准农业模型”，2018 年国际计算、通信和信息学会议（ICACCI），2018 年，第 99-104 页。
+
+27. B. Yan, P. Shi, and G. Huang, “基于 RFID 和 EPC 物联网的水生食品供应链可追溯系统的开发”，中国农业工程学报，第 29 卷，第 15 号，第 172-183 页，2013 年。
+
+28. M. Andoni, V. Robu, D. Flynn, S. Abram, D. Geach, D. Jenkins, P. McCallum, and A. Peacock, “区块链技术在能源行业中的应用：系统回顾挑战与机遇”，可再生和可持续能源评论，第 100 卷，第 143-174 页，2019 年。
+
+29. P. K. Sharma, N. Kumar, and J. H. Park, “区块链技术推动绿色物联网：机遇与挑战”，IEEE 网络，第 34 卷，第 4 号，第 263-269 页，2020 年。
+
+30. T. Lundqvist, A. De Blanche, and H. R. H. Andersson, “基于区块链技术的物物对物电力微支付”，2017 年全球物联网峰会（GIoTS），IEEE，2017 年，第 1-6 页。
+
+31. W. Y. Ng, T.-E. Tan, P. V. Movva, A. H. S. Fang, K.-K. Yeo, D. Ho, F. S. San Foo, Z. Xiao, K. Sun, T. Y. Wong *et al.*, “区块链在医疗保健中用于 COVID-19 及其后续情况的系统回顾”，The Lancet Digital Health，第 3 卷，第 12 号，第 e819-e829 页，2021 年。
+
+32. I. A. Omar, R. Jayaraman, K. Salah, I. Yaqoob, and S. Ellahham, “区块链技术在临床试验中的应用：综述与开放挑战”，阿拉伯科学与工程期刊，第 46 卷，第 4 号，第 3001-3015 页，2021 年。
+
+33. S. Shukla, S. Thakur, S. Hussain, J. G. Breslin, and S. M. Jameel, “基于集成雾计算的区块链模型，用于医疗物联网的识别与认证”，物联网，第 15 卷，第 100422 号，2021 年。
+
+34. V. Hassija, G. Bansal, V. Chamola, N. Kumar, and M. Guizani, “安全贷款：基于区块链和博弈论的去中心化信用评分模型”，IEEE 网络科学与工程期刊，第 7 卷，第 4 号，第 2566-2575 页，2020 年。
+
+35. N. Kapsoulis, A. Psychas, G. Palaiokrassas, A. Marinakis, A. Litke, and T. Varvarigou, “基于隐私导向去中心化架构的智能合约实现 KYC（了解客户）”，Future Internet，第 12 卷，第 2 号，第 41 页，2020 年。
+
+36. R. Wang, Z. Lin, and H. Luo, “区块链、银行信贷和中小企业融资”，Quality & Quantity，第 53 卷，第 3 号，第 1127-1140 页，2019 年。
+
+37. A. R. Harish, X. Liu, R. Y. Zhong, and G. Q. Huang, “Log-flock：基于区块链的数字资产估值和风险评估平台用于电子商务物流融资”，Computers & Industrial Engineering，第 151 卷，第 107001 号，2021 年。
+
+38. K. Wüst and A. Gervais, “你需要区块链吗？”在 2018 年区块链技术会议（CVCBT）上，IEEE，2018 年，第 45-54 页。
+
+39. D. Ramesh, R. P. Sharma, and D. R. Edla, “HHDSSC：利用密码文本策略属性基于加密的云端医疗数据安全”，国际信息与计算机安全期刊，第 13 卷，第 3-4 号，第 322-336 页，2020 年。
+
+40. P. Zhang, J. White, D. C. Schmidt, and G. Lenz, “在区块链基于医疗应用中应用软件模式以解决互操作性问题”，arXiv 预印本 arXiv:1706.03700，2017 年。
+
+41. A. Farouk, A. Alahmadi, S. Ghose, and A. Mashatan, “工业医疗区块链平台：愿景与未来机遇”，Computer Communications，第 154 卷，第 223-235 页，2020 年。
+
+42. A. Sturmanis, J. Hudenko, and M. Juruss, “在物流链中引入区块链技术的挑战”，2018 年 WMSCI 2018 会议论文集第 2 卷，2018 年，第 37-42 页。
+
+43. M. Dobrovnik, D. M. Herold, E. Fürst, and S. Kummer, “区块链在物流中的采用与起步：需要采用什么以及从何处开始”，物流，第 2 卷，第 3 号，第 18 页，2018 年。
+
+44. J. Leng, G. Ruan, P. Jiang, K. Xu, Q. Liu, X. Zhou, and C. Liu, “区块链赋能的可持续制造和产品生命周期管理在工业 4.0 中的应用：综述”，可再生和可持续能源评论，第 132 卷，第 110112 号，2020 年。
+
+45. Z. Shahbazi and Y.-C. Byun, “区块链、物联网和机器学习在智能制造中实现多标签平等控制和安全增强的集成”，Sensors，第 21 卷，第 4 号，第 1467 页，2021 年。
+
+46. L. Sislian and A. Jaegler, “将区块链与企业资源计划系统集成以提升可持续绩效”，Business Strategy and the Environment，第 31 卷，第 3 号，第 737-750 页，2022 年。
+
+47. Y. Jiang, K. Zhou, X. Lu, and S. Yang, “基于博弈论的模型在能源区块链环境中实现 prosumers 之间的电力交易定价”，Applied Energy，第 271 卷，第 115239 号，2020 年。
+
+48. P. Pal, R. P. Sharma, S. Tripathi, C. Kumar, and D. Ramesh, “2.4 GHz RF 接收信号强度基于节点分离在用于小麦和稻米植被的 WSN 监测基础设施”，IEEE 传感器期刊，第 21 卷，第 16 号，第 18298-18306 页，2021 年。
+
+49. P. Pal, R. Sharma, S. Tripathi, C. Kumar, and D. Ramesh, “基于遗传算法的节点部署优化，用于 IEEE 802.15.4 土豆和小麦作物监测基础设施”，Scientific Reports，第 11 卷，第 1 号，第 1-12 页，2021 年。
+
+
+
+
+50.  A. Kamilaris, A. Fonts, and F. X. Prenafeta-Boldú, “区块链技术在农业和食品供应链中的兴起,” Trends in Food Science & Technology, vol. 91, pp. 640–652, 2019.
+
+51.  S. Dey, S. Saha, A. K. Singh, and K. McDonald-Maier, “Foods QR Block: 通过区块链和二维码在云端数字化食品生产和供应链,” Sustainability, vol. 13, no. 6, p. 3486, 2021.
+
+# 11 Smart Agricultural System Using IoT 2.0
+
+Pankaj Pal
+
+Department of Computer Science and Engineering, Indian Institute of Technology(ISM), Dhanbad, India
+
+Mohammad S. Obaidat
+
+King Abdullah II School of Information Technology, University of Jordan, Amman, Jordan
+
+University of Science and Technology Beijing, Beijing, China
+
+SRM University, India
+
+Amity University, Noida, India
+
+DOI: [10.1201/9781003326236-11](https://dx.doi.org/10.1201/9781003326236-11)
+
+## 11.1 Introduction
+
+当代农业面临诸多困难，如因全球人口激增而增加的食品需求、气候波动、自然资源枯竭、饮食习惯变化以及健康与安全问题。天气在农业中起着关键作用，对作物生长、发育和产量的营养动态变化、害虫和疾病的发生、水资源短缺、及时的灌溉和施肥以及作物预防和文化措施的效率都有重大影响 \[1\]. 气候变化会对作物造成物理损害，同时也会退化土壤质量。作物产量的质量取决于种植季节，并且因地区而异。在恶劣天气条件下，不良的储存和运输会影响种子和育苗材料的活力，从而导致产量下降。为应对农业部门面临的挑战以及日益增长的需求，有必要提升农业实践的效率，同时最大限度地降低其环境影响。这促使了精准农业的发展，精准农业通过聚焦这两个关键因素来优化农业方法。在当前物联网上加速信息接收和机器人化的现实中，基本职业和社会机会（如农业）必然会取得进步。农业技术的进步有望促进可持续性、最大化产量并确保安全环境。智能农业旨在满足日益增长的需求，通常基于四大主要支柱：(a) 高效管理自然资源，(b) 保护生态系统，(c) 适当服务发展，(d) 利用现代技术。
+
+信息与通信技术（ICT）是当代农业的必备要素，全球决策者正在推动其采用。ICT 工具可包括农场管理信息系统、土壤和湿度传感器、加速度计、无线传感器网络、摄像头、无人机、低成本卫星、在线服务以及自动导引车辆等设备。农业的数字化转型产生大量数据，随着农场中智能机器和传感器的普及，农业过程日益数据驱动。
+
+精准农业依赖于多种信息技术的使用。其中一种流行的技术是遥感，它能够高效检测作物在田间内外的生长差异。文献中强调的精准农业是具有实时监测能力的地面传感器。各种类型的无线传感器网络（WSN）用于监测农业环境和作物生长状态。虽然卫星、无人机（UAS）和传感器提供关键数据，但真正推动精准农业的是执行器和智能机械的自动化操作。物联网（IoT）的兴起在全球各行各业带来了重大变化。精准农业采用物联网 2.0 技术有望提高产量、提升质量并促进可持续性。物联网辅助的无线传感器网络（IoWSN）用于监测农业数据是一种成本效益高且可靠的方式，能够实现可扩展的数据收集和远程访问。物联网结合前文提到的多种技术，是精准农业领域近期且受关注的研究热点 \[2, 3, 4, 5, 6, 7, 8, 9, 10 and 11\].
+
+我们对过去十年关于物联网及物联网 2.0 在农业方面的文献进行了综述，以帮助其实施。通过可视化分析，我们识别出研究前沿和知识基础，揭示了物联网技术在农业中的新应用及相关问题。我们通过分析合作网络的贡献数量，确定了主要的国家、机构和作者。此外，我们利用引用网络识别出具有影响力的研究和学者，从而突出了 2010 至 2022 年农业物联网文献中的当前研究和趋势。
+
+## 11.2 Importance of Precision Agriculture
+
+为满足预计 2050 年全球人口达九十亿的粮食需求，联合国粮农组织（FAO）估计粮食产量需要提升 60%。这要求提高作物产量以应对粮食短缺并提升农场盈利能力。为实现这一目标，必须深入了解作物表现并能够在多种环境、土壤、施肥和灌溉条件下进行精准预测。提高农场产量是任何应对这些挑战的策略的关键要素。印度的农业仍然以手工和传统方式进行，这与数据采集标准不匹配，且难以应对气候变化的当前情境。目前，作物推荐依赖于在田间进行的农业研究收集的数据。然而，数据收集过程往往困难，因为这些研究通常在偏远分散的地点进行，且数据主要是手动收集的。此外，数据收集过程难以扩展，因为只能从有限的农场地点获取数据，这不足以构建农场条件的数字孪生。此外，缺乏记录土壤相关参数（如土壤温度、土壤湿度和土壤盐分）的可获数据库。此外，使用现有解决方案需要大量努力将各传感器节点收集的数据（如拖拉机上的施肥喷洒器数据与土壤湿度传感器数据）进行整合和关联。
+
+
+
+
+Data-driven precision agriculture approaches are the modern world tool that is enhancing the productivity of crop yield and also addresses climate change and resource constraints issues (water, labor, and energy shortages). A taxonomy of Precision Agriculture is shown in Figure 11.1. Precision agriculture strives to enhance and refine agricultural processes to achieve maximum productivity. This involves fast, dependable, and distributed measurements to provide growers with a more comprehensive understanding of the current status of their cultivation area. Additionally, it enables the coordination of automated machinery to optimize energy consumption, water usage, and the application of chemicals for pest control and plant growth. Smart algorithms can also organize well-evaluated scientific knowledge to provide deeper insights into ongoing processes. Moreover, these algorithms can perform current situation reasoning and predict potential threats to crops, produce early warnings, and improve automated control signals based on plant responses.
+
+![Figure 11.1 Taxonomy of precision agriculture.](img/fig11_1_B.jpg)
+
+Figure 11.1 Taxonomy of precision agriculture.
+
+Precision agriculture involves utilizing Information and Communication Technologies (ICT) and big data analytics to connect crop data with specific crop varieties’ genetic and phenotypic characteristics. Figure 11.2 illustrates the flow of information in precision agriculture infrastructure. Wireless technologies have recently been introduced into agriculture, with high-value sectors such as greenhouse crops, horticulture, and vineyards taking priority. Wireless sensors are particularly useful in short-range indoor applications for greenhouses and small parcels of perennial crops with infrastructure for vineyards. Soil moisture measurement is mainly used to optimize crop irrigation, and wireless sensors are also commonly used as advanced weather stations to measure various parameters necessary for crop management. WSN are included in control loops and also used as actuators, such as in irrigation applications. The complexity of the algorithms needed to handle real-time distributed data is too great for low-power nodes in WSNs. However, with IoT, all objects are connected, making it easier to move computational overhead to the cloud or distribute it among interconnected devices.
+
+![Figure 11.2 Flow of information in precision agriculture infrastructure.](img/fig11_2_B.jpg)
+
+Figure 11.2 Flow of information in precision agriculture infrastructure.
+
+### 11.2.1 Crop Management and Produce Quality
+
+CropgrowthandqualitycanbetrackedusingsensordatatakenonthefarmandprocessedinPython with OpenCV, Matplotlib, Scikit-image, and other image processing tools \[12\]. We can measure the crop attribute like the growing stage and quality and also predict the yield by extracting the unique properties like elevation, density, and leaf greenness index of vegetation from the captured data. The advancement in state-of-the-art IoT hardware technology made it possible to deploy economical monitoring infrastructures in large farms and collect and process big data on remote rack servers and cloud platforms \[13\]. As an illustration, IoT networks are set up in the food processing industries to gather information about each step of the food manufacturing process. This includes the quality of the raw materials used and the additives needed to produce the end product. The data collected can be saved in various file formats, like CSV, and stored on the cloud \[14\]. The objective of estimating crop yields is to analyze the various factors that influence and shape crop production. These factors comprise irrigation, topography, natural composition and physical characteristics of soil, weather and climatic conditions, crop diseases and pests, as well as crop stress \[9\]. Following an initial study and evaluation of the significance of the retrieved crop attribute, Machine learning and deep learning models can be trained with some of the abstracted data to estimate the yield of the crop. It facilitates effective resource management; fast and exact yield estimation can give a credible foundation for decision-makers to assess whether there will be a shortage or surplus and respond accordingly as per conditions \[15\].
+
+### 11.2.2 Sustainable Use of Resources
+
+There is a possibility for practical and scalable solutions for natural resource conservation and sustainable agriculture through the use of precision agriculture techniques \[16, 17 and 18\]. Innovation in the agricultural sector is being driven by technologies like artificial intelligence(AI), drones, and the IoT, which leverage big data to enhance sustainability \[19, 20\]. As arable land is limited, groundwater levels are dropping, and soil quality is decreasing, these technologies could help optimize the utilization of land, water, and other resources to fulfill global demands while ensuring resources are preserved for future generations.
+
+Agribusinesses can employ AI to manage weeds using state-of-the-art computer vision, machine learning, and robotics techniques \[21, 22\]. Based on data obtained from farms through IoT sensors, AI can help find weeds in fields through data abstraction and spray pesticides where weeds are located. As a result, the amount of pesticide used to spray the entire field can be reduced, and fewer chemicals are left on the agricultural product compared to the amount of chemicals sprayed regularly \[23, 24 and 25\].
+
+### 11.2.3 Plant Disease Detection
+
+Plant illnesses pose a substantial risk to agricultural output and quality \[26\]. Recently, several neural network-based models have been developed to diagnose plant diseases \[27, 28 and 29\]. Nonetheless, these models are limited in that they can only detect diseases after they have fully developed in the crop, and they do not have a significant impact on improving product quality. Identifying and monitoring plant diseases in the early stages in the field can be difficult, time-consuming, and costly. However, using deep learning algorithms for early disease detection and categorization is necessary to improve crop production and quality. To accomplish this, datasets on plant pathology diseases must be compiled throughout the vegetation’s growth cycle.
+
+### 11.2.4 Agriculture Management System
+
+In recent years, farmers have exchanged data and collaborated more effectively, thanks to emerging information and communications technologies. Agriculture practitioner’s connectivity enables the emergence of software-defined management systems \[30\]. New frameworks for rural administration are being developed to offer accounting services, link farmers with farm owners and managers, and enable agriculturalists to benchmark their performance by connecting them in a network \[31\]. The aim of the agriculture management system is to support farm managers and agribusinesses globally by collecting and analyzing a vast amount of data from real-time sources to aid them in making informed business decisions.
+
+
+
+一个农业决策支持系统(DSS)在农业制造和分销的每个阶段收集数据 \[32, 33, 34 and 35\]。用于在农业中做出明智决策所需的数据来自多种来源，如土壤湿度、环境条件、作物产量、供应链需求和供应数据、食品加工行业的生产数据，以及农民使用的农药 \[36, 37 and 38\]。这些数据既存储在云端数据库中，也存储在本地数据库中，用于理解关键因素，如土壤养分水平、种子特性以及它们与病原体、害虫和毒性物质的相关性。农民和农业实践者结合害虫和病原体发展的概率，分析生物和非生物数据，以做出明智的决策。DSS 用于帮助实践者根据市场需求选择作物。系统跟踪并映射预计需求的作物，使农民能够避免对需求低的作物过度收获。
+
+## 11.3 无线传感器技术和物联网在农业中的作用
+
+无线传感器技术的最新进展为研究和开发提供了众多选项。这得益于传感器节点的低成本和射频技术的进步 \[39\]。无线区域网络（Cognitive Radio/WRAN）、无线个人区域网络（WPAN）、Mesh、点对点（P2P）以及低功耗广域网（LPN/LPWAN）是物联网领域中使用最广泛的无线技术 \[40, 41 and 42\]。GSM 进一步细分为 GSM EDGE 无线访问网络（GERAN）和 UMTS 地面无线访问网络（UMTS TRAIN）（UTRAN） \[43, 44\]。在最近的学术文献中，出现了相当数量的嵌入式可编程设备的引用 \[45, 46 and 47\]。一些物联网研究中使用的设备是定制的，而其他则是商业可用的系统，这些系统已经预先编程或具有封闭源监测功能。研究人员根据其特定的研究目标或关注领域选择设备。商业系统提供多种功能，使研究人员能够专注于物联网部署的其他方面，如智能算法、云兼容性和后处理。另一方面，可编程和开放的解决方案为开发人员提供了对节点和网络行为的完全控制，并能够编程额外的外设，如新传感器或执行器模块，以使其与节点兼容。这些信息来源于多种来源 \[48, 49, 50, 51, 52 and 53\]。
+
+无线传感器网络（WSN）是 21 世纪最重要的技术之一 \[51\]。尽管 RFID（射频识别）最初是用于识别和跟踪附着在物体上的标签，但对各种其他应用的兴趣日益增长，促使 RFID 无线传感器设备的进一步演变 \[54\]。与 RFID 系统相比，WSN 的最显著区别在于 RFID 设备不提供协作通信。然而，WSN 支持多种网络类型和多跳通信 \[55\]。随着 Bluetooth、ZigBee 等标准以及用于 RFID 的多个 ISO（国际标准化组织）标准（ISO 15693、ISO/IEC 18000、ISO 11784 等）的广泛应用，这些技术在近年来受到了显著关注 \[56\]。
+
+物联网和 WSN 设备具有广泛的应用范围，包括环境监测、灌溉、牲畜和温室管理以及冷链。农业基础设施（如温室）通过标量传感器网络进行监测和控制，而多媒体传感器网络则用于远程收集和处理图像，以检测昆虫和作物疾病。基于标签的网络（如 RFID 和 NFC）用于产品追踪和远程识别。通常，监测基础设施由少量的汇聚点和大量的传感器组成。无线传感器节点由三个主要组件构成：感知、处理和通信。这些节点通过网关单元进行通信，网关单元可以通过 LAN、WLAN、Internet、CAN 或 WWAN 使用 GSM 或 GPRS 等行业标准协议与其他计算机通信。这些信息来源于多种来源 \[56, 57\]。
+
+在各种农业生产系统中，基于 WSN 的监测基础设施允许在尽量不损害动物和环境的前提下收集大量作物相关参数。农民可以根据实时田间数据做出作物相关的决策，这有助于提高作物产量或辅助水资源管理。精准农业通过识别作物的差异并相应调整管理技术，而不是依赖可能与实际情况不符的假想平均状态。这一理念基于文献中引用的研究 \[58\]。
+
+安装在越野车辆（如拖拉机或联合收割机）上的传感器节点能够与静态基础设施或其他车辆共享数据，从而实现移动无线传感器网络 \[59, 60\]。在 Ref. \[61\], 作者在饲料收割机内部安装了电容湿度传感器，以在收割过程中监测土壤含水量（SWC）。同样，在 Ref. \[62\], 作者在施肥机上集成了蓝牙传感器节点，实现了现场数据采集。数据用于计算肥料的正确用量和均匀分布模式。在 Ref. \[63\], 部署了一个 WSN 以识别和控制马铃薯农场中的疫霉病。疫霉病是由依赖环境因素的真菌攻击引起的。使用 868/916 MHz 节点测量了湿度和温度。系统旨在检测植被受到疫霉病侵害的情况，并在必要时推荐处理措施。植物监测（即监测植物）通过 WSN 监测基础设施更加容易。例如，借助 WSN，葡萄园主可以更高效、自动化地管理葡萄园运营。例如，在 Ref. \[64\], 作者提出了多种 WSN 配置和实现方案，以解决葡萄园的各种属性。在 Ref. \[65\], 作者利用 Zigbee 节点在葡萄园内建立 WSN，并持续一个月收集温度数据。其目的是利用收集的数据检查酿酒的两个重要因素——热量累积和潜在霜冻损害。同样，Ref. \[66\] 的作者也展示了基于 Zigbee 的精准葡萄栽培的远程传感器网络的有效性。在他们的研究中，网络节点由电池供电，并通过太阳能电池板进行充电。
+
+
+
+在许多作物种植系统中，高效的灌溉管理是一个重要问题。无线传感器网络（WSN）有潜力准确显示作物水分含量（SWC）在田间的变化。SWC 数据可用于创建决策支持系统，帮助农民在提高产量的同时节约用水 \[67, 68\]。此外，WSN 消除了在农场布设传感器节点时的布线困难，并降低了维护成本。由于 WSN 比有线方案更易部署，因此可以使用更多传感器来获取特定区域更详细的信息。与其在整个田间均匀灌溉，WSN 可根据传感器在田间战略性放置所获取的数据，对各区域进行按需灌溉。研究 Ref. \[69\] 中评估了两种 WSN，分别在配备红外测温仪的中心旋转灌溉系统的六跨架上部署。研究比较了网格式和非网格式 WSN 在中心旋转平台上的性能。同样，在 \[70\]，作者开发了一个用于棉花灌溉调度的智能传感器阵列原型。该系统包含湿度传感器、热电偶和 RFID 标签。在 Ref. \[71\] 中，作者部署了基于 WSN 的地下水监测基础设施。监测数据由嵌入式单片机处理，GSM 数据模块无线传输数据。Ref.\[72\] 的作者展示了在直线移动灌溉系统中使用 WSN 进行现场精准灌溉控制的应用。蓝牙无线电连接使传感器和灌溉控制器能够与基站通信。在 Ref.\[73\]，作者介绍了一项关于地下系统的研究，该系统可监测土壤条件（如水分和矿物质含量），并提供如何正确灌溉和施肥土壤的信息。此外，该系统还可监测河流和含水层附近土壤中各种有害化合物的存在及含量，这些化合物可能因化学径流而影响饮用水来源。
+
+对于在农业环境中部署 WSN，考虑节点部署的具体环境和周围条件至关重要。农田作物和其他物体的移动可能导致网络中节点连接出现严重问题。这些障碍移动不可预测，会影响链路连接质量，使其随时间和空间波动。这会影响网络的多个方面，包括部署、路由和故障诊断等，如 Ref. \[74\] 所指出。温度、降雨、湿度、太阳辐射、植物叶片遮阴以及建筑物（如温室）产生的噪声等环境因素也会导致时空气候波动，进一步影响节点间的链路和通信质量，如 Ref. \[74\] 所述。这些问题在自动化农业设施中尤为重要，因为它们依赖于节点间可靠的连接。该特性表明了对高级循环周期控制、数据采样调度、数据重构、存储与检索以及智能管理等要求。因此，选择合适的物联网平台来规划部署，可能会影响项目的整体成功。
+
+对于农民在田间大规模部署土壤湿度传感器网络，选择合适的无线收发器关键取决于节点数量、通信距离和天线安装选项等关键参数。多路径、阴影和衰减等因素增加了真实世界无线电传播的复杂性 \[75\]。我们需要 WSNs 在各种环境下（从空旷田地和葡萄园到起伏丘陵和 rugged 山地）都能 flawlessly 运行，同时应对多样的天气条件。这些因素对无线电性能产生显著影响。农田无线电传播受作物生长期的植被高度和密度影响。在这些农业场景中，链路功率预算由作物生长、地理位置以及更传统的因素（如节点间距和天线高度）决定。其他农业应用（如谷仓、温室或仓库）的障碍包括墙壁、窗户、托盘、机械设备等，导致信号强度显著衰减 \[76\]。在这些环境中，接收到的信号强度比接收器灵敏度限制高出 10–20 dB 被认为是可接受的链路预算值 \[77\]。
+
+农业部署通常会经历高温和高湿度环境。当温度从 25° C 升至 65° C 时，接收到的信号强度（RSS）会显著受影响。此外，农业环境中的湿度水平可能非常高，无线节点在开阔田野中暴露于雨水或灌溉系统中，温室内湿度可超过 80%。高湿度已被证明会对无线电波传播产生显著影响 \[78\]。同频或邻频工作的设备之间的干扰是无线通信的潜在问题。物联网模型提供了带宽、通信距离、能耗和安全协议等多种选择。然而，由于 IoT 项目涉及多种技术、标准和独特需求，网络层的互操作性可能受到限制 \[79\]。
+
+尽管文献中已有大量关于 WSN 理论方面的研究，但在农业环境中实现实时 IoT/WSN 部署仍面临挑战。传感器模块必须高精度、具备适合特定环境的测量范围，并能够抵御可能导致读数错误或永久损坏传感器的外部因素。由于 WSN 基础设施分散，更换位于开阔田野或其他农业设施中电池供电节点的电源可能困难，甚至不可能。因此，在开发新传感器节点时，硬件选择受到严格的功耗限制，低功耗外设的特性被仔细考虑。此外，构建终端设备功能所需的软件组件也必须经过全面评估。为避免现场问题，最终功能代码必须在大量嵌入式软件工程专业知识的指导下开发，并经过密集测试 \[80\]。决定使用低功耗嵌入式设备的因素包括其在长时间运行中的稳定性、能够提供的数字和模拟输入/输出通道数量（以支持传感器和执行器等外设）、通过电源采集模块维持自身的能力，以及编程复杂度的高低。
+
+## 11.4 IoT 2.0 的应用
+
+
+
+
+IoT 2.0 指的是一个新时代，其中设备和数据被用于生成可操作的洞察。它由大量相互连接的设备、传感器和执行器构成的庞大网络驱动，使其比其前身 IoT 更加重要、更具弹性和更加成熟。IoT 的下一阶段通常被称为“物物网”或 IoT 2.0。IoT 2.0 有能力从设备数据和共享中提取有价值的洞察，类似于互联网通过文档交换提供有价值的信息。IoT 2.0 不仅包括设备技术和网关，还包括相关的 IT 技术、流程、人员、益处、结果以及真实世界的巨大潜力。专家们建议，实现这一点需要三个基本属性。为了改进 IoT，需要考虑三个因素：(a) 使用标准协议，(b) 从集中式枢纽-辐射结构转变为更去中心化的点对点模型，以及 (c) 增强设备自主性，以提升设备和网络层面的感知、适应和预测能力。这对于管理在不同平台上运行的众多多样化对象至关重要。
+
+“IoT 2.0”这一术语涵盖了各种技术应用和变革性过程，使其成为推动社会数字化转型的最重要技术之一。为了区分不同的应用场景、挑战和机遇，通常会使用更具体的术语。例如，“工业物物网”(IIoT) 或“工业物物网”指的是在工业流程中使用 IoT，而“消费物物网”(CIoT) 指的是数十亿个利用 IoT 技术的个人物理设备。IoT 2.0 有时被称为“万物物联网”(IoE)，因为其范围广泛且设备多样化。它涵盖了技术、流程、人员、益处、结果以及真实世界应用的巨大潜力，代表了一个物物网的概念。无论使用什么具体术语来描述它，IoT 2.0 最终关注的是这些方面。
+
+第四次工业革命，即 Industry 4.0，将物物网、大数据、机器人、人工智能和区块链等先进技术汇集在一起。这些技术使工业流程和供应链更加复杂且自给自足。通过将 Industry 4.0 与农业相结合，可以实现 Agriculture 4.0，从而实现可持续且智能的工业农业。在农业的各个环节——从食品生产和加工到分销和消费——可以收集、处理和分析高度详细、空间和时间变化的实时数据。这种工业化农业生态系统涉及高度数字化、实时农场管理以及基于数据的自主决策过程，从而提高生产率、提升农业食品供应链的效率、增强食品安全并节约自然资源。IoT 的农业应用包括精准农业、动物监测、人工大棚、渔业管理和天气监测。Ref.\[81\] 的作者在宏观层面描述了这些影响，包括用于无处不在的农业监测和网络的空中-空中-地面-水下整合网络。
+
+利用现有的国家和商业空间基础设施实施远程感知卫星星座，可以促进对农业数据的广泛收集，从而为作物产量预测、产量建模和害虫识别等任务带来显著好处。此外，配备高分辨率光谱传感器、多光谱相机和其他专用设备的先进无人机（UAS）能够实现快速响应，并通过高通量 3D 监测在不同地理位置提高观测精度。地面和地下观测——这些是负责多个农业传感节点、自主农业机械和移动人群感知的关键——同样发挥着重要作用。由于通信技术的进步，现在可以选择各种无线设备来满足农业应用的多样化服务需求，例如实时远程硬件控制和高吞吐量植物表型分析，以提升覆盖范围、连接密度、带宽和端到端延迟。
+
+### 11.5 IoT 2.0 挑战
+
+农业环境感知可能导致多种问题。精准农业需要在农田、作物、牲畜和农业机械上部署多个传感器，但缺乏合适的传感器是限制精细化农业监测的主要障碍，尤其是在生物传感牲畜和作物表型分析方面。为解决这一问题，必须开发并建立符合高标准、高灵敏度和高可靠性的专业农业传感器，用于评估农业生产环境以及动物和植物的生理指标。另一种研究方向是利用无线电波实现无传感器的农业感知。
+
+在农业环境中，更换安装在地下、水下、树上或动物上的传感器电池十分困难，因此低功耗感知至关重要。通过电磁波进行无线电力传输有潜力消除电池更换的需求，实现电池充电。长距离无线充电是大多数农业应用的必要条件。此外，还需要研究在恶劣条件下（如地下和水下）的无线电力传输。
+
+在光伏农业物物网 \[82\] 中，农业作业与发电共享同一片土地。散布的无线充电器为感知设备提供能量，但由于农业应用中使用的传感器种类繁多，能量传输的适应性任务调度面临挑战。另一种可持续的农业物物网替代方案是环境能量采集。试验性研究表明，传感器节点可以从河流、流动体、车辆运动以及地表收集能量。然而，为了克服当前对转换电能的限制，必须提高能量转换效率。
+
+由于农业条件的多样性，不可能存在一套通用的网络解决方案来满足所有应用需求。农业传感器位于各种环境中，如温室、户外农田、地下空间甚至海域。这些环境的异质性要求基于射频、声呐、振动等信号的多样化无线通信技术用于信息共享。因此，必须在每种情境下评估不同无线通信技术的性能，以选择最合适的技术。此外，要在农业环境中成功实现智能感知，跨媒体通信（地下、水下和空中）至关重要。不同的农业应用对网络规模、节点密度、传输距离、吞吐量和延迟有不同的要求。鉴于农业环境中 IoT 应用的多样性，基于蜂窝的网络、802.15.4 网状网络、蓝牙低功耗网络和 LoRa 网络会在同一区域共存。因此，跨物理层不同技术的通信研究至关重要。
+
+### 11.6 结论
+
+
+
+当前的农业供应链部分自动化和数字化，但缺乏完整的数字化转型和理解，这限制了其自动化潜力。此外，当前的农业食品分销系统监管不当。为解决这些问题，必须将新的物联网 2.0 技术整合到农业中。物联网 2.0 平台利用人工智能和机器学习生成洞察并向客户提供可操作信息。互联网是社会和经济的驱动力，促进了物理世界与数字世界之间更高效的沟通，并创建了真实物体和交易的数字化表示，以便理解其行为。因此，本章深入分析了将这些技术应用于农业时最重要的应用和研究挑战。
+
+## REFERENCES
+
+1.  D. Ramesh, R. P. Sharma, and D. R. Edla, “HHDSSC: Harnessing healthcare data security in cloud using cipher text policy attribute-based encryption,” International Journal of Information and Computer Security, vol. 13, nos. 3–4, pp. 322–336, 2020.
+
+2.  P. Pal, R. P. Sharma, S. Tripathi, C. Kumar, and D. Ramesh, “NSGA-III based heterogeneous transmission range selection for node deployment in IEEE 802.15.4 infrastructure for sugarcane and rice crop monitoring in a humid sub-tropical region,” IEEE Transactions on Wireless Communications, vol. 22, no. 6, pp. 1–1, 2022.
+
+3.  P. Pal, S. Tripathi, and C. Kumar, “Single probe imitation of multi-depth capacitive soil moisture sensor using bidirectional recurrent neural network,” IEEE Transactions on Instrumentation and Measurement, vol. 71, pp. 1–11, 2022.
+
+4.  M. N. M. Bhutta, A. A. Khwaja, A. Nadeem, H. F. Ahmad, M. K. Khan, M. A. Hanif, H. Song, M. Alshamari, and Y. Cao, “A survey on blockchain technology: Evolution, architecture and security,” IEEE Access, vol. 9, pp. 61048–61 073, 2021.
+
+5.  P. Pal, R. P. Sharma, S. Tripathi, C. Kumar, and D. Ramesh, “Machine learning regression for rf path loss estimation over grass vegetation in iowsn monitoring infrastructure,” IEEE Transactions on Industrial Informatics, vol. 18, no. 10, pp. 6981–6990, 2022.
+
+6.  R. Priya, D. Ramesh, and V. Udutalapally, “NSGA-2 optimized fuzzy inference system for crop plantation correctness index identification,” IEEE Transactions on Sustainable Computing, vol. 7, no. 1, pp. 172–188, 2022.
+
+7.  R. Priya and D. Ramesh, “Ml based sustainable precision agriculture: A future generation perspective,” Sustainable Computing: Informatics and Systems, vol. 28, p. 100439, 2020.
+
+8.  E. Khosla, R. Dharavath, and R. Priya, “Crop yield prediction using aggregated rainfall-based modular artificial neural networks and support vector regression,” Environment, Development and Sustainability, vol. 22, no. 6, pp. 5687–5708, 2020.
+
+9.  R. Priya, D. Ramesh, and E. Khosla, “Biodegradation of pesticides using density-based clustering on cotton crop affected by xanthomonas malvacearum,” Environment, Development and Sustainability, vol. 22, no. 2, pp. 1353–1369, 2020.
+
+10.  R. Priya, D. Ramesh, and E. Khosla, “Adaboost. RT based soil NPK prediction model for soil and crop specific data: A predictive modelling approach,” in International Conference on Big Data Analytics. Springer, 2018, pp. 322–331.
+
+11.  R. Priya, D. Ramesh, and E. Khosla, “Crop prediction on the region belts of india: A naïvebayes mapreduce precision agricultural model,” in *2018 International Conference on Advances in Computing, Communications and Informatics* (ICACCI), 2018, pp. 99–104.
+
+12.  J. Doshi, T. Patel, and S. Kumar Bharti, “Smart farming using IoT, a solution for optimally monitoring farming conditions,” Procedia Computer Science, vol. 160, pp. 746–751, 2019.
+
+13.  X. Shi, X. An, Q. Zhao, H. Liu, L. Xia, X. Sun, and Y. Guo, “State-of-the-art internet of things in protected agriculture,” Sensors, vol. 19, no. 8, p. 1833, 2019.
+
+14.  N. Misra, Y. Dixit, A. Al-Mallahi, M. S. Bhullar, R. Upadhyay, and A. Martynenko, “IoT, big data and artificial intelligence in agriculture and food industry,” IEEE Internet of Things Journal, vol. 9, no. 9, pp. 6305–6324, 2020.
+
+15.  T. N. Liliane and M. S. Charles, “Factors affecting yield of crops,” Agronomy-Climate Change & Food Security. London, UK: Intech Open, p. 9, 2020.
+
+16.  J. A. Delgado, N. M. Short Jr, D. P. Roberts, and B. Vandenberg, “Big data analysis for sustainable agriculture on a geospatial cloud framework,” Frontiers in Sustainable Food Systems, vol. 3, p. 54, 2019.
+
+17.  J. N. Pretty, “Supportive policies and practice for scaling up sustainable agriculture,” Facilitating Sustainable Agriculture: Participatory Learning and Adaptive Management in Times of Environmental Uncertainty. UK: Cambridge University Press, pp. 23–45, 1998.
+
+18.  A. Dobermann and R. Nelson, “Opportunities and solutions for sustainable food production,” Sustainable Development Solutions Network: Paris, France, 2013.
+
+19.  S. A. Bhat and N.-F. Huang, “Big data and ai revolution in precision agriculture: Survey and challenges,” IEEE Access, vol. 9, pp. 110 209–110 222, 2021.
+
+20.  K. Spanaki, E. Karafili, U. Sivarajah, S. Despoudi, and Z. Irani, “Artificial intelligence and food security: Swarm intelligence of agritech drones for smart agrifood operations,” Production Planning & Control, vol. 33, pp. 1–19, 2021.
+
+21.  O. Bongomin, A. Yemane, B. Kembabazi, C. Malanda, M. Chikonkolo Mwape, N. Sheron Mpofu, and D. Tigalana, “Industry 4.0 disruption and its neologisms in major industrial sectors: A state of the art,” Journal of Engineering, vol. 2020, 2020. [`www.hindawi.com/journals/je/2020/8090521/`](https://www.hindawi.com/journals/je/2020/8090521/)
+
+22.  T. Duckett, S. Pearson, S. Blackmore, B. Grieve, W.-H. Chen, G. Cielniak, J. Cleaversmith, J. Dai, S. Davis, C. Fox *et al.*, “Agricultural robotics: The future of robotic agriculture,” arXiv preprint arXiv:1806.06762, 2018.
+
+23.  C. A. Damalas and S. D. Koutroubas, “Farmers’ exposure to pesticides: Toxicity types and ways of prevention,” Toxics, vol. 4, p. 1, 2016.
+
+24.  M. Kishi, N. Hirschhorn, M. Djajadisastra, L. N. Satterlee, S. Strowman, and R. Dilts, “Relationshipof pesticide spraying to signs and symptoms in indonesian farmers,” Scandinavian Journal of Work, Environment & Health, vol. 21, pp. 124–133, 1995.
+
+25.  J. Luck, S. Pitla, S. Shearer, T. Mueller, C. Dillon, J. Fulton, and S. Higgins, “Potential for pesticide and nutrient savings via map-based automatic boom section control of spray nozzles,” Computers and Electronics in Agriculture, vol. 70, no. 1, pp. 19–26, 2010.
+
+26.  S. Chakraborty and A. C. Newton, “Climate change, plant diseases and food security: An overview,” Plant Pathology, vol. 60, no. 1, pp. 2–14, 2011.
+
+27.  S. Mishra, R. Sachan, and D. Rajpal, “Deep convolutional neural network based detection system for real-time corn plant disease recognition,” Procedia Computer Science, vol. 167, pp. 2003–2010, 2020.
+
+28.  A. F. Fuentes, S. Yoon, J. Lee, and D. S. Park, “High-performance deep neural network-based tomato plant diseases and pests diagnosis system with refinement filter bank,” Frontiers in Plant Science, vol. 9, p. 1162, 2018.
+
+
+
+29. 刘斌, 张颖, 何强, 李颖, “基于深度卷积神经网络的苹果叶病识别研究,” Symmetry, vol. 10, no. 1, p. 11, 2017.
+
+30. El Bilali, H., and M. S. Allahyari, “向农业和食品系统可持续发展转变的进程：信息和通信技术的作用,” Information Processing in Agriculture, vol. 5, no. 4, pp. 456–464, 2018.
+
+31. Jack, L., Benchmarking in Food and Farming: Creating Sustainable Change. Farnham, Surrey, UK: Gower Publishing, Ltd., 2009.
+
+32. Jones, J., “农业发展的决策支持系统,” in Systems Approaches for Agricultural Development. Springer, 1993, pp. 459–471.
+
+33. Kanatas, P., I. S. Travlos, I. Gazoulis, A. Tataridas, A. Tsekoura, and N. Antonopoulos, “决策支持系统（dss）的优势与局限性：特别关注杂草问题,” Agronomy, vol. 10, no. 4, p. 548, 2020.
+
+34. Kukar, M., P. Vracar, D. Košir, D. Pevec, Z. Bosnić *et al.*, “Agrodss: 农业与农业决策支持系统,” Computers and Electronics in Agriculture, vol. 161, pp. 260–271, 2019.
+
+35. Bange, M., S. Deutscher, D. Larsen, D. Linsley, and S. Whiteside, “用于澳大利亚棉花系统改进昆虫害虫管理的手持决策支持系统,” Computers and Electronics in Agriculture, vol. 43, no. 2, pp. 131–147, 2004.
+
+36. Herrera, C. M., “成熟果实对害虫的防御：与植物-传播者互动关系的重要性,” The American Naturalist, vol. 120, no. 2, pp. 218–241, 1982.
+
+37. Alengebawy, A., S. T. Abdelkhalek, S. R. Qureshi, and M.-Q. Wang, “农业土壤和作物中的重金属及农药毒性：生态风险与人类健康影响,” Toxics, vol. 9, no. 3, p. 42, 2021.
+
+38. Younis, S. A., K.-H. Kim, S. M. Shaheen, V. Antoniadis, Y. F. Tsang, J. Rinklebe, A. Deep, and R. J. Brown, “纳米技术在作物促进和土壤肥力提升方面的进展：益处、生命周期评估及立法政策,” Renewable and Sustainable Energy Reviews, vol. 152, p. 111686, 2021.
+
+39. Kocakulak, M., and I. Butun, “面向物联网的无线传感器网络概述,” in *2017 IEEE 7th Annual Computing and Communication Workshop and Conference (CCWC)*. Ieee, 2017, pp. 1–6.
+
+40. Tadayon, N., and S. Aissa, “基于认知无线电的 IEEE 802.22 无线区域网络建模与分析,” IEEE Transactions on Wireless Communications, vol. 12, no. 9, pp. 4363–4375, 2013.
+
+41. Türk, Y., and A. Akman, “低功耗无线个人区域网络的管理模型,” in IEEE 19th International Symposium on “A World of Wireless, Mobile and Multimedia Networks” *(WoWMoM)*. IEEE, 2018, pp. 14–16.
+
+42. Ikpehai, A., B. Adebisi, K. M. Rabie, K. Anoh, R. E. Ande, M. Hammoudeh, H. Gacanin, and U. M. Mbanaso, “低功耗广域网技术在物联网中的应用：比较综述,” IEEE Internet of Things Journal, vol. 6, no. 2, pp. 2225–2240, 2018.
+
+43. Gritsai, E., and I. Daudov, “GPRS/UTRAN/EUTRAN 网络中无线接口演进与改进趋势,” in Journal of Physics: Conference Series, vol. 2032, no. 1. IOP Publishing, 2021, p. 012009.
+
+44. Kakadia, D., J. Yang, and A. Gilgur, “演进的通用陆地无线接入网络（EUTRAN），” in Network Performance and Fault Analytics for LTE Wireless Service Providers. Springer, 2017, pp. 61–81.
+
+45. Martínez-Rodríguez, M. C., E. Camacho-Ruiz, P. Brox, and S. Sánchez-Solano, “用于嵌入式系统的可配置 ROPUF，保障可编程设备的安全,” Electronics, vol. 10, no. 16, p. 1957, 2021.
+
+46. Renzini, F., M. Cuppini, C. Mucci, E. Franchi Scarselli, and R. Canegallo, “嵌入式可编程设备的多级切换网络定量分析,” Electronics, vol. 8, no. 3, p. 272, 2019.
+
+47. Martina, M., C. Condo, G. Masera, and M. Zamboni, “联合源/信道方法提升嵌入式可编程设备对闪存错误的抗性,” IEEE Embedded Systems Letters, vol. 6, no. 4, pp. 77–80, 2014.
+
+48. Ferrández-Pastor, F. J., J. M. García-Chamizo, M. Nieto-Hidalgo, J. Mora-Pascual, and J. Mora-Martínez, “基于物联网的通用传感器网络平台开发：精准农业应用,” Sensors, vol. 16, no. 7, p. 1141, 2016.
+
+49. Didla, S., A. Ault, and S. Bagchi, “优化 AES 用于嵌入式设备和无线传感器网络,” in Trident Com. Citeseer, 2008, p. 4.
+
+50. Strazdins, G., A. Elsts, and L. Selavo, “Mansos：易用、便携且资源高效的网络嵌入式设备操作系统,” in Proceedings of the 8th ACM Conference on Embedded Networked Sensor Systems, 2010, pp. 427–428.
+
+51. Modieginyane, K. M., B. B. Letswamotse, R. Malekian, and A. M. Abu-Mahfouz, “软件定义无线传感器网络在高效网络管理中的应用机会：综述,” Computers & Electrical Engineering, vol. 66, pp. 274–287, 2018.
+
+52. Galluccio, L., S. Milardo, G. Morabito, and S. Palazzo, “SDN‑wise：为无线传感器网络设计的状态 ful SDN 解决方案的设计、原型和实验,” in IEEE Conference on Computer Communications (INFOCOM). IEEE, 2015, pp. 513–521.
+
+53. Egidius, P. M., A. M. Abu-Mahfouz, and G. P. Hancke, “软件定义无线传感器网络中的可编程节点：综述,” in IECON 2018–44th Annual Conference of the IEEE Industrial Electronics Society. IEEE, 2018, pp. 4672–4677.
+
+54. Jia, X., Q. Feng, T. Fan, and Q. Lei, “RFID 技术及其在物联网（IoT）中的应用,” in 2nd International Conference on Consumer Electronics, Communications and Networks (CECNet). IEEE, 2012, pp. 1282–1285.
+
+55. Sobral, J. V., J. J. Rodrigues, R. A. Rabelo, J. C. Lima Filho, N. Sousa, H. S. Araujo, and R. Holanda Filho, “基于 RFID 和 WSNS 的物联网应用性能提升框架,” Journal of Network and Computer Applications, vol. 107, pp. 56–68, 2018.
+
+56. Ruiz-Garcia, L., Lunadei, L., Barreiro, P., and Robla, I., “无线传感器技术在农业和食品工业中的应用综述：现状与趋势,” Sensors, vol. 9, no. 6, pp. 4728–4750, 2009.
+
+57. Kandris, D., Nakas, C., Vomvas, D., and Koulouras, G., “无线传感器网络应用：最新调查,” Applied System Innovation, vol. 3, no. 1, p. 14, 2020.
+
+58. Thakur, D., Kumar, Y., Kumar, A., and P. K. Singh, “精准农业中的无线传感器网络适用性综述,” Wireless Personal Communications, vol. 107, no. 1, pp. 471–512, 2019.
+
+59. Sarvela, K. *et al.*, “实时测量方法的开发，用于分析轮胎‑土壤接触对农业拖拉机移动性的影响,” The University of Helsinki, 2020, pp. 1–37.
+
+60. Sunusi, I. I., Zhou, J., Wang, Z. Z., Sun, C., Ibrahim, I. E., Opiyo, S., Soomro, S. A., Sale, N. A., Olanrewaju, T., *et al*., “智能拖拉机：在线牵引控制过程综述,” Computers and Electronics in Agriculture, vol. 170, p. 105176, 2020.
+
+
+
+61.  W. S. Lee, T. F. Burks, and J. K. Schueller, “Silage yield monitoring system,” in ASAE Annual Meeting. American Society of Agricultural and Biological Engineers, 2002, p. 1.
+
+62.  S. Cugati, W. Miller, and J. Schueller, “Automation concepts for the variable rate fertilizer applicator for tree farming,” in The proceedings of the 4th European Conference in Precision Agriculture, 2003, pp. 14–19.
+
+63.  D. Goense and J. Thelen, “Wireless sensor networks for precise phytophthora decision support,” in `2005` ASAE Annual Meeting. American Society of Agricultural and Biological Engineers, 2005, p. 1.
+
+64.  J. Burrell, T. Brooke, and R. Beckwith, “Vineyard computing: Sensor networks in agricultural production,” IEEE Pervasive Computing, vol. 3, no. 1, pp. 38–45, 2004.
+
+65.  J. D. F. Selvaraj, P. M. Paul, and I. D. J. Jingle, “Automatic wireless water management system(AWWMS) for smart vineyard irrigation using iot technology,” International Journal of Oceans and Oceanography, vol. 13, no. 1, pp. 211–218, 2019.
+
+66.  R. Morais, M. A. Fernandes, S. G. Matos, C. Serôdio, P. Ferreira, and M. Reis, “A zigbee multi-powered wireless acquisition device for remote sensing applications in precision viticulture,” Computers and Electronics in Agriculture, vol. 62, no. 2, pp. 94–106, 2008.
+
+67.  L. Hamami and B. Nassereddine, “Application of wireless sensor networks in the field of irrigation: A review,” Computers and Electronics in Agriculture, vol. 179, p. 105782, 2020.
+
+68.  T. Savic and M. Radonjić, “WSN architecture for smart irrigation system,” in 2018 23rd International Scientific-Professional Conference on Information Technology (IT). IEEE, 2018, pp. 1–4.
+
+69.  S. A. O'Shaughnessy and S. R. Evett, “Integration of wireless sensor networks into moving irrigation systems for automatic irrigation scheduling,” in Providence, Rhode Island, June 29–July 2, 2008. American Society of Agricultural and Biological Engineers, 2008, p. 1.
+
+70.  G. Vellidis, M. Tucker, C. Perry, C. Kvien, and C. Bednarz, “A real-time wireless smart sensor array for scheduling irrigation,” Computers and Electronics in Agriculture, vol. 61, no. 1, pp. 44–50, 2008.
+
+71.  D. Qian, Y. Shi, and K. Zhang, “Study of wireless-sensor-based groundwater monitoring instrument,” in Watershed Management to Meet Water Quality Standards and TMDLS (Total Maximum Daily Load) Proceedings of the 10–14 March 2007, San Antonio, Texas. American Society of Agricultural and Biological Engineers, 2007, p. 129.
+
+72.  Y. Kim, R. G. Evans, and W. M. Iversen, “Remote sensing and control of an irrigation system using a distributed wireless sensor network,” IEEE Transactions on Instrumentation and Measurement, vol. 57, no. 7, pp. 1379–1387, 2008.
+
+73.  I. F. Akyildiz and E. P. Stuntebeck, “Wireless underground sensor networks: Research challenges,” Ad Hoc Networks, vol. 4, no. 6, pp. 669–686, 2006.
+
+74.  Y. Liu, X. Ma, L. Shu, G. P. Hancke, and A. M. Abu-Mahfouz, “From industry 4.0 to agriculture 4.0: Current status, enabling technologies, and research challenges,” IEEE Transactions on Industrial Informatics, vol. 17, no. 6, pp. 4322–4334, 2020.
+
+75.  D. L. Ndzi, A. Harun, F. M. Ramli, M. L. Kamarudin, A. Zakaria, A. Y. M. Shakaff, M. N. Jaafar, S. Zhou, and R. S. Farook, “Wireless sensor network coverage measurement and planning in mixed crop farming,” Computers and Electronics in Agriculture, vol. 105, pp. 83–94, 2014.
+
+76.  S. Kurt and B. Tavli, “Path-loss modeling for wireless sensor networks: A review of models and comparative evaluations.” IEEE Antennas and Propagation Magazine, vol. 59, no. 1, pp. 18–37, 2017.
+
+77.  S. Singh and S. Kumar, “IEEE 802.15. 4 zigbee based wireless sensor technology in agriculture-asurvey.” Journal: International Journal of Electrical and Electronics Engineers (IJEEE), vol. 8, no. 01, pp. 269–273, 2016.
+
+78.  R. Khan, I. Ali, M. Zakarya, M. Ahmad, M. Imran, and M. Shoaib, “Technology-assisted decision support system for efficient water utilization: A real-time testbed for irrigation using wireless sensor networks,” IEEE Access, vol. 6, pp. 25 686–25 697, 2018.
+
+79.  Y. Chen, M. Li, P. Chen, and S. Xia, “Survey of cross-technology communication for IoT heterogeneous devices,” IET Communications, vol. 13, no. 12, pp. 1709–1720, 2019.
+
+80.  I. Almomani and A. Alromi, “Integrating software engineering processes in the development of efficient intrusion detection systems in wireless sensor networks,” Sensors, vol. 20, no. 5, p. 1375, 2020.
+
+81.  Y. Liu, X. Ma, L. Shu, G. P. Hancke, and A. M. Abu-Mahfouz, “From industry 4.0 to agriculture 4.0: Current status, enabling technologies, and research challenges,” IEEE Transactions on Industrial Informatics, vol. 17, no. 6, pp. 4322–4334, 2021.
+
+82.  F. Yang, L. Shu, Y. Liu, K. Li, K. Huang, Y. Zhang, and Y. Sun, “Poster: Photovoltaic agricultural internet of things the next generation of smart farming.” in Ewsn, 2019, pp. 236–237.
+
+# 12 Smart Health Monitoring and Management System
+
+M. Junaid Gul
+
+Yeungnam University, Daegu, South Korea
+
+Anand Paul
+
+Kyungpook National University, Daegu, South Korea
+
+Mucheol Kim and Seungmin Rho
+
+Chung-Ang University, Seoul, South Korea
+
+DOI: [10.1201/9781003326236-12](https://dx.doi.org/10.1201/9781003326236-12)
+
+## 12.1 Introduction
+
+Innovative technologies now encircle humans, and ever-advancing technologies affect our daily lives. Smart healthcare is a term that has gained hype in recent years and is helping communities worldwide. Smart healthcare, or e-healthcare, is subdivided into SHMMS. The fundamental functionalities of smart healthcare are to collect and process healthcare data into knowledge, which helps to take proper actions \[1, 2 and 3\].
+
+The Internet of Things (IoT) opens new standards for technology and changes your lifestyle. IoT is everywhere from bus stops to our gadgets. Smart cities get the most benefits out of IoT technologies. IoT is keeping an eye on pollution, electricity generation, and consumption and making us more effective in the decision-making process. Under the hood, IoT is a fancy term for sensors that are connected via a network to communicate between servers and themselves. IoT technology is vulnerable to security and privacy threats. Cyber-attacks can result in the malfunctioning of IoT devices and compromise security and privacy \[4\]. Data integrity is also a key factor in the IoT ecosystem as data is required to be encrypted, but IoT technology lacks such functionality. Researchers are working on this issue but implementing security measures across the communication channel \[5\] is still an open challenge and thus requires more exploration. To overcome some of the IoT issues, blockchain technology can be explored as it inherits security and privacy properties.
+
+
+
+
+-   [区块链](https://en.wikipedia.org/wiki/Blockchain)也是一项前景广阔的技术，为数据安全和隐私问题提供解决方案。国际商业机器（IBM）为企业和高管创造了了解新兴区块链技术的机会，以便像医疗行业这样的组织能够轻松采用基于区块链的框架。区块链具有多种潜力，可创建大量可靠且多功能的网络，提供可行的解决方案和框架，以探索新的与数据和消费者交互的方式，并以高度的安全性和隐私性实现。医院和医疗机构希望尽可能准确地治愈和诊断疾病，但组织在达成任何结论时都高度依赖可用数据。医疗记录管理系统如今已广泛可用，记录数据可以传输到相应的医疗中心。然而，当前系统缺乏数据保密性，易受数据篡改攻击，这使得相关组织难以信任数据，导致医生重新检查患者。为避免任何影响，医院会重新进行检测，结果是成本增加且时间浪费。时间和成本是医疗行业的关键因素，区块链可以通过在组织之间以保密方式通信，为可靠的数据可用性提供坚实的基础。数据（在医疗术语中称为“医疗数据”）的传输和存储是关键挑战，因为数据可能通过窃听\[6］、中间人攻击或任何其他导致数据泄露的攻击被篡改。医疗数据应保持私密，仅在患者及相关组织或人员同意的情况下共享。此类数据披露会破坏保密性，甚至在数据被操纵的情况下对患者构成危险。由于高风险因素，医疗数据应在加密后传输。加密医疗数据确保了可靠性\[7］，使医生在诊断患者时能够信赖它。虽然区块链提供更高的安全性，但它缺乏某些能力——如理解数据以处理并发现发送和接收数据中的异常。结合机器学习概念的区块链可以解决这一问题。
+
+机器学习（ML）是人工智能的一个子分支。ML 概念和算法使系统能够理解数据并产生结果，而无需显式编程。一旦 ML 模型在可用数据上训练完成，它即可用于分类、聚类、回归和集成。在物联网（IoT）领域，ML 可用于降低维度，使数据更适合存储在区块链上。随着 ML 的重要性日益提升，它能够解决区块链管理系统的底层问题。ML 概念可以自动化那些本应困难、成本高且出错概率大的区块链管理流程。
+
+本章在引言部分介绍了物联网、医疗物联网、区块链和机器学习的概念。第 12.2 节 和 第 12.3 节 对医疗物联网提供了对当前和未来物联网和医疗物联网趋势的深入洞察。第 12.4 节 和 第 12.5 节 讨论了医疗领域区块链的应用场景，不仅强调医疗物联网与区块链的结合，还提供了一些可用于简化医疗或医疗相关程序的可开发案例。随后，作者讨论了机器学习在区块链中的概念，特别是强化学习。为提供一个稳健的示例，作者提出了一个框架作为使用场景，该框架能够更深入地洞察构建基于区块链和机器学习的医疗监测与管理系统的方法。章节末尾的使用场景结果支持了本章所分享的信息。最后，作者以总结结束本章。
+
+## 12.2 背景
+
+医疗监测和管理系统为特定功能量身定制\[8, 9, 10, 11, 12 和 13］。监测体温至关重要，尤其是在发烧期间。体温在到达医疗机构之前可能会发生变化。特别是在新冠疫情期间，实时体温监测系统是必需的。利用异构医疗物联网设备与云服务的实时体温监测系统已被证明能够有效将数据发送至相应医院\[14, 15, 16 和 17］。尽管云端监测服务可行，但将处理负载更靠近用户的雾端和边缘计算可以实现更快的与医疗组织的通信，并使雾端和边缘计算显得更为合理的选择\[18, 19, 20, 21, 22, 23 和 24］。医疗物联网还为监测血压提供医疗系统。血压监测需要另一个人操作，去医院就诊可能导致血压读数不准确。医疗物联网通过读取患者脉搏来监测血压\[25, 26, 27, 28 和 29］，并将实时血压数据发送至医疗中心，以生成警报从而挽救生命。
+
+
+
+
+Kevin Ashton 创造了物联网（IoT）一词，而他在工作于普乐集团时提出了将射频识别（RFID）芯片嵌入产品以进行追踪的设想。通过供应链追踪产品的优势在全球范围内得以实现，因此“IoT”这一术语受到关注。IoT 设备可以是任何带有传感器的设备，并且应能够通过互联网传输数据。这种聚合使得 IoT 更具可行性，因为异构设备可以相互通信以获取可行的结果。智能家居电器（如空调）是此类场景的例子，用户可以发送指令开启空调，传感器则在房间达到设定温度后自动关闭。这既可以为消费者节省每月的电费，也能帮助电力网降低发电成本和时间。该例子展示了 IoT 设备在现代的有效性，IoT 设备可以形成闭环工作，提供更好的服务，并尽可能保持环境绿色。Figure 12.1 展示了 IoT 设备的生态系统。这种增长表明 IoT 在未来的重要性。IoT 市场预计到 2026 年将达到 1.40 万亿美元 \[33\]。IoT 使世界更加互联，因为机器越来越小，行业专注于设备执行特定或有限的任务，而不是在单一单元中完成所有工作。创建设备网络卸载了负担，构建了协作环境，使每个设备都能执行其指定的计算。执行单一任务的设备更受青睐，因为它们更易维护和制造。软件开发流程更加聚焦，因为设备执行有限数量的计算。
+
+![Figure 12.1 IoT ecosystem.](img/fig12_1_B.jpg)
+
+Figure 12.1 IoT ecosystem.
+
+![Figure 12.2 Key trendsin IoT.](img/fig12_2_B.jpg)
+
+Figure 12.2 Key trendsin IoT.
+
+Figure 12.3 展示了从 2004 年 1 月到 2022 年 2 月在谷歌搜索引擎中“IoT”搜索趋势。我们可以观察到大约十年内没有大幅上升，但从 2015 年起呈上升趋势。同样，我们还尝试了“医疗 IoT”这一术语，以通过谷歌搜索趋势分析最近的 MIoT 发展情况。
+
+![Figure 12.3 Search trend of the term IoT.](img/fig12_3_B.jpg)
+
+Figure 12.3 Search trend of the term IoT.
+
+Figure 12.4 展示了“MIoT”搜索趋势。由于初期的波动不确定，我们无法从 2004 到 2009 年得出结论或提供任何实质性推理。自 2010 年起，数据线保持稳定，并呈现出低缓慢上升的趋势。我们可以预期 MIoT 的重要性正在逐步被认可。因此，该领域需要更多的研究和探索。MIoT 采集医疗数据，在医疗领域，及时准确的数据至关重要，这可能在生死之间起到决定性作用。MIoT 设备可用于心脏病患者，帮助他们避免即将发生的心脏病发作。设备可以感知心率及其他相关变量，在发出警报的同时向医院发送提醒，以便在严重损伤发生前采取行动。老年人跌倒也是近年来备受研究关注的重要问题。研究人员转向 MIoT 设备，因为它们可以在检测到血糖或氧气水平后感知患者可能跌倒，并发送提前警报，使患者在时间尚未到来前坐下或躺下。MIoT 设备的几个关键需求包括低延迟、足够的带宽以满足所需场景、安全性以及隐私保护。
+
+![Figure 12.4 Search trends of the term MIoT.](img/fig12_4_B.jpg)
+
+Figure 12.4 Search trends of the term MIoT.
+
+Table 12.1 列出了 MIoT 通信技术在数据速率、覆盖范围和工作频率方面的特性。根据患者的健康状况和场景，这些通信技术可供选择。MIoT 还包括可穿戴设备，通过 Wi‑Fi、蓝牙或两者结合的通信技术监测心率并发送/接收数据。此类技术在创建患者监测环境方面发挥着重要作用，因为蓝牙的覆盖范围较短，而 Wi‑Fi 能够在更远距离传输信号，相比蓝牙。如果范围和快速传输是关键因素，则可以构建 mesh 网络环境，使患者在日常活动中进行，监测系统能够收集医疗数据。
+
+Table 12.1 MIoT Data Rate, Range, and Frequency \[34\]
+
+| Technologies || Data Rate || Range || Frequency (Band) |
+| --- | --- | --- | --- |
+| RFID || 106–424 Kbps || 20 m || 13.56 MHz |
+| --- | --- | --- | --- |
+| Bluetooth || 1,2,3 Mbps || 80–115 m || 2.4 GHz |
+| LoRa WAN || 300 Bps–37.5 kbps || 3–4 km || 169–915 MHz |
+| NFC || 106–424 Kbps || 20 cm || 13.56 MHz |
+| ZigBee || 250 kbps || 10–100 m || 2.4 GHz |
+| UWB || 53–480 Mbps || 10 m || 3.1–10.6 GHz |
+| WSN || 80–250 kb/s || 20–100 m || 2.45 GHz |
+| 50 Network || 5–10 Gibs || 1,000 feet || 28 GHz 39 GHz |
+
+MIoT 设备在医疗行业的应用范围不限于通过机器人自动化医疗、药品存储、残障人士防盗监控系统、可穿戴设备实时监测、病人警报和警报系统、智慧医院及医疗中心等。
+
+尽管 MIoT 设备在帮助人们方面表现出色，但它们也存在局限性——在安全性和实现缺陷方面，如 Table 12.2 所示。
+
+Table 12.2 Limitation of MIoT Communication Technologies \[34\]
+
+| Technologies || Security || Drawbacks |
+| --- | --- | --- |
+| RFID || Encryption (AES, DES) || No authorization |
+| --- | --- | --- |
+| Bluetooth || Secure pairing 128-AES encryption || Blue jacking |
+| LoRa WAN || Authentication, Encryption || Low bandwidth |
+| Wi‑Fi || Authentication, Authorization || Eavesdropping |
+| NFC || Authentication || Hacking |
+| ZigBee || encryption Integrity || Fixed key |
+| UWB || Passive keyless entry || Need large frequency range |
+| IrDA (Infrared) || Line of sight and exceptionally low bit error rate || Data transfer is very less |
+| WSN || Encryption Authentication || DOS attack |
+| 50 Network || Authentication, Authorization || Distributed DoS. Intercell Interference |
+
+在 Table 12.2 中指出的缺点是研究的主题，相关研究正在进行，旨在解决 MIoT 中的安全问题。MIoT 还面临安全、数据完整性和完整性、基础设施建设成本、缺乏标准以及连接性等挑战。
+
+## 12.4 区块链在医疗中的作用
+
+
+
+
+Blockchain 可以在转变医疗机构方面发挥重要作用。健康行业面临诸如在涉及的医疗中心之间安全共享数据、数据的完整性、可用性和可靠性等挑战 \[35, 36, 37 and 38\]. 区块链技术提升了安全性、完整性、加密数据共享以及近乎实时的数据可用性。与物联网（MIoT）结合时，数据由 MIoT 设备生成。新建块用于存储接收到的医疗数据。在创建块的所需大小后，数据会广播到节点。节点是矿工，负责根据区块链公司的业务规则计算哈希值。块的大小会因不同的区块链服务提供商执行的业务规则而有所不同。计算哈希值的难度也取决于区块链服务提供商。在上述步骤之后，节点会发起共识。简单来说，共识是检查所有参与节点是否达成相同哈希值的过程。如果所有节点都同意该哈希值，则区块被验证并发送到区块链中。区块链通常是一个更广泛的概念，但在各种书籍和论文中，作者根据上下文将其指代为存储介质。用于保存已验证块的数据库也被称为账本。区块链账本或数据库保存加密数据，并将其与前一个块链接，以保持连续性。区块链的连续性使得区块链成为一串通过前一个块的哈希值相连的块。如果一个块的哈希值被修改，之后的所有块都会出错。这种现象使得很容易识别和定位数据被非法修改的位置，并采取适当的反措施。
+
+`Figure 12.5` 展示了在 Google 搜索引擎中搜索 “blockchain” 这一词条的情形。虽然从这一行可以看出趋势相对稳定，但我们无法推断区块链的受欢迎程度出现了重大下降。研究人员正在探索区块链能够提供的解决方案，以增强安全性和隐私性。
+
+![Figure 12.5 Blockchain search rate.](img/fig12_5_B.jpg)
+
+Figure 12.5 Blockchain search rate.
+
+区块链生态系统本身是一个复杂的架构。创建区块链基础设施需要特定的网络设备。构建区块链基础设施的成本很高，企业仍对区块链的可行性持不确定态度。`Figure 12.6` 展示了区块链基础设施的复杂性。区块链生态系统和基础设施可以因业务和安全需求而有所不同。区块链基础设施的基本结构可分为四个部分。用户域部分是客户端连接区块链服务的区域。客户端部分是区块链服务的消费者，矿业域包含负责执行哈希运算、区块链验证和存储的节点，所有共识算法都可以在此区域内部署。
+
+![Figure 12.6 Workflow of blockchain.](img/fig12_6_B.jpg)
+
+Figure 12.6 Workflow of blockchain.
+
+在继续前进之前，我们必须考虑 `Table 12.3` 中提到的关键问题。这些问题有助于识别需求，从而简化区块链的构建过程。在 MIoT 中，我们将追踪并记录患者数据。需要捕获的是患者当前状况的信息和知识，而区块链正好适合医疗组织和医疗中心。`Figure 12.7` 展示了区块链的基本构建块。
+
+Table 12.3 Key, Feasibility Questionnaire for Blockchain
+
+| 目标 |  | 想要捕获的价值 |  | 目标受众 |
+| --- | --- | --- | --- | --- |
+| • 记录 | • 信息和知识 | • 客户 |
+| • 追踪 | • 归属和责任 | • 员工 |
+| • 验证 | • 访问或权限 | • 供应商 |
+| • 聚合 | • 决策权或投票 | • 生产者或制造商 |
+|  | • 所有权或激励 | • 债权人或投资者 |
+|  | • 声誉和信任 | • 政府 |
+|  | • 合同 | • 公民 |
+|  | • 交易 |  |
+
+![Figure 12.7 The basic structure of the block.](img/fig12_7_B.jpg)
+
+Figure 12.7 The basic structure of the block.
+
+如 `Figure 12.8` 所示，区块链有三种主要类型，任何一种或多种组合均可用于构建医疗行业的区块链服务。这三种区块链各自抑制特定属性，如数据暴露程度、共识机制以及存储介质。
+
+![Figure 12.8 Types of blockchain.](img/fig12_8_B.jpg)
+
+Figure 12.8 Types of blockchain.
+
+医疗机构或患者可能希望在全国范围内共享区块链医疗数据，以便医生轻松获取患者的病史并准确开具药物。通过区块链创建可信赖的平台，医疗数据可以在更高安全性下存储和共享。由于区块链中的数据难以篡改，医生和医疗机构会信任从该区块链系统中获取的信息。区块链医疗管理系统可提供数据保护、疾病追踪及来源、可互操作的医疗记录等功能，同时实现数据及每一步骤的透明。在构建区块链前，必须确定所需的功能，如 `Table 12.4` 所示。
+
+Table 12.4 Functional Properties of the Blockchain
+
+| 公共区块链 | 私有区块链 | 联盟或联邦区块链 |
+| --- | --- | --- |
+| 任何人都可以运行 BTC/LTC 全节点 | 任何人都不能运行全节点 | 联盟成员中选定的成员可以运行全节点 |
+| 任何人都可以发起交易 | 任何人都不能发起交易 | 联盟成员中选定的成员可以发起交易 |
+| 任何人都可以审查/审计区块链 | 任何人都不能审查/审计区块链 | 联盟成员中选定的成员可以审查/审计区块链 |
+
+### 12.5 区块链医疗应用场景
+
+区块链在 MIoT 中的一个重要特点是患者拥有数据所有权。医疗数据随时间戳和其他信息记录，以确保透明。随着区块链在金融领域已经奠定基础，患者可以通过区块链钱包进行支付。区块链基于的医疗系统能够提供患者近乎实时的数据，从而让医生根据数据精准开药 \[39\]. 这不仅让医疗机构受益，患者也能够出售或自愿提供数据用于科研，并积极参与实验和分析。此外，区块链可记录患者的药物记录，帮助医疗研究人员选择并跟踪新药或疫苗的临床试验，依赖区块链数据。如果某些患者对药物出现化学反应，医生可以迅速开具替代药物。
+
+#### 12.5.1 患者中心 MIoT 数据
+
+
+
+-   存储和维护患者病历是一项挑战性任务，即使在基础设施完善的发达国家也如此。政府、地方政府和医疗中心面临数据不完整、不可靠且无法为患者的历史健康提供任何洞察的挑战，因此许多医疗错误发生。医疗错误是指医生依赖于历史数据，但这些数据被篡改或记录不清而导致的错误。由于这些错误，每年在美国有大量死亡。[Figure 12.9 展示了一个避免此类医疗错误的抽象模型 \[40\]。
+
+![Figure 12.9 A potential model to improve patient care and facilitate.](img/fig12_9_B.jpg)
+
+Figure 12.9 A potential model to improve patient care and facilitate.
+
+### 12.5.2 Cost Reduction
+
+将区块链引入医疗生态系统可以通过简化底层流程来降低运营成本。研究 \[41\] 显示，医疗行业在几年内就能将运营成本削减至上百亿美元。这种削减之所以可能，是因为区块链可以降低数据安全成本 \[42\]，因为区块链不易被黑客攻击，同时还能降低管理和行政成本、保险欺诈以及其他相关运营成本。Figure 12.10 展示了美国的年度支出，我们可以观察到图表呈现出持续上升的趋势。
+
+![Figure 12.10 US per year healthcare expenditures.](img/fig12_10_B.jpg)
+
+Figure 12.10 US per year healthcare expenditures.
+
+### 12.5.3 Identity and Credential Verification
+
+区块链可以帮助医疗系统存储和追踪医务人员数据 \[43\]。因此，医务人员的某些资质可以随时在线验证。在医生前往其他医疗机构的使用案例中，该机构可以验证医生的资质。这种身份和资质验证有助于医疗机构轻松招募医生。同样，如果因缺乏专科医生而医院需要求助，区块链也能验证医生的资质，因为在该场景中这非常重要。所有处方和诊断记录都将在区块链上维护，以备将来参考。
+
+### 12.5.4 Smart Contract-Based Insurance for Fraud Detection
+
+保险欺诈在全球范围内普遍存在，各国仍在努力减少此类挑战 \[44\]。通过构建智能合约并将其与区块链连接，可以减少保险合同争议。传统上，合同分别由客户与医院、客户与保险公司签订，这导致诸多争议，例如某些疾病缺乏覆盖。维护一个单一的智能合约将对所有相关方都可用，并可在需要时进行检查。患者和医院可以查看合同的单一版本，从而减少保险欺诈。
+
+### 12.5.5 IoT-Based Secure Remote Monitoring
+
+远程监测已被广泛采用，并使医疗行业能够采取主动措施。区块链可以在该使用案例中部署，因为它能确保只有合法或授权用户才能从远程传感设备中检索数据 \[45\]。
+
+## 12.6 Blockchain with Machine Learning
+
+机器学习（ML）是人工智能的一个子类，如图 12.11 所示。ML 是一种过程，它教会计算机（算法）分析并从提供的数据中学习特定特征，使算法的决策过程达到无需进一步人工干预的程度。
+
+ML 主要用于解决回归和分类问题。ML 分为四种类型：
+
+*   监督学习
+
+*   无监督学习
+
+*   半监督学习
+
+*   强化学习
+
+### 12.6.1 Supervised Learning
+
+监督学习基于模型，试图通过参数化的超调参数调整过程，建立预测输出与原始输出之间的关系。要训练监督学习模型，需要标记数据。标记数据确保模型能够提取准确的特征。
+
+![Figure 12.11 Artificial Intelligence in a glance.](img/fig12_11_B.jpg)
+
+Figure 12.11 Artificial Intelligence in a glance.
+
+如果第一个 epoch 后错误较高，算法会调整权重，尝试使预测输出与提供的标记输出匹配。回归问题常见的误差函数有均方误差和绝对误差。均方误差和绝对误差的数学表达式分别在 Eq. 12.1 和 12.2 中表示。
+
+(12.1)  
+
+$$~Mean~Squared~Error~ = \\frac{\\sum\_{i = 1}^{n}{(y\_{i} - \\hat{y})}^{2}}{n}$$  
+
+(12.2)  
+
+$$\\text{Mean~Absolute~Error~} = \\frac{\\sum\_{i = 1}^{n}\\left| {y\_{i} - {\\hat{y}}\_{i}} \\right|}{n}$$  
+
+### 12.6.2 Unsupervised Learning
+
+无监督学习主要处理未标记的聚类问题。与监督学习不同，监督学习需要标记数据来训练模型，而无监督学习则试图理解未标记数据中的隐藏模式，以赋予或预测数据点的准确聚类。为了构建稳健的模型，通常会尝试减小聚类中心点的欧几里得距离。Figure 12.12 展示了在二维空间中计算欧几里得距离的公式。
+
+![Figure 12.12 Two-dimensional Euclidean distance.](img/fig12_12_B.jpg)
+
+Figure 12.12 Two-dimensional Euclidean distance.
+
+### 12.6.3 Semi-Supervised Learning
+
+半监督学习结合了监督学习和无监督学习的优势。半监督学习解决了标记数据不足以及因缺乏标记数据导致模型收敛错误的问题。半监督学习利用标记和未标记数据共同训练模型，从而节省了对大量数据集进行标记所需的时间和成本。常用的交叉熵误差函数的变体用于评估模型，如数学表达式 Eq. 12.3 所示。
+
+(12.3)  
+
+$$\\text{~loss~} = \\left\\{ \\begin{matrix} {\\left. \\text{~crossentropy~}\\left( {x\_{i},y\_{i}} \\right) + \\right\\| f\_{\\theta}\\left( x\_{i} \\right) - f\_{\\theta}\\left( {x\_{i} \\| \\text{augumented}\\left( x\_{i} \\right)\\|_{2}^{2},x\_{i} \\in X\_{\\text{labelled~}}} \\right. \\\\ \\left\\| f\_{\\theta}\\left( x\_{i} \\right) - f\_{\\theta}\\left( {x\_{i} \\| \\text{augumented}\\left( x\_{i} \\right)\\|_{2}^{2},x\_{i} \\in X\_{\\text{unlabelled~}}} \\right. \\right. \\end{matrix} \\right$$  
+
+### 12.6.4 Reinforcement Learning
+
+强化学习（RL）与人类学习过程非常相似。人类通过自身行动的反馈来学习。同样，强化学习依赖于环境的反馈来学习。人类所做的每一次行动都有后果。后果可以是正面的也可以是负面的。如果行动的结果是正面的，人类倾向于沿着这条路走；否则，他们会在未来避免产生负面结果的行为。强化学习亦是如此：对于每个良好行为或正面反馈，会给予奖励；如果行动导致负面或不良反馈，则会给予惩罚，以确保在学习后模型会避免产生负面反馈的行为。与监督学习一样，强化学习不使用标记数据，但通过反馈进行学习。Figure 12.13 展示了强化学习的基本工作流程。强化学习中有一些特定的术语，如代理、环境、动作、状态、奖励、策略、价值和 Q 值。
+
+![Figure 12.13 Reinforcement learning workflow.](img/fig12_13_B.jpg)
+
+
+
+
+-   图 12.13 强化学习工作流程
+
+总体而言，代理在不知道反馈将会是什么的情况下，被编程去作用于环境。它类似于试错法，只有当行动产生正回报时，反馈才提供信息；否则，代理将面临惩罚。在 RL 中使用的符号在 图 12.14 中所示。
+
+图 12.14 RL 中的符号
+
+| Symbol || Meaning |
+| --- | --- |
+| *s* ∈ *S* || 状态。 |
+| *a* ∈ *A* || 行动。 |
+| r ∈ R || 奖励。 |
+| S[*t*], A[*t*], R[*t*] || 一个轨迹中时刻 **t** 的状态、行动和奖励。我可能会偶尔使用 s[*t*], a[*t*], r[*t*] 来表示。 |
+| γ || 折扣因子；对未来奖励不确定性的惩罚；0 < γ ≤ 1 |
+| G[*t*] || 回报；即折扣的未来奖励；$\\text{G}\_{t} = {\\sum\_{k = 0}^{\\infty}\\gamma^{k}}\\text{R}\_{t + k + 1}$ |
+| *P*(*s′,r|s,a*) || 从当前状态 *s* 通过动作 *a* 获得下一个状态 *s*2 并获得奖励 *r* 的转移概率。 |
+| *π*(*a|s*) || 随机策略（代理行为策略）；*π[θ]*(.) 是由 θ 参数化的策略。 |
+| *μ*(*s*) || 确定性策略；我们也可以把它标记为 *π*(*s*)，但使用不同的字母可以更好地区分随机策略和确定性策略，从而无需进一步解释即可判断策略的类型。无论是 *π* 还是 *μ*，都是强化学习算法所要学习的内容。 |
+| *V*(*s*) || 状态值函数，衡量状态 *s* 的预期回报；*V[w]*(.) 是由 *w* 参数化的值函数。 |
+| *V^π*(*s*) || 当我们遵循策略 *π* 时，状态 s 的值；*V^π*(*s*) = E[*a~π*]\[*G[t]*|*S[t]* = *s*\] |
+| *Q*(*s, a*) || 动作值函数，类似于 *V*(*s*)，但它评估状态-动作对 (*s*, *a*) 的预期回报；*Qw*(.) 是由 *w* 参数化的动作值函数。 |
+| *Q^π*(*s*, *a*) || 当我们遵循策略 *π* 时，(状态, 动作) 对的值；*Q^π*(*s*, *a*) = E[*a~π*]\[*G[t]*|*S[t]* = *s*, *A[t]* = *a*\]. |
+| *A*(*s*, *a*) || 优势函数，*A*(*s*, *a*) = *Q*(*s*, *a*)\`*V*(*s*)；它可以被视为以状态值作为基线的另一种 Q 值形式，具有更低的方差。 |
+
+#### 12.6.4.1 RL Agent
+
+RL agent 被描述为一种智能或聪明的软件或机器，它可以观察环境的变化并据此行动。理论上，RL agent 具备一种心理状态，即信念或知识，这使得它能够观察变化。有几种类型的 RL agent，例如：简单反射、基于模型的反射、目标导向、效用导向和学习型 agent。在抽象层面上，RL agent 被分为两类：物理 agent 和虚拟 agent。图 12.15 展示了 simplex agent 的工作流程和架构。
+
+![Figure 12.15 RL agent workflow and architecture.](img/fig12_15_B.jpg)
+
+图 12.15 RL agent workflow and architecture.
+
+#### 12.6.4.2 Bellman Equation
+
+1953 年，Richard Ernest Bellman 在动态编程领域引入了一个方程，用于在特定时点通过结合之前的状态来计算某些值。数学上，
+
+贝尔曼方程可以写作 Eq. 12.4。
+
+(12.4)  
+
+*V*(*s*) = max \[*R*(*s*,*a*)+*γ**V*(*s*^′)\]  
+
+其中 *V*(*s*) 是某一点的值，*a* 是动作，*s* 是代理在采取动作后到达的状态，*R* 是反馈后的奖励，*V*(*s*^′) 是前一个状态的值，*γ* 是折扣因子。该函数的目标是通过跟踪奖励和之前的状态来最大化回报。图 12.16 展示了强化学习的一些应用。
+
+![Figure 12.16 Applications of reinforcement learning.](img/fig12_16_B.jpg)
+
+图 12.16 Applications of reinforcement learning.
+
+#### 12.6.4.3 Markov Decision Process
+
+贝尔曼方程为动态编程奠定了基础，而马尔可夫决策过程（MDP） formalizes RL 相关问题。如果环境是完全可观测的，马尔可夫过程可以用来建模环境的动态，这意味着代理可以观察环境中的所有元素。
+
+我们可以看到，图 12.17 中的 RL 模型的简单工作流程现在已经包含了之前的状态。状态会跟踪代理在某一时刻的位置。MDP 需要四个元素：有限数量的状态、有限数量的动作、在状态之间转移时的奖励或惩罚，以及下一个状态和动作的概率。代理从反馈中学习哪些状态是好的（给予正向反馈），哪些是坏的（给予负向反馈），并开始学习避免坏的状态以最大化回报。MDP 的优化目标是选择最佳策略以最大化累计奖励，如数学公式 Eq. 12.5 所示。
+
+![Figure 12.17 RL with Markov decision process workflow.](img/fig12_17_B.jpg)
+
+图 12.17 RL with Markov decision process workflow.
+
+(12.5)  
+
+$$E\\left\\lbrack {{\\sum\\limits\_{t = 0}^{\\infty}\\gamma^{t}}R\_{at}\\left( s\_{t}\\rightarrow s\_{t + 1} \\right)} \\right\\rbrack$$  
+
+#### 12.6.4.4 Reinforcement Learning Algorithms
+
+基于 RL 的算法侧重于教会计算机玩像国际象棋这样的智力游戏，但受游戏启发的其他应用（如漫游器着陆）也已出现。Q-learning 是最著名的算法之一，也是最早利用强化学习的算法。Q-learning 是一种 off-policy 算法，可以用于时差学习，算法可以比较连续的预测。图 12.18 展示了 Q-learning 算法的工作流程。
+
+![Figure 12.18 Workflow of the Q-learning algorithm.](img/fig12_18_B.jpg)
+
+图 12.18 Workflow of the Q-learning algorithm.
+
+#### 12.6.4.5 SHMMS
+
+在本节中，我们将以智能健康监测与管理系统为使用案例场景进行评估。我们的 SHMMS 被泛化为三层结构，如 图 12.19 所示。每一层都具有其功能。我们在前面的章节中简要讨论了使用强化学习算法进行训练的 agent。为了保持使用案例的简洁和有效，我们在强化学习框架下使用神经网络作为模型。一个典型的神经网络驱动的强化学习模型是 Actor 2 Critic（A2C）。A2C 现在已有更高级的版本 A3C。神经网络模型的任务是识别可穿戴设备数据中的任何异常。可穿戴设备数据来自次要和主要来源，用于评估强化学习模型的有效性。
+
+![Figure 12.19 Abstract framework SHMMS.](img/fig12_19_B.jpg)
+
+图 12.19 Abstract framework SHMMS.
+
+区块链层包含数据库和矿工节点，负责计算可穿戴设备数据的加密哈希。该层是去中心化的，但为了与第四层通信，区块链需要一些中央管理系统来执行智能合约，以及 agent 和 MIoT 层。
+
+
+
+
+Agent 层由多个通过强化学习训练的 Agent 组成，用于检测数据中的任何异常。如果检测到异常，Agent 将停止通信，从而防止数据到达矿工，避免在错误数据上计算加密哈希导致成本增加。矿工的成本本身就不低，而计算错误数据是不可取的。在第二种情况中，当 Agent 检测到医疗紧急异常时，Agent 会提前通知相应的权威部门。如果没有异常且数据一致，Agent 将依据智能合约规则执行，该规则规定了在区块链上记录每一次观测的必要性或严重程度。医疗情况会因条件而异，智能合约和 Agent 可以防止矿工处理不可用的数据，从而节省区块链数据库的存储容量。
+
+第三且最后一层是 MIoT 层。该层负责生成数据。在我们的使用案例中，数据是通过持续监测每分钟心跳的可穿戴设备生成的。
+
+为了评估模型的表现，我们设计了一项实验。在实验中，我们固定了集数为 49，并在第七次会话中运行模型七次。奖励是第一个观察变量，因为它表明模型正在做出良好的政策和决策。如果模型持续累积奖励，则在终止点后会被重置。这是一个连续场景，因此我们的终止点在每集结束时累积最高奖励。Figure 12.20 为模型在奖励方面提供了洞察。在图中，我们可以看到奖励从较低端开始，随着集数增加而上升。这种坡度表明我们的模型在每集结束前累积奖励并逐步学习，直到终止点。另一个事实是，所有会话的奖励起点并不相同。在强化学习中，这很正常，因为在开始时模型或 Agent 一无所知，会采取随机动作。随着集数推进，Agent 学习得更多，直到超参数得到最高可能的调整。
+
+![Figure 12.20 Episodic and average reward.](img/fig12_20_B.jpg)
+
+Figure 12.20 Episodic and average reward.
+
+为了确认模型正在学习，我们还可以检查损失指标。Figure 12.21 提供了关于损失指标的信息。损失函数在图中呈现出杂乱的直线，这可能是由于初始的随机动作，或者在集数结束后重新开始时的随机性。从上述图中可以明显看出，训练正在进行良好，模型正在学习。强化学习需要广泛的训练过程，因此 49 集可能不足以提供深入的信息。根据我们的假设，我们可以进行另一次实验，检查每次会话的第一次奖励。这可以告诉我们模型在每集的第一步是否犯错，或者是否利用了前一集的知识。为此，我们取了某个点的奖励平均值并尝试构建趋势线。Figure 12.22 展示了趋势线以及一步和两步对平均奖励的预测。斜率不高，但这归因于强化学习需要大量训练，在 49 集后获得此斜率已属不错。
+
+![Figure 12.21 Episodic and average loss.](img/fig12_21_B.jpg)
+
+Figure 12.21 Episodic and average loss.
+
+![Figure 12.22 Trend line for the average reward with one and two step prediction.](img/fig12_22_B.jpg)
+
+Figure 12.22 Trend line for the average reward with one and two step prediction.
+
+Figure 12.23 提供了关于模型损失的信息。我们可以看到损失呈下降趋势。趋势线的斜率也相当不错；因此，通过这些评估我们可以断言模型正在学习并能够在可穿戴设备的数据中检测异常。
+
+![Figure 12.23 Trend line for average loss.](img/fig12_23_B.jpg)
+
+Figure 12.23 Trend line for average loss.
+
+总体框架主要依赖于 Agent 和区块链的安全性，以在医疗行业提供强大的框架。机器学习概念与 MIoT 结合，结合区块链，在训练完成后表现更好。我们也可以看到模型的短 coming——学习率较慢，可以进一步优化。
+
+## 12.7 Chapter Summary
+
+In this chapter, we discuss the challenges faced by the health sector and the importance of developing a framework where MIoT can work alongside blockchain and ML concepts. The chapter started with an example of an existing framework, but most of them are either using ML or blockchain. Moreover, we gather brief information about IoT, MIoT, blockchain, and ML concepts before going toward our use case. We discussed IoT, how IoT communicates in depth, and how more IoT-related domains are emerging. We covered the ML concept from starch and then studied reinforcement learning and its application. We also learned about blockchain and its properties and why it is more secure. The concept of mining is also presented in this chapter but up to a level so it remains more user readable as cryptography can lead to another mature domain to understand the functionality of the blockchain.
+
+## References
+
+1.  M. M. Kamruzzaman, “Architecture of smart health care system using artificial intelligence”, 2020 IEEE Int. Conf. Multimed. Expo Work. ICMEW 2020. 2020, doi: [10.1109/ICMEW46912.2020.9106026](https://dx.doi.org/10.1109/ICMEW46912.2020.9106026)
+
+2.  W. Li *et al.*, “A comprehensive survey on machine learning-based big data analytics for IoT-enabled smart healthcare system”, Mob. Networks Appl. Volume 26(1), pp. 234–252, 2021, doi: [10.1007/S11036-020-01700-6/FIGURES/5](https://dx.doi.org/10.1007/S11036-020-01700-6/FIGURES/5)
+
+3.  F. Ali *et al.*, “An intelligent healthcare monitoring framework using wearable sensors and social networking data”, Futur. Gener. Comput. Syst. Volume 114, pp. 23–43, 2021, doi: [10.1016/J.FUTURE.2020.07.047](https://dx.doi.org/10.1016/J.FUTURE.2020.07.047)
+
+4.  J. Li and Y. Hu, “Employing edge computing to enhance self-defense capabilities of IoT devices”, 2022 IEEE World AI IoT Congr. pp. 604–610, 2022, doi: [10.1109/AIIOT54504.2022.9817368](https://dx.doi.org/10.1109/AIIOT54504.2022.9817368)
+
+5.  H. Moudoud, Z. Mlika, L. Khoukhi, and S. Cherkaoui, “Detection and prediction of FDI attacks in IoT systems via hidden Markov model”, IEEE Trans. Netw. Sci. Eng. 2022, doi: [10.1109/TNSE.2022.3161479](https://dx.doi.org/10.1109/TNSE.2022.3161479)
+
+6.  M. H. Panahi Rizi and S. A. Hosseini Seno, “A systematic review of technologies and solutions to improve security and privacy protection of citizens in the smart city”, Internet of Things. Volume 20 p. 100584, 2022, doi: [10.1016/J.IOT.2022.100584](https://dx.doi.org/10.1016/J.IOT.2022.100584)
+
+7.  C. H. Liu, T. L. Chen, C. Y. Chang, and Z. Y. Wu, “A reliable authentication scheme of personal health records in cloud computing”, Wirel. Netw. pp. 1–11, 2021, doi: [10.1007/S11276-021-02743-7/TABLES/2](https://dx.doi.org/10.1007/S11276-021-02743-7/TABLES/2)
+
+8.  A. D. Jurik and A. C. Weaver, “Remote medical monitoring”, Computer (Long. Beach. Calif). Volume 41(4), pp. 96–99, 2008, doi: [10.1109/MC.2008.133](https://dx.doi.org/10.1109/MC.2008.133).
+
+
+
+9.  J. M. Ehrenfeld and M. A. Rehman, “Anesthesia information management systems: a review of functionality and installation considerations”, J. Clin. Monit. Comput. Volume 25(1), pp. 71–79, 2010, doi: [10.1007/S10877-010-9256-Y](https://dx.doi.org/10.1007/S10877-010-9256-Y).
+
+10.  A. Milenković, C. Otto, and E. Jovanov, “Wireless sensor networks for personal health monitoring: Issues and an implementation”, Comput. Commun. Volume 29(13–14), pp. 2521–2533, 2006, doi: [10.1016/J.COMCOM.2006.02.011](https://dx.doi.org/10.1016/J.COMCOM.2006.02.011).
+
+11.  Y. Yang, H. Wang, R. Jiang, X. Guo, J. Cheng, and Y. Chen, “A review of IoT-enabled mobile healthcare: Technologies, challenges, and future trends”, IEEE Internet Things J. Volume 9(12), pp. 9478–9502, 2022, doi: [10.1109/JIOT.2022.3144400](https://dx.doi.org/10.1109/JIOT.2022.3144400).
+
+12.  A. Vaidyam, J. Halamka, and J. Torous, “Enabling research and clinical use of patient-generated health data (the mindLAMP platform): Digital phenotyping study”, JMIR Mhealth Uhealth. Volume 10(1), p. e30557, 2022, [https//mhealth.jmir.org/2022/1/e30557](https://mhealth.jmir.org/2022/1/e30557); doi: [10.2196/30557](https://dx.doi.org/10.2196/30557).
+
+13.  K. B. Jyothilakshmi, V. Robins, and A. S. Mahesh, “A comparative analysis between hyperledger fabric and ethereum in medical sector: A systematic review”, Lect. Notes Data Eng. Commun. Technol. Volume 93 pp. 67–86, 2022, doi: [10.1007/978-981-16-6605-6\_5/COVER](https://dx.doi.org/10.1007/978-981-16-6605-6_5/COVER).
+
+14.  M. Sang *et al.*, “Ultrahigh sensitive Au-doped silicon nanomembrane based wearable sensor arrays for continuous skin temperature monitoring with high precision”, Adv. Mater. Volume 34(4), p. 2105865, 2022, doi: [10.1002/ADMA.202105865](https://dx.doi.org/10.1002/ADMA.202105865).
+
+15.  V. Bhardwaj, Rajat Joshi, and A. M. Gaur, “IoT-based smart health monitoring system for COVID-19”, SN Comput. Sci. Volume 3(2), pp. 1–11, 2022, doi: [10.1007/S42979-022-01015-1](https://dx.doi.org/10.1007/S42979-022-01015-1).
+
+16.  S. Ali and S. Parveen, “IoT-based smart healthcare monitoring system: A prototype approach”, In Intelligent Communication Technologies and Virtual Mobile Networks: Proceedings of ICICV 2022. pp. 441–452, 2023, doi: [10.1007/978-981-19-1844-5\_34](https://dx.doi.org/10.1007/978-981-19-1844-5_34).
+
+17.  R. M. Atta, “Cost-effective vital signs monitoring system for COVID-19 patients in smart hospital”, Health Technol. (Berl). Volume 12(1), pp. 239–253, 2022, doi: [10.1007/S12553-021-00621-Y/FIGURES/9](https://dx.doi.org/10.1007/S12553-021-00621-Y/FIGURES/9).
+
+18.  M. J. Gul, B. Subramanian, A. Paul, and J. Kim, “Blockchain for public health care in smart society”, Microprocess. Microsyst. Volume 80 p. 103524, 2021, doi: [10.1016/J.MICPRO.2020.103524](https://dx.doi.org/10.1016/J.MICPRO.2020.103524).
+
+19.  A. Singh and K. Chatterjee, “Securing smart healthcare system with edge computing”, Comput. Secur. Volume 108 p. 102353, 2021, doi: [10.1016/J.COSE.2021.102353](https://dx.doi.org/10.1016/J.COSE.2021.102353).
+
+20.  G. L. Santos *et al.*, “The internet of things for healthcare: Optimising e-health system availability in the fog and cloud”, Int. J. Comput. Sci. Eng. Volume 21(4), pp. 615–628, 2020, doi: [10.1504/IJCSE.2020.106873](https://dx.doi.org/10.1504/IJCSE.2020.106873).
+
+21.  R. Rajavel, S. K. Ravichandran, K. Harimoorthy, P. Nagappan, and K. R. Gobichettipalayam, “IoT-based smart healthcare video surveillance system using edge computing”, J. Ambient Intell. Humaniz. Comput. Volume 13(6), pp. 3195–3207, 2022, doi: [10.1007/S12652-021-03157-1/TABLES/5](https://dx.doi.org/10.1007/S12652-021-03157-1/TABLES/5).
+
+22.  I.S.B.M. Isa, T.E.H. El-Gorashi, M.O.I. Musa, and J.M.H. Elmirghani, “Energy efficient fog-based healthcare monitoring infrastructure”, IEEE Access. Volume 8, pp. 197828–197852, 2020, doi: [10.1109/ACCESS.2020.3033555](https://dx.doi.org/10.1109/ACCESS.2020.3033555).
+
+23.  P. Verma, R. Tiwari, W. C. Hong, S. Upadhyay, and Y. H. Yeh, “FETCH: A deep learning-based fog computing and IoT integrated environment for healthcare monitoring and diagnosis”, IEEE Access. Volume 10, pp. 12548–12563, 2022, doi: [10.1109/ACCESS.2022.3143793](https://dx.doi.org/10.1109/ACCESS.2022.3143793).
+
+24.  K. Lakshmanan and S. Arumugam, “An efficient data science technique for IoT assisted healthcare monitoring system using cloud computing”, Concurr. Comput. Pract. Exp. Volume 34(11), p. e6857, 2022, doi: [10.1002/CPE.6857](https://dx.doi.org/10.1002/CPE.6857).
+
+25.  K. Sangeethalakshmi, U. Preethi, and S. Pavithra, “Patient health monitoring system using IoT”, Materials Today: Proceedings. Volume 80, pp. 2228–2231, 2021, doi: [10.1016/J.MATPR.2021.06.188](https://dx.doi.org/10.1016/J.MATPR.2021.06.188).
+
+26.  A. D. Acharya and S. N. Patil, “IoT based health care monitoring kit”, Proc. 4th Int. Conf. Comput. Methodol. Commun. ICCMC 2020. pp. 363–368, 2020, doi: [10.1109/ICCMC48092.2020.ICCMC-00068](https://dx.doi.org/10.1109/ICCMC48092.2020.ICCMC-00068).
+
+27.  M. A. Khan, M. T. Quasim, N. S. Alghamdi, and M. Y. Khan, “A secure framework for authentication and encryption using improved ECC for IoT-based medical sensor data”, IEEE Access. Volume 8, pp. 52018–52027, 2020, doi: [10.1109/ACCESS.2020.2980739](https://dx.doi.org/10.1109/ACCESS.2020.2980739).
+
+28.  T. Mohanraj, B. Arunkumar, S. Shahulhammed, and R. Santhosh, “A review on Internet of Things (IoT) based pulse rate, blood pressure, body temperature monitoring system”, Proc. 4th Int. Conf. IoT Soc. Mobile, Anal. Cloud, ISMAC 2020. pp. 78–79, 2020, doi: [10.1109/I-SMAC49090.2020.9243350](https://dx.doi.org/10.1109/I-SMAC49090.2020.9243350).
+
+29.  N. Hashim, N. Norddin, F. Idris, S. Nur, I. M. Yusoff, and M. Zahari, “IoT blood pressure monitoring system”, Indones. J. Electr. Eng. Comput. Sci. Volume 19(3), pp. 1384–1390, 2020, doi: [10.11591/ijeecs.v19.i3.pp1384-1390](https://dx.doi.org/10.11591/ijeecs.v19.i3.pp1384-1390).
+
+30.  S. Albishi, B. Soh, A. Ullah, and F. Algarni, “Challenges and solutions for applications and technologies in the Internet of Things”, Procedia Comput. Sci. Volume 124, pp. 608–614, 2017, doi: [10.1016/J.PROCS.2017.12.196](https://dx.doi.org/10.1016/J.PROCS.2017.12.196).
+
+31.  K. Ashton, “Related content RFID-powered handhelds guide visitors at Shanghai expo despite sluggish growth, Taiwan’s RFID industry remains committed mobile RTLS tracks health-care efficiency RFID journal live! 2010 Report, Part 2”, That “Internet Things” Thing-RFID J. 2010, Accessed: Aug. 11, 2022. \[Online\]. Available: [`www.rfidjournal.com/article/print/4986`](http://www.rfidjournal.com)
+
+32.  S. C. Mukhopadhyay and N. K. Suryadevara, “Internet of things: Challenges and opportunities”, Smart Sensors, Meas. Instrum. Volume 9, pp. 1–17, 2014, doi: [10.1007/978-3-319-04223-7\_1/COVER](https://dx.doi.org/10.1007/978-3-319-04223-7_1/COVER).
+
+33.  A. Rejeb, K. Rejeb, S. Simske, H. Treiblmaier, and S. Zailani, “The big picture on the internet of things and the smart city: A review of what we know and what we need to know”, Internet of Things. Volume 19, p. 100565, 2022, doi: [10.1016/J.IOT.2022.100565](https://dx.doi.org/10.1016/J.IOT.2022.100565).
+
+
+
+34. T. Ramathulasi and M. Rajasekhara Babu, “综合调查物联网通信技术”，Adv. Intell. Syst. Comput. 卷 1054，第 303–311 页，2020 年，doi: [10.1007/978-981-15-0135-7_29/TABLES/2](https://dx.doi.org/10.1007/978-981-15-0135-7_29/TABLES/2)。
+
+35. B. K. Sarkar, “大数据在安全医疗系统中的应用：概念设计”，Complex Intell. Syst. 卷 3(2)，第 133–151 页，2017 年，doi: [10.1007/S40747-017-0040-1](https://dx.doi.org/10.1007/S40747-017-0040-1)。
+
+36. L. Zhang, J. Xu, P. Vijayakumar, P. K. Sharma, and U. Ghosh, “基于同态加密的隐私保护联邦学习在物联网驱动的医疗系统中的应用”，IEEE Trans. Netw. Sci. Eng. 第 1–17 页，2022 年，doi: [10.1109/TNSE.2022.3185327](https://dx.doi.org/10.1109/TNSE.2022.3185327)。
+
+37. S. V. Akram, P. K. Malik, R. Singh, G. Anita, and S. Tanwar, “区块链技术在各领域的采用：机遇与挑战”，Secur. Priv. 卷 3(5)，第 e109 页，2020 年，doi: [10.1002/SPY2.109](https://dx.doi.org/10.1002/SPY2.109)。
+
+38. U. Satapathy, B. K. Mohanta, S. S. Panda, S. Sobhanayak, and D. Jena, “基于 Hyperledger 的区块链的物联网应用安全通信框架”，2019 第十届国际计算机通信网络技术会议 (ICCCNT 2019)，doi: [10.1109/ICCCNT45670.2019.8944811](https://dx.doi.org/10.1109/ICCCNT45670.2019.8944811)。
+
+39. T. Lavigne, B. Mbarek, and T. Pitner, “用于紧急医疗服务的智能区块链应用”，Proc. 37th ACM/SIGAPP Symp. Appl. Comput. 2022，doi: [10.1145/3477314](https://dx.doi.org/10.1145/3477314)。
+
+40. J. Y. Park, Y. James, and H. Park, “韩国医疗错误的当前状态”，Sch. J. Appl. Sci. Res. 卷 1(4)，2018 年，浏览日期：2022 年 8 月 11 日。[Online]。可用：[www.innovationinfo.org](https://www.innovationinfo.org)
+
+41. K. Kakhi, R. Alizadehsani, H. M. D. Kabir, A. Khosravi, S. Nahavandi, and U. R. Acharya, “物联网医疗物和人工智能：趋势、挑战与机遇”，Biocybern. Biomed. Eng. 卷 42(3)，第 749–771 页，2022 年，doi: [10.1016/J.BBE.2022.05.008](https://dx.doi.org/10.1016/J.BBE.2022.05.008)。
+
+42. J. Wang, J. Chen, Y. Ren, P. K. Sharma, O. Alfarraj, and A. Tolba, “基于区块链工业物联网的数据安全存储机制”，Comput. Ind. Eng. 卷 164，第 107903 页，2022 年，doi: [10.1016/J.CIE.2021.107903](https://dx.doi.org/10.1016/J.CIE.2021.107903)。
+
+43. R. Cerchione, P. Centobelli, E. Riccio, S. Abbate, and E. Oropallo, “区块链将走进医院，数字化医疗服务：设计分布式电子健康记录生态系统”，Technovation。第 102480 页，2022 年，doi: [10.1016/J.TECHNOVATION.2022.102480](https://dx.doi.org/10.1016/J.TECHNOVATION.2022.102480)。
+
+44. G. Zhang, X. Zhang, M. Bilal, W. Dou, X. Xu, and J. J. P. C. Rodrigues, “基于区块链和深度学习的医疗保险欺诈识别”，Futur. Gener. Comput. Syst. 卷 130，第 140–154 页，2022 年，doi: [10.1016/J.FUTURE.2021.12.006](https://dx.doi.org/10.1016/J.FUTURE.2021.12.006)。
+
+45. G. Zhang and N. J. Navimipour, “IoT 导向的医疗管理系统全面系统综述：应用、技术、趋势与开放问题”，Sustain. Cities Soc. 卷 82，第 103914 页，2022 年，doi: [10.1016/J.SCS.2022.103914](https://dx.doi.org/10.1016/J.SCS.2022.103914)。
+
+# 13 污染监测与治理在智慧城市中使用物联网
+
+Javier Rocher, Sandra Viciano-Tudela, Alberto Ivars-Palomares, and Jaime Lloret
+
+Universitat Politècnica de València, Grao de Gandia, Spain
+
+DOI: [10.1201/9781003326236-13](https://dx.doi.org/10.1201/9781003326236-13)
+
+## 13.1 介绍
+
+自 20 世纪末以来，农村向城市迁移（农村外流）显著增加。这一现象始于工业革命，因为城市新增了就业机会。如今，55% 的人居住在城市，预计到 2050 年，这一比例将上升至 65% \[1\]。城市人口的增长导致社会冲突和环境退化。为提升生活质量并减少环境损害，实施了不同的政策，并引入新技术，这些政策和技术共同催生了所谓的智慧城市。与此同时，新型治理形式也在发展。
+
+### 13.1.1 智慧城市
+
+智慧城市概念近年来迅速发展。根据欧洲委员会的说法，“\[a\] 智慧城市是通过数字解决方案，使传统网络和服务更高效惠及其居民和企业的地方” \[2\]. 因此，智慧城市必须具备信息和通信技术（ICT）解决方案。智慧城市的历史可以追溯到 20 世纪 60 年代末的洛杉矶，当时使用了计算统计分析。随着 ICT 的改进，近年来越来越多的城市计划成为智慧城市。在这一过程中，企业发挥了重要作用。
+
+一个例子是 Cisco Systems，它与克林顿基金会合作，与旧金山、阿姆斯特丹和首尔于 2006 年共同推出 Connected Urban Development 计划，投资 2500 万美元。智慧城市的主要目标是通过数字化提升可持续性。需要强调的是，可持续性不仅从环境角度考虑，还包括人类和经济因素。
+
+智慧城市的支柱之一是物联网（IoT），它有多种定义。但大多数作者一致认为，IoT 包括智能手机、耳机、洗衣机、灯具、可穿戴设备等，这些设备连接互联网并能发送和接收信息\[3\]。
+
+用于监测的 IoT 设备配备微控制器或处理器，负责读取传感器数据并控制其开关。处理器的 RAM、闪存和计算能力高于微控制器，但微控制器成本更低\[8\]。选择哪种取决于所需的计算需求。IoT 项目通常使用处理器，将数据发送到互联网，由更强大的计算设备进行分析。
+
+
+
+
+-   物联网设备的一个问题在于能耗。在某些情况下，这些设备由电池供电。这意味着它们的能耗必须降低，以减少能源成本。已提出了不同的解决方案来减少这些设备的能源使用 \[[9\]。
+
+智慧城市是城市发展的未来。然而，需要解决的重要差距包括：(I) 智慧城市需要大量的资本投入。(II) 对技术服务和新技术的依赖增加。(III) 部分群体对新技术持不愿意或不适应的态度。(IV) 住房价格上涨阻碍了年轻一代获得住房。
+
+### 13.1.2 污染与环境退化
+
+污染是指对生命或基础设施有害的物质、能量或辐射的存在。人们通常认为人类导致所有污染和环境退化。然而，污染可以是人为的或自然的起源。自然污染事件的例子包括火山喷发，它们会向大气中释放大量的二氧化硫（SO[3]）和二氧化碳（CO[2]），以及自然起源的森林火灾（由雷暴引起）。然而，自然环境退化会与环境保持平衡，不同物种已适应该环境。例如，地中海森林中存在耐火物种。环境可以通过人为污染来减缓污染。然而，在某些情况下，环境减缓能力需要提升以吸收人为污染。
+
+人为污染是由于持续污染或环境灾难的结果产生的。环境灾难的例子包括核事故，如福岛（日本）和切尔诺贝利（乌克兰）；油污，如 Prestige（西班牙加利西亚海岸）；Deepwater Horizon 爆炸（美国）；Sanchi 油轮碰撞（东中国海）；矿山有毒泥浆泄漏（如西班牙的 Aznalcollar）；布拉干萨水库灾难（巴西）；以及田纳西州 Kingston Fossil Plant 煤灰渣泄漏。在这些事故中，大面积区域立即受到污染，其影响可持续多年。随着时间的推移，污染物的累积会导致环境灾难。例如，过量的化肥进入土壤并随 groundwater 流入，导致硝酸盐污染；氯氟烃（CFC）产生的臭氧层空洞；全球变暖。例如，水体的富营养化（如西班牙的 Mar Menor）是污染物累积的一个区域例子。Mar Menor 长期遭受各种污染。由于城市化，污水处理系统不足，采矿活动向湿地区域倾倒废弃物。1979 年塔洪-塞古拉水系转移的到来导致农业和畜牧业增加。Mar Menor 的水体因未达到与农业和畜牧业相关的硝酸盐法规，以及法律制度缺乏实际应用而恶化。因此，Mar Menor 水体的富营养化是由于富含硝酸盐的排放引起的，导致水中缺氧并造成海洋生物大规模死亡 \[10\]。
+
+在城市地区，污染是一个严重问题。根据世界卫生组织（WHO）的数据，十人中有九人呼吸污染空气，每年有七百万人死亡 \[11\]。不同研究结论表明，呼吸污染空气的影响等同于吸烟。在城市地区，污染不仅存在于空气中。土壤和水体污染也影响人类健康。在土壤中，重金属、烃类和其他物质的浓度可能通过摄入土壤或吸入蒸气与人体接触。在水体中，污染通过饮用水途径到达人类。
+
+一个污染问题是，产生污染的一方可能感觉不到其影响。跨境污染是一个关键问题，尤其在处于冲突中的国家之间 \[12\]。例如，酸雨。它造成的破坏包括欧洲森林的消失、加拿大和美国湖泊生物的灭绝，以及对中国和印度人类及作物的危害。酸雨是由硫氧化物和氮氧化物在水中反应生成硝酸、亚硫酸和硫酸，这些酸降低雨水的 pH 值，导致水体酸化，影响野生动物。此外，酸雨还威胁人类建筑、艺术纪念碑和呼吸系统健康 \[13\]。
+
+最后，环境退化不仅仅是污染的负面影响。生态系统的退化可以在不存在污染物的情况下发生。栖息地毁灭、水资源减少、土壤压实、野生动物灭绝或外来物种的引入是自然环境退化的例子。
+
+### 13.1.3 治理
+
+治理是指公民参与决定可能影响他们的决策的过程。在传统民主制度中，人民选举他们的代表。这些政治家在决策时并不被要求考虑公众意见，因此政治精英位于社会金字塔的顶端。随着民主制度的演变，治理概念被引入。治理旨在减少政治精英与公民之间的权力金字塔。这意味着新政府应包含公民参与。欧洲委员会将治理定义为在欧盟行使权力并使公民更加接近的规则、程序和实践的集合。其原则包括：机构透明度、在决策中参与社会、实施一致的政策、以及制定有利于就业的监管框架 \[14\]。基于此，应用治理的公共行政包含多个互补机构，确保公民权利，如问责制、公共伦理指南和公众参与计划。
+
+信息通信技术（ICT）的使用改善了治理。如今，几乎没有哪个政府不需要一个网页。政府可以在网页上上传影响不同机构的项目，感兴趣的人可以比项目仅以纸质形式存在时更快地获取信息。ICT 在治理中的另一个改进是电子公投的可能性。在这些公投中，公民可以在不同项目之间投票，使政府选择公民更倾向的项目。
+
+ICT 带来的所有改进及其带来的好处，也可能带来必须解决的问题。 (I) 一些群体，如老年人，可能对数字环境感到不适。因此，他们更有可能不参与其中。因此，必须便利他们进入或创建物理空间，以便他们能够互动并参与项目。 (II) 安全是一个关键因素。必须防止第三方操纵公众参与过程。 (III) 应开展广告活动，让公民了解公众参与过程的存在。
+
+### 13.2 污染与环境退化
+
+在本章这一部分，我们将重点阐述城市中不同类型的污染及其产生的影响。
+
+### 13.2.1 土壤污染与退化
+
+
+
+
+土壤污染和退化影响农业和城市土壤。主要问题之一是土壤板结，由土木工程和农业机械引起 \[15\]。土壤板结是外部压力导致的密度增加，减少或消除空气孔隙。土壤板结不利影响土壤的蒸渗，减少地下动物、微生物和植物根系可用的氧气。另一个影响是降雨水渗透减少，土壤保持雨水的能力下降，增加洪水风险。恢复板结土壤困难，因此土木工程的合理利用至关重要。建筑和道路会导致土壤板结。在公园、人行道和裸露地面上使用农业机械会产生板结。土壤板结的一个例子是人行道。Figure 13.1 展示了西班牙加尼亚（Gandia）绿地中因人行道造成的土壤板结和侵蚀形成的欲路示例。另一个导致环境退化的事实是城市大面积清除植被。一些城市因树木维护成本高而清除街道和大道上的树木，这导致城市热量上升、湿度下降。树木在城市中具有重要优势，因为它们吸收污染物、降低热量，并为城市野生动物提供庇护。
+
+![Figure 13.1 Example of a desired path.](img/fig13_1_B.jpg)
+
+Figure 13.1 Example of a desired path.
+
+沥青和建筑物阻碍土壤的自然更新，因为垃圾无法分解。这导致土壤分解循环和养分更新的紊乱。Figure 13.2 展示了正常条件下的土壤分解循环。氮化细菌可以在根部或土壤中固定大气氮，将其转化为铵。此外，动物以植物为食，分解者分解氮。分解者通过氨化作用将其转化为铵。随后，硝化细菌将铵转化为亚硝酸盐，再转化为硝酸盐。硝酸盐通过同化过程被植物吸收。或者，它可以通过反硝化作用返回大气，由反硝化细菌产生氮气。土壤退化干扰土壤生物，可能影响人类食物生产 \[16\]。
+
+![Figure 13.2 Soil decomposition cycle.](img/fig13_2_B.jpg)
+
+Figure 13.2 Soil decomposition cycle.
+
+城市污染导致城市热岛效应 \[17\]。该现象表现为城市中心温度高于周边地区。原因包括建筑物、沥青、污染物以及残余热的消除。沥青因阳光加热土壤后通过红外辐射或反射光释放热量，且因颜色黑色，太阳光被吸收，导致热量积累并释放到环境中。建筑物阻碍风力循环，使热量在城市内积聚。残余热在城镇产生并释放到环境中。最终，污染物有两个影响：(I) 污染物与大气反应产生热量。(II) 污染物如 CO₂ 吸收红外辐射，导致温度上升 1°C 至 3°C。
+
+另一个土壤问题为土壤流失。土壤流失由风和水的侵蚀与运输引起。如前所述，沥青增加雨水径流，进而增加土壤流失。此外，植被减少会导致根系固定土壤的能力下降。土壤流失会降低土壤肥力。估计创建 1 厘米土壤需要 100 到 1,000 年。
+
+到目前为止，我们讨论了土地退化。现在，我们转向土壤污染。土壤污染物的存在方式取决于其浓度和物理特性。在低浓度下，污染物被土壤基质吸附；此外，挥发性污染物如烃类和汞会在土壤大气中达到平衡。当污染物浓度升高时，土壤基质无法再吸收它们，形成自由层，向下渗透至地下水位。因此，若从含水层中移除污染物并消除污染源，土壤可能会受到污染。土壤污染物的例子包括烃类、重金属、农药、氮肥硝酸盐和病原微生物。通常，重金属出现在工业区或去工业化区域。烃类可出现在与重金属相同的区域、加油站以及油箱附近。在工业区，污染物通过公司排放或因水流携带被带入土壤。另一个来源是雨水将大气中的污染物带入土壤。烃类通过可燃储存设施的泄漏进入土壤。其他污染物（硝酸盐、农药和化肥）来源于花园、农田或水体运输。若地下水受这些污染物污染并用于灌溉，这些污染物会返回土壤。
+
+此外，塑料在所有部门的使用日益增多，导致微塑料累积增加，大多数情况下进入水体或土壤本身，加剧污染。虽然微塑料目前因对水体的显著污染而最为人知，但过度增加使其大量渗入土壤。这些微塑料被小型动物摄入或沉积在植物上，最终进入食物链并进入人体 \[18\]。我们将微塑料定义为任何形状规则或不规则、直径在 1 μm 至 5 mm 之间的合成固体颗粒或聚合物基质，无论是否为主要或次要制造来源，且不溶于水 \[19\]。这些微塑料是新兴且普遍的污染物，已成为环境挑战 \[20\]。
+
+### 13.2.2 Water Pollution
+
+本节将重点讨论水污染。首先，必须了解水循环。水循环自古以来被知晓，主要由太阳能驱动。太阳加热海洋、海 seas、其他水体中的水，使其蒸发。水分通过冷凝形成更重的水滴，最终回落地面（降雨）。雨水流经山谷和河流，最终回到海洋。人类利用这水源进行工业、饮用或灌溉。当前全球年水需求约为 6,000 至 7,000km³。然而，全球地下水储量约为 7,000,000 km³。该水体通过降雨和渗透过程每年积累。近年来，由于过度开采和降雨不足，这一储量受到影响，导致地下水位下降 \[21\]。
+
+
+
+如上文所述，水循环对行星上生物的生命至关重要。该循环中水质的改变可能导致系统发生重大变化。城市化是导致水循环（地下水和表面水 \[22\]）质量发生改变的最具代表性的例子之一。这些主要的人为改变引发了各种自然灾害。在前面的段落中，我们讨论了沥青路面造成的土壤结构和质量改变的影响。
+
+水中含有不同的污染物，如有机物、固体、肥料、杀虫剂、营养盐和内分泌干扰物。在有机物中，我们可以区分生化需氧量（BOD）和化学需氧量（COD）。BOD 是微生物可以分解的有机物，而 COD 是总的有机物 \[23\]。这些参数的单位是 mg O₂/l，因为降解有机物所需的氧量是以此测量的。测定 BOD 时，样品必须放入密闭容器中并保留微生物一段时间。通常在水分析中，进行的是 BOD₅ 测量。BOD₅ 是微生物在五天内消耗的氧量。另一个参数是 BODₗ，它是降解水中所有可生物降解有机物所需的氧量。使用 BOD₅ 的原因是五天是英国最早实施这些测量的河流中水体停留的平均时间。测定 BODₗ 时，样品通常保留 21 天。由于 BOD 的测量速度较慢，COD 常常被使用。COD 是一种测量方法，大约需要两小时，并且可以经验性地与 BODₗ 的值相关联。此外，COD 与 BOD 之间的差异提供了关于水中不可生物降解的有机污染物的信息。还可以引入总有机碳（TOC）参数，它测定水中有机物氧化后生成的 CO₂ 的量。该参数与 BOD 和 COD 相关，但目前仍有少量研究探讨其广泛应用 \[24\]。
+
+固体是水中另一种存在的污染物。固体的性质多种多样。固体可以是矿物、微生物或土壤。固体可能来自其他污染物的存在，也可能来自水的拖曳作用。其他水污染物是营养盐，它们是生命生长所必需的。营养盐的存在会导致水体出现富营养化问题。主要的营养盐是氮和磷。这些元素来源于洗涤剂、人类和动物排泄物、工业等。最终，内分泌干扰物是一种新兴的污染物。这些污染物是随着分析技术的改进而被发现的。关于这些物质，需要更多的信息。这些污染物的来源是药物和复杂化合物的使用。内分泌干扰物会在生物体内引起激素变化，导致动物性别的改变，并可能阻碍繁殖。
+
+水体污染可以通过雨水、废水、工业非法排放或污染事件来发生。雨水会将大气或土面上的污染物带入水体。废水是家庭、工业和公共服务使用水后的结果，因使用而失去可用性，成为废弃物。污水设施将城市区域的废水输送至污水处理厂（WWTP）。非法排放是指公司或个人未经授权排放废水的行为。这些排放会导致显著污染，恶化水质，对人类健康造成危害 \[18\]。
+
+
+
+另一种由空气污染引起的现象是光化学烟雾。烟雾与污染物的存在以及光照相关。它表现为工业区产生的气体在接触阳光后反应形成的铅灰色或黑色云 \[31\]。Figure 13.3 展示了光化学烟雾过程中的主要污染物。首先，有发起过程的主要污染物。排放物可以来自自然或人工来源。主要污染物包括悬浮颗粒、烃类（NOx）、一氧化碳（CO）和 CO[2]。这些主要污染物反应，产生次生污染物，如 peroxyacetyl nitrates（PANs）、臭氧（O[3]）、H[2]SO[4] 和 HNO[3]。Figure 13.4 展示了烟雾光解过程中的反应。其中一个反应是 NO[2] 的臭氧形成，光照射 NO[2] 产生 NO 和 O 的自由基，氧原子与 O[2] 结合生成 O[3]。另一个反应是烃类生成自由基，烃类与 O[2] 结合生成自由基，随后与 O[2] 结合形成 RO[3]\*，该自由基再与另一个烃类结合生成乙醛。最终，在光化学烟雾中，PAN 形成。
+
+![Figure 13.3 Smog photochemical.](img/fig13_3_B.jpg)
+
+Figure 13.3 Smog photochemical.
+
+![Figure 13.4 Photochemical smog reactions.](img/fig13_4_B.jpg)
+
+Figure 13.4 Photochemical smog reactions.
+
+在此情况下，RO[3]\* 分子与 NO 结合生成 RO[2] 和 NO[2]。RO[3]\* 分子可以与氧结合，形成 RO[2] 和臭氧。除了与 NO 和臭氧结合，该分子还可以与 NO[2] 结合，生成 PAN。烟雾的反应是一个循环，最终结果是另一个 NO[2]。因此，一旦化学反应开始，只有当大气中所有烃类被消除时，反应才会停止。这与有毒化合物的产生一起，使其成为人类健康的危险事件。其危害的一个例子发生在 1952 年的伦敦大烟雾事件中，当时 4,000 人死亡，100,000 人出现呼吸问题。
+
+另一种有害健康的空气颗粒物是空气中的颗粒。它们可分为两类：主要颗粒和次要颗粒。主要颗粒直接从排气管、灰尘和沙粒中排放。次要颗粒是在大气中因被称为前体的气态物质的化学反应形成的。颗粒物是空气污染的标准指标，影响的人数多于其他任何污染物。其主要成分包括硝酸盐、氨、氯化钠、硫酸盐、矿物粉末、水和烟灰。了解有害微粒的危害促使科学家根据大小和来源对它们进行特征化。颗粒的危害性受其大小影响，导致不同类型的疾病。在空气站中最常监测的颗粒是 PM10 和 PM2.5。其气动直径分别为 10 微米和 2.5 微米 \[32\]。我们还发现 PM1 颗粒小于 1 微米。细菌、病毒和超细微颗粒属于这种微粒。
+
+WHO 指出，直径小于 2.5 微米的颗粒导致最严重的疾病，因为它能到达肺部，进入血液，并影响心脏 \[33\]。多项研究关注 PM2.5 颗粒的重要性和侵袭性。除了因体积小而危害，这些颗粒还含有污染物。其小尺寸使其能在空气中长时间悬浮并长距离传输。
+
+尽管未发现颗粒在没有影响健康的阈值，WHO 制定了一些限值，规定这些颗粒必须保持在一定水平。最小颗粒（PM2.5）年平均应为 5μg/m³，日均应为 15 μg/m³。同时，较粗颗粒（PM10）的年平均应为 15 μg/m³，日均应为 45 μg/m³ 24 小时。
+
+### 13.2.4 噪音污染
+
+噪音污染是任何引起人们烦扰、风险或损害的振动，影响人们的活动、物品或环境，而不考虑产生它们的声学来源 \[34\]。WHO 将噪音定义为超过 65 分贝（dB）的振动。如果噪音超过 75 dB，则被认为是有害且疼痛的，120 dB 更是如此。
+
+人口增长、公共交通使用减少、私家车增加、大型建筑的建造以及休闲区的扩张，导致大城市噪音污染增加。欧洲环境署（EEA）数据显示，噪音导致 72,000 次住院和 16,600 例早逝 \[35\]。噪音对人类的影响包括绩效下降、攻击性增加、疲劳、压力、睡眠紊乱和胃肠道疾病。在动物中，噪音会影响睡眠周期、交配周期和社会关系，甚至导致某些物种灭绝。
+
+### 13.2.5 光污染
+
+光污染是人工光源产生的排放物，这些光源未指向地面，且地面反射的光向天空反射。光污染由人工光的过大功率和街灯或路灯设计不良引起 \[36\]。街灯的连接时间也应考虑，因为控制不善的照明系统会影响光污染。总体而言，这种污染主要发生在城市中。光污染是能源的浪费，因为光的目的不是照亮天空。因此，产生了与能源生产相关的污染物。
+
+光照度指数的变化会影响生物体的生物节律 \[37\]。植物和其他动物的昼夜节律受影响。例如，鸟类可能偏离其方向或影响其繁殖周期。对人类而言，人工光会导致睡眠紊乱，进而引发某些疾病。在交通运输领域，眩光会影响驾驶员的视力并导致事故。此外，海运和空运也受高光污染的影响。
+
+欧洲是光污染最严重的大陆之一，这部分是因为其相较于其他大陆的显著发展。西班牙是光污染增加第三多的国家，后跟希腊和马耳他。从全球角度观察，欧洲是光污染率最高的大陆之一。相反，非洲等大洲光污染较少，因为其发展水平较低。
+
+### 13.3 监测污染
+
+本节分析不同方法和物联网技术，用于监测城市中的主要污染物。我们区分土壤、空气和水体中的污染物。此外，还分析光和声音监测，这些环境与它们相关。例如，污染物可以通过空气沉积到土壤中，之后被雨水携带到另一个水体或渗入地下水。
+
+#### 13.3.1 土壤监测
+
+
+
+
+监测土壤使用物联网仪器是复杂的。土壤污染物很难监测，因为这些污染物被吸附在土壤基质中，并且在土壤中分布不均匀。需要在实验室中使用分析技术或使用分析仪器。
+
+监测土壤中碳氢化合物的技术基于利用溶剂对土壤中的碳氢化合物进行脱附，并通过重量法、色谱法、质谱法等进行分析。这些技术需要实验室设备，且在大多数情况下无法在现场使用。为了监测美国（US）的碳氢化合物浓度，环境保护署（EPA）建立了标准方法（418.1 EPA）。该传统方法被推荐用于检测受污染区域，并使用更昂贵的方法确保土壤清洁 \[38\]。另一种方法是利用吸附碳氢化合物并改变其内在属性的材料来检测地下水中的碳氢化合物，该属性可被测量。例如，Yavari 等人 \[39\] 提出使用硅棒覆盖的光纤。硅棒与碳氢化合物接触时会吸附它们，产生弯曲，影响光的传输。然而，该技术仍可更精确，因此需要进行工作以防止泄漏。使用传感器控制储层中油的水平并正确执行立法是控制该参数的最佳工具。
+
+与碳氢化合物一样，监测土壤中的重金属也很复杂，因为重金属被吸附在土壤上。已提出了多种监测方法。其中一种方法是使用分光光度法。不同研究表明，人为向土壤中添加一定数量的重金属会改变其光谱 \[40, 41\]。这为利用卫星影像或无人机航拍来检测可能受重金属污染的区域提供了可能性。然而，利用遥感进行分光光度测量存在关键缺陷：(I) 遥感只能检测地表上的重金属污染，无法检测地下土壤中的污染。(II) 植被覆盖土壤，导致无法测量土壤的反射率。因此，遥感虽能初步检测土壤污染，却无法用于验证污染情况，需要进行现场研究。
+
+技术是减少绿地用水的重要工具。湿度传感器可以最小化灌溉用水的用量，因为土壤湿度保持在田间容水量（土壤能保持的最大水量）和永久凋亡点（植物无法从土壤中获取水分的最小水量）之间。最近，配备红、绿、蓝（RGB）和红外相机的无人机已被用于分析植物状态并计算归一化差动植被指数（NDVI）。
+
+### 13.3.2 水监测
+
+水被称为通用溶剂，因为它能溶解大多数物质。因此，许多物质会在水中被检测。水被用来运输人们产生的污染物。水的一个问题在于非法排放的存在。公司和个人必须仅在拥有排放许可的情况下，将污染物排放到污水系统中。然而，如前所述，非法排放仍在发生。
+
+要在污水系统中检测非法排放，必须全天候了解污染物浓度的变化——废水质量每日、每年都在变化 \[42\]。体育赛事或节假日会影响废水质量。在 Figure 13.5 中，我们展示了废水（固体）中污染物浓度的演变以及两个饺子的情况。夜间的污染物浓度低于白天。从凌晨 5 点开始，浓度在白天逐渐上升，直到中午。中午时浓度会有轻微下降，直到下午中段。此后浓度持续下降，直到次日。在发生排放时，浓度可能更高、更低或持平。通过监测不同参数，排放浓度与废水浓度相同的可能性会降低。传感器会在其他两种情况下检测到废水浓度的变化。为了消除因日常波动导致的浓度差异，必须将数值发送到中央节点，在那里数值会与历史数据系列以及附近传感器的数值进行比较。通过这些信息和人工智能的使用，可以检测到泄漏。
+
+![Figure 13.5 Evolution of solids throughout the day and the effect of two discharges.](img/fig13_5_B.jpg)
+
+Figure 13.5 Evolution of solids throughout the day and the effect of two discharges.
+
+整合不同传感器可以控制水的物理参数 \[43, 44\]。浊度是一个可以用于检测非法排放的参数 \[45\]。浊度定义为水的透明度，取决于水中的固体和溶解物。测量浊度的三种方法是 Secchi disk、光学法和声学法。Secchi disk 方法是在水中放入一个圆盘并测量该圆盘不可见的深度，该方法较难实现自动化，因此不适用于连续监测。但目前志愿者仍使用它作为简单的水体监测手段 \[46\]。声学浊度传感器基于声学多普勒流剖面仪（ADCP），其原理是发射声波脉冲并测量声波回波。光学浊度传感器原理类似，但它发射光而不是声波，光电探测器用于捕获光信号。光电探测器可位于不同角度的光源旁。在 180° 的位置，它测量水的吸光度（吸光计）。如果角度不是 180°，光电探测器测量的是散射光（漫射计）。通常，漫射计的光电探测器位于 90° 处。 Figure 13.6 展示了基于光学（a）和声学（b）的浊度传感器工作原理。光学和声学技术的使用并非不可能。
+
+![Figure 13.6 Operating an acoustic sensor.](img/fig13_6_B.jpg)
+
+Figure 13.6 Operating an acoustic sensor.
+
+导电率也可以用于监测非法排放。水的导电率定义为水导电的能力。纯水是电的 poor conductor（差导体），但溶解的盐会使水成为良好的导体。测量导电率的三种方法是：(I) 密度法、(II) 导电池法、和 (III) 感应传感器。
+
+密度法基于含有样品的管子振动，振动周期与密度根据方程 13.1 成正比。仪器校准利用已知密度的样品计算 *A* 和 *B* 项 \[47\]。如今，该方法不再常用，因为电池法更可靠且使用更简便。
+
+(13.1)  
+
+Density = *A* + *B* period²  
+
+
+
+
+-   [导电池法](https://wiki.example.org/feynmans_learning_method)基于两个或多个电极，用于测量样品能够携带的电流。由于成本低廉和使用简便，该方法是当今最常用的，但其缺点是元件的稳定性差。因此，有研究正在探索使用感应导电传感器。感应传感器基于生成电磁场，感应线圈的感应效果取决于样品中盐分的浓度。
+
+-   其他参数如 pH、硝酸盐、氨和有机物指示水体污染。为了监测 pH，物联网（IoT）采用的方法是定位特定的膜。pH 计类似于导电池，但有一个膜，该膜不允许除质子以外的物质通过。类似的方法也用于硝酸盐和氨的检测。使用膜意味着维护成本高，这使得在大规模 IoT 设备中使用这些传感器变得不可行。关于有机物，最广泛使用的方法是紫外光谱法。在此情况下，为大规模 IoT 导向设备生成紫外光波长具有挑战性。
+
+-   水体中的另一类重要污染物是生物污染物。需要区分饮用水和水体中的生物污染。
+
+-   在饮用水中，通过培养技术在实验室中监测细菌等生物污染物。使用的技术包括 (I) 多管发酵（MTF），(II) 膜过滤（MF），(III) DNA/RNA 扩增，以及 (IV) 原位荧光原位杂交（FISH）48。MTF 基于在玻璃管中放置培养基和样品。根据要分析的细菌种类，特定的培养基会在特定温度和时间下放置。与 MTF 类似，MF 技术中，样品经过过滤，滤膜放置在培养基中以促进细菌生长。这两种技术无法检测病毒，因为病毒不能在不感染细胞的情况下复制。利用遗传技术可检测病毒和细菌。其中一种技术是 DNA 和 RNA 扩增，利用试剂和热循环仪放大 DNA 或 RNA 链。试剂中含有荧光物质，用于标记生成的 DNA 或 RNA 链的数量。最终，FISH 技术基于荧光探针与核酸链杂交。当杂交发生时，样品被固定，过量探针被擦除。样品的荧光表明其中存在的细菌或病毒数量。由于这些技术对精度要求极高，且许多技术依赖培养，据我们所知，目前没有用于监测这些参数的传感器。
+
+-   在水体中，还可以监测微藻。过度生长可能导致水体富化（藻华）。通常通过测量叶绿素 a（绿色色素）的浓度来检测富化。研究表明，遥感可以预测这些色素在水中的浓度。由于富化会导致水色变化，浊度传感器是可行的选择。不同波长的光用于区分富化导致的浊度与其他浊度来源。不同浊度来源在不同波长下的行为各异，因此可以确定浊度的来源 49。
+
+### 13.3.3 空气监测
+
+-   空气中污染物的浓度通常很低，单位为 μg/m³ 或 mg/m³。然而，人体吸入的空气量远大于其他暴露途径。
+
+-   在欧洲，指令 2008/50/EC 必须建立测站网络，以监测聚集区和背景污染的空气质量 50。其他国家也有类似法律。在美国，Clean Air Act 确保公共健康和福祉，并规范空气污染物的排放 51。为了确保空气质量正确，环保局（EPA）与联邦政府合作开展空气监测活动，包括一系列固定站（AirData Air Quality Monitors app）。澳大利亚 52、新加坡 53 和日本 54 也有类似的网络。通常，这些网络提供关于 O₃、NOx、CO₂、SO₂、NH₃、PM₂.₅、PM₁₀ 等空气污染物浓度以及降雨、风速和风向、阳光等气象数据。
+
+-   这些网络能够监测城市中的污染，但无法监测建筑物内部的污染。可以使用不同的传感器监测室内环境。Saini、Dutta 和 Marques55 分析了 40 篇关于室内 IoT 的论文，发现 70% 的论文测量温度和湿度，65% 测量 CO₂，30% 测量 CO，PM₁₀ 和 PM₂.₅ 在 27.5% 的论文中被使用，最终 20% 的论文测量挥发性有机化合物（VOCs）。大多数工作使用 MQ 系列传感器监测气体。DHT11 和 DHT22 是最常用的温湿度传感器。
+
+-   DHT11 和 DHT22 是两种测量空气相对湿度和温度的传感器。温度通过热敏电阻测量，湿度通过电容传感器测量。两者的区别在于 DHT22 比 DHT11 更贵，但更精确。这些传感器用于室内控制湿度和温度，有助于营造更舒适的环境并降低空调等设备的电耗，这与电子健康（e-health）相关。
+
+-   MQ 传感器是一类能够监测不同气体的传感器。它们具有一个感应元件，该元件随气体的变化而改变其特性。传感器内部有一个加热元件（calefactor），用于加热感应元件以便与气体反应。在该传感器系列中，能够检测易燃气体的传感器会在感应元件上覆盖一层网格，以防止爆炸。表 13.1 列出了不同 MQ 传感器及其可监测的气体。
+
+Table 13.1 Elements That Can Be Monitored with MQ Sensors
+
+| Sensor || Measure Element || Sensor || Measure Element || Sensor || Measure Element |
+| --- | --- | --- | --- | --- | --- |
+| MQ-2 || Propane, butane, methane, hydrogen, alcohol || MQ-7 || Carbon Monoxide || MQ-136 || Hydrogen Sulfide |
+| MQ-3 || Alcohol || MQ-8 || Hydrogen || MQ-137 || NH3 |
+| MQ-4 || Methane, natural gas || MQ-9 || Carbon Monoxide || MQ-138 || Benzene alcohol, NH3 |
+| MQ-5 || LPG, LNG, natural gas, iso-butane, propane, town gas || MQ-131 || Ozone || MQ-214 || Methane, LPG, propane, butane |
+| MQ-6 || LPG, iso-butane, propane, LNG || MQ-135 || Nh3, Benzene, alcohol || MQ-216 || LPG, propane, butane, methane, alcohol |
+
+
+
+
+The use of an IoT sound sensor detects places where excessive noise is produced. With this, the sensor can generate an alarm so that the police can stop the noise generation. This reduces noisy neighbours, spotting bar fights, and detecting illegal parties.
+
+There are sound sensors such as `LM386`, `KY-037`, and `DFR0034`. These sensors have a microphone that detects the sound and transmits the information to a microcontroller.
+
+### 13.3.5 Light Monitoring
+
+There are few studies on monitoring light pollution with IoT. Usually, this type of pollution is detected with field studies. However, some authors introduce IoT sensors to monitor this pollution and take measures to reduce it. Pribadi et al. \[56\] used a sky quality metre model SQM-LUconnected to a Raspberry Pi to control light pollution. The significant gap in the solution to continuous monitoring is that no solutions can be implemented to reduce light pollution quickly. The solutions to reducing it are based on improving the design of the lamps, reducing light intensity, eliminating the lights projected to the sky, etc. These solutions however need to be initiated by the administrations to come into effect.
+
+## 13.4 Governance
+
+As we said previously, governance is the interaction of all members of society in making decisions. In many cases, the laws require interaction with society for decision-making. In the European Union, Directive 2011/92/EU on assessing the effects of specific public and private projects on the environment in article 6 section 5 requires the submission to public participation of all projects that must undergo an environmental impact assessment\[57\]. In US, projects with environmental impacts are subjected to Environmental Impact Statement. The document includes the alternatives and the major impacts of the analysed project. The final and draft document is shared with the federal agency and the citizens \[58\].
+
+Governance is a tool to include the different statements of the society and control the politician elites. Governance is a fundamental pillar of modern democracies. Citizens no longer only elect their rulers from time to time but also participate in decision-making. Proper governance can lead to conflicts. Aggravating these conflicts can lead to riots and even civil wars \[59\]. In addition, bad governance is related to corruption \[60\].
+
+New technologies have improved governance with the introduction of e-governance. E-governance is the introduction of ICT in the different statements of the government to facilitate the exchange of information between the administration and citizens. The quality of e-government increases trust in government \[61\].
+
+The data obtained from the different IoT systems present in a city help in decision-making. Hence, there are more and more cities that bet on smart cities. In addition, to help improve the city, financial expenses decrease with the reduction in the use of resources. In the following section, some of the smart cities are presented in which, thanks to good use of governance, the quality of the city and that of the citizens have been improved.
+
+### 13.4.1 Projects in Cities Related to Governance
+
+In this section, some examples of smart cities that are related to governance are cited. According to Telecommunication Standardization Sector of International Telecommunication Union (ITU-T) \[62\] “A Smart Sustainable City
+
+> is an innovative city that takes advantage of Information and Communication Technologies (ICT) and other means to improve quality of life, competitiveness, operational efficiency, and urban services while ensuring that it responds to the needs of present and future generations in terms of economic, social, environmental and cultural aspects.
+
+According to the IMD Smart City Index 2021 \[63\], Singapore is at the top of the list of the most intelligent cities. And within the top ten, we find Bilbao. According to this index, Madrid is in position 34, followed by Barcelona, and in position number 15, the city of Zaragoza appears on the list. Table 13.2 shows the top ten of the most innovative cities in the world in 2021, as well as the changes that have occurred in the positions of each city \[64\].
+
+Table 13.2 World Smart Cities Ranking in 2021
+
+| **Position** || **1\. Singapore** || **2\. Zurich** || **3\. Oslo** || **4\. Taipei City** || **5\. Lausanne** |
+| --- | --- | --- | --- | --- | --- |
+| **Rating** || **AAA** || **AA** || **AA** || **A** || **A** |
+| **Structure** || **AAA** || **AAA** || **AAA** || **A** || **AAA** |
+| **Technology** || **AAA** || **A** || **A** || **A** || **A** |
+| **Position** || **6\. Helsinki** || **7\. Copenhagen** || **8\. Geneva** || **9\. Auckland** || **10\. Bilbao** |
+| **Rating** || **A** || **A** || **A** || **A** || **BBB** |
+| **Structure** || **AA** || **AA** || **AA** || **A** || **A** |
+| **Technology** || **A** || **A** || **A** || **A** || **BBB** |
+
+Next, we will comment on some of the smart cities in the Spanish state and examples of the projects they have associated with that allow them to develop smart cities.
+
+Firstof all, we will talk about Valencia. In 2018, the intelligent city office was created in Valencia in the Local Government Board, where the necessary powers to carry out a smart city were established. For the development of this city, different projects have been carried out that have allowed the city of Valencia to develop as a smart city. Table 13.3 shows the classification followed by the projects depending on whether they affect services to citizens, the city, or municipal services \[65\].
+
+Table 13.3 Projects Associated with the City of Valencia
+
+| **Services to the citizenship** || WiFi4EU, Web COVID 19 de información ciudadana, València al minut, AppValència, Geoportal, WiFiValencia, Open data, Connecta VLCi, Efficient management of places for reduced mobility-loading and unloading-taxi, and local civic network |
+| --- | --- |
+| **City** || VLCi Platform, ISO 37120 certification, development and evaluation of the implementation of Sustainable Development Goals, and smart tourism |
+| **Municipal services** || Smart lighting, dashboards, urban waste and cleaning-sensorisation of vehicles, Russafa Market sensors pilot, noise management in Plaça del Tossal, effective social fund, smart management of municipal assets, EMT embedded environmental sensors, improvements in the GeoPortal– smart geoservices, AppValència – improvements and reuse, efficient urban noise management, solid waste management and cleaning, and smart clauses |
+
+On the other hand, in Spain, we find the city of Barcelona one of the most developed cities in terms of the use of technology to improve the quality of life of citizens in the town and in carrying out urban improvements. This presents different enhancements that make it on the list of the best smart cities. Table 13.4 shows how technology has been implemented in Barcelona and what changes the city is experiencing due to the implementation of different projects \[66\].
+
+Table 13.4 Some of the Projects Applied in Barcelona to Establish an Intelligent City
+
+| Some of the Projects Applied in Barcelona |
+| --- |
+
+
+
+| 智能街道 BicingThe Barcelona City Council Tax System Renewal PlanConnectivity in civic centresPortal and urban information consultation services (PIU)New SI management campaign for childhood aidDeployment of citizen Wi‑Fi in the bus fleet (Barcelona Wi‑Fi services for citizens)CityOSCloud4Cities (BCN Cloud)Renovation of the Data Processing Centre of the City CouncilPLEDGERGrowSmarterFLAME 人工智能威胁报告与事件响应系统 (IRIS) |
+| --- |
+| 如上所述，新加坡是世界上最具创新性的国家。当新加坡决定建立该国家系统时，它是基于明确定义的支柱。这些支柱保证可持续的生活方式，提升公民的教育、健康和出行水平，减少公共空间的排队等待时间，提高安全性，并加强公共空间。 |
+| 新加坡所称的可持续领土是指在不同地区安装大量传感器的领土。这些传感器能够收集关于资源和服务使用情况的精确数据。通过识别浪费区域，能够更好地分配资源，降低成本，同时提高公众意识\[66\]。 |
+| 另一方面，值得一提的是家庭远程医疗的实施。他们开发了名为“远程健康”（Tele‑Health）的计划。该系统能够监测老年人、行动不便者或慢性病患者的生命体征。它能够跟踪患者健康状况，以便调整药物剂量，并在必要时发送救护车。这是因为医疗中心会接收相关数据。该计划使得国家的急救系统得以减轻\[68\]。 |
+| 此外，新加坡还关注城市交通部分，推动智能出行。通过安装传感器和地理定位系统，公共交通网络可以显示乘客数量和车辆位置等参数。这使得人工智能能够保证服务的最优化提供。同时，收集的数据会输入交通管理部门的数据库，配合交通信号灯网络，实现城市交通的实时管理\[69\]。现代化的安防系统通过监控摄像头和传感器实现。 |
+| 为维持新加坡所有活跃传感器并处理海量数据，需要广泛的互联网基础设施。与韩国和日本一样，新加坡提供之一项低成本连接能力，适用于企业和个人，家庭平均速度为 200 Mbps \[70\]。 |
+| ## 13.5 当前挑战与未来趋势 |
+| 如今，环境监测是热点话题。利用成本低廉的传感器和开源微控制器（如 Arduino 和 Raspberry）已提升了科学界和普通用户监测污染物的可能性。 |
+| 在城市中，污染源往往会向城外迁移。例如，电动汽车。一些欧洲城市对进入该城市的化石燃料车辆实施限制。然而，这些车辆的电池充电依赖于大多数国家仍然使用化石燃料发电的电网。总体而言，预计绿色能源或冷融合技术将在未来取代化石燃料，消除能源生产过程中的排放。 |
+| 如前所述，发展中国家拥有空气质量监测网络，用于监测空气中污染物的存在。监测外部空气质量对于采取防护措施（如佩戴口罩、发布健康警报或实施环境政策）至关重要。然而，内部大气可能存在危害性的污染物浓度，却未被监测。在工业环境中，内部大气的监测是职业风险预防计划的一部分；但在家庭中，内部大气的监测存在缺陷。 |
+| 在水体方面，可以区分饮用水和水体的监测。发达国家的饮用水监测非常全面，能够快速检测化学或生物污染物。然而，在新兴国家，饮用水污染是实现可持续发展目标的挑战。使用传感器监测生物污染物仍是一个挑战。当前的技术依赖于培养细菌和 DNA 复制，需要昂贵的实验室设备。预计这些技术成本将下降，同时新兴国家的经济实力提升，将使这些技术的普遍应用成为可能。 |
+| 土壤污染的监测难以改进。土壤是异质环境，污染物可能在不同部位被吸收，使得监测变得复杂。未来预计传感器监测技术将得到改进。利用卫星图像虽然在土壤监测方面存在局限，但有助于监测植被。 |
+| 最后，各级政府正致力于治理。如今，信息通信技术（ICT）的使用使得城市或国家的政府能够更贴近公民，促进公民参与决策。但要真正提升其效果，需要让更多人了解其价值，改善实施过程。大多数老年人不使用 ICT，这意味着在城市治理过程中需要充分考虑他们的意见。 |
+| ## 13.6 结论 |
+| 物联网（IoT）在任何领域的使用近年来显著增加，主要得益于智能传感器提供的大量数据。因此，越来越多的城市采用治理概念，通过制定法律和法规，实现城市和公民的理想福祉。本章展示了城市中的各类污染及其对自然循环的影响（需注意许多污染物也影响农村地区），并描述了人类与自然污染引发的相关环境过程，如光化学烟雾和酸雨。最后，介绍了通过低成本系统使用浊度、导电性、湿度和温度传感器对污染物进行监测的多种方式。在治理框架下，描述了新加坡、巴塞罗那和瓦伦西亚等创新城市项目。这些指南可帮助在新城市中实施治理。 |
+
+
+
+5. Rathee DS, Ahuja K, Hailu T 电子设备在智能城市中对电子健康的作用。在：Singh Rathee D, Ahuja K, Hailu T，编辑。实践、进展与可持续性。宾夕法尼亚州，美国。IGI Global；2019。第 212–233 页。
+
+6. Vijayakumar N, Ramya R. 物联网环境中实时水质监测。在：2015 年信息、嵌入式和通信系统创新国际会议（ICIIECS）。IEEE；2015。
+
+7. Lloret J, Garcia M, Bri D, Sendra S. 无线传感器网络部署用于农村和森林火灾检测与验证。Sensors 2009;9(11):8722–8747。
+
+8. Microsoft Azure IoT 设备类型概述[Internet]。docs.microsoft.com 2021[cited 2022 Aug 13]；可从：[`https://docs.microsoft.com/en-us/azure/iot-develop/concepts-iot-device-types`](https://docs.microsoft.com/en-us/azure/iot-develop/concepts-iot-device-types)
+
+9. Mehmood A, Lv Z, Lloret J, Umar MM ELDC：基于人工神经网络的能源高效且强健的污染监测无线传感器网络路由方案。IEEE Transactions on Emerging Topics in Computing 2020;8(1):106–114。
+
+10. Velasco AM, Pérez-Ruzafa A, Martínez-Paz JM, Marcos C 河口潟湖的生态服务与主要环境风险（马尔门尔，西班牙马尔默）：公众认知。Journal for Nature Conservation 2018;43:180–189。
+
+11. World Health Organization (WHO) 全球每 10 人中有 9 人吸入受污染空气，但越来越多的国家正在采取行动[Internet]。WHO 2018；可从：[`https://www.who.int/news/item/02-05-2018-9-out-of-10-people-worldwide-breathe-polluted-air-but-more-countries-are-taking-action`](https://www.who.int/news/item/02-05-2018-9-out-of-10-people-worldwide-breathe-polluted-air-but-more-countries-are-taking-action)
+
+12. Yim SHL, Gu Y, Shapiro MA, Stephens B. 当地排放和跨境空气污染对日本和韩国空气质量及酸雨的影响。Atmospheric Chemistry and Physics 2019;19(20):13309–13323。
+
+13. Grennfelt P, Engleryd A, Forsius M, Hov Ø, Rodhe H, Cowling E 酸雨与空气污染：50 年环境科学与政策进展。Ambio \[Internet\]。2019，49；可从：[`https://link.springer.com/article/10.1007/s13280-019-01244-4`](https://link.springer.com/article/10.1007/s13280-019-01244-4)
+
+14. European Union 欧盟立法信息系统 - 管理 - EN - EUR-Lex \[Internet\]。eur-lex.europa.eu。2018；可从：[`https://eur-lex.europa.eu/EN/legal-content/glossary/eu-governance.html#`](https://eur-lex.europa.eu/EN/legal-content/glossary/eu-governance.html#)
+
+15. Batey T. 土壤压实与土壤管理 - 综述。Soil Use and Management 2009;25(4): 335–345。
+
+16. Bernhard A 氮循环：过程、参与者及人类影响[Internet]。Nature.com 2010 [cited 2023 Feb 15]；可从：[`https://www.nature.com/scitable/knowledge/library/the-nitrogen-cycle-processes-players-and-human-15644632/`](https://www.nature.com/scitable/knowledge/library/the-nitrogen-cycle-processes-players-and-human-15644632/)
+
+17. Yang L, Qian F, Song D-X, Zheng K-J 城市热岛效应研究。Procedia Engineering \[Internet\]。2016;169:11–18。可从：[`https://www.sciencedirect.com/science/article/pii/S1877705816332039`](https://www.sciencedirect.com/science/article/pii/S1877705816332039)
+
+18. Gall SC, Thompson RC 碎屑对海洋生物的影响。Marine Pollution Bulletin 2015;92 (1-2):170–179。
+
+19. Frias JPGL, Nash R 微塑料：确定其定义的共识。Marine Pollution Bulletin 2019;138:145–147。
+
+20. Afrin S, Uddin MdK, Rahman MdM 城市垃圾场土壤中的微塑料污染。Dhaka, Bangladesh。Heliyon 2020;6(11):e05572。
+
+21. Dwivedi AK 水污染研究综述。Journal of Natural and Applied Sciences 2017;4(1):118–142。
+
+22. Hasan MdK, Shahriar A, Jim KU 孟加拉国的水污染及其对公共健康的影响。Heliyon \[Internet\]. 2019;5(8): e02145。可从：[`https://www.heliyon.com/article/e02145/`](https://www.heliyon.com/article/e02145/)
+
+23. Najafzadeh M, Ghaemi A, Emamgholizadeh S. 利用进化计算公式预测水质参数。International Journal of Environmental Science and Technology 2018;16(10):6377–6396。
+
+24. Lee J, Lee S, Yu S, Rhew D 河流和湖泊水质参数（BOD5、COD、NBOPs、TOC）之间的关系。Environmental Monitoring and Assessment 2016;188(4): 1–8。
+
+25. Farid S, Baloch KM, Khan SAI 水污染：城市地区的主要问题。International Journal of Water Resources and Environmental Engineering \[Internet\]. 2012;4(3):55–65。可从：[`https://academicjournals.org/journal/IJWREE/article-full-text-pdf/730CE7F2619`](https://academicjournals.org/journal/IJWREE/article-full-text-pdf/730CE7F2619)
+
+26. Official Journal of the European Communities. Council Directive 91/271/EEC of 21 May 1991 concerning urban wastewater treatment。1991。
+
+27. Chaudhry F, Malik M 水污染影响因素综述。Journal of Ecosystem & Ecography 2017;7(1): 225–231。
+
+28. Ruiz-Beviá F, Fernández-Torres MJ 饮用水中硝酸盐的有效催化去除：一个未解决的问题？Journal of Cleaner Production 2019;217:398–408。
+
+29. Nicoletti G, Arcuri N, Nicoletti G, Bruno R 氢能与某些化石燃料之间的技术与环境比较。Energy Conversion and Management \[Internet\] 2015;89:205–213。可从：[`https://www.sciencedirect.com/science/article/pii/S0196890414008589`](https://www.sciencedirect.com/science/article/pii/S0196890414008589)
+
+30. Lu Z, Streets DG, Zhang Q, Wang S, Carmichael GR, Cheng YF, et al. 中国的二氧化硫排放及其在东亚自 2000 年以来的趋势。Atmospheric Chemistry and Physics 2010;10(13):6311–6331。
+
+31. Grennfelt P, Engleryd A, Forsius M, Hov Ø, Rodhe H, Cowling E 酸雨与空气污染：50 年环境科学与政策进展。Ambio 2020;49(4):849–864。可从：[`https://link.springer.com/article/10.1007/s13280-019-01244-4`](https://link.springer.com/article/10.1007/s13280-019-01244-4)
+
+32. Rani B, Singh U, Chuhan AK, Sharma D, Maheshwari R 光化学烟雾污染及其缓解措施。Journal of Advanced Scientific Research 2011;2(4):28–33。
+
+33. Barmpadimos I, Keller J, Oderbolz D, Hueglin C, Prévôt ASH 欧洲 PM2.5 和 PM10–PM2.5 的平行测量十年趋势与变异性。Atmospheric Chemistry and Physics 2012;12(7):3189–3203。
+
+34. World Health Organisation (WHO) 世界卫生组织空气质量指南：颗粒物（PM2.5 和 PM10）、臭氧、二氧化氮、二氧化硫和一氧化碳[Internet]。[www.who.int](http://www.who.int) 2021 [cited 2022 Aug 8]；可从：[`https://www.who.int/publications/i/item/9789240034228`](https://www.who.int/publications/i/item/9789240034228)
+
+35. Morillas JMB, Gozalo GR, González DM, Moraga PA, Vilchez-Gómez R 噪声污染与城市规划。Current Pollution Reports 2018;4(3):208–219。
+
+36. European Environmental Agency 噪声[Internet]。European Environment Agency 2016 [cited 2022 Aug 8]；可从：[`https://www.eea.europa.eu/themes/human/noise`](https://www.eea.europa.eu/themes/human/noise)
+
+37. Solano Lamphar HA, Kocifaj M 紫外线和可见光谱中的光污染：对不同视觉感知的影响。PLoS ONE 2013;8(2):e56563
+
+38. Mendoza J. 夜间光对哺乳动物生理学的危害：啮齿动物昼夜模型告诉我们。Clocks& Sleep 2021;3(2):236–250。
+
+
+
+
+39. Schwartz G, Ben-Dor E, Eshel G. 量化分析土壤中的总烃类（TPH）：反射光谱与溶剂萃取法比较. 3 认证实验室. Applied and Environmental Soil Science 2012;2012:1–11.
+
+40. Yavari A, Georgakopoulos D, Stoddart PR, Shafiei M. 基于物联网的烃类传感器用于实时环境监测. In: 2019 IEEE 5th World Forum on Internet of Things(WF-IoT). IEEE;2019.
+
+41. Gholizadeh A, Borůvka L, Saberioon MM, Kozák J, Vašát R, Němeček K. 基于土壤光谱特征的不同数据预处理方法在土壤重金属监测中的比较. Soil and Water Research 2015;10(4):218–227.
+
+42. Liu K, Zhao D, Fang J, Zhang X, Zhang Q, Li X. 利用遥感光谱和统计方法估算土壤重金属污染. Journal of the Indian Society of Remote Sensing 2017;45(5):805–813.
+
+43. Razif M, Yanuwiadi B, Rachmansyah A. 废水质量与数量波动对选择废水处理厂的影响：以“泗水商场”为例. International Journal of ChemTech Research 2015;8(2):534–540.
+
+44. Parra L, Viciano-Tudela S, Carrasco D, Sendra S, Lloret J. 低成本微控制器多参数探头用于沿海区域监测. Sensors 2023;23(4):1871.
+
+45. Rocher J, Parra M, Parra L, Sendra S, Lloret J, Mengual J. 低成本传感器用于检测污水系统中的非法排放. Journal of Sensors 2021;2021:1–16.
+
+46. Bigham Stephens DL, Carlson RE, Horsburgh CA, Hoyer MV, Bachmann RW, Canfield DE. 美国水体中 Secchi 盘透明度的区域分布. Lake and Reservoir Management 2015;31(1):55–63.
+
+47. Rice EW, Eaton AD, Baird R. 2520 C 密度法. In: American Public Health Association, American Water Works Association, Water Environment Federation, editors Standard Methods for the Examination of Water and Wastewater. Washington, DC: American Public Health Association, American Water Works Association, Water Environment Federation.
+
+48. Zulkifli SN, Rahim HA, Lau W-J. 水资源中污染物检测：基于最新监测技术的综述及其应用. Sensors and Actuators B, Chemical 2018;255:2657–2689.
+
+49. Rocher J, Parra L, Jimenez JM, Lloret J, Basterrechea DA. 低成本光学传感器用于检测灌溉水库中的富营养化. Sensors 2021;21(22):7637.
+
+50. European Council. 欧盟指令 2008/50/EC，关于环境空气质量及更清洁的欧洲空气 [Internet]。2008 [引用于 2022 年 8 月 2 日]；来源：https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32008L0050&from=es
+
+51. EEUU Congress EC. Clean Air Act. 2020.
+
+52. Government of New South Wales. Monitoring Air Quality \[Internet\. NSW Environment, Energy and Science 2022 [cited 2022 Aug 8]；来源：https://www.environment.nsw.gov.au/topics/air/monitoring-air-quality
+
+53. National Environmental Agency. 新加坡如何监测其环境空气质量？ [Internet]。va.ecitizen.gov.sg 2022 [cited 2022 Aug 8]；来源：https://va.ecitizen.gov.sg/CFP/CustomerPages/NEA_google/displayresult.aspx?MesId=1068830&Source=Google&url=va.ecitizen.gov.sg
+
+54. Botta E, Yamasaki S. 空气质量管理政策、监管框架与执行：日本案例. Environment Working Paper N° 156 [Internet]。OECD; 2020 [cited 2022 Aug 8]；来源：https://www.oecd.org/officialdocuments/publicdisplaydocumentpdf/?cote=ENV/WKP(2020)3&docLanguage=En
+
+55. Saini J, Dutta M, Marques G. 基于物联网的室内空气质量监测系统系统综述. International Journal of Environmental Research and Public Health 2020;17(14):4942.
+
+56. Pribadi P, Pramudya Y, Muchlas, Okimustava. 物联网在巴南测量夜空亮度的实施（使用天空质量计） [Internet]。In: International Conference On Science And Applied Science (ICSAS) 2019. AIP Publishing; 2019 [cited 2022 Aug 9]；来源：https://doi.org/10.1063/1.5141636
+
+57. European parliament. 欧洲议会指令 2011/92/EU，关于若干公共或私人项目对环境的影响评估 [Internet]。2011 [cited 2022 Jul 13]；来源：https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32011L0092
+
+58. Code of Federal Regulations. 第 1502 条 - 环境影响声明 [Internet]。2020 [cited 2022 Jul 14]；来源：https://www.ecfr.gov/current/title-40/chapter-V/subchapter-A/part-1502
+
+59. Walter BF. 不良治理导致内战重演的原因. Journal of Conflict Resolution 2014;59(7):1242–1272.
+
+60. Jha S, Quising PF. 亚洲和太平洋地区的腐败：治理薄弱的表现。In: Deolalikar AB, Jha S, Quising PF, editors. Governance in Developing Asia. Cheltenham: Edward Elgar Publishing Limited; 2015. pp. 101–136.
+
+61. Myeong S, Kwon Y, Seo H. 可持续电子治理：信任、数字鸿沟与电子政府的关系. Sustainability 2014;6(9):6049–6069.
+
+62. IT.U-T. 智能可持续城市概述及信息通信技术的作用。In International Telecommunication Union (ITU-T) Focus Group on Smart Sustainable Cities (FGSSC) 2014. 3–3.
+
+63. Smart Cities - Smart Cities World \[Internet\. \[cited 2022 Aug 10\]; 来源：https://www.smartcitiesworld.net/smart-cities?topics=Singapore
+
+64. Singapur 再次在 2021 年智能城市指数中位居第一，而比利巴斯跃升至前 10 名 - smartlighting ([smart-lighting.es](http://www.smart-lighting.es)) [Internet]。\[cited 2022 Aug 10\]; 来源：https://smart-lighting.es/singapur-smart-city-index-2021-bilbao/
+
+65. Oficina de Ciudad Inteligente - València Ciudad Inteligente ([valencia.es](http://www.valencia.es)) [Internet]。\[cited 2022 Aug 10\]; 来源：https://smartcity.valencia.es/oficina-ciudad-inteligente/
+
+66. Nuevos proyectos para convertir Barcelona en una smart city — Nae \[Internet\. \[cited 2022 Aug 10\]; 来源：https://nae.global/es/ultimos-proyectos-para-convertir-barcelona-en-una-smart-city/
+
+67. [Singapur, ¿la primera ciudad inteligente del mundo? | SG Buzz \[Internet\]. \[cited 2022 Aug 10\]; 来源：https://sg.com.mx/buzz/singapur-la-primera-ciudad-inteligente-del-mundo
+
+68. Website: [gov.sg](http://www.gov.sg) | Home ([www.gov.sg](http://www.gov.sg)) [Internet]。\[cited 2022 Aug 10\]; 来源：https://www.gov.sg/
+
+
+
+
+69. 未来 移动性和运输 | 合作增长部门 | 企业新加坡 (enterprisesg.gov.sg) \[Internet\]. \[引用 2022 年 8 月 10 日\]; 可从: [`www.enterprisesg.gov.sg/industries/hub/infrastructure-hub/build-on-singapores-infrastructure-ecosystem/growth-sectors/future-mobility-and-transport`](https://www.enterprisesg.gov.sg)
+
+70. Estos 是那些拥有最高平均互联网连接速度的国家 ([muycomputer-pro.com](http://www.muycomputer-pro.com)) \[Internet\]. \[引用 2022 年 8 月 10 日]; 可从: [`www.muycomputerpro.com/2020/06/10/paises-velocidad-media-conexion-internet`](https://www.muycomputerpro.com)
+
+# 14 传感器技术在物联网中
+
+Laura García, Sandra Sendra, Jose Miguel Jiménez and Jaime Lloret
+
+Universitat Politècnica de València, Spain
+
+DOI: [10.1201/9781003326236-14](https://dx.doi.org/10.1201/9781003326236-14)
+
+## 14.1 介绍
+
+随着通信技术的发展，对解决部署大量人员进行监测和管理活动所带来的问题的解决方案的兴趣增加。无线传感器网络 (WSN) 使从个人电脑便捷地监测广阔区域成为可能。随后，随着通信技术的进一步发展，物联网 (IoT) 解决方案开始被实施为方便人们的系统，包括与用户的交互。IoT 的第一篇文章发表于 2002 年，应用于智能超市的概念 \[1\]. 从 2009 年起，与 IoT 相关的论文呈现出快速增长的趋势，政府开始制定计划和发展方向，以提供具备智能功能的城市。2015 年出现了指数级增长，并且仍在持续增长。
+
+IoT 的兴趣和便利性的增加促使 IoT 在各种领域得到广泛应用。IoT 领域涵盖广泛的环境、功能和应用。工业、农业、家庭、医疗、城市和海洋是 IoT 部署的一些环境。主要功能是获取环境信息，以获得其状态的洞察，进行预测，或通过使用执行器或通知警报来改变该环境或解决检测到的问题。这导致了无数努力创建分类，以便便于理解 IoT 及其概念。尽管对具体类别没有共识，但大多数分类包含相同类型的应用 \[2, 3, 4, 5 和 6\]。
+
+对于每个应用，开发人员或研究人员必须考虑环境的物理参数及其限制。IoT 传感器设备应能够承受高温或低温（如果部署在户外），承受深压（如果部署在水下），或在部署在可携带设备（如手表或玩具）时被高度操作和抛掷。此外，IoT 网络的主要特征是传感器节点应连接到网络，以便能够将其数据共享并处理或存储在其他外部服务器上。因此，在设计设备时，需要确定最适合该设备及其监测的环境的有线或无线通信方式。
+
+应用的要求通常决定了开发 IoT 解决方案所需的无线技术类型。用于开发 WSN 和 IoT 解决方案的当前无线技术列表 \[7\] 包括蓝牙低功耗 (BLE)、Zigbee、Z-Wave、6LowPAN、Thread、WiFi、Sigfox、Neul 或 LoRa/LoRaWAN 等。每种技术都意味着需要考虑的一系列特性，例如使用特定的拓扑结构、有效数据传输速率、最大覆盖范围以及单个设备能提供的范围。最后，考虑到我们希望有效利用收集的数据，应用的类型将决定所需的处理技术和信息存储方式。因此，根据应用的需求，可以寻找边缘计算、雾计算或云计算等计算技术 \[8\]。
+
+因此，IoT 领域的多样性随时间不断增加。因此，传感器技术必须演进以满足这些应用的需求。每个领域可能有特定的需求，如传感器设备之间的通信类型、封装（防水、抗冲击）或电源选项（太阳能板、直接连接电网、电池），等因素。因此，本章旨在阐述这些领域之间的差异及其对传感器技术的影响，识别部署传感器设备的主要挑战，确定这些传感器生成的数据类型，并讨论 IoT 应用中传感器设备的当前创新。它将为读者提供 IoT 传感器技术当前状态的概览，作为进入该领域的入门介绍。
+
+## 14.2 物联网的定义
+
+现在是几点钟？你是否取出手机查看时间？是否查看过你的智能手表？也许电视？我猜这些设备都起到了作用，但它们还做了什么？是否考虑到移动作为体育活动，并在你用于健康管理的应用中增加消耗的卡路里？移动是否仅仅使屏幕亮起。或者还有更多。毫无疑问，技术是我们生活的一部分。它与我们的日常行为交织得如此紧密，以至于我们甚至不去想它。但这些设备拥有传感器，收集信息并将其传输，以提供我们不曾思考的各种功能。随着新的进展不断进入市场，新的连接也成为构成物联网 (IoT) 网络的一部分。
+
+“IoT”一词于 1999 年由 RFID (Radio Frequency Identification) 开发社区的合作者创造 \[9\]. IoT 本质上是大量通过私有或公共网络相互连接的物体。这里的“物体”一词用于指代根据其预定用途而异的形状、尺寸和类型的设备。这些设备的目标是收集并共享信息，以监测、管理和控制其所在的环境 \[9\]. 这些设备相互交互并合作，以提供新的服务和应用，以实现既定的共同目标。因此，冰箱、娃娃、食品处理机、你的新车或最近医院的医疗设备，它们都可能是 IoT 设备。
+
+位于我们家中的设备、用于接送我们的设备、用于治愈我们的设备以及我们不断携带的设备——甚至我们的衣物、树木、动物以及我们最喜欢的超市货架上的食品——也可以借助 WiFi、Bluetooth 或 RFID 等无线技术成为 IoT 网络的一部分。因此，不足为奇的是，一些作者设想一个所有物体和人们都配备某种识别设备的世界 \[10\].
+
+
+
+
+-   架构是构成系统的元素的方案，它们在系统中的作用以及它们之间的相互关系。它通常被分为层，指示其包含的设备或软件工具的主要功能。Figure 14.1 描绘了这种层级架构形式。它由四层组成：传感器层、通信层、服务层和应用层。
+
+![Figure 14.1 IoT generic architecture.](img/fig14_1_B.jpg)
+
+Figure 14.1 IoT generic architecture.
+
+传感器层：传感器是物联网的基础。没有能够响应环境并生成数据的设备，就没有东西可以通信。因此，传感器是能够响应其所在的物理环境的设备。响应通常是需要被解释并转换为人类用户或处理数据的机器可以理解的电压。然而，传感器本身无法存储、显示或传输数据，还需要其他设备来执行所有功能才能被视为物联网设备。
+
+物联网设备是具有计算能力的物体，这些计算能力不包括标准计算设备，如个人电脑、平板电脑或智能手机。通过这种方式，普通物体可以配备连接能力，成为网络的一部分，并与其他物体及互联网进行交互。我们日常使用的设备中的传感器可能不易察觉，但它们确实存在，响应环境的变化。个人电脑、平板电脑和智能手机通过设备电路中集成的不同元件，为传感器提供必要的计算和通信能力。然而，对于开发者来说，常规做法是使用嵌入式开发板通过所需模块的互连来提供这些能力。尽管如此，所有这些设备都共享常见元素（见 Table 14.1），如 Figure 14.2 所示。
+
+Table 14.1 Elements of an IoT Device
+
+| Element || Description |
+| --- | --- |
+| Processor || The `Processor` is the part of the device that provides computing power. This computer power is used to run the program that dictates how the device should operate and process the information. If the IoT device needs to perform simple operations, the selection of an 8-bit processor may provide enough computing capabilities. However, 16-bit and 32-bit processors are available for higher processing requirements. |
+| --- | --- |
+| Memory || IoT devices are configured to perform a certain task through a software program. It may also be necessary to store the information gathered by the sensors until this information is transmitted. Therefore, memory is another important part of IoT devices with computing capabilities. The memory is part of the microcontroller. There are two types of memory for different types of information. The `RAM` (random access memory) stores short-term data that is lost when the device is not powered. The `ROM` (read-only memory) stores long-term data, such as the program, that can be accessed when necessary and is not lost when the device is restarted. |
+| I/O pins || Sensors and other modules in the IoT device need to be connected to the processor to interact and perform their tasks. This connection is performed through the input and output pins. The pins read data or perform the actions established in the program of the device. The number of I/O pins and their specified use vary according to the type of board and should be consulted in the datasheet provided by the manufacturer. |
+| Communication ports and antennas || IoT devices need a form of communication either to be configured or to exchange data with other devices. The communication ports enable wired communications with other devices. `USB`, `UART`, or the `Ethernet` port are examples of wired communication ports. Wireless communications are performed through `antennas`. The antennas may be as small as a printed circuit that is part of the embedded board, but oftentimes it is a bigger electronic device selected to meet the communication requirements in terms of coverage and transmission power that is connected to the embedded board. |
+| Power supply || The `Power supply` is necessary for the device to operate. Batteries, solar panels, or a connection to the power grid are some of the options for providing a steady power supply to the device. Typical voltages for powering small-sized devices comprised embedded boards are 5V and 3.3V. However, large-sized devices with higher processing and communication requirements may need more potent power supplies, including a connection to the power grid. |
+| Circuitry || All the different elements of IoT devices are connected and integrated into a circuit with elements such as resistors, capacitors, diodes, or transistors, among others, to enable the correct operation of the device. |
+
+![Figure 14.2 Parts of the embedded boards.](img/fig14_2_B.jpg)
+
+Figure 14.2 Parts of the embedded boards.
+
+市面上有许多嵌入式开发板，满足不同的处理能力、I/O 引脚数量及类型（模拟或数字）以及工作电压（见 Table 14.2）的需求。在开发用于监测不同环境的物联网设备时，需要考虑所用传感器的特性、稳定电源的可用性（或缺乏）以及天气条件和所需的封装。如果设备未得到保护，它可能会因环境因素或操作活动而损坏。因此，必须覆盖设备并根据具体条件调整封装，以确保正常工作。设备若位于户外，应具备防 weatherproof 特性；若部署于深海，则需能够承受高压。
+
+Table 14.2 Commonly Embedded Boards and Their Characteristics
+
+| Controller || Analog Pins || Digital Pins || USB || Operating Voltage || Processor || FLASH || RAM || EEPROM || Frequency |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Arduino Mega \[12\] ||  16 ||  54 || — ||  7–12 V || `ATmega 2560` ||  256 kB ||  8 kB ||  4 kB ||  16 MHz |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Arduino UNO \[13\] ||  6 ||  6+14 || — ||  7–12 V || `ATmega 328P` ||  32 kB ||  2 kB ||  1 kB ||  16 MHz |
+| WEMOS MINI D1 \[14\] ||  1 ||  11 ||  1 ||  3.3 V || `ESP8266` ||  4 MB || — || — ||  80/160 MHz |
+| Node MCU \[15\] ||  1 ||  17 || — ||  3.3 V || `ESP8266` ||  16 MB ||  32+80 kB || — || — |
+| Raspberry Pi 2 Model B \[16\] ||  ||  40 ||  4 || — || `Broadcom BCM2837` ||  900 MHz || — ||  1 GB || — |
+| Raspberry Pi 3 Model B+ \[17\] ||  ||  40 ||  4 ||  5 V || `Broadcom BCM2837B0` ||  1.4 GHz || — ||  1 GB || — |
+
+Depending on the purpose of the device, they may be consumer devices, such as smart watches, cars, home appliances, thermostats, lighting, and irrigation devices for gardens \[11\]; enterprise devices, such as security, lighting, locks, thermostats, cameras, TVs, monitors, and projectors; and industrial devices such as sensors and machinery.
+
+
+
+-   IoT 设备可能会根据环境中感知到的内容或用户收到的操作来执行特定的动作。例如，灯光可能被打开，空调可能被关闭，闸门可能被打开，或者植物可能需要浇水。执行器是根据收到的信号指示而执行的设备。它们的功能与传感器相反，因为传感器响应环境，而执行器则修改环境。
+
+`Communication Layer`: 传感器设备如果没有能够与其他设备通信，就不能被视为物联网 (IoT)。它们必须是网络的一部分。该网络由不同的网络设备组成，如网关、路由器、交换机、集线器或桥接器，这些设备创建连接以实现通信。通信可以是有线的或无线的，根据通信协议的不同，传感器设备需要包含特定的端口、天线或模块来进行通信。
+
+可用的技术种类繁多 \[9\]，因此使用标准有助于设备的集成和互操作性。Table 14.3 列出了这些技术的主要特性。最佳技术的选择取决于覆盖范围、需要传输的数据量或功耗需求。
+
+Table 14.3 Wired and Wireless Communication Protocols
+
+| Protocol || Distance || Data Rate/Bandwidth || Power Consumptio |
+| --- | --- | --- | --- |
+| WiFi \[18, 19\] ||  70 m (indoor)/250 m (outdoor) || Up to 40 Mbps (802.11ah) || High |
+| LoRa \[19\] ||  22 km ||  0.3 to 50 kbps || Low |
+| RFID \[20\] ||  27 m (passive)/100 m(active) || Up to 640 kbps || Low |
+| ZigBee \[19\] ||  75 m || Up to 250 kbps || Low |
+| Bluetooth \[19\] ||  350 m || Up to 3 Mbps || Medium-Low |
+| GPRS \[21\] ||  35 km ||  40 kbps || High |
+|  4G/LTE \[19\] ||  100 km || Upload 150 Mbps Download 50 Mbps || High |
+| Ethernet \[22\] || Up to 100 m (without intermediate devices) || Up to 100 Gbps (Gigabit Ethernet) || Medium |
+
+`Service Layer`: 服务层包含网络提供的各种功能。其中一些功能侧重于数据处理，包括云服务、本地处理与分析以及人工智能 (AI) 技术用于进行预测 \[9\]。这些技术可以用于减少需要转发的信息量，并从数据中得出结论，帮助用户和系统做出决策或进行预测。其他功能侧重于设备管理和安全保障 \[11\]。设备可能需要进行注册并经历激活过程，以建立配置，这在被授权并经过验证后进行。此外，某些应用可能需要特殊的安全措施，例如智能医疗，因为数据极其私密。其他应用可能需要管理大量设备。因此，不同的应用可能使用不同的服务，因为将所有服务都应用于所有应用是低效的。智能农业的安全需求低于智能电网，因为农业数据可能不那么机密。但仍需考虑互操作性、可扩展性或可用性等问题，因此使用和开发标准以便于物联网系统的实现至关重要。
+
+`Application Layer`: 最后一层是应用层。这一层包含每个智能环境的不同功能，如农业、环境监测、医疗、城市、太空、纳米设备、物流、教育、能源、工业或社交物联网 \[9\]。用户与设备之间的交互，或人与物之间、物与物之间的交互，可以导致人与人、人与事、事与事的交互。此外，用户或事物对数据的访问以及智能应用的管理可以在远程位置进行。
+
+## 14.4 The Use of IoT Technology in Different Use Cases
+
+In this section, the use cases for the different smart applications are presented. The concept for each smart application is described, and the architecture and sensor devices in each case are described.
+
+### 14.4.1 IoT for Smart Environmental Monitoring
+
+The increase in population has led to the detection of increased danger to the health of both people and ecological systems. A report of the Lancet Commission on pollution and health \[23\], where a two-year study was conducted, concludes that environmental pollution is currently the biggest culprit of disease and premature death in the world. The study states that, in countries with serious pollution problems, a quarter of the people who die do so from diseases directly related to pollution. They calculated that, in 2015, 9 million people died prematurely from diseases directly related to this serious problem. This reason is one of the main factors for the need to monitor the environment in cities, industrial areas, forests, rivers, lakes, seas, etc.
+
+The combined action of sensors, IoT devices, and remote connectivity is used to monitor properly. In addition, we must be able to analyze, determine the accuracy, and present reports of the obtained data.
+
+The use of sensor networks and IoT allows for protecting and cleaning our environment, thanks to the detection of harmful pollutants, harmful substances, chemical spills, etc. With the sensors that are integrated into weather stations, irrigation systems, ocean equipment, etc., we can easily and efficiently detect data such as temperature, humidity, water level, or physical properties, and facilitate monitoring air, soil, and water.
+
+The data obtained from the sensors is transmitted through devices or nodes, which are connected to the cloud or external databases through different communication technologies. If data is processed using edge computing, critical information can be quickly classified and delivered. At other points, even from the very edge of the network, the information can be analyzed and evaluated. After that, the appropriate actions must be carried out in response to each of the anomalous situations.
+
+*   **Weather:** Temperature, humidity, rain, atmospheric pressure, the intensity of light, direction, and speed of the wind, solar radiation, UV radiation.
+
+*   **Air quality:** PM 2.5, PM 1, PM 10, CO[2], O[3], NO[2], SO[2].
+
+*   **Water pollution:** Turbidity, salinity, dissolved oxygen, temperature.
+
+*   **Forest fire detection:** smoke, flame, CO[2].
+
+Figure 14.3 shows the network architecture of smart environmental monitoring. To carry out environmental monitoring, we must establish an architecture in which there will be:
+
+![Figure 14.3 The network architecture of IoT for smart environmental monitoring. The parameters that are most commonly monitored are the following:](img/fig14_3_B.jpg)
+
+Figure 14.3 The network architecture of IoT for smart environmental monitoring. The parameters that are most commonly monitored are the following:
+
+*   **Sensor network:** It continuously monitors the environment and generates data related to the observed variables.
+
+*   **Nodes:** The sensors will be connected to nodes that are capable of transmitting the data captured during monitoring.
+
+
+
+-   [通信网络：](https://wiki.example.org/feynmans_learning_method) 使用不同技术，将数据从节点发送到云端或私有数据库进行处理。
+
+-   [智能系统：](https://wiki.example.org/feynmans_learning_method) 它们负责处理捕获的气候数据，在发生危险情况时生成警报和通知。
+
+-   [所获信息的展示：](https://wiki.example.org/feynmans_learning_method) 处理后的信息结果必须发送给相关行为人或人员，以便他们作出适当反应。
+
+There are public platforms that offer information with climatological data obtained in different locations, for example, Microsoft’s Planetary Computer Data Catalog \[24\].
+
+There are public platforms that offer information with climatological data obtained in different locations, for example, Microsoft’s Planetary Computer Data Catalog \[24\].
+
+It is very interesting to use low-cost sensors that allow monitoring of the air and the exposure to pollution that people face \[25\] since they would allow its massive use. One of the biggest problems we have to face is the calibration of the sensors. They must be calibrated before their deployment. It would be advisable that, initially, its calibration is conducted in the laboratory following the manufacturer’s instructions. Once the final implementation has been carried out, calibrations are performed again, since in this way the quality of the obtained data can be guaranteed. Access to environmental parameters using the web in remote areas would also be very interesting \[26\]. Citizens can access information on environmental parameters through the Internet, and in addition, alarms can be sent when the pollution parameters exceed the ranges considered appropriate. The control of marine pollution is of great interest as well. Using sensors and other technological means, it is possible to map and monitor aquatic environments, even seeing their distribution and evolution \[27, 28\].
+
+It is very interesting to use low-cost sensors that allow monitoring of the air and the exposure to pollution that people face \[25\] since they would allow its massive use. One of the biggest problems we have to face is the calibration of the sensors. They must be calibrated before their deployment. It would be advisable that, initially, its calibration is conducted in the laboratory following the manufacturer’s instructions. Once the final implementation has been carried out, calibrations are performed again, since in this way the quality of the obtained data can be guaranteed. Access to environmental parameters using the web in remote areas would also be very interesting \[26\]. Citizens can access information on environmental parameters through the Internet, and in addition, alarms can be sent when the pollution parameters exceed the ranges considered appropriate. The control of marine pollution is of great interest as well. Using sensors and other technological means, it is possible to map and monitor aquatic environments, even seeing their distribution and evolution \[27, 28\].
+
+### 14.4.2 Smart Farming: Smart Agriculture, Smart Breeding
+
+According to the United Nations (UN) \[29\], the world population in 2050 will reach 9,700 million, given this forecast, the Food and Agriculture Organization of the United Nations (FAO) \[30\] indicates that world agricultural production should increase by 70% in 2050, compared to agricultural production in 2009.
+
+Smart farming can be defined as the use of new technologies in agriculture to increase its yield efficiently, achieve better use of resources, and cause minimal environmental impact.
+
+To achieve this objective, it is necessary to observe and analyze the conditions, to subsequently create an optimal plan of the actions to be taken. The available resources must be adjusted to the specific situations in each location. For all the reasons stated, it is necessary to use sensor technology to obtain the most precise information from the monitored data, which will be processed by intelligent systems to obtain optimal results.
+
+The terms “smart farming” and “precision farming” are often used as similar terms, but they should be differentiated. Smart farming focuses on tillage agriculture, while precision farming takes more concepts into account, including smart electronics, to make the farmer’s tasks more bearable and achieve additional cost savings.
+
+The parameters that are usually monitored by different types of sensors are the following:
+
+*   Soil, plant, and water sensors: The parameters most controlled by these sensors are soil moisture, water level, pH (soil or water), water flow, soil temperature, water conductivity, leaf wetness, plant height, water temperature, and soil nutrients.
+
+*   Climate sensors: The parameters most controlled by these sensors are air temperature, air humidity, luminosity, rain, wind direction and velocity, ultraviolet radiation, CO[2], gas, atmospheric pressure, and smoke.
+
+The use of actuators is also of vital importance. The data observed during monitoring is stored in the cloud or private databases and is processed by intelligent systems. With the produced response and based on pre-established reference values, appropriate decisions can be made in situations that may endanger crops. The actions can be carried out directly, acting automatically on the actuators, or the farmers themselves can make the decision they believe to be the best based on the received information.
+
+In many situations, drones are being used \[31\] since they allow information to be collected through the sensors and cameras that are installed on a large surface. From the cameras, using infrared technology and multispectral images, information can be obtained on the state of the land, crops, water needs, etc. Furthermore, fumigation tasks can be carried out with the use of drones.
+
+Another key point to monitor correctly is to use the appropriate communication technologies. The information must be sent from the field to the cloud or private databases, where it will be stored and can be accessed by farmers, even in real time. According to the Machina research report \[32\], the number of connected agricultural devices is expected to reach 225 million by 2024. The employed technologies are very numerous since multiple factors must be taken into consideration for their implementation. We can highlight the following factors, which will be of vital importance in the selection of the technology used for transmission: maximum data rate, maximum range, energy consumption, ease of installation, etc. Thus, we can find cellular technologies implemented (3G, 4G, 5G), wireless (WiFi, Bluetooth BLE, RFDI, Zigbee, NB-IoT, IEEE 802.15.1) LPWAN (LTE-M, EC-GSM, Sigfox, LoRaWAN), and wired (Ethernet).
+
+Due to climate change and its effects on precision farming, extremely efficient use of fresh water must be taken into account. In addition, water availability for food production and people, as well as to maintain ecosystems, must be ensured, as indicated by the authors \[33\]. A fundamental task when implementing soil moisture (or any other parameter) monitoring solutions in precision agriculture is the location of the nodes with their connected sensors since an observation will depend on its adequacy to the requirements. Authors such as \[34\] have submitted a proposal to fix this problem. The network architecture of smart farming is presented in Figure 14.4.
+
+![Figure 14.4 The network architecture of smart farming.](img/fig14_4_B.jpg)
+
+Figure 14.4 The network architecture of smart farming.
+
+### 14.4.3 Smart Healthcare: eHealth, Smart Medical Management, Independent Living
+
+In smart healthcare, the concept of IoT is applied to monitoring and managing people’s health. The smart sensors deployed for these applications are often wearable devices (see Figure 14.5). Materials, people, and healthcare institutions are then connected to provide intelligent responses to medical needs \[35\]. It enables more interaction between the parties (hospitals, patients, doctors, and research facilities), helps allocate resources, improves medical research, prevents diseases, and facilitates making more informed decisions, diagnoses, and treatments. Smart healthcare functionalities can be classified into the categories of individual users, health institutions, and research institutions \[35\].
+
+![Figure 14.5 Network of smart wearable sensors for smart healthcare.](img/fig14_5_B.jpg)
+
+Figure 14.5 Network of smart wearable sensors for smart healthcare.
+
+
+
+传统健康管理以医生–患者关系为中心，在慢性病管理方面可能存在不足。为解决这一问题，物联网（IoT）实现了患者自我管理。患者可以居住在配备传感器的智能住宅中，这些传感器可监测可能的健康风险，如跌倒或空气质量，从而提升生活质量并为老年人和残障人士提供帮助。他们可以佩戴可穿戴设备，如智能手表，这些设备内置高级传感器，可实时、不令人不适地监测运动、心率或呼吸模式。医院可以使用 RFID 识别并管理患者、人员和材料，以提升性能、资源分配并降低成本。医生可以通过集成系统获取信息，或借助医疗机器人进行更安全、更精准的手术。最后，研究机构可以获得更大量、更长时间的数据，以便进行分析并帮助发现新的帮助患者的方法。
+
+智慧医疗利用所有物联网应用的共同技术，同时可能还包括通过在智能手机和可穿戴设备中加入生物传感器而引入的生物技术 \[36\]。
+
+可穿戴传感器通常是外部且无线的，因为内部传感器更不舒适，且在维修时会带来更多不便。它们测量生理指标，如呼吸频率、体温、脉搏、血压、血氧饱和度等。其他特殊用途的传感器还包括跌落检测、血糖或关节角度传感器。
+
+加速度计可用于康复，以检测关节（如膝盖）的运动或监测帕金森病患者的病情演变。脉搏可从身体不同部位读取，如手腕、胸部、指尖或耳垂。许多商用设备监测脉搏，尤其用于运动。脉搏可以通过压力、超声（RF）、射频或光电血脉波（PPG）传感器测量。后者利用 LED 和光电二极管观察光的变化来确定脉搏。呼吸频率可用于检测呼吸暂停、气道阻塞、哮喘或过度换气等情况。基于热敏电阻的鼻子传感器是监测呼吸频率并检测空气温度的一种形式。超声波、麦克风、光纤、压力传感器或拉伸传感器也可用于检测呼吸。体温通过热敏电阻测量。血压传感器可用于管理高血压患者，但定期监测较为困难。可以通过脉搏读数估算脉搏传导时间，虽然后者不如理想般准确。脉搏血氧传感器用于监测血液中的氧含量，基于 LED 技术。最近的进展还包括智能药丸，当其接触患者胃酸时会触发传感器，生成药物摄入时的时间戳，以及能够从泪液中监测血糖并将信息发送至胰岛素泵的隐形眼镜 \[37\]。视觉传感器也可用于智慧医疗解决方案，但用户可能不愿在家中安装摄像头。
+
+另一方面，人工智能（AI）正被应用于智慧医疗系统，用于分析数据以实现疾病预防、风险监测、精准诊断和个性化治疗方案。AI 基于从所有传感器设备收集并存储在云端的数据，判断患病风险、评估疾病演进或提供健康与治疗建议。这有助于改善患者的生活方式以及可能增加疾病风险或恶化当前状况的行为。AI 还可以用于实现虚拟助手，理解书面或语音输入并作出相应响应，充当患者、医生和机构之间的中介。它可用于心理健康、提供信息或执行行政任务（如预约）。区块链被实现以提供安全、隐私、透明、不可篡改、容错、服务质量和自动化 \[38, 39\]。手术机器人（如达芬奇系统）有助于提升手术效果和恢复时间。此外，混合现实技术可用于通过建模患者及其伤害来规划手术。
+
+然而，智慧医疗系统的部署仍面临一些挑战。缺乏智慧医疗的统一标准，导致概念模糊且缺乏互操作性。此外，法律法规的进步速度跟不上技术发展，可能导致阻碍这些系统测试和部署的问题。大量来自无数智能设备的数据产生，使得管理和传输所有信息变得困难。而且，部分用户在使用技术时可能遇到困难，例如老年人和残障人士。数据安全也是必须考虑的重要因素。最后，某些传感器可能需要重新校准，且因覆盖损失或电池耗尽导致的断连现象也时有发生 \[36\]。
+
+### 14.4.4 Smart Home: Smart Buildings, Smart Living
+
+智能住宅的根本目标是在住宅和建筑中加入传感器和执行器，以简化日常生活。智能住宅可以在新建阶段即被构建，也可以在原本没有这些设备的老房子中增添传感器、执行器和必要设备。智能住宅的一个基本特征是，居民可以在本地或远程访问互联网，从而控制家中状态信息并根据偏好和需求作出相应响应。
+
+当实现家庭自动化时，可实现更高层次的家庭控制和安全、更高的能源节约与效率、更高的居住舒适度，甚至更大的可持续性。
+
+目前，通过移动设备控制家庭主要有两种方式：Home Assistant 或 SmartThings。SmartThings \[40\] 是三星的专有解决方案。通过该方案，用户可以使用 App 控制三星及兼容设备。使用该选项的前提是用户必须连接至三星云服务，并通过互联网访问。如果用户选择使用 Home Assistant \[41\]，则使用的是开源自动化软件。其主要优势之一是可以控制不同设备和系统，这些设备和系统在用户视角下会协同工作且透明。该方案可通过多种系统实现，但最知名且使用最广泛的包括 Google Home、Amazon Echo 和 Alexa。从使用角度看，Home Assistant 选项需要更高的实现知识。
+
+要实现 Home Assistant 或 SmartThings 方案，需要使用无线或有线通信技术与设备和控制器连接。最常用的技术有以太网（Ethernet）、Wi‑Fi、蓝牙低功耗（BLE）、Zigbee 等。
+
+如果我们已具备智能住宅所需的资源，则在家中任何有网络连接的位置都可以控制暖通空调（HVAC）系统、家电、照明、闭路电视（CCTV）等。在可用的传感器和执行器中，我们可以突出以下几类：
+
+
+
+
+# 智能家居与智能城市
+
+## 智能家居
+
+*   智能开窗和关门：我们可以在任何地方打开家庭或车库的门。它还允许我们通过窗户进行操作。这提供了更高的安全性，并便于其他人在家中访问。
+
+*   智能照明：这些传感器和执行器的安装使我们能够远程控制家庭灯光。根据设备和控制器的不同，我们甚至可以调节光的亮度。除了显著的能源节约，它还能在家庭中提供额外的安全模式。
+
+*   智能能耗计量器：这些传感器和执行器可以控制能耗，并能对成本大幅降低产生重要影响。
+
+*   智能插座：使用它们可以控制联网家用电器。这将帮助我们减少能耗，并在电气问题发生时避免故障。
+
+*   烟雾和气体检测：烟雾的存在可以被检测。它通过启动相应的警报来防止火灾，并避免火灾可能导致的巨大物质损失。此外，有害健康的气体也可以被检测，并相应地触发警报。
+
+*   智能暖通空调系统：它们允许你从任何地方控制家庭空调。其对降低能源成本的影响是毋庸置疑的。
+
+*   漏水传感器：可以安装传感器来报告管道系统中的任何漏失。它们通常用于厨房和浴室，但检测范围可以扩展到整个家庭。
+
+*   运动传感器：它们的安装使我们能够发现家中任何异常的运动。它与家庭安全紧密相关。摄像头和闭路电视（CCTV）通常用于执行这些功能。
+
+*   传感器和执行器，它们将连接到所有希望控制的设备和元件。
+
+*   智能插座网络，具有能源管理功能。
+
+*   家庭通信网络（有线或无线）。
+
+*   中央网关，负责协调和控制家庭中所有连接设备。
+
+Figure 14.6 显示了智能家庭的网络架构。
+
+![Figure 14.6 The network architecture of a smart home.](img/fig14_6_B.jpg)
+
+Figure 14.6 The network architecture of a smart home.
+
+### 14.4.5 智能城市：交通管理、公共安全
+
+每天，从农村环境迁移到城市生活的人口不断增加。
+
+根据联合国经济及社会事务部《世界城市化展望》2014 年修订版 \[42\]，预计到 2050 年，66% 的人口将居住在城市地区。为了实现适当的发展，可持续城市化的前提显得尤为重要。智能城市在城市未来中扮演着基础性的角色。
+
+智能城市利用数字解决方案实现城市的可持续性和效率。传感器和传感器网络用于监测和改善基础设施、服务、安全等。通过传感器网络、摄像头、无线设备和数据中心，数据将被获取，这有助于将传统城市转变为智能城市。
+
+从环境角度来看，智能城市的目标是成为可持续城市；从居民的角度来看，它必须因其提供的服务而具有吸引力。为了实现目标，必须具备：
+
+*   决策所需的监测资源。
+
+*   适当的通信技术。
+
+*   分析观测数据并作出最适当决策的能力。
+
+*   投资未来技术，以更好地适应改进，满足我们的需求。
+
+根据 \[43\] 智能城市的六大关键特征：
+
+*   **智能经济**：智能城市的人口增长将推动经济增长，进而影响劳动力市场和创业等。对产品和服务的需求将更大。
+
+*   **智能人民**：许多智能城市鼓励创业和创新。根据 \[44\]，城市成功的关键在于人们在知识交流中的参与。
+
+*   **智能治理**：每个智能城市的组织方式各不相同，取决于其目标。常见的智能治理形式包括透明度和决策参与。
+
+*   **智能出行**：城市内的交通是智能城市的关键点。公民需要能够高效移动于不同地点之间的系统。
+
+*   **智能环境**：未来城市必须减少污染、保护环境并更高效地管理废弃物。
+
+*   **智能生活**：提升公民的生活质量至关重要，这将通过改善健康状况、住房质量、教育和文化设施等实现。
+
+智能城市使用大量传感器获取数据。以下是需要监测的关键领域：
+
+*   **污染管理或空气质量**：在城市中战略性安装传感器，监测空气质量，并在污染水平危险时提醒公民，同时提升公众对环境的认知。
+
+*   **结构健康管理**：对建筑物进行监控以提高安全性并降低维护成本。建筑物的结构退化可能由环境作用或建筑材料降解等多种原因引起。会监测温度、湿度、应力、加速度和材料降解等参数。
+
+*   **交通和交通管理**：利用智能交通和交通监测系统提高交通网络的效率。其带来的优势包括交通管理和优化、道路设施改善、道路安全提升、环境污染减少以及公共交通管理。公民的移动将更高效，通勤更加便捷，安全性提高，污染水平降低。
+
+*   **水资源管理**：监测水利基础设施是必要的。大城市因管道漏水而浪费大量水资源。
+
+*   **能源管理**：需要使用传感器对电网进行智能控制。当检测到异常或故障时，会向服务公司发出警报，进行快速修复或通过其他路径重新引导能源。此外，还向公司和客户提供信息，帮助他们改进资源的使用和管理。
+
+*   **公共照明管理**：通过监测街灯和公共照明状态的传感器，行政部门可以在灯光故障发生时立即收到警报。这样可以控制能源的浪费，例如灯光白天仍然亮着的情况。同时，还能够发现照明的盗窃和操纵。
+
+
+
+
+**废弃物管理**：通过在垃圾容器中安装传感器，可以监测并通知当垃圾容器已满时。此外，公民可以获取其所在区域最近的垃圾容器的填充程度信息。此外，这将使垃圾收集路线的规划得以进行，从而节省车辆和填埋场的管理成本。此外，废弃物管理还可以被控制。它们甚至可以通过监测温度水平来提供火灾警报。
+
+Figure 14.7 显示了智能城市的网络架构。
+
+![Figure 14.7 The network architecture of a smart city.](img/fig14_7_B.jpg)
+
+Figure 14.7 The network architecture of a smart city.
+
+### 14.4.6 智能物流：运输、移动性、智能旅游、产品生命周期管理、智能海运、智能港口、智能船只
+
+物流被定义为公司或服务，特别是分销，所需资源和方法的集合。多年来，主要目标一直保持不变，但用于实现这一目标的手段和资源却一直在变化。Figure 14.8 展示了物流经历的不同世代 \[45\]。
+
+![Figure 14.8 Generations of logistics.](img/fig14_8_B.jpg)
+
+Figure 14.8 Generations of logistics.
+
+智能物流被认为是将网络物理系统的原则应用于供应链中，以更好地控制、自我组织和优化这一功能。物流管理是一个受不断变化的行业影响而发展的创新方法。技术创新、对商品和服务需求的增长、或供应链的复杂性等因素只是其中一些。
+
+通过使用技术，可以生成直接的数字图像，随后可以建立实时措施，以提高公司网络的效率，以及自我控制、处理和与 IT 系统、摄像头或传感器系统等其他信息系统相连的子系统。因此，智能物流的主要目标是实现更高效、分散、灵活和敏捷的订单处理。
+
+当然，物联网技术和大数据将继续被用于管理运输和产品制造。通过物联网技术和大数据，该行业将得到惠及，并提高其运营能力，物流网络效率最大化的研究活动将持续发展。
+
+#### 14.4.6.1 什么是智能物流？
+
+智能物流 \[46\] 指的是一种在物流活动发展过程中实现所有集成流程显著效率提升的特定物流类型；也就是说，它不是一种单一的物流系统，而是指以尽可能高效、可持续和盈利的物流视角执行的物流活动。从这个角度来看，虽然没有单一的方面必须考虑来识别智能物流，但有几个共同元素是其固有的：
+
+*   **可持续物流**
+
+*   **社会物流**
+
+*   **应用于可追溯性的新技术使用**
+
+*   **流程自动化**
+
+这四个元素在理解智能物流时至关重要，因为它们提高了整体物流活动的效率，同时也回应了消费者对其购买决策不仅影响其自身经济，也影响整个社会的需求。Figure 14.9 显示了一个从制造到用户交付的异构网络的例子，用于控制货物的物流。
+
+![Figure 14.9 Example network in smart logistics.](img/fig14_9_B.jpg)
+
+Figure 14.9 Example network in smart logistics.
+
+#### 14.4.6.2 智能物流对企业和工业的益处
+
+使用智能物流的好处很多。例如，基于更准确的诊断和可靠的预测，运输的质量和速度可以显著提高。此外，这一步骤的优势在于通过交换可视化和分析，简化了与供应商、仓库人员和最终客户的利益共享 \[47\]。
+
+许多物流提供商已经将其数字化战略集中在将系统数据与云平台上的传感器收集的车辆数据相互连接上。这正是智能物流的一个积极后果。在与行业合作的同时，这种方法也将便于现有设施的数字连接，并提供准确信息以确保整个基础设施的稳定。基于此方法，我们不仅可以确定维护策略，还可以智能地应对异常情况。例如，当收到多个错误消息时，可以决定哪些应优先处理。结果是，得益于智能物流，客户满意度提高。
+
+### 14.4.7 智能工业：工业处理、智能制造
+
+每天，许多行业加入工业革命，也称为工业 4.0。数字化转型使得物理元素与数字元素融合，从而提高生产率。这促成了智能工业和智能工厂概念 \[48\]。
+
+智能工厂 \[49\] 指的是智能工业，即在其生产流程中引入了颠覆性技术，结果是生产更加灵活和模块化，这得益于自动化技术。
+
+智能工厂可以缩短生产流程的时间，并降低成本，因为它们能够适应和优化流程，同时实时存储和分析大量数据。这使得生产更加灵活、高效和自主，使人们能够专注于改进流程，而非重复性任务，从而提供巨大价值 \[50\]。
+
+智能工业中的云计算 \[51\] 允许存储在工厂（机器人、传感器等）和特定工具（MES、ERP 等）以及制造产品中产生的大量数据。智能工业的主要特点如下：
+
+*   **物联网在智能工业中**。机器之间的连接使得系统协调、数据捕获、远程生产控制以及系统和产品之间的信息交换成为可能。
+
+*   **大数据**。通过机器或工厂与工具之间的连接生成的信息必须被收集和分析，以实现两个目标：第一是识别模式，第二是预防未来事件。只有大数据才能在最佳时机处理大量数据。
+
+*   **智能工厂中的网络安全**是必备技术之一，因为隐私和数据保护是工业最重要的要求。
+
+*   **机器人**便于执行需要高精度或重复性的任务。在每项活动中，可能需要认知机器人、自主机器人或两者兼有。
+
+*   **数字孪生** \[52\] 能提高操作的效率、控制和规划。
+
+
+
+
+**虚拟和增强现实**帮助组织中的操作员管理产品、生产任务以及设备的维护和修理。但我们不应混淆这两个术语；当我们谈论增强现实（AR）时，我们指的是能够实时在我们通过眼睛感知的信息上叠加数字信息的技术，我们只需要一部智能手机。而虚拟现实则需要特殊眼镜来将我们转入虚拟世界。
+
+#### 14.4.7.1 投资信息和通信技术（ICT）于智能工业的好处
+
+数字化工业带来了众多影响产品规划、质量和开发以及供应链物流的好处。下面列出最重要的竞争优势 \[53\]：
+
+*   在不可预见事件发生时的速度和灵活性
+
+*   通过传感器和物联网设备实时连接数字和物理元素
+
+*   资源优化
+
+*   存储数据的可靠性
+
+*   元素之间的双向数据流
+
+从长远来看，智能工业还将带来其他优势，如机器学习所提供的好处。我们需要时间来收集并存储足够的数据，以制定需求预测、开展预防性和预测性维护，或生成数字孪生体等众多机器学习可执行的操作 \[54\]。
+
+### 14.4.8 智能能源：智能电网、电力管理
+
+传统自 20 世纪以来的能源生成与处理方式是一种僵化且单向的模式，依赖有限数量的厂站从上至下向客户供电，且在中长期不可持续。根据欧洲委员会 2015 年通信 \[55\]，每年需要投资 20 亿美元，到 2030 年可实现 90 亿美元的节约，这将通过提升能源效率 25%实现。向智能能源转型将带来一系列变化，包括更高的能源效率、能源处理与最终使用的改进，以及更大比例的清洁可再生能源和智能能源系统 \[56\]。
+
+智能能源的目标是使传统能源行业数字化，迈向日益去中心化且双向的模式，以适应实际需求的能源消耗。传统模式下的 excess production（过剩产出）将被消除，以匹配消费者的需求。
+
+根据 Dincer 等人 \[57\]，智能能源系统的关键期望包括：能源上可持续、能源安全、环境友好、经济可行、商业可行、社会可接受、可集成和可靠。通过实施智能能源，不仅能实现成本节约，还能带来环境变化，如降低碳足迹和减少用水量。
+
+此外，还需考虑以下新概念。
+
+*   **新型消费者，即 prosumer（生产者-消费者）**：既是能源消费者，也生产能源。prosumer 通过其设施生产能源，除了消费外，还会将多余能源注入电网。
+
+*   **智能电网**：一种能够确保可持续且高效的能源系统，损耗极低，并能提供高质量、安全的能源供应的网络。
+
+*   **智能电表**：新型能源计量器。它们必须具备远程管理能力，并支持时间差分计费。
+
+*   **能量存储**：虽然存储能源非常复杂，但已成为必需。
+
+追求最大能源效率使我们走向智能电网，这些电网将是具备智能、灵活、高效、安全、开放和可持续性的网络。它们能够快速响应，得益于在其上部署的新型监控和通信系统。
+
+从一开始，能源传输网络就配备了计量设备，用于为每个连接的消费者定价。新型智能电网必须具备以下特性：
+
+*   监控系统可实时定位任何供电中断，以便派遣维修团队进行适当维修。
+
+*   对能源生成设备和系统的全生命周期维护，以监控老化情况。
+
+*   预防性维护可在出现潜在故障点时进行监测，并基于人工智能对历史数据的分析，采取适当的预防措施。
+
+*   通过消费监测优化费用。实时消费监测使得能源生成能够匹配实时需求，从而减少能源浪费。
+
+能源存储是未来能源面临的重大挑战之一。以下是能源存储方法的规模示例：
+
+*   **大规模（约吉瓦 GW）**：可通过可逆水电或热存储来存储。
+
+*   **网络存储（约兆瓦 MW）**：可通过电池和电池单元、电容器和超导体、飞轮来存储。
+
+*   **终端用户级别（约千瓦 kW）**：可通过电池、超导体和飞轮来存储。
+
+另一个重大挑战是实现智能电表，因为未来的计费方式将按小时计费，这些电表将简化网络管理和控制。它们需要替换旧电表，因为新型电表能够进行远程测量和远程管理，从而实现对电表读取和信息处理的远程操作。
+
+综上所述，智能电网的运行依赖于一个能够持续监测客户用电行为的持续通信网络。该网络能够实时监测并测量所有连接客户基础设施的设备行为。为实现这一目标，必须具备一个自动化系统，能够调节生成和客户需求的变化。Figure 14.10 展示了一个智能配电系统的示例，左侧显示不同的能源生成来源，右侧则显示一些能源消费者。
+
+![Figure 14.10 智能能源配电系统。](img/fig14_10_B.jpg)
+
+Figure 14.10 智能能源配电系统。
+
+### 14.4.9 社会物联网（SIoT）
+
+社会物联网概念聚焦于将社交网络与物联网相结合，使物体之间模拟人与人之间的交互，并运用社会学概念来定义其通信方式 \[58\]。创建由物体组成的社交网络，以实现共同目标，如提供服务或提升效率、功能和性能 \[59\]。这样，设备会自主选择“友谊”或形成“朋友的朋友”连接。因此，SIoT 的交互方式是物物之间或用户与物体之间的交互。SIoT 设备之间可能建立的关系类型如 Figure 14.11 所示。结果，SIoT 可用于协调策略、社交化游戏化以及虚拟化平台，也可在其他物联网应用中建立设备之间的新型通信方式 \[58\]。
+
+![Figure 14.11 SIoT 设备之间的关系类型。](img/fig14_11_B.jpg)
+
+
+
+# 图 14.11 SIoT 设备之间的关系类型。
+
+因此，SIoT 的主要任务之一是管理关系。社交化对象的好处在于，与独立工作的对象相比，它们的响应时间和准确性得到了提升。因此，随着服务和功能的复杂性增加，物联网（IoT）趋向于更加“社交”。当 SIoT 可以在其他物联网应用场景中实现时，物联网应用中的传感器设备也可以成为 SIoT 的一部分，与其他设备建立“社交”形式的通信。当对象首次被引入网络时，它需要被分配一个 ID、一个包含网络中其他对象的静态和动态信息的配置文件，以及设备所有者指定的用于控制其行为的设置或权限 \[59\]。此过程由设备所有者通过与服务器建立通信并创建账户来完成 \[60\]。
+
+SIoT 的另一个主要关注点是信任管理，以确定哪些设备是恶意的，哪些是善意的。因此，根据每个对象的可信度，识别出不同特征的信任类型 \[59\]。由于建立物联网设备之间社交关系的系统，也会出现针对该系统的特定信任攻击。诽谤攻击会损害某些设备的声誉，从而降低它们被选中的机会。诽谤攻击会影响信任反馈。洗白攻击会清除设备的负面声誉。歧视性攻击针对组内连接较弱的设备，以孤立该设备。机会主义服务攻击是由恶意设备执行的，这些设备通常提供低质量服务，但会提升性能以获得信任，然后参与其他类型的攻击。投票填充攻击专注于推荐恶意对象，以便它们被选中。最后，自我推广攻击会广播关于……的良好反馈……
+
+
+
+# 第二层：关键技术
+
+这些技术对于教育转型至关重要。应包括教学/学习过程管理系统、支持远程访问的虚拟教室以及自主管理的监控空间。还可考虑将传感器和执行器以及通信技术纳入其中，以实现智能环境内部的通信。可考虑的技术包括环境光的亮度及其质量、以及用于控制百叶窗、窗帘和灯光的执行器系列。这些技术可用于监测环境并分析学习绩效、进行教育数据采矿、提供电子书或交互式书籍。此外，所有促进远程访问和虚拟教学的技术，如增强现实、虚拟现实和交互机器人，也可纳入此层。
+
+# 第三层：环境控制与管理
+
+该层的技术能够提升智能教育的体验。当组织内存在多个环境时，建议从更高层次（集中或分布，取决于设计）进行管理任务。实时跟踪课堂内的移动量、声音水平以及正在进行的活动等事件非常重要。环境管理系统可智能判断是否需要因课堂参数（影响学生舒适度和表现的指标）出现问题而将小组调至特定教室。此类警报可通过短信或电子邮件直接发送。
+
+# 第四层：云存储
+
+将智能环境中产生的数据存储于云端非常有意义。通过这些数据和相应的工具，可长期、详细地分析学习过程。在此层中，可采用最新的深度学习和人工智能（AI）技术，结合行为分析系统与环境参数或活动特性，得出结论，进而开发或完善管理系统的推理规则。
+
+Figure 14.13 shows the proposed layered model for smart education:
+
+![Figure 14.13 Layered model for smart education.](img/fig14_13_B.jpg)
+
+Figure 14.13 Layered model for smart education.
+
+## 14.4.10.2 Benefits of Smart Learning
+
+根据 Alcatel-Lucent Enterprise 的研究 \[66\]，物联网（IoT）在教育领域的应用可带来以下益处：
+
+* 新的个性化教学方法，通过数字书籍和游戏化学习等更具活力的体验实现。
+
+* 通过新型音视频设备、数字视频录像机、流媒体平台和在线测试，提升学生绩效。
+
+* 为学校行政团队简化任务，通过对基础设施的主动监控以及更高效、更具盈利性的空调、照明和学校管理流程，实现更高效的运营。
+
+* 为学生和教师提供更安全的环境，借助现代监控系统、集中式门锁以及基于追踪的校车系统。
+
+* 通过 IoT 实现能源效率和成本节约。IoT 连接的灯光和其他设备可定时、自动化，例如灯光可根据时间表或 occupancy sensor 设置，在房间空置时自动关闭。
+
+## 14.4.11 Internet of Nano Things (IoNT)
+
+“Internet of Nano Things”（IoNT）概念源自“纳米技术”。该术语最早于 1959 年由 R. Feynman 在《There’s Plenty of Room at the Bottom》一文中提出 \[67\]。文中讨论了通过创建更小、性能更高的设备来 miniaturize 已有技术的可能性。1974 年，Taniguchi \[68\] 尝试将纳米技术定义为在 1 至 100 纳米尺度上制造物体的过程。
+
+M. Roco 于美国国家纳米技术倡议定义了纳米技术发展的不同世代 \[69\]。第一代与材料科学及其性能提升相关，通过引入“被动纳米结构”（如涂层或碳纳米管强化塑料）实现。第二代采用“主动纳米结构”，例如通过生物活性实现药物精准递送至特定细胞或器官，可通过在纳米颗粒表面涂覆特定蛋白实现。第三代和第四代复杂度更高：第三代基于包含“特征纳米系统”的高级纳米系统，包含数千个交互组件；第四代则基于分子纳米系统，用于控制人工器官的纳米材料发展。最后，第五代可在系统中加入人工智能和认知意识 \[70\]。Figure 14.14 将每一代与时间对应。
+
+![Figure 14.14 Nanotechnology generations.](img/fig14_14_B.jpg)
+
+Figure 14.14 Nanotechnology generations.
+
+IoNT 的核心是纳米规模设备与现有网络及互联网的相互连接，形成一种新的网络范式——“Internet of Nano-Things”。IoNT 可定义为能够通过 Nano Communication 相互交换数据的微型物理实体网络。
+
+IoNT 基础设施可采用纳米设备结合 IoT、传感器以及多种计算技术实现。该基础设施主要受应用领域及带宽、连接数量/设备数量或能源限制的影响。IoNT 的普及与扩展取决于设备处理能力、低成本大容量存储、智能天线以及智能 RFID 标签技术的进步。
+
+IoNT 面临的主要挑战之一是确保用户及其敏感数据的隐私与安全。由于关键数据通常通过公共网络（即 Internet）在设备间通信，隐私泄露的担忧随之上升。此外，经济投入大是限制 IoNT 市场增长的另一重要因素，因为 nanotechnology 的正确发展和研究需要显著资金投入。当前，IoNT 的发展主要基于两大通信方向：
+
+* **Electromagnetic Nano Communication** \[71, 72\] 与基于纳米材料的元件通过电磁（EM）辐射进行接收和传输相关。
+
+* **Molecular Communication** \[73, 74\] 指通过分子编码的数据进行接收和传输。
+
+### 14.4.11.1 Network Architecture of IoNT
+
+
+
+
+为了设计和部署 IoNT，无论应用领域如何，以下设备和元素应被视为 IoNT 架构的基础部分（参见 Figure 14.15 \[75, 76：
+
+![Figure 14.15 Network architecture of IoNT.](img/fig14_15_B.jpg)
+
+Figure 14.15 Network architecture of IoNT.
+
+1. **纳米节点**：纳米节点是具有有限存储容量的小型设备，安装在日常用品（如钥匙、书籍和小工具）中。这些设备能够执行简单任务和计算。所测数据通过短距离传输。植入人体的生物传感器可视为纳米节点。
+
+2. **纳米路由器**：纳米路由器是计算能力更强的设备，负责 interconnecting（互连）不同的纳米节点。纳米路由器还能在不同的纳米微接口之间路由数据，或将数据发送至具有 Internet 接入权限的网关。
+
+3. **纳米微接口设备**：这些设备负责将纳米路由器来的信息添加后，传输至网关，反之亦然。网关实现不同事物与 Internet 的连接，以及与传统通信网络的连接。这些设备还与其他纳米微接口设备进行通信。
+
+4. **网关**：它提供对整个网络及网络中所有物体和实体的 Internet 接入。
+
+5. **设备之间的链路**：完整连接所有纳米系统必须使用适合环境和网络需求的协议和技术。
+
+#### 14.4.11.2 用途与益处
+
+如本节所示，纳米技术将在科学和工程创新的发展中发挥至关重要的作用。纳米技术广泛应用于能源、通信与信息技术、航空航天、医药、国防和交通等领域。
+
+纳米技术还承诺在电动汽车行业带来重要进展，实现能源高效电池、光伏板和燃料电池。此外，纳米技术可为清理作物土壤和水体污染提供有趣的解决方案，并提升医疗和医疗保健水平 \[77\]。以下是可从纳米技术中受益的应用：
+
+*   **医疗保健**：纳米技术可帮助研发用于快速疾病检测的高级工具，以及对抗疾病的新型治疗手段。
+
+*   **电子设备**可受益于先进的芯片和个人电子设备。
+
+*   在 **体育器材** 中，纳米技术可提升摩托车头盔的安全性，并让棒球棒、网球拍等材料更耐用。
+
+*   **基于纳米技术的织物** 能抵抗污渍和细菌生长，帮助改善空气质量。
+
+*   **家用产品**如去渍剂、抗菌清洁剂、油漆、密封剂、空气净化器和过滤器等，可通过纳米技术得到改进。
+
+*   **能源创新**，如更高效的光伏板、更强、更轻的风力涡轮机、更轻的汽车部件以及更高的燃油效率，均由纳米技术驱动。
+
+*   **工业与食品包装** 可借助纳米技术防止污染，并延长食品保鲜时间。
+
+IoNT 仍面临一些问题和挑战需解决。研究人员应考虑上下文管理、安全、隐私、服务组合以及发现等问题。
+
+IoNT 设备应研发新的安全与隐私机制，确保纳米传感器收集的数据得到安全处理。面向服务的架构更适合让纳米传感器和纳米网络保持兼容，以便处理大量不同格式的数据。
+
+## 14.5 结论
+
+物联网（IoT）近年来不断演进并增加了功能。预计随着智能设备数量随时间增长，其发展将持续。对能够感知环境变化并据此执行操作的智能事物的连接兴趣，源于在设备中引入能够（通常无线）通信的传感器，以及技术进步使传感器尺寸和精度显著提升。本章提供了物联网各领域的概览以及传感器设备在各领域中的作用。同时，也讨论了各 IoT 领域的创新与挑战。通过此，读者获得了当前物联网的整体认知以及使 IoT 系统能够提供服务的传感器设备的一般性知识。
+
+物联网在多个领域的应用表明，其适用范围将覆盖生活的方方面面，带来更可持续、包容且繁荣的未来 \[78\]、\[79\]。这将导致数以百万计的设备部署，对无线技术的改进以提供服务并实现大规模通信的需求也随之提升。人工智能是另一项将融入每个 IoT 领域的技术，将改变当前关于遥测和从这些数据中获取的智能应用的范式。不可避免地，这将导致许多人的工作和生活方式发生重大变化，需要增加具备 AI 资质的人员来管理这些应用。随着物联网的普及，生产成本显著下降，使该技术在发达国家和发展中国家都能更快更广泛地被采用，以实现更高效的系统。尽管当前的地缘政治背景导致供应链延误和成本上升，整体趋势仍是 IoT 设备和系统成本降低、更易获取，成为服务提供商提供的另一项服务。因此，服务提供商应提升通信并提供新的云服务，以解决已部署的物理基础设施的当前限制。
+
+5G 是目前最受欢迎的无线通信技术，用于满足未来网络需求，但升级基础设施的成本是实施下一代网络的主要障碍，导致其部署时间可能超过预期。尽管如此，5G 的普及度体现在持续发表的研究论文数量上，预计当 5G 网络全球部署时，将包含目前 5G 设备规格之外的新功能和改进。
+
+保障这些网络及其传输的数据安全至关重要，确保下一代 IoT 系统的成功实施。随着人与机器的连接日益紧密，IoT 系统提供的安全机制应确保完整的隐私和保密性，防止对 IoT 能力的误用和欺诈。
+
+认识到 IoT 能为社会带来的好处以及其错误使用可能带来的问题，可促使实现更具现实性的发展，并帮助政策制定者根据新技术环境调整现行立法。最后，新的 IoT 范式包含物联网纳米技术（IoNT）等应用，这些应用需要对医疗、农业等领域的应用域进行深入的伦理评估与更新。该 IoT 领域仍处于起步阶段，其首次可操作的实现将在更远的未来出现。
+
+
+
+
+1. 王, J., 林, M., 王, C., 曾, M., 2021. 物联网（IoT）在过去 20 年的演变。计算机与工业工程。155:107174.
+
+2. Shifa, A., Asghar, M. N., Fleury, M. 2016 第六届创新计算技术国际会议（INTECH）。IEEE; 2016.
+
+3. Hasan Alhafidh, B. M., Allen, W. 智能自适应系统管理的智能家居设计与模拟。工程研究与应用期刊。2016 年 8 月; 6(8):64–90.
+
+4. Aslam, S., Michaelides, M. P., Herodotou, H. 物联网船舶：架构、新兴应用和挑战调查。物联网杂志。2020;7(10):9714–9727.
+
+5. Ali, O., Ishak, M. K., Bhatti, M. K. L. 物联网新兴领域、当前状态和开放研究挑战：综述。计算机科学杂志。2021;7(e659):e659.
+
+6. Pekar, A., Mocnej, J., Seah, W. K. G., Zolotova, I. 物联网网络流量特性的应用领域概览。计算机调查。2021;53(4):1–33.
+
+7. Sendra, S., García, L., Lloret, J., Bosch, I., Vega-Rodríguez, R. 乡村环境中的 LoRaWAN 网络用于火灾监测。电子（Basel）。2020;9(3):531.
+
+8. Lin, B., Zhu, F., Zhang, J., Chen, J., Chen, X., Xiong, N. N., *et al*. 结合边缘计算和云计算的科学工作流的基于时间的数据定位策略。工业信息学交易。2019;15(7):4254–4265.
+
+9. Patel, K. K., Patel, S. M. 物联网（IOT）：定义、特性、架构、使能技术、应用与未来挑战。工程科学与计算期刊。2016 年 5 月;6(5):6122–6131.
+
+10. Sorri, K., Mustafee, N., Seppänen, M. 重新审视物联网定义：面向全面使用的框架。预测和社会变化。2022;179(121623):121623.
+
+11. Xenofontos, C., Zografopoulos, I., Konstantinou, C., Jolfaei, A., Khan, M. K., Choo, K.-K. R. Consumer, 商业和工业物联网（in）安全：攻击分类法和案例研究。物联网杂志。2022;9(1):199–221.
+
+12. [Mega 2560 Rev3 \[Internet\]](#ch14.xhtml#R_ref14_12). Arduino.cc. 可从: [`docs.arduino.cc/hardware/mega-2560`](https://www.docs.arduino.cc) \[访问日期: 2022 年 8 月 10 日\].
+
+13. [UNO R3 \[Internet\]](#ch14.xhtml#R_ref14_13). Arduino.cc. 可从: [`docs.arduino.cc/hardware/uno-rev3`](https://www.docs.arduino.cc) \[访问日期: 2022 年 8 月 10 日\].
+
+14. [D1 mini — WEMOS documentation LOLIN \[Internet\]](#ch14.xhtml#R_ref14_14). Wemos.cc. 可从: [`www.wemos.cc/en/latest/d1/d1_mini.html`](https://www.wemos.cc) \[访问日期: 2022 年 8 月 10 日\].
+
+15. [NodeMCU documentation \[Internet\]](#ch14.xhtml#R_ref14_15). Readthedocs.io. 可从: [`nodemcu.readthedocs.io/en/release/`](https://www.nodemcu.readthedocs.io) \[访问日期: 2022 年 8 月 10 日\].
+
+16. [Datasheet of Raspberry Pi 2 Model B \[Internet\]](#ch14.xhtml#R_ref14_16). Adafruit.com. 可从: [`cdn-shop.adafruit.com/pdfs/raspberrypi2modelb.pdf`](https://www.cdn-shop.adafruit.com) \[访问日期: 2022 年 8 月 10 日\].
+
+17. [Raspberry Pi 3 Model B+ \[Internet\]](#ch14.xhtml#R_ref14_17). Raspberrypi.org. 可从: [`static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf`](https://www.static.raspberrypi.org) \[访问日期: 2022 年 8 月 10 日\].
+
+18. García, L., Parra, L., Jimenez, J. M., Lloret, J., Lorenz, P. 基于 Iota 的智能灌溉系统：精准农业传感器和物联网系统的最新趋势概述。传感器（Basel）。2020;20(4):1042.
+
+19. Garcia, L., Jiménez, J. M., Taha, M., Lloret, J. 智能城市物联网的无线技术。网络协议与算法。2018;10(1):23.
+
+20. Durgin, G. D. 被动 RFID 的 RF 热电发电。2016 IEEE RFID 会议论文集。IEEE; 2016.
+
+21. Heine, G., Sagkob, H. *GPRS: Gateway to Third Generation Mobile Networks*. Norwood, MA: ArtechHouse; 2003.
+
+22. Duelk, M., Zirngibl, M. 100 兆比特以太网 - 应用、特性和挑战。2006 IEEE 国际会议论文集。IEEE; 2006.
+
+23. Landrigan, P. J., Fuller, R., Acosta, N. J. R., Adeyi, O., Arnold, R., Basu, N., *et al*., 污染与健康联合委员会。兰德委员会。2018;391(10119):462–512.
+
+24. Microsoft 的行星计算机数据目录。[在线] 可从: [`planetarycomputer.microsoft.com/catalog`](https://www.planetarycomputer.microsoft.com)。\[访问日期: 2022 年 8 月 10 日\].
+
+25. Rai, A. C., Kumar, P., Pilla, F., Skouloudis, A. N., Di Sabatino, S., Ratti, C., Yasar, A., Rickerby, D. 低成本传感器的户外空气污染监测视角。全球环境科学。2017;607–608:691–705.
+
+26. Sampathkumar, A., Murugan, S., Elngar, A. A., Garg, L., Kanmani, R., Malar, A. C. J. 一个基于无线传感器网络的物联网天气监测系统新方案。智能城市集成传感器网络与物联网。2020, pp. 181–191.
+
+27. Parra, L., Sendra, S., Jimenez, J. M., Lloret, J. 智能系统用于检测和追踪海洋环境中的污染。2015 IEEE 通信研讨会论文集。伦敦, UK, 08–12 June 2015.
+
+28. Lloret, J., Garcia, M., Bri, D., Sendra, S. 农村和森林火灾检测与验证的无线传感器网络部署。传感器。2009;9(11):8722–8747.
+
+29. United Nations (UN). 全球问题。 *Population*. [在线] 可从: [`www.un.org/en/globalissues/population`](https://www.un.org)。\[访问日期: 2022 年 8 月 10 日\].
+
+30. Food and Agriculture Organization of the United Nations. 2050: 增加农业研究投资至关重要。[在线] 可从: [`www.fao.org/news/story/en/item/35686/icode/`](https://www.fao.org)。\[访问日期: 2022 年 8 月 10 日\].
+
+31. García, L., Parra, L., Jimenez, J. M., Lloret, J., Mauri, P. V., Lorenz, P. L. DronAway: 提议使用遥感无人机作为精准农业无线传感器网络的移动网关。应用科学。2020;10(19):6668.
+
+32. Gartner. 农业物联网未来 10 年将呈现非常快速增长。[在线] 可从: [`machinaresearch.com/news/agricultural-iot-will-see-a-very-rapid-growth-overthe-next-10-years/`](https://www.machinaresearch.com) \[访问日期: 2022 年 8 月 10 日\].
+
+33. García, L., Parra, L., Jimenez, J. M., Lloret, J., Lorenz, P. 基于物联网的智能灌溉系统：精准农业传感器和物联网系统的最新趋势概述。传感器。2020;20(4):1042.
+
+34. Lloret, J., Sendra, S., Garcia, L., Jimenez, J. M. 精准农业土壤湿度监测的无线传感器网络部署。传感器。2021;21(21):7243.
+
+35. Tian, S., Yang, W., Grange, J. M. L., Wang, P., Huang, W., Ye, Z. 智能医疗：使医疗更加智能。全球健康期刊。2019;3(3):62–65.
+
+36. Baker, S. B., Xiang, W., Atkinson, I, 物联网用于智能医疗：技术、挑战和机遇。IEEE Access。2017;5:26521–26544.
+
+
+
+37. Ghazal, T. M., Hasan, M. K., Alshurideh, M. T., Alzoubi, H. M., Ahmad, M., Akbar, S.S., *et al*. IoT for smart cities: Machine learning approaches in smart healthcare—A review. Future internet. 2021;13(8):218.
+
+38. Kumar, A., Krishnamurthi, R., Nayyar, A., Sharma, K., Grover, V., Hossain, E. A novel smart healthcare design, simulation, and implementation using healthcare 4.0 processes. IEEE Access. 2020;8:118433–118471.
+
+39. Garcia-Sanchez, A.-J., Garcia Angosto, E., Llor, J. L., Serna Berna, A., Ramos, D. Machine learning techniques applied to dose prediction in computed tomography tests. Sensors (Basel). 2019;19(23):5116.
+
+40. SmartThings. Connected life with smart things \[On Line\] Available: [`www.samsung.com/es/apps/smartthings/`](https://www.samsung.com) \[Accessed: Aug 10, 2022\].
+
+41. Home Assistant. Awaken your home. \[On Line\] Available: [`www.home-assistant.io/`](https://www.home-assistant.io) \[Accessed: Aug 10, 2022\].
+
+42. United Nations. Revision of the world urbanization prospects. \[On Line\];2014. Available: [`www.un.org/en/development/desa/publications/2014-revision-world-urbanization-prospects.html`](https://www.un.org) \[Accessed: Aug 10, 2022\].
+
+43. Townsend, A. Smart Cities: Big Data Civic Hackers and the Quest for a New Utopia. London: W. W. Norton & Company, Inc.; 2013.
+
+44. Kogan, N., Lee, K. J. Exploratory research on success factors and challenges of smart city projects. Asia Pacific Journal of Information Systems. 2014;24(2):141–189.
+
+45. Song, Y., Yu, F. R., Zhou, L., Yang, X., & He, Z. Applications of the Internet of things (IoT) in smart logistics: a comprehensive survey. IEEE Internet of Things Journal. 2020;8(6):4250–4274.
+
+46. Korczak, J., Kijewska, K. Smart Logistics in the development of smart cities. Transportation Research Procedia. 2019;39:201–1.
+
+47. Ding, Y., Jin, M., Li, S., Feng, D. Smart logistics based on the internet of things technology: An overview. *International Journal of Logistics Research and Applications*. 2021;24(4):323–345.
+
+48. Haverkort, B. R., Zimmermann, A. Smart industry: How ICT will change the game! IEEE Internet Computer. 2017;21(1):8–10.
+
+49. Hozdic, E. Smart factory for industry 4.0: A review. International Journal of Modern Manufacturing Technologies. 2015;7(1):28–35.
+
+50. Lom, M., Pribyl, O., Svitek, M. (2016). Industry 4.0 as a Part of Smart Cities. In: 2016 Smart Cities Symposium Prague (SCSP).
+
+51. Serrano, M., Dimitropoulos, P. Smart Industry Services in Times of Internet of Things and Cloud Computing. In: Enterprise Interoperability: Interoperability for Agility, Resilience and Plasticity of Collaborations: I-ESA’14 Proceedings, 2015, 5–14.
+
+52. Židek, K., Pite¾, J., Adámek, M., Lazorík, P., Hošovský, A. Digital twin of experimental smart manufacturing assembly system for industry 4.0 concept. Sustainability. 2020;12(9):3658.
+
+53. Shi, Z., Xie, Y., Xue, W., Chen, Y., Fu, L., Xu, X. Smart factory in Industry 4.0. Systems Research and Behavioral Science. 2020; 37(4):607–617.
+
+54. Kalsoom, T., Ramzan, N., Ahmed, S., Ur-Rehman, M. Advances in sensor technologies in the era of smart factory and industry 4.0. Sensors. 2020;20(23):6783.
+
+55. European Commission. A framework strategy for a resilient energy union with a forward-looking climate change policy. \[On Line\] Available: [`eur-lex.europa.eu/resource.html?uri=cellar:1bd46c90-bdd4-11e4-bbe1-01aa75ed71a1.0001.03/DOC_1&format=PDF`](http://eur-lex.europa.eu) \[Accessed: Aug 10, 2022\].
+
+56. Ellegård, K., Palm, J. Visualizing energy consumption activities as a tool for making everyday life more sustainable. Applied Energy. 2011;88(5):1920–1926.
+
+57. Dincer, I., Acar, C. Smart energy systems for a sustainable future. Applied Energy. 2017;194:225–235.
+
+58. Shahab, S., Agarwal, P., Mufti, T., Obaid, A. J. SIoT (Social Internet of Things): A Review. In: S. Fong, N. Dey, A. Joshi (Eds.), ICT Analysis and Applications. Singapore: Springer Nature Singapore; 2022, pp. 289–297.
+
+59. Malekshahi Rad, M., Rahmani, A. M., Sahafi, A., Nasih, Qader N. Social Internet of Things: Vision, challenges, and trends. Human-centric Computing and Information Sciences. 2020;10(1): 1–40.
+
+60. Atzori, L., Iera, A., Morabito, G., Nitti, M. The Social Internet of Things (SIoT) – When social networks meet the Internet of Things: Concept, architecture and network characterization. Computer Networks. 2012;56(16):3594–3608.
+
+61. Prasanna, S. Combining internet of things and e-learning standards to provide pervasive learning experience. International Journal of Advanced Research in Computer Science. 2018;9(Special Issue 1):128.
+
+62. Glasco, J. Smart education for smart cities: Visual, collaborative & interactive \[Online article\]. Published Feb 27, 2019. Available at: [`hub.beesmart.city/en/solutions/smart-people/smarteducation/viewsonic-smart-education-for-smart-cities`](https://www.hub.beesmart.city) \[Accessed: Aug 10, 2022\].
+
+63. Oda, T., Matsuo, K., Barolli, L., Yamada, M., Liu, Y. Design and implementation of an IoT-basede-learning testbed. International Journal of Web and Grid Services. 2017;13(2):228–241.
+
+64. Zeeshan, K., Hämäläinen, T., Neittaanmäki, P. Internet of Things for sustainable smart education: An overview. Sustainability. 2022;14(7):4293.
+
+65. Demir, K. A. Smart education framework. Smart Learning Environments 2021;8(1):1–36.
+
+66. Alcatel Lucent Enterprise. The Internet of Things in education – Improve learning and teaching experiences by leveraging IoT on a secure foundation. Available at: [`www.al-enterprise.com/-/media/assets/internet/documents/iot-for-education-solutionbrief-en.pdf`](https://www.al-enterprise.com) \[Accessed: Aug 10, 2022\].
+
+67. Feynman, R. P. There’s Plenty of Room at the Bottom. Miniaturization (H. D. Gilbert, ed.) New York: Reinhold; 1961.
+
+68. Taniguchi, N. On the Basic Concept of Nano-Technology. In: Proceeding of the International Conference on Production Engineering, 1974.
+
+69. Roco, M. C., Mirkin, C. A., Hersam, M. C. Nanotechnology Research Directions for Societal Needs in 2020: Retrospective and Outlook (Vol. 1). Springer Science & Business Media, 2011.
+
+70. De Berardis, B., Marchetti, M., Risuglia, A. *et al*. Exposure to airborne gold nanoparticles: a review of current toxicological data on the respiratory tract. Journal of Nanoparticle Research. 2022;22:235.
+
+71. Akyildiz, I. F., Jornet, J. M. Electromagnetic wireless nanosensor networks, Nano Communication Networks Journal. 2010;1(1):3–19.
+
+72. Rutherglen, C., Burke, P. Nanoelectromagnetics: Circuit and electromagnetic properties of carbon nanotubes. Small. 2009;5(8):884–906.
+
+73. Akyildiz, I. F., Jornet, J. M. The internet of nano-things. IEEE Wireless Communications. 2010;17(6):58–63.
+
+74. Akyildiz, I. F., Brunetti, F., Blazquez, C., Nanonetworks: A new communication paradigm. Computer Networks. 2008;52(12):2260–2279.
+
+
+
+75.  阿尔-图尔曼, 法迪. 一个用于灾难驱动物联网纳米事物（IoNT）的理性数据传输框架在实践中。集群计算。2019;22:1–13.
+
+76.  奈亚尔, A., 普里, V., 列, D.-N., 物联网纳米事物（IoNT）：纳米技术的下一步演进。纳米科学与纳米技术。2017;7(1):4–8.
+
+77.  巴尔巴扎, M., 莱赛尔的“黑暗世纪”：跨学科数据，包括岩画、考古学、编年史和口头传统。Prehistoire, Art et Archéologie, 2005. 可于: [`hal.archives-ouvertes.fr/file/index/docid/370895/filename/PAS_2005_pdf`](https://www.hal.archives-ouvertes.fr/file/index/docid/370895/filename/PAS_2005_pdf) \[Accessed: 2022, Aug 10\].
+
+78.  阿尔瓦罗-阿尔孔, F.-J., 阿苏埃-卡切达, R., 加西亚-桑切兹, A.-J., 加西亚-阿罗, J. (2022). 碳足迹与物联网部署中的能源优化。IEEE Access: 实用创新, 开放解决方案, 10, 111297–111309. [`doi.org/10.1109/access.2022.3216377`](https://doi.org/10.1109/access.2022.3216377)
+
+79.  阿赫梅德, S., 卡, M., 努赫, M., 梅里特, J. (2023). 2023 年版连接世界状态。[`www3.weforum.org/docs/WEF_State_of_the_Connected_World_2023_Edition.pdf`](https://www.3.weforum.org)
+
+# 15 An Energy-Aware Task Scheduling Method using the Meta-Heuristic Algorithm in IoT Environments
+
+Fatemeh Bahrani-pour and Sepehr Ebrahimi Mood
+
+Yazd University, Yazd, Iran
+
+Alireza Souri
+
+Halic University: 伊斯坦布尔, 土耳其
+
+Mohammad Farshi
+
+Yazd University, Yazd, Iran
+
+DOI: 10.1201/9781003326236-15
+
+## 15.1 Introduction
+
+近年来, 随着技术的进步, 物联网的出现给网络信息技术领域带来了重大变化 \[1\]. 物联网设备包括传感器、智能家电、恒温器、智能设备以及所有可以连接互联网并发送数据的各种设备。这些设备在地理上分布，根据应用需求，有时需要实时处理，有时需要在数据传输中实现高安全性。例如，健康监测设备产生的数据需要实时处理，处理延迟可能导致不可逆的损害。资源限制是物联网设备的主要限制之一。大多数物联网设备在数据处理、内存和电池方面存在限制，因此需要强大的资源来将任务卸载以处理其信息。云环境和雾环境提供了强大的资源。雾环境包括一个称为雾控制器的控制器和雾网络 \[2\]。
+
+雾资源具有计算和存储能力，暂时存储在缓冲区的卸载任务会在雾网络中执行，该网络包括地理分布的设备，如高级服务器、个人电脑、路由器和移动电话。雾控制器管理卸载任务，需要一种任务调度方法。根据任务的重要性，有不同的方法来执行此调度。调度方法越智能、越强大，处理的任务质量越高。
+
+云环境由一组虚拟机器（VM）组成，其计算能力和存储空间远大于雾环境的资源 \[3\]。云环境中服务器的数量越多，越需要采用智能的能源管理方法。因此，找到一种能最大限度减少资源浪费和能耗的虚拟机器放置策略是一个挑战。
+
+由于物联网网络的巨大增长，能源管理和发现新颖、及时的能源消耗优化方式已成为物联网领域近年来的重要研究话题 \[4\]。一种能源管理方法是通过调度请求来分配资源。找到一种智能的任务调度方法可以大幅提高云端和雾端服务的服务质量（QoS）。所有调度算法的目标都是在最短的总体任务执行时间内确定必须分配给处理请求的资源，以完成任务处理 \[3\]。
+
+过去几年，元启发算法在优化作业调度方面展现出良好的性能，并迅速发展。然而，这种方法面临多种挑战，包括实现时间。由于在大多数应用中，调度算法必须在最短时间内完成调度操作，因此检查元启发调度算法的执行时间很重要。在大多数研究中，算法的执行时间并未被视为重要参数；研究重点仅限于优化延迟或能耗等参数 \[5, 6\]。因此，一个合适的方法不仅在优化方面表现良好、能够找到高质量解，还必须在执行时间上高效。
+
+机器学习（ML）和人工智能（AI）技术是另一种高效的任务调度和资源负载分配方法。已被证明，ML 和 AI 技术有助于诸如资源优化、能源优化、工作量估计、视频游戏、任务调度等复杂问题的应用 \[7\]。在部署模型到云端环境用于资源管理和任务调度等应用之前，需要进行数据收集、构建 ML 模型、训练和测试模型以及验证其有效性等步骤 \[8\]。本章节，我们通过定义基于延迟和最大响应时间的能源计算系统模型来定义目标函数。通过定义目标函数，我们将得到一个必须使用线性规划方法求解的优化问题。本章节，在定义问题的目标函数时，我们采用一种受自然启发的元启发算法——Reptile Search Algorithm（RSA）来解决该问题。考虑到问题的复杂性以及改进算法通过规模化方法提高解决复杂问题的效率，在本算法中我们使用线性缩放来控制选择压力。
+
+本章节的其余部分组织如下：第 15.2 节 介绍该领域已有的工作历史。第 15.3 节 介绍系统模型和问题公式。第 15.4 节 描述改进的 RSA 算法。第 15.5 节 介绍仿真和结果，第 15.6 节 介绍结论和未来工作。
+
+## 15.2 Background
+
+
+
+
+在周等人的研究 \[9\] 中，考虑了在多处理器系统上调度任务的问题，以优化物联网中的安全质量和能源。为此，采用了混合整数调度公式，并在实时和能源约束下将任务调度问题进行了公式化，提出了一种两阶段方案来解决该问题。在此方案中，除了最大化安全质量和减少能源外，系统的限制也已得到满足。该方案经过测试以验证其质量。仿真结果表明，所提方法在解决该问题方面表现良好。在拉贾苏德拉兰等人的研究 \[10\] 中，采用了强化学习方法。具体而言，首先通过一种特殊的验证方法确定一些危及系统安全的任务。随后，这些任务被从调度循环中移除，以确保安全。通过强化学习技术和猫群优化任务服务调度，调度安全任务。结果表明，所提方法在本研究的其他方法上取得了最高 8% 的改进。
+
+在包等人的研究 \[11\] 中，使用了机器学习系统，并提出了一种在线算法来调度任务并就资源使用做出决策，以最大化整体效用。本文提出的在线算法在多项式时间内解决了该问题。通过仿真和实验验证了该算法的效率。结果表明，该在线算法在本文综述的多种云计算算法中取得了更好的结果。在苏古马兰等人的研究 \[12\] 中，旨在全面回顾云环境中的任务调度。该研究考察了各种方法的优势和劣势。特别是，研究了不同的调度方法，以找出哪些特性更为重要。总体而言，本研究的文献综述是基于方法、应用和参数进行的。
+
+在研究 \[13\] 中，首先比较了不同工作量预测方法的性能。随后，提出了一种工作量预测方法，并据此进行调度。为提高本文的准确性，采用了聚类方法将任务分类，然后为每个调度类别使用预测模型并进行训练。结果表明，该方法达到了 90% 的准确率。在王等人的研究 \[14\] 中，提出了一种在线调度算法。该算法具备模仿学习能力，并能够提供接近最优的性能。在该在线算法中，通过离线方式解决所制定的优化问题并找到最优调度策略，在线学习的性能损失在可接受范围内。本文的结果表明，所提出的算法相较于本研究的对比方法提升了 50%。
+
+在查巴尔等人的研究 \[15\] 中，定义了中心-辐射网络，并设定了两个目标：降低网络成本和降低环境污染物排放。采用了基于元启发算法和机器学习技术的混合方法（ML-MOAIS）来解决该问题。MOAIS 和 NSGA-II 算法用于评估该方法。根据本文的结果，机器学习方法能够更快速地收敛到最优解，并限制问题的目标空间。该方法的评估采用了定量和定性指标，结果表明该方法优于 MOAIS 和 NSGA-II 两种算法。本文的拟议方法在帕累托前沿上具有更大的分散性和更好的解决方案质量。在坦哈等人的研究 \[16\] 中，提出了一种基于遗传算法和模拟退火的混合算法，用于云环境中的任务调度。遗传算法和模拟退火的结合很好地弥补了探索和开发能力的不足。该算法的初始种群是通过一种新方法创建的。遗传算法中的交叉算子可以提升探索能力，而模拟退火算法则提升开发能力。因此，在这两种能力之间建立了平衡。
+
+## 15.3 System Model
+
+本章考虑的物联网网络架构由四部分组成。第一部分是物联网设备。第二部分是网关，其他部分是雾环境和云环境。Figure 15.1 展示了本章使用的物联网–雾–云架构 \[2\]。在该架构中，第一层由于设备的内存和电池限制，将由物联网设备生成的任务通过网关 offload 到雾环境或云环境。根据任务的截止时间或处理优先级等参数 \[17\]，网关决定哪些任务应在雾网络中处理，哪些任务应在云服务器中处理。在雾环境中，有一套用于处理任务的资源。在该环境中对任务进行调度，可提升服务质量（QoS）的交付。
+
+![Figure 15.1  IoT system architecture.](img/fig15_1_B.jpg)
+
+Figure 15.1  IoT system architecture.
+
+### 15.3.1 Problem Formulation
+
+*   **Tasks:** 我们假设由物联网设备生成的 *n* 个任务集合，同时假设云和雾资源能够处理这些任务。我们用 *R* = {*r*[1],*r*[2],...,*r*[n]} 表示从物联网设备 offload 到雾网络的任务集合。我们为每个任务定义了一组特征，具体为 \[*Q*[j],*T*[j],*W*[j],*D*[j]\]。在特征集合中，*Q*[j] 表示第 *j* 个任务的大小，通常由包的数量决定。在该集合中，*T*[j] 表示第 *j* 个任务的请求初始时间。*W*[j] 表示第 *j* 个任务的权重或优先级。我们还假设所有由物联网设备创建的任务都是独立的。每个任务在被分配到服务器后必须 uninterrupted 地连续处理。每个任务只能在单个服务器上处理，不能在多个服务器上并行处理。
+
+
+
+**雾计算**：我们假设我们在雾网络中拥有 `m` 台服务器，这些服务器具有不同的处理能力。有些服务器更强大，处理任务的时间更短，而有些服务器需要更长的时间。处理能力通常以百万指令每秒（MIPS）来表示。雾网络由若干雾节点（FNs）组成，这些节点具有特定的拓扑结构。我们用 `S = {s[1], s[2], ..., s[m]}` 表示 FNs 服务器的集合。我们用 `p[i]` 表示第 *i* 个 FNs 的处理能力，因此我们有集合 `P = {p[1], p[2], ..., p[m]}` 表示 FNs 的处理能力集合。除此之外，每个 FN 还有一个特征，即能耗。当服务器处于活动模式并处理任务时，它在空闲模式下的能耗更高。假设第 *i* 个 FN 在活动模式下的能耗为 `β[i]`，在空闲模式下的能耗为 `α[i]` \[19\]。因此，根据场景，由物联网设备生成的任务通过网关发送到 FNs。优化能耗需要调度算法。当任务被分配给某个 FN 时，处理时间会根据该任务的大小以及该 FN 的处理能力而不同。预期计算时间（ETC）矩阵包含了在不同 FN 上处理每个任务的预期时间。该矩阵的每个元素形式为 `^(*Q*)*[j]*/*P[i]*`，其中 `Q[j]` 是第 `j` 个包中任务的大小（1 ≤ `j` ≤ `n`），`P[i]` 是第 `i` 个 FN 的功率（单位 MIPS） （1 ≤ `i` ≤ `m`）。
+
+### 15.3.2 目标函数
+
+首先，我们定义问题的决策变量，然后描述用于计算响应时间和能耗的拟议模型。该决策变量用于指定是否将任务分配给 FN。该变量为二值 `x[ij]` ∈ {0,1}，并影响值为 1 的计算。
+
+(15.1)  
+
+`x_ij = { 1 if task j allocated to FN i 0 otherwise ∀j ∈ n, ∀i ∈ m }`
+
+因此，我们可以考虑 `X[ij]` 矩阵，称之为分配矩阵。在该矩阵中，决定哪个任务分配给哪个 FN，根据决策变量的值为 1 的区域实现。为了描述能耗模型，我们需要计算响应时间，它取决于任务在处理过程中的延迟。IoT 设备发出的任务在开始处理直到结束之间会经历各种延迟，例如传输延迟和排队延迟。传输延迟是基于任务大小和链路传输速度计算的，因此整体延迟在方程 15.2 中设计 \[18\]。
+
+(15.2)  
+
+`delay = d(tr) + d(q)`，
+
+其中 `d(tr)` 是传输延迟，`d(q)` 是排队延迟；因此，处理第 `j` 个任务与第 `i` 个 FN 的延迟使用方程 15.3 计算。
+
+(15.3)  
+
+`LT[i j] = ST[i j] + PT[i j] + TQT[i j]`，
+
+其中 `ST[ij]` 是任务 *i* 在 *j*th FN 上开始处理的时间，`PT[ij]` 是矩阵 ETC 的第 `ij` 个元素，`TQT[ij]` 使用方程 15.4 计算 \[18\]。
+
+(15.4)  
+
+`TQT_ij = Σ_{i=1}^{n} Σ_{j=1}^{Q_j} d_{ij}^q`，
+
+其中 *n* 是任务的数量，`Q[j]` 是第 `j` 个包中任务的大小，`d[ij]^q` 是在第 `i` 个任务在第 `j` 个 FN 上的排队延迟。现在我们可以描述能耗模型。为此，我们首先计算每个节点的分配工作量。已知活动状态和空闲状态的能耗不同，对于每个节点，其活动时间应等于其分配任务的处理时间之和，因此我们有以下方程 \[19\]。
+
+(15.5)  
+
+`ET_i = Σ_{i=1}^{n} Σ_{j=1}^{m} X_ij × LT_ij`，
+
+其中 `X[ij]` 是任务分配矩阵，在该函数中计算值为 1，表示将任务分配给 FN，`LT[ij]` 是任务的总延迟。
+
+现在我们可以从以下方程 \[19\] 计算聚合能耗：
+
+(15.6)  
+
+`E(s_i) = [ET_i × β_i + (M − ET_i) × α_i] × p_i`，
+
+其中 *M* 是所有 FN 中的最大执行时间（`M` = max[*i*]≤[*m*] ET[i]），`ET[i]` 是第 `i` 个 FN 分配给任务的总执行时间，`β[i]` 和 `α[i]` 是 FN 在活动和空闲状态下的能耗，`p[i]` 是处理功率（单位 MIPS）。
+
+接下来，我们定义目标函数，以最小化调度的能耗，如下 \[19\]。
+
+(15.7)  
+
+`F = argmin_X Σ_{i=1}^{m} E(s_i)`
+
+目标函数必须在以下约束条件下得到优化。第一个约束在方程 15.8 中给出，任务必须在传输到 FN 之后才能处理 \[18\]。
+
+(15.8)  
+
+`ST[i j] ≥ IT[j] + TQT[j] ∀j ∈ n, i ∈ m`
+
+方程 15.9 中的约束表明，每个任务只能由一个 FN 处理 \[18\]。
+
+(15.9)  
+
+`Σ_{i=1}^{n} Σ_{j=1}^{m} X_ij = 1 ∀j ∈ n, i ∈ m`
+
+### 15.4 改进的爬虫搜索算法
+
+2021 年，Laith Abualigah 等人介绍了一种受自然现象启发的元启发式算法 RSA \[20\]。该算法模拟鳄鱼在求偶和捕猎时的行为。在该算法中，解的位置根据鳄鱼的行为更新。更新的目的是更好地搜索并找到更高质量的解，使该算法适用于复杂问题。通过函数测试和真实工程问题，验证了该算法的效果 \[20\]。该算法的探索能力和开发能力受到鳄鱼在自然界中的约束、捕猎和社会行为机制的启发，这些行为机制被数学模型化，用于优化操作。RSA 与大多数进化算法一样，基于种群，可以用于解决带有特定约束的优化问题。下面，我们将全面考察该算法的工作原理。
+
+### 15.4.1 第一阶段
+
+在第一阶段，优化过程从构建初始种群集合开始，该集合是随机生成的。初始种群是问题的可能解的集合。初始种群的一个例子在方程 15.10 中显示 \[20\]。
+
+(15.10)  
+
+`X = [ x_11  ...  x_1n
+       ...        ...    
+       x_n1  ...  x_nn ]`，
+
+其中 *X* 是随机生成的初始种群，依据变量在问题中可取值的下限和上限。
+
+
+
+
+数学公式保持不变：
+
+$$x\_{i,j}(t + 1) = \\left\\{ \\begin{matrix} {Best\_{j}(t) \\times \\eta\_{i,j}(t) \\times \\beta - R\_{i,j}(t) \\times rand,t < T/4} \\\\ {Best\_{j}(t) \\times x\_{r\_{1},j} \\times \\text{ES}(t) \\times rand,t \\leq 2^{T}/4andt > T/4} \\\\ \\end{matrix} \\right.$$  
+
+where `Bestj` is the position of the best-obtained so far solution, `rand` is a function that generates a random number in \[0, 1\], `t` is the index of the current iteration, and `T` is the maximum number of iterations. The hunting operator is denoted by `ηi,j` for the *j*th position in the *i*th solution; this operator is obtained from Equation 15.12. The parameter that controls the accuracy of exploration is fixed `β = 0.1`. To decrease the search region, the function `R[i],j` is defined as in Equation 15.13. In this equation `ε` is a small random number. `r[2]` is a random number in \[1*N\] that select a solution. The position of a selected solution, indicated by `x[r1,j]`, and *N* is the size of the initial population. Evolutionary Sense `ES(t)` is calculated using Equation 15.14, which is a probability ratio. During the iterations of the algorithm, `ES(t)` takes a random value in \[−22\], and `r[3]` is a random number in \[−11\].
+
+(15.12)  
+
+`ηi, j` = `Bestj` × `P[i, j]`,  
+
+(15.13)  
+
+$$R\_{i,j}(t) = \\frac{Best\_{j}(t) \\times x\_{r\_{2},j}}{Best\_{j}(t) + \\varepsilon},$$  
+
+(15.14)  
+
+$$ES(t) = 2 \\times r\_{3} \\times (1 - \\frac{1}{T}).$$  
+
+In Equation 15.12, `P[i][,j]` is the difference between the position of the best-obtained solution and the current solution and is calculated using Equation 15.15.
+
+(15.15)  
+
+$$P\_{i,j} = \\alpha + \\frac{x\_{i,j} - M(x\_{i})}{Best\_{j}(t) \\times (\\text{UB}\_{j} - \\text{LB}\_{j}) + \\varepsilon},$$  
+
+where `M(x[i])` is the average of solution *x[i]* and is calculated in Equation 15.16. `UB(j)` is the upper bound and `LB(j)` is the lower bound of variables in a solution. Fixed parameter `α = 0.1` is a parameter that controls the difference between solutions for the hunting cooperation over the iterations.
+
+(15.16)  
+
+$$M(x\_{i}) = \\frac{1}{n}\\sum\\limits\_{j = 1}^{n}x\_{i,j}.$$  
+
+### 15.4.3 Phase 3 (Exploitation)
+
+In this section, the efficiency of the algorithm is described using the behavior of crocodiles in hunting. Coordination and cooperation in hunting, which are among the hunting strategies of crocodiles, help in the exploitation search and convergence of the algorithm and getting closer to the optimal solution. These two strategies are modeled in Equation 15.17.
+
+(15.17)  
+
+$$x\_{j}(t + 1) = \\left\\{ {\\begin{matrix} {Best\_{j}(t) \\times P\_{i,j}(t) \\times rand,t < 3T/4andt > 2T/4} \\\\ {Best\_{j}(t) - \\eta\_{i,j} \\times \\epsilon - R\_{i,j}(t) \\times rand,t \\leq Tandt > 3T/4} \\\\ \\end{matrix},} \\right.$$  
+
+In this equation `Bestj` is the position of the best-obtained so far solution; the hunting operator is denoted by `ηi,j` for the *j*th position in the *i*th solution; function `R[i],j` is the decrease function, which is calculated using Equation 15.13; `P[i][,j]` is difference between the position of the best-obtained solution and the current solution, which is calculated using Equation 15.15; `ε` is a small random number; and `rand` is a function that produces a random number between 0 and 1. Therefore, after several iterations, the search is done near the optimal solution and the answers converge to the optimal solution. As a result, the algorithm can find an almost optimal solution. According to the explanations mentioned in this algorithm, until less than half of the iterations are done, the exploration phase is done, and when more than half of the iterations are done, the algorithm enters the exploit phase, and the search around the optimal solution is done until the algorithm converges.
+
+These two phases are summarized in Figures 15.2 and 15.3. In these figures, the prey is shown in white color, and in the initial iterations (less than ^(*T*)/2), the reptiles, which are shown in different colors, search the entire problem space, and in the later iterations (more than ^(*T*)/2), the search is performed around the prey, which is the optimal solution, and then the convergence happens. The pseudo-code of the RSA is shown in Algorithm 1.
+
+![Figure 15.2 Exploration phase before T/2 iterations.](img/fig15_2_B.jpg)
+
+Figure 15.2 Exploration phase before T/2 iterations.
+
+![Figure 15.3 Exploitation phase after T/2 iterations.](img/fig15_3_B.jpg)
+
+Figure 15.3 Exploitation phase after T/2 iterations.
+
+| **Algorithm 1** Pseudo-code of the Reptile Search Algorithm (RSA) |
+
+| --- |
+
+| 
+
+1.  Initialization phase
+
+2.  Initialize RSA parameters.
+
+3.  Initialize the solutions’ positions randomly. *X* : *i* = 1,...*N*.
+
+4.  *while* (*t* < *T*) *do*
+
+5.  Calculate the fitness function for the candidate solutions (*X*).
+
+6.  Find the best solution so far.
+
+7.  Update the ES using Equation 15.14.
+
+8.  The beginning of the RSA
+
+9.  *for* (*i* = 1*toN*) *do*
+
+10.  *for* (*j* = 1*ton*) *do*
+
+11.  Update the `η`, `R`, `P`, and values using Equation 15.12, Equation 15.13, and Equation 15.15 respectively.
+
+12.  *if* (*t* ≤ ^(*T*)/4) *then*
+
+13.  `x`(*i*,*j*) = `Best[j]`(*t*) × (−`η`*i*,*j*) × `β` − `R`[*i*],*j*× `rand`. {High walking}
+
+14.  *else if t* ≤ ^(2*T*)/4 *and t* > ^(*T*)/4 *then*
+
+15.  `x`(*i*,*j*) = `Best[j]`(*t*) × `x`[*r*1,*j*] × `ES`(*t*)× `rand`. {Belly walking}
+
+16.  *else if t* ≤ ^(3*T*)/4 *and t* > 2^(*T*)/4 *then*
+
+17.  `x`(*i*,*j*) = `Best[j]`(*t*) × `P`[*i*],*j*× `rand` {Hunting cooperation}
+
+18.  *else*
+
+19.  `x`(*i*,*j*) = `Best[j]`(*t*) − `η`*i*,*j* × `ε` − `R`[*i*],*j*× `rand`. {Hunting cooperation}
+
+20.  *end if*
+
+21.  *end for*
+
+22.  *end for*
+
+23.  `t` = `t` + 1
+
+24.  *end while*
+
+25.  Return the best solution (`Best`(`X`)).
+
+ |
+
+| --- |
+
+In the pseudo-code of the algorithm shown in Figure 15.4, it is clear that this algorithm, like most evolutionary algorithms, starts working with an initial population of candidate solutions. Then, during the iterations of the algorithm, they are guessed with the defined mechanisms to search for optimal solutions, and then they converge to the optimal solution in the last iterations of the algorithm.
+
+ ![Figure 15.4  Total delay vs data size.](img/fig15_4_B.jpg)
+
+Figure 15.4  Total delay vs data size.
+
+### 15.4.4 Phase 4 (Scaling)
+
+To strengthen the capabilities of exploration and exploitation, which is one of the most important capabilities of evolutionary algorithms, we suggest the linear scaling method. In contrast to the advantages mentioned for the algorithm and its good capability in searching the problem space and finding the optimal solution, there are also disadvantages. Among them, we can mention early convergence and getting stuck in local optima, especially in complex problems with more constraints. To solve these disadvantages in this research, we used the idea of linear scaling. Linear scaling is one of the scaling methods that is known for its simple implementation and robust performance.
+
+
+
+-   [线性缩放方法](https://example.org)在实际问题中被广泛使用，尤其是在定义适应度函数的范围非常小或非常大的问题中。在这种情况下，由于适应度函数值的定义范围较大，选择压力增加，从而导致陷入局部最优和提前收敛的概率上升。然而，适应度函数定义范围较小会导致选择压力降低，进而使收敛速度极慢，算法效率下降。使用该算法中的线性缩放方法会使适应度函数的值通过缩放函数发生变化，从而缩小数值范围。在此情况下，能够增强探索和开发能力，从而完全解决上述问题。第 *i* 个种群在 *t* 迭代中的适应度函数输出值由公式 15.18 计算得出。
+
+(15.18)  
+
+fit[*i*]*^s*(*t*) = *a*(*t*) × fit*i* + *b*(*t*),  
+
+在本公式中，fit*^s[i]*(*t*) 为缩放后的适应度函数，fit*i* 为使用线性缩放前第 *i* 个种群的适应度函数输出值，而 *a*(*t*) 与 *b*(*t*) 由下面的公式计算。
+
+(15.19)  
+
+$$a(t) = \\frac{(C\_{m} - 1) \\times \\text{fit}^{\\text{avg}}(t)}{\\text{fit}^{\\text{max}}(t) - \\text{fit}^{\\text{avg}}(t)}$$  
+
+(15.20)  
+
+*b*(*t*) = (1 − *a*(*t*)) × fit^(avg)(*t*),  
+
+在公式 15.19 和 15.20 中，fit^(avg)(*t*) 表示第 *t* 次迭代时种群适应度函数输出值的平均值，fit^(max)(*t*) 表示第 *t* 次迭代时种群中适应度函数最高值，而 *C[m]* 则是通过公式 15.21 计算的期望最佳解选取率。
+
+| **Algorithm 2** Pseudo-code of the Modified Reptile Search Algorithm (MRSA) |
+
+| --- |
+
+| 
+
+1.  初始化阶段  
+
+2.  初始化 RSA 参数。  
+
+3.  随机初始化解的位置。*X*： *i* = 1,…*N*。  
+
+4.  **while** (*t* < *T*) **do**  
+
+5.  计算候选解（*X*）的适应度函数。  
+
+6.  找出至今最佳解。  
+
+7.  使用公式 15.14 更新 ES。  
+
+8.  RSA 的起始  
+
+9.  **for** (*i* = 1 to N) **do**  
+
+10.  **for** (*j* = 1 to N) **do**  
+
+11.  分别使用公式 15.12、15.13 和 15.15 更新 η、*R*、*P* 以及相应的值。  
+
+12.  **if** (*t* ≤ ^(*T*)/4 **then**  
+
+13.  *x*(*i*,*j*) = *Best[j]*(*t*) × (−η*i*,*j*) × β − *R[i]*,*j* × rand {高步行}  
+
+14.  **else if** t ≤ ^*(2*T*)/4 *and* t > ^(*T*)/4 **then**  
+
+15.  *x*(*i*,*j*) = *Best[j]*(*t*) × *x*[*r*1,*j*] × *ES*(*t*) × rand {中步行}  
+
+16.  **else if** t ≤ ^*(3*T*)/4 *and* t > 2^(*T*)/4 **then**  
+
+17.  *x*(*i*,*j*) = *Best**j* × *P[i]*,*j* × rand {合作捕猎}  
+
+18.  **else**  
+
+19.  *x*(*i*,*j*) = *Best**j* − η*i*,*j* × ε − *R[i]*,*j* × rand {合作捕猎}  
+
+20.  **end if**  
+
+21.  **end for**  
+
+22.  **end for**  
+
+23.  使用公式 15.18 对解的适应度函数值进行缩放。  
+
+24.  *t* = *t* + 1  
+
+25.  **end while**  
+
+26.  返回最佳解 (*Best*(*X*))。  
+
+| --- |
+
+(15.21)  
+
+$$C\_{m} = \\frac{\\text{fit}^{\\text{avg}}(t)}{\\text{ft}^{\\max}(t)}$$  
+
+*C[m]* 是一个参数，其值在区间 [1, 2] 中定义。该参数值为 2 意味着选择最佳解的概率是选择平均适应度解概率的两倍。在此情况下，选择压力最大。参数值越接近 2，选择压力越大；若参数值更接近 1，则最佳解与平均解被选中的概率相等，选择压力最小。通过使用线性缩放方法，进化算法的探索与开发能力可以得到调控。下图展示了带有线性缩放的算法伪代码（Algorithm 2）。
+
+## 15.5 Simulation and Results
+
+为进行仿真，我们采用了三层架构。用户在第一层生成 IoT 请求。请求生成遵循均匀分布并随机产生。创建用于云资源和雾资源处理的请求后，考虑 16 台云雾服务器。由于云雾服务器的能力不同，初始模型系统中随机生成 100 条不同包数的请求。随后，产生 10 台雾服务器和 6 台云服务器，它们在处理能力上有所差异。随后，采用所提算法调度请求，以能量最优的方式解决已制定的问题。该算法通过调度请求，使处理延迟最小化，从而实现处理请求的最小能耗。最初，所有资源均可用。随着时间的推移，资源被分配给请求并忙于处理，部分请求需要等待资源空闲后才能处理。本章考虑静态调度模式，即所有请求最初均可用，请求创建的初始时间为 0。服务器延迟取平均每个包 5 ms，并服从 1 ~ 9.7 ms 的均匀分布。请求截止时间设为 400 ms 和 50 ms，分别对应均值和方差。为进行测试，我们首先考虑请求数量足够少，平均包数足够小，以保证没有请求错过截止时间。随后，我们逐步提高平均包数，第一个测试是检查不同算法在错过截止时间的数量，同时控制每种算法产生的延迟对能耗的影响。
+
+### 15.5.1 Missed Deadlines
+
+为了检查错过截止时间的数量，我们首先计算每个算法提供的调度中每个请求的总延迟，并统计延迟超过定义截止时间的请求数量。Figure 15.5 展示了平均包数在 1,000 ~ 10,000 之间的请求总延迟。可以看出，所提 RSA 算法在优化方面优于其他对比算法。
+
+![Figure 15.5 Missed deadline requests.](img/fig15_5_B.jpg)
+
+Figure 15.5 Missed deadline requests.
+
+本算法在本文中使用线性缩放，能够在约束条件下增强算法在问题空间上的探索能力，并对算法的及时收敛产生显著影响，使得在请求递增平均数的累计结果上，该算法的表现优于其他算法。基于整体延迟的结果，我们进一步比较各算法在错过截止时间的数量。Figure 15.5 显示，所提算法在平均 7,000 条请求后开始错过截止时间，而其他算法在更低的平均值下即已出现错过截止的情况。Figures 15.3 和 15.4 表明，该算法在延迟优化方面优于其他算法，这充分体现了使用线性缩放的效果。
+
+### 15.5.2 Energy Consumption
+
+
+
+
+-   为了检查能耗量，根据所制定的问题，我们以寻找最优解为依据比较算法。处理时间越长，随着响应时间增加，能耗越高。图 15.6 展示了算法在寻找最优解方面的能耗表现。比较结果表明，随着请求平均量的增加，所提算法表现出更强的鲁棒性。这意味着当请求的平均数量（以包为单位）增加且问题更为复杂时，由于采用线性缩放方法对适应度函数的输出值进行缩放，所提算法能够比其他算法更好地寻找到最优解。线性缩放方法通过缩放评估函数的输出参数来提升算法性能。
+
+![图 15.6 总体能耗。](img/fig15_6_B.jpg)
+
+图 15.6 总体能耗。
+
+为了更好地评估 RSA 算法中线性缩放的性能，并观察其对寻找最优解以及平衡算法的探索与开发能力的影响，我们对所提方法进行了多项测试，包括弗雷德曼测试。在该测试中，算法根据效率进行评估，表现更好（即获得更高评分）的算法说明其相较于其他方法表现更佳。可用数据下的弗雷德曼测试结果显示在 表 15.1。
+
+表 15.1 弗雷德曼测试结果
+
+| 算法 || 排名 |
+| --- | --- |
+| 所提方法 || 14.56 |
+| HHO || 17.78 |
+| WOA || 18.67 |
+| 蚁群算法 || 24.89 |
+| Pvalue (α = 0.05) || 0.00001 = Rejected |
+
+![图 15.7  MRSA vs RSA。](img/fig15_7_B.jpg)
+
+图 15.7  MRSA vs RSA。
+
+获得第一名的方法相较于其他方法表现最佳。该测试的 p 值为 0.00001，表明统计显著。
+
+为了观察线性缩放对算法性能的影响，我们分别在固定模型系统上实现了不使用线性缩放和使用线性缩放的算法。我们进行了 50 次算法运行并计算了算法的平均值。实验结果表明，使用线性缩放并控制探索与开发能力，使算法在初期能够很好地探索问题空间，而在算法结束时，通过降低标准差，收敛到最优解。
+
+## 15.6 结论与未来研究
+
+总体而言，本章针对物联网请求的调度与能耗优化问题，定义了以延迟和最大响应时间为依据的目标函数，并采用了采用线性缩放的改进进化算法进行求解。实验结果表明，线性缩放在控制选择压力方面发挥了重要作用，从而增强了算法的探索与开发能力。由于调度问题本身具有复杂性，尤其是存在多重约束且评估函数的取值范围较大时，线性缩放方法可以通过缩放输出值来降低选择压力。具体而言，在算法初始迭代阶段，搜索因子的竞争力标准差较高，从而能够充分探索问题空间；而在后期迭代阶段，标准差被降低，从而实现对最优解的适当收敛。为继续深化研究，建议采用多目标函数进行优化，涵盖延迟、能耗、安全、带宽等参数。将智能方法与进化算法相结合也是一项建议。将神经网络与进化算法集成用于调度也是建议的。所提算法包含若干参数，这些参数的取值对算法性能影响显著。本章通过实验设定这些参数的值。然而，可以定义并使用模糊逻辑控制器来计算这些参数的值，以平衡算法能力并提升所提方法的性能。
+
+## 参考文献
+
+1.  J. A. Hulin and Z. B. Jin, “Real-time energy consumption detection simulation of network node in internet,” Sustainable Energy Technologies and Assessments, vol. 44, 2021, p. 101004.
+
+2.  A. Sadoon, S. Mohammad, A. Jemal and B. Rajkumar, “Deadline-aware and energy-efficient IoT task scheduling in fog,” Journal of Network and Computer Applications, vol. 201, 2021.
+
+3.  S. Bhambri and R. G. K. Pankaj, Cloud and Fog Computing Platforms for Internet of Things (P. Bhambri, S. Rani, G. Gupta, and A. Khang, Eds.). CRC Press, 2022.
+
+4.  B. Imran, A. Naeem Iqbal and D. H. Kim, “IoT Task Management Mechanism Based on Predictive Optimization for Efficient Energy Consumption in Smart Residential Buildings,” Energy & Buildings, vol. 257, 2022.
+
+5.  C. Bu and J. Wang, “Computing Tasks Assignment Optimization among Edge Computing Servers, via SDN,” Peer-to-Peer Netw, vol. 14, pp. 1190–1206, 2021.
+
+6.  K. Gai, X. Qin and L. Zhu, “An Energy-Aware High Performance Task Allocation Strategy in Heterogeneous Fog Computing Environments,” IEEE Transactions on Computers, vol. 70, pp. 626–639, 2021.
+
+7.  K. Yogesh, K. Surabhi and H. Yu-Chen, “Machine Learning for Energy-Resource Allocation, Workflow Scheduling and Live Migration In Cloud Computing: State-of-the-Art Survey,” Sustainable Computing: Informatics and Systems, vol. 36, 2022.
+
+8.  A. Houssein and H. Essam, “Task Scheduling in Cloud Computing based on Meta-Heuristics: Review, Taxonomy, Open Challenges, and Future Trends,” Swarm and Meta-heuristics: Review, Taxonomy, Open Challenges, and Future Trends, vol. 62, 2021.
+
+9.  J. Zhou, J. Sun, P. Cong, Z. Liu, X. Zhou, T. Wei and S. Hu, “Security-Critical Energy-Aware Task Scheduling for Heterogeneous Real-Time MPSoCs in IoT,” IEEE Transactions on Services Computing, vol. 13, pp. 745–758, 2020.
+
+10.  S. Rajasoundaran, A. Prabu, R. Sidheswar, S. Santhosh Kumar, P. M. Prince, M. Suman, M. Amritand G. Uttam, “Machine Learning Based Deep Job Exploration and Secure Transactions in Virtual Private Cloud Systems,” *Computers & Security*, vol. 109, 2021.
+
+11.  Yixin Bao, Yanghua Peng, Chuan Wu and Zongpeng Li, “Online Job Scheduling in Distributed Machine Learning Clusters,” in IEEE INFOCOM 2018 - IEEE Conference on Computer Communications, pp. 495–503, 2018.
+
+12.  A. Sugumaran, D. Manjula and Vijayan, “Task Scheduling Techniques in Cloud Computing: A Literature Survey,” Future Generation Computer Systems, vol. 91, pp. 497–415, 2019.
+
+13.  J. Gao, H. Wang and H. Shen, “Machine Learning Based Workload Prediction in Cloud Computing,” in 2020 29th International Conference on Computer Communications and Networks (ICCCN), pp. 1–9, 2020.
+
+
+
+
+14. X. Wang, Z. Ning, S. Guo and L. Wang, “基于模仿学习的在线车载边缘计算任务调度,” IEEE Transactions on Mobile Computing, 第 21 卷, 2022.
+
+15. A. P. Chobar, M. A. Adibi and A. Kazemi, “使用组合机器学习和元启发算法的可腐食旅游产品多目标枢纽-辐射网络设计,” Environment, Development and Sustainability, 2022, 第 1–28 页. DOI: [10.1007/s10668-022-02350-2](http://dx.doi.org/10.1007/s10668-022-02350-2)
+
+16. M. Tanha, S. Hosseini and A. Rahmani, “基于遗传算法和热力学模拟退火算法的混合元启发任务调度算法在云计算环境中的应用,” Neural Comput & Applic, 第 33 卷, 第 16951–16984 页, 2021.
+
+17. M. Adhikari, M. Mukherjee and S. N. Srirama, “DPTO: 在雾计算框架中基于多级反馈队列的考虑截止时间和优先级的任务卸载,” IEEE Internet of Things Journal, 第 7 卷, 第 5773–5782 页, 2020.
+
+18. R. O. Aburukba, A. Mazin, L. Taha and E.-F. Khaled, “在混合雾云计算中调度物联网请求以降低延迟,” Future Generation Computer Systems, 第 111 卷, 第 539–551 页, 2020.
+
+19. S. K. Mishra, D. Puthal, J. Rodrigues, B. Sahoo and E. Dutkiewicz, “在工业应用雾服务器上使用元启发技术的可持续服务分配,” IEEE Transactions on Industrial Informatics, 第 14 卷, 第 4497–4506 页, 2018.
+
+20. A. Laith, A. E. Mohamed, S. Putra, W. G. Zong and A. H. Gandomi, “爬行搜索算法(RSA):一种新型自然启发元启发元启发算法,” Expert Systems with Applications, 第 192 卷, 第 116158 页, 2022.
+
+21. K. Yogesh, K. Surabhi and H. Yu-Chen, “云计算中基于机器学习的能源-资源分配、工作流调度和实时迁移的状态调查,” Sustainable Computing: Informatics and Systems, 第 36 卷, 2022, 第 100780 页.
+
+22. S.-H. Wu, Z.-H. Zhan and J. Zhang, “SAFE: 适应性扩展的昂贵优化问题适用性评估方法,” IEEE Transactions on Evolutionary Computation, 第 25 卷, 第 478–491 页, 2021.
+
+23. B. Pankaj, R. Sita, G. Gaurav and K. Alex, Cloud and Fog Computing Platforms for Internet of Things, 2022. CRC Press.
+
+24. J. Z. Hulin Jin, “基于人工智能的物联网网络节点实时能耗检测模拟,” Sustainable Energy Technologies and Assessments, 第 44 卷, 2021, 第 101004 页.
+
+25. S. Rajasoundaran, A. V. Prabu, R. Sidheswar, K. Santhosh, P. M. Prince, M. Suman, M. Amrit and Uttam Ghosh, “基于虚拟专用云系统的机器学习深度作业探索和安全交易,” Computers & Security, 第 109 卷, 2021, 第 102379 页.
+
+26. H. Essam, G. Ahmed, W. Yaser and S. Ponnuthurai Nagaratnam, “基于元启发算法的云计算任务调度综述、分类、开放挑战和未来趋势,” Swarm and Evolutionary Computation, 第 62 卷, 2021, 第 100841 页.
+
+27. Y. Bao, Y. Peng, C. Wu and Z. Li, “分布式机器学习集群中的在线作业调度,” IEEE INFOCOM 2018 - IEEE Conference on Computer Communications, 第 495–503 页, 2018.
+
+28. Imran, Naeem Iqbal and Do Hyeun Kim, “基于预测优化的智能住宅建筑物物联网任务管理机制,以实现高效能源消耗,” Energy & Buildings, 第 257 卷, 2022, 第 111762 页.
+
+# 16 Real-time Artificial Intelligence Applications in the IoT Based on Cloud Collaboration
+
+Yu Guo, Yuanyan Xie, and Yue Chen
+
+University of Science and Technology Beijing, China
+
+DOI: [10.1201/9781003326236-16](https://dx.doi.org/10.1201/9781003326236-16)
+
+## 16.1 Introduction
+
+物联网旨在利用射频识别技术和无线通信技术构建一种全球物联网的实时信息共享互联网。当前，随着人工智能（AI）的发展，历史数据和实时数据可以被分析并用于更准确地判断用户习惯，从而实现更智能的行为，提升用户体验。基于此背景，自 2017 年以来，“AIoT”一词频繁出现，并成为物联网的主要发展方向。AIoT 意为 “AI + IoT”，指在实际应用中将 AI 技术与 IoT 相结合，如图 16.1 所示。例如，智能家居可以让人们根据需求自动开关电器，农民可以利用 AIoT 进行分析和自动化土地管理。根据 “Markets and Markets” 的一项研究报告，全球 AIoT 市场预计到 2024 年将增长至 162 亿美元。
+
+![Figure 16.1 AIoT convergence technologies.](img/fig16_1_B.jpg)
+
+Figure 16.1 AIoT convergence technologies.
+
+AIoT 具备一些新的特点和需求：
+
+*   大规模设备：与云计算中的数百万设备相比，AIoT 未来可能支持的设备数量将达到数十亿。
+
+*   海量大数据：预计会产生更大规模的数据。
+
+*   低响应延迟：不同的应用场景可能对延迟有不同的低要求。
+
+*   数据隐私：理想情况下应在不泄露原始数据的前提下获得分析结果。
+
+然而，由于 IoT 设备硬件有限、电池容量小且成本较高，难以在资源受限的 IoT 设备上实现复杂 AI 算法的准确性和实时性，这阻碍了 AIoT 的发展和实际应用。虽然将计算任务直接交给云端可以减轻 IoT 设备的处理压力，但传输大量数据会带来时间延迟、通信能耗、数据丢失甚至数据泄露的问题，这对物联网系统尤其是恶劣应用场景产生显著影响。
+
+以典型的人工智能技术——自然语音交互为例，该技术分为声学计算和自然语言理解（NLP）两部分。毫无疑问，NLP 部分（如设备对用户语句的理解和信息获取，如天气）必须在云端完成。然而，对于用户语音转文本的过程，如“打开空调并提高温度”，部分或甚至大部分计算可以在 IoT 设备上本地完成。此时，上传到云端的数据不再是压缩后的声音本身，而是更简洁的结果，从而实现更快的响应。
+
+本章将描述在基于云协作和边缘计算的物联网中实现实时复杂 AI 应用的基本流程，即将任务划分并分别在云端和 IoT 设备上处理，从而显著提升低成本 IoT 设备的计算能力，并保证整个系统的性能。本章还从设计和开发角度描述了在低成本 IoT 设备上实现计算机视觉（CV）和同步定位与映射（SLAM）等 AI 技术的典型案例。
+
+
+
+
+-   [从集体到个人：在计算机发展的早期，由于成本高昂，计算机主要用于进行大型科学实验，不存在个人计算机。随着集成电路的出现，计算机的体积不断缩小，成本也在降低。如今，许多人可以拥有个人计算机来计算和存储数据。]
+
+-   [从本地到云端：随着计算机网络和万维网技术的持续发展，计算机不再仅仅是存储或计算的载体，而是越来越多地用于通信。用户将大量信息从本地迁移到 Web 服务器，这一“信息网络化”过程将数据带到服务器，并逐步将部分计算过程转移到服务器上，从而逐步形成当今的云计算形态。]
+
+-   从云端到边缘：随着智能设备的普及，越来越多的设备连接到网络，这给云计算基础设施带来了压力。将计算资源同步到靠近用户的网络边缘设备已成为实现大规模实时计算的必然要求 \[[1\]. 因此，广域网（WAN）的数据传输延迟可以完全避免，数据隐私安全、访问效率以及服务部署和管理的灵活性均得到提升。]
+
+### 16.2.2 边缘计算概念
+
+边缘计算是一种层级分布式计算模型，主要将计算从中心下沉到边缘 \[2, 3\]. 通过充分利用网络边缘设备的计算和存储能力，边缘计算在网络边缘提供通信、存储和计算资源，形成“设备‑边缘‑云”架构，以降低应用延迟和网络负载。
+
+如图 16.2 所示，在校园和工业园区等场景中，配备计算和存储资源的设备可作为边缘设备；在城市街区场景中，移动蜂窝网络的通信基站可作为边缘计算设备提供服务 \[4\]; 在住宅场景中，家庭路由器可作为边缘计算设备。
+
+![Figure 16.2 边缘计算系统示意图。](img/fig16_2_B.jpg)
+
+Figure 16.2 边缘计算系统示意图。
+
+### 16.2.3 边缘计算的变化
+
+在边缘计算中，前端设备通过不同的通信方式将计算请求和必要数据发送到边缘服务器，然后服务器检查对应的计算服务是否可用：如果可用，则执行计算任务并将结果返回前端设备；如果不可用，则请求其他边缘服务器或云服务器执行任务。
+
+与云计算相比，边缘计算中前端设备与边缘服务器的距离通常是固定的，传输延迟显著缩短，能够支持各类对实时性要求较高的计算服务。
+
+具体而言，边缘计算模型具有以下特性：
+
+*   **极低延迟**：边缘计算比云计算更靠近前端用户。在典型的边缘计算系统中，前端用户与边缘服务器通过单跃网络相连，延迟直接取决于所使用的无线传输技术。表 16.1 汇总了不同通信技术的延迟和能耗。在边缘计算架构中，前端设备与边缘服务器之间的通信对边缘计算效率影响显著 \[5\]. 对移动设备，边缘计算结合 5G 可实现低通信延迟；对物联网（IoT）设备，其云计算方案的延迟约为 800–2000 ms。在这些场景下，边缘计算预计能够将单跃传输延迟降低并使端到端延迟提升超过十倍，从而显著提升实时性能。
+
+    Table 16.1 通信技术的延迟与能耗
+
+    | 应用场景 | 通信技术 | 通信延迟 | 能耗 |
+    | --- | --- | --- | --- |
+    | 移动计算 | 5G | <5 ms | 高 |
+    | 移动计算 | 4G | <50 ms | 高 |
+    | 室内短距离 | Wi‑Fi | <150 ms | 中等 |
+    | 室内短距离 | 蓝牙 | <200 ms | 中等 |
+    | 嵌入式 IoT | ZigBee | 2 s | 低 |
+    | 嵌入式 IoT | NB‑IoT | 1 s | 低 |
+    | 嵌入式 IoT | SigFo6 | 2 s | 低 |
+
+*   **异构服务对象**：边缘计算服务器主要服务于直接连接到它的设备，所提供的服务高度依赖于服务对象设备及其请求。例如，智能家居场景下的边缘服务器主要针对各类智能家居和可穿戴设备，因此大多数在边缘服务器上运行的服务可能是数据存储、数据分析等；而支持娱乐服务的边缘服务器则可能提供图像渲染、图像分析、视频缓存等服务。
+
+*   **多样化服务形态**：与云计算环境中的数据中心网络不同，边缘计算的服务器可以是各类相对资源优势且连接延迟低的设备，为资源受限的前端设备提供服务。这些形态的主要区别在于计算资源的下沉程度：当服务对象为智能家居的各类智能设备时，边缘服务器可以以家庭网关的形式运行计算服务；而当服务对象为移动设备（如智能手机）时，边缘服务器可集成到移动基站中，同时提供通信和计算服务。
+
+*   **高度敏感于移动性**：边缘计算服务于通过单跃连接的用户，但单跃的通信范围通常有限，这使得边缘计算对用户移动性非常敏感。用户的移动会影响无线传输质量；相反，高速移动的用户更可能在多个边缘服务器之间切换。这种高切换频率在移动场景中对边缘计算带来诸多挑战，且在高移动性条件下的边缘计算优化技术已成为当前边缘计算研究的热点。
+
+
+
+
+-   [隐私保护]：由于数据存储在靠近用户的边缘设备上，网络结构降低或甚至消除了用户数据与其他网络实体之间的连接性，使数据隐私更加安全。由于计算的下沉，更复杂的加密和隐私保护算法可以应用于更多类型的边缘服务，以更好地保护用户隐私。此外，数据传输延迟的降低催生了新的隐私保护计算模型和更复杂的加密算法，显著降低了隐私泄露的风险。
+
+### 16.2.4 边缘计算发展趋势
+
+`技术发展趋势`：自 2017 年以来，边缘计算被权威咨询机构甘特纳（Gartner）列为技术领域的重点，持续列入其报告，发展逐步进入从创新驱动角度的高期待阶段。随着 5G 技术的发展与成熟，边缘计算从最初的泛化概念衍生出多个细分领域，如图 16.3 所示。
+
+Table 16.3 边缘计算在甘特纳的变化
+
+| 年份 | 关键词 | 位置 |
+| --- | --- | --- |
+| 2017 | 边缘计算 | 创新触发点 |
+| 2018 | 边缘 AI | 创新触发点 |
+| 2019 | 边缘 AI/分析 | 高期待的膨胀期 |
+| 2020 | 边缘低成本单板计算机 | 创新触发点 |
+
+`学术研究`：近年来，随着边缘计算研究的兴起，发表的科学论文数量不断增加。根据近年来在 SCI 期刊中使用“边缘计算”作为关键词的论文统计数据，研究成果增长迅速，如图 16.4 所示。
+
+Table 16.4 与边缘计算相关的学术论文数量（IEEE）
+
+| 年份 | 2015 | 2016 | 2017 | 2018 | 2019 |
+| --- | --- | --- | --- | --- | --- |
+| 数量 | 500+ | 1,200+ | 2,000+ | 3,100+ | 5,000+ |
+
+`国家战略`：各国的电信网络行业国家战略均在不同程度上推动了边缘计算的发展。边缘计算作为设备、系统与决策之间的“润滑剂”，发挥了重要作用。
+
+## 16.3 边缘计算架构原理
+
+在边缘计算中，前端设备必须将计算任务 offload 到边缘服务器，任务在本地执行或 offload 到云端，具体取决于任务类型。该过程主要涉及三个实体：前端设备、边缘设备和云中心。边缘计算架构指的是这三类实体如何通过软硬件有效组织与协调，实现协同工作。
+
+### 16.3.1 整体系统架构
+
+网络边缘是一个相对概念，指距离网络中心较远的区域。根据当前对边缘计算的定义及真实网络架构的特点，我们将边缘设备分为两类：骨干网络边缘和普适边缘，如图 16.3 所示。
+
+![图 16.3 骨干网络边缘与普适边缘。](img/fig16_3_B.jpg)
+
+图 16.3 骨干网络边缘与普适边缘。
+
+骨干网络边缘的设备通常可管理、可控制，资源相对丰富，例如移动通信网络的基站。普适边缘设备则表现出资源可用性和连接稳定性较差的特点，如笔记本电脑和智能手机。由于边缘设备的特性，边缘计算难以像云计算那样建立统一且固定的网络架构。理想的边缘计算架构应能够高效利用各类边缘资源，在满足服务质量和体验要求的前提下，以最低成本完成前端计算任务。
+
+在学术与产业界讨论的主流边缘计算架构包括“云-边-设备”架构、“边缘设备”架构、分布式 D2D 架构以及弹性边缘架构，它们适用于不同的参考场景并面临不同的系统挑战。下面依次介绍：
+
+*   “云-边-设备”架构：该三层架构包括云中心层、边缘层和设备层，如图 16.4 所示。从前端设备发送的用户请求会先被边缘层设备接受。如果边缘层设备能够提供相应的边缘服务，计算请求将在边缘层处理，结果返回前端设备；若边缘层没有对应的计算任务，则将请求转发至相关边缘服务或云中心进行处理。通过此过程，前端设备的计算任务可从本地计算转变为请求边缘计算。同时，前端设备通过访问更多类型的边缘计算服务，显著提升其计算能力。在该架构中，云计算主要处理计算量巨大且运行周期长的任务。云中心作为边缘设备的补充，主要用于处理以下类型的计算任务：(a) 延迟要求极低，云中心无法满足；(b) 数据量大，将任务数据传输至云端会产生高带宽压力；(c) 请求频繁、数据量大，云端处理可能导致延迟；(d) 计算任务对隐私要求高，无法将数据传输至云端。边缘与云的协作涉及边缘 IaaS 与云 IaaS 的资源协作、边缘 PaaS 与云 PaaS 的数据共享、智能协作与业务编排，以及边缘 SaaS 与云 SaaS 的服务协作。
+
+    ![图 16.4 “云-边-设备”架构。](img/fig16_4_B.jpg)
+
+    图 16.4 “云-边-设备”架构。
+
+*   “边缘设备”架构：在该架构中，仅由边缘服务器（即边缘网络）和前端设备组成。边缘网络中的每个服务器既是接入点也是计算节点，负责接收并处理前端设备的计算请求和任务 offload。对于一个计算请求，连接的边缘节点与任务处理节点不一定是同一台，因为缺乏高速云中心传输通道。当边缘服务器接收到无法处理的服务类型时，必须将请求转发给具备相应服务的其他边缘服务器，以实现整体协同运行。该架构通常用于高度定制化场景，如工业园区的设备通信与计算网络、大学实验网络等。在这些场景中，边缘网络的服务对象和计算类型高度确定，部署、资源分配和计算服务编排必须根据具体应用场景进行定制。
+
+
+
+
+- **多访问边缘计算**：随着新应用的持续生成和边缘设备数量的增加，超密集网络应运而生。每个前端设备可以访问多个边缘服务器；这种架构称为多访问边缘网络。多访问边缘网络可以与上述两种架构共存。上述架构描述了云层和边缘层的实现方式，而多访问边缘网络强调前端设备与边缘设备层的连接方式。当前端设备从访问单个边缘设备切换到访问多个边缘设备时，会对上述两种架构的技术设计和实现产生不同影响。
+
+- **分布式设备对设备/设备对设备架构（普遍边缘架构）**：设备对设备（D2D）或设备对设备（D4D）边缘计算意味着边缘设备之间的通信不再经过骨干网络，而是通过直接设备连接和多跳形成自组网络以完成设备间信息传输。每个设备可以将计算卸载给其他设备，也可以接受其他设备的计算请求。虽然 D2D 架构相对简单，但由于缺乏全局信息、稳定的通信链路和物理拓扑，它通常适用于基础设施缺乏或部署成本高的场景，如车联网和战场作战场景。
+
+- **AIoT 架构**：从提升物联网能力的角度来看，边缘计算直接推动了 AIoT 架构的产生 —  — “人工智能 + 物联网”。在系统层面，AI 的能力将通过边缘计算提供。
+
+### 16.3.2 边缘计算架构设计的挑战
+
+在边缘计算中，前端设备将计算任务卸载到边缘服务器，服务器在本地或进一步到云端执行这些任务。此过程涉及前端设备、边缘设备和云端。边缘计算架构的工作是有效组织和协调这三者，边缘计算架构设计的挑战如下。
+
+- **场景多样化与定制化**：与云计算不同，边缘计算更贴近真实的计算场景，这使得边缘计算更受特定场景需求的影响 \[6\]。例如，仓储等工业场景的计算任务类型、任务负载和用户特征高度确定性。针对该场景的边缘计算部署必须关注数据安全、系统可靠性、连接稳定性等问题。对于其他场景（如购物中心、车站），由于前端用户的计算类型相对复杂，用户和服务的多样性会对边缘计算架构设计产生完全不同的影响。此类场景要求边缘服务能够灵活、快速地调整服务类型和资源分配策略，这使得边缘架构设计的各个方面成为满足场景需求的重要议题。
+
+- **前端用户的流动性**：边缘计算通过在边缘服务器与前端用户之间建立直接通信，显著降低了计算服务的端到端延迟，这也使得前端用户的流动性直接影响边缘服务的质量和可用性。具体而言，由于边缘计算部署更贴近用户，其覆盖范围相对有限。例如，在车联网场景中，高速智能车必须协同多个边缘服务器，这对接入点切换、服务迁移与备份以及服务资源分配提出了新的要求。表 16.5 展示了不同场景下用户的流动性。
+
+    Table 16.5 User Mobility in Different Scenarios
+
+    | 场景 | 移动速度 | 5G 边缘网关切换频率 |
+    | --- | --- | --- |
+    | 自动驾驶 + 5G 边缘网关 | 60 km/h | 5AP/m |
+    | 高速铁路多媒体服务 + 5G 边缘网关 | 300 km/h | 25AP/m |
+    | 移动 AR/VR 用户 + 5G 边缘网关 | 4 km/h | 0.33AP/m |
+    | 行人 + 5G 边缘网关 | 4 km/h | 1.33AP/m |
+
+- **多种基础设施的资源限制与不确定性**：由于边缘计算的资源受限，良好的边缘协作机制应在边缘服务架构层面形成，并能够支持不同任务的快速转换。然而，边缘设备的不确定性使得耗时较长的计算任务面临挑战。需要合理分配资源，以避免任务时长过长；同时，软件架构需要支持细粒度的、拆分的任务 offloading，以降低服务时长，减轻计算和传输压力。
+
+- **多样、海量且异构的边缘服务**：边缘计算直接访问的设备种类多样，导致各类服务层出不穷 \[7\]。计算服务所需的资源类型多样，且用户体验质量和服务质量要求差异显著。例如，视频解析需要大量视频数据并对缓存有高要求，但对视频解析的实时结果要求相对较低；而自动驾驶场景则要求视频解析结果的实时性高，但对缓存需求低。因此，考虑到边缘服务的多样性、海量和异构性，边缘架构应具备支持边缘设备协作、资源共享以及服务灵活配置的功能。
+
+### 16.3.3 边缘计算操作系统和开源框架
+
+边缘计算中的操作系统主要用于开放云、边缘和终端之间的业务流程；整合所有方的资源；并为开发者和用户提供开放接口以供使用。与云计算操作系统相比，边缘操作系统和框架主要面临三个挑战：高度异构性、边缘数据分析与处理、以及由业务模型驱动的边缘优化。
+
+目前已有多种边缘操作系统和开源框架，如 Amazon 提出的 AWS IoT (Greengrass)、Microsoft 提出的 Azure IoT Hub、AT&T 提出的 CORD（以数据中心为中心的重新架构），Huawei 提出的 KubeEdge、Arduino 提出的 Arduino IoT Cloud、Google 提出的 K3S，以及 Baidu 提出的 OpenEdge。
+
+下面主要介绍由 Linux 基金会发起的 EdgeX Foundry 和由 Intel 与 Wind River 共同发起的 Starlingx 项目。
+
+- **EdgeX Foundry**：EdgeX Foundry（简称 EdgeX）是由 Linux 基金会发起的开源项目，主要面向通用工业物联网的应用场景，聚焦于大规模、异构前端设备的管理。EdgeX 描述设备接入和边缘数据传输等场景，但不提供云边协作、云端服务以及应用管理的具体规范。该软件使得用户能够轻松在物联网应用场景中实现基于 EdgeX 的边缘系统，并在边缘系统上恢复服务管理和应用生态。
+
+
+`StarlingX`: The `StarlingX` project is an edge computing framework open-sourced by Intel and WindRiver and provides a software stack based on the OpenStack platform and VIM, automated service packaging, compilation, and configuration tools.
+
+# 16.4 计算卸载在边缘计算中的概念
+
+计算卸载是边缘计算的核心问题 \[8\]，指将用户的计算任务卸载到边缘服务器，从而降低任务处理延迟和设备能耗。计算卸载流程包括三个步骤：任务上传、任务处理和结果返回。任务上传是指通过移动接入点将任务上传到边缘服务器，根据用户服务特性选择通信技术，并协调上传策略。任务处理是指合理分配资源并处理到达的任务。结果返回是指将计算结果发送回用户。
+
+接下来，我们将介绍计算卸载的时间延迟模型和能耗模型。在云计算网络中，路由器的存储转发延迟占主导，而在接入端，任务的无线传输延迟占主导。用户到核心云之间的路由器“跳数”（即数据在网络中转发的次数）大于 1。云计算通常为覆盖面广的用户提供服务，前端传输之间用户间的干扰相对较小。在边缘网络中，接入端的无线传输延迟占主导。用户与边缘服务器之间的距离通常是“一跳”（即直线相连）。边缘服务器通过 A‑Node 为同一区域的用户提供服务，信道间干扰显著。影响无线信道质量的主要因素包括多径衰减、信噪比和同频干扰。利用香农公式估计理论信道传输速率。因此，任务上传速率可以通过（16.1）公式计算：
+
+(16.1)  
+
+``` 
+R_j = B log_2 (1 + q_j g_j / (N + Σ_i q_i g_i))
+``` 
+
+其中 *B* 为分配给用户的带宽，*N* 为环境噪声，*q* 为用户的发射功率，*g* 为信道增益。
+
+数据传输的能耗可以通过（16.2）计算，其中 *Input* 是计算卸载时需要上传的数据量，*R* 是任务上传速率；Input / R 为完成任务上传所需时间；*q* 为用户的发射功率。提高设备的发射功率可以提高数据传输速率，但也会增加设备的能耗：
+
+(16.2)  
+
+``` 
+E_t = q * (Input / R)
+``` 
+
+任务处理时间可分为两种情况：（1）用户仅请求单个任务；（2）用户持续请求任务。在第一种情况下，当单个任务上传到边缘服务器后，边缘服务器处理该任务所需的时间可表示为（16.3）：
+
+(16.3)  
+
+``` 
+T = C / S
+``` 
+
+其中 *C* 是处理该任务所需的 CPU 循环数，描述任务的复杂度，*S* 是边缘服务器为用户分配的计算资源。在第二种情况下，用户持续向边缘网络请求计算（例如在 AR 应用中，终端设备采集的图像变化时，更新后的图像必须持续上传至边缘服务器进行处理）。当存在多个任务时，部分任务会出现等待时间。我们假设两个连续的任务到达间隔相互独立，且到达时间遵循泊松分布。因此，我们将任务处理延迟建模为排队理论模型，任务处理延迟可通过（16.4）计算：
+
+(16.4)  
+
+``` 
+T_e = 1 / (μ - λ)
+``` 
+
+其中 μ 是用户请求的强度（即泊松分布的均值），λ 是服务器的平均处理时间。
+
+## 16.4.2 计算卸载技术
+
+### 16.4.2.1 基于计算卸载的卷积神经网络分段部署
+
+由于 ImageNet 发布了大规模图像分类和识别数据集 \[9\]，深度卷积神经网络在图像分类和识别任务中的性能一直得到各种深度网络模型的验证，逐渐吸引了研究者的关注，并推动了深度学习的快速发展。现有方法通过加深网络来提升卷积神经网络的性能，计算量大、内存消耗大，不适合低成本移动设备。
+
+计算卸载技术可以通过将卷积神经网络的计算密集任务卸载到云端，加速推理。具体做法是选择合适的拆分点，移动设备完成前端网络的处理，并将输出特征值上传到云端，云端根据特征值完成后续步骤，从而使低性能设备也能轻松完成图像识别任务，如图 Figure 16.5 所示。
+
+![Figure 16.5 Deployment of a segmental network on the device-cloud system \[12\].](images/fig16_5_B.jpg)
+
+Figure 16.5 Deployment of a segmental network on the device-cloud system \[12\].
+
+##### 16.4.2.1.1 方法论
+
+拆分点选择是必须解决的关键问题，需要在移动设备的计算开销与设备与云端之间的数据传输之间取得平衡。本文同时考虑感受野大小、计算量以及网络传输延迟。
+
+感受野是衡量层能够抽象原始图像数据能力的重要参数，如图 Figure 16.6 所示。在卷积神经网络中，感受野可以通过（16.5）公式计算，其中 *s[n]* 是当前卷积层的步长；*j[n]* 是所有层在 *n* 之前的步长乘积；*k[n]* 是卷积核大小；*r[n]* 是感受野大小。同时 *j*[1] = 1，*r*[1] = 1：
+
+![Figure 16.6 Receptive field of feature maps.](img/fig16_6_B.jpg)
+
+Figure 16.6 Receptive field of feature maps.
+
+(16.5)  
+
+``` 
+j_n = j_{n-1} * s_n
+r_n = r_{n-1} + (k_n - 1) * j_{n-1}
+``` 
+
+发送到云端的数据量取决于拆分点处的网络输出，不同层的输出数据大小可以通过（16.6）公式计算：
+
+(16.6)  
+
+``` 
+l_n = (l_{n-1} + 2p_n - k_n) / s_n + 1
+``` 
+
+
+
+-   [η[n] 是当前层输出的特征边长 l[n]、填充 p[n] 以及卷积核尺寸 k[n] 的函数。为了评估分割点选择方案，本文定义了如在 (16.7) 所示的度量 η[n]，它表示压缩比与感受野比的和。在此研究中，l[0] 表示输入图像的长度，c[0] 表示输入通道数。η[n] 越小，分割点方案越优。同时，前端网络应尽可能短，以便降低移动设备的计算成本。通常，前端网络占整个网络的比例在 20% 到 30% 之间：
+
+(16.7)  
+
+```math
+\\eta\_{n} = \\frac{l\_{n}^{2}c\_{n}}{l\_{0}^{2}c\_{0}} + \\frac{r\_{n}^{2}}{l\_{0}^{2}} = \\frac{1}{l\_{0}^{2}}\\left( {\\frac{l\_{n}^{2}c\_{n}}{c\_{0}} + r\_{n}^{2}} \\right)
+```
+
+以标准 MobileNetV2 为例，结果如 Figure 16.7 所示。最小的 η[n] 位于第五层和第八层之间，因此选择第五层作为最终分割点。
+
+![Figure 16.7 ηn diagram of standard MobileNetV2.](img/fig16_7_B.jpg)
+
+[Figure 16.7 `η[n]` diagram of standard MobileNetV2.](#ch16.xhtml#R_fig16_7)
+
+Table 16.6 展示了使用不同部署技术时 MobileNetV2 的推理延迟。分段部署系统能够在机器人和云端之间平衡执行效率，并考虑网络传输延迟。因此，系统的总延迟最低，满足实时系统的要求。
+
+Table 16.6 Average MobileNet Deployment Time Across 50 Experiments, using Various Deployment Techniques
+
+|  || Robot (ms) || Communication (ms) || Cloud (ms) || Total (ms) |
+| --- | --- | --- | --- | --- |
+| MobileNet (Only robot) || 513.5 || — || — || 513.5 |
+| Segmental-MobileNet || 103.2 || 37.2 || 35.0 || 175.6 |
+| MobileNet (Only cloud) || 43.6 || 206.7 || 54.3 || 302.4 |
+
+#### 16.4.2.2.2 Real-Time Instance Segmentation Method Based on Computation Offloading
+
+实例分割是计算机视觉中的一项最困难的任务，它旨在通过边界框和分割面具定位图像中的对象实例，如 Figure 16.8 所示。由于实例分割能够通过视觉理解环境，其应用场景广泛，吸引了机器人领域的研究者增多。实例分割可帮助机器人获取环境的高层语义信息，并与几何感知方法结合，实现更复杂的交互，如导航和抓取。
+
+![Figure 16.8 Results of instance segmentation on the COCO test set. Bounding boxes, classes, and confidences are also displayed, along with colored masks.](img/fig16_8_B.jpg)
+
+Figure 16.8 Results of instance segmentation on the COCO test set. Bounding boxes, classes, and confidences are also displayed, along with colored masks.
+
+然而，移动机器人必须在受限空间中移动，因此其体积和重量有最小限制，导致其 onboard 资源（包括计算、内存和电池容量）在某些特殊场景（如灾害救援、森林保护和家务清洁）中受限。移动机器人在日常生活中的广泛应用受到高性能 CPU 成本巨大的制约，这些机器人无法承担实例分割技术所需的大量计算和数据需求。
+
+将实例分割网络的部分计算卸载到云端是一种有前景的方法，如 Figure 16.9 所示。这样，移动机器人可以利用强大的云端资源加速网络执行。移动机器人会并行处理数据，去除不必要的信息，提取关键元素，从而加快数据传输并提高数据安全性 \[16, 17\]。
+
+![Figure 16.9 Computation offloading strategy for the instance segmentation network \[15\].](images/fig16_9_B.jpg)
+
+Figure 16.9 Computation offloading strategy for the instance segmentation network \[15\].
+
+##### 16.4.2.2.1 Methodology
+
+可以将实例分割网络建模为有向无环图 `G` = <`M`, `D`\>，其中节点 `M` = {`m`[1], `m`[2],..., `m`[K]} 代表若干网络模块，例如后骨网络用于提取基础特征，其他功能模块用于执行分类或分割任务。此外，后骨网络可以细分为若干卷积层，每个卷积层作为独立模块。在实例分割网络中，需要将两个并行组件合并为一个模块，且所有模块必须是顺序的。图的边 `D` = {`d[ij]` = (`m`[i], `m`[j])|`m`[i], `m`[j]∈`M`} 表示不同模块之间的数据传输，边的长度 |`d[ij]`| 反映了从 `m`[i] 到 `m`[j] 传输的数据量。
+
+##### 16.4.2.2.2 Time Cost Model
+
+前面所述的有向无环图中的每个模块可以部署在移动机器人或云端平台上，硬件配置决定其运行速度（如 CPU、GPU 和内存）。在移动机器人上，模块的执行时间 tr 通常远大于在云端平台上 tc 的执行时间。机器人到机器人传输（R2R）和机器人到云端传输是两种数据传输方式（R2C）。在 R2C 模式下，数据传输时间 t(d, R2C, B) 取决于数据体积和通信带宽 B，其中 B 假设在 R2R 模式下的传输时间可忽略（即 t(d, R2R) = 0）。
+
+完整实例分割网络的时间成本可表示为 (16.8)，包括模块执行时间 t[exec] 和数据传输时间 t[trans]。
+
+(16.8)  
+
+```math
+t\_{total} = \\sum\\limits\_{m \\in M\_{R}}t\_{r}(m) + \\sum\\limits\_{m \\in M\_{C}}t\_{c}(m) + t(d,R2C,B)
+```
+
+我们考虑三种场景：(1) 部分模块在云端运行；(2) 所有模块在云端运行；(3) 所有模块在移动机器人上运行。
+
+第一种场景下，模块执行时间可由公式 (16.9) 计算，其中 M[R] 表示在移动机器上处理的模块集合，M[C] 表示在云端执行的模块集合。数据传输时间可由公式 (16.10) 计算，其中 d 是移动机器处理模块后的中间结果。因此，(16.11) 可用于表示整体时间成本：
+
+(16.9)  
+
+```math
+t\_{exec} = \\sum\\limits\_{m \\in M\_{R}}t\_{r}(m) + \\sum\\limits\_{m \\in M\_{C}}t\_{c}(m)
+```
+
+(16.10)  
+
+```math
+t\_{total} = \\sum\\limits\_{m \\in M\_{R}}t\_{r}(m) + \\sum\\limits\_{m \\in M\_{C}}t\_{c}(m) + t(d,R2C,B)
+```
+
+(16.11)  
+
+```math
+t\_{total} = \\sum\\limits\_{m \\in M\_{R}}t\_{r}(m) + \\sum\\limits\_{m \\in M\_{C}}t\_{c}(m) + t(d,R2C,B)
+```
+
+
+
+
+-   [第二种场景中的模块执行时间](https://wiki.example.org/feynmans_learning_method)可以通过 (`16.12`) 估算，其中 *M* 表示实例分割网络中的所有模块。数据传输时间也可以通过公式 (`16.10`) 估算，其中 *d* 表示传感器生成的原始图像或视频数据。因此，总时间开销可以表示为 (`16.13`):
+
+```
+(16.12)  
+
+$$t\_{exec} = \\sum\\limits\_{m \\in M}t\_{c}(m)$$
+```
+
+(16.13)  
+
+$$t\_{total} = \\sum\\limits\_{m \\in M}t\_{c}(m) + t(d,R2,CB)$$
+```
+
+在最终场景中，移动机器人执行整个实例分割网络，总时间成本为 (`16.14`):
+
+```
+(16.14)  
+
+$$t\_{total} = \\sum\\limits\_{m \\in M}t\_{r}(m)$$
+```
+
+### 16.4.2.2.3 能耗模型
+
+由于移动机器人的电池容量有限，且能耗对机器人的待机时间影响显著，本文仅考虑移动机器人的能耗。相比之下，云系统拥有恒定的电源，可无论特定进程消耗多少能量都能持续运行。在实例分割网络执行期间，数据传输能耗 *E*[trans] 和模块执行能耗 *E*[exec] 如 (`16.15`) 所示，共同构成移动机器人的能耗。
+
+```
+(16.15)  
+
+*E*[*r**o**b**o**t*] = *E*[*e**x**e**c*] + *E*[*t**r**a**n**s**]
+```
+
+Section 16.4.2.2.2 中描述的三种情况也被考虑在内。第一种场景的能耗可通过 (`16.16`) 估算，其中 *C*(*m*) 表示机器人执行模块 m 时的电池消耗，*C*(*d*) 表示机器人向云传输数据 *d* 时的电池消耗。电池使用量以 *mAh* 计量，1 mAh = 0.001A × 3600 s，即 3.6 A。第二种场景仅因数据传输产生能耗，可通过 (`16.17`) 计算。第三种场景中，所有模块均在移动机器人上运行，不使用云资源，因此 *E*[trans] = 0。于是能耗可通过 Equation (`16.18`) 估算:
+
+```
+(16.16)  
+
+$$E\_{robot} = \\sum\\limits\_{m \\in M\_{R}}3.6 \\ast (C(m) \\ast U + C(d) \\ast U)$$
+```
+
+(16.17)  
+
+*E*[*r**o**b**o**t*] = 3.6 * C*(*d*) * U  
+
+(16.18)  
+
+$$E\_{robot} = \\sum\\limits\_{m \\in M}3.6 \\ast C(m) \\ast U$$
+```
+
+主要待解决的问题是如何将实例分割网络的计算卸载到云端，以借助云实现移动机器人上的实时实例分割。基于上述公式，卸载问题可简化为在有向无环图（DAG）中选择哪些节点在移动机器上执行、哪些节点在云平台上执行，以最小化整个实例分割的时间和能耗成本，如 (`16.19`) 所示：
+
+```
+(16.19)  
+
+$$\\min\\limits\_{M\_{R},M\_{C}}\\alpha t\_{total} + \\beta E\_{robot}.$$
+```
+
+Yolact 结果如 表 16.7 所示。可以看出，我们的部分卸载策略在最短时间内（约一秒）完成一帧推理，而完全卸载则可能需要长达 15 秒。我们还展示了每个 Yolact 模块的时间开销，其中 C1、C2、C3、C4、C5 表示构成后骨网络的五个块，FPN 为特征金字塔网络，Proto + Pred Head 表示两个并行子任务（即创建原型掩码和预测掩码系数），Detect 为检测阶段结束后的若干后处理步骤。发现部分卸载显著降低了 C2、C3+C4+C5、FPN、Proto+Pred head、Detect 的时间开销，这归因于这些模块已卸载至云端，其执行时间远快于在移动机器上运行。
+
+Table 16.7 The Average Time Cost of Yolact When Offloading Is Partly, Completely, or Not At All
+
+| Modules || Partly(s) || Completely(s) || Not at all(s) |
+| --- | --- | --- | --- |
+| C1 ||  0.6271 ||  0.0002 ||  0.6271 |
+| C2 ||  0.0013 ||  0.0013 ||  1.9786 |
+| C3+C4+C5 ||  0.0058 ||  0.0058 ||  5.5642 |
+| FPN ||  0.0009 ||  0.0009 ||  0.9789 |
+| Proto+Pred\_head ||  0.0303 ||  0.0303 ||  6.3138 |
+| Detect ||  0.0115 ||  0.0115 ||  0.2178 |
+| Data transmission ||  0.4800 ||  4.0400 ||  0.0000 |
+| Total ||  1.1569 ||  4.0900 ||  15.6804 |
+
+## 16.5 AIoT Based on Edge Computing
+
+Edge computing technology is one of the most important computing technologies, which aims to process and analyze industrial data at the edge of the network near the industrial site to meet the requirements of practical applications, including real-time performance, low device energy consumption, and data security ```18, 19 and 20```. Edge computing technology changes the paradigm of traditional manufacturing. In recent decades, the domestic and foreign industries have developed various edge computing architectures and models. In 2014, the European ETSI established the Mobile Edge Computing Standardization Working Group (MEC). In 2015, the OpenFog computing consortium (OFC) performed research on OpenFog architecture and computing models. The Domestic Edge Computing Industry Alliance and the Industrial Internet Industry Alliance jointly released the white paper “Edge Computing Reference Architecture 3.0” and more than 20 edge computing test beds. In terms of standard formulation, in 2020, the international standard of “Edge Computing Requirements and Capability Requirements”(ITU-TY.4208) promoted by China Unicom and other standards in ITU-T SG20 were officially released. Concurrently, the international standard of “Edge Computing Gateway” was steadily advancing. In October 2016, the IEEE/ACM Symposium on Edge Computing was officially established by IEEE and ACM. The Edge Computing Gateway formed an academic forum jointly recognized by academia, industry, and government (National Foundation of the United States). In 2017, Shenyang Institute of Automation, Chinese Academy of Sciences, led the establishment of the Edge Computing Committee of the Chinese Association of Automation. At Microsoft’s 2018 Annual Developer Conference, Microsoft released “Azure IoT Edge” and other Edge products, which shifted its business focus from the Windows operating system to intelligent Edge computing. Concurrently, Amazon released its “AWS Greengrass” edge-side software that seamlessly extends AWS cloud services to devices. Ali Cloud announced that in 2018, it will strategically invest in the field of edge computing technology and launch the Edge computing product Link Edge.
+
+The advantages of edge computing include the following three aspects:
+
+1.  The gateway on the edge side offers a variety of interfaces and protocols to field devices, which can solve the problem of network connections and communication among field devices, and integrate and converge a lot of data from different devices and sensors.
+
+2.  Business data can be uploaded to the cloud and can be processed at edge servers in real time, which markedly reduces the data transmission delay and network bandwidth consumption and ensures data security.
+
+3.  Edge computing is based on intelligent distributed architectures and platforms. System operation and maintenance personnel, decision-makers, and developers can cooperate with each other through the edge computing system.
+
+### 16.5.1 Industrial Vision
+
+
+
+
+工业视觉用于控制和监控生产流程，包括自动检测、工件加工和装配自动化，如图 16.10 所示。工业视觉主要取代人工检测，降低企业的人工成本，提高检测效率和精度。具体而言，生产线的 4K、8K 等高清摄像机采集大量图像信息，这些信息必须进行处理和分析以支持实时反馈控制。在工业场景中，这些图像数据通常需要 5–150 Mbps/300 Mbps 的大带宽用于成像数据回传，以及 20–50 ms 的低延迟用于 PLC 控制反馈。因此，5G+ 边缘计算可作为工业视觉的有希望解决方案。图像信息通过 5G 的高上行带宽传输，满足工业视觉对大带宽的需求。在边缘计算平台上部署机器视觉 AI 算法，可实现生产线的实时智能检测。此外，还需与云端合作进行大数据存储和 AI 算法训练。
+
+```
+![Figure 16.10 Industrial vision.](img/fig16_10_B.jpg) 
+Figure 16.10 Industrial vision.
+```
+
+### 16.5.2 AR 远程协助
+
+AR 远程协助可支持员工学习、培训和沟通；提供操作演示和指导；提醒生产流程注意事项和操作细节，如图 16.11 所示。工人所感知的场景直接传输给技术人员，技术人员可通过视频、语音、标记等交互方式直接指导工人。AR 应用旨在让用户感觉身临其境。如果图像渲染速率跟不上用户移动速度，画面会出现错位，导致用户体验差。因此，AR 远程协助也必须确保低延迟和实时处理。边缘计算结合 5G 可实现此目标，具备转码、渲染、3D 重建、目标识别和 AR 内容管理等多种能力。
+
+```
+![Figure 16.11 AR remote assistance.](img/fig16_11_B.jpg) 
+Figure 16.11 AR remote assistance.
+```
+
+### 16.5.3 远程驾驶
+
+近年来，远程驾驶在工业场景中的应用日益增多，如钢铁厂起重机远程驾驶和地下矿山卡车远程驾驶，如图 16.12 所示。通常，监控屏幕和控制设备部署在中央控制室，执行器（即卡车或起重机）部署在工业现场。该场景要求精确控制和低服务延迟（通常小于 20 ms）。边缘计算同样可作为远程驾驶应用的有希望解决方案。
+
+```
+![Figure 16.12 Remote driving.](img/fig16_12_B.jpg) 
+Figure 16.12 Remote driving.
+```
+
+### 16.5.4 AI 视频监控
+
+AI 视频监控应用范围广泛，包括园区办公监控、仓库监控、园区出入监控、异常生产线设备、操作员行为、是否佩戴安全头盔、车间人员是否按规定路线行走等，如图 16.13 所示。除安全监控外，还需识别生产线设备和操作员在生产过程中的异常行为，提升生产线的安全性和可靠性，并确保关键操作不被遗漏。在这些场景中，实时数据分析和数据隐私至关重要。通过边缘计算，视频监控在现场部署以记录操作员的行为，数据随后传输到边缘计算平台并实时分析，以确保生产安全和质量。
+
+```
+![Figure 16.13 AI video surveillance.](img/fig16_13_B.jpg) 
+Figure 16.13 AI video surveillance.
+```
+
+### 16.5.5 UAV 检查
+
+UAV 检查广泛用于智能物流、智能公园、设备检查等领域，用于保障人员、财产、公共安全和防火安全，如图 16.14 所示。UAV 将摄像机视频（可见高清、红外等）实时传输到工厂综合控制中心。通过对视频的智能分析（如目标识别和模式识别），控制中心可判断检查地点是否存在安全异常或火灾警报，并实现智能警报，以最大程度降低安全人员的日常工作强度。遗憾的是，大多数前端设备仅具备感知和简单处理能力，无法进行密集的智能分析计算。数据必须传输到数据中心进行处理。视频分析和处理服务部署在靠近感知设备的 MEC 平台上。UAV 摄像机采集的数据通过 5G 基站传输到 MEC 平台进行本地分析和预处理，这可以降低核心网络和骨干网络的带宽占用，并缩短总延迟。AI 训练服务部署在云端数据中心，依赖云计算的强大计算能力训练数据并获得更精确的模型。5G 上行速率可达 200 Mbps，能够支持 4K、8K 甚至全景视频传输。5G 毫秒级的低延迟和高可靠性可有效保障 UAV 的精确控制和定位。
+
+```
+![Figure 16.14 UAV inspection.](img/fig16_14_B.jpg) 
+Figure 16.14 UAV inspection.
+```
+
+### 16.5.6 AGV 仓储物流
+
+自动导引车辆（AGV）是配备电磁或光学自动导引装置的车辆，能够沿预定路径安全行驶并具备载荷搬运功能。AGV 系统是智能工厂的重要组成部分，实现从生产到制造全过程的自动化货物和材料运输以及可追溯的生产数据采集。在 AGV 仓储物流场景中，如图 16.15 所示，AGV 小车在收到指令后会自动前往相应位置作业。在 AGV 小车的工作流程中，需要定位当前位置、通过传感器检测前方障碍、实时规划路径、与其他车辆协作等，因此该流程对延迟和并发性能要求很高。通过 5G+ 边缘计算，数百辆 AGV 小车可并发接入，且 AGV 传感器采集的数据可在边缘实时处理以规划路径。
+
+```
+![Figure 16.15 AGV warehousing logistics.](img/fig16_15_B.jpg) 
+Figure 16.15 AGV warehousing logistics.
+```
+
+### 16.5.7 讨论
+
+AIoT 广泛应用于生活、工业、农业等领域，边缘计算可解决大量设备互连带来的计算问题。边缘计算在数据处理能力和传输延迟方面的优势，能够支撑“随处可计算”，并赋予物理世界“流畅思考”的能力。AIoT 为人们提供了更多机遇和新挑战。
+
+### 16.6 结论
+
+
+
+
+AI 正在从“辅助人力”和“替代人力”逐步发展到“扩展人力”，正逐步完成物理世界中信息化和智能化的过程。随着计算机技术和通信技术的发展，连接方式从人与人、人与物、物与物的转变已经发生。由于 AIoT 连接数量不断增加以及部署 AI 算法所需的强大计算能力，在实时实现 AI 应用方面面临许多挑战。本章介绍边缘计算和计算离线技术，以解决上述问题。然而，未来仍需解决若干挑战，包括统一的技术规范和标准、离线任务的高效智能调度、可靠的网络通信、负载与成本的平衡、云端与边缘之间的智能协同 AI、真实应用、层级和多粒度隐私保护等。
+
+1. P. Garcia Lopez, A. Montresor, D. H. J. Epema, A. Datta。 “Edge-centric computing: Vision and challenges”，ACM SIGCOMM Computer Communication Review, 45(5):37–42, 2015。
+
+2. W. Shi, J. Cao。 “Edge computing: Vision and challenges”，IEEE Internet of Things Journal, 3(5):637–646, 2016。
+
+3. J. Cao, Q. Zhang, W. Shi。 “Challenges and opportunities in edge computing” In Edge Computing: A Primer, Cham, Switzerland: Springer, pp. 59–70, 2018。
+
+4. D. Bradley, B. Lucia。 “Orbital edge computing: Nanosatellite constellations as a new class of computer system”，In Proceedings of the Twenty-Fifth International Conference on Architectural Support for Programming Languages and Operating Systems 2020, pp. 939–954。
+
+5. J. Luo, X. Deng, H. Qi。 “QoE-driven computation offloading for edge computing”，Journal of Systems Architecture, 97:34–39, 2019。
+
+6. M. Shahrad, J. Balkind, D. Wentzlaff。 “Architectural implications of function-as-a-service computing”，In Proceedings of the 52nd Annual IEEE/ACM International Symposium on Microarchitecture 2019, pp. 1063–1075。
+
+7. A. Glikson, S. Nastic, S. Dustdar。 “Deviceless edge computing: extending serverless computing to the edge of the network”，In Proceedings of the 10th ACM International Systems and Storage Conference, pp. 1–1, 2017。
+
+8. L. Xiao, X. Lu, T. Xu, X. Wan, W. Ji, Y. Zhang, “Reinforcement learning-based mobile offloading for edge computing against jamming and interference”，IEEE Transactions on Communications, 68(10):6114–6126, 2020。
+
+9. O. Russakovsky, J. Deng, H. Su, et al, “Imagenet large scale visual recognition challenge”，International Journal of Computer Vision, 115(3):211–252, 2015。
+
+10. C. Hu, W. Bao, D. Wang, and F. Liu, “Dynamic adaptive DNN surgery for inference acceleration on the edge”，In IEEE INFOCOM 2019-IEEE Conference on Computer Communications, IEEE, 2019, pp. 1423–1431。
+
+11. L. Jia, Z. Zhou, F. Xu, and H. Jin, “Cost-efficient continuous edge learning for artificial-intelligence-of-things (AIoT)”，IEEE Internet of Things Journal, 9(10):7325–7337, 2021。
+
+12. R. Liao, Y. Guo, Z. Mi and Y. Yang, “Segmental Deployment of Neural Network in Cloud Robotic System”，In Proceedings of 2018 IEEE 3rd International Conference on Cloud Computing and Internet of Things (CCIOT),, 2018。
+
+13. D. Bolya, C. Zhou, F. Xiao and Y. J. Lee, “YOLACT: Real-time instance segmentation”，In Proceedings of the 2019 IEEE/CVF International Conference on Computer Vision (ICCV), 2019。
+
+14. H. Liu, R. A. R. Soto, F. Xiao, et al. “Yolactedge: Real-time instance segmentation on the edge.” In Proceedings of the 2021 IEEE International Conference on Robotics and Automation (ICRA). IEEE, 2021。
+
+15. Y. Xie, Y. Guo, Z. Mi, Y. Yang and M. S. Obaidat, “Edge-assisted real-time instance segmentation for resource-limited IoT devices”，IEEE Internet of Things Journal, 2022. DOI: 10.1109/JIOT.2022.3199921。
+
+16. H. Wu, Z. Zhang, C. Guan, K. Wolter, M. Xu, “Collaborate edge and cloud computing with distributed deep learning for smart city internet of things”，IEEE Internet of Things Journal, 7(9):8099–8110, 2020。
+
+17. S. Deng, H. Zhao, W. Fang, J. Yin, S. Dustdar, A. Y. Zomaya, “Edge intelligence: The confluence of edge computing and artificial intelligence”，IEEE Internet of Things Journal, 7(8):7457–7469, 2020。
+
+18. Y. Xie, Y. Guo, Y. Chen, Z. Mi, “Real-Time Instance Segmentation for Low-Cost Mobile Robot Systems Based on Computation Offloading”，In Proceedings of 2021 International Conference on Communications, Computing, Cybersecurity, and Informatics (CCCI), 2021。
+
+19. Y. Xie, Y. Guo, Z. Mi, Y. Yang, M. S. Obaidat, “Loosely coupled cloud robotic framework for qos-driven resource allocation-based web service composition”，IEEE Systems Journal, 14(1):1245–1256, 2020。
+
+20. Y. Guo, Z. Mi, Y. Yang, M. S. Obaidat, “An energy sensitive computation offloading strategy in cloud robotic network based on GA”，IEEE Systems Journal, 13(3):3513–3523, 2019。
+
+# 17 IoT-Supported Dynamic Emergency Evacuation: Modelling and Simulation
+
+Jiacun Wang, Jordan Strobing and Meghan Granit
+
+Monmouth University, New Jersey, USA
+
+DOI: [10.1201/9781003326236-17](https://dx.doi.org/10.1201/9781003326236-17)
+
+## 17.1 Introduction
+
+在教学大楼中，必须始终制定应急撤离方案。虽然教学大楼可能已经制定了撤离计划，但因火灾、化学泄漏等紧急事件导致的恐慌，使得撤离人员选择路线变得十分复杂。一般来看，影响决策的因素包括建筑的结构和几何形状、出口数量及位置、撤离人数以及通道上的障碍 \[1, 2 and 3\]。最常用的策略是基于距离的，即人们选择就近撤离。但若通道拥堵，此策略可能失效。部分人会选择熟悉的出口，或仅仅跟随他人 \[4, 5\]。因此，开发更科学的撤离流动指引方式至关重要。
+
+
+
+
+# 1. 研究背景与模型分类
+
+许多研究者一直致力于开发用于紧急疏散的数学模型，其目标是优化疏散路径并最小化总疏散时间 \[6, 7 and 8\]。这些模型可分为两类：宏观模型和微观模型 \[9\]。宏观模型将系统视为整体，研究行人运动特征、拥堵和聚集现象 \[10\]。回归模型 \[11\]、路径选择模型 \[12\]、排队模型 \[13\] 和气体动力学模型 \[14\] 均属宏观模型。另一方面，微观模型更关注行人在不同环境下的具体运动细节或疏散行为。典型的微观模型包括社会力模型（粒子系统） \[15\]、基于规则的模型 \[16\] 和胞波模型 \[17\]。例如，Zhang *et al*. 在 \[18\] 中通过改进的胞波模型模拟了隧道火灾中人员流动，并据此提出了相应的优化疏散策略。Cao 等人 \[19\] 研究了无视野房间的疏散过程，结合实验与建模；基于实验观察，他们构建了一个用于无视野疏散的多网格模型进行模拟。Li 等人 \[20\] 通过实验和模拟讨论了办公楼的疏散动态，并开发了一种晶格气体（LG）模型用于模拟有序紧急疏散的动态过程。
+
+许多研究聚焦于实际应用。例如，Mizuta 等人在 \[21\] 中研究了化工厂有毒物质泄漏时的应急疏散准备情况，设计了一套考虑风速、大气条件和泄漏率的预测模型。在 \[22\] 中，提出了一种基于 Petri 网的方法，用于建模和评估与凝结储罐火灾场景相关的疏散计划的性能。模拟为在建筑施工前评估建筑安全提供了高效的手段。Pelechano *et al*. 在 \[9\] 中综述了人群模拟模型，并为高层建筑疏散模拟选择了商业软件工具。Sheeba 等人 \[23\] 提出了一种利用随机 Petri 网（SPN）的火灾疏散分析模型，该模型考虑了人类行为等实际因素以及楼梯拥堵等真实情境。
+
+Petri 网是一种强大的数学和图形建模与分析工具 \[24, 25\]。自 1962 年 Carl Petri 的博士论文发表以来，Petri 网模型一直受到全球学者和工业实践者的研究与应用。Petri 网被用于解决各种离散事件系统的问题，如制造系统 \[27\]、医疗系统 \[28\]、安全架构 \[29\] 和交通控制系统 \[30\]。此外，Petri 网也被一些研究者用于疏散建模与仿真，如在 \[22, 23\] 之前讨论的工作。例如，Danial *et al*. 在 \[31\] 中提出了一种基于地标的路径学习模型，利用广义 SPN 考虑路径上的地标信息及导航指令，决定是否将该信息纳入已学习的路径。Petri 网概念简单、易学、灵活可扩展，且能够严谨地验证系统的各类属性。其图形表示使得 Petri 网模型易于理解。此外，时 Petri 网模型的发展为系统性能分析提供了强大的仿真工具。Zhou *et al*. 在 \[32\] 中提出了一个基于随机时 Petri 网的仿真引擎，并将其用于急诊科室绩效评估。Wang 在 \[33\\) 中提出了基于单时 Petri 网的紧急医疗工作流建模和时效性能分析方法。
+
+# 2. 物联网（IoT）在疏散中的应用
+
+物联网（IoT）是一种基于互联网的技术，将具有“物体”的实体与传感器、软件等其他技术集成，实现网络连接和数据交换。这些连接的物体范围从普通的家用电器（如电视、灯光、机器人吸尘器）到高端的工业制造设备、自动驾驶车辆和电力设施。云计算、机器学习、对话式人工智能以及低成本低功耗传感器接入是支撑 IoT 的关键技术。
+
+本章旨在通过将信息技术嵌入疏散过程，使人员在疏散时能够选择正确的路径，从而缩短疏散总耗时。技术进步几乎影响了所有行业；在疏散过程中加入技术有助于缓解拥堵，整体降低疏散时间。在考虑的建筑中部署 IoT 能够让疏散人员选择最优路径，从而在最短时间内离开建筑。各类传感器（如视频摄像头和烟雾探测器）收集的信息能够实时呈现建筑整体状态。这些数据可由本地服务器或云端专用服务器处理，进而用于指导疏散过程。特别是，通过在关键节点指示何时改变行进方向，可以避免疏散路径中的大规模拥堵。当走廊和出口拥堵较少时，整体疏散时间得以最小化，教学楼的全面疏散时间也随之缩短。
+
+我们计划利用 IoT 技术动态指引疏散人员在教学楼疏散时的行进方向。实际上，疏散过程多年未发生重大变化。将技术元素加入这一过程，既正面地提升了疏散效果，又保持了原有流程的熟悉感。新的疏散流程简洁明了，学生无需额外培训即可遵循。我们的研究表明，基于 IoT 的动态紧急疏散能够正向影响教学楼的疏散时间。每一秒在疏散中都是宝贵的，即使节省几秒钟也可能挽救生命。疏散是一项高压过程，本研究的目标是让技术协助人类在最短时间内安全、快速地选择正确的出口路径离开建筑。 
+
+
+
+本章的其余部分按以下方式组织：Section 17.2 简要介绍了 Petri 网和时制 Petri 网。Section 17.3 给出了基于 IoT 的动态疏散概述。Section 17.4 展示了动态疏散的建模与仿真案例，并分析结果。Section 17.5 简要讨论多层建筑疏散。Section 17.6 总结本章，说明工作的未来计划。
+
+## 17.2 Petri Nets
+
+本节介绍本研究中使用的 Petri 网和时制 Petri 网的基本概念。
+
+### 17.2.1 Petri Nets
+
+Petri 网是离散事件系统的形式模型，是一种数学和图形模型。Petri 网包含四类元素：地点、过渡、有向弧、令牌。它被正式定义为一个 5 元组 *N* = (*P*, *T*, *I*, *O*, *M*[0])，其中
+
+*   *P* = {*p*[1], *p*[2],..., *p*[m]} 是有限的 *places* 集合。地点可以包含 *tokens*，表示对象或条件。
+
+*   *T* = {*t*[1], *t*[2],..., *t*[n]} 是有限的 *transitions* 集合。*P* ∩ *T* = ϕ 且 *P* ∪ *T* ≠ ϕ。
+
+*   *I* : *P*×*T* → *N* 定义从地点到过渡的有向弧的重复次数。若 *I*(*p*, *t*) > 0，则 *p* 是 *t* 的 *input place*。
+
+*   *O* : *P* × *T* → *N* 定义从过渡到地点的有向弧的重复次数。若 *O*(*p*, *t*) > 0，则 *p* 是 *t* 的 *output place*。*I* 与 *O* 共同决定了 Petri 网中令牌的流向。
+
+*   *M*[0] : *P* → *N* 定义初始标记，即初始时在各地点上的令牌分布。
+
+一个地点若包含一个或多个令牌，则该地点被 *marked*。标记是对 Petri 网中所有地点的令牌分配，它定义了 Petri 网的 *state*。过渡是一个活性元素，可以 *fire*。当过渡 firing 时，地点上的令牌分布可能改变，产生新的标记或状态。过渡只有在 *enabled* 时才能 firing。 *M*(*p*) 表示标记 *M* 中地点 *p* 的令牌数。若每个输入地点 *p* 的令牌数至少等于连接 *p* 到 *t* 的有向弧的权重，即 *M*(*p*)ε *I*(*p*, *t*)，则过渡 *t* 被认为是 *enabled*。 firing *t* 时，从每个输入地点 *p* 移除数量等于 *I*(*p*, *t*) 的令牌，并在每个输出地点 *p* 放入数量等于 *O*(*p*, *t*) 的令牌。在 *M* 中 firing *t* 产生新的标记 *M*′，计算方式为 *M*′(*p*) = *M*(*p*) − *I*(*p*, *t*) + *O*(*p*, *t*)。*E*(*M*) 表示标记 *M* 中所有 enabled 的过渡集合。
+
+考虑如下简单的 Petri 网（Figure 17.1(a)），它包含 4 个地点和 3 个过渡，即 *P* = {*p*[1], *p*[2], *p*[3], *p*[4]}，*T* = {*t*[1], *t*[2], *t*[3]}。初始标记为
+
+![Figure 17.1 A simple Petri net and transition firing. (a) Initial marking. (b) The marking after firing t1 and t3.](img/fig17_1_B.jpg)
+
+[Figure 17.1 A simple Petri net and transition firing. (a) Initial marking. (b) The marking after firing *t*[1] and *t*[3].](#ch17.xhtml#R_fig17_1)
+
+*M*[0] = (1, 0, 0, 0)。  
+
+仅 *t*[1] 在 *M*[0] 中 enabled。 firing *t*[1] 会得到新的标记 *M*[1]：
+
+*M*[1] = (0, 1, 1, 0)。  
+
+*M*[1] 使 *t*[2] 和 *t*[3] 成为 enabled，即 *E*(*M*[1]) = {*t*[2], *t*[3]}。若选择 *t*[2] 进行 firing，则新的标记 *M*[2] 为
+
+*M*[2] = (0, 0, 1, 1)。  
+
+若在 *M*[1] 中改为 firing *t*[3]，则得到
+
+*M*[3] = (0, 1, 0, 1)。  
+
+Figure 17.1(b) 展示了从初始标记 *t*[1] 和 *t*[3] 之后的令牌分布。在 *M*[2] 中 firing *t*[3] 或在 *M*[3] 中 firing *t*[2] 将导致
+
+*M*[4] = (0, 0, 0, 2)。  
+
+这是该 Petri 网的最终标记，因为 *E*(*M*[4]) = ∅，即该标记下没有任何 enabled 的过渡。
+
+Petri 网能够建模顺序事件、并发事件以及决策或竞争。在 Figure 17.1(a) 中，*t*[1] − *t*[2] 和 *t*[1] − *t*[3] 的序列分别表示两个顺序事件。在 Figure 17.2(a) 中，*t*[2] 与 *t*[3] 构成一个 *decision set*，它们竞争 *p*[2] 中的令牌以 firing。其中一个 firing 会使另一个失能。在 Figure 17.2(b) 中，*t*[4] 是一个 *synchronization transition*，它在 *p*[4] 和 *p*[5] 同时获得令牌后才能 firing，用于同步注入 *p*[4] 令牌和 *p*[5] 令牌的事件序列。
+
+ ![Figure 17.2 (a) t2 and t3 compete for the token in p2. (b) t4 is a synchronization transition.](img/fig17_2_B.jpg)
+
+[Figure 17.2 (a) *t*[2] and *t*[3] compete for the token in *p*[2]. (b) *t*[4] is a synchronization transition.](#ch17.xhtml#R_fig17_2)
+
+### 17.2.2 Stochastic Petri Nets (SPNs) and Generalized Stochastic Petri Nets
+
+基本 Petri 网不包含时间概念。然而，由于现实世界中的事件总是需要时间完成，研究者在 Petri 网上加入事件持续时间，从而出现了多种时制 Petri 网。[24, 34]。可以为令牌、地点或过渡分配时间参数。时间参数的值可以是固定的，也可以是随机的。在后者情况下，时间可以在区间内均匀分布，或遵循任意概率分布。
+
+SPN 为每个过渡分配指数分布的 firing time。由于指数分布的无记忆性，循环 SPN 在稳态下的标记过程是 *Markov chain*。因此，基于 SPN 的系统性能评估变得相对容易。
+
+SPN 是六元组 (*P*, *T*, *I*, *O*, *M*[0], Λ)，其中
+
+*   (*P*, *T*, *I*, *O*, *M*[0]) 是普通 Petri 网，
+
+*   Λ : *T* → *R* 是一组 firing rates，其元素 λ 为对应于每个过渡的指数分布的 firing rate。
+
+已证明 SPN 的标记过程是连续时间马尔可夫链 (CTMC) [24]。CTMC 可以通过状态转换率图或过渡率矩阵（也称为 *infinitesimal generator matrix*，记作 *Q*）来描述。状态转换率图是一幅有向图，其顶点代表 CTMC 状态，弧代表状态之间的指数分布过渡的速率。过渡率矩阵是一个矩阵，其非对角线元素是与状态之间过渡相关的指数分布的速率，而对角线元素使得每行元素之和为零。
+
+给定过渡率矩阵 *Q*，可以通过求解
+
+$$\\begin{array}{l} {\\prod^{}Q = 0} \\\\ {\\sum\\limits\_{i \\in S}\\pi\_{i} = 1} \\\\ \\end{array}$$  
+
+得到稳态概率向量 Π。若状态空间 *S* 为有限集合，例如 *S* = {0, 1, ..., *n* − 1}，则 Π 为 1 × *n* 的向量，而 *Q* 为 *n* × *n* 的矩阵。Π*Q* = 0 的每一项可表示为
+
+$$q\_{ii}\\pi\_{i} + \\sum\\limits\_{j \\in S,j \\neq i}q\_{ij}\\pi\_{i} = 0$$  
+
+其中
+
+$$\\sum\\limits\_{j \\in S}q\_{ij} = 0$$  
+
+一般化随机 Petri 网 (GSPN) 是一种特殊的 SPN，它引入了 *immediate transitions*。即时过渡在 0 时间内 firing，即一旦 enabled 并被选中，就会立即 firing，不产生延迟。其余过渡为 *timed transitions*，它们会以指数延迟 firing。给定标记 *M*，如果 *E*(*M*) 中的所有过渡都是 timed transitions，且 *t* 的 firing rate 为 *r*，则 *t* 的 firing 概率由
+
+$$\\Pr(t) = \\frac{r}{\\sum\_{t\_{j} \\in E(M)}r\_{j}}$$  
+
+
+
+
+如果 `E(M)` 中的所有过渡都是即时过渡，并且为所有这些过渡定义了预定义的概率分布，则根据该概率分布选择下一个触发的过渡。如果在可启用的过渡中既有即时过渡又有有时间标记的过渡，则只考虑即时过渡 \[34, 35\]。请参考 \[36\] 了解实时应用中有时间标记的过渡和即时过渡是如何处理的。
+
+## 17.3 Proposed Approach
+
+行人疏散通常通过结合楼层场景模型的细胞自动化来处理，该模型指示行人有前途的移动方向。静态楼层场景表示每个单元格到出口的最短路径（通常与行人密度或分布的动态措施结合），而动态楼层场景表示每个单元格到出口的最快路径 \[37\]。我们考虑动态疏散，即在过程中出现意外情况时，撤离路径可以在必要时进行调整。本章提出了一种利用物联网技术在疏散过程中动态导航行人，使其尽快离开建筑物的方法。我们希望证明，在疏散进行中根据实时情况决定撤离方向可以对总疏散时间产生积极影响。
+
+本方法的关键因素是将技术融入疏散过程的所有阶段。该方法的核心思想如图 17.3 所示 \[Figure 17.3\]. 假设一栋教学楼内有多个课程正在进行。每个教室里都有老师和学生，当发生紧急事件（如火灾或化学泄漏）时，他们就是撤离者。假设所有学生和老师都有智能手机。教室、走廊和楼梯的每个部分都安装了传感器（如摄像头）来监测整个建筑中的物体分布和运动。传感器定期收集数据并将其发送到云端服务器。服务器识别建筑中的物体及其运动，进行情景评估，并计算最佳疏散方案，同时通过移动网络向行人智能手机发送通知。服务器会评估建筑通往出口的任何部分是否存在潜在的拥堵。如果形成或已经形成拥堵，服务器会向行人发送指令，让其选择人少的一侧前往出口。通过指示行人前往人少的出口，拥堵导致的延误疏散的可能性会大幅降低。
+
+![Figure 17.3 Illustration of dynamic teaching building evacuation. Sensors collect data (information about objects in each monitored cell) and send it to a server in the cloud periodically. The server performs situation assessment and sends evacuation instructions to evacuees through cellular network.](img/fig17_3_B.jpg)
+
+Figure 17.3 Illustration of dynamic teaching building evacuation. Sensors collect data (information about objects in each monitored cell) and send it to a server in the cloud periodically. The server performs situation assessment and sends evacuation instructions to evacuees through cellular network.
+
+我们原本的信念是，获取尽可能多的实时信息有助于在疏散期间做出明智的决策。通过将技术融入疏散过程，我们能够根据教学楼内部实际情况进行实时决策。实验结果证实，实时决策显著缩短了疏散时间。
+
+能够在疏散过程中动态改变正在发生的事情是降低疏散时间的主要因素。这与传统疏散方式截然不同。传统疏散为每个教室提供固定的路线，未考虑班级规模或拥堵情况，因此每次都是静态疏散计划，与实际情况无关。
+
+基于物联网的动态疏散过程使用 GSPN 对其进行建模和模拟，详细讨论将在下一节。
+
+## 17.4 Modelling and Simulation
+
+我们通过案例研究展示动态疏散方法的建模与模拟。首先展示正在研究建筑的楼层平面图。我们在建模与模拟过程中使用了几种软件工具。其中，`GreatSPN` 是用于时序和 SPN（标记事件网络）的图形编辑器和分析器 \[38\]，也是用于基于 STPN 模型对分布式系统进行建模、验证和性能评估的软件包。该工具由意大利都灵大学开发。`GreatSPN` GUI 是我们创建 Petri 网络模型并对其运行仿真所使用的界面。
+
+除了 `GreatGPN`，我们还使用了 `Dash` 和 `Plotly` 两种基于 Python 的框架和库。`Dash` 让我们能够创建网页应用，以多种形式（如图表）显示数据。鉴于我们的研究性质，我们积累了大量数据。`Dash` 有助于我们管理数据，并提供将发现可视化的方式。对于我们稍后解释的每个测试用例，我们将数据导入 `Dash` 并创建折线图，显示随时间推移撤离人数的变化。我们使用 `Plotly` 绘制模拟结果的数据并检查趋势。`Plotly` 是 `Dash` 工具的扩展，用于数据可视化。
+
+### 17.4.1 Floor Plan of Evacuation Building
+
+为了准确呈现疏散过程，我们基于单县 Monmouth University 的 Howard Hall 二层进行建模。这使我们能够利用精确的测量数据。我们建模的区域包括一条宽六英尺的走廊，走廊两侧有教室。走廊一侧有两间大教室，每间教室配有两扇出口；另一侧有三间小教室，每间教室配有一扇出口。走廊的两端各设有一个出口，因此形成基于选择的疏散。当从教室走出时，部分人会选择向左走，另一部分人会选择向右走。由于行人无法看到出口是否拥堵，他们会凭借事先的知识选择特定的出口。Figure 17.4 展示了楼层平面。房间和走廊的测量单位为英尺。
+
+![Figure 17.4 Floor plan of the teaching building. There are two large rooms (R1 and R2) and three small rooms (R3, R4, and R5). A large room has two doors while a small room has one door.](img/fig17_4_B.jpg)
+
+Figure 17.4 Floor plan of the teaching building. There are two large rooms (R1 and R2) and three small rooms (R3, R4, and R5). A large room has two doors while a small room has one door.
+
+### 17.4.2 GSPN Modelling
+
+
+
+
+-   [用于模型化人们可能所在的个别区域或细胞的地方。每个教室都用一个地方来表示。] [对于走廊，我们将其划分为多个单元，如图 17.5 所示。] [共有 14 个单元，] [每个单元都用 Petri 网模型中的一个地方来表示。] [地方 p[10] 到 p[16] 用于向左出口移动的人，] [p[17] 到 p[23] 用于向右出口移动的人。] [以 R3 最左侧的小房间中的人离开房间为例。] [当人们离开房间时，] [他们可能会选择向左转向左出口，] [或者向右转向走廊右端的出口。] [如果他们向左转，] [他们将成为单元 p[10] 中的对象。] [然后他们可以继续向左走向出口。] [如果他们向右转，] [他们将进入单元 p[18]。] [然后他们通过 p[19] 到 p[23] 并通过右出口离开。]
+
+![Figure 17.5 The hallway. It is divided into 14 cells to indicate where people are. For example, when someone walks out of the leftmost small room R3, if he chooses to turn left towards the left exit, he will be in the cell labelled p10. If he turns right, he will be in the cell labelled p18.](img/fig17_5_B.jpg)
+
+[Figure 17.5 The hallway. It is divided into 14 cells to indicate where people are. For example, when someone walks out of the leftmost small room R3, if he chooses to turn left towards the left exit, he will be in the cell labelled `p[10]`. If he turns right, he will be in the cell labelled `p[18]`.](#ch17.xhtml#R_fig17_5)
+
+[Figure 17.6 The Petri net model of the evacuation process. The token distribution indicates that there are 60 people in the classroom R1, 62 people in R2, 40 people in R3, 38 people in R4, and 48 people in R5. Nobody is in the hallway. The transition sequence `t[16]` — `t[22]` represents people moving to the left exit, while the sequence `t[29]` — `t[35]` represents people moving to the right exit.](images/fig17_6_B.jpg)
+
+[Figure 17.6 The Petri net model of the evacuation process. The token distribution indicates that there are 60 people in the classroom R1, 62 people in R2, 40 people in R3, 38 people in R4, and 48 people in R5. Nobody is in the hallway. The transition sequence `t[16]` — `t[22]` represents people moving to the left exit, while the sequence `t[29]` — `t[35]` represents people moving to the right exit.](#ch17.xhtml#R_fig17_6)
+
+Table 17.1 Description of Places in *n Figure 17.3
+
+| Place || Description |
+| --- | --- |
+| `p[1]` || Large classroom R1 |
+| `p[2]` || Large classroom R2 |
+| `p[3]` || Regular-sized classroom R3 |
+| `p[4]` || Regular-sized classroom R4 |
+| `p[5]` || Regular-sized classroom R5, has one door |
+| `p[6]` || The left-side door of R1 |
+| `p[7]` || The right-side door of R1 |
+| `p[8]` || The left-side door of R2 |
+| `p[9]` || The right-side door of R2 |
+| `p[10]` || The leftmost cell of the hallway when evacuating left |
+| `p[11]` || The 2nd leftmost cell of the hallway when evacuating left |
+| `p[12]` || The 3rd leftmost cell of the hallway when evacuating left |
+| `p[13]` || The 4th leftmost cell of the hallway when evacuating left |
+| `p[14]` || The 5th leftmost cell of the hallway when evacuating left |
+| `p[15]` || The 6th leftmost cell of the hallway when evacuating left |
+| `p[16]` || The 7th leftmost cell of the hallway when evacuating left |
+| `p[17]` || The 7th rightmost cell of the hallway when evacuating right |
+| `p[18]` || The 6th rightmost cell of the hallway when evacuating right |
+| `p[19]` || The 5th rightmost cell of the hallway when evacuating right |
+| `p[20]` || The 4th rightmost cell of the hallway when evacuating right |
+| `p[21]` || The 3rd rightmost cell of the hallway when evacuating right |
+| `p[22]` || The 2nd rightmost cell of the hallway when evacuating right |
+| `p[23]` || The rightmost cell of the hallway when evacuating right |
+| `p[24]` || The door of room R3 |
+| `p[25]` || The door of room R4 |
+| `p[26]` || The door of room R5 |
+| `ExitLeft` || The exit on the left-hand side of the hallway |
+| `ExitRight` || The exit on the right-hand side of the hallway |
+
+Table 17.2 Description of Transitions in *n Figure 17.3
+
+| Transition || Description |
+| --- | --- |
+| `t[1]` || People walk out the classroom R1 through the left door |
+| `t[2]` || People walk out the classroom R1 through the right door |
+| `t[3]` || People walk out the classroom R2 through the left door |
+| `t[4]` || People walk out the classroom R2 through the right door |
+| `t[5]` || People walk out the classroom R3 |
+| `t[6]` || People walk out the classroom R4 |
+| `t[7]` || People walk out the classroom R5 |
+| `t[8]` || Evacuee from the left door of R1 decides to leave towards the left |
+| `t[9]` || Evacuee from the left door of R1 decides to leave towards the right |
+| `t[10]` || Evacuee from the right door of R1 decides to leave towards the left |
+| `t[11]` || Evacuee from the right door of R1 decides to leave towards the right |
+| `t[12]` || Evacuee from the left door of R2 decides to leave towards the left |
+| `t[13]` || Evacuee from the left door of R2 decides to leave towards the right |
+| `t[14]` || Evacuee from the right door of R2 decides to leave towards the left |
+| `t[15]` || Evacuee from the right door of R2 decides to leave towards the right |
+| `t[16]` || Heading towards the left exit |
+| `t[17]` || Walking through the hallway, en route to the left exit |
+| `t[18]` || Walking through the hallway, en route to the left exit |
+| `t[19]` || Walking through the hallway, en route to the left exit |
+| `t[20]` || Walking through the hallway, en route to the left exit |
+| `t[21]` || Walking through the hallway, en route to the left exit |
+| `t[22]` || Walking through the hallway, en route to the left exit |
+| `t[23]` || Evacuee from room R3 decides to leave towards the left |
+| `t[24]` || Evacuee from room R3 decides to leave towards the right |
+| `t[25]` || Evacuee from room R4 decides to leave towards the left |
+| `t[26]` || Evacuee from room R4 decides to leave towards the right |
+| `t[27]` || Evacuee from room R5 decides to leave towards the left |
+| `t[28]` || Evacuee from room R5 decides to leave towards the right |
+| `t[29]` || Walking through the hallway, en route to the right exit |
+| `t[30]` || Walking through the hallway, en route to the right exit |
+| `t[31]` || Walking through the hallway, en route to the right exit |
+| `t[32]` || Walking through the hallway, en route to the right exit |
+| `t[33]` || Walking through the hallway, en route to the right exit |
+| `t[34]` || Walking through the hallway, en route to the right exit |
+| `t[35]` || Heading towards the left exit |
+
+Table 17.3 Firing Rates of Timed Transitions and Firing Probabilities of Immediate Transitions
+
+| Timed Transition || Firing Rate || Immediate Transition || Probability |
+| --- | --- | --- | --- |
+| `t[1]` || 0.16 || `t[8]` || 0.8 |
+
+
+
+
+| *t*[2] || 0.16 || *t*[9] || 0.2 |
+| *t*[3] || 0.16 || *t*[10] || 0.8 |
+| *t*[4] || 0.16 || *t*[11] || 0.2 |
+| *t*[5] || 0.31 || *t*[12] || 0.2 |
+| *t*[6] || 0.31 || *t*[13] || 0.8 |
+| *t*[7] || 0.31 || *t*[14] || 0.2 |
+| *t*[16] || 0.47 || *t*[15] || 0.8 |
+| *t*[17] || 0.47 || *t*[19] || 1 |
+| *t*[18] || 0.02 || *t*[20] || 1 |
+| *t*[21] || 0.02 || *t*[23] || 0.8 |
+| *t*[22] || 0.47 || *t*[24] || 0.2 |
+| *t*[29] || 0.47 || *t*[25] || 0.5 |
+| *t*[30] || 0.02 || *t*[26] || 0.5 |
+| *t*[33] || 0.02 || *t*[27] || 0.2 |
+| *t*[34] || 0.47 || *t*[28] || 0.8 |
+| *t*[35] || 0.47 || *t*[31] || 1 |
+|  ||  || *t*[32] || 1 |
+The two large classrooms are modelled by *p*[1] and *p*[2]. The three small classrooms are modelled by *p*[3], *p*[4], and *p*[5]. The model works as follows: Consider a student in the large classroom R1 (*p*[1]). They might walk out of the room through the left door (*t*[1] fires and *p*[6] gets a token) or the right door (*t*[2] fires and *p*[7] gets a token). Assume they take the right door. When they move out of the door, they have the option to turn left (*t*[10] fires and *p*[12] gets a token) or turn right (*t*[11] fires and *p*[19] gets token). Assume they turn right. The token in *p*[19] triggers the transition *t*[31]. Firing of *t*[31] injects a token to *p*[20] that triggers *t*[32], and then *t*[33], *t*[34], and *t*[35], and eventually the place ExitRight gets a token, meaning this student exited. We can analyse the model for all other evacuation options for an individual in any classroom.
+
+Notice that in the model we use both timed transitions and immediate transitions. Timed transitions are used to model people moving from one cell to another cell. For example, in transitions *t*[0] − *t*[6] all model people walking out of a classroom, in which *t*[0] stands for people in the left large room R1 walking out of the room through the left door, while *t*[1] stands for people in R1 walking out of the room through the right door. The immediate transitions model the decision to turn left or right. They are also used to model the movement between two cells that are very close to each other. For example, the three cells represented by *p*[12], *p*[13] and *p*[14] are almost the same area, and thus we ignore the time for evacuees to move among these three cells. This is also the case for cells *p*[19], *p*[20], and *p*[21].
+
+The exponential rate of each timed transition is calculated based on the classroom measurements shown in Figure 17.2. We assume that the average human moves 4.7 feet per second, so that is a key piece of data we used to calculate our rate. The transition firing rate is calculated by dividing 4.7 by the distance. This provides us with a realistic simulation that accurately captures human movement.
+
+An immediate transition’s weight, that is, firing probability, is given based on what we thought the perfect evacuation route for each room would be. Table 17.3 lists default transition firing probabilities. The way our immediate transitions work are probabilities that add up to 1. For example, if one door has two exists, 0.8 is assigned to the left and 0.2 is assigned to the right. This means that 80% of tokens will go left while the remaining 20% will go right.
+
+Transitions *t*[7] and *t*[8] form a decision set. *t*[7] models that when someone walks out of the large room R1 from the left door, they choose to turn left and walk towards the left exit. *t*[8] models that when someone walks out of R1 from the left door, they choose to turn right and walk towards the right exit.
+
+We can easily identify other decision sets: {*t*[10], *t*[11]}, {*t*[12], *t*[13]}, {*t*[14], *t*[15]}, {*t*[23], *t*[24]}, {*t*[25], *t*[26]}, and {*t*[27], *t*[28]}. There are seven such kinds of decision sets. We use *α*[*i*] and 1 − *α*[*i*] to represent the probabilities of the two transitions in the *i*‑th decision set, *i* = 1, 2, …, 7.
+
+### 17.4.3 Real-time Congestion Monitoring and Intervention
+
+With the IoT technology in place, we can always get the distribution of evacuees in a building and therefore know if there is and where there is congestion. Based on some algorithms, we can also predict if there will be congestion. If we do foresee congestion, we take preventative action to stop it. In the Petri net model of Figure 17.6, each token represents an evacuee somewhere. For example, the initial marking indicates that there are 60 people in the classroom R1, 62 people in R2, 40 people in R3, 38 people in R4, and 48 people in R5. Nobody is in other places. When the evacuation simulation starts, the token distribution will change, representing people moving; each real-time snapshot of the token distribution is recorded by the marking of the Petri net. Therefore, by examining the marking of the GSPN model, we can analyse the evacuation status and see if intervention is needed to prevent any potential congestion from happening or worsening.
+
+Notice that such a decision-making strategy should be made on a case‑by‑case basis. That is, the mechanism for the marking analysis and decision for intervention is contingent on the individual system or GSPN model. In general, we need to derive functions *f**i*, such that  
+
+*α*[*i*] = *f**i*, *i* = 1, 2, …, 7  
+
+This way, based on the current congestion status, we modify *α*[*i*] and inform more people to move to a less congested exit. As far as the model in Figure 17.6, the total number of tokens in places *p*[10] − *p*[16] is the number of people moving to the left exit, while the total number of tokens in places *p*[17] − *p*[23] is the number of people moving to the right exit.
+
+There are two decisions here. One is to decide when we need to adjust *α*[*i*]. The second decision is how to adjust *α*[*i*]. A simple way to decide if we need to adjust *α*[*i*] is calculating the difference between the number of people moving towards each exit and see if it exceeds a threshold. Let  
+
+$$\begin{array}{l} N_{L} = M(p_{10} \cup^{} p_{11} \cup^{} p_{12} \cup^{} p_{13} \cup^{} p_{14} \cup^{} p_{15} \cup^{} p_{16}), \\ N_{R} = M(p_{17} \cup^{} p_{18} \cup^{} p_{19} \cup^{} p_{20} \cup^{} p_{21} \cup^{} p_{22} \cup^{} p_{23}). \end{array}$$
+
+Denote the threshold of the difference by *D*. There are three cases. The first case is  
+
+|*N*[*L*]−*N*[*R*]| < *D*,  
+
+in which no action will be taken. In the second case,  
+
+*N*[*L*] − *N*[*R*] > *D*,  
+
+that is, too many people move to the left exit. We should instruct those who are still in the classrooms to move to the right exit when they walk out of a classroom. Similarly, in the third case,  
+
+*N*[*R*] − *N*[*L*] > *D*,  
+
+that is, too many people move to the right exit. We should instruct those who are still in the classrooms to move to the left exit when they walk out of the room. As far as how to adjust *α*[*i*], we can consider reducing *α*[*i*] by a certain percentage in the second case and increasing *α*[*i*] by a certain percentage in the third case. It is not a good idea to adjust *α*[*i*] dramatically. We should consider all *N*[*L*], *N*[*R*], and *D*. For example, we can set the percentage to  
+
+*D*/max {*N*[*L*],*N*[*R*]}.  
+
+A more reasonable increment can be figured out through experiments.
+
+A second way to decide if we need to adjust *α*[*i*] is to track the change of *N*[*L*] and *N*[*R*]. If one increases much faster than the other, then we need to make an adjustment. The idea behind this is when the number of people moving towards one exit increases too fast, it is very likely a congestion will develop on the way to that exit. One can create an algorithm for this approach.
+
+### 17.4.4 Simulation and Results
+
+
+
+我们设计了三个模拟场景，以验证所提动态疏散机制的有效性。场景 1 对应于 表 17.3 中列出的模拟设置。Petri 网的初始代币分布——即教学楼中初始疏散人员的分布——如 图 17.6 所示。运行场景 1 的模拟后，我们得到左侧和右侧出口之间的疏散人员近乎完美的平分。总疏散时间为 3089 秒，属于人数较多时的近乎最佳情况。模拟结果如 图 17.7 所示。蓝线表示通过右侧出口离开的人员，红线表示通过左侧出口离开的人员。
+
+![Figure 17.7 场景 1 模拟结果。疏散人员在各教室内几乎均匀分布。移动到两个出口的人数几乎相同。这是理想情况。](img/fig17_7_B.jpg)
+
+Figure 17.7 场景 1 模拟结果。疏散人员在各教室内几乎均匀分布。移动到两个出口的人数几乎相同。这是理想情况。
+
+第二个场景模拟的是更多人倾向于通过右侧出口离开的情况。初始标记的代币分布如下：
+
+*M*(*p*[1]) = 20; *M*(*p*[2]) = 58; *M*(*p*[3]) = 5; *M*(*p*[4]) = 40; *M*(*p*[5]) = 60.  
+
+在此场景中，一侧逐渐拥挤，另一侧则容易疏散。我们的目标是引导剩余疏散人员向较少拥挤的一侧移动。最初我们让模拟在没有任何干预的情况下运行。最终疏散所需时间为 2921.392 秒。通过使疏散过程动态化的干预，我们希望缩短总疏散时间。
+
+为了验证，我们再次运行模拟，并在出现拥挤时动态调整疏散人员的权重。在时间 *t* = 25 时，立即转移的 firing 概率如 表 17.4 所示，为将因右侧拥挤而增加左侧疏散人员。在 *t* = 100 时，拥挤消除，权重恢复原状。仅在这 75 秒内进行的细微改动，使总疏散时间节省了 671.83 秒，即超过 11 分钟。
+
+Table 17.4 场景 2：调整的立即转移参数
+
+| Transition || Probability || Transition || Probability |
+| --- | --- | --- | --- |
+| *t*[8] || 0.9 || *t*[20] || 1 |
+| *t*[9] || 0.1 || *t*[23] || 0.9 |
+| *t*[10] || 0.9 || *t*[24] || 0.1 |
+| *t*[11] || 0.1 || *t*[25] || 0.7 |
+| *t*[12] || 0.5 || *t*[26] || 0.3 |
+| *t*[13] || 0.5 || *t*[27] || 0.2 |
+| *t*[14] || 0.2 || *t*[28] || 0.8 |
+| *t*[15] || 0.8 || *t*[31] || 1 |
+| *t*[19] || 1 || *t*[32] || 1 |
+
+Figure 17.8 跟踪该场景（未干预）的模拟结果。红色曲线跟踪通过左侧出口的人员，蓝色曲线跟踪通过右侧出口的人员。Figure 17.9 展示干预后的结果。
+
+![Figure 17.8 场景 2 模拟结果：静态疏散。楼层上初始疏散人员分布不均匀，一侧人数远多于另一侧。未干预时，疏散耗时 2921 秒。](img/fig17_8_B.jpg)
+
+Figure 17.8 场景 2 模拟结果：静态疏散。楼层上初始疏散人员分布不均匀，一侧人数远多于另一侧。未干预时，疏散耗时 2921 秒。
+
+![Figure 17.9 场景 2 模拟结果：动态疏散。初始疏散人员分布与图 17.8 相同，但随后采用了动态干预。总疏散时间缩短了 672 秒。](img/fig17_9_B.jpg)
+
+Figure 17.9 场景 2 模拟结果：动态疏散。初始疏散人员分布与图 17.8 相同，但随后采用了动态干预。总疏散时间缩短了 672 秒。 Figure 17.8
+
+第三个场景是第二个场景的变体。各房间的人数相同，但初始概率不同（见 表 17.5）。大多数人位于走廊的右侧，该测试案例探讨将大多数人送向左侧对整体疏散时间的影响。初始代币分布如下：
+
+Table 17.5 场景 3：调整的立即转移参数
+
+| Transition || Probability || Transition || Probability |
+| --- | --- | --- | --- |
+| *t*[8] || 1 || *t*[20] || 1 |
+| *t*[9] || 0 || *t*[23] || 1 |
+| *t*[10] || 0.8 || *t*[24] || 0 |
+| *t*[11] || 0.2 || *t*[25] || 0.8 |
+| *t*[12] || 0.7 || *t*[26] || 0.2 |
+| *t*[13] || 0.3 || *t*[27] || 0.2 |
+| *t*[14] || 0.7 || *t*[28] || 0.8 |
+| *t*[15] || 0.3 || *t*[31] || 1 |
+| *t*[19] || 1 || *t*[32] || 1 |
+
+*M*(*p*[1]) = 58; *M*(*p*[2]) = 12; *M*(*p*[3]) = 16; *M*(*p*[4]) = 23; *M*(*p*[5]) = 7  
+
+如 图 17.10 所示，在未修改任何概率的情况下运行完整模拟，总疏散时间为 4216.85 秒。这比场景 2 的结果有显著增长。根据初始代币分布，右侧很快会拥挤。然而，将更多人推向左侧导致左侧拥挤。为解决此问题，我们在 *t* = 30 时将概率改为推向右侧。结果总疏散时间为 3414.613 秒，如 图 17.11 所示，比静态疏散减少了 802.237 秒。
+
+![Figure 17.10 场景 3 模拟结果：静态疏散。立即转移概率设置迫使更多人向左侧移动，导致通道拥挤。总疏散时间为 4217 秒。](img/fig17_10_B.jpg)
+
+Figure 17.10 场景 3 模拟结果：静态疏散。立即转移概率设置迫使更多人向左侧移动，导致通道拥挤。总疏散时间为 4217 秒。
+
+![Figure 17.11 场景 3 模拟结果：动态疏散。与图 17.10 相同的初始设置，但在过程中进行干预，使疏散时间减少 802 秒。](img/fig17_11_B.jpg)
+
+Figure 17.11 场景 3 模拟结果：动态疏散。与图 17.10 相同的初始设置，但在过程中进行干预，使疏散时间减少 802 秒。 Figure 17.10
+
+上述模拟结果强烈表明，一旦建立动态导航机制，就能实时监测疏散状态，并在出现或预测拥挤时及时调整疏散流，从而节省疏散时间。
+
+## 17.5 多层楼宇疏散
+
+
+
+
+我们还将基于物联网的动态疏散方法应用于多层教学楼的疏散中。例如，考虑一个两层楼的建筑。整个 GSPN 模型由第一层的模型、第二层的模型以及连接两层楼出口的楼梯模型组成。为了直观感受动态疏散对多层建筑的影响，我们假设两层楼具有完全相同的布局，因此对每一层使用 Figure 17.6 的 GSPN 模型。我们使用一个转换来连接代表两个左侧出口的两个地点，使用另一个转换来连接代表两个右侧出口的两个地点。我们测量每条楼梯的长度，并计算对应转换的 firing rate。每层楼的模型参数与 Scenario 3 中描述的相同。结果如 Figure 17.12 所示。静态疏散耗时 4771 秒，而动态疏散耗时 3219 秒，节省了 1552 秒。
+
+![Figure 17.12 Simulation results of a two-floor building evacuation. Static evacuation took 4771 seconds, while dynamic evacuation took 3219 seconds. (a) Static evacuation. (b) Dynamic evacuation.](img/fig17_12_B.jpg)
+
+Figure 17.12 Simulation results of a two-floor building evacuation. Static evacuation took 4771 seconds, while dynamic evacuation took 3219 seconds. (a) Static evacuation. (b) Dynamic evacuation.
+
+## 17.6 Conclusion
+
+在本研究中，我们利用先进的物联网技术进行紧急疏散，并提出使用动态导航帮助疏散者在疏散过程中提高效率并节省疏散时间。我们通过基于 GSPN 的建模和仿真，考察了教学楼的多种疏散场景，以确定动态变化对最终出口时间的影响。研究结果支持我们的理论：对建筑内个体的动态变更疏散路径能够在火灾或化学泄漏等紧急情况下，缩短整体疏散时间。这一点在教学楼疏散中尤为重要，因为每天各房间的学生人数差异显著。
+
+我们的研究成果有望改进各类教学楼的疏散流程。将技术用于实时疏散决策，可帮助学校在更短的时间内安全疏散学生。鉴于学校的首要目标是确保学生安全，他们可能会采用此方法，以确保疏散过程的最安全结果。
+
+我们的未来工作将在医院、办公楼以及其他人口密集建筑中测试我们的疏散流程。其他潜在的未来工作包括将机器学习技术用于捕捉疏散者的异常行为，如跌倒或特殊手势。对于户外疏散（如街道疏散），我们可以使用无人机监测并跟踪疏散流动，识别交通拥堵。
+
+## REFERENCES
+
+1.  H. Kurdi, A. Almuli, S. Al-Megrenb, and K. Youcef-Toumib, “A balanced evacuation algorithm for facilities with multiple exits.” European Journal of Operational Research, 26(1), 285–296, 2021.
+
+2.  N. Bode, J. Miller, R. O'Gorman, and E. Codling, “Increased costs reduce reciprocal helping behaviour of humans in a virtual evacuation experiment.” Scientific Reports, 5, 15896, 2015.
+
+3.  M. Lee, H. Nam, and C. Jun, “Multiple exits evacuation algorithm for real-time evacuation guidance.” Spatial Information Research, 25, 261–270, 2017.
+
+4.  H. Kurdi, S. Al-Megren, R. Althunyan, and A. Almuli, “Effect of exit placement on evacuation plans.” European Journal of Operational Research, 269, 749–759, 2018.
+
+5.  X. Pan, C. Han, K. Dauber, and K. Law, “Human and social behavior in computational modelingand analysis of egress.” Automation in Construction, 15, 448–461, 2006.
+
+6.  M. Davidich, and G. Koster, “Towards automatics and robust adjustment of human behavioral parameters in a pedestrian stream model to measured data.” Safety Science, 50, 1253–1260, 2012.
+
+7.  T. Dhamala, “A survey on models and algorithms for discrete evacuation planning network problems.” Journal of Industrial and Management Optimization, 11, 265–289, 2015.
+
+8.  M. Yuksel, “Agent-based evacuation modeling with multiple exits using neuroevolution of augmenting topologies.” Advanced Engineering Informatics, 35, 30–55, 2018.
+
+9.  N. Pelechano and A. Malkawi, “Evacuation simulation models: Challenges in modeling high rise building evacuation with cellular automata approaches.” Automation in Construction, 17, 377–385, 2008.
+
+10.  Q. Xiao and J. Li, “Pedestrian evacuation model considering dynamic emotional update in direction perception domain.” Complexity, 2021, 2021. [`doi.org/10.1155/2021/5530144`](https://doi.org/10.1155/2021/5530144)
+
+11.  J.S. Milazzo, N.M. Rouphail, J.E. Hummer, and D.P. Allen, “Effect of pedestrians on the capacity of signalized intersections.” Transportation Research Record 1646, Transportation Research Board, National Research Council, 1998.
+
+12.  S.P. Hoogendoorn, and P.H.L. Bovy, “Pedestrian travel behavior modeling.” In: K. Axhausen (Ed.), Moving through nets: The physical and social dimensions of trave, 10th International Conference on Travel Behavior Research, Lucerne (Switzerland), pp. 1–33, 2003.
+
+13.  G.C. Lovas, “Modeling and simulation of pedestrian traffic flow.” Transportation Research B, 28(6), 429–443, 1994.
+
+14.  L.F. Henderson, “The statistics of crowd fluids.” Nature, 229, pp. 381–383, 1971.
+
+15.  D. Helbing, I. Farkas, and T. Vicsek, “Simulating dynamical features of escape panic.” Nature, 407, pp. 487–490, 2000.
+
+16.  C. Reynolds, “Flocks, herds, and schools: A distributed behavior model.” Proceedings of ACM SIGGRAPH ‘87, pp. 25–34, 1987.
+
+17.  S. Wolfgram, “Statistical mechanics of cellular automata.” Reviews of Modern Physics, 55, 601–644, 1983.
+
+18.  Y. Zhang, W. Li, Y. Rui, S. Wang, H. Zhu, and Z. Yan, “A modified cellular automaton model of pedestrian evacuation in a tunnel fire.” Tunnelling and Underground Space Technology, 130, 2022. [`doi.org/10.1016/j.tust.2022.104673`](https://doi.org/10.1016/j.tust.2022.104673)
+
+19.  S. Cao, W. Song, W. Lv, and Z. Fang, “A multi-grid model for pedestrian evacuation in a room without visibility.” Physica A: Statistical Mechanics and its Applications, 436, 45–61, 2015.
+
+20.  X. Li, T. Chen, L. Pan, S. Shen, and H. Yuan, “Lattice gas simulation and experiment study of evacuation dynamics.” Physica A: Statistical Mechanics and its Applications, 387(22), 5457–5465, 2008.
+
+21.  Y. Mizuta, M. Sumino, Y. Kunito, K. Shiota, Y. Izato, and A. Miyake. “Emergency evacuation model assuming leakage of toxic substances in a chemical plant.” Journal of Loss Prevention in the Process Industries, 68, 104287, 2020.
+
+22.  R. Hamzi, F. Innala, M. Bouda, and M. Chati. “Performance assessment of an emergency plan using Petri nets.” Chemical Engineering Transactions, 32, 235–240, 2013.
+
+
+
+-   [A. Sheeba Angel, and R. Jayaparvathy]的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
+
+1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+
+
+可用频谱被分为 40 条 2 MHz 的信道，其中 37 条用于数据传输，剩余的 3 条用于广告事件。频谱资源在网络节点之间共享，这意味着并发传输可能会发生碰撞。因此，中访问规则是由三种众所周知的技术组合决定的。第一种是时间分多路复用（TDMA），在可用信道上为节点分配固定的 0.625 msec 时间片用于数据传输。在分配的时间片上，采用频率跳变（FH），即每次数据传输时节点使用不同的信道。最后，采用时间分双工（TTD）技术，将每个时间片的可用时间分开并在这两部分之间共享上行和下行。
+
+最新蓝牙版本的改进专门针对 BLE，包括数据传输速率翻倍，最高可达 2 Mbps \[1\]。另一个增强是通过前向纠错（FEC）技术提升范围，理论上在户外环境中可达 500 米。最后，还有一项重要改进是扩大广告容量，因为可以使用全部 40 条可用信道来实现此目的。
+
+### 18.2.2 IEEE 802.15.4（Zigbee）
+
+Zigbee 的主要目标是创建低能耗、低复杂度、低运营成本但数据传输速率较低的短距离无线网络。Zigbee 网络由三类设备组成：坐标器和路由器，它们均为全功能设备（FFD），以及终端设备，它们为受限功能设备（RFC）\（图 18.2 a）#ch18.xhtml#fig18_2〕。坐标器的主要功能是通过发送蜂窝帧来同步网络，并选择网络操作参数，如信道选择和唯一网络标识。路由器的主要功能是转发设备之间的数据以扩展网络覆盖范围。坐标器和路由器通常由交流电源供电，因为它们需要一直保持唤醒。终端设备则由电池供电，其主要功能是收集并传输传感器的各类信息。它们不能在网络中中继信息，并且可以进入睡眠状态以节省能源。
+
+![Figure 18.2 (a) Zigbee network and (b) Zigbee protocol stack.
+
+Figure 18.2 (a) Zigbee network and (b) Zigbee protocol stack.
+
+Zigbee 协议栈包含四层，其中物理层和 MAC 层在 IEEE 802.15.4 标准中定义，而网络层和应用层在 Zigbee 联盟发布的规范中定义\[（图 18.2 b）#ch18.xhtml#fig18_2〕。物理层负责辅助信道选择的多项任务，如链路质量估计、能量检测测量和信道空闲判定。可用的工作频段有三个：868 MHz（1 条信道，20 Kbps，采用 BPSK 调制），915 MHz（10 条信道，40 Kbps，采用 BPSK 调制）以及 2.45 GHz（16 条信道，250 Kbps，采用 O‑QPSK 调制）。MAC 层作为物理层和网络层之间的接口。它使用四种帧结构：Beacon、Data、Acknowledge 和 MAC command。它支持两种中访问方式：第一种是蜂窝启动式，设备同步并可在预定时间片中通过争用传输；同时支持通过坐标器分配的保证时间片实现无争用时期。第二种是非蜂窝式，设备未同步，因而没有无争用时期和保证时隙。非蜂窝方式能够提升终端设备的能源效率，因为它们在睡眠模式下的时间更长，而蜂窝启动式方式则提高网络的可靠性。
+
+网络层位于应用层和 MAC 层之间。其主要功能是形成网络并在这网络内部路由信息。使用的拓扑结构有星形、树形和网状。应用层根据 Zigbee 规范划分为三个子层。应用框架子层通过控制 Zigbee 设备硬件的软件管理其他层；ZigBee 设备对象子层负责服务发现、安全性和绑定；应用支持子层则作为网络层和应用层之间的接口。
+
+### 18.2.3 Z‑Wave
+
+Z‑Wave 于 1999 年出现，是一种专注于智能家居内部连接的无线协议。它是低功耗的 Wi‑Fi 替代方案，但其覆盖范围远大于蓝牙。Z‑Wave 网络的覆盖距离可以通过让节点转发和中继消息、借助路由表实现。协议规定源节点和目的节点之间的最大距离为 4 跳，以在扩展范围和网络可靠性之间取得平衡。Z‑Wave 设备的工作频段取决于使用所在国家：美国使用 908.40 MHz、908.42 MHz 和 916 MHz；英国和欧洲使用 868.40 MHz、868.42 MHz 和 869.85 MHz。
+
+Z‑Wave 网络的节点分为三类基本类别，依据协议提供的任务和功能划分。第一类是单一的主控节点，它负责维护网络的路由表，并能与网络中每个节点通信。主控节点的其他重要任务包括将节点加入或移出网络，以及为网络节点分配角色（次级控制器、从属节点）和 ID。次级控制器节点功能与主控节点相同，只是不能加入或移出节点。从属节点不维护路由表，可以在永久供电时充当中继器；如果从属节点使用电池供电，则在形成路由表的过程中会被从中央控制器中排除。根据分配的功能，从属节点可以拥有不同的角色，如路由从属节点、频繁监听路由从属节点或增强从属节点。
+
+协议栈包含物理层、MAC 层、网络层和应用层。物理层定义调制参数，提供三种可选方案：最保守的方案传输速率为 9.6 Kbps，第二种为 40 Kbps，最激进的方案为 100 Kbps。MAC 层定义的中访问机制是基于碰撞避免和退避算法的争用方式，同时支持每网络最多 232 个节点以及低功耗模式。网络层的其他功能是通过重传、确认和认证机制确保传输可靠性，并定义四种基本帧类型：单播、确认、组播和广播。最后，应用层负责解码并向节点提供一些网络管理功能。
+
+
+
+
+-   [Wi‑Fi 技术](https://wiki.example.org/feynmans_learning_method)基于 IEEE 802.11 协议，是无线接入网络中连接最广泛的方式。该技术的普及既得益于它为终端用户和设备提供的简便连接，也得益于其在物理层和 MAC 层持续演进的技术。
+
+-   这种演进使得传输速率从 Mbps 级别提升至 Gbps 级别，同时提升了可靠性、能效以及根据应用需求动态适配的安全性。
+
+-   在 IEEE 802.11 中，一个站点可以是接入点（AP）或终端设备（客户端）。基本服务集（BSS）是一组在物理层进行通信的站点，依据工作模式可分为基础设施模式（设备通过 AP 与其他设备通信）或自组网模式（设备在对等基础上直接通信）。此外，BSS 之间还可以通过分布式系统（distribution system）实现扩展服务集（ESS），该系统连接各 BSS 的 AP。
+
+-   IEEE 802.11 包含两层：数据链路层和物理层。数据链路层由两个子层组成：链路逻辑控制（LLC），为上层提供接口并执行基本链路层功能，如错误控制和流量控制；MAC 层定义了两种信道访问方法。第一种是分布式协调功能（DCF），采用二进制指数退避的载波监听多访问与碰撞避免（CSMA/CA）。CSMA/CA 是“先听后说”的访问机制，要求每次传输后都收到确认帧。另一种是可选协调功能（CCF），由集中式 MAC 算法通过轮询移动设备实现无争用的服务。
+
+-   802.11 的工作频段为 2.4 GHz 和 5 GHz，物理层定义的信道带宽可达 160 MHz，并规定了调制编码方案等传输细节。
+
+-   该协议的最新修订是 802.11.ax，亦称高效（high efficiency），主要针对因大规模部署 Wi‑Fi 网络导致的拥塞问题，该问题因重叠 BSS 的同频干扰而降低整体性能 \[2\]。主要改进包括：通过引入激进的 1024 QAM 调制更好地利用可用频谱资源；采用正交频分复用（OFDMA）技术为不同子载波独立调制；以及在 MAC 层引入先进的算法和技术，提升可用频谱的空间复用能力。为提升能效，新修订还加入了延长睡眠状态的机制，以降低终端设备的功耗。
+
+### 18.2.5 Mesh Networking for IoT
+
+-   物联网（IoT）网络需要服务的场景多样，导致技术种类呈现出极大的异质性。常见的拓扑结构是树形和星形，其中设备拥有预定义的层级角色。例如，某些设备负责收集信息，其他设备则转发或处理信息，形成集中式网络模型。然而，随着 IoT 应用的演进，更复杂的网格（mesh）拓扑结构变得必要，能够根据流量条件动态调整。网络设备也不能预先固定角色，必须根据具体情况承担不同任务。网格 IoT 网络的主要优势包括：降低安装和维护成本、动态分配网络负载、提高对故障的容错能力、以及能够随需求改变拓扑结构 \[3\]。
+
+-   网格 IoT 网络的关键操作是路由，分为主动（proactive）和反应（reactive）两类。主动协议的特点是每个网络节点为所有可能的路径维护、更新路由表。由于路由表大小受限，这种路由协议更适合小型网络。反应协议则不预先创建路由表，只有在收到特定请求时才建立路径，路由过程包括路径发现和维护，基于泛洪（flooding）实现。
+
+-   优化链路状态路由（OLSR）是一种主动路由协议。其工作原理是所有网络节点周期性地向邻居发送链路状态信息，以维护路由表。其主要的泛洪策略是将拓扑控制报文的转发责任分配给特定的邻居节点 —  — 多点中继（MPR），从而减少不必要的泛洪传输。算法在选择 1‑hop MPR 节点时，确保覆盖所有 2‑hop 邻居节点。Figure 18.3 展示了从节点 A 到节点 B 选择的 MPR 节点，用于转发拓扑控制报文。
+
+![Figure 18.3 Selection of multipoint relay nodes by the optimized link state routing protocol.](img/fig18_3_B.jpg)
+
+Figure 18.3 Selection of multipoint relay nodes by the optimized link state routing protocol.
+
+-   动态源路由（DSR）是一种反应协议，按需工作。它不依赖中间节点维护路由表，而是使用源路由技术，无需周期性的路由广播。协议包含两大功能：第一是路径发现，当节点缓存中不存在目的节点的路径时触发；第二是路径维护，当缓存中的路径失效时激活。
+
+### 18.3 Long-range Networks
+
+-   低功耗宽带（Low Power Wide Area Networks，LPWAN）是专为机器类型通信（MTC）设计的无线网络，旨在提供低成本、高能效、长通信距离，以牺牲更低带宽为代价。文献中大多数将 LPWAN 归类的网络在技术上已趋于统一，具备以下基本技术要求，使其区别于其他网络技术 \[4\]：
+
+  * *能效*：鉴于大规模 IoT 设备部署且往往缺乏持续电源，LPWAN 设备必须支持约十年甚至更长的电池寿命。
+
+  * *覆盖范围*：LPWAN 的目标覆盖范围从城市区域的几公里到农村区域的数十公里不等。
+
+  * *可扩展性*：LPWAN 必须能够支撑大量设备，每个基站至少支持几万台设备。
+
+  * *低成本*：为满足上述范围和可扩展性需求，LPWAN 网络及其应用的部署成本必须保持较低。单个 LPWAN 设备的目标成本控制在几美元以内，年费不超过 1 USD。
+
+
+
+
+一些网络，特别是蜂窝物联网（cellular IoT）网络，使用授权频谱，而其他网络则使用 ISM 波段进行通信，这凸显了干扰管理的必要性。为降低信道噪声和干扰的影响，采用了两种主要的调制方式：窄带和扩频。许多 LPWAN 中（但并非全部）的常见技术包括在子 GHz 频段上进行网络运行，以在牺牲数据速率的前提下增加通信距离，以及让设备在睡眠模式中长时间保持关闭，以实现设备的长寿命。
+
+长距离物联网网络的一般架构由一系列基站天线组成，这些天线连接到核心网络服务器并为物联网设备提供覆盖。因此，基站充当设备与核心网络之间的中继，设备之间无需直接通信。核心网络负责处理物联网设备之间的通信以及与各种物联网应用和用户的交互。该架构如图 18.4 所示。
+
+![Figure 18.4 General architecture of a long-range IoT network.](img/fig18_4_B.jpg)
+
+Figure 18.4 General architecture of a long-range IoT network.
+
+### 18.3.1 IEEE 802.11ah (Wi‑Fi HaLow)
+
+IEEE 802.11ah 标准，亦称 Wi‑Fi HaLow，是面向物联网的子 GHz Wi‑Fi 规范。与传统 Wi‑Fi 相比，Wi‑Fi HaLow 的设计目标是低功耗、更高的节点密度以及更大的通信距离。Wi‑Fi HaLow 网络采用星/树状结构，中心接入点（AP）充当网关，设备与之关联。为提升覆盖范围，802.11ah 支持使用继电节点，继电节点关联到根 AP，并可作为其他设备的 AP 使用。
+
+在物理层，IEEE 802.11ah 采用 OFDM，运行在子 GHz ISM 波段，信道带宽可在 1 至 16 MHz 之间，理论上可覆盖约 1 km 并比传统 Wi‑Fi 更节能。标准规定了多种调制方案，提供灵活的数据速率，范围从 0.3 Mbit/s 到约 230 Mbit/s。因此，与其他 LPWAN 相比，Wi‑Fi HaLow 实现了更高的数据速率但通信距离较短。
+
+在 MAC 层，对基于 CSMA/CA 的 Wi‑Fi 协议进行了多项调整，以支持大量设备并实现节能运行。与其他 Wi‑Fi 标准相同，网络信息通过周期性广播的 Beacon 向活跃和潜在设备传输。为降低开销，提出了缩短头部长度的优化措施 \[5\]。
+
+为在关联阶段减少碰撞，定义了两种快速认证方案：集中式认证控制（Centralized Authentication Control），在该方案中设备在碰撞减少前会被随机排除在关联过程之外；分布式认证控制（Distributed Authentication Control）则是一种退避（backoff）机制。为管理密集部署中的碰撞，引入了受限访问窗口（Restricted Access Window，RAW），这是一种受限的争用协议，如图 18.5 所示。在该协议中，设备被分组，空中时间被划分为若干间隔，部分间隔可预留给特定组别。在预留间隔期间，仅对应组别的设备才能争用信道，间隔采用时隙方式并按网络 ID 以轮询（round‑robin）方式分配，但不保证无碰撞 \[6\]。
+
+![Figure 18.5 Example of the Restricted Access Window (RAW) protocol. The beacon frame (BCN) carries the RAW Parameter Set (RPS), which specifies the timing and corresponding group information for each RAW in the following Beacon Period. In each RAW, only the group of devices in the corresponding group can access the channel. Each RAW is slotted, and the slots are assigned evenly and pseudorandomly to devices in the corresponding group.](img/fig18_5_B.jpg)
+
+Figure 18.5 Example of the Restricted Access Window (RAW) protocol. The beacon frame (BCN) carries the RAW Parameter Set (RPS), which specifies the timing and corresponding group information for each RAW in the following Beacon Period. In each RAW, only the group of devices in the corresponding group can access the channel. Each RAW is slotted, and the slots are assigned evenly and pseudorandomly to devices in the corresponding group.
+
+流量指示图（TIM）机制是 IEEE 802.11 中用于在 Beacon 帧中通过比特图（bitmap）广告待发下行流量的方法。在 Wi‑Fi HaLow 中，引入了 TIM 分段（TIM segmentation），即把比特图分段传输，从而缩短 Beacon 时长，并允许设备跳过多次 Beacon 接收。另一种提升能耗的方法是 Target Wake Time（TWT），在此 AP 与设备协商延长的睡眠时间，在此期间无需接收 Beacon 帧。为管理邻近接入点之间的重叠，还引入了 BSS 着色（BSS coloring），在错误的接入点接收时提前终止接收。
+
+### 18.3.2 LTE‑M and NB‑IoT
+
+蜂窝物联网（Cellular IoT，CIoT）的目标是通过现有或新建的移动网络部署，支持物联网使用场景，有时在本文中称为大规模机器类型通信（mMTC）。mMTC 的需求自 2015 年起已纳入 ITU 第五代移动通信愿景，相关 CIoT 技术自 3GPP Release 13（2015 年）起被提出并标准化。CIoT 的主要挑战在于以成本效益的方式满足 IoT 要求，既能在现有网络上部署，也能在未来的第五代网络部署中使用。最重要的 CIoT 标准是 LTE‑M（也称 eMTC – enhanced MTC）和 NB‑IoT，它们均于 3GPP Release 13 首次标准化并随后在后续版本中得到完善。该愿景是使这些标准逐步演进，最终满足 ITU 对 mMTC 的要求 \[4\]。
+
+两项关键的低功耗规范是电源节省模式（PSM）和增强不连续接收（eDRX），分别在 Release 12 与 Release 13 中引入。在 PSM 中，用户设备（UE）可在不失联网络注册的情况下进入深度睡眠模式，从而降低功耗并减少重新连接网络的开销。在不连续接收（DRX）模式下，UE 不是持续监听寻呼信令，而是按周期性、逐渐增大的间隔（最长约 10 秒）间歇性监听。eDRX 进一步将此间隔延长至数小时。
+
+
+
+
+NB-IoT 是基于修改后的 LTE 架构的长距离低功耗网络标准。它首次在 Release 13 中引入，移除了物联网不需要的若干 LTE 核心网功能，将调制方式限制为 QPSK 和 BPSK，并使用优化的信令程序，同时将上行数据速率限制在最高 158 kbps。定义了一个新的硬件复杂度更低、成本更低的 UE 类别，Cat‑NB1。NB‑IoT 支持三种部署模式，如图 18.6 所示：在带内模式，为 Cat‑NB1 设备分配 LTE 资源块；在 guard band 模式，为 NB‑IoT 在 LTE guard band 中分配频谱；在独立模式，NB‑IoT 频谱完全独立于 LTE 频谱，适用于回收的 2G 和 3G 运营商频段。Release 14 引入了功耗更低的发射功率类（14 dBm，取代之前的 20 dBm 和 23 dBm 类）、增强定位、下行组播功能、传输速率提升以及新增的 UE 类别 Cat‑NB2。Release 15 的改进包括唤醒机制、支持与 5G 新无线电（NR）和 LTE‑M 同时运行（这对长期部署可行性至关重要）以及其他多项优化。Release 16 和 17 进一步提升了吞吐量和功耗的协议优化 \[7, 8\]。
+
+![Figure 18.6 Illustration of NB-IoT deployment modes. In this example, the standalone deployment is assumed to utilize reclaimed GSM spectrum.](img/fig18_6_B.jpg)
+
+Figure 18.6 Illustration of NB-IoT deployment modes. In this example, the standalone deployment is assumed to utilize reclaimed GSM spectrum.
+
+LTE‑M 面向更高性能的物联网应用，具备宽带类网络接入需求并支持较少的设备数量。因此，它为 NB‑IoT 及其他 LPWAN 提供互补而非竞争的方案，并且保持与 LTE 的向后兼容。它首次在 Release 13 中引入，并定义了 UE Cat‑M1，支持定位、语音和视频流传功能，峰值数据速率为 1 Mbps。Release 14 进一步优化了能耗并增加了组播功能，定义了 UE Cat‑M2，上行速率可达 7 Mbps。
+
+另一项面向物联网应用的 3GPP 规范是 EC‑GSM‑IoT。该标准利用现有的 GSM 和 GPRS 移动网络部署提供物联网连接服务。EC‑GSM‑IoT 的技术特性包括 20 dB 的链路预算提升，以及 PSM 和 eDRX，数据速率在 GMSK 调制下可达 0.35–70 kbps，在 8PSK 调制下可达 240 kbps。
+
+### 18.3.3 LoRaWAN
+
+LoRaWAN 是由 LoRa Alliance 开发的 LPWAN 标准。它采用星状网络拓扑，包含三类设备：网络服务器（网络核心后端，连接互联网），终端设备（传感器/执行器 IoT 设备），以及网关（基站），它们负责中继终端设备与网络服务器之间的流量。尽管它在物理层使用专有的 LoRa 调制，网络架构和上层协议是开放标准。网络运行在亚 GHz ISM 频段，不同地区使用不同频率。由于 LoRaWAN 标准的开放性以及使用 ISM 频段，它既可以部署为公共网络服务，也可以部署为私有网络 \[9\]。
+
+在物理层，LoRaWAN 采用 LoRa 调制（一种 chirp spread spectrum 方案）以及用于更高数据速率的 FSK 调制。扩频因子（spreading factor）是一个物理层参数，控制数据速率与传输时长的权衡，使得在延长覆盖范围的同时会增加功耗。LoRaWAN 在亚 GHz ISM 频段上使用 125 kHz、250 kHz 和 500 kHz 的信道。LoRaWAN 网关在城市区域可覆盖最高 5 km，农村地区的覆盖距离可达 45 km。传输速率范围为 0.3–37.5 kbps（LoRa）和 50 kbps（FSK）。
+
+在 MAC 层，LoRaWAN 支持三种设备类，如图 18.7 所示。Class A 是最节能的类，设备通过随机接入在 TX 窗口中上传数据，下行帧仅能在每次上传后打开的两个接收窗口（RX1、RX2）中接收，因此设备只能在发送上行消息后才能收到服务器的消息。Class B 的设备通过定时的信标帧（BCN frame）与网络同步，并在信标的随机偏移处打开额外的下行接收窗口（class B RX windows），从而缓解 Class A 的下行限制。Class C 的设备始终保持接收状态。
+
+![Figure 18.7 Illustration of LoRaWAN channel access modes for each device class.](img/fig18_7_B.jpg)
+
+Figure 18.7 Illustration of LoRaWAN channel access modes for each device class.
+
+### 18.3.4 SigFox
+
+SigFox 是由 SigFox Corporation 开发并运营的专有 LPWAN 标准。系统包括 IoT 设备、基站（BS）和核心网络。基站部署在覆盖范围内并通过互联网与核心网络相连。设备在通过注册管理员（Registration Authority）关联到核心网络后，可通过基站与核心网络服务中心（Service Center）交换少量数据帧。服务中心随后向客户提供设备的数据和控制功能。
+
+SigFox 通过以下设计特性实现低功耗与长距离传输：在物理层，网络运行在亚 GHz 非授权 ISM 频段，通信通过 100 Hz 或 600 Hz 的超窄带（UNB）信道进行，这既降低了白噪声的影响，也将数据速率降至 100 bps 或 600 bps，同时延长传输时长至 2 s，并增加频段内的信道数量。使用差分相位移键控制（D‑BPSK）和高斯频移键控制（GFSK）调制，可降低硬件复杂度。
+
+在 MAC 层，接入方式为随机接入，不提供同步选项。为提高网络可靠性，每帧在随机选取的信道和时间偏移上重复发送三次，并由多个基站接收，以通过时间、频率和空间多样性重构原始传输。此策略分别称为时间、频率和空间多样性。通信可单向或双向进行；双向通信仅在上行传输后、在预定延迟打开的接收窗口内进行，在此期间接收下行帧并由设备确认。由于 UNB 物理层与 MAC 层多样性策略的组合，SigFox 基站在城市区域可覆盖最高 10 km，农村区域可覆盖最高 50 km \[10\]。
+
+## 18.4 Comparative Analysis
+
+
+
+
+选择物联网（IoT）领域中使用的技术至关重要且充满挑战。尽管已经部署了大量基于相似原理的无线技术，能够满足 IoT 概念，但每种技术都有其自身的特点、优势和劣势。因此，并非所有无线技术都适用于所有 IoT 应用。本节以 Sections 18.2 和 18.3 中介绍和讨论的短距离和长距离网络技术为基准，对 **延迟、能耗、成本、QoS 等** 进行对比。随后，会先对无线技术进行比较，再根据特定 IoT 应用场景确定合适的无线技术。
+
+短距离和长距离网络技术的主要特性如 Table 18.1 所示。短距离技术方面，Wi‑Fi 最初是为在小范围内提供高吞吐量、面向少量设备而设计，且对能耗没有特殊要求；这类设备通常位于室内且距离较近。因此，Wi‑Fi 及其变体并不特别适合所有 IoT 应用，尤其是需要低功耗或长距离覆盖的场景。为满足低功耗 IoT 要求，市场已引入 **BLE、ZigBee、Z‑Wave** 等技术和标准。BLE 与 ZigBee 例如是低成本、功耗显著低于 Wi‑Fi 的技术，但覆盖距离仅约 100 米。数据速率方面，BLE、Z‑Wave、ZigBee 均低于 1 Mbps，适合带宽需求小、流量受限的设备。因此，对于需要部署少量节点且流量较大的 **家庭自动化** 等 IoT 应用，**Wi‑Fi 802.11 系列** 更为合适。根据 \[11\]，ZigBee 可支持规模较大的网络（数百个节点），而 Wi‑Fi 和 BLE 分别支持中等和少量设备。
+
+Table 18.1 Key Characteristics of Short/Long-Range Networks
+
+| Technology || Frequency || Range || Data Rate || Encryption || Modulation || Power || Network size |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Bluetooth || 2.4 GHz || 10–100 m || 1 Mbps || AES || GFSK || 30 mA || Unlimited |
+| ZigBee || 2.4 GHz || 10–100 m || 250 kbps || AES || BPSK || 30 mA || 127 |
+| Z‑Wave || ~900 MHz || 30–100 m || 40–100 kbps || AES || BFSK || 2.5 mA || 232+ |
+| Wi‑Fi || 2.4 GHz, 5 and 6 GHz || <200 m || 600 Mbps || AES || BPSK || High || 255 |
+| Wi‑Fi HaLow || ~900 MHz || <1.5 km || 150 kbps–346 Mbps || WPA || QPSK || Low || 8000 devices supported |
+| NB‑IoT || Many || ~10 km || 200 kbps || LTE Encryption || QPSK || 20/23 dBm || >100 000 devices supported |
+| LoRaWAN || Many || 1–10 km || 0.3–50 kbps || AES || GFSK || 20 dBm || >100 000 devices supported |
+| SigFox || 862–928 MHz || 3–50 km || 100–600 bps || Not built in || GFSK || 13.5 dBm || >1 000 000 devices supported |
+
+若需在长距离上传输数据，短距离技术已不足，需采用 **Low Power Wide Area Network（LPWAN）** 技术。LPWAN 的多项参数用于评估优劣，部分关键指标如下，并在 Table 18.2 中可视化对比 \[12\]。
+
+Table 18.2 Comparison of Sigfox, NB‑IoT, and LoRaWAN
+
+|  || SigFox || LoRaWAN || NB‑IoT |
+| --- | --- | --- | --- |
+| Scalability || **`2/5`** || **`3/5`** || **`5/5`** |
+| Range || **`5/5`** || **`4/5`** || **`2/5`** |
+| Coverage || **`5/5`** || **`4/5`** || **`1/5`** |
+| Deployment || **`4/5`** || **`5/5`** || **`1/5`** |
+| Cost efficiency || **`5/5`** || **`5/5`** || **`2/5`** |
+| Battery life || **`5/5`** || **`5/5`** || **`3/5`** |
+| QoS || **`2/5`** || **`2/5`** || **`5/5`** |
+| Payload length || **`1/5`** || **`2/5`** || **`5/5`** |
+| Latency performance || **`1/5`** || **`3/5`** || **`5/5`** |
+
+**QoS**：Sigfox 与 LoRaWAN 不提供 QoS；NB‑IoT 使用授权频段和基于 LTE 的同步协议，能够在牺牲成本的情况下实现 QoS。因 QoS 与成本的权衡，NB‑IoT 适合需要保证服务质量的应用，而 Sigfox 或 LoRaWAN 则适用于对 QoS 无严格要求的场景。IEEE 802.11ah 提供中等 QoS。
+
+**Battery life**：Sigfox、LoRaWAN 与 NB‑IoT 的终端设备均在应用所需的时间内保持睡眠模式，以降低能耗。NB‑IoT 设备因需同步、QoS 处理以及 OFDM/FDMA 接入而消耗更多能量，导致其端末使用寿命相对 Sigfox 和 LoRaWAN 更短。
+
+**Latency**：NB‑IoT 连接提供极低的 IoT 延迟；LoRaWAN Class C 设备也能实现低双向延迟，但功耗较高。相反，Sigfox 与 LoRaWAN Class A 设备延迟较高，不适合对低延迟有要求的 IoT 应用。
+
+**Cost and Scalability**：相较于 NB‑IoT，Sigfox 与 LoRaWAN 在成本上更具优势。三者均能支持数千个终端设备，具备良好可扩展性；但 NB‑IoT 的可扩展性远超 Sigfox 与 LoRaWAN，单基站可支持超过 10 万设备。
+
+### 18.4.1 Application Examples
+
+物联网领域涵盖广泛的应用与设备，最佳技术取决于应用特性以及上述无线通信技术的差异，因而不存在单一适用于所有场景的通用标准。每种方案因其在各项网络需求上的优势与局限而适合特定 IoT 场景。例如，**智能电表** 与 **农业传感器** 具有极小的负载和间歇性传输需求，LoRa 能够满足；而 **公共安全** 或 **共享单车** 应用需要频繁、大容量的数据发送和移动性支持，NB‑IoT 更为合适。下面依次介绍几类典型应用场景，提供各技术适配情况的概览 \[12, 13 and 14\]。
+
+- **高速数据需求**（如视频流）主要由 **LTE** 或 **Wi‑Fi** 支持；中等速率（智能家居）和低速率（监测传感器）则由 **ZigBee、BLE、LTE‑M** 以及 **LPWAN** 技术覆盖。Wi‑Fi 速度约是 BLE 的 20–30 倍，适合大文件传输。
+
+- **延迟敏感** 应用（自动驾驶、医疗系统）最适合 **Wi‑Fi、BLE、Wi‑Fi HaLow、ZigBee、LTE‑M**；而 **延迟容忍** 的应用（Sigfox、NB‑IoT、LoRa）则更合适。
+
+
+
+
+此外，蓝牙是个人物联网设备（如健身可穿戴设备和追踪器）的理想选择。蓝牙能够持续广播大量数据，长期以来一直受到消费电子行业的青睐。此外，BLE 是专门为低功耗物联网设备设计的。由于设备被设计为支持睡眠模式，BLE 最适合用于在间歇性传输少量数据的设备。
+
+另一方面，网格技术适用于家庭内部应用和相邻项目，如智能照明、安防系统、暖通空调系统和遥控器。ZigBee 和 Z-Wave 能够使用网格拓扑结构，通过相互连接的节点在短距离到中距离传输小数据包。
+
+在电力计量应用领域的企业通常需要频繁通信、低延迟和大数据速率。由于电力计量仪表提供持续的电源，它们不需要低能耗或长电池寿命。此外，企业希望实时监控电网以驱动时间敏感的决策机制。因此，Sigfox 的延迟较高，不适合用于时间敏感的应用。电力计量仪表，另一方面，可以通过 LoRaWAN Class-C 连接以确保持续观测。然而，NB-IoT 是此类应用的最佳选择，因为它提供持续且高速的数据连接。
+
+传感器设备的电池寿命在农业物联网应用中至关重要。利用传感器（如温度、湿度和碱性）产生的关键信息来调节水供应，可能会影响产量。由于环境条件变化不大，设备会稀疏地更新传感器数据。因此，Sigfox 和 LoRaWAN 是农业应用的极佳选择。此外，由于许多农场缺乏 LTE 移动网络连接，NB-IoT 云在未来也不会成为农业选项。
+
+实时机器监控会调整工业生产线的运行参数，并实现远程控制以提高效率。在工厂自动化中，选择合适的物联网技术取决于使用场景的要求。NB-IoT 在需要频繁通信和良好服务质量的应用中表现更佳；而 Sigfox 和 LoRaWAN 则更适合成本低、能效高的应用，如资产追踪和状态监测。另一种满足多样化需求的选择是混合解决方案。
+
+温度、湿度、安全、水流和电源插座传感器会向物业管理员发出警报，以便在不亲自监控建筑的情况下及时防止损坏并响应请求。建筑清洁度和利用率也可以得到改善。这些传感器需要成本低廉且电池寿命长。由于它们不要求高服务质量或频繁通信，Sigfox 和 LoRaWAN 更适合此类应用。
+
+销售点系统需要保证服务质量，因为它们管理常规通信。由于这些设备使用持续的电力供应，电池寿命并不受限制。此外，还对低延迟有强烈需求（因为延迟时间过长会限制商店可进行的交易数量）。因此，NB-IoT 是此类应用的最佳匹配。
+
+## 18.5 Application Layer
+
+三层架构（包含感知层、网络层和应用层）构成了物联网技术最常见的架构形式。总体而言，感知层代表负责从部署环境中获取适当信息的物理实体，网络层负责将感知层提供的数据传输至应用层，而应用层则包含提供特定服务所需的全部软件，并确定应用层消息传递的协议集合。本节讨论最常用的应用层协议。
+
+### 18.5.1 Constrained Application Protocol (CoAP)
+
+Constrained Application Protocol (CoAP) 是专为资源受限的小型设备（如内存或 CPU 能力有限、网络带宽低、数据速率受限、丢包率高的网络）设计的网页传输协议。CoAP 是一种请求/响应协议，类似于 HTTP 的客户端/服务器模型。除轻量化（其主要优势）之外，它通过 UDP 支持单播和组播请求，并具备异步消息交换的能力 \[15\]。此外，它在头部开销小、解析复杂度低的同时，还提供了简单的代理和缓存功能。
+
+一般来看，CoAP 请求由客户端使用方法代码（Method Code）在服务器上标识的 URI 资源上发送。随后，服务器发送响应，响应代码（Response Code）如图 18.8 所示（Figure 18.8）。CoAP 分为两层：消息层和请求/响应子层，其标准定义了四种消息类型：确认（Confirmable）、非确认（Non-confirmable）、确认报文（Acknowledgment）和复位（Reset）。确认和非确认消息携带请求或响应，而后者还可以在确认报文中携带。
+
+![Figure 18.8 CoAP operation.](img/fig18_8_B.jpg)
+
+Figure 18.8 CoAP operation.
+
+CoAP 的最低层负责通过 UDP 在端点之间交换消息。每条消息（无论是确认（CON）消息还是非确认（NON）消息）都包含一个唯一 ID 以防止重复。CON 消息是可靠的消息，确保消息能够到达服务器端。此确认由初始消息的接收方通过发送确认报文（ACK）来完成。如果任何一方在处理 incoming request 时遇到困难，可以发送复位（RST）消息而非 ACK。对于 NON 消息，接收方无需执行额外操作。CoAP 的上层负责处理 CON 和 NON 消息的请求。服务器是否接受请求取决于其可用性：如果服务器能够立即回答 CON 请求，则会在 ACK 中返回响应（响应报文携带在 ACK 内）；否则，服务器会返回一个带空响应的 ACK。当响应准备好后，服务器会再次发送一个新的 CON 消息给客户端，包含该响应。在此过程中，客户端向服务器发送 ACK 消息。如果客户端的请求使用的是 NON 消息，则服务器也会以 NON 消息形式返回响应。
+
+
+
+
+MQTT 通信使用 TCP 作为传输协议，并通过 SSL/TLS 实现安全性，它基于发布/订阅系统工作，客户端可以在特定主题上发布消息，同时所有订阅该主题的客户端都能接收该消息 (`/path.to/xxx`)[16]。除了客户端，MQTT 协议还定义了一个额外的网络实体，即经纪人（或服务器）。经纪人负责协调所有订阅系统的客户端之间的通信。客户端可以是订阅者或发布者。通常，发布者在有更新或周期性消息时会将消息发送给经纪人，然后经纪人过滤接收到的消息并将其分配给正确的订阅者。MQTT 包含 14 种消息类型，其中四种由客户端使用（CONNECT、PUBLISH、SUBSCRIBE、UNSUBSCRIBE），其余类型用于内部机制和消息流。根据可靠性要求和传输需求，MQTT 确定了三种服务质量（QoS）等级（0、1、2）。
+
+![Figure 18.9 MQTT operation.](img/fig18_9_B.jpg)
+
+Figure 18.9 MQTT operation.
+
+### 18.5.3 Advanced Message Queuing Protocol (AMQP)
+
+AMQP 是一种基于可靠且高效消息队列的发布/订阅模型。OASIS 负责标准化。AMQP 如今在商业和业务系统中被广泛使用。该协议的主要优势在于其可扩展性，这得益于所采用的发布/订阅方法。AMQP 还支持多种通信语言的设备之间的互操作性和异构性。AMQP 协议的消息可以在 AMQP 协议应用之间交换。为实现可靠性、安全性和性能，AMQP 定义了三种消息递送保证：至多一次、至少一次和恰好一次。
+
+为确保可靠性，该协议还利用了 TCP 传输层。AMQP 的发布/订阅技术由两部分组成：交换机和消息队列 (`/path.to/xxx`)[16]。交换机负责将消息路由到适当的队列中。消息会在消息队列中保存，直到被传输到接收方。为了在交换组件和消息队列之间交换消息，使用了一种专用方法及一套规则。
+
+![Figure 18.10 AMQP operation.](img/fig18_10_B.jpg)
+
+Figure 18.10 AMQP operation.
+
+该协议极具可扩展性，并且在不同平台和环境之间可互操作；它非常适合工业环境应用。然而，它不适合受限环境或实时应用，并且缺乏自动发现机制。
+
+### 18.5.4 Extensive Messaging and Presence Protocol (XMPP)
+
+IETF 已经标准化了可扩展消息和存在协议（XMPP），它如今是物联网中最常用的通信和消息协议之一。XMPP 是一组开放技术的集合，能够实现即时通信、存在感、多方聊天、语音和视频通话、协作、轻量中间件、内容分发以及通用 XML 数据路由。
+
+这是一个众所周知的协议，已在所有网络中被广泛使用。XMPP 协议能够满足物联网需求，因为它支持微型消息、提供安全性以及最小延迟；这些特性使得 XMPP 成为物联网通信和消息的强选择。XMPP 的去中心化特性使其具备高度可扩展性。XMPP 协议拥有多种增强功能，使其能够在无基础设施的环境中工作。
+
+XMPP 协议支持请求/响应和发布/订阅两种模型 (`/path.to/xxx`)[15]。拥有唯一名称的客户端通过关联服务器与另一客户端进行通信。客户端形式的协议由每个客户端实现，而服务器提供路由功能。请求/响应模型支持双向通信，而发布/订阅模型支持多向通信（推送和拉取数据）。
+
+![Figure 18.11 XMPP operation.](img/fig18_11_B.jpg)
+
+Figure 18.11 XMPP operation.
+
+XMPP 协议使用 XML 进行文本对话，这可能会导致网络流量开销，尽管可以通过使用 EXI 对 XML 进行压缩来避免。该协议简单易用，可在各种项目和应用中使用。它是一个可扩展且适应性强的协议，基于其构建了许多扩展。另一方面，它也存在一些缺陷：带宽和 CPU 使用量大，没有 QoS 保证，且仅限于简单数据类型。
+
+## 18.6 Conclusion
+
+近年来，物联网连接和互连的物联网设备数量呈现出巨大的增长。实现物联网愿景只能通过整合各种无线通信技术来实现，这些技术受到各类应用需求的驱动。为此，本章提供了物联网行业最适合的无线通信网络技术的概览，这些技术按传输距离分为短距离和长距离两类。对每种通信技术的关键特性进行了详细阐述，并就其在可靠性、安全性、可扩展性、覆盖范围、成本和能效方面的性能优势和劣势进行了分析。一个重要的未来挑战是设计能够支持所展示网络技术多样性的架构。在这方面，未来的物联网网络必须具备在不同网络协议之间提供互操作性的能力。
+
+## Acknowledgment
+
+本工作得到欧洲联盟和希腊国家基金通过“竞争力、企业家精神和创新操作计划”在“RESEARCH–CREATE – INNOVATE 2”号项目（项目编号 T2EDK-02617）的支持。
+
+## References
+
+1. Cilfone, A., Davoli, L., Belli, L., & Ferrari, G. (2019). Wireless mesh networking: An IoT-oriented perspective survey on relevant technologies. Future Internet, 11(4), 99.
+
+2. Darroudi, S. M., & Gomez, C. (2017). Bluetooth low energy mesh networks: A survey. Sensors, 17(7), 1467.
+
+3. Qu, Q., Li, B., Yang, M., Yan, Z., Yang, A., Deng, D. J., & Chen, K. C. (2019). Survey and performance evaluation of the upcoming next generation WLANs standard-IEEE 802.11 ax. Mobile Networks and Applications, 24(5), 1461–1474.
+
+4. Buurman, B., Kamruzzaman, J., Karmakar, G., & Islam, S. (2020). Low-power wide-area networks: Design goals, architecture, suitability to use cases and research challenges. IEEE Access, 8, 17179–17220.
+
+5. Tian, L., Santi, S., Seferagić, A., Lan, J., & Famaey, J. (2021). Wi-Fi HaLow for the Internet of Things: An up-to-date survey on IEEE 802.11 ah research. Journal of Network and Computer Applications, 182, 103036.
+
+6. Šljivo, A., Kerkhove, D., Tian, L., Famaey, J., Munteanu, A., Moerman, I., … & De Poorter, E. (2018). Performance evaluation of IEEE 802.11 ah networks with high-throughput bidirectional traffic. Sensors, 18(2), 325.
+
+7. Popli, S., Jha, R. K., & Jain, S. (2018). A survey on energy efficient narrowband internet of things (NBIoT): architecture, application and challenges. IEEE Access, 7, 16739–16776.
+
+8. Díaz Zayas, A., Rivas Tocado, F. J., & Rodríguez, P. (2020). Evolution and testing of NB-IoT solutions. Applied Sciences, 10(21), 7903.
+
+
+
+9.  Almuhaya, M. A., Jabbar, W. A., Sulaiman, N., & Abdulmalek, S. (2022). 一项关于 LoRaWAN 技术的调查：最新趋势、机遇、模拟工具和未来方向。Electronics, 11(1), 164.
+
+10.  Gomez, C., Veras, J. C., Vidal, R., Casals, L., & Paradells, J. (2019). Sigfox 能耗模型。Sensors, 19(3), 681.
+
+11.  Elkhodr, M., Shahrestani, S., & Cheung, H. (2016). 物联网中的新兴无线技术：比较研究。arXiv 预印本 arXiv:1611.00861。
+
+12.  Mekki, K., Bajic, E., Chaxel, F., & Meyer, F. (2018, March). 面向物联网部署的蜂窝 LPWAN 技术概览：Sigfox、LoRaWAN 和 NB-IoT。2018 IEEE 会议《普遍计算与通信研讨会论文集》（percom workshops）（第 197–202 页）。IEEE。
+
+13.  Online. 可用于：[`www.iotworldtoday.com/2018/08/19/iot-connectivity-options-comparing-short-long-range-technologies/`](http://www.iotworldtoday.com)，2022 年 8 月访问。
+
+14.  Ding, J., Nemati, M., Ranaweera, C., & Choi, J. (2020). 物联网连接技术与应用调查。arXiv 预印本 arXiv:2002.12646。
+
+15.  Shelby, Z., Hartke, K., Bormann, C., & Frank, B. (2012). 受限应用协议（CoAP）。draft-ietfcore-coap-12。Expires December, 27。
+
+16.  Yassein, M. B., & Shatnawi, M. Q. (2016, September). 物联网的应用层协议调查。2016 年工程与 MIS 国际会议（ICEMIS）（第 1–4 页）。IEEE。
+
+# 19 易受攻击的工业和农业控制系统在物联网框架内的脆弱性评估
+
+Roberto Caviglia, Franco Davoli, Alessandro Fausto, Giovanni Gaggero, Mario Marchese, Aya Moheddine, Fabio Patrone 和 Giancarlo Portomauro
+
+意大利热那亚大学，热那亚
+
+DOI: [10.1201/9781003326236-19](https://dx.doi.org/10.1201/9781003326236-19)
+
+## 19.1 介绍
+
+工业控制系统（ICS）是一个涵盖多种控制系统的总称，包括监控与数据采集（SCADA）和分布式控制系统（DCS），同时也包括交通、水坝、应急服务、医疗、能源和农业等不同的网络物理环境。ICS 由监测和控制组件组合而成，协同工作以实现工业控制目标。ICS 正在越来越多地依赖信息和通信技术（ICT）。ICS 通过将 ICT 能力纳入现有的物理系统，并常常取代或补充传统的物理控制机制而发展起来。物联网（IoT）通信技术是这一趋势的一部分。
+
+从网络安全的角度来看，ICS 演进的一个重要步骤是采用不同的无线技术用于监测和控制目的。无线技术的使用意味着放弃“隐蔽安全”概念，即依赖于攻击者无法访问控制网络的假设。只要攻击者能够在覆盖范围内实现物理接近，就始终有可能对无线网络进行攻击。
+
+农业领域采用的 ICT 技术包括传感器网络、自动化机器和自主车辆。随着新产品的不断涌现，开发测试这些设备的网络安全保护水平的方法和工具至关重要。为第三方实体提供符合特定要求的测试程序也是首要任务。软件定义无线电（SDR）是一项非常有用的测试无线通信的工具。SDR 可以在不需要专用硬件或软件的情况下，对各种已知或未知的协议进行攻击的实现。从这个意义上说，SDR 可以被视为安全研究的基础技术。
+
+本章的目标是展示 SDR 在农业领域的两种技术——传感器网络和自主可编程农业车辆——上实施攻击的应用。章节结构如下。Section 19.2 介绍 SDR 技术及其在渗透测试中的应用。Section 19.3 描述在两个真实场景中的安全攻击实施：一种是可以自主操作或通过无线控制器远程管理的拖拉机；另一种是基于长距离宽带（LoRaWAN）物联网通信协议的传感器网络。结果展示了攻击的执行方式及其影响。结论在 Section 19.4 中给出。
+
+## 19.2 SDR 在网络安全中的应用
+
+### 19.2.1 SDR 介绍
+
+SDR 没有单一、统一、全球公认的定义。我们通常用 SDR 来指代基于通用硬件组件构建的无线设备，并使用可灵活配置的软件生成不同种类的无线信号。SDR 在军事领域可带来软件升级和可重新配置的无线电通信设备等好处，在商业领域可实现多协议多频段基站、移动多标准终端和认知无线电等应用 \[1\]。
+
+SDR 在网络安全中的作用可以是双重的 \[2\]：一方面，SDR 可用于对具有无线通信接口的潜在脆弱系统进行主动或被动攻击（恶意方面）；另一方面，SDR 可帮助开发针对无线网络攻击的安全监测解决方案（防护方面）。
+
+### 19.2.2 SDR 用于渗透测试
+
+SDR 深刻影响了渗透测试社区的方法和工具 \[3\]。历史上，除了少数技术外，无线通信系统的威胁主要局限于拥有非常专业知识或专用硬件的个人。这种局限使得独立第三方在时间或资源有限的情况下，可靠地评估特定无线通信方案的安全性变得困难。
+
+SDR 的使用使安全研究人员能够使用相对廉价的通用硬件和开源软件，对各种无线技术进行攻击，从而发现新的漏洞。文献中多篇论文展示了该方法在多种无线解决方案中的应用，如蜂窝技术、全球导航卫星系统、射频识别（RFID）和物联网（IoT）协议。Ref. \[4\] 利用通用软件无线电外设（USRP）板和 OpenBTS 软件建立一个欺骗 GSM 基站系统，并展示了如何利用缺乏双向认证，执行国际移动用户标识（IMSI）捕获攻击并冒充移动用户发送恶意短信。Ref. \[5\] 展示了使用 USRP 板对 LTE 网络进行攻击的方法，能够在 2 km 城市区域内定位 LTE 设备并阻断目标 LTE 设备的部分或全部服务。Ref. \[6\] 描述了使用 GNU Radio 软件和 USRP 设备对蓝牙 2.1+ 安全简单配对（密码入口模式）进行攻击的实现，而 Ref. \[7\] 则展示了使用普通 SDR 平台进行 RFID 窃听的可能性。
+
+
+
+另一个基本应用领域是低功耗广域网（LPWA）协议。下面将介绍在该类网络中进行的大量攻击，详见 第 19.3.2 节。
+
+SDR（软件定义无线电）工具和方法的一个有趣且特殊的应用是能够自动执行攻击并发现使用未知（专有）通信协议的设备的漏洞，这些协议没有公开的信息说明它们的工作原理、数据格式以及通信流程。传统上，对未知无线电协议的分析是手动完成的，需要自定义和定制的程序，通常在文献中难以找到，且缺乏明确的指导。SDR 技术使第三方能够在没有协议规范的情况下进行安全验证，并采用更自主、更通用的程序。例如，Ref. \[8\] 利用 `HackRF One` SDR 卡和 `GNU Radio` 软件，研究基于未知射频（RF）协议的物联网设备的通信漏洞，包括对 RF 信号的解调与解码、干扰以及数据包重放等一系列测试。另一个例子是开源工具 `Universal Radio Hacker` \[9\]，该工具专为协议分析设计，能够连续执行诸如识别信号调制（ASK、FSK、PSK 等）、解调以及将信号映射到比特流等操作。虽然这已是无线协议分析自动化的重要一步，研究界仍需进一步工作，开发价格亲民、能够覆盖尽可能多协议的通用工具。
+
+## 19.3 实世界应用中的安全攻击实现
+
+### 19.3.1 使用案例 1 - 自主驱动的农业机械
+
+#### 19.3.1.1 现代农业通信技术的最新状态
+
+过去 20 年来，农业等行业（如建筑）的新技术迅速发展，使它们能够实现更高的效率和安全性。农业领域的最新研究，如 Ref. \[12\] 所示，探讨技术如何影响新型栽培技术，以实现整个食品链的高可持续性。这一过程导致所谓的“农业 4.0”。该术语指示物联网（IoT）以及大数据、人工智能和云计算等新技术和方法在农业中的渗透，旨在提升生产链的效率。例如，Ref. \[13\] 展示了部署在自家作物田的物联网设备如何提升蔬菜质量，同时减少农民用水量和工作时间。Figure 19.1 展示了农业 4.0 控制系统的一个典型架构。
+
+![Figure 19.1 An example of a control system architecture in Agriculture 4.0.](img/fig19_1_B.jpg)
+
+Figure 19.1 An example of a control system architecture in Agriculture 4.0.
+
+过去 20 年来的主要关注点之一是确保农业机械的高安全水平。Ref. \[14\] 表明，在农业拖拉机上安装的 Rollover Protective Structure（ROPS）可将致命事故的概率降低 50%。为进一步降低此概率，目前正在研究和开发远程或自主控制农业机械的技术。虽然农业领域的安全、效率和产品质量随着创新而提升，但网络攻击的可能性也随之上升。传感器与执行器之间的互连，尤其是与互联网的连接，是这些系统易受攻击的关键因素，使恶意用户更容易探测、发现并利用新的漏洞。
+
+目前，大量研究集中在自主车辆（尤其是拖拉机）上，以实现农业 4.0 的目标。Ref. \[15\] 对不同类型的自主拖拉机进行比较，并提出了一种基于神经网络的人工智能算法，用于提升自学习能力。Ref. \[16\] 描述了一个园艺自主管理系统，使用两台自主拖拉机进行割草、果实采收和喷洒除草剂，并在 1300 公顷的园艺场通过物联网传感器（激光扫描仪、彩色摄像头）实现对农业车辆的 IoT 控制，这些传感器通过 GPS 进行登记。此外，Ref. \[16\] 还介绍了控制室的设计与实现，用于分析系统行为并向车辆发送指令。
+
+#### 19.3.1.2 农业领域网络攻击的最新状态
+
+如 第 19.3.1.1 节 所述，物联网设备的快速增长以及农业 4.0 控制系统的使用，使农业场景更容易受到更广泛的攻击，并增加了攻击者可利用的漏洞数量。文献中已有多项关于农业网络安全的研究。Ref. \[17\] 分析了芬兰六个真实农场的通信架构，指出农民对其面临威胁缺乏认知，这是主要问题之一。Ref. \[18\] 定义了农业设备能够联网时产生的主要问题和网络威胁，讨论了智慧农业及整个食品供应链的安全、隐私和安全挑战。Ref. \[19\] 展示了在智慧农业中使用 LoRaWAN 协议，指出可被利用的漏洞，并给出一种防范该类威胁的方法。
+
+大量文献表明，自动驾驶车辆（尤其是基于 CANbus 网络的车辆）在汽车行业中存在漏洞。Ref. \[20\] 通过对商用汽车进行渗透测试，证明可以控制刹车、转向、加速和显示系统。同一组作者在 Ref. \[21\] 中分析了大量车辆的远程攻击面，估计远程 compromising 它们的难度。汽车与农业车辆的控制网络具有许多共同元素，因此在汽车领域发现的漏洞可能也存在于自动化农业机械中。尽管相似，目前关于农业车辆网络安全的研究仍很少。Ref. \[22\] 提出了一个农业车辆安全测试平台，作为识别商用现成组件中潜在漏洞的潜在解决方案。Ref. \[23\] 则提出了一个初步框架，用于验证自动化农业车辆的网络安全。
+
+#### 19.3.1.3 农业自动化车辆的控制网络
+
+
+
+
+自动化农业机械通常配备具有多个无线接口的控制<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>
+
+
+*   *控制面板:* 控制面板允许管理拖拉机的基本功能，如开/关灯光、启动和停止发动机以及紧急停止开关。控制面板内还设有用于显示各种参数状态的警告灯，包括电池电量、汽油量、水温和油温。此外，还有一个诊断显示屏，用于查看错误信息和车辆的总工作时间等信息。这些数据通过 CANbus 进行发送和接收。
+
+*   *天线:* 天线通过相关的无线电接口将 CANbus 消息作为数据包进行发送和接收。
+
+*   *远程控制器:* 远程控制器允许授权操作员远程驾驶拖拉机。它配有按钮、开关和可调电位器，可用于管理不同参数，如速度、方向以及转子的启动。此外，还有一个小屏幕显示无线电通信链路状态的信息，并让操作员监测拖拉机的状态。
+
+#### 19.3.1.6 考虑的网络攻击
+
+##### 19.3.1.6.1 干扰攻击
+
+干扰攻击旨在阻断控制器与拖拉机之间的通信。为了测试，我们使用 SDR 卡配合 GNU Radio 软件生成适当的干扰信号实现干扰攻击。评估该攻击的影响至关重要，以判断在与远程控制器通信中断或出现自我及周围环境中的人员和物体危险行为时，车辆是否仍能安全运行。
+
+系统可能因内部软件配置和攻击的复杂程度而易受干扰攻击。针对攻击模型，我们使用了三种不同的干扰方式：
+
+*   固定白噪声干扰：干扰信号为固定中心频率和带宽的白噪声信号。
+
+*   反应式白噪声干扰：干扰信号为中心频率可变、带宽固定的白噪声信号。当干扰器“听到”被监测信道上的信号时，它会立即开启，并可自动调节干扰信号的中心频率以“追踪”原始信号。
+
+*   伪造控制器数据包干扰：干扰信号由一系列模拟远程控制器发送数据包的数据组成，但不包含有意义的数据。干扰器通过发送可能被视为可信的假命令来“模仿”远程控制器。
+
+系统会对上述各类攻击作出不同的反应。图 19.5 展示了固定干扰的效果。可以注意到，系统会通过频率跳变机制在先前使用的信道繁忙时切换信号中心频率。
+
+```
+![图 19.5 固定白噪声干扰攻击。](img/fig19_5_B.jpg)
+```
+
+图 19.5 固定白噪声干扰攻击。
+
+虽然这种特定攻击对我们的测试平台没有影响，但其他干扰方式则不然。如果反应式干扰器足够快，它甚至可以在发射端实现频率跳变机制的情况下完全中断通信。
+
+此外，针对伪造数据包的攻击，接收端会立即停止接收命令。对于此攻击，我们会收集数据包、截断其中一部分并作为回放进行传输。在此情况下，接收端的行为与白噪声干扰不同：它会立即中断通信。操作杆随后可以尝试在另一条信道上重新建立通信。
+
+##### 19.3.1.6.2 重放攻击
+
+重放攻击是指记录远程控制器发送的合法数据包，并使用 SDR 卡将其重新发送到车辆上。如果系统未实现任何身份验证机制，重放攻击可能让攻击者部分或完全控制车辆。即使攻击者无法单独隔离数据包，根据通信情况，对原始通信的直接重传可能足以完成攻击。
+
+图 19.6 展示了重放攻击在我们测试平台上的效果。
+
+```
+![图 19.6 正在进行的重放攻击：频谱图。](img/fig19_6_B.jpg)
+```
+
+图 19.6 正在进行的重放攻击：频谱图。
+
+我们可以识别出 4 个主要阶段：
+
+1. 正常操作。
+
+2. 重放攻击开始：恶意控制器的信号与合法信号重叠。接收端开始遵循恶意控制器的指示，而不是合法用户的指示。
+
+3. 重新连接：授权人工操作员仍可通过选择其他信道尝试重新连接到接收端。
+
+4. 再次恢复正常操作。
+
+图 19.7 展示了信息流经 CANbus 网络的情况。
+
+```
+![图 19.7 正在进行的重放攻击：拖拉机接收的数据包。](img/fig19_7_B.jpg)
+```
+
+图 19.7 正在进行的重放攻击：拖拉机接收的数据包。
+
+浅蓝色圆圈标记与拖拉机移动命令相关的字节。当值为 80 时，拖拉机处于停止状态（正常工作和重新连接阶段）。当值为 FF 时，拖拉机因重放数据包中的命令而直线行驶（重放攻击阶段）。可以看到，在重放阶段和正常工作阶段，接收端将 SDR 设备视为远程控制器，这通过红圈标记的 0 值体现，表示控制器在线（攻击和正常工作阶段）。值为 FF 表示控制器离线。绿色圆圈标记重新连接阶段的值变化。总之，输出显示拖拉机在前进，而授权操作员将拖拉机状态设为停止。
+
+
+
+3. *识别每个比特的含义*：它允许识别每个检索数据包的结构，从而识别每个单独比特或比特子集的含义。例如，可以通过比较随时间变化的数据包来实现这一点。这一步骤通常是最为手动和耗时的：需要记录多个随时间变化的数据包；数据包会以已知方式变化，例如点击单个按钮或移动单个遥控器的杠杆时；实际上，如果动作改变，数据包也会相应改变，从而允许将比特与动作关联。
+
+这些测试揭示了系统在测试中存在的严重漏洞。该系统还与许多用于自主农业车辆的现成产品以及其他自动化设备具有相似之处，这表明类似的漏洞可能出现在许多其他系统中，应予以认真考虑。此分析也加强了对这类设备进行网络安全测试的必要性，考虑到可能出现的各种网络攻击的广泛范围。
+
+### 19.3.2 农业领域传感器网络使用案例 2
+
+#### 19.3.2.1 物联网系统架构与层次
+
+物联网在过去几年已在诸多领域获得巨大关注。物联网一词由 Kevin Ashton 在 1999 年提出，并与随时随地连接任何事物的概念相联系，从而使物体能够相互通信以及与互联网通信 \[29\]。
+
+典型的物联网架构由三个主要层组成，如 Figure 19.10 所示：*感知层、网络层和应用层*。
+
+![Figure 19.10 物联网三层架构。](img/fig19_10_B.jpg)
+
+Figure 19.10 物联网三层架构.
+
+第一层对应物联网设备，如传感器和执行器，它们与周围环境交互并收集数据以进行传输和处理。确保该层的安全至关重要，因为生成的数据会传送到上层网络，若设备未受监控且易受网络攻击，可能对整个网络造成损害 \[30\]。网络层负责通过网络传输数据。根据相关物联网应用的性能需求，设计了多种通信协议，如短距离或长距离、延迟敏感或延迟容忍、高可靠性或低可靠性等。该层能够管理和控制大量交换流量。然而，由于其功能类似于 OSI 模型中的网络层和传输层，该层易受多种网络攻击，如中间人攻击（MITM）或拒绝服务攻击（DoS） \[31\]。应用层代表物联网应用，根据物联网服务和制造商的不同而异。其作用是通过特定的用户界面将终端用户与物联网设备连接，并确保身份验证。由于它通常处理大量数据事务，该层易受数据或软件攻击，如数据泄露、恶意脚本注入和钓鱼攻击 \[31, 32 and 33\]。
+
+#### 19.3.2.2 物联网网络中的安全挑战
+
+物联网的动态特性、硬件多样性、广泛的可访问性以及全球连通性使其在安全方面极为关键且充满挑战。因此，各种安全挑战和威胁可能影响物联网，针对物联网设备和通信通道 \[34\]。此外，物联网概念基于大量物体与终端用户及虚拟实体的相互作用，确保安全与隐私至关重要 \[35\]。基于上述原因，多种攻击手段可用，安全保障是一个重要议题。任何物联网系统中最重要的挑战之一是保障传输数据和信息的机密性。不同的加密技术用于保证不同实体之间的数据秘密，如高级加密标准（AES）或三重 DES（数据加密标准）等。然而，这些技术不足以充分保障数据隐私。通过监控和窃听数据的流量分析，敏感信息仍可能被获取。此外，当恶意节点加入网络时，数据也可能被释放并受到损害。即便在保证机密性的前提下，数据完整性也可能受损。这可以通过引入恶意节点并在网络中注入伪造数据、篡改通信数据，甚至导致服务中断来实现 \[36\]。结果是数据包损坏和数据丢失。此外，任何物联网网络都需要确保数据真实性，因为物联网设备通常与服务器共享无线通信介质 \[37\]。端到端节点必须进行身份验证，以验证源节点并防止恶意节点或伪造数据包。可用性也是物联网系统另一项关键挑战。通过存在受损节点或物联网网关故障，可用性可能被破坏，导致端到端实体接收数据出现错误和中断 \[38\]。
+
+#### 19.3.2.3 物联网网络所执行的攻击
+
+物联网网络因其低成本安装和易于编程部署而闻名，这使得对网络及其行为的各类攻击更加容易进行，从而导致功耗、延迟和吞吐量等性能退化。物联网网络可进行两类攻击：(I) 网络攻击和 (II) 物理攻击。网络攻击包括通常远程执行的攻击（即使在某些情况下，网络攻击可能以物理动作作为起点），而物理攻击则旨在通过更“传统”且具身体理的方式破坏或损坏物联网网络的实体。攻击还可分为被动或主动两类 \[40\]。
+
+每个物联网层都有其自身的安全关注点，关于威胁和攻击的概述如 Figure 19.11 所示。
+
+![Figure 19.11 物联网各层可执行攻击的概述。](img/fig19_11_B.jpg)
+
+Figure 19.11 物联网各层可执行攻击的概述.
+
+从感知层开始，攻击针对物联网设备，企图破坏它们或改变其行为。该层的主要攻击包括：
+
+*   *干扰（Jamming）*：攻击者产生强干扰信号，旨在在其覆盖范围内破坏所有合法通信。
+
+*   *节点篡改（Node Tampering）*：攻击者完全控制物联网传感器或设备，可对其进行修改或用恶意设备替换。由于设备已集成到物联网网络中，此攻击可能对整个物联网系统造成安全问题 \[41\]。
+
+*   *恶意代码注入（Malicious code injection）*：攻击者注入恶意代码，使物联网设备执行意外且未计划的功能。此类攻击可能在多种情形下发生，例如设备固件的定期更新/升级，通常通过空中方式进行。
+
+
+
+
+*   *错误数据注入*：攻击者在获得设备控制权后，会将错误数据注入物联网设备内存中。此攻击可能导致用户行为出现异常，因为错误数据的影响。
+
+*   *窃听*：攻击者监听或窃取位于其覆盖范围内的物联网设备生成或发送的数据 \[42\]。此攻击通常旨在获取格式、操作和流程的信息，并可能用于未来节点篡改和错误数据注入。
+
+*   *睡眠剥夺*：攻击者旨在耗尽物联网设备电池，迫使其执行无用且耗电的任务。
+
+关于第二层，针对网络层的主要攻击包括：
+
+*   *Sinkhole / Wormhole*：攻击者在网络中插入恶意监听设备和恶意物联网节点。监听设备拦截目标物联网设备的数据包并通过独立通信通道转发至恶意物联网节点，该节点再伪装成真实设备向网关发送数据包。若攻击成功，下行通信将被重定向至恶意设备 \[43\]。此攻击可能导致网络拥堵并影响网络性能 \[44\]。
+
+*   *选择转发*：攻击者在被攻击物联网设备与用户之间的网络中“过滤”通信，例如仅转发部分数据包并丢弃其他数据包 \[45, 46\]。
+
+*   *拒绝服务 (DoS) / 分布式拒绝服务 (DDoS)*：攻击者通过持续生成请求，使系统资源耗尽，导致无法处理合法数据包。若伪造数据包旨在触发物联网设备响应，则会导致设备电池耗尽 \[47\]。
+
+*   *中间人 (MITM)*：攻击者监听并拦截物联网设备与网关/服务器之间的通信，以收集数据并利用信息，如用于保护数据传输的安全交换和设备认证 \[48\]。
+
+*   *Sybil*：攻击者创建或使用多个假身份来获取系统信任并侵犯用户隐私 \[49\]。
+
+应用层直接面向终端用户。针对应用层的主要攻击包括：
+
+*   *恶意脚本*：攻击者利用远程连接向被攻击物联网设备注入看似合法的脚本，该脚本会被设备软件自动执行。攻击成功后，用户可能面临数据盗取、系统故障等后果 \[50\]。
+
+*   *数据扭曲*：攻击者修改物联网设备生成的数据，并将其写入物联网系统服务器，服务器通常用于数据存储和用户检索 \[48, 50\]。
+
+#### 19.3.2.4 LoRa 和 LoRaWAN 通信协议
+
+我们决定将安全分析聚焦于更适合本用例的无线通信协议：LoRaWAN 通信协议。Long Range（LoRa）是一种专为物联网应用设计的调制技术。该技术提供长距离连接、低功耗节点、抗噪声和干扰的通信，但代价是数据速率较低。它采用 Chirp Spread Spectrum（CSS）调制技术，通过在宽带上扩展信号，降低信噪比（SNR）并提升覆盖范围。LoRa 通信使用非授权 ISM 频段，从而降低部署成本，不同地区可使用不同频率集合 \[51\]。
+
+LoRaWAN 是实现物联网设备与互联网用户之间端到端通信的应用层协议。由于其低成本、低功耗，它是目前被广泛采用的物联网通信协议之一。它被视为户外物联网应用的理想解决方案，因其具备宽覆盖范围。但该特性也使其更易受干扰和攻击。LoRaWAN 网络采用星形星形（star-of-stars）拓扑结构，主要由以下四个组件组成：(1) 终端设备，(2) LoRa 网关，(3) 网络服务器，(4) 应用服务器。LoRa 网关负责转发数据包，具备 LoRa 接口以与 LoRa 设备通信，同时连接位于互联网上的网络服务器。网络服务器通过标准 IP 技术将数据包转发至应用服务器，并向终端设备发送下行消息和 MAC 命令 \[52, 53\]。图 19.12 展示了典型 LoRaWAN 网络架构的示意图。
+
+```
+![Figure 19.12 LoRaWAN network architecture.](img/fig19_12_B.jpg)
+```
+
+Figure 19.12 LoRaWAN network architecture.
+
+#### 19.3.2.5 LoRaWAN 网络中的干扰攻击
+
+干扰攻击是无线传感器网络（WSN）和物联网系统中最常见的攻击类型之一。其主要有四种类型 \[54, 55, 56 和 57\]：
+
+
+
+
+*   *Constant jammer:* 这个干扰器发出强大的信号，干扰合法用户的信号。它始终处于激活状态，并且由于持续占用信道，阻止用户访问信道。攻击者可以在整个 LoRaWAN 通信使用的频谱上进行这种攻击，或者仅在部分信道上进行 \[55, 57, 58\].
+
+*   *Deceptive jammer:* 攻击者发送与 LoRaWAN 包相对应的比特字符串，模拟合法节点 \[57\].
+
+*   *Reactive jammer:* 它与常规干扰器类似，但它遵循“先监听再干扰”的概念，而不是始终激活。它监听 LoRaWAN 频道，并在检测到合法包传输时才发射干扰射频信号 \[57, 59, 60\]。与前两种干扰技术相比，它更节能，但必须尽快响应以在检测到包传输时立即行动。
+
+*   *Random jammer:* 它与反应式干扰器类似，但它在随机时间间隔内开启，而不是监听信道并相应行动，并且保持固定的激活时间。与常规干扰器相比，它被认为是更不具破坏性且更节能的干扰器。
+
+Various studies in the literature analyze the behaviors of the LoRaWAN protocol under jamming attacks. Ref. \[61\] evaluates the behavior of LoRaWAN under channel-aware jamming (a reactive jamming), and channel-oblivious jamming (a continuous jamming). Simulation results show that the LoRaWAN protocol is vulnerable to such jamming with degradation in both end device throughput and gateway performance. A reactive jammer was designed in \[62\] by using special hardware components to provide LoRaWAN connectivity. The jammer introduced in Ref. \[62\] is based on two parameters: (1) Channel Active Detection (CAD) and (2) Received Signal Strength Indicator (RSSI). The jammer consists of two parts: the detector and the jammer. The detector examines the CAD for preamble checking, and, once detected, the jammer checks the RSSI value before deciding whether to jam the signal or not. A similar reactive jammer is presented in Ref. \[63\]: it uses the concept of CAD detection on a specific channel and a spreading factor causing collisions at the gateway level by transmitting a jamming signal with higher power. Ref. \[64\] presents a LoRaWAN jammer based on low-cost commercial devices and able to transmit a signal with a higher signal strength than the legitimate one. A selective jamming and a combination of selective and wormhole jamming are introduced in Ref. \[65\]: the selective jammer detects and receives the LoRaWAN packets and then jams the channel immediately; the integrated selective and wormhole jammer is composed of a sniffer and jammer, the sniffer detects, receives, and records the LoRaWAN packets and then triggers the jammer when enough content is received. Once the signal is received by the jammer, it launches the attack.
+
+#### 19.3.2.6 Reactive LoRa Jammer Design and Test
+
+To assess the robustness of a LoRaWAN IoT network against jamming attacks, we designed a reactive jammer aimed at interrupting LoRa signals and packet transmissions generated by a LoRa device before being received by the gateway. Figure 19.13 shows the logical structure of the LoRa jammer.
+
+![Figure 19.13 Logical structure of the developed LoRa jammer.](img/fig19_13_B.jpg)
+
+Figure 19.13 Logical structure of the developed LoRa jammer.
+
+The jammer is composed of two SDR cards and a Linux system equipped with GNU Radio software that can be used also alone depending on the test purpose, as shown in Figure 19.14. In detail, the Linux-based PC equipped with GNU radio and two SDR cards acts as the LoRa signal jammer (red part). The PC runs the GNU radio software with the gr-LoRa module. ![Figure 19.14 LoRa jammer testbed scheme.](img/fig19_14_B.jpg)
+
+Figure 19.14 LoRa jammer testbed scheme.
+
+The LoRa reactive jammer can interfere with the LoRa signal and completely disrupt the communication between end devices and the gateway. The jamming signal is based on continuous up-chirp and down-chirp signals sent for 1 second after a LoRa transmission is detected.
+
+Figure 19.15 shows a successfully jammed LoRa signal which is not received by the gateway.
+
+ ![Figure 19.15 RF spectrum of a successfully jammed LoRa packet.](img/fig19_15_B.jpg)
+
+Figure 19.15 RF spectrum of a successfully jammed LoRa packet.
+
+The performance of the jammer may depend on different factors, such as the distance between the jammer and end devices and/or gateway, which affects the jammer’s reliability. We carried out other tests by increasing the distance between the jammer and attacked IoT device and sometimes a packet can pass through, as shown in Figure 19.16.
+
+![Figure 19.16 RF spectrum of a successfully received LoRa packet](img/fig19_16_B.jpg)
+
+Figure 19.16 RF spectrum of a successfully received LoRa packet
+
+## 19.4 Conclusions
+
+This work shows a practical use of Software Defined Radio in the vulnerability assessment process of wireless communications in the field of industrial and agricultural systems. We present two main use cases and show how it is possible to develop a procedure to test the security of teleoperated agricultural vehicles that rely on proprietary solutions for wireless communications. The obtained results show how these
+
+
+
+5.  Shaik A, Borgaonkar R, Asokan N, et al. `Practical attacks against privacy and availability in 4G/LTE mobile communication systems`. `arXiv preprint arXiv:151007563`. 2015.
+
+6.  Barnickel J, Wang J, Meyer U. `Implementing an attack on Bluetooth 2.1+ secure simple pairing in passkey entry mode`. In: `IEEE 11^th International Conference on Trust, Security and Privacy in Computing and Communications`; `IEEE`; 2012. pp. 17-24.
+
+7.  Le Roy F, Quiniou T, Mansour A, et al. `RFID eavesdropping using SDR platforms`. In: `International Conference on Applications in Electronics Pervading Industry, Environment and Society`; `Springer`; 2016. pp. 208-214.
+
+8.  Hung P.D., Vinh B.T. `Vulnerabilities in IoT devices with software-defined radio`. In: `IEEE 4^th International Conference on Computer and Communication Systems (ICCCS)`; `IEEE`; 2019. pp. 664-668.
+
+9.  Pohl J, Noack A. `Universal radio hacker: A suite for analyzing and attacking stateful wireless protocols`. In: `12^th USENIX Workshop on Offensive Technologies (WOOT)`; 2018.
+
+10.  Kour VP, Arora S. `Recent developments of the internet of things in agriculture: A survey`. `IEEE Access`. 2020;8:129924-129957.
+
+11.  Kanan R, Elhassan O, Bensalem R. `An IoT-based autonomous system for workers’ safety in construction sites with real-time alarming, monitoring, and positioning strategies`. `Automation in Construction`. 2018;88:73-86.
+
+12.  Ahmad A, Ordonez J, Cartujo P, et al. `Remotely piloted aircraft (RPA) in agriculture: A pursuit of sustainability`. `Agronomy`. 2020; 11 (1): 7.
+
+13.  Muangprathub J, Boonnam N, Kajornkasirat S, et al. `IoT and agriculture data analysis for smart farm`. `Computers and Electronics in Agriculture`. 2019;156:467-474.
+
+14.  Rondelli V, Casazza C, Martelli R. `Tractor rollover fatalities, analyzing accident scenario`. `Journal of Safety Research`. 2018;67:99-106.
+
+15.  Roshanianfard A, Noguchi N, Okamoto H, et al. `A review of autonomous agricultural vehicles (The experience of Hokkaido University)`. `Journal of Terramechanics`. 2020;91:155-183.
+
+16.  Moorehead SJ, Wellington CK, Gilmore BJ, et al. `Automating orchards: A system of autonomous tractors for orchard maintenance`. In: `IEEE International Conference of Intelligent Robots and Systems, Workshop on Agricultural Robotics`; 2012.
+
+17.  Nikander J, Manninen O, Laajalahti M. `Requirements for cybersecurity in agricultural communication networks`. `Computers and Electronics in Agriculture`. 2020;179:105776.
+
+18.  Gupta M, Abdelsalam M, Khorsandroo S, et al. `Security and privacy in smart farming: Challenges and opportunities`. `IEEE Access`. 2020;8:34564-34584.
+
+19.  Kuntke F, Romanenko V, Linsner S, et al. `LoRaWAN security issues and mitigation options by the example of agricultural IoT scenarios`. `Transactions on Emerging Telecommunications Technologies`. 2022;33(5):e4452.
+
+20.  Miller C, Valasek C. `Adventures in automotive networks and control units`. `Def Con`. 2013;21:260-264.
+
+21.  Miller C, Valasek C. `A survey of remote automotive attack surfaces`. In: `Black Hat USA Conference`; 2014. p. 94.
+
+22.  Freyhof M, Grispos G, Pitla S, et al. `Towards a cybersecurity testbed for agricultural vehicles and environments`. `arXiv preprint arXiv:220505866`. 2022.
+
+23.  Gaggero GB, Fausto A, Patrone F, et al. `A framework for network security verification of automated vehicles in the agricultural domain`. In: `2^th International Conference Electronics`; `IEEE`; 2022. pp. 1-5.
+
+24.  Bozdal M, Samie M, Aslam S, et al. `Evaluation of can bus security challenges`. `Sensors`. 2020;20(8):2364.
+
+25.  Meucci M, Muller A. `OWASP Testing Guide V. 4.0`. `Open Web Application Security Project`. 2014;4:165-166.
+
+26.  Zeng KC, Liu S, Shu Y, et al. `All your GPS are belong to us: Towards stealthy manipulation of road navigation systems`. In: `27^th USENIX Security Symposium`; 2018. pp. 1527-1544.
+
+27.  Jafarnia-Jahromi A, Broumandan A, Nielsen J, et al. `GPS vulnerability to spoofing threats and a review of antispoofing techniques`. `International Journal of Navigation and Observation`. 2012; 2012:1-16.
+
+28.  Kwon KC, Shim D.S. `Performance analysis of direct GPS spoofing detection method with AHRS/accelerometer`. `Sensors`. 2020;20(4):954.
+
+29.  Balaji S, Nathani K, Santhakumar R. `IoT technology, applications and challenges: A contemporary survey`. `Wireless Personal Communications`. 2019;108(1):363-388.
+
+30.  Liang X, Kim Y `A survey on security attacks and solutions in the IoT network`. In: `IEEE 11th Annual Computing and Communication Workshop and Conference (CCWC)`; `IEEE`; 2021. pp. 0853-0859.
+
+31.  Deogirikar J, Vidhate A. `Security attacks in IoT: A survey`. In: `International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud)(I-SMAC)`; `IEEE`; 2017. pp. 32-37.
+
+32.  Hassija V, Chamola V, Saxena V, et al. `A survey on IoT security: Application areas, security threats, and solution architectures`. `IEEE Access`. 2019;7:82721-82743.
+
+33.  Mohanty J, Mishra S, Patra S, et al. `IoT security, challenges, and solutions: A review`. `Progress in Advanced Computing and Intelligent Engineering`. 2021;493-504. DOI: [10.1007/978-981-15-6353-9\_46](http://dx.doi.org/10.1007/978-981-15-6353-9_46)
+
+34.  Alkhalil A, Ramadan R.A. `IoT data provenance implementation challenges`. `Procedia Computer Science`. 2017;109:1134-1139.
+
+35.  Roman R, Zhou J, Lopez J. `On the features and challenges of security and privacy in distributed internet of things`. `Computer Networks`. 2013;57(10):2266-2279.
+
+36.  Padmavathi DG, Shanmugapriya M, et al. `A survey of attacks, security mechanisms and challenges in wireless sensor networks`. `arXiv preprint arXiv:09090576`. 2009.
+
+37.  Hassan WH, et al. `Current research on Internet of Things (IoT) security: A survey`. `Computer Networks`. 2019;148:283-294.
+
+38.  Burhanuddin M, Mohammed AAJ, Ismail R, et al. `A review on security challenges and features in wireless sensor networks: IoT perspective`. `Journal of Telecommunication, Electronic and Computer Engineering (JTEC)`. 2018;10(1-7):17-21.
+
+39.  Tahsien SM, Karimipour H, Spachos P. `Machine learning based solutions for security of Internet of Things (IoT): A survey`. `Journal of Network and Computer Applications`. 2020;161:102630.
+
+40.  Rong C, Çayirci E. `Security Attacks in Ad Hoc, Sensor and Mesh Networks`. Book `Security in Wireless Ad Hoc and Sensor Networks` (Chapter 8). 2009. DOI: [10.1002/9780470516782.ch8](http://dx.doi.org/10.1002/9780470516782.ch8)
+
+41.  Kumar S, Sahoo S, Mahapatra A, et al. `Security enhancements to system on chip devices for IoT perception layer`. In: `IEEE International Symposium on Nanoelectronic and Information Systems (iNIS)`; `IEEE`; 2017. pp. 151-156.
+
+42.  Liao CH, Shuai HH, Wang LC. `Eavesdropping prevention for heterogeneous Internet of Things systems`. In: `15^th IEEE Annual Consumer Communications & Networking Conference (CCNC)`; `IEEE`; 2018. pp. 1-2.
+
+43.  Hu YC, Perrig A, Johnson DB. `Packet leashes: A defense against wormhole attacks in wireless networks`. In: `IEEE International Conference on Computer Communications (INFOCOM)`; `Vol. 3`; `IEEE`; 2003. pp. 1976-1986.
+
+
+
+44. 但云 I, 奥斯塔伯格 P, 宋 H. 物联网的安全：漏洞、攻击和对策. IEEE Communications Surveys & Tutorials. 2019;22(1):616-644.
+
+45. Wallgren L, Raza S, Voigt T. 无线路由网络中的路由攻击和对策. International Journal of Distributed Sensor Networks. 2013;9(8):794326.
+
+46. Krishna RR, Priyadarshini A, Jha AV, 等. 物联网威胁和攻击的最新综述：分类学、挑战和解决方案. Sustainability. 2021;13(16):9463.
+
+47. Haji SH, Ameen S.Y. 利用机器学习技术的物联网网络攻击和异常检测综述. Asian Journal of Research in Computer Science. 2021;9(2):30-46.
+
+48. Abosata N, Al-Rubaye S, Inalhan G, 等. 物联网在系统完整性中的应用：工业应用的安全、攻击和对策全面综述. Sensors. 2021;21(11):3654.
+
+49. Abdul-Ghani HA, Konstantas D, Mahyoub M. 基于建筑块参考模型的物联网攻击综述. International Journal of Advanced Computer Science and Applications. 2018;9(3):355-373.
+
+50. Gautam S, Malik A, Singh N, 等. 物联网环境中各类攻击的最新进展与对策. In: 2^(nd) International Conference on Signal Processing and Communication (ICSPC); IEEE; 2019. pp. 315-319.
+
+51. Alliance L. LoRa 地区参数. [`lora-alliance.org/resource hub/rp2-1-0-3-lorawan-regional-parameters/`](http://www.lora-alliance.org); 2021.
+
+52. Haxhibeqiri J, De Poorter E, Moerman I, 等. LoRaWAN 在物联网中的调查：从技术到应用. Sensors. 2018;18(11):3995.
+
+53. Ertünk MA, Aydın MA, Büyükakkaşlar MT, 等. LoRaWAN 架构、协议和技术调查. Future Internet. 2019;11(10):216.
+
+54. Mpitziopoulos A, Gavalas D, Konstantopoulos C, 等. 无线传感器网络中的干扰攻击和对策调查. IEEE Communications Surveys & Tutorials. 2009;11(4):42-56.
+
+55. Pelechrinis K, Iliofotou M, Krishnamurthy S.V. 无线网络的拒绝服务攻击：干扰器案例. IEEE Communications Surveys & Tutorials. 2010;13(2):245-257.
+
+56. Wang L, Wyglinski AM. 对无线网络不同干扰攻击类型的区分综合方法. In: IEEE Pacific Rim Conference on Communications, Computers and Signal Processing; IEEE; 2011. pp. 809-814.
+
+57. Xu W, Trappe W, Zhang Y, 等. 无线网络中发起和检测干扰攻击的可行性. In: 6^(th) ACM International Symposium on Mobile Ad Hoc Networking and Computing; 2005. pp. 46-57.
+
+58. Grover K, Lim A, Yang Q. 无线网络中的干扰与反干扰技术综述. International Journal of Ad Hoc and Ubiquitous Computing. 2014;17(4):197-215.
+
+59. Cai Y, Pelechrinis K, Wang X, 等. 企业 WiFi 网络中联合反向干扰器检测和定位. Computer Networks. 2013;57(18):3799-3811.
+
+60. Vadlamani S, Eksioglu B, Medal H, 等. 无线网络干扰攻击的分类. International Journal Production Economics. 2016;172:76-94.
+
+61. Martinez I, Tanguy P, Nouvel F. LoRaWAN 在干扰下的性能评估. In: 12th IFIP Wireless and Mobile Networking Conference (WMNC); IEEE; 2019. pp. 141-145.
+
+62. Huang CY, Lin CW, Cheng RG, 等. LoRaWAN 中干扰威胁的实验评估. In: IEEE 89^(th) Vehicular Technology Conference (VTC2019-Spring); IEEE; 2019. pp. 1-6.
+
+63. Perković T, Rudeš H, Damjanović S, 等. 低成本在 LoRaWAN 网络上实现反向干扰器. Electronics. 2021;10(7):864.
+
+64. Perković T, Siriščvić D. 低成本 LoRaWAN 干扰器. In: 5^(th) International Conference on Smart and Sustainable Technologies (SpliTech); IEEE; 2020. pp. 1-6.
+
+65. Aras E, Small N, Ramachandran GS, 等. 使用商用硬件进行 LoRaWAN 选择性干扰. In: 14^(th) EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services; 2017. pp. 363-372.
+
+# 20 Intrusion Detection in IoT with Machine Learning and Deep Learning: A Systematic Review
+
+Manjit Kumar Nayak and Debasis Gountia
+
+Odisha University of Technology and Research, Bhubaneswar, India
+
+Niranjan K. Ray
+
+KIIT University, Bhubaneswar, India
+
+DOI: [10.1201/9781003326236-20](https://dx.doi.org/10.1201/9781003326236-20)
+
+## 20.1 Introduction
+
+物联网的安全，特别是基于机器学习(ML)和深度学习(DL)技术的入侵检测系统(IDS)。我们系统地研究和分析不同的入侵检测机制，以识别它们的局限性和优势。这些技术正在网络安全领域成为新兴系统。
+
+物联网 (IoT) 自 1999 年末 `1` 起便已显现。它随着数以百万计的可穿戴设备、传感器、执行器、医疗设备、家用电器等的快速增长而显著发展。全球已有数十亿的联网设备；预计未来几年将增长到 220 亿以上 `2`。大多数物联网设备在设计时并未考虑到为用户提供安全和隐私保护 `3`。2019 年，在蜜罐服务器上发现了超过 1 亿 5000 万次攻击 `4`。入侵检测系统 (IDS) 是结合多种方法，用于在主机和网络层面检测恶意行为 `5, 6`。尽管在网络入侵研究方面已有大量成果，但在检测入侵和防止其发生方面仍有大量改进空间 `1`。入侵是故意的尝试或威胁，旨在获取数据、修改信息或使系统变得不可信和无效。例如，DoS 攻击会让服务器忙于处理大量不必要的请求，导致合法用户无法获得预期服务。基于异常的入侵发现是识别网络流量中不常见、不匹配常规流量的模式的问题。这些异常被称为异常、异常值、特殊性等。 `2, 3`。异常发现在信用卡欺诈检测、网络安全和军事监控等领域有广泛应用。IoT 网络中的异常流量表明被入侵的系统正在向非授权设备发送敏感信息。
+
+
+
+研究人员自 19 世纪以来一直在研究统计学中异常检测的问题`2`。过去几十年里，`ML`和`DL`在异常检测方面发挥了重要作用。大多数综述都没有讨论具体的方法，这些方法有助于提升性能`2, 5, 6]`。在本章中，> 我们详细讨论了入侵检测是什么、物联网中的不同攻击类型，以及用于检测这些攻击的方法和所使用的数据集。物联网中的传感器收集数据并通过有线和无线通信介质传输数据。物联网系统必须在来自大量传感器的巨大信息量的情况下，不丢失数据的前提下处理这些信息，同时提供安全的通信`7]`。物联网通过网络传输信息，因此面临安全问题`8]`。可靠的认证机制、数据的完整性和保密性是物联网环境中必须实现的安全目标。如果任何这些问题被侵犯，就会导致网络不安全。物联网设备资源有限，即电池、存储容量、带宽和计算能力，因此高度复杂和可配置的安全模型并不实用`9]`。基于机器学习和深度学习的安全模型是物联网系统安全的有前途的替代方案。机器可以通过机器学习和深度学习的方法进行训练，以检测不同的攻击并提供所需的防御机制。攻击可以在初期阶段被发现，新型攻击可以通过巧妙利用新技能来被检测出来。与以往相比，机器学习和深度学习模型为物联网网络提供了更好的安全机制。
+
+## 20.2. Detection of Intrusion
+
+这是一组旨在损害网络和授权用户的安全与隐私的活动，涉及保密性、完整性和可用性`10`。通常由外部代理非法访问系统并进行操控。入侵检测系统（IDS）提供明确的机制来保护系统基础设施，这些系统收集网络信息并对其进行分析，以检测可能的安全攻击。
+
+入侵检测的功能包括：
+
+1.  跟踪和分析网络中的不同用户、网络活动以及网络本身。
+
+2.  开发机制，以识别不同的攻击。
+
+3.  分析文件系统和完整性。
+
+4.  分析网络活动偏离正常活动的情况。
+
+5.  监控用户违规行为。
+
+### 20.2.1 概念：异常检测
+
+在网络异常检测中，正常性概念是提供解决方案的基础。正常性的概念表现为一组影响系统动态的基本变量之间的关系。如果一个实体或对象在系统的特征或行为上偏离了常规模型所定义的规律，则被视为异常。
+
+### 20.2.2 攻击分类
+
+入侵者分为两类：(a) 外部入侵者和 (b) 内部入侵者。外部入侵者是系统的非法操作者。内部入侵者是授权用户，但没有权限访问资源或超级用户模式。
+
+#### 20.2.2.1 网络入侵检测的先前研究
+
+对于异常检测，基于统计和机器学习的综述已经进行过`11, 12]`。对于数值和符号数据，已进行了广泛的综述`13]`。Patcha、Park 等人对网络入侵检测进行了专项综述`14`，Snyder 也进行了综述`15]`。张等人对异常检测方法的全面综述是`16]`。Sperotto 等人介绍了基于流量技术的入侵检测概念，并详细讨论了 DoS 攻击、僵尸网络和病毒的发现方法`17]`。
+
+Sun 等人对移动自组网络（MANET）和无线传感器网络（WSN）中的入侵检测进行了综述`18`，并讨论了将各种移动特性融合用于构建 IDS 的多种问题和研究挑战。
+
+Sun 等人介绍了基于马尔可夫链和 Hotelling T2 的 IDS 模型用于 MANET，并使用分类技术检测异常。Wu 和 Banzhaf 介绍了使用计算智能方法进行入侵检测的应用，包括神经网络、模糊逻辑、演化计算和人工免疫系统等。DoS 和 DDoS 攻击检测技术受到极大的关注`20]`。
+
+### 20.2.3 不同类型的攻击
+
+物联网过去十年来经历了各种各样的攻击，因此物联网设备制造商在开发和使用时更加谨慎。物联网攻击可分为物理攻击和网络攻击。网络攻击是指黑客入侵系统，盗取、删除、修改或操纵用户信息的行为。在物理攻击中，攻击者不通过网络，而是直接对物联网设备（如传感器、摄像头和路由器）进行物理损害，从而导致网络中断`21]`。
+
+#### 20.2.3.1 主动攻击
+
+在主动攻击中，入侵者干预系统，旨在扰乱配置、阻断或导致网络故障。有时，他还试图窃取和修改信息。主动攻击包括拒绝服务（DoS）、干扰、洞攻击和 Sybil 攻击。
+
+##### 20.2.3.1.1 拒绝服务（DoS）
+
+攻击者持续向系统发送冗余请求。结果，设备忙于处理请求，无法为实际用户提供服务，从而导致系统功能失常。由于设备持续处于活跃状态，电池寿命逐渐减少。特殊类型的 DoS 攻击是分布式拒绝服务攻击（DDoS），攻击者同时从多个 IP 地址向服务器发送请求，使服务器忙于处理请求，从而难以区分正常流量和攻击流量`22]`。最近，臭名昭著的“Mirai”僵尸网络发起了破坏性的 DDoS 攻击，造成了数千个物联网设备的毁灭`23]`。
+
+##### 20.2.3.1.2 冒充和 Sybil 攻击
+
+为了非法获取数据，这些攻击主要针对凭证，如 RFID、MAC 地址。由于 TCP/IP 协议缺乏可靠的验证机制，冒充攻击更容易成功。这两种攻击会招致更严重的后果。
+
+##### 20.2.3.1.3 干扰攻击
+
+通过向物联网设备传输不需要的信号，干扰攻击会使无线网络变得繁忙。这种攻击会降低网络性能，增加能耗、带宽和内存使用。
+
+##### 20.2.3.1.4 中间人攻击
+
+在中间人攻击中，攻击者假装是合法用户，从而能够在网络中制造问题，并可能窃取和滥用信息`22]`。这种攻击可以捕获敏感数据，如登录凭据和信用卡信息。该攻击也被称为“猴子中间人”或“怪物中间人”攻击。
+
+##### 20.2.3.1.5 选择转发攻击
+
+在选择转发攻击中，攻击者作为网络中的一个节点，丢弃不同的数据包，在网络中创建“洞”。这种攻击在网络中很难被发现和防范。
+
+
+
+
+## 20.2.3.1.6 数据篡改
+
+攻击者有意使用用户的数据，故意扰乱用户的保密性。诸如位置、计费价格和健身等物联网设备所携带的重要信息，由于这些数据篡改攻击而面临巨大威胁 \[24\]。
+
+## 20.2.3.2 被动攻击
+
+攻击者未经用户同意收集用户的数据，并试图解密其私密的受保护信息 \[25\]。在物联网中，窃听和流量分析是执行被动攻击的两种方式。用户的物联网设备作为窃听器被部署，用于收集并混乱其私密数据和位置 \[26, 27, 28 和 29\]。
+
+## 20.2.4 攻击对物联网的不同后果
+
+攻击对物联网用户的身份、授权、验证和隐私产生后果。图 20.1 给出了不同种类攻击及其在物联网上的后果。在开发新的物联网安全协议时，必须考虑以下影响以防止这些影响。
+
+![Figure 20.1  不同类型攻击、攻击面和攻击效果。](img/fig20_1_B.jpg)
+
+Figure 20.1  不同类型攻击、攻击面和攻击效果。
+
+## 20.2.4.1 识别
+
+识别意味着对物联网用户的授权，仅允许授权用户访问网络和云服务器。保持物联网的强健性和权衡正在为识别创造挑战 \[30\]。Sybil 和 Spoofing 等攻击破坏网络安全，使未经授权的用户无需适当识别即可进入网络。因此，需要开发有效且强大的安全机制，以阻止未经授权的用户进入系统 \[31\]。
+
+## 20.2.4.2 授权
+
+授权指用户的可达性。只有授权用户才能访问、监控和使用信息。维护用户和请求的日志并根据请求需求提供信息非常困难，因为不仅人是用户，传感器和不同机器也充当用户 \[32\]。在处理大数据集时，维护强大的保护环境也非常困难 \[33\]。这在 Fig. 20.2. 中显示。
+
+![Figure 20.2  不同攻击及其效果。](img/fig20_2_B.jpg)
+
+Figure 20.2  不同攻击及其效果。
+
+## 20.2.4.3 可达性
+
+可达性确保只有授权用户能够获得物联网系统提供的服务。创建有效的安全网络至关重要，因为 DoS 和干扰等攻击会发送不必要的请求，导致服务器始终忙碌。因此，需要强有力的协议，确保授权用户在不中断的情况下获得物联网设施 \[34\]。
+
+## 20.2.4.4 隐私
+
+物联网的隐私受到主动攻击和被动攻击的影响。个人身份、位置、健康记录和国家安全数据等敏感信息必须不被泄露给任何未经授权的用户 \[35\]。然而，由于攻击者跟踪物联网设备的位置以解密信息并滥用它，保护网络隐私非常困难 \[36\]。
+
+## 20.2.4.5 完整性
+
+完整性确保只有合法用户可以修改物联网设备的任何数据。这一要求对于任何物联网网络都至关重要。SQL 查询注入攻击是一种恶意攻击，会破坏网络的完整性。如果此特性受到破坏，物联网的功能将受到影响，不仅泄露敏感数据，还会危及人类生命 \[36\]。
+
+## 20.3 入侵检测系统 (IDS)
+
+入侵检测系统是一种通过警报通知网络攻击的方法，并采取措施阻止攻击者 \[37\]。已开发出许多 IDS，主要分为三类。
+
+1. HIDS（主机基于 IDS） – 它跟踪关键操作系统文件，检测内部活动，如哪个程序获取了哪些资源并进行禁止性入口。它观察系统状态及存储的事实，可能在内存、文件系统或日志文件中。HIDS 充当一种监视器，监控操作系统告知的安全策略是否被任何人或任何事物违反 \[38\]。
+
+2. NIDS（网络基于 IDS） – 它分析网络中流动的数据。当流量模式出现偏差时，即系统按顺序建模数据以检测偏离该模式时，即可识别入侵。这些攻击的主要原因是非法使用网络，意图窃取或获取数据或干扰网络的功能。
+
+网络通过互联网与世界相连。NIDS 捕获所有入站流量以检测流量模式的偏差。例如，如果观察到在短时间内出现大量针对不同端口的 TCP 连接请求，可以假设某些攻击者正在在网络中的特定计算机上进行“端口扫描”。要检测入站 shell 的端口扫描，需要对入站流量进行类似 IDS 的分析。除了分析入站流量，NIDS 还提供来自出站流量的有价值的入侵信息。现有 IDS 包含三种功能机制 \[39\]。
+
+1. 信息来源 – 入站数据包的事件信息来源，或用于判断入侵的信息。
+
+2. 分析 – 这是最重要的机制，它通过分析组合动作来判断入侵是否正在发生或已经发生。
+
+3. 响应 – 检测到入侵后的响应分为两种：主动和被动。在主动响应中，系统自行介入。在被动响应中，检测详情会报告给管理员，由管理员介入。
+
+### 20.3.1 机器学习和深度学习在入侵检测中的应用
+
+
+
+
+机器学习是人工智能的一部分，系统地应用其算法来综合数据和信息之间的内在关系。1959 年，Samuel 将 ML 定义为赋予计算机在没有显式编程 `cvar = avar + bvar` 的情况下学习的能力的研究领域。ML 是统计学、概率论、线性代数、信息论和算法理论等多个学科的结合。ML 算法分为三类：监督学习、无监督学习和增强学习。监督学习的输出变量可以从学习中预测，而输出变量不通过无监督学习估计。机器通过增强学习以连续的方式自我教育，从过去的知识中学习并尝试理解最精确的数据以做出精确的决策。线性回归、逻辑回归、决策树、随机森林、人工神经网络（ANN）、k 最近邻（KNN）、支持向量机（SVM）和 Naive Bayes 是最知名的算法。机器学习存在局限性。它在原始形式下激活常规记录方面受到一定限制。设计特征提取器需要大量经验，该提取器将原始信息转换为适当的表征，以便分类器可以分类或检测模式。深度学习提供简单的表示。为了更好地提高效率，SVM 和 DT 等机器学习算法被广泛使用。“IoT”和“ICN”在无监督学习模型中非常流行。
+
+机器学习和深度学习模型在对抗性环境中的有效性显著下降。通过某种方式，网络的实际性能在对抗性环境中被阻碍。对抗性示例使用进化计算和深度学习生成。许多机器学习模型和分类器因其对抗性环境而出现高误分类率。已提出一种用于对抗性环境中入侵检测的增强学习算法。
+
+为了获得更好的结果，在训练中加入对抗性代理策略，这会增加分类器的错误预测，并迫使其学习最困难的情况。然而，在这些环境中，仍需更多研究来研究入侵检测。
+
+### 20.3.1.1 决策树
+
+它是由决策及其结果组成的树模型，帮助做出决策。它是一种主要用于 IDS 中分类活动的互相管理的学习分类技术。训练好的 DT 会选择数据包的特征以确定其类别。大多数数据包都包含在一个具有最小层数的最优 DT 中。ID3、C4.5 和 Classification and Regression Tree（CART）是几种用于一般最优树的算法。使用的度量用于衡量 DT 的性能。选择信息最高的属性称为“熵”。ID3 算法基于熵做出决策。但 ID3 的局限性在于它无法识别特征中具有连续性的缺失值。C4.5 利用 ID3 的信息增益比率并剪枝，这并未提供帮助。ID3 不处理回归任务，而 CART 使用 Gini 不纯度作为度量来处理回归任务。
+
+DT 是入侵检测的常见模型，具有独特的分类方法，易于应用和解释，并且可以在构建后进行剪枝以获得更好的概括性。提出了一种由三层组成的机制，称为 IDS，它依赖于 MAC 地址识别 IoT 设备，将消息分类为真实和伪造，然后使用 DT 进行攻击分类。DT 用于对分类记录进行分类，标记为恶意。系统识别了 DoS 攻击、僵尸网络（botnets）和扫描，并取得了良好的结果。K 数量的集群是通过 K-means 算法根据欧几里得距离的相似性来形成，该算法将 C4.5 应用于每个组，构建用于合法和恶意消息的决策树。
+
+DT 的局限性在于其鲁棒性较弱。当训练记录进行少量修改时，它会产生完全不同的 DT。大型 DT 需要手动剪枝，因为数据增益受额外层级特征的影响。
+
+### 20.3.1.2 支持向量机（SVM）
+
+为了最优分类数据，会构建 N 维超平面。SVM 分为两种类型：线性和非线性。当该模型用于线性可分割的数据时，它会通过一条直线将其分为两组。如果是非线性数据，则使用非线性 SVM。使用核函数方法，将数据点在更高维空间中通过平面或函数进行分离。
+
+SVM 可以简化高维问题。它基于小而简单的统计理论，具有良好的概括能力，并常用于入侵检测。开发了一种轻量级攻击检测策略，用于检测 IoT 网络中因注入不需要的数据而引起的攻击。该策略获取特征池并与标签向量一起使用。该技术具有良好的分类策略和发现时间。构建了一个基于 DT 结构的四阶段 SVM 检测方法。通过 SVM1、SVM2、SVM3 和 SVM4 实现对常规数据、拒绝服务攻击、探测、R2L 或 U2R 的检测。实验表明，该模型在性能上优于单阶段 SVM 模型。该方法还利用统计方法和自组织映射（S-O-M）来区分正常流量和恶意流量。为区分正常和恶意流量，该方法还使用 PCA 和 Fisher Discriminant Ratio（FDR）进行噪声消除和特征选择。还使用 PSOM（概率自组织映射）。
+
+### 20.3.1.3 聚类
+
+它将相似类型的对象从其他类型中分组。聚类算法种类繁多。根据对象与聚类之间的匹配标准，它们分为硬聚类和软聚类。K-means 聚类和 KNN 是广泛使用的算法，可以计算对象之间的欧几里得距离。每个对象的群组归属度由概率程度测量。
+
+聚类算法的不同类别包括连接性基于、K-means 基于（中心基于）、分布基于、密度基于和网格基于。算法的局限性在于它们简单易实现和解释。结果过于依赖于异常值和参数的早期值。
+
+为了获得聚类并减少相似性，采用小批量 K-means 和 PCA 来降低维度。实验结果和时间复杂度分析表明，该方法有效。无监督入侵检测系统（UIDS）可以检测未知攻击。
+
+### 20.3.1.4 深度神经网络（DNN）
+
+
+
+
+#### 20.3.1.5 The CNN
+
+它在计算机视觉中表现出卓越的性能[64]。这些方法已显示出良好的结果[65, 66]。卷积神经网络(CNN)受生物过程启发，是神经网络的共享模型，同时也涉及卷积核。
+
+CNN 具有提取本地特征的能力，可以检测质量，同时降低计算复杂度，从而提高训练和计算速度。
+
+#### 20.3.1.6 The RNN
+
+当数据由频繁连续的数据流组成时，循环神经网络(RNNs)在入侵检测系统(IDS)中被广泛应用[67]。然而，RNN 在处理激活函数时效率不高。当网络层数较多时，梯度消失现象会发生。DNN 在处理时序变化数据的困难通过 RNN 得到解决。
+
+#### 20.3.1.7 LSTM
+
+经典的 RNN 问题，即梯度消失问题，通过长短期记忆网络(LSTM)通过引入额外的存储状态来解决[68]。LSTM 通过将门函数作为激活函数，有效控制梯度消失问题的程度。梯度消失问题是在网络训练过程中遇到的一种不稳定行为。它表明当神经网络无法将有价值的梯度数据从原型的输出传播回到系统输入附近的层时会出现问题。
+
+结果是，具有许多层的模型一般无法从可用数据集中获取数据。
+
+遗忘门被引入，使得 LSTM 能够通过模拟原始 LSTM 架构中记忆过程的失败来重新组织其状态[68]。由于其效率，它被视为最传统的 LSTM 架构。LSTM 的性能通过包含重新组织门和更新门的 GRU 得到维持[69]。
+
+RNN 的最大偏差是 LSTM，因为它解决了经典 RNN 的梯度消失现象。LSTM 被许多 IDS 研究所使用[70, 71]。LSTM 网络非常适用于目录和基于时间序列数据的预测，但无法回忆机制。LSTM 网络在检测数据流方面得到改进。
+
+LSTM 模型运行成本高，因为其架构无法在等效条件下进行训练，这是由于 RNN 的固有特性[72]。
+
+#### 20.3.1.8 Naive Bayes(NB)
+
+NB 算法是一系列信息收集算法的集合，它们使用概率的贝叶斯定理，假设每对特征之间存在显著的独立性。Naive Bayes 算法是一种基于贝叶斯定理的监督学习算法。
+
+入侵检测问题受到高维网络数据流维度的影响，并基于隐式 Naive Bayes(HNB)模型[73]。两个或多个事物之间的相互关系被称为相关性。
+
+(20.1)  
+
+$$\\text{P}(\\text{A} \\mid \\text{B}) = \\frac{\\text{P}(\\text{B} \\mid \\text{A})\\text{P}(\\text{A})}{\\text{P}(\\text{B})}$$  
+
+And
+
+(20.2)  
+
+$$\\text{P}(\\text{A} \\mid \\text{B}) = \\frac{\\text{P}(\\text{B} \\mid \\text{A})\\text{P}(\\text{A})}{\\text{P}(\\text{B})}$$  
+
+在入侵检测中，攻击的概率可以通过最初估计前序数据属于该类型攻击的概率，然后乘以该类型攻击发生的概率来计算。
+
+Naive Intrusion detection problems are affected by high network data stream, dimensionality, and highly correlated features based on the HNB model [73]. A common relationship among two or more things is known as correlation if there are certain points(*x[i]*,*y[i]*),*i* = 1,2,3...*n* in a dataset. Correlation observes if huge values of “*x*”are combined with huge values of “*y*”and small values of “*x*”are combined with small values of “*y*,”also if minor values of “*x*”are combined with huge values of “*y*” and vice versa. Correlation coefficient is computed by
+
+$$\\sum\\limits\_{i = 1}^{n}\\frac{\\left( {x\_{i} - \\underset{¯}{x}} \\right)\\left( {y\_{i} - \\underset{¯}{y}} \\right)}{\\sqrt{{\\sum\_{i = 1}^{n}\\left( {x\_{i} - \\underset{¯}{x}} \\right)^{2}}{\\sum\_{i = 1}^{n}\\left( {y\_{i} - \\underset{¯}{y}} \\right)^{2}}}}$$  
+
+The conditional independence approach of the Naive Bayes model is relaxed by the HNB data mining model. Greater efficiency is achieved in terms of accuracy, error rate, and misclassification cost by the HNB model than the traditional NB model. A multi-agent IDS Naive algorithm called NB-MAIDS specifies possible pressures of DDoS threats in the IoT and applied multi-agents in the entire network [74]. In this model, the information is gathered by different agents through sensors. Then further processing is done through the analysis of gathered information. The attacks and illegal activities may be prevented by disseminating the gathered information of malicious traffic to either the connected IoTs or the administrator. Serious security issues in IoT are DoS and DDoS. In these attacks, the network services are disturbed by flooding unwanted, meaningless huge traffic over the network. DDoS attacks are massive and hazardous. It tries to capture the bandwidth and prevent legitimate users from receiving the required service from the intended network. Mostly there exist two mechanisms to initiate DDoS threats on IoT. (i) The attacker sends some faulty packets to the victim to create some hindrance to the protocol or application running on it. (ii) The attacker tries to execute one or both of the following.(a) Application-level flooding attack is done by overloading the resources of the server. By this, the attacker blocks and delays the services to a legitimate valid user [75].
+
+
+
+为实现共同目标，代理人以协调和支持的方式独立收集数据和信息。所有代理人基于共同的算法工作，并在需要时相互通信。通过在多代理之间分配负载，入侵检测时节点的工作负载可以大幅降低。在分布式系统中，实施多代理系统（MAS）是最合适的。
+
+## 20.4 入侵检测数据集
+
+从 DARPA 1998 年开始，新的数据集开始在研究社区中出现。自 2009 年起，入侵发现数据集呈现出迅猛增长的趋势。表 9 中列出的数据集中，超过一半来自模拟实验。此类数据集的精确性和有效性是一个大问题 \[77\]。基于这些数据集构建的入侵检测模型被观察到效率低下。
+
+从 表 20.2 可以看出，KDD-99 和 NSL-KDD 是使用最频繁的数据集，尽管它们是通过模拟实验获得的。这些数据集长期以来一直广泛可用。每当研究人员提出一种新的入侵技术，希望与此前开发的旧技术进行比较时，都需要 KDD-99 和 NSL-KDD 数据集。这些数据集的内容被发现是过时的。
+
+Table 20.2  Use of Datasets by Different Researchers
+
+| Dataset || No. of Times Used |
+| --- | --- |
+| **KDD-99** || **Forty-six** |
+| **NSL-KDD** || **Thirty-five** |
+| **U NSW-N B15** || **Eight** |
+| **ISCX2012** || **Six** |
+| **Kyoto 2006+** || **Two** |
+| **Botnet** || **Two** |
+
+在未来的研究中，建议使用新的入侵检测数据集，例如 CIRA-CID-DoHBrw 2020。研究人员还应使用一些实时数据集，如 ISOT CId、IoT-23 和 SDN 数据集，以验证他们的模型。
+
+**DARPA** 在 MIT Lincoln 实验室的模拟环境中创建了许多数据集，这些数据集在入侵检测研究中非常受欢迎。DARPA 1998 和 DARPA 1999 包含五到七周的网络流量数据，格式为包。这些数据集中模拟了 DoS、缓冲区溢出、端口扫描和根包含等攻击。这些数据集广泛分布，但因冗余和人工注入的攻击而经常受到批评。
+
+*   **KDD99:** 从 DARPA 网络数据集文件中创建了 KDD99 数据集。该数据集用于数据预处理以及通过数据挖掘研究 DARPA 数据集的结构。该数据集包含七周的网络流量数据。大约 49 亿个向量包含在该数据集中。该数据集中的不同类型的攻击有：用户到根 (U2R)、远程到本地 (R2L)、探测和 DoS。数据集的每个出现都由诸如基本、流量和内容等集合中的众多结构描述。从 TCP/IP 连接中提取基本特征。流量特征属于同一主机或特定服务。数据部分的恶意行为属于内容部分。为评估入侵检测模型，KDD99 数据集被广泛使用。
+
+*   **NSL-KDD:** 该数据集被建议用于解决 KDD99 的问题。该新数据集也存在许多问题 \[78\]。可以使用该数据集比较不同的入侵检测模型。该数据集的优势在于可以在不使用部分记录的情况下进行完整的实验。该数据集有助于研究一致且可比较的结果。
+
+*   **UNSW-NB15:** 澳大利亚网络安全中心的网络实验室创建了该数据集。由于其包含新型攻击的多样性，该数据集被广泛使用。模糊器、后门、DoS、通用、侦察、壳码利用和蠕虫是使用该数据集分析的攻击类型。该数据集包含 82,332 条训练记录和 1,75341 条测试记录。
+
+*   **CICIDS2017:** 该数据集包含源数据及分析结果，即包含时间戳、发送者和接收者 IP 地址、不同端口、进程、威胁的令牌移动以及所有 benign 和常见攻击的 CSV 文件。研究人员使用 B-profile 系统来检查用户的非法行为，以在背景中创建 benign 流量。加拿大网络安全研究所的该数据集可在应用层 DoS/DDoS 攻击的入侵检测数据集上在线访问。研究人员在应用层执行了八种 DoS 攻击。通过将 ISCX 2012 数据集的无攻击流量结果与攻击痕迹结合，生成正常用户行为。该数据集提供 24 小时的网络流量包设置。
+
+*   **CICIDDoS2019:** **CICIDDoS2019** 包含最新的 DDoS 攻击。该数据集与真实世界数据相似。该数据集使用 CICFLOWMeter-V3，其中包含网络流量分析的结果，以及基于时间戳的发送者和接收者的令牌流。
+
+*   **KDD – CUP-99:** **Kyoto 2006+** 是一个小范围的真实用户行为数据集，由蜜罐公开。开发人员将包-based 流量转换为会话。每个会话包含 24 个类别；其中 14 个数字是从 **KDD to CUP-99** 数据集中提取的统计结构，其余 10 个是正常流量特征。该数据集在三年内收集了 9300 万会话。
+
+*   **NDSEC-1:** 数据集 **NDSEC-1** 展示了 botnet 和 brute force 类型的攻击，这些攻击与基于 UDP 洪水、HTTP、SYN、Exploits、端口扫描、伪造和 XSS/SQL 注入的 SSH、FTP、HTTP 和 DoS 相矛盾。该数据集于 2016 年以包-based 方式生成，并可在线获取。研究人员从网络中提取了跟踪和日志文件。
+
+*   **CTU-13:** 2013 年，研究人员生成了数据集 **CTU-13**，以包格式呈现。数据流是单向和双向的。该数据集来源于大学网络，其 13 个设置来自 botnet 攻击。该数据集以网页门户形式展示了受感染主机的信息。流量被标记为三种类型：(i) 所有到和从受感染主机的通信被视为 botnet；(ii) 匹配特定过滤器的流量被标记为正常流量；(iii) 其余的通信被视为相关，可能是受感染或正常。
+
+*   **BOT-IoT:** **BOT-IoT** 数据集由 UNSW Canberra Cyber 中心的网络实验室设计，用于创建真实的网络环境。数据集包含常规流量和 botnet 流量的混合。数据集文件以 pcap 文件、生成的 argus 文件和 csv 文件的不同格式呈现。为了更好的标记，文件根据攻击类别和子类别进行了分离。该数据集包含 keylogging、DDoS、数据入侵、DoS 和 Service scan 等攻击。使用 Node-red 工具模拟 IoT 网络。采用轻量级机器对机器 (M2M) 通信协议 MQTT。IoT 测试场景包括智能冰箱、天气站、运动感应灯、遥控车库门和智能恒温器。
+
+
+
+*   **IoT-23:** 网络流量是从一些实际设备的网络中提取的故障场景：一个智能 LED 灯、一个智能语音助手和一个 Somfy 智能门锁的数据集 `IoT-23`。它包含 20 个 PCAP 文件和 23 个 IoT 流量网络场景。在每个恶意场景中，使用不同的协议通过树莓派恶意软件进行执行。已在未受干扰的 Internet 连接上运行恶意软件和正常 IoT 流量的场景。它于 2020 年 1 月首次发布，检测时间跨度为 2018 年至 2019 年。该 IoT 网络流量在捷克共和国 CTU 大学的 Stratosphere 实验室、AIC 小组、FEL 中捕获。其目标是为研究人员提供真实且标记的 IoT 恶意软件感染和 IoT 正常流量的大型数据集，以便开发机器学习算法。该数据集及其研究由阿维斯软件（Prague）资助。该数据集的目标是使两种数据集对社区可用：第一种包含恶意网络流量，第二种仅包含正常 IoT 流量。正常和恶意流量都有两个新的网络行为描述标签列。这些标签遵循以下过程分配。原始 .pcap 文件由人工分析。检测出可疑流量，并在分析仪表板上分配标签。分析员生成 labels.csv 文件。
+
+*   **LBNL:** 在企业网络中，LBNL 数据集被开发用于分析网络流量特征。该数据集包含几乎正常的用户行为，用于安全研究目的。该数据集以数据包形式存在，已匿名化，可获取最高一百小时的网络数据。
+
+20.5 Evaluation Metrics in IDS
+
+入侵检测技术的效率可以通过不同的评估指标来衡量。常用的指标包括准确率、精确率、召回率、F1 分数和误报率（FAR）。检测率或 True Positive Rate（TPR）也称为召回率。TPR 是正确分类的攻击与总攻击数的比值。用于识别攻击的分类准确率称为召回率。准确率是正确预测的样本占所有预测样本的比例。FAR 是入侵发现中一个棘手的指标。误报是错误正值的结果。大量的 FAR 会增加网络的权重。
+
+随后，信息被分为四组：True Positive（TP）、False Positive（FP）、True Negative（TN）和 False Negative（FN）。当模型正确预测阳性类时，称为 True Positive。当模型正确预测阴性类时，称为 True Negative。
+
+当模型错误预测阳性类时，称为 False Positive。当模型错误预测阴性类时，称为 False Negative。
+
+所有指标都能够细致地反映分类器的工作情况。这些指标的概览可以在 Figure 20.3 中显示。
+
+![Figure 20.3  Hierarchy of metrics.](img/fig20_3_B.jpg)
+
+Figure 20.3  Hierarchy of metrics.
+
+**Confusion Matrix**
+
+混淆矩阵用于展示分类器的性能。
+
+|  |  | Actual Values |
+| --- | --- | --- |
+|  |  | Positive | Negative |
+| Predicted Values | **Positive** | **Negative** | **TP** **FN** | **FP** **TN** |
+
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
+$$\\begin{array}{l} {\\text{~Accuracy~} = \\frac{\\text{TP} + \\text{TN}}{\\text{TP} + \\text{TN} + \\text{FP} + \\text{FN}}} \\\\ {\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, = \\frac{\\text{~No}\\text{.~of~correct~predictions~}}{\\text{~No}\\text{.~of~all~predictions~}}} \\\\ {\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, = \\frac{\\text{~No}\\text{.~of~correct~predictions~}}{\\text{~size~of~Dataset~}}} \\\\ \\end{array}$$  
+
+**Precision**
+
+精确率是正确预测的阳性预测占所有阳性预测的比例（True Positive）。
+
+$$\\text{~Precision~} = \\frac{\\text{TP}}{\\text{TP} + \\text{FP}} = \\frac{\\text{~No}\\text{.~of~Correct~predicitons~}}{\\text{~No}\\text{.~of~total~positive~predicitons~}}$$  
+
+**Recall/Sensitivity**
+
+它是分类器正确预测的阳性案例数占所有阳性案例数的比例。
+
+$$\\begin{array}{l} {\\text{~Sensitivity~} = \\frac{\\text{~True~positives~}}{\\text{~True~positives~} + \\text{~False~Negative~}}} \\\\ {\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, = \\frac{\\text{~No}\\text{.~of~correctly~predicted~positive~instances~}}{\\text{~No}\\text{.~of~total~positive~instances~in~the~Dataset~}}} \\\\ \\end{array}$$  
+
+**Specificity (FAR)**
+
+它衡量正确预测的阴性预测的总数。
+
+$$\\begin{array}{l} {\\text{~Sensitivity~} = \\frac{\\text{~True~Negatives~(TN)~}}{\\text{~True~Negatives~+~False~Positives~}}} \\\\ {\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, = \\frac{\\text{~No}\\text{.~of~correctly~predicted~negative~instances~}}{\\text{~No}\\text{.~of~total~negative~instances~in~the~dataset~}}} \\\\ {\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\text{F1} = \\frac{2 \\times \\text{~Precision~} \\times \\text{~Recall~}}{\\text{~Precision~} + \\text{~Recall~}}} \\\\ \\end{array}$$  
+
+互相评估的指标是检测时间，即在入侵检测领域中使用已训练模型对模型进行分类所消耗的总时间。入侵检测研究经常面临维度灾难的问题，导致检测时间高，即使在特征收集用于降维时也如此。入侵检测的核心是以适当的检测率和可忽略的资源消耗来完成。高检测周期意味着算法的时间复杂度过高。
+
+在大数据情况下，基于深度学习的模型耗时较长。一些算法的计算复杂度难以计算，这直接影响检测时间。因此，除了检测时间外，仍需在当前 IDS 研究中提供一个综合的复杂度评估。
+
+20.6 Conclusion
+
+物联网（IoT）是全球广泛普及的技术，它正在给人类生活带来变革。
+
+物联网设备应在从家庭、农业、办公室、工业等不同领域进行配置时，落实安全与安全措施。尽管智能设备让人们与虚拟世界连接，使生活变得舒适、顺畅和便捷，但信息保密性和隐私安全问题仍是主要担忧。为了提升 IoT 网络的安全性，研究界对可靠且高效的安全协议有巨大需求。研究者面临的挑战是进一步诊断现有的安全机制和协议，识别其局限性，并开发适用于 IoT 网络的高效、安全、强健的安全机制。本章通过对以往研究的广泛文献综述，阐述了入侵检测、IoT 网络中的不同攻击类型、基于机器学习/深度学习的入侵检测模型、相关数据集及其局限性、以及使用的性能指标。我们还指出了现有机制的局限性，并明确了研究挑战和问题。我们期望这将对该领域的研究者扩展和修正目标产生巨大帮助。
+
+## References
+
+
+
+1. Ashton, Kevin. 2009. That ‘Internet of Things’ Thing-2009-06-22-Page1-RFID Journal. Journal. \[Online\]. Available: [`https://www.rfidjournal.com/articles/view?4986`](http://www.rfidjournal.com)
+
+2. State of the IoT 2018: Number of IoT devices now at 7B–Market accelerating. \[Online\]. Available: [`https://iot-analytics.com/state-ofthe-iot-update-q1-q2-2018-number-of-iot-devices-now-7b/`](https://iot-analytics.com)
+
+3. Hossain, M. M., Fotouhi, M., and Hasan, R. 2015. Towards an Analysis of Security Issues, Challenges, and Open Problems in the Internet of Things. Proceedings-2015 IEEE World Congress on Services, SERVICES 2015, pp. 21–28.
+
+4. IoT under fire: Kaspersky detects more than 100 million attacks on smart devices in H1 2019 | Kaspersky. \[Online\]. Available: [`https://www.kaspersky.com/about/press-releases/2019_iot-underfire-kaspersky-detects-more-than-100-million-attacks-on-smartdevices-in-h1-2019`](http://www.kaspersky.com)
+
+5. Kwon, D., Kim, H., Kim, J., Suh, S. C., Kim, I., and Kim, K. J. Jan. 2019. A survey of deep learning-based network anomaly detection. Cluster Computing, 22, 949–961.
+
+6. Malik, A. J., Shahzad, W., and Khan, F. A. Nov. 2015. Network intrusion detection using hybrid binary PSO and random forests algorithm, Secure Communication Networks, 8(16), 2646–2660.
+
+7. Khan, Rafiullah, Khan, Sarmadullah, Zaheer, Rifaqat, and Khan, Shahid. 2012. Future internet: The internet of things architecture. Possible Applications and Key Challenges. 257–260. [`https://doi.org/10.1109/FIT.2012.53`](https://doi.org/10.1109/FIT.2012.53)
+
+8. Borgohain, T., Kumar, U., and Sanyal, S. 2015. Survey of security and privacy issues of internet of things. International Journal of Advanced Networking Applications, 6, 2372–2378.
+
+9. Zhou, J., Cap, Z., Dong, X. and Vasilakos, A.V. 2017. Security and privacy for cloud-based IoT: Challenges. IEEE Communications Magazine, 55, 26–33. [`https://doi.org/10.1109/MCOM.2017.1600363CM`](https://doi.org/10.1109/MCOM.2017.1600363CM)
+
+10. Axelsson, S. 2000. *Intrusion detection systems: a survey and taxonomy*, Chalmers University of Technology, Sweden, Technical Report 99-15, pp. 1–27.
+
+11. Hodge, V., and Austin, J. 2004. A survey of outlier detection methodologies. Artificial Intelligence Review, 22(2), 85–126.
+
+12. Nguyen, T., and Armitage, G. 2008. A survey of techniques for internet traffic classification using machine learning. IEEE Commun. Surveys Tutorials, 10(4), 56–76.
+
+13. Agyemang, M., Barker, K., and Alhajj, R. 2006. A comprehensive survey of numeric and symbolic outlier mining techniques. Intelligence Data Analysis, 10(6), 521–538.
+
+14. Patcha, A., and Park, J. M. 2007. An overview of anomaly detection techniques: Existing solutions and latest technological trends. Computer Networks, 51(12), 3448–3470.
+
+15. Snyder, D. 2001. Online intrusion detection using sequences of system calls. Master’s thesis, Department of Computer Science, Florida State University.
+
+16. Zhang, Z., Li, J., Manolopoulos, C. N., Jorgenson, J., and Ucles, J. 2001. HIDE: A Hierarchical Network Intrusion Detection System Using Statistical Preprocessing and Neural Network Classification. Proceedings IEEE Man Systems and Cybernetics Information Assurance Workshop.
+
+17. Sperotto, A., Schaffrath, G., Sadre, R., Morariu, C., Pras, A., and Stiller, B. quarter 2010. An overview of IP flow-based intrusion detection. IEEE Commun. Surveys Tutorials, 12(3), 343–356.
+
+18. Sun, B., Osborne, L., Xiao, Y., and Guizani, S. October 2007. Intrusion detection techniques in mobile ad hoc and wireless sensor networks. IEEE Wireless Commun., 14(5), 56–63.
+
+19. Wu, S. X. and Banzhaf, W. January 2010. The use of computational intelligence in intrusion detection systems: A review. Applied Soft Computing, 10(1), 1–35.
+
+20. Peng, T., Leckie, C., and Ramamohanarao, K. April 2007. Survey of network-based defense mechanisms countering the DoS and DDoS problems. ACM Computing Surveys, 39(1), 1–42.
+
+21. Roman, R., Zhou, J., and Lopez, J., 2013. On the features and challenges of security and privacy in distributed internet of things. Comput. Network., 57(10), 2266–2279.
+
+22. Andrea, I., Chrysostomou, C., and Hadjichristofi, G. Feb. 2015. “Internet of things: Security Vulnerabilities and Challenges. Proceedings IEEE Symp. Computers and Communication, Larnaca, Cyprus, pp. 180–187.
+
+23. Bertino, E., and Islam, N. 2017. Botnets and internet of things security. Computer, 50(2), 76–79.
+
+24. Bekara, C. 2014. Security issues and challenges for the IoT based smart grid. Procedia Comput. Sci., 34, 532–537.
+
+25. AlTawy, R., and Youssef, A.M. Jan 2016. Security tradeoffs in cyber physical systems: A case study survey on implantable medical devices. IEEE Access, 26(4), 959–979.
+
+26. Wamba, S.F., Anand, A., and Carter, L. 2013. A literature review of RFIDenabled healthcare applications and issues. Int. J. Inf. Manag., 33(5), 875–891.
+
+27. Malasri, K., and Wang, L., 2009. Securing wireless implantable devices for healthcare: Ideas and challenges. IEEE Commun. Mag., 47(7), 74–80.
+
+28. Wang, N., Jiang, T., Lv, S., and Xiao, L., 2017a. Physical layer authentication based on an extreme learning machine. IEEE Commun. Lett., 21(7), 1557–1560.
+
+29. Spachos, P., Papapanagiotou, I., and Plataniotis, K.N. Sept. 2018. Microlocation for smart buildings in the era of the internet of things: A survey of technologies, techniques, and approaches. IEEE Signal Process. Mag., 35(5), 140–152.
+
+30. Bose, T., Bandyopadhyay, S., Ukil, A., Bhattacharyya, A., and Pal, A., 2015. Why Not Keep Your Personal Data Secure Yet Private in IoT?: Our Lightweight Approach. Intelligent Sensors, Sensor Networks and Information Processing (ISSNIP), 2015 IEEE Tenth International Conference on. IEEE, pp. 1–6.
+
+31. Yao, X, Farha, F, Li, R, Psychoula, I, Chen, L, and Ning, H. Aug 1 2021. Security and privacy issues of physical objects in the IoT: Challenges and opportunities. Digital Communications and Networks, 7(3), 373–384.
+
+32. Ahmed, E., et al. 2017. The role of big data analytics in the Internet of Things. Comput. Network. 129, 459–471.
+
+33. Moosavi, S.R., et al., 2015. SEA: a secure and efficient authentication and authorization architecture for IoTbased healthcare using smart gateways. Procedia Comput. Sci. 52, 452–459.
+
+34. Restuccia, F., Daro, S., and Melodia, T., Dec. 2018. Securing the internet of things in the age of machine learning and softwaredefined networking. IEEE Internet Things J. 5(6), 4829–4842.
+
+35. Roman, R., Zhou, J., and Lopez, J., 2013. On the features and challenges of security and privacy in distributed internet of things. Comput. Network., 57(10), 2266–2279.
+
+36. Camara, C., Peris-Lopez, P., and Tapiador, J.E., 2015. Security and privacy issues in implantable medical devices: A comprehensive survey. J. Biomed. Inf., 55, 272–289.
+
+37. Axelsson, S. 2000. Intrusion detection systems: a survey and taxonomy, Chalmers University of Technology, Sweden, Technical Report 99-15, pp. 1–27.
+
+
+
+38. F. Wikimedia. 入侵检测系统。[`en.wikipedia.org/wiki/Intrusion-detectionsystem`](http://en.wikipedia.org), 2009 年 2 月。
+
+39. Al-Garadi, M. A., Mohamed, A., Al-Ali, A., Du, X., Ali, I., and Guizani, M. 2020 年 4 月。关于物联网（IoT）安全的机器学习和深度学习方法综述。IEEE Commun. Surv. Tutorials, 22(3), 1646–1685。
+
+40. Awad, M., and Khanna, R. 2015 年。机器学习。载于《高效学习机器：工程师和系统设计者的理论、概念与应用》（第 1–18 页）。Apress。
+
+41. Munoz, A. 机器学习与优化。[Online]。可于[`www.cims.nyu.edu/~munoz/files/ml_optimization.pdf`](http://www.cims.nyu.edu) 查阅。[WebCite Cache ID 6fiLfZvnG]
+
+42. Commonly used machine learning algorithms | Data Science。Online。可于[`www.analyticsvidhya.com/blog/2017/09/common-machinelearning-algorithms/`](https://www.analyticsvidhya.com) 查阅。[Accessed: Jun 09, 2020]
+
+43. Lecun, Y., Bengio, Y., and Hinton, G. 2015 年 5 月 27 日。深度学习。Nature, 521(7553), 436–444。
+
+44. Goodfellow, I., Bengio, Y., and Courville, A. 2016 年。*深度学习在智能入侵检测系统中的应用*。MIT Press。
+
+45. Alhajjar, E., Maxwell, P., and Bastian, N., 2021 年。网络入侵检测系统中的对抗性机器学习。Expert Syst Appl, 186, 115782。
+
+46. Caminero, G., Lopez-Martin, M., and Carro, B., 2019 年。用于入侵检测的对抗环境增强学习算法。Comput. Netw., 159, 96–109。
+
+47. Quinlan, J. R. 1983 年。高效分类程序的学习及其在国际象棋末局中的应用。载于《1983 年机器学习》（第 463–482 页）。Morgan Kaufmann。
+
+48. Quinlan, J.R. 1986 年。决策树的诱导。Mach. Learn., 1(1), 81–106。
+
+49. Quinlan, J. R., 2014 年。C4.5: 用于机器学习的程序。Elsevier。
+
+50. Loh, W.-Y., 2011 年。分类与回归树。Wiley Interdiscip. Rev. Data Min.Knowl. Discov., 1(1), 14–23。
+
+51. Anthi, E., Williams, L., Słowìnska, M., Theodorakopoulos, G., and Burnap, P. 2019 年。用于智能家居 IoT 设备的受监督入侵检测系统。IEEE Internet Things J., 6(5), 9042–9053。
+
+52. Abbes, T., Bouhoula, A., and Rusinowitch, M. 2010 年。高效决策树用于入侵检测中的协议分析。Int. J. Secur. Netw., 5(4), 220–235。
+
+53. Muniyandi, A.P., Rajeswari, R., and Rajaram, R. 2012 年。通过级联 k-means 聚类和 C4.5 决策树算法进行网络异常检测。Procedia Eng., 30, 174–182。
+
+54. Deng, H., Runger, G., and Tuv, E., 2011 年。多值属性中重要性度量的偏差及解决方案。国际人工神经网络会议，第 293–300 页。
+
+55. Özgür, A., Erdem, H., 2016 年。2010 年至 2015 年 KDD99 数据集在入侵检测和机器学习中的应用综述。PeerJ. Preprints 4, e1954v1。[`doi.org/10.7287/PEERJ.PREPRINTS.1954`](https://doi.org/10.7287/PEERJ.PREPRINTS.1954)。
+
+56. Jan, S.U., Ahmed, S., Shakhov, V., and Koo, I. 2019 年。面向物联网的轻量级入侵检测系统。IEEE Access, 7, 42450–42471。
+
+57. Teng, S., Wu, N., Zhu, H., Teng, L., and Zhang, W. 2017 年。SVM-DT 基适应协同入侵检测。IEEE/CAA J. Autom. Sin., 5(1), 108–118。
+
+58. De la Hoz, E., De La Hoz, E., Ortiz, A., Ortega, J., and Prieto, B. 2015 年 9 月 21 日。PCA 滤波与概率 SOM 用于网络入侵检测。Neurocomputing, 164, 71–81。
+
+59. Peng, K., Leung, V.C., Huang, Q. 2018 年。基于小批量 Kmeans 的大数据入侵检测系统聚类方法。IEEE Access, 6, 11897–11906。
+
+60. Casas, P., Mazel, J., and Owezarski, P. 2012 年。无监督网络入侵检测系统：在无知识的情况下检测未知威胁。Comput. Commun., 35(7), 772–783。
+
+61. Vinayakumar, R., Alazab, M., Soman, K., Poornachandran, P., Al-Nemrat, A., and Venkatra-man, S. 2019 年。深度学习在智能入侵检测系统中的应用。IEEE Access, 7, 41525–41550。
+
+62. Xu, C., Shen, J., Du, X., and Zhang, F. 2018 年。基于带门控循环单元的深度神经网络入侵检测系统。IEEE Access, 6, 4 8697–4 8707。
+
+63. Bengio, Y., 2009 年。学习深度架构用于人工智能。Now Publishers Inc.
+
+64. He, H., Bai, Y., Garcia, E.A., and Li, S. 2008 年。ADASYN：自适应合成采样方法用于不平衡学习。2008 IEEE 国际神经网络联合会议（IEEE 世界计算智能大会），第 1322–1328 页。
+
+65. Dong, Y., Wang, R., and He, J. 2019 年。基于深度学习的实时网络入侵检测系统。2019 IEEE 软件工程与服务科学国际会议（ICSESS），第 1–4 页。
+
+66. Vinayakumar, R., Soman, K., and Poornachandran, P. 2017 年。使用卷积神经网络进行网络入侵检测。2017 国际计算、通信和信息 advances (ICACCI)，第 1222–1228 页。
+
+67. Yin, C., Zhu, Y., Fei, J., and He, X. 2017 年。基于循环神经网络的深度学习入侵检测方法。IEEE Access, 5, 21954–21961。
+
+68. Gers, F.A., Schmidhuber, J., and Cummins, F., 2000 年。学习遗忘：使用 LSTM 进行持续预测。Neural Comput., 12(10), 2451–2471。
+
+69. Cho, K., Van Merriënboer, B., Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H., and Bengio, Y. 2014 年。使用 RNN 编码器-解码器学习短语表示用于统计机器翻译。arXiv preprint arXiv:1406.1078。
+
+70. Bontemps, L., McDermott, J., Le-Khac, N.-A., et al., 2016 年。基于长短期记忆（LSTM）循环神经网络的集体异常检测。国际未来数据安全工程会议，第 141–152 页。
+
+71. Roy, S.S., Mallik, A., Gulati, R., Obaidat, M.S., and Krishna, P.V. 2017 年。基于深度学习的人工神经网络入侵检测方法。国际数学与计算会议，第 44–53 页。
+
+72. Bai, S., Kolter, J.Z., and Koltun, V. 2018 年。通用卷积和循环网络在序列建模中的经验评估。arXiv preprint arXiv: 1803.01271。
+
+73. Koc, L., Mazzuchi, T.A., and Sarkani, S., 2012 年。基于隐式贝叶斯多类分类器的网络入侵检测系统。Expert Syst. Appl., 39(18), 13492–13500。
+
+74. Mehmood, A., Mukherjee, M., Ahmed, S.H., Song, H., and Malik, K.M. 2018 年。NBC-MAIDS：基于贝叶斯分类技术的多代理系统增强 IDS，用于保护 IoT 免受 DDoS 攻击。J. Supercomput, 74(10), 5156–5170。
+
+75. Zargar, S.T., Jyoti, J., and Tipper, D. 2013 年。针对分布式拒绝服务（DDoS）洪水攻击的防御机制综述。IEEE Commun Surv Tutor, 15(4), 2046–2069。
+
+76. Prasad, K.M., Reddy, A.R.M., and Rao, K.V. 2014 年。DoS 和 DDoS 攻击：防御、检测与追踪机制——综述。Glob J Comput Sci Technol, 14(7), 1–19。
+
+
+
+77. Mahoney, Matthew, Philip, V., and Chan, K. 2003. An Analysis of the 1999 DARPA/Lincoln Laboratory Evaluation Data for Network Anomaly Detection. International Workshop on Recent Advances in Intrusion Detection, Springer, Berlin, Heidelberg, pp. 220–237.
+
+78. Tavallaee, M., Bagheri, E., Lu, W., and Ghorbani, A. A. 2009. A Detailed Analysis of the KDD CUP 99 Data Set. 2009 IEEE Symposium on Computational Intelligence for Security and Defense Applications, pp. 1–6.
+
+# 21 An Enhanced Effective Methodology to Detect Intrusions Using Machine Learning
+
+Devishree Naidu, Shubhangi Tirpude, Sandesh Sachdev, and Vaidik Murarka
+
+Shri Ramdeobaba College of Engineering and Management, Nagpur, India
+
+Kalinga Institute of Industrial Technology, Odisha, India
+
+Niranjan K. Ray
+
+Kalinga Institute of Industrial Technology, Odisha, India
+
+DOI: [10.1201/9781003326236-21](https://dx.doi.org/10.1201/9781003326236-21)
+
+## 21.1 Introduction
+
+Network security is critical in today’s world of linked networks. Despite businesses’ and organisa- tions’ best attempts to safeguard their networks, no device is totally secure, especially if it is linked to the Internet. This is due to the fact that hackers are continually developing new and sophisticated types of malware, with MAcfee claiming that over 300,000 new pieces of malware are developed every day.
+
+Businesses and organisations invest millions of dollars to air-gap their networks in order to resist these dangers. To limit the danger of prospective assaults, air-gapping entails physically disconnecting the network from the Internet. However, this strategy is not infallible, as air-gapped networks have been infiltrated in the past.
+
+This is when intrusion detection steps in. Intrusion detection is a model-based strategy for detecting possible network intrusions. The approach works by continually monitoring network traffic for suspicious or unusual behavior. If a breach is found, the model will notify system administrators, who may then take the required mitigation procedures.
+
+Because it gives early notice of prospective assaults, intrusion detection is an effective technique to protect network security. This allows system administrators to take action and repair any vulnerabilities before they cause substantial damage. The use of an intrusion detection system(IDS) may also assist firms in meeting numerous security rules and standards, such as the Payment Card Industry Data Security Standard(PCI DSS).
+
+Accordingly, network security is an important concern in today’s linked society. Despite the greatest attempts to safeguard networks, no device, especially one linked to the Internet, is completely secure. Intrusion detection is a model-based way to detectect possible network breaches and provide early warning of future assaults. This allows system administrators to intervene and patch any flaws before they do major damage, making intrusion detection a critical tool for safeguarding network security.
+
+## 21.2 Related Work
+
+The NSL-KDD dataset is used in this chapter to compare several classification methods for iden- tifying aberrant network traffic patterns. It is an enhanced version of its predecessor, KDD’99. \[1\] Intrusion detection has emerged as a critical area of concern over the past decade, with researchers focusing on different datasets to enhance system accuracy and reduce false positives in line with the DAPRA’98 initiative. Machine learning-based anomaly-based attack detection systems can be trained to increase their detection performance. However, because not all forms of attacks can be accurately recognized, current anomaly detection approaches frequently produce large false positive rates and only modest accuracy and detection rates. The NSL-KDD dataset has already been examined in earlier works. An extensive literature review of numerous research studies that have used either the KDD’99 or NSL-KDD security datasets to investigate IDS or implement IDS models using machine learning techniques is included in the study “A Survey on Machine Learning based Intrusion Detection System on NSL-KDD Dataset.” The survey covers a variety of classification methods and classifiers that have been used for the security dataset, such as K-Nearest Neighbor(KNN), K-means SVM, Deep Belief Network, Genetic Algorithm, and Deep Convolution Neural Network(DCNN). The study’s conclusions demonstrate the possibility of a hybrid strategy to improve machine learning-based intrusion detection technologies. \[2\] In the year 2015, author presented performance evaluation of NSL-KDD dataset using Artificial Neural Network (ANN). The chapter recommends using Tansig transfer function, Levenberg-Marquardt (LM), and BFGS quasi-Newton Backpropagation (BFG) algorithms when using ANNs on the NSL-KDD dataset. \[3\]The neural network architecture is designed to modify the values of neurons and layers during the learning process. The proposed approach outperforms other reported techniques for binary class classification, exhibiting superior accuracy in detecting attacks. Additionally, the study finds that the system has the ability to effectively identify attacks for specific classes within the NSL-KDD dataset during five-class classification. Pervez et al. \[4, 5\] presented NSL-KDD Cup 99 dataset feature selection and intrusion classification using. Support Vector Machines (SVMs), which are reliable machine learning algorithms frequently used for image classification, pattern recognition, and biometric analysis, are suggested to be employed in the research work. The suggested strategy uses fewer input features from the training data while maintaining the high accuracy of the SVM classifier. The chapter makes use of the NSL-KDD Cup 99 dataset, a multi-class classification issue that includes both normal and attack network connections. The suggested approach achieves classification accuracies of 91% using only three input features, 99% using 36 input features, and 99% when all 41 input features are utilized. These results demonstrate the effectiveness of the proposed method in accurately classifying network connections.
+
+## 21.3 Dataset
+
+The NSL-KDD dataset, an improved version of the KDD’99 dataset, has been extensively utilized by researchers to develop effective IDSs. Its superior performance over its predecessor can be attributed to the rectification of several issues. The NSL-KDD dataset is built upon the DARPA ’98 dataset produced by the MIT Lincoln Laboratory’s Cyber Systems and Technological group.
+
+The NSL-KDD dataset has been subjected to various analyzes, using a range of methodologies and tools, with the ultimate goal of developing an efficient IDS. In this context, The NSL-KDD dataset has been thoroughly examined by the WEKA program using a variety of machine learning techniques. In particular, several attacks, both known and undiscovered, have been trained and tested using the K-means clustering technique.
+
+In summary, the NSL-KDD dataset has served as a significant benchmark in the field of intrusion detection, facilitating the development of effective and efficient machine learning algorithms for detecting attacks. The utilization of such techniques has significantly advanced the ability to safeguard computer systems against malicious activities. \[6\]
+
+The NSL-KDD data set is an improved version of the one that came before. It includes all of the crucial KDD data set records. The researchers have access to a variety of files that can be downloaded.
+
+
+
+虽然 NSL-KDD 数据集的采集存在一些问题，但它仍然是一个高度有用的数据集，可以用于研究。6，7 NSL-KDDDataset 文件列表如 表 21.1 所示，数据记录在 图 21.1 和 21.2 中引用。
+
+Figure 21.1 NSL-KDD dataset referred data records. 
+
+| Dataset  || Number of Records |
+| --- | --- |
+| Normal || DoS || Probe || U2R || R2L || Total |
+| KDD Train || 67343 || 45927 || 11656 || 52 || 995 || 125973 |
+| --- | --- | --- | --- | --- | --- | --- |
+| KDD Test || 9711 || 7458 || 2421 || 200 || 2654 || 22444 |
+
+Table 21.1 NSL-KDD Dataset Files List with Their Description
+
+| Sr. No. || File Name || Explanation |
+| --- | --- | --- |
+| **1** || **KDDTrain+.ARFF** || **The full NSL-KDD train set with binary labels in ARFF format** |
+| **2** || **KDDTrain+.TXT** || **The full NSL-KDD train set including attack-type labels and difficulty level in CSV format** |
+| **3** || **KDDTrain+\_20Percent.ARFF** || **A 20% KDDTrain+.arff file** |
+| **4** || **KDDTrain+\_20Percent.TXT** || **A 20% KDDTrain+.txt file** |
+| **5** || **KDDTest+.ARFF** || **The full NSL-KDD test set with binary labels in ARFF format** |
+| **6** || **KDDTest+.TXT** || **The full NSL-KDD test set including attack-type labels and difficulty level in CSV format** |
+| **7** || **KDDTest-21.ARFF** || **A subset of the KDDTest+.arff file which does not include records with difficultylevel of 21 outof 21** |
+| **8** || **KDDTest-21.TXT** || **A subset of the KDDTest+.txt file which does not include records with difficultylevel of 21 outof 21** |
+
+![Figure 21.2 The figure shows the data records in the NSL-KDD dataset on attacks class in the form of a Pie Chart.](img/fig21_2_B.jpg)
+
+Figure 21.2 The figure shows the data records in the NSL-KDD dataset on attacks class in the form of a Pie Chart.
+
+## 21.4 Proposed Methodology
+
+### 21.4.1 Machine Learning Methodologies and Prediction Techniques: Model Training
+
+The process of training a model on a collection of data so that it can make predictions or judgements based on fresh data is known as machine learning. Several steps are involved in the model training process:
+
+1.  Data collection: The first stage in model training is to collect data relevant to the situation at hand.
+
+2.  Data cleaning and preprocessing: Once the data has been acquired, it must be cleaned and preprocessed to guarantee that it can be used by machine learning algorithms.
+
+3.  Feature engineering is the process of identifying and developing meaningful features from data that the machine learning model can use.
+
+4.  Model selection: To train a model, numerous machine learning techniques can be utilized. The method you choose is determined by the problem you are attempting to answer as well as the qualities of the data.
+
+5.  Model training: Once you’ve decided on an algorithm, you must train it on data. This entails putting the data into the algorithm and modifying the model’s parameters to optimize its performance.
+
+6.  Model evaluation: The model must be tested against a set of test data after it has been trained to ensure that it is reliable and accurate.
+
+7.  Model deployment: Once the model has been trained and assessed, it may be put into production and make predictions or judgements based on fresh data.
+
+### 21.4.2 Data Preprocessing
+
+Data preprocessing is an important stage in the data mining and assessment process that includes turning raw data into an organized and standardized format that computers and machine learning algorithms can readily comprehend and analyze. Raw data in many forms, such as text and photos, is typically jumbled, with mistakes and inconsistencies. Furthermore, the data is frequently inadequate and lacks a clear and standard format. This data may be turned into a usable format for accurate analysis and decision-making through preprocessing.
+
+### 21.4.3 Data Visualization
+
+Data visualization, or the depiction of data in graphical or pictorial representations, is an important part of machine learning. It is an effective tool for comprehending large datasets, recognizing patterns and trends, and making data-driven decisions. In this chapter, we will look at the significance of data visualization in machine learning, as well as the steps needed in developing good visualizations.
+
+Step 1: Cleanup and Preprocessing of Data
+
+Cleaning and preparing the data is the initial stage in data visualization. This includes deleting missing numbers, outliers, and other abnormalities that might degrade the visualization’s quality. The data should be translated into a visually appealing format, such as a table, matrix, or graph.
+
+Step 2: Choose the Best Visualization Technique
+
+The proper visualization approach must be used to deliver the intended message to the audience. Scatter plots, line charts, bar charts, histograms, and heatmaps are some of the visualization techniques accessible. The approach used is determined by the type of data, the research topic, and the audience.
+
+Step 3: Create the Visualization
+
+Once the approach has been chosen, the visualization should be devised to properly portray the information. This includes selecting the appropriate colors, labels, titles, and comments to improve data comprehension. The visualization should be simple to understand, aesthetically appealing, and effectively convey the idea.
+
+Step 4: Visualization Interactive
+
+The interactive visualization allows the viewer to interact with the visualization and study the data in real time. This may be accomplished by use tools like as zooming, panning, filtering, and highlighting. Interactive visualization gives a more engaging experience and can aid in the discovery of fresh insights that static visualizations may not provide.
+
+### 21.4.4 Feature Engineering
+
+Feature engineering is an important part of machine learning that includes developing additional variables or features to improve the performance of a prediction model. This chapter will give an in-depth description of feature engineering, covering the many phases required.
+
+The feature engineering process consists of four major steps: feature development, transformation, extraction, and selection. The initial stage is to discover and pick variables that will be most beneficial in the prediction model. This phase is subjective and needs domain understanding as well as imagination. This step’s features should capture the significant qualities of the data that might aid in forecasting the target variable.
+
+The next phase is transformation after the features have been built. This stage entails modifying the predictor variables in order to improve model performance. For example, we may use scaling or normalization to increase the model’s performance by making the data more consistent.
+
+The third stage is to extract features. Feature extraction is an automated technique that includes extracting new variables from raw data to create new variables. The goal of this stage is to lower the dataset’s dimensionality and make it more manageable for modeling. Principal component analysis (PCA), linear discriminant analysis (LDA), and independent component analysis (ICA) are all methodologies for extracting features.
+
+### 21.4.5 Experimenting Random Forest Classifier
+
+
+
+-   使用各种样本创建决策树，随后对结果进行分析，并基于决策树的多数票进行预测。为了提升性能，随机森林生成大量决策树而非仅使用一个。与单个决策树算法相比，它更准确。它提供了一种处理缺失数据的实用方法，且无需调整超参数，即可生成合理的预测。它解决了决策树的过拟合问题。在每棵随机森林树的节点分割点，会随机选择一个子集特征。
+
+### 21.4.6 实验 KNN 分类器
+
+基于相似性，数据点被分类。由于它不创建学习算法来预测结果，因此常被称为懒惰算法。它对如何使用提供的数据构建模型没有任何假设。这对于进行基于各种特征对事物进行分类的模式识别任务非常有益。
+
+#### 21.4.6.1 入侵检测机制
+
+##### 21.4.6.2 数据预处理
+
+在导入数据集之前，必须导入如 `Pandas`、`Numpy`、`Matplotlib`、`Seaborn` 和 `SK Learn` 等有用库，以便于机器学习分类和回归算法的实现。与 KDD’99 数据集相比，NSL-KDD 数据集具有显著优势，因为它记录更清洁，无需预处理。这一点在 [Figure 21.3 中显示。
+
+![Figure 21.3  Development phases in the machine learning.](img/fig21_3_B.jpg)
+
+Figure 21.3  Development phases in the machine learning.
+
+#### 21.4.6.3 探索性数据分析
+
+##### 21.4.6.4 编码
+
+数据集包含 42 个属性，研究后发现其中 41 个属性决定了数据包信息，最后一个属性是实际攻击类别。
+
+进一步调查发现，有三个属性的类型为对象（即字符串值）。这些对象值需要转换为数值，以便分类模型处理。为此，在需要时使用了热编码和标签编码进行转换。
+
+#### 21.4.6.5 数据可视化
+
+在本分析中，我们添加了图形来可视化数据集中的记录。观察图形后，发现每种协议类型都与其他类型不同。协议可能有助于判断所观察的流量类型，根据我们的原始假设。因此，我们进一步进行了调查，以查看标记是否遵循类似模式。
+
+总体而言，添加图形后，能够以可视化的方式呈现数据集中的记录。观察后发现，每种协议类型均存在差异，这导致我们假设协议可能有助于识别所观察的流量类型。进一步调查了标记是否遵循相同的模式。
+
+从网络管理员的视角来看，分析网络流量中的协议、标记和服务的组合可以提供有价值的洞察，帮助理解网络行为及潜在的安全威胁。这些参数提供了关于网络内通信类型的关键信息，使得对网络行为的更深入理解成为可能。利用这些数据，管理员可以采用更有效的网络监控、入侵检测和事件响应策略。此外，借助机器学习算法，异常流量模式的自动识别可以实现，为保护网络基础设施提供可扩展且高效的解决方案。
+
+### 21.4.7 特征工程
+
+为了开始特征构建过程，协议类型、服务和标记是很好的起点。这些元素具有足够的多样性，有助于实现基本的识别。此外，我们计划加入基础数值数据，如 `duration`、`source bytes` 和 `destination bytes`。这些指标可从现代网络设备中轻松获取，并预计能够为网络活动的本质提供有价值的洞察。
+
+#### 21.4.7.1 特征选择
+
+特征选择[8, 9] 是机器学习中的关键过程，涉及从较大的特征集中筛选出相关特征子集。通过应用特定的评估标准，确定对给定任务或应用最有价值的特征。特征选择过程通常包括三个主要阶段：首先选择初始特征子集；其次在该子集内评估每个特征的价值；最后选择用于模型训练和预测的最有价值的特征。该过程通过降低特征空间的复杂度、减少过拟合、提高模型可解释性来提升模型性能。在大数据量的场景中，特征选择的重要性不容低估。
+
+#### 21.4.7.2 特征提取
+
+为提升模型的性能和准确性，我们致力于工程人工特征、消除冗余特征，并仅保留相关特征。具体而言，我们决定移除 “`numOutboundCmds`” 特征，因为该特征在数据集的每一行中都具有相同的值。此外，我们通过 scikit-learn 特征选择包，仅选取最重要的特征用于模型训练，避免使用全部特征集。
+
+### 21.4.8 训练-测试划分
+
+提供的数据集由独立的训练集和测试集组成，划分比例为 0.3，用于训练和测试。预测模型依赖于两个特定特征：攻击识别和攻击类型分类。该方法利用机器学习技术检测入侵尝试，并在给定系统或网络环境中降低恶意活动的风险。通过将数据集划分，模型可以在一部分数据上进行训练，并在独立的数据子集上进行测试，从而更准确地评估模型的预测能力。借助训练后模型的洞察，系统管理员和网络安全专业人员可以采取主动措施，提升组织的安全态势，防止网络攻击。详情如 Figures 21.4、21.5 和 21.6 所示。
+
+![Figure 21.4 The figure presents a dataset comprising records that have been stratified according to their transport layer protocol and the corresponding attack patterns they exhibit.](img/fig21_4_B.jpg)
+
+Figure 21.4 The figure presents a dataset comprising records that have been stratified according to their transport layer protocol and the corresponding attack patterns they exhibit.
+
+![Figure 21.5  The figure provides a visualization of network packets, categorized as either “Normal” or “Attack” based on the flags that are active on the packet.](img/fig21_5_B.jpg)
+
+Figure 21.5  The figure provides a visualization of network packets, categorized as either “Normal” or “Attack” based on the flags that are active on the packet.
+
+![Figure 21.6 The figure shows the feature which are selected by using Random Forest feature selection function for important attribute.](img/fig21_6_B.jpg)
+
+
+
+-   图 21.6 图中展示了使用随机森林特征选择函数选取重要属性后的特征。
+
+### 21.4.8.1 训练和测试模型
+
+训练模型使用三种分类器：
+
+1. `随机森林模型`
+
+2. `KNN 模型`
+
+3. `逻辑回归模型`
+
+在模型训练阶段，从数据集生成的分割会提供给分类器进行进一步分析。训练分割用于训练模型，而测试分割用于评估模型的预测能力。
+
+基于数据集的特性，决策树被认为是构建预测模型的合适起点。因此，采用了`随机森林`技术来创建和整合多个决策树。
+
+为了评估模型的性能，构建了混淆矩阵以识别假阳性数量。随后评估模型的准确率，若发现准确率较低，则进行超参数调优以提升准确率。调优超参数后，模型在数据集分割上重新训练。此过程在图 21.7 和图 21.8 中展示。
+
+```
+![Figure 21.7  This figure displays binary classification-based confusion matrix using training dataset.](img/fig21_7_B.jpg)
+```
+
+Figure 21.7  This figure displays binary classification-based confusion matrix using training dataset.
+
+```
+![Figure 21.8 The given figure displays the multi-class classification confusion matrix experimented on the training dataset, which illustrates the ability of a machine learning model to accurately classify instances into multiple classes.](img/fig21_8_B.jpg)
+```
+
+Figure 21.8 The given figure displays the multi-class classification confusion matrix experimented on the training dataset, which illustrates the ability of a machine learning model to accurately classify instances into multiple classes.
+
+## 21.5 结果与讨论
+
+本研究的目标是通过降低数据维度和使用特征选择技术来提升模型性能。采用了 NSL-KDD 数据集，并应用随机特征选择技术以降低模型复杂度和训练时间。虽然该方法在本研究中表现有效，但其效果可能取决于数据的具体特性。
+
+使用能够处理数据不规则分布的`随机森林`技术，使准确率超过 98%。`随机森林`方法采用自助采样程序，提升少数类别的表示，从而减少分类错误并提高模型准确率。该方法在识别数据不平衡方面表现出色。此结果在图 21.9 和图 21.10 中展示。
+
+```
+![Figure 21.9 The depicted graph illustrates the scores for both binary and multi-class classifications achieved through the implementation of a Random Forest classifier.](img/fig21_9_B.jpg)
+```
+
+Figure 21.9 The depicted graph illustrates the scores for both binary and multi-class classifications achieved through the implementation of a Random Forest classifier.
+
+|  || F1 ||  || Fbeta ||  |
+
+| --- | --- | --- | --- | --- |
+
+| Binary Score || 0.9976471 ||  || 0.998202 ||  |
+
+| --- | --- | --- | --- | --- |
+
+|  || Macro || Micro || Macro || Micro |
+
+| Multi Score || 0.8914191 || 0.997738 || 0.929808 || 0.997738 |
+
+Figure 21.10 The figure depicts the classification scores for both binary and multi-class classification tasks using the KNN algorithm.
+
+|  || F1 ||  || Fbeta ||  |
+
+| --- | --- | --- | --- | --- |
+
+| Binary Score || 0.9976471 ||  || 0.998202 ||  |
+
+| --- | --- | --- | --- | --- |
+
+|  || Macro || Micro || Macro || Micro |
+
+| Multi Score || 0.8463801 || 0.991189 || 0.862354 || 0.991189 |
+
+下面是三种分类的完整结果：
+
+### 21.5.1 随机森林分类器
+
+在所有被评估的分类器中，`随机森林`分类器表现最佳，实现了 99.76%的 F1 评分和 99.8%的 F-Beta 评分。此外，该分类器的多类别预测得分为 F1 89.14%（宏平均）和 99.77%（微平均），F-Beta 92.98%（宏平均）和 99.77%（微平均）。这些结果表明，`随机森林`分类器是入侵检测任务的高度有效方法。
+
+### 21.5.2 KNN
+
+`KNN`算法展示出令人印象深刻的准确率，F1 评分和 F-Beta 评分均为 99.76%和 99.8%。此外，`KNN`分类器的多类别预测得分为 F1 84.63%（宏平均）和 99.11%（微平均），F-Beta 86.23%（宏平均）和 99.11%（微平均）。这些结果展示了`KNN`在准确预测入侵方面的有效性。
+
+### 21.5.3 逻辑回归
+
+`logistic regression`模型在预测入侵方面表现出高精度，F1 和 F-Beta 评分分别为 86.83%和 88.389%。当使用该分类器进行多类别预测时，模型实现了微平均 F1 评分和微平均 F-Beta 评分为 84.52%。这些结果展示了`logistic regression`在识别入侵方面的有效性，并突出了其在 IDS（入侵检测系统）中的应用潜力。
+
+根据实验结果，该技术仅使用三个特征即可实现 91%的分类准确率，使用全部 36 个特征加上 41 个训练特征则可达到 99%的准确率。这些发现支持该方法的有效性，表明其能够实现最高 99%的分类准确率。结果在图 21.11, 21.12 和 21.13 中展示。
+
+```
+![Figure 21.11 The figure illustrates the performance metrics of binary and multi-class classification utilizing logistic regression.](img/fig21_11_B.jpg)
+```
+
+Figure 21.11 The figure illustrates the performance metrics of binary and multi-class classification utilizing logistic regression.
+
+|  || F1 ||  || Fbeta ||  |
+
+| --- | --- | --- | --- | --- |
+
+| Binary Score || 0.8683753 ||  || 0.88389 ||  |
+
+| --- | --- | --- | --- | --- |
+
+|  || Macro || Micro || Macro || Micro |
+
+| Multi Score || 0.3565048 || 0.845219 || 0.349988 || 0.845219 |
+
+```
+![Figure 21.12 The presented figure illustrates a bar graph depicting the binary score obtained from all three classifiers utilized in the project.](img/fig21_12_B.jpg)
+```
+
+Figure 21.12 The presented figure illustrates a bar graph depicting the binary score obtained from all three classifiers utilized in the project.
+
+```
+![Figure 21.13 The figure presents a bar graph depicting the multi-scores of the three classifiers employed in the project.](img/fig21_13_B.jpg)
+```
+
+Figure 21.13 The figure presents a bar graph depicting the multi-scores of the three classifiers employed in the project.
+
+## 21.6 结论与未来展望
+
+在本研究中，我们对 NSL-KDD 数据集进行了深入分析，并使用三种分类器——`随机森林`、`KNN`和`逻辑回归`——评估其性能。训练结果显示出与以往使用流行数据集的研究相似的高准确率。我们的发现在结果部分得到了详细的说明。
+
+
+
+
+It was observed that although the prominent classifiers used in the well-renowned NSL-KDD data set produced promising results for the training set, their accuracy levels were suboptimal for the test set. This observation highlights the need for further research in developing classifiers that can accurately detect intrusions in the test set. The current intrusion detection model is experiencing a lag in performance on the test dataset, despite exhibiting high accuracy in the training dataset, with true accurate prediction almost reaching 99.8%. The reason behind this under-performance is the presence of outliers in the test dataset. In the forthcoming research, it is suggested to employ techniques with improved optimization to explore the ability to develop a more precise and effective IDS. One promising avenue of investigation involves the use of ensemble-based techniques, where multiple algorithms are combined to generate more robust and accurate results. Moreover, the exploration of alternative classifiers and techniques, such as deep learning models like Artificial Neural Networks (ANNs), Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and clustering algorithms like K-means, could be fruitful. These models can be analyzed and evaluated to identify the most appropriate and effective approach for developing an improved IDS. Ultimately, the success of the IDS model will hinge on its ability to perform well on the test dataset, indicating its reliability and practical utility in real-world settings. There is a critical security challenge as a result of the growth of unauthorized access to and use of network resources. Rapid identification of intrusions is crucial to mitigate the impact on system networks as attacks continue to pose a serious threat. Machine learning classifiers have gained prominence in IDSs due to their flexibility, capacity for generalization, and resilience. Deploying such models on network servers would enhance their robustness and accuracy in detecting attacks on the system.
