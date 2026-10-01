@@ -1,0 +1,186 @@
+name: The Comprehensive Guide to Machine Learning Algorithms and Techniques
+slug: the-comprehensive-guide-to-machine-learning-algorithms-and-t
+name_cn: '
+
+  机器学习算法与技术综合指南'
+toc:
+- - '##'
+  - 数学背景
+- - '##'
+  - 优缺点
+- - '##'
+  - 2.6 神经网络用于回归
+- - '##'
+  - 2.7 GBM（梯度提升机器）
+- - '##'
+  - 2.8 GLM（广义线性模型）
+- - '##'
+  - 2.9 K-邻近回归
+- - '##'
+  - 3 分类算法
+- - '##'
+  - 3.1 Logistic Regression
+- - '##'
+  - 3.2 朴素贝叶斯
+- - '##'
+  - 3.3 支持向量机（SVM）用于分类
+- - '##'
+  - 3.4 决策树用于分类
+- - '##'
+  - 3.5 随机森林用于分类
+- - '##'
+  - 3.6 神经网络用于分类
+- - '##'
+  - 3.7  梯度提升机器（GBM）用于分类
+- - '##'
+  - 3.8  K-最近邻（KNN）用于分类
+- - '##'
+  - 3.9  多类 Naive Bayes
+- - '##'
+  - 4.  聚类算法
+- - '##'
+  - 4.1  K-Means
+- - '##'
+  - 4.3 DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+- - '##'
+  - 4.4 Gaussian Mixture Model (GMM)
+- - '##'
+  - 4.5 Affinity Propagation
+- - '##'
+  - 4.6 Spectral Clustering
+- - '##'
+  - 5.5  Proximal Policy Optimization (PPO)
+- - '##'
+  - 5.6  Trust Region Policy Optimization (TRPO)
+- - '##'
+  - 6  集合方法
+- - '##'
+  - 6.1  提升
+- - '##'
+  - 7.5 独立成分分析（ICA）
+- - '##'
+  - 8 优化算法
+- - '###'
+  - 8.1 粒子群优化（PSO）
+- - '###'
+  - 8.2 遗传算法
+- - '###'
+  - 8.3  梯度搜索
+- - '###'
+  - 8.4  线性规划
+- - '###'
+  - 8.5  整数规划
+- - '###'
+  - 8.6  多臂带纹盗贼
+- - '##'
+  - 9.  计算机视觉算法
+- - '##'
+  - 9.1  CNN（卷积神经网络）
+- - '##'
+  - 9.2 快速 R-CNN（快速区域建议网络）
+- - '##'
+  - 9.3 GANs（生成对抗网络）
+- - '##'
+  - 9.4 YOLO（你只看一次）
+- - '##'
+  - 9.5 ImageNet
+- - '##'
+  - 9.6 U-Net
+- - '##'
+  - 9.7 AlexNet
+- - '##'
+  - 9.8  VGG (Visual Geometry Group)
+- - '##'
+  - 9.9  ResNet (Residual Network)
+- - '##'
+  - 10  Recommender Systems
+- - '##'
+  - 10.1  Collaborative Filtering
+- - '##'
+  - 10.2  Alternating Least Squares (ALS)
+- - '##'
+  - 10.3  Content Filtering
+- - '##'
+  - 10.4  Association Rule
+- - '##'
+  - 10.5  RNN (Recurrent Neural Network)
+- - '##'
+  - 10.6  Two-Tower Model
+- - '##'
+  - 11.  Forecasting Algorithms（预测算法）
+- - '##'
+  - 11.1  ARIMA (AutoRegressive Integrated Moving Average)
+- - '##'
+  - 11.2  SARIMA (Seasonal ARIMA)
+- - '##'
+  - 11.3 SARIMAX（季节性 ARIMA 与外生变量）
+- - '##'
+  - 11.4 指数平滑
+- - '##'
+  - 11.5 DeepAR
+- - '##'
+  - 11.6 BayesDLM (贝叶斯动态线性模型)
+- - '##'
+  - 11.7 N-Beats
+- - '##'
+  - 12 NLP/LLM 算法
+- - '##'
+  - 12.1 RNN (循环神经网络)
+- - '##'
+  - 12.2 LSTM (长短期内存)
+- - '##'
+  - 12.3 BERT（Bidirectional Encoder Representations from Transformers）
+- - '##'
+  - 12.4 GPT（Generative Pre-trained Transformer）
+- - '##'
+  - 12.5 Word2Vec
+- - '##'
+  - 12.6 LaMDA（Language Model for Dialogue Applications）
+- - '##'
+  - 12.7 Llama (Large Language Model for Multimodal Access)
+- - '##'
+  - 12.8 StableLM (Stable and Expressive Language Model)
+- - '##'
+  - 13. 特征选择方法
+- - '##'
+  - 13.1 后向消除
+- - '##'
+  - 13.2 前向选择
+- - '##'
+  - 13.3 步进选择
+- - '##'
+  - 13.4 递归特征消除（RFE）
+- - '##'
+  - 13.5 LASSO（最小绝对收缩和选择算子）
+- - '##'
+  - 13.6 Random Forest Importance
+- - '##'
+  - 13.7 Relief Methods
+- - '##'
+  - 14 Overfitting Prevention Techniques
+- - '##'
+  - 14.1 Cross-Validation
+- - '##'
+  - 14.2 Early Stopping
+- - '##'
+  - 14.3 Regularization (L1, L2)
+- - '##'
+  - 15. 数据平衡技术
+- - '##'
+  - 15.1 随机下采样
+- - '##'
+  - 15.2 合成少数类过采样技术（SMOTE）
+- - '##'
+  - 15.3 自适应合成采样（ADASYN）
+- - '##'
+  - 16. Fine-tune techniques for LLMs
+- - '##'
+  - 16.1 LoRA (Low-Rank Adaptation)
+- - '##'
+  - 16.2 Quantized LoRA (QLoRA)
+- - '##'
+  - 16.3 Parameter Efficient Fine Tuning (PEFT)
+- - '##'
+  - 16.4 DeepSpeed
+- - '##'
+  - 16.5 ZeRO (Zero Redundancy Optimizer)
