@@ -1,0 +1,43 @@
+name: Python Programming for Beginners： Easy Steps to Learn the Python Language and
+  Go from Beginner to Expert Today!
+slug: python-programming-for-beginners-easy-steps-to-learn-the-pyt
+name_cn: '
+
+  Python 入门指南：轻松掌握 Python 语言，从初学者到专家！'
+toc:
+- - '##'
+  - 第 11 章：准备动手实践项目？
+- - '##'
+  - 导入模块
+- - '##'
+  - importing the time module
+- - '##'
+  - print then out the character
+- - '##'
+  - if not found, print a dash
+- - '##'
+  - and increase the failed counter with one
+- - '##'
+  - if failed is equal to zero
+- - '##'
+  - print You Won
+- - '##'
+  - exit the script
+- - '##'
+  - ask the user go guess a character
+- - '##'
+  - set the players guess to guesses
+- - '##'
+  - if the guess is not found in the secret word
+- - '##'
+  - turn's counter decreases with 1 (now 9)
+- - '##'
+  - print wrong
+- - '##'
+  - how many turns are left
+- - '##'
+  - if the turns are equal to zero
+- - '##'
+  - print "You Loose"
+- - '##'
+  - Conclusion
