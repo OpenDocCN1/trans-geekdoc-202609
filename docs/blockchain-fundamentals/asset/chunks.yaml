@@ -1,0 +1,1893 @@
+- raw: "\n\n# Blockchain Fundamentals\n\n# A Gentle Intro to Blockchain Technology\n\
+    \nAlessandro Parisi\n\n© 2021 Alessandro Parisi \n\n# Introducing the Blockchain\n\
+    \nEssentially, the *Blockchain* is a\n\n*   **distributed** archive\n\n*   based\
+    \ on **peer-to-peer** networks\n\n*   implemented through **encryption**\n\nAs\
+    \ a **distributed and decentralized archive**, aimed at managing the transfers\
+    \ of digital *assets*, the Blockchain allows users to exchange digital values\
+    \ with each other in the form of transactions.\n\nIn this way, there is no need\
+    \ to resort to third parties/authorities which guarantee transactions.\n\nLet’s\
+    \ now see the Blockchain goals and how they are met by the underlying technology.\n\
+    \n## Blockchain’s Goals\n\nBlockchain technology was originally introduced to\
+    \ support Bitcoin.\n\nThe main purpose was to prevent the phenomenon of **double\
+    \ spending** of cryptocurrencies, i.e. the possibility of spending the same currency\
+    \ several times.\n\nHowever, the role of the Blockchain is not limited to the\
+    \ financial transaction sector.\n\nIn general, each transaction involving digital\
+    \ values can be recorded within a distributed ledger.\n\n## Blockchain technology\n\
+    \nBlockchain technology can take different forms and implementations.\n\nTherefore,\
+    \ it represents more a concept of an architectural nature than a specific and\
+    \ well-defined technology.\n\nEach different implementation can also provide specific\
+    \ features and functionalities, such as the execution of smart contracts.\n\n\
+    ### Blockchain transactions\n\nThe exchange of values between the counterparties\
+    \ within the Blockchain takes place by recurring to transactions.\n\nThe transactions\
+    \ are validated by the network of blockchain nodes, before being inserted into\
+    \ the distributed ledger.\n\nOnce appended to the ones already registered within\
+    \ the ledger, transactions become unalterable and unchangeable.\n\n### Blockchain’s\
+    \ blocks\n\nBy its very nature, as the name itself shows, the Blockchain is nothing\
+    \ more than a **chain of blocks.**\n\nEach block within the Blockchain contains\
+    \ one or more transactions.\n\nThe addition of new blocks to the Blockchain takes\
+    \ place on the basis of predetermined time elapses.\n\nIn this way, it is possible\
+    \ to keep the overall history of transactions, by tracing the sequence of registrations\
+    \ made on the blocks.\n\n### The distributed ledger\n\nIn accounting terms, the\
+    \ blockchain can be considered a **distributed** and decentralized ledger, known\
+    \ precisely as the “distributed ledger”.\n\nThe management of the ledger takes\
+    \ place through the use of **consensus protocols**, which are designed to achieve\
+    \ the network’s consent on the transactions recorded within the ledger.\n\nThere\
+    \ are different types of consensus protocols, as much as there are different implementations\
+    \ of the blockchain.\n\nAmong the most common consensus protocols we can mention\
+    \ the **Proof of Work** (PoW), the **Proof of Stake** (PoS) and the **Proof of\
+    \ Authority** ( PoA).\n\n# Blockchain core concepts\n\nWe’ll now introduce the\
+    \ concepts on which Blockchain technology is based, such as distributed archiving,\
+    \ decentralized peer-to-peer networks, transparency and irreversibility of transactions.\n\
+    \n## Distributed Archiving\n\nThe ability to store data within a distributed database\
+    \ allows each participant to access the complete transaction history.\n\nIn addition,\
+    \ distributed archiving prevents a single entity from taking full control over\
+    \ the archived information.\n\nDistributed archiving allows individual nodes to\
+    \ directly and independently verify the integrity of the information stored.\n\
+    \nIt is therefore not necessary to use third parties or intermediaries to carry\
+    \ out the verification of transactions.\n\nThe verification of the integrity of\
+    \ the information is in fact implemented through the hashing functions.\n\nLet’s\
+    \ now see how peer-to-peer networks help implement distributed storaging of transactions\
+    \ in the Blockchain.\n\n## Peer-to-peer networks\n\nTo implement distributed storage,\
+    \ the blockchain uses **Peer-to-peer** (P2P) networks.\n\nIn this type of network,\
+    \ no node assumes the role of central server.\n\nOn the contrary, in a P2P network\
+    \ each node assumes the role respectively of client and server when appropriate.\n\
+    \n![](media/file0.png)\n\nP2P network\n\n## Transactions transparency\n\nEach\
+    \ transaction and its associated value are publicly visible to all network participants.\n\
+    \nThe counterparties of a transaction are identified by their respective **addresses**,\
+    \ consisting of alphanumeric sequences.\n\nEach transaction is subjected to a\
+    \ number of confirmations by the miners nodes, before being validated and inserted\
+    \ into the distributed ledger.\n\n## Transactions Irreversibility\n\nAfter being\
+    \ entered into a block and added to the blockchain, transactions are no longer\
+    \ modifiable.\n\nThis result is achieved by concatenating togheter the different\
+    \ blocks that make up the blockchain.\n\nAny modification to the transactions\
+    \ already archived in the ledger would in fact lead to the alteration of the calculated\
+    \ previously hashes.\n\nThis alteration would be immediately evident to all the\
+    \ nodes in the network that would therefore prevent transaction confirmation.\n\
+    \n# Centralized versus Decentralized networks\n\nAs we have seen, one of the basic\
+    \ principles of the Blockchain involves the use of a **Peer-to-peer** network\
+    \ communication protocol, in order to achieve **the decentralized storage** of\
+    \ the information.\n\nTo understand the advantages associated with decentralized\
+    \ networks, we will first introduce traditional centralized networks, analyzing\
+    \ their main characteristics, then comparing them with decentralized peer-to-peer\
+    \ networks.\n\n## Centralized networks (Client-Server)\n\nIn the following image,\
+    \ we show a typical example of a **centralized** network:\n\n![](media/file1.png)\n\
+    \nCentralized network\n\nThe main feature of these types of networks is the presence\
+    \ of a **central node**, acting as the **server node**.\n\nClient nodes can connect\
+    \ only to the central server to get the information they need.\n\nLet’s now see\
+    \ some examples of centralized networks, assessing their pros & cons.\n\n### Centralized\
+    \ networks: examples\n\nA typical example of a centralized network is represented\
+    \ by traditional client-server web connections.\n\nThe main advantage of a centralized\
+    \ network is represented by the **simplicity of implementation, maintenance and\
+    \ updating** of this architectural model.\n\nThe necessary information is stored\
+    \ and updated in a single central node (the server) which makes it available to\
+    \ clients.\n\n### Centralized networks: limitations\n\nThe fundamental limitation\
+    \ of centralized networks is represented by the fact that in the event of a malfunction\
+    \ or compromise of the central node (for example due to cyber attacks), the information\
+    \ contained therein is no longer available and accessible by the entire network.\n\
+    \nIn addition, in centralized networks the server node assumes and retains full\
+    \ control over information.\n\nDue to these limitations, the Blockchain adopts\
+    \ a decentralized network communication protocol to achieve its own functionality.\n\
+    \n## Decentralized (Peer-to-peer) networks\n\nBy definition, in a decentralized\
+    \ network there is no central node that assumes the role of control authority\
+    \ of information sharing.\n\nIn contrast, in a peer to peer network protocol,\
+    \ each individual node is able to interchangeably play the roles of client and\
+    \ server.\n\nThe decentralized model therefore allows each node of the network\
+    \ to autonomously contribute to the sharing and verification of information.\n\
+    \n![](media/file0.png)\n\nP2P network\n\nThis model therefore makes the presence\
+    \ of a central information control authority superfluous.\n\n### Blockchain &\
+    \ Decentralized networks\n\nThe characteristics of decentralized networks are\
+    \ essential for realizing the features of the blockchain.\n\nOne of the key advantages\
+    \ of the blockchain is in fact the decision-making decentralization on the verification,\
+    \ validation and insertion of transactions within the blockchain."
+  fmt: "\n\n# Blockchain Fundamentals\n\n# A Gentle Intro to Blockchain Technology\n\
+    \nAlessandro Parisi\n\n© 2021 Alessandro Parisi \n\n# Introducing the Blockchain\n\
+    \nEssentially, the `Blockchain` is a\n\n`distributed` archive\n\n`peer-to-peer`\
+    \ networks\n\n`encryption`\n\nAs a `distributed and decentralized archive`, aimed\
+    \ at managing the transfers of digital `assets`, the `Blockchain` allows users\
+    \ to exchange digital values with each other in the form of transactions.\n\n\
+    In this way, there is no need to resort to third parties/authorities which guarantee\
+    \ transactions.\n\nLet’s now see the Blockchain goals and how they are met by\
+    \ the underlying technology.\n\n## Blockchain’s Goals\n\nBlockchain technology\
+    \ was originally introduced to support Bitcoin.\n\nThe main purpose was to prevent\
+    \ the phenomenon of `double spending` of cryptocurrencies, i.e. the possibility\
+    \ of spending the same currency several times.\n\nHowever, the role of the Blockchain\
+    \ is not limited to the financial transaction sector.\n\nIn general, each transaction\
+    \ involving digital values can be recorded within a distributed ledger.\n\n##\
+    \ Blockchain technology\n\nBlockchain technology can take different forms and\
+    \ implementations.\n\nTherefore, it represents more a concept of an architectural\
+    \ nature than a specific and well-defined technology.\n\nEach different implementation\
+    \ can also provide specific features and functionalities, such as the execution\
+    \ of `smart contracts`.\n\n### Blockchain transactions\n\nThe exchange of values\
+    \ between the counterparties within the Blockchain takes place by recurring to\
+    \ transactions.\n\nThe transactions are validated by the network of blockchain\
+    \ nodes, before being inserted into the distributed ledger.\n\nOnce appended to\
+    \ the ones already registered within the ledger, transactions become unalterable\
+    \ and unchangeable.\n\n### Blockchain’s blocks\n\nBy its very nature, as the name\
+    \ itself shows, the Blockchain is nothing more than a `chain of blocks.`\n\nEach\
+    \ block within the Blockchain contains one or more transactions.\n\nThe addition\
+    \ of new blocks to the Blockchain takes place on the basis of predetermined time\
+    \ elapses.\n\nIn this way, it is possible to keep the overall history of transactions,\
+    \ by tracing the sequence of registrations made on the blocks.\n\n### The distributed\
+    \ ledger\n\nIn accounting terms, the blockchain can be considered a `distributed`\
+    \ and decentralized ledger, known precisely as the “distributed ledger”.\n\nThe\
+    \ management of the ledger takes place through the use of `consensus protocols`,\
+    \ which are designed to achieve the network’s consent on the transactions recorded\
+    \ within the ledger.\n\nThere are different types of consensus protocols, as much\
+    \ as there are different implementations of the blockchain.\n\nAmong the most\
+    \ common consensus protocols we can mention the `Proof of Work` (`PoW`), the `Proof\
+    \ of Stake` (`PoS`) and the `Proof of Authority` (`PoA`).\n\n# Blockchain core\
+    \ concepts\n\nWe’ll now introduce the concepts on which Blockchain technology\
+    \ is based, such as distributed archiving, decentralized peer-to-peer networks,\
+    \ transparency and irreversibility of transactions.\n\n## Distributed Archiving\n\
+    \nThe ability to store data within a distributed database allows each participant\
+    \ to access the complete transaction history.\n\nIn addition, distributed archiving\
+    \ prevents a single entity from taking full control over the archived information.\n\
+    \nDistributed archiving allows individual nodes to directly and independently\
+    \ verify the integrity of the information stored.\n\nIt is therefore not necessary\
+    \ to use third parties or intermediaries to carry out the verification of transactions.\n\
+    \nThe verification of the integrity of the information is in fact implemented\
+    \ through the hashing functions.\n\nLet’s now see how peer-to-peer networks help\
+    \ implement distributed storaging of transactions in the Blockchain.\n\n## Peer-to-peer\
+    \ networks\n\nTo implement distributed storage, the blockchain uses `Peer-to-peer`\
+    \ (`P2P`) networks.\n\nIn this type of network, no node assumes the role of central\
+    \ server.\n\nOn the contrary, in a P2P network each node assumes the role respectively\
+    \ of client and server when appropriate.\n\n![](media/file0.png)\n\nP2P network\n\
+    \n## Transactions transparency\n\nEach transaction and its associated value are\
+    \ publicly visible to all network participants.\n\nThe counterparties of a transaction\
+    \ are identified by their respective `addresses`, consisting of alphanumeric sequences.\n\
+    \nEach transaction is subjected to a number of confirmations by the miners nodes,\
+    \ before being validated and inserted into the distributed ledger.\n\n## Transactions\
+    \ Irreversibility\n\nAfter being entered into a block and added to the blockchain,\
+    \ transactions are no longer modifiable.\n\nThis result is achieved by concatenating\
+    \ togheter the different blocks that make up the blockchain.\n\nAny modification\
+    \ to the transactions already archived in the ledger would in fact lead to the\
+    \ alteration of the calculated previously hashes.\n\nThis alteration would be\
+    \ immediately evident to all the nodes in the network that would therefore prevent\
+    \ transaction confirmation.\n\n# Centralized versus Decentralized networks\n\n\
+    As we have seen, one of the basic principles of the Blockchain involves the use\
+    \ of a `Peer-to-peer` network communication protocol, in order to achieve `the\
+    \ decentralized storage` of the information.\n\nTo understand the advantages associated\
+    \ with decentralized networks, we will first introduce traditional centralized\
+    \ networks, analyzing their main characteristics, then comparing them with decentralized\
+    \ peer-to-peer networks.\n\n## Centralized networks (Client-Server)\n\nIn the\
+    \ following image, we show a typical example of a `centralized` network:\n\n![](media/file1.png)\n\
+    \nCentralized network\n\nThe main feature of these types of networks is the presence\
+    \ of a `central node`, acting as the `server node`.\n\nClient nodes can connect\
+    \ only to the central server to get the information they need.\n\nLet’s now see\
+    \ some examples of centralized networks, assessing their pros & cons.\n\n### Centralized\
+    \ networks: examples\n\nA typical example of a centralized network is represented\
+    \ by traditional client-server web connections.\n\nThe main advantage of a centralized\
+    \ network is represented by the `simplicity of implementation, maintenance and\
+    \ updating` of this architectural model.\n\nThe necessary information is stored\
+    \ and updated in a single central node (the server) which makes it available to\
+    \ clients.\n\n### Centralized networks: limitations\n\nThe fundamental limitation\
+    \ of centralized networks is represented by the fact that in the event of a malfunction\
+    \ or compromise of the central node (for example due to cyber attacks), the information\
+    \ contained therein is no longer available and accessible by the entire network.\n\
+    \nIn addition, in centralized networks the server node assumes and retains full\
+    \ control over information.\n\nDue to these limitations, the Blockchain adopts\
+    \ a decentralized network communication protocol to achieve its own functionality.\n\
+    \n## Decentralized (Peer-to-peer) networks\n\nBy definition, in a decentralized\
+    \ network there is no central node that assumes the role of control authority\
+    \ of information sharing.\n\nIn contrast, in a peer to peer network protocol,\
+    \ each individual node is able to interchangeably play the roles of client and\
+    \ server.\n\nThe decentralized model therefore allows each node of the network\
+    \ to autonomously contribute to the sharing and verification of information.\n\
+    \n![](media/file0.png)\n\nP2P network\n\nThis model therefore makes the presence\
+    \ of a central information control authority superfluous.\n\n### Blockchain &\
+    \ Decentralized networks\n\nThe characteristics of decentralized networks are\
+    \ essential for realizing the features of the blockchain.\n\nOne of the key advantages\
+    \ of the blockchain is in fact the decision-making decentralization on the verification,\
+    \ validation and insertion of transactions within the blockchain.\n\n"
+  trans: "\n# 区块链基础\n\n# 区块链技术入门\n\nAlessandro Parisi\n\n© 2021 Alessandro Parisi\
+    \ \n\n# 介绍区块链\n\n本质上，`Blockchain` 是一个\n\n`distributed` 归档\n\n`peer-to-peer` 网络\n\
+    \n`encryption`\n\n作为一个 `distributed and decentralized` 归档，旨在管理数字 `assets` 的转移，`Blockchain`\
+    \ 允许用户以交易的形式相互交换数字值。\n\n通过这种方式，无需依赖第三方/权威机构来保证交易。\n\n下面我们来了解区块链的目标以及底层技术是如何实现这些目标的。\n\
+    \n## 区块链的目标\n\n区块链技术最初是为了支持 Bitcoin 而被提出的。\n\n其主要目的是防止 `double spending`（即同一加密货币被多次花费）的现象。\n\
+    \n然而，区块链的作用并不局限于金融交易领域。\n\n一般而言，任何涉及数字值的交易都可以记录在分布式账本中。\n\n## 区块链技术\n\n区块链技术可以采取多种形式和实现方式。\n\
+    \n因此，它更多是一种架构概念，而非特定且明确的技术。\n\n每种不同的实现也可以提供特定的功能和特性，例如执行 `smart contracts`。\n\n\
+    ### 区块链交易\n\n区块链内部的双方价值交换通过交易（transactions）实现。\n\n这些交易在区块链节点网络验证后，才会被写入分布式账本。\n\
+    \n一旦交易被添加到账本中已有的记录，交易即变得不可篡改且不可更改。\n\n### 区块链的区块\n\n从名称本身就能看出，区块链本质上是一个 `chain\
+    \ of blocks`（区块链）。\n\n每个区块中包含一个或多个交易。\n\n新区块的加入遵循预定义的时间间隔。\n\n通过这种方式，可以通过追踪区块上登记的交易序列，保持整个交易历史的记录。\n\
+    \n### 分布式账本\n\n在会计术语中，区块链可以被视为 `distributed` 和去中心化的账本，即所谓的“分布式账本”。\n\n账本的管理通过\
+    \ `consensus protocols`（共识协议）来完成，这些协议设计用于在账本中记录的交易上达成网络一致。\n\n共识协议种类繁多，与区块链的实现形式同样多样。其中最常见的共识协议包括\
+    \ `Proof of Work`（`PoW`）、`Proof of Stake`（`PoS`）和 `Proof of Authority`（`PoA`）。\n\
+    \n# 区块链核心概念\n\n我们现在将介绍区块链技术基于的核心概念，如分布式存储、去中心化的点对点网络、交易的透明性以及不可逆性。\n\n## 分布式存储\n\
+    \n能够在分布式数据库中存储数据，使得每个参与者都能访问完整的交易历史。\n\n此外，分布式存储防止任何单一实体完全控制已存档的信息。\n\n分布式存储让各个节点能够直接且独立地验证所存储信息的完整性。\n\
+    \n因此，无需使用第三方或中介机构来验证交易。\n\n信息完整性的验证实际上是通过哈希函数实现的。\n\n下面我们来看看点对点网络如何帮助在区块链中实现交易的分布式存储。\n\
+    \n## 点对点网络\n\n为了实现分布式存储，区块链使用 `Peer-to-peer`（`P2P`）网络。\n\n在该类型网络中，没有节点充当中央服务器的角色。\n\
+    \n相反，在 P2P 网络中，每个节点在需要时可分别充当客户端和服务器的角色。\n\n![](img/file0.png)\n\nP2P 网络\n\n##\
+    \ 交易透明性\n\n每笔交易及其关联的价值对所有网络参与者均公开可见。\n\n交易的对等方通过其各自的 `addresses`（由字母数字序列组成）进行识别。\n\
+    \n在被写入分布式账本并得到确认之前，每笔交易都需要由矿工节点进行若干次确认。\n\n## 交易不可逆性\n\n一旦交易被写入区块并加入区块链，就不再可修改。\n\
+    \n这一结果是通过将构成区块链的各个区块逐一拼接起来实现的。\n\n对已存档交易进行修改会导致先前计算的哈希值被改变，这将立即被网络中所有节点察觉，从而阻止交易确认。\n\
+    \n# 集中化与去中心化网络\n\n如前所述，区块链的基本原则之一是使用 `Peer-to-peer` 网络通信协议，以实现信息的 `去中心化存储`。\n\n\
+    为了理解去中心化网络的优势，我们首先介绍传统的集中化网络，分析其主要特征，然后将其与点对点网络进行比较。\n\n## 集中化网络（客户端-服务器）\n\n\
+    下面的图展示了典型的 `centralized` 网络：\n\n![](img/file1.png)\n\n集中化网络\n\n这类网络的主要特征是存在一个\
+    \ `central node`（中心节点），它充当 `server node`（服务器节点）。\n\n客户端节点只能连接到中心服务器以获取所需信息。\n\n\
+    下面我们来看一些集中化网络的例子，并评估其优缺点。\n\n### 集中化网络：例子\n\n典型的集中化网络例子是传统的客户端-服务器式网页连接。\n\n集中化网络的主要优势在于其\
+    \ `实现、维护和更新的简便性`。\n\n所需信息存储和更新在单一的中心节点（服务器）中，并向客户端提供。\n\n### 集中化网络：局限性\n\n集中化网络的根本局限性在于，如果中心节点发生故障或被\
+    \ compromise（例如受到网络攻击），其中包含的信息将不再对整个网络可用和可访问。\n\n此外，在集中化网络中，服务器节点拥有并完全控制信息。\n\n\
+    基于这些局限性，区块链采用去中心化网络通信协议来实现其功能。\n\n## 去中心化（点对点）网络\n\n按定义，去中心化网络中不存在充当信息共享控制权威的中心节点。\n\
+    \n相反，在点对点网络协议中，每个节点都能够在适当时互换客户端和服务器的角色。\n\n去中心化模型使得网络中的每个节点能够自主地参与信息的共享和验证。\n\n\
+    ![](img/file0.png)\n\nP2P 网络\n\n该模式使得中心化信息控制权威变得多余。\n\n### 区块链与去中心化网络\n\n去中心化网络的特性对于实现区块链的功能至关重要。\n\
+    \n区块链的一个关键优势是其在交易验证、有效性确认以及将交易写入区块链中的决策去中心化。\n\n"
+  toc: []
+- raw: 'These decisions are then condensed within the blocks, which constitute the
+    building blocks of the blockchain.
+
+
+    # Blocks, the building elements of Blockchain
+
+
+    The Blockchain, as the name states, is nothing more than a **chain of blocks**.
+
+
+    The simplest unit of a blockchain is in fact constituted by the block.
+
+
+    Each block contains within it a certain number of transactions that represent
+    the transfers of values ​​between the counterparties, carried out within the blockchain.
+
+
+    ## Blocks and transactions
+
+
+    Each block contains batches of transactions with their hashes.
+
+
+    The number of transactions contained in a block depends on the **block size**.
+
+
+    The average size of a block is about 1 MB, but it can even reach larger sizes,
+    as in the case of Ethereum.
+
+
+    In Bitcoin, a block contains **more than 500 transactions on average**
+
+
+    Let’s now see how the **block time** affects the size and the number of transactions
+    that can be embedded inside a block.
+
+
+    ## Blockchain block time
+
+
+    Each blockchain has its own **block time**, i.e. the approximate amount of time
+    required to add a new block to the Blockchain.
+
+
+    The **block time** affects the **number of transactions** that are inserted within
+    the single block.
+
+
+    For example, if the blockchain had a blocking time of five minutes, and there
+    were only four transactions completed during those five minutes, the block will
+    consequently contain only those four transactions.
+
+
+    ### Block time and number of transactions
+
+
+    In the event that there are too many transactions compared to the block size,
+    the transactions should wait for a block still open, which has enough space left
+    to accommodate and insert them within it.
+
+
+    In the case of Bitcoin, the blocking time is 10 minutes.
+
+
+    This value derives from the limits set in the Bitcoin source code.
+
+
+    These limits in turn derive from the objective of issuing no more than 21 million
+    bitcoins in the period between 2009 and 2024.
+
+
+    Remunerations for miners are reduced accordingly by half every four years.
+
+
+    ## The structure of the blocks
+
+
+    Each block consists of a **header** and a **list of transactions.**
+
+
+    Each block includes the hash of the previous block, thus the blocks as a whole
+    constitute a chain that connects all the blocks together.
+
+
+    The first block of the Blockchain is called “genesis block”.
+
+
+    ### Block header
+
+
+    The block structure is represented by the block header.
+
+
+    ![](media/file2.png)
+
+
+    Bitcoin block header
+
+
+    This data structure contains a series of information relating to blocks, also
+    known as metadata.
+
+
+    *   Hash of the previous block: this value is required to compute the corresponding
+    hash of the new block to be added to the blockchain;
+
+
+    *   Merkle root: it is the hash value associated with the root node of the transaction
+    tree, which acts as a check on the validity of the block;
+
+
+    *   Timestamp: it’s the time stamp assigned to the block;
+
+
+    *   Nonce: an arbitrary value that is used in block mining.
+
+
+    The blocks are stored in a tree structure known as the Merkle tree.
+
+
+    # Blockchain transactions - Nature and characteristics
+
+
+    The Blockchain, as the name states, is nothing more than a **chain of blocks**.
+
+
+    The simplest unit of a blockchain is in fact constituted by the block.
+
+
+    Each block contains within it a certain number of transactions that represent
+    the transfers of values ​​between the counterparties, carried out within the blockchain.
+
+
+    Transactions must undergo the confirmation phase by miners, which are rewarded
+    for their work in bitcoins. Without confirmation, no transaction can be convalidated.
+
+
+    ![](media/file3.png)
+
+
+    Blockchain overall process
+
+
+    ## Transactions and Distributed Ledger
+
+
+    One of the characteristics of Blockchain is that it makes the intervention of
+    intermediaries in transactions superfluous.
+
+
+    People can carry out transactions without third parties being involved. The shared
+    ledger itself manages and ensures the **integrity** and **reliability** of transactions
+    between the parties.
+
+
+    The ledger is maintained and updated in a distributed manner by all participants
+    in the blockchain, and all nodes taking part of the networks can verify the reliability
+    of transactions without resorting to trusted third parties.
+
+
+    Let’s now see the characteristics of the **distributed ledger** and the ways in
+    which it is managed.
+
+
+    ## Distributed Ledger
+
+
+    From the accounting point of view, the ledger is simply a cronologically held
+    register of economic transactions.
+
+
+    It is analogous to the ledger commonly used by banks and other financial institutions,
+    to reconcile the accounting balances.
+
+
+    All the charges and credits during an accounting period are calculated to prepare
+    the accounting balance.
+
+
+    The balance sheets of banks, financial institutions and businesses, are compiled
+    using accounting records within a ledger.
+
+
+    When we conduct a traditional financial transaction using fiat currency, we have
+    a third party ledger that keeps information about each transaction.
+
+
+    Some of these third-party trust systems are traditionally represented by banking
+    and financial institutions (such as VISA, MasterCard, and so on).
+
+
+    Blockchain has radically changed the management methods of this accounting system,
+    making all the network operators participate in the preparation of the ledger.
+
+
+    This is why the ledger is also called **distributed ledger**: all those who carry
+    out a transaction in the blockchain, also have access to the registration of other
+    transactions that have occurred, or that are taking place in the blockchain.
+
+
+    The data structure employed in the implementation of the distributed ledger is
+    known as the *merkle tree*:
+
+
+    ![](media/file4.jpg)
+
+
+    Merkle tree
+
+
+    Basically, it traces the structure of a tree, whose leaves correspond to the different
+    transactions recorded within the ledger; for each path, starting from the root
+    node, the corresponding hash values ​​are calculated, the references of which
+    are stored inside the blocks.
+
+
+    Since each transaction is linked to the previous ones, any subsequent changes
+    would be immediately recognizable by anyone, simply by recalculating the corresponding
+    hash values.
+
+
+    Being distributed, this decentralized ledger provides several confirmations of
+    authenticity for each transaction that has occurred.
+
+
+    One of the key properties of blockchain technology is that it encourages a **global**
+    and **shared** concept of **trust** in transactions.
+
+
+    # Assuring transactions integrity
+
+
+    How is the integrity of transactions guaranteed within the Blockchain?
+
+
+    This is what we will deal with now, analyzing the different cryptographic features,
+    such as **hashing** and **hash digests**, highlighting the differences that exist
+    with the actual encryption algorithms.
+
+
+    Finally, we will show a practical example of calculating a hash digest using the
+    class of SHA algorithms used in the implementation of the Blockchain, using simple
+    tools available online.
+
+
+    ## Hash digests: the fingerprints of the blocks
+
+
+    Let’s start by showing the hash digests, considered the “fingerprints” of the
+    blocks of the Blockchain.
+
+
+    As we have said, the integrity of transactions within the blockchain is achieved
+    through the use of hash functions.
+
+
+    Hash functions constitute a class of algorithms that make it computationally unlikely
+    that different alphanumeric strings will give rise to equal hash values.
+
+
+    Hashing algorithms are specifically designed to be sensitive to even the slightest
+    variations in the input data.
+
+
+    ### Encryption and Hashing: Differences
+
+
+    An interesting property of hashing algorithms is that they are not reversible,
+    unlike cryptographic algorithms.
+
+
+    **Reversible** here means that it is possible to convert an encrypted text into
+    its original plaintext, using the decrypting function, which is the inverse of
+    the encrypting function:
+
+
+    ![](media/file5.jpg)
+
+
+    Encrpytion and decryption
+
+
+    Unlike cryptography, there is no reverse function for hashing.
+
+
+    This means that we cannot convert the calculated hash value to its original input,
+    as hashing is a one-way process by definition.'
+  fmt: '
+
+    These decisions are then condensed within the blocks, which constitute the building
+    blocks of the blockchain.
+
+
+    # Blocks, the building elements of Blockchain
+
+
+    The Blockchain, as the name states, is nothing more than a `chain of blocks`.
+
+
+    The simplest unit of a blockchain is in fact constituted by the `block`.
+
+
+    Each `block` contains within it a certain number of `transactions` that represent
+    the transfers of values between the counterparties, carried out within the blockchain.
+
+
+    ## Blocks and transactions
+
+
+    Each `block` contains batches of `transactions` with their hashes.
+
+
+    The number of `transactions` contained in a `block` depends on the `block size`.
+
+
+    The average size of a `block` is about 1 MB, but it can even reach larger sizes,
+    as in the case of Ethereum.
+
+
+    In Bitcoin, a `block` contains more than 500 `transactions` on average
+
+
+    Let’s now see how the `block time` affects the size and the number of `transactions`
+    that can be embedded inside a `block`.
+
+
+    ## Blockchain block time
+
+
+    Each blockchain has its own `block time`, i.e. the approximate amount of time
+    required to add a new `block` to the Blockchain.
+
+
+    The `block time` affects the `number of transactions` that are inserted within
+    the single `block`.
+
+
+    For example, if the blockchain had a blocking time of five minutes, and there
+    were only four `transactions` completed during those five minutes, the `block`
+    will consequently contain only those four `transactions`.
+
+
+    ### Block time and number of transactions
+
+
+    In the event that there are too many `transactions` compared to the `block size`,
+    the `transactions` should wait for a `block` still open, which has enough space
+    left to accommodate and insert them within it.
+
+
+    In the case of Bitcoin, the blocking time is 10 minutes.
+
+
+    This value derives from the limits set in the Bitcoin source code.
+
+
+    These limits in turn derive from the objective of issuing no more than 21 million
+    bitcoins in the period between 2009 and 2024.
+
+
+    Remunerations for miners are reduced accordingly by half every four years.
+
+
+    ## The structure of the blocks
+
+
+    Each `block` consists of a `header` and a `list of transactions.`
+
+
+    Each `block` includes the hash of the previous `block`, thus the `blocks` as a
+    whole constitute a chain that connects all the `blocks` together.
+
+
+    The first `block` of the Blockchain is called “genesis block”.
+
+
+    ### Block header
+
+
+    The `block` structure is represented by the `block header`.
+
+
+    ![](media/file2.png)
+
+
+    Bitcoin `block header`
+
+
+    This data structure contains a series of information relating to `blocks`, also
+    known as metadata.
+
+
+    *   Hash of the previous `block`: this value is required to compute the corresponding
+    hash of the new `block` to be added to the blockchain;
+
+
+    *   Merkle root: it is the hash value associated with the root node of the `transaction`
+    tree, which acts as a check on the validity of the `block`;
+
+
+    *   Timestamp: it’s the time stamp assigned to the `block`;
+
+
+    *   Nonce: an arbitrary value that is used in `block` mining.
+
+
+    The `blocks` are stored in a tree structure known as the Merkle tree.
+
+
+    # Blockchain transactions - Nature and characteristics
+
+
+    The Blockchain, as the name states, is nothing more than a `chain of blocks`.
+
+
+    The simplest unit of a blockchain is in fact constituted by the `block`.
+
+
+    Each `block` contains within it a certain number of `transactions` that represent
+    the transfers of values between the counterparties, carried out within the blockchain.
+
+
+    `transactions` must undergo the confirmation phase by miners, which are rewarded
+    for their work in bitcoins. Without confirmation, no `transaction` can be convalidated.
+
+
+    ![](media/file3.png)
+
+
+    Blockchain overall process
+
+
+    ## Transactions and Distributed Ledger
+
+
+    One of the characteristics of Blockchain is that it makes the intervention of
+    intermediaries in `transactions` superfluous.
+
+
+    People can carry out `transactions` without third parties being involved. The
+    shared ledger itself manages and ensures the **integrity** and **reliability**
+    of `transactions` between the parties.
+
+
+    The ledger is maintained and updated in a distributed manner by all participants
+    in the blockchain, and all nodes taking part of the networks can verify the reliability
+    of `transactions` without resorting to trusted third parties.
+
+
+    Let’s now see the characteristics of the **distributed ledger** and the ways in
+    which it is managed.
+
+
+    ## Distributed Ledger
+
+
+    From the accounting point of view, the ledger is simply a cronologically held
+    register of economic `transactions`.
+
+
+    It is analogous to the ledger commonly used by banks and other financial institutions,
+    to reconcile the accounting balances.
+
+
+    All the charges and credits during an accounting period are calculated to prepare
+    the accounting balance.
+
+
+    The balance sheets of banks, financial institutions and businesses, are compiled
+    using accounting records within a ledger.
+
+
+    When we conduct a traditional financial `transaction` using fiat currency, we
+    have a third party ledger that keeps information about each `transaction`.
+
+
+    Some of these third-party trust systems are traditionally represented by banking
+    and financial institutions (such as VISA, MasterCard, and so on).
+
+
+    Blockchain has radically changed the management methods of this accounting system,
+    making all the network operators participate in the preparation of the ledger.
+
+
+    This is why the ledger is also called **distributed ledger**: all those who carry
+    out a `transaction` in the blockchain, also have access to the registration of
+    other `transactions` that have occurred, or that are taking place in the blockchain.
+
+
+    The data structure employed in the implementation of the distributed ledger is
+    known as the `merkle tree`:
+
+
+    ![](media/file4.jpg)
+
+
+    Merkle tree
+
+
+    Basically, it traces the structure of a tree, whose leaves correspond to the different
+    `transactions` recorded within the ledger; for each path, starting from the root
+    node, the corresponding hash values are calculated, the references of which are
+    stored inside the `blocks`.
+
+
+    Since each `transaction` is linked to the previous ones, any subsequent changes
+    would be immediately recognizable by anyone, simply by recalculating the corresponding
+    hash values.
+
+
+    Being distributed, this decentralized ledger provides several confirmations of
+    authenticity for each `transaction` that has occurred.
+
+
+    One of the key properties of blockchain technology is that it encourages a **global**
+    and **shared** concept of **trust** in `transactions`.
+
+
+    # Assuring transactions integrity
+
+
+    How is the integrity of `transactions` guaranteed within the Blockchain?
+
+
+    This is what we will deal with now, analyzing the different cryptographic features,
+    such as **hashing** and **hash digests**, highlighting the differences that exist
+    with the actual encryption algorithms.
+
+
+    Finally, we will show a practical example of calculating a hash digest using the
+    class of SHA algorithms used in the implementation of the Blockchain, using simple
+    tools available online.
+
+
+    ## Hash digests: the fingerprints of the blocks
+
+
+    Let’s start by showing the hash digests, considered the “fingerprints” of the
+    `blocks` of the Blockchain.
+
+
+    As we have said, the integrity of `transactions` within the blockchain is achieved
+    through the use of hash functions.
+
+
+    Hash functions constitute a class of algorithms that make it computationally unlikely
+    that different alphanumeric strings will give rise to equal hash values.
+
+
+    Hashing algorithms are specifically designed to be sensitive to even the slightest
+    variations in the input data.
+
+
+    ### Encryption and Hashing: Differences
+
+
+    An interesting property of hashing algorithms is that they are not reversible,
+    unlike cryptographic algorithms.
+
+
+    **Reversible** here means that it is possible to convert an encrypted text into
+    its original plaintext, using the decrypting function, which is the inverse of
+    the encrypting function:
+
+
+    ![](media/file5.jpg)
+
+
+    Encryption and decryption
+
+
+    Unlike cryptography, there is no reverse function for hashing.
+
+
+    This means that we cannot convert the calculated hash value to its original input,
+    as hashing is a one-way process by definition.
+
+    '
+  trans: '
+
+    这些决定随后被压缩在块中，而块构成了区块链的构建单元。
+
+
+    # 块，区块链的构建元素
+
+
+    区块链，顾名思义，仅仅是一个 `块链`。
+
+
+    区块链的最简单单元实际上是由 `块` 构成的。
+
+
+    每个 `块` 内包含一定数量的 `交易`，这些交易代表了在区块链内部对双方之间进行的价值转移。
+
+
+    ## 块和交易
+
+
+    每个 `块` 包含若干 `交易` 的批次及其哈希值。
+
+
+    `块` 中包含的 `交易` 数量取决于 `块大小`。
+
+
+    平均 `块` 大小约为 1 MB，但也可能更大，例如在以太坊的情况下。
+
+
+    在比特币中，`块` 平均包含超过 500 个 `交易`。
+
+
+    让我们现在看看 `块时间` 如何影响能够嵌入单个 `块` 中的 `交易` 数量和大小。
+
+
+    ## 区块链块时间
+
+
+    每个区块链都有自己的 `块时间`，即添加新 `块` 到区块链所需的时间大约是多少。
+
+
+    `块时间` 影响了单个 `块` 内插入的 `交易` 数量。
+
+
+    例如，如果区块链的 `块时间` 为五分钟，且在这五分钟内仅完成了四个 `交易`，那么 `块` 将只包含这四个 `交易`。
+
+
+    ### 块时间与交易数量
+
+
+    当 `交易` 数量超过 `块大小` 时，这些 `交易` 需要等待一个仍然打开的 `块`，该 `块` 仍有足够的空间容纳并插入它们。
+
+
+    在比特币的情况下，`块时间` 为 10 分钟。
+
+
+    这个值来源于比特币源代码中设定的限制。
+
+
+    这些限制源自于在 2009 年至 2024 年期间最多发行 2100 万比特币的目标。
+
+
+    矿工的报酬相应地每四年减半。
+
+
+    ## 块的结构
+
+
+    每个 `块` 由 `头`（header）和 `交易列表` 组成。
+
+
+    每个 `块` 包含前一个 `块` 的哈希值，因此整个 `块` 链将所有 `块` 连接在一起。
+
+
+    区块链的第一个 `块` 称为“创世块”。
+
+
+    ### 块头
+
+
+    `块` 的结构由 `块头` 表示。
+
+
+    ![](img/file2.png)
+
+
+    比特币 `块头`
+
+
+    该数据结构包含一系列与 `块` 相关的信息，也称为元数据。
+
+
+    *   前一个 `块` 的哈希值：该值用于计算即将添加到区块链的新 `块` 的相应哈希值；
+
+
+    *   Merkle 根：它是与 `交易` 树根节点相关联的哈希值，用于检查 `块` 的有效性；
+
+
+    *   时间戳：它是分配给 `块` 的时间戳；
+
+
+    *   Nonce：一个任意值，用于 `块` 挖矿时使用。
+
+
+    `块` 存储在一种称为 Merkle 树的树结构中。
+
+
+    # 区块链交易 - 本质和特征
+
+
+    区块链，顾名思义，仅仅是一个 `块链`。
+
+
+    区块链的最简单单元实际上是由 `块` 构成的。
+
+
+    每个 `块` 内包含一定数量的 `交易`，这些交易代表了在区块链内部对双方之间进行的价值转移。
+
+
+    `交易` 必须经过矿工的确认阶段，矿工因其工作而获得比特币奖励。没有确认，任何 `交易` 都无法被验证。
+
+
+    ![](img/file3.png)
+
+
+    区块链整体流程
+
+
+    ## 交易和分布式账本
+
+
+    区块链的一个特点是它使得 `交易` 中介的介入变得多余。
+
+
+    人们可以在没有第三方参与的情况下进行 `交易`。共享账本本身管理并确保参与方之间 `交易` 的 **完整性** 和 **可靠性**。
+
+
+    账本由区块链的所有参与者以分布式方式维护和更新，所有参与网络的节点都可以在不诉诸于可信第三方的情况下验证 `交易` 的可靠性。
+
+
+    让我们现在看看 **分布式账本** 的特性以及它是如何被管理的。
+
+
+    ## 分布式账本
+
+
+    从会计角度来看，账本仅仅是按时间顺序保存的经济 `交易` 登记册。
+
+
+    它类似于银行和其他金融机构常用的账本，用于调节会计余额。
+
+
+    账户期间的所有借方和贷方都会计算以准备会计余额。
+
+
+    银行、金融机构和企业的资产负债表是使用账本内的会计记录编制的。
+
+
+    当我们使用法币进行传统的 `交易` 时，我们有一个第三方账本来记录每个 `交易` 的信息。
+
+
+    一些传统的第三方信任系统传统上由银行和金融机构（如 VISA、MasterCard 等）代表。
+
+
+    区块链彻底改变了这种会计系统的管理方式，使得所有网络操作者都参与账本的编制。
+
+
+    因此，账本也被称为 **分布式账本**：所有在区块链中进行 `交易` 的人也可以访问区块链中其他 `交易` 的登记，或正在发生的 `交易`。
+
+
+    用于实现分布式账本的数据结构被称为 `Merkle 树`：
+
+
+    ![](img/file4.jpg)
+
+
+    Merkle 树
+
+
+    基本上，它追踪树结构，其叶子对应于账本中记录的不同 `交易`；对于从根节点开始的每一条路径，都会计算相应的哈希值，这些哈希值的引用存储在 `块` 中。
+
+
+    由于每个 `交易` 都与前一个 `交易` 相连，任何后续的变更都会被任何人通过重新计算相应的哈希值轻易识别。
+
+
+    由于其分布式特性，这种去中心化的账本为每个发生的 `交易` 提供了多重真实性确认。
+
+
+    区块链技术的一个关键属性是它鼓励对 `交易` 的 **全球** 和 **共享** **信任** 概念。
+
+
+    ## 确保交易完整性
+
+
+    在区块链中，如何保证 `交易` 的完整性？
+
+
+    我们现在将分析用于实现区块链完整性的各种加密特性，如 **哈希** 和 **哈希摘要**，并突出它们与实际加密算法之间的差异。
+
+
+    最后，我们将使用区块链实现中采用的基于 SHA 算法的类计算哈希摘要的实际示例，使用简单的在线工具。
+
+
+    ### 哈希摘要：区块的指纹
+
+
+    让我们先展示 `块` 的哈希摘要，它们被视为 `块` 的“指纹”。
+
+
+    正如我们所讨论的，区块链中 `交易` 的完整性是通过使用哈希函数实现的。
+
+
+    哈希函数属于一类算法，使得不同的字母数字字符串产生相同哈希值的可能性极低。
+
+
+    哈希算法被专门设计为对输入数据的最微小变化都极为敏感。
+
+
+    ### 加密和哈希：区别
+
+
+    哈希算法的一个有趣属性是它们不可逆，与密码学算法不同。
+
+
+    **可逆**在这里意味着可以使用解密函数将加密文本转换回其原始明文，这是加密函数的逆运算：
+
+
+    ![](img/file5.jpg)
+
+
+    加密与解密
+
+
+    与密码学不同，哈希没有逆函数。
+
+
+    这意味着我们无法将计算出的哈希值转换回其原始输入，因为哈希是由定义的单向过程。
+
+
+    '
+  toc: []
+- raw: 'Now let’s see how the Blockchain exploits the irreversibility characteristics
+    of the hashing algorithms to guarantee the integrity of transactions.
+
+
+    ### Hashing and transaction integrity
+
+
+    Hashing algorithms are designed to prevent **collisions**, i.e. the possibility
+    of obtaining the same hash value for two different input strings.
+
+
+    Thanks to these features, hashes can be considered a kind of **data fingerprint**:
+    any variation, even minimal, in the original data will result in a very different
+    calculated hashing value.
+
+
+    Making use of hash functions within the blockchain, anyone can verify the integrity
+    of blocks and transactions by calculating their corresponding hash values ​​and
+    comparing them with the values ​​stored within the blockchain.
+
+
+    There are several families of hashing algorithms: the bitcoin Blockchain adopts
+    the SHA-256 hashing algorithm.
+
+
+    ### SHA hash value: calculation example
+
+
+    In the example below, we see how the hash value generated by the hashing algorithm
+    radically changes even in the case of minimal changes in the input data.
+
+
+    The images below show the results obtained using the hashing tool available online
+    at www.sha1-online.com
+
+
+    ![](media/file6.png)
+
+
+    SHA256 digest ex.1
+
+
+    ![](media/file7.png)
+
+
+    SHA256 digest ex.2
+
+
+    As it is easy to notice from the output produced, even minimal variations in the
+    input strings determine completely different output values, that are not easily
+    attributable to the original ones.
+
+
+    # Achieving Trust in a Distributed environment
+
+
+    One of the most interesting tasks of the Blockchain concerns the goal of achieving
+    the shared consensus of the network on the **global state** of the transactions
+    recorded in the distributed ledger.
+
+
+    That of shared consensus represents one of the classic problems of computer science
+    relating to distributed systems.
+
+
+    As we have seen previously, the Blockchain is nothing more than a particular implementation
+    of a distributed storage system; as such, many of the solutions adopted by the
+    Blockchain reproduce the solutions commonly adopted by distributed systems.
+
+
+    First of all, distributed systems must provide a consensus protocol that is “fault-tolerant”,
+    meaning that it is robust and capable of tolerating any malfunctions, to ensure
+    that a common consensus can be reached on the state of the system as a whole.
+
+
+    By reaching a consensus on the global status of the transactions stored in the
+    ledger, all the players in the distributed system consequently share a common
+    “truth” on which to place their “trust”.
+
+
+    Achieving consensus is fundamental in a distributed system, in order to share
+    a common “truth”, to which to attribute “trust”.
+
+
+    Let’s now see the most common consensus protocols. ## Proof of Work (PoW)
+
+
+    In the PoW consensus protocol, the nodes of the Blockchain must employ high computational
+    resources to solve mathematical challenges of increasing difficulty, required
+    in order to reach the consensus on transactions.
+
+
+    The PoW, in fact, generates a hash value of a given length, and the goal of the
+    nodes is to discover the input value that gave rise to this hash value.
+
+
+    Since, as we have seen previously, the values ​​calculated by hashing algorithms
+    are **not reversible**, to solve these challenges it is necessary to proceed “by
+    brute force”, that is, it is necessary to proceed **by trial and error**.
+
+
+    This results in a lot of computational work by the block validation nodes (hence
+    the name “Proof of Work”).
+
+
+    The node that finds the solution to the math challenge sends it to the rest of
+    the network for verification by the other nodes (in the Bitcoin blockchain, these
+    nodes are called “miners”, and they receive a reward for their activity, which
+    is quantified in units or fractions of bitcoins).
+
+
+    The logic of the PoW is to make adding a new block to the chain computationally
+    difficult and onerous, thus reducing the possibility for anyone of being able
+    to modify the transaction ledger.
+
+
+    Then, once the solution found by the node has been verified, the block created
+    can be inserted into the blockchain.
+
+
+    The length of the blockchain increases accordingly, reflecting the computational
+    effort (PoW) it took to reach the current size.
+
+
+    Therefore, the consensus on which of the local copies of the blockchain should
+    be considered the updated one, is reached simply by selecting the longest chain,
+    which is consequently attributed the trust of the network.
+
+
+    Given the characteristics of the PoW, it is very difficult to modify a block (thus
+    altering the transactions within it) once it has been inserted into the blockchain,
+    and this difficulty increases as the length of the chain increases.
+
+
+    The advantages of PoW are not without costs, both in terms of the time required
+    to validate the blocks, and the electricity required to meet the required computational
+    load.
+
+
+    To try to address these disadvantages, the alternative consensus mechanism known
+    as Proof of Stake (PoS) has been proposed.
+
+
+    ## Proof of Stake (PoS)
+
+
+    In the case of the PoS protocol, digital signatures are used instead of hash values,
+    and the node that was authorized to create the next block to be included in the
+    blockchain is selected, based on the amount of investment made by that node in
+    the network.
+
+
+    Block validation is rewarded by attributing financial commissions to the nodes
+    that contributed to the validation.
+
+
+    ## Proof of Authority (PoA)
+
+
+    Unlike previous mechanisms, the Proof of Authority (PoA) protocol is a consensus
+    mechanism that works in the presence of a limited number of transaction validation
+    nodes.
+
+
+    Its use is therefore considered more appropriate in permissioned blockchains,
+    rather than in public blockchains.
+
+
+    In the case of PoA, consensus is reached on the basis of the greater trust (authority)
+    recognized in these nodes.
+
+
+    # The problem of the Byzantine Generals
+
+
+    One of the classical coordination problems, most studied in the field of computer
+    science and distributed systems, is known as the “Byzantine Generals” problem.
+
+
+    The problem concerns the achievement of consensus by the Generals who surrounded
+    the enemy, on the moment in which to launch the attack all together, to guarantee
+    the success of the military operation.
+
+
+    The problem lies in the fact that Generals can communicate with each other remotely,
+    through the reciprocal exchange of messages.
+
+
+    Each General decides whether to attack or retreat, communicating their decision
+    to the others by sending messengers.
+
+
+    Among these, however, there may be “traitors”, who prevent with their behavior
+    to reach shared and unanimous consent, by sending contradictory messages to others.
+
+
+    The final aim, in fact, is to reach a shared consensus on the action to be undertaken
+    all together, to attack or withdraw, avoiding a disordered behavior, which would
+    determine a sure failure.
+
+
+    ### Byzantine Generals problem in the context of the Blockchain
+
+
+    The problem of the Byzantine Generals arises in the context of the Blockchain
+    in relation to the need to choose the correct version of the ledger, which preserves
+    the real history of transactions.
+
+
+    In the blockchain, this choice occurs in the presence of nodes that cannot communicate
+    correctly with others, or of dishonest nodes that intend to cheat on the correct
+    version of the transaction history, thus making it difficult to reach consensus
+    within the network.
+
+
+    ## What solution to the problem of the Byzantine generals?
+
+
+    The problem of the Byzantine Generals therefore represents a problem of coordination
+    on how to reach shared consensus in the presence of possible errors (represented
+    by the conflicting messages sent by the “infidel” Generals).
+
+
+    This coordination problem also arises in achieving consensus on Blockchain transactions.
+
+
+    Therefore, it is necessary to implement a consensus protocol capable of maintaining
+    its reliability even in the presence of “unfaithful” nodes.'
+  fmt: '
+
+    Now let’s see how the Blockchain exploits the irreversibility characteristics
+    of the hashing algorithms to guarantee the integrity of transactions.
+
+
+    ### Hashing and transaction integrity
+
+
+    Hashing algorithms are designed to prevent `collisions`, i.e. the possibility
+    of obtaining the same hash value for two different input strings.
+
+
+    Thanks to these features, hashes can be considered a kind of `data fingerprint`:
+    any variation, even minimal, in the original data will result in a very different
+    calculated hashing value.
+
+
+    Making use of hash functions within the blockchain, anyone can verify the integrity
+    of blocks and transactions by calculating their corresponding hash values and
+    comparing them with the values stored within the blockchain.
+
+
+    There are several families of hashing algorithms: the bitcoin Blockchain adopts
+    the `SHA-256` hashing algorithm.
+
+
+    ### SHA hash value: calculation example
+
+
+    In the example below, we see how the hash value generated by the hashing algorithm
+    radically changes even in the case of minimal changes in the input data.
+
+
+    The images below show the results obtained using the hashing tool available online
+    at `www.sha1-online.com`
+
+
+    ![](media/file6.png)
+
+
+    SHA256 digest ex.1
+
+
+    ![](media/file7.png)
+
+
+    SHA256 digest ex.2
+
+
+    As it is easy to notice from the output produced, even minimal variations in the
+    input strings determine completely different output values, that are not easily
+    attributable to the original ones.
+
+
+    # Achieving Trust in a Distributed environment
+
+
+    One of the most interesting tasks of the Blockchain concerns the goal of achieving
+    the shared consensus of the network on the `global state` of the transactions
+    recorded in the distributed ledger.
+
+
+    That of shared consensus represents one of the classic problems of computer science
+    relating to distributed systems.
+
+
+    As we have seen previously, the Blockchain is nothing more than a particular implementation
+    of a distributed storage system; as such, many of the solutions adopted by the
+    Blockchain reproduce the solutions commonly adopted by distributed systems.
+
+
+    First of all, distributed systems must provide a consensus protocol that is “fault-tolerant”,
+    meaning that it is robust and capable of tolerating any malfunctions, to ensure
+    that a common consensus can be reached on the state of the system as a whole.
+
+
+    By reaching a consensus on the global status of the transactions stored in the
+    ledger, all the players in the distributed system consequently share a common
+    “truth” on which to place their “trust”.
+
+
+    Achieving consensus is fundamental in a distributed system, in order to share
+    a common “truth”, to which to attribute “trust”.
+
+
+    Let’s now see the most common consensus protocols. ## Proof of Work (PoW)
+
+
+    In the PoW consensus protocol, the nodes of the Blockchain must employ high computational
+    resources to solve mathematical challenges of increasing difficulty, required
+    in order to reach the consensus on transactions.
+
+
+    The PoW, in fact, generates a hash value of a given length, and the goal of the
+    nodes is to discover the input value that gave rise to this hash value.
+
+
+    Since, as we have seen previously, the values calculated by hashing algorithms
+    are `not reversible`, to solve these challenges it is necessary to proceed “by
+    brute force”, that is, it is necessary to proceed `by trial and error`.
+
+
+    This results in a lot of computational work by the block validation nodes (hence
+    the name “Proof of Work”).
+
+
+    The node that finds the solution to the math challenge sends it to the rest of
+    the network for verification by the other nodes (in the Bitcoin blockchain, these
+    nodes are called “miners”, and they receive a reward for their activity, which
+    is quantified in units or fractions of bitcoins).
+
+
+    The logic of the PoW is to make adding a new block to the chain computationally
+    difficult and onerous, thus reducing the possibility for anyone of being able
+    to modify the transaction ledger.
+
+
+    Then, once the solution found by the node has been verified, the block created
+    can be inserted into the blockchain.
+
+
+    The length of the blockchain increases accordingly, reflecting the computational
+    effort (PoW) it took to reach the current size.
+
+
+    Therefore, the consensus on which of the local copies of the blockchain should
+    be considered the updated one, is reached simply by selecting the longest chain,
+    which is consequently attributed the trust of the network.
+
+
+    Given the characteristics of the PoW, it is very difficult to modify a block (thus
+    altering the transactions within it) once it has been inserted into the blockchain,
+    and this difficulty increases as the length of the chain increases.
+
+
+    The advantages of PoW are not without costs, both in terms of the time required
+    to validate the blocks, and the electricity required to meet the required computational
+    load.
+
+
+    To try to address these disadvantages, the alternative consensus mechanism known
+    as Proof of Stake (PoS) has been proposed.
+
+
+    ## Proof of Stake (PoS)
+
+
+    In the case of the PoS protocol, digital signatures are used instead of hash values,
+    and the node that was authorized to create the next block to be included in the
+    blockchain is selected, based on the amount of investment made by that node in
+    the network.
+
+
+    Block validation is rewarded by attributing financial commissions to the nodes
+    that contributed to the validation.
+
+
+    ## Proof of Authority (PoA)
+
+
+    Unlike previous mechanisms, the Proof of Authority (PoA) protocol is a consensus
+    mechanism that works in the presence of a limited number of transaction validation
+    nodes.
+
+
+    Its use is therefore considered more appropriate in permissioned blockchains,
+    rather than in public blockchains.
+
+
+    In the case of PoA, consensus is reached on the basis of the greater trust (authority)
+    recognized in these nodes.
+
+
+    # The problem of the Byzantine Generals
+
+
+    One of the classical coordination problems, most studied in the field of computer
+    science and distributed systems, is known as the “Byzantine Generals” problem.
+
+
+    The problem concerns the achievement of consensus by the Generals who surrounded
+    the enemy, on the moment in which to launch the attack all together, to guarantee
+    the success of the military operation.
+
+
+    The problem lies in the fact that Generals can communicate with each other remotely,
+    through the reciprocal exchange of messages.
+
+
+    Each General decides whether to attack or retreat, communicating their decision
+    to the others by sending messengers.
+
+
+    Among these, however, there may be “traitors”, who prevent with their behavior
+    to reach shared and unanimous consent, by sending contradictory messages to others.
+
+
+    The final aim, in fact, is to reach a shared consensus on the action to be undertaken
+    all together, to attack or withdraw, avoiding a disordered behavior, which would
+    determine a sure failure.
+
+
+    ### Byzantine Generals problem in the context of the Blockchain
+
+
+    The problem of the Byzantine Generals arises in the context of the Blockchain
+    in relation to the need to choose the correct version of the ledger, which preserves
+    the real history of transactions.
+
+
+    In the blockchain, this choice occurs in the presence of nodes that cannot communicate
+    correctly with others, or of dishonest nodes that intend to cheat on the correct
+    version of the transaction history, thus making it difficult to reach consensus
+    within the network.
+
+
+    ## What solution to the problem of the Byzantine generals?
+
+
+    The problem of the Byzantine Generals therefore represents a problem of coordination
+    on how to reach shared consensus in the presence of possible errors (represented
+    by the conflicting messages sent by the “infidel” Generals).
+
+
+    This coordination problem also arises in achieving consensus on Blockchain transactions.
+
+
+    Therefore, it is necessary to implement a consensus protocol capable of maintaining
+    its reliability even in the presence of “unfaithful” nodes.
+
+    '
+  trans: '
+
+    让我们看看区块链如何利用哈希算法的不可逆性特征来保证交易的完整性。
+
+
+    ### 哈希与交易完整性
+
+
+    哈希算法的设计是为了防止`collisions`，即获得两个不同输入字符串相同哈希值的可能性。
+
+
+    得益于这些特性，哈希值可以被视为一种`数据指纹`：原始数据的任何变化，即使是最小的，也会导致计算出的哈希值发生很大差异。
+
+
+    在区块链中使用哈希函数，任何人都可以通过计算相应哈希值并与区块链中存储的值进行比较，来验证区块和交易的完整性。
+
+
+    有几种哈希算法家族：比特币区块链采用`SHA-256`哈希算法。
+
+
+    ### SHA 哈希值：计算示例
+
+
+    在下面的示例中，我们看到即使输入数据发生极小的变化，哈希算法生成的哈希值也会发生根本性变化。
+
+
+    下面的图片展示了在在线工具 `www.sha1-online.com` 上使用该工具获得的结果：
+
+
+    ![](img/file6.png)
+
+
+    SHA256 消息摘要示例 1
+
+
+    ![](img/file7.png)
+
+
+    SHA256 消息摘要示例 2
+
+
+    从输出结果中可以明显看出，即使输入字符串发生极小的变化，输出值也会完全不同，且难以追溯到原始值。
+
+
+    # 在分布式环境中实现信任
+
+
+    区块链最有趣的任务之一是实现网络对分布式账本中记录的交易`全局状态`的共识。
+
+
+    共识是分布式系统领域中计算机科学的经典问题之一。
+
+
+    如前所述，区块链本质上是一种分布式存储系统的特殊实现；因此，区块链采用的许多解决方案都反映了分布式系统中常用的解决方案。
+
+
+    首先，分布式系统必须提供一个“容错”共识协议，即能够抵御故障、确保能够就整个系统的状态达成一致的协议。
+
+
+    通过对账本中存储的交易全局状态达成共识，分布式系统中的所有参与者因此共享一个共同的“真相”，基于此可以建立“信任”。
+
+
+    实现共识在分布式系统中至关重要，是为了共享一个共同的“真相”，并将“信任”属性赋予它。
+
+
+    下面我们来看看最常见的共识协议。## 证明工作量（Proof of Work, PoW）
+
+
+    在 PoW 共识协议中，区块链的节点必须使用越来越难的数学挑战来消耗大量计算资源，以达成交易共识。
+
+
+    PoW 实际上生成一个指定长度的哈希值，节点的目标是找出产生该哈希值的输入值。
+
+
+    由于如前所述，哈希算法计算出的值是`不可逆`的，因此解决这些挑战需要“蛮力”，即通过`试错`的方式进行。
+
+
+    这导致区块验证节点（因此得名“Proof of Work”）进行大量计算工作。
+
+
+    找到解决方案的节点会将其结果发送给网络其他节点进行验证（在比特币区块链中，这些节点被称为“矿工”），他们因活动获得以比特币单位或其分数计量的奖励。
+
+
+    PoW 的逻辑是使将新区块添加到链中变得计算上困难且繁琐，从而降低任何人修改交易账本的可能性。
+
+
+    随后，一旦节点找到的解决方案被验证，创建的区块即可插入区块链。
+
+
+    区块链的长度随之增加，反映了达成当前尺寸所需的计算努力（PoW）。
+
+
+    因此，共识是通过简单选择最长链来达成的，这条链因此获得网络的信任。
+
+
+    鉴于 PoW 的特性，一旦区块被插入区块链，修改该区块（从而修改其中的交易）就变得极其困难，且随着链长的增加，这种困难程度会进一步提升。
+
+
+    PoW 的优势并非没有代价，代价体现在验证区块所需的时间以及满足计算负载所需的电力上。
+
+
+    为解决这些缺点，被提议的替代共识机制是 Proof of Stake（PoS）。
+
+
+    ## 证明权益（Proof of Stake, PoS）
+
+
+    在 PoS 协议中，使用数字签名替代哈希值，且被选中创建下一个区块的节点是根据该节点在网络中投入的金额来决定的。
+
+
+    区块验证通过向为验证做出贡献的节点分配财务佣金来获得奖励。
+
+
+    ## 证明权威（Proof of Authority, PoA）
+
+
+    与之前的机制不同，证明权威（PoA）协议是一种在交易验证节点数量有限的情况下运作的共识机制。
+
+
+    因此，其使用被认为更适合**许可链**（permissioned blockchains），而非公开链（public blockchains）。
+
+
+    在 PoA 的情况下，共识基于这些节点所获得的更大信任（权威）。
+
+
+    # 拜占庭将军问题
+
+
+    在计算机科学和分布式系统领域，最著名的协调问题之一是所谓的“拜占庭将军”问题。
+
+
+    该问题涉及围困敌军的将军们达成共识的目标：在何时统一发起攻击以保证军事行动的成功。
+
+
+    问题在于，将军们只能通过远程消息交换进行沟通。
+
+
+    每位将军决定攻击或撤退，并通过派遣使者将其决定告知其他人。
+
+
+    然而，这些使者中可能存在“叛徒”，他们通过发送矛盾的消息阻碍达成一致，从而导致无法达成共识。
+
+
+    最终目标是达成共识，统一行动（攻击或撤退），避免行为混乱导致失败。
+
+
+    ### 拜占庭将军问题在区块链中的应用
+
+
+    拜占庭将军问题在区块链中表现为选择正确账本版本的需求，该版本应保存真实的交易历史。
+
+
+    在区块链环境中，这种选择发生在存在无法正确通信的节点，或恶意节点试图篡改交易历史、使网络难以达成共识的情况下。
+
+
+    ## 如何解决拜占庭将军问题？
+
+
+    拜占庭将军问题因此代表了在存在“叛徒”（即发送矛盾消息的“异端”将军）时，如何协调达成共识的问题。
+
+
+    这个协调问题同样出现在区块链交易达成共识的过程中。
+
+
+    因此，有必要实施一种共识协议，使其即使在存在“不忠”节点的情况下也能保持可靠性。
+
+
+    '
+  toc: []
+- raw: "It has been shown that the Byzantine Generals problem does not admit a solution\
+    \ in the event that the number of infidel generals is equal to or greater than\
+    \ one third of the total.\n\nA consensus protocol capable of resisting the problem\
+    \ of the Byzantine Generals is called Byzantine Fault Tolerant (BFT).\n\nThe Proof\
+    \ of Work consensus protocol demonstrates this capability.\n\nIn the case of the\
+    \ PoW, the problem of the Byzantine Generals is solved by the fact that the protocol\
+    \ does not require the participation of all the nodes of the network to reach\
+    \ consensus.\n\n# The Purpose of Mining\n\nThe ways in which consensus is obtained\
+    \ within the network varies according to the different types of blockchains.\n\
+    \nConsequently, not all consensus mechanisms are suitable for all blockchains.\n\
+    \nIn the case of the Bitcoin’s blockchain, the mechanism for achieving consensus\
+    \ is based on the economic incentive.\n\nNodes are encouraged to help reach consensus\
+    \ on transactions through their mining activity, which is rewarded in the form\
+    \ of bitcoin (as we saw when talking about PoW).\n\nThis system of economic incentives\
+    \ is particularly important for public blockchains, as it allows them to achieve\
+    \ and maintain the sustainability of the architecture itself.\n\n# The different\
+    \ types of Blockchain\n\nThere are different implementations of Blockchain technology,\
+    \ which offer different features and functionalities.\n\nIn fact, blockchains\
+    \ can be differentiated not only based on the consensus protocol adopted, but\
+    \ also for other features, such as the ability to execute smart contracts.\n\n\
+    So let’s see the main types of blockchains currently existing.\n\n### Public blockchain\n\
+    \nA public blockchain is a blockchain in which anyone can join, without the need\
+    \ to obtain permissions based on the role played within the network.\n\nTherefore,\
+    \ public blockchains are also called **permissionless** blockchains.\n\nAmong\
+    \ the examples of public blockchains we can mention Bitcoin, Ethereum, Litecoin\
+    \ and so on.\n\n### Private blockchain\n\nIn private blockchains, read and write\
+    \ permissions within the network are assigned to different groups of users.\n\n\
+    Read permissions are usually public or assigned to an indefinite number of users,\
+    \ while write permissions are reserved for a predetermined group of users or organizations.\n\
+    \nConsequently, the validation of the transactions is entrusted to a predetermined\
+    \ number of nodes.\n\nSome examples of private blockchain include the Gem Health\
+    \ network, Corda, and so on.\n\n### Consortium Blockchain\n\nIn this type of blockchain,\
+    \ consensus management is limited to a predefined group of subjects.\n\nConsequently,\
+    \ there are no incentives or economic rewards for the validation of transactions.\n\
+    \nTransaction validation times are reduced compared to public blockchains.\n\n\
+    Among the examples of blockchain consortium we can mention Deutsche Boerse and\
+    \ R3.\n\n# About the Author\n\nAlessandro Parisi has been an IT professional for\
+    \ over 20 years, acquiring significant experience as a Security Data Scientist,\
+    \ and as an Artificial Intelligence Cybersecurity and Blockchain specialist.\n\
+    \nHe has experience of operating within organizational and decisional contexts\
+    \ characterized by high complexity.\n\nOver the years, he has helped companies\
+    \ to adopt Artificial Intelligence and Blockchain DLT technologies as strategic\
+    \ tools in protecting sensitive corporate assets.\n\nHe holds a Master Degree\
+    \ in Economics and Statistics.\n\nPlease find further info on the professional\
+    \ profile of the Author at the following link:  \n\n[https://www.linkedin.com/in/parisialessandro/](https://www.linkedin.com/in/parisialessandro/)\n\
+    \n# Image Credits\n\nUnless otherwise expressly indicated, the images appearing\
+    \ in the text are available under public domain license and can be found on the\
+    \ Wikipedia commons website (https://commons.wikimedia.org)"
+  fmt: "\nIt has been shown that the Byzantine Generals problem does not admit a solution\
+    \ in the event that the number of infidel generals is equal to or greater than\
+    \ one third of the total.\n\nA consensus protocol capable of resisting the problem\
+    \ of the Byzantine Generals is called Byzantine Fault Tolerant (BFT).\n\nThe Proof\
+    \ of Work consensus protocol demonstrates this capability.\n\nIn the case of the\
+    \ PoW, the problem of the Byzantine Generals is solved by the fact that the protocol\
+    \ does not require the participation of all the nodes of the network to reach\
+    \ consensus.\n\n# The Purpose of Mining\n\nThe ways in which consensus is obtained\
+    \ within the network varies according to the different types of blockchains.\n\
+    \nConsequently, not all consensus mechanisms are suitable for all blockchains.\n\
+    \nIn the case of the Bitcoin’s blockchain, the mechanism for achieving consensus\
+    \ is based on the economic incentive.\n\nNodes are encouraged to help reach consensus\
+    \ on transactions through their mining activity, which is rewarded in the form\
+    \ of bitcoin (as we saw when talking about PoW).\n\nThis system of economic incentives\
+    \ is particularly important for public blockchains, as it allows them to achieve\
+    \ and maintain the sustainability of the architecture itself.\n\n# The different\
+    \ types of Blockchain\n\nThere are different implementations of Blockchain technology,\
+    \ which offer different features and functionalities.\n\nIn fact, blockchains\
+    \ can be differentiated not only based on the consensus protocol adopted, but\
+    \ also for other features, such as the ability to execute smart contracts.\n\n\
+    So let’s see the main types of blockchains currently existing.\n\n### Public blockchain\n\
+    \nA public blockchain is a blockchain in which anyone can join, without the need\
+    \ to obtain permissions based on the role played within the network.\n\nTherefore,\
+    \ public blockchains are also called `permissionless` blockchains.\n\nAmong the\
+    \ examples of public blockchains we can mention `Bitcoin`, `Ethereum`, `Litecoin`\
+    \ and so on.\n\n### Private blockchain\n\nIn private blockchains, read and write\
+    \ permissions within the network are assigned to different groups of users.\n\n\
+    Read permissions are usually public or assigned to an indefinite number of users,\
+    \ while write permissions are reserved for a predetermined group of users or organizations.\n\
+    \nConsequently, the validation of the transactions is entrusted to a predetermined\
+    \ number of nodes.\n\nSome examples of private blockchain include the `Gem Health`\
+    \ network, `Corda`, and so on.\n\n### Consortium Blockchain\n\nIn this type of\
+    \ blockchain, consensus management is limited to a predefined group of subjects.\n\
+    \nConsequently, there are no incentives or economic rewards for the validation\
+    \ of transactions.\n\nTransaction validation times are reduced compared to public\
+    \ blockchains.\n\nAmong the examples of blockchain consortium we can mention `Deutsche\
+    \ Boerse` and `R3`.\n\n# About the Author\n\nAlessandro Parisi has been an IT\
+    \ professional for over 20 years, acquiring significant experience as a Security\
+    \ Data Scientist, and as an Artificial Intelligence Cybersecurity and Blockchain\
+    \ specialist.\n\nHe has experience of operating within organizational and decisional\
+    \ contexts characterized by high complexity.\n\nOver the years, he has helped\
+    \ companies to adopt Artificial Intelligence and Blockchain DLT technologies as\
+    \ strategic tools in protecting sensitive corporate assets.\n\nHe holds a Master\
+    \ Degree in Economics and Statistics.\n\nPlease find further info on the professional\
+    \ profile of the Author at the following link:  \n\n[https://www.linkedin.com/in/parisialessandro/](https://www.linkedin.com/in/parisialessandro/)\n\
+    \n# Image Credits\n\nUnless otherwise expressly indicated, the images appearing\
+    \ in the text are available under public domain license and can be found on the\
+    \ Wikipedia commons website (https://commons.wikimedia.org)\n"
+  trans: '
+
+    -   [拜占庭将军问题](https://en.wikipedia.org/wiki/Byzantine_Generals_problem)在拜占庭将军数量等于或超过总数的三分之一时，不存在解决方案。
+
+
+    -   能够抵御拜占庭将军问题的共识协议称为拜占庭容错 (BFT)。
+
+
+    -   工作证明 (PoW) 共识协议展示了这一能力。
+
+
+    -   在 PoW 的情况下，拜占庭将军问题通过协议不需要网络中所有节点参与达成共识而得到解决。
+
+
+    # 矿业的目的
+
+
+    -   网络内共识的获得方式因区块链类型而异。
+
+
+    -   因此，并非所有共识机制都适用于所有区块链。
+
+
+    -   在比特币区块链的情况下，共识机制基于经济激励。
+
+
+    -   通过矿业活动，节点被激励帮助达成交易共识，奖励以比特币形式发放（正如我们在讨论 PoW 时所看到）。
+
+
+    -   这种经济激励体系对于公共区块链尤为重要，因为它使它们能够实现并维持自身架构的可持续性。
+
+
+    # 区块链的不同类型
+
+
+    -   区块链技术存在不同的实现形式，提供不同的功能和特性。
+
+
+    -   事实上，区块链不仅可以根据所采用的共识协议进行区分，还可以根据其他特性进行区分，例如执行智能合约的能力。
+
+
+    -   因此，让我们来看看当前存在的主要区块链类型。
+
+
+    ### 公共区块链
+
+
+    -   公共区块链是任何人都可以加入的区块链，无需根据网络内所扮演的角色获得权限。
+
+
+    -   因此，公共区块链也被称为 `permissionless`（无需许可）区块链。
+
+
+    -   公共区块链的例子包括 `Bitcoin`、`Ethereum`、`Litecoin` 等。
+
+
+    ### 私有区块链
+
+
+    -   在私有区块链中，网络内的读写权限分配给不同的用户群体。
+
+
+    -   读取权限通常是公开的，或分配给不限定的用户群体，而写入权限则保留给预定义的用户群体或组织。
+
+
+    -   因此，事务验证委托给预定义的节点数量。
+
+
+    -   私有区块链的例子包括 `Gem Health` 网络、`Corda` 等。
+
+
+    ### 联盟区块链
+
+
+    -   在联盟区块链中，共识管理受限于预定义的主体群体。
+
+
+    -   因此，事务验证不存在激励或经济奖励机制。
+
+
+    -   与公共区块链相比，联盟区块链的事务验证时间更短。
+
+
+    -   联盟区块链的例子包括 `Deutsche Boerse` 和 `R3`。
+
+
+    # 作者简介
+
+
+    -   Alessandro Parisi 作为 IT 专业人员已有 20 多年经验，在安全数据科学、人工智能网络安全以及区块链专家方面拥有显著经验。
+
+
+    -   他曾在高度复杂的组织和决策环境中工作。
+
+
+    -   多年来，他帮助企业将人工智能和区块链 DLT 技术作为战略工具，用于保护敏感的企业资产。
+
+
+    -   他拥有经济学与统计学硕士学位。
+
+
+    -   关于作者的详细个人简介请参阅以下链接：
+
+
+    [`www.linkedin.com/in/parisialessandro/`](https://www.linkedin.com/in/parisialessandro/)
+
+
+    # 图片版权
+
+
+    -   除非另有明确说明，文本中出现的图片均在公共领域许可下，可在维基共享资源网站（https://commons.wikimedia.org）查找。
+
+
+    '
+  toc: []
