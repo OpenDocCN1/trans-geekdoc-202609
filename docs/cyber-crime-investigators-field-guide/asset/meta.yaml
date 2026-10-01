@@ -1,0 +1,740 @@
+name: Cyber Crime Investigator’s Field Guide
+slug: cyber-crime-investigators-field-guide
+name_cn: '
+
+  网络犯罪调查员现场指南'
+toc:
+- - '##'
+  - 前言
+- - '##'
+  - 作者简介
+- - '##'
+  - Chapter 1 The initial contact
+- - '###'
+  - Chapter questions
+- - '##'
+  - Chapter 2 Client site arrival
+- - '##'
+  - Chapter 3 Evidence collection procedures
+- - '##'
+  - 你现在坐在受害者的系统前 – 你的做法应该是什么？
+- - '##'
+  - 让我们稍作停顿，看看整体网络图景
+- - '##'
+  - 恶意软件
+- - '###'
+  - 病毒
+- - '####'
+  - 加密
+- - '####'
+  - 程序
+- - '####'
+  - 引导扇区
+- - '####'
+  - 多部分
+- - '####'
+  - 宏
+- - '####'
+  - Stealth
+- - '####'
+  - Hoax
+- - '####'
+  - Polymorphic
+- - '####'
+  - Armored
+- - '####'
+  - Metamorphic
+- - '####'
+  - Worm
+- - '####'
+  - Trojan horse
+- - '####'
+  - Ransomware
+- - '####'
+  - Spyware
+- - '####'
+  - Rootkit
+- - '####'
+  - Spam
+- - '##'
+  - 网络设备
+- - '##'
+  - Microsoft Windows 操作系统和文件系统类型
+- - '##'
+  - 获取硬盘位流备份的详细步骤
+- - '###'
+  - '`Kali Linux`'
+- - '##'
+  - Chapter 4 Evidence collection and analysis tools
+- - '##'
+  - SafeBack
+- - '##'
+  - GetTime
+- - '##'
+  - FileList, FileCnvt, and Excel
+- - '##'
+  - GetFree
+- - '##'
+  - Swap files and GetSwap
+- - '##'
+  - GetSlack
+- - '###'
+  - 临时文件
+- - '###'
+  - Filter_I
+- - '####'
+  - Filter
+- - '####'
+  - Intel
+- - '####'
+  - Names
+- - '#####'
+  - Words
+- - '###'
+  - 关键词生成
+- - '##'
+  - TextSearch Plus
+- - '###'
+  - Doc
+- - '###'
+  - Mcrypt
+- - '###'
+  - Micro-Zap
+- - '###'
+  - Map
+- - '###'
+  - M-Sweep
+- - '###'
+  - Net Threat Analyzer
+- - '##'
+  - AnaDisk
+- - '##'
+  - Seized
+- - '##'
+  - Scrub
+- - '##'
+  - Spaces
+- - '##'
+  - NTFS FileList
+- - '###'
+  - NTFS GetFree
+- - '###'
+  - NTFS GetSlack
+- - '###'
+  - NTFS VIEW
+- - '###'
+  - NTFS Check
+- - '###'
+  - NTIcopy
+- - '###'
+  - DiskSearch 32
+- - '##'
+  - Chapter 5 AccessData’s Forensic Toolkit
+- - '##'
+  - Creating a case
+- - '#'
+  - 1. 进入 `/path.to/xxx` 目录，找到 `xxx.json`
+- - '#'
+  - 2. 犯罪现场拍照步骤
+- - '#'
+  - 3. 确定是否有其他人通过 Solaris 1 远程登录并查看系统近期活动
+- - '#'
+  - 4. 判断 Leopoldl 的来源含义
+- - '#'
+  - 5. 显示所有 TCP/IP 连接
+- - '#'
+  - 6. 获取 Leopold1 的近期登录记录
+- - '#'
+  - 7. 通知 FBI 并进行取证
+- - '##'
+  - 章节问题
+- - '##'
+  - 章节问题
+- - '#'
+  - 第 8 章 密码恢复
+- - '###'
+  - Chapter questions
+- - '##'
+  - Chapter 9 Questions and answers by subject area
+- - '##'
+  - Evidence collection
+- - '##'
+  - 第 10 章 推荐参考资料
+- - '##'
+  - PERL 和 C 脚本
+- - '##'
+  - UNIX、Windows、NetWare、和 Macintosh
+- - '##'
+  - 计算机内部原理
+- - '##'
+  - Websites of interest
+- - '##'
+  - Chapter 11 Case study
+- - '###'
+  - 旅行安全
+- - '###'
+  - 事后影响
+- - '###'
+  - 供应商状态
+- - '###'
+  - 目标
+- - '###'
+  - 让我们跳舞
+- - '###'
+  - Recommendations
+- - '####'
+  - Passwords
+- - '####'
+  - SAM file
+- - '####'
+  - Intrusion Detection Systems
+- - '####'
+  - Insecure CGI Scripts
+- - '####'
+  - BO/BO2K
+- - '##'
+  - Chapter 12 Rail transportation
+- - '##'
+  - ElectrologIXS
+- - '##'
+  - Positive Train Control (PTC)
+- - '##'
+  - Ultra-Cab II
+- - '##'
+  - ITCS
+- - '##'
+  - RailEdge（用于铁路交通管理的软件包……类似于空中交通管制）
+- - '##'
+  - Switch machines
+- - '##'
+  - Wireless crossing
+- - '##'
+  - 英国主要铁路系统
+- - '##'
+  - 第 13 章 后人类主义、机器人与医疗设备
+- - '##'
+  - “State of the Future” Report – Writing of genetic code like a computer program
+- - '##'
+  - 目的在于保护人类免受本章讨论的技术所带来的威胁
+- - '##'
+  - 时间和/或金钱的捐赠者包括惠普公司、Google、Sun Microsystems 以及各类大学教授（例如普林斯顿大学的埃里克·马西金教授），等等
+- - '##'
+  - '“Catastrophe: Risk and Response”'
+- - '###'
+  - 由美国上诉法院法官理查德·波斯纳撰写
+- - '###'
+  - 表示希望在白宫内设立风险与灾难办公室
+- - '##'
+  - Chapter 14 Memory and incident response system commands
+- - '##'
+  - Chapter 15 Making use of open-source intelligence (OSINT)
+- - '##'
+  - 其他与“十四眼”联合合作的情报机构国家包括英国海外领地、以色列、日本、新加坡（不像以前那样多）以及韩国（由于朝北对话加剧，现在不像以前那样多）
+- - '##'
+  - 还有其他“类似”的组别，但相关信息并未公开披露
+- - '###'
+  - 一些使用 Google Dorks 的示例：
+- - '##'
+  - 附录 A 术语表
+- - '##'
+  - Appendix BPort numbers of interest
+- - '##'
+  - Appendix CAttack signatures
+- - '##'
+  - Appendix DUNIX/Linux commands
+- - '##'
+  - Appendix ECisco firewall commands
+- - '##'
+  - PIX command reference
+- - '##'
+  - Appendix FDiscovering unauthorized access to your computer
+- - '##'
+  - Appendix GElectromagnetic field analysis (EFA)
+- - '##'
+  - Appendix HThe intelligence community since 9/11
+- - '##'
+  - 国防情报分析中心 (DIAC)
+- - '##'
+  - 附录 I 章节问题答案
+- - '###'
+  - 第 1 章：初步接触
+- - '###'
+  - 第 2 章：客户现场到达
+- - '###'
+  - 第 3 章：证据收集程序
+- - '###'
+  - 第 4 章：证据收集与分析工具
+- - '##'
+  - 'Chapter 5: AccessData’s forensic tool kit'
+- - '##'
+  - 'Chapter 6: Guidance Software’s EnCase'
+- - '##'
+  - 'Chapter 7: Hook investigator'
+- - '##'
+  - 'Chapter 8: Password recovery'
+- - '##'
+  - Index
+- - '##'
+  - 检测
+- - '##'
+  - DEVCOM
+- - '##'
+  - 偏差
+- - '##'
+  - DHCP
+- - '##'
+  - DHS
+- - '##'
+  - DIA
+- - '##'
+  - DIAC
+- - '##'
+  - 诊断
+- - '##'
+  - 拨号连接
+- - '##'
+  - 词典
+- - '##'
+  - 介电材料
+- - '##'
+  - 差分
+- - '##'
+  - 摘要
+- - '##'
+  - 数字
+- - '##'
+  - 数字智能
+- - '##'
+  - 数字化
+- - '##'
+  - 二极管
+- - '##'
+  - 外交
+- - '##'
+  - 目录
+- - '##'
+  - 指令
+- - '##'
+  - 目录头
+- - '##'
+  - 目录
+- - '##'
+  - 目录名
+- - '##'
+  - 反汇编器
+- - '##'
+  - 分离
+- - '##'
+  - 灾难
+- - '##'
+  - 披露
+- - '##'
+  - Discord 服务器
+- - '##'
+  - 不一致
+- - '##'
+  - 疾病
+- - '##'
+  - 误信息
+- - '##'
+  - 磁盘
+- - '##'
+  - 磁盘复制
+- - '##'
+  - 软盘
+- - '##'
+  - 磁盘
+- - '##'
+  - 磁盘搜索
+- - '##'
+  - 磁盘搜索专业版
+- - '##'
+  - 磁盘签名
+- - '##'
+  - 发送
+- - '##'
+  - 显示写入
+- - '##'
+  - 破坏
+- - '##'
+  - 动态链接库
+- - '##'
+  - DMARC
+- - '##'
+  - Dmares
+- - '##'
+  - DMS
+- - '##'
+  - DMSetup
+- - '##'
+  - DMZ
+- - '##'
+  - DNA
+- - '##'
+  - DNB
+- - '##'
+  - DNS
+- - '##'
+  - DNSBL
+- - '##'
+  - DNS 检查器
+- - '##'
+  - DNS 盘子
+- - '##'
+  - DNSSEC
+- - '##'
+  - 文档
+- - '##'
+  - DocD
+- - '##'
+  - 文档
+- - '##'
+  - DOD
+- - '##'
+  - DoE
+- - '##'
+  - 狗搜
+- - '##'
+  - DOI
+- - '##'
+  - DOJ
+- - '##'
+  - 域名
+- - '##'
+  - 适配器
+- - '##'
+  - 毁灭
+- - '##'
+  - 错误
+- - '##'
+  - 调查
+- - '##'
+  - 调查员
+- - '##'
+  - InvesXCasel
+- - '##'
+  - Invoker
+- - '##'
+  - Iomega
+- - '##'
+  - IoT
+- - '##'
+  - IP
+- - '##'
+  - Ipconfig
+- - '##'
+  - IPFS
+- - '##'
+  - Ipstat
+- - '##'
+  - IR
+- - '##'
+  - IRC
+- - '##'
+  - IRCnet
+- - '##'
+  - Irfanview
+- - '##'
+  - IronPort
+- - '##'
+  - Ironportstore
+- - '##'
+  - ISecurity
+- - '##'
+  - ISO
+- - '##'
+  - ISP
+- - '##'
+  - ISS
+- - '##'
+  - ITCS
+- - '##'
+  - IWatch
+- - '##'
+  - J
+- - '##'
+  - JammerKillah
+- - '##'
+  - Java
+- - '##'
+  - Jnz
+- - '##'
+  - JPEG
+- - '##'
+  - JPG
+- - '##'
+  - Juries
+- - '##'
+  - Justice
+- - '##'
+  - JustSystems
+- - '##'
+  - JustWrite
+- - '##'
+  - K
+- - '##'
+  - Kaggle
+- - '##'
+  - Kali
+- - '##'
+  - Kensington
+- - '##'
+  - KeyLogger
+- - '##'
+  - Keystrokes
+- - '##'
+  - Keyword
+- - '##'
+  - KeywordsBAEl
+- - '##'
+  - 附录 A 术语表
+- - '##'
+  - Appendix BPort numbers of interest
+- - '##'
+  - Appendix CAttack signatures
+- - '##'
+  - Appendix DUNIX/Linux commands
+- - '##'
+  - Appendix ECisco firewall commands
+- - '##'
+  - PIX command reference
+- - '##'
+  - Appendix FDiscovering unauthorized access to your computer
+- - '##'
+  - Appendix GElectromagnetic field analysis (EFA)
+- - '##'
+  - Appendix HThe intelligence community since 9/11
+- - '##'
+  - 国防情报分析中心 (DIAC)
+- - '##'
+  - 附录 I 章节问题答案
+- - '###'
+  - 第 1 章：初步接触
+- - '###'
+  - 第 2 章：客户现场到达
+- - '###'
+  - 第 3 章：证据收集程序
+- - '###'
+  - 第 4 章：证据收集与分析工具
+- - '##'
+  - 'Chapter 5: AccessData’s forensic tool kit'
+- - '##'
+  - 'Chapter 6: Guidance Software’s EnCase'
+- - '##'
+  - 'Chapter 7: Hook investigator'
+- - '##'
+  - 'Chapter 8: Password recovery'
+- - '##'
+  - Index
+- - '##'
+  - 检测
+- - '##'
+  - DEVCOM
+- - '##'
+  - 偏差
+- - '##'
+  - DHCP
+- - '##'
+  - DHS
+- - '##'
+  - DIA
+- - '##'
+  - DIAC
+- - '##'
+  - 诊断
+- - '##'
+  - 拨号连接
+- - '##'
+  - 词典
+- - '##'
+  - 介电材料
+- - '##'
+  - 差分
+- - '##'
+  - 摘要
+- - '##'
+  - 数字
+- - '##'
+  - 数字智能
+- - '##'
+  - 数字化
+- - '##'
+  - 二极管
+- - '##'
+  - 外交
+- - '##'
+  - 目录
+- - '##'
+  - 指令
+- - '##'
+  - 目录头
+- - '##'
+  - 目录
+- - '##'
+  - 目录名
+- - '##'
+  - 反汇编器
+- - '##'
+  - 分离
+- - '##'
+  - 灾难
+- - '##'
+  - 披露
+- - '##'
+  - Discord 服务器
+- - '##'
+  - 不一致
+- - '##'
+  - 疾病
+- - '##'
+  - 误信息
+- - '##'
+  - 磁盘
+- - '##'
+  - 磁盘复制
+- - '##'
+  - 软盘
+- - '##'
+  - 磁盘
+- - '##'
+  - 磁盘搜索
+- - '##'
+  - 磁盘搜索专业版
+- - '##'
+  - 磁盘签名
+- - '##'
+  - 发送
+- - '##'
+  - 显示写入
+- - '##'
+  - 破坏
+- - '##'
+  - 动态链接库
+- - '##'
+  - DMARC
+- - '##'
+  - Dmares
+- - '##'
+  - DMS
+- - '##'
+  - DMSetup
+- - '##'
+  - DMZ
+- - '##'
+  - DNA
+- - '##'
+  - DNB
+- - '##'
+  - DNS
+- - '##'
+  - DNSBL
+- - '##'
+  - DNS 检查器
+- - '##'
+  - DNS 盘子
+- - '##'
+  - DNSSEC
+- - '##'
+  - 文档
+- - '##'
+  - DocD
+- - '##'
+  - 文档
+- - '##'
+  - DOD
+- - '##'
+  - DoE
+- - '##'
+  - 狗搜
+- - '##'
+  - DOI
+- - '##'
+  - DOJ
+- - '##'
+  - 域名
+- - '##'
+  - 适配器
+- - '##'
+  - 毁灭
+- - '##'
+  - 错误
+- - '##'
+  - 调查
+- - '##'
+  - 调查员
+- - '##'
+  - InvesXCasel
+- - '##'
+  - Invoker
+- - '##'
+  - Iomega
+- - '##'
+  - IoT
+- - '##'
+  - IP
+- - '##'
+  - Ipconfig
+- - '##'
+  - IPFS
+- - '##'
+  - Ipstat
+- - '##'
+  - IR
+- - '##'
+  - IRC
+- - '##'
+  - IRCnet
+- - '##'
+  - Irfanview
+- - '##'
+  - IronPort
+- - '##'
+  - Ironportstore
+- - '##'
+  - ISecurity
+- - '##'
+  - ISO
+- - '##'
+  - ISP
+- - '##'
+  - ISS
+- - '##'
+  - ITCS
+- - '##'
+  - IWatch
+- - '##'
+  - J
+- - '##'
+  - JammerKillah
+- - '##'
+  - Java
+- - '##'
+  - Jnz
+- - '##'
+  - JPEG
+- - '##'
+  - JPG
+- - '##'
+  - Juries
+- - '##'
+  - Justice
+- - '##'
+  - JustSystems
+- - '##'
+  - JustWrite
+- - '##'
+  - K
+- - '##'
+  - Kaggle
+- - '##'
+  - Kali
+- - '##'
+  - Kensington
+- - '##'
+  - KeyLogger
+- - '##'
+  - Keystrokes
+- - '##'
+  - Keyword
+- - '##'
+  - KeywordsBAEl
