@@ -1,0 +1,366 @@
+name: Machine Learning in Elixir： Learning to Learn with Nx and Axon
+slug: machine-learning-in-elixir-learning-to-learn-with-nx-and-axo
+name_cn: '
+
+  Nx 和 Axon 实践指南：机器学习入门'
+toc:
+- - '##'
+  - About the Pragmatic Bookshelf
+- - '##'
+  - 为什么选择 Elixir 进行机器学习？
+- - '##'
+  - Who This Book Is For
+- - '###'
+  - 元素级单元操作
+- - '##'
+  - 重新划分标题层级
+- - '##'
+  - 代表世界的表示
+- - '###'
+  - 元素级二元操作
+- - '###'
+  - 减值操作
+- - '##'
+  - Tabular Data
+- - '##'
+  - Images
+- - '##'
+  - Video
+- - '##'
+  - Audio
+- - '##'
+  - Text
+- - '##'
+  - Going from def to defn
+- - '###'
+  - Important Operations in Linear Algebra
+- - '####'
+  - Vector Addition
+- - '####'
+  - Scalar Multiplication
+- - '####'
+  - Transpose
+- - '####'
+  - Linear Transformations
+- - '##'
+  - Thinking Probabilistically
+- - '###'
+  - Reasoning About Uncertainty
+- - '####'
+  - All About Bayes
+- - '###'
+  - 做决策
+- - '###'
+  - 从观察中学习
+- - '##'
+  - 追踪变化
+- - '###'
+  - 理解微分
+- - '###'
+  - 自动微分与 defn
+- - '####'
+  - Wrapping Up
+- - '####'
+  - Footnotes
+- - '###'
+  - 最小化风险以最大化性能
+- - '###'
+  - 定义目标
+- - '####'
+  - 可能性估计
+- - '####'
+  - 跨熵
+- - '####'
+  - 均方误差
+- - '###'
+  - 收敛到解
+- - '####'
+  - 正则化以泛化
+- - '#####'
+  - 过拟合、欠拟合与容量
+- - '###'
+  - 定义正则化
+- - '####'
+  - 复杂度惩罚
+- - '####'
+  - 早停
+- - '##'
+  - 下降梯度
+- - '###'
+  - 获取良好的初始化
+- - '###'
+  - 实现模型
+- - '###'
+  - 定义目标函数
+- - '###'
+  - 向正确方向迈进
+- - '###'
+  - 整合所有组件
+- - '###'
+  - Grid Search
+- - '##'
+  - Wrapping Up
+- - '####'
+  - Footnotes
+- - '#'
+  - 'Chapter 5  '
+- - '##'
+  - Learning Linearly
+- - '###'
+  - Linear Regression with Scholar
+- - '###'
+  - 使用 Scholar 的 Logistic Regression
+- - '###'
+  - 处理非线性数据
+- - '##'
+  - 从周围环境中学习
+- - '##'
+  - 使用聚类
+- - '#'
+  - 一个集群的核心挑战是确定合适的簇数量。
+- - '##'
+  - 决策
+- - '##'
+  - 总结
+- - '####'
+  - Footnotes
+- - '#'
+  - 'Part 2  '
+- - '#'
+  - 'Chapter 6  '
+- - '##'
+  - '理解深度学习的必要性  '
+- - '###'
+  - '维度诅咒  '
+- - '###'
+  - '层级表示  '
+- - '###'
+  - '表示任意函数  '
+- - '###'
+  - 分解神经网络
+- - '####'
+  - 正确掌握术语
+- - '###'
+  - 神经网络的解剖结构
+- - '####'
+  - 输入层
+- - '####'
+  - 隐藏层
+- - '####'
+  - Activations
+- - '####'
+  - Output Layers
+- - '##'
+  - Using Nx to Create a Simple Neural Network
+- - '#'
+  - 生成模型
+- - '##'
+  - 使用数据
+- - '###'
+  - 设计模型
+- - '###'
+  - 模型表示内部
+- - '###'
+  - 训练模型
+- - '###'
+  - 模型评估
+- - '###'
+  - 使用 `Axon` 执行模型
+- - '###'
+  - 总结
+- - '####'
+  - Footnotes
+- - '#'
+  - 'Chapter 7  '
+- - '##'
+  - Identifying Cats and Dogs
+- - '###'
+  - Installing Dependencies
+- - '###'
+  - Building an Input Pipeline
+- - '####'
+  - Memory Efficiency
+- - '####'
+  - Overlapping Execution
+- - '###'
+  - Trying to See with MLPs
+- - '##'
+  - 介绍卷积神经网络
+- - '###'
+  - CNN 的解剖结构
+- - '####'
+  - 卷积层
+- - '####'
+  - 激活函数
+- - '####'
+  - 池化层
+- - '####'
+  - 全连接头（Fully-Connected Head）
+- - '###'
+  - 使用 Axon 实现 CNNs
+- - '###'
+  - 为什么 CNNs 有效
+- - '###'
+  - 改进训练过程
+- - '####'
+  - 数据增强
+- - '###'
+  - 调整模型
+- - '###'
+  - 早停和验证
+- - '##'
+  - Going Beyond Image Classification
+- - '###'
+  - Object Detection（目标检测）
+- - '###'
+  - Image Segmentation（图像分割）
+- - '###'
+  - Beyond Computer Vision（超越计算机视觉）
+- - '##'
+  - Wrapping Up（章节结束）
+- - '####'
+  - Footnotes
+- - '##'
+  - 再次识别猫和狗
+- - '##'
+  - 理解传递学习
+- - '###'
+  - 为何传递学习有效
+- - '###'
+  - 了解何时使用迁移学习
+- - '###'
+  - 利用机器学习生态系统
+- - '###'
+  - 导出 TensorFlow 模型
+- - '####'
+  - 使用 tf2onnx
+- - '####'
+  - 查找预训练的 TensorFlow 模型
+- - '###'
+  - 从 PyTorch 导出模型
+- - '####'
+  - 示例：保存 PyTorch ResNet 模型
+- - '####'
+  - 查找预训练的 PyTorch 模型
+- - '###'
+  - 从 HuggingFace 导出模型
+- - '##'
+  - 9 理解文本
+- - '###'
+  - Classifying Movie Reviews
+- - '###'
+  - Getting the Data
+- - '####'
+  - Tokenizing on Whitespace
+- - '####'
+  - Tokenizing on Characters
+- - '####'
+  - Tokenizing on Bytes
+- - '####'
+  - Tokenizing on Pieces
+- - '####'
+  - Tokenizing and Vectorizing in Elixir
+- - '##'
+  - 介绍循环神经网络（Recurrent Neural Networks）
+- - '###'
+  - 双向发展
+- - '##'
+  - Wrapping Up
+- - '####'
+  - Footnotes
+- - '#'
+  - 'Chapter 10  '
+- - '##'
+  - Predicting Stock Prices
+- - '##'
+  - 调整期望值
+- - '##'
+  - 结束语
+- - '####'
+  - 注释
+- - '##'
+  - 从 RNNs 到 Transformers
+- - '##'
+  - 使用变压器与 Bumblebee
+- - '###'
+  - 安装依赖
+- - '###'
+  - 零射击分类与 BART
+- - '###'
+  - Making Conversation
+- - '###'
+  - Classifying Images
+- - '###'
+  - Fine-Tuning Pre-trained Models
+- - '###'
+  - 仅此而已
+- - '##'
+  - 结束语
+- - '####'
+  - Footnotes
+- - '#'
+  - '第 12 章  '
+- - '##'
+  - 使用自动编码器压缩数据
+- - '##'
+  - 学习结构化的隐空间
+- - '##'
+  - Generating with GANs
+- - '##'
+  - Learning Without Supervision in Practice
+- - '###'
+  - 无监督学习理论
+- - '###'
+  - 状态艺术是什么？
+- - '###'
+  - 自动编码器、VAEs 和 GANs 的应用
+- - '####'
+  - 图像去噪
+- - '####'
+  - 超分辨率
+- - '####'
+  - 异常检测
+- - '##'
+  - 结束语
+- - '####'
+  - 注释
+- - '#'
+  - '第 3 部分  '
+- - '#'
+  - '第 13 章  '
+- - '##'
+  - 决定使用机器学习
+- - '###'
+  - 全文检索 vs. 语义检索
+- - '###'
+  - 机器学习与简单解决方案的比较
+- - '###'
+  - 什么是应用的计算和存储限制？
+- - '###'
+  - 什么是应用的开发和维护限制？
+- - '###'
+  - 选择方案
+- - '###'
+  - 设置应用
+- - '##'
+  - Integrating Nx with Phoenix
+- - '##'
+  - 为数据库添加种子数据
+- - '##'
+  - 构建实时搜索 LiveView
+- - '##'
+  - 结束语
+- - '####'
+  - Footnotes
+- - '#'
+  - 'Chapter 14  '
+- - '##'
+  - Learning from Experience
+- - '##'
+  - Diffusing Innovation
+- - '##'
+  - Talking to Large Language Models
+- - '##'
+  - Compressing Knowledge
+- - '####'
+  - Footnotes
