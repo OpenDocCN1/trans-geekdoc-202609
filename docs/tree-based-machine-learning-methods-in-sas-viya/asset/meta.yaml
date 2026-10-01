@@ -1,0 +1,134 @@
+name: Tree-Based Machine Learning Methods in SAS® Viya®
+slug: tree-based-machine-learning-methods-in-sas-viya
+name_cn: '
+
+  SAS® Viya® 树基机器学习方法'
+toc:
+- - '##'
+  - 这本书涵盖了什么？
+- - '#'
+  - Is This Book for You?
+- - '#'
+  - What Should You Know about the Examples?
+- - '##'
+  - 分割点
+- - '###'
+  - 对名义输入进行划分
+- - '###'
+  - 名义变量的编码方式
+- - '###'
+  - 对有序输入进行划分
+- - '###'
+  - 排名（Ranking）
+- - '###'
+  - 分箱（Binning）
+- - '#'
+  - k-Means 聚类
+- - '##'
+  - 'Figure 3.25: Binning Approximation Properties'
+- - '##'
+  - 'Figure 3.26: Two-Means Clustering'
+- - '##'
+  - 多路分割
+- - '##'
+  - 'Figure 3.27: Binary Split Versus Multi-Way Split'
+- - '#'
+  - 类目标标准属性
+- - '#'
+  - 区间目标标准属性
+- - '##'
+  - 'Figure 3.30: Splitting Criteria in Model Studio'
+- - '##'
+  - 'Figure 3.31: Impurity Reduction'
+- - '##'
+  - 基于杂质的分割标准
+- - '##'
+  - 'Figure 3.32: Gini Impurity Example'
+- - '##'
+  - 分类树的杂质减少准则
+- - '###'
+  - Gini 指数准则
+- - '##'
+  - 'Figure 3.33: Entropy Example'
+- - '###'
+  - 熵准则
+- - '##'
+  - 'Figure 3.34: Relationship of Entropy and Gini Functions'
+- - '###'
+  - 信息增益准则
+- - '#'
+  - 统计检验标准用于回归树
+- - '##'
+  - F 检验
+- - '##'
+  - 分类树和回归树的统计准则
+- - '###'
+  - CHAID
+- - '###'
+  - 用于基于统计检验的分割标准的 Bonferroni 校正
+- - '##'
+  - 注意事项
+- - '##'
+  - 示例
+- - '##'
+  - 以下是需要翻译的文本
+- - '##'
+  - 决策树的优势与劣势
+- - '##'
+  - 决策树的次要用途
+- - '#'
+  - 初步数据分析（IDA）和探索性数据分析（EDA）
+- - '##'
+  - 交互检测
+- - '##'
+  - 识别重要变量
+- - '##'
+  - 模型解释
+- - '##'
+  - 变量选择
+- - '##'
+  - 名值级别合并
+- - '##'
+  - 注意事项
+- - '##'
+  - 示例
+- - '##'
+  - 以下是需要翻译的文本
+- - '#'
+  - 1. 选择预剪枝决策树选项，限制树的生长
+- - '#'
+  - 2. 如何避免决策树的过拟合？
+- - '#'
+  - 3. 哪条陈述是错误的？
+- - '#'
+  - 4. 如果您对决策树超参数一无所知，自动调优可能是一个好的起点。
+- - '###'
+  - 装袋（Bagging）
+- - '###'
+  - 提升（Boosting）
+- - '##'
+  - 以下是需要翻译的文本
+- - '###'
+  - 考虑每次分割的输入数量
+- - '###'
+  - 图 6.24：调参在袋内样本比例
+- - '###'
+  - 最小叶节点大小（计数或比例）
+- - '###'
+  - 图 6.25：调参输入数量
+- - '###'
+  - 图 6.26：调参最小叶节点大小（计数或比例）
+- - '###'
+  - 图 6.27：调参最大深度
+- - '###'
+  - 自动调参超参数
+- - '###'
+  - FOREST 过程
+- - '#'
+  - 'Table 7.1: PaySim 数据字典'
+- - '#'
+  - Additive Ensemble Model
+- - '#'
+  - Perturbing and Combining Boosted Trees
+- - '#'
+  - Avoiding Overfitting in Gradient Boosting
