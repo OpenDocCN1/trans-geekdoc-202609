@@ -1,0 +1,99 @@
+name: Phishing Detection Using Content-Based Image Classification
+slug: phishing-detection-using-content-based-image-classification
+name_cn: '
+
+  内容基于图像分类的网络钓鱼检测'
+toc:
+- - '##'
+  - Preface
+- - '##'
+  - CNN 模型性能评估
+- - '##'
+  - 总结
+- - '##'
+  - 5 Feature Extraction and Representation Learning
+- - '###'
+  - 结构
+- - '###'
+  - 目标
+- - '###'
+  - 使用表示学习进行分类
+- - '####'
+  - 数据准备
+- - '##'
+  - 转换图像为 NumPy 数组
+- - '##'
+  - 使用 CNN 预设架构进行特征提取
+- - '##'
+  - Xception
+- - '##'
+  - 从特征提取过程发送训练数据
+- - '##'
+  - 通过相同的特征提取器过程发送测试数据
+- - '##'
+  - VGG19
+- - '##'
+  - ResNet50
+- - '##'
+  - InceptionV3
+- - '##'
+  - InceptionResNetV2
+- - '##'
+  - MobileNet
+- - '##'
+  - DenseNet121
+- - '###'
+  - 处理类别失衡
+- - '###'
+  - 使用 SMOTE 添加合成数据
+- - '###'
+  - SMOTE Python 实现
+- - '###'
+  - 机器学习分类器
+- - '##'
+  - Performance Assessment of Various Experimentations
+- - '###'
+  - Summary
+- - '##'
+  - 6 Dimensionality Reduction Techniques
+- - '###'
+  - 水平拼接特征：从最后卷积层提取的特征与处理类失衡后，结合三个 CNN 模型
+- - '###'
+  - 水平拼接 PCA 特征：从最后卷积层提取的特征与类失衡处理，结合两个 CNN 模型
+- - '###'
+  - 水平拼接 PCA 特征：从最后卷积层提取的特征与类失衡处理，结合三个 CNN 模型
+- - '###'
+  - 垂直拼接 PCA 特征：从最后卷积层提取的特征与类失衡处理，结合两个 CNN 模型
+- - '###'
+  - Fusing PCA’d Features Vertically Extracted from the Last Convolution Layer and
+    Class Imbalance Treatment in a Combination of Three CNN Models
+- - '###'
+  - Performance Assessment of Various Experimentations
+- - '###'
+  - Summary
+- - '##'
+  - 8 Comparison of Phishing Detection Approaches
+- - '##'
+  - Classification Approaches
+- - '##'
+  - 评估分类实验
+- - '###'
+  - 与最先进技术的最佳模型比较
+- - '##'
+  - 总结
+- - '##'
+  - 9 数字图像处理基础
+- - '##'
+  - Structure
+- - '##'
+  - Objective
+- - '##'
+  - Basics of Digital Image Processing
+- - '###'
+  - What Is a Digital Image?
+- - '###'
+  - Loading and Displaying Images
+- - '##'
+  - References
+- - '##'
+  - Index
