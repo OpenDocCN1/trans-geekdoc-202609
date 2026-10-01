@@ -1,0 +1,558 @@
+name: Artificial Intelligence： A Modern Approach, Global Edition
+slug: artificial-intelligence-a-modern-approach-global-edition
+name_cn: '
+
+  人工智能：现代方法（全球版）'
+toc:
+- - '##'
+  - 前言
+- - '###'
+  - 本版新增内容
+- - '###'
+  - 书籍概览
+- - '###'
+  - '`aima.cs.berkeley.edu`, the Web site for the book, contains'
+- - '###'
+  - '`aima.cs.berkeley.edu`, the cover'
+- - '##'
+  - 关于作者
+- - '####'
+  - 1.3.4 A dose of reality (1966–1973)
+- - '####'
+  - 1.3.5 知识库系统：权力的关键？（1969–1979）
+- - '####'
+  - 1.3.6 AI 成为工业（1980–present）
+- - '###'
+  - 1.3.7 神经网络的回归（1986–至今）
+- - '###'
+  - 1.3.8 AI 采用科学方法（1987–至今）
+- - '####'
+  - 1.3.9 The emergence of intelligent agents (1995–present)
+- - '####'
+  - 1.3.10 The availability of very large data sets (2001–present)
+- - '###'
+  - 1.4 THE STATE OF THE ART
+- - '#'
+  - 自主规划与调度
+- - '#'
+  - 游戏对弈
+- - '#'
+  - 垃圾邮件防治
+- - '#'
+  - 后勤规划
+- - '#'
+  - 机器人
+- - '#'
+  - 机器翻译
+- - '##'
+  - 1.5 SUMMARY
+- - '###'
+  - BIBLIOGRAPHICAL AND HISTORICAL NOTES
+- - '###'
+  - EXERCISES
+- - '###'
+  - 2 INTELLIGENT AGENTS
+- - '###'
+  - 2.1 AGENTS AND ENVIRONMENTS
+- - '###'
+  - '2.2 GOOD BEHAVIOR: THE CONCEPT OF RATIONALITY'
+- - '####'
+  - Rationality
+- - '####'
+  - 万能感知、学习和自主性
+- - '###'
+  - 2.3 THE NATURE OF ENVIRONMENTS
+- - '####'
+  - Specifying the task environment
+- - '####'
+  - Properties of task environments
+- - '###'
+  - 2.4 THE STRUCTURE OF AGENTS
+- - '####'
+  - Agent programs
+- - '####'
+  - Simple reflex agents
+- - '####'
+  - Model-based reflex agents
+- - '####'
+  - Goal-based agents
+- - '####'
+  - Utility-based agents
+- - '####'
+  - Learning agents
+- - '####'
+  - How the components of agent programs work
+- - '###'
+  - 2.5 SUMMARY
+- - '###'
+  - BIBLIOGRAPHICAL AND HISTORICAL NOTES
+- - '###'
+  - EXERCISES
+- - '##'
+  - 2.8 实现一个性能测量环境模拟器，用于如 `Figure 2.2` 所示的吸尘器世界，并按照 `第 38 页` 的描述进行。你的实现应具有模块化设计，以便轻松更改传感器、执行器以及环境属性（如尺寸、形状、污垢位置等）。注意：对于某些编程语言和操作系统，在线代码仓库中可能已经有相应的实现。
+- - '##'
+  - 2.9 在 `Exercise 2.8` 中实现一个简单的吸尘器代理，并用该代理运行吸尘器环境的所有可能初始污垢配置和代理位置。记录每种配置以及整体平均分数的性能得分。
+- - '##'
+  - 2.10 考虑 `Exercise 2.8` 中吸尘器环境的一个变体，其中代理每移动一次会被扣除一个分点。
+- - '###'
+  - a. 简单的反射代理能在该环境中完美理性吗？请解释。
+- - '###'
+  - b. 具有状态的反射代理如何设计？请设计该代理。
+- - '###'
+  - c. 如果代理的感知器能够提供环境中每个格子的清洁/脏污状态，你的 a、b 答案会有何变化？
+- - '##'
+  - 2.11 考虑 `Exercise 2.8` 中吸尘器环境的一个变体，在该变体中，环境的地理（范围、边界和障碍）未知，初始污垢配置也未知。（代理可以上下左右移动。）
+- - '###'
+  - a. 简单的反射代理能在该环境中完美理性吗？请解释。
+- - '###'
+  - b. 简单的反射代理结合随机代理函数能否超越简单的反射代理？设计该代理并测量其在多个环境中的表现。
+- - '###'
+  - c. 你能否设计一个在该随机代理表现不佳的环境？请展示你的结果。
+- - '###'
+  - d. 具有状态的反射代理能否超越简单的反射代理？设计该代理并测量其在多个环境中的表现。你能否设计一种具有理性行为的此类代理？
+- - '##'
+  - 2.12 重复 `Exercise 2.11`，但这次传感器被替换为“碰撞”传感器，该传感器能够检测代理尝试移动进入障碍物或跨越环境边界的尝试。假设碰撞传感器失效，代理应如何行为？
+- - '##'
+  - 2.13 之前的练习中的吸尘器环境均为确定性。讨论以下随机版本的可能代理程序：
+- - '###'
+  - a. 马修斯定律：25% 的时间，Suck（吸尘）动作如果地面脏污则无法清洁，若地面干净则会在地面上散布污垢。如果脏污传感器在 10% 的时间内给出错误的答案，你的代理程序会受到什么影响？
+- - '###'
+  - b. 小孩子：每个时间步，每个干净的格子有 10% 的概率变脏。你能为这种情况设计一种理性的代理吗？
+- - '####'
+  - 3.1.1 定义良好的问题和解
+- - '###'
+  - 3.1.2 问题形式化
+- - '##'
+  - 3.2 EXAMPLE PROBLEMS
+- - '####'
+  - 3.2.1 玩具问题
+- - '####'
+  - 3.2.2 Real-world problems
+- - '#'
+  - 游览问题
+- - '#'
+  - 旅行售货员问题
+- - '#'
+  - 旅行售货员问题（续）
+- - '#'
+  - VLSI 布局
+- - '#'
+  - 机器人导航
+- - '#'
+  - 自动装配序列
+- - '#'
+  - 蛋白质设计
+- - '##'
+  - 3.3 寻找解决方案
+- - '#'
+  - 搜索树
+- - '#'
+  - 节点
+- - '#'
+  - 展开
+- - '#'
+  - 生成
+- - '#'
+  - 父节点
+- - '#'
+  - 子节点
+- - '#'
+  - 叶子节点
+- - '#'
+  - 前沿
+- - '#'
+  - 打开列表
+- - '#'
+  - 搜索策略
+- - '####'
+  - 基础设施为搜索算法
+- - '#'
+  - 优先级队列
+- - '##'
+  - 规范形式
+- - '###'
+  - 3.3.2 测量问题解决性能
+- - '##'
+  - 分支因子
+- - '##'
+  - 深度
+- - '##'
+  - search cost
+- - '##'
+  - TOTAL COST
+- - '###'
+  - 3.4 UNINFORMED SEARCH STRATEGIES
+- - '####'
+  - 3.4.1 广度优先搜索
+- - '####'
+  - 3.4.2 Uniform-cost search
+- - '####'
+  - 3.4.3 Depth-first search
+- - '###'
+  - 3.4.4 深度限制搜索
+- - '###'
+  - 3.4.5 迭代加深深度优先搜索
+- - '#'
+  - 迭代加深搜索（或迭代加深深度优先搜索）是一种通用策略，常与深度优先树搜索结合使用，用于确定最佳深度限制。它通过逐步增加限制——首先是 0，然后是 1，接着是
+    2，以此类推——直到找到目标。当深度限制达到 `d`，即最浅目标节点的深度时，这将发生。算法如下图 `![Figure 3.18](img/#index_split_010.html#filepos393712)`
+    所示。迭代加深结合了深度优先和宽度优先搜索的优点。与深度优先搜索一样，其内存需求较小：精确为 `O(bd)`。与宽度优先搜索一样，在分支因子有限且节点深度的路径成本是非递减函数时，它是完备的且最优的。`![Figure
+    3.19](img/#index_split_010.html#filepos394196)` 展示了在二叉搜索树上 `ITERATIVE-DEEPENING-SEARCH`
+    的四次迭代，目标在第 4 次迭代中找到。
+- - '#'
+  - ITERATIVE DEEPENING SEARCH
+- - '#'
+  - ITERATIVE LENGTHENING SEARCH
+- - '##'
+  - 3.4.6 双向搜索
+- - '#'
+  - PREDECESSOR
+- - '##'
+  - 3.4.7 比较无启发式搜索策略
+- - '###'
+  - 3.5 启发式（有启发性）搜索策略
+- - '#'
+  - 有启发性搜索
+- - '####'
+  - 'A* search: Minimizing the total estimated solution cost'
+- - '#####'
+  - '条件 for optimality: Admissibility and consistency'
+- - '#####'
+  - A*的最优性
+- - '####'
+  - 3.5.3 记忆受限启发式搜索
+- - '####'
+  - 3.5.4 Learning to search better
+- - '###'
+  - 3.6 HEURISTIC FUNCTIONS
+- - '####'
+  - 3.6.1 启发式准确性对性能的影响
+- - '####'
+  - 3.6.2 Generating admissible heuristics from relaxed problems
+- - '####'
+  - '3.6.3 Generating admissible heuristics from subproblems: Pattern databases'
+- - '###'
+  - 3.7 SUMMARY
+- - '###'
+  - BIBLIOGRAPHICAL AND HISTORICAL NOTES
+- - '###'
+  - EXERCISES
+- - '##'
+  - 4. BEYOND CLASSICAL SEARCH
+- - '###'
+  - 4.1. LOCAL SEARCH ALGORITHMS AND OPTIMIZATION PROBLEMS
+- - '####'
+  - Hill-climbing search
+- - '####'
+  - Simulated annealing
+- - '####'
+  - Local beam search
+- - '####'
+  - Genetic algorithms
+- - '###'
+  - 4.2 LOCAL SEARCH IN CONTINUOUS SPACES
+- - '#'
+  - INTERLEAVING
+- - '##'
+  - 4.3.3 Try, try again
+- - '###'
+  - 4.4 SEARCHING WITH PARTIAL OBSERVATIONS
+- - '####'
+  - Searching with no observation
+- - '####'
+  - Searching with observations
+- - '####'
+  - 解决部分可观测问题
+- - '####'
+  - 面向部分可观测环境的代理设计
+- - '###'
+  - 4.5 ONLINE SEARCH AGENTS AND UNKNOWN ENVIRONMENTS
+- - '####'
+  - Online search problems
+- - '####'
+  - Online search agents
+- - '####'
+  - Online local search
+- - '####'
+  - Learning in online search
+- - '###'
+  - 4.6 SUMMARY
+- - '###'
+  - BIBLIOGRAPHICAL AND HISTORICAL NOTES
+- - '###'
+  - EXERCISES
+- - '##'
+  - 4.6 精确说明如何修改 AND-OR-GRAPH-SEARCH 算法，在不存在无循环计划时生成循环计划。你需要处理三个问题：为计划步骤标记，使循环计划能够指回计划的早期部分；修改
+    OR-SEARCH，使其在发现循环计划后仍继续寻找无循环计划；并增强计划表示，以指示计划是否为循环计划。下面展示算法在 (a) 滑稽吸尘器世界，以及 (b)
+    滑稽、紊乱吸尘器世界的工作情况。你可以使用电脑实现来验证结果。
+- - '##'
+  - 4.7 在 第 4.4.1 节 中，我们引入了信念状态来解决感知无法观测的搜索问题。一个动作序列解决感知无法观测问题，如果它能将初始信念状态 *b* 中的每一个物理状态映射到目标状态。假设代理知道
+    *h*^(\*)(*s*)，即在完全可观测问题中解决物理状态 *s* 的真实最优成本，对于信念状态 *b* 中的每一个状态 *s*。请用这些成本来找出一个适当的启发函数
+    *h*(*b*)，用于感知无法观测问题，并证明其适当性。评论该启发函数在 第 4.14 图 的感知无法观测吸尘器问题中的准确性。A^(\*) 在该问题上表现如何？
+- - '##'
+  - 4.8 该练习探讨信念状态在感知无法观测或部分可观测环境中的子集-超集关系。
+- - '##'
+  - 4.9 第 139 页 假设给定的动作在同一信念状态内的任何物理状态下具有相同的执行成本。（这导致一个明确的步骤成本的信念状态搜索问题。）现在考虑当该假设不成立时会发生什么。在这种情形下，最优性的概念是否仍然有意义，或需要修改？请同时考虑对“执行成本”的不同定义，例如：使用该动作的最小物理成本；最大物理成本；一个包含下限（最小成本）和上限（最大成本）的成本区间；或者仅保留该动作的所有可能成本集合。针对每种情况，探讨在必要时对
+    A^(\*) 进行修改后，是否仍能返回最优解。
+- - '##'
+  - 4.10 考虑感知无法观测版本的紊乱吸尘器世界。绘制从初始信念状态 {1, 2, 3, 4, 5, 6, 7, 8} 可达的信念状态空间，并解释为何该问题不可解。
+- - '##'
+  - 4.11 我们可以把练习 3.7 中的导航问题转化为如下环境：
+- - '##'
+  - 4.12 假设一个代理在 3 × 3 迷宫环境中（如 第 4.19 图 所示）。代理知道其初始位置是 (1,1)，目标在 (3,3)，且 Up、Down、Left、Right
+    四个动作在未被墙阻挡时具有正常效果。代理不知道内部墙的具体位置。在任意给定状态中，代理感知合法动作集合，并能判断该状态是否之前被访问过。
+- - '##'
+  - 4.14 类似于 DFS，面向在线 DFS 对于具有无限路径的可逆状态空间是不完整的。例如，假设状态是二维无限网格上的点，动作是单位向量（1, 0）、（0,
+    1）、（−1, 0）、（0, −1），按此顺序尝试。请说明从 (0, 0) 开始的在线 DFS 将无法到达 (1, −1)。假设代理除了当前状态外，还能观察到所有后继状态以及导致这些状态的动作。请编写一个算法，即使在双向可逆状态空间且路径无限的情况下也能保证完整。在到达
+    (1, −1) 的过程中，它会访问哪些状态？
+- - '##'
+  - 5 ADVERSARIAL SEARCH
+- - '###'
+  - 5.1 GAMES
+- - '###'
+  - 5.2 OPTIMAL DECISIONS IN GAMES
+- - '####'
+  - The minimax algorithm
+- - '####'
+  - Optimal decisions in multiplayer games
+- - '###'
+  - 5.3 ALPHA–BETA PRUNING
+- - '####'
+  - Move ordering
+- - '###'
+  - 5.4 IMPERFECT REAL-TIME DECISIONS
+- - '####'
+  - Evaluation functions
+- - '####'
+  - Cutting off search
+- - '####'
+  - 前向剪枝
+- - '####'
+  - 搜索与查找
+- - '###'
+  - 5.5 STOCHASTIC GAMES
+- - '####'
+  - 游戏机会的评估函数
+- - '###'
+  - 5.6 PARTIALLY OBSERVABLE GAMES
+- - '####'
+  - 'Kriegspiel: Partially observable chess'
+- - '###'
+  - 5.8 ALTERNATIVE APPROACHES
+- - '###'
+  - 5.9 SUMMARY
+- - '###'
+  - BIBLIOGRAPHICAL AND HISTORICAL NOTES
+- - '##'
+  - 5.12 描述在两玩家、非零和游戏中，每位玩家拥有独立的效用函数且两个效用函数都被两位玩家所知的情况下，最小极大值（minimax）和 α–β 算法如何变化。如果对两个终端效用函数没有任何约束，是否可以通过
+    α–β 算法剪枝任意节点？如果玩家的效用函数在任意状态之间最多相差一个常数 *k*，使得游戏几乎合作，情况如何？
+- - '##'
+  - 5.13 证明在最佳走序下，α–β 剪枝的运行时间为 *O*(2^(*m*/2))，其中 *m* 是游戏树的最大深度。
+- - '##'
+  - 5.14 假设你有一个国际象棋程序，每秒能评估 1000 万个节点。请决定一种紧凑的游戏状态表示方式，以便存储在转换表（transposition table）中。大约可以在
+    2 GB 内存的表中容纳多少条记录？这对分配给单个动作三分钟搜索时间是否足够？在完成一次评估所需的时间内，你可以进行多少次表查找？如果转换表存储在磁盘上，大约在一次标准磁盘
+    seek 所需时间内可以进行多少次评估？
+- - '##'
+  - 5.16 本题考察在包含机率节点的游戏中进行剪枝。图 5.19（索引分割 012.html#filepos805435 所示）展示了一个平凡游戏的完整游戏树。假设叶子节点按从左到右的顺序评估，且在评估叶子前我们对其价值一无所知——可能的值范围是
+    −∞ 到 +∞。
+- - '##'
+  - 5.17 实现期望极小极大算法（expectiminax）以及 Ballard（1983）描述的 *-α–β* 算法，用于对包含机率节点的游戏树进行剪枝。在诸如
+    backgammon 等游戏上进行测试，并衡量 *-α–β* 的剪枝效果。
+- - '##'
+  - 5.18 证明：在叶子值上进行正向线性变换（即将 *x* 变为 *ax* + *b*，其中 *a* > 0）时，即使存在机率节点，所选的走法仍保持不变。
+- - '##'
+  - 5.19 考虑下面的选取机率节点动作的过程：
+- - '##'
+  - 5.20 在下面的描述中，“max” 树仅包含 max 节点，而“expectimax” 树根节点为 max 节点，随后交替出现机会节点和 max 节点。机会节点的所有结果概率均不为零。目标是在此有限深度搜索下求得根节点的值。对于
+    (a)–(f) 中的每一项，要么给出一个例子，要么说明不可能实现。
+- - '##'
+  - 5.21 判断下列陈述的真假，并给出简短解释。
+- - '##'
+  - 5.22 仔细审视 Exercise 5.4 中各游戏中机率事件与部分信息的相互作用。
+- - '##'
+  - 6 CONSTRAINT SATISFACTION PROBLEMS
+- - '###'
+  - 6.1 定义约束满足问题（Constraint Satisfaction Problems）
+- - '####'
+  - 示例问题：地图涂色
+- - '####'
+  - 为什么要把问题形式化为 CSP？
+- - '####'
+  - 示例问题：作业车间调度
+- - '####'
+  - 变体形式化
+- - '##'
+  - 离散域
+- - '##'
+  - 有限域
+- - '##'
+  - 无限域
+- - '##'
+  - 约束语言
+- - '##'
+  - 线性约束
+- - '##'
+  - 非线性约束
+- - '##'
+  - 连续域
+- - '##'
+  - 一元约束
+- - '##'
+  - 二元约束
+- - '##'
+  - 全局约束
+- - '##'
+  - 字母数独谜题
+- - '##'
+  - 约束超图
+- - '##'
+  - 对偶图
+- - '###'
+  - '6.2 CONSTRAINT PROPAGATION: INFERENCE IN CSPS'
+- - '####'
+  - 节点一致性
+- - '####'
+  - 弧一致性
+- - '####'
+  - 路径一致性
+- - '####'
+  - K-consistency
+- - '####'
+  - Global constraints
+- - '#'
+  - BOUNDS CONSISTENT
+- - '##'
+  - 6.2.6 Sudoku example
+- - '###'
+  - 6.3 BACKTRACKING SEARCH FOR CSPS
+- - '####'
+  - Variable and value ordering
+- - '####'
+  - Interleaving search and inference
+- - '####'
+  - 智能回溯：向后回溯
+- - '###'
+  - 6.4 LOCAL SEARCH FOR CSPS
+- - '###'
+  - 6.5 THE STRUCTURE OF PROBLEMS
+- - '###'
+  - 6.6 SUMMARY
+- - '###'
+  - BIBLIOGRAPHICAL AND HISTORICAL NOTES
+- - '#'
+  - 变量域 `distributed constraint satisfaction` 研究在存在若干代理人时如何解决 CSP，每个代理人控制一部分约束变量。自
+    2000 年以来，每年都有针对该问题的工作坊，并且在其他地方也有良好覆盖 (`Collin et al.`, 1999; `Pearce et al.`,
+    2008; Shoham and Leyton-Brown, 2009)。
+- - '##'
+  - DISTRIBUTED CONSTRAINT SATISFACTION
+- - '###'
+  - EXERCISES
+- - '###'
+  - 7.2 THE WUMPUS WORLD
+- - '###'
+  - 7.3 LOGIC
+- - '###'
+  - '7.4 PROPOSITIONAL LOGIC: A VERY SIMPLE LOGIC'
+- - '####'
+  - Syntax
+- - '####'
+  - Semantics
+- - '####'
+  - A simple knowledge base
+- - '####'
+  - A simple inference procedure
+- - '###'
+  - 7.5 PROPOSITIONAL THEOREM PROVING
+- - '####'
+  - Inference and proofs
+- - '####'
+  - Proof by resolution
+- - '#####'
+  - 合取范式
+- - '####'
+  - Horn clauses and definite clauses
+- - '####'
+  - Forward and backward chaining
+- - '####'
+  - 7.6.2 本地搜索算法
+- - '####'
+  - 7.6.3 随机 SAT 问题的景观
+- - '###'
+  - 7.7. AGENTS BASED ON PROPOSITIONAL LOGIC
+- - '####'
+  - The current state of the world
+- - '###'
+  - 7.8 SUMMARY
+- - '#'
+  - 推理规则
+- - '##'
+  - 文献和历史注释
+- - '###'
+  - EXERCISES
+- - '##'
+  - 7.27 将 HYBRID-WUMPUS-AGENT 修改为使用第 271 页（<#index_split_014.html#filepos1087695>）所述的
+    1-CNF 逻辑状态估计方法。我们在该页指出，此类代理无法获取、维护和使用更复杂的信念，例如析取（disjunction）`P[3,1] ⋁ P[2,2]`。请提出一种通过定义额外命题符号来克服该问题的方法，并在
+    wumpus 世界中尝试该方法。这能否提高代理的性能？
+- - '##'
+  - 8 FIRST-ORDER LOGIC
+- - '###'
+  - 8.1 REPRESENTATION REVISITED
+- - '####'
+  - 思维的语言
+- - '####'
+  - 结合形式语言和自然语言的最佳实践
+- - '###'
+  - 8.2 SYNTAX AND SEMANTICS OF FIRST-ORDER LOGIC
+- - '####'
+  - Models for first-order logic
+- - '####'
+  - Symbols and interpretations
+- - '####'
+  - Terms
+- - '#####'
+  - 通用量词 (∀)
+- - '#####'
+  - 存在量词 (∃)
+- - '#####'
+  - 嵌套量词
+- - '#####'
+  - Connections between ∀ and ∃
+- - '####'
+  - 8.2.7 Equality
+- - '####'
+  - 8.2.8 An alternative semantics?
+- - '###'
+  - 8.3 USING FIRST-ORDER LOGIC
+- - '####'
+  - Assertions and queries in first-order logic
+- - '####'
+  - The kinship domain
+- - '####'
+  - Numbers, sets, and lists
+- - '####'
+  - The wumpus world
+- - '###'
+  - 8.4 KNOWLEDGE ENGINEERING IN FIRST-ORDER LOGIC
+- - '####'
+  - The knowledge-engineering process
+- - '####'
+  - 电子电路领域
+- - '##'
+  - 确定任务
+- - '##'
+  - 组装相关知识
+- - '##'
+  - 决定词汇
+- - '##'
+  - 编码领域的一般知识
+- - '##'
+  - 编码具体问题实例
+- - '##'
+  - 向推理程序提出查询
+- - '##'
+  - 调试知识库
+- - '###'
+  - 8.5 SUMMARY
+- - '###'
+  - BIBLIOGRAPHICAL AND HISTORICAL NOTES
+- - '###'
+  - EXERCISES
