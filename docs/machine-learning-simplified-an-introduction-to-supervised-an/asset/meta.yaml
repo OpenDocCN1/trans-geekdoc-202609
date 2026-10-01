@@ -1,0 +1,113 @@
+name: Machine Learning Simplified： An introduction to Supervised and Unsupervised
+  Learning
+slug: machine-learning-simplified-an-introduction-to-supervised-an
+name_cn: '
+
+  机器学习简明入门指南：Supervised and Unsupervised Learning 入门'
+toc:
+- - '##'
+  - AWS Account Requirements
+- - '###'
+  - 强化学习及其应用
+- - '###'
+  - 强化学习应用
+- - '###'
+  - 新术语
+- - '##'
+  - 强化学习与 AWS DeepRacer
+- - '###'
+  - 强化学习概念
+- - '###'
+  - 基础 RL 术语：Agent、environment、state、action、reward、episode
+- - '####'
+  - Agent
+- - '####'
+  - Environment
+- - '####'
+  - State
+- - '#'
+  - 在 AWS DeepRacer 的情况下，每个状态都是由它的摄像头捕获的图像。
+- - '#'
+  - 车辆的初始状态是赛道的起始线，其终止状态是当车辆完成一圈、撞击障碍物或驶离赛道时。
+- - '##'
+  - 动作
+- - '##'
+  - 奖励
+- - '##'
+  - 集 episode
+- - '##'
+  - 在 AWS DeepRacer 上加入自己的特色：
+- - '###'
+  - 强化学习实践者的角色
+- - '##'
+  - 将强化学习与 AWS DeepRacer 结合起来
+- - '##'
+  - 关于奖励函数的要点回顾：
+- - '##'
+  - 关于探索与利用的要点回顾：
+- - '##'
+  - 关于奖励图的要点回顾：
+- - '##'
+  - 关于 AWS DeepRacer 的要点回顾：
+- - '##'
+  - 新术语
+- - '##'
+  - 进一步阅读
+- - '#'
+  - 1. 训练模型的步骤
+- - '#'
+  - 2. 检查奖励图以评估训练进度
+- - '##'
+  - 奖励图解读
+- - '###'
+  - 需要更多训练
+- - '###'
+  - 需要更多训练
+- - '###'
+  - 训练良好的模型
+- - '###'
+  - 避免过拟合
+- - '##'
+  - 生成式人工智能入门
+- - '##'
+  - 生成式人工智能模型
+- - '###'
+  - 自回归模型
+- - '###'
+  - 生成式对抗网络（GANs）
+- - '###'
+  - 基于 Transformer 的模型
+- - '##'
+  - 使用 AWS DeepComposer 进行生成式人工智能
+- - '###'
+  - 什么是 AWS DeepComposer？
+- - '###'
+  - AWS DeepComposer 音乐工作室
+- - '###'
+  - 'Demo: AWS DeepComposer'
+- - '###'
+  - AWS DeepComposer 学习胶囊
+- - '###'
+  - AWS DeepComposer Chartbusters 挑战
+- - '##'
+  - GANs 与 AWS DeepComposer
+- - '###'
+  - 什么是 GANs？
+- - '##'
+  - AR-CNN with AWS DeepComposer
+- - '##'
+  - 'Build a Custom GAN Model (Optional): Part 1'
+- - '##'
+  - 多行 docstring
+- - '##'
+  - 模型版本管理
+- - '#'
+  - 第五章
+- - '##'
+  - 软件工程实践，第二部分
+- - '##'
+  - 测试
+- - '##'
+  - Commenting object-oriented code
+- - '##'
+  - A Gaussian class
