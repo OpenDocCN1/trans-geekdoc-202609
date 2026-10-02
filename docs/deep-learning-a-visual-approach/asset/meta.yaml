@@ -1,0 +1,1416 @@
+name: Deep Learning ： A Visual Approach
+slug: deep-learning-a-visual-approach
+name_cn: '
+
+  深度学习：可视化方法'
+toc:
+- - '##'
+  - '208. '
+- - '##'
+  - '209. '
+- - '##'
+  - '210. '
+- - '##'
+  - '211. '
+- - '##'
+  - '212. '
+- - '##'
+  - '213. '
+- - '##'
+  - '214. '
+- - '##'
+  - '215. '
+- - '##'
+  - '216. '
+- - '##'
+  - '217. '
+- - '##'
+  - '218. '
+- - '##'
+  - '219. '
+- - '##'
+  - '220. '
+- - '##'
+  - '221. '
+- - '##'
+  - '222. '
+- - '##'
+  - '223. '
+- - '##'
+  - '224. '
+- - '##'
+  - '225. '
+- - '##'
+  - '226. '
+- - '##'
+  - '227. '
+- - '##'
+  - '228. '
+- - '##'
+  - '229. '
+- - '##'
+  - '230. '
+- - '##'
+  - '231. '
+- - '##'
+  - '232. '
+- - '##'
+  - '233. '
+- - '##'
+  - '234. '
+- - '##'
+  - '235. '
+- - '##'
+  - '236. '
+- - '##'
+  - '237. '
+- - '##'
+  - '238. '
+- - '##'
+  - '239. '
+- - '##'
+  - '240. '
+- - '##'
+  - '241. '
+- - '##'
+  - '242. '
+- - '##'
+  - '243. '
+- - '##'
+  - '244. '
+- - '##'
+  - '245. '
+- - '##'
+  - '246. '
+- - '##'
+  - '247. '
+- - '##'
+  - '248. '
+- - '##'
+  - '249. '
+- - '##'
+  - '250. '
+- - '##'
+  - '251. '
+- - '##'
+  - '252. '
+- - '##'
+  - '253. '
+- - '##'
+  - '254. '
+- - '##'
+  - '255. '
+- - '##'
+  - '256. '
+- - '##'
+  - '257. '
+- - '##'
+  - '258. '
+- - '##'
+  - '259. '
+- - '##'
+  - '260. '
+- - '##'
+  - '261. '
+- - '##'
+  - '262. '
+- - '##'
+  - '263. '
+- - '##'
+  - '264. '
+- - '##'
+  - '265. '
+- - '##'
+  - '266. '
+- - '##'
+  - '267. '
+- - '##'
+  - '268. '
+- - '##'
+  - '269. '
+- - '##'
+  - '270. '
+- - '##'
+  - '271. '
+- - '##'
+  - '272. '
+- - '##'
+  - '273. '
+- - '##'
+  - '274. '
+- - '##'
+  - '275. '
+- - '##'
+  - '276. '
+- - '##'
+  - '277. '
+- - '##'
+  - '278. '
+- - '##'
+  - '279. '
+- - '##'
+  - '280. '
+- - '##'
+  - '281. '
+- - '##'
+  - '282. '
+- - '##'
+  - '283. '
+- - '##'
+  - '284. '
+- - '##'
+  - '285. '
+- - '##'
+  - '286. '
+- - '##'
+  - '287. '
+- - '##'
+  - '288. '
+- - '##'
+  - '289. '
+- - '##'
+  - '290. '
+- - '##'
+  - '291. '
+- - '##'
+  - '292. '
+- - '##'
+  - '293. '
+- - '##'
+  - '294. '
+- - '##'
+  - '295. '
+- - '##'
+  - '296. '
+- - '##'
+  - '297. '
+- - '##'
+  - '298. '
+- - '##'
+  - '299. '
+- - '##'
+  - '300. '
+- - '##'
+  - '301. '
+- - '##'
+  - '302. '
+- - '##'
+  - '303. '
+- - '##'
+  - '304. '
+- - '##'
+  - '305. '
+- - '##'
+  - '306. '
+- - '##'
+  - '307. '
+- - '##'
+  - '308. '
+- - '##'
+  - '309. '
+- - '##'
+  - '310. '
+- - '##'
+  - '311. '
+- - '##'
+  - '312. '
+- - '##'
+  - 548.  549
+- - '##'
+  - 549.  550
+- - '##'
+  - 550.  551
+- - '##'
+  - 551.  552
+- - '##'
+  - 552.  553
+- - '##'
+  - 553.  554
+- - '##'
+  - 554.  555
+- - '##'
+  - 555.  556
+- - '##'
+  - 556.  557
+- - '##'
+  - 557.  558
+- - '##'
+  - 558.  559
+- - '##'
+  - 559.  560
+- - '##'
+  - 560.  561
+- - '##'
+  - 561.  562
+- - '##'
+  - 562.  563
+- - '##'
+  - 563.  564
+- - '##'
+  - 564.  565
+- - '##'
+  - 565.  566
+- - '##'
+  - 566.  567
+- - '##'
+  - 567.  568
+- - '##'
+  - 568.  569
+- - '##'
+  - 569.  570
+- - '##'
+  - 570.  571
+- - '##'
+  - 571.  572
+- - '##'
+  - 572.  573
+- - '##'
+  - 573.  574
+- - '##'
+  - 574.  575
+- - '##'
+  - 575.  576
+- - '##'
+  - 576.  577
+- - '##'
+  - 577.  578
+- - '##'
+  - 578.  579
+- - '##'
+  - 579.  580
+- - '##'
+  - 580.  581
+- - '##'
+  - 581.  582
+- - '##'
+  - 582.  583
+- - '##'
+  - 583.  584
+- - '##'
+  - 584.  585
+- - '##'
+  - 585.  586
+- - '##'
+  - 586.  587
+- - '##'
+  - 587.  588
+- - '##'
+  - 588.  589
+- - '##'
+  - 589.  590
+- - '##'
+  - 590.  591
+- - '##'
+  - 591.  592
+- - '##'
+  - 592.  593
+- - '##'
+  - 593.  594
+- - '##'
+  - 594.  595
+- - '##'
+  - '595.  [596](#c20.xhtml#Page_672 '
+- - '##'
+  - '关于作者 '
+- - '##'
+  - '关于技术审稿人 '
+- - '##'
+  - '致谢 '
+- - '##'
+  - '引言 '
+- - '##'
+  - Who This Book Is For
+- - '##'
+  - This Book Has No Complex Math and No Code
+- - '##'
+  - There Is Code, If You Want It
+- - '##'
+  - The Figures Are Available, Too!
+- - '##'
+  - Errata
+- - '##'
+  - About This Book
+- - '###'
+  - 'Part I: Foundational Ideas'
+- - '###'
+  - 'Part II: Basic Machine Learning'
+- - '###'
+  - 'Part III: Deep Learning Basics'
+- - '###'
+  - 'Part IV: Beyond the Basics'
+- - '##'
+  - Final Words
+- - '#'
+  - 'Part I '
+- - '#'
+  - '1 '
+- - '##'
+  - Expert Systems
+- - '##'
+  - 监督学习
+- - '##'
+  - 无监督学习
+- - '##'
+  - 强化学习
+- - '##'
+  - 深度学习
+- - '#'
+  - '2 '
+- - '##'
+  - Describing Randomness
+- - '##'
+  - Random Variables and Probability Distributions
+- - '###'
+  - 离散分布
+- - '####'
+  - 伯努利分布
+- - '####'
+  - 多项分布（Multinoulli）
+- - '##'
+  - 随机值的集合
+- - '###'
+  - 期望值
+- - '###'
+  - 依赖性
+- - '###'
+  - 独立同分布变量
+- - '###'
+  - 采样与放回
+- - '####'
+  - 有放回的选择
+- - '####'
+  - 无放回的选择
+- - '###'
+  - 引导法
+- - '##'
+  - 协方差与相关系数
+- - '###'
+  - 协方差
+- - '#'
+  - 变量共变与相关性
+- - '##'
+  - Correlation
+- - '#'
+  - 当两个变量具有完美的正相关或负相关（即取值为 +1 和 −1）时，我们称它们为 `线性相关`，因为（正如我们所见）点位于一条直线上。任何其他相关系数值的变量被认为是
+    `非线性相关`。
+- - '##'
+  - 统计告诉我们的并非全部
+- - '##'
+  - 高维空间
+- - '#'
+  - '3 '
+- - '##'
+  - Measuring Performance
+- - '###'
+  - 简单概率
+- - '###'
+  - 条件概率
+- - '###'
+  - 联合概率
+- - '###'
+  - 边际概率
+- - '###'
+  - 测量准确性
+- - '####'
+  - 分类样本
+- - '###'
+  - 混淆矩阵
+- - '###'
+  - 表征错误预测
+- - '###'
+  - 测量正确和错误
+- - '###'
+  - 准确率
+- - '###'
+  - 精确率
+- - '###'
+  - 召回率
+- - '###'
+  - Precision-Recall Tradeoff
+- - '###'
+  - Misleading Measures
+- - '###'
+  - f1 Score
+- - '###'
+  - About These Terms
+- - '###'
+  - Other Measures
+- - '##'
+  - 构建混淆矩阵的正确方法
+- - '#'
+  - '4 '
+- - '###'
+  - 频率派方法
+- - '###'
+  - 波伊森（Bayesian）方法
+- - '###'
+  - 频繁主义者与波伊森主义者
+- - '##'
+  - 频繁主义硬币翻转
+- - '##'
+  - 波伊森（Bayesian）硬币翻转
+- - '###'
+  - 一个激励性例子
+- - '###'
+  - 以图示概率
+- - '###'
+  - 将硬币抛掷转化为概率
+- - '###'
+  - Bayes’ Rule
+- - '##'
+  - 用文字表达，我们想要找出 P(F|H)，即在我们刚刚抛掷硬币并看到正面后，拥有公平硬币的概率。为了确定这一点，我们结合了三个信息。首先，P(H|F)，即在我们确实拥有公平硬币的情况下出现正面的概率。我们将其与
+    P(F)，即我们确实拥有公平硬币的概率相乘。正如我们所见，这种乘法只是更便捷地评估 P(H,F)，即我们的硬币是公平的 *并且* 它出现了正面。最后，我们除以
+    P(H)，即我们的硬币出现正面的概率，*同时考虑到公平和作弊硬币*。这就是我们使用 *任一* 这些硬币来得到正面的可能性有多大。
+- - '##'
+  - Bayes’ Rule 的讨论
+- - '##'
+  - Bayes’ Rule 与混淆矩阵
+- - '##'
+  - Repeating Bayes’ Rule
+- - '###'
+  - 后验-先验循环
+- - '###'
+  - Bayes 循环的实际应用
+- - '##'
+  - Multiple Hypotheses
+- - '##'
+  - Summary
+- - '#'
+  - '5 '
+- - '##'
+  - 函数的本质
+- - '##'
+  - 导数
+- - '###'
+  - 极值
+- - '###'
+  - 切线
+- - '###'
+  - 使用导数寻找极值
+- - '###'
+  - 梯度
+- - '####'
+  - 水、重力与梯度
+- - '####'
+  - 利用梯度寻找极值
+- - '###'
+  - 解析上下文
+- - '##'
+  - 测量信息
+- - '###'
+  - 自适应代码
+- - '####'
+  - 说 Morse 代码
+- - '###'
+  - Customizing Morse Code
+- - '##'
+  - Entropy
+- - '##'
+  - Cross Entropy
+- - '###'
+  - 两个自适应代码
+- - '###'
+  - 使用代码
+- - '###'
+  - Cross Entropy in Practice
+- - '##'
+  - Kullback–Leibler Divergence
+- - '##'
+  - 2D 多类分类
+- - '##'
+  - 多类分类
+- - '###'
+  - One-Versus-Rest
+- - '###'
+  - One-Versus-One
+- - '##'
+  - Clustering
+- - '##'
+  - The Curse of Dimensionality
+- - '###'
+  - Dimensionality and Density
+- - '###'
+  - 高维奇异性
+- - '####'
+  - 球体在立方体内的体积
+- - '####'
+  - 在超立方体中装载超球体
+- - '##'
+  - Summary
+- - '#'
+  - '8 '
+- - '##'
+  - Training and Testing
+- - '##'
+  - Training
+- - '##'
+  - Testing the Performance
+- - '###'
+  - Test Data
+- - '###'
+  - Validation Data
+- - '##'
+  - Cross-Validation
+- - '##'
+  - k-Fold Cross-Validation
+- - '##'
+  - Summary
+- - '#'
+  - '9 '
+- - '##'
+  - Finding a Good Fit
+- - '###'
+  - Overfitting
+- - '###'
+  - Underfitting
+- - '##'
+  - Detecting and Addressing Overfitting
+- - '#'
+  - 如何判断我们是否开始对数据进行过拟合？
+- - '###'
+  - 正则化
+- - '###'
+  - 偏差与方差
+- - '###'
+  - 匹配底层数据
+- - '###'
+  - High Bias, Low Variance
+- - '###'
+  - Low Bias, High Variance
+- - '###'
+  - Comparing Curves
+- - '##'
+  - 使用贝叶斯规则拟合直线
+- - '##'
+  - Summary
+- - '#'
+  - '10 '
+- - '##'
+  - 基础数据清洗
+- - '##'
+  - 一致性的重要性
+- - '##'
+  - 数据类型
+- - '##'
+  - One-Hot Encoding
+- - '##'
+  - Normalizing and Standardizing
+- - '###'
+  - Normalization
+- - '###'
+  - Standardization
+- - '###'
+  - 记住变换
+- - '##'
+  - 变换类型
+- - '###'
+  - Slice Processing（切片处理）
+- - '####'
+  - Samplewise Processing（按样本处理）
+- - '####'
+  - Featurewise Processing（按特征处理）
+- - '####'
+  - Elementwise Processing（按元素处理）
+- - '###'
+  - 逆转换
+- - '##'
+  - 缩小数据集
+- - '###'
+  - 特征选择
+- - '###'
+  - 维度降低
+- - '##'
+  - 主成分分析
+- - '###'
+  - 'Figure 10-26: The result of Figure 10-25 after all the points have been moved
+    to the projection line. Each point now is described only by its x coordinate,
+    resulting in a one-dimensional dataset.'
+- - '###'
+  - 'Figure 10-27: The thick black line is the line of maximum variance through our
+    original data. This is our projection line.'
+- - '###'
+  - 'Figure 10-28: We project the guitar data onto the projection line by moving each
+    point to its closest point on the line. For clarity, we’re showing the path taken
+    by only about 25 percent of the points.'
+- - '###'
+  - 'Figure 10-29: The points of the guitar dataset projected onto the line of maximum
+    variance'
+- - '###'
+  - 'Figure 10-30: Rotating the points of Figure 10-29 into a horizontal position'
+- - '###'
+  - 'Figure 10-31: Comparing the points created by projection to y = 0 in Figure 10-26
+    (top) and the PCA algorithm in Figure 10-30 (bottom)'
+- - '###'
+  - PCA for Simple Images
+- - '###'
+  - 'Figure 10-32: Six images we’d like to represent'
+- - '###'
+  - 'Figure 10-33: We can create all six images in Figure 10-32 by scaling these three
+    by different amounts and adding the results.'
+- - '###'
+  - 'Figure 10-34: The weights to use when scaling the three images in Figure 10-33
+    to recover the images in Figure 10-32'
+- - '###'
+  - PCA for Real Images
+- - '##'
+  - Types of Classifiers
+- - '##'
+  - k-Nearest Neighbors
+- - '##'
+  - 决策树
+- - '###'
+  - 树的介绍
+- - '###'
+  - 使用决策树
+- - '###'
+  - Overfitting Trees
+- - '###'
+  - Splitting Nodes（节点分割）
+- - '##'
+  - Support Vector Machines（支持向量机）
+- - '###'
+  - The Basic Algorithm（基本算法）
+- - '###'
+  - SVM Kernel Trick
+- - '##'
+  - Naive Bayes
+- - '##'
+  - Summary
+- - '##'
+  - Voting（投票）
+- - '##'
+  - 决策树集合
+- - '###'
+  - Bagging
+- - '###'
+  - Random Forests
+- - '###'
+  - Extra Trees
+- - '##'
+  - Boosting
+- - '###'
+  - 优化段落格式
+- - '###'
+  - Boosting
+- - '#'
+  - '13 '
+- - '##'
+  - 真实神经元
+- - '##'
+  - 人工神经元
+- - '###'
+  - perceptron
+- - '###'
+  - 现代人工神经元
+- - '###'
+  - 绘制神经元
+- - '##'
+  - Feed-Forward Networks
+- - '##'
+  - Neural Network Graphs
+- - '##'
+  - 初始化权重
+- - '##'
+  - 深度网络
+- - '##'
+  - Fully Connected Layers
+- - '##'
+  - Tensors
+- - '##'
+  - Preventing Network Collapse
+- - '##'
+  - 激活函数
+- - '###'
+  - 直线函数
+- - '###'
+  - 步阶函数
+- - '###'
+  - Piecewise Linear Functions
+- - '###'
+  - Smooth Functions
+- - '###'
+  - Activation Function Gallery
+- - '###'
+  - Comparing Activation Functions
+- - '##'
+  - Softmax
+- - '##'
+  - 高层次培训概览
+- - '###'
+  - 惩罚错误
+- - '###'
+  - 慢速学习方法
+- - '##'
+  - Getting Started
+- - '##'
+  - Backprop on a Tiny Neural Network
+- - '###'
+  - 计算输出神经元的 Delta 值
+- - '####'
+  - 计算网络误差
+- - '####'
+  - 绘制误差曲线
+- - '####'
+  - 求 Dδ
+- - '#'
+  - 1. 观察图表
+- - '#'
+  - 2. 观察曲线
+- - '#'
+  - 3. 关键观察
+- - '#'
+  - 4. 过拟合与错误最小化
+- - '#'
+  - 5. 逐步更新权重
+- - '##'
+  - 5.1 测量误差
+- - '##'
+  - 6. 使用 deltas 修改权重
+- - '##'
+  - 图 14-15
+- - '##'
+  - 其他神经元 deltas
+- - '##'
+  - 反向传播在更大网络上
+- - '##'
+  - 图 14-25：使用反向传播法求第二隐藏层的 delta 值
+- - '##'
+  - 学习率
+- - '###'
+  - 构建二元分类器
+- - '#'
+  - 取小步的第二个原因是，网络初始阶段的权重变化会导致后层神经元的输出发生变化，进而改变它们的梯度。为了防止出现冲突的、糟糕的参数变化交织在一起，我们只对权重进行小幅度的调整。
+- - '##'
+  - 选择学习率
+- - '###'
+  - 使用更小的学习率
+- - '#'
+  - '15 '
+- - '###'
+  - Constant-Sized Updates
+- - '###'
+  - Changing the Learning Rate over Time
+- - '#'
+  - 更新策略
+- - '##'
+  - 衰减调度
+- - '###'
+  - Batch Gradient Descent
+- - '###'
+  - Stochastic Gradient Descent
+- - '###'
+  - Mini-Batch Gradient Descent
+- - '##'
+  - Gradient Descent Variations
+- - '###'
+  - Momentum
+- - '#'
+  - '16 '
+- - '##'
+  - Introducing Convolution
+- - '###'
+  - Detecting Yellow
+- - '###'
+  - 权重共享
+- - '###'
+  - 更大的滤波器
+- - '###'
+  - 过滤器与特征
+- - '###'
+  - Padding
+- - '##'
+  - Multidimensional Convolution
+- - '###'
+  - 多个卷积核
+- - '###'
+  - 卷积层
+- - '####'
+  - 1D 卷积
+- - '###'
+  - '`1×1` 卷积'
+- - '##'
+  - 改变输出尺寸
+- - '###'
+  - 池化
+- - '###'
+  - Striding
+- - '###'
+  - 转置卷积
+- - '#'
+  - 让我们看看如何通过转置卷积（Dumoulin 和 Visin 2016）来放大张量
+- - '##'
+  - 层次化的滤波器
+- - '###'
+  - 简化假设
+- - '###'
+  - 寻找面罩
+- - '###'
+  - 寻找眼睛、鼻子和嘴巴
+- - '###'
+  - 应用我们的过滤器
+- - '#'
+  - '17 '
+- - '##'
+  - 分类手写数字
+- - '##'
+  - 可视化滤波器，第一部分
+- - '##'
+  - 可视化滤波器，第二部分
+- - '##'
+  - 对抗者
+- - '##'
+  - Summary
+- - '#'
+  - '18 '
+- - '##'
+  - Introduction to Encoding
+- - '###'
+  - Lossless and Lossy Encoding
+- - '#'
+  - 一个简单的方法是考虑转换是否可以 `inverted`，即向后运行以恢复原始数据，从而判断其是否 lossy 或 lossless。例如，标准摩斯电码中，我们可以将字母转换为点划模式，然后再转换回字母，整个过程不丢失任何信息。但当我们从消息中删除元音时，这些字母就永远丢失了。我们通常可以猜测它们，但这只是猜测，而且可能会出错。删除元音会创建一个不可逆的压缩版本。
+- - '##'
+  - Blending Representations
+- - '##'
+  - The Simplest Autoencoder
+- - '##'
+  - 更好的自动编码器
+- - '##'
+  - 探索自动编码器
+- - '###'
+  - 对隐性变量的更近距离观察
+- - '###'
+  - 参数空间
+- - '###'
+  - Blending Latent Variables
+- - '###'
+  - Predicting from Novel Input
+- - '##'
+  - Convolutional Autoencoders
+- - '###'
+  - Blending Latent Variables
+- - '###'
+  - Predicting from Novel Input
+- - '###'
+  - Denoising
+- - '##'
+  - Variational Autoencoders
+- - '###'
+  - 潜在变量的分布
+- - '###'
+  - Variational Autoencoder Structure
+- - '###'
+  - 潜在变量的聚类
+- - '###'
+  - 将相同数字的潜在值聚在一起
+- - '###'
+  - 引入随机性
+- - '##'
+  - 探索 VAE
+- - '###'
+  - Working with the MNIST Samples
+- - '###'
+  - Working with Two Latent Variables
+- - '###'
+  - 生成新输入
+- - '##'
+  - 总结
+- - '#'
+  - '19 '
+- - '##'
+  - 使用语言
+- - '###'
+  - 常见自然语言处理任务
+- - '###'
+  - 将文本转换为数字
+- - '###'
+  - 微调与下游网络
+- - '##'
+  - Fully Connected Prediction
+- - '###'
+  - Testing Our Network
+- - '###'
+  - Why Our Network Failed
+- - '##'
+  - 循环神经网络
+- - '###'
+  - 引入状态
+- - '###'
+  - 循环单元在实际中的应用
+- - '###'
+  - 训练循环神经网络
+- - '###'
+  - 长短期记忆和门控循环网络
+- - '###'
+  - 使用循环神经网络
+- - '###'
+  - 使用太阳斑数据
+- - '###'
+  - 生成文本
+- - '###'
+  - 不同架构
+- - '####'
+  - CNN-LSTM Networks
+- - '####'
+  - Deep RNNs
+- - '####'
+  - Bidirectional RNNs
+- - '##'
+  - Seq2Seq
+- - '##'
+  - Summary
+- - '#'
+  - '20 '
+- - '##'
+  - Embedding
+- - '###'
+  - 嵌入词
+- - '##'
+  - Attention
+- - '###'
+  - A Motivating Analogy
+- - '###'
+  - 自我注意力
+- - '###'
+  - Q/KV Attention
+- - '###'
+  - Multi-Head Attention
+- - '###'
+  - Layer Icons
+- - '##'
+  - Transformers
+- - '####'
+  - Skip Connections
+- - '####'
+  - Norm-Add
+- - '####'
+  - Positional Encoding
+- - '###'
+  - 组装变换器
+- - '###'
+  - Transformers in Action
+- - '###'
+  - BERT and GPT-2
+- - '###'
+  - BERT
+- - '###'
+  - GPT-2
+- - '##'
+  - Generators Discussion
+- - '###'
+  - Data Poisoning
+- - '##'
+  - 摘要
+- - '#'
+  - '21 '
+- - '##'
+  - 基本思想
+- - '##'
+  - 学习新游戏
+- - '###'
+  - 'Step 1: The Agent Selects an Action'
+- - '###'
+  - 'Step 2: The Environment Responds'
+- - '###'
+  - 步骤 3：代理人自我更新
+- - '###'
+  - 回到整体视角
+- - '###'
+  - 理解奖励
+- - '##'
+  - Flippers
+- - '##'
+  - L-Learning
+- - '###'
+  - The Basics
+- - '#'
+  - 1. 标题层级与段落优化
+- - '###'
+  - L-learning 算法
+- - '###'
+  - Testing Our Algorithm
+- - '###'
+  - Handling Unpredictability
+- - '##'
+  - Q-Learning
+- - '###'
+  - Q-Values and Updates
+- - '###'
+  - Q-Learning 政策
+- - '###'
+  - 总结
+- - '#'
+  - 当我们开始一个 move 时，如 Figure 21-29(a) 所示，我们会查看当前状态的 Q-table 行，并使用我们的 policy 来选择一个 action，这里以红色显示。该
+    action 会被传递给环境。环境会返回一个 reward 以及一个新的 state。如在 Figure 21-29(b) 所示，我们会在 Q-table
+    中找到对应新 state 的行，并选择其中最大的 reward（这假设我们在到达新 state 时会选择最大的 action，但我们已经知道这并不总是成立。我们稍后会回到这个问题）。我们通过将该
+    reward 乘以 *γ* 来折扣，然后将其与本 move 的即时 reward 相加，得到我们最初选择的 action 的新值。我们使用 *α* 来混合旧值和新值，新值随后被放入原始
+    action 在 Q-table 中的单元格。
+- - '##'
+  - The Elephant in the Room
+- - '##'
+  - Q-learning in Action
+- - '###'
+  - 算法
+- - '###'
+  - SARSA in Action
+- - '###'
+  - Comparing Q-Learning and SARSA
+- - '##'
+  - The Big Picture
+- - '#'
+  - '22 '
+- - '##'
+  - 伪造金钱
+- - '###'
+  - 从经验中学习
+- - '###'
+  - 利用神经网络进行锻造
+- - '###'
+  - 一个学习回合
+- - '###'
+  - 为何是对抗性？
+- - '##'
+  - 实现 GANs
+- - '###'
+  - 判别器
+- - '###'
+  - 生成器
+- - '###'
+  - 训练 GAN
+- - '##'
+  - GANs in Action
+- - '###'
+  - 构建判别器和生成器
+- - '###'
+  - 训练我们的网络
+- - '###'
+  - 测试我们的网络
+- - '###'
+  - DCGANs
+- - '###'
+  - 挑战
+- - '###'
+  - 模式崩溃
+- - '###'
+  - 使用生成数据进行训练
+- - '##'
+  - 总结
+- - '#'
+  - '23 '
+- - '##'
+  - 创意应用
+- - '##'
+  - 深度梦境
+- - '###'
+  - 激发滤波器
+- - '###'
+  - 运行深度梦境
+- - '###'
+  - 神经风格迁移
+- - '####'
+  - 表示风格
+- - '###'
+  - 表示内容
+- - '###'
+  - 风格与内容结合
+- - '###'
+  - 运行风格迁移
+- - '###'
+  - 为本书生成更多内容
+- - '##'
+  - References
+- - '##'
+  - Chapter 1
+- - '##'
+  - Chapter 2
+- - '##'
+  - Chapter 3
+- - '##'
+  - Chapter 4
+- - '##'
+  - 第 10 章
+- - '##'
+  - 第 11 章
+- - '##'
+  - 第 12 章
+- - '##'
+  - 第 13 章
+- - '#'
+  - 第 14 章
+- - '#'
+  - 第 15 章
+- - '##'
+  - 第 16 章
+- - '##'
+  - Chapter 17
+- - '##'
+  - Chapter 18
+- - '##'
+  - 文献列表
+- - '##'
+  - 2020 年
+- - '##'
+  - 2019 年
+- - '##'
+  - 2018 年
+- - '##'
+  - 2017 年
+- - '##'
+  - 2016 年
+- - '##'
+  - 2015 年
+- - '##'
+  - 2014 年
+- - '##'
+  - 2013 年
+- - '##'
+  - 2012 年
+- - '##'
+  - 2011 年
+- - '##'
+  - 2010 年
+- - '##'
+  - Index
+- - '##'
+  - Symbols and Numbers
+- - '##'
+  - A
+- - '##'
+  - B
+- - '##'
+  - 目录
+- - '##'
+  - C
+- - '##'
+  - code
+- - '##'
+  - D
+- - '##'
+  - RMSprop
+- - '##'
+  - stochastic
+- - '##'
+  - typical meaning
+- - '##'
+  - Gram matrix
+- - '##'
+  - graph
+- - '##'
+  - introduction
+- - '##'
+  - weighted graph
+- - '##'
+  - graph theory
+- - '##'
+  - Great Dane
+- - '##'
+  - greedy algorithm (for decision trees)
+- - '##'
+  - grid
+- - '##'
+  - ground truth
+- - '##'
+  - grouping
+- - '##'
+  - GRU (gated recurrent unit)
+- - '##'
+  - guitar data
+- - '##'
+  - He Normal initialization
+- - '##'
+  - He Uniform initialization
+- - '##'
+  - head (in attention layer)
+- - '##'
+  - Heaviside step activation function
+- - '##'
+  - hidden layer
+- - '##'
+  - hidden state
+- - '##'
+  - hierarchy
+- - '##'
+  - high-dimensional spaces
+- - '##'
+  - high-dimensional weirdness
+- - '##'
+  - hypercube
+- - '##'
+  - hyperorange
+- - '##'
+  - hypersphere
+- - '##'
+  - packing hyperspheres in hypercubes
+- - '##'
+  - volume of a hypersphere in a hypercube
+- - '##'
+  - hill (3D surface)
+- - '##'
+  - hit rate
+- - '##'
+  - Holmes, Sherlock (stories)
+- - '##'
+  - generating with GPT2
+- - '##'
+  - generating with RNN
+- - '##'
+  - Hopper, Edward
+- - '##'
+  - Huffman code
+- - '##'
+  - husky
+- - '##'
+  - hypercube
+- - '##'
+  - hyperorange
+- - '##'
+  - hyperparameter
+- - '##'
+  - hypersphere
+- - '##'
+  - hypothesis (in Bayes’ Rule)
+- - '##'
+  - i.i.d. (independent and identically distributed)
+- - '##'
+  - ice-cream shop (scenario)
+- - '##'
+  - idealized curve
+- - '##'
+  - identically distributed
+- - '##'
+  - identifying dog breeds (scenario)
+- - '##'
+  - identity activation function
+- - '##'
+  - IG (information gain)
+- - '##'
+  - image classifier
+- - '##'
+  - image matrix (for style transfer)
+- - '##'
+  - ImageNet
+- - '##'
+  - immediate children (in decision tree)
+- - '##'
+  - impurity
+- - '##'
+  - inceptionism
+- - '##'
+  - independent and identically distributed
+- - '##'
+  - independent variable
+- - '##'
+  - inertia
+- - '##'
+  - infinite distribution
+- - '##'
+  - information
+- - '##'
+  - information exchange
+- - '##'
+  - information leakage
+- - '##'
+  - initial state (in reinforcement learning)
+- - '##'
+  - initialization (of a neural network)
+- - '##'
+  - input layer
+- - '##'
+  - input tensor
+- - '##'
+  - instant reward
+- - '##'
+  - internal node (in decision tree)
+- - '##'
+  - interval decay
+- - '##'
+  - inverse transformation
+- - '##'
+  - inversion (of encoding)
+- - '##'
+  - joint probability
+- - '##'
+  - JPG encoder
+- - '##'
+  - junkyard (scenario)
+- - '##'
+  - dimensions left after PCA
+- - '##'
+  - number of clusters
+- - '##'
+  - number of folds
+- - '##'
+  - number of nearest neighbors
+- - '##'
+  - k-means clustering
+- - '##'
+  - k-nearest neighbors
+- - '##'
+  - Kandinsky, Wassily
+- - '##'
+  - kernel (of a convolution filter)
+- - '##'
+  - kernel trick
+- - '##'
+  - key (for transformer)
+- - '##'
+  - kissing line (tangent)
+- - '##'
+  - KL divergence
+- - '##'
+  - kNN (k-nearest neighbors)
+- - '##'
+  - Kullback-Leibler divergence
+- - '##'
+  - L-Learning
+- - '##'
+  - L-table
+- - '##'
+  - L-value
+- - '##'
+  - label
+- - '##'
+  - language model
+- - '##'
+  - last-minute stopping
+- - '##'
+  - latent layer
+- - '##'
+  - latent space
+- - '##'
+  - latent variable
+- - '##'
+  - law of diminishing returns in ensemble construction
+- - '##'
+  - layer normalization
+- - '##'
+  - layer schematic symbol
+- - '##'
+  - layers
+- - '##'
+  - learning rate
+- - '##'
+  - learning rate adjustment
+- - '##'
+  - LeCun Normal initialization
+- - '##'
+  - LeCun Uniform initialization
+- - '##'
+  - letter frequencies in English
+- - '##'
+  - life-seeking probes (scenario)
+- - '##'
+  - likelihood
+- - '##'
+  - line (in a neural network)
+- - '##'
+  - line fitting with Bayes’ Rule (scenario)
+- - '##'
+  - linear activation function
+- - '##'
+  - linear function
+- - '##'
+  - linear layer. *See* fully connected layer
+- - '##'
+  - VAE (variational autoencoder) 521
+- - '##'
+  - Vail, Alfred 139
