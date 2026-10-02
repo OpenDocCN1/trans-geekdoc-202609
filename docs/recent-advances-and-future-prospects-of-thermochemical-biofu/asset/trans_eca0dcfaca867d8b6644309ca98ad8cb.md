@@ -1,0 +1,51 @@
+
+热解炭化中无机磷回收, Waste Manag. 85 (2019) 242-252, https://doi.org/10.1016/j.wasman.2018.12.044.
+[80] L. Mu, Z. Wang, D. Wu, L. Zhao, H.C. Yin, 来自废弃固体生物质的热解炭燃料特性预测与评价：基于提出的PSO-NN模型的机器学习算法, Fuel 318 (2022), 123644.
+[81] B.W.X. Yang, Y. Guo, F. Yang, F. Cheng, 污泥与煤泥共热解炭化用于清洁固体燃料生产：热解炭燃料特性与燃烧行为的综合评估, Biomass Convers. Biorefin. (2022), https://doi.org/10.1007/s13399-022-03601-y.
+[82] W. Zhang, J. Li, T. Liu, S. Leng, L. Yang, H. Peng, S. Jiang, W. Zhou, L. Leng, H. Li, 基于机器学习的藻类水热液化生物油生产预测与优化, Bioresour. Technol. 342 (2021), 126011.
+[83] J. Li, M. Suvarna, L. Pan, Y. Zhao, X. Wang, 水热气化的混合数据驱动与机理建模方法, Appl. Energy 304 (2021) 117674.
+[84] D. Főzer, A.J. Tóth, P.S. Varbanov, J.J. Klemes, P. Mizsey, 基于人工神经网络的水热气化生物甲醇生产可持续性评估, J. Clean. Prod. 318 (2021) 128606.
+[85] O. Çepelioğullar, I. Mutlu, S. Yaman, H. Haykiri-Acma, 基于不同神经网络拓扑结构的生物质废弃物活化能预测, Fuel 220 (2018) 535-545.
+[86] W. Ji, F. Richter, M.J. Gollner, S. Deng, 利用化学反应神经网络的生物质热解自主动力学建模, Combust. Flame 240 (2022), 111992.
+[87] A.P. Mayol, J.M.Z. Maningo, A.G.A.Y. Chua-Unsu, C.B. Felix, P.I. Rico, G.S. Chua, E.V. Manalili, D.D. Fernandez, J.L. Cuello, A.A. Bandala, A.T. Ubando, C. F. Madrazo, E. Dadios, A.B. Culaba, 人工神经网络在藻类垫（LABLAB）热解行为预测中的应用, in: Biomass, 2018 IEEE 10th International Conference on Humanoid, NanoTechnology, Information Technology, Communication and Control, Environment and Management (HNICEM), 2018, pp. 1-5.
+[88] P.V. Gopirajan, K.P. Gopinath, G. Sivaranjani, J. Arun, 通过机器学习方法优化水热气化工艺：实验条件、产物产率与污染, J. Clean. Prod. 306 (2021) 127302, https://doi.org/10.1016/j.jclepro.2021.127302.
+[89] S. Shenbagaraj, P.K. Sharma, A.K. Sharma, G. Raghav, K.B. Kota, V. Ashokkumar, 超临界水条件下食品废弃物气化：基于人工神经网络的创新合成气组成预测模型, Int J Hydrog Energy 46 (24) (2021) 12739-12757, https://doi.org/10.1016/j.ijhydene.2021.01.122.
+[90] W. Jiang, X. Xing, S. Li, X. Zhang, W. Wang, 稻草活性炭的合成、表征及基于机器学习的性能预测, J. Clean. Prod. 212 (2019) 1210-1223.
+[91] T. Liu, Q. Lang, Y. Xia, Z. Chen, D. Li, J. Ma, C. Gai, Z. Liu, 污泥处理中热解炭化与富氧燃烧工艺的结合：燃烧特性与动力学分析, Fuel 242 (2019) 265-276, https://doi.org/10.1016/j.fuel.2019.01.035.
+[92] P.R. Jeon, C.-H. Lee, 从纯水到盐水各种水溶液中二氧化碳溶解度的神经网络建模, J. CO2 Util. 47 (2021), 101500, https://doi.org/10.1016/j.jcou.2021.101500.
+[93] H.J.L. van Can, H.A.B. te Braake, C. Hellinga, K.C.A.M. Luyben, 基于宏观平衡中神经网络的生物过程高效模型开发策略, Biotechnol. Bioeng. 54 (6) (1997) 549-566, https://doi.org/10.1002/(SICI)1097-0290(19970620)54:6<549::AID-BIT6>3.0.CO;2-J.
+[94] D. Serrano, D. Castillo, 通过人工神经网络预测鼓泡流化床气化中的焦油, Chem. Eng. J. 402 (2020), 126229.
+[95] S.L. Wang, Z.Y. Shi, Y.H. Jin, I.N. Zain, Y. Li, C.C. Tang, W.Z. Mu, Y.M. Wen, J.C. Jiang, P.G. Jonsson, 预测不同类型原料热解动力学的机器学习模型, Energy Convers. Manag. 260 (2022), 115613.
+[96] A. Bahadar, R. Kanthasamy, H.H. Sait, M. Zwawi, M. Algarn, B. Ayodele, C. K. Cheng, L.J. Wei, 阐明工艺参数对生物质与煤炭共气化技术富氢合成气生产的影响：多准则建模方法, Chemosphere 287 (Pt 1) (2022), 132052, https://doi.org/10.1016/j.chemosphere.2021.132052.
+[97] J. Li, X.Z. Zhu, Y.A. Li, Y.W. Tong, Y.S. Ok, X.N. Wang, 高含水城市固体废弃物热解炭特性的多任务预测与优化：机器学习在废物资源化中的应用, J Clean Prod 278 (2021) 123928. https://doi.org/10.1016/j.jclepro.2020.123928.
+[98] M. Aykol, C.B. Gopal, A. Anapolsky, P.K. Herring, B. van Vlijmen, M.D. Berliner, M.Z. Bazant, R.D. Braatz, W.C. Chueh, B.D. Storey, 述评——结合物理与机器学习预测电池寿命, J. Electrochem. Soc. 168 (3) (2021), 030525, https://doi.org/10.1149/1945-7111/abec55.
+[99] J. Marchetti, V. Miguel, A. Errazu, 生物柴油生产不同替代方案的技术经济研究, Fuel Process. Technol. 89 (8) (2008) 740-748.
+[100] P. Yaashikaa, M.K. Devi, P.S. Kumar, E. Pandian, 藻类生物质生物柴油生产的综述：生命周期评估与技术经济分析展望, Fuel 324 (2022), 124774.
+[101] A. Kushwaha, A.N. Yadav, B. Singh, V. Dwivedi, S. Kumar, L. Goswami, C. M. Hussain, 藻类衍生生物柴油的生命周期评估与技术经济分析：当前挑战与未来前景, Waste-to-Energy approaches towards zero waste, Elsevier (2021) 343-372, https://doi.org/10.1016/C2020-0-02334-0.
+[102] R. Naveenkumar, G. Baskar, 利用非均相纳米催化剂从光果油楸油生产生物柴油的优化与技术经济分析, Bioresour. Technol. 315 (2020), 123852.
+[103] H. Huang, S. Long, V. Singh, 来自产脂甘蔗的生物柴油与乙醇共生产的技术经济分析, Biofuel Bioprod Biorefin 10 (3) (2016) 299-315.
+[104] H.Y. Heo, S. Heo, J.H. Lee, 微藻生物柴油生产的酯交换技术比较技术经济分析, Ind. Eng. Chem. Res. 58 (40) (2019) 18772-18779.
+[105] A. Apostolakos, L. Kookos, C. Maraziotis, K. Angelopoulos, 来自植物油的生物柴油生产工艺的技术经济分析, Fuel Process. Technol. 90 (7-8) (2009) 1023-1031.
+[106] A.W. Bartling, M.L. Stone, R.J. Hanes, A. Bhatt, Y. Zhang, M.J. Biddy, R. Davis, J.S. Kruger, N.E. Thornburg, J.S. Luterbacher, R. Rinaldi, J.S.M. Samec, B.F. Sels, Y. Román-Leshkov, G.T. Beckham, 利用还原性催化分馏的生物炼制厂的技术经济分析与生命周期评估, Energy Environ. Sci. 14 (8) (2021) 4147-4168.
+[107] F. Masala, D. Groppi, B. Nastasi, G. Piras, D.A. Garcia, 小岛能源系统中沼气生产与利用情景的技术经济分析, Energy 258 (2022), 124831.
+[108] A. Akbulut, 农场规模沼气厂发电与供热的技术经济分析：Çiçekdağı案例研究, Energy 44 (1) (2012) 381-390.
+[109] T.T. Vo, D.M. Wall, D. Ring, K. Rajendran, J.D. Murphy, 通过胺洗涤、碳捕集和原位甲烷化的沼气升级技术经济分析, Appl. Energy 212 (2018) 1191-1202.
+[110] K. Rajendran, G.S. Murthy, 厌氧消化的技术经济与生命周期评估综述, Biocatal. Agric. Biotechnol. 20 (2019), 101207.
+[111] A. Pääkkönen, H. Tolvanen, J. Rintala, 基于波动电价运行的电力制沼气系统的技术经济分析, Renew Energy 117 (2018) 166-174.
+[112] F. Ferella, F. Cucchiella, I. D'Adamo, K. Gallucci, 发达市场中沼气升级的技术经济评估, J. Clean. Prod. 210 (2019) 945-957.
+[113] J.-C. Lee, B. Lee, Y.S. Ok, H. Lim, 固体生物炭上生物柴油生产的初步技术经济分析, Bioresour. Technol. 306 (2020), 123086.
+[114] M. Byun, H. Lee, C. Choe, S. Cheon, H. Lim, 具有技术、环境和经济视角的甲醇蒸汽重整机器学习预测模型, Chem. Eng. J. 426 (2021), 131639.
+[115] F. Cheng, H. Luo, 评估水热液化藻类衍生生物燃料的最低燃料售价, Bioresour Technol Rep 17 (2022), 100901.
+[116] O. Olafasakin, Y. Chang, A. Passalacqua, S. Subramaniam, R.C. Brown, M. Mba Wright, 用于热解系统成本与排放评估的机器学习降阶模型, Energy Fuels 35 (12) (2021) 9950-9960.
+[117] M. Vondra, M. Touš, S.Y. Teng, 沼气厂消化液蒸发处理：蒙特卡洛、神经网络和决策树的技经评估, J. Clean. Prod. 238 (2019), 117870.
+[118] Z. Wang, X. Peng, A. Xia, A.A. Shah, Y. Huang, X. Zhu, X. Zhu, Q. Liao, 机器学习在促进生物能源与生物燃料转化中的作用, Bioresour. Technol. 343 (2022), 126099.
+[119] M. Mowbray, T. Savage, C. Wu, Z. Song, B.A. Cho, E.A. Del Rio-Chanona, D. Zhang, 生物化工中的机器学习：综述, Biochem. Eng. J. 172 (2021), 108054, https://doi.org/10.1016/j.bej.2021.108054.
+[120] P.R. Jeon, M.S. Hong, R.D. Braatz, 通过标准非线性算子形式对非线性动力系统的紧凑神经网络建模, Comput. Chem. Eng. 159 (2022), 107674, https://doi.org/10.1016/j.compchemeng.2022.107674.
+[121] M. von Stosch, R. Oliveira, J. Peres, S. Feyo de Azevedo, 过程系统工程中的混合半参数建模：过去、现在与未来, Comput. Chem. Eng. 60 (2014) 86-101, https://doi.org/10.1016/j.compchemeng.2013.08.008.
+[122] S.R. Jeong, J.H. Park, J.H. Lee, P.R. Jeon, C.-H. Lee, 高压下煤与页岩上CO2、CH4及其混合物的吸附平衡综述：用于增强CH4回收与CO2封存, Fluid Phase Equilib. 564 (2023), 113591, https://doi.org/10.1016/j.fluid.2022.113591.
+[123] Y.B.H. Ma, Y. Rong, W. Huang, T. Xu, W. Xie, G. Ye, J. Huang, 用于分子性质预测的交叉依赖图神经网络, Bioinformatics 38 (2022) 2003-2009.
+[124] Y. Kim, J. Cho, N. Naser, S. Kumar, K. Jeong, R.L. McCormick, P.C. St. John, S. Kim, 用于预测十六烷值并进行系统数据质量分析的物理信息图神经网络, Proc Combust Inst 39 (4) (2023) 4969-4978.
+[125] A. Daw, A. Karpatne, W. Watkins, J. Read, V. Kumar, 物理引导神经网络（PGNN）：湖泊温度建模的应用, 2017, p. arXiv: 1710.11431.
+[126] M. Raissi, A. Yazdani, G.E. Karniadakis, 隐藏流体力学：从流动可视化学习速度和压力场, Science 367 (6481) (2020) 1026-1030, https://doi.org/10.1126/science.aaw4741.
+[127] G. Cybenko, 由S形函数叠加逼近, Math Control Signal Syst 2 (4) (1989) 303-314, https://doi.org/10.1007/BF02551274.
+[128] J.C. Lee, S.S. Kim, S. You, Y.-K. Park, 基于木质纤维素生物质的集成可再生能源系统热化学转化生物能源生产, Renew. Sustain. Energy Rev. 178 (2023) 113240.

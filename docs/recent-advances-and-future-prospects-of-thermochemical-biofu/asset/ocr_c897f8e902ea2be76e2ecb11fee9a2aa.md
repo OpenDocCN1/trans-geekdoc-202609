@@ -1,0 +1,17 @@
+# Table 3
+
+Summary of the ML models to predict products yield and composition (wet conditions).
+
+| Biomass | Method | Model inputs | Model outputs | No. of data (split ratio) | Model development | Model performance | Feature importance | Remark | Ref. |
+|---|---|---|---|---|---|---|---|---|---|
+| Waste | TDSS, TRS | C, H, O, N, S, MC, VM, AC, T, P, SV/ B, RT, mass of catalyst | H2 yield, pollution index (CO2, and CO %) | 520 (500:20) | Pre-process: X | %Accuracy: 94% | X | Missing data were assumed suitably and analyzed using TDSS. | [88] |
+| Food waste | ANN | T, RT, BC | H2, CH4, CO, CO2 yields | 40 (28:6:6) | Pre-process: X | R²: 0.989 (H2) R²: 0.991 (CH4) R²: 0.994 (CO) R²: 0.982 (CO2) | X | Overfitting was prevented by early-stop method. | [89] |
+| Microalgae, waste | ANN | C, H, O, N, S, T, P, B/W, RT, Cat/ Susp | H2, CH4, CO2, CO, C2H4 C2H6 yields | 55 (70:15:15) | Pre-process: X | R²>: 0.965 | X | Overfitting was prevented by early-stop method. The developed ANN model was used in cost estimation. | [84] |
+| Micro and macroalgae | RF, GBR | H/C, O/C, N/C, AC, protein, lipid, carbohydrate, T, Solid content | Oil Yield, O content in Oil, N content in Oil | 310 (80:20) | Pre-process: z-score 5-fold CV | R²: 0.90 (GBR, MISOs) | MDI | MISOs of GBR was better than MIMO of GBR (R²0.89). The contribution of operating condition was much larger. | [82] |
+| Wet waste | GBR, GBR-PSO | C, H, N, O, AC, SD (solid content), T, P | H2, CH4, CO2, CO yield | 295 (90:10) | Pre-process: X | R²: 0.99 (GBR) | Method not mentioned | Developed GBR model was used for optimization for H2-rich syngas production. The suggested condition was inserted in Aspen simulation and the result was validated with experiment. Reaction kinetic was further analyzed with Aspen. | [83] |
+| Diverse biomass | LR, ANN, SVM, GPR | T, S/B, O, AC, F, mass of biomass, adsorbent to biomass, PS, C | H2-rich syngas | 1. 15 2. 16 3. 26 4. 15 5. 20 6. 15 (70:15:15) | Pre-process: X | 1. R²:0.998 (H2 mol%) 2. R²:0.998 (syngas, HHV) 3. R²:0.970 (H2 yield, %) 4. R²: 0.883 H2 5. R² (H2/ CO):0.857 6. R²: 0.978 (H2) | Modified Garson Equation | Overfitting was prevented by early-stop method. Relative importance 1) T > Oxygen > S/B 2) biomass weight > T > total feedstock weight > AC > F > the ash weight 3) T > Adsorbent to Biomass Ratio > S/B > PS > Superficial Velocity 4) Total amount of feedstock > Amount of coal > initial water volume 5) ER > T > Coal blending 6) F > T > biomass ratio T was the most important input variable. | [38] |
+| Poultry litter | MLR | RT, T | IP, CR | 21 | Pre-process: X 3-fold CV | R²: 0.9122 (IP) R²: 0.9162 (CR) | MLR coefficient |  | [79] |
+| Sewage sludge, food waste, and manure | RF, SVR, DNN | C, H, N, O, FC, AC, VM, MC, RT, T | Yield, HHV, Carbon in char, CR, ENR, N/C, H/C, and O/C | 248 (90:10) | Pre-process: z-score 10-fold CV dropout | R²>: 0.91 | Permutation importance | DNN was the best. T, C, H, N, O are commonly important in prediction. Developed model was used to optimize fuel properties and carbon storage performance of produced biochar. | [78] |
+| Diverse biomass | ANN, ANN-PSO | C, H, O, N, S FC, AC, VM, T, RT, B/ W | Yield, HHV, AC, N/C, DHD, and DCD of biochar | 296 (90:10) | Pre-process: X 10-fold CV L2 regularization | R²: > 0.85 | SHAP | Overfitting was prevented by L2 regularization. DHD and DHD were defined. Yield: C and T were important. HHV: N, C, and H were important. AC in biochar: O and AC in biomass were important. N/C: N was the most important. DHD: T, AC were | [73] |
+
+(continued on next page)
