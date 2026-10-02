@@ -1,0 +1,14 @@
+
+- [22] M. Liu, A. Jain, Z. Rong, X. Qu, P. Canepa, R. Malik, G. Ceder, and K. A. Persson, 用于多价电池正极应用的硫尖晶石化合物的评估, Energy Environ. Sci. 9, 3201 (2016).
+- [23] 通用机器学习原子间势中的系统性软化 | Npj Computational Materials, https://www.nature.com/articles/s41524-024-01500-6.
+- [24] J. P. Perdew, K. Burke, and M. Ernzerhof, 广义梯度近似的简化, Phys. Rev. Lett. 77, 3865 (1996).
+- [25] L. Wang, T. Maxisch, and G. Ceder, GGA + U 框架下过渡金属氧化物的氧化能, Phys. Rev. B 73, 195107 (2006).
+- [26] 有效相互作用参数计算的线性响应方法 | Phys. Rev. B, https://journals.aps.org/prb/abstract/10.1103/PhysRevB.71.035105.
+- [27] 液态金属的第一性原理分子动力学 | Phys. Rev. B, https://journals.aps.org/prb/abstract/10.1103/PhysRevB.47.558.
+- [28] 交换关联泛函对电池材料迁移势垒估计的影响 | Npj Computational Materials, https://www.nature.com/articles/s41524-022-00837-0.
+- [29] J. Lian, X. Fu, X. Gong, R. Xiao, and H. Li, 通过微调 CHGNet 势实现锂离子导体发现的高通量 NEB, arXiv:2507.02334.
+- [30] C. Chen and S. P. Ong, 周期表的通用图深度学习原子间势, Nat. Comput. Sci. 2, 718 (2022).
+- [31] S. R. Bahn and K. W. Jacobsen, 面向对象的遗留电子结构代码脚本接口, Comput Sci Eng 4, 56 (2002).
+- [32] A. H. Larsen et al., 原子模拟环境——用于处理原子的 Python 库, J. Phys. Condens. Matter 29, 273002 (2017).
+- [33] S. P. Ong, W. D. Richards, A. Jain, G. Hautier, M. Kocher, S. Cholia, D. Gunter, V. L. Chevrier, K. A. Persson, and G. Ceder, Python 材料基因组学 (pymatgen)：用于材料分析的稳健开源 Python 库, Comput. Mater. Sci. 68, 314 (2013).
+- [34] Z. Deng, Z. Zhu, I.-H. Chu, and S. P. Ong, 用于碱性超离子导体研究和设计的基于数据的第一性原理方法, https://doi.org/10.1021/acs.chemmater.6b02648.
