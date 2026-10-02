@@ -1,0 +1,553 @@
+name: Pragmatic machine learning with Python ： learn how to deploy machine learning
+  models in production
+slug: pragmatic-machine-learning-with-python-learn-how-to-deploy-m
+name_cn: '
+
+  Python 机器学习 实践指南'
+toc:
+- - '##'
+  - 致
+- - '##'
+  - 致 Balaram Nag
+- - '##'
+  - 致 我的父亲，他为我的人生奠定了基础。
+- - '##'
+  - 关于作者
+- - '##'
+  - 前言
+- - '##'
+  - 纳伊夫贝叶斯分类器的优势
+- - '##'
+  - 纳伊夫贝叶斯分类器的缺点
+- - '##'
+  - 逻辑回归分类器
+- - '##'
+  - Python 实现
+- - '##'
+  - SoftMax 激活函数方法
+- - '##'
+  - Python 实现
+- - '##'
+  - Logistic Regression Classifier 的优势
+- - '##'
+  - Logistic Regression Classifier 的缺点
+- - '##'
+  - 决策树分类器
+- - '##'
+  - 决策树的解剖结构
+- - '##'
+  - Handling continuous and categorical attributes
+- - '##'
+  - Categorical attribute
+- - '##'
+  - Continuous attribute
+- - '##'
+  - Measure and technique of splitting a node
+- - '##'
+  - Impurity and mathematical measures
+- - '##'
+  - ID3 algorithm of building Decision Tree
+- - '##'
+  - 类别失衡问题
+- - '##'
+  - 替代指标
+- - '##'
+  - 混淆矩阵
+- - '##'
+  - 基于比率的指标
+- - '##'
+  - 多类和失衡数据集的准确率指标
+- - '##'
+  - Receiver Operating Characteristic 曲线 (ROC)
+- - '##'
+  - Python 实现 ROC 生成
+- - '##'
+  - 缓解类别失衡问题
+- - '##'
+  - 类别权重调整方法
+- - '##'
+  - 基于采样的方法
+- - '##'
+  - 集成分类模型
+- - '##'
+  - Bagging
+- - '##'
+  - RandomForest 模型
+- - '##'
+  - RandomForest 的 Python 实现
+- - '##'
+  - 多标签分类模型
+- - '##'
+  - 问题形式 ulation
+- - '##'
+  - 问题分解及伞分类方案（Umbrella classification scheme）
+- - '##'
+  - 二元相关性方案（Binary relevance scheme）
+- - '##'
+  - 分类链方案（Classifier chain scheme）
+- - '##'
+  - 标签子集方案（Label powerset scheme）
+- - '##'
+  - 各方案对比
+- - '##'
+  - 准确率指标
+- - '##'
+  - Hamming loss 指标
+- - '##'
+  - Python 多标签分类器实现
+- - '##'
+  - 结论
+- - '##'
+  - CHAPTER 3
+- - '##'
+  - 回归（Regression）
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 回归问题的数学定义
+- - '##'
+  - 线性 vs.非线性关系
+- - '##'
+  - Conversion between linear and non-linear relationships
+- - '##'
+  - Building a linear regression model
+- - '##'
+  - General approach to solving linear regression
+- - '##'
+  - Ordinary Least Squares (OLS)
+- - '##'
+  - Gradient Descent
+- - '##'
+  - Backward selection
+- - '##'
+  - 'Forward or backward: When to use what'
+- - '##'
+  - Key points to remember in linear regression
+- - '##'
+  - Polynomial regression
+- - '##'
+  - Regularization
+- - '##'
+  - L1 regularization or Lasso
+- - '##'
+  - L2 正则化或脊回归
+- - '##'
+  - 参数回归模型用于解释事实
+- - '##'
+  - 基于树的回归
+- - '##'
+  - 层次聚类
+- - '##'
+  - 聚类作为分类技术
+- - '##'
+  - 目标
+- - '##'
+  - 聚类的正式定义
+- - '##'
+  - 聚类概念
+- - '##'
+  - 相似度度量
+- - '##'
+  - 基于中心的聚类
+- - '##'
+  - K-means 聚类
+- - '##'
+  - 基本 K-means 算法
+- - '##'
+  - 超参数
+- - '##'
+  - Python 实现 K-means 聚类
+- - '##'
+  - 预处理
+- - '##'
+  - 聚类作为新特征空间
+- - '##'
+  - KMeans 中中心初始化的敏感性
+- - '##'
+  - 可视化聚类
+- - '##'
+  - 准确性指标
+- - '##'
+  - 聚类的凝聚与分离
+- - '##'
+  - 轮廓系数
+- - '##'
+  - Python 实现聚类指标
+- - '##'
+  - KMeans 的优势
+- - '##'
+  - KMeans 的缺点
+- - '##'
+  - 在 KMeans 中确定最优 K
+- - '##'
+  - 肘部法（Elbow method）
+- - '##'
+  - XMeans 聚类
+- - '##'
+  - 对数似然的计算
+- - '##'
+  - Python implementation of XMeans
+- - '##'
+  - Density-based clustering
+- - '##'
+  - DBSCAN clustering
+- - '##'
+  - Python implementation of DBSCAN clustering
+- - '##'
+  - Visualization of clusters
+- - '##'
+  - DBSCAN 的优势
+- - '##'
+  - DBSCAN 的劣势
+- - '##'
+  - 确定 DBSCAN 的最优参数
+- - '##'
+  - 使用 K 距离图确定 Eps
+- - '##'
+  - 层次聚类
+- - '##'
+  - 层次聚类的 Python 实现
+- - '##'
+  - 聚类可视化
+- - '##'
+  - Visualization of hierarchical clusters with a dendrogram
+- - '##'
+  - Clustering to solve a classification problem
+- - '##'
+  - Computation of class probabilities
+- - '##'
+  - Classification process
+- - '##'
+  - Python implementation of the model
+- - '##'
+  - Visualization of clusters and classification accuracy
+- - '##'
+  - 需要记住的要点
+- - '##'
+  - 结论
+- - '##'
+  - 第 5 章
+- - '##'
+  - 深度学习
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 什么是深度学习？
+- - '##'
+  - 为什么需要深度学习？
+- - '##'
+  - 神经网络
+- - '##'
+  - 神经网络的解剖
+- - '##'
+  - 感知单元（Perceptron）
+- - '##'
+  - 激活函数
+- - '##'
+  - Logistic Sigmoid（Logistic Sigmoid）
+- - '##'
+  - Tanh（正切）
+- - '##'
+  - ReLU（整流线性单元）
+- - '##'
+  - Linear（线性）
+- - '##'
+  - 层（Layers）
+- - '##'
+  - 损失函数（Loss function）
+- - '##'
+  - Mean Squared Error（均方误差，MSE）
+- - '##'
+  - Cross-Entropy Loss（交叉熵损失）
+- - '##'
+  - 优化器（Optimizer）
+- - '##'
+  - Stochastic Gradient Descent（随机梯度下降，SGD）
+- - '##'
+  - Mini-batch Gradient Descent（小批量梯度下降）
+- - '##'
+  - 构建神经网络模型
+- - '##'
+  - '[神经网络训练过程'
+- - '##'
+  - 前向传播
+- - '##'
+  - 反向传播
+- - '##'
+  - 停止条件
+- - '##'
+  - 将神经网络用于分类和回归问题
+- - '##'
+  - 决定隐藏层数量和神经元数量
+- - '##'
+  - 分类问题
+- - '##'
+  - 决定隐藏层节点数的启发式方法
+- - '##'
+  - 存在一个在 one-hot 编码结果中的挑战，训练和测试数据集之间可能存在差异。正如 `第 2 章：分类` 中解释的那样。
+- - '##'
+  - 回归问题
+- - '##'
+  - 构建 MLP（多层感知器）模型的惯例
+- - '##'
+  - 不同类型的神经网络
+- - '##'
+  - Convolutional Neural Network (CNN)
+- - '##'
+  - Convolution operation
+- - '##'
+  - Significance of convolution in the neural network model
+- - '##'
+  - Anatomy of a CNN
+- - '##'
+  - Convolution layer
+- - '##'
+  - Max/average-pool layer
+- - '##'
+  - Feature engineering of images using CNN
+- - '##'
+  - A brief introduction to PyTorch for designing a neural network
+- - '##'
+  - CNN using PyTorch
+- - '##'
+  - Input and output channel
+- - '##'
+  - Auto-Encoder
+- - '##'
+  - Disadvantages of deep learning and neural network
+- - '##'
+  - 结论
+- - '##'
+  - 结论
+- - '##'
+  - Miscellaneous Unsupervised Learning
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 维度降低
+- - '##'
+  - Principal Component Analysis (PCA)
+- - '##'
+  - 计算主成分 (PC) 与协方差和特征向量的方法
+- - '##'
+  - PCA and Co-relation coefficient
+- - '##'
+  - Classification using principal components
+- - '##'
+  - Regression using principal components
+- - '##'
+  - Key points to remember about PCA
+- - '##'
+  - Unsupervised outlier detection
+- - '##'
+  - Outlier detection using Auto-Encoder
+- - '##'
+  - Architecture of the Auto-Encoder for outlier detection
+- - '##'
+  - Metric to measure outlier factor
+- - '##'
+  - Training of Auto-Encoder
+- - '##'
+  - Testing the result
+- - '##'
+  - Key points to remember about Auto Encoder based outlier detection
+- - '##'
+  - Outlier detection using clustering
+- - '##'
+  - Center-based clustering algorithm for outlier detection
+- - '##'
+  - Density-based clustering algorithm for outlier detection
+- - '##'
+  - Testing the accuracy
+- - '##'
+  - Key points to remember about DBSCAN based outlier detection
+- - '##'
+  - Isolation Tree
+- - '##'
+  - Isolation Forest
+- - '##'
+  - 第 7 章
+- - '##'
+  - 文本挖掘
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 分析文本
+- - '##'
+  - 什么是语料库和文档？
+- - '##'
+  - 文本预处理
+- - '##'
+  - Steps of cleaning text
+- - '##'
+  - Vector space models of text
+- - '##'
+  - TF-IDF model
+- - '##'
+  - Word2Vec model
+- - '##'
+  - Skip-Gram Word2Vec model
+- - '##'
+  - CBOW (Continuous Bag of Words) Word2Vec model
+- - '##'
+  - Comparison of Skip-Gram and CBOW
+- - '##'
+  - Doc2Vec 模型
+- - '##'
+  - Word2Vec 的平均值
+- - '##'
+  - 分布式记忆模型 (PV-DM) 的 Doc2Vec
+- - '##'
+  - 分布式词袋模型 (PV-DBOW) 的 Doc2Vec
+- - '##'
+  - 不同 Doc2Vec 模型的比较
+- - '##'
+  - 不同向量空间模型的比较
+- - '##'
+  - 文本分类技术
+- - '##'
+  - 文本可视化技术
+- - '##'
+  - 直方图
+- - '##'
+  - 词云
+- - '##'
+  - 文本 Naïve Bayes 分类器
+- - '##'
+  - TF-IDF 与 Naïve Bayes 分类器
+- - '##'
+  - Doc2Vec 与 Naïve Bayes 分类器
+- - '##'
+  - 测量文本相似度
+- - '##'
+  - Text clustering
+- - '##'
+  - Conclusion
+- - '##'
+  - CHAPTER 8
+- - '##'
+  - Machine Learning Models in Production
+- - '##'
+  - Structure
+- - '##'
+  - Objectives
+- - '##'
+  - Challenges of putting a model into production
+- - '##'
+  - Exposing model as a service
+- - '##'
+  - Save and load a model
+- - '##'
+  - Flask 简要介绍
+- - '##'
+  - 将模型作为 Flask REST API 暴露
+- - '##'
+  - 添加可扩展性支持
+- - '##'
+  - 可扩展性存储
+- - '##'
+  - 可扩展性计算
+- - '##'
+  - Apache Spark-MLlib 和管道
+- - '##'
+  - 构建平台无关的模型描述符
+- - '##'
+  - 预测模型标记语言 (PMML)
+- - '##'
+  - PMML 文档的元素/标签
+- - '##'
+  - 从模型生成 PMML 文档
+- - '##'
+  - 所需库的安装
+- - '##'
+  - 从 scikit-learn 管道到 PMML 的转换
+- - '##'
+  - 如何使用 PMML 文档
+- - '##'
+  - Python 客户端 for PMML 模型
+- - '##'
+  - Java 客户端 for PMML 模型
+- - '##'
+  - 构建整体架构
+- - '##'
+  - 批量模式下的模型部署
+- - '##'
+  - 即时/ ad-hoc 模式下的模型部署
+- - '##'
+  - 结论
+- - '##'
+  - 第 9 章
+- - '##'
+  - 案例研究与故事讲述
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 什么是数据科学故事讲述？
+- - '##'
+  - 机器学习模型
+- - '##'
+  - 可视化
+- - '##'
+  - 事实
+- - '##'
+  - 案例研究 1：基于表格用户组的 Superstore 销售数据，使用多元线性回归分析销售利润
+- - '##'
+  - 数据来源与问题定义
+- - '##'
+  - 数据探索
+- - '##'
+  - 数据过滤
+- - '##'
+  - 图 9.2
+- - '##'
+  - 数据预处理
+- - '##'
+  - 建立模型
+- - '##'
+  - 结果分析与维度-度量关系
+- - '##'
+  - 子类别与利润分析
+- - '##'
+  - 数量与利润分析
+- - '##'
+  - 邮编与利润分析
+- - '##'
+  - Sales vs.profit analysis
+- - '##'
+  - Discount vs.profit analysis
+- - '##'
+  - Product name vs.profit analysis
+- - '##'
+  - 'Case study 2: Prediction of movie genres with multilabel text classification'
+- - '##'
+  - Data source and problem definition
+- - '##'
+  - Data exploration
+- - '##'
+  - Building the model
+- - '##'
+  - Analysis of result and testing the model
+- - '##'
+  - 'Case study 3: Classification of natural images using CNN and PyTorch'
+- - '##'
+  - Data source and problem definition
+- - '##'
+  - Data exploration
+- - '##'
+  - 应用卷积滤波器的效果
+- - '##'
+  - 构建模型
+- - '##'
+  - 结果分析与模型测试
+- - '##'
+  - 结论
