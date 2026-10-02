@@ -1,0 +1,174 @@
+- - '##'
+  - 物流
+- - '##'
+  - Part A
+- - '##'
+  - Part B1
+- - '##'
+  - Part C2
+- - '##'
+  - C2 部分
+- - '###'
+  - 药物设计作为结构化机器翻译，即条件生成
+- - '###'
+  - 生成式图形模型
+- - '###'
+  - 序列
+- - '###'
+  - 强化学习
+- - '###'
+  - 分子优化
+- - '###'
+  - 黑盒优化
+- - '###'
+  - 'Typical methods:'
+- - '###'
+  - 强化学习用于分子优化
+- - '###'
+  - 'Learning:'
+- - '###'
+  - 图形 + 强化学习
+- - '###'
+  - 在潜在空间中搜索
+- - '###'
+  - '模型: SMILES → VAE+RNN'
+- - '###'
+  - 分子优化作为机器翻译
+- - '###'
+  - 议程
+- - '###'
+  - 分子优化
+- - '###'
+  - 生成分子生成
+- - '###'
+  - 逆设计
+- - '###'
+  - '背景: 变分自编码器'
+- - '###'
+  - VAE 用于药物空间建模
+- - '###'
+  - 图形VAE
+- - '###'
+  - 处理不规则结构
+- - '###'
+  - 处理变大小图
+- - '###'
+  - 处理 permutation invariance
+- - '###'
+  - 邻接矩阵
+- - '###'
+  - 连接树 VAE
+- - '###'
+  - '聚类词汇:'
+- - '###'
+  - 算法 2 分子 G = (V, E) 的树分解
+- - '###'
+  - 图RNN
+- - '###'
+  - VAE + BO 方式的问题
+- - '###'
+  - 语法 VAE
+- - '###'
+  - 编码
+- - '###'
+  - 语法 VAE (2)
+- - '###'
+  - 第 122 页
+- - '###'
+  - 解码
+- - '###'
+  - 语法 VAE (3)
+- - '###'
+  - 其他作品
+- - '###'
+  - Knowledge graph reasoning & Drug synthesis
+- - '###'
+  - Agenda
+- - '###'
+  - Reasoning on biomedical knowledge graphs
+- - '###'
+  - Retrosynthesis
+- - '###'
+  - Wrapping up
+- - '###'
+  - Biomedical knowledge graphs
+- - '###'
+  - Some biomedical knowledge graphs
+- - '###'
+  - Examples of ontologies suitable for drug discovery
+- - '###'
+  - Biomedical knowledge graph construction
+- - '###'
+  - Use cases of reasoning with KGs
+- - '###'
+  - Polypharmacy prediction
+- - '###'
+  - Polypharmacy prediction
+- - '###'
+  - Decagon (Zitnik, M et.al)
+- - '###'
+  - A GCN per-layer update for a single drug node (in blue)
+- - '###'
+  - B Polypharmacy side effect prediction
+- - '###'
+  - C A batch of networks for six drugs
+- - '###'
+  - Drug-target interaction prediction
+- - '###'
+  - Gene-disease prioritisation
+- - '###'
+  - Gene-disease prioritisation
+- - '###'
+  - Drug repurposing
+- - '###'
+  - Approaches
+- - '###'
+  - Repurposing as multi-target prediction over molecular graph
+- - '###'
+  - Repurposing as drug-target prediction in biomedical knowledge graphs
+- - '###'
+  - 知识图推理与药物合成
+- - '###'
+  - 议程
+- - '###'
+  - 生物医学知识图的推理
+- - '###'
+  - 逆向合成
+- - '###'
+  - 总结
+- - '###'
+  - 生物医学知识图
+- - '###'
+  - 一些生物医学知识图
+- - '###'
+  - 适用于药物发现的本体论示例
+- - '###'
+  - 生物医学知识图构建
+- - '###'
+  - 与知识图进行推理的使用案例
+- - '###'
+  - 多药联用预测
+- - '###'
+  - 多药联用预测
+- - '###'
+  - Decagon (Zitnik, M 等)
+- - '###'
+  - 每层 GCN 对单个药物节点的更新 (蓝色)
+- - '###'
+  - B 多药联用副作用预测
+- - '###'
+  - C 六种药物的网络批量
+- - '###'
+  - 药物-靶点相互作用预测
+- - '###'
+  - 基因疾病优先级排序
+- - '###'
+  - 基因疾病优先级排序
+- - '###'
+  - 药物再利用
+- - '###'
+  - 方法
+- - '###'
+  - 多靶点预测 (在分子图上)
+- - '###'
+  - 药物-靶点预测 在生物医学知识图中
