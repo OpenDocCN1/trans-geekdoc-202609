@@ -1,0 +1,47 @@
+
+Conflicts of Interest: The authors declare no conflict of interest.
+
+## References
+- 1. Yang, X.; Meng, L. A Survey of Object Tracking Algorithms. Acta Autom. Sin. 2019, 20, 1–15.
+- 2. Zhu, G.; Porikli, F.; Li, H. Not All Negatives Are Equal: Learning to Track With Multiple Background Clusters. IEEE Trans. Circuits Syst. Video Technol. 2018, 28, 314–326. [CrossRef]
+- 3. Han, Y.; Deng, C.; Zhao, B. High-Performance Visual Tracking with Extreme Learning Machine Framework. IEEE Trans. Cybern. 2018, 1–12. [CrossRef] [PubMed]
+- 4. Dong, X.; Shen, J.; Yu, D.; Wang, W.; Liu, J.; Huang, H. Occlusion-Aware Real-Time Object Tracking. IEEE Trans. Multimed. 2017, 19, 763–771. [CrossRef]
+- 5. Ilic, S.; Holzer, S.; Navab, N.; Tan, D.; Pollefeys, M. Efficient Learning of Linear Predictors for Template Tracking. Int. J. Comput. Vis. 2015, 111, 12–28.
+- 6. Ilic, S.; Holzer, S.; Navab, N. Multilayer Adaptive Linear Predictors for Real-Time Tracking. IEEE Trans. Pattern Anal. Mach. Intell. 2013, 35, 105–117.
+- 7. Del Bimbo, A.; Pernici, F. Object Tracking by Oversampling Local Features. IEEE Trans. Pattern Anal. Mach. Intell. 2014, 36, 2538–2551.
+- 8. Ren, Y.; Huang, R. Visual Tracking Using Spatio-Temporal Context Template Set Learning. In Proceedings of the 2017 9th IEEE International Conference on Communication Software and Networks (ICCSN), Guangzhou, China, 6–8 May 2017; pp. 1496–1500.
+- 9. Qiao, Y.; Niu, X. Context-Based Occlusion Detection for Robust Visual Tracking. In Proceedings of the International Conference on Image Processing (ICIP), Beijing, China, 17–20 September 2017; pp. 3655–3658.
+- 10. Gu, Y.; Niu, X.; Qiao, Y. Robust Visual Tracking via Adaptive Occlusion Detection. In Proceedings of the ICASSP 2019—2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Brighton, UK, 12–17 May 2019; pp. 2242–2246.
+- 11. Niu, X.; Fang, X.; Qiao, Y. Robust visual tracking via occlusion detection based on staple algorithm. In Proceedings of the 2017 11th Asian Control Conference (ASCC), Gold Coast, QLD, Australia, 17–20 December 2017; pp. 1051–1056.
+- 12. Zhang, S.; Zhao, S.; Zhang, L. Towards Occlusion Handling: Object Tracking with Background Estimation. IEEE Trans. Cybern. 2018, 48, 2086–2099.
+- 13. Wang, H.; Zhang, X.; Yu, L.; Wang, X. Research on Mean Shift Tracking Algorithm Based on Significant Features and Template Updates. In Proceedings of the 2018 IEEE International Conference on Mechatronics and Automation (ICMA), Changchun, China, 5–8 August 2018; pp. 1199–1203.
+- 14. Huang, L.; Shao, L.; Ma, B.; Shen, J.; He, H.; Porikli, F. Visual Tracking by Sampling in Part Space. IEEE Trans. Image Process. 2017, 26, 5800–5810. [CrossRef]
+- 15. Lauer, M.; Tian, W. Tracking Objects with Severe Occlusion by Adaptive Part Filter Modeling--in Traffic Scenes and Beyond. IEEE Intell. Trans. Syst. Mag. 2018, 10, 60–73.
+- 16. Vipin Krishnam, C.V.; Ramya, K.V. Object Tracking Via Boosted Cascade of Simple Features and Coarse and Fine Structural Local Sparse Appearance Models. In Proceedings of the 2018 IEEE International Conference on Communication and Signal Processing (ICCSP), Chennai, India, 3–5 April 2018; pp. 693–697.
+- 17. Nai, K.; Li, Z.; Li, G.; Wang, S. Robust Object Tracking via Local Sparse Appearance Model. IEEE Trans. Image Process. 2018, 27, 4958–4970. [CrossRef] [PubMed]
+- 18. Kuai, Y.; Wen, G.; Li, D. Learning Fully Convolutional Network for Visual Tracking With Multi-Layer Feature Fusion. IEEE Access 2019, 7, 25915–25923. [CrossRef]
+- 19. Zou, Q.; Lin, S.; Du, Y. High Confidence Updating Strategy on Staple Trackers. In Proceedings of the 2018 IEEE International Conference of Intelligent Robotic and Control Engineering (IRCE), Lanzhou, China, 24–27 August 2018; pp. 238–241.
+- 20. Soldic, M.; Marcetic, D.; Maracic, M.; Mihalic, D.; Ribaric, S. Real-time face tracking under long-term full occlusions. In Proceedings of the 10th International Symposium on Image and Signal Processing and Analysis, Ljubljana, Slovenia, 18–20 September 2017; Volume 1, pp. 147–152.
+- 21. Zhu, Y.; Wen, J.; Zhang, L.; Wang, Y. Visual Tracking with Dynamic Model Update and Results Fusion. In Proceedings of the 2018 25th IEEE International Conference on Image Processing (ICIP), Athens, Greece, 7–10 October 2018; pp. 2685–2689.
+- 22. Li, Z.; Zhang, J.; Zhang, K.; Li, Z. Visual Tracking With Weighted Adaptive Local Sparse Appearance Model via Spatio-Temporal Context Learning. IEEE Trans. Image Process. 2018, 27, 4478–4489. [CrossRef] [PubMed]
+- 23. Qiu, S.; Zhang, J.; Qing, S.; Dong, J.; Guo, W. Object Tracking Method Based on Semi Supervised Extreme Learning. In Proceedings of the 2018 International Conference on Information Systems and Computer Aided Education (ICISCAE), Changchun, China, 6–8 July 2018; pp. 308–312.
+- 24. Elharrouss, O.; Moujahid, D.; Tairi, H. Visual Object Tracking Via the Local Soft Cosine Similarity. Pattern Recognit. Lett. 2018, 110, 79–85.
+- 25. Gao, Y.; Hu, Z.; Yeung, H.W.F.; Chung, Y.Y.; Tian, X.; Lin, L. Unifying Temporal Context and Multi-feature with Update-pacing Framework for Visual Tracking. IEEE Trans. Circuits Syst. Video Technol. 2019. [CrossRef]
+- 26. Ma, D.; Bu, W.; Xie, Y.; Cui, Y.; Wu, X. Segmentation-Guided Tracking with Prior Map Decision. In Proceedings of the 2018 24th International Conference on Pattern Recognition (ICPR), Beijing, China, 20–24 August 2018; pp. 2014–2019.
+- 27. Chi, Z.; Li, H.; Lu, H.; Yang, M.-H. Dual Deep Network for Visual Tracking. IEEE Trans. Image Process. 2017, 26, 2005–2015. [CrossRef] [PubMed]
+- 28. Han, B.; Nam, H. Learning Multi-Domain Convolutional Neural Networks for Visual Tracking. In Proceedings of the 2016 IEEE Conference on Computer Vision and Pattern Recognition, Seattle, WA, USA, 27–30 June 2016; pp. 4293–4302.
+- 29. Ma, C.; Huang, J.-B.; Yang, X.; Yang, M.-H. Hierarchical Convolutional Features for Visual Tracking. In Proceedings of the 2015 IEEE International Conference on Computer Vision (ICCV), Santiago, Chile, 7–13 December 2015; pp. 3074–3082.
+- 30. Alatan, A.A.; Gundogdu, E. Good Features to Correlate for Visual Tracking. IEEE Trans. Image Process. 2018, 27, 2526–2540.
+- 31. Dai, K.; Wang, Y.; Yan, X.; Huo, Y. Fusion of Template Matching and Foreground Detection for Robust Visual Tracking. In Proceedings of the 2018 25th IEEE International Conference on Image Processing (ICIP), Athens, Greece, 7–10 October 2018; pp. 2720–2724.
+- 32. Luo, L.; Huang, D.; Chen, Z.; Wen, M.; Zhang, C. Applying Detection Proposals to Visual Tracking for Scale and Aspect Ratio Adaptability. Int. J. Comput. Vis. 2017, 122, 524–541.
+- 33. Tang, F.; Lu, X.; Zhang, X.; Luo, L.; Hu, S.; Zhang, H. Adaptive convolutional layer selection based on historical retrospect for visual tracking. IET Comput. Vis. 2019, 13, 345–353. [CrossRef]
+- 34. Hu, Q.; Liu, H.; Li, B.; Guo, Y. Robust Long-Term Tracking Via Instance Specific Proposals. IEEE Trans. Instrum. Meas. 2018, 20, 1–13.
+- 35. Hu, G.; Liu, Q.; Islam, M.M. Robust Visual Tracking with Spatial Regularization Kernelized Correlation Filter Constrained by a Learning Spatial Reliability Map. IEEE Access 2019, 7, 27339–27351.
+- 36. Guo, J.; Liu, J.; Hu, S. Correlation Filter Tracking Based on Adaptive Learning Rate and Location Refiner. Opt. Prec. Eng. 2018, 26, 2100–2111.
+- 37. Zhang, K.; Wang, W.; Lv, M. Robust Visual Tracking Based on Adaptive Extraction and Enhancement of Correlation Filter. IEEE Access 2019, 7, 3534–3546.
+- 38. Qin, X.; Yang, M.-H.; Wang, G.; Zhong, F.; Liu, Y.; Li, H.; Peng, Q. Visual Tracking via Sparse and Local Linear Coding. IEEE Trans. Image Process. 2015, 24, 3796–3809.
+- 39. Zhou, T.; Liu, F.; Bhaskar, H.; Yang, J. Robust Visual Tracking via Online Discriminative and Low-Rank Dictionary Learning. IEEE Trans. Cybern. 2018, 48, 2643–2655. [CrossRef] [PubMed]
+- 40. Lu, X.; Yi, S.; He, Z.; Wang, H.; Chen, W.-S. A New Template Update Scheme for Visual Tracking. In Proceedings of the 2016 7th International Conference on Cloud Computing and Big Data (CCBD), Macau, China, 16–18 November 2016; pp. 243–247.
+- 41. Qi, Y.; Qin, L.; Zhang, J.; Zhang, S.; Huang, Q.; Yang, M.-H. Structure-Aware Local Sparse Coding for Visual Tracking. IEEE Trans. Image Process. 2018, 27, 3857–3869. [CrossRef]
+- 42. Gong, C.; Liu, F.; Zhou, T.; Fu, K.; He, X.; Yang, J. Visual Tracking Via Nonnegative Multiple Coding. IEEE Trans. Multimed. 2017, 19, 2680–2691.
+- 43. Zeng, F.; Ji, Y.; Levine, M.D. Contextual Bag-of-Words for Robust Visual Tracking. IEEE Trans. Image Process. 2018, 27, 1433–1447. [CrossRef]

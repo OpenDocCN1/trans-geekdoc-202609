@@ -1,0 +1,5 @@
+![](bbox=[0.17, 0.13, 0.83, 0.62])
+
+Figure 8. Comparison of recoveries of the Lena image at the presence of noise. σ denotes the standard deviation of the noise. The compression ratio r is 0.04.
+
+As in Figure 8 and Figure 9, at all noise levels, fewer artifacts can be seen yet sharp edges are preserved in the recovered images of the proposed method. Further, Figure 10 plots the PSNR and SSIM curves as σ varies. The PSNR and SSIM of all algorithms drop as σ increases, yet PSNR and SSIM of the proposed method are higher than those of the algorithms being compared. As σ grows from 5 to 30, the decrease of PSNR and SSIM of the proposed method, which is no more than 1.6 dB and 0.11, is the least among the algorithms. Therefore, it can be concluded that the proposed method features noise robustness when the compression ratio is low.
