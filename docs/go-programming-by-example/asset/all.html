@@ -1,0 +1,4329 @@
+<p><span id="Section0001.xhtml"></span></p>
+<div style="text-align: center; padding: 0pt; margin: 0pt;">
+<svg xmlns="http://www.w3.org/2000/svg" height="100%" preserveaspectratio="xMidYMid meet" version="1.1" viewbox="0 0 600 900" width="100%" xlink="http://www.w3.org/1999/xlink">
+<image width="600" height="900" href="../Images/cover.png"></image>
+</svg>
+</div>
+<p><span id="Section0002.xhtml"></span></p>
+<div style="display:none;">
+<span id="Section0002.xhtml#GBS.0003.01"></span>
+</div>
+<h1>Copyright</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>Go Programming by Example</p>
+<p>Agus Kurniawan</p>
+<p>1st Edition, 2015</p>
+<p><span style="font-size: x-small;">Copyright © 2015 Agus Kurniawan</span></p>
+<p><span style="font-size: x-small;">* Cover photo is credit to Fajar Ramadhany, Bataviasoft, </span><a href="http://bataviasoft.com/">http://bataviasoft.com/</a>.</p>
+<p>** Go logo is taken from <a href="https://blog.golang.org/gopher">https://blog.golang.org/gopher</a> .</p>
+<div style="display:none;">
+<span id="Section0002.xhtml#GBS.0003.02"></span>
+</div>
+<p><span id="toc.html"></span></p>
+<div style="display:none;">
+<span id="toc.html#GBS.0004.01"></span>
+</div>
+<div class="sgc-toc-title">
+Table of Contents
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0002.xhtml">Copyright</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Preface.xhtml">Preface</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter1.xhtml">1. Development Environment</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter1.xhtml#heading_id_3">1.1 Installation</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter1.xhtml#sigil_toc_id_1">1.2 Development Tools</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter1.xhtml#heading_id_4">1.3 Hello World</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter1.xhtml#heading_id_5">1.4 Go Packages</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter2.xhtml">2. Go Programming Language</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter2.xhtml#heading_id_3">2.1 Common Rule</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter2.xhtml#sigil_toc_id_2">2.2 Variables</a>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter2.xhtml#heading_id_4">2.2.1 Declaring Variable</a>
+</div>
+<span id="toc.html#GBS.0004.02"></span>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter2.xhtml#heading_id_5">2.2.2 Assigning Variables</a>
+</div>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter2.xhtml#heading_id_6">2.2.3 Demo</a>
+</div>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter2.xhtml#sigil_toc_id_33">2.3 Comment</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter2.xhtml#heading_id_7">2.4 Arithmetic Operations</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter2.xhtml#heading_id_12">2.5 Mathematical Functions</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter2.xhtml#heading_id_13">2.6 Increment and Decrement</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter2.xhtml#sigil_toc_id_34">2.7 Getting Input from Keyboard</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter2.xhtml#sigil_toc_id_35">2.8 Comparison Operators</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter2.xhtml#heading_id_17">2.9 Logical Operators</a>
+</div>
+<div class="sgc-toc-level-2">
+<span id="toc.html#GBS.0004.03"></span> <a href="../Text/chapter2.xhtml#heading_id_18">2.10 Decision</a>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter2.xhtml#heading_id_10">2.10.1 if..then</a>
+</div>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter2.xhtml#heading_id_11">2.10.2 switch..case</a>
+</div>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter2.xhtml#heading_id_9">2.11 Iteration - for</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter2.xhtml#sigil_toc_id_3">2.12 Iteration - while</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter2.xhtml#sigil_toc_id_4">2.13 break and continue</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter3.xhtml">3. Arrays, Slices and Maps</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter3.xhtml#heading_id_3">3.1 Array</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter3.xhtml#heading_id_20">3.2 Slice</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter3.xhtml#heading_id_11">3.3 Map</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter4.xhtml">4. Functions</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter4.xhtml#heading_id_3">4.1 Creating A Simple Function</a><span id="toc.html#GBS.0004.04"></span>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter4.xhtml#sigil_toc_id_5">4.2 Function with Parameters</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter4.xhtml#heading_id_6">4.3 Function with Returning Value</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter4.xhtml#heading_id_4">4.4 Function with Multiple Returning Values</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter4.xhtml#sigil_toc_id_6">4.5 Function with Multiple Parameters and Returning Value</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter4.xhtml#sigil_toc_id_36">4.6 Closure Function</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter4.xhtml#heading_id_5">4.7 Recursion Function</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter4.xhtml#sigil_toc_id_7">4.8 Testing</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter5.xhtml">5. Pointers</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter5.xhtml#heading_id_3">5.1 Pointer in Go</a><span id="toc.html#GBS.0004.05"></span>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter5.xhtml#sigil_toc_id_8">5.2 Demo: Singly Linked List</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter6.xhtml">6. Structs and Methods</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter6.xhtml#heading_id_7">6.1 Structs</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter6.xhtml#sigil_toc_id_9">6.2 Methods</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter7.xhtml">7. String Operations</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter7.xhtml#sigil_toc_id_10">7.1 Getting Started</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter7.xhtml#heading_id_3">7.2 Concatenating Strings</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter7.xhtml#heading_id_4">7.3 String To Numeric</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter7.xhtml#heading_id_5">7.4 Numeric to String</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter7.xhtml#heading_id_6">7.5 String Parser</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter7.xhtml#heading_id_7">7.6 Check String Data Length</a><span id="toc.html#GBS.0005.01"></span>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter7.xhtml#heading_id_8">7.7 Copy Data</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter7.xhtml#heading_id_9">7.8 Upper and Lower Case Characters</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter7.xhtml#sigil_toc_id_11">7.9 Testing A Program</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter8.xhtml">8. File Operations</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter8.xhtml#heading_id_7">8.1 Getting Started</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter8.xhtml#heading_id_8">8.2 Writing Data Into A File</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter8.xhtml#heading_id_4">8.3 Reading Data From A File</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter8.xhtml#sigil_toc_id_12">8.4 Writing All</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter9.xhtml">9. Error Handling and Logging</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter9.xhtml#heading_id_3">9.1 Error Handling</a><span id="toc.html#GBS.0005.02"></span>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter9.xhtml#sigil_toc_id_13">9.2 defer, panic(), and recover()</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter9.xhtml#sigil_toc_id_14">9.3 try..catch</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter9.xhtml#heading_id_4">9.4 Logging</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter10.xhtml">10. Building Own Go Package</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter10.xhtml#heading_id_3">10.1 Creating Simple Module</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter10.xhtml#heading_id_4">10.2 Building Own Package</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter11.xhtml">11. Concurrency</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter11.xhtml#heading_id_3">11.1 Getting Started</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter11.xhtml#sigil_toc_id_15">11.2 Goroutines</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter11.xhtml#sigil_toc_id_16">11.3 Synchronizing Goroutines</a>
+</div>
+<span id="toc.html#GBS.0005.03"></span>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter11.xhtml#sigil_toc_id_17">11.4 Channels</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter12.xhtml">12. Encoding</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter12.xhtml#heading_id_3">12.1 Getting Started</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter12.xhtml#sigil_toc_id_18">12.2 Encoding Base64</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter12.xhtml#sigil_toc_id_19">12.3 Hexadecimal</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter12.xhtml#sigil_toc_id_20">12.4 JSON</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter12.xhtml#sigil_toc_id_21">12.5 XML</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter12.xhtml#sigil_toc_id_22">12.6 CSV</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter13.xhtml">13. Hashing and Cryptography</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter13.xhtml#heading_id_3">13.1 Getting Started</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter13.xhtml#sigil_toc_id_23">13.2 Hashing</a>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter13.xhtml#sigil_toc_id_24">13.2.1 Hashing with MD5</a><span id="toc.html#GBS.0005.04"></span>
+</div>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter13.xhtml#sigil_toc_id_25">13.2.2 Hashing with SHA256</a>
+</div>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter13.xhtml#sigil_toc_id_26">13.2.3 Hashing with Key Using HMAC</a>
+</div>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter13.xhtml#sigil_toc_id_27">13.2.4 Testing</a>
+</div>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter13.xhtml#sigil_toc_id_28">13.3 Cryptography</a>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter13.xhtml#sigil_toc_id_29">13.3.1 Symmetric Cryptography</a>
+</div>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter13.xhtml#sigil_toc_id_30">13.3.2 Asymmetric Cryptography</a>
+</div>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter14.xhtml">14. Database Programming</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter14.xhtml#heading_id_3">14.1 Database for Go</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter14.xhtml#heading_id_7">14.2 MySQL Driver for Go</a><span id="toc.html#GBS.0005.05"></span>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter14.xhtml#sigil_toc_id_31">14.3 Testing Connection</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter14.xhtml#sigil_toc_id_32">14.4 Querying</a>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/chapter15.xhtml">15. Socket Programming</a>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter15.xhtml#heading_id_3">15.1 Socket Module</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter15.xhtml#heading_id_4">15.2 Hello World</a>
+</div>
+<div class="sgc-toc-level-2">
+<a href="../Text/chapter15.xhtml#heading_id_14">15.3 Client/Server Socket</a>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter15.xhtml#heading_id_6">15.3.1 Server Socket</a>
+</div>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter15.xhtml#heading_id_7">15.3.2 Client Socket</a>
+</div>
+<div class="sgc-toc-level-3">
+<a href="../Text/chapter15.xhtml#heading_id_8">15.3.3 Testing</a>
+</div>
+</div>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/sourcode.xhtml">Source Code</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/contact.xhtml">Contact</a><span id="toc.html#GBS.0006.01"></span>
+</div>
+<div style="display:none;">
+<span id="toc.html#GBS.0006.02"></span>
+</div>
+<p><span id="Preface.xhtml"></span></p>
+<div style="display:none;">
+<span id="Preface.xhtml#GBS.0007.01"></span>
+</div>
+<h1>Preface</h1>
+<p> </p>
+<p> </p>
+<p> </p>
+<div>
+Go was created by Robert Griesemer, Rob Pike, and Ken Thompson at Google in 2007. This book is a reference to the Go programming language. It describes all the elements of the language and illustrates their use with code examples.
+</div>
+<div>
+ 
+</div>
+<div>
+Agus Kurniawan
+</div>
+<div>
+Berlin &amp; Depok, February 2015
+</div>
+<div style="display:none;">
+<span id="Preface.xhtml#GBS.0007.02"></span>
+</div>
+<p><span id="chapter1.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter1.xhtml#GBS.0008.01"></span>
+</div>
+<h1>1. Development Environment</h1>
+<p> </p>
+<p> </p>
+<p><br />
+</p>
+<p>This chapter explains introduction of Go. The official web of Go could be found on <a href="https://golang.org/.">https://golang.org/.</a> What is Go? Based on information from website, we could know what it is. Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</p>
+<h2 id="chapter1.xhtml#heading_id_3">1.1 Installation</h2>
+<p>Installation of Go application is<span id="chapter1.xhtml#GBS.0008.02"></span> easy. For Windows and Mac Platform, you download setup file from Go website, <a href="http://golang.org/doc/install">http://golang.org/doc/install</a>. Run it and follow installation commands.</p>
+<p><img src="Images/mac1.png" alt="mac1" /><span id="chapter1.xhtml#GBS.0008.03"></span><br />
+</p>
+<p>The next step is to configure GOROOT path. For Windows platform, you can add GOROOT variable on <strong>Environment Variables</strong>. For Mac/Linux, you can it on your bash profile.</p>
+<p><img src="Images/ch1-2.png" alt="ch1-2" /><span id="chapter1.xhtml#GBS.0009.01"></span></p>
+<p><br />
+</p>
+<p>For Windows platform, you can add GO installation path, for instance my Go installation path is c:/go/bin, into PATH variable on <strong>Environment Variables</strong>.</p>
+<p><img src="Images/ch1-3.png" alt="ch1-3" /><span id="chapter1.xhtml#GBS.0009.02"></span><br />
+</p>
+<p><br />
+</p>
+<p>After configured, you can verify Go version by typing this command on your Terminal or CMD for Windows.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go version</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample output can be seen in Figure below, Mac platform.</p>
+<p><img src="Images/mac2.png" alt="mac2" /><span id="chapter1.xhtml#GBS.0010.01"></span><br />
+</p>
+<p>The output of program on Windows platform.</p>
+<p><img src="Images/go_win.png" alt="go_win" /><span id="chapter1.xhtml#GBS.0010.02"></span><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter1.xhtml#sigil_toc_id_1">1.2 Development Tools</h2>
+<p>Basically, you can use any text editor to write Go code. The following is a list of text editor:</p>
+<ul>
+<li>vim</li>
+<li>nano</li>
+<li>Intellij IDEA, <a href="https://www.jetbrains.com/idea/">https://www.jetbrains.com/idea/</a> </li>
+<li>Sublime text, <a href="http://www.sublimetext.com/">http://www.sublimetext.com/</a> </li>
+</ul>
+<p><br />
+</p>
+<p>A sample screenshot for Intellij IDEA is shown in Figure below.</p>
+<p><img src="Images/ch1-1.png" alt="ch1-1" /><span id="chapter1.xhtml#GBS.0010.03"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter1.xhtml#heading_id_4">1.3 Hello World</h2>
+<p>How to get started with Go? well, it is easy. Firstly, create a folder, called hello.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir hello
+$ cd hello</code></pre>
+</div>
+<p><br />
+</p>
+<p>Then, create a file, called main.go, on the hello folder. Write this code for <strong>main.go</strong> file.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    fmt.Println(&quot;Hello, go!&quot;)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this file. Then, back to your Terminal.<span id="chapter1.xhtml#GBS.0011.01"></span> You can build and run it.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>In this case, it will generate an executable file based on your platform.</p>
+<p>A sample program output can be seen in Figure below.</p>
+<p><img src="Images/ch1-4.png" alt="ch1-4" /><span id="chapter1.xhtml#GBS.0011.02"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter1.xhtml#heading_id_5">1.4 Go Packages</h2>
+<p>There are a lot of Go packages that you can use. The list of Go packages can seen on this link <a href="https://golang.org/pkg/">https://golang.org/pkg/</a>. In this book, we will explore some Go standard packages. We also try to build own Go package.</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter1.xhtml#GBS.0011.03"></span>
+</div>
+<p><span id="chapter2.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter2.xhtml#GBS.0012.01"></span>
+</div>
+<h1>2. Go Programming Language</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains the basic of Go programming language.</p>
+<h2 id="chapter2.xhtml#heading_id_3">2.1 Common Rule</h2>
+<p>Go language uses "C family" as primary language but we don't write ";" at the end of syntax. Here is the syntax rule:</p>
+<div class="sgc-3">
+<pre class="sgc-2"><code>syntax_code1
+syntax_code2
+syntax_code3</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter2.xhtml#sigil_toc_id_2">2.2 Variables</h2>
+<p>In this section, we explore how to define a variable and assign its<span id="chapter2.xhtml#GBS.0012.02"></span> value.</p>
+<h3 id="chapter2.xhtml#heading_id_4">2.2.1 Declaring Variable</h3>
+<p>To declare a variable called <span class="sgc-6"><span style="font-style: normal;"><strong>myvar</strong> and data type is <strong>data_type1</strong>, you can</span></span> write the following script:</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>var myvar data_type1</code></pre>
+</div>
+<p><br />
+</p>
+<p>The following is a sample script to declare some variables.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    var str string
+    var n, m int
+    var mn float32</code></pre>
+</div>
+<p><br />
+</p>
+<p>We also can define multiple variables as follows.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    var (
+        name string
+        email string
+        age int
+    )</code></pre>
+</div>
+<p><br />
+</p>
+<p>Once declared, these variables can be used to store any type data.</p>
+<p><br />
+</p>
+<h3 id="chapter2.xhtml#heading_id_5">2.2.2 Assigning Variables</h3>
+<p>Variable that you already declare can be assigned by a value. It can done using the equals sign (=). For example, variable str will assign a string value "Hello World", you would write this:</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    str = &quot;Hello World&quot;
+    n = 10
+    m = 50
+    mn = 2.45</code></pre>
+</div>
+<p><br />
+</p>
+<p>We also can declare a variable and assign its value.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    var city string = &quot;London&quot;
+    var x int = 100</code></pre>
+</div>
+<p><br />
+</p>
+<p>Another option, we can declare a variable with defining data type using := syntax. Assign it with a value.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    country := &quot;DE&quot;
+    val := 15</code></pre>
+</div>
+<p><br />
+</p>
+<h3 id="chapter2.xhtml#heading_id_6">2.2.3 Demo</h3>
+<p>For illustration for declaring variables<span id="chapter2.xhtml#GBS.0012.05"></span> using Go, create a folder, called vardemo. Then, create a file, called <strong>main.go</strong>.</p>
+<p>Write the following script for <strong>main.go</strong>.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    // declare variables
+    var str string
+    var n, m int
+    var mn float32
+
+    // assign values
+    str = &quot;Hello World&quot;
+    n = 10
+    m = 50
+    mn = 2.45
+
+    fmt.Println(&quot;value of str= &quot;,str)
+    fmt.Println(&quot;value of n= &quot;,n)
+    fmt.Println(&quot;value of m= &quot;,m)
+    fmt.Println(&quot;value of mn= &quot;,mn)
+
+    // declare and assign values to variables
+    var city string = &quot;London&quot;
+    var x int = 100
+
+    fmt.Println(&quot;value of city= &quot;,city)
+    fmt.Println(&quot;value of x= &quot;,x)
+
+    // declare variable with defining its type
+    country := &quot;DE&quot;
+    val := 15
+    fmt.Println(&quot;value of country= &quot;,country)
+    fmt.Println(&quot;value of val= &quot;,val)
+
+
+    // define multiple variables
+    var (
+        name string
+        email string
+        age int
+    )
+    name = &quot;john&quot;
+    email = &quot;john@email.com&quot;
+    age = 27
+
+    fmt.Println(name)
+    fmt.Println(email)
+    fmt.Println(age)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this file.</p>
+<p>Then, try to build and run it.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ cd vardemo
+$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample<span id="chapter2.xhtml#GBS.0013.03"></span> output can be seen in Figure below.</p>
+<p><img src="Images/ch2-1.png" alt="ch2-1" /><span id="chapter2.xhtml#GBS.0013.04"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter2.xhtml#sigil_toc_id_33">2.3 Comment</h2>
+<p>You may explain how to work on your code with writing comments. To do it, you can use <span class="sgc-6">//</span> and <span class="sgc-6">/* */</span> syntax. Here is sample code:</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    // declare variables
+    var str string
+    var n, m int
+    var mn float32
+
+    // assign values
+    str = &quot;Hello World&quot;
+    n = 10
+    m = 50
+    mn = 2.45
+
+    /* print the result */
+    fmt.Println(&quot;value of str= &quot;,str)</code></pre>
+</div>
+<div style="display:none;">
+<span id="chapter2.xhtml#GBS.0013.05"></span>
+</div>
+<p><br />
+</p>
+<h2 id="chapter2.xhtml#heading_id_7">2.4 Arithmetic Operations</h2>
+<p>Go supports the same four basic arithmetic operations such as addition, subtraction, multiplication, and division. For testing, create a folder arithdemo. Then, create a file, called <strong>main.go</strong>.</p>
+<p>The following is the code illustration for basic arithmetic in <strong>main.go</strong>:<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    // declare variables
+    var a, b int
+
+    // assign values
+    a = 5
+    b = 10
+
+    // arithmetic operation
+    // addition
+    c := a + b
+    fmt.Printf(&quot;%d + %d = %d \n&quot;,a,b,c)
+    // subtraction
+    d := a - b
+    fmt.Printf(&quot;%d - %d = %d \n&quot;,a,b,d)
+    // division
+    e := float32(a) / float32(b)
+    fmt.Printf(&quot;%d / %d = %.2f \n&quot;,a,b,e)
+    // multiplication
+    f := a * b
+    fmt.Printf(&quot;%d * %d = %d \n&quot;,a,b,f)
+
+}</code></pre>
+</div>
+<div style="display:none;">
+<span id="chapter2.xhtml#GBS.0014.02"></span>
+</div>
+<p><br />
+</p>
+<p>Then, try to build and run it.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ cd arithdemo
+$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>The following is a sample output.</p>
+<p><img src="Images/ch2-2.png" alt="ch2-2" /><span id="chapter2.xhtml#GBS.0014.03"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter2.xhtml#heading_id_12">2.5 Mathematical Functions</h2>
+<p>Go provides math library which you can read it on <a href="https://golang.org/pkg/math/">https://golang.org/pkg/math/</a>. For illustration, we try to use several math functions.</p>
+<p>Create a folder, called mathdemo. Then, create a file, called <strong>main.go</strong>. Write the following code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;math&quot;
+)
+
+func main(){
+    a := 2.4
+    b := 1.6
+
+    c := math.Pow(a,2)
+    fmt.Printf(&quot;%.2f^%d = %.2f \n&quot;,a,2,c)
+
+    c = math.Sin(a)
+    fmt.Printf(&quot;Sin(%.2f) = %.2f \n&quot;,a,c)
+
+    c = math.Cos(b)
+    fmt.Printf(&quot;Cos(%.2f) = %.2f \n&quot;,b,c)
+
+    c = math.Sqrt(a*b)
+    fmt.Printf(&quot;Sqrt(%.2f*%.2f) = %.2f \n&quot;,a,b,c)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Then, try to build and run it.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ cd mathdemo
+$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>The following is a sample output.<br />
+</p>
+<p><img src="Images/ch2-3.png" alt="ch2-3" /><span id="chapter2.xhtml#GBS.0015.01"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter2.xhtml#heading_id_13">2.6 Increment and Decrement</h2>
+<p>Go has special syntax for increment and decrement.</p>
+<ul>
+<li>++ syntax for increment. a++ means a = a + 1</li>
+<li>-- syntay for decrement. a-- means a = a - 1</li>
+</ul>
+<p><br />
+</p>
+<p>For testing, create a folder, called incdec, and then create a file, called <strong>main.go</strong>. Write the following script.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    // declare variables
+    var a = 4
+
+    // increment
+    fmt.Printf(&quot;a = %d \n&quot;,a)
+    a = a + 1
+    fmt.Printf(&quot;a + 1 = %d \n&quot;,a)
+    a++
+    fmt.Printf(&quot;a++ = %d \n&quot;,a)
+
+    // decrement
+    a = a - 1
+    fmt.Printf(&quot;a - 1 = %d \n&quot;,a)
+    a--
+    fmt.Printf(&quot;a-- = %d \n&quot;,a)
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Then, try to build and run it.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ cd incdec
+$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>The following is a sample output.<br />
+</p>
+<div style="display:none;">
+<span id="chapter2.xhtml#GBS.0015.03"></span>
+</div>
+<p><img src="Images/ch2-4.png" alt="ch2-4" /><span id="chapter2.xhtml#GBS.0015.04"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter2.xhtml#sigil_toc_id_34">2.7 Getting Input from Keyboard</h2>
+<p>In fmt library, it provides a feature to get input from keyboard. We can use Scanf().</p>
+<p>For illustration, we calculate circle area. In this case, we need an input for radius value.</p>
+<p>Create a folder, called inputdemo. Then, create a file, called <strong>main.go</strong>, and write this script.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;math&quot;
+)
+
+func main() {
+
+    fmt.Println(&quot;Circle Area calculation&quot;)
+    fmt.Print(&quot;Enter a radius value: &quot;)
+    var radius float64
+    fmt.Scanf(&quot;%f&quot;, &amp;radius)
+
+    area := math.Pi * math.Pow(radius,2)
+    fmt.Printf(&quot;Circle area with radius %.2f = %.2f \n&quot;,radius, area)
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Then, try to build and run it.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ cd inputdemo
+$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>Entry an input for circle radius.</p>
+<div style="display:none;">
+<span id="chapter2.xhtml#GBS.0016.01"></span>
+</div>
+<p>The following is a sample output.<br />
+</p>
+<p><img src="Images/ch2-5.png" alt="ch2-5" /><span id="chapter2.xhtml#GBS.0016.02"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter2.xhtml#sigil_toc_id_35">2.8 Comparison Operators</h2>
+<p>You may determine equality or difference among variables or values. Here is the list of comparison operatos:</p>
+<div class="sgc-3">
+<pre class="sgc-2"><code>==       is equal to
+!=       is not equal
+&gt;        is greater than
+&lt;        is less than
+&gt;=       is greater than or equal to
+&lt;=       is less than or equal to</code></pre>
+</div>
+<p>This is sample code for comparison usage.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    var (
+        a = 2
+        b = 10
+    )
+
+    fmt.Println(a&gt;b)
+    fmt.Println(a&lt;b)
+    fmt.Println(a&gt;=b)
+    fmt.Println(a&lt;=b)
+    fmt.Println(a!=b)
+    fmt.Println(a==b)
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Build and run it.<br />
+</p>
+<p>A sample output of the program can be seen in Figure below.</p>
+<p><img src="Images/ch2-6.png" alt="ch2-6" /><span id="chapter2.xhtml#GBS.0016.04"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter2.xhtml#heading_id_17">2.9 Logical Operators</h2>
+<p>These operators can be used to determine the logic between variables or values.</p>
+<div class="sgc-3">
+<pre class="sgc-2"><code>&amp;&amp;      and
+||      or
+!        not</code></pre>
+</div>
+<p>Sample code:</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    var (
+        a = 5
+        b = 8
+    )
+
+    fmt.Println(a&gt;b &amp;&amp; a!=b)
+    fmt.Println(!(a&gt;=b))
+    fmt.Println(a==b || a&gt;b)
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Build and run it.<br />
+</p>
+<div style="display:none;">
+<span id="chapter2.xhtml#GBS.0017.01"></span>
+</div>
+<p>A sample output of the program can be seen in Figure below.</p>
+<p><img src="Images/ch2-7.png" alt="ch2-7" /><span id="chapter2.xhtml#GBS.0017.02"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter2.xhtml#heading_id_18">2.10 Decision</h2>
+<p>There are two approaches to build decision on Go. We can use <span class="sgc-6">if..then</span> and <span class="sgc-6">switch..case</span>.</p>
+<h3 id="chapter2.xhtml#heading_id_10">2.10.1 if..then</h3>
+<p>Syntax model for <span class="sgc-6">if..then</span> can be formulated as below:</p>
+<div class="sgc-3">
+<pre class="sgc-2"><code>if conditional {
+   // do something
+}else{
+   // do another job
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p><em>conditional</em> can be obtained by logical or/and comparison operations.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    var (
+        a = 5
+        b = 8
+    )
+
+    if a&gt;b || a-b&lt;a {
+        fmt.Println(&quot;conditional--&gt;a&gt;b || a-b&lt;a&quot;)
+    }else{
+        fmt.Println(&quot;..another&quot;)
+    }
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Build and run it.<br />
+</p>
+<p>A sample output of the program can be seen in Figure below.</p>
+<p><img src="Images/ch2-8.png" alt="ch2-8" /><span id="chapter2.xhtml#GBS.0017.04"></span><br />
+</p>
+<p><br />
+</p>
+<h3 id="chapter2.xhtml#heading_id_11">2.10.2 switch..case</h3>
+<p><span class="sgc-6">switch..case</span> can be declared as below:</p>
+<div class="sgc-3">
+<pre class="sgc-2"><code>switch option {
+        case option1:
+                // do option1 job
+                
+        case option2:
+                // do option2 job
+               
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Here is the sample code of <span class="sgc-6">switch..case</span> usage:</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+
+    selected := 2
+
+    switch selected {
+        case 0:
+            fmt.Println(&quot;selected = 0&quot;)
+        case 1:
+            fmt.Println(&quot;selected = 1&quot;)
+        case 2:
+            fmt.Println(&quot;selected = 2&quot;)
+        case 3:
+            fmt.Println(&quot;selected = 3&quot;)
+        default:
+            fmt.Println(&quot;other..&quot;)
+
+    }
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Build and run it.<br />
+</p>
+<p>A sample output of the program can be seen in Figure below.</p>
+<p><img src="Images/ch2-9.png" alt="ch2-9" /><span id="chapter2.xhtml#GBS.0018.02"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter2.xhtml#heading_id_9">2.11 Iteration - for</h2>
+<p>Iteration operation is useful when we do repetitive activities. The following is for syntax.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>for initialization;conditional;increment/decrement {
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>For testing, write this script into a file, main.go.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+
+    // iteration - for
+    var i int
+    for i=0;i&lt;5;i++ {
+        fmt.Println(i)
+    }
+
+    for j:=5;j&lt;11;j++ {
+        fmt.Println(j)
+    }
+
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Build and run it.<br />
+</p>
+<p>A sample output of the program can be seen in Figure below.</p>
+<p><img src="Images/ch2-10.png" alt="ch2-10" /><span id="chapter2.xhtml#GBS.0019.01"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter2.xhtml#sigil_toc_id_3">2.12 Iteration - while</h2>
+<p>Go doesn't provide while syntax like "C family" programming language. We can use for which passes conditional value.</p>
+<p>Write this script for testing.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+
+    // iteration - while
+    // go doesn&#39;t provide while syntax. we can use for
+    i := 0
+    for i&lt;5 {
+        fmt.Println(i)
+        i++
+    }
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter2.xhtml#GBS.0019.02"></span>
+</div>
+<p>Build and run it.</p>
+<p>A sample output of the program can be seen in Figure below.<br />
+</p>
+<p><img src="Images/ch2-11.png" alt="ch2-11" /><span id="chapter2.xhtml#GBS.0019.03"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter2.xhtml#sigil_toc_id_4">2.13 break and continue</h2>
+<p>break can be used to stop on the code point. Otherwise, continue can be used to skip some scripts. For illustration, we have a looping. The looping will be stopped using <em>break</em> if value = 3. Another sample, we can skip the iteration with value = 7 using <em>continue</em> syntax.</p>
+<p>Write this script.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+
+    // iteration - for
+    var i int
+    for i=0;i&lt;5;i++ {
+        if i==3 {
+            break
+        }
+        fmt.Println(i)
+    }
+
+    for j:=5;j&lt;11;j++ {
+        if j==7 {
+            continue
+        }
+        fmt.Println(j)
+    }
+
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Build and run it.<br />
+</p>
+<p>A sample output of the program can be seen in Figure below.</p>
+<p><img src="Images/ch2-12.png" alt="ch2-12" /><span id="chapter2.xhtml#GBS.0020.01"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter2.xhtml#GBS.0020.02"></span>
+</div>
+<p><span id="chapter3.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter3.xhtml#GBS.0021.01"></span>
+</div>
+<h1>3. Arrays, Slices and Maps</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains how to work with Go collection.</p>
+<h2 id="chapter3.xhtml#heading_id_3">3.1 Array</h2>
+<p>Go provides Array object for collection manipulation. We define our array variable as follows.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    var numbers[5] int
+    var cities[5] string
+    var matrix[3][3] int // array 2D</code></pre>
+</div>
+<p><br />
+</p>
+<p>For illustration, we can build a new project, called arraydemo, by creating<span id="chapter3.xhtml#GBS.0021.02"></span> a folder, called arraydemo.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir arraydemo
+$ cd arraydemo</code></pre>
+</div>
+<p><br />
+</p>
+<p>Then, create a file, <strong>main.go</strong>. Import Go packages for our program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;math/rand&quot;
+)</code></pre>
+</div>
+<p><br />
+</p>
+<p>In this program, we can try to define several array variables. Set their values and display them on Terminal.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main() {
+
+    // define array
+    fmt.Println(&quot;define arrays&quot;)
+    var numbers[5] int
+    var cities[5] string
+    var matrix[3][3] int // array 2D
+
+    // insert data
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;&gt;insert array data&quot;)
+    for i:=0;i&lt;5;i++ {
+        numbers[i] = i
+        cities[i] = fmt.Sprintf(&quot;City %d&quot;,i)
+    }
+
+    // insert matrix data
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;&gt;insert matrix data&quot;)
+    for i:=0;i&lt;3;i++ {
+        for j:=0;j&lt;3;j++ {
+            matrix[i][j] = rand.Intn(100)
+
+        }
+    }
+
+    // display data
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;&gt;display array data&quot;)
+    for j:=0;j&lt;5;j++ {
+        fmt.Println(numbers[j])
+        fmt.Println(cities[j])
+    }
+
+    // display matrix data
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;&gt;display matrix data&quot;)
+    for i:=0;i&lt;3;i++ {
+        for j:=0;j&lt;3;j++ {
+            fmt.Println(matrix[i][j])
+
+        }
+    }
+    
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this<span id="chapter3.xhtml#GBS.0021.05"></span> code.</p>
+<p>Build and run this program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>You can see a sample of program output, shown in Figure below.</p>
+<p><img src="Images/ch3-1.png" alt="ch3-1" /><span id="chapter3.xhtml#GBS.0022.01"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter3.xhtml#heading_id_20">3.2 Slice</h2>
+<p>We can define an array without giving array length. Go uses Slice to do this case. To set array length, we can use make() function.</p>
+<p>For testing, we build a project, called slicedemo.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir slicedemo
+$ cd slicedemo</code></pre>
+</div>
+<p><br />
+</p>
+<p>Then, create a file, <strong>main.go</strong>, and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;math/rand&quot;
+)
+
+func main() {
+
+    // define slice
+    fmt.Println(&quot;define slices&quot;)
+    var numbers[] int
+    numbers = make([]int,5)
+    matrix := make([][]int,3*3)
+
+
+    // insert data
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;&gt;insert slice data&quot;)
+    for i:=0;i&lt;5;i++ {
+        numbers[i] = rand.Intn(100) // random number
+    }
+
+    // insert matrix data
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;&gt;insert slice matrix data&quot;)
+    for i:=0;i&lt;3;i++ {
+        matrix[i] = make([]int,3)
+        for j:=0;j&lt;3;j++ {
+            matrix[i][j] = rand.Intn(100)
+        }
+    }
+
+    // display data
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;&gt;display sclice data&quot;)
+    for j:=0;j&lt;5;j++ {
+        fmt.Println(numbers[j])
+    }
+
+    // display matrix data
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;&gt;display sclice 2D data&quot;)
+    for i:=0;i&lt;3;i++ {
+        for j:=0;j&lt;3;j++ {
+            fmt.Println(matrix[i][j])
+
+        }
+    }
+
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this code.</p>
+<p>Build and run this program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample of program output can be seen in Figure below.</p>
+<p><img src="Images/ch3-2.png" alt="ch3-2" /><span id="chapter3.xhtml#GBS.0023.01"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter3.xhtml#heading_id_11">3.3 Map</h2>
+<p>We can create an array with key-value. Go uses map() to implement key-value array.</p>
+<p>For illustration, we create a project, called mapdemo.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir mapdemo
+$ cd mapdemo</code></pre>
+</div>
+<p><br />
+</p>
+<p>We will define map variables. Then, set their values and dispay them on Terminal. Create a file, called <strong>main.go</strong>. Write this code.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;math/rand&quot;
+)
+
+func main() {
+
+    // define array
+    fmt.Println(&quot;define map&quot;)
+    products := make(map[string]int)
+    customers := make(map[string]int)
+
+    // insert data
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;&gt;insert map data&quot;)
+    products[&quot;product1&quot;] = rand.Intn(100)
+    products[&quot;product2&quot;] = rand.Intn(100)
+
+    customers[&quot;cust1&quot;] = rand.Intn(100)
+    customers[&quot;cust2&quot;] = rand.Intn(100)
+
+
+    // display data
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;&gt;display map data&quot;)
+    fmt.Println(products[&quot;product1&quot;])
+    fmt.Println(products[&quot;product2&quot;])
+    fmt.Println(customers[&quot;cust1&quot;])
+    fmt.Println(customers[&quot;cust2&quot;])
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this code.</p>
+<p>Build and run this program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample of program output can be seen in Figure below.<br />
+</p>
+<p><img src="Images/ch3-3.png" alt="ch3-3" /><span id="chapter3.xhtml#GBS.0023.04"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter3.xhtml#GBS.0023.05"></span>
+</div>
+<p><span id="chapter4.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter4.xhtml#GBS.0024.01"></span>
+</div>
+<h1>4. Functions</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains how to create function using Go.</p>
+<h2 id="chapter4.xhtml#heading_id_3">4.1 Creating A Simple Function</h2>
+<p>Declaring function in Go has format as follows.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func function_name return_datatype {
+
+    return foo
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>For illustration, we can build a new project, called arraydemo, by creating a folder, called arraydemo.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir arraydemo
+$ cd arraydemo</code></pre>
+</div>
+<p><br />
+</p>
+<p>Create a file, <strong>main.go</strong>. Then, import Go package.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;math&quot;
+)</code></pre>
+</div>
+<p><br />
+</p>
+<p>To create a simple function, you can write this code in <strong>main.go</strong> file.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main(){
+    foo()
+
+}
+
+
+// a simple function
+func foo() {
+    fmt.Println(&quot;foo() was called&quot;)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter4.xhtml#sigil_toc_id_5">4.2 Function with Parameters</h2>
+<p>Sometimes you want to create a function<span id="chapter4.xhtml#GBS.0024.03"></span> with a parameter. You can implement it as follows.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>// a function with a parameter
+func circle_area(r float64){
+    area := math.Pi * math.Pow(r,2)
+    fmt.Printf(&quot;Circle area (r=%.2f) = %.2f \n&quot;,r, area)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>If there are many parameters on function, we can define the function as below.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>// a function with parameters
+func calculate(a,b, c float64){
+    result := a*b*c
+    fmt.Printf(&quot;a=%.2f, b=%.2f, c=%.2f = %.2f \n&quot;,a, b, c, result)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter4.xhtml#heading_id_6">4.3 Function with Returning Value</h2>
+<p>You may want to create function that has a return value. Look this code for sample illustration.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>// a function with parameters and a return value
+func advanced_calculate(a,b, c float64) float64 {
+    result := a*b*c
+
+    return result
+}</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter4.xhtml#heading_id_4">4.4 Function with<span id="chapter4.xhtml#GBS.0024.05"></span> Multiple Returning Values</h2>
+<p>A function can return multiple returning values in Go. For instance, we return three values in Go function. A sample code can be written as below.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>// a function with parameters and multiple return values
+func compute(a,b, c float64, name string) (float64,float64,string) {
+    result1 := a*b*c
+    result2 := a + b + c
+    result3 := result1 + result2
+    newName := fmt.Sprintf(&quot;%s value = %.2f&quot;, name,result3)
+
+    return result1, result2, newName
+}</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter4.xhtml#sigil_toc_id_6">4.5 Function with Multiple Parameters and Returning Value</h2>
+<p>You may want to unlimited parameters on function. It possible to implement it in Go. We can use ... to define multiple parameters in a function.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>// a function with zero or more parameters and a return value
+func add(numbers ...int) int {
+    result := 0
+    for _, number := range numbers {
+        result += number
+    }
+    return result
+}</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter4.xhtml#sigil_toc_id_36">4.6 Closure Function</h2>
+<p>We can define functions in a function. It's called closure function. We can implement closure function in Go as follows.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>// a closure function
+func closure_func(name string){
+
+    hoo := func(a,b int){
+        result := a*b
+        fmt.Printf(&quot;hoo() = %d \n&quot;,result)
+    }
+    joo := func(a,b int) int {
+        return a*b + a
+    }
+
+    fmt.Printf(&quot;closure_func(%s) was called\n&quot;,name)
+    hoo(2,3)
+    val := joo(5,8)
+    fmt.Printf(&quot;val from joo() = %d \n&quot;,val)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter4.xhtml#heading_id_5">4.7 Recursion Function</h2>
+<p>Recursion function is a function where the solution to a problem depends on solutions to smaller instances of the same problem<span id="chapter4.xhtml#GBS.0025.04"></span> (as opposed to iteration). For illustration, we can implement Fibonacci problem using Go. </p>
+<p>The following is a sample code for Fibonacci solution in Go.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>// a recursion function
+func  fibonacci(n int) int {
+    if n==0{
+        return 0
+    }else if n==1 {
+        return 1
+    }
+    return (fibonacci(n-1) + fibonacci(n-2))
+}</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter4.xhtml#sigil_toc_id_7">4.8 Testing</h2>
+<p>We can write code again from<span id="chapter4.xhtml#GBS.0025.05"></span> section 4.1 to 4.7 and use them in main entry. Write this code on <strong>main.go</strong> file.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;math&quot;
+)
+
+func main(){
+    foo()
+    circle_area(2.56)
+    calculate(2, 6.7, 5)
+
+    val := advanced_calculate(2, 4.8, 7)
+    fmt.Printf(&quot;advanced_calculate() = %.2f \n&quot;,val)
+
+    val1,val2,val3 := compute(6, 2.7, 1.4, &quot;energy&quot;)
+    fmt.Printf(&quot;val1=%.2f, val2=%.2f, val3=\&quot;%s\&quot; \n&quot;, val1, val2, val3)
+
+    result := add(1,2,3,4,5,6,7,8,9,10,11)
+    fmt.Printf(&quot;add() = %d \n&quot;,result)
+
+    closure_func(&quot;testing&quot;)
+
+    ret := fibonacci(15)
+    fmt.Printf(&quot;fibonacci() = %d \n&quot;,ret)
+}
+
+// a simple function
+func foo() {
+    fmt.Println(&quot;foo() was called&quot;)
+}
+
+// a function with a parameter
+func circle_area(r float64){
+    area := math.Pi * math.Pow(r,2)
+    fmt.Printf(&quot;Circle area (r=%.2f) = %.2f \n&quot;,r, area)
+}
+
+// a function with parameters
+func calculate(a,b, c float64){
+    result := a*b*c
+    fmt.Printf(&quot;a=%.2f, b=%.2f, c=%.2f = %.2f \n&quot;,a, b, c, result)
+}
+
+// a function with parameters and a return value
+func advanced_calculate(a,b, c float64) float64 {
+    result := a*b*c
+
+    return result
+}
+
+// a function with parameters and multiple return values
+func compute(a,b, c float64, name string) (float64,float64,string) {
+    result1 := a*b*c
+    result2 := a + b + c
+    result3 := result1 + result2
+    newName := fmt.Sprintf(&quot;%s value = %.2f&quot;, name,result3)
+
+    return result1, result2, newName
+}
+
+// a function with zero or more parameters and a return value
+func add(numbers ...int) int {
+    result := 0
+    for _, number := range numbers {
+        result += number
+    }
+    return result
+}
+
+// a closure function
+func closure_func(name string){
+
+    hoo := func(a,b int){
+        result := a*b
+        fmt.Printf(&quot;hoo() = %d \n&quot;,result)
+    }
+    joo := func(a,b int) int {
+        return a*b + a
+    }
+
+    fmt.Printf(&quot;closure_func(%s) was called\n&quot;,name)
+    hoo(2,3)
+    val := joo(5,8)
+    fmt.Printf(&quot;val from joo() = %d \n&quot;,val)
+}
+
+// a recursion function
+func  fibonacci(n int) int {
+    if n==0{
+        return 0
+    }else if n==1 {
+        return 1
+    }
+    return (fibonacci(n-1) + fibonacci(n-2))
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this code.<br />
+</p>
+<p>Build and run this program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample of program output can be seen in Figure below.<br />
+</p>
+<p><img src="Images/ch4-1.png" alt="ch4-1" /><span id="chapter4.xhtml#GBS.0027.01"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter4.xhtml#GBS.0027.02"></span>
+</div>
+<p><span id="chapter5.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter5.xhtml#GBS.0028.01"></span>
+</div>
+<h1>5. Pointers</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter we explore how to use Pointer in Go.</p>
+<h2 id="chapter5.xhtml#heading_id_3">5.1 Pointer in Go</h2>
+<p>A pointer is a programming language object, whose value refers directly to (or "points to") another value stored elsewhere in the computer memory using its address, ref: <a href="http://en.wikipedia.org/wiki/Pointer_(computer_programming)">http://en.wikipedia.org/wiki/Pointer_(computer_programming)</a> .<br />
+</p>
+<p>When we define x as int, we can x value by calling<span id="chapter5.xhtml#GBS.0028.02"></span> x = 1. To know the memory address of x, we can use &amp;x. To test, we build a new project. Create a folder, called pointers.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir pointers
+$ cd pointers</code></pre>
+</div>
+<p><br />
+</p>
+<p>Creata a file, <strong>main.go</strong>, and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main(){
+
+    var x int
+
+    x = 10
+    fmt.Println(x)  // print a value of x
+    fmt.Println(&amp;x) // print address of x
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter5.xhtml#GBS.0028.03"></span>
+</div>
+<p>Save this file.</p>
+<p>Try to build and run it.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p><img src="Images/ch5-1.png" alt="ch5-1" /><span id="chapter5.xhtml#GBS.0028.04"></span><br />
+</p>
+<p><br />
+</p>
+<p>You can see x has a value 10 and its memory address 0xC082002238. Memory address can be retrieved using &amp; keyword.</p>
+<p>In Go, we can define data type as Pointer using *, for instance var x *int. We can set Pointer variable using *x = value. To set memory address on Pointer variable, we can use x = memory_address.</p>
+<p>For testing, we add the following code on <strong>main.go</strong> file.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import &quot;fmt&quot;
+
+func main(){
+
+    var x int
+
+    x = 10
+    fmt.Println(x)  // print a value of x
+    fmt.Println(&amp;x) // print address of x
+
+
+    // declare pointer
+    var num *int
+    val := new(int)
+
+    num = new(int)
+    *num = x   // set value
+
+    val = &amp;x   // set address
+
+    fmt.Println(&quot;===pointer num===&quot;)
+    fmt.Println(*num)  // print a value of x
+    fmt.Println(num) // print address of x
+    fmt.Println(&quot;===pointer val===&quot;)
+    fmt.Println(*val)  // print a value of x
+    fmt.Println(val) // print address of x
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this file.</p>
+<p>Try to build and run it. A sample of program output is shown in Figure below.</p>
+<p><img src="Images/ch5-2.png" alt="ch5-2" /><span id="chapter5.xhtml#GBS.0029.02"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter5.xhtml#sigil_toc_id_8">5.2 Demo: Singly Linked List</h2>
+<p>In this section, we can create a singly linked list from scratch. You can read your Data Structure book to understand what singly linked list is. You also read it on Wikipedia, <a href="http://en.wikipedia.org/wiki/Linked_list#Singly_linked_lists">http://en.wikipedia.org/wiki/Linked_list#Singly_linked_lists</a> .</p>
+<p>Now we can create a singly linked list using Go. Firstly, we create folder, linkedlist.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir linkedlist
+$ cd linkedlist</code></pre>
+</div>
+<p><br />
+</p>
+<p>Create a file, <strong>main.go</strong>. Import Go package and define struct for Pointer.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;math/rand&quot;
+)
+
+type Node struct {
+    value int
+    next *Node
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>next is Pointer variable which refers to memory address of the next Pointer variable.</p>
+<p>We create a function, add(), which we insert a new data on our singly linked list.<span id="chapter5.xhtml#GBS.0029.04"></span> The following is implementation of add() function.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func add(list *Node,data int) *Node {
+    if list==nil {
+        list := new(Node)
+        list.value = data
+        list.next = nil
+
+        return list
+    }else{
+        temp := new(Node)
+        temp.value = data
+        temp.next = list
+
+        list = temp
+
+        return list
+    }
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>We also can display a content<span id="chapter5.xhtml#GBS.0030.01"></span> of singly linked list. Create a function, display(), and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func display(list *Node){
+    var temp *Node
+    temp = list
+
+    for temp!=nil {
+
+        fmt.Println(temp.value)
+        temp = temp.next
+    }
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>In main entry, we define singly linked list as Pointer variable, called head. We add five data into a Pointer list. Then, we display all data. Write the<span id="chapter5.xhtml#GBS.0030.02"></span> following code for main() function.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main(){
+
+    var head *Node
+    head = nil
+
+    // add 5 data
+    fmt.Println(&quot;=== insert 5 data=== &quot;)
+    n := 0
+    for n &lt; 5 {
+        fmt.Printf(&quot;data %d\n&quot;,n)
+
+        head = add(head,rand.Intn(100))
+        n++
+    }
+    fmt.Println(&quot;=== display ===&quot;)
+    display(head)
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this file.<br />
+</p>
+<p>Try to build and run it.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample of program output can be seen in Figure below.</p>
+<p><img src="Images/ch5-3.png" alt="ch5-3" /><span id="chapter5.xhtml#GBS.0030.04"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter5.xhtml#GBS.0030.05"></span>
+</div>
+<p><span id="chapter6.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter6.xhtml#GBS.0031.01"></span>
+</div>
+<h1>6. Structs and Methods</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains how to work with struct and method in Go.</p>
+<h2 id="chapter6.xhtml#heading_id_7">6.1 Structs</h2>
+<p>We can extend our object using struct. If you have experience in C/C++, we use struct approach in Go language.</p>
+<p>To define a struct, we can use struct keyword, for instance, we define struct_name for struct object.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>type struct_name struct {
+  // fields
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>For illustration, we create a struct, Employee. Firstly, we build a new project by creating a folder, called structdemo.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir structdemo
+$ cd structdemo</code></pre>
+</div>
+<p><br />
+</p>
+<p>Then, create a file, called <strong>main.go</strong>. Firstly, we define our packages and a struct, Employee.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;time&quot;
+)
+
+// define  a struct
+type Employee struct {
+    id int
+    name string
+    country string
+    created time.Time
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Employee struct has four fields such as id, name, country and created.</p>
+<p>To use a struct in Go, we can instance our struct object using new(). Then, we set its values.</p>
+<p>Write this code in entry point on <strong>main.go</strong> file.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main() {
+
+    // declare variable
+    var emp Employee
+    newEmp := new(Employee)
+
+    // set values
+    emp.id = 2
+    emp.name = &quot;Employee 2&quot;
+    emp.country = &quot;DE&quot;
+    emp.created = time.Now()
+
+    newEmp.id = 5
+    newEmp.name = &quot;Employee 5&quot;
+    newEmp.country = &quot;UK&quot;
+    newEmp.created = time.Now()
+
+
+    // display
+    fmt.Println(&quot;=====================&quot;)
+    fmt.Println(emp.id)
+    fmt.Println(emp.name)
+    fmt.Println(emp.country)
+    fmt.Println(emp.created)
+
+    fmt.Println(&quot;=====================&quot;)
+    fmt.Println(newEmp.id)
+    fmt.Println(newEmp.name)
+    fmt.Println(newEmp.country)
+    fmt.Println(newEmp.created)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this file.</p>
+<p>Try to build and run it.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample of program output:</p>
+<p><img src="Images/ch6-1.png" alt="ch6-1" /><span id="chapter6.xhtml#GBS.0032.01"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter6.xhtml#sigil_toc_id_9">6.2 Methods</h2>
+<p>We define methods in our struct object by passing struct object. For illustration, we create Circle struct object which has the following methods:</p>
+<ul>
+<li>display()</li>
+<li>area()</li>
+<li>circumference()</li>
+<li>moveTo()</li>
+</ul>
+<p><br />
+</p>
+<p>How to implement?</p>
+<p>Create a folder, called structmethod.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir structmethod
+$ cd structmethod</code></pre>
+</div>
+<p><br />
+</p>
+<p>The next step is to create<span id="chapter6.xhtml#GBS.0032.02"></span> a file, called <strong>main.go</strong>. Import our package and define Circle struct object.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;math&quot;
+)
+
+// define  a struct
+type Circle struct {
+    x,y int
+    r float64
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Circle struct has three fields: x, y and r.</p>
+<p>Basically, we can create struct method in the same way when you create a function. We pass our struct object on the front of method name.<span id="chapter6.xhtml#GBS.0032.03"></span> The following is implementation our struct methods.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func (c Circle) display() {
+    fmt.Printf(&quot;x=%d,y=%d,r=%.2f\n&quot;,c.x,c.y,c.r)
+}
+func (c Circle) area() float64 {
+    return math.Pi * math.Pow(c.r,2)
+}
+func (c Circle) circumference() float64 {
+    return 2* math.Pi * c.r
+}
+func (c Circle) moveTo(newX,newY int) {
+    c.x = newX
+    c.y = newY
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>The last step is to use our<span id="chapter6.xhtml#GBS.0032.04"></span> struct method in main program. Write the following code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main() {
+    // methods
+    shape := Circle{10,5,2.8}
+    shape.display()
+    fmt.Printf(&quot;area=%2.f\n&quot;,shape.area())
+    fmt.Printf(&quot;circumference=%2.f\n&quot;,shape.circumference())
+
+    shape.moveTo(5,5)
+    shape.display()
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this code.</p>
+<p>Build and run <strong>main.go</strong> on your Terminal.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample of program output:</p>
+<p><img src="Images/ch6-2.png" alt="ch6-2" /><span id="chapter6.xhtml#GBS.0033.01"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter6.xhtml#GBS.0033.02"></span>
+</div>
+<p><span id="chapter7.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter7.xhtml#GBS.0034.01"></span>
+</div>
+<h1>7. String Operations</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains how to work with String operation in Go.</p>
+<h2 id="chapter7.xhtml#sigil_toc_id_10">7.1 Getting Started</h2>
+<p>We already use string as data type. The following is a sample code to work with string data and print it on Terminal.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    // simple string demo
+    var str string
+    str = &quot;Hello world&quot;
+    fmt.Println(str)</code></pre>
+</div>
+<p><br />
+</p>
+<p>In this section, we try to manipulate<span id="chapter7.xhtml#GBS.0034.02"></span> string data. We will explore several functions on strconv, <a href="http://golang.org/pkg/strconv/">http://golang.org/pkg/strconv/</a> and strings,<a href="http://golang.org/pkg/strings/">http://golang.org/pkg/strings/</a> packages.</p>
+<p>Firstly, we build a new project by creating a folder, stringdemo.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir stringdemo
+$ cd stringdemo</code></pre>
+</div>
+<p><br />
+</p>
+<p>Create a file, called <strong>main.go</strong>. Import fmt, strcov and strings packages.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;strconv&quot;
+    &quot;strings&quot;
+)</code></pre>
+</div>
+<p><br />
+</p>
+<p>The next step is to explore how to work with string.</p>
+<p><br />
+</p>
+<h2 id="chapter7.xhtml#heading_id_3">7.2 Concatenating Strings</h2>
+<p>If you have a list of string, you can concatenate into one string. You can use + operator and fmt.Sprintf() function. Here is a sample code</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    str1 := &quot;hello&quot;
+    str2 := &quot;world&quot;
+    str3 := str1 + str2
+    fmt.Println(str3)
+
+    str4 := fmt.Sprintf(&quot;%s %s&quot;,str1,str2)
+    fmt.Println(str4)</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter7.xhtml#heading_id_4">7.3 String To Numeric</h2>
+<p>Sometime you want to do math operations but input data has string type. To convert string type into numeric, you can use strcov.ParseInt() for String to Int and strcov.ParseFloat() for string to Float.</p>
+<p>The following is a sample code to implement string to numeric conversion.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    fmt.Println(&quot;----demo String To Numeric----&quot;)
+    str_val1 := &quot;5&quot;
+    str_val2 := &quot;2.8769&quot;
+
+    var err error
+    var int_val1 int64
+    int_val1,err = strconv.ParseInt(str_val1,10,32) // base10, 64 size
+    if err==nil {
+        fmt.Println(int_val1)
+    }else{
+        fmt.Println(err)
+    }
+
+    var float_val2 float64
+    float_val2,err = strconv.ParseFloat(str_val2,64)  // 64 size
+    if err==nil {
+        fmt.Println(float_val2)
+    }else{
+        fmt.Println(err)
+    }</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter7.xhtml#heading_id_5">7.4 Numeric to String</h2>
+<p>It is easy to convert numeric to String type, you can use fmt.Sprintf. You can get string type automatically.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    fmt.Println(&quot;----demo numeric to string----&quot;)
+    num1 := 8
+    num2 := 5.872
+
+    var str_num1 string
+    str_num1 = fmt.Sprintf(&quot;%d&quot;,num1)
+    fmt.Println(str_num1)
+
+    var str_num2 string
+    str_num2 = fmt.Sprintf(&quot;%f&quot;,num2)
+    fmt.Println(str_num2)</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter7.xhtml#heading_id_6">7.5 String Parser</h2>
+<p>The simple solution to parsing String uses <span class="sgc-6">Split()</span> with delimiter parameter. For example, you have String data with ; delimiter and want to parse it. Here is sample code</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    fmt.Println(&quot;----demo String Parser----&quot;)
+    data := &quot;Berlin;Amsterdam;London;Tokyo&quot;
+    fmt.Println(data)
+    cities := strings.Split(data, &quot;;&quot;)
+    for _, city := range cities {
+        fmt.Println(city)
+    }</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter7.xhtml#heading_id_7">7.6 Check String Data Length</h2>
+<p>You can use <span class="sgc-6">len()</span> to get the length of data.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    fmt.Println(&quot;----demo String Length----&quot;)
+    str_data := &quot;welcome to go&quot;
+    len_data := len(str_data)
+    fmt.Printf(&quot;len=%d \n&quot;,len_data)</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter7.xhtml#heading_id_8">7.7 Copy Data</h2>
+<p>You may copy some characters from String data. To<span id="chapter7.xhtml#GBS.0035.04"></span> do it, you can use [start:end] syntax. Here is syntax format:</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    fmt.Println(&quot;----demo copy data----&quot;)
+    sample := &quot;hello world, go!&quot;
+    fmt.Println(sample)
+    fmt.Println(sample[0:len(sample)]) // copy all
+    fmt.Println(sample[:5]) // copy 5 characters
+    fmt.Println(sample[3:8]) // copy characters from index 3 until 8
+    fmt.Println(sample[len(sample)-5:len(sample)]) // 5 copy characters from the end of string</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter7.xhtml#heading_id_9">7.8 Upper and Lower Case Characters</h2>
+<p>In some situation, you want to get all string data in upper or lower case characters. This feature is built in String object. <span class="sgc-6">ToUpper()</span> function is used to make whole string in upper case and <span class="sgc-6">ToLower()</span> is used to make whole string in lower case.</p>
+<p>The following is a sample code to get upper and lower case<span id="chapter7.xhtml#GBS.0036.01"></span> characters.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>    fmt.Println(&quot;----demo upper/lower characters----&quot;)
+    message := &quot;Hello World, GO!&quot;
+    fmt.Println(message)
+    fmt.Println(strings.ToUpper(message)) // upper chars
+    fmt.Println(strings.ToLower(message)) // upper chars</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter7.xhtml#sigil_toc_id_11">7.9 Testing A Program</h2>
+<p>We can write our code in main.go completely as follows.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;strconv&quot;
+    &quot;strings&quot;
+)
+
+func main(){
+
+    // simple string demo
+    var str string
+    str = &quot;Hello world&quot;
+    fmt.Println(str)
+
+
+    // Concatenating
+    str1 := &quot;hello&quot;
+    str2 := &quot;world&quot;
+    str3 := str1 + str2
+    fmt.Println(str3)
+
+    str4 := fmt.Sprintf(&quot;%s %s&quot;,str1,str2)
+    fmt.Println(str4)
+
+
+    // String To Numeric
+    fmt.Println(&quot;----demo String To Numeric----&quot;)
+    str_val1 := &quot;5&quot;
+    str_val2 := &quot;2.8769&quot;
+
+    var err error
+    var int_val1 int64
+    int_val1,err = strconv.ParseInt(str_val1,10,32) // base10, 64 size
+    if err==nil {
+        fmt.Println(int_val1)
+    }else{
+        fmt.Println(err)
+    }
+
+    var float_val2 float64
+    float_val2,err = strconv.ParseFloat(str_val2,64)  // 64 size
+    if err==nil {
+        fmt.Println(float_val2)
+    }else{
+        fmt.Println(err)
+    }
+
+    // numeric to string
+    fmt.Println(&quot;----demo numeric to string----&quot;)
+    num1 := 8
+    num2 := 5.872
+
+    var str_num1 string
+    str_num1 = fmt.Sprintf(&quot;%d&quot;,num1)
+    fmt.Println(str_num1)
+
+    var str_num2 string
+    str_num2 = fmt.Sprintf(&quot;%f&quot;,num2)
+    fmt.Println(str_num2)
+
+    // String Parser
+    fmt.Println(&quot;----demo String Parser----&quot;)
+    data := &quot;Berlin;Amsterdam;London;Tokyo&quot;
+    fmt.Println(data)
+    cities := strings.Split(data, &quot;;&quot;)
+    for _, city := range cities {
+        fmt.Println(city)
+    }
+
+    // String Data Length
+    fmt.Println(&quot;----demo String Length----&quot;)
+    str_data := &quot;welcome to go&quot;
+    len_data := len(str_data)
+    fmt.Printf(&quot;len=%d \n&quot;,len_data)
+
+    // copy data
+    fmt.Println(&quot;----demo copy data----&quot;)
+    sample := &quot;hello world, go!&quot;
+    fmt.Println(sample)
+    fmt.Println(sample[0:len(sample)]) // copy all
+    fmt.Println(sample[:5]) // copy 5 characters
+    fmt.Println(sample[3:8]) // copy characters from index 3 until 8
+    fmt.Println(sample[len(sample)-5:len(sample)]) // 5 copy characters from the end of string
+
+
+    // Upper and Lower Case Characters
+    fmt.Println(&quot;----demo upper/lower characters----&quot;)
+    message := &quot;Hello World, GO!&quot;
+    fmt.Println(message)
+    fmt.Println(strings.ToUpper(message)) // upper chars
+    fmt.Println(strings.ToLower(message)) // upper chars
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this code.</p>
+<p>Build and run <strong>main.go</strong> on your Terminal.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample of program output:</p>
+<p><img src="Images/ch7-1.png" alt="ch7-1" /><span id="chapter7.xhtml#GBS.0038.01"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter7.xhtml#GBS.0038.02"></span>
+</div>
+<p><span id="chapter8.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter8.xhtml#GBS.0039.01"></span>
+</div>
+<h1>8. File Operations</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains how to work with file operations.</p>
+<h2 id="chapter8.xhtml#heading_id_7">8.1 Getting Started</h2>
+<p>We can work with I/O file using io package, <a href="http://golang.org/pkg/io/">http://golang.org/pkg/io/</a> .</p>
+<p>For illustration, we can try to write and read text file. Firstly, we create a folder, called fileio.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir fileio
+$ cd fileio</code></pre>
+</div>
+<p><br />
+</p>
+<p>The next step is to build Go application to<span id="chapter8.xhtml#GBS.0039.02"></span> write and read a file.</p>
+<p><br />
+</p>
+<h2 id="chapter8.xhtml#heading_id_8">8.2 Writing Data Into A File</h2>
+<p>To write and read a file, we can use io package. In this section, we try to write data into a file.</p>
+<p>Create a file, called <strong>main.go</strong>, and put it on &lt;go_project_root&gt;/fileio folder. Firstly, we define our packages which we use.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>import (
+    &quot;fmt&quot;
+    &quot;io/ioutil&quot;
+)</code></pre>
+</div>
+<p><br />
+</p>
+<p>Then, create a function, called writeFile().<span id="chapter8.xhtml#GBS.0039.03"></span> Write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func writeFile(message string) {
+    bytes := []byte(message)
+    ioutil.WriteFile(&quot;d:/temp/testgo.txt&quot;,bytes,0644)
+    fmt.Println(&quot;created a file&quot;)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>You can see that we can create a file using ioutil.WriteFile(). We pass data in byte array format. You can change file name and its path.</p>
+<p><br />
+</p>
+<h2 id="chapter8.xhtml#heading_id_4">8.3 Reading Data From A File</h2>
+<p>To read data from a file,<span id="chapter8.xhtml#GBS.0039.04"></span> we create a function, called readFile(). Write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func readFile(){
+    data, _ := ioutil.ReadFile(&quot;d:/temp/testgo.txt&quot;)
+    fmt.Println(&quot;file content:&quot;)
+    fmt.Println(string(data))
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>To read a content of file, we can use ioutil.ReadFile(). It return array of string.</p>
+<p>Note: a file and its patch is similar to file on previous section.</p>
+<p><br />
+</p>
+<h2 id="chapter8.xhtml#sigil_toc_id_12">8.4 Writing All</h2>
+<div style="display:none;">
+<span id="chapter8.xhtml#GBS.0039.05"></span>
+</div>
+<p>To simply, we can write our code in <strong>main.go</strong> file as follows.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;io/ioutil&quot;
+)
+
+func main() {
+
+    // write data into a file
+    fmt.Println(&quot;writing data into a file&quot;)
+    writeFile(&quot;welcome to go&quot;)
+    readFile()
+
+    // read data from a file
+    fmt.Println(&quot;reading data from a file&quot;)
+    readFile()
+
+}
+
+func writeFile(message string) {
+    bytes := []byte(message)
+    ioutil.WriteFile(&quot;d:/temp/testgo.txt&quot;,bytes,0644)
+    fmt.Println(&quot;created a file&quot;)
+}
+func readFile(){
+    data, _ := ioutil.ReadFile(&quot;d:/temp/testgo.txt&quot;)
+    fmt.Println(&quot;file content:&quot;)
+    fmt.Println(string(data))
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this file.</p>
+<p>Now you can build and run it.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample output of program is shown in Figure<span id="chapter8.xhtml#GBS.0040.02"></span> below.</p>
+<p><img src="Images/ch8-1.png" alt="ch8-1" /><span id="chapter8.xhtml#GBS.0040.03"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter8.xhtml#GBS.0040.04"></span>
+</div>
+<p><span id="chapter9.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter9.xhtml#GBS.0041.01"></span>
+</div>
+<h1>9. Error Handling and Logging</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains how to handle errors and exceptions that occur in Go application.<br />
+</p>
+<h2 id="chapter9.xhtml#heading_id_3">9.1 Error Handling</h2>
+<p>Basically when we write a program and occur error on running, Go will catch program error. It will generate a panic.</p>
+<p>For illustration, we create a project by creating a folder, errorhandle.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir errorhandle
+$ cd errorhandle</code></pre>
+</div>
+<p><br />
+</p>
+<p>Then, create a file, main.go, and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func main(){
+
+    calculate()
+}
+
+func calculate() {
+    fmt.Println(&quot;----demo error handling---&quot;)
+    a := 10
+    b := 0
+    c := 0
+
+    c = a/b
+    fmt.Printf(&quot;result = %.2f \n&quot;,c)
+    fmt.Println(&quot;Done&quot;)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Now you can build and run it.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>This program output is shown in Figure below.</p>
+<p><img src="Images/ch9-1.png" alt="ch9-1" /><span id="chapter9.xhtml#GBS.0042.01"></span><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter9.xhtml#sigil_toc_id_13">9.2 defer, panic(), and recover()</h2>
+<p>Go provide defer syntax to make sure our program run completely. panic() can be use to raise error on our program.</p>
+<p>For illustration, we add demoPanic() function on main.go from previous project. Then, we call demoPanic() in main entry.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func main(){
+
+    demoPanic()
+
+}
+
+func demoPanic() {
+    fmt.Println(&quot;----demo error handling---&quot;)
+    defer func() {
+        fmt.Println(&quot;do something&quot;)
+    }()
+    panic(&quot;this is a panic from demoPanic()&quot;)
+    fmt.Println(&quot;This message will never show&quot;)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Now you can this program.</p>
+<p><img src="Images/ch9-2.png" alt="ch9-2" /><span id="chapter9.xhtml#GBS.0042.03"></span><br />
+</p>
+<p><br />
+</p>
+<p>You can see function under defer run completely. When we call panic(), Go will raise error on our program and then stopped this program.</p>
+<p>Now how to catch error on Go program? we can use recover() to catch error.</p>
+<p>Try to create calculaze2() function, and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func main(){
+    calculate2()
+}
+
+
+func calculate2() {
+    fmt.Println(&quot;----demo error handling---&quot;)
+    c := 0
+    defer func() {
+        a := 10
+        b := 0
+
+        c = a/b
+
+        if error := recover(); error != nil {
+            fmt.Println(&quot;Recovering....&quot;, error)
+            fmt.Println(error)
+        }
+
+    }()
+    fmt.Printf(&quot;result = %d \n&quot;,c)
+    fmt.Println(&quot;Done&quot;)
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Now you can run this program.</p>
+<p><img src="Images/ch9-3.png" alt="ch9-3" /><span id="chapter9.xhtml#GBS.0043.02"></span><br />
+</p>
+<p><br />
+</p>
+<p>You can see the program occurred error but it can recover so the program can print "result" and "Done" at the end of program.</p>
+<p><br />
+</p>
+<h2 id="chapter9.xhtml#sigil_toc_id_14">9.3 try..catch</h2>
+<p>In this section, we explorer external library, Try/Catch/Finally, from <a href="https://github.com/manucorporat/try">https://github.com/manucorporat/try</a> . We can use try..catch to handle error in Go.</p>
+<p>To install Go library from Github, you must instal git, <a href="http://git-scm.com/">http://git-scm.com/</a><span id="chapter9.xhtml#GBS.0044.01"></span> . Download it based on your platform. If you use Windows platform, don't forget to set it on PATH on Environment Variables.</p>
+<p><img src="Images/ch9-4.png" alt="ch9-4" /><span id="chapter9.xhtml#GBS.0044.02"></span><br />
+</p>
+<p><br />
+</p>
+<p>The next step is to configure GOPATH. It represents our workspace path, for instance, my workspace path is <strong>D:\PE_PRESS\eBook\go_prog\codes</strong>. In Linux/Mac, you can define your own workspace path in under your account home path, for instance. Further information, you can read it on <a href="https://golang.org/doc/code.html">https://golang.org/doc/code.html</a> .</p>
+<p>If you use Linux/Mac, you can define GOPATH using export command or<span id="chapter9.xhtml#GBS.0044.03"></span> you add it on your profile file.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir $HOME/go
+$ export GOPATH=$HOME/go</code></pre>
+</div>
+<p><br />
+</p>
+<p>If you use Windows platform, you open <strong>Environment Variables</strong>. You can open it from <strong>Advanced system settings</strong>. Then, click <strong>Environment Variables</strong> button. Add GOPATH on your user and System variables.</p>
+<p><img src="Images/ch10-2.png" alt="ch10-2" /><span id="chapter9.xhtml#GBS.0045.01"></span><br />
+</p>
+<p><br />
+</p>
+<p>For illustration, we create a project by creating a folder, trycatch.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir trycatch
+$ cd trycatch</code></pre>
+</div>
+<p><br />
+</p>
+<p>Now we can install trycatch library from Github. Type the following command.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go get github.com/manucorporat/try</code></pre>
+</div>
+<p><br />
+</p>
+<p><img src="Images/ch9-5.png" alt="ch9-5" /><span id="chapter9.xhtml#GBS.0045.02"></span><br />
+</p>
+<p><br />
+</p>
+<p>If you use Windows platform and get error related to <strong>libcurl.dll</strong>, you must copy libcurl.dll from &lt;installed_git_path&gt;/bin folder to &lt;installed_git_path&gt;/libexec/git-core folder.</p>
+<p><img src="Images/ch9-6.png" alt="ch9-6" /><span id="chapter9.xhtml#GBS.0045.03"></span><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><img src="Images/ch9-7.png" alt="ch9-7" /><span id="chapter9.xhtml#GBS.0046.01"></span><br />
+</p>
+<p><br />
+</p>
+<p>Now you can write a program. Create a file, called <strong>main.go</strong>, and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;github.com/manucorporat/try&quot;
+)
+
+func main() {
+    try.This(func() {
+        a := 10
+        b := 0
+        c := 0
+
+        c = a/b
+        fmt.Printf(&quot;result = %.2f \n&quot;,c)
+
+    }).Finally(func() {
+        fmt.Println(&quot;Done&quot;)
+
+    }).Catch(func(_ try.E) {
+        fmt.Println(&quot;exception catched&quot;) // print
+        try.Throw()                      // rethrow current exception!!
+    })
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this code.</p>
+<p>Now you can build and run this program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A program output can be seen in Figure below.</p>
+<p><img src="Images/ch9-8.png" alt="ch9-8" /><span id="chapter9.xhtml#GBS.0047.01"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter9.xhtml#heading_id_4">9.4 Logging</h2>
+<p>In previous section, we use <span class="sgc-1">fmt.Println()</span> to print error message on console. Imagine there are many messages on console and we want to identify which error message is. Go package provides "log" to handle logging.</p>
+<p>For illustration, we create a project by creating a folder, logging.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir logging
+$ cd logging</code></pre>
+</div>
+<p><br />
+</p>
+<p>Then, try to create a file, <strong>main.go</strong><span id="chapter9.xhtml#GBS.0047.02"></span>, and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;log&quot;
+    &quot;os&quot;
+)
+
+func main() {
+    simpleLogging()
+
+}
+
+func simpleLogging(){
+    fmt.Println(&quot;-----------simple logging-----------&quot;)
+    log.Println(&quot;Hello World&quot;)
+    log.Println(&quot;This is a simple error&quot;)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Now you can build and run it.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>This program output is shown<span id="chapter9.xhtml#GBS.0047.03"></span> in Figure below.</p>
+<p><img src="Images/ch9-9.png" alt="ch9-9" /><span id="chapter9.xhtml#GBS.0047.04"></span><br />
+</p>
+<p><br />
+</p>
+<p>We can modify our logging format by modifying log.Logger object. For illustration, create a function, called formattingLogging(), and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main() {
+    formattingLogging()
+
+}
+
+func formattingLogging(){
+    fmt.Println(&quot;-----------formattingLogging-----------&quot;)
+    var warning *log.Logger
+
+    warning = log.New(
+        os.Stdout,
+        &quot;WARNING: &quot;,
+        log.Ldate|log.Ltime|log.Lshortfile)
+
+    warning.Println(&quot;This is warning message 1&quot;)
+    warning.Println(&quot;This is warning message 2&quot;)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Now you can build and run this program. A sample output can be seen in Figure below.</p>
+<p><img src="Images/ch9-10.png" alt="ch9-10" /><span id="chapter9.xhtml#GBS.0048.01"></span><br />
+</p>
+<p><br />
+</p>
+<p>We also can save our logging messages into a file. For instance, we save them on myapp.log. Basically, we can open file using os.OpenFile(). Then, pass this object into log.Logger object.</p>
+<p>Try to create fileLogging() function and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main() {
+    fileLogging()
+
+}
+
+func fileLogging(){
+    fmt.Println(&quot;-----------file logging-----------&quot;)
+    file, err := os.OpenFile(&quot;d:/temp/myapp.log&quot;, 
+            os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+    if err != nil {
+        fmt.Println(&quot;Failed to open log file&quot;)
+        return
+    }
+
+    var logFile *log.Logger
+    logFile = log.New(
+        file,
+        &quot;APP: &quot;,
+        log.Ldate|log.Ltime|log.Lshortfile)
+
+    logFile.Println(&quot;This is error message 1&quot;)
+    logFile.Println(&quot;This is error message 2&quot;)
+    logFile.Println(&quot;This is error message 3&quot;)
+    fmt.Println(&quot;Done&quot;)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Note: You can change file path based on your platform.</p>
+<p>Now you can build and run this program.</p>
+<p><img src="Images/ch9-11.png" alt="ch9-11" /><span id="chapter9.xhtml#GBS.0048.04"></span><br />
+</p>
+<p><br />
+</p>
+<p>After that, you can open <strong>myapp.log</strong> file. You will see the logging message on this file.</p>
+<p><img src="Images/ch9-12.png" alt="ch9-12" /><span id="chapter9.xhtml#GBS.0049.01"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter9.xhtml#GBS.0049.02"></span>
+</div>
+<p><span id="chapter10.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter10.xhtml#GBS.0050.01"></span>
+</div>
+<h1>10. Building Own Go Package</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains how to build own Go Package</p>
+<h2 id="chapter10.xhtml#heading_id_3">10.1 Creating Simple Module</h2>
+<p>In this section, we create a simple module. We will call functions from external file (*.go) in the same package, main package.</p>
+<p>Firstly, create new project, called mymodule.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir mymodule
+$ cd mymodule</code></pre>
+</div>
+<p><br />
+</p>
+<p>Then, create a file, called <strong><span id="chapter10.xhtml#GBS.0050.02"></span>simplemath.go</strong>. We define three functions. Write the following code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+func Add(a,b int) int {
+
+    return a+b
+}
+func Subtract(a,b int) int {
+
+    return a-b
+}
+func Multiply(a,b int) int {
+
+    return a*b
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Note: Method name is written in Pascalcase, for instance HelloWorld(), DoProcessing(), IsEmpty().</p>
+<p>Now we will call three function (<strong>simplemath.go</strong>) from main<span id="chapter10.xhtml#GBS.0050.03"></span> entry. Create a new file, called <strong>main.go</strong>, and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+
+)
+
+func main(){
+
+    fmt.Println(&quot;access mymodule...&quot;)
+    var c int
+    c = Add(10,6)
+    fmt.Printf(&quot;add()=%d\n&quot;,c)
+    c = Subtract(5,8)
+    fmt.Printf(&quot;subtract()=%d\n&quot;,c)
+    c = Multiply(5,3)
+    fmt.Printf(&quot;multiply()=%d\n&quot;,c)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save all.</p>
+<p>Now you can test to build<span id="chapter10.xhtml#GBS.0050.04"></span> and run the program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go simplemath.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample output can be seen in Figure below.</p>
+<p><img src="Images/ch10-1.png" alt="ch10-1" /><span id="chapter10.xhtml#GBS.0050.05"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter10.xhtml#heading_id_4">10.2 Building Own Package</h2>
+<p>In previous program, we create a module in main package. We create a package and then use it in our program. </p>
+<p>The first thing we should do is to configure GOPATH. It represents our workspace path, for instance, my workspace path is <strong>D:\PE_PRESS\eBook\go_prog\codes</strong>. In Linux/Mac, you can define your own workspace path in under your account home path, for<span id="chapter10.xhtml#GBS.0051.01"></span> instance. Further information, you can read it on <a href="https://golang.org/doc/code.html">https://golang.org/doc/code.html</a> .</p>
+<p>If you use Linux/Mac, you can define GOPATH using export command or you add it on your profile file.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir $HOME/go
+$ export GOPATH=$HOME/go</code></pre>
+</div>
+<p><br />
+</p>
+<p>If you use Windows platform, you open <strong>Environment Variables</strong>. You can open it from <strong>Advanced system settings</strong>. Then, click <strong>Environment Variables</strong><span id="chapter10.xhtml#GBS.0051.02"></span> button. Add GOPATH on your user and System variables.</p>
+<p><img src="Images/ch10-2.png" alt="ch10-2" /><span id="chapter10.xhtml#GBS.0051.03"></span><br />
+</p>
+<p><br />
+</p>
+<p>In this section, we organize our workspace as follows:</p>
+<p><br />
+</p>
+<p>---- $GOPATH</p>
+<p>-------src<br />
+</p>
+<p>----------simplemodule</p>
+<p>----------simplemoduletest<br />
+</p>
+<p><br />
+</p>
+<p>For instance, we already been on GOPATH. Then, create src/simplemodule and src/simplemoduletest folders.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir src
+$ cd src
+$ mkdir simplemodule
+$ mkdir simplemoduletest</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample illustration for our<span id="chapter10.xhtml#GBS.0052.01"></span> lab path is shown in Figure below.</p>
+<p><img src="Images/ch10-3.png" alt="ch10-3" /><span id="chapter10.xhtml#GBS.0053.01"></span><br />
+</p>
+<p><br />
+</p>
+<p>Now you can create a file, called <strong>simplemath.go</strong> on <strong>simplemath</strong> folder. Write the following code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package simplemath
+
+func Add(a,b int) int {
+
+    return a+b
+}
+func Subtract(a,b int) int {
+
+    return a-b
+}
+func Multiply(a,b int) int {
+
+    return a*b
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Note: Method name is written in Pascalcase, for instance HelloWorld(), DoProcessing(), IsEmpty().<br />
+</p>
+<p>To compile<span id="chapter10.xhtml#GBS.0053.02"></span> our package, you can navigate to <strong>simplemodule</strong> directory, then call go build and install.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ cd simplemodule
+$ go build
+$ go install</code></pre>
+</div>
+<p><br />
+</p>
+<p>If success, it will create a folder, called <strong>pkg</strong>. You can see your compiled package file, for instance, <strong>simplemodule.a</strong></p>
+<p><img src="Images/ch10-4.png" alt="ch10-4" /><span id="chapter10.xhtml#GBS.0053.03"></span><br />
+</p>
+<p><br />
+</p>
+<p>The next step is to use simplemodule package. </p>
+<p>Create a file, called <strong>main.go</strong> on simplemathtest folder.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;simplemodule&quot;
+)
+
+func main(){
+
+    fmt.Println(&quot;access mymodule...&quot;)
+    var c int
+    c = simplemath.Add(5,8)
+    fmt.Printf(&quot;add()=%d\n&quot;,c)
+    c = simplemath.Subtract(5,8)
+    fmt.Printf(&quot;subtract()=%d\n&quot;,c)
+    c = simplemath.Multiply(5,3)
+    fmt.Printf(&quot;multiply()=%d\n&quot;,c)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save all. Now you can compile and run this program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ cd simplemathtest
+$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>You can see the sample output can be seen in Figure below.</p>
+<p><img src="Images/ch10-5.png" alt="ch10-5" /><span id="chapter10.xhtml#GBS.0054.02"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter10.xhtml#GBS.0054.03"></span>
+</div>
+<p><span id="chapter11.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter11.xhtml#GBS.0055.01"></span>
+</div>
+<h1>11. Concurrency</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains how to create concurrency in Go</p>
+<h2 id="chapter11.xhtml#heading_id_3">11.1 Getting Started</h2>
+<p>We can run a program or a function in background using Go. In this chapter, we explore several scenarios to build concurrency application.</p>
+<p><br />
+</p>
+<h2 id="chapter11.xhtml#sigil_toc_id_15">11.2 Goroutines</h2>
+<p>Basically, we can define our Go background using go..&lt;program code&gt;.</p>
+<p>For illustration, create new project,<span id="chapter11.xhtml#GBS.0055.02"></span> called goroutines.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir goroutines
+$ cd goroutines</code></pre>
+</div>
+<p><br />
+</p>
+<p>Create a file, <strong>maing.go</strong>, and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;time&quot;
+)
+
+func main(){
+
+    fmt.Printf(&quot;goroutines demo\n&quot;)
+
+    // run func in background
+    go calculate()
+
+    index := 0
+    // run in background
+    go func() {
+        for index &lt; 6 {
+            fmt.Printf(&quot;go func() index= %d \n&quot;, index)
+            var result float64 = 2.5 * float64(index)
+            fmt.Printf(&quot;go func() result= %.2f \n&quot;, result)
+
+            time.Sleep(500 * time.Millisecond)
+            index++
+        }
+    }()
+    // run in background
+    go fmt.Printf(&quot;go printed in the background\n&quot;)
+
+    // press ENTER to exit
+    var input string
+    fmt.Scanln(&amp;input)
+    fmt.Println(&quot;done&quot;)
+
+}
+func calculate() {
+    i := 12
+    for i &lt; 15 {
+        fmt.Printf(&quot;calculate()= %d \n&quot;, i)
+        var result float64 = 8.2 * float64(i)
+        fmt.Printf(&quot;calculate() result= %.2f \n&quot;, result)
+
+        time.Sleep(500 * time.Millisecond)
+        i++
+    }
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>In this code, we try to run program in background for functions and lines of code. We use go statement to represent background<span id="chapter11.xhtml#GBS.0055.05"></span> process.</p>
+<p>Save all.</p>
+<p>Now you can test to build and run the program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample output can be seen in Figure below.</p>
+<p><img src="Images/ch11-1.png" alt="ch11-1" /><span id="chapter11.xhtml#GBS.0056.01"></span><br />
+</p>
+<p><br />
+</p>
+<p>You can see the program is running randomly due to all codes run on background (concurrency).</p>
+<p><br />
+</p>
+<h2 id="chapter11.xhtml#sigil_toc_id_16">11.3 Synchronizing Goroutines</h2>
+<p>We can synchronize among background codes in Go. One of the solution is to use sync library. In this section, we use sync.Mutex.Lock and sync.Mutex.Unlock for synchronization.</p>
+<p>For illustration, create new project, called syncgoroutines.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir syncgoroutines
+$ cd syncgoroutines</code></pre>
+</div>
+<p><br />
+</p>
+<p>Create a file, <strong>main.go</strong>, and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;sync&quot;
+    &quot;math/rand&quot;
+    &quot;time&quot;
+)
+
+type Task struct {
+    value int
+    executedBy string
+}
+
+var total int
+var task Task
+var lock sync.Mutex
+
+func main(){
+
+    fmt.Printf(&quot;synchronizing goroutines demo\n&quot;)
+    total = 0
+    task.value = 0
+    task.executedBy = &quot;&quot;
+    display()
+
+    // run background
+    go calculate()
+    go perform()
+
+    // press ENTER to exit
+    var input string
+    fmt.Scanln(&amp;input)
+    fmt.Println(&quot;done&quot;)
+}
+
+func calculate(){
+
+    for total &lt; 10 {
+        lock.Lock()
+        task.value = rand.Intn(100)
+        task.executedBy = &quot;from calculate()&quot;
+        display()
+        total++
+        lock.Unlock()
+        time.Sleep(500 * time.Millisecond)
+    }
+}
+func perform(){
+
+    for total &lt; 10 {
+        lock.Lock()
+        task.value = rand.Intn(100)
+        task.executedBy = &quot;from perform()&quot;
+        display()
+        total++
+        lock.Unlock()
+        time.Sleep(500 * time.Millisecond)
+    }
+}
+func display(){
+    fmt.Println(&quot;--------------------------&quot;)
+    fmt.Println(task.value)
+    fmt.Println(task.executedBy)
+    fmt.Println(&quot;--------------------------&quot;)
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save all.</p>
+<p>Now you can test to build and run the program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample output can be seen in Figure below.</p>
+<p><img src="Images/ch11-2.png" alt="ch11-2" /><span id="chapter11.xhtml#GBS.0057.01"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter11.xhtml#sigil_toc_id_17">11.4 Channels</h2>
+<p>We can create channels in Go and then we can communicate among Goroutines using these channel. For illustration, we create a channel which hold number data. To insert data in channel, we can use <em>channel &lt;-</em>. Otherwise, we can get data from a channel using <em>&lt;- channel</em>.</p>
+<p>For testing, create new project, called simplechannel.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir simplechannel
+$ cd simplechannel</code></pre>
+</div>
+<p><br />
+</p>
+<p>Create a file, <strong>main.go</strong>, and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+
+func main(){
+
+    fmt.Println(&quot;simple channel&quot;)
+
+    // define a channel
+    c := make(chan int)
+
+    // run a function in background
+    go func() {
+        fmt.Println(&quot;goroutine process&quot;)
+
+        c &lt;- 10   // write data to a channel
+    }()
+
+    val := &lt;-c // read data from a channel
+    fmt.Printf(&quot;value: %d\n&quot;,val)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save all.</p>
+<p>Now you can test to build and run the program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample output can be seen in Figure below.</p>
+<p><img src="Images/ch11-3.png" alt="ch11-3" /><span id="chapter11.xhtml#GBS.0057.04"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter11.xhtml#GBS.0057.05"></span>
+</div>
+<p><span id="chapter12.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter12.xhtml#GBS.0058.01"></span>
+</div>
+<h1>12. Encoding</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains how to work with encoding in Go</p>
+<h2 id="chapter12.xhtml#heading_id_3">12.1 Getting Started</h2>
+<p>In this chapter, we explore encoding package, <a href="http://golang.org/pkg/encoding/">http://golang.org/pkg/encoding/</a> . The following is a list of our demo to illustrate how to use encoding package:</p>
+<ul>
+<li>Base64</li>
+<li>Hexadecimal</li>
+<li>JSON</li>
+<li>XML</li>
+<li>CSV</li>
+</ul>
+<p><br />
+</p>
+<p>For testing, you can create a new project, called<span id="chapter12.xhtml#GBS.0058.02"></span> encoding.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir encoding
+$ cd encoding</code></pre>
+</div>
+<p><br />
+</p>
+<p>Create a file, <strong>main.go</strong>. Firstly, we import our Go packages for the demo. Write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;encoding/base64&quot;
+    &quot;encoding/hex&quot;
+    &quot;encoding/json&quot;
+    &quot;encoding/xml&quot;
+    &quot;encoding/csv&quot;
+    &quot;os&quot;
+)</code></pre>
+</div>
+<p><br />
+</p>
+<h2 id="chapter12.xhtml#sigil_toc_id_18">12.2 Encoding Base64</h2>
+<p>The first demo is to work with base64 encoding. We can<span id="chapter12.xhtml#GBS.0058.03"></span> use base64 package, <a href="http://golang.org/pkg/encoding/base64/">http://golang.org/pkg/encoding/base64/</a> . To encode string to base64 string, we can use EncodeToString(). Otherwise, we can decode it using DecodeString() function.</p>
+<p>For testing, we encode a string message to base64. Then, we decode base64 message to original message. Create a function, called demoBase64(). Call this function to main entry.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main(){
+
+    message := &quot;hello,go (*w3hu%#&quot;
+    demoBase64(message)
+
+}
+
+func demoBase64(message string) {
+
+    fmt.Println(&quot;--------Demo encoding base64--------&quot;)
+
+    fmt.Println(&quot;plaintext:&quot;)
+    fmt.Println(message)
+
+    encoding := base64.StdEncoding.EncodeToString([]byte(message))
+    fmt.Println(&quot;base64 msg:&quot;)
+    fmt.Println(encoding)
+
+    decoding, _ := base64.StdEncoding.DecodeString(encoding)
+    fmt.Println(&quot;decoding base64 msg:&quot;)
+    fmt.Println(string(decoding))
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save all.</p>
+<p>Now you can test to build and run the program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample output can be seen in Figure below.</p>
+<p><img src="Images/ch13-1.png" alt="ch13-1" /><span id="chapter12.xhtml#GBS.0059.01"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter12.xhtml#sigil_toc_id_19">12.3 Hexadecimal</h2>
+<p>The second demo is to encode and decode string to Hexademical. We can use hex package, <a href="http://golang.org/pkg/encoding/hex/">http://golang.org/pkg/encoding/hex/</a>, to implement our demo.</p>
+<p>Create a function, called demoHex(). The following is implementation of encoding/decoding Hexadecimal.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main(){
+
+    message := &quot;hello,go (*w3hu%#&quot;
+    demoHex(message)
+
+}
+
+func demoHex(message string) {
+
+    fmt.Println(&quot;--------Demo encoding Hex--------&quot;)
+
+    fmt.Println(&quot;plaintext:&quot;)
+    fmt.Println(message)
+
+    encoding := hex.EncodeToString([]byte(message))
+    fmt.Println(&quot;Hex msg:&quot;)
+    fmt.Println(encoding)
+
+    decoding, _ := hex.DecodeString(encoding)
+    fmt.Println(&quot;decoding Hex msg:&quot;)
+    fmt.Println(string(decoding))
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this code. Now you can build and run<span id="chapter12.xhtml#GBS.0059.03"></span> this program.</p>
+<p>A sample output can be seen in Figure below.</p>
+<p><img src="Images/ch13-2.png" alt="ch13-2" /><span id="chapter12.xhtml#GBS.0059.04"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter12.xhtml#sigil_toc_id_20">12.4 JSON</h2>
+<p>The third demo is to construct and parse JSON data. In Go, we can use json package, <a href="http://golang.org/pkg/encoding/json/">http://golang.org/pkg/encoding/json/</a> . In this demo, we try to convert struct data to JSON data. Then, we can convert JSOn string to struct.</p>
+<p>Now you can create a function, called demoJson(), and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main(){
+
+    demoJson()
+
+}
+
+func demoJson(){
+
+    fmt.Println(&quot;--------Demo encoding json--------&quot;)
+    type Employee struct {
+        Id string  `json:&quot;id&quot;`
+        Name string `json:&quot;name&quot;`
+        Email string `json:&quot;email&quot;`
+    }
+
+    // struct to json
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;struct to json....&quot;)
+    emp := &amp;Employee{Id:&quot;12345&quot;,Name:&quot;Michael&quot;,Email:&quot;michael@email.com&quot;}
+    b, err := json.Marshal(emp)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    fmt.Println(string(b))
+
+    // json string to struct
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;json to struct....&quot;)
+    var newEmp Employee
+    str := `{&quot;Id&quot;:&quot;4566&quot;,&quot;Name&quot;:&quot;Brown&quot;,&quot;Email&quot;:&quot;brown@email.com&quot;}`
+    json.Unmarshal([]byte(str),&amp;newEmp)
+    fmt.Printf(&quot;Id: %s\n&quot;,newEmp.Id)
+    fmt.Printf(&quot;Name: %s\n&quot;,newEmp.Name)
+    fmt.Printf(&quot;Email: %s\n&quot;,newEmp.Email)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this code.<span id="chapter12.xhtml#GBS.0060.02"></span> Now you can build and run this program.<br />
+</p>
+<p>A sample output can be seen in Figure below.</p>
+<p><img src="Images/ch13-3.png" alt="ch13-3" /><span id="chapter12.xhtml#GBS.0060.03"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter12.xhtml#sigil_toc_id_21">12.5 XML</h2>
+<p>The fourth demo is to read and write XML data. We xml package, <a href="http://golang.org/pkg/encoding/xml/">http://golang.org/pkg/encoding/xml/ </a>. In this demo, we construct XML from a struct which has nested struct. In XML data nested struct can be converted to XML attribute and value.</p>
+<p>Now you can create a function, called demoXml(), and write this code.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main(){
+
+    demoXml()
+
+}
+
+func demoXml(){
+
+    fmt.Println(&quot;--------Demo encoding xml--------&quot;)
+    type EmployeeCountry struct {
+        CountryCode string `xml:&quot;code,attr&quot;` // XML attribute: code
+        CountryName  string `xml:&quot;,chardata&quot;`    // XML value
+    }
+    type Employee struct {
+        XMLName   xml.Name `xml:&quot;employee&quot;`
+        Id string  `xml:&quot;id&quot;`
+        Name string `xml:&quot;name&quot;`
+        Email string `xml:&quot;email&quot;`
+        Country EmployeeCountry `xml:&quot;country&quot;`
+    }
+
+
+    // struct to xml
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;struct to xml....&quot;)
+    emp := &amp;Employee{Id:&quot;12345&quot;,Name:&quot;Michael&quot;,Email:&quot;michael@email.com&quot;,
+                    Country: EmployeeCountry{CountryCode:&quot;DE&quot;,CountryName:&quot;Germany&quot;}}
+    b, err := xml.Marshal(emp)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    fmt.Println(string(b))
+
+    // xml string to struct
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;xml to struct....&quot;)
+    var newEmp Employee
+    str := `&lt;employee&gt;&lt;id&gt;555&lt;/id&gt;&lt;name&gt;Lee&lt;/name&gt;&lt;email&gt;lee@email.com&lt;/email&gt;&lt;country code=&quot;CN&quot;&gt;China&lt;/country&gt;&lt;/employee&gt;`
+    xml.Unmarshal([]byte(str),&amp;newEmp)
+    fmt.Printf(&quot;Id: %s\n&quot;,newEmp.Id)
+    fmt.Printf(&quot;Name: %s\n&quot;,newEmp.Name)
+    fmt.Printf(&quot;Email: %s\n&quot;,newEmp.Email)
+    fmt.Printf(&quot;CountryCode: %s\n&quot;,newEmp.Country.CountryCode)
+    fmt.Printf(&quot;CountryName: %s\n&quot;,newEmp.Country.CountryName)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this code. Now you can build and run this program.</p>
+<p>A sample output can be seen in Figure below.</p>
+<p><img src="Images/ch13-4.png" alt="ch13-4" /><span id="chapter12.xhtml#GBS.0061.03"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter12.xhtml#sigil_toc_id_22">12.6 CSV</h2>
+<p>The last demo is to read and write data CSV which is a collection of comma-separated data. We can access CSV file using csv package, <a href="http://golang.org/pkg/encoding/csv/">http://golang.org/pkg/encoding/csv/</a> . </p>
+<p>For testing, we have a CSV file, <strong>demo.csv</strong>, with the following content.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>Employee 1;employee1@email.com;DE
+Employee 2;employee2@email.com;UK
+Employee 3;employee3@email.com;UK
+Employee 4;employee4@email.com;NL
+Employee 5;employee5@email.com;US
+Employee 6;employee6@email.com;JP
+Employee 7;employee7@email.com;DE</code></pre>
+</div>
+<p><br />
+</p>
+<p> <img src="Images/ch13-6.png" alt="ch13-6" /><span id="chapter12.xhtml#GBS.0062.01"></span></p>
+<p><br />
+</p>
+<p>Create a function, demoCsv(). This function will read CSV file, demo.csv, and convert these data to array of struct. After that, we write array of struct to a new CSV file, called <strong>employee.csv</strong>.</p>
+<p>The following is implementation of reading/writing CSV file.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main(){
+
+    demoCsv()
+
+}
+
+func demoCsv(){
+
+    fmt.Println(&quot;--------Demo encoding csv--------&quot;)
+    type Employee struct {
+        Name string
+        Email string
+        Country string
+    }
+
+    // read csv file to a array of struct
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;read a csv file and load to array of struct....&quot;)
+    file, err := os.Open(&quot;D:/PE_PRESS/eBook/go_prog/codes/src/encoding/demo.csv&quot;)
+
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    defer file.Close()
+    reader := csv.NewReader(file)
+    reader.FieldsPerRecord = 3
+    reader.Comma = &#39;;&#39;
+
+    csvData, err := reader.ReadAll()
+    if err != nil {
+        fmt.Println(err)
+        os.Exit(1)
+    }
+
+    var emp Employee
+    var employees []Employee
+
+    for _, item := range csvData {
+        emp.Name = item[0]
+        emp.Email = item[1]
+        emp.Country = item[2]
+        employees = append(employees, emp)
+        fmt.Printf(&quot;name: %s email: %s  country: %s\n&quot;, item[0], item[1],item[2])
+    }
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;show all employee structs....&quot;)
+    fmt.Println(employees)
+
+    // write data to csv file
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;write data to a csv file ....&quot;)
+    csvFile, err := os.Create(&quot;D:/PE_PRESS/eBook/go_prog/codes/src/encoding/employee.csv&quot;)
+    if err != nil {
+        fmt.Println(&quot;Error:&quot;, err)
+        return
+    }
+    defer csvFile.Close()
+
+    writer := csv.NewWriter(csvFile)
+    writer.Comma = &#39;;&#39;
+    for _, itemEmp := range employees {
+        records := []string{itemEmp.Name,itemEmp.Email,itemEmp.Country}
+        err := writer.Write(records)
+        if err != nil {
+            fmt.Println(&quot;Error:&quot;, err)
+            return
+        }
+    }
+    writer.Flush()
+    fmt.Println(&quot;&gt;&gt;&gt;&gt;Done&quot;)
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter12.xhtml#GBS.0063.01"></span>
+</div>
+<p>Note: You can change CSV file path.</p>
+<p>Save this code. Now you can build and run this program.</p>
+<p>A sample output can be seen in Figure below.</p>
+<p><img src="Images/ch13-5.png" alt="ch13-5" /><span id="chapter12.xhtml#GBS.0063.02"></span><br />
+</p>
+<p><br />
+</p>
+<p>If you open <strong>employee.csv</strong>, you get a content of employee data like a content of <strong>demo.csv</strong> file.</p>
+<p><img src="Images/ch13-7.png" alt="ch13-7" /><span id="chapter12.xhtml#GBS.0063.03"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter12.xhtml#GBS.0063.04"></span>
+</div>
+<p><span id="chapter13.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter13.xhtml#GBS.0064.01"></span>
+</div>
+<h1>13. Hashing and Cryptography</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains how to work with hashing and cryptography in Go</p>
+<h2 id="chapter13.xhtml#heading_id_3">13.1 Getting Started</h2>
+<p>Hashing is generating a value or values from a string of text using a mathematical function. Cryptography is the practice and study of techniques for secure communication in the presence of third parties (called adversaries), <a href="http://en.wikipedia.org/wiki/Cryptography">http://en.wikipedia.org/wiki/Cryptography</a><span id="chapter13.xhtml#GBS.0064.02"></span> . In this chapter, I don't explain mathematical hashing and Cryptography. You can read those materials on textbooks.<br />
+</p>
+<p>In this chapter, we explore how to work with hashing implementation using Go. The following is hashing algorithms which we use in this book:</p>
+<ul>
+<li>MD5</li>
+<li>SHA256</li>
+<li>Hashing with Key (HMAC)</li>
+</ul>
+<p><br />
+</p>
+<p>The next topic is to implement Cryptography using Go. We explore symmetric<span id="chapter13.xhtml#GBS.0064.03"></span> and asymmetric Cryptography.</p>
+<p>Firstly, we can create a new project, called cryptodemo.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir cryptodemo
+$ cd cryptodemo</code></pre>
+</div>
+<p><br />
+</p>
+<p>Create a file, <strong>main.go</strong>. Firstly, we import our Go packages for the demo. Write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;crypto/md5&quot;
+    &quot;crypto/sha256&quot;
+    &quot;crypto/hmac&quot;
+    &quot;crypto/aes&quot;
+    &quot;crypto/rsa&quot;
+    &quot;crypto/cipher&quot;
+    &quot;crypto/rand&quot;
+    &quot;crypto/x509&quot;
+    &quot;encoding/hex&quot;
+    &quot;encoding/base64&quot;
+    &quot;encoding/pem&quot;
+    &quot;io&quot;
+    &quot;io/ioutil&quot;
+)</code></pre>
+</div>
+<p><br />
+</p>
+<p>Let's start to explore hashing and cryptography using Go.</p>
+<p><br />
+</p>
+<h2 id="chapter13.xhtml#sigil_toc_id_23">13.2 Hashing</h2>
+<p>Basically, you can explore how to implement hashing or hash function using Go via <a href="http://golang.org/pkg/crypto/">http://golang.org/pkg/crypto/</a> . In this section, we explore several hashing algorithms, for instance, MD5, SHA256<span id="chapter13.xhtml#GBS.0064.05"></span> and HMAC.</p>
+<p><br />
+</p>
+<h3 id="chapter13.xhtml#sigil_toc_id_24">13.2.1 Hashing with MD5</h3>
+<p>We can use MD5 using md5 package, <a href="http://golang.org/pkg/crypto/md5/">http://golang.org/pkg/crypto/md5/</a> . To calculate a hash value from a text , we can call Sum() function. </p>
+<p>For illustration, we create a function, demoHash_md5(), and write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func demoHash_md5() {
+
+    fmt.Println(&quot;--------Demo encoding hash using md5--------&quot;)
+
+    message := &quot;Hello world, go!&quot;
+    fmt.Println(&quot;plaintext:&quot;)
+    fmt.Println(message)
+
+    h := md5.New()
+    h.Write([]byte(message))
+    hash_message := hex.EncodeToString(h.Sum(nil))
+    fmt.Println(&quot;hashing message:&quot;)
+    fmt.Println(hash_message)
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<h3 id="chapter13.xhtml#sigil_toc_id_25">13.2.2 Hashing with SHA256</h3>
+<p>The second demo is to implement hash function using SHA256. Go provides sha256 package, <a href="http://golang.org/pkg/crypto/sha256/">http://golang.org/pkg/crypto/sha256/</a>, to<span id="chapter13.xhtml#GBS.0065.02"></span> implement hash function using SHA256.</p>
+<p>For illustration, we create a function, demoHash_sha256(), and write this code.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func demoHash_sha256() {
+
+    fmt.Println(&quot;--------Demo encoding hash using sha256--------&quot;)
+
+    message := &quot;Hello world, go!&quot;
+    fmt.Println(&quot;plaintext:&quot;)
+    fmt.Println(message)
+
+    h := sha256.New()
+    h.Write([]byte(message))
+    hash_message := hex.EncodeToString(h.Sum(nil))
+    fmt.Println(&quot;hashing message:&quot;)
+    fmt.Println(hash_message)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<h3 id="chapter13.xhtml#sigil_toc_id_26">13.2.3 Hashing with Key Using HMAC</h3>
+<p>A keyed-hash message authentication code (HMAC) is a specific construction for calculating a message authentication code (MAC) involving a cryptographic hash function in combination with a secret cryptographic key, <a href="http://en.wikipedia.org/wiki/Hash-based_message_authentication_code">http://en.wikipedia.org/wiki/Hash-based_message_authentication_code</a><span id="chapter13.xhtml#GBS.0065.04"></span> . In Go, we can hmac package, <a href="http://golang.org/pkg/crypto/hmac/">http://golang.org/pkg/crypto/hmac/</a> , to implement HMAC algorithm.</p>
+<p>For illustration, we create a function, demoHashKey(), and write this code.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func demoHashKey(key,message string) {
+
+    fmt.Println(&quot;--------Demo encoding hash with key: HMAC and sha256--------&quot;)
+
+    fmt.Println(&quot;key:&quot;)
+    fmt.Println(key)
+    fmt.Println(&quot;plaintext:&quot;)
+    fmt.Println(message)
+
+    hmacKey := []byte(key)
+    h := hmac.New(sha256.New, hmacKey)
+    h.Write([]byte(message))
+    hash_message := hex.EncodeToString(h.Sum(nil))
+    fmt.Println(&quot;hashing message:&quot;)
+    fmt.Println(hash_message)
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<h3 id="chapter13.xhtml#sigil_toc_id_27">13.2.4 Testing</h3>
+<p>Save all code for our demo on section 13.2.1, 13.2.2 and 13.2.3. To testing, we call these functions in main entry. Write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main(){
+    demoHash_md5()
+    demoHash_sha256()
+    demoHashKey(&quot;mykey&quot;,&quot;Hello world, go!&quot;)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save all.</p>
+<p>Now you can test to build and run the program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample output can be seen in Figure below.</p>
+<p><img src="Images/ch12-1.png" alt="ch12-1" /><span id="chapter13.xhtml#GBS.0066.02"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter13.xhtml#sigil_toc_id_28">13.3 Cryptography</h2>
+<p>In this section, we focus Symmetric and Asymmetric Cryptography. In Symmetric Cryptography, we use the same key to encrypt and decrypt. Otherwise, Asymmetric Cryptography uses different key to encrypt and decrypt.</p>
+<p>We explore these on the next section.</p>
+<p><br />
+</p>
+<h3 id="chapter13.xhtml#sigil_toc_id_29">13.3.1 Symmetric Cryptography</h3>
+<p>There are many algorithms to implement Symmetric Cryptography. In<span id="chapter13.xhtml#GBS.0066.03"></span> this section, we use AES algorithm. The Advanced Encryption Standard (AES) is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST) in 2001, <a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">http://en.wikipedia.org/wiki/Advanced_Encryption_Standard</a>. </p>
+<p>For illustration, we create two functions, encrypt_symmetric_crpyto() and decrypt_symmetric_crpyto(). The following<span id="chapter13.xhtml#GBS.0067.01"></span> is implementation of encrypt_symmetric_crpyto().<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func encrypt_symmetric_crpyto(key,message string) string {
+
+    fmt.Println(&quot;--------Demo encrypt encrypt_symmetric_crpyto--------&quot;)
+    if len(key)!=16 &amp;&amp; len(key)!=24 &amp;&amp; len(key)!=32 {
+        fmt.Println(&quot;key must 16,24,32 byte length&quot;)
+        return  &quot;&quot;
+    }
+    bc, err := aes.NewCipher([]byte(key))
+    if err != nil {
+        panic(err)
+    }
+    text := []byte(message)
+
+    ciphertext := make([]byte, aes.BlockSize+len(text))
+    iv := ciphertext[:aes.BlockSize]
+    if _, err := io.ReadFull(rand.Reader, iv); err != nil {
+        panic(err)
+    }
+    cfb := cipher.NewCFBEncrypter(bc, iv)
+    cfb.XORKeyStream(ciphertext[aes.BlockSize:], text)
+
+    return base64.StdEncoding.EncodeToString(ciphertext)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Explanation:</p>
+<div style="display:none;">
+<span id="chapter13.xhtml#GBS.0067.03"></span>
+</div>
+<ul>
+<li>Define a key. It should be 16, 24, or 32 key length</li>
+<li>Instantiate AES using NewCipher() with passing key value</li>
+<li>Calculate IV value</li>
+<li>Encrypt message in array of byte format by calling NewCFBEncrypter()</li>
+<li>The result is be encoded to base64 string</li>
+</ul>
+<p><br />
+</p>
+<p>The following is implementation of encrypt_symmetric_crpyto().<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func decrypt_symmetric_crpyto(key,message string) string {
+
+    fmt.Println(&quot;--------Demo decrypt decrypt_symmetric_crpyto--------&quot;)
+    if len(key)!=16 &amp;&amp; len(key)!=24 &amp;&amp; len(key)!=32 {
+        fmt.Println(&quot;key must 16,24,32 byte length&quot;)
+        return  &quot;&quot;
+    }
+    encrypted,_ := base64.StdEncoding.DecodeString(message)
+
+    bc, err := aes.NewCipher([]byte(key))
+    if err != nil {
+        panic(err)
+    }
+    if len(encrypted) &lt; aes.BlockSize {
+        panic(&quot;ciphertext too short&quot;)
+    }
+    iv := encrypted[:aes.BlockSize]
+    encrypted = encrypted[aes.BlockSize:]
+    cfb := cipher.NewCFBDecrypter(bc, iv)
+    cfb.XORKeyStream(encrypted, encrypted)
+
+    return string(encrypted)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Explanation:</p>
+<ul>
+<li>Define a key. It should be 16, 24, or 32 key length</li>
+<li>Instantiate AES using NewCipher() with passing key value</li>
+<li><span id="chapter13.xhtml#GBS.0068.01"></span>Calculate IV value</li>
+<li>Encrypt message in array of byte format by calling NewCFBDecrypter()</li>
+<li>The result is be encoded to string</li>
+</ul>
+<p><br />
+</p>
+<p>Now we can call these functions in main entry. Write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main(){
+    // symmetric crypto
+    key :=  &quot;this is key 1234&quot;
+    message := &quot;Hello world, go!&quot;
+    encrypted := encrypt_symmetric_crpyto(key,message)
+    fmt.Println(&quot;message:&quot;)
+    fmt.Println(message)
+    fmt.Println(&quot;key:&quot;)
+    fmt.Println(key)
+    fmt.Println(&quot;encrypted:&quot;)
+    fmt.Println(encrypted)
+
+    decrypted := decrypt_symmetric_crpyto(key,encrypted)
+    fmt.Println(&quot;encrypted message:&quot;)
+    fmt.Println(encrypted)
+    fmt.Println(&quot;key:&quot;)
+    fmt.Println(key)
+    fmt.Println(&quot;decrypted:&quot;)
+    fmt.Println(decrypted)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Now you can build and run it.<span id="chapter13.xhtml#GBS.0068.03"></span> A sample output can be seen in Figure below.</p>
+<p><img src="Images/ch12-2.png" alt="ch12-2" /><span id="chapter13.xhtml#GBS.0068.04"></span><br />
+</p>
+<p><br />
+</p>
+<h3 id="chapter13.xhtml#sigil_toc_id_30">13.3.2 Asymmetric Cryptography</h3>
+<p>The common algorithm to implement Asymmetric Cryptography is RSA which is widely used for secure data transmission. You read a brief description in Wikipedia, <a href="http://en.wikipedia.org/wiki/RSA_(cryptosystem)">http://en.wikipedia.org/wiki/RSA_(cryptosystem)</a> .</p>
+<p>Go has library for RSA implementation. In this section, we try to implement RSA using Go. The following is our scenario:</p>
+<ul>
+<li>Generate<span id="chapter13.xhtml#GBS.0069.01"></span> RSA keys (public and private keys)</li>
+<li>Save these keys to two files (public and private key files)</li>
+<li>For encryption, we use public key file</li>
+<li>For decryption, we use private key file<br />
+</li>
+</ul>
+<p><br />
+</p>
+<p>We store public and private keys into a file in PEM data encoding. We can use pem package from Go, <a href="http://golang.org/pkg/encoding/pem/">http://golang.org/pkg/encoding/pem/</a> .</p>
+<p>To generate public and private keys for RSA, we create<span id="chapter13.xhtml#GBS.0069.02"></span> a function, generateRSAkeys(). After generated keys, we save these keys to files. The following is implementation for generating keys.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func generateRSAkeys(){
+    fmt.Println(&quot;Generating RSA keys....&quot;)
+
+    // change files and their paths
+    privKeyFile := &quot;D:/PE_PRESS/eBook/go_prog/codes/src/cryptodemo/private.rsa.key&quot;
+    pubKeyFile := &quot;D:/PE_PRESS/eBook/go_prog/codes/src/cryptodemo/public.rsa.key&quot;
+
+    // generate RSA keys
+    privateKey, err := rsa.GenerateKey(rand.Reader, 1024)
+    if err != nil {
+        panic(err)
+    }
+
+    // extract private and public keys from RSA keys
+    privASN1 := x509.MarshalPKCS1PrivateKey(privateKey)
+    pubASN1, err := x509.MarshalPKIXPublicKey(&amp;privateKey.PublicKey)
+    if err != nil {
+        panic(err)
+    }
+
+    // store private and public keys into files
+    privBytes := pem.EncodeToMemory(&amp;pem.Block{
+        Type:  &quot;RSA PRIVATE KEY&quot;,
+        Bytes: privASN1,
+    })
+
+    pubBytes := pem.EncodeToMemory(&amp;pem.Block{
+        Type:  &quot;RSA PUBLIC KEY&quot;,
+        Bytes: pubASN1,
+    })
+
+    ioutil.WriteFile(privKeyFile, privBytes, 0644)
+    ioutil.WriteFile(pubKeyFile, pubBytes, 0644)
+    fmt.Println(&quot;Done&quot;)
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>This code will generate<span id="chapter13.xhtml#GBS.0069.05"></span> two files, private.rsa.key and public.rsa.key files.<br />
+</p>
+<p>To encrypt data, we create a function, encrypt_asymmetric_crypto(). Firstly, we load public key. Then, encrypt the message using RSA. The following is code implementation for encrypt_asymmetric_crypto() function.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func encrypt_asymmetric_crypto(message string) string {
+
+    fmt.Println(&quot;--------Demo encrypt encrypt_asymmetric_crypto--------&quot;)
+
+    // public key file
+    pubKeyFile := &quot;D:/PE_PRESS/eBook/go_prog/codes/src/cryptodemo/public.rsa.key&quot;
+
+    // read public key from file
+    pubBytes, err := ioutil.ReadFile(pubKeyFile)
+    if err != nil {
+        panic(err)
+    }
+
+    pubBlock, _ := pem.Decode(pubBytes)
+    if pubBlock == nil {
+        fmt.Println(&quot;Failed to load public key file&quot;)
+        return &quot;&quot;
+    }
+
+    // Decode the RSA public key
+    publicKey, err := x509.ParsePKIXPublicKey(pubBlock.Bytes)
+    if err != nil {
+        fmt.Printf(&quot;bad public key: %s&quot;, err)
+        return &quot;&quot;
+    }
+
+    // encrypt message
+    msg := []byte(message)
+    encryptedmsg, err := rsa.EncryptPKCS1v15(rand.Reader, publicKey.(*rsa.PublicKey), msg)
+    if err != nil {
+        panic(err)
+    }
+
+    return base64.StdEncoding.EncodeToString(encryptedmsg)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>To decrypt data, we create a function, decrypt_asymmetric_crypto(). Firstly, we load private key. Then, decrypt the message using RSA. The following is code implementation for decrypt_asymmetric_crypto() function.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func decrypt_asymmetric_crypto(message string) string {
+
+    fmt.Println(&quot;--------Demo decrypt decrypt_asymmetric_crypto--------&quot;)
+
+    // private key file
+    privKeyFile := &quot;D:/PE_PRESS/eBook/go_prog/codes/src/cryptodemo/private.rsa.key&quot;
+
+    // read private key from file
+    privBytes, err := ioutil.ReadFile(privKeyFile)
+    if err != nil {
+        panic(err)
+    }
+
+    privBlock, _ := pem.Decode(privBytes)
+    if privBlock == nil {
+        fmt.Println(&quot;Failed to load private key file&quot;)
+        return &quot;&quot;
+    }
+
+    // Decode the RSA private key
+    privateKey, err := x509.ParsePKCS1PrivateKey(privBlock.Bytes)
+    if err != nil {
+        fmt.Printf(&quot;bad public key: %s&quot;, err)
+        return &quot;&quot;
+    }
+
+    // encrypt message
+    encrypted,_ := base64.StdEncoding.DecodeString(message)
+    decrypteddmsg, err := rsa.DecryptPKCS1v15(rand.Reader, privateKey, encrypted)
+    if err != nil {
+        panic(err)
+    }
+
+    return string(decrypteddmsg)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save all. Now you can implement our functions to main entry. Write this code.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main(){
+    // asymmetric crypto
+    generateRSAkeys()
+    plainText := &quot;Hello world, go!&quot;
+    fmt.Println(&quot;plainText:&quot;)
+    fmt.Println(plainText)
+    rsa_encrypted := encrypt_asymmetric_crypto(plainText)
+    fmt.Println(&quot;encrypted:&quot;)
+    fmt.Println(rsa_encrypted)
+    rsa_decrypted := decrypt_asymmetric_crypto(rsa_encrypted)
+    fmt.Println(&quot;decrypted:&quot;)
+    fmt.Println(rsa_decrypted)
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Now you can build and run it. A sample output can be seen in Figure below.<br />
+</p>
+<p><img src="Images/ch12-3.png" alt="ch12-3" /><span id="chapter13.xhtml#GBS.0071.03"></span><br />
+</p>
+<p><br />
+</p>
+<p>You can open public.rsa.key to see our RSA public key value.</p>
+<p><img src="Images/ch12-4.png" alt="ch12-4" /><span id="chapter13.xhtml#GBS.0071.04"></span><br />
+</p>
+<p><br />
+</p>
+<p>You can also open private.rsa.key to see our RSA private key value.<br />
+</p>
+<p><img src="Images/ch12-5.png" alt="ch12-5" /><span id="chapter13.xhtml#GBS.0072.01"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter13.xhtml#GBS.0072.02"></span>
+</div>
+<p><span id="chapter14.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter14.xhtml#GBS.0073.01"></span>
+</div>
+<h1>14. Database Programming</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains how to build database application using Go.</p>
+<h2 id="chapter14.xhtml#heading_id_3">14.1 Database for Go</h2>
+<p>Go can communicate with database server through database driver. Go provides generic interfaces for database drive on <a href="http://golang.org/pkg/database/">http://golang.org/pkg/database/</a> . We must install database driver and Go database package before we start to develop database application.</p>
+<div style="display:none;">
+<span id="chapter14.xhtml#GBS.0073.02"></span>
+</div>
+<p>In this chapter, I only focus on MySQL scenario.<br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter14.xhtml#heading_id_7">14.2 MySQL Driver for Go</h2>
+<p>We use Go-MySQL-Driver for database driver. Further information about this driver, please visit on <a href="https://github.com/go-sql-driver/mysql">https://github.com/go-sql-driver/mysql</a> .</p>
+<p>To install Go-MySQL-Driver, you can try to write this command in terminal</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go get github.com/go-sql-driver/mysql</code></pre>
+</div>
+<p><br />
+</p>
+<p><img src="Images/ch14-1.png" alt="ch14-1" /><span id="chapter14.xhtml#GBS.0073.03"></span><br />
+</p>
+<p>After finished, we can do testing.<br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter14.xhtml#sigil_toc_id_31">14.3 Testing Connection</h2>
+<p>In this section, we try to connect MySQL database. Firstly, we can create a new project, called mysqldemo.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir mysqldemo
+$ cd mysqldemo</code></pre>
+</div>
+<p><br />
+</p>
+<p>Create a file, <strong>main.go</strong>. Firstly, we import our Go packages for the demo. Write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;database/sql&quot;
+    _ &quot;github.com/go-sql-driver/mysql&quot;
+)</code></pre>
+</div>
+<p><br />
+</p>
+<p>Firstly, we can start to create simple Go application to connect to mysql database. Write this code</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main(){
+    testConnection()
+}
+
+func testConnection(){
+    // change database user and password
+    db, err := sql.Open(&quot;mysql&quot;,string(&quot;user:password@tcp(127.0.0.1:3306)/researchdb&quot;))
+    if err != nil {
+        panic(err)
+    }
+    err = db.Ping()  // test connection
+    if err != nil {
+        panic(err.Error())
+    }
+    fmt.Println(&quot;connected&quot;)
+    defer db.Close()
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>change host, user, and password based on your mysql database configuration and authentication.<br />
+</p>
+<p>Save all.</p>
+<p>Now you can test to build and run the program.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ go build
+$ go run main.go</code></pre>
+</div>
+<p><br />
+</p>
+<p>A sample output can be seen in Figure<span id="chapter14.xhtml#GBS.0074.02"></span> below.</p>
+<p><img src="Images/ch14-2.png" alt="ch14-2" /><span id="chapter14.xhtml#GBS.0074.03"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter14.xhtml#sigil_toc_id_32">14.4 Querying</h2>
+<p>In this section, we try to insert data into a table. The following is our table scheme on MySQL.</p>
+<p><img src="Images/ch14-3.png" alt="ch14-3" /><span id="chapter14.xhtml#GBS.0074.04"></span><br />
+</p>
+<p><br />
+</p>
+<p>Here is sample code to insert data into mysql database using Go.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>func main(){
+    insertData()
+
+}
+
+func insertData(){
+
+    db, err := sql.Open(&quot;mysql&quot;,string(&quot;researcher:researcher@tcp(127.0.0.1:3306)/researchdb&quot;))
+    if err != nil {
+        panic(err)
+    }
+    err = db.Ping()  // test connection
+    if err != nil {
+        panic(err.Error())
+    }
+    fmt.Println(&quot;connected&quot;)
+
+    // prepare development
+    stmt, err := db.Prepare(&quot;INSERT INTO sensordevice(deviceid,temperature,humidity,light_intensity,pressure) VALUES(?,?,?,?,?)&quot;)
+    if err != nil {
+        panic(err)
+    }
+    defer stmt.Close()
+    fmt.Println(&quot;inserting data...&quot;)
+    for i := 0; i &lt; 10; i++ {
+        _, err = stmt.Exec(2,0.2*float64(i),0.6*float64(i),0.5*float64(i),0.3*float64(i))
+        if err != nil {
+            panic(err)
+        }
+    }
+    fmt.Println(&quot;done&quot;)
+    defer db.Close()
+
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>After finished, we can do testing.</p>
+<p><img src="Images/ch14-4.png" alt="ch14-4" /><span id="chapter14.xhtml#GBS.0075.02"></span><br />
+</p>
+<p><br />
+</p>
+<p>You can verify this data into your table.</p>
+<p><img src="Images/ch14-5.png" alt="ch14-5" /><span id="chapter14.xhtml#GBS.0075.03"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter14.xhtml#GBS.0075.04"></span>
+</div>
+<p><span id="chapter15.xhtml"></span></p>
+<div style="display:none;">
+<span id="chapter15.xhtml#GBS.0076.01"></span>
+</div>
+<h1>15. Socket Programming</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>This chapter explains how to create socket application using Go.</p>
+<h2 id="chapter15.xhtml#heading_id_3">15.1 Socket Module</h2>
+<p>We can create application based on socket stack using net package. You can find it for further information on <a href="http://golang.org/pkg/net/">http://golang.org/pkg/net/</a>. I recommend you to read some books or websites about the concept of socket.</p>
+<h2 id="chapter15.xhtml#heading_id_4">15.2 Hello World</h2>
+<p>To get started, we create<span id="chapter15.xhtml#GBS.0076.02"></span> a simple application to get a list of IP Address in local computer. We can use net package and call <span class="sgc-12">Interfaces()</span> to get a list of network interfaces in our local computer. Each network interface provides information about IP address.</p>
+<p>In this section, we try to get local IP Address. Firstly, we can create a new project, called netdemo.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir netdemo
+$ cd netdemo</code></pre>
+</div>
+<p><br />
+</p>
+<p>Create<span id="chapter15.xhtml#GBS.0076.03"></span> a file, <strong>main.go</strong>. Then, write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;net&quot;
+)
+
+func main(){
+    ifaces, err := net.Interfaces()
+    if err!=nil {
+        panic(err)
+    }
+
+    fmt.Println(&quot;getting local IP Address...&quot;)
+    for _, i := range ifaces {
+        addrs, err := i.Addrs()
+        if err!=nil {
+            panic(err)
+        }
+        for _, addr := range addrs {
+            switch v := addr.(type) {
+                case *net.IPAddr:
+                    if v.String()!=&quot;0.0.0.0&quot;{
+                        fmt.Println(v.String())
+                    }
+            }
+        }
+    }
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>Save this code. Try to build and run it.</p>
+<p>The following is a sample program output which runs on Windows:</p>
+<p><img src="Images/ch15-1.png" alt="ch15-1" /><span id="chapter15.xhtml#GBS.0077.01"></span><br />
+</p>
+<p><br />
+</p>
+<h2 id="chapter15.xhtml#heading_id_14">15.3 Client/Server Socket</h2>
+<p>Now we create a client/server socket using Go. We will use net package to build client/server application. For illustration, we create server and client.</p>
+<h3 id="chapter15.xhtml#heading_id_6">15.3.1 Server Socket</h3>
+<p>How to create server socket? It is easy. The following is a simple algorithm how to build server socket</p>
+<ul>
+<li>create server socket</li>
+<li>listen incoming client on the specific<span id="chapter15.xhtml#GBS.0077.02"></span> port</li>
+<li>if client connected, listen incoming data and then disconnect from client</li>
+</ul>
+<p><br />
+</p>
+<p>In this section, we build server app. Firstly, we can create a new project, called netserver.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir netserver
+$ cd netserver</code></pre>
+</div>
+<p><br />
+</p>
+<p>Create a file, <strong>main.go</strong>. Write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;net&quot;
+    &quot;os&quot;
+)
+
+const (
+    SVR_HOST = &quot;localhost&quot;
+    SVR_PORT = &quot;9982&quot;
+    SVR_TYPE = &quot;tcp&quot;
+)
+
+func main() {
+    fmt.Println(&quot;server is running&quot;)
+    svr, err := net.Listen(SVR_TYPE, SVR_HOST+&quot;:&quot;+SVR_PORT)
+    if err != nil {
+        fmt.Println(&quot;Error listening:&quot;, err.Error())
+        os.Exit(1)
+    }
+    defer svr.Close()
+    fmt.Println(&quot;Listening on &quot; + SVR_HOST + &quot;:&quot; + SVR_PORT)
+    fmt.Println(&quot;Waiting client...&quot;)
+
+    for {
+
+        conn, err := svr.Accept()
+        if err != nil {
+            fmt.Println(&quot;Error accepting: &quot;, err.Error())
+            os.Exit(1)
+        }
+        fmt.Println(&quot;client connected&quot;)
+        go handleClient(conn)
+    }
+}
+
+func handleClient(conn net.Conn) {
+
+    buff := make([]byte, 1024)
+    msgLen, err := conn.Read(buff)
+    if err != nil {
+        fmt.Println(&quot;Error reading:&quot;, err.Error())
+    }
+    fmt.Println(&quot;Received: &quot;,string(buff[:msgLen]))
+    conn.Close()
+}</code></pre>
+</div>
+<p><br />
+</p>
+<p>It uses port 9982. You can change it.</p>
+<p><br />
+</p>
+<h3 id="chapter15.xhtml#heading_id_7">15.3.2 Client Socket</h3>
+<p>Client socket is client application that connects to server and then sends/receives data from/to server. We should know about IP address and port from target server. We can call <span class="sgc-12">Dial()</span> to connect to server. Use <span class="sgc-12">Write()</span> for sending data. </p>
+<p>In this section, we build<span id="chapter15.xhtml#GBS.0078.01"></span> client app. Firstly, we can create a new project, called netclient.<br />
+</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>$ mkdir netclient
+$ cd netclient</code></pre>
+</div>
+<p><br />
+</p>
+<p>Create a file, <strong>main.go</strong>. Write this code.</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;net&quot;
+)
+
+const (
+    SVR_HOST = &quot;localhost&quot;
+    SVR_PORT = &quot;9982&quot;
+    SVR_TYPE = &quot;tcp&quot;
+)
+
+func main() {
+    fmt.Println(&quot;client is running&quot;)
+    conn, err := net.Dial(SVR_TYPE, SVR_HOST+&quot;:&quot;+SVR_PORT)
+    if err != nil {
+        panic(err)
+    }
+    fmt.Println(&quot;send data&quot;)
+    _, err = conn.Write([]byte(&quot;message from client&quot;))
+    defer conn.Close()
+}</code></pre>
+</div>
+<p><br />
+</p>
+<h3 id="chapter15.xhtml#heading_id_8">15.3.3 Testing</h3>
+<p>Now we can test our client/server application. Firstly, we run server application and then execute client application.</p>
+<p>Here is sample of program output for server application:</p>
+<p><img src="Images/ch15-2.png" alt="ch15-2" /><span id="chapter15.xhtml#GBS.0078.03"></span><br />
+</p>
+<p>Here is sample of program output for client application:</p>
+<p><img src="Images/ch15-3.png" alt="ch15-3" /><span id="chapter15.xhtml#GBS.0078.04"></span><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="chapter15.xhtml#GBS.0078.05"></span>
+</div>
+<p><span id="sourcode.xhtml"></span></p>
+<div style="display:none;">
+<span id="sourcode.xhtml#GBS.0079.01"></span>
+</div>
+<h1>Source Code</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>You can download source code on <a href="http://www.aguskurniawan.net/book/go_cd.zip">http://www.aguskurniawan.net/book/go_cd.zip</a> .</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="sourcode.xhtml#GBS.0079.02"></span>
+</div>
+<p><span id="contact.xhtml"></span></p>
+<div style="display:none;">
+<span id="contact.xhtml#GBS.0080.01"></span>
+</div>
+<h1>Contact</h1>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>If you have question related to this book, please contact me at aguskur@hotmail.com . My blog: <a href="http://blog.aguskurniawan.net">http://blog.aguskurniawan.net</a><br />
+</p>
+<p><br />
+</p>
+<div style="display:none;">
+<span id="contact.xhtml#GBS.0080.02"></span>
+</div>
