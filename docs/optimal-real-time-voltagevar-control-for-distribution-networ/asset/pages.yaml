@@ -1,0 +1,930 @@
+- pgno: 0
+  md: '# Electrical Power and Energy Systems 153 (2023) 109370
+
+
+    Contents lists available at ScienceDirect
+
+
+    # International Journal of Electrical Power and Energy Systems
+
+
+    journal homepage: www.elsevier.com/locate/jepes
+
+
+    # Optimal real-time Voltage/Var control for distribution network: Drop-based multi-agent
+    deep reinforcement learning
+
+
+    Peishui Li$^{a}$, Jia Shen$^{b}$, Zijun Wu$^{b}$, Minghui Yin$^{a}$, Yanhao Dong$^{b}$,
+    Jing Han$^{a}$
+
+
+    +   $a$ Nanjing University of Science & Technology, No. 200, Xiaoliangwei Street,
+    Nanjing 210094, China
+
+    $b$ Southeast University, No. 2, Siupiao Street, Nanjing 210060, China
+
+
+    # ARTICLE INFO
+
+
+    Keywords:
+
+
+    +   Distributed voltage/var control
+
+    Q-var drop control
+
+    Multi-agent deep reinforcement learning
+
+
+    # ABSTRACT
+
+
+    The photovoltaics (PVs) as clean power generation has been highly penetrated in
+    distribution networks, which motivates the network towards highly complex operation
+    status. In this paper, an optimal real-time Voltage/Var control (ORT-VVC) is proposed
+    to reduce power losses and mitigate fluctuations by regulating the reactive power
+    of the PV inverters. The ORT-VVC proposed using drop-based multi-agent reinforcement
+    learning (DC-MARL) is established. The structure is constructed in distribution
+    network with network partition and the multi-agents. Then, the control model is
+    formulated as a Q-var drop function with parameters, to optimize the control parameters
+    instead of minimizing reactive power output directly, which aims to improve the
+    real-time VVC performance for distribution network. The DC-MARL model is established
+    and numerical simulations are performed on the IEEE 123-bus test system to demonstrate
+    the effectiveness of the proposed method.
+
+
+    # 1. Introduction
+
+
+    The distribution network develops towards a active pattern with increasing penetration
+    of renewable energy sources (RES) [1], which is environment friendly. According
+    to the international energy agency, the grid capacity will increase nearly twice
+    from 2022 to 2027. The penetration of renewable energy like wind and turbine (WT)
+    is increasingly intermittent and uncertain, which leads to frequent voltage fluctuations
+    in distribution network [2]. The Voltage/Var control (VVC) is realized by controlling
+    reactive power output to mitigate voltage fluctuations and reduce power losses
+    of level [3], 4]. As for the control of distributed resources, e.g., PV inverters
+    provide new means for VVC implementation [5], 6].
+
+
+    For the VVC of distributed resources, various methods have been proposed. From
+    the point of view of control method, they fall into three categories: centralized
+    control, local control, and distributed control [7], 8). The centralized control
+    requires a central coordinator and system for information storage, communication,
+    and interaction [9], 10]. However, the distribution network facilities are relatively
+    backward, and the network operator
+
+
+    doesn''t have the benefit of global communication. The required calculation amount
+    is large, it is difficult to realize the optimal real-time control for distribution
+    network especially with the high-penetration of RES [11]. The local control can
+    make decisions based on local information and does not have high requirements
+    for communication in the distribution network. Meanwhile, the local control faces
+    communication delays and data delays [12], 13). It is true that the local control
+    can regulate the voltage within a reasonable range, but without coordination between
+    local agents, the voltage regulation capability of the devices cannot be fully
+    utilized. The distributed control doesn''t achieve a better result in terms of
+    reduction, robustness and scalability enhancement, compared with the centralized
+    methods. The distributed control can be realized by the distributed algorithm,
+    which utilizes the local information and communication to improve the performance
+    of the network.
+
+
+    > * Corresponding author.
+
+
+    E-mail: peishui2021683@qq.com (P. Li)
+
+
+    https://doi.org/10.1016/j.jep.2023.109370
+
+
+    Received 30 November 2022; Revised in form 13 March 2023; Accepted 8 July 2023
+
+    Available online 25 July 2023
+
+
+    0412-0015-X © 2023 Elsevier Ltd. This is an open access under the CC BY-NC-ND
+    license (http://creativecommons.org/licenses/by-nc-nd/4.0).'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Distribution Network
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_1_0.png)
+
+
+    PV and Load historical data
+
+
+    State s,
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_1_1.png)
+
+
+    # Optimal Reactive Power $Q^*$
+
+
+    # Optimized Q-V Droop Control Parameters
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_1_2.png)
+
+
+    Input
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_1_3.png)
+
+
+    Output
+
+
+    Policy model /
+
+
+    Fig. 1. The distributed ORT-VVC scheme.
+
+
+    centralized and distributed control has the ability in global optimum searching,
+    but they deny the real-time response speed according to the computation and communication
+    buffers [16–18]. Model-based control methods often require precise and comprehensive
+    distribution network parameters, which may be difficult to for low voltage distribution
+    network [19,20].
+
+
+    is based on the dynamic characteristic of reactive power and node voltage. In
+    other words, it follows the physical law of power system operation. As for the
+    VVC of the distribution network, the model-based method can be realized with renewable
+    VVC droop control.
+
+
+    The method proposed in this paper is different from the model-based method which
+    has been used in VVC of distribution network and attracts lots of attention [27–21].
+    The reinforcement learning (DRL) is a data-driven method, that is based on the
+    Markov Game. The DRL generator is realized through online training and combines
+    with well-trained neural networks (DNNs). The decisions can be determined in milliseconds.
+    In other words, the DRL can act in real-time with high optimum searching. Thus,
+    the DRL method can optimize the operation of distribution network without variation.
+    In fact, a multi-agent reinforcement learning (MADRL) method is proposed to optimize
+    the static variance $Q$ reactive power for managing the bus loads, which can be
+    decentralized and executed independently. Ref [24]
+
+
+    In this paper, the multi-agent reinforcement learning (MADRL) method is implemented
+    as a model and control. The droop parameters are optimized by the MADRL, realizing
+    the optimal real-time VVC (ORT-VVC) for distribution network. The main contributions
+    are as follows:
+
+
+    +   - An ORT-VVC method is proposed to mitigate voltage fluctuation and reduce
+    power losses. The ORT-VVC is implemented via a model and control. The PAC-DRL
+    method is implemented together with the Q-V droop control, the relationship between
+    voltage and reactive power with the optimum searching and online ability of MADRL
+    for distribution network with high penetration of RES.
+
+    - A novelty penalty function is proposed to improve convergence rate during training.
+    The particular define penalty function is replaced by a linear penalty function
+    which equals 0 when the training time of one episode is finished. With this method,
+    the episode occurs more frequently and the convergence rate will be reduced, to
+
+
+    the algorithm used for voltage control, which the control problem is formulated
+    as a Markov game and the decentralized multi-agent gradient policy (MADPG) algorithm
+    is employed. In Ref [25], a voltage reactive power control algorithm is proposed
+    to control VVC, SVC and energy support system (ESS) coordination with decentralized
+    execution framework. Ref [26] provides a data-driven multi-agent policy and the
+    security-constrained optimal power flow model, in which the constrained DRL training
+    is transformed into nonconstrained problem with a penalty function. In Ref [27],
+    a data-driven reactive voltage control method is proposed with addressing the
+    spatial and temporal characteristics of RES and loads, the data-VVC model is established
+    as a partially observable Markov Game and solved with a modified MADPG algorithm.
+    However, the DRL methods rely on data, and it may have the uncertain scenarios
+    across distribution network operation. The Q-V droop control has high operation
+    stability, which results from that
+
+
+    The reminder of the paper is organized as follows. Section 2 it the ORT-VVC scheme
+    which is implemented in a distributed partition. In section 3, the Q-V droop model
+    and the ORT-VVC model are described. In section 4, the ORT-VVC model is formulated
+    to a DC-DRL problem based on a partially observable Markov process (POMG) and
+    the solution process based on MADPG algorithm. Section 5 gives the case study
+    drawn in section.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'J. Li et al.
+
+
+    International Journal of Electrical Power and Energy 155 (2023) 109370
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_2_0.png)
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_2_1.png)
+
+
+    Fig. 2. The Q-droop model (a)The traditional Q-droop control model; (b) The adjustable
+    Q-droop control model.
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_2_2.png)
+
+
+    Fig. 3. Simplified network.
+
+
+    # 2. Real-time VVC scheme
+
+
+    The paper proposes a ORT-VVC scheme to reduce loss with mitigating voltage fluctuations
+    for distribution network as shown in Fig. 1. The proposed scheme is superior in
+    its real-time response and high global optimization ability, which is integrated
+    in an “off-line training, online execution” process. Moreover, the proposed scheme
+    is applicable to distribution network framework which can be decomposed into several
+    sub-networks of which is ruled by an agent. Each agent can communicate with its
+    adjacent agents and determine strategies for network stability.
+
+
+    With consideration of time, the ORT-VVC scheme is implemented by the hierarchical
+    coordination system to operate the “minutes-level dispatch” strategy and the dynamic
+    load procedure. For the static procedure, each agent collects the information
+    of network topology, resources, device installations, etc., then then optimizes
+    the controlling parameters of the Q-V droop group. For the dynamic procedure,
+    the reactive output is determined based on the real-time operation status.
+
+
+    The scheme is realized via the MADPG method which the multiple agents are based
+    on deep neural network (DNN). Moreover the DNN is trained through the offline
+    training stage, and then employed in the online execution stage to determine the
+    reactive power according to the real-time system constraints. During the procedure,
+    the input includes the PV active power demand, load consumption, voltage within
+    the network and also the load transmitted from its agents. For the executions,
+    the optimized Q-droop control model and the system status variables, such as PV
+    active power and the load, then the output is the reactive power setting.
+
+
+    At the start of the dispatch, such as 15 minutes, the one agent will control the
+    parameters to each PV inverter and there find no more information communication
+    between PVs and
+
+
+    # 3. Q-V droop control based ORT-VVC
+
+
+    # 3.1. Q-V droop model
+
+
+    The Q-droop control models are shown in Fig. 2 Fig(a) represents the proposed
+    adjustable Q-V droop. As shown in Fig. (3)(a), the Q-droop curve is not activated
+    and there exists a dead zone as $[V_l, V_h]$ where the reactive power is only
+    generated when the voltage is beyond the dead zone $[V_l, V_h]$ in the traditional
+    method. Moreover, the controlling parameters are shown in Fig. 2(b), where the
+    Q-slope is set as 1.0, and would not be regulated during the operation period.
+    Thus, a more flexible Q-V droop control method parameters are adjustable while
+    the mathematical model is shown as:
+
+
+    ```
+
+    $Q_{i}^{max} - \alpha_{i}(V_{i} - V_{ref}) \geq Q_{i} \geq Q_{i}^{min}$
+
+    $- \alpha_{i}(V_{i} - V_{ref}) \geq Q_{i}, \quad i \in N^{PV}$
+
+    ```
+
+
+    $\alpha = \alpha_{i,s}$
+
+
+    ```
+
+    $(V_{i})^{2} + (Q_{i})^{2} \leq (x_{i})^{2}, \quad i \in N^{PV}$
+
+    ```
+
+
+    $N^{PV}$ is the set of buses equipped with PV for sub-networks. $V_{i}^{t}$ and
+    $Q_{i}^{t}$ represent the active power, reactive power and capacity of PV at node
+    $i$ at time $t$, respectively. $R_{i}^{max}$ and $Q_{i}^{max}$ are the maximal
+    and minimal reactive power limits, respectively. $V_{i}^{t}$ is the voltage of
+    the PV connecting to node $i$ at time $t$, i.e. the intersection of the Q-V curve
+    and the x-axis, and $V^{opt}$ is the optimal droop point. $R_{i}$ is the sensitivity
+    of voltage to reactive power.
+
+
+    Eq. implements the action rule of reactive power scheme, eq.(2) and the Q-V sensitivity
+    is determined by the number of nodes and the Q-V sensitivity of the system. Then,
+    it can be that the Q-V droop model contains the necessary and information for
+    network operation. In this paper, an adjustable droop parameter to determine the
+    position of the Q-V curve in the distribution network operation status. As shown
+    in Fig. 2(b), multiple droop curves are determined by several candidate $V_{i}^{opt}$
+    collectively constitute the feasible baseline.
+
+
+    3'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'P. Li et al.
+
+
+    International Journal of Electrical Power and Energy Systems 153 (2023) 109370
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_3_0.png)
+
+
+    Fig. 4. The structure of the MADDPG.
+
+
+    # 3.2. ORC-VTC model
+
+
+    The simplified distribution network with PV is shown in Fig. 3, based on which
+    the distribution network model is established. For sub-network ruled by $m$, $B_m$
+    and $M_m$ are utilized to represent the branch and node respectively. For branch
+    $ij$ where $r_{ij}$ and $x_{ij}$ represent the resistance and reactance, $P_{ij}$
+    and $Q_{ij}$ are the active and reactive power flow respectively. $P_i$ and $Q_i$
+    are the active power, reactive power and current respectively for node $i$ where
+    $P_i^m$ and $Q_i^m$ denote the active and reactive power injection of sub-network
+    $m$. $V_i$ indicates the voltage magnitude. The power flow model of the distribution
+    network can be constructed as:
+
+
+    $p_i = -V_i\sum_{j\in\mathcal{N}_i} V_j(r_{ij}\cos\theta_{ij} + x_{ij}\sin\theta_{ij})
+    + Q_i\sum_{j\in\mathcal{N}_i} V_j(x_{ij}\cos\theta_{ij} - r_{ij}\sin\theta_{ij})$$\nq_i
+    = -V_i\sum_{j\in\mathcal{N}_i} V_j(x_{ij}\cos\theta_{ij} - r_{ij}\sin\theta_{ij})
+    - P_i\sum_{j\in\mathcal{N}_i} V_j(r_{ij}\cos\theta_{ij} + x_{ij}\sin\theta_{ij})$
+
+
+    $p_i^m = Re\left(\frac{(V_i - V_m)^*}{Z_{im}^*}\right)\nq_i^m = Im\left(\frac{(V_i
+    - V_m)^*}{Z_{im}^*}\right)$
+
+
+    Where, $N_j \in\mathcal{B}_m$ is the set of nodes connected to node $i$, $\theta_{ij}$
+    is the phase difference between node $i$ and node $j$, $g_{ij}$ and $b_{ij}$ stands
+    for the conductance and susceptance of branch $ij$.
+
+
+    In this paper, the ORC-VTC model is established to reduce power losses via controlling
+    the reactive power of inverters, the penalty for losses is shown as:
+
+
+    $p_{loss}^m = \sum_{i\in\mathcal{N}_m} (V_i - V_m)^2, 0,(5)$
+
+
+    During the normal operation of distribution network, the voltage level should
+    be adjusted within the allowable scope, then the penalty for voltage out of limits
+    is established as:
+
+
+    $q_{loss}^m = \sum_{i\in\mathcal{N}_m} (V_i - V_m)^2, 0,(6)$
+
+
+    With the constraints and droop control model established, the sub-network $m$
+    is shown as,\n$\min \sum_{i\in\mathcal{N}_m} (p_{loss}^m + \lambda q_{loss}^m)^2,(7)$
+
+
+    s.t. (1)-(4),
+
+
+    $p_{ij}^{m,max} = \sqrt{(V_{ij}^m)^2 - (q_{ij}^m)^2}, i\in\mathcal{N}^m\quad(8)$
+
+
+    $q_{ij}^{m,max} = \sqrt{(V_{ij}^m)^2 - (p_{ij}^m)^2},\quad(9)$
+
+
+    Eq. (7) illustrates the objective function which aims to minimize the power losses
+    with a penalty factor for the voltage constraints, meanwhile the penalty factor
+    $\lambda$ is large enough to reduce the possibility of constraint violations.
+    Eq. (8) shows the possible constraints for sub-network $m$ and eq. (9) illustrates
+    the calculation for the minimal and maximal reactive power output of inverter.
+
+
+    # 4. Deep reinforcement learning formulation
+
+
+    # 4.1. Partially observable Markov game formulation
+
+
+    In this paper, the ORC-VTC model can be reformulated into a partially observable
+    Markov Game (POMG), which addresses the priority issues inherent in the Markov
+    decision process [29].
+
+
+    In this formulation, the controller of each sub-network is modeled as an agent
+    that interacts with the environment. Since POMG operates only on an incomplete
+    layer, the underlying state can then be protected by the POMG. The observation
+    space $\mathcal{O}_1, \dots, \mathcal{O}_m$ and action space $\mathcal{A}_1, \dots,
+    \mathcal{A}_m$ are
+
+
+    are contained in a POMG with $m$ agents. Each agent in it acts with action $a_i$,
+    with reward $r_i$ corresponding to the observation $o_i$ after taking the action.
+    After all, the agent receives the reward and observations while it aims to maximize
+    the expected state transition reward.
+
+
+    is determined by the transition function $P(s''|s, a_1, \dots, a_m)$ which gives
+    the probability of the next state occurring based on the current state $s$ and
+    the actions taken. Each agent then receives
+
+
+    the observation and action space are sets of series information which includes
+    $p_{ij}^m, q_{ij}^m$ and $V_{ij}$ in the sub-network'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_4_0.png)\n\ncomposes the observation\
+    \ space. A series of variables as $V_t^\\pi$ which can be controlled within an\
+    \ action space.\n\nIn the reward function, a discount factor $\\gamma$ is employed\
+    \ to balance the current reward and future return. Then, the expected reward during\
+    \ the scheduling period is shown as\n\n```\n$r_t = \\sum_{i=0}^{\\infty} \\gamma^i\
+    \ (r_{t+i} + \\eta_{t+i})$\n```\n\n# ## 4.2. Violence penalty reward function\n\
+    \nDuring the procedure, it may occur in one episode, a violence penalty reward\
+    \ function is proposed to improve convergence and reduce solution failures. To\
+    \ be specific, a training episode may be terminated for the operation constraint\
+    \ is not met, thus the convergence process is not finished. With the aim of solving\
+    \ this problem, a violence penalty reward function is shown and proposed as follows:\n\
+    \n```\n$r_t = -f_t + \\lambda R_t$\n```\n\n```\n$$\\begin{cases} t_t \\in [0,\
+    \ t_{max}] \\ R_t \\in [0, R_{max}] \\ f_t = \\sum_{i=0}^{t_{max}} \\gamma^i (f_{t+i}\
+    \ + \\eta_{t+i}) \\end{cases}$\n```\n\n$r_t$ shows the reward function for agent\
+    \ $m$, $f_t$ is a positive constant and its value is much larger than the reward\
+    \ obtained in (12). $t_t$ shows the show time and duration of training before\
+    \ the occurrence of termination, $t_{max}$ denotes the slot for one episode. With\
+    \ this violence design, the default penalty constant is defined by a linear function.\
+    \ The reward is defined as a function of the training time for episode lasting,\
+    \ and 0 when the episode is finished. It should be noted that $t_{max}$ equals\
+    \ to 0 when the termination does not occur, thus the value of reward would not\
+    \ be fixed. With this proposed penalty function, the total reward of agent m is\
+    \ shown as\n\n```\n$R_m = r_t$\n```\n\n# ## 4.3. MADDPG algorithm\n\nIn this paper,\
+    \ the MADDPG model is solved via the MADDPG structure shown in Fig. 4, as each\
+    \ agent is constructed with an actor network and a critic network. Meanwhile in\
+    \ both actor and critic network, there are two DNNs with the same structure and\
+    \ parameters, and these two DNNs are\n\nare named as evaluation network and target\
+    \ network respectively. With combination of state-value function and the policy\
+    \ algorithm, the actor network determines the optimal policy under certain state\
+    \ via regulating the parameters of DNN. The critic evaluates each action from\
+    \ the actor network via the communication of temporal difference\n\nFor the MADDPG\
+    \ policy, there are M agents whose policy is denoted as $\\pi = (\\pi_1, \\dots,\
+    \ \\pi_M)$ while the parameters are defined by $\\theta = (\\theta_1, \\dots,\
+    \ \\theta_M)$. During the training of the DNN, the gradient can be expressed as:\n\
+    \n```\n$\\nabla_{\\theta_i} J(\\\theta) = \\mathbb{E} [\\nabla_{\\theta_i} \\\
+    log \\pi_i(a_i|s_i) Q_i(s, a_1, \\dots, a_M)]$\n```\n\nwhere, $a = (a_1, \\dots,\
+    \ a_M)$, $Q_i(s, a)$ is the state-value function whose input is the action and\
+    \ the environment information s. Moreover, deterministic policies are optimized\
+    \ to speed up the convergence and improve the efficiency, then the gradient of\
+    \ the agent m can be described as\n\n```\n$L(\\\theta) = \\mathbb{E} [(Q(s, a)\
+    \ - y)^2]$\n```\n\nwhere, $\\mu$ represents the policy function with parameters\
+    \ $\\theta^-$, the experience replay buffer stores the tuples $(s, a, r)$, $r\
+    \ = (R_1, \\dots, R_M)$. And the samples of the agents will be trained by experience\
+    \ replay buffer. The loss function of critic network during the procedure as an\
+    \ agent interacts with the environment is\n\n```\n$y = R + \\gamma Q(s', \\mu_1(s'),\
+    \ \\dots, \\mu_M(s'))$\n```\n\nwhere, $\\mu$ is defined as the set of target policies,\
+    \ $\\mu_{in}$ shows the target policies with parameters $\\theta_{in}$ which indicate\
+    \ the next target state-action-value function. With procedure of training, the\
+    \ parameters of critic network are updated as. For the target network, the parameters\
+    \ are updated according to the evaluation network.\n\nBased on the MADDPG, the\
+    \ chart of training for one episode is shown in Fig. 5, and the detailed procedure\
+    \ is conducted as: The initialization is finished with the parameters of evaluation\
+    \ network and actor network, meanwhile the experience replay buffer and the action\
+    \ process with Gaussian noise $G_i(0;0.38, \\epsilon)$ are also initialized. Subsequently,\
+    \ the interaction of agent with the environment is conducted with the AC power\
+    \ flow model. The PV reactive output is obtained via the Q-V drop control with\
+    \ adjustable"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '11 et al.
+
+
+    International Journal of Electrical Power and Energy Systems 153 (2023) 109370
+
+
+    # Table 1
+
+    PV capacity and placement locations.
+
+
+    | PV Capacity | Placement Location |
+
+    |---|---|
+
+    | 300kV | 11,16,21,26,30,35,39,83,96 |
+
+    | 400kV | 44,69,27 |
+
+    | 500kV | 50,55,99,100 |
+
+    | 600kV | 104,109 |
+
+    | 800kV | 54,114 |
+
+
+    actor network and evaluation network updated. If the experience replay buffer
+    is used, then a prioritized experience method will be employed to solve this problem.
+    The aforementioned procedure will be repeated until the training of this episode.
+
+
+    # 5. Case study
+
+
+    # 5.1. Test system description
+
+
+    intercept of droop, when the intercept is the action, but it will determine the
+    reactive power output utilized in the power flow calculation directly as (1).
+    In each step, for timestep, the action with adding Gaussian noise is equal to
+    the AC power flow model, thus to obtain the next system state and reward. Meanwhile,
+    the stack transition (s,m,i,r) is added to the experience replay buffer. Finally,
+    each agent will receive the observation and reward, then
+
+
+    With the aim of verifying the effectiveness of proposed DC-MADRL model in VCC
+    case studies are performed on the PyCharm where the power flow is solved via the
+    PandaPower [30]. The IEEE 123 distributed network is employed as the test system
+    with the based load consumption data from [15]. Moreover, PPVs are installed to
+    modify the test network and the corresponding placement information is shown as
+    Table 1. in accordance with the
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_5_0.png)
+
+
+    Fig. 6. IEEE 123-bus network.
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_5_1.png)
+
+
+    Fig. 7. PV generation and load consumption.
+
+
+    6'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'P. Li et al.
+
+
+    International Journal of Electrical Power and Energy Systems 153 (2023) 109370
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_6_0.png)
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_6_1.png)
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_6_2.png)
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_6_3.png)
+
+
+    Table 2
+
+    Comparison results of four VVC methods.
+
+
+    | | QVDVC | MADRL | DC | DC-MADRL |
+
+    |---|---|---|---|--|
+
+    | Average voltage (p.u.) | 0.9858 | 0.9925 | 0.9938 | |
+
+    | Maximum voltage higher | 0 | 0.0031 | 0.0001 | 0.0001 |
+
+    | Percentage of voltage higher | 0.407 | 0 | | |
+
+    | Minimum voltage lower than 0.95 (p.u.) | 0.0223 | 0.0 | 0 | 0 |
+
+    | Percentage of voltage lower than 0.95p(p.u.) | 16.26 | 2.44 | 0 | 0 |
+
+    | Average power losses (MW) | 0.0877 | 0.0691 | 0.0462 | 0.0658 |
+
+
+    distributed OR-VVC scheme, the network distribution is divided into 4 sub-works
+    with references to [11]. Based on the construction of electrical distance, the
+    network partition is realized by the affinity clustering algorithm. As the network
+    partition is not explained in the details here, the topology of the test system
+    with network partition is shown in Fig. 6.
+
+
+    With the aim of training the established model adequately, the electricity consumption
+    data in Portugal is used to construct the training and testing sets. As the training,
+    the active and reactive power output to the base value the corresponding factor
+    from the training data sets the maximal factor is set as 1. The PV active power
+    for the training and testing data sets are also referred from [51] which utilizes
+    the data from Belgian operator Elia Group. With this basis, the power
+
+
+    7'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# a
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_7_0.png)
+
+
+    # b
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_7_1.png)
+
+
+    # c
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_7_2.png)
+
+
+    Fig. 12. The voltage distribution of IEEE 123 system for 24 h (a) Non-regulation
+    (b) TVQC (c) MADRL (d) DC-SADRL (e) DC-MADRL.
+
+
+    capacity shown in Table 1, the PV active power output for each specific scenario
+    can be obtained. Thus, the training and testing data sets for the load and PV
+    active power can be obtained, as in Fig. 7.
+
+
+    offline training performance of DC-MADRL between proposed punishment function
+    and deflate punishment constant is conducted. In the comparison, all the settings
+    in model, data and algorithm are the same for each expected to be punished, the
+    punishment is set as a linear function in the proposed DC-MADRL while the punishment
+    is set to a negative constant -f as the comparative method. For these two methods,
+    the offline trainings are conducted on 2500 episodes. Then, the comparison results
+    are shown in Fig. 8.
+
+
+    # 5.2. DC-MADRL offline training performance
+
+
+    With the aim of verifying the effectiveness and validity of the proposed punishment
+    reward function, the comparison for the'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'P. Li et al.
+
+
+    International Journal of Electrical Power and Energy Systems 153 (2023) 109370
+
+
+    # d
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_8_0.png)
+
+
+    # e
+
+
+    ![](img/12fb6e6f1bc1f8a1a0a53bb6280c63a7_8_1.png)
+
+
+    Fig. 12. (continued).
+
+
+    # Table 3
+
+
+    Statistical data for voltage regulation and power losses.
+
+
+    | Difference between the maximum and minimum voltage p.u. | Power losses (MW)
+    | TVQDC | MADRL | DC-SASDR | DC-MADRL |
+
+    |---|---|---|---|---|---|n| 0.1718 | 0.1085 | 0.1145 | 0.0709 | 0.0431 | 0.0477
+    0.00984 0.00753 0.02826
+
+
+    # 5.3. DC-MADRL online test performance
+
+
+    With utilizing MADRL, the agents share the critic network and select the actions
+    via their actor network during the training process, and during the execution,
+    each agent determines the optimal action based on the local observation and trained
+    actor network. After the training, the DC-MADRL performance is verified through
+    the test data. The test set is constructed with the random sample of 120/480 scenarios,
+    then the remaining 360 scenarios are used for training. The online decision speed
+    of the proposed DC-MADRL is 19.63ms, which implies that it meets the real-time
+    VCC requirement.
+
+
+    Aiming at verifying the effectiveness of the proposed method compared with the
+    traditional Q-V drop control (QVDTC) (28), the the drop control single-agent deep
+    reinforcement learning (DC-SAD) is constructed. The TVQDC has a fixed drop curve
+    and parameters, which is not adaptable to changing environments. The proposed
+    method is fully data-driven, so it is easier to compare with the data-driven method.
+    The DC-SAD is used to verify the accuracy of proposed distributed VCC scheme,
+    as the only difference between DC-SAD and DC is distributed method. Then, the
+    comparison results of the online test performance for these four methods are shown
+    in Table 2.
+
+
+    As seen in Fig. 8, the proposeded reinforcement has a better convergence performance
+    than employing the different punishment function. During the training process
+    for the proposed linear punishment function, the convergence rate is improved
+    by 42% compared to the quadratic function. With the linear punishment function,
+    the training process of DC-MADRL is shown in Fig. 9. As seen in Fig. 9, the value
+    of the distributed network is regulated within the allowable scope as (0.95, 1.03).
+    However, the power losses also converge to 0.008 after 2360 episodes training.
+    Therefore, as shown in Fig. 8 and Fig. 9, the proposed method has converged with
+    the proposed linear punishment function.
+
+
+    From Table 2, it can be seen that comparison of model based TVQDC and data-driven
+    methods, the power losses are reduced more than the data-driven methods, which
+    results from the TVQDC is
+
+
+    9'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'P. Li et al.
+
+
+    International Journal of Power and Energy Systems 155 (2023) 109370
+
+
+    DC-MADRAL has the average voltage level to 1.0pu than TDVC, which can also give
+    much less losses than the latter, which includes the joint of data-driven model
+    and has better ability in loss reduction. For the DC-SAD and DC-MADRAL, the average
+    and power losses are nearly the same for both methods, which have the high accuracy
+    of distributed optimization.
+
+
+    that proposed method can regulate voltage in time and effectively reduce power
+    losses for the distribution network.
+
+
+    # Declaring of Interest
+
+
+    The authors declare the financial interests/personal relationships which may be
+    considered as competing interests: The authors declare that the research was conducted
+    in the absence of any commercial or financial relationships that could be construed
+    as a conflict of interest.
+
+
+    # 5.4. VVC performance over a time period
+
+
+    # Data availability
+
+
+    Data will be made on request
+
+
+    With considerations of inverter PV active power and load demand, the 24 scenario
+    is tested to verify the performance of VVC in a more visible way. The 24 scenario
+    is evaluated by using the data from day test set, reality the PV active power
+    and load demand are shown in Fig. 10. Moreover, the reactive load has the same
+    factor as the active load, thus it can be ignored in this study.
+
+
+    # References
+
+
+    +   [1] Li Y, Sun J, et al. Distribution active network and reactive power coordinated
+    dispatching method based on discrete monkey learning. Int J Elect Power Syst 178
+    (2021) 107893.
+
+
+    +   [2] Zhang C, Xu Y, et al. A three-stage inverter-based voltage regulation
+    for VVC control in distribution systems. IEEE Trans Power Syst 37 (2022) 897-905.
+
+
+    +   [3] Wang M, Rahimov R, et al Two-level centralized and local control in distribution
+    systems for mitigating inverter harmonics. IEEE Trans Power Syst 36 (2022) 540-549.
+
+
+    Then comparison of TDVC, DC-SAD and DC-MADRAL, the effectiveness of voltage regulation
+    and power losses are both reduced as shown in Fig. 12 and Table 3 can be used
+
+
+    It can be seen that VVC can regulate the voltage with some error (0.95). However,
+    the MADRL, DC-SAD and DC-MADRAL provide more smooth distribution than TDVC, thus
+    it is proved that the three ones are global methods better than local control.
+    The global method, while local control only makes use of the local information,
+    the DC-SAD and DC-MADRAL provide higher efficiency than TDVC in voltage regulation
+    and power losses.
+
+
+    +   [4] Li P, Wu C, et al. Multi-objective adaptive robust voltage regulation
+    in distribution systems with high PV penetration. IEEE Trans Smart Clean Grid
+    11 (2023) 2131-2144-
+
+
+    +   [5] Wang J, et al. A deep reinforcement learning-based VVC for power grid
+    connections of large-scale farm area: IEEE Access 10 (2022) 85669-85678.
+
+
+    +   [6] Zhang Y, et al. Deep reinforcement learning-based system based on multi-agent
+    reinforcement learning, arXiv: arXiv:2006.05466.
+
+
+    +   [7] Zhou J, Li H, et al. Multi-coordinated Voltage/Var control for non-renewable
+    integrated distribution systems. IEEE Trans Power Syst 77 (2023) 3511-3520.
+
+
+    +   [8] Wang J, Li H, et al. A coordinated voltage/var control method for distribution
+    systems with high PV. IEEE Trans Smart Grid 14 (2023) 7180-7191.
+
+
+    +   [9] Feng G, Li J, et al. Decentralized control-based UVC method in distribution
+    networks. IEEE Trans Smart Grid 11 (2023) 6865-6876.
+
+
+    +   [10] Qua J, J S, et al. Real-time voltage/var control in active distribution
+    networks with data-driven method. IEEE Trans Power Syst 37 (2023) 2468-2479.
+
+
+    Then comparison of TDVC, DC-SAD and DC-MADRAL, the effectiveness of voltage regulation
+    and power losses are both reduced as shown in Fig. 12 and Table 3 can be used
+
+
+    It can be seen that VVC can regulate the voltage with some error (0.95). However,
+    the MADRL, DC-SAD and DC-MADRAL provide more smooth distribution than TDVC, thus
+    it is proved that the three ones are global methods better than local control.
+    The global method, while local control only makes use of the local information,
+    the DC-SAD and DC-MADRAL provide higher efficiency than TDVC in voltage regulation
+    and power losses.
+
+
+    Then, it can be concluded that DC-SAD and DC-MADRAL has better voltage regulation
+    ability than MADRL, and that based on data-driven model, when the PV active power
+    fluctuates, the integration of data and model will enhance the stability of VVC.
+    Moreover, as shown in Fig. 10, the methods also produce lower power losses than
+    the others, which shows the advantage of proposed method in power loss reduction.
+    Although the DC-SAD and DC-MADRAL have similar performance in voltage regulation
+    and power losses, the latter is better for its advantages in providing better
+    stability, lower requirement in data and calculation resources, and high efficiency
+    in large scale problem solving.
+
+
+    # 6 Conclusion
+
+
+    This paper proposes a DC-MADRAL for real-time VVC control of distribution networks.
+    The UVC uses certain rules to reduce power losses and voltage fluctuation, in
+    which PV inverters are connected in a distributed framework. Along with a Q-driven
+    control model with variable parameters, the partially observed Markov decision
+    model is employed to collect optimal strategy. Through various methods, the proposed
+    approach combines model and data driven together for enhancing stability in the
+    power system network.
+
+
+    variations. Based on the 123-bus system
+
+
+    10'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '+   [24] Wang, S., Duan, J., Shi, et al. A data-driven multi-agent autonomous
+    voltage control framework using deep reinforcement learning. IEEE Trans Power
+    System 2020:35
+
+
+    +   [25] Cao, D., Zhao, J., Hu, W., et al. Data-driven multiagent deep reinforcement
+    learning for distribution system decentralized voltage control with high penetration
+    of pvs. IEEE Trans Smart Grid 2021;12(6):5420-5430.
+
+
+    +   [26] Yan, Z., Xu, Y. et al. A data-driven method for fast solution of security-constrained
+    optimal power flow. IEEE Trans Power Syst 2022;37(6):4365-74.
+
+
+    +   [27] H. Li, J. Li, et al. Multi-agent reinforcement learning for inverter-based-Var
+    control via multi-agent deep reinforcement learning. IEEE Trans Smart Grid 2021;12(6):5420-33.
+
+
+    +   [28] Zhang, C., Chen, Y., et al. Hierarchically-coordinated Voltage-V/Var
+    control of distribution networks with PV inverters. IEEE Trans Smart Grid 2020;11(4):2942-53.
+
+
+    +   [29] Qin, Z., Liu, D., Hu, H., et al. Privacy preserving load control of residential
+    microgrid networks using reinforcement learning. IEEE Trans Smart Grid 2021;12(6):5420-33.
+
+
+    +   [30] Thumer, I., Schneider, A., Schuster, F, et al. Pandower–An open source
+    tool for modeling and automation of electric power systems. IEEE Trans Power Syst
+    2018;33(6):6510-21.
+
+
+    +   [31] Wang, J., Xu, W., Gu, Y, et al. Multi-agent reinforcement learning for
+    active voltage control in power distribution networks. Neural Inform Process Syst
+    2021;34:3271-84.'
+  merge: -1
+  img_proc: true
