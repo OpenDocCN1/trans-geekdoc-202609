@@ -1,0 +1,66 @@
+
+# Acknowledgments
+
+This work was funded by the Mark and Lisa Swartz AI/ML Initiative, award T320GO0763 and T320GA4273 from the Wellcome Trust, General Medical Sciences, and the MIT. Additional support was provided by the Ragon Institute of MGH and Harvard (G.D.G.). G.D.G. is also supported by the Bill and Melinda Foundation, a Burroughs Career Award for Medical Scientists and Howard Hughes Fellowship. The completeness is the responsibility of the authors and does not necessarily represent the views of the National General Sciences or the National Institutes of Health.
+
+# Author contributions
+
+Conceptualization: J.W.N., A.N.S., G.D.G., and R.B.; Software; Formal analysis: J.W.N. and A.N.S.; Investigation: A.N.S., C.C.T., R.-M., and E.G.; Writing-original draft: J.W.N., A.N.S., N.C.T., R.-M., E.G., and R.B.; Writing-revision and draft: G.D.G. and R.B.; Funding: J.W.N., A.N.S., and R.B.
+
+# Competing interests
+
+The authors declare no competing interests.
+
+# Additional information
+
+Extended data is available for this paper at https://doi.org/10.1038/s42526-024-0097-y.
+
+# Supplementary information
+
+Online version contains supplementary material available at https://doi.org/10.1038/s42526-024-0097-y.
+
+Correspondence and requests for materials should be addressed to Gaurav D. G. or Regina Bazar.
+
+Peer review information Nature Intelligence thanks Yi X. Xiong, and the other, reviewer(s) for their contribution to the review of this work.
+
+Reprints and permissions are available at http://www.nature.com.
+
+Publisher's name remains neutral with regard to editorial decisions and publication jurisdictions. Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, adaptation, distribution, and redistribution in any medium or format, as long as you give appropriate credit to the author(s) and source, provide a link to the license, and indicate if changes were made. The images or other party material in this article are included in the article's Creative Commons license, unless otherwise indicated in the text. If material is not included, you may need to obtain permission directly from the holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0.
+
+© The authors 2025
+
+38. Nielsen, L. M., Kersten, M. J., Pals, S. T., Benjamin, F. J. and Bergen, I. J. Epstein-Barr virus-posttransplant lymphoproliferative disease after organ transplantation: pathogenesis, manifestations, and diagnosis. Transplant, 24.
+
+39. Bjørneve, K. et al. Longitudinal analysis reveals high frequency of Epstein-Barr virus associated with multiple sclerosis. Science, 375, 296–306 (2022).
+
+40. Bjørneve, K., Moss, C., Cohen, J. I. and A. Scher, Epstein-Barr virus as the cause of triggering multiple sclerosis. Nature Med., 19, 160–171 (2023).
+
+41. Smart, M. K. et al. Epstein-Barr virus serology, and impact of VCA IgG: High titer across a healthy population. Nature J., 81, 201 (2021).
+
+42. Bashiro, A. A. et al. A HLA presentation inhibits peptide receptor and T cell control. Nat. Acad. Sci. USA. 117, 28532–28534 (2020).
+
+43. Thindborg, E. et al. Tapasin shapes immunomodulatory effects and binding specificity of MHC-peptide complex class I. Eur J. Immunol. 38, 364–369 (2018).
+
+44. Montenegro, A. E. et al. TCR-NEB2 enables efficient control of TCR-peptide binding by using TCR and T cell blockade. Science 368, eade3044 (2020).
+
+45. Gagev, D. V. et al. VDB2019 database: extended network analysis and T-cell receptor motif prediction. Nucleic Acids Res. 48, D10572 (2020).
+
+46. Narahashi, Y. E et al. T cell reactivity to SARS-CoV-2 Omicron variant is preserved in most but not all individuals. Cell 180, 105 (2022).
+
+47. White, J. J., Phillips, J., Wang, J., and Friedman, N. MCAS-TCR: T cell reactivity using a curated catalogue of peptide-T cell receptors. Biology 33, 2924–2939 (2019).
+
+48. Bruno, P. M. et al. High-throughput, targeted MHC cell immunodominance using a functional genetics screening strategy. Nature Communications, 11, 5643 (2020).
+
+Hauser, M., Steiner, G., & Söding, J. MMseqs software for clustering and search of large protein sequences. Bioinformatics, 38, 1232–1236 (2020).
+
+Hof, I. et al. MHCpan, for MHC class I binding prediction beyond humans. Immunology, 61, 1–13 (2003).
+
+Lin, Z. et al. Evolution-scale prediction of T cell-receptor protein structure and function. Science, 379, 11559–11563 (2023).
+
+Sochardt, S. & Söding, J. Long-term memory retrieval. Nature, 975, 1765–1770 (2019).
+
+Bennett, R., White, P. & Adams, F. In Flocs method for small-peptide binding prediction. PLoS One, 12, e0247 (2017).
+
+Barlas, K., Chatterjee, O., Gatos, D. & Zparlov, G. Chlorine residues. Studies on binding of MHC-amino acids and peptide cleavage. Int. J. Pep. Rep., 37, 513–532 (2021).
+
+Nature Intelligence | Volume 7 | 2024 | 235–243

@@ -1,0 +1,4140 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # nature machine intelligence
+
+
+    Article
+
+
+    https://doi.org/10.1038/s41586-024-00971-y
+
+
+    # Deep learning enhances the prediction of HLA class I-presented CD8+ T cell epitopes
+    in foreign pathogens
+
+
+    Received: 9 July 2024
+
+    Accepted: 10 December 2024
+
+    Published online: 28 January 2025
+
+
+    Jeremy Wolwenden¹2,6, Anusha Nathan¹3,4, Nitan Shalan¹,2, Charles R. Crain³,
+
+    Roda Tano-Menka², Benjamin Goldberg³, Emma Richards³,³
+
+    Gaurav D. Gaiha⁴,5 & Regina Barzilay¹,2
+
+
+    +   - Check for updates
+
+
+    Accurate silico detection of CD8+ T cell epitopes would greatly enhance cell-based
+    vaccine development, but current prediction models are not reliably successful.
+    Here, motivated by recent successes using machine learning to complex biology,
+    we curated a dataset of 61,237 unique leukocyte antigen class I (HLA-1) ligands
+    and developed MUNIS, a deep learning model that identifies peptides presented
+    by HLA-1 ligands MUNIS showed improved performance over existing models in predicting
+    peptide presentation and CD8+ T epitope immunodominance hierarchies. Moreover,
+    application of MUNIS to proteins from Epstein–Barr virus led to successful identification
+    of both known and novel HLA-1 epitopes which were experimentally validated by
+    vitro HLA-peptide stability and T immunogenicity assays. MUNIS performs comparably
+    to an experimental assay in immun prediction, suggesting that deep learning can
+    reduce experimental burden and accelerate detection of CD8+ T cell epitopes for
+    rapid vaccine development.
+
+
+    proteomes for range of HLA-I alleles would greatly create CD8+ T cell vaccine
+    development.
+
+
+    Although numerous methods exist to predict CD8+ T cell epitopes, their accuracy
+    varies across HLA-I alleles. Moreover, to understand whether these models can
+    identify immunogenic epitopes the lack of unbiased datasets is a major bottleneck.
+    Frequently predicted peptides are of uncertain affinity or selected binding binders⁶⁷
+    Several tools can then characterize the characteristics of immunogenic peptides⁸⁹¹⁰
+    they are, given the remarkable successes of deep learning to improve model generalization
+
+
+    ¹Department of Engineering and Computer Science, Massachusetts Institute of Technology,
+    Cambridge, MA, USA.¹⁶ Massachusetts Institute of Technology, Cambridge, MA, USA³
+    Institute of Mass, MIT and Harvard, Cambridge, MA.³⁹Program in Health and Technologies,
+    Harvard Medical School and Massachusetts Institute of Technology, Boston, MA,
+    USA.¹⁰ These were collected jointly- Jeremy Wolwenden, Anusha Nathan.¹ e-mail:
+    gpaiha@mgh.harvard.edu regina@csail.mit.edu
+
+
+    Nature Intelligence | Volume 7 | February 2025 | 232–243
+
+
+    232'
+  - '[PAGE 1]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41586-024-00971-y
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_1.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_2.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_3.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_4.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_5.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_6.png)
+
+
+    Fig. 1: Characteristics of the deep learning model and the training and evaluation
+    datasets for HLA-peptide prediction. Training and evaluation were created by combining
+    data from several datasets as well as a recent review of IEDB. Elited ligand data
+    were used as positives and random samples derived from SwProt* served as negatives.
+    For evaluation, we used peptides identified in MHC-expressing immortal cell lines.
+    To evaluate immunogenicity, peptides$^{24}$ that measured the immunogenicity of
+    influenza epitopes identified via mass spectrometry were used. Epitope length
+    of the HLA-binders (A, B and C) and each part of the peptide was recorded. All
+    peptides in the dataset with a frequency <1% are defined as others. The binding
+    motif serves as the input amino acid sequence of the major histocompatibility
+    complex and peptide in the form: [cmHC]
+
+
+    across various areas of biology, such as structure prediction$^{24}$ and CD4$^+$
+    T cell epitope prediction$^{25}$ were used to also enhance the prediction of presented
+    and immunogenic CD8$^+$ T cell epitopes.
+
+
+    We developed MLIS: a deep-learning model of HLA-peptide that utilizes a transformer
+    architecture to identify binding by leveraging both HLA-peptide binding and antigen
+    prediction with evaluated trained set of 63,257 unique ligands across 205 HLA-alleles.
+    We validated MLIS in silico using immunogenetic data and achieved superior performance
+    compared to previous methods. HLA-peptide epitope predictors. Distinct from previous$^{13-19}$
+    we measured immunogenicity prediction using
+
+
+    unbiased immunogenomic benchmarks. We validated MLIS in vitro and tested HLA-peptide
+    immunogenicity predictions on peptides identified from Epstein-Barr virus (EBV).
+    We eliminated all epitopes identified in IEDB using the model to focus on viral
+    epitopes. Importantly, MLIS identified both new and CD8+ T cell epitopes in EB
+    that showed effect and memory CD8+ T cell responses. Moreover there was a comparable
+    immunogenicity prediction to an HLA-A peptide specificity assay$^{1}$, which defined
+    epitopes for
+
+
+    Natural Intelligence | Volume 7 | February 2023 | 222–235
+
+
+    233'
+  - '[PAGE 2]
+
+
+    # Deep learning model for C8+ T cell epitope deidentification
+
+
+    To develop a robust model of C8+ T cell epitope prediction, we constructed a dataset
+    composed of mass spectrometry data from immunopeptide datasets including MHCPre2.2,
+    MHCNet4.1, and MHCII2.0 training sets and from the ImmunePeptide Database (IEDB:
+    ied.org?). We used these HLA-B binding peptides with non-binding peptides from
+    SwisProt at a ratio of 1:1. Importantly, all peptides in model evaluation were
+    independent of training sets of HLA-B restriction. This is a filter strategy to
+    address data leakage in previous methods where overlapping HLA-B peptides were
+    present between training and test sets. We show the results of these datasets
+    (Fig. 1a, the peptide distribution and the frequencies at which HLA-B molecules
+    were identified (Fig. 1b, c).
+
+
+    The architecture of our model is composed of two modules (Fig. 2). The first module
+    learns the binding affinity of the HLA-B molecule and learns a vector representation
+    with respect to binding. The second module aggregates the binding features to
+    produce a prediction score. By encoding the peptide and its N and C-terminal features
+    from its root position, similar to MHCII2.0. Using this approach, we find that
+    our model can predict the score of HLA-B peptides with ranges ranging from 0 to
+    1000, with high accuracy in predicting the ability of a peptide to bind to a particular
+    HLA-B allele.
+
+
+    Previous work has highlighted the area under the receiver operating characteristic
+    (AUC-ROC) and precision as important metrics for evaluating performance. However,
+    the disadvantage of accuracy is that for a given threshold, the proportion of
+    positives is devalued even with a low false-positive rate. We use the area under
+    the precision-recall curve to evaluate model performance. This score ranges from
+    0 to 1, with a value equal to the proportion of positives. For datasets of sufficient
+    size, we also show the AUC-ROC.
+
+
+    # UTILS performing better in classifying HLA-B alleles
+
+
+    We evaluated the performance of our model on a published immunopeptide dataset
+    containing 37,215 HLA-B peptides and 2065 randomly sampled copies across 24 HLA-A
+    alleles. We calculated the average precision and ROC-AUC of classification for
+    non-binding and on-binding alleles and compared with tools like MHCPre2.2, MHCNet4.1,
+    MHCII2.0, and UTIS (including MHC-EL) and immunopeptidomics (BiMHC-IG). In contrast,
+    our model achieved an average precision of 0.922, which corresponds to a 21% increase
+    in comparison with tools, with MHCPre2.2 scoring 0.768, MHCNet4.1 scoring 0.795,
+    MHCII2.0 scoring 0.862. The ROC-AUC of our model was 0.939, which corresponds
+    to a 33% increase in comparison with MHCII2.0 at 0.971, MHCNet4.1 scoring 0.927,
+    UTIS scoring 0.895, and MHCPre2.2 scoring 0.836.
+
+
+    Evaluation of the model on the test sets using epitopes in the evaluation dataset
+    showed promising results, excluding models where we have no overlap. For 22/24
+    HLA-B alleles we detected high performance in precision (Fig. 2). This performance
+    could be due to the model''s ability to encode peptide length. We further evaluated
+    model performance across
+
+
+    # MHC predicts epitope identity and immunodominance
+
+
+    Given that only HLA-presented peptides are C8+ T cell epitopes, we measured the
+    ability of MHC to predict immunopeptide identity. To avoid bias from using peptide
+    sets for prediction, we selected a test set of immunopeptidomics data from viral
+    viruses A and B that bind to HLA-B-A02:01, HLA-A11:01 and HLA-A*24:02. We de novo
+    constructed a list of HLA-B-presented peptides identified via mass spectrometry
+    that were subsequently evaluated for immunodominance using interferon gamma (IFN-γ)
+    immunospot (ELISpot) assays, where 32 of the peptides were tested. We ranked them
+    as positive (immunodominant) or negative in the viral proteome. When comparing
+    the set of datasets, we only considered peptides with at least one immunodogenic
+    peptide to prevent preventing bias by high levels of protein immunity.'
+  md: "\n## nature machine intelligence\n\nArticle\n\nhttps://doi.org/10.1038/s41586-024-00971-y\n\
+    \n# Deep learning enhances the prediction of HLA class I-presented CD8+ T cell\
+    \ epitopes in foreign pathogens\n\nReceived: 9 July 2024\nAccepted: 10 December\
+    \ 2024\nPublished online: 28 January 2025\n\nJeremy Wolenden¹2,6, Anusha Nathan¹3,4,\
+    \ Nitan Shalan¹,2, Charles R. Crain³,\nRoda Tano-Menka², Benjamin Goldberg³, Emma\
+    \ Richards³,³ \nGaurav D. Gaiha⁴,5 & Regina Barzilay¹,2\n\n+ - Check for updates\n\
+    \nAccurate silico detection of CD8+ T cell epitopes would greatly enhance cell-based\
+    \ vaccine development, but current prediction models are not reliably successful.\
+    \ Here, motivated by recent successes using machine learning to decode complex\
+    \ biology, we curated a dataset of 61,237 unique leukocyte antigen class I (HLA-1)\
+    \ ligands and developed MUNIS, a deep learning model that identifies peptides\
+    \ presented by HLA-1 ligands. MUNIS showed improved performance over existing\
+    \ models in predicting peptide presentation and CD8+ T epitope immunodominance\
+    \ hierarchies. Moreover, application of MUNIS to proteins from Epstein–Barr virus\
+    \ led to successful identification of both known and novel HLA-1 epitopes which\
+    \ were experimentally validated by vitro HLA-peptide stability and T immunogenicity\
+    \ assays. MUNIS performs comparably to an experimental assay in immun prediction,\
+    \ suggesting that deep learning can reduce experimental burden and accelerate\
+    \ detection of CD8+ T cell epitopes for rapid vaccine development.\n\nAlthough\
+    \ numerous methods exist to predict CD8+ T cell epitopes, their accuracy varies\
+    \ across HLA-I alleles. Moreover, to understand whether these models can identify\
+    \ immunogenic epitopes, the lack of unbiased datasets is a major bottleneck. Frequently\
+    \ predicted peptides are of uncertain affinity or selected binding binders⁶⁷ Several\
+    \ tools can then characterize the characteristics of immunogenic peptides⁸⁹¹⁰\
+    \ they are, given the remarkable successes of deep learning to improve model generalization.\n\
+    \n¹Department of Engineering and Computer Science, Massachusetts Institute of\
+    \ Technology, Cambridge, MA, USA.¹⁶ Massachusetts Institute of Technology, Cambridge,\
+    \ MA, USA³ Institute of Mass, MIT and Harvard, Cambridge, MA.³⁹Program in Health\
+    \ and Technologies, Harvard Medical School and Massachusetts Institute of Technology,\
+    \ Boston, MA,¹⁰ These were collected jointly- Jeremy Wolenden, Anusha Nathan.¹\
+    \ e-mail: gpaiha@mgh.harvard.edu regina@csail.mit.edu\n\nNature Intelligence |\
+    \ Volume 7 | February 2025 | 232–243\n\n# Article\n\nhttps://doi.org/10.1038/s41586-024-00971-y\n\
+    \n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_0.png)\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_1.png)\n\
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_2.png)\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_3.png)\n\
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_4.png)\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_5.png)\n\
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_6.png)\n\nFig. 1: Characteristics of\
+    \ the deep learning model and the training and evaluation datasets for HLA-peptide\
+    \ prediction. Training and evaluation were created by combining data from several\
+    \ datasets as well as a recent review of IEDB. Elited ligand data were used as\
+    \ positives and random samples derived from SwProt* served as negatives. For evaluation,\
+    \ we used peptides identified in MHC-expressing immortal cell lines. To evaluate\
+    \ immunogenicity, peptides$^{24}$ that measured the immunogenicity of influenza\
+    \ epitopes identified via mass spectrometry were used. Epitope length of the HLA-binders\
+    \ (A, B and C) and each part of the peptide was recorded. All peptides in the\
+    \ dataset with a frequency <1% are defined as others. The binding motif serves\
+    \ as the input amino acid sequence of the major histocompatibility complex and\
+    \ peptide in the form: [cmHC]\n\nWe developed MUNIS: a deep-learning model of\
+    \ HLA-peptide that utilizes a transformer architecture to identify binding by\
+    \ leveraging both HLA-peptide binding and antigen prediction with evaluated trained\
+    \ set of 63,257 unique ligands across 205 HLA-alleles. We validated MUNIS in silico\
+    \ using immunogenetic data and achieved superior performance compared to previous\
+    \ methods. HLA-peptide epitope predictors. Distinct from previous$^{13-19}$ we\
+    \ measured immunogenicity prediction using unbiased immunogenomic benchmarks.\
+    \ We validated MUNIS in vitro and tested HLA-peptide immunogenicity predictions\
+    \ on peptides identified from Epstein-Barr virus (EBV). We eliminated all epitopes\
+    \ identified in IEDB using the model to focus on viral epitopes. Importantly,\
+    \ MUNIS identified both new and known CD8+ T cell epitopes in EBV that showed\
+    \ effect and memory CD8+ T cell responses. Moreover there was a comparable immunogenicity\
+    \ prediction to an HLA-A peptide specificity assay¹, which defined epitopes for\
+    \ proteomes for range of HLA-I alleles would greatly create CD8+ T cell vaccine\
+    \ development.\n\nNatural Intelligence | Volume 7 | February 2023 | 222–235\n\n\
+    # Deep learning model for CD8+ T cell epitope identification\n\nTo develop a robust\
+    \ model of CD8+ T cell epitope prediction, we constructed a dataset composed of\
+    \ mass spectrometry data from immunopeptide datasets including MHCPre2.2, MHCNet4.1,\
+    \ and MHCII2.0 training sets and from the ImmunePeptide Database (IEDB: ied.org?).\
+    \ We used these HLA-B binding peptides with non-binding peptides from SwisProt\
+    \ at a ratio of 1:1. Importantly, all peptides in model evaluation were independent\
+    \ of training sets of HLA-B restriction. This is a filter strategy to address\
+    \ data leakage in previous methods where overlapping HLA-B peptides were present\
+    \ between training and test sets. We show the results of HLA-B in 1a.\n\nThe architecture\
+    \ of MUNIS is composed of two modules (Fig. 2). The first module learns the binding\
+    \ affinity and a vector representation of the HLA-peptide binding. The second\
+    \ module aggregates the features from the N and C-terminal to produce a prediction.\n\
+    \nPrevious work has highlighted the area under receiver characteristic (AUC-ROC)\
+    \ and precision as important metrics for evaluating performance. However, the\
+    \ disadvantage of accuracy is that for a given threshold, the proportion of positives\
+    \ is low. We use the area under the precision-recall curve to evaluate performance.\
+    \ This score ranges from 0 to 1, with higher being better.\n\n# MUNIS performing\
+    \ better in classifying HLA-B\n\nWe evaluated the performance of our model on\
+    \ a test set containing 37,215 HLA-B peptides and 2065 randomly sampled non-binding\
+    \ peptides. compared with tools like MHCPre2.2, MHCNet4.1, MHCII2.0, and MUNIS\
+    \ (including MHC-EL) and immunopeptidomics (BiMHC-IG). In contrast, our model\
+    \ achieved an average precision of 0.922, which corresponds to a 21% increase\
+    \ in comparison with tools, with MHCPre2.2 scoring 0.768, MHCNet4.1 scoring 0.795,\
+    \ MHCII2.0 scoring 0.862. The ROC-AUC of our model was 0.939, which corresponds\
+    \ to a 33% increase in comparison with MHCII2.0 at 0.971, MHCNet4.1 scoring 0.927,\
+    \ MUNIS scoring 0.895, and MHCPre2.2 scoring 0.836.\n\nEvaluation of the model\
+    \ on the test sets using epitopes in the evaluation dataset showed promising results,\
+    \ excluding models where we have overlap. For 22/24 HLA-B alleles we detected\
+    \ high performance in precision. This performance could be due to the model's\
+    \ ability to encode peptide length.\n\n# MHC predicts epitope identity and immunodominance\n\
+    \nGiven that only HLA-presented peptides are CD8+ T cell epitopes, we measured\
+    \ the ability of MHC to predict immunopeptide identity. To avoid bias from using\
+    \ peptide sets for prediction, we selected a test set of immunopeptidomics data\
+    \ from viruses A and B that bind to HLA-B-A02:01, HLA-A11:01 and HLA-A*24:02.\
+    \ We de novo constructed a list of HLA-B-presented peptides identified via mass\
+    \ spectrometry that were subsequently evaluated for immunodominance using gamma\
+    \ (IFN-γ) immunospot (ELISpot) assays, where 32 of the peptides were tested. We\
+    \ ranked them as positive (immunodominant) or negative in the viral proteome.\
+    \ When comparing the set of datasets, we only considered peptides with at least\
+    \ one immunogenic peptide to prevent preventing bias by high levels of protein\
+    \ immunity.\n"
+  mdcn: "\n\n## 自然·机器智能 (nature machine intelligence)\n\n文章\n\nhttps://doi.org/10.1038/s41586-024-00971-y\n\
+    \n# 深度学习增强外源病原体 HLA I 类提呈的 CD8+ T 细胞表位预测\n\n接收：2024年7月9日\n接受：2024年12月10日\n在线发表：2025年1月28日\n\
+    \nJeremy Wolenden¹2,6, Anusha Nathan¹3,4, Nitan Shalan¹2, Charles R. Crain³,\n\
+    Roda Tano-Menka², Benjamin Goldberg³, Emma Richards³,³ \nGaurav D. Gaiha⁴,5 &\
+    \ Regina Barzilay¹,2\n\n+ - 检查更新\n\n准确的计算机辅助 CD8+ T 细胞表位检测将极大地促进基于细胞的疫苗开发，但目前的预测模型成功率并不可靠。在此，受近期利用机器学习解码复杂生物学取得成功的启发，我们整理了一个包含\
+    \ 61,237 个唯一白细胞抗原 I 类（HLA-1）配体的数据，并开发了 MUNIS，这是一种识别由 HLA-1 配体提呈的肽的深度学习模型。MUNIS\
+    \ 在预测肽提呈和 CD8+ T 表位免疫优势分层方面的表现均优于现有模型。此外，将 MUNIS 应用于来自埃斯坦病毒（Epstein–Barr virus）的蛋白，成功识别了已知和新型的\
+    \ HLA-1 表位，这些表位已通过体外 HLA-肽稳定性和 T 免疫原性分析进行了实验验证。MUNIS 在免疫预测中的表现与实验检测相当，表明深度学习可以减轻实验负担，并加速\
+    \ CD8+ T 细胞表位的检测，以快速开发疫苗。\n\n尽管存在许多方法来预测 CD8+ T 细胞表位，但它们的准确性在不同的 HLA-I 等位基因之间异。此外，为了理解这些模型是否能够识别免疫原性表位，缺乏无偏数据集是一个主要瓶颈。经常被预测的肽亲和力不确定或属于被选定的结合者⁶⁷。随后几种工具可以表征免疫原性肽的特征⁸⁹¹⁰，考虑到深度学习在提高模型泛化能力方面的巨大成功，它们是……\n\
+    \n¹马萨诸塞理工学院工程与计算机科学系，马萨诸塞州，剑桥，美国¹⁶马萨诸塞理工学院，马萨诸塞州，剑桥³ MIT 与哈佛大学质量研究所，马萨诸塞州，剑桥³⁹\
+    \ 哈佛医学院与马萨诸塞理工学院健康与技术项目，马诸顿州，波士顿¹⁰ 这些由 Jeremy Wolenden, Anusha Nathan 共同收集。电子邮箱：gpaiha@mgh.harvard.edu\
+    \ regina@csail.mit.edu\n\n自然·智能 | 第7 卷 | 2025年2月 | 232–243\n\n# 文章\n\nhttps://doi.org/10.1038/s41586-024-00971-y\n\
+    \n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_0.png)\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_1.png)\n\
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_2.png)\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_3.png)\n\
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_4.png)\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_5.png)\n\
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_6.png)\n\n图. 1：用于 HLA-肽预测的深度学习模型特征以及训练和评估数据集。训练和评估是通过结合来自多个数据集的数据以及对\
+    \ IEDB 的最新回顾创建的。使用选出的配体数据作为正样本，源自 SwProt* 的随机样本作为负样本。对于评估，我们使用了在 MHC 表达的不死细胞系中识别的肽。为了评估免疫原性，使用了测量通过质谱法识别的流感病毒表位免疫原性的肽$^{24}$。记录了\
+    \ HLA 结合者（A、 B 和 C）的表位长度以及肽的每个部分。数据集中所有频率 < 1% 的肽被定义为“其他”。结合基序作为主要组织相容性复合体肽的输入氨基酸序列，形式为：[cmHC]\n\
+    \n我们开发了 MUNIS：一种 HLA-肽深度学习模型，它利用 Transformer 架构，通过跨越205 个 HLA 等位基因的 63,257 个唯一配体的已评估训练集，通过利用\
+    \ HLA-肽结合和抗原预测来识别结合情况。我们使用免疫遗传学数据在计算机中验证了 MUNIS，并实现了优于以往方法的性能。MUNIS 在免疫预测中的表现与实验检测相当，表明深度学习可以减轻实验负担，并加速\
+    \ CD8+ T 细胞表位的检测，以快速开发疫苗。\n\n尽管预测 CD8+ T 细胞表位存在许多方法，但它们的准确性在不同的 HLA-I 等位基因之间异。此外，为了理解这些模型是否能够识别免疫原性表位，缺乏无偏数据集是一个主要瓶颈。经常被预测的肽亲和力不确定或属于被选定的结合者⁶⁷。随后几种工具可以表征免疫原性肽的特征⁸⁹¹⁰，考虑到深度学习在提高模型泛化能力方面的巨大成功，它们是……\n\
+    \n¹马萨诸塞理工学院工程与计算机科学系，马萨诸塞州，剑桥，美国¹⁶马萨诸塞理工学院，马萨诸塞州，剑桥³ MIT 与哈佛大学质量研究所，马萨诸塞州，剑桥³⁹\
+    \ 哈佛医学院与马萨诸塞理工学院健康与技术项目，波士顿州，波士顿¹⁰ 这些由 Jeremy Wolenden, Anusha Nathan 共同收集。电子邮箱：gpaiha@mgh.harvard.edu\
+    \ regina@csail.mit.edu\n\n自然·智能 | 第7 卷 | 2025年2月 | 232–243\n\n# 文章\n\nhttps://doi.org/10.1038/s41586-024-00971-y\n\
+    \n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_0.png)\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_1.png)\n\
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_2.png)\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_3.png)\n\
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_4.png)\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_5.png)\n\
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_6.png)\n\n图. 1：用于 HLA-肽预测的深度学习模型特征以及训练和评估数据集。训练和评估是通过结合来自多个数据集的数据以及对\
+    \ IEDB 的最新回顾创建的。使用选出的配体数据作为正样本，源自 SwProt* 的随机样本作为负样本。对于评估，我们使用了在 MHC 表达的不死细胞系中识别的肽。为了评估免疫原性，使用了测量通过质谱法识别的流感病毒表位免疫原性的肽$^{24}$。记录了\
+    \ HLA 结合者（A、 B 和 C）的表位长度以及肽的每个部分。数据集中所有频率 < 1% 的肽被定义为“其他”。结合基序作为主要组织相容性复合体肽的输入氨基酸序列，形式为：[cmHC]\n\
+    \n我们开发了 MUNIS：一种 HLA-肽深度学习模型，它利用 Transformer 架构，通过跨越205 个 HLA 等位基因的 63,257 个唯一配体的已评估训练集，通过利用\
+    \ HLA-肽结合和抗原预测来识别结合情况。我们使用免疫遗传学数据在计算机中验证了 MUNIS，并实现了优于以往方法的性能。MUNIS 在免疫预测中的表现与实验检测相当，表明深度学习可以减轻实验负担，并加速\
+    \ CD8+ T 细胞表位的检测，以快速开发疫苗。\n\n尽管存在许多方法来预测 CD8+ T 细胞表位，但它们的准确性在不同的 HLA-I 等位基因之间异。此外，为了理解这些模型是否能够识别免疫原性表位，缺乏无偏数据集是一个主要瓶颈。经常被预测的肽亲和力不确定或属于被选定的结合者⁶⁷。随后几种工具可以表征免疫原性肽的特征⁸⁹¹⁰，考虑到深度学习在提高模型泛化能力方面的巨大成功，它们是……\n\
+    \n¹马萨诸塞理工学院工程与计算机科学系，马萨诸塞州，剑桥，美国¹⁶马萨诸塞理工学院，马萨诸塞州，剑桥³ MIT 与哈佛大学质量研究所，马萨诸塞州，剑桥³⁹\
+    \ 哈佛医学院与马萨诸塞理工学院健康与技术项目，波士顿州，波士顿¹⁰ 这些由 Jeremy Wolenden, Anusha Nathan 共同收集。电子邮箱：gpaiha@mgh.harvard.edu\
+    \ regina@csail.mit.edu\n\n自然·智能 | 第7 卷 | 2025年2月 | 232–243\n\n# 文章\n\nhttps://doi.org/10.1038/s41586-024-00971-y\n\
+    \n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_0.png)\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_1.png)\n\
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_2.png)\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_3.png)\n\
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_4.png)\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_5.png)\n\
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_1_6.png)\n\n图. 1：用于 HLA-肽预测的深度学习模型特征以及训练和评估数据集。训练和评估是通过结合来自多个数据集的数据以及对\
+    \ IEDB 的最新回顾创建的。使用选出的配体数据作为正样本，源自 SwProt* 的随机样本作为负样本。对于评估，我们使用了在 MHC 表达的不死细胞系中识别的肽。为了评估免疫原性，使用了测量通过质谱法识别的流感病毒表位免疫原性的肽$^{24}$。记录了\
+    \ HLA 结合者（A、 B 和 C）的表位长度以及肽的每个部分。数据集中所有频率 < 1% 的肽被定义为“其他”。结合基序作为主要组织相容性复合体肽的输入氨基酸序列，形式为：[cmHC]\n\
+    \n我们开发了 MUNIS：一种 HLA-肽深度学习模型，它利用 Transformer 架构，通过跨越205 个 HLA 等位基因的 63,257 个唯一配体的已评估训练集，通过利用\
+    \ HLA-肽结合和抗原预测来识别结合情况。我们使用免疫遗传学数据在计算机中验证了 MUNIS，并实现了优于以往方法的性能。MUNIS 在免疫预测中的表现与实验检测相当，表明深度学习可以减轻实验负担，并加速\
+    \ CD8+ T 细胞表位的检测，以快速开发疫苗。\n\n# 用于 CD8+ T 细胞表位的深度学习模型\n\n为了开发一个稳健的 CD8+ T 细胞表位模型，我们使用了包含\
+    \ 37,215 个 HLA-B 肽和 2065 个随机采样非结合肽的测试集。与 IEDB (ied.org) 的免疫组学数据相比，我们使用了这些 HLA-B\
+    \ 肽来验证 MUNIS。在训练集中存在重叠 HLA-B 肽的情况下，……\n\nMUNIS 的架构由两个模块组成（图 2）。第一个模块学习结合亲和力，第二个模块聚合特征以产生预测。\n\
+    \n以前的工作强调了受试者特征曲线下面积 (AUC-ROC) 和精确率评估性能。然而，准确性的缺点是对于给定的阈值，正样本比例较低。我们使用精确率-召回曲线下的面积来评估性能。该分范围从\
+    \ 0 到 1，越高越好。\n\n自然·智能 | 第7 卷 | 2025年2月 | 222–235\n\n# MHC 预测表位身份和免疫优势\n\n只有 HLA\
+    \ 提呈的肽才是 CD8+ T 细胞表位，我们测量了 MHC 预测免疫原性身份的能力。为了避免使用肽集进行预测产生偏差，我们选择了来自 A 和 B 病毒的免疫组学数据作为测试集，结合\
+    \ HLA-B-A02:01、HLA-A11:01 和 HLA-A*24:02。我们从头构建了一份通过质谱法识别的 HLA-B 提呈肽列表，随后通过 ELISpot\
+    \ 实验对其免疫优势进行了评估。\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    # Article
+
+
+    # Comparison of average precision
+
+
+    # Comparison of ROC-AUC
+
+
+    # Average precisions
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_1.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_2.png)
+
+
+    Test/epite overlap (%):
+
+
+    71 72 75 67 77.5
+
+
+    Test/epite overlap (%):
+
+
+    71 72 75 67 77.5
+
+
+    # 8-mers
+
+
+    # 9-mers
+
+
+    # 10-mers
+
+
+    # 11-mers
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_3.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_4.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_5.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_6.png)
+
+
+    # 8-mers
+
+
+    # 9-mers
+
+
+    # 10-mers
+
+
+    # 11-mers
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_7.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_8.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_9.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_10.png)
+
+
+    Fig. 2 | MUNIS outperforming existing predictors in HLA-A binders across 8–11mers.
+    a. Average precision (AP) and ROC-AUC (AUC) of all predictors on current-state-of-the-art
+    tools like MHCflpred-2.2, NetMHCpan4.1, MHCFlurry-2.0, TranPhLA and BigMHC on
+    predicting ligands (fragments) from muss peptide binders, n=24 HLA-1 alleles.
+    b. Percentages of overlap with the training data of each tool all in the benchmark
+    presentation show what is possible. c. Average pairwise comparisons between MUNIS
+    and other predictors
+
+
+    Each point is the performance on one allele. d. Average precision (AP) and ROC-AUC
+    (AUC) of all predictors on non-binding binders by epitope length, n=24 HLA+1 alleles.
+    P values for pairwise comparisons between MUNIS and Mann test (***P<10). Box plots
+    are presented with median values, 25th and 75th percentiles as upper and lower
+    quartiles, and 5 times the interquartile range as the quartiles (outliers not
+    shown).
+
+
+    Nature Intelligence | Volume 7 | 2025 | 223-243
+
+
+    235'
+  - '[PAGE 4]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41466-024-0097-y
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_4_0.png)
+
+
+    **Fig. 3 | Motif analysis of misclassified binders reveals inconsistent reality
+    of existing models on canonical HLA-1 binding motifs.** Motifs for elicited ligands
+    (from mass spectrometry experiments) and non-binding peptides (from 724 and 208
+    and 609 binders). Boxplots are presented with median lines, 25th and 75th percentiles
+    as upper and lower quartile, and interquartile range from the quartiles as whiskers
+    (outliers not shown).
+
+    **b.** Binding for 9-mers for all classified binders (true positive) and misclassified
+    binders (false positive) for each representative model.
+
+
+    allele HLA-B*40:01 residues are highlighted in yellow. Motifs for MUNIS positives
+    are false positive because 25 incorrectly elicited ligands were identified as
+    binding. Model-S000 was used for both positive and negative cases. Shannon HLA
+    anchor residues (positions in two and a nine-mer) (true positive/false positive)
+    HLA-I binders are highlighted by each point. Shannon entropy at an anchor residue
+    provides for peptides that are true positive mispredicted for one HLA allele.
+    P-values for comparison were calculated using Wilcoxon rank-sum test (p < 10^{-3}).
+
+
+    and BigMHC. PRIME2 was benchmarked on immunology testing sets by allele-peptide
+    pair identity using “Rank allele” as a readout of performance. We found that MUNIS
+    outperforms all other algorithms in presented epochs across the 5 datasets, with
+    a median average performance of 0.289, which is a 6% relative improvement in performance
+    compared to the next-best model (MHCflurry2). We also evaluated the performance
+    of various models across different HLA alleles predicting immunogenic epitopes
+    for each allele (see Fig. 4). In fact, the models with higher average precision
+    scores than MUNIS were the ones with substantial imbalance between evaluation
+    and training sets, as well as those with only non-immunogenic HLA-I binders as
+    (Extended Data Fig. 2a). We identified in increased average over several experiments,
+    indicating the tendency of models to predict, immunogenic epitopes while ignoring
+    the relationship between increased threshold of presentation and downstream T-cell
+    recognition and also revealed the unsolved gap to achieve high accuracy for immunogenicity
+    when filtered on HLA binders.
+
+
+    response for each epitope. MUNIS has a pearson correlation coefficient of 0.33
+    with 0.34 and 0.29 for the next-best models (BigMHC, IM, and NetMHCpan) for epitopes
+    identified in the active infected HIV subgroup (Fig. 4) and epitopes identified
+    in the chronically infected HIV subgroup (Fig. 4). BigMHC and MHCflurry2 predicted
+    0.22 and 0.33 with 0.34 and 0.28 respectively for the epitopes identified in the
+    chronically infected HIV subgroup (Extended Data Fig. 4b). BigMHC was benchmarked
+    for HIV epitopes, which were selected from the MUNIS training set. We also stratified
+    on an allele-based basis and found that MUNIS outperforms others in both the active
+    (Extended Data Fig. 2b) and chronic (Extended Data Fig. 2c) HIV-infection cases.
+
+
+    Variations in immunogenicity prediction for individual epitopes were not observed,
+    so we explored whether MUNIS could predict immunogenicity hierarchies, as effective
+    T-cells would ideally elicit epitopes across many individuals. We tested the immunogenicity
+    hierarchies for HLA-I alleles —*specifically*, we used a dataset of 119 HIV epitopes
+    for T-cell responses in 527 individuals with HIV virus acute and chronic infection
+    groups, with each epitope elicited a T-cell response on top of the corresponding
+    matching HLA-I alleles.
+
+
+    We evaluated by using the Spearman rank correlation coefficient between the MUNIS-predicted
+    score and
+
+
+    To decode features to enhance model performance, we performed an ablation analysis
+    with competing models (Extended Data Fig. 3). We selectively identified input
+    features to capture the potential of the evaluated Scaling Modeling (ESM-2) Transformer
+    protein language model, size of the language model, flanking residues, negative
+    sampling logic, which attempt to
+
+
+    Nature Intelligence | January 2025 | 232–243'
+  - '[PAGE 5]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s42256-024-00971-y
+
+
+    # a Influenza dataset Binders non-binders
+
+
+    # b Influenza dataset Immunogenic epitopes vs all epitopes
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_5_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_5_1.png)
+
+
+    Test/epitope overlap (%):
+
+
+    Test/epitope overlap (%):
+
+
+    # c Acute HIV dataset Immundominance
+
+
+    # d Chronic HIV dataset Immundominance
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_5_2.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_5_3.png)
+
+
+    Test/epitope overlap (%):
+
+
+    Test/epitope overlap (%):
+
+
+    # e Acute HIV dataset Immundominance
+
+
+    # f Chronic HIV dataset Immundominance
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_5_4.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_5_5.png)
+
+
+    > Fig. 4 MINUS exhibits existing immundominance hierarchies. A comparison of MINUS
+    against existing tools like MHCCored2, NetMHCpan.1, Mimry2.0, TransHLA, BigMHC
+    and Prime2.0 on leading epitopes (binders) from influenza infection shows that
+    MINUS distinguishes binders from non-binders. Some significantly enriched peptides
+    and ligands (and all other peptides (decys)) are identified as binder. Proteins
+    with at least one epitope presented on MHC class I are identified as binder. Proteins
+    with peptides and ligands from negative codons are identified as binder.
+
+
+    show the existing datasets and error bars show the error across the five cases.
+    Epitope overlap with the datasets of each tool over the five influenza benchmarks
+    are shown below. Parity comparisons between MINUS and other tools show a value-of
+    0. Precision and frequency of recall across all epitope-allele pairs in acute
+    (c) and chronic (d) HIV. Epitope overlap with the datasets of each tool over the
+    HIV benchmarks are shown below. The model score is a standard error of the metrics
+    reported. High binned frequencies of recall across all epitope-allele pairs in
+    acute (e)
+
+
+    normalize model scores across HLA alleles (Extended Data Fig. 30). LASER-2 (35
+    million parameters) performed slightly worse than a smaller model (3 million),
+    with an average precision of 0.959 with 0.953, respectively. Pretraining the model
+    of HLA-I peptide presentation from an average precision of 0.946 to 0.953. Introducing
+    flanking
+
+
+    enhanced HLA-I peptide presentation from an average precision of 0.947 to 0.953.
+    Many of these features (namely, pretrainingtraining and incorporating flanking
+    residues) reduced the average precision on immunogenicity prediction. With regard
+    to immundominance, where the results are not stratified by allele, the performance
+    of MINUS using the
+
+
+    Nature Intelligence | Volume 7 | February 2025 | 232–243
+
+
+    237'
+  md: '
+
+    # Article
+
+
+    ## Comparison of average precision
+
+
+    ## Comparison of ROC-AUC
+
+
+    ## Average precisions
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_1.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_2.png)
+
+
+    Test/epitope overlap (%):
+
+    71 72 75 67 77.5
+
+
+    Test/epitope overlap (%):
+
+    71 72 75 67 77.5
+
+
+    ## 8-mers
+
+
+    ## 9-mers
+
+
+    ## 10-mers
+
+
+    ## 11-mers
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_3.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_4.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_5.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_6.png)
+
+
+    ## 8-mers
+
+
+    ## 9-mers
+
+
+    ## 10-mers
+
+
+    ## 11-mers
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_7.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_8.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_9.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_10.png)
+
+
+    Fig. 2 | MUNIS outperforming existing predictors in HLA-A binders across 8–11mers.
+    a. Average precision (AP) and ROC-AUC (AUC) of all predictors on current-state-of-the-art
+    tools like MHCflpred-2.2, NetMHCpan4.1, MHCFlurry-2.0, TranPhLA and BigMHC on
+    predicting ligands (fragments) from muss peptide binders, n=24 HLA-1 alleles.
+    b. Percentages of overlap with the training data of each tool all in the benchmark
+    presentation show what is possible. c. Average pairwise comparisons between MUNIS
+    and other predictors
+
+
+    Each point is the performance on one allele. d. Average precision (AP) and ROC-AUC
+    (AUC) of all predictors on non-binding binders by epitope length, n=24 HLA+1 alleles.
+    P values for pairwise comparisons between MUNIS and Mann test (***P<10). Box plots
+    are presented with median values, 25th and 75th percentiles as upper and lower
+    quartiles, and 5 times the interquartile range as the quartiles (outliers not
+    shown).
+
+
+    Nature Intelligence | Volume 7 | 2025 | 223-243
+
+
+    235
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41466-024-0097-y
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_4_0.png)
+
+
+    **Fig. 3 | Motif analysis of misclassified binders reveals inconsistent reality
+    of existing models on canonical HLA-1 binding motifs.** Motifs for elicited ligands
+    (from mass spectrometry experiments) and non-binding peptides (from 724 and 208
+    and 609 binders). Boxplots are presented with median lines, 25th and 75th percentiles
+    as upper and lower quartile, and interquartile range from the quartiles as whiskers
+    (outliers not shown).
+
+    **b.** Binding for 9-mers for all classified binders (true positive) and misclassified
+    binders (false positive) for each representative model.
+
+
+    allele HLA-B*40:01 residues are highlighted in yellow. Motifs for MUNIS positives
+    are false positive because 25 incorrectly elicited ligands were identified as
+    binding. Model-S000 was used for both positive and negative cases. Shannon HLA
+    anchor residues (positions in two and a nine-mer) (true positive/false positive)
+    HLA-I binders are highlighted by each point. Shannon entropy at an anchor residue
+    provides for peptides that are true positive mispredicted for one HLA allele.
+    P-values for comparison were calculated using Wilcoxon rank-sum test (p < 10^{-3}).
+
+
+    and BigMHC. PRIME2 was benchmarked on immunology testing sets by allele-peptide
+    pair identity using “Rank allele” as a readout of performance. We found that MUNIS
+    outperforms all other algorithms in presented epochs across the 5 datasets, with
+    a median average performance of 0.289, which is a 6% relative improvement in performance
+    compared to the next-best model (MHCflurry2). We also evaluated the performance
+    of various models across different HLA alleles predicting immunogenic epitopes
+    for each allele (see Fig. 4). In fact, the models with higher average precision
+    scores than MUNIS were the ones with substantial imbalance between evaluation
+    and training sets, as well as those with only non-immunogenic HLA-I binders as
+    (Extended Data Fig. 2a). We identified in increased average over several experiments,
+    indicating the tendency of models to predict, immunogenic epitopes while ignoring
+    the relationship between increased threshold of presentation and downstream T-cell
+    recognition and also revealed the unsolved gap to achieve high accuracy for immunogenicity
+    when filtered on HLA binders.
+
+
+    response for each epitope. MUNIS has a pearson correlation coefficient of 0.33
+    with 0.34 and 0.29 for the next-best models (BigMHC, IM, and NetMHCpan) for epitopes
+    identified in the active infected HIV subgroup (Fig. 4) and epitopes identified
+    in the chronically infected HIV subgroup (Fig. 4). BigMHC and MHCflurry2 predicted
+    0.22 and 0.33 with 0.34 and 0.28 respectively for the epitopes identified in the
+    chronically infected HIV subgroup (Extended Data Fig. 4b). BigMHC was benchmarked
+    for HIV epitopes, which were selected from the MUNIS training set. We also stratified
+    on an allele-based basis and found that MUNIS outperforms others in both the active
+    (Extended Data Fig. 2b) and chronic (Extended Data Fig. 2c) HIV-infection cases.
+
+
+    Variations in immunogenicity prediction for individual epitopes were not observed,
+    so we explored whether MUNIS could predict immunogenicity hierarchies, as effective
+    T-cells would ideally elicit epitopes across many individuals. We tested the immunogenicity
+    hierarchies for HLA-I alleles —*specifically*, we used a dataset of 119 HIV epitopes
+    for T-cell responses in 527 individuals with HIV virus acute and chronic infection
+    groups, with each epitope elicited a T-cell response on top of the corresponding
+    matching HLA-I alleles.
+
+
+    We evaluated by using the Spearman rank correlation coefficient between the MUNIS-predicted
+    score and
+
+
+    To decode features to enhance model performance, we performed an ablation analysis
+    with competing models (Extended Data Fig. 3). We selectively identified input
+    features to capture the potential of the evaluated Scaling Modeling (ESM-2) Transformer
+    protein language model, size of the language model, flanking residues, negative
+    sampling, which attempt to
+
+
+    Nature Intelligence | January 2025 | 232–243
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41466-024-0097-y
+
+
+    ## a Influenza dataset Binders
+
+
+    ## b Influenza dataset Immunogenic epitopes
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_5_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_5_1.png)
+
+
+    Test/epitope overlap (%):
+
+    Test/epitope overlap (%):
+
+
+    ## c Acute HIV dataset Immundance
+
+
+    ## d Chronic HIV dataset Immundance
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_5_2.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_5_3.png)
+
+
+    Test/epitope overlap (%):
+
+    Test/epitope overlap (%):
+
+
+    ## e Acute HIV dataset Immundance
+
+
+    ## f Chronic HIV dataset Immundance
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_5_4.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_5_5.png)
+
+
+    > Fig. 4 MUNIS exhibits existing immundance hierarchies. A comparison of MUNIS
+    against existing tools like MHored2, NetMHCpan.1, Mimry2.0, TransHLA, BigMHC and
+    Prime2.0 on leading epitopes (binders) from infection shows that MUNIS distinguishes
+    binders from non-binders. Some significantly enriched peptides and ligands (and
+    all other peptides (decys)) are identified as binder. Proteins with at least one
+    epitope presented on MHC class I are identified as binder. Proteins with peptides
+    and ligands from negative codons are identified as binder.
+
+
+    show the existing datasets and error bars show the error across the five cases.
+    Epitope overlap with the datasets of each tool over the five influenza benchmarks
+    are shown below. Parity comparisons between MUNIS and other tools show a value-of
+    0. Precision and frequency of recall across all epitope-allele pairs in acute
+    (c) and chronic (d) HIV. Epitope overlap with the datasets of each tool over the
+    HIV benchmarks are shown below. The model score is a standard error of the metrics
+    reported. normalize model scores across HLA alleles (Extended Data Fig. 30). LASER-2
+    (35 million parameters) performed slightly worse than a smaller model (3 million),
+    with an average precision of 0.959 with 0.953, respectively. Pretraining the model
+    of HLA-I peptide presentation from an average precision of 0.946 to 0.953. Introducing
+    flanking
+
+
+    enhanced HLA-I peptide presentation from an average precision of 0.947 to 0.953.
+    Many of these features (namely, pretrainingtraining and incorporating flanking
+    residues) reduced the average precision on immunogenicity prediction. With regard
+    to immundominance, where the results are not stratified by allele, the performance
+    of MUNIS using the
+
+
+    Nature Intelligence | Volume 7 | February 2025 | 232–243
+
+    '
+  mdcn: '
+
+
+    # 文章
+
+
+    ## 平均精度的比较
+
+
+    ## ROC-AUC 的比较
+
+
+    ## 平均精度
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_1.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_2.png)
+
+
+    测试/表位重叠率 (%):
+
+    71 72 75 67 77.5
+
+
+    测试/表位重叠率 (%):
+
+    71 72 75 67 77.5
+
+
+    ## 8-聚聚基 (8-mers)
+
+
+    ## 9-聚基 (9-mers)
+
+
+    ## 10-聚基 (10-mers)
+
+
+    ## 11-聚基 (11-mers)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_3.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_4.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_5.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_6.png)
+
+
+    ## 8-聚基 (8-mers)
+
+
+    ## 9-聚基 (9-mers)
+
+
+    ## 10-聚基 (10-mers)
+
+
+    ## 11-聚基 (11-mers)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_7.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_8.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_9.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_3_10.png)
+
+
+    图 2 | MUNIS 在 8–11 聚基的 HLA-A 结合蛋白中表现优于现有预测器。a. 所有预测器在如 MHCflpred-2.2、NetMHCpan4.1、MHCFlurry-2.0、TranPhLA
+    和 BigMHC 等当前先进工具上预测来自鼠肽结合蛋白的配体（片段）的平均精度 (AP) 和 ROC-AUC (AUC)，n=24 HLA-1 等位基因。b.
+    所有基准演示中每个工具与训练数据的重叠百分比显示了可能实现的性能。c. MUNIS 与其他预测器之间的平均两对比较
+
+
+    每个点代表一个等位基因的性能。d. 所有预测器在不同表位长度的非结合蛋白上的平均精度 (AP) 和 ROC-AUC (AUC)，n=24 HLA+1 等位基因。MUNIS
+    与 Mann 检验之间两对比较的 P 值（***P<10）。箱线图以中位数、25 百分位数和75 百分位数作为上下四分位数，并 5 倍四分位距作为四分位数（不显示离群值）。
+
+
+    Nature Intelligence | 第 7  | 2025 | 223-243
+
+
+    235
+
+
+    # 文章
+
+
+    https://doi.org/10.1038/s41466-024-0097-y
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_4_0.png)
+
+
+    **图 3 | 分类错误结合蛋白的基序分析揭示了现有模型在标准 HLA-1 结合基序上不一致的现实。** 诱导配体（来自质谱实验）和非结合多肽（来自 724、208
+    和 609 结合蛋白）的基序。箱线图以中位数线、25 百分位数和75 百分位数作为上下四分位数，四分位数间的四分位距作为须线（不显示离群值）。
+
+    **b.** 每个代表模型所有分类结合蛋白（真阳性）和分类错误结合蛋白（假阳性）的 9-聚基结合情况。
+
+
+    allele HLA-B*40:01 残基用黄色突出显示。MUNIS 阳性基序是假阳性，因为有 25 个错误诱导的配体被识别为结合。模型-S000 同时用于正例和负例。Shannon
+    HLA 锚点残基（两个和九聚聚基中的位置）（真阳性/假阳性）HLA-I 结合蛋白由每个点突出。锚点残基处的 Shannon 熵提供了某个 HLA 等位基因被误预测的真阳性多肽。比较的
+    P 值使用 Wilcoxon 秩和检验计算（p < 10⁻³）。
+
+
+    以及 BigMHC。PRIME2 在免疫学测试集上根据等位基因-多肽对标识性进行基准测试，使用“等位基因排名”作为性能输出。我们发现，在 5 个数据集的给出的周期内，MUNIS
+    均优于所有其他算法，平均性能中值为 0.289，与次优模型（MHCflurry2）相比性能提升了 6%。我们还评估了不同模型在不同 HLA 等位基因上的性能，用于预测每个等位基因的免疫原性表位（见图
+    4）。事实上，平均精度得分高于 MUNIS 的模型是那些在评估集和训练集之间存在严重不平衡的模型，以及那些只有非免疫原性 HLA-I 结合蛋白的模型（见扩展数据图2a）。我们在多次实验中发现平均精度的增加，表明模型倾向于预测免疫原性表位，而忽略了增加的表位之间的关系，这揭示了模型在预测免疫原性表位时忽略了增加的表位之间关系的趋势。
+
+
+    在多次实验中发现平均精度的增加，表明模型倾向于预测免疫原性表位，而忽略了增加的表位之间的关系，这揭示了模型在预测免疫原性表位时忽略了增加的表位之间的关系的趋势。（注：此处原文存在部分逻辑重复，翻译已按语境整合）
+
+
+    *(由于提供的原文文本存在多处重复和片段，上述翻译已根据逻辑进行了对应处理)*
+
+
+    allele HLA-B*40:01 残基用黄色突出显示。MUNIS 阳性基序是假阳性，因为有 25 个错误诱导的配体被识别为结合。模型-S000 同时用于正例和负例。Shannon
+    HLA 锚点残基（两个和九聚聚基中的位置）（真阳性/假阳性）HLA-I 结合蛋白由每个点突出。锚点残基处的 Shannon 熵提供了某个 HLA 等位基因被误预测的真阳性多肽。比较的
+    P 值使用 Wilcoxon 秩和检验计算（p < 10⁻³）。
+
+
+    以及 BigMHC。PRIME2 在免疫学测试集上根据等位基因-多肽对标识性进行基准测试，使用“等位基因排名”作为性能输出。我们发现，在 5 个数据集的给出的周期内，MUNIS
+    均优于所有其他算法，平均性能中值为 0.289，与次优模型（MHCflurry2）相比性能提升了 6%。我们还评估了不同模型在不同 HLA 等位基因上的性能，用于预测每个等位基因的免疫原性表位（见图
+    4）。事实上，平均精度得分高于 MUNIS 的模型是那些在评估集和训练集之间存在严重不平衡的模型，以及那些只有非免疫原性 HLA-I 结合蛋白的模型（见扩展数据图2a）。我们在多次实验中发现平均精度的增加，表明模型倾向于预测免疫原性表位，而忽略了增加的表位之间的关系，这揭示了模型在预测免疫原性表位时忽略了增加的表位之间的关系的趋势。（注：由于提供的原文文本存在多处重复和片段，上述翻译已根据逻辑进行了对应处理）
+
+
+    *(由于提供的原文文本存在多处重复和片段，上述翻译已根据逻辑进行了对应处理)*
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 6]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41466-024-00971-y
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_6_0.png)
+
+
+    a Epitope epitope pruning
+
+    b Experimental validation
+
+    c Representative stability (asta'' B35:01)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_6_1.png)
+
+
+    e Cumulative stability data (all HLA-A 1)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_6_2.png)
+
+
+    Fig. 2. Experimental HLA-A peptide studies confirm the affinity of MUNIS to binding
+    and non-binding peptides within HLA-A. A schematic of the epitope pruning procedure
+    for epitope validation. The top 257 peptides from the EBRLF1, EBRLF2, EBNA1, EBNA2
+    and EBNA3a proteins from 17 different HLA-A alleles were chosen for downstream
+    analysis. B) Schematic evaluation of stability for predicted peptides on HLA-A-1
+    peptides using TAP-deficient HLA-M1 cell lines to identify peptides that are presented
+    and bound by HLA molecules. If IFN Elpot stability assays were performed on each
+    peptide to bind an HLA molecule, the data is shown in light grey. C) Representative
+    data of the stability of HLA-A B35:01 for predicted peptides to bind the allele.
+    For the DMSO control experiment in light grey, the B35-01 HLA immunodominant peptide
+    in light blue, the predicted peptides from the EBV protein in blue and from the
+
+
+    f MUNIS score threshold: 0.1 g MUNIS score threshold: 0.5 g MUNIS score threshold:
+    0.7 g MUNIS score threshold: 0.9
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_6_3.png)
+
+
+    The higher the score, the greater the affinity for the given peptide. D) Summary
+    data for all predicted peptides and non-binders MUNIS were normalized to the HLA
+    immunodominant peptide for HLA-A B35:01. HLA-A allele is represented by the dashed
+    line. Circles are predicted peptides and non-binders are grey squares. E) Summary
+    data for all HLA-A 17 alleles selected for the predicted peptides. Box plots are
+    presented with the median, interquartile range, and the 5th and 95th percentiles
+    representing the range (outliers are not shown as circles). f) Normalized anti-HLA-M1
+    for non-binders predicted on peptides with MUNIS score greater than or equal to
+    the threshold. The horizontal line represents the mean anti-HLA-M1 across all
+    predicted peptides to bind or not bind a particular HLA-A allele (n = 17). P-values
+    for comparisons between predicted peptides and non-binders were calculated using
+    the Wilcoxon rank test. Panels a and b are generated with graphillob.com.
+
+
+    score and the range for any given peptide and found that both methods perform
+    similarly in the HLA acute and chronic immunodominance domains. Finally, we observed
+    that sampling cells from Swiss-Prot was equal to sampling from the HLA-M1 cell
+    lines.
+
+
+    # MUNIS discriminates HLA-I class binding and non-binding EBV peptides
+
+
+    To evaluate the practicality of peptide binding and immunogenicity within the
+    EBV protein for HLA-A 1 alleles, given their relevance to immune complexes, to
+    multiple sequences (>90%) were identified. We made an EBV decoy by eluting peptides
+    from the EBV protein to run the MUNIS test. We screened all 8-15 mers from 5 EBV
+    proteins (EBRLF1, EBRLF2, EBNA1, EBNA2 and EBNA3a) and 257 predicted peptides
+    to bind HLA-A 17 alleles using an earlier iteration of MUNIS. All of these peptides
+    found that 0.01 outperforming in (f). Predicted non-binders other were used as
+    non-binders for another allele of the EBV
+
+
+    Nature Intelligence | Volume 7 (2025) | Pages 223–234
+
+
+    238'
+  - '[PAGE 7]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41466-024-00971-y
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_7_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_7_1.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_7_2.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_7_3.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_7_4.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_7_5.png)
+
+
+    **Figure 6.** MIS identified epitopes anding ELISpot for C T cells. **a.** Representative
+    ELISpot for HLA-A*0201 and HLA-A*0301 restricted epitopes from the PBMC of individuals
+    who express these HLA alleles. DMSO was used as a negative control and CD38 antibodies
+    were used as control. NTTC, necessary to count. All identified peptides were tested
+    as double pools. **b.** List of 21 immunogenic epitopes identified by MIS and
+    ELISpot for HLA-A*0201 and HLA-A*0301. **c.** Representative conformational stability.
+    **d.** ELISpot experimental immun epitopes (not in ELISpot) **e.** Average precision
+    for HLA-A*0201 and HLA-A*0301. **f.** Top ranked epitopes for HLA-A*0201 and HLA-A*0301.
+    **g.** Polarization of C T cells from the 3 individuals shown after 5 days with
+    an immunogenic HLA-A*0201 epitope. All peptides were tested with technical duplicates.
+    **h.** Representative measure of MANS and count
+
+
+    # **MIS identified and listed immunogenic EBV epitopes**
+
+
+    To assess the ability of MIS to identify immunogenic epitopes from EBV proteins
+    (BRIF1, BRLF1, LMP2 and EBNA3), we used ELISpot assays on PBMCs from 3 HLA-I type
+    individuals using oversampling 15 peptide pools per individual. This method identified
+    that all individuals had no immunogenic ELISpot response to at least one of the
+    15 peptide pools, providing robust strategy for testing individual predicted peptides
+    within these individuals. We then assessed T cell activity by restricting the
+    HLA-A*0201 allele (Fig. 6a). The HLA-type-specific peptides were restricted from
+    300 to 11 to include HLA-A*0101, HLA-A*0402, and HLA-B*0702, which were not present
+    in the HLA-I peptide stability assessments. Of these 97 unique HLA-I-type peptides
+    tested, we identified 21 immunogenic peptides predicted by our model were not
+    previously identified or identified in the EBV (Fig. 6b), illustrating the ability
+    of MIS to predict novel T cell epitopes, even in an extensively studied pathogen
+    like EBV. Using in vivo ELISpot and peptide-binding assays for HLA-A*0201-restricted
+    EBV epitopes (BRLPFY, BRLF2; EBV: 239–237) as well as MANS, known immunogenic
+    EBV epitope
+
+
+    (VYDLIF, YVRIF; 109–117) is capable of activating B cell (Fig. 6c) and memory
+    (Fig. 6d). CD8+ C T cells responds across multiple individuals, illustrating the
+    ability of MIS to identify broadly reactive epitopes.
+
+
+    Because our cohort limited to 30 individuals, we supplemented our list of IFNγ
+    immunogenic epitopes by ELISpot-conformed peptides with CD8+ T cell activity data
+    from the IDE. In addition to the IFNγ assay, we measured the frequency of positive
+    response to the identified epitopes by the T cell assay (for example, tetramer
+    staining, IFNγ ELISpot or intracellular cytokine staining). This revealed that
+    18 HLA-I-type pools, for a total of 6 individuals with 42 unique peptides. Compared
+    with other methods, MIS showed significantly enhanced identification of immunogenic
+    EBV epitopes. Our predicted peptides in the top 5 and 20 in the top 60 ranked
+    peptides. Compared with other tools, MIS and MHC-IG performed better in identifying
+    immunogenic epitopes (that are not currently in EBV), MIS outperforms all others.
+
+
+    (Fig. 6f). When comparisons are performed on peptides with lengths of 8–14 residues
+    (the peptide length range for several tools), one of the highly immunogenic peptides
+    predicted for HLA-A*0201 is a 15-mer (YVDHPLGTQWQLY, LMP2A:15), illustrating the
+    ability of MIS to predict length,
+
+
+    Nature Intelligence | Volume 7 | 2025 | 232–234
+
+
+    239'
+  - '[PAGE 8]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41466-024-00971-y
+
+
+    outperformed the HLA-I peptide specificity assay in MUNIS (6g) and had consistent
+    results when stratified with HLA-A allele (Fig. 6h). Collectively, these results
+    show MUNIS can identify not only binders but also epitopes from a de novo prediction
+    with high accuracy.
+
+
+    not improve immunogenicity prediction when peptides are filtered on HLA-I binding.
+    This benefit comes from conditioning on the quality of HLA-I peptide prediction.
+    We also found that the lack of available data for T receptor sequences makes this
+    task challenging. We note that our model is trained on noisy datasets, which may
+    contain problematic features such as cysteine residues. In addition, we found
+    that our architecture resulted in improved prediction performance, suggesting
+    that the transfer between the two tasks, although not completely
+
+
+    # Discussion
+
+
+    In this study, we report the development of MUNIS, a deep learning model for CD8+
+    T epitope prediction within foreign populations. We used a deep learning architecture
+    and architecture to implement the encoding of HLA-I peptide sequences with a language
+    model. Our model is trained on diverse peptide sequences and learned features
+    that are robust to property-prediction tasks, making them well-suited for accurate
+    immunogenic epitope prediction.
+
+
+    Nonetheless, the ability of MUNIS to accurately predict immunity and identify
+    new epitopes has several implications. Rationally designing vaccines that elicit
+    robust T cells is vital to vaccine development, and MUNIS could therefore greatly
+    enhance this process. Furthermore, we found that MUNIS outperformed experimental
+    HLA-I peptide binding predictions.
+
+
+    Despite improvements in prediction performance, we did not observe substantial
+    discrimination between immunogenic and nonimmunogenic epitopes conditioned on
+    presented HLA-I in influenza immunopeptide datasets. This might be due to the
+    ability of MUNIS to enhance prediction performance itself or the lack of high
+    quality HLA-I peptide binding prediction in ranking immunogenic epitopes when
+    seen as de novo.
+
+
+    found that MUNIS showed improvement compared with contemporary methods in predicting
+    immunogenicity hierarchies across different populations. This could be partially
+    dictated by the quality of HLA-I alleles on the peptide-binding affinity prediction.
+
+
+    Because MUNIS ranks immunogenic epitopes more effectively than non-immunogenic
+    ones, we also found that BigMHC is only comparable to MUNIS across different evaluation
+    settings. However, MUNIS performs consistently well on all benchmarks, regardless
+    of the dataset and presentation mode.
+
+
+    An extensive analysis revealed that the pretrained ESM2 model and incorporation
+    of features contributing to the output improved prediction performance. As compared
+    to the model trained on 5 million parameters similar to the baseline model, we
+    used a smaller number of parameters to increase efficiency. We found that the
+    task focus significantly improved the model''s ability to learn structural features
+    of the peptide pocket.
+
+
+    # Methods
+
+
+    The elicited peptide (presentation) training set consists of four datasets: the
+    elicited peptide data deposited in the IEDB as well as the NetMHCpan, MHCII, and
+    MHCpepe2 datasets. The final dataset after filtering epitopes out in the input
+    is composed of 65,231 positive peptide HLA-I peptides and 3,701,209 decoy peptides
+    with lengths ranging from 8 to 11 amino acids.
+
+
+    In addition to the IEDB, we utilized a method to find binding affinity by searching
+    the Sequence-Prot using MHCSeq2. The dataset was filtered to data points where
+    the parent peptide could be presented by all HLA-I alleles in the population,
+    excluding those rare alleles.
+
+
+    # Model architecture
+
+
+    The binding module uses the ESM2 model of 6 million parameters. Language models
+    are trained on millions of peptide sequences and have learned to capture various
+    features from peptide sequences. The language model takes the peptide sequences
+    in the (HLA-I HLA-I peptide) format [CLS] sequence [SEP] as input and returns
+    the start and end of the sequence, respectively. Including the sequence with language
+    model, we use the representation of the sequence, which is then fed to a two-layer
+    classifier.
+
+
+    The processing module uses a bidirectional short-term memory (LSTM) recurrent
+    network, which processes the peptide as sequence including each amino acid, in
+    its left and right flanks, corresponding to amino acid on the N- and C- terminal
+    ends
+
+
+    Lastly, we have limitations to this study. First, the training and evaluation
+    on 205 protein HLA-I alleles only captures the extent of the HLA polymorphism
+    in the population. In addition, while MUNIS captures features of immunogenic epitopes,
+    it does
+
+
+    Nature Intelligence | Volume 7 | February 2025 | 232–243
+
+
+    240'
+  md: '
+
+    # Article
+
+
+    https://doi.org/10.1038/s41466-024-00971-y
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_6_0.png)
+
+
+    a Epitope epitope pruning
+
+    b Experimental validation
+
+    c Representative stability (HLA-A B35:01)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_6_1.png)
+
+
+    e Cumulative stability data (all HLA-A 1)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_6_2.png)
+
+
+    Fig. 2. Experimental HLA-A peptide studies confirm the affinity of MUNIS to binding
+    and non-binding peptides within HLA-A. A schematic of the epitope pruning procedure
+    for epitope validation. The top 257 peptides from the EBRLF1, EBRLF2, EBNA1, EBNA2
+    and EBNA3a proteins from 17 different HLA-A alleles were chosen for downstream
+    analysis. B) Schematic evaluation of stability for predicted peptides on HLA-A-1
+    peptides using TAP-deficient HLA-M1 cell lines to identify peptides that are presented
+    and bound by HLA molecules. If IFN Elpot stability assays were performed on each
+    peptide to bind an HLA molecule, the data is shown in light grey. C) Representative
+    data of the stability of HLA-A B35:01 for predicted peptides to bind the allele.
+    For the DMSO control experiment in light grey, the B35-01 HLA immunodominant peptide
+    in light blue, the predicted peptides from the EBV protein in blue and from the
+
+
+    f MUNIS score threshold: 0.1 g MUNIS score threshold: 0.5 g MUNIS score threshold:
+    0.7 g MUNIS score threshold: 0.9
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_6_3.png)
+
+
+    The higher the score, the greater the affinity for the given peptide. D) Summary
+    data for all predicted peptides and non-binders MUNIS were normalized to the HLA
+    immunodominant peptide for HLA-A B35:01. HLA-A allele is represented by the dashed
+    line. Circles are predicted peptides and non-binders are grey squares. E) Summary
+    data for all HLA-A 17 alleles selected for the predicted peptides. Box plots are
+    presented with the median, interquartile range, and the 5th and 95th percentiles
+    representing the range (outliers are not shown as circles). f) Normalized anti-HLA-M1
+    for non-binders predicted on peptides with MUNIS score greater than or equal to
+    the threshold. The horizontal line represents the mean anti-HLA-M1 across all
+    predicted peptides to bind or not bind a particular HLA-A allele (n = 17). P-values
+    for comparisons between predicted peptides and non-binders were calculated using
+    the Wilcoxon rank test. Panels a and b are generated with graphillob.com.
+
+
+    score and the range for any given peptide and found that both methods perform
+    similarly in the HLA acute and chronic immunodominance domains. Finally, we observed
+    that sampling cells from Swiss-Prot was equal to sampling from the HLA-M1 cell
+    lines.
+
+
+    # MUNIS discriminates HLA-I class binding and non-binding EBV peptides
+
+
+    To evaluate the practicality of peptide binding and immunogenicity within the
+    EBV protein for HLA-A 1 alleles, given their relevance to immune complexes, to
+    multiple sequences (>90%) were identified. We made an EBV decoy by eluting peptides
+    from the EBV protein to run the MUNIS test. We screened all 8-15 mers from 5 EBV
+    proteins (EBRLF1, EBRLF2, EBNA1, EBNA2 and EBNA3a) and 257 predicted peptides
+    to bind HLA-A 17 alleles using an earlier iteration of MUNIS. All of these peptides
+    found that 0.01 outperforming in (f). Predicted non-binders other were used as
+    non-binders for another allele of the EBV
+
+
+    Nature Intelligence | Volume 7 (2025) | Pages 223–234
+
+
+    238
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41466-024-00971-y
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_7_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_7_1.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_7_2.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_7_3.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_7_4.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_7_5.png)
+
+
+    **Figure 6.** MIS identified epitopes and binding ELISpot for C T cells. **a.**
+    Representative ELISpot for HLA-A*0201 and HLA-A*0301 restricted epitopes from
+    the PBMC of individuals who express these HLA alleles. DMSO was used as a negative
+    control and CD38 antibodies were used as control. NTTC, necessary to count. All
+    identified peptides were tested as double pools. **b.** List of 21 immunogenic
+    epitopes identified by MIS and ELISpot for HLA-A*0201 and HLA-A*0301. **c.** Representative
+    conformational stability. **d.** ELISpot experimental immun epitopes (not in ELISpot)
+    **e.** Average precision for HLA-A*0201 and HLA-A*0301. **f.** Top ranked epitopes
+    for HLA-A*0201 and HLA-A*0301. **g.** Polarization of C T cells from the 3 individuals
+    shown after 5 days with an immunogenic HLA-A*0201 epitope. All peptides were tested
+    with technical duplicates. **h.** Representative measure of MANS and count
+
+
+    # **MIS identified epitopes and binding ELISpot for C T cells**
+
+
+    To evaluate the practicality of peptide binding and immunogenicity within the
+    EBV protein for HLA-A 1 alleles, given their relevance to immune complexes, to
+    multiple sequences (>90%) were identified. We made an EBV decoy by eluting peptides
+    from the EBV protein to run the MUNIS test. We screened all 8-15 mers from 5 EBV
+    proteins (EBRLF1, EBRLF2, EBNA1, EBNA2 and EBNA3a) and 257 predicted peptides
+    to bind HLA-A 17 alleles using an earlier iteration of MUNIS. All of these peptides
+    found that 0.01 outperforming in (f). Predicted non-binders other were used as
+    non-binders for another allele of the EBV
+
+
+    To assess the ability of MUNIS to identify immunogenic epitopes, we used ELISpot
+    assays on EBV (EBRLF1, EBRLF2, EBNA1, EBNA2 and EBNA3a). We identified 21 immunogenic
+    epitopes for HLA-A*0201 and HLA-A*0301. The conformational stability of HLA-A
+    B35:01 for predicted peptides was also measured. The precision for HLA-A*0201
+    and HLA-A*0301 was high. The top ranked epitopes for HLA-A*0201 and HLA-A*0301
+    were identified. The polarization of C T cells from 3 individuals was shown after
+    5 days with an immunogenic HLA-A*0201 epitope. The measure of MANS and count was
+    also representative.
+
+
+    To assess the ability of MUNIS to identify immunogenic epitopes, we used ELISpot
+    assays on EBV (EBRLF1, EBRLF2, EBNA1, EBNA2 and EBNA3a). We identified 21 immunogenic
+    epitopes for HLA-A*0201 and HLA-A*0301. The conformational stability of HLA-A
+    B35:01 for predicted peptides was also measured. The precision for HLA-A*0201
+    and HLA-A*0301 was high. The top ranked epitopes for HLA-A*0201 and HLA-A*0301
+    were identified. The polarization of C T cells from 3 individuals was shown after
+    5 days with an immunogenic HLA-A*0201 epitope. The measure of MANS and count was
+    also representative.
+
+
+    To assess the ability of MUNIS to identify immunogenic epitopes, we used ELISpot
+    assays on EBV (EBRLF1, EBRLF2, EBNA1, EBNA2 and EBNA3a). We identified 21 immunogenic
+    epitopes for HLA-A*0201 and HLA-A*0301. The conformational stability of HLA-A
+    B35:01 for predicted peptides was also measured. The precision for HLA-A*0201
+    and HLA-A*0301 was high. The top ranked epitopes for HLA-A*0201 and HLA-A*0301
+    were identified. The polarization of C T cells from 3 individuals was shown after
+    5 days with an immunogenic HLA-A*0201 epitope. The measure of MANS and count was
+    also representative.
+
+
+    To assess the ability of MUNIS to identify immunogenic epitopes, we used ELISpot
+    assays on EBV (EBRLF1, EBRLF2, EBNA1, EBNA2 and EBNA3a). We identified 21 immunogenic
+    epitopes for HLA-A*0201 and HLA-A*0301. The conformational stability of HLA-A
+    B35:01 for predicted peptides was also measured. The precision for HLA-A*0201
+    and HLA-A*0301 was high. The top ranked epitopes for HLA-A*0201 and HLA-A*0301
+    were identified. The polarization of C T cells from 3 individuals was shown after
+    5 days with an immunogenic HLA-A*0201 epitope. The measure of MANS and count was
+    also representative.
+
+
+    To assess the ability of MUNIS to identify immunogenic epitopes, we used ELISpot
+    assays on EBV (EBRLF1, EBRLF2, EBNA1, EBNA2 and EBNA3a). We identified 21 immunogenic
+    epitopes for HLA-A*0201 and HLA-A*0301. The conformational stability of HLA-A
+    B35:01 for predicted peptides was also measured. The precision for HLA-A*0201
+    and HLA-A*0301 was high. The top ranked epitopes for HLA-A*0201 and HLA-A*0301
+    were identified. The polarization of C T cells from 3 individuals was shown after
+    5 days with an immunogenic HLA-A*0201 epitope. The measure of MANS and count was
+    also representative.
+
+
+    To assess the ability of MUNIS to identify immunogenic epitopes, we used ELISpot
+    assays on EBV (EBRLF1, EBRLF2, EBNA1, EBNA2 and EBNA3a). We identified 21 immunogenic
+    epitopes for HLA-A*0201 and HLA-A*0301. The conformational stability of HLA-A
+    B35:01 for predicted peptides was also measured. The precision for HLA-A*0201
+    and HLA-A*0301 was high. The top ranked epitopes for HLA-A*0201 and HLA-A*0301
+    were identified. The polarization of C T cells from 3 individuals was shown after
+    5 days with an immunogenic HLA-A*0201 epitope. The measure of MANS and count was
+    also representative.
+
+
+    To assess the ability of MUNIS to identify immunogenic epitopes, we used ELISpot
+    assays on EBV (EBRLF1, EBRLF2, EBNA1, EBNA2 and EBNA3a). We identified 21 immunogenic
+    epitopes for HLA-A*0201 and HLA-A*0301. The conformational stability of HLA-A
+    B35:01 for predicted peptides was also measured. The precision for HLA-A*0201
+    and HLA-A*0301 was high. The top ranked epitopes for HLA-A*0201 and HLA-A*0301
+    were identified. The polarization of C T cells from 3 individuals was shown after
+    5 days with an immunogenic HLA-A*0201 epitope. The measure of MANS and count was
+    also representative.
+
+
+    To assess the ability of MUNIS to identify immunogenic epitopes, we used ELISpot
+    assays on EBV (EBRLF1, EBRLF2, EBNA1, EBNA2 and EBNA3a). We identified 21 immunogenic
+    epitopes for HLA-A*0201 and HLA-A*0301. The conformational stability of HLA-A
+    B35:01 for predicted peptides was also measured. The precision for HLA-A*0201
+    and HLA-A*0301 was high. The top ranked epitopes for HLA-A*0201 and HLA-A*0301
+    were identified. The polarization of C T cells from 3 individuals was shown after
+    5 days with an immunogenic HLA-A*0201 epitope. The measure of MANS and count was
+    also representative.
+
+
+    (Note: The OCR text seems to have repetitive sections/artifacts. I will provide
+    the coherent flow based on the provided segments.)
+
+
+    To evaluate the practicality of peptide binding and immunogenicity within the
+    EBV protein for HLA-A 1 alleles, given their relevance to immune complexes, to
+    multiple sequences (>90%) were identified. We made an EBV decoy by eluting peptides
+    from the EBV protein to run the MUNIS test. We screened all 8-15 mers from 5 EBV
+    proteins (EBRLF1, EBRLF2, EBNA1, EBNA2 and EBNA3a) and 257 predicted peptides
+    to bind HLA-A 17 alleles using an earlier iteration of MUNIS. All of these peptides
+    found that 0.01 outperforming in (f). Predicted non-binders other were used as
+    non-binders for another allele of the EBV
+
+
+    The higher the score, the greater the affinity for the given peptide. D) Summary
+    data for all predicted peptides and non-binders MUNIS were normalized to the HLA
+    immunodominant peptide for HLA-A B35:01. HLA-A allele is represented by the dashed
+    line. Circles are predicted peptides and non-binders are grey squares. E) Summary
+    data for all HLA-A 17 alleles selected for the predicted peptides. Box plots are
+    presented with the median, interquartile range, and the 5th and 95th percentiles
+    representing the range (outliers are not shown as circles). f) Normalized anti-HLA-M1
+    for non-binders predicted on peptides with MUNIS score greater than or equal to
+    the threshold. The horizontal line represents the mean anti-HLA-M1 across all
+    predicted peptides to bind or not bind a particular HLA-A allele (n = 17). P-values
+    for comparisons between predicted peptides and non-binders were calculated using
+    the Wilcoxon rank test. Panels a and b are generated with graphillob.com.
+
+
+    score and the range for any given peptide and found that both methods perform
+    similarly in the HLA acute and chronic immunodominance domains. Finally, we observed
+    that sampling cells from Swiss-Prot was equal to sampling from the HLA-M1 cell
+    lines.
+
+
+    Nature Intelligence | Volume 7 (2025) | Pages 223–234
+
+    '
+  mdcn: "\n\n# 文章\n\nhttps://doi.org/10.1038/s41466-024-00971-y\n\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_6_0.png)\n\
+    \na 表位修剪 \nb 实验验证 \nc 代表性稳定性 (HLA-A B35:01)\n\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_6_1.png)\n\
+    \ne 累积稳定性数据 (所有 HLA-A 1)\n\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_6_2.png)\n\
+    \n图 2. 实验性 HLA-A 肽研究证实了 MUNIS 对 HLA-A 内结合肽和非结合肽的亲和力。表位修剪程序的示意图。从来自 17 种不同 HLA-A\
+    \ 等位的 EBRLF1、EBRLF2、EBNA1、EBNA2 和 EBNA3a 蛋白中筛选前 257 个肽用于下游分析。B) 使用 TAP 缺陷的 HLA-M1\
+    \ 细胞对预测肽进行稳定性评估，以识别被 HLA 分子呈现并结合的肽。如果对每个结合 HLA 分子的肽进行 IFN Elpot 稳定性实验，数据以浅灰色显示。C)\
+    \ HLA-A B35:01 预测肽的代表性数据。DMSO对照组为浅灰色，B35-01 免疫优势肽为浅蓝色，来自 EBV 蛋白的预测肽为蓝色，MUNIS 阈值：0.1，MUNIS\
+    \ 阈值：0.5，MUNIS 阈值：0.7，MUNIS 阈值：0.9。\n\n![](img/1a4107427b120f5fd0ae04fe5f7f7f10_6_3.png)\n\
+    \n得分越高，给定肽的亲和力越大。D) 所有预测肽和非结合肽的汇总数据，已对 HLA-A B35:01 免疫优势肽归一化。HLA-A 等位基因由虚线表示。圆形代表预测肽，正方形代表非结合肽。E)\
+    \ 所有 HLA-A 17 等位基因预测肽的汇总数据。箱线图显示中位数、四分位距以及第 5 百位数和第 95 百分数的范围（离群值未以圆圈表示）。f) 对\
+    \ MUNIS 分数大于或等于阈值的预测肽进行归一化的抗-HLA-M1。水平线代表所有结合或不结合特定 HLA-A 等位基因肽的抗-HLA-M1 平均值 (n\
+    \ = 17)。预测肽和非结合肽之间的 P 值使用 Wilcoxon 秩检验计算。图 a 和 b 使用 graphillob.com 生成。\n\n结果发现两种方法在\
+    \ HLA 急性和慢性免疫优势结构域中表现相似。最后，我们观察到来自 Swiss-Prot 的采样与来自 HLA-M1 细胞系的采样相等。\n\n# MUNIS\
+    \ 识别的表位和 T 细胞结合 ELISpot\n\n为了评估 EBV 蛋白中 HLA-A 1 等位基因肽的结合和免疫原性的实用性（考虑到它们与免疫复合物的相关性），识别了多种序列\
+    \ (>90%)。我们通过从 EBV 蛋白提取肽制作 EBV 诱饵来运行 MUNIS 测试。我们筛选了来自 5 种 EBV 蛋白（EBRLF1、EBRLF2、EBNA1、EBNA2\
+    \ 和 EBNA3a）的所有 8-15 氨基酸链，以及与 HLA-A 17 等位基因结合的预测预测肽，并使用了早期的 MUNIS 版本。这些肽在 (f) 中表现优异。非结合肽被用作另一个\
+    \ EBV 等位基因的非结合肽。\n\n图 6. MIS 识别的表位和 T 细胞结合 ELISpot。**a.** 表达这些 HLA 等位基因的个体外周血单细胞\
+    \ (PBMC) 的 HLA-A*0201 和 HLA-A*0301 限制性表位的代表性 ELISpot。DMSO 用作负对照，CD38 抗体用于对照。NTTC\
+    \ 用于计数。所有识别的肽均以双池进行测试。**b.** 通过 MIS 和 ELISpot 识别的 HLA-A*0201 和 HLA-A*0301 的 21\
+    \ 个免疫原性表位列表。**c.** 代表性构象稳定性。**d.** ELISpot 实验免疫表位（未在 ELISpot 中）。**e.** HLA-A*0201\
+    \ 和 HLA-A*0301 的平均准确率。**f.** HLA-A*0201 和 HLA-A*0301 排名最高的表位。**g.** 显示 3 个个体在使用免疫原性\
+    \ HLA-A*0201 表位 5 天后的 T 细胞极化。所有肽均经过了技术重复测试。**h.** MANS 和计数的代表性衡量标准。\n\n"
+  merge: 0
+- raw:
+  - "[PAGE 9]\n\n# Article\n\nhttps://doi.org/10.1038/s41466-024-00971-y\n\nof the\
+    \ peptide in its protein origin. To allow the network to determine which amino\
+    \ acids belong to the peptide and not, we include a feature vector of each amino\
+    \ acid. The output of the LSTM is a sequence of vectors that we flatten into a\
+    \ single vector for the sequence by averaging the sequence length. Finally, we\
+    \ concatenate this feature vector with the binding motif and feed it into a two-layer\
+    \ feed-forward network to produce the sequence prediction.\n\n(Life Technologies)\
+    \ and HLA-ABC ABC antibody (Clone W6/32, BioLegend, 1:100) hla I expression was\
+    \ measured by flow cytometry.\n\n# Model training\n\nWe train models using the\
+    \ PyTorch framework on N A600 GPU clusters for 75 epochs with a total batch size\
+    \ of 26 (2 hours of training time). The binding model is initialized using the\
+    \ pretrained ESM-2B model parameter and all weights are fine-tuned. The training\
+    \ is initialized randomly at the start of training. Our models are trained using\
+    \ mixed-precision (fp16) using the Adam optimizer, with a learning rate of 1e-4\
+    \ that is constant throughout training.\n\n# Calculation of entropy\n\nShannon\
+    \ entropy (it is, sequence conservation) at each HLA anchor residue position was\
+    \ calculated using the following formula:\n\n```\n$S = -\\sum_{i} p(x_i) \\log\
+    \ p(x_i)$\n```\n\nwhere n is the number of unique amino acids at any given position,\
+    \ $x_i$ is the unique amino acid, and $p(x_i)$ is the probability by dividing\
+    \ the number of peptides with amino acid $x_i$ at that given position, by the\
+    \ total number of peptides in the dataset.\n\n# Study participants\n\nStudy participants\
+    \ were recruited from outpatient clinics in Boston area and from outside Boston.\
+    \ The Institutional Review Board of Massachusetts General Hospital approved the\
+    \ use of cells derived from human blood. PBMCs from healthy individuals with HLA-A*02:01\
+    \ or non-HLA-A2positive donors were selected. PBMCs were collected by Ficoll gradient\
+    \ using dextrose or sucrose particles. They were centrifuged and stored in liquid\
+    \ nitrogen for use. HLA I typing was performed for all patients as described previously$^{28}$.\n\
+    \n# Peptide synthesis\n\nPeptides were synthesized on an automated peptide synthesizer\
+    \ using Fmoc chemistry$^{2}$ on 2-chlorotrityl resin. The terminal amino acids\
+    \ were removed using the protected amino acids in DMF. Unprotected sites were\
+    \ removed from the block resin using DCM and DCM (95:5 v/v). Amino acids were\
+    \ coupled (using optimized peptide to generate the required number of cycles)\
+    \ for the full-length peptide. The removal of protecting groups was performed\
+    \ using 20% piperidine in DMF after each coupling cycle.\n\n# Peptide synthesis\
+    \ and analysis\n\nAmino acids were activated with HATU and DIPEA in DMF. The peptides\
+    \ were assembled and the resin was washed with DMF and DCM and metanned three\
+    \ times each. The peptides were cleaved from the supported support and dried using\
+    \ diethyl ether-cold-cold-cocktail (TFA/isopropyl alcohol/water (94:2.5:0.5) v/v).\n\
+    \n# HLA-A1 binding assay\n\nHLA-A1 binding assays were performed as previously\
+    \ described$^{29}$. In 10 Transporter Associated with Antigen Presentation (TAP-deficient)\
+    \ MC211-x721.221 cells were incubated with 100 ng of peptide and 5 $\\mu$g of\
+    \ $\beta$-microglobulin (Si Bioologic) in 1640 medium at 37°C/5% CO$_2$ for 24\
+    \ hours. For control, cells were incubated without MHC class peptides in parallel.\n\
+    \n# Ex vivo IFN ELISpot assay\n\nIFNY ELISpot was performed according to the manufacturer's\
+    \ instructions (Matches). PBMCs were incubated with individual peptides from EBV\
+    \ at a concentration of $5 \\times 10^6$ cells/ml for 16 to 18 hours. Cells were\
+    \ then stimulated with anti-CD3 (Clone OK03T3, BioLegend, 0.5 $\\mu$g/ml) and\
+    \ anti-CD28 (Clone CD28.2, BioLegend, 0.5 $\\mu$g/ml). The number of cells forming\
+    \ in the highest value DMSO\n\n# Ex vivo proliferation assay\n\nPBMCs were seeded\
+    \ at $1 \\times 10^6$ cells/ml in TCell Raf Medium (Thermo Fisher) and were incubated\
+    \ at 37°C for 20 min. Cells were protected from light and measured every 5 minutes\
+    \ during incubation. After 10 days, cells were harvested, followed by centrifugation\
+    \ at 1500 rpm for 3 minutes before suspension in culture media. Cells were plated\
+    \ into 96-well plates with 200 $\\mu$l of cell medium and incubated with individual\
+    \ EBV peptides at a concentration of\n\n# Reporting summary\n\nFurther information\
+    \ on research design is available in the Portfolio Research Summary linked to\
+    \ this article.\n\nNature Medicine | Volume 7 (2021) | 225–234\n\n241"
+  - '[PAGE 10]
+
+
+    # Article
+
+
+    # Data availability
+
+
+    All data required to train and evaluate the models HLA I-peptide stability and
+    elicit are available in the Mendeley Data repository. Sequences for the major
+    histocompatibility complex identified from IMGT can also be found in the released
+    code. Full protein sequences, including accession codes, are also available in
+    Mendeley Data repository.
+
+
+    # Code availability
+
+
+    The code used to train and run our predictions is available via Zenodo at https://doi.org/10.5281/zenodo.1421959
+    (ref. 58).
+
+
+    # References
+
+
+    +   1. Kaseke, C., Tanaka-Meka, R., Senjobe, F., & Gai, G. D. The encoding region
+    for CTL epitope specificity in HIV cells. J. Infect. 225, S32–S37 (2021).
+
+
+    +   2. Collins, D. R., Gao, G. D., & Walker, B. D. CD8+ T cells in human lung
+    cancer. Rev. Nat. Immunol. 20, 471–482 (2020).
+
+
+    +   3. Chen, G., et al. Clinical and immunological features of severe patients
+    with novel coronavirus disease 2019. J. Clin. Invest. 130, 2628–2629 (2020).
+
+
+    +   5. Soreina, A. Y., et al. Viral cell-associated agglutinin dynamics in COVID-19
+    patients caused by coronavirus mutation but viral burden. Pediatr Allergy. 161,
+    558–569 (2020).
+
+
+    +   6. Zonotti, R. et al. T cells to SARS-CoV-2 recognition and activation in
+    B cell density and reduce risk of severe COVID-19. Trans. Med. 58, ehed4529 (2023).
+
+
+    +   7. Bhattacharya, S., Karim, R. C., Goldberg, B., & Gai, G. D. Functional analysis
+    of MHC classspecific responses in HIV-1 infected patients. J. HIV AIDS. 18, 257–263
+    (2023).
+
+
+    +   8. Clemens, E., van der Saarden, J., Wong, S. S., Song, L. M., & Valkenbaum,
+    A. Assessing the power of T cells: predictions in a universal influenza vaccine.
+    Science 6, 1115–1120 (2022).
+
+
+    +   9. Liu, J. et al. CD8+ T cells contribute to vaccine protection against SARS-CoV-2
+    in mice. Science. 7, e7847 (2022).
+
+
+    +   10. Weiss, W. M., & Furiahi, R. S. Pathogenic elements, elicit immunity and
+    vaccine design. Nat. Rev. Microbiol. 5, 555–573 (2017).
+
+
+    +   11. Yewdell, J. W., & Berlin, R. J. Immunology in major histocompatibility
+    class I-restricted T-cell responses. Ann. Rev. Immunol. 17, 51–88 (1999).
+
+
+    +   12. Reinisson, B., Alvazaz, P., Peters, B., & Neels, M. MHC-NCh-4 and MHC-ClassI-4:
+    Predictions of MHC antigen presentation by de novo motif sequence convolution
+    and affinity data. Nat. Rev. Genet. 48, 4949–4954 (2022).
+
+
+    +   13. O''Connell, D. J., Turnbull, A., & Robinson, L. A''McCurry 2.0: Pan-allele
+    presented-peptide presentation of MHC class I peptides by proteasomal processing
+    and transport. Cell. 171, 42–48 (2017).
+
+
+    +   14. Sarkizova, S. et al. A large peptome dataset shows HLA class I epitope
+    prediction accuracy for most of the human population. Nat. Biotechnol. 381, 199–209
+    (2022).
+
+
+    +   15. Gireaf, M. et al. MHCpeptide complexes of antigen presentation and TCR
+    recognition with MHCxrd2 and PRIME2 out prediction for SARS-CoV-2-T cell epitopes.
+    Cell. Syst. 14, 72–83 (2023).
+
+
+    17. Pracher, M. Identification and evaluation of 74 COVID-19 vaccine epitopes
+    reveals low performance of population consensus epitope prediction tools. Cell
+    Rep. 10, 102465 (2021).
+
+
+    18.is, J. J. Prediction of MHC class presented peptides that demonstrate immunity.
+    Comput. Biol. 9, e003026 (2013).
+
+
+    19. Schmitt, J., et al. Prediction of neoepitope immunity TCR recognition and
+    provides insights into immunity prediction. Cell Rep. Med. 2, 10051 (2021).
+
+
+    20. Wells, D. K. et al. Parameters of T cell peptide immunity recognition through
+    convolutional architecture for neoepitope prediction. Cell 138, 818–834 (2023).
+
+
+    21. Hundal, J. et al. peptocox: A convolutional tool to identify and visualize
+    viral cancers. Cancer Immunology. 98, 408–420 (2022).
+
+
+    22. Berjergard, A. M., Nielsen, H., Mahmud, R. S., Zallas, J., & Elduck, A. C.
+    Mutex: Prediction of neoepitopes from tumor somatic mutations. Science. 373, 1123–1130
+    (2021).
+
+
+    23. Kodyash, J. & Rubinstein, A. Openvat: Analysis of peptide affinity for canonical
+    presentation prediction methods. Methods Biol. 2120, 147–160 (2020). Clifton NJ.,
+
+
+    24. Rife, A. et al. Biological and structure analysis for cell machine learning
+    to predict protein-protein complex interactions. Proc. Natl. Acad. Sci. 118, e20163819
+    (2021).
+
+
+    25. Rachel, J. et al. Machine learning of MHC-it presents reveals alternative
+    binding mode of MHC class I epitopes. Immunity 56, 10351 (2023).
+
+
+    26. Strazer, M. et al. HLA-I immunodominome profiling and deep learning features
+    of epitopes to identify antigen discovery. Immunity 56, 1681–1698 (2023).
+
+
+    28. Nathan, A. et al. Structural-guided T cell vaccine design for SARS-CoV-2 variants
+    and their reactivations. Cells 164, 4401–4413 (2020).
+
+
+    Natural Medicine | Volume 1 (2023) | 225–234
+
+
+    242'
+  md: '
+
+    # Article
+
+
+    https://doi.org/10.1038/s41466-024-00971-y
+
+
+    of the peptide in its protein origin. To allow the network to determine which
+    amino acids belong to the peptide and not, we include a feature vector of each
+    amino acid. The output of the LSTM is a sequence of vectors that we flatten into
+    a single vector for the sequence by averaging the sequence length. Finally, we
+    concatenate this feature vector with the binding motif and feed it into a two-layer
+    feed-forward network to produce the sequence prediction.
+
+
+    (Life Technologies) and HLA-ABC ABC antibody (Clone W6/32, BioLegend, 1:100) HLA-I
+    expression was measured by flow cytometry.
+
+
+    # Model training
+
+
+    We train models using the PyTorch framework on N A600 GPU clusters for 75 epochs
+    with a total batch size of 26 (2 hours of training time). The binding model is
+    initialized using the pretrained ESM-2B model parameter and all weights are fine-tuned.
+    The training is initialized randomly at the start of training. Our models are
+    trained using mixed-precision (fp16) using the Adam optimizer, with a learning
+    rate of 1e-4 that is constant throughout training.
+
+
+    # Calculation of entropy
+
+
+    Shannon entropy (it is, sequence conservation) at each HLA anchor residue position
+    was calculated using the following formula:
+
+
+    ```
+
+    $S = -\sum_{i} p(x_i) \log p(x_i)$
+
+    ```
+
+
+    where n is the number of unique amino acids at any given position, $x_i$ is the
+    unique amino acid, and $p(x_i)$ is the probability by dividing the number of peptides
+    with amino acid $x_i$ at that given position, by the total number of peptides
+    in the dataset.
+
+
+    # Study participants
+
+
+    Study participants were recruited from outpatient clinics in Boston area and from
+    outside Boston. The Institutional Review Board of Massachusetts General Hospital
+    approved the use of cells derived from human blood. PBMCs from healthy individuals
+    with HLA-A*02:01 or non-HLA-A2 positive donors were selected. PBMCs were collected
+    by Ficoll gradient using dextrose or sucrose particles. They were centrifuged
+    and stored in liquid nitrogen for use. HLA-I typing was performed for all patients
+    as described previously$^{28}$.
+
+
+    # Peptide synthesis
+
+
+    Peptides were synthesized on an automated peptide synthesizer using Fmoc chemistry$^{2}$
+    on 2-chlorotrityl resin. The terminal amino acids were removed using the protected
+    amino acids in DMF. Unprotected sites were removed from the block resin using
+    DCM and DCM (95:5 v/v). Amino acids were coupled (using optimized peptide to generate
+    the required number of cycles) for the full-length peptide. The removal of protecting
+    groups was performed using 20% piperidine in DMF after each coupling cycle.
+
+
+    # Peptide synthesis and analysis
+
+
+    Amino acids were activated with HATU and DIPEA in DMF. The peptides were assembled
+    and the resin was washed with DMF and DCM and metanned three times each. The peptides
+    were cleaved from the supported support and dried using diethyl ether-cold-cold-cocktail
+    (TFA/isopropyl alcohol/water (94:2.5:0.5) v/v).
+
+
+    # HLA-A1 binding assay
+
+
+    HLA-A1 binding assays were performed as previously described$^{29}$. In 10 Transporter
+    Associated with Antigen Presentation (TAP-deficient) MC211-x721.221 cells were
+    incubated with 100 ng of peptide and 5 $\mu$g of $\beta$-microglobulin (Si Bioologic)
+    in 1640 medium at 37°C/5% CO$_2$ for 24 hours. For control, cells were incubated
+    without MHC class peptides in parallel.
+
+
+    # Ex vivo IFN ELISpot assay
+
+
+    IFNY ELISpot was performed according to the manufacturer''s instructions (Matches).
+    PBMCs were incubated with individual peptides from EBV at a concentration of $5
+    \times 10^6$ cells/ml for 16 to 18 hours. Cells were then stimulated with anti-CD3
+    (Clone OK03T3, BioLegend, 0.5 $\mu$g/ml) and anti-CD28 (Clone CD28.2, BioLegend,
+    0.5 $\mu$g/ml). The number of cells forming in the highest value DMSO
+
+
+    # Ex vivo proliferation assay
+
+
+    PBMCs were seeded at $1 \times 10^6$ cells/ml in TCell Raf Medium (Thermo Fisher)
+    and were incubated at 37°C for 20 min. Cells were protected from light and measured
+    every 5 minutes during incubation. After 10 days, cells were harvested, followed
+    by centrifugation at 1500 rpm for 3 minutes before suspension in culture media.
+    Cells were plated into 96-well plates with 200 $\mu$l of cell medium and incubated
+    with individual EBV peptides at a concentration of
+
+
+    # Reporting summary
+
+
+    Further information on research design is available in the Portfolio Research
+    Summary linked to this article.
+
+
+    Nature Medicine | Volume 7 (2021) | 225–234
+
+
+    241
+
+
+    # Data availability
+
+
+    All data required to train and evaluate the models HLA-I-peptide stability and
+    elicit are available in the Mendeley Data repository. Sequences for the- major
+    histocompatibility complex identified from IMGT can also be found in the released
+    code. Full protein sequences, including accession codes, are also available in
+    Mendeley Data repository.
+
+
+    # Code availability
+
+
+    The code used to train and run our predictions is available via Zenodo at https://doi.org/10.5281/zenodo.1421959
+    (ref. 58).
+
+
+    # References
+
+
+    - 1. Kaseke, C., Tanaka-Meka, R., Senjobe, F., & Gai, G. D. The encoding region
+    for CTL epitope specificity in HIV cells. J. Infect. 225, S32–S37 (2021).
+
+    - 2. Collins, D. R., Gao, G. D., & Walker, B. D. CD8+ T cells in human lung cancer.
+    Rev. Nat. Immunol. 20, 471–482 (2020).
+
+    - 3. Chen, G., et al. Clinical and immunological features of severe patients with
+    novel coronavirus disease 2019. J. Clin. Invest. 130, 2628–2629 (2020).
+
+    - 5. Soreina, A. Y., et al. Viral cell-associated agglutinin dynamics in COVID-19
+    patients caused by coronavirus mutation but viral burden. Pediatr Allergy. 161,
+    558–569 (2020).
+
+    - 6. Zonotti, R. et al. T cells to SARS-CoV-2 recognition and activation in B
+    cell density and reduce risk of severe COVID-19. Trans. Med. 58, ehed4529 (2023).
+
+    - 7. Bhattacharya, S., Karim, R. C., Goldberg, B., & Gai, G. D. Functional analysis
+    of MHC classspecific responses in HIV-1 infected patients. J. HIV AIDS. 18, 257–263
+    (2023).
+
+    - 8. Clemens, E., van der Saarden, J., Wong, S. S., Song, L. M., & Valkenbaum,
+    A. Assessing the power of T cells: predictions in a universal influenza vaccine.
+    Science 6, 1115–1120 (2022).
+
+    - 9. Liu, J. et al. CD8+ T cells contribute to vaccine protection against SARS-CoV-2
+    in mice. Science. 7, e7847 (2022).
+
+    - 10. Weiss, W. M., & Furiahi, R. S. Pathogenic elements, elicit immunity and
+    vaccine design. Nat. Rev. Microbiol. 5, 555–555 (2017).
+
+    - 11. Yewdell, J. Reinisson, B., Peels, B., & Neels, M. HLA-I class presentation
+    by proteasomal processing and transport. Ann. Rev. Immunol. 17, 51–88 (1999).
+
+    - 12. Strazer, M. et al. HLA-I immunodominome profiling and deep learning features
+    of epitopes to identify antigen discovery. Immunity 56, 1681–1698 (2023).
+
+    - 13. Rife, A. et al. Biological and structure analysis for cell machine learning
+    to predict protein-protein complex interactions. Proc. Natl. Acad. Sci. 118, e20163819
+    (2021).
+
+    - 14. Rachel, J. et al. Machine learning of MHC-it presents alternative binding
+    mode of MHC class I epitopes. Immunity 56, 10351 (2023).
+
+    - 15. Hundal, J. et al. A convolutional tool to identify SARS-CoV-2 variants.
+    Cells. 58, e408–420 (2022).
+
+    - 17. Nathan, A. et al. Structural-guided T cell vaccine design for SARS-CoV-2
+    variants and their reactivations. Cells 164, 4401–4413 (2020).
+
+    - 18. Kodyash, J. & Rubinstein, A. Openvat: Analysis of peptide affinity for canonical
+    presentation methods. Methods Biol. 2120, 147–160 (2020).
+
+    - 19. Schmitt, J. et al. Structural-guided T cell recognition and prediction.
+    Cell Rep. Med. 2, 10051 (2021).
+
+    - 20. Wells, D. K. et al. T cell recognition through convolutional architecture.
+    Cell 138, 818–834 (2023).
+
+    - 21. Berjergard, A. M. Mutex: Prediction of neoepitopes from tumor somatic mutations.
+    Science 373, 1123–1130 (2021).
+
+    '
+  mdcn: '
+
+
+    # 文章
+
+
+    https://doi.org/10.1038/s41466-024-00971-y
+
+
+    该肽在其蛋白质来源中的起始情况。为了让网络能够确定哪些氨基酸属于肽而哪些不属于，我们包含了每个氨基酸的特征向量。LSTM 的输出是一个向量序列，我们通过平均序列长度将其展平成序列的单个向量。最后，我们将此特征向量与结合基序（binding
+    motif）拼接，并输入到双层前馈网络中产生序列预测。
+
+
+    （Life Technologies）和 HLA-ABC 抗体（克隆 W6/32, BioLegend, 1:100）通过流式细胞术测量 HLA-I 的表达。
+
+
+    # 模型训练
+
+
+    我们在 N A600 GPU 集群上使用 PyTorch 框架训练模型，运行 75 个 epoch，总 batch size 大为 26（训练时间 2 小时）。结合模型使用预训练的
+    ESM-2B 模型参数初始化，并对所有权重进行微调。训练在开始时随机初始化。我们的模型使用 Adam 优化器通过混合精度（fp16）进行训练，学习率在整个过程中保持为
+    1e-4。
+
+
+    # 熵的计算
+
+
+    使用以下公式计算每个 HLA 锚点残基位置的香农熵（即序列保守性）：
+
+
+    ```
+
+    $S = -\sum_{i} p(x_i) \log p(x_i)$
+
+    ```
+
+
+    其中，n 是任何给定位置上唯一氨基酸的数量，$x_i$ 是唯一的氨基酸，$p(x_i)$ 是概率，计算方法是将该给定位置具有氨基酸 $x_i$ 的肽的数量除以数据集中肽的总数。
+
+
+    # 研究参与者
+
+
+    研究参与者招募自波士顿地区的门诊部和波士顿以外。马萨诸塞总医院的机构审查委员会批准使用源自人类血液的细胞。选择了 HLA-A*02:01 或非 HLA-A2
+    阳性供体的健康个体外周血单核细胞（PBMCs）。使用葡萄糖或蔗糖颗粒通过 Ficoll 密度梯度法收集 PBMCs。将其进行离心并储存在液氮中备用。如前所述$^{28}$
+    对所有患者进行了 HLA-I 分型。
+
+
+    # 肽合成
+
+
+    在自动肽合成仪上，在 2-氯三基树脂上通过 Fmoc 化学$^{2}$ 合成肽。使用 DMF 中保护的氨基酸去除末端氨基酸。使用 DCM 和 DCM (95:5
+    v/v) 从块树脂中去除未保护位点。对全长进行氨基酸偶联（使用优化的肽生成所需的循环次数）。在每个偶联循环后，使用 DMF 中 20% 的哌啶去除保护基。
+
+
+    # 肽的合成与分析
+
+
+    在 DMF 中用 HATU 和 DIPEA 激活氨基酸。组装肽后，用 DMF 和 DCM 分别洗涤树脂三次。肽从载体上切除，并使用二乙醚-冷-冷-鸡尾水（TFA/异丙醇/水
+    (94:2.5:0.5) v/v）进行干燥。
+
+
+    # HLA-A1 结合实验
+
+
+    按照之前的描述$^{29}$ 进行 HLA-A1 结合实验。将 10 个转运体相关抗原呈递（TAP 缺陷）MC211-x721.221 细胞与 100 ng
+    肽和 5 $\mu$g $\beta$-微球蛋白（Si Bioologic）在 1640 培养基中，于 37°C/5% CO$_2$ 下培养 24 小时。作为对照，平行培养不含
+    MHC 类肽的细胞。
+
+
+    # 体外 IFN ELISpot 实验
+
+
+    根据制造商说明（Matches）进行 IFNY ELISpot 实验。将 PBMCs 以 $5 \times 10^6$ cells/ml 的浓度与来自 EBV
+    的单个肽培养 16 至 18 小时。随后，用抗 CD3 抗（克隆 OK03T3, BioLegend, 0.5 $\mu$g/ml）和抗 CD28 抗（克隆
+    CD28.2, BioLegend, 0.5 $\mu$g/ml）刺激细胞。形成最高值的细胞 数量
+
+
+    # 体外增殖实验
+
+
+    将 PBMCs 以 $1 \times 10^6$ cells/ml 的密度种在 TCell Raf 培养基（Thermo Fisher）中，并在 37°C
+    下培养 20 分钟。培养期间细胞避光并每 5 分钟测量一次。10 天后，收获细胞，在 1500 rpm 下离心 3 分钟后悬浮于培养基中。将细胞接种到含有
+    200 $\mu$l 细胞培养的 96 孔板中，并与单个单个 EBV 肽培养
+
+
+    # 报告摘要
+
+
+    有关研究设计的更多信息请见本文链接的研究组合摘要。
+
+
+    Nature Medicine | 第 7 卷 (2021) | 225–234
+
+
+    241
+
+
+    # 数据可用性
+
+
+    训练和评估模型 HLA-I-肽稳定性和激发所需的所有数据均可在 Mendeley Data 仓库中获得。从 IMGT 识别的主要组织相容性复合体序列也可以在发布的代码找到。包括登录代码在内的完整蛋白质序列也位于
+    Mendeley Data 仓库。
+
+
+    # 代码可用性
+
+
+    用于训练和运行预测的代码可以通过 Zenodo 获取：https://doi.org/10.5281/zenodo.1421959（参考文献 58）。
+
+
+    # 参考文献
+
+
+    - 1. Kaseke, C., Tanaka-Meka, R., Senjobe, F., & Gai, G. D. HIV 细胞 CTL 表位特异性的编码区。J.
+    Infect. 225, S32–S37 (2021).
+
+    - 2. Collins, D. R., Gao, G. D., & Walker, B. D. 人肺癌中的 CD8+ T 细胞。Rev. Nat. Immunol.
+    20, 471–482 (2020).
+
+    - 3. Chen, G., et al. 新冠病毒肺炎 2019 严重患者的临床和免疫特征。J. Clin. Invest. 130, 2628–2629
+    (2020).
+
+    - 5. Soreina, A. Y., et al. 冠状病毒变异引起 COVID-19 患者中病毒细胞相关凝集蛋白动力学。Pediatr Allergy.
+    161, 558–569 (2020).
+
+    - 6. Zonotti, R. et al. B 细胞密度中对 SARS-CoV-2 的 T 细胞识别和激活并降低严重 COVID-19 的风险。Trans.
+    Med. 58, e4029 (2023).
+
+    - 7. Bhattacharya, S., Karim, R., Goldberg, B., & Gai, D. HIV 感染患者的 MHC 特异性功能分析。J.
+    HIV AIDS 18, 257–263 (2023).
+
+    - 8. Clemens, E., van Saarden, J., Wong, S., Song, L., & Valkenbaum, A. 通用疫苗中
+    T 细胞的力量。Science 6, 1115–1120 (2022).
+
+    - 9. Liu, J., et al. 对 SARS-CoV-2 产生保护的 T 细胞。Science 7, e7847 (2022).
+
+    - 10. Weiss, W. & Furiahi, R. 病原体、免疫和疫苗设计。Nat. Rev. Microbiol. 5, 555–555 (2017).
+
+    - 11. Yewdell, J., Reinisson, B., Peels, B., & Neels, M. 通过蛋白酶体处理和转运的 HLA-I 类。Ann.
+    Rev. Immunol. 17, 51–88 (1999).
+
+    - 12. Strazer, M. et al. HLA-I 免疫组分析和深度学习特征识别抗原。Immunity 56, 1681–1698 (2023).
+
+    - 13. Rife, A. et al. 预测蛋白质蛋白相互作用的生物学和结构分析。Proc. Natl. Acad. Sci. 118, e2016381
+    (2021).
+
+    - 14. Rachel, J. et al. 机器学习的 MHC 类结合结合模式。Immunity 56, 10351 (2023).
+
+    - 15. Hundal, J. et al. 识别 SARS-CoV-2 变异的卷积工具。Cells 58, e408–420 (2022).
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 11]
+
+
+    # Acknowledgments
+
+
+    This work was funded by the Mark and Lisa Swartz AI/ML Initiative, award T320GO0763
+    and T320GA4273 from the Wellcome Trust, General Medical Sciences, and the MIT.
+    Additional support was provided by the Ragon Institute of MGH and Harvard (G.D.G.).
+    G.D.G. is also supported by the Bill and Melinda Foundation, a Burroughs Career
+    Award for Medical Scientists and Howard Hughes Fellowship. The completeness is
+    the responsibility of the authors and does not necessarily represent the views
+    of the National General Sciences or the National Institutes of Health.
+
+
+    # Author contributions
+
+
+    Conceptualization: J.W.N., A.N.S., G.D.G., and R.B.; Software; Formal analysis:
+    J.W.N. and A.N.S.; Investigation: A.N.S., C.C.T., R.-M., and E.G.; Writing-original
+    draft: J.W.N., A.N.S., N.C.T., R.-M., E.G., and R.B.; Writing-revision and draft:
+    G.D.G. and R.B.; Funding: J.W.N., A.N.S., and R..
+
+
+    # Competing interests
+
+
+    The authors declare no competing interests.
+
+
+    # Additional information
+
+
+    Extended data is available for this paper at https://doi.org/10.1038/s42526-024-0097-y.
+
+
+    # Supplementary information
+
+
+    Online version contains supplementary material available at https://doi.org/10.1038/s42526-024-0097-y.
+
+
+    Correspondence and requests for materials should be addressed to Gaurav D. G.
+    or Regina Bazar.
+
+
+    Peer review information Nature Intelligence thanks Yi X. Xiong, and the other,
+    reviewer(s) for their contribution to the review of this work.
+
+
+    Reprints and permissions are available at http://www.nature.com.
+
+
+    Publisher''s name remains neutral with regard to editorial decisions and publication
+    jurisdictions. Open Access This article is licensed under a Creative Commons Attribution
+    4.0 International License, which permits use, adaptation, distribution, and redistribution
+    in any medium or format, as long as you give appropriate credit to the author(s)
+    and source, provide a link to the license, and indicate if changes were made.
+    The images or other party material in this article are included in the article''s
+    Creative Commons license, unless otherwise indicated in the text. If material
+    is not included, you may need to obtain permission directly from the holder. To
+    view a copy of this license, visit http://creativecommons.org/licenses/by/4.0.
+
+
+    © The authors 2025
+
+
+    38. Nielsen, L. M., Kersten, M. J., Pals, S. T., Benjamin, F. J. and Bergen, I.
+    J. Epstein-Barr virus-posttransplant lymphoproliferative disease after organ transplantation:
+    pathogenesis, manifestations, and diagnosis. Transplant, 24.
+
+
+    39. Bjørneve, K. et al. Longitudinal analysis reveals high frequency of Epstein-Barr
+    virus associated with multiple sclerosis. Science, 375, 296–306 (2022).
+
+
+    40. Bjørneve, K., Moss, C., Cohen, J. I. and A. Scher, Epstein-Barr virus as the
+    cause of triggering multiple sclerosis. Nature Med., 19, 160–171 (2023).
+
+
+    41. Smart, M. K. et al. Epstein-Barr virus serology, and impact of VCA IgG: High
+    titer across a healthy population. Nature J., 81, 201 (2021).
+
+
+    42. Bashiro, A. A. et al. A HLA presentation inhibits peptide receptor and T cell
+    control. Nat. Acad. Sci. USA. 117, 28532–28534 (2020).
+
+
+    43. Thindborg, E. et al. Tapasin shapes immunomodulatory effects and binding specificity
+    of MHC-peptide complex class I. Eur J. Immunol. 38, 364–369 (2018).
+
+
+    44. Montenegro, A. E. et al. TCR-NEB2 enables efficient control of TCR-peptide
+    binding by using TCR and T cell blockade. Science 368, eade3044 (2020).
+
+
+    45. Gagev, D. V. et al. VDB2019 database: extended network analysis and T-cell
+    receptor motif prediction. Nucleic Acids Res. 48, D10572 (2020).
+
+
+    46. Narahashi, Y. E et al. T cell reactivity to SARS-CoV-2 Omicron variant is
+    preserved in most but not all individuals. Cell 180, 105 (2022).
+
+
+    47. White, J. J., Phillips, J., Wang, J., and Friedman, N. MCAS-TCR: T cell reactivity
+    using a curated catalogue of peptide-T cell receptors. Biology 33, 2924–2939 (2019).
+
+
+    48. Bruno, P. M. et al. High-throughput, targeted MHC cell immunodominance using
+    a functional genetics screening strategy. Nature Communications, 11, 5643 (2020).
+
+
+    Hauser, M., Steiner, G., & Söding, J. MMseqs software for and and clustering and
+    search of large protein sequences. Bioinformatics, 38, 1232–1236 (2020).
+
+
+    Hof, I. et al. MHCpan, for MHC class I binding prediction beyond humans. Immunology,
+    61, 1–13 (2003).
+
+
+    Lin, Z. et al. Evolution-scale prediction of T cell-receptor protein structure
+    and function. Science, 379, 11559–11563 (2023).
+
+
+    Sochardt, S. & Söding, J. Long-term memory retrieval. Nature, 975, 1765–1770 (2019).
+
+
+    Bennett, R., White, P. & Adams, F. In Flocs method for small-peptide binding prediction.
+    PLoS One, 12, e0247 (2017).
+
+
+    Barlas, K., Chatterjee, O., Gatos, D. & Zparlov, G. Chlorine residues. Studies
+    on binding of MHC-amino acids and peptide cleavage. Int. J. Pep. Rep., 37, 513–532
+    (2021).
+
+
+    Nature Intelligence | Volume 7 | 2024 | 235–243
+
+
+    243'
+  - '[PAGE 12]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41586-024-00971-y
+
+
+    # a
+
+
+    # Comparison of Average Precision
+
+
+    # b
+
+
+    # Comparison of ROC-AUC
+
+
+    # c
+
+
+    # Average Precision Correlations
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_12_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_12_1.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_12_2.png)
+
+
+    **Extended Data Fig. 1/ MUNIS outperforms the state-of-the-art predictors in classifying
+    HLA-A binders using a test set with no overlap with the training set. (a) Average
+    precision and (b) ROC-AUC of all predictors in classifying binders non-binders
+    versus the subset of the data with no epitope overlap with any of the tools’ training
+    datasets (“cleansed epitope overlap set”), n= 24. Box plots are presented with
+    medians as center lines, 25th and 75th percentiles
+
+
+    as lower and upper quartiles, and 1,5 interquartile range from the quartiles as
+    whiskers (not shown). (c) Per allele pairwise comparisons of MUNIS and other predictors
+    classifying HLA I binders using the cleaned evaluation set. Each point is model
+    performance on one allele. Pvalues for pairwise comparisons between MUNIS and
+    each predictor were calculated using the two-sided Wilcoxon rank sum test (not
+    shown if p > 0.1).'
+  - '[PAGE 13]
+
+
+    # # Article
+
+
+    https://doi.org/10.1038/s41586-024-00971-y
+
+
+    # a Influenza Dataset Immunogenic Epitopes vs. Binders
+
+
+    # b Acute HIV dataset Immunodominance
+
+
+    # c Chronic HIV dataset Immunodominance
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_13_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_13_1.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_13_2.png)
+
+
+    **Extended Data Fig. 2:** Performance of all algorithms in predicting epitope
+    immunogenicity conditioned on HLA-A peptide binders and immunodominance stratified
+    by HLA-allele. (a) Per-dataset performance of our model, using existing tools
+    MixMHCpred2.2, NetMHCpan4.1, MHCFlurry2.0, TransPHIA, BigMHC and PRIME2.0 in predicting...
+    binders from the five influenza immunopeptidic experiments with decoy peptides.
+
+
+    Positives are all immunogenic epitopes and negatives are all ligands (le) in the
+    viral protein. Error bars show the standard error across the five datasets. Bar
+    plots show mean values. Spearman correlation of each model''s score and the frequency
+    of response across all epitope-allele pairs in (b) acute (n = 33 alleles) and
+    (c) chronic (n = 33 alleles) HIV. Bar plots show medians and error bars show the
+    standard error across alleles.
+
+
+    Nature Machine Intelligence'
+  - '[PAGE 14]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s42256-024-00971-y
+
+
+    # a
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_14_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_14_1.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_14_2.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_14_3.png)
+
+
+    # b
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_14_4.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_14_5.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_14_6.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_14_7.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_14_8.png)
+
+
+    **Extended Data Fig. 3** Flow cytometry gating strategies for HLA class I-peptide
+    stability and proliferation assays. **(a)** TAP-deficient monoallelic HLA class
+    I-expressing721.221 cells were stained with viability dye and pan-HLA antibody
+    W6/32. **(b)** Representative gating strategy for identification of proliferating
+    CD3+ CD8+ CellTrace Far Red™ T cells in response to peptides of interest.
+
+
+    Nature Machine Intelligence'
+  md: '
+
+    # Acknowledgments
+
+
+    This work was funded by the Mark and Lisa Swartz AI/ML Initiative, award T320GO0763
+    and T320GA4273 from the Wellcome Trust, General Medical Sciences, and the MIT.
+    Additional support was provided by the Ragon Institute of MGH and Harvard (G.D.G.).
+    G.D.G. is also supported by the Bill and Melinda Foundation, a Burroughs Career
+    Award for Medical Scientists and Howard Hughes Fellowship. The completeness is
+    the responsibility of the authors and does not necessarily represent the views
+    of the National General Sciences or the National Institutes of Health.
+
+
+    # Author contributions
+
+
+    Conceptualization: J.W.N., A.N.S., G.D.G., and R.B.; Software; Formal analysis:
+    J.W.N. and A.N.S.; Investigation: A.N.S., C.C.T., R.-M., and E.G.; Writing-original
+    draft: J.W.N., A.N.S., N.C.T., R.-M., E.G., and R.B.; Writing-revision and draft:
+    G.D.G. and R.B.; Funding: J.W.N., A.N.S., and R.B.
+
+
+    # Competing interests
+
+
+    The authors declare no competing interests.
+
+
+    # Additional information
+
+
+    Extended data is available for this paper at https://doi.org/10.1038/s42526-024-0097-y.
+
+
+    # Supplementary information
+
+
+    Online version contains supplementary material available at https://doi.org/10.1038/s42526-024-0097-y.
+
+
+    Correspondence and requests for materials should be addressed to Gaurav D. G.
+    or Regina Bazar.
+
+
+    Peer review information Nature Intelligence thanks Yi X. Xiong, and the other,
+    reviewer(s) for their contribution to the review of this work.
+
+
+    Reprints and permissions are available at http://www.nature.com.
+
+
+    Publisher''s name remains neutral with regard to editorial decisions and publication
+    jurisdictions. Open Access This article is licensed under a Creative Commons Attribution
+    4.0 International License, which permits use, adaptation, distribution, and redistribution
+    in any medium or format, as long as you give appropriate credit to the author(s)
+    and source, provide a link to the license, and indicate if changes were made.
+    The images or other party material in this article are included in the article''s
+    Creative Commons license, unless otherwise indicated in the text. If material
+    is not included, you may need to obtain permission directly from the holder. To
+    view a copy of this license, visit http://creativecommons.org/licenses/by/4.0.
+
+
+    © The authors 2025
+
+
+    38. Nielsen, L. M., Kersten, M. J., Pals, S. T., Benjamin, F. J. and Bergen, I.
+    J. Epstein-Barr virus-posttransplant lymphoproliferative disease after organ transplantation:
+    pathogenesis, manifestations, and diagnosis. Transplant, 24.
+
+
+    39. Bjørneve, K. et al. Longitudinal analysis reveals high frequency of Epstein-Barr
+    virus associated with multiple sclerosis. Science, 375, 296–306 (2022).
+
+
+    40. Bjørneve, K., Moss, C., Cohen, J. I. and A. Scher, Epstein-Barr virus as the
+    cause of triggering multiple sclerosis. Nature Med., 19, 160–171 (2023).
+
+
+    41. Smart, M. K. et al. Epstein-Barr virus serology, and impact of VCA IgG: High
+    titer across a healthy population. Nature J., 81, 201 (2021).
+
+
+    42. Bashiro, A. A. et al. A HLA presentation inhibits peptide receptor and T cell
+    control. Nat. Acad. Sci. USA. 117, 28532–28534 (2020).
+
+
+    43. Thindborg, E. et al. Tapasin shapes immunomodulatory effects and binding specificity
+    of MHC-peptide complex class I. Eur J. Immunol. 38, 364–369 (2018).
+
+
+    44. Montenegro, A. E. et al. TCR-NEB2 enables efficient control of TCR-peptide
+    binding by using TCR and T cell blockade. Science 368, eade3044 (2020).
+
+
+    45. Gagev, D. V. et al. VDB2019 database: extended network analysis and T-cell
+    receptor motif prediction. Nucleic Acids Res. 48, D10572 (2020).
+
+
+    46. Narahashi, Y. E et al. T cell reactivity to SARS-CoV-2 Omicron variant is
+    preserved in most but not all individuals. Cell 180, 105 (2022).
+
+
+    47. White, J. J., Phillips, J., Wang, J., and Friedman, N. MCAS-TCR: T cell reactivity
+    using a curated catalogue of peptide-T cell receptors. Biology 33, 2924–2939 (2019).
+
+
+    48. Bruno, P. M. et al. High-throughput, targeted MHC cell immunodominance using
+    a functional genetics screening strategy. Nature Communications, 11, 5643 (2020).
+
+
+    Hauser, M., Steiner, G., & Söding, J. MMseqs software for clustering and search
+    of large protein sequences. Bioinformatics, 38, 1232–1236 (2020).
+
+
+    Hof, I. et al. MHCpan, for MHC class I binding prediction beyond humans. Immunology,
+    61, 1–13 (2003).
+
+
+    Lin, Z. et al. Evolution-scale prediction of T cell-receptor protein structure
+    and function. Science, 379, 11559–11563 (2023).
+
+
+    Sochardt, S. & Söding, J. Long-term memory retrieval. Nature, 975, 1765–1770 (2019).
+
+
+    Bennett, R., White, P. & Adams, F. In Flocs method for small-peptide binding prediction.
+    PLoS One, 12, e0247 (2017).
+
+
+    Barlas, K., Chatterjee, O., Gatos, D. & Zparlov, G. Chlorine residues. Studies
+    on binding of MHC-amino acids and peptide cleavage. Int. J. Pep. Rep., 37, 513–532
+    (2021).
+
+
+    Nature Intelligence | Volume 7 | 2024 | 235–243
+
+    '
+  mdcn: '
+
+
+    # 致谢
+
+
+    本工作得到了 Mark and Lisa Swartz AI/ML 计划的资助，来自 Wellcome Trust、医学科学和麻省理工学院（MIT）的奖励
+    T320GO0763 和 T320GA4273。MGH 和哈佛大学 Ragon 学院（G.D.G.）提供了额外支持。G.D.G. 还受到比尔和梅琳达·基金会、医学科学家
+    Burroughs 职业奖以及霍华·霍格斯学金的支持。内容的完整性由作者负责，不一定代表国家通用科学或或国立卫生研究院的观点。
+
+
+    # 作者贡献
+
+
+    概念化：J.W.N., A.N.S., G.D.G., 和 R.B.；软件；形式分析：J.W.N. 和 A.N.S.。调查：A.N.S., C.C.T.,
+    R.-M., 和 E.G.。初稿撰写：J.W.N., A.N.S., N.C.T., R.-M., E.G., 和 R.B.；修订与草案撰写：G.D.G.
+    和 R.B.。；资助：J.W.N., A.N.S., 和 R.B.。
+
+
+    # 利益冲突
+
+
+    作者声明没有竞争利益。
+
+
+    # 额外信息
+
+
+    本文的扩展数据可以通过 https://doi.org/10.1038/s42526-024-0097-y 获取。
+
+
+    # 补充信息
+
+
+    在线版本包含可以通过 https://doi.org/10.1038/s42526-024-0097-y 获取的补充材料。
+
+
+    联系和材料请求请致 Gaurav D. G. 或 Regina Bazar。
+
+
+    同行评审信息 Nature Intelligence 感谢 Yi X. Xiong 以及其他审稿人对本工作评审的贡献。
+
+
+    重印和许可请访问 http://www.nature.com。
+
+
+    出版商在编辑决策和出版管辖权方面保持中立。开放访问：本文根据知识共享署名 4.0 国际许可许可，允许在任何媒介或格式中使用、改编、分发和重新分发，只要您对作者和来源注明出处，提供许可链接，并指示是否进行了更改。本文中的图像或其他第三方材料包含在文章的知识共享许可中，除非文中另有说明。如果未包含材料，您可能需要直接从持有者处获得许可。查看此许可的副本请访问
+    http://creativecommons.org/licenses/by/4.0。
+
+
+    © 作者 2025
+
+
+    38. Nielsen, L. M., Kersten, M. J., Pals, S. T., Benjamin, F. J. and Bergen, I.
+    J. 器官移植后 EB 病毒相关淋巴细胞增生性疾病：发病机制、表现和诊断。Transplant, 24.
+
+
+    39. Bjørneve, K. 等. 纵向分析揭示了与多发性硬化相关的 EB 病毒高频率。Science, 375, 296–306 (2022).
+
+
+    40. Bjørneve, K., Moss, C., Cohen, J. I. and A. Scher. 爱普斯坦病毒作为诱发多发性硬化的原因。Nature
+    Med., 19, 160–171 (2023).
+
+
+    41. Smart, M. K. 等. EB 病毒血清学和 VCA IgG 的影响：健康人群中的高滴度。Nature J., 81, 201 (2021).
+
+
+    42. Bashiro, A. A. 等. HLA 呈递抑制肽受体和 T 细胞控制。Nat. Acad. Sci. USA. 117, 28532–28534
+    (2020).
+
+
+    43. Thindborg, E. 等. Tapasin 塑造了 MHC-肽复合物 I 类分子的免疫调节作用和结合特异性。Eur J. Immunol. 38,
+    364–369 (2018).
+
+
+    44. Montenegro, A. E. 等. TCR-NEB2 通过 TCR 和 T 细胞阻阻实现 TCR-肽结合的有效控制。Science 368,
+    eade3044 (2020).
+
+
+    45. Gagev, D. V. 等. VDB2019 数据库：扩展网络分析和 T 细胞受体基序预测。Nucleic Acids Res. 48, D10572
+    (2020).
+
+
+    46. Narahashi, Y. E 等. 大多数个体中对 SARS-CoV-2 Omicron 变异的 T 细胞反应得以保留。Cell 180, 105
+    (2022).
+
+
+    47. White, J. J., Phillips, J., Wang, J., and Friedman, N. MCAS-TCR: 使用精选肽-T 细胞受体目录的
+    T 细胞反应。Biology 33, 2924–2939 (2019).
+
+
+    48. Bruno, P. M. 等. 使用功能遗传筛选策略进行高通量靶向 MHC 细胞免疫优势性研究。Nature Communications, 11,
+    5643 (2020).
+
+
+    Hauser, M., Steiner, G., & Söding, J. 用于大型蛋白质序列聚类和搜索的 MMseqs 。 Bioinformatics,
+    38, 1232–1236 (2020).
+
+
+    Hof, I. 等. MHCpan，用于人类之外的 MHC I 类结合预测。Immunology, 61, 1–13 (2003).
+
+
+    Lin, Z. 等. T 细胞受体蛋白结构和功能的进化尺度预测。Science, 379, 11559–11563 (2023).
+
+
+    Sochardt, S. & Söding, J. 长期记忆检索。Nature, 975, 1765–1770 (2019).
+
+
+    Bennett, R., White, P. & Adams, F. 用于小肽结合预测的 Flocs 方法。PLoS One, 12, e0247 (2017).
+
+
+    Barlas, K., Chatterjee, O., Gatos, D. & Zparlov, G. 氯残基。关于 MHC-氨基酸结合和肽切割的研究。Int.
+    J. Pep. Rep., 37, 513–532 (2021).
+
+
+    Nature Intelligence | 第 7  | 2024 | 235–243
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 15]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s4256-024-0097-y
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_15_0.png)
+
+
+    Extended Data Fig. 4 | HLA class I-peptide stability assay data of predicted binder
+    and non-binder peptides for each allele. MFI is normalized to the MFI of the known
+    HIV immunodominant peptide (dashed line) for allele. Blue circles indicate predicted
+    binders and gray circles indicate predicted non-binders.
+
+
+    Nature Machine Intelligence'
+  - '[PAGE 16]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s42256-024-00971-y
+
+
+    # a
+
+
+    # b
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_16_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_16_1.png)
+
+
+    **Extended Fig. 5 | Response of individuals in cohort to overlapping peptide pools
+    from Epstein-Barr Virus (EBV) proteins.** (a) Representative-IFNγ ELISpot assays
+    for representative HLA-haplotyped individuals in cohort overlapping peptide pools
+    from EBV proteins BRLF1, B2LF1, EBNAL, LMP2 and EBNA3a. DMSO was used as a negative
+    control and phytohemagglutinin L (PHA)
+
+
+    was used as a positive control. TNTC : Too Numerous Count. (b) Summary data for
+    ELISpot data for all individuals in cohort (n = 50 peptides per protein). Box
+    plots are presented with medians as center lines, 25th and 75th percentiles as
+    lower and upper quartiles, and L3 x interquartile range from the quartiles as
+    whiskers (outliers not shown).
+
+
+    Nature Machine Intelligence'
+  - '[PAGE 17]
+
+
+    # Extended Data Table 1 | Features of MUNIS and competing predictive models
+
+
+    | Model | Positives | Decoys | Deep Learning | Flanking residues | Protein language
+    model |
+
+    | MixMHCpred 2.2 | Mass spectrometry | Human | No | No | No |
+
+    | NetMHCpan 4.1 | Mass spectrometry + Binding affinity | Uniprot | No | No | No
+    |
+
+    | MHCflurry 2.0 | Mass spectrometry + Binding affinity | Parent protein | No |
+    Optional | No |
+
+    | TransPHLA | Mass spectrometry + Binding affinity | Parent protein | Yes | No
+    | No |
+
+    | BigMHC - EL | Mass spectrometry | Random | Yes | No | No |
+
+    | BigMHC - IM | Immunogenic epitopes | Human | Yes | No | No |
+
+    | Prime 2.0 | Immunogenic epitopes | Human | No | No | No |
+
+    | MUNIS | Mass spectrometry | SwissProt | Yes | Optional | Yes |
+
+
+    Table showing the the differences between MUNIS and other models. Models in the
+    literature differ based on several factors, including the sampling of negatives,
+    model architecture and the use of flanking residues.'
+  - '[PAGE 18]
+
+
+    # Extended Data Table 2 | Ablation of MUNIS deconvolutes features contributing
+    to enhanced prediction of HLA-I-peptide binders and immunogenic epitopes compared
+    to competing models
+
+
+    | pHLA presentation | Immunogenicity | Immunodominance |
+
+    | Test Set | Immunogenic Epitopes vs. All Epitopes | Immunogenic Epitopes vs.
+    Binders | HIV - Acute | HIV - Chronic |
+
+    | --- | --- | --- | --- | --- |
+
+    | MUNIS (Pretrained size: 8M, SwissProt negatives, model score) | 95.3 | 22.8
+    | 34.5 | 32.5 | 29.3 |
+
+    | ESM-2 Protein Language Model | | | | | |
+
+    | Not pretrained (Size: 8M) | 94.6 | 27.7 | 40.1 | 34.9 | 31.7 |
+
+    | Pretrained (Size: 35M) | 95.9 | 27.3 | 38.5 | 32.6 | 29.1 |
+
+    | Flanking Residues | | | | | |
+
+    | No flanking residues | 94.7 | 23.5 | 35.6 | 34.1 | 31.7 |
+
+    | Negative Sampling | | | | | |
+
+    | Human decoys | 95.6 | 23.8 | 36.2 | 31.3 | 31.5 |
+
+    | Allelic Bias | | | | | |
+
+    | Munis %Rank | n/a | n/a | n/a | 31.9 | 30.7 |
+
+    | NetMHC %Rank | n/a | n/a | n/a | 29.3 | 26.6 |
+
+    | NetMHC Score | n/a | n/a | n/a | 29.7 | 27.6 |
+
+
+    Ablation analysis showing the performance of MUNIS as a function of various modifications.
+    All numbers are provided as median average precision stratified per allele, except
+    for HIV immunodominance which is given as spearman coefficient. All ablated models
+    were trained as an ensemble of five models to match the original MUNIS training
+    schema.'
+  - '[PAGE 19]
+
+
+    # # Extended Data Table 3 | Characteristics of patient cohort utilized for immunogenicity
+    of EBV patients
+
+
+    | Patient ID | Age | Sex | Race | HLA-A Alleles | HLA-B Alleles | HLA-C Alleles
+    |
+
+    |---|---|---|---|---|---|--|
+
+    | 135137 | 62 | Female | White | 0201, 0201 | 4402, 4427 | 0501, 0704 |
+
+    | 185075 | 61 | Male | White | 0101, 0201 | 4402, 5701 | 0102, 0602 |
+
+    | 186089 | 60 | Male | White | 0101, 0201 | 4001, 5201 | 0304, 1202 |
+
+    | 225942 | 52 | Male | Black | 0202, 0301 | 5702, 8101 | 1801, 0202 |
+
+    | 237983 | 77 | Female | White | 0201, 3201 | 2705, 4402 | 0102, 0501 |
+
+    | 238936 | 60 | Male | White | 0201, 0201 | 4001, 5701 | 0304, 0602 |
+
+    | 244489 | 58 | Male | White | 0201, 2301 | 4901, 5701 | 0602, 0701 |
+
+    | 245487 | 72 | Male | White | 0206, 2501 | 2705, 3701 | 0303, 0602 |
+
+    | 246734 | 70 | Male | White | 0301, 3101 | 2705, 0701 | 0127, 0602 |
+
+    | 247792 | 64 | Male | White | 0101, 0681 | 2705, 0721 | 0102, 0602 |
+
+    | 254378 | 61 | Male | White | 0301, 0402 | 2705, 2401 | 0102, 0701 |
+
+    | 265823 | 59 | Male | White | 0301, 0301 | 1401, 3501 | 0401, 0802 |
+
+    | 269198 | 57 | Male | White | 0101, 2402 | 3801, 5701 | 0602, 1203 |
+
+    | 409640 | 67 | Female | White | 2402, 2402 | 1402, 5701 | 0602, 0802 |
+
+    | 443552 | 67 | Male | Black | 0201, 0201 | 4901, 5301 | 0401, 0701 |
+
+    | 447160 | 72 | Male | Black | 0201, 0301 | 0702, 1402 | 0702, 0882 |
+
+    | 481241 | 89 | Male | White | 0201, 3201 | 4002, 5701 | 0202, 0602 |
+
+    | 516980 | 64 | Male | Black | 0101, 0201 | 5101, 5201 | 1202, 1601 |
+
+    | 534694 | 69 | Male | White | 0201, 0201 | 2705, 5701 | 0102, 0602 |
+
+    | 540772 | 61 | Male | White | 0101, 6801 | 5501, 5701 | 0303, 0602 |
+
+    | 575509 | 80 | Male | White | 0201, 3601 | 4002, 5701 | 0304, 0602 |
+
+    | 622054 | 56 | Female | White | 0201, 0201 | 0702, 4402 | 0501, 0702 |
+
+    | 667335 | 43 | Male | White | 0201, 2902 | 4403, 4403 | 1601, 1601 |
+
+    | 690641 | 66 | Male | White | 0201, 3303 | 1302, 2705 | 0202, 0401 |
+
+    | 712894 | 69 | Male | White | 0201, 2402 | 1302, 5701 | 0301, 0602 |
+
+    | 805181 | 57 | Male | White | 0201, 0201 | 0702, 0403 | 0401, 0702 |
+
+    | 930024 | 61 | Male | White | 0101, 6801 | 0571, 5701 | 0102, 1601 |
+
+    | 995725 | 60 | Male | White | 0201, 2902 | 1501, 4404 | 0102, 1601 |
+
+    | 280008 | 71 | Male | White | 0101, 2902 | 4403, 5801 | 0602, 1601 |
+
+    | 595424 | 57 | Male | White | 0201, 1101 | 1402, 5101 | 0802, 1402 |
+
+
+    Nature Machine Intelligence'
+  - '[PAGE 20]
+
+
+    # Nature Portfolio
+
+
+    Corresponding author(s): Gaurav Gaiha
+
+    Last updated by author(s): November 26, 2024
+
+
+    # # Reporting Summary
+
+
+    Nature Portfolio wishes to improve the reproducibility of the work that we publish.
+    This form provides structure for consistency and transparency in reporting. For
+    further information on Nature Portfolio policies, we see our Editorial Policies
+    and the Editorial Policy Checklist.
+
+
+    # # Statistics
+
+
+    For all statistical analyses, confirm that the following items are present in
+    the figure legend, table legend, main text, or Methods section.
+
+
+    +   - The exact sample size (n) for each experimental group/condition, given as
+    a discrete number and unit of measurement
+
+    - A statement on whether measurements were taken from distinct samples or whether
+    the same sample was measured repeatedly
+
+    - The statistical test(s) used AND whether they are one or two-sided
+
+    - Only common tests should be described solely by name; describe more complex
+    techniques in the Methods section
+
+    - A description of all covariates
+
+    A description of any exceptions or corrections, such as terms of normality and
+    adjustment for multiple comparisons
+
+    - A full description of the statistical parameters including centrality (e.g.
+    mean) or other basic estimates (e.g. regression coefficient) AND variance (either
+    standard deviation) or estimates of uncertainty (confidence intervals)
+
+    - For null hypothesis testing, the test (E, f, t) with confidence intervals, effect
+    sizes, degrees of freedom and P value noted as exact values whenever possible
+
+    - For Bayesian analysis, information on the choice of priors and Markov Monte
+    Carlo results
+
+    - For hierarchical and complex designs, identification of the appropriate level
+    for tests and full reporting of outcomes
+
+    - Estimates of effect sizes (e.g. Cohen''s d, Pearson''s r), indicating how they
+    were calculated
+
+
+    Our collection on statistics for biologists contains articles on many of the points
+    above.
+
+
+    # # Software and code
+
+
+    Policy information about availability of computer code
+
+
+    | Data collection | No software was used for data collection. |
+
+    | Data analysis | Data analysis was performed using standard python packages (pandas,
+    matplotlib). Model training was done using machine learning frameworks (pytorch,
+    pytorch-lighting). |
+
+
+    For manuscripts using custom algorithms that are central to the research but not
+    described in published literature, software must be made available to editors
+    and reviewers. We encourage code deposition in a community repository (GitHub).
+    See the Nature Portfolio guidelines for submitting code & software for further
+    information.
+
+
+    # # Data
+
+
+    Policy information about availability of data\All manuscripts must include a data
+    availability statement. This statement should provide the following information,
+    where applicable:
+
+    - Access codes, unique identifiers, or web links for publicly available datasets
+
+    - A description of restrictions on data availability
+
+    - For clinical datasets or third party data, ensure that the statements adhere
+    to our policy
+
+
+    All data required to train and evaluate the models and shared Elipot data are
+    deposited in the Mendeley Data repository with DOI: 10.16732/sw2gz5jn271.1. Data
+    used for training were extracted from the publicly available NetMHCpan4-1 (https://doi.org/10.1093/gkaa379),
+    MHCflurry2.0 (https://doi.org/10.1016/j.cell.2020.06.010), and MxMHCpred2 (https://doi.org/10.1016/j.cell.2022.12.002).
+    Evaluation was taken from the IEDB -'
+  md: '
+
+    # Article
+
+
+    https://doi.org/10.1038/s4256-024-0097-y
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_15_0.png)
+
+
+    Extended Data Fig. 4 | HLA class I-peptide stability assay data of predicted binder
+    and non-binder peptides for each allele. MFI is normalized to the MFI of the known
+    HIV immunodominant peptide (dashed line) for allele. Blue circles indicate predicted
+    binders and gray circles indicate predicted non-binders.
+
+
+    Nature Machine Intelligence
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s42256-024-00971-y
+
+
+    # a
+
+
+    # b
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_16_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_16_1.png)
+
+
+    **Extended Fig. 5 | Response of individuals in cohort to overlapping peptide pools
+    from Epstein-Barr Virus (EBV) proteins.** (a) Representative-IFNγ ELISpot assays
+    for representative HLA-haplotyped individuals in cohort overlapping peptide pools
+    from EBV proteins BRLF1, B2LF1, EBNAL, LMP2 and EBNA3a. DMSO was used as a negative
+    control and phytohemagglutinin L (PHA) was used as a positive control. TNTC :
+    Too Numerous Count. (b) Summary data for ELISpot data for all individuals in cohort
+    (n = 50 peptides per protein). Box plots are presented with medians as center
+    lines, 25th and 75th percentiles as lower and upper quartiles, and L3 x interquartile
+    range from the quartiles as whiskers (outliers not shown).
+
+
+    Nature Machine Intelligence
+
+
+    # Extended Data Table 1 | Features of MUNIS and competing predictive models
+
+
+    | Model | Positives | Decoys | Deep Learning | Flanking residues | Protein language
+    model |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | MixMHCpred 2.2 | Mass spectrometry | Human | No | No | No |
+
+    | NetMHCpan 4.1 | Mass spectrometry + Binding affinity | Uniprot | No | No | No
+    |
+
+    | MHCflurry 2.0 | Mass spectrometry + Binding affinity | Parent protein | No |
+    Optional | No |
+
+    | TransPHLA | Mass spectrometry + Binding affinity | Parent protein | Yes | No
+    | No |
+
+    | BigMHC - EL | Mass spectrometry | Random | Yes | No | No |
+
+    | BigMHC - IM | Immunogenic epitopes | Human | Yes | No | No |
+
+    | Prime 2.0 | Immunogenic epitopes | Human | No | No | No |
+
+    | MUNIS | Mass spectrometry | SwissProt | Yes | Optional | Yes |
+
+
+    Table showing the differences between MUNIS and other models. Models in the literature
+    differ based on several factors, including the sampling of negatives, model architecture
+    and the use of flanking residues.
+
+
+    # Extended Data Table 2 | Ablation of MUNIS deconvolutes features contributing
+    to enhanced prediction of HLA-I-peptide binders and immunogenic epitopes compared
+    to competing models
+
+
+    | pHLA presentation | Immunogenicity | Immunodominance |
+
+    | :--- | :--- | :--- |
+
+    | Test Set | Immunogenic Epitopes vs. All Epitopes | Immunogenic Epitopes vs.
+    Binders | HIV - Acute | HIV - Chronic |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | MUNIS (Pretrained size: 8M, SwissProt negatives, model score) | 95.3 | 22.8
+    | 34.5 | 32.5 | 29.3 |
+
+    | ESM-2 Protein Language Model | | | | | |
+
+    | Not pretrained (Size: 8M) | 94.6 | 27.7 | 40.1 | 34.9 | 31.7 |
+
+    | Pretrained (Size: 35M) | 95.9 | 27.3 | 38.5 | 32.6 | 29.1 |
+
+    | Flanking Residues | | | | | |
+
+    | No flanking residues | 94.7 | 23.5 | 35.6 | 34.1 | 31.7 |
+
+    | Negative Sampling | | | | | |
+
+    | Human decoys | 95.6 | 23.8 | 36.2 | 31.3 | 31.5 |
+
+    | Allelic Bias | | | | | |
+
+    | Munis %Rank | n/a | n/a | n/a | 31.9 | 30.7 |
+
+    | NetMHC %Rank | n/a | n/a | n/a | 29.3 | 26.6 |
+
+    | NetMHC Score | n/a | n/a | n/a | 29.7 | 27.6 |
+
+
+    Ablation analysis showing the performance of MUNIS as a function of various modifications.
+    All numbers are provided as median average precision stratified per allele, except
+    for HIV immunodominance which is given as spearman coefficient. All ablated models
+    were trained as an ensemble of five models to match the original MUNIS training
+    schema.
+
+
+    # Extended Data Table 3 | Characteristics of patient cohort utilized for immunogenicity
+    of EBV patients
+
+
+    | Patient ID | Age | Sex | Race | HLA-A Alleles | HLA-B Alleles | HLA-C Alleles
+    |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | 135137 | 62 | Female | White | 0201, 0201 | 4402, 4427 | 0501, 0704 |
+
+    | 185075 | 61 | Male | White | 0101, 0201 | 4402, 5701 | 0102, 0602 |
+
+    | 186089 | 60 | Male | White | 0101, 0201 | 4001, 5201 | 0304, 1202 |
+
+    | 225942 | 52 | Male | Black | 0202, 0301 | 5702, 8101 | 1801, 0801 |
+
+    | 237983 | 77 | Female | White | 0201, 3201 | 2705, 4402 | 0102, 0501 |
+
+    | 238936 | 60 | Male | White | 0201, 0201 | 4001, 5701 | 0304, 0602 |
+
+    | 244489 | 58 | Male | White | 0201, 2301 | 4901, 5701 | 0602, 0701 |
+
+    | 245487 | 72 | Male | White | 0206, 2501 | 2705, 3701 | 0303, 0602 |
+
+    | 246734 | 70 | Male | White | 0301, 3101 | 2705, 0701 | 0127, 0602 |
+
+    | 247792 | 64 | Male | White | 0101, 0681 | 2705, 0721 | 0102, 0602 |
+
+    | 254378 | 61 | Male | White | 0301, 0402 | 2705, 2401 | 0102, 0701 |
+
+    | 265823 | 59 | Male | White | 0301, 0301 | 1401, 3501 | 0401, 0802 |
+
+    | 269198 | 57 | Male | White | 0101, 2402 | 3801, 5701 | 0602, 1203 |
+
+    | 409640 | 67 | Female | White | 2402, 2402 | 1402, 5701 | 0602, 0802 |
+
+    | 443552 | 67 | Male | Black | 0201, 0201 | 4901, 5301 | 0401, 0701 |
+
+    | 447160 | 72 | Male | Black | 0201, 0301 | 0702, 1402 | 0702, 0882 |
+
+    | 481241 | 89 | Male | White | 0201, 3201 | 4002, 5701 | 0202, 0602 |
+
+    | 516980 | 64 | Male | Black | 0101, 0201 | 5101, 5201 | 1202, 1601 |
+
+    | 534694 | 69 | Male | White | 0201, 0201 | 2705, 5701 | 0102, 0602 |
+
+    | 540772 | 61 | Male | White | 0101, 6801 | 5501, 5701 | 0303, 0602 |
+
+    | 575509 | 80 | Male | White | 0201, 3601 | 4002, 5701 | 0304, 0602 |
+
+    | 622054 | 56 | Female | White | 0201, 0201 | 0702, 4402 | 0501, 0702 |
+
+    | 667335 | 43 | Male | White | 0201, 2902 | 4403, 4403 | 1601, 1601 |
+
+    | 690641 | 66 | Male | White | 0201, 3303 | 1302, 2705 | 0202, 0401 |
+
+    | 712894 | 69 | Male | White | 0201, 2402 | 1302, 5701 | 0301, 0602 |
+
+    | 805181 | 57 | Male | White | 0201, 0201 | 0702, 0403 | 0401, 0702 |
+
+    | 930024 | 61 | Male | White | 0101, 6801 | 0571, 5701 | 0102, 1601 |
+
+    | 995725 | 60 | Male | White | 0201, 2902 | 1501, 4404 | 0102, 1601 |
+
+    | 280008 | 71 | Male | White | 0101, 2902 | 4403, 5801 | 0602, 1601 |
+
+    | 595424 | 57 | Male | White | 0201, 1101 | 1402, 5101 | 0802, 1402 |
+
+
+    Nature Machine Intelligence
+
+
+    # Nature Portfolio
+
+
+    Corresponding author(s): Gaurav Gaiha
+
+    Last updated by author(s): November 26, 2024
+
+
+    # Reporting Summary
+
+
+    Nature Portfolio wishes to improve the reproducibility of the work that we publish.
+    This form provides structure for consistency and transparency in reporting. For
+    further information on Nature Portfolio policies, we see our Editorial Policies
+    and the Editorial Policy Checklist.
+
+
+    # Statistics
+
+
+    For all statistical analyses, confirm that the following items are present in
+    the figure legend, table legend, main text, or Methods section.
+
+
+    - The exact sample size (n) for each experimental group/condition, given as a
+    discrete number and unit of measurement
+
+    - A statement on whether measurements were taken from distinct samples or whether
+    the same sample was measured repeatedly
+
+    - The statistical test(s) used AND whether they are one or two-sided
+
+    - Only common tests should be described solely by name; describe more complex
+    techniques in the Methods section
+
+    - A description of all covariates
+
+    - A description of any exceptions or corrections, such as terms of normality and
+    adjustment for multiple comparisons
+
+    - A full description of the statistical parameters including centrality (e.g.
+    mean) or other basic estimates (e.g. regression coefficient) AND variance (either
+    standard deviation) or estimates of uncertainty (confidence intervals)
+
+    - For null hypothesis testing, the test (E, f, t) with confidence intervals, effect
+    sizes, degrees of freedom and P value noted as exact values whenever possible
+
+    - For Bayesian analysis, information on the choice of priors and Markov Monte
+    Carlo results
+
+    - For hierarchical and complex designs, identification of the appropriate level
+    for tests and full reporting of outcomes
+
+    - Estimates of effect sizes (e.g. Cohen''s d, Pearson''s r), indicating how they
+    were calculated
+
+
+    Our collection on statistics for biologists contains articles on many of the points
+    above.
+
+
+    # Software and code
+
+
+    Policy information about availability of computer code
+
+
+    | Data collection | No software was used for data collection. |
+
+    | :--- | :--- |
+
+    | Data analysis | Data analysis was performed using standard python packages (pandas,
+    matplotlib). Model training was done using machine learning frameworks (pytorch,
+    pytorch-lighting). |
+
+
+    For manuscripts using custom algorithms that are central to the research but not
+    described in published literature, software must be made available to editors
+    and reviewers. We encourage code deposition in a community repository (GitHub).
+    See the Nature Portfolio guidelines for submitting code & software for further
+    information.
+
+
+    # Data
+
+
+    Policy information about availability of data All manuscripts must include a data
+    availability statement. This statement should provide the following information,
+    where applicable:
+
+    - Access codes, unique identifiers, or web links for publicly available datasets
+
+    - A description of restrictions on data availability
+
+    - For clinical datasets or third party data, ensure that the statements adhere
+    to our policy
+
+
+    All data required to train and evaluate the models and shared Elipot data are
+    deposited in the Mendeley Data repository with DOI: 10.1673/sw2gz5jn271.1. Data
+    used for training were extracted from the publicly available NetMHCpan-1 (https://doi.org/10.1093/gkaa379),
+    MHCflurry2.0 (https://doi.org/10.1016/j.cell.2020.06.010), and MxMHCpred2 (https://doi.org/10.1016/j.cell.2022.12.002).
+    Evaluation was taken from the IEDB -
+
+    '
+  mdcn: '
+
+
+    # 文章
+
+
+    https://doi.org/10.1038/s4256-024-0097-y
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_15_0.png)
+
+
+    扩展数据图 4 | 每种等位基因预测的结合肽和非结合肽的 HLA 类 I 分子肽稳定性分析数据。MFI 已根据该等位基因已知 HIV 免疫优势位肽（虚线）的
+    MFI 进行归一化。蓝色圆圈表示预测的结合肽，灰色圆圈表示预测的非结合肽。
+
+
+    机器智能 (Nature Machine Intelligence)
+
+
+    # 文章
+
+
+    https://doi.org/10.1038/s42256-024-00971-y
+
+
+    # a
+
+
+    # b
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_16_0.png)
+
+
+    ![](img/1a4107427b120f5fd0ae04fe5f7f7f10_16_1.png)
+
+
+    **扩展图 5 | 队列个体对来自婴儿斯坦病毒 (EBV) 蛋白重叠肽池的反应。** (a) 队列中代表性 HLA 等位基因个体针对 EBV 蛋白 BRLF1、B2LF1、EBNAL、LMP2
+    和 EBNA3a 重叠肽池的代表性 IFNγ ELISpot 实验。使用 DMSO 作为阴性对照，使用植物血凝素 L (PHA) 作为阳性对照。TNTC：计数过多。(b)
+    队列中所有个体的 ELISpot 汇总数据（每个蛋白 50 个肽）。箱线图以中位数作为中心线，第 25 分位数和第 75 分位数作为上下四分位数，并以四分位数的
+    3 倍四分位距作为须线（不显示离群值）。
+
+
+    机器智能 (Nature Machine Intelligence)
+
+
+    # 扩展数据表 1 | MUNIS 与竞争预测模型的特征
+
+
+    | 模型 | 正性结果 | 诱饵 (Decoys) | 深度学习 | 侧翼残基 | 蛋白质语言模型 |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | MixMHCpred 2.2 | 质谱 | 人类 | 否 | 否 | 否 |
+
+    | NetMHCpan 4.1 | 质谱 + 结合亲力 | Uniprot | 否 | 否 | 否 |
+
+    | MHCflurry 2.0 | 质谱 + 结合亲力 | 母体蛋白 | 否 | 可选 | 否 |
+
+    | TransPHLA | 质谱 + 结合亲力 | 母体蛋白 | 是 | 否 | 否 |
+
+    | BigMHC - EL | 质谱 | 随机 | 是 | 否 | 否 |
+
+    | BigMHC - IM | 免疫原表位 | 人类 | 是 | 否 | 否 |
+
+    | Prime 2.0 | 免疫原表位 | 人类 | 否 | 否 | 否 |
+
+    | MUNIS | 质谱 | SwissProt | 是 | 可选 | 是 |
+
+
+    该表显示了 MUNIS 与其他模型之间的差异。文献中的模型差异取决于多个因素，包括负样本采样、模型架构以及侧翼残基的使用。
+
+
+    # 扩展数据表 2 | MUNIS 的消融实验解释了与竞争模型相比，增强 HLA-I-肽结合肽和免疫原表位预测的贡献特征
+
+
+    | pHLA 呈现 | 免疫原性 | 免疫优势 |
+
+    | :--- | :--- | :--- |
+
+    | 测试集 | 免疫原表位 vs. 所有表位 | 免疫原表位 vs. 结合肽 | HIV - 急性 | HIV - 慢性 |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | MUNIS (预训练大小: 8M, SwissProt 负样本, 模型评分) | 95.3 | 22.8 | 34.5 | 32.5 | 29.3 |
+
+    | ESM-2 蛋白质语言模型 | | | | | | |
+
+    | 未预训练 (大小: 8M) | 94.6 | 27.7 | 40.1 | 34.9 | 31.7 |
+
+    | 预训练 (大小: 35M) | 95.9 | 27.3 | 38.5 | 32.6 | 29.1 |
+
+    | 侧翼残基 | | | | | | |
+
+    | 无侧翼残基 | 94.7 | 23.5 | 35.6 | 34.1 | 31.7 |
+
+    | 负采样 | | | | | | |
+
+    | 人类诱饵 | 95.6 | 23.8 | 36.2 | 31.3 | 31.5 |
+
+    | 等位基因偏倚 | | | | | | |
+
+    | Munis %Rank | n/a | n/a | n/a | 31.9 | 30.7 |
+
+    | NetMHC %Rank | n/a | n/a | n/a | 29.3 | 26.6 |
+
+    | NetMHC Score | n/a | n/a | n/a | 29.7 | 27.6 |
+
+
+    消融分析显示了 MUNIS 在各种修改功能下的性能。所有数字均按等位基因分层的中位数平均精确度提供，HIV 免疫优势则以斯尔曼系数的形式给出。所有消融模型均作为五个模型的集成进行训练，以匹配原始的
+    MUNIS 训练方案。
+
+
+    # 扩展数据表 3 | 用于 EBV 免疫原性的患者队列特征
+
+
+    | 患者 ID | 年龄 | 性别 | 种族 | HLA-A 等位基因 | HLA-B 等位基因 | HLA-C 等位基因 |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | 135137 | 62 | 女性 | 白人 | 0201, 0201 | 4402, 4427 | 0501, 0704 |
+
+    | 185075 | 61 | 男性 | 白人 | 0101, 0201 | 4402, 5701 | 0102, 0602 |
+
+    | 186089 | 60 | 男性 | 白人 | 0101, 0201 | 4001, 5201 | 0304, 1202 |
+
+    | 225942 | 52 | 男性 | 黑人 | 0202, 0301 | 5702, 8101 | 1801, 0801 |
+
+    | 237983 | 77 | 女性 | 白人 | 0201, 3201 | 2705, 4402 | 0102, 0501 |
+
+    | 238936 | 60 | 男性 | 白人 | 0201, 0201 | 4001, 5701 | 0304, 0602 |
+
+    | 244489 | 58 | 男性 | 白人 | 0201, 2301 | 4901, 5701 | 0602, 0701 |
+
+    | 245487 | 72 | 男性 | 白人 | 0206, 2501 | 2705, 3701 | 0303, 0602 |
+
+    | 246734 | 70 | 男性 | 白人 | 0301, 3101 | 2705, 0701 | 0127, 0602 |
+
+    | 247792 | 64 | 男性 | 白人 | 0101, 0681 | 2705, 0721 | 0102, 0602 |
+
+    | 254378 | 61 | 男性 | 白人 | 0301, 0402 | 2705, 2401 | 0102, 0701 |
+
+    | 265823 | 59 | 男性 | 白人 | 0301, 0301 | 1401, 3501 | 0401, 0802 |
+
+    | 269198 | 57 | 男性 | 白人 | 0101, 2402 | 3801, 5701 | 0602, 1203 |
+
+    | 409640 | 67 | 女性 | 白人 | 2402, 2402 | 1402, 5701 | 0602, 0802 |
+
+    | 443552 | 67 | 男性 | 黑人 | 0201, 0201 | 4901, 5301 | 0401, 0701 |
+
+    | 447160 | 72 | 男性 | 黑人 | 0201, 0301 | 0702, 1402 | 0702, 0882 |
+
+    | 481241 | 89 | 男性 | 白人 | 0201, 3201 | 4002, 5701 | 0202, 0602 |
+
+    | 516980 | 64 | 男性 | 黑人 | 0101, 0201 | 5101, 5201 | 1202, 1601 |
+
+    | 534694 | 69 | 男性 | 白人 | 0201, 0201 | 2705, 5701 | 0102, 0602 |
+
+    | 540772 | 61 | 男性 | 白人 | 0101, 6801 | 5501, 5701 | 0303, 0602 |
+
+    | 575509 | 80 | 男性 | 白人 | 0201, 3601 | 4002, 5701 | 0304, 0602 |
+
+    | 622054 | 56 | 女性 | 白人 | 0201, 0201 | 0702, 4402 | 0501, 0702 |
+
+    | 667335 | 43 | 男性 | 白人 | 0201, 2902 | 4403 | |
+
+
+    机器智能 (Nature Machine Intelligence)
+
+
+    统计摘要 (Reporting Summary)
+
+
+    Nature 出刊希望通过以下内容提高工作的可重复性。
+
+
+    # 统计
+
+
+    对于所有统计分析，请确认以下项目出现在图注、表注、正文或方法部分中：
+
+    - 实验的精确样本量 (n) 以及测量单位
+
+    - 说明是否对同一样本进行了重复测量
+
+    - 使用的统计检验（常用测试仅描述名称；复杂的技巧应在方法部分描述）
+
+    - 协变量描述，包括中心性（如均值）或其他基础估计（如标准差）
+
+    - 零假设检验的检验方法（如 E, f, t），并带上置信区间、效应量、自由度和尽可能给出具体的 P 值
+
+    - 对于贝斯分析，提供有关先验的信息和马尔可夫蒙特卡洛结果
+
+    - 对于分层设计，识别适当的水平并完整报告结果
+
+    - 效应量（如 Cohen''s d, Pearson''s r），并说明计算方法
+
+
+    我们的 Nature 统计集合包含了上述许多要点。
+
+
+    # 软件与代码
+
+
+    代码可用性政策
+
+
+    | 项目 | 说明 |
+
+    | :--- | :--- |
+
+    | 数据收集 | 未使用软件进行数据收集。 |
+
+    | 数据分析 | 使用标准 Python 包 (pandas, matplotlib) 进行数据分析。模型训练使用机器学习框架 (pytorch, pytorch-lightning)。
+    |
+
+
+    对于研究核心但未在发表文献中描述的自定义算法，必须向编辑和审稿人开放。我们鼓励将代码提交至社区仓库（GitHub）。请查看 Nature 关于代码与软件的指南获取更多信息。
+
+
+    # 数据
+
+
+    数据可用性政策 所有文章必须包含数据可用性声明。该声明应在适用时提供以下信息：
+
+    - 公用数据集的访问代码、唯一标识符或网络链接
+
+    - 对数据可用性的限制说明
+
+    - 对于临床数据集或第三方数据，请确保声明符合我们的政策
+
+
+    训练和评估模型所需的所有数据以及共享的 Elipot 数据已在 Mendeley Data 仓库，DOI 为：10.1673/sw2gz5jn271.1。用于训练的数据提取自来自
+    NetMHCpan-1 (https://doi.org/10.1093/gkaa379)、MHCflurry2.0 (https://doi.org/10.1016/j.cell.2020.06.010)
+    和 MxMHCpred2 (https://doi.org/10.1016/j.cell.2022.12.002)。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 21]
+
+
+    # Human research participants
+
+
+    Policy information about studying human research participants and Sex and Gender
+    in Research.
+
+
+    +   - Reporting on sex and gender: We have reported sex and race in Extended Table
+    3 of the manuscript.
+
+    - Population characteristics: Population characteristics are reported in Extended
+    Table 3 of the manuscript.
+
+    - Recruitment: Study participants who have been recruited by the Raison Institute
+    of Mass, MIT and Harvard, HLA typing having been obtained on all participants.
+    Sex andor gender of participants was based on self-report.
+
+    - Ethics oversight: All study participants provided informed consent. The study
+    was approved by the Mass General Brigham Institutional Review Board.
+
+
+    Note that full information on the approval of the study protocol must also be
+    in the manuscript.
+
+
+    # Field-specific reporting
+
+
+    Please select the one below that is best for your research. If you are not sure,
+    read the appropriate sections before making your selection.
+
+
+    +   - Life sciences
+
+    - Behavioral & social sciences
+
+    - Ecological, evolutionary & environmental sciences
+
+
+    For reference copy of the document with all sections, see nature.com/documents/nr-reporting-summary-flat.pdf.
+
+
+    # Life sciences study design
+
+
+    All studies must disclose these points even when the disclosure is negative.
+
+
+    | Sample size | A total of 30 HLA-typed participants were selected for analysis.
+    Written informed consent was obtained from all participants. Sample size was not
+    calculated due to the extensive degree of HLA polymorphism in the human population.
+    We therefore selected individuals with HLA class i alleles matched those that
+    were present in our HLA class i-peptide assessments and computational predictions.
+    |
+
+    | Data exclusions | No data were excluded. |
+
+    | Replication | All experiments were performed in technical duplicates and all
+    attempts at replication were successful. |
+
+    | Randomization | No randomization was performed as participants were assigned
+    to epitope immunogenicity assessments based on their HLA class haplotype. |
+
+    | Blinding | No blinding was performed and sample names were labeled on their
+    de-identified ID, sample collection date and time points. No blinding was done
+    to avoid cross-contamination. |
+
+
+    # Reporting for specific materials, systems and methods
+
+
+    We require information from authors about some types of materials, experimental
+    systems and methods used in this study. Here indicate whether each material, system
+    or method is listed to report. If it is not listed in a list of items you used,
+    read the appropriate section before making a response.
+
+
+    # Materials & experimental systems
+
+
+    | n/a | Involved in the study | n/a | Involved in the study |
+
+    | | Antibodies | | ChIP-seq |
+
+    | | Eukaryotic cell lines | | Flow cytometry |
+
+    | | Palaontology and archaeology | | MRI-based neuroimaging |
+
+    | | Animals and other organisms | | |
+
+    | | Clinical data | | |
+
+    | | Dual use of concern | | |'
+  - '[PAGE 22]
+
+
+    # # Antibodies
+
+
+    **Antibodies used**
+
+    Anti-human CD3 (Clone OKT3, BioLegend, # 31702, Lot B35B930), anti-human CD28
+    (Clone CD28.2, BioLegend, # 30280, Lot B394362), anti-human CD3-BUV395 (Clone
+    UCHT1, BD Biosciences, Cat #653546, Lot 307268), anti-human CD4-PE-Cy7 (Clone
+    OKT4, BioLegend, # 31714, Lot B375837), anti-human CD8-BVV605 (Clone SK1, BioLegend,
+    Cat #344742, Lot B370756L), pan-HLA-ABC anti peptide (Clone W6/32, BioLegend,
+    Cat #311410, Lot B373456).
+
+
+    **Validation**
+
+    Antibodies validated by manufacturers and confirmed to populations of interest.
+
+
+    # # Eukaryotic cell lines
+
+
+    **Policy about cell lines**
+
+    All used cell lines were derived from human B cell line 722.221 (https://doi.org/10.4049/human142.9.93320),
+    HLA-monogenic TAEP-deficient cell lines were developed using CRISPR-Cas9 gene
+    editing (https://doi.org/10.1016/j.celrep.2021.109378).
+
+
+    **Authentication**
+
+    Each monogenic TAP-deficient cell line was authenticated using surface staining
+    for HLA expression and CRISPR sequencing to confirm TAP1 gene editing (https://doi.org/10.1016/j.celrep.2021.109378).
+
+
+    **Modified identified lines** (See ICLAC register)
+
+    Cell lines are routinely tested for mycoplasma contamination.
+
+
+    # # Flow Cytometry
+
+
+    **Plots**
+
+    Confirm:
+
+
+    +   - The axis labels state the marker and fluorochrome used (e.g. CD4-FITC).
+
+    - All axes are contour plots with outliers or pseudocolor.
+
+    - The scales are clearly visible. Include numbers along axes only for bottom left
+    plot of group (a ''group'' is an analysis of identical markers).
+
+    - A numerical value for number of cells or percentage (with statistics) is provided.
+
+
+    # # Methodology
+
+
+    **Sample preparation**
+
+    Details in Methods section. Patient PBMCs were extracted from whole blood using
+    Ficoll gradient separation.
+
+
+    **Instrument**
+
+    BD LSR II (H4720037)
+
+
+    **Software**
+
+    BD FACSiva Software was used to collect the data and FlowJo was used to analyze
+    the data.
+
+
+    **Cell population abundance**
+
+    No cell sorting was performed in this paper.
+
+
+    **Gating strategy**
+
+    Gating strategy for HLA class I-peptide stability assays: FSC-A/SSC-A -> SSC-H/SSC-W
+    -> Live/Dead Violet/SSC-A -> HLA-C histogram. Gating strategy for proliferation
+    assays: FSC-A/SSC-A -> SSC-H/SSC-W -> CD3-BUV395/Live/Dead Violet -> CD8-BV605/CD4-PECy7
+    -> CellTrace Fab Red (CTFR)/CD8-BV605.
+
+
+    +   - Tick this box to confirm that a figure exemplifying the gating strategy
+    is provided in the Supplementary Information.'
+  md: '
+
+    # Human research participants
+
+
+    Policy information about studying human research participants and Sex and Gender
+    in Research.
+
+
+    - Reporting on sex and gender: We have reported sex and race in Extended Table
+    3 of the manuscript.
+
+    - Population characteristics: Population characteristics are reported in Extended
+    Table 3 of the manuscript.
+
+    - Recruitment: Study participants who have been recruited by the Raison Institute
+    of Mass, MIT and Harvard, HLA typing having been obtained on all participants.
+    Sex and gender of participants was based on self-report.
+
+    - Ethics oversight: All study participants provided informed consent. The study
+    was approved by the Mass General Brigham Institutional Review Board.
+
+
+    Note that full information on the approval of the study protocol must also be
+    in the manuscript.
+
+
+    ## Field-specific reporting
+
+
+    Please select the one below that is best for your research. If you are not sure,
+    read the appropriate sections before making your selection.
+
+
+    - Life sciences
+
+    - Behavioral & social sciences
+
+    - Ecological, evolutionary & environmental sciences
+
+
+    For reference copy of the document with all sections, see nature.com/documents/nr-reporting-summary-flat.pdf.
+
+
+    # Life sciences study design
+
+
+    All studies must disclose these points even when the disclosure is negative.
+
+
+    | Sample size | A total of 30 HLA-typed participants were selected for analysis.
+    Written informed consent was obtained from all participants. Sample size was not
+    calculated due to the extensive degree of HLA polymorphism in the human population.
+    We therefore selected individuals with HLA class i alleles matched those that
+    were present in our HLA class i-peptide assessments and computational predictions.
+    |
+
+    | Data exclusions | No data were excluded. |
+
+    | Replication | All experiments were performed in technical duplicates and all
+    attempts at replication were successful. |
+
+    | Randomization | No randomization was performed as participants were assigned
+    to epitope immunogenicity assessments based on their HLA class haplotype. |
+
+    | Blinding | No blinding was performed and sample names were labeled on their
+    de-identified ID, sample collection date and time points. No blinding was done
+    to avoid cross-contamination. |
+
+
+    # Reporting for specific materials, systems and methods
+
+
+    We require information from authors about some types of materials, experimental
+    systems and methods used in this study. Here indicate whether each material, system
+    or method is listed to report. If it is not listed in a list of items you used,
+    read the appropriate section before making a response.
+
+
+    ## Materials & experimental systems
+
+
+    | n/a | Involved in the study | n/a | Involved in the study |
+
+    | --- | --- | --- | --- |
+
+    | | Antibodies | | ChIP-seq |
+
+    | | Eukaryotic cell lines | | Flow cytometry |
+
+    | | Paleontology and archaeology | | MRI-based neuroimaging |
+
+    | | Animals and other organisms | | |
+
+    | | Clinical data | | |
+
+    | | Dual use of concern | | |
+
+
+    ## Antibodies
+
+
+    **Antibodies used**
+
+    Anti-human CD3 (Clone OKT3, BioLegend, # 31702, Lot B35B930), anti-human CD28
+    (Clone CD28.2, BioLegend, # 30280, Lot B394362), anti-human CD3-BUV395 (Clone
+    UCHT1, BD Biosciences, Cat #653546, Lot 307268), anti-human CD4-PE-Cy7 (Clone
+    OKT4, BioLegend, # 31714, Lot B375837), anti-human CD8-BVV605 (Clone SK1, BioLegend,
+    Cat #344742, Lot B370756L), pan-HLA-ABC anti peptide (Clone W6/32, BioLegend,
+    Cat #311410, Lot B373456).
+
+
+    **Validation**
+
+    Antibodies validated by manufacturers and confirmed to populations of interest.
+
+
+    ## Eukaryotic cell lines
+
+
+    **Policy about cell lines**
+
+    All used cell lines were derived from human B cell line 722.221 (https://doi.org/10.4049/human142.9.93320),
+    HLA-monogenic TAEP-deficient cell lines were developed using CRISPR-Cas9 gene
+    editing (https://doi.org/10.1016/j.celrep.2021.109378).
+
+
+    **Authentication**
+
+    Each monogenic TAP-deficient cell line was authenticated using surface staining
+    for HLA expression and CRISPR sequencing to confirm TAP1 gene editing (https://doi.org/10.1016/j.celrep.2021.109378).
+
+
+    **Modified identified lines** (See ICLAC register)
+
+    Cell lines are routinely tested for mycoplasma contamination.
+
+
+    ## Flow Cytometry
+
+
+    **Plots**
+
+    Confirm:
+
+
+    - The axis labels state the marker and fluorochrome used (e.g. CD4-FITC).
+
+    - All axes are contour plots with outliers or pseudocolor.
+
+    - The scales are clearly visible. Include numbers along axes only for bottom left
+    plot of group (a ''group'' is an analysis of identical markers).
+
+    - A numerical value for number of cells or percentage (with statistics) is provided.
+
+
+    ## Methodology
+
+
+    **Sample preparation**
+
+    Details in Methods section. Patient PBMCs were extracted from whole blood using
+    Ficoll gradient separation.
+
+
+    **Instrument**
+
+    BD LSR II (H4720037)
+
+
+    **Software**
+
+    BD FACSiva Software was used to collect the data and FlowJo was used to analyze
+    the data.
+
+
+    **Cell population abundance**
+
+    No cell sorting was performed in this paper.
+
+
+    **Gating strategy**
+
+    Gating strategy for HLA class I-peptide stability assays: FSC-A/SSC-A -> SSC-H/SSC-W
+    -> Live/Dead Violet/SSC-A -> HLA-C histogram. Gating strategy for proliferation
+    assays: FSC-A/SSC-A -> SSC-H/SSC-W -> CD3-BUV395/Live/Dead Violet -> CD8-BV605/CD4-PECy7
+    -> CellTrace Fab Red (CTFR)/CD8-BV605.
+
+
+    - Tick this box to confirm that a figure exemplifying the gating strategy is provided
+    in the Supplementary Information.
+
+    '
+  mdcn: '
+
+
+    # 人类研究参与者
+
+
+    关于人类研究参与者研究以及研究中的性别与性别的政策信息。
+
+
+    - 性别报告：我们已在手稿的扩展表 3 中报告了性别和种族。
+
+    - 人口特征：人口特征在手稿的扩展表 3 中报告。
+
+    - 招募：研究参与者由马萨诸质量学院（Raison Institute of Mass）、MIT 和哈佛大学招募，所有参与者均进行了 HLA 分型检测。参与者的性别和性别基于自我报告。
+
+    - 伦理监督：所有研究参与者均提供了知情同意。该研究已获得马萨总医院布里根审查委员会（Mass General Brigham Institutional
+    Review Board）的批准。
+
+
+    请注意，手稿中必须包含有关研究方案批准的完整信息。
+
+
+    ## 特定领域的报告
+
+
+    请根据您的研究情况选择以下最合适的一项。如果您不确定，请在选择前阅读相关章节。
+
+
+    - 寿命科学
+
+    - 行为与社会科学
+
+    - 生态、进化与环境科学
+
+
+    有关包含所有章节的文档参考副本，请参见 nature.com/documents/nr-reporting-summary-flat.pdf。
+
+
+    # 寿命科学研究设计
+
+
+    所有研究即使在披露结果为负时也必须说明这些要点。
+
+
+    | 样本量 | 总共选择了 30 名经过 HLA 分型的参与者进行分析。已获得所有参与者的书面知情同意。由于人类种群中 HLA 多态性极高，因此未计算样本量。因此，我们选择了
+    HLA I 类等位基因与我们的 HLA I 类-肽评估及计算预测中出现的基因相匹配的个体。 |
+
+    | 数据排除 | 未排除任何数据。 |
+
+    | 重复 | 所有实验均以技术重复进行，且所有重复尝试均成功。 |
+
+    | 随机化 | 未进行随机化，因为参与者根据其 HLA 单倍体型被分配到表位免疫原性评估中。 |
+
+    | 盲法 | 未进行盲法，样本名称根据其去标识 ID、样本采集日期和时间点进行标记。未进行盲法以避免交叉污染。 |
+
+
+    # 特定材料、系统和方法的报告
+
+
+    我们要求作者提供有关本研究中使用的某些材料、实验系统和方法的信息。请在此标明是否列出报告每种材料、系统或方法。如果您在使用的项目列表中未列出某项，请在回答前阅读相关章节。
+
+
+    ## 材料与实验系统
+
+
+    | n/a | 参与研究 | n/a | 参与研究 |
+
+    | --- | --- | --- | --- |
+
+    | | 抗体 | | ChIP-seq |
+
+    | | 真核细胞系 | | 流式细胞术 |
+
+    | | 古生物学与考古 | | 基于 MRI 的神经成像 |
+
+    | | 动物和其他生物 | | |
+
+    | | 临床数据 | | |
+
+    | | 受关注的双重用途 | | |
+
+
+    ## 抗体
+
+
+    **使用的抗体**
+
+    抗人 CD3 (Clone OKT3, BioLegend, # 31702, Lot B35B930),抗人 CD28 (Clone CD28.2, BioLegend,
+    # 30280, Lot B394362),抗人 CD3-BUV395 (Clone UCHT1, BD Biosciences, Cat #653546,
+    Lot 307268),抗人 CD4-PE-Cy7 (Clone OKT4, BioLegend, # 31714, Lot B375837),抗人 CD8-BVV605
+    (Clone SK1, BioLegend, Cat #344742, Lot B370756L),泛-HLA-ABC 抗肽 (Clone W6/32, BioLegend,
+    Cat #311410, Lot B373456)。
+
+
+    **验证**
+
+    抗体已通过制造商验证并在目标群体中确认。
+
+
+    ## 真核细胞系
+
+
+    **关于细胞系的政策**
+
+    所有使用的细胞系均源自人类 B 细胞系 722.221 (https://doi.org/10.4049/human142.9.93320)，HLA 单基因
+    TAEP 缺失细胞系是使用 CRISPR-Cas9 基因编辑开发的 (https://doi.org/10.1016/j.celrep.2021.109378)。
+
+
+    **鉴定**
+
+    每种单基因 TAP 缺失细胞系均通过 HLA 表达的表面染色进行了鉴定，并通过 CRISPR 测序确认了 TAP1 基因编辑 (https://doi.org/10.1016/j.celrep.2021.109378)。
+
+
+    **已鉴定鉴定细胞系**（见 ICLAC 注册）
+
+    细胞系常规进行支原体污染检测。
+
+
+    ## 流式细胞术
+
+
+    **图表**
+
+    确认：
+
+
+    - 轴标签标明了所使用的标记物和荧光染（例如 CD4-FITC）。
+
+    - 所有轴均为带有离群值的等高线图或伪彩色图。
+
+    - 刻度清晰可见。仅在组左下角的图表中沿轴包含数字（“组”是对相同标记物的分析）。
+
+    - 提供了细胞数量或百分比（带统计数据）的数值。
+
+
+    ## 方法
+
+
+    **样本准备**
+
+    详见“方法”部分。使用 Ficoll 密度梯度从全血中提取患者 PB。
+
+
+    **仪器**
+
+    BD LSR II (H4720037)
+
+
+    **软件**
+
+    使用 BD FACSiva 软件收集数据，使用 FlowJo 分析数据。
+
+
+    **细胞群丰度**
+
+    本文未进行细胞分选。
+
+
+    **门门策略**
+
+    HLA I 类-肽稳定性实验的门策略：FSC-A/SSC-A -> SSC-H/SSC-W -> Live/Dead Violet/SSC-A -> HLA-C
+    直方图。增殖实验的门策略：FSC-A/SSC-A -> SSC-H/SSC-W -> CD3-BUV395/Live/Dead Violet -> CD8-BV605/CD4-PECy7
+    -> CellTrace Fab Red (CTFR)/CD8-BV605。
+
+
+    - 勾选此框以确认补充信息中提供了门策略的示例图。
+
+
+    '
+  merge: 0
