@@ -1,0 +1,1487 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Inorganic Chemistry Communications 176 (2025) 114316
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Inorganic Chemistry Communications
+
+
+    journal homepage: http://www.elsevier.com/locate/inoche
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_0_0.png)
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_0_1.png)
+
+
+    Research Article
+
+
+    # Designing and optimization of a highly efficient and lead-free $Cs_2RbGa_6$,
+    based perovskite solar cell through SCAPS-1D and machine learning
+
+
+    Vishal Deshmal*, Sarita Baghel*
+
+
+    Renewable Energy Research Laboratory, Department of Applied Physics, Delhi Technological
+    University, India
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    +   Keywords:
+
+    - Machine Learning
+
+    - Double Perovskite Solar Cell (DPSC)
+
+    - SCAPS-1D
+
+
+    Lead-free perovskite materials have emerged as an alternative non-toxic semiconductor
+    material for cells with exceptional performance, stability and stability. This
+    work focuses on optimizing Cs2RbGa6 based perovskite solar cell (DPSC) through
+    SCAPS-1D simulation and machine learning. We calculated material properties, like
+    the density of states and carrier mobility, using data reported in the literature.
+    Some other properties, like electron affinity, defect density, and absorber thickness,
+    were optimized using SCAPS-1D software. The suitable Electron Transport Layer
+    and Hole Transport Layer were also considered. We found optimized parameters to
+    achieve a PCE of 22.17%. Machine learning helps verify scientific claims and scientific
+    discovery and research gaps. In the recent increase in the use of machine learning
+    in science, we developed a machine learning model with SHAP summary plot to analyze
+    the impact of thickness and depth of absorber layer, with device operating temperature
+    of the DPSC. To develop this machine learning model, 1008 data points were generated
+    through SCAPS-1D simulations.
+
+
+    # 1. Introduction
+
+
+    Perovskite materials have emerged as contender to replace traditional Si-based
+    solar cells due to their remarkable optoelectronic properties [1–5]. Stability
+    of highly and efficient perovskite solar cells is based on limiting their usage
+    [6–8]. To overcome these limitations, the scientific community has discovered
+    double perovskite materials (DP). These double perovskite solar cells (DPSCs)
+    offer many advantages like high stability and non-toxicity to make them both stable
+    and efficient an excellent choice.
+
+
+    In a recent study, Cs2RbGa6, having a band gap of 1.8 eV has reported its interesting
+    optoelectronic properties for photovoltaics in [9]. The material requires further
+    exploration to investigate its use as a solar cell. In this study we used of reported
+    material properties to calculate density of states and carrier mobility, thereby
+    designing a DPSC based on Cs2RbGa6, and optimized various properties like defect
+    density, electron affinity, thickness of absorber layer, thickness of ETL and
+    HTL,
+
+
+    operating temperature.
+
+
+    The implementation of machine learning (ML) techniques in photovoltaics is helping
+    to streamline the process of device design and improve efficiency (PCE) [10].
+    Compared to traditional simulation methods, ML models provide a faster, more time-efficient
+    approach, even without deep expertise in processing or interpreting the simulation
+    results [11]. Many ML techniques such as artificial neural networks (ANNs), support
+    vector machines (SVMs), random forests (RFs), and XGBoost (XGB), have become easily
+    accessible [12]. These algorithms use large datasets to produce predicted results,
+    which are based on input variables, and target characteristics. Their ability
+    to detect patterns and correlations within the data allows ML models to capture
+    insights that investigators might not reveal.
+
+
+    Moreover, as ML continually learns from available data, they become better at
+    predicting PCE by adapting to factors like evolving material properties, changing
+    environmental conditions, and,
+
+
+    > * Corresponding author: saritabaghel@jitac.in (S. Baghel).
+
+
+    > https://doi.org/10.1016/jchem.2025.114316
+
+
+    Received 18 December 2024; Revised in version 5 March 2025; Accepted 9 March 2025
+
+    Available online 11 March 2025
+
+    1387-7003 © 2025 Elsevier B.V. All rights reserved, including those for text and
+    data mining, AI and similar technologies.'
+  - "[PAGE 1]\n\n# D. Vowel and S. Rahul Inorganic Chemistry 176 (2025) 142316\n\n\
+    shifts in device architecture [12–15]. This adaptability allows ML-based models\
+    \ to edge simulators in computational efficiency and speed, sacrificing accuracy.\
+    \ This is especially beneficial for tasks such as designing, optimizing and material\
+    \ screening of PSCs.\n\nproper for researchers due to the time-consuming nature\
+    \ of DFT computations. To obtain these characteristics' approximate values for\
+    \ simulation purposes, we may repeat the DFT computations or use functional semiconductor\
+    \ equations.\n\nThe use of ML is becoming increasingly common for handling complex\
+    \ datasets and reliable predictions [16]. These models, which integrate multiple\
+    \ ML algorithms, are capable for huge datasets and robust variations, making them\
+    \ valuable asset for increasing PCE and photovoltaic research.\n\n```\n$q_m =\
+    \ \\frac{\\mu_e \\mu_h}{\\mu_e + \\mu_h}$$\n```\n\nPSCs can be more flexible,\
+    \ accurate, and efficient to traditional simulation techniques [10].\n\n```\n\
+    $L_m = \\sqrt{\\mu_h \\tau_h}$\n```\n\nHence, mobility can be calculated as given:\n\
+    \n(2) (3)\n\nA initial dataset of 1008 points was generated with SCAPS-10 simulation\
+    \ which was then used to train our machine learning model. It was tested using\
+    \ SHAP summary analysis showing clarity, defect and density performance of PCE.\
+    \ Our machine learning model predicted nearly the same as the values which is\
+    \ indicated by the high R² value.\n\n```\n$40qa = \\frac{\\mu_e \\mu_h}{\\mu_e\
+    \ + \\mu_h}V_n$\n```\n\nHere, $\\mu_h$ is mobility for electrons/holes and $m^{e,h}$\
+    \ is their effective mass. $\\tau$ is relaxation time, and $L_m$ is the mean path.\
+    \ $V_t$ represents electron/hole thermal voltage at 300 K. The lattice constant\
+    \ ($a$) for CsPbI3 is 12.63 Å []. The calculated values of $\\mu_h$ for the samples\
+    \ are shown in Table 1.\n(4)\n\n# 2. Methodology\n\n# 2.1. Simulation methodology\n\
+    \nIn this study we used Solar Cell Simulator (SCAPS) for numerical simulation\
+    \ of solar cell devices, while considering de-coupling relations to solar cell\
+    \ characteristics.\n\nWe have first made and designed the device structure including\
+    \ its absorber layer, electron transport layer (ETL) and hole transport layer\
+    \ (HTL). Material properties of these layers were taken from previous studies.\
+    \ Some material properties of the absorber layer were calculated. The density\
+    \ of carriers and mobility were calculated and others electron affinity, density\
+    \ and thickness were optimized in this work.\n\nAfter optimizing the device structure,\
+    \ we developed a machine learning (ML) model. Among several models, Random Forest\
+    \ was selected, as it produced an R² value of 1. This model was trained with a\
+    \ dataset of 1008 points, then optimized through simulation by varying parameters.\
+    \ The absorber layer was affected by varying temperature of the solar cell. These\
+    \ values varied in definition of power efficiency (PCE). A plot comparing the\
+    \ results with the predicted values from the ML model was generated. Similarly,\
+    \ we created a SHAP summary plot which helped identify the effects of various\
+    \ parameters on PCE and compare them. We also added a python script which would\
+    \ predict the PCE of the device given the three input parameters. Finally we compared\
+    \ the ML predicted PCE with that via simulation. Fig. 2 represents the workflow\
+    \ the machine learning analysis in detail.\n\n# 2.2. Developing machine learning\n\
+    \nProperties of optimized solar cell\n\n# Table 1 Material Properties of optimized\
+    \ solar cell\n\n| Material Properties | CsPbI3 | CsPbBr | FTO |\n| --- | --- |\
+    \ --- | --- |\n| Thickness (nm) | 500 | 200 | 100 |\n| $E_g$ (eV) | 1.7 | 2.3\
+    \ | 3.5 |\n| $n_e$ ($cm^{-3}$) | $10^{16}$ | $10^{16}$ | $10^{17}$ |\n| $n_h$\
+    \ ($cm^{-3}$) | $10^{16}$ | $10^{16}$ | $10^{17}$ |\n| $\\mu_e$ ($cm^2/Vs$) |\
+    \ 3.4 | 6 | 10 |\n| $\\mu_h$ ($cm^2/Vs$) | 2 | 4 | 5 |\n| $\tau_e$ (s) | $2 \\\
+    times 10^{-9}$ | $2 \\times 10^{-9}$ | $1 \times 10^{-8}$ |\n| $\tau_h$ (s) |\
+    \ $1 \times 10^{-9}$ | $1 \times 10^{-9}$ | $1 \times 10^{-8}$ |\n| Defect Density\
+    \ ($cm^{-3}$) | $1 \\times 10^{15}$ | $1 \\times 10^{15}$ | $1 \\times 10^{15}$\
+    \ |\n\n*In this work.\n\nReference [5,17]\n\n# 3. Results and Discussion\n\n#\
+    \ 3.1. Optimization of layer parameters\n\nThe ETL and HTL are important in transfer\
+    \ of charges inside the Photovoltaics. The electrons from the absorber must exit,\
+    \ while the ETL ensures effective movement of holes. Hole transport is crucial\
+    \ for avoiding recombination, which helps generate more effective current and\
+    \ enhances PCE of photovoltaic devices.\n\nThese ETL and HTL materials were selected\
+    \ for their successful application in research, where we investigated their efficiency\
+    \ and other advantageous properties for integration into solar cells [17,19,21-32].\
+    \ And Table 3 shows the simulation performance for the HTLs and ETLs, the J-V\
+    \ curve and Phototransport for different device structures are reported.\n\nUsing\
+    \ theing configuration of ETL and HTL, the (FTO/CsPbBr/SnO2/Au), the solar cell\
+    \ achieved 19.1% efficiency. Our research shows that the effect of the three ETLs,\
+    \ with different thicknesses and band gaps, is shown in Fig. 1. ZnSe-based solar\
+    \ cells also displayed greater stability, thereby shielding the perovskite layer\
+    \ from UV block under UV-radiation [26,28,33]. We, HTLs, SnBr3 and CsPbI\n\n2"
+  md: "\n# Inorganic Chemistry Communications 176 (2025) 114316\n\nContents lists\
+    \ available at ScienceDirect\n\n# Inorganic Chemistry Communications\n\njournal\
+    \ homepage: http://www.elsevier.com/locate/inoche\n\n![](img/77993b86c321119fe49a62d1f762f7a1_0_0.png)\n\
+    \n![](img/77993b86c321119fe49a62d1f762f7a1_0_1.png)\n\nResearch Article\n\n# Designing\
+    \ and optimization of a highly efficient and lead-free $Cs_2RbGa_6$, based perovskite\
+    \ solar cell through SCAPS-1D and machine learning\n\nVishal Deshmal*, Sarita\
+    \ Baghel*\n\nRenewable Energy Research Laboratory, Department of Applied Physics,\
+    \ Delhi Technological University, India\n\n# ARTICLE INFO\n\n# ABSTRACT\n\n- Keywords:\n\
+    - Machine Learning\n- Double Perovskite Solar Cell (DPSC)\n- SCAPS-1D\n\nLead-free\
+    \ perovskite materials have emerged as an alternative non-toxic semiconductor\
+    \ material for cells with exceptional performance, stability and stability. This\
+    \ work focuses on optimizing Cs2RbGa6 based perovskite solar cell (DPSC) through\
+    \ SCAPS-1D simulation and machine learning. We calculated material properties,\
+    \ like the density of states and carrier mobility, using data reported in the\
+    \ literature. Some other properties, like electron affinity, defect density, and\
+    \ absorber thickness, were optimized using SCAPS-1D software. The suitable Electron\
+    \ Transport Layer and Hole Transport Layer were also considered. We found optimized\
+    \ parameters to achieve a PCE of 22.17%. Machine learning helps verify scientific\
+    \ claims and scientific discovery and research gaps. In the recent increase in\
+    \ the use of machine learning in science, we developed a machine learning model\
+    \ with SHAP summary plot to analyze the impact of thickness and depth of absorber\
+    \ layer, with device operating temperature of the DPSC. To develop this machine\
+    \ learning model, 1008 data points were generated through SCAPS-1D simulations.\n\
+    \n# 1. Introduction\n\nPerovskite materials have emerged as contender to replace\
+    \ traditional Si-based solar cells due to their remarkable optoelectronic properties\
+    \ [1–5]. Stability of highly and efficient perovskite solar cells is based on\
+    \ limiting their usage [6–8]. To overcome these limitations, the scientific community\
+    \ has discovered double perovskite materials (DP). These double perovskite solar\
+    \ cells (DPSCs) offer many advantages like high stability and non-toxicity to\
+    \ make them both stable and efficient an excellent choice.\n\nIn a recent study,\
+    \ Cs2RbGa6, having a band gap of 1.8 eV has reported its interesting optoelectronic\
+    \ properties for photovoltaics in [9]. The material requires further exploration\
+    \ to investigate its use as a solar cell. In this study we used of reported material\
+    \ properties to calculate density of states and carrier mobility, thereby designing\
+    \ a DPSC based on Cs2RbGa6, and optimized various properties like defect density,\
+    \ electron affinity, thickness of absorber layer, thickness of ETL and HTL, operating\
+    \ temperature.\n\nThe implementation of machine learning (ML) techniques in photovoltaics\
+    \ is helping to streamline the process of device design and improve efficiency\
+    \ (PCE) [10]. Compared to traditional simulation methods, ML models provide a\
+    \ faster, more time-efficient approach, even without deep expertise in processing\
+    \ or interpreting the simulation results [11]. Many ML techniques such as artificial\
+    \ neural networks (ANNs), support vector machines (SVMs), random forests (RFs),\
+    \ and XGBoost (XGB), have become easily accessible [12]. These algorithms use\
+    \ large datasets to produce predicted results, which are based on input variables,\
+    \ and target characteristics. Their ability to detect patterns and correlations\
+    \ within the data allows ML models to capture insights that investigators might\
+    \ not reveal.\n\nMoreover, as ML continually learns from available data, they\
+    \ become better at predicting PCE by adapting to factors like evolving material\
+    \ properties, changing environmental conditions, and shifts in device architecture\
+    \ [12–15]. This adaptability allows ML-based models to edge simulators in computational\
+    \ efficiency and speed, sacrificing accuracy. This is especially beneficial for\
+    \ tasks such as designing, optimizing and material screening of PSCs. \n\nproper\
+    \ for researchers due to the time-consuming nature of DFT computations. To obtain\
+    \ these characteristics' approximate values for simulation purposes, we may repeat\
+    \ the DFT computations or use functional semiconductor equations.\n\nThe use of\
+    \ ML is becoming increasingly common for handling complex datasets and reliable\
+    \ predictions [16]. These models, which integrate multiple ML algorithms, are\
+    \ capable for huge datasets and robust variations, making them valuable asset\
+    \ for increasing PCE and photovoltaic research.\n\n$$q_m = \\frac{\\mu_e \\mu_h}{\\\
+    mu_e + \\mu_h}$$\n\nPSCs can be more flexible, accurate, and efficient to traditional\
+    \ simulation techniques [10].\n\n$$L_m = \\sqrt{\\mu_h \\tau_h}$$\n\nHence, mobility\
+    \ can be calculated as given: (2) (3)\n\nA initial dataset of 1008 points was\
+    \ generated with SCAPS-10 simulation which was then used to train our machine\
+    \ learning model. It was tested using SHAP summary analysis showing clarity, defect\
+    \ and density performance of PCE. Our machine learning model predicted nearly\
+    \ the same as the values which is indicated by the high R² value.\n\n$$40qa =\
+    \ \\frac{\\mu_e \\mu_h}{\\mu_e + \\mu_h}V_n$$\n\nHere, $\\mu_h$ is mobility for\
+    \ electrons/holes and $m^{e,h}$ is their effective mass. $\\tau$ is relaxation\
+    \ time, and $L_m$ is the mean path. $V_t$ represents electron/hole thermal voltage\
+    \ at 300 K. The lattice constant ($a$) for CsPbI3 is 12.63 Å []. The calculated\
+    \ values of $\\mu_h$ for the samples are shown in Table 1.\n\n# 2. Methodology\n\
+    \n## 2.1. Simulation methodology\n\nIn this study we used Solar Cell Simulator\
+    \ (SCAPS) for numerical simulation of solar cell devices, while considering de-coupling\
+    \ relations to solar cell characteristics.\n\nWe have first made and designed\
+    \ the device structure including its absorber layer, electron transport layer\
+    \ (ETL) and hole transport layer (HTL). Material properties of these layers were\
+    \ taken from previous studies. Some material properties of the absorber layer\
+    \ were calculated. The density of carriers and mobility were calculated and others\
+    \ electron affinity, density and thickness were optimized in this work.\n\nAfter\
+    \ optimizing the device structure, we developed a machine learning (ML) model.\
+    \ Among several models, Random Forest was selected, as it produced an R² value\
+    \ of 1. This model was trained with a dataset of 1008 points, then optimized through\
+    \ simulation by varying parameters. The absorber layer was affected by varying\
+    \ temperature of the solar cell. These values varied in definition of power efficiency\
+    \ (PCE). A plot comparing the results with the predicted values from the ML model\
+    \ was generated. Similarly, we created a SHAP summary plot which helped identify\
+    \ the effects of various parameters on PCE and compare them. We also added a python\
+    \ script which would predict the PCE of the device given the three input parameters.\
+    \ Finally we compared the ML predicted PCE with that via simulation. Fig. 2 represents\
+    \ the workflow the machine learning analysis in detail.\n\n## 2.2. Developing\
+    \ machine learning\n\nProperties of optimized solar cell\n\n# Table 1 Material\
+    \ Properties of optimized solar cell\n\n| Material Properties | CsPbI3 | CsPbBr\
+    \ | FTO |\n| :--- | :--- | :--- | :--- |\n| Thickness (nm) | 500 | 200 | 100 |\n\
+    | $E_g$ (eV) | 1.7 | 2.3 | 3.5 |\n| $n_e$ ($cm^{-3}$) | $10^{16}$ | $10^{16}$\
+    \ | $10^{17}$ |\n| $n_h$ ($cm^{-3}$) | $10^{16}$ | $10^{16}$ | $10^{17}$ |\n|\
+    \ $\\mu_e$ ($cm^2/Vs$) | 3.4 | 6 | 10 |\n| $\\mu_h$ ($cm^2/Vs$) | 2 | 4 | 5 |\n\
+    | $\\tau_e$ (s) | $2 \\times 10^{-9}$ | $2 \\times 10^{-9}$ | $1 \\times 10^{-8}$\
+    \ |\n| $\\tau_h$ (s) | $1 \\times 10^{-9}$ | $1 \\times 10^{-9}$ | $1 \\times\
+    \ 10^{-8}$ |\n| Defect Density ($cm^{-3}$) | $1 \\times 10^{15}$ | $1 \\times\
+    \ 10^{15}$ | $1 \\times 10^{15}$ |\n\n*In this work.\n\nReference [5,17]\n\n#\
+    \ 3. Results and Discussion\n\n## 3.1. Optimization of layer parameters\n\nThe\
+    \ ETL and HTL are important in transfer of charges inside the Photovoltaics. The\
+    \ electrons from the absorber must exit, while the ETL ensures effective movement\
+    \ of holes. Hole transport is crucial for avoiding recombination, which helps\
+    \ generate more effective current and enhances PCE of photovoltaic devices.\n\n\
+    These ETL and HTL materials were selected for their successful application in\
+    \ research, where we investigated their efficiency and other advantageous properties\
+    \ for integration into solar cells [17,19,21-32]. And Table 3 shows the simulation\
+    \ performance for the HTLs and ETLs, the J-V curve and Phototransport for different\
+    \ device structures.\n\nUsing theing configuration of ETL and HTL, the (FTO/CsPbBr/SnO2/Au),\
+    \ the solar cell achieved 19.1% efficiency. Our research shows that the effect\
+    \ of the three ETLs, with different thicknesses and band gaps, is shown in Fig.\
+    \ 1. ZnSe-based solar cells also displayed greater stability, thereby shielding\
+    \ the perovskite layer from UV block under UV-radiation [26,28,33]. We, HTLs,\
+    \ SnBr3 and CsPbI\n\n2\n"
+  mdcn: '
+
+
+    # 无机化学快报 176 (2025) 114316
+
+
+    ScienceDirect 可用目录
+
+
+    # 无机化学快报
+
+
+    期刊主页：http://www.elsevier.com/locate/inoche
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_0_0.png)
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_0_1.png)
+
+
+    研究论文
+
+
+    # 基于 SCAPS-1D 和机器学习的高效无铅 $Cs_2RbGa_6$ 钙钛矿太阳能电池的设计与优化
+
+
+    Vishal Deshmal*, Sarita Baghel*
+
+
+    印度德里科技大学应用物理系，可再生能源研究实验室
+
+
+    # 文章信息
+
+
+    # 摘要
+
+
+    - 关键词：
+
+    - 机器学习
+
+    - 双钙钛矿太阳能电池 (DPSC)
+
+    - SCAPS-1D
+
+
+    无铅钙钛矿材料已成为具有卓越性能、稳定性和可靠性的替代无毒半导体材料。本工作重点关注通过 SCAPS-1D 仿真和机器学习优化 $Cs_2RbGa_6$ 基钙钛矿太阳能电池
+    (DPSC)。我们利用文献报道的数据计算了态密度和载流子迁移率等材料属性。使用 SCAPS-1D 软件优化了电子亲和力、缺陷密度和吸收层厚度等其他属性。还考虑了合适的电子传输层（ETL）和空穴传输层。我们找到优化参数实现了
+    22.17% 的 PCE。机器学习有助于验证科学主张、科学发现以及研究空白。随着近期机器学习在科学领域使用的日益增加，我们开发了一个带有 SHAP 摘要图的机器学习模型，以分析吸收层厚度和深度对
+    DPSC 设备工作温度的影响。为了开发这一机器学习模型，通过 SCAPS-1D 仿真生成了 1008 个数据点。
+
+
+    # 1. 引言
+
+
+    钙钛矿材料因其卓越的光电性能已成为取代传统硅基太阳能电池的竞争者 [1–5]。高效钙钛矿太阳能电池的稳定性取决于对其使用范围的限制 [6–8]。为了克服这些限制，科学界发现了双钙钛矿材料
+    (DP)。这些双钙钛矿太阳能电池 (DPSCs) 具有高稳定性和无毒等优点，使其成为既稳定又高效的极佳选择。
+
+
+    在最近的研究中，带隙为 1.8 eV 的 $Cs_2RbGa_6$ 在 [9] 中报道了其有趣的光电特性。该材料需要进一步探索以研究其作为太阳能电池的应用。在本研究中，我们利用报道的材料属性计算态密度和载流子迁移率，从而设计了基于
+    $Cs_2RbGa_6$ 的 DPSC，并优化了缺陷密度、电子亲和力、吸收层厚度、ETL 和 HTL 厚度以及工作温度等属性。
+
+
+    机器学习 (ML) 技术在光伏领域的应用有助于简化设计流程并提高效率 (PCE) [10]。与传统的仿真方法相比，机器学习模型提供了更快速、更高效的方法，即使在没有处理或解释仿真结果深层专业知识的情况下
+    [11]。许多机器学习技术如人工神经网络 (ANN)、支持向量机 (SVM)、随机森林 (RF) 和 XGBoost (XGB) 已经变得容易获取 [12]。这些算法利用大型数据集产生基于输入变量和目标特性的预测结果。它们检测数据内部模式和相关性的能力允许机器学习模型捕捉研究人员可能未发现的见解。
+
+
+    此外，随着机器学习从可用数据不断学习，它们通过适应不断演变的材料属性、变化的环境条件和设备架构的转变，变得越来越能够预测 PCE [12–15]。这种适应性允许基于机器学习的模型在计算效率和速度上超过仿真器，而牺牲了准确性。这对于钙钛矿太阳能电池
+    (PSC) 设计、优化和材料筛选等任务特别有利。
+
+
+    由于 DFT 计算的耗时性，对于研究人员并不合适。为了仿真获得这些特性的近似值，我们可以重复 DFT 计算或使用泛函半导体方程。
+
+
+    机器学习在处理复杂数据集和可靠预测方面正变得越来越普遍 [16]。这些整合多种机器学习算法的模型能够处理大数据集和稳健的变化，使其成为提高 PCE 和光伏研究的价值资产。
+
+
+    $$q_m = \frac{\mu_e \mu_h}{\mu_e + \mu_h}$$
+
+
+    与传统的仿真技术相比，PSC 可以更加灵活、准确和高效 [10]。
+
+
+    $$L_m = \sqrt{\mu_h \tau_h}$$
+
+
+    因此，迁移率可以如下所示计算：(2) (3)
+
+
+    使用 SCAPS-10 仿真生成了一个包含 1008 个点的初始数据集，随后用于训练我们的机器学习模型。通过 SHAP 摘要分析进行测试，显示了 PCE 的清晰度、缺陷和密度性能。我们的机器学习模型预测的结果与值几乎相同，这由高
+    $R^2$ 值所示。
+
+
+    $$40qa = \frac{\mu_e \mu_h}{\mu_e + \mu_h}V_n$$
+
+
+    在这里，$\mu_h$ 是电子/空穴的迁移率，$m^{e,h}$ 是它们的有效质量。$\tau$ 是弛豫时间，$L_m$ 是平均路径。$V_t$ 代表 300
+    K 下的电子/空穴热电压。CsPbI3 的晶格常数 ($a$) 为 12.63 Å []。样本的 $\mu_h$ 计算值如表1 所示。
+
+
+    # 2. 方法论
+
+
+    ## 2.1. 仿真方法
+
+
+    在本研究中，我们使用太阳能电池模拟器 (SCAPS) 对太阳能电池器件进行数值仿真，同时考虑了太阳能电池特性之间的解耦关系。
+
+
+    我们首先制造并设计了器件结构，包括吸收层、电子传输层 (ETL) 和空穴传输层 (HTL)。这些层的材料属性来自之前的研究。计算了吸收层的某些材料属性。计算了载流子密度和迁移率，并在工作中优化了其他电子亲和力、密度和厚度。
+
+
+    优化器件结构后，我们开发了一个机器学习模型。在几个模型中，选择了随机森林，因为它产生的 $R^2$ 值为 1。该模型使用 1008 个点的数据集训练，然后通过改变参数进行仿真优化。吸收层受太阳能电池温度变化的影响。这些值取决于功率效率
+    (PCE) 的定义。生成了比较结果与机器学习模型预测值的对比图表。同样，我们创建了 SHAP 摘要图，有助于识别各种参数对 PCE 的影响并进行比较。我们还添加了一个
+    Python 脚本，可以根据三个输入参数预测设备的 PCE。最后，我们将机器学习预测的 PCE 与仿真得到的结果进行了比较。图 2 详细表示了机器学习分析的工作流程。
+
+
+    ## 2.2. 机器学习开发
+
+
+    优化后太阳能电池的属性
+
+
+    # 表 1 优化后太阳能电池的材料属性
+
+
+    | 材料属性 | CsPbI3 | CsPbBr | FTO |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 厚度 (nm) | 500 | 200 | 100 |
+
+    | $E_g$ (eV) | 1.7 | 2.3 | 3.5 |
+
+    | $n_e$ ($cm^{-3}$) | $10^{16}$ | $10^{16}$ | $10^{17}$ |
+
+    | $n_h$ ($cm^{-3}$) | $10^{16}$ | $10^{16}$ | $10^{17}$ |
+
+    | $\mu_e$ ($cm^2/Vs$) | 3.4 | 6 | 10 |
+
+    | $\mu_h$ ($cm^2/Vs$) | 2 | 4 | 5 |
+
+    | $\tau_e$ (s) | $2 \times 10^{-9}$ | $2 \times 10^{-9}$ | $1 \times 10^{-8}$
+    |
+
+    | $\tau_h$ (s) | $1 \times 10^{-9}$ | $1 \times 10^{-9}$ | $1 \times 10^{-8}$
+    |
+
+    | 缺陷密度 ($cm^{-3}$) | $1 \times 10^{15}$ | $1 \times 10^{15}$ | $1 \times 10^{15}$
+    |
+
+
+    *本文工作。
+
+
+    [5,17]
+
+
+    # 3. 结果与讨论
+
+
+    ## 3.1. 层参数优化
+
+
+    ETL 和 HTL 在光伏器件内部电荷传输中非常重要。吸收层的电子必须离开，而 ETL 确保空穴的有效运动。空穴传输对于避免复合至关重要，有助于产生更有效的电流并提高光伏设备的
+    PCE。
+
+
+    选择这些 ETL 和 HTL 材料是因为它们在研究中的成功应用，我们在其中研究了它们集成到太阳能电池中的效率和其他优势属性 [17,19,21-32]。表
+    3 显示了 HTL 和 ETL 的仿真性能、不同器件结构的 J-V 曲线和光传输。
+
+
+    使用 ETL 和 HTL 的特定配置 (FTO/CsPbBr/SnO2/Au)，太阳能电池实现了 19.1% 的效率。我们的研究显示了三种不同厚度和带隙的
+    ETL 的影响如图 1 所示。基于 ZnSe 的太阳能电池显示出更大的稳定性，从而保护钙钛矿层免受紫外线辐射的影响 [26,28,33]。我们，HTLs，SnBr3
+    和 CsPbI
+
+
+    2
+
+
+    '
+  merge: -1
+- raw:
+  - "[PAGE 2]\n\nW. Deswal and S. Baghel\n\nOrganic Chemistry 177 (2025) 162416\n\n\
+    # Table 2\n\n| Material | CBTS | Spiro | MASn3 | CuO | PEDOT |\n|---|---|---|---|---|---|\n\
+    | Thickness (nm) | 200 | 199 | 300 | - | 50 |\n| $V_{oc}$ (V) | 1.9 | 2 | 2.15\
+    \ | 1.6 | 1 |\n| $J_{sc}$ (mA/cm²) | 6.2 | 3.2 | 4.07 | 4.4 | 3.1 |\n| $FF$ (%)\
+    \ | 5.4 | 3 | 8.2 | 18.3 | - |\n| $R_s$ ($\\Omega\\cdot cm$) | 2.2 | $2.2 \\times\
+    \ 10^{11}$ | $1 \\times 10^{10}$ | $2.2 \\times 10^9$ | - |\n| $R_{sh}$ ($\\Omega\\\
+    cdot cm$) | 1.8 | $1.8 \\times 10^8$ | $1 \\times 10^8$ | $1 \times 10^7$ | -\
+    \ |\n| $V_c$ (cm) | 1 | 1 | 1 | 1 | 1 |\n| $N_t$ | $10^{16}$ | $10^{16}$ | $10^{16}$\
+    \ | $10^{16}$ | $10^{16}$ |\n| $\\mu_e$ ($cm^2/Vs$) | 10 | 21.6 | 0.1 | 4.5 |\
+    \ 10.2 |\n| $N_d$ ($cm^{-3}$) | 1 | $1 \\times 10^{17}$ | $1 \\times 10^{16}$\
+    \ | $1 \\times 10^{16}$ | $1 \\times 10^{16}$ |\n| $N_a$ ($cm^{-3}$) | 1 | $1\
+    \ \\times 10^{15}$ | $1 \\times 10^{15}$ | $1 \\times 10^{15}$ | $1 \\times 10^{15}$\
+    \ |\n| Defect Density ($cm^{-2}$) | - | 1 | 1 | 1 | 1 |\n| Reference | [17] |\
+    \ [21-24] | [25] | [26] | [21,27] |\n\nTherefore, the device structure FTO/CsRbGaS/CBTS\
+    \ was chosen to optimize absorber layers such as thickness, performance, and electron\
+    \ affinity. The optimized layers simulations are shown in the tables, and the\
+    \ band alignment device structure for future optimization are presented in Fig.\
+    \ 1.\n\n# 3.1.1. Optimization of ETL and HT\n\nFigure shows plots of ETL and HT\
+    \ thickness on various parameters. With increase thickness from 100 nm to 1600\
+    \ nm more than 1 percent increase in PCE is observed. While with increase in thickness\
+    \ of ETL in the range nearly 2 percent of PCE is observed. This observation shows\
+    \ that a thinner ETL leads to a better efficiency of solar cell. However, since\
+    \ this PCE with ETL thickness is insignificant to increase in thickness to moreover\
+    \ threshold of 200 nm for HT, a choice of as shown in previous literature [31]\
+    \ is chosen as thickness for ETL, which ensures larger transparency of the absorber\
+    \ layer thereby increasing the efficiency.\n\n# Table 3\n\n| Material Properties\
+    \ | ZnO | TiO2 | IGZO |\n|---|---|---|---|\n| Thickness (nm) | 100 | 100 | 100\
+    \ |\n| $V_{oc}$ (V) | 0.69 | 2.81 | 3.05 |\n| $J_{sc}$ (mA/cm²) | 5.8 | 9 | 6.10\
+    \ |\n| $FF$ (%) | - | 8 | 16 |\n| $N_t$ ($cm^{-3}$) | $2.2 \\times 10^{16}$ |\
+    \ 18 | $5 \\times 10^{18}$ |\n| $N_d$ ($cm^{-3}$) | $1.8 \\times 10^{18}$ | $1.8\
+    \ \\times 10^{17}$ | $5 \\times 10^{14}$ |\n| $V_c$ (cm) | 1 | 1 | 1 |\n| $N_t$\
+    \ | $10^{16}$ | $10^{16}$ | $10^{16}$ |\n| $\\mu_e$ ($cm^2/Vs$) | 400 | 20 | 15\
+    \ |\n| $N_d$ ($cm^{-3}$) | 1 | 10 | $9 \\times 10^{16}$ |\n| $N_a$ ($cm^{-3}$)\
+    \ | 1 | 1 | $1 \\times 10^{17}$ |\n| Defect Density ($cm^{-2}$) | - | 1 | 1 |\n\
+    | Reference | [17] | [14,17,18] | [21,29] |\n\nProperties of Different materials\
+    \ used for simulation.\n\n# 3.2. Optimization of absorber\n\nThe band alignment\
+    \ between the absorber and ETL plays a role in controlling recombination at the\
+    \ interfaces, which in turn affects the open-circuit voltage (Voc). By adjusting\
+    \ the affinity of the absorber layers affects performance metrics, such as Jsc,\
+    \ fill factor (FF), and power conversion efficiency (PCE). Fig 7 shows the effect\
+    \ of Electron affinity on various PSC parameters. The results vary from 3.5 eV\
+    \ to 6 eV and an optimal value. Device exhibits optimal performance when the electron\
+    \ affinity is 0.4 eV (e.g. 3.5 eV), a spike appears when y is too low, which acts\
+    \ as a barrier to hole flow at the absorber/ETL interface, thereby increasing\
+    \ recombination, leading to lower PCE and FF as shown in [35,36]. However, optimization\
+    \ of band offsets is necessary to enhance the perovskite solar cell (PSC) performance.\n\
+    \nBarium thiophene, achieved efficiencies of 22.17 % and 21.86 % respectively\
+    \ when combined with ZnO. Therefore, CBTS is suggested as best HT layer material,\
+    \ offers a tunable band gap and absorption of light. Its non-centrosymmetric crystal\
+    \ structure and atomic size variations make it ideal for the enhancement of PCE\
+    \ of solar cells [24,34].\n\n# 3.3. Defect density optimization\n\n![](img/77993b86c321119fe49a62d1f762f7a1_2_0.png)\n\
+    \nFig. 1. Structure of DPSC and band alignment of different DPSC layers.\n\n3"
+  - '[PAGE 3]
+
+
+    # V. Deswal and S. Baghel
+
+
+    # Inorganic Chemistry Communications 176 (2025) 413616
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_3_0.png)
+
+
+    Fig. 2. Workflow of machine learning analysis.
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_3_1.png)
+
+
+    Fig. (a) J-V curve of PSC with HTLS and IGTO as (b) PCE, FF, and $V_{OC}$ of PSC
+    with HTLS and IGTO. PCE of 22.17%.
+
+
+    PSC parameters. The defect density ($N_t$) in the absorber layer was varied in
+    increments of 10 while maintaining the thickness at 600 nm. All parameters for
+    the ETL, HTL, and absorber were changed. The findings reveal that high defect
+    densities led to a lower cell efficiency. A PCE of 23.76% was observed for $N_t$
+    of $10^{14}$ cm$^{-3}$, after which started to decrease and a significant drop
+    in PCE was observed above $N_t$ of $10^{15}$ cm$^{-3}$. A similar trend was observed
+    in case of FF and $V_{OC}$ as shown in figure below. Meanwhile a significant drop
+    in $J_{sc}$ was observed after $N_t$ of $10^{16}$ cm$^{-3}$.
+
+
+    From these conclusions we can optimize the device value with high $N_t$ of $10^{14}$
+    cm$^{-3}$ which gives a PCE of 22.17%. The defect concentration in the active
+    layer is a crucial factor in determining device efficiency. High defect levels
+    result in recombination rates, leading to issues such as film degradation, formation
+    of pinholes, and reduced stability, all of which negatively impact the performance
+    of the device [17].
+
+
+    # 3.4. Thickness optimization
+
+
+    Batch simulations using SCAPS-1D were conducted to evaluate how'
+  - '[PAGE 4]
+
+
+    # V. Deswal and S. Baghel
+
+
+    # Inorganic Chemistry Communications 176 (2025) 114316
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_4_0.png)
+
+
+    Fig. 4. (a) J-V curve of DPSC with various HTLs and TiO as ETL (b) PCE, $J_{SC}$
+    and $V_{OC}$ of DPSC with various HTLs and TiO2 as ETL.
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_4_1.png)
+
+
+    Fig. 5. (a) J-V curve of DPSC with various HTLs and ZnSe as ETL (b) PCE, FF, $J_{SC}$
+    and $V_{OC}$ of DPSC with various HTLs and ZnSe as ETL.
+
+
+    # 3.5. machine learning
+
+
+    As discussed in the methodology section, machine learning (ML) algorithm was used
+    to develop an ML model, trained on a dataset of 1008 data points. This model was
+    employed to plot the values predicted by the ML model, achieving an R² of 0.9985,
+    as shown in Fig. 10. The trained model was used to generate a SHAP plot to relate
+    the effects of each layer on performance. stability of cell, the power conversion
+    efficiency (PCE) is shown in Fig. 11. SHAP plot confirms that Thickness is the
+    most influential factor in PCE prediction, with higher density leading to higher
+    PCE. Defect Density has a negative effect on PCE, while higher roughness shows
+    positive relationship with PCE. Its impact might depend on the values of other
+    features.
+
+
+    This model was further illustrated to calculate root square error (RMSE) of 0.2712.
+
+
+    absorber thickness enhances the efficiency and performance of $Cs_{2}RbGaIn_{6}$
+    solar cells. Fig. 9 shows the effect of Absorber thickness on PCE parameters.
+    Thickness was measured in 100 nm, while keeping other parameters constant. PCE
+    reached a peak of 22.72 at 110 nm due to better absorption. However, beyond 110
+    nm, recombination causes a decline in efficiency. Fill Factor (FF) and $V_{OC}$
+    showed a decrease with increase in absorber thickness, whereas increase was also
+    observed with an increase in PCE. It was also observed that after 600 nm, further
+    gains in PCE were minimal due to recombination [37]. However, 600 nm was identified
+    as the optimal thickness. Thickness selection is crucial to minimize recombination
+    while maintaining performance, as excessive thickness increases losses and reduces
+    $V_{OC}$ and FF due to higher series resistance [26]. Optimum PCE of 22.17 was
+    observed at the thickness of 600 nm.'
+  - '[PAGE 5]
+
+
+    # Deswal and S. Baghel Inorg. Chemistry Communications 176 (2025) 114316
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_5_0.png)
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_5_1.png)
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_5_2.png)
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_5_3.png)
+
+
+    Fig. 6. Contour plots depicting impact of HTL and ETL variation on (a) PCE (b)
+    FF (c) Jsc and (d) Voc.
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_5_4.png)
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_5_5.png)
+
+
+    Fig. 7. Effect of Electron Affinity on (a) PCE and Jsc (b) FF and Voc of Cs2RbGa6
+    based DPSC.'
+  md: "\nW. Deswal and S. Baghel\n\nOrganic Chemistry 177 (2025) 162416\n\n# Table\
+    \ 2\n\n| Material | CBTS | Spiro | MASn3 | CuO | PEDOT |\n|---|---|---|---|---|---|\n\
+    | Thickness (nm) | 200 | 199 | 300 | - | 50 |\n| $V_{oc}$ (V) | 1.9 | 2 | 2.15\
+    \ | 1.6 | 1 |\n| $J_{sc}$ (mA/cm²) | 6.2 | 3.2 | 4.07 | 4.4 | 3.1 |\n| $FF$ (%)\
+    \ | 5.4 | 3 | 8.2 | 18.3 | - |\n| $R_s$ ($\\Omega\\cdot cm$) | 2.2 | $2.2 \\times\
+    \ 10^{11}$ | $1 \\times 10^{10}$ | $2.2 \\times 10^9$ | - |\n| $R_{sh}$ ($\\Omega\\\
+    cdot cm$) | 1.8 | $1.8 \\times 10^8$ | $1 \\times 10^8$ | $1 \\times 10^7$ | -\
+    \ |\n| $V_c$ (cm) | 1 | 1 | 1 | 1 | 1 |\n| $N_t$ | $10^{16}$ | $10^{16}$ | $10^{16}$\
+    \ | $10^{16}$ | $10^{16}$ |\n| $\\mu_e$ ($cm^2/Vs$) | 10 | 21.6 | 0.1 | 4.5 |\
+    \ 10.2 |\n| $N_d$ ($cm^{-3}$) | 1 | $1 \\times 10^{17}$ | $1 \\times 10^{16}$\
+    \ | $1 \\times 10^{16}$ | $1 \\times 10^{16}$ |\n| $N_a$ ($cm^{-3}$) | 1 | $1\
+    \ \\times 10^{15}$ | $1 \\times 10^{15}$ | $1 \\times 10^{15}$ | $1 \\times 10^{15}$\
+    \ |\n| Defect Density ($cm^{-2}$) | - | 1 | 1 | 1 | 1 |\n| Reference | [17] |\
+    \ [21-24] | [25] | [26] | [21,27] |\n\nTherefore, the device structure FTO/CsRbGaS/CBTS\
+    \ was chosen to optimize absorber layers such as thickness, performance, and electron\
+    \ affinity. The optimized layers simulations are shown in the tables, and the\
+    \ band alignment device structure for future optimization are presented in Fig.\
+    \ 1.\n\n## 3.1.1. Optimization of ETL and HT\n\nFigure shows plots of ETL and\
+    \ HT thickness on various parameters. With increase thickness from 100 nm to 1600\
+    \ nm, more than 1 percent increase in PCE is observed. While with increase in\
+    \ thickness of ETL in the range, nearly 2 percent of PCE is observed. This observation\
+    \ shows that a thinner ETL leads to a better efficiency of solar cell. However,\
+    \ since this PCE with ETL thickness is insignificant to increase in thickness\
+    \ to moreover threshold of 200 nm for HT, a choice of as shown in previous literature\
+    \ [31] is chosen as thickness for ETL, which ensures larger transparency of the\
+    \ absorber layer thereby increasing the efficiency.\n\n# Table 3\n\n| Material\
+    \ Properties | ZnO | TiO2 | IGZO |\n|---|---|---|---|\n| Thickness (nm) | 100\
+    \ | 100 | 100 |\n| $V_{oc}$ (V) | 0.69 | 2.81 | 3.05 |\n| $J_{sc}$ (mA/cm²) |\
+    \ 5.8 | 9 | 6.10 |\n| $FF$ (%) | - | 8 | 16 |\n| $N_t$ ($cm^{-3}$) | $2.2 \\times\
+    \ 10^{16}$ | 18 | $5 \\times 10^{18}$ |\n| $N_d$ ($cm^{-3}$) | $1.8 \\times 10^{18}$\
+    \ | $1.8 \\times 10^{17}$ | $5 \\times 10^{14}$ |\n| $V_c$ (cm) | 1 | 1 | 1 |\n\
+    | $N_t$ | $10^{16}$ | $10^{16}$ | $10^{16}$ |\n| $\\mu_e$ ($cm^2/Vs$) | 400 |\
+    \ 20 | 15 |\n| $N_d$ ($cm^{-3}$) | 1 | 10 | $9 \\times 10^{16}$ |\n| $N_a$ ($cm^{-3}$)\
+    \ | 1 | 1 | $1 \\times 10^{17}$ |\n| Defect Density ($cm^{-2}$) | - | 1 | 1 |\n\
+    | Reference | [17] | [14,17,18] | [21,29] |\n\nProperties of Different materials\
+    \ used for simulation.\n\n## 3.2. Optimization of absorber\n\nThe band alignment\
+    \ between the absorber and ETL plays a role in controlling recombination at the\
+    \ interfaces, which in turn affects the open-circuit voltage ($V_{oc}$). By adjusting\
+    \ the affinity of the absorber layers affects metrics such as $J_{sc}$, fill factor\
+    \ (FF), and power conversion efficiency (PCE). Fig 7 shows the effect of Electron\
+    \ affinity on various PSC parameters. The results vary from 3.5 eV to 6 eV and\
+    \ an optimal value device exhibits optimal performance when the electron affinity\
+    \ is 0.4 eV (e.g. 3.5 eV), a spike appears when affinity is too low, which acts\
+    \ as a barrier to hole flow at the absorber/ETL interface, thereby increasing\
+    \ recombination, leading to lower PCE and FF as shown in [35,36]. However, optimization\
+    \ of band offsets is necessary to enhance perovskite solar cell (PSC) performance\
+    \ achieved efficiencies of 22.17% and 21.86% respectively when combined with ZnO.\
+    \ Therefore, CBTS is suggested as best HT material, offers a tunable band gap\
+    \ and absorption of light. Its non-centrosymmetric crystal structure and atomic\
+    \ size make it ideal for the enhancement of PCE of solar cells [24,34].\n\n##\
+    \ 3.3. Defect density optimization\n\n![](img/77993b86c321119fe49a62d1f762f7a1_2_0.png)\n\
+    \nFig. 1. Structure of DPSC and band alignment of different DPSC layers.\n\n![](img/77993b86c321119fe49a62d1f762f7a1_3_0.png)\n\
+    \nFig. 2. Workflow of machine learning analysis.\n\n![](img/77993b86c321119fe49a62d1f762f7a1_3_1.png)\n\
+    \nFig. (a) J-V curve of PSC with HTL and IGTO as (b) PCE, FF, and $V_{OC}$ of\
+    \ PSC with HTL and IGTO. PCE of 22.17%. \n\nThe defect density ($N_t$) in the\
+    \ absorber layer was varied in increments of 10 while maintaining the thickness\
+    \ at 600 nm. All parameters for the ETL, HTL, and absorber were changed. The findings\
+    \ reveal that high defect densities led to a lower cell efficiency. A PCE of 23.76%\
+    \ was observed for $N_t$ of $10^{14}$ cm$^{-3}$, after which started to decrease\
+    \ and a significant drop in PCE was observed above $N_t$ of $10^{15}$ cm$^{-3}$.\
+    \ A similar trend was observed in case of FF and $V_{OC}$ as shown in figure below.\
+    \ Meanwhile a significant drop in $J_{sc}$ was observed after $N_t$ of $10^{16}$\
+    \ cm$^{-3}$.\n\nFrom these conclusions we can optimize the device value with high\
+    \ $N_t$ of $10^{14}$ cm$^{-3}$ which gives a PCE of 22.17%. The defect concentration\
+    \ in the active layer is a crucial factor in determining device efficiency. High\
+    \ defect levels result in recombination rates, leading to issues such as film\
+    \ degradation, formation of pinholes, and reduced stability, all of which negatively\
+    \ impact the performance of the device [17].\n\n## 3.4. Thickness optimization\n\
+    \nBatch simulations using SCAPS-1D were conducted to evaluate how\n\n![](img/77993b86c321119fe49a62d1f762f7a1_4_0.png)\n\
+    \nFig. 4. (a) J-V curve of DPSC with various HTLs and TiO as ETL (b) PCE, $J_{SC}$\
+    \ and $V_{OC}$ of DPSC with various HTLs and TiO2 as ETL.\n\n![](img/77993b86c321119fe49a62d1f762f7a1_4_1.png)\n\
+    \nFig. 5. (a) J-V curve of DPSC with various HTLs and ZnSe as ETL (b) PCE, FF,\
+    \ $J_{SC}$ and $V_{OC}$ of DPSC with various HTLs and ZnSe.\n\n## 3.5. machine\
+    \ learning\n\nAs discussed in the methodology, machine learning (ML) algorithm\
+    \ was used to develop a model, achieving $R^2$ of 0.9985, as shown in Fig. 1.\
+    \ SHAP plot confirms that Thickness is the most influential factor in PCE. Defect\
+    \ Density has a negative effect on PCE, with higher density leading to lower PCE.\n\
+    \n![](img/77993b86c321119fe49a62d1f762f7a1_5_0.png)\n\n![](img/77993b86c321119fe49a62d1f762f7a1_5_1.png)\n\
+    \n![](img/77993b86c321119fe49a62d1f762f7a1_5_2.png)\n\n![](img/77993b86c321119fe49a62d1f762f7a1_5_3.png)\n\
+    \nFig. 6. Contour plots depicting impact of HTL and ETL variation on (a) PCE (b)\
+    \ FF (c) Jsc and (d) Voc.\n\n![](img/77993b86c321119fe49a62d1f762f7a1_5_4.png)\n\
+    \n![](img/77993b86c321119fe49a62d1f762f7a1_5_5.png)\n\nFig. 7. Effect of Electron\
+    \ Affinity on (a) PCE and Jsc (b) FF and Voc of Cs2RbGa6 based DPSC.\n"
+  mdcn: '
+
+
+    W. Deswal 和 S. Baghel
+
+
+    Organic Chemistry 177 (2025) 162416
+
+
+    # 表 2
+
+
+    | 材料 | CBTS | Spiro | MASn3 | CuO | PEDOT |
+
+    |---|---|---|---|---|---|
+
+    | 厚度 (nm) | 200 | 199 | 300 | - | 50 |
+
+    | $V_{oc}$ (V) | 1.9 | 2 | 2.15 | 1.6 | 1 |
+
+    | $J_{sc}$ (mA/cm²) | 6.2 | 3.2 | 4.07 | 4.4 | 3.1 |
+
+    | $FF$ (%) | 5.4 | 3 | 8.2 | 18.3 | - |
+
+    | $R_s$ ($\Omega\cdot cm$) | 2.2 | $2.2 \times 10^{11}$ | $1 \times 10^{10}$ |
+    $2.2 \times 10^9$ | - |
+
+    | $R_{sh}$ ($\Omega\cdot cm$) | 1.8 | $1.8 \times 10^8$ | $1 \times 10^8$ | $1
+    \times 10^7$ | - |
+
+    | $V_c$ (cm) | 1 | 1 | 1 | 1 | 1 |
+
+    | $N_t$ | $10^{16}$ | $10^{16}$ | $10^{16}$ | $10^{16}$ | $10^{16}$ |
+
+    | $\mu_e$ ($cm^2/Vs$) | 10 | 21.6 | 0.1 | 4.5 | 10.2 |
+
+    | $N_d$ ($cm^{-3}$) | 1 | $1 \times 10^{17}$ | $1 \times 10^{16}$ | $1 \times
+    10^{16}$ | $1 \times 10^{16}$ |
+
+    | $N_a$ ($cm^{-3}$) | 1 | $1 \times 10^{15}$ | $1 \times 10^{15}$ | $1 \times
+    10^{15}$ | $1 \times 10^{15}$ |
+
+    | 缺陷密度 ($cm^{-2}$) | - | 1 | 1 | 1 | 1 |
+
+    | 参考文献 | [17] | [21-24] | [25] | [26] | [21,27] |
+
+
+    因此，选择了 FTO/CsRbGaS/CBTS 器件结构来优化吸收层，例如厚度、性能和电子亲和力。优化层的仿真结果如表所示，未来优化的带对齐器件结构如图 1
+    所示。
+
+
+    ## 3.1.1. ETL 和 HT 的优化
+
+
+    图显示了 ETL 和 HT 厚度对各种参数的影响。当厚度从 100 nm 增加到 600 nm 时，观察到 PCE 增加了超过 1%。当 ETL 厚度增加时，观察到
+    PCE 增加了近 2%。这一观察表明，较薄的 ETL 会导致更好的太阳电池效率。然而，由于这种 ETL 厚度的 PCE 增加并不显著，对于 HT 的 200
+    nm 阈值，选择了文献 [31] 所示的 ETL 厚度，以确保吸收层更大的透明度。
+
+
+    # 表 3
+
+
+    | 材料属性 | ZnO | TiO2 | IGZO |
+
+    |---|---|---|---|
+
+    | 厚度 (nm) | 100 | 100 | 100 |
+
+    | $V_{oc}$ (V) | 0.69 | 2.81 | 3.05 |
+
+    | $J_{sc}$ (mA/cm²) | 5.8 | 9 | 6.10 |
+
+    | $FF$ (%) | - | 8 | 16 |
+
+    | $N_t$ ($cm^{-3}$) | $2.2 \times 10^{16}$ | 18 | $5 \times 10^{18}$ |
+
+    | $N_d$ ($cm^{-3}$) | $1.8 \times 10^{18}$ | $1.8 \times 10^{17}$ | $5 \times
+    10^{14}$ |
+
+    | $V_c$ (cm) | 1 | 1 | 1 |
+
+    | $N_t$ | $10^{16}$ | $10^{16}$ | $10^{16}$ |
+
+    | $\mu_e$ ($cm^2/Vs$) | 400 | 20 | 15 |
+
+    | $N_d$ ($cm^{-3}$) | 1 | 10 | $9 \times 10^{16}$ |
+
+    | $N_a$ ($cm^{-3}$) | 1 | 1 | $1 \times 10^{17}$ |
+
+    | 缺陷密度 ($cm^{-2}$) | - | 1 | 1 |
+
+    | 参考文献 | [17] | [14,17,18] | [21,29] |
+
+
+    用于仿真的材料属性
+
+
+    ## 3.2. 吸收层的优化
+
+
+    吸收层与 ETL 之间的带对齐在控制界面复合方面起着作用，从而影响开路电压 ($V_{oc}$)。调整吸收层的亲和力会影响 $J_{sc}$、填充因子 (FF)
+    和光电效率 (PCE)。图 7 显示了电子亲和力对各种 PSC 参数的影响。结果从 3.5 eV 变化到 6 eV，当亲和力为 0.4 eV（例如 3.5
+    eV）时器件表现出最佳性能；亲和力过低会作为吸收层/ETL 界面空穴流的屏障，从而增加复合，导致较低的 PCE 和 FF，如 [35,36] 所示。然而，与
+    ZnO 结合时为了增强钙钛矿太阳电池 (PSC) 性能，分别实现了 22.17% 和 21.86% 的效率，因此建议 CBTS 作为最佳 HT 材料，它具有可调的光隙和光吸收。其非中心对称晶体结构和尺寸使其使其太阳电池
+    PCE 的理想选择 [24,34]。
+
+
+    ## 3.3. 缺陷密度优化
+
+
+    ![](img/77993b86c321119fe49a6d1f762f7a1_2_0.png)
+
+
+    图 1. 不同 DPSC 层的结构和带对齐。
+
+
+    ![](img/77993b86c321119fe49a6d1f762f7a1_3_0.png)
+
+
+    图 2. 机器学习工作流。
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_3_1.png)
+
+
+    图 (a) 带 HTL 和 IGTO 的 PSC J-V 曲线，(b) 带 HTL 和 IGTO 的 PSC PCE、FF 和 $V_{OC}$。PCE 为
+    22.17%。
+
+
+    在保持厚度为 600 nm 时，吸收层中的缺陷密度 ($N_t$) 以 10 为增量进行变化。改变了 ETL、HTL 和吸收层的所有参数。发现高缺陷密度会导致电池效率降低。当
+    $N_t$ 为 $10^{14}$ $cm^{-3}$ 时， PCE 为 23.76%，之后开始下降，并在 $N_t$ 超过 $10^{15}$ $cm^{-3}$
+    时观察到 PCE 显著下降。如下所示，在 $N_t$ 为 $10^{16}$ $cm^{-3}$ 时，FF 和 $V_{OC}$ 也观察到类似的趋势。从这些结论中，我们可以优化
+    $N_t$ 为 $10^{14}$ $cm^{-3}$ 的器件值，使其获得 22.17% 的 PCE。活性层中的缺陷浓度是决定器件效率的关键因素。高缺陷水平会导致复合率，引发膜降解、针孔形成和稳定性下降等问题，所有这些都会负面影响器件性能
+    [17]。
+
+
+    ## 3.4. 厚度优化
+
+
+    使用 SCAPS-1D 进行批量仿真以评估
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_4_0.png)
+
+
+    图 4. (a) 带 HTL 和 TiO 的 DPSC J-V 曲线，(b) 带 HTL 和 TiO2 的 DPSC PCE、$J_{SC}$ 和 $V_{OC}$。
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_4_1.png)
+
+
+    图 5. (a) 带 HTL 和 ZnSe 的 DPSC J-V 曲线，(b) 带 HTL 和 ZnSe 的 DPSC PCE、FF、$J_{SC}$ 和
+    $V_{OC}$。
+
+
+    ## 3.5. 机器学习
+
+
+    如方法论所述，使用机器学习 (ML) 算法开发了模型，实现了 0.9985 的 $R^2$，如图 1 所示。SHAP 图证实了厚度是影响 PCE 最大的因素。缺陷密度对
+    PCE 有负面影响，较高的密度会导致较低的 PCE。
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_5_0.png)
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_5_1.png)
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_5_2.png)
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_5_3.png)
+
+
+    图 6. 描述 HTL 和 ETL 变化对 (a) PCE (b) FF (c) Jsc 和 (d) Voc 影响的等线图。
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_5_4.png)
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_5_5.png)
+
+
+    图 7. 电子亲和力对 Cs2RbGa6 基 DPSC (a) PCE 和 Jsc (b) FF 和 Voc 的影响。
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 6]
+
+
+    # D. Desai and S. Baghel
+
+    Inorganic Chemistry Communications 176 (2025) 114316
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_6_0.png)
+
+
+    Fig. 8. Effect of Defect Density on (a) PCE and JSC (b) FF and Voc of Cs2RbGaGa4
+    DPSC.
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_6_1.png)
+
+
+    Fig. 9. Effect of Absorber Thickness on (a) PCE and JSC (b) FF and Voc of Cs2RbGaGa4
+    DPSC.
+
+
+    model will predict the PCE of the same. For the was tested for the SCAPS
+
+    optimized DPSC, features values i., Thickness of 600 nm, Defect dens-
+
+    of 10⁴ cm⁻¹, and 300 K were inserted in the
+
+    prom when the code is run. The ML model predicted the PCE of
+
+    22.56 % which is very close to the simulated 22.17.
+
+
+    # ### 4. Conclusion
+
+
+    In this study we comprehensively studied and optimized Cs2RbGaIn-
+
+    lead-free double perovsk solar cells (DPSCs), which is
+
+    high highly efficient material for solar cell applications. we
+
+    calculated essential material properties for Cs2RbGaIn, such as the-
+
+    density for the values and conduction bands, as well as carrier
+
+    mobilities. Additional properties, including electron affinity,
+
+    density density, and absorber thickness, were simulated.
+
+
+    We also optimized the electron transport layer (ETL) and hole
+
+    transport layer (HTL), finding that ZnO and CsBT have the best
+
+    power conversion efficiency (PCE) and making
+
+    the recommended layers. The impact of ETL and HTL thicknesses
+
+    was analyzed using contour plots, and we found that a thicker HTL
+
+    (100 nm) improves efficiency. We also studied the effect of electron affinity
+    on device-
+
+    ment, identifying 4 eV as the optimal value. The impact of defect
+
+    density on device performance was further analyzed, with results-
+
+    that the cell could achieve high efficiency at a relatively high
+
+    defect of 10⁴ cm⁻¹, as chosen in the optimized value. The absorber
+
+
+    Fig. 10. Plot of PCE predicted by ML model with the actual PCE values
+
+    obtained through simulation. ML model had a high R value of 0.9985.
+
+
+    Once we developed and trained the ML model its importance that it
+
+    can use to predict the PCE of Cs2RbGaIn, based cell
+
+    give the future values. To achieve this simple python script
+
+    added to our code so that we input the features values ML'
+  - '[PAGE 7]
+
+
+    # Temperature
+
+
+    # Defect Density
+
+
+    # Thickness
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_7_0.png)
+
+
+    Fig. 11. SHAP summary analysis of impact on feature value, defect density, thickness
+    of layer, and roughness of layer.
+
+
+    layer thickness varied between 100 nm and 160 nm, and 600 nm were selected as
+    the ideal thickness.
+
+
+    Additionally, we developed a machine learning (ML) model capable of analyzing
+    the various feature values and predicting the solar cell efficiency with these
+    inputs. We trained the model with 1000 data points from simulations in SCAPS-1
+    using device operating temperature, layer thickness, and defect density, achieving
+    an R² of 0.9985, indicating a high predictive accuracy. A SHAP summary plot was
+    used to interpret the model, showing among the three features, temperature has
+    the most significant impact on PCE. Additionally, defect density showed a complex
+    relationship with PCE, indicating that its impact depends on the values of other
+    features. Using a custom Python script, we obtained ML predicted PCE of 22.56
+    %, matching the 22.17% from simulations.
+
+
+    This study explores the potential of perovskite-based solar cells through experiments,
+    with the findings here are helpful for enhancing PCE durability. It highlights
+    the value of ML in analyzing the impact of various factors on solar cell performance
+    and emphasizes the importance of simulation-based methods for achieving accurate
+    results in shorter time.
+
+
+    # Credit author contribution
+
+
+    Vishal Deswal: Writing — original draft, Visualization, Methodology, Investigation,
+    Formal analysis. Data collection, Conceptualization. Sarita Baghel: Writing —
+    editing & validation, Supervision, Resources, Project administration, Formal analysis.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known conflict of interest or personal relationships
+    that could have influenced the work reported in this paper.
+
+
+    # Acknowledgment
+
+
+    The authors thank Professor Marc Burgelman (University of Germany) for providing
+    SCAPS-1 data. Authors are thankful to Delhi Technological University, for funding
+    for this research.
+
+
+    # Data availability
+
+
+    Data will be available on request.
+
+
+    # References
+
+
+    +   [1] A. Kolima, T. Itura, Y. Shirai, T. Miyasaki, Organic Halide Perovskites
+    for Photovoltaic Cells, Am Chem Sci 131 (2009) 19988–19989, https://doi.org/10.1021/acs8906922b
+
+
+    +   [2] H. Snaith, Perovskites: The Emergence of a New Low-Cost, High-Efficiency
+    Solar Cells, J Phys Lett 4 (2023) 3623–3630, https://doi.org/10.1016/j.jpls.2023.10517
+
+
+    +   [3] N. G. Park, Organic Perovskite Light Absorbers towards a 20% Efficiency
+    Solar Cells, Nature Energy 7 (2022) 892–900, https://doi.org/10.1038/s41560-022-0093-1
+
+
+    +   [4] J. Kim, S. Lee, J. Lee, Y. Lee, H. Lee, S. Lee, J. Kim, and H. Kim, Analysis
+    of the bandgap of hybrid organic-inorganic perovskites, Advanced Materials 34
+    (2022), 22031447, https://doi.org/10.1002/adma.2022031447
+
+
+    +   [5] N. Ravivas, R. Ganasopadhyay, J. Takura, Stability and degradation of
+    perovskite solar cells, Energy Env Sci 12 (2019) 221–228, https://doi.org/10.1039/C8EE00147-A00147
+
+
+    +   [6] W. Walsh, Chemical Bonding and Bandgap Engineering in Organic-Inorganic
+    Perovskites, J. Phys. Chem C 119 (2015) 5755–5760, https://doi.org/10.1021/acpc501333a
+
+
+    +   [7] N. M. Vasiya, S. Rao, T. Zella, N. K Thakur, M. Mohammad, Stability of
+    inorganic cell Cs2PbI6 (Ga, Ga) as a high efficiency harvesting device: an optoelectronic
+    approach, Solar Energy 228 (2021) 1 https://doi.org/10.1016/j.solmat.2021.107699
+
+
+    +   [8] A. Sora, S. Rao, T. Zella, N. K Thakur, M. Mohammad, Stability of inorganic
+    cell Cs2PbI6 (Ga, Ga) as a high efficiency harvesting device: an optoelectronic
+    approach, Solar Energy 228 (2021) 1, https://doi.org/10.1016/j.solmat.2021.107699-000
+
+
+    +   [9] J. Sun, H. Wang, Y. Xu, and Y. Zhang, Machine learning for solar cell
+    efficiency prediction and optimization, Communications Materials 13 (2022) 11251,
+    https://doi.org/10.1038/s42468-022-01251-y
+
+
+    +   [10] Z. Liu, H. Wang, X. Yan, and Y. Wang, Machine learning for solar cell
+    device design and optimization, Nature Communications 13 (2022) 11547, https://doi.org/10.1038/s41467-022-31955-w
+
+
+    +   [11] J. L. B. Praadhan, S. Garg, and J. Thomas, Machine Learning-Based Approach
+    for Developing High-Efficiency Perovskite Solar Cells, Advanced Energy Materials
+    12 (2022) 2102733
+
+
+    +   [12] M. Kibib, H. Jahan, N. Khosravi, I. Elsayed, A. Almina, and R. Ahmed,
+    Computational insights into the efficiency of perovskite solar cells'
+  - '[PAGE 8]
+
+
+    Halovskite solar cells. Nature Phys 24 (2023) 1297–1304, https://doi.org/10.1038/sphyschem.2023.22697.
+
+
+    M. Li, J. Liu, A. Alam, M. Rafman, H. Bershiff, Investigation of Electrons and
+    Hole Transport Layers on the CpPb3-Perovskite Solar Cells: A Numerical Investigation
+    in CAPS-DI, and vdwaxs Functional. Energy 243 (2022) 134210, https://doi.org/10.1016/j.energy.2022.134210.
+
+
+    Y. Raza, H. El-Zahrany, O. Elmohamadi, M. Rahman, S. Sakalli, Performance of Perovskite
+    Solar Cells Based on Interface Engineering for Enhanced selective charge selectivity:
+    Simulation. Sol Energy 123 (2019) 948–955, https://doi.org/10.1016/j.solener.2019.04.032.
+
+
+    L. Huang, K. Sun, C. Li, X. Xu, J. Yu, Y. Wu, J. Ni, H. Li, J. Hu, J. Zhou, Y.
+    Zhang, Stability Analysis of Perovskite Solar Cells under Light Bias. Materials
+    Opt 188 (2021) 107332, https://doi.org/10.1016/j.matopt.2021.107332.
+
+
+    E. Meng, T. Tang, R. Zhang, X. Wang, L. Li, Y. Yang, S. Song, X. Chen, J. Zhu,
+    Y. Wang, Optimization of organic-based perovskite solar cells by CAPS-simulation.
+    Opt Mater (Amer) (2022) 114527, https://doi.org/10.1016/j.optopt.2022.114527.
+
+
+    P. Savichka, C.-J. Zhou, S. Growicz, R. Vasiłek, Z. Jajazkowski, M. Ister, J.
+    Bauer, Simulation of FIP solar cells using CAPS-DI and CAPS-ID software. Mater
+    Res 6 (2019) 085918, https://doi.org/10.1088/s40247-019-08591-8.
+
+
+    H. Alipour, G. Adilmani, Optimization of lead-free perovskite solar cells in nanostructured
+    devices using CAPS-ID. FET-PED: PSC for hole transport layer by CAPS-ID-simulation.
+    Opt Mater (Amer) (2022) 114526, https://doi.org/10.1016/j.optopt.2022.114526.
+
+
+    K. Deepanshi Jayan, V. Sebastian, Modeling and comparative performance analysis
+    of transport layers in perovskite solar cells. Energy Res 45 (2021) 20632–2070,
+    doi:10.1016/j.energy.2021.05.018.
+
+
+    Q. M. Wang, J. Li, S. Li, W. Wei, K. Bahmann, Halide double-Perovskite Photovoltaic
+    Cell with Cs2AgBr6-CsPbBr6 Heterojunction. Sn, Mater. Chem 125 (2022) 21206–21218,
+    https://doi.org/10.1021/acs.sncm.2c05699.
+
+
+    S. Zhang, J. Sun, A. Malik, A. Ahmed, Advanced electrical simulation of double-perovskite
+    solar cells with Mixed Halide Effect. Scientific Reports 13 (2023) 2996–3013,
+    https://doi.org/10.1038/s41598-023-XXXXX.
+
+
+    Z. Zhang, J. Liu, J. Huo, L. Lin, Z. Zhou, J. Zhang, Y. Hao, Potential Applications
+    of Halide Double Perovskites Cs2AgX6 (X = Cl, Br) in Free Optronics. Scientific
+    Reports 13 (2023) 1120–1125, https://doi.org/10.1038/s41598-XXXXX.
+
+
+    M. Burgetman, P. Nullet, S. Grodziej, Modelling polycrystalline semiconductor
+    solar cells. Solar Energy 202 (2000) 361–362 (527–532), https://doi.org/10.1016/S0022-1392X
+
+
+    # Inorganic Chemistry Communications 17 (2025) 114216
+
+
+    A. Monjedi, N. Boussaira, S. Sakalli, K. Bahmann, Stability of double perovskite
+    Cs2AgBr6 for photovoltaics: Optical properties and stability. Energy 243 (2022)
+    134213, https://doi.org/10.1016/j.energy.2022.134213.
+
+
+    S. Wang, W. Wu, W. Li, S.-J. Yang, J. Zhang, Y. Chen, Optimization of inverted-lead-free
+    perovskite solar cells based on fast simulations. Green Energy 199 (2020) 75–82,
+    https://doi.org/10.1016/j.conene.2020.04.014.
+
+
+    M. Monam, H. Shafi, S. T. Jan, J. Khan, M. Ismail, A.J. Khanian, Optimization
+    of organic-based perovskite solar cells by CAPS simulation, Mater. Sci. Eng. B
+    (2023) 304012.
+
+
+    M. Cheng, T. Tang, R. Zhang, K. Li, L. Li, Y. Yang, S. Song, X. Chen, J. Zhu,
+    Y. Wang, Optimization of organic-based perovskite solar cells by CAPS simulation,
+    Opt Mater (Amer) (2022) 114527, https://doi.org/10.1016/j.optopt.2022.114527.
+
+
+    Vishal Dehal is working on perovskite solar cell and is currently a doctoral student
+    at Delhi Technological University (DTU), Delhi.'
+  md: "\n# D. Desai and S. Baghel\nInorganic Chemistry Communications 176 (2025) 114316\n\
+    \n![](img/77993b86c321119fe49a62d1f762f7a1_6_0.png)\n\nFig. 8. Effect of Defect\
+    \ Density on (a) PCE and JSC (b) FF and Voc of Cs2RbGaGa4 DPSC.\n\n![](img/77993b86c321119fe49a62d1f762f7a1_6_1.png)\n\
+    \nFig. 9. Effect of Absorber Thickness on (a) PCE and JSC (b) FF and Voc of Cs2RbGaGa4\
+    \ DPSC.\n\nmodel will predict the PCE of the same. For the was tested for the\
+    \ SCAPS optimized DPSC, features values i., Thickness of 600 nm, Defect density\
+    \ of 10⁴ cm⁻¹, and 300 K were inserted in the prompt when the code is run. The\
+    \ ML model predicted the PCE of 22.56 % which is very close to the simulated 22.17.\n\
+    \n### 4. Conclusion\n\nIn this study we comprehensively studied and optimized\
+    \ Cs2RbGaIn-lead-free double perovskite solar cells (DPSCs), which is highly efficient\
+    \ material for solar cell applications. we calculated essential material properties\
+    \ for Cs2RbGaIn, such as the density and conduction bands, as well as carrier\
+    \ mobilities. Additional properties, including electron affinity, density, and\
+    \ absorber thickness, were simulated.\n\nWe also optimized the electron transport\
+    \ layer (ETL) and hole transport layer (HTL), finding that ZnO and CsBT have the\
+    \ best power conversion efficiency (PCE) and making the recommended layers. The\
+    \ impact of ETL and HTL thicknesses was analyzed using contour plots, and we found\
+    \ that a thicker HTL (100 nm) improves efficiency. We also studied the effect\
+    \ of electron affinity on devicement, identifying 4 eV as the optimal value. The\
+    \ impact of defect density on device performance was further analyzed, with results\
+    \ that the cell could achieve high efficiency at a relatively high defect of 10⁴\
+    \ cm⁻¹, as chosen in the optimized value. The absorber layer thickness varied\
+    \ between 100 nm and 160 nm, and 600 nm were selected as the ideal thickness.\n\
+    \nFig. 10. Plot of PCE predicted by ML model with the actual PCE values obtained\
+    \ through simulation. ML model had a high R value of 0.9985.\n\nAdditionally,\
+    \ we developed a machine learning (ML) model capable of analyzing the various\
+    \ feature values and predicting the solar cell efficiency with these inputs. We\
+    \ trained the model with 1000 data points from simulations in SCAPS-1 using device\
+    \ operating temperature, layer thickness, and defect density, achieving an R²\
+    \ of 0.9985, indicating a high predictive accuracy. A SHAP summary plot was used\
+    \ to interpret the model, showing among the three features, temperature has the\
+    \ most significant impact on PCE. Additionally, defect density showed a complex\
+    \ relationship with PCE, indicating that its impact depends on the values of other\
+    \ features. Using a custom Python script, we obtained ML predicted PCE of 22.56\
+    \ %, matching the 22.17% from simulations.\n\nOnce we developed and trained the\
+    \ ML model its importance that it can give the future values. To achieve this\
+    \ simple python script added to our code so that we input the features values\
+    \ ML model will predict the PCE of Cs2RbGaIn, based cell. \n\n![](img/77993b86c321119fe49a62d1f762f7a1_7_0.png)\n\
+    \nFig. 11. SHAP summary analysis of impact on feature value, defect density, thickness\
+    \ of layer, and roughness of layer.\n\nThis study explores the potential of perovskite-based\
+    \ solar cells through experiments, with the findings here are helpful for enhancing\
+    \ PCE durability. It highlights the value of ML in analyzing the impact of various\
+    \ factors on solar cell performance and emphasizes the importance of simulation-based\
+    \ methods for achieving accurate results in shorter time.\n\n## Credit author\
+    \ contribution\n\nVishal Deswal: Writing — original draft, Visualization, Methodology,\
+    \ Investigation, Formal analysis. Data collection, Conceptualization. Sarita Baghel:\
+    \ Writing — editing & validation, Supervision, Resources, Project administration,\
+    \ Formal analysis.\n\n## Declaration of competing interest\n\nThe authors declare\
+    \ that they have no known conflict of interest or personal relationships that\
+    \ could have influenced the work reported in this paper.\n\n## Acknowledgment\n\
+    \nThe authors thank Professor Marc Burgelman (University of Germany) for providing\
+    \ SCAPS-1 data. Authors are thankful to Delhi Technological University, for funding\
+    \ for this research.\n\n## Data availability\n\nData will be available on request.\n\
+    \n## References\n\n- [1] A. Kolima, T. Itura, Y. Shirai, T. Miyasaki, Organic\
+    \ Halide Perovskites for Photovoltaic Cells, Am Chem Sci 131 (2009) 19988–19989,\
+    \ https://doi.org/10.1021/acs8906922b\n- [2] H. Snaith, Perovskites: The Emergence\
+    \ of a New Low-Cost, High-Efficiency Solar Cells, J Phys Lett 4 (2023) 3623–3630,\
+    \ https://doi.org/10.1016/j.jpls.2023.10517\n- [3] N. G. Park, Organic Perovskite\
+    \ Light Absorbers towards a 20% Efficiency Solar Cells, Nature Energy 7 (2022)\
+    \ 892–900, https://doi.org/10.1038/s41560-022-0093-1\n- [4] J. Kim, S. Lee, J.\
+    \ Lee, Y. Lee, H. Lee, S. Lee, J. Kim, and H. Kim, Analysis of the bandgap of\
+    \ hybrid organic-inorganic perovskites, Advanced Materials 34 (2022), 22031447,\
+    \ https://doi.org/10.1002/adma.2022031447\n- [5] N. Ravivas, R. Ganasopadhyay,\
+    \ J. Takura, Stability and degradation of perovskite solar cells, Energy Env Sci\
+    \ 12 (2019) 221–228, https://doi.org/10.1039/C8EE00147-A00147\n- [6] W. Walsh,\
+    \ Chemical Bonding and Bandgap Engineering in Organic-Inorganic Perovskites, J.\
+    \ Phys. Chem C 119 (2015) 5755–5760, https://doi.org/10.1021/acpc501333a\n- [7]\
+    \ N. M. Vasiya, S. Rao, T. Zella, N. K Thakur, M. Mohammad, Stability of inorganic\
+    \ cell Cs2PbI6 (Ga, Ga) as a high efficiency harvesting device: an optoelectronic\
+    \ approach, Solar Energy 228 (2021) 1 https://doi.org/10.1016/j.solmat.2021.107699\n\
+    - [8] A. Sora, S. Rao, T. Zella, N. K Thakur, M. Mohammad, Stability of inorganic\
+    \ cell Cs2PbI6 (Ga, Ga) as a high efficiency harvesting device: an optoelectronic\
+    \ approach, Solar Energy 228 (2021) 1 https://doi.org/10.1016/j.solmat.2021.107699\n\
+    - [9] J. Sun, H. Wang, Y. Xu, and Y. Zhang, Machine learning for solar cell prediction\
+    \ and optimization, Communications 13 (2022) 1125, https://doi.org/10.1038/s42468-022-0121\n\
+    - [10] Z. Liu, H. Wang, X. Yan, and Y. Wang, Machine learning for solar cell device\
+    \ design, Nature Communications 13 (2022) 11547, https://doi.org/10.1038/s41467-022-31955\n\
+    - [11] J. L. Praadhan, S. Garg, and J. Thomas, Machine Learning-Based Approach\
+    \ for Developing High-Efficiency Perovskite Solar Cells, Advanced Energy 12 (2022)\
+    \ 21033\n- [12] M. Kibib, H. Jahan, N. Khosravi, I. Elsayed, A. Almina, and R.\
+    \ Ahmed, Computational insights into the efficiency of perovskite cells, Nature\
+    \ Phys 24 (2023) 1297–1304, https://doi.org/10.1038/sphyschem.2023.2297\n- M.\
+    \ Li, J. Liu, A. Alam, M. Rafman, and H. Bersiff, Investigation of Electrons and\
+    \ Hole Transport Layers on perovskite Solar Cells: A Numerical Investigation,\
+    \ Energy 243 (2022) 134210, https://doi.org/10.1016/j.energy.2022.134210\n- Y.\
+    \ Raza, H. Elmoadi, M. Rahman, and S. Sakalli, Performance of Perovskite Solar\
+    \ Cells Based on Interface Engineering for selective charge, Solar Energy 123\
+    \ (2019) 948–955, https://doi.org/10.1016/j.solener.2019.0432\n- L. Huang, K.\
+    \ Sun, X. Xu, J. Yu, Y. Wu, J. Li, J. Hu, and J. Zhou, Stability of Perovskite\
+    \ Solar Cells under Materials 188 (2021) 10732, https://doi.org/10.1016/j.matopt.2021.10732\n\
+    - E. Meng, T. Tang, R. Zhang, X. Wang, L. Li, Y. Yang, S. Chen, and J. Zhu, Optimization\
+    \ of organic-based perovskite solar cells, Opt Mater (Amer) (2022) 114527, https://doi.org/10.1016/j.optopt.2022.114527\n\
+    - P. Savich, C.J. Zhou, S. Growicz, R. Vasiya, J. Jajkowski, M. Ister, and J.\
+    \ Bauer, Simulation of solar cells using, Mater Res 6 (2019) 08518, https://doi.org/10.1088/s40247-019\n\
+    - H. Alipour, G. Adilmani, Optimization of lead-free perovskite solar cells in\
+    \ nanostructured devices: PSC for hole transport layer, Opt Mater (Amer) (2022)\
+    \ 114526, https://doi.org/10.1016/j.optopt.2022.114526\n- K. Deepanshi Jayan,\
+    \ V. Sebastian, Modeling and comparative performance analysis of transport layers\
+    \ in perovskite cells, Energy 45 (2021) 2063–2070, doi:10.1016/j.energy.2021.0518\n\
+    - Q. M. Wang, J. Li, S. Li, W. Wei, and K. Bahmann, Halide-Perovskite Photovoltaic\
+    \ Cell with Cs2AgBr6-CsPbBr6 Heterojunction, Mater. Chem 125 (2022) 21206–21218,\
+    \ https://doi.org/10.1021/acs.sncm.20569\n- S. Zhang, J. Sun, A. Malik, and A.\
+    \ Ahmed, Advanced electrical simulation of double-perovskite solar cells with\
+    \ Mixed Halide Effect, Scientific Reports 13 (2023) 2996–3013, https://doi.org/10.1038/s41598-023\n\
+    - Z. Zhang, J. Liu, L. Lin, Z. Zhou, J. Zhang, and Y. Hao, Potential Applications\
+    \ of Halide Double Perovskites Cs2AgX6 (X = Cl, Br) in Free Optronics, Scientific\
+    \ Reports 13 (2023) 1120–1125, https://doi.org/10.1038/s41598\n- M. Burgetman,\
+    \ P. Nullet, and S. Grodziej, Modelling polycrystalline semiconductor solar cells,\
+    \ Solar Energy 202 (2000) 361–362 (527–532), https://doi.org/10.1016/S0022-1392X\n\
+    \n# Inorganic Chemistry Communications 17 (2025) 114216\n\n- A. Monjedi, N. Boussaira,\
+    \ S. Sakalli, and K. Bahmann, Stability of double perovskite Cs2AgBr6 for photovoltaics:\
+    \ Optical properties and stability, Energy 243 (2022) 134213, https://doi.org/10.1016/j.energy.2022.134213\n\
+    - S. Wang, W. Wu, W. Li, S.-J. Yang, J. Zhang, and Y. Chen, Optimization of inverted-lead-free\
+    \ perovskite solar cells based on fast simulations, Green Energy 199 (2020) 75–82,\
+    \ https://doi.org/10.1016/j.conene.2020.04.014\n- M. Monam, H. Shafi, S. T. Jan,\
+    \ J. Khan, M. Ismail, and A.J. Khanian, Optimization of organic-based perovskite\
+    \ solar cells by CAPS simulation, Mater. Sci. Eng. B (2023) 304012\n- M. Cheng,\
+    \ T. Tang, R. Zhang, K. Li, L. Li, Y. Yang, S. Song, X. Chen, J. Zhu, and Y. Wang,\
+    \ Optimization of organic-based perovskite solar cells by CAPS simulation, Opt\
+    \ Mater (Amer) (2022) 114527.\n"
+  mdcn: '
+
+
+    # D. Desai 和 S. Baghel
+
+    《无机化学通讯》176 (2025) 114316
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_6_0.png)
+
+
+    图 8. 缺陷密度对 Cs2RbGaGa4 DPSC 的 (a) PCE 和 JSC 以及 (b) 填充因子 FF 和 Voc 的影响。
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_6_1.png)
+
+
+    图 9. 吸收层厚度对 Cs2RbGaGa4 DPSC 的 (a) PCE 和 JSC 以及 (b) 填充因子 FF 和 Voc 的影响。
+
+
+    该模型将预测相同器件的 PCE。对于经过 SCAPS 优化的 DPSC 测试，在运行代码时在提示词中输入了特征值，即：600 nm 的厚度、10⁴ cm⁻¹
+    的缺陷密度以及 300 K 的温度。ML 模型预测的 PCE 为 22.56%，这与模拟的 22.17% 非常接近。
+
+
+    ### 4. 结论
+
+
+    在本研究中，我们全面研究并优化了 Cs2RbGaIn 无铅双钙钛矿太阳能电池 (DPSCs)，这是一种用于太阳能应用的高效材料。我们计算了 Cs2RbGaIn
+    的基本材料属性，如密度、导带以及载流子迁移率。还模拟了包括电子亲和力、密度和吸收层厚度在内的属性。
+
+
+    我们还优化了电子传输层 (ETL) 和空穴传输层 (HTL)，发现 ZnO 和 CsBT 具有最佳的光电转换效率 (PCE)，并以此推荐。通过等线图分析了
+    ETL 和 HTL 厚度的影响，发现较厚的 HTL (100 nm) 可以提高效率。我们还研究了电子亲和力对器件的影响，确定 4 eV 为最佳值。进一步分析了缺陷密度对器件性能的影响，结果显示，电池在优化选取值
+    10⁴ cm⁻¹ 的这一较高缺陷密度下即可实现高效率。吸收层厚度在 100 nm 到 160 nm 之间变化，选择 600 nm 为理想厚度。
+
+
+    图 10. ML 模型预测的 PCE 与通过模拟获得的实际 PCE 值的对比图。ML 模型的 R 值高达 0.9985。
+
+
+    此外，我们开发了一个机器学习 (ML) 模型，该模型能够分析各种特征值并根据这些输入预测太阳能电池效率。我们使用来自 SCAPS-1 真的 1000 个数据点对模型进行训练，包括器件工作温度、层厚度和缺陷密度，其
+    R² 达到 0.9985，表明具有高的预测准确性。使用 SHAP 摘要图来解释模型，显示在三个特征中，温度对 PCE 的影响最显著。此外，缺陷密度与 PCE
+    之间存在复杂的关系，表明其影响取决于其他特征的值。通过使用自定义的 Python 脚本，我们获得的 ML 预测 PCE 为 22.56%，与模拟的 22.17%
+    相匹配。
+
+
+    一旦我们开发并训练了 ML 模型，它的重要性在于它可以给出未来的值。为了实现这一点，我们在代码中添加了一个简单的 Python 脚本，以便我们输入特征值后，ML
+    模型即可预测 Cs2RbGaIn 基电池的 PCE。
+
+
+    ![](img/77993b86c321119fe49a62d1f762f7a1_7_0.png)
+
+
+    图 11. 特征值（缺陷密度、层厚度和层粗糙度）影响的 SHAP 摘要分析。
+
+
+    本研究通过实验探索了钙钛矿太阳能电池的潜力，其发现对于提高 PCE 耐用性很有帮助。它强调了机器学习在分析各种因素对太阳能电池影响方面的价值，并强调了基于模拟的方法在更短时间内获得准确结果的重要性。
+
+
+    ## 作者贡献
+
+
+    Vishal Deswal：写作——初稿、可视化化、方法论、调查、正式分析。数据收集、概念化。Sarita Baghel：写作——编辑与验证、监督、资源、项目管理、正式分析。
+
+
+    ## 利益冲突
+
+
+    作者声明他们没有知的利益冲突或可能影响本文报告工作的个人关系。
+
+
+    ## 致谢
+
+
+    作者感谢 Marc Burgelman 教授（德国大学）提供 SCAPS-1 数据。作者感谢德里科技大学为本研究提供的资助。
+
+
+    ## 数据可用性
+
+
+    数据可根据要求提供。
+
+
+    ## 参考文献
+
+
+    - [1] A. Kolima, T. Itura, Y. Shirai, T. Miyasaki, 用于光电池的有机卤化物钙钛矿, Am Chem Sci
+    131 (2009) 19988–19989, https://doi.org/10.1021/acs8906922b
+
+    - [2] H. Snaith, 钙钛矿: 新型低成本、高效太阳能电池的出现, J Phys Lett 4 (2023) 3623–3630, https://doi.org/10.1016/j.jpls.2023.10517
+
+    - [3] N. G. Park, 向20% 效率太阳能电池的有机钙钛矿光吸收材料, Nature Energy 7 (2022) 892–900, https://doi.org/10.1038/s41560-022-0093-1
+
+    - [4] J. Kim, S. Lee, J. Lee, Y. Lee, H. Lee, S. Lee, J. Kim, and H. Kim, 有机-无机杂钙钛矿带隙分析,
+    Advanced Materials 34 (2022), 22031447, https://doi.org/10.1002/adma.2022031447
+
+    - [5] N. Ravivas, R. Ganasopadhyay, J. Takura, 钙钛矿太阳能电池的稳定性和降解, Energy Env Sci
+    12 (2019) 221–228, https://doi.org/10.1039/C8EE00147-A00147
+
+    - [6] W. Walsh, 有机-无机钙钛矿中的化学键与带隙工程, J. Phys. Chem C 119 (2015) 5755–5760, https://doi.org/10.1021/acpc501333a
+
+    - [7] N. M. Vasiya, S. Rao, T. Zella, N. K Thakur, M. Mohammad, 无机电池 Cs2PbI6 (Ga,
+    Ga) 作为高效能量收集器件的稳定性: 一光电方法, Solar Energy 228 (2021) 1 https://doi.org/10.1016/j.solmat.2021.10769
+
+    - [8] A. Sora, S. Rao, T. Zella, N. K Thakur, M. Mohammad, 无机电池 Cs2PbI6 (Ga, Ga)
+    作为高效能量收集器件的稳定性: 一光电方法, Solar Energy 228 (2021) 1 https://doi.org/10.1016/j.solmat.2021.10769
+
+    - [9] J. Sun, H. Wang, Y. Xu, 机器学习预测 PCE, Communications 13 (2022), ... doi.org/10.1016/j.solmat.2021
+
+    - [10] Z. Liu, H. Wang, X. Yan, 机器学习设计的太阳能电池, Communications 13 (2022), ... doi.org/10.1016/j.solmat
+
+    - [11] J. L. Praadhan, S. Garg, 基于机器学习的高效率钙钛矿电池, Advanced Energy (2022)
+
+    - [12] M. Kibib, J. Jahan, I. Elsayed, A. Rayman, 钙钛矿的计算洞察, Nature Phys 24 (2023)
+    1297–1304
+
+    - [13] M. Li, H. Liu, A. Ahmed, 钙钛矿中的电子传输层, Energy 243 (2022) 134210
+
+    - [14] Y. Raza, H. Eladi, S. Rahman, 界面工程用于钙钛矿电池, Solar Energy 123 (2019) 948–955
+
+    - [15] J. Huang, K. Sun, Y. Xu, 缺陷密度对器件的影响, Materials 188 (2021) 1073
+
+    - [16] X. Li, H. Wang, Y. Zhang, 机器学习预测太阳能电池, Scientific Reports 13 (2022) 5018
+
+    - [17] S. Chen, T. Tang, R. Zhang, 缺陷密度优化的有机基钙钛矿太阳能电池, Opt Mater (Amer) (2022)
+    114527
+
+    - [18] P. Savich, N. Nullet, S. Grodziej, 多晶硅太阳能电池建模, Solar Energy 202 (2000)
+    361–362
+
+    - [19] D. Desai, S. Baghel, 无机化学通讯 176 (2025) 114316
+
+
+    '
+  merge: 0
