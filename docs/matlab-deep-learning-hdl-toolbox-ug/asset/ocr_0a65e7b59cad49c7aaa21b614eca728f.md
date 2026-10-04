@@ -1,0 +1,1 @@
+| ResNet-based YOLO v2 | You look only once (YOLO) is an object detector that decodes predictions from convolutional neural network and generates bounding boxes around the objects. Directed acyclic graph (DAG) | For more information, see "Vehicle Detection Using DAG Network Based YOLO v2 Deployed to FPGA" on page 10-125. | Yes | Yes | Yes | Yes | Yes | Yes | Object detection |

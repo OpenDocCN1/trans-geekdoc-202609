@@ -1,0 +1,1 @@
+Bright features indicate a strong activation. To understand and debug convolutional networks, running and visualizing data is a useful tool.
