@@ -1,0 +1,2806 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Biomedical Signal Processing and Control
+
+
+    # Bridging minds and limbs: novel hybrid deep learning approach for low-cost EEG-based
+    lower limb imagery classification
+
+
+    Zhengdi Sun, Anle Mu\*, Ye Qian, Xudong Sun
+
+
+    School of Medical and Precision Engineering, Xian University of Technology, China
+
+
+    # ABSTRACT
+
+
+    This study aims to develop a highly cost effective brain-computer interface (BCI)
+    system specifically for detecting lower limb imagery during stroke rehabilitation.
+    Existing BCI systems often suffer from high costs and are easily affected by environmental
+    interference. To tackle these problems, our system is built on a modified OpenBCI
+    platform with wireless communication, featuring signal processing algorithms and
+    design. We collected electroencephalography (EEG) data from healthy subjects using
+    16 channels. We developed a novel hybrid deep learning method to perform feature
+    extraction and classification, which combines Convolutional Neural Networks (CNN),
+    Bidirectional Long-Term Memory (LSTM), Particle Swarm Optimization (PSO), and
+    attention mechanisms. The system achieved an accuracy of 72.4% (±3.6%) on the
+    test dataset, with the CNN-LSTM model showing 4.1% improvement over baseline methods.
+    These results were comparable to existing literature, demonstrating good potential
+    despite the small sample size. Future work will focus on expanding the sample
+    size and long-term clinical validation to address current limitations and further
+    improve the system’s efficacy in real-world applications.
+
+
+    Keywords:
+
+
+    +   - Lower limb imagery classification
+
+    - Stroke rehabilitation BCI
+
+    - EEG signal processing
+
+    - Deep learning with attention mechanisms
+
+    - Low-cost openBCI platform
+
+
+    # 1. Introduction
+
+
+    Brain-computer interface (BCI) technology has revolutionized human-computer interaction
+    by enabling direct control of external devices through activity. This is particularly
+    useful in rehabilitation where BCI can modulate motor activity—specifically by
+    inhibitory control of descending pathways—which helps in promoting motor recovery
+    [2–4]. The integration of brain with motor systems to improve neuroplasticity
+    is an important area of focus in both robotics and neurosciences. BCI systems
+    can capture activity through non-invasive methods such as electroencephalography
+    (EEG), offering high signal-to-noise ratios but with significant risks and errors.
+    Non-invasive techniques like functional magnetic resonance imaging (fMRI), near
+    infrared spectroscopy (NIRS), magnetoencephalography (MEG), and electroencephalography
+    (EEG) provide safer alternatives but generally suffer from lower signal quality
+    due to the distance between the electrodes and the brain activity source [6].
+    Despite this
+
+
+    EEG is widely preferred for BCI applications because of its portability, affordability,
+    and high reliability. Motor imagery (MI) is a widely used paradigm in EEG-based
+    BCI research, particularly detecting motor movements through evoked related potentials
+    (ERP) in the 8–12 Hz band (mu rhythms) and event-related desynchronization and
+    synchronization (ERS) further assist in decoding motor intentions. However, EEG
+    signals are often affected by artifacts, such as electrocardiography (ECG) and
+    electromyography (EMG), making activity analysis and feature extraction challenging
+    for BCI performance [10–13]. Various methods, such as independent component analysis
+    (ICA) and wavelet transform, are commonly employed to handle complex artifacts.
+    Similarity feature extraction techniques, like power spectral density (PSD) and
+    common spatial patterns, have performed well with different motor signals [14–16].
+    Recent advances in deep learning have shown promise for improving EEG signal processing.
+    Convolutional neural networks (CNN) and long short-term memory networks (LSTM)
+    have demonstrated strong performance in feature extraction and classification
+
+
+    > * Corresponding author.
+
+    E-mail: muse@xaut.edu.cn (A. Mu).
+
+
+    > https://doi.org/10.1016/j.bpc.2025.108528
+
+
+    > Received 13 November 2024; Revised in 26 June 2025; Accepted 2 August 2025
+
+    Available online 14 August 2025
+
+
+    > 1746-8094 © 2025 Elsevier Ltd. All rights are reserved, including those for
+    text and data mining, AI, and similar technologies.
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_0_0.png)
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_0_1.png)
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_0_2.png)'
+  - '[PAGE 1]
+
+
+    # Z. Sun et.
+
+
+    # Biomedical Signal Processing and Control 121 (2026) 10528
+
+
+    However, standalone CNN may not handle time-series data, whereas LSTM networks
+    can be demanding when processing high-dimensional data.
+
+
+    Consequently, hybrid deep learning models that combine CNN and LSTM offer a promising
+    approach, leveraging the strengths of both networks.
+
+
+    Most commercial EEG devices used in applications are expensive, limiting their
+    accessibility for home usage by patients. OpenBCI an open-source EEG platform,
+    offers a cost-effective and portable solution making research accessible for researchers
+    and democratization [22–24].
+
+
+    While research on motor imagery focuses on lower limbs using publicly available
+    datasets [25,26], there is limited attention to upper limb [27,28]. We chose lower
+    limbs as primary motor imagery task in this study, despite the difficulty of selecting
+    lower limbs.
+
+
+    Clinically, stroke patients suffer from lower limb weakness and affecting, making
+    daily activities difficult. Involuntary assisted-exercise therapies, which in
+    efforts support the patient''s movement and enhance muscle activation and neuroplasticity,
+
+
+    can facilitate the development of robotic rehabilitation systems for tailored
+    rehabilitation.
+
+
+    To address these gaps, this study uses a low-cost lower-limb EEG system based
+    on the OpenBCI platform and a deep learning network. The system is equipped with
+    a hybrid CNN-LSTM model for classification of left and right lower limb motor
+    imagery.
+
+
+    The primary goal of this study is to evaluate the effectiveness of the low-cost
+    EEG system for detecting lower motor imagery. We conducted a series of experiments,
+    including data acquisition, signal processing, and classification, using different
+    methods of region recognition. This work offers a promising solution for stroke-rehabilitation,
+    low-cost, efficient EEG system that could be adopted in home settings.
+
+
+    # 2. Materials and methods
+
+
+    # 2.1. Hardware and software
+
+
+    # 2.1.1. OpenBCI
+
+
+    OpenBCI is an open-source, cost-effective, and programmable platform for monitoring
+    cardiac, muscle, and electroencephalography (EEG). The OpenBCI board, powered
+    by a 3-6 DC battery, facilitates EEG acquisition. This chip utilizes the integrated
+    ADS1299 chip, which supports eight-channel EEG acquisition with a sampling rate
+    of 244Hz. The digital-to-analog converter (ADC) also supports flexible sampling
+    rates from 250 samples per second (ps) to 1000 ps and has a common mode rejection
+    (CMR) exceeding 120 dB. Furthermore, the chip contains an internal referenced
+    voltage and an on-board oscillator.
+
+
+    The OpenBCI board establishes a connection to a PC (11th Gen Intel(R) Core(i7)-11800H
+    @ 2.30 GHz, 16 GB RAM, Windows 10) via-
+
+
+    Fi.
+
+
+    To account for physiological variations in head, we used a stereoscopic mesh cap
+    (Tencubic, Qinjiao) in place of the 3D-printed helmet fitted with the OpenBCI
+    system. The cap accommodates 20 disco slots according to the arrangement of the
+    head system, allowing for the integration of gold electrodes. We used conductive
+    paste to the electrodes to enhance signal quality during EEG acquisition.
+
+
+    # 2.1.2. Software
+
+
+    The OpenBCI team provides a software system called the OpenBCI Graphical User
+    Interface (GUI), which facilitates data acquisition and transfer from various
+    OpenBCI boards. However, the GUI cannot perform real-time analysis, necessitating
+    the use of third-party software for analysis. During experiments to ensure safety
+    and seamless execution, we developed a custom software using Python and the Flow
+    library for data streaming, processing, and visualization of mental data.
+
+
+    The process begins with a communication interface to configure the board parameters.
+    Once configured, the stream is commanded to initiate data acquisition. Simultaneously,
+    the GUI tailored to show the motor imagery tasks to the subject. Each trial is
+    shown on the GUI, which then automatically closes, signaling the end of the acquisition.
+    Data and corresponding labels are then saved and imported into MATLAB for analysis.
+
+
+    # 2.2. Experimental design
+
+
+    Ten healthy-right handed participants (8 males and 2 females, age = 29 ± 3.7 years)
+    with no experience using Brain Computer Interface (BCI) systems participated in
+    this study.
+
+
+    We conducted the experiments in an office environment with stable lighting. The
+    experiment was divided into five sessions, with 20 trials each. Each session lasted
+    45 minutes. Participants sat in chairs close to a computer screen. In each trial,
+    as shown in Fig. 2, an arrow appeared on the screen to indicate the direction,
+    either left or right arrow, displayed for four seconds. During this time, the
+    participants were instructed to imagine the movement (e.g., lifting the left leg
+    when an arrow appeared) while remaining still.
+
+
+    To ensure an equal number of left and right limb imagery trials, we used a structured
+    arrangement strategy. A randomly selected left or right arrow was presented, followed
+    by a four-second rest. The trial within the block was followed by another rest
+    period. This alternating sequence was repeated throughout the session, ensuring
+    that both left and right were used an equal number of times to prevent predictable
+    patterns.
+
+
+    The experiment consisted of three sessions, each session composed of 50 trials
+    (25 blocks for each imagery task), and between sessions were given a 5-10 minute
+    break to minimize fatigue before starting the next session.
+
+
+    # 2.3. Data acquisition and processing
+
+
+    The OpenBCI system supports 16 channels, allowing for the placement of 16 electrodes
+    over the sensorimotor cortex.'
+  md: '
+
+    # Biomedical Signal Processing and Control
+
+
+    # Bridging minds and limbs: novel hybrid deep learning approach for low-cost EEG-based
+    lower limb imagery classification
+
+
+    Zhengdi Sun, Anle Mu*, Ye Qian, Xudong Sun
+
+
+    School of Medical and Precision Engineering, Xian University of Technology, China
+
+
+    # ABSTRACT
+
+
+    This study aims to develop a highly cost effective brain-computer interface (BCI)
+    system specifically for detecting lower limb imagery during stroke rehabilitation.
+    Existing BCI systems often suffer from high costs and are easily affected by environmental
+    interference. To tackle these problems, our system is built on a modified OpenBCI
+    platform with wireless communication, featuring signal processing algorithms and
+    design. We collected electroencephalography (EEG) data from healthy subjects using
+    16 channels. We developed a novel hybrid deep learning method to perform feature
+    extraction and classification, which combines Convolutional Neural Networks (CNN),
+    Bidirectional Long-Term Memory (LSTM), Particle Swarm Optimization (PSO), and
+    attention mechanisms. The system achieved an accuracy of 72.4% (±3.6%) on the
+    test dataset, with the CNN-LSTM model showing 4.1% improvement over baseline methods.
+    These results were comparable to existing literature, demonstrating good potential
+    despite the small sample size. Future work will focus on expanding the sample
+    size and long-term clinical validation to address current limitations and further
+    improve the system’s efficacy in real-world applications.
+
+
+    Keywords:
+
+
+    - Lower limb imagery classification
+
+    - Stroke rehabilitation BCI
+
+    - EEG signal processing
+
+    - Deep learning with attention mechanisms
+
+    - Low-cost openBCI platform
+
+
+    # 1. Introduction
+
+
+    Brain-computer interface (BCI) technology has revolutionized human-computer interaction
+    by enabling direct control of external devices through activity. This is particularly
+    useful in rehabilitation where BCI can modulate motor activity—specifically by
+    inhibitory control of descending pathways—which helps in promoting motor recovery
+    [2–4]. The integration of brain with motor systems to improve neuroplasticity
+    is an important area of focus in both robotics and neurosciences. BCI systems
+    can capture activity through non-invasive methods such as electroencephalography
+    (EEG), offering high signal-to-noise ratios but with significant risks and errors.
+    Non-invasive techniques like functional magnetic resonance imaging (fMRI), near
+    infrared spectroscopy (NIRS), magnetoencephalography (MEG), and electroencephalography
+    (EEG) provide safer alternatives but generally suffer from lower signal quality
+    due to the distance between the electrodes and the brain activity source [6].
+    Despite this
+
+
+    EEG is widely preferred for BCI applications because of its portability, affordability,
+    and high reliability. Motor imagery (MI) is a widely used paradigm in EEG-based
+    BCI research, particularly detecting motor movements through evoked related potentials
+    (ERP) in the 8–12 Hz band (mu rhythms) and event-related desynchronization and
+    synchronization (ERS) further assist in decoding motor intentions. However, EEG
+    signals are often affected by artifacts, such as electrocardiography (ECG) and
+    electromyography (EMG), making activity analysis and feature extraction challenging
+    for BCI performance [10–13]. Various methods, such as independent component analysis
+    (ICA) and wavelet transform, are commonly employed to handle complex artifacts.
+    Similarity feature extraction techniques, like power spectral density (PSD) and
+    common spatial patterns, have performed well with different motor signals [14–16].
+    Recent advances in deep learning have shown promise for improving EEG signal processing.
+    Convolutional neural networks (CNN) and long short-term memory networks (LSTM)
+    have demonstrated strong performance in feature extraction and classification
+
+
+    > * Corresponding author.
+
+    > E-mail: muse@xaut.edu.cn (A. Mu).
+
+
+    > https://doi.org/10.1016/j.bpc.2025.108528
+
+
+    > Received 13 November 2024; Revised in 26 June 2025; Accepted 2 August 2025
+
+    > Available online 14 August 2025
+
+
+    > 1746-8094 © 2025 Elsevier Ltd. All rights are reserved, including those for
+    text and data mining, AI, and similar technologies.
+
+
+    ![](img/227c841f21f5a65d08dd42355e_0.png)
+
+    ![](img/227c841f21f5a65d08dd42355e_1.png)
+
+    ![](img/227c841f21f5a65d08dd42355e_2.png)
+
+
+    # Z. Sun
+
+    # Biomedical Signal Processing and Control 1025
+
+
+    However, standalone CNN may not handle time-series data, whereas LSTM networks
+    can be demanding when processing high-dimensional data. Consequently, hybrid deep
+    learning models that combine CNN and LSTM offer a promising approach, leveraging
+    the strengths of both networks. Most commercial EEG devices used in applications
+    are expensive, limiting their accessibility for home usage. OpenBCI, an open-source
+    EEG platform, offers a cost-effective and portable solution making research accessible
+    for researchers and democratization [22–24]. While research on motor imagery focuses
+    on lower limbs using publicly available datasets [25,26], there is limited attention
+    to upper limb. Clinically, stroke patients suffer from lower limb weakness, making
+    daily activities difficult. Involuntary assisted-exercise therapies, which support
+    the patient''s movement and enhance neuroplasticity, facilitate the development
+    of robotic systems. To address these gaps, this study uses a low-cost lower-limb
+    EEG system based on the OpenBCI platform and a deep learning network equipped
+    with a hybrid CNN-LSTM model for classification. The goal of of study is to evaluate
+    the effectiveness of the low-cost EEG system for detecting motor imagery. We conducted
+    a series of experiments, including data acquisition, signal processing, and classification
+    using different methods. This work offers a promising solution for stroke rehabilitation,
+    efficient EEG system that could be adopted in home settings.
+
+
+    # 2. Materials and methods
+
+
+    ## 2.1. Hardware and software
+
+
+    ### 2.1.1. OpenBCI
+
+
+    OpenBCI is an open-source, cost-effective, and programmable platform for monitoring
+    cardiac, muscle and electroencephalography (EEG). The OpenBCI board, powered by
+    3-6 DC battery, facilitates EEG acquisition. This chip utilizes the integrated
+    ADS1299, which supports eight-channel EEG acquisition with a sampling rate of
+    244Hz. The digital-to-analog converter (ADC) also supports flexible sampling rates
+    from 250 samples per second (ps) to 1000 ps and has a common mode rejection (CMR)
+    exceeding 120 dB. Furthermore, the chip contains an internal referenced voltage
+    and an on-board oscillator. OpenBCI board establishes a connection to a PC (11th
+    Gen Intel(R) Core i7-11800H @2.3 GHz, 16 GB RAM, Windows 10) via Wi-Fi. To account
+    for physiological variations in head, we used a stereoscopic mesh cap in place
+    of 3D-printed helmet fitted with the OpenBCI system. The cap accommodates 20 slots
+    according to the arrangement of the head system, allowing for the integration
+    of gold electrodes. We used conductive paste to the electrodes to enhance signal
+    quality during EEG acquisition.
+
+
+    ### 2.1.2. Software
+
+
+    The OpenBCI team provides a software system called the OpenBCI Graphical Interface
+    (GUI), which facilitates data acquisition and transfer from various OpenBCI boards.
+    However, the GUI cannot perform real-time analysis, necessitating the use of third-party
+    software for analysis. During experiments to ensure safety and seamless execution,
+    we developed a custom software using Python and the Flow library for data streaming,
+    processing, and visualization of mental data. The process begins with a communication
+    interface to configure the board parameters. Once configured, the stream is commanded
+    to initiate data acquisition. Simultaneously, the GUI tailored to show the motor
+    imagery tasks to the subject. Each trial is shown on the GUI, which then automatically
+    closes, signaling the end of the acquisition. Data and corresponding labels are
+    then saved and imported into MATLAB for analysis.
+
+
+    ## 2.2. Experimental design
+
+
+    Ten healthy-handed participants (8 males and 2 females, age = 29 ± 3.7 years)
+    with no experience using Brain Computer Interface (BCI) systems participated in
+    this study.
+
+
+    We conducted the experiments in an office environment with stable lighting. The
+    experiment was divided into five sessions, with 20 trials each. Each session lasted
+    45 minutes. Participants sat in chairs close to a computer screen. In each trial,
+    as shown in Fig. 2, an arrow appeared on the screen to indicate the direction,
+    either left or right arrow, displayed for four seconds. During this time, the
+    participants were instructed to imagine the movement (e.g., lifting the left leg
+    when an arrow appeared) while remaining still.
+
+
+    To ensure an equal number of left and right limb imagery trials, we used a structured
+    arrangement strategy. A randomly selected left or right arrow was presented, followed
+    by a four-second rest. The trial within the block was followed by another rest
+    period. This alternating sequence was repeated throughout the session, ensuring
+    that both left and right were used an equal number of times to prevent predictable
+    patterns.
+
+
+    The experiment consisted of three sessions, each session composed of 50 trials
+    (25 blocks for each imagery task), and between sessions were given a 5-10 minute
+    break to minimize fatigue before starting the next session.
+
+
+    ## 2.3. Data acquisition and processing
+
+
+    The OpenBCI system supports 16 channels, allowing for the placement of 16 electrodes
+    over the sensorimotor cortex.
+
+    '
+  mdcn: '
+
+
+    # 生物医学信号处理与控制
+
+
+    # 桥接大脑与肢体：一种用于低成本 EEG 下肢想象分类的新型混合深度学习方法
+
+
+    Zhengdi Sun, Anle Mu*, Ye Qian, Xudong Sun
+
+
+    中国西安科技大学 医疗与精密工程学院
+
+
+    # 摘要
+
+
+    本研究旨在开发一种高成本效益的脑机接口（BCI）系统，专门用于检测中风康复期间的下肢想象信号。现有的 BCI 系统通常面临成本高且易受环境干扰的问题。为了解决这些问题，我们的系统构建在改进的带有无线通信的
+    OpenBCI 平台上，具有信号处理算法和设计。我们使用 16 通道从健康受试者处收集了脑电图（EEG）数据。我们开发了一种新型混合深度学习方法进行特征提取和分类，该方法结合了卷积神经网络（CNN）、双向长记忆网络（LSTM）、粒子群优化（PSO）和注意力机制。该系统在测试数据集上达到了
+    72.4% (±3.6%) 的准确率，其中 CNN-LSTM 模型比基准方法提升了 4.1%。这些结果与现有文献相当，尽管样本量较小，但展示了良好的潜力。未来的工作将重点于扩大样本量和长期临床验证，以解决目前的局限性并进一步提高系统在实际应用中的功效。
+
+
+    关键词：
+
+
+    - 下肢想象分类
+
+    - 中风康复 BCI
+
+    - EEG 信号处理
+
+    - 带注意力机制的深度学习
+
+    - 低成本 OpenBCI 平台
+
+
+    # 1. 引言
+
+
+    脑机接口（BCI）技术通过允许活动直接控制外部设备改变了人机交互。这在康复中特别有用，因为 BCI 可以调节运动活动——特别是通过对下降通道的抑制控制——有助于促进运动恢复
+    [2–4]。大脑与运动系统的整合以提高神经塑性是机器人学和神经科学领域的一个重点。BCI 系统可以通过脑电图（EEG）等非侵入性方法捕捉活动，提供较高的信噪比，但存在显著的风险和误差。功能磁共振成像（fMRI）、近红外光谱（NIRS）、磁脑图（MEG）和脑电图（EEG）等非侵入性技术提供了更安全的替代方案，但由于电极与大脑活动源之间的距离，通常信号质量较低
+    [6]。尽管如此，
+
+
+    EEG 因其便携性、廉价和高可靠性被广泛应用于 BCI 。运动想象（MI）是基于 EEG 的 BCI 研究中广泛使用的范式，特别是通过 8–12 Hz 频段（mu
+    节律）中的诱发相关电位（ERP）检测运动，以及事件相关的去同步和同步（ERS）进一步协助解码运动意图。然而，EEG 信号经常受到心电图（ECG）和肌电图（EMG）等伪迹的影响，使得活动分析和特征提取对
+    BCI 性能面临挑战 [10–13]。各种方法，如独立成分分析（ICA）和小波变换，常用于处理复杂的伪迹。相似特征提取技术，如功率谱密度（PSD）和共同空间模式在不同的运动信号中表现良好
+    [14–16]。深度学习的最新进展在改进 EEG 信号处理方面显示前景。卷积神经网络（CNN）和长短期记忆网络（LSTM）在特征提取和分类方面展现了强大的性能
+
+
+    > * 通讯作者。
+
+    > 邮箱：muse@xaut.edu.cn (A. Mu)。
+
+
+    > https://doi.org/10.1016/j.bpc.2025.108528
+
+
+    > 2024年11月13日接收；2025年6月26日修订；2025年8月2日接受
+
+    > 2025年8月14日在线发布
+
+
+    > 1746-8094 © 2025 Elsevier Ltd. 保留所有权利，包括文本和数据挖掘、AI 以及类似技术。
+
+
+    ![](img/227c841f21f5a65d08dd42355e_0.png)
+
+    ![](img/227c841f21f5a65d08dd42355e_1.png)
+
+    ![](img/227c841f21f5a65d08dd42355e_2.png)
+
+
+    # Z. Sun
+
+    # 生物医学信号处理与控制 1025
+
+
+    然而，独立的 CNN 可能无法处理时间序列数据，而 LSTM 网络在处理高维数据时可能要求严苛。因此，结合 CNN 和 LSTM 的混合深度学习模型提供了一种极具前景的方法，利用了两种网络的优势。应用中使用的多数商业
+    EEG 设备价格昂贵，限制了它们在家庭使用的可用性。OpenBCI 是一个开源 EEG 平台，提供了一种成本效益且便携的解决方案，使研究人员更易获取资源并实现民主化
+    [22–24]。虽然关于运动想象的研究主要关注使用公开数据集的下肢 [25,26]，但对上肢的关注有限。临床上，中风患者遭受下肢无力，导致日常生活困难。中风患者遭受下肢无力，使日常生活变得困难。由于本研究旨在开发一种专门用于检测中风康复期间下肢想象的高成本效益脑机接口（BCI）系统。由于成本高且易受环境干扰的影响。这在康复中特别有用，因为
+    BCI 能够调节运动活动——特别是通过对下降通道的抑制控制——有助于促进运动恢复 [2–4]。大脑与运动系统的整合以提高神经塑性是机器人学和神经科学领域的一个重点。BCI
+    系统可以通过脑电图（EEG）等非侵入性方法捕捉活动，提供较高的信噪比，但存在显著的风险和误差。非侵入性技术如功能磁共振成像（fMRI）、近红外光谱（NIRS）、磁脑图（MEG）和脑电图（EEG）提供了更安全的替代方案，但由于电极与大脑活动源之间的距离，通常信号质量较低
+    [6]。尽管如此，
+
+
+    EEG 因其便携性、廉价和高可靠性被广泛应用于 BCI 。运动想象（MI）是基于 EEG 的 BCI 研究中广泛使用的范式，特别是通过 8–12 Hz 频段（mu
+    节律）中的诱发相关电位（ERP）检测运动，以及事件相关的去同步和同步（ERS）进一步协助解码运动意图。然而，EEG 信号经常受到心电图（ECG）和肌电图（EMG）等伪迹的影响，使得活动分析和特征提取对
+    BCI 性能面临挑战 [10–13]。各种方法，如独立成分分析（ICA）和小波变换，常用于处理复杂的伪迹。相似特征提取技术，如功率谱密度（PSD）和共同空间模式在不同的运动信号中表现良好
+    [14–16]。深度学习的最新进展在改进 EEG 信号处理方面显示前景。卷积神经网络（CNN）和长短期记忆网络（LSTM）在特征提取和分类方面展现了强大的性能
+
+
+    # 2. 材料与方法
+
+
+    ## 2.1. 硬件与软件
+
+
+    ### 2.1.1. OpenBCI
+
+
+    OpenBCI 系统支持 16 通道，允许在运动皮层上放置 16 个电极。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    Z. Sun et al.
+
+
+    Biomedical Signal Processing and Control 112 (2026) 106528
+
+
+    # Framework
+
+
+    # Signal Processing
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_2_0.png)
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_2_1.png)
+
+
+    Fig. 1. Overall framework of the BCI system.
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_2_2.png)
+
+
+    earlobes, respectively, are experiments conducted using MATLAB on a system equipped
+    with 11 V18000 processor, NVIDIA GTX3090 GPU, and 16 GB RAM. The healthy practitioners
+    are recruited for EEG acquisition, focusing on the motor imagery due to their
+    experience in stroke rehabilitation.
+
+
+    EEG signals into independent components using ICA, for the identification and
+    removal of EEG data processing is conducted using the EEGLAB (v20.2) in MATLAB
+    R2021b. To improve efficiency, raw EEG signals are downsampled to 25 Hz. A 1 Hz
+    high-pass filter and a 40 Hz low-pass filter are applied to remove irrelevant
+    frequency components, such as low-frequency and high-frequency noise outside the
+    typical motor imagery band (8–30 Hz). For artifact removal, the Artifact Removal
+    Toolbox, an EEGLAB plug-in based on Independent Component Analysis (ICA). This
+    toolbox decomposes the
+
+
+    EEG signals into independent components using ICA, for the identification and
+    removal of EEG blink movements, artifacts and other sources [31]. The user manually
+    or automatically identifies the artifact components, which are ensuring that the
+    remaining signal reveals the underlying brain activity relevant to motor imagery.
+
+
+    The study comprises EEG recordings from ten participants, performing 150 motor
+    imagery tasks. Each trial consists of 501 time points across 15 channels (including
+    reference and ground electrodes). To train and evaluate the proposed model, the
+    dataset is split 7:3. For each participant, 105 trials (70 %) were allocated for
+    training, and 45 trials for testing. This partitioning is performed individually
+    for each
+
+
+    Fig. 2. EEG paradigm of motor imagery.
+
+
+    3'
+  - "[PAGE 3]\n\n# Z. Sun et al.\n\n# Biomedical Signal Processing and Control 112\
+    \ (2026) 106528\n\n![](img/227c841f21f5a658d08dfdd42355ed3e_3_0.png)\n\nFig. 3.\
+    \ Location of electrode distribution and experimental configuration. Fz (central\
+    \ frontal), F3 (left frontal), F4 (right frontal), F7 (left posterior frontal),\
+    \ F8 (right posterior frontal), Cz (central parietal), C3 (left parietal), C4\
+    \ (right parietal), T3 (left temporal), T4 (right temporal), Pz (posterior parietal),\
+    \ P3 (left posterior temporal), T5 (left posterior temporal), and T6 (right posterior\
+    \ temporal).\n\nsubject, that the model subject is trained and tested on the participant’s\
+    \ data from different subjects. Data expansion is applied using the overlapping\
+    \ window method described in Section 2.4 to enhance the dataset while preserving\
+    \ the temporal characteristics of EEG signals.\n\n# 2.4. Data expansion\n\nEEG\
+    \ acquisition is a time-consuming task, from initial preparation to data collection.\
+    \ Prolonged monitoring task may also lead to fatigue. In this study’s EEG data,\
+    \ experiment generates 150 sets of training data. Deep learning techniques typically\
+    \ require large datasets and are limited in scale due to the high cost and difficulty\
+    \ in recruiting a sufficient number of subjects for EEG-based studies. As a result,\
+    \ the available data in this study is relatively small.\n\nTo address the restricted\
+    \ size inherent in EEG datasets, we applied an overlapping window segmentation\
+    \ approach that preserves temporal dependencies. Each trial lasts for 4 s, at\
+    \ a sampling rate of 125 Hz, yields 501 samples (the extra is obtained by including\
+    \ the starting point). To augment the dataset, a sliding window of 2 s with a\
+    \ sample size of 50 samples. Consequently, each 4-second trial is segmented into\
+    \ 6 overlapping segments, as calculated by: $N = \frac{501}{50} + 1 = 6$. Despite\
+    \ this, each segment retains the same label as the original, and the timeline-graph\
+    \ of data expansion is shown in Fig. 4. The resultingfold resulted in increase\
+    \ in training samples (dataset-size amplification) without introducing artificial\
+    \ features or altering spectral characteristics, complying with the data integrity\
+    \ principles.\n\n# 2.5. Mathematical method\n\n# 2.5.1. Convolutional neural networks\n\
+    \nConvolutional Neural Networks (CNNs) have emerged as a powerful tool for EEG\
+    \ signal analysis due to their ability to capture and learn resemble patterns\
+    \ in artificial neural networks and are deep learning models that widely used\
+    \ for visual image analysis [32]. The multi-channel, continuous, and spatial nature\
+    \ of EEG makes CNNs particularly suitable for extracting relevant features from\
+    \ this data type. A typical CNN consists of five layers: (1) input, (2) convolutional,\
+    \ (3)\n\n# Data Augmentation\n\n![](img/227c841f21f5a658d08dfdd42355ed3e_3_1.png)\n\
+    \nFig. 4. The timeline-graph of data expansion.\n\n4"
+  - "[PAGE 4]\n\nZ. Sun et al.\n\nBiomedical Signal Processing and Control 112 (2020)\
+    \ 108528\n\nactivation, (4) and (5) fully connected. A complete CNN structure\
+    \ contains multiple blocks of these layers, with a classifier at the end:\n\n\
+    ```\n$f_i(X) = \\sigma(W_i \\otimes X + b_i)$\n```\n\nHere, $X$ represents the\
+    \ $i$-th convolution layer, $W_i$ denotes the convolution kernel (weights), and\
+    \ $b_i$ is the bias. The operator $\\otimes$ denotes the convolution operation,\
+    \ computes the map by sliding the kernel over the input and performing element-wise\
+    \ multiplications and summations. For each convolutional layer,\n\n+   * The input\
+    \ $X$ is convolved with the kernel $W_i$.\n* The bias $b_i$ is added to the convolution.\n\
+    * The result is then passed through an activation function (e.g., ReLU) and a\
+    \ pooling layer to reduce dimensionality and maintain important features.\n\n\
+    O, is the output activation, $W$ and $b$ are the weight matrix and bias for the\
+    \ output gate, $h_t$ is the current hidden state, which serves as both the output\
+    \ of the LSTM and the input to the next step.\n\nUnlike LSTM models, which only\
+    \ consider the past, bidirectional structure of LSTM enables to model both past\
+    \ and future information. This is particularly beneficial for medical imaging\
+    \ (MI) tasks, such as EEG non-stationary signals that span multiple time scales.\
+    \ The bidirectional structure improves the network's ability to capture long-range\
+    \ temporal correlations and phase shifts in EEG, leading to more accurate feature\
+    \ representation.\n\nFig. 5 illustrates the LSTM-architecture and the internal\
+    \ mechanism of an LSTM. Here, the Bi-LSTM is shown in \"unrolled\" format across\
+    \ multiple time steps (t-1, t, t+1), both forward and backward temporal. Each\
+    \ block represents an LSTM unit. (b) zooms into the internal structure of a single\
+    \ LSTM cell, detailing the forget gate ($f_t$), output gate ($o_t$), cell gate\
+    \ ($c_t$), and hidden state ($h_t$). The multiplication and addition operations,\
+    \ as shown in equations (4)-(8), use learned parameters and weights to integrate\
+    \ the input to generate the new cell state and hidden state. By combining the\
+    \ left (unrolled) and right (inter-interval) views, Fig. 5 provides a comprehensive\
+    \ overview of how the Bi-LSTM processes EEG data.\n\nThe outputs of the activated\
+    \ blocks are aggregated (sum) to form the final representation $f_i(X)$, which\
+    \ is subsequently fed into fully connected layers and a classifier for the final\
+    \ classification. The entire network is trained-end-to-end using backpropagation\
+    \ with a optimizer to adjust the weights and biases.\n\n# 2.5.2. Long-Term Memory\n\
+    \nLong-Term Memory (LSTM) networks are crucial for EEG processing due to their\
+    \ ability to capture long-term dependencies in time series. This is particularly\
+    \ important for the temporal analysis of behavioral patterns during memory monitoring\
+    \ tasks. LSTMs use three gates: the forget gate, input gate, and output gate,\
+    \ to control the information flow, allowing the model's ability to adapt to time-dependent\
+    \ changes [3]\n\nThe forget gate controls which information from the previous\
+    \ step is retained or discarded, preserving relevant temporal information:\n\n\
+    ```\n$f_t = \\sigma(W_f \\cdot [h_{t-1}, X_t] + b_f)$\n```\n\nWhere, $f_t$ is\
+    \ the forget gate activation at time $t$, $X_t$ is the input at time $t$, $h_{t-1}$\
+    \ is the hidden state from the previous step, $W_f$ is the weight matrix associated\
+    \ with the forget gate, $b_f$ is the bias, and $\\sigma$ denotes the sigmoid activation\
+    \ function, which maps values to the range [0,1].\n\nThe input gate controls what\
+    \ new information is updated in the long-term and short-term memory:\n\n```\n\
+    $i_t = \\sigma(W_i \\cdot [h_{t-1}, X_t] + b_i), \\tilde{C}_t = \\tanh(W_c \\\
+    cdot [h_{t-1}, X_t] + b_c)$\n```\n\nWhere, $i_t$ is the input gate activation,\
+    \ $\tilde{C}_t$ is the candidate cell state, and $W_i$ are the weights for the\
+    \ input gate and cell state respectively, $b_i$ and $b_c$ are the corresponding\
+    \ bias, and $\\tanh$ is the hyperbolic tangent function.\n\nThe cell state $C_t$\
+    \ is updated by combining the information from the previous cell state and the\
+    \ new cell state:\n\n```\n$C_t = f_t \\odot C_{t-1} + i_t \\odot \\tilde{C}_t$\
+    \ (5)\n```\n\nwhere denotes element-wise multiplication, and $C_{t-1}$ is the\
+    \ previous cell state.\n\nFinally, the output gate controls the current hidden\
+    \ state $h_t$ by passing the updated cell state through a non-linear transformation:\n\
+    \n```\n$o_t = \\sigma(W_o \\cdot [h_{t-1}, X_t] + b_o), h_t = o_t \\odot \\tanh(C_t)$\
+    \ (7)\n```\n\n# 2.5.3. Particle Algorithm\n\nCNN networks effectively extract\
+    \ spatial features from EEG, but the LSTM kernels affect their performance. The\
+    \ Particle Swarm Optimization (PSO) algorithm can optimize the number of parameters\
+    \ by competition and cooperation among particles [5]. In PSO, solution candidates\
+    \ are called \"particles\", which have position and velocity. The position and\
+    \ velocity of the $i$-th particle in a D-dimensional space are denoted as...\n\
+    \n```\n$v_i^{d+1} = v_i^d + c_1 r_1 (p_i^d - x_i^d) + c_2 r_2 (g^d - x_i^d)$ (8)\n\
+    $x_i^{d+1} = x_i^d + v_i^{d+1}$\n```\n\nIn this context, the reward enters the\
+    \ influence of the velocities on the current iteration, $j$ denotes the number\
+    \ of iterations of $i$, and $r_1, r_2$ are cognitive and social learning factors\
+    \ that determine the relative importance of a particle's performance and the global\
+    \ best positions, $r_1$ and $r_2$ are uniformly distributed variables in the range\
+    \ [0, 1], $p_i^d$ and $p_{global}^d$ introducing stochasticity to avoid local\
+    \ optima, and the personal and global best positions at iterations [j]. The PSO\
+    \ process terminates when one of the following conditions is met: (1) the improvement\
+    \ in classification accuracy becomes negligible over consecutive iterations, or\
+    \ (2) the predefined maximum number of iterations is reached. This ensures a balance\
+    \ between computational efficiency and optimization effectiveness.\n\n5"
+  md: '
+
+    Z. Sun et al.
+
+
+    Biomedical Signal Processing and Control 112 (2026) 106528
+
+
+    # Framework
+
+
+    # Signal Processing
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_2_0.png)
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_2_1.png)
+
+
+    Fig. 1. Overall framework of the BCI system.
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_2_2.png)
+
+
+    earlobes, respectively, are experiments conducted using MATLAB on a system equipped
+    with an i7-V1800 processor, NVIDIA GTX3090 GPU, and 16 GB RAM. The healthy practitioners
+    are recruited for EEG acquisition, focusing on the motor imagery due to their
+    experience in stroke rehabilitation.
+
+
+    EEG signals into independent components using ICA, for the identification and
+    removal of EEG data processing is conducted using the EEGLAB (v20.2) in MATLAB
+    R2021b. To improve efficiency, raw EEG signals are downsampled to 25 Hz. A 1 Hz
+    high-pass filter and a 40 Hz low-pass filter are applied to remove irrelevant
+    frequency components, such as low-frequency and high-frequency noise outside the
+    typical motor imagery band (8–30 Hz). For artifact removal, the Artifact Removal
+    Toolbox, an EEGLAB plug-in based on Independent Component Analysis (ICA). This
+    toolbox decomposes the EEG signals into independent components using ICA, for
+    the identification and removal of EEG blink movements, artifacts and other sources
+    [31]. The user manually or automatically identifies the artifact components, which
+    are ensuring that the remaining signal reveals the underlying brain activity relevant
+    to motor imagery.
+
+
+    The study comprises EEG recordings from ten participants, performing 150 motor
+    imagery tasks. Each trial consists of 501 time points across 15 channels (including
+    reference and ground electrodes). To train and evaluate the proposed model, the
+    dataset is split 7:3. For each participant, 105 trials (70 %) were allocated for
+    training, and 45 trials for testing. This partitioning is performed individually
+    for each subject, that the model subject is trained and tested on the participant’s
+    data from different subjects.
+
+
+    Fig. 2. EEG paradigm of motor imagery.
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_3_0.png)
+
+
+    Fig. 3. Location of electrode distribution and experimental configuration. Fz
+    (central frontal), F3 (left frontal), F4 (right frontal), F7 (left posterior frontal),
+    F8 (right posterior frontal), Cz (central parietal), C3 (left parietal), C4 (right
+    parietal), T3 (left temporal), T4 (right temporal), Pz (posterior parietal), P3
+    (left posterior temporal), T5 (left posterior temporal), and T6 (right posterior
+    temporal).
+
+
+    # Data Augmentation
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_3_1.png)
+
+
+    Fig. 4. The timeline-graph of data expansion.
+
+
+    ## 2.4. Data expansion
+
+
+    EEG acquisition is a time-consuming task, from initial preparation to data collection.
+    Prolonged monitoring task may also lead to fatigue. In this study’s EEG data,
+    experiment generates 150 sets of training data. Deep learning techniques typically
+    require large datasets and are limited in scale due to the high cost and difficulty
+    of recruiting a sufficient number of subjects for EEG-based studies. As a result,
+    the available data in this study is relatively small.
+
+
+    To address the restricted size inherent in EEG datasets, we applied an overlapping
+    window segmentation approach that preserves temporal dependencies. Each trial
+    lasts for 4 s, at a sampling rate of 125 Hz, yields 501 samples (the extra is
+    obtained by including the starting point). To augment the dataset, a sliding window
+    of 2 s with a sample size of 50 samples. Consequently, each 4-second trial is
+    segmented into 6 overlapping segments, as calculated by: $N = \frac{501}{50} +
+    1 = 6$. Despite this, each segment retains the same label as the original, and
+    the timeline-graph of data expansion is shown in Fig. 4. The resulting fold resulted
+    in increase in training samples (dataset-size amplification) without introducing
+    artificial features or altering spectral characteristics, complying with the data
+    integrity principles.
+
+
+    ## 2.5. Mathematical method
+
+
+    ### 2.5.1. Convolutional neural networks
+
+
+    Convolutional Neural Networks (CNNs) have emerged as a powerful tool for EEG signal
+    analysis due to their ability to capture and learn resemble patterns in artificial
+    neural networks and are deep learning models that widely used for visual image
+    analysis [32]. The multi-channel, continuous, and spatial nature of EEG makes
+    CNNs particularly suitable for extracting relevant features from this data type.
+    A typical CNN consists of five layers: (1) input, (2) convolutional, (3) activation,
+    (4) pooling and (5) fully connected. A complete CNN structure contains multiple
+    blocks of these layers, with a classifier at the end:
+
+
+    $f(X) = \sigma(W_i \otimes X + b_i)$
+
+
+    Here, $X$ represents the $i$-th convolution layer, $W_i$ denotes the convolution
+    kernel (weights), and $b_i$ is the bias. The operator $\otimes$ denotes the convolution
+    operation, computes the map by sliding the kernel over the input and performing
+    element-wise multiplications and summations. For each convolutional layer:
+
+
+    - The input $X$ is convolved with the kernel $W_i$.
+
+    - The bias $b_i$ is added to the convolution.
+
+    - The result is then passed through an activation function (e.g., ReLU) and a
+    pooling layer to reduce dimensionality and maintain important features.
+
+
+    Unlike LSTM models, which only consider the past, bidirectional structure of LSTM
+    enables to model both past and future information. This is particularly beneficial
+    for medical imaging (MI) tasks, such as EEG non-stationary signals that span multiple
+    scales. The bidirectional structure improves the network''s ability to capture
+    long-range temporal correlations and phase shifts, leading to more accurate feature
+    representation.
+
+
+    Fig. 5 illustrates the LSTM architecture and internal mechanism. Here, the LSTM
+    is shown in "unrolled" format across multiple time steps (t-1, t, t+1), both forward
+    and backward. Each block represents an LSTM unit, detailing the forget gate ($f_t$),
+    output gate ($o_t$), cell gate ($c_t$), and hidden state ($h_t$). The multiplication
+    and addition operations, as shown in equations (4)-(7), use learned parameters
+    and weights to integrate the input to generate the new cell state and hidden state.
+    The outputs of the activated blocks are aggregated to form the final representation
+    $f(X)$, which is subsequently fed into fully connected layers and a classifier
+    for final classification. The entire network is trained end-to-end using backpropagation
+    to adjust the weights and biases.
+
+
+    ### 2.5.2. Long-Term Memory
+
+
+    Long-Term Memory (LSTM) networks are crucial for EEG processing due to their ability
+    to capture long-term dependencies in time series. This is particularly important
+    for temporal analysis of behavioral patterns during monitoring tasks. LSTMs use
+    three gates: the forget gate, input gate, and output gate, to control the information
+    flow, allowing the model''s ability to adapt to time-dependent changes [3]. The
+    forget gate controls which information from the previous step is retained or discarded,
+    preserving relevant temporal information:
+
+
+    $f_t = \sigma(W_f \cdot [h_{t-1}, X_t] + b_f)$
+
+
+    Where, $f_t$ is the forget gate activation at time $t$, $X_t$ is the input at
+    $t$, $h_{t-1}$ is the hidden state from the previous step, $W_f$ is the weight
+    matrix associated with the forget gate, $b_f$ is the bias, and $\sigma$ denotes
+    the sigmoid activation function, which maps values to the range [0,1].
+
+
+    The input gate controls what new information is updated in the long-term and short-term
+    memory:
+
+
+    $i_t = \sigma(W_i \cdot [h_{t-1}, X_t] + b_i)$, $\tilde{C}_t = \tanh(W_c \cdot
+    [h_{t-1}, X_t] + b_c)$
+
+
+    Where, $i_t$ is the input gate activation, $\tilde{C}_t$ is the candidate cell
+    state, $W_i$ are the weights for the input gate and cell state respectively, $b_i$
+    and $b_c$ are the corresponding bias, and $\tanh$ is the hyperbolic tangent function.
+
+
+    The cell state $C_t$ is updated by combining the information from the previous
+    cell state and the new cell state:
+
+
+    $C_t = f_t \odot C_{t-1} + i_t \odot \tilde{C}_t$ (5)
+
+
+    where $\odot$ denotes element-wise multiplication, and $C_{t-1}$ is the previous
+    cell state.
+
+
+    Finally, the output gate controls the current hidden state $h_t$ by passing the
+    updated cell state through a non-linear transformation:
+
+
+    $o_t = \sigma(W_o \cdot [h_{t-1}, X_t] + b_o), h_t = o_t \odot \tanh(C_t)$ (7)
+
+
+    ### 2.5.3. Particle Algorithm
+
+
+    CNN networks effectively extract spatial features from EEG, but the LSTM kernels
+    affect their performance. The Particle Swarm Optimization (PSO) algorithm can
+    optimize the number of parameters by competition and cooperation among particles
+    [5]. In PSO, solution candidates are called "particles", which have position and
+    velocity. The position and velocity of the $i$-th particle in a D-dimensional
+    space are denoted as:
+
+
+    $v_i^{d+1} = v_i^d + c_1 r_1 (p_i^d - x_i^d) + c_2 r_2 (g^d - x_i^d)$ (8)
+
+    $x_i^{d+1} = x_i^d + v_i^{d+1}$
+
+
+    '
+  mdcn: "\n\nZ. Sun 等人\n\nBiomedical Signal Processing and Control 112 (2026) 106528\n\
+    \n# 框架\n\n# 信号处理\n\n![](img/227c841f21f5a658d08dfdd42355ed3e_2_0.png)\n\n![](img/227c841f21f5a658d08dfdd42355ed3e_2_1.png)\n\
+    \n图 1. BCI 系统的整体框架。\n\n![](img/227c841f21f5a658d08dfdd42355ed3e_2_2.png)\n\n耳垂，实验分别是在配备了\
+    \ i7-V1800 处理器、NVIDIA GTX3090 GPU 和 16 GB RAM 的系统上使用 MATLAB 进行的。募健康受试者进行 EEG 采集，由于他们在中风康复方面的经验，实验重点关注运动想象。\n\
+    \n使用 MATLAB R2021b 中的 EEGLAB (v20.2) 通过 ICA（独立成分分析）将 EEG 信号分解为独立成分，以便对 EEG 数据进行识别和去除。为了提高效率，原始\
+    \ EEG 信号被下采样至 25 Hz。应用 1 Hz 高通滤波器和 40 Hz 低通滤波器以消除无关的频率成分，例如典型运动想象频带（8–30 Hz）之外的低频和高频噪声。对于伪影去除，使用了基于独立成分分析（ICA）的\
+    \ EEGLAB 插件 Artifact Removal Toolbox（伪影去除工具箱）。该工具箱通过 EEG 信号分解为独立成分，用于识别和去除 EEG\
+    \ 眼动运动、伪影和其他来源 [31]。用户手动或自动识别伪影成分，以确保剩余信号能够揭示与运动想象相关的底层脑活动。\n\n该研究包含来自十名参与者的 EEG\
+    \ 记录，他们执行了 150 次运动想象任务。每次试验包含 15 个 通道的 501 个时间点（包括参考电极和接地电极）。为了训练和评估所提模型，数据集按\
+    \ 7:3 进行划分。对于每位参与者，分配了 105 次试验（70%）用于训练，45 次试验用于测试。这种划分是针对每个受试者单独进行的，以确保模型在不同受试者的数据上进行训练和测试。\n\
+    \n图 2. 运动想象的 EEG 范式。\n\n![](img/227c841f21f5a658d08dfdd42355ed3e_3_0.png)\n\n\
+    图 3. 电极分布位置和实验配置。Fz（中央额叶）、F3（左额叶）、F4（右额叶）、F7（左后额叶）、F8（右后额叶）、Cz（中央顶叶）、C3（左顶叶）、C4（右顶叶）、T3（左颞）、T4（右颞）、Pz（后顶叶）、P3（左后颞）、T5（左后颞）和\
+    \ T6（右后颞）。\n\n# 数据增强\n\n![](img/227c841f21f5a658d08dfdd42355ed3e_3_1.png)\n\n\
+    图 4. 数据扩展的时间线图。\n\n## 2.4. 数据扩展\n\nEEG 采集是一项耗时的任务，从初始准备到数据收集。长时间的监测任务还可能导致疲劳。在本研究的\
+    \ EEG 数据中，实验生成了 150 组训练数据。深度学习技术通常需要大型数据集，由于在 EEG 研究中招募足够数量受试者的成本高且困难，其规模受到限制。因此，本研究中的可用数据相对较少。\n\
+    \n为了解决 EEG 数据集固有的尺寸限制，我们采用了保留时间依赖性的重叠窗口分段方法。每次试验持续 4 秒，采样频率为 125 Hz，产生 501 个样本（额外的一个通过包含起始点获得）。为了增强数据集，使用了步长为\
+    \ 2 秒、样本大小为 50 个样本的滑动窗口。因此，每个 4 秒的试验被分成了 6 个重叠段，计算公式为：$N = \\frac{501}{50} + 1\
+    \ = 6$。尽管如此，每个段保留与原始数据相同的标签，数据扩展的时间线图如图 4 所示。所得的折增加了训练样本的数量（数据集尺寸放大），而没有引入人工特征或改变光谱特性，这了数据完整性原则。\n\
+    \n## 2.5. 数学方法\n\n### 2.5.1. 卷积神经网络\n\n卷积神经网络（CNNs）由于其在人工神经网络中捕捉和学习相似模式的能力，已成为\
+    \ EEG 信号分析的强大工具，它们是广泛用于视觉图像分析的深度学习模型 [32]。EEG 多通道、连续性和空间性质使得 CNN 特别适用于从此类数据类型中提取相关特征。典型的\
+    \ CNN 由五层组成：(1) 输入、(2) 卷积、(3) 激活、(4) 池化和 (5) 全连接。一个完整的 CNN 结构包含这些层的多个数据块，末尾有一个分类器：\n\
+    \n$f(X) = \\sigma(W_i \\otimes X + b_i)$\n\n在这里，$X$ 代表第 $i$ 个卷积层，$W_i$ 表示卷积核（权重），$b_i$\
+    \ 是偏置。算子 $\\otimes$ 表示卷积操作，通过在输入上滑动卷积核并执行逐元素乘法和求和来计算特征图。对于每个卷积层：\n\n- 输入 $X$ 与卷积核\
+    \ $W_i$ 卷积。\n- 将偏置 $b_i$ 加到卷积中。\n- 结果随后通过激活函数（例如 ReLU）和池化层以降低维度并保持重要特征。\n\n与仅考虑过去的\
+    \ LSTM 模型不同，LSTM 的双向结构能够对过去和未来信息进行建模。这对于医学成像（MI）任务特别有利，例如跨越多个尺度的 EEG 非平稳信号。双向结构改进了网络捕捉长期时间相关性和相位偏移的能力，导致更准确的特征表示。\n\
+    \n图 5 展示了 LSTM 架构和内部机制。在这里，LSTM 在跨多个时间步（t-1, t, t+1）上以“展开”格式显示，包括正向和反向。每个块代表一个\
+    \ LSTM 单元，详细说明遗忘门 ($f_t$)、输出门 ($o_t$)、细胞门 ($c_t$) 和隐藏状态 ($h_t$)。方程 (4)-(7) 所示的乘法和加法操作使用学习的参数和权重来整合输入以生成。\n\
+    \n 2.5.2. 长短期记忆（Long-Term Memory）\n\n由于其捕捉时间序列中长期依赖的能力，长短期记忆（LSTM）网络对 EEG 处理至关重要。这对于监测任务中的时间模式特别重要。LSTM\
+    \ 使用三个门：遗忘门、输入门和输出门来控制信息流，遗忘门控制上一步的信息是保留还是丢弃：\n\n$f_t = \\sigma(W_f \\cdot [h_{t-1},\
+    \ X_t] + b_f)$\n\n其中，$f_t$ 是 $t$ 刻的遗忘门激活，$X_t$ 是输入，$h_{t-1}$ 是上一步的隐藏状态，$W_f$ 是与遗忘门的权重，$b_f$\
+    \ 是偏置，$\\sigma$ 表示将值映射到 [0,1]。\n\n输入门控制长期记忆中更新哪些新信息：\n\n$i_t = \\sigma(W_i \\\
+    cdot [h_{t-1}, X_t] + b_i)$，$\\tilde{C}_t = \\tanh(W_c \\cdot [h_{t-1}, X_t] +\
+    \ b_c)$\n\n其中，$i_t$ 是输入门激活，$\\tilde{C}_t$ 是候选细胞状态，$W_i$ 和 $W_c$ 分别是输入门和细胞的权重，$b_i$\
+    \ 和 $b_c$ 是对应的偏置，$\\tanh$ 是双曲正函数。\n\n细胞状态 $C_t$ 通过结合上一步细胞状态和新细胞状态进行更新：\n\n$C_t\
+    \ = f_t \\odot C_{t-1} + i_t \\odot \\tilde{C}_t$ (5)\n\n其中 $\\odot$ 表示逐元素相乘，$C_{t-1}$\
+    \ 是细胞状态。\n\n最后，输出门通过将更新的细胞状态通过非线性变换控制当前隐藏状态 $h_t$：\n\n$o_t = \\sigma(W_o \\cdot\
+    \ [h_{t-1}, X_t] + b_o), h_t = o_t \\odot \\tanh(C_t)$ (7)\n\n### 2.5.3. 粒子算法\n\
+    \nCNN 网络可以有效地从 EEG 中提取空间特征，但 LSTM 卷积核影响其性能。粒子群优化（PSO）算法可以通过粒子间的竞争与合作来优化参数数量 [5]。在\
+    \ PSO 中，解候选被称为“粒子”，它们具有位置和速度。$D$ 维空间中第 $i$ 个粒子的位置和速度表示为：\n\n$v_i^{d+1} = v_i^d\
+    \ + c_1 r_1 (p_i^d - x_i^d) + c_2 r_2 (g^d - x_i^d)$ (8)\n$x_i^{d+1} = x_i^d +\
+    \ v_i^{d+1}$\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    # S. Sun et al.
+
+
+    # Biomedical Signal Processing and Control 112 (2026) 108528
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_5_0.png)
+
+
+    Fig. 5. Structure of Bidirectional Long Short-Term Memory (Bi-LSTM) network.
+
+
+    By applying PSO to our CNN architecture, we optimized the number of convolutional
+    layers and kernel sizes. Specifically, we set the number of kernels between 12
+    and 16, and the kernel size to 10 × 10 and 15 × 15. This optimization significantly
+    improved the overall network performance by finding the most effective combination
+    of these hyperparameters for classification task.
+
+
+    # Algorithm 1 PSO
+
+
+    +   STEPS
+
+    1: FOR each particle i
+
+    2: FOR each dimension d
+
+    3: Initialize $x_i$ within permissible range
+
+    4: Update velocity $v_i$ within permissible range
+
+    5: END FOR
+
+    6: END FOR
+
+    7: FOR iteration = 1
+
+    8: FOR each particle i
+
+    9: Calculate fitness
+
+    10: If fitness is better than $g_{best}$
+
+    11: SET current fitness as $g_{best}$
+
+    12: END FOR
+
+    13: END FOR
+
+    14: Choose the best value $g_{best}$ for the particle
+
+    15: Update $v_i''$ of the particle
+
+    16: Update $x_i''$ of the particle
+
+    17: WHILE iterations or minimum error are not attained
+
+    END WHILE
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_5_1.png)
+
+
+    Fig. 6. Squeeze-and-Attention mechanism.
+
+
+    | X | H × W × C |
+
+    |---|---|
+
+    | Global pooling | 1 × 1 × C |
+
+    | FC | 1 × 1 × C |
+
+    | Relu | 1 × 1 × C |
+
+    | FC | 1 × 1 × C |
+
+    | Sigmoid | 1 × 1 × C |
+
+
+    configuration, as illustrated in Fig. 7, and its detailed-hyperparameters shown
+    in Table 1.
+
+
+    # 2.5.4 Attention Feature Extraction
+
+
+    In deep learning, the importance of various spatial locations or channels is dynamically
+    enhanced by the Squeeze-and-Attention mechanism, allowing to concentrate on the
+    most relevant to the task at hand [35]. In our model, we integrated the attention
+    mechanism within the CNN network, adding attention layers. Instead of using all
+    channels or frequencies, the attention mechanism learns their importance based
+    on their contribution to our classification task. This data-driven approach enables
+    the model to learn most important features without relying on prior assumptions.
+    The detailed architecture of this is shown in Fig. 6.
+
+
+    +   - The first 1D convolutional layer (Conv1d) applies 16 filters with 10 × 10
+    kernel size to capture spatial patterns.
+
+    - The 2nd convolutional layer (Conv2d) refines the extracted features with 15
+    × 15 kernel.
+
+    - These layers are followed by batch normalization (BN) and ReLU activation, ensuring
+    stable gradient and improved feature representation.
+
+    - A pooling layer is then applied to the feature maps, reducing computational
+    complexity while preserving spatial information.
+
+
+    # 2.5.5. SE-LSTM fusion network
+
+
+    This study proposes a fusion network that integrates CNN, Squeeze-and-Attention
+    (SE) mechanism, and Bidirectional Long-Term Memory (Bi-LSTM) networks to effectively
+    capture both spatial and temporal characteristics of EEG signals in motor imagery
+    tasks. The network architecture follows a CNN-LSTM seem
+
+
+    # B. SE Attention: Adaptive Feature Extraction
+
+
+    The attention mechanism enhances the model''s ability to focus on the most informative
+    EEG channels. It dynamically recalibrates feature importance through the following
+    strategy:
+
+
+    +   1. Global Average Pooling (GAP): The feature maps are mapped to a 1 × 1 ×
+    C C-channel map, which encodes the global distribution of signals'
+  - '[PAGE 6]
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_6_0.png)
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_6_1.png)
+
+
+    Table 1
+
+    Parameters of the hybrid deep learning network.
+
+
+    | | Layer | Filters | Size | Activation |
+
+    |---|---|---|---||
+
+    | CNN | Input | | (251,251) | |
+
+    | | Conv_1 | 16 | (10,10) | Relu |
+
+    | | Conv_2 | 12 | (10,1) | Relu |
+
+    | SE | Maxpool | | (15,15) | Relu |
+
+    | | FC_1 | 3 | | |
+
+    | | FC_2 | 12 | | Sigmoid |
+
+    | Bi-LSTM | Flatten | | 13,080 | | |
+
+    | | FC_3 | 16 | | |
+
+    | | SoftMax Output | 2 | | |
+
+
+    +   • A sigmoid activation function normalizes the learned attention weights to
+    the range [0,1], emphasizing or suppressing specific EEG channels.
+
+    • These are weights applied to the original feature maps element-wise multiplication,
+    selectively enhancing significant EEG channels while suppressing irrelevant ones.
+
+
+    Through this process, the SE mechanism dynamically adjusts the importance of different
+    EEG channels, ensuring that channels containing noise are prioritized. This weighting
+    improves the ability to distinguish more imagery patterns effectively.
+
+
+    +   • C-LSTM Component: Temporal Dependency Modeling.
+
+    The weighted feature maps from the SE module are then processed by the Bi-LSTM
+    network, which captures both forward and backward temporal dependencies in EEG
+    signals.
+
+
+    +   • The Bi-LSTM layer contains 16 hidden units, allowing it to effectively encode
+    long-range dependencies across time.
+
+
+    +   • A fully connected (FC) layer reduces the feature dimensions from C to C/r
+    (where r is the reduction ratio, set to 3), ensuring compact feature representation.
+
+    • A second FC restores the feature dimensions back to C, maintaining consistency
+    with the original features.
+
+
+    +   • A fully connected layer with tanh activation integrates bidirectional, enabling
+    the network to construct a more comprehensive representation.
+
+
+    # 2. Dimensionality Reduction & Restoration:
+
+
+    # 3. Channel Weighting
+
+
+    # D. Optimization and Training.
+
+
+    To optimize the algorithm, Particle Swarm Optimization (PSO) algorithm is used
+    to determine the optimal number of convolutional kernels. Training is conducted
+    using the Adaptive Moment Estimation (ADAM) optimizer, with an initial learning
+    rate of 0.01, which is
+
+
+    activations.'
+  - '[PAGE 7]
+
+
+    Z. Sun et al.
+
+
+    Biomedical Signal Processing and Control 112 (2020) 108528
+
+
+    reduced to 001 after 300 epochs to balance convergence speed and accuracy.
+
+
+    To evaluate the model, we employ three metrics: accuracy, kappa value and sensitivity.
+    Accuracy provides an average measure of correct predictions across all classes,
+    with the kappa value accounting for disagreement between observed and expected
+    classifications. These metrics will be used to compare our model against baseline
+    methods and state-of-the-art approaches, demonstrating the superior performance
+    of our fusion in EEG-based image classification.
+
+
+    participant, preprocessing pipeline described in Section 2.3 to ensure consistency
+    and fairness. Parameter optimization for machine learning models was performed
+    using grid search. Accuracy, sensitivity, and kappa coefficient were used as evaluation
+    metrics across all models.
+
+
+    ```
+
+    $P_{acc} = \frac{TP + TN}{TP + TN + FN} (10)$
+
+    ```
+
+
+    ```
+
+    $P_{\kappa} = \frac{(TP + TN)(TP + FN)}{(TP + FP)(TN + FN)} (11)$
+
+    ```
+
+
+    ```
+
+    $Kappa = \frac{TP - FP}{TP - FP + TN + FN} (12)$
+
+    ```
+
+
+    ```
+
+    $Sensitivity = \frac{TP}{TP + FN} (13)$
+
+    ```
+
+
+    Here, True Positive (TP) refers to cases where the model correctly identifies
+    the intent imagery, and True Negative (TN) denotes where the model correctly predicts
+    the absence of intent imagery. Conversely, False Positive (FP) occurs when the
+    model incorrectly classifies a non-intent imagery as event; False Negative (FN)
+    refers to cases where the model fails to detect the correct imagery class. $P_{acc}$
+    refers to the classification accuracy, and $P_{\kappa}$ to the expected accuracy
+    due to random chance.
+
+
+    This comparative analysis is designed to demonstrate the superiority of our proposed
+    model in terms of both classification accuracy and robustness over lower motor
+    imagery tasks.
+
+
+    # 3. Results
+
+
+    # 3.1. Classification performance
+
+
+    After 400 iterations of training, the proposed model achieved an average classification
+    accuracy of 72.14% (SD - 3.60) for distinguishing between left and right motor
+    imagery classes across subjects (Fig. 8). Despite inter-subject variability, participants''
+    accuracies ranged from 70% to 75%, indicating relatively consistent performance.
+
+
+    # 3.2. Comparative analysis
+
+
+    Table 2 presents a comparison of our approach with widely used classification
+    techniques, including EEGNet [36], CNN-SVM [38], energy-efficient CNN [39], and
+    CNN-LSTM [40]. All methods were trained and tested on the same dataset, using
+    the same proportion of participants and data preprocessing pipeline. Our model
+    achieved high average accuracy (72.1%) and kappa coefficient (0.436), which is
+    significantly higher than other methods. For instance, the average accuracy of
+    63.7% is much higher than that of CNN-SVM (59.5%) and energy-efficient CNN (53.8%).
+    Our kappa coefficient of 0.096 is also much higher than that of CNN-SVM (0.027)
+    and CNN-LSTM (0.050), showing that our method performs better compared to others.
+
+
+    To evaluate classification performance, the sensitivity of each method is analyzed,
+    as shown in Table 3, which reflects the ability to correctly classify each class,
+    which is a key metric for assessing the effectiveness of the classification system.
+    The highest sensitivity (69.9%) was achieved by the proposed model, consistently
+    outperforming all other approaches. It is followed by CNN-LSTM (67.5%) and CNN-Net
+    (62.2%), while the lowest sensitivity (54.9%) was observed for CNN-SVM.
+
+
+    # 2.6. Framework framework
+
+
+    To evaluate the effectiveness of the proposed CNN-SEB-LSTM fusion network, we
+    conducted a comparative analysis against several representative baseline models
+    commonly used in motor imagery EEG-based tasks:
+
+
+    +   * EEGNet [36], a compact CNN architecture designed specifically for EEG-based
+    tasks;
+
+    * CNNNet [37], a deeper convolutional model for EEG signal decoding;
+
+    * CNN-SVM [38], a traditional feature-extraction and classification pipeline;
+
+    * Eff-KNN [39], an energy-efficient variant of the k-nearest neighbors algorithm;
+
+    * CNN-LSTM [40], a hybrid model integrating convolutional layers with short memory
+    networks.
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_7_0.png)
+
+
+    All baseline models were implemented using the same EEG dataset,
+
+
+    Fig. 8. Overall classification rate graph.
+
+
+    8'
+  md: '
+
+    # S. Sun et al.
+
+
+    # Biomedical Signal Processing and Control 112 (2026) 108528
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ede_5_0.png)
+
+    Fig. 5. Structure of Bidirectional Long-Term Memory (Bi-LSTM) network.
+
+
+    By applying PSO to our architecture, we optimized the number of convolutional
+    layers and kernel sizes. Specifically, we set the number of kernels between 12
+    and 16, and the kernel size to 10 × 10 and 15 × 15. This optimization significantly
+    improved the overall network performance by finding the most effective combination
+    of these hyperparameters for classification task.
+
+
+    # Algorithm 1 PSO
+
+    1: FOR each particle i
+
+    2: FOR each dimension
+
+    3: Initialize $x_i$ within permissible range
+
+    4: Update velocity $v_i$ within permissible range
+
+    5: END FOR
+
+    6: END FOR
+
+    7: FOR iteration =1
+
+    8: FOR each particle i
+
+    9: Calculate fitness
+
+    10: If fitness is better than $g_{best}$
+
+    11: SET current fitness as $g_{best}$
+
+    12: END FOR
+
+    13: END FOR
+
+    14: Choose the best value $g_{best}$ for the particle
+
+    15: Update $v_i''$ of the particle
+
+    16: Update $x_i''$ of the particle
+
+    17: WHILE iterations or minimum error are not attained
+
+    18: END WHILE
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ede_5_1.png)
+
+    Fig. 6. Squeeze-and-Attention mechanism.
+
+
+    | X | H × W × C |
+
+    |---|---|
+
+    | Global pooling | 1 × 1 × C |
+
+    | FC | 1 × 1 × C |
+
+    | ReLU | 1 × 1 × C |
+
+    | FC | 1 × 1 × C |
+
+    | Sigmoid | 1 × 1 × C |
+
+
+    configuration, as illustrated in Fig. 7, and its detailed hyperparameters shown
+    in Table 1.
+
+
+    ## 2.5.4 Attention Extraction
+
+
+    In deep learning, the importance of various spatial locations or channels is dynamically
+    enhanced by the Squeeze-and-Attention mechanism, allowing to concentrate on the
+    most relevant to the task at hand. In our model, we integrated the attention mechanism
+    within the CNN network, adding attention layers. Instead of using all channels,
+    the attention mechanism learns their importance based on their contribution to
+    our task. This data-driven approach enables the model to learn important features
+    without relying on prior assumptions. The detailed architecture of this is shown
+    in Fig. 6.
+
+
+    - The first 1D convolutional layer (Conv1d) applies 16 filters with 10 × 10 kernel
+    size to capture spatial patterns.
+
+    - 2nd convolutional layer (Conv2d) refines the extracted features with 15 × 15
+    kernel.
+
+    - These layers are followed by batch normalization (BN) and ReLU activation, ensuring
+    stable gradient and improved feature representation.
+
+    - A pooling layer is then applied to the feature maps, reducing computational
+    complexity while preserving spatial information.
+
+
+    ## 2.5.5. SE fusion network
+
+
+    This study proposes a fusion network that integrates CNN, Squeeze-and-Attention
+    (SE) mechanism, and Bidirectional Long-Term Memory (Bi-LSTM) networks to effectively
+    capture both spatial and temporal characteristics of EEG signals. The network
+    architecture follows CNN.
+
+
+    ## B. SE Attention: Adaptive Feature Extraction
+
+
+    The attention mechanism enhances the model''s ability to focus on the most informative
+    channels. It dynamically recalibrates feature importance through the following
+    strategy:
+
+
+    - 1. Global Average Pooling (GAP): The feature maps are mapped to 1 × 1 × C map,
+    which encodes the global distribution of signals.
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ede_6_0.png)
+
+    ![](img/227c841f21f5a658d08dfdd42355ede_6_1.png)
+
+    Table 1: Parameters of hybrid deep learning network.
+
+
+    | Layer | Filters | Size | Activation |
+
+    |---|---|---|---|
+
+    | CNN | Input | (251,251) | |
+
+    | Conv_1 | 16 | (10,10) | ReLU |
+
+    | Conv_2 | 12 | (10,1) | ReLU |
+
+    | SE | Maxpool | (15,15) | ReLU |
+
+    | FC_1 | 3 | | |
+
+    | FC_2 | 12 | | Sigmoid |
+
+    | Bi-LSTM | Flatten | 13,080 | |
+
+    | FC_3 | 16 | | |
+
+    | SoftMax Output | 2 | | |
+
+
+    - A sigmoid activation function normalizes the learned attention weights to the
+    range [0,1], emphasizing specific channels.
+
+    - These weights applied to the original feature maps element-wise multiplication,
+    selectively enhancing significant channels while suppressing irrelevant ones.
+
+
+    Through this process, the SE mechanism dynamically adjusts the importance of different
+    channels, ensuring that channels containing noise are prioritized. This weighting
+    improves the ability to distinguish imagery patterns effectively.
+
+
+    - Bi-LSTM Component: Temporal Dependency Modeling. The weighted feature maps from
+    the SE module are then processed by the Bi-LSTM network, which captures both forward
+    and backward temporal dependencies in EEG signals.
+
+    - The Bi-LSTM layer contains 16 hidden units, allowing it to effectively encode
+    long-range dependencies across time.
+
+    - A fully connected (FC) layer reduces the feature dimensions from C to C/r (where
+    r is the reduction ratio, set to 3), ensuring compact feature representation.
+
+    - A second FC restores the feature dimensions back to C, maintaining consistency
+    with the original features.
+
+    - A fully connected layer with tanh activation integrates bidirectional, enabling
+    the network to construct a more comprehensive representation.
+
+
+    ## 2. Dimensionality Reduction & Restoration:
+
+
+    ## 3. Channel Weighting
+
+
+    ## D. Optimization and Training.
+
+
+    To optimize the algorithm, Particle Swarm Optimization (PSO) algorithm is used
+    to determine the optimal number of convolutional kernels. Training is conducted
+    using the Adaptive Moment Estimation (ADAM) optimizer, with an initial learning
+    rate of 0.01, which is reduced to 001 after 300 epochs to balance convergence
+    speed and accuracy.
+
+
+    To evaluate the model, we employ three metrics: accuracy, kappa value and sensitivity.
+    Accuracy provides an average measure of correct predictions across all classes,
+    with the kappa value accounting for disagreement between observed and expected
+    classifications. These metrics will be used to compare our model against baseline
+    methods and state-of-the-art approaches, demonstrating the superior performance
+    of our fusion in EEG-based classification.
+
+
+    participant, preprocessing pipeline described in Section 2.3 to ensure consistency
+    and fairness. Parameter optimization for machine learning models was performed
+    using grid search. Accuracy, sensitivity, and kappa coefficient were used as evaluation
+    metrics across all models.
+
+
+    $$P_{acc} = \frac{TP + TN}{TP + TN + FN} (10)$$
+
+
+    $$P_{\kappa} = \frac{(TP + TN)(TP + FN)}{(TP + FP)(TN + FN)} (11)$$
+
+
+    $$Kappa = \frac{TP - FP}{TP - FP + TN + FN} (12)$$
+
+
+    $$Sensitivity = \frac{TP}{TP + FN} (13)$$
+
+
+    Here, True Positive (TP) refers to cases where the model correctly identifies
+    the intent imagery, and True Negative (TN) denotes where the model correctly predicts
+    the absence of intent imagery. Conversely, False Positive (FP) occurs when the
+    model incorrectly classifies a non-intent imagery; False Negative (FN) refers
+    to cases where the model fails to detect the imagery. $P_{acc}$ refers to the
+    classification accuracy, and $P_{\kappa}$ refers to the expected accuracy due
+    to random chance.
+
+
+    ## 3. Results
+
+
+    ### 3.1. Classification performance
+
+
+    After 400 iterations of training, the proposed model achieved an average accuracy
+    of 72.14% (SD - 3.60) for distinguishing left and right imagery classes across
+    subjects (Fig. 8). Despite inter-subject variability, participants'' accuracies
+    ranged from 70% to 75%, indicating relatively consistent performance.
+
+
+    ### 3.2. Comparative analysis
+
+
+    Table 2 presents a comparison of our approach with widely used classification
+    techniques, including EEGNet [36], CNN-SVM [38], energy-efficient CNN [39], and
+    CNN-LSTM [40]. All methods were trained and tested on the same dataset. Our model
+    achieved high average accuracy (72.1%) and kappa coefficient (0.436), which is
+    significantly higher than other methods. For instance, the average accuracy of
+    63.7% is much higher than that of CNN-SVM (59.5%) and energy-efficient CNN (53.8%).
+    Our kappa coefficient of 0.096 is also much higher than that of CNN-SVM (0.027)
+    and CNN-LSTM (0.050), showing that our method performs better compared to others.
+
+
+    To evaluate classification performance, the sensitivity of each method is analyzed,
+    as shown in Table 3, which reflects the ability to correctly classify each class,
+    which is a key metric for assessing the effectiveness of the classification system.
+    The highest sensitivity (69.9%) was achieved by the proposed model, consistently
+    outperforming all other approaches. It is followed by CNN-LSTM (67.5%) and CNN-Net
+    (62.2%), while the lowest sensitivity (54.9%) was observed for CNN-SVM.
+
+    '
+  mdcn: '
+
+
+    # S. Sun 等人
+
+
+    # 生物医学信号处理与控制 112 (2026) 108528
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ede_5_0.png)
+
+    图 5. 双向长短期记忆 (Bi-LSTM) 网络结构。
+
+
+    通过在我们的架构中应用 PSO 优化算法，我们优化了卷积层数和卷积核大小。具体而言，我们将卷积核的数量设置在 12 到 16 之间，卷积核大小设置为 10
+    × 10 和 15 × 15。这种优化通过为分类任务找到这些超参数的最有效组合，显著提升了网络的整体性能。
+
+
+    # 算法 1 PSO
+
+    1: 遍历每个粒子 i
+
+    2: 遍历每个维度
+
+    3: 在允许范围内初始化 $x_i$
+
+    4: 在允许范围内更新速度 $v_i$
+
+    5: 结束循环
+
+    6: 结束循环
+
+    7: 迭代次数 = 1
+
+    8: 遍历每个粒子 i
+
+    9: 计算适应度
+
+    10: 如果适应度优于 $g_{best}$
+
+    11: 将当前适应度设为 $g_{best}$
+
+    12: 结束循环
+
+    13: 结束循环
+
+    14: 为粒子选择最优值 $g_{best}$
+
+    15: 更新粒子的 $v_i''$
+
+    16: 更新粒子的 $x_i''$
+
+    17: 当未达到迭代次数或最小误差时
+
+    18: 结束循环
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ede_5_1.png)
+
+    图 6. 挤压与注意力机制 (Squeeze-and-Attention mechanism)。
+
+
+    | X | H × W × C |
+
+    |---|---|
+
+    | 全局池化 | 1 × 1 × C |
+
+    | 全连接层 (FC) | 1 × 1 × C |
+
+    | ReLU | 1 × 1 × C |
+
+    | 全连接层 (FC) | 1 × 1 × C |
+
+    | Sigmoid | 1 × 1 × C |
+
+
+    配置如图 7 所示，其详细超参数见表 1。
+
+
+    ## 2.5.4 注意力提取
+
+
+    在深度学习中，通过挤压与注意力机制动态增强各种空间位置或通道的重要性，使其能够聚焦于当前任务最相关的特征。在我们的模型中，我们将注意力机制集成到 CNN 网络中，添加了注意力层。注意力机制并非使用所有通道，而是根据它们对我们任务的贡献来学习其重要性。这种数据驱动的方法使模型能够在不依赖先验假设的情况下学习重要特征。其详细架构如图
+    6 所示。
+
+
+    - 第一层 1D 卷积层 (Conv1d) 应用 16 个 10 × 10 尺寸的过滤器来捕捉空间模式。
+
+    - 第 2 层卷积层 (Conv2d) 使用 15 × 15 卷积核精炼提取的特征。
+
+    - 这些层之后是批归一化 (BN) 和 ReLU 激活函数，以确保梯度的稳定并改进特征表示。
+
+    - 随后对特征图应用池化层，在保留空间信息的同时降低计算复杂度。
+
+
+    ## 2.5.5. SE 融合网络
+
+
+    本研究提出了一种融合了 CNN、挤压与注意力 (SE) 机制以及双向长短期记忆 (Bi-LSTM) 网络的融合网络，以有效捕捉 EEG 信号的空间和时间特征。网络架构遵循
+    CNN。
+
+
+    ## B. SE 注意力：自适应特征提取
+
+
+    注意力机制增强了模型关注信息丰富通道的能力。它通过以下策略动态校准特征重要性：
+
+
+    - 1. 全局平均池化 (GAP)：将特征图映射到 1 × 1 × C 图，这编码了信号的全局分布。
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ede_6_0.png)
+
+    ![](img/227c841f21f5a658d08dfdd42355ede_6_1.png)
+
+    表 1：混合深度学习网络参数。
+
+
+    | 图层 | 过滤器 | 尺寸 | 激活函数 |
+
+    |---|---|---|---|
+
+    | CNN | 输入 | (251,251) | |
+
+    | Conv_1 | 16 | (10,10) | ReLU |
+
+    | Conv_2 | 12 | (10,1) | ReLU |
+
+    | SE | Maxpool | (15,15) | ReLU |
+
+    | FC_1 | 3 | | |
+
+    | FC_2 | 12 | | Sigmoid |
+
+    | Bi-LSTM | Flatten | 13,080 | |
+
+    | FC_3 | 16 | | |
+
+    | SoftMax 输出 | 2 | | |
+
+
+    - Sigmoid 激活函数将学习到的注意力权重归一化到 [0,1] 范围内，强调特定通道。
+
+    - 将这些权重与原始特征图进行逐元素相乘，选择性地增强重要通道，同时抑制不相关的的通道。
+
+
+    通过这一过程，SE 机制动态调整不同通道的重要性，确保包含噪声的通道被优先考虑。这种加权改进了有效区分图像模式的能力。
+
+
+    - Bi-LSTM 组件：时间依赖建模。来自 SE 模块的加权特征图随后由 Bi-LSTM 网络处理，该网络捕捉 EEG 信号中正向和反向的时间依赖。
+
+    - Bi-LSTM 层包含 16 个隐藏单元，使其能够有效地编码跨时间的长程依赖。
+
+    - 全连接 (FC) 层将特征维度从 C 减少到 C/r（其中 r 是压缩比例，设置为 3），确保了紧凑的特征表示。
+
+    - 第二个 FC 层将特征维度恢复到 C，保持与原始特征的一致。
+
+    - 带有 tanh 激活的全连接层整合了双向信息，使网络能够构建更全面的表示。
+
+
+    ## 2. 降维与恢复：
+
+
+    ## 3. 通道加权
+
+
+    ## D. 优化与训练。
+
+
+    为了优化算法，使用了粒子群优化 (PSO) 算法来确定卷积核的最佳数量。使用自适应动量估计 (ADAM) 优化器进行训练，初始学习率设置为 0.01。为了评估模型，我们采用了三种指标：准确率、Kappa
+    值和灵敏度。这种优化通过找到分类任务的最有效超参数组合，显著提升了整体网络性能。通过网格搜索进行参数优化，在 300 个迭代后平衡收敛速度和准确性。
+
+
+    ## 3. 结果
+
+
+    ### 3.1. 分类性能
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 8]
+
+
+    # Table 2
+
+
+    Comparison of correctness of each algorithm.
+
+
+    | Subject | CSP + SVM | EEGNet | Kovnet | CNN | CNN-LSTM | Proposed | | |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | 0 | 0.58 | 0.157 | 0.34 | 0.71 | 0.42 | 0.263 | 0.73 | 0.526 |
+
+    | 1 | 0.455 | -0.019 | 0.163 | 0.46 | 0.012 | 0.252 | 0.675 0.638 |
+
+    | 2 | 0.532 | 0.068 | 0.623 | 0.751 | 0.492 | 0.152 | 0.718 | 0.737 |
+
+    | 3 | 0.484 | -0.036 | 0.629 | 0.722 | 0.218 | 0.619 | 0.685 | 0.743 | 0.412 |
+
+    | 4 | 0.526 | 0.064 | 0.778 | 0.628 | 0.541 | 0.551 | 0.623 | 0.668 | 0.758 |
+
+    | 5 | 0.591 | 0.016 | 0.684 | 0.232 | 0.709 | 0.451 | 0.651 | 0.675 | 0.721 |
+
+    | 6 | 0.548 | 0.147 | 0.602 | 0.378 | 0.513 | 0.227 | 0.642 | 0.652 | 0.722 |
+    0.432 |
+
+    | 7 | 0.545 | 0.106 | 0.718 | 0.242 | 0.377 | 0.553 | 0.648 | 0.246 | 0.708 |
+    0.471 |
+
+    | 8 | 0.558 | 0.056 | 0.621 | 0.269 | 0.333 | 0.648 | 0.706 | 0.397 | 0.416 |
+
+    | average | 0.538 | 0.095 | 0.627 | 0.261 | 0.305 | 0.296 | 0.638 | 0.741 | 0.436
+    |
+
+
+    # Table 3
+
+
+    Comparison of sensitivity of each algorithm.
+
+
+    | Subject | CSP + SVM | EEGNet | Kovnet | CNN | CNN-LSTM | |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | 0 | 0.622 | 0.668 | 0.691 | 0.573 | 0.674 |
+
+    | 1 | 0.622 | 0.601 | 0.559 | 0.667 | 0.689 |
+
+    | 2 | 0.553 | 0.669 | 0.603 | 0.653 | - |
+
+    | 3 | 0.514 | 0.617 | 0.566 | 0.672 | 0.695 |
+
+    | 4 | 0.544 | 0.619 | 0.560 | 0.671 | 0.691 |
+
+    | 5 | 0.538 | 0.623 | 0.563 | 0.673 | 0.698 |
+
+    | 6 | 0.553 | 0.629 | 0.568 | 0.676 | 0.701 |
+
+    | 7 | 0.551 | 0.628 | 0.564 | 0.674 | 0.696 |
+
+    | 8 | 0.545 | 0.621 | 0.562 | 0.661 | 0.692 |
+
+    | 10 | 0.538 | 0.611 | 0.618 | 0.561 | 0.669 |
+
+    | average | 0.549 | 0.614 | 0.623 | 0.569 | 0.675 |
+
+
+    # 3.3. Confusion matrix analysis
+
+
+    Fig. 9 presents the confusion matrix for classification algorithms applied across
+    all subjects. This matrix illustrates the classification performance for left
+    and right mirror imagery tasks, where the diagonal elements represent classified
+    true (true positives), and the off-diagonal elements indicate misclassifications.
+    Among all, the method with highest accuracy identified 71% of left trials and
+    74% of right trials. In contrast, traditional approaches like CSP + SVM show 56%
+    accuracy for left trials and 53% for right trials, greatly differing in feature
+    extraction. CNN-LSTM achieved 63% accuracy for both movements, while ConvNet significantly
+    improves this performance with 64% and 67% accuracy.
+
+    KNN and CNN-LSTM exhibit moderate classification accuracy, with KNN classifying
+    58% of left trials and 62% of right trials, while CNN-LSTM exhibits 69% and 68%
+    accuracy, respectively.
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_8_0.png)
+
+
+    Fig. 9. The cumulative confusion matrix of subject.'
+  - '[PAGE 9]
+
+
+    # 3.4. Spectral and topographical analysis
+
+
+    Power spectral density (PSD) analysis was performed on EEG signals in the mu (8-12
+    Hz) and beta (13-30 Hz) bands, which are known to be involved in motor imagery
+    tasks. We present the PSD topographies for subject 1, where area represents regions
+    of higher power. This example as case spectral pattern typically shows the rhythmic
+    responses observed our participant cohort. In these maps, regions of higher power
+    induced by motor imagery, energy is predominantly concentrated in the occipital
+    lobe and lateral brain regions. The color represents the power in microvolts per
+    hertz (µV/Hz), which represents the power density at each frequency band. Red
+    areas in the map indicate higher power. In right side motor imagery, the EEG topography
+    did not show a significant difference in brain activity, which in contrast, during
+    right-side motor imagery, a more pronounced increase was observed in the left
+    hemisphere, consistent with contralateral motor control mechanisms.
+
+
+    activation of the motor cortex and its use in detecting motor movements for lower
+    limbs [41,42].
+
+
+    # 4. Discussion
+
+
+    The results presented here demonstrate the potential of a hybrid deep learning
+    model for detecting lower limb imagery, a task that is particularly relevant for
+    stroke rehabilitation. The model achieved accuracy (72.14%) and demonstrated consistent
+    performance across subjects, even with inherent variability. By integrating CNN
+    and LSTM with adaptive feature weighting and PSO for parameter optimization, the
+    proposed model feature enhancement demonstrates robustness and robustness. These
+    components work synergistically to address the complexity of motor imagery tasks
+    and provide improved classification performance.
+
+
+    Specifically, CNN captures spatial characteristics by local and global patterns
+    in EEG topologies, which are essential for distinguishing motor imagery classes.
+    The attention mechanism further captures the temporal dependencies, allowing the
+    network to focus on spatial features. Bi-LSTM effectively models the temporal
+    effects of EEG signals in both forward and backward directions, enabling better
+    understanding of the imagery. Optimization of kernel sizes and filter numbers
+    leads to faster convergence and improved generalization across subjects.
+
+
+    # 3.5. Event-related desynchronization (ERD) analysis
+
+
+    Event-related desynchronization (ERD) was observed during both left and right
+    motor imagery. Fig. 11 shows the ERD phenomenon in the mu-wave frequency band
+    at electrodes C3 and C4. Left motor imagery resulted in a transient ERD in the
+    motor region of the right cortex, right motor imagery resulted in a more pronounced
+    response in the left motor cortex, with a decrease in EEG power, persisting throughout
+    the four-second imagery period.
+
+
+    Although data from all 15 electrodes were collected, we chose to present the data
+    from electrodes C3 and C4 specifically because these channels are widely recognized
+    for their role in detecting motor activity during lower limb movements. Movements,
+    C3 and C4 are widely recognized for their role in detecting motor activity during
+    motor imagery tasks. Notably, multiple studies have demonstrated that lower limb
+    imagery can elicit ERD patterns at C3 and C4, reflecting contralateral
+
+
+    The classification of EEG signals is challenging due to physiological differences,
+    motor imagery differences, psychological state, and equipment limitations. To
+    address these challenges, the proposed model utilized traditional classification
+    approaches, enhancing its robustness across subjects. A 1 Hz high-pass filter
+    and 40 Hz low-pass filter played a crucial role in removing baseline fluctuations,
+    ensuring the preservation of neural activity and minimizing artifacts caused by
+    eye movement and muscle artifacts, which are common in EEG records.
+
+
+    This filtering strategy helps maintain motor-related oscillations, particularly
+    in the mu (8-12 Hz) and beta (13-30 Hz) frequency bands, which are known to be
+    crucial for motor imagery tasks [4]. By refining the signal quality, these processing
+    steps contributed to the improved
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_9_0.png)
+
+
+    Fig. 11. The PSD of the EEG signals.'
+  - '[PAGE 10]
+
+
+    # Z. Sun et al.
+
+
+    # Biomedical Signal Processing and Control 112 (2026) 108528
+
+
+    ![](img/227c841f21f5a658d08dfdd42355ed3e_10_0.png)
+
+
+    Fig. 11. ERP during motor imagery.
+
+
+    classification accuracy over during.
+
+    The analysis of confusion matrices confirmed that the proposed method significantly
+    outperformed traditional techniques like CSP. Traditional methods, such as CSP-SVM,
+    struggled to capture the complex temporal and spatial dimensions in motor imagery,
+    resulting in lower classification performance. In contrast, the hybrid model effectively
+    leveraged CNN to extract spatial features, which Bi-LSTM captured the sequential
+    features of imagery, leading to improved classification performance. The attention
+    mechanism, in particular, reduced training time and overall performance. Further
+    analysis of classification sensitivity indicates that the model effectively captures
+    the neural representations of lower motor imagery, reduces misclassification,
+    and enhances robustness.
+
+
+    Topographical and spectral analyses revealed cortical control during motor imagery,
+    with distinct patterns in the contralateral hemisphere. These patterns reflect
+    the motor intentions to lead and that the higher resolution of EEG for lower limb
+    movements be better compared to upper limb movements. Additionally, it highlights
+    the ability to demonstrate motor imagery for different body parts, reinforcing
+    the flexibility of EEG to movement detection methods.
+
+
+    The selection of electrodes C3 and C4 is based on their role in monitoring cortical
+    cortex activity during movement. Previous studies show that these electrodes effectively
+    captured ERP patterns with lower motor imagery, making them suitable for assessing
+    motor-related EEG signals [1, 2]. Compared to previous works, our proposed method
+    improves the specificity of our approach in detecting motor imagery-related neural
+    responses.
+
+
+    The proposed hybrid deep learning model offers several key contributions to EEG-based
+    motor imagery classification:
+
+
+    +   1. Development of a cost-effective EEG system, integrating the OpenBCI platform
+    to facilitate EEG data acquisition in controlled environments.
+
+
+    +   2. Improved classification accuracy, with the multi-channel CNN Attention-Bi-LSTM
+    achieved 72.1% accuracy, outperforming conventional machine learning approaches.
+
+
+    +   3. Enhanced feature selection and weighting by the attention mechanism, which
+    reduces feature importance and improves classification robustness.
+
+
+    +   4. Physiological validation through PSD, ERSP, and E/ERS analysis, confirming
+    the system''s effectiveness in detecting lower limb motor imagery.
+
+
+    +   5. Demonstration of system robustness, highlighting its potential application
+    in real-world rehabilitation settings despite limited imagery.
+
+
+    The findings of this study contribute to the development of effective ECI systems
+    for stroke rehabilitation, highlighting deep learning models to improve the detection
+    and classification of complex motor imagery. By addressing the limitations of
+    traditional methods and leveraging a fusion of deep learning techniques, providing
+    a promising framework for motor-imagery based BCI applications.
+
+
+    # 5. Limitations and Future work
+
+
+    While the proposed deep learning model exhibits potential for lower limb motor
+    imagery, first, the dataset used in this study consists only of healthy participants,
+    which limits the generalizability of the findings to stroke patients with motor
+    impairments. Future research should validate the model''s effectiveness in clinical
+    populations to ensure its practical application.
+
+
+    Second, the model learning techniques for feature extraction and classification,
+    its computational complexity presents a challenge, for real-time BCI applications.
+    Future works should explore optimization strategies such as model compression
+    to enhance the decoding speed.
+
+
+    Third, EEG-based motor imagery signals are inherently noisy and exhibit significant
+    inter-subject variability. The proposed approach improves classification performance,
+    further investigations are needed in real-world BCI applications.
+
+
+    Finally, this study focuses on motor imagery classification, and additional research
+    is required to integrate the proposed method into a robotic system. Future work
+    will involve experimental validation with stroke patients to assess the system''s
+    effectiveness in clinical rehabilitation scenarios.
+
+
+    11'
+  md: '
+
+    ## Table 2
+
+
+    Comparison of correctness of each algorithm.
+
+
+    | Subject | CSP + SVM | EEGNet | Kovnet | CNN | CNN-LSTM | Proposed | | | |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | 0 | 0.58 | 0.157 | 0.34 | 0.71 | 0.42 | 0.263 | 0.73 | 0.526 |
+
+    | 1 | 0.455 | -0.019 | 0.163 | 0.46 | 0.012 | 0.252 | 0.675 | 0.638 |
+
+    | 2 | 0.532 | 0.068 | 0.623 | 0.751 | 0.492 | 0.152 | 0.718 | 0.737 |
+
+    | 3 | 0.484 | -0.036 | 0.629 | 0.722 | 0.218 | 0.619 | 0.685 | 0.743 | 0.412 |
+
+    | 4 | 0.526 | 0.064 | 0.778 | 0.628 | 0.541 | 0.551 | 0.623 | 0.668 | 0.758 |
+
+    | 5 | 0.591 | 0.016 | 0.684 | 0.232 | 0.709 | 0.451 | 0.651 | 0.675 | 0.721 |
+
+    | 6 | 0.548 | 0.147 | 0.602 | 0.378 | 0.513 | 0.227 | 0.642 | 0.652 | 0.722 |
+    0.432 |
+
+    | 7 | 0.545 | 0.106 | 0.718 | 0.242 | 0.377 | 0.553 | 0.648 | 0.246 | 0.708 |
+    0.471 |
+
+    | 8 | 0.558 | 0.056 | 0.621 | 0.269 | 0.333 | 0.648 | 0.706 | 0.397 | 0.416 |
+
+    | average | 0.538 | 0.095 | 0.627 | 0.261 | 0.305 | 0.296 | 0.638 | 0.741 | 0.436
+    |
+
+
+    ## Table 3
+
+
+    Comparison of sensitivity of each algorithm.
+
+
+    | Subject | CSP + SVM | EEGNet | Kovnet | CNN | CNN-LSTM | |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | 0 | 0.622 | 0.668 | 0.691 | 0.573 | 0.674 | |
+
+    | 1 | 0.622 | 0.601 | 0.559 | 0.667 | 0.689 | |
+
+    | 2 | 0.553 | 0.669 | 0.603 | 0.653 | - | |
+
+    | 3 | 0.514 | 0.617 | 0.566 | 0.672 | 0.695 | |
+
+    | 4 | 0.544 | 0.619 | 0.560 | 0.671 | 0.691 | |
+
+    | 5 | 0.538 | 0.623 | 0.563 | 0.673 | 0.698 | |
+
+    | 6 | 0.553 | 0.629 | 0.568 | 0.676 | 0.701 | |
+
+    | 7 | 0.551 | 0.628 | 0.564 | 0.674 | 0.696 | |
+
+    | 8 | 0.545 | 0.621 | 0.562 | 0.661 | 0.692 | |
+
+    | 10 | 0.538 | 0.611 | 0.618 | 0.561 | 0.669 | |
+
+    | average | 0.549 | 0.614 | 0.623 | 0.569 | 0.675 | |
+
+
+    ### 3.3. Confusion matrix analysis
+
+
+    Fig. 9 presents the confusion matrix for classification applied across all subjects.
+    This matrix illustrates the classification performance for left and right imagery
+    tasks, where the diagonal elements represent true (true positives), and the off-diagonal
+    elements indicate misclassification. Among all, the method with highest accuracy
+    identified 71% of left trials and 74% of right trials. In contrast, traditional
+    approaches like CSP + SVM show 56% accuracy for left trials and 53% for right
+    trials, greatly differing in feature extraction. CNN significantly improves this
+    performance with 64% and 67% accuracy. KNN and CNN-LSTM exhibit moderate classification
+    accuracy, with 58% of left trials and 62% of right trials, respectively.
+
+
+    ![](img/227c841f21fa658d08df42355ed3e_8.png)
+
+
+    Fig. 9. The confusion matrix of subject.
+
+
+    ### 3.4. Spectral and topographical analysis
+
+
+    Power spectral density (PSD) analysis was performed on EEG signals in the mu (8-12
+    Hz) and beta (13-30 Hz) bands, which are known to be involved in motor imagery
+    tasks. We present the PSD topographies for each subject. In these maps, regions
+    of higher power induced by motor imagery, energy is predominantly concentrated
+    in the occipital lobe and lateral brain regions. The color represents the power
+    in microvolts per hertz (µV/Hz), which represents the power density at each frequency
+    band. In right side motor imagery, the EEG topography did not show a significant
+    difference in activity; in contrast, during right-side motor imagery, a more pronounced
+    increase was observed in the left hemisphere, consistent with contralateral motor
+    control activation of the motor cortex.
+
+
+    ### 4. Discussion
+
+
+    The results presented here demonstrate the potential of a hybrid deep learning
+    model for detecting lower limb imagery, a task that is particularly relevant for
+    stroke rehabilitation. The model achieved 72.14% accuracy and demonstrated consistent
+    performance across subjects, even with inherent variability. By integrating CNN
+    and LSTM with adaptive feature weighting and PSO for parameter optimization, the
+    proposed model demonstrates robustness to address the complexity of motor imagery
+    tasks and provide improved performance.
+
+
+    Specifically, CNN captures spatial characteristics by local and global patterns
+    in EEG topologies, which are essential for distinguishing motor imagery classes.
+    The attention mechanism further captures temporal dependencies, allowing the network
+    to focus on spatial features. Bi-LSTM effectively models the temporal effects
+    of EEG signals in both forward and backward directions, enabling better understanding
+    of the imagery. Optimization of kernel sizes and filter numbers leads to faster
+    convergence and improved generalization across subjects.
+
+
+    ### 3.5. Event-related desynchronization (ERD) analysis
+
+
+    Event-related desynchronization (ERD) was observed during both left and right
+    motor imagery. Fig. 11 shows the ERD phenomenon in the mu-wave frequency band
+    at electrodes C3 and C4. Left motor imagery resulted in a transient ERD in the
+    motor region of the right cortex; right motor imagery resulted in a more pronounced
+    response in the left motor cortex, with a decrease in EEG power persisting throughout
+    the four-second imagery period.
+
+
+    Although data from all 15 electrodes were collected, we chose to present the data
+    from electrodes C3 and C4 specifically because these channels are widely recognized
+    for their role in detecting motor activity during lower limb movements. C3 and
+    C4 are widely recognized for their role in detecting motor activity during motor
+    imagery tasks. Notably, multiple studies have demonstrated that lower limb imagery
+    can elicit ERD patterns at C3 and C4, reflecting contralateral control.
+
+
+    The classification of EEG signals is challenging due to physiological differences,
+    motor imagery differences, psychological state, and equipment limitations. To
+    address these challenges, the proposed model utilized traditional classification
+    approaches, enhancing its robustness across subjects. A 1 Hz high-pass filter
+    and 40 Hz low-pass filter played a crucial role in removing baseline fluctuations,
+    ensuring the preservation of neural activity and minimizing artifacts caused by
+    eye movement and muscle artifacts, which are common in EEG records.
+
+
+    This filtering strategy helps maintain motor-related oscillations, particularly
+    in the mu (8-12 Hz) and beta (13-30 Hz) frequency bands, which are known to be
+    crucial for motor imagery tasks [4]. By refining the signal quality, these processing
+    steps contributed to the improved-
+
+
+    ![](img/227c841f21fa a658d08df42355ed3e_9_0.png)
+
+
+    Fig. 11. The PSD of the EEG signals.
+
+
+    ![](img/227c841f21fa a658d08df42355ed3e_10_0.png)
+
+
+    Fig. 11. ERP during motor imagery.
+
+
+    The analysis of confusion matrices confirmed that the proposed method significantly
+    outperformed traditional techniques like CSP. Traditional methods, such as CSP-SVM,
+    struggled to capture the complex temporal and spatial dimensions. The classification
+    accuracy over time.
+
+    '
+  mdcn: '
+
+
+    ## 表 2
+
+
+    各算法的准确性对比。
+
+
+    | 受试者 | CSP + SVM | EEGNet | Kovnet | CNN | CNN-LSTM | 提议方法 | | | |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | 0 | 0.58 | 0.157 | 0.34 | 0.71 | 0.42 | 0.263 | 0.73 | 0.526 |
+
+    | 1 | 0.455 | -0.019 | 0.163 | 0.46 | 0.012 | 0.252 | 0.675 | 0.638 |
+
+    | 2 | 0.532 | 0.068 | 0.623 | 0.751 | 0.492 | 0.152 | 0.718 | 0.737 |
+
+    | 3 | 0.484 | -0.036 | 0.629 | 0.722 | 0.218 | 0.619 | 0.685 | 0.743 | 0.412 |
+
+    | 4 | 0.526 | 0.064 | 0.778 | 0.628 | 0.541 | 0.551 | 0.623 | 0.668 | 0.758 |
+
+    | 5 | 0.591 | 0.016 | 0.684 | 0.232 | 0.709 | 0.451 | 0.651 | 0.675 | 0.721 |
+
+    | 6 | 0.548 | 0.147 | 0.602 | 0.378 | 0.513 | 0.227 | 0.642 | 0.652 | 0.722 |
+    0.432 |
+
+    | 7 | 0.545 | 0.106 | 0.718 | 0.242 | 0.377 | 0.553 | 0.648 | 0.246 | 0.708 |
+    0.471 |
+
+    | 8 | 0.558 | 0.056 | 0.621 | 0.269 | 0.333 | 0.648 | 0.706 | 0.397 | 0.416 |
+
+    | 平均值 | 0.538 | 0.095 | 0.627 | 0.261 | 0.305 | 0.296 | 0.638 | 0.741 | 0.436
+    |
+
+
+    ## 表 3
+
+
+    各算法的灵敏度对比。
+
+
+    | 受试者 | CSP + SVM | EEGNet | Kovnet | CNN | CNN-LSTM | |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | 0 | 0.622 | 0.668 | 0.691 | 0.573 | 0.674 | |
+
+    | 1 | 0.622 | 0.601 | 0.559 | 0.667 | 0.689 | |
+
+    | 2 | 0.553 | 0.669 | 0.603 | 0.653 | - | |
+
+    | 3 | 0.514 | 0.617 | 0.566 | 0.672 | 0.695 | |
+
+    | 4 | 0.544 | 0.619 | 0.560 | 0.671 | 0.691 | |
+
+    | 5 | 0.538 | 0.623 | 0.563 | 0.673 | 0.698 | |
+
+    | 6 | 0.553 | 0.629 | 0.568 | 0.676 | 0.701 | |
+
+    | 7 | 0.551 | 0.628 | 0.564 | 0.674 | 0.696 | |
+
+    | 8 | 0.545 | 0.621 | 0.562 | 0.661 | 0.692 | |
+
+    | 10 | 0.538 | 0.611 | 0.618 | 0.561 | 0.669 | |
+
+    | 平均值 | 0.549 | 0.614 | 0.623 | 0.569 | 0.675 | |
+
+
+    ### 3.3. 混淆矩阵分析
+
+
+    图 9 展示了适用于受试者的分类混淆矩阵。该矩阵说明了左右想象任务的分类性能，其中对角线元素代表真实分类正确（真阳性），非对角线元素表示分类错误。在所有方法中，精度最高的方法识别出
+    71% 的左侧试验和 74% 的右侧试验。相比之下，如 CSP + SVM 等传统方法在左侧试验中的准确率为 56%，右侧试验为 53%，在特征提取方面存在巨大差异。CNN
+    以 64% 和 67% 的准确率显著提升了这一性能。KNN 和 CNN-LSTM 表现出中等的分类准确率，左侧试验占比 58%，右侧试验占比 62%。![](img/227c841f21fa
+    a658d0df42355ed3e_8.png) 图 9. 混淆矩阵
+
+
+    ### 3.4. 频谱与拓扑分析
+
+
+    功率谱密度（PSD）分析是对 EEG 信号进行的。PSD 分析关注了 C3 和 C4 电极的 mu 波（8-12 Hz）和 beta 波（13-30 Hz）频段。PSD
+    展示了每个受试者的拓扑图。左侧想象导致右侧皮层出现瞬态 ERD；右侧想象导致左侧皮层出现更明显的反应。
+
+
+    ### 4. 讨论
+
+
+    EEG 信号的分类具有挑战性，受生理差异、想象差异、心理状态以及设备限制的影响。为了应对这些挑战，提议的方法使用了传统的分类方法，增强了其在不同受试者之间的鲁棒性。1
+    Hz 高通滤波器和 40 Hz 低通滤波器在消除基线漂移方面起了至关作用，在保留神经活动的同时减少了由眼动运动和肌肉伪影引起的干扰。这种过滤策略有助于维持运动震荡，特别是在
+    mu（8-12 Hz）和 beta（13-30 Hz）频段，这些频段已知对运动想象至关重要 [4]。通过优化信号质量，这些处理步骤改善了-
+
+
+    ### 3.5. 事件相关去同步（ERD）分析
+
+
+    事件相关去同步（ERD）在左右运动想象期间均被观察到。图 11 显示了 C3 和 C4 电极处的 ERD 现象。左侧想象导致右侧区域出现 ERD；右侧想象导致左侧区域出现功率下降。
+
+
+    尽管收集了所有 15 个电极的数据，但我们专门展示了 C3 和 C4 电极的数据，因为这些通道被广泛认为是检测运动活动的关键。值得注意的是，多项研究已证明肢体想象可以在
+    C3 和 C4 产生 ERD 模式，反映了对侧控制。
+
+
+    混淆矩阵的分析证实，提议的方法显著优于 CSP 等传统技术。传统方法（如 CSP-SVM）难以捕捉复杂的时间空间维度。随时间变化的分类准确率。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 11]
+
+
+    # 6 Conclusions
+
+
+    This study presents a novel brain-computer interface (BCI) system for detecting
+    lower motor imagery, with potential applications in rehabilitation. By using OpenBCI
+    with a deep learning framework, the system ensures both hardware capability and
+    EEG signal processing. The proposed approach catches key features in imagery classification
+    by leveraging CNN for spatial extraction, Bi-LSTM for temporal recognition, and
+    an attention mechanism for feature fusion.
+
+
+    The study demonstrates the feasibility of using consumer-grade EEG devices for
+    motor imagery, offering a promising balance between cost and performance. High
+    accuracy was further validated the needed system in clinical applications, particularly
+    for stroke patients, and to optimize it for real-life rehabilitation. Future research
+    should focus on integrating the proposed approach with robotic systems and refining
+    its adaptability for personalized rehabilitation.
+
+
+    # CRediit contribution statement
+
+
+    Zhengdi Sun: original draft; Ale Mu: Conceptualization, Y. Jiang: Methodology;
+    Xudong Sun: Investigation.
+
+
+    # Funding
+
+
+    The author(s) received the following financial support for the research, analysis,
+    and/or publication of this article: Work was supported by Doctoral Innovation
+    Fund of An University of Technology (No. 102-25027202).
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no competing interests or personal relationships
+    that could have appeared to influence the work reported in this paper.
+
+
+    # Data availability
+
+
+    The data used has been considered available.
+
+
+    # References
+
+
+    [1] H.B. Bohlein, D. Raj, J. Chen, K. Xu, L. Li, Z. Zhou, Motor imagery features
+    and outcomes for neural rehabilitation. J. Phys. 575 (2007) 637–642. https://doi.org/10.1016/j.jphys.2006.09.012
+
+
+    [2] F. Li, D. Zhang, J. Chen, K. Xu, L. Hou, Motor imagery features and outcomes
+    in stroke rehabilitation: visualization analysis. Fron Neur. 17 (2023) 938. https://doi.org/10.3389/fronneur.2023.1154332
+
+
+    [3] C.C. Dadda, V.A. Naz, V. Vachrakov, F. Role of the Contralateral Lesion in
+    Ipsilateral Hemorrhagic Stroke. Hum Res. 11 (2007) 189–201. https://doi.org/10.1007/s0046-006-011-y
+
+
+    [4] A. Mcabria, M. Y. Sun, U. Chandary, J. del, R. Miller, S. Cox, A. Gugelsberger,
+    P. Valance, EEG-based neurofeedback for upper limb motor imagery rehabilitation
+    in chronic stroke: Stroke 48 (2021) e662–e670. https://doi.org/10.1161/STROKE0000000000003933
+
+
+    [5] M. Wang, H. Hu, G. Wang, L. Zhang, J. Gao, Automatic sleep stage mapping of
+    EEG signal based on fusion learning and neural network. Front Comput Neurosci
+    15 (2021) 693500. https://doi.org/10.3389/fcompneu.2021.693500
+
+
+    [6] B. Cuscasi, A. Centagnelli, G. Gu, The origin of cortical features and classification
+    of motor imagery. Neuroimage. 122 (2012) 417–420. https://doi.org/10.1016/j.neuroimage.2012.03.018
+
+
+    [7] A. R. Holmes, V.A. McNaughton, and N. Pearson, Prediction of functional connectivity
+    surfaces and their applications for rehabilitation, and control of human brain
+    patients. Phys. Rep. 918 (2021) 1–123. https://doi.org/10.1016/j.re.2021.03.011
+
+
+    [8] A. M. Roy, Adaptive transfer learning-based multiple feature fusion decoding
+    for EEG classification in brain-computer interface. Eng. Art. Med. Inf. Art 116
+    (2022) 105347. https://doi.org/10.1016/j.ejami.2022.105347
+
+
+    [9] P. Ochsler, F.R. Lopes da Silva, Event-related EEG synchronization and desynchronization:
+    basic principles. Clin Neurosci. 110 (1999) 1842–1857. https://doi.org/10.1097/01.11.300001633
+
+
+    [10] W. Wu, S. Rahid, A. Irfan, Y. Feng, Classification of associated events with
+    the EEG-related motor imagery. Signal Process Comput. 62 (2021) 102741. https://doi.org/10.1016/j.sigpro.2021.102741
+
+
+    [11] M. Klag, K. Grimmann, Identifying key features for ICA-based decomposition
+    of EEG data in motor imagery classification and experiments. Eur. J. Neuro. 22
+    (2005) 1033–1040. https://doi.org/10.1111/j.1460-9744.00333.x
+
+
+    [12] N. Manmorban, F. Ebrahim, Hamnoush, A. Tangifi, T. A. Gulk, Automated Independent
+    Component Analysis for Motor Imagery Classification. IEEE Access. 9 (2021) 77632–77643.
+    https://doi.org/10.1109/ACCESS.2021.3112853
+
+
+    [13] S. El-Ghazawi, J. Jimenez, M. Perez-Vicente, E. Fernandez, Optimization of
+    Real-Time EEG-Related Feature Removal and Estimation for Human-Robot Interactions.
+    Front. Comput. 56 (2019) 100233. https://doi.org/10.1016/j.futurec.2019.100233
+
+
+    [14] H. Cizmas, C. Rocaj, D. Zhang, Channel selection and feature extraction for
+    EEG-based motor imagery classification using deep learning. Soft Computing. 44
+    (2021) 107034. https://doi.org/10.1016/j.softai.2020.107034
+
+
+    [15] L. Liu
+
+
+    [16] L. Sun, Y. Zhang, J. Liu, Deep learning for motor imagery classification
+    design: Using Transformer and New Algorithms. Front. Robotics. 58 (2021) 685011.
+    https://doi.org/10.3389/s12871-021-00394-y
+
+
+    [17] Y. Roy, H. Horvath, A. Alcheieri, F. Ganguly, J. John, Deep learning for
+    brain-computer interfaces: A review. J. Neural Eng. 16 (2019) 026001. https://doi.org/10.1088/1741-2535/aa662d
+
+
+    [18] J. Elgashiry, A. Rafahi, P.C. Mougli, End-to-end CNN networks for motor imagery
+    classification. EEG Brain Interfaces. 18 (2016) 641–650. https://doi.org/10.1016/j.eprebi.2016.03.002
+
+
+    [19] Y. Kim, S. Kim, J. Lee, J. Park, Deep Learning Network with Bi-LSTM. Med.
+    Biol. 2020 (124) 104192. https://doi.org/10.1016/j.mbio.2020.104192
+
+
+    [20] G. Peng, Y. Wang, J. Zhang, Deep Convolutional Network and LSTM for EEG-Based
+    Brain-Computer Interface. Front Bios. Eng. 108 (2021) 107733. https://doi.org/10.1016/j.bpe.2021.107733
+
+
+    [21] K. Woller, M. Müller, CNN-LSTM deep learning reconstruction model for motor
+    imagery classification using electroencephalography. Int. Neurosci. 333 (2021)
+    131–144. https://doi.org/10.1007/s00423-021-01935-z
+
+
+    [22] P. Petersen, G. Hamander, R. Spies, Feasibility of using a low-cost consumer-grade
+    EEG device for motor imagery classification. Sensors 16 (2016) 6120. https://doi.org/10.3390/s160606120-6120
+
+
+    [23] A. Gasy, A. Mishra, M. Gao, J. Zhang, Robotic control algorithms for assistance
+    and rehabilitation in stroke patients. J Rehhab. 16 (2019) 1–13. https://doi.org/10.1186/s12982-019-040-x
+
+
+    [24] S. Pattissio, R. Say, Sinusoidal-induced band gamma oscillations in the brain
+    using consumer-grade low-cost EEG imagery, Plos One 18 (2023) e280018. doi: 10.1371/journal.pone.0280018
+
+
+    [25] H. Li, M. Zheng, J. Zhang, C. Liu, Motor imagery classification based on
+    EEG convolutional neural network with attention mechanism. IEEE Access. 10 (2022)
+    103432.
+
+
+    [26] J. Zhang, Y. Wang, H. He, Deep Learning for Motor Imagery Classification
+    using Brain-Computer Interface. Med. Biol. 145 (2022) 105558. https://doi.org/10.1016/j.mbio.2022.105558
+
+
+    [27] D. Wang, S. Kim, J. Lee, A review of deep learning for motor imagery classification.
+    Front. Comput. Neurosci 5 (2021) 663000. https://doi.org/10.3389/fcompnu.2021.663000
+
+
+    [28] D. Wolker, K. M. Hammar, Optimization for 1D-CNN-Neat Neural Network Detection..
+    95 (2022) 3724. https://doi.org/10.1007/s10403-022-21934-y
+
+
+    [29] A. Delborne, S. Maekki, EEGLAR: an open system of tools for single-channel
+    EEG data analysis. EEG Brain Interfaces. 14 (2019) 99–1004. https://doi.org/10.1016/j.eprebi.2019.03.006
+
+
+    [30] S. J. Kim, H. S. Lee, Deep learning for image-based land cover classification
+    in remote sensing. J. Photogramm. Remote Sens. Eng. 168 (2022) 103633.
+
+
+    [31] K. R. Biffatti, S. Sivakian, J. Boustki, R. Seilenberg, J. Schluler: Search
+    for Space Odyssey Object Detection. IEEE Trans. Neural Net. Syst. 28 (2017) 2775–2788'
+  - '[PAGE 12]
+
+
+    [36] V.J. Lawrence, A. Solon, N. Waytowsch, S.M. Gordon, C.P. Hung, R.J. Lance,
+    EEGNet: a compact convolutional neural network for EEG-brain-computer interfaces,
+    J. Neural Eng. 15 (2018) 056013, https://doi.org/10.1088/1741-2552/aa995a
+
+
+    [37] R.T. Schmitter, T. Springberg, L.D.J. Fehner, M. Glasner, K. Eggermontbauer,
+    and M. Tomitsch, Deep learning with convolutional neural networks for EEG decoding
+    and visualization, Hum. Brain Map, 38 (2017) 5231–5240.
+
+
+    [38] M.J. Kim, S. Lee, J.K. Kim, A.A. Gardner, M. Shafahi, J. Choi, G. Ham, Classification
+    of EEG using Independent Component Analysis with CSP interfaces, Sensors 22 (2022)
+    7596, https://doi.org/10.3390/s22237596
+
+
+    [39] J.J. Escobar, F Rodríguez, B. Prieto, A. Deagi Kimski, M.D. Ortiz, A distributed
+    and energy-efficient SSN for EEG classification with dynamic money-saving policy
+
+
+    in heterogeneous clusters, Clustering Signal Processing and Control 112 (2026)
+    2487–2514, https://doi.org/10.1007/s10967-023-01193-7
+
+
+    [40] B. Kim, S. Lee, M. Elarian, and M. Lee, EEG-based emotion recognition using
+    CNN and LSTM classification, Front. Comput. Neurosci. 16 (2022), https://doi.org/10.3389/fncn.2022.101979
+
+
+    [41] A. Wang, J. Li, X. Zhang, and Y. Vas, Motor Injury-Related Changes of Neural
+    Oscillation in Unilateral Lower Limb Amputation, Front. Neurosci. 16 (2022), https://doi.org/10.3389/fnins.2022.855232
+
+
+    [42] W. Ahmed Shahi, et al., Event-related changes in Oscillatory Activity within
+    same Hemispheres in BCI: a review and meta-analysis, Frontiers in neuroinformatics
+    13 (2019) 78, https://doi.org/10.3389/fninf.2019.0021.5'
+  md: "\n## 6 Conclusions\n\nThis study presents a novel brain-computer interface\
+    \ (BCI) system for detecting lower motor imagery, with potential applications\
+    \ in rehabilitation. By using OpenBCI with a deep learning framework, the system\
+    \ ensures both hardware capability and EEG signal processing. The proposed approach\
+    \ catches key features in imagery classification by leveraging CNN for spatial\
+    \ extraction, Bi-LSTM for temporal recognition, and an attention mechanism for\
+    \ feature fusion.\n\nThe study demonstrates the feasibility of using consumer-grade\
+    \ EEG devices for motor imagery, offering a promising balance between cost and\
+    \ performance. High accuracy was further validated the needed system in clinical\
+    \ applications, particularly for stroke patients, and to optimize it for real-life\
+    \ rehabilitation. Future research should focus on integrating the proposed approach\
+    \ with robotic systems and refining its adaptability for personalized rehabilitation.\n\
+    \n## CRRedit contribution statement\n\nZhengdi Sun: original draft; Ale Mu: Conceptualization,\
+    \ Y. Jiang: Methodology; Xudong Sun: Investigation.\n\n## Funding\n\nThe author(s)\
+    \ received the following financial support for the research, analysis, and/or\
+    \ publication of this article: Work was supported by Doctoral Innovation Fund\
+    \ of An University of Technology (No. 102-25027202).\n\n## Declaration of competing\
+    \ interest\n\nThe authors declare that they have no competing interests or personal\
+    \ relationships that could have appeared to influence the work reported in this\
+    \ paper.\n\n## Data availability\n\nThe data used has been considered available.\n\
+    \n## References\n\n[1] H.B. Bohlein, D. Raj, J. Chen, K. Xu, L. Li, Z. Zhou, Motor\
+    \ imagery features and outcomes for neural rehabilitation. J. Phys. 575 (2007)\
+    \ 637–642. https://doi.org/10.1016/j.jphys.2006.09.012\n\n[2] F. Li, D. Zhang,\
+    \ J. Chen, K. Xu, L. Hou, Motor imagery features and outcomes in stroke rehabilitation:\
+    \ visualization analysis. Fron Neur. 17 (2023) 938. https://doi.org/10.3389/fronneur.2023.1154332\n\
+    \n[3] C.C. Dadda, V.A. Naz, V. Vachrakov, F. Role of the Contralateral Lesion\
+    \ in Ipsilateral Hemorrhagic Stroke. Hum Res. 11 (2007) 189–201. https://doi.org/10.1007/s0046-006-011-y\n\
+    \n[4] A. Mcabria, M. Y. Sun, U. Chandary, J. del, R. Miller, S. Cox, A. Gugelsberger,\
+    \ P. Valance, EEG-based neurofeedback for upper limb motor imagery rehabilitation\
+    \ in chronic stroke: Stroke 48 (2021) e662–e670. https://doi.org/10.1161/STROKE0000000000003933\n\
+    \n[5] M. Wang, H. Hu, G. Wang, L. Zhang, J. Gao, Automatic sleep stage mapping\
+    \ of EEG signal based on fusion learning and neural network. Front Comput Neurosci\
+    \ 15 (2021) 693500. https://doi.org/10.3389/fcompneu.2021.693500\n\n[6] B. Cuscasi,\
+    \ A. Centagnelli, G. Gu, The origin of cortical features and classification of\
+    \ motor imagery. Neuroimage. 122 (2012) 417–420. https://doi.org/10.1016/j.neuroimage.2012.03.018\n\
+    \n[7] A. R. Holmes, V.A. McNaughton, and N. Pearson, Prediction of functional\
+    \ connectivity surfaces and their applications for rehabilitation, and control\
+    \ of human brain patients. Phys. Rep. 918 (2021) 1–123. https://doi.org/10.1016/j.re.2021.03.011\n\
+    \n[8] A. M. Roy, Adaptive transfer learning-based multiple feature fusion decoding\
+    \ for EEG classification in brain-computer interface. Eng. Art. Med. Inf. Art\
+    \ 116 (2022) 105347. https://doi.org/10.1016/j.ejami.2022.105347\n\n[9] P. Ochsler,\
+    \ F.R. Lopes da Silva, Event-related EEG synchronization and desynchronization:\
+    \ basic principles. Clin Neurosci. 110 (1999) 1842–1857. https://doi.org/10.1097/01.300016\n\
+    \n[10] W. Wu, S. Rahid, Y. Feng, Classification of associated events with the\
+    \ EEG-related motor imagery. Signal Process Comput. 62 (2021) 10271. https://doi.org/10.1016/j.sigpro.2021.10271\n\
+    \n[11] M. Klag, K. Grimm, Identifying key features for ICA-based decomposition\
+    \ of EEG data in motor imagery classification and experiments. Eur. J. Neuro.\
+    \ 22 (2005) 1033–1040. https://doi.org/10.1111/j.1460-9744\n\n[12] N. Manban,\
+    \ F. Ebrahim, Hamnous, T. Tang, Automated Component Analysis for Motor Imagery\
+    \ Classification. IEEE Access 9 (2021) 7762–7763. https://doi.org/10.1109/ACCESS.2021.311285\n\
+    \n[13] S. El-Ghazawi, J. Jimenez, M. Perez-Vicente, E., Optimization of Real-Time\
+    \ EEG-Related Feature Removal for Human-Robot Interactions. Front. Comput. 56\
+    \ (2019) 100233. https://doi.org/10.1016/j.futurec.2019.100233\n\n[14] H. Cizmas,\
+    \ C. Rocaj, D. Zhang, Channel selection and feature extraction for EEG-based motor\
+    \ imagery using deep learning. Soft Computing. 44 (2021) 10734. https://doi.org/10.1016/j.soft.2020.10734\n\
+    \n[15] L. Sun, Y. Zhang, J. Liu, Deep learning for motor imagery design: Using\
+    \ Transformer and New Algorithms. Front. Robotics 58 (2021) 68501. https://doi.org/10.3389/s12871-021-0394y\n\
+    \n[16] Y. Roy, H. Horvath, F. Ganguly, Deep learning for brain-computer interfaces:\
+    \ A review. J. Neural Eng. 16 (2019) 02601. https://doi.org/10.1088/1741-2535/aa662d\n\
+    \n[17] J. Elgash, P. Rafahi, C. Mougli, End-to-end CNN networks for motor imagery\
+    \ classification. EEG Interfaces 18 (2016) 641–650. https://doi.org/10.1016/j.eprebi.2016.03002\n\
+    \n[18] Y. Kim, S. Kim, J. Park, Deep Learning Network with Bi-LSTM. Med. Biol.\
+    \ 124 (2020) 104192. https://doi.org/10.1016/j.mbio.2020.104192\n\n[19] G. Peng,\
+    \ Y. Wang, J. Zhang, Deep Convolutional Network and LSTM for EEG-Based Brain-Computer\
+    \ Interface. Front. Bios. Eng. 108 (2021) 107733. https://doi.org/10.1016/j.bpe.2021.107733\n\
+    \n[20] K. Woller, M. Müller, CNN-LSTM deep learning reconstruction model for motor\
+    \ imagery classification using electroencephalography. Int. Neurosci. 333 (2021)\
+    \ 131–144. https://doi.org/10.1007/s00423-021-01935-z\n\n[21] P. Petersen, G.\
+    \ Hamander, R. Spies, Feasibility of using a low-cost consumer-grade EEG device\
+    \ for motor imagery classification. Sensors 16 (2016) 6120. https://doi.org/10.3390/s16060120-6120\n\
+    \n[22] A. Gasy, A. Mishra, M. Gao, J. Zhang, Robotic control algorithms for assistance\
+    \ and rehabilitation in stroke patients. J Rehhab. 16 (2019) 1–13. https://doi.org/10.1186/s12982-019-040-x\n\
+    \n[23] S. Pattissio, R. Say, Sinusoidal-induced band gamma oscillations in the\
+    \ brain using consumer-grade low-cost EEG imagery, Plos One 18 (2023) e280018.\
+    \ doi:10.1371/journal.pone.0280018\n\n[24] H. Li, M. Zheng, J. Zhang, C. Liu,\
+    \ Motor imagery classification based on EEG convolutional neural network with\
+    \ attention mechanism. IEEE Access. 10 (2022) 103432.\n\n[25] J. Zhang, Y. Wang,\
+    \ H. He, Deep Learning for Motor Imagery Classification using Brain-Computer Interface.\
+    \ Med. Biol. 145 (2022) 105558. https://doi.org/10.1016/j.mbio.2022.105558\n\n\
+    [26] D. Wang, S. Kim, J. Lee, A review of deep learning for motor imagery classification.\
+    \ Front. Comput. Neurosci 5 (2021) 663000. https://doi.org/10.3389/fcompnu.2021.663000\n\
+    \n[27] D. Wolker, K. M. Hammar, Optimization for 1D-CNN-Neat Neural Network Detection..\
+    \ 95 (2022) 3724. https://doi.org/10.1007/s10403-022-2193\n\n[28] D. Wolker, K.\
+    \ M. Hammar, Optimization for 1D-CNN-Neat Neural Network Detection.. 95 (2022)\
+    \ 3724. https://doi.org/10.1007/s10403-022-2193\n\n[29] A. Delborne, S. Maekki,\
+    \ E., EEGLAR: an open system for single-channel EEG data. EEG Interfaces 14 (2019)\
+    \ 1033–1040. https://doi.org/10.1111/j.1460-9744\n\n[30] B. Manban, F. Ebrahim,\
+    \ Hamnous, etc., Deep learning for image-based land cover in remote sensing. J.\
+    \ Photogramm. Remote Sens. Eng. 168 (2022).\n\n[31] K. R. Biff, S. Sivak, J. Schluler,\
+    \ Search for Space Odyssey IEEE Trans. Neural. Syst. 28 (2017) 2775. \n\n[36]\
+    \ V.J. Lawrence, T. Springberg, L.D.J. Fehner, M. Glasner, K. Eggermont, EEGNet:\
+    \ a compact convolutional neural network for brain-computer interfaces. J. Neural\
+    \ Eng. 15 (2018) 05601, https://doi.org/10.1088/1741-2552/aa995\n\n[37] R.T. Schmitter,\
+    \ T. Springberg, L.D.J. Fehner, M. Glasner, M. Tomitsch, Deep learning with convolutional\
+    \ neural networks for EEG decoding and visualization. Hum. Brain Map, 38 (2017)\
+    \ 5231–5240.\n\n[38] M.J. Kim, S. Lee, J.K. Kim, A.A. Gardner, M. Shafahi, J.\
+    \ Choi, Classification of EEG using Independent Component Analysis with CSP interfaces.\
+    \ Sensors 22 (2022) 7596, https://doi.org/10.3390/s22237596\n\n[39] J.J. Escobar,\
+    \ F Rodríguez, B. Prieto, A. Deagi Kimski, M.D. Ortiz, A distributed and energy-efficient\
+    \ SSN for EEG classification with dynamic money-saving policy in heterogeneous\
+    \ clusters, Clustering Signal Processing and Control 112 (2026) 2487–2514, https://doi.org/10.1007/s10967-023-01193-7\n\
+    \n[40] B. Kim, S. Lee, M. Elarian, and M. Lee, EEG-based emotion recognition using\
+    \ CNN and LSTM classification, Front. Comput. Neurosci. 16 (2022), 101979, https://doi.org/10.3389/fncn.2022.101979\n\
+    \n[41] A. Wang, J. Li, X. Zhang, and Y. Vas, Motor Injury-Related Changes of Neural\
+    \ Oscillation in Unilateral Lower Limb Amputation, Front. Neurosci. 16 (2022),\
+    \ 855232, https://doi.org/10.3389/fnins.2022.855232\n\n[42] W. Ahmed Shahi, et\
+    \ al., Event-related changes in Oscillatory Activity within same Hemispheres in\
+    \ BCI: a review and meta-analysis, Frontiers in neuroinformatics 13 (2019) 78,\
+    \ https://doi.org/10.3389/fninf.2019.0021.5\n"
+  mdcn: "\n\n## 6 结论\n\n本研究提出了一种用于检测下肢运动想象的新型脑机接口（BCI）系统，在康复领域具有应用潜力。通过使用 OpenBCI\
+    \ 和深度学习框架，该系统确保了硬件能力和 EEG 信号处理能力。所提方法通过利用 CNN 进行空间提取、Bi-LSTM 进行时间识别以及利用注意力机制进行特征融合，捕捉了运动想象分类中的关键特征。\n\
+    \n研究证明了使用消费级 EEG 设备进行运动想象的可行性，在成本和性能之间取得了良好的平衡。高准确性进一步验证了该系统在临床应用中（特别是中风患者）的需求，并对其针对现实生活康复进行了优化。未来的研究应侧重于将所提方法与机器人集成，并完善其对个性化康复的适应性。\n\
+    \n## 贡献声明\n\nZhengdi Sun: 初稿撰写；Ale Mu: 概念化；Y. Jiang: 方法论；Xudong Sun: 调查。\n\n##\
+    \ 资助\n\n作者在本论文的研究、分析和/或出版方面接受了以下资金支持：工作由某理工大学博士创新基金支持（编号：102-25027202）。\n\n##\
+    \ 利益冲突\n\n作者声明，他们没有可能影响本文所报告工作的竞争利益或个人关系。\n\n## 数据可用性\n\n所使用的数据已被认为可用。\n\n## 参考文献\n\
+    \n[1] H.B. Bohlein, D. Raj, J. Chen, K. Xu, L. Li, Z. Zhou, Motor imagery features\
+    \ and outcomes for neural rehabilitation. J. Phys. 575 (2007) 637–642. https://doi.org/10.1016/j.jphys.2006.09.012\n\
+    \n[2] F. Li, D. Zhang, J. Chen, K. Xu, L. Hou, Motor imagery features and outcomes\
+    \ in stroke rehabilitation: visualization analysis. Fron Neur. 17 (2023) 938.\
+    \ https://doi.org/10.3389/fronneur.2023.1154332\n\n[3] C.C. Dadda, V.A. Naz, V.\
+    \ Vachrakov, F. Role of the Contralateral Lesion in Ipsilateral Hemorrhagic Stroke.\
+    \ Hum Res. 11 (2007) 189–201. https://doi.org/10.1007/s0046-006-011-y\n\n[4] A.\
+    \ Mcabria, M. Y. Sun, U. Chandary, J. del, R. Miller, S. Cox, A. Gugelsberger,\
+    \ P. Valance, EEG-based neurofeedback for upper limb motor imagery rehabilitation\
+    \ in chronic stroke: Stroke 48 (2021) e662–e670. https://doi.org/10.1161/STROKE0000000000003933\n\
+    \n[5] M. Wang, H. Hu, G. Wang, L. Zhang, J. Gao, Automatic sleep stage mapping\
+    \ of EEG signal based on fusion learning and neural network. Front Comput Neurosci\
+    \ 15 (2021) 693500. https://doi.org/10.3389/fcompneu.2021.693500\n\n[6] B. Cuscasi,\
+    \ A. Centagnelli, G. Gu, The origin of cortical features and classification of\
+    \ motor imagery. Neuroimage. 122 (2012) 417–420. https://doi.org/10.1016/j.neuroimage.2012.03.018\n\
+    \n[7] A. R. Holmes, V.A. McNaughton, and N. Pearson, Prediction of functional\
+    \ connectivity surfaces and their applications for rehabilitation, and control\
+    \ of human brain patients. Phys. Rep. 918 (2021) 1–123. https://doi.org/10.1016/j.re.2021.03.011\n\
+    \n[8] A. M. Roy, Adaptive transfer learning-based multiple feature fusion decoding\
+    \ for EEG classification in brain-computer interface. Eng. Art. Med. Inf. Art\
+    \ 116 (2022) 105347. https://doi.org/10.1016/j.ejami.2022.105347\n\n[9] P. Ochsler,\
+    \ F.R. Lopes da Silva, Event-related EEG synchronization and desynchronization:\
+    \ basic principles. Clin Neurosci. 110 (1999) 1842–1857. https://doi.org/10.1097/01.300016\n\
+    \n[10] W. Wu, S. Rahid, Y. Feng, Classification of associated events with the\
+    \ EEG-related motor imagery. Signal Process Comput. 62 (2021) 10271. https://doi.org/10.1016/j.sigpro.2021.10271\n\
+    \n[11] M. Klag, K. Grimm, Identifying key features for ICA-based decomposition\
+    \ of EEG data in motor imagery classification and experiments. Eur. J. Neuro.\
+    \ 22 (2005) 1033–1040. https://doi.org/10.1111/j.1460-9744\n\n[12] N. Manban,\
+    \ F. Ebrahim, Hamnous, T. Tang, Automated Component Analysis for Motor Imagery\
+    \ Classification. IEEE Access 9 (2021) 7762–7763. https://doi.org/10.1109/ACCESS.2021.311285\n\
+    \n[13] S. El-Ghazawi, J. Jimenez, M. Perez-Vicente, E., Optimization of Real-Time\
+    \ EEG-Related Feature Removal for Human-Robot Interactions. Front. Comput. 56\
+    \ (2019) 100233. https://doi.org/10.1016/j.futurec.2019.100233\n\n[14] H. Cizmas,\
+    \ C. Rocaj, D. Zhang, Channel selection and feature extraction for EEG-based motor\
+    \ imagery using deep learning. Soft Computing. 44 (2021) 10734. https://doi.org/10.1016/j.soft.2020.10734\n\
+    \n[15] L. Sun, Y. Zhang, J. Liu, Deep learning for motor imagery design: Using\
+    \ Transformer and New Algorithms. Front. Robotics 58 (2021) 68501. https://doi.org/10.3389/s12871-021-0394\n\
+    \n[16] Y. Roy, H. Horvath, F. Ganguly, Deep learning for brain-computer interfaces:\
+    \ A review. J. Neural Eng. 16 (2019) 02601. https://doi.org/10.1088/1741-2535/aa66d\n\
+    \n[17] J. Elgash, P. Rafahi, C. Mougli, End-to-end CNN networks for motor imagery.\
+    \ EEG Interfaces 18 (2016) 641–650. https://doi.org/10.1016/j.eprebi.2016.03002\n\
+    \n[18] Y. Kim, S. Kim, J. Park, Deep Learning Network with Bi-LSTM. Med. Biol.\
+    \ 124 (2020) 104192. https://doi.org/10.1016/j.mbio.2020.104192\n\n[19] G. Peng,\
+    \ Y. Wang, J. Zhang, Deep Convolutional Network and LSTM for EEG-Based Brain-Computer\
+    \ Interface. Front. Bios. Eng. 108 (2021) 107733. https://doi.org/10.1016/j.bpe.2021.10733\n\
+    \n[20] K. Woller, M. Müller, CNN-LSTM deep learning reconstruction for motor imagery\
+    \ classification using electroencephalography. Int. Neurosci. 333 (2021) 131–144.\
+    \ https://doi.org/10.1007/s00423-021-1935-z\n\n[21] P. Petersen, G. Hamander,\
+    \ R. Spies, Feasibility of using a low-cost consumer-grade EEG device for motor\
+    \ imagery classification. Sensors 16 (2016) 6120. https://doi.org/10.3390/s16060120\n\
+    \n[22] A. Gasy, A. Mishra, M. Gao, J. Zhang, Robotic control algorithms for assistance\
+    \ and rehabilitation in stroke patients. J. Neuro-Rehab. 16 (2019) 1–13. https://doi.org/10.1186/s12982-019-040-x\n\
+    \n[23] S. Pattissio, R. Say, Sinusoidal-induced band gamma oscillations in the\
+    \ brain using consumer-grade low-cost imagery, Plos One 18 (2023) e280018. doi:10.1371/journal.pone.028018\n\
+    \n[24] H. Li, M. Zheng, J. Zhang, C. Liu, Motor imagery classification based on\
+    \ EEG convolutional neural network with attention mechanism. IEEE Access. 10 (2022)\
+    \ 103432.\n\n[25] J. Zhang, Y. Wang, H. He, Deep Learning for Motor Imagery using\
+    \ Brain-Computer Interface. Med. Biol. 145 (2022) 105558. https://doi.org/10.1016/j.mbio.2022.105558\n\
+    \n[26] D. Wang, S. Kim, J. Lee, A review of deep learning for motor imagery classification.\
+    \ Front. Comput. Neurosci 5 (2021) 663000. https://doi.org/10.3389/fcompnu.2021.663000\n\
+    \n[27] D. Wolker, K. M. Hammar, Optimization for 1D-CNN-Neat Neural Network..\
+    \ 95 (2022) 3724. https://doi.org/10.1007/s10403-022-2193\n\n[28] D. Wolker, K.\
+    \ M. Hammar, Optimization for 1D-CNN-Neat Neural Network.. 95 (2022) 3724. https://doi.org/10.1007/s10403-022-2193\n\
+    \n[29] A. Delborne, S. Maekki, E., EEGLAR: an open system for single-channel EEG\
+    \ data. EEG Interfaces 14 (2019) 1033–1040. https://doi.org/10.1111/j.1460-9744\n\
+    \n[30] B. Manban, F. Ebrahim, Hamnous, etc., Deep learning for image-based land\
+    \ cover in remote sensing. J. Photogramm. Remote Sens. Eng. 168 (2022).\n\n[31]\
+    \ K. R. Biff, S. Sivak, J. Schluler, Search for Space Odyssey IEEE Trans. Neural.\
+    \ Syst. 28 (2017) 2775. \n\n[36] V.J. Lawrence, T. Springberg, L.D.J. Fehner,\
+    \ M. Glasner, K. Eggermont, EEGNet: a compact convolutional neural network for\
+    \ brain-computer interfaces. J. Neural Eng. 15 (2018) 05601, https://doi.org/10.1088/1741-2552/aa995\n\
+    \n[37] R.T. Schmitter, T. Springberg, L.D.J. Fehner, M. Glasner, M. Tomitsch,\
+    \ Deep learning with convolutional neural networks for EEG decoding and visualization.\
+    \ Hum. Brain Map, 38 (2017) 5231–5240.\n\n[38] M.J. Kim, S. Lee, J.K. Kim, A.A.\
+    \ Gardner, M. Shafahi, J. Choi, Classification of EEG using Independent Component\
+    \ Analysis with CSP interfaces. Sensors 22 (2022) 7596, https://doi.org/10.3390/s22237596\n\
+    \n[39] J.J. Escobar, F Rodríguez, B. Prieto, A. Deagi Kimski, M.D. Ortiz, A distributed\
+    \ and energy-efficient SSN for EEG classification with dynamic money-saving policy\
+    \ in heterogeneous clusters, Clustering Signal Processing and Control 112 (2026)\
+    \ 2487–2514, https://doi.org/10.1007/s10967-023-01193-7\n\n[40] B. Kim, S. Lee,\
+    \ M. Elarian, and M. Lee, EEG-based emotion recognition using CNN and LSTM classification,\
+    \ Front. Comput. Neurosci. 16 (2022) 101979, https://doi.org/10.3389/fncn.2022.101979\n\
+    \n[41] A. Wang, J. Li, X. Zhang, and Y. Vas, Motor Injury-Related Changes of Neural\
+    \ Oscillation in Unilateral Lower Limb Amputation, Front. Neurosci. 16 (2022)\
+    \ 855232, https://doi.org/10.3389/fnins.2022.855232\n\n[42] W. Ahmed Shahi, et\
+    \ al., Event-related changes in Oscillatory Activity within same Hemispheres in\
+    \ BCI: a review and meta-analysis, Frontiers in neuroinformatics 13 (2019) 78,\
+    \ https://doi.org/10.3389/fninf.2019.0021.5\n\n"
+  merge: 0
