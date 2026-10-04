@@ -1,0 +1,61 @@
+
+
+There are four `IPv4` addresses in [Figure 6-8](#ch06.xhtml#ch06fig08); assume `A` needs to send packets to `C`, `D`, and `E`. If `A` knows the prefix length of the local segment is `24` bits either through manual configuration or through `DHCPv4`, then it can simply look at the `24` most significant bits of each address, compare it to the `24` most significant bits of its own address, and determine whether the destination is on segment or not. Twenty-four bits of an `IPv4` address produces a nice break between the third and fourth section of the address (each section of an `IPv4` address represents `8` bits of address space, for a total of `32` bits of address space).
+
+Any two addresses with the same left three sections as `A` has, called the network address, are on the same segment; any address that does not is not on segment. In this case, the network address for `A` and `C` match, so `A` will believe `C` is on the same segment, and hence will send packets to `C` directly, rather than sending them to a router. For any destination `A` believes is off segment, it will send packets to the final destination’s `IPv4` address, but to the default gateway’s `MAC` address. This means the router acting as the default gateway will accept the packet and switch it based on the destination `IPv4` address (packet switching is considered more fully in [Chapter 7](#ch07.xhtml#ch07), “[Packet Switching](#ch07.xhtml#ch07)”). How is the default gateway chosen? It is either manually configured or included in a `DHCPv4` option.
+
+What about `D`? Because the network portions of the addresses don’t match, `A` will believe `D` is off segment. In this case, `A` will send any traffic for `D` to its default gateway, which is `B`. When `B` receives these packets, it will realize `A` and `D` are reachable through the same interface (based on its routing table—building routing tables is considered in [Part II](#part2.xhtml#part2), “[The Control Plane](#part2.xhtml#part2)”), so it will send an `ICMP` redirect to `A` telling it to send traffic toward `D` directly, rather than through `B`.
+
+`IPv6` presents a more complex set of problems to solve when considering which default gateway to use, because `IPv6` assumes a single device may have many `IPv6` addresses assigned to a particular interface. [Figure 6-9](#ch06.xhtml#ch06fig09) illustrates.
+
+![Image](graphics/06fig09.jpg)
+
+**Figure 6-9** *IPv6 and On Link/Off Link Determination*
+
+In [Figure 6-9](#ch06.xhtml#ch06fig09), assume the network administrator has configured the following policies:
+
+• No host may connect to `A` unless it has an address in the `2001:db8:3e8:110::/64` range of addresses.
+• No host may connect to `D` unless it has an address in the `2001:db8:3e8:112::/64` range of addresses.
+
+**Note**
+
+You would never build policies like this in the real world; this is a contrived situation to illustrate a problem set in a minimally sized network. A much more real problem of this same type would involve unicast Reverse Path Forwarding (`uRPF`).
+
+To make these policies work, the administrator has assigned `110::3` and `112::12` to host `C` and `111::120` to host `F`. This might look odd, but it is perfectly legal for a single segment to have multiple `IPv6` subnets assigned in `IPv6`; it is also perfectly legal to have a single device with multiple addresses. In fact, in `IPv6`, there are many situations where a single device may have a range of addresses assigned.
+
+From the perspective of the prefix lengths, however, no two addresses assigned to `C` or `F` are on the same subnet. Because of this, `IPv6` does not rely on the prefix length to determine what is on segment and what is not. Instead, `IPv6` implementations keep a table of all connected hosts, using neighbor solicitations to discover what is on segment and what is not. When a host wants to send traffic off the local segment, it sends the traffic to one of the routers it has learned about through router advertisements. If a router receives a packet that it knows another router on the segment has a better route to (because the routers have routing tables that tell them which path to take to any particular destination), the router will send an `ICMPv6` redirect message telling the host to use some other first hop router to reach the destination.
+
+### Final Thoughts
+
+This chapter has provided an overview of a very difficult problem, and a number of complex solutions—the Domain Name System, the Dynamic Host Configuration Protocol, the Address Resolution Protocol, and Neighbor Discovery—are far more complex than the high-level overviews provided here. The deployment and operation of `DNS` servers and the maintenance of the `DNS` system are an entire career field within network engineering, for instance.
+
+Even so, all of these complex solutions represent just one of four ways to solve the difficult problems of mapping the identifiers used at one layer into the identifiers used at another layer, or the discovery of identifiers in order to facilitate communication. The contrast between the four basic solutions and the diverse protocols implementing those solutions is a solid example of the premise of this book: if you understand the problem space, and you understand the available solutions, then it becomes possible to ask the right questions of a solution to understand how it works.
+
+Once the identifiers have been discovered, and the data to be transported has been marshaled, it is time to switch packets through the network; this is the topic of the next chapter.
+
+### Further Reading
+
+Asati, Rajiv, Hemant Singh, Wes Beebee, Carlos Pignataro, Eli Dart, and Wesley George. *Enhanced Duplicate Address Detection*. Request for Comments `7527`. RFC Editor, 2015. doi:10.17487/RFC7527.
+
+Baker, Fred, and Brian E. Carpenter. *First-Hop Router Selection by Hosts in a Multi-Prefix Network*. Request for Comments `8028`. RFC Editor, 2016. doi:10.17487/RFC8028.
+
+Beebee, Wes, Hemant Singh, and Erik Nordmark. *IPv6 Subnet Model: The Relationship between Links and Subnet Prefixes*. Request for Comments `5942`. RFC Editor, 2010. doi:10.17487/RFC5942.
+
+Droms, Ralph. *DNS Configuration Options for Dynamic Host Configuration Protocol for IPv6 (DHCPv6)*. Request for Comments `3646`. RFC Editor, 2003. doi:10.17487/RFC3646.
+
+———. *Stateless Dynamic Host Configuration Protocol (DHCP) Service for IPv6*. Request for Comments `3736`. RFC Editor, 2004. doi:10.17487/RFC3736.
+
+Gont, Fernando. *Security Implications of IPv6 Fragmentation with IPv6 Neighbor Discovery*. Request for Comments `6980`. RFC Editor, 2013. doi:10.17487/RFC6980.
+
+Johnson, Jarrod, and Dr. Thomas Narten. *Definition of the UUID-Based DHCPv6 Unique Identifier (DUID-UUID)*. Request for Comments `6355`. RFC Editor, 2011. doi:10.17487/RFC6355.
+
+Kempf, James, Jari Arkko, Brian Zill, and Pekka Nikander. *SEcure Neighbor Discovery (SEND)*. Request for Comments `3971`. RFC Editor, 2005. doi:10.17487/RFC3971.
+
+Liu, Bing, Sheng Jiang, Xiangyang Gong, Wendong Wang, and Enno Rey. “DHCPv6/SLAAC Interaction Problems on Address and DNS Configuration.” Internet-Draft. Internet Engineering Task Force, August 2016. [https://datatracker.ietf.org/doc/html/draft-ietf-v6ops-dhcpv6-slaac-problem-07](https://datatracker.ietf.org/doc/html/draft-ietf-v6ops-dhcpv6-slaac-problem-07).
+
+Mrugalski, Tomek, Marcin Siodelski, Bernie Volz, Andrew Yourtchenko, Michael Richardson, Sheng Jiang, Ted Lemon, and Timothy Winters. “Dynamic Host Configuration Protocol for IPv6 (DHCPv6) bis.” Internet-Draft. Internet Engineering Task Force, June 2017. [https://datatracker.ietf.org/doc/html/draft-ietf-dhc-rfc3315bis-09](https://datatracker.ietf.org/doc/html/draft-ietf-dhc-rfc3315bis-09).
+
+Narten, Dr. Thomas, Tatsuya Jinmei, and Dr. Susan Thomson. *IPv6 Stateless Address Autoconfiguration*. Request for Comments `4862`. RFC Editor, 2007. doi:10.17487/RFC4862.
+
+Nordmark, Erik, and Igor Gashinsky. *Neighbor Unreachability Detection Is Too Impatient*. Request for Comments `7048`. RFC Editor, 2014. doi:10.17487/RFC7048.
+

@@ -1,0 +1,52 @@
+
+The network device in the middle of the diagram is of particular interest. A network device—such as a router, switch, or middle box—connects two physical media together to build an actual network. Perhaps the simplest question to begin with is this: why are these devices required in the first place? Routers and switches are obviously complex devices, with their own internal architecture (which will be covered in this chapter at a high level); why add this complexity to a network? There are two fundamental reasons.
+
+The original reason for building these devices was to connect different kinds of physical media together. For instance, within a building it might be practical to run ARCnet or thicknet Ethernet (to use examples from the time when network devices were first invented). The distance these media can traverse, however, is very short— on the order of hundreds of meters. Somehow these networks must be extended between buildings, between campuses, between cities, and eventually between continents, using some sort of multiplexed (or inverse multiplexed) telephone circuit like a T1 or DS3. These two different media types use different kinds of signaling; there must be some sort of device that translates one kind of signaling into another.
+
+The second reason is this: scale quickly became an issue. The nature of the physical world is such that you have two choices when it comes to putting data on a wire:
+• The wire can connect precisely two computers; in this case, every pair of computers needs to be physically connected to every other computer it needs to communicate with.
+• The wire can be shared among many computers (the wire can be a shared media).
+
+To solve the problem the first way, you need a lot of wire. Solving the problem the second way seems like the obvious solution, but it presents another set of problems—specifically, how is the bandwidth available on the wire shared among all the devices? At some point, if there are enough devices on a single shared media, any sort of scheme used to enable resource sharing will, itself, consume as much or more bandwidth as any individual device connected to the wire. At some point, even a 100G link, shared among enough hosts, will leave each individual host with very little available resources.
+
+The solution to this situation is the network device—the router or switch—that separates two shared media, only passing traffic between the two as needed. With some logical planning, devices that need to talk to each other more often can be placed closer together (in terms of network topology), conserving bandwidth in other places. Routing and switching has moved far beyond these humble beginnings, of course, but these are the root problems engineers solved by injecting network devices into networks.
+
+There are other difficult problems to solve in this space beyond the bare carrying of information from a source to a destination; many times it is useful to be able to virtualize the network, which generally means creating a tunnel between two devices in the network.
+
+The series of chapters in [Part I](#part1.xhtml#part1) consider the sometimes incredibly difficult problems in simply carrying data from one end of a network to the other, along with a range of possible solutions for each of these problems. Along the way, various chapters also explore the concept of layering in data transport protocols, and its importance to breaking this complex domain into more solvable chunks. Layering, however, brings its own set of problems into the transport world, so [Part I](#part1.xhtml#part1) also needs to consider how to resolve the problems caused by the introduction of layering—specifically, interlayer discovery.
+
+The chapters in this part include:
+• **[Chapter 1](#ch01.xhtml#ch01): [Fundamental Concepts](#ch01.xhtml#ch01)**, which discusses business drivers, circuit switching, packet switching, and network complexity
+• **[Chapter 2](#ch02.xhtml#ch02): [Data Transport Problems and Solutions](#ch02.xhtml#ch02)**, which discusses marshaling data, dictionaries, grammars, metadata, error detection, error correction, addressing, multiplexing, multicast, anycast, and flow control
+• **[Chapter 3](#ch03.xhtml#ch03): [Modeling Network Transport](#ch03.xhtml#ch03)**, which discusses the value of modeling, the Department of Defense (DoD) model, the Open Systems Interconnect (OSI) model, the Recursive Internet Architecture (RINA) model, connection-oriented and connectionless transport mechanisms
+• **[Chapter 4](#ch04.xhtml#ch04): [Lower Layer Transports](#ch04.xhtml#ch04)**, which discusses Ethernet and 802.11 Wireless
+• **[Chapter 5](#ch05.xhtml#ch05): [Higher Layer Data Transports](#ch05.xhtml#ch05)**, which discusses the Internet Protocol (IP), the Transmission Control Protocol (TCP), QUIC, and the Internet Control Message Protocol (ICMP)
+• **[Chapter 6](#ch06.xhtml#ch06): [Interlayer Discovery](#ch06.xhtml#ch06)**, which discusses mapping identifiers and services between layers, the Domain Name System (DNS), the Address Resolution Protocol (ARP), Neighbor Discovery (ND), Stateless Address Autoconfiguration (SLAAC), and the concept of the default gateway
+• **[Chapter 7](#ch07.xhtml#ch07): [Packet Switching](#ch07.xhtml#ch07)**, which discusses the process of copying a packet off of the physical media, processing the packet, moving a packet through the network device, and finally copying a packet onto the physical medium
+• **[Chapter 8](#ch08.xhtml#ch08): [Quality of Service](#ch08.xhtml#ch08)**, which discusses why Quality of Service (QoS) is needed, traffic classification, Class of Service, Type of Service, QoS trust boundaries, jitter, and fairness in queueing
+• **[Chapter 9](#ch09.xhtml#ch09): [Network Virtualization](#ch09.xhtml#ch09)**, which discusses use cases for network virtualization, tunneling, switching tunneled packets, the problems network virtualization must solve, Segment Routing (SR), Software-Defined Wide Area Networks (SD-WAN), virtualization tradeoffs, and shared fate
+• **[Chapter 10](#ch10.xhtml#ch10): [Transport Security](#ch10.xhtml#ch10)**, which discusses data exhaust, asymmetric and symmetric encryption, key exchange, hiding user information, man-in-the-middle (MitM) attacks, and Transport Level Security (TLS)
+
+# Chapter 1
+## Fundamental Concepts
+
+### Learning Objectives
+
+After reading this chapter, you should be able to:
+
+![Image](graphics/bull.jpg)Understand the relationship between business drivers and network engineering
+
+![Image](graphics/bull.jpg)Understand the difference between circuit and packet switching
+
+![Image](graphics/bull.jpg)Understand the advantages and disadvantages of circuit and packet switching
+
+![Image](graphics/bull.jpg)Understand the basic concept of network complexity and complexity tradeoffs
+
+Networks were always designed to do one thing: carry information from one attached system to another. The discussion (or perhaps argument) over the best way to do this seemingly simple task has been long-lived, sometimes accompanied by more heat than light, and often intertwined with people and opinions of a rather absolute kind. This history can be roughly broken into multiple, and often overlapping, stages, each of which asked a different question:
+• Should networks be circuit switched or packet switched?
+• Should packet switched networks use fixed- or variable-sized frames?
+• What is the best way to calculate a set of shortest paths through a network?
+• How should packet switched networks interact with Quality of Service (QoS)?
+• Should the control plane be centralized or decentralized?
+
+Some of these questions have been long since answered, most often by blending the more extreme elements of each position into a sometimes messy, but generally always useful, solution. Some of these questions are, on the other hand, still active, particularly the last one. Perhaps, in twenty years’ time, readers will be able to look on this last question as being answered, as well.
