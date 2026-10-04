@@ -1,0 +1,3536 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # nature machine intelligence
+
+
+    Article
+
+
+    https://doi.org/10.1038/s42256-025-01070-2
+
+
+    # # Deep-learning-aided dismantling of interdependent networks
+
+
+    Received: 26 September 2024
+
+
+    Accepted: 4 June 2025
+
+
+    Weiwei Gu†¹, Chen Yang†¹, Lei Li², Jinqiang Hou¹¹, and Filippo Radicchi‡
+
+
+    Published online: 14 July 2025
+
+
+    +   - Check for updates
+
+
+    Identifying the minimal set of nodes whose removal breaks a complex network apart,
+    also referred to as network dismantling, is a highly non-trivial task with applications
+    in multiple domains. Whereas network dismantling has been extensively studied
+    over the past decade, research has primarily focused on the optimization problem
+    for single-layer networks, neglecting that if not all, real world networks display
+    multiple layers of interdependent interactions. In such networks, the optimization
+    problem is fundamentally different as the effect of removing nodes propagates
+    and across layers in a way that can not be predicted using a single-layer perspective.
+    We propose a dismantling algorithm MultiDismantler, which leverages multiple representation
+    and deep reinforcement learning to optimally dismantle interdependent networks.
+    MultiDismantler is trained on synthetic graphs; and when applied to either real
+    or synthetic networks, it displays exceptional dismantling performance, outperforming
+    all existing benchmark algorithms. We show that MultiDismantler is effective in
+    guiding strategies for the control of diseases in social networks characterized
+    by multiple layers of social interactions. Also, we show MultiDismantler is useful
+    in the design of protocols aimed at preventing the onset of cascading failures
+    in critical infrastructures.
+
+
+    Networks are ubiquitous in both natural (for example, climate networks and protein-protein
+    interaction networks) and man-made (for example, social networks and infrastructure
+    networks) complexes¹. Connectivity is essential for the overall network function,
+    as being part of any connected component is a necessary condition for interaction.
+    Due to its heterogeneous structure, finding the minimal set of nodes whose removal
+    would destroy any connected components is known as the network dismantling problem².
+    Network dismantling has numerous applications: inhibiting specific species or
+    proteins for drug design is network dismantling; enhancing the tolerance and networks
+    such as traffic or electric systems, to maximize the efficiency of infrastructural
+    networks which can be thought
+
+
+    network dismantling³ finding the smallest set of nodes that should be vaccinated
+    to prevent a disease outbreak is well approximated by the solution of a network
+    dismantling problem.
+
+
+    Dismantling is the most fundamental optimization problem for networks, but it
+    is notoriously, NP-hard (non-polynomial time)⁴⁵. Such exact solutions, for large
+    networks with only medium and large layers, can only be may obtained. Many optimization
+    methods provide approximate solutions that are based on node-centric heuristics,
+    such as high degree adaptive (HDA)⁶ collective influence (CI) and Minsur. These
+    methods do not optimize a global problem, perform no guarantees and generalization
+    capability. Machine learning-based strategies such as the
+
+
+    > †College of Information Science and Technology, Beijing University of Technology,
+    Beijing, People''s Republic of China. School of Engineering, University of Science
+    and Technology of China, Hefei, People''s Republic of China. ‡Center for Networks
+    and Systems Research, Lloyd School of Informatics, Computing, and Engineering,
+    Indiana University, Bloomington, USA. E-mail: chenyang@buct.edu.cn; fiiradiuchi@iiu.edu
+
+
+    Nature Machine Intelligence | Volume 7 | 2023 | 1266–1277
+
+
+    1266'
+  - "[PAGE 1]\n\n# Article\n\nhttps://doi.org/10.1038/s42256-025-0170-2\n\n![](img/d057769f0d49aabde85e4a59e009e9ea_1_0.png)\n\
+    \n**Fig 1 | The training process of MultiDisismant.** The process includes generating\
+    \ training networks, dismantling them and learning from previous experience. The\
+    \ training data includes over 20,000 synthetic networks with sizes from 30 to\
+    \ 50 nodes, generated according to the geometric models. To represent a network,\
+    \ we add a first virtual node (denoted) in each layer; all nodes are neighbors\
+    \ of the virtual node, but vice versa. With the MGNN model, we learn multi-layer\
+    \ node attention mechanism ($\theta_l$), MultiDisismant decodes multiple networks,\
+    \ including the embedding of virtual nodes as well as the final embedding of each\
+    \ node. Subsequently, the agent decodes the embeddings using MLPs ($\\phi_l$)\
+    \ and layer attention attention mechanism ($\\psi$) to compute the expected return\
+    \ ($Q$) value of each node, which reflects the\n\nthat can be achieved by removing\
+    \ a node under the current network nodes. The agent uses an e-greedy strategy\
+    \ to remove nodes (red nodes); with probability $1-e$, it selects the node with\
+    \ the highest Q value; otherwise, it removes a random node. Considering dependencies\
+    \ between layers in the network, a cascading failure occurs after an agent removes\
+    \ a node, leading to removal of more edges (blue lines). After node operation,\
+    \ the agent decodes and reconstructs the residual network. Once the network is\
+    \ completely dismantled, the agent collects information in the form of $(s_t,\
+    \ a, r, s_{t})$ and stores them in an experience buffer. The agent learns by randomly\
+    \ sampling batches from the experience buffer to update policies.\n\ndismantling\
+    \ with machine learning (GML) and the neural ranking (NBR) learning methods face\
+    \ challenges on synthetic graphs like Barabási-Albert (BA) and Erdős-Rényi (ER)\
+    \ networks. reinforcement learning where the agent learns node removal strategies\
+    \ through trial-and-interactions with the network environment. These policies\
+    \ appear successful when used to optimize large-scale dismantling problems. However,\
+    \ real-world networks are often nested or formed by multiple independent layers;\
+    \ a network composed of independent layers is more volatile than each of its layers\
+    \ considered in isolation. Location of damage in one layer may lead to the failure\
+    \ of other layers, potentially collapsing the entire system. This dismantling\
+    \ mechanism makes system operation difficult to anticipate and control. Examples\
+    \ include the 30-minute blackout in Italy and the sudden disruptions of the global\
+    \ supply chain during the pandemic. Two methods, effective degree measures (EDM)\
+    \ and CoreLL, are specifically designed for dismantling complex networks; however,\
+    \ they are both based on node-centric heuristics and are thus affected by\n\n\
+    the limitations of this class of methods. As we will show, they often suffer from\
+    \ suboptimal dismantling performances compared with our proposed method. Recent\
+    \ advancements in machine learning using graph optimization techniques$^{11}$\
+    \ and on the foundation of framework$^{14}$, we introduce an agent-learned dismantling\
+    \ framework MultiDisismant, which can approximate solutions in large-scale networks\
+    \ with high effectiveness. By leveraging a generative model to learn the characteristics\
+    \ of the embeddings of the MultiDisismant, which cannot characterize interactions\
+    \ and correlations across different networks. Geometric correlations between structural\
+    \ and dynamic processes occurs on the network$^{28-30}$. After training process,\
+    \ the MultiDisismant uses a convolutional neural network with a multi-level layer-independent\
+    \ architecture to predict node importance. This is followed by Deep Q-Network\
+    \ ($39}$), which takes nodes as input and automatically to learn an optimization\
+    \ strategy that dismantles multilayer networks.\n\nMultiDisismant, trained on\
+    \ synthetic graphs, displays excellent performance across complex real-world networks,\
+    \ handling arbitrary network code. We validate MultiDisismant in two practical\
+    \ applications of network dismantling,.\n\nNatural Intelligence | Volume 7 | August\
+    \ 2025 | 1266–1277\n\n1267"
+  - '[PAGE 2]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41586-025-01070-2
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_2_0.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_2_1.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_2_2.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_2_3.png)
+
+
+    **Fig. 2:** Dismantling performance of synthetic and real-world interdependent
+    networks under the metrics AUDC and C. For synthetic networks, we consider two
+    layers with 100 nodes each, power-law degree distribution ($\gamma$) and expected
+    mean ($\langle k \rangle$). We tune one parameter while keeping the other two
+    invariant for 20 interconnected networks with various properties (see Supplementary
+    Table 3 for the parameter setting of the GMM model). To generate networks under
+    condition ($i=0,1$), $N=1024$, we set $\gamma=2.5$ and $\langle k \rangle=6$.
+
+
+    generate g from 0 to 1, a dismantling performance of unit removal cost under AUDC,
+    which quantifies the vulnerability, and C, which measures the cost of removing
+    nodes until the giant component of the MCC disappears. For real-world interdependent
+    networks from various domains, we observe the dismantling performance differences
+    under both unit cost (a) and removal cost (b). See Supplementary Tables 10–12
+    for the detailed numerical results.
+
+
+    We utilize multilayer networks to design immunization strategies for spreading
+    over social networks; we seek to take advantage of Multilayer Dismantler to mitigate
+    spread in interdependent networks. In all applications, Multilayer Dismantler
+    demonstrates superior performance compared with all other algorithms.
+
+
+    # Dissecting networks
+
+
+    We consider a network consisting of two layers of interactions. In the layers
+    they are one-to-one interdependent. For simplicity of description thus without
+    loss of generality, we do not make a formal decomposition between one node and
+    its replica in the other layer; instead, as we
+
+
+    the two layers share a set of nodes. Dismantling in the context of networks, with
+    layers, but indistinguishable nodes across the layers, are also represented as
+    multiplex networks or edge-coloured networks$^{13,14}$. Two nodes are in the same
+    mutually connected component (MCC) if there are paths between them along the layers
+    and such mutually connected components are also in the same MCC. The network dismantling
+    problem involves identifying a sequence of nodes whose effectively increases the
+    fragmentation of the network into mutually connected components of non-extensive
+    size$^{15}$ (see Problem formulation section in the Methods). The removal of
+
+
+    Nature Intelligence | Volume 7 | 2025 | 1266–1277'
+  md: '
+
+    # nature machine intelligence
+
+
+    Article
+
+
+    https://doi.org/10.1038/s42256-025-01070-2
+
+
+    # Deep-learning-aided dismantling of interdependent networks
+
+
+    Received: 26 September 2024
+
+
+    Accepted: 4 June 2025
+
+
+    Weiwei Gu†¹, Chen Yang†¹, Lei Li², Jinqiang Hou¹¹, and Filippo Radicchi‡
+
+
+    Published online: 14 July 2025
+
+
+    + - Check for updates
+
+
+    Identifying the minimal set of nodes whose removal breaks a complex network apart,
+    also referred to as network dismantling, is a highly non-trivial task with applications
+    in multiple domains. Whereas network dismantling has been extensively studied
+    over the past decade, research has primarily focused on the optimization problem
+    for single-layer networks, neglecting that if not all, real-world networks display
+    multiple layers of interdependent interactions. In such networks, the optimization
+    problem is fundamentally different as the effect of removing nodes propagates
+    across layers in a way that can not be predicted using a single-layer perspective.
+    We propose a dismantling algorithm MultiDismantler, which leverages multiple representation
+    and deep reinforcement learning to optimally dismantle interdependent networks.
+    MultiDismantler is trained on synthetic graphs; and when applied to either real
+    or synthetic networks, it displays exceptional dismantling performance, outperforming
+    all existing benchmark algorithms. We show that MultiDismantler is effective in
+    guiding strategies for the control of diseases in social networks characterized
+    by multiple layers of social interactions. Also, we show MultiDismantler is useful
+    in the design of protocols aimed at preventing the onset of cascading failures
+    in critical infrastructures.
+
+
+    Networks are ubiquitous in both natural (for example, climate networks and protein-protein
+    interaction networks) and man-made (for example, social networks and infrastructure
+    networks)¹. Connectivity is essential for the overall network function, as being
+    part of any connected component is a necessary condition for interaction. Due
+    to its heterogeneous structure, finding the minimal set of nodes whose removal
+    would destroy any connected components is known as the network dismantling problem².
+    Network dismantling has numerous applications: inhibiting specific species or
+    proteins for drug design is network dismantling; enhancing the tolerance of networks
+    such as traffic or electric systems, to maximize the efficiency of infrastructural
+    networks which can be thought of network dismantling³; finding the smallest set
+    of nodes that should be vaccinated to prevent a disease outbreak is well approximated
+    by the solution of a network dismantling problem.
+
+
+    Dismantling is the most fundamental optimization problem for networks, but it
+    is notoriously, NP-hard (non-polynomial time)⁴⁵. Such exact solutions, for large
+    networks with only medium and large layers, can only be obtained. Many optimization
+    methods provide approximate solutions that are based on node-centric heuristics,
+    such as high degree adaptive (HDA)⁶ collective influence (CI) and Minsur. These
+    methods do not optimize a global problem, perform no guarantees and generalization
+    capability. Machine learning-based strategies such as the
+
+
+    > †College of Information Science and Technology, Beijing University of Technology,
+    Beijing, People''s Republic of China. School of Engineering, University of Science
+    and Technology of China, Hefei, People''s Republic of China. ‡Center for Networks
+    and Systems Research, Lloyd School of Informatics, Computing, and Engineering,
+    Indiana University, Bloomington, USA. E-mail: chenyang@buct.edu.cn; fiiradiuchi@iiu.edu
+
+
+    Nature Machine Intelligence | Volume 7 | 2023 | 1266–1277
+
+
+    1266
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s42256-025-0170-2
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_1_0.png)
+
+
+    **Fig 1 | The training process of Multi-Dismantler.** The process includes generating
+    training networks, dismantling them and learning from previous experience. The
+    training data includes over 20,000 synthetic networks with sizes from 30 to 50
+    nodes, generated according to the geometric models. To represent a network, we
+    add a first virtual node (denoted $v$) in each layer; all nodes are neighbors
+    of the virtual node, but vice versa. With the MGNN model, we learn multi-layer
+    node attention mechanism ($\theta_l$), MultiDismantler decodes multiple networks,
+    including the embedding of virtual nodes as well as the final embedding of each
+    node. Subsequently, the agent decodes the embeddings using MLPs ($\phi_l$) and
+    layer attention mechanism ($\psi$) to compute the expected return ($Q$) value
+    of each node, which reflects the reward that can be achieved by removing a node
+    under the current network. The agent uses an $\epsilon$-greedy strategy to remove
+    nodes (red nodes); with probability $1-\epsilon$, it selects the node with the
+    highest Q value; otherwise, it removes a random node. Considering dependencies
+    between layers in the network, a cascading failure occurs after an agent removes
+    a node, leading to removal of more edges (blue lines). After node operation, the
+    agent decodes and reconstructs the residual network. Once the network is completely
+    dismantled, the agent collects information in the form of $(s_t, a, r, s_{t})$
+    and stores them in an experience buffer. The agent learns by randomly sampling
+    batches from the experience buffer to update policies.
+
+
+    the dismantling with machine learning (GML) and the neural ranking (NBR) learning
+    methods face challenges on synthetic graphs like Barabási-Albert (BA) and Erdős-Rényi
+    (ER) networks. However, real-world networks are often nested or formed by multiple
+    independent layers; a network composed of independent layers is more volatile
+    than each of its layers considered in isolation. Location of damage in one layer
+    may lead to the failure of other layers, potentially collapsing the entire system.
+    This dismantling mechanism makes system operation difficult to anticipate and
+    control. Examples include the 30-minute blackout in Italy and the sudden disruptions
+    of the global supply chain during the pandemic. Two methods, effective degree
+    measures (EDM) and CoreLL, are specifically designed for dismantling complex networks;
+    however, they are both based on node-centric heuristics and are thus affected
+    by the limitations of this class of methods. As we will show, they often suffer
+    from suboptimal dismantling performances compared with our proposed method. Recent
+    advancements in machine learning using graph optimization techniques$^{11}$ and
+    on the foundation of framework$^{14}$, we introduce an agent-learned dismantling
+    framework MultiDismantler, which can approximate solutions in large-scale networks
+    with high effectiveness. By leveraging a generative model to learn the characteristics
+    of the embeddings of the MultiDismantler, which cannot characterize interactions
+    and correlations across different networks. Geometric correlations between structural
+    and dynamic processes occurs on the network$^{28-30}$. After training process,
+    the MultiDismantler uses a convolutional neural network with a multi-level layer-independent
+    architecture to predict node importance. This is followed by Deep Q-Network (DQN)
+    where the agent learns node removal strategies through trial-and-interaction with
+    the network environment. These policies appear successful when used to optimize
+    large-scale dismantling problems.
+
+
+    Nature Machine Intelligence | Volume 7 | 2023 | 1266–1277
+
+
+    1267
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s42256-025-0170-2
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_2_0.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_2_1.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_2_2.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_2_3.png)
+
+
+    **Fig 2 | Dismantling performance of synthetic and real-world networks under the
+    metrics AUDC and C.** For synthetic networks, we consider two layers with 100
+    nodes each, power-law degree distribution ($\gamma$) and expected mean ($\langle
+    k \rangle$). To generate networks under condition ($i=0,1$), $N=1024$, we set
+    $\gamma=2.5$ and $\langle k \rangle=6$. We tune one parameter while keeping the
+    other invariant, a unit performance under AUDC, which quantifies the vulnerability,
+    and C, which measures the cost of removing nodes until the giant component disappears.
+    For real-world networks from various domains, we observe the dismantling performance
+    under both unit cost (a) and removal cost (b). See Supplementary Tables 10–12
+    for the detailed numerical results.
+
+
+    We utilize multilayer networks to design immunization strategies for spreading
+    over social networks; we seek to take advantage of Multilayer Dismantler to mitigate
+    spread in interdependent networks. In all applications, Multilayer Dismantler
+    demonstrates superior performance compared with all other algorithms.
+
+
+    Natural Intelligence | Volume 7 | 2023 | 1266–1277
+
+
+    # Dissecting networks
+
+
+    We consider a network consisting of two layers. In the layers they are one-to-one
+    interdependent. For simplicity of description thus without loss of generality,
+    we do not make a formal decomposition between one node and its replica in the
+    other layer; instead, as we
+
+
+    the two layers share a set of nodes. Dismantling in the context of networks, with
+    layers, but indistinguishable nodes across the layers, are also represented as
+    multiplex networks or edge-coloured networks$^{13,14}$. Two nodes are in the same
+    mutually connected component (MCC) if there are paths between them along the layers
+    and such mutually connected components are also in the same MCC. The network dismantling
+    problem involves identifying a sequence of nodes whose effectively increases the
+    fragmentation of the network into mutually connected components of non-extensive
+    size$^{15}$ (see Problem formulation section in the Methods). The removal of
+
+    '
+  mdcn: '
+
+
+    # 自然机器智能 (Nature Machine Intelligence)
+
+
+    文章
+
+
+    https://doi.org/10.1038/s42256-025-01070-2
+
+
+    # 深度学习辅助的相互依赖网络拆解
+
+
+    接收：2024年9月26日
+
+
+    接纳：2025年6月4日
+
+
+    Weiwei Gu†¹, Chen Yang†¹, Lei Li², Jinqiang Hou¹¹，以及 Filippo Radicchi‡
+
+
+    在线发表：2025年7月14日
+
+
+    + - 查看更新
+
+
+    识别一组移除后可以破坏复杂网络连接的最小节点集合，也称为网络拆解（network dismantling），是一项极具挑战性的任务，在多个领域都有应用。尽管网络拆解在过去十年中得到了广泛研究，但研究主要集中在单层网络的优化问题上，忽略了并非所有（如果不是）现实网络都显示出多层相互依赖的交互。在这样的网络中，优化问题从根本上不同，因为移除节点的影响会跨层传播，这种传播方式无法通过单层视角进行预测。我们提出了一种拆解算法
+    MultiDismantler，它利用多重表示和深度强化学习来优化地拆解相互依赖网络。MultiDismantler 在合成图上进行训练；当应用于真实或合成网络时，它表现出卓越的拆解性能，优于所有现有的基准算法。我们证明了
+    MultiDismantler 在引导具有多层社会交互的社交网络的疾病控制策略方面有效。此外，我们还证明 MultiDismantler 在设计旨在防止关键基础设施发生级联故障的协议方面有用。
+
+
+    网络无存在于自然（例如，气候网络和蛋白质-蛋白质相互作用网络）和人造（例如，社交网络和基础设施网络）¹。连通性对于网络的整体功能至关重要，因为作为任何连通分的一部分是交互的必要条件。由于其异质结构，寻找移除后会破坏任何连通分的最小节点集合被称为网络拆解问题²。网络拆解有许多应用：为了药物设计抑制特定物种或蛋白质属于网络拆解；增强交通或电力系统等网络的容忍性以最大化基础设施网络的效率，可以被视为网络拆解³；寻找应该接种以防止疾病爆发的最小节点集可以通过网络拆解问题的解决方案很好地近似。
+
+
+    拆解是网络最基础的优化问题，但众所周知它是 NP-hard（非多项式时间）⁴⁵。对于仅具有中大型层的大网络，只能获得此类精确解。许多优化方法提供了基于以节点为中心的启发式方法的近似解，例如高度自适应（HDA）⁶集体影响（CI）和
+    Minsur。这些方法没有优化全局问题，不具备保证和泛化能力。基于机器学习的策略，如
+
+
+    > †中国北京理工大学信息科学技术学院，中国北京。中国科学技术大学工程学院，中国合肥。‡印第安纳大学洛伊德信息、计算与工程学院，网络与系统研究中心，美国布鲁明林顿。电子邮箱：chenyang@buct.edu.cn;
+    fiiradiuchi@iiu.edu
+
+
+    Nature Machine Intelligence | 第7卷 | 2023 | 1266–1277
+
+
+    1266
+
+
+    # 文章
+
+
+    https://doi.org/10.1038/s42256-025-0170-2
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_1_0.png)
+
+
+    **图 1 | Multi-Dismantler 的训练过程。** 该过程包括生成训练网络、拆解它们并从以往经验中学习。训练数据包含超过20,000个规模从30到50个节点的合成网络，这些网络根据几何模型生成。为了表示网络，我们在每层中添加了第一个虚拟节点（表示为
+    $v$）；所有节点都是虚拟节点的邻居，但反之亦然。通过 MGNN 模型，我们学习了多层节点注意力机制 ($\theta_l$)，MultiDismantler
+    解码多个网络，包括虚拟节点的嵌入以及每个节点的最终嵌入。随后，代理体使用 MLPs ($\phi_l$) 和层注意力机制 ($\psi$) 解码嵌入以计算每个节点的预期回报
+    ($Q$) 值，该值反映了在当前网络下移除一个节点可以获得的奖励。代理体使用 $\epsilon$-greedy策略移除节点（红色节点）；以 $1-\epsilon$
+    的概率选择 Q 值最高的节点；否则，移除一个随机节点。考虑到网络层之间的依赖关系，当代理体移除一个节点后会发生级联故障，导致更多边的移除（蓝色线条）。在节点操作后，代理体解码并重构剩余网络。一旦网络被完全拆解，代理体以
+    $(s_t, a, r, s_{t})$ 的形式收集信息并存储在经验池中。代理体通过从经验池中随机采样批次来更新策略。
+
+
+    机器学习拆解 (GML) 和神经排序 (NBR) 学习方法在处理 Barabási-Albert (BA) 和 Erdős-Rényi (ER) 网络等合成图时面临挑战。然而，现实网络往往是嵌套的或由多个独立层组成；由独立层组成的网络比其单独考虑的每一层都更不稳定。某一层中的损坏可能会导致其他层的失效，并可能导致整个系统的崩溃。这种拆解机制使得系统运行难以预测和控制。例如意大利的30分钟停电和大流行期间全球供应链的突然中断。两种方法，有效度度量
+    (EDM) 和 CoreLL 是专门为拆解复杂网络设计的；然而，它们都基于以节点为中心的启发式方法，因此受到这类方法局限性的影响。正如我们将所示，与我们提出的方法相比，它们往往面临次优的拆解性能。利用图优化技术的机器学习¹¹以及在框架¹⁴
+    基础上的最新进展，我们引入了代理体学习的拆解框架 MultiDismantler，它可以以高效率在大规模网络中近似解。通过利用生成模型来学习 MultiDismantler
+    嵌入的特征（这无法表征不同网络之间的交互和相关性）。网络上的结构过程与动态过程之间存在几何相关性²⁸-³⁰。训练完成后，MultiDismantler 使用具有多级层独立架构的卷积神经网络来预测节点重要性。随后是深度
+    Q 网络 (DQN)，代理体通过与网络环境的尝试和交互学习节点移除策略。当这些策略用于优化大规模拆解问题时，表现得成功。
+
+
+    Nature Machine Intelligence | 第7卷 | 2023 | 1266–1277
+
+
+    1267
+
+
+    # 文章
+
+
+    https://doi.org/10.1038/s42256-025-0170-2
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_2_0.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_2_1.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_2_2.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_2_3.png)
+
+
+    **图 2 | 合成网络和现实网络在两种指标下的拆解性能。** 对于合成网络，我们考虑每层有100个节点、幂律度分布 ($\gamma$) 和期望值 ($\langle
+    k \rangle$)。在条件 ($i=0,1$) 下生成网络，$N=1024$，我们设置 $\gamma=2.5$ 和 $\langle k \rangle=6$。我们在保持另一个参数不变的情况下调整一个参数，即衡量脆弱性的单位性能
+    AUDC 以及衡量直到巨型分量消失的移除成本 C。对于来自不同领域的现实网络，我们观察了单位成本 (a) 和移除成本 (b) 下的拆解性能。详细数值结果见附表10–12。我们利用多层网络设计用于社交网络传播的免疫策略；我们寻求利用
+    Multilayer Dismantler 来缓解依赖网络中的传播。在所有应用中，Multilayer Dismantler 都表现出优于所有其他算法的性能。
+
+
+    Natural Intelligence | 第7卷 | 2023 | 1266–1277
+
+
+    # 解析网络
+
+
+    我们考虑一个由两层组成的网络。这些层之间是一一对一相互依赖的。为了描述简单且不失通用性，我们没有对一个节点与其在另一层中的副本进行正式分解；相反，正如我们
+
+
+    两层共享一组节点。在网络背景下，具有层但跨层节点不可区分的拆解也被表示为多层网络或边彩色网络¹³,¹⁴。两个节点处于同一个相互连接分量 (MCC)，如果它们沿着层存在路径，且这些相互连接分量也处于同一个
+    MCC。网络拆解问题涉及识别一个节点序列，该序列可以有效地增加网络分裂成非扩展尺寸的相互连接分量的程度¹⁵（见方法中的问题定义章节）。移除的
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    # # Article
+
+
+    https://doi.org/10.1038/s41556-025-01070-2
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_3_0.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_3_1.png)
+
+
+    **Fig. 3** The disentangling cost of two real-world networks by different disentangling
+    algorithms. **a– d**. The horizontal axis represents the cost of node fraction
+    and the vertical axis represents the residual node cost
+
+
+    each node in the sequence incurs a cost. We consider two scenarios: the cost of
+    each node equals, that is, the cost of a node equals the edges that are removed
+    together with the node, that is, degree cost. We relax these layers to identify
+    nodes taken at random from the normal or uniform distributions. This allows us
+    to test the generalizability of our algorithms to cases where edges are removed.
+    The size of the LMCER provides a measure to monitor the formation of the network
+    into non-mutually exclusive components and typically decreases with the cumulative
+    cost of the removed nodes. The area under the curve (ADC), which is the relative
+    size of the LMC, provides a measure to quantify the quality of a specific sequence
+    of nodes or whether a disentangling is given by the cost required to make the
+    LMC non-existent. The disentangling cost, is given by the sum of the costs of
+    the removed nodes,
+
+
+    is essential for increasing the diversity of real-world networks with synthetic
+    networks, increasing the generalizability of MultiDisrainer. The Homo and Sanremo2016
+    networks under unit cost (a) and under degree cost
+
+
+    Proposed approach to the disentangling of interdependent networks
+
+
+    MultiDisrainer is the first approach to integrate multilayer network representation
+    with deep reinforcement learning (DRL) to solve optimization problems on multilayer
+    interdependent networks. We ensure to address the three main challenges faced
+    by MultiDisrainer:
+
+
+    +   (1) MultiDisrainer trained on synthetic graphs constructed via a generative
+    network model to accurately reproduce the structure of real-world interdependent
+    networks. and
+
+
+    +   (2) MultiDisrainer operates on an encoding framework designed to effectively
+    capture and preserve both intra-layer and inter-layer network structures and properties.
+    This high-quality representation enables effective learning and generalization
+    to unseen networks.
+
+
+    +   (3) MultiDisrainer appropriately bridges multilayer representation with DRL
+    components. This involves defining the network state, node deletion actions, designing
+    the environment and establishing evaluation methods to guide learning.
+
+
+    A schematic illustration of the MultiDisrainer framework is provided in Fig. 1,
+    and details on its implementation are reported in ''MultiDisrainer'' Methods.
+    We describe its structure here.
+
+
+    GNN generates synthetic multilayer networks with cross geometric correlations.
+    GMM has been widely used to capture the properties of real multilayer networks.
+    The model has several parameters that control both intra-layer and inter-layer
+    properties of generators by aggregating information across layers.
+
+
+    Traditional learning for multilayer networks using graph neural network architectures,
+    such as path-based or generative layers. These frameworks independently learn
+    representations in each layer and combine using deep learning techniques such
+    as multilayer attention; however, they fail to fully capture the complexity of
+    the interlayer topology. Here, we propose a new multilayer graph neural network
+    (MGNN), which uses a layer-specific graph
+
+
+    Nature Intelligence | Volume 7 | 2025 | 1266–1277
+
+
+    1269'
+  - '[PAGE 4]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41466-025-01070-2
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_4_0.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_4_1.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_4_2.png)
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_4_3.png)
+
+
+    **Fig. 4** Preventing spread and maintaining robustness with MultiDismantler,
+    a. MultiDismantler in reducing the outbreak spread of size offline and online
+    networks. We simulate dynamics on the remaining network after the removal of nodes.
+    Different dismantling strategies is considerably simpler than that other comparison.
+    d. Simulations of robustness of the Homo network under targeted and random attack.
+    We show the size of the LMCC as a function of the cost of the removed nodes. Multiplexes
+    are more robust against random failure, and MultiDismantler has a slight advantage
+    in maintaining robustness.
+
+
+    After interaction, MGNN applies multiple linear transformation to map layer projectors
+    into a shared representation space. Incorporating feature from cross-layer neighbors
+    represents each node representations; the impact of layer interplay on different
+    nodes varies dramatically. Some nodes are influenced primarily by intracellular
+    clusters, which rely only on interlayer edge information. MGNN incorporates an
+    attention mechanism to learn weights for each node. The final representation of
+    a node in a given layer is a weighted combination of its neighbors'' representations
+    from both interlayer and intracellular.
+
+
+    predicted Q and the target Q, which includes the cumulative reward and the maximum
+    future Q. The agent removes nodes around the predicted Q. As the agent removes
+    nodes and the topology of the multiplex network changes, the embeddings of state
+    and action are continuously updated. The node removal process continues until
+    the interdependent network is fully
+
+
+    # **Comparison with FINDER**
+
+
+    In work using DRL, the agent is trained to learn the strategy that maximizes disconnectivity
+    across nodes. The DARN approach addresses this problem by using a value function
+    with a deep neural network. The Q network estimates the expected reward of taking
+    action a in state s. Here, the agent selects a selection of nodes to remove, and
+    we use node vectors from multiplex representation as action embeddings. The state
+    represents the current configuration of the multiplex network, where all nodes
+    are neighbors of the unit state. The reward r is designed to quantify the impact
+    of node removal on the network connectivity: measured rewards using the decrease
+    in the size of the LMCC.
+
+
+    MultiDismantler builds on foundational ideas of FINDER. Both methods use a deep
+    learning for network dismantling; also, they use techniques such as neural representation,
+    reconstruction and loss for cost-action interaction. However, FINDER aims at finding
+    the cost of removing the target connected component in a single network. MultiDismantler
+    aims to solve radically different dismantling problems, they differ in key aspects.
+    For example, MultiDismantler uses the GAN-based version of FINDER. MultiDismantler
+    operates on a GNN, whereas FINDER targets with an advantage on a single-layer
+    graph. For a detailed discussion on differences and similarities between MultiDismantler
+    and FINDER, see Supplementary Section I.
+
+
+    # **Experimental setup**
+
+
+    We train two MultiDismantler agents with identical architecture; but distinct
+    rules to handle node dismantling tasks with unit and degree costs. Also, we use
+    cost values varying
+
+
+    Nature Intelligence | 7 | August 2025 | 1266–1277
+
+
+    1270'
+  - '[PAGE 5]
+
+
+    # Table 1 | Real-world network robustness weakness under different protection
+    strategies
+
+
+    | Dataset | HDA | CI | MinSum | FINDER | NIRM | CoreHDA | EMD | MultiDisant |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | USir | 0.421±0.032 | 0.366±0.034 | 0.377±0.046 | 0.437±0.039 | 0.419±0.024 |
+    0.402±0.054 | 0.408±0.038 | 0.419±0.024 |
+
+    | FAQ | 0.410±0.007 | 0.408±0.008 | 0.406±0.004 | 0.408±0.003 | 0.413±0.009 |
+    0.410±0.006 | 0.408±0.006 | 0.411±0.007 |
+
+    | Citizens | 0.379±0.012 | 0.389±0.008 | 0.377±0.011 | 0.384±0.010 | 0.391±0.012
+    | 0.395±0.010 | 0.391±0.012 | 0.395±0.013 |
+
+    | Drosophila | 0.279±0.011 | 0.271±0.023 | 0.276±0.016 | 0.289±0.016 | 0.287±0.022
+    | 0.283±0.017 | 0.291±0.023 | 0.284±0.011 |
+
+    | FbTw | 0.436±0.063 | 0.460±0.031 | 0.462±0.033 | 0.463±0.025 | 0.462±0.041 |
+    0.458±0.043 | 0.463±0.048 | 0.465±0.003 |
+
+    | NetSi | 0.327±0.036 | 0.398±0.017 | 0.315±0.023 | 0.324±0.025 | 0.317±0.021
+    | 0.322±0.039 | 0.327±0.012 | 0.327±0.009 |
+
+    | Sachpemb | 0.237±0.021 | 0.235±0.023 | 0.295±0.016 | 0.236±0.042 | 0.239±0.044
+    | 0.243±0.024 | 0.246±0.021 | 0.246±0.042 |
+
+    | Homo | 0.211±0.021 | 0.201±0.027 | 0.218±0.051 | 0.215±0.032 | 0.203±0.023 |
+    0.213±0.021 | 0.214±0.027 | 0.217±0.001 |
+
+    | Sanremo | 0.206±0.021 | 0.201±0.027 | 0.218±0.034 | 0.202±0.031 | 0.201±0.028
+    | 0.219±0.025 | 0.219±0.010 | 0.217±0.001 |
+
+
+    The results are averaged over various runs, errors denote the standard deviation
+    over the mean. These results are best with confidence (with the highest AUC values).
+
+
+    We evaluate MultiDisant on real-world networks from different dimensions. Figure
+    2c shows that MultiDisant outperforms other methods in both unity and degree costs.
+    MultiDisant’s cumulative AUC is 8.4% lower than the second-best algorithm for
+    degree cost, and the cumulative value of 7.5% is lower than the second-best for
+    unit cost.
+
+
+    Figure 3 illustrates the performance of diminishing two real multilayer networks.
+    MultiDisant consistently achieves the LMMC compared to other diminishing methods
+    in terms of removal node costs and identifies most relevant nodes, indicating
+    that MultiDisant is more effective in identifying diminishing structures (see
+    Supplementary Section 4 for the results and discussion). In addition, for some
+    real-world networks, MultiDisant’s diminishing strategy is better than others
+    but decreases more rapidly. This shows that the methods predict a longer subgraph
+    but a smaller network size, which is essential in revealing the network vulnerability,
+    making it prone to rapid breakdown of the other nodes.
+
+
+    # Results on synthetic networks
+
+
+    Diminishing performance on various networks. To demonstrate the advantages of
+    our algorithm across various networks, we use the GMM model to generate synthetic
+    networks with different structures and layer correlation levels. Figure 2b shows
+    MultiDisant’s diminishing performance on synthetic networks with unit cost and
+    degree cost. Supplementary Tables 10 and 11 show that our algorithm outperforms
+    the second-best diminishing algorithm in the AUC and C values by 5.9% and 2.6%
+    under degree cost.,
+
+
+    Predicting the greedy-truth optimal diminishing. In small networks, we evaluate
+    all permutations to determine the diminishing sequence with minimal AUC in the
+    unit-cost version of the formula. Since we cannot evaluate all permutations in
+    scale, Supplementary Table 6 uses the 1-normalized distance to quantify the similarity
+    between the diminishing sequences identified by different algorithms and the optimal
+    diminishing sequence found by brute-force search. Supplementary Table 6 shows
+    the diminishing sequence closest to the optimal sequence and achieves the maximum
+    diminishing AUC values.,
+
+
+    # Results on real-world networks
+
+
+    Diminishing performance and inductive learning capacity. MultiDisant is trained
+    on larger sets of synthetic networks and then applied to real-world networks.
+
+
+    We apply MultiDisant, trained on multilayer networks, to multilayer network task.
+    Supplementary Table 8 shows that MultiDisant achieves the best diminishing performance.
+    This can be attributed to the algorithm to effectively leverage the diminishing
+    features learned from multilayer networks (see Supplementary Section 3.5 for more
+    details).
+
+
+    Analyzing the key components of MultiDisant. To determine the elements that contribute
+    to the outstanding performance of MultiDisant, we successfully analyzed its three
+    main components: cost, the attention mechanism in IGNN, and the interlayer similarity
+    in the GMM. Supplementary Table 44 evaluates the effectiveness of the attention
+    mechanism. In the first case, we disable the interlayer message-passing mechanism,
+    resulting in MultiDisant’s inability to fuse information from different layers,
+    which leads to worse diminishing quality. Next, we replace the corpus for the
+    GMM with the BA model with randomly selected independent nodes. The first column
+    in'
+  md: '
+
+    # Article
+
+
+    https://doi.org/10.1038/s41556-025-01070-2
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_3_0.png)
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_3_1.png)
+
+
+    **Fig. 3** The disentangling cost of two real-world networks by different disentangling
+    algorithms. **a– d**. The horizontal axis represents the cost of node fraction
+    and the vertical axis represents the residual node cost each node in the sequence
+    incurs a cost. We consider two scenarios: the cost of each node equals, that is,
+    the cost of a node equals the edges that are removed together with the node, that
+    is, degree cost. We relax these layers to identify nodes taken at random from
+    the normal or uniform distributions. This allows us to test the generalizability
+    of our algorithms to cases where edges are removed. The size of the LMCER provides
+    a measure to monitor the formation of the network into non-mutually exclusive
+    components and typically decreases with the cumulative cost of the removed nodes.
+    The area under the curve (ADC), which is the relative size of the LMC, provides
+    a measure to quantify the quality of a specific sequence of nodes or whether a
+    disentangling is given by the cost required to make the LMC non-existent. The
+    disentangling cost, is given by the sum of the costs of the removed nodes, is
+    essential for increasing the diversity of real-world networks with synthetic networks,
+    increasing the generalizability of MultiDisrainer. The Homo and Sanremo2016 networks
+    under unit cost (a) and under degree cost
+
+
+    ## Proposed approach to the disentangling of interdependent networks
+
+
+    MultiDisrainer is the first approach to integrate multilayer network representation
+    with deep reinforcement learning (DRL) to solve optimization problems on multilayer
+    interdependent networks. We ensure to address the three main challenges faced
+    by MultiDisrainer:
+
+
+    - (1) MultiDisrainer trained on synthetic graphs constructed via a generative
+    network model to accurately reproduce the structure of real-world interdependent
+    networks. and
+
+    - (2) MultiDisrainer operates on an encoding framework designed to effectively
+    capture and preserve both intra-layer and inter-layer network structures and properties.
+    This high-quality representation enables effective learning and generalization
+    to unseen networks.
+
+    - (3) MultiDisrainer appropriately bridges multilayer representation with DRL
+    components. This involves defining the network state, node deletion actions, designing
+    the environment and establishing evaluation methods to guide learning.
+
+
+    A schematic illustration of the MultiDisrainer framework is provided in Fig. 1,
+    and details on its implementation are reported in ''MultiDisrainer'' Methods.
+    We describe its structure here.
+
+
+    GNN generates synthetic multilayer networks with cross geometric correlations.
+    GMM has been widely used to capture the properties of real multilayer networks.
+    The model has several parameters that control both intra-layer and inter-layer
+    properties of generators by aggregating information across layers.
+
+
+    Traditional learning for multilayer networks using graph neural network architectures,
+    such as path-based or generative layers. These frameworks independently learn
+    representations in each layer and combine using deep learning techniques such
+    as multilayer attention; however, they fail to fully capture the complexity of
+    the interlayer topology. Here, we propose a new multilayer graph neural network
+    (MGNN), which uses a layer-specific graph
+
+
+    Nature Intelligence | Volume 7 | 2025 | 1266–1277
+
+
+    1269
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41466-025-01070.2
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_4_0.png)
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_4_1.png)
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_4_2.png)
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_4_3.png)
+
+
+    **Fig. 4** Preventing spread and maintaining robustness with MultiDismantler,
+    a. MultiDismantler in reducing the outbreak spread of size offline and online
+    networks. We simulate dynamics on the remaining network after the removal of nodes.
+    Different dismantling strategies is considerably simpler than that other comparison.
+    d. Simulations of robustness of the Homo network under targeted and random attack.
+    We show the size of the LMCC as a function of the cost of the removed nodes. Multiplexes
+    are more robust against random failure, and MultiDismantler has a slight advantage
+    in maintaining robustness.
+
+
+    After interaction, MGNN applies multiple linear transformation to map layer projectors
+    into a shared representation space. Incorporating feature from cross-layer neighbors
+    represents each node representations; the impact of layer interplay on different
+    nodes varies dramatically. Some nodes are influenced primarily by intracellular
+    clusters, which rely only on interlayer edge information. MGNN incorporates an
+    attention mechanism to learn weights for each node. The final representation of
+    a node in a given layer is a weighted combination of its neighbors'' representations
+    from both interlayer and intracellular.
+
+
+    predicted Q and the target Q, which includes the cumulative reward and the maximum
+    future Q. The agent removes nodes around the predicted Q. As the agent removes
+    nodes and the topology of the multiplex network changes, the embeddings of state
+    and action are continuously updated. The node removal process continues until
+    the interdependent network is fully
+
+
+    ## Comparison with FINDER
+
+
+    In work using DRL, the agent is trained to learn the strategy that maximizes disconnectivity
+    across nodes. The DARN approach addresses this problem by using a value function
+    with a deep neural network. The Q network estimates the expected reward of taking
+    action a in state s. Here, the agent selects a selection of nodes to remove, and
+    we use node vectors from multiplex representation as action embeddings. The state
+    represents the current configuration of the multiplex network, where all nodes
+    are neighbors of the unit state. The reward r is designed to quantify the impact
+    of node removal on the network connectivity: measured rewards using the decrease
+    in the size of the LMCC.
+
+
+    MultiDismantler builds on foundational ideas of FINDER. Both methods use a deep
+    learning for network dismantling; also, they use techniques such as neural representation,
+    reconstruction and loss for cost-action interaction. However, FINDER aims at finding
+    the cost of removing the target connected component in a single network. MultiDismantler
+    aims to solve radically different dismantling problems, they differ in key aspects.
+    For example, MultiDismantler uses the GAN-based version of FINDER. MultiDismantler
+    operates on a GNN, whereas FINDER targets with an advantage on a single-layer
+    graph. For a detailed discussion on differences and similarities between MultiDismantler
+    and FINDER, see Supplementary Section.
+
+
+    ## Experimental setup
+
+
+    We train two MultiDismantler agents with identical architecture; but distinct
+    rules to handle dismantling tasks with unit and degree costs. Also, we use cost
+    varying
+
+
+    Nature Intelligence | 7 | August 2025 | 1266–1277
+
+
+    1270
+
+
+    ## Table 1 | Real-world network robustness under different strategies
+
+
+    | Dataset | HDA | CI | MinSum | FINDER | NIRM | CoreHDA | EMD | MultiDisant |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | USir | 0.421±0.032 | 0.366±0.034 | 0.377±0.046 | 0.437±0.039 | 0.419±0.024 |
+    0.402±0.054 | 0.408±0.038 |
+
+    | FAQ | 0.410±0.007 | 0.408±0.008 | 0.406±0.004 | 0.408±0.003 | 0.413±0.009 |
+    0.410±0.006 | 0.408±0.006 | 0.411±0.007 |
+
+    | Citizens | 0.379±0.012 | 0.389±0.008 | 0.377±0.011 | 0.384±0.010 | 0.391±0.012
+    | 0.395±0.010 | 0.391±0.012 | 0.395±0.013 |
+
+    | Drosophila | 0.279±0.011 | 0.271±0.023 | 0.276±0.016 | 0.289±0.016 | 0.287±0.022
+    | 0.283±0.017 | 0.291±0.023 | 0.284±0.011 |
+
+    | FbTw | 0.436±0.063 | 0.460±0.031 | 0.462±0.033 | 0.463±0.025 | 0.462±0.041 |
+    0.458±0.043 | 0.463±0.048 | 0.465±0.003 |
+
+    | NetSi | 0.327±0.036 | 0.398±0.017 | 0.315±0.023 | 0.324±0.025 | 0.317±0.021
+    | 0.322±0.039 | 0.327±0.012 | 0.327±0.009 |
+
+    | Sachpemb | 0.237±0.021 | 0.235±0.023 | 0.295±0.016 | 0.236±0.042 | 0.239±0.044
+    | 0.243±0.024 | 0.246±0.021 | 0.246±0.042 |
+
+    | Homo | 0.211±0.021 | 0.201±0.027 | 0.218±0.051 | 0.215±0.032 | 0.203±0.023 |
+    0.213±0.021 | 0.214±0.027 | 0.217±0.001 |
+
+    | Sanremo | 0.206±0.021 | 0.201±0.027 | 0.218±0.034 | 0.202±0.031 | 0.201±0.028
+    | 0.219±0.025 | 0.219±0.010 | 0.217±0.001 |
+
+
+    The results are averaged over various runs, errors denote the standard deviation
+    over the mean. These results are best with confidence (with the highest AUC values).
+
+
+    We evaluate MultiDisant on real-world networks from different dimensions. Figure
+    2c shows that MultiDisant outperforms other methods in both unity and degree costs.
+    MultiDisant’s cumulative AUC is 8.4% lower than the second-best algorithm for
+    degree cost, and the cumulative value of 7.5% is lower than the second-best for
+    unit cost.
+
+
+    Figure 3 illustrates the performance of diminishing two real multilayer networks.
+    MultiDisant consistently achieves the LMMC compared to other diminishing methods
+    in terms of removal node costs and identifies most relevant nodes, indicating
+    that MultiDisant is more effective in identifying diminishing structures (see
+    Supplementary Section 4 for the results and discussion). In addition, for some
+    real-world networks, MultiDisant’s diminishing strategy is better than others
+    but decreases more rapidly. This shows that the methods predict a longer subgraph
+    but a smaller network size, which is essential in revealing the network vulnerability,
+    making it prone to rapid breakdown of the other nodes.
+
+
+    ## Results on synthetic networks
+
+
+    Diminishing performance on various networks. To demonstrate the advantages of
+    our algorithm across various networks, we use the GMM model to generate synthetic
+    networks with different structures and layer correlation levels. Figure 2b shows
+    MultiDisant’s diminishing performance on synthetic networks with unit cost and
+    degree cost. Supplementary Tables 10 and 11 show that our algorithm outperforms
+    the second-best diminishing algorithm in the AUC and C values by 5.9% and 2.6%
+    under degree cost.
+
+
+    Predicting the greedy-truth optimal diminishing. In small networks, we evaluate
+    all permutations to determine the diminishing sequence with minimal AUC in the
+    unit-cost version of the formula. Since we cannot evaluate all permutations in
+    scale, Supplementary Table 6 uses the 1-normalized distance to quantify the similarity
+    between the diminishing sequences identified by different algorithms and the optimal
+    diminishing sequence found by brute-force search. Supplementary Table 6 shows
+    the diminishing sequence closest to the optimal sequence and achieves the maximum
+    diminishing AUC values.
+
+
+    ## Results on real-world networks
+
+
+    Diminishing performance and inductive learning capacity. MultiDisant is trained
+    on larger sets of synthetic networks and then applied to real-world networks.
+
+
+    We apply MultiDisant, trained on multilayer networks, to multilayer network task.
+    Supplementary Table 8 shows that MultiDisant achieves the best diminishing performance.
+    This can be attributed to the algorithm to effectively leverage the diminishing
+    features learned from multilayer networks (see Supplementary Section 3.5 for more
+    details).
+
+
+    Analyzing the key components of MultiDisant. To determine the elements that contribute
+    to the outstanding performance of MultiDisant, we successfully analyzed its three
+    main components: cost, the attention mechanism in IGNN, and the interlayer similarity
+    in the GMM. Supplementary Table 44 evaluates the effectiveness of the attention
+    mechanism. In the first case, we disable the interlayer message-passing mechanism,
+    resulting in MultiDisant’s inability to fuse information from different layers,
+    which leads to worse diminishing quality. Next, we replace the corpus for the
+    GMM with the BA model with randomly selected independent nodes. The first column
+    in
+
+    '
+  mdcn: '
+
+
+    # 文章
+
+
+    https://doi.org/10.1038/s41556-025-01070-2
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_3_0.png)
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_3_1.png)
+
+
+    **图. 3** 不同解耦算法对两个真实网络的解耦成本。**a– d**。横轴代表节点比例的成本，纵轴代表序列中每个节点所遭受的剩余节点成本。我们考虑了两种场景：每个节点的成本相等，即节点的成本等于与节点一同移除的边数，即度成本。我们放宽了这些层，以识别从正态分布或均匀分布中随机提取的节点。这使得我们能够测试算法在边被移除情况下的泛化性。LMCER
+    的大小提供了一个监测网络形成非互斥分量的度量，通常随着被移除节点的累计成本增加而减少。曲线下面积（ADC）是 LMC 的相对大小，提供了一个量化特定节点序列质量的度量，或者通过使
+    LMC 不存在所需的成本来给出解耦结果。解耦成本由被移除节点的成本之和给出，对于增加真实网络相对于合成网络的多样性、提高 MultiDisrainer 的泛化性至关重要。单位成本下
+    (a) 和度成本下的 Homo 和 Sanremo2016 网络
+
+
+    ## 相互依赖网络解耦的建议方法
+
+
+    MultiDisrainer 是首个将多层网络表示与深度强化学习（DRL）相结合的方法，用于解决多层依赖网络上的优化问题。我们确保解决了 MultiDisrainer
+    面临的三个主要挑战：
+
+
+    - (1) MultiDisrainer 在通过生成网络模型构建的合成图上进行训练，以准确还原真实相互依赖网络的结构。以及
+
+    - (2) MultiDisrainer 运行在一个编码框架上，该框架旨在有效捕捉并保留层内和层间的网络结构及属性。这种高质量的表示能够实现对未见性的有效学习和泛化。
+
+    - (3) MultiDisrainer 恰当桥接了多层表示与 DRL 组件。这涉及定义网络状态、节点删除动作、设计环境以及建立评估方法以指导学习。
+
+
+    图 1 提供了 MultiDisrainer 框架的示意图，其实现细节在“MultiDisrainer”方法部分中报告。我们在此描述其结构。
+
+
+    GNN 生成具有跨几何相关性的合成多层网络。GMM 已广泛用于捕捉真实多层网络的属性。该模型具有多个参数，通过聚合跨层信息来控制生成器的层内和层间属性。
+
+
+    使用图神经网络架构（如基于路径或生成式层）对多层网络进行传统学习。这些框架独立地学习每一层的表示，并使用多层注意力等深度学习技术进行组合；然而，它们未能充分捕捉层间拓扑结构的复杂性。在这里，我们提出了一种新的多层图神经网络（MGNN），它使用特定于层的图
+
+
+    Nature Intelligence | 卷 7 | 2025 | 1266–1277
+
+
+    1269
+
+
+    # 文章
+
+
+    https://doi.org/10.1038/s41466-025-01070.2
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_4_0.png)
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_4_1.png)
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_4_2.png)
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_4_3.png)
+
+
+    **图. 4** 使用 MultiDismantler 防止扩散并维持鲁棒性，a. MultiDismantler 在减少离线和在线网络规模爆发扩散方面的作用。我们在节点移除后的剩余网络上模拟动力学。不同的拆解策略比其他比较对象要简单得多。d.
+    Homo 网络在目标攻击和随机攻击下的鲁棒性模拟。我们展示了 LMCC 大小随被移除节点成本的变化。多路网络对随机故障更具鲁棒性，且 MultiDismantler
+    在维持鲁棒性方面具有微弱优势。
+
+
+    交互后，MGNN 应用多个线性变换将层投影器映射到共享表示空间。结合跨层邻居的特征来表示每个节点的表示；层间交互对不同节点的影响差异巨大。某些节点主要受细胞内簇的影响，这些这些仅依赖于层间边信息。MGNN
+    引入了注意力机制来学习每个节点的权重。给定层中节点的最终表示是其层间和细胞内邻居表示的加权组合。
+
+
+    预测的 Q 和目标 Q，包括累计奖励和未来最大 Q。智能体移除预测 Q 周围的节点。随着智能体移除节点以及多路网络拓扑的变化，状态和动作的嵌入被不断更新。节点移除过程持续直到相互依赖网络完全
+
+
+    ## 与 FINDER 的比较
+
+
+    在使用 DRL 的工作中，智能体被训练用于学习最大化节点间不连通性的策略。DARN 方法通过使用带有深度神经网络的值函数来解决这个问题。Q 网络估计在状态
+    $s$ 下采取动作 $a$ 的期望奖励。在这里，智能体选择一组节点进行移除，我们使用来自多路表示的节点向量作为动作嵌入。状态代表多路网络的当前配置，其中所有节点都是单位状态的邻居。奖励
+    $r$ 设计用于量化节点移除对网络连通性的影响：通过 LMCC 尺寸的减少来衡量奖励。
+
+
+    MultiDismantler 构建在 FINDER 的基础之上。两种方法都使用深度学习进行网络拆解；同样，它们使用神经表示、重构和损失函数来处理成本-动作交互。然而，FINDER
+    旨在寻找移除单个网络中目标连通分的成本。MultiDismantler 旨在解决完全不同的拆解问题，它们在关键方面不同。例如，MultiDismantler
+    使用了基于 GAN 的 FINDER 版本。MultiDismantler 运行在 GNN 上，而 FINDER 在单层图上具有优势。关于 MultiDismantler
+    和 FINDER 之间差异和相似性的详细讨论，请参见补充章节。
+
+
+    ## 实验设置
+
+
+    我们训练了两个架构相同的 MultiDismantler 智能体；但具有不同的规则来处理单位成本和度成本的拆解任务。此外，我们使用了变化的成本
+
+
+    Nature Intelligence | 7 | 2025年8月 | 1266–1277
+
+
+    1270
+
+
+    ## 表 1 | 不同策略下的真实网络鲁棒性
+
+
+    | 数据集 | HDA | CI | MinSum | FINDER | NIRM | CoreHDA | EMD | MultiDisant |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | | | | | | | | | |
+
+    | US | 0.421±0.032 | 0.366±0.034 | 0.377±0.046 | 0.395±0.039 | 0.419±0.024 | |
+    | |
+
+    | FAQ | 0.410±0.007 | 0.408±0.008 | 0.406±0.004 | 0.408±0.003 | 0.410±0.006 |
+    | | |
+
+    | Citizens | 0.379±0.012 | 0.389±0.008 | 0.377±0.011 | 0.384±0.010 | 0.391±0.012
+    | | | |
+
+    | Drosophila | 0.279±0.011 | 0.271±0.023 | 0.276±0.016 | 0.289±0.017 | 0.287±0.022
+    | | | |
+
+    | FbTw | 0.436±0.063 | 0.460±0.031 | 0.462±0.033 | 0.463±0.025 | 0.458±0.041 |
+    | | |
+
+    | NetSi | 0.327±0.036 | 0.398±0.017 | 0.315±0.023 | 0.324±0.025 | 0.327±0.039
+    | | | |
+
+    | Sachp | 0.237±0.021 | 0.235±0.023 | 0.295±0.016 | 0.239±0.042 | 0.243±0.024
+    | | | |
+
+    | Homo | 0.211±0.021 | 0.201±0.027 | 0.218±0.051 | 0.213±0.032 | 0.213±0.024 |
+    | | |
+
+    | Sanremo | 0.206 |0.027 | 0.202±0.027 | 0.218±0.034 | 0.202±0.021 | 0.219±0.028
+    | 0.219±0.010 | 0.217±0.001 |
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 6]
+
+
+    # 2 Table-level network robustness under targeted attack with different protection
+    strategies
+
+
+    | Dataset | HDA | CI | MinSum | FINDER | NIRM | CoreHLDA | EMD | MultiDiscriminant
+    |
+
+    |---|---|---|---|---|---|---|---||
+
+    | US | 0.070 | 0.069 | 0.053 | 0.085 | 0.069 | 0.136 | 0.136 |
+
+    | FAQ | 0.331 | 0.346 | 0.288 | 0.350 | 0.330 | 0.350 | 0.350 |
+
+    | Clegens | 0.226 | 0.226 | 0.161 | 0.240 | 0.240 | 0.239 | 0.239 |
+
+    | Drosophila | 0.117 | 0.112 | 0.057 | 0.119 | 0.117 | 0.127 | 0.127 |
+
+    | FbTw | 0.326 | 0.322 | 0.330 | 0.338 | 0.332 | 0.343 | 0.348 |
+
+    | NetSci | 0.132 | 0.111 | 0.063 | 0.122 | 0.125 | 0.131 | 0.122 |
+
+    | Sachpcomb | 0.116 | 0.115 | 0.051 | 0.132 | 0.052 | 0.159 | 0.162 |
+
+    | Homo | 0.122 | 0.107 | 0.109 | 0.159 | 0.130 | 0.135 | 0.144 |
+
+    | Sanremo2016 | 0.172 | 0.156 | 0.006 | 0.139 | 0.174 | 0.177 | 0.182 |
+
+
+    The best results are highlighted (corresponding to the highest AUC values).
+
+
+    Supplementary Table 4b indicates that MultiDiscriminant with the BA network performs
+    much better than the model with node-level removal and GMM. The performance of
+    MultiDiscriminant degrades less than for other algorithms, such as HDA and CI.
+    Cluster similarity significantly influences MultiDiscriminant''s performance.
+    We adjust the importance of the cluster information by varying degrees of interlayer
+    similarity. As shown in Supplementary Table 4c, the threshold parameter g is varied
+    and deteriorates for extreme values (i.e., g = 0 and g = 1).
+
+
+    not in the protected set (that is, targeted). We then iterate the above node-removal
+    process until the LMMC reaches 1 fraction of the number of attacked nodes
+
+
+    # ### Application to the prevention of disease spreading and the attack-protect
+    strategy in real-world networks
+
+
+    Network connectivity is a crucial factor for network functionality, as the size
+    of the LMMC is particularly relevant to problems such as disease spreading and
+    attack-protect strategies. We evaluate the effectiveness of MultiDiscriminant
+    in both applications.
+
+
+    nodes where the LMMC reaches 1 fraction of the number of nodes. We then remove
+    the nodes with the highest order until 1 fraction of the initial residual nodes
+
+
+    # ### Evaluating MultiDiscriminant''s efficacy in immunization strategies.
+
+
+    We use MultiDiscriminant to design strategies for disease spreading on social
+    networks: FbTw and Sanremo2016. First, we use the node demining strategy to identify
+    nodes that play a crucial role in preventing disease spreading. Second, we use
+    the node-removal strategy to identify nodes that are vulnerable to attacks.
+
+
+    of the initial network nodes, less than 1% of the residual network''s nodes. In
+    Tables 1 and 2, we show that MultiDiscriminant maintains robustness, outperforming
+    other algorithms under both targeted attack and the random-factor attacks.
+
+
+    MultiDiscriminant shows its versatility and reliability, by protecting the most
+    critical nodes through its disease spreading strategy, also protecting the network
+    against vulnerable failures. This dual capability of
+
+
+    # ### Conclusion
+
+
+    In this study, we addressed the problem of dismantling one-to-one interdependent
+    networks using a deep learning approach named MultiDiscriminant. The method proposes
+    a cluster-based embedding framework and a DQN-based classifier
+
+
+    to train agents in learning complex dismantling strategies. We demonstrate that
+    MultiDiscriminant outperforms existing state-of-the-art algorithms. Compared with
+    other dismantling strategies, MultiDiscriminant shows high similarity
+
+
+    We demonstrate that an immunization strategy prevents the spreadout outbreak of
+    disease. Compared with other algorithms, the immunization strategy proposed by
+    MultiDiscriminant reduces the number of nodes that must be immunized to stop the
+    spreading of the epidemic.
+
+
+    to the capabilities across various network topologies and node cost distributions,
+    which can be easily applied to various practical scenarios.
+
+
+    Our work underscores the potential of combining graph neural networks with reinforcement
+    learning for complex network tasks and opens avenues for future research at enhancing
+    the scalability and adaptability of such methods for broader applications.
+
+
+    MultiDiscriminant''s performance in protecting network connected under targeted
+    attacks and random failures. We protect the first 1% nodes in the set of nodes
+    identified by MultiDiscriminant or the immunization strategy. We then evaluate
+    the network by removing either 1% of the residual nodes (at random, for failure)
+    or the 1% nodes belonging to MultiDiscriminant that'
+  - '[PAGE 7]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41256-020-01070-2
+
+
+    One such capability could be the extension of MultDisanter dismantling problems
+    for multilayer networks, for example, networks of many-to-many interdependent
+    layers $\mathcal{N}$ or networks connected by redundant interdependencies. We
+    leave such extensions to future research.
+
+
+    ```
+
+    $AUDC = \frac{1}{N} \sum_{i=1}^{N} (F(S) - F(S \setminus \{v_i\))$$
+
+    ```
+
+
+    $F(V)$ is the cost associated with nodes of the graph. This is the definition
+    of the so-called robustness metric introduced by Schneider et al. For computational
+    reasons, we approximate AUDC by summing the first $N$ contributions such as $P(S_t;
+    S_t)$ for $t = 0, \dots, N$. This provides a good approximation of the true value.
+
+
+    # Dismantling multilayer interdependent networks
+
+
+    **Problem formulation.** We consider a network consisting of two layers of interactions.
+    Nodes in the two layers are one-interdependent. For simplicity but without loss
+    of generality, we do not make a distinction between one layer and the other layer,
+    as we treat them as if they all belong to the same set of nodes. We represent
+    the network as $G = (V, E^1, E^2)$, where $|V|$ denoting the total number of nodes,
+    and $E^l$ are the edges in layer $l = 1$. The generic element of the adjacency
+    matrix of layer $l$ is $A^l_{ij} = 1$ if $(i, j) \in E^l$ and $A^l_{ij} = 0$ otherwise.
+
+
+    Large-scale connectivity of the network is quantified by the fraction of nodes
+    belonging to the LMMC of our network. Let $P(S) = \frac{|S|}{|V|}$, where $|S|$
+    is the number of nodes in the LMMC and $|V|$ is the number of nodes in the initial
+    LMMC. When all nodes are present in the network, $P(S) = 1$. If we remove nodes
+    belonging to a subset $S \subset V$, if $S = \emptyset$, then $P(S) = 0$.
+
+
+    Network dismantling, often referred to as the dismantling problem, can be seen
+    as a constrained optimization problem.
+
+
+    ```
+
+    $S^*(C) = \arg \min_{S} P(S),$$
+
+    ```
+
+
+    The constraint is imposed on the cost $C$ of removing elements from the set $S$.
+    In this article, we consider three types of cost: (1) unit cost, (2) degree cost
+    and (3) resource cost. In the unit-cost version, the cost function associated
+    with the set $S$ is its size, so $C(S) = |S|$. The degree-cost version is defined
+    as $C(S) = \sum_{v \in S} d_v$, where $d_v$ is the degree of node $v$ in the graph
+    $G$. We denote $d_v^{(l)}$ as the degree of node $v$ in layer $l$, the sum over
+    nodes $v$ in the set $S$, with the nodes in $S$ counted only once. In the random-cost
+    version, the cost associated with each node $i$ is given by $F(i) = X_i$, where
+    $X_i$ is extracted from a distribution with average 0.5 and variance 0.1, or the
+    Poisson distribution with average value of 1.
+
+
+    An important aspect in the characterization of the optimization problem is the
+    identification of the minimum-cost set of nodes that can lead to the disappearance
+    of the multicast LMMC. Such define
+
+
+    ```
+
+    $S^*(C) = \arg \min_{S: C(S) \leq C} P(S),
+
+    ```
+
+
+    Essentially, only $S$ that reduce $P$ below the threshold value are considered
+    solutions to the problem:
+
+
+    Approximating the multilayer network dismantling problem. All algorithms considered
+    in this article construct approximate approaches to the dismantling problem sequentially,
+    ensuring that the set proposed for the solution is built by adding one element
+    at a time. With indicate, $f_1, f_2, \dots, f_n$, are the labels of the nodes
+    added according to the order and then. We define $S_t = \{f_1, \dots, f_t\}$,
+    the approximate solution of the algorithm when the set is composed of respectively
+    elements. If $S_0 = \emptyset$ and $S_n = V$, we clearly have $P(S_t) \geq P(S_{t+1})$
+    and $F(S_t) \leq F(S_{t+1})$ for all $t=1, \dots, n$.
+
+
+    We evaluate the performance of an approximate algorithm by measuring the AUD,
+
+
+    ```
+
+    $C = \frac{F(S)}{F(V)},$
+
+    ```
+
+
+    Note that both AUDC and $C$ are defined in the initial [0, 1]. Also for metrics,
+    low value indicate good performance of the dismantling problem, whereas values
+    close to 1 denote poor performance.
+
+
+    # Multilayer
+
+
+    We provide details about the encoder, decoder, and dismantling strategy used in
+    Multilayer.
+
+
+    Encoder. The framework of the MGNN is shown in Figure 5. MGNN consists of an intralayer
+    graph convolutional neural and layer attention module to aggregate information
+    from different layers.
+
+
+    Initializing features in network embedding plays a crucial role in building a
+    solid foundation and convergence. Drawing insight from the initialization method
+    used in FINDER, MGNN utilizes a multilayer MLP to encode features
+
+
+    ```
+
+    $H^{(l)} = \text{ReLU}(W_l X^{(l)}),$$
+
+    ```
+
+
+    Where $X^{(l)}$ is the normalized degree of node $i$ in layer $l$ (defining the
+    degree of a node by the maximum degree of a node in layer). $\text{ReLU}(\cdot)$
+    is the activation function, $W_l$ is a weight matrix and $\cdot$ denotes the l2
+    normalization.
+
+
+    Using the initialized features we apply the intralayer graph convolutional network
+    to the node embeddings by iteratively aggregating information from the node''s
+    features and the representations of its.
+
+
+    ```
+
+    $H^{(l)} = \text{ReLU}(W_l H^{(l-1)} + U_l \cdot \sum_{j \neq l} H^{(j-1)}),
+
+    ```
+
+
+    In equation (l), $H^{(l)}$ represents the embedding of node $i$ in layer $l$ for
+    the forward propagation step. It captures $h$ hidden information. $W_l$ and $U_l$
+    are weight matrices, and $N^{(l)}$ denotes the set of neighbor nodes in layer
+    $l$. The final representation can be represented as $H^{(L)}$.
+
+
+    In multilayer networks, nodes across layers depend on one another and interact.
+    Given the heterogeneity of layers the cross layer influence can be captured, first
+    by using a mapping function to represent nodes from different layers into a shared
+    latent space, which is formed as
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_7_0.png)
+
+
+    Nature Intelligence 7 | Volume 2023 (5) 1266–1277
+
+
+    1273'
+  md: '
+
+    ## 2 Table-level network robustness under targeted attack with different protection
+    strategies
+
+
+    | Dataset | HDA | CI | MinSum | FINDER | NIRM | CoreHLDA | EMD | MultiDiscriminant
+    |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | US | 0.070 | 0.069 | 0.053 | 0.085 | 0.069 | 0.136 | 0.136 | |
+
+    | FAQ | 0.331 | 0.346 | 0.288 | 0.350 | 0.330 | 0.350 | 0.350 | |
+
+    | Clegens | 0.226 | 0.226 | 0.161 | 0.240 | 0.240 | 0.239 | 0.239 | |
+
+    | Drosophila | 0.117 | 0.112 | 0.057 | 0.119 | 0.117 | 0.127 | 0.127 | |
+
+    | FbTw | 0.326 | 0.322 | 0.330 | 0.338 | 0.332 | 0.343 | 0.348 | |
+
+    | NetSci | 0.132 | 0.111 | 0.063 | 0.122 | 0.125 | 0.131 | 0.122 | |
+
+    | Sachpcomb | 0.116 | 0.115 | 0.051 | 0.132 | 0.052 | 0.159 | 0.162 | |
+
+    | Homo | 0.122 | 0.107 | 0.109 | 0.159 | 0.130 | 0.135 | 0.144 | |
+
+    | Sanremo2016 | 0.172 | 0.156 | 0.006 | 0.139 | 0.174 | 0.177 | 0.182 | |
+
+
+    The best results are highlighted (corresponding to the highest AUC values).
+
+
+    Supplementary Table 4b indicates that MultiDiscriminant with the BA network performs
+    much better than the model with node-level removal and GMM. The performance of
+    MultiDiscriminant degrades less than for other algorithms, such as HDA and CI.
+    Cluster similarity significantly influences MultiDiscriminant''s performance.
+    We adjust the importance of the cluster information by varying degrees of interlayer
+    similarity. As shown in Supplementary Table 4c, the threshold parameter $g$ is
+    varied and deteriorates for extreme values (i.e., $g = 0$ and $g = 1$).
+
+
+    not in the protected set (that is, targeted). We then iterate the above node-removal
+    process until the LMMC reaches 1 fraction of the number of attacked nodes.
+
+
+    ### Application to the prevention of disease spreading and the attack-protect
+    strategy in real-world networks
+
+
+    Network connectivity is a crucial factor for network functionality, as the size
+    of the LMMC is particularly relevant to problems such as disease spreading and
+    attack-protect strategies. We evaluate the effectiveness of MultiDiscriminant
+    in both applications.
+
+
+    nodes where the LMMC reaches 1 fraction of the number of nodes. We then remove
+    the nodes with the highest order until 1 fraction of the initial residual nodes.
+
+
+    ### Evaluating MultiDiscriminant''s efficacy in immunization strategies.
+
+
+    We use MultiDiscriminant to design strategies for disease spreading on social
+    networks: FbTw and Sanremo2016. First, we use the node demining strategy to identify
+    nodes that play a crucial role in preventing disease spreading. Second, we use
+    the node-removal strategy to identify nodes that are vulnerable to attacks.
+
+
+    of the initial network nodes, less than 1% of the residual network''s nodes. In
+    Tables 1 and 2, we show that MultiDiscriminant maintains robustness, outperforming
+    other algorithms under both targeted attack and the random-factor attacks.
+
+
+    MultiDiscriminant shows its versatility and reliability, by protecting the most
+    critical nodes through its disease spreading strategy, also protecting the network
+    against vulnerable failures. This dual capability of
+
+
+    ### Conclusion
+
+
+    In this study, we addressed the problem of dismantling one-to-one interdependent
+    networks using a deep learning approach named MultiDiscriminant. The method proposes
+    a cluster-based embedding framework and a DQN-based classifier. We demonstrate
+    that MultiDiscriminant outperforms existing state-of-the-art algorithms. Compared
+    with other dismantling strategies, MultiDiscriminant shows high similarity as
+    immunization strategy prevents the spread of disease. We demonstrate this across
+    various network topologies and cost distributions, which can be easily applied
+    to practical scenarios. Our work underscores the potential of combining graph
+    neural networks with reinforcement learning for complex network tasks and opens
+    avenues for future research at enhancing the scalability and adaptability of such
+    methods. MultiDiscriminant''s performance in protecting network under targeted
+    attacks and random failures. We then evaluate the network by removing either 1%
+    of the residual nodes (at random) or nodes identified by MultiDiscriminant.
+
+
+    ### Dismantling multilayer networks
+
+
+    **Problem formulation.** We consider a network consisting of two layers of interactions.
+    Nodes in the two layers are one-interdependent. For simplicity but without loss
+    of generality, we do not make distinction between one layer and the other, as
+    we treat them if they all belong to the same set of nodes. We represent the network
+    as $G = (V, E^1, E^2)$, where $|V|$ denoting the total number of nodes, and $E^l$
+    are the edges in layer $l = 1$. The generic element of the adjacency matrix of
+    layer $l$ is $A^l_{ij} = 1$ if $(i, j) \in E^l$ and $A^l_{ij} = 0$ otherwise.
+
+
+    Large-scale connectivity of the network is quantified by the fraction of nodes
+    belonging to the LMMC of our network. Let $P(S) = \frac{|S|}{|V|}$, where $|S|$
+    is the number of nodes in LMMC and $|V|$ is the number of nodes in the initial
+    LMMC. When all nodes are present in the network, $P(S) = 1$. If we remove nodes
+    belonging to a subset $S \subset V$, if $S = \emptyset$, then $P(S) = 0$.
+
+
+    Network dismantling, often referred to as the dismantling problem, can be seen
+    as a constrained optimization problem:
+
+
+    $$S^*(C) = \arg \min_{S} P(S)$$
+
+
+    The constraint is imposed on the cost $C$ of removing elements from the set $S$.
+    In this article, we consider three types of cost: (1) unit cost, (2) degree cost
+    and (3) resource cost. In the unit-cost version, the cost function associated
+    with the set $S$ is its size, so $C(S) = |S|$. The degree-cost version is defined
+    as $C(S) = \sum_{v \in S} d_v$, where $d_v$ is the degree of node $v$ in the graph
+    $G$. We denote $d_v^{(l)}$ as the degree of node $v$ in layer $l$, the sum over
+    nodes $v$ in the set $S$, with the nodes in $S$ counted only once. In the random-cost
+    version, the cost associated with each node $i$ is given by $F(i) = X_i$, where
+    $X_i$ is extracted from a distribution with average 0.5 and variance 0.1, or the
+    Poisson distribution with average value of 1.
+
+
+    An important aspect in the characterization of the optimization problem is the
+    identification of the minimum-cost set of nodes that can lead to the disappearance
+    of the LMMC. Such define:
+
+
+    $$S^*(C) = \arg \min_{S: C(S) \leq C} P(S)$$
+
+
+    Essentially, only $S$ that reduce $P$ below the threshold value are considered
+    solutions to the problem:
+
+
+    Approximating the multilayer network dismantling problem. All algorithms considered
+    in this article construct approximate approaches to the dismantling problem sequentially,
+    ensuring that the set proposed for the solution is built by adding one element
+    at a time. With indicate, $f_1, f_2, \dots, f_n$, are the labels of the nodes
+    added according to the order and then. We define $S_t = \{f_1, \dots, f_t\}$,
+    the approximate solution of the algorithm when the set is composed of respectively
+    elements. If $S_0 = \emptyset$ and $S_n = V$, we clearly have $P(S_t) \geq P(S_{t+1})$
+    for all $t=0, \dots, n$. We evaluate the performance of an approximate algorithm
+    by measuring AUD:
+
+
+    $$AUD = \frac{1}{N} \sum_{i=1}^{N} (F(S) - F(S \setminus \{v_i\}))$$
+
+
+    $F(V)$ is the cost associated with nodes of the graph. This is the definition
+    of the so-called robustness metric introduced by Schneider et al. For computational
+    reasons, we approximate AUD by summing the $N$ contributions such as $P(S_t; S_t)$,
+    which provides a good approximation of the true value. One such capability could
+    be the extension of dismantling problems for multilayer networks, for example,
+    networks of many-to-many layers $\mathcal{N}$ or networks connected by redundant
+    interdependencies. We leave such extensions to future research.
+
+
+    https://doi.org/10.1038/s41586-020-01070-2
+
+
+    Note that both AUD and $C$ are defined in [0, 1]. Also for metrics, low value
+    indicate good performance.
+
+
+    ## Multilayer
+
+
+    We provide details about the encoder, decoder, and dismantling strategy used in
+    Multilayer.
+
+
+    Encoder. The framework of MGNN is shown in Figure 5. MGNN consists of an intralayer
+    graph neural and layer attention module to aggregate information from different
+    layers.Initializing features in network embedding plays a crucial role in building
+    a solid foundation and convergence. Drawing insight from the initialization method
+    used in FINDER, MGNN utilizes a multilayer MLP to encode features:
+
+
+    $$H^{(l)} = \text{ReLU}(W_l X^{(l)})$$
+
+
+    Where $X^{(l)}$ is the normalized degree of node $i$ in layer $l$ (defining the
+    degree of a node by the maximum degree of a node in layer). $\text{ReLU}(\cdot)$
+    is the activation function, $W_l$ is a weight matrix and $\cdot$ denotes the l2
+    normalization.
+
+
+    Using the initialized features we apply the intralayer graph convolutional network
+    to the node embeddings by iteratively aggregating information from the node''s
+    features and the representations of its:
+
+
+    $$H^{(l)} = \text{ReLU}(W_l H^{(l-1)} + U_l \cdot \sum_{j \neq l} H^{(j-1)})$$
+
+
+    In equation (l), $H^{(l)}$ represents the embedding of node $i$ in layer $l$ for
+    the forward propagation step. It captures $h$ hidden information. $W_l$ and $U_l$
+    are weight matrices, and $N^{(l)}$ denotes the set of neighbor nodes in layer
+    $l$. The final representation can be represented as $H^{(L)}$.
+
+
+    In multilayer networks, nodes across layers depend on one another and interact.
+    Given the heterogeneity of layers the cross layer influence can be captured, first
+    by using a mapping function to represent nodes from different layers into a shared
+    latent space, which is formed as
+
+
+    ![](img/d057769f0d49aabde85e4a59e009e9ea_7_0.png)
+
+
+    Nature Intelligence 7 | Volume 2023 (5) 1266–1277
+
+    '
+  mdcn: '
+
+
+    ## 2 不同保护策略下针对攻击的表级网络鲁棒性
+
+
+    | 数据集 | HDA | CI | MinSum | FINDER | NIRM | CoreHLDA | EMD | MultiDiscriminant
+    |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | US | 0.070 | 0.069 | 0.053 | 0.085 | 0.069 | 0.136 | 0.136 | |
+
+    | FAQ | 0.331 | 0.346 | 0.288 | 0.350 | 0.330 | 0.350 | 0.350 | |
+
+    | Clegens | 0.226 | 0.226 | 0.161 | 0.240 | 0.240 | 0.239 | 0.239 | |
+
+    | Drosophila | 0.117 | 0.112 | 0.057 | 0.119 | 0.117 | 0.127 | 0.127 | |
+
+    | FbTw | 0.326 | 0.322 | 0.330 | 0.338 | 0.332 | 0.343 | 0.348 | |
+
+    | NetSci | 0.132 | 0.111 | 0.063 | 0.122 | 0.125 | 0.131 | 0.122 | |
+
+    | Sachpcomb | 0.116 | 0.115 | 0.051 | 0.132 | 0.052 | 0.159 | 0.162 | |
+
+    | Homo | 0.122 | 0.107 | 0.109 | 0.159 | 0.130 | 0.135 | 0.144 | |
+
+    | Sanremo2016 | 0.172 | 0.156 | 0.006 | 0.139 | 0.174 | 0.177 | 0.182 | |
+
+
+    最佳结果已加粗（对应最高 AUC 值）。
+
+
+    补充表 4b 表明，在 BA 网络上，MultiDiscriminant 的性能远优于节点级移除模型和 GMM 模型。MultiDiscriminant 的性能下降程度低于其他算法（如
+    HDA 和 CI）。类相似性显著影响了 MultiDiscriminant 的性能。我们通过改变不同程度的层间相似性来调整类信息的重要性。如补充表 4c 所示，阈值参数
+    $g$ 发生变化，并在极端值（即 $g = 0$ 和 $g = 1$）时性能恶化。
+
+
+    不在保护集中（即受针对性攻击的）。然后我们迭代上述节点移除过程，直到 LMMC 达到受攻击节点数量的 1 分分之一。
+
+
+    ### 在真实网络疾病传播预防及攻防策略中的应用
+
+
+    网络连通性是网络功能的关键因素，因为 LMMC 的大小与疾病传播和攻防策略等问题特别相关。我们在两种应用中评估了 MultiDiscriminant 的有效性。
+
+
+    LMMC 达到节点总数 1 分分之一的节点。然后我们移除高阶节点，直到达到初始剩余节点的 1 分分之一。
+
+
+    ### 评估 MultiDiscriminant 在免疫策略中的效力
+
+
+    我们使用 MultiDiscriminant 设计了社交网络（FbTw 和 Sanremo2016）的疾病传播策略。首先，我们使用节点挖掘策略来识别在防止疾病传播中起关键作用的节点。其次，我们使用节点移除策略来识别易受攻击的节点。
+
+
+    初始网络节点的少于 1%。在表 1 和表 2 中，我们展示了 MultiDiscriminant 维持了鲁棒性，在针对性攻击和随机因素攻击下均优于其他算法。
+
+
+    MultiDiscriminant 通过其疾病传播策略保护最关键的节点，展示了多功能性和可靠性，同时也保护了网络免受脆弱故障的影响。这种双重能力
+
+
+    ### 结论
+
+
+    在这项研究中，我们使用一种名为 MultiDiscriminant 的深度学习方法解决了一对一相互依赖网络的拆解问题。该方法提出了一种基于类的嵌入框架和基于
+    DQN 的分类器。我们证明了 MultiDiscriminant 优于现有的先进算法。与其他拆解策略相比，MultiDiscriminant 作为免疫策略在防止疾病传播方面表现出很高的相似性。我们在各种网络拓扑结构和成本分布中证明了这一点，这可以轻松应用于实际场景。我们的工作强调了将图神经网络与强化学习相结合处理复杂网络任务的潜力，并为未来研究增强此类方法的可扩展性和适应性开辟了途径。MultiDiscriminant
+    在保护网络免受针对性攻击和随机故障方面的表现。随后，我们通过移除 1% 的剩余节点（随机）或由 MultiDiscriminant 识别的节点来评估网络。
+
+
+    ### 拆解多层网络
+
+
+    **问题公式。** 我们考虑一个由两个交互层组成的网络。两层中的节点是单相互依赖的。为了简单起见且不失通用性，我们不对其中一层和另一层进行区分，因为如果它们都属于同一节点集合，我们会处理它们。我们将网络表示为
+    $G = (V, E^1, E^2)$，其中 $|V|$ 表示节点总数，$E^l$ 表示第 $l$ 层的边，$l = 1$。第 $l$ 层的邻接矩阵的通用元素为
+    $A^l_{ij} = 1$，如果 $(i, j) \in E^l$，否则为 $A^l_{ij} = 0$。
+
+
+    大规模网络连通性通过属于 LMMC 的节点比例来量化。令 $P(S) = \frac{|S|}{|V|}$，其中 $|S|$ 是 LMMC 中的节点数，$|V|$
+    是节点数。当所有节点存在于网络中时，$P(S) = 1$。如果移除子集 $S \subset V$，若 $S = \emptyset$，则 $P(S) =
+    0$。网络拆解（通常被称为拆解问题）可以作为一个约束优化问题：
+
+
+    $$S^*(C) = \arg \min_{S} P(S)$$
+
+
+    施加在移除集合 $S$ 元素的成本 $C$ 之上的约束。本文考虑了三种成本类型：1) 单位成本、（2) 度、（3) 随机成本。在单位成本版本中，与集合 $S$
+    相关的函数是大小，因此 $C(S) = |S|$。度版本定义为 $C(S) = \sum_{v \in S} d_v$，其中 $d_v$ 是图 $G$ 中节点
+    $v$ 的度。我们用 $d_v^{(l)}$ 表示第 $l$ 层中节点 $v$ 的度，集合 $S$ 中的节点仅计算一次。在随机成本版本中，每个节点 $i$
+    相关的成本由 $F(i) = X_i$ 给出，其中 $X_i$ 取自均值为 0.5、方差为 0.1 的分布，或均值为 1 的泊松分布。
+
+
+    优化问题描述的一个重要方面是识别导致 LMMC 消失的最小成本节点集。此类定义：
+
+
+    $$S^*(C) = \arg \min_{S: C(S) \leq C} P(S)$$
+
+
+    本质上，只有将 $P$ 降低到阈值以下的 $S$ 才被视为解决方案：近似多层网络拆解。本文考虑的所有算法顺序构造拆解问题的近似方法，确保解决方案每次添加一个元素。$f_1,
+    f_2, \dots, f_n$ 是按照顺序添加的节点标签。我们定义 $S_t = \{f_1, \dots, f_t\}$ 为集合由相应元素组成时的算法近似解。如果
+    $S_0 = \emptyset$ 且 $S_n = V$，对于所有 $t=0, \dots, n$，显然有 $P(S_t) \geq P(S_{t+1})$。我们通过衡量
+    AUD 来评估近似算法的性能：
+
+
+    $$AUD = \frac{1}{N} \sum_{i=1}^{N} (F(S) - F(S \setminus \{v_i\}))$$
+
+
+    $F(V)$ 是与图中节点相关的成本。这是 Schneider 等人引入的所谓鲁棒性指标。由于计算原因，我们通过累加 $N$ 个贡献来近似 AUD，这提供了真实值的良好近似。这种能力之一可以是多层网络拆解问题的扩展，例如多层
+    $\mathcal{N}$ 或通过冗余依赖关系连接的网络。我们将此类扩展留给未来研究。
+
+
+    https://doi.org/10.1038/s41586-020-0170-2
+
+
+    注意 AUD 和 $C$ 都定义在 [0, 1] 。对于指标，低值表示良好的性能。
+
+
+    ## Multilayer
+
+
+    我们提供了 Multilayer 中使用的编码器、解码器和拆解策略的细节。
+
+
+    编码器。MGNN 的框架如图 5 所示。MGNN 由层内图和层注意力模块组成，用于聚合来自不同层的信息。网络嵌入中的初始化特征对于建立坚实基础和收敛至关重要。借鉴
+    FINDER 的初始化方法，MGNN 利用多层 MLP 编码：
+
+
+    $$H^{(l)} = \text{ReLU}(W_l X^{(l)})$$
+
+
+    其中 $X^{(l)}$ 是节点 $i$ 在层 $l$ 中的归一化度（通过节点最大度定义节点度）。$\text{ReLU}(\cdot)$ 是激活函数，$W_l$
+    是权重矩阵，$\cdot$ 表示 l2 归一化。
+
+
+    使用初始化特征，我们通过迭代聚合节点特征及其表示的信息，将层内图卷积神经网络应用于节点嵌入：
+
+
+    $$H^{(l)} = \text{ReLU}(W_l H^{(l-1)} + U_l \cdot \sum_{j \neq l} H^{(j-1)})$$
+
+
+    在方程 (l) 中，$H^{(l)}$ 代表前向传播步中节点 $i$ 在层 $l$ 中的嵌入。它捕捉了 $h$ 个隐藏信息。W_l$ 和 $U_l$ 是权重矩阵，$N^{(l)}$
+    表示层 $l$ 中的邻居节点集。最终表示可以表示为 $H^{(L)}$。
+
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 8]\n\n# Article\n\nhttps://doi.org/10.1038/s41256-020-01070-2\n\n```\n\
+    $h_i^{(l)} = \\text{tanh}(W_l h_i^{(l-1)} + b_l);$\n```\n\nWe aggregate the result\
+    \ of node $v$ across all layers\n\n```\n$Q(s, a) = \\sum_{t=1}^{\\infty} \\gamma^t\
+    \ r(s_t, a_t);$\n```\n\nPrevious aggregation techniques typically use cross-layer\
+    \ weights to quantify interlayer overlap, overruling the reality of layer connections\
+    \ within the same layer.\n\nwhere $Q(s, a)$ is the expected $Q$-value taking action\
+    \ $a$, under node $v$ is over the overall interaction of the interconnected network.\n\
+    \nthese higher-order layer network attention enhancements and overcome the limitations\
+    \ of previous methods. Here we use a multi-layer interlayer attention mechanism\
+    \ that captures interactions across layers, enabling the model to effectively\
+    \ learn interactions between different layers of the interdependent network:\n\
+    \nloss and function dependency. For the observed result, we use the impact of\
+    \ node removal on the network's connectivity to quantify the direct reward of\
+    \ removal across\n\n```\n$a_i^{(l)} = \\sigma(W_i^{(l)}h_i^{(l-1)} + b_i^{(l)})$,\n\
+    ```\n\n```\n$r(v) = f(G) - f(G-v);$\n```\n\nwhere $P(l)$ is the size of the LMCC\
+    \ of the graph when node $v$ is under, and $f(G)$ is the cost of removing it.\n\
+    \nwhere $a^{(l)}$ is the computed interlayer attention of node $v$ from layer\
+    \ $q$ to $t$, $W$ is a trainable weight matrix, $b$ defines a bias, $p$ is a vector,\
+    \ $L$ is the number of layers and $S$ for the standard reward,\n\nThe impact of\
+    \ removing a node might not be immediate and can have delayed effects on the network's\
+    \ connectivity. We apply\n\n$n$-step DQN uses $n$-step returns in a replay buffer\
+    \ to better capture the delayed effects by considering the cumulative reward over\
+    \ multiple steps.\n\nit aggregates the layer representation and interlayer features\
+    \ to form the final node embedding using\n\nThe target $Q$-value is computed of\
+    \ the cumulative rewards. The direct reward from the next time step under potential\
+    \ action $a$ is denoted as $\\max_{a'} Q(s', a')$. The decoder framework evaluates\
+    \ the predicted rewards of an action $a$ at time $t$ denoted as $Q(s, a)$. The\
+    \ $Q$-learning loss aims to minimize the difference between the predicted $Q$\
+    \ and the target $Q$ value\n\n```\n$x_i^{(l)} = \\sum_{p=1}^{l} \\alpha_p^{(l)}\
+    \ h_i^{(p)};$\n```\n\nwhere $x_i^{(l)}$ is the final representation of node $v$\
+    \ in layer $l$.\n\nThe decoder takes the state and action vector as input and\
+    \ computes the $Q$ values for all possible actions in a network. In this article,\
+    \ we use node representations derived from MGAN as action: $x_i^{(l)}$ is the\
+    \ action of node $v$ in layer $l$. This state represents the impact of removing\
+    \ node $v$ on the network. We use graph neural networks to estimate the removal\
+    \ of nodes, so we add a virtual node $v$ to the state. All residual nodes are\
+    \ direct neighbours of node $s$ but it is not necessary to consider any other\
+    \ node in that layer.\n\n```\n$Loss_Q = \\mathbb{E}_{(s,a,r,s') \\sim UB} [(r\
+    \ + \\gamma \\max_{a'} Q(s', a'; \\theta^-) - Q(s, a; \\theta))^2]$\n```\n\nwhere\
+    \ $UB$ denotes the uniform sampling distribution over the experience buffer $B$,\
+    \ $\theta$ is current network parameters and $\theta^-$ is updated periodically\
+    \ from $\theta$, and $\\gamma$ is the discount factor that enhances the future\
+    \ of rewards.\n\nIn different layers we have used various rewards: the direct\
+    \ reward and the reward of removal of node $v$; for example, a node might serve\
+    \ as a core connecting node in communities in one layer but act as a peripheral\
+    \ node in another layer. To have a comprehensive view of node importance from\
+    \ various layers, we use a reward-level fusion mechanism to quantify the final\
+    \ node reward with\n\nWe also add a graph reconstruction loss to preserve the\
+    \ network topology\n\n```\n$Loss_R = \\sum_{i=1}^{n} ||\\hat{x}_i - x_i||^2$;\n\
+    ```\n\n```\n$Loss = Loss_Q + \\beta Loss_R$;\n```\n\n```\n$\\omega^{(l)} = \\\
+    frac{1}{M} \\sum_{i=1}^{M} \\text{RelU}(r^{(i)}, \\mathbf{M}_i);\n```\n\nwhere\
+    \ $\\omega^{(l)}$ is the reward importance of node $v$ in layer $l$, and $M$ and\
+    \ $\\mathbf{M}_i$ are trainable matrices.\n\nwhere $\beta$ is a hyperparameter\
+    \ that balances the importance of nodes. By building the established environment,\
+    \ encoding, and optimization framework, we use a greedy selection procedure to\
+    \ determine the optimal action and node removal based on the Q value. During the\
+    \ training phase, an e-greedy strategy is used, where the action with the highest\
+    \ Q is selected with a probability of $(1-e)$, while a random action is chosen\
+    \ with probability $e$. The value of $Q$ is used to balance exploration and exploitation.\
+    \ In the application phase,\n\nNatural Intelligence | Volume 7 | 2025 | 1266–1277\n\
+    \n1274"
+  - '[PAGE 9]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41256-025-01070-2
+
+
+    # Other algorithms
+
+
+    Here we described other algorithms used in our experiments. For instance, layer
+    denoising algorithms, we explain how they are constructed and utilized in multiple
+    networks. These generalized algorithms also use a global score to reach the maximum
+    of a centrality centered metric estimated on each individual layer. This heuristic
+    approach was refined by as a generalization of the targeted-attack protocol from
+    single layer to one-to-one networks. We stress, however, that merging scores into
+    a global score: future work could leverage a deep learning approach to infer the
+    appropriate rule of score aggregation to maximize the performance of the results.
+
+
+    CoreHLDA. CoreHLDA² is used for network recycling, and refining processes to dismantle
+    multiplex networks. A novel scoring method used in network recycling and tree
+    by combining the scores from the single-layer network.
+
+
+    # Reporting summary
+
+
+    Further information on research design is available in the Nature Portfolio linked
+    to this article.
+
+
+    # Data availability
+
+
+    All data used in this study are available. To facilitate the reproducibility of
+    our results, all necessary data are available at https://doi.org/10.2443/CC038603882
+    (ref. 51).
+
+
+    # Code availability
+
+
+    HDA. We assign a score to each node $s_i = k_i^{(k)}$, and $k_i$ is the degree
+    of node $i$; which nodes are sorted by degree. We remove the node with the highest
+    degree. When nodes share identical degree, we randomly select one of them. Once
+    a node is removed, the degrees of the remaining nodes are updated.
+
+
+    The code developed for this research is available at https://doi.org/10.2443/CC038603882
+    (ref. 51).
+
+
+    # References
+
+
+    +   1. Watts, D. J., & Strogatz, S. H. Collective dynamics of ''small-world''
+    networks. Nature 398, 440–442 (1998).
+
+
+    CL. We use the advantage version of CL. In each layer, the score assigned to each
+    node $i$ is a function of the number of other nodes at distance $u$; a tunable
+    parameter. For $u=0$, the metric reduces to HDA. We use $u=1$ in our experiments,
+    to assign a score to each node which maximizes the total score of the network.
+    When a node is removed from the network, the scores of the remaining nodes are
+    updated. The implementation of theCl algorithm is available via GitHub at https://github.com/cmfit/Cl
+
+
+    +   2. Holme, P. Complex networks: structure and dynamics. Phys. Rep. 42, 175–308
+    (2006).
+
+
+    +   3. Cohen, R., Perez, A., Duvani, A., & Havlin, S. Robustness of the internet
+    under attack. Phys. Rev. 86, 3682 (2001).
+
+
+    +   4. Molnar, F. A., & Higham, A. M. Influence propagation in multiplex networks.
+    Nature 524, 65–68 (2015).
+
+
+    MinSum. We use MinSum to identify the interconnected component by their dismantling
+    scores. The position of node $i$ in the dismantling process of layer is represented
+    by $s_i = m_i/w_i$; we assign a score to node $i$ and remove the node with the
+    smallest score. For nodes with the same score, we randomly select one of them.
+    The implementation of the MinSum algorithm is available via GitHub at https://github.com/abaysalzer/dismantling
+
+
+    +   5. Barabasi, A. L., Guiltner, N., & Marchalani, J. Network robustness: critical
+    points and transitions in electric power grids susceptible to cascading failures.
+    Science 394, 1285–994 (2002).
+
+
+    FINDER. FINDER uses a DRL framework to identify critical nodes of single-layer
+    networks. It estimates the expected node that is removed from layer $l$. In multiplex
+    networks, we assign to each node the score $s_i = \max(k_i^{(l)})$ and we remove
+    the node with the highest score. We used the well-trained FINDER version in the
+    unit scenario. A function implementation of FINDER is available via GitHub at
+    https://github.com/TianFrankY/FINDER. For other requirements, such as degree and
+    removal constraints, we retained the FINDER model with the same training parameters
+    for Multilayer analysis.
+
+
+    +   6. Bertagnoni, G., Gilli, A., & De Manci, M. Quantifying efficiency failures
+    in exchange market networks. Complex Systems 15, 125 (2021).
+
+
+    +   7. Chen, Y., Paul, G., Lledijos, R., & Stanley, H. E. A better immunization
+    strategy. Phys. Rev. Lett. 101, 058701 (2008).
+
+
+    +   8. Braunstein, A., Dalla, L., Sergiani, J., & Zoblik, L. Robustness of targeted
+    attacks on complex networks. Science 313, 12326–12330 (2006).
+
+
+    NIRM. NIRM uses both local and global searching mechanisms to find the critical
+    nodes in each layer. The score of node $i$ is given by $s_i = \max(k_i^{(l)},
+    m_i)$; where $m_i$ is the score of node $i$ in layer $l$. For nodes with identical
+    scores, we randomly select one of them. The implementation of the NIRM algorithm
+    is available at https://github.com/JiazhengZhang/NIRM
+
+
+    +   9. Ortime, A., et al. Robustness and resilience of complex networks. Nature,
+    414, 113–116 (2001).
+
+
+    +   10. Chen, W., Wang, Y., & Yang, S. Influence propagation in social networks.
+    In 15th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining
+    199–208 (2009).
+
+
+    +   11. Zhang, J., Wang, B., & Manci, G. Multilayer dismantling and early-warning
+    signals of disintegration in complex systems. Nat. 12, 5159 (2021).
+
+
+    +   12. Fan, C., Zeng, J., Sun, Y., & Liu, Y. J. Finding key nodes in networks
+    through deep reinforcement learning. Nat. Mach. Intell. 2, 888–95 (2021).
+
+
+    +   13. Bianconi, G. Multilayer Networks: Structure and Optimization (Oxford University
+    Press, 2018).
+
+
+    +   14. Buldyrev, V. S., Parisi, R., Paul, G. E., & Havlin, S. Cascading failures
+    in interdispersed networks. Nature 464, 1025–1028 (2010).
+
+
+    +   15. Vespignani, A. The fragility of networks. Nature 464, 968–975 (2010).
+
+
+    Nature Intelligence | 7 | August 2025 | 1266–1277
+
+
+    1275'
+  md: '
+
+    # Article
+
+
+    https://doi.org/10.1038/s41256-020-01070-2
+
+
+    ```
+
+    $h_i^{(l)} = \text{tanh}(W_l h_i^{(l-1)} + b_l);$
+
+    ```
+
+
+    We aggregate the result of node $v$ across all layers
+
+
+    ```
+
+    $Q(s, a) = \sum_{t=1}^{\infty} \gamma^t r(s_t, a_t);$
+
+    ```
+
+
+    Previous aggregation techniques typically use cross-layer weights to quantify
+    interlayer overlap, overruling the reality of layer connections within the same
+    layer. where $Q(s, a)$ is the expected $Q$-value taking action $a$, under node
+    $v$ is over the overall interaction of the interconnected network.
+
+
+    these higher-order layer network attention enhancements and overcome the limitations
+    of previous methods. Here we use a multi-layer interlayer attention mechanism
+    that captures interactions across layers, enabling the model to effectively learn
+    interactions between different layers of the interdependent network: loss and
+    function dependency. For the observed result, we use the impact of node removal
+    on the network''s connectivity to quantify the direct reward of removal across
+
+
+    ```
+
+    $a_i^{(l)} = \sigma(W_i^{(l)}h_i^{(l-1)} + b_i^{(l)})$,
+
+    ```
+
+
+    ```
+
+    $r(v) = f(G) - f(G-v);$
+
+    ```
+
+
+    where $P(l)$ is the size of the LMCC of the graph when node $v$ is under, and
+    $f(G)$ is the cost of removing it. where $a^{(l)}$ is the computed interlayer
+    attention of node $v$ from layer $q$ to $t$, $W$ is a trainable weight matrix,
+    $b$ defines a bias, $p$ is a vector, $L$ is the number of layers and $S$ for the
+    standard reward,
+
+
+    The impact of removing a node might not be immediate and can have delayed effects
+    on the network''s connectivity. We apply $n$-step DQN uses $n$-step returns in
+    a replay buffer to better capture the delayed effects by considering the cumulative
+    reward over multiple steps. it aggregates the layer representation and interlayer
+    features to form the final node embedding using the target $Q$-value is computed
+    of the cumulative rewards. The direct reward from the next time step under potential
+    action $a$ is denoted as $\max_{a''} Q(s'', a'')$. The decoder framework evaluates
+    the predicted rewards of an action $a$ at time $t$ denoted as $Q(s, a)$. The $Q$-learning
+    loss aims to minimize the difference between the predicted $Q$ and the target
+    $Q$ value
+
+
+    ```
+
+    $x_i^{(l)} = \sum_{p=1}^{l} \alpha_p^{(l)} h_i^{(p)};$
+
+    ```
+
+
+    where $x_i^{(l)}$ is the final representation of node $v$ in layer $l$. The decoder
+    takes the state and action vector as input and computes the $Q$ values for all
+    possible actions in a network. In this article, we use node representations derived
+    from MGAN as action: $x_i^{(l)}$ is the action of node $v$ in layer $l$. This
+    state represents the impact of removing node $v$ on the network. We use graph
+    neural networks to estimate the removal of nodes, so we add a virtual node $v$
+    to the state. All residual nodes are direct neighbours of node $s$ but it is not
+    necessary to consider any other node in that layer.
+
+
+    ```
+
+    $Loss_Q = \mathbb{E}_{(s,a,r,s'') \sim UB} [(r + \gamma \max_{a''} Q(s'', a'';
+    \theta^-) - Q(s, a; \theta))^2]$
+
+    ```
+
+
+    where $UB$ denotes the uniform sampling distribution over the experience buffer
+    $B$, $\theta$ is current network parameters and $\theta^-$ is updated periodically
+    from $\theta$, and $\gamma$ is the discount factor that enhances the future of
+    rewards.
+
+
+    In different layers we have used various rewards: the direct reward and the reward
+    of removal of node $v$; for example, a node might serve as a core connecting node
+    in communities in one layer but act as a peripheral node in another layer. To
+    have a comprehensive view of node importance from various layers, we use a reward-level
+    fusion mechanism to quantify the final node reward with we also add a graph reconstruction
+    loss to preserve the network topology
+
+
+    ```
+
+    $Loss_R = \sum_{i=1}^{n} ||\hat{x}_i - x_i||^2$;
+
+    ```
+
+
+    ```
+
+    $Loss = Loss_Q + \beta Loss_R$;
+
+    ```
+
+
+    ```
+
+    $\omega^{(l)} = \frac{1}{M} \sum_{i=1}^{M} \text{RelU}(r^{(i)}, \mathbf{M}_i);
+
+    ```
+
+
+    where $\omega^{(l)}$ is the reward importance of node $v$ in layer $l$, and $M$
+    and $\mathbf{M}_i$ are trainable matrices. where $\beta$ is a hyperparameter that
+    balances the importance of nodes. By building the established environment, encoding,
+    and optimization framework, we use a greedy selection procedure to determine the
+    optimal action and node removal based on the Q value. During the training phase,
+    an e-greedy strategy is used, where the action with the highest Q is selected
+    with a probability of $(1-e)$, while a random action is chosen with probability
+    $e$. The value of $Q$ is used to balance exploration and exploitation. In the
+    application phase,
+
+
+    Natural Intelligence | Volume 7 | 2025 | 1266–1277
+
+
+    1274
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s41256-020-01070-2
+
+
+    # Other algorithms
+
+
+    Here we described other algorithms used in our experiments. For instance, layer
+    denoising algorithms, we explain how they are constructed and utilized in multiple
+    networks. These generalized algorithms also use a global score to reach the maximum
+    of centrality estimated on each individual layer. This heuristic approach was
+    refined by as generalization of the targeted-attack protocol from single layer
+    to one-to-one networks. We stress, however, that merging scores into a global
+    score: future work could leverage a deep learning approach to infer the appropriate
+    rule of the results. CoreHLDA is used for network recycling, and refining processes
+    to dismantle multiplex networks. A novel scoring method used in network by combining
+    the scores from the single-layer.
+
+
+    # Reporting summary
+
+
+    Further information on research design is available linked to this article.
+
+
+    # Data availability
+
+
+    All used in study are available. To facilitate the reproducibility of our results,
+    all necessary data are available at https://doi.org/10.1038/s41256-020-01070-2
+    (ref 51).
+
+
+    # Code availability
+
+
+    DDA. We assign a score to each node $s_i = k_i^{(k)}$, and $k_i$ is the degree
+    of node $i$; which nodes are sorted by degree. We remove the node with the highest
+    degree. When nodes share identical degree, we randomly select one of them. Once
+    a node is removed, the degrees of the remaining nodes are updated. The code developed
+    for this research is available at https://doi.org/10.1038/s41256-020-01070-2
+
+
+    - 1. Watts, D. J., & Strogatz, S. Collective dynamics of ''small-world'' networks.
+    Nature 398, 440–442 (1998).
+
+    - 2. Holme, P. Complex networks: structure and dynamics. Phys. Rep. 42, 175–308
+    (2006).
+
+    - 3. Cohen, R., Perez, A., Duvani, A., & Havlin, S. Robustness of the internet
+    under attack. Phys. Rev. 86, 3682 (2001).
+
+    - 4. Molnar, F. A., & Higham, A. M. Influence propagation in multiplex networks.
+    Nature 524, 65–68 (2015).
+
+    - 5. Barabasi, A. L., Guiltner, N., & Marchalani, J. Network robustness: critical
+    points and transitions in electric power grids susceptible to cascading failures.
+    Science 394, 1285–994 (2002).
+
+    - 6. Bertagnoni, G., Gilli, A., & De Manci, M. Quantifying efficiency failures
+    in exchange market networks. Complex Systems 15, 125 (2021).
+
+    - 7. Chen, Y., Paul, G., Lledijos, R., & Stanley, H. E. A better immunization
+    strategy. Phys. Rev. Lett. 101, 058701 (2008).
+
+    - 8. Braunstein, A., Dalla, L., Sergiani, J., & Zoblik, L. Robustness of targeted
+    attacks on complex networks. Science 313, 12326–12330 (2006).
+
+    - 9. Ortime, A., et al. Robustness and resilience of complex networks. Nature
+    414, 113–116 (2001).
+
+
+    NIRM. NIRM uses both local and global searching mechanisms to find the critical
+    nodes in each layer. The score of node $i$ is given by $s_i = \max(k_i^{(l)},
+    m_i)$; where $m_i$ is the score of node $i$ in layer $l$. For nodes with identical
+    scores, we randomly select one of them. The implementation of the NIRM algorithm
+    is available at https://github.com/cmfit/Cl
+
+
+    FINDER. FINDER uses a DRL framework to identify critical nodes of single-layer
+    networks. It estimates the expected node that is removed from layer $l$. In multiplex
+    networks, we assign to each node the score $s_i = \max(k_i^{(l)})$ and we remove
+    the node with the highest score. We used the well-trained FINDER version in the
+    unit scenario. A function implementation of FINDER is available via GitHub at
+    https://github.com/TianFrankY/FINDER. For other requirements, such as degree and
+    removal constraints, we retained the FINDER model with the same training parameters
+    for Multilayer analysis.
+
+
+    MinSum. We use MinSum to identify the interconnected component by their dismantling
+    scores. The position of node $i$ in the dismantling process of layer is represented
+    by $s_i = m_i/w_i$; we assign a score to node $i$ and remove the node with the
+    smallest score. For nodes with the same score, we randomly select one of them.
+    The implementation of the MinSum algorithm is available via GitHub at https://github.com/abaysalzer/dismantling
+
+    '
+  mdcn: '
+
+
+    # 文章
+
+
+    https://doi.org/10.1038/s41256-020-01070-2
+
+
+    ```
+
+    $h_i^{(l)} = \text{tanh}(W_l h_i^{(l-1)} + b_l);$
+
+    ```
+
+
+    我们聚合了所有层中节点 $v$ 的结果
+
+
+    ```
+
+    $Q(s, a) = \sum_{t=1}^{\infty} \gamma^t r(s_t, a_t);$
+
+    ```
+
+
+    之前的聚合技术通常使用跨层权重来量化层间重叠，忽略了同一层内连接的真实性。其中 $Q(s, a)$ 是在节点 $v$ 下采取动作 $a$ 的期望 $Q$ 值，对于互连网络的整体交互。
+
+
+    这些高阶层网络注意力增强克服了以往方法的局限性。在这里，我们使用多层层间注意力机制来捕捉跨层交互，使模型能够有效学习依赖网络不同层之间的交互：损失和函数依赖。对于观察到的结果，我们使用节点移除对网络连通性的影响来量化跨越的直接奖励：
+
+
+    ```
+
+    $a_i^{(l)} = \sigma(W_i^{(l)}h_i^{(l-1)} + b_i^{(l)})$,
+
+    ```
+
+
+    ```
+
+    $r(v) = f(G) - f(G-v);$
+
+    ```
+
+
+    其中 $P(l)$ 是当节点 $v$ 存在时图的 LMCC 大小，$f(G)$ 是移除它的成本。其中 $a^{(l)}$ 是节点 $v$ 从层 $q$ 到
+    $t$ 的计算出的层间注意力，$W$ 是可训练的权重矩阵，$b$ 定义了偏置，$p$ 是一个向量，$L$ 是层数，$S$ 是标准奖励。
+
+
+    移除节点的影响可能不是立即产生的，并可能对网络连通性产生延迟影响。我们应用的 $n$-步 DQN 使用重放缓冲区中的 $n$-步回报，通过考虑多步的累积奖励来更好地捕捉延迟效应。它聚合了层表示和层间特征，使用通过累积奖励计算出的目标
+    $Q$ 值形成最终的节点嵌入。潜在动作 $a$ 下下一个时间步的直接奖励表示为 $\max_{a''} Q(s'', a'')$。解码器框架评估时间 $t$
+    处动作 $a$ 的预测奖励，表示为 $Q(s, a)$。$Q$-learning 损失旨在最小化预测 $Q$ 值与目标 $Q$ 值之间的差异
+
+
+    ```
+
+    $x_i^{(l)} = \sum_{p=1}^{l} \alpha_p^{(l)} h_i^{(p)};$
+
+    ```
+
+
+    其中 $x_i^{(l)}$ 是节点 $v$ 在层 $l$ 中的最终表示。解码器将状态和动作向量作为输入，并计算网络中所有可能动作的 $Q$ 值。在本文，我们使用来自
+    MGAN 的节点表示作为动作：$x_i^{(l)}$ 是节点 $v$ 在层 $l$ 中的动作。该状态代表移除节点 $v$ 对网络的影响。我们使用图神经网络来估计节点的移除，因此我们在状态中添加了一个虚拟节点
+    $v$。所有残留节点都是节点 $s$ 的直接邻居，但没有考虑该层中的任何其他节点。
+
+
+    ```
+
+    $Loss_Q = \mathbb{E}_{(s,a,r,s'') \sim UB} [(r + \gamma \max_{a''} Q(s'', a'';
+    \theta^-) - Q(s, a; \theta))^2]$
+
+    ```
+
+
+    其中 $UB$ 表示经验缓冲区 $B$ 上的均匀采样分布，$\theta$ 是当前网络参数，$\theta^-$ 从 $\theta$ 定期更新，$\gamma$
+    是增强未来奖励的折扣因子。
+
+
+    在不同的层中，我们使用了各种奖励：直接奖励和节点 $v$ 的移除奖励；例如，一个节点在某层中可能作为社区的核心连接节点，但在另一层中可能作为外围节点。为了从不同层全面视角节点重要性，我们使用奖励级融合机制来量化最终节点奖励，同时我们添加了图重构损失以保留网络拓扑结构
+
+
+    ```
+
+    $Loss_R = \sum_{i=1}^{n} ||\hat{x}_i - x_i||^2$;
+
+    ```
+
+
+    ```
+
+    $Loss = Loss_Q + \beta Loss_R$;
+
+    ```
+
+
+    ```
+
+    $\omega^{(l)} = \frac{1}{M} \sum_{i=1}^{M} \text{RelU}(r^{(i)}, \mathbf{M}_i);
+
+    ```
+
+
+    其中 $\omega^{(l)}$ 是节点 $v$ 在层 $l$ 中的奖励重要性，$M$ 和 $\mathbf{M}_i$ 是可训练矩阵。其中 $\beta$
+    是平衡节点重要性的超参数。通过建立既定的环境、编码和优化框架，我们使用贪婪选择程序根据 $Q$ 值确定最佳动作和节点移除。在训练阶段，使用了 $\epsilon$-greedy
+    策略，以 $(1-\epsilon)$ 的概率选择 $Q$ 值最高的动作，以 $\epsilon$ 的概率选择随机动作。$Q$ 的值用于平衡探索与利用。在应用阶段，
+
+
+    Natural Intelligence | 卷 7 | 2025 | 1266–1277
+
+
+    1274
+
+
+    # 文章
+
+
+    https://doi.org/10.1038/s41256-020-01070-2
+
+
+    # 其他算法
+
+
+    在这里我们描述了实验中使用的其他算法。例如层去噪算法，我们解释了它们如何在多个网络中构建和利用。这些泛化算法也使用全局得分来达到每个单个层上估计的中心性最大值。这种启发式方法通过将目标攻击协议从单层推广到一对一网络进行了精炼。然而，我们强调将得分合并为全局得分：未来的工作可以利用深度学习方法来推断结果的适当规则。CoreHLDA
+    用于网络回收和分解多层网络的精炼过程。一种在网络中使用的新颖评分方法，它结合了来自单层的得分。
+
+
+    # 报告摘要
+
+
+    有关研究设计的更多信息请参见本文的链接。
+
+
+    # 数据可用性
+
+
+    研究中使用的所有数据均可获得。为了便于结果的可复现性，所有必要数据均可在 https://doi.org/10.1038/s41256-020-01070-2
+    (ref 51) 获取。
+
+
+    # 代码可用性
+
+
+    DDA. 我们为每个节点 $s_i = k_i^{(k)}$ 分分，$k_i$ 是节点 $i$ 的度；节点按度排序。我们移除度最高的节点。当节点具有相同度时，我们随机选择其中一个。一旦节点被移除，剩余节点的度将得到更新。为本研究开发的代码可在
+    https://doi.org/10.1038/s41256-020-01070-2 获取
+
+
+    - 1. Watts, D. J., & Strogatz, S. Collective dynamics of ''small-world'' networks.
+    Nature 398, 440–442 (1998).
+
+    - 2. Holme, P. Complex networks: structure and dynamics. Phys. Rep. 42, 175–308
+    (2006).
+
+    - 3. Cohen, R., Perez, A., Duvani, A., & Havlin, S. Robustness of the internet
+    under attack. Phys. Rev. 86, 3682 (2001).
+
+    - 4. Molnar, F., & Higham, A. Influence propagation in multiplex networks. Nature
+    524, 65–68 (2015).
+
+    - 5. Barabasi, A., Guiltner, N., & Marchal, J. Quantifying efficiency in exchange
+    market. Science 394, 1285–994 (2002).
+
+    - 6. Bertagnoni, G., Gilli, A., & De Manci, M. Power grids susceptible to cascading
+    failures. Complex Systems 15, 125 (2021).
+
+    - 7. Chen, Y., Paul, G., Lledijos, R., & Stanley, H. E. A better immunization
+    strategy. Phys. Rev. Lett. 101, 058701 (2008).
+
+    - 8. Braunstein, A., Dalla, L., Sergiani, J., & Zoblik, L. Targeted attacks on
+    complex networks. Science 313, 1232–1230 (2006).
+
+    - 9. Cohen, A., et al. Robustness and resilience of complex networks. Nature 414,
+    113–116 (2001).
+
+
+    NIRM. NIRM 使用局部和全局搜索机制寻找每层中的关键节点。节点 $i$ 的得分由 $s_i = \max(k_i^{(l)}, m_i)$ 给出，其中
+    $m_i$ 是节点 $i$ 在层 $l$ 中的得分。当得分相同时，我们随机选择其中一个。NIRM 算法的代码可在 https://github.com/cmfit/Cl
+    获取
+
+
+    FINDER. FINDER 使用 DRL 框架识别单层网络的关键节点。它估计从层中移除的节点。在多层网络中，我们为每个节点分配 $s_i = \max(k_i^{(l)})$
+    并移除度最高的节点。我们在单元场景中使用训练良好的 FINDER 版本。对于其他需求（如度和移除约束），我们保留了具有相同训练参数的 FINDER 模型。FINDER
+    的函数实现可通过 GitHub
+
+
+    MinSum. 我们使用 MinSum 通过拆解得分来识别连通组件。节点 $i$ 在层拆解过程中的位置由 $s_i = m_i/w_i$ 表示；我们为节点
+    $i$ 分配得分并移除得分最小的节点。当得分相同时，我们随机选择其中一个。MinSum 算法的实现可在 https://github.com/abaysalzer/dismantling
+    获取。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 10]
+
+
+    # Article
+
+
+    18. Chen, Y., Tang, M., & Li, Y. Epidemic dynamics on non-Markovian travelers
+    in multilayer networks. Commun. Phys. 6, 263 (2020).
+
+
+    19. Orta, S., Faget, A., & Radicchi, F. Financial percolation on multiplex networks.
+    Nat. Commun. 8, 1540 (2017).
+
+
+    20. Baxter, J. J., Timár, G., & Mendes, J. Targeted damage to interdependent networks.
+    Phys. Rev. E 98, 032618 (2018).
+
+
+    21. Coignard, F., & Radicchi, F. Controlling the resilience of real response to
+    multilayer networks. Nat. Phys. 13, 1037 (2017).
+
+
+    22. Han, J., Shi, Y., Zhao, L., & Li, J. An influence factor layer adaptive strategy
+    to damage multilayer networks. Eur. Phys. J. 94, 74 (2021).
+
+
+    23. Schwarz, M. J., Brusaker, K. J., & Katagberger, G. Community optimization
+    with physics-inspired graph neural networks. Nat. Mach. Intell. 4, 367–377 (2022).
+
+
+    24. Khalil, E., Dai, J., Zhang, Y., Dilaina, B., & Song, L. Learning combinatorial
+    optimization over graphs. Adv. in Neural Information Learning. Inf. Proc. Syst.
+    32 (2019).
+
+
+    25. Wu, C., Pu, L., Li, W., Xie, L., & G, R. M. Multilayer network robustness
+    analysis based on the graph isomorphism. IEEE Trans. Networks 54, 6630–6642 (2016).
+
+
+    26. Kleinberg, K., Bogunáá, N., Morales, S., & Papadopoulos, H. Geometric correlations
+    in multilayer networks. Nat. Phys. 12, 1078– (2016).
+
+
+    27. Baxter, M. et al. Geometric network. Nat. Phys. 9, 114–135 (2013).
+
+
+    28. Fakeeh, A., Orta, S., & Radicchi, F. Characterizing the dynamics between epidemic
+    and community structure of complex networks. Phys. Rev. Lett. 121, 098301 (2018).
+
+
+    29. Ramirez, S.,, W. K., Fortunato, S., & Radicchi, F. Epidemic spreading in complex
+    networks. Phys. Rev. X 13, E01054 (2023).
+
+
+    30. Sutton, B. R. To learn by methods of temporal difference. Machine Learning,
+    3, 99–114 (1990).
+
+
+    31. Wen, R.-L., Lin, G., Hedberg, A., & Antulia, F. General decentralized mining.
+    Proc. Natl. Acad. Sci. USA 116, 6554–6559 (2019).
+
+
+    32. Ramsey, F. P. In Classic Combinatorics 1–24 (Springer-Verlag, 1998).
+
+
+    33. Kivela, M., et al. Multilayer networks. J. Complex Net. 2, 203–234 (2017).
+
+
+    34. Sun, Y., Wang, L., & Guang, R. Structural robustness of complex networks:
+    a survey of measures. IEEE Circuits Syst. Mag. 23, 12–35 (2017).
+
+
+    35. Ma, Y., Wang, S., Aggrawal, C., Yan, D., & Han, J. Multi-dimensional graph
+    convolutional networks. In Proc. 2019 8th International Conference on Data Mining
+    657–675 (2019).
+
+
+    36. Dong, Y., Wang, X., & Wang, S. Metapatch22.0: scalable representation for
+    heterogeneous networks. In Proc.2017 23rd ACM SIGKDD International Conference
+    on Knowledge Discovery and Data Mining 135–144 (2017).
+
+
+    37. Wu, X., et al. Heterogeneous attention-based graph neural network for link
+    prediction. In Proc. 33th AAAI International Conference on Artificial Intelligence
+    2261–2270 (2020).
+
+
+    38. Radicchi, F. Percolation in interdependent networks. Nat. Phys. 11, 597–602
+    (2015).
+
+
+    41. De Monminici, M., Varas, Arenas, A., & Latora, V. Structural reducibility
+    of multilayer networks. Nat. Commun. 6, 6884 (2019).
+
+
+    42. Stark, C., & Biograd: A general representation for interaction of multilayer
+    networks. Nat. Acad. Sci. USA, 115, 32536 (2018).
+
+
+    43. Xu, X., & Yu, Y. A robust approach for aggregating heterogeneous networks.
+    In Machine Learning and Knowledge Databases: European Conference, ECCM, PKDO 2016,
+    1 455–479 (2016).
+
+
+    44. De Monminici, L., Radicchi, A., & Arenas, V. Structural stability of multilayer
+    networks reveals highly optimized synchronization in interconnected systems. Phys.
+    Rev. X 9, 011027 (2019).
+
+
+    45. De Monminici, L., & Altmann, E. G. Unveiling the origin of social dynamics
+    in multilayer networks. Sci Rep. 9, 1622 (2019).
+
+
+    46. Albert, R., Jeong, Y., & Barabasi, A. L. Error and attack tolerance of complex
+    networks. Nature 406, 378–382 (2000).
+
+
+    Celli, F., Lasi, M. F., L. D. Managni, P., Basel, R., & Rossi L. Social networks
+    and data practices: the case of friendship. In International Conference on Social
+    Computing, Behavioral Modeling and Decision 348–356 (2010).
+
+
+    48. Radicchi, F. & Boguná, G. Redundant interconnectivity brings the robustness
+    of multilayer networks. Phys. Rev. X 7, 011033 (2017).
+
+
+    49. Schneider, C., Mori, A. A., Andresi, J. J., Havlin, S., & Herrmann, H. J.
+    Mitigation of attacks on complex networks. Nat. Acad. Sci. USA 108, 3831–3838
+    (2011).
+
+
+    50. Vulnerability analysis of structural networks. In Proc.2002 ACM SIGKDD International
+    Conference on Knowledge Discovery and Data Mining 1225–1234 (2002).
+
+
+    51. Gu, W., Chen, Y., Li, L., & Hou, J. Deep-learning-aided stability of interdependent
+    networks. Code Open https://doi.org/10.1038/s41598-022-15553-z (2022).
+
+
+    # Acknowledgement
+
+
+    This work was supported by grants from National Science Foundation of China (grant
+    4250583 and 7231074) and support from the Beijing University of Technology China.
+    Partial support was also received from the Air Force of Scientific Research (grants
+    FA9950-21 and 044955-234). The funding agency had no role in the study design,
+    data collection, analysis, or decision to publish opinions, conclusions or representations
+    in the Article.
+
+
+    # Author contributions
+
+
+    The authors declare no conflicts of interest.
+
+
+    # Competing interests
+
+
+    # Additional information
+
+
+    Supplementary information: The online version contains supplementary material
+    available at https://doi.org/10.1038/s41598-025-02170-0
+
+
+    Correspondence and requests for materials should be addressed to Chen Yang or
+    Filippo Radicchi.
+
+
+    Peer review Nature Intelligence acknowledges Gomez and the other, reviewer(s)
+    for their contribution to the peer review of this work.
+
+
+    Reprints and reprints are available at www.nature.com/reprints.
+
+
+    Nature Intelligence | Volume 7 | Article (2025) 1266–1277
+
+
+    127'
+  - '[PAGE 11]
+
+
+    # Article
+
+
+    https://doi.org/10.1038/s42256-025-01070-2
+
+
+    Publisher’s note Springer Nature remains neutral with regard to jurisdictional
+    claims in published maps and institutional affiliations.
+
+
+    the author(s) or other rightsholder(s); self-archiving of the accepted manuscript
+    version of this article is solely governed by the terms of such publishing agreement
+    and applicable law.
+
+
+    Springer Nature or its lic (e.g. a society or other partner) holds exclusive rights
+    to this article under a publishing agreement with
+
+
+    © The Author(s), under exclusive licence to Springer Nature Limited 2025
+
+
+    Nature Machine Intelligence | Volume 7 | August 2025 | 1266–1277
+
+
+    1277'
+  - '[PAGE 12]
+
+
+    # nature portfolio
+
+
+    Corresponding author(s): Filippo Radicchi
+
+    Last updated by author(s): 05/15/2025
+
+
+    # # Nature Summary
+
+
+    Nature Portfolio wishes to improve the reproducibility of the work that we publish.
+    This form provides structure for consistency and transparency in reporting. For
+    further information on Nature Portfolio policies, see our Editorial Policies and
+    the Editorial Policy Checklist.
+
+
+    # # Statistics
+
+
+    For all analyses, confirm that the following items are present in the figure legend,
+    table legend, main text, or Methods section.
+
+
+    +   - The exact sample size (n) for each experimental group/condition, given as
+    a discrete number and unit of measurement
+
+    - A statement on whether measurements were taken from distinct samples or whether
+    the same sample was measured repeatedly
+
+    - The statistical test(s) used AND whether they are one- or two-sided
+
+    - Only common tests should be described solely by name; describe more complex
+    techniques in the Methods section.
+
+    - A description of all variables tested
+
+    - A description of any assumptions or corrections, such as tests of normality
+    and adjustment for multiple comparisons
+
+    - A full description of the statistical parameters including centrality (e.g.
+    means) or other basic estimates (e.g. regression coefficient) AND variance (e.g.
+    standard deviation) or estimates of uncertainty (eg.. confidence intervals)
+
+    - For null hypothesis testing, the test (E, f, t, r) with confidence intervals,
+    effect sizes, degrees of freedom and P value Give P as exact values whenever suitable.
+
+    - For Bayesian analysis, information on the choice of priors and Markov chain
+    Monte Carlo settings
+
+    - For hierarchical design, identification of the appropriate level for tests and
+    full reporting of outcomes
+
+    - Estimates of effect sizes (e.g. Cohen''s d, Pearson''s r), indicating how they
+    were calculated
+
+
+    Our web collection on statistics for biologists contains many of the points above.
+
+
+    # # Software and code
+
+
+    Policy information about availability of code
+
+    Scripts for data processing being written in python(3.8),numpy(1.17.3),networkx(2.5.1)
+
+
+    Data analysis The training and evaluation framework were implemented using python(3.8),pytorch(1.12.0),networkx(2.5.1),
+    and others.
+
+
+    For manuscripts utilizing custom algorithms or software that are central to the
+    research but not described in published literature, software must be made available
+    to editors and readers. We encourage online code deposition in a community repository
+    (GitHub). See the Nature Portfolio guidelines for submitting code & software for
+    further information.
+
+
+    # # Data
+
+
+    Policy information about availability of data
+
+    All manuscripts must include a data availability statement. This statement should
+    provide the following information, where applicable:
+
+
+    +   - Access codes
+
+
+    https://ocean.com/capsule/646056'
+  md: '
+
+    # Article
+
+
+    18. Chen, Y., Tang, M., & Li, Y. Epidemic dynamics on non-Markovian travelers
+    in multilayer networks. Commun. Phys. 6, 263 (2020).
+
+
+    19. Orta, S., Faget, A., & Radicchi, F. Financial percolation on multiplex networks.
+    Nat. Commun. 8, 1540 (2017).
+
+
+    20. Baxter, J. J., Timár, G., & Mendes, J. Targeted damage to interdependent networks.
+    Phys. Rev. E 98, 032618 (2018).
+
+
+    21. Coignard, F., & Radicchi, F. Controlling the resilience of real response to
+    multilayer networks. Nat. Phys. 13, 1037 (2017).
+
+
+    22. Han, J., Shi, Y., Zhao, L., & Li, J. An influence factor layer adaptive strategy
+    to damage multilayer networks. Eur. Phys. J. 94, 74 (2021).
+
+
+    23. Schwarz, M. J., Brusaker, K. J., & Katagberger, G. Community optimization
+    with physics-inspired graph neural networks. Nat. Mach. Intell. 4, 367–377 (2022).
+
+
+    24. Khalil, E., Dai, J., Zhang, Y., Dilaina, B., & Song, L. Learning combinatorial
+    optimization over graphs. Adv. in Neural Information Learning. Inf. Proc. Syst.
+    32 (2019).
+
+
+    25. Wu, C., Pu, L., Li, W., Xie, L., & G, R. M. Multilayer network robustness
+    analysis based on the graph isomorphism. IEEE Trans. Networks 54, 6630–6642 (2016).
+
+
+    26. Kleinberg, K., Boguná, N., Morales, S., & Papadopoulos, H. Geometric correlations
+    in multilayer networks. Nat. Phys. 12, 1078– (2016).
+
+
+    27. Baxter, M. et al. Geometric network. Nat. Phys. 9, 114–135 (2013).
+
+
+    28. Fakeeh, A., Orta, S., & Radicchi, F. Characterizing the dynamics between epidemic
+    and community structure of complex networks. Phys. Rev. Lett. 121, 098301 (2018).
+
+
+    29. Ramirez, S., W. K., Fortunato, S., & Radicchi, F. Epidemic spreading in complex
+    networks. Phys. Rev. X 13, E01054 (2023).
+
+
+    30. Sutton, B. R. To learn by methods of temporal difference. Machine Learning,
+    3, 99–114 (1990).
+
+
+    31. Wen, R.-L., Lin, G., Hedberg, A., & Antulia, F. General decentralized mining.
+    Proc. Natl. Acad. Sci. USA 116, 6554–6559 (2019).
+
+
+    32. Ramsey, F. P. In Classic Combinatorics 1–24 (Springer-Verlag, 1998).
+
+
+    33. Kivela, M., et al. Multilayer networks. J. Complex Net. 2, 203–234 (2017).
+
+
+    34. Sun, Y., Wang, L., & Guang, R. Structural robustness of complex networks:
+    a survey of measures. IEEE Circuits Syst. Mag. 23, 12–35 (2017).
+
+
+    35. Ma, Y., Wang, S., Aggrawal, C., Yan, D., & Han, J. Multi-dimensional graph
+    convolutional networks. In Proc. 2019 8th International Conference on Data Mining
+    657–675 (2019).
+
+
+    36. Dong, Y., Wang, X., & Wang, S. Metapatch22.0: scalable representation for
+    heterogeneous networks. In Proc. 2017 23rd ACM SIGKDD International Conference
+    on Knowledge Discovery and Data Mining 135–144 (2017).
+
+
+    37. Wu, X., et al. Heterogeneous attention-based graph neural network for link
+    prediction. In Proc. 33th AAAI International Conference on Artificial Intelligence
+    2261–2270 (2020).
+
+
+    38. Radicchi, F. Percolation in interdependent networks. Nat. Phys. 11, 597–602
+    (2015).
+
+
+    41. De Monminici, M., Varas, Arenas, A., & Latora, V. Structural reducibility
+    of multilayer networks. Nat. Commun. 6, 6884 (2019).
+
+
+    42. Stark, C., & Biograd: A general representation for interaction of multilayer
+    networks. Nat. Acad. Sci. USA, 115, 32536 (2018).
+
+
+    43. Xu, X., & Yu, Y. A robust approach for aggregating heterogeneous networks.
+    In Machine Learning and Knowledge Databases: European Conference, ECCM, PKDO 2016,
+    1 455–479 (2016).
+
+
+    44. De Monminici, L., Radicchi, A., & Arenas, V. Structural stability of multilayer
+    networks reveals highly optimized synchronization in interconnected systems. Phys.
+    Rev. X 9, 011027 (2019).
+
+
+    45. De Monminici, L., & Altmann, E. Unveiling the origin of social dynamics in
+    multilayer networks. Sci Rep. 9, 1622 (2019).
+
+
+    46. Albert, R., Jeong, Y., & Barabasi, A. Error and attack tolerance of complex
+    networks. Nature 406, 378–382 (2000).
+
+
+    47. Celli, F., Lasi, M., Managni, P., Rossi, R. Social networks and data practices:
+    the case of friendship. In International Conference on Social Computing, Behavioral
+    Modeling and Decision 348–356 (2010).
+
+
+    48. Radicchi, F., & Boguna, G. Redundant interconnectivity brings the robustness
+    of multilayer networks. Phys. Rev. X 7, 011033 (2017).
+
+
+    49. Schneider, C., Mori, A., Havlin, S., & Herrmann, H. Mitigation of attacks
+    on complex networks. Nat. Acad. Sci. USA 108, 3831–3838 (2011).
+
+
+    50. Vulnerability analysis of structural networks. In Proc. 2002 ACM SIGKDD International
+    Conference on Knowledge Discovery and Data Mining 2225–2234 (2002).
+
+
+    51. Gu, W., Chen, Y., Li, L., & Hou, J. Deep-learning-aided stability of interdependent
+    networks. https://doi.org/10.1038/s41598-022-1553 (2022).
+
+
+    # Acknowledgement
+
+
+    This work was supported by grants from National Science Foundation (grant 4250583
+    and 723107) and support from Beijing University. The funding agency had no role
+    in the study design, data collection, analysis or decision to publish opinions,
+    conclusions or representations.
+
+
+    # Author contributions
+
+
+    The authors declare no conflicts of interest.
+
+
+    # Competing interests
+
+
+    # Additional information
+
+
+    Supplementary information: The online version contains supplementary material
+    available at https://doi.org/10.1038/s41598-022-1553. Correspondence and requests
+    for materials should be addressed to Yang or Filippo Radicchi. Peer review acknowledges
+    the other reviewer(s) for their contribution to the peer review of this work.
+    Reprints and reprints are available at www.nature.com/reprints.
+
+
+    Nature Intelligence | Volume 7 | Article (2025) 1266–1277
+
+
+    # nature portfolio
+
+
+    Corresponding author(s): Filippo Radicchi
+
+    Last updated by author(s): 05/15/2025
+
+
+    # # Nature Summary
+
+
+    Nature Portfolio wishes to improve the reproducibility of the work we publish.
+    This form provides structure for consistency and transparency in reporting. For
+    further information on Nature Portfolio policies, see our Editorial Policies and
+    the Editorial Policy Checklist.
+
+
+    # # Statistics
+
+
+    For all analyses, confirm that the following items are present in the figure legend,
+    table legend, main text, or Methods section.
+
+
+    - The exact sample size (n) for each experimental group/condition, given as a
+    discrete number and unit of measurement
+
+    - A statement on whether measurements were taken from distinct samples or whether
+    the same sample was measured repeatedly.
+
+    - The statistical test(s) used AND whether they are one- or two-sided.
+
+    - Only common tests should be described solely by name; describe more complex
+    techniques in the Methods section.
+
+    - A description of all variables tested
+
+    - A description of any assumptions or corrections, such as tests of normality
+    and adjustment for multiple comparisons
+
+    - A full description of the statistical parameters including centrality (e.g.
+    means) or other basic estimates (e.g. regression coefficient) AND variance (e.g.
+    standard deviation) or estimates of uncertainty (eg.. confidence intervals)
+
+    - For null hypothesis testing, the test (E, f, t, r) with confidence intervals,
+    effect sizes, degrees of freedom and P value. Give P as exact values whenever
+    suitable.
+
+    - For Bayesian analysis, information on the choice of priors and Markov chain
+    Monte Carlo settings
+
+    - For hierarchical design, identification of the appropriate level for tests and
+    full reporting of outcomes
+
+    - Estimates of effect sizes (e.g. Cohen''s d, Pearson''s r), indicating how they
+    were calculated
+
+
+    Our web collection on statistics for biologists contains many of the points above.
+
+
+    # # Software and code
+
+
+    Policy information about availability of code
+
+    Scripts for data processing being written in python(3.8), numpy(1.17.3), networkx(2.5.1)
+
+
+    Data analysis The training and evaluation framework were implemented using python(3.8),
+    pytorch(1.12.0), networkx(2.5.1), and others.
+
+
+    For manuscripts utilizing custom algorithms or software that are central to the
+    research but not described in published literature, software must be made available
+    to editors and readers. We encourage online code deposition in a community repository
+    (GitHub). See the Nature Portfolio guidelines for submitting code & software for
+    further information.
+
+
+    # # Data
+
+
+    Policy information about availability of data
+
+    All manuscripts must include a data availability statement. This statement should
+    provide the following information, where applicable:
+
+
+    - Access codes
+
+
+    https://ocean.com/capsule/646056
+
+    '
+  mdcn: '
+
+
+    # 文章
+
+
+    18. Chen, Y., Tang, M., & Li, Y. 多层网络中非马尔可夫旅行者的流行动力学. Commun. Phys. 6, 263 (2020).
+
+
+    19. Orta, S., Faget, A., & Radicchi, F. 多路网络上的金融渗透. Nat. Commun. 8, 1540 (2017).
+
+
+    20. Baxter, J. J., Timár, G., & Mendes, J. 相互依赖网络的针对性破坏. Phys. Rev. E 98, 032618
+    (2018).
+
+
+    21. Coignard, F., & Radicchi, F. 控制多层网络真实响应的韧性. Nat. Phys. 13, 1037 (2017).
+
+
+    22. Han, J., Shi, Y., Zhao, L., & Li, J. 一种破坏多层网络的影响因子层自适应策略. Eur. Phys. J. 94,
+    74 (2021).
+
+
+    23. Schwarz, M. J., Brusaker, K. J., & Katagberger, G. 受物理启发的图神经网络的社区优化. Nat.
+    Mach. Intell. 4, 367–377 (2022).
+
+
+    24. Khalil, E., Dai, J., Zhang, Y., Dilaina, B., & Song, L. 图上的组合优化学习. Adv. in
+    Neural Information Learning. Inf. Proc. Syst. 32 (2019).
+
+
+    25. Wu, C., Pu, L., Li, W., Xie, L., & G, R. M. 基于图同构的多层网络鲁棒性分析. IEEE Trans. Networks
+    54, 6630–6642 (2016).
+
+
+    26. Kleinberg, K., Boguná, N., Morales, S., & Papadopoulos, H. 多层网络中的几何相关性. Nat.
+    Phys. 12, 1078– (2016).
+
+
+    27. Baxter, M. 等. 几何网络. Nat. Phys. 9, 114–135 (2013).
+
+
+    28. Fakeeh, A., Orta, S., & Radicchi, F. 复杂网络中流行与社区结构之间动力学的表征. Phys. Rev. Lett.
+    121, 098301 (2018).
+
+
+    29. Ramirez, S., W. K., Fortunato, S., & Radicchi, F. 复杂网络中的流行扩散. Phys. Rev. X
+    13, E01054 (2023).
+
+
+    30. Sutton, B. R. 通过时间差分方法学习. Machine Learning, 3, 99–114 (1990).
+
+
+    31. Wen, R.-L., Lin, G., Hedberg, A., & Antulia, F. 通用去中心化挖掘. Proc. Natl. Acad.
+    Sci. USA 116, 6554–6559 (2019).
+
+
+    32. Ramsey, F. P. 见经典组合数学 1–24 (Springer-Verlag, 1998).
+
+
+    33. Kivela, M., 等. 多层网络. J. Complex Net. 2, 203–234 (2017).
+
+
+    34. Sun, Y., Wang, L., & Guang, R. 复杂网络的结构鲁棒性：指标综述. IEEE Circuits Syst. Mag. 23,
+    12–35 (2017).
+
+
+    35. Ma, Y., Wang, S., Aggrawal, C., Yan, D., & Han, J. 多维图卷积网络. 在 Proc. 2019 第8
+    届国际数据挖掘会议 657–675 (2019).
+
+
+    36. Dong, Y., Wang, X., & Wang, S. Metapatch22.0: 异构网络的可扩展表示. 在 Proc. 2017 第23
+    届 ACM SIGKDD 知识发现与数据挖掘国际会议 135–144 (2017).
+
+
+    37. Wu, X., 等. 用于链路预测的基于注意力机制异构图神经网络. 在 Proc. 第33 届 AAAI 国际人工智能会议 2261–2270 (2020).
+
+
+    38. Radicchi, F. 相互依赖网络中的渗透. Nat. Phys. 11, 597–602 (2015).
+
+
+    41. De Monminici, M., Varas, Arenas, A., & Latora, V. 多层网络的结构可还原性. Nat. Commun.
+    6, 6884 (2019).
+
+
+    42. Stark, C., & Biograd: 多层网络交互的通用表示. Nat. Acad. Sci. USA, 115, 32536 (2018).
+
+
+    43. Xu, X., & Yu, Y. 聚合异构网络的鲁棒方法. 在 机器学习与知识数据库：欧洲会议，ECCM, PKDO 2016, 1 455–479
+    (2016).
+
+
+    44. De Monminici, L., Radicchi, A., & Arenas, V. 多层网络的结构稳定性揭示了互连系统中高度优化的同步性. Phys.
+    Rev. X 9, 011027 (2019).
+
+
+    45. De Monminici, L., & Altmann, E. 揭示多层网络中社会动力学的起源. Sci Rep. 9, 1622 (2019).
+
+
+    46. Albert, R., Jeong, Y., & Barabasi, A. 复杂网络的误差和攻击容忍度. Nature 406, 378–382 (2000).
+
+
+    47. Celli, F., Lasi, M., Managni, P., Rossi, R. 社会网络与数据实践：友谊案例. 在 社交计算、行为建模与决策国际会议上.
+
+
+    48. Radicchi, F., Boguna, N., & Havlin, H. 相互依赖网络的渗透. Phys. Rev. X 9, 011027 (2019).
+
+
+    49. Schneider, C., Mori, A., & Herrmann, G. 相互依赖网络的脆弱性. Phys. Rev. E 98, 032618
+    (2018).
+
+
+    50. Gu, W., Chen, Y., & Li, J. 相互依赖网络的脆弱性. Eur. Phys. J. 94, 74 (2021).
+
+
+    51. Schwarz, M. J., Brusaker, K. J., & Katagberger, G. 受物理启发的图神经网络的社区优化. Nat.
+    Mach. Intell. 4, 367–377 (2022).
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 13]
+
+
+    # # Research involving human participants, their data, or biological material
+
+
+    Policy information about studies with human participants or human data. Also see
+    policy information about sex, gender (identity/presentation), and sexual orientation
+    and race, ethnicity and racism.
+
+
+    Reporting on sex and gender no sex and gender
+
+
+    Reporting on race, ethnicity, or other socially relevant groupings no race,ethnicity
+    or other socially relevant groupings
+
+
+    Population characteristics no population characteristics
+
+
+    Recruitment no recruitment participants
+
+
+    Ethics oversight ethics oversight
+
+
+    Note that full information on the approval of the study protocol must also be
+    provided in the manuscript.
+
+
+    # ## Field-specific reporting
+
+
+    Please select the one that is the best fit for your research. If you are not sure,
+    read the appropriate sections before making your selection.
+
+
+    +   - ] Life sciences
+
+    - ] Ecological, evolutionary & environmental sciences
+
+
+    For a reference copy of the document with all sections, see nature.com/documents/nr-reporting-summary-flat.pdf.
+
+
+    # ## Behaviour & social sciences study design
+
+
+    All studies must disclose these points even when the disclosure is negative.
+
+
+    | Study description | identifying key nodes in the network |
+
+    | Research sample | Publicly available dataset |
+
+    | Sampling strategy | Publicly available dataset |
+
+    | Data collection | Publicly available dataset |
+
+    | Timing | Publicly available dataset |
+
+    | Data exclusions | no data exclusions |
+
+    | Non-participation | no participant |
+
+    | Randomization | no participant |
+
+
+    # ## Reporting for specific materials, systems and methods
+
+
+    We require information about some types of materials, experimental systems and
+    methods used in many studies. Here, indicate whether each material, system or
+    method is relevant to your research. If you are not sure a list item applies to
+    your research, read the appropriate section before selecting a response.
+
+
+    # ### Materials & experimental systems
+
+
+    | n/a Involved in the study | n/a Involved in the study |
+
+    | [ ] Antibodies | [ ] ChIP-seq |
+
+    | [ ] Eukaryotic cell lines | [ ] Flow cytometry |
+
+    | [ ] Palaontology and archaeology | [ ] MRI-based imaging |
+
+    | [ ] Animals and other organisms |
+
+    | [ ] Clinical data |
+
+    | [ ] Dual use research of concern |
+
+    | [ ] Plants'
+  - '[PAGE 14]
+
+
+    # Plants
+
+
+    | Seed stocks | no seed stocks |
+
+    | Novel plant genotypes | no novel plant genotypes |
+
+    | Authentication | no authentication |'
+  md: '
+
+    # Research involving human participants, their data, or biological material
+
+
+    Policy information about studies with human participants or human data. Also see
+    policy information about sex, gender (identity/presentation), and sexual orientation
+    and race, ethnicity and racism.
+
+
+    - Reporting on sex and gender: no sex and gender
+
+    - Reporting on race, ethnicity, or other socially relevant groupings: no race,
+    ethnicity or other socially relevant groupings
+
+    - Population characteristics: no population characteristics
+
+    - Recruitment: no recruitment participants
+
+    - Ethics oversight: ethics oversight
+
+
+    Note that full information on the approval of the study protocol must also be
+    provided in the manuscript.
+
+
+    ## Field-specific reporting
+
+
+    Please select the one that is the best fit for your research. If you are not sure,
+    read the appropriate sections before making your selection.
+
+
+    - Life sciences
+
+    - Ecological, evolutionary & environmental sciences
+
+
+    For a reference copy of the document with all sections, see nature.com/documents/nr-reporting-summary-flat.pdf.
+
+
+    ## Behaviour & social sciences study design
+
+
+    All studies must disclose these points even when the disclosure is negative.
+
+
+    | Study description | identifying key nodes in the network |
+
+    | :--- | :--- |
+
+    | Research sample | Publicly available dataset |
+
+    | Sampling strategy | Publicly available dataset |
+
+    | Data collection | Publicly available dataset |
+
+    | Timing | Publicly available dataset |
+
+    | Data exclusions | no data exclusions |
+
+    | Non-participation | no participant |
+
+    | Randomization | no participant |
+
+
+    ## Reporting for specific materials, systems and methods
+
+
+    We require information about some types of materials, experimental systems and
+    methods used in many studies. Here, indicate whether each material, system or
+    method is relevant to your research. If you are not sure a list item applies to
+    your research, read the appropriate section before selecting a response.
+
+
+    ### Materials & experimental systems
+
+
+    | n/a Involved in the study | n/a Involved in the study |
+
+    | :--- | :--- |
+
+    | [ ] Antibodies | [ ] ChIP-seq |
+
+    | [ ] Eukaryotic cell lines | [ ] Flow cytometry |
+
+    | [ ] Palaontology and archaeology | [ ] MRI-based imaging |
+
+    | [ ] Animals and other organisms | |
+
+    | [ ] Clinical data | |
+
+    | [ ] Dual use research of concern | |
+
+    | [ ] Plants | |
+
+
+    ### Plants
+
+
+    | Seed stocks | no seed stocks |
+
+    | Novel plant genotypes | no novel plant genotypes |
+
+    | Authentication | no authentication |
+
+    '
+  mdcn: '
+
+
+    # 涉及人类参与者、其数据或生物材料的研究
+
+
+    关于涉及人类参与者或人类数据研究的政策信息。另见关于性别、性别（身份/表现）、性取向以及种族、民族和种族主义的政策信息。
+
+
+    - 关于和性别的报告：无性别和性别
+
+    - 关于种族、族裔或其他社会相关分组的报告：无种族、族裔或其他社会相关分组
+
+    - 人口统计特征：无人口特征
+
+    - 招募：无招募参与者
+
+    - 伦理审查：伦理审查
+
+
+    请注意，稿件中必须提供有关研究方案批准的完整信息。
+
+
+    ## 特定领域的报告规范
+
+
+    请选择最适合您研究的一项。如果您不确定，请在做出选择之前阅读相关章节。
+
+
+    - 生命科学
+
+    - 生态学、演化与环境科学
+
+
+    如需包含所有章节的文档参考副本，请参阅 nature.com/documents/nr-reporting-summary-flat.pdf。
+
+
+    ## 行为与社会科学研究设计
+
+
+    所有研究必须披露这些要点，即使结果为负面。
+
+
+    | 研究描述 | 识别网络中的关键节点 |
+
+    | :--- | :--- |
+
+    | 研究样本 | 公开数据集 |
+
+    | 采样策略 | 公开数据集 |
+
+    | 数据收集 | 公开数据集 |
+
+    | 时间节点 | 公开数据集 |
+
+    | 数据排除 | 无数据排除 |
+
+    | 未参与 | 无参与者 |
+
+    | 随机化 | 无参与者 |
+
+
+    ## 特定材料、系统和方法的报告
+
+
+    我们要求提供有关许多研究中使用的某些类型材料、实验系统和方法的信息。在此，请每种材料、系统或方法是否与您的研究相关。如果您不确定列表项目是否适用于您的研究，请在选择回答之前阅读相关章节。
+
+
+    ### 材料与实验系统
+
+
+    | 参与了研究 | 参与了研究 |
+
+    | :--- | :--- |
+
+    | [ ] 抗体 | [ ] ChIP-seq |
+
+    | [ ] 真核细胞系 | [ ] 流式细胞术 |
+
+    | [ ] 古物学与考古学 | [ ] 基于 MRI 的成像 |
+
+    | [ ] 动物和其他生物 | |
+
+    | [ ] 临床数据 | |
+
+    | [ ] 引起关注的双重用途研究 | |
+
+    | [ ] 植物 | |
+
+
+    ### 植物
+
+
+    | 种子储备 | 无种子储备 |
+
+    | 新型植物基因型 | 无新型植物基因型 |
+
+    | 认证 | 无认证 |
+
+
+    '
+  merge: 0
