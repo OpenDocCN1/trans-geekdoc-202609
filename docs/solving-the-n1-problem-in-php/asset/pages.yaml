@@ -1,0 +1,1619 @@
+- pgno: 0
+  md: '![](img/01fa0b441fea2a4599b86ee2416424bf_0_0.png)
+
+
+    # Solving the N+1 Problem in PHP
+
+
+    Paul M. Jones'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Solving The N+1 Problem In PHP
+
+
+    Paul M. Jones
+
+
+    This book is for sale at http://leanpub.com/sn1php
+
+
+    This version was published on 2015-03-19
+
+
+    ![](img/01fa0b441fea2a4599b86ee2416424bf_1_0.png)
+
+
+    This is a Leanpub book. Leanpub empowers authors and publishers with the Lean
+    Publishing process. Lean Publishing is the act of publishing an in-progress ebook
+    using lightweight tools and many iterations to get reader feedback, pivot until
+    you have the right book and build traction once you do.
+
+
+    ©2015 Paul M. Jones'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Tweet This Book!
+
+
+    Please help Paul M. Jones by spreading the word about this book on Twitter!
+
+
+    The suggested hashtag for this book is #sn1php.
+
+
+    Find out what other people are saying about the book by clicking on this link
+    to search for this hashtag on Twitter:
+
+
+    https://twitter.com/search?q=#sn1php'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Also By Paul M. Jones
+
+
+    Modernizing Legacy Applications In PHP
+
+
+    Aura Framework v2'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# # Contents\n\n+   1. Introduction .................................................................................................................................................................\
+    \ . . . 1\n   The Slow Reporting Script .................................................................................................................................................\
+    \ . . . . . . . . 1\n   Example Application .................................................................................................................................................................\
+    \ . . . . . . . . . . . 2\n2. Defining The N+1 Problem .................................................................................................................................................................\
+    \ . . 3\n   The Problem By Example .................................................................................................................................................................\
+    \ . . . . . . . . 3\n   The Problem Defined .................................................................................................................................................................\
+    \ . . . . . . . . . . 4\n   Performance Implications .................................................................................................................................................................................\
+    \ . . . . . . . . . . . 4\n3. Diagnosing N+1 Problems ................................................................................................................................................................................\
+    \ . . 5\n   Codebase Examination .................................................................................................................................................................................................\
+    \ . . . . . . . . . . 5\n   Log/Profile Examination .................................................................................................................................................................................................................\
+    \ . . . . . . . . . . 5\n   Easier Query Examination .................................................................................................................................................................................................................................\
+    \ . . . . . . . . 8\n4. Why Does The N+1 Problem Occur? ....................................................................................................................................................................\
+    \ . . 9\n   CRUD Is The Problem .................................................................................................................................................................................................................................................\
+    \ . . . . . . . . 9\n   BREAD Is The Answer .................................................................................................................................................................................................................................................................\
+    \ . . . . . . . . 9\n5. Solving N+1 With A Single Query .....................................................................................................................................................................................\
+    \ . . . 11\n   Handling “Many-to-One” Relationships .................................................................................................................................................................................................................\
+    \ . . . . . . . . 11\n   Handling “One-to-One” Relationships .................................................................................................................................................................................................................\
+    \ . . . . . . . . . . 14\n   Combining “Many-to-One” and “One-to-One” .................................................................................................................................................................................................................\
+    \ . . . . . . 16\n   Handling “Many-to-Many” Relationships .................................................................................................................................................................................................................\
+    \ . . . . . . . . . 18\n   Single-Query Fails With “Many-to-Many” Relationships\
+    \ .................................................................................................................................................................................................................\
+    \ . . . . . . 20\n6. Solving N+1 With Query-And-Stitch ....................................................................................................................................................................................................\
+    \ . . 21\n   Tradeoffs In Query-And-Stitch .................................................................................................................................................................................................................................\
+    \ . . . . . . . . 21\n   Handling “One-to-Many” Relationships .................................................................................................................................................................................................................\
+    \ . . . . . . . . . . 22\n   Handling “Many-to-Many” Relationships .................................................................................................................................................................................................................\
+    \ . . . . . . . . . . 24\n   Handling “Many-to-One” Relationships .................................................................................................................................................................................................................\
+    \ . . . . . . . . . . 24\n   Handling “One-to-One” Relationships .................................................................................................................................................................................................................\
+    \ . . . . . . . . . . 26\n   Performance Implications .................................................................................................................................................................................................................................................\
+    \ . . . . . . . . . 27\n7. Refactoring The Codebase To Remove N+1 Problems ................................................................................................................................................................................\
+    \ . . 28\n   Prerequisites .................................................................................................................................................................................................................................................................\
+    \ . . . . . . . . . . . 28"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# CONTENTS
+
+
+    +   The Process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 29
+
+    N+1 In A Single Location . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 29
+
+    N+1 Across Separated Locations . . . . . . . . . . . . . . . . . . . . . . . .
+    . 29
+
+    Test, Commit, Push, Notify QA . . . . . . . . . . . . . . . . . . . . . . . .
+    34
+
+    Do ... While . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 34
+
+    8. Common Questions . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . 35
+
+    Can I Combine Single-Query With Query-And-Stitch? . . . . . . . . . . . 35
+
+    Can I Use Sub-Selects Instead Of The IN() Operator? . . . . . . . . . . . . 35
+
+    Should I Use A Transaction With Query-And-Stitch? . . . . . . . . . . 37
+
+    Can I Just Use An ORM? . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 38
+
+
+    +   Appendix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    39
+
+    SQL Schema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    39
+
+    PHP Classes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+
+
+    +   Colophon . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 42
+
+
+    +   About the Author . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    43'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# 1. Introduction
+
+
+    # The Slow Reporting Script
+
+
+    The web page was taking three hours to load. Let that sink in for a moment: three
+    hours. The code backing the page was a reporting script written in PHP, attempting
+    to build 40,000 entity objects from 2 million database rows. Sometimes the page
+    never loaded at all. At least the client could tell when it failed, because a
+    big ugly error popped up in the browser window. Unfortunately that was also around
+    the three hour point. The client was understandably frustrated.
+
+
+    I was assigned to troubleshoot the problem. It turned out the cause was not that
+    the database was optimized. It was not the number of rows being returned. It was
+    not even the number of objects being built.
+
+
+    No, the cause was the number of queries being issued from the reporting script.
+    The high volume of queries, in turn, was a result of how the script was assembling
+    the entity objects. When I say "high volume", I mean two hundred thousand and
+    one queries. These 200,000+ queries were used to build each root entity along
+    with each of its five associated collections and entities. No wonder the script
+    was taking three hours to finish!
+
+
+    After discovering this, I was able to apply the "query-and-stitch" technique presented
+    in this book to refactor how the entity objects were assembled. Over the course
+    of a few days of refactoring I was able to reduce the load time from 3+ hours
+    to just under 6 minutes. That''s a 30x improvement, and still so by typical standards,
+    it was much more bearable for the client. (Later refactorings improved the load
+    time ever.)
+
+
+    The causes leading to the terrible performance of the Slow Reporting Script have
+    a name: N+1 Problem. The problem has various aliases, such as the "1+N problem",
+    "N+1 queries", "SELECT N+1", and so on, but they all refer to the same thing.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Introduction
+
+
+    While I mention the N+1 problem more than once in Modernizing Legacy Applications
+    in PHP¹, I did not address a solution directly. This book remedies it. Here, we
+    will discuss the specifics of the N+1 problem:
+
+
+    +   - what the N+1 problem is,
+
+    - how to diagnose and discover the problem in your application,
+
+    - why the problem occurs, and
+
+    - how to solve the problem in your codebase.
+
+
+    # Example Application
+
+
+    While I cannot present the Slow Reporting Script itself for before-and-after examination,
+    I can do the next best thing and present a generic example. In this book, we will
+    use hypothetical code from naive blogging as our subject. In doing so, we will
+    use the SQL and PHP structures described in the appendix.
+
+
+    This will be a legacy application example, so there is no use of ORMs. (Different
+    ORM implementations have their own N+1 mitigation strategies, which we cannot
+    discuss here.)
+
+
+    Without an ORM, this hypothetical application uses PDO² for its database abstraction.
+    Not all legacy code uses PDO, but the principles regarding N+1 (both the problem
+    and solutions) apply to all database connection libraries. These include mysqli³,
+    mysqli*, as well as usland database abstraction layers.
+
+
+    When fetching query, our application uses the PDO::FETCH_CLASS* mode as much as
+    possible. This causes PDO to return an array instance of a specified entity class,
+    each with its properties already filled with the data from one row. With other
+    systems, you are likely to create the class separately from the database query;
+    we use FETCH_CLASS primarily to reduce the volume of the example code. (The entity
+    classes themselves are plain PHP objects with public properties)
+
+
+    Finally, the naive codebase uses plain PHP arrays for entity collections. More
+    sophisticated systems may use generic class properties, but the principles concerning
+    N+1 regarding collections remain the same.
+
+
+    > ¹https://github.com/mlphp
+
+    ²http://php.net/PDO
+
+    ³http://php.net/mysql
+
+    ⁴http://php.net/mysqli
+
+    ⁵http://php.net/manual/pdostatement.fetch.php'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# # Defining The N+1 Problem\n\n# ## The Problem By Example\n\nIt is easiest\
+    \ to describe the N+1 problem by example. Let's say that our naive blog application\
+    \ needs to show a page of the 10 most recent blog posts, along with all the comments\
+    \ on each post.\n\nFirst, the application retrieves the root collection of Post\
+    \ entities as an array:\n\n```\n<?php\n$stm = 'SELECT *\nFROM posts\nORDER BY\
+    \ datetime DESC\nLIMIT 10';\n$sth = $pdo->prepare($stm);\n$sth->execute();\n$posts\
+    \ = $sth->fetchAll(PDO::FETCH_CLASS, 'Post');\n?>\n```\n\nSo far so good: the\
+    \ application has issued one query to build the root collection of Post entities.\\\
+    Next, the application collects the Comment entities on each entity:\n\n```\n<?php\n\
+    // prepare a statement to select the comments\n$stm = 'SELECT *\nFROM comments\n\
+    WHERE post_id = :post_id';\n$sth = $pdo->prepare($stm);\nforeach ($posts as $post)\
+    \ {\n  $sth->execute(array('post_id' => $post->post_id));\n  $post->comments =\
+    \ $sth->fetchAll(PDO::FETCH_CLASS, 'Comment');\n}\n?>\n```\n\nThe application\
+    \ has issued ten queries to build the comments for each post. With this, we have\
+    \ arrived at the core of the N+1 Problem."
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# The Problem Defined
+
+
+    The N+1 problem is revealed as the following:
+
+
+    For each entity in a root collection, the application issues one additional query
+    to retrieve each association for each entity.
+
+
+    In the above example, the application issued a total of 11 queries to build up
+    a collection of 10 Post entities with their associated Comment collections:
+
+
+    +   - one query to fetch the ten entities in the root collection (this is the
+    "1" in "N+1")
+
+    - ten more queries, for each entity in the root collection, to fetch the associations
+    (this is the "N" in "N+1", where "N" equals the number of entities in the root
+    collection).
+
+
+    # Performance Implications
+
+
+    There are two performance implications of the N+1 problem:
+
+
+    +   1. The number of queries grows as a factor of the number of entities in the
+    root collection.
+
+    2. The number of queries *also* grows as a factor of the number of associations
+    needed to complete each root entity.
+
+
+    This means that as the number of root entities and number of relationships increase
+    *linearly*, the number of queries increases as a *multiple* of those two numbers.
+    Each added query reduces the responsiveness of the application.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "# 3. Diagnosing N+1 Problems\n\nThere are two methods to diagnose occurrences\
+    \ of the N+1 problem in a codebase. Both methods are a matter of detective work,\
+    \ and are not especially amenable to automation.\n\n# Codebase Examination\n\n\
+    First, we can examine the codebase manually to look for queries being executed\
+    \ inside loops. This can be tougher than it sounds, since the loop may be widely\
+    \ separated from the query. For example, this loop looks mostly harmless:\n\n\
+    ```\n<?php\nforeach ($posts as $post) {\n    $helper->doSomething($post);\n}\n\
+    ?>\n```\n\nOn further examination, if the doSomething() method (or one of the\
+    \ methods it calls in turn) issues a query to the database, then we have an N+1\
+    \ problem on our hands. As such, it may not be immediately obvious where the problem\
+    \ originates in the codebase.\n\n> What can be really pernicious is when the codebase\
+    \ makes a database call to a stored procedure, and the stored procedure itself\
+    \ is the origin of the N+1 problem. In that case, we will need to review the stored\
+    \ procedure code as well.\n\n# Log/Profile Examination\n\nAlternatively, we can\
+    \ start at the other end of the problem, and review the database query logs (or\
+    \ an application-level query profiler) to look for patterns in the queries. This\
+    \ is easier to achieve with some amount of knowledge of the application and the\
+    \ underlying data, but in simple cases it should be relatively obvious even without\
+    \ detailed application knowledge. Pattern recognition is the key to success with\
+    \ this approach."
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Diagnosing N+1 Problems
+
+
+    In the case of our posts-and-comments example, we might see something like this
+    in the query logs:
+
+
+    # N Comment queries and 1 Post query
+
+
+    ```
+
+    SELECT * FROM posts ORDER BY date DESC LIMIT 10;
+
+    SELECT * FROM comments WHERE comments.post_id = 936;
+
+    SELECT * FROM comments WHERE comments.post_id = 935;
+
+    SELECT * FROM comments WHERE comments.post_id = 934;
+
+    SELECT * FROM comments WHERE comments.post_id = 933;
+
+    SELECT * FROM comments WHERE comments.post_id = 932;
+
+    SELECT * FROM comments WHERE comments.post_id = 931;
+
+    SELECT * FROM comments WHERE comments.post_id = 929;
+
+    SELECT * FROM comments WHERE comments.post_id = 927;
+
+    ```
+
+
+    If the application retrieves data for two or more relationships, the pattern might
+    be less obvious. In the case of the Slow Reporting Script, where the application
+    retrieved five associated entities for each root entity, the logs looked like
+    this...
+
+
+    Queries batched per root entity
+
+
+    ```
+
+    SELECT * FROM root_table WHERE;
+
+    SELECT * FROM rel1 WHERE rel1.root_id = 10324 ...;
+
+    SELECT * FROM rel2 WHERE rel2.root_id = 10324 ...;
+
+    SELECT * FROM rel3 WHERE rel3.root_id = 10324 ...;
+
+    SELECT * FROM rel4 WHERE rel4.root_id = 10324 ...;
+
+    SELECT * FROM rel5 WHERE rel5.root_id = 10324 ...;
+
+    SELECT * FROM rel1 WHERE rel1.root_id = 10325 ...;
+
+    SELECT * FROM rel2 WHERE rel2.root_id = 10325 ...;
+
+    SELECT * FROM rel3 WHERE rel3.root_id = 10325 ...;
+
+    SELECT * FROM rel4 WHERE rel4.root_id = 10325 ...;
+
+    SELECT * FROM rel5 WHERE rel5.root_id = 10325 ...;
+
+    SELECT * FROM rel1 WHERE rel1.root_id = 10326 ...;
+
+    SELECT * FROM rel2 WHERE rel2.root_id = 10326 ...;
+
+    SELECT * FROM rel3 WHERE rel3.root_id = 10326 ...;
+
+    SELECT * FROM rel4 WHERE rel4.root_id = 10326 ...;
+
+    SELECT * FROM rel5 WHERE rel5.root_id = 10326 ...;
+
+    ```
+
+
+    ... and so, with 5 related queries for each of the root entities. As you can see,
+    the pattern repeats over groups of five lines, one for each rel1 through rel5.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Diagning N+1 Problems
+
+
+    If the queries are batched per-relationship, instead of per-root-entity, the log
+    might look more like this:
+
+
+    Queries batched per relationship
+
+
+    ```
+
+    SELECT * FROM root_table WHERE ... ;
+
+    SELECT * FROM rell1.root_id = 10324 ...;
+
+    SELECT * FROM rell1.root_id = 10325 ...;
+
+    SELECT * FROM rell1.root_id = 10326 ...;
+
+
+    SELECT * FROM rell2.root_id = 10324 ...;
+
+    SELECT * FROM rell2.root_id = 10325 ...;
+
+    SELECT * FROM rell2.root_id = 10326 ...;
+
+
+    SELECT * FROM rell3.root_id = 10324 ...;
+
+    SELECT * FROM rell3.root_id = 10325 ...;
+
+    SELECT * FROM rell3.root_id = 10326 ...;
+
+
+    SELECT * FROM rell4.root_id = 10324 ...;
+
+    SELECT * FROM rell4.root_id = 10325 ...;
+
+    SELECT * FROM rell4.root_id = 10326 ...;
+
+
+    SELECT * FROM rel4.root_id = 10324 ...;
+
+    SELECT * FROM rell4.root_id = 10325 ...;
+
+    SELECT * FROM rell4.root_id = 10326 ...;
+
+
+    SELECT * FROM rell5.root_id = 10324 ...;
+
+    SELECT * FROM rell5.root_id = 10325 ...;
+
+    SELECT * FROM rell5.root_id = 10326 ...
+
+    ```
+
+
+    Unfortunately, even when we recognize a pattern, it may be difficult to discover
+    what part of the codebase is causing the problem. We will need to search the codebase
+    for SQL strings similar to the ones showing up in the logs.
+
+
+    > If your database abstraction layer has a query profiler that retains a backtrack,
+    so that you can tell where the query originates, so much the better (Aura.Sql¹
+    is one package). Even if it does not, you can narrow down the possible locations
+    by starting the profiler at a point of your choosing, then stopping the profiler
+    (and logging or dumping its output) at a later point.
+
+
+    ¹https://github.com/auraph/Aura.Sql'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Easier Query Examination
+
+
+    If we have a non-trivial number of root entities, more than 100 or so, reviewing
+    the query logs or profiles will be a heavy undertaking. If at all possible, try
+    to reduce the data set to something more manageable, so that the logs are relatively
+    short. At the very least, reducing the data set will decrease the amount of time
+    it takes to generate the logs in the first place.
+
+
+    In the case of the Slow Reporting Script, it would have taken three hours to run
+    the script and get a log, and the log itself would have been hundreds of thousands
+    of lines. That would have for a very slow “change-and-retest” iteration cycle.
+    Realizing this, I reduced the data set from 2 million rows to just 2 thousand;
+    as a result, the script had to build only 40 root entities instead of 40,000.
+    This had the benefit reducing the time for the script to run and to generate the
+    query log, as well as reducing the number of lines in the log. That meant looking
+    through only 201 relevant log lines, instead of 200,001.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# 4. Why Does The N+1 Problem Occur?
+
+
+    Why is it that the N+1 problem appears at all? After fixing the problem in several
+    codebases, and talking with some of the original developers on those codebases,
+    I have concluded that the problem stems from a CRUD-dy developer mindset.
+
+
+    # CRUD Is The Problem
+
+
+    We all know the CRUD acronym: Create, Read, Update, Delete. The key here is that
+    CRUD applies primarily to single entity, retrieve a single entity, edit and delete
+    a single entity.
+
+
+    This one-at-a-time approach is useful for the vast majority of database interactions.
+    It leads to using such patterns as RowDataGateway and ActiveRecord?. In these,
+    the concentration is on how to build a single entity, usually with its associations.
+
+
+    The single-entity concentration is the source of the N+1 problem. With that mindset,
+    developers approach building a collection of multiple entities as a variation
+    on building entities. The developer just loops over the single-entity creation
+    process once for each entity in the collection. Collections of entities are essentially
+    an afterthought. Because they are not a primary focus, the developer naturally
+    gravitates towards queries-inside-loops, the hallmark of the N+1 problem.
+
+
+    # B Is The Answer
+
+
+    The key to solving the N+1 problem, then, begins with a change in developer mindset.
+    Instead of thinking in terms of CRUD, we should think in terms of BREAD: Browse,
+    Read, Edit, Add, and Delete.
+
+
+    Although the "R-E-A-D" parts map directly to "C-R-U-D", notice that the very first
+    letter represents a collection of multiple entities. Dealing with collections
+    is the very first thing to think about with a BREAD mindset.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Why Does The N+1 Problem Occur?
+
+
+    By thinking first about how to build collections of entities, instead of only
+    individual entities, a developer begins to consider different approaches for entity
+    storage and retrieval. Patterns such as TableDataGateway³, TableModule⁴, and even
+    DataMapper⁵ implementations deal with collections of entities as a first-class
+    part of the application. Collections are no longer an afterthought; instead, they
+    are among the earliest considerations.
+
+
+    After treating entity collections as a first-class concern, it becomes relatively
+    easy to build a single entity, one that contains only a single entity. Thus, the
+    process to build one entity becomes identical to the process of building hundreds
+    of them, and obviates the N+1 problem from the start.
+
+
+    Thus, if we can efficiently build a collection of entities, then building a single
+    entity is also reasonably efficient. The reverse is simply not true, as we have
+    seen by example.
+
+
+    > ³http://martinfowler.com/eaa/eaaCatalog/tableDataGateway.html
+
+    ⁴http://martinfowler.com/eaa/eaaCatalog/tableModule.html
+
+    ⁵http://martinfowler.com/eaa/eaaCatalog/dataMapper.html'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# 5. Solving N+1 With A Single Query\n\nOne approach to solving the N+1 problem\
+    \ is to retrieve all the data for the root entities, and all data for all the\
+    \ associations, all in one query:\n\n+   - Issue a query that joins all necessary\
+    \ tables in a single result set.\n- Convert each result row to entity objects\
+    \ in a PHP loop.\n\nThis approach is intuitively appealing, because it results\
+    \ in only a single query no matter the number of root entities or associations.\
+    \ While it works reasonably well for \"to-one\" relationships, it is generally\
+    \ unsuitable for \"to-many\" relationships. Even so, it warrants discussion, if\
+    \ only for completeness' sake.\n\n# Handling “Many-To-One” Relationships\n\nLet's\
+    \ say our blogging application needs to present a list of the 10 most-recent blog\
+    \ posts and their authors. In an N+1 situation, the relevant code might look like\
+    \ the following.\n\n# The Original N+1 Code\n\n```\n<?php\n// get the most recent\
+    \ posts\n$stmt = 'SELECT *\nFROM posts\nORDER BY datetime DESC\nLIMIT 10';\n$stmt\
+    \ = $pdo->prepare($stmt);\n$stmt->execute();\n$posts = $stmt->fetchAll(PDO::FETCH_CLASS,\
+    \ 'Post');\n\n// get the author for each post\n$stmt = 'SELECT *\nFROM authors\n\
+    WHERE author_id = :author_id'\n$stmt = $pdo->prepare($stmt);\nforeach ($posts\
+    \ as $post) {\n    $stmt->execute(array('author_id' => $post->author_id));\n \
+    \   $post->author = $stmt->fetchObject('Author');\n}\n?>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "# Solving N+1 With A Single Query\n\nAs with any N+1 situation, this will issue\
+    \ 1 query for the root collection of entities, and then 1 query for each association.\
+    \ In this case, with 10 Post entities, that means a total of 11 queries.\n\n>\
+    \ As an added problem, note that the code creates a new Author entity for each\
+    \ Post. If all Post entities belong to the same Author, means there are ten copies\
+    \ of the Author data, none of which is authoritative. Changes to the Author of\
+    \ one Post will not be reflected in what should the same Author on another post.\
+    \ We will address this issue as part of the single-query solution below.\n\n#\
+    \ Converting To A Single Query\n\nBecause this is a \"many-to-one\" query, where\
+    \ each Post belongs to only one Author, we can consider using a single-query approach\
+    \ to eliminate the N+1 problem. First, we fetch a set of rows for all Post and\
+    \ Author data:\n\n```\n<php\n// get the most recent posts with their authors\n\
+    $stmt = 'SELECT\n    posts.post_id AS post__post_id,\n    posts.author_id AS post__author_id,\n\
+    \    posts.datetime AS post__datetime,\n    posts.title AS post__title,\n    posts.body\
+    \ AS post__body,\n    authors.author_id AS author__author_id,\n    authors.name\
+    \ AS author__name\nFROM posts\nJOIN authors ON authors.author_id = posts.author_id\n\
+    ORDER BY datetime DESC\nLIMIT 10';\n$stmt = $pdo->prepare($stmt);\n$stmt->execute();\n\
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);\n?>\n```\n\nSome things to note about\
+    \ this code:\n\n+   We no longer use SELECT *. We have to deconflict between tables\
+    \ that have the same column names (in this case author_id), and at the same time\
+    \ make sure we get back all the data needed to construct the relevant entities.\
+    \ Here we do by aliasing each column name with a prefix indicating the intended\
+    \ entity name, along with two underscores as a separator.\nWe add a JOIN clause\
+    \ for the \"to-one\" relationship, in this case joining to the author's table."
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "# Solving N+1 With A Single Query\n\n3. We use the PDO::FETCH_ASSOC fetch mode\
+    \ instead of PDO::FETCH_CLASS. This returns an array of arrays instead of an array\
+    \ of object instances. Because each row represents data for two entities, a Post\
+    \ and an Author, no class is suitable for the row data. As such, we will have\
+    \ to create the object instances ourselves from the row data.\n\nThe database\
+    \ returns a result set that looks something like following:\n\n# Result rows with\
+    \ post and author\n\n| post_id | title | author_id | name |\n| --- | --- | ---\
+    \ | --- |\n| 1 | Post #1 | 1 | Author #1 |\n| 2 | Post #2 | 2 | Author #2 |\n\
+    | 3 | Post #3 | 2 | Author #2 |\n| 4 | Post #4 | 1 | Author #1 |\n| 5 | Post #5\
+    \ | 2 | Author #2 |\n| 6 | Post #6 | 1 | Author #1 |\n| 7 | Post #7 | 1 | Author\
+    \ #1 |\n| 8 | Post #8 | 2 | Author #2 |\n| 9 | Post #9 | 2 | Author #2 |\n| 10\
+    \ | Post #10 | 1 | Author #1 |\n\nNow we have the results, we loop through to\
+    \ create our entity objects.\n\n```\n<?php\n$authors = array();\n$posts = array();\n\
+    foreach ($rows as $row) {\n\n    // create the post entity\n    $post = new Post();\n\
+    \    $post->post_id = $row['post_post_id'];\n    $post->author_id = $row['post_author_id'];\n\
+    \    $post->datetime = $row['post_datetime'];\n    $post->title = $row['post_title'];\n\
+    \    $post->body = $row['post_body'];\n\n    // does the author already exist?\n\
+    \    $author_id = (isset($authors[$author_id])) {\n        // use the existing\
+    \ author entity\n        $author = $authors[$author_id];\n    } else {\n     \
+    \   // create and retain a new author entity\n        $author = new Author();\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Solving N+1 With A Single Query
+
+
+    ```
+
+    $author->author_id = $author_id;
+
+    $author->name = $row[''__name__''];
+
+    $authors[$author_id] = $author;
+
+    }
+
+
+    // associate the author entity
+
+    $post->author = $author;
+
+
+    // retain the post in the collection
+
+    $posts[] = $post;
+
+    ```
+
+
+    Some notes about the object-creation code:
+
+
+    +   1. The approach clearly involves more lines of code than allowing PDO to create
+    the entity instances for us. In a less naive situation, the entity constructors
+    might receive an array of data and populate themselves, or there might be an entity
+    factory or builder of some sort to handle that work. Regardless, this approach
+    is guaranteed to perform better than issuing 11 queries to create the Post entities
+    with their associated Author entities.
+
+    2. This solution uses unique Author associations across Post entities, unlike
+    the N+1 code. While not strictly an N+1 problem, it does solve the issue of multiple
+    objects representing the same author.
+
+
+    With that, the solution is complete. Adding “to-one” relationships to build associated
+    entities is similarly straightforward. We would add another JOIN clause, alias
+    the selected column names appropriately, and then pull them out of the row in
+    our entity-creation flow, tracking unique entities along the way.
+
+
+    # Handling “One-To-One” Relationships
+
+
+    These are pretty straightforward under the single-query approach. A plain-old
+    JOIN, without any tracking of unique entities, is all we need.
+
+
+    Let’s say the blogging application needs to present a list of Post entities, along
+    with Summary data that tracks the number of views and number of comments. The
+    retrieval and creation code would look something like this:'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "```\n<?php\n// get the most recent posts with their authors\n$stm = 'SELECT\n\
+    \    posts.post_id AS post__post_id,\n    posts.author_id AS post__author_id,\n\
+    \    posts.datetime AS post__datetime,\n    posts.title AS post__title,\n    posts.body\
+    \ AS post__body,\n    summaries.post_id AS summary__post_id,\n    summaries.view_count\
+    \ AS summary__view_count,\n    summaries.comment_count AS summary__comment_count\n\
+    FROM posts\nJOIN summaries ON posts.post_id = posts.post_id\nORDER BY datetime\
+    \ DESC\nLIMIT 10';\n$sth = $pdo->prepare($stm);\n$sth->execute();\n$rows = $sth->fetchAll(PDO::FETCH_ASSOC);\n\
+    \n// create the posts collection with summaries\n$posts = array();\nforeach ($rows\
+    \ as $row) {\n    // create the post entity\n    $post = new Post();\n    $post->post_id\
+    \ = $row['__post_post_id'];\n    $post->author_id = $row['__post_author_id'];\n\
+    \    $post->datetime = $row['__post_datetime'];\n    $post->title = $row['__post_title'];\n\
+    \    $post->body = $row['__post_body'];\n\n    // associate the summary\n    $post->summary\
+    \ = new Summary();\n    $post->summary->post_id = $row['__summary__post_id'];\n\
+    \    $post->summary->view_count = $row['__summary__view_count'];\n    $post->summary->comment_count\
+    \ = $row['__summary__comment_count'];\n\n    // retain the post in the collection\n\
+    \    $posts[] = $post;\n}\n?>\n```\n\nAs we can see, this is a simple interaction."
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# Combining \"Many-To-One\" and \"One-To-One\"\n\nThe major selling point of\
+    \ the single-query solution is that we should be able to bring in all the data\
+    \ for the root entity and the associated entities in one results set. As an example,\
+    \ let's get the Author and Summary data in one query, and create the entities\
+    \ from that.\n\nThe combined data retrieval code would look like this:\n\n```\n\
+    <?php\n$stm = 'SELECT\n    posts.post_id AS post__post_id,\n    posts.author_id\
+    \ AS post__author_id,\n    posts.datetime AS post__datetime,\n    posts.title\
+    \ AS post__title,\n    posts.body AS post__body,\n    authors.author_id AS author__author_id,\n\
+    \    authors.name AS author__name,\n    summaries.post_id AS summary__post_id,\n\
+    \    summaries.view_count AS summary__view_count,\n    summaries.comment_count\
+    \ AS summary__comment_count\nFROM posts\nJOIN authors ON authors.author_id = posts.author_id\n\
+    JOIN summaries ON summaries.post_id = posts.post_id\nORDER BY datetime\nLIMIT\
+    \ 10';\n$stm = $pdo->prepare($stm);\n$stm->execute();\n$rows = $stm->fetchAll(PDO::FETCH_ASSOC);\n\
+    ?>\n```\n\nThe \"many-to-one\" and \"one-to-one\" relationships are now combined\
+    \ into a single query. When we get the results, we can pick up each row by building\
+    \ the creation logic as well:\n\n```\n<?php\n$authors = array();\n$posts = array();\n\
+    foreach ($rows as $row) {\n\n    // create the post entity\n    $post = new Post();\n\
+    \    $post->post_id = $row['post_id'];\n    $post->author_id = $row['author_id'];\n\
+    \    $post->datetime = $row['datetime'];\n    $post->title = $row['post_title'];\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "# Solving N+1 With A Single Query\n\n```\n$post->body = $row['post_body'];\n\
+    \n// does the author entity already exist?\n$author_id = $row['author__author_id'];\n\
+    if (isset($authors[$author_id])) {\n    // use the existing author entity\n  \
+    \  $author = $authors[$author_id];\n} else {\n    // create and retain a new author\
+    \ entity\n    $author = new Author();\n    $author->id = $author_id;\n    $author->name\
+    \ = $row['author__name'];\n    $authors[$author_id] = $author;\n}\n\n// associate\
+    \ the author entity\n$post->author = $author;\n\n// associate the summary\n$post->summary\
+    \ = new Summary();\n$post->summary->post_id = $row['summary__post_id'];\n$post->summary->view_count\
+    \ = $row['summary__view_count'];\n$post->summary->comment_count = $row['summary__comment_count'];\n\
+    \n// retain the post in the collection\n$posts[] = $post;\n```\n\nWith that, we\
+    \ have avoided the N+1 problem entirely for our \"many-to-one\" and \"one-to-one\"\
+    \ relationships. Adding more \"to-to-one\" relationships is as easy as adding\
+    \ another JOIN and creating the associated entity in the PHP loop."
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "# Handling “To-Many” Relationships\n\nUnfortunately, the single-query solution\
+    \ is almost entirely unsuitable for most \"one-to-many\" and \"many-to-many\"\
+    \ situations. Let’s take a look at our initial post-and-comments example to see\
+    \ why. We will start by retrieving all the Post entities (not just 10) and all\
+    \ their comments:\n\n```\n<?php\n$stmt = 'SELECT\n    posts.post_id AS post__post_id,\n\
+    \    posts.author_id AS post__author_id,\n    posts.datetime AS post__datetime,\n\
+    \    posts.title AS post__title,\n    posts.body AS post__body,\n    comments.id\
+    \ AS comment__comment_id,\n    comments.name AS comment__name,\n    comments.email\
+    \ AS comment__email,\n    comments.website AS comment__website,\n    comments.body\
+    \ AS comment__body\nFROM posts\nLEFT JOIN comments ON comments.post_id = posts.post_id';\n\
+    $stmt = $pdo->prepare($stmt);\n$stmt->execute();\n$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);\n\
+    ?>\n```\n\nSome things to note about this code:\n\n+   1. With “to-one”, we no\
+    \ longer use SELECT *; deconstruction of similar column names is still needed.\n\
+    2. We add a LEFT JOIN clause for the “to-many” relationship, in this case joining\
+    \ the comments table. (We use a LEFT JOIN in case there are no comments on a post).\n\
+    3. Again with “to-one”, we use the PDO: FETCH_ASSOC mode instead of PDO::FETCH_CLASS,\
+    \ and we will have to create the object instances ourselves.\n\nThe result set\
+    \ is going to be rather large and will contain a lot of repetition. If there are\
+    \ 50 Post entities in the system, there are 5 Comment entities associated with\
+    \ each Post, that means there will be 250 rows in the result set. It will look\
+    \ something like this:"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "# Solving N+1 With A Single Query\n\n# Result rows with comment and repeated\
+    \ posts\n\n| post_id | title | comment_id | body |\n|---|---|---|--|\n| 1 | Post\
+    \ #1 | 1 | Comment #1 on post #1 |\n| 1 | Post #1 | 2 | Comment #2 on post #1\
+    \ |\n| 1 | Post #1 | 3 | Comment #3 on post #1 |\n| 1 | Post #1 | 4 | Comment\
+    \ #4 on post #1 |\n| 1 | Post #1 | 5 | Comment #5 on post #1 |\n| 2 | Post #2\
+    \ | 6 | Comment #1 on post #2 |\n| 2 | Post #2 | 7 | Comment #2 on post #2 |\n\
+    | 2 | Post #2 | 8 | Comment #3 on post #2 |\n| 2 | Post #2 | 9 | Comment #4 on\
+    \ post #2 |\n| 2 | Post #2 | 10 | Comment #5 on post #2 |\n| 10 | Post #10 | 246\
+    \ | Comment #1 on post #10 |\n| 10 | Post #10 | 247 | Comment #2 on post #10 |\n\
+    | 10 | Post #10 | 248 | Comment #3 on post #10 |\n| 10 | Post #10 | 249 | Comment\
+    \ #4 on post #10 |\n| 10 | Post #10 | 250 | Comment #5 on post #10 |\n\nBy this\
+    \ repetition in the result set, we need to loop through the result set and pick\
+    \ out the distinct Posts. At the same time, we need to retain the multiple Comment\
+    \ entities associated with each Post. The code to do so would look like this:\n\
+    \n```\n<?php\n$posts = array();\nforeach ($rows as $row) {\n    // the post entity\
+    \ ID on this row\n    $post_id = $row['posts__post_id'];\n    \n    // does the\
+    \ post entity already exist in the $posts collection?\n    if (!isset($posts[$post_id]))\
+    \ {\n        // create a new post entity\n        $post = new Post();\n      \
+    \  $post->post_id = $row['posts__post_id'];\n        $post->author_id = $row['posts__author_id'];\n\
+    \        $post->datetime = $row['posts__datetime'];\n        $post->title = $row['posts__title'];\n\
+    \        $post->body = $row['posts__body'];\n        $post->comments = array();\n\
+    \    }\n\n    // create a comment entity from the row data\n```"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '```
+
+    $comment = new Comment();
+
+    $comment->comment_id = $row[''__comment_id''];
+
+    $comment->name = $row[''__comment_name''];
+
+    $comment->email = $row[''__comment_email''];
+
+    $comment->website = $row[''__comment_website''];
+
+    $comment->body = $row[''__comment_body''];
+
+
+    // associate the comment with the post
+
+    $posts[$post_id]->comments[$comment->id] = $comment;
+
+    }?
+
+    ```
+
+
+    At the end of this loop, we will have a $posts collection of all the Post entities
+    with all their Comment entities attached.
+
+
+    # Single-Query Fails With “To-Many” Relationships
+
+
+    At the first single-query solution may seem like a solution for N+1 problems as
+    applied to “to-many” relationships, but there are some major drawbacks.
+
+
+    First, there is no reasonable way to add a LIMIT clause that works the way we
+    need it to. This is because the LIMIT applies to the number of rows returned,
+    and not to the number of entities represented. The difference is subtle but important.
+
+
+    If we were to add LIMIT 10 to the above query, we would in fact get back 10 rows.
+    But those rows would not necessarily represent 10 Post entities (at least, unless
+    there was only one Comment per Post). Even variations on sub-selects for the FROM
+    and JOIN clauses, with LIMIT clauses in the sub-selects, do not work the way we
+    would like in “to-many” relationships.
+
+
+    It turns out the only way to enforce a LIMIT involving a “to-many” relationship
+    in the single-query solution is to count the entities in the PHP looping code.
+    It is left to say that this is a sub-optimal approach.
+
+
+    Second, if there are two or more “to-many” relationships, it becomes much more
+    difficult to construct the query and then pick apart the result set to create
+    the entities. The repetition becomes exponentially more troublesome, we need to
+    track the existence of each related entities. In addition, the size of the result
+    set becomes a problem, whether in terms of columns (because each row has every
+    column for every entity) or in terms of rows (because each row repeats every data
+    element for every entity, multiplied by the number of relationships).
+
+
+    Overall, then, the single-query solution may be fine for “to-one” relationships,
+    but is almost entirely unsuitable for any number of “to-many” relationships.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# 6. Solving N+1 With Query-And-Stitch
+
+
+    There is an alternative to the single-query solution that is easy to implement
+    and more scalable across any number of associations. This alternative is called
+    "query-and-stitch."
+
+
+    The query-and-stitch approach is as follows:
+
+
+    +   1. Issue one query for the root collection of entities.
+
+    2. Issue one additional query per association to get all of the associated entities
+    for all of the root entities at.
+
+    3. Stitch the associated entities into the root entities using a PHP loop.
+
+
+    # Tradeoffs In Query-And-Stitch
+
+
+    The key here is that we issue one additional query per relationship, not one per
+    root entity. The increase in the number of queries is thus linear, not exponential.
+
+
+    For example, if there are 10 entities in the root collection and 2 associations
+    ...
+
+
+    +   - Under N+1 we would issue 21 queries (1 for the root collection of 10 entities,
+    and then 10 more queries for each of the associations). Adding a third association
+    would result in a total of 31 queries (i.e., 1 more for each of the 10 root entities).
+
+    - With the single-query solution, we might be able to retrieve the data in one
+    query, but the costs of working with the result set are too high, including the
+    inability to effectively LIMIT the results on the SQL side.
+
+    - Using query-and-stitch, we issue a total of 3 queries (1 for the root collection,
+    and 1 each of the associations). Adding a third association would result in a
+    total of 4 queries (i.e., 1 query for the relationship).
+
+
+    The query-and-stitch approach represents an effective tradeoff between N+1 and
+    the single-query solution, both for "to-one" and "to-many" relationships.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# Handling “One-To-Many” Relationships\n\nThe following is a rewritten version\
+    \ of our earlier posts-comments example using the query-and-stitch technique.\
+    \ The query to fetch the master set of Post entities is identical, but note that\
+    \ we follow it by creating a root collection keyed on the post_id identity values\
+    \ (i.e., instead of sequential keys).\n\n```\n<?php\n// fetch the sequentially-indexed\
+    \ post entities\n$stmt = 'SELECT\nFROM posts\nORDER BY datetime DESC\nLIMIT 10';\n\
+    $stmt = $pdo->prepare($stmt);\n$stmt->execute();\n$post_entities = $stmt->fetchAll(PDO::FETCH_CLASS,\
+    \ 'Post');\n\n// reindex the entities on their primary key values\n$posts = array();\n\
+    foreach ($post_entities as $post) {\n    $post_id = $post->post_id;\n    $posts[$post_id]\
+    \ = $post;\n}\n?>\n```\n\nSome notes about this code:\n\n+   1. We are back to\
+    \ using PDO::FETCH_CLASS and letting PDO create the entity instances for us.\n\
+    2. We key a new $posts collection array on the post_id values so that later we\
+    \ can easily look up a specific Post by its primary key. While it's tempting to\
+    \ change the array keys of the original result set we might unintentionally overwrite\
+    \ an existing key, which would be counterproductive and difficult to debug.\n\
+    3. Instead of using a loop to key the $posts collection on the post_id of each\
+    \ entity, we could use $stmt->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_UNIQUE,\
+    \ 'Post'). While that would automatically key column on the first column of each\
+    \ returned row, it would also unset column from the row. In turn means each Post\
+    \ would no longer have its post_id value as a property.\n\nNow that we have our\
+    \ collection of Post entities keyed on their identity values, we fetch all the\
+    \ Comment entities for the entire $posts collection in a single query."
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "# Solving N+1 With Query-Stitch\n\n```\n<?php\n// create a comma-separated\
+    \ list of quoted post_id values\n$quoted_post_ids = [];\nforeach (array_keys($posts)\
+    \ as $post_id) {\n    $quoted_post_ids[] = $pdo->quote($post_id);\n}\n$quoted_post_ids\
+    \ = implode(',', $quoted_post_ids);\n\n// fetch all the comments for the posts\n\
+    $stmt = \"SELECT \nFROM comments\nWHERE post_id IN ($quoted_post_ids)\";\n$stmt\
+    \ = $pdo->prepare($stmt);\n$stmt->execute();\n$comment_entities = $stmt->fetchAll(PDO::FETCH_CLASS,\
+    \ 'Comment');\n?>\n```\n\n> The comment-coding feature creates a comma-separated\
+    \ list of post_id values for the use in the IN clause. Normally we would prefer\
+    \ to use placeholder binding, but unfortunately PDO does not bind arrays. Further,\
+    \ quote() does not convert arrays to quoted-separated values. As much, we must\
+    \ create the quoted set of comma-separated values. (Some database access libraries\
+    \ do bind arrays as comma-separated values, such as AuraSql. If you are using\
+    \ one of them, so much the better.\n\nFinally, we commit the Comment entries into\
+    \ the root collection of Post entities. Because the $posts collection is keyed\
+    \ on post_id values, it is easy to match each Comment to each Post.\n\n```\n<?php\n\
+    foreach ($comment_entities as $comment) {\n    $post_id = $comment->post_id;\n\
+    \    $comment_id = $comment->comment_id;\n    $posts[$post_id]->comments[$comment_id]\
+    \ = $comment;\n}\n?>\n```\n\nVoila: we have used a total of two queries and two\
+    \ loops to create the root collection of Post entities with their associated Comment\
+    \ collections.\n\nAlthough we are still loops, the important distinction is that\
+    \ we are not using queries inside the loops. The loops that stitch the associated\
+    \ entities into the root collection are very fast compared to running queries\
+    \ inside those loops.\n\nhttps://github.com/aurasphp/AuraSql"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "Solving N+1 With Query-And-Stitch\n\n# Handling “Many-To-Many” Relationships\n\
+    \nWe can also associate entities from a many-to-many relationship. For example,\
+    \ if we need to associate a Tag collection in a many-to-many relationship for\
+    \ each Post, we could do something like:\n\n```\n<?php\n// fetch all tags through\
+    \ a `posts_tags` association table\n$stmt = \"SELECT\n    posts_tags.post_id AS\
+    \ post_id,\n    tags.*\nFROM tags\nJOIN posts_tags ON posts_tags.tag_id = tags.tag_id\n\
+    WHERE posts_tags.post_id IN ({$quoted_post_ids})\";\n\n$stmt = $pdo->prepare();\n\
+    $stmt->execute();\n$tag_entities = $stmt->fetchAll(PDO::FETCH_CLASS, 'Tag');\n\
+    \n// stitch the tag into the posts\nforeach ($tag_entities as $tag) {\n    $post_id\
+    \ = $tag->post_id;\n    $tag_id = $tag->tag_id;\n    $posts[$post_id]->tags[$tag_id]\
+    \ = $tag;\n}\n?>\n```\n\n> Note that we do not capture the association table mapping\
+    \ data itself. For that, we would need another query, and another entity to retain\
+    \ the data.\n\nUsing the query-and-stitch technique, we have issued a total of\
+    \ 3 queries, and used a total of 4 loops, to get the root entity IDs and stitch\
+    \ together two associations (comments and tags). In an N+1 situation, would have\
+    \ used a single loop in the PHP code, but we would have issued a total of 21 queries.\
+    \ The performance of the multiple PHP loops is practically guaranteed to be better\
+    \ than the performance of 21 queries.\n\n# Handling “Many-To-One” Relationships\n\
+    \nIf we want to add a “many-to-one” relationship, sometimes called a “belongs-to”\
+    \ association, the query-and-stitch logic is somewhat more complex. We need to\
+    \ build a collection of unique associated entities, then stitch the associated\
+    \ entities into the root collection. We do not want to create multiple"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "# Solving N+1 With Query-And-Stitch\n\ncopies of each associated entity in\
+    \ this case, each is represented by the same backing database row.\n\nFor example,\
+    \ if each Post belongs to an Author, we need to collect the unique Author entities\
+    \ first, then stitch them into the Post collection. If one Author is associated\
+    \ with multiple Post entities, changing the Author data through one Post will\
+    \ be reflected in all other Post entities with that same Author.\n\n```\n<?php\n\
+    // get the unique author_id values from the posts collection\nquoted_author_ids\
+    \ = array();\nforeach ($posts as $post) {\n    $quoted_author_ids[] = $pdo->quote($post->author_id);\n\
+    }\n$quoted_author_ids = implode(',', array_unique($quoted_author_ids));\n\n//\
+    \ fetch all authors into the posts collection\n$stmt = \"SELECT *\nFROM authors\n\
+    WHERE author_id IN ($quoted_author_ids)\";\n\n$stmt = $pdo->prepare();\n$stmt->execute();\n\
+    $author_entities = $stmt->fetchAll(PDO::FETCH_CLASS, 'Author');\n\n// key all\
+    \ authors collection on its identity values\n$authors = array();\nforeach ($author_entities\
+    \ as $author) {\n    $author_id = $author->author_id;\n    $authors[$author_id]\
+    \ = $author;\n}\n\n// stitch the author entities into the posts\nforeach ($posts\
+    \ as $post) {\n    $author_id = $post->author_id;\n    $post->author = $authors[$author_id];\n\
+    }\n?>\n```\n\nThe Author is the third association we have added to each Post (the\
+    \ others were Comment and Tag associations). In doing so we have added only 1\
+    \ query, for a total of 4. In this case, there were two additional loops, one\
+    \ to create the Author collection and to stitch each Author into its associated\
+    \ Post."
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# Handling “One-To-One” Relationships\n\nAdding a \"one-to-one\" relationship\
+    \ is the simplest case to deal with. We add one more query, and one more loop,\
+    \ to fetch the associations for the root collection all, and stitch them into\
+    \ the root collection. There's no need for uniqueness tracking as \"many-to-one\"\
+    , but we need to key the associated entities on their foreign key values.\n\n\
+    Let's say we want to bring in the Summary entry for each Post for the view and\
+    \ comment counts:\n\n```\n<?php\n // fetch all summaries for the post collection\n\
+    \ $stmt = \"SELECT *\n FROM summaries\n WHERE post_id IN ({$quoted_post_ids})\"\
+    ;\n\n $sth = $pdo->prepare();\n $sth->execute();\n $summary_entities = $sth->fetchAll(PDO::FETCH_CLASS,\
+    \ 'Summary');\n\n // key a summaries collection on its foreign key values\n $summaries\
+    \ = array();\n foreach ($summary_entities as $summary) {\n $post_id = $summary->post_id;\n\
+    \ $summaries[$post_id] = $summary;\n}\n\n // stitch the summaries into the posts\n\
+    \ foreach ($posts as $post) {\n $post_id = $post->post_id;\n $post->summary =\
+    \ $summaries[$post_id];\n}\n ?>\n```\n\nThe Summary marks the fourth association\
+    \ for the root collection of Post entities."
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "# Performance Implications\n\nLet's tally up our query and loop counts:\n\n\
+    +   * A total of 5 queries: 1 for the root collection, and 1 for each of the Comment,\
+    \ Tag, Author, and Summary associations\n* A total of 9 loops:\n  - 1 to key the\
+    \ Post collection on its key values,\n  - 1 each to rekey the Author and Summary\
+    \ collections on their key values\n  - 1 each to create the quoted comma-separated\
+    \ values for the post_id and author_id lists\n  - 1 each to stitch the Comment,\
+    \ Tag, Author, and Summary associations into the root collection\n\nBy contrast,\
+    \ an N+1 situation with 10 Post entities in the root collection would have had\
+    \ only one loop, but would have issued 41 queries. The query-and-stitch solution\
+    \ is certainly more lines of code, but its performance is much better than N+1\
+    \ because of the reduced number of queries."
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# 7. Refactoring The Codebase To Remove N+1 Problems
+
+
+    Now that we have discussed solutions for N+1 problems, we can begin to remove
+    them from our codebase. We need not rewrite the entire application; instead, we
+    can incrementally improve the codebase through [refactoring].
+
+
+    # Prerequisites
+
+
+    Before we get started, we should have some prerequisites in place.
+
+
+    Most importantly, we should have tests of some sort for our application, or at
+    least for the parts we are going to modify. These tests will help us assure that
+    any changes we make while removing N+1 problems do not break the application.
+    These need not be unit tests, [Characterization tests] will just do fine. If nothing
+    else, make friends with your QA team and apply their acceptance tests to your
+    changes.
+
+
+    If we are not using a revision version control system, such as Git, now would
+    be an excellent time to start. We should do our work in a separate branch, not
+    in the same branch as the main thrust of development work. We can merge our changes
+    after we know they work properly.
+
+
+    We need to be able to work in short iteration loops while diagnosing and resolving
+    our database-interaction loops. This means we need access to the database itself,
+    even if only a local copy, with a representative set of data for the querying
+    testing. This is in addition to a working installation of the application code,
+    of course.
+
+
+    Finally, if you have not [Modernizing Legacy Applications in PHP] and applied
+    its formula to your codebase, you should consider doing so. While not strictly
+    required, it will be very helpful. This is because we want to work on a codebase
+    that has a good separation of concerns in place. If the database code is mixed
+    in business logic and presentation, it is going to be that much more difficult
+    to pick apart (and test!) the SQL queries contributing to our N+1 problems.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# The Process\n\nThe general process for resolving N+1 problems is as follows:\n\
+    \n+   1. Diagnose the existence of an N+1 problem and discover its location in\
+    \ the codebase.\n2. Determine the nature of the N+1 code:\n    - If root collection\
+    \ and the associations are all built together, we should be able to refactor the\
+    \ code in place.\n    - On the other hand, if the root collection is built in\
+    \ one location, and the associations are built elsewhere, we must either modify\
+    \ the code in different locations, or collect it into a single location.\n3. Once\
+    \ the N+1 problem is resolved, test or spot-check the application to make sure\
+    \ it still works.\n4. Commit the changes, push them to the central repository,\
+    \ and notify QA.\n5. Diagnose the existence of any remaining N+1 problems, and\
+    \ start the process over again.\n\nSince we have already gone over the diagnosis\
+    \ and discovery techniques for N+1 problems, we can proceed to determining the\
+    \ nature of the discovered N+1 code.\n\n# N+1 In A Single Location\n\nThis is\
+    \ the easiest variation of N+1 to resolve. In this case, the root collection of\
+    \ entities and all the associations are built in a single function, method, or\
+    \ class. It will look something like our earlier posts-and-comments examples,\
+    \ and we can apply the single-query solution and/or the query-and-stitch directly\
+    \ on the code as it is.\n\n# N+1 Across Separated Locations\n\nThis is a more\
+    \ difficult variation of N+1, one that can be prevalent in modernized codebases.\
+    \ Here, the root collection of entities is built in one location in the codebase,\
+    \ but the associations are built in a separate location.\n\nFor example, if our\
+    \ business-logic builds a collection of Post entities ..."
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "Refactoring The Codebase To Remove N+1 Problems\n\n/path/to/posts_controller.php\n\
+    \n```\n<?php\n$stmt = 'SELECT * FROM posts ORDER BY datetime DESC LIMIT 10';\n\
+    $sth = $pdo->prepare($stmt);\n$sth->execute();\n$posts = $sth->fetchAll(PDO::FETCH_CLASS,\
+    \ 'Post');\n?>\n```\n\nand our presentation layer loops through the Post entities\
+    \ to show the Comment collections ...\n\n/path/to/templates/show_posts.php\n\n\
+    ```\n<?php\nforeach ($posts as $post) {\n  // display the post, ...\n  $stmt =\
+    \ \"SELECT * FROM comments WHERE post_id = :post_id LIMIT 10\";\n  $sth = $pdo->prepare(array('post_id'\
+    \ => $post->post_id));\n  $sth->execute();\n  $comments = $sth->fetchAll(PDO::FETCH_CLASS,\
+    \ 'Comment');\n  foreach ($comments as $comment) {\n    // display each comment\n\
+    \  }\n}\n?>\n```\n\nthen we have to deal with the code in these separate locations.\
+    \ (This is a classic example of N+1 in legacy codebases.)\n\n# Embed Query-And-Stitch\
+    \ Logic Inline\n\nBecause the \"1\" and the \"N\" are in separate locations, we\
+    \ cannot apply the single-query solution, even in cases where the association\
+    \ is a single entity. We will need to embed query-and-stitch logic inline in the\
+    \ separate locations.\n\nFirst, we change the code that builds the root collection\
+    \ so that it keys the collection on the Post identity values. (This should look\
+    \ familiar; it is taken from the chapter on query-and-stitch.)"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "/path/to/posts_controller.php\n\n```\n<?php\n$stm = 'SELECT * FROM posts ORDER\
+    \ BY datetime DESC LIMIT 10';\n$stm = $pdo->prepare($stm);\n$stm->execute();\n\
+    $post_entities = $stm->fetchAll(PDO::FETCH_CLASS, 'Post');\n\n$posts = array();\n\
+    foreach ($post_entities as $post) {\n    $post_id = $post->post_id;\n    $posts[$post_id]\
+    \ = $post;\n}\n?>\n```\n\nThen, in the separate location where the associations\
+    \ are built, we apply the query-and-stitch approach inline. (This too should look\
+    \ familiar.)\n\n/path/to/templates/show_posts.php\n\n```\n<?php\n$quoted_post_ids\
+    \ = [];\nforeach (array_keys($posts) as $post_id) {\n    $quoted_post_ids[] =\
+    \ $pdo->quote($post_id);\n}\n$quoted_post_ids = implode(',', $quoted_post_ids);\n\
+    \n// fetch all the comments for all the posts and stitch into posts\n$stm = \"\
+    SELECT * FROM comments WHERE post_id IN ($quoted_post_ids)\";\n$stm = $pdo->prepare($stm)->execute();\n\
+    $comment_entities = $stm->fetchAll(PDO::FETCH_CLASS, 'Comment');\nforeach ($comment_entities\
+    \ as $comment) {\n    $post_id = $comment->post_id;\n    $comment_id = $comment->comment_id;\n\
+    \    $posts[$post_id]->comments[$comment_id] = $comment;\n}\n\n// refactored presentation\
+    \ logic\nforeach ($posts as $post) {\n    // display the post, and then ...\n\
+    \    foreach ($post->comments as $comment) {\n        // display each comment\n\
+    \    }\n}\n?>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "# Unify Query-And-Stitch Logic\n\nThe inline approach is fine for legacy codebases,\
+    \ but it is messy. If we have a more modern codebase with well-separated layers,\
+    \ we would do better to extract the separated association-building logic to an\
+    \ appropriate layer. This is by far the preferred approach.\n\nFor example, let's\
+    \ say we have a PostsMapper and a CommentsMapper:\n\nMapper classes\n\n```\n<?php\n\
+    class PostsMapper\n{\n    protected $pdo;\n\n    public function fetchRecentPosts()\n\
+    \    {\n        $stm = 'SELECT * FROM posts ORDER BY datetime DESC LIMIT 10';\n\
+    \        $sth = $this->pdo->prepare($stm);\n        $sth->execute();\n       \
+    \ $posts = $sth->fetchAll(PDO::FETCH_CLASS, 'Post');\n        return $posts;\n\
+    \    }\n}\n\nclass CommentsMapper\n{\n    protected $pdo;\n\n    public function\
+    \ fetchCommentsForPost($post_id)\n    {\n        $stm = 'SELECT * FROM comments\
+    \ WHERE post_id = :post_id';\n        $sth = $this->pdo->prepare($stm);\n    \
+    \    $sth->execute(array('post_id' => $post_id));\n        $comments = $sth->fetchAll(PDO::FETCH_CLASS,\
+    \ 'Comment');\n        return $comments;\n    }\n?>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "# Refactoring The Codebase To Remove N+1 Problems\n\nOur N+1 presentation logic\
+    \ might look like this:\n\n/path/to/templates/show_posts.php\n\n```\n```php\n\
+    foreach ($posts as $post) {\n    // display the post, and then ...\n    $comments\
+    \ = $comments_mapper->fetchCommentsForPost($post->post_id);\n    foreach ($comments\
+    \ as $comment) {\n        // display each comment\n    }\n}\n```\n```\n\nOne way\
+    \ of using the query-and-stitch logic would be to place it in the CommentsMapper\
+    \ as a new method. Again, this logic should look very familiar.\n\nCommentsMapper.php\n\
+    \n```\n```php\nclass CommentsMapper {\n    public function fetchCommentsIntoPosts($posts)\
+    \ {\n        $quoted_post_ids = [];\n        foreach (array_keys($posts) as $post_id)\
+    \ {\n            $quoted_post_ids[] = $pdo->quote($post_id);\n        }\n    \
+    \    $quoted_post_ids = implode(',', $quoted_post_ids);\n\n        // fetch all\
+    \ the comments for all the posts\n        $stmt = \"SELECT * FROM comments WHERE\
+    \ post_id IN ($quoted_post_ids)\";\n        $stmt = $pdo->prepare($stmt)->execute();\n\
+    \        $comment_entities = $stmt->fetchAll(PDO::FETCH_CLASS, 'Comment');\n\n\
+    \        // stitch into the posts\n        foreach ($comment_entities as $comment)\
+    \ {\n            $post_id = $comment->post_id;\n            $comment_id = $comment->comment_id;\n\
+    \            $posts[$post_id]->comments[$comment_id] = $comment;\n        }\n\
+    \    }\n}\n``````\n```"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "(There is no need to return $posts since $posts was passed by reference.)\n\
+    \nThe presentation logic can then become something more like this:\n\n/path/to/templates/show_$posts.php\n\
+    \n```\n<?php\n$comments_mapper->fetchCommentsIntoPosts($posts);\nforeach ($posts\
+    \ as $post) {\n    // display the post, and then\n    foreach ($post->comments\
+    \ as $comment) {\n        // display each comment\n    }\n}\n?\n```\n\nWith this,\
+    \ we have removed the N+1 problem. However, we still have layer-separation issues.\
+    \ As a further refactoring, we would probably want to unify the query-and-stitch\
+    \ logic in the domain layer and build the collection of Post entities in a better-separated\
+    \ way.\n\n# Test, Commit, Push, Notify QA\n\nAfter making our changes, we need\
+    \ to make sure the application still works. We do this by running our pre-existing\
+    \ unit or characterization tests. If we do not have tests in place, we must browse\
+    \ to or otherwise invoke the changed code.\n\nIf these tests fail, we rejoice!\
+    \ We have discovered that the refactoring has errors. We now have a chance to\
+    \ fix them before we deploy to production.\n\nIf the tests pass, we likewise rejoice.\
+    \ We can now commit all of our new work and push it to the central repository.\
+    \ Then we can notify the QA team that our better-performing code is ready for\
+    \ them to review.\n\n# Do ... While\n\nOnce we have solved that occurrence of\
+    \ one N+1 problem, we can start over again and look for remaining ones, and apply\
+    \ the process again."
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# 8. Common Questions
+
+
+    # Can I Combine Single-Query With Query-And-Stitch?
+
+
+    It might be reasonable in some cases to combine the single-query approach with
+    the query-and-stitch approach. You might handle all the "to-one" relationships
+    with the single-query approach,and follow by handling all the "to-many" relationships
+    using query-and-stitch. Doing so would reduce the number of queries in total by
+    consolidating all the "to-one" queries into the root query. In our earlier examples,
+    that would mean the three Post, Author, and Summary queries would become one query,
+    leaving only the Comment and Tag queries.
+
+
+    I am in favor of combining the approaches when performance is of the utmost concern.
+    However, my guess is that by eliminating N+1 problems in the codebase, we have
+    increased performance so dramatically that the greater concern is one of consistency.
+    Mixing approaches, or using one approach in some cases and the other in different
+    cases, means inconsistency in the codebase. That, in turn, can reduce developer
+    comprehension and confuse expectations.
+
+
+    Thus, I prefer using the query-and-stitch method throughout a codebase, even when
+    it means one or two extra queries here and there. Of course, once those extra
+    queries change from an imagined or predicted performance concern into an actual
+    and measured performance concern, I am happy to use the single-query solution
+    to resolve those concerns.
+
+
+    As usual, your own needs and preferences should be the final determinant of which
+    approaches to use, and when.
+
+
+    # Can I Use-Selects Instead Of The IN() Operator?
+
+
+    In the query-and-stitch solution, we create a list of quoted comma-separated values
+    indicating the identity or foreign key to retrieve from the database. We then
+    use the list of values with an IN() operator to get the necessary rows for building
+    our associations.
+
+
+    While it is easy to imagine problems with the IN() operator, I myself have rarely
+    run into a situation where using IN() was actually a problem. Some databases may
+    restrict the number or length of IN() elements, or restrict the length of the
+    query string overall, but in practice I have found these restrictions of little
+    importance. As long as the IN() condition referred to an indexed column, I found
+    few or no performance-related problems.
+
+
+    However, there are still cases where the IN() operator is a measurable problem.
+    You will only be able to tell this by running EXPLAIN (or the equivalent) on your
+    slower queries, and discovering that the query plan is sub-optimal to the IN().'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# Common Questions
+
+
+    In such cases, replace the IN() with a JOIN on a sub-select to provide the related
+    values for retrieval. For example, fetching a root collection of Post entities
+    and an associated collection of Comment entities might look like this
+
+
+    ```
+
+    <?php
+
+    // fetch the sequentially-indexed post entities
+
+    $stm = ''SELECT *
+
+    FROM posts
+
+    ORDER BY datetime DESC
+
+    LIMIT 10'';
+
+    $sth = $pdo->prepare($stmt);
+
+    $sth->execute();
+
+    $post_entities = $sth->fetchAll(PDO::FETCH_CLASS, ''Post'');
+
+
+    // fetch all the comments for all the posts
+
+    $stm = "SELECT *
+
+    FROM comments
+
+    JOIN (
+
+    SELECT post_id
+
+    FROM posts
+
+    ORDER BY datetime DESC
+
+    LIMIT 10
+
+    ) AS posts ON posts.post_id = comments.post_id";n
+
+    $sth = $pdo->prepare($stmt);
+
+    $sth->execute();
+
+    $comment_entities = $sth->fetchAll(PDO::FETCH_CLASS, ''Comment'');
+
+    ?>
+
+    ```
+
+
+    In this case, we remove the WHERE ... IN() and literal list of post_id values.
+    We then replace it with JOIN against a sub-select that is identical to the SELECT
+    we used to create the root collection (with the exception that the sub-select
+    returns only the primary key).
+
+
+    If we really want to get clever, we can create a temporary table with the post_id
+    values from the root collection. We can then JOIN against the temporary table
+    instead of the sub-select. This is probably most useful when we need to use the
+    same sub-select multiple times within a transaction.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Should I Use a Transaction With Query-And-Stitch?
+
+
+    With query-and-stitch, we make multiple calls to the database. However, the data
+    in the database may change between those calls. For example, let''s say we fetch
+    the rows for a Post collection, and immediately after that one of the posts row
+    values is changed (say the author_id). Any query after that, where we JOIN posts
+    or otherwise provide the same list of author_id values to available, may be inconsistent
+    and lead to unexpected results.
+
+
+    For this reason, it may be wise in some cases to perform query-and-stitch inside
+    a transaction. Doing so will help to maintain a consistent state across the several
+    queries whose results will be stitched together.
+
+
+    There are differing levels of transaction isolation, and different databases have
+    their defaults. I suggest using the READ COMMITTED level and moving up to REPEATABLE
+    READ if you notice errors or inconsistencies from insufficient isolation.
+
+
+    > Transactions and transaction isolation carry performance considerations related
+    to table and row locking. Be sure to consult your database documentation for specifics.
+    You may need to choose a tradeoff between consistency and performance.
+
+
+    For example, with PDO and either MySQL or PostgreSQL, the code might look like
+    the following:
+
+
+    ```
+
+    <?php
+
+    // begin the transaction in
+
+    $pdo->exec(''SET TRANSACTION ISOLATION LEVEL REPEATABLE READ'');
+
+    $pdo->beginTransaction();
+
+    // select all the data ...
+
+    // end the transaction
+
+    $pdo->commit();
+
+    // stitch the data together into entities
+
+    ?>
+
+    ```
+
+
+    Notice that we do all our data selection in a single block, then end the transaction,
+    and only afterwards do we stitch our entities. This is because we want to keep
+    the time spent in the transaction as short as possible. In general, longer transactions
+    mean slower performance.
+
+
+    > http://en.wikipedia.org/wiki/Isolation_(database_systems)'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# Can I Just Use ORM?
+
+
+    At this point, some readers are wondering if it would be wise to incorporate ORM
+    system such as Doctrine, Propel, or one of the others available in PHP. After
+    all, ORMs use the single-query and query-and-stitch techniques themselves, and
+    thus using an ORM would automate away a lot of the code we have to write for ourselves
+    when solving the N+1 problem.
+
+
+    I have mixed feelings about ORMs. After developing a robust ORM system for Solar
+    with Jeff Moore, I am fully acquainted with the tradeoffs in using them. They
+    are often a great boon in the early development of an application. But later they
+    are revealed as opaque, ineffective, or unpredictable in edge cases, and so require
+    that you have good knowledge of their idiosyncrasies in different situations.
+
+
+    ORMs almost always require you to learn special idioms to build your queries.
+    These idioms can be tied to a SQL-lookalike language, or to a particular set of
+    methods and informational properties on various classes, or even of the two. I
+    feel this modified way-of-working presents a significant impediment to incorporating
+    an ORM into an existing application. Even if your database logic is well separated,
+    you will have to rewrite every database interaction to conform to the ORM query
+    idioms. This will take time and effort that might be better spent elsewhere.
+
+
+    Even after incorporating an ORM, you may not be fully insulated from the N+1 problem.
+    This is especially case if the ORM lazy-loads records in a loop where you did
+    not eager-fetch the necessary data. You will need to pay attention to how your
+    ORM works internally so that you do not end up with the very problem you were
+    trying to solve.
+
+
+    Overall, I think the tradeoffs of an ORM are highly context-dependent. I cannot
+    offer general-purpose advice regarding them without knowing your particular situation,
+    other than to say “Proceed with caution.”
+
+
+    http://solarphp.com
+
+    http://www.procata.com'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "# # Appendix\n\n# ## SQL Schema\n\nThe following SQLite tables represent the\
+    \ data structures for a naive blogging application.\nThe tables are named for\
+    \ plural entities: posts, comments, and so on. Each primary key column is auto-incremented,\
+    \ and is named for the singular entity suffixed with *_id: post_id, comment_id,\
+    \ and so on.\n\nThe summaries table does not have a summary_id column, since each\
+    \ row is one-to-one with posts directly. The posts_tags table is an association\
+    \ table, mapping a many-to-many relationship between posts and tags.\n\nThe tables\
+    \ are stripped stripped to reveal the core substance of the data, and should not\
+    \ be used as the basis for a real application.\n\n```\nCREATE TABLE authors (\n\
+    \    author_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name VARCHAR(255)\n);\n\
+    CREATE TABLE comments (\n    comment_id INTEGER PRIMARY KEY AUTOINCREMENT,\n \
+    \   post_id INTEGER,\n    datetime DATETIME,\n    name VARCHAR(255),\n    email\
+    \ VARCHAR(255),\n    website VARCHAR(255),\n    body TEXT\n);\nCREATE TABLE posts\
+    \ (\n    post_id INTEGER PRIMARY KEY AUTOINCREMENT,\n    author_id INTEGER,\n\
+    \    datetime DATETIME,\n    title VARCHAR(255),\n    body TEXT\n);\nCREATE TABLE\
+    \ posts_tags (\n```"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "Appendix\n\n40\n\n```\nposts_tags_id INTEGER PRIMARY KEY AUTOINCREMENT,\npost_id\
+    \ INTEGER,\ntag_id INTEGER;\n```\n\n```\nCREATE TABLE summaries (\npost_id INTEGER,\n\
+    view_count INTEGER,\ncomment_count INTEGER\n```\n\n```\nCREATE TABLE tags (\n\
+    tag_id INTEGER PRIMARY KEY AUTOINCREMENT,\nname VARCHAR(255));\n```\n\n# # PHP\
+    \ Classes\n\nThe following PHP classes represent entities in a naive blogging\
+    \ application. These are purposely stripped down to show the core substance of\
+    \ the classes, and should not be used as the basis for a real application. In\
+    \ particular, the classes use public properties to avoid boilerplate getter and\
+    \ setter methods; this is to reduce the volume of code presented, not to indicate\
+    \ a good practice.\n\n```\n<?php\nclass Author {\n    /** database columns */\n\
+    \    public $author_id;\n    public $name;\n}\n```\n\n```\nclass Comment {\n \
+    \   /** database columns */\n    public $comment_id;\n    public $post_id;\n \
+    \   public $datetime;\n    public $name;\n    public $email;\n    public $website;\n\
+    \    public $body;\n}\n```\n\n```\nclass Post\n```"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "```\n/** database columns */\npublic $post_id;\npublic $author_id;\npublic\
+    \ $datetime;\npublic $title;\npublic $body;\n\n/** associations */\npublic $author;\n\
+    public $comments;\npublic $summary;\npublic $tags;\n}\nclass Summary {\n  /**\
+    \ database columns */\npublic $post_id;\npublic $view_count;\npublic $comment_count;\n\
+    }\nclass Tag {\n  /** database columns */\npublic $tag_id;\npublic $name;\n}\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# # Colophon
+
+
+    Leanpub Formatting Settings
+
+
+    | | |
+
+    |---|---|
+
+    | Page break after every section | No |
+
+    | Show links as footnotes in PDFs | Yes |
+
+    | Font size | 12pt |
+
+    | Body font | Linux Libertine |
+
+    | Title font | Open Sans |
+
+    | Code font | Source Code Pro |
+
+    | Code font size | 10pt |
+
+    | Page size | US Letter |
+
+    | Paragraph style | No ident |
+
+    | Show line numbers on code samples | Yes |
+
+    | Chapter and section Titles | Left-aligned |
+
+    | Table of contents | Parts, chapters, and sections; show dots |
+
+    | Section numbering | Number parts and chapters |
+
+    | Display scene break as | Horizontal line |
+
+    | Tables | Default |
+
+    | Asides | White; show borders |
+
+    | Captions | Bold |
+
+    | Show page numbers on chapter pages | No |'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# About the Author
+
+
+    Paul M. Jones is an internationally recognized PHP expert who has worked as everything
+    from junior developer to VP of Engineering in all kinds of organizations (corporate,
+    military, non-profit, educational, medical, and others). He blogs professionally
+    at paul-m-jones.com and is a regular speaker at various PHP conferences.
+
+
+    Paul''s latest open-source project is Aura for PHP¹. Previously, he was the architect
+    behind the Solar Framework², and was the creator of the Savant template system³.
+    He was a founding contributor to the Zend Framework¹, the DB, DB, Table, and View
+    components, and has written a series of authoritative benchmarks⁵ on dynamic framework
+    performance⁶.
+
+
+    Paul was one of the first members of the PEAR project⁷. He is a voting member
+    of the PHP Framework Interoperability Group⁸, where he sheed the PSR-1⁹ “Coding
+    Standard” and PSR-2¹⁰ “Coding Style” recommendations, and was the primary author
+    on the PSR-4¹¹ “Autoloader” recommendation. He was also a member of the Zend PHP
+    5.3 Certification education advisory board¹³.
+
+
+    In a previous career, Paul was an operations intelligence specialist for the US
+    Air Force. In his spare time, he enjoys putting .308 holes in targets at 400 yards.
+
+
+    +   ¹http://paul-m-jones.com
+
+    ²http://aurphp.com
+
+    ³http://solarphp.com
+
+    ⁴http://phpsavant.com
+
+    ⁵http://framework.com/
+
+    ⁶https://github.com/jonpson/php-framework-benchmarks
+
+    ⁷http://paul-m-jones.com/?p=421
+
+    ⁸http://pear.php.net
+
+    ⁹http://php-fig.org/
+
+    ¹⁰http://php-fig.org/psr/psr-1
+
+    ¹¹http://php-fig.org/psr/psr-2
+
+    ¹²http://php-fig.org/psr/psr-4
+
+    ¹³https://www.zend.com/services/certification/php-5-certification/education-advisory-board'
+  merge: -1
+  img_proc: true
