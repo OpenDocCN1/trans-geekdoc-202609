@@ -1,0 +1,15 @@
+# Advancing Digital Forensic Intelligence
+
+Face recognition systems that use EdgeAI technology may process data locally, minimizing the requirement for significant network connectivity and reducing latency. This decentralized technique guarantees real-time analysis and allows forensics professionals to quickly identify perpetrators. Furthermore, EdgeAI devices with facial recognition capabilities provide increased privacy and security because sensitive data is kept on the device, reducing the danger of unwanted access or breaches.
+
+The incorporation of facial recognition systems into EdgeAI devices has proven beneficial in solving complex cases, speeding up investigations, and maintaining public safety. With their ability to process and analyse large amounts of data quickly, these devices have become invaluable assets in the DFI landscape, allowing investigators to quickly identify and apprehend criminals while maintaining the highest privacy and accuracy standards.
+
+Therefore, EdgeAI device integration in DFI has ushered in a new era of efficiency, portability, and precision. Wearable devices to facial recognition systems are examples of advanced equipment that provide real-time analysis, secure data processing, and better investigative skills. EdgeAI devices, with their ability to conduct complicated tasks at the edge, have become important tools, enabling investigators to remain ahead of the ever-changing landscape of digital crimes while maintaining the highest standards of privacy and forensic integrity.
+
+# 3.5 EDGEAI-ENABLED EVIDENCE COLLECTION AND PRESERVATION
+
+EdgeAI approaches play a critical role in improving evidence collection and preservation processes in the field of DFI. Organizations may ensure efficient and safe digital evidence handling in real time by employing edge computing and AI at the network edge. EdgeAI's distributed nature allows for evidence gathering and preservation closer to the source, reducing the chance of data loss or tampering during transmission (Figure 3.5). EdgeAI also enables the use of strong encryption and distributed storage techniques, which forensic the integrity and validity of digital evidence. Organizations can simplify the forensic investigation process while protecting and adhering to legal standards by using EdgeAI-enabled evidence collecting and preservation. This section delves into the significance and benefits of using EdgeAI approaches for evidence gathering and preservation in the context of increasing DFI.
+
+# 3.5.1 ENSURING INTEGRITY AND AUTHENTICITY OF EVIDENCE AT THE NETWORK EDGE
+
+Ensure the integrity and validity of digital evidence is critical in the field of DFI. Organizations can develop robust systems to safeguard the integrity and validity of digital evidence at the network edge in real time by integrating EdgeAI approaches. This section delves into the strategies and technologies used to attain this critical goal.
