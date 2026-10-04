@@ -1,0 +1,1789 @@
+- pgno: 0
+  md: "# Machine Learning with Applications 10 (2022) 100406\n\nContents lists available\
+    \ at ScienceDirect\n\n# Machine Learning with Applications\n\njournal homepage:\
+    \ www.elsevier.com/locate/mlwa\n\n# Increasing trust and fairness in machine learning\
+    \ applications within the mortgage industry\n\nW. van Zetten *, G.J. Ramackers,\
+    \ H.H. Hoos\nLIACS, Leiden University, Nieuw Bosch 1, Leiden, 2333 CA, The Netherlands\n\
+    \n# ARTICLE INFO\n\n# ABSTRACT\n\n+   * Keywords\n* Explainable artificial intelligence\n\
+    * Interpretable machine learning\n* Fair artificial intelligence\n* Bias detection\n\
+    \nThe integration of machine learning in applications provides opportunities for\
+    \ increased efficiency in many organizations. The deployment of such systems is\
+    \ often hampered by the lack of insight into how decisions are reached, resulting\
+    \ in about trust and fairness. In this article, we investigate what the extent\
+    \ of explainable AI components to ML applications can contribute to alleviating\
+    \ these issues. As part of this research, AI functionality was developed for an\
+    \ existing ML model used for mortgage fraud detection at a large institution.\
+    \ The global and local explanation techniques were deployed to support the day-to-day\
+    \ work of fraud detection experts with the model. In addition, a second system\
+    \ implementing explanation techniques was developed to support the management\
+    \ process. A large-scale controlled experiment was carried out to measure the\
+    \ effectiveness of the two systems, both qualitative and quantitative assessment\
+    \ showed that the addition of AI functionality resulted in a significant increase\
+    \ in trust in the model by its users. The AI system implementing global explanation\
+    \ was found to considerably increase confidence in the ability to perform the\
+    \ processes on compliance and fairness. In particular, bias detection towards\
+    \ certain demographic groups was identified and removal of such biases achieved\
+    \ with a mitigation strategy.\n\n# 1. Introduction\n\nArtificial Intelligence\
+    \ is being deployed in a broad range of applications, increasing the scope of\
+    \ AI applications and the degree to which they affect our daily lives. These systems\
+    \ play important roles across various sectors, including healthcare, education,\
+    \ entertainment and finance. AI systems, or more specifically machine learning\
+    \ (ML), software can achieve high precision in prediction where humans are unable\
+    \ to detect the patterns to solve a given problem.\n\nunfairly biased towards\
+    \ certain demographics. Methods that can help gain insight into such opaque decision\
+    \ processes and ensure systems make fair decisions are extensive research. Learning\
+    \ from machine learning could produce knowledge of the target domains, and ensuring\
+    \ systems are unbiased and fair the decision process is a requirement for the\
+    \ ethical application of machine learning, and AI systems in finance.\n\n# 1.1.\
+    \ Problem statement\n\nA trade-off in the deployment of high-performance ML systems\
+    \ is that they are often so that the exact decision is made by the system, making\
+    \ it very difficult for users to understand why a specific result was obtained.\
+    \ Many problems arise from this inability to examine the decision process. Firstly,\
+    \ it is important to validate that the outcome of the process is defensible, and\
+    \ that it follows a compelling path of thought. \n\nOne frequently used for machine\
+    \ learning is in addressing the risk of fraud. A large case is the Dutch System\
+    \ Risk Indication (SRRI), which is linked to a large amount of demographic data\
+    \ and used to identify potentially fraudulent individuals. The requirements for\
+    \ the process to be fairly considered, combined with the fact that being marked\
+    \ as a potential fraudster had great impact on the industry, caused the system\
+    \ to be prohibited in 2020, after having been in use for many years (van Dijk\
+    \ et al., 2020).\n\nInsurers and banks use ML to estimate the risk of fraud with\
+    \ loan applicants, personal loans as well as mortgages. Organizations applying\
+    \ these systems want to ensure that the systems do not suffer from unintended\
+    \ bias, helping them adhere to anti-discrimination\n\nit is difficult to determine\
+    \ when the decisions was made us\n\n> * Corresponding\nE-mail: wvanzetten@elsevier.com\
+    \ (W. van Zetten), g.j.ramackers@liacs.leidenuniv.nl (G.J. Ramackers), hh@H.H.\
+    \ Hoos).\n\nhttps://doi.org/10.1016/j.jmlwa.2022.100406\nReceived 20 May 2022\
+    \ (The Authors). Received in revised form 5 July 2022; Accepted 29 August 2022\n\
+    2666-8275 © 2022 The Authors. Published by Elsevier Ltd. This is an open access\
+    \ article under the CC BY license\n(http://creativecommons.org/licenses/by/4.0)."
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Laws, these organisations must refrain from making automated decisions based
+    on predictions from the ML system.
+
+
+    This guideline, as well as others, from the Ethical Framework for Insurers, a
+    guaranteed review setup by the Department of Insurers based on the High-Level
+    Expert Group on Artificial Intelligence addressing the European Commission (Verband
+    van Verzekeraars, 2021).
+
+
+    # 1.2. Hypotheses
+
+
+    In this article, we present an extensive evaluation and case study with a large
+    Dutch insurer, hereafter referred to as "the organisation". The organisation offers
+    life and non-life insurance for various products and services in different areas;
+    it uses ML for fraud detection, risk pricing and underwriting. Our goal is to
+    further improve its use of AI, in order to address the obligations set out by
+    regulators. In order to achieve this, we would like to have a set of tools that
+    help data scientists explain the models they use, to validate the decision process,
+    and investigate and demonstrate the fairness of a given model. Furthermore, the
+    organisation requires methods to explain the individual outcomes and for models
+    with black box structures to explain the decision making process. Also, the organisation
+    requires us to evaluate the interpretability of models using ML, as it is crucial
+    for employees and managers to understand the predictions made by ML.
+
+
+    In this paper, we focus on the development of explainable AI systems and instructions
+    proposed in this research helps organisations implement interpretable and unbiased
+    ML systems, we set the following hypotheses:
+
+
+    +   1. Techniques for individual predictions to be interpretable and transparent
+    increase trust, and usability of ML models with their users.
+
+
+    +   2. Techniques for ML to be globally interpretable and demonstrably free of
+    discriminatory bias enables streamline internal processes concerning fair and
+    balanced AI.
+
+
+    # 1.3. Methodology
+
+
+    Our study presented here researches design, by designing two prototype AI systems
+    jointly with the organisation. By researching existing techniques in the domain
+    of AI research, we selected a set of techniques and combine them to provide interpretability
+    for the organisation to achieve the goals described. We evaluate the techniques
+    identified through existing AI at the organisation, how effective these techniques
+    are, and what should be considered for their implementation.
+
+
+    We propose two prototype systems. The first of these focuses on implementing operational
+    explainability, granting users insight into the individual predictions generated
+    by a model. In literature this is known as local interpretability. This first
+    system will benefit from being locally interpretable. Our second system focuses
+    on bias detection, granting insight factors into the overall behaviour of the
+    ML model, and testing the fairness for a given model. This allows for a model
+    to be fair and unbiased, which is known as global interpretability. This system
+    will be called MLX2. These two systems allow for an organisation to gain insight
+    into the behaviour of ML models on
+
+
+    a micro-level, as well as to ensure that an ML system is demonstrably free of
+    bias.
+
+
+    MLX1 was validated in cooperation with a group of 11 mortgage application agents,
+    who work with an ML model assessing applications on daily basis. A short survey
+    revealed high satisfaction and satisfactory performance. We validated it with
+    a second survey, in cooperation with data scientists, specifically focusing on
+    the use of their system in development and process, and also with experts from
+    Legal, Compliance and Risk departments, to evaluate the interpretability and insights
+    gained from using it. The results showed that the system was accepted in every
+    new and existing ML model in their use.
+
+
+    The result of our study presented here is an evaluation of techniques for the
+    given problem, implementation and considerations in a practical scenario.
+
+
+    # 2. Background
+
+
+    The background for this work is determined by the business context, namely and
+    regulations to which the organisation must adhere, as well as guidelines to be
+    met. Research in the field of transferable machine learning has produced a range
+    of techniques that can be used by our prototype systems.
+
+
+    # 2.1. Research in AI
+
+
+    In recent years, the field of interpretable machine learning and bias detection
+    has seen enormous growth. Some of these focus on the effect of interpretability
+    in its application areas and the interactions with users, using user trust and
+    model adaptation (Doran et al., 2018; Hoffmann et al., 2019). Another subset of
+    research focuses on developing techniques to gain insight into machine learning
+    models (Rudin et al., 2019). Another is focused on developing machine learning
+    models that are interpretable, by creating methods to develop a separate layer
+    that explains the interpretability of black-box models (Lipton et al., 2016).
+    In this paper, we focus on model-specific techniques, as it that we develop and
+    address the problem of models from being limited to a certain type of ML.
+
+
+    Interpretable machine learning is a subset of explainable AI, with many surveys
+    seeking to give an overview of interpretability in machine learning models. Our
+    paper goes more deeply into the different views and perspectives with explainable
+    AI (Doran et al., 2018). Yet other people investigate the impact of explainable
+    models people have used and what they perceive about them (Gill et al., 2019).
+    After several years of applications, or by classification of relevant techniques,
+    Roscher et al. (2020) specifically highlights the application of interpretable
+    machine learning for scientific research, considering existing research and applications
+    of interpretation. Based on byys and Ardell (2024) and Guid et al. (2019) with
+    the reasons listed above, we agree that in order to satisfy the interpretable
+    machine learning aspect of AI, it is necessary to consider both local and global
+    interpretability. Local interpretability includes techniques that help grant insight
+    into the considerations made by the model in a specific case, often identifying
+    the most important features used. Global interpretability techniques focus on
+    building an overall understanding of the decision making process of the model,
+    examining features that are most important and most used when judging new cases.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Machine Learning with Applications (2022) 100406
+
+
+    Mehrabi et al. (2021) review types of bias and fairness definitions.
+
+
+    Consider two aspects of detecting bias in machine learning: data and bias. When
+    training a model that is biased, using an unbiased or biased data set, it is important
+    to put into place techniques to challenge and identify the bias. Secondly, in
+    instances where the data set does not contain bias, the training process may introduce
+    features, such as gender or race. Catan and Hao (2020) review the importance of
+    these features for detecting bias, as well as increasing fairness; we used this
+    as a starting point to explore possible techniques in both data and model.
+
+
+    Besides techniques for global interpretability that produce feature weights or
+    rankings, or deliver rules determining the behaviour, this is also the approach
+    of interactive visualisation to capture the model. The What if? allows users to
+    probe, visualise and analyse systems without much coding (Wchsler et al., 2020).
+    Now, users can inspect behaviour in different contexts, and build their own understanding
+    of global behaviour.
+
+
+    # 2.2. Relevant techniques
+
+
+    Based on reviewed papers in the previous section, we have compiled a short-list
+    of promising techniques focusing the business context and requirements.
+
+
+    # 2.2.1. Techniques for local interpretability
+
+
+    Local Model-agnostic Explanations (LIME) (Ribeiro et al., 2016) is one of local
+    techniques. LIME learns to interpret each specific prediction. LIME is a linear
+    model, which approximates the importance of each feature and whether the feature
+    has a positive or negative impact on the final prediction. Non-linear (or rule-based)
+    approaches can also take into account the combined effects of features in individual
+    predictions. It is also possible that these techniques do not work well in the
+    case of a binary prediction, but a focus of features together. An example of such
+    a technique is SHAP (Ribeiro et al., 2018). An explanation is an analysis that
+    explains a local prediction, so that changes can be made accordingly. Since SHAP
+    uses rules, it is possible to combine features and is much powerful compared to
+    LIME, also with some stems from the comparison of features as to a single angle.
+
+
+    Aquitas (Salinas et al., 2018) focuses on data exploration as output and make
+    it attractive to both data scientists and decision makers. General, it explores
+    exploration of the system and its role in facilitating and understanding data
+    dependencies. Aquitas focuses on bias and visualisation based on specific demographic
+    groups. The library does not directly interact with the model, but with the results
+    of with the model, correct classification of cases. Fairness measures, for example
+    false positive rate, are calculated and visualised in detail, showing the groups
+    with their respective fairness and performance scores.
+
+
+    It is possible, even when a feature is not used in the training of the model,
+    such as race, is present in the training data, the results may be biased against
+    those groups (Okamoto et al., 2018), which has been discussed in the subsection
+    on global interpretability, but also be used to see in rules with regards to ‘predictions’.
+    By observing predicted features, it is possible to determine whether the predicted
+    features are used in the model.
+
+
+    # 2.2.2. Techniques for bias detection
+
+
+    Besides exploring for global and local interpretability, we also investigate techniques
+    to determine bias in a model. For us, we must look at both bias in the data and
+    the results of training a model with biased data also usually yields a biased
+    result.
+
+
+    # 2.2.3. Techniques for global interpretability
+
+
+    SHAP (Lundberg & Lee, 2017) can be used to test the explainability, and also be
+    used to estimate global interpretability. With local interpretability, it is possible
+    to see that features have a global impact on the model with a different enter.
+    An instance where secondary features impact the global model by iteratively observing
+    the features in the data set to get certain and assess the impact on the test
+    set. This technique, called BlackBoxAuditing (Adler et al., 2018), can be used
+    for global interpretability by identifying the importance of features in the data
+    set, as well as determine whether a prediction is still impacting the model through
+    its secondary features, monitoring the error rate achieved by the model.
+
+
+    One of the known techniques for explaining machine models is SHAP (Lundberg &
+    Lee, 2017) which uses a cooperative game theory to explain the prediction of a
+    specific instance by how much each feature contributed to the prediction, in the
+    presence of combinations. All predictions result in a matrix of values, which
+    can be compared for the entire model, thus providing global interpretability (Lundberg
+    & Lee, 2017; Molnar).
+
+
+    # 2.3. Ethical considerations
+
+
+    There are several ethical issues in this research, stemming from the industry
+    which the operation operates as well as the deployment of a machine learning model
+    in any industry. The deployment of machine learning models brings with it ethical,
+    specifically concerning housing and the potential impact on an applicant who is
+    a customer of a machine learning model.
+
+
+    # 2.3.1. Automated machine learning detection
+
+
+    The organisation handles many applications in a day. This case of wanting efficiency
+    in service has many applications, which may cause an automated machine learning
+    application to receive a rejection that is not true. In this case, a model might
+    reject the requester because the time required is so short to inspect all documents.
+    In search for efficiency, organizations and industries are to use automated machine
+    learning models for classification tasks. In this paper, the classification of
+    machine learning model in the organisation judges incoming mortgage applicant.
+    The evaluation of the applicant is the right way. In the case of a fraudulent
+    applicant slipping through the machine learning model, an offer may be extended
+    to the recipient, potentially resulting in financial losses for the organisation.
+    The importance of an applicant who is biased and rejected by the machine learning
+    model, the applicant will not receive a mortgage offer. The result of an evaluation
+    by the machine learning model has a better impact for the applicant than for the
+    organisation.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Machine Learning with Applications (2022) 100406
+
+
+    In the above scenario, a machine learning model is left unchecked
+
+    by oversight, meaning it can cause financial damage to the\organisation or deny
+    a valid mortgage to an applicant. From an ethical
+
+    , the event of a valid mortgage being denied is unacceptable.
+
+    Thus, we can conclude that deploying any automated machine
+
+    learning without evaluating all incoming machine applications is ethically
+
+    unacceptable.
+
+
+    (20) Deciding to use data-driven applications, the in-
+
+    ser considers diversity and inclusivity, especially regard-
+
+    groups who are at risk of exclusion or disadvantage as a
+
+    special of needs.
+
+
+    However, a barrier may exist between machine learning
+
+    and reviewer. A machine learning model for which individual
+
+    models are understandable, but the decisions for
+
+    cisions can be transparent, and the decisions of the
+
+    reviewer have the final say in the evaluation of the application,
+
+    but the transparency provided by the machine learning
+
+    model may assist the reviewer in making their own informed
+
+    decision. Care must be taken that this balance between and
+
+    trainer remains in favour of the reviewer, that they keep the final say. This
+    process of making the
+
+    density of existing machine learning models understandable, and
+
+    guarding the balance between machine learning and reviewer is a matter of
+
+    MLXI.
+
+
+    +   - Social well-being
+
+
+    +   (21) The reviewer will monitor the impact of employing
+
+    data-driven decision on groups of clients.
+
+
+    +   - Accountability
+
+
+    +   (23) The reviewer will set up an internal control and ac-\ountability system
+    for the use of AI applications and data
+
+    sources.
+
+
+    +   (24) The insurer improves the expertise of internal
+
+    ternal auditors with data-driven applications.
+
+
+    +   (25) The insurer ensures adequate internal communication
+
+    over data-driven applications.
+
+
+    +   (26) The insurer performs a risk and effect assessment with
+
+    the stakeholders for each data-driven
+
+    decision.
+
+
+    # 2.3.2 Ethical framework for insurers
+
+
+    The organisation is bound by the Ethical Framework, set up
+
+    the Dutch Authority for Insurers, with which all
+
+    nare associated. The associations represent the
+
+    interests, and aim to ensure the customer interacts
+
+    with social developments. The Ethical Framework was set up
+
+    to respond to demands in Europe and Dutch legislation governing
+
+    the use of AI. The Ethical Group on AI advising the
+
+    Committee, who set document containing key requirements
+
+    for trustworthy. These models also aim to address
+
+    ethical concerns noted in Section 2.1., ensuring meaningful
+
+    impact.
+
+
+    The Ethical Framework sets 30 guidelines, guided by
+
+    seven key requirements set up by the High-Level Group.
+
+    The guidelines for our work as presented here are listed
+
+    below, with their number whereas so that they can
+
+    easily be found in the original version of the Ethical Frame-
+
+    work (by Verendaeke, 2021).
+
+
+    +   - Technical robustness and transparency
+
+
+    +   (14) The insurer ensures employees with data-
+
+    driven applications have adequate training, specnically to avoid confirmation
+    bias and ensure human auto-
+
+    omy.
+
+
+    +   - Privacy and governance
+
+
+    +   (15) The use of data-driven productions in production
+
+    always be subject to adequate oversight.
+
+
+    +   - Transparency
+
+
+    +   (18) When evaluating data-driven applications, human-
+
+    vention will be possible, and explanations can be
+
+    obtained by considering the results of an applic-
+
+    .
+
+
+    +   - Diversity, non-discrimination and fairness
+
+
+    +   (19) When infringement on fundamental rights, including
+
+    unfair discriminatory bias in data-driven applications
+
+    not be avoided, the insurer will not deploy the application.
+
+
+    # 2.4. Fraud matching for insurers
+
+
+    The organisation uses a box-like model in the en-
+
+    vironment to estimate the risk associated with income mortgage
+
+    application. The model uses basic properties of mortgage
+
+    indicators as considered in research reports. In total, the model of
+
+    uses 75 features. Each case is assigned a
+
+    risk score, and the top five cases are passed to manual
+
+    review. Due to capacity issues, only cases with
+
+    isclosed.
+
+
+    A currently, right-driven system generates an explanation for the
+
+    case risk, before they are forwarded to the reviewers.
+
+    This explanation is generated using 25 expert-constructed features,
+
+    which trigger on specific values of individuals, meaning the
+
+    coverage of rules does not match the 75 features used by
+
+    tmodel. It is possible that the model identifies a high-
+
+    risk in the case that commonly comes from a reviewer
+
+    covered by the 22 rules. The reviewers who are assigned
+
+    use a maximum of fifteen minutes to verify the generated
+
+    explanation, and are able to consider the different reasons and
+
+    features which, according to the current explanation method, and
+
+    be explained. Our MLXI system allows for all 75 features used by the
+
+    be present in the explanation for reviewers, and allows for the
+
+    combination of features that might indicate a high risk of fraud.
+
+
+    W. van Seiten, (G.J.) Ramakers and H.N. Hoo
+
+
+    4'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 2.5 Acceptance of ML models
+
+
+    The introduction of a Project Initiation Document (PID) at the organisation is
+    one of the requirements for the organisation''s project interpretability. Every
+    new machine learning model-PID also includes sections on bias and discrimination,
+    explainability, and the ethical concerns involved. It must be accepted by the
+    Data Privacy Officer, Compliance and Risk departments before any step of developing
+    a new model or updating an existing model is taken in turn covered by a Record
+    of Processing Activity (ROPA) on data used that is reviewed by the Compliance
+    department. Internal specific guidelines and development methods must be approved
+    by Finance.
+
+
+    Furthermore, the organisation is interested in using automated systems to quantify
+    bias and discrimination as well as to gain insight into the decision making process.
+    Furthermore, the MLX system was developed in a way to determine whether a model
+    is biased towards certain demographic groups. Our MLX2 system was designed to
+    support a generalised approach to including interpretability and bias in the Project
+    Initiation Document. This enables the organisation to streamline internal processes
+    when concerning the acceptance of new models.
+
+
+    # 3. Methods
+
+
+    This section covers the design of the two systems, MLX1 and MLX2, of how they
+    fit into the business context and the model processes at the organisation as described
+    in the previous section. Furthermore, it describes the development of the systems,
+    as well as the demonstrations of their capabilities. Lastly, we outline the methods
+    for validation of both.
+
+
+    # 3.1. Logical design
+
+
+    The system for local interpretability involves generating explanations for applications
+    that have been flagged as high risk. In Fig. 1 we see the different ways for an
+    application after it has been classified. If an application is classified as high
+    risk then it is passed to the reviewer for review, after which the explanation
+    is presented. A reviewer first interprets the explanation before they would normally,
+    to ensure the model decision is verified. This ensures that the model decision
+    is not influenced by the reviewer after they have made their own, decision. The
+    other path follows the normal assessment by a reviewer, if the application has
+    not been judged as a high risk. Based on their decision, the application proceeds
+    or stops. If a risk is identified by a reviewer, the mortgage application is passed
+    onto the anti-fraud department by the reviewer, who do in more research into the
+    application and the decision. If the fraud is proven, it is returned to the organisation.
+    However, resolution of suspicion by the anti-fraud officer is valid to reject
+    the application at first, if the applicant is rejected by the requester. The decision
+    is subject to an appeal, supporting the fraud suspicion but not conclusively proving
+    it
+
+
+    The MLX1 simply replaces the current method for generating the explanation, which
+    in the current situation is using simple
+
+
+    decision rules. It also gives better insight into the decision made by the model,
+    identifying those that support the model (or no risk) indication. Given that the
+    reviewers are expected to spend 5 minutes evaluating the model explanation, can
+    be taken to explain the structure in such a way that this time can limit is still
+
+
+    Internal processes at the organisation need to start new AI projects from a providing
+    system global interpretability and bias detection. MLX2 was designed to help the
+    organisation to ensure that models are free of bias, and to provide an overview
+    of the decision making process.
+
+
+    Currently, the results of the ROPA on all data used by the model are used to ensure
+    that the model is free, but the identification of bias is still difficult. By
+    identifying and quantifying bias, the PID has been helped by the data scientist,
+    that has been approved by Compliance, Legal and Risk departments before the model
+    is built. Any elements of the PID could lead to unclear how bias is identified
+    and quantified, and the results of this in the PID could streamline the process
+    for AI projects in all future cases.
+
+
+    The MLX and MLX2 offer the following two: Firstly, MLX allows for local interpretability,
+    giving the opportunity to gain mortgage reviewers insights into the decision making
+    of individual mortgage applications that are affected by local interpretability
+    and bias detection, enabling the system to use and integrate with existing models
+    for bias and gain overall insights into their behaviour.
+
+
+    In light of this, we decided to use SHAP (Lundberg & Lee 2017) for local interpretability,
+    because it is able to identify the contribution of the result of a simple local
+    case is beneficial to the human reviewers working with the outcome of the model.
+    The SHAP method can be used to show which features have a big or small influence
+    on the outcome of a case gives insights into the model behaviour. SHAP is an aggregate,
+    kernel-based explanation for values. SHAP is a more efficient, model-specific
+    explanation for tree-based models.
+
+
+    Where we found that the running time of the Kernel was able to produce local explanations
+    for all cases in test was so slow that TreeSHAP was able to produce explanations
+    in a reasonable time. TreeSHAP has time complexity $O(TDD2^L)$ (Lundberg et al.
+    2020).
+
+
+    In this case we found that the running time of the Kernel was able to produce
+    local explanations for all cases in test was so slow that TreeSHAP was able to
+    produce explanations in a reasonable time. TreeSHAP is much faster. As important
+    as SHAP is we have to run once per batch, or per each day. We wanted to use SHAP
+    and TreeSHAP because they did not produce different importance rankings. To do
+    this, we compared the features that were ranked in the top 5, as these are the
+    features that would be used in the explanation of our MLX system. We found, on
+    that, the 5 features produced by both methods contained 4 of the same. In practice,
+    this functional difference has no impact on the use of the system.
+
+
+    Three variants of the MLX system were developed and presented to data scientists
+    and mortgage application reviewers for'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# W. van Zellen, J.G. Ramackers and I.H. Hoo
+
+
+    # Machine Learning with Applications 10 (2022) 100406
+
+
+    ![](img/b37ab3c0b0e8ecc504cdf93a1b444c50_5_0.png)
+
+
+    Fig. 1 Activity diagram showing how MLX fits into the process of determining the
+    incoming risk management, by replacing current method for making the full use
+    of a high risk fraud.
+
+
+    +   - High risk indicator(s):
+
+    - The main application has been working for four months.
+
+    - Medium risk indicator(s):
+
+    - The main application is 29 years old.
+
+    - The requested loan is 29800 euros.
+
+    - There are 70 days until the date of sale.
+
+    - The proprietary indicator is xxx.
+
+    - High risk indicator(s):
+
+    - The main application has only been working for four months.
+
+    - Medium risk indicator(s):
+
+    - The main application is only 29 years old.
+
+    - The requested loan is above average, named 29800 euros.
+
+    - There are still 70 days until the date of sale.
+
+    - The proprietary indicator is above average, named xxx.
+
+
+    Fig. 2 Output produced by variant 2 (left) and variant 3 (right) of MLX. It shows
+    the five top indicators classified in two different groups. The risk score is
+    within two for both variants. The variant three is highlighted in blue.
+
+
+    the organisation. On their feedback, one variant was developed
+
+    We started by transforming SHAP values into our possibilities of modeling, using
+    to rank features based on the specific case. The first variant we proposed this
+    ranking of features and the five top features with the highest impact on the case,
+    as well as the impact of each feature.
+
+    The second variant used straightforward, objective explanations for each feature,
+    in form of sentences describing the fraud importance, while the third variant
+    used formalisms such as ‘above average’. These variants used three different impact
+    groups to rank the features. The ‘high impact’ group contained features with an
+    impact on the fraud probability that was 0.1 or higher, while ‘medium impact’
+    had features with an impact between 0.05 and 0.1. The top 5 features with an impact
+    above the 0.05 threshold, were divided into the ‘high impact’ and ‘medium impact’
+    categories. The outputs of these two variants were
+
+    After presenting these three variants to the manager of risk, the they decided
+    variant two, using the objective explanation. The department manager also found
+    that variant two was more useful, and therefore, determined by the adherence to
+    the Ethical Framework (Verbeke et al.). We then tested the model by reviewing
+    a case, and found that it showed the precise impact on the probability of a fraud
+    classification would influence them much, and them to classify the case by the
+    features used. The result was based on the thresholds used, and that those thresholds
+    could influence the decision.
+
+    In our view, the variant three offered more information than the explanations
+    provided by variant two for possible fraudulent fraudulent applications upon detecting
+    outlying cases, which has properties that differ from the average application.
+    When judging an application, it is important to have knowledge of the ‘average’
+    and outliers.
+
+    Using a supposed dataset, we were able to enable Anchor to generate explanations
+    using combinations of rules. Using SHAP, we found 15 globally most important features
+    of the model. From
+
+
+    with revealers, we concluded that using 15 features would be acceptable in the
+    given context, in practice, to review many of the features. We then used a model
+    (the original model) on this data set. Finally, we used Anchor with this data
+    set to generate explanations for the cases. Using this approach, the ranking method
+    for cases was reduced to seconds, four per case using the full
+
+    In another attempt at grouping of features to MLX, we created groups of features
+    that are closely related. For example, there is a group containing features describing
+    the amount of the loan. This group added an impact on the outcome of an individual
+    case can be classified as a ‘high impact’ or ‘medium impact’ present, we presented
+    this with a textual explanation as described.
+
+    We then used SHAP to provide the revealers with textual explanations for features
+    that have a clear impact. This feature is further extended by grouping groups
+    of features that are closely related, to offer the reviewer why the case was identified
+    as a high risk by the MLX system. With the addition of Anchor using a trained
+    data set, we further showed some insights into combinations of features impact
+    the outcome. We presented an explanation for a case used in the validation of
+    the MLX system that was identified by the trained as a high risk fraud.
+
+
+    3.3. Validation
+
+    For the validation of MLX, we recruited the manager of application reviewers within
+    the organisation. We were able to source 11 reviewers for this test, up to an
+    overall shortage of reviewers within the organisation. As result, this was the
+    maximum of reviewers that could be available at the time of the survey. The presented
+    results are based on the cases of the two comparable applications (in terms of
+    length), of which one was fraud case and the other was not. The first case was
+    accompanied by an explanation generation by the main-rules, while the second case
+    was accompanied by an explanation generated by Anchor. We asked each reviewer
+    for changed new review. We asked each to consider the explanation for both cases
+    as they usually, and and forward
+
+
+    6'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# High risk indicator(s)
+
+
+    +   * The main applicant has been working for 3 months.
+
+
+    # Medium risk indicator(s)
+
+
+    +   * There are 41 days until the date of sale.
+
+
+    +   * proprietary indicator
+
+
+    +   * The requested loan amount is 415000 euro.
+
+
+    +   * The main applicant is 30 years old.
+
+
+    The combination of the features below group increases the risk of this case:
+
+
+    +   * proprietary indicator
+
+
+    +   * There are more than 33 days until the date of sale.
+
+
+    +   * The main applicant is younger than 37 years old.
+
+
+    +   * proprietary indicator
+
+
+    ![](img/b37ab3c0b0e8ecc504cdf93a1b444c50_6_0.png)
+
+
+    in count survey of questions, followed by a short (5 min) interview for additional
+    feedback.
+
+
+    As explained in Section 3, our methodology is conclusively proven. As a result,
+    MLXI by making explainable AI systems reviewers to frequently make correct decision
+    on an possibility. Furthermore, the mortgage reviewers using MLXI are the first
+    line in fraud detection, and mentioned in Section 3.1 pass on an anti-fraud system.
+    There is a fraud suspicion. However it is possible to quantify whether the new
+    MLXI system is an improvement over the existing-based explanations:
+
+
+    questions for global explanation and bias detection focused on that might not
+    be able to express in the survey questions. The questions on the reviewers'' experience
+    with the Anchor explanation, and how they found combining features that indicate
+    a risk of fraud, for a group counting ratio features describing the relations
+    between house price, mortgage amount, renovation price, etc.
+
+
+    As research by Hoffman (2018) considering metrics for satisfaction we evaluated
+    the reviewers'' opinions on their perceived speed and accuracy. We also added
+    two specific questions covering the groups that the Anchor component developed.
+    We analyzed the results of these metrics:
+
+
+    +   * Trust
+
+
+    Trust in the model developed by using the existing research of Hoffman et al.
+    (2018) and uses three questions to assess the confidence of the users in the model,
+    and whether they feel the model is predictable, reliable, and believable.
+
+
+    +   * Explanation Satisfaction
+
+
+    The degree to which users feel that they understand the AI system or being explained
+    by. Hoffman et al. (2018). For this research, by Hoffman et al. (2018) also provides
+    a list of questions, which we were used.
+
+
+    The performance of the reviewers is also important. With an interpretable system
+    we will measure the performance of the reviewers. To this value, we used two performance
+    metrics to the fraud case:
+
+
+    +   * Speed Does the explanation help identify the important aspects of a case?
+    The reviewer identify potentially fraudulent aspects of a case, the quicker the
+    faster is
+
+
+    +   * Accuracy — Does the reviewer feel more confident in making a decision on
+    the case then?
+
+
+    These groups of metrics used for developed research and statements with which
+    Hoffman (2018) could fully disagree or agree on a five-point Likert scale (1932)
+    were used. Immediately after a reviewer completed the survey, we conducted the
+    interview asking four question
+
+
+    # 3.4. MLXI BlackAuditing
+
+
+    The output generated by BlackAuditing has two main parts. Firstly, the library
+    generates a simple ranking of features based on their importance, measured by
+    how the Black Balanced Classification Rate (BCR), which balanced the accuracy
+    changes, when each feature is removed from the model. This outputs a simple list
+    of features. Secondly, BlackAuditing allows the data scientist to identify features
+    that contain sensitive personal information. BlackAuditing is then used to determine
+    whether the Balanced Classification Rate (BCR) changes less than a threshold when
+    omitting the features from the model. This threshold is set by the organization.
+    Of the
+
+
+    We briefly describe our use of each of the three selected for the MLXI.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# W. Zetten, G.J. Ramachers and H.H. Hoos
+
+
+    # Machine Learning with Applications 10 (2022) 100406
+
+
+    ![](img/b37ab3c0b0e8ecc504cdf93a1b444c50_7_0.png)
+
+
+    **4. The first panel of the What (If?) tool, visualising a dataset. The user can
+    zoom or slice to certain areas, and use the left panel to predict the case and
+    rerun the classification.
+
+
+    **Figure 5. A Aquitas output of a test comparing FPR for Dutch, non-, and western
+    migration backgrounds.
+
+
+    data scientist in observation as well as the fairness measure of the features,
+    along with their distributions.
+
+
+    # 4.3.3. Aquitas
+
+
+    Aequitas is the statistical library used in MLX. We have chosen to enrich the
+    dataset with demographic data provided by the Dutch Central Bureau of Statistics
+    (Centra Bureau voor Statistiek, or CBS), which contains information on the ratios
+    of inhabitants of The Netherlands by 100 m. MLX allows the user to select both
+    the feature they want to investigate, as well as the false positive rate (FPR)
+    disparity, which shows that groups within a feature category to compare with the
+    larger group.
+
+
+    The addition of migration backgrounds means we can evaluate whether the tested
+    model is fair with its background, or whether it is unfair to include individuals
+    in applications that might be fraudulent.
+
+
+    Aequitas can be used to test a model for bias with migration backgrounds, as well
+    as to inspect a result of CBS data. This allows data scientists to gain insights
+    into the features of the model they are evaluating for production, fulfilling
+    guidelines 19 and 20 of the Ethical Framework, and providing extra information
+    for the PID.
+
+
+    # 5.3. Validation of MLX
+
+
+    # 4.2. What (If?) tool
+
+
+    The What (If?) tool is an interactive library that allows the scientist to visualise
+    the results of their model, to slice, aggregate and observe on different groups
+    of features. The data scientist can use this library to practise the distribution
+    of features in the dataset, and also is possible to view features with clusters,
+    or the overall fairness metric. This allows them to adjust the attributes of an
+    individual case and run through the model to see predictions.
+
+
+    By using this library the MLX system is freed. Firstly, the data scientist can
+    use it to visualise the performance of their model, and observe whether it is
+    behaving as expected, also for detecting bias. Secondly it is of great use when
+    investigating specific cases, for example when a client questions the model decision
+    of application (fulfilling guidelines 18 of the Ethical Framework). Thirdly, the
+    library is simple to use of the'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'Machine Learning with Applications 10 (2022) 100406
+
+
+    Table 1
+
+    Mean of agreement for all statements covering trust in the model, explanation
+    satisfaction and whether the proposed explanation
+
+    help the reviewer complete their task.
+
+
+    # Statement
+
+
+    | Trust in the model | Mean of degree agreement |
+
+    |---|---|n| 1 - I like the explanation, I feel like the model is working | Agree
+    |
+
+    | 2 - I like using explanations to make decisions. | Agree |
+
+    | 3 - I feel I will make the correct decision using this explanation. | Neutral
+    |
+
+    | Explanation satisfaction | |
+
+    | 4 - The explanations make me understand how the model reaches its | Agree |
+
+    | 5 - I am satisfied with the explanation. | Agree |
+
+    | 6 - The explanation is sufficiently detailed. | Agree |
+
+    | 7 - The explanation of how the model works seems sufficient. | Neutral |
+
+    | 8 - The explanation tells me how accurate our model is. | |
+
+    | Performance | |
+
+    | 9 - I reach a decision quickly because the case has an explanation. | Agree
+    |
+
+    | 10 - I am able to make a better decision because the case has an explanation.
+    | Agree |
+
+    | 11 - I find the combination of risk indicators to the explanation important.
+    |
+
+
+    # 4. Results
+
+
+    In this section we present the results of the survey with mortgage application
+    reviews, followed by a discussion and evaluation of the first hypothesis. Then
+    we summarize the findings gathered from the first demonstrations with data scientists
+    and data representatives, finally we discuss how the systems we have developed
+    can improve their adherence to the relevant claims from the Ethical Framework.
+
+
+    # 4.1. Survey of MLXI
+
+
+    MLXI implements SHAP and Anchor, two approaches to improve local interpretability
+    for mortgage reviews with model estimated risk for mortgage applications on a
+    daily basis. A set of 22 rules was used to generate an explanation for a given
+    case and model prediction. In order to evaluate the effectiveness of MLXI, reviewers
+    were presented with short explanations of the model predictions that they achieved
+    using MLXI. In Table 1 we present the mean degree of agreement for all statements,
+    where we divided them into three groups (trust, explanation satisfaction, impact).
+    Figure 6 shows
+
+
+    the baselines presented to all reviewers. In Table 1 two randomly selected reviewers
+    from the case which we manually grouped related factors and requested their opinions.
+    As shown, there was a significant difference. One reviewer agreed that of these
+    features did not help them at all (complexity), while the second reviewer agreed
+    that one of the most helpful features of the MLXI explanation. This difference
+    in agreement could be an interesting direction for future research.
+
+
+    After presenting the survey, we conducted a quick interview to provide them with
+    feedback that they could not get in the survey. Below, we list the most common
+    feedback from these sessions.
+
+
+    # Insights
+
+
+    Reviewers reported that the insight into the decisions process of the model increased
+    the trust in the model.
+
+
+    # Clarity (Explanation satisfaction)
+
+
+    Several reviewers indicated that some of the factors presented a ratio (e.g.,
+    the ratio between the house price and renovation costs) that they did not know
+    what these features meant exactly. This could be addressed
+
+
+    by rewarding the explanation in context with reviewers, and to include more than
+    the text.
+
+
+    # Misinformation (Explanation satisfaction)
+
+
+    Some features might mislead the organisation. reviewers reported that they did
+    not know how to handle the ''unknown'' indicators. Some misinformation can be
+    a good fraud indicator, however ''unknown'' indicators are indicators that have
+    no value. Providing data to the model is not helpful, if there is no context for
+    the case.
+
+
+    Out of eleven reviewers were positive about the additional information provided
+    by the explanations generated by MLXI. While stressing the importance of independent
+    assessment MLXI provided them with much better guidance as to how to use the current
+    explanation method, improving the quality of their assessment and saving time.
+
+
+    # H1: Techniques that allow for individual predictions to be interpretable and
+    improve true trust, satisfaction and usability of ML models in practice
+
+
+    Figure 6 shows the degree of agreement on a Likert scale, there for the questions
+    LikXI-data. It is possible to compare the analysis by the mean degree of agreement
+    for all statements (Allen & Arthur, 2013). We separate the investigation by the
+    three factors of the hypothesis: trust, explanation satisfaction and performance.
+
+
+    Trust. Following the overall of the first three statements, we conclude that trust
+    in the model increased with the use of the explanation. This might simply be due
+    to MLXI offers more data than the existing approach, which leads to believe that
+    it is more knowable than the current explanation. This might mean the reviewers
+    are more eager to trust the model. However, reviewers should remember not to make
+    the decision based solely on the level of detail that MLXI provides, possibly
+    believing that this extra detail might mean the model decision is the right one.
+    reviewers might be more inclined to blindly follow the classification by the determining
+    oversight that is provided by the Ethical Guidelines.
+
+
+    Explanation satisfaction. The responses to comments can be viewed as a positive
+    outcome, and user satisfaction was increased when compared to the current method
+
+
+    9'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Degrees of agreement
+
+
+    ![](img/b37ab3c0b0e8ecc504cdf93a1b444c50_9_0.png)
+
+
+    Fig. 6. Showing the frequency of revealers indicating certain degrees of agreement
+    to statements on a five-point Likert scale.
+
+
+    for explanations. However, there is room for improvement of this metric by addressing
+    the limitations identified by the interviewees. This room for improvement is also
+    evident from Fig. 5, which shows that the responses cover a wide range of agreement.
+    The increase in satisfaction might be explained by the fact that the existing
+    solution was lacking in depth and detail of the explanation. This possibility
+    was also reinforced by the feedback gathered from the interviewees, which we interviewers
+    identified for certain features and the overall satisfaction level.
+
+
+    satisfaction. There is room for speed of answers, leading to even stronger overall
+    agreement.
+
+
+    Performance. Meanwhile, we measured the perceived performance of the current experiment
+    versus MLX1. Three respondents queried us about their experiences with MLX1 and
+    the addition of the Anchor component, which allowed for combinations of features
+    and labels. This was further supported by the survey and,, turn, we conclude that
+    MLX1 has a positive impact on perceived performance, compared to the current method
+    of generalizations.
+
+
+    Nevertheless, we can state that the MLX1 system, which uses techniques enable
+    individuals to be interpretable and transparent, achieved a statistically significant
+    improvement in trust, and usability of MLX with their daily users. The reviewers
+    who indicated slightly different levels of agreement that they experienced an
+    improvement by using MLX1 compared to the current approach.
+
+
+    # 4.2. Demonstration results
+
+
+    Statistical significance. In order to test whether MLX1 improved our user experience,
+    we performed a parametric test to investigate whether the results were statistically
+    significant. According to Norman (Norman, 2010), parametric tests have an advantage
+    in our situation, since we have Likert-type scales and a small sample size. We
+    used a t-test, as suggested by Boone and Boone (2012), for each feature-type statement
+    on the Likert scale. The performance of the questionnaire to measure whether MLX1
+    positively improved the user experience compared to the current system. We set
+    H0 to be no improvement in the current system due to MLX. Interpreting the Likert
+    scale as an interval scale, we observed m = 3.6 and s = 0.86, leading to a t-value
+    of 2.5839 and a p-value of 0.01367. This indicates that there is a statistically
+    significant improvement in experience when using the explanations generated by
+    MLX.
+
+
+    Two demos were held for MLX2. In one session, we demonstrated the use of the Anchor
+    component of MLX2 in combination with CBS data for potential demographic analysis.
+    The CBS data contains aggregated data on a 100 meter by 100 meter geographical
+    basis, providing (among other) data information on the inhabitants. The participants
+    agreed that the Anchor component of MLX2 would be highly useful, and that if further
+    so developed it could be easily used by different departments. This experiment
+    would cover the case-use-of the library, using a web interface, and better enhance
+    the presentation of the results. It was decided that this would lead the way for
+    the development of the tool, starting by investigating the possibilities of the
+    output.
+
+
+    Evaluation of HI. By evaluating three parts of the hypotheses used user experience,
+    satisfaction and perceived performance, we now saw our first hypothesis confirmed.
+    The response to MLX2 on the mortgage fraud model was overwhelmingly positive.
+    Several statements had a high spread of agreement, as seen in Fig. 6. Interviewees
+    also indicated there is room for improvement, specifically involving explanation
+
+
+    +   - Example examples
+
+    Even though of all three libraries were developed using the mortgage fraud model
+    and example cases, the scientists requested concrete examples from different ML
+    models. This reflects the need for the stakeholders to be presented with a wider
+    range of ML application domains.
+
+    - Concrete thresholds
+
+    MLX2 gives the data scientist identification of indirect influence and fairness
+    measures, but feedback suggested needed the'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'Average importance ranking for the four points gathered during the demonstration
+
+    to scientists, as well as standard deviation.
+
+
+    | Feedback point | Average (1 to 5) | Standard deviation |
+
+    |---|---|--|
+
+    | Clear importance | 4.25 | 0.50 |
+
+    | Concrete thresholds | 4 | 0.81 |
+
+    | Clear instructions | 4.5 | 1.00 |
+
+    | Choosing measures | 3.75 | |
+
+
+    concrete thresholds for these indicators, to enable easier reporting
+
+    to the PID. Having sets for these indicators, which are
+
+    relative for each and therefore comparable, we
+
+    elinate uncertainty questions in the PID, improving
+
+    t process for both scientists and from Legal,
+
+    Compliance departments.
+
+
+    Besides the demonstration, the scientists indicated that
+
+    clear instructions were working, accommodating examples provided
+
+    to the ML system with their own needs. Data
+
+    scientists could reach the stakeholders who are more likely to
+
+    ableble the global explanations provided by
+
+    MLX2. This approach ensures an overall need for
+
+    training programs to enable effective deployment of
+
+    AI.
+
+
+    +   - **Choosing measures**
+
+    Aequitas offers several fairness measures, and the
+
+    scientists requested additional explanations and back-
+
+    formation regarding them, so that they could choose
+
+    the fairness measures that best fit their application.
+
+
+    These four main points were gathered into a short
+
+    svey, which was filled by the scientists who attended
+
+    t demonstration session.
+
+
+    Table 2 indicates that when the points could be
+
+    addressed, MLX2 could be a great asset to support them
+
+    in MLX2, they may help in quantifying global interpretability
+
+    and trust, the importance of working and their requirements.
+
+    Scientists highlighted the importance of understanding
+
+    models for which they are needed. The scientists indicated
+
+    of possibilities of outranking the ML systems to be clear
+
+    to PID, as they acknowledged the benefit of having
+
+    qualitative results.
+
+
+    H2: Techniques for ML to be globally interpretable and
+
+    dstrably free of bias enabling organizations to streamline
+
+    internal processes clearing and balanced AI.
+
+
+    After gathering results from the demonstration session, we can
+
+    confirm the second hypothesis. The scientists gathered feedback from
+
+    the data of a group discussion session, which resulted in four
+
+    points. These points were converted into a survey, which
+
+    was distributed among the participants of the demonstration
+
+    session in order of importance.
+
+
+    Looking at the importance of scale displayed in the table,
+
+    we can infer that clear working instructions is the most
+
+    crucial point, followed by using examples, and data
+
+    handling for fairness groups. The table also shows
+
+    the highest-ranked point requiring working instructionsinstructions also. The
+    ranking and
+
+    standard deviations show how much of the uncertainties of
+
+    using AI could be addressed by adding working instructions
+
+    st for the data scientists to use, as well as supplying examples
+
+    ple applications to allow them to use the techniques used.
+
+    Based on this feedback, we developed and updated work instructions,
+
+
+    which was validated and accepted by the organisation. The most
+
+    important point, addressing the importance of concrete thresholds
+
+    for fairness measures and indirect influence, also has a high standard deviation.
+    In the data, data scientists indicated that
+
+    clear thresholds and measures could greatly help them in filling
+
+    t PID and demonstrating the paperwork that was useful
+
+    with initializing or adapting ML models. The point
+
+    oint addresses fairness measures, which also has the least
+
+    standard deviation of 0.05, implying data scientists largely agree on
+
+    thing.
+
+
+    Evaluation of H2.
+
+    From the feedback gathered from the demonstration session to scientists
+
+    as as well as the data gathered where scientists Aequitas
+
+    to presented, Legal and Compliance officers, we can conclude
+
+    the importance of the "What if" tool, Backtesting and Expl-
+
+    anations were very useful. The scientists felt that the
+
+    data scientists workflow would improve their efficiency and case
+
+    ter. It would also facilitate the processes involved
+
+    bringing a new or adapting model to production. The points
+
+    cover different aspects of the workflow, as
+
+    ndicated by the participants in the
+
+    demonstration session. Participants showed interest in
+
+    MLX2 and needed to tackle the setting of proper thresholds
+
+    for fairness and transparency. They found that using
+
+    working tools could help improve and streamline the processes
+
+    surviving the deployment of ML tools. This provides clear
+
+    tchniques that for ML to be globally interpretable and
+
+    usable for any organisation to streamline processes
+
+    cerning and balanced AI, specifically through the
+
+    t PID as a result of the Aequitas fairness measures and
+
+    measures.
+
+
+    As mentioned in Section 2, there are a number of ethical
+
+    gelines to which the organization agreed. These guidelines
+
+    from requirements from the High Level Expert Group on AI
+
+    by the European Commission, and also to establish meaningful
+
+    gnance over AI models, also addressing ethical concerns\around the discussion
+    in each sector. The results from
+
+    the survey with helped application reviewers, we
+
+    as well as the demonstration session with data scientists and
+
+    from Legal, Compliance, and clearly demonstrated that both
+
+    the organisation''s workflow and the set of requirements
+
+    t in the Framework for Ethics. For MLX2, specifically
+
+    t Aequitas component, is useful, as it is relevant for a
+
+    number of guidelines. The demonstration session held
+
+    for MLX2 showed that application reviewers did not
+
+    ticipated that they better understood the possibility of bias
+
+    as using the relevant guidelines. We list all the relevant guidelines and whether
+
+    MLX2 helped the organisation''s agreement.
+
+
+    (7) The inventory ensures adequate quality (including,
+
+    rectness, representativeness) of (training) data for
+
+    driven-applications.
+
+    MLX2, specifically Aequitas, allows data scientists
+
+    and evaluate the distribution of different
+
+    data groups and models, which helps in
+
+    ful the representativeness of this guideline. Other
+
+    techn or processes could be used to ensure integrity and
+
+    correctness.
+
+
+    (14)-insurer ensures employees working with data-
+
+    driven applications have received adequate training, speci-
+
+    to avoid confirmation bias and ensure human aut-
+
+    omy.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Machine Learning with Applications (2022) 100406
+
+
+    MLX does not assist in the training, but it does assist in ensuring human autonomy
+    and reducing bias. Because reviewers are confronted with two explanations, they
+    are less susceptible to confirmation bias. The reviewer has their own opinion
+    on a case, using their domain knowledge and preference. MLX offers an explanation
+    which is different from other reviewers, which may cause them to reconsider. In
+    the end, the assessment of the case remains the reviewer''s responsibility, ensuring
+    human autonomy.
+
+
+    (15) The use of data-driven applications in production will always be subject
+    to adequate human autonomy. The organization uses a process involving deploying
+    a predictive model in production. The libraries used in MLX2, specifically WhatIf?
+    and Aquitas, help this, as discussed in Section 4.2. Furthermore, the PD process
+    can be helped by the development of fairness measures and the identification of
+    possibly indeed biased features.
+
+
+    (16) When data-driven applications, human intervention will always be possible
+    and explanations can be understood by the appropriate reviewers.
+
+
+    Human intervention is possible as a result of the process, which means the organisation
+    remains from making unwanted decisions. MLX and MLX2 offer to provide a client
+    with more information on the results of an application to their. On request, MLX
+    can be used to generate the same explanation as offered to reviewers.
+
+
+    (17) Without regard to fundamental rights, if the unfair disparity in data-driven
+    applications cannot be avoided, the reviewer will not employ the application.
+
+
+    All libraries used in MLX2 are used to cover the Project Initiation Document,
+    and evaluation that contains outputs of the libraries should be developed. Furthermore,
+    MLX2 helps the organisation adhere to these guidelines.
+
+
+    (20) In order to use data-driven applications, the user must monitor diversity
+    and inclusivity, especially regard groups who are at risk of exclusion or disadvantage
+    as a result of bias.
+
+
+    Aquitas, in MLX2, helps the data scientist as well Legal, Compliance and Risk
+    officers evaluate possible bias rate for demographic groups, provided that the
+    information is available and accessible according to GDPR regulations. Evaluation
+    indicated that Aquitas will be used in this manner whenever possible.
+
+
+    (21) The user will monitor the impact of employing data-driven applications when
+    making decisions on groups of clients.
+
+
+    Similar to Genio, Aquitas (in MLX2) will be employed to evaluate the fairness
+    of data-driven applications, by comparing false positive rate (FPR) for demographic
+    groups. Mitigation can be achieved through entering the data with aggregated data
+    base zip code. The tool can be used to evaluate fairness measures by FPR disparity.
+
+
+    (23) The user will set up internal control and accountability systems for the
+    use of AI applications and data sources.
+
+
+    This accountability system was set up prior to the development of both MLX systems.
+    However, the tools included in MLX2 will be included in the main article of this
+    specification, the Project Initiation Document. The outputs of the libraries in
+    MLX2 must meet certain criteria, to enforce internal control.
+
+
+    (24) The insurer improves the knowledge of executives and internal auditors with
+    data-driven applications. The use of Aquitas (in MLX2) is suitable for interpretation
+    by executives and auditors, as proven in the demo to Senior Legal, Risk and Compliance
+    officers. This party is the benefit of simple visuals.
+
+
+    (25) The use of data-driven applications ensures adequate continual following
+    the use of the Project Initiation Document and the acceptance process of this
+    document, the organisation agrees to that the component of MLX2 will be used in
+    this document, furthering the knowledge of possible with the involved stakeholders.
+
+
+    (26) The insurer performs a risk and effect assessment regarding the immediate
+    stakeholders for each data-driven application.
+
+
+    The Project Initiation Document was set up to adhere to these guidelines and others.
+    With the use of Aquitas (in MLX2), the model will be extended with insights into
+    the potential impact of vulnerable demographic groups, based on migration background
+    and the disparities for diversity groups, the risk in this assessment for every
+    application.
+
+
+    The organisation section helped for Risk, Legal and Compliance managers resulted
+    in much discussion, and participants indicated that better the understanding of
+    bias in a system and how to test for it. Therefore, we can claim that not only
+    the explanations employed by MLX and MLX2 improve user experience and for the
+    streamlining of internal processes, they also aided the organisation in tailoring
+    their process to adhere to the Ethical guidelines.
+
+
+    # 5. Conclusions and future work
+
+
+    In this work, we have evaluated the effectiveness of post-hoc, agnostic techniques
+    for enhancing the interpretability of machine learning models. We considered all
+    as global explanation techniques and reported two main findings:
+
+
+    +   1. Techniques that allow for predictions to be transparent and can improve
+    trust, satisfaction, and usability of ML tools with their daily users.
+
+    2. Techniques for ML to be globally interpretable and defromary of discriminatory
+    bias enable organisation mitigation.
+
+
+    The results of our research were validated in collaboration with a great financial
+    institution in the Netherlands. A case study using a model for estimating fraud
+    risk for mortgage applications was presented. This model produced daily reports
+    of fraudulent cases, which were enhanced with an explanation to why they were
+    marked as high-risk. The high-risk cases were reviewed, and with a focus on the
+    factors mentioned in the explanation. Prior to this work, the organisation used
+    a simple rule-based system presenting only a subset of possible features. In our
+    work, we replaced this with an automated method of using SHAP and Aquitas to provide
+    detailed explanations containing all possible features and to improve it in the
+    future.
+
+
+    The explainable AI system implementing these local explanations techniques, dubbed
+    MLX1, was used in an in-depth study and short interviews with eleven fraud experts.
+    The survey captured perceptions of changes in transparency, usability, and performance.
+    These three measures allowed for a qualitative measurement of whether MLX1 improved
+    the reviewers ways of working with the existing AI model for mortgage fraud
+
+
+    12'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'detection. It was found that MLXI achieved a statistically significant improvement
+    in three measures.
+
+
+    A second explainable AI system (MLX2) focused on global explanation of the market
+    response, based on the What tool, BoxAuditing and Aequitas. It aims to provide
+    insight into making investment decisions by allowing for quantitative (measuring)
+    bias. In addition, instructions and examples were provided to the data scientists
+    with the libraries. The techniques were executed with augmented data classification
+    tasks to test for the possibility to model bias in this regard.
+
+
+    This collection of global explanation techniques was demonstrated to data scientists
+    and representatives from risk, legal and compliance departments, and it also helped
+    the organisation to address concerns concerned with the construction and administration
+    of models.
+
+
+    Furthermore, we conclude that the explainable AI systems developed in this work
+    have also helped the organisation in adhering to guidelines regarding the ethical
+    use of machine learning in the insurance industry, improving accountability and
+    quality as expressed in the Ethical Guidelines for the Insurance Industry. This
+    enables the organisation to establish human control over AI systems, addressing
+    potential transparency issues.
+
+
+    Overall, the findings of our research demonstrate the benefits of interpretable
+    techniques in practice. The opportunity to implement and validate our systems
+    in a business environment, with a wide range of stakeholders, from learners to
+    others clearly demonstrates that these libraries render ML systems easier to interpret
+    and critically assess.
+
+
+    Finally, number of practical observations we made while deploying explainable
+    AI in a real-world setting. Developing an explainable AI in a business environment
+    requires significant time, effort and expertise, as we need to curate the data
+    set to select the top 15 most important features for our model.
+
+
+    Furthermore, experts do not want all the possible explained by ML technique; in
+    our case, detailed explanations were provided to the reviewers of models in order
+    to identify potential bias. As a result, we requested a prototype system that
+    was based on part of the explanations, generated, comparisons to variants and
+    the data features, in order to provide experts with additional insights.
+
+
+    Our implementation of MLXI showed that users experience a higher level of trust
+    using AI systems more than MLXI without. However, when implementing business processes
+    that guard against bias, users found to have their own concerns. Our readers encountered
+    the oversight required by the Ethical Guidelines. In the mortgage application
+    context, reviewers were required to verify and confirm every single risk indicator
+    identified by the model and considered the model decisions and insights, but not
+    blindly copy.
+
+
+    There are several limitations to our research that should be addressed. In the
+    fact that we used only when suspected fraud was detected, as well as limited to
+    reviewers, mean that the fact performance or potential of a more subjective implementation
+    that adds more statistically based explanations, remains untreated.
+
+
+    Other limitations could arise when the methodology introduced in our work is used
+    in practice, for example the added computation time of KernelSHAP in the case
+    of a more complex architecture or data privacy laws making it impossible to aggregate
+    data with results to mitigate bias.
+
+
+    Further areas for future work include comparing MLXI for explanations against
+    a baseline providing a textual evaluation. Evaluating the Anchor component MLXI
+    against manual group of results might provide insights as the reviewers presented
+    with the mapping grouping having differing reactions. Furthermore, developing
+    a method to quantify the trust in gains and debits, and allow for a comparison
+    between the model variant that was built in this research, and a more subjective
+    variant of MLXI context.
+
+
+    The research presented in this paper allowed the organisation to improve the acceptance
+    and effectiveness of their ML models, by providing a new method for better understanding
+    models. Furthermore, the paper presented an approach to test unbiased bias and
+    distribution, in a bidirectional stream relating results model acceptance and
+    decision. Both methods presented are designed to clarify the potential fraud risk
+    domain, improving model bias and testing with AI models in high impact applications.
+
+
+    # Credit contribution statement
+
+
+    W. Wetzen: Conceptualization, Methodology, Validation, Formal analysis, Inspection
+    — Writing draft, G.J. Ramakers: Conceptualization, Methodology, Writing — editing
+    & Supervision, H.H. Hoos: Methodology, Writing — editing & Supervision.
+
+
+    # References
+
+
+    +   Aada, B., & Berardi, M. (2018). Picking inside the black box: A study of explainable
+    artificial intelligence (AI). IEEE Ethics, 6(5), 5218–5236. https://doi.org/10.1109/IEE.2018.2834499
+
+
+    +   ANP. (2020). Get under the skin: metrik gyyr på naustret. Het Post No. URL,
+    https://www.parodil.no/get-under-the-skin-metrik-gyr-pa-naustret/
+
+
+    +   Bakshi, E. A., Arik, R., Tyeck, G., Schninder, C., Smyth., & Venkatubanasumar,
+    M. (2018). Auditing black-box models for implicit inference. AI Intelligence,
+    289, 89–99.
+
+
+    +   Cano, S., & Haas, R. (2020). Financial fairness in machine learning: A survey.
+    arXiv:2010.04055.
+
+
+    +   Duarte, J., Rios, B., & Stern, F. (2018). What does Explainable AI actually
+    mean? A new perspective of conceptualization. In: Proceedings of the 2018 ACM
+    Conference on Fairness, Transparency, and Accountability.
+
+
+    +   Guidotti, R., Molnar, A., Rugutti, S., Tuffelli, F., Giann, F., & Fetti, D.
+    (2019). A survey of methods for explaining black box models. ACM Computing Surveys,
+    52(1)
+
+
+    +   Hoffmann, R., Ruuis, M., Steier, K., & Liman, J. (2018). Metrics for explainability:
+    challenges and prospects. CoRR, arXiv:1812.04068.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'W. Wen, J.G. Ramkers and I.H. Hoo
+
+
+    Machine Learning with Applications 10 (2022) 100406
+
+
+    Jamieson, S. (2004). Likert scales: How to use them. Medical Education, 38(6),
+    1217-1218. http://dx.org/10.1011/j.1360-2929.2004.02010.x
+
+
+    Likert, R. (1932). A technique for the measurement of attitudes. Archives of Psychology,
+    14,
+
+
+    Landberg, S. M., & Lee, S.-I. (2021). A unified approach to interpreting model
+    predictions. In Proceedings of the 33rd international conference on information
+    discovery and mining.
+
+
+    Mohrafi, N., Nortier, F., Saxena, N., Lerman, K., & Galykin, A. (2021). A survey
+    on bias and fairness in machine learning. ACM Computing Surveys, 54(6), http://dx.org/10.1145/3454733
+
+
+    Molnar, C. (2020). SHAP (additive feature explanations). In Interpretable machine
+    learning.
+
+
+    Norman, G. (2010). Likert scales, levels of measurement and the "laws" of statistics.
+    Advances in Health Science Education, 15(5), 625-632. http://dx.org/10.1007/s10763-010-0177-y
+
+
+    Rai, A. (2020). Explainable AI: From black to white box. Journal of the Academy
+    of Marketing Science, 48(1), 137-144.
+
+
+    Ribeiro, M. T., et al. (2016). "Why should I trust you? Explaining the predictions
+    of classifier. In Proceedings of the 22nd ACM SIGKDD international conference
+    on knowledge discovery and data mining (pp. 1135-1144). New York, NY, USA: Association
+    for Computing Machinery, http://dx.org/10.1145/293672.293977b.
+
+
+    Ribeiro, M., Singh, S., & Guestrin, C. (2018). Anchors: High-performance model-agnostic
+    explanations. IEEE Access, 6,42200-42216. http://dx.org/10.1109/ACCESS.2018.2853141
+
+
+    Roscher, R., Hahn, B., Duarte, M. F., & Garcke, J. (2020). Explainable machine
+    learning for scientific insights and discoveries. IEEE Access, 8,
+
+
+    Salejo, P., Kuster, B., Hintikka, L., London, J., Aniefeld, A., Rodofa, K. T.,
+    & Chiao, R. (2018). Accountability: A bias and fairness audit toolkit. Published
+    as a preprint.
+
+
+    Shin, B. (2021). The effects of explainability and causality on perception, trust,
+    and acceptance: for explanable AI. International Journal of Human-Computer Studies,
+    150,
+
+
+    Sullivan, G. M., & Artino, A. R. (2013). Analyzing and interpreting data from
+    likert-type scales. Journal of Graduate Medical Education, 5(4), 541-542. http://dx.org/10.4303/jgme.0112
+
+
+    Verbond van Verzekeraars (2021). Ethical kader. URL http://www.verzekeraars.nl/media/7541/ethisch-kader.
+
+
+    Wexler, J., Pushkarna, M., Bohlmann, T., Wattenberg, M., Végas, F., & Wilson,
+    J. (2019). Interactive probing of machine learning models. IEEE Transactions on
+    Visualization and Computer Graphics, 25(1), 56-66. http://dx.org/10.1109/TVCG.2019.2934619.
+
+
+    14'
+  merge: -1
+  img_proc: true
