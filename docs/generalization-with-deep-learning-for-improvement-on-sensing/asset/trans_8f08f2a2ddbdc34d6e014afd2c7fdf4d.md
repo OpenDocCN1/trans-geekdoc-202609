@@ -1,0 +1,90 @@
+
+
+[28](#chap2.xhtml#fs28).J. Donahue, L. A. Hendricks, S. Guadarrama, M. Rohrbach, S. Venugopalan, K. Saenko, and T. Darrell, “Long-term recurrent convolutional networks for visual recognition and description,” `CVPR`, 2015.
+
+[29](#chap2.xhtml#fs29).S. Ji, W. Xu, M. Yang, and K. Yu, “3D convolutional neural networks for human action recognition,” `IEEE Trans. Pattern Anal. Mach. Intell`., vol. 35, no. 1, pp. 221–231, 2013.
+
+[30](#chap2.xhtml#fs30).A. Karpathy, G. Toderici, S. Shetty, T. Leung, R. Sukthankar, and L. Fei- Fei, “Large-scale video classification with convolutional neural networks,” `CVPR`, 2014.
+
+[31](#chap2.xhtml#fs31).K. Simonyan and A. Zisserman, “Two-stream convolutional networks for action recognition in videos,” `NIPS`, 2014.
+
+[32](#chap2.xhtml#fs32).Y. Wang, J. Song, L. Wang, L. Van Gool, and O. Hilliges, “Two-stream SR-CNNs for action recognition in videos,” `BMVC`, 2016.
+
+[33](#chap2.xhtml#fs33).L. Wang, Y. Qiao, and X. Tang, “Action recognition with trajectory-pooled deep-convolutional descriptors,” `CVPR`, pp. 4305–4314, 2015.
+
+[34](#chap2.xhtml#fs34).B. Zhang, L. Wang, Z. Wang, Y. Qiao, and H. Wang, “Real-time action recognition with enhanced motion vector cnns,” `CVPR`, pp. 2718–2726, 2016.
+
+[35](#chap2.xhtml#fs35).D. Tran, L. Bourdev, R. Fergus, L. Torresani, and M. Paluri, “Learning spatiotemporal features with 3D convolutional networks,” `ICCV`, 2015.
+
+[36](#chap2.xhtml#fs36).G. Varol, I. Laptev, and C. Schmid, “Long-term temporal convolutions for action recognition,” 2016, arXiv: 1604.04494.
+
+[37](#chap2.xhtml#fs37).B. Fernando, P Anderson, M. Hutter, and S. Gould, “Discriminative hierarchical rank pooling for activity recognition,” `CVPR`, pp. 1924–1932, 2016.
+
+[38](#chap2.xhtml#fs38).X. Peng, L. Wang, X. Wang, and Y. Qiao, “Bag of visual words and fusion methods for action recognition: Comprehensive study and good practice,” `Computer Vis. Image Understand`, vol. 150, pp. 109–125, 2016.
+
+[39](#chap2.xhtml#fs39).J. Sanchez, F. Perronnin, T. Mensink, and J. Verbeek, “Image classification with the fisher vector: Theory and practice,” `Int. J. comput. Vis`., vol. 105, no. 3, pp. 222–245, 2013.
+
+[40](#chap2.xhtml#fs40).T.-Y. Lin, A. RoyChowdhury, and S. Maji, “Bilinear cnn models for finegrained visual recognition,” `Proc. IEEE Int. Conf. Computer Vision`, pp. 1449–1457, 2015.
+
+[41](#chap2.xhtml#fs41).Y. Wen, K. Zhang, Z. Li, and Y. Qiao, “A discriminative feature learning approach for deep face recognition,” `ECCV`, 2016.
+
+[42](#chap2.xhtml#fs42).C.-Y. Lee, S. Xie, P W. Gallagher, Z. Zhang, and Z. Tu, “Deeply-supervised nets,” `AISTATS`, vol. 2, p. 5, 2015.
+
+[43](#chap2.xhtml#fs43).L. Wang, Y. Xiong, Z. Wang, and Y. Qiao, “Towards good practices for very deep two-stream convnets,” 2015, arXivpreprint arXiv.1507.02159.
+
+[44](#chap2.xhtml#fs44).C. Zach, T. Pock, and H. Bischof, “A duality based approach for realtime tv-l 1 optical flow,” `Joint Pattern Recognition Symposium`, pp. 214–223. Springer, 2007.
+
+[45](#chap2.xhtml#fs45).Y. Jia, E. Shelhamer, J. Donahue, S. Karayev, J. Long, R. Girshick, S. Guadarrama, and T. Darrell, “Caffe: Convolutional architecture for fast feature embedding,” 2014, arXiv preprint arXiv: 1408.5093.
+
+[46](#chap2.xhtml#fs46).C. Feichtenhofer, A. Pinz, and A. Zisserman, “Convolutional two-stream network fusion for video action recognition,” `CVPR`, 2016.
+
+[47](#chap2.xhtml#fs47).A. Krizhevsky, I. Sutskever, and G. E. Hinton, “Imagenet classification with deep convolutional neural networks,” `Advances in Neural Information Processing Systems`, pp. 1097–1105, 2012.
+
+[48](#chap2.xhtml#fs48).H. Wang and C. Schmid, “LEAR-INRIA submission for the THUMOS workshop,” `ICCV Workshop on Action Recognition with a Large Number of Classes`, vol. 2, p. 8, 2013.
+
+[49](#chap2.xhtml#fs49).J. Yue-Hei Ng, M. Hausknecht, S. Vijayanarasimhan, O. Vinyals, R. Monga, and G. Toderici, “Beyond short snippets: Deep networks for video classification,” `IEEE Conf. Comput. Vision and Pattern Recognition`, pp. 4694–4702, 2015.
+
+[50](#chap2.xhtml#fs50).R. Girdhar, D. Ramanan, A. Gupta, J. Sivic and B. Russell, “ActionVLAD: Learning Spatio-Temporal Aggregation for Action Classification,” `2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)`, Honolulu, HI, 2017, pp. 3165–3174, doi: 10.1109/CVPR.2017.337.
+
+51.L. Wang, Y. Qiao, and X. Tang, “MoFAP: A multi-level representation for action recognition,” `Int. J. Comput. Vision`, vol. 119, no. 3, pp. 254–271, 2016.
+
+[52](#chap2.xhtml#fs52).L. Sun, K. Jia, D.-Y. Yeung, and B. E. Shi, “Human action recognition using factorized spatio-temporal convolutional networks,” `IEEE Int. Conf. Comput`. `Vision`, pp. 4597–4605, 2015.
+
+53.W. Zhu, J. Hu, G. Sun, X. Cao, and Y. Qiao, “A key volume mining deep framework for action recognition,” `IEEE Conf. Comput. Vision and Pattern Recognition`, pp.1991–1999, 2016.
+
+54.E. Park, X. Han, T. L. Berg, and A. C. Berg, “Combining multiple sources of knowledge in deep CNNs for action recognition,” `WACV`, 2016.
+
+55.A. Hernandez Ruiz, L. Porzi, S. Rota Bulo, and F. Moreno-Noguer, “3D CNNS on distance matrices for human action recognition,” `Proc. 2017 ACM on Multimedia Conference`, ACM, pp. 1087–1095, 2017.
+
+56.P. Wang, Z. Li, Y. Hou, and W. Li, “Action recognition based on joint trajectory maps using convolutional neural networks,” `Proceedings of the 2016 ACM on Multimedia Conference`, pp. 102–106. ACM, 2016.
+
+________________________
+
+^[a](#chap2.xhtml#fd1) Although a subConvNet is by itself a deep ConvNet, we use the `sub` prefix to indicate that it is part of a larger model.
+
+^[b](#chap2.xhtml#fd2) For certain videos which are shorter than 80 frames, we replicate them and concatenate the frames.
+
+© 2021 World Scientific Publishing Company
+
+`https://doi.org/10.1142/9789811218842_0003`
+
+# Chapter 3
+
+# 将领域知识与深度学习相结合以改进 HAR 模型
+
+Massinissa Hamidi[*](#chap3.xhtml#fn1) and Aomar Osmani^[†](#chap3.xhtml#fn2)
+
+*LIPN-UMR CNRS 7030, Univ. Sorbonne Paris Nord*
+
+[*](#chap3.xhtml#fnr1)*hamidi@lipn.univ-paris13.fr*
+
+^[†](#chap3.xhtml#fnr2)*ao@lipn.univ-paris13.fr*
+
+**Abstract**
+
+在本章中，我们提出将领域知识与深度学习相结合以改进人体活动识别 `HAR` 模型。我们从实证角度探讨了两个基本问题：`1` 将哪些知识纳入 `HAR` 模型以及 `2` 如何将其纳入？我们关注的是关于身体佩戴传感器部署的拓扑结构以及这些传感器之间出现的相互作用的知识。我们报告了在 Sussex Huawei 运动-交通 `SHL` 数据集上进行的实验，该数据集具有结构化的数据生成过程。所得结果为开发利用领域知识以提高鲁棒性和数据效率的基于深度学习的 `HAR` 模型开辟了前景。
+
+**Keywords:** human activity recognition, domain knowledge, deep learning, neural architecture search.
+
+## 1.Introduction
+
