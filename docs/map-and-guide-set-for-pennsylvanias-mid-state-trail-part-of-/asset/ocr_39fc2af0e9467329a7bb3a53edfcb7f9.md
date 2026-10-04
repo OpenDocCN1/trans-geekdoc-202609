@@ -1,0 +1,9 @@
+The Mid State has had other fires as well, such as those on Little Poe Mountain, South White Deer Mountain, and Ramsey, but these fires were not caused by hikers. Please be very careful with fire.
+
+# USING THE COLOR MSTA MAPS
+
+Each of the color maps currently issued by MSTA is based on the Universal Transverse Mercator (UTM) grid, North American Datum (NAD) 1983, at 1:50,000 scale, except for blown-up areas in insets (such as the Tussey Mountain Urban Forest Interface near State College on Map 307-310). This means that moving 1 centimeter on the basic map is equivalent to moving 500 meters on the ground. This is roughly half the scale used by USGS 7.5 minute topographic maps (which are 1:24,000) but it is the same scale used on Canadian topographic maps. If you can find one, Natural Resources Canada gives away a little plastic scale that is very handy for reading distance kilometers directly from 1:50,000 scale maps.
+
+The grid lines on the map are spaced every 1000 meters and each is labeled with a two digit number. This two digit number is the thousands and ten-thousands of meters in the UTM coordinate system. In order to locate yourself globally you also need the hundred-thousand and the million place – these are the smaller numbers that appear once per edge of each map panel. Finally you need the UTM Zone designation – that inconspicuous bit of information is emplaced in the legend of the MSTA color map sheet. Most of Pennsylvania and sections 7 through 20 of MST is in Zone 18, however western PA hence southern-most MST sections 1 through 6 is in Zone 17.
+
+Here is an example. Let's say someone tells you to meet them at UTM Zone 18 NAD 1983, Northing 4511833, Easting 258024, near Beaver Pond in Huntington County. Think of these numbers as 45 11833 and 2 58024 respectively. If you're looking at the correct panel on Map

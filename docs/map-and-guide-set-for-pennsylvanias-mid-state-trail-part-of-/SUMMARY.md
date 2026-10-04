@@ -1,0 +1,2 @@
++   [宾夕法尼亚州中州步道地图与指南集（大东部步道的一部分）：包含第 13 版指南书及全彩地图：在线提供更新与最新信息 http](README.md)
++   [宾夕法尼亚州中州步道地图与指南集（大东部步道的一部分）：包含第 13 版指南书及全彩地图：在线提供更新与最新信息 http](map-and-guide-set-for-pennsylvanias-mid-state-trail-part-of-.md)

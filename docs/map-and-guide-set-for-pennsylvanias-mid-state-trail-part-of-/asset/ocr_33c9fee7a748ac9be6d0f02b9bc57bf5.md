@@ -1,0 +1,3 @@
+# GENERAL DESCRIPTION
+
+After a short road walk just north of the M-D line MST enters Buchuchanan State Forest and climbs Tussey Mountain on Burnt Mills Trail into Martin Hill Wild Area. It then turns north on Dickens Trail and new trails eventually following Tussey Mountain XC Ski Trail to Beans Cove Gap. Continuing north it climbs to the top of Martin Hill and then traverses Sweet Root Natural Area before reaching PA 326 between Rainsburg and Chaneysville.
