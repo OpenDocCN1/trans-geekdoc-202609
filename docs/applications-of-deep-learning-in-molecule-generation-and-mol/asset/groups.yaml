@@ -1,0 +1,2256 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Applications of Deep Learning in Molecule Generation and Molecular Property
+    Prediction
+
+
+    Published as part of the Accounts of Chemical Research special issue "Data Science
+    Meets Chemistry".
+
+    W. Patrick Walters and Regina Balizar*
+
+
+    Cite This: Acc. Chem. Res. 2021, 54, 263–270
+
+
+    # ACCESS
+
+
+    # Metrics & More
+
+
+    # Article Recommendations
+
+
+    SPECTUS: Recent advances in computer hardware and software have led to a revolution
+    in deep neural networks that have impacted fields ranging from translation to
+    computer vision. Deep learning has also impacted a number of areas in drug discovery,
+    including the analysis of chemical images and the design of new routes for the
+    synthesis of organic molecules. While work in these areas has been incomplete,
+    a complete review of the scope of a single Account. In this Account, we will focus
+    on two key areas of deep learning in drug discovery: the prediction of molecular
+    properties and the de novo generation of suggestions for new molecules.
+
+
+    One of the most significant advances in the quantitative development of structure–activity
+    relationships (QSARS) has come from the application of deep learning methods to
+    predict the biological activity and physical properties of molecules in drug discovery.
+    Rather than using expert-derived chemical features to typically build models,
+    researchers are now using deep learning to model complex, nonlinear representations.
+    These representations, have led to state-of-the-art performance. While deep learning
+    has changed the way that many researchers approach QSARs, it is not a panacea.
+    With any other machine learning technique, the task of designing and creating
+    a training set is still a fundamentally challenging issue, such as identifying
+    critical areas that are still uncertain. Multiple researches have the development
+    of methods for assessing the confidence in a model.
+
+
+    Deep learning has also contributed to the generation of new molecular structures.
+    Rather than relying on manual design, deep learning has opened up new possibilities.
+    Techniques that were originally developed for image generation and language translation
+    have been adapted to the generation of molecules. These deep learning methods
+    have been used with the predictive models above and being used to generate new
+    molecules with specific predicted biological profiles. While these generative
+    algorithms appear promising, there have been only a few reports on the synthesis
+    and testing of molecules proposed by generative designs. The evaluation of the
+    diversity, quality, and ultimate value of molecules produced by generative models
+    is still an open question. The field has produced a number of benchmarks, but
+    it needs to agree on how one should assess molecules" by an inventory.
+
+
+    +   KEY REFERENCES
+
+
+    +   Yang, K.; Wang, J.; Jin, W.; Cole, C.; Eid, P.; Gao, G.; Guzman-Perera, A.;
+    Hopper, T.; Kelley, B.; Mathja, M.; Palmer, A.; Watts, Y.; Vakkola, J.; Jenkins,
+    T.; Balalay, R. Learning Molecular Representations for Property Prediction. J.
+    Chem. Med. 2019, 59, 3370–3388. The design and application of deep neural networks
+    for systems of pharmaceutical informatics.
+
+
+    +   Stokes, J. M.; Wang, K.; Swanson, J.; Wen, Y.; Cubillos-Buiz, A.; Donghia,
+    N. M.; MacNair, C. R.; French, S.; Carlafee, L. A.; Bloomer-Ackman, J.; Tran,
+    V. M.; Chiapeno-Pepe, A.; Badran, H.; Andrews, I. W.
+
+
+    +   Chory, E. J.; Church, M.; Brown, E. D.; Jaakumock, T. S.; Balaraj, R.; Collins,
+    J. J. A Deep Learning Approach to Antibiotic Discovery. Cell. 2020, 180, 688–702.
+    The application of deep learning methods for property prediction to the discovery
+    of novel antibiotics.
+
+
+    Received: October 2020
+
+    Published: December 2020
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_0_0.png)
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_0_1.png)
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_0_2.png)
+
+
+    © 2020 American Chemical Society
+
+
+    263
+
+
+    https://doi.org/10.1021/acs.acs.0b699
+
+    Acc. Chem. Res. 2021, 54, 263–270'
+  - '[PAGE 1]
+
+
+    # Accounts of Chemical Research
+
+
+    pubs.acs.org/accounts
+
+
+    Article
+
+
+    +   * Jin, W.; Balay, R.; Jaakkola, T. Junction Tree Variational Autoencoder for
+    Molecular Graph Generation, Proc. Mach. Learn. **2018**, 80, 2232–2332. A graph-based
+    generative algorithm that overcomes limitations of earlier sequence-based approaches.
+
+
+    Perhas the most significant challenge facing the field is a lack of quality data
+    that are available to build and predict models. In order to make progress, we
+    need to create opportunities for collaboration between those in the pharmaceutical
+    industry who are generating data and those in academia who are creating new methodologies.
+
+
+    # 1. INTRODUCTION
+
+
+    # 2. MOLECULAR PROPERTY PREDICTION
+
+
+    The generation and evaluation of new molecules based on data are critical tasks
+    in the design of new medicines. In the early days of drug discovery, iteration
+    were largely manual and intuition-driven. Scientists would test a set of compounds,
+    examine the data produced, and use an understanding of the underlying science
+    to synthesize molecules. The structural-activity relationships (QSAR) in the 1990s
+    created a framework for associating compounds with chemical properties from physical
+    or biological responses. These quantitative models formed the basis of many virtual
+    screening strategies.
+
+
+    The promise of virtual screening has moved decades beyond infancy. machine learning
+    (ML) methods for predicting molecular properties ranging from biotoxicity to distributive
+    and physical properties. If successful, these methods could transform the process
+    by reducing the time and expense associated with experimental screening while
+    broadening the chemical space. Current experimental screening approaches can potentially
+    access millions of molecules, virtual screening can enable the evaluation of billions
+    of molecules in a short time. The ML algorithms developed using virtual screening
+    can capture complex chemical structure and the nature of molecules. The assumption
+    is that when methods of chemical analysis used with large amounts of data in the
+    form of measured properties, these algorithms can systematically capture properties
+    that may be too subtle for humans to grasp.
+
+
+    Training and Data
+
+
+    New Molecules
+
+
+    Predictive Model
+
+
+    Predicted Values
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_1_0.png)
+
+
+    Over the past years, the field of molecule and property prediction has seen a
+    revolution, which has been driven by deep learning. Advances in computer hardware
+    and software have made natural language processing now applicable to molecular
+    properties including bioactivity, ADME, and interactions with targets such as
+    QSAR. Rather than relying on sets of expert-defined models, deep learning has
+    enabled researchers to develop models that can be trained directly on large datasets.
+    With the depth and complexity of the neural networks employed, these models have
+    outperformed traditional QSAR approaches. This has also transformed the field
+    of de novo generation. Rather than expanding existing molecules or using a set
+    of rules to link existing generative models, deep learning generates molecules
+    based on learned features of existing molecules.
+
+
+    provides an overview of machine learning approaches for molecular property prediction.
+    A training set with associated data is used to create a model that can be used
+    to predict a set of experimental observables.
+
+
+    # 2.1. Neural Networks for Property Prediction
+
+
+    Advancements in neural models opened a possibility to handle this state of the
+    era. One of the key departments of these models is how molecules relate to properties
+    represented within the machine learning algorithms. Traditional models use pre-computed
+    features such as fingerprints. The role of the ML algorithm was to learn how to
+    weigh these features to deliver accurate attributes. Clearly, the success of these
+    models depends on the quality of the training data, which is critical for a predictive
+    modeling task. In contrast, neural models learn their own experience representations
+    from the data, mapping a molecular structure into a continuous vector space using
+    various network architectures.
+
+
+    While the field is advancing, it still faces a number of significant challenges
+    in current research efforts. Although researchers are developing heuristics, we
+    specifically lack a fundamental understanding of molecules required to develop
+    a learned representation and the scope of chemical space covered by a model. As
+    models become more powerful, we need to develop guidelines for the evaluation
+    of these “discoveries” and comparing them with more traditional human-driven methods.
+
+
+    264
+
+
+    https://doi.org/10.1021/acs.orgchem.3c05699'
+  md: '
+
+    # Applications of Deep Learning in Molecule Generation and Molecular Property
+    Prediction
+
+
+    Published as part of the Accounts of Chemical Research special issue "Data Science
+    Meets Chemistry".
+
+    W. Patrick Walters and Regina Balizar*
+
+
+    Cite This: Acc. Chem. Res. 2021, 54, 263–270
+
+
+    # ACCESS
+
+
+    # Metrics & More
+
+
+    # Article Recommendations
+
+
+    SPECTUS: Recent advances in computer hardware and software have led to a revolution
+    in deep neural networks that have impacted fields ranging from translation to
+    computer vision. Deep learning has also impacted a number of areas in drug discovery,
+    including the analysis of chemical images and the design of new routes for the
+    synthesis of organic molecules. While work in these areas has been incomplete,
+    a complete review of the scope of a single Account. In this Account, we will focus
+    on two key areas of deep learning in drug discovery: the prediction of molecular
+    properties and the de novo generation of suggestions for new molecules.
+
+
+    One of the most significant advances in the quantitative development of structure–activity
+    relationships (QSARs) has come from the application of deep learning methods to
+    predict the biological activity and physical properties of molecules in drug discovery.
+    Rather than using expert-derived chemical features to typically build models,
+    researchers are now using deep learning to model complex, nonlinear representations.
+    These representations, have led to state-of-the-art performance. While deep learning
+    has changed the way that many researchers approach QSARs, it is not a panacea.
+    With any other machine learning technique, the task of designing and creating
+    a training set is still a fundamentally challenging issue, such as identifying
+    critical areas that are still uncertain. Multiple researches have the development
+    of methods for assessing the confidence in a model.
+
+
+    Deep learning has also contributed to the generation of new molecular structures.
+    Rather than relying on manual design, deep learning has opened up new possibilities.
+    Techniques that were originally developed for image generation and language translation
+    have been adapted to the generation of molecules. These deep learning methods
+    have been used with the predictive models above and are being used to generate
+    new molecules with specific predicted biological profiles. While these generative
+    algorithms appear promising, there have been only a few reports on the synthesis
+    and testing of molecules proposed by generative designs. The evaluation of the
+    diversity, quality, and ultimate value of molecules produced by generative models
+    is still an open question. The field has produced a number of benchmarks, but
+    it needs to agree on how one should assess molecules" by an inventory.
+
+
+    ### KEY REFERENCES
+
+
+    - Yang, K.; Wang, J.; Jin, W.; Cole, C.; Eid, P.; Gao, G.; Guzman-Perera, A.;
+    Hopper, T.; Kelley, B.; Mathja, M.; Palmer, A.; Watts, Y.; Vakkola, J.; Jenkins,
+    T.; Balalay, R. Learning Molecular Representations for Property Prediction. J.
+    Chem. Med. 2019, 59, 3370–3388. The design and application of deep neural networks
+    for systems of pharmaceutical informatics.
+
+    - Stokes, J. M.; Wang, K.; Swanson, J.; Wen, Y.; Cubillos-Buiz, A.; Donghia, N.
+    M.; MacNair, C. R.; French, S.; Carlafee, L. A.; Bloomer-Ackman, J.; Tran, V.
+    M.; Chiapeno-Pepe, A.; Badran, H.; Andrews, I. W.
+
+    - Chory, E. J.; Church, M.; Brown, E. D.; Jaakumock, T. S.; Balaraj, R.; Collins,
+    J. J. A Deep Learning Approach to Antibiotic Discovery. Cell. 2020, 180, 688–702.
+    The application of deep learning methods for property prediction to the discovery
+    of novel antibiotics.
+
+
+    Received: October 2020
+
+    Published: December 2020
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_0_0.png)
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_0_1.png)
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_0_2.png)
+
+
+    © 2020 American Chemical Society
+
+
+    263
+
+
+    https://doi.org/10.1021/acs.acs.0b699
+
+    Acc. Chem. Res. 2021, 54, 263–270
+
+
+    # Accounts of Chemical Research
+
+
+    pubs.acs.org/accounts
+
+
+    Article
+
+
+    - *Jin, W.; Balay, R.; Jaakkola, T. Junction Tree Variational Autoencoder for
+    Molecular Graph Generation, Proc. Mach. Learn. **2018**, 80, 2232–2332. A graph-based
+    generative algorithm that overcomes limitations of earlier sequence-based approaches.
+
+
+    Perhaps the most significant challenge facing the field is a lack of quality data
+    that are available to build and predict models. In order to make progress, we
+    need to create opportunities for collaboration between those in the pharmaceutical
+    industry who are generating data and those in academia who are creating new methodologies.
+
+
+    # 1. INTRODUCTION
+
+
+    # 2. MOLECULAR PROPERTY PREDICTION
+
+
+    The generation and evaluation of new molecules based on data are critical tasks
+    in the design of new medicines. In the early days of drug discovery, iteration
+    were largely manual and intuition-driven. Scientists would test a set of compounds,
+    examine the data produced, and use an understanding of the underlying science
+    to synthesize molecules. The structural-activity relationships (QSAR) in the 1990s
+    created a framework for associating compounds with properties.
+
+
+    ### 2.1. Neural Networks for Property Prediction
+
+
+    Over the past years, the field of molecule and property prediction has seen a
+    revolution, which has been driven by deep learning. Advances in computer hardware
+    and software have made natural language processing now applicable to molecular
+    properties including bioactivity, ADME, and interactions with targets. Rather
+    than relying on sets of expert-defined models, deep learning has enabled researchers
+    to develop models that can be trained directly on large datasets. With the depth
+    and complexity of the neural networks employed, these models have outperformed
+    traditional QSAR approaches. provides an overview of machine learning approaches
+    for molecular property prediction. A training set with associated data is used
+    to create a model that can be used to predict a set of experimental observables.
+
+
+    | Training and Data | New Molecules | Predictive Model | Predicted Values |
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_1_0.png)
+
+    '
+  mdcn: '
+
+
+    # 深度学习在分子生成和分子性质预测中的应用
+
+
+    发表于《化学研究要》（Accounts of Chemical Research）特刊“数据科学会汇化学”。
+
+    W. Patrick Walters 和 Regina Balizar*
+
+
+    引用本文：Acc. Chem. Res. 2021, 54, 263–270
+
+
+    # 访问权限
+
+
+    # 指标及更多
+
+
+    # 文章推荐
+
+
+    摘要：计算机硬件和软件的最新进展引发了深度神经网络的革命，这影响了从翻译到计算机视觉的多个领域。深度学习也影响了药物发现的许多领域，包括化学图像分析和有机分子合成新路径的设计。虽然这些领域的工作尚不完全，但本述（Account）将对相关范围进行全面的综述。在本述中，我们将重点关注药物发现中深度学习的两个关键领域：分子性质预测和新分子的从头生成建议。
+
+
+    构效关系（QSAR）定量发展中最重大的进展之一来自于应用深度学习方法预测药物发现中分子的生物活性和物理性质。研究人员现在不再通常使用专家定义的化学特征来构建模型，而是使用深度学习对复杂的非线性表示进行建模。这些表示带来了顶尖的性能。虽然深度学习改变了许多研究人员处理
+    QSAR 的方式，但它并非万灵药。与任何其他机器学习技术一样，设计和创建训练集的任务仍然是一个根本性的挑战性问题，例如识别仍然不确定的关键领域。多项研究已经开发了评估模型置信度的方法。
+
+
+    深度学习也为新分子结构的生成做出了贡献。深度学习不再依赖人工设计开启了新的可能性。最初为图像生成和语言翻译开发的技术被应用于分子生成。这些深度学习方法已与上述预测模型结合使用，并被用于生成具有特定预测生物特征的新分子。虽然这些生成算法看起来很有前景，但关于生成设计提出的分子的合成和测试的报告较少。评估生成模型产生的分子的多样性、质量和最终价值仍然是一个开放性问题。该领域已经产生了许多基准，但需要对如何通过清单来评估分子达成共识。
+
+
+    ### 关键参考文献
+
+
+    - Yang, K.; Wang, J.; Jin, W.; Cole, C.; Eid, P.; Gao, G.; Guzman-Perera, A.;
+    Hopper, T.; Kelley, B.; Mathja, M.; Palmer, A.; Watts, Y.; Vakkola, J.; Jenkins,
+    T.; Balalay, R. Learning Molecular Representations for Property Prediction. J.
+    Chem. Med. 2019, 59, 3370–3388. 用于药物信息学系统的深度神经网络的设计与应用。
+
+    - Stokes, J. M.; Wang, K.; Swanson, J.; Wen, Y.; Cubillos-Buiz, A.; Donghia, N.
+    M.; MacNair, C. R.; French, S.; Carlafee, L. A.; Bloomer-Ackman, J.; Tran, V.
+    M.; Chiapeno-Pepe, A.; Badran, H.; Andrews, I. W.
+
+    - Chory, E. J.; Church, M.; Brown, E. D.; Jaakumock, T. S.; Balaraj, R.; Collins,
+    J. J. A Deep Learning Approach to Antibiotic Discovery. Cell. 2020, 180, 688–702.
+    深度学习性质预测方法在新型抗生素的发现中。
+
+
+    接收：2020年10月
+
+    发表：2020年12月
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_0_0.png)
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_0_1.png)
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_0_2.png)
+
+
+    © 2020 美国化学学会
+
+
+    263
+
+
+    https://doi.org/10.1021/acs.acs.0b699
+
+    Acc. Chem. Res. 2021, 54, 263–270
+
+
+    # 化学研究要要
+
+
+    pubs.acs.org/accounts
+
+
+    文章
+
+
+    - *Jin, W.; Balay, R.; Jaakkola, T. Junction Tree Variational Autoencoder for
+    Molecular Graph Generation, Proc. Mach. Learn. **2018**, 80, 2232–2332. 一种基于图的生成算法，克服了早期基于序列方法的局限性。
+
+
+    也许该领域面临的最重大挑战是缺乏可用于构建和预测模型的优质数据。为了取得进展，我们需要在产生数据的制药行业人员与创建新方法的学术界人员之间建立合作机会。
+
+
+    # 1. 引言
+
+
+    # 2. 分子性质预测
+
+
+    基于数据的新分子的生成和评估是新药设计中的关键任务。在药物发现的早期，迭代在很大程度上是人工和直觉驱动的。科学家会测试一组化合物，检查产生的数据，并利用对基础科学的理解来合成分子。20世纪90年代的构效关系（QSAR）为化合物与性质之间的联系建立了一个框架。
+
+
+    ### 2.1. 用于性质预测的神经网络
+
+
+    在过去的几年里，分子和性质预测领域经历了一场深度学习驱动的革命。计算机硬件软件的进步使得自然语言处理现在适用于分子性质，包括生物活性、ADME 以及与靶点的相互作用。深度学习不再依赖于专家定义的模型，而是使研究人员能够开发可以直接在大型数据集上训练的模型。由于所采用神经网络的深度和复杂性，这些模型的性能优于传统的
+    QSAR 方法。本文提供了分子性质预测的机器学习方法的概述。使用带有相关数据的训练集创建一个模型，该模型可预测一组实验观测值。
+
+
+    | 训练与数据 | 新分子 | 预测模型 | 预测值 |
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_1_0.png)
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # Accounts of Chemical Research
+
+
+    # Article
+
+
+    # Training
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_2_0.png)
+
+
+    # Testing
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_2_1.png)
+
+
+    **Figure 2. Process by Stokes to discover a novel antibiotic.**
+
+
+    Recent publications have shown a number of cases where these new architectures
+    deliver performance over neural models. One example of the success of deep learning
+    in drug discovery is the Tox21 Challenge, where machine learning approaches were
+    to predict outcomes of experimental toxicity assays. A submission by the Hoechriter
+    group used deep learning and won 11 out of 16 benchmarks. In retrospect, Yang
+    et al. and a consortium of pharmaceutical partners reported a result that was
+    comparable or better than those obtained by existing baseline models on 19 public
+    benchmarks and 15 proprietary datasets. Neural models were applied respectively.
+    A 2020 paper by Stokes et al. describes the discovery of a novel antibiotic from
+    a library of 100 million compounds from the ZINC database. The method was used
+    to generate this illustrated in Figure 2. A set of marked and natural products
+    were produced to select 80% molecules labeled as active (1), and the remaining
+    labeled as inactive (0). A deep learning model was then used to select molecules
+    from a database of 107 commercially available molecules. Subsequently, they identified
+    eighted antibiotics that were distinct from the molecules used to train the model.
+
+
+    Moreover, even a large training set does not guarantee that the model will generalize
+    successfully to a new chemical space. The larger the divergence from the original
+    training set, the harder it is for the model to correctly predict the property
+    of interest. Future matters: establishing methods for estimation cannot adequately
+    assess the likelihood of the model to be correct.
+
+
+    # **2.3. Uncertainty
+
+
+    When a learning model is used to predict the biological or activity properties
+    of a molecule, it is important to understand the uncertainty in the prediction.
+    While it seems intuitive that one can be more certain about predictions on molecules
+    that are similar to those in the training set,¹⁶ the field has yet to agree reliable
+    methods for assessing uncertainty. As the field moves to more complex molecules
+    it becomes more difficult to quantify similarity and evaluate the uncertainty
+    in machine learning models. A 2020 paper used five benchmark datasets to select
+    several methods for quantifying uncertainty in neural network models. These authors
+    explored the ability of the established strategies to estimate the error in prediction
+    models.
+
+
+    +   - Ensemble methods, where network parameters are varied to create an ensemble
+    of models and the variance as a measure of uncertainty.
+
+
+    +   - An approach has mean-variance estimation, where the network is trained to
+    predict both the mean and the variance of the predicted for a particular molecule.
+
+
+    +   - Distance-based methods based on molecular fingerprints or latent space representations
+    like those described in Section 3.2
+
+
+    +   - Union-based methods, which combine a neural network with a latent space
+    representation to produce both an output and an associated uncertainty.
+
+
+    The authors concluded that none of the methods investigated were capable of consistently
+    uncertainty across the data sets. While there have been a number of published
+    reports for estimating uncertainty,¹⁷ further study is necessary to create reliable
+    methods that can be used in practice.
+
+
+    # **2.2. Data Requirements for Accurate Property Prediction
+
+
+    The accuracy of predictive molecular models depends on accurate data. Given a
+    vast number of parameters, neural models require a sufficient amount of data to
+    achieve an optimal molecular representation and ultimately the prediction set.
+    While traditional molecular-fingerprint-based models can be trained on a few hundred
+    molecules, that amount of data is insufficient for neural models. Thousands of
+    molecules is required to start their training. Unfortunately, in many drug discovery
+    scenarios, obtaining a large sample may not be feasible. A typical pharmaceutical
+    optimization effort, which generates a few thousand, may provide sufficient data
+    to train a neural model.
+
+
+    265
+
+
+    https://doi.org/10.1021/acs.chemchem.0c5699'
+  - '[PAGE 3]
+
+
+    # Accounts of Chemical Research
+
+
+    # Article
+
+
+    # 2.4. Data Augmentation Strategies
+
+
+    As mentioned above, the performance of models depends on the quantity of data
+    used to train the model. In some machine learning disciplines, it is possible
+    to augment data by modifying training examples. For instance, when analyzing images,
+    one can create a larger dataset by blurring or inserting elements into the data.
+    Unfortunately, this augmentation is not possible with molecules. Every change
+    to a molecule can drastically affect the molecular property in context. Multiple
+    lines of research are aiming to address these limitations by generating additional
+    data or looking for more effective ways of augmenting data. One direction that
+    has already been shown to be highly effective is to suggest target training with
+    data from related tasks (e.g., Netflix-style recommendation systems). Another
+    method of line works is to use encoders of molecular structures to improve learned
+    representations. Such approaches have been shown to be successful in computer
+    vision and natural language processing to demonstrate similar benefits in the
+    context of molecular property prediction.³⁴ However, the crucial dependence on
+    training data means that activating a set of candidates requires a fixed training
+    budget. These learning approaches provide a systematic approach to the exploration
+    and optimization of their properties (encoding). By informing the collection of
+    experimental data with diverse properties, researchers can hopefully strengthen
+    the drug discovery process.
+
+
+    decode a continuous representation to generate new molecules. In an alternate
+    approach, another type of deep neural network (RNN), can be used to generate new
+    molecules.³⁵ An RNN is designed to learn sequential data such as text or speech.
+    When an RNN is trained to generate molecules, it learns which parts of molecules
+    belong to atoms or groups being connected. These connections vary depending on
+    the parts of the molecule it has already seen. By treating the molecule as a sequence
+    of atoms at each step, one can generate molecules with a high likelihood of being
+    valid and bearing some resemblance to the training process. In another approach,
+    known as reinforcement learning (RL), the agent learns a series of actions to
+    reach a specific goal.³⁶⁷ The most well-known example of RL is AlphaGo, a program
+    developed by Google, that defeated a grandmaster in the strategy game known as
+    Go.³⁹ In molecular drug design, generative models define a molecule to grow or
+    change through the addition and modification of bonds. A goal is defined as a
+    reward based on a predicted metric and the agent then learns the path to that
+    goal. In a 2019 paper, Zhao and chaholders used RL to generate molecules with
+    multiple objectives, including similarity to a target molecule and diversity.
+
+
+    # 3. DE NOVO MOLECULAR DESIGN WITH GENERATIVE MODELS
+
+
+    Over the past few years, we have seen the emergence of a new number of approaches
+    to novo molecular design that have been inspired by techniques used in areas such
+    as computer vision and natural language processing. This field has gained significant
+    interest in the machine learning community, lately of natural chemistry, to increase
+    state-of-the-art performance. In instance, from 2017 on some data sets, the absolute
+    gain reached over 20% (measured by the quality of generating molecules with the
+    desired properties).
+
+
+    The first of these techniques, known as an autoencoder (3), utilizes complex tasks:
+    to encode molecules in a continuous latent space that facilitates the prediction
+    and optimization of their properties (encoding) and to learn an optimal representation
+    of a molecular graph with improved properties (decoding).⁴⁰ This is illustrated
+    in Figure 4, where we navigate and
+
+
+    The first applications of generative models to novo molecular design used the
+    Simplified Input Line Entry System (SMILES) representation of the molecular structure,
+    which was transformed into a latent vector and further optimized to decode the
+    desired property.³¹ The new optimized vector is then decoded into a SMILES string
+    representing the output molecule. The key assumption in this approach is that
+    representation in this space is smooth, in contrast to the discrete nature of
+    molecular space. However, research has revealed that the constructed latent space
+    is far from smooth: molecules with similar properties might not be similar to
+    each other in the latent space. This part of the explanation can be bridged by
+    the IMPACT of SMILES representation as a starting point—similar molecules may
+    have very different SMILES strings. However, there are other contributing factors,
+    such as property cliffs (chemicals with very similar structures but very different
+    properties) and chemical constraints of the synthesis process. Recent work has
+    significantly advanced the state of the art in novo generative models. Moving
+    molecules representations have explored encoding and decoding algorithms that
+    can effectively process molecular graphs. Unlike computer vision and natural language,
+    the field is still far from having a standard architecture, and we expect to see
+    new developments in this area.
+
+
+    # 3.1. Specific Generative Modeling Approaches
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_3_0.png)
+
+
+    266
+
+
+    https://doi.org/10.1021/acs.acchemrev.2c05699
+
+    ACS Chem. Rev. 2023, 123, 24–263'
+  md: '
+
+    # Accounts of Chemical Research
+
+
+    # Article
+
+
+    # Training
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_2_0.png)
+
+
+    # Testing
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_2_1.png)
+
+
+    **Figure 2. Process by Stokes to discover a novel antibiotic.**
+
+
+    Recent publications have shown a number of cases where these new architectures
+    deliver performance over neural models. One example of the success of deep learning
+    in drug discovery is the Tox21 Challenge, where machine learning approaches were
+    to predict outcomes of experimental toxicity assays. A submission by the Hoechriter
+    group used deep learning and won 11 out of 16 benchmarks. In retrospect, Yang
+    et al. and a consortium of pharmaceutical partners reported a result that was
+    comparable or better than those obtained by existing baseline models on 19 public
+    benchmarks and 15 proprietary datasets. Neural models were applied respectively.
+    A 2020 paper by Stokes et al. describes the discovery of a novel antibiotic from
+    a library of 100 million compounds from the ZINC database. The method was used
+    to generate this illustrated in Figure 2. A set of marked and natural products
+    were produced to select 80% molecules labeled as active (1), and the remaining
+    labeled as inactive (0). A deep learning model was then used to select molecules
+    from a database of 107 commercially available molecules. Subsequently, they identified
+    eight antibiotics that were distinct from the molecules used to train the model.
+
+
+    Moreover, even a large training set does not guarantee that the model will generalize
+    successfully to a new chemical space. The larger the divergence from the original
+    training set, the harder it is for the model to correctly predict the property
+    of interest. Future matters: establishing methods for estimation cannot adequately
+    assess the likelihood of the model to be correct.
+
+
+    ## 2.3. Uncertainty
+
+
+    When a learning model is used to predict the biological or activity properties
+    of a molecule, it is important to understand the uncertainty in the prediction.
+    While it seems intuitive that one can be more certain about predictions on molecules
+    that are similar to those in the training set,¹⁶ the field has yet to agree reliable
+    methods for assessing uncertainty. As the field moves to more complex molecules
+    it becomes more difficult to quantify similarity and evaluate the uncertainty
+    in machine learning models. A 2020 paper used five benchmark datasets to select
+    several methods for quantifying uncertainty in neural network models. These authors
+    explored the ability of the established strategies to estimate the error in prediction
+    models.
+
+
+    - Ensemble methods, where network parameters are varied to create an ensemble
+    of models and the variance as a measure of uncertainty.
+
+    - An approach has mean-variance estimation, where the network is trained to predict
+    both the mean and the variance of the predicted for a particular molecule.
+
+    - Distance-based methods based on molecular fingerprints or latent space representations
+    like those described in Section 3.2
+
+    - Union-based methods, which combine a neural network with a latent space representation
+    to produce both an output and an associated uncertainty.
+
+
+    The authors concluded that none of the methods investigated were capable of consistently
+    estimating uncertainty across the data sets. While there have been a number of
+    published reports for estimating uncertainty,¹⁷ further study is necessary to
+    create reliable methods that can be used in practice.
+
+
+    ## 2.2. Data Requirements for Accurate Property Prediction
+
+
+    The accuracy of predictive molecular models depends on accurate data. Given a
+    vast number of parameters, neural models require a sufficient amount of data to
+    achieve an optimal molecular representation and ultimately the prediction set.
+    While traditional molecular-fingerprint-based models can be trained on a few hundred
+    molecules, that amount of data is insufficient for neural models. Thousands of
+    molecules is required to start their training. Unfortunately, in many drug discovery
+    scenarios, obtaining a large sample may not be feasible. A typical pharmaceutical
+    optimization effort, which generates a few thousand, may provide sufficient data
+    to train a neural model.
+
+
+    265
+
+
+    https://doi.org/10.1021/acs.chemchem.0c5699
+
+
+    ## 2.4. Data Augmentation Strategies
+
+
+    As mentioned above, the performance of models depends on the quantity of data
+    used to train the model. In some machine learning disciplines, it is possible
+    to augment data by modifying training examples. For instance, when analyzing images,
+    one can create a larger dataset by blurring or inserting elements into the data.
+    Unfortunately, this augmentation is not possible with molecules. Every change
+    to a molecule can drastically affect the molecular property in context. Multiple
+    lines of research are aiming to address these limitations by generating additional
+    data or looking for more effective ways of augmenting data. One direction that
+    has already been shown to be highly effective is to suggest target training with
+    data from related tasks (e.g., Netflix-style recommendation systems). Another
+    method of line works is to use encoders of molecular structures to improve learned
+    representations. Such approaches have been shown to be successful in computer
+    vision and natural language processing to demonstrate similar benefits in the
+    context of molecular property prediction.³⁴ However, the crucial dependence on
+    training data means that activating a set of candidates requires a fixed training
+    budget. These learning approaches provide a systematic approach to the exploration
+    and optimization of their properties (encoding). By informing the collection of
+    experimental data with diverse properties, researchers can hopefully strengthen
+    the drug discovery process.
+
+
+    decode a continuous representation to generate new molecules. In an alternate
+    approach, another type of deep neural network (RNN), can be used to generate new
+    molecules.³⁵ An RNN is designed to learn sequential data such as text or speech.
+    When an RNN is trained to generate molecules, it learns which parts of molecules
+    belong to atoms or groups being connected. These connections vary depending on
+    the parts of the molecule it has already seen. By treating the molecule as a sequence
+    of atoms at each step, one can generate molecules with a high likelihood of being
+    valid. In another approach, known as reinforcement learning (RL), the agent learns
+    a series of actions to reach a specific goal.³⁷ The most well-known example of
+    RL is AlphaGo, a program developed by Google, that defeated a grandmaster in the
+    game.³⁹ In molecular design, generative models define a molecule to grow or change
+    through the addition of bonds. In a 2019 paper, Zhao and others used RL to generate
+    molecules with multiple objectives, including similarity to a target molecule
+    and diversity.
+
+
+    ## DEVO MOLECULAR DESIGN WITH GENERATIVE MODELS
+
+
+    Over the past few years, we have seen the emergence of a new number of approaches
+    to novo molecular design that have been inspired by techniques used in areas such
+    as computer vision and natural language processing. This field has gained significant
+    interest in the machine learning community, lately of chemistry, to increase state-of-the-art
+    performance. In instance, from 2017 on some data sets, the absolute gain reached
+    over 20% (measured by the quality of generating molecules).
+
+
+    The first of these techniques, known as an autoencoder, utilizes complex tasks:
+    to encode molecules in a continuous latent space that facilitates the prediction
+    and optimization of their properties (encoding) and to learn an optimal representation
+    of a molecular graph with improved properties (decoding).⁴⁰ This is illustrated
+    in Figure 4.
+
+
+    The first applications of generative models to novo molecular design used the
+    Simplified Line Entry System (SMILES) representation of the molecular structure,
+    which was transformed into a latent vector and further optimized to the desired
+    property.³¹ The new optimized vector is then decoded into a SMILES string representing
+    the output molecule. The key assumption in this approach is that representation
+    in this space is smooth, in contrast to the discrete nature of molecular space.
+    However, research has revealed that the constructed latent space is far from smooth:
+    molecules with similar properties might not be similar to each other in the latent
+    space. This part of the explanation can be bridged by the impact of SMILES representation
+    as a starting point—similar molecules may have very different SMILES strings.
+    However, there are other contributing factors, such as property cliffs (chemicals
+    with very similar structures but very different properties) and chemical constraints
+    of the synthesis process. Recent work has significantly advanced the state of
+    the art in novo generative models. Moving molecules representations have explored
+    encoding and decoding algorithms that can effectively process molecular graphs.
+
+
+    ## 3.1. Specific Generative Modeling Approaches
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_3_0.png)
+
+
+    266
+
+
+    https://doi.org/10.1021/acs.acchemrev.2c05699
+
+    ACS Chem. Rev. 2023, 123, 24–263
+
+    '
+  mdcn: '
+
+
+    # 化学研究叙述
+
+
+    # 论文
+
+
+    # 训练
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_2_0.png)
+
+
+    # 测试
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_2_1.png)
+
+
+    **图 2. Stokes 发现新型抗生素的过程。**
+
+
+    最近的文献表明，许多新架构在性能上优于神经网络模型。深度学习在药物发现中的成功案例是 Tox21 挑战，该挑战要求机器学习方法预测实验毒性分析的结果。Hoechriter
+    小组提交的一个方案使用了深度学习，并在 16 个基准测试中赢得了 11 个。回顾过去，Yang 等人和一个药物合作伙伴联盟报告了在 19 个公共基准测试和
+    15 个私有数据集上取得了与现有基准模型相当或更好的结果。他们分别应用了神经网络。Stokes 等人在 2020 年的一篇论文描述了如何从 ZINC 数据库的
+    1 亿个化合物库中发现一种新型抗生素。该方法被用于生成图2 所示的内容。产生了一系列标记和天然产物以筛选出 80% 标记为活性 (1) 的分子，其余标记为不活性
+    (0)。然后使用深度学习模型从包含 107 万种市售分子的数据库中筛选分子。随后，他们识别出了八种与训练模型时使用的分子不同的抗生素。
+
+
+    此外，即使是大型训练集也不能保证模型能够成功泛化到新的化学空间。模型与原始训练集的偏差越大，模型正确预测目标属性的难度就越。。未来的问题在于：建立估计方法无法充分评估模型预测正确的概率。
+
+
+    ## 2.3. 不确定性
+
+
+    当使用学习模型预测分子的生物学或活性属性时，理解预测中的不确定性至关重要。虽然直觉上认为人们对与训练集相似的分子的预测会更有把握，¹⁶，但该领域尚未就评估不确定性达成可靠的方法共。随着该领域向更复杂的分子发展，量化相似性和评估机器学习模型中的不确定性变得更加困难。2020
+    年的一篇论文使用了五个基准数据集，选择了几种量化神经网络模型不确定性的方法。这些作者探索了既有策略估计预测模型误差的能力。
+
+
+    - 集成方法，通过改变网络参数来创建模型集成，并将方差作为不确定性的衡量标准。
+
+    - 一种均值-方差估计方法，通过训练网络同时预测特定分子的预测值均值和方差。
+
+    - 基于分子指纹或潜空间表示（如第 3.2 节所述）的距离的方法。
+
+    - 基于并（Union-based）的方法，将神经网络与潜空间表示相结合，以产生输出及相关的不确定性。
+
+
+    作者得出结论，所研究的方法中没有一种能够跨数据集一致地估计不确定性。尽管已有许多关于估计不确定性的发表报告，⁷，但仍需进一步研究以创建可以在实践中使用的可靠方法。
+
+
+    ## 2.2. 准确预测属性所需的数据需求
+
+
+    预测分子模型的准确性取决于数据的准确性。考虑到海量的参数，神经网络需要足够的数据来实现最优的分子表示并最终实现预测集。虽然传统的基于分子指纹的模型可以在数百个分子上进行训练，但这些数据量对于神经网络来说是不够的。训练它们需要数千个分子。遗憾的是，在许多药物发现场景中，获取大量样本可能是不可行的。典型的药物优化工作会产生几千个分子，这可能为训练神经网络提供足够的数据。
+
+
+    265
+
+
+    https://doi.org/10.1021/acs.chemchem.0c5699
+
+
+    ## 2.4. 数据增强策略
+
+
+    如上所述，模型的性能取决于用于训练模型的数据量。在某些机器学习领域中，可以通过修改训练示例来增强数据。例如，在分析图像时，可以通过模糊处理或在数据中插入元素来创建一个更大的数据集。遗憾的是，这种增强在分子上是不可能的。对分子的任何改变都可能剧烈影响背景下的分子属性。多项研究方向旨在通过生成额外数据或寻找更有效的数据增强方法来解决这些局限性。一个已被证明非常有效的方向是建议使用来自相关任务的数据（例如
+    Netflix 风格的推荐系统）目标训练。另一类工作方法是使用分子结构的编码器来改进学习到的表示。此类方法在计算机视觉和自然语言处理中已被证明成功，并在分子属性预测背景下显示出类似的益处.³⁴。然而，对训练数据的关键依赖意味着激活一组候选对象需要固定的训练预算。这些学习方法为其属性（编码）的探索和优化提供了系统化的方法。通过为具有多样属性的实验数据收集提供信息，研究人员有望加强药物发现过程。
+
+
+    解码连续表示以生成新分子。在另一种方法中，可以使用另一种类型的深度神经网络（RNN）来生成新分子.³⁵ RNN 设计用于学习文本或语音等序列数据。当对 RNN
+    进行训练以生成分子时，它会学习分子的哪些部分属于正在连接的原子或基团。这些连接取决于它已经过的分子部分。通过将分子在每一步视为原子的序列，可以生成极概率为有效的分子。在另一种被称为强化学习（RL）的方法中，智能体学习一系列动作以达到特定目标.³⁷
+    RL 最著名的例子是 AlphaGo，这是一个由 Google 开发的程序，它在游戏中击败了特大师.³⁹ 在分子设计中，生成模型定义了通过增加键来生长或改变分子。在
+    2019 年的一篇论文中，Zhao 等使用 RL 生成了具有多个目标的分子，包括与目标分子的相似性和多样性。
+
+
+    ## 使用生成模型进行从分子设计
+
+
+    在过去的几年里，我们看到了许多从头分子设计新方法的出现，这些方法受到了计算机视觉和自然语言处理等领域技术的启发。该领域在机器学习社区，特别是化学领域引起了极大兴趣，以提高最先进的性能。例如，从2017年开始在某些数据集上，绝对增益（通过生成分子的质量衡量）超过了20%。
+
+
+    这些技术中的第一个被称为编码器，利用了复杂的任务：在连续潜空间中编码分子，以便对其属性进行预测和优化（编码），并学习具有改进属性的分子图的最优表示（解码）。⁴⁰
+    如图4 所示。
+
+
+    生成模型在从头分子设计中的首次应用使用了分子结构的简化线条输入系统（SMILES）表示，该表示被转换为潜向量并进一步优化到所需的属性.³¹ 新的优化向量随后被解码为代表输出分子的
+    SMILES 字符串。该方法的关键假设是空间中的表示是平滑的，与分子空间的离散性质形成对比。然而，研究发现，构建的潜空间远平滑：具有相似属性的分子在潜空间中可能并不相似。解释的这可以通过
+    SMILES 表示作为起点的影响来桥接——相似的分子可能具有非常不同的 SMILES 字符串。然而，还有其他影响因素，例如性质梯度（结构非常相似但属性巨大的化学品）和合成过程的化学限制。最近的工作显著推进了从头生成模型的发展。分子表示探索了可以有效处理分子图的编码和解码算法。
+
+
+    ## 3.1. 特定生成建模方法
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_3_0.png)
+
+
+    266
+
+
+    https://doi.org/10.1021/acs.acchemrev.2c05699
+
+    ACS Chem. Rev. 2023, 123, 24–263
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    # Accounts of Chemical Research
+
+
+    # Article
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_4_0.png)
+
+
+    Figure 4. An example of a continuous representation, and a decoder in the hidden
+    space for generation of new molecules.
+
+
+    properties.$^{29}$ This approach can be viewed as a neural version of matched
+    molecular pair (MPA)$^{24,45}$ where the model learns trajectories in the hidden
+    space that result in property improvements. This formulation delivers robust performance
+    even when the hidden space is not small and also supports the generation of diverse
+    outputs.
+
+
+    # 3.2. Applications of Generative Modeling
+
+
+    While many papers have been describing generative models, very few have reported
+    the synthesis of molecules based on generative models. One of the first papers
+    to report on synthesis and chemical and biological testing of molecules designed
+    by a generative algorithm was published in 2018 by Merck and coworkers who successfully
+    designed agonists of retinoid X receptors (RXRs) or peroxisome proliferator-activated
+    receptors (PPARs).$^{46}$
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_4_1.png)
+
+
+    Figure 5. Comparison of Compound 1, designed by a generative model, and the marked
+    drug ponatibinib.
+
+
+    A QSAR model was used to predict the activity of each generated molecule. Subsequent
+    biological assays showed that the compound were dual PPAR and RXR inhibitors with
+    $EC_{50}$ values between 60 and 13 nM.
+
+
+    A subset generated by Zhavorov et al. reported the molecules as potent inhibitors
+    of DDR1, a protein tyrosine kinase family often implicated in fibrosis.$^{47}$
+    That paper received considerable notice in the popular press and led to reports
+    of "a drug designed in 21 days." This work was considered notable, in order to
+    demonstrate its selectivity in a biochemical model, the authors demonstrated that
+    one molecule was active in cells and demonstrated reasonable pharmacokinetics
+    in a mouse model. These results initially provided a strong response.$^{48}$ Murcko
+    pointed out that the molecule highlighted in the hidden space bore a striking
+    similarity to a previously published DDR1 inhibitors, including the marked drug
+    ponatibinib (Figure 5). This controversy highlights difficulties in assessing
+    the significance of molecules "invented" by generative methods.
+
+
+    A number of recent papers suggested methods for evaluating the molecules produced
+    by generative models.$^{49}$ These benchmarks focus on evaluating the ability
+    of generative models to explore chemical space and exploit known information.
+    The GuacMolchem benchmark, published by Brown and coworkers, evaluates exploration
+    through a series of tests to evaluate the validity, novelty and diversity of molecules
+    generated by a generator. The software also has a goal-directed method to assess
+    the ability of a generative model to focus on specific chemical space. An alternative
+    for evaluating the diversity of molecules produced by a generative model is to
+    compare the generated molecules with an exhaustive exploration of chemical space.
+
+
+    Another question for the field is where to apply generative models in the drug
+    discovery process. Given the difficulty of exploring large chemical spaces, one
+    can imagine in the assessment of synthesizability$^{50}$ and the use of machine
+    learning in the synthesis of synthetic molecules.$^{51}$ the synthesis of molecules
+    produced by generative models may end up being difficult or time-consuming.
+
+
+    267
+
+
+    https://doi.acs.org/doi/10.1021/acs.orgchem.2c05699
+
+
+    Acc. Chem. Res. 2023, 12, 263–278'
+  - '[PAGE 5]
+
+
+    # Accounts of Chemical Research
+
+
+    Article
+
+
+    prefer to discuss this hit discovery on commercially available compound libraries,
+    which are inexpensive and readily available. Later in the discovery, process design
+    strategies are largely driven by evaluation based on results. Generative models
+    provide means of moving beyond synthetic building blocks. If a molecule is predicted
+    by a generative model presents itself with acceptable ADMET liability, discovery
+    may mean to devote resources to a difficult synthesis. As generative models are
+    more widely applied, the field will become more aware of the scope, limitations,
+    and applications for automated molecule generation methods.
+
+
+    pubs.acs.org/accounts
+
+
+    # AUTHOR INFORMATION
+
+
+    Corresponding Author
+
+
+    Regina Balazaki — Computer Science and Artificial Intelligence Laboratory, Massachusetts
+    Institute of Technology, Cambridge, Massachusetts 02139, United States; email:
+    regina@mit.edu
+
+
+    Author
+
+
+    W. Patrick Walters — Relay Therapeutics, Massachusetts 02142, United States; orcid.org/0000-0023-7895
+
+
+    Complete information is available at:
+
+
+    https://pubs.acs.org/doi/10.1021/acs.c006999
+
+
+    Notes
+
+
+    The authors do not claim financial interest.
+
+
+    # Biographies
+
+
+    W. Patrick Walters leads the Computation and Informatics group at Relay Therapeutics
+    in Massachusetts. His group focuses on novel applications of computational methods
+    that integrate simulations and experimental data to drive drug discovery. Prior
+    to joining Relay, he spent more than 20 years at Vertex Pharmaceuticals, where
+    he was Global Head of Modeling & Informatics. He earned his Ph.D. from the University
+    of Arizona, where he developed expertise in conformational analysis. Prior to
+    obtaining his Ph.D., he worked at Instruments as both a chemist and a software
+    developer. He holds a B.S in chemistry from the University of Colorado.
+
+
+    Regina Balazaki is a professor in the Department of Engineering and Computer Science
+    and a member of the Computer Science and Artificial Intelligence Laboratory at
+    Massachusetts Institute of Technology. At MIT she leads the Machine Learning for
+    Biology group and faculty lead of James Clinic, a center for machine learning
+    and health. Her research interests include natural language processing and oncology.
+    She was a postdoctoral researcher at Rossel at Columbia University and she spent
+    a year as a postdoctoral researcher at Gen Bonn of the University of Niger.
+
+
+    # 4. SUMMARY AND OUTLOOK
+
+
+    Over the past years, there has been a tremendous amount of interest, enthusiasm,
+    and surging application of AI in drug discovery. While a group of researchers
+    has published promising results, there have few examples of prospective application
+    of many the techniques described above. It is important to note that drug discovery
+    is a complex process that requires balancing multiple parameters. In order to
+    achieve potency against a target, drug discovery must avoid potential off targets
+    (which could bring side effects), an appropriate pharmacokinetic profile that
+    will enable in synthesis, and ensure that a drug can be safely delivered.
+
+
+    In the end, one of the most critical elements in generating machine learning models
+    is the data. In each case the quality and reliability of the predictions will
+    depend on the data used. Unfortunately, much of the data needed to train these
+    models reside in proprietary databases within pharmaceutical companies or in databases
+    that be limited from publishers. Such databases as PubChem and ChEMBL¹
+
+
+    large amounts of experimental data are available to scale the quality, and quality
+    can also be improved. As the field progresses, it is possible we will be able
+    to create automated methods of identifying and predicting which drug molecule
+    contains many errors. Although pharmaceutical companies have large datasets, the
+    field moves forward only when these individuals have some collected datasets that
+    are not difficult to use for model building.
+
+
+    It is unfortunate that the surging applications of AI in drug discovery has caused
+    the scientific community to dismiss the discipline. This field has made a number
+    of significant advancements in a relatively short period of time and appears to
+    continue to advance the methods as more widely applied. While we do not hold ai
+    as a panacea to be adopted in drug discovery, it will become another tool in the
+    broad array of techniques used to bring medicine to patients.
+
+
+    # REFERENCES
+
+
+    +   1) Yang, K.; Kwan, S.; Jin, W.; Cole, J.; E, P.; Gao, H.; Jiang, S.; Wu, A.;
+    Ho, J. J.; Walters, W. P.; Baker, T.; He, M.; Mathe, A.; Milner, R.; Vakkala,
+    J.; Jaaskeler, R.; Machine Learning for Molecular Property Prediction. J. Med.
+    Chem. Int. 2019, *62*, 5919.
+
+
+    +   2) Stokes, J. M.; Yang, K.; Kwan, S.; Jin, W.; Cilluis-Ruziz, A.; Dong, N.;
+    Ma, A.; French, R. S.; Carter, L. A.; Brown, D. M.; Chapman, M. H.; E, P.; Gao,
+    H.; Cole, J.; G, M.; Evans, J.; J.; Riley, S.; Barkley, R.; Collins, J. J. Deep
+    Learning for Anthropogenic Toxicity
+
+
+    +   3) Win, W.; Balazarski, R.; Jaaskeler, T. Junction Variational Autoencoder
+    for Molecular Property Generation. Proc. Mach. Learn. Res. 2019, *12*, 1-10.
+
+
+    +   4) Cherkashev, A.; Nurakul, E. N.; Foches, J.; Varenek, A.; Ishkan, I..; Cronin,
+    M.; Dearden, J.; Gramatica, P.; Martin, Y. C.; Todeschini, R.; Consoni, V.; Vuzic,
+    M. E.; Camer, R.; Benini, R.; Rath, L.; Lathfeer, J.; Jericho, A.; A. QSAR
+
+
+    268
+
+
+    Accounts of Chemical Research 2020, *53*, 261–273'
+  md: '
+
+    # Accounts of Chemical Research
+
+
+    # Article
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_4_0.png)
+
+
+    Figure 4. An example of a continuous representation, and a decoder in the hidden
+    space for generation of new molecules.
+
+
+    properties.$^{29}$ This approach can be viewed as a neural version of matched
+    molecular pair (MPA)$^{24,45}$ where the model learns trajectories in the hidden
+    space that result in property improvements. This formulation delivers robust performance
+    even when the hidden space is not small and also supports the generation of diverse
+    outputs.
+
+
+    ## 3.2. Applications of Generative Modeling
+
+
+    While many papers have been describing generative models, very few have reported
+    the synthesis of molecules based on generative models. One of the first papers
+    to report on synthesis and chemical and biological testing of molecules designed
+    by a generative algorithm was published in 2018 by Merck and coworkers who successfully
+    designed agonists of retinoid X receptors (RXRs) or peroxisome proliferator-activated
+    receptors (PPARs).$^{46}$
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_4_1.png)
+
+
+    Figure 5. Comparison of Compound 1, designed by a generative model, and the marked
+    drug ponatibinib.
+
+
+    A QSAR model was used to predict the activity of each generated molecule. Subsequent
+    biological assays showed that the compound were dual PPAR and RXR inhibitors with
+    $EC_{50}$ values between 60 and 13 nM.
+
+
+    A subset generated by Zhavorov et al. reported the molecules as potent inhibitors
+    of DDR1, a protein tyrosine kinase family often implicated in fibrosis.$^{47}$
+    That paper received considerable notice in the popular press and led to reports
+    of "a drug designed in 21 days." This work was considered notable, in order to
+    demonstrate its selectivity in a biochemical model, the authors demonstrated that
+    one molecule was active in cells and demonstrated reasonable pharmacokinetics
+    in a mouse model. These results initially provided a strong response.$^{48}$ Murcko
+    pointed out that the molecule highlighted in the hidden space bore a striking
+    similarity to a previously published DDR1 inhibitors, including the marked drug
+    ponatibinib (Figure 5). This controversy highlights difficulties in assessing
+    the significance of molecules "invented" by generative methods.
+
+
+    A number of recent papers suggested methods for evaluating the molecules produced
+    by generative models.$^{49}$ These benchmarks focus on evaluating the ability
+    of generative models to explore chemical space and exploit known information.
+    The GuacMolchem benchmark, published by Brown and coworkers, evaluates exploration
+    through a series of tests to evaluate the validity, novelty and diversity of molecules
+    generated by a generator. The software also has a goal-directed method to assess
+    the ability of a generative model to focus on specific chemical space. An alternative
+    for evaluating the diversity of molecules produced by a generative model is to
+    compare the generated molecules with an exhaustive exploration of chemical space.
+
+
+    Another question for the field is where to apply generative models in the drug
+    discovery process. Given the difficulty of exploring large chemical spaces, one
+    can imagine in the assessment of synthesizability$^{50}$ and the use of machine
+    learning in the synthesis of synthetic molecules.$^{51}$ the synthesis of molecules
+    produced by generative models may end up being difficult or time-consuming.
+
+
+    Prefer to discuss this hit discovery on commercially available compound libraries,
+    which are inexpensive and readily available. Later in the discovery, process design
+    strategies are largely driven by evaluation based on results. Generative models
+    provide means of moving beyond synthetic building blocks. If a molecule is predicted
+    by a generative model presents itself with acceptable ADMET liability, discovery
+    may mean to devote resources to a difficult synthesis. As generative models are
+    more widely applied, the field will become more aware of the scope, limitations,
+    and applications for automated molecule generation methods.
+
+
+    ## AUTHOR INFORMATION
+
+
+    Corresponding Author
+
+
+    Regina Balazaki — Computer Science and Artificial Intelligence Laboratory, Massachusetts
+    Institute of Technology, Cambridge, Massachusetts 02139, United States; email:
+    regina@mit.edu
+
+
+    Author
+
+
+    W. Patrick Walters — Relay Therapeutics, Massachusetts 02142, United States; orcid.org/0000-0023-7895
+
+
+    Complete information is available at:
+
+
+    https://pubs.acs.org/doi/10.1021/acs.c006999
+
+
+    Notes
+
+
+    The authors do not claim financial interest.
+
+
+    ## Biographies
+
+
+    W. Patrick Walters leads the Computation and Informatics group at Relay Therapeutics
+    in Massachusetts. His group focuses on novel applications of computational methods
+    that integrate simulations and experimental data to drive drug discovery. Prior
+    to joining Relay, he spent more than 20 years at Vertex Pharmaceuticals, where
+    he was Global Head of Modeling & Informatics. He earned his Ph.D. from the University
+    of Arizona, where he developed expertise in conformational analysis. Prior to
+    obtaining his Ph.D., he worked at Instruments as both a chemist and a software
+    developer. He holds a B.S in chemistry from the University of Colorado.
+
+
+    Regina Balazaki is a professor in the Department of Engineering and Computer Science
+    and a member of the Computer Science and Artificial Intelligence Laboratory at
+    Massachusetts Institute of Technology. At MIT she leads the Machine Learning for
+    Biology group and faculty lead of James Clinic, a center for machine learning
+    and health. Her research interests include natural language processing and oncology.
+    She was a postdoctoral researcher at Rossel at Columbia University and she spent
+    a year as a postdoctoral researcher at Gen Bonn of the University of Niger.
+
+
+    ## 4. SUMMARY AND OUTLOOK
+
+
+    Over the past years, there has been a tremendous amount of interest, enthusiasm,
+    and surging application of AI in drug discovery. While a group has published promising
+    results, it is important to note that drug discovery is a complex process that
+    requires balancing parameters. In order to achieve potency against a target, drug
+    discovery must avoid side effects, safely delivered.
+
+
+    In the end, one of the most critical elements in generating machine learning models
+    is the data. Unfortunately, much of the data needed to train these models reside
+    in proprietary databases within pharmaceutical companies or in publishers. Large
+    amounts of experimental data are available to scale the quality, and as the field
+    progresses, it is possible we will be able to create which molecule contains errors.
+    The quality and reliability of the predictions will depend on the data used. The
+    field moves forward only when individuals have collected datasets that are not
+    difficult to use. While we do not hold AI as a panacea to be adopted in drug discovery,
+    it will become another tool in the broad array of techniques used to bring medicine
+    to patients.
+
+
+    ## REFERENCES
+
+
+    - 1) Yang, K.; Kwan, S.; Jin, W.; Cole, J.; E, P.; Gao, H.; Jiang, S.; Wu, A.;
+    Ho, J.; Walters, W. P.; Baker, T.; He, M.; Mathe, A.; Milner, R.; Vakkala, J.;
+    Jaaskeler, R.; Machine Learning for Molecular Property Prediction. J. Med. Chem.
+    Int 2019, *62*, 5919.
+
+    - 2) Win, W.; Balazarski, R.; Jaaskeler, T. Junction Variational Autoencoder for
+    Molecular Property Generation. Proc. Mach. Learn. Res. 2019, *12*, 1-10.
+
+    - 3) Stokes, J. M.; Yang, K.; Kwan, S.; Jin, W.; Cilluis-Ruziz, A.; Dong, N.;
+    Ma, A.; French, R. S.; Carter, L. A.; Brown, D. M.; Chapman, M. H.; E, P.; Gao,
+    H.; Cole, J.; G, M.; Evans, J.; Riley, S.; Barkley, R.; Collins, J. J. Deep Learning
+    for Anthropogenic Toxicity
+
+    - 4) Cherkashev, A.; Nurakul, E. N.; Foches, J.; Varenek, A.; Ishkan, I.. Cronin,
+    M.; Dearden, J.; Gramatica, P.; Martin, Y. C.; Todeschini, R.; Consoni, V.; Vuzic,
+    M. E.; Camer, R.; Benini, R.; Rath, L.; Lathfeer, J.; Jericho, A.; A. QSAR
+
+    '
+  mdcn: '
+
+
+    # 化学研究报告
+
+
+    # 文章
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_4_0.png)
+
+
+    图 4。连续表示的一个示例，以及在隐藏空间中用于生成新分子的解码器。
+
+
+    properties.$^{29}$这种方法可以被视为匹配分子对（MPA)$^{24,45}$ 的神经版本，其中模型学习隐藏空间中能够导致属性改进的轨迹。这种表述即使在隐藏空间并不小的情况下也能提供稳健的性能，并支持多样化输出的生成。
+
+
+    ## 3.2. 生成式模型的应用
+
+
+    尽管许多论文都在描述生成式模型，但只有极少数的研究报道了基于生成式模型的分子合成。最早报道关于生成式算法设计的分子进行合成以及化学和生物测试的论文之一，是由默克（Merck）及其同事于2018年发布的，他们成功设计了视黄醇X受体（RXRs）或过氧化物体增殖激活受体（PPARs）的激动剂$^{46}$
+
+
+    ![](img/536f19b45a7f1be615936a253b8eec62_4_1.png)
+
+
+    图 5。由生成模型设计的化合物1与标记药物ponatibinib的对比。
+
+
+    使用QSAR模型预测了每个生成分子的活性。随后的生物分析显示，这些化合物是双重PPAR和RXR抑制剂，$EC_{50}$值在60到13 nM之间。
+
+
+    Zhavorov等人生成的子集报道这些分子是DDR1的强效抑制剂，DDR1是一种通常与纤维化相关的蛋白酪氨酸激酶家族蛋白$^{47}$ 该论文在媒体中引起了极大关注，并引发了“21天设计药物”的报道。这项工作被认为具有意义，为了证明其在生化模型中的选择性，作者证明了一种分子在细胞中具有活性，并在小鼠模型中表现出合理的药代动力学。这些结果最初提供了强有力的反馈$^{48}$
+    Murcko指出，隐藏空间中显示的分子与之前发表的DDR1抑制剂具有惊人的相似性，包括标记药物ponatibinib（图5）。这一争议凸显了在评估生成方法“发明”的分子之重要性方面的困难。
+
+
+    近期许多论文建议了评估生成式模型产生分子的方法$^{49}$。这些基准测试侧重于评估生成式模型探索化学空间和利用已知信息的能力。由Brown及其同事发布的GuacMolchem基准通过一系列测试来评估生成器生成的分子的有效性、新性和多样性，从而评估探索能力。该软件还了一种目标引导的方法，用于评估生成式模型关注特定化学空间的能力。评估生成式模型产生的分子多样性的另一种方法是将生成的分子与化学空间的详尽探索进行比较。
+
+
+    该领域的另一个问题是在药物发现过程的何时应用生成式模型。鉴于探索大型化学空间的困难，可以想象在合成性评估$^{50}$以及机器学习在合成分子的合成中的应用$^{51}$。生成模型产生分子的合成可能会变得困难或耗时。
+
+
+    倾向于在市售的化合物库上进行这种命中发现，因为这些库廉价且易于获得。在发现后期，工艺设计策略很大程度上由结果评估驱动。生成式模型提供了超越合成构建块的手段。如果生成模型预测的分子具有可接受的ADMET毒性，发现可能意味着投入资源进行困难的合成。随着生成式模型更广泛的应用，该领域将对自动化分子生成方法的范围、局限性和应用有更多的认识。
+
+
+    ## 作者信息
+
+
+    通讯作者
+
+
+    Regina Balazaki — 马萨诸塞理工学院计算机科学与人工智能实验室，马萨诸塞州剑桥市 02139，美国；电子邮箱：regina@mit.edu
+
+
+    作者
+
+
+    W. Patrick Walters — Relay Therapeutics，马萨诸塞州 02142，美国；orcid.org/0000-0023-7895
+
+
+    完整信息请参阅：
+
+
+    https://pubs.acs.org/doi/10.1021/acs.c006999
+
+
+    注释
+
+
+    作者未声称具有财务利益。
+
+
+    ## 个人传记
+
+
+    W. Patrick Walters在马萨诸塞州的Relay Therapeutics领导计算与信息小组。他的小组专注于计算方法的新颖应用，通过整合模拟和实验数据来驱动药物发现。在加入Relay之前，他在Vertex
+    Pharmaceuticals工作了20多年，担任全球建模与信息学负责人。他在亚利利桑那大学获得博士学位，在构象分析方面积累了专业知识。在获得博士学位之前，他曾在Instruments担任化学家和软件开发人员。他拥有科罗拉多大学的化学学士学位。
+
+
+    Regina Balazaki是马萨诸塞理工学院工程与计算机科学系教授，也是该校计算机科学与人工智能实验室的成员。在MIT，她领导生物学机器学习小组，并担任James
+    Clinic（一个专注于机器学习与健康的中心）的教职负责人。她的研究兴趣包括自然语言处理和肿瘤学。她曾是哥比亚大学Rossel的博士后研究，并在尼日尔大学Gen
+    Bonn担任了一年的博士后研究。
+
+
+    ## 4. 总结与展望
+
+
+    在过去的几年里，人工智能在药物发现领域引起了巨大的兴趣、热情和应用的激增。尽管一些小组发表了具有前景的结果，但需要注意的是，药物发现是一个需要平衡参数的复杂过程。为了实现针对目标的活性，药物发现必须避免副作用并确保安全递送。
+
+
+    最后，生成机器学习模型最关键的要素之一是数据。不幸的是，训练这些模型所需的大数据存在制药公司或出版商的内部数据库中。大量的实验数据可用于扩展质量，随着该领域的发展，我们可能能够创建出哪些分子包含错误。预测的质量和可靠性取决于所使用的数据。只有当个人收集到易于使用的数据集时，领域才能向前发展。虽然我们不认为AI是药物发现的万灵药，但它将成为用于开发药物的广泛技术中的另一种工具。
+
+
+    ## 参考文献
+
+
+    - 1) Yang, K.; Kwan, S.; Jin, W.; Cole, J.; E, P.; Gao, H.; Jiang, S.; Wu, A.;
+    Ho, J.; Walters, W. P.; Baker, T.; He, M.; Mathe, A.; Milner, R.; Vakkala, J.;
+    Jaaskeler, R.; Machine Learning for Molecular Property Prediction. J. Med. Chem.
+    Int 2019, *62*, 5919.
+
+    - 2) Win, W.; Balazarski, R.; Jaaskeler, T. Junction Variational Autoencoder for
+    Molecular Property Generation. Proc. Mach. Learn. Res. 2019, *12*, 1-10.
+
+    - 3) Cherkashev, A.; Nurakul, E. N.; Foches, J.; Varenek, A.; Ishkan, I.. Cronin,
+    M.; Dearden, J.; Gramatica, P.; Martin, Y. C.; Todeschini, R.; Consoni, V.; Vuzic,
+    M. E.; Camer, R.; Benini, R.; Rath, L.; Lathfeer, J.; Jericho, A.; A. Deep Learning
+    for Anthropogenic Toxicity
+
+    - 4) A. QSAR
+
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 6]\n\n# Accounts of Chemical Research\n\n# Article\n\nModeling: Where Have\
+    \ You Been? Where Are Going To? J. Med. Chem. 2014, 57, 4997–5010.\n\n(5) Schneider,\
+    \ G., Fecher, U. Computer-Based Design of Drug-Molecules. Nat. Rev Drug Discovery\
+    \ 2005, 5, 649–663.\n\n(6) LeCun, Y., Bengio, Y., Hinton, G. Deep Learning. Nature\
+    \ 2015, 521, 436–443.\n\n(7) Rogers, D., Hahn, M. Extended-Fingerprint Connectivity.\
+    \ J. Chem. Inf. 2010, 31, 742–754.\n\n(8) Mauri, A., Consoni, V.; Pavan, M.; Tozogni,\
+    \ R. Dragon For Molecular Descriptors. Molecular Modeling 2006, 32, 55–64.\n\n\
+    (9) Lee, Y.; Qassbani, A.; Butler, C.; Ryu, H.; Jenkins, J. P.; Schenker, J. D.\
+    \ Biological Activity Prediction by Computational Learning and Chemical Normalization.\
+    \ Proc. Am. Natl. Sci. 2016, 113, 352–357.\n\n(10) May, A.; Clarkson, G.; Unterteich,\
+    \ H.; Steier, M.; Winter, J. K.; Clemard, H.; Eves, D. H. Large-Scale Quantitative\
+    \ Machine Learning for Drug Target Prediction on ChemBL. 2019, 9, 5441–5451.\n\
+    \n(11) Coley, C. W.; Barinski, R.; Green, W. H.; Hajoski, J.; Jenkins, S. M. Convolution\
+    \ of Molecular Descriptors for Predicting Molecular Properties. J. Am. Chem. Soc.\
+    \ 2016, 138, 3339–3347.\n\n(12) Kermorener, S.; Cilic, M. Graph Convolutional\
+    \ Networks for Predicting Molecular Properties. J.Chem. Inf. Model. 2019, 39,\
+    \ 992–1000.\n\n(13) Duvernard, D.; Maclain, A.; Adams, R.; Iparragurre, B.; Richard,\
+    \ H.; Tapinski, G.; Urban, J. Deep Neural Networks for Predicting Molecular Activity\
+    \ and Properties. Bioinformatics and Structural Biology 2015, 22, 2254.\n\n(14)\
+    \ Gimenez, J.; Schneider, S. L.; Fine, P. V.; Vinyals, O.; Hahn, E. J. Neural\
+    \ Message Passing for Quantum Chemistry. Chem. Phys. 2017, 72, 1265–1270.\n\n\
+    (15) Kipf, T.; Welling, M. Semsupervised Classification with Graph Convolutional\
+    \ Networks. arXiv (Computer Science: Learning). September 2016, 1609.02907, https://arxiv.org/abs/1609.02907.\n\
+    \n(16) Maymay, A.; Glekberger, J.; Unterteich, H.; Steier, S. Toxicity Prediction\
+    \ using Deep Learning. Front. Environ. Sci. 2018, 50.\n\n(17) French, R. E.; Sun,\
+    \ J.; Wu, D.; Bai, E. E.; Ma, Y. H.; Li, S.; Yan, Y. J.; Wang, R.; Bansal, V.\
+    \ S. Potential for Molecular Activity Prediction. J. Am. Chem. Soc. 2017, 139,\
+    \ 1333.\n\n(18) Shi, L. P.; Peng, R. Learning in the Similarity Space is a Good\
+    \ Tool for Prediction Accuracy in QSAR. J. Chem. Inf. Comput. Soc. 2004, 44, 197–202.\n\
+    \n(19) Hirsfeld, L.; Wang, Q.; Q, J. B.; Barkley, R. C. Uncertainty Quantification\
+    \ using Neural Networks for Molecular Property Prediction. J.Chem. Inf. Model.\
+    \ 2018, 35, 1097–1118.\n\n(20) Thomas, S. The Relative Importance of Domain Applicability\
+    \ Metrics for Estimating Prediction Errors in QSAR with Diverse Sets. J. Chem.\
+    \ Inf. Model. 2015, 55, 1098–1117.\n\n(21) Benavides, D.; Baines, M. Estimation\
+    \ of Errors in QSAR Models under Model Cross-Validation. J. Chem. Anal. 2016,\
+    \ 6, 24.\n\n(22) Vander, A. T.; Chiao, L.; Ashby, J.; Smith, J. R.F. High-Performance\
+    \ Framework for Molecular Discovery. In International Engineering Conference on\
+    \ Artificial Intelligence and Applications (AIAS). IEEE, 2019, pp. 304–308.\n\n\
+    (23) Wang, Y.; Lee, M.-H.; Lee, L.; Toutanova, K. BERT: Training of Bidirectional\
+    \ Transformers for Language Understanding. arXiv (Computer Science: Computation\
+    \ and Language), October 2018, 1810.04805, https://arxiv.org/abs/1810.04805 (accessed\
+    \ 2020-10-28).\n\n(25) Reker, D.; Schneider, P.; Schneider, G.; Brown, J. B. Active\
+    \ Learning for Drug Discovery. Drug Discovery. Today. 2020,\n\n(26) Werniger,\
+    \ M. K.; Liu, J.; Ritchie, G.; Ghosh, M.; Putta, S.; Lee, J. Learning with Support\
+    \ Machines in the Drug Discovery Process. J. Chem. Inf. Comput. Soc. 2003, 43,\
+    \ 667–673.\n\n(27) Kone, K. D.; Hahn, P. H.; Adams, J. F.; K.; Leuing, J.; Borwein-Barton,\
+    \ I.; Robbaerts, R.; Baxendale, A. Ensemble Estimation and Free Energy Calculations\
+    \ for Rapidly Expanding Synthetic Chemical Space and Optimization of Potential-Dependent\
+    \ Chemical Indices in 2 Inhibitors. J. Chem. Inf. 2021,\n\n(28) Reker, D.; Schneider,\
+    \ P.; Schneider, G.; Brown, J. B. Active Learning for Chemical Property Prediction.\
+    \ Future. Med. 2017.\n\n(29) Jin, Y.; Wang, K.; Barkley, R.; Rajnik, K. Multitask\
+    \ Graph-to-Graph Translation for Molecular Prediction. arXiv (Computer Science:\
+    \ Learning). December 2018, 1812.01328, https://arxiv.org/abs/1812.01328 (accessed\
+    \ 2020-10-28).\n\n(30) Gómez-Domínez, R. W.; Jin, Y.; Wang, J. D.; Hernandez-Lozano,\
+    \ M.; Sanchez, J.; Jbera, A.; Tirado, J. D.; Perez-Pazquioui, A. Automated Chemical\
+    \ Design using a Data-Driven Representation of Molecules. ACS Chem. Sci. 2018,\
+    \ 4, 2608–2616.\n\n(31) Silver, D.; Huang, A.; MacKay, J. C.; Adams, S. R.; Dreesves,\
+    \ A.; Vinyals, O.; Vácek, I.; Maddman, D.; Mien, H.; Snezson, G.; Grave, J.; Kumarski,\
+    \ A.; Schrittiel, J.; Leach, A.; Silver, M.; Hassabis, D. Mastering the Game of\
+    \ Go with Deep Neural Networks. Science 2016, 539, 483–488.\n\n(32) Morgan, P.;\
+    \ Ajay, I.; Trostrup, A. Deep Learning for Molecular Design. Nature 2018, 559,\
+    \ e01785.\n\n(33) Zhang, Z.; Lee, H. S.; Li, J.; Fine, R. Optimization of Molecular\
+    \ Property Prediction using Machine Learning. J. Chem. Inf. Model. 2015, 55, 11–20.\n\
+    \n(34) Oliveira, M.; Schachtler, J.; Engqvist, O.; Hahn, M. Deep Novo Design for\
+    \ Reinforcement Learning. Journal of Learning. 2017, 8, 11–15.\n\n(35) Silver,\
+    \ D.; Huang, A.; MacKay, J. C.; Adams, S. R.; Dreesves, A.; Vinyals, O.; Vácek,\
+    \ I.; Maddman, D.; Mien, H.; Snezson, G.; Grave, J.; Kumarski, A.; Schrittiel,\
+    \ J.; Leach, A.; Silver, M.; Hassabis, D. Mastering the Game of Go with Deep Neural\
+    \ Networks. Science 2016, 539, 483–488.\n\n(36) Li, Y.; Yin, O.; Dyer, C.; Pasquiani,\
+    \ R.; Battaglia, L. Deep Generative Models of Molecules. arXiv (Computer Science:\
+    \ Learning), 2018, 1803.03324, https://arxiv.org/abs/1803.03324 (accessed 2020-10-28).\n\
+    \n(37) Yang, Y.; Jin, R.; Ren, S.; Hamilton, W. L.; Leskovec, J. Generating Molecules\
+    \ with Deep Autoencoders. arXiv (Computer Science: Machine Learning), February\
+    \ 2018, 1802.08277, https://arxiv.org/abs/1802.08277 (accessed 2020-10-28).\n\n\
+    (40) Li, Y.; Yang, L.; Lu, J. Multi-objective De Novo Design with Conditional\
+    \ Graph Generative Model. J. Chem. Inform. 2018, 10, 33.\n\n(41) Sanchez-Leleschel,\
+    \ B.; Arpusqui, G.; Guirza, A. Deep Novo Learning: Generative Models for Molecular\
+    \ Engineering. Science 2018, 361, 360–365.\n\n(42) Lu, Q.; Alamiani, M.; Brockschmidt,\
+    \ J.; Gaunt, A. Graph Variational Autoencoders for Molecular Design. In Neural\
+    \ Information Processing Systems 31; Bengio, S.; Wang, \n\n269"
+  - '[PAGE 7]
+
+
+    # Accounts of Chemical Research
+
+
+    Larochelle, H., Grauman, K., Cesa-Bianchi, N., Garrett, R., Eds; Curran Associates,
+    2018, pp 7795–7804.
+
+
+    (43) Jin, W., Baralay, R., Jaakkola, T. Hierarchical Graph-to-Graph Translation
+    for Molecules. arXiv (Physics.Chemical Physics), June 11, 2019. https://arxiv.org/abs/1906.11223
+    (accessed 2020-10-28).
+
+
+    (44) Wassermann, A. M., Dimov, D. J., Izer, P., Bajorath, J. Advances in Computational
+    Chemistry: Matched Molecular Analysis. Drug Chem Res. 2012, 73, 518–527.
+
+
+    (45) Griffen, E., Leach, A. G., Robinson, G. J., Winter, D. J. Matched Molecular
+    Analysis in a Chemical Toolkit: Multispective j. Med. Chem. 2011, 54, 7739–7750.
+
+
+    (46) Merck, D., Friedrich, J.; Grisoni, F.; Schneider, G. NovoDesign of Small
+    Molecules by Artificial Intelligence. Med. Inf. 2019, 58:7001–558.
+
+
+    (47) Zharankov, A.; Iventovsky, V.; Aliper, A.; Veslov, M. S.; Aladinsky, V. A.;
+    Aladinskiy, A. V.; Terekhov, V. A.; Polykovsky, D. A.; Kuzminov, V. D.; Davydov,
+    A. S.; Volkov, Y.; Zholov, A.; Shakhrymkov, R. R.; Zbekhar, A.; Nimanov, L.; Lagreznitsyn,
+    B.; Bany, A. B.; Lee, L. H.; Soll, R.; Madge, J.; Xing, L.; Aspur-Guri, J. Deep
+    Learning-Based Identification of Potential DKK1 Inhibitors. Nat. Biotechnol. 2019,
+    37:1078–83.
+
+
+    (48) Walters, W. P.; Murrock, M. Assessing the Impact of Generative AI on Medicinal
+    Chemistry. Nat. BioChem. 2020, 38, 143–145.
+
+
+    (49) Golovanov, V.; Zbert, A.; Schenck-Leling, B.; Golubov, S.; Stanov, O.; Belyukhov,
+    K.; Artemmanov, A.; Aladinskiy, V.; Veslov, M.; Kardan, A.; Johnson, S.; Churbin,
+    A.; Shakhrymov, A.; Zharankov, A. A Molecules Set (MOLES): A Benchmark Platform
+    for Predicting Molecular Models. arXiv (Computer Science. Learning), November
+    29, 2018, 1811.12283 ver. 1. https://arxiv.org/abs/1811.12283 (accessed 2020-10-28).
+
+
+    (51) Zhang, J.; Mercado, R.; Engqvist, O.; Chen, H. Comprehensive Comparison of
+    Generative Models on Chemical Space Coverage. Chem Central. 2023: 106264.
+
+
+    (52) Blum, L. C.; Reynond, J. L. 970 Million Small Molecules in the Chemical Universe
+    Database for Virtual Screening in the Chemical Universe Database. Chem Sci. 2009,
+    9: 723–733.
+
+
+    (53) Cole, C. W.; Rogers, L.; Green, W. H.; Jensen, K. F. SCScore: Synthetic Complexity
+    Learned from a Reaction Corpus. J. Chem. Inf. Mol. 2021, 42, 251–264.
+
+
+    (54) Cole, C. W.; Green, W. H.; Jensen, K. F. Machine Learning in Computer-Aided
+    Synthesis. Acc. Chem. Res. 2018, 51, 1277–1289.
+
+
+    (55) Wang, Y.; Xiao, J.; Suzuki, T.; Oh, J.; Wang, J.; Bryant, S. H. PubChem:
+    A Public Information System for Analyzing Bioactivities of Small Molecules. Nucleic
+    Acids Res. 2009, 37, W625–W635.
+
+
+    (57) Kim, S. Y.; Yi, T.; Piesen, A.; Lee, E. E.; Chen, J.; Xu, G.; Gupta, A.;
+    Hu, J.; Lee, H. S.; Shoemaker, B. A.; Wang, J.; Yu, B.; Zhang, J.; Bryant, S.
+    H. PubChem Compound and Compound Database. Nucleic Acids Res. 2014, 42: D0121–D0123.
+
+
+    (58) Bento, A. P.; Gaullard, A.; Hersey, A.; Bells, L. J.; Chambers, J.; Yu, M.;
+    Kramer, F. A.; Santos, R.; Overington, J. P. Light, Y.; McGlinney, S.; Nowotka,
+    M.; Papadopoulos, G.; et al. The ChEMBL-Bioactivity Database: Updated. Nucleic
+    Acids Res. 2014, 42, D1083–D1090.
+
+
+    (59) Gaullard, A.; Bells, L. J.; Bento, A. P.; Chambers, J.;sey, H. A.; Light,
+    Y.; McGlinney, S.; Moluchovich, D.; Al-Lazarini, A.; Overington, J. P. ChEMBL:
+    A Large-Scale Bioactivity Database for Drug Discovery. Nucleic Acids Res. 2012,
+    40, D1101–D1107.'
+  md: '
+
+    # Accounts of Chemical Research
+
+
+    ## Article
+
+
+    Modeling: Where Have You Been? Where Are Going To? J. Med. Chem. 2014, 57, 4997–5010.
+
+
+    (5) Schneider, G., Fecher, U. Computer-Based Design of Drug-Molecules. Nat. Rev
+    Drug Discovery 2005, 5, 649–663.
+
+
+    (6) LeCun, Y., Bengio, Y., Hinton, G. Deep Learning. Nature 2015, 521, 436–443.
+
+
+    (7) Rogers, D., Hahn, M. Extended-Fingerprint Connectivity. J. Chem. Inf. 2010,
+    31, 742–754.
+
+
+    (8) Mauri, A., Consoni, V.; Pavan, M.; Tozogni, R. Dragon For Molecular Descriptors.
+    Molecular Modeling 2006, 32, 55–64.
+
+
+    (9) Lee, Y.; Qassbani, A.; Butler, C.; Ryu, H.; Jenkins, J. P.; Schenker, J. D.
+    Biological Activity Prediction by Computational Learning and Chemical Normalization.
+    Proc. Am. Natl. Sci. 2016, 113, 352–357.
+
+
+    (10) May, A.; Clarkson, G.; Unterteich, H.; Steier, M.; Winter, J. K.; Clemard,
+    H.; Eves, D. H. Large-Scale Quantitative Machine Learning for Drug Target Prediction
+    on ChemBL. 2019, 9, 5441–5451.
+
+
+    (11) Coley, C. W.; Barinski, R.; Green, W. H.; Hajoski, J.; Jenkins, S. M. Convolution
+    of Molecular Descriptors for Predicting Molecular Properties. J. Am. Chem. Soc.
+    2016, 138, 3339–3347.
+
+
+    (12) Kermorener, S.; Cilic, M. Graph Convolutional Networks for Predicting Molecular
+    Properties. J. Chem. Inf. Model. 2019, 39, 992–1000.
+
+
+    (13) Duvernard, D.; Maclain, A.; Adams, R.; Iparragurre, B.; Richard, H.; Tapinski,
+    G.; Urban, J. Deep Neural Networks for Predicting Molecular Activity and Properties.
+    Bioinformatics and Structural Biology 2015, 22, 2254.
+
+
+    (14) Gimenez, J.; Schneider, S. L.; Fine, P. V.; Vinyals, O.; Hahn, E. J. Neural
+    Message Passing for Quantum Chemistry. Chem. Phys. 2017, 72, 1265–1270.
+
+
+    (15) Kipf, T.; Welling, M. Semisupervised Classification with Graph Convolutional
+    Networks. arXiv (Computer Science: Learning). September 2016, 1609.02907, https://arxiv.org/abs/1609.02907.
+
+
+    (16) Maymay, A.; Glekberger, J.; Unterteich, H.; Steier, S. Toxicity Prediction
+    using Deep Learning. Front. Environ. Sci. 2018, 50.
+
+
+    (17) French, R. E.; Sun, J.; Wu, D.; Bai, E. E.; Ma, Y. H.; Li, S.; Yan, Y. J.;
+    Wang, R.; Bansal, V. S. Potential for Molecular Activity Prediction. J. Am. Chem.
+    Soc. 2017, 139, 1333.
+
+
+    (18) Shi, L. P.; Peng, R. Learning in the Similarity Space is a Good Tool for
+    Prediction Accuracy in QSAR. J. Chem. Inf. Comput. Soc. 2004, 44, 197–202.
+
+
+    (19) Hirsfeld, L.; Wang, Q.; Q, J. B.; Barkley, R. C. Uncertainty Quantification
+    using Neural Networks for Molecular Property Prediction. J. Chem. Inf. Model.
+    2018, 35, 1097–1118.
+
+
+    (20) Thomas, S. The Relative Importance of Domain Applicability Metrics for Estimating
+    Prediction Errors in QSAR with Diverse Sets. J. Chem. Inf. Model. 2015, 55, 1098–1117.
+
+
+    (21) Benavides, D.; Baines, M. Estimation of Errors in QSAR Models under Cross-Validation.
+    J. Chem. Anal. 2016, 6.
+
+
+    (22) Vander, A. T.; Chiao, L.; Ashby, J.; Smith, R. High-Performance Framework
+    for Molecular Discovery. International Conference on Artificial Intelligence and
+    Applications (AIAS), 2019, pp. 304–308.
+
+
+    (23) Wang, Y.; Lee, M.; Lee, L.; Toutanova, K. BERT: Training of Bidirectional
+    Transformers for Language Understanding. arXiv (Computer Science: Language), October
+    2018, 1810.04805, https://arxiv.org/abs/1810.04805 (accessed 2020-10-28).
+
+
+    (25) Reker, D.; Schneider, P.; Schneider, G. Active Learning for Drug Discovery.
+    2020.
+
+
+    (25) Werniger, M.; Liu, J.; Ritchie, G.; Ghosh, M.; Putta, S. Learning with Support
+    Machines in the Drug Discovery Process. J. Chem. Inf. Comput. Soc. 2003, 43, 667–673.
+
+
+    (27) Kone, K. D.; Hahn, P.; Adams, F.; Leuing, J.; Borwein, I.; Robbaerts, R.;
+    Baxendale, A. Estimation of Free Energy Calculations for Rapidly Expanding Chemical
+    Space and Indices. J. Chem. Inf. 2021.
+
+
+    (28) Reker, D.; Schneider, P.; Schneider, G. Active Learning for Chemical Property
+    Prediction. Med. 2017.
+
+
+    (29) Jin, Y.; Wang, K.; Barkley, R.; Rajnik, K. Multitask Graph-to-Graph Translation
+    for Molecular Prediction. arXiv (Computer Science: Learning), December 2018, 1812.01328,
+    https://arxiv.org/abs/1812.01328 (accessed 2020-10-28).
+
+
+    (30) Gómez-Domínez, R.; Jin, Y.; Wang, J.; Hernandez-Lozano, M.; Sanchez, J.;
+    Jbera, A.; Tirado, D.; Perez-Pazqui, A. Automated Chemical Design using a Data-Driven
+    Representation of Molecules. ACS Chem. Sci. 2018, 4, 2608–2616.
+
+
+    (31) Silver, D.; Huang, A.; MacKay, J. C.; Adams, S. R.; Dreesves, A.; Vinyals,
+    O.; Vácek, I.; Maddman, D.; Mien, H.; Snezson, G.; Grave, J.; Kumarski, A.; Schrittiel,
+    J.; Leach, A.; Silver, M.; Hassabis, D. Mastering the Game of Go with Deep Neural
+    Networks. Science 2016, 539, 483–488.
+
+
+    (32) Morgan, P.; Ajay, I.; Trostrup, A. Deep Learning for Molecular Design. Nature
+    2018, 559, e01785.
+
+
+    (33) Zhang, Z.; Lee, H. S.; Li, J.; Fine, R. Optimization of Molecular Property
+    Prediction using Machine Learning. J. Chem. Inf. Model. 2015, 55, 11–20.
+
+
+    (34) Oliveira, M.; Schachtler, J.; Engqvist, O.; Hahn, M. Deep Novo Design for
+    Reinforcement Learning. Journal of Learning. 2017, 8, 11–15.
+
+
+    (35) Silver, D.; Huang, A.; MacKay, J. C.; Adams, S. R.; Dreesves, A.; Vinyals,
+    O.; Vácek, I.; Maddman, D.; Mien, H.; Snezson, G.; Grave, J.; Kumarski, A.; Schrittiel,
+    J.; Leach, A.; Silver, M.; Hassabis, D. Mastering the Game of Go with Deep Neural
+    Networks. Science 2016, 539, 483–488.
+
+
+    (36) Li, Y.; Yin, O.; Dyer, C.; Pasquiani, R.; Battaglia, L. Deep Generative Models
+    of Molecules. arXiv (Computer Science: Learning), 2018, 1803.03324, https://arxiv.org/abs/1803.03324
+    (accessed 2020-10-28).
+
+
+    (37) Yang, Y.; Jin, R.; Ren, S.; Hamilton, W. L.; Leskovec, J. Generating Molecules
+    with Deep Autoencoders. arXiv (Computer Science: Machine Learning), February 2018,
+    1802.08277, https://arxiv.org/abs/1802.08277 (accessed 2020-10-28).
+
+
+    (40) Li, Y.; Yang, L.; Lu, J. Multi-objective De Novo Design with Conditional
+    Graph Generative Model. J. Chem. Inform.
+
+
+    (41) Li, Y.; Yang, L.; Lu, J.; Perez-Pazqui, A. Deep Novo Design with Generative
+    Graph-to-Graph Translation for Molecular Prediction. J. Chem. Inf. 2018, 360–365.
+
+
+    (42) Vander, A. T.; Chiao, L.; Ashby, J.; Smith, R. High-Performance Framework
+    for Molecular Discovery. International Conference on Artificial Intelligence and
+    Applications (AIAS), 2019, pp. 304–308.
+
+
+    (43) Wang, Y.; Lee, M.; Lee, L.; Toutanova, K. BERT: Training of Bidirectional
+    Transformers for Language Understanding. arXiv (Computer Science: Language), October
+    2018, 1810.04805, https://arxiv.org/abs/1810.04805 (accessed 2020-10-28).
+
+
+    (44) May, A.; Clarkson, G.; Unterteich, H.; Steier, M.; Winter, J. K.; Clemard,
+    H.; Eves, D. H. Large-Scale Quantitative Machine Learning for Drug Target Prediction
+    on ChemBL. 2019, 9, 5441–5451.
+
+
+    (45) Coley, C. W.; Barinski, R.; Green, W. H.; Hajoski, J.; Jenkins, S. M. Convolution
+    of Molecular Descriptors for Predicting Molecular Properties. J. Am. Chem. Soc.
+    2016, 138, 3339–3347.
+
+
+    (46) Kermorener, S.; Cilic, M. Graph Convolutional Networks for Predicting Molecular
+    Properties. J. Chem. Inf. Model. 2019, 39, 992–1000.
+
+
+    (47) Duvernard, D.; Maclain, A.; Adams, R.; Iparragurre, B.; Richard, H.; Tapinski,
+    G.; Urban, J. Deep Neural Networks for Predicting Molecular Activity and Properties.
+    Bioinformatics and Structural Biology 2015, 22, 2254.
+
+
+    (48) Gimenez, J.; Schneider, S. L.; Fine, P. V.; Vinyals, O.; Hahn, E. J. Neural
+    Message Passing for Quantum Chemistry. Chem. Phys. 2017, 72, 1265–1270.
+
+
+    (49) Kipf, T.; Welling, M. Semisupervised Classification with Graph Convolutional
+    Networks. arXiv (Computer Science: Learning). September 2016, 1609.02907, https://arxiv.org/abs/1609.02907.
+
+
+    (50) Maymay, A.; Glekberger, J.; Unterteich, H.; Steier, S. Toxicity Prediction
+    using Deep Learning. Front. Environ. Sci. 2018, 50.
+
+
+    (51) French, R. E.; Sun, J.; Wu, D.; Bai, E. E.; Ma, Y. H.; Li, S.; Yan, Y. J.;
+    Wang, R.; Bansal, V. S. Potential for Molecular Activity Prediction. J. Am. Chem.
+    Soc. 2017, 139, 1333.
+
+
+    (52) Shi, L. P.; Peng, R. Learning in the Similarity Space is a Good Tool for
+    Prediction Accuracy in QSAR. J. Chem. Inf. Comput. Soc. 2004, 44, 197–202.
+
+
+    (53) Hirsfeld, L.; Wang, Q.; Q, J. B.; Barkley, R. C. Uncertainty Quantification
+    using Neural Networks for Molecular Property Prediction. J. Chem. Inf. Model.
+    2018, 35, 1097–1118.
+
+
+    (54) Thomas, S. The Relative Importance of Domain Applicability Metrics for Estimating
+    Prediction Errors in QSAR with Diverse Sets. J. Chem. Inf. Model. 2015, 55, 1098–1117.
+
+
+    (55) Benavides, D.; Baines, M. Estimation of Errors in QSAR under Cross-Validation.
+    J. Chem. Anal. 2016, 6.
+
+
+    (56) Reker, D.; Schneider, P.; Schneider, G. Active Learning for Drug Discovery.
+    2020.
+
+
+    (57) Werniger, M.; Liu, J.; Ritchie, G.; Ghosh, M.; Putta, S. Learning with Support
+    Machines in the Drug Discovery Process. J. Chem. Inf. Comput. Soc. 2003, 43, 667–673.
+
+
+    (58) Kone, K. D.; Hahn, P.; Adams, F.; Leuing, J.; Borwein, I.; Robbaerts, R.;
+    Baxendale, A. Estimation of Free Energy Calculations for Rapidly Expanding Chemical
+    Space and Indices. J. Chem. Inf. 2021.
+
+
+    (59) Reker, D.; Schneider, P.; Schneider, G. Active Learning for Chemical Property
+    Prediction. Med. 2017.
+
+
+    (60) Jin, Y.; Wang, K.; Barkley, R.; Rajnik, K. Multitask Graph-to-Graph Translation
+    for Molecular Prediction. arXiv (Computer Science: Learning), December 2018, 1812.01328,
+    https://arxiv.org/abs/1812.01328 (accessed 2020-10-28).
+
+
+    (61) Gómez-Domínez, R.; Jin, Y.; Wang, J.; Hernandez-Lozano, M.; Sanchez, J.;
+    Jbera, A.; Tirado, D.; Perez-Pazqui, A. Automated Chemical Design using a Data-Driven
+    Representation of Molecules. ACS Chem. Sci. 2018, 4, 2608–2616.
+
+
+    (62) Silver, D.; Huang, A.; MacKay, J. C.; Adams, S. R.; Dreesves, A.; Vinyals,
+    O.; Vácek, I.; Maddman, D.; Mien, H.; Snezson, G.; Grave, J.; Kumarski, A.; Schrittiel,
+    J.; Leach, A.; Silver, M.; Hassabis, D. Mastering the Game of Go with Deep Neural
+    Networks. Science 2016, 539, 483–488.
+
+
+    (63) Morgan, P.; Ajay, I.; Trostrup, A. Deep Learning for Molecular Design. Nature
+    2018, 559, e01785.
+
+
+    (64) Zhang, Z.; Lee, H. S.; Li, J.; Fine, R. Optimization of Molecular Property
+    Prediction using Machine Learning. J. Chem. Inf. Model. 2015, 55, 11–20.
+
+
+    (65) Oliveira, M.; Schachtler, J.; Engqvist, O.; Hahn, M. Deep Novo Design for
+    Reinforcement Learning. Journal of Learning. 2017, 8, 11–15.
+
+
+    (66) Silver, D.; Huang, A.; MacKay, J. C.; Adams, S. R.; Dreesves, A.; Vinyals,
+    O.; Vácek, I.; Maddman, D.; Mien, H.; Snezson, G.; Grave, J.; Kumarski, A.; Schrittiel,
+    J.; Leach, A.; Silver, M.; Hassabis, D. Mastering the Game of Go with Deep Neural
+    Networks. Science 2016, 539, 483–488.
+
+
+    (67) Li, Y.; Yin, O.; Dyer, C.; Pasquiani, R.; Battaglia, L. Deep Generative Models
+    of Molecules. arXiv (Computer Science: Learning), 2018, 1803.03324, https://arxiv.org/abs/1803.03324
+    (accessed 2020-10-28).
+
+
+    (68) Yang, Y.; Jin, R.; Ren, S.; Hamilton, W. L.; Leskovec, J. Generating Molecules
+    with Deep Autoencoders. arXiv (Computer Science: Machine Learning), February 2018,
+    1802.08277, https://arxiv.org/abs/1802.08277 (accessed 2020-10-28).
+
+
+    (69) Li, Y.; Yang, L.; Lu, J. Multi-objective De Novo Design with Conditional
+    Graph Generative Model. J. Chem. Inform.
+
+
+    (70) Li, Y.; Yang, L.; Lu, J.; Perez-Pazqui, A. Deep Novo Design with Generative
+    Graph-to-Graph Translation for Molecular Prediction. J. Chem. Inf. 2018, 360–365.
+
+
+    (71) Vander, A. T.; Chiao, L.; Ashby, J.; Smith, R. High-Performance Framework
+    for Molecular Discovery. International Conference on Artificial Intelligence and
+    Applications (AIAS), 2019, pp. 304–308.
+
+
+    (72) Wang, Y.; Lee, M.; Lee, L.; Toutanova, K. BERT: Training of Bidirectional
+    Transformers for Language Understanding. arXiv (Computer Science: Language), October
+    2018, 1810.04805, https://arxiv.org/abs/1810.04805 (accessed 2020-10-28).
+
+    '
+  mdcn: '
+
+
+    # 化学研究报告
+
+
+    ## 文章
+
+
+    建模：你曾去何处？你要去何方？J. Med. Chem. 2014, 57, 4997–5010.
+
+
+    (5) Schneider, G., Fecher, U. 药物分子的计算机设计。Nat. Rev Drug Discovery 2005, 5, 649–663.
+
+
+    (6) LeCun, Y., Bengio, Y., Hinton, G. 深度学习。Nature 2015, 521, 436–443.
+
+
+    (7) Rogers, D., Hahn, M. 扩展指纹连接性。J. Chem. Inf. 2010, 31, 742–754.
+
+
+    (8) Mauri, A., Consoni, V.; Pavan, M.; Tozogni, R. 用于分子描述符的 Dragon。Molecular Modeling
+    2006, 32, 55–64.
+
+
+    (9) Lee, Y.; Qassbani, A.; Butler, C.; Ryu, H.; Jenkins, J. P.; Schenker, J. D.
+    通过计算学习和化学归一化预测生物活性。Proc. Am. Natl. Sci. 2016, 113, 352–357.
+
+
+    (10) May, A.; Clarkson, G.; Unterteich, H.; Steier, M.; Winter, J. K.; Clemard,
+    H.; Eves, D. H. ChemBL 上药物靶预测的大规模机器学习。2019, 9, 5441–5451.
+
+
+    (11) Coley, C. W.; Barinski, R.; Green, W. H.; Hajoski, J.; Jenkins, S. M. 用于预测分子性质的分子描述符卷积。J.
+    Am. Chem. Soc. 2016, 138, 3339–3347.
+
+
+    (12) Kermorener, S.; Cilic, M. 用于预测分子性质的图卷积网络。J. Chem. Inf. Model. 2019, 39, 992–1000.
+
+
+    (13) Duvernard, D.; Maclain, A.; Adams, R.; Iparragurre, B.; Richard, H.; Tapinski,
+    G.; Urban, J. 用于预测分子活性和性质的深度神经网络。Bioinformatics and Structural Biology 2015, 22,
+    2254.
+
+
+    (14) Gimenez, J.; Schneider, S. L.; Fine, P. V.; Vinyals, O.; Hahn, E. J. 量子化学的神经传递。Chem.
+    Phys. 2017, 72, 1265–1270.
+
+
+    (15) Kipf, T.; Welling, M. 基于图卷积网络的半监督分类。arXiv (Computer Science: Learning). September
+    2016, 1609.02907, https://arxiv.org/abs/1609.02907.
+
+
+    (16) Maymay, A.; Glekberger, J.; Unterteich, H.; Steier, S. 使用深度学习进行毒性预测。Front.
+    Environ. Sci. 2018, 50.
+
+
+    (17) French, R. E.; Sun, J.; Wu, D.; Bai, E. E.; Ma, Y. H.; Li, S.; Yan, Y. J.;
+    Wang, R.; Bansal, V. S. 分子活性预测的潜力。J. Am. Chem. Soc. 2017, 139, 1333.
+
+
+    (18) Shi, L. P.; Peng, R. 相似空间学习是提高 QSAR 预测准确性的良好工具。J. Chem. Inf. Comput. Soc.
+    2004, 44, 197–202.
+
+
+    (19) Hirsfeld, L.; Wang, Q.; Q, J. B.; Barkley, R. C. 用于分子性质预测神经网络不确定性量化。J. Chem.
+    Inf. Model. 2018, 35, 1097–1118.
+
+
+    (20) Thomas, S. 多样数据集下 QSAR 预测误差估计中领域适用性指标的相对重要性。J. Chem. Inf. Model. 2015, 55,
+    1098–1117.
+
+
+    (21) Benavides, D.; Baines, M. 交叉验证下 QSAR 模型误差估计。J. Chem. Anal. 2016, 6.
+
+
+    (22) Vander, A. T.; Chiao, L.; Ashby, J.; Smith, R. 用于分子发现的高性能框架。人工智能与应用国际会议 (AIAS),
+    2019, pp. 304–308.
+
+
+    (23) Wang, Y.; Lee, M.; Lee, L.; Toutanova, K. BERT: 用于语言理解的双向 Transformer 训练。arXiv
+    (Computer Science: Language), October 2018, 1810.04805, https://arxiv.org/abs/1810.04805
+    (访问 2020-10-28).
+
+
+    (25) Reker, D.; Schneider, P.; Schneider, G. 用于药物发现的主动学习。2020.
+
+
+    (25) Werniger, M.; Liu, J.; Ritchie, G.; Ghosh, M.; Putta, S. 药物发现过程中的支持机学习。J.
+    Chem. Inf. Comput. Soc. 2003, 43, 667–673.
+
+
+    (27) Kone, K. D.; Hahn, P.; Adams, F.; Leuing, J.; Borwein, I.; Robbaerts, R.;
+    Baxendale, A. 快速扩张化学空间和索引的自由能计算估计。J. Chem. Inf. 2021.
+
+
+    (28) Reker, D.; Schneider, P.; Schneider, G. 用于化学性质预测的主动学习。Med. 2017.
+
+
+    (29) Jin, Y.; Wang, K.; Barkley, R.; Rajnik, K. 用于分子预测的多任务图到图翻译。arXiv (Computer
+    Science: Learning), December 2018, 1812.01328, https://arxiv.org/abs/1812.01328
+    (访问 2020-10-28).
+
+
+    (30) Gómez-Domínez, R.; Jin, Y.; Wang, J.; Hernandez-Lozano, M.; Sanchez, J.;
+    Jbera, A.; Tirado, D.; Perez-Pazqui, A. 使用分子数据驱动表示的自动化化学设计。ACS Chem. Sci. 2018,
+    4, 2608–2616.
+
+
+    (31) Silver, D.; Huang, A.; MacKay, J. C.; Adams, S. R.; Dreesves, A.; Vinyals,
+    O.; Vácek, I.; Maddman, D.; Mien, H.; Snezson, G.; Grave, J.; Kumarski, A.; Schrittiel,
+    J.; Leach, A.; Silver, M.; Hassabis, D. 深度神经网络精通围棋。Science 2016, 539, 483–488.
+
+
+    (32) Morgan, P.; Ajay, I.; Trostrup, A. 用于分子设计的深度学习。Nature 2018, 559, e01785.
+
+
+    (33) Zhang, Z.; Lee, H. S.; Li, J.; Fine, R. 使用机器学习优化分子性质预测。J. Chem. Inf. Model.
+    2015, 55, 11–20.
+
+
+    (34) Oliveira, M.; Schachtler, J.; Engqvist, O.; Hahn, M. 用于强化学习的深度从头。Journal
+    of Learning. 2017, 8, 11–15.
+
+
+    (35) Silver, D.; Huang, A.; MacKay, J. C.; Adams, S. R.; Dreesves, A.; Vinyals,
+    O.; Vácek, I.; Maddman, D.; Mien, H.; Snezson, G.; Grave, J.; Kumarski, A.; Schrittiel,
+    J.; Leach, A.; Silver, M.; Hassabis, D. 深度神经网络精通围棋。Science 2016, 539, 483–488.
+
+
+    (36) Li, Y.; Yin, O.; Dyer, C.; Pasquiani, R.; Battaglia, L. 分子深度生成模型。arXiv (Computer
+    Science: Learning), 2018, 1803.03324, https://arxiv.org/abs/1803.03324 (访问 2020-10-28).
+
+
+    (37) Yang, Y.; Jin, R.; Ren, S.; Hamilton, W.; Leskovec, J. 使用深度自编码器生成分子。arXiv
+    (Computer Science: Machine Learning), February 2018, 1802.08277, https://arxiv.org/abs/1802.08277
+    (访问 2020-10-28).
+
+
+    (40) Li, Y.; Yang, L.; Lu, J. 多目标条件深度从头设计。J. Chem. Inform.
+
+
+    (41) Li, Y.; Yang, L.; Lu, J.; Perez-Pazqui, A. 用于生成式图到图翻译的深度从头设计。J. Chem. Inf.
+    2018, 360–365.
+
+
+    (42) Vander, A. T.; Chiao, L.; Ashby, J.; Smith, R. 用于分子发现的高性能框架。人工智能与应用国际会议 (AIAS),
+    2019, pp. 304–308.
+
+
+    (43) Wang, Y.; Lee, M.; Lee, L.; Toutanova, K. BERT: 用于语言理解的双向 Transformer 训练。arXiv
+    (Computer Science: Language), October 2018, 1810.04805, https://arxiv.org/abs/1810.04805
+    (访问 2020-10-28).
+
+
+    (44) May, A.; Clarkson, G.; Unterteich, H.; Steier, M.; Winter, J. K.; Clemard,
+    H.; Eves, D. H. ChemBL 上药物靶预测的大规模机器学习。2019, 9, 5441–5451.
+
+
+    (45) Coley, C. W.; Barinski, R.; Green, W. H.; Hajoski, J.; Jenkins, S. M. 用于预测分子性质的分子描述符卷积。J.
+    Am. Chem. Soc. 2016, 138, 3339–3347.
+
+
+    (46) Kermorener, S.; Cilic, M. 用于预测分子性质的图卷积网络。J. Chem. Inf. Model. 2019, 39, 992–1000.
+
+
+    (47) Duvernard, D.; Maclain, A.; Adams, R.; Iparragurre, B.; Richard, H.; Tapinski,
+    G.; Urban, J. 用于预测分子活性和性质的深度神经网络。Bioinformatics and Structural Biology 2015, 22,
+    2254.
+
+
+    (48) Gimenez, J.; Schneider, S. L.; Fine, P. V.; Vinyals, O.; Hahn, E. J. 量子化学的神经传递。Chem.
+    Phys. 2017, 72, 1265–1270.
+
+
+    (49) Kipf, T.; Welling, M. 基于图卷积网络的半监督分类。arXiv (Computer Science: Learning). September
+    2016, 1609.02907, https://arxiv.org/abs/1609.02907.
+
+
+    (50) Maymay, A.; Glekberger, J.; Unterteich, H.; Steier, S. 使用深度学习进行毒性预测。Front.
+    Environ. Sci. 2018, 50.
+
+
+    (51) French, R. E.; Sun, J.; Wu, D.; Bai, E. E.; Ma, Y. H.; Li, S.; Yan, Y. J.;
+    Wang, R.; Bansal, V. S. 分子活性预测的潜力。J. Am. Chem. Soc. 2017, 139, 1333.
+
+
+    (52) Shi, L. P.; Peng, R. 相似空间学习是提高 QSAR 预测准确性的良好工具。J. Chem. Inf. Comput. Soc.
+    2004, 44, 197–202.
+
+
+    (53) Hirsfeld, L.; Wang, Q.; Q, J. B.; Barkley, R. C. 用于分子性质预测神经网络不确定性量化。J. Chem.
+    Inf. Model. 2018, 35, 1097–1118.
+
+
+    (54) Thomas, S. 多样数据集下 QSAR 预测误差估计中领域适用性指标的相对重要性。J. Chem. Inf. Model. 2015, 55,
+    1098–1117.
+
+
+    (55) Benavides, D.; Baines, M. 交叉验证下 QSAR 模型误差估计。J. Chem. Anal. 2016, 6.
+
+
+    (56) Reker, D.; Schneider, P.; Schneider, G. 用于药物发现的主动学习。2020.
+
+
+    (57) Werniger, M.; Liu, J.; Ritchie, G.; Ghosh, M.; Putta, S. 药物发现过程中的支持机学习。J.
+    Chem. Inf. Comput. Soc. 2003, 43, 667–673.
+
+
+    (58) Kone, K. D.; Hahn, P.; Adams, F.; Leuing, J.; Borwein, I.; Robbaerts, R.;
+    Baxendale, A. 快速扩张化学空间和索引的自由能计算估计。J. Chem. Inf. 2021.
+
+
+    (59) Reker, D.; Schneider, P.; Schneider, G. 用于化学性质预测的主动学习。Med. 2017.
+
+
+    (60) Jin, Y.; Wang, K.; Barkley, R.; Rajnik, K. 用于分子预测的多任务图到图翻译。arXiv (Computer
+    Science: Learning), December 2018, 1812.01328, https://arxiv.org/abs/1812.01328
+    (访问 2020-10-28).
+
+
+    (61) Gómez-Domínez, R.; Jin, Y.; Wang, J.; Hernandez-Lozano, M.; Sanchez, J.;
+    Jbera, A.; Tirado, D.; Perez-Pazqui, A. 使用分子数据驱动表示的自动化化学设计。ACS Chem. Sci. 2018,
+    4, 2608–2616.
+
+
+    (62) Silver, D.; Huang, A.; MacKay, J. C.; Adams, S. R.; Dreesves, A.; Vinyals,
+    O.; Vácek, I.; Maddman, D.; Mien, H.; Snezson, G.; Grave, J.; Kumarski, A.; Schrittiel,
+    J.; Leach, A.; Silver, M.; Hassabis, D. 深度神经网络精通围棋。Science 2016, 539, 483–488.
+
+
+    (63) Morgan, P.; Ajay, I.; Trostrup, A. 用于分子设计的深度学习。Nature 2018, 559, e01785.
+
+
+    (64) Zhang, Z.; Lee, H. S.; Li, J.; Fine, R. 使用机器学习优化分子性质预测。J. Chem. Inf. Model.
+    2015, 55, 11–20.
+
+
+    (65) Oliveira, M.; Schachtler, J.; Engqvist, O.; Hahn, M. 用于强化学习的深度从头。Journal
+    of Learning. 2017, 8, 11–15.
+
+
+    (66) Silver, D.; Huang, A.; MacKay, J. C.; Adams, S. R.; Dreesves, A.; Vinyals,
+    O.; Vácek, I.; Maddman, D.; Mien, H.; Snezson, G.; Grave, J.; Kumarski, A.; Schrittiel,
+    J.; Leach, A.; Silver, M.; Hassabis, D. 深度神经网络精通围棋。Science 2016, 539, 483–488.
+
+
+    (67) Li, Y.; Yin, O.; Dyer, C.; Pasquiani, R.; Battaglia, L. 分子深度生成模型。arXiv (Computer
+    Science: Learning), 2018, 1803.03324, https://arxiv.org/abs/1803.03324 (访问 2020-10-28).
+
+
+    (68) Yang, Y.; Jin, R.; Ren, S.; Hamilton, W.; Leskovec, J. 使用深度自编码器生成分子。arXiv
+    (Computer Science: Machine Learning), February 2018, 1802.08277, https://arxiv.org/abs/1802.08277
+    (访问 2020-10-28).
+
+
+    (69) Li, Y.; Yang, L.; Lu, J. 多目标条件深度从头设计。J. Chem. Inform.
+
+
+    (70) Li, Y.; Yang, L.; Lu, J.; Perez-Pazqui, A. 用于生成式图到图翻译的深度从头设计。J. Chem. Inf.
+    2018, 360–365.
+
+
+    (71) Vander, A. T.; Chiao, L.; Ashby, J.; Smith, R. 用于分子发现的高性能框架。人工智能与应用国际会议 (AIAS),
+    2019, pp. 304–308.
+
+
+    (72) Wang, Y.; Lee, M.; Lee, L.; Toutanova, K. BERT: 用于语言理解的双向 Transformer 训练。arXiv
+    (Computer Science: Language), October 2018, 1810.04805, https://arxiv.org/abs/1810.04805
+    (访问 2020-10-28).
+
+
+    '
+  merge: 0
