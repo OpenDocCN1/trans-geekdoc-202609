@@ -1,0 +1,2167 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Journal of Affective Disorders 349 (2024) 502–508
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Journal of Affective Disorders
+
+
+    journal homepage: www://www.elsevier.com/locate/jad
+
+
+    ELSEVIER
+
+
+    Research paper
+
+
+    # Prediction of suicidal ideation with associated risk factors among students
+    in the north of Bangladesh: Machine learning approach
+
+
+    Shiba Shirina Sara*, Asim Kumar Rahman*, Riaz Rahman*, Ashish Talukder**a,b*
+
+
+    * Statistics Discipline, Science Engineering and Technology School, Khulna University,
+    Khulna 9208, Bangladesh ** National Centre for Epidemiology and Population Health,
+    Australian National University, Canberra, ACT, 2609, Australia
+
+
+    Keywords:
+
+    Suicidal ideation
+
+    Mental health condition
+
+    Machine learning (ML)
+
+    Gender
+
+    Bangladesh
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    Background: The prevalence of suicidal ideation has become an urgent issue, particularly
+    adolescents. The primary objective of this research is to determine the prevalence
+    of suicidal ideation among students in the northern region of Bangladesh and to
+    prevent this phenomenon using machine learning (ML) models. Method: The data were
+    collected using a random sampling technique to gather information from university
+    students located in the northern region during the period ranging from April 2022
+    to June 2022. Upon collection, the sample size was determined to be 584, with
+    51.5% of identifying as male and 48.5% female. Results: A significant proportion
+    of students experienced suicidal ideation. Participants were free (77%) and ideated
+    (78%). Within the machine learning (ML) framework, the Random Forest (RF) and
+    Gradient Boosting (GB) algorithms exhibited comparable high accuracy of 91.45%
+    and 90.66% respectively. Limitation: None. Conclusion: Mental health practitioners
+    can employ the KNN model alongside patients'' histories to identify those who
+    may be at high risk of attempting suicide. This approach enhances healthcare professionals
+    to take appropriate measures, such as counseling, regular sleep patterns, and
+    addressing depression and anxiety, to prevent suicidal behavior.
+
+
+    # 1. Introduction
+
+
+    Suicidal ideation, which involves thoughts of suicide or self-harm, serves as
+    a critical tool for identifying individuals at risk of suicide (Zisstein et al.,
+    2009). The World Health Organization (WHO) reports that suicide is a major public
+    health problem, among teenagers aged 15 to 19 (WHO), often occurring every 40
+    days and resulting in 700,000 deaths annually, with a significant 77% of these
+    incidents taking place in low- and middle-income countries (WHO, 2020). Furthermore,
+    approximately 17.2% of individuals in developing countries have made suicidal
+    ideation, with adolescents and females being the most affected (Li et al., 2018).
+    Agrawal and Talukipalli (2019) highlight that various mental health conditions,
+    including bipolar disorder, depression, anxiety, and dementia, contribute to the
+    underlying causes of suicidal behavior. Excessive internet use, particularly driven
+    to platforms like Facebook and smartphones, has also been linked to increased
+    risk of suicide attempts (Johan and Hansen, 2021). Specific circumstances, such
+    as HIV status, adverse life experiences, depression frequency, and first episode
+    psychosis, have been associated with high rates of suicide with rates of 16.3%,
+    88.5%, and 40.8%, respectively. Reported in recent studies (García et al., 2020;
+    Pelliza et al., 2022), suicidal ideation is common among adolescents.
+
+
+    In Southeast Asian, the prevalence of suicidal ideation is concerning, with 17.7%
+    reporting thoughts and planning among 9% of students. Within this region, some
+    countries have the highest numbers of suicide deaths, occurring at a staggering
+    rate of one suicide every 25 days (García et al., 2022). Among ASEAN countries,
+    university students experience suicidal ideation at a rate of 11.7% (Putri et
+    al., 2021). Recent studies indicate that suicidal behavior among Indonesian adolescents
+    is 8.7% (Marthoeno and Yasir Ahmad, 2022), while in Khulna University, Khulna
+    9208, it stands at 7.52% (Shan et al.,
+
+
+    * Corresponding author: Statistics Discipline, Science Engineering and Technology
+    School, Khulna University
+
+    Email-address: ashim.talukder@au.edu.bd (A. Talukder).
+
+
+    https://doi.org/10.1016/j.sad.2024.01.096
+
+    Received 27 May 2023; Revised in November 9 2023; Accepted 7 July 2024
+
+    Available online 11 January 2024'
+  - '[PAGE 1]
+
+
+    S.S. Sera et al.
+
+
+    Journal of Afflicted Disorders 349 (2022) 502–508
+
+
+    2022. Women in Southeast Asia had a higher overall prevalence of suicidal ideation,
+    17% (Manzour et al., 2022). The COVID-19 pandemic has exacerbated the issue in
+    Bangladesh, with a 18.5% prevalence of lifetime suicide, and a 9% prevalence of
+    lifetime attempts (Rahim et al., 2021). These factors also contributed to higher
+    risk (Hossain et al., 2021; Tahsim et al., 2020). Factors such as gender, bullying,
+    anxiety, loneliness, financial crisis, education, socioeconomic status, and past
+    suicidal behavior have been reported in Bangladesh (Islam et al., 2021; Matharthi
+    and Yasir Arif, 2022). Furthermore, difficulties in婚姻 life, and the perception
+    of being alone with one''s family, have been identified as risk factors for suicidal
+    ideation among students in Bangladesh (Rahman, 2022).
+
+
+    Furthermore, suicidal ideation was evaluated as the dependent variable. The marital
+    status was classified into three distinct categories: Unmarried, Married, and
+    Widow/Divorce. Sleep quality was assessed by determining the mean duration of
+    sleep. As per the lines set by the National Sleep Foundation in the United States,
+    it was measured using the scale developed by (Chabut et al., 2006). Consistently,
+    the debated ‘Sleep quality’ was partitioned into three categories, namely (7-9)
+    hours, less than (<7), and more than (>9) hours.
+
+
+    Our study aims to determine the prevalence of suicidal ideation, primarily among
+    students in the southern region of Bangladesh, and we employed machine learning
+    (ML) models to predict suicidal ideation. This approach was chosen due to the
+    superior performance demonstrated by ML models compared to traditional methods,
+    and for confounding variables and missing data (Bi et al., 2019). One of the key
+    strengths of the utilization of machine learning technologies is that they can
+    facilitate the development of automated decisions and the identification of rates
+    of suicidal ideation.
+
+
+    # 2.2. Patient Health Questionnaire (PHQ-9)
+
+
+    The Patient Health Questionnaire (PHQ-9) was used to collect depression screening
+    among the participants. The instrument consists of nine items with multiple-choice
+    format. Each item is rated on a four-point scale, ranging from 0 (Not at all)
+    to 3 (Nearly every day). The PHQ-9 score was calculated by summing the scores
+    from 0 to 27 to determine the severity of depression. The score was categorized
+    as follows: mild, moderate, moderately severe, and severe.
+
+
+    +   Step 1: obtain a comprehensive list of university students from the registrar''s
+    office of various universities in the south.
+
+    Step 2: Sequential numbers were randomly assigned to each student, numbering from
+    1 to n=34,000. This enumeration was used as the sampling frame, from which a random
+    sample would be drawn.
+
+    Step 3: determine the sample size based on the population size of 34,000, which
+    was calculated using the Krecie and Cochran method. Based on the guidelines and
+    considerations of the study, we opted to use a confidence level of 95% and a margin
+    of error of 5%. This resulted in a required sample size of 384 (as per Morgan,
+    2021).
+
+    Step 4: Select the participants from the sampling frame stated in Step 2 by employing
+    a random number generator. While the required requirement was met, 387 students
+    were selected, 11 agreed to participate in the study, and 7 were refusing to answer
+    all the questions, resulting in missing data. After excluding 16 cases (11 non-participants
+    and 5 incomplete), our final sample size remained at 368. Within this sample,
+    51.5% were female, and 48.5% were male.
+
+
+    # 2.2.3. Generalized Anxiety Disorder (GAD-7)
+
+
+    A screening tool and scale used for generalized anxiety disorder among the participants.
+    The instrument consists of seven items, each having points ranging from 0 “not
+    at all” to 3 “nearly every day”. The GAD-7 score was ranging from 0 to 21. According
+    to Osman-Samani et al. (2018), the scores were interpreted as follows: minimal
+    anxiety (0-4), mild anxiety (5-9), moderate anxiety (10-14), and severe anxiety
+    (15-21). The study yielded a satisfactory reliability, with a Cronbach’s alpha
+    value of 0.851.
+
+
+    # 2.2. Measures
+
+
+    # 2.3. Outcome
+
+
+    # 2.3.1. Suicidal ideation
+
+
+    # 2.2.1. Independent variables
+
+
+    The variables explored in the study included: marital status, family income, residence,
+    physical activity, smoking habits, social quality, relationship with partner,
+    and depression. The assessment of physical activity level was conducted utilizing
+    the Global Physical Activity Questionnaire (GPAQ), which was employed in prior
+    research endeavors (Ranasinghe et al., 2013).
+
+
+    The Suicidal Behaviour Questionnaire (SBQ-R) was used in our study to assess suicidal
+    ideation among the participants. The SBQ-R consists of four items, each having
+    a distinct dimension. The measurement of lifetime suicidal ideation or attempt
+    was conducted using a scale where participants reported the frequency of the suicidal
+    ideation over the past two months. The study evaluated each using a cut-off score
+    (>7) to identify the presence of suicidal ideation among the participants. The
+    Cronbach’s alpha score was 0.78, which could be considered acceptable.
+
+
+    # 2.4. Statistical analysis
+
+
+    The data was processed using SPSS (Version 25). For further analysis, frequency
+    distribution table and chi-square test were conducted using R. Machine learning
+    algorithms were conducted through Python.
+
+
+    503'
+  md: '
+
+    # Journal of Affective Disorders 349 (2024) 502–508
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Journal of Affective Disorders
+
+
+    journal homepage: www://www.elsevier.com/locate/jad
+
+
+    ELSEVIER
+
+
+    Research paper
+
+
+    # Prediction of suicidal ideation with associated risk factors among students
+    in the north of Bangladesh: Machine learning approach
+
+
+    Shiba Shirina Sara*, Asim Kumar Rahman*, Riaz Rahman*, Ashish Talukder**a,b*
+
+
+    * Statistics Discipline, Science Engineering and Technology School, Khulna University,
+    Khulna 9208, Bangladesh ** National Centre for Epidemiology and Population Health,
+    Australian National University, Canberra, ACT, 2609, Australia
+
+
+    Keywords:
+
+    - Suicidal ideation
+
+    - Mental health condition
+
+    - Machine learning (ML)
+
+    - Gender
+
+    - Bangladesh
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    Background: The prevalence of suicidal ideation has become an urgent issue, particularly
+    among adolescents. The primary objective of this research is to determine the
+    prevalence of suicidal ideation among students in the northern region of Bangladesh
+    and to prevent this phenomenon using machine learning (ML) models. Method: The
+    data were collected using a random sampling technique to gather information from
+    university students located in the northern region during the period ranging from
+    April 2022 to June 2022. Upon collection, the sample size was determined to be
+    584, with 51.5% identifying as male and 48.5% female. Results: A significant proportion
+    of students experienced suicidal ideation. Participants were free (77%) and ideated
+    (78%). Within the machine learning (ML) framework, the Random Forest (RF) and
+    Gradient Boosting (GB) algorithms exhibited comparable high accuracy of 91.45%
+    and 90.66% respectively. Limitation: None. Conclusion: Mental health practitioners
+    can employ the KNN model alongside patients'' histories to identify those who
+    may be at high risk of attempting suicide. This approach enhances healthcare professionals
+    to take appropriate measures, such as counseling, regular sleep patterns, and
+    addressing depression and anxiety, to prevent suicidal behavior.
+
+
+    # 1. Introduction
+
+
+    Suicidal ideation, which involves thoughts of suicide or self-harm, serves as
+    a critical tool for identifying individuals at risk of suicide (Zisstein et al.,
+    2009). The World Health Organization (WHO) reports that suicide is a major public
+    health problem, among teenagers aged 15 to 19 (WHO), often occurring every 40
+    days and resulting in 700,000 deaths annually, with a significant 77% of these
+    incidents taking place in low- and middle-income countries (WHO, 2020). Furthermore,
+    approximately 17.2% of individuals in developing countries have made suicidal
+    ideation, with adolescents and females being the most affected (Li et al., 2018).
+    Agrawal and Talukipalli (2019) highlight that various mental health conditions,
+    including bipolar disorder, depression, anxiety, and dementia, contribute to the
+    underlying causes of suicidal behavior. Excessive internet use, particularly driven
+    to platforms like Facebook and smartphones, has also been linked to increased
+    risk of suicide attempts (Johan and Hansen, 2021). Specific circumstances, such
+    as HIV status, adverse life experiences, depression frequency, and first episode
+    psychosis, have been associated with high rates of suicide with rates of 16.3%,
+    88.5%, and 40.8%, respectively. Reported in recent studies (García et al., 2020;
+    Pelliza et al., 2022), suicidal ideation is common among adolescents.
+
+
+    In Southeast Asian, the prevalence of suicidal ideation is concerning, with 17.7%
+    reporting thoughts and planning among 9% of students. Within this region, some
+    countries have the highest numbers of suicide deaths, occurring at a staggering
+    rate of one suicide every 25 days (García et al., 2022). Among ASEAN countries,
+    university students experience suicidal ideation at a rate of 11.7% (Putri et
+    al., 2021). Recent studies indicate that suicidal behavior among Indonesian adolescents
+    is 8.7% (Marthoeno and Yasir Ahmad, 2022), while in Khulna University, Khulna
+    9208, it stands at 7.52% (Shan et al.,
+
+
+    * Corresponding author: Statistics Discipline, Science Engineering and Technology
+    School, Khulna University
+
+    Email-address: ashim.talukder@au.edu.bd (A. Talukder).
+
+
+    https://doi.org/10.1016/j.sad.2024.01.096
+
+    Received 27 May 2023; Revised in November 9 2023; Accepted 7 July 2024
+
+    Available online 11 January 2024
+
+
+    S.S. Sera et al.
+
+
+    Journal of Affective Disorders 349 (2022) 502–508
+
+
+    2022. Women in Southeast Asia had a higher overall prevalence of suicidal ideation,
+    17% (Manzour et al., 2022). The COVID-19 pandemic has exacerbated the issue in
+    Bangladesh, with a 18.5% prevalence of lifetime suicide, and a 9% prevalence of
+    lifetime attempts (Rahim et al., 2021). These factors also contributed to higher
+    risk (Hossain et al., 2021; Tahsim et al., 2020). Factors such as gender, bullying,
+    anxiety, loneliness, financial crisis, education, socioeconomic status, and past
+    suicidal behavior have been reported in Bangladesh (Islam et al., 2021; Matharthi
+    and Yasir Arif, 2022). Furthermore, difficulties in marital life, and the perception
+    of being alone with one''s family, have been identified as risk factors for suicidal
+    ideation among students in Bangladesh (Rahman, 2022).
+
+
+    Furthermore, suicidal ideation was evaluated as the dependent variable. The marital
+    status was classified into three distinct categories: Unmarried, Married, and
+    Widow/Divorce. Sleep quality was assessed by determining the mean duration of
+    sleep. As per the lines set by the National Sleep Foundation in the United States,
+    it was measured using the scale developed by (Chabut et al., 2006). Consistently,
+    the debated ‘Sleep quality’ was partitioned into three categories, namely (7-9)
+    hours, less than (<7), and more than (>9) hours.
+
+
+    Our study aims to determine the prevalence of suicidal ideation, primarily among
+    students in the southern region of Bangladesh, and we employed machine learning
+    (ML) models to predict suicidal ideation. This approach was chosen due to the
+    superior performance demonstrated by ML models compared to traditional methods,
+    and for confounding variables and missing data (Bi et al., 2019). One of the key
+    strengths of the utilization of machine learning technologies is that they can
+    facilitate.
+
+
+    ## 2.2. Measures
+
+
+    ### 2.3. Outcome
+
+
+    ### 2.3.1. Suicidal ideation
+
+
+    ### 2.2.1. Independent variables
+
+
+    The variables explored in the study included: marital status, family income, residence,
+    physical activity, smoking habits, social quality, relationship with partner,
+    and depression. The assessment of physical activity level was conducted utilizing
+    the Global Physical Activity Questionnaire (GPAQ), which was employed in prior
+    research endeavors (Ranasinghe et al., 2013).
+
+
+    The Suicidal Behaviour Questionnaire (SBQ-R) was used in our study to assess suicidal
+    ideation among the participants. The SBQ-R consists of four items, each having
+    a distinct dimension. The measurement of lifetime suicidal ideation or attempt
+    was conducted using a scale where participants reported the frequency of the suicidal
+    ideation over the past two months. The study evaluated each using a cut-off score
+    (>7) to identify the presence of suicidal ideation among the participants. The
+    Cronbach’s alpha score was 0.78, which could be considered acceptable.
+
+
+    ### 2.2.3. Generalized Anxiety Disorder (GAD-7)
+
+
+    A screening tool and scale used for generalized anxiety among the participants.
+    The instrument consists of seven items, each having points ranging from 0 “not
+    all” to 3 “nearly every day”. The GAD-7 score was ranging from 0-21. According
+    to Osman-Samani et al. (2018), the scores were interpreted as: minimal anxiety
+    (0-4), mild anxiety (5-9), moderate anxiety (10-14), and severe anxiety (15-21).
+    The study yielded a satisfactory reliability, with a Cronbach’s alpha value of
+    0.851.
+
+
+    ### 2.2.2. Patient Health Questionnaire (PHQ-9)
+
+
+    The Patient Health Questionnaire (PHQ-9) was used to determine the severity of
+    depression among the participants. The Cronbach’s alpha score was 0.82.
+
+
+    ## 2.4. Statistical analysis
+
+
+    The data was processed using SPSS (Version 25). For further analysis, frequency
+    distribution table and chi-square test were conducted using R. Machine learning
+    algorithms were conducted through Python.
+
+    '
+  mdcn: '
+
+
+    # 情感障碍杂志 349 (2024) 502–508
+
+
+    ScienceDirect 提供目录列表
+
+
+    # 情感障碍杂志 (Journal of Affective Disorders)
+
+
+    期刊首页：www://www.elsevier.com/locate/jad
+
+
+    爱尔斯维 (ELSEVIER)
+
+
+    研究论文
+
+
+    # 孟加拉国北部学生自杀念动的相关风险因素预测：机器学习方法
+
+
+    Shiba Shirina Sara*, Asim Kumar Rahman*, Riaz Rahman*, Ashish Talukder**a,b*
+
+
+    * 孟加拉国库尔纳大学科学工程与技术学院统计学系，Khulna 9208 ** 澳大利亚，澳大利亚国立大学流行病学与人口健康中心，堪培拉，ACT, 2609
+
+
+    关键词：
+
+    - 自杀念动
+
+    - 心理健康状况
+
+    - 机器学习 (ML)
+
+    - 性别
+
+    - 孟加拉国
+
+
+    # 文章信息
+
+
+    # 摘要
+
+
+    背景：自杀念动的流行行率已成为一个紧迫的问题，特别是在青少年中。本研究的主要目的是确定孟加拉国北部地区学生自杀念动的流行率，并使用机器学习 (ML) 模型预防这一现象。方法：采用随机抽样技术，在
+    2022 年 4 月至 2022 年 6 月期间收集北部地区大学生的信息。收集完成后，确定样本量为 584 人，其中 51.5% 为男性，48.5% 为女性。结果：很大比例的学生经历过自杀念动。参与者中，自由的（77%）和产生念头的（78%）。在机器学习
+    (ML) 框架内，随机森林 (RF) 和梯度提升 (GB) 算法表现出相当的高准确率，分别为 91.45% 和 90.66%。局限性：无。结论：心理健康从业人员可以使用
+    KNN 模型结合患者病史来识别可能处于自杀高风险的人群。这种方法有助于医疗专业人员采取适当措施，如咨询、规律睡眠模式以及解决抑郁和焦虑，以预防自杀行为。
+
+
+    # 1. 引言
+
+
+    自杀念动涉及自杀或自残的想法，是识别自杀风险个体的关键工具 (Zisstein 等人，2009)。世界卫生组织 (WHO) 报告，自杀是 15 至 19 岁青少年中的一个重大公共健康问题
+    (WHO)，通常每 40 天发生一次，每年导致 70 万死亡，其中高达 77% 的事件发生在中低收入国家 (WHO, 2020)。此外，发展中国家约有 17.2%
+    的个人产生过自杀念动，青少年和女性受影响最为严重 (Li 等人，2018)。Agrawal 和 Talukipalli (2019) 强调，各种心理健康状况，包括双极障碍、抑郁症、症和痴呆症，是自杀行为的潜在原因。过度使用互联网，特别是由
+    Facebook 和智能手机等平台驱动，也与自杀尝试风险的增加有关 (Johan 和 Hansen, 2021)。特定情况，如 HIV 状态、不利的生活经历、抑郁频率和首次发作精神病发作，与高自杀率有关，比例分别为
+    16.3%、88.5% 和 40.8%。近期研究报道 (García 等人，2020; Pelliza 等人，2022)，自杀念动在青少年中很常见。
+
+
+    在东南亚，自杀念动的流行率令人担忧，17.7% 的人报告有想法，9% 的学生有计划。在该地区，某些国家的自杀死亡人数最高，发生率达到每 25 天一次自杀的惊人速度
+    (García 等人，2022)。在东盟 (ASEAN) 国家中，大学生的自杀念动率为 11.7% (Putri 等人，2021)。近期研究表明，印度尼西亚青少年的自杀行为为
+    8.7% (Marthoeno 和 Yasir Ahmad,2022)，而在库尔纳大学 (Khulna 9208)，该比例为 7.52% (Shan 等人，
+
+
+    * 通讯作者：库尔纳大学科学工程与技术学院统计学系
+
+    邮箱地址：achim.talukder@au.edu.bd (A. Talukder)。
+
+
+    https://doi.org/10.1016/j.sad.2024.01.096
+
+    收于 2023 年 5 月 27 日；修于 2023 年 11 月 9 日；录于 2024 年 7 月 7 日
+
+    在线发布于2024 年 1 月 11 日
+
+
+    S.S. Sera 等人
+
+
+    情感障碍杂志 349 (2022) 502–508
+
+
+    2022。东南亚女性的自杀念动总体流行率更高，为 17% (Manzour 等人，2022)。COVID-19 疫情加剧了这一问题，在孟加拉国表现为 18.5%
+    的流行率。根据睡眠基金会的设定，睡眠质量被划分为三类：未婚、已婚和离婚（少于 9 小时、大于 9 小时）。机器学习模型被用于预测孟加拉国学生产生自杀念动的因素包括性别、焦虑、抑郁和孤独
+    (Rahman 等人，2021)。社会经济状况、教育、婚姻状况关系关系等因素导致了自杀念动。研究报告 (Tahsim 等人，2021)。由于机器学习模型表现优于传统方法，该方法被选择
+    (Bi 等人，2019)。机器学习技术的利用可以促进
+
+
+    ## 2.2. 测量
+
+
+    ### 2.3. 结果
+
+
+    ### 2.3.1. 自杀念动
+
+
+    ### 2.2.1. 自变量
+
+
+    研究中的变量包括：婚姻状况、家庭收入、居住地、身体活动、吸烟习惯、社交质量、伴侣关系和抑郁。身体活动水平的评估采用了全球活动问卷 (GPAQ)，此前研究 (Ranasinghe
+    等人，2013)。
+
+
+    自杀行为问卷 (SBQ-R) 用于评估参与者的自杀念动。SBQ-R 由四个项目组成，每个项目都有一个独特的维度。自杀念动或尝试的测量是通过参与者报告过去两个月自杀念动的频率来进行的。研究使用评分值
+    (>7) 来评估自杀念动的存在。Cronbach''s alpha 分数为 0.78，被认为是可以接受的。
+
+
+    2.2.3. 一般性焦虑障碍 (GAD-7)
+
+
+    用于评估参与者广泛性焦虑的筛查工具和量表。该工具由七个项目组成，每个项目的分值从 0“没有”到 3“几乎每天”。GAD-7 得分范围为 0-21。根据 Osman-Samani
+    等人 (2018)，得分被解释为：轻微焦虑 (0-4)、轻度焦虑 (5-9)、中度焦虑 (10-14) 和严重焦虑 (15-21)。该研究产生了良好的可靠性，Cronbach''s
+    alpha 值为 0.851。
+
+
+    2.2.2. 患者健康问卷 (PHQ-9)
+
+
+    患者健康问卷 (PHQ-9) 用于确定参与者的抑郁程度。Cronbach''s alpha 分数为 0.82。
+
+
+    ## 2.4. 统计分析
+
+
+    数据使用 SPSS (25 版本) 进行处理。进一步的分析使用 R 执行了频率分布表和卡方检验。机器学习算法通过 Python 执行。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # 2.5. Machine learning
+
+
+    # 2.5.1. CatBoost
+
+
+    CatBoost is based on gradient boosting decision tree (GBDT) and a new named ordered
+    boosting. CatBoost adds a prior value to Greedy TBS. Now, let''s assume a dataset
+    of observations $D=(X,Y), i=1,...,n$, is given a permutation $\sigma = (\sigma_1,...,\sigma_n)$,i$
+    is substituted with
+
+
+    ```
+
+    $\sum_{i=1}^{n} [y_{\sigma_i} - f_{\sigma_i}(x_{\sigma_i})]^2 + a\sum_{i=2}^{n}
+    [f_{\sigma_{i-1}}(x_{\sigma_i})]^2$
+
+    ```
+
+
+    # 2.5.2. KNN
+
+
+    The K-Nearest Neighbour also be known as the distance-based machine learning algorithm,
+    mostly used for classification problems. It aims to locate all of the neighbors
+    around a new point to determine which class it belongs to (Sainn et al., 2013).
+
+
+    # 2.5.3. XGBoost
+
+
+    XGBoost is a decision-tree based ensemble machine learning algorithm. XGBoost
+    and Gradient Boosting Machines (GBMs) are ensemble tree methods, XGBoost improves
+    upon the base GBM framework through systems optimization and algorithmic enhancements.
+    In this algorithm, trees are created in sequential format (Chen and Guestrin,
+    2016).
+
+
+    # 2.5.4. Random forest
+
+
+    Random forest is an ensemble machine learning method based on classification and
+    decision regression trees. It is based on well-known ensemble learning methods
+    of classification type: boosting and bagging (Belgu and Callik, 2018).
+
+
+    # 2.5.5. Decision tree
+
+
+    A decision tree is a predictive modeling based on observations about an item to
+    conclusions about its target value. In the tree structures, leaves represent classifications
+    (also called leaves), non-leaf nodes are the features, and branches represent
+    conjunctions of the features that
+
+
+    classifications. The decision process starts from the tree root. Each node''s
+    condition is checked based on node edges are choices, and the decision process
+    continues to the next tree. This trend continues until a leaf node is reached,
+    which the final decision is
+
+
+    # 2.6. Feature selection
+
+
+    To determine the features for inclusion in the Machine Learning model, we assessed
+    their influence using the XGB SHAP values and examined feature correlations Cramer’s
+    V criterion. We observed observed correlations and high impact on the model output,
+    to incorporate all of them into the model. We observed that anxiety had the most
+    impact on the model output''s impact (Fig. 1). Additionally, features such as
+    gender, sleeping hour, relationship with partner, depression, and marital status,
+    exhibited relatively higher than other variables.
+
+
+    # 3. Results
+
+
+    # 3.1. Frequency distribution
+
+
+    Table 1 displays the frequency distribution of the chosen variables. The study
+    found that 51.5% of the participants identified as male and 48.5% as female. The
+    majority of the participants, 55%, hailed from rural areas. 10.4% reported no
+    involvement in physical activity, while 7.9% reported smoking habit. Regarding
+    the participants'' mental health status, it found that 13.4% of the respondents
+    showed symptoms of severe depression, while 87% reported experiencing suicidal
+    experience. Of the entire population, 80.1% reported suicidal ideation, while
+    the remaining 19.9% did not report such ideation.
+
+
+    # 3.2. Bivariate analysis
+
+
+    The chi-square distribution of the chosen variables is significant gender, marital
+    status, relationship with partner, depression, and anxiety. Of the participants
+    who reported experiencing suicidal ideation, 77% identified as female, and 78%
+    reported being unmarried. Of the participants surveyed, 37%
+
+
+    ![](img/93c930364f1296a34364da2188a32c82_2_0.png)
+
+
+    504'
+  - '[PAGE 3]
+
+
+    # Table 1
+
+
+    | Variable | Category | Frequency | Percentages |
+
+    | --- | --- | --- | --- |
+
+    | Gender | Male | 301 | 51.5 |
+
+    | | Female | 284 | 48.5 |
+
+    | Education level | Undergraduate (1st) | 139 | 23.8 |
+
+    | | Undergraduate (2nd–4th) | 392 | 67.1 |
+
+    | | Graduated/post-graduation | 53 | 9.1 |
+
+    | Marital status | Unmarried | 538 | 92.1 |
+
+    | | Married | 40 | 6.8 |
+
+    | | Divorced/widowed | 6 | 1.0 |
+
+    | Family income | Less than 20,000 | 241 | 41.3 |
+
+    | | 20,001–35,000 | 185 | 31.6 |
+
+    | | 35,001–50,000 | 98 | 16.8 |
+
+    | | Greater than 50,000 | 59 | 10.1 |
+
+    | Residence | Rural | 321 | 55.0 |
+
+    | | Urban | 263 | 45.0 |
+
+    | Physical activity | No | 443 | 75.9 |
+
+    | | Yes | 141 | 24.1 |
+
+    | Smoking habit | No | 529 | 89.6 |
+
+    | | Yes | 61 | 10.4 |
+
+    | Sleeping hour | Less than 7 h | 274 | 46.9 |
+
+    | | 7–9 h | 271 | 46.4 |
+
+    | Relationship with partner | Good | 364 | 62.3 |
+
+    | | Don''t have | 145 | 24.8 |
+
+    | Depression | No | 307 | 5.2 |
+
+    | | Yes | 152 | 26.0 |
+
+    | Anxiety | No | 758 | 73.4 |
+
+    | | Yes | 252 | 43.2 |
+
+    | Suicidal ideation | No | 916 | 96.4 |
+
+    | | Yes | 468 | 50.1 |
+
+    | | 116 | 19.9 |
+
+
+    # Table 2
+
+
+    | Variable | Category | Suicidal ideation | p-value |
+
+    | --- | --- | --- | --- |
+
+    | Gender | Male | 274 | (59) |
+
+    | | Female | 194 | (81) |
+
+    | Education level | Undergraduate (1st) | 114 | (41) |
+
+    | | Undergraduate (2nd–4th) | 315 | (67) |
+
+    | | Graduated/post-graduation | 78 | (82) |
+
+    | Marital status | Unmarried | 447 | 0.378* |
+
+    | | Married | 190 | (28) |
+
+    | | Divorced/widowed | 31 | (39) |
+
+    | Family income | Less than 20,000 | 192 | 0.278 |
+
+    | | 20,001–35,000 | 150 | |
+
+    | | 35,001–50,000 | 62 | |
+
+    | | Greater than 50,000 | 13 | (20) |
+
+    | Residence | Rural | 94 | (14) |
+
+    | | Urban | 204 | (56) |
+
+    | Physical activity | No | 141 | 0.369 |
+
+    | | Yes | 75 | (78) |
+
+    | Smoking habit | No | 816 | 0.012 |
+
+    | | Yes | 39 | (92) |
+
+    | Sleeping hour | Less than 7 h | 298 | 0.021 |
+
+    | | 7–9 h | 248 | (42) |
+
+    | | Greater than 9 h | 26 | (69) |
+
+    | Relationship with partner | Bad | 32 | 0.723* |
+
+    | | Good | 318 | (440) |
+
+    | | Don''t have | 117 | (25) |
+
+    | Depression | No | 312 | 0.128* |
+
+    | | Mild | 234 | (69) |
+
+    | | Moderate | 227 | (23) |
+
+    | | Severe | 46 | (61) |
+
+    | Anxiety | No no mild | 818 | 1.379* |
+
+    | | Mild | 216 | (36) |
+
+    | | Moderate | 242 | (54) |
+
+    | | Severe | 12 | (36) |
+
+    | | Acute | 28 | (4) |
+
+
+    reported having a negative relationship with partner, while 67% reported for <7
+    h. The prevalence of suicidal ideation was high among respondents, with 48% reporting
+    severe depression. Although, almost an identical prevalence of 45% was observed
+    with moderate depression. Individuals with moderate anxiety exhibited the highest
+    prevalence of suicidal ideation, at 36%.
+
+
+    # 3.3. Evaluation of model performance
+
+
+    Table 3 displays the performance metrics of all the algorithms. All algorithms
+    achieved a respectable accuracy of around 90%. On the performance metric, it is
+    observed that KNN achieved the highest accuracy of 91.45%. Furthermore, it is
+    noteworthy that RF and CatBoost exhibited comparable efficiency, with accuracies
+    of 90.5%. Of all, the decision tree exhibited a relatively lower accuracy of 80.34.
+    The KNN achieved the highest accuracy score of 91.26, while the other algorithms
+    produced similar results with values around 90%. Regarding F1, KNN scored 0.92,
+    while RF and CatBoost were also high,
+
+
+    In the Area Under the Operating Characteristic Curve (AUC) performance for binary
+    classification models. It evaluates a model''s performance by ability to distinguish
+    between positive and negative classifications. In Fig 2, the KNN model achieved
+    an AUC of 0.953, showing high precision in distinguishing between depressive and
+    negative classifications. This underscores the model''s ability to accurately
+    rank instances from the two classes based on their predicted behaviors. The Random
+    Forest, with an AUC of 0.921,
+
+
+    closely trails the KNN and RF models and exhibit excellent classification capabilities.
+    The CatBoost model, with an AUC of 0.886%, showcases decent performance, potential
+    for improvement in its classification abilities compared to the previous models.
+    The Decision Tree model, showing an AUC of 0.863, falls slightly behind the other
+    models in performance. In summary, all models exhibit remarkable proficiency in
+    distinguishing between positive and negative cases,'
+  - '[PAGE 4]
+
+
+    # Table 3
+
+    Evaluation of ML models.
+
+
+    | Model | Accuracy | F1 score | Log loss |
+
+    |---|---|---|---||
+
+    | KNN | 91.45 | 91.26 | 0.904 | 2.95 |
+
+    | RF | 90.60 | 90.80 | 0.897 | 3.25 |
+
+    | CatBoost | 90.59 | 90.38 | 0.892 | 3.6 |
+
+    | XGBoost | 88.03 | 87.45 | 0.879 | 4.13 |
+
+    | DT | 80.34 | 80.25 | 0.814 | 6.7 |
+
+
+    ideation in a population through a machine learning algorithm. Their prediction
+    model exhibited favourable performance in the test set, accurately identifying
+    suicide actors among the total sample with an accuracy of 82.1%, a sensitivity
+    of 83.6%, and a specificity of 80%. To Van Mens et al., Random Forest was the
+    best model for predicting suicidal ideation considering various psychological
+    factors. However, KNN proved to be the model with the highest accuracy in accuracy.
+
+
+    the KNN model demonstrated the highest performance based on its AUC value.
+
+
+    In our study, feature selection was conducted using the XGBoost model which identified
+    a significant feature of suicidal ideation. Our research also established a positive
+    correlation between mental health issues and suicidal ideation, as evidenced by
+    studies by Macalli (2021) and Song et al. The results suggest that professional
+    experience and depression might have reduced over their suicidal ideation and
+    behavior.
+
+
+    To best of our knowledge, this study represents the first attempt to predict suicidal
+    ideation in the Bangladesh using machine learning techniques. Several factors
+    linked to suicidal ideation were identified in the region of Bangladesh. Implementing
+    machine learning algorithms, we observed that KNN exhibited high levels of accuracy,
+    sensitivity and AUC with respect of 91.45, 91.26, 90.9 and 91.5. Our machine learning
+    models showed superiority over conventional statistical techniques in which standard
+    statistical methods fail to elucidate complex ideation among students. Our machine
+    learning models on student-level data for suicide ideation (SI) screening and
+    assessment have significant implications for prevention efforts, deconstructed
+    in our work.
+
+
+    This study revealed a significant determinant of ideation. Research suggests that
+    there may be a higher prevalence of mental health issues among female individuals
+    compared to their counterparts, which might contribute to an increased risk of
+    suicide (Miranda Mirandazabel et al., 2019). Our research also revealed a positive
+    correlation between mental health issues and suicidal ideation which has also
+    been identified as a potential risk factor. According to a study conducted in
+    the United States by Bryan et al. (2020), engaging in social activities with family
+    and friends may reduce the risk of suicidal ideation and even lead to suicide.
+    Maintaining a positive relationship with one''s may reduce the risk of suicide.
+    Another risk factor for suicidal ideation was the duration of sleep. Lack of sleep
+    may increase the risk of suicidal ideation when compared to the average duration
+    of sleep. This phenomenon occurs due to the negative impact of inadequate sleep
+    on emotional regulation, impulse control, and sleep patterns.
+
+
+    Our results showed that models may predict suicidal ideation by detecting several
+    risk factors (Lin et al., 2020; Ryu et al., 2018; Van Mens et al.). The study
+    conducted by Lin and colleagues employed various machine learning methods as logistic
+    regression, decision tree, support vector machine, and multilayer perceptron to
+    predict the possibility of suicidal ideation based on psychological stress demands
+    among persons of genders. The multilayer perceptron and support vector effective
+    models for predicting suicidal ideation, with an accuracy of approximately 100%.
+    The objective of Rye and colleagues was to construct a predictive model for identifying
+    individuals with suicidal
+
+
+    Furthermore, research has identified marital status as a risk factor for suicidal
+    ideation. A study conducted among workers in the United States also yielded similar
+    findings (Chic, 2018). The binary analysis results indicates that unmarried participants
+    (78%) exhibited a higher
+
+
+    ![](img/93c930364f1296a34364da2188a32c82_4_0.png)
+
+
+    Fig. 2. ROC-AUC curve of the model.'
+  md: '
+
+    ## 2.5. Machine learning
+
+
+    ### 2.5.1. CatBoost
+
+
+    CatBoost is based on gradient boosting decision tree (GBDT) and a new named ordered
+    boosting. CatBoost adds a prior value to Greedy TBS. Now, let''s assume a dataset
+    of observations $D=(X,Y), i=1,...,n$, is given a permutation $\sigma = (\sigma_1,...,\sigma_n)$,
+    $i$ is substituted with
+
+
+    ```
+
+    $\sum_{i=1}^{n} [y_{\sigma_i} - f_{\sigma_i}(x_{\sigma_i})]^2 + a\sum_{i=2}^{n}
+    [f_{\sigma_{i-1}}(x_{\sigma_i})]^2$
+
+    ```
+
+
+    ### 2.5.2. KNN
+
+
+    The K-Nearest Neighbour also be known as the distance-based machine learning algorithm,
+    mostly used for classification problems. It aims to locate all of the neighbors
+    around a new point to determine which class it belongs to (Sainn et al., 2013).
+
+
+    ### 2.5.3. XGBoost
+
+
+    XGBoost is a decision-tree based ensemble machine learning algorithm. XGBoost
+    and Gradient Boosting Machines (GBMs) are ensemble tree methods, XGBoost improves
+    upon the base GBM framework through systems optimization and algorithmic enhancements.
+    In this algorithm, trees are created in sequential format (Chen and Guestrin,
+    2016).
+
+
+    ### 2.5.4. Random forest
+
+
+    Random forest is an ensemble machine learning method based on classification and
+    decision regression trees. It is based on well-known ensemble learning methods
+    of classification type: boosting and bagging (Belgu and Callik, 2018).
+
+
+    ### 2.5.5. Decision tree
+
+
+    A decision tree is a predictive modeling based on observations about an item to
+    conclusions about its target value. In the tree structures, leaves represent classifications
+    (also called leaves), non-leaf nodes are the features, and branches represent
+    conjunctions of the features that classifications. The decision process starts
+    from the tree root. Each node''s condition is checked based on node edges are
+    choices, and the decision process continues to the next tree. This trend continues
+    until a leaf node is reached, which the final decision is
+
+
+    ## 2.6. Feature selection
+
+
+    To determine the features for inclusion in the Machine Learning model, we assessed
+    their influence using the XGB SHAP values and examined feature correlations Cramer’s
+    V criterion. We observed observed correlations and high impact on the model output,
+    to incorporate all of them into the model. We observed that anxiety had the most
+    impact on the model output''s impact (Fig. 1). Additionally, features such as
+    gender, sleeping hour, relationship with partner, depression, and marital status,
+    exhibited relatively higher than other variables.
+
+
+    ## 3. Results
+
+
+    ### 3.1. Frequency distribution
+
+
+    Table 1 displays the frequency distribution of the chosen variables. The study
+    found that 51.5% of the participants identified as male and 48.5% as female. The
+    majority of the participants, 55%, hailed from rural areas. 10.4% reported no
+    involvement in physical activity, while 7.9% reported smoking habit. Regarding
+    the participants'' mental health status, it found that 13.4% of the respondents
+    showed symptoms of severe depression, while 87% reported experiencing suicidal
+    experience. Of the entire population, 80.1% reported suicidal ideation, while
+    the remaining 19.9% did not report such ideation.
+
+
+    ### 3.2. Bivariate analysis
+
+
+    The chi-square distribution of the chosen variables is significant gender, marital
+    status, relationship with partner, depression, and anxiety. Of the participants
+    who reported experiencing suicidal ideation, 77% identified as female, and 78%
+    reported being unmarried. Of the participants surveyed, 37%
+
+
+    ![](img/93c930364f1296a34364da2188a32c82_2_0.png)
+
+
+    # Table 1
+
+
+    | Variable | Category | Frequency | Percentages |
+
+    | --- | --- | --- | --- |
+
+    | Gender | Male | 301 | 51.5 |
+
+    | | Female | 284 | 48.5 |
+
+    | Education level | Undergraduate (1st) | 139 | 23.8 |
+
+    | | Undergraduate (2nd–4th) | 392 | 67.1 |
+
+    | | Graduated/post-graduation | 53 | 9.1 |
+
+    | Marital status | Unmarried | 538 | 92.1 |
+
+    | | Married | 40 | 6.8 |
+
+    | | Divorced/widowed | 6 | 1.0 |
+
+    | Family income | Less than 20,000 | 241 | 41.3 |
+
+    | | 20,001–35,000 | 185 | 31.6 |
+
+    | | 35,001–50,000 | 98 | 16.8 |
+
+    | | Greater than 50,000 | 59 | 10.1 |
+
+    | Residence | Rural | 321 | 55.0 |
+
+    | | Urban | 263 | 45.0 |
+
+    | Physical activity | No | 443 | 75.9 |
+
+    | | Yes | 141 | 24.1 |
+
+    | Smoking habit | No | 529 | 89.6 |
+
+    | | Yes | 61 | 10.4 |
+
+    | Sleeping hour | Less than 7 h | 274 | 46.9 |
+
+    | | 7–9 h | 271 | 46.4 |
+
+    | Relationship with partner | Good | 364 | 62.3 |
+
+    | | Don''t have | 145 | 24.8 |
+
+    | Depression | No | 307 | 5.2 |
+
+    | | Yes | 152 | 26.0 |
+
+    | Anxiety | No | 758 | 73.4 |
+
+    | | Yes | 252 | 43.2 |
+
+    | Suicidal ideation | No | 916 | 96.4 |
+
+    | | Yes | 468 | 50.1 |
+
+    | | 116 | 19.9 |
+
+
+    # Table 2
+
+
+    | Variable | Category | Suicidal ideation | p-value |
+
+    | --- | --- | --- | --- |
+
+    | Gender | Male | 274 | (59) |
+
+    | | Female | 194 | (81) |
+
+    | Education level | Undergraduate (1st) | 114 | (41) |
+
+    | | Undergraduate (2nd–4th) | 315 | (67) |
+
+    | | Graduated/post-graduation | 78 | (82) |
+
+    | Marital status | Unmarried | 447 | 0.378 |
+
+    | | Married | 190 | (28) |
+
+    | | Divorced/widowed | 31 | (39) |
+
+    | Family income | Less than 20,000 | 192 | 0.278 |
+
+    | | 20,001–35,000 | 150 | |
+
+    | | 35,001–50,000 | 62 | |
+
+    | | Greater than 50,000 | 13 | (20) |
+
+    | Residence | Rural | 94 | (14) |
+
+    | | Urban | 204 | (56) |
+
+    | Physical activity | No | 141 | 0.369 |
+
+    | | Yes | 75 | (78) |
+
+    | Smoking habit | No | 816 | 0.012 |
+
+    | | Yes | 39 | (92) |
+
+    | Sleeping hour | Less than 7 h | 298 | 0.021 |
+
+    | | 7–9 h | 248 | (42) |
+
+    | | Greater than 9 h | 26 | (69) |
+
+    | Relationship with partner | Bad | 32 | 0.723 |
+
+    | | Good | 318 | (440) |
+
+    | | Don''t have | 117 | (25) |
+
+    | Depression | No | 312 | 0.128 |
+
+    | | Yes | 234 | (69) |
+
+    | | Moderate | 227 | (23) |
+
+    | | Severe | 46 | (61) |
+
+    | Anxiety | No mild | 818 | 1.379* |
+
+    | | Mild | 216 | (36) |
+
+    | | Moderate | 242 | (54) |
+
+    | | Severe | 12 | (36) |
+
+    | | Acute | 28 | (4) |
+
+
+    ### 3.3. Evaluation of performance
+
+
+    Table 3 displays the performance metrics of all the algorithms. All algorithms
+    achieved a respectable accuracy around 90%. On the performance metric, it is observed
+    that KNN achieved the highest accuracy of 91.45%. Furthermore, it is noteworthy
+    that RF and CatBoost exhibited comparable efficiency, with accuracies of 90%.
+    Of all, the decision tree exhibited a lower accuracy of 80.34. Regarding F1, KNN
+    scored the highest at 91.26, while the other algorithms produced similar results
+    with values around 90%. In the Area Under Operating Curve (AUC) performance for
+    binary classification, it evaluates a model''s performance by ability to distinguish
+    between positive and negative classifications. In Fig 2, the KNN model achieved
+    an AUC of .953, showing high precision in distinguishing between depressive and
+    negative classifications. This underscores the model''s ability to accurately
+    rank instances from the two classes. The Random Forest, with an AUC of .921, closely
+    trails the KNN and RF models and exhibit excellent classification capabilities.
+    The CatBoost model, with an AUC of .886, showcases decent performance, potential
+    for improvement in classification abilities compared to the previous models. The
+    Decision Tree model, showing an AUC of .863, falls slightly behind the other models
+    in performance.
+
+
+    # Table 3
+
+    Evaluation of ML models.
+
+
+    | Model | Accuracy | F1 score | Log loss |
+
+    | --- | --- | --- | --- |
+
+    | KNN | 91.45 | 91.26 | 0.904 | 2.95 |
+
+    | RF | 90.60 | 90.80 | 0.897 | 3.25 |
+
+    | CatBoost | 90.59 | 90.38 | 0.892 | 3.6 |
+
+    | XGBoost | 88.03 | 87.45 | 0.879 | 4.13 |
+
+    | DT | 80.34 | 80.25 | 0.814 | 6.7 |
+
+
+    ideation in a population through a machine learning algorithm. Their prediction
+    model exhibited favourable performance in the test set, accurately identifying
+    suicide among the total sample with an accuracy of 82.1%, a sensitivity of 83.6%,
+    and a specificity of 80%. To Van Mens et al., Random Forest was the best model
+    for predicting suicidal ideation considering various psychological factors. However,
+    KNN proved to be the model with the highest accuracy in accuracy. the KNN model
+    demonstrated the highest performance based on its AUC value. observed that KNN
+    exhibited high levels of accuracy, sensitivity and AUC with respect of 91.45,
+    91.26, 90.9 and 91.5. Our machine learning models showed superiority over conventional
+    statistical techniques in which standard statistical methods fail to elucidate
+    complex ideation among students. Our machine learning models on student-level
+    data for suicide ideation (SI) screening and assessment have significant implications
+    for prevention efforts, deconstructed in our work. To best of our knowledge, this
+    study represents the first attempt to predict suicidal ideation in the Bangladesh
+    using machine learning techniques. Several factors linked to suicidal ideation
+    were identified in the region of Bangladesh. Implementing machine learning algorithms,
+    we observed that KNN exhibited high levels of accuracy, sensitivity and AUC with
+    respect of 91.45, 91.26, 90.9 and 91.5. This study revealed a significant determinant
+    of ideation. Research suggests that there may be a higher prevalence of mental
+    health issues among female individuals compared to their counterparts, which might
+    contribute to an increased risk of suicide (Miranda Mirandazabel et al., 2019).
+    Our research also revealed a positive correlation between mental health issues
+    and suicidal ideation which has also been identified as a potential risk factor.
+    According to a study conducted in the United States by Bryan et al. (2020), engaging
+    in social activities with family and friends may reduce the risk of suicidal ideation
+    and even lead to suicide. Maintaining a positive relationship with one''s may
+    reduce the risk of suicide. Another factor for suicidal ideation was the duration
+    of sleep. Lack of sleep may increase the risk of suicidal ideation when compared
+    to the average duration of sleep. This phenomenon occurs due to the negative impact
+    of inadequate sleep on emotional regulation, impulse control, and sleep patterns.
+    Our results showed that models may predict suicidal ideation by detecting several
+    risk factors (Lin et al., 2020; Ryu et al., 2018; Van Mens et al.). The study
+    conducted by Lin and colleagues employed various machine learning methods as logistic
+    regression, decision tree, support vector machine, and multilayer perceptron to
+    predict the possibility of suicidal ideation based on psychological stress demands
+    among persons of genders. The multilayer perceptron and support vector effective
+    models for predicting suicidal ideation, with an accuracy of approximately 100%.
+    The objective of Rye and colleagues was to construct a predictive model for identifying
+    individuals with suicidal
+
+
+    ![](img/93c930364f1296a34364da2188a32c82_4_0.png)
+
+
+    Fig. 2. ROC-AUC curve of the model.
+
+    '
+  mdcn: '
+
+
+    ## 2.5. 机器学习
+
+
+    ### 2.5.1. CatBoost
+
+
+    CatBoost 基于梯度提升决策树 (GBDT) 和一种名为序贯提升（ordered boosting）的新算法。CatBoost 在贪心 TBS 中添加了先验值。现在，假设给定一个观测数据集
+    $D=(X,Y), i=1,...,n$，以及一个排列 $\sigma = (\sigma_1,...,\sigma_n)$，其中 $i$ 被替换为：
+
+
+    ```
+
+    $\sum_{i=1}^{n} [y_{\sigma_i} - f_{\sigma_i}(x_{\sigma_i})]^2 + a\sum_{i=2}^{n}
+    [f_{\sigma_{i-1}}(x_{\sigma_i})]^2$
+
+    ```
+
+
+    ### 2.5.2. KNN
+
+
+    K 最近邻（KNN）也被称为基于距离的机器学习算法，主要用于分类问题。它的目的是定位新点周围的所有邻居，以确定它属于哪一类（Sainn 等人，2013）。
+
+
+    ### 2.5.3. XGBoost
+
+
+    XGBoost 是一种基于决策树的集成机器学习算法。XGBoost 和梯度提升机 (GBMs) 都是集成树方法，XGBoost 通过系统优化和算法增强改进了基础
+    GBM 框架。在该算法中，树是以顺序格式创建的（Chen 和 Guestrin，2016）。
+
+
+    ### 2.5.4. 随机森林
+
+
+    随机森林是一种基于分类和决策回归树的集成机器学习方法。它基于著名的分类类型集成学习方法：Boosting 和 Bagging（Belgu 和 Callik，2018）。
+
+
+    ### 2.5.5. 决策树
+
+
+    决策树是一种基于对物品的观测进行预测建模，并得出关于其目标值的结论。在树结构中，叶节点代表分类（也称为叶子），非叶节点是特征，分支代表分类分类的特征的交集。决策过程从树根开始。根据节点边缘的
+    la检查每个节点的条件，决策过程继续到下一棵树。这种趋势持续到到达叶子节点，最终的决策为：
+
+
+    ## 2.6. 特征选择
+
+
+    为了确定纳入机器学习模型的特征，我们使用 XGB SHAP 值评估了它们的影响，并根据 Cramer''s V 准则检查了特征相关性。我们观察到了观测到的相关性和对模型输出的高影响，并将将它们全部纳入模型中。我们观察到焦虑对模型输出的影响最大（图
+    1）。此外，性别、睡眠时间、与伴侣的关系、抑郁和婚姻状况等特征表现出高于其他变量水平。
+
+
+    ## 3. 结果
+
+
+    ### 3.1. 频率分布
+
+
+    表 1 显示了选择变量的频率分布。研究发现，51.5% 的参与者识别为男性，48.5% 为女性。大多数参与者（55%）来自农村地区。10.4% 的人表示没有参与体力活动，7.9%
+    的人报告有吸烟习惯。参与者的心理健康状况，发现 13.4% 的受访者表现出严重抑郁症状，而 87% 的人报告有自杀经历。在整个人群中，80.1% 的人报告有自杀意念，其余
+    19.9% 未报告此类意念。
+
+
+    ### 3.2. 双变量分析
+
+
+    所选变量的卡方分布在性别、婚姻状况、与伴侣的关系、抑郁和焦虑方面具有显著性。在报告有自杀意念的参与者中，77% 识别为女性，78% 报告未婚。在受调查的参与者中，37%
+
+
+    ![](img/93c930364f1296a34364da2188a32c82_2_0.png)
+
+
+    # 表 1
+
+
+    | 变量 | 类别 | 频率 | 百比 |
+
+    | --- | --- | --- | --- |
+
+    | 性别 | 男性 | 301 | 51.5% |
+
+    | | 女性 | 284 | 48.5% |
+
+    | 教育程度 | 本科（一年级） | 139 | 23.8% |
+
+    | | 本科（二至四级） | 392 | 67.1% |
+
+    | | 毕业/研究生 | 53 | 9.1% |
+
+    | 婚姻状况 | 未婚 | 538 | 92.1% |
+
+    | | 已婚 | 40 | 6.8% |
+
+    | | 离婚/丧偶 | 6 | 1.0% |
+
+    | 家庭收入 | 低于 20,000 | 241 | 41.3% |
+
+    | | 20,000-35,000 | 185 | 31.6% |
+
+    | | 35,000-50,000 | 62 | 16.8% |
+
+    | | 高于 50,000 | 59 | 10.1% |
+
+    | 居住地 | 农村 | 321 | 55.0% |
+
+    | | 城市 | 263 | 45.0% |
+
+    | 体力活动 | 否 | 443 | 75.9% |
+
+    | | 是 | 141 | 24.1% |
+
+    | 吸烟习惯 | 否 | 529 | 89.6% |
+
+    | | 是 | 61 | 10.4% |
+
+    | 睡眠时间 | 少于 7 小时 | 274 | 46.9% |
+
+    | | 7-9 小时 | 271 | 46.4% |
+
+    | | 多于 9 小时 | 26 | 69% |
+
+    | 与伴侣的关系 | 好 | 364 | 62.3% |
+
+    | | 无 | 145 | 24.8% |
+
+    | 抑郁 | 否 | 307 | 5.2% |
+
+    | | 是 | 152 | 26.0% |
+
+    | 焦虑 | 无轻度 | 758 | 73.4% |
+
+    | | 是 | 252 | 43.2% |
+
+    | 自杀意念 | 否 | 916 | 96.4% |
+
+    | | 是 | 468 | 50.1% |
+
+    | | | 116 | 19.9% |
+
+
+    # 表 2
+
+
+    | 变量 | 类别 | 自杀意念 | p 值 |
+
+    | --- | --- | --- | --- |
+
+    | 性别 | 男性 | 274 | (59) |
+
+    | | 女性 | 194 | (81) |
+
+    | 教育程度 | 本科（一年级） | 114 | (41) |
+
+    | | 本科（二至四级） | 315 | (67) |
+
+    | | 毕业/研究生 | 78 | (82) |
+
+    | 婚姻状况 | 未婚 | 447 | 0.378 |
+
+    | | 已婚 | 190 | (28) |
+
+    | | 离婚/丧偶 | 31 | (39) |
+
+    | 家庭收入 | 低于 20,000 | 192 | 0.278 |
+
+    | | 20,000-35,000 | 150 | |
+
+    | | 35,000-50,000 | 62 | |
+
+    | | 高于 50,000 | 13 | (20) |
+
+    | 居住地 | 农村 | 94 | (14) |
+
+    | | 城市 | 204 | (56) |
+
+    | 体力活动 | 否 | 141 | 0.369 |
+
+    | | 是 | 75 | (78) |
+
+    | 吸烟习惯 | 否 | 816 | 0.012 |
+
+    | | 是 | 39 | (92) |
+
+    | 睡眠时间 | 少于 7 小时 | 298 | 0.021 |
+
+    | | 7-9 小时 | 248 | (42) |
+
+    | | 多于 9 小时 | 26 | (69) |
+
+    | 与伴侣的关系 |  | 32 | 0.723 |
+
+    | | 好 | 318 | (440) |
+
+    | | 无 | 117 | (25) |
+
+    | 抑郁 | 否 | 312 | 0.128 |
+
+    | | 是 | 234 | (69) |
+
+    | | 中度 | 227 | (23) |
+
+    | | 严重 | 46 | (61) |
+
+    | 焦虑 | 无轻度 | 818 | 1.379* |
+
+    | | 轻度 | 216 | (36) |
+
+    | | 中度 | 242 | (54) |
+
+    | | 严重 | 12 | (36) |
+
+    | | 急性 | 28 | (4) |
+
+
+    ### 3.3. 性能评估
+
+
+    表 3 显示了所有算法的性能指标。所有算法都实现了 90% 左右的良好准确率。在性能指标上，观察到 KNN 达到了 91.45% 的最高准确率。此外，RF
+    和 CatBoost 表现出相当的效率，准确率为 90%。在所有算法中，决策树的准确率较低，为 80.34。在 F1 上，KNN 的得分最高。在性能指标上，观察到
+    KNN 达到了 91.45% 的最高准确率。此外，值得注意的是 RF 和 CatBoost 表现出相当的效率，准确率为 90%。在所有算法中，决策树的准确率较低，为
+    80.34。在 F1 上，KNN 的得分最高。在性能指标上，观察到 KNN 达到了 91.45% 的最高准确率。此外，值得注意的是 RF 和 CatBoost
+    表现出相当的效率，准确率为 90%。在所有算法中，决策树的准确率较低，为 80.34。在 F1 上，KNN 的得分最高。在性能指标上，观察到 KNN 达到了
+    91.45% 的最高准确率。此外，值得注意的是 RF 和 CatBoost 表现出相当的效率，准确率为 90%。在所有算法中，决策树的准确率较低，为 80.34。在
+    F1 上，KNN 的得分最高。
+
+
+    # 表 3 机器学习模型的评估。
+
+
+    | 模型 | 准确率 | F1 分 | 损失 |
+
+    | --- | --- | --- | --- |
+
+    | KNN | 91.45 | 0.91 | 0.29 |
+
+    | RF | 90.60 | 0.90 | 0.35 |
+
+    | CatBoost | 90.59 | 0.90 | 0.36 |
+
+    | XGBoost | 88.03 | 0.88 | 0.42 |
+
+    | DT | 80.34 | 0.81 | 0.63 |
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    S.S. Sara et al.
+
+
+    Journal of Academic Frontiers 2024 (9): 502-508
+
+
+    prevalence of suicidal ideation. This phenomenon occur due to the experience of
+    learning (ML), which can contribute to the development of suicidal ideation.
+
+
+    Machine learning (ML) applications in clinical contexts have considerable limitations;
+    ML is a balance of effectiveness and accuracy of medical professionals. Moreover,
+    ML algorithms are more effective at extracting features from multimodal datasets
+    (Sarker, like 2021), which measures symptoms since they are able to manage complex
+    conditions. In this study, we used a logistic regression model to assess the likelihood
+    of suicidal ideation among participants, using responses from the PHQ-9 questions
+    (refer to Supplementary Table SI for details). Any participant who reported thoughts
+    of self-harm, or a desire to be dead or "nearly dead" exhibited elevated ideation
+    out of SI (OR: 6.9; 95% CI: 1-83.71).
+
+
+    # Cedit authorship
+
+
+    Sabina Shirin: Conceptualization, Data curation, Methodology; Writing - original
+    draft, Formal analysis, Writing - review & editing; Md. Nasir Rahman: Data curation,
+    Methodology, Writing - original draft, Writing - review & editing. Ashish Lakhter:
+    Conceptualization, Data curation, Methodology, Writing - original draft, Formal
+    analysis, Writing - review, & editing.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that the research was conducted without any commercial or
+    financial relations that could be a potential conflict of interest.
+
+
+    Acknowledgments
+
+
+    The authors are thankful to the participants in this study for their kind assistance.
+
+
+    # Funding
+
+
+    No fund has been declared.
+
+
+    # Compliance with ethical standards
+
+
+    The ethical guidelines of the national research committee, the 1964 Helsinki Declaration,
+    and any subsequent changes, or equivalent standards, of this study''s procedures
+    were followed in all involving human subjects. Informed consent was obtained from
+    all individuals participants in the study. As per local and institutional regulations,
+    an ethical evaluation has been made by the authors during the data collection
+    of this study.
+
+
+    # References
+
+
+    In this study, we used a broader of features from the PHQ-9 questions, a sophisticated
+    model can uncover hidden connections between various symptoms and their impact
+    on mental health (Graham et al., 2019). However, when using a similar methodology,
+    it was found that overlooking some crucial data that might require a more precise
+    approach and intervention. Consequently, using an advanced machine learning model
+    is expected to provide enhanced outcomes, helping interventions and delivering
+    better healthcare services to experienced patients (Smith, 2021; Bohr and Mahmudzadeh,
+    2020).
+
+
+    This present research has demonstrated that the predictive model for suicidal
+    ideation (SI) in Bangladesh has the potential to predict the future of students
+    at an early stage. Furthermore, this model enables healthcare practitioners to
+    allocate more time to provide diverse treatment alternatives, such as identified
+    individuals, thereby enhancing the efficacy of healthcare facilities and clinics
+    at a minimal expense. The utilization of our model will be crucial in developing
+    clinical support and personalised treatment strategies, optimizing outcomes.
+
+
+    # 5. Conclusion
+
+
+    Based on the findings of this study, it was reported that a significant proportion
+    of university students located in the southern region of Bangladesh have 19.9%
+    suicidal ideation. The findings indicate a significant association between the
+    duration of students'' mental health concerns, specifically depression, pressure
+    status, and suicidal ideation. The XGBoost model demonstrated that depression
+    and pressure are the primary factors, while gender was the secondary factor. The
+    development and execution of campaigns and counseling initiatives are aimed at
+    improving mental health and preventing suicidal ideation and behavior. To mitigate
+    the crisis of suicide among university students, all pertinent stakeholders, including
+    academia, government bodies, and non-governmental organizations, should devise
+    and implement effective strategies. The model can identify patients'' medical
+    history to detect those who may be at a higher risk of suicidal ideation. This
+    approach could encourage regular sleep patterns, addressing depression and avoiding
+    potential suicide attempts.
+
+
+    Supplementary data to this article can be found online at https://doi.org/10.1016/j.jad.2024.01.092.
+
+
+    Agrawal, R., Maitwaj, P., 2019. Prevalence of Suicidal Ideation and Factors Among
+    College Students of the Tribal Region of India.
+
+
+    Ammi, S., 2022. Prevalence of suicidality in immigrants/refugees: a systematic
+    review and meta-analysis.
+
+
+    Arafat, S.M., Bhattacharya, S., Amoon, N., Varma, P., Hu, Y., Islam, M.A.N. A.,
+    Khan, H., 2021. Prevalence and factors of suicidal ideation among university students
+    in Bangladesh.
+
+
+    Chen, X., Liu, J., Zhang, Y., Wang, J., 2021. Suicidal behavior in East-South
+    Asia: a systematic review and meta-analysis. Res Public Health Int. 2021;18(8):21772.
+    doi: 10.3390/phph18082172
+
+
+    Belsky, M., Gilga, O., et al., 2018. Centrally created suicide mapping using pixel-and-object-based
+    methods: time-weighted dynamic analysis. Mental Res Env. 2019;51:10394. doi: 10.1016/j.menres.2018.12.015
+
+
+    Gu, B., Kairn, S.M., Robinson, J. G., Lewis, J. M., 2019. What are the mental
+    health factors associated with suicidal ideation among adolescents in the United
+    States? A systematic review. Adolescents Health 2020;58(6):1223-1239.
+
+
+    Bohr, A., Kamrazadeh, K., 2020. The role of artificial intelligence in mental
+    health care: a review. Front Psychiatry 2020;11:594632. doi: 10.3389/fyt.2020.594632
+
+
+    Caben, J., Delgado, R., Delinauro, R., Ininta, D., Wang Y., Choki, P., 2021. The
+    promise of machine learning in predicting psychiatric outcomes: a systematic review.
+    World Psychiatry 2021;21(3):896-905.
+
+
+    Chowdhury, A., et al., 2022. Development of a scalable data warehouse for health
+    things. In Proceedings of the 22nd ACM SIGK International Conference on Data Mining
+    and Discovery.
+
+
+    507
+
+
+    *Neeti*'
+  - '[PAGE 6]
+
+
+    S.S. Sora et al.
+
+
+    Journal of Affective Disorders 349 (2022) 5
+
+
+    Choi, B. (2018). Long hours, suicidal ideation in US workers: a longitudinal study.
+    Arch. Occup. Environ Health. 91, 865–875.
+
+
+    Elberaby, S.A., Saad, W.E. (2020). Prevention in suicidal adolescent behavior:
+    a systematic review and meta-analysis. J Adolescence, 82, 88–99.
+
+
+    Garcia-Vera, P., Sanchez, A., Anclardo Rios, R., Martínez, F., Mico, B.M., Neto,
+    J.A.F., Lima, N.J.R., Neto, M.R.R. (2022). Domestic violence and suicidal ideation
+    in university students in Mexico City.
+
+
+    Graham, S., Depp, C., Lee, E., Neeker, S., Tu, K., Kim, H.E., Jest, J.D. (2019).
+    Mental health interventions for natural and suicidal ideation: a systematic review.
+    Psychiatry Res. 31(7): 3170–3180. PMID: PMC6724446.
+
+
+    Hassan, S., Nasir, S., Thomas, N., Nehtat, T., Hunt, N., Clark, D., Acker, McKay,
+    E.L., Ahmed, H.H. (2021). Prevalence of anxiety and suicidal ideation in South
+    Asia during COVID-19: a systematic review and meta-analysis. Health Public. 74(8),
+    e819–e826.
+
+
+    Jahan, L., Islam, M. (2021). If you feel alone, it Kamawa M., Griffiths M., Mann
+    M.A. How the COVID-19 pandemic impacted adolescent ideation used behaviors and
+    focused mental health outcomes. J Health Inform. 24 (7), 1997–2003.
+
+
+    Li, X., Liu, J., Zheng, J., Wang, Y., Zhou, C. (2020). Suicidal Attack and its
+    Associated Factors among Chinese adolescents: A systematic review. Front. Psychol.
+    11, 575533.
+
+
+    Liu, R., Wang, Y., Zhang, Y., Tang, X., Liu, S. (2021). Prevalence, distribution,
+    and factors of suicidal ideation among college students: data-based study from
+    multi-center study. Sci Med Rep. 11 (1), 1–8.
+
+
+    Macalli, M., Macvaro, O., Ortiz, M., Montour, T., Thibeault, R., Case, S.M., Srout,
+    J.E. (2017). Relationship between social media and suicidal thoughts and behaviors
+    among college students. J Youth Adolesc. 36, 745–756.
+
+
+    Mohammadi, M., Mohammad, M.H., Goin, E., Hassan, M.M., Ward, K.D. (2022). Prevalence
+    of suicidal ideation and attempted suicide among women and girls in Asia: a systematic
+    review and meta-analysis. Psychiatry Res. 339 (6), 106008.
+
+
+    Mendez-Mendizabal, A., Castelli, P., Forte-Badeell, O., Alayo, L., Aleneira, J.,
+    Omani-Samani, R., Mirzoufadeh, S., Ghaheri, A., Navid, B. (2018). Generalized
+    anxiety disorder (GAD-7) in people with infertility: a reliability and validity
+    study. Fert Ill. 23 (3), 244–249.
+
+
+    Organization, W. (2021). Suicide Trends in 2019: Global Health Estimates. Peffartz,
+    L., Colegiao, C., Quantrone, A., Szali, G., Gheli, P., Lelux, E., et al. (2022).
+    Suicidal thinking and belief in first depressive episodes during the COVID-19
+    pandemic: a cohort study. Lancet Psychiatry. 39 (6), 255–266.
+
+
+    Prajapati, Y., Singh, S., Kumar, A., Dovag, A.V., Gulian, A. (2021). Cyberbullying
+    with unbiased consequences during the COVID-19 pandemic: A cross-sectional study
+    of factors of suicidal ideation among university students in Association of South
+    Asian Nations (Asian J. Psychiatry). 62, 100513.
+
+
+    Rahman, Q.Q., Khan, A.H., Al-Zayed, M., Ahmed, M., Hasan, M., Islam, S., et al.
+    (2021). Prevalence of suicidal ideation among university students in Bangladesh
+    after one year of COVID-19 pandemic: a cross-sectional study. Health Public. 74(8),
+    e836–e843.
+
+
+    Riaz, M. K., Zhadry, M., Rahman, M., Khan, M.K. (2021). Factors affecting suicidal
+    ideation during the COVID-19 pandemic: an online cross-sectional survey. PLoS
+    Med. 18(9), e10933.
+
+
+    Ry, S., Lee, H., Lee, E-H., Park, J. (2018). A use of a machine learning algorithm
+    to predict suicidal ideation among college students. J Med Syst. 123, 1–10.
+
+
+    Sahoo, S., Bonda, A. (2013). Quick screening using the Suicidal Ideation Questionnaire
+    (Q-IS) and evaluation of its reliability in adolescents. J Pediatr Res. 4(4),
+    331–345.
+
+
+    Song, S. L., Hong, H. T., Lee, S.Y., Lee, S.H. (2022). Prevalence of suicidal
+    ideation and attempted suicide among Bangladeshi students during the COVID-19
+    pandemic: a cross-sectional study.
+
+
+    Tannin, R., Islam, M.S., Muj own, M.S., Sikder, M.T., Maitona, N.K. (2022). Suicidal
+    ideation among Bangladeshi students during the COVID-19 pandemic: a cross-sectional
+    study.
+
+
+    Tsai, T.-Y., Padahaluk, S., Hu, X., Wong, Y., Yu, T., Chen, M., Lee, N.-Y. (2022).
+    Suicidal ideation and factors among university students in Taiwan: a systematic
+    review and a meta-analysis.
+
+
+    Vaidyanathan, V., Rajagaram, S., Pekälä, P., Lepipelänki, S., Isometri, E. T.
+    (2009). How bipolar suicidal ideation affects different students: a population-based
+    longitudinal study.
+
+
+    508'
+  md: '
+
+    S.S. Sara et al.
+
+
+    Journal of Academic Frontiers 2024 (9): 502-508
+
+
+    prevalence of suicidal ideation. This phenomenon occur due to the experience of
+    learning (ML), which can contribute to the development of suicidal ideation.
+
+
+    Machine learning (ML) applications in clinical contexts have considerable limitations;
+    ML is a balance of effectiveness and accuracy of medical professionals. Moreover,
+    ML algorithms are more effective at extracting features from multimodal datasets
+    (Sarker, 2021), which measures symptoms since they are able to manage complex
+    conditions. In this study, we used a logistic regression model to assess the likelihood
+    of suicidal ideation among participants, using responses from the PHQ-9 questions
+    (refer to Supplementary Table SI for details). Any participant who reported thoughts
+    of self-harm, or a desire to be dead or "nearly dead" exhibited elevated ideation
+    out of SI (OR: 6.9; 95% CI: 1-83.71).
+
+
+    ## Credit authorship
+
+
+    Sabina Shirin: Conceptualization, Data curation, Methodology; Writing - original
+    draft, Formal analysis, Writing - review & editing; Md. Nasir Rahman: Data curation,
+    Methodology, Writing - original draft, Writing - review & editing. Ashish Lakhter:
+    Conceptualization, Data curation, Methodology, Writing - original draft, Formal
+    analysis, Writing - review, & editing.
+
+
+    ## Declaration of competing interest
+
+
+    The authors declare that the research was conducted without any commercial or
+    financial relations that could be a potential conflict of interest.
+
+
+    Acknowledgments
+
+
+    The authors are thankful to the participants in this study for their kind assistance.
+
+
+    ## Funding
+
+
+    No fund has been declared.
+
+
+    ## Compliance with ethical standards
+
+
+    The ethical guidelines of the national research committee, the 1964 Helsinki Declaration,
+    and any subsequent changes, or equivalent standards, of this study''s procedures
+    were followed in all involving human subjects. Informed consent was obtained from
+    all individuals participants in the study. As per local and institutional regulations,
+    an ethical evaluation has been made by the authors during the data collection
+    of this study.
+
+
+    ## References
+
+
+    In this study, we used a broader of features from the PHQ-9 questions, a sophisticated
+    model can uncover hidden connections between various symptoms and their impact
+    on mental health (Graham et al., 2019). However, when using a similar methodology,
+    it was found that overlooking some crucial data that might require a more precise
+    approach and intervention. Consequently, using an advanced machine learning model
+    is expected to provide enhanced outcomes, helping interventions and delivering
+    better healthcare services to experienced patients (Smith, 2021; Bohr and Mahmudzadeh,
+    2020).
+
+
+    This present research has demonstrated that the predictive model for suicidal
+    ideation (SI) in Bangladesh has the potential to predict the future of students
+    at an early stage. Furthermore, this model enables healthcare practitioners to
+    allocate more time to provide diverse treatment alternatives, such as identified
+    individuals, thereby enhancing the efficacy of healthcare facilities and clinics
+    at a minimal expense. The utilization of our model will be crucial in developing
+    clinical support and personalised treatment strategies, optimizing outcomes.
+
+
+    ## 5. Conclusion
+
+
+    Based on the findings of this study, it was reported that a significant proportion
+    of university students located in the southern region of Bangladesh have 19.9%
+    suicidal ideation. The findings indicate a significant association between the
+    duration of students'' mental health concerns, specifically depression, pressure
+    status, and suicidal ideation. The XGBoost model demonstrated that depression
+    and pressure are the primary factors, while gender was the secondary factor. The
+    development and execution of campaigns and counseling initiatives are aimed at
+    improving mental health and preventing suicidal ideation and behavior. To mitigate
+    the crisis of suicide among university students, all pertinent stakeholders, including
+    academia, government bodies, and non-governmental organizations, should devise
+    and implement effective strategies. The model can identify patients'' medical
+    history to detect those who may be at a higher risk of suicidal ideation. This
+    approach could encourage regular sleep patterns, addressing depression and avoiding
+    potential suicide attempts.
+
+
+    Supplementary data to this article can be found online at https://doi.org/10.1016/j.jad.2024.01.092.
+
+
+    - Agrawal, R., Maitwaj, P., 2019. Prevalence of Suicidal Ideation and Factors
+    Among College Students of the Tribal Region of India.
+
+    - Ammi, S., 2022. Prevalence of suicidality in immigrants/refugees: a systematic
+    review and meta-analysis.
+
+    - Arafat, S.M., Bhattacharya, S., Amoon, N., Varma, P., Hu, Y., Islam, M.A.N.
+    A., Khan, H., 2021. Prevalence and factors of suicidal ideation among university
+    students in Bangladesh.
+
+    - Chen, X., Liu, J., Zhang, Y., Wang, J., 2021. Suicidal behavior in East-South
+    Asia: a systematic review and meta-analysis. Res Public Health Int. 2021;18(8):21772.
+    doi: 10.3390/phph18082172
+
+    - Belsky, M., Gilga, O., et al., 2018. Centrally created suicide mapping using
+    pixel-and-object-based methods: time-weighted dynamic analysis. Mental Res Env.
+    2019;51:10394. doi: 10.1016/j.menres.2018.12.015
+
+    - Gu, B., Kairn, S.M., Robinson, J. G., Lewis, J. M., 2019. What are the mental
+    health factors associated with suicidal ideation among adolescents in the United
+    States? A systematic review. Adolescents Health 2020;58(6):1223-1239.
+
+    - Bohr, A., Kamrazadeh, K., 2020. The role of artificial intelligence in mental
+    health care: a review. Front Psychiatry. 2020;11:59462. doi: 10.3389/fpsyc.2020.59462
+
+    - Caben, J., Delgado, R., Delinauro, R., Wang, Y., Choki, P., 2021. The promise
+    of machine learning in predicting psychiatric outcomes. World Psychiatry 2021;21(3):896-905.
+
+    - Chowdhury, A., et al., 2022. Development of a scalable data warehouse. Proceedings
+    of the 22nd ACM International Conference on Data Mining and Discovery.
+
+    - Choi, B., 2018. Long suicidal ideation in workers: a longitudinal study. Arch.
+    Occup. Environ. 91,865–875.
+
+    - Elberaby, S.A., Saad, W., 2020. Prevention in suicidal behavior: a systematic
+    review and meta-analysis. J Adolescence, 82,88–99.
+
+    - Garcia-Vera, P., Sanchez, A., Martínez, F., Lima, N.J., 2022. Domestic violence
+    and suicidal ideation in university students in Mexico City.
+
+    - Graham, S., Depp, C., Lee, E., Neeker, S., Kim, H., 2019. Mental health interventions
+    for natural and suicidal ideation: a systematic review. Psychiatry Res. 31(7):3170–3180.
+    PMID: PMC672446.
+
+    - Hassan, S., Nasir, S., Thomas, N., Clark, D., 2021. Prevalence of suicidal ideation
+    in South Asia during COVID-19 pandemic: a systematic review. Health Public. 74(8),
+    e819–e826.
+
+    - Jahan, L., Islam, M., 2021. If you feel alone, the COVID-19 impacted impacted
+    mental health outcomes. J Health Inform. 24 (7),1997–2003.
+
+    - Li, X., Liu, J., Zheng, J., Zhou, C., 2020. Suicidal Attack and its Associated
+    Factors among Chinese adolescents: A systematic review. Front. Psychol. 11,5753.
+
+    - Liu, R., Wang, Y., Tang, X., Liu, S., 2021. Prevalence, distribution, and factors
+    of suicidal ideation among college students: data-based multi-center study. Sci
+    Med Rep. 11 (1),1–8.
+
+    - Macalli, M., Macvaro, O., Ortiz, M., Thibeault, R., Case, S.M., 2017. Relationship
+    between social media and suicidal thoughts and behaviors. J Youth Adolesc. 36,745–756.
+
+    - Mohammadi, M., Mohammad, M.H., Hassan, M.M., Ward, K.D., 2022. Prevalence of
+    suicidal ideation and attempted suicide among women and girls in Asia: a systematic
+    review and meta-analysis. Psychiatry Res. 39 (6),10608.
+
+    - Mendez-Mendizabal, A., Castelli, P., Forte, Alayo, L., 2018. Generalized anxiety
+    disorder (GAD-7) in people with infertility: a reliability and validity study.
+    Fert Ill. 23 (3),244–249.
+
+    - Organization, W., 2021. Suicide Trends in 2019: Global Health Estimates.
+
+    - Peffartz, L., Colegiao, C., Quantrone, A., Szali, G., Gheli, P., Lelux, E.,
+    et al., 2022. Suicidal thinking and belief in first depressive episodes during
+    the COVID-19 pandemic: a cohort study. Lancet Psychiatry. 39 (6),255–266.
+
+    - Prajapati, Y., Singh, S., Kumar, A., Dovag, A.V., Gulian, A., 2021. Cyberbullying
+    with consequences during the COVID-19 pandemic: A cross-sectional study of factors
+    of suicidal ideation among university students in Association of South Asian Nations
+    (Asian J. Psychiatry). 62,100513.
+
+    - Rahman, Q.Q., Khan, A.H., Al-Zayed, M., Ahmed, M., Hasan, M., Islam, S., et
+    al., 2021. Prevalence of suicidal ideation among university students in Bangladesh
+    after one year of COVID-19 pandemic: a cross-sectional study. Health Public. 74(8),
+    e836–e843.
+
+    - Riaz, M. K., Zhadry, M., Rahman, M., Khan, M.K., 2021. Factors affecting suicidal
+    ideation during the COVID-19 pandemic: an online cross-sectional survey. PLoS
+    Med. 18(9), e10933.
+
+    - Ry, S., Lee, H., Lee, E-H., Park, J., 2018. A use of a machine learning algorithm
+    to predict suicidal ideation among college students. J Med Syst. 123,1–10.
+
+    - Sahoo, S., Bonda, A., 2013. Quick screening using the Suicidal Ideation Questionnaire
+    (Q-IS) and evaluation of its reliability in adolescents. J Pediatr Res. 4(4),331–345.
+
+    - Song, S. L., Hong, H. T., Lee, S.Y., Lee, S.H., 2022. Prevalence of suicidal
+    ideation and attempted suicide among Bangladeshi students during the COVID-19
+    pandemic: a cross-sectional study.
+
+    - Tannin, R., Islam, M.S., Muj, M.S., Sikder, M.T., Maitona, N.K., 2022. Suicidal
+    ideation among Bangladeshi students during the COVID-19 pandemic: a cross-sectional
+    study.
+
+    - Tsai, T.-Y., Padahaluk, S., Hu, X., Wong, Y., Yu, T., Chen, M., Lee, N.-Y.,
+    2022. Suicidal ideation and factors among university students in Taiwan: a systematic
+    review and a meta-analysis.
+
+
+    508
+
+    '
+  mdcn: '
+
+
+    S.S. Sara 等人
+
+
+    《学术前沿期刊》2024 (9): 502-508
+
+
+    自杀念念的流行率。这种现象由于学习（ML）的经历而发生，这会导致自杀念念的发展。
+
+
+    机器学习（ML）在临床环境中的应用具有很大的局限性；机器学习是医疗专业人员有效性和准确性之间的平衡。此外，机器学习算法从多模态数据集中提取特征方面更为有效（Sarker,
+    2021），它们能够处理复杂的情况，从而衡量症状。在研究中，我们使用逻辑回归模型来评估参与者自杀念念的可能性，使用了来自 PHQ-9 问题的回答（详情请参考补充表
+    SI）。任何报告过自残念头、死亡或“濒临死亡”愿望的参与者均表现出较高的自杀念念（OR: 6.9; 95% CI: 1-83.71）。
+
+
+    ## 贡献作者
+
+
+    Sabina Shirin：概念化、数据策展、方法论；写作-初稿、正式分析、写作-审阅与编辑；Md. Nasir Rahman：数据策展、方法论、写作-初稿、写作-审阅与编辑。Ashish
+    Lakhter：概念化、数据策展、方法论、写作-初稿、正式分析、写作-审阅与编辑。
+
+
+    ## 利益冲突
+
+
+    作者声明，本研究是在没有任何可能导致潜在冲突的商业或财务关系的情况下进行的。
+
+
+    致谢
+
+
+    作者感谢本研究参与者的积极帮助。
+
+
+    ## 资助
+
+
+    未声明任何资助。
+
+
+    ## 符合伦理标准
+
+
+    所有涉及人类受试者的程序均遵循了国家研究委员会的伦理指南、1964年《赫尔辛基宣言》及其任何后续修订或同等标准。研究中的所有个人参与者均已获得知情同意。根据当地和机构规定，作者在本项研究的数据收集期间进行了伦理评估。
+
+
+    ## 参考文献
+
+
+    在这项研究中，我们使用了来自 PHQ-9 问题的更广泛特征，复杂的模型可以揭示各种症状与其心理健康影响之间的隐藏联系（Graham et al., 2019）。然而，当使用类似的方法时，发现忽略了某些关键数据可能需要更精确的方法和干预。因此，使用先进的机器学习模型有望提供增强的结果，帮助干预并为经验丰富的患者提供更好的医疗服务（Smith,
+    2021; Bohr and Mahmudzadeh, 2020）。
+
+
+    本研究表明，孟加拉自杀念念（SI）预测模型具有在早期预测学生未来的潜力。此外，该模型使医疗从业人员能够分配更多时间提供多样化的治疗方案（例如识别出的个体），从而以最低成本提高医疗机构和诊所的效率。我们模型的利用对于开发临床支持和个性化治疗策略、优化结果至关重要。
+
+
+    ## 5. 结论
+
+
+    根据本研究结果报告，位于孟加拉南部地区的大学学生中有 19.9% 具有自杀念念。结果显示，学生心理健康问题的时长（特别是抑郁、压力状态）与自杀念念之间存在显著关联。XGBoost
+    模型显示，抑郁和压力是主要因素，而性别是次要因素。开发和执行活动及咨询倡议旨在改善心理健康并预防自杀念念和行为。为了缓解大学生的自杀危机，所有相关的利益相关者（包括学术界、政府机构和非政府组织）都应该制定并实施有效的策略。该模型可以识别患者的病史，以检测出那些自杀念念风险较高的人。这种方法可以鼓励规律睡眠模式，解决抑郁并避免潜在的自杀尝试。
+
+
+    本文的补充数据可在网上通过 https://doi.org/10.1016/j.jad.2024.01.092 找到。
+
+
+    - Agrawal, R., Maitwaj, P., 2019. 印度部落地区大学学生自杀念念的流行率及因素。
+
+    - Ammi, S., 2022. 移民/难民中自杀倾向的流行率：系统评价和元萃分析。
+
+    - Arafat, S.M., Bhattacharya, S., Amoon, N., Varma, P., Hu, Y., Islam, M.A.N.
+    A., Khan, H., 2021. 孟加拉大学学生自杀念念的流行率和因素。
+
+    - Chen, X., Liu, J., Zhang, Y., Wang, J., 2021. 东亚南地区的自杀行为：系统评价和元萃分析。Res Public
+    Health Int. 2021;18(8):21772. doi: 10.3390/phph18082172
+
+    - Belsky, M., Gilga, O., et al., 2018. 使用像素和对象基础的方法创建中心自杀地图：时间加权动态分析。Mental Res
+    Env. 2019;51:1034. doi: 10.1016/j.menres.2018.015
+
+    - Gu, B., Kairn, S., Robinson, J., Lewis, J., 2019. 美国青少年自杀念念的心理健康因素是什么？Adolescents
+    Health 2020;58(6):1223-1239.
+
+    - Bohr, A., Kamrazadeh, K., 2020. 人工智能在心理健康护理中的作用。Front Psychiatry. 2020;11:5942.
+    doi: 10.3389/fpsyc.2020.5942
+
+    - Caben, J., Delgado, R., Delinauro, R., Wang, Y., Choki, P., 2021. 机器学习预测精神结果的前。World
+    Psychiatry 2021;21(3):896-905.
+
+    - Chowdhury, A., et al., 2022. 可扩展数据仓库的发展。Proceedings of 22nd ACM International
+    Conference on Data Mining and Discovery.
+
+    - Choi, B., 2018. 工人长期自杀念念。Arch. Occup. Environ. 91,865–875.
+
+    - Elberaby, S.A., Saad, W., 2020. 自杀行为预防：系统评价和元萃分析。J Adolescence 82,99.
+
+    - Garcia-Vera, P., Sanchez, A., Martínez, F., Lima, N., 2022. 墨西哥大学学生的家庭暴力和自杀念念。
+
+    - Graham, S., Depp, C., Lee, E., Kim, H., 2019. 针对自然自杀念念的心理健康干预。Psychiatry Res.
+    31(7):3170–3180.
+
+    - Hassan, S., Nasir, S., Thomas, N., 2021. COVID-19 疫情期间南亚自杀念念的流行率。Health Public.
+    74(8), e819–e826.
+
+    - Jahan, L., Islam, M., 2021. 如果你感到孤独，COVID-19 影响了心理健康结果。J Health Inform. 24 (7),1997–2003.
+
+    - Li, X., Liu, J., Zheng, C., 2020. 中国青少年自杀攻击及其因素：系统评价。Front. Psychol. 11,5753.
+
+    - Liu, R., Wang, Y., Tang, X., Liu, S., 2021. 大学学生自杀念念的流行率、分布和因素：多中心研究。Sci Med
+    Rep. 11 (1),1–8.
+
+    - Macalli, M., Macvaro, O., Ortiz, M., Thibeault, R., Case, S., 2017. 社交媒体与自杀念头和行为的关系。J
+    Youth Adolesc. 36,745–756.
+
+    - Mohammadi, M., Mohammad, M.H., Hassan, M., Ward, K.D., 2022. 亚洲女性和女孩自杀念念的流行率：系统评价和元萃分析。Psychiatry
+    Res. 39 (6),1008.
+
+    - Mendez-Mendizabal, A., Castelli, P., Alayo, L., 2018. 不孕患者的广性焦虑障碍 (GAD-7)：信度研究。Fert
+    Ill. 23 (3),244–249.
+
+    - Organization, W., 2021. 2019年自杀趋势：全球健康估计。
+
+    - Peffartz, L., Colegiao, C., Quantrone, A., Szali, G., Gheli, P., Lelux, E.,
+    et al., 2022. COVID-19 疫情期间首次抑郁发作的自杀思考和信念：队列研究。Lancet Psychiatry. 39 (6),255–266.
+
+    - Prajapati, Y., Singh, S., Kumar, A., Dovag, A.V., Gulian, A., 2021. COVID-19
+    疫情期间网络欺凌的后果：南亚国家大学学生自杀念念的横断面研究 (Asian J. Psychiatry). 62,100513.
+
+    - Rahman, Q.Q., Khan, A.H., Al-Zayed, M., Ahmed, M., Hasan, M., Islam, S., et
+    al., 2021. COVID-19 疫情一年后孟加拉大学学生自杀念念的流行率：横断面研究。Health Public. 74(8), e836–e843.
+
+    - Riaz, M. K., Zhadry, M., Rahman, M., Khan, M.K., 2021. COVID-19 疫情期间影响自杀念念的因素：在线横断面调查。PLoS
+    Med. 18(9), e10933.
+
+    - Ry, S., Lee, H., Lee, E-H., Park, J., 2018. 使用机器学习算法预测大学学生自杀念念。J Med Syst. 123,1–10.
+
+    - Sahoo, S., Bonda, A., 2013. 使用自杀念念问卷 (Q-IS) 进行快速筛查及其在青少年中的信度评价。J Pediatr Res.
+    4(4),331–345.
+
+    - Song, S. L., Hong, H. T., Lee, S.Y., Lee, S.H., 2022. COVID-19 疫情期间孟加拉学生自杀念念和自杀尝试：横断面研究。
+
+    - Tannin, R., Islam, M.S., Muj, M.S., Sikder, M.T., Maitona, N.K., 2022. COVID-19
+    疫情期间孟加拉学生的自杀念念：横断面研究。
+
+    - Tsai, T.-Y., Padahaluk, S., Hu, X., Wong, Y., Yu, T., Chen, M., Lee, N.-Y.,
+    2022. 台湾学生的自杀念念及因素：系统评价和元萃分析。
+
+
+    '
+  merge: 0
