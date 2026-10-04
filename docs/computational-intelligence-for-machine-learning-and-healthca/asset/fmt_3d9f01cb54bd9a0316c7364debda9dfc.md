@@ -1,0 +1,65 @@
+
+![Figure 11.10: Artificial Neural Network-Basic Architecture.](graphic/converted/b_9783110648195-011_fig_010.png)
+
+Figure 11.10: Artificial Neural Network-Basic Architecture.
+
+There are different types of neural networks like convolutional neural networks (`CNNs`), recurrent neural networks and so on. Among these, for image classification, `CNNs` give promising results. Let us understand more about `CNNs`.
+
+## 11.5 Convolutional neural networks
+
+Convolutional Neural Networks (`CNNs`) are a special type of neural network. Like a normal neural network, they are made up of neurons. Weights are assigned to each of the connections among the neurons, which change as and when the network learns. Each neuron in the layer receives some inputs, performs a dot product, and optionally follows it with a nonlinearity. The output layer predicts the class. `CNNs` are the most effective in case of image recognition and classification.
+
+Following is the basic architecture of a `CNN` (trying to classify as boat, cat, house, tree) ([Figure 11.11](#bodymatter-011.xhtml#b_9783110648195-011_fig_011)):
+
+![Figure 11.11: Basic architecture of convolutional neural network.](graphic/converted/b_9783110648195-011_fig_011.png)
+
+Figure 11.11: Basic architecture of convolutional neural network.
+
+`CNNs` have four major components:
+
+1. Convolution layers:
+Convolutional layers learn from the input images by extracting the features. Convolution uses small squares of input data to learn the features, thus preserving the relationship between the pixels. It performs dot operation of the image matrix and the kernel/filter map to produce the feature maps. Convolution with different filters extract different information from the image, thus producing different feature maps.
+
+2. Nonlinearity: There are various functions which can be used to introduce nonlinearity, such as rectified linear unit (`ReLU`), sigmoid, and tanh. The most commonly used is `ReLU`. For all the pixels in the feature map, `ReLU` replaces all the negative valued pixels by zero. Most of the real-world data we would want our ConvNet to learn would be nonlinear, Thus, `ReLU` introduces nonlinearity in the ConvNet.
+
+3. Pooling or sub sampling: When the input images are too large, then the number of parameters generated are also large, which makes it difficult to process. While reducing the dimensionality of each feature map, retaining the information is very important to get correct results. This is achieved by pooling. Spatial pooling also called subsampling or downsampling reduces the dimensionality of each map by retaining the important information. Max pooling, average pooling, and sum pooling are the different types of spatial pooling.
+
+4. Classification (fully connected (`FC`) layer): In `FC`, all the neurons of the preceding layers are connected to all the neurons of the succeeding layer. The high-level features of an input image are learnt by the convolutional and pooling layers. The `FC` layer uses these extracted features and classifies the input image into its class, based on the training dataset. The `FC` layer is followed by a softmax activation function which in the output layer.
+
+`CNNs`, although are considered to be a good choice for spatial features extraction (images), still, they do have the problem of vanishing gradient. In order to overcome this drawback of `CNNs`, dense `CNNs` can be considered.
+
+## 11.6 Dense convolutional neural networks
+
+We have seen in the previous chapter that `CNNs` are a good choice in case of extracting spatial features, making it suitable for the healthcare related static data. However, since medical images have many minute details, in order to extract all the features, more number of layers are required. In case of `CNNs`, as the number of layers increases, the complexity of the network increases, and the information passed from one layer to another eventually decreases due to dropout, thus causing information loss. In order to overcome the drawback of vanishing gradient of `CNNs`, dense `CNNs` can be used (Gao Huang, et al, Densely Connected Neural Networks).
+
+In case of traditional `CNNs` with `M` Layers, there are `M` connections – one in between every layer and it’s next layer. On the other hand, in case of dense `CNNs`, for a particular layer, in order to produce its own feature maps, it uses the feature maps of all its preceding layers. The subsequent layers thus get all these feature maps as an input. Hence there are `M(M + 1)` connections. Thus the concept of concatenation is used instead of summing.
+
+Following is the basic architecture diagram of a dense `CNN`. It consists of dense blocks and transition layers in between the dense blocks ([Figure 11.12](#bodymatter-011.xhtml#b_9783110648195-011_fig_012))
+
+![Figure 11.12: Basic architecture of Dense Convolutional Neural Network.](graphic/converted/b_9783110648195-011_fig_012.png)
+
+Figure 11.12: Basic architecture of Dense Convolutional Neural Network.
+
+![Figure 11.13: Staining patterns HEP2 cells (homogeneous, cytoplasmic, centromere, fine speckled, coarse speckled, and nucleolar).](graphic/converted/b_9783110648195-011_fig_013.jpg)
+
+Figure 11.13: Staining patterns HEP2 cells (homogeneous, cytoplasmic, centromere, fine speckled, coarse speckled, and nucleolar).
+
+As it can be seen from the [Figure 11.12](#bodymatter-011.xhtml#b_9783110648195-011_fig_012), the dimensions of the feature maps remain the same within a block so that they can be concatenated together easily. The convolutional and the pooling layer act as transition layers.
+
+Because of this nature of dense `CNN`, the network can be thinner and more compact. It also requires fewer parameters and makes accurate predictions. One of the biggest advantages of DenseNets is that there is an improvement in the flow of information as well as gradients throughout the network. Hence it is easy to train them. There is implicit deep supervision as each layer has direct access to the gradients from the loss function and the original input signal. This helps training of deeper network architectures. Further, in cases where there are smaller training set sizes, there are chances of overfitting. In such cases, having dense connections help by having a regularizing effect. Thus, because of all these reasons, DenseNets are a promising choice to use in case of medical image iagnosis.
+
+Let us see the following case studies with respect to image classification to get better insight:
+
+## 11.7 Case studies
+
+### 11.7.1 Case study 1
+
+#### 11.7.1.1 Classification of IIF images
+
+There are various tests for Antinuclear Antibodies (`ANAs`). One of the most commonly used tests is indirect `IIF`. Usually, for detecting antibodies in human serum, Human epithelial type 2 (`HEp-2`) cells are used as a substrate. `HEp-2` cells are used to coat the microscope slides and the serum is incubated with the cells. The antibodies bind to the antigens or the nucleus is considered as a test. If they are present then they will bind to the antigens on the cells; in the case of `ANAs`, the antibodies will bind to the nucleus. These need to be visualized to see the results. They are visualized by adding a fluorescent tagged (usually `FITC` or rhodopsin B) antihuman antibody that binds to the antibodies. Distinct patterns of fluorescence are seen on the `HEp-2` cells depending on the antibody present in the human serum and the localization of the antigen in the cell.
+
+Various staining patterns are observed on `HEP-2` cells but the major six among them are cytoplasmic, homogeneous, nucleolar, centromere, `FS`, and `FS` (refer Figure 11.13).
+
+#### 11.7.1.2 Results
+
+In this section we will discuss the results obtained in details. Initially we will discuss the results obtained by using the single feature which is given in the table below. Chi Square 1 indicates chi square distance metric and the value of `k` is 1 (refer Table 11.1).
