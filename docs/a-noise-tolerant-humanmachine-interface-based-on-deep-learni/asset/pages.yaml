@@ -1,0 +1,2087 @@
+- pgno: 0
+  md: '# nature sensors
+
+
+    Article
+
+    https://doi.org/10.1038/s44460-025-00001
+
+
+    # # A noise-tolerant human–machine interface based on deep learning-enhanced wearable
+    sensors
+
+
+    Received: 23 April 2025
+
+    Accepted: 13 September 2025
+
+    Published online: 17 November 2025
+
+    Check for updates
+
+
+    Xianjun Chen$^{1,2}$, Zhiyuan Lu$^{2}$, Xiaoxiang Gao$^{2,8}$, Li Yin$^{2}$, Siyu
+    Qin$^{2}$, Muyang Lin$^{2}$, Fangao Zhang$^{1}$, Yi Lu$^{1}$, Shicho Ding$^{2}$,
+    Ruixiao Liu$^{2}$, Selene Tang$^{2}$, Sai Zhou$^{2}$, Dennis Dang$^{2}$, Xinyi
+    Yang$^{2}$, Zihan Wu$^{2}$, Ziyang Yang$^{2}$, Hongjie Hu$^{2}$, Xinyu Wang$^{2}$,
+    Zhangzhi Zhu$^{2,8}$, Chengchangfeng$^{2}$, Ruota Wang$^{2}$, Wentong Ye$^{2}$,
+    Hao Huang$^{2}$, Ray S. Wu$^{2}$, Yizhou Bian$^{2}$, Geonho Park$^{2}$, Jian Cao$^{2}$,
+    Xueping Lin$^{2}$, Deying Lu$^{2}$, Gert Cauwenhenberg$^{2}$, Joseph Wang$^{2}$
+    & Sheng Xu$^{1,2,3,7}$
+
+
+    Wearable machine interfaces with inertial measurement units (IMUs) are widely
+    applied across healthcare, robotics and interactive technologies. However, extracting
+    signals remains challenging owing to motion artifacts in real-world environments.
+    Here we present a human–machine interface capable of tolerating diverse motion
+    artifacts through deep learning-enhanced wearable sensors. The system integrates
+    a six-channel IMU, an electromyography module, a Bluetooth microcontroller unit
+    and a stretchable battery, enabling wireless capture and transmission of gestures.
+    A convolutional neural network trained on a composite dataset of gestures and
+    motion artifacts extracts robust signals, parameter-based transfer learning improves
+    the generalizability of the network across users. A sliding-window approach connects
+    the extracted gestures in real-time, continuous control of a robotic arm during
+    dynamic activities such as running, high-frequency vibration, posture changes,
+    ocean wave motion and combinations of these. This work demonstrates the potential
+    of wearable human–machine interfaces for complex real-world applications.
+
+
+    Wearable devices have great promise in various applications, such as continuous
+    health monitoring$^{1}$, energy harvesting$^{1}$, and human–machine interfaces$^{2}$.
+    Wearable inertial measurement units (IMUs) that can capture gestures have proven
+    to be particularly valuable for virtual and augmented reality$^{2}$, non-communication$^{2}$,
+    physiological monitoring$^{2}$, sports rehabilitation$^{2}$ and robotic control$^{2}$.
+    However, gestures are inevitably confounded by motion artifacts in real-world
+    applications (Supplementary
+
+
+    Note: Motion artifacts can arise from environmental activities such as walking,
+    running or sitting in vehicles, from the changing orientations of the IMU to the
+    gravity vector (Supplementary Figure 1) or com of these. The motion artifacts
+    may exhibit similar features to those of gesture signals, or different frequencies
+    which vary among individuals. However, recovering gesture signals amid these motion
+    artifacts is a major challenge$^{2-10}$.
+
+
+    A list of affiliations appears at the end of the paper. E-mail: josephwang@ucsd.edu;
+    shengxu@ucsd.edu
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Article
+
+
+    https://doi.org/10.1038/s44460-025-0003-3
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_1_0.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_1_1.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_1_2.png)
+
+
+    **Fig. 1 Overview the noise-tolerant human-machine interface.** **a**, Illuminating
+    the six-channel IMU, illustrated with motion artifact-free flexible substrate.
+    Gestures containing no motion artifacts are captured by the IMU and processed
+    using a deep learning model. Acc: accelerometer, gyroscope. The results are processed
+    with digitally filtered EMG signals to control a robotic arm. ADC. **b**, Photograph
+    of the structure and exploded view of the flexible device. Integrated electrode
+    configuration, where Zn and Ag TiO serve as anode and cathode, respectively. PVI
+    hydro as the electrolyte, a TiO layer, and the Ag as the separator and collector.
+    Zn, Ag TiO3, and Ag were mixed with stretchable binders.
+
+
+    battery is encased within SEBS. The upper-right inset shows the tri-layered EMG
+    device. InAMP, implementation amplifier: VIA, vertical interconnect access. **c**,
+    Capacity and RSS of the 2-kg flexible device during bending and stretching cycles,
+    at -25 °C. After 60 cycles, the battery capacity remains nearly 100% throughout
+    the entire process. RSS signal strength indicator (dB) of the Bluetooth signal
+    as a function of working distance. The data represent the mean values and standard
+    deviation measurements at each point. Image of the sensors. The dashed frames
+    define the device area. After continuous operation for 30 minutes in ambient conditions,
+    the peak temperature of the sensors was saturated at 27.7 °C.
+
+
+    Existing methods for mitigating artifacts in IMUs can be broadly categorized into
+    hardware- and software-based approaches (Supplementary Note 2). For hardware-based
+    approaches, reducing the device thickness or enhancing the adhesion between the
+    device and the
+
+
+    skin can minimize artifacts caused by displacement of the skin–sensor interface.
+    Although this method is effective in bipolar measurement, it is essential for
+    IMUs, which inherently capture unintentional depletments during body movements.
+
+
+    Nature Sources'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41468-025-00001-3
+
+
+    addition, incorporating density of IMIs can minimize motion effects. Specifically,
+    a dual-IMU configuration placed at anatomical joints (for example, the wrist and
+    ankle) can effectively record motion artifacts induced by body movements revealing
+    physiological signals of interest (magnitudes, for example respiration and heart
+    rates). This approach is applicable to specific locations and is not suitable
+    for other regions. A multi-IMU configuration (for example, on the torso and limbs)
+    has also been used to derive different estimates of human activities from sensor
+    misalignment, and inconsistent patterns of motion artifacts across different bodies.
+
+
+    an amplifier for EMG. (Supplementary Note 5: The bottom was an amplifier with
+    wideband support; the top was a band-pass structured structure, which bonded bounding
+    the circuit and electrode could reduce EMG signals from motion artifacts. However,
+    the effectiveness of these techniques relies on the assumption that the signal
+    (for example, bilateral, respiration rate or heart rate) contains specific and
+    spectral characteristics that can be separated from motion artifacts.
+
+
+    For software-based methods, such as bandpass filtering, adaptive filtering, and
+    component analysis can isolate motion artifacts from motion characteristics. However,
+    the effectiveness of these techniques relies on the assumption that the signal
+    (for example, bilateral, respiration rate or heart rate) contains specific and
+    spectral characteristics that can be separated from motion artifacts.
+
+
+    The third layer integrated a dual IMU to capture gesture signals and a Bluetooth
+    controller unit for processing and storage. We measured the Bluetooth intensity
+    using the received signal strength in an open environment with various methods.
+    The signals remained stable (and decreased from -46 dB to -96 dB) after 30 minutes
+    of operation at the Bluetooth controller unit, reaching only 27.7°C (Fig. 1c).
+    During prolonged use (the skin), the temperature remained within the safety limits
+    of the wearables used at 34.5°C (Fig. 2).
+
+
+    In addition, we used deep learning-based wearables that accurately recognize gestures
+    despite the presence of diverse real-world motion artifacts (Fig. 1a and Supplementary
+    Note 3). The system consists of a multilayer IMU (3-axis accelerometer, 3-axis
+    gyroscope and 3-axis magnetometer along the x, y, and z axes). We recorded the
+    IMU signals from 19 gestures, with each gesture lasting 1–6 s (Fig. 2). In addition,
+    we collected three types of motion artifacts, including baseline and physiological
+    variations in IMU signals and motion-induced artifacts (Supplementary Figure 1).
+
+
+    The fourth layer used convolutional filters to classify gestures (Supplementary
+    Notes 5, 6, and Supplementary Table 1 and Supplementary Note 6). To establish
+    the robustness of the system, we needed access to measure human mechanical constraints
+    with constraints (Supplementary Note 7). The methods used to evaluate the accuracy
+    of power consumption withouted data (Extended Data Fig. 3). The total power of
+    the consumption was 15 mW, and the battery power could last for 4h (Supplementary
+    Fig. 7, and Notes).
+
+
+    Deep learning-based gesture recognition-based wearables that accurately recognize
+    gestures despite the presence of diverse real-world motion artifacts (Fig. 1a
+    and Supplementary Note 3). The system consists of a multilayer IMU (3-axis accelerometer,
+    3-axis gyroscope and 3-axis magnetometer along the x, y, and z axes). We recorded
+    the IMU signals from 19 gestures, with each gesture lasting 1–6 s (Fig. 2). In
+    addition, we collected three types of motion artifacts, including baseline and
+    physiological variations in IMU signals and motion-induced artifacts (Supplementary
+    Figure 1).
+
+
+    The sensors acquire multiple channels of IMU and EMG. The output, sampling rate
+    of 100 Hz per channel, inchanne a 3-axis accelerometer along the x, y, and z axes
+    and a 3-axis gyroscope. We recorded the IMU signals from 19 gestures, with each
+    gesture lasting 1–6 s (Fig. 2). In addition, we collected three types of motion
+    artifacts, including baseline and physiological variations in IMU signals and
+    motion-induced artifacts (Supplementary Figure 1).
+
+
+    # Multi-channel signal recognition for gestures and motion artifacts
+
+
+    Deep learning-based gesture recognition based on a convolutional dataset
+
+
+    # Results
+
+
+    # Design and characterization of the sensors
+
+
+    The system was designed with four layers (Fig. 1b and Supplementary Note 2). The
+    first layer is a band bonded onto a flexible substrate. The second layer contains
+    the sensors used to provide an output voltage of -0.1 to 1 mV (Extended Data Fig.
+    4, and Methods). After 60-discharge cycles, the battery capacity maintained at
+    -25 mAh, even under bending and stretching (Supplementary Note 4). The coulombic
+    efficiency was retained at nearly 100% (Fig. 1c; and Methods).
+
+
+    The second, third and fourth layers formed the circuit (Methods). The third layer
+    incorporates an anti-matching unit and with
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # Article
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_3_0.png)
+
+
+    **a.** Depiction of 19 gesture signals when the individual is lying down. The
+    sensors mounted on the forearm capture each level, while the other 18 gestures
+    vary in angle. The first gesture to keep the forearm relatively level, the others
+    speed, direction, and distinct IM signals. The gray arrow shows the upwards and
+    downwards rotation, the blue arrow shows the left and right forearm rotation,
+    the red arrow shows the wrist rotation.
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_3_1.png)
+
+
+    **b.** Motion artifacts of the same 19 gestures collected when the individual
+    is lying down. The markedly different waveforms are generated from the orientation
+    shifts of the IMU relative to gravity. Motion artifacts generated when the forearm
+    is stimulated with a high-frequency movement gun. Motion artifacts generated by
+    the natural swaying of the forearm and body movement during recognition. Filtered
+    EMG from grasping and releasing. The red curve represents the root mean square
+    of the filtered
+
+
+    We trained and configured deep learning networks using the composite dataset and
+    evaluated their performance by the confusion matrix of tests. These models included
+    a fully connected neural network, a recurrent neural network based on long short-term
+    memory (Supplementary Figures 16 and 17) and a CNN (Supplementary Figure 1). The
+    CNN achieved the highest recall (-0.92), precision (-0.93), F1-score (-0.94) and
+    showed superior performance in gesture recognition (Fig. 3b, Supplementary Figure
+    18 and Supplementary Note 11). We customized the CNN to match the signal dimensions
+    and optimize the performance in this study (Fig.3c). At the input, six channel
+    IMU signals were reshaped into a single-channel and processed through a dense
+    convolutional layer with 8 kernels, resulting in channels of
+
+
+    The representations were then summarized by a max-pooling layer. The process followed
+    with subsequent convolutional layers using 32 and 64 kernels, each followed by
+    max-pooling for hierarchical feature representation. Finally, the output was flattened
+    and routed through three fully connected layers to define the final predictions.
+    We used cross-validation to evaluate the discrepancy between the model predictions
+    and ground truth (Supplementary Note 12). During training and validation phases,
+    the CNN converted-1 to -0, confirming the absence of overfitting and the appropriateness
+    of the selected kernels and loss function (Supplementary Fig. 19). To further
+    evaluate the model''s robustness to unseen, real world data, we tested the system
+    under two running speeds and
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41468-025-00031-3
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_4_0.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_4_1.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_4_2.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_4_3.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_4_4.png)
+
+
+    Fig. 2 Gesture classification via deep learning and transfer learning. a Architecture
+    of the process used to construct the dataset. The composite dataset was assembled
+    by inserting diverse motion artefacts onto gesture signals. b Comparison of analysis
+    recall values across different deep learning models. The CNNs show accuracy with
+    high recall. The graph presents mean values, with error bars indicating the standard
+    deviation (n=13 independent test results). c Fully connected neural network, RNN,
+    recurrent neural network, and architecture of the CNN(s). It includes convolutional
+    layers, max pooling layers and fully connected (FC) layers, with cross entropy
+    as the loss function. d Schematics of the transfer process, which features two
+    stages: First, the model is trained on a dataset from five individuals. Second,
+    the pretrained convolutional layers are tuned at a lower learning rate with a
+    smaller dataset from a new individual. e Confusion matrices of the results before
+    and after transfer. The minimum recognition accuracy of the 19 gestures improved
+    from 53% to 97%. f Schematics of the sliding-window mechanism. The window size
+    is 1 s, with a sliding step of 0.25 s. Each segment serves as an individual input,
+    generating a separate prediction.
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# # Article
+
+
+    https://doi.org/10.1038/s41468-020-00051-3
+
+
+    other vibration frequencies and gestures without additional training. The recognition
+    accuracy remained high across all conditions (Fig. 2a), confirming the robustness
+    of the model to unseen, real-world disturbances (Supplementary Fig. 20).
+
+
+    the robotic arm was programmed to execute an action after receiving three identical
+    gestures (Supplementary Fig. 21). Moreover, the model was capable of handling
+    a fourth gesture (if present) to perform different robotic actions between consecutive
+    gestures.
+
+
+    Individual variations in gestures (Supplementary Fig. 21) and motion (Supplementary
+    Fig. 22) induce differences between training and testing datasets, thereby reducing
+    the model accuracy for new identities. We applied parameter-based transfer learning
+    to enhance the model''s ''generalizability''. We first trained the model on one
+    dataset with a learning rate of 0.01, which controlled the convolutional and recurrent
+    layers.
+
+
+    Selessly, and grasping the release of the robotic arm was controlled by calculating
+    the mean value of the EMG and comparing it with a different threshold (Supplementary
+    Fig. 27 and Methods).
+
+
+    Then, we fine-tuned the model with varying numbers of shots (that is, the number
+    of shots from each gesture). Furthermore, we used a lower learning rate of 0.001
+    for the recurrent layers to retain the primary gesture representations (Supplementary
+    Fig. 3 and Supplementary Note 14).
+
+
+    When the user moved, the involuntary motions significantly distorted the accelerometer
+    and gyroscope sensors. The robotic arm experienced unwanted vibrations without
+    a deeplearning algorithm (Supplementary Fig. 1). However, even when the gestures
+    were executed in different dates, the system successfully recognized the intended
+    actions.
+
+
+    We evaluated the efficiency of the transfer learning with 100 shots (that is,
+    used in the testing dataset) (Extended Fig. 5 and Methods). The result showed
+    that transfer learning with only 2 shots per gesture (one recorded while sitting
+    and one while standing) performed as well as the 400 shots required for the initial
+    training process.
+
+
+    Using a sliding window with a step size of 0.5s to reduce the computational load
+    and overlap between consecutive gestures (Fig. 3f). A larger step size improved
+    the minimum recognition accuracy across all types of gestures from 51% to >92%
+    (Fig. 3e). The time taken to collect motion artifacts from the new individual
+    was reduced from 2 minutes to 60 seconds.
+
+
+    To achieve gesture recognition, the acquired signals should be continuously fed
+    into the sliding window mechanism, which allows the window to capture signals
+    from either a single gesture or two consecutive gestures.
+
+
+    In underwater environments, water currents are different from the intricate dynamics
+    of seas, which vary significantly with wave parameters (e.g., wavelength and height).
+    However, unwanted wave-interference can affect the user''s gesture signals, complicating
+    the classification of gestures.
+
+
+    When the sliding window slides, the window may contain signals from two consecutive
+    gestures. Therefore, we generated signals using various consecutive gesture combinations.
+    Rather than performing individually, we predicted by concatenating individual
+    perceived gestures, by connecting two signals to end-consecutive gestures.
+
+
+    We trained the model with a dataset that includes sea-wave motions. The training
+    data was originally collected in San Diego Bay (Fig. 5a). However, due to the
+    bay''s enclosed environment (compared to an open environment), the amplitude of
+    the waves is different from the open sea.
+
+
+    The sliding window was applied to these concatenated signals, and we achieved
+    a recognition rate of 95% of the duration (Extended Fig. 6). A similarity comparison
+    was performed for all gestures while sliding down (Supplementary Fig. 24). This
+    approach reached 46,930 signals for 19 gestures (Methods).
+
+
+    # Potential aquatic applications
+
+
+    Human-machine interfaces are used to control underwater robots for task tracking,
+    data collection, shipw inspection, and rescue operations.
+
+
+    # Robotic arm
+
+
+    Although many studies have achieved high accuracy in gesture recognition using
+    EMG and IMU with many degrees of freedom, these approaches require the user to
+    remain stationary, which is inevitably impacted by motion artifacts.
+
+
+    With the model built, we can perform a demonstration directing a robotic arm floating
+    in the ocean. When the IMU signals were superimposed with sea-wave interference,
+    the system generated accurate commands for the robotic arm (Supplementary Fig.
+    34).
+
+
+    We achieved robust recognition performance by performing the gestures (Fig. 7).
+
+
+    with 1.3s, the time required to capture sufficient data for initial gesture recognition
+    and the intrinsic response delay of the robotic arm (Fig. 4a). However, because
+    the gesture recognition was performed continuously using the sliding window mechanism,
+
+
+    With precision, specificity, and F1 score-all above 0.99, the method offered a
+    unique advantage by reducing the electrode-skin impedance.
+
+
+    the EMG signal quality (Supplementary Fig. 36).
+
+
+    # Conclusion
+
+
+    # The successors
+
+
+    The architecture in this study features a multilayer, stretchable circuit, allowing
+    for an efficient and potential
+
+
+    Natural Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41468-025-0003-3
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_6_0.png)
+
+
+    Fig. 4 | Real-time robotic arm control with motion artifacts. a. Schematics of
+    controlling the robotic arm. The individually continuously performs gestures.
+    The gesture signals are wirelessly transmitted to a backend station with a delay
+    of 1–5 ms by Bluetooth*. A sliding window segments the gestures continuously after
+    detecting the first gesture signal, and does not segment the signal when motion
+    artifacts occur. The CNN architecture takes less than 1 ms for a prediction for
+    each gesture signal. Upstream processing 3
+
+
+    sequential predictions (~3 ms), the robotic arm (275 ms) and executes the corresponding
+    action. b. Demonstration of the individual controlling the robotic arm to lift
+    while running on a treadmill. The IMU sensors from the individual''s arm, intertwined
+    with motion artifacts, control the robotic arm precisely. When the root mean square
+    of the EMG signals surpasses a threshold, the robotic arm grabs the wrist.
+
+
+    arrangement of components¹, with a high degree of electronics integration, electrodes
+    and sensors. We leverage a deep-learning model trained on a composite dataset,
+    which demonstrates strength against various of motion artifacts, enabling robust
+    and accurate control under diverse real-world scenarios.
+
+
+    key features while minimizing the relevance of irrelevant ones, such as motion
+    artifacts (Supplementary Note 19). Second, the current system is designed to recognize
+    gestures quickly, which simplifies the recognition task and enhances efficiency
+    in recognition.
+
+
+    There remain multiple opportunities to improve this performance. First, the system
+    is designed to recognize gestures lasting 1 s, which is possible without delay
+    due to reduced latency from this window (Supplementary Note 18). To address this
+    problem, a potential solution would be to integrate an additional learning model
+    for signal segmentation to detect gesture start and end points.
+
+
+    To improve performance in complex gestures, future work could explore the implementation
+    of multi-task deep learning models with each model to recognize gestures along
+    a single axis. This multi-model architecture would allow parallel processing of
+    any type of signal, enabling simultaneous multi-gesture recognition.
+
+
+    The window could further reduce latency by minimizing the time required to acquire
+    a complete input sequence, enabling faster response. In this case, more complex
+    CNN architecture (for example, deeper networks or larger kernels) would be required
+    to extract discriminative features from shorter signals. To further enhance extraction,
+    it is also possible to integrate a sequence-aware attention mechanism, which can
+    prioritize
+
+
+    Future work could also focus on a limited underwater communication range (~30
+    cm with a reliable signal strength indicator of over 90 dB), ensuring stable connection
+    between the device and machine (Supplementary Note 37). It is feasible to use
+    Bluetooth of high power for real-time control of submerged robots, with higher
+    gain, more directional antenna, and most importantly, embedding the receiver and
+    processing unit within the submerged robot. This configuration would allow direct
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41468-025-00001-3
+
+
+    a
+
+
+    b
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_7_0.png)
+
+
+    Sensors
+
+
+    0.2 m
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_7_1.png)
+
+
+    Simulated Ocean-Atmosphere
+
+
+    Waveform Simulator
+
+
+    Sensors in the box
+
+
+    Simulated sea
+
+    wave
+
+
+    0.5 m
+
+
+    c
+
+
+    Simulated sea-wave motions
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_7_2.png)
+
+
+    Acceleration
+
+    (g)
+
+
+    Angular
+
+    velocity
+
+    °/s)
+
+
+    x - y - z
+
+
+    Roll Yaw Pitch
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_7_3.png)
+
+
+    Gesture
+
+    number
+
+
+    Gesture signals
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_7_4.png)
+
+
+    1 3 6 8 13 16 19
+
+
+    Sensors
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_7_5.png)
+
+
+    Acceleration
+
+    (g)
+
+
+    Angular
+
+    velocity
+
+    °/s)
+
+
+    1 s
+
+
+    Superimposed signals
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_7_6.png)
+
+
+    Acceleration
+
+    (g)
+
+
+    Angular
+
+    velocity
+
+    °/s)
+
+
+    1 s
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_7_7.png)
+
+
+    → Leftwards/rightwards forearm rotation  → Upwards /downwards forearm rotation  →
+    Wrist rotation
+
+
+    **Fig. 5 | Aquatic aations of the noise-tolerant human-machine interface.** **a**,
+    Photograph of an individual wearing the sensors for the collection of motion artifacts
+    from San Diego Mission Bay. **b**, Collection of sea wave motion artifacts from
+    the Scripps Ocean-Atmosphere Research Facility. By adjusting
+
+
+    the simulator''s settings, a range of sea-wave patterns can be created, allowing
+    the sensors to capture diverse sensory variations introduced by sea seas. Offline
+    demonstration incorporating sea wave artifacts. The collected sea wave motions
+    are superimposed on gesture signals as input for the CNN.
+
+
+    communication between the wearable sensors and the robots, which can eliminate
+    the need for an intermediate system for signal acquisition, processing and robotic
+    arm control, thereby decreasing the signal loss and extending communication range.
+    In addition, it is
+
+
+    possible to integrate radio waves (integrated circuits for Bluetooth and Wi-Fi,
+    which is robust for communication at the air/water interface), acoustic waves
+    (advanced microromechanical systems with low transmission loss) and optical methods
+    (tunable vertical-cavity
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# Article\n\nsurface-earthing layers and photodetectors with high transparency\\\
+    \ speeds; Supplementary Note 20 and Table S1.\n\nThe final design we used was\
+    \ for an experiment to study the two-finger robotic gripper\ndesigned for grasping\
+    \ and releasing. To enable fine-tune-color\nhigh resolution geometry, a multi-electrode\
+    \ array was\\designed to capture tactile signals from individual\nmuscular groups.\
+    \ Integrating such an array with a multimodal\nlearning system demonstrated the\
+    \ capability\ncuring high resolution dynamics and the\nexecution of intricate\
+    \ tasks with greater degrees of freedom.\n\n# Fabrication of the meg\n\nThe cell\
+    \ was fabricated using the procedure as for the\n. CNTs (4 wt%) were prepared\
+    \ and blended homogene\nwith PDMS. It was further added to ensure the uniformity\n\
+    of the mixture. We used PDMS Ecoflex for each\ncuring, which allowed extended\
+    \ stirring to ensure a more\ndispersion ofs. PDMS and CNTs were par-\ntially soluble\
+    \ in IPA, which could further enhance the uniformity\nof the mixture. The CNT-doped\
+    \ PDMS was degassed and\ncated onto the glass substrate. The glass\nslass was\
+    \ then plasma treated to form a CNT-\ndoped PDMS film. The underlying PI and\n\
+    Ecoflex at the layer edges were removed using mechanical\nvents. The circuit was\
+    \ then connected using silver ink\nto the interfacial spaces between the electrodes\
+    \ and the circuit\nto bond them together.\n\n# Methods\n\n# Preparation\n\nSeveral\
+    \ glass slides were cleaned using acetone, ace-\ntyl alcohol (IPA) and deionized\
+    \ water. Two glass slides were\ncoated with polymethyl methacrylate (PMMA, 940\
+    \ AA MicroChem)\nat at 2,000 rpm for 30 s, for curing on a substrate with a temperature\n\
+    of80 °C for 3 min to remove a layer. A layer of Ecoflex (00-30-Month 1) was\n\
+    coated with PDMS at 2,000 rpm for 30 s, for curing in\nof oven. The substrate\
+    \ was then coated with\npolydimethylsiloxane (PDMS, Sylgard 1844 silicone)\n10:1)\
+    \ at 2,000 rpm for 30 s, for curing at a hot plate\nat 150 °C for 20 min.\n\n\
+    Separately, polymeric (PI, HD Micros) was coated onto\nEcoflex (Oks-Mist) at 2,000\
+    \ rpm for 30 s, followed by baking on\na hot plate at 150 °C for 1 h and baking\
+    \ in a nitrogen-prote-\ncted at 300 °C for 1 h.\n\n# Fabrication of the transfer\
+    \ circuit\n\nThe PI-coated and the CNT-coated glass slides were attached\nby ultrasonic\
+    \ vibration (250 kHz, series PSX ultrasonic,\nQUASOL II, Novacosam). For 1 min,\
+    \ the PI-coated film was la-\ndered onto the coated glass slide and then patterned\
+    \ using\npulsed laser (600 W, Laser Mark's) according to\na Custom Auto Editor.\
+    \ After removing the material\nton the patterned film, it was lifted using a water-table\n\
+    ubstrate and then cured at 80 °C for 10 min. The hot plate\nwas used to reach\
+    \ 80 °C for 10 min.\n\nThe substrate-table was removed using in\ndeionized water.\
+    \ After drying, the glass film was cleaned by\nIPA. The circuit was then bonded\
+    \ with silver solder\n(MS33, LTIP). The solder was used for bonding the chips\
+    \ to the\nto the patterned film, by curing on the hot plate\nat 40 °C for 24 min.\n\
+    \nThe second layer of Ecoflex was coated at 2,000 rpm and\ncured on the first\
+    \ layer slide as the substrate for fabricating\nthe second layer. A solvent was\
+    \ then applied to remove the Ecoflex\nat at designated locations, using a solvent\
+    \ without access to in\nthe next and second layer slides. Subsequently, the solvent\
+    \ was\nremoved to reveal the first layer. The micro-circuit was pre-programmed\
+    \ using a\ncustomized evaluation approach,\n\nThe third layer was fabricated on\
+    \ an Ecoflex/PMMA-coated\nglass slide, aligned and pressed with the first and\
+    \ second\nlayers through alignment markers observed under a microscope. The\n\
+    second and third layers were cured by connecting 0.0 Ω\nresistors on a hot plate\
+    \ at 240 °C for 5 min.\n\nFinally, the transfer circuit was encapsulated by filling\
+    \ degassed\nEcoflex over the 2 glass slides that sandwiched the circuit, for\n\
+    low curing at 50 °C for 20 min. The PMMA-coated glass slides\nwere removed by\
+    \ IPA.\n\n# Fabrication of stretchable substrate\n\nFour inks were formulated\
+    \ into the stretchable substrate: Ag,\nZnO, and TiO (600 mesh). The Ag ink was\
+    \ used for the circuit,\nwhich was formed using a mixture of Ag, polystyrene-ethylene-\n\
+    (SEBS) resin toner with a weight ratio of 9.0:1.\nThe Zn ink was used for the\
+    \ substrate and was synthesized using Zn, \nZnO (25 wt% in water) with a weight\
+    \ ratio similar to Ag. The TiO ink was used as the battery\nsubstrate, prepared\
+    \ by mixing TiO2 with calcium carbonate\n(33 wt% in water) with a weight ratio\
+    \ of 9.0:12.6.\nThe TiO ink, was prepared as the separator using, Triton X-104,\n\
+    SEBS (40 ml in water) and then mixed in a solvent at a ratio\nof3:1:1.1.5. Each\
+    \ ink was used as the separator, poly vinyl\nacetate (PVA) was dissolved in 9.1\
+    \ ml deionized water at 90 °C. The\nis then mixed with 14 M NaOH solution (16.7\
+    \ wt%) and cured-\nto get about 67% of the original yield, using a hydrated PVA.\
+    \ The PVA\nwas then cast onto the substrate to form the electrolyte\ncured at\
+    \ 80 °C for 12 h (6 h).\n\n# Characterization of the battery performance\n\nThe\
+    \ power consumption of the sensors was characterized using a\npower meter (Nordic).\
+    \ An electrochemical cycling was performednusing an Arabic electrochemical cell\
+    \ at 2.2 c over 60 cycles under\nbending, stretching and strain conditions (Fig.\
+    \ 1c). The\nvoltage was 2.6 V (discharge) and 3.3 V (charge). Moreover,\nwe also\
+    \ measured the capacity of the battery when placed\nion on a hot plate maintained\
+    \ at 37 °C and its history\nlow over time (Data Fig. 1).\n\nTo assess the battery\
+    \ performance, it was needed to connect\nboth the battery and the test system\
+    \ (Instruments CT2001)\nto monitor voltage variations over time. To simulate skintemperature,\n\
+    the battery was then placed on a hot plate maintained at 37 °C\n(Supplementary\
+    \ Fig).\n\nNature Sensors"
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Article
+
+
+    # Mechanical simulation
+
+
+    The commercial software ABAQUS was used to predict deformation and evaluate the
+    streptability of interface connections between each layer (Extended Fig. 2). Two
+    Cu/PL laminates were modeled using four-dimensional shell elements².
+
+
+    An explicit solver was used to ensure convergence in involving intricate contact
+    areas with the serpentine interconnections.
+
+
+    Cu was used to evaluate the mechanical properties using an elastic modulus of
+    110 GPa, Poisson''s ratio of 0.34 and a strength of 350 MPa (-0.3 yield). The
+    mechanical behavior of the elastomer (Ecoflex), and the substrate, was modeled
+    using a hyperelastic viscoelastic model.
+
+
+    This relationship was evaluated with an elastic modulus of 10 GPa and a Poisson''s
+    ratio of 0.49. For Ep, an elastic modulus of 2.5 GPa and a Poisson''s ratio of
+    0.27 were used. A rigid and frictionless contact model described interactions
+    between the serpentine interconnections and elastomer.
+
+
+    Boundary conditions were implemented on the two vertical edges of the model. Specifically
+    the displacement constraints were prescribed as follows: (uₓ, 0) for the left
+    side and (uₓ, ε*L) for the right side, where ε* is the strain applied along the
+    length of the model and L is the length of the model.
+
+
+    # Bluetooth characterization
+
+
+    The Bluetooth signal was characterized using the received signal strength meter.
+    Measurements were conducted through the Bluetooth scanner. To ensure data accuracy
+    and reliability, the received signal strength value was recorded 15 times under
+    each specified condition (Fig. 1, Extended Fig. 3 and Supplementary Fig. 37).
+
+
+    # Thermal characterization
+
+
+    Thermal images were captured by a thermal camera (FLIR C Series) after activating
+    the sensors. Images were recorded every 10 minutes during different conditions
+    (Fig. 4 and Supplementary Fig. 4).
+
+
+    To assess actual conditions, a thermocouple (a sensor) was placed between the
+    active and the skin to monitor temperature during continuous operation (Supplementary
+    Fig. 4).
+
+
+    # Signal processing of EMG signals for differentiating grasping and relaxing
+
+
+    Raw EMG signals are susceptible to low frequency artifacts and noise. To mitigate
+    these interferences, we used a digital 30 –200 Hz bandpass filter and a 6 Hz notch
+    filter.
+
+
+    The root mean square (RMS) of the EMG signals was calculated by:
+
+
+    ```
+
+    EMG_{RMS} = \sqrt{\frac{1}{N}\sum_{i=1}^{N} EMG^{2}(i)}
+
+    ```
+
+
+    where N represents the length of the signal and EMG denotes the magnitude of the
+    RMS data points. The value represents the power of the EMG signal during a short
+    duration: duration for grasping and relaxing.
+
+
+    When the window length increases, we capture more of the signal but reduce resolution.
+    We used a window of 200 ms to achieve a balance. The RMS value exceeded 0.2 μV
+    when the robotic finger performed grasping, and conversely, relaxed when the value
+    was below the threshold (Fig. 4b and Extended Data Figs. 7–10).
+
+
+    To account for individual variations in muscle tone, which can influence EMG amplitudes,
+
+
+    we implemented an individual-specific calibration strategy to reliably distinguish
+    grasping from relaxing – specifically for each individual, EMG
+
+
+    signals were recorded during baseline and grasping actions (each lasting: -2 s
+    to 10 cycles). The RMS of the baseline during grasping and relaxing (V_{baseline}
+    and V_{grasping}) were measured.
+
+
+    V_{threshold} = 0.5 × (V_{baseline} + V_{grasping}),
+
+
+    This calibration consistent recognition performance across individuals with varying
+    signal quality.
+
+
+    # Characterization of electrode conductivity, impedance and signal quality
+
+
+    The impedance of the test electrode was measured using a digital multimeter (Keysight).
+    Impedance was measured using a bioimpedance analyzer (AD-594B02) in a three-electrode
+    configuration (that, is, reference and counter electrodes).
+
+
+    Measurements were conducted under specific conditions, ringing and vibration conditions
+    (Supplementary Fig. 1).
+
+
+    The impedance of the EMG was evaluated by quantifying the signal-to-noise ratio
+    during grasping, ringing and vibration (Supplementary Fig. 11). In each test,
+    the individual performed hand relaxing and grasping force of –n N.
+
+
+    # Characterization of electrode-skin interface
+
+
+    The impedance at the electrode-skin interface was measured using a Palenostat
+    with a three-electrode configuration (Supplementary Fig. 2). The device maintains
+    a stable pressure.
+
+
+    This setup enabled characterizing the impedance of the working electrode-skin
+    interface, while the counter electrode circuited the circuits. The three electrodes
+    were laminated onto the flexible polymer substrate with a 2 cm spacing.
+
+
+    We utilized the galvanic impedance spectroscopy over a frequency range of 0.1
+    Hz to 10 Hz, to ensure stability for the body. The units were tested under various
+    conditions, the electrode-skin interface was submerged in seawater collected from
+    the San Diego Mission.
+
+
+    # Stability of the sensor performance
+
+
+    To evaluate the sensors'' long-term term performance during interactive activities,
+    we conducted experiments over five days. The experiments were performed on the
+    individuals, where the EMG module recorded signals induced by grasping and hand.
+    The recorded signal was analysed using power spectral density analysis (Supplementary
+    Fig. 12).
+
+
+    Performance under varying temperature and humidity conditions was assessed by
+    baseline noise levels. The sensors were placed on a hotplate at different temperatures
+    while kept stationary. Additionally, the sensors were tested under varying humidity
+    levels during measurement (Supplementary Fig. 13).
+
+
+    To characterize the effect of pressure on signal quality, we measured EMG for
+    15 min and 30 min during short-term runs. In each session, the individual performed
+    hand relaxing and grasping force of –n N (Supplementary Fig. 14).
+
+
+    # Generation of the corpus training dataset
+
+
+    The individual performed each gesture 20 times while sitting. Each session was
+    recorded independently with 18 different motor motions, including grasping, ringing,
+    vibration and their combinations at different stages, with a duration of 1 s (Fig.
+    3a and Extended Data Fig. 4). To address the influence of orientation and the
+    morphology of the gesture signals, each gesture was also performed motion artifacts
+    related to vibration (without those from grasping) (Supplementary Fig. 15).
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41468-025-00001-3
+
+
+    All superimposed signals used in the dataset were unique and non-repetitive (which
+    accommodates variability in both signals and motion), preventing the model from
+    overestimating recurring patterns.
+
+
+    In addition, to reduce the orientation differences between superimposed motions
+    and the gesture signals collected during different motion aspects (gestures used
+    for training), we adopted two measures: first, during the training, we maintained
+    a palm-down posture, matching the orientation used during real-world gesture execution.
+    Second, we filtered the baseline component from the acceleration in motion before
+    preprocessing (note that accelerometers have gravity bias), which reduces the
+    orientation disparity; thereby aligning the superimposed signals with real world
+    gesture signals collected under motions.
+
+
+    MATLAB was used for TCP/IP communication (Supplementary Fig. 27). In demonstrations,
+    the beaker was at a fixed location to ensure comparison of gesture used under
+    different motion aspects, and the robotic arm could operate anywhere within the
+    workspace.
+
+
+    # Collection of superimposed sea waves
+
+
+    We generated superimposed waves in an enclosed atmosphere and monitored the wave
+    characteristics using the Scripps-Ocean Research Simulator (Fig. 5b and Supplementary
+    Fig. 30). Throughout the data acquisition, the sensors remained afloat on the
+    water surface, which emitted a dliver wave with a paddle, with the frequency adjusted
+    to vary wavelength (Supplementary
+
+
+    # Reporting
+
+
+    Further information on this research is available in the Nature Research Report
+    Linking to this article.
+
+
+    # Process for training learning
+
+
+    For training, we collected data from 6 subjects (5 males and 1 female, aged 21
+    to 34) with different motion speeds and forearm lengths (40-50 cm). The data from
+    five individuals were used to train the CNN, while the sixth was used for fine-tuning.
+    During the testing phase, we used the CNN to determine the output. Notably, 100
+    sequences were randomly selected to evaluate the performance of the CNN (Fig.
+    3c and Extended Data Fig. 5). This cross-validation approach separates training
+    and testing, preventing any data leakage during the process.
+
+
+    # Data availability
+
+
+    The material and resources supporting this findings are available upon request.
+    The raw data can be found in the Source Data files. Source data are provided with
+    this paper.
+
+
+    # Code availability
+
+
+    The codes used in gesture recognition and transfer learning are found in a publicly
+    accessible repository (https://github.com/zIou/mm/main).
+
+
+    # Generation of the generated signals
+
+
+    # References
+
+
+    Each superimposed signal was generated for 19 superimposed gestures (including
+    both identical and different gestures), which produced 342 concatenated signals
+    (19 superimposed signals with 8 cm of motion for setting or lowering gestures).
+    For each gesture, a randomly weighted segment was concatenated into segments,
+    yielding a total of 2,280 segmented motions with signals (Fig. 3F, Extended Data
+    Fig. 6 and Supplementary Fig. 4).
+
+
+    In total, 2,470 signals were generated per gesture, comprising 95 superimposed
+    signals and 95 from lying down without motion, 2,280 segmented motions with signals.
+    Across all 19 gestures, a total of 46,930 signals were generated per iteration.
+    The dataset was split into training, validation and testing sets at a ratio of
+    70%:15%:15%. Performance was evaluated across 15 independent runs.
+
+
+    +   1. Simponatto, J. R., et al. An epidermal pathway for the monitoring of hemodynamics
+    and metabolic biomarkers. Nat. Bio, 55, 738-745 (2023)
+
+
+    +   2. Wang, X., et al. Continuous monitoring of deep-tissue hemodynamics with
+    ultrasonic phased arrays. Nat. Eng, 5, 749-758 (2018)
+
+
+    +   3. Zhang, J., et al. Smart soft contact lenses for monitoring of intracranial
+    pressure in glaucoma case. Conn. Ophthalmol., 12, e02110 (2022).
+
+
+    +   4. Manassak, L., Lin, N., Lennon, A., Wang, J., & Dahlin, R. Energy harvesting
+    autonomous sweat-based wearable sensors. Nat. Mater., 33, 1009-9 (2020).
+
+
+    # Control of the robot
+
+
+    To ensure sensor orientation, the individual maintained a palm-down orientation
+    during the robotic control. This was necessary because six gestures involved the
+    palm (that, is, wrist rotation). Maintaining a constant orientation minimized
+    motion artifacts caused by gravity.
+
+
+    IMU and EMG data from the wearables were sent to a USB receiver and processed
+    by MATLAB on a computer. The segmented CNN signals were generated using a sliding
+    window (25 ms step) and then sent to an online CNN in Python. The model was chosen
+    after three consecutive independent predictions, and the predicted results were
+    sent back to MATLAB to control the robotic arm, which executed commands within
+    the desired state. In addition, the EMGs were acquired and filtered in MATLAB
+    to control the grasping of the robotic gripper based on the RMS values. The communication
+    between Python and
+
+
+    +   5. Gao, W., et al. Fully integrated wearable sensors for sensing and harvest.
+    Nat. Nature, 529, 509-514 (2019)
+
+
+    +   6. Li, C., et al. Wearable-smart electronics for wrist sensing and harvesting.
+    Nat. Human Interact, 7, 13319 (2021)
+
+
+    +   7. Liu, R., Wang, Z., Fukuda, K., & Seymour, M. Flexible soft-power sensors
+    for wearable. Nat. Mater., 7, 870-886 (2022)
+
+
+    +   8. Li, H., Zhang, J., Chen, Q., & Wang, Y. Stretchable stability and flexibility
+    of wearable electronics devices. Journal Materials 3, 613-619 (2019)
+
+
+    +   9. Sun, Z., Zhou, M., Xian, X., & Lee, C. Augmented tactile-perception and
+    haptic-feedback rings as interfaces for immersive interactions. Nat. Communication,
+    13, 5224 (2022)
+
+
+    +   10. Kwon, Y.-J., et al. All-printed nanomowires with biocompatible electronic
+    skin for multimodal human interface. Nat. Communication, 11, 3450 (2020)
+
+
+    +   11. Liu, Y. et al. Electronic skin as human-machine interface for robotic
+    VR. Sci. Adv., 8, e6700 (2022)
+
+
+    # Natural Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41467-020-00501-3
+
+
+    13. Lee, Y. et al. Fiber-optic motion tracking with robustness against collision,
+    interference, and contact. Sci. Robot. 6, e13b151 (2020).
+
+
+    35. Chen, X. et al. Fabric-subsurface capacitive biospectral sensors enhanced
+    by dielectric nanoparticles. Nature Res. 14, 3285–3292 (2020).
+
+
+    14. Cournay, J.-N., Cordell, J., Flynn, B., Sanchez, J. T. & Garner, P. IMU sensor-based
+    electro goniometer for clinical finger movement analysis. IEEE Trans. 11, 1273–1281
+    (2021).
+
+
+    36. Jung, H.-C. et al. CNT/PVDFMS composite flexible dielectrofor for-freq ECG
+    monitoring. IEEE Trans. Biomed. Eng. 69, 1472–1479 (2022).
+
+
+    15. Chun, K. S. et al. A skin-configurable wireless sensor to objectively quantify
+    properties of sweat. Sci Adv. 7, eab99405 (2021).
+
+
+    37. Bhardwaj, R., Kumar, N. & Kumar, V. Errors in micro-mechanical systems inertial
+    measurement and a review of present methods of training. Int. Meas. Control. 40,
+    971–978 (2013).
+
+
+    16. Li, S., Zhang, J., Zhang, Y. & Zhu, R. A wearable motion capture device to
+    detect motion of human limbs. Nat. Commun. 11, 5615 (2020).
+
+
+    38. Ho, Y. & Woolley, S. The real-world cross-entropy loss function: monitoring
+    the costs of mislabeling. IEEE Access 8, 4806–4813 (2020).
+
+
+    17. Priorietti, T. et al. Construction of a multi-joint soft robot for rehabilitation
+    and assistance. IEEE Robot. Autom. Lett. 6, 2381–2388 (2021).
+
+
+    39. Shin, D. et al. Deep convolutional networks for computer-detected action:
+    CNN datasets, characteristics and transfer learning. IEEE Trans. Med. 35, 1285–1296
+    (2016).
+
+
+    18. Kang, P., Li, J., Fan, B., Zhang, S. & Shu, P. Wrist-band wrist gesture recognition
+    while using wearable technology. IEEE Int. J. Technol. 6, 5515–5522 (2027).
+
+
+    Wen, F., Zhang, J., The X. & Lee, C. Aligned signal recognition for VR body interaction
+    using wearable smart glove. Nat. Commun. 12, 5378–5385 (2021).
+
+
+    19. Lee, Y. K., Kim, K. & Lee, S. Soft-type finger gesture recognition using 6-axis
+    inertial measurement unit for muscle monitoring. Proc. Technol. Innov. 14, 16–21
+    (2022).
+
+
+    41. Kemal, A., Antoluneiz, D., Turiel, J., Fraile, J. & De La Fuente, V. A versatile
+    embedded platform for bio-cooperative operation in closed-loop neuro rehabilitation.
+    IEEE Access 15, 35726–35736 (2023).
+
+
+    20. Wen, H., Ramos, J., Ortiz, M. Jonex robotic assessment for stroke rehabilitation.
+    In Proc. 2021 IEEE Conference on Human Assistance in Computer Systems 3847–3851
+    (Association for Computing Machinery, 2021).
+
+
+    42. Tanchana, E., Zhu, R., Zhang, S. & Ali, G. A general-purpose-based feedback
+    system for postoperative wearable sensors. Adv. Invent. 5, 2300207 (2023).
+
+
+    21. Jin, Y., Sun, W., Tat, T. & Chen, J. Motion robotic assessment for stroke
+    rehabilitation. Scientific Reports, 12, 17433 (2022).
+
+
+    43. Troyon, J. R., Ali, L. Classification of task using using deep learning on
+    EEG signal. IEEE Trans. Neural Eng. 51, 5001–5012 (2020).
+
+
+    22. Jeong, H. et al. Differential cardiogram monitoring system for artifact-free
+    physiological tracking of athletes, and COVID-19 patients. Sci Adv. 7, eab30952
+    (2021).
+
+
+    44. Ghorbani, S., Shahmoradi, M. Multi-of target tracking classification of autonomous
+    underwater vehicles. Ocean Eng. 96, 60–75 (2019).
+
+
+    23. Jeong, H. et al. Mineralized wireless, integrated-sensor network for sweat
+    monitoring and fitness analysis. Nat. Sci. Adv. 11, e1294518 (2025).
+
+
+    45. McMahon, J. & Price, A. Data communication with deep learning for constrained
+    environments in underwater vehicles. IEEE Robot. 6, 1832–1839 (2021).
+
+
+    24. Capriglio, E. et al. Experimental analysis of filtering algorithms for IMU-based
+    applications virtual reality. IEEE Trans. Med. Eng. 68, 2742–2753 (2021).
+
+
+    46. Jacobson, M. Autonomous inspection of underwater structures. Robot Autom.
+    Syst. 67, 8–20 (2019).
+
+
+    25. Lee, K. et al. Mechanoacoustic sensing of physiological processes and motions
+    by soft wireless device placed at the suprastral notch. Nat. Biol. Eng. 8, 148–158
+    (2020).
+
+
+    47. Delmirico, J. et al. A review of current state and future outlook of remote
+    sensing. Sensors, 19, 1171–1119 (2019).
+
+
+    26. Franklin, D. et al. Synchronized wearable devices for the detection of heart
+    arrhythmias using optical photoplethysmography. Phot. Med. Biol. 102, 1229–1243
+    (2021).
+
+
+    48. Lindroth, S. & Leijsson, M. Offshore power measurements – a review. Sustain.
+    Energy Rev. 19, 4274–4285 (2021).
+
+
+    27. James, C. J., Hart, M., Jones, R. D., Penny, P., & Carroll, J. Multifrequency
+    adaptive noise cancellation applied to the EEG. IEEE Trans. Neural Eng. 47, 1065–1073
+    (2000).
+
+
+    49. Kota, P. D. & Zhang, G. A. Airy wave theory for healthy brain-computer interfaces.
+    International Journal of Electronics 1972, 4045–4018 (2018).
+
+
+    28. Voznesensky, A. & Kaplin, L. Deep learning adaptive classification algorithms
+    based on IDD. IEEE Access 7, 17313–17321 (2019).
+
+
+    50. Huang, J.-C. & Chu, Y.-C. Fabrication of a flexible and flexible carbon-film
+    sensor for electroelectronics and its application in smart electronics. ACS Advances
+    6, 6360–6376 (2020).
+
+
+    29. Dickinson, J., McCarthy, P. K. & V. Stafanovich. Non-linear decomposition:
+    a routine-sublet, adaptive decomposition method. Phys. Rev. D 92, 023012 (2015).
+
+
+    51. Hu, J., Lin, S. & Sun, G. IEEE Conference on Computer Wireless Networks and
+    Pattern Recognition 7132–7137 (2018).
+
+
+    30. Zare, M. & Nouri, M. End-to-end neural network for image classification using
+    a new convolutional-based spatial method. Sci Reports 10, 16623 (2020).
+
+
+    52. Li, Y., Shen, J. & Zheng, G.-J. Comprehensive properties and challenges for
+    communication of wireless sensor networks. IEEE Commun. Mob. Commun. Mag. 8, 997–9994
+    (2008).
+
+
+    31. Sun, W., Su, Y., Wu, X. & Xu, A. A novel end-to-end 1D-ResNet model to remove
+    artifact from EEG signals. Neural networks. 404, 108–121 (2021).
+
+
+    53. Chite, M., Mahobavadi, S. & Soojanjani, M. Underwater acoustic communication
+    networks: reviews and future challenges. Technol. Method. Sci. J. 42, 103 (2023).
+
+
+    32. Huang, J. et al. Three-dimensional integrated tactile electrodes. Nat. Electron.
+    1, 473–480 (2018).
+
+
+    54. Zeng, Z., Fu, S., Zhang, H., & Zheng, Y. A survey of underwater optical wireless
+    communications. IEEE Commun. Surviv. Tutor. 19, 204–238 (2016).
+
+
+    33. Wu, H. et al. Materials, devices and skin-on electrodes for electrophysiological
+    monitoring and human-machine interfaces. Adv. Sci. 6, 20190018 (2019).
+
+
+    55. Main, A. et al. A wearable biosensing system with in-adaptive deep learning
+    for gesture recognition. Nat. Electron. 4, 564–565 (2023).
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41468-025-00001-3
+
+
+    +   56. Gao, X. A wearable eyewear system based on a single transducer. Nat. Electron.
+    7, 1035–1046 (2021).
+
+
+    +   57. Hu, H. et al. Structural ultrasonic transducer arrays for three-dimensional
+    imaging on complex surfaces. Science. 324, eaar3979 (2009)
+
+
+    +   58. Kim, J. H. et al. Cost-effective method of highly conductive and elastic
+    carbon nanotube/polydimethylsiloxane composite for wearable electronics. Sci.
+    Rep. 8, 1375 (2018)
+
+
+    +   59. Lee, N. Park, and C. Whitesides, G. M. Solvent compatibility of poly (dimethylsiloxane)
+    biofluidic devices. Anal. Mater. 75, 6554–6554 (2023)
+
+
+    +   60. Yin, L. et al. An epidermal sweat sensing platform with an printed battery
+    and electrochrom display. Nat. Electron. 5, 694–705 (2022).
+
+
+    +   61. Yin, L. et al. High performance Ag-Zn barrier for flexible electronics.
+    Sensors 2, 228–248 (2021).
+
+
+    +   62. Song, H. et al. High-integrated, miniaturized electronic systems based
+    on soft-layer multilayer network. Sci. Mater. 8, 8385s (2022).
+
+
+    +   63. Ershad, F. et al. Ultrasonic draw-on-skin electronics for multifunctional
+    tactile arrays and point-to-cell interfaces. Communication. 11, 11823 (2020).
+
+
+    +   64. Bai, Y. et al. Adaptive 60Hz noise reduction with a notch filter for ECG
+    signals. In Proc. 2021 IEEE International Instrumentation and Measurement Conference
+    1706–1711 (IEEE, 2021).
+
+
+    +   65. Lawrence, J. H. and J. L. Du, Microneedle sensors for force relationship
+    with human muscles. J. Appl. Phys. 54, 1653–1659 (1998).
+
+
+    +   66. Takagi, H. et al. Structural analysis of EMG signal. Clin. Neurophys.
+    34, 243–258 (2020).
+
+
+    +   Makinen, N., Karthick, P. A. and Smithian, R. Analysis of EMG signal variations
+    in footing configurations of muscles using training network approach. IEEE Trans.
+    Instrum. Mechat. 70, (2023).
+
+
+    +   Xu, L. et al. Integrated strain sensor for the monitoring of body activity
+    and sweat in sweat. Nat. Biol. Eng. 7, 1307–1320 (2023).
+
+
+    +   69. Cho, K. et al. Latency performance of Bluetooth low energy (BLE) networks.
+    Sensors 15, 59–78 (2015).
+
+
+    Simulator at Scripps Ocean. The work was sponsored by DARPA (contract number HRO200100095).
+    The content is the responsibility of the authors and does not represent the official
+    views of DARPA. All biological experiments conducted accordance with ethical guidelines
+    approved by the Institutional Review Board of University of California Diego.
+
+
+    # Author contributions
+
+
+    X.C., Y.L., and S.D. designed the research. X.C., Y.L., M.Q., G.Z., F.Y., and
+    S.Z. developed the deep learning algorithms. X.C., Y.L., and S.Y. analyzed the
+    data. X.C., Y.L., and X. wrote the paper. All authors provided constructive and
+    valuable feedback.
+
+
+    # Competing interests
+
+
+    The authors declare no competing interests.
+
+
+    # Additional information
+
+
+    Extended data is available at this paper at https://doi.org/10.1038/s41468-025-00001-3.
+
+
+    Supplementary information The online version contains supplementary material available
+    at https://doi.org/10.1038/s41468-025-00001-3.
+
+
+    Correspondence and requests for data should be directed to Josef Wang or Shen
+    Xu.
+
+
+    Peer review information Nature Sensors thanks Chiwan Lee and the other, anonymous,
+    reviewer(s) for their contribution to the peer review of this work.
+
+
+    Reprints and permissions information is available at www.nature.com/reprints.
+
+
+    Springer Nature or its licensor (e.g. a society or other partner) holds rights
+    to publish this under an agreement with the accepted(s) or other rightsholder(s);
+    self-authoring of the accepted manuscript version of this article is solely governed
+    by the terms of such agreement and applicable law.
+
+
+    We thank Z. Yang. and X. Huang for guidance on the circuit design and microcontroller
+    unit: A. Iqbal, for concerning mechanical design; D. Strokes, G. Dean, R. Kly
+    and R. Reinisenberg for help with the Scripps Ocean-Atmosphere Research
+
+
+    # Acknowledgements
+
+
+    *Materials Science and Engineering Program, University of California San Diego.
+    La Jolla, CA, USA. *Aife Yofeng Li Family Department of Chemical and Nano Engineering,
+    University of California San Diego. La Jolla, CA, USA. *Department of Electrical
+    and Computer Engineering, University of California San Diego, La Jolla, CA, USA.
+    *Department of Mechanical and Aerospace Engineering, University of California
+    San Diego, La Jolla, CA, USA. *Terasaki Institute for Biomedical Innovation, Los
+    Angeles, CA, USA, *Shu Chen–Gene Line Department of Bioengineering, University
+    of California San Diego, La Jolla, CA, USA. *These authors contributed equally:
+    Xiangjun Chen, Zhiyuan Lu, Xiaochao Gao, Jin Lu. E-mail: josephwang@ucsd.edu;
+    shenxu@ucsd.edu
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Article
+
+
+    https://doi.org/10.1038/s44460-025-00001
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_13_0.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_13_1.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_13_2.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_13_3.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_13_4.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_13_5.png)
+
+
+    **Extended Data Fig. 1 | Characterizations of the stretchable battery under various
+    states.** a. Undeformed, b. 25% Stretching, c. Twisting, d. Bending, Owing to
+    its soft constituent materials, the battery exhibits remarkable durability under
+    extensive mechanical deformations. e. Output voltage stability under cyclic mechanical
+    deformations. The output voltage remained steady at -3.1 V
+
+
+    with minimal fluctuation. f. Long-term stability test of the hydrogel within the
+    battery. The hydrogel exhibits excellent stability due to its enclosed nature,
+    negligible weight loss observed over five days when the battery is placed on a
+    hotplate maintained at 37 °C.
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Article
+
+
+    https://doi.org/10.1038/s44460-025-00001-3
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_14_0.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_14_1.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_14_2.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_14_3.png)
+
+
+    **Extended Data Fig. 2.** Uniaxial horizontal stretchability of the sensors. **a**,
+    Photos of the sensors under horizontal 100-cycle stretchability test from 0 to
+    20%. **b**, Photos of the sensors under vertical 100-cycle stretchability test
+    from 0 to 20%. **c**, Finite element analysis of each layer in the sensors under
+    25% uniaxial stretching. The analysis confirms that the maximum strain does not
+    exceed 6.3%, indicating that the Ga electrodes remain well within their elastic
+    limit and
+
+
+    do not yield or undergo plastic deformation. To mitigate computational load, mechanical
+    simulations were performed on layers layers than the entire assembly. In the actual
+    sensors, vertical interconnect accesses layers can lead to localized strain concentrations
+    when stretched. Consequently, the simulations assumed a higher stretchability
+    (25%) than the cyclic mechanical test (20%).
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Article
+
+
+    https://doi.org/10.1038/s44460-025-0001-9
+
+
+    a
+
+
+    Original
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_15_0.png)
+
+
+    Stretch
+
+
+    5 mm
+
+
+    10%
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_15_1.png)
+
+
+    After 100 times
+
+
+    b
+
+
+    -20
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_15_2.png)
+
+
+    -30
+
+
+    -40
+
+
+    -50
+
+
+    -60
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_15_3.png)
+
+
+    15%
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_15_4.png)
+
+
+    After 100 times
+
+
+    RSSI (dBm)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_15_5.png)
+
+
+    0%
+
+
+    10%
+
+
+    15%
+
+
+    20%
+
+
+    Level of bi-axial stretching
+
+
+    20%
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_15_6.png)
+
+
+    After 100 times
+
+
+    Extended Data Fig. 3: Biaxial cyclic stretchability test of the sensors.
+
+
+    a. Photos of the sensors under simultaneous 100-cycle tensile forces along both
+    vertical and horizontal directions up to 200%, showing plastic deformation after
+    300 cycles of biaxial stretching tests, which demonstrates the robustness of the
+    design. b. Bluetooth signal strength under bi-axial stretching. The RSSI consistently
+    remained above -60 dB across all tested levels, indicating stable and continuous
+    wireless communication. Two competing effects influence signal strength during
+    stretching. First, mechanical strain increases the resistance of the interconnects,
+    leading
+
+
+    to transmission loss (there is, reduced signal strength). Second, as the device
+    stretches, the antenna beam progresses away from nearby electronic components,
+    reducing parasitic capacitance and thereby decreasing signal loss (that is, improved
+    signal strength). Due to these opposing effects, the signal strength initially
+    decreases from increased resistance and subsequently increases as parasitic loss
+    diminishes. The graph presents the average values, with error bars indicating
+    the standard deviation (n = 15 independent measurements).
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Article
+
+
+    20 signals of gesture 2 while sitting
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_16_0.png)
+
+
+    Motion artifacts induced by running
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_16_1.png)
+
+
+    Motion artifacts induced by high-frequency vibrations
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_16_2.png)
+
+
+    Motion artifacts induced by the combination of high-frequency vibrations and running
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_16_3.png)
+
+
+    18 superimposed signals
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_16_4.png)
+
+
+    **Extended Fig. 4:** Illustration of the process for generating the composite
+    dataset (for example, gesture 2) with 20 signals of gesture 2 recorded while sitting.
+    **b.** Motion artifacts induced by running. These motion artifacts are divided
+    into six stages with each stage lasting 1 s. **c.** Motion artifacts induced by
+    high-frequency vibrations. These motion artifacts are divided into six stages
+    with each stage lasting 1 s. **d.** Motion artifacts induced by the combination
+    of high-frequency vibrations and running. These motion artifacts are divided into
+    six stages with each stage lasting 1 s. **e.** Superimposed signals for training.
+    The superimposed signals are generated by adding motion artifacts to the gesture
+    signal (for example, a signal of gesture 2) superimposed with 18 stages of motion
+    artifacts in **b** and **d**. The stages are fixed rather than by randomly selecting
+    segments from continuous motion artifact recordings. Since random selection can
+    unintentionally introduce overlapping segments, where identical portions of motion
+    artifacts appear in multiple superimposed signals, using fixed stages is key to
+    extracting generalizable features. Otherwise, the model may learn to recognize
+    repeated motion artifact patterns instead. To mitigate this, we deliberately divided
+    the motion artifacts into distinct, non-overlapping stages.
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41467-025-0003-3
+
+
+    # a One-shot training
+
+
+    # b Three-shot transfer learning
+
+
+    # c Four-shot transfer learning
+
+
+    Prediction (gesture number 1-19)
+
+
+    Prediction (gesture number 1-19)
+
+
+    Prediction (gesture number 1-19)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_17_0.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_17_1.png)
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_17_2.png)
+
+
+    Minimum accuracy: 69%
+
+
+    Minimum accuracy: 92%
+
+
+    Minimum accuracy: 93%
+
+
+    **Extended Data Fig. 5: Efficacy of transfer learning across different numbers
+    of gestures.** Confusion matrices of the prediction results are based on a, one-shot,
+    b, three-shot, and c, four-shot transfer learning for gesture recognition. In
+    one-shot transfer learning, the minimum observed accuracy is 69% for gesture 5,
+    which is considered suboptimal. This limitation is attributed to the fact that
+    a single gesture signal is obtained from an individual only one posture: either
+    sitting or lying down. When two or more shots are used in transfer learning, gesture
+    signals during both sitting and lying down are collected. As a result, the recognition
+    accuracy can stabilize and converge. Therefore, two-shot transfer learning has
+    been adopted because it balances the time for collecting signals and the accuracy
+    (Fig. 3c).
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Article
+
+
+    https://doi.org/10.1038/s44160-025-00001-3
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_18_0.png)
+
+
+    **Extended Data Fig. 6,** Illustration of the process for generating the segmented
+    signals for one gesture (example, gesture 2) while sitting. **a**, 19 concatenated
+    signals (for example, superimposed with running motion artefacts). These signals
+    are generated by connecting one superimposed signal **b**, Each concatenated gesture
+    signal end-to-end with 19 different types of signals. Each five segmented signals
+    by the sliding window. Each segmented signal is labeled based on the gesture signal
+    that occupies more than 50% of the window duration.
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41467-025-00003-3
+
+
+    Extended Data Fig. 7 | Robotic arm control amidst high-frequency motion artifacts.
+    The individual utilizes a muscle-massage gun to generate high-frequency motion
+    artifacts. Leveraging the trained CNN, the system achieves precise prediction
+    accuracy for controlling the robotic arm. Furthermore, the
+
+
+    robotic gripper can perform accurate grasping and releasing actions based on EMG
+    signals. A glass vial is grasped and moved to a designated location accurately
+    to pour water into a beaker.
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# Article
+
+
+    https://doi.org/10.1038/s44460-025-0003-3
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_20_0.png)
+
+
+    **Extended Data Fig. 8** | Robotic arm control under a different posture. The
+    change in posture results in distinct IMU signal waveforms, attributed to the
+    variations in orientation relative to gravity. Utilizing the trained CNN, the
+    system maintains high prediction accuracy during robotic arm control. A glass
+    vial is grasped and moved to a designated location accurately to pour water into
+    a beaker.
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41467-025-0003-3
+
+
+    ![](img/a586d877770d9adbdea6809f1986596b_21_0.png)
+
+
+    Extended Data Fig. 9: Robotic arm control under the combination of a different
+    posture and high-frequency vibrations. Utilizing the trained CNN, the system maintains
+    high prediction accuracy in controlling the robotic arm even while the individual
+    is lying down and experiencing high-frequency vibrations simultaneously. A glass
+    vial is grasped and moved to a designated location accurately to pour water into
+    beaker.
+
+
+    Nature Sensors'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "# Article\n\nhttps://doi.org/10.1038/s44460-025-0003-3\n\n![](img/a586d877770d9adbdea6809f1986596b_22_0.png)\n\
+    \nExtended Data Fig. 10 | Robotic arm control during running and high-frequency\
+    \ vibration. Utilizing the trained CNN, the system maintains high prediction accuracy\
+    \ in controlling the robotic arm even when the individual is running and experiencing\
+    \ high-frequency vibrations. A glass vial is grasped and moved to a designated\
+    \ location accurately to pour water into a beaker.\n\n+   Beaker $\rightarrow$\
+    \ Grasping/releasing $\rightarrow$ Leftward/rightward forearm rotation $\rightarrow$\
+    \ Upward/downward forearm rotation $\rightarrow$ Wrist rotation\n\nNature Sensors"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# nature portfolio
+
+
+    Corresponding author(s): Sheng Xu
+
+    Last updated by author(s): Aug 25, 2025
+
+
+    # Reporting Summary
+
+
+    Nature Portfolio wishes to improve the reproducibility of the work that we publish.
+    This form provides structure for consistency and transparency in reporting. For
+    further information on Nature Portfolio policies, see Editorial Policies and the
+    Editorial Policy Checklist.
+
+
+    # Statistics
+
+
+    For all statistical analyses, confirm that the following items are present in
+    the figure legend, table legend, main text, or Methods section.
+
+
+    +   - Confirmed
+
+    - The example size (n) for each experimental group/condition, given as a discrete
+    number and unit of measurement
+
+    - A statement on whether measurements were taken from distinct samples or whether
+    the same sample was measured repeatedly
+
+    - The statistical test(s) USED AND whether they are: one or two-sided
+
+    - Only common tests should be described solely by name; describe more complex
+    techniques in the Methods section.
+
+    - A description of all covariates
+
+    - A description of any omissions or corrections, as these tests of normality and
+    adjustment for multiple comparisons
+
+    - A full description of the statistical parameters including central tendency
+    (e.g. means) or other basic estimates (e.g. regression coefficient) AND variance
+    (e. standard deviation) or estimates of uncertainty (confidence intervals)
+
+    - For null hypothesis testing, the test test (F, t, r) with confidence intervals,
+    effect sizes, degrees of freedom and P value noted Give values as exact whenever
+    suitable.
+
+    - For Bayesian analysis, information on the choice of priors and Markov Carlo
+    simulations
+
+    - For hierarchical and complex designs, identification of the appropriate level
+    for tests and reporting of outcomes
+
+    - Estimates of effect sizes (e.g. Cohen’s d, Pearson’s r), indicating how they
+    were calculated
+
+
+    Our web collection on statistics for biologists contains articles on many of the
+    points above.
+
+
+    # Software and code
+
+
+    Policy information about availability of computer code
+
+
+    | | |
+
+    |---||
+
+    | Data collection | Data collection of the IMU and EMG signals was carried out
+    with a personal computer. |
+
+    | Data analysis | Origin 2021b, MatLab 2020 and Python 3.9 from https://github.com/xl3lou/Hmiwithnoise/tree/tree
+    |
+
+
+    For publishing custom algorithms or software that are central to the research
+    but not published in literature, software may be made to editors and reviewers.
+    We strongly encourage code deposition in a community repository (GitHub). See
+    the Nature Portfolio guidelines for submitting code & software for further information.
+
+
+    # Data
+
+
+    Policy information about availability of data
+
+
+    All manuscripts must include a data availability statement. This statement should
+    provide the following information, where applicable:
+
+    - Accession codes, unique identifiers, or web links for publicly available datasets
+
+    - A description of any restrictions on data availability
+
+    - For clinical datasets or third party data, please ensure that the statement
+    adheres to our policy
+
+
+    The data and material resources supporting the findings of this study are available
+    within the article and supplementary materials. The raw data can be found in the
+    Source Data files.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Including human participants, their data, or biological material
+
+
+    Policy information about studies with human participants or human data. See also
+    policy information about sex, gender (identity/presentation), and sexual orientation
+    and race, ethnicity and racism.
+
+
+    Reporting on sex and gender There are one female and five males.
+
+
+    Reporting on race, ethnicity, or other socially relevant groupings
+
+
+    The subjects are Asian and American. 6 subjects, larger than 18.
+
+
+    Population characteristics
+
+
+    Consenting subjects were recruited recently within our research group. There are
+    no biases.
+
+
+    Recruitment
+
+
+    All studies on human subjects in this work were approved by the Institutional
+    Review Board at the University of California, San Diego. The informed consent
+    was obtained from each subject.
+
+
+    Ethics oversight
+
+
+    Note that full de approval of the study protocol must also be provided in the
+    manuscript.
+
+
+    # Field-specific reporting
+
+
+    Please select one below that is the best fit for your research. If you are not
+    sure, read the appropriate sections before making your selection.
+
+
+    +   * Life sciences Behavioral & social sciences
+
+    * Ecological, evolutionary & environmental sciences
+
+
+    For a reference copy of the document with all sections, see nature.com/documents/nr-reporting-summary-flat.pdf.
+
+
+    # Life sciences study design
+
+
+    All studies must disclose on these points when the disclosure is negative.
+
+
+    | Sample size | 6, based on literature introducing transfer-learning methods |
+
+    | Data exclusions | No data was excluded from the analysis. |
+
+    | Replication | For real-time robotic demonstration, the training dataset were
+    collected in one day, while the replications were conducted one week later for
+    real-time demonstration. For transfer learning, training and testing are performed
+    on the same day. |
+
+    | Randomization | The subjects were randomly selected. In this work, each subject
+    is individual and there is no need for group allocations. |
+
+    | Blinding | No blinding measures were taken deliberately, and all data were processed
+    together by multiple authors. |
+
+
+    # Reporting for specific materials, systems and methods
+
+
+    We require information about some types of materials, experimental systems and
+    methods used in many studies. Here, indicate each material, system or method listed
+    relevant to you. If you are not sure if a item applies to your research, read
+    the appropriate section before selecting a response.
+
+
+    | Materials & experimental systems | Methods |
+
+    |---|---|n| n/a Involved in the study | n/a Involved in the study |
+
+    | Antibodies | ChIP-seq |
+
+    | Eukaryotic cell lines | Flow cytometry |
+
+    | Paleontology and archaeology | MRI-based neuroimaging |
+
+    | Animals and other organisms | |
+
+    | Clinical data | |
+
+    | Dual use of research concern | |
+
+    | Plants | |'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Plants
+
+
+    # Seed stocks
+
+
+    Report on the source of all seed stocks or plant material used. If applicable,
+    state the seed stock centre and catalogue number. If plant specimens were collected
+    from the field, describe the collection location, date and sampling procedures.
+
+
+    # Novel plant genotypes
+
+
+    Describe the methods by which all novel plant genotypes were produced. This includes
+    those generated by transgenic approaches, gene editing, chemical/radiation-based
+    mutagenesis and hybridization. For transgenic lines, describe the transformation
+    method, the number of independent lines analyzed and the generation upon which
+    experiments were performed. For gene-edited lines, describe the editor used, the
+    indigenous Cas sequence targeted. The report should include details of independence
+    if the editor was integrated. Describe any authentication procedures for each
+    seed stock-used or novel genotype generated. Describe any experiments used to
+    assess the effect of a mutation and, where applicable, how potential secondary
+    effects (e.g. second site T-DNA insertions, mosaicism, off-target gene editing)
+    were examined.
+
+
+    # Authentication'
+  merge: -1
+  img_proc: true
