@@ -1,0 +1,3 @@
+where is the number of $DALYs$ is the response variable, $HDI$ the human development index where is the number of $DALYs$ is the response variable, $HDI$ the socio-demographic index acting as predictor, $f(.)$ is the function that relates the number of DALYs to the socio-demographic index, and $\epsilon$ is the error term. Big data analytics with machine learning analysis are used to classify the patterns of global disease burden by human development index (HDI) to have a better understanding of DALYs caused by infectious diseases such as COVID19 given different levels of HDI.
+
+This can help us to understand the trends and patterns of infectious diseases and their impact on global health.

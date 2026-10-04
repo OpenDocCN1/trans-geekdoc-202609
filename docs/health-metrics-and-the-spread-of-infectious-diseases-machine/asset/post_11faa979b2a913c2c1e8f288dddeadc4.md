@@ -1,0 +1,93 @@
+
+# Index
+
+# 319
+
+- Receiver Operating Characteristic (ROC), Spatial model, 190
+- Spatial models, 189
+- Receiver Operating Characteristic (ROC) Specificity, 85
+- Curve, 227 Splines, 138
+- Recovered, Stacking, 150, 240
+- Recovery rate, 227, 228 Standard life expectancy, 17, 49, 252
+- Regression, 72 Standardisation, 96
+- Regression Standardised life tables, 17 Rate for Mortality, 16
+- lasso, 104 Stationarity, 145, 146
+- ridge, 104 Regression loss functions, 91 Statistical model, 69
+- Regression models, 171 Stochastic process, 69
+- Regression models, 95 Stroke, 17, 26, 180
+- Lasso linear, 95 Sullivan's Index, 12
+- regression, 95 Summary Measure of Population Health
+- Ridge regression, 95 (SMPH), 14
+- Relative Risk (RR), 49, 63 Summary Measures of Population Health
+- Relative Risk (RR), Risk Ratio 58 (SMPH), 9
+- Relative Risks (RRs), 57 Supervised learning, 72
+- Reproduction Ratio (R0), 228 Support Vector Machines (SVMs), 91, 108
+- Resampling, 101 229, 240, 265
+- bootstrap, 101 Susceptible, 227
+- spatial, 101 Susceptible Exposed Recovered
+- stratified, 101 (SEIR), 79, 224, 234
+- Resampling strategy, 317 Susceptible Recovered (SIR), 69, 71
+- Residual Sum of Squared Error (RMSE), 157 227
+- Risk, 55 Susceptible Inceptible (SIS), 227
+- Risk exposure, 62 Sustainable Development Goals (SDG), 274
+- Risk factors, 9, 57, 63, 272 Sustainable Development Index (SDI), 277
+- Risk-outcome, 57 Temporal data, 138
+- Root Mean Square Error (RMSE), 83, 92 Temporal dynamics, 264
+- 135, 242, 264, 266 Testing, 58
+- Root-Square Error (RMSE), 108 Theoretical, Minimum Risk Exposure Levels
+- Seasonal, 138 (TMREls), 57, 63 Threshold, 229
+- Seasonality, 96, 138 TidyUniverse, 170
+- Sensitivity, 185 Time series, 96, 133, 138, 264
+- Sensitivity analysis, 96 Time cross validation, 101
+- Sensitivity, 93 Time Trade-Off (TTO), 47
+- Ever, 23, 46 Total Fertility Rate (TFR), 57, 139
+- Simulation, 41, 44, 82 Total number of person-years (Tx), 39
+- Single layer, 149 Trade-offs, 92
+- Smallnetwork, 202 Training, 82
+- Smoothing, 138
+- Socio Demographic Index (SDI), 57, 138, 230
+- Spatial analysis, 234 Transfer learning, 66, 230
+- Spatial data, 189 Transmission methods, 259, 262
+- Spatial interpolation technique (Kriging), respiratory droplets, 227
+- 207 vector borne, 227
+
+# 320
+# Index
+
+- Transmission patterns, 259
+- West Nile Virus, 227
+- Transmission rate, 228
+- White noise, 144
+- Treatment, 64
+- 
+- William Haenszel, 16
+- Trend, 96, 138
+- William Playfair, 163
+- True Negative (TN), 93
+- World Bank, 10
+- True Positive (TP), 93
+- World Geodetic System 1984 (WGS 84), 192
+- True Positive Rate (TPR), 185
+- World Health Organization (WHO), 11, 14, 19, 38, 43, 233
+- Tuberculosis, 17, 37, 152, 275
+- World Population Prospects (WPP), 217, 255
+- Tuning process, 84
+- xgboost, 136
+- Universal Transverse Mercator (UTM), 191
+- Unsupervised learning, 72
+- Years Lived with Disabilities (YLDs), 11
+- Vaccines, vaccination, 234
+- Years Lived with Disability (YLDs), 11, 15, 16, 28, 43, 46, 54, 95, 116, 152, 254, 272, 277
+- Validation, 128
+- Variability, 138
+- Years of Life Lost (YLLs), 9, 11, 15–18, 28, 38, 49, 54, 95, 116, 252, 272
+- Variogram, 208
+- Virus, 225, 226
+- Vital registration, 40
+- Yeo-Johnson transformations, 103
+- W.E.B. Du Bois, 163
+- Well-being, 12
+- Zika, 227
+- Well-being Adjusted Health Expectancy (WAHE), 14
+- Zoonosis, 232
+- Zoonotic, 232
