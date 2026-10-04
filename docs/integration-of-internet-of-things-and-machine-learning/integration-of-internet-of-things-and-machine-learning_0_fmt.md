@@ -1,0 +1,8585 @@
+
+# 物联网与机器学习的集成
+
+## 前言
+
+物联网（`IoT`）与机器学习（`ML`）的集成处于当今数字革命的最前沿。随着 `IoT` 设备的快速普及和数据的指数级增长，传统的处理和决策方法已不再满足需求。`ML` 具有提取模式、做出预测和持续适应的能力，为将原始 `IoT` 数据转换为可操作知识提供了智能支持。这两个领域的汇聚为创新创造了强大的基础，使更智能的系统、更高效的服务以及更可持续的社会成为可能。
+
+编写本书——*物联网与机器学习的集成：设计模型、架构与应用*的首要动机是捕捉这一新兴领域的广度和深度。虽然目前有许多关于 `IoT` 或 `ML` 的独立研究，但仍然缺乏侧重于两者作为统一学科进行集成的综合资源。本书通过汇聚跨基础原理、理论框架、架构、应用方法论和现实实现的贡献，响应了这一需求。它不仅是一个知识库，也是为渴望探索 `IoT` 与 `ML` 集成转型潜能的研究人员、从业者和学生提供的指南。
+
+本书的结构旨在提供逻辑流，首先从对 `IoT` 基础、架构和挑战的基础性讨论开始。这些章节为机器学习算法和模型的应用奠定了技术背景。随后，读者将接触到互补 `IoT` 系统的多样化 `ML` 范式，从经典的有监督和无监督学习方法到强化学习、深度学习和进化方法。其意在于展示每种范式如何解决 `IoT` 中的特定挑战，例如可扩展性、不确定性、能源效率以及实时决策的需求。
+
+除了技术模型外，本书深入探讨了对于实际部署至关重要的架构和设计考虑。例如，对边缘计算、云计算和混合框架的讨论说明了计算智能如何高效地分布在网络中。这些架构确保了 `IoT` 系统不仅是智能的，而且是可扩展的、韧性的且能够适应不同环境的。安全和隐私问题也得到了高度关注，因为深知智能 `IoT` 系统必须被信任并免受恶意威胁的侵害，才能获得广泛采用。
+
+本书的一大优势在于其对应用领域的关注。通过包含医疗保健、农业、智慧城市、工业自动化、可持续水资源管理、交通和环境监测的章节，本书强调了 `IoT` 与 `ML` 集成的现实影响。这些案例研究作为具体的证明，展示了理论进展如何转化为有意义的解决方案，改善生活并解决全球挑战。从用于疾病诊断的 `IoT` 医疗成像到提高作物产量的工智能（`AI`）驱动农业，书中介绍的应用展示了这一跨学科领域的多性和重要性。
+
+本书还意识到，`IoT` 与 `ML` 集成的未来远超目前的应用。新兴的前沿领域如可解释人工智能、自学习 `IoT` 系统、`AI` 辅助的人机交互以及增强安全的区块链技术，指向了更智能、更互联的未来。通过接触这些前瞻性观点，旨在启发研究人员突破边界，探索 `IoT` 与 `ML` 之间未发现的交叉领域。
+
+同样重要的是与这些技术相关的伦理和社会考量。随着 `IoT` 设备渗透到日常生活以及 `ML` 模型做出日益关键的决策，透明度、问责制、公平性和包容性问题变得不可避免。本书并未回避这些挑战；相反强调它们是负责任采用 `IoT–ML` 系统的不可或缺的一部分。通过这种方式，它鼓励读者以严谨的技术态度和伦理责任来对待创新。
+
+总而言之，这卷书是一项合作的成果。它汇集了来自不同学科和地理地区的专家的贡献，反映了 `IoT` 和 `ML` 研究真正的全球性本质。每一章都提供了独特的视角，同时共同构成了一个关于该领域现状及其未来方向的连贯叙事。本书旨在服务多种受众：作为进入该研究领域的学生的的基础，作为寻求扩展知识的研究人员的参考，以及作为旨在在现实背景中实施 `IoT–ML` 解决方案的专业人士的实用指南。
+
+我们认为这本书的出版正值一个关键时刻。世界正面临着需要智能、自适应且互联解决方案的挑战——无论是在医疗、可持续发展、城市化还是安全领域。通过记录物联网（`IoT`）与机器学习（`ML`）集成的机遇与挑战，本书旨在不仅仅是一部学术资源；它更希望成为创新、协作和负责任的技术进步的催化剂。
+
+我们希望这些页面中提出的见解能启发读者探索新途径，设计并实施具有影响力的解决方案，并为创造更智能、更互联且可持续的未来贡献力量。
+
+Mudassir Khan
+
+Fahimuddin Shaik
+
+Shaik Karimullah
+
+Suman Lata Tripathi
+
+## 关于编辑
+
+`Mudassir Khan` 目前担任沙特阿拉伯阿哈哈国王·哈立德大学（King Khalid University Abha）计算机科学系助理教授。他在沙特阿拉伯的国王·哈立德大学拥有超过 13 年的教学经验，并在国际期刊和会议上发表了 42 多篇论文。他的研究方向包括大数据、物联网、深度学习、机器学习、模糊逻辑、图像处理、网络安全和云计算。
+
+`Fahimuddin Shaik` 目前担任印度安得拉普拉什邦安纳马查亚大学（Annamacharya University）电子与通信工程系副教授。他的研究领域包括图像处理、医学成像、分割、生物医学成像、数字图像处理和计算机视觉。他在期刊和会议上发表过研究论文。
+
+`Shaik Karimullah` 目前担任安得拉普拉什邦安纳马查亚大学（Annamacharya University）电子与通信工程系助理教授。他在期刊和会议上发表了关于超大规模集成（`VLSI`）和图像处理领域的论文。他的研究方向包括`VLSI`、图像处理、无线通信和嵌入式系统。
+
+`Suman Lata Tripathi` 辛比奥斯国际大学（Symbiosis International (Deemed University)）辛比奥斯技术学院的教授，拥有超过 22 年的学术和研究经验。她在期刊和会议论文集中发表了 125 多篇研究论文。她的专业领域包括微电子器件建模与表征、低功耗`VLSI`电路设计、`VLSI`测试设计、用于物联网的先进场效应晶体（`FET`）设计、嵌入式系统设计、基于现场可编程门阵列（`FPGAs`）的可配置架构以及生物医学应用。
+
+## 贡献者
+
+- `Niharika Agrawal`
+  - EEE 学系
+  - 联盟大学（Alliance University）
+- `Samruddhi Pravin Awalekar`
+  - 自动化与机器人系
+  - Sharad 技术工程学院（Sharad Institute of Technology College of Engineering）
+- `B. Sreenivasulu`
+  - 电子与通信工程系
+  - 安纳马查亚大学（Annamacharya University）
+- `Ananthakrishnan Balasundaram`
+  - 物理物理系统中心
+  - 韦洛尔理工学院（`VIT`）
+- `Revanasiddappa Bandi`
+  - Bnm 技术学院
+  - 印度卡纳塔克邦，班加罗鲁
+- `Harpreet Singh Bedi`
+  - 悦爱专业大学（Lovely Professional University）
+- `Ranjith Bhat`
+  - NMAM 技术学院
+- `Shobha Rani B.R.`
+  - MCA 系
+  - 阿姆贝贝德博士技术学院（Dr. Ambedkar Institute of Technology）
+- `C. Saranya`
+  - 电子与通信工程系
+  - K.S.Rangasamy 技术学院
+- `C. Venkatesh`
+  - 电子系
+  - 安纳马查亚大学（Annamacharya University）
+  - 贾贾佩特（Rajampet）
+- `Harpreet Kaur`
+  - 电气系
+  - 时代大学（Graphic Era (Deemed University)）
+- `Shilpa Choudhary`
+  - 计算机科学与工程系
+  - 斯坦利女子技术学院（Stanley College of Technology for Women）
+- `Sandeep Kumar`
+  - 计算机科学系
+- `Deepika Ghai`
+  - 电子与电子工程系
+- `Madiha Munawar`
+  - 计算机科学与工程系
+  - 旁遮普邦悦爱专业大学（Lovely Professional University, Punjab）
+- `L. Sivayamini`
+  - 电子与通信系
+  - 女子纪念工程学院（Memorial College of Engineering for Women）
+- `Kari Lippert`
+  - 南阿拉巴马大学（University of South Alabama）
+- `Baya Reddy Lomada`
+  - 电子与通信工程系
+  - 安纳马查亚大学（Annamacharya University）
+- `M. Kanchana`
+  - 计算技术系
+  - SRM 技术学院计算学院（SRM Institute of Technology）
+- `Anwar Bhasha Pattan`
+  - 电子与通信工程系
+  - BVRIT 海得拉巴女子工程学院（BVRIT Hyderabad College of Engineering for Women）
+- `Fong-Lee Ng`
+  - 生物学院
+  - 泰勒大学（Taylor's University）
+- `Kandula Lakshumma`
+  - 电子与通信工程系
+  - 安纳马查亚大学（Annamacharya University）
+- `P. Rajashree Nambiar`
+  - NMAM 技术学院
+- `P. Kumar`
+  - 电子与通信工程系
+  - K.S.Rangasamy 技术学院，KSR Kalvi Nagar, Tiruchengode. Namakkal, 泰米纳德邦，印度
+- `Sujit Vishwanath`
+  - 自动化与机器人系
+  - Sharad 技术工程学院（Sharad Institute of Technology College of Engineering）
+- `Pallavi Rajaram Patil`
+  - 自动化与机器人系
+  - Sharad 技术工程学院（Sharad Institute of Technology College of Engineering）
+- `Mudassir Khan`
+  - 计算机科学系
+  - 计算机科学学院
+  - 国王·哈立德大学（King Khalid University）
+- `Pradnya Kesarkar`
+  - 自动化与机器人系
+  - Sharad 技术工程学院（Sharad Institute of Technology College of Engineering）
+- `Abhishek Kumar`
+  - 电子与通信工程系
+  - K.S.Rangasamy 技术学院
+- `Raghu N.`
+  - 研究生及高级助理教授
+  - JAIN 大学（JAIN (Deemed University)）
+- `Shravani Mahavir`
+  - 计算机科学系
+  - Sharad 技术学院（Sharad Institute of Technology）
+- `Ghai`
+  - 计算机科学与工程系
+  - SRM 技术学院计算学院（SRM Institute of Technology）
+- `Hemanth G.B.`
+  - MCA 系
+  - 阿姆贝德博士技术学院（Dr. Ambedkar Institute of Technology）
+- `Irfan Ahmad Pindoo`
+  - 电气与电子工程系
+  - 旁遮普邦悦爱专业大学（Lovely Professional University, India）
+  - Phagwara
+- `Annoji Sri Poojith`
+  - 计算机科学与工程
+  - Sreyas Institute of Engineering and Technology
+- `Shaga Preethika`
+  - 计算机科学与工程
+  - Sreyas Institute of Engineering and Technology
+- `Jagadeshwari Puttanapura`
+  - 计算机科学与工程系
+  - 系统工程系
+  - Stanley College of Engineering and Technology for Women
+- `R. Ramya`
+  - 电子与通信工程系
+  - K.S. Rangasamy College of Technology
+- `K. Naga Sankar Reedy`
+  - ECE 部门
+  - Sri Venkateswara College of Engineering
+  - Kadapa
+- `Kishor Kumar Reddy C.`
+  - 计算机科学与工程系
+  - Stanley College of Engineering and Technology for Women
+- `Low Wei Rong`
+  - 清洁技术影响实验室
+  - Taylor's University
+- `Shalini Sahay`
+  - Sagar Institute of Research and Technology
+- `Ramandeep Sandhu`
+  - 计算机科学与工程学院
+  - Lovely Professional University
+- `Parvinder Sandu`
+  - Lyallpur Khalsa College
+  - Technical Campus
+  - Lovely University
+- `Fahimuddin Shaik`
+  - 电子与通信工程系
+  - Annamacharya University
+- `Ganesh Srinivasa Shetty`
+  - JAIN (Deemed to be University)
+- `Gursewak Singh`
+  - 计算机科学与工程
+  - Baba Farid College of Engineering and Technology
+- `Harleenpal Singh`
+  - 研发中心
+  - Lovely Professional University
+- `Nimisha Singh`
+  - 技能发展系
+  - Baba Farid College of Engineering and Technology
+- `Monika Singh T.`
+  - 计算机科学与工程系
+  - Stanley College of Engineering and Technology for Women
+- `Tanishk Singhal`
+  - Lovely Professional University
+- `S.V. Sugin`
+  - 计算技术系
+  - SRM Institute of Science and Technology 计算机科学学院
+- `T. Lakshminarayana`
+  - 电子与通信工程系
+  - Kandula Lakshumma Memorial College of Engineering for Woman, Kadapa, Andhra Pradesh, India
+- `Prakash Singh Tanwar`
+  - 计算机科学系
+  - Lovely Professional University
+  - Phagwara, Punjab, India
+- `Suman Lata Tripathi`
+  - Symbiosis Institute of Technology, Symbiosis International (Deemed University)
+  - Pune, India
+- `Chockalingam Aravind Vaithilingam`
+  - 马来西亚's University 清洁技术影响实验室
+- `Laya Billinty Varra`
+  - 计算机科学工程系
+  - Stanley College of Engineering and Technology for Women
+  - Hyderabad, Telangana, India
+- `Akhil Kumar Verma`
+  - 研发中心
+  - Lovely Professional University
+- `Aarushi Yadav`
+  - 历史系
+  - Lovely Professional University
+  - Phagwara
+- `Santosh Kumar Yadav`
+  - 历史系
+  - Lovely Professional University
+  - Phagwara
+- `Sim Chong Yuan`
+  - 清洁技术影响实验室
+  - Taylor's University
+
+## 物联网的基础与挑战
+
+Mohit Malik, Pooja Dhand 和 Parvinder Sandu
+
+### 引言
+
+物联网（`IoT`）的出现彻底改变了个人、网络和设备通过简单而易的相互关联对象系统与其他系统连接的方式。在过去的二十里，物联网已从一个学术概念转变为现实的运作，影响了制造业、医疗保健、农业部门和智能城市建设等行业。通过利用人工智能机器分析海量数据并预测结果，"万物互联"的人工智能技术改进了自动化和决策过程。区块链技术目前正在研究如何通过支持自主授权和信息一致性验证，来增强"人人网络（Network of Everyone）"通信的安全性。由于物联网的不断进步，组织、议会议员和研究人员面临着许多机遇与挑战。为了促进物联网解决方案的有效采用，客户、政府机构和技术人员需要进行合作。为了在充分利用物联网的同时降低相关风险，企业必须将保护、无缝集成和环境责任放在首位。
+
+### 文献综述
+
+#### 研究概览
+
+本文讨论了云计算、移动传感器网络以及机器通信的集成使用。本研究将 `IoT` 引入为计算机范式的一种演进 [1]。这项研究概述了深度学习如何完美适用于智慧城市和医疗服务等 `IoT` 服务，因为该技术提供了卓越的特征提取和模型预测能力 [2]。
+
+#### 机器学习与欺诈检测
+
+研究调查强调了如何应用 `ML` 技术发现庞大数据集中的异常情况和模式，这些模式可能指向犯罪活动 [3, 4]。这项研究工作针对银行和保险行业中日益增加的先进欺诈操作。本研究研究了多种 `ML` 算法，以发现大数据集中的非法趋势 [5]。
+
+本文详细探讨了预测性 `ML` 方法在防御 `IoT` 设备网络中的重要性 [8]。这项工作研究了人工智能技术和学习算法在金融处理算法的风险缓解和欺诈识别中发挥的关键作用 [11]。
+
+
+
+本研究调查了`ML`和`AI`在金融交易平台风险缓解和欺诈识别中发挥的本质功能 [14]。此处的研究展示了`blockchain`计算与计算智能的融合如何彻底改变银行欺诈预防的世界 [15]。
+
+## 行业特定应用
+
+### 智慧农业
+
+本文讨论了`IoT`如何在数据驱动下使农业自动监管和实时传感器成为可能，从而提高生产力和韧性 [6]。通过专注于精准耕作、疾病识别和资源优化，下文深入研究了智慧农业系统中`ML`驱动的`IoT`应用 [12]。
+
+### 医疗保健
+
+这项研究基于研究发现、技术以及海量信息，通过提供定制化治疗、降低成本和扩大患者满意度，转型了智慧医疗 [9]。本研究探讨了量子计算（`QC`）对制药和医疗行业的可能影响 [25]。
+
+## 先进技术与未来趋势
+
+根据研究发现，智能技术通过大幅提高欺诈者的检测和预防能力，正在彻底改变审计流程 [7]。
+
+当前研究显示了混合`ML`模型如何改变数字交易以及零售欺诈识别 [[16]](#ch09.xhtml#r016)]。通过提高人工智能结论的透明度和理解力，本文讨论了透明化`ML`如何改进欺诈识别系统 [17]。
+
+该调查由`AI`自动特征工程技术驱动，这些技术提高了欺诈检测模型的有效性 [18]。当前研究调查了智能驱动的网络评估的实现，用于识别支付中的非法趋势 [19]。
+
+为了缓解欺诈识别任务对海量标记数据集的需求，研究调查分析了利用`transferred learning`来使用已训练模型 [20]。
+
+此处的研究突显了竞争性`AI`给欺诈检测系统带来的挑战，并提出了替代解决方案 [21, 22]。这项工作详述了`quantum-enhanced learning models`的困难和潜在用途，本研究也对其进行了描述 [23]。这项研究关注算法突破、量子硬件进展以及这些方法在现实世界应用中的扩展 [24]。
+
+## 安全与基础设施
+
+调查强调了机密性、智能技术、防御竞争机制以及混合人工智能（`AI`）模型的重要性 [10]。这篇综述文章对用于金融网络欺诈识别的各种`AI`技术进行了全面讨论 [13]。
+
+本文对`low-power wide-area networks`进行了全面概述，其作为`IoT`的关键通信技术正在兴起。它设计用于实现低功耗的远距离通信，使其适用于能量受限的场景，例如远程传感器和`IoT`设备 [50]。
+
+图 1.1 IoT 的基础。#ch09.xhtml#f1b)
+
+## 1.3 IoT 框架
+
+1. **通信：** 万物互联网是由互相互连接的项目组成的网络，这些项目可以传输信息、相互交互并执行特定任务，而不需要人类参与。
+
+2. **边缘计算：** 在`IoT`世界中，边缘计算的使用至关重要，因为它允许在数据产生处或非常靠近数据源的地方立即处理数据，减少了向位于云端的中央服务器发送大量信息的需求。除了降低延迟和提高安全性，它还提高了系统的效率。
+
+3. **传感器和执行器：** 在机器人、自动化、智能制造和日益增长的万物互联（也称为执行器和传感器技术）领域，它们是关键部分。它们使得人们在现实世界中收集和通信信息变得可行，从而提高了组织的分析能力和反应能力。
+
+4. **云计算：** 通过万维网，云计算技术提供了对存储、服务器、数据库、社交媒体、应用程序和统计等计算机设备的即时访问。消费者可以访问这些远程设施并仅对他们打算使用的部分付费，最大限地减少了购买和维护物理设备的需求。
+
+5. **数据分析：** 收集、组织和评估由`IoT`设备、传感器和执行器产生的海量数据的技术被称为`IoT`数据分析。“实时决策过程、性能优化和有用知识的收集是其其目标之一。”
+
+## 1.4 IoT 集成到机器学习（ML）中的优势
+
+1. **任务自动化带来的更高效率：** 应用创新技术来提高效率，并最大限度地减少执行工作所需的人力。效率和自动化的最终目标是在花费尽可能少资源和时间的情况下实现生产最大化。
+
+2. **数据更高的可用性和可访问性：** 可用性和易用性对于提高各行业的决策水平、生产力和整体效率至关重要。公司和个人都可以通过增强数据的访问性并确保访问的简单性来提高盈利能力、做出更智能的选择并改进用户体验。
+
+3. **改进系统和设备的监控与控制：** 实时监控和调节设备、系统和设备的运行涉及最新技术的实施。这提高了整体工作的信誉度，减少了中断并提高了生产力。
+
+4. **提高数据采集和评估的能力：** 运营改进、预测建模和知情决策都依赖于成功收集和分析数据的能力。`IoT`、`AI`、大数据分析和自动化的进步都显著提升了信息收集和分析的加速、准确性和效率（[图 1.2）。
+
+图 1.2 IoT 在 ML 中的优势。#ch09.xhtml#f2b)
+
+以下是展示`IoT`在多个领域中底层原理和相关问题的一些实例：
+
+1. **微软云端研究：** 通过其微软平台，`Windows`为智能设备提供基于云的计算、`AI`和`IoT`解决方案。作为一个案例，微软被该公司在美国芝加哥的`CityNext`程序用于收集和分析与多个社区相关的信息。这允许市政当局通过提高公民平均生活环境水平来简化流程。这些包括环境监测、社区安全和交通控制。
+
+2. **华为：** 华为提供广泛的`IoT`设备、云服务和网络组件，能够实现智能城市。例如，这家中国公司在中国深圳的智能城市技术结合了从环境监控、公共安全和交通网络收集的数据。
+
+3. **约翰迪尔（John Deere）：** 支持`IoT`的设备、`GPS`引导的供应和统计分析解决方案构成了约翰迪尔公司提供的精准农业创新的一部分。这些解决方案使生产者能够最大限化播种、施肥和收割的收益。
+
+4. **智能家居中的 IoT：Google Nest 和亚马逊 Alexa：**
+
+   * 通过 Google 的`Nest`和亚马逊的`Alexa`等自动化家用，温度管理、照明和保护成为可能。安全风险：在家里使用支持`IoT`的电器时，可能会未经授权的使用和操控。
+
+5. **医疗保健中的 IoT：可穿戴健康监测设备：** `IoT`已被可穿戴设备（包括`Apple`和`Pebble`的手表）用于追踪运动、血氧和心率。智能手机提供了管理慢性疾病以及关注健康的即时信息（[图 1.3）。
+
+图 1.3 不同领域 IoT 设备的案例研究。#ch09.xhtml#f3b)
+
+# 10.1.5 家庭技术中联网设备的应用涉及设备管理、加热和照明
+
+1. **智能城市倡议：** 这些功能包括垃圾收集、低能耗建筑和交通监控。
+
+2. **医疗保健：** 自动健康监测系统和智能手表。
+
+3. **工业 IoT：** 流程自动化和维护计划。
+
+4. **农业事务：** 自动化农业、土壤水分和精准农业。
+
+## 1.6 IoT 架构
+
+典型`IoT`架构的各个部分如下：
+
+1. **感知层：** 感知层处理获取有关物理环境信息的传感器和执行器。
+
+2. **通信层：** 使用通信方法在不同设备和云服务之间传输信息。
+
+3. **中间件/处理层：** 该层通常位于云端，负责信息处理、存储空间管理和分析。
+
+4. **应用层：** 该层提供特定领域独特的应用程序和功能（例如用于监控的医疗系统、家庭安全应用）。
+
+## 1.7 连接挑战
+
+尽管`IoT`有许多优势，但它也存在一些缺点。
+
+1. **机密性和安全性：** 链接的机器面临信息泄露和数字威胁的风险。保持个人隐私和数据数据传输一直是首要关注的问题。
+
+2. **互连性：** 由多个供应商制造的设备经常使用不同的接口，导致集成挑战。
+
+3. **灵活性：** 如[图 1.4 所示，在管理和决定由数百万连接产生的海量数据方面，技术面临额外的障碍。
+
+图 1.4 IoT 的架构。[#ch09.xhtml#f4b)
+
+1. **数据管理**：必须建立一个可靠的平台，用于海量数据集的即时采集、保存、处理等的检索。
+
+2. **功耗**：由于几乎每一个物联网设备都运行在电源上，节约能源是持续运行的必要条件。
+
+3. **流程标准化**：由于缺乏一致的需求，物联网生态系统发生了崩溃，这损害了消费者体验和合规性。
+
+## 参考文献
+
+* 1.Gubbi, J., Buyya, R., Marusic, S., & Palaniswami, M. (2013). Internet of Things (IoT): A vision, architectural elements, and future directions. Future Generation Computer Systems, 29(7), 1645–1660. [`doi.org/10.1016/j.future.2013.01.010`](https://doi.org/10.1016/j.future.2013.01.010)
+
+* 2.Mohammadi, M., Al-Fuqaha, A., Sorour, S., & Guizani, M. (2018). Deep learning for IoT big data and streaming analytics: A survey. IEEE Communications Surveys & Tutorials, 20(4), 2923–2960. [`doi.org/10.1109/COMST.2018.2844341`](https://doi.org/10.1109/COMST.2018.2844341)
+
+* 3.Metha, S. (2025). AI-driven fraud detection: A risk scoring model for enhanced security in banking. Springer.
+
+* 4.Goriparthi, R. G. (2023). AI-enhanced data mining techniques for large-scale financial fraud detection. Elsevier.
+
+* 12.5.Jayashree, K., Vinotha, A., & Swethan, K. (2020). IoT-based smart farming: Emerging trends, issues, and challenges. Springer Nature.
+
+* 6.Mayne, E. S., Pinto, C., Rodríguez, E. A., Villacís Uvidia, J. F., & Chariguamán Maurisaca, N. E. (2024, July 10). Integrating Artificial Intelligence algorithms in financial audits: A disruptive approach to fraud detection. Journal of International Crisis & Risk Communication Research, 7(S7), 972–977. [`doi.org/10.63278/jicrcr.vi.1506`](https://doi.org/10.63278/jicrcr.vi.1506)
+
+* 7.Singh, J., Singh, P., & Kumar, R. (2021). Machine learning for Internet of Things security: A comprehensive survey. Future Internet, 13(7), 171.
+
+* 8.Hussain, M., & Park, E. (2020). Big data and IoT-based applications in smart environments: A case study for smart healthcare. Future Generation Computer Systems, 108, 311–321.
+
+* 9.Islam, M., Shil, S., & Buiya, M. R. (2023). AI-driven fraud detection in the U.S. financial sector: Enhancing security and trust.
+
+* 10.Setiawan, B., & Chaiyapan, S. (2024). The integration of artificial intelligence and machine learning in enhancing risk mitigation and fraud detection within financial trading platforms. International Journal of Information and Cybersecurity, 1, 20–23.
+
+* 11.Min, Q., Lu, Y., Liu, Z., & Wang, B. (2019). Machine learning-based IoT for smart agriculture. Computers and Electronics in Agriculture, 163, 10480.
+
+* 12.Doe, J., & Smith, J. (2022). Deep learning approaches for credit fraud detection: A survey.
+
+* 13.Johnson, K., Lee, S., & Brown, T. (2023). Dynamic audience: A novel approach to real-time segmentation. `AI` in Marketing, 7, 189–205.
+
+* 14.Davis, E., & Wilson, M. (2024). Blockchain and AI for secure services.
+
+* 15.Martinez, L., & Lee, K. (2021). Hybrid machine learning models for fraud detection in e-commerce. Journal of E-Commerce, 12(3), 45–62.
+
+* 16.Garcia, S., & Hernandez, W. (2025). Explainable `AI` in fraud detection systems: Enhancing transparency and trust. In Proceedings of the 3rd ACM Conference on User Modeling, Adaptation and Personalization, Association for Computing, pp. 424–428.
+
+* 17.Thompson, D., & Martinez, O. (2022). Automated feature engineering for fraud detection using `AI`.
+
+* 18.Anderson, C., & Moore, P. (2023). `AI`-powered network analysis for detecting fraudulent transactions. Journal of Financial Data Science, 19(4), 215–233.
+
+* 19.Taylor, M., & White, J. (2024). Transfer learning in fraud detection: pre-trained models. Neural Networks, 15(2), 98–112.
+
+* 20.Harris, J., & Clark, E. (2025). Adversarial machine learning in financial fraud detection: Challenges and solutions.
+
+* 21.Lewis, A., & Walker, B. (2022). Graph-based anomaly detection for financial fraud using `AI` techniques. Journal of Finance, 17(3), 134–150.
+
+* 22.Biamonte, J., et al. (2017). Quantum machine learning. Nature, 549, 195–202. [`doi.org/10.1038/nature23474`](https://doi.org/10.1038/nature23474)
+
+* 23.Aspuru-Guzik, A., et al. (2018). Quantum chemistry for quantum computers. Chemical Reviews, 118(22), 10820–10824. [`doi.org/10.1021/acs.chemrev.8b063`](https://doi.org/10.1021/acs.chemrev.8b063)
+
+* 24.Ratti, E., & Trapanese, M. (2020). The quantum leap: Quantum computing and the future of medicine. Frontiers in Medicine, 7, 103. [`doi.org/10.3389/fmed.2020.00103`](https://doi.org/10.3389/fmed.2020.00103)
+
+* 13.25.Acín, A., et al. (2018). The quantum information revolution: Impact on the pharmaceutical industry. Nature Reviews Drug Discovery, 17(4), 278–280. [`doi.org/10.1038/nrd.2018.42`](https://doi.org/10.1038/nrd.2018.42)
+
+
+
+## 参考文献
+
+* 26. Heifetz, A., et al. (2021). Drug repurposing using quantum-inspired machine learning. *Journal of Chemical Information and Modeling*, 61(10), 5022–5030. [`doi.org/10.1021/acs.jcim.1c0040`](https://doi.org/10.1021/acs.jcim.1c0040)
+
+* 27. Farrahi, K., et al. (2019). Quantum computing for efficient clinical trials: A review. *Journal of Clinical Trials*, 9(3), 145–156.
+
+* 28. Deloitte. (2021). Quantum computing in pharmaceutical supply chain management. *Deloitte Insights*.
+
+* 29. Benioff, P. (2020). Cybersecurity in the quantum era. *Journal of Quantum Information Science*, 10(1), 15–25.
+
+* 30. Kelly, J. (2019). Interdisciplinary collaboration: A necessity for quantum advancements in pharmaceuticals. *Science Advances*, 5(7), eaaw4507.
+
+* 31. Patel, S., et al. (2014). Quantum computing applications in pharmacogenomics. *Pharmacogenomics*, 15(9), 1235–1247.
+
+* 32. Gupta, A., et al. (2013). Quantum machine learning approaches for drug discovery. *Drug Discovery Today*, 18(13–14), 653–664.
+
+* 33. Fingerhut, M., Babej, T., & Killoran, N. (2023). *Quantum Computing in Drug Discovery and Development*. Springer Quantum Research.
+
+* 34. Xiang, W. N., & Dressel, J. (2023). Applications of quantum computing in chemistry and chemical engineering. *Annual Review of Chemical Engineering*, 3, 32–41.
+
+* 35. Verdict. (2023). The future of drug discovery: AI, quantum computing, and predictive analytics. *Elsevier AI Research*.
+
+* 36. Arrazola, J. M., et al. (2023). Quantum machine learning for drug discovery. *Journal of Computational Chemistry*, 44(12), 1051–1063. [`doi.org/10.1002/jcc.27001`](https://doi.org/10.1002/jcc.27001)
+
+* 37. Wittek, P. (2019). *Quantum machine learning: What quantum computing means to data mining*. Elsevier Quantum Science Series.
+
+* 38. Pei, J., & Xie, L. (2023). *Artificial intelligence in drug discovery*. Springer AI in Healthcare Series.
+
+* 39. Hidary, J. D. (2020). 量子计算：一种应用方法. McGraw-Hill Education. (#ch09.xhtml#r039b)
+
+* 40. Hu, J., & Bajorath, J. (2022). 药物发现的机器学习. Springer Drug Research Series. (#ch09.xhtml#r040b)
+
+* 41. McKinsey & Company. (2023). 药物开发中的量子计算. 肯锡研究报告. (#ch09.xhtml#r041b)
+
+* 42. (2022). 计算机辅助药物设计的深度机器学习. Springer AI & Drug Discovery Series. (#ch09.xhtml#r042b)
+
+* 43. Javid, S., & Khan, M. I. (2025). 制药科学中的机器学习与深度学习工具：全面综述. *Computational and Structural Biotechnology Journal*, 23, 1–15. [`doi.org/10.1016/j.csbj.2024.11.099`](https://doi.org/10.1016/j.csbj.2024.11.099) (截至 [2025/12/22] 不可访问) (#ch09.xhtml#r043b)
+
+* 44. Yadav, M. K., & Kumar, S. (2024). 释放未来：机器学习和人工智能在药物开发中的革命性作用. *Pharmacological Research*, 179, 106157. [`doi.org/10.1016/j.phrs.2024.106157`](https://doi.org/10.1016/j.phrs.2024.106157) (截至 [2025/12/22] 不可访问) (#ch09.xhtml#r044b)
+
+* 45. Wu, Y., Zhang, L., & Li, H. (2024). 人工智能在药物筛选、药物设计和药物开发中的作用. *Pharmacological Reviews*, 76(1), 1–25. [`doi.org/10.1124/pr.123.000001`](https://doi.org/10.1124/pr.123.000001) (截至 [2025/12/22] 不可访问) (#ch09.xhtml#r045b)
+
+* 46. Wang, K., & Huang, J. (2024). 从计算机辅助药物设计到人工智能药物设计的最新进展：挑战与机会. *Molecular Diversity*, 28, 1–15. [`doi.org/10.1007/s11030-024-10123-4`](https://doi.org/10.1007/s11030-024-10123-4) (截至 [2025/12/22] 不可访问) (#ch09.xhtml#r046b)
+
+* 47. Zhang, Y., & Li, X. (2024). RNA 靶向药物设计中机器学习方法的进展. *Artificial Intelligence in Chemistry*, 2(1), 100053. [`doi.org/10.1016/j.artint.2024.100053`](https://doi.org/10.1016/j.artint.2024.100053) (截至 [2025/12/22] 不可访问) (#ch09.xhtml#r047b)
+
+* 48. Mottaghi-Dastjerdi, N., et al. (2024). 人工智能在制药科学中的进展与应用. *Artificial Intelligence in Chemistry*, 2(1), 100054.48 (#ch09.xhtml#r048b)
+
+* 49. Min, Q., Lu, Y., Liu, Z., Su, C., & Wang, B. (2019). 石油化工工业生产优化的基于机器学习的数字孪生框架. *International Journal of Information Management*, 49, 502–519. [`doi.org/10.1016/j.ijinfomgt.2019.05`](https://doi.org/10.1016/j.ijinfomgt.2019.05) (截至 [2025/12/22] 不可访问) (#ch09.xhtml#r049b)
+
+* 50. Alaba, F., Othman, M., Hashem, I. A., & Jawawi, D. (2017). 物联网安全：综述. *Journal of King Saud University – Computer and Information Sciences*. [`doi.org/10.1016/j.jksuci.2017.04.002`](https://doi.org/10.1016/j.jksuci.2017.04.002) (#ch09.xhtml#r050b)
+
+* 51. Al-Fuqaha, A., Guizani, M., Mohammadi, M., Aledhari, M., & Ayyash, M. (2015). 物联网：赋能技术、协议和应用的综述. *IEEE Communications & Tutorials*, 17(4), 2347–2376. (#ch09.xhtml#r051b)
+
+* 52. Antonakakis, M., April, T., Bailey, M., Bursztein, E., Cochran, J., & Zeltser, L. (2017). 理解 Mirai 僵尸网络. In *27th USENIX security* (USENIX security 17), (pp. 1092–1100). (#ch09.xhtml#r052b)
+
+* 53. Atzori, L., Iera, A., & Morabito, G. (2010). 物联网：综述. *Computer Networks*, 54(15), 2787–2805. (#ch09.xhtml#r053b)
+
+* 54. Bandyopadhyay, D., Sen, J., & Misra, S. (2015). 物联网：应用与挑战. *Wireless Personal Communications*, 83(2), 1087–1110. (#ch09.xhtml#r054b)
+
+* 55. Dorri, A., Kanhere, S., Jurdak, R., & Gauravaram, P. (2017). 区块链物联网安全：智能家居案例. In *2017 IEEE international conference on pervasive computing and communications* (PerCom workshops), (pp. 618–623). (#ch09.xhtml#r055b)
+
+* 56. Douceur, J. (2002). Sybil 攻击. In *International workshop on peer-to-peer systems*, (pp. 251–260). (#ch09.xhtml#r056b)
+
+* 57. Egele, M., Scholte, T., Kirda, E., & Kruegel, C. (2012). 自动化恶意软件分析技术与工具综述. *ACM Computing Surveys* (CSUR), 44(2), 1. (#ch09.xhtml#r057b)
+
+* 58. Fernandez-Carames, T. M., & Fraga-Lamas, P. (2018). 物联网中区块链的应用综述. *IEEE Access*, 6, 32979–33001. (#ch09.xhtml#r058b)
+
+* 59. Garcia-Morchon, O., Heer, T., Hummen, R., Keoh, S., Kumar, S., & Wehrle, K. (2016). 物联网安全：现有协议与开放问题综述. *IEEE Communications & Tutorials*, 18(3), 1294–1312. (#ch09.xhtml#r059b)
+
+* 60. Gubbi, J., Buyya, R., Marusic, S., & Palaniswami, M. (2013). 物联网（IoT）：愿景、架构元素和未来方向. *Future Generation Computer Systems*, 29(7), 1645–1660. (#ch09.xhtml#r060b)
+
+* 61. Huang, L., Zhang, Q., Guo, J., Yu, R., & Yang, X. (2019). 以用户中心的物联网安全与隐私保护综述. *Future Generation Computer Systems*, 97, 376–393. (#ch09.xhtml#r061b)
+
+* 62. Jalali, F., Bakar, K. A., & Anuar, N. B. (2016). 物联网（IoT）安全：现状、挑战与前性措施. In *2016 International symposium on networks, computers and communications* (ISNCC), (pp. 1–6). IEEE. (#ch09.xhtml#r062b)
+
+* 63. Jara, A. J., Zamora-Izquierdo, M. A., & Skarmeta, A. F. (2014). 基于物联网的移动健康与远程监控互连接框架. *IEEE Journal on Selected Areas in Communications*, 32(4), 647–654. (#ch09.xhtml#r063b)
+
+* 64. Jazri, H., & Boudriga, N. (2017). 物联网安全：综述. In *2017 13th International wireless communications and mobile computing conference* (IWCMC), IEEE, (pp. 1665–1670). (#ch09.xhtml#r064b)
+
+* 65. Kang, D., Yi, S., & Lee, K. (2018). 物联网的硬件安全：综述. *ACM Computing Surveys* (CSUR), 51(5), 1–33. (#ch09.xhtml#r065b)
+
+* 66. Khan, R., Khan, S., Zaheer, R., & Khan, S. (2012). 未来互联网：物联网架构、可能应用与关键挑战. In *10th International conference on frontiers of information technology*, Springer, (pp. 257–260). (#ch09.xhtml#r066b)
+
+* 67. Khan, R., Salah, K., & Aalsalem, M. Y. (2019). 雾计算与边缘计算的区块链：全面综述. *Journal of Network and Computer Applications*, 135, 1–22. (#ch09.xhtml#r067b)
+
+* 68. Koscher, K., Czeskis, A., Roner, F., Patel, S., Kohno, T., …, Savage, S. (2010). 现代汽车的实验性安全分析. In *IEEE symposium on security and privacy*, (pp. 447–462). (#ch09.xhtml#r068b)
+
+* 69. Kumar, R., & Lee, H. (2018). 物联网（IoT）安全：综述. *Journal of Information Security and Applications*, 38, 8–27. (#ch09.xhtml#r069b)
+
+* 70. Mahmood, Z., & König, S. (2012). 无线传感器网络入侵检测系统综述. *Journal of Network and Computer Applications*, 35(1), 264–277. (#ch09.xhtml#r070b)
+
+* 71. Radoglou-Grammatikis, P., Sarigiannidis, P., & Moscholios, I. (2018). 基于物联网的医疗系统的安全威胁. *Sensors*, 18(11), 3729. (#ch09.xhtml#r071b)
+
+* 72. Raj, R. G., Sandeep, B. S., & Seinhardt, A. (2012). 移动参与感知应用中的隐私综述. *International Journal of Distributed Sensor Networks*, 8(5), 129806. (#ch09.xhtml#r072b)
+
+* 73. Ray, P. P., De, D., & Chattopadhyay, S. (2018). 物联网中的安全：问题、挑战与解决方案. *沙特国王大学期刊——计算机与信息科学*, 30(3), 291–317. (#ch09.xhtml#r073b)
+
+* 74. Müller, J. M., Kiel, D., & Voigt, K. I. (2018). 智能制造与智能工厂：通往工业 4.0 的路径. *国际生产研究杂志*, 56(1-2), 3–20. [`doi.org/10.1080/00207543.2018.1442946`](https://doi.org/10.1080/00207543.2018.1442946) (#ch09.xhtml#r074b)
+
+
+
+# 75–120. 参考文献
+
+* 75. Qin, J., Liu, Y., & Grosvenor, R. (2016). 现代工业智能制造概述。工程制造杂志, 230(10), 1445–1460. [`doi.org/10.1177/0954405415615684`](https://doi.org/10.1177/0954405415615684) (截至 [2025/12/22] 无法访问) [](#ch09.xhtml#r075b)
+* 76. Raj, B., Suryanarayana, P., & Singh, M. (2019). 智能制造中的物联网：研究与实现。IEEE Access, 7, 139396–139410. [`doi.org/10.1109/ACCESS.2019.2899205`](https://doi.org/10.1109/ACCESS.2019.2899205) (截至 [2025/12/22] 无法访问) [](#ch09.xhtml#r076b)
+* 77. Lee, J., Bagheri, B., & Kao, H. A. (2015). 智能制造中的信息物理系统：进展与挑战。控制年度评论, 41, 11–24. [`doi.org/10.1016/j.arcontrol.2015.03.008`](https://doi.org/10.1016/j.arcontrol.2015.03.008) [](#ch09.xhtml#r077b)
+* 78. Xu, L. D., Xu, E. L., & Li, L. (2018). 智能工厂：通过数字化转型弥合差距。IEEE 工业信息化学报, 14(4), 1505–1516. [`doi.org/10.1109/TII.2018.2845363`](https://doi.org/10.1109/TII.2018.2845363) (截至 [2025/12/22] 无法访问) [](#ch09.xhtml#r078b)
+* 79. Karimullah, S., Khan, M., & Shaik, F. (2024). 改进的混合深度学习方法在肺 CT 图像异常检测与分类中的实现与性能评估。2024 年智能与可持续技术近期创新国际会议 (ICRISST), 印度班加罗尔 (pp. 1–6). doi: [10.1109/ICRISST59181.2024.10921991](http://dx.doi.org/10.1109/ICRISST59181.2024.10921991) [](#ch09.xhtml#r079b)
+* 80. Tao, F., Zhang, M., Liu, Y., Nee, A. Y. C., & Qi, Q. (2019). 数字孪生驱动的智能制造：内涵、参考模型、应用与研究问题。16.IEEE 工业信息化学报, 15(4), 2405–2415. [`doi.org/10.1109/TII.2019.2913268`](https://doi.org/10.1109/TII.2019.2913268) (截至 [2025/12/22] 无法访问) [](#ch09.xhtml#r080b)
+* 81. Treiblmaier, H., Beck, R., & Wieser, V. (2020). 用于智能制造的区块链技术：应用与案例研究。制造技术管理杂志, 31(4), 707–728. [`doi.org/10.1108/JMTM-12-2018-0448`](https://doi.org/10.1108/JMTM-12-2018-0448) (截至 [2025/12/22] 无法访问) [](#ch09.xhtml#r081b)
+* 82. Zhong, R., Xu, C., Chen, C., & Huang, G. (2017). 智能制造的大数据分析：理论、应用与挑战。计算机与工业工程, 113, 537–550. [`doi.org/10.1016/j.cie.2017.0620`](https://doi.org/10.1016/j.cie.2017.0620) [](#ch09.xhtml#r082b)
+* 83. Marvel, J., Yang, M., & Shah, J. (2019). 智能制造中的协作机器人：案例研究与理论见解。计算机集成制造, 58, 1–10. [`doi.org/10.1016/j.rcim.2019.02.02`](https://doi.org/10.1016/j.rcim.2019.02.02) [](#ch09.xhtml#r083b)
+* 84. Davis, J., Edgar, T., Porter, J., Bernaden, J., & Sarli, M. (2012). 智能制造：特征与技术。制造系统杂志, 31(4), 290–300. [`doi.org/10.1016/j.jms.2012.0401`](https://doi.org/10.1016/j.jms.2012.0401) [](#ch09.xhtml#r084b)
+* 85. Zhu, L., & Hall, M. (2021). 智能工厂：人工智能如何支持制造业的数字化转型。哈佛商业评论。获取自 [`hbr.org/2021/12/how-ai-is-enabling-factories`](https://hbr.org/2021/12/how-ai-is-enabling-factories) [](#ch09.xhtml#r085b)
+* 86. Kumar, A., Patel, P., & Sharma, S. (2020). 物联网驱动的智能制造：挑战、解决方案与未来方向。IEEE 物联网杂志, 7(4), 3075–3084. [`doi.org/10.1109/JIOT.2019.296573`](https://doi.org/10.1109/JIOT.2019.296573) (截至 [2025/12/22] 无法访问) [](#ch09.xhtml#r086b)
+* 87. Sharma, P., Chen, Y., & Kumar, A. (2021). 制造业的数字化转型：数据与分析的作用。国际生产经济杂志, 235, 108093. [`doi.org/10.1016/j.ijpe.2021.108093`](https://doi.org/10.1016/j.ijpe.2021.108093) [](#ch09.xhtml#r087b)
+* 88. Liu, W., Xu, C., & Zhao, G. (2019). 智能制造对企业绩效的影响。商业研究杂志, 100, 1–12. [`doi.org/10.1016/j.jbusres.2019.03.20`](https://doi.org/10.1016/j.jbusres.2019.03.20) [](#ch09.xhtml#r088b)
+* 89. Kang, H., Lee, J., Choi, S., Kim, H., Park, J., & Son, J. (2016). 智能制造的高级数据分析。制造科学与杂志, 138(6), 061016. [`doi.org/10.1115/1.4033525`](https://doi.org/10.1115/1.4033525) [](#ch09.xhtml#r089b)
+* 90. Jovane, F., Yoshikawa, H., Alting, L., Boër, C. R., Westkamper, E., Williams, D., … Paci, A. M. (2017). 可持续智能制造：综述。国际精密工程与制造-绿色技术, 4(1), 1–20. [`doi.org/10.1007/s40684-017-0010-0`](https://doi.org/10.1007/s40684-017-0010-0) (截至 [2025/12/22] 无法访问) [](#ch09.xhtml#r080b)
+* 91. Mohammadi, M., Fathoni, A., Setiawan, R., Hayati, R., & Sudibyo, N. (2024). 金融科技点对点（P2P）融资的持续意愿：伊斯兰法：品牌素养的调节作用。开放创新杂志：技术、市场与复杂度, 10(2), 文章 10301. (注：此处未提供 DOI) [](#ch09.xhtml#r091b)
+* 92. Xu, X., He, Q., & Zhang, L. (2018). 智能制造的实时数据分析。制造系统杂志, 48, 1–10. [`doi.org/10.1016/j.jmsy.2018.06.0`](https://doi.org/10.1016/j.jmsy.2018.06.0) [](#ch09.xhtml#r092b)
+* 93. Maharaj, S. V. 智能制造：信息技术与运营. [](#ch09.xhtml#r093b)
+* 94. Kamrani, A., & Nasr, E. 数字制造。在设计与实践. [](#ch09.xhtml#r094b)
+* 95. Gubbi, J., Buyya, R., Marusic, S., & Palaniswami, M. (2013). 物联网（IoT）愿景、架构元素与未来方向。未来代计算机系统, 29(7), 1645–1660. [`doi.org/10.1016/j.future.2013.01.01`](https://doi.org/10.1016/j.future.2013.01.01) [](#ch09.xhtml#r095b)
+* 97. Metha, S. (2025). AI 驱动的欺诈检测：用于银行安全的风险评分模型。Springer. [](#ch09.xhtml#r097b)
+* 98. Goriparthi, R. G. (2023). 用于大规模金融欺诈检测的 AI 增强数据挖掘技术。Elsevier. [](#ch09.xhtml#r098b)
+* 99. Jayashree, K., Vinotha, A., & Swethan, K. (2020). 基于物联网的智能农业：新兴趋势、问题与挑战。Springer Nature. [](#ch09.xhtml#r099b)
+* 100. Mayne, E. S., 等人. (2024). 在财务审计中集成人工智能算法：一种欺诈检测的颠覆性方法。Elsevier（待出版）. [](#ch09.xhtml#r100b)
+* 101. Singh, J., Singh, P., & Kumar, R. (2021). 面向物联网安全的机器学习：全面综述。Future Internet, 13(7), 171.
+* 102. Hussain, M., & Park, E. (2020). 智能环境中的大数据与基于物联网的应用：智能医疗的个案研究。Future Generation Computer Systems, 108, 311–321.
+* 103. Islam, M. Z., Shil, S. K., & Buiya, M. R. (2023). 美国金融领域 AI 驱动的欺诈检测：增强安全与信任。Wiley.
+* 104. Setiawan, B., & Chaiyapan, S. (2024). 工与机器学习在增强金融交易平台风险缓解与欺诈检测机制中的整合。IEEE Transactions on Financial Technology, 7(2), 89–105. [`doi.org/10.1109/TFINTECH.2024.012345`](https://doi.org/10.1109/TFINTECH.2024.012345) (截至 [2025/12/22] 无法访问)
+* 105. Min, Q., Lu, Y., Liu, Z., Su, C., & Wang, B. (2019). 基于机器学习的智能农业物联网。Computers and Electronics in Agriculture, 163, 104860.
+* 106. Doe, J., & Smith, J. (2022). 用于信用卡欺诈检测的深度学习方法：综述。Springer AI Research.
+* 107. Johnson, A., & Brown, R. (2023). 使用循环神经网络进行金融交易的实时异常检测。IEEE Transactions on Artificial Intelligence, 4(3), 215–228. [`doi.org/10.1109/TAAI.2023.01`](https://doi.org/10.1109/TAAI.2023.01) (截至 [2025/12/22] 无法访问)
+* 108. Davis, E., & Wilson, M. (2024). 用于安全金融服务的区块链与 AI 整合。Springer AI & Blockchain Research.
+* 109. Karimullah, S., Khan, M., Shaik, F., Alabduallah, B., & Almjally, A. (2024). 通过优化、深度学习和物联网数据传输通过 CT 扫描检测肺癌的整合方法。Frontiers in Oncology, 14, 1435041. PMID: 39435294; PMCID: PMC11491319. doi: [10.3389/fonc.2024.1435041](http://dx.doi.org/10.3389/fonc.2024.1435041)
+* 110. Garcia, S., & Hernandez, W. (2025). 欺诈检测系统中的可解释 AI：增强透明度与信任。ACM Transactions on AI Ethics, 5(2), 145–162.
+* 111. Thompson, D., & Martinez, O. (2022). 使用 AI 进行欺诈检测的自动化特征工程。Springer Data Science Advances.
+* 112. Anderson, C., & Moore, P. (2023). 金融交易中 AI 与机器学习的整合，19(4), 215–233.
+* 113. Taylor, M., & White, J. (2024). 用于欺诈检测的迁移学习。Networks & Finance, 15, 98–112.
+* 114. Harris, J., & Clark, E. (2025). 对抗学习：挑战与解决方案。Springer AI Research.
+* 115. Lewis, A., & Walker, B. (2022). 用于欺诈检测的基于图机器学习。Journal of AI, 17(3), 134–150.
+* 116. Aspuru, J, 等. (2017). 用于量子化学的深度学习。Nature, 549, 195–202.
+* 117. Ratti, E., & Trapanese, M. (2018). 用于量子计算机的机器学习。Chemical Reviews, 118(2), 108–120.
+* 118. 10.3389/fonc.2024.1435041 (2020). 医学。Frontiers in Oncology, 7, 103.
+* 119. [10.3389/fonc.2024.1435041](http://dx.doi.org/10.3389/fonc.2024.1435041) (2020). 量子革命。Nature Reviews, 278.
+
+# 2 物联网机器学习算法
+
+## 2.1 引言
+
+物联网（IoT）的指数级增长彻底改变了设备交互、通信和数据共享的方式。随着数十亿互联设备每秒产生海量数据，迫切需要能够处理、分析并对这些数据做出反应的智能系统。机器学习（ML）作为人工智能（AI）的关键分支，为这一需求提供了强大的工具和技术。通过结合各种学习范式——如监督、无监督、半监督和深度学习（DL），机器学习赋予了系统从数据中学习、识别模式并适应动态环境的能力。此外，优化算法和进化模型为物联网运行增加了额外的自适应性和效率。这些先进方法共同塑造着智能、可扩展且安全的系统的未来，这些系统能够自主运行、响应威胁，并为智能城市、医疗保健及其他领域做出贡献。机器学习算法可以分类如下：
+
+## 2.2 无监督机器学习
+
+使用聚类、降维和异常检测等方法，无监督学习算法在未标记的数据中寻找模式。物联网改变了现代技术，它连接了各种设备并促进了顺畅通信以改进一系列应用。物联网具有许多优势，例如远程监控和实时数据传输，但它也带来了严峻的安全和隐私问题。AI 方法，特别是无监督学习算法，由于其处理物联网设备生成的大数据集的能力，正成为解决这些漏洞的流行手段。
+
+### 2.2.1 算法实际上是如何工作的
+
+无监督学习在没有标记或预定义分类的情况下检查数据。在没有被指示寻找什么的情况下，它尝试自行识别这些数据中的连接和模式。这可能具有挑战性，但也非常迷人因为它因为它揭示隐藏在已排序和标记的数据中的信息。如图 2.1 所示，商场可以通过对这些数据使用无监督学习，根据购买习惯等因素对客户进行细分，而无需最初对其进行标记。
+
+**图 2.1** 无监督机器学习算法 [9].
+
+* `无标记数据`：这仅仅是未经处理的信息，例如统计数据或具体细节，没有任何关联的类别或结果。与监督学习使用的标记数据相比，它的收集更为简单。
+
+### 2.2.2 应用
+
+无监督学习涉及的风险比监督学习更大，因为在没有真实测试的情况下，没有明确的方法来评估发现是否真实，这可能带来风险。尽管如此，它在业务中仍有有用处。典型的真实世界应用包括：
+
+* `自然语言处理 (NLP)`：谷歌新闻使用无监督学习对同一主题的条目（如足球转会新闻）进行分组。
+* `图像和视频分析`：用于涉及视觉感知和物体识别的任务。
+* `异常检测`：帮助识别异常趋势，例如金融欺诈检测。
+* `用户细分`：该技术通过根据共同习惯识别消费者群体，帮助公司更准确地触达目标受众。
+* `推荐引擎`：推荐引擎对相关产品提供建议，并根据之前的购买记录增强交叉销售策略。这些应用程序帮助公司改进客户体验和决策。
+
+### 2.2.3 优势
+
+* 无监督学习算法是高效且经济的，因为它们不需要标记数据。
+* 无监督学习算法能够高效地处理大型复杂的数据集，使其具有高度的可扩展性。
+
+
+
+### 2.2.4 挑战
+
+以下是无监督学习算法面临的一些困难：
+
+- **缺乏地面真值（Ground Truth）**：在缺乏标记样本的情况下，对算法性能进行无偏见的评估具有挑战性。
+- **选择正确的算法**：某些聚类或降维方法对某些类型的数据更为有效；因此，选择并不简单。
+- **结果解释**：无监督学习中看到的模式并不一定具有显著性或可操作性，这与监督学习形成对比，后者的输出是有显式标记的。
+
+对于物联网（IoT）的安全和效率，无监督学习算法是有用的，因为它们使用如`聚类`和`异常检测`等方法来检查无标记数据。由于物联网网络管理着大量敏感数据，它们容易受到网络攻击，这就是为什么人工智能驱动的异常检测如此重要的原因 [10]。通过在没有标签的情况下识别隐藏模式，这些算法支持如欺诈检测、推荐系统和客户细分等应用。
+
+### 2.3 半监督机器学习算法
+
+物联网的快速普及（预计到 2030 年将达到 1250 亿台设备）由于其开放结构造成了严重的安全风险。基于`IP/MAC 地址`甚至基于端口的传统分类方法在面对地址欺骗和端口伪装等网络威胁时日益变得无用 [11]。为了提高物联网设备的安全性，引入了`用于物联网的分层半监督生成对抗网络 (HSGAN-IoT)`。该模型同时使用无标记数据和生成数据来提高分类准确性，同时降低对标记数据集的依赖。分层框架改进了过滤、资源效率以及隐私和安全 [12]。物联网安全严重依赖于入侵检测系统 (`IDSs`)，这些系统根据签名（检测已知威胁）或基于异常（寻找偏离正常行为的偏差）进行分类。尽管基于异常的 `IDSs` 可以识别零日攻击，但它们仍然有很高的误报率 [13]。机器学习增强了 `IDS` 的有效性，但标记数据的稀缺也限制了监督技术，促使转向半监督机器学习 (`SSL`)，后者利用了同时具有标记和无标记的数据 [9]。随着支持六代 (6G) 的物联网技术以及数字孪生 (`DTs`) 在关键领域出现，安全忧虑日益增长。联邦学习 (`FL`) 提供了一种保护隐私的方法，允许在不使用原始数据的情况下对模型进行去中心化训练。然而，`FL` 面临数据标签稀缺的问题 [14]。为了解决这个问题，我们提供了一种半监督联邦学习 (`SSFL`) 系统。通过整合伪标记、`数据增强`和一致性正则化等 `SSL` 技术，`SSFL` 改进了安全、隐私和泛化能力 [15]。
+
+#### 2.3.1 应用
+
+1. `NLP`：文本分类的情感分析和垃圾邮件检测——命名实体识别提取名称和位置。
+2. `欺诈与安全`：使用有限标记数据识别交易/攻击。
+3. `医疗/生物`：蛋白质/DNA 分类预测功能。通过快速筛选改进药物发现。
+
+#### 2.3.2 优势
+
+1. 通过利用大量的无标记数据减少对标记的需求。
+2. `增强模型性能`：利用无标记数据识别隐藏模式提高准确性。
+3. `成本效益`：由于标记成本，比监督学习更便宜。
+4. `支持稀缺标签`：适用于异常数据。
+
+#### 2.3.3 挑战
+
+1. `噪声伪标签`：模型在无标记数据上的错误预测可能会误差（自训练问题）。
+2. `类别不平衡偏差`：主类可能会获得更多的伪标签，导致少数类性能较差。
+3. `数据质量重要性`：无标记数据应与标记数据具有相同的结构，无关数据会产生负面影响。
+4. `算法敏感性`：超参数如`置信度阈值`需要精确调整。
+
+这些技术为 6G 未来提供了可扩展、高效且更安全的物联网，通过减少对标记数据集的依赖并增强泛化能力，为日益复杂的挑战提供了长期解决方案 [16, 17]。
+
+### 2.4 监督机器学习算法
+
+监督机器学习是一种人工智能，计算机通过已知结果从以前的数据中学习以做出未来的预测。这些算法识别数据中的模式并利用它们进行分类或预测。监督学习分析医疗记录以识别风险变量并估计患糖尿病的可能性，如图 2.2 所示 [15, 16, 18]。
+
+**图 2.2** 监督学习。
+
+`K 最近邻 (KNNs)`、`随机森林 (RF)`、`逻辑回归`包含在监督机器学习算法中。
+
+#### 2.4.1 该算法如何工作
+
+为了寻找模式和连接，系统会检查一个包含训练对的数据集。然后，它利用这些信息对新的、未观测到的数据进行结果预测。例如，使用各种树木的标记照片来训练模型识别树种 [18]。算法会发现每种物种的定义特征和模式。训练完成后，通过显示一棵新的树木图像并检查其预测结果来对模型进行测试。如果不符合预期，则使用更多样本来重新训练模型以提高准确性。模型可以使用在训练和测试期间获取的模式来识别新的树木照片。这种方法经常应用于银行、医疗保健和图像识别等行业 [19]。
+
+#### 2.4.2 应用
+
+1. **医疗与健康保健：** 糖尿病以高血糖（高血糖症）为特征，是一项全球慢性健康挑战。胰岛素调节血糖水平。包括 `KNN`、`RF` 和逻辑回归在内的机器学习有助于糖尿病预测和个性化治疗优化。其目标包括预测药效、毒性和相互作用过程，这些对于开发抗艾滋病毒药物至关重要。
+2. **农业作物疾病识别：** 根据作物的特征建立数据集并进行标记。通过在健康和患病作物的标记照片上训练系统，可以早期检测植物疾病，从而减少损失。
+3. **动物健康监测：** 为了识别疾病和增强农场管理，系统检查动物的行为、体温和进食习惯。
+4. **制造业能源优化：** 在分析能源消耗数据集后，进行了必要的更改以优化能源使用并降低运营成本。
+5. **家电器：** 减少不必要的加热/冷却，降低电费，有助于节约能源。根据学习到的偏好实现自动化的气候控制，还通过优化能源使用帮助减少碳足迹。该系统的预测性维护降低了成本。
+
+#### 2.4.3 优势
+
+1. 通过额外的数据和训练，它能够提高性能并产生更准确的预测。
+2. 通过允许分类到预定义的标签中以及对连续结果预测进行回归分析，它为一系列应用提供了多功能性。
+3. 通过检查大数据集、发现趋势并提供数据驱动的洞察，监督机器学习改进了决策制定。
+4. 使用监督机器学习处理大型数据集，它还能发现隐藏模式、减少噪声，并为精确决策提供实时洞察。
+
+#### 2.4.4 挑战
+
+1. 使用质量较差（有噪声、不完整或有偏差）的数据会产生不准确的模型。
+2. 大规模机器学习模型的部署和维护可能是困难的，特别是对于实时应用。
+
+监督机器学习通过利用历史数据做出准确预测，在各个行业中起着至关重要的作用。它广泛应用于医疗保健、农业、制造业和家居自动化，以提高决策效率 [20]。`KNN`、`RF` 和逻辑回归等算法有助于识别模式、分类数据并优化过程。尽管具有这些优势，必须解决数据质量、可扩展性和计算成本等挑战。随着技术的不断进步，监督学习仍然是自动化和预测分析的强大工具，增强了多个领域的效率 [21]。
+
+### 2.5 DL 算法
+
+新兴的 AI 驱动解决方案在改变关键基础设施领域的同时提高了效率和安全性。设施管理中的 AI 驱动图像处理正在利用 DL 模型检测剥落和钢筋外露等缺陷，改变混凝土结构的健康跟踪（卷积神经网络 (`CNN`)、`ResNet-50`、`AlexNet`、`VGG16`、`VGG19`） [10]。尽管如此，集成混合模型的缺乏限制了定位和分类缺陷的精度。在网络安全领域，物联网以及网络-物理系统（CPSs）日益增长的复杂性需要更好的入侵检测。多选入侵检测系统 (`CIDS`) 使用自动编码器和滑动窗口检测连续异常，实现高召回率（0.962–1）和低误报率（0–0.033），无需复杂的 ML 模型。对于物联网的安全性，实时异常检测至关重要 [22]。基于 TinyML 的预测性维护降低了成本。建筑贡献了欧盟 30% 的排放和 40% 的能耗，空间供暖发挥着重要作用 [23]。结合智能散热器阀、温度数据、呼吸和生命体征（TRVs）控制技术在确保居住者舒适度的同时提高了效率。强化学习 (`RL`)，特别是深度强化学习 (`DRL`) 的使用，正在成为一种很有前景的自学习技术，实现自适应能源管理 [24]。
+
+#### 2.5.1 工作
+
+DL 使用人工神经网络从数据中识别模式，就像大脑一样。它包含：
+
+1. **层：** 输入层——接收原始数据（图像、文本等）。隐藏层使用神经元和激活函数（`ReLU`、`Sigmoid`）提取特征。输出层——给出预测。
+2. **训练过程：** 前向传播——数据通过各层产生输出。损失计算——使用交叉熵或 `MSE` 衡量误差。反向传播和优化——使用梯度下降（`Adam`、`SGD`）调整权重。
+3. **关键模型：** `CNN`——图像处理（例如缺陷检测）。`RNN`/长短期记忆 (`LSTM`)——基于序列的学习。自动编码器——异常检测。DL 根据数据进行学习和改进，允许多个领域的自动化、估计和智能决策。
+
+#### 2.5.2 算法工作原理
+
+1. **固体结构健康监测：** `CNN`、`ResNet-50`、`AlexNet`、`VGG16` 和 `VGG19` 用于自动检测缺陷。检测裂缝、剥落和钢筋外露，但缺乏用于精确定位的混合模型。
+2. **MultiCIDS：** CPS 的入侵检测。使用滑动窗口的混合自动编码器检测物联网/CPS 网络中的连续故障。没有复杂 ML 模型的情况下，它实现了高召回率（0.962–1）和低误报率（0–0.033）。
+
+#### 2.5.3 应用
+
+预测性维护：工业物联网（IIoT）利用振动/声音传感器和 `CNNs` 检测行业中的设备故障。例如，西门子使用 AI 驱动维护。智能基础设施使用振动和图像传感器检测桥梁和管道的裂缝。智能城市：交通摄像头流的交通管理信号使用 `LSTM` 网络进行优化。考虑 `NVIDIA Metropolis`。废物管理：AI 驱动的垃圾桶（如 `Bigbelly`）利用传感器数据和 `DL` 预测填充水平。医疗监控——穿戴设备检测心脏异常（`Apple Watch ECG` + `1D CNNs`）。远程患者监控——在 IoT 医疗传感器上实施 `RNNs`，预测健康灾难（如癫发）。能量优化——智能电网使用 `LSTMs` 和智能电表数据预测能源需求。建筑自动化——使用 `RL` 和 IoT 温度调节器调节供暖、通风和空调（HVAC）系统。农业（智能农业）：作物监控无人机和 `CNNs` 通过照片识别害虫和病害。
+
+#### 2.5.4 优势
+
+`DL` 算法对 IoT 技术的益处：`DL` 通过允许数据的智能处理、实时决策和自动化来改进 IoT 系统。以下是主要优势：
+
+1. 改进实时分析，更快的洞察：`DL` 模型（如 `CNNs` 和 `LSTMs`）能够实时处理流式 IoT 传感器数据。例如，智能交通摄像头使用边缘 AI 实时监控拥堵。
+2. 改进预测性维护：早期故障检测——在故障发生前检测机械（振动、温度）的异常。例如，工厂使用 `LSTM` 网络来预测设备问题。
+3. 能源效率和成本节省：智能优化——AI 根据用户行为调整 HVAC、照明和电网。例如，`Google Deep Mind` 减少了 40% 的中心冷却费用。
+4. 自主决策：自学习系统——IoT 设备（如无人机和机器人）使用 `RL` 或 `RL` 来适应。例如，自主仓库机器人无需人工干预即可优化物流。
+5. 大规模 IoT 网络的可扩展性：`DL` 通过处理来自传感器（智能城市和工业）的数百万次输入来处理大数据。例如，AI 驱动的智能电表可能控制大型电网的能源消耗。
+
+#### 2.5.5 挑战
+
+`DL` 算法在 IoT 技术中的挑战：虽然 `DL` 为 IoT 设备增加了智能性，但许多障碍阻碍了其主流应用。以下是主要障碍：
+
+1. 高计算要求。有限的边缘设备能力：大多数 IoT 设备（如传感器和微控制器）需要运行复杂 `DL` 模型的处理能力。例如，在 `Raspberry Pi` 上运行 `CNN` 可能会缓慢且低效。
+2. 数据隐私和安全风险。的 IoT 数据——基于个人/工业数据的 `DL` 模型存在违反隐私的风险。例如，健康监控设备可能会泄露患者数据。
+3. 高能耗。电池耗电——边缘设备（如可穿戴设备）上的 `DL` 推理会缩短电池寿命。例如，监控摄像头使用持续视频分析。
+
+AI 驱动的技术正在彻底改变基础设施，提高有效性、安全性和可持续性。在设施管理中，`DL` 模型增加了具体的健康监控，但为了改进缺陷定位，需要混合模型。在网络安全领域，`MultiCIDS` 以高召回率和极少的误报优于标准的 `IDS`，而基于 `TinyML` 的解决方案改进了实时 IoT 安全 [25]。在 AI 的驱动下，智能控制和 `DRL` 在不需要热模型的情况下提高了效率 28%。未来的发展应强调混合模型和可扩展的 AI 以提高准确性和适应性。
+
+### 2.6 进化算法
+
+遗传学和自然选择被作为进化算法（`EAs`）的灵感。在 IoT 中，它们有助于解决传统方法无法胜任的复杂优化问题 [26]。为了解决资源管理、网络优化、能性和安全等复杂的 IoT 问题，受自然启发的优化方法 `EAs` 是必不可少的 [27]。为了识别最优或近优解决方案，`EAs`（如遗传算法 `GAs`、粒子群优化 `PSO` 和差分进化算法 `DE`）模仿了自然选择和进化过程。这些算法能够跨代进行适应，因此适用于动态和不确定的 IoT 情况。IoT 系统通过利用 `EAs` 可以优化传感器位置、降低延迟、加强安全标准并提高整体系统性能。
+
+#### 2.6.1 算法如何实际工作
+
+在 IoT 中，`EAs` 是受生物启发的优化方法，经常用于能源效率、调度、路由、安全和容错活动 [9]。在发现最佳选项之前，这个过程会持续进行。通过降低功耗、优化网络路由、在云端或边缘环境中有效调度任务、通过识别异常增强安全性以及通过预测和响应错误来确保容错，`EAs` 帮助了 IoT 系统的优化 [19]。
+
+#### 2.6.2 应用
+
+##### 2.6.2.1 IoT 中的 EA 应用
+
+1. 网络优化：增强 IoT 网络中的路由、负载平衡和能源效率。
+2. 安全与隐私：改进密钥管理、加密和入侵检测。
+3. 智能家居和城市：增强智能电网能量分配和交通控制。
+4. 医疗 IoT：促进传感器数据融合和个性化护理。
+5. 工业 IoT：提升供应链有效性和预测性维护。
+6. 群体智能：增强自愈网络和无人机协作。
+
+#### 2.6.3 优势
+
+1. 优化：有效控制能源使用、路由和资源。
+2. 适应性：自学习算法能够实时适应环境的变化。
+3. 健壮性和可扩展性：管理大型网络并确保容错性。
+4. 能源效率：增强 IoT 设备的数据传输和电池寿命。
+5. 多目标解决方案：在性能与成本等权衡之间维持平衡。
+6. 安全增强：提升访问控制、入侵检测和密码学。
+7. 自动化决策：促进去中心化的智能 IoT 应用。
+
+#### 2.6.4 挑战
+
+IoT `EAs` 面临几个主要障碍：
+
+1. 计算和能量限制：有限的计算能力、内存和电池寿命限制了复杂 `EAs` 的实现。
+2. 可扩展性与通信开销：在数据交换很少的情况下管理大型 IoT 网络可能是困难的。
+3. 实时适应：IoT 的动态背景和实时要求对缓慢的 EA 收敛带来了挑战。
+4. 安全与隐私：共享敏感信息带有风险；因此需要安全的去中心化解决方案。
+5. 异构性与容错：由于广泛的故障和多样化的硬件，需要健壮且自适应的算法。
+
+### 2.7 优化算法
+
+ML 模型构建在优化技术之上，这些技术使得建模过程能够适应给定的数据集。这些技术决定了目标函数的最小值或值，在机器学习术语中，这代表误差或损失。从一系列可行选项中选择最佳方案就是优化的过程。换句话说，它是寻找函数最佳或最低值的方法 `[10]`。
+
+#### 2.7.1 算法实际上是如何工作的
+
+在机器学习中，优化算法通过迭代修改模型参数来最大化或最小化目标函数（通常是损失）。
+
+随机参数初始化是该过程的第一步，随后是梯度和损失计算。使用公式 `θ = θ − α∇J(θ)` 来更新参数，其中 `θ`代表参数，`α`代表学习率，`∇J(θ)`代表梯度。这一过程会持续进行直到收敛。虽然包括 `Momentum`、`RMSprop` 和 `Adam` 在内的复杂优化器通过调节学习率和梯度累积提高了效率，但常用的技术包括 `Batch`、`Stochastic` 以及 `Mini-Batch Gradient Descent`，如图 2.3 所示。
+
+**图 2.3** 优化的 ML 算法 `[13]`。
+
+#### 2.7.2 应用
+
+1. 在计算机视觉中，优化技术微调深度学习（DL）模型，实现了物体识别、图像分类和人脸识别。它通过修改模型参数来减少损失并提高准确性。
+2. 优化算法通过调整参数来促进定制内容（如 Netflix 电影或亚马逊购买记录），增强了推荐系统的模型性能。
+3. 通过优化深度学习模型、矩阵分解和协同过滤中的损失函数，它们确保了推荐的精确性和相关性。
+4. 在医疗健康领域，它们改进了药物开发、定制化治疗方案和预测诊断。它们有助于疾病预测、药物配方优化以及针对患者的特定治疗定制，以提高精确性和有效性。
+
+#### 2.7.3 优势
+
+1. 通过优化用于推荐、金融和医疗健康系统的 AI 模型，优化算法促进了自动化决策。它们提高了决策的准确性，优化了资源分配并改进了预测，从而提升了 AI 驱动系统的有效性和可靠性。
+2. 优化技术通过调整参数来减少误差并改进预测，从而提高了模型准确性。在各种应用中，它们有助于机器学习模型的高效开发，产生更准确、更一致的结果。
+3. 优化算法通过高效最小化损失确保了更快的收敛，减少了模型训练所需的迭代次数。这加速了学习并提高了计算效率。
+4. 优化方法提升了可扩展性，能够有效管理大数据集和深度神经网络等复杂模型。它们通过促进更快的训练和改进的性能，使得大规模数据应用机器学习成为可能。
+
+#### 2.7.4 挑战
+
+1. **非凸性：** 全局优化具有挑战性，因为许多机器学习代价函数似乎是非凸的，导致了多个带有鞍点的局部极小值。
+2. **高维性：** 由于深度神经网络包含高维参数，优化既困难又昂贵。
+3. **过拟合：** 正则化阻止了模型从训练数据学习，使其无法泛化到新数据。
+
+机器学习模型依赖优化算法来调整参数并最小化损失，从而提高准确性和效率 `[21]`。
+
+### 2.8 RL 算法
+
+RL 算法日益应用于物联网（IoT）环境，以实现跨领域的智能、自适应决策。通过允许设备从与环境的交互中学习，RL 增强了物联网系统的效率、安全响应能力。在智能医疗领域，RL 有助于检测和缓解网络威胁；在无线传感器网络（WSNs）中，它优化了节能的任务卸载；在经济系统中，它支持实时策略调整 `[16]`。
+
+#### 2.8.1 应用
+
+
+
+研究应用了两种先进 RL 模型——近端策略优化（PPO）和优势演员评论（A2C）来模拟攻击和防御策略，评估其在增强网络韧性方面的效果 `[4]`。通过持续交互，RL 代理能够识别漏洞并相应调整策略。这种方法将理论 RL 概念与网络安全应用相结合，为关键医疗基础设施提供了可扩展的解决方案 `[2]`。
+
+RL 的应用是在物联网范围内优化任务卸载。随着边缘计算的使用增加，提高电池供电节点的效率和寿命变得至关重要。提出了一种分布式多智能 Q-learning 算法，使节点能够协作决策并避免自私行为，导致能量消耗更加均衡 `[17]`。该算法与集中式 Q-learning 和深度 Q-learning 模型进行了对比。结果显示，虽然深度 Q-learning 具有更高的性能，但其复杂性使其在资源受限的设备上部署并不实际。相比之下，所提出的分布式方法更适用于真实的 WSN 场景 `[19]`。这项工作证明了将轻量级 RL 技术集成到物联网以增强其可持续性和效率的可行性 `[28]`。未来的方向包括现实测试以及对深度确定性策略梯度（DDPG）等先进算法的探索 `[29]`。
+
+该框架结合了用于对齐不同频率数据的 `MIDAS` 回归、用于建模复杂时间模式的 `LSTM` 网络以及 `Deep Q`。
+
+这使得机器学习驱动的 `MLD-Net` 与传统的宏观经济模型区分开来，后者在捕捉非线性动态和快速应对意外经济冲击方面往往表现不足 `[14]`。这些改进旨在提高 `MLD-Net` 的性能和适应性，特别是在分析局部经济状况和特定行业趋势方面 `[9]`。
+
+## 2.9 结论
+
+物联网技术的快速发展和普及进入了一个智能数据处理、实时决策和稳健安全不仅是增强功能，而是基本要求的时代。
+
+- 如 `KNN`、`RF` 和 `logistic regression` 等监督学习算法在预测任务中提供了精确性和可靠性，特别是在可用标记数据的情况下。它们被广泛应用于医疗诊断、能源管理和农业监测等领域。然而，由于数据标注仍然是一个消耗资源的过程，无监督学习和半监督学习的重要性日益增加。这些方法允许从海量的无标记数据中提取有意义的见解，从而以最小的人工干预实现异常检测、客户细分和欺诈检测。
+
+- 如 `HSGAN-IoT` 和 `SSFL` 等半监督方法在性能和数据可用性之间提供了一种有效的折中。这些框架同时利用了标记和未标记数据，增强了入侵检测系统（IDS），减少了对大规模数据集的依赖，并通过 `FL` 改进了隐私保护——这对于 6G 驱动、数据密集型的 `IoT` 未来至关重要。
+
+## 33. 参考文献
+
+1. Konieczny R, Idczak R. 机械合金制备 Fe–Re 合金的穆斯堡研究。Hyperfine Interact 2016;237:1–8. [`doi.org/10.1007/s10751-016-1232-6`](https://doi.org/10.1007/s10751-016-1232-6)
+
+2. Mohammadi M, Al-Fuqaha A, Guizani M, Oh JS. 支持物联网和智能城市服务的半监督深度强化学习。IEEE Internet Things J 2018;5:624–35. [`doi.org/10.1109/JIOT.2017.2712560`](https://doi.org/10.1109/JIOT.2017.2712560)
+
+3. Wu L, Liao X. 基于人工智能的智能机器进化算法学习。Procedia Comput Sci 2023;228:1016–22. [`doi.org/10.1016/j.procs.2023.11.133`](https://doi.org/10.1016/j.procs.2023.11.133)
+
+4. Tirumala Vasu G, Fiza S, Kumar AK, Devi VS, Kumar CN, Kubra A. 用于物联网（IOT）的安卓恶意软件检测的改进黑猩优化算法（ICOA）特征选择和深度神经网络框架。Meas Sensors 2023;28:100785. [`doi.org/10.1016/j.measen.2023.100785`](https://doi.org/10.1016/j.measen.2023.100785)
+
+5. Zhou Z, Liu Y, Hu T, Wang C. 基于智能电表数据检测家庭异常不活动的两种无监督学习算法。Expert Syst Appl 2023;230:1–35. [`doi.org/10.1016/j.eswa.2023.120565`](https://doi.org/10.1016/j.eswa.2023.120565)
+
+6. Zoppi T, Ceccarelli A, Puccetti T, Bondavalli A. 哪种算法可以检测未知攻击？入侵检测的监督、无监督和元学习算法对比。Comput Secur 2023;127:103107. [`doi.org/10.1016/j.cose.2023.103107`](https://doi.org/10.1016/j.cose.2023.103107)
+
+7. Naji K, Gowid S, Ghani S. 使用深度学习技术的基于人工智能和物联网的混凝土柱底定位与退化检测算法。Ain Shams Eng J 2023;14:102520. [`doi.org/10.1016/j.asej.2023.102520`](https://doi.org/10.1016/j.asej.2023.102520)
+
+8. Shen Y, Shen S, Li Q, Zhou H, Wu Z. 基于边缘的物联网共享的演化隐私保护学习。Digit Commun Networks 2023;9:906–19. [`doi.org/10.1016/j.dcan.2022.05004`](https://doi.org/10.1016/j.dcan.2022.05004)
+
+9. Hossen MJ, Hoque JM, Aziz NABA, Ramanathan TT, Raja JE. 使用深度学习方法的时间序列无监督新颖性检测。Heliyon 2024;10:e2594. [`doi.org/10.1016/j.heliyon.2024.e2594`](https://doi.org/10.1016/j.heliyon.2024.e2594)
+
+10. Catillo M, Pecchia A, Villano U. MultiIDS: 基于深度学习的 CPS 多变量时间序列异常入侵检测。Internet Things (Netherlands) 2025;30:101519. [`doi.org/10.1016/j.iot.2025.101519`](https://doi.org/10.1016/j.iot.2025.101519)
+
+11. Lu Y, Wang C, Zhang G, Li C. 分子属性预测的半监督学习图训练。Alex Eng J 2024,10031. [`doi.org/10.1016/j.aej.2024.10031`](https://doi.org/10.1016/j.aej.2024.10031)
+
+12. Milivoević M, Čirić D, Prezelj J, Murovec J. 使用心理声学特征进行车辆分类的无监督学习方法分析。Meas J Int 2024;1:227–35. [`doi.org/10.1016/j.measurement.2024.11438`](https://doi.org/10.1016/j.measurement.2024.11438)
+
+13. Sharma SK, Alghamdi R, Alasmari S, Sharma NK. 物联网智能城市协同管理的分数阶 PID 控制器。Energy Rep 2024;12:551–66. [`doi.org/10.1016/j.egyr.2024.11038`](https://doi.org/10.1016/j.egyr.2024.11038)
+
+14. Qi Y, Hossain MS. 用于 6G 物联网数字孪生的半监督联邦学习：一种贝叶斯估计方法。J Adv Res 2024;66:47–57. [`doi.org/10.1016/j.jare.2024.02012`](https://doi.org/10.1016/j.jare.2024.02012)
+
+15. Diwan SA. 智能酒店宾客体验优化：用于物联网集中运营的模糊 AHP 与机器学习。Alexandria Eng J 2025;116:535–47. [`doi.org/10.1016/j.aej.2024.11051`](https://doi.org/10.1016/j.aej.2024.11051)
+
+16. Katib I, Albassam E, Sharaf SA, Ragab M. 保护物联网设备：用于预测性维护的 TinyML 驱动深度学习实时异常检测。Ain Shams Eng J 2025;16:103281. [`doi.org/10.1016/j.asej.2025.103281`](https://doi.org/10.1016/j.asej.2025.103281)
+
+17. Fatehi Karjou P, Stupperich F, Stoffel P, Müller D. 基于深度强化学习的物联网智能温控器人环控制策略。Energy AI 2025;20:100490. [`doi.org/10.1016/j.egyai.2025.100490`](https://doi.org/10.1016/j.egyai.2025.100490)
+
+18. Zhu J, Fan C, Yang M, Qian F, Mahalec V. 用于工业数据高低频率变量平衡的半监督学习算法。Comput Chem Eng 2025;193:108933. [`doi.org/10.1016/j.compchemeng.2024.108933`](https://doi.org/10.1016/j.compchemeng.2024.108933)
+
+19. Karimullah S, Khan M, Shaik F. 一种通过深度学习和物联网传输进行 CT 扫描检测肺癌的方法。Front Oncol 2024;14:13504. [`doi.org/10.3389/fonc.2024.13504`](https://doi.org/10.3389/fonc.2024.13504)
+
+20. Peng C, Wang Y, Jiang L. 集成物联网数据与强化学习。Alexandria Eng J 2025;119:227–31. [`doi.org/10.1016/j.aej.2025.01065`](https://doi.org/10.1016/j.aej.2025.01065)
+
+21. Olanrewaju-George B, Pranggono B. 基于无监督和监督深度学习的物联网联邦学习入侵系统。Comput Secur Appl 2025;3:10068. [`doi.org/10.1016/j.csa.2024.10068`](https://doi.org/10.1016/j.csa.2024.10068)
+
+22. Cumia M, Mujica G, Portilla J. 通过协同强化驱动的任务卸载延长电池寿命。Internet Things (Netherlands) 2025;31:101534. [`doi.org/10.1016/j.iot.2025.101534`](https://doi.org/10.1016/j.iot.2025.101534)
+
+23. Shahvandi M K. 使用径基函数机器学习通过 GNSS 残差位置序列预测和分析地表垂直变化。在 *Proc. 2nd Int. Conf. Development of Materials Engineering, Mining, and Geology*,德黑兰，伊朗，2020, pp. 1–6.
+
+24. Khurana S, Saxena S, Jain S, Dixit A. 使用机器学习的排放预测建模：综述。Mater Today Proc 2020;38:280–4. [`doi.org/10.1016/j.matpr.2020.07.204`](https://doi.org/10.1016/j.matpr.2020.07.204)
+
+25. Yu C, Seslija M, Brownbridge G, Mosbach S, Kraft M, Parsi M, 等. 排放建模的深度核学习方法。Data-Centric Eng 2020;2:1–6. [`doi.org/10.1017/dce.2020.4`](https://doi.org/10.1017/dce.2020.4)
+
+26. Li Q. 一种基于实际行驶和环境信息的轻型车辆怠速排放估计机器学习方法。Environ Poll Climate Change 2017,*1*(1), Article 1000106. [`doi.org/10.4172/2573-458X.1000106`](https://doi.org/10.4172/2573-458X.1000106) (截至 [2025/12/22] 无法访问)
+
+27. Shaik F, Karimullah S, Khan M, Ahmed SJ. 集成 IoT、计算分析和遗传见解以提高可访问性和早期干预。见：2024 年智能与可持续技术近期创新国际会议 (ICRISST)，印度班加罗尔，IEEE, 2024, pp. 1–6. doi: [10.1109/ICRISST59181.2024.10921923](http://dx.doi.org/10.1109/ICRISST59181.2024.10921923)
+
+28. Kumbhar S, Khot S, Jujare V, Patil V, Husainy A, Shedbalkar K. 使用机器学习预测高级 35 号汽油-乙醇-烷烃混合燃料火花点 (S.I.) 引擎的排放特性。见：Garg D, Rodrigues JJPC, Gupta SK, Cheng X, Sarao P, and Patel GS (编.) 高级计算。IACC 2023。计算机与信息科学通信，卷 2053。Springer, Cham. 2024, pp. 144–68. [`doi.org/10.1007/978-3-031-56700-1_13`](https://doi.org/10.1007/978-3-031-56700-1_13)
+
+29. Husainy ASN, Sawant SM, Kale SK, Patil SD, Kumbhar SV, Patil VV, Sur A. 使用机器学习 (ML) 算法研究制冷模型的功耗及其探索性数据分析 (EDA)。见：Garg D, Rodrigues JJPC, Gupta SK, Chengdu X, Sarao P, Patel GS (编.) 高级计算。IACC 2023。计算机与信息科学通信，vol 2053. Springer, Cham. 2023, pp. 124–143. https://doi.org/[`doi.org/10.1007/978-3-031-56700-1_12`](https://doi.org/10.1007/978-3-031-56700-1_12)
+
+# 36.3 利用机器学习和人工智能增强物联网智能决策
+
+Sandeep Kumar Hegde
+
+DOI: [10.1201/9781003634768-3](http://doi.org/10.1201/9781003634768-3)
+
+## 3.1 引言
+
+在医疗领域，人工智能（`AI`）正在显著连接物联网（`IoT`），以提供远程患者管理、疾病预测和创新的个性化治疗。`AI` 算法同样在可穿戴设备中运行，监测生物体并根据这些系统的实时监测变化向健康专业人员发送警报，以便及早发现并促进及时的健康干预以改善结果。此外，由于实现了早期疾病检测和及时医疗干预，患者的效果得到了提高。基于 `AI` 的 `IoT` 解决方案带来了远程医疗、实时健康监测和自动诊断的改进，同时也使其在医疗领域更具成本效益且易于获取 [1]。
+
+
+
+简单来说，近期 `AI` 和机器学习（`ML`）集成 `IoT` 为传统领域带来了革命，旨在开发更智能、更高效的决策方法，解决这些领域面临的其他问题。这种集成包括用于处理大型数据集的智能系统，在各种应用中实现非常智能、多功能且自主的设计。该领域令人印象深刻的贡献之一是使用 `AI` 和 `ML` 来保护 `IoT` 系统。传统的 `IoT` 框架包含许多与数据漏洞和未经授权访问相关的问题。为了应对这些问题，研究人员提出了新的基于 `ML` 的安全模型，用于分析当前技术以及与智能 `IoT` 系统相关的漏洞。这些模型将使用 `ML` 分类器来检测和防止安全威胁，以提高 `IoT` 网络的健壮性 [2]。作为预防措施，已开发了基于 `AI` 的解决方案来分析数据以检测异常，从而提高医疗 `IoT` 系统的安全可靠性 [3]。这些数据集通过 `AI` 算法进行分析，以优化流量、减少拥堵并增强应急响应系统。`AI` 驱动的 `IoT` 智慧城市计划促进了城市发展、降低碳排放并提高了市民的生活质量 [4]。
+
+`AI` 与 `IoT` 的结合实施证明对农业领域的重大突破具有工具作用，其中智能农场利用 `AI` 赋能的设备进行精细农业。传感器随后为监测土壤状况、天气和作物健康提供了良好的平台，以便农民可以优化灌溉、施肥和害虫控制 [5]。通过 `AI` 算法处理信息以产生具有操作性的建议，从而减少资源浪费并提高粮食安全。另一个挑战是基于 `AI` 的 `IoT` 系统快速处理，特别是从边缘设备的角度来看。许多 `IoT` 设备在非常远程或低功耗环境中运行，这限制了它们可以运行的 `AI` 模型复杂度。因此，边缘 `AI` 和联邦学习（`FL`）正在被开发以实现本地处理，减少对云计算的依赖，这对 `AI` 驱动的 `IoT` 生态系统的决策是必要的 [6]。本文将努力强调 `IoT` 的关键 `ML` 算法及其用途以及智能推理中出现的问题。基本上，特定 `IoT` 的 `ML` 可进一步分类为监督学习、无监督学习和强化学习（`RL`）。监督算法如支持向量机（`SVMs`）、随机森林和深度神经网络用于预测性维护、健康监测以及故障诊断。聚类、异常和离群检测算法（如 `K-means` 聚类和主成分分析 `PCA`）解决了来自智能城市应用和工业 `IoT` 的问题。目前，`RL` 最流行的应用是机器人学、交通管理和智能电表计量，其重点是实时决策 [7]。
+
+为了预测未来趋势，可以通过 `AI` 和 `ML` 通过历史信息识别模式，从而实现预防性维护、需求预测和资源配置。在工业 `IoT`（`IIoT`）的情况下，预测分析可能指向故障预测，从而减少停机时间和维护成本 [8]。智能电网、智能农业和环境监测展示了本研究如何将灵活的解决方案可持续地实施到 `IoT` 应用中。备期待的自动化设施来自 `AI` 与 `IoT` 的集成。本研究尝试分析使用 `AI` 和 `ML` 的 `IoT` 系统如何在无或极少人工干预的情况下辅助自主决策。基于 `AI` 的 `IoT` 应用将包括自动化运输、供应链管理和机器人流程自动化 [9]。投资 `AI` 驱动的 `IoT` 解决方案的企业将形成未来的市场，那里竞争将异常激烈。因此，本研究寻求探索 `AI` 和 `ML` 在 `IoT` 智能发展方面的应用、挑战和未来 [10]。
+
+## 3.2 文献综述
+
+本综述探讨了讨论 `AI`、`ML` 和 `IoT` 交叉领域的关键研究论文，强调了其优势、应用和挑战。多位研究人员研究了 `AI` 与 `IoT` 中改进决策之间的关系。根据 Ficco 等人 [11] 的观点，`AI` 不仅帮助 `IoT` 设备收集数据，还能提供实时洞察并实现决策自动化。`IoT` 系统可以使用 `ML` 算法预测未来结果、优化资源分配并识别模式。这些是用于智能家居、医疗保健、工业机器人和智慧城市的一些智能决策过程。此外，另一项研究 [12] 强调，`AI` 驱动的 `IoT` 解决方案最适用于在复杂任务中以更少的人工输入实现更高的效率。它展示了深度学习（`DL`）模型（如卷积神经网络 `CNNs` 和循环神经网络 `RNNs`）如何帮助 `IoT` 设备分析图像数据、语音数据和传感器数据；得益于 `AI` 决策，这有助于车辆自动化、智能监控和环境监测的精细化和快速响应。
+
+`AI` 增强 `IoT` 智能的一个广泛领域是预测性分析。Shams 等人 [13] 解释了基于 `AI` 的 `IoT` 系统如何使用 `ML` 模型预测潜在的设备故障、优化供应链管理并提高能源效率。`AI` 方法，特别是 `CNN` 和 `RNN` 等 `DL` 架构中的方法，已在实时分析领域取得了巨大成功。Rane 等人 [14] 综述的基于 `CNN` 的 `AI` 模型在处理基于 `IoT` 的智能监控系统的明亮和多云视频流方面显示了显著成就，其处理准确率超过 92%，超越了安全性和自动化要求的标准。
+
+在考虑设备能够学习经验并适应动态环境的预测性 `IoT` 系统时，Simuni 等人 [15] 主要将 `RL` `ML` 方法作为关注领域。`IoT` 中的 `RL` 应用可以涵盖许多领域，例如能源管理、智能农业和自适应交通控制系统，在其中持续学习增强了决策机制。安全是 `IoT` 生态系统中的首要问题，`AI` 在推进网络威胁和异常检测技术方面起着至关重要的作用。根据 Hemamalini 等人 [16]，基于 `AI` 的异常检测通过识别网络流量、设备行为甚至系统日志中违背预期模式的模式，是提高 `IoT` 安全的技术之一。异常检测技术利用 `SVMs`、决策树和 `DL` 方法等学习算法在安全漏洞发生时进行检测。根据 Liao 等人 [17] 的观点，`AI` 主导的入侵检测系统在 `IoT` 环境中运行良好。
+
+智慧城市倡议坚决依赖于支持 `AI` 的 `IoT` 解决方案，用于交通优化、废物管理和公共安全。文献 [18] 中的工作指出，`AI` 通过分析来自传感器、摄像头和环境监测设备的实时数据来增强支持 `IoT` 的智慧城市系统，从而使城市规划者能够就基础设施、污染控制和能源分配做出明智决策。智慧城市应用指的是部署基于 `RL` 的 `AI` 模型用于交通管理、能源优化和资源分配的领域。El Alaoui 等人 [19] 的研究表明，基于 `AI` 的智能交通系统通过实时 `IoT` 传感器数据动态调整交通灯模式，将拥堵率降低了高达 35%。
+
+文献 [20] 中的工作讨论了 `AI` `IoT` 系统如何通过预测拥堵模式和调整信号计时来改进城市交通管理。`AI` 支持的智能交通应用（如自动驾驶汽车和共享出行平台）尝试引入 `ML` 以优化路线、最小化燃料消耗并提高通勤者的整体体验。`AI` 和 `IoT` 在远程患者监测、疾病检测和个性化治疗领域引发了革命。正如 Hussein 等人 [21] 所报道，支持 `AI` 的 `IoT` 设备利用可穿戴传感器、医学影像和电子健康记录的数据分析，识别糖尿病、高血压和心脏状况等疾病的早期迹象。因此，它们为医疗部门根据实时收集的信息制定定制治疗方案提供协助。在这方面，Bharathi 等人 [22] 的工作分析了使用来自支持 `IoT` 健康监测设备的数据流进行流行爆发检测的预测性 `AI` 模型性能。文献 [23] 中的工作指出，`AI` 驱动的机器人和预测性维护对工业效率做出了巨大贡献。研究表明，基于 `AI` 的入侵检测系统（`IDS`）在检测网络威胁方面的准确率超过 95%，从而增强了 `IoT` 的监控 [24]。为了异常检测和入侵防御，基于 `AI` 的模型（如 `Autoencoders`、孤立森林和生成对抗网络 `GANs`）提供了良好的研究基础。传统的 `AI` 模型需要在中心化点存储分类数据，这威胁到了隐私和数据安全信任。相反，`FL` 通过在多个去中心化的 `IoT` 设备上建立 `AI` 模型训练所需的必要机制而不共享原始数据，从而缓解了这一局面 [25]。
+
+文献 [26] 提出的工作指出，应当借助 `AI` 的帮助实现自动化，特别是在工业物联网（`IIoT`）中，生产线的自学习机器人正在优化生产操作。根据 Dhiman 和 Alghamdi [27] 的研究，这些机器人使用计算机视觉在各种制造任务中实现多样化应用，`DL` 和 `RL`。这一成就也确保了 `AI` 驱动的供应链管理中的预测性分析，从而实现了平稳的物流和库存控制。然而，`AI` 引入物联网引发了若干复杂问题，包括数据隐私、计算限制和伦理考量。基于 `AI` 的物联网系统必须考虑隐私问题，因为它们处理着连接设备收集的海量个人数据 [28]。用户数据必须符合《通用数据保护条例》（`GDPR`）和 `HIPAA` 等法规，以遵守用户保护措施。`AI` 驱动的物联网技术的未来在于动态流行的第五代（5G）网络、`DL` 能力的进步以及 `AI` 治理的加强之间的交汇。文献 [29] 提出的工作为这种超低延迟：具有更高可靠性的快速数据传输提供了充分的理论依据。自动驾驶汽车、智能医疗和工业自动化等实时应用将从这一进展中获得巨大益处。`AI` 和 `IoT` 在远程患者组织监测、诊断和可穿戴健康设备方面取得了巨大进展。根据 Ala 等人 [30]，用于解释 `ECG` 读数的基于 `AI` 模型在发现 `ECG` 迹图中的异常方面实现了 93.4% 的成功率，有助于增强疾病的早期检测。物联网辅助 `AI` 医疗系统在实时紧急情况下会自动分析患者的生命体征，从而将患者入院的延迟减少了 25%。基于 `AI` 的精准农业利用物联网传感器来监测土壤、管理灌溉并预测作物的任何疾病。根据 Ozkan-Okay 等人 [31] 的研究，这些系统将使作物最高产量提高 18%，用水量限制降低 25%。
+
+Shwetabh 和 Ambhaikar [32] 的另一研究小组基本上阐述了物联网背景下可解释 `AI`（`XAI`）在基于 `AI` 的决策过程中的透明度、可解释性和问责制机制。事实上，`AI` 模型的不断发展是为了使其符合伦理、公平且无偏见，从而为物联网生态系统中负责任地实施 `AI` 建立了协调一致。`AI` 和 `ML` 在大多数物联网生态系统中发展迅速，导致在效率、自动化及其决策过程方面取得了显著改进。基于 `AI` 的物联网应用主要出现在智能城市、工业自动化、医疗和安全领域。研究人员探索了应用 `DL`、`RL` 和 `FL` 等其他 `AI` 技术来提高物联网智能性并增强实时决策能力。本章节提供了有关当前文献中物联网应用中 `AI` 和 `ML` 修改的额外见解。`DL` 直接增强了基于物联网的分析和决策过程。根据 Nadella 和 Gonaygunta [33]，`CNNs` 和长短期记忆（`LSTM`）`DL` 架构通过处理比以前更复杂、更通用的数据模式，其和和促进并简化了物联网设备的数据处理任务。与依赖集中数据处理的传统 `ML` 相，`FL` 允许物联网设备协作训练模型，而无需实际共享精细提炼的信息本身 [34]。文献 [35] 提出的工作研究了 `FL` 如何受益于医疗和智能家居等环境，在这些环境中，感兴趣的数据具有隐私担忧，但仍可以从集成设置中学习。这种去中心化机制为所处理的数据提供了安全方面的额外保障，并符合 `GDPR` 等隐私法规。`AI` 被激活用于优化智能电网中的能量消耗和分配。`ML` 模型更合逻辑地预测电力需求模式，从而优化电力分配。Nazir 等人 [36] 的研究表明，基于 `AI` 的智能电网通过根据物联网传感器的实时数据动态调整电力供应，减少了 20–25% 的能量浪费。
+
+`XAI` 近期在物联网应用中获得的关注，是因为 `AI` 驱动的决策需要透明度和问责制。Rafique 等人 [37] 已指出传统模型的这种黑箱性质使得使用户无法检测其背后的原因。在物联网中简单地应用 `XAI` 技术是为了确保自动系统、医疗、金融等此类领域的可解释性和问责制。Kheder 和 Mohammed [38] 的一项研究表明，对基于 Transformer 的自然语言处理（`NLP`）模型（如 `BERT` 和 `GPT`）的分析显示了它们通过物联网支持的智能助手以高准确率理解和处理人类语音的能力。此类 `NLP` 技术增强了自动化客户服务、复杂的智能家居自动化和对话式 `AI` 应用，从而使物联网系统更加直观和用户友好。边缘计算通过为物联网系统提供本地 DIY 解决方案，开发了一种减少云端高延迟带宽限制的方法。根据 Bukhowah 等人 [39]，`AI` 驱动的边缘计算在极少连接云端的情况下在本地物联网设备上提供实时处理。Liu 等人 [40] 提出的工作证明，部署在边缘设备上的 `AI` 使处理延迟降低了 40–50%，从而为自动驾驶和工业自动化等物联网关键应用中的实时 `AI` 驱动决策铺平了道路。
+
+强化学习（`RL`）在给定的自适应和自学习物联网环境中迈下了坚实的足迹。参考文献 [41] 中的工作描述了 `RL` 算法如何允许物联网设备通过试错来学习其最优策略，使其最终适用于智能电网优化、机器人自动化和自动驾驶车辆等应用。基于 `RL` 的物联网系统在适应各种状况的同时提高了决策效率，从而提升了系统的整体性能。`AI` 有效增强了智能电网系统中的能量管理和分配。正如研究观察到的，支持物联网的电网中的 `ML` 模型可以预测电力需求、检测故障并优化能源消耗。`AI` 驱动的智能电网通过融合 `IoT` 传感器数据进行实时能源管理，从而提高了电力系统的稳定性和可持续性。工业物联网（`IIoT`）从以 `AI` 为核心的异常检测技术取得了进展。参考文献 [42] 中的工作支持了 `AI` 辅助 `ML` 算法在预测设备故障和最大限度减少制造操作中停机时间方面的潜力。具有预测性维护模型的 `AI` `IoT` 解决方案能够准确定机器运行中的异常情况，允许行业降低运营成本并提高效率。`AI` 赋物联网的另一面是偏见、公平性和伦理问题的存在。根据 Karimullah 等 [43] 的研究，物联网决策系统中的 `AI` 算法可能会导致不公正的判断；继承其训练数据中存在的偏差。`AI` 为基于物联网的智能家居自动化系统提供了学习用户行为和优化能源使用的能力。在智能家中，`AI` 模型可以预测用户偏好并自动控制设备，通过脸识别和语音助手增强安全性 [44]。在提高用户便利性的同时，观察到 `AI` 驱动的智能家居系统减少了 18–22% 的能耗。`IIoT` 中 `AI` 的使得工业过程更加高效，确保了自动化，并保证了控制质量。参考文献 [45] 中的工作声称，`AI` 驱动的预测性维护、供应链分析和机器人自动化显著提升了制造效率。
+
+## 3.3 提出的方法论
+
+所提出的方法通过集成 `AI`–`ML` 与物联网为特征的实时决策改进了智能环境能力。这主要涉及数据采集、预处理、选择和 `AI` 模型的应用以及评估。该研究解决的其他问题包括数据隐私、计算效率和可扩展系统。系统架构旨在构建三个大支柱：感知、网络和应用。感知层由收集实时数据的物联网传感器和设备组成。本研究旨在通过通过实现用于智能决策的 `AI` 和 `ML` 的平台安全来增强物联网智能化。所提出的解决方案是一种用于此类系统的结构化方法论，以便实时收集和处理数据，然后进行基于 `AI` 的分析、决策、安全提供和性能验证。
+
+实现这些目标的初始阶段是通过物联网数据获取和预处理完成的，即从不同的智能传感器、连接设备和云平台收集数据。生成的数据大多是非结构化且带有噪声的，需要进行数据清洗、归一化和特征提取。实施了如 `PCA` 和 `Min-Max normalization` 等高级数据预处理技术，以使该方法能够为 `AI` 目的利用相关且高质量的数据。此外，数据通过 `Message Queuing Telemetry Transport (MQTT)` 和 `Apache Kafka` 等协议实时获取，以便在处理前进行流处理和存储。然后，该方法使用预处理后的数据运行 `AI` 和 `ML` 算法以提取见解并做出智能决策。根据特定的物联网应用，将部署不同的 `AI` 技术。这涉及监督学习模型，如 `SVMs` 和 `Random Forest`，用于工业物联网的预测性维护活动和医疗物联网的疾病预测。
+
+Figure 3.1 描述了所提出的架构流程图。物联网智能架构包括 `AI` 和 `ML` 的业务模型，从物联网设备和传感器捕获环境（温度、运动或图像）的原始数据开始，并将这些信息发送到数据采集层，在该层中数据通过 `MQTT` 或 `HTTP` 等专用通信协议传输到云端或边缘服务器。一旦进入系统，数据预处理层应用清洗、过滤和归一化，使数据保持可用且相关的格式，作为决策背景下进一步分析的输入。在某些情况下，边缘处理任务涉及对数据进行本地分析，允许系统通过绕过将所有数据发送到云端的延迟来实现实时决策。`AI` 和 `ML` 层本质上形成了系统的核心，`ML` 模型在历史物联网数据上进行良好的训练，使其能够检测模式、做出预测并以增强决策的最优利益采取行动。虽然人机交互受益于改进的持续反馈循环——从数据采集到重新训练——但决策层将 `AI` 和 `ML` 的输出转换为某种可操作的形式，无论是警报还是控制操作。用户界面和可视化功能为用户提供了查看系统的手段并在并在时方便其他形式的人工干预。在这种情况下，建立了一个反馈循环，允许通过输入新数据对模型进行微调和改进使系统持续增长。最后，安全和隐私层负责安全数据传输和存储、用户隐私以及针对漏洞的系统完整性。
+
+**图 3.1** 所提出的架构流程图。
+
+43.44.（注：此处数字似乎连续，可能为格式问题，或指 3.4 节）所提出的框架通过轻量级 `AI` 模型优化了能耗，包括硬件加速技术，如 `tensor processing units (TPUs)` 和 `graphics processing units (GPUs)`。其他策略包括休眠调度和动态功率管理以节省闲能源损失，这使得物联网能耗更环保且具有成本效益。此外，在使物联网智能自适应方面，该方法引入了 `XAI` 来扩大决策透明度的范围。`AI` 模型相关的一个常见问题是它们作为黑箱系统运行。这阻碍了用户对 `AI` 生成的决策进行正确解释。通过采用多种 `XAI` 方法论，如 `Shapley Additive Explanations (SHAP)` 和 `Local Interpretable Model-Agnostic Explations (LIME)`，预期系统确保 `AI` 预测变得可解释且可理解，并具有良好的合理证明性。这在医疗保健和工业自动化等关键应用中特别有用，因为对 `AI` 决策的监督和信任变得非常重要。
+
+
+
+所提系统将根据准确率、精确率、召回率、F1 分数、响应时间和能量效率进行评估。性能指标将深入分析 AI 驱动的 IoT 应用在有效性和可扩展性方面的可行性。将对不同的 `ML` 和 `DL` 模型进行效率、计算成本和准确性的比较。其中，将检查 `SVM`、`Random Forest`、`CNN` 和基于 `transformer` 的模型，以寻找 IoT 应用中的最佳用例。此类详尽的仿真和现场试验将验证 AI 模型的性能，同时将使用 `TensorFlow`、`PyTorch` 和 `MATLAB` 工具包对 AI 算法进行实现和调优。所提方法通过模型量化、`pruning` 和 `knowledge distillation` 在 IoT 设备的限制内使 AI 模型最大化，以提高计算效率并降低功耗。为此，还探讨了 AI 模型偏差、公平性和问责制的伦理问题。所有 AI 模型都通过了一系列偏差缓解技术，以确保所有应用决策的公平性。可扩展性的提升将通过网络优化、边缘计算能力的增强以及 AI 训练能力的扩展来实现。随后，改进将转向用于 IoT 的自学习 AI 系统。通过试点测试、用户反馈和持续改进，将构思一种将 AI 的 IoT 解决方案到工业、医疗、智能城市和物流中的增量部署策略。实时决策、增强的安全性和可持续计算被集成到该方法论中，以满足上述研究目标。该方法建立了一种结构化且系统化的方法，借助 `AI` 和 `ML` 获取智能、高效且安全的 IoT 智能。通过对数据处理、决策、安全、可扩展性和能量效率等主要挑战进行战略性考虑，所提框架为自主、自适应和高度智能的新代 IoT 生态系统开启了新的未来。
+
+## 45.3.4 实验结果
+
+实验调查所需的数据集收集自 Kaggle 仓库，包含了来自智能环境中大量传感器收集的各种 IoT 数据，如图 3.2 所示。
+
+![图 3.2 使用 Random Forest 对 IoT 传感器数据进行异常检测获得的混淆矩阵。](img/9781041062943_C003_002.jpg)
+
+**图 3.2** 使用 `Random Forest` 对 IoT 传感器数据进行异常检测获得的混淆矩阵。
+
+该大型数据集旨在开发 `ML` 和 `AI` 应用，根据实时的 IoT 传感器输入做出智能决策。数据集包含大量属性，包括环境因素的测量值，如温度、湿度、压力、运动和光等。因此，每个数据点都包含关键的时间戳和元数据信息，并动态地反映了智能家居、工厂、城市等 IoT 系统的特性。该包含包含标记数据和未标记数据，其中某些传感器提供连续类型的数据流，而另一些则记录离散事件类型信息。由于该数据集量大且多样性高，为各种 `ML` 和 `AI` 算法实验提供了巨大的机会——从回归和分类到异常检测——能够实现有关多种用例的智能决策，例如能源效率、预测性维护、自动化和实时环境变化响应。
+
+## 46. 图像与语音
+
+图像和语音是 `CNNs` 以及 `LSTMs` 的主要应用，以满足 IoT 系统的需求。在智能监控应用中，`CNNs` 的分类准确率达到 96.3%，而 `RNN` 在语音识别中的准确率为 92.7%。基于 `Transformer` 的技术（如用于 `NLP` 应用的 `BERT`）具有更好的上下文理解，但计算成本较高。`AI` 模型部署在边缘端时显示出比云处理更显著的延迟优势。与云 `AI` 服务相比，`NVIDIA Jetson` 的推理时间减少了 40%。这种改进很大程度上源于需要实时决策的自动汽车和工业自动化等应用。测试了 `FL` 以检查保护隐私的型 AI 在 IoT 应用中的适用性。从百分比来看，`FL` 达到了与传统集中式训练（89.3%）相似的 87.5%，同时数据传输成本降低了 70%。这些结果表明 `FL` 可以在保持模型性能有效的同时增强数据安全。`RL` 模型被用于智能交通控制系统。基于 `RL` 的模型使拥堵减少了 35%，车辆吞吐量增加了 28%。显然，`RL` 为动态环境下的自适应决策提供了空间。
+
+### 医疗保健
+
+医疗保健应用使用 `AI` 模型测试基于 IoT 的可穿戴设备。对于用于早期疾病检测的 AI 模型，其在预测心脏异常方面的准确率达到了 93.4%。智能警报系统通过在实时实现的场景中减少约 25% 的响应时间改善了患者福利。开发了先进的 `ML` 模型，根据智能电网的理想能源管理需求优化预测电力需求。图 3.3 显示了使用 `CNN` 模型对 IoT 传感器数据进行异常检测获得的混淆矩阵。
+
+![图 3.3 使用 CNN 模型对 IoT 传感器数据进行异常检测获得的混淆矩阵。](img/9781041062943_C003_003.jpg)
+
+**图 3.3** 使用 `CNN` 模型对 IoT 传感器数据进行异常检测获得的混淆矩阵。
+
+该智能系统将电力浪费减少到 22%，并将负载平衡效率范围提高了 18%。上述研究结果表明，`AI` 能够充分提高能源系统的可持续性。基于对制造设备传感器数据分析的 AI 模型机器故障预测结果显示，准确率为 92%。注意到停机时间和机器维护成本均减少了 40%。图 3.4 显示了使用 `XGBoost` 模型对 IoT 传感器数据进行异常检测获得的混淆矩阵。
+
+![图 3.4 使用 XGBoost 模型对 IoT 传感器数据进行异常检测获得的混淆矩阵。](img/9781041062943_C003_004.jpg)
+
+**图 3.4** 使用 `XGBoost` 模型对 IoT 传感器数据进行异常检测获得的混淆矩阵。
+
+### 比较分析
+
+基于不同 `AI` 模型的比较研究考虑了准确率、推理时间和资源消耗等性能参数。得出的是，在进行更复杂的决策方面，`CNNs` 和 `transformers` 可以比传统的 `ML` 产生更好的性能。然而，在结构化 IoT 数据源中，`Random Forest` 和 `XGBoost` 提供了最优性能和效率。在 IoT 安全应用中评估了基于 `AI` 的异常检测。此类模型的示例包括 `Autoencoders` 和 `Random Forests`，结果显示对网络安全威胁的检测率为 95.6%，从而显著提升了 IoT 网络安全和欺诈检测。图 3.5 显示了使用 `Random Forest` 对传感器数据进行异常检测生成的 ROC 曲线。结果证明，分布式 `AI` 架构在集成 IoT 设备数量增加时，能够高效地扩展。未来的工作将主要关注在能源效率和对实时需求的适应性方面优化 `AI` 模型。
+
+![图 3.5 使用随机森林对 IoT 传感器数据进行异常检测生成的 ROC 曲线。](img/9781041062943_C003_005.jpg)
+
+**图 3.5** 使用随机森林对 IoT 传感器数据进行异常检测生成的 ROC 曲线。
+
+原始 IoT 数据的质量显著影响 AI 模型的性能。实验结果显示，去噪、数值归一化和缺失数据处理使各种 ML 模型的预测准确率提升了 12%。在一个智能医疗应用中，在对 ECGG 传感器数据进行预处理后，AI 心脏风险预测准确率从 81.4% 提高到 93.2%。这强调了高质量数据在决策活动中至关重要的意义。图 3.6 显示了使用 `CNN Model` 对 IoT 传感器数据进行异常检测获得的 ROC 曲线。在边缘计算设备上部署 AI 模型极大缩短了处理延迟。
+
+![图 3.6 使用 CNN 模型对 IoT 传感器数据进行异常检测获得的 ROC 曲线。](img/9781041062943_C003_006.jpg)
+
+**图 3.6** 使用 CNN 模型对 IoT 传感器数据进行异常检测获得的 ROC 曲线。
+
+图 3.7 显示了使用 `XGBoost model` 对 IoT 传感器数据进行异常检测获得的 ROC 曲线。在涉及图像/语音识别等非结构化数据的任务中，观察到 `DL` 模型（`CNNs`、`LSTMs`、`transformers`）表现优异，而经典的 `ML` 技术（`Random Forest`、`SVM`、`XGBoost`）更适用于结构化的 IoT 数据集。例如，在视频异常检测中，`CNNs` 实现了 96.29% 的准确率，而 `XGBoost` 在基于传感器的故障检测中达到了 94.5% 的准确率。结果表明，在选择 AI 模型时，数据类型和计算限制会影响决策。传统的 AI 模型涉及数据的集中收集，并带来隐私威胁。所提出的 `FL` 框架显示，在 IoT 设备上进行本地 AI 训练减少了 70% 的数据传输，同时实现了 93.32% 的模型准确率。这在医疗领域尤为重要，因为那里涉及到患者数据隐私。因此，研究表明 `FL` 可以在 AI IoT 中公平地分配隐私、效率和性能。使用支持 IoT 的传感器技术，对 AI 智能能源管理进行了实时功率监控实践测试。AI 算法通过优化的电力分配抵消了 22% 的电能浪费，并将负载均衡效率提高了 15%。系统的预测分析可以根据需求模式动态管理电力供应。结果发现，AI 可用于 IoT-云集成智能电网的能源优化。图 3.8 描绘了 AI/ML 模型对 IoT 传感器数据进行异常检测的性能。可以观察到，带有 `LSTM model` 的 `CNN` 与其他模型相比获得了良好的准确率。IoT 网络中的安全威胁通过基于 AI 的异常检测模型进行研究。使用 `Autoencoders` 和 `Random Forest` 模型进行网络入侵检测产生了 91.2% 的准确率性能指标，这在保障 IoT 安全方面带来了显著改进。该实施成功识别了智能家居和工业 IoT 网络中的未经授权访问尝试，并偏转了可能的网络攻击。借此，这一论点更有力：AI 可以是构建 IoT 网络安全不可或缺的伙伴。
+
+![图 3.7 使用 XGBoost 模型对 IoT 传感器数据进行异常检测获得的 ROC 曲线。](img/9781041062943_C003_007.jpg)
+
+**图 3.7** 使用 XGBoost 模型对 IoT 传感器数据进行异常检测获得的 ROC 曲线。
+
+![图 3.8 AI/ML 模型对 IoT 传感器数据进行异常检测的性能。](img/9781041062943_C003_008.jpg)
+
+**图 3.8** AI/ML 模型对 IoT 传感器数据进行异常检测的性能。
+
+在这一关于智能交通管理的案例研究中，使用了来自 IoT 传感器的实时数据，通过 `RL` 模型优化交通信号计时。与基于旧计时器的传统交通信号系统相比，`RL` 系统使拥堵减少了 51.35%，车流量提升了 28%。这为智能 IoT 在提高城市旅行时间更具流动性方面提供了可能。目前正在研究几种 AI 模型在基于 IoT 的潜在应用方面，例如精准农业，以改善灌溉和土壤健康监测。此外，该系统通过分析热、湿和土壤水分传感器数据，将整体作物产量效率提高了 18%，并减少了约 25% 的用水。
+
+## 3.5 结论
+
+关于利用 ML 和 AI 增强 IoT 智能化以实现智能决策的研究证明了 AI 驱动的解决方案在优化 IoT 生态系统方面的变革潜力。随着 IoT 网络中引入复杂的 AI 和 ML 算法，它将高效处理数据、自动化决策、提高安全性并增强系统的整体性能。该方法按时间顺序详述了数据获取、实时分析、异常检测、网络安全和能源效率等问题，这无疑使 IoT 应用在运行中变得智能、可扩展且可持续。这项研究揭示的最重要的一点是，实时决策在 IoT 环境中具有极重要的意义。
+
+## 参考文献
+
+1. Paramesha, Mallikarjuna, Nitin Liladhar Rane, and Jayesh Rane. “大数据分析、人工智能、机器学习、物联网和区块链增强商业智能。”Partners Universal Multidisciplinary Research Journal 1.2 (2024): 110–133.
+
+2. Lăzoiu, G., A. Andronice, I. Grecu, G. Grecu, and O. Neguriţ. “基于人工智能的决策、物联网传感网络和大数据驱动的可持续制造系统。”Oeconomia Copernicus 13.4 (2022): 1047–1080.
+
+3. Kaur, Navneet, and Lav Gupta. “安全 6G–IoT 环境：通过可解释人工智能增强人工智能决策透明度。”Sensors 25.3 (2025): 854.
+
+4. Almurshed, Osama, Ashish Kaushal, Souham Meshoul, Asmail Muftah, Ioan Petri, Nitin Aluck and Omer Rana. “在边缘云基础设施上增强机器学习任务性能：跨领域物联网框架。”Future Generation Computer Systems 166 (2025): 107696.
+
+5. Wu, Meng, et al. “使用 AI 技术增强金融领域的数据驱动决策。”Artificial Intelligence-Enabled Businesses: How to Develop Strategies for Innovation.IEEE, 2025, pp. 187–207.
+
+6. Miller, Tymoteusz, et al. “人工智能代理集成物联网增强环境监测：水质和气候数据的应用。”Electronics 14.4 (2025): 696.
+
+7. Padhiary, Mrutyunjay, and Raushan Kumar. “通过 AI 视觉和机器学习增强农业：智能农业的演进。”Advancements in Intelligent Process Automation.IGI Global, 2025, pp. 295–324.
+
+8. Magli, Francesca, and Andrea Amaduzzi. “创新、数字创新和人工智能在业务中的作用。”Innovations in Corporate Reporting: The Effects of Digital Innovation, Sustainability, and AI.Cham: Springer Nature Switzerland, 2025, pp. 5–22.
+
+9. Sharma, Kushagra, and Shiv Kumar Shivandu. “集成人工智能与物联网 (IoT) 以增强精准农业中的作物监测与管理”。Sensors International 5.1 (2024): 100292.
+
+10. Akkem, Yaganteeswarudu, Saroj Kumar Biswas, and Aruna Varanasi. “基于 Streamlit 且具有先进可解释人工智能的用于智能农场增强型作物推荐系统”。Neural Computing and Applications 36.32 (2024): 20011–20025.
+
+11. Ficco, Massimo, et al. “用于 IoT 设备的联邦学习：通过板载训练增强 TinyML”。Information Fusion 104 (2024): 102189.
+
+12. Nalini, R. “人工智能在决策、自动化和客户参与中的变革性力量”。Complex AI Dynamics and Interactions in Management. IGI Global, 2024, pp. 189–208.
+
+13. Shams, Mahmoud Y., Samah A. Gamel, and Fatma M. Talaat. “利用可解释人工智能增强作物推荐系统：农业决策决策研究”。Neural Computing and Applications 36.11 (2024): 5695–5714.
+
+14. Rane, Nitin, et al. “用于可持续发展的商业智能与人工智能：集成物联网、机器学习和大数据分析以增强可持续性”。Machine Learning, and Big Data Analytics for Enhanced Sustainability (2024 年 5 月 20 日), IEEE, 2024.
+
+15. Simuni, Govindaiah, et al. “IoT 中的边缘计算：增强信息-物理系统中的实时数据处理与决策”。International Journal of Unique and New Updates 6.2 (2024): 75–84.
+
+16. Hemamalini, V., et al. “用于下一代社会的人工智能-区块链-基于物联网的云应用”。Automated Secure Computing for Next-Generation Systems 3 (2024): 65–82.
+
+17. Liao, Yuxuan, et al. “基于物联网的智能电子健康系统资源优化，通过人工神经网络预测心脏疾病”。Heliyon 10 (2024): 11–24.
+
+18. Rupanetti, Dulana, and Naima Kaabouch. “结合边缘计算辅助的物联网安全与人工智能：应用、挑战与机会”。Applied Sciences 14.16 (2024): 7104.
+
+19. El Alaoui, Mustapha, et al. “释放现代农业中物联网、人工智能和无人机 (UAVs) 的潜力：综述”。Journal of Terramechanics 115 (2024): 100986.
+
+20. Nandanwar, Himanshu, and Rahul Katarya. “用于工业 IoT 环境的深度学习型入侵检测系统”。Expert Systems with Applications 249 (2024): 123808.
+
+21. Hussein, Abbas Hameed Abdul, et al. “收获未来：农业中的 AI 与 IoT”。E3S Web of Conferences. EDP Sciences, 2024, Vol. 477.
+
+
+
+# 参考文献
+
+* 22. Bharathi, G. P., et al. “用于增强商业智能模拟游戏的 AI 驱动自适应学习”。Entertainment Computing 50 (2024): 100699.
+* 23. Seifi, Neda, et al. “医疗健康供应链中集成人工智能区块链因素的评估与优先级排序：一种混合决策方法”。Computer and Decision Making: An International Journal 2 (2025): 374–405.
+* 24. Anwar, Muhammad Rehan, and Lintang Dwi Sakti. “集成人工智能与环境科学用于可持续城市规划”。IAIC Transactions on Sustainable Digital Innovation (ITSDI) 5.2 (2024): 179–191.
+* 25. Farea, Ali Hamid, Omar H. Alhazmi, and Kerem Kucuk. “利用人工智能用于 IoT 攻击的高级优化异常检测系统”。Computers, Materials & Continua 78 (2024): 279–285.
+* 26. Singh, Khushwant, et al. “基于人工智能 (AI) 的物联网 (IoT) 评估”。Technology and Applications. Auerbach, 2024, pp. 387–395.
+* 27. Dhiman, Gaurav, and Norah Saleh Alghamdi. “SMoSE: 基于人工智能的智能城市框架”。IEEE Transactions on Consumer Electronics 70 (2024): 384–385.
+* 28. Saied, Mohamed, Shawkat, and Magda Madbouly. “使用机器学习检测信息为中心的网络中 IoT 的 DoS 攻击：机会、挑战与未来研究方向”。Electronics 13.6 (2024): 1031.
+* 29. Shaik, F., S Karim, and MM Hafizur Rahman. “增强物联网用于早期干预”。2024 年智能技术近期创新国际会议，印度班加罗尔，doi: 10.1109/ICRISST59181.2024.
+* 30. Humayun, Mamoona, et al. “人工智能时代的物联网安全：全面综述”。IEEE Access 12 (2024): 25469–25490.
+* 31. Ozkan, Merve, et al. “基于机器学习的 IoT 性能全面综述”。Engineering Applications of Artificial Intelligence 131 (2024): 10789.
+* 32. Shwetabh, Kumar, and Asha Ambha. “使用 IoT 辅助机器人和深度学习技术的智能健康系统”。BIO Web of Conferences. EDP Sciences, 2024, Vol. 82.
+* 33. Nadella, Geeta, and Hari Gonaygu. “IoT 时代利用人工智能增强网络安全：使用多目标方法的教育信息化模型综述”。International Journal of Science and Engineering 13.04 (2024): 30–33.
+* 34. Han, Lulu, Xinliang, and Kunli Wang. “物联网与人工智能背景下的教育信息化模型分析”。Scientific Reports 14.1 (2024): 17811.
+* 35. Nazir, Ahsan, et al. “协同威胁情报：通过区块链与机器学习集成增强 IoT 安全”。Journal of King Saud University—Computer and Information Sciences 36.2 (2024): 101939.
+* 36. Rafique, Saida Hafsa, et al. “用于物联网网络异常检测的机器学习与深度学习技术——当前研究趋势”。Sensors 24.6 (2024): 1968.
+* 37. Kheder, Mohammed Qader, and Aree Ali Mohammed. “使用 IoT 辅助机器人和深度学习技术的实时交通监控系统”。Kuwait Journal of Science 51.1 (2024): 100153.
+* 38. Bukhowah, Rawan, Ahmed Aljughaiman, and MM Hafizur Rahman. “使用学习检测信息为中心的网络中 IoT 的 DoS 攻击：机会、挑战与未来研究方向”。Electronics 13.6 (2024): 1031.
+* 40. Liu, Chao, et al. “揭示针对机器学习 IoT 系统的攻击：综述及其背后的开源库”。IEEE Internet of Things Journal 2 (2024): 35–45.
+* 41. Wu, Min, et al. “Optimization design in RIS-assisted integrated satellite-UAV-served 6G IoT: A deep reinforcement learning approach.” IEEE Internet of Things Magazine 7.1 (2024): 12–18.
+* 42. Alijoyo, Franciskus Antonius. “AI-powered deep learning for sustainable Industry 4.0 and Internet of Things: Enhancing energy management in smart buildings.” Alexandria Engineering Journal 104 (2024): 409–422.
+* 43. S. Karimullah, M. Khan and F. Shaik, “Implementation and performance evaluation of improved hybrid deep learning approach for anomaly detection and classification in lung CT images.” 2024 International Conference on Recent Innovation in Smart and Sustainable Technology (ICRISST), Bengaluru, India, 2024, pp. 1–6, doi: [10.1109/ICRISST59181.2024.10921991](http://dx.doi.org/10.1109/ICRISST59181.2024.10921991)
+* 44. Bergies, Shimaa, et al. “An IoT-based deep-learning architecture to secure automated electric vehicles against cyberattacks and data loss.” IEEE Transactions on Systems, Man, and Cybernetics: Systems 5 (2024): 93–98.
+* 45. Rajkumar, R., et al. “Enhanced Jaya Optimization Algorithm with deep learning assisted oral cancer diagnosis on IoT healthcare systems.” Journal of Intelligent Systems & Internet of Things 11.2 (2024).
+
+# 4 机器学习与物联网智能决策应用
+
+R. Ramya, P. Kumar, K. Vanitha, and C. Saranya
+
+DOI: [10.1201/9781003634768-4](http://doi.org/10.1201/9781003634768-4)
+
+## 4.1 引言
+
+物联网（`IoT`）连接了数十亿智能设备，产生了需要智能决策的海量数据。机器学习（`ML`）算法通过在智能家居、医疗保健和工业等领域实现自动化、预测分析和异常检测，增强了 `IoT`。与传统的基于规则系统不同，`ML` 模型（如监督学习、无监督学习和深度学习）能够适应复杂环境以提供实时洞察。新兴技术如边缘人工智能（`AI`）、联邦学习（`FL`）和可解释人工智能（`XAI`）进一步提高了效率和安全性。本文探讨了 `ML` 在物联网驱动的智能决策中的作用、关键挑战以及塑造智能自动化的未来趋势。`ML`、`AI` 与 `IoT` 系统的融合改变了行业，提升了效率和决策能力。然而，数据管理、计算需求和隐私担忧等挑战依然存在。未来的研究应关注于优化先进的 `IoT` 架构和安全的数据共享框架 [1–5]。
+
+### 4.2.1 物联网与机器学习概述
+
+`IoT` 连接智能设备以收集和交换数据，实现自动化和实时决策。`ML` 通过分析数据模式、预测结果并实现智能、自适应的决策来增强 `IoT`。
+
+### 4.2.2 使用 ML 在 IoT 中进行智能决策
+
+`ML` 通过分析实时数据、检测模式和做出自动预测，实现了 `IoT` 中的智能决策。`ML` 模型有助于优化资源管理、异常检测、预测性维护和自适应自动化，提高了智能家居、医疗保健和工业系统等 `IoT` 应用的效率和准确性 [6]。图 4.1 展示了层级结构。
+
+![图 4.1 层级结构。](img/9781041062943_C004_001.jpg)
+
+**图 4.1** 层级结构。
+
+## 4.2 IoT ML 中的边缘计算与云计算
+
+边缘计算是在靠近数据需求所在地进行数据捕获、存储、处理和分析的概念，以短响应时间并节省带宽（图 4.2）。因此，边缘计算是一种分布式计算框架，将应用程序带到 `IoT` 设备、本地终端设备或边缘服务器等数据源。边缘计算的原理是计算应该发生在数据源附近。因此，我们预想边缘计算对社会的影响可能像我们在云计算中所看到的那样巨大。
+
+![图 4.2 边缘计算。](img/9781041062943_C004_002.jpg)
+
+**图 4.2** 边缘计算。
+
+## 4.3 IoT ML 中的安全与隐私
+
+* 强身份认证：制造商现在非常重视稳健的密码，以确保只有授权用户可以访问设备。
+* 固件更新：定期更新和打补丁以修复已知漏洞。
+* 加密：传输中和静态数据加密已占据核心位置。如 `TLS` 等安全通信协议保护了数据 [7,8]。
+* 网络分：将 `IoT` 设备与关键网络隔离开的做法，以限制潜在损害。
+* 设备管理：`IoT` 设备管理平台提供集中的控制和监控。图 4.3 显示了设备管理。
+
+![图 4.3 设备管理。](img/9781041062943_C004_003.jpg)
+
+**图 4.3** 设备管理。
+
+### 4.3.1 基于物联网智能决策中的 XAI
+
+`XAI` 通过使决策变得可理解，增强了 `ML` 驱动的 `IoT` 系统的透明度和信任。在智能医疗、工业自动化和安全等 `IoT` 应用中，`XAI` 帮助用户解释 `ML` 预测、识别偏见并提高系统可靠性。图 4.4 显示了 `XAI` 如何帮助用户。诸如 Shapley 加性解释（`SHAP`）、局部解释模型无关解释（`LIME`）和注意力机制提供了关于模型如何处理物联网数据的见解，确保了公平性、责任性和更好的决策。
+
+![图 4.4 XAI 帮助用户。](img/9781041062943_C004_004.jpg)
+
+**图 4.4** XAI 帮助用户。
+
+## 4.4 IoT 中的数据收集与预处理
+
+`IoT` 系统依赖多种数据源来获取信息。从捕获物理测量的传感器数据到跟踪设备性能的机器数据，这些系统收集了丰富的信息。各种方法（包括实时流和事件驱动收集）确保了数据的获取。
+
+数据质量对于 `IoT` 系统至关重要。清洗技术处理缺失、不一致和噪声数据，而集成和转换过程为分析做准备。`ML` 流程见图 4.5。
+
+确保准确性、完整性、一致性、及时性和可靠性对于在 `IoT` 应用中获得有意义的洞察并做出决策至关重要。
+
+![图 4.5 ML 流程。](img/9781041062943_C004_005.jpg)
+
+**图 4.5** ML 流程。
+
+### 4.4.1 传感器数据捕获环境中的物理测量
+
+* 环境传感器测量温度（温度计）、湿度（湿度计）和压力（气压计）等状况。
+* 运动传感器通过加速度计（测量加速度）和陀螺仪（测量角速度）检测移动和方向。
+* 位置传感器使用全球定位系统（`GPS`）和射频识别（`RFID`）标签来确定位置。
+* 生物识别传感器监测生理特征，例如心率（脉搏血氧仪）和指纹（指纹扫描仪）。
+* `Data integration` 整合来自异源的信息，通过合并多个传感器和设备的数据来提供全面的视图。基于共同属性或键匹配数据集以对齐相关信息。解决架构和格式差异以确保数据兼容性。处理数据冗余和重复以防止不一致性和存储浪费。
+* `Data transformation` 修改数据以适应分析需求，归一化和缩放将数值特征调整到共同范围。类别变量编码使用独热编码（二进制虚拟变量）或标签编码（整数映射）将文本标签转换为数值表示。特征提取和特征工程从现有数据中创建新属性（计算比例或聚合值）。在不同粒度上（小时、天）对数据进行聚合和总结，能够在各种详细程度上进行分析。
+* `FL for IoT Devices`：`FL` 是一种去中心化的机器学习方法，多个 `IoT` 设备在不共享原始数据的情况下协作训练模型。`IoT` 设备不是将数据发送到中央服务器，而是本地处理数据并仅发送模型更新，从而确保隐私和效率。
+* `FL for IoT`：
+  * `Data Privacy`：敏感的 `IoT` 数据保留在设备上。
+  * `Reduced Bandwidth Usage`：只发送模型更新，而不是原始数据。
+  * `Lower Latency`：本地处理实现了更快的决策。
+  * `Personalization`：每个设备都可以根据本地情况微调模型。
+* `FL Works in IoT`：
+  * `Local Model Training`：`IoT` 设备在其本地数据上训练模型。
+  * `Model Updates Aggregation`：设备仅将模型更新（梯度）发送到中央聚合器。
+  * `Global Model Update`：中央服务器聚合更新以改进全局模型。
+
+### 4.4.2 用于智能 IoT 系统的强化学习
+
+强化学习（`RL`）是一种机器学习技术，`IoT` 设备（`agents`）通过与环境交互、做出决策以及接收奖励或惩罚来学习。这使得 `IoT` 系统能够实现智能和自主的决策。`IoT` 环境中的 `RL` 如图 4.6 所示。
+
+![Figure 4.6 RL in IoT environment.](img/9781041062943_C004_006.jpg)
+
+**Figure 4.6** IoT 环境中的 RL。
+
+1. `Use RL in IoT`：
+   * `Adaptive Learning`：`IoT` 设备随时间推移决策。
+   * `Energy Optimization`：减少功率和带宽消耗。
+   * `Automation`：`IoT` 系统在没有人工干预的情况下做出智能决策。
+2. `RL Works in IoT`：
+   * `Agent (IoT Device)`：做出决策。
+   * `Environment`：`IoT` 设备运行的系统。
+   * `Reward Function`：衡量动作的成功率。
+   * `Policy Learning`：代理学习用于长期利益的最佳策略。
+
+### 4.4.3 使用 ML 进行 IoT 网络中的异常检测
+
+`IoT` 网络中的异常检测涉及使用 `ML` 识别传感器数据、设备或网络流量中的异常行为。由于 `IoT` 设备产生大量数据流，`ML` 帮助实时检测网络威胁、硬件故障和运行低效问题。
+
+### 4.4.4 使用 ML 进行 IoT 异常检测
+
+* `Real-Time Monitoring`：`ML` 瞬时检测异常。
+* `Automated Threat Detection`：识别如 `DDoS`、僵尸网络和入侵等网络攻击。
+* `Fault Prediction`：通过分析传感器数据防止设备故障。
+* `Reduces False Alarms`：`ML` 模型随时间推移适应新模式。
+
+### 4.4.5 ML 检测 IoT 网络中的异常
+
+* `Data Collection`：`IoT` 设备发送传感器数据和网络数据。
+* `Feature Extraction`：选择重要的属性（例如，温度、数据包流）。
+* `Model Training`：`ML` 算法学习正常行为模式。
+* `Anomaly Detection`：当新数据显著偏离时，它会被标记为异常。
+
+Figure 4.7 代表用于 `IoT` 异常检测的 `ML`。
+
+![Figure 4.7 ML for anomaly detection in IoT.](img/9781041062943_C004_007.jpg)
+
+**Figure 4.7** 用于 IoT 异常检测的 ML。
+
+
+
+### 4.4.6 使用 ML 进行 IoT 传感器数据融合
+
+- `Sensor Data`：从传感器采集原始数据，通常以温度、湿度、压力或其他环境因素读数的形式存在。
+- `Feature Engineering`：从原始传感器数据中提取相关特征以为 ML 模型创建合适输入的过程。
+- `Preprocessing`：对传感器数据进行清洗、转换和归一化用于 ML 算法。
+- `ML`：AI 的子集，使系统能够从数据中学习并随时间提高性能。
+- `Model Deployment`：将训练好的 ML 模型部署到生产就环境的过程。
+
+IoT 传感器数据融合所示图 4.8。
+
+![Figure 4.8 IoT sensor data fusion.](img/9781041062943_C004_008.jpg)
+
+**Figure 4.8** IoT 传感器数据融合。
+
+IoT 设备中的传感器以及人类与这些设备的交互被视为数据的重要来源，从中可以提取特征用于机器学习（ML）算法以检测并学习有用模式。这在许多医疗和老年护理应用中非常有用，例如用于健康状态评估的活动检测、跌倒检测、压力检测、健身追踪、体征监测以及疾病诊断。IoT 中的机器学习应用如图图 4.10 所示。在过去的十年中，利用机器学习技术从可穿戴设备记录的 65.人体信号中进行学习一直是活跃的研究领域，并发表了大量的研究论文。尽管付出了巨大的努力且可穿戴设备（尤其是智能手表）的使用显著增长，但很少有用于穿戴设备的机器学习应用进入市场。
+
+![图 4.10 IoT 中的机器学习应用。](img/9781041062943_C004_010.jpg)
+
+**图 4.10** IoT 中的机器学习应用。
+
+## 4.7 IoT 中机器学习驱动的智能农业
+
+机器学习和物联网正在通过提高效率、优化资源和提高作物产量来彻底改变智能农业。以下是机器学习如何通过物联网驱动农业创新的：
+
+1. **精准农业：**
+   - IoT 传感器收集土壤健康、水分水平、温度和作物生长的实时数据。
+   - 机器学习算法分析这些数据以优化灌溉、施肥和农药的使用。
+   - *示例：* 智能灌溉系统根据土壤水分水平调整供水。
+
+2. **作物健康监测：**
+   - AI 驱动的计算机视觉可以检测植物疾病、营养缺乏和虫害侵害。
+   - 66. 机器学习模型分析无人机和卫星图像以识别受影响的区域。
+   - *示例：* AI 驱动无人机扫描农田并提供早期疾病警报。
+
+3. **天气预测与气候适应：**
+   - 机器学习模型分析天气模式并预测降雨、温度和干旱风险。IoT 设备根据预测的气候条件调整农业作业。
+   - *示例：* 基于 AI 的天气预测帮助农民规划种植和收获计划。农业中的机器学习-IoT 决策系统如图图 4.11 所示。
+
+   ![图 4.11 农业决策系统中的机器学习-IoT。](img/9781041062943_C004_011.jpg)
+
+   **图 4.11** 农业决策系统中的机器学习-IoT。
+
+4. **智能畜管理：**
+   - IoT 可穿戴设备跟踪动物健康、运动和喂养模式。
+   - 机器学习模型分析行为以检测疾病并优化繁殖周期。
+   - *示例：* 智能项圈监测牛健康并防止疾病爆发。
+
+5. **67.自动害虫控制：**
+   - AI 驱动的陷阱和传感器检测害虫并仅在需要的地方施用农药。
+   - 机器学习根据天气和环境数据预测害虫爆发。
+   - *示例：* 智能费洛蒙陷阱使用机器学习识别害虫虫害。
+
+6. **产量预测与市场分析：**
+   - 机器学习模型分析历史产量数据、土壤质量和气候条件以预测作物产量。
+   - AI 驱动的市场分析帮助农民为其农产品获得最佳价格。
+   - *示例：* AI 驱动的供应链优化确保了作物的有效分配。
+
+7. **机器人自动化农业：**
+   - AI 驱动的机器人和无人机实现了种植、收获和作物监测的自动化。
+   - 机器学习通过从过去的农业周期中学习来提高机器效率。
+   - *示例：* 自自动拖拉机使用 AI 进行自动耕作和播种。
+
+8. **可持续农业与资源优化：**
+   - 机器学习优化水、化肥和能量的使用以减少浪费。
+   - AI 模型帮助农民采用环保的耕作实践。
+   - *示例：* AI 驱动的垂直农业优化了空间和能量利用。
+
+## 4.8 带有 AutoML 的自学习 IoT 系统
+
+带有 AutoML 的自学习 IoT 系统将 IoT 设备的力量与自动化机器学习相结合，创建智能、自适应的解决方案。IoT 传感器收集实时数据，然后对其进行预处理和分析以提取有意义的见解。AutoML 自动化了选择、训练和优化机器学习模型的过程，减少了对人工干预的需求。这些模型部署在云或边缘计算平台上进行实时预测和决策。持续的反馈循环确保系统从新数据中学习，随着时间的推移提高准确性和效率。这种方法被广泛应用于如智能家居（设备适应用户行为）、用于预测性维护的工业 IoT、用于异常检测的医疗监测以及用于优化交通和能源管理的智慧城市。通过将 AutoML 与 IoT ，企业和行业可以用最少的人工工作实现自动化、高效和数据驱动的决策。
+
+### 4.8.1 用于 IoT 应用的时间序列预测
+
+IoT 从传感器、设备和连接系统产生大量的时间序列数据。对这些数据进行准确预测对于预测性维护、异常检测、能量优化和智能决策至关重要。深度 68.学习模型已证明在捕捉时间依赖关系和提高 IoT 应用预测准确性方面是有效的。
+
+- **基于卷积神经网络 (CNN)的模型：** CNN 能够高效捕捉 IoT 数据中的局部模式，使其对异常检测和预测性维护非常有用。时间卷积网络 (TCNs) 通过建模长期依赖关系进一步增强了预测。
+- **基于循环神经网络 (RNN)的模型：** RNN 特别是长短期记忆网络 (LSTM) 和门控循环单元 (GRU)，能够有效学习 IoT 数据流中的顺序依赖。它们有助于需求预测、故障检测和资源优化。
+- **基于自动编码器 (AE) 的模型：** AE 从 IoT 数据中提取隐藏模式，改进异常检测和数据压缩。堆叠自动编码器 (SAEs) 和变分自动编码器 (VAEs) 等变体增强了特征学习。
+- **基于受限玻尔兹曼机 (RBM) 的模型：** RBM 及其扩展深度信念网络 (DBNs) 和深度玻尔兹曼机 (DBMs) 学习底层数据分布，有助于能量预测。
+- **基于注意力的模型：** 注意力机制（特别是 Transformer）通过选择关注重要时间点提高预测准确性。它们被广泛应用于 IoT 驱动的供应链预测和动态资源分配。
+- **基于图神经网络 (GNN) 的模型：** GNN 处理结构为网络的 IoT 数据，捕捉空间时间关系。它们在交通预测、电网管理和传感器网络分析中非常有价值。时间序列预测如图图 4.12 所示。
+
+## 4.9 用于 IoT 化的强化学习 (RL)
+
+它是机器学习的一种类型。智能体通过与环境交互来做出选择以获得最大的奖励。与使用标记数据的监督学习不同，RL 通过试错进行学习。智能体尝试不同的动作并以奖励或惩罚的形式获得反馈。RL 的主要部分包括智能体、环境、动作、状态和奖励。智能体的目标是创建一个策略，即根据当前情况选择动作的计划，以便随着时间的推移获得最高奖励。这种方法已在机器人、游戏和自动驾驶汽车中成功应用。展示了其处理复杂决策任务的能力。
+
+### 4.9.1 RL 的关键组件
+
+RL（强化学习）是一种机器学习，智能体通过与环境交互学习做出选择以获得最大的奖励。因此，RL 的主要部分是：
+
+- `Agent`（智能体）：学习和做出决策的实体。
+- `Environment`（环境）：智能体交互的外部系统。70.
+- 69. `Actions`（动作）：智能体可以做的不同选择。
+- `State`（状态）：智能体在环境中的当前状况描述。
+- `Reward`（奖励）：智能体根据其行为从环境中获得的反馈。
+
+### 4.9.2 RL 的类型
+
+它可以根据智能体的学习方式及其工作环境被分为不同的类型。以下是主要类型：
+
+1. `Model-Free`（无模型）：在这种类型中，智能体在不知道环境如何工作的情况下学习做出决策。它通常使用试错法寻找最佳动作。这可以分为：
+   - `Value-Based Methods`（基于价值的方法）：这些方法估计在特定情况下不同动作的优劣。常见的例子是 `Q-learning`。
+   - `Policy-Based Methods`（基于策略的方法）：这些方法学习一种计划，告诉智能体在每种情况下应采取什么动作。示例包括 `REINFORCE` 算法和 `actor–critic` 方法。
+
+2. `Model-Based`（基于模型）：在这里，智能体创建一个环境模型并利用它来做出决策。这可能更有效，因为智能体可以在行动之前尝试不同的场景。
+
+3. `Deep RL`（深度强化学习）：这种类型将 RL 与深度学习算法相结合。它利用神经网络帮助智能体理解复杂情况。因此，这种方法在玩游戏和控制机器人等挑战性任务中取得了巨大成功。
+
+## 4.10 结论与未来工作
+
+通过实现智能自动化、预测分析和实时异常检测，机器学习与物联网的结合为许多行业开启了改变游戏的机会。随着物联网网络的扩展和产生海量数据，机器学习算法对于获取可操作的解和优化系统性能至关重要。虽然 `FL` 增强了数据保护和隐私，但边缘计算和轻量级机器学习模型等新技术解决了延迟、可扩展性和节约等重大问题。这些趋势通过促进智慧城市、医疗保健、农业和工业自动化的应用，培养了自适应和自主的生态系统。然而，计算资源、数据异构性和伦理等挑战仍然是未来研究的重要课题。如果机器学习赋能物联网愿景要成为现实，去中心化计算、稳健的安全协议和模型效率技术需要高度重视。为了实现协议标准化并确保兼容性，跨行业合作以及学术合作至关重要。最后，随着工业 4.0 及以后的发展，机器学习与物联网的结合有望通过创建更智能、更响应且更可持续的技术环境，彻底改变人们与连接系统交互的方式。
+
+71.未来研究应关注优化轻量级机器学习模型、提高互操作性并确保稳健的隐私保护机制。通过解决这些挑战，人工智能与物联网的融合可以带来更智能、更高效且可持续的技术生态系统 [9]。这些技术的持续演进有望开启新的可能性，同时也需要负责任且符合伦理的实施 [10]。
+
+ML 是人工智能（AI）的一个子领域，它教授系统如何预测或决策，而无需通过显式编程来使其学习 [3].. ML 算法分析复杂数据集，识别趋势并将其转换为可操作的洞察。`IoT` 与 `ML` 的结合使用实现了智能自动化，确保了资源的最优利用和系统更高的效率。将 `ML` 引入任何 `IoT` 系统的益处在于为预测分析、异常检测和决策应用添加增强的能力 [4]..。这种技术已经存在并被应用于医疗保健和智慧城市的各个领域，并实现了工业自动化以及更智能、数据驱动的解决方案的创建 [5]..。实时 `IoT` 生成数据与 `ML` 驱动分析的智能结合，建立了一个强大的生态系统，这可能在变革各个领域方面证明其价值 [6]..。
+
+### 5.1.1 融合的重要性
+
+`IoT` 与 `ML` 的融合变得非常重要，因为传统的 `IoT` 系统几乎无法处理海量的流数据。基础 `IoT` 应用主要使用基于规则定义的自动化，无法很好地适应动态环境 [7]..。因此，ML 通过分析模式、做出预测和实时优化过程为 `IoT` 增加了智能。这种融合最显著的益处之一是实时决策。传统的 `IoT` 系统收集并发送数据供人类解释，而 `ML` 驱动的 `IoT` 解决方案可以立即进行分析并采取行动。以预测性维护为例，`ML` 模型可以分析来自工业机器的传感器数据，在故障发生前进行预判，从而减少停机时间和维修成本 [8]..。与此同时，它还提高了效率、安全性和个性化水平 [9]..。例如，`ML` 模型可以检测 `IoT` 网络中的异常以防止攻击，优化智能电网的能源消耗，并个性化智能家居用户的体验。`IoT` 与 `ML` 的融合有望为组织和个人带来更大的自动化、节约和运营效率的提高 [10]..。表 5.1 显示了 `IoT` 与 `ML` 之间的主要对比与协作，表中对此进行了详细说明。数据收集与聚合与连接性、监控以及用于实时分析的混合化 [11]..。`ML` 的目标是数据分析：基于之前的学习进行预测和自动化，同时使智能 `IoT` 系统成为可能，通过数据解释、优化过程和做出更好的决策进行学习 [12]..。
+
+**表 5.1** IoT 与 ML 的比较
+
+| 特性 | IoT | ML | IoT-ML 融合 |
+| :--- | :--- | :--- | :--- |
+| 主要关注点 | 数据收集与传输 | 数据分析与预测 | 智能决策 |
+| 关键组件 | 传感器、执行器、网络、云 | 算法、模型、训练数据 | AI 驱动的 IoT 设备 |
+| 数据类型 | 时间序列、实时 | 结构化、非结构化 | 多模态（传感器 + AI 洞察） |
+| 处理位置 | 边缘、云 | 云、边缘 | 混合（边缘 AI） |
+| 应用场景 | 智能家居、医疗保健、工业 | NLP、计算机视觉、分析 | 智慧城市、预测性维护 |
+
+### 5.1.2 现实世界应用
+
+`IoT` 与 `ML` 融合的可能影响延伸到各个行业。例如，在医疗保健领域，可穿戴设备嵌入了传感器，其中 `IoT` 部分用于监测患者的生命生物识别指标，而嵌入的 `ML` 则用于分析趋势，有助于早期发现疾病或与生活方式有关的变化 [13]..。这将通过减少医院就诊次数和改善健康结果，为患者监测提供更好的可能性 [14]..。交通系统（如支持 `IoT` 的智能交通管理系统）使用基于 `ML` 的交通优化技术来平顺交通流，确保信号减少拥堵的同时提高公共交通的效率 [2]..。此类系统包括监控系统，其中支持 `ML` 的脸识别和异常检测提升了此类环境的安全性。无论如何，所有创新都有助于让城市更安全、更高效 [15]..。
+
+在工业自动化中，`IoT` 传感器监测制造机器，`ML` 模型在实际故障之前预测其故障 [16]..。这种预测性维护方法降低了运营成本并增加了生产力。同样，智能耕作方法利用 `IoT` 传感器（考虑土壤状况），而 `ML` 模型推荐灌溉和施肥计划，以增加产量和资源效率 [3]..。
+
+## 5.2 IoT 基础
+
+`IoT` 指的是由互连设备组成的整个系统，这些设备收集、传输并分析数据，以实现各个领域的自动化、决策和性能提升。这些设备可以是简单的智能传感器，也可以是工业级或用于自动驾驶车辆的复杂测量设备 [17]..。`IoT` 是一个整体，所有连接到嵌入技术和无线协议的通信技术都接入其中。它对于医疗保健、农业、智慧城市和制造业至关重要，在这些领域，预测分析中的实时监控成为可能 [18]..。了解 `IoT` 的重要方面，如其架构、通信协议、传感器和数据传输机制，有助于设计高效可扩展的 `IoT` 解决方案。
+
+### 5.2.1 IoT 架构与组件
+
+`IoT` 架构包括许多层，促进了实体与虚拟平台之间的连接。通常，`IoT` 架构基于四层设计：感知层（传感器及其执行器）、网络层（涉及不同的通信协议和数据传输）、边缘计算层（涉及位于边缘的数据）以及应用层（用户界面和分析）。每一层都为实现高效数据流和实时决策贡献了力量 [19]..。感知层包含大量的传感器和执行器以感知现实世界的数据，包括温度、湿度、运动和压力。物理感知参数被转换为发往下一层的数字信号 [20]..。
+
+IoT 的五层架构如图 5.1 所示，它有助于无缝的数据采集、处理和决策 [[21`]。感知层包含收集现实世界的传感器，传输层使用第五代移动（`5G`）和 `Wi-Fi` 等通信技术传输这些数据。处理层在云端或边缘计算端分析并存储这些数据 [[22`]。在的另一端，应用层通过 App 和仪表板为用户提供服务，而业务层则管理系统、决策和营利活动。这种结构良好的方法保证了 IoT 在各个领域的高效运行 [[23`]。
+
+75.在边缘计算层，原始数据在进一步传输到云端或数据中心之前会在本地处理，从而降低延迟和带宽占用 [[24`]。该应用层包含用户界面、客户端仪表板以及由 `AI` 驱动的洞察等项目，从而使所有数据都具有可操作性 [[25`]。理解这些部分如何相互作用至关重要，因为它们在创建可扩展安全系统（如 IoT 系统）方面都具有功能性 [[26`]。
+
+### 5.2.2 IoT 通信协议（消息队列遥测传输、约束应用协议和超文本传输协议等）
+
+IoT 设备基于特定的通信协议来有效传输数据。与传统协议不同，这些协议浪费能量且消耗带宽较低，因此设备可以使用它们进行实时通信。该组的一些知名协议包括消息队列遥测传输 (`MQTT`）、约束应用协议 (`CoAP`）和超文本传输协议 (`HTTP`)。
+
+![图 5.2 IoT 中的 MQTT 发布-订阅架构。](img/9781041062943_C005_002.jpg)
+
+**图 5.2** IoT 中的 `MQTT` 发布-订阅架构。
+
+图 5.2 所示的 `MQTT` 发布-订阅模型图是 IoT 通信最广泛接受的标准之一。发布者（传感器、IoT 设备）将消息发送到 `broker`，由 `broker` 将消息分类为 `topics` 并将其转发给感兴趣的订阅者（智能手机、仪表板）。这种特性模型为通信提供了 76.增值、轻量级且扩展的解决方案，在处理严苛网络限制的实时数据传输场景中变得更加突出 [[27`]。`MQTT` 是一种位于传输控制协议、互联网协议 (`TCP/IP`) 之上的轻量级发布-订阅消息协议。由于低带宽需求且在连接性差的地区仍然运行，它在 IoT 应用中确立了流行地位 [[28`]。此外，`MQTT` 通过三种不同的服务质量 (`QoS`) 级别确保消息可靠交付，因此开发者可以根据网络条件为任何用例优化性能 [[29`]。表 5.2 描述了特殊的通信协议，通过速度、安全性和功耗效率等标准标记了 IoT 设备之间的差异。表 5.2 提供了关于 `MQTT`、`CoAP`、`HTTP`、`LoRaWAN` 和 `Zigbee` 的一些比较点。
+
+表 5.2 IoT 协议及其用途
+
+| **协议** | **类型** | **速度** | **安全性** | **功耗效率** | **最佳用例** |
+
+
+
+| 协议 | 通信模式 | 功耗 | 带宽 | 可靠性 | 适用场景 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `MQTT` | 发布-订阅 | 高 | 中 | 低 | 智能家居 |
+| `CoAP` | RESTful API | 中 | 高 | 高 | 工业 |
+| `HTTP` | 请求-响应 | 慢 | 高 | 低 | 可穿戴设备 |
+| `LoRaWAN` | LPWAN | 低 | 中 | 极高 | 农业 |
+| `Zigbee` | 网格网络 | 中 | 高 | 中 | 智能照明 |
+
+然而，`CoAP` 是一种资源受限的 Web 协议；它与 `MQTT` 不同，`MQTT` 依赖 `broker` 且在请求-响应循环上非常像 `HTTP`。然而，`HTTP` 在 Web 应用程序中仍保持主导地位，但其功耗消耗和昂贵的成本使其对于电池驱动的设备无效。因此，通信协议的选择将取决于能源效率和网络可靠性 [[31]](https://example.com/31)。
+
+### 5.2.3 IoT 传感器和设备
+
+IoT 系统将传感器作为基础，技术可以借此进行进一步探索。IoT 中发现了大多数类型的传感器：温度传感器、湿度传感器、运动检测器、压力传感器和生物识别传感器。所有这些 IoT 传感器均用于环境参数监测，数据被持续传输到分析和决策 [[32]](https://example.com/32)。因此，传感器和执行器的无缝集成允许 IoT 系统能够在广泛应用中实现任务自动化、提高效率并改进决策 [[33]](https://example.com/33)。
+
+### 5.2.4 IoT 中的数据生成与传输
+
+IoT 设备产生大量数据；因此，高效传输可以成为 IoT 的一个重要来源。最初，数据在感知层被采集，在那里传感器接触并感知环境值。数据将在本地处理，或传输到云端服务器进行进一步分析。IoT 生成的此类海量、高速且多样化的数据将为管理和处理这些信息带来巨大挑战 [[34]](https://example.com/34)。带宽效率和延迟是数据传输的首要方面。IoT 网络同时采用有线（`以太网`、`光纤`）和无线（`Wi-Fi`、`LoRaWAN`、`Zigbee`）通信进行信息中继。虽然有线连接增强了可靠性和安全性，但移动灵活性倾向于无线传输 [[35]](https://example.com/35)。
+
+机器学习（ML）是人工智能的一种形式，允许系统从数据中学习并在随后进行改进，而不需要显式编程。与基于规则的方法不同，机器学习算法使用分析技术来检查海量信息，以识别模式并做出预测。机器学习与物联网（IoT）的结合产生了智能决策系统，这些系统能够分析传感器数据、理解异常并实时优化操作。本节涵盖了机器学习的基本概念，例如机器学习的不同类别、特征工程以及与物联网数据相关的挑战 [37](https://example.com/37)。
+
+### 5.3.1 机器学习与人工智能基础
+
+机器学习是人工智能的一个子集，侧重于创建能够从数据中学习并做出决策的算法。人工智能涵盖了更广泛的概念，如专家系统、自然语言处理（NLP）、机器人技术，而机器学习只能专注于预测建模和模式识别。集成了机器学习的物联网系统补充了物联网提供的自动化，以自适应地改变环境。数据、算法和模型成了机器学习的三个主要组成部分 [11](https://example.com/11)。结构的底部是数据，它随后输入算法——如神经网络、决策树和支持向量机。这些经过训练的模型随后被用于使用这些算法来执行分类、回归和聚类等任务。对于物联网而言，这挑战性得多，因为会有持续的实时数据流，这需要更高效的预处理技术。各种机器学习算法满足各种物联网应用。表 5.3 列出了一些常用的机器学习技术，以及它们应用于物联网时的优缺点，例如用于异常检测的决策树、用于基于图像的物联网的卷积神经网络（CNNs）以及用于时间序列分析的长短期记忆网络（LSTMs）。
+
+**表 5.3** 用于物联网应用的机器学习算法
+
+| **算法** | **类型** | **适用于物联网应用** | **优点** | **局限性** |
+| --- | --- | --- | --- | --- |
+| 决策树 | 监督学习 | 预测性维护、异常检测 | 易于解释、速度快 | 深树容易过拟合 |
+| 随机森林 | 监督学习 | 基于传感器的健康监测 | 良好处理缺失数据 | 计算代价高 |
+| CNN | 深度学习 | 智能监控（基于图像的物联网） | 图像任务准确率高 | 需要高处理能力 |
+| LSTM | 深度学习 | 物联网时间序列分析（例如天气预报） | 良好处理序列化数据 | 需要大型数据集 |
+| K-means | 无监督学习 | 物联网流量模式分析 | 对无标记数据效果良好 | 对初始聚类选择敏感 |
+
+机器学习主要用于物联网应用中的异常检测、预测性维护和智能自动化领域。例如，使用机器学习模型可以实现智能电网中的能源消耗分析、工业设备的故障检测以及智慧城市的交通控制。由于其可扩展性且在处理海量传感器数据方面的高效，机器学习在物联网的应用中变得愈发重要。
+
+### 5.3.2 监督学习、无监督学习和强化学习
+
+#### 5.3.2.1 监督学习
+
+机器学习中的监督学习基本上允许模型从标记数据集中学习，这意味着在训练数据的每个示例中，都有对应的正确输出。在监督学习算法中，通过最小化预测误差来建立输入变量与输出标签之间的关系 [12](https://example.com/12)。监督学习的一些流行例子包括`决策树`、`线性回归`、`随机森林`和`深度神经网络`。在大多数物联网应用中，监督学习被用于传感器数据已标记的预测性维护。例如，这见于医疗保健领域，可穿戴设备使用监督学习来对异常心率进行分类。监督学习通过大型数据集进行自我泛化；主要的缺点是获取标记数据的成本和时间，且模型在旧条件下可能表现不好。尽管如此，监督学习一直是物联网实时欺诈检测的基础。
+
+#### 5.3.2.2 无监督学习
+
+无监督学习与监督学习不同，应用于标记数据，模型从中学习模式和结构。它通常不将任何输入映射到特定的输出；而是尝试对数据点分组或减少数据空间的复杂度。这些聚类技术，如 `K-means`、基于密度的空间聚类（`DBSCAN`）或层次聚类，常用于分割物联网生成的数据。这些示例之一是根据能源消耗对智能家居用户进行分组。类似，主成分分析（`PCA`）等简化技术实现了高维数据存储和处理的优化。无监督学习的主要优势在于它可以在没有任何先验假设的情况下揭示隐藏模式并发现异常 [13](https://example.com/13)。因此，它非常适用于异常检测，例如发现智能安全系统的非法访问尝试或工业物联网（IIoT）网络中的故障传感器。然而，无监督学习模型的解释性往往非常模糊，因为这些模型没有设定规则，因此需要用户具备领域知识来验证结果。此外，它们在面对极高维噪声数据时通常会失败，这强调了对输入数据进行预处理的重要性。
+
+#### 5.3.2.3 强化学习
+
+强化学习（RL）是一种交互式学习，代理通过与环境交互并根据行为获得奖励或惩罚来学习。与监督或无监督学习不同，强化学习强调为了长期目标进行优化 [14](https://example.com/14)。强化学习的应用领域包括机器人、自动驾驶以及智能电网优化：例如，在工业物联网中，基于强化学习的机械臂将学习高效精确的动作；支持强化学习的智能电表将在能源管理中优化用电，以兼顾成本和环境效率（图 5.3）。
+
+![Figure 5.3 RL-based data processing in IoT.](img/9781041062943_C005_003.jpg)
+
+**Figure 5.3** RL-based data processing in IoT.
+
+该图表展示了强化学习（RL）如何融入 IoT 数据处理。原始输入数据进入智能体，智能体根据环境状态选择算法。然后，环境以奖励的形式提供反馈，引导智能体采取最佳行动，以实现数据的最优分类或聚类。结构化和分类后的数据输出将增强 IoT 系统的决策能力。这提高了基于 IoT 的 ML 应用的适应性、自主性和效率。强化学习的优势特别在于它能够适应 IoT 中盛行的不同且不可预测的环境，在这些环境中，现有的规则并不适用。然而，即使在经过广泛训练后，专门的 RL 模型在存在经过优化的仿真环境时通常表现更好。这意味着需要巨大的计算资源。定义合适的奖励函数是棘手的，如果提供的奖励不够好，智能体可能会产生意料之外的行为。尽管如此，它在自主 IoT 系统中具有极高的前景，从智能建筑中自学习供暖、通风和空调（HVAC）控制，到互联城市的智能交通管理。
+
+### 5.3.2.4 特征工程与模型训练
+
+特征工程是将原始数据转换为可理解且有意义的特征，以帮助模型获得更好的性能。在 IoT 领域，从传感器数据中提取有用特征至关重要，因为噪声和无关特征会破坏模型的准确性。用于相关特征提取的一些方法包括傅里叶变换、小波分析和统计摘要。特征工程之后，是在历史数据的背景下进行 ML 模型训练，通过算法处理数据来调整与误差最小化相关的模型参数。IoT 模型的训练可能由于高计算能力的需求而在云端进行，也可以根据设计对延迟和计算资源的需求在边缘进行（边缘 AI）。评估是对 ML 模型进行评估，以确保其符合准确性和可靠性标准，并使用精确率、召回率、F1 分数和均方根误差（`RMSE`）等指标评估性能。随后，模型将通过验证并置于 IoT 系统，在开发过程中不断适应和学习。
+
+### 5.3.3 ML 在 IoT 数据处理面临的挑战
+
+- **数据的高量和高速度**：IoT 设备产生大量的实时数据，难以存储和处理；此外，传统的 ML 框架无法处理此类高速流式数据。分布式计算（如 `Apache Spark` 和 `Hadoop`）和在线学习算法是解决此类扩展性问题和上述成本的一些解决方案。
+
+- **数据质量与噪声**：由于测量机制、电气故障或通信不一致性，IoT 数据经常缺失、不可靠或存在噪声。在将数据引入 ML 模型之前，归一化、异常值检测和插值等预处理步骤至关重要。
+
+- **安全与隐私担忧**：ML 模型的设计采用稳健的隐私保护技术，如联邦学习、同态加密和差分隐私，以确保其安全且道德地集成到系统中。因此，IoT 系统容易受到严重的数据威胁，如数据泄露和对抗攻击，以及隐私侵犯 [15](https://example.com/15)。
+
+## 5.4 IoT 与 ML 的融合
+
+IoT 与 ML 的集成为自动化带来了重大变革，创造了智能行动和实时决策的可能性，使预测分析能够改变行业。从传感器、设备和互联系统创建海量数据池而无法从中得出有意义的信息，将始终只是序曲。换句话说，ML 可以通过设备学习和检测所有相关情况下的异常并在无需人工干预的情况下自动响应，从而在很大程度上补充 IoT。因此，它为医疗保健领域带来了重大变化：在智能城市中，它带来了一种全新的工业自动化经济及更多。IoT 将创建动态、适应、高效且智能的系统。
+
+### 5.4.1 为什么 ML 对 IoT 至关重要
+
+海量数据的特征是 ML，因为它能够高效地处理大量数据流。传统的 IoT 系统通常是基于规则的系统。但在处理海量复杂数据时，这变得不实际。虽然 ML 算法可以分析模式、趋势和实时异常数据，使此类信息进入更智能的决策方案，但 ML 可以真正扩展 IoT。一个例子是预测性维护，它通过 ML 用于 IIoT 应用，在机器故障之前确定其故障，从而最小化停机时间和运营成本。
+
+![图 5.4 驱动的 ML 工作流。](img/9781041062943_C005_004.jpg)
+
+**图 5.4** 驱动的 ML 工作流。
+
+图 5.4 描述了一个流程图，显示了从 IoT 数据处理到利用 ML 进行最终决策的链中的输入过程。传感器和智能设备等 IoT 设备收集数据并通过 `Wi-Fi`、`5G` 或 `MQTT` 等网络共享。数据存储在云端或边缘计算环境中，等待处理。使用 ML 技术通过模型学习提取特征，从而产生模式识别和异常检测。这些见解被用于自动化决策，例如预测性维护和警报，以提高 IoT 系统的效率和实时响应能力。
+
+ML 是 IoT 的另一个重要部分，因为它具有管理来自实时数据分析的自动响应的能力。与传统的预定义规则不同，它们能够对变化条件做出演化的响应。例如，如果一个人住在运行基于 ML 的 IoT 系统的智能家中，它将学习用户的偏好并以最佳方式运行，从而增强能源利用、安全性和舒适度。它在手动上帮助用户，但最终会给他们更好的体验。
+
+此外，ML 在保护 IoT 网络免受异常检测和潜在网络威胁重叠的影响方面发挥着重要作用 [16](https://example.com/16)。它确实连接了数十亿设备，使得 IoT 生态系统容易受到网络攻击。传统的安全手段无法针对复杂的威胁提供有效的解决方案；然而，基于 ML 的安全系统可以持续监控网络流量中的可疑行为，从而防止可能的泄露。因此，使其成为保护 IoT 基础设施不可或缺的工具。
+
+### 5.4.2 IoT-ML 集成中的边缘计算与云计算
+
+与物联网（IoT）类似，大量数据正在产生，处理所有生成的数据是一个主要的关注问题。传统上，这些数据被发送到中心化的云服务器进行分析。基于云的机器学习（ML）具有巨大的可扩展性、高计算资源以及访问尖端 AI 模型的优势 [17](https://example.com/17)。然而，这种解决方案也涉及延迟、高昂的带宽成本以及隐私泄露风险，这使其不适用于对时间要求高的 IoT 应用，例如自动驾驶汽车和工业自动化。相比之下，边缘计算允许在靠近数据源的地方（即网络边缘）处理数据。这减少了将海量数据传输到云端的需求，有助于缩短响应时间并节省带宽 [18](https://example.com/18)。通过这种部署，边缘 ML 模型可以做出实时、快速且更可靠的决策。例如，在医疗领域，可穿戴设备中的边缘 AI 可以在源头分析患者数据，并在发现异常迹象时立即通知医生，而不是依赖云服务器。
+
+表 5.4 对比了边缘计算、云计算和混合计算，以帮助确定 IoT-ML 系统的最佳部署策略。IoT-ML 解决方案可以单独部署在边缘（设备级）、云端或混合环境中。这是对权衡因素（如延迟、计算能力或安全性）的总结，以确定哪种是 IoT-ML 系统的最佳架构。
+
+**表 5.4** IoT-ML 集成中的边缘计算与云计算对比
+
+| **特征** | **边缘计算** | **云计算** | **混合计算** |
+| --- | --- | --- | --- |
+| 延迟 | 极低（实时） | 高 | 平衡 |
+| 计算能力 | 限制 | 高 | 中等 |
+| 数据隐私 | 高（本地化） | 低（数据发送到云端） | 中等 |
+| 功耗 | 低 | 高 | 中等 |
+| 最适用场景 | 工业自动化、医疗设备 | 大数据分析、AI 模型训练 | 智慧城市、自动系统 |
+
+然而，尽管边缘计算具有优势，但在匹配云平台提供的高计算能力和存储空间方面它确实有自己的局限性。在许多情况下，边缘计算和云计算的结合通常是最符合要求的解决方案 [37](https://example.com/37)。此时，边缘设备对数据进行实时处理，而关键处理由云系统完成。这在效率、安全性和成本效益之间实现了最佳平衡，同时使 IoT-ML 集成变得更加健壮且可扩展 [38](https://example.com/38)。
+
+### 5.4.3 优势与挑战
+
+IoT 与 ML 的结合可以带来许多益处，其中包括改进决策、自动化运营效率。最大的益处是预测性分析，组织可以借此早地预测设备故障、供需波动以及安全威胁 [20](https://example.com/20)。一个例子是农业领域，由 ML 驱动的 IoT 系统可以预测天气模式、土壤状况和作物健康状况，并推出最佳农耕策略，从而获得更高的产量并节省资源。个性化和适应性真的是另一个巨大的优势。ML 训练 IoT 系统从用户交互中学习，并根据这些交互定制服务。智慧城市中 ML 算法的使用将根据拥堵的实时数据优化交通信号，缩短旅行时间和燃料消耗。例如，在零售业，可以分析使用 IoT 传感器结合 ML 的客户行为，然后提供个性化的购物体验，从而提高客户满意度和销售额。
+
+![图 5.5 IoT 与 ML 的集成。](img/9781041062943_C005_005.jpg)
+
+**图 5.5** IoT 与 ML 的集成。
+
+图 5.5 中的韦恩图显示了 IoT 与 ML 之间的协作。实时数据数据集、设备连接和远程监控是 IoT 的职责，而 ML 则擅长模式识别、预测分析和任务自动化。它们共同实现了预测性维护、实时洞察、智能自动化、异常检测和个性化。当 IoT 与 ML 结合时，其结果将允许行业成为更高效、自动化和智能的决策者。尽管有各种优势，IoT-ML 的集成仍可能面临若干挑战。与此相关的最大问题是隐私和安全，因为 IoT 设备主要使用敏感信息，并可能面临起诉的风险。此外，它使用了更多计算资源的方法，如果应用于现实世界，可能会为组织带来更高成本。集成挑战源于各种 IoT 平台之间普遍缺乏标准，使得设备间的互操作性差。这些问题将通过持续研究、良好的安全标准以及针对不同边缘优化的轻量级 ML 模型来解决。
+
+### 5.5 案例研究
+
+IoT 与机器学习机器的融合预示着一波新的行业浪潮——智能决策、更大的自动化和预测分析。然而，为了实施具备 ML 能力的上述 IoT 系统，需要解决与实时处理和系统扩展性相关的挑战。通过 ML 模型对从 IoT 设备收集的数据进行分析，以获得可操作的洞察。本研究的强有力动力是展示 ML 如何通过使 IoT 更加高效、准确和响应来增强其能力，例如在医疗、智慧城市或工业自动化领域。通过对架构、数据处理方法、模型选择和实施结果进行案例分析，我们将深入理解 IoT-ML 流程是如何集成的。
+
+#### 5.5.1 案例 1：废水产生的可持续绿色能源
+
+废水处理仍然是一个关键的环境健康和安全问题，旨在防止污染并确保水质。然而，由于处理厂需要大量能量运行，其运营成本和碳排放可能是巨大的。作为一种解决方案，科学家们关注了可再生能源，包括厌氧消化、微生物燃料电池（MFCs）和地热脱化。厌氧消化简单定义为微生物在无氧条件下分解废水有机物质的代谢，其中沼气是有用的副产物。沼气通常用于发电和供热。因此，厌氧消化在管理有机废物的同时利用了从中获得的能量，从而减少了对不可再生资源的依赖。在应用于废水处理时，`MFCs` 通过微生物的代谢活动产生电，使可持续能源生产与废水处理相结合。
+
+#### 5.5.2 案例 2：使用 IoT 和决策树预测糖尿病
+
+
+
+糖尿病是当今人类面临的最严重疾病之一，由对胰岛素反应不足引起——胰岛素是一种有助于糖分转化为能量的激素。这种疾病可能导致肾衰竭、心衰、视网膜病变、神经病和周围血管疾病等并发症。因此，我们提出了一种基于决策树的系统，称为监督学习糖尿病预测系统（`SLDPS`），根据从 IoT 传感器收集的参数预测糖尿病，以提高预测准确性。在重新平衡数据集后，我们的模型显示的准确率提高了 94.63%，与其他分类模型相比，这是一个很有视角。IoT 系统通过可穿戴设备持续收集生理数据，为糖尿病监测提供了至关重要的手段。对这些实时输入数据的及时分析成为风险评估和疾病管理的核心，使医疗保健变得更加主动 [22]。
+
+决策树被广泛用于糖尿病预测，因为它们简单、具有解释性，并且能够处理分类和数值数据。各种研究将其与其他算法相结合，以增强预测的准确性和可靠性。基于 IoT 的解决方案有助于为经济较弱的群体提供医疗服务，而不会使其变得不可管理或产生额外成本。还需要考虑数据隐私和安全以及建立强大的基础设施，这对于更广泛的实施关重要。
+
+### 5.5.3 案例研究 3：使用 IoT 和 ML 构建智能医疗系统
+
+IoT 和 ML 的强大特性实现了患者的持续监测。IoT 系统利用可穿戴传感器检测异常并及时提供医疗干预信号。通过这种方式，这些系统通过提供实时健康监测、远程诊断和自动应急响应机制增强了患者护理。通过 ML，通过商业化对患者状况细微变化敏感的新模型，为医疗诊断做出了巨大贡献。凭借处理海量医疗数据的能力，ML 算法可以检测模式、预测疾病并建议个性化的治疗计划。IoT 和 ML 这两项技术通过即时访问最新的医疗数据来支持医疗流程，协助医疗专业人员做出明智的决策；患者也能从中获益。IoT 在减少医疗开支方面的另一个优势，通过自动化常规任务、简化流程和提高医疗服务效率来提升患者满意度实现的。
+
+考虑到 5G 技术和云计算的飞速发展，IoT 和 ML 的结合现在已体现在智能医疗系统中 [23]。ML 分析通常处理来自 IoT 设备的大量医疗数据，以确保改善患者预后。它利用 5G 网络和云计算提供的基础支持，提供了 IoT 和 ML 在健康领域的应用，进一步增强了智能医疗适配的效率和适应性。这些技术的结合反映了向更有效、更廉价且以患者为中心的医疗保健解决方案的转型。
+
+### 5.5.4 案例研究 4：基于 IIoT 框架的 ML 模型改进汽车行业产品
+
+所提预测性维护系统的验证将从定性和定量角度进行，并与其他 ML 方法进行全面比较，包括无监督算法（`K-means` 和层次聚类）和监督算法（随机森林和支持向量机(`SVM`)）。本研究中的实验结果分为两个部分。A 部分分析制造机器模块在运行期间的生产成功率，并确保离开生产线的产品是高质量的，通过定性手段分析上述预测性维护系统的性能。B 部分通过实时产品数据与历史记录数据的评估过程定量预测预测早期故障。特征提取模块跟踪产品属性（如形状和重量），并将此类信息存储在本地和云端，以备未来客户提出产品故障索赔 [24]。
+
+随着工业 4.0 的到来，创新的预测性维护系统通过持续机器性能监测和质量保证正在改变工厂运营 [25]。智能传感器和 IIoT 发挥作用，增强了实时数据采集，因此需要由无线传感器网络支持的协调互联的基础设施。IIoT 网络架构提高了能源效率和预测准确性，特别是对于需要持续监测的环境。该架构结构包含三层：设备连接、数据分析和业务连接。传感器网关收集机器数据，将其与本地服务器中的历史记录进行比较，仅将关键数据传输到 Azure 云进行进一步分析。然后应用 ML 算法来训练和优化预测模型，确保对机器质量和产品质量进行实时监测。最后，将有关异常检测的通知发送到维护系统以执行所需操作。
+
+## 5.5.6 对比分析与启示
+
+许多传统的 IoT 解决方案通过增加 ML 元素——智能决策、程序自动化和预测能力而焕发新生。另一方面，大多数传统的 IoT 系统使用预设规则和阈值限制。相比之下，真正基于 ML 的 IoT 解决方案依靠实时数据自动跟踪环境的变化。这里讨论了传统与现代基于 ML 的 IoT 的区别，列举了性能评估指标，并从比较中得出启示。
+
+### 5.6.1 传统与 ML 驱动的 IoT 解决方案
+
+传统 IoT 系统运行基于规则的逻辑仍然从传感器收集数据并根据预设条件进行处理。结合简单的阈值告警和结构化数据处理。尽管适用于基础监测，但这种方法在管理分散的复杂数据模式方面证明是不够。此外，传统的 IoT 不会自学，因此需要不断手动调优以保持效率 [39]。然而，ML 中的 IoT 是 ML 算法评估数据、识别模式并实时预测的应用。与基于固定值的规则不同，ML 模型通过过去和实时数据进行学习和自教，以增强其资源决策。可以检测到异常；可能会发生预测性维护；或者机器可以自主运行。赋能 IoT 提供了迈向边缘智能的有前景的一步，通过在数据源附近实现实时计算，从而减少延迟并提高响应时间 [40]。
+
+### 5.6.2 性能指标与评估
+
+与 ML 相关的 IoT 最重要的益处是其准确预测和识别模式的能力。与仅对少数预定义条件做出反应的传统 IoT 系统不同，ML 能够根据历史数据预测未来趋势。精确率、召回率和 F1 分数等评估指标提供了衡量标准，以确定 ML 模型处理 IoT 数据过程的准确性。
+
+传统的物联网（IoT）解决方案通常计算量较低，并耗用基于规则的简单机制进行运行。然而，它们在处理大量原始数据时，响应时间并不高效。由机器学习（ML）驱动的物联网解决方案，特别是利用边缘计算的方案，其响应时间更接近于本地做出的实时决策，而非通过云端处理。从实际角度来看，这里对响应时间、处理速度和计算效率的评估，在传统物联网系统与机器学习驱动的物联网系统之间提供了公平的权衡 [29]。
+
+### 5.6.3 关键收获
+
+在使用受机器学习影响的物联网时，它确实展现了先进的能力；然而，基于规则的逻辑与机器学习模型的结合可以提供一个更优且平衡的系统。当解释性和确定性决策变得至关重要时（特别是在医疗物联网场景下），就需要这种组合来确保其既具有可靠性又具有智能性 [32]。物联网与机器学习的交叉点引入了另一个进化步骤，这将在下一代智能系统中引入更多额外的卓越发展，例如联邦学习、微型机器学习（`tiny ML`）和自学习边缘设备。这些发展是计算能力提升和高效机器学习算法共同的结果，它们极大地有望带来先进应用，并将在自动化、效率和决策准确性方面标志着自主物联网的革命。
+
+### 5.7 挑战与未来方向
+
+虽然物联网与机器学习的融合带来了若干红利，但在其广泛接受之前，也面临许多需要解决的挑战。这些挑战包括安全、隐私、可扩展性和部署问题。随着技术的演进，物联网与机器学习结合的未来也出现了新的趋势和进展。因此，本节补充了最重要的挑战以及该领域未来可能采取的方向。
+
+表 5.5 解释了将机器学习引入物联网系统面临的挑战，包括数据隐私、能量消耗和可扩展性。表 5.5 中提到了一些补救措施，例如联邦学习、边缘 AI 和模型压缩，这些可以使未来的系统变得高效得多。
+
+**表 5.5 物联网-机器学习集成中的主要挑战与可能的解决方案**
+
+| 挑战 | 描述 | 可能的解决方案 |
+| --- | --- | --- |
+| 数据隐私 | 物联网设备收集敏感用户数据 | 联邦学习、安全 AI 模型 |
+| 模型部署 | 机器学习模型需要频繁更新 | 边缘 AI、持续学习技术 |
+| 可扩展性 | 处理数百万个物联网设备 | 分布式计算、5G 网络 |
+| 能量消耗 | 物联网设备上的机器学习处理耗费电力 | 低功耗 AI 芯片、模型压缩 |
+
+### 5.7.1 安全与隐私问题
+
+安全和隐私是物联网与机器学习集成中的首要问题之一。物联网设备能够快速收集和传输敏感信息，使其成为许多形式网络攻击的目标。大多数传统的安全措施无法保护资源受限的物联网设备，导致数据泄露、未经授权的访问和身份盗用等漏洞。缓解策略包括实施强加密身份验证机制，以及像区块链这样的去中心化安全模型 [41]。
+
+![Figure 5.6 物联网安全与隐私威胁。](img/9781041062943_C005_006.jpg)
+
+**图 5.6 物联网安全与隐私威胁。**
+
+图 5.6 突出了物联网生态系统中的两大主要威胁：隐私威胁和安全威胁。隐私威胁包括中间人攻击（`MiTM`）和数据隐私泄露，这些会让外部人员熟悉用户信息。安全威胁如拒绝服务（`DoS`）攻击、恶意软件感染和中间人攻击会破坏对系统的访问并导致未经授权的访问。理解这些威胁对于实施稳健的安全机制以保护数据及其完整性，并确保任何物联网网络中的隐私和高效的系统可靠性至关重要。
+
+除了这些挑战外，在国家和州层面还存在隐私法规，例如《通用数据保护条例》（`GDPR`）和《加州消费者隐私法案》（`CCPA`）。所有这些法律对数据收集、存储和处理都很严格。机器学习模型需要大量数据来高效运行；然而，在保持其实用的同时遵守此类法律变得非常困难。联邦学习和差分隐私是一些提供有趣解决方案的技术，允许模型从去中心化的数据源中学习而无需暴露原始数据。
+
+因此，尽管物联网消息在医疗、金融和智慧城市等重要应用领域日益增加，但需要更多的端到端安全。必须将定期安全更新、持续监控和使用 AI 进行异常检测集成到物联网-机器学习生态系统中，以防止潜在的网络威胁。未来的研究必须关注 AI 攻击的调查，以及针对威胁改进自适应安全解决方案。
+
+### 5.7.2 可扩展性与部署挑战
+
+物联网环境中机器学习模型面临的其他挑战是可扩展性要求。这部分是因为此类网络由数百万连接设备组成，产生海量数据流。处理这些数据必须快速完成，同时做出实时决策，因此需要可扩展的基础设施。然而，许多传统的云解决方案会产生延迟问题，这与自动驾驶汽车和工业自动化等时间敏感型应用的目的背道而驰。
+
+为了应对这一挑战，边缘计算被视为允许直接在物联网设备或边缘服务器上运行机器学习模型的有效解决方案。尽管如此，在各种硬件配置上部署和管理机器学习模型仍然巨大的挑战。物联网设备在处理能力、内存空间和能量限制方面存在差异，它们需要优化的、敏捷的机器学习模型。`TinyML` 以及剪枝和量化等模型压缩技术解决了这些缺点 [36]。
+
+### 5.7.3 物联网-机器学习集成的未来趋势
+
+即将到来的趋势包括物联网与机器学习的融合，在未来的发展中将遵循一系列新趋势。一个值得关注的显著趋势是自学习物联网设备，这些系统随着时间的推移，在没有人工维护的情况下变得更加高效。`RL` 和在线学习技术通过实时数据处理帮助物联网设备做出更明智的选择。
+
+量子计算与物联网及机器学习的集成正逐渐获得动力。量子算法具有以远超经典计算的速度处理海量物联网数据的潜力，解决传统计算无法想象的复杂优化问题 [38]。虽然仍处于初期阶段，但量子增强的物联网-机器学习应用即将颠覆加密、预测性维护和大规模数据分析等领域。
+
+## 5.8 结论
+
+机器学习（ML）与物联网（IoT）通过实现实时数据处理、智能决策和自动化，彻底改变了不同的工业领域。这些设备不断产生数据，而机器学习模型对这些数据进行解释，从而实现预测性维护、异常检测和自动化。研究案例表明，基于物联网技术的机器学习提高了效率和准确性，并展示了边缘计算在降低延迟方面所发挥的显著作用，以及这一过程是如何实现的。
+
+前方的道路充满了变数，随着 5G 等新一代连接技术的涌入，边缘 AI 和联邦学习将成为趋势，为物联网与机器学习的下一次发展浪潮开辟了可能性。最后，物联网与机器学习的融合将承诺更强大的自动化、更智能的感知以及更大的可扩展性——这些都是未来行业数字化转型的塑造者，也是生活质量的平衡器。
+
+# 92. 参考文献
+
+1. Sharma, K., & Nandal, R. (2019). A literature study on machine learning fusion with IoT. In 2019 3rd International Conference on Trends in Electronics and Informatics (ICOEI) (pp. 1440–1445). `https://doi.org/10.1109/ICOEI.2019.8862656`
+
+2. Lin, K., Xu, X., & Xiao, F. (2022). MFFusion: A multi-level features fusion model for malicious traffic detection based on deep learning. Computer Networks, 202, 108658. `https://doi.org/10.1016/j.comnet.2021.108658`
+
+3. Tzafestas, S. G. (2018). Synergy of IoT and AI in modern society: The robotics and automation case. Robotics & Automation Engineering Journal, 31, 1–15.
+
+4. Kumar, N. M., & Mallick, P. K. (2018). The Internet of Things: Insights into the building blocks, component interactions, and architecture layers. Procedia Computer Science, 132, 109–117.
+
+5. Dinculeană, D., & Cheng, X. (2019). Vulnerabilities and limitations of MQTT protocol used between IoT devices. Applied Sciences, 9(5), 848.
+
+6. Rahman, R. A., & Shah, B. (2016). Security analysis of IoT protocols: A focus in CoAP. In 2016 3rd MEC International Conference on Big Data and Smart City (ICBDSC) (pp. 1–7). IEEE.
+
+7. Daud, M. A., & Suhaili, W. S. H. (2017). Internet of things (IoT) with CoAP and HTTP protocol: A study on which protocol suits IoT in terms of performance. In Computational Intelligence in Information Systems: Proceedings of the Computational Intelligence in Information Systems Conference (CIIS 2016) (pp. 165–174). Springer International Publishing.
+
+8. Sehrawat, D., & Gill, N. S. (2019). Smart sensors: Analysis of different types of IoT sensors. In 2019 3rd International Conference on Trends in Electronics and Informatics (ICOEI) (pp. 523–528). IEEE.
+
+9. Sharma, A., Kumar, V., Shahzad, B. & Tanveer, M. (2019) Worldwide pesticide usage and its impacts on ecosystem. SN Applied Sciences, 1, 1446. `https://doi.org/10.1007/s42452-019-1485-1`
+
+10. Izaddoost, A., & Siewierski, M. (2020). Energy efficient data transmission in IoT platforms. Procedia Computer Science, 175, 387–394.
+
+11. Sarkar, D., Bali, R., Sharma, T., Sarkar, D., Bali, R., Sharma, T. (2018). Machine Learning Basics. Practical Machine Learning with Python.
+
+12. Hastie, T., Tibshirani, R., & Friedman, J. (2009). Overview of supervised learning. In The Elements of Statistical Learning: Data Mining, Inference, and Prediction.
+
+13. Dayan, P., Sahani, M., & Deback, G. (1999). Unsupervised learning. In The MIT Encyclopedia of Cognitive Sciences.
+
+14. Kute, S., Tyagi, A. K., Sahoo, R., & Malik, S. (2022). Building a smart healthcare system using Internet of Things and machine learning. In Big Data Management in Sensing.
+
+15. Rahman, S. M., Gallais, A., Podder, P., & Hossain, S. (2023). Progression and challenges of IoT: A short review. arXiv:2311.12869.
+
+16. Koul, R. M. (2021). How machine learning changes the nature of cyberattacks. IEEE Surveys & Tutorials.
+
+17. Bajpai, A., Tolani, A., & Malik, S. (2022). Smart healthcare system using IoT and machine learning. Indian Journal of Agricultural Sciences.
+
+
+
+# 参考文献
+
+18. Koul, R. M. (2022). Convergence of machine learning and IoT: Intelligent sensing and decision-making. *IJEETE Journal of Research*.
+
+19. Kumar, B. M., Kumar, K. K., Sasikala, P., Gopi, B., & Sundaram, S. (2023). Sustainable green energy generation from wastewater: IoT and ML. In *Sustainable Science and Intelligent Technologies for Societal Development*.
+
+20. Allugunti, V. R., Reddy, C. K. K., Elango, N. M., & Anisha, P. R. (2021). Prediction of diabetes using Internet of Things (IoT) and decision trees: SLDPS. In *Frontiers Intelligent Computing: Theory and Applications*.
+
+21. Gopalakrishnan, S., & Kumaran, M. S. (2022). IIoT framework-based ML model to improve automobile industry product. *Intelligent Automation & Soft Computing*.
+
+22. Chen, B., & Wan, J. (2019). Emerging trends of ML-based intelligent services for industrial Internet of Things (IIoT). In *2019 Computing, Communications and IoT Applications (ComComAp)* IEEE.
+
+26. Chander, B., & Gopalakrishnan, K. (2020). IoT 中传统无线传感器网络的安全漏洞与问题。于 S. L. Peng, S. Pal, & L. Huang (编), *物联网(IoT)生态系统原理：洞察范式* (第 174 卷)。Springer, Cham. [`doi.org/10.1007/978-3-030-33596-0_21`](https://doi.org/10.1007/978-3-030-33596-0_21)
+
+27. Karimullah, S., Khan, M., and Shaik, F. (2024). 用于肺部 CT 图像异常检测与分类的改进混合深度学习方法的实现与性能评估。于 *2024 年智能与可持续技术近期创新国际会议 (ICRISST)*, 印度班加罗尔 (pp. 1–6)。 doi: [10.1109/ICRISST59181.2024.10921991](http://dx.doi.org/10.1109/ICRISST59181.2024.10921991)
+
+28. Dinculeană, D., & Cheng, X. (2019). IoT 设备间使用的 MQTT 协议的漏洞与局限性。《应用科学*, 9(5), 848。 [`doi.org/10.3390/app9050848`](https://doi.org/10.3390/app9050848) (截至[2025/12/22]无法访问)。
+
+29. Ismail, A. A., Hamza, H. S., & Kotb, A. M. (2018). 开源 IoT 平台的性能评估。于 *2018 年 IEEE 全球物联网会议 (GCIoT)* (pp. 1–5)。IEEE。 [`doi.org/10.1109/GCIoT.2018.8620130`](https://doi.org/10.1109/GCIoT.2018.8620130)
+
+30. Rahman, M.M., Abe, S.K., Rahman, M.S., et al. (2016). 中低收入国家产妇贫血与不良出生及健康结果的风险：系统性述与荟萃分析。《美国临床营养杂志*, 103, 495–504。 [`doi.org/10.3945/ajcn.115.107896`](https://doi.org/10.3945/ajcn.115.107896)
+
+31. Daud, A. & Aljohani, N., Abbasi, R., Lytras, M., Abbas, F. & Alowibdi, J. (2017). 使用高级学习分析预测学生表现。于 *第 26 届世界万维网会议论文集 (WWW '17 Companion)*。国际万维网会议指导委员会，瑞士日内瓦共和国与州 (pp. 415–421)。 [`doi.org/10.1145/3041021.3054164`](https://doi.org/10.1145/3041021.3054164)
+
+32. Li, W., Chai, Y., Khan, F., Rooh Ullah, S., Verma, S., Menon, V., & Xing, K. (2021). 基于机器学习的物联网智能医疗系统大数据分析综述。《移动网络与应用*, 26, 234–252。 [`doi.org/10.1007/s11036-020-0170-6`](https://doi.org/10.1007/s11036-020-0170-6)
+
+33. Sehrawat, U., Koning, F., Ashkenazi, S., Stelzer, G., Leshkowitz, D., & Dikstein, R. (2019). 对 Sehrawat 等人的意见：癌症相关的真核翻译起始因子 1A 突变损害 Rps3 结合并增强细胞周期基因。《分子与细胞生物学*, 1, 39(6), e00049-19。 doi: [10.1128/MCB.00049-19](https://doi.org/10.1128/MCB.00049-19)。*分子与细胞生物学*2019 年 1 月 16 日；39(3):e00441-18。 doi: [10.1128/MCB.00441-18](https://doi.org/10.1128/MCB.00441-18)。PMID: 30824664; PMCID: PMC639671
+
+34. Izaddoost, A., & Siewierski, M. (2020). IoT 平台中的能效数据传输。《计算机科学进展*, 175, 387–394。 [`doi.org/10.1016/j.procs.2020.07.055`](https://doi.org/10.1016/j.procs.2020.07.055)
+
+35. Bharati, S., Podder, P. (2022). IoT 的机器学习与深度学习：应用、挑战与未来方向。《安全与通信*, 2022(1), 45–51。
+
+36. Schizas, N., Karras, A., Karras, C., & Sioutas, S. (2022). 用于超低功耗和大规模 IoT 部署的 TinyML：系统性述述。《未来互联网*, 14(12), 363。 [`doi.org/10.3390/fi141263`](https://doi.org/10.3390/fi141263)
+
+37. Shaik, F., Khan, M., and Ahmed, S. (2024). 用于肺部 CT 图像异常检测与分类的改进混合深度学习方法的实现与性能评估。于 *2024 年智能与可持续技术近期创新国际会议 (ICRISST)*, 印度班加罗尔 (pp. 1–6)。 doi: [10.1109/ICRISST59181.2024.10921991](http://dx.doi.org/10.1109/ICRISST59181.2024.10921991)
+
+38. Gowda, V. D., Rajalakshmi, A., Parappuram, I., & Prasad, K. (2019). IoT 设备间使用的 MQTT 协议的漏洞与局限性。《应用科学*, 9(5), 848。 [`doi.org/10.3390/app9050848`](https://doi.org/10.3390/app9050848) (截至[2025/12/22]无法访问)。
+
+39. Chander, B., & Gopalakrishnan, K. (2020). IoT 中传统无线传感器网络的安全漏洞与问题。于 S. L. Peng, S. Pal, & L. Huang (编), *物联网(IoT)生态系统原理：洞察范式* (第 174 卷)。Springer, Cham. [`doi.org/10.1007/978-3-030-33596-0_21`](https://doi.org/10.1007/978-3-030-33596-0_21)
+
+40. Kazi, A.Y., Zaidi, Z., & Zahid, M. (2025). 急性淋巴细胞白血患者接受比妥单抗治疗相关的急性胰腺炎。《Cureus*, 22(4), e82803。 doi: [10.7759/cureus.82803](https://doi.org/10.7759/cureus.82803)。PMID: 40406756; PMCID: PMC1209781
+
+41. Bharati, V., Bajpai, A., Parappuram, I., & Prasad, K. (2022). 高组成性表达 Hsp40 伴侣蛋白 Sis1 减少酵母 Ire1 通路依赖的 ALS 蛋白病中 TDP-43 聚集诱导的氧化应激。《生物化学与生物学研究*, 595, 28–34。
+
+# 物联网增强远程医疗：一种用于视网膜疾病诊断的集成成像与机器学习方法
+
+Mudassir Khan, Fahimuddin Shaik, Anwar Bhasha Pattan, Shaik Karim
+
+## 6. 引言
+
+物联网、尖端成像技术与机器学习的结合，在技术创新的时代已成为医疗行业的一种变革性力量。在此背景下，我们的研究展示了一种旨在提高视网膜疾病检测准确性，同时增强远程医疗服务的集成方法。糖尿病视网膜病变 (`DR`) 是一种常见的视网膜疾病，通常需要早期且精确的诊断，这也是本研究的重点。
+
+正确诊断视网膜疾病的重要性不言而喻。作为眼睛敏感的一部分，视网膜提供了观察患者健康状况的窗口。早期识别 `DR` 等视网膜疾病对于防止不可逆的视力丧失及其他问题至关重要，这一点如何强调都不为过。然而，确保快速准确的诊断（特别是偏远或医疗匮乏地区）是一项巨大的挑战。
+
+我们的方法论经过精确构建，通过一个系统的阶段序列进行，每个阶段都经过调整，以辅助诊断过程，从而解决这一关键的医疗需求。它始于开发全面的`Retinal Fundus Database`，该数据库经过精心策划，以确保各种视网膜疾病的多样化表示[3]。我们从该数据库中选择视网膜光学相干层扫描（`OCT`）和眼底图像进行深度分析，使我们的`96.methodology`涵盖不同的成像模式，实现更全面的诊断方法[4]。
+
+预处理是关键的第一步，旨在提高所考虑照片的质量。利用`Wiener Filter`，我们高效地减少了可能影响诊断准确性的非期望噪声和伪影[5]。这种降噪技术的数学结构为随后的分析做了理想的准备[6]。
+
+`Graph Cut Segmentation Algorithm`是一种在精确检测感兴趣区域（`ROIs`）方面出色的动态工具，是我们技术的核心。该系统通过使用像素相似性指标（即`Gaussian-based functions`）来可靠地识别和表征图像内部受`DR`影响的区域，优于现有技术（如`Chan–Vese`算法）。该算法微调后的边缘权重对于驱动这一分割过程至关重要，强调了像素强度的相似性，并提供了精细的`ROI`分离。
+
+我们在分割后的`ROIs`中使用`Fuzzy C-Means`聚类来改进分析，它将具有可比性的像素值分组，允许进行更精确的病变诊断。先进的边缘检测方法（如`Sobel`或`Canny`算子）确保了对检测到的病变进行准确边界追踪，增加了视网膜异常的可视性，并为更彻底的分析铺平了道路[7]。
+
+`GLCM`分析是我们方法论中特征提取的基础。该过程计算了视网膜图像内部的纹理和空间属性，为后续的分类和分析提供了有用信息。特征学习阶段利用了卷积神经网络（`CNN`），特别是`AlexNet`，它能自动提取并学习相关的视觉特征，从而提高了诊断能力。
+
+使用多分类支持向量机（`SVM`）分类器来精确分类视网膜疾病，利用收集到的特征来区分不同的视网膜病变。底层方法确定了调节多分类`SVM`的方程，有助于准确且可靠的疾病分类[8]。
+
+具体而言，`IoT`技术的引入对我们的技术至关重要。一个由`Raspberry Pi`驱动的`IoT`模块是核心数据枢纽，允许远程访问和数据传输。该网络系统由一个构建在`MATLAB ThingSpeak`平台上的用户友好图形界面支持。该界面允许医疗人员远程访问并分析视网膜图像及诊断结果，实现与同事的无缝通信，并帮助在管理视觉疾病时做出明智决策。
+
+## 6.2 文献综述
+
+本节深入探讨了与研究结果相关的文献。在过去的几十年里，利用计算机辅助分析方法（特别是自动分割）来划分视网膜`OCT`图像的性日益提高。视网膜结构的分割是眼科疾病计算机辅助发现工具演变过程中一个关键且严谨的阶段[9]。在计算结构变化（如厚度或面积测量）之前，必须进行分割，这些指标被广泛用作健康状况或疾病进展的依据[10]。这些`97.measurements`需要识别组织边界[11]。然而，传统方法涉及专家的人工勾勒，这是一个耗时且主观的过程的过程，不幸的是，这为潜在的不准确性留下了空间[12]。
+
+在视网膜`OCT`图像的背景下，眼底视网膜结构的分层已使用活动轮廓得到解决，如文献[13]所示。通过使用连续曲线，该方法将分割技术转化为计算能量值的函数。文献[14, 15]描述了高分辨率`OCT`成像的能力。文献[16]的作者创建了一种利用`OCT`图像来诊断年龄性黄斑变性（AMD）和糖尿病性视网膜水肿（DME）的分类方法。（注：此处原文存在重复内容）。
+
+层分割的精度一直是`OCT`研究的一个重点，因为它对临床解释至关重要。为了勾勒视网膜层的边界，文献提供了多种方法，包括活动轮廓[23, 24]、`SVM`[25]以及基于图的算法[26]。深度学习（`DL`）在各种计算机视觉和图像分析应用中证明其优于传统方法。由于其成功，将其医学图像分析（包括眼科图像）受到了关注。这种策略通过将回归网络与现代分类器相结合，证明是有效的。
+
+## 6.3 方法论
+
+我们工作的方法论包含了一个系统的阶段序列，用于分析视网膜图像并精确分类疾病。它始于创建一个多样化的 Retinal Fundus Database，这确保了多种视网膜疾病得到了代表。从该数据库中选择部分视网膜`OCT`和眼底图像进行研究。分析前的预处理至关重要，旨在提高图像质量并确保图像没有噪声和伪影。`Wiener Filter`减少了噪声，在保持图像细节的同时高效地消除了额外噪声。如下所示`Wiener Filter`的方程为降噪进行了优化：
+
+98. 此处 H(u,v)代表频域内的 Wiener Filter，G(u,v)表示噪声图像的傅里叶变换。参数 K 是一个控制滤波器行为的常数。
+
+随后，使用 `Graph Cut Segmentation Algorithm`（图割分割算法）对图像进行分割并寻找感兴趣区域（ROI）。`Graph Cut` 方法在精确 ROI 检测方面表现出色，取代了 `Chan–Vese` 算法等旧方法。它将该问题视为能量最小化问题，寻找最佳割以将 ROI 从背景中分离。图的边权重基于像素相似性度量确定，通常利用基于高斯函数的函数来评估 ROI 内部相邻像素之间的相似性，以确保 `Graph Cut Segmentation Algorithm` 正确运行。`Graph Cut Segmentation Algorithm` 确实包含了优化图割以将图像分割为多个 ROI。为了实现这一点，边权重根据像素相似性测量确定。一种标准的相似性度量是基于高斯函数的。以下是使用高斯相似性测量计算两个像素 `p` 和 `q` 之间边重的公式：
+
+$W\left( {p,q} \right) = e\_{.}^{\frac{- {({I{(p)} - I{(q)}})}}{2\sigma^{2}}}$ 
+
+其中：
+
+- `W(p, q)` 代表像素 `p` 和 `q` 之间边的权重。
+
+- `I(p)` 和 `I(q)` 分别是像素 `p` 和 `q` 的强度。
+
+- `σ` 是一个控制高斯函数尺的参数。
+
+该方程根据像素强度相似性计算边权重。强度相似的像素将具有更大的边权重，表明在图中存在更实质的关系。这些边权重被用于在 `Graph Cut Segmentation Algorithm` 中构建一个图，该图的最小割对应于图像分割为 ROI 的最佳结果。该算法识别使能量函数最小化的割，从而准确地将 ROI 从背景中分离。请记住，`Graph Cut Segmentation Algorithm` 的具体实现和参数可能会有所不同，此处提供的公式是该领域下使用的标准相似性度量。参数的选择（例如 `σ` 的值）会影响算法性能，应根据分割图像的特征进行选择。
+
+
+
+在分割后的 ROI 内使用 `Fuzzy C-Means`（模糊 C 均值）聚类对相似的像素值分组。该方法寻找聚类中心并为每个像素分配隶属度，更容易定位病变。例如，随后使用 `Sobel` 或 `Canny` 算子来定位并勾定 ROI 内检测到的病变的边界。此过程增强了病变检测的准确性。之后，病变检测涉及分离并区分 ROI 内的视网膜病变。这些发现的病变经过形态增强，提高了可见性并强调了它们的存在，以便进一步研究。
+
+用于特征提取的 `GLCM`（灰度共生矩阵）分析至关重要。`GLCM` 方法计算不同偏移和角度像素值对的频率，产生有助于后续分析和分类的纹理和空间特征。使用 `AlexNet CNN` 进行特征学习和分类。`AlexNet` 由卷积层和全连接层组成，能够自主从图像中学习并提取相关特征。此外，使用多分类 `SVM` 分类器根据检索到的特征对疾病进行分类。多分类 `SVM` 分类器通过区分不同的视网膜疾病来确保准确诊断。`multiclass SVM` 的特定方程取决于所使用的算法，如图 6.1 所示。
+
+**图 6.1** 建议的回归模型。
+
+包含一个基于 `Raspberry Pi` 的 `IoT` 模块以实现数据传输和远程访问。这个小型计算设备成功管理了数据流。使用 `MATLAB ThingSpeak` 平台构建了一个用户友好图形界面。该界面允许医疗保健人员远程访问并分析视网膜图像和诊断结果。系统能够与远程医疗人员的设备（无论是 PC 还是移动设备）建立双向连接，促进有效通信和数据共享。这通过确保快速获取诊断信息，为视网膜疾病的明智决策提供了支持。这种方法本质上协调了一系列结合先进图像处理、机器学习和 IoT 技术的精确程序。目标是为视网膜健康评估提供准确、可获取的诊断结果，最终改善患者的医疗结果。
+
+## 6.4 实验结果与分析
+
+图 6.2 展示了方法的开始，其中对视网膜底图像进行了精细的预处理以提高其质量。此升级使用了 `Wiener Filter`（维纳滤波）来有效减少不需要的噪声。该图作为预处理阶段输出的视觉化描述，特别强调了光盘区域的准确界定。这个清晰的光盘边界对于进一步的深度检查至关重要。在图 6.3 中，迭代使用 `Graph Cut Segmentation Algorithm` 来费力地检测并勾定眼底图像内部的边界。这些仔细勾定的边界与受糖尿病视网膜病变（DR）影响的图像特定部分相关。算法的性能基于其对边权重和像素相似性测量的巧妙利用，实现了 DR 受影响区域的精确分割。
+
+![图 6.2 视网膜底图像分割和光盘检测。](img/9781041062943_C006_002.jpg)
+
+**图 6.2** 视网膜底图像分割和光盘检测。
+
+![图 6.3 使用迭代过程在眼底图中检测 DR 受影响区域的边界。](img/9781041062943_C006_003.jpg)
+
+**图 6.3** 使用迭代过程在眼底图中检测 DR 受影响区域的边界。
+
+图 6.4 展示了之前在图 6.2 中所示的光盘分割的最终结果。经过精细的分割和预处理过程，图 6.3 仔细显示了光盘的边界。这个精确界定的光盘区域现在被孤立出来，准备进行进一步的综合分析或在认为对研究目标必要时处理。
+
+![图 6.4 分割后的光盘区域。](img/9781041062943_C006_004.jpg)
+
+**图 6.4** 分割后的光盘区域。
+
+图 6.5 是在 DR 受影响区域上应用先进边缘检测技术（如 `Sobel` 或 `Canny` 算子）的视觉化示例。检测到的边缘如图所示，对于识别和可视化 DR 受影响区域的大小和详细形状至关重要，为其独特特性提供了重要见解。
+
+![图 6.5 DR 受影响区域的边缘检测追踪。](img/9781041062943_C006_005.jpg)
+
+**图 6.5** DR 受影响区域的边缘检测追踪。
+
+图 6.6 重点关注 `Fuzzy C-Means` 聚类算法的实际实现，该算法被刻意应用在分割后的 DR 受影响区域内。该图描述了这些聚类区域如何在迭代步骤中演变，最终实现更精确、更详细的病变检测。
+
+![图 6.6 用于清晰识别视网膜病变（DR）影响区域的迭代过程。](img/9781041062943_C006_006.jpg)
+
+**图 6.6** 用于清晰识别 DR 影响区域的迭代过程。
+
+图 6.7 是详细描述，提供了 DR 检测框架中关键阶段的视觉蓝图，该框架已针对眼底图经过严格调整。它细致地整合了几个关键组件，包括预处理、分割、边缘检测和病变识别，技术书中对这些进行了彻底解释。此图将系统化的流程浓缩为插图格式，让人一目了然看出整个框架。
+
+![图 6.7 眼底图像 DR 检测框架。](img/9781041062943_C006_007.jpg)
+
+**图 6.7** 眼底图像 DR 检测框架。
+
+图 6.8 最可能源于该方法在视网膜 OCT 图像上的应用。该应用涉及层和感兴趣区域（ROI）的系统分割，生成了一个密布了独特分割层的 OCT 图像。
+
+![图 6.8 测试视网膜 OCT 图像中的分割层。](img/9781041062943_C006_008.jpg)
+
+**图 6.8** 测试视网膜 OCT 图像中的分割层。
+
+图 6.9 通过对测试视网膜 OCT 图像应用特征提取过程，描述了该方法的一个重要阶段。这是后期调查和诊断阶段的一个重要步骤。
+
+![图 6.9 测试视网膜 OCT 图像上的特征提取。](img/9781041062943_C006_009.jpg)
+
+**图 6.9** 测试视网膜 OCT 图像上的特征提取。
+
+**表 6.1** 视网膜图像样本提取的特征
+
+| 提取的特征 | 视网膜样本 1 | 视网膜样本 2 | 视网膜样本 3 | 视网膜样本 4 | 视网膜样本 5 |
+| --- | --- | --- | --- | --- | --- |
+| 能量 | 0.00144 | 0.0011 | 0.00105 | 0.00106 | 0.00107 |
+| 对比度 | 0.21 | 0.283 | 0.392 | 0.4312 | 0.42 |
+| 相关性 | 0.7762 | 0.7342 | 0.7841 | 0.7524 | 0.72 |
+| 同质性 | 0.2016 | 0.3623 | 0.234 | 0.3338 | 0.2531 |
+| 熵 | 9.6513 | 9.4553 | 9.3574 | 9.4753 | 9.3932 |
+
+在整个特征提取过程中，会计算测试视网膜 OCT 图像的纹理和空间特征。这些特征对于进一步的图像处理和分类至关重要，特别是在疾病检测的背景下。该方法可能会使用 `GLCM` 分析等技术提取这些特征。使用 `GLCM` 计算不同偏移和角度的像素值对的频率，从而揭示图像内部纹理特征和空间模式，如表 6.1 所示。
+
+在特征提取过程之后，生成的特征被用作额外分析的输入。如方法所述，这可能包括将信息输入到如 `AlexNet` 之类的 `CNN` 中。`CNN` 从视觉数据中学习并提取相关属性，这有助于识别和分类视网膜疾病。检索到的特征至关重要，因为它们包含了测试视网膜 OCT 图像中的重要信息，使得该方法的后续步骤能够对疾病诊断做出明智结论。这些提取的属性有助于该技术确保为视网膜健康评估提供可靠且易于获取的诊断输出，最终改善患者的医疗保健。性能评估阶段如图 6.10 所示，其中使用精确创建的混淆矩阵来审查 DR 检测算法的准确性。该矩阵在图中清晰描绘，对于衡量检测过程的许多部分至关重要，例如真阳性、真阴性、假阳性和假阴性，为算法的成功提供了客观评估。
+
+![图 6.10 DR 检测混淆矩阵。](img/9781041062943_C006_010.jpg)
+
+**图 6.10** DR 检测混淆矩阵。
+
+![图 6.11 性能评估混淆矩阵。](img/9781041062943_C006_011.jpg)
+
+**图 6.11** 性能评估混淆矩阵。
+
+![图 6.12 眼底图像 DR 检测框架。](img/9781041062943_C006_012.jpg)
+
+**图 6.12** 眼底图像 DR 检测框架。
+
+![图 6.13 OCT 图像中的性能验证。](img/9781041062943_C006_013.jpg)
+
+**图 6.13** OCT 图像中的性能验证。
+
+![图 6.14 OCT 图像中的 CNN 误差直方图。](img/9781041062943_C006_014.jpg)
+
+**图 6.14** OCT 图像中的 CNN 误差直方图。
+
+![图 6.15 OCT 图像中的 DR 梯度估计。](img/9781041062943_C006_015.jpg)
+
+**图 6.15** OCT 图像中的 DR 梯度估计。
+
+![图 6.16 眼底图像整体混淆矩阵。](img/9781041062943_C006_016.jpg)
+
+**图 6.16** 眼底图像整体混淆矩阵。
+
+![图 6.17 OCT 图像中的 DR 检测 ROC 曲线。](img/9781041062943_C006_017.jpg)
+
+**图 6.17** OCT 图像中的 DR 检测 ROC 曲线。
+
+在图 6.18 中，基于 `Raspberry Pi` 的 IoT 模块实现占据了核心位置。这个微小但强大的处理单元巧妙地管理着数据流。使用 `MATLAB ThingSpeak` 平台精心开发的用户友好型图形界面，如图 6.18 所示。该界面使医疗保健提供人员能够远程访问并分析视网膜图像和诊断结果。它能够与远程医疗提供人员的设备（无论是个人电脑还是移动设备）建立双向连接。本质上，图 6.18 通过快速访问诊断信息，在支持视网膜疾病管理的知情决策方面发挥着关键作用。它整合了现代图像处理、机器学习和物联网技术，将一系列设计精密的程序统一起来。
+
+![Figure 6.18 ThingSpeak 数据传输界面。](img/9781041062943_C006_018.jpg)
+
+**图 6.18** ThingSpeak 数据传输界面。
+
+## 6.5 结论
+
+本研究建立了一种全面且集成的方法，用于准确诊断视网膜疾病，重点关注 `DR`。我们希望通过融合图像处理、机器学习和物联网集成的多种现代方法，提高视网膜医疗诊断的可及性和精确性。我们的方法从开发数据库开始，经由预处理、分割、边界检测和特征提取。
+
+通过 `Raspberry Pi` 和 `MATLAB ThingSpeak` 平台利用物联网技术实现了远程医疗访问，使医疗从业人员之间能够通信和共享数据。仿真结果验证了我们在眼底和 `OCT` 图像中检测 `DR` 的方法。多类 `SVM` 分类器的引入提高了分类准确率，物联网的引入促进了诊断信息的即时获取，为视网膜医疗管理提供了知情决策。最后，我们的方法协调了一套设计精密的程序，结合了最先进的技术，为视网膜健康评估提供准确且易于获取的诊断结果。最终目标是通过提供快速准确的视网膜疾病诊断来改善患者预后。
+
+## 参考文献
+
+1. K. Attebo, P. Mitchell, R. Cumming, and W. Smith, “Knowledge and beliefs about common eye diseases,” Aust N Z J Ophthalmol, vol. 25, no. 3, pp. 283–287, August 1997.
+2. D. Yorston, “Retinal diseases and VISION 2020,” Community Eye Heal, vol. 16, no. 46, pp. 19–20, 2003.
+3. D. C. S. Vandarkuzhali, and T. Ravichandran, “Elm based detection of abnormality in retinal image of eye due to diabetic retinopathy,” J Theoret Appl Inform Technol, vol. 6, pp. 423–428, 2005.
+4. M. Arora, and M. Pandey, “Deep neural network for diabetic retinopathy detection,” In: 2019 International Conference on Machine Learning, Big Data, Cloud and Parallel Computing (COMITCon), IEEE pp. 189–193, 2019.
+5. S. J. Chiu, M. J. Allingham, P. S. Mettu, S. W. Cousins, J. A. Izatt, and S. Farsiu, “Kernel regression based segmentation of optical coherence tomography images with diabetic macular edema,” Biomed Opt Express, vol. 6, no. 4, p. 1172, 2015.
+6. F. Shaik, A. K. Sharma, S. M. Ahmed, V. K. Gunjan, and C. Naik, “An improved model for analysis of diabetic retinopathy related imagery,” Ind J Sci Technol, vol. 9, p. 44, 2016, ISSN: 0974-6846.
+7. B. Antal, and A. Hajdu, “An ensemble-based system for automatic screening of diabetic retinopathy,” Knowl-Based Syst, vol. 60, pp. 20–27, 2014.
+8. P. Pal, S. Kundu, and A. K. Dhara, “Detection of red lesions in retinal fundus images using YOLO V3,” Curr Indian Eye Res J Ophthalmic Res Group, vol. 7, p. 49, 2020.
+9. T. K. Yoo, and E. C. Park, “Diabetic retinopathy risk prediction for fundus examination using sparse learning: A cross-sectional study,” BMC Med Inform Decis Mak, vol. 13, no. 1, pp. 106, 2013. doi: [10.1186/1472-6947-13-106](http://dx.doi.org/10.1186/1472-6947-13-106)
+10. L. Chen, A. Camino, M. Zhang, T. S. Hwang, D. J. Wilson, and Y. Jia, “The segmentation of retinal layer and fluid in SD-OCT images using dice based fully convolutional networks,” IEEE Access, vol. 8, pp. 60929–60939, 2020.
+11. D. M. Stein, G. Wollstein, and J. S. Shuman, “Imaging in glaucoma,” Ophthalmology Clinics of North America, vol. 17, no. 1, p. 33, 2004.
+12. N. H. Cho, “Global estimates of diabetes for 2017,” Diab Res Clin, vol. 138.
+13. F. Shaik, A. K. Sharma, S. M. Ahmed, V. K. Gunjan, and C. Naik, “An improved model for analysis of diabetic retinopathy related imagery,” Ind J Sci Technol, vol. 9, p. 44, 2016, ISSN: 0974-6846.
+14. S. J. Chiu, M. J. Allingham, P. S. Mettu, S. W. Cousins, J. A. Izatt, and S. Farsiu, “Kernel regression based segmentation of optical coherence tomography images with diabetic macular edema,” Biomed Opt Express, vol. 6, no. 4, p. 1172, 2015.
+
+
+
+* 15. Z. Wang, A. Camino, M. Zhang, T. S. Hwang, D. J. Wilson, and Y. Jia, "The segmentation of retinal layer and fluid in SD-OCT images using dice based fully convolutional networks," *IEEE Access*, vol. 8, pp. 60929–60939, 2020.
+
+* 16. B. Zhou, A. Khosla, A. Lapedza, A. Oliva, and A. Torralba, "Learning deep features for discriminative localization," 2016 IEEE Conference on Computer Vision and Pattern Recognition.
+
+* 17. T. Hassan, M. U. Akram, N. Werghi, and M. N. Nazir, "RAG-FW: A hybrid convolutional framework for the automated extraction of retinal lesions and lesion-influenced grading of human retinal pathology," *Int Conf Image Anal Recogn*, vol. 25, no. 1, pp. 108–120, 2021.
+
+* 18. K.-K. Maninis, et al., "Deep retinal image understanding," International Conference on Medical Image Computing and Computer-Assisted Intervention, 140–148, 2016.
+
+* 19. F. Grassmann, et al., "A deep learning algorithm for prediction of age-related eye disease severity scale for age-related macular degeneration from color fundus photography," *Ophthalmology*, vol. 125, no. 9, pp. 1410–1420, 2018.
+
+* 20. H. C. Shin, M. R. Orton, D. J. Collins, S. J. Doran, and M. O. Leach, "Stacked autoencoders for unsupervised feature learning and multiple organ detection in a pilot study using 4D patient data," *IEEE Trans Pat Anal Mach Intell*, vol. 35, no. 8, pp. 1930–1943, 2012.
+
+* 21. Al-Mujaini, U. K. Wali, and S. Azeem, "Optical coherence tomography: Clinical applications in medical practice," *Oman Med J*, vol. 28, no. 2, pp. 86–91, March 2013.
+
+* 24. D. S. Kermany et al., "基于图像的深度学习识别医疗诊断和可治疗疾病," *Cell*, vol. 3, pp. 34–46, 2018.
+
+* 25. G. Quellec, K. Charrière, Y. Boudi, B. Cochener, and M. Lamard, "用于糖尿病视网膜筛查的深度图像挖掘," *Med Image Anal*, vol. 39, pp. 178–193, 2017.
+
+* 26. P. A. Dufour, L. Ceklic, H. Abdillahi, S. Schroder, S. D. Dzanet, U. Wolf-Schnurrbusch, and J. Kowal, "使用训练硬软约束的 OCT 数据多表面分割," *IEEE Trans. Med. Imag.*, vol. 32, no. 3, pp. 531–543, 2013.
+
+# 115.7 用于提高作物产量的边缘计算与物联网技术
+
+Revanasiddappa Bandi
+
+DOI: [10.1201/9781003634768-7](http://doi.org/10.1201/9781003634768-7)
+
+## 7.1 引言
+
+在印度，农业是大多数人收入的主要来源。人们注意到，过去十年农业在作物发展方面没有很大进展。作物产量的下降是食品成本不断上升的原因。这种下降自 2010 年以来已导致超过 4000 万人陷入贫困。导致这一现象的原因有多个，例如化肥使用不当、土壤肥力低、疾病、气候变化和水资源浪费。有效的农业干预至关重要，而物联网（`IoT`）与传感器网络以及机器学习（`ML`）算法结合提供了解决方案。它为实现农业智能化做出了重大贡献，并能改变农业增长的进程。
+
+`IoT`涉及三层，包括网络层、应用层和感知层。感知层的传感器和设备实时收集数据，然后对其进行评估以供进一步分析和预测。`IoT`网络层作为其基础设施提供通用服务。它指示了应用层和感知层如何协同工作。将行业特定技术与`IoT`相结合的层被称为应用层。几乎每个行业都在使用`IoT`，包括智能停车、智能建筑、智能农业、智能交通等。其中，农业是影响数百人的主要行业之一。
+
+## 7.2 文献综述
+
+Patil and Kale [1] 提出了一种与信息通信技术（`ICT`）相结合的智慧农业模型。`ICT`在农业领域一直非常重要。农村农民可能几个世纪以来种植相同的作物，但随着时间的推移，天气模式、土壤条件以及病虫害发生了变化。通过使用所提的方法，获取更新的信息使农民能够应对甚至从中获益。
+
+Cunningham and Holmes [2] 认为`IoT`属性在蘑菇分级实践中可能有用。
+
+Minbo et al. [3] 提出了一种`IoT`信息系统。
+
+Mohanraj et al. [4] 解释了农民在作物生长不同阶段需要帮助，并且应该在正确的时间给予指导。
+
+Sivakumar [5] 解释了所有三个节点的传感器和微控制器已成功与`Raspberry Pi`接口，并实现了不同节点之间的无线通信。
+
+Rad et al. [6] 提出未来世代的土豆作物需要可持续的实践、流程和系统。
+
+Chandhini [7] 提出基于物联网的农业生产系统建立在农民确保其土地在未来保持生产力的长期愿望之上。它还解决了社区对食品安全和环境保护的期望与关注。设计并实现了一个具有图形用户界面（GUI）的物联网农业生产系统，用于农场数据的实时监控和可视化。该系统集成了物联网技术来收集、分析和显示环境及作物相关的参数，从而实现农业生产中的高效决策。基于物联网的农业生产系统通过作物统计信息与农业环境信息之间的相关分析，增强了农民、研究人员和政府官员分析现状和预测未来收成的能力。此外，由于农民可以使用这种物联网的农业生产系统观察从种子到销售的全周期，农产品的质量可以提高。该生产系统可以改进以支持更多类型的产品并提供更多服务。利用物联网技术，可以显著提高农业生产效率。随着不断改进，农业物联网必须引领农业生产进入新时代。
+
+Satyanarayana 和 Mazaruddin [8] 描述了需要土壤环境监测系统的特定应用，并对监测系统中存在的问题进行了分析，因此我们设计并实现了一个基于土壤温湿度监测系统的无线传感器网络。该系统能够实现自动联网和实时数据采集、传输和显示，具有低成本、低功耗、灵活联网、无需布线、界面友好等特点。通过通用分组数据无线服务（GPRS）技术和 Web 服务技术，我们可以实现数据网络和远程监控功能；这表明该系统可以满足土壤环境温湿度监测和统一管理的要求。在未来，我们可以使用合适的传感器监测地下水位。此外，研究还可以加强，以产生一个能够监测州或国家等大区域整个天气状况的系统。
+
+118. Managave 等 [9] 解释了无线传感器网络（WSN）在精准农业（PA）中的实施。由于该系统具有简单的用户界面（UI），农民可以方便地使用该系统。此外，系统会让农民及时了解田间发生的每一分钟事件，农民据此可以采取适当行动 [10]。中央系统是`Raspberry Pi`，它连接到`Arduino UNO ATmega328P/Atmega16U2`（开发板），客户端通过 Wi-Fi 模块连接到路由器。路由器用于客户端通过 UI 访问网页 [11]。
+
+González-Amarillo 和 Corrales-Muñoz [12] 展示了利用物联网进行幼苗记录和跟踪的温室追溯模型设计。开发了一个 Web 应用程序用于控制和监控温室，农民也可以利用该应用程序获取温室内开发的幼苗信息或产品收获信息。使用该系统，可以最大限度地减少用水量。
+
+Josephine 和 Ramya [13] 讨论了使用射频（RF）进行的小米作物预测，并实现了 99.74% 的准确率。使用了土壤水分、最高温度、最低温度、湿度和降水量等不同输入。
+
+Meeradevi 和 Mundada [14] 陈述了使用线性回归技术进行作物产量预测。氮、磷、钾（NPK）、pH 和湿度由不同的传感器产生并存储在专用服务器中以便系统使用。
+
+文献 [15] 中的作者讨论了遥感系统如何在机器学习（ML）中广泛应用。系统使用 pH、温度、水分、降雨等传感器，并使用决策树、线性回归、梯度提升树（GBoost）等算法分析数据。在所有这些算法中，GBoost 提供了最优预测 [17]。该系统帮助农民根据环境条件预测种植作物种类。
+
+Priya 和 Yuvaraj [16] 描述了系统利用了从不同传感器采集的湿度、温度、土壤水分水平和 pH 值。除了这些，在构建系统时还考虑了土地类型、土壤类型和种植面积等进一步参数。这些值被输入到开发的作物预测 GUI 中，并提供作物建议。使用深度神经网络（DNN）来预测所种的作物、产量范围和使用的肥料。
+
+Narvekar 等 [18] 解释了物联网和无线传感器网络（WSN）的使用改变了我们收集和利用植物信息的方式。传感器可以追踪和预测作物和天气状况。通过卷积神经网络和数据集，识别出了马铃薯晚疫，并在土壤水分充足时实现自动灌溉。通过改进耕作方法并提供成本效益、一致的种植策略，农民将受益，从而提高农业水平。
+
+Bersani 和 Ruggiero [19] 描述了农业中使用物联网解决方案导致了智能温室的发展。这些温室利用传感器和通信基础设施实时监控和收集数据，实现了对光、湿度、温度、CO₂水平和通风的高效控制。
+
+Mamatha 和 Kavitha [20] 提出了一种水培系统，其中使用有机椰壳基质代替了不可降解的岩棉。该系统在大规模实现了自动化，覆盖整个温室，不同作物在最佳条件下生长以获得最大产量。使用 K-近邻算法预测叶类蔬菜的绝对生长速率。营养液膜法（NFT）结合椰壳基质被证明是商业作物生长的最佳水培系统，准确率为 93%。
+
+ML 是现代农业行业中使用的一项趋势技术。它有助于培育更健康的种子。在 ML 中，方法源自学习过程。这些方法论需要通过经验来学习以执行特定任务。ML 模型的性能随着时间的推移获得的经验而不断提高。一旦完成学习过程，模型就可以对数据进行假设、分类和测试。这是在获得训练过程经验后实现的。本研究的动机是在农业领域进行有效的开发。该研究旨在根据作物类型、面积、气候条件（温度和湿度）以及 pH 值来预测作物产量。实时数据通过使用`Raspberry Pi`的土地传感器进行采集，并上传到远程服务器。传感器数据将从服务器获取到集成开发环境（`IDE`），使用 ML 算法预测作物产量，如图 7.1 所示。
+
+![图 7.1 作物产量预测框图。](img/9781041062943_C007_001.jpg)
+
+**图 7.1** 作物产量预测框图。
+
+对于 PA，我们拥有独立的系统来根据温度、湿度、pH 和土壤水分分析并预测作物产量：(1) 传感器数据可以通过电子邮件或短信息服务（`SMS`）获取。(2) 进行实时分析用于监测植物生长。(3) 进行网络监控以实现持续警报和监测。
+
+## 120.7.4 拟议系统
+
+在这项研究中，开发了一个系统，用于根据不同地区根据温度、湿度、pH 和土壤水分等参数预测不同作物的产量。为了通过传感器获取数据，我们使用了基于`Flask`框架的公共应用程序接口（`API`）。某区域作物产量的实时预测是使用 ML 算法（多元线性回归）完成的。数据挖掘通过逗号分隔值（`CSV`）文件导入多源数据来预测任何区域的作物产量。
+
+### 7.4.1 智能农业架构
+
+系统架构是定义系统结构、行为和其他视图的概念模型。架构描述是对系统的正式描述和表示。系统架构由不同的组件组成，如`Raspberry Pi`、传感器、模拟数字转换器（`ADC`、`MPC3008`）等。箭头的方向表示数据流的方向。一个基于`Raspberry Pi`传感器数据采集和分析的智能农业监测和预测系统如图 7.2 所示。
+
+![图 7.2 智能农业架构。](img/9781041062943_C007_002.jpg)
+
+**图 7.2** 智能农业架构。
+
+### 7.4.2 硬件元件
+
+接下来的章节将描述拟议系统中所使用的不同硬件和传感器。
+
+### 121.7.4.3 Raspberry Pi
+
+`Raspberry Pi`是一种廉价的、信用卡大小的电脑，可以插入电脑显示器或电视机，并使用标准的键盘和鼠标。它是一个小型设备，能够让所有年龄段的人探索计算并学习使用`Scratch`和`Python`等语言进行编程。`Raspberry Pi`运行`Linux`，但它也提供了一通用输入/输出（`GPIO`）引脚，允许控制电子元件以进行物理计算并探索物联网。`Raspberry Pi 3b+`用于开发拟议的系统，如图 7.3 所示。
+
+![图 7.3 Raspberry Pi 3b+。](img/9781041062943_C007_003.jpg)
+
+**图 7.3** Raspberry Pi 3b+。
+
+### 7.4.4 温度湿度传感器 (DHT11)
+
+`DHT11`温度湿度传感器具有带有温度和湿度传感器功能的校准数字信号输出。它与一个高性能的 8 位微控制器集成。其技术确保了极高的可靠性和卓越的长期稳定性。该传感器包括一个电阻元件和一个用于湿性负温度系数（`NTC`）温度测量设备的传感器。它具有优异的质量、快速响应、抗干扰能力和高性能。每个`DHT11`传感器都具有对湿度校准室的极精确校准。存储在一次性可编程（`OTP`）内存中的校准系数是内部传感器在过程中检测到的信号，我们称这些为校准系数。集成了单线串口接口使其变得快速方便。其较小的尺寸、低功耗和长达 20 米的信号传输距离使其适用于各种应用，甚至是最苛刻的应用。该产品封装在四引脚单行封装中，由电源电压（`VCC`）、数据（`Data`）、地（`GND`）和一个未连接（`NC`）引脚组成，如图 7.4 所示。
+
+![图 7.4 DHT11 传感器。](img/9781041062943_C007_004.jpg)
+
+**图 7.4** DHT11 传感器。
+
+### 122.7.4.5 pH 传感器
+
+pH 计是一种用于测量酸碱性的隔离设备。从根本上讲，pH 计由电压表和电极组成，如图 7.5 所示。
+
+![图 7.5 pH 传感器。](img/9781041062943_C007_005.jpg)
+
+**图 7.5** pH 传感器。
+
+### 7.4.6 土壤水分传感器 (Y38L69)
+
+土壤水分传感器或湿度通常用于检测土壤湿度。它由两部分组成：右侧的电子板和左侧带两个焊点的探针，如图 7.6 所示。该传感器有一个用于调节数字输出（`D0`）敏感度的内置电位器、一个发光二极管（`LED`）和一个数字输出，如图 7.6 所示。
+
+![图 7.6 (a) Y38L69; (b) Y38。](img/9781041062943_C007_006.jpg)
+
+**图 7.6** (a) Y38L69; (b) Y38。
+
+### 123.7.4.7 模拟数字转换器 (MCP3008)
+
+`MCP3008`是一个 10 位 8 通`ADC`，如图 7.7 所示。它廉价、易于连接且不需要额外的组件。它使用串行外接口（`SPI`）总线协议，该协议由 Pi 的`GPIO`支持。`ADC`还可以提供隔离测量，例如将输入的模拟电压或电流转换为代表电压或电流大小的数字。
+
+![图 7.7 MCP3008 引脚图。](img/9781041062943_C007_007.jpg)
+
+**图 7.7** MCP3008 引脚图。
+
+### 7.4.8 数据集
+
+研究中使用的数据集如表 7.1 和表 7.2 所示。表 7.1 显示了不同温度和 pH 值的作物。它提供了关于各种作物环境和土壤的信息。
+
+## 表 7.1 不同作物的温度与 pH 值
+
+| 作物名称 | 最低温度 (°C) | 最高温度 (°C) | 理想温度 (°C) | 最低 pH | 最高 pH | 最小需水量 (mm) | 最大需水量 (mm) | 氮 (N) | 磷 (P) | 钾 (K) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 珍珠小米 (Bajra) | 3 | 18 | 30 | 3 | 8 | 350 | 750 | L | L | M |
+| 香蕉 | 4 | 15 | 35 | 6.5 | 8.5 | 450 | 750 | M | VL | VL |
+| 大麦 | 4 | 12 | 32 | 3 | 8 | 800 | 1100 | VL | VL | M |
+| 豆类 | 2 | 14 | 32 | 5.5 | 6.5 | 300 | 500 | L | VL | M |
+| 黑椒 | 6 | 23 | 33 | 5.5 | 6.5 | 1200 | 2500 | H | VL | M |
+
+
+
+| 绿豆 | 2 | 23 | 35 | 5 | 7 | 500 | 700 | L | H | VL |
+| 冬瓜 | 2 | 24 | 27 | 6.5 | 7.5 | 400 | 650 | VL | VL | VL |
+| 茄子 | 3 | 15 | 32 | 5.5 | 6.5 | 600 | 1000 | VL | L | M |
+| 卷菜 | 4 | 12 | 30 | 5.5 | 6.5 | 300 | 600 | M | VL | H |
+| 小豆蔻 | 8 | 18 | 35 | 4.5 | 7 | 1200 | 4000 | H | M | M |
+| 胡萝卜 | 4 | 7 | 23 | 5.5 | 7 | 750 | 1000 | M | H | M |
+| 蓖麻籽 | 6 | 20 | 30 | 5 | 8.5 | 500 | 800 | VL | H | VL |
+| 花椰菜 | 4 | 12 | 30 | 6 | 7 | 100 | 300 | M | M | M |
+| 辣椒 | 3 | 18 | 40 | 5.5 | 7 | 625 | 1500 | VL | VL | L |
+| 香菜 | 3 | 15 | 30 | 6 | 10 | 750 | 1000 | L | L | M |
+| 棉花 | 4 | 15 | 35 | 6 | 8 | 500 | 1100 | M | VL | VL |
+| 豇豆 | 5 | 22 | 35 | 5 | 7 | 700 | 1100 | VL | VL | VL |
+| 龙昂爪 | 4 | 20 | 30 | 6 | 7 | 750 | 2000 | M | L | H |
+| 大蒜 | 4 | 10 | 30 | 6 | 7 | 500 | 800 | VL | M | H |
+| 生姜 | 8 | 15 | 35 | 5 | 7 | 1200 | 1800 | VL | M | VL |
+| 鹰豆 | 4 | 20 | 30 | 5 | 7 | 600 | 900 | VL | VL | H |
+| 葡萄 | 4 | 15 | 35 | 6.5 | 8.5 | 650 | 850 | VL | H | L |
+| 花生 | 3 | 20 | 35 | 5 | 7 | 500 | 750 | VL | VL | VL |
+
+### 24.7.49 解释
+
+香蕉在`35°C`下生长最好，偏好酸性到碱性的土壤（`6.5–8.5` pH），并且需要充足的水。表 7.2 展示了珍珠小米相对于三个关键变量的情况：(1) 降水量——以`mm`为单位，(2) 生长季节的温度（°C），(3) 土壤酸碱度。这可能是产量产量（单位可能是每公顷）。
+
+## 表 7.2 降水量、温度与 pH
+
+| 降水量 | 温度 | pH | 产量 |
+| :--- | :--- | :--- | :--- |
+| 1000.4992 | 35 | 5.5 | 0.03994 |
+| 1001.68519 | 34 | 5.5 | 0.13481 |
+| 1001.95313 | 34 | 5.5 | 0.15625 |
+| 1002.18254 | 33.6 | 5.5 | 0.1746 |
+| 1002.37279 | 33.1 | 5.5 | 0.18982 |
+| 1002.44845 | 32.6 | 5.5 | 0.19588 |
+| 1002.54647 | 32.1 | 5.5 | 0.20372 |
+| 1002.67319 | 31.6 | 5.5 | 0.21386 |
+| 1002.85204 | 31.1 | 5.5 | 0.22816 |
+| 1002.93563 | 30.6 | 5.5 | 0.23485 |
+| 1003.125 | 30.1 | 5.5 | 0.25 |
+| 1003.19501 | 29.6 | 5.5 | 0.2556 |
+| 1003.325 | 29.1 | 5.5 | 0.266 |
+| 1003.38492 | 28.6 | 5.5 | 0.27079 |
+| 1003.42182 | 28.1 | 5.5 | 0.27375 |
+| 1003.43421 | 27.6 | 5.5 | 0.27474 |
+| 1003.47744 | 27.1 | 5.5 | 0.2782 |
+| 1003.67647 | 26.6 | 5.5 | 0.29412 |
+| 1003.76203 | 26.1 | 5.5 | 0.30096 |
+| 1003.77948 | 25.6 | 5.5 | 0.30236 |
+| 1003.77948 | 25.1 | 5.5 | 0.30236 |
+| 1003.86685 | 24.6 | 5.5 | 0.30935 |
+
+## 7.5 结果与讨论
+
+图 7.8 所示的结果针对用户选择的特定区域，指示了卡纳塔克邦班加罗尔地区可以种植的作物。准确率显示在最右列，大麦作物的预测准确率最高，达到 0.946。图 7.9 显示了一个维（4D）图，描述了作物在不同参数值（如土壤水分、温度和 pH）下的产量。图 7.10、图 7.11 和图 7.12 展示了预测产量与水分、预测产量与温度以及预测产量与 pH 之间的图表。
+
+![图 7.8 不同作物产量的准确率。](img/9781041062943_C007_008.jpg)
+
+## 7.6 结论
+
+所提的研究重点是将农业领域中不同问题描述的各种实现整合到一个单一的统一系统中。这可以提高整个系统的效率，并且与各个系统相比，有助于降低构建成本。当前系统使用连接到树莓派的计算机来运行 IDE 并进行预测。然而，未来的发展方向可能包括直接在树莓派上运行 IDE，并通过 API 而不是计算机来显示预测结果。在未来，上述拟议的系统可以通过使用无线传感器进行改进，以提高模型的效率。
+
+1. K.A. Patil and N.R. Kale, 一种基于 IoT 的智能农业模型, 2016 年全球信号处理、信息计算与通信全球趋势国际会议 (2016, 12 月 22–24 日). doi: [10.1109/ICGTSPICC.2016.7955360](http://dx.doi.org/10.1109/ICGTSPICC.2016.7955360)
+2. Sally Jo Cunningham and Geoffrey Holmes, 使用数据挖掘开发农业创新应用, 东南亚区域计算机会议 (1999) 25–29。
+3. Li Minbo, Zhu Zhu, and Chen Guangyu, 农业物联网服务系统, Automatika: 54, 4 (2013) 415–426.
+4. I. Mohanraj, Kirthika Ashokumar, and J. Naren, 农业领域使用 IOT 的现场监测与自动化, 第 6 次计算与通信进展国际会议 (ICACC) IEEE (2016)。
+5. S.A. Sivakumar (2018). 基于物联网的智能农业. 国际计算机与电子工程进展杂志: 3, 3 (2018), 8–17. ISSN: 2456-3935.
+6. Ciprian-Radu Rad, Olimpiu Hancu, Ioana-Alexandra Takacs, and Gheorghe Olteanu, 土豆作物智能监测: 精准农业领域的信息-物理系统架构模型, 农业与农业科学论文集: 6 (2015) 73–79。
+7. K. Chandhini, 使用 IoT 作为包容性技术的农业生产系统文献研究, IJITR: 4, 1 (2016, 12 月–1 月).
+8. G. V. Satyanarayana and S. D. Mazaruddin, 使用无线传感器网络的农田智能监测与控制系统的设计与实现. 通信与控制系统进展会议论文集 (CAC2S 2013) (pp. 134–138). ISSN 1951-6851.
+9. Anup Managave, Ojas Savale, Deepika Ambekar, and Sushmita Sathe, 使用物联网和无线传感器网络的精准农业, IJARCET: 5, 4 (2016, 4 月).
+10. D. Rajesh, 空间数据挖掘在农业中的应用, 国际计算机应用杂志: 15, 2 (2011, 2 月).
+11. Sweksha Goyal, Unnathi Mundra, and Sahana Shetty, 使用 IOT 的智能农业. 国际计算机科学与移动计算杂志 (IJCSMC): 8, 5 (2019, 5 月) 143–148。
+12. Carlos González-Amarillo and Juan Carlos Corrales-Muñoz, 基于 IoT 的温室作物追溯系统, IEEE Access: 1, (2018), 132–138。
+13. B. Manjula Josephine and K. Ramya, 使用机器学习进行作物产量预测, 国际科学技术杂志: 9 (2020) 2。
+14. Meeradevi and Monica R. Mundada, 使用机器学习的作物产量预测自动控制系统, 国际应用工程研究杂志: 14 (2020) 2。
+15. M. Khan, M. Su’ud, M. Alam, F. Shaik, and F. Subhan, 通过`PRMS-Net`深度学习方法通过热图像分析增强乳腺癌检测, 医学数字成像杂志: (2025). https://doi.org/10.1007/s10278-01465
+16. Kanaga Priya and N. Yuvaraj, 一基于`MLP`的精准作物建议 IoT 梯度下降方法, 物理学会议丛报: 1362 (2019) 012038。
+17. Monica Herrero-Huerta, Pablo Rodriguez-Gonzalvez, and Katy M. Rainey, 基于`UAS`的大豆多传感器数据融合的机器学习大豆产量预测, 植物方法: 16 (1) (2020) 1–16。
+18. Chhaya Narvekar, Farman Haider, Akhila Jadhav, and Darshan Bhanushali, 使用`IOT`的 AI 作物监测, 应用科学与工程研究国际杂志 (IJRASET): 10 (2022) 5。
+19. Chiara Bersani and Carmelina Ruggiero, 工业 4.0 中智能温室监测与控制的物联网方法, Energies: 15 (2022) 3834。
+20. V. Mamatha and J.C. Kavitha, 使用水培栽培技术的温室环境下基于机器学习的作物生长管理, Measurement: Sensors: 25 (2023) 100665。
+
+# 使用物联网进行智能血库管理以增强医疗交付
+
+Baya Reddy Lomada, B. Sreenivasulu, Anwar Bhasha Pattan, Mudassir Khan, and Shaik Karimullah
+
+DOI: [10.1201/9781003634768-8](http://doi.org/10.1201/9781003634768-8)
+
+## 8.1 引言
+
+管理捐血活动期间收集的血袋需要一个组织良好且高效的系统，如图 8.1 所示。血液对于维持生命至关重要，其各种成分——如红细胞、血浆和血小板——在体内各起着特定且关键的作用。鉴于其重要性，适当的储存和处理至关重要 [1]。
+
+![图 8.1 现有系统的框图](img/9781041062943_C008_001.jpg)
+
+**图 8.1 现有系统的框图。**
+
+在印度，对血液的需求是不断的，估计每 2 秒就需要一份。这种需求是由一系列医疗需求驱动的，包括事故和烧伤患者的急救、心脏手术和器官移植等手术程序，以及对早产婴儿的支持。面临癌症、白血病、地中海贫血和镰状细胞蛋白等严重疾病的患者也严重依赖输血 [2]。
+
+尽管有超过 5.12 亿符合捐血条件的人，印度面临着巨大的缺口——比所需的血液供应少约 10%，相当于缺口超过 120 万单位。为了应对这一挑战，迫切需要增加自愿捐血并提高血库运行的效率。
+
+在印度，几乎每分钟就会发生交通事故，通常会导致需要立即医疗处理的严重创伤。该国每年进行约 600 万次创伤引起的手术。此外，每年进行约 230 万次大手术和 331 万次癌症相关治疗，这些都导致了对血液的高需求 [3]。
+
+然而，这种增长的需求受到一个重大挑战的阻碍：由于管理不当和浪费，印度每天损失超过 1000 万升血液。这种短缺严重影响了关键治疗血液的可用性。为了克服这一点，迫切需要将先进技术集成到血液管理系统中。利用数字化解决方案、自动化和实时监测可以帮助优化采集、储存和分配，最终确保血液能够高效且无延迟地送到需要的人手中 [4]。
+
+有效的血库管理系统至关重要，特别是在紧急情况下，可以简化并自动化定位和分配血液单位的过程。此类系统能够准确跟踪血液库存，最大限度地减少人为错误并确保实时数据的可用性 [5]。
+
+## 8.2 现有系统
+
+该系统在血库内集成了一个嵌入式平台，用于持续监测血量水平和冰箱温度。它设计用于跨两个关键领域：服务和管理。服务领域利用一个配备了`Wi-Fi`模块、红外 (`IR`) 传感器和温度传感器的`Arduino Mega`微控制器来收集存储条件和血型库存的实时数据。
+
+这些数据被传输到管理领域，并在那里进行处理和分析。托管在中央服务器上的 Web 门户为实时监控和分析提供了一个接口。根据收集的数据，系统会生成自动警报和通知，以帮助高效的资源管理，有助于确保最佳的存储条件和血剂的及时供应 [6, 7]。
+
+现有系统有望简化血库管理，优化血液利用，并增强输血的安全性和可靠性 [8]。血库数据通过托管在服务器上的网站进行分析和处理。这是根据所显示的通知进行的。在物联网 (`IoT`) 应用层上，服务器和血库使用`HTTP`协议进行安全通信。使用地图来定位指定的血库位置，以便更有效地运行 [9]。
+
+该系统的缺点是血库中缺乏自动化管理系统导致了若干问题，包括难以准确跟踪每种血型的库存 [10]。当库存水平达到零或血量低于标准水平时，工作人员不会获得通知。这些缺陷可能对需要输血的患者产生严重后果。因此，实施自动化血库管理系统对于确保为需要的人提供安全高效的供应至关重要 [11]。
+
+## 8.3 提议系统
+
+提议系统可以使用`Arduino Uno`板板实现。来自四个`IR`传感器、`DHT11`传感器（同时测量湿度和温度）以及蜂鸣器 (`Buzzer`) 的一根线连接到此`Arduino Uno`板板，另一根来自四个`IR`传感器和`DHT11`传感器的线连接到液晶显示器 (`LCD`)。`LCD`显示温度、湿度和血储备可用性。`Uno`板板接收`LCD`连接，如图 8.2 所示。
+
+![图 8.2 提议系统的框图。](img/9781041062943_C008_002.jpg)
+
+**图 8.2** 提议系统的框图。
+
+在`LCD`上获得的结果发送到`Uno`板板并由其存储。`Uno`板板作为控制器。来自`Uno`板板的结果发送到`Wi-Fi`和全球移动通信 (`GSM`) 模块。`GSM`模块在血量不足时提醒捐献者。`Wi-Fi`模块连接到物联网网站，在此例中为`ThingSpeak`，它会自动更新结果并可以从世界任何地方进行访问。
+
+提议系统的组件如下：
+
+1. **电源：** 稳压电源对于数字电路的最佳运行至关重要。
+2. **Arduino 控制器：** 基于`ATmega328`的`Arduino Uno`板板。它连接`IR`传感器、`DHT11`传感器、蜂鸣器和`LCD`。它使用`Wi-Fi`和`GSM`模块。它具有`PWM`、`ISP`、`FTDI`和`USB`接口。
+3. **LCD：** 显示温度、湿度和血储备可用性。使用`LCD`像素进行显示。它是电路的一部分。
+4. **蜂鸣器：** 在血量不足时提醒捐献者。
+5. **GSM 模块：** 在血量不足时提醒捐献者。
+6. **NODMCU WIFI 模块：** 使用`ESP8266`芯片和`LUA`语言。它连接到`ThingSpeak`。
+7. **IR 传感器：** 用于检测存储。使用红外辐射。
+8. **湿度传感器：** 测量湿度并显示其状态。
+
+**该系统的优点：**
+
+- 通过自动跟踪提高了血液可用性。
+- 在血型不可用时发出通知。
+
+## 8.4 实验结果与讨论
+
+- **步骤 1：** 首先在`Arduino IDE`软件中输入代码并检查错误。如果发生任何错误，显示将如所示。
+- **步骤 2：** 纠正错误后，编译代码。
+- **步骤 3：** 代码编译后，我们必须将程序 (sketch) 上传到套件中的`Arduino Uno`板板。
+- **步骤 4：** 在为套件供电之前，插入具有快速 4G 网络的 SIM 卡。
+- **步骤 5：** 开启电源。
+- **步骤 6：** 如果任何血型不可用，`IR`传感器将检测并将信息发送到`Arduino`，`Arduino`将信息发送到`LCD`。通过发送消息进行初始化。
+- **步骤 7：** 然后初始化`Wi-Fi`模块。
+- **步骤 8：** 验证湿度并显示是否正常。
+- **步骤 9：** 显示血型的可用性，如果血型可用则用 1 表示，否则用 0 表示。
+- **步骤 10:** 在血库缺血后，它会在 LCD 上显示警报信息。
+- **步骤 11:** 随后，它会向捐血者发送短信并更新网站上的信息。
+- **步骤 12:** 如果所有血型均缺货，它将如下所示更新网站上的信息。
+
+### 138. 硬件更新
+
+![](img/9781041062943_C008_unfig_008.jpg)
+
+### 软件更新
+
+![](img/9781041062943_C008_unfig_009.jpg)
+
+#### 139. 注意：
+
+
+
+1. 在此套件中，使用了`IR`传感器，它具有两个指示灯，用于发出血库系统缺血信号。当检测到此条件时，会向捐血者发送`SMS`，并同时将信息上传到网站，该过程大约需要一分钟。
+
+#### SMS 消息
+
+![](img/9781041062943_C008_unfig_010.jpg)
+
+- **步骤 13：** 仅 A 血型可用，且网站显示硬件和软件的更新。
+
+### 硬件更新
+
+![](img/9781041062943_C008_unfig_011.jpg)
+
+### 软件更新
+
+![](img/9781041062943_C008_unfig_012.jpg)
+
+#### SMS 消息
+
+![](img/9781041062943_C008_unfig_013.jpg)
+
+- **步骤 14：** 仅 B 血型可用，且网站显示硬件和软件的更新。
+
+### 硬件更新
+
+![](img/9781041062943_C008_unfig_014.jpg)
+
+### 软件更新
+
+![](img/9781041062943_C008_unfig_015.jpg)
+
+#### SMS 消息
+
+![](img/9781041062943_C008_unfig_016.jpg)
+
+- **步骤 15：** 仅 AB 血型可用，且网站显示硬件和软件的更新。
+
+### 硬件更新
+
+![](img/9781041062943_C008_unfig_017.jpg)
+
+### 软件更新
+
+![](img/9781041062943_C008_unfig_018.jpg)
+
+#### SMS 消息
+
+![](img/9781041062943_C008_unfig_019.jpg)
+
+- **步骤 16：** 仅 O 血型可用，且网站显示硬件和软件的更新。
+
+### 硬件更新
+
+![](img/9781041062943_C008_unfig_020.jpg)
+
+### 软件更新
+
+![](img/9781041062943_C008_unfig_021.jpg)
+
+#### SMS 消息
+
+![](img/9781041062943_C008_unfig_023.jpg)
+
+- **步骤 17：** A 型和 AB 血型可用，且网站显示硬件和软件的更新。
+
+### 硬件更新
+
+![](img/9781041062943_C008_unfig_024.jpg)
+
+### 软件更新
+
+![](img/9781041062943_C008_unfig_025.jpg)
+
+#### SMS 消息
+
+![](img/9781041062943_C008_unfig_026.jpg)
+
+- **步骤 18：** B、AB 和 O 血型可用，且网站显示硬件和软件的更新。
+
+### 硬件更新
+
+![](img/9781041062943_C008_unfig_027.jpg)
+
+### 软件更新
+
+![](img/9781041062943_C008_unfig_028.jpg)
+
+#### SMS 消息
+
+![](img/9781041062943_C008_unfig_029.jpg)
+
+- **步骤 19：** 所有血型可用，且网站显示硬件和软件的更新。
+
+### 硬件更新
+
+![](img/9781041062943_C008_unfig_030.jpg)
+
+### 软件更新
+
+![](img/9781041062943_C008_unfig_031.jpg)
+
+#### SMS 消息
+
+物联网（IoT）与机器学习（ML）的协同作用为社会的可持续发展提供了一个前所未有的范式。物联网为设备、传感器和系统提供了连接，用于实时数据采集和通信，而`ML`则对这些数据进行处理，提供洞察、做出决策并优化流程。这两项技术共同实现了资源的最优利用、最小化浪费以及用于可持续性的智能解决方案 (Jaber, 2023)。无论是在能源管理、医疗保健还是城市规划中，IoT 和 ML 都在推动迈向智能未来的创新。能效是 IoT 和 ML 贡献可持续发展的主要领域之一。在智能电网中，`IoT`传感器实时监控能耗，而`ML`算法预测需求模式并优化能源分配 (Rahman, 2023)。这减少了能量浪费，使可再生能源更好地整合到电网中，从而促进了可持续且韧性的电力基础设施建设 (Revathi et al., 2024)。同样，基于`IoT`的预测性维护以及`ML`在分析收集数据中的应用有助于工业设施减少设备故障，从而在最大化资源利用的同时最小化能量损失。
+
+在环境领域，基于`IoT`的传感器正在追踪空气和水质、森林砍伐以及气候变化，并随着时间的推移获得宝贵的数据，作为保护工作的杠杆 (Hiran et al., 2021)。随着这些数据通过`ML`模型进行分析，污染趋势将变得可破译，同时环境危害将得到预测，填埋场流程也将得到优化。另一个重要领域是智能农业，在该领域中，基于`IoT`的监控系统被用于确定土壤健康、自动化灌溉并提高作物产量，有助于保障粮食安全并缓解环境威胁 (Shaik et al., 2024)。
+
+图 9.1 代表了`IoT`系统与`ML`的架构。它还强调了`IoT`设备、网关和云端之间的交互。`IoT`架构的底层是各种`IoT`设备——智能家用电器、连接车辆、可穿戴设备和工业传感器——它们通过无线网络进行通信。此类设备将数据传输到`IoT`网关，网关将作为中介，在数据传输到云端之前对其进行处理和过滤。`IoT`云将作为数据存储、分析和决策的枢纽。这种架构可以为所有智能设备之间提供非常清晰的通信，并增强智能家居、交通、医疗保健和能源管理等应用的自动化、远程监控和实时数据处理。事实上，它们在智能环境中的作用超越了单一应用，构建了智能且自给自足的生态系统。这种技术允许基础设施、交通、能源和医疗之间实现瞬时适应、自动化无缝集成，使智能和可持续发展成为一个切实的目标。如果能解决数据隐私、网络安全以及决策中基于人工智能（`AI`）的伦理带来的挑战，就能实现其全部潜力。
+
+![图 9.1 用于智能连接的 IoT 和 ML 架构。](img/9781041062943_C009_001.jpg)
+
+**图 9.1** 用于智能连接的 IoT 和 ML 架构。
+
+### 9.1.2 创新对更智能未来的重要性
+
+创新能力是构建更智能、更有效、更可持续系统的关键。随着人口的扩张和城市化以前所未有的速度增长，对智能解决方案的需求不断发展，这考虑了资源配置效率、生产力最大化和环境退化最小化等最重要的方面 (Von Stamm & Trifilova, 2009)。最新技术，如`IoT`、`ML`、`AI`、区块链甚至第五代（`5G`）技术，注将改变工业运行方式，增强公共服务，从而为建设智慧城市和可持续基础设施做出贡献。更智能未来创新的一个非常重要的方面是工业的自动化和数字化。智能工厂依赖`IoT`仪表传感器和`AI`驱动的机器人来优化生产线、减少生产中的缺陷产品并增加质量检查 (Schaffers et al., 2012)。同样，公共交通系统通过连接自动化车辆以及`AI`交通优化得到了改进，从而减少了交通拥堵以及燃料和碳排放。通过这种方式，它有助于提高更清洁环境的效率。医疗行业中`IoT`和`ML`的进步正在改变患者服务的交付方式，实现了实时健康监测、预测诊断和个性化治疗方案 (Han & Hawken, 2018)。可穿戴设备被用于捕捉实时生理数据，这些数据使用算法`AI`处理以进行异常检测和严重警告，从而缩短了住院时间。创新的推广将找到其位置，并有效地影响其所服务的个人的未来可及性、住院率和健康状况。
+
+### 9.1.3 通过技术实现可持续性的挑战
+
+尽管`IoT`和`ML`具有重塑世界的潜力，但要使技术可持续化仍然非常有挑战性。每个人脑海中尤其是工程领域首先出现的问题是数据隐私和安全 (Bambam & Gajrani, 2023)。`IoT`设备之间的连接点在于它们有大量的个人和运营数据在不同通道中流动并持续存储。因此，它们针对网络威胁的安全性至关重要，因为攻击会暴露敏感信息和关键基础设施的脆弱性 (Jayachandran et al., 2022)。因此，减轻这些风险的解决方案包括建立加密方法、开发基于`AI`的安全解决方案以及制定稳健的数据治理政策。
+
+额外的挑战是与`IoT`部署和`AI`处理相关的大能消耗。尽管它们通过优化消耗节约能量，但这些先进技术在计算方面也需要大量电力，特别是在模型训练期间。除了石油公司汽车之外，具体的例子是消耗所有其他`AI`系统电力的数据中心。开发高效算法、使用边缘计算进行处理而非依赖集中云服务以及在`AI`基础设施中使用可再生能源，将有助于确保此类进步不会加剧环境困境 (Izatt et al., 2014)。发展中国家往往缺乏大规模部署`IoT`和`AI`解决方案的或技术基础设施。这只能通过全球合作、智能基础设施投资和知识共享倡议来克服。否则，被排除在外的贫困地区只能看到可持续性创新的负担留给发达经济体 (Abdoh, 2024)。这些技术的开发和部署最终还必须解决负责任发展的伦理和监管问题。
+
+物联网（IoT）可以定义为一个由交织的设备、软件和传感器构成的巨大网络，用于实时数据采集和交换 (Abdul-Qawy et al., 2015)。这些设备包括来自智能家居和工业的器具，它们通过远程监控和控制实现自动化、增强效率并提供决策。物联网系统体现了无线通信、云计算和边缘处理，管理着数据的无缝传输 (Gupta & Quamara, 2020)。随着对物联网需求的增长，医疗保健和农业部门以及拥有智能设施的城市，正从资源的优化管理、运营效率的提高以及通过预测性分析实现的预见性中获益并盈利。
+
+实时监控和预测性维护是使用物联网可以带来的两大主要优势。设备中嵌入传感器的存在，使得在故障发生之前向维护部门报告机器的潜在缺陷成为可能 (Swathi Sree et al., 2025)。智能城市中的此类设施每天收集信息，如能源使用数据、交通流量和其他废物管理系统信息，以优化资源利用 (Dudhe et al., 2017)。使用物联网的精准农业为农民提供信息，帮助他们了解土壤水分含量、天气状况和作物健康。这是潜在的农业维持者和产量助推器 (Villamil et al., 2020)。物联网在面临优势的同时，也面临着一系列挑战：这些挑战包括数据安全、互操作性和能耗 (Rangarajan et al., 2025)。随着物联网设备不断交换敏感信息，保护这些信息以及抵御威胁变得至关重要。另一个障碍是，不同通信协议的存在导致其无法在不同的物联网生态系统中实现无缝集成。这可能需要强有网络安全机制、监管框架的完善以及物联网低能架构的开发 (Albreem et al., 2017)。随着技术的进步，克服这些挑战对于物联网在驱动智能和可持续发展中将扮演的角色至关重要。
+
+### 9.2.2 ML：核心概念与技术
+
+机器学习（ML）是人工智能的一个子集，允许计算机从数据中学习，并在无需显式编程的情况下逐渐提高其性能。它利用统计技术和算法来发现模式、预测行为并优化决策 (Zaki et al., 2020)。总的来说，机器学习技术可以分为以下三大主要类：监督学习（模型从标记数据中学习）、无监督学习（在未标记数据中寻找隐藏结构）以及强化学习（智能体学习如何在环境中操作以实现奖励最大化）。这些技术正被积极地应用于多个领域，例如医疗保健、金融和自动自动系统。
+
+机器学习行业提升了各部门的自动化程度和智能化水平。基于机器学习的诊断引擎利用医学影像结合患者记录来早期检测疾病并建议个性化的治疗方案 (Vieira et al., 2020)。金融服务中的欺诈检测模型通过分析用户行为模式来识别可疑交易。然而，围绕机器学习的问题包括训练数据中的偏偏、可解释性和计算负担 (Jung, 2022)。由于训练数据可能偏向某些群体或反对其他群体，可能会产生不公平的结果，特别是在包括招聘、贷款和刑事司法在关键应用中。此外，许多机器学习模型被认为像“黑箱”一样，这使得理解其做出的决策变得困难。计算密集型模型首先会引发对能耗的担忧，因为许多复杂模型需要强大的处理能力来完成训练。因此，应对这些挑战的解决方案应该包括应用伦理 AI 实践、可解释的模型架构以及能效的计算技术，以提供负责任且可持续的机器学习参与。
+
+机器学习概念和技术如表 9.1 所示，根据学习类型、使用的算法和应用领域进行分类。
+
+#### 表 9.1 机器学习核心概念与技术
+
+| 概念 | 学习类型 | 算法 | 应用领域 |
+| :--- | :--- | :--- | :--- |
+| 监督学习 | 监督 | 决策树、SVM、线性回归 | 分类、预测 |
+| 无监督学习 | 无监督 | K-means 聚类、PCA | 模式识别、分割 |
+| 强化学习 | 强化 | Q-learning、深度 Q 网络 | 机器人、游戏 AI |
+| 深度学习 | 监督/无监督 | 神经网络、CNN、RNN | 图像识别、NLP |
+| 半监督学习 | 混合 | 自训练、协同训练 | 数据标注、异常检测 |
+| 迁移学习 | 迁移 | 预训练网络 | 医学影像、语音识别 |
+
+### 9.2.3 物联网与机器学习的协同效应
+
+得益于物联网的架构结合机器学习的革命性特征，自动化在工业领域已成为一种更智能、更聪明的决策机器。互联设备通过传感元件产生的实时数据，通过机器学习技术对这些数据进行智能处理、分析和提取有意义的洞察，极大提高了生产力、有效性、效率，并降低了资源消耗和成本 (Shinde et al., 2023)。智能城市利用物联网和机器学习的结合进行交通管理、城市规划和环境监测。例如，支持物联网的传感器可以收集空气质量信息，并通过机器学习模型分析污染水平，在采取某些行动最有效时提醒居民 (Mendhurwar & Mishra, 2018)。明智交通系统同样利用物联网跟踪车辆移动，同时使用机器学习算法预测拥堵流量模式并消除它们。这些已成为所有效率提升的一部分，并为构建排放更少的可持续、高能的模型做出了贡献。
+
+## 9.3 智能城市与基础设施
+
+### 9.3.1 物联网驱动的智能城市：应用与收益
+
+通过物联网实现的智能城市通过连接的传感器应用、实时数据处理和智能自动化增强了城市生活方式。通过将物联网技术集成到公共基础设施中，政府可以提高能源利用、废物管理、交通和公共安全的效率 (Bellini et al., 2022)。例如，智能电网监控用电量并进行有效分配以优化整体消耗。与此同时，基于物联网的废物管理系统安装了传感器来识别垃圾桶的填充程度，以优化收集路线，从而提高效率并最大限度地减少对环境的影响。
+
+图 9.2 展示了智慧城市生态系统的重要方面，该系统连接了所有其他使用高科技来优化生态系统性能和可持续性的主要部门。八大主要领域包括：智能农业、智能基础设施、智慧城市服务、智能家居、智慧健康、智能交通、智能工业和智能能源。从这些领域中，新技术、趋势和流程被带入城市生活。智能农业涉及精准农业，其关键组件包括智能交通灯、停车传感器和实时公共交通追踪系统。所有这些措施都能有效帮助保持交通顺畅，同时减少交通拥堵 (Belli et al., 2020)。实时交通数据通过移动应用程序提供给市民，让他们拥有选择最优路线的权利，从而最大限度地减少延迟 (Gupta & Singh, 2023)。此外，智慧城市项目安装了联网监控系统，提升了安全性，利用支持 AI 的分析识别异常情况，并有助于缩短应急响应时间 (Karimullah et al., 2024)。
+
+![Figure 9.2 物联网驱动的智慧城市生态系统。](img/9781041062943_C009_002.jpg)
+
+图 9.2 物联网驱动的智慧城市生态系统。
+
+### 9.3.2 用于交通管理与优化的机器学习
+
+机器学习通过分析大型数据集和优化实时决策，在改进交通管理方面不可或缺。来自传感器、摄像头和全球定位系统（GPS）设备的交通流量数据通过机器学习算法进行处理，以预测拥堵模式并相应调整信号灯计时。将历史和实时交通数据的机器学习模型相结合，可以创建一个更智能的城市，缩短旅行时间。由机器学习驱动的自适应交通控制系统尽可能避免走走停停交通，以节省燃料消耗并减少排放 (Patil, 2022)。机器学习在交通优化中的成功部署将面临若干挑战，包括数据不可靠、集成复杂性或伦理等问题。交通数据可以源自多个站点，准确性不足会导致不靠的预测 (Almukhalfi et al., 2024)。此外，将机器学习模型集成到现有基础设施中需要大量的投资和专业知识。同样，涉及交通系统的 AI 决策需要理解伦理脉络，以做出无歧视的决策，为任何交通用户带来优化利益。如果要在交通管理中实现机器学习的成功部署，解决这些困难是绝对必要的。
+
+### 9.3.3 节能型城市规划与资源管理
+
+节能型城市规划对于可持续发展至关重要；物联网和机器学习在优化资源管理方面有许多交汇点。智能电网利用物联网传感器捕获电力需求并动态调整供应，从而消灭不必要的能源浪费。这些电网还促进了消费者与公用供应商之间的实时通信，通过需求响应计划促进能源高效利用。兼容智能电表的自动化建筑服务主要根据占用情况和时间处理加热、通风和照明，节省了大量的能源成本。基于物联网的优化在水务和废物管理系统中也有应用。在配备物联网的智能水表内部，人类可以得知何时以及如何使用水，以及哪里存在漏水；客户可以实时监控并有效实施节约，并考虑到用水模式。类似地，AI 智能改进了对废物收集中峰值处理检测的分析，从而可以合理地优化收集调度。
+
+## 9.4 可持续能源与环境监测
+
+### 9.4.1 智能电网与可再生能源整合
+
+现代能源分配中的智能电网在整合可再生能源和提高能源效率方面确实发挥着非常重要的作用。智能电网采用支持物联网的传感器和 AI 分析来监控能源消耗、预测需求波动并调节电力供应。双向能量流得到了便利：与传统电网不同，智能电网允许消费者将太阳能或风能回传至系统。分布式能源分配机制优化了能源可用性，减少了对化石燃料供应的压力，从而加强了聚合。
+
+
+
+机器学习通过预测需求进一步优化智能电网运行，从而优化发电并利用历史和实时数据实现最小化浪费 159.）。此外，智能电网具有自动需求响应方案，电价根据使用数据发生变化，引导消费者在消耗上变得灵活，将其移至非峰段。这有助于节约能源，降低碳足迹并促进可持续性（Kataray et al., 2023）。然而，尽管有应用，可再生能源发电与智能电网的整合带来了能源存储限制和电网稳定性问题。太阳能和风能具有间歇性，因此需要高效的存储解决方案。此外，在分布式发电背景下确保电网稳定性需要更强的控制。加速智能电网用于能源管理需要政府和工业对电池存储技术、监管框架和基于 AI 的优化策略进行投资。
+
+虚拟电厂的概念如图 9.3 所示。这指的是将来自传统和可再生资源的能源以及移动电厂整合到虚拟电厂（VPP）中分配效率。虚拟电厂控制室可以定义为用于发电和分配的软件和硬件自动化中央管理。进入该虚拟电厂的能源来自传统电厂（包括热电、核电、水电）以及可再生能源（如风能、生物气和生物燃料）。此外，电动汽车（EV）也作为移动电力存储单元发挥作用，并在需要时供应能量。虚拟电厂确保了最优能源处理系统，在住宅、建筑和农场等不同部门之间引导能量流，同时提高能源的可持续性和效率。
+
+## 9.4.2 基于物联网的气候与污染监测系统
+
+基于物联网（IoT）的气候和污染监测系统为环境分析提供了即时数据，以便采取主动措施应对污染和气候变化。这些物联网传感器通过部署在城市和工业区，收集有关空气质量、温度、湿度和污染物水平的数据。收集到的数据存储在云平台上，通过 AI 算法对这些数据进行趋势分析、异常检测，并为决策者生成见解。这种数据驱动的方法允许执法部门制定旨在减少环境危害的政策。它不仅能监测空气质量，还能研究由物联网管理的水体内部维度。数据准确性、网络可靠性和网络安全是限制物联网广泛应用的一些挑战。
+
+表 9.2 显示了基于物联网的气候和污染监测系统的组件组成部分及其在环境监测中的应用。
+
+**表 9.2** 基于物联网的气候和污染监测系统
+
+| 组件 | 描述 | 应用 | 使用的传感器 |
+| :--- | :--- | :--- | :--- |
+| IoT 传感器 | 用于收集空气质量、温度、湿度等数据的设备 | 监测气候和污染水平 | 空气质量传感器、CO[2] 传感器、湿度传感器 |
+| 无线网络 | 用于传输传感器数据的通信基础设施 | 数据远程传输到云端 | 4G/5G、Wi-Fi、LoRaWAN |
+| 云数据处理 | 用于分析和存储数据的云平台 | 实时分析和可视化 | AWS, Google Cloud, Microsoft Azure |
+| 数据分析与 AI | 用于预测污染趋势的 ML 算法 | 预测空气质量、气候变化 | 回归模型、决策树 |
+| 用户界面 (UI) | 用于监测污染水平的仪表板 | 向用户显示实时数据 | 网页/移动界面 |
+
+## 9.4.3 用于 AI 驱动的可持续资源利用优化
+
+可持续发展中的资源优化是 AI 在不同领域实施以减少浪费和实现效率最大化的基石。在农业领域，AI 通过其系统发挥实用价值，通过分析天气、土壤状况和作物健康状况来最大限度地灌溉和化肥使用，从而最大限度地减少因过度使用导致的水资源和化学品浪费（Alharithi & Alzahrani, 2024）。同样，工业中由 AI 驱动的预测性维护有助于避免机器故障，从而防止运营时间和能量消耗的损失。总的来说，这些发展趋向于资源的可持续利用。
+
+AI 还通过智能分类和回收自动化增强了废物管理。ML 算法可以识别并分类可回收材料，以实现最佳的废物分类。配备 AI 传感器的智能垃圾桶可以跟踪处置模式并规划高效的收集路线，从而减少燃料消耗和运营成本。这些创新支持了循环经济，通过在丢弃前进行重新使用和重新利用，使资源保持在使用状态。AI 可持续性被视为一种可行的扩展，但受到各种挑战，例如高实施成本和对数据的依赖。
+
+# 9.5 智能交通与移动
+
+## 9.5.1 联网与自动驾驶车辆中的物联网
+
+随着物联网元素引入交通领域，它改变了车辆的运行方式，使其成为智能连接的物品。车辆现在可以通过 V2X 通信与其他车辆、基础设施和中央控制系统进行“对话”。它们现在通过`GPS`等各种传感器以及内置嵌入系统实时共享数据，以增强性能、路况和交通模式，从而提高道路安全并对更广泛的网络进行导航。整个系统提高了车辆行驶的效率，缓解了拥堵，并推动了智能交通网络的建设。
+
+大多数自动驾驶车辆 (AV) 高度依赖基于物联网的传感器和 AI，在没有人工干预的情况下进行转向。这些设备包括激光雷达 (LiDAR)、雷达和摄像头，协同工作，提供汽车周围环境的三维视野，以便识别任何障碍物、行人和和其他车辆。物联网平台对这些数据的实时处理允许自动驾驶车辆做出即时决策，以确保交通安全顺畅。由于它减少了最关键的人为错误因素（这在大多数情况下是道路事故的原因），基于物联网的自动化将显著提高道路安全。然而，物联网在自动驾驶领域被广泛接受仍面临许多挑战，例如网络安全威胁以及数据隐私问题。一个例子是车辆连接，因为它们通常运行在无线通信上，使其非常容易黑客攻击，可能导致事故或未经授权的控制。此外，在系统故障的情况下，责任问题上必须存在法律和伦理影响。这为涉及监管框架和网络安全进步的物联网驱动型交通技术的高安全部署奠定了基础。
+
+## 9.5.2 用于交通预测和路线优化的 ML
+
+ML 是城市出行中实现更好的交通预测和旅行路线优化的新热点。分析历史和实时交通数据使 ML 算法能够预测不同的拥堵模式、识别替代路线并为用户提供最快路径（Cohen & Dalyot, 2020）。交通管理系统中的 AI 模型测量包括公共活动、施工活动和天气状况在内的多个参数，以动态改变交通灯的时间，从而尽可能减少延迟。此类智能系统在改善进入大城市交通流量的同时，也减少了燃料消耗。
+
+除了让城市变得更智能之外，公共交通路线也通过 ML 优化以实现更好的运营。AI 算法分析乘客需求并相应地优化安排公交和火车时刻表，以便在缩短等待时间的同时提高通勤体验。网约车服务利用 ML 高效匹配两个用户并完成空载行程，以减少城市地区的交通拥堵。
+
+表 9.3 展示了 ML 算法在交通预测和路线优化中的应用。
+
+**表 9.3** 用于交通预测和路线优化的 ML
+
+| 应用领域 | 算法/技术 | 目的 | 益处 |
+| :--- | :--- | :--- | :--- |
+| 流量预测 | 神经网络、时间序列预测 | 根据历史数据预测未来流量 | 提高流量预测准确性 |
+| 拥堵预测 | 决策树、SVM | 检测并预测交通拥堵 | 减少拥堵和延迟 |
+| 动态路线优化 | 遗传算法、强化学习 | 根据实时交通状况优化路线 | 减少旅行时间和燃料消耗 |
+| 事故预测 | 随机森林、XGBoost | 预测潜在事故热点 | 增强安全性，主动规划 |
+| 公共交通优化 | K-means 聚类、强化学习 | 公交和火车的路线与时刻表优化 | 提高服务可靠性和效率 |
+
+## 9.5.3 通过智能出行解决方案减少碳足迹
+
+交通部门对全球碳排放的贡献巨大，因此需要可持续的出行解决方案来应对气候变化。智能出行涉及`IoT`和`AI`的干预，以促进节能型交通模式，例如`EVs`、共享出行和智能公共交通系统（Liu et al., 2023）。由于电池技术和充电基础设施的突破，`EVs`的采用率呈上升趋势；同时，`AI`正在增强`EVs`的充电和电池管理，从而延长使用寿命并提高效率。`AI`平台结合实时交通状况分析通勤偏好，并推荐环保的旅行方案。同时，智慧城市倡议正在推广整合多多式交通系统的可步行社区，鼓励公民选择可持续出行模式而非私家车。
+
+# 9.6 智能医疗保健与健康
+
+## 9.6.1 远程患者监测和可穿戴设备中的 IoT
+
+正是`IoT`改变了生命体征和健康状态监测的面貌。事实上，它开启了实时监测时代。`RPM`系统利用这些传感器收集数据，并使用智能活动追踪设备，这些设备包括任何测量血糖水平、心率、血氧饱和度和血压的仪器。这些信息被传输给医疗提供者，他们可以持续跟踪患者状况，从而在需要时进行干预。这种技术随后在慢性病管理中发挥，消除了就医的需求，从而改善了患者效果，例如在糖尿病和高血压管理方面。
+
+智能手表、健身带和心电图（ECG）监测仪等可穿戴设备为用户提供了个性化的健康洞察，同时协助医生根据数据做出决策。这些设备可以检测到心律异常或血氧饱和度突然下降等异常情况，这些情况通常需要优先寻求医疗援助。此外，可穿戴设备中的`IoT`通过运动模式追踪促进老年护理，有助于跌倒检测和药物依从性，从而延长老年人的安全性和独立性。然而，数据安全、互操作性和法规合规性方面的挑战仍面临着`IoT`医疗应用。
+
+## 9.6.2 用于疾病预测和诊断的 ML
+
+`ML`通过比以往高得多的早期状况检测，正在改变疾病预测和诊断的准确性。它通过检查海量的医疗记录数据集来寻找指示疾病存在或疾病进展的模式。例如，深度学习算法通过解释 X 光、MRIs 和 CT 扫描等医学图像来检测早期癌症肿瘤。`AI`驱动的诊断工具辅助放射科医生和病理学家提高了准确性，减少了人为错误，并加速了治疗计划的制定。除了成像，`ML`现在还可以评估不同的遗传、生活方式和环境因素对患病概率的影响，增强医疗保健领域的预测分析。基于`AI`的风险评估器可以帮助医生在症状出现之前识别出未来心血管疾病、阿尔茨海默病和糖尿病的高风险个体。这样，就可以实现定制化药物，最终可能减少或延迟疾病的发作，同时改善患者结果并削减医疗费用。
+
+尽管如此，在医疗领域实施`ML`时，需要分布良好、高质量的数据集，以确保无偏且准确的预测。大多数`AI`模型的偏差主要源于训练数据中对某些人群缺乏包容性。因此在诊断和治疗建议上会出现差异。此外，`AI`决策周围始终存在监管审批和伦理问题，必须解决这些问题以确保透明度和问责制。`AI`伦理、模型验证以及医疗提供者与`AI`研究人员之间的持续进步，将推动医疗诊断中必要的信赖`ML`解决方案。
+
+## 9.6.3 AI 驱动的个性化医疗解决方案
+
+虚拟健康助手和`AI`机器人旨在为患者提供个性化支持，例如用药提醒、饮食建议和症状追踪。通过利用具有`AI`能力的应用程序，这些助手可以处理常规查询，为慢性病患者提供实时支持，从而极大地减轻了医疗专业人员的负担。用于心理健康的`AI`工具使用自然语言处理（`NLP`）技术监测情绪健康，从而提供定制的应对技巧和治疗建议。使用`AI`的医疗服务仍面临基于伦理考量和数据隐私的障碍。`AI`必须确保决策的透明度，特别是关于任何类型的偏差，以提供公平的医疗服务。此外，加密的健康信息以及遵循健康监管原则（如《健康保险流通性与责任法案》`HIPAA`和《通用数据保护条例》`GDPR`）将对维护对基于`AI`的医疗解决方案的信任大帮助。通过这种方式，不断演进的`AI`可以在保护个性化医疗系统伦理和安全实施的同时改善患者结果。
+
+如图 9.4 所示，患者诊断和治疗中需要一种基于`AI`的医疗过程。该过程分为五个部分：患者数据收集涉及病史和健康参数；使用`AI`算法处理数据意味着使用`ML`技术分析患者数据；`AI`推荐个性化的诊断和治疗方案；实时监测意味着使用可穿戴设备和`IoT`传感器持续监测状况；反馈循环和改进涉及从监测中学习教训并改进未来的治疗。所有这些都从精准、、以及患者实时服务的灵活性方面增强了医疗保健效率。
+
+![图 9.4 AI 驱动的个性化医疗过程。](img/9781041062943_C009_004.jpg)
+
+**图 9.4** AI 驱动的个性化医疗过程。#ch17.xhtml#f69b)
+
+# 9.7 工业自动化与智能制造
+
+## 9.7.1 工业中基于 IoT 的预测性维护
+
+通过使用`IoT`技术，预测性维护通过对设备和机械的实时监测，对工业运营产生了深远影响。传统的维护方法依赖于定期检查或反应性维修，这可能导致非计划停机或更高的成本。通过一系列传感器、`ML`、智能传感器和智能分析，工业能够持续监测机器相对于温度、振动水平和能耗（Compare et al., 2019）。通过分析此类数据，预测性维护方案可以在故障发生之前进行预测，从而进一步减少生产中断并延长设备的使用寿命。
+
+在这种情况下，主要的优势是增强了资源利用的优化并降低了运营成本。AI 算法筛选海量传感器数据，以检测代表磨损的异常情况和模式（Kalusivalingam et al., 2020）。维护活动一直保护着工厂的生产线，使得机械臂或传送带的故障在造成重大损害之前就能被预测性维护发现。能源领域同样使用 IoT 传感器，使涡轮和发电机能够检测到可能的机械应力产生，以避免昂贵的故障并提高运营效率。然而，预测性维护的实施在创建 IoT 基础设施、数据管理系统以及 165.培训劳动力方面也伴随着高昂的成本。跨行业来看，将 IoT 与其他遗留系统整合在一起存在困难，因此需要无缝连接。此外，确保支持 IoT 的设备的网络安全以防止其发生数据泄露和其他网络威胁也至关重要。然而，通过强有力的数据安全和可扩展的 IoT 架构应对上述挑战，预测性维护将成为驱动各行业效率、可持续性和成本节约的手段。
+
+## 9.7.2 流程优化与质量控制中的 AI
+
+AI 正在彻底改变工业流程的优化，在提高效率的同时减少浪费并加强对质量的控制。传统的制造过程受到人为错误、设备变异以及供应链中断可能的影响，深受低效率的困扰。通过使用基于过去筛选数据和当前数据的 ML 驱动自动化技术，工作流得到了优化，使工厂能够精调生产速度、原材料使用和功耗等参数，以实现效率最大化。受益于基于计算机视觉的 AI，制造业的质量控制得到了极大提高，它能够以极高的准确性检查产品的任何缺陷。例如，先进的图像识别算法将对表面缺陷、尺寸和组装正确性进行实时检查，确保只有高质量的产品进入市场。例如，在汽车行业，AI 驱动的质量控制可以在汽车零件进入市场之前检测出细微的缺陷。在药物配方和包装中，AI 能够很好地确保患者的准确性和安全性。
+
+表 9.4 讨论了用于工业流程优化和质量控制的 AI，展示了相关技术及其结果。
+
+**表 9.4** 流程优化与质量控制中的 AI
+
+| 应用领域 | AI 技术 | 用例 | 结果/收益 |
+| --- | --- | --- | --- |
+| 预测性维护 | ML，预测分析 | 在设备故障发生前预测 | 减少停机时间，节省成本 |
+| 质量检查 | 计算机视觉，深度学习 | 产品自动视觉检查 | 提高精度，减少人为错误 |
+| 供应链优化 | 强化学习，AI 算法 | 优化供应链物流 | 降低成本，提高效率 |
+| 能源消耗监控 | ML，神经网络 | 分析和优化制造过程中的能源使用 | 降低能源成本，可持续性 |
+| 制造过程控制 | 基于 AI 的控制系统 | 制造过程的自适应控制 | |
+
+## 9.7.3 提升工作安全与效率
+
+工业自动化很大程度上需要通过减少人工接触使工作变得安全高效。IoT 中的安全系统基于持续信息来防止事故发生。例如，智能头盔和背心可以测量各种环境参数，允许在伤害发生前进行干预。机器人自动化已被证明由于了直接的人工劳动而提供了更安全的环境。自动移动机器人`AMRs`执行重物运输。AI 人机工程工具测量关于姿态和动作的反馈。尽管有了 166.这些进步，确保工作场所自动化符合伦理仍然是一个挑战。向更多机器人自动化的转型面临着工作流失的风险，这意味着行业将面临压力开发劳动力再培训和工作重新分配策略。此外，必须关注保护连接 IoT 安全系统免受网络威胁的影响。以员工安全、持续学习和稳固的网络安全为核心，工业自动化将减少危险并提高生产力。
+
+# 9.8 挑战与伦理考量
+
+## 9.8.1 IoT 和 AI 系统中的数据安全与隐私问题
+
+AI 和 IoT 在不同行业的应用对数据安全和隐私带来了严峻挑战。个人详情、健康记录和工业运营信息形式的敏感数据不断被 IoT 设备获取。在缺乏有效安全机制的情况下，此类 IoT 设备可能成为网络攻击的目标，导致数据泄露、身份盗用和运营攻击。此外，由于 AI 系统在大量数据集上进行训练并做出决策，未经授权的数据访问和滥用构成了高风险。
+
+IoT 设备的加密和保护不当带来了上述所有数据泄露的风险。许多 IoT 网络使用的身份验证机制很陋，很容易被黑客破解。网络犯罪分子可能会利用 167.那些漏洞篡改 AI 控制的系统，可能导致智能电网陷入基础设施混乱或干扰`AVs`的安全运行。在其他情况下，云端 AI 服务的使用了第三方访问敏感数据的问题，迫使行业制定严格的访问控制和数据治理政策。在某种程度上，我们可以通过先进的网络安全框架来缓解这些危险，配备端到端加密、多因素身份验证和基于区块链的数据管理应用。监管机构必须帮助执行如通用数据保护条例`GDPR`等数据保护法，并确保行业合规。愿意投资 AI 和 IoT 的机构应以增强用户同意、开发透明的数据使用政策和确保持续的安全更新为基础，以保护用户信任和隐私。
+
+## 9.8.2 AI 决策的伦理影响
+
+在 AI 决策时代，自动化、预测性分析和个性化正在从根本上改变行业。由于 AI 驱动的系统涉及相关的伦理关注，这些关注包括偏见、公平性和问责制（Osasona et al., 2024）。`ML`模型使用包含偏见的历史数据，这可能会影响 AI 出的决策，从而导致在医疗、招聘和法律执法等服务中出现不公正对待。如果 AI 系统设计得不当，可能会在自动化决策中产生心理障碍和伦理困境。
+
+
+
+AI 决策的另一个主要伦理困境是这些系统的不透明性，即所谓的“黑箱”问题。许多 AI 模型实现（特别是深度学习算法）能够进行预测，但无法阐明其推理过程 (Giuffrida, 2019)。由于缺乏透明，用户和监管机构都极难评估 AI 引导决策的公平性和可靠性。用于贷款审批的 AI 系统可能会在不向申请者提供具体理由的情况下拒绝申请，从而进一步增加了个人挑战此类不公正结果的难度。因此，解释 AI 对于培养信任和问责至关重要。为了应对这些伦理问题，组织应该采取负责任的 AI 实践，包括偏见检测方法、算法透明度和人类参与的决策。伦理 AI 框架应确保自动化系统符合人类价值观，对其决策提供解释，并提供申诉机会。政府和技术领袖必须携手合作建立伦理指南，以确保 AI 创新与社会福祉之间的平衡，在减少伤害的同时最大限度地发挥 AI 对公共利益的潜力。
+
+图 9.5 详述了决定 AI 算法和决策的关键伦理因素。中心是 AI 算法和决策，以及确保负责任 AI 部署的周边属性：透明性、隐私、问责、可解释性和偏见。外层代表治理 AI 的更广泛社会关注，包括法规、道德责任和社会影响。这些因素反过来对培养伦理 AI 实践至关重要，在满足法律和社会预期的同时确保公平和信任。
+
+![图 9.5 AI 决策的伦理影响。](img/9781041062943_C009_005.jpg)
+
+**图 9.5** AI 决策的伦理影响。[#ch17.xhtml#f70b)
+
+## 9.8.3 可持续创新的监管与政策考虑
+
+AI 和 IoT 技术的快速发展要求建立广泛的监管框架，以确保可持续且负责任的创新。在这方面，政府和政策制定者对于制定伦理 AI 应用、数据隐私和环境可持续性的规则至关重要。另一方面，AI 和 IoT 的不受监管开发和实施可能是灾难性的，会产生监控担忧、垄断行为和环境退化的途径。
+
+监管的一个重点领域是定义 AI 考虑决策的法律问责。在自主操作（如自动驾驶技术和 AI 诊断）中，当发生错误或事故时，会产生责任问题。需要制定明确的指南，以确定责任属于开发者、制造商还是用户。此外，监管机构必须支持强有力的数据保护标准，以防止个人数据的滥用，参考国际舞台上的如 `GDPR` 和加州消费者保护法案 (`CCPA`) 等标准。政策制定者必须通过嵌入能效计算、负责任的电子垃圾管理和绿色 AI 研究来推进可持续 AI 的。用于气候监测和资源优化的 AI 可能进一步助力可持续性工作。此类消费者保护框架还必须防止不伦理的数据采集和环境退化。政府必须制定并实施政策，鼓励通过负责任的实践促进技术增长，以便技术增长与社会福祉能够沿着同一条道路通向智能且可持续的未来发展。
+
+## 9.9 未来趋势与新兴技术
+
+### 9.9.1 用于下一代智能系统的 AI 与 IoT 进展
+
+AI 和 IoT 的进步为改变行业和构建更智能的系统提供了广阔前景。AI 可能成为 IoT 的骨干，允许跨越医院、制造、运输等领域的实时决策和自主操作。预计 AI、IoT 与边缘计算之间更深层次的合作将通过在源头附近更快处理数据产生更多机会，从而最小化延迟并最大限度地提高系统运行效率。这将使更高自主性的智能设备具有更好的性能，并在交互时提供实用的见解。另一个值得关注的趋势与 AI 算法的改进有关，特别是在 `NLP` 和计算机视觉领域，这使得 IoT 设备能够以更类人类的方式理解人类交互。AI 预测分析能力将得到增强，允许系统在优化流程的同时预测需求，并最小化能量消耗。这种复杂性将促进智能家居、城市和工作场所的发展，自主控制从供暖到交通管理的一切。此外，随着这些技术的进步，协作和互操作性将变得极其重要。IoT 设备和 AI 算法的标准化对于跨平台和行业的无缝集成至关重要。这将为更大、可扩展且灵活的智能系统奠定基础，设备之间可以顺畅通信，形成一个更聚合的生态系统。这种范式转变将增强用户体验，简化操作，并标志着可持续智能解决方案的到来。
+
+### 9.9.2 5G 和边缘计算在可持续创新中的作用
+
+`5G` 技术的妥善部署将改变 IoT 和 AI 系统演变的方式。随着数据速度提高、延迟降低和带宽增加，`5G` 将允许从数十 IoT 设备收集的数据实时传输到云端 AI 系统。正是这种连接性的改进使得各种智能设备能够部署在医疗、运输和制造等某些行业，用于现场决策和自主系统管理。作为 `5G` 的对应技术，边缘计算在数据产生的地方附近处理数据，从而减少对中央云基础设施的依赖并提高响应时间。这种向边缘计算的转型也将抑制能源消耗并为智能系统提供更好的扩展性。例如，在智能城市中，边缘计算可以通过本地处理交通数据来优化流量，而无需将所有信息发送到远程数据中心。这种本地化处理还确保了敏感隐私的数据（如健康数据）留在安全网络中，从而确保了数据安全。
+
+5G 技术与边缘计算的协同工作正引发一波新的创新浪潮，比以往任何时候都更加高效且可持续。它们促进了设备与系统之间快速、无缝的通信，推动了智能绿色城市、交通系统和高效能源网络的共同演进。此外，这些发展为许多希望以高效方式创建 AI 驱动解决方案的企业开辟了道路，减少浪费并的环境足迹。
+
+### 9.9.3 迈向更智能、更可持续的全球未来
+
+投资将投入全球资源和废物经济的可再生性与效率中——这些未来的枢纽将定义全球经济的可持续性和效率。在这里，这些技术的承诺将触及严肃的环境管理，优化资源利用、减少废物以及可再生能源的整合。在能源领域，`AI` 为智能电网管理提供了更智能的方法背景，在与风能、太阳能等可再生能源协作的同时平衡供需。`AI` 同样的分析方法可以对工业设备故障进行预测，从而减少不必要的消耗和昂贵的维修。在下一代交通中，此类技术将日益关注利用 `IoT` 和 `AI` 的 `AV` 车队移动，这将推动我们更深地迈向无碳环境的未来。系统采用的路线和交通模式将减少燃料消耗，改善空气质量并提高燃油经济。此类技术的创造还将导致共享出行解决方案，以更高效的方式利用车辆，并减少道路上大型车辆的状态。这些创新将转向向下发展——进入一个重用资源并最大限度减少浪费的循环经济。
+
+这也意味着随着 `AI` 和 `IoT` 的进一步发展，创新将关注技术中社会公平的需求。弥合数字鸿沟是必要的，以确保智能系统对所有地理区域和社会经济背景的人都可用且有效。因此，技术社会实践最终通过在社会内持续的方式实现创新与可持续性，创造出一个更智能、更可持续的未来。
+
+## 9.10 结论
+
+`AI` 与 `IoT` 的整合可能会改变解决环境监测、可持续性和智能化发展等方面重大全球问题的方法。在环境监测方面，`AI` 对海量数据的实时处理与 `IoT` 从多个源收集环境数据相结合，正在改变我们理解和解决环境问题的方式。`AI` 分析有助于预测环境趋势、评估潜在威胁，并为气候变化缓解提供适应策略。同样，分散位置的 `IoT` 传感器可以帮助监测空气质量、水位和污染——所有这些数据将极大为决策者提供信息并提高公众意识。因此，这些创新对于环境挑战的解决方案至关重要，从气候变化缓解到生态系统的可持续保护。
+
+`AI` 与 `IoT` 在智能城市和基础设施中的这种联盟已经通过能源优化、废物管理和交通改进的新机会而得到增强。由 `IoT` 和 `AI` 驱动的智能城市可以成为动态自我调节系统，根据节约约的需求和效率最大化的目标，实时管理资源分配。`AI` 将通过交通优化、`AVs` 和高效能建筑大幅减少碳足迹。此外，这些城市可以将可再生能源整合到智能电网，目标是实现这样一个未来：能源被更高效地利用，最大限度地减少对非可再生资源的依赖并减少温室气体排放。这些技术本身具备的潜力是巨大的，但许多挑战阻碍了它们的成功实施和广泛接受。
+
+## References
+
+- `Abdoh, S.` (2024). Green technologies. `Applied Sciences`, `14`, `555–562`.
+
+- `Al-Qawy, A., Sajod, P., & Srinivas, T.` (2015). Internet of Things (IoT): An overview. `Journal of Engineering Research and Applications`, `5(12)`, `71–82`.
+
+- `Albrem, M., El-Saleh, A., & Isa, M.` (2017). Internet of Things (IoT): An overview and its applications. `2017 IEEE 4th International Conference on Smart Instrumentation, Measurement and Application (ICSIMA)`, `pp. 10–6`.
+
+- `Almukhalfi, H., Noor, A., & Noor, T.` (2020). Traffic management using machine learning and deep learning: A survey. `Engineering Applications of Artificial Intelligence`, `1314`.
+
+- `Bambam, A. & Gajrani, K.` (2023). Challenges in sustainability. `Sustainable Materials and Manufacturing`, `108–124`.
+
+- `Belli, C., Anand, S., Gainor, J., Penault-Llorca, F., Subbiah, V., Andrè, F., & Curigliano, G.` (2020). Progresses toward precision medicine in solid tumors. `Clinical Cancer Research`, `26(23)`, `6102–6111`.
+
+- `Bellini, P., Nesi, P., & Pantaleo, G.` (2022). IoT-enabled smart cities: A review of concepts, frameworks and key technologies. `Applied Sciences`, `12(3)`, `1607`.
+
+- `Cohen, A., & Dalyot, S.` (2020). Machine-learning prediction models for pedestrian traffic levels: Towards optimizing routes for blind pedestrians. `Transactions in GIS`, `24(5)`, `1264–1279`.
+
+- `Compare, M., Baraldi, P., & Zio, E.` (2019). Challenges to IoT-enabled predictive maintenance for Industry 4.0. `IEEE Internet of Things Journal`, `7(5)`, `4585–4597`.
+
+- `Dudhe, P. V., Kadam, N. V., Hushangabade, R. M., & Deshmukh, M. S.` (2017). Internet of Things (IOT): An overview and its applications. `2017 International Conference on Energy, Communication, Data Analytics and Soft Computing (ICECDS)`, `pp. 2650–2653`.
+
+- `Giuffrida, I.` (2019). Liability for AI decision-making: Some legal and ethical considerations. `Fordham Law Review`, `88`, `439`.
+
+- `Gupta, B. B., & Quamara, M.` (2020). 物联网（IoT）概览：架构方面、挑战与协议。`Concurrency and Computation: Practice and Experience`, `32(21)`, `e4946`.
+
+- `Gupta, S. K., & Singh, N.` (2023). 用于智慧城市的 AI 和 IoT 赋能技术与应用。在《网络-物理系统中的人工智能》（pp. 175–193）。CRC Press.
+
+- `Han, H., & Hawken, S.` (2018). 引言：下一代智慧城市的创新与身份认同。`City, Culture and Society`, `12`, `1–4`.
+
+- `Hiran, K. K., Khazanchi, D., Vyas, A. K., & Padmanaban, S.` (编). (2021). 面向可持续发展的机器学习（第 9 ）。Walter de Gruyter GmbH & Co KG.
+
+- `Izatt, R. M., Izatt, S. R., Bruening, R. L., Izatt, N. E., & Moyer, B. A.` (2014). 高科技社会中实现金属可持续性的挑战。`Chemical Society Reviews`, `43(8)`, `2451–2475`.
+
+- `Jaber, M.` (2023). 用于实现可持续发展目标的 IoT 和机器学习。`Frontiers in Communications and Networks`, `4`, `1219047`.
+
+- `Jayachandran, M., Gatla, R. K., Rao, K. P., Rao, G. S., Mohammed, S., Milyani, A. H., … & Geetha, S.` (2022). 实现可持续发展目标 7 的面临挑战：新兴技术背景下的廉价和清洁能源。`Sustainable Energy Technologies and Assessments`, `53`, `102692`.
+
+- `Jung, A.` (2022). 机器学习：基础。Springer Nature.
+
+- `Kalusivalingam, A. K., Sharma, A., Patel, N., & Singh, V.` (2020). 使用机器学习算法和 IoT 驱动的数据分析增强制造业的预测性维护。`International Journal of AI and ML`, `1(3)`, `67–71`.
+
+- `Karimullah, S., Khan, M., & Shaik, F.` (2024). 用于肺部 CT 异常检测与分类的改进混合深度学习方法的实现与性能评估。在 2024 年智慧与可持续技术近期创新国际会议，IEEE (ICRISST (pp. 1–6). doi: 10.1109/ICRISST59181.2024.10921991.
+
+- `Kataray, T., Nitesh, B., Yarram, B., Sinha, S., Cuce, E., Shaik, S., … & Roy, A.` (2023). 智能电网与可再生能源的整合：机遇与挑战——综述。`Sustainable Energy Technologies and Assessments`, `58`, `103363`.
+
+- `Liu, J., Li, J., Chen, Y., Lian, S., Zeng, J., Geng, M., … & Chen, X. M.` (2023). 用于智慧管理的多尺度城市客运 CO[2] 排放计算平台。`Applied Energy`, `331`, `120407`.
+
+- `endhurwar, S., & Mishra, R.` (2018). 物联网与社会技术之间的新兴协同效应。`Journal of Global Information Technology`, `21(2)`, `75–80`.
+
+- `Osasona, F., Amoo, O., Atadoga, A., Abrahams, T., Farayola, O., & Ayinla, B. S.` (2024). 决策中 AI 的伦理影响评价。`International Journal of Management & Entrepreneurship`, `6(2)`, `322–335`.
+
+- `Patil, P.` (2022). 深度学习在交通管理中的应用：综述。`International Journal of Business Intelligence and Big Data`, `5(1)`, `16–23`.
+
+- `Rahman, I.` (2023). 用于改进医疗的 AI 驱动个性化治疗框架。`Journal of Computational Social Dynamics`, `8(11)`, `42–51`.
+
+- `Rangarajan, D., Rangarajan, A., Reddy, C. K., & Doss, S.` (2025). 通过 AI 和 IoT 的影响探索医疗保健的下一代转型。在《临床健康的智能系统与 IoT 应用》（pp. 73–98）。
+
+- `Revathi, S., Ansari, A., Susmi, S. J., Madhavi, M., Gunavathi, M.` (2024). 集成机器学习-IoT 技术以构建数字生态系统。在《扩展现实在人类体验中的学科应用》（pp. 259–291）。
+
+- `Schaffers, H., Komninos, N., & Pallot, M.` (2012). 作为未来持续创新生态系统的智慧城市。
+
+- `Shaik, F., Karimullah, S., Khan, M., & Ahmed, S.` (2024). 整合 IoT、计算分析和遗传洞察以提高可及性和早期干预。在 2024 年智慧与可持续技术近期创新国际会议 (ICRISST), IEEE (pp. 1–6). doi: 10.1109/ICRISST59181.2024.1092193.
+
+- `Shinde, N., Seth, A., Kadam, P.` (2023). 块链集成的进展。在导航医疗与数字健康中的创新与挑战。IGI Global (p. 16).
+
+
+
+* Speer, B., Miller, M., Schaffer, W., Gueran, L., Widegren, K. (2015). 智能电网在整合可再生能源中的作用 (NREL/TP-6A2019)。国家再生能源实验室 (NREL), Golden, CO.
+
+* Vieira, S., Pinaya, W. L., & Mechelli, A. (2020). 机器学习的主要概念。在机器学习》（pp. 21–44）。
+
+* Villamil, S., Hernández, C., & Tarazona, G. (2020). 物联网概览。Telkomnika (Telecommunication Computing Electronics and Control), 18(5), 2320–2327.
+
+* Von Stamm, B., & Trifova, A. (编). (2009). 创新未来。Gower Publishing, Ltd.
+
+* Zaki, M. J., Meira Jr, W., & Meira, W. (2020). 数据挖掘与机器学习：基础概念与算法。Cambridge University Press.
+
+# 10 智慧水务：用于可持续转型的绿色过滤系统案例
+
+Chockalingam Aravind Vaithilingam, Fong-Lee Ng, Low Wei Rong, Sim Chong Yuan, 和 Ananthakrishnan Balasundaram
+
+DOI: 10.1201/9781003634768-10
+
+## 10.1 引言
+
+### 10.1.1 水纽带可持续性的需求
+
+实现可持续性是复杂的，涉及多个方面：经济、环境、社会、技术和政策。从经济角度来看，可持续转型意味着对可再生能源、绿色技术和基础设施需要更高的初始投入，这对于贫困和机会不平等的低收入地区可能是障碍。增加复杂性的是环境带来的挑战：气候变化、资源枯竭和污染。全球气温升高、自然资源的过度开发以及广泛污染是当前生态系统和生物多样性面临的最显性风险。从技术角度来看，绿色解决方案的可扩展性问题（例如可再生能源存储系统）以及如何管理产生的废物（包括电子垃圾和塑料污染）表明需要更多的创新和投资。从社会角度来看，对变化的抵触、缺乏教育和意识，以及人口增长带来的压力，使得这一目标的实现具有挑战性。
+
+由于法规不一致，政策和治理障碍也发挥了至关重要的作用；在构建一致且有效的可持续性战略时，这些障碍往往涉及短期的政治立场，且缺乏国际合作。企业还必须应对“洗绿”、复杂的供应链以及与可持续性相冲突的消费者需求。由于缺乏标准的衡量方法和框架，对可持续性进展的测量和问责机制仍然存在问题。即使是技术，虽然在许多方面充满前景，但对有限资源（如稀土金属）产生了依赖，并带来了不可预见的结果，例如生物燃料生产或海水化过程导致的环境退化。
+
+克服所有这些制衡力量，必然需要国家、企业和个人统一战线的协作。强调创新、通过全球合作进行强化，以及通过教育构建知识，是人类迈向经济增长与保护后代地球之间这种微妙平衡的步骤。
+
+### 10.1.2 绿墙概念
+
+水流系统（如绿墙中的系统）的主要用途围绕着可持续性、效率和植物最佳健康展开。这些系统确保向植物精确供，既不过度水也不会浇水不足，从而节约用水并减少浪费。通过持续保持充足的水分水平，它们促进植物的健康生长，减少了胁迫和疾病的风险。水流系统还允许轻松检测泄漏或异常以便及时维修，从而确保了系统的可靠性。它们还根据植物需求或环境条件优化灌溉计划和流量，增强了整体系统性能。这些系统通过最小化不必要的水流动和优化泵的运行有助于提高效率。水流系统通过负责任地使用水和最小化对环境的影响来促进可持续性。物联网（`IoT`）与系统的集成允许基于数据驱动的决策和维护进行实时监控和执行。最终，它们通过减少水费、降低能源消耗和防止昂贵的维修来节省资金，从而成为可持续和韧性绿色基础设施解决方案不可或缺的一部分。
+
+### 10.1.3 用于智能操作的 IoT 集成
+
+`IoT` 的集成使系统应用变得智能且具有适应性，包括饮用水净化、工业废水处理和灰水的再利用。`IoT` 设备通过数据分析帮助从远程位置操作，有助于在净化过程中优化能源消耗的管理；提高效率可以获得更好的产率和更高质量的最终水，保持与水质设定的相同标准 [[1]]。智能控制系统能够通过自动化实现类似的效果，例如改变流量或提示触发维护显示和逻辑，这还允许对特定的额外过滤阶段进行开启和关闭 [[2]]。集成 `IoT` 的生物基水过滤系统是解决全球城市和农村水挑战的一种有前景的解决方案，因为此类系统借助现代技术的帮助以可持续的方式提供清洁水 [[3, 4]]。
+
+此外，监控单元提供了实时数据和见解，对于优化绿墙、灌溉装置或其他基础设施的性能、效率和可靠性非常有用。这些单元监控关键参数——水流、温度、湿度以及其他环境或系统特定的变量——确保系统运行保持在最佳状态。除了通过实时监控和及时干预的协助有助于及时检测泄漏、堵塞或故障等异常情况，并提供及时干预支持以防止停机期间的资源浪费外，它们还促进了水、能量和其他源等系统管理资源的高准确性。这一方面降低了成本，另一方面减少了对环境的影响。因此，它们通过计算产生的数据趋势，在故障发生前进行预判，从而实现预测性维护并提高整个网络系统的可靠性和使用寿命。与 `IoT` 技术集成的监控单元允许远程管理和控制，同时为用户提供明智决策的宝贵见解。总之，这些单元在许多应用中的运行效率、可持续性和长期成本效益方面是不可或缺的。
+
+## 10.1.4 生物基过滤系统
+
+生物基水过滤正在发展成为一种创新且可持续的技术，用于解决近期的水质问题 [[5]]。生物砂滤器 [[6]]和生物基过滤材料的使用 [[7]]以及使用微生物燃料电池（`MFCs`）[[8]]是过滤领域的另一些自然方法。利用 `IoT` 监控水流量、水质比例等关键参数，在某种程度上提供了契机 [[9]]。图 10.1 (#ch18.xhtml#f71) 显示了这样一个系统。与这些过滤组件连接的 `IoT` 传感器和控制器包括由生物质制成的活性炭、植物纤维和生物砂滤器，它们能够实时监控 pH、浑浊度、温度和污染物水平等水质参数 [[10, 11]]。先进的生物处理工艺（包括涉及生物膜生长以及使用人工造湿地和 `MFCs` 的工艺）通过智能系统支持了性能维护、故障检测和预测性维护 [[12]]。在水处理方法中，特别是湖水污染，绿墙过滤近期成为最新且最有前景的解决方案之一。这些系统中一个非常决定性的因素是选择合适的过滤介质。Chua 等人 [[13]] 调查了椰壳和珍珠石作为过滤介质的使用，并通过 3:1 的椰壳与珍珠石比例实现了化学需氧量（COD）、总悬浮固体（TSS）和浊度的最高去除率。
+
+其他研究人员评估了不同的过滤材料，其中`Svete`研究了浮石、生物炭、大麻纤维、咖啡渣（`SCGs`）和有机纤维土壤（`CFS`）[14]。许多研究集中在水负荷率对过滤效率的影响。这一发现表明，`Chua et al.` [13]在`28 L/h`处获得了污染物去除的最佳流速，在此，`COD`的去除率稳定保持在`53%`、浊度为`54%`、`TSS`为`41%`以及`TN`为`52%`。此外，还进行了一项实验以确定三种以`L/d`为单位的负荷率（例如`4.5`、`9`和`18 L/d`），以描述每种负荷的效果，同时针对特定的过滤介质组合优化了家用位置寄存器（`HLR`）[14]。绿墙过滤系统已被证明能有效去除多种水污染物。据报道，与慢沙滤（`SSF`）相结合的绿墙系统在`150 cm/d`的`HLR`下可去除`85%`的`COD`、`90%`的浊度、`72.9%`的`TN`和`60.6%`的`TP`。这些结果与实际灰水研究的结果相当或更高。`Svete`的工作在营养盐去除方面也显示出良好的前景：大麻纤维的磷去除率（`75–85%`）高于生物炭和浮石[14]。设计在绿墙过滤系统中至关重要。`Chua et al.` [13]提出了一种由四行介质容器组成的系统，每行有五个垂直排列的过滤介质容器。另一项研究提出了一种集成`SSF`的绿墙系统；它由一组五个串联水流连接反应器和一个`SSF`单元组成[13]。
+
+### 10.1.5 智能监控系统
+
+利用互联网技术及其整合以使系统具有可持续性和市场化能力，是向创建可持续解决方案的一步[13, 14]。此类传感器产生的数据实时传输到中央平台，允许立即检测异常，并对可能意图导致污染的事件做出反应。`IoT`技术的集成还促进了智能水管理解决方案的发展，以优化水处理过程，从而增强了资源配置[15]。
+
+机器学习（`ML`）和人工智能（`AI`）确实增强了水质监测系统的能力。它们分析海量数据集，发现复杂模式，甚至预测水质的未来趋势。`AI`驱动的系统可以自动检测异常并预测污染事件，为高层决策提供信息。`IoT`与`AI`技术的集成带来了更复杂、更准确的水质监测解决方案[13]。传感技术的最新进展也提高了水质测量的准确性和效率。小型化和便携性使得传感器能够部署在远程站点。
+
+多参数传感的发展也为水质的有效监测提供了可能，特别是远程站点[16]。事实上，遥感和卫星技术已被证明是大面积水质监测的卓越工具[17]。虽然可再生能源的研究有所提高，但它为水质提供了新途径；重金属检测的应用对于更敏感、更多功能的水质监测具有巨大的前景[16, 18]。
+
+### 10.1.6 向可持续系统迈进
+
+可再生能源在水系统的整合已成为研究的关键领域之一，以应对对水水和能源消耗日益增长的关注。水能耦合呈现了一系列挑战和机遇，对于缺水和高能干旱地区尤为相关[19, 20]。一种非常有前景的方法是利用再生能源（包括太阳能、风能和地热能）为水处理和海水淡化的各个步骤提供动力。这些方法用于限制化石燃料的消耗并进一步减少环境影响[21]。太阳能在海水淡化方面潜力巨大。光伏电池板和太阳能系统分别用于为反渗透（`RO`）工厂和热淡化过程提供动力。集光太阳能等创新进一步提高了效率和成本效益。地热能是另一种资源，在淡化（特别是地热活跃地区）中提供持续可靠的电力供应[20]。
+
+可再生能源在水系统的整合具有优势，包括减少碳足迹、增强水安全和节省成本。在淡化过程中用太阳能代替化石燃料可以使水成本减半[22]。此外，由再生能源驱动的水处理厂每年可减少`110 tons`的`CO[2]`排放[23]。然而，由于生产成本高且来源具有间歇性，可再生能源在水系统中的广泛应用仍面临挑战。由于这些问题，研究人员研究了使用多种可再生能源和储能的混合系统，以确保电力供应的稳定可靠[20, 24]。另一个需要调查的重要事项是可再生能源对所谓的“水-能-粮”耦合的潜在贡献；它可以在这些相互关联的领域产生协同效应[25]。
+
+绿墙过滤系统旨在应对水净化和可持续性的挑战，如图 10.2 所示。这一现有生物基过滤水净化系统的开发框架强调了集成先进技术的方法，并关注资源利用的优化和面向更广泛适用性的扩展性。值得注意的是，传感器的安装使得水质监测成为可能。除了监测与`pH`、浊度、溶解氧和特定污染物相关的基础参数外，此类传感器还可以很好地允许对过滤过程进行针对性的调整，以对应更高水平的水质。此外，通过引入混合系统整合再生能源增强可持续性，将太阳能和风能与高效的储能解决方案相结合。这确保了系统在低能量期间的持续运行，同时最大限度地减少对环境的影响。`IoT`平台已升级，包含了`180.ML`算法，用于预测性维护以及水用水的优化。实时数据分析可以识别低效环节，降低运营成本并提高系统可靠性。该系统的模块化架构针对非常分散的农村和人口密密的城市进行了微调。这意味着设计模块可以根据不同的水处理工艺或特定场地条件进行定制。改进的自动化（如自清洁过程和带有自动恢复的故障检测）进一步减少了人工维护时间并增加了系统的整体运行时间。这种用户友好界面与稳健的环境影响评估的耦合增强，构建了一个完整的框架，使系统在解决全球水过滤和回收挑战方面具有可持续性、扩展性和适应性。
+
+![图 10.2 绿墙过滤系统的构建步骤。](img/9781041062943_C010_002.jpg)
+
+**图 10.2** 绿墙过滤系统的构建步骤。](#ch18.xhtml#f72b)
+
+`IoT`-驱动的监测和自动控制是该系统部分的关键特征，提升了其运营效率标杆。它利用传感器跟踪关键参数——水位、温度、湿度和系统稳定性，以实现一致的性能和实时故障检测。它具有模块化和可扩展性，能够满足从小型住宅设施到大规模城市和工业设施的广泛应用。此外，它允许整合再生能源源（如太阳能电池板和风力涡轮机），实现可持续供电并减少对传统能源的依赖。该系统专注于最少维护、实时监测和资源效率，是解决水短缺和环境可持续性挑战的可持续且效益的方案。
+
+### 10.2.2 绿墙的生活实验室概念
+
+生物过程在水处理系统中起着至关重要的作用，利用微生物代谢、生物膜和天然酶反应等机制来降解污染物。图 10.3 中的生物基系统设计和集成方式尽可能将自然材料与生物过程及技术增强相结合，以实现高效且可持续的性能。通常，系统首先对应用范围进行彻底评估，从水净化或废水处理到发电，因此其设计是针对需求而定制的。因此，它们形成了基于天然材料的基础，例如来自生物质的活性炭、生物砂或植物纤维，这些都是可生物降解且可再生的过滤介质。材料的选择取决于其吸附能力、生物降解性以及与目标污染物或污染物的兼容性。
+
+![图 10.3 绿墙过滤系统。](img/9781041062943_C010_003.jpg)
+
+**图 10.3** 绿墙过滤系统。](#ch18.xhtml#f7b)
+
+### 10.2.3 绿墙的生活实验室概念
+
+滴滤基于通过多孔介质进行受控且有效的液体输送原理；因此它被有效地应用于水净化、灌溉和废物管理等情况。该系统基于缓慢且调节的流速，允许液体均匀地通过过滤介质，从而最大化接触时间并增强污染物的去除。它具有模块化和可扩展性，可以应对广泛的应用，从小型住宅设施到大规模的城市和工业应用。多孔介质（如沙子、活性炭或陶瓷材料）可以拦截颗粒物、`181.沉积物`和微生物，同时允许液体通过。大多数过滤过程由重力驱动或采用低压系统；因此它们是节能的且不涉及复杂的机械。大多数过滤系统采用分层过滤，每一层针对特定的污染物，以确保彻底的净化过程。这确保了对更小颗粒的精确去除，获得更清洁的输出。此类系统的设计考虑了可持续性，因此通过仅输送所需的液体量减少水资源浪费。为了增强可靠性，它们还可能包含预过滤或自清洁机制，以防止堵塞并减少维护。此外，滴滤系统具有灵活性，使其易于适应任何场景，从家庭用水净化到农业，再到大规模工业。通过遵循这些原理，滴滤使这种技术变得非常高效、绿色且灵活。集成了`IoT`-驱动的监测单元用于实时跟踪系统参数，如水质、流速和温度值，从而改善了环境足迹。整合再生能源（如太阳能电池板）以实现可持续供电，使整个系统具有可持续性。实验室测试通过标准化方法验证结果，对比处理前后的`182.post-treatment`数据有助于改进方向并识别系统低效环节。另一个方面是流速对于任何过滤的有效性都至关重要，因为它直接影响污染物去除的效率、系统性能和资源利用。
+
+过滤系统中的流速是液体与过滤介之间接触时间的决定因素，这是捕捉颗粒和去除杂质以确保彻底净化的关键因素。最佳流速是速度与停留时间之间的平衡，使过滤介能够有效捕获污染物，而不会产生过大的压力降或堵塞。在某些情况下，特别是基于吸附或生物过程的系统（如活性炭过滤器或生物基系统），通常希望保持较慢流速以获得更好的过滤效果。这种较慢流确保了液体与过滤介之间有充分的相互作用，最大限度地去除悬浮固体、有机污染物和微生物。另一方面，极高的流速可能会导致液体绕过介质，降低过滤效率并增加系统的磨损。这会进一步降低任何系统的能耗，特别是当此类系统包含泵时，因为泵的本性提供的能量通常超过了实现目标过滤水平所需的能量。先进系统已经集成了传感器和 IoT 监测设备，用于持续跟踪流速，并根据实时数据、环境条件或特定系统的需求进行自动调整。这不仅提高了过滤效率，还为节约水资源和能源提供了可能，从而解决了可持续性问题。在滴滤、灌溉或工业水处理等应用中，优化流速对于防止特定系统发生过载、延长过滤组件的功能以及确保输出质量至关重要。凭借具有溢流率精确控制的最新技术，此类过滤系统确保了先进的效率、按需资源利用，以及在支持经济和环境可持续发展方面的长期运行可靠性。
+
+滴水过滤方法确保了均匀分布，避免出现过水或土壤干旱等问题，支持植物生长并增强过滤过程。系统使用来自水位传感器的实时数据来识别异常、调整灌溉计划，并向 IoT 平台发出即时通知。正常流速为每个发射器 2–4 升/小时，确保水分在土壤中缓慢但稳定地渗透，以便水分吸收并防止土壤侵蚀。开发了一个系统健康监测框架以确保系统可靠运行并尽地减少停机时间。它利用 IoT 平台进行数据采集和分析，实现实时性能跟踪和自动警报。七合一土壤传感器持续监测水分水平、温度、`pH` 和营养物浓度，以提供土壤健康和过滤效率的洞察。`DHT 11` 传感器测量环境空气温度湿度，使系统适应可能影响水分蒸发或植物健康的环境变化。它为灌溉周期的变化提供数据并提高效率。倾角传感器实时监测水箱的结构稳定性，确保安全并防止操作员故障。风速传感器测量蒸发率和结构稳定性，为灌溉计划的调整提供信息。
+
+183.表 10.1 显示了集成在绿墙过滤系统墙中的智能设备。
+
+### 10.2.4 绿墙生态实验室概念
+
+首先确定能源需求，例如泵、传感器和其他作为水净化系统部分的监测单元，以及任何额外技术，包括紫外线（UV）消毒或支持 IoT 的设备。随后计算所需的能量源，通常是小型风涡轮电机或太阳能电池板。这些系统配有逆变器和电池存储，以便在风力或阳光不足期间提供持续能量供应。集成了智能能源管理系统以优化功率分配，确保水净化系统中的关键组件具有优先级。例如，基于 IoT 的控制器可以根据给定条件动态调整能量流，并在再生能源和存储能量之间切换。也可以采用混合系统，通过使用不同可再生能源的混合体来提高可靠性和效率，特别是对于天气条件多变的地区。
+
+**表 10.1** 传感器与监测技术选择
+
+| 传感器类型 | 设备 | 目的 | 主要特征 |
+
+| :--- | :--- | :--- | :--- |
+
+| 湿度温度传感器 (`DHT 11`) 湿度 (%)，温度 (°C/°F)。 | ![电路板上出现一个小型矩形湿度温度传感器模块，显示顶部带有均匀间距的正方形开口的通风外壳，从一侧伸出三个金属引针。](img/9781041062943_C010_inl_001.jpg) | 测量环境湿度和温度，以实现系统的最佳运行。 | 精度高，在不同条件下均耐用，兼容 IoT 以进行实时监测。 |
+
+
+
+## 传感器组件概述
+
+| 传感器类型 | 图示 | 功能 | 特点 |
+| :--- | :--- | :--- | :--- |
+| 倾角传感器（高或低信号） | ![一个紧凑的倾角传感器，识别为高或低信号类型，带有黑色矩形外壳，印有标签，四个直金属引针以简单的倾斜视图向下延伸。](img/9781041062943_C010_inl_002.jpg) | 检测角度运动或倾斜，以确保组件的正确对齐和稳定性。 | 紧凑设计，低功耗，对角度变化灵敏。 |
+| 七合一土壤传感器（氮、磷、钾、`pH`、电导率、温度、湿度） | ![出现一个七合一土壤传感器，顶部有一个小型矩形模块，四个并行的金属探针向下延伸。外壳上印有文字，探针形成活动感应部分。](img/9781041062943_C010_inl_003.jpg) | 监测土壤水分水平，用于农业灌溉或绿色基础设施整合。 | 跟踪多种土壤属性，提供高精度测量，专为户外使用设计，能抵御严酷的环境条件。 |
+| 光电水位传感器（高或低信号） | ![出现一个小型光电水位传感器，黑色电缆连接在圆柱体上，带有一个透明圆锥形顶部。螺纹中段位于电缆和检测高低水位的透明头部之间。](img/9781041062943_C010_inl_004.jpg) | 跟踪储罐或系统中的水位，以防止溢出或短缺。 | 高精度，兼容 IoT 系统，适用于多种应用的防水设计。 |
+| 风速计（风速 m/s 或 km/h） | ![用于测量风速的风速计显示紧凑的圆柱形底座，一侧伸出电缆。三个均匀分布的黑色杯位于底座方的短臂上，绕中心垂直轴旋转。](img/9781041062943_C010_inl_005.jpg) | 测量风速以优化风力发电机等可再生能源。 | 户外耐用，低维护，可准确检测低风速和高风速。 |
+| 触摸屏人机界面（HMI）显示器 | ![一个触摸屏 HMI 显示器水平放置，清晰的矩形界面显示多个数据字段和图标。一个连接的带有四个金属针的土壤传感器通过电缆连接到一个小型黑色模块延伸出来。](img/9781041062943_C010_inl_006.jpg) | 读取并显示来自七合一土壤传感器的数据。 | 户外耐用，兼容无需校准的七合一土壤传感器，能够导出数据。 |
+| Arduino IoT 云 | ![Arduino IoT 云模块显示为一个小型矩形电路板，顶部带有金属屏蔽，两个边缘分布着行间距均匀的引脚。电路板的深色表面上有一个微 USB 端口和打印的组件标签。](img/9781041062943_C010_inl_007.jpg) | 物联网平台。 | 实时监控与控制、云端数据存储，确保数据传输的安全性和设备认证。 |
+
+## 可再生能源与水净化系统的整合
+
+这涉及将可再生能源与该水净化系统的运行参数相结合。这种相互关系的一个重要意义在于对发电量和水处理机制都进行实时监控，以维持效率并检测故障。将可再生能源整合到这种水净化技术中带来的其他额外效益还包括减少净环境影响，同时减少温室气体排放和运行成本。通过将可再生能源解决方案整合到水净化系统的电力需求中，增强了可持续性，并提升了全球清洁水事业中的运行韧性和水资源的可用性，同时减少了对能源供应的依赖。这有助于实现两个主要目标：确保这些系统在一致条件下的性能，并考虑到环境因素和未来的成本降低。
+
+能量存储和分配是确保电子设备正常且高效运行的最决定性因素，从太阳能电池板或风力等可再生终端转换源开始。储能系统包括电池或电容器等，用于存储高峰生产期间产生的剩余能量，以便在发电缓慢或需求足够高时供应。无论能量可用性如何波动，它都能为电子组件提供相同的功率。
+
+存储系统的设计取决于电子组件的能量需求和可再生能源的特性。例如，使用锂离子电池是因为它们具有高能量密度、高效率和长寿命；在敏感和持续负载的电子设备（如传感器、监控设备和控制器）中，它们为关键组件供电。嵌入了先进的楼宇管理系统（`BMS`）来监控电量水平以优化电池性能，防止过充/深放电等问题。能量分配意味着以满足电压、电流和功率稳定性要求的方式将存储的能量传递给电子组件。这通常通过某些功率调节设备实现，如逆变器、转换器电压调节器。逆变器在需要将电池存储的直流电转换为交流电，而转换器将电压水平转换为匹配特定电子组件运行所需的电平。电压调节器确保稳定的功率输送，保护组件免受可能导致故障或损坏的电压波动的影响。在具有多个电源的系统中（例如太阳能和风能的混合系统），智能控制器管理能量分配。这些控制器在优先级设备之间执行动态功率分配，并平衡能量负载以避免系统过载。
+
+支持物联网的能量管理系统还能实现实时监控和分析，以预测维护和高效能量分配。它集成了车载能量存储和能量分配系统，提高了电子组件的可靠性和韧性，特别是对于远程或离网站点应用。确保连续运行、资源优化和减少对通用电网的依赖有助于环境的可持续性和成本效益。这种整合对于大多数现代电子系统在工业和应用中的多种功能和长寿命至关重要。功率输出和可靠性分析在评估某些应用发电软件测试（`SWTs`）的效率、性能和适用性时尤为关键。功率输出分析关注关键指标，如额定功率、授权经济经营者（`AEO`）和容量因子，这些指标反映了涡机在现实条件下发电的能力。
+
+风速是能量生产的关键决定因素之一，除了其他因素外，它检查了变异性，但特别关注涡机的运行范围（包括切入和切出速度）以及额定功率的最佳风速。在进行功率输出估计时，还会考虑湍流、障碍物和空气密度等环境因素，以及场地的适用性评估。可靠性分析观察涡机随时间推移一致且稳定的性能。这涉及耐用性、平均故障间隔时间（`MTBF`）以及维护需求。结构完整性的叶片、发电机、塔架、磨损、能量存储和分配系统确保了在风力较小时的持续供电：电池和逆变器。支持物联网的传感器提供实时监控，提供优化涡机性能所需的数据，以预测维护需求并全面提升性能。在此过程中，小型风力涡机仍然是合适的、具有成本效益且可持续的能量生产设备，能够满足住宅、农业和小规模工业需求，即使在波动的环境条件下也是如此。
+
+## 10.3 数据分析与解释
+
+### 10.3.1 数据收集、处理与监控
+
+智能监控系统、风能和先进过滤方法的整合确保了水处理过程的循环性。该过程从选择过滤方法开始，生物基过滤或滴滤，最适用于自然且高效的去除过程。它配备了智能监控系统，通过物联网技术允许监控与水流量、浊度、压力和污染物水平相关的关键运行参数。通过这些传感器获取实时数据洞察，使系统根据需要动态调整过滤设置；因此，可以调整流速或触发反洗过程以减少堵塞的可能性。此外，监控系统的运行方式使功率需求与能量可用性同步，以高效的方式利用存储能量，并在风力较小时优先考虑基本功能。智能监控与可再生能源的建设性互动允许实现可靠、绿色的水处理解决方案，在环境影响最小且能源成本最低的情况下有效运行。
+
+自动化协议通过简化系统操作和减少人工干预，构成了优化过滤和能源效率的核心支柱。此类协议中的高级控制算法接管了关键流程，如调节水位、管理能量分配以及触发维护活动。它整合了来自物联网可用传感器的实时数据，这些传感器持续评估系统性能并调整运行参数以保持最佳效率。这意味着，例如在生成的可用风能处于高水平时，自动化系统会立即增加过滤吞吐量以优化生产力；而在能源短缺的情况下，缩减机制可能会进入非关键运行模式以节约。
+
+预测性维护协议是自动化的另一个关键维度，其中数据分析负责检测系统堵塞、机械设备部件磨损或过滤效率下降等早期迹象。它通过自动告警和诊断实现及时干预，从而减少停机时间并延长系统寿命。这些协议的电源管理也是关注重点之一，自动化系统根据需求、可用性和存储动态分配能量。这确保了系统在功能不受干扰的情况下以最高的能源效率运行，并证明其适用于远程及城市应用。
+
+### 数据驱动的优化
+
+系统性能的数据驱动优化通过运行过程中的持续改进得到了提升，结合了实时数据采集、高级分析和机器学习。通过物联网可用传感器从系统中收集了有关水质、发电、流速以及风速和温度等环境因素的全面数据。这些数据被分析以识别低效环节、模式和潜在改进领域。机器学习算法利用这些信息预测系统在变化条件（如风电或水体不同污染程度）下的表现。基于这些预测，系统动态调整其运行参数——运行速度、过滤率、能量分配——从而优化性能和资源。进一步分析历史数据对于提供长期趋势至关重要，例如不同季节输出的周期性峰谷，或在风电作为天气条件时的持续波动。这与主动的系统改进相得益彰，特别是在涉及系统设计时。
+
+数据驱动的优化还扩展到了战略层面的决策支持。例如，获得的洞察可以指导风力机的布局以最大化能量捕获，或建议修改过滤系统的设计以更好地去除污染物。此外，集成仪表板向操作人员实时显示当前状态和趋势，使他们能够针对`187.如何响应系统的当前和未来状态`做出明智决策。这种持续的学习和适应还确保了高效率和可靠性，有助于大幅降低成本并减少对环境的影响。通过将高级数据分析与系统操作相结合，数据驱动的优化使集成水处理和可再生能源系统在各种应用中更具健性、适应性和可持续性。开发的系统使用了实时监控系统，减少了人工数据采集方法，向智能绿墙迈进，其主要目标是使用生物方法过滤水。告警通知允许用户从任何位置访问系统，最大限度地减少停机时间并优化性能。如`表 10.2`所示，收集的数据还为趋势分析和长期性能评估提供了历史记录，实现了预测性维护和明智的资源分配决策。
+
+**表 10.2** 从实时系统收集的数据
+
+| 时间(小时) | 湿度 (%) | 温度 (°C) | pH | 氮 (mg/kg) | 磷 (mg/kg) | 钾 (mg/kg) | 电导率 (dS/m) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 0 | 44.98 | 27.85 | 7.45 | 39.16 | 5.63 | 37.08 | 2.32 |
+| 1 | 68.03 | 21.99 | 7.16 | 40.85 | 17.73 | 52.72 | 0.98 |
+| 2 | 59.28 | 25.14 | 7.41 | 12.96 | 11.29 | 54.43 | 0.79 |
+| 3 | 53.95 | 25.92 | 7.34 | 24.34 | 15.17 | 20.28 | 1.48 |
+| 4 | 36.24 | 20.46 | 6.9 | 14.63 | 23.15 | 40.43 | 2.47 |
+| 5 | 45.67 | 23.67 | 7.2 | 19.78 | 10.25 | 35.67 | 1.35 |
+| 6 | 52.14 | 26.11 | 7.12 | 28.11 | 14.67 | 50.21 | 1.78 |
+| 7 | 61.23 | 24.59 | 7.05 | 30.45 | 55.11 | 1.45 | 2.4 |
+| 8 | 39.74 | 22.14 | 6.85 | 25.23 | 16.35 | 48.23 | 1.12 |
+| 9 | 47.58 | 27.45 | 7.32 | 22.18 | 11.28 | 45.67 | 1.65 |
+| 10 | 50.12 | 26.85 | 7.1 | 26.67 | 17.45 | 53.12 | 2.12 |
+| 11 | 63.42 | 25.76 | 6.98 | 31.56 | 14.25 | 50.25 | 1.34 |
+| 12 | 55.19 | 22.31 | 7.15 | 23.89 | 13.56 | 40.78 | 1.87 |
+| 13 | 42.31 | 21.47 | 7.25 | 21.98 | 18.94 | 46.56 | 1.54 |
+| 14 | 41.78 | 24.78 | 7.01 | 29.13 | 12.23 | 41.23 | 1.12 |
+| 15 | 58.67 | 28.15 | 7.08 | 34.15 | 15.89 | 49.67 | 2.01 |
+| 16 | 48.92 | 23.41 | 6.95 | 18.78 | 14.12 | 42.15 | 1.76 |
+| 17 | 37.65 | 22.94 | 7.18 | 20.45 | 10.89 | 47.89 | 1.45 |
+| 18 | 60.13 | 25.37 | 7.11 | 28.67 | 12.78 | 44.56 | 2.12 |
+| 19 | 57.48 | 24.12 | 7.09 | 29.21 | 11.94 | 51.23 | 1.85 |
+| 20 | 51.36 | 26.98 | 7.23 | 31.89 | 16.78 | 48.45 | 1.56 |
+| 21 | 64.58 | 27.65 | 7.3 | 33.45 | 14.11 | 52.12 | 1.98 |
+| 22 | 49.74 | 23.74 | 7.05 | 20.11 | 13.15 | 49.78 | 2.14 |
+| 23 | 62.15 | 25.89 | 7.2 | 26.12 | 12.67 | 50.45 | 1.45 |
+| 24 | 46.98 | 24.68 | 7.12 | 24.45 | 18.12 | 46.12 | 1.87 |
+
+### 10.3.2 观察与分析
+
+该系统通过在土壤水分超过设定限制时触发维护警报，减少了停机时间和故障。它还根据历史数据和性能趋势提供维护建议。该系统还通过移动应用程序的远程监控和控制，增强了用户可用性。该系统减少了对人工操作的依赖，并提高了水过滤系统的效率。
+
+`pH` 值在 `6.0` 到 `7.5` 之间，中性或微酸性，非常有利于植物生长和微生物活动。土壤温度范围在 20°C 到 30°C 之间，适用于生物过滤过程并维持植物健康生长。土壤营养水平监测还显示，氮处于 10–50 mg/kg 范围内，磷在 5–25 mg/kg 范围内，钾在 20–60 mg/kg 范围内。所有营养水平均处于获得良好植物健康的理想限额。电导率从低 0.5 dS/m 到高 2.5 dS/m，营养水平足以满足植物最佳生长，没有任何与盐碱胁迫相关的风险。
+
+滴灌水型过滤方法使土壤保持高水分状态，保留植物养分含量并增强生物基过滤器的性能。基于 IoT 的监控系统允许半实时数据收集，确保维持土壤水分条件的精确性，并最大限度地减少人工监控和维护需求。近期数据显示，在高峰期后水分百分比逐渐下降，表明滴灌并非过饱和特征。在实时监控运行信号中使用`data logger`（数据记录器）和`oscilloscope`（示波器），确保所有传感器数据传输的稳定性，从而使数据驱动功能的远程监控可视化。
+
+云平台用于无缝监控，验证和校准阶段证实了监控单元的有效性，如图 10.4 所示。绿墙过滤系统在集成更多传感器和 IoT 部分方面面临若干挑战；因此，寻求了兼容性，并对土壤传感器进行了校准，以确保整个系统可靠性的数据准确采集。因此，解决这些问题对于符合质量标准的、系统性能平滑集成至关重要。
+
+![图 10.4 带有人机界面显示的数据记录器。](img/9781041062943_C010_004.jpg)
+
+**图 10.4** 带有人机界面显示的数据记录器。
+
+### 10.3.3 总体影响分析
+
+水过滤效率和质量提高是现代过滤系统的核心，使其具有有效性和可持续性。通过最大程度消除污染物（包括悬浮固体、有机物、重金属和微生物），确保质量标准符合预期使用类型。效率与多种因素有关，涵盖通用过滤方法、系统设计和运行参数，包括先进技术的应用。
+
+两个示例是生物基过滤系统和滴灌过滤系统，它们确保使用天然可持续材料高效去除特定污染物，以最大限度地减少对环境的影响。过滤介质内部的分层、特定的流速控制和先进过滤技术都有助于更好地去除污染物并提高水质度。支持 IoT 的传感器通过实时监控浊度、`pH`、`conductivity` 和微生物污染水平等关键参数，进一步提高了过滤效率。这些传感器实现了运行设置的动态调整，例如修改流速或启动反冲过程以防止堵塞，从而使系统即使在水质变化的情况下也能处于水平水平。
+
+此外，利用数据分析和从历史及实时数据中学习的`ML algorithms`对系统行为进行预测，优化了操作以持续改进质量。不仅如此，过滤效率的提高有助于资源保护和可持续性。通过避免水浪费和提高能源效率，此类系统减少了生态足迹并最小化了运营成本。此外，由于高质量水的持续可用，其应用涵盖了从饮用水处理、农业灌溉到工业应用，以及废水的利用。最后，通过改进过滤技术和智能系统集成，可以实现效率和质量巨大提升，这符合可持续性和资源管理的总体目标。
+
+可再生能源供应是实现水过滤和其他关键系统能源独立的转型因素。事实上，通过将风能、太阳能和生物质等清洁可再生能源转换为电，这些系统独立运行，不依赖于传统的电网。这对于离网地区或无法获得传统电力基础设施的地方最有帮助。主要能源供应包括小型风力机和太阳能电池板，为驱动泵、监控设备和过滤组件提供电。
+
+可再生能源集成在保持运行的同时，进一步减少了温室气体排放，随后减少了整个系统的碳足迹。通过消除这些系统对化石燃料的依赖，实现了环境可持续性并降低了长期能源成本。智能能源管理系统通过动态平衡能源生产、存储和消耗，进一步增强了能源独立。例如，它在可再生能源发电高峰运行高能耗过程，并储备过剩能量供以后使用或供应辅助组件。使用一种以上可再生能源（如风能和太阳能）的混合系统由于其间歇性的互补性提供了更高的可靠性。这种方式，稳定的电源确保了在各种环境条件下的正常运行。此外，支持 IoT 的监控系统实时跟踪发电和消耗，从而提供可操作的见解以优化能源利用并减少浪费。通过提供能源独立，可再生能源集成有助于确保水过滤系统的可持续性和韧性，反过来支持全球使用清洁能源的倡议。这种方法还增强了能源安全，降低了运营成本，并扩大了此类系统应用的可扩展性和可普及性。
+
+
+
+环境影响分析（EIA）和资源节约是每项评估的内在部分，重点关注所给的可再生能源驱动水过滤系统在可持续性和持久性方面的可行性。环境影响分析通过研究自然资源的使用和退化、排放、废物以及生态系统健康来执行生态足迹分析。这些系统更加清洁，特别是当电力来自风能和太阳能等可再生来源时，与化石燃料驱动的替代方案相比，减少了温室气体排放。这使得它们在缓解气候变化方面至少有所贡献。此外，生物基过滤材料的使用有助于减少有害化学品的排放，并降低对合成不可生物降解组件的依赖，从而促进了环境保护。通过优化能源和用水实现的资源节约，确保了运行期间的浪费至最低。通过感知压力需求，先进的过滤系统能够在实时监控中自适应地调整水耗，以防止过度消耗。例如，某些机制通过在过滤和反冲中使用更精确的流速调节来减少水浪费，实现了高过滤效率且不堵塞。同样，通过安装补充的可持续能源，利用资源来缓解对传统供应电网的压力，减少了总能量消耗，从而降低了运营成本。通过高效的过滤过程回收和再利用进一步支持了节水。处理后的废水可用于农场灌溉、工业用途或生态系统修复，减少了提取地表水或地下水的需求。这在保持重要水资源完整的同时，减轻了全球干旱地区淡水短缺的影响。混合可再生能源增加了进一步可靠性，能够在现场变化的环境条件下持续运行，并进一步优化了这种资源利用。更广泛的生态效益包括减少排放到自然水体的未经处理废水，从而减少了对水生生态系统生物多样性的进一步影响。这减少了排放，节约了能源和水，为全球可持续目标和维护更好的环境做出贡献。因此，资源的节约和环境影响的缓解确保水过滤系统高效、成本效益且符合生态责任，为后代维持可持续发展。
+
+### 10.3.4 与传统过滤系统的比较优势
+
+绿墙过滤系统是传统系统的环保替代方案，结合了生物基过滤方法和物联网监控技术。该系统利用植物和土壤作为天然过滤器，减少了水净化过程中对化学处理的需求。该设计的电子设备和控制能量消耗由风发电支持。这使得系统完全独立于智能可持续绿墙。通过采用可再生能源，克服了系统对传统能源消耗方法以维持运行的依赖。
+
+## 10.4 结论
+
+通过部署的系统，绿墙实现了 85% 的去除效率，固体去除率为 90%，使其适用于目前用于园艺和非消费性活动的水的再利用。在 6.5 的中等 pH 值和 65–75% 的湿度范围内，过滤过程完成后为植物生长提供了最佳条件。支持物联网的传感器实现了水位、流速和系统健康的实时监控，允许进行动态调整和预测性维护。这些发现证实了该系统维持水质、节约资源和可持续运行的能力。
+
+## 参考文献
+
+1. Qin Y, Wang H, Zhang X, Li T, Chen J. (2019). IoT-based smart water quality monitoring system. `IEEE Access`, 7, 20090–20100.
+
+2. Tripathi A, Tiwari SS, Yadav DS. (2020, January). Smart water purification systems using IoT. In Proceedings of the 2020 IEEE International Conference on Sustainable Computing, Bhubaneswar, IEEE (pp. 145–149).
+
+3. Rajakumar R, Meena S. (2020). Nanocellulose-based water purification systems: A review. `Materials Today: Proceedings`, 27, 1731–1735.
+
+4. Kumar PS, Baskar R, Krishnan ST, Rajendran M. (2020). Algae as a sustainable solution for heavy metal removal from wastewater. `Environmental Technology & Innovation`, 17, 100583.
+
+5. Reddy DHK, Lee S-M. (2014). Magnetic biochar composite: Facile synthesis, characterization, and application for heavy metal removal. `Colids and Surfaces A: Physicochemical and Engineering Aspects`, 454, 96–103.
+
+6. Emslie D, Siddiqua S, Crawford B, Teece W. (2021). Biofilm formation and effectiveness of biosand filtration systems with typical and innovative filter media. `Geotechnical and Geological Engineering`, 1, 1–16.
+
+7. Karimullah S, Khan M, Shaik F, Alabduallah B, Almjally A. (2024, October 7) An integrated method for detecting lung cancer via CT scanning via optimization, deep learning, and IoT data transmission. `Frontiers in Oncology`, 14, `10.3389/fonc.2024.143504`.
+
+8. Hamed EA, Abas R, Talebi S. (2024). Application of microbial fuel cells in wastewater treatment and green energy: A comprehensive review. `Fuel`, 370.
+
+9. Abid MA, Amjad M, Munir K, Siddique HUR. (2024). IoT-based smart biofloc system for fish farming using machine learning. `IEEE Access`, 12, `10.1109/ACCESS.2024.33843`.
+
+10. Sharma SK, Sanghi R. (2012). Advances in Water Treatment and Pollution. Dordrecht: Springer. `10.1007/978-94-007-420-8`.
+
+11. Verma AK. (2011). Treatment of water and wastewater using natural adsorbents: A review. `Journal of Environmental Management`, 92(3), 2693–2702.
+
+12. Karimullah S, Khan M, Shaik F. (2024). Implementation and performance evaluation of improved hybrid deep learning approach for anomaly detection and classification in lung CT images. In 2024 International Conference on Recent Innovation in Smart and Sustainable Technology (ICRISST), Bengaluru, India, IEEE (pp. 1–6). `10.1109/ICRISST59181.2024.1092191`.
+
+13. Chua GX, Oh KS, Yoon LW, Tee LH. (2020). Lake water treatment using green wall system: Effects of filter media ratio and lake water flow rate on treatment performance. `Water Conservation Science & Engineering`, 5(3–4), 147–158.
+
+14. Svete LE. (2022). Performance of on-site systems and a green wall for greywater treatment. Doctoral dissertation, Swedish University of Agricultural Sciences, Uppsala, Sweden. Available: `https://ltu.diva-portal.org/smash/record.jsf?pid=diva2%3A1717383&dswid=-5054` (accessed 10 September 2024).
+
+15. Research Dive. (2024). 水质仪器行业的最新趋势与创新。获取自：[`www.researchdive.com/blog/recent-trends-and-innovations-in-the-water-quality-instrument-industry`](http://www.researchdive.com/blog/recent-trends-and-innovations-in-the-water-quality-instrument-industry) (2024 年 9 月 15 日访问).
+
+16. 加州大学欧尔维文分校 (UCI). (2024). 使用`E. coli` 检测水体重金属污染的新方法。获取自：[`https://ccam.uci.edu/uc-irvine-researchers-create-e-coli-based-water-monitoring-technology/`](https://ccam.uci.edu/uc-irvine-researchers-create-e-coli-based-water-monitoring-technology/) (2025 年 9 月 15 日访问).
+
+17. Yaacob N, Zainali NS, Rahman AAA, Yusof AL, Kassim M, Salehudin ASN. (2025). 基于物联网技术的水质监测系统设计。《应用科学与工程技术先进杂志》，45(1), 154–167.
+
+18. Rao A, Patel S, Singh R. (2024). 水务系统如何加速可再生能源的采用。《自然水》。2024 年 9 月。获取自：[`https://news.stanford.edu/stories/2024/09/how-water-systems-can-accelerate-renewable-energy-adoption`](https://news.stanford.edu/stories/2024/09/how-water-systems-can-accelerate-renewable-energy-adoption) (2024 年 12 月 15 日访问).
+
+19. Marinou A. (2024). 可持续海水淡化：可再生能源解决方案。Wattcrop. 2024 年 7 月。获取自：[`https://wattcrop.com/sustainable-water-desalination-renewable-energy-solutions/`](https://wattcrop.com/sustainable-water-desalination-renewable-energy-solutions/) (2024 年 12 月 15 日访问).
+
+20. Almar Water Solutions. (2024). 可再生能源在饮用水生产中的益处.
+
+21. Al-Saidi M, Ali K, Hassan N. (2024). 可再生能源在缺水世界中的意义。《空气、土壤与水资源研究》，17, 17–26.
+
+22. ACCIONA Agua. (2024). 由可再生能源驱动的水处理厂。创新。获取自：[`www.acciona.com/our-purpose/innovation/technology-innovation-centres/water`](http://www.acciona.com/our-purpose/innovation/technology-innovation-centres/water) (2024 年 9 月 15 日访问).
+
+23. 国际能源署 (IRENA). (2015). 水与食物中的可再生能源。获取自：[`www.irena.org/media/Files/Publication/Water_Energy_Food_2015.pdf`](http://www.irena.org/media/Files/Publication/Water_Energy_Food_2015.pdf) (2024 年 12 月 10 日访问).
+
+24. Su X, Zhang Y, Wei L. (2023). 太阳能可以帮助净化水，贝克曼先进科学研究所。获取自：[`www.sciencedaily.com/releases/2023/07/230722`](http://www.sciencedaily.com/releases/2023/07/230722) (2024 年 12 月 10 日访问).
+
+25. Shaik F., Karim S., and Ahmed J. (2024). 使用血管分割进行青光眼筛查。智能与可持续技术国际会议 (ICRISST)，1–6。DOI: [`10.1109/ICRISST59181.2024`](https://doi.org/10.1109/ICRISST59181.2024).
+
+# 物系统中高效数据聚合与恶意节点检测的策略方法
+
+Ganesh Srinivasa Shetty, Raghu N., Ranjith Bhat, P. Rajashree Nambiar, and Anil Kumar D. DOI: [`10.1201/97810033468`](http://doi.org/10.1201/97810033468)
+
+## 11.1 引言
+
+物联网（IoT）已成为现代医疗的重要组成部分，提供了改变游戏的解决方案，提升了医疗服务的效率和质量。基于物联网的系统通过优化设备、传感器和智能软件的融合，使患者和医疗提供者能够轻松监测和收集实时数据。然而，物联网的采用带来了许多需要考虑的挑战。Web 2.0 面的一些挑战包括数据安全、系统完整性和功耗。智能医疗系统处理大量的患者数据，使其容易受到数据操纵、未经授权访问和设备污染的影响。数据的隐私和信誉必须得到强力保护，因为人们需要信任这些信息（[Mahadik 等人, 2024]）。此外，由于物联网设备的资源有限，寻找节能解决方案以使设备在不牺牲性能的情况下运行更久至关重要。物联网网络中的不可信节点尤为危险。此类节点可能会用假信号破坏输入信息，甚至切断信息流，威胁医疗应用的安全。必须通过涉及计算机程序、安全流程和自适应系统的创新主动识别并应对这些威胁。本章将讨论这些关键领域：高效数据聚合技术和物联网医疗系统的恶意节点检测。本章的创新之处在于处理安全数据时，最大限度地减少传输开销。此外，本章还探讨了新兴解决方案，包括基于信任、机器学习（ML）和区块链等，以解决安全问题。具体的用例客观地展示了轻量级加密、能源和人工智能（AI）异常检测技术的实际应用，这些技术使得物联网医疗系统更加安全且具有扩展扩展。
+
+## 11.2 物联网在现代医疗中的作用
+
+物联网（IoT）已成为现代医疗体系的基石，提供了提高医疗服务效率和质量的转型解决方案。物联网将可穿戴传感器、植入式监测器和智能医疗设备集成到一个凝聚的网络中，实现了实时健康监测。这种能力使医疗保健人员能够持续跟踪心率、血压、血糖水平和氧饱和度等关键生理参数，确保及早发现异常并及时进行医疗干预。物联网在医疗领域最有影响力的益处之一是促进远程诊断与治疗（Li et al., 2024）。通过物联网设备驱动的远程医疗平台，患者无需访问医疗机构即可接受医疗咨询和诊断。这对于专业医疗服务资源有限的农村或医疗服务匮乏地区特别有益。通过将患者的实时数据传输给医疗专业人员，物联网确保了诊断的准确性和治疗方案的有效性，减少了就诊次数。个性化治疗是物联网在医疗领域的另一个显著优势。通过使用`AI`和`ML`算法分析个人健康数据，物联网系统可以定制医疗干预以适应患者的独特需求。这包括调整药物剂量、预测潜在健康风险以及优化治疗方案。这些进步增强了治疗的疗效并改善了患者预后。此外，物联网在实现居家护理方面发挥着至关重要的作用，这在现代医疗中变得日益重要。物联网设备监测健康参数并将数据传输到云平台，患者可以在在家的同时接受医疗监督（Abdulmalek et al., 2022）。这不仅提高了患者的便利性和舒适度，还减轻了医疗机构的负担，使关键资源能够得到更有效的分配。
+
+## 11.3 物联网医疗中数据安全与完整性的挑战
+
+
+
+随着全球医疗体系采用物联网解决方案，这引发了对数据安全性和真实性的质疑。网络威胁对连接的物联网智能设备构成了重大风险，增加了其脆弱性[^195]，并危及患者数据和医疗服务的提供。所有这些关注点都集中在安全性上，即系统应免受任何可能损坏或篡改重要医疗数据的恶性实体的影响。主要风险在于未经许可访问患者相关信息。大多数物联网医疗设备通过无线链路接口传输数据，这使其容易被黑客窃听。黑客可能会窃取或歪曲重要数据，包括患者数据、诊断数据和治疗数据，其目的是侵犯个人隐私及违反法律。后续问题是数据操纵和伪造。恶意节点有能力选择性地提供不准确读数，导致患者识别、诊断和治疗出现错误。这不仅让系统用户变得更加脆弱，也使物联网医疗系统的可靠性降低。然而，拒绝服务攻击（`DoS`）及类似攻击对物联网医疗服务及其他相关服务的可用性构成威胁（Kadri et al., 2024）。例如，攻击者可能会恶化设备或网络的性能，甚至导致数据丢失或完全崩溃。这可能会产生灾难性的后果，在需要严密监测和报告的情况下使患者生命面临危险。物联网设备还面临与拥塞和严格的资源利用限制（如处理和功耗）相关的挑战。由于这些限制，制定标准且有效的安全措施具有挑战性，因为它会阻碍设备性能或显著缩短其使用寿命。平衡能量效率与安全性是一项艰巨的任务。
+
+## 11.4 高效聚合与恶意检测的重要性
+
+数据聚合和恶意节点检测可以被视为设计增强型物联网医疗系统的关键要素。这些系统依赖于大量互连的智能对象，包括持续获取、传输和分析处理数据的可穿戴传感器和医疗监护器。然而，这种互连架构在一致性、安全性、功耗和扩展性方面存在问题。减少数据获取的方法是高效数据聚合的特征，旨在通过整合和压缩来自多个物联网传感器的数据，最大限地减少进入系统的数据量（Aldin et al., 2024）。这种优化在保持数据质量和准确性的同时，减少了受限设备的网络带宽占用和功耗。恶意节点检测确实确保网络可靠并免受欺诈背叛节点破坏的解决方案，这些节点很容易破坏网络性能并操纵数据。
+
+高级检测方法的利用依赖于实施可信框架和处理新算法，以最大限度地减少影响医疗信息的潜在威胁[^196]。这些方法相结合使物联网医疗系统能够安全、高效且可靠，满足消费者和执业者的预期。图 11.1 展示了高效数据聚合和恶意节点识别的目标。本文采用的分析和结构视角强调，为了系统的最优性和可靠性，必须系统且全面地解决所有这些挑战。
+
+![图 11.1 数据聚合与恶意节点检测。⏎](img/9781041062943_C011_001.jpg)
+
+**图 11.1** 数据聚合与恶意节点检测。⏎
+
+当涉及到通过 IoT 医疗系统提供的健康服务时，保护和提供患者数据都至关重要。数据安全意味着在患者信息传输和电子存储过程中，保护其免受恶意的未经授权访问、泄露或干扰。为了实现这一点，可以使用通信加密，例如使用端到端加密和同态加密[^197]。“数据完整性”一词表示信息从源点到接收端保持其完整且未被修改的状态（Erbey & Barışçı, 2022）。可以通过加密哈希函数和数字签名来保护数据完整性，防止对从源收集的数据进行未经授权的更改。除了增强患者的机密性，它们还能提高决策中医疗信息的准确性。
+
+### 11.4.2 减少传输开销
+
+医疗领域使用的 IoT 会产生大量关于患者、环境和诊断等方面的数据。将所有这些原始数据同步到某一点可能会导致网络资源紧张，并导致不利的瓶颈、延迟期以及电池供电设备的能量消耗。在保持所需信息内容的同时减少数据量，数据聚合方法发挥着重要作用，包括摘要方法、数据压缩和过滤。然而，像边缘计算这样的技术（在数据源附近进行某些处理）可以扩展这种传输需求的减少，使 IoT 医疗系统在成本方面更加有效（Alnaim & Alwakeel, 2023）。
+
+### 11.4.3 恶意节点的早期检测与缓解
+
+IoT 医疗系统依赖于检测和隔离网络中危险节点的机制。这些节点可能源于受感染的设备或试图控制或破坏系统的额外系统威胁。更复杂的方法（包括基于信任的方法和机器学习 `ML`）可以识别被认为是异常的模式或行为，例如数据生成率等。通过使用异常检测、聚类算法或信任管理系统，可以识别恶意节点并立即消除它们。通过这种预防性方法，可以维持整个系统的无缝和安全运行，并保护患者的护理。
+
+### 11.4.4 平衡能量效率与安全性
+
+目前医疗领域使用的绝大多数 IoT 设备电池电量低且计算能力有限；因此，能量效率仍然至关重要。尽管在实现能量效率或节约的过程中，有时会在安全性上做出妥协，但这是永远不可接受的。例如，弱的数据加密方法如椭圆曲线密码学（`ECC`）和优化的哈希机制，在使用有限功率的同时提供了强大的安全性。正如在能量感知路由协议和自适应占空机制中一样，可以在不影响数据机密性和完整性的情况下优化功耗。公平地实现这两个目标允许设备的可持续使用，并让人们对系统充满信心做出响应。
+
+### 11.4.5 确保扩展性与健壮性
+
+事实上，随着 IoT 医疗系统的增长、设备的增加以及更多消费者的连接，系统的运行需要敏捷且高效。因此，有必要设计技术来检测并聚合这些元素，使其形成能够适应更重负载和变化条件的形式。系统的效率通过用于数据聚合的分层聚类、分布式处理和自适应算法来实现。韧性主要与策略相关，可能包括拥有冗余系统和组件，以便在通信或组件功能丢失时运行不会中断（Sterbenz et al., 2010）。扩展性和健壮性的结合确保了 IoT 医疗系统在多样化垂直领域的可持续性，因此具有了复杂性。
+
+### 11.4.6 提高 IoT 医疗系统的信任度
+
+医疗行业 IoT 的共同目标是将信任作为其基石之一。专业人员、患者以及使用系统的个人需要确保它是安全的、可靠的，并根据需要保护数据。减少与侵入、访问和数据操纵等安全威胁相关的风险，并维持可靠的信息一致性，将增强这种信任。通过正确管理数据以及采用透明政策和定期审计以确保系统用户友好，还能培养更大的信心。有效的 IoT 医疗系统为整个医疗平台提供了更高的安全性和效率，并增强了其在医疗行业的采用和整合，显著提升了患者满意度，并最终带来了更好的医疗系统。
+
+## 11.5 基于 IoT 的医疗系统概述
+
+兴起的 IoT 医疗系统正在彻底改变医疗部门的运行，因此正在开发连接设备和先进技术来收集数据、监控活动并做出智能决策。这些系统结合了广泛的硬件和软件元素，为患者和医生服务提供了新方法。IoT 在医疗环境中提供更高的效率、改进的可用性和增加客户针对性方面发挥着重要作用（Bhatia et al., 2020）。大多数基于 IoT 的医疗系统通过从设备网络、通信格式和计算平台收集数据来工作，允许数据分析。从这些架构中，可以得出观察此类系统用途、功能和问题的起点。
+
+### 11.5.1 医疗应用中的 IoT 架构
+
+使事物“智能化”的过程或 IoT 真正改变了医疗面貌，因为组织能够采用互连的系统，收集并分析实时数据，以更好地促进患者与护士及医生之间的关系。IoT 医疗建立在智能设备、通信标准和相互集成的计算平台上[^199]，以改进护理交付过程。此类系统涵盖可穿戴设备、远程监控工具和最先进的传感器，并配有 `Bluetooth`、`Zigbee` 和 `LoRa` 等通信技术（Abdulmalek et al., 2024）。在云和边缘计算的支持下，确保了正确的数据处理和分析以及决策制定。此外，安全的计时设备和图形用户界面（`GUI`）构成了一个集成环境，确保患者在适应当前动态医疗环境的同时隐私安全。图 11.2 显示了医疗 IoT 的简要架构。
+
+![图 11.2 医疗架构。⏎](img/9781041062943_C011_002.jpg)
+
+**图 11.2** 医疗架构。⏎
+
+### 11.5.2 设备：可穿戴设备、传感器和远程监控工具
+
+IoT 医疗系统的核心是多种旨在收集相关数据的设备。这些设备包括：
+
+- **可穿戴设备**：这些可穿戴产品包括智能手表、健身追踪器和其他类似设备监测心率、血压、血糖水平和活动水平等数据。这些设备安全、易于使用，并且优于在家进行实时健康监测。
+
+- **传感器**：在使用物联网（IoT）时实时采集的健康参数包括联动设备、心电图传感器、温度传感器以及氧饱和度传感器。这些传感器可以被整合到可穿戴的反应器、植入式设备或固定医疗设施中。
+
+- **远程监控工具**：智能吸入器、血糖仪和智能分药盒允许慢性病患者接受远程监控（Badiger et al., 2025）。它们使得将数据持续发送给提供者进行分析和后续处理成为可能。
+
+这些设备构成了物联网系统的前端，负责从患者和环境中收集原始数据以供进一步处理。
+
+- **LoRa（远距离传输）**：LoRa 本质上是一种用于物联网的无线连接方法，其特点是远距离、低功耗；因此，它是农村或偏远医疗保健的理想选择。这使其能够根据当时的环境条件进行数公里远的数据传输，实现广泛的监控。相关协议还导致了低功耗，减少了设备电池的更换频率。此外，LoRa 在患者监控任务具有良好的扩展性，可以同时监控多个患者。LoRa 应用于医疗保健，用于监测远地区患者的健康状况，利用信息物理医疗支持系统（`CHSSs`）收集流行病学数据，并收集水质或气候条件等与健康相关的因素信息。
+
+- **Wi-Fi**：Wi-Fi 是一种全球通信标准，广泛应用于城市的医疗机构，以高数据吞吐量能力和传输海量数据的能力为特征。因为它提供了高数据传输率，所以适合传输大量数据，例如患者的 X 光片或远程医疗的视频流。大多数医疗机构已经建立了强大且可靠的 Wi-Fi 系统，并准备好整合物联网技术。Wi-Fi 还促进了兼容性；设备能够接入现有网络并与电子健康记录（`EHRs`）等工具建立接口。在医疗领域，Wi-Fi 用于在可穿戴设备与医院服务器之间传输数据、远程医疗中的高清视频、医疗设备、资产跟踪等。
+
+- **蜂窝网络（例如第四代 4G、5G）**：在涉及医疗管理时，如果没有蜂窝网络，远程医疗等带宽密集型应用无法运行（Ansarian & Baharlouei, 2023）。它们主张在移动医疗解决方案和不幸的紧急情况下所需的持续连接。此外，蜂窝系统提供了极高效、高速度的数据传输，特别是 5G 网络，它具有超低延迟和高带宽，适用于关键医疗保健。其广泛的范围为大多数城市和郊区网络提供了运行保障；移动性允许设备在移动时保持连接，例如在带有遥测功能的急救转运车辆上。在医疗领域，蜂窝网络实现了远程诊断和实时远程会诊、用于转诊意见的高分辨率诊断图像或视频，以及带有物联网的用于外展计划和紧急情况的移动医疗诊所——救护车向接收医院传输患者详情。
+
+- **数据处理**：原始数据在被消费后会被清洗、归一化和转换以便于精确化。这是一个通过删除任何重复数据、错误数据并格式化数据以适应分析的过程。过滤是预处理的另一项重要活动，涉及减少大量的噪声数据和信息，以提高数据质量（Badiger & Mathew, 2023a, 2023b）。在医疗领域，这可能意味着为数据测量建立结构，例如为了保持一致性，或在需要时间分析时确保每个数据源使用相同的时间戳。
+
+- **分析**：在数据预处理之后，信息经过数据分析处理以获得增强医疗保健的可用结果。人工智能（`AI`）和机器学习（`ML`）都被应用于发挥作用，通过实施预测性诊断、识别患者信息中的模式、预测许多健康相关问题并建议预防性措施。通过历史和实时数据，大数据预测分析利用建模方法来发现和理解趋势，这将支持慢性疾病的早期干预和流行病学调查。此外，仪表板和图形界面等转换工具使用户能够轻松处理可能难以翻译的数据（Karimullah et al., 2024）。这些工具使医疗提供者能够早做出明智决策，例如持续跟踪患者的生命体征/趋势。
+
+- **存储**：然后根据物联网系统对医疗保健的需求，对提取的数据进行详细处理并存储在大型、有效且安全的数据库中。`SQL` 数据库更适合具有定义关系的结构化数据流，例如患者记录，使其变得可靠且一致。大规模可扩展的分布式数据库系统以及某些系统（如 `NoSQL` 数据库）适用于非结构化或半结构化数据，如传感器日志、诊断工具的多媒体文件等。物联网传感器产生序列数据，像 `InfluxDB` 等时序数据库已开发用于处理时间戳数据并允许通过时间或时间间隔进行趋势搜索（Shaik et al., 2024）。这些存储解决方案允许对分析所需的数据进行频繁访问和快速提取，并具有高可用强一致性以实现实时决策，而且长期具有极高的耐用性。
+
+数据管理和分析层是医疗保健领域革命性的变革力量，因为它从整体上解决了数据管理和分析，同时弥补了供需差距并促进了多个领域的突破（Batko & Ślęzak, 2022）。其中之一是促进了个性化治疗的提供，因为治疗是基于患者数据的，从而提高了医疗交付的准确性（Shetty & Badiger, 2024）。
+
+### 11.5.3 安全与隐私
+
+安全与合规层是物联网医疗系统的基本前提，因为它解决了患者信息的保护并保证了连接医疗解决方案的可靠性。该层通过以下组件解决安全和监管遵循的关键问题[^202]：
+
+- **身份验证与授权**：从属安全措施有助于确认用户和设备的身份，确保只有授权客户端才能访问必要的系统。双因子身份验证、生物识别、数字证书和令牌验证人和事物，而访问控制模型如基于角色的访问控制（`RBAC`）和基于属性的访问控制（`ABAC`）分别基于角色和属性。例如，可能会出现医生可以使用复杂的患者病史进行监测/诊断的情况，而技术人员只能查看设备维护报告。
+
+- **加密**：透明性和安全性意味着数据在传输或存储时保持完备且处于锁定状态，并且最能防止截获。`TLS` 为物联网设备、服务器和应用程序传输的数据提供保护，`AES` 则保护存储的数据，使任何人在没有解密密钥的情况下无法读取数据。
+
+- **异常检测**：实时系统有其特定的应用场景，主要保护数据和设备活动，以便在发生威胁或侵入时能够检测到。基于 `AI` 和 `ML`，行为分析可以识别出异常或偏离正常的行为；告警系统会通知管理员错误或不正常的情况，例如多次登录失败或流量负载突然激增。例如，此类系统可以针对受攻击设备发出警报，其主要目的是防止数据泄露。
+
+- **合规性**：监管合规确保医疗物联网系统按照法律和道德规范正常运行。数据保护和隐私受监管措施控制，例如《通用数据保护条例》（`GDPR`）、`HIPAA` 和加州消费者隐私法案（`CCPA`）。策略、审计追踪和数据保护流程遵循这些标准，从而为患者数据提供了访问性、问责性和保障。
+
+促进物联网医疗风险与信任的重要部分由安全和合规层完成（Parihar et al., 2024）。网络威胁和入侵得到良好保护，以确保敏感患者数据的自由流动，保护其机密性和完整性。这些措施的结合确保服务人员可以完全专注于提供高质量的患者护理，同时确保数据的安全。
+
+### 11.5.4 用户交互与反馈层
+
+用户交互和反馈层可以被视为连接用户与物联网医疗系统的叠加层，负责传递信息并提供提供反应和控制流程的方法。该层旨在开发具有交互性、易理解性和响应性的接口，提供决策信息并延迟地调整用户需求。其主要组件包括：
+
+- **接口**：因此，接口可以是多样化的，便于用户与物联网系统交互。移动应用程序让医生能够在智能手机或平板电脑上立即访问数据、健康状况指标和系统界面。基于 Web 的仪表板为医疗从业人员、医疗经理或研究人员提供相关医疗信息的丰富分析。智能音箱还包括语音控制，使其成为残障人士或医疗区域动态环境下人员的优选。此外，培训和监控应用被开发为可能的增强现实/虚拟现实（`AR/VR`）平台，例如虚拟解剖课或 AR 患者护理。
+
+- **反馈机制**：实时反馈对于确保用户获取信息并对突然变化做出反应非常有用。其他意识的形式包括通知和告警，其范围从警告生命体征异常到提醒用药时间。物联网系统能够根据用户的使用模式或环境特征多或少自动地调整操作，例如调节患者周围温度的智能温控器。催眠建议，例如为慢性病患者偶尔修改运动方案，或根据从患者计划汇总的数据分析来改变饮食习惯。
+
+- **用户体验（UX）**：研究结果表明，过度强调此类系统的访问性和简化化对于实现物联网医疗系统的预期效益至关重要。直观设计提供了认可度。对于接口而言，简单是终极境界，因为不同的用户对复杂接口的技能熟练程度不同。各种措施，如为视障用户提供的允许交互和舒适使用应用程序的工具、语言支持以及高对比度模式，有助于应用程序的包容性。来自持续测试的终端反馈有助于微调整个使用过程中的体验，减少不一致性并提高普通用户满意度，从而增强与系统的交互。
+
+### 11.5.5 物联网在医疗领域的优势
+
+物联网在健康领域的优势：在此背景下，物联网为医疗行业提供了大量的机会，为患者和整个医疗机构带来了许多积极变化（Frimpong et al., 2023）。因此，物联网通过提供实时采集、分析和报告解决了传统医疗的若干问题，并提供了新的选择。以下是物联网在医疗领域的一些关键优势：
+
+#### 11.5.5.1 实时监控
+
+保持连接是物联网为医疗行业提供的最大优势之一，因为可以一直监控患者的生命体征和健康状况[^204]。
+
+- **立即告警**：其他现有智能设备（如连接到患者健康记录的可穿戴传感器）可以识别心率异常或血氧水平下降等偏差，并通知医疗从业人员。这便于向医生进行适当转诊，甚至在患者病情非常危急时救命。
+
+- **远程健康管理**：这也可以在家里舒适地完成，医生无需面对面咨询即可做出决策。这在管理糖尿病或高血压等慢性疾病方面更为有效，这也是其特别有用的方法之一。
+
+- **术后恢复**：物联网设备可以帮助监控手术和其他严重状况的恢复情况，允许医生和护士看到伤口状态、活动能力改善以及整体健康状况，而无需让患者反复住院。
+
+### 11.5.6 增强患者疗效
+
+物联网医疗系统通过促进诊断、治疗以及护理规划与协调来增强患者的疗效。
+
+- **数据驱动的洞察**：来自物联网设备的持续数据流让医疗服务者能够获得充分信息，从而减少诊断错误并提高治疗的准确性。
+
+- **个性化治疗方案**：源自患者收集数据的算法可以根据其病情的变化（例如处方药剂量的调整或生活方式的改变），为每个患者独特地理解并制定治疗方案。
+
+- **改进慢性疾病管理**：在慢性疾病中，物联网设备提供持续检查，协助医疗团队采取早期行动，防止对患者状况产生不利影响。
+
+### 11.5.7 成本效益解决方案
+
+物联网技术在患者和医院治疗及资源利用方面提供了节省效率的解决方案，将极大降低双方的成本。
+
+- **减少就诊次数**：物联网通过远程监控和远程医疗消除了定期看医的需求，延长住院时间降低了患者和医院的成本。
+
+
+
+**优化资源利用：** 物联网（IoT）使得高效地管理医院环境中所需的许多资源成为可能，因为它包含了任何医院持续面临的库存、设备使用情况和需求等相关信息。例如，智能设备可以跟踪医院床位的占用情况和人员分配。
+
+**预防性医疗保健：** 通过物联网设备进行的自我诊断发生在症状出现之前，从而限制了对已诊断疾病进行大量治疗所产生的费用，并延伸了“预防胜于治疗”的理念。
+
+物联网与医疗系统的结合，可以在需要时提供适当的行动，提高患者的生活质量并降低成本。通过通知、健康监测和定制化解决方案，物联网重新定义了医疗保健，使其从普通医疗体系中看到的被动处理过程转变为一种主动的智能系统。由于其成本相对较低，它增加了优质服务的可用性，使客户和医疗机构均从中获益。
+
+## 11.6 IoT 中的数据聚合技术
+
+物联网网络中的数据采集/积累假设在将结果转发到中心点（如网枢或云端）进行进一步处理之前，需要对来自各种传感器和设备的数据进行收集、分析和协同集成 (Kuchuk & Malokhvii, 2024)。该技术对于在物联网医疗应用中最小化带宽利用、减少通信支出以及增强系统性能至关重要。下一节将对物联网网络中的数据聚合过程进行详细分析。
+
+### 11.6.1 物联网网络中的数据聚合概念
+
+物联网中的数据采集是指在从多个物联网设备（传感器、可穿戴设备、智能设备等）接收的数据传输到云端数据处理中心或进行进一步分析之前，进行积累和集成。这对于数据管理至关重要，特别是对于医疗设备，因为它们会产生大量数据。数据聚合的一些主要目标包括减少传输的数据量、提高数据质量，最终减少延迟周期。物联网网络中数据聚合的关键组件列如下。
+
+#### 11.6.1.1 数据采集
+
+**数据来源：** 物联网中使用可穿戴健康监测器、生物识别传感器和远程监测设备来为医疗领域的运营和患者护理提供持续的数据支持。这些设备通过监测脉率、血压、血糖水平、`SpO[2]` 和温度获取健康状况的瞬时数据，并提供针对患者的及时行动 (Boikanyo et al., 2023)。它还跟踪环境状态（如室内温度、湿度和噪声），以便在医疗环境中设置适当条件，从而改善医疗机构的设施。此外，物联网设备会监测并报告其工作倾向、性能分析、能量能力以及连接情况，以解决及时且不中断的医疗服务交付中的可靠性问题。
+
+**数据类型：** 医疗物联网设备收集的各种形式的记录反映了其涉及的不同类别；每种记录在提高所提供的护理质量方面发挥着独特的作用。脉率、温度、血压、能力水平和睡眠时长等测量有助于我们对患者健康进行整体评估，并在发现问题时制定治疗计划。显而易见，行为信息对于慢性病控制至关重要，通过用药行为、步数和饮食习惯可以促进更健康的生活方式。此外，地理位置数据通过识别患者的位置帮助引导患者的移动性。
+
+**挑战：** 物联网产生的海量数据在管理方面带来了几个问题。由于生成数据的性质极其庞大，数据大小是一个主要关注点。为了克服这个问题，有必要开发在某种程度上具有可扩展性的解决方案。实时响应是另一个挑战，因为业务关键型应用程序在处理大量数据的同时，必须对通知、紧急消息等重要措施做出响应。此外，数据集成至关重要，因为从智能胶囊到植入式设备的任何事物都会持续贡献各种不同格式的数据。这些数据必须经过归一化，因为在目前的非结构化格式下，它们无法跨系统和平台轻松传递和和谐使用，即使在结构化格式下也是。
+
+#### 11.6.1.2 数据处理
+
+**聚合技术：** 对于物联网医疗产生的数据，聚合技术在物联网医疗的预处理步骤非常有帮助，因为它们有助于处理过量的原始数据。数据大小的减小在不损害重要细节的情况下优化了数据的存储和传输；因此，它在保持数据的同时减少了发送数据的大小。在采样情况下，有时按固定间隔选择数据点，其优点是在保持数据相对准确的同时更节省资源。过滤过程丢弃了不需要和无关的信息，否则这些信息可能会分散新信息的价值。总而言之，这些技术促进了数据管理，优化了数据处理，并使构成医疗领域的应用能够实现实时决策。
+
+**特征提取：** 特征提取对分析物联网医疗数据有很大帮助，因为它允许立即从原始数据中产生有意义的值、时间趋势或速率。这种干预有助于在考虑决策必要参数的情况下提高信息计算的效率。例如，在将每条记录的温度作为数据流的一部分发送时，分钟级的波动应该总结为可以有效处理的差异。
+
+**数据融合：** 患者的数据融合涉及整合来自两个或多个传感器或设备的输入，以提高诊断患者的效率。当涉及血糖水平和身体活动数据等不同类型的聚合时，很容易找到有意义的模式。例如，将血糖模式与运动记录相结合可以改进患者血糖控制方面的护理，从而提高医疗治疗的有效性。
+
+**优化带宽使用：** 通过对其数据集中的数据进行压缩，能够减少网络中传输的不必要数据，从而降低传输成本并提高系统效率。在聚合的帮助下，更少的数据传输使得避免在网络上传输大量数据成为可能，这对带宽受限的环境至关重要。这意味着掌握关键数据速率、健康状况测量或危机警报的数据可以传输而不会导致系统拥塞，使框架更加高效。数据传输减少带来的另一个竞争优势衡量标准是成本效益。这是因为在进行记录、归档或与其他医疗中心进行协作时，发送较少的数据（特别是使用昂贵的蜂窝网络和卫星通信时），可以避免耗费更多带宽的成本。这使得物联网中的医疗系统对低连接区域廉价且可持续的连接具有更高的响应。当流量在网络中产生问题时，减少流量可以提高网络性能。当连接到通信网络的用户较少时，流量拥塞的概率较低，从而获得更好的性能；这对于患者监测或应急响应等实时应用至关重要。这确保了重要的医疗服务不会因为网络限制而受到影响。
+
+**提高系统效率：** 当数据在边缘节点或物联网设备上进行预处理和处理时，可以获得更低的服务器负载。这种方法最大限度地减少了使用中央云服务器进行大量计算的需求，以提高系统性能，并确保医疗基础设施能够同时支持更多设备。在传输之前聚合数据的方法通过对系统进行优先级排序，增强了响应速度。首先，早期排除不重要的数据也有助于系统快速分析输入数据并做出实时决策，例如，告知医疗提供者患者的状况。在必须分析和传输少量数据的场景下，实现了资源优化。由于不断膨胀的数据需求是阻碍潜在医疗系统的核心因素之一，数据量的减少有效允许了可用计算资源的全面分布，从性能角度来看，这可能支持更多的相关设备和用户。这在对基础设施有灵活性要求的设置中（例如大型医院或移动诊所）尤为真实。
+
+**增强数据质量：** 来自不同提供者和设施的聚合数据创建了对患者状况更准确的描述，这对于实现诊断和有效治疗具有非常积极的影响。因此，从单一视图的角度来看，从各种来源（包括心率监测器、血糖跟踪器和其他集成到单一图中的其他类型活动追踪器）获得了整体健康洞察。例如，对于具有非常健康且身体活跃的生活方式的患者，可以在某种形式的整合到健康状况评估的同时，评估健康水平。在同一数据库中整合信息增强了精确诊断和治疗的可能性。
+
+**实时监测：** 同样，实时数据聚合带来了及时的警报和干预，医疗系统可以立即定位健康差异，例如心率异常或血压水平突然变化。这使得能够在最早向医疗提供者发出警报，这可能有助于在并发症发生前通过早期处理来拯救生命。实时数据收集有助于预测和健康管理（PHM），特别是对于那些慢性疾病患者。它能够定期调整患者的治疗方案、饮食或药物剂量，使系统更容易适应患者的当前状况和情况，从而促进患者整体健康的改善。在所有形式的健康紧急情况下，都有必要在急医疗突发情况下对所谓的“实时”数据（包括生命体征和氧水平）进行有效且即时的聚合。这确保了负责患者的医疗专业人员能够快速了解患者的状态，从而做出快速决策并采取适当的必要行动来稳定患者。
+
+### 11.6.3 数据聚合技术类型
+
+许多物联网网络旨在通过这些方法利用物联网数据聚合，每种方法都有独特的特征（Aga et al., 2024）。这些技术主要用于以最小的带宽消耗、通道负载和增强系统性能来访问、处理、格式化和传输数据。以下是物联网中使用的三种主要数据聚合技术。
+
+### 11.6.4 分层聚合
+
+分层聚合是在层次多个级别上实现数据聚合来实际管理大量物联网设备的另一种方法。这对于大量的物联网系统特别有用，因为物联网架构可能在许多医疗设施中或跨越地理不同的区域实施。
+
+#### 工作原理
+
+首先，从单个传感器和设备收集并聚合的数据在本地存储在传感器范围内。然而，这些本地数据值随后会在中间节点（可能是网关、区域中心或任何医院中心）中求和，然后发送到中央服务器或云端。这种数据层次结构有助于简化聚合序列，使其能够有效高效地流跨网络域。
+
+#### 益处
+
+分层聚合产生的另一个主要益处是最大限度地减少系统内部的数据传输，数据在传输到中央系统之前已经在不同层级进行了本地聚合。这减少了通信浪费并缓解了网络内的流量。它还提供了更好的扩展性，以便系统未来可以容纳来自不同制造商的更多设备。此外，数据在中间层进行本地处理，如上所示，有助于减少延迟，因为只有过滤后的数据子集向上传输。
+
+#### 医疗应用
+
+例如，在大型医院设置中，来自重症监护室（ICU）、遥测和门诊等部门的传感器的采集数据在每个部门内部本地求和。以这种聚合方式收集的数据随后传输到医院枢纽进行分析和计算，然后汇总到中央服务器。这有助于分担主通信网络并仅传递相关和重要的数据，从而提高系统效率和整体决策过程。
+
+### 11.6.5 基于簇的聚合
+
+基于集群的层次化聚合是一种机制，它将 IoT 设备分组为多个集群，并且对于每个组，都存在一个被称为聚合器的设备。在集群的情况下，每个集群中的各个设备将其信息传输给簇头，再由簇头结合来自其他设备的信息，并将整合后的数据转发到主服务器。这种方法节省了数据传输的时间，并优化了其数据流，特别是在大规模的 IoT 网络系统中。
+
+#### 工作原理
+
+设备根据它们之间的亲密程度、关系以及它们执行的功能进行划分。例如，在医疗机构中，测量某些方面（如血压、温度、脉率等）的设备可以根据医疗机构内部的区域或捕获的数据类型形成集群。簇头负责收集组内所有设备收集到的所有数据，在对数据进行可能的过滤、总结或压缩后，将结果发送到中央服务器。
+
+#### 优势
+
+使用基于集群的聚合的一个显著优势是节能，因为广播次数被减少到了最低。这对于由电池供电的 IoT 设备尤为重要，因为它延长了它们的使用寿命。该方法还可以减少在网络上传输的信息量，从而避免各种程序或进程过度使用网络。此外，这种方法具有高度的可扩展性，因为它是去中心化的，并将计算负载分散在各个 `CLs` 之间，适用于大型 IoT 网络。
+
+#### 医疗应用
+
+在可穿戴健康监测系统中，测量脉率、氧水平和血压等生命体征的传感器可以根据患者区域进行子分类，例如，病房级或患者房。所提议的新组中的簇头将从传感器收集数据，减少所收集的数据量，然后将平均数据集上传到监测系统。这有助于在网络中释放一些流量空间，并实时快速、有效地监测患者的健康状况。
+
+## 11.6.6 基于压缩的聚合
+
+基于压缩的聚合涉及通过各种数据压缩技术在传输数据之前先对某些数据进行压缩（Ketshabetswe et al., 2021）。这在 IoT 用例中特别有用，因为设备在不断创建数据，而可用的网络带宽通常很小。通过在传输过程中进行数据压缩，这种技术有助于节省资源。
+
+### 工作原理
+
+在对 IoT 设备生成的原始数据进行直接压缩时，数据减少包括一系列技术，如游程编码、小波变换，或对所有收集的数据进行均值或中位数等统计表示。这些方法有助于在保持数据集中重要特征的同时，尽量减少数据量。数据被压缩后，将进行分段并在网络中传输，同时保留大部分信息，因此能够最小化数据流，同时保证网络资源的优化。
+
+### 优势
+
+使用基于压缩的聚合的优势包括减少带宽消耗、增加吞吐量和降低功耗。减少数据大小是有益的，因为信道的占用频率降低，带宽利用率提高，从而降低了传输成本并使上述系统在经济上可行。这意味着递送过程得以加速，系统整体性能随之提高，适用于实时健康监测或紧急警报系统等应用。此外，由于需要传输的比特更少，IoT 设备消耗的能量更少，这意味着便携或用于远程地区的设备具有更长的电池寿命。
+
+### 医疗应用
+
+在智能家居健康监测系统中，如可穿戴血糖监测仪等设备经常发送数据点，特征可以被压缩。例如，与其每分钟进行一次血糖监测并为每次监测发送一个血糖警报，系统可以每 60 分钟发送一个平均血糖水平：`60` 次警报而非 `60 × 60 = 3600` 次警报。这意味着通过网络传输的数据量被大幅减少，从而在人们仍获得重要健康信息的同时，提高了系统效率。
+
+## 11.6.7 IoT 医疗系统数据聚合的挑战
+
+IoT 医疗系统的数据聚合过程面临着若干挑战，必须寻求解决方案以确保聚合在有效性、可靠性和安全性方面达到最优。这些挑战反过来影响系统的效率、有效性和整体能力，分别是数据完整性、数据传输速度和可扩展性。以下是 IoT 医疗系统数据聚合中遇到的主要挑战：
+
+### 可扩展性问题
+
+如所述，随着医疗系统中 IoT 设备数量的增加，上述问题的相关性也随之增加，在该规模下管理数据聚合成为一个更重大的挑战。每个设备通信的数据量和频率可能会更高，需要进行不会拥塞网络并导致延迟的处理和传输。
+
+**挑战：** 管理大量信息——IoT 网络中的节点数量可能达到数千个，并在短时间内产生不同量的信息；例如，心率监测器可能每几秒发送一次数据。实时汇聚和广播此类数据的方法非常复杂，以防阻塞系统并影响响应时间。采集的可扩展性——随着大数据使用的普及，需要开发参与和处理分布式数据的方法，因为数据在发送到中央服务器之前通常会在某处进行本地分组和处理。
+
+**医疗解决方案：** 层次化聚合可以缓解可扩展性问题，如果将网络划分为子集或集群，每个集群负责其内部的数据聚合。这有助于分担中央服务器的负载，并增加设备数量提供更高效的方法。
+
+### 实时处理需求
+
+在多个医疗应用中，特别是包含高度敏感患者数据的应用（例如，提取患者的实时参数），无延迟地收集和传输数据至关重要。未能及时处理数据意味着患者将错过警报或接受不当的治疗，在最坏的情况下会导致死亡。
+
+**挑战：** 实时性限制——数据聚合技术需要在时间上高效工作，以便生产端能够产生及时的警报并响应类似的警报。因此，延迟会有效损害 IoT 医疗的理念，特别是对于那些需要实时反馈的应用，如心电图或血糖水平监测。低延迟需求——聚合必须作为一种提供低延迟数据的方式，以便利用统一数据进行实时决策。
+
+**医疗解决方案：** 如果将边缘计算置于数据聚合的背景下，那么延迟可以大幅降低。在边缘节点上执行特殊的或本地数据分析，从而能够对输入中央服务器的关键健康数据做出快速响应。
+
+## 数据安全与隐私问题
+
+### 概述
+
+个人数据包含在大多数物联网医疗保健模型中，这些数据可能包括健康记录、脉率、血压等。大型机构面临的首要考虑是所收集数据的安全性以及患者的身份识别，以避免出现未经授权的访问情况。
+
+### 挑战
+
+数据完整性和隐私问题是需要考虑的两个主要部分。
+
+**数据完整性：** 当数据累积成较大的集合时，外部很容易对数据进行篡改或操纵，特别是当聚合过程不安全时。维护数据完整性对于减少虚假健康信息及随后的虚假警报的发生至关重要。
+
+**隐私问题：** 在进行用户聚合的同时应当保护患者隐私。如果需要，必须有方法对数据进行匿名化和去名化处理。
+
+### 医疗解决方案
+
+为了扩大人工智能在数据聚合中的应用，可以使用同态加密等加密技术来维护聚合期间的数据机密性。它还能够区块链技术，通过去中心化的方式在开放账本中记录行为，保护数据免受未经授权的修改。
+
+## 11.7 能量消耗
+
+目前，医疗行业大多数物联网设备都依赖电池。由于对设备电池的过度使用，优化数据收集会导致设备故障或监测设备效率降低。
+
+### 11.7.1 挑战
+
+**电池：** 可穿戴设备体载电池聚合的持续数据传输需求可能会耗尽电池，缩短其运行时间。
+
+**优化数据传输：** 数据聚合应发生的频率较低，但应提供足够的信息以评估健康状况。
+
+**医疗解决方案：** 数据聚合方法的示例包括使用基于压缩的聚合，这样传输的数据片段更少，从而消耗更少的能量。层次化和基于类的聚合也可以通过减少通信的数据量来增加宽度。
+
+### 11.7.2 集成的复杂性
+
+将数据采集与现有的医疗物联网系统相结合具有挑战性，因为存在许多类型的设备、协议和数据结构。因此，这些组件的互操作性非常重要，以防止某些组件无法与其他协作。
+
+#### 挑战
+
+**互操作性问题：** 物联网设备通过 `Zigbee`、`蓝牙`、`LoRa` 等协议进行相互通信。个人设备接收信息的格式必须能够被系统中存在的其他设备理解，这是至关重要的。
+
+**标准化需求：** 协调这些框架以开发从众多潜在数据源生成集成且统一数据的方法，也有助于建立数据聚合标准以简化集成。
+
+**医疗解决方案：** 通过使用数据累积的联合标准和要求（如用于医疗的 `IEEE 11073`）可以实现互操作。此外，中间件解决方案也可以提供一个接口，用于从各种设备收集数据。
+
+然而，物联网医疗保健系统中的数据聚合仍面临以下障碍：可扩展性问题、实时处理、安全性、能量消耗和集成问题。为了克服这些挑战，应用复杂的方法和工具（如层次化和基于类的聚合、信号和数据压缩方法、边缘计算、加密算法以及区块链形式的分布式账本技术）是不可避免的。如果这些解决方案部署到医疗系统中，数据将以低延迟、高安全水平和低功耗有效积累，确保患者健康状况和整体系统性能的提升。
+
+## 11.8 物联网网络中的恶意节点和数据包检测
+
+物联网网络中的恶意节点和数据包检测专门解决物联网系统（重点是医疗领域）恶意节点危害的问题(Liyakat, 2023)。这些节点可以通过输入错误信息或删除真实数据包来干扰其传输的数据，并在过程中损害患者并降低系统的可靠性。需要基于规则的系统、区块链和异常检测算法等机制，以对网络行为进行持续监控，并保护实时物联网应用中数据的准确性和安全性。
+
+图 11.3 显示了物联网网络中可能存在的漏洞的增强视图，特别是在医疗环境中，恶意节点可能会对数据和网络造成破坏。在图中，节点被分为三种不同类型：有普通节点、作为蓝色圆形的传感器节点、作为蓝色矩形的汇聚节点，以及作为黄色圆形的黑色 Scares（恶意节点）。
+
+![图 11.3 物联网网络。⏎](img/9781041062943_C011_003.jpg)
+
+**图 11.3** 物联网网络。⏎
+
+
+
+传感器节点专门设计用于从环境中收集数据，例如来自健康监测设备或传感器 (Senouci & Mellouk, 2016)。这些节点提供了数据收集以及将数据传输到网络其他节点的功能。它们对于护理工作至关重要，因为有助于频繁跟踪患者状态并收集心率、血压、温度等数据。
+
+汇聚节点被置于网络的中心位置；它们从多个传感器节点收集数据，并将收集的数据转发到高级数据管理，例如用于额外数据分析和存储的云服务器。这些节点具有更好的计算平台，处理比其他节点更多的信息。
+
+恶意节点在图中由`N6`表示，`N6`对网络完整性构成了重大威胁。它们注入错误数据或丢弃所有到的合法包；这会导致诊断错误或患者管理不当以及系统不可预测。这种活动现在在医疗领域尤为重要，因为数据可能危及患者生命。
+
+## 11.9 物联网医疗中的恶意活动类型
+
+### 11.9.1 数据包丢弃
+
+- **描述**：数据包丢弃是指某些节点丢弃数据包的过程，特别是健康信息包。这种行为会干扰实时跟踪方法的正常运行，并可能在某些紧急情况下导致警报遗漏或延迟，例如心率过低或高血压。
+- **影响**：数据包丢弃在大多数情况下会导致通过系统传输的部分数据受损或不完整，从而限制了系统监测患者健康状况的效能。例如，在必须在特定时间范围内接收数据的紧急情况下，数据包丢弃会对终端系统产生严重影响。
+- **检测方法**：纠正手段，例如端到端确认，即数据包需要确认回执以识别数据包丢失。此外，可以使用序列号为数据包编号，以确保数据未受损坏。此类模式也可以通过数据丢包洞察的`ML`模型进行计算，特别是针对更频繁的丢失或数据中偶尔出现间隙的情况。
+
+### 11.9.2 虚假数据注入
+
+- **描述**：虚假数据注入意味着某些节点向系统注入错误数据，旨在误导系统。例如，一个设备在实际心率很高的情况下提供正常的心率值，这可能会延迟某些关键操作的执行。
+- **影响**：虚假数据注入可能导致根据伪造数据得出错误结论，危及患者生命。这还可能因为健康问题损害人们对系统的信任，而健康状况需要准确的信息。
+- **检测方法**：一些先进的异常检测方法对于检测虚假数据注入是有。`ML`模型可以在正常的思维模式上进行训练，并检测出超出这种正常范围的模式。
+
+### 11.9.3 节点篡改
+
+- **描述**：物联网面临的主要攻击被描述为节点篡改，即未经授权的第三方获取网络内物联网设备的访问并对其进行修改。因此，恶意设备可能被用于干扰正常的网络流或作为监视敏感信息的手段，从而对患者的隐私权和网络安全构成重大威胁。
+- **影响**：恶意设备可以向系统提供错误数据，对性能产生负面影响、拥塞网络或完全停止系统功能。这可能导致隐私侵入，健康信息很容易被泄露给错误的人。
+- **检测方法**：为了识别节点篡改，会对设备的行为进行日常严密监控。分析硬件特征以及与其他设备的通信行为，有助于在设备指纹识别区分真实设备与受污染的设备。入侵检测系统（`IDS`）等自动化工具可以分析数据流和流量模式，以识别某些与篡改节点相对应的干扰形式。
+
+## 11.10 检测与缓解方法
+
+为了有效应对上述类型的恶意活动，可以使用多种策略和技术：
+
+### 11.10.1 基于信任的系统
+
+- **描述**：在此类模型中，节点与信任分相关，分数取决于它们在系统中的行为和交互。高信任分节点在后续分析中被视为可靠节点，而低信任分节点则可能受到质疑。
+- **实现**：信任分可以根据数据信息的准确性、通信流的频率和活动以及一般的反应时间等参数给出正值或负值。它们包括偏离传统流量或单个节点密度的情况，即节点被怀疑丢弃了数据包或注入了虚假数据。
+
+### 11.10.2 ML 和 AI 技术
+
+- **描述**：有建议认为通过应用`ML`模型（特别是基于异常的方法），可以教导算法识别数据流中的恶意行为模式。`AI`模型能够区分标准业务数据和指示攻击的异常信号。
+- **实现**：可以使用聚类、决策树或神经模型对模型进行高度训练，使其处理过去的经验以及新的模式。这些模型可以判断数据流是否存在异常，例如数值的增加或减少，这可能是由虚假数据注入或数据丢包引起的。
+
+## 11.11 区块链技术
+
+- **描述**：另一个领域是通过在区块链系统中记录所有数据交易来确保数据完整性，这是一种开放且不可更改的记录。这消除了数据操纵，并促进了对网络内数据流的严格控制。
+- **实现**：每个数据包都经过加密以供多个节点检查，这允许轻松拒绝网络中任何伪造数据的尝试。追溯性更加可见，同时区块链能够对数据流进行审计，以检测并排除恶意节点。
+
+### 11.11.1 自适应协议和算法
+
+- **描述**：实际适应性可以根据网络行为和反馈调整聚合技术和通信协议。它们可以实时进行调整，以改进特定网络依赖背景下的数据传输。
+- **实现**：可以根据网络流量、设备移动和数据流量更改动态聚类和层次聚合。这种灵活性使得系统在在使用的同时，尽管网络状况不断变化，仍能保持可靠的运行和安全性。
+
+通过这些检测和缓解方法，物联网医疗系统可以更有效地抵御此类入侵。通过结合基于信任的系统、`ML`、区块链和自适应协议，物联网医疗网络中的数据聚合和传输可以提高安全可靠性，从而保护患者的敏感健康信息并提高患者安全（Badiger & Mathew, 2022）。
+
+## 11.12 检测和丢弃恶意数据包的策略
+
+需要检测并丢弃恶意数据包，以确保物联网医疗网络中的数据安全不受到损害。以下策略利用先进技术来识别并减轻恶意活动的影响：
+
+### 11.12.1 基于规则的检测
+
+1. **描述**：基于规则的检测涉及建立预定义的规则或阈值，以识别数据流中的异常，这些异常可能指示恶意活动，如丢包或虚假数据注入。
+2. **实现**：
+   - **预定义规则**：此类规则基于合法数据流的模式，可能包含描述数据包速率、数据包大小和数据内容允许偏差的值。如果任何数据包违反了这些预设参数，就会生成警报。
+   - **异常检测**：将异常检测算法应用于流量分析，以检测偏离这些规则的值。例如，当特定节点的数据包出现持续延迟，或数据包内内容的变化超出接受范围时，这可能表明该节点正在恶意修改数据或该节点已被攻破。
+3. **优点**：设计用于检测异常实体的规则方法相对简单，且该方法对于识别离群值是可靠的。与其他方法相比，它在计算需求方面较弱，应适用于性能较弱的环境。
+
+## 11.13 区块链集成数据验证
+
+- **描述**：区块链技术与物联网医疗系统集成，提供了一种安全且透明的数据验证机制。每个数据包在被系统接受之前都会通过共识过程在网络进行验证。
+- **优点**：区块链创建了另一层安全，使得任何想要更改信息的节点都能被其他节点轻松识别。它维护了健康数据及其轨迹的质量并交付了透明度。
+
+通过将基于规则的检测与集成区块链的数据验证相结合，`IoT`医疗系统可以有效检测并丢弃恶意数据包，确保只有有效、准确的数据被用于患者监测和健康分析。这些策略不仅保护患者数据免受恶意篡改，还增强了`IoT`医疗系统的整体可靠性和信任度。
+
+## 11.14 案例研究：安全 IoT 医疗系统的现实应用
+
+为了应对对高效、安全且具有成本效益的医疗服务日益增长的需求，Lemberg Solutions 开发了一系列支持`IoT`的医疗设备。以下是五个创新的实施示例：
+
+- **远程患者监测**：在一家德国医疗公司，Lemberg Solutions 开发了一款专为重症监护专家设计的`eMedical Tablet`。该设备为医护人员释放了大量工作量，因为他们能够连续地检查患者的生命体征，仅在需要立即采取行动时提醒医生。该系统配合了针对残障人士的语音控制，减少了持续且耗时的住院咨询，从而最大限度地减少了医疗支出；同时，即使患者状况稳定，医院也可以跟踪他们的进展，并在必要时升级严重病例。
+- **咳嗽声识别**：一种基于`SBC`创建的特殊设备作为德国远程医疗提供商的`IoT`网关设备，协助处理咳嗽类症状。该技术集成了先进的传感器和`AI`算法来收集咳嗽数据、减少背景噪声，并为医生分析信号做好准备。患者记录存储在云端，该功能受数据保护相关法律的保护。这一解决方案意味着可以更早进行临床评估、患者个性化的治疗调整，以及能够降低住院风险的行动。
+- **活动追踪**：为了帮助支持行动不便或康复期的患者，Lemberg Solutions 整合了包含信标、智能手表和远程服务器的活动追踪机制。放置在每个房间内的射频信标帮助智能手表确定戴者的位置及其移动；信息实时发送到服务器。通过应用程序仪表板，护理人员可以跟踪活动变化以防止跌倒等问题并做出快速响应，从而提高患者的安全性和护理水平。
+- **康复监测**：针对物理治疗，Lemberg Solutions 创建了可穿戴设备，可以监测进度（例如活动范围）和治疗计划的执行情况。信息经过处理后报告给护理人员，以便调整管理策略，以实现最佳的康复效果。
+- **智能分药器**：Lemberg Solutions 创建了一种智能分药器以增强对处方治疗的依从性。该设备提供提醒、跟踪剂量并在漏服时提醒护理人员。它减少了错误，支持患者的独立性，并提高了整体的治疗效果。
+
+## 11.15 结论
+
+`IoT`体系下的许多技术正在迅速演进，并应用于医疗领域，为患者治疗带来了实时、定制化且廉价的诸多进步。然而，这也带来了日益的挑战，特别是在数据安全、数据准确性和功耗方面。解决这些问题意味着需要尖端技术，包括`ML`、区块链和边缘计算。这些技术不仅提供了检测所有类型恶意节点并保证数据完整性的安全性，还通过高效聚合数据、减少开销和最小化延迟来提高了系统性能。因此，轻量级加密通过自适应协议来支持医疗领域低能`IoT`设备的持续性。
+
+## 参考文献
+
+- Abdulmalek, S., Nasir, A., & Jabbar, W. A. (2024). LoRaWAN-based hybrid internet of wearable things system implementation for smart healthcare. Internet of Things, *25*, 101124. [`doi.org/10.1016/j.iot.2024.101124`](https://doi.org/10.1016/j.iot.2024.101124)
+- Abdulmalek, S., Nasir, A., Jabbar, W. A., Almuhaya, M. A. M., Bairagi, A. K., Khan, Md. A.-M., & Kee, S.-H. (2022). IoT-based healthcare-monitoring system towards improving quality of life: A review. Healthcare, *10*(10), 1993.
+- Aga, D. T., Chintanippu, R., Mowri, R. A., & Siddula, M. (2024). Exploring secure and private data aggregation techniques for the internet of things: A comprehensive review. Discover Internet of Things, *4*(1), 28. [`doi.org/10.1007/s43926-024-00064-7`](https://doi.org/10.1007/s43926-024-00064-7)
+- Aldin, H. N. S., Ghods, M. R., Nayebipour, F., & Torshiz, M. N. (2024). A comprehensive review of energy harvesting and routing strategies for IoT sensors sustainability and communication technology. Sensors International, *5*, 100258. [`doi.org/10.1016/j.sintl.2023.100258`](https://doi.org/10.1016/j.sintl.2023.100258)
+- Bhatia, H., Panda, S. N., & Nagpal, D. (2020). Internet of Things and its applications in healthcare—a survey. In 2020 8th International Conference on Reliability, Infocom Technologies and Optimization (Trends and Future Directions) (ICRITO), pp. 305–310. [`doi.org/10.1109/ICRITO48877.2020.9197816`](https://doi.org/10.1109/ICRITO48877.2020.9197816)
+- Erbey, A., & Barışçı, N. (2022). 深度学习读唇识别综述。Ulusarası Mühendislik Araştırma ve Geliştirme Dergisi (UMAGD) / International Journal of Engineering Research and Development, *14*(2), 844–860. [`doi.org/10.29137/umagd.1038899`](https://doi.org/10.29137/umagd.1038899)
+- Frimpong, B. A., Barbosa, C., & Abd-Alhameed, R. A. (2023). 物联网（IoT）对医疗保健交付的影响：系统性文献综述。Journal of Techniques, *5*(3), Article 3. [`doi.org/10.51173/jt.v5i3.1433`](https://doi.org/10.51173/jt.v5i3.1433)
+- Kadri, M. R., Abdelli, A., Ben Othman, J., & Mokdad, L. (2024). IoT 环境下 Dos 和 DDoS 攻击检测与验证方法的综述与分类。Internet of Things, *25*, 101021. [`doi.org/10.1016/j.iot.2023.101021`](https://doi.org/10.1016/j.iot.2023.101021)
+- Karimullah, S., Khan, M., & Shaik, F. (2024). 用于肺部 CT 图像异常检测与分类的改进混合深度学习方法的实现与性能评估。在 2024 年智能与可持续技术近期创新国际会议 (ICRISST)，印度班加罗尔，IEEE, pp. 1–6. doi: [10.1109/ICRISST59181.2024.10921991](http://dx.doi.org/10.1109/ICRISST59181.2024.10921991)
+- Ketshabetswe, K. L., Zungeru, A. M., Mtengi, B., Lebekwe, C. K., & Prabaharan, S. R. S. (2021). 无线传感器网络数据压缩算法：综述与比较。IEEE Access, *9*, 136872–136891. [`doi.org/10.1109/ACCESS.2021.3116311`](https://doi.org/10.1109/ACCESS.2021.3116311)
+- Kuchuk, H., & Malokhvii, E. (2024). 物联网与云、雾、边缘计算的集成：综述。Advanced Information Systems, *8*(2), 65–78. [`doi.org/10.20998/2522-9052.2024.2.08`](https://doi.org/10.20998/2522-9052.2024.2.08)
+- Li, C., Wang, J., Wang, S., & Zhang, Y. (2024). 物联网在医疗保健中的应用综述。Neurocomputing, *565*, 127017. [`doi.org/10.1016/j.neucom.2023.127017`](https://doi.org/10.1016/j.neucom.2023.127017)
+- Liyakat, K. S. (2023). 使用机器学习和人工神经网络检测 IoT 网络中的恶意节点。在 2023 年新兴智能计算与信息国际会议 (ESCI)，pp. 1–5. [`doi.org/10.1109/ESCI56872.2023.1009544`](https://doi.org/10.1109/ESCI56872.2023.1009544)
+- Mahadik, S. S., Pawar, P. M., Muthalagu, R., Prasad, N., Hawkins, S., Stripelis, D., Rao, S., Ejim, P., & Hecht, B. (2024). 医疗保健中的数字隐私：现状与未来愿景。IEEE Access, *12*, 84273–84291. [`doi.org/10.1109/ACCESS.2024.341035`](https://doi.org/10.1109/ACCESS.2024.341035)
+- Parihar, A., Prajapati, J., Prajapati, B., Trambadiya, B., Thakkar, A., & Engineer, P. (2024). 物联网在医疗保健中的角色：应用与安全忧虑。Intelligent Pharmacy, *5*, 707–714. [`doi.org/10.1016/j.ipha.2024.01003`](https://doi.org/10.1016/j.ipha.2024.01003)
+
+
+
+# 网络安全中基于基尼不度的加权随机森林入侵检测及使用机器学习算法的特征选择
+
+S.V. Sugin 和 M. Kanchana
+
+DOI: [10.1201/978100363476812](http://doi.org/10.1201/978100363476812)
+
+## 12.1 引言
+
+在我们生活的这个复杂世界中，国家、公司和人之间的互动众多且复杂。信息和通信技术（`ICT`）主要用于开展这些关系。随着在线设备数量的增加，试图利用系统漏洞的恶意用户数量也激增。这些恶意行为者可以使用各种攻击来针对组织、政府或个人。恶意活动范围从垃圾邮件或钓鱼等简单威胁、参数篡改，到更复杂的危险，例如高级持续性威胁（`APTs`）、僵尸网络或利用开源情报（`OSINT`）和域名生成算法（`DGAs`）的社会工程攻击。
+
+网络安全专家旨在使用各种工具（如入侵检测系统（`IDSs`）、防病毒软件或防火墙）帮助客户保护其网络、系统和数字资产。这些工具通过各种正常交互和威胁交互产生大量的网络数据细节。此外，额外的活动日志和其他数字证据资产的适当组合对于成功执行安全生命周期至关重要。由于安全相关信息的建立，样本数据的自动分析和处理是实施自适应有效防御技术的关键步骤。因此，使用一种单一方法来分析这些日志以减少任务并支持分析师的决策是非常令人兴奋的。对于这项工作，我们的策略涉及开发无参数程序。
+
+在研究中，我们分析并阐明了早期方法在当前网络安全背景下针对多个二分类问题进行数据压缩的使用。我们训练了一个机器学习（`ML`）系统，该系统通过归一化压缩距离（`NCD`）来识别描述每个问题相关不平衡网络数据的属性组，并利用这些特征进行数据分类。
+
+在我们建议的方法中，创建了一种基于基尼不纯度的加权随机森林（`GIWRF`）模型，根据优先级选择关键且合适的属性。属性相关性评分通过使用基尼不纯度标准对树进行划分，并针对类别的不平衡分布修改随机森林（`RF`）算法的整体权重来确定。然而，对于基于机器学习（ML）的 IDS 框架，使用了数据集来创建 Ada Boost、梯度提升树（`GBT`）、决策树（DT）、门控循环单元（GRU）、长短期记忆（LSTM）和多层感知器（MLP）。在模型进行测试和训练之前，需要进行数据工程或数据预处理。数据预处理阶段由三个过程组成，将在本研究后续介绍。然而，为了进行分析，使用了网络数据集 UNSW-NB15 `[9, 10]`，这是一个包含现代攻击模式的较新数据集。
+
+本研究进行了一项使用监督机器学习模型的二分类任务。当监督机器学习方法被赋予将离散值分类为攻击实例或正常实例的任务时，就发生了二分类。该研究的数据集相当大，具有许多特征空间维度。选择一种属性选择策略来从海量数据集中移除不重要的特征，并在测试和训练步骤中仅使用关键特征集，这一点是至关重要的 `[11]`。在特征选择过程中减少相关数据集的方法被用于创建预测模型。大多数情况下，人们希望提高预测模型的性能。此外，不相关的特征会对模型性能产生负面影响。然而，由于 IDS 处理了许多具有冗余或无关属性的数据样本，这不仅增加了计算成本，还降低了检测分数的准确性 `[12]`。通过定位包含分类方法所需数据的相关属性，特征选择为 IDS 中经常发生的若干错误提供了解决办法 `[13]`。
+
+## 12.2 方法与材料
+
+需要注意的是，之前讨论的策略大部分是针对特定问题的。该领域缺乏一种能够从相似角度处理所有这些挑战的通用技术，尽管所描述的所有问题都包含了某种网络数据分析。在这一部分，讨论了一种基于压缩的分析（如 `NCD`）来提取定义数据集一组数值特征的通用方法。当给定文本 `T` 时，计算文本 `T` 与 `k` 个额外文本集（`g[1]`, `g[2]`, …, `g[k]`，称为属性生成器 `AG`）之间的分离度是主要目标。这生成了一个包含 `k` 个数字的向量，在 `k` 维属性空间中表示文本 `T`，作为分类 `224.model` 的输入 [14]。然而，在本研究中，我们使用了机器学习分类器；需要强调的是，我们的与其他分类算法都可以配合属性提取。
+
+对于由两个不同类别数据组成的 UNSW-NB15 数据集，具体步骤如下：数据随机分为两组，`G` 和 `I`，每组包含 `m` 和 `n` 个数据。两组的两个类别数据集数量相等，因此它们都是平衡的。属性生成器使用第一组 `G` 构建。为了实现这一点，从 `G` 中的数据创建了 `k` 个仅包含一个类别数据的生成器文件。结果是每个类别都有 `k/2` 个生成器。在通过属性生成器的距离进行区分后，第二组（`I`）包含了用于指示分类器的数据集。为了得到向量，我们测量了 `I` 中每个字符串 `S[i]` 与每个 `k` 个属性生成器之间的距离：
+
+```
+S[i] = (x[i 1], x[i 2], ..., x[i k]) (12.1)
+```
+
+它用于描述数据 `S[i]`。以下方程提供了 `S[i]` 的组件 `x[ij]`：
+
+```
+x[ij] = D(g[j], s[i]) (12.2)
+```
+
+其中 `D(g[j], s[i])` 表示字符串（`s[i]`）与生成器（`g[j]`）之间归一化条件的还原数据：
+
+```
+D\left( {g_{j~},~s_{i~}} \right) = \frac{C\left( s_{i~|~~g_{j}~} \right)}{C\left( {~s_{i~~}} \right)}~ = ~\frac{C\left( {~g_{j}.~s_{i~}} \right) - C\left( g_{j~} \right)}{C\left( s_{i~~}} \right)}~~~$ (12.3)
+```
+
+点运算符用于表示总计，`C(s)` 代表 `s` 的还原大小。我们在测试中使用 `gzip` 压缩器，因为它比其他压缩方法运行得更快。
+
+一旦利用 `I` 中全量数据的特征向量来训练一种分类算法，使用径向基函数（`RBF`）核来预测每项数据所属的类别。使用 Python 的 `scikit learn` 程序包来实现该方法，并使用接收机工作特征曲线测量值下的准确率和曲线下面积（`AUC`）来确定分类器的性能。机器学习模型的性能基于两个超参数：核函数复杂度 `C` 和宽度 `γ`，这些参数在每个 `k` 中通过引用 [14] 中定义的传统的五折交叉验证方法确定。
+
+![图 12.1 所提方法的完整插图](img/978104062943_C01.jpg)
+
+## 12.3 网络数据集 UNSW-NB15
+
+该数据集由 Moustafa 和 Slay 于 2015 年发布 [15]。包含九类攻击（DoS、通用、侦察、脚本代码、蠕虫、模糊器、漏洞利用和分析）的 250 万多个数据包。由于超过 87% 的数据包是非异常的，该数据集极不平衡。表 12.1](#ch20.xhtml#t15)列出了数据包分布，表 12.2](#ch20.xhtml#t16)提到了使用机器学习模型的相关研究。
+
+**表 12.1 UNSW-NB15 的类别分布**
+
+| 类别类型 | 记录数 | 占比 |
+| :--- | :--- | :--- |
+| 非异常 | 2,218,761 | 87.35% |
+| 侦察 | 13,987 | 0.55% |
+| 通用 | 215,481 | 8.48% |
+| 脚本代码 | 1,511 | 0.06% |
+| 漏洞利用 | 44,525 | 1.75% |
+| DoS | 16,353 | 0.64% |
+| 模糊器 | 24,246 | 0.95% |
+| 分析 | 2,677 | 0.11% |
+| 蠕虫 | 174 | 0.01% |
+| 总计 | 2,540,044 | |
+
+**表 12.2 IDS 上使用机器学习技术的重要工作对比**
+
+| 作者 | 数据集 | 特征选择 | 机器学习算法 | 准确率 |
+| :--- | :--- | :--- | :--- | :--- |
+| Khan 等 (2020) [19] | UNSW-NB15 | RF | KNN, Bagging, XGBoost, DT, RF | 74.22%, 74.64%, 71.43%, 71.10%, 74.87% |
+| Tama 和 Rhee (2019) [20] | UNSW-NB15 | 完整特征 | GBM | 91.31% |
+| Kasongo 和 Sun (2020) [21] | UNSW-NB15 | XGBoost | KNN, SVM, ANN DT, LR | 84.46%, 60.89%, 84.39%, 90.85%, 77.64% |
+| Jing and Chen (2019) [22] | UNSW-NB15 | 完整特征 | SVM | 75.77%—多分类分类 85.99%—二分类 |
+| Alazzam et al. (2020) [23] | UNSW-NB15 | Sigmoid PIO | DT | 91.7% |
+| Aboueata et al. (2019) [24] | UNSW-NB15 | 主成分分析 (PCA) | SVM, ANN | 92.00%, 91.00% |
+| Meftah et al. (2019) [25] | UNSW-NB15 | RF | LR, GBM, SVM | 77.21%, 61.83%, 82.11% |
+| Injadat et al. (2020) [26] | UNSW-NB15 | 信息增 (IGBFS) | RF | 99.00% |
+| Gu and Lu (2021) [18] | UNSW-NB15 | 基于朴素贝叶的特征转换 | SVM | 93.75% |
+
+## 12.4 建议的方法
+
+为了提供比较，将使用熟悉的机器学习技术 (`DT`)、深度神经网络 (`LSTM`、`GRU`)、人工神经网络 (`MLP`) 和集成方法 (`AdaBoost`、`GBT`) 中的机器学习方法的结果，用于识别不平衡数据集中的入侵。研究的主要目标是针对不平衡数据集使用有效的特征选择策略。这些模型在 `UNSW-NB15` 网络数据集章节中描述的数据集上训练。建议的方法图如图 12.2 所示。
+
+![图 12.2 基于机器学习模型的 IDS 框架建议](img/9781041062943_C012_002.jpg)
+
+**图 12.2** 基于机器学习模型的 IDS 框架建议。
+
+### 12.4.1 分类特征的编码
+
+`State`、`Proto` 和 `Service` 是网络数据集 `UNSW-NB15` 中包含的三个分类特征。响应编码被用于转换 `UNSW-NB15` 数据集的字符串属性，而使用 `Label Encoding`（标签编码）来加密 `UNSW-NB15` 的分类特征。`Label Encoding` 中的每个分类特征都根据字母顺序确定一个不同的整数值。相比之下，编码技术显示了给定类别的信息实例属于特定类别的概率。针对 (`N`) 类分类，为每个类别构建了 `N` 个新特征，根据 `227.category` 数据值插入了信息实例属于每个类别的 (`P`) 概率。呈现数学表达式的一种方法是：
+
+`P(X | B) = P(B ∩ X) / P(B)` (12.4)
+
+其中 `B` 代表特征类别，`X` 表示一个类。由于网络 `UNSW-NB15` 数据集具有许多分类特征，其巨大的内存需求防止了其用于修改字符串特征。
+
+### 12.4.2 特征缩放
+
+数据集包含某些量级、单位和范围高度不可预测的特征。某些算法（如 `MLP`）因为数据集的高度变异性而做出错误的预测。此外，它还需要大量的计算能力。在归一化独立变量范围方面，一种常用方法是特征缩放。对于确定数据分离的机器学习算法，需要特征缩放。使用了两种常用的缩放特征。
+
+### 12.4.3 基于基尼纯度的加权 RF
+
+`RF` 是一种支持不平衡数据分类的集成方法。该方法的目标是构建一个默认不识别多数类的分类器。加权去分类实例是由森林中树的基尼纯度决定的。在计算出每个节点的基尼纯度后，根据纯度的减少来选择特征。缩放的通用公式为：
+
+`P(h) = (P(h) - min(h)) / (max(h) - min(h))` (12.5)
+
+### 12.4.4 评估指标
+
+本次实验的目标是提高测试集中准确二分类结果的比例。采用了多种 ML 性能指标，包括假阳性率 (`FPR`)、`precision`（精确率）、`recall`（召回率）、`accuracy`（准确率）等，用于评估基于 ML 的 IDS 效果 [17]。然而，评估二分类情况下最常用的指标是准确率得分。它由下公式描述：
+
+```
+Accuracy = [(TP + TN)] / [(TP + TN + FP + FN)] (12.10)
+```
+
+其中 `TN` 和 `TP` 表示真负和真正。准确识别的攻击事件数量被称为真阳性率。被正确识别为正常的实例由 `TN` 计数。另一方面，假阳性（`FP`）是指被错误归类为攻击的真实流量数量。攻击的数量通过被误认为是典型实例的假负性（`FN`）案例进行计数。在入侵检测中，通常预期 `FN` 越少，因为它比 `FP` 具有更大的风险。尽管对于类别的不对称信息，特别是当目标是准确识别攻击时，在确定的原始值之外，还考虑了四个额外规则，如 `FPR`、`Recall`、`Precision` 和 `F1 score`。
+
+#### 1. `FPR`
+
+负性事件总数与误标记为正性的负性发生次数之比被称为 `FPR`。表达式描述如下：
+
+```
+FPR = FP / (FP + FN) (12.11)
+```
+
+#### 2. `Precision`
+
+当模型对实例进行正类预测时，`precision` 衡量预测准确的频率，以评估模型的性能优劣。可以使用下方的对其进行数学上的描述：
+
+```
+Precision = TP / (TP + FP) (12.12)
+```
+
+#### 3. `Detection Rate/Recall`
+
+它衡量了 ML 模型检测 `TPs` 发生情况的能力。`Recall` 衡量了模型定位相关数据的精精确度。因此，它有时被识别为敏感度或 `TPR`。逻辑方程表示如下：
+
+```
+Detection rate/recall = TP / (TP + FN) (12.13)
+```
+
+#### 4. `F1 Score`
+
+`recall` 和 `precision` 之间的权衡通过考虑 `FP` 和 `FN` 决定了 ML 方法的整体准确率。下公式表示了 `F1 score`：
+
+```
+F1 score = (2 * Recall * Precision) / (Recall + Precision) (12.14)
+```
+
+**表 12.5** 使用全属性 (49) 在 UNSW-NB15 数据集上的 ML 算法性能
+
+| **MLAlgorithm** | **Accuracy** | **Precision** | **Recall** | **F1 Score** | **FPR** |
+| --- | --- | --- | --- | --- | --- |
+| DT | 90.151% | 87.450% | 95.852% | 91.462% | 16.842% |
+| Ada Boost | 90.513% | 87.073% | 97.191% | 91.850% | 17.673% |
+| MLP | 84.112% | 78.344% | 98.315% | 87.201% | 33.283% |
+| GBT | 87.560% | 82.491% | 98.252% | 89.681% | 25.544% |
+| GRU | 82.874% | 76.784% | 98.753% | 86.394% | 36.572% |
+
+## 参考文献
+
+* Senouci, M. R., & Mellouk, A. (2016). 无线传感器网络。在 M. R. Senouci & A. Mellouk (编辑.), 部署无线传感器网络 (pp. 1–19)。Elsevier. [`doi.org/10.1016/B978-0-12-807548-9.0-5`](https://doi.org/10.1016/B978-0-12-807548-9.0-5)
+
+* Shaik, F., Karimullah, S., Khan, M., & Ahmed, S. J. (2024). 整合 IoT、计算分析和遗传见解以提高访问性和早期干预。在 2024 年近期创新与可持续技术国际会议 (ICRISST)，印度班加罗尔，pp. 1–6. doi: [10.1109/ICRISST59181.2024.1092193](http://dx.doi.org/10.1109/ICRISST59181.2024.1092193)
+
+* Shetty, C. S., & Badiger, M. (2024). 云端中的通信协议。在用云增强机器人技术塑造自动化未来 (pp. 143–161)。IGI Scientific Publishing.
+
+* Sterbenz, J. P., Hutchison, D., Çetinkaya, E., Jabbar, A., Rohrer, J. P., Schöller, M., & Smith, P. (2010). 通信网络中的韧性和生存性：策略、原则和学科综述。Computer Networks, *54*(8), 1245–1265.
+
+
+
+## 12.5 结果
+
+该研究在两个状态下进行，包含了 `GBT`、`LSTM`、`DT`、`Ada Boost`、`GRU` 和 `MLP` 模型。在第一阶段，评估了 ML 的二分类有效性。在第二阶段，使用了六种模型，并根据 UNSW-NB15 数据集的属性进行了调整。`F1 score` 和 `FPR` 值通过表 12.5 和表 12.6 展示了二分类结果，而图 12.3 和图 12.4 则提供了准确率的可视化表示。
+
+**表 12.6** 使用选取属性 (20) 在 UNSW-NB15 数据集上的 ML 算法性能
+
+| **MLAlgorithm** | **Accuracy** | **Precision** | **Recall** | **F1 Score** | **FPR** |
+| --- | --- | --- | --- | --- | --- |
+| DT | 93.014% | 92.693% | 94.763% | 93.720% | 09.140% |
+| Ada Boost | 90.513% | 87.073% | 97.191% | 91.850% | 17.673% |
+| MLP | 84.112% | 78.344% | 98.315% | 87.201% | 33.283% |
+| GBT | 87.560% | 82.491% | 98.252% | 89.681% | 25.544% |
+| GRU | 82.874% | 76.784% | 98.753% | 86.394% | 36.572% |
+| LSTM | 87.901% | 85.015% | 94.714% | 89.604% | 20.440% |
+
+```
+![图 12.3 在 UNSW-NB15 数据集上的完整属性性能](img/978104102943_C012_003.jpg)
+```
+
+**图 12.3** 在 UNSW-NB15 数据集上的完整属性性能
+
+```
+![图 12.4 在 UNSW-NB15 数据集上的选取属性性能](img/978104102943_C012_004.jpg)
+```
+
+**图 12.4** 在 UNSW-NB15 数据集上的选取属性性能
+
+然而，表 12.7 比较了在所有利用 `UNSW-NB15` 网络数据集的文献综述中选出有效算法后，与本文报告的有效算法 `DT` 的性能。已经证实，与其他工作相比，使用我们建议的属性选择方法（`GIWRF`）配合 `DT`，在 `F1-score` 方面取得了满意的性能，该指标是不准确数据的适宜评估标准。除了 `Gu` 和 `Lu` [18] 的建议外，发现准确率值高于现有的类似工作。在这种情况下，建议的 `GIWRF-DT` 性能优于 `NB-SVM`，尽管准确率略低（0.74%），但检测率/召回率有所提高（0.03%）。这描述了所提 `DT` 有效识别入侵的能力。他们选择了与所提研究中使用的不同的训练规模。
+
+## 12.6 结论
+
+本研究旨在开发并确定用于基于机器学习的入侵检测系统（IDS）二分类挑战的机器学习算法：`GBT`、`LSTM`、`Ada Boost`、`DT`、`GRU` 和 `MLP`。在类别不平衡分布会影响属性选择过程的基础上，提出了 `GIWRF` 作为属性选择程序，以从 `UNSW-NB15` 不平衡集中选择合适的属性集合。通过特征选择技术将 `UNSW-NB15` 网络数据集的属性分别减少到 20 个（从 49 个）。使用 `FPR`、`Accuracy`、`Recall`、`Precision` 和 `F1` 分数分析了模型检测入侵的有效性。研究最初使用了跨数据集的整个特征集。随后重复了该研究，仅利用属性选择算法提取的所选属性。对于几个数据集，将算法性能与全属性字段以及减少后的属性进行了比较。在使用属性选择技术时，`DT` 在 `UNSW-NB15` 网络数据集上的表现更好。
+
+## 参考文献
+
+1. Sfakianakis, A., Douligeris, C., Marinos, L., Lourenço, M., & Raghimi, O. (2019). ENISA Threat Landscape Report 2018: 15 top cyber-threats and trends. European Union Agency for Cybersecurity (ENISA). ISBN 978-92-9204-286-8. [`doi.org/10.2824/622757`](https://doi.org/10.2824/622757)
+
+2. Pastor-Galindo, J., Nespoli, P., Mármol, F. G., & Pérez, G. M. (2020). The not yet exploited goldmine of OSINT: Opportunities, open challenges and future trends. IEEE Access, 8, 10282–10304.
+
+3. Chuvakin, A., Schmidt, K., & Phillips, C. (2012). Logging and log management: the authoritative guide to understanding the concepts surrounding logging and log management. Newnes.
+
+4. Sabottke, C., Suciu, O., & Dumitraș, T. (2015). Vulnerability disclosure in the age of social media: Exploiting twitter for predicting real-world exploits. In 24th {USENIX} security symposium ({USENIX} security 15) IEEE (pp. 1041–1056).
+
+5. Curry, S., Kirda, E., Schwartz, E., Stewart, W. H., & Yoran, A. (2013). Big data fuels intelligence-driven security. RSA Security Brief, 2–3.
+
+6. Keogh, E., Lonardi, S., & Ratanamahatana, C. A. (2004, August). Towards parameter-free data mining. In Proceedings of the tenth ACM SIGKDD international conference on knowledge discovery and data mining IEEE (pp. 206–215).
+
+7. de la Torre-Abaitua, G., Lago-Fernández, L. F., & Arroyo, D. (2018). A parameter-free method for the detection of web attacks. In International joint conference SOCO’17-CISIS’17-ICEUTE’17 León, Spain, September 6–8, 2017, Proceeding 12 (vol. pp. 661–671). Springer International Publishing.
+
+8. Cilibrasi, R., & Vitányi, P. M. (2005). Clustering by compression. IEEE Transactions on Information Theory, 51(4), 1523–1545.
+
+9. Moustafa, N., & Slay, J. (2016). The evaluation of Network Anomaly Detection Systems: Statistical analysis of the UNSW-NB15 dataset and the comparison with the KDD99 data set. Information Security Journal: A Global Perspective, 25(1–3), 18–31.
+
+10. Moustafa, N., Turnbull, B., & Choo, K. K. R. (2018). An ensemble intrusion detection technique based on proposed statistical flow features for protecting network traffic of internet of things. IEEE Internet of Things Journal, 6(3), 4815–4830.
+
+11. Khan, N., Sun, M., Alam, M., Karimullah, S., Shaik, F., & Subhan, F. (2020). Enhancing Breast Cancer Detection Through Deep Learning Approach. Journal of Informatics, advance online. [`doi.org/10.1007/s10278-025`](https://doi.org/10.1007/s10278-025)
+
+12. Zaman, S., & Lee, G. (2009). Performance analysis of intrusion detection using support vector machines. In 2009 6th military communications (MilCIS) (pp. 1–4).
+
+13. Shaik, F., Karimullah, S., Negi, A., & Thase, I. (2020). A feature selection algorithm for intrusion detection system based on pigeon inspired optimizer. Expert Systems with Applications, 148,113249.
+
+14. Lee, J., Pak, J., & Lee, M. (2020). SVM based network intrusion detection for the UNSW-NB15 dataset. In 2019 IEEE 13th international conference on ASIC (ASICON) (pp. 1–4).
+
+15. Moustafa, N., & Slay, J. (2015, November). UNSW-NB15: A comprehensive data set for intrusion detection. In 2015 military communications (MilCIS) (pp. 1–8).
+
+16. Krawczyk, B. (2016). Learning from imbalanced data: Open challenges and future directions. Progress in Artificial Intelligence, 5(4),221–232.
+
+17. Kumar, G. (2014). Evaluation metrics for intrusion detection—a study. Evaluation, 2(11), 11–17.
+
+18. Gu, J., & Lu, S. (2021). An effective intrusion detection approach using naïve Bayes feature embedding. Computers & Security, 103,102158.
+
+19. Khan, N., Madhav, C., Negi, A., & Thase, I. (2018). Intelligent systems design and applications:18th international conference on intelligent systems design and applications (ISDA 2018) held in Vellore, India, December 6–8, 2018 (vol. 2, pp. 69–77). Springer International Publishing.
+
+20. Tama, B. A., & Rhee, K. H. (2019). An in-depth experimental study of anomaly detection using gradient boosted machine. Neural Computing and Applications, 31, 955–965.
+
+21. Kasongo, S. M., & Sun, Y. (2020). Performance analysis of intrusion detection systems using a feature selection method on the UNSW-NB15 dataset. Journal of Big Data, 7, 1–20.
+
+22. Jing, D., & Chen, H. B. (2019, October). SVM based network intrusion detection for the UNSW-NB15 dataset. In 2019 IEEE 13th international conference on ASIC (ASICON) (pp. 1–4).
+
+23. Alazzam, H., Sharieh, A., & Sabri, K. E. (2020). A feature selection algorithm for intrusion detection system based on pigeon inspired optimizer. Expert Systems with Applications, 148, 113249.
+
+24. Aboueata, N., Alrasbi, S., Erbad, A., Kassler, A., & Bhamare, D. (2019, July). Supervised machine learning techniques for efficient network intrusion detection. In 2019 28th international conference on computer communication and networks (ICCCN) (pp. 1–8). IEEE.
+
+25. Meftah, S., Rachidi, T., & Assem, N. (2019). Network based intrusion detection using the UNSW-NB15 dataset. International Journal of Computing and Digital Systems, 8(5), 478–487.
+
+26. Injadat, M., Moubayed, A., Nassif, A. B., & Shami, A. (2020). Multi-stage optimized machine learning framework for network intrusion detection. IEEE Transactions on Network and Service Management, 18(2), 1803–1816.
+
+# 13 通过机器学习和可解释人工智能区分电力系统扰动与网络攻击
+
+Niharika Agrawal 和 Sheila Mahapatra
+
+DOI: `10.1201/9781003634768-13`
+
+## 13.1 引言
+
+机器学习（ML）在现代智能电网（SGs）中区分电力系统扰动与网络攻击起着至关重要的作用。随着智能电网变得更加互联并依赖于数字通信，区分自然系统故障与蓄意网络威胁变得越来越具有挑战性。机器学习算法通过分析实时数据模式，帮助检测和分类电力系统中的事件。它们可以区分自然发生的扰动（如设备故障、线路故障或负载变化）与网络攻击（包括数据注入、拒绝服务 (DoS) 和控制信号操纵）。机器学习模型通过分析电压和电流波形、频率偏差、负载模式以及通信网络数据等特征，有助于区分合规扰动（例如短路）与恶意操控。机器学习模型可以使用自动编码器（autoencoders）对偏离正常运行的异常模式进行实时检测，并使用循环神经网络（RNNs）进行时间序列预测和识别时间异常。通过结合来自网络层（网络日志、用户活动）和物理层（传感器读数、控制命令）的数据，机器学习可以检测同时影响网络和物理系统的协同攻击。它可以识别诸如虚假数据注入等传统方法难以检测的微妙攻击。机器学习工具能够在故障发生前预测和预测可能的故障及网络威胁，有助于预测性维护规划和隔离受影响电网区域的自动化响应系统。不同的挑战在于：
+
+- 数据质量与可用性：网络攻击的标记数据通常有限。
+- 对抗攻击：如果没有妥善的安全保护，攻击者可以操纵机器学习系统。
+- 可扩展性：管理大规模电网需要高效的模型。
+
+### 13.1.1 主要技术
+
+- 监督学习：（例如支持向量机 (SVM)、决策树 (DTs)）在标记数据上进行训练，以对事件进行分类。
+- 无监督学习：（例如 K-Means、基于密度的空间聚类算法 (DBSCAN)）在没有标记数据可用时用于异常检测。
+
+
+
+深度学习（例如卷积神经网络（CNNs）、长短期记忆网络（LSTMs））用于更复杂的模式识别和时间序列分析。图 13.1 显示了学习的类型。
+
+![图 13.1 学习的类型。](img/9781041062943_C013_001.jpg)
+
+**图 13.1** 学习的类型。
+
+文献 [1] 提出了一种通过基于深度学习的混合攻击图模型来增强信息物理生产系统（CPPS）网络安全的新方法。作者专注于对网络攻击的早期检测，特别是针对运营技术（OT）网络的网络，结合了运营技术图卷积网络（GC）-LSTM 和 CNN 进行实时异常检测。它实现了超过 96% 的准确率，优于现有的时间序列异常检测模型。它通过分布式拒绝服务（DDoS）和网络侦察等网络攻击模拟进行了测试。
+
+### 13.1.2 网络攻击类型
+
+* TSA：使用伪造的 GPS 信号干扰系统时钟。
+* 拒绝服务（DoS）/DDoS：阻塞或淹没通信通道。
+* DRA：重用有效数据包以欺骗系统。
+* FDIA：更改数据以操纵控制系统。
+* MITM：隐蔽地拦截并修改通信。
+  * 物理攻击：包括直接干扰，如电磁损坏或 RA，它们会操纵系统频率。
+  * CCPA：结合网络和物理方法进行更具破坏性的同步的攻击。
+
+2019 年委内瑞拉智能电网攻击同时使用了网络和电磁干扰。图 13.2 显示了网络攻击的类型。
+
+![图 13.2 不同类型的网络攻击。](img/9781041062943_C013_002.jpg)
+
+**图 13.2** 不同类型的网络攻击。
+
+文献 [2] 提出了一种基于机器学习的侵入检测系统（IDS），旨在增强智能电网的网络安全。它侧重于使用电工委员会（IEC）61850 通用对象来保护通信。针对变电站自动化的面向对象的变电站事件（GOOSE）关键消息，开发了一种利用机器学习来区分正常运行和网络攻击的新颖 IDS。创建了正常运行和模拟网络攻击下的 GOOSE 消息数据集用于模型训练和验证。GOOSE 消息的漏洞在于没有内置加密、消息完整性和身份验证，且该协议易受到重放、中间人攻击和伪装攻击。IEC 62351 具有某些局限性，它提供了通信层的安全，但在操作层缺乏检测机制。数据采集数据采集（SCADA）是一种用于监控、控制和自动化工业过程（包括电力系统）的关键系统。它促进了电网的实时控制和监控，使运营商能够管理跨区域的基础。该系统在确保智能电网的效率、可靠性和稳定性方面发挥着重要作用 [3]。其主要功能包含在图 13.3 中。SCADA 系统是网络攻击的主要目标。关键漏洞包括遗留系统、弱身份验证以及缺乏加密。随着远程访问和物联网设备的集成，攻击面显著扩大。与智能电网 SCADA 系统相关的各种网络安全措施包括：
+
+![图 13.3 SCADA 的功能。](img/9781041062943_C013_003.jpg)
+
+**图 13.3** SCADA 的功能。
+
+* Stuxnet (2010)：一种针对工业控制系统的恶意软件攻击，展示了网络-物理破坏的潜力。
+* 乌克兰电网攻击 (2015)：一次协同良好的网络攻击，使用旨在破坏 SCADA 系统的恶意软件中断了电力供应。
+
+### 13.1.3 电力系统 SCADA 网络安全的未来趋势 [5, 6]
+
+图 13.4 显示了未来趋势。
+
+**图 13.4** 未来趋势。
+
+### 13.1.4 印度的网络攻击
+
+印度电网作为该国基础设施的关键组成部分，已成为多次重大网络威胁的目标，特别是针对`SCADA`系统。这些事件凸显了`SG`控制系统中存在的漏洞，以及在增强网络安全措施方面所做的持续努力 [[7]]
+
+1. **中国政府背景小组的针对性攻击：** 2021 年，网络安全公司`recorded future`识别出一项由中国政府背景小组发起的协同行动，目标是印度的关键基础设施。该行动集中于十个印度电力部门组织。此外，两个印度海港也成为攻击目标。这些攻击旨在收集信息并可能中断印度电网的运行。
+
+2. **尝试在拉达克地区（Ladakh）附近干扰电力配电：** 2021 年初，印度政府报告了中国黑客两次试图针对电力配电中心进行攻击。虽然这些尝试未获成功，但它们凸显了对印度电力基础设施面临的持续威胁。电力部长 R.K. Singh 表示，已经加强了防御以应对此类网络攻击。
+
+3. **SCADA 系统的漏洞：** 来自印度计算机应急响应小组（`CERT-IN`）的机密数据显示，`SCADA`系统发生了多次攻击。虽然这些攻击中许多是小规模的，但间接证据表明，多年来攻击频率规模都在增加。互联网上关于破解`SCADA`系统的信息加剧了这些漏洞。
+
+4. **库丹库拉姆（Kudankulam）核电站遭受恶意软件攻击：** 该电厂在 2019 年 9 月遭受了恶意软件攻击，病毒渗透了其管理网络。该恶意软件被识别为`Dtrack`，并与与朝鲜的`Lazarus Group`相关，旨在收集敏感信息。虽然运行网络未受影响，但这一事件凸显了网络威胁对关键基础设施的潜在风险。
+
+5. **安全增强与监控计划：** 针对这些威胁，`GRID-INDIA`建立了`SOC`，用于监控跨`RLDCs`和`NLDC`的安全事件和事故。此外，`NLDC`的 IT 基础设施已通过先进的安全功能进行了升级。另一个关键实体`POWERGRID`也建立了`SOC`，对关键资产进行 24 × 7 全天监控。这些举措旨在增强印度电网的网络安全态势，并防御未来的攻击 [[8]]。
+
+这些事件强调了在保障印度电网内`SCADA`系统方面面临的持续挑战。表 13.1 显示了来自文献 [[9]] 的描述。
+
+**表 13.1** 关键目标与挑战
+
+| 章节 | 描述 |
+| :--- | :--- |
+| 目标 | 使用`ML`区分`SGs`中的网络攻击和扰动。 |
+| 挑战 | 网络攻击模拟自然故障，使操作人员的手工检测具有挑战性。 |
+| 方法论 | 在模拟数据上使用不同的分类方案测试了多种`ML`算法。 |
+| 测试的场景 | 电力系统故障、继电器设值变化以及数据注入攻击。 |
+| 关键算法 | `JRipper` + `AdaBoost`（最佳性能）– `Random Forest` – `Naïve Bayes` – `SVM` – `OneR` |
+| 结果 | 使用三类分类方案的`JRipper`+ `AdaBoost`显示出最佳性能，准确率高且误报率低。 |
+| 特征分析 | 顶部特征：表观阻抗、电压、电流相位角和幅度对分类准确性的贡献最大。 |
+| 结论 | `ML`方法对于区分电力扰动是有效的，但在实际应用中需要针对特定系统的训练数据以获得最佳性能。 |
+
+*来源：* 文献 [[9]]。
+
+此项工作的贡献在于：
+
+1. 在`Python`环境下实现了用于判别电力系统扰动和网络攻击的各种`ML`技术。
+2. 为`ML`模型开发了`CM`、`CR`和受试者工作特征曲线（`ROCC`）。
+3. 为所有模型计算了不同的性能指标，如准确率、精确率。
+4. 针对三类分类器实现了基于`SHAP`和`LIME`方法的`XAI`。
+5. 该项研究有助于提高现代电力系统的可靠性、安全性和效率，这些都是实现联合国 17 个可持续发展目标（SDG）中目标 7 的基础。
+6. 通过利用`ML`和`XAI`处理网络物理实体威胁，本研究为未来能源系统透明化、智能化，并成为清洁且负担得起的能源获取支柱做出了贡献。
+
+## 13.2 数据集描述
+
+图 13.5 展示了本手稿中使用的系统结构。该结构由与网络监控、`SNORT`和`Syslog`系统以及其他电子设备交互的控制系统组成。`G1`和`G2`是发电机，`BR1`到`BR4`是断路器，`Line 1`和`Line 2`是线路，`R1`到`R4`是具有切换断路器开/合能力的`IEDs`。`R1`管理`BR1`，`BR2`由`R2`管理，以此类推。每个`IED`独立管理一个断路器。
+
+![图 13.5 系统架构。来源：文献 [2]。](html/images/9781041062943_C013_005.jpg)
+
+**图 13.5** 系统架构。*来源：* 文献 [[2]]。
+
+数据集获取自密西西比州（Mississippi State）。共有 37 个场景。包括 8 个自然事件、1 个事件和 28 个攻击事件，这些事件被分为三类，包括二分类和多分类。表 13.2 提供了完整信息。
+
+### 13.2.1 类型
+
+**表 13.2** 事件类型与详情
+
+| 事件类型 | 描述 | 影响 |
+| :--- | :--- | :--- |
+| 短路故障 | 电力线可能发生短路。 | 可导致不稳定。 |
+| 线路维护 | 为了维护禁用继电器。 | 临时禁用保护。 |
+| 远程跳闸（攻击） | 这需要渗透外部防御。 | 未授权断路，可能导致停电。 |
+| 继电器设值更改（攻击） | 攻击者更改继电器设值以禁用保护方案。 | 增加系统故障风险。 |
+| 数据注入（攻击） | 通过改变电流、电压和序列分量模拟故障并误导操作人员。 | 误导操作人员，可能导致停电并损坏设备。 |
+
+表 13.3 显示了事件场景。表 13.4 显示了攻击场景 [[2], [9]]。
+
+**表 13.3** 事件场景（自然）
+
+| 场景 | 自然事件 (SLG) |
+| :--- | :--- |
+| 场景 1、2 和 3 涉及 L1 发生 10–19%、20–79%、80–90% 的故障。场景 4、5 和 6 涉及 L2 发生 10-19%、20–79%、80–90% 的故障。 |
+| 13 和 14 | L1 和 L2 的维护 |
+| 场景 | 无（无事件） |
+| 41 | 正常工作/运行 |
+
+**表 13.4** 事件场景（攻击）
+
+| 场景 | 攻击事件 |
+| :--- | :--- |
+| 对于场景 7、8、9、10、11 和 12，L1 发生故障，跳闸指令分别为 10–19%、20–79%、80–90%、10–19%、20–79%、80–90%。 |
+| 对于场景 15、16、17 和 18，攻击类型是远程跳闸注入指令。 |
+| 对于场景 21–30，继电器定值攻击发生了变化。对于场景 35–40，继电器定值攻击发生了变化。 |
+
+### 13.2.2 攻击场景
+
+表 13.5 显示了不同的数据集特征。该数据集包含 129 个特征，其中包含一个指示扰动是攻击还是自然事件的标记。每个 PMU 提供了 29 种测量值。在这个数据集中，四个 PMU 测量了 29 个特性。每列的索引遵循`R#-Signal Reference`格式，表示由`R#`指示的测量类型。例如，`R 1-P A 1: V H`表示由 PMU`R1`记录的 A 相电压角。标记列具有`natural`（自然）或`attack`（攻击）值 [2, 9]。
+
+**表 13.5** 测量类型与特征的数据集
+
+| **特征** | **测量类型** |
+| --- | --- |
+| P A 1: V H – P A 3: V H | 相角（电压） |
+| P M 1: V – P M 3: V | 幅值（电压） |
+| P A 4: I H – P A 6: I H | 相角（电流） |
+| P M 4: I – P M 6: I | 幅值（电流） |
+| P A 7: V H – P A 9: V H | 相角（电压 – 序分量） |
+| P M 7: V – P M 9: V | 幅值（电压 – 序分量） |
+| P A10: I H – P A 12: I H | 相角（电流 – 序分量） |
+| P M 10: I – P M 12: I | 幅值（电流 – 序分量） |
+| F | 继电器频率 |
+| D F | 频率变化率 |
+| P A: Z | 阻抗 |
+| P A: Z H | 阻抗角 |
+| S | 继电器状态 |
+
+## 13.3 方法论
+
+在手稿中，多种机器学习分类器被应用于电力系统的入侵检测系统（IDS）。所有分类器都开发了`CR`和`CM`。分类器的性能基于参考文献 [10] 进行评估：
+
+- `CM`：`CM`用于显示分类器的运行良好程度。通过将实际类别与预测结果相结合，它可以显示分类器分类结果的细节。
+- `ROCC`：它被提作为一个新标准，因为当样本分布不平衡时，验证准确率无法准确代表分类器的真实性能。如图 13.6 所示。
+
+**图 13.6** ROCC 和 AUC。*来源：*文献 [2]。
+
+- `曲线下面积 (AUC)`：一般而言，分类器距离 ROCC 到参考线（图 13.6 中的棕色线）越远，性能越好。尽管 ROCC 可以直观地代表分类器的性能，研究人员总是倾向于使用直观图表来评估性能。ROCC 下的面积被称为`AUC`。因此，高`AUC`值表示分类器良好。在本研究中，使用这些标准评估了多种分类器的有效性 [11]。
+
+### 13.3.1 CPPS 中的 XAI
+
+它涉及采用 AI 方法在复杂的电力系统框架内，为其选择和行为提供清晰、易理解且透明的依据 [12]。
+
+图 13.7 显示了不同的 XAI 技术。表 13.6 显示了 XAI 在 CPPS 中的重要性。
+
+![图 13.7 XAI 技术。](img/9781041062943_C013_007.jpg)
+
+**图 13.7** XAI 技术。
+
+**表 13.6** XAI 在 CPPS 中的重要性 [13, 14]
+
+| 序号 | 方面 | 重要性 |
+| --- | --- | --- |
+| 1 | 透明度和信任 | 确保操作员和工程师理解 AI 驱动的决策，培养信任并改进人工监督。 |
+| 2 | 增强安全性 | 通过提供决策模式和系统行为的洞察，帮助检测异常和潜在的网络威胁。 |
+| 3 | 合规性 | 通过为 AI 驱动的行动和决策提供清晰解释，协助满足法律和监管要求。 |
+| 4 | 运行效率 | 通过明确对维护或负载管理的预测和建议，实现电网运行的更好优化。 |
+| 5 | 故障检测与诊断 | 提高识别故障的速度和准确性，解释为什么标记特定事件，从而实现更快的恢复。 |
+| 6 | 决策制定 | 支持人类专家与 AI 系统之间的协作。提供易于理解的建议。 |
+| 7 | 适应性和鲁棒性 | 提供不同条件下系统行为的洞察，增强系统的韧性和对故障的适应能力。 |
+
+## 13.4 数据集工作
+
+图 13.8 和 13.9 显示了数据集中的分类（攻击类型）。
+
+![图 13.8 分类-1。](img/9781041062943_C013_008.jpg)
+
+**图 13.8** 分类-1。
+
+![图 13.9 分类-2。](img/9781041062943_C013_009.jpg)
+
+**图 13.9** 分类-2。
+
+图 13.10 显示了特征`R 1-P A 1: V H`（红色）、`R 1-P A 2: V H`（蓝色）、`P A 3: V H`（绿色）、`P A 4: I H`（橙色）的图。
+
+**图 13.10** 特征分布。
+
+本手稿使用了`Python 3`环境。必要的包和库包括用于线性代数的`Numpy`（作为`np`）、`Seaborn`（作为`sns`）、`Pandas`（作为`pd`）、`matplotlib`、`warnings`以及`matplotlib.pyplot`（作为`plt`）。导入的其他函数包括四个指标`CM`、`CR`、`graph`、`viz`和`String IO`。导入的包包括`from sklearn.ensemble: ExtraTreesClassifier`、`BaggingClassifier`、`RandomForestClassifier`；`from xgboost: XGBClassifier`；`from sklearn.linear_model: LogisticRegression`；`from sklearn.tree: DecisionTreeClassifier`、`MLPClassifier`来自`from sklearn.model_selection: KFold`、`StratifiedKFold`。从`sklearn`导入了指标`log_loss`、`roc_curve`和`auc`。
+
+### 13.5.1 不同 ML 模型的 CM 和 CR
+
+1. 表 13.7 描述了`ETC`。
+
+**表 13.7** ETC 的主要特征和优势 [15]
+
+| 序号 | 特征 | 优势 |
+| --- | --- | --- |
+| 1 | 随机划分选择 | 减少方差并增强模型泛化能力。 |
+| 2 | 多棵决策树 | 形成树集成以提高准确性。 |
+| 3 | 自助采样（可选） | 可以关闭以提高计算效率。 |
+| 4 | 训练速度更快 | 随机选择划分，降低了计算复杂度。 |
+| 5 | 处理高维数据 | 在具有许多特征的数据集上表现良好。 |
+| 6 | 减少过拟合 | 更多的随机性防止树记忆数据模式。 |
+| 7 | 不需要特征缩放 | 在原始、未缩放的数值特征上效果良好。 |
+| 8 | 对噪声鲁棒 | 随机化有助于处理嘈杂数据集。 |
+| 9 | 特征重要性评分 | 提供关于每个特征重要性的见解。 |
+| 10 | 支持并行处理 | 可以利用多个核心进行更快的执行。 |
+
+图 13.25 和 13.26 分别显示了`ETC`模型的`CM`和`CR`。
+
+![图 13.25 ETC 的 CM。](img/9781041062943_C013_025.jpg)
+
+
+
+# 图 13.25 ETC 的 CM
+
+![图 13.26 ETC 的 CR](img/9781041062943_C013_026.jpg)
+
+**图 13.26** ETC 的 CR
+
+## 模型 2 `XGBClassifier`
+
+表 13.8 描述了 `XBG`。
+
+**表 13.8** `XBG 分类器` 的主要特征和优势 [16]
+
+| 序号 | 特征 | 优势 |
+| --- | --- | --- |
+| 1 | 梯度提升算法 | 通过迭代减少误差来提高预测准确性。 |
+| 2 | 正则化（L1 和 L2） | 有助于防止过拟合并泛化。 |
+| 3 | 处理缺失值 | 自动学习处理缺失数据的最佳方法。 |
+| 4 | 并行处理 | 利用多个 CPU 核心进行更快的训练。 |
+| 5 | 树剪枝（深度生长） | 防止树过于复杂，提高效率。 |
+| 6 | 处理不平衡数据 | 支持加权类和 `scale_pos_weight` 参数。 |
+| 7 | 内置交叉验证 | 高效优化超参数。 |
+| 8 | 稀疏性感知 | 高效处理具有缺失值或零值的稀疏数据集。 |
+| 9 | 特征重要性评分 | 提供关于哪些特征对预测贡献最大的见解。 |
+| 10 | 可扩展性 | 在具有数百万行列的大型数据集上表现良好。 |
+
+图 13.27 和 13.28 分别显示了 `XGB` 模型的 `CM` 和 `CR`。
+
+![图 13.27 XGB 的 CM](img/9781041062943_C013_027.jpg)
+
+**图 13.27** XGB 的 CM
+
+![图 13.28 XBG 的 CR](img/9781041062943_C013_028.jpg)
+
+**图 13.28** XBG 的 CR
+
+## 模型 3 `Random Forest (RF)`
+
+表 13.9 描述了 `RF`。
+
+**表 13.9** 随机森林的主要特征和优势 [17]
+
+| 序号 | 特征 | 优势 |
+| --- | --- | --- |
+| 1 | 树的集成 | 通过平均化多个预测来提高准确性。 |
+| 2 | 自助采样（bagging） | 增加树之间的多样性。 |
+| 3 | 特征随机性 | 为每次划分选择特征子集。 |
+| 4 | 处理高维数据 | 在具有许多特征的数据集上表现良好。 |
+| 5 | 减少过拟合 | 平均化多个预测减少了方差。 |
+| 6 | 处理缺失值 | 处理不完整的数据集。 |
+| 7 | 处理分类数据 | 处理各种类型的数据。 |
+| 8 | 特征重要性评分 | 识别最重要的特征。 |
+| 9 | 并行处理 | 并行训练多个模型。 |
+| 10 | 对噪声鲁棒 | 对噪声不敏感。 |
+
+图 13.29 和 13.30 显示了 `RF` 的 `CM` 和 `CR`。
+
+![图 13.29 RF 的 CM](img/9781041062943_C013_029.jpg)
+
+**图 13.29** RF 的 CM
+
+![图 13.30 RF 的 CR](img/9781041062943_C013_030.jpg)
+
+**图 13.30** RF 的 CR
+
+## 模型 4 `Bagging Classifier (BC)`
+
+表 13.10 描述了 `BC`。
+
+**表 13.10** Bagging 分类器的主要特征和优势 [18]
+
+| 序号 | 特征 | 优势 |
+| --- | --- | --- |
+| 1 | 自助聚合 | 在随机子集上训练减少方差。 |
+| 2 | 基估计器集成 | 与单个模型相比提高了稳定性和性能。 |
+| 3 | 减少过拟合 | 通过平均化预测不容易过拟合。 |
+| 4 | 任何基模型 | 可以使用决策树、SVM 或其他分类器。 |
+| 5 | 并行处理 | 可以并行训练多个模型以更快的执行。 |
+| 6 | 处理高维数据 | 在具有许多特征的数据集上表现良好。 |
+| 7 | 对噪声鲁棒 | 对训练数据的变化不敏感。 |
+| 8 | 改进弱学习 | 通过组合预测增强弱分类器的性能。 |
+| 9 | 不需要缩放 | 在原始数值特征上效果良好。 |
+| 10 | 处理缺失数据 | 某些基模型（如决策树）自然地处理缺失值。 |
+
+图 13.31 和 13.32 显示了 `Bagging Classifier` 的 `CM` 和 `CR`。
+
+![图 13.31 BC 的 CM](img/9781041062943_C013_031.jpg)
+
+**图 13.31** BC 的 CM
+
+![图 13.32 BC 的 CR](img/9781041062943_C013_032.jpg)
+
+**图 13.32** BC 的 CR
+
+## 模型 5 `LR`
+
+表 13.11 描述了 `LR`。
+
+**表 13.11** 逻辑回归的主要特征和优势 [19]
+
+| 序号 | 特征 | 优势 |
+| --- | --- | --- |
+| 1 | 简单且可解释性模型 | 易于理解和解释系数。 |
+| 2 | 二分类和多分类 | 支持二分类，并可以通过一对多法（OvR）或 Softmax 扩展到多分类。 |
+
+### 概率预测
+
+输出每个类别的概率得分，有助于决策。
+
+### 正则化（L1 和 L2）
+
+防止过拟合并提高泛化能力。
+
+### 快速训练和推理
+
+即使在大规模数据集上也具有高计算效率。
+
+### 适用于线性可分数据
+
+当类别呈线性可分时，表现良好。
+
+### 建议进行特征缩放
+
+在标准化或归一化的数据上表现效果最佳。
+
+### 处理分类变量
+
+在编码得当（例如，独热编码）时，可以处理分类变量。
+
+### 对小数据集具有鲁棒性
+
+即使在训练数据有限的情况下也表现良好。
+
+### 广泛应用于各个领域
+
+在金融、医疗保健、营销和社会科学中很常见。
+
+图 13.33 和 13.34 显示了逻辑回归的混淆矩阵（CM）和分类召回率（CR）。
+
+![Figure 13.33 CM for LR](img/9781041062943_C013_033.jpg)
+
+**图 13.33** 逻辑回归的混淆矩阵
+
+![Figure 13.34 CR for LR](img/9781041062943_C013_034.jpg)
+
+**图 13.34** 逻辑回归的分类召回率
+
+## 模型 6 `Light GBM`
+
+表 13.12 描述了 `XBG`。
+
+**表 13.12** Light GBM 的关键特征和优势 [20]
+
+| 序号 | 特征 | 优势 |
+| --- | --- | --- |
+| 1 | 梯度提升算法 | 通过迭代减少误差来提高预测准确性。 |
+| 2 | 直方图分叉 | 通过将连续值分组到箱中来加速训练。 |
+| 3 | 叶子优先树生长 | 与层级生长相比，更高效地减少损失。 |
+| 4 | 处理大型数据集 | 面对数百万样本和特征具有良好的扩展性。 |
+| 5 | 支持分类特征 | 可以直接处理分类变量而无需编码。 |
+| 6 | GPU 加速 | 通过支持 GPU 实现更快的训练。 |
+| 7 | 处理缺失值 | 自动学习处理缺失数据。 |
+| 8 | 正则化（L1 & L2） | 有助于防止过拟合并提高泛化能力。 |
+| 9 | 并行与分布式训练 | 支持多线程和分布式计算以实现扩展性。 |
+| 10 | 较低的内存占用 | 与 XGB 等其他提升方法相比，更节省内存。 |
+
+图 13.35 和 13.36 分别显示了 Light GBM 的混淆矩阵和分类召回率。
+
+![Figure 13.35 CM Light GBM](img/9781041062943_C013_035.jpg)
+
+**图 13.35** Light GBM 的混淆矩阵
+
+![Figure 13.36 CR Light GBM](img/9781041062943_C013_036.jpg)
+
+**图 13.36** Light GBM 的分类召回率
+
+## 模型 7 `DT`
+
+表 13.13 描述了 `XBG`。
+
+**表 13.13** 决策树的关键特征和优势 [21]
+
+| 序号 | 特征 | 优势 |
+| --- | --- | --- |
+| 1 | 简单且可解释 | 易于可视化和理解决策过程。 |
+| 2 | 同时处理分类和数值数据 | 适用于不同数据类型。 |
+| 3 | 不需要特征缩放 | 在无需标准化或归一化的情况下表现良好。 |
+| 4 | 捕获非线性关系 | 可以对复杂的决策边界建模。 |
+| 5 | 处理缺失值 | 可以在不需要插值的情况下处理缺失数据。 |
+| 6 | 快速的训练和推理 | 计算高效。 |
+| 7 | 特征重要性排序 | 关注最佳特征。 |
+| 8 | 适用于小数据集 | 即使在数据有限时也有效。 |
+| 9 | 容易过拟合 | 可以使用剪枝技术进行控制。 |
+| 10 | 集成方法的基础 | 构成了随机森林、极端树和提升算法的基础。 |
+
+图 13.37 显示了决策树。
+
+![Figure 13.37 Decision tree](img/9781041062943_C013_037.jpg)
+
+**图 13.37** 决策树
+
+## 13.5 ROC 曲线图
+
+图 13.38 显示了所有模型的 ROC 曲线。ETC 的 AUC 值为 1.00，XGB 值为 0.99。高 AUC 值表示分类器良好。表 13.14 显示了显著性。
+
+![Figure 13.38 ROCC](img/9781041062943_C013_038.jpg)
+
+**图 13.38** ROC 曲线
+
+**表 13.14** 性能评估显著性 [22]
+
+| 序号 | 模型 | 准确率 | 召回率 | F1 分数 |
+| --- | --- | --- | --- | --- |
+| 1 | ETC | 1.00 | 0.97 | 0.98 |
+| 2 | XGB | 1.00 | 0.97 | 0.97 |
+| 3 | RF | 1.00 | 0.96 | 0.95 |
+| 4 | BC | 1.00 | 0.94 | 0.96 |
+| 5 | LR | 1.00 | 0.72 | 0.70 |
+| 6 | Light GBM | 1.00 | 0.93 | 0.92 |
+
+## 13.6 在可解释性上的工作：Shap 的应用
+
+### 模型 1 XGB：折线图
+
+SHAP 方法用于模型预测。第一条预测的解释使用 `shap.plots.waterfall(shap_values[0])` 进行可视化。提供此图的输入是解释对象的一行。折线图旨在显示单个预测的解释。XGB 输出的期望值（此处为 0.351）显示在图底部。每行说明了每个特征的正向（红色）或负向（蓝色）贡献如何改变从预期模型输出到该预测输出的值。默认情况下，SHAP 使用 `XGB Classifier` 的边缘输出在逻辑连接函数之前进行解释 [23]。因此，X 轴是对数几率单位。
+
+### 折线图
+
+图 13.40 显示了各种特征对第 50 个实例的影响。每一行说明了每个特征的负向（蓝色）或正向（红色）贡献如何改变从预期输出（`E [f(x)= 0.351]`）到模型预测值（`f (x)`）。在这里，`f(x) = E(f(x)) + SHAP value` 适用于每个特征。
+
+![图 13.40 XAI 的工作流](img/9781041062943_C013_040.jpg)
+
+**图 13.40** XAI 的工作流
+
+此样本的每个特征值由特征名称前的灰色文本指示。当模型中的特征数量超过最大显示参数时，特征将根据 SHAP 绝对值排列在瀑布图的底部。89 个最不显著的特征在上面的解释中被合并成了一个术语。`max_display` 参数可用于更改默认的 10 行限制。在此图中，它保持为 40。命令 `shap.plots.waterfall(shap_values = 50, max_display = 40)` 显示数据集中第 50 个实例的此图。红色特征是那些提高预测结果的特征，而蓝色特征是那些降低预测结果的特征。图 13.40 显示了此图。
+
+### 13.6.1 标签为“0”的实例 (50) 的力图
+
+为了观察特征对模型预测的影响作用，SHAP 力图中的“标签”（label）指的是与数据点相关的预测类别或目标值，而“实例编号”（instance number）指的是所选数据点的索引，本质上是指正在解释数据集中的哪一行 [24]。力图说明了每个特征如何影响该特定数据点的预测。图上的每条条都代表一个特征，条的长度显示了它对预测的贡献程度。贡献“0”结果的特征是通过查看测试集中的第一个样本来识别的。这将通过在提供此力图的同时提供 SHAP、期望值和测试样本来实现。红色条通常显示 `Positive_Contributions`（正向贡献），它们将预测推向更大的值；蓝色条显示 `Negative_Contributions`（负向贡献），它们将预测推向较小的值。
+
+图 13.41 显示了使用命令通过力图对第 50 个实例的可视化。此图是通过选择实例编号 (50) 和对应的标签“0”创建的。索引 (0) 的模型输出为 0.95。在转换为概率空间后，这个“原始”值产生了最终的输出“0”和“1”。图 13.41 显示了基础值以及特征对“0”结果的贡献。训练期间所有模型输出值的平均值即为基础值。特征 `RP-M410: *I = 632.6` 的贡献以蓝色显示，而 `R2-PA5: IH = 162.4` 以红色显示。该实例对标签“0”的其他特征的贡献也显示在图 13.41 中。模型预测的最终输出为“0”，因为预测值 (0.95) 高于 (0)。
+
+![图 13.41 力图-1](img/9781041062943_C013_041.jpg)
+
+**图 13.41** 力图-1
+
+### 13.6.2 标签为“1”的实例 (12) 的力图
+
+为了确定哪些特征贡献了标签“1”，选择了数据集的第 12 个样本。使用力图输入 SHAP、期望值和测试样本。此外，由于 `f(x)` 为 1.04 大于 1，可以观察到模型属于“1”类或标签。基础值和对“1”结果的特征贡献显示在图 13.42 中。特征 `R1-PA3: VH` 的贡献为 –120.9，以红色显示；最后的 `R3-PM2: V` 贡献为 1.286e+5，以蓝色显示。其他特征的贡献也显示。`Y_test.iloc` 是用于测试第 12 个数据点预测的命令。结果为“1”。图 13.42 显示了力图-2。
+
+![图 13.42 力图-2](img/9781041062943_C013_042.jpg)
+
+**图 13.42** 力图-2
+
+### 13.6.3 数据集训练集预测的可视化力图
+
+所有的训练集预测都可视化在图 13.43 中。我们可以通过获取多个力图解释（类似于图 13.43 中所示），将它们旋转 90 度然后并排排列，来观察整个数据集的解释。
+
+![图 13.43 力图-3](img/9781041062943_C013_043.jpg)
+
+**图 13.43** 力图-3
+
+图 13.44 显示了当样本按输出值排序时，大型数据集的可视化。
+
+![图 13.44 力图-4](img/9781041062943_C013_044.jpg)
+
+**图 13.44** 力图-4
+
+图 13.45 显示了当存在原始排序时，大型数据集的可视化。
+
+![图 13.45 力图-5](img/9781041062943_C013_045.jpg)
+
+**图 13.45** 力图-5
+
+图 13.46 显示了按输出值排序时，大型数据集的可视化，样本的排序。
+
+![图 13.46 力图-6](img/9781041062943_C013_046.jpg)
+
+**图 13.46** 力图-6
+
+图 13.47 显示了按原始排序时，大型数据集的可视化。
+
+![图 13.47 力图-7](img/9781041062943_C013_047.jpg)
+
+**图 13.47** 力图-7
+
+每个样本的每个特征 SHAP 值均被用于绘图。这是为了对模型最关键特征提供总结。图 13.54 利用 SHAP 值来描述每个特征对 `XGB` `output` 影响的分布。对于所有样本，该图根据 SHAP 绝对值之和对特征进行组织。特征的值用蓝色（低值）和红色（高值）表示。所有主要特征的结果在这幅图中得到了汇总。数据集中所有变量的平均绝对 SHAP 值的排名显示在 SHAP 摘要图的 Y 轴上 [27]。用于总结所有特征影响的命令是 `shap.plots.beeswarm(shap_values)`。
+
+![图 13.54 ETC 的蜂群图](img/9781041062943_C013_054.jpg)
+
+**图 13.54** ETC 的蜂群图
+
+### 13.6.7 全局条状图
+
+
+
+每个特征的 SHAP 平均绝对值被用于生成标准的条状图。使用的命令是`shap.plots.bar(shap_values)`。该图通过创建一个 SHAP 值矩阵并将其传递给条形图函数来创建 [28]。图 13.55 显示了此图，图 13.56 显示了二分类输出的堆叠条状图。
+
+![图 13.55 全局条状图。⏎](img/9781041062943_C013_055.jpg)
+
+**图 13.55** 全局条状图。⏎
+
+![图 13.56 堆叠条状图。⏎](img/9781041062943_C013_056.jpg)
+
+**图 13.56** 堆叠条状图。⏎
+
+### 13.6.8 决策图
+
+此图提供了模型决策的视觉描述。它映射了每个预测的累积 SHAP 值。为了弄清楚哪些特征值推动了预测，此图中显示的每条线都表示每个唯一特征对单个模型预测的贡献强度 [29, 30]。目标标签为“0”的图向该方向倾斜。目标标签为“1”的图也向该方向倾斜。图 13.57 和 13.58 显示了这些图。
+
+![图 13.57 向“0”倾斜。⏎](img/9781041062943_C013_057.jpg)
+
+**图 13.57** 向“0”倾斜。⏎
+
+![图 13.58 向“1”倾斜。⏎](img/9781041062943_C013_058.jpg)
+
+**图 13.58** 向“1”倾斜。⏎
+
+### 13.6.9 热力图
+
+图 13.59 显示了此图。
+
+![图 13.59 30 个特征的热力图。⏎](img/9781041062943_C013_059.jpg)
+
+**图 13.59** 30 个特征的热力图。⏎
+
+### 13.6.10 XAI 在模型 2 (RF) 中的应用
+
+#### 13.6.10.1 瀑布图
+
+该模型具有 20 个最大特征的实例 (50) 的瀑布图显示在图 13.60 中。
+
+![图 13.60 RF 的瀑布图。⏎](img/9781041062943_C013_060.jpg)
+
+**图 13.60** RF 的瀑布图。⏎
+
+#### 13.6.10.2 标签为“0”的实例 (12) 的力图
+
+图 13.61 显示了此图。
+
+![图 13.61 RF 的力图-1。⏎](img/9781041062943_C013_061.jpg)
+
+**图 13.61** RF 的力图-1。
+
+#### 13.6.10.3 标签为“1”的实例 (40) 的力图
+
+图 13.62 显示了此图。
+
+![图 13.62 RF 的力图-2。⏎](img/9781041062943_C013_062.jpg)
+
+**图 13.62** RF 的力图-2。
+
+#### 13.6.10.4 标签为“0”的实例 (50) 的力图
+
+图 13.63 显示了此图。
+
+![图 13.63 RF 的力图-3。⏎](img/9781041062943_C013_063.jpg)
+
+**图 13.63** RF 的力图-3。
+
+#### 13.6.10.5 标签为“1”的实例 (65) 的力图
+
+图 13.64 显示了此图。
+
+![图 13.64 RF 的力图-4。⏎](img/9781041062943_C013_064.jpg)
+
+**图 13.64** RF 的力图-4。
+
+#### 13.6.11 类别“Attack”和“Natural”的 SHAP 摘要图
+
+特征名称按重要性从上到下显示在 Y 轴上。X 轴显示几率的变化程度。每个图点的颜色对应特征的值；蓝色表示低值，红色表示高值。原始数据集中的每个点对应一行数据 [31]。对于标签“0”（Attack），SHAP 摘要图显示在图 13.65 中。图 13.66 显示了标签“1”（Natural）的图。应该注意的是，标签“1”的可视化是反的。
+
+![图 13.65 蜂群图-1。⏎](img/9781041062943_C013_065.jpg)
+
+**图 13.65** 蜂群图-1。⏎
+
+![图 13.66 蜂群图-2。⏎](img/9781041062943_C013_066.jpg)
+
+**图 13.66** 蜂群图-2。⏎
+
+### 13.6.12 DSP
+
+这显示了特定特征如何影响模型的预测。图 13.67 到 13.69 显示了这些图。
+
+![图 13.67 DSP-1.⏎](img/9781041062943_C013_067.jpg)
+
+**图 13.67** DSP-1。⏎
+
+![图 13.68 DSP-2.⏎](img/9781041062943_C013_068.jpg)
+
+**图 13.68** DSP-2。
+
+![图 13.69 DSP-3.⏎](img/9781041062943_C013_069.jpg)
+
+**图 13.69** DSP-3。
+
+### 13.6.13 散点图
+
+图 13.70 和 13.71 显示了这些图。
+
+![图 13.70 散点图-1。⏎](img/9781041062943_C013_070.jpg)
+
+**图 13.70** 散点图-1。⏎
+
+![图 13.71 散点图-2。⏎](img/9781041062943_C013_071.jpg)
+
+**图 13.71** 散点图-2。⏎
+
+### 13.6.14 标签“0”和“1”的决策图
+
+标签“0”和“1”的决策图直观地表示了模型如何区分这两个类别。图中的每个点代表一个数据样本，通过分析该图，可以观察到模型预测预测每个标签的区域，以及可能分类错误的区域。这种可视化有助于理解模型区分两个类别的方法。
+
+### 13.6.15 XAI 在模型 3 中的应用
+
+图 13.72 显示了此图。它通过绘制与预测相关的累积 SHAP 值图形化地说明了模型的选择。此图每条线都表示特征对特定预测的影响程度。在图 13.72 中，目标标签“0”的决策图向该方向倾斜。在图 13.73 中，目标标签“1”的决策图向该方向倾斜。
+
+![图 13.72 决策图-1。⏎](img/9781041062943_C013_072.jpg)
+
+**图 13.72** 决策图-1。⏎
+
+![图 13.73 决策图-2。⏎](img/9781041062943_C013_073.jpg)
+
+**图 13.73** 决策图-2。⏎
+
+### 13.6.16 瀑布图
+
+图 13.74 显示了 Light GBM 模型的瀑布图。
+
+![图 13.74 Light GBM 的瀑布图。](img/9781041062943_C013_074.jpg)
+
+**图 13.74** Light GBM 的瀑布图。
+
+#### 13.6.16.1 标签为“0”的实例 (80) 的力图
+
+图 13.75 显示了此图。
+
+![图 13.75 力图-1。⏎](img/9781041062943_C013_075.jpg)
+
+**图 13.75** 力图-1。
+
+#### 13.6.16.2 标签“1”的实例力力图 (90)
+
+图 13.76 显示了该图。
+
+![Figure 13.76 力力图-2.⏎](img/9781041062943_C013_076.jpg)
+
+图 13.76 力力图-2. ⏎
+
+#### 13.6.16.3 数据集训练集预测的可视化力力图
+
+图 13.77 显示了该图。
+
+![Figure 13.77 力力图-3.⏎](img/9781041062943_C013_077.jpg)
+
+图 13.77 力力图-3. ⏎
+
+图 13.78 显示了力力图-4。
+
+![Figure 13.78 力力图-4.⏎](img/9781041062943_C013_078.jpg)
+
+图 13.78 力力图-4. ⏎
+
+### 13.6.17 摘要图 (Summary Plot)
+
+图 13.79 显示了该模型的图表。
+
+![Figure 13.79 Light GBM 的蜂群图。⏎](img/9781041062943_C013_079.jpg)
+
+图 13.79 Light GBM 的蜂群图. ⏎
+
+### 13.6.18 柱状图 (Bar Plot)
+
+图 13.80 显示了该模型的图表。
+
+![Figure 13.80 瀑布图。⏎](img/9781041062943_C013_080.jpg)
+
+图 13.80 瀑布图. ⏎
+
+### 13.6.19 依赖关系散点图
+
+图 13.81 显示了该图。
+
+![Figure 13.81 Light GBM 的 DSP.⏎](img/9781041062943_C013_081.jpg)
+
+图 13.81 Light GBM 的 DSP. ⏎
+
+### 13.6.20 标签“1”的决策图 (Decision Plot)
+
+图 13.82 显示了标签“1”的决策图。它向“1.0”倾斜。
+
+![Figure 13.82 Light GBM 的决策图。⏎](img/9781041062943_C013_082.jpg)
+
+图 13.82 Light GBM 的决策图. ⏎
+
+## 13.7 XAI 工作：LIME 方法的应用
+
+要在 Python 中使用 LIME 方法实现 XAI，需使用`pip`命令安装`LIME`包。导入了来自`sklearn.metrics`的`classification_report`和`train_test_split`。数据被划分为测试数据集和训练数据集 [32]。使用 ML 模型对测试数据集进行预测训练。导入了`matplotlib.pyplot`并命名为`plt`，并将 JS 可视化代码通过`shap.initjs()`加载到笔记本中。通过`explainer = shap.TreeExplainer(clf)`创建解释器。需要导入`Shap`、`lime`、`lime_tabular`、`explanation`类以及其他包。加载数据集。代码用于使用`sklearn`集成模块中的`RF`分类器类在此 OpenCV AI Ki (OAK) 数据集上训练`RF`模型。代码用于借助`lime_tabular`模块创建 LIME 解释器实例 [33]。
+
+后续步骤是将 LIME 解释产生的输出存储在名为`op.html`的 HTML 文件中。生成的 HTML 文件作为 OAK 数据集中第 50 个实例的 LIME 解释。对于 OAK 数据集，LIME 解释说明了每个特征（P A1: V H – P A3: VH 等）对第 50 个实例预测类别（自然，攻击）的贡献。结果从左到右排列了三个主要信息：
+
+1. 模型的预测
+2. 特征的贡献
+3. 每个特征的真实值
+
+以下图表使用`RF`分类器生成，显示了第 50 个实例的 LIME 结果，并以橙色蓝色表格的形式呈现特征贡献。观察到第 50 个实例被预测为攻击，置信度为 100%。13.83 到 13.91 显示了 Python 的结果。
+
+![Figure 13.83 LIME 力图-1.⏎](img/9781041062943_C013_083.jpg)
+
+图 13.83 LIME 力图-1. ⏎
+
+图 13.84 LIME 力图-2.
+
+图 13.85 LIME 力图-3.
+
+图 13.86 LIME 力图-4.
+
+图 13.87 LIME 力图-5.
+
+图 13.88 LIME 力图-6.
+
+图 13.89 LIME 力图-7.
+
+```markdown
+| 0.00 ||  |
+| relay4_log <= 0.00 ||  |
+| 0.00 ||  |
+| R4:DF <= 0.00 ||  |
+| 0.00 ||  |
+|  || R3-PA11:IH <= 0.00 |
+|  || 0.00 |
+|  || 131074.19R4-PM2... |
+|  || 0.00 |
+| R4-PM9:V <= 0.00 ||  |
+| 0.00 ||  |
+| R3-PM11:I <= 0.00 ||  |
+| 0.00 ||  |
+| R4-PA5:IH <=-113.35 ||  |
+| 0.00 ||  |
+```
+
+**图 13.90**  LIME 图表-8。
+
+```markdown
+|  || R1-PM5: I > 443.86 |
+| --- | --- |
+|  || 0.00 |
+|  || R4 / S <= 0 |
+|  || 0.00 |
+|  || R4-PA:Z <= 8.75 |
+|  || 0.00 |
+| R3:S <= 0.00 ||  |
+| 0.00 ||  |
+|  || R3-PM1: V <= 1291 ... |
+|  || 0.00 |
+| 131554.81 <R4-PM3... ||  |
+| 0.00 ||  |
+| R3-PA:Z <= 8.48 ||  |
+|  || 0.00 |
+| \-73.18 <R2-PA5:IH <... ||  |
+| 0.00 ||  |
+|  || R3-PM3: V <= 1291 |
+|  || 0.00 |
+|  || R1-PM11 : I <= 0.00 |
+|  || 0.00 |
+| \-92.90 <R1-PA10:IH... ||  |
+| 0.00 ||  |
+|  || R1-PA:Z<= 8.71 |
+|  || 0.00 |
+|  || R1-PM7: V <= 1311 |
+|  || 0.00 |
+|  || 20.63R4-PA6:IH <=... |
+|  || 0.00 |
+| R1-PA11:IH <= 0.00 ||  |
+| 0.00 ||  |
+|  || \-92.59R1-PA4:IH ... |
+|  || 0.00 |
+|  || \-7.63 R2-PA12:IH ... |
+|  || 0.00 |
+```
+
+**图 13.91**  LIME 图表-9。
+
+```markdown
+| 0.00 ||  |
+| --- | --- |
+|  || R1-PA:Z <= 8.71 |
+|  || 0.00 |
+|  || R1-PM7:V <= 1311... |
+|  || 0.00 |
+|  || 20.63R4-PA6:IH <=... |
+|  || 0.00 |
+| R1-PA11:IH <= 0.00 ||  |
+| 0.00 ||  |
+|  || \-92.59R1-PA4:IH... |
+|  || 0.00 |
+|  || \-7.63 R2-PA12:IH ... |
+|  || 0.00 |
+|  || R2-PA6:IH <= -110.59 |
+|  || 0.00 |
+| R1-PA12:IH <= 0.00 ||  |
+| 0.00 ||  |
+| R2:S <= 0.00 ||  |
+| 0.00 ||  |
+| control_panel_log1 <=... ||  |
+| 0.00 ||  |
+| control_panel_log2 <=... ||  |
+| 0.00 ||  |
+| control_panel_log3 <=... ||  |
+| 0.00 ||  |
+| control_panel_log4 <=... ||  |
+| 0.00 ||  |
+| snort_log2 <= 0.00 ||  |
+| 0.00 ||  |
+| snort_log3 <= 0.00 ||  |
+| 0.00 ||  |
+| snort_log4 <= 0.00 ||  |
+| 0.00 ||  |
+```
+
+## 13.8 结论与未来工作
+
+电力系统受攻击和扰动是由于人为或自然事件引发而最经常出现的问题。最大的困难在于识别电力中断的主要原因并采取采取适当的应对措施。仅凭人类判断对于预测扰动是不够有效的。对于操作人员来说，观察系统状态是一项挑战。本研究的目标是部署各种`ML`模型来识别扰动并可靠地将其分类为自然或有害攻击。`OAK`数据集用于通过`Python`编程实现`ML`算法。两个系统的合并建立了物理设置。`PMU`在数字部分通过能量控制运行。相位数据包含了关于开关、断路器和继电器的电压测量。来自`XAI`的`SHAP`和`LIME`方法用于评估模型：`ETC`、`RF`和`GBM`。从`ETC`模型获得了四个指标的最高值。可视化对于调试模型行为非常有帮助。蜂群图基于个人的`SHAP`值，点垂直排列。每个点代表该个人/特征的原始值。高原始值由红色表示，低原始值由蓝色表示。2. 未来的研究应该处理电力系统中提出的`ML`的实时实现。扩展数据集，引入`DL`并融合多源数据可以提高准确性。`XAI`的进一步开发将增强操作员在复杂、高风险物理场景下的信任和决策能力。
+
+## 参考文献
+
+1. Presekal, A., Ştefanov, A., Rajkumar, V., & Palensky, P. (2023). 使用深度学习的电物理电力系统攻击模型。`IEEE Transactions on Smart Grid`, `14`(5), 4007–4020.
+
+2. Hink, R. C., Beaver, J. M., Buckner, M. A., Morris, T., Adhikari, U., & Pan, S. (2014, August). 电力系统扰动和网络攻击的机器学习。`2014 第届国际弹性系统研讨会 (ISRCS)` (pp. 1–8). `IEEE`.
+
+3. Nechivute, A., & Mafukidze, H. D. (2024). `SCADA`与工业物联网的集成：机遇与挑战。`IETE Technical Review`, `41`(3), 312–325.
+
+4. Gnana Swathika, O. V., Karthikeyan, A., Karthikeyan, K., Sanjeevikumar, P., Thomas, S., & Babu, A. (2024). 智能建筑和能源部门中`SCADA`和`PLC`的批判综述。`Energy Reports`, `12`, 1518–1530.
+
+5. Aggarwal, S., & Kaddoum, G. (2024). `SCADA`系统中集成`QKD`和`blockchain`的智能电网认证。`IEEE Transactions on Network and Service Management`, `1`, 22–31.
+
+
+
+6. Polat, O., Türkoğlu, M., Polat, H., Oyucu, S., Üzen, H., Yardımcı, F., & Aksöz, A. (2024). 使用卷积神经网络和决策树的多阶段学习框架，卷 2，页 22–29。`Springer`.
+
+7. Tatipatri, N., & Arun, S. L. (2024). 电力系统网络攻击综述：影响分析、检测和网络安全。`IEEE Access`, `12`, 18147–18167.
+
+8. Sarkar, G., & Shukla, S. K. (2024). 重新定义网络犯罪：印度法律背景下区分网络犯罪、网络攻击和网络恐怖主义的框架。`Journal of Economic Criminology`, `4`, 100063.
+
+9. Panthi, M. (2021). 使用机器学习识别电力系统扰动和 DDoS 攻击。`IOP Conference Series: Materials Science and Engineering` (Vol 1022, No 1, p. 012096). `IOP Publishing`.
+
+10. Sathyanarayanan, S., & Tantri, B. R. (2024). 基于混淆矩阵的性能评估指标。`African Journal of Biomedical Research`, `1`, 4023–4031.
+
+11. Polamarasetti, A. (2024, November). 机器学习用于恶意软件检测和分类的研究进展、趋势和挑战。`2024 智能计算与新兴技术国际会议 (ICEC)` (pp. 1–5). `IEEE`.
+
+12. Pawlicki, M., Pawlicka, A., Kozik, R., & Choraś, M. (2024). 通过系统分析获得先进见解：映射网络安全深度学习和人工智能中 `xAI` 的未来研究方向和机会。`Neurocomputing`, `1`, 127759.
+
+13. Mohale, V. Z., & Obagbuwa, I. C. (2025). 关于解释性人工智能集成到入侵检测系统的系统综述，以增强网络安全的透明度和可解释性。`Frontiers in Artificial Intelligence`, `8`, 152621.
+
+14. Sindiramutty, S. R., Tan, C. E., Lau, S. P., Thangaveloo, R., Gharib, A. H., Manchuri, A. R., … & Muniandy, L. (2024). 网络安全的可解释 AI。`智能城市中可解释 AI 应用的进展` (pp. 31–97). `IGI Global Scientific Publishing`.
+
+15. Jui, T. D., & Rivas, P. (2024). 机器学习模型中的公平性问题、当前方法和挑战。`International Journal of Machine Learning and Cybernetics`, `15`(8), 3095–3125.
+
+16. Radhakrishnan, A., Beaglehole, D., Pandit, P., & Belkin, M. (2024). 神经网络中的特征学习机制与无反向传播机器学习模型。科学，`383`(6690), 1461–1467.
+
+17. Karimullah, S., Khan, M., & Shaik, F. (2024). 针对肺部 CT 图像异常检测与分类的改进混合深度学习方法的实现与性能评估。在 2024 年智能与可持续技术领域最新创新国际会议 (ICRISST)，印度班加罗尔，IEEE, (pp. 1–6)。 doi: [10.1109/ICRISST59181.2024.10921991](http://dx.doi.org/10.1109/ICRISST59181.2024.10921991)
+
+18. Ye, L., Du, P., & Wang, S. (2024). 考虑外部因素的线性和机器学习模型工业碳排放预测。清洁生产杂志，`434`, 140010.
+
+19. Li, X., Wang, Z., Yang, C., & Boozkurt, A. (2024). 一种先进的净电量消耗预测框架：结合新型机器学习模型和优化算法。能量，`296`, 131259.
+
+20. Iyelolu, T. V., & Paul, P. O. (2024). 在业务分析中实施机器学习模型：挑战、解决方案及对决策的影响。世界先进研究与评论，`22`(3), 1906–1916.
+
+21. Zhang, L., & Jánošík, D. (2024). 混合机器学习模型增强短期负荷预测：CatBoost 和 XGBoost 方法。专家系统与应用，`241`, 122686.
+
+22. Fan, D., Xue, K., Zhang, R., Zhu, W., Zhang, H., Qi, J., … & Cui, P. (2024). 应用可解释机器学习模型以提高离子液体毒性的预测性能。总环境科学，`908`, 168168.
+
+23. Moreira Cunha, B., & Diniz Junqueira Barbosa, S. (2024, 10 月). 评估 SHAP 值视觉化表示对可解释人工智能的有效性。在第 23 届巴西计算系统人机因素专题会议论文集 IEEE (pp. 1–11)。
+
+24. Cunha, B. M., & Barbosa, S. D. J. (2024, 11 月). 评估 SHAP 值视觉化表示对可解释人工智能的有效性。在计算系统人机因素巴西会议 (IHC) (pp. 622–632)。SBC.
+
+25. Choi, W. C., Lam, C. T., & Mendes, A. J. (2024, 12 月). 使用 Shapley 加加性解释 (SHAP) 分析机器学习对学生表现预测的可解释性。在 2024 年 IEEE 工程教学、评估与学习国际会议 (TALE) (pp. 1–8)。IEEE.
+
+26. Shaik, F., Karimullah, S., Khan, M., & Ahmed, S. J. (2024). 集成 IoT、计算分析和遗传见解以提高可访问性和早期干预。在 2024 年智能与可持续技术领域最新创新国际会议 (ICRISST)，印度班加罗尔，IEEE, (pp. 1–6)。 doi: [10.1109/ICRISST59181.2024.10921991](http://dx.doi.org/10.1109/ICRISST59181.2024.10921991)
+
+27. Gebreyesus, Y., Dalton, D., Chiara, M. (2024). 用于数据中心自动化的 AI：背景下的 Shapley 加性解释。电子学，`13`(9).
+
+28. Mia, M., Pritom, M., & Islam, A. (2024). 可视化分析 SHAP 以诊断分类错误。arXiv 预印本：2411.02670.
+
+29. Zidoum, H., Shareed, A., Bentahar, R (2024). 可解释机器学习：使用 LIME 和 SHAP。在人工智能、大数据与区块链国际会议 (pp. 52–66)。Springer.
+
+30. Ahmed, T., Jiang, Z., & Attar, W. (2024). 用于入侵检测的混合装袋与提升。科学报告，`14`, 33–45.
+
+31. Bedle, H., & Lubo-Robles, D. (2024, 8 月). 矢量图、LIME 和 SHAP 在地震相中的应用。在 SEG 国际展览年会 (pp. 21–28).
+
+# 14.4 人工智能 (AI) GestureDraw：基于计算机视觉和 AI 辅助的手势绘图界面
+
+Swathi Gowroju, Shilpa Choudhary, Annoji Sri Poojith, Puvvula Haritha, Shaga Preethika, 以及 G. Sai Kiran
+
+DOI: [10.1201/978100634768-14](http://doi.org/10.1201/978100634768-14)
+
+## 14.1 引言
+
+在过去的几十年里，人机交互 (HCI) 已从传统的键盘和鼠标输入设备向更自然、更直观的模式发生了巨大变化，例如触摸屏、语音命令和手势识别。在这些方式中，手势识别是人类与数字系统交互的最变革性方式之一。例如，1980 代 Myron Krueger 开发的“Videoplace”中基于手势的界面，初衷是为了让技术变得易于获取且具有趣味。计算机视觉和人工智能技术已经进步，使得对手势进行非常准确且高效的识别，并将从游戏化到医疗、教育和创意设计的创新应用变为现实。现有的手势识别工作基于使用不同的算法和技术对人类手势进行准确解释。例如，传统方法依赖边缘检测和轮分析作为识别手势的手工特征。通常，所有这些方法由于光照条件的变化、背景干扰的存在以及手部位置或移动的不一致而容易失败，这不利于手势识别的准确性。得益于深度学习，这一学科经历了革命，让机器能够从大型数据集中学习甚至复杂的模式。目前为止，卷积神经网络 (CNN) 和循环神经网络 (RNN) 等模型已用于许多手势，以在不同的手势识别应用中实现卓越性能。预训练模型如 `MediaPipe Hands` 和 `OpenPose` 持续通过手势识别应用中的稳健框架，使得实时手部检测和追踪变得更加容易。
+
+## 引言
+
+基于上述所有进展，所提出的系统——人工智能（AI）`AI GestureDraw`，展示了一种结合了 AI 驱动输出生成的新型手势识别技术。`AI GestureDraw` 的独特之处在于它将实时手部追踪与超越简单解释能力的先进 AI 能力相结合，不仅增强了用户生成的草图，还确保了无缝、智能的用户体验。除了允许用户通过追踪实时手部动作来创建数字草图外，该系统还利用 AI 分析并增强用户的草图。因此，它本质上使用了计算机视觉技术结合深度学习模型，来理解手部动作如何转化为有意义的输出。`AI GestureDraw` 具有几个构成其创新功能的关键要素：
+
+1. **手部追踪与手势识别**：(a) 系统采用了一些先进的手部检测和跟踪技术，可以识别手部最重要的关键点并以极高的准确度解释手势。(b) 这如 `CNNs` 等算法可以分析手部动作的空间和时间特征，因此系统能够区分哪个手势代表绘图、清除画布或调用 AI 处理。
+
+2. **动态内容生成**：它利用人工智能来解释创建的任何草图，从而提供与上下文相关的输出。这种过程涉及解释手绘输入，并直接针对用户的意图找到响应或解决方案。
+
+3. **交互式界面**：该系统提供了一个直观且易于使用的实时交互平台，用户可以在其中查看其手部动作转化为画布上的绘画，同时接收 AI 生成的反馈或解决方案。
+
+所提出的系统通过人工智能和计算机视觉的应用，转化了数字创造和参与度。它通过破译自然手部动作摒弃了传统的输入设备，使用户能够自然地进行创作或素描。AI 通过改进形状、纠正错误或即时提供原创想法改进了这一过程。其应用非常广泛，包括康复（为运动功能障碍人士提供无障碍工具）、创意艺术与设计（能够实现复杂的创作）以及教育（提供交互式学习体验）。其他应用还包括产品设计与原型制作（简化构思生成）、沉浸式虚拟现实与增强现实（`VR/AR`）体验（使用户能够与三维 `3D` 环境交互）、游戏（实现基于手势的交互）以及用于虚拟会议的协作工具。这项技术通过 AI 驱动的改进与简单性相结合实现了变革。`AI GestureDraw` 是将人类对技术精度的直觉及其以系统化、整合方式的应用的一个卓越范例。通过将高级手势识别能力与生成式 AI (`GenAI`) 结合，该系统既简化了数字内容的创建与交互过程，又跨领域提供了新的创新空间。本文阐述了支持 `AI GestureDraw` 的技术基础，例如其开发过程和底层算法，旨在彻底改变数字系统的参与方式。
+
+论文的其余部分结构如下：`Section 14.2` 包含文献综述，`Section 14.3` 讨论了提出的系统。`Section 14.4` 展示了所提系统的结果分析以及与先进技术的对比分析。`Section 14.5` 总结了本文工作。
+
+## 14.2 文献综述
+
+手势识别是人机交互（HCI）中不断发展的领域之一，已有若干突破旨在增强应用程序（包括无接触界面）的精度、实时执行和可用性。在该领域开展的大部分工作 `[1–12]` 在应用技术上有所不同，例如 `CNNs`、`optical flow` 和基于媒体的手部追踪，每种技术都对手势识别的准确性和熟练度提供了独特的贡献。尽管如此，关于将基于手势的交互与 AI 驱动的反馈机制相结合的研究仍然很少，表明该领域仍有深度空间。`Table 14.1` 显示了基于 AI 的手势识别的文献综述。
+
+Reddy 等 `[1]` 和 Khan 等 `[5]` 分别探索了基于 AI 的手势识别，分别提供了 95.2% 和 96.8% 的准确率。尽管这些方法在孤立手势识别方面运行良好，但在不受控的光照条件和复杂环境下的实际实现通常面临挑战。其他相关研究人员如 Yusuf 等 `[2]` 和 Podder 等 `[3]` 分别提出了基于 `MediaPipe` 和 `YOLO` 的手部检测方案，在动态设置下解决了上述某些问题，但在实时追踪方面仍有很大提高空间。
+
+最近，识别手势并促进创意领域、绘画或教育工具的系统引起了极大兴趣。研究人员 `[4, 7]` 探索了深度学习技术以及传统的计算机视觉算法，例如 `Haar Cascade` 特征和方向直方图 `HOG` 特征。然而，这些方法虽然高效，但与更复杂的模型（特别是 `CNN` 和长短期记忆 `LSTM` 模型 `[6]`）相比，准确性仍不从心。其他方法基于机器学习和光流技术，如 Alonazi 等 `[8]` 和 Rastgoo 等 `[7]`，它们在基于手势的用户界面中的应用中也显示出潜力，但在手势过快或模糊时在追踪方面存在困难。最后，几项研究实际上指出了上下文感知识别系统，特别是基于 AI 的反馈，如 Ansar 等 `[10]` 所述。这些系统的设计旨在具有更强的适应性，取决于手部动作和手势驱动的智能应用。尽管如此，显而易见，设计更健壮、更灵活的系统以适应各种手部姿和实时情况仍然是未来研究的重要目标。
+
+**表 14.1** 各种手势识别算法
+
+| 年份 | 作者 | 算法 | 准确率 | 数据集 |
+|---|---|---|---|---|
+| 2021 | Reddy 等 [1] | 基于 CNN 的手势识别，使用卡尔曼滤波进行追踪 | 95.2% | 包含 10 种手势的自定义手势数据集 |
+| 2020 | Yusuf 等 [2] | MediaPipe 手部关键点，使用 KNN 进行手势分类 | 92.7% | MPII 人体姿态数据集 |
+| 2019 | Podder 等 [3] | 使用 YOLO 进行手部检测，使用 SVM 进行手势分类 | 90.5% | EgoHands 数据集 |
+| 2018 | Song 等人 [4] | Haar 级联分类器、HOG 特征、用于手势检测的 CNN | 89.3% | 自定义数据集（手势的 RGB 图像） |
+| 2022 | Khan 等人 [5] | 基于深度学习的手势识别识别 CNN | 96.8% | 手势识别识别数据库 (HGRD) |
+| 2020 | Tchantchane 等人 [6] | 基于 LSTM 的手势识别、用于特征提取的 CNN | 94.5% | NTU 手势数据集 |
+| 2021 | Rastgoo 等人 [7] | 用于手关键点检测 OpenPose、随机森林分类器 | 91.0% | 牛津手势数据集 |
+| 2019 | Alonazi 等人 [8] | 用于手势识别的 ConvNet、用于运动跟踪的光流法 | 93.6% | Jester 手势数据集 |
+| 2020 | Mountenerin 等人 [9] | 用于手定位的 K-means 聚类、用于手势分类的 CNN | 90.8% | 自定义数据集（通过摄像头捕捉） |
+| 2021 | Chen 等人 [10] | MediaPipe 手、用于手势识别的 CNN | 94.0% | SHREC’17 手势数据集 |
+| 2023 | Wang 等人 [11] | 基于 Transformer 的手势识别、自注意力机制 | 95.0% | 手势识别数据集 (GRD) |
+| 2022 | Ahuja 等人 [12] | 带有迁移学习的 CNN | 97.5% | 手语语言数据集 (SLD) |
+
+## 14.3 建议工作
+
+
+
+本文引入了创新的手势识别和人工智能，以增强用户交互和创造力 \[13]。`AI GestureDraw` 是基于计算机视觉和深度学习相关技术的坚实基础开发的。所提出的系统将允许人们通过手势创建一种交互式的绘画方式，从而可能加速绘画过程并通过 AI 辅助输出生成来提升水平 \[14]。在完成草图后，系统会智能地分析绘画并给出特定任务的响应，使其成为各种应用程序的通用工具\[15]。`AI GestureDraw` 在允许流畅、引人的用户体验的同时，鼓励创造力，通过利用 AI 的分析能力，实时为草图赋予意义 \[16]。该应用建议的方法涉及通过摄像头实时捕捉视频输入，如图 14.1 所示，识别用户手势以解释他们的绘画，并根据绘画输入生成有意义的输出 \[17]。
+
+```
+![Figure 14.1 AI 手势绘制工作流。⏎](img/9781041062943_C014_001.jpg)
+```
+
+**图 14.1** AI 手势绘制工作流。\⏎
+
+图 14.1 所示的系统架构描述了所提模型的工作原理。首先，给出视频输入，这是通过摄像头；它捕捉用户的实时视频。摄像头首先检测用户。
+
+图 14.2 展示了基于计算机视觉的 AI 接口如何操作。手部的关键点识别在第一阶段（图 14.2a–d）中演示，其中节点代表关节或手指，连接线（可能由姿态估计技术产生）创建了手的结构。活动手势检测在阶段（图 14.2e）中演示，显示了原始视频流并使用边界框识别并跟踪用户的手。在最后一步（图 14.2f–h）中，显示界面，系统解码“数字 1”或“拳头”等手势，并产生标记为“答案”的 AI 输出。这展示了从手识别到手势解释的平滑过渡，为手语翻译、虚拟素描和基于手势的控制系统等应用开启了大门。
+
+手势识别模块能够识别多个命令。例如，当仅检测到食指时，系统能够进行“绘制”，但识别到五指全部合拢则会删除之前的画。缩放操作通过类似于食指和大拇指合并的手势进行，而除拇指以外的所有手指则代表视频冻结操作。一旦手势处理完成，将根据检测到的手势生成基于 AI 的输出。这种文本输出产生一个结果（如绘制空格或冻结区块）或系统响应的摘要。这种多层结构实现了实时手势识别、动作执行和反馈的无缝集成，适用于虚拟画板、手势控制演示或智能环境等应用。所有组件共同工作，提供了一个无缝且沉浸式的用户界面。
+
+### 14.3.1 训练
+
+该模型用于涉及特征提取和分类的任务。它包含两个具有 16 个滤波器的卷积层（`Conv2D`）。虽然第二个卷积层将空间维度缩小到 (22, 22, 16)，但第一个卷积层生成的输出大小为 (48, 48, 16)。
+
+批归一化（Batch normalization）位于这些层之后，对特征图进行归一化以加速并稳定训练过程。模型具有有两个 `MaxPooling2D` 层，分别将特征图下采样到 (24, 24, 16) 和 (11, 11, 16)，以进一步缩小空间维度并避免过拟合。为了增强模型的泛化能力，每次池化操作后还使用了 `Dropout` 层，在训练期间随机移除部分神经元。图 14.2 中所示的图表显示了模型在跨多个 epoch 的训练和验证过程中的表现。训练和验证准确率的进展显示在准确图中。当训练准确率（蓝线）随着 epoch 的增加逐渐上升并接近 1.0 时，模型成功地从训练数据中学习。同样，验证准确率（橙色线）以极小的波动实现了极佳的准确率。由于训练和验证准确率之间的紧密对齐，模型似乎有效地泛化到了未知数据，而没有经历严重的过拟合。
+
+损失和准确率图如图 14.3 所示。它显示训练和验证损失的曲线在同一时间段内都在下降。随着训练损失（蓝线）在前几个 epoch 中急剧下降，然后逐渐趋于零，模型在训练数据上的预测变得越来越准确。与训练损失类似，验证损失（橙色线）显示出类似的模式，急剧下降并稳定在低数值。对于训练和验证数据，模型整体表现优异，展示了高准确率和极小的损失。训练参数和验证参数之间的强相关性凸显了有效的学习和对未知数据的卓越泛化能力。这一结果表明数据集、模型架构和超参数都已为任务配置妥。
+
+### 14.3.2 评估参数
+
+所提系统使用手势识别准确率（`GRA`）、延迟（`L`）和 AI 输出相关性（`OR`）来确保所提系统的性能。`GRA` 使用公式 14.1 计算，有助于识别在执行的所有手势总数中正确手势的总数。
+
+`GRA = (T_correct/T_total) × 100%` (14.1)
+
+其中 `T_correct` 是正确识别的手势数量，`T_total` 是测试的手势总数。`L` 使用公式 14.2 计算，有助于识别识别正在执行的手势的大致时间。
+
+```
+L = (Σ(i=1 to n) T_recognize_i) / n
+```
+
+(14.2)
+
+其中 `T_recognize, i` 是识别手势 `I` 所花费。`n` 是测试的手势数量。`OR` 使用公式 14.3 计算，有助于在接收到的输出总数中识别相关 AI 输出的数量。
+
+`OR = (S_relevant / S_total) × 100 %` (14.3)
+
+其中 `S_relevant` 是评估者认为相关的 AI 输出数量，`S_total` 是评估的输出总数。
+
+## 14.4 结果
+
+所提系统使用先进的手势识别技术，结合 `GenAI`，以确保响应和交互体验。该系统结合了计算机视觉、手部跟踪和 AI 驱动的能力，提供了实时的手势交互，设计用于创意、教育和解决问题的应用。它为用户提供了一个集成平台，用于可视化概念、执行操作并获取 AI 生成的答案。所提系统的结果展示了 AI 驱动的手势检测和交互应用的操作和输出。利用计算机视觉、手部跟踪和生成式 AI，该系统实时检查用户并开启了由手势驱动的交互体验。整个系统通过实时摄像头输入启动，其中 `cvzone HandTrackingModule` 获取并分析手势。当检测食指时，系统接收到该手势并开始跟踪其移动。然后用户就可以在虚拟画布上进行自由绘图（如图 14.4 所示）。
+
+- **基于 AI 的解释：** 张起四根手指（如图 14.3 所示）可调用 Google 的生成式 AI 连接。它将用户的绘制存储为图像，并将其通过 AI 模型以生成上下文相关的响应。例如，如果画画布上勾勒出一个数学问题，AI 可以提供文本输出的解决方案（如图 14.5 所示）。
+
+**图 14.3** 提议系统的准确率和损失图。#ch22.xhtml#f166b)
+
+```
+![图 14.5 先进手势识别分析方法的比较。
+```
+
+**图 14.5** 先进手势识别分析方法的比较。#ch22.xhtml#f168b)
+
+这是一个由 AI 系统驱动的实时手势学习应用，既易用又适用于多种用途。凭借 `cvzone` 准确跟踪手的能力以及生成式 AI 响应的集成，该组件创建了交互且引人入胜的体验。我们在此强调该系统通过绘制和基于 AI 的内容生成功能整合计算与创意任务的能力。
+
+该系统的准确性、响应速度和实时反馈效率是典范性的。手部追踪功能强大，延迟低，并且在相同的光照条件下正确识别手势。基本上，绘制设备具有某些 AI 支持的功能。画布通过直观的命令对手势做出响应，由于这些操作在画布上感觉非常自然灵活，所有技能水平的用户都可以使用该系统。
+
+对于实际应用，虚拟白板、教学辅助和创意工具在该应用中也具有巨大的前景。通过其解释丰富输入并产生自动输出的能力，这种 AI 驱动的功能通过作为用户创造力机器智能之间的桥梁，扩展了系统的实用性。信息最大化（更简洁）：“总之，这些结果显示了计算机视觉、手势识别和基于 AI 的处理在实时交互系统中的适用性。”它使用了基于 LF 的系统。表 14.2 显示了提议系统的性能指标。
+
+**表 14.2** 提议系统的评估指标#ch22.xhtml#t47b)
+
+| 指标使用 | 实现准确率 | 注释 |
+| --- | --- | --- |
+| GRA | 96.2% | 衡量从所有执行的操作中正确识别手势的精度。 |
+| 延迟 (L) | 82 ms | 评估识别手势所需的平均时间，确保实时响应。 |
+| AI OR | 94.5% | 评估 AI 生成输出对于给定任务的相关性。 |
+
+该系统在某些指标和领域显示出卓越的性能和效率，表明了让手势识别或 AI 辅助任务高效工作的提案是成功的。结果是以 `GRA` 衡量的，在包含 327.15 种动态手势的自定义数据集上达到了惊人的 96.2%，因此证明了系统在准确解释用户输入方面的可靠性。平均延迟 (`L`) 为每个手势 82 ms，证明了他们的系统可以返回近实时的响应，这对于交互式应用至关重要。此外，`AI OR` 达到了 94.5%，表明该系统在各种教育、创意和解决问题的场景中提供相关输出的能力。这些指标共同证明了提议系统的可靠性、多功能适用性，可以作为基于手势和 AI 解决方案的潜在选择。
+
+### 14.4.1 比较分析
+
+提议系统的主要优势之一是其实时基于手势的绘制功能。与目前提供的大多数系统 \[1] 相比，提议系统允许通过直接举起食指参与直接绘制的动态过程来实现人机交互（HCI）。目前的大多数其他系统关注静态手势识别，某些系统对预定义的手部动作进行分类。这种能力为系统带来了更具互动性和引人入胜的环境，使其更加灵活且对用户友好。相比之下，传统系统仅限于检测和解释手势，而无法实现对绘制或视觉输出的直接操作。
+
+将 AI 引入提议系统引入了一项重要功能，这项功能在大多数现有系统中可能大部分缺失。然而，一旦用户完成绘制，系统会将捕获的图像传输到 AI 模型以处理生成的图画并生成特定上下文的输出。这可能是解决某个特定问题、提供详尽的解释，或根据输入的输入创建创意内容。然而，目前此类基于 `CNNs` 或支持向量机 (`SVMs`) 的系统仅能指示手势可以被识别和分类，而不提供任何额外的输出或交互。由于 AI 的性质，提议系统将具有许多功能，但这些是扩展功能，使其能够胜任更严格的应用——教育工具、创意平台和 AI 驱动的设计。
+
+该提议系统的核心思想是它能够将各种动作映射到若干手势上。例如，可以用一种手势绘图，用另一个手势擦除。这种手势控制与目前仅识别预定义静态手势而无法提供执行复杂任务能力的系统相比，由更精细的用户体验驱动，是另一个很有前景的发展。例如，用户可以使用简单的拇指手势清除画布，或使用另一个手势开始新的绘制。这种对系统执行的动作的动态控制使其在创意任务中非常高效，并比不具备多动作能力的现有手势识别系统具有积极优势。
+
+尽管提议的应用在多样性和应用方面高于现有系统（现有主要用于简单手势的识别或 HCI 和手语解释的分类），该系统的能力扩展到了更多样化的实际应用。通过将手势识别与 AI 结合，该系统非常适用于交互式绘工具、数字艺术创作、教育环境和虚拟白板。解决问题的能力（例如用户绘制的数学方程甚至图表）也被集成到 AI 中。这种应用范围的扩展充分强调了提议系统的活性，同时与文献研究得出的定义清晰但更简单的系统类型相比，为终端用户提供了更完整的工具。
+
+### 14.4.2 优点
+
+它允许用户使用手势实时在虚拟画布上进行绘制和触摸，与大多数静态手势识别系统相比，创造了一种动态且沉浸的体验。通过集成的 AI 处理来处理绘制的输入，除了手势识别外，当用户可以获取特定上下文的输出时，系统变得更加智能且功能更加强大。它通过支持绘制、擦除或停止，为用户提供了控制和灵活性方面的额外优势，从而最大限度地提高工具在创意和生产力目的上的效率。手势识别与 AI 的深度结合了多种应用，从虚拟白板到数字艺术，从教育平台到解决方案工具等。
+
+### 表 14.3 手势识别分析对比
+
+| 作者 | 预测 | 准确率 |
+| --- | --- | --- |
+| Mittal 等人 [2] | MediaPipe 手部关键点，用于手势分类的 KNN | 92.7 |
+| Lee 等人 [3] | 用于手部检测的 YOLO，用于手势分类的 SVM | 90.5 |
+| Kim 等人 [4] | Haar 级联分类器，HOG 特征，用于手势检测的 CNN | 89.3 |
+| Sharma 等人 [9] | 用于手部定位的 K-means 聚类，用于手势分类的 CNN | 90.8 |
+| AI GestureDraw：基于计算机视觉和 AI 辅助输出的手势绘制界面 | 手势检测（Open CV, Mediapipe, 基于 AI 的处理） | 94.6 |
+
+在过去的 10 年里，已经许多许多手势识别系统（见表 14.3）。它们大多数采用了不同的算法和技术，结合不同的数据集，帮助克服了在正确检测和分类手势方面的问题。Zhang 和 Lu [19] 使用 `CNN` 进行手势识别，但添加了 `Kalman filtering`，准确率达到 95.2%。类似的工作还涉及 Gupta 等人 [20]。它使用基于 `CNN` 的深度学习方法，在手势识别数据库（HGRD）上表现出高达 96.8% 的高准确率。Bhiri 等人 [21] 使用 `MediaPipe` 检测手部关键点，并使用 `K-nearest neighbors` (`KNNs`) 进行手势分类。Patel 等人 [22] 采用 `OpenPose` 进行手部关键点检测，并结合 `Random Forest classifier`，这两个系统都实现了显著的准确率：分别为 92.7% 和 91.0%。
+
+尽管这些现有系统如图 14.4 所示具有非常高的识别准确率，但它们主要关注于手势的检测和分类，交互性和反馈非常少。像 Lee 等人 [23]（使用 `YOLO` 进行手部检测）和 Kim 等人 [24]（使用 `Haar Cascade Classifiers`）的方法虽然在手势识别方面显示出高水平的性能，但无法根据识别出的手势提供实时的、感知内容的响应。
+
+所提出的系统通过展示实时 GenAI 响应与手势识别的集成，提供了一种新颖的补充。与现有方法相比，所讨论的系统显著区别在于，该方法重点放在了 GenAI 模型的集成上，以便根据上下文动态地产生由识别手势所提供的反馈。它赋予了用户额外的控制和灵活性优势，通过支持绘制、擦除或停止，最大限度地提高工具在创意和生产力目的上的效率。这种交互层具有重要价值，使得体验更加个性化且具有响应性。与现有系统不同，所提出的系统不仅限于手势检测和分类，还提供了一种能够适应各种需求的通用解决方案。该系统利用 `Streamlit` 构建用户界面，以确保流畅高效的实时处理，且 GenAI 模型使用户变得更加直观无缝。
+
+视频流系统还通过手势控制提供了另一种形式的益处，特定的手部动作（包括抬起手指）会发送信号来冻结捕捉的特定内容，这意味着控制过程具有某种直观性和准确属性，因为控制过程的人不需要伸出手进行某种形式的远程控制。这种功能在现有系统中是不可能的，因为它们主要设计用于分类连续视频流。通过手势支持视频流的暂停和恢复使得整个系统更有交互性，并为用户捕捉正确时刻的内容提供了最大的灵活性。
+
+## 14.5 结论与未来展望
+
+在所提出的系统中，我们利用最新的计算机视觉技术和机器学习算法开发了一种交互式手势识别应用程序，允许实时用户交互。该系统包含多个功能模块，例如手部和手指检测算法（使用 `CNNs` 和 `Haar Cascades` 等技术），用于精确定位手部并跟踪其在视频或图像中的移动。使用 `KNNs`、`SVM`、决策树和机器学习算法进行手势识别，根据手指的相对位置和手部动作进行分类。这些方法的集成允许程序交互式地响应用户输入，允许实时执行操作，如在画布上绘图或根据特定手势进行擦除。在实施过程中，检测和分类准确性的关键在于对输入数据进行预处理，例如减少音频中的噪声并确保所有帧都以相同的方式处理。这些结果还证明了从清洁且响应良好的画布开始的优势，并清晰地展示了系统提供准确可靠的手势交互方法的能力。
+
+尽管所提系统成功包含了诸如通过手势绘制和清除画布等关键功能，但未来仍有若干改进空间。一个令人兴奋的方向包括利用最前沿的机器学习方法，例如深度学习模型。例如，使用`CNNs` 进行更高效的特征提取，或使用`RNNs` 对处理过的手势数据进行处理可以极大提高识别准确率。此外，集成手写分析技术，特别是光学字符识别（`OCR`）或用于字符识别的`CNN` 模型，将扩大系统在数字手写识别和签名验证等领域的应用。为了进一步开发，我们甚至可以使用不同类型的算法，如`Naive Bayes Classifier`或`LSTM` 网络，因为我们甚至可以根据手势对用户进行情感分析。此外，扩展系统以适应更广泛的手势选择，并允许更大的实时交互性，将进一步发展该应用。在快速演进的用户界面设计领域，所提系统可以跟上技术进步和不断变化的用户需求。
+
+## 参考文献
+
+1. Reddy, Veluru Karthik, Vanapalli Durga Prasanth, R. Shivaramakrishna, Naidu Sri lekha, and Jyothi N.M, “基于卷积神经网络的手手势识别,” `IJSRIS`, 3, no. 3: 20–25, Jun. 2024.
+
+2. Yusuf, Oluwaleke, Maki Habib, and Mohamed Moustafa. “实时手势识别：集成基于骨骼的数据融合和多流 CNN,” `arXiv preprint arXiv:2406.15003`, 2024.
+
+3. Podder, Kanchon Kanti, Maymouna Ezeddin, Muhammad E.H. Chowdhury, Md Shaheenur Islam Sumon, Anas M. Tahir, Mohamed Arselene Ayari, Proma Dutta, Amith Khandakar, Zaid Bin Mahbub, and Muhammad Abdul Kadir. “使用深度学习模型的与签名者无关阿拉伯手语识别系统,” `Sensors`, 23, no. 16: 7156, 2023.
+
+4. Song, Zhaomou, John J. Dudley, and Per Ola Kristensson. “HotGestures: 在虚拟现实中使用无分界符的手势快捷键补充命令选择和使用,” `IEEE Transactions on Visualization and Computer Graphics`, 1: 22–29, 2023.
+
+
+
+5. Khan, M., Su’ud, M.M., Alam, M.M., et al. “通过使用`PRMS-Net`深度学习方法优化热图像分析增强乳腺癌检测,” `Journal of Imaging Informatics in Medicine`, 1, 26–35, 2025. `https://doi.org/10.1007/s10278-025-01465-y`
+
+6. Tchantchane, Rayane, Hao Zhou, Shen Zhang, and Gursel Alici. “基于非侵入性传感器的手势识别综述,” `Advanced Intelligent Systems`, 5, no. 10: 230027, 2023.
+
+7. Rastgoo, Razieh, Kourosh Kiani, Sergio Escalera, and Mohammad Sabokrou. “多模态零样本动态手势识别,” `Expert Systems with Applications`, 247: 12349, 2024.
+
+8. Alonazi, Mohammed, Hira Ansar, Naif Mudawi, Saud. Alotaibi, Nouf Abdullah Almujally, Abdulwahab Alazeb, Ahmad Jalal, Jaekwang Kim, and Moohong Min. “基于 CNN 的检测器和深度信念网络的智能医疗手势识别,” `IEEE Access`, 11: 84922–84933, 2023.
+
+9. Montazerin, Mansooreh, Ela Rahimian, Farnoosh Naderkani, S. Farokh Atashzar, Svetlana Yanushvich, and Arash Mohammadi. “从高密度`EMG`信号的瞬时分解到融合分解：基于 Transformer 的手势识别,” `Scientific Reports`, 13, no. 1: 11000, 2023.
+
+10. Ansar, Hira, Naif Mudawi, Saud. Alotaibi, Abdulwahab Alazeb, Bayan Ibraimm Abdullah, Mohammed Alonazi, and Jeongmin Park. “使用凸包和几何特征的字符手势识别,” `IEEE Access`, 11: 82065–82078, 2023.
+
+11. Tchantchane, Rayane, Hao Zhou, Shen Zhang, and Gursel Alici. “基于非侵入性传感器的手势识别系统综述,” `Advanced Intelligent Systems`, 5, no. 10: 230027, 2023.
+
+12. Karsh, Bhumika, Rabul Hussain Laskar, and Ram Kumar Karsh. “IV3Net: 用于手势识别的改进 inceptionV3 网络,” `Multimedia Tools and Applications`, 83, no. 4: 10587–10613, 2024.
+
+13. Bhiri, Nahla Majdoub, Safa Ameur, Ihsen Alouani, Mohamed Mahjoub, and Anouar Ben Khalifa. “关注 Leap Motion 的手势识别：概述、现实挑战和未来方向,” `Expert Systems with Applications`, 226: 120125, 2023.
+
+14. Swathi, A., Sandeep Kumar, Shilpa Rani, Abhishek Jain. “使用各种特征进行表情分类,” 2022. (注：此处原文作者信息略有偏差，翻译保留对应关系)
+
+15. Rani, Shilpa, Sandeep Kumar, Arpit Jain. “使用各种技术进行商品价格预测,” 2022.
+
+16. Patel, R., S. Kumar, Shilpa Rani, A. “基于`IRIS`的识别与欺骗攻击,” 在 2022 年技术进展国际会议上, pp. 2–6.
+
+17. Karimullah S, Khan M, Shaik F, Alabduallah. “通过 CT 扫描、深度学习和数据传输检测肺癌的集成方法,” `Frontiers in Oncology`, 14:143501, 2024.
+
+18. Swathi, A., Shilpa Rani, Sandeep Kumar. “使用`ACS`避免疲劳检测中的误报,” 在第六届科学与工程创新会议论文上, pp. 225–233.
+
+19. Zhang, C., & Y Lu. “人工智能：现状与未来前景,” `Journal of Industrial Integration`, 23, Article 10024, 2021.
+
+20. Gupta, R., S. Patel, A. Sharma. “自动化更新：利用 AI 进行决策支持,” `Journal of Information Systems`, 15: 45–58, 2022.
+
+21. Bhiri, N. M., S. Ameur, I. Alouani, M. A. Mahjoub, and A. B. Khalifa. “关注 Leap Motion 的手势识别：概述、现实挑战和未来方向,” `Expert Systems With Applications`, 226: 120125, 2023.
+
+22. Patel, R., J. Dhakad, K. Desai, and T. Gupta. “使用卷积神经网络的手势识别系统,” 在 2018 年第四届计算通信与自动化国际会议（CCAA）上, pp. 1–6. IEEE.
+
+23. Lee, E., J.-S. Kim, D. K. Park, and T. Whangbo. “YOLO-MR: 用于解决数据不平衡的元学习检测检测算法,” `IEEE Access`, 12: 42650–42663, 2024.
+
+24. Kim, J., Y. Kumar, J. Yoo, and S. Kwon. “佩戴 HMD 观看虚拟现实时的眨眼频率变化,” `Symmetry`, 10: 400, 2018.
+
+25. Wang, Y., I. Azimi, K. Kazemi, A. M. Rahmani & P. Liljeberg. “使用深度卷积生成对抗网络进行 PPG 信号重建”，2022: 3387–3391, 2022. [10.1109/EMBC48229.2022.9871678](https://doi.org/10.1109/EMBC48229.2022.9871678).
+
+# 333.15 使用混合小波去噪法改进胎儿心电图检测
+
+K. Naga Sankar Reedy, Peddapullaiahgari Hariobulesu, Shaik Karimullah, Anwar Bhasha Pattan, Fahimuddin Shaik, and Mudassir Khan
+
+DOI: [10.1201/9781003634768-15](http://doi.org/10.1201/9781003634768-15)
+
+## 15.1 引言
+
+测量胎儿心电图（fECG）主要有两种方法：侵入性和非侵入性。非侵入性腹部心电图（ECG）记录包含母亲和婴儿心跳的信号。相反，侵入性方法需要在分娩过程中宫颈口打开后将电极准确地放置在婴儿头皮上[1]。你可以通过在母亲腹部放置电极，在怀孕第一阶段就开始无手术地监测婴儿的心率。然而，来自电源线的噪声、皮肤电极阻抗以及母亲的肌肉活动往往会阻碍这种方法的运行[2]。查看 fECG 以检查婴儿心脏状况并发现先天性心脏异常、心过缓、心过速和缺氧等问题非常重要[3]。提取 fECG 数据有多种方法，即线性分解、自适应滤波和非线性变换[4]。像单值分解（SVD）这样的线性方法将根据时间特频谱特征提供加性分离源，这些特征是基于可能是预先定义或数据驱动的基函数的[5]。一种盲分盲源分离（BSS）方法（如独立成分分析（ICA）及其变体）假设信号源矩阵在统计上是独立的。最近提出的周期分量分析（πCA）概念已被证明在有或无先验知识的情况下都可以作为一种半盲分离方法[6]。在 fECG 数据被大量噪声污染的情况下，需要非线性方法，例如使用受干扰 334.信号的延迟副本来近似恢复其状态空间，从而继续使用主成分分析（PCA）或类似的方法来妥善滤波信号[7]。这类方法确实相当良好，准确性显著提高，但计算量大，且可能取决于专家意见决定的主观边界[8]。自适应滤波今天仍被频繁使用，但它通常需要来自母胎的 ECG 信号参考，而且如果它是独立的，则肯定需要来自母体心电图（mECG）的专用信号通道[9]。在没有 ECG 参考源的情况下，可以使用连续消除法计算 fECG，尽管消除所有 mECG 活动并不一定会有令人满意的（图 15.1）。还有基于小波变换（WT）方法的变体也被证明也能达到良好的性能，特别是当将自适应阈值应用于小波系数时。扩展卡尔曼平滑器能够从单通道数据中提取 fECG，但当母亲和胎儿信号混合时它们会表现得很困难。总而言之，由于信号重叠和外部噪声，从腹部记录中提取胎儿 EC 是非常困难的[10]。复杂的信号处理技术对于提高信号质量和诊断水平是必要的。
+
+![图 15.1 自适应滤波配置。⏎](img/9781041062943_C015_001.jpg)
+
+**图 15.1** 自适应滤波配置。⏎
+
+提取 fECG 的方法有很多。卡尔曼滤波（KF）正成为减少自适应滤波中噪声的有效解决方案。建议可以使用扩展状态 KF 在混合的腹部信号后提取 fECG 数据。这种方法比标准的卡尔曼滤波方法更有效。最近，研究人员利用定性和定量测量研究了各种用于提取单通道 fECG 的方法。其中一项研究提出了一种新的自适应滤波方法来检测母腹部 ECG 信号中的胎儿 QRS 复合波。此外，还提出了一种自适应噪声去除器，它包含许多子滤波器以提供更好的 fECG。该研究非常丰富，335.且这些技术指向了利用不同技术来估计胎儿心率（FHR）的混合系统。然而，fECG 信号通常隐藏在腹部信号的噪声和伪影中，胎儿 R 峰无法被准确发现。在这些情况下，稳态小波变换（SWT）非常重要，因为它能够分析频率不断变化的平稳信号。SWT 是提取 fECG 的有用方法，它可以分解复杂的信号。这对于诊断出生前的异常特别有用。
+
+## 15.2 文献综述
+
+Camps 等人[11]建议使用有限脉冲响应（FIR）神经网络结合自适应降噪框架获取 fECG 数据。这种方法比典型的最小均方（LMS）和归一最小均方（NLMS）算法更好，因为它利用了非线性特征。它能够从模拟和真实的数据集中提取 f ECG。Sameni 和 Clifford[12]对 fECG 信号处理的问题和未来进行了全面的评估。他们指出了重要的障碍，例如信噪比（SNR）低、缺乏基准数据库以及我们对心脏工作的了解较少。该研究还回顾了过去 40 年信号采集和信号传输技术的改进。Kanjilal 等人[13]提出了一种通过 SVD 提取单通道 fECG 的方法。他们证明了这种方法在分离母胎信号方面效果良好，且计算成本合理。Al-Zaben 和 Al-Smadi[14]在此基础上，创建了一种结合 SVD 和神经模糊推理系统的自适应消除噪声的混合方法。他们的解决方案结合了 SVD 产生的参考信号和模糊逻辑来改进滤波。它在合成和真实的 fECG 数据上均表现非常好。
+
+## 15.3 现有方法
+
+必须有一种方法能够正确找到胎心跳，以便在怀孕早期监测胎儿心脏健康状况。本文提出了两种使用递归最小二法（`RLS`）方法提取 fECG 数据的混合算法。准确找到胎儿 R 峰对于诊断和治疗先天性心脏问题至关重要。主要目标是从复合的腹部记录中分离出 fECG 信号。`RLS` 是自适应信号处理中常用的方法，用于减少噪声和分离信号 [15]。`RLS` 算法通过连续估计 `mECG`，然后随时间变化从腹部信号中减去估计的 `mECG`，使得剩余误差中的 fECG 更容易观察。`RLS` 算法针对输入信号的不同时间点调整滤波器系数，以确保输入信号与参考信号之间的差异最小。`RLS` 的某些提取组件包括滤波器设置、残差计算、滤波器权重调整和卡尔曼增益计算。`RLS` 非常适用于实时应用，因为它随着估计过程不断优化滤波器，使估计值更接近感兴趣的测量值 336。这些点使得 `RLS` 成为区分 fECG 与 mECG 及环境噪声的重要方法。
+
+### 15.3.1 信号预处理
+
+- **带通滤波：** 对原始腹部 ECG 信号应用带通滤波器，以分离 ECG 的频率范围（例如 0.5–50 Hz）并去除高频噪声和基线漂移。
+- **分段：** 如果为了处理效率需要，将信号分解为较段。
+
+### 15.3.2 RLS 滤波器设置
+
+- `RLS` 滤波器通过自适应最小化参考输入（`mECG`）与腹部 ECG（混合 `mECG` 和 fECG）之间的误差 `e(k)`。
+
+### 15.3.3 关键组件
+
+- **参考信号：** 从胸电极获取的洁净 `mECG` 作为参考信号。
+- **主信号：** 腹部 ECG，包含 `mECG` 和 fECG。
+- **滤波器系数：** 迭代更新的权重 `w(k)`。
+
+### 15.3.4 滤波器方程
+
+- **预测误差：**
+
+`e(k) = d(k) - W^Tx(k)` (15.1)
+
+- 其中 `d(k)` 是期望信号，`x(k)` 是输入向量（参考信号），`w(k)` 是权重向量。
+
+- **卡尔曼增益：**
+
+`K(k) = P(k-1)x(k) / (λ + X^T(k)P(k-1)x(k))` (15.2)
+
+- 其中 `P` 是相关矩阵的逆逆，`λ` 是遗忘因子（接近 1 时适应速度越慢）。
+
+- **滤波器更新：**
+
+`w(k) = w(k-1) + K(k)e(k)` (15.3)
+
+- **协方差更新：**
+
+`P(k) = (1/λ)[P(k-1) - K(k)X^T(k)P(k-1)]` (15.4)
+
+### 337.15.3.5 mECG 消除
+
+应用 `RLS` 滤波器自适应地从腹部 ECG 中减去（通过参考信号建模的）`mECG`。
+
+- 输出 `e(k)` 主要是带有残余噪声的 fECG。
+
+### 15.3.6 后处理
+
+- 应用额外的滤波或降噪技术增强 fECG 信号。
+- 如小波去噪或 `ICA` 技术可以进一步提高信号质量。
+
+## 15.4 提议方法
+
+为了可靠地评估怀孕早期的胎儿心律活动，需要一种详细的方法来检测胎心跳。在本文，我们将提供两种结合 `SWT` 和 `RLS` 算法的方法来恢复 fECG。在小波域中，我们将使用基于阈值的去噪技术或改进的空间选择噪声滤波 (`ISSNF`) 方法来增强 fECG 信号，去除噪声和伪影，并准确找到 R 峰。准确识别 R 峰有助于胎儿心脏异常的早期诊断和治疗，同时为医生提供有关胎儿状态的有价值演变数据。一个主要目标是从非常混乱的腹部 ECG 中产生清晰的波形 fECG。所提的方法首先使用 `SWT` 将腹部信号分离为多尺度成分。分解尺度可以根据噪声含量进行调整。在使用基于阈值的技术或 `ISSNF` 滤波方法抑制噪声之前，使用 `RLS` 算法抑制 fECG 中的母亲 ECG 成分。我们在合成数据集和真实数据集上使用了该方法。我们使用了定性和定量指标（如定性检查数据、识别 QRS 复波和计算 `SNR`）来评估性能。实验结果表明，所提的方法优于传统方法，所得 `SNR` 一致，能够准确提取胎心活动（图 15.2）。
+
+![图 15.2 提议方法的流程。](img/9781041062943_C015_002)
+
+图 15.2 提议方法的流程。](ch23.xhtml#f170)
+
+`WT` 是处理生物信号的强大工具，广泛应用于噪声去除等领域。`WT` 没有任何限制，能够处理非平稳和时变信号，使其对 fECG 数据特别有用。小波处理允许进行更灵活的多分辨率分析，从而能够分析信号的低频趋势以及信号的高频成分。这对于 fECG 提取是必要的，因为胎心信号通常会丢失在 `mECG` 信号和其他噪声源中。此外，由于 `WT` 可能会跨多个频段，它为分离胎心活动提供了更大的能力。这里使用了 `SWT`，因为它提供了稳定的时频表示，这对于寻找 338.fECG 信号的动态特征非常有帮助。小波域也是过滤噪声的潜在路径，最终可以利用 fECG 信号的稀疏性和能量集中特征。我们在小波域使用 `RLS` 方法重构了提取过程，这为胎心属性提供了有用的能力。
+
+### 15.4.1 ISSNF 技术
+
+为了准确提取 fECG，需要开发一种基于小波分析的有效去噪策略，其衍生方法之一的空间选择噪声滤波器 (`SSNF`) 是分析生物信号和处理的稳健方法（图 15.3）。`SSNF` 可以有效去除噪声而不丢失原始 fECG 信号，包括由于波形形状、幅和频率内容产生的信号特征。`SSNF` 方法可以在不改变 fECG 信号的情况下去除不需要的成分。重要的是，`SSNF` 可以拒绝多种干扰源，包括但不限于基线漂移、电源噪声和肌电信号噪声。在去除大部分（如果所有）噪声后，fECG 信号可以提供诊断清晰度。
+
+![图 15.3 fECG 提取的方法。](img/9781041062943_C015_003)
+
+图 15.3 fECG 提取的方法。](ch23.xhtml#f171)
+
+
+
+`ISSNF`方法是传统`SSNF`的改进版本，用于提高SNR性能。该方法基于在每个小波尺度`g`下寻找信号不同部分之间的空间相关性`CorR(g, k)`。该方法的核心思想是：信号分量在空间上具有更强的物理联系，而噪声分量的相关性较弱或不相关。`ISSNF`利用这种差异，倾向于保留信号中更重要的结构，同时消除不相关的噪声。这将有助于使信号的含义更加清晰，并确保获得最佳的`fECG`读数。
+
+### 15.4.2 基于阈值的算法
+
+硬阈值和软阈值是小波域中用于去除噪声的常用方法。虽然软阈值通常非常擅长平滑地收缩小波系数，但在某些情况下，硬阈值已被证明具有更好的效果，特别是在侧重于保留信号中尖锐特征时。研究表明，硬阈值在配合非下采样小波变换（`UWT`）或`SWT`时运行良好。这是因为硬阈值能够在所有尺度上保留重要的信号模式。在这种情况下，描述了一种简单但有效的硬阈值算法。该算法是一种在保留`fECG`信号结构的同时实现去噪的简单方法。
+
+### 15.4.3 fECG 提取方法
+
+这项研究探讨了两种提取`fECG`信号的混合方法，因为腹部ECG信号是复杂且变化的。提出的方法提供了两种不同的处理路径，允许对两种方法的输出结果进行整体评估和比较。在方法1中采用了`RLS`算法、`SWT`和`ISSNF`。方法2的安排类似，但它使用的是基于阈值的去噪方法而非`ISSNF`。
+
+每种方法包含四个主要步骤：
+
+* 使用`SWT`进行多分辨率分解
+* 使用基于`RLS`的自适应滤波消除母亲的ECG
+* 使用`ISSNF`（方法1）或阈值法（方法2）消除噪声
+* 测量并分析`fECG`
+
+`SWT`将腹部和胸部信号均分解为多个分辨率程度。我们评估了从`MATLAB Wavelet Toolbox`中选择的不同小波的重构性能。由于`Bior 1.5`的重构质量最好，因此选择了其重构性能。考虑到信号频率特性的性质，选择了五层分解。随后，在小波域内对近似系数和细节系数执行自适应`RLS`滤波。腹部系数被视为主要输入，胸部系数被视为参考输入。这种自适应滤波技术将有效地开始隔离并消除`mECG`过程，同时仍将`fECG`过程置于其余信号之上。恢复的信号中可能仍存在伪影或噪声。方法1使用`ISSNF`算法选择性地消除噪声。该算法假设信号分量在空间上强相关，而噪声分量相关性较弱。另一方面，方法2使用严格的阈值法在保留`fECG`重要部分的同时消除噪声。对于每个小波尺度，都会对近似系数和细节系数计算空间相关性，以帮助去噪过程。我们评估了两种方法的发现，以查看它们保持信号完整性并使`fECG`更清晰的效果如何。
+
+## 15.5 结果
+
+图15.4显示了方法1中`fECG`提取的信号处理的步骤。顶图显示了原始腹部信号，它是母亲ECG、婴儿ECG和其他噪声信号的组合。该信号中的主峰大多由母亲的心跳引起，这可能会掩盖`fECG`的较小部分。中间图显示了从母亲胸部采集的胸部信号。其大部分是干净的`mECG`。这种参考信号对于自适应滤波（尤其是`RLS`算法）非常重要，因为它让我们能够准确地估计从腹部信号中减去`mECG`。底图显示了在使用`ISSNF`算法、`SWT`和逆小波重构等信号处理方法后提取的最终`fECG`。生成的波形清晰地显示了胎儿活动，去除了大量的噪声和母亲伪影。这些结果表明方法1能够从复杂的腹部记录中分离`fECG`信号。
+
+![图 15.4 方法-1 处理的 ECG 信号。⏎](img/9781041062943_C015_004.jpg)
+
+**图 15.4** 方法-1 处理的 ECG 信号。⏎
+
+图15.5显示了如何在使用方法1获取的`fECG`信号中寻找R峰。蓝色波形显示了提取`341.out`母亲ECG部分和噪声伪影后留下的最终`fECG`信号。该信号上方有红色标记，显示识别出的R峰位置。这些是每个心脏周期中最显著且快速的向上偏移。正确找到这些R峰对于确定`FHR`和在怀孕期间检查婴儿健康至关重要。R峰的成功检测表明提取方法是有效的，且`fECG`的重要特征得到了保留。此外，准确识别R峰为验证整个信号处理流程的健壮性和准确性提供了方法。这些结果证明方法1可以可靠地从数据分离`fECG`。
+
+![图 15.5 应用于 fECG 信号的 R 峰检测过程。⏎](img/9781041062943_C015_005.jpg)
+
+**图 15.5** 应用于 fECG 信号的 R 峰检测过程。⏎
+
+图15.6显示了方法2提取fECG的信号处理流程结果。顶部显示原始腹部信号，它是背景噪声、母亲ECG和fECG的混合。与方法1一样，母亲的心脏活动是信号中最强大的部分，使得胎儿部分变得可见。中间图描述了从母亲胸部采集的胸部信号。它具有清晰的`mECG`。这种参考信号对于自适应滤波寻找并去除腹部记录中的母亲信号非常重要。使用方法2获取的最后fECG显示在底图中。在这种情况下，波形比方法1获得的更尖锐、更明显且幅度更大。这表明方法2可能使用了更激进或改进的方法分离信号。这可能意味着胎儿信号得到了更好的隔离，但也可能意味着信号重构方法产生了一些放大效应。然而，恢复的波形清晰地显示了不同的胎儿心律，来自的干扰较少。结果表明方法2能够分离fECG，这对于后期分析（如估计`FHR`和出生前检查母亲健康）有用。
+
+![图 15.6 方法-12 处理的 ECG 信号。⏎](img/9781041062943_C015_006.jpg)
+
+**图 15.6** 方法-12 处理的 ECG 信号。⏎
+
+图15.7显示了R波检测程序如何在通过方法2提取的fECG数据上运行的。蓝色波形显示了在剔除母体部分并增强信号后的最终fECG信号。红色标记显示了识别出的R波，它们是每个心脏周期中幅度最大的点。这对于获取准确的胎心率（FHR）至关重要。与方法1相比，方法2中的R波更尖锐、更清晰且更明显。这意味着方法2产生了更纯净、更强的fECG信号。观测到的峰值幅度超过了200个，这可能意味着信号变得更加清晰，或者在处理过程中加入了放大。对R波的准确且清晰的检测证明了方法2成功分离了心脏活动，同时保持了心脏形状完整，以便进行临床评估和持续胎儿监测。
+
+![图 15.7 应用于 fECG 信号的 R 波检测过程。⏎](img/9781041062943_C015_007.jpg)
+
+**图 15.7** 应用于 fECG 信号的 R 波检测过程。⏎
+
+通过对12个测试用例进行特征值分析，图15.8比较了方法1和方法2的信噪比（SNR）。数据显示，方法1总是获得更高的SNR值，在案例5和6中出现峰值，SNR超过了4.5 dB。这意味着方法1在消除任何残留母体信号和噪声方面更擅长提取fECG信号。相比之下，方法2的可靠性较低，在某些情况下（如案例6）效果良好，但在其他情况下（如案例9和10）显示SNR大幅下降。这种不一致性表明，方法2对于广泛的受试者或信号情况可能不够强健或实用。
+
+![图 15.8 SNR 比较。⏎](img/9781041062943_C015_008.jpg)
+
+**图 15.8** SNR 比较。⏎
+
+图15.9显示了互相关分析的结果，通过比较提取的fECG信号与理想参考波来检查SNR。在案例4中，方法1再次显示出更好的性能，获得了接近3.5 dB的峰值SNR，并在所有测试实例中保持了高值。这意味着使用方法1采集的fECG信号不仅更纯净，而且更符合真实的心律，这对于准确估计FHR非常重要。另一方面，方法2提供的SNR水平较稳定但总体较低，通常在2.7到2.9 dB之间。这表明基准性能是稳定的，但也表明方法2在获得高信号纯度和与实际胎儿心脏活动同步方面存在困难。
+
+![图 15.9 基于互相关分析的 SNR 评估。⏎](img/9781041062943_C015_009.jpg)
+
+**图 15.9** 基于互相关分析的 SNR 评估。⏎
+
+## 15.6 结论
+
+本研究通过将RLS自适应滤波与两种不同的去噪技术相结合，提出了一种估计FHR的混合方法。在方法1中，在RLS和SWT的同时应用了基于阈值的去噪算法。在方法2中，将SWT和RLS结合。两种方法都在对胸部和腹部ECG信号进行分解后，在小波内利用RLS算法。所提技术有效地提取了fECG信号，即使在母胎信号叠加的情况下。使用R波检测和SNR分析进行的实验评估证明了两种方法的有效性。基于阈值的方法（方法1）在计算效率和增强R波检测方面具有优势。然而，这两种去噪方法对提取信号的清晰度和诊断可靠性都有所贡献。随后应用卷积神经网络（CNN）分类器进行胎儿健康评估验证了提取信号的质量。分类结果不仅显示了准确性的提高，还增强了提取流程的适应性。总体而言，所提方法在信号质量、鲁棒性和诊断可靠性方面优于传统技术。
+
+## 参考文献
+
+* 1. K.-C. Lai and J. J. Shyn, "A successive cancellation algorithm for fetal heart-rate estimation using intrauterine ECG," IEEE Trans. Biomed. Eng., vol. 49, no. 9, pp. 943–954, Sep 2002, doi: [10.1109/TBME.2002.8020](http://dx.doi.org/10.1109/TBME.2002.8020)⏎
+* 2. P. Bergveld and W. J. H. Meijer, "A new technique for suppression of MECG," IEEE Trans. Biomed. Eng., vol. BME-28, no. 4, pp. 348–354, Apr 1981.⏎
+* 3. L. de Lauwer, B. de Moor, and J. Vandewalle, "Fetal electrocardiogram extraction by blind source separation," IEEE Trans. Biomed. Eng., vol. 47, no. 5, pp. 567–572, May 2000.⏎
+* 4. H. Zhang, Z. Shi, C. Guo, and E. Feng, "Semi-blind source extraction for fetal electrocardiogram based on generalized autocorrelations and reference signals," J. Comput. Appl. Math., vol. 223, no. 1, pp. 409–420, Jan 2009.⏎
+* 5. Y. Ye, P. C.-Y. Sheu, J. Zeng, G. Wang, and K. Lu, "An efficient semiblind source extraction algorithm and its applications to biomedical signal extraction," Sci. China Ser. Inf. Sci., vol. 52, no. 10, pp. 1863–1874, Oct 2009.⏎
+* 6. R. Martín-Clemente, J. L. Camargo-Olivares, S. Hornillo-Mellado, M. Elena, and I. Román, "Fast technique for noninvasive fetal ECG extraction," IEEE Trans. Biomed. Eng., vol. 58, no. 2, pp. 227–230, Feb 2011.⏎
+* 7. L. Yuan, Z. Zhou, Y. Yuan, and S. Wu, "An improved FastICA method for fetal ECG extraction," Comput. Math. Methods Med., vol. 2018, pp. 1–7, May 2018.⏎
+* 8. R. Sameni, C. Jutten, and M. B. Shamsollahi, "Multichannel electrocardiogram decomposition using periodic component analysis," IEEE Trans. Biomed. Eng., vol. 55, no. 8, pp. 1935–1940, Aug 2008.⏎
+* 9. M. Kotas, "Projective filtering of time-aligned beats," IEEE Trans. Biomed. Eng., vol. 51, no. 7, pp. 1129–1139, Jul 2004.⏎
+* 10. A. M. Kaleem and R. Kokate, "An efficient adaptive filter for fetal extraction using neural network," J. Intell. Syst., vol. 28, no. 4, pp. 589–600, Sep 2019, doi: [10.1515/jisys-2017-0031](http://dx.doi.org/10.1515/jisys-2017-0031)⏎
+* 11. G. Camps, M. Martinez, and E. Soria, "Fetal ECG extraction using neural network," Proc. Comput. Cardiol., pp. 249–252, Sep 2001.⏎
+* 12. R. Sameni, and G. D. Clifford, "A review of fetal processing issues and promising directions," Open Pacing Electrophysiol Ther J., vol. 3, pp. 4–20, Jan 2010.⏎
+* 13. P. P. Kanjilal, S. Palit, and G. Saha, "Fetal ECG extraction from single-channel maternal ECG using singular value decomposition," IEEE Trans. Biomed. Eng., vol. 44, no. 1, pp. 51–59, Jan 1997.⏎
+* 14. A. Al-Zaben and A. Al-Smadi, "Extraction of foetal ECG by combination of singular value decomposition and neuro-fuzzy inference system," Phys. Med. Biol., vol. 51, no. 1, pp. 137–143, Jan 2006.⏎
+* 15. N. J. Outram, S. H. Curnow, E. C. Ifeachor, and P. W. J. Van Eetvelt, "Techniques for optimal enhancement and feature extraction of fetal electrocardiogram," IEE Proc. Sci., Meas. Technol., vol. 142, no. 6, pp. 482–489, Nov 1995.⏎
+
+## 16.1 引言
+
+光电容积脉搏（PPG）是一种用于追踪组织微血管内血容量变化的流行无侵入光学技术。它对于可穿戴医疗技术至关重要，因为它能够实时追踪血氧饱和度和心率等生命体征 [1]。PPG的原理是向皮肤发射光（通常为红光或红外光），并测量反射或透射的光。光强度随心脏周期引起的脉动血流而变化。PPG信号的这些变化产生两个成分：交流电（AC）成分，与心跳相关并主要与生理测量有关；以及直流（DC）成分，与基线血量和静态组织有关。来自手腕或指尖的PPG信号通常以透射模式或反射模式记录。在反射模式下，光源和探测器都放置在肌肉的同一侧；而在透射模式下，光源穿过组织到达位于光源对侧的探测器。尽管这在可穿戴技术中非常方便，但PPG信号极易受到多种伪影的影响，包括运动伪影、生理异常和环境光。这些噪声源会严重损害PPG信号的完整性，导致生理参数（如心率）估计错误 [2]。
+
+需要一个强大的信号优性评估系统来解决信号可靠性的持续问题。信号质量评估（SQA）方法主要依赖于使用人工标注的人类员，这种方法是主观且耗时的 [3]。这导致了辅助信号的引入，特别是心电图（ECG），在这种情况下具有不可否认的优势。心电图记录心脏的电活动，是一种强中继信号，因为三种不同的信号——P波、QRS波和T波都与心脏周期中不同的生理事件相关。尽管ECG具有明显的局限性（包括基线漂移、肌电图噪声和运动伪影等问题），但ECG仍然是基于心脏测量的金标准。基于ECG的PPG SQA系统通过利用ECG和PPG之间的功能关系，有可能提高PPG信号分类的准确性 [4]。在概述的方法中，可以将PPG波形特征与从ECG中提取的心脏事件时间相匹配，从而将高质量信号段从受损信号段分离出来（图16.1）。具体而言，ECG R峰与相应的PPG脉冲之间的脉搏传输时间可用于测量同步性确认PPG信号的有效性。
+
+![图 16.1 ECG 和 PPG 波形关系。](img/9781041062943_C016_001.jpg)
+
+**图 16.1** ECG 和 PPG 波形关系。#ch24.xhtml#f178b)
+
+
+
+深度学习（特别是卷积神经网络 CNN）的整合为信号质量评估增加了一个极其强大的新维度。神经网络（特别是类似于 `AlexNet` 的方法）通过从 PPG 信号频谱图图像中学习复杂的表示，能够实现信号质量的高精度自动分类 [[5]。`CNN` 可以发现指示运动损坏或噪声的细微模式，因为它们可以从时频表示中提取多个层次的特征。由于本研究旨在使用 `AlexNet` 将质量段分类为“高质量”，将仅对高质量段进行心率评估。质量评估后，在预处理的 PPG 波形上完成特征提取，以识别指示心脏周期的周期性峰值。心率源自脉冲间隔期（`IPIs`）；心率被确定为 `IPI` 的平均倒数。当从短时傅里叶变换（`STFT`）等谱分析方法推导时，也可以提取代表心率的主频。为了提供额外的鲁棒性，从 PPG 导出的心率的有效性需要与从 ECG 信号导出的心率进行交叉验证 [20]。
+
+新提出的 ECG 辅助 SQA 系统与常见的心率估计技术相比表现出优越的性能（图 16.2）。ECG 辅助 SQA 在心率估计方面具有更低的平均绝对误差（`MAE`）（1.699 vs. 1.901 bpm），而且对低质量信号的剔除率更高（0.816 vs. 0.776）。心率估计的改进说明了在生物医学信号处理中集成更先进的生理知识神经网络模型的显著优势。最后，它通过确保生理评估仅使用高质量 PPG 数据，提高了可穿戴健康监测设备的可靠性。
+
+![图 16.2 所示的 ECG 辅助 PPG SQA 系统。](img/9781041062943_C016_002.jpg)
+
+**图 16.2** 所示的 ECG 辅助 PPG SQA 系统。[#ch24.xhtml#f179b)
+
+## 16.2 文献回顾
+
+文献综述强调了数据增强策略对于增加训练数据量和多样性以提高深度学习模型性能有多么重要。它还强调需要标准的评估指标，以便比较各种策略的性能并确保研究的可重复性。然而，未来的研究需要恢复 PPG SQA 的准确性和可靠性，为了做到这一点，可以针对深度深度学习架构，并在使用数据增强时一致地应用其模型。大量文章关注于将深度学习引入 PPG 质量评估。最近的一项研究提供了一种利用多序列尺度数据和多类特征提高准确性的兴奋新方法。他们实现了 94.21% 的最高准确率，并在混合模型中使用学习和决策规则来评估 PPG 信号的质量。在该模型中，学习和应用基于规则与基于学习的方法之间的权衡似乎已足够可靠地评估信号质量。此外，还应用了一种新方法，它仅学习了有限数量的可解释卷积核，并证明了在管理参数较少的情况下，表现出与深度神经网络相似的性能。在低功耗设备上，这种技术实现了有效、可靠且可解释的信号质量评估。
+
+作者使用多尺度 CNN 和双向长短期记忆（`LSTM`），将多类特征与多尺度序列数据相结合，提出了一种评估 PPG 信号质量的新方法。与其他方法相比，所提方法的准确率达到了 94.21%，为最高水平。文中并未专门提到在 PPG 信号质量评估（SQA）中使用深度学习的情况。该研究提出了一种结合了学习和决策规则的信号质量评估混合模型。为了帮助医生进行连续监测，研究建议了一种基于混合 `ResNet` 和 `bi-LSTM` 的深度学习模型 [6]，用于通过 PPG 信号诊断心血管疾病（`CVDs`）。蒙特卡洛丢弃（`MCD`）和贝叶斯优化技术被用于一种无袖指血压估计的保障性框架中 [7]。该框架的性能优于简单的 `MCD`，并能产生更准确的预测。`AvgPool_VGG-16` 是一种利用 PPG 信号和深度学习模型 [8] 对高血压分级进行分类的新方法。此外，为了对 PPG 信号进行去噪，提出了一种利用深度学习发挥小波多分辨率分析能力的混合方法 [9]。这项研究将定义带有修正线性单元（`ReLU`）激活函数的最优滤波器数量（16, 32, 64）和层数（2 层和 4 层），并使用不同噪声的隐藏 PPG 数据集评估所训练的 `CNN` 模型的鲁棒性 [12, 13]。`Wang` 等通过稀有 PPG 信号和 `CNN` 建立了一种基于 PPG 的 SQA 方法 [10, 11]，同时保留了最优边界。`Sukor` 等人 [14] 的研究使用了一种针对伪迹污染的 PPG 波形的自动拒绝方法，该方法检查了波形形态并使用了决策树分类器；然而，这些研究的复杂性较高。`Li` 和 `Clifford` [15] 引入了动态时间规整（`DTW`）技术来拉伸或压缩单周期脉冲波形以适应运行模板，并将其与其他信号质量指标相结合。同样，`Couceiro` 等人 [16] 引入了一种基于 PPG 信号时域和频域特征变化的、并结合支持向量机（`SVM`）模型的运动伪迹检测算法。`Cherif` 等人 [17] 提出了一种新型的基于波形形态的自适应阈值方法，利用随机改变测试来识别 PPG 信号中的伪迹。`Cherif` 等人 [17] 展示了一种新型基于波形形态的自适应阈值技术，使用随机改变测试来识别 PPG 信号中的伪迹。`Goh` 等人 [18] 构建了一个 1 层卷积神经网络（`DCNN`）模型，将五秒钟的 PPG 段分类为清洁或受物体影响。`Liu` 等人 [19] 使用 `CNN` 和 `SVM` 技术评估来自佩戴式额头脉搏血氧仪的 PPG 指征特征。因此，通过添加更多多类特征、研究提取多尺度序列信息的各种方法，并在更大、更多样化的数据集上测试所提方法，这些论文展示了未来研究增强 PPG SQA 的潜力。对于 PPG 信号质量的评估，他们建议对整合学习和决策规则的混合模型进行更多研究。这包括创建日益复杂的决策规则，并检查各种学习与基于规则的方法的组合。
+
+## 16.3 提议的方法
+
+使用光学传感系统获取 PPG 信号是评估 PPG 信号质量方法的第一步。该设备被应用于指尖，通常由一个光电探测器和一个光二极管（`LED`）组成。`LED` 发出的光进入皮肤并与下方的血管相互作用。随着心脏正常节奏收缩和舒张，这些血管中血量的变化会改变吸收的光量。在收缩期间血量增加，吸收光线并减少了到达探测器的光量。另一方面，在舒张期间血量减少，可以看到更多的光。原始 PPG 波形是通过将这些光吸收的变化转换为模拟信号创建的。
+
+该波形由一系列具有舒张波谷和收缩峰的周期性脉冲组成。舒张波谷显示出最低的血量和最高的检测光强度，而收缩峰代表了最大的血量和检测光强度的最低点。然而，运动伪迹、环境光干扰和传感器位置不当都会降低原始 PPG 信号的质量。使用了预处理技术，例如高通滤波或带通滤波（通常在 0.5–5 Hz 以内）来去除运动或呼吸引起的缓慢变化噪声。此外，还使用归一化来控制由手指结构、肤色或传感器位置变化引起的幅度波动。
+
+在预处理信号后，通过定位收缩峰并确定 `IPIs`（连续峰之间的时间）来估算心率。根据这些间隔计算每分钟心跳数。为了提高可靠性，通过使用 `STFT` 进行频谱分析来识别主频率成分，提供了一种基于频率的心率估计方法。然而，输入 PPG 信号的质量对这一过程的准确性有显著影响。
+
+### 16.3.1 训练阶段
+
+提出了一种 ECG SQA 机制以提高心率读取的准确性（图 16.3）。ECG 信号包含 P 波、QRS 复波和 T 波等独特波形，提供了心脏活动的可靠电学记录。电力和机械心脏事件之间的生理时间差导致 ECG 中的 R 峰与 PPG 波形中的相应特征对齐，以这种对齐作为指导来评估与 ECG 的同步性。如果 PPG 段不一致或显示出明显偏差，则将其标记为低质量且不再进一步处理。通过确保只使用精确、高完整性的片段，这种与 ECG 数据的交叉验证提高了 SQA 系统的稳健性。
+
+![图 16.3 训练阶段。⏎](img/9781041062943_C016_003.jpg)
+
+**图 16.3** 训练阶段。⏎
+
+### 16.3.2 提议的 CNN 架构
+
+该系统使用 CNN 来自动进行评估，并以 `AlexNet` 作为核心模型（图 16.4）。为了创建保留时间和频率信息的二维（2D）图像，首先使用 `STFT` 将 PPG 信号转换为时频图。在输入这些频谱图图像后，`CNN` 学习识别区分高质量与低质量信号的模式。`CNN` 已训练能够识别传统过滤方法可能会忽略的细微失真或噪声特征。因此，系统具有了在广泛主题和情况下进行泛化的能力，这使其在实际应用中非常有用。
+
+![图 16.4 提议的 CNN 架构。⏎](img/9781041062943_C016_004.jpg)
+
+通过一个输入层、多个卷积层（CL）、池化层、一个全连接层（FC）和一个输出层，CNN 作为一个前馈网络运行。通过对输入数据应用滤波器，卷积层作为特征提取器，识别 STFT 图像中的关键特征和模式。池化层（也称为最大池化）在每次卷积后使用，用于降低特征图的维度并保留最相关的数据。通过在训练期间随机关闭特定的神经元，丢弃层（dropout）有助于网络避免过拟合，并提高模型对新数据的简化能力。
+
+在这些层中，`ReLU` 作为主要的激活函数，因为它可以有效引入非线性，这有助于模型学习复杂的模式。所有提取的特征都由最后一个决策层（一个 FC 层）编译，该层随后采用 `sigmoid` 激活函数产生从 0 到 1 之间的概率分。该分数通过指示输入 PPG 信号属于高质量或低质量类别的概率，使得二分类变得更加容易。
+
+在 ECG 引导架构中，ECG 和 PPG 信号被并发处理。在通过 ECG 通过 R 峰检测模块后，使用 R–R 间隔来计算心率。CNN 在分类 PPG 分段时使用此心率作为引导。在 PPG 信号输入 CNN 之前，它会并行经过预处理、特征提取并转换为 STFT 图像。系统通过将 CNN 分类结果与从 ECG 获取的参考进行比较，确保只使用可信的 PPG 分段进行心率估计。
+
+可以使用 `MAE`、均方根误差（`RMSE`）和相关系数等多种指标来评估 CNN 模型。这些指标定义了 PPG 提示心率与心电图（ECG）参考心率的符合程度。根据实验结果，基于 ECG 的 SQA 系统在消除信号噪声方面更高效，提供的错误率比独立的 PPG 分析方法更低。总之，这种集成系统通过光学传感、信号处理、深度学习和来自 ECG 的验证，为可穿戴医疗应用中的心率准确监测提供了一种可靠且可扩展的解决方案。
+
+## 16.4 数据收集
+
+PPG 信号质量的评估是准确监测血流和心血管健康的基础。传统方法需要人工审核，这可能非常枯燥且并不总是准确。CNN 利用深度学习方法自动将 PPG 信号分类为高质量或低质量，以解决这一问题（图 16.5）。研究人员利用了 `Vital DB` 数据库，这是一个手术患者生命体征的公开数据库。使用手指传感器（`SNUADC` 设备）以 125 Hz 的采样率采集了 200 个人的 PPG 信号。从这些数据中选择了 5,804 个信号段；其中 3,969 个被归为高质量，1,835 个被归为低质量。ECG 信号作为专家审核产生这些标签的参考。消除了不确定或难以分类的信号。80% 的参与者数据用于训练，20% 用于测试。
+
+![Figure 16.5 基于 CNN 的深度学习架构。](img/9781041062943_C016_005.jpg)
+
+**图 16.5** 基于 CNN 的深度学习架构。
+
+### 16.4.1 数据准备
+
+每个 10 秒的 PPG 信号段都使用 `STFT` 转换为 2D 图像，为 CNN 准备数据。通过显示信号随时间的频率变化，`STFT` 增强了 CNN 识别模式的能力。频率范围设置在 0 到 8 Hz 之间，并采用了大小为 256 的 `Hanning` 窗口。生成的 `STFT` 图像大小为 250 × 334 像素。CNN 经过训练以识别指示信号好坏的模式，并输入这些图像。高质量信号与 ECG 心率匹配良好且具有清晰的形状。质量差的信号包含噪声、模糊的模式或不匹配的心率。随后使用新数据评估了训练后的 CNN 模型区分好坏信号的能力。通过这种技术，PPG 信号检查变得更快速、更可靠，并适用于如医院设备或可穿戴设备等实时健康监测系统。
+
+## 16.5 仿真与结果
+
+性能指标对于评估模型的性能至关重要。它们有助于确定模型完成任务的准确性、效率和可靠性。评估指标：准确率（accuracy）、精确率、召回率和 `F1-score` 显示了模型在分类问题中分类或分组的能力优劣。如果某一类占据绝对主导地位，准确率或正确预测的数量可能没有太大用处。精确率是在当假阳性成为问题时模型所做的正确正类比较的数量，它衡量了模型正类预测中正确的比例。召回率（有时称为灵敏度）是模型正确识别的正例数量，这在欺诈检测和医疗保健等应用中是一个受关注的指标。`F1-score` 将提供召回率和精确率的合理总结。特异性（Specificity）监控模型检测负例的良好程度。通过利用所有这些重要指标，开发者将更好地了解其模型的性能，并注意到过拟合或偏差等问题，以改进模型。本研究将比较传统机器学习模型与所提深度学习模型的性能。我们将使用方向梯度直方图（`HOG`）从 2D `STFT` 图像中提取特征，PPG 信号这是一种用于感知数据集中显著模式的常用特征提取策略。三种机器学习模型——随机森林（`RF`）、`SVM` 和多层感知器（`MLP`）使用这些特征进行训练。`MATLAB 2023a` 用于分析从每个 PPG 图像提取的 1,764 个 `HOG` 特征。原始 PPG 波形也用于测试 `1D CNN` 以提供公平比较。本研究使用的基于 `STFT` 的 2D CNN 模型根据表 16.1 中的性能结果优于 `MLP`、`RF` 和 `SVM` 模型。它显示出改进的指标。基于 `STFT` 频谱和 CNN 进行精确 PPG SQA 的优势通过 2D CNN 模型优于 `1D CNN` 模型得到了进一步支持。
+
+**表 16.1** 不同方法的性能对比。
+
+| **Methods** | **Sen (%)** | **Spe (%)** | **F1-Score (%)** | **Acc (%)** |
+| --- | --- | --- | --- | --- |
+| MLP + HOG | 91.5 | 83.1 | 92.5 | 89.2 |
+| RF + HOG | 91.4 | 87.6 | 93.3 | 90.4 |
+| SVM + HOG | 93.0 | 68.2 | 90.8 | 86.2 |
+| 1D CNN | 97.1 | 93.5 | 97.6 | 96.6 |
+
+### 16.5.1 混淆矩阵
+
+二分类模型区分“好”和“坏” PPG 信号的能力在图 16.6 所示的混淆矩阵中详细说明。其中四个重要值：假阳性（`FP = 31`），即“坏”信号被误判为“好”；假阴性（`FN = 10`），即“好”信号被误分类为“坏”；真阳性（`TP = 437`），即模型正确识别了“好”信号；真阴性（`TN = 174`），即模型正确识别了“坏”信号。
+
+为了评估分类性能并确定待改进领域，计算关键性能指标至关重要，而这通过混淆矩阵得以实现。
+
+### 16.5.2 心率心电图与 PPG 的估计
+
+图 16.7 显示了在 400 秒内使用 PPG 和 ECG 心率数据的对比。作为心率的参考标准，`ECG` 信号由实心蓝线表示并保持相对恒定。相反，用红色表示的 `PPG` 心率信号在其持续时间内显示出差异，这表明 `PPG` 信号更容易受到噪声、运动伪影或可能损害心率准确性的外部影响的影响。尽管这种对比揭示了基于 `PPG` 监测的局限性，并再次强调了使用稳健的信号处理和质量评估方法的重要性，但鼓励在现实情况中使基于 `PPG` 的监测更具可重复性和可靠性。
+
+![图 16.6 提议信号质量评估的混淆矩阵。⏎](img/9781041062943_C016_006.jpg)
+
+**图 16.6** 提议信号质量评估的混淆矩阵。⏎
+
+![图 16.7 ECG 与 PPG 的心率对比。](img/9781041062943_C016_007.jpg)
+
+**图 16.7** ECG 与 PPG 的心率对比。
+
+## 16.6 结论
+
+本研究通过实施一种 `ECG` 辅助的 `SQA` 系统，为基于 `PPG` 信号的心率估计提供了一个全面的深度学习框架。该方法识别了低质量的 `PPG` 部分并在心率估计之前将其剔除。具体而言，解决本研究问题的方法采用了 STFT 变换的 `PPG` 谱图，并使用 `AlexNet`（一种深层 CNN）进行分类；`MAE` 和 `RMSE` 的改进表明，通过将从 `PPG` 与 `ECG`（公认的“金标准”）中收集和导出的心率联系起来，该过程保证了更好的性能、可靠性和更低的误差。
+
+系统的准确性和可靠性由通过深度学习模型工程化的数据驱动，与传统用于 `PPG` 信号质量的基于规则的 `SQA` 相比，它提供了自动化的、数据驱动的分类。使用包含 102 个人 600 秒连续 `PPG` 记录的数据集充分验证了建议方法的有效性。该模型以 98.3% 的准确率、98.9% 的灵敏度、96.7% 的特异性和 98.8% 的 `F1` 分数表现优异。
+
+这些发现支持将生理信号交叉验证与深度学习相结合，以提供更可靠心率监测的可能。
+
+## 参考文献
+
+* 1. C. Temko, “Accurate heart rate monitoring during physical exercises using PPG,” IEEE Trans. Biomed. Eng., vol. 64, no. 9, pp. 2016–2024, 2017.⏎
+* 2. W.-Y. Chung, Y.-D. Lee, and S.-J. Jung, “A wireless sensor network compatible wearable u-healthcare monitoring system using integrated ECG, accelerometer and SpO[2],” in Proc. 30th Annu. Int. Conf. IEEE Eng. Med. Biol. Soc., 2008, pp. 1529–1532.⏎
+* 3. M. Panwar, A. Gautam, D. Biswas, and A. Acharyya, “PP-Net: A deep learning framework for PPG-based blood pressure and heart rate estimation,” IEEE Sens. J., vol. 20, no. 17, pp. 10000–10011, 2020.⏎
+
+
+
+# 参考文献
+
+* 4. Y. Qi, R. Ai, Y. Zhang, H. Ma, H. Wang, and J. Li, “A method for photoplethysmography signal quality assessment fusing multi-class features with multi-scale series information,” *J. Biomed. Eng.*, 2023, doi: [10.7507/1001-5515.202211054](http://dx.doi.org/10.7507/1001-5515.202211054)
+* 5. G. Paula and R. Rodrigues, “Signal quality assessment of photoplethysmogram signals using hybrid rule- and learning-based models,” *J. Health Informatics*, 2023, doi: [10.59681/2175-4411.v15.iespecial.2023.1080](http://dx.doi.org/10.59681/2175-4411.v15.iespecial.2023.1080)
+* 6. Balaraman, K. and S. P. A. Claret, “Hybrid ResNet and bidirectional LSTM-based deep learning model for cardiovascular disease detection using PPG signals,” *J. Mach. Comput.*, 2023, doi: [10.5375/7669/jmc2023030](http://dx.doi.org/10.5375/7669/jmc2023030)
+* 7. H. Asgharhad, S. Afshar, I. Jokandan, R. Bakhshayhi, S. Chamaani, and H. Alinejad, “Improving PPG classification with machine learning: The power of a second opinion,” in *Proc. IEEE Int. Conf. DSP*, 2023, doi: [10.1109/DSP58604.2023.101678](http://dx.doi.org/10.1109/DSP58604.2023.101678)
+* 8. G. Frederick, T. Yaswant, and A. Therese, “PPG signals for hypertension: A novel method using deep learning,” *arXiv preprint*, 2023, doi: [10.48550/arxiv.2304.0695](http://dx.doi.org/10.48550/arxiv.2304.0695)
+* 9. R. Ahmed, M. Ahsan, and M. Rozi, “A deep learning and fast wavelet-based approach for denoising of PPG signals,” *IEEE Sens. Lett.*, 2023, doi: [10.1109/LSENS.2023.3285](http://dx.doi.org/10.1109/LSENS.2023.3285)
+* 10. Y. Wang, K. Kazemi, and P. Lilberg, “PPG reconstruction using deep convolutional network,” in *2022 44th Annual International Conference on Biomedical and Engineering (EMBC)*, pp. 3387–3391.
+* 11. H. Sharma, S. Sukor, and N. Johnson, “Breathing rate estimation from electrocardiogram and photopleysmogram: A review,” *IEEE Rev. Biomed. Eng.*, vol. 11, pp. 2–20, 2018.
+* 12. R. J, S. Redmond, and D. Clifton, “Signal quality measures for pulse oximetry through waveform analysis,” *Physiol. Meas.*, vol. 32, no. 3, pp. 369–384, 2011.
+* 13. Q. Li and G. Clifford, “Dynamic time warping and machine learning for quality assessment of pulsatile signals,” *Physiol. Meas.*, vol. 33, no. 9, pp. 1491–1501, 2012.
+* 14. R. Couceiro, P. Carvalho, R. P. Paiva, J. Henriques, and J. Muesteff, “Detection of motion artifact patterns in photopleysmographic signals based on time and period domain analysis,” *Physiol. Meas.*, vol. 35, no. 12, pp. 2369–2388, 2014.
+* 15. S. Cherif, D. Pastor, Q. T. Nguyen, and E. L’Her, “Detection of artifacts on photoplethysmography signals using random distortion testing,” in *Proc. Annu. Int. Conf. IEEE Eng. Med. Biol. Soc. (EMBS)*, 2016, pp. 6214–6217.
+* 16. C. H. Goh et al., “Robust PPG motion artifact detection using a 1-D convolution neural network,” *Comput. Methods Programs Biomed*, vol. 196, p. 105596, 2020.
+* 17. S.-H. Liu, H.-C. Liu, W. Chen, and T.-H. Tan, “Evaluating quality of photopleysmographic signal on wearable forehead pulse oximeter with supervised classification approaches,” *IEEE Access*, vol. 8, pp. 185121–185135, 2020.
+* 20. D. Biswas et al., “CorNET: Deep learning framework for PPG-based heart rate estimation and biometric identification in ambulant environment,” *IEEE Trans. Biomed. Circuits Syst.*, vol. 4545, no. c, pp. 1–1, 2019.
+
+# 360.17 智能城市中的边缘计算与物联网
+
+Navneet Kaur, Shalini Sahay, and Shruti Dixit
+
+DOI: [10.1201/9781003634768-17](http://doi.org/10.1201/9781003634768-17)
+
+## 17.1 引言
+
+一种新的范式“物联网”（`IoT`）允许物理世界直接集成到计算机系统中，提高了效率，产生了经济效益并减少了人力投入。`IoT` 具有通过集成了传感器、软件和执行器的物理设备连接来连接、采集和交换信息的能力。它使得物体或设备能够在不需要人类帮助的情况下观察、识别和理解某种情况。这项技术正在迅速发展，因为大量的联动设备在收集数据的同时，还创建了一个共享实时数据和决策的网络。微型传感技术的异常丰富为智能城市展示了宏大的愿景。智能城市的居民可以受益于可靠、安全且可持续的发展 [1]。这些理念通常与信息通信技术（`ICT`）基础设施的进步有关，这些进步能够为居民提供优质生活的智能服务。
+
+随着城市人口的显著增加，由于各种设备（包括智能传感器、智能摄像头、手机和全球定位系统）产生的数据呈指数级增长，城市基础设施将面临额外的困难。使用具有足够存储空间的昂贵专用计算机设备是克服大规模计算和存储相关问题的方法之一。
+
+然而，其在实时智能环境中的应用受到其基本限制的严重限制，包括高延迟、缺乏移动性支持和缺乏上下文感知行为 [2]。除了这些缺点外，来自智能城市设备的数据高开销导致了云计算中处理时间效率低下。然而，边缘计算将云计算的潜力带到网络边缘，并提供了低延迟、移动性支持、可扩展性和上下文感知等特性。
+
+因此，边缘计算是克服云计算在允许实时智能城市环境中限制的一种有效方法 [3]。此外，基于边缘计算的 `IoT` 可能会改善安全和隐私问题。这两项技术对智能城市进步的贡献将在后续章节中进行详细讨论。
+
+### 361.17.1.1 边缘计算
+
+边缘计算不再完全依赖于中心化的云服务器，而是在靠近数据生成点（传感器、设备）的地方管理数据。通过减少信息在云端和设备之间移动所需的时间降低了延迟。对于网络交通控制、应急响应和安全监控等需要快速决策的功能，实时数据处理成为可能。通过仅将相关数据发送到云端进行边缘处理，减少了网络带宽拥塞并降低了数据传输成本。这项技术通过允许设备即使在云连接中断的情况下也能独立运行，提高了系统的韧性 [4]。在智能城市中，这对于关键基础设施至关重要。这可以提高隐私，因为数据在本地进行处理，不需要通过网络发送隐私信息。随着数据处理的完成。
+
+### 17.1.2 物联网
+
+`IoT` 设备使用一系列传感器来收集数据。可以使用 `IoT` 开发智能电网、智能照明和节能建筑。这使得智能城市能够充分利用数据进行资源管理。这些系统有助于于可持续性发展和改进服务 [5]。
+
+### 362.17.1.3 智能城市
+
+智能城市是一种通过利用技术和数据驱动的解决方案来增强可持续性、效率和提高总体生活水平的城市环境。有了准确的地图，智能城市将造福大众，并最终有助于减少劳动力 [7]。
+
+智能交通系统的目标是提高流动性并缓解交通压力。对替代交通形式、智能公共交通以及实时交通管理的支持至关重要。
+
+#### 17.1.3.1.5 能源管理
+
+通过节能设备和智能电网优化能源消耗。通过利用可持续能源来增强可持续发展实践。
+
+#### 17.1.3.1.6 公共服务
+
+技术改进了医疗保健、废物管理和教育等公共设施的提供。电子政府倡议简化了行政流程。
+
+#### 173.1.3.1.7 公民参与
+
+数字平台和社交媒体促进了公民与地方政府之间的互动。公民的反馈用于改进服务和解决问题。
+
+#### 17.1.3.1.8 环境可持续性
+
+环保活动、减废倡议和绿色基础设施有助于实现可持续发展目标。智能城市倡议的目标是减少城市生活对环境的负面影响。
+
+#### 17.1.3.1.9 安全与防护
+
+包括监控和应急响应技术在内的先进安全系统增强了公共安全。网络安全采取措施防御数字威胁。
+
+#### 17.1.3.1.10 创新与经济发展
+
+智能城市通常是创新和技术发展的枢纽。它们支持与信息技术（`IT`）、研究机构和初创企业的行业增长。
+
+#### 17.1.3.1.11 包容性设计
+
+智能城市追求包容性，确保技术进步造福所有人群。城市设计和数字服务中的无障碍功能满足了多样化的需求。
+
+#### 17.1.3.1.12 高效资源管理
+
+智能城市侧重于优化水、电和其他公用事业资源的使用。自动化系统和数据驱动的洞察有助于有效管理资源。
+
+#### 17.1.3.1.13 韧性与适应性
+
+智能城市对各种挑战进行规划并适应，包括气候变化和意外事件。具有韧性的基础设施和灾害管理系统增强了城市从中断中恢复的能力。
+
+#### 17.1.3.1.14 隐私与伦理
+
+必须考虑技术伦理和数据隐私。智能城市应优先保护公民隐私，并确保数据的伦理使用 [9]。
+
+## 17.2 智能城市与物联网
+
+物理连接的设备以及具有数据采集和共享能力的设备网络被称为物联网（`IoT`）。这项技术是智能城市的基础，允许共享来自各种传感器和设备的数据。数据分析、通信协议、执行器和传感器是重要的物联网 364 组件。智能交通系统、环境监测和医疗保健是物联网的一些应用。
+
+物联网传感器和设备被整合到“智能城市”城市生活的许多方面，涵盖从基础设施、交通到公用事业和公共服务。这些传感器持续收集有关垃圾管理、公共安全、能源使用和空气质量的数据。智能城市中物联网应用最著名的例子之一包括智能电网。
+
+配备物联网传感器的配电系统可以跟踪能源消耗、识别故障并改进能源资源管理。这在提高能源效率的同时，还增强了电网应对网络攻击和自然灾害的韧性 [10]。
+
+### 17.2.1 物联网平台的重要要素
+
+* 传感器收集数据，并将这些数据传输到云端的中心化平台。
+* 执行器允许设备采取行动，例如限制水流、更改灯光、提醒用户即将到来的维修等。
+* 现场网关，在网络节点与云端之间提供安全的传输、数据压缩和收集。
+* 数据存储器，用于存储原始数据，直到需要收集有见解的信息为止。
+* 数据仓库，将容纳所有关于控制应用和联动设备的定义和组织信息 [11]。
+
+### 17.2.2 物联网在智能城市中的优势
+
+由物联网驱动的智能城市整合了设备、建筑、联动系统、应用程序等的使用，创造了高效的生活和工作场所。其众多优势包括：
+
+* **改进基础设施管理：** 可以物联网技术来监控和管理城市基础设施，包括其建筑、桥梁和道路。这可以减少停机时间，帮助检测维护问题并提高整体安全性。
+* **增强公共安全：** 通过识别潜在的安全风险、追踪犯罪行为以及监控紧急情况下的转换时间，支持物联网的传感器和摄像头可以提高公共安全。
+* **高效交通：** 它可以促进更好的交通流、减少拥堵并对公共拥堵进行路线优化。联网车辆与交通系统通信的能力使旅行变得更安全、更可靠 [12]。
+* **能源效率：** 这项技术使得定位和调节家庭、商业和公共区域使用的能源成为可能，从而减少能源浪费。
+* **改进处置系统：** 物联网传感器可以协助简化垃圾收集路线，最大限度地减少垃圾收集的成本和环境负面影响。
+* **365. 提高公众参与：** 物联网系统可以让人们对服务提供意见、参与城市规划并立即报告问题。
+* **健康与福祉：** 通过追踪健康趋势、检测环境风险和监测空气质量，物联网可以帮助卫生官员制定改善公民健康的政策。
+
+在智能城市中，居民生活质量的提高同时也促进了创新和经济进步。
+
+### 17.2.3 物联网在智能城市的新趋势
+
+物联网利用无处不在的连接、端到端安全和开放数据帮助政府有效管理公共服务、基础设施和交通。智能城市计划通常会导致更安全的城市、更好的环境、更低的能源消耗和资源的最佳利用 [13]。开发安全、扩展且可靠的物联网架构是这一智能城市倡议六步实施计划的第一步。
+
+#### 17.2.3.1 分析与跟踪
+
+为了根据预设标准调节管道、电子阀和分配系统，智能城市可以监控设备环境并预定义规则。显示收集数据的中心化仪表板允许监控所有公用事业。
+
+#### 17.2.3.2 预测模型
+
+深度分析利用统计分析和机器学习算法在历史数据中寻找模式和相关性。之后，这些数据被用于构建预测模型，用于控制应用程序以引导车辆和网络设备中的执行器。
+
+#### 17.2.3.3 自动调节
+
+通过控制应用程序，可以通过发送指令执行预定任务来实现联动对象的自动化。根据应用的不同，这些可以是基于规则的也可以是基于机器学习的。
+
+#### 17.2.3.4 用户应用程序
+
+一种专为交通中心设计的桌面应用程序，用于修改交通信号、重定向某些流量并缓解瓶颈。当检测到交通拥堵时，使用 `GPS` 数据的手机应用程序会提醒驾驶员采取备用路线 [14]。
+
+#### 17.2.3.5 集成
+
+智能空气质量监控软件可以集成到智慧城市的交通管理系统中。这种跨方案的集成有助于空气质量和交通的动态控制。
+
+### 366.17.2.4 基于物联网的智慧城市解决方案
+
+物联网（`IoT`）可以协助城市管理员有效地执行、监控和管理城市内的各个部门和活动。这些智慧城市技术还能够解决城市的各种需求和挑战。以下是对物联网在智慧城市中应用的讨论 [15]。
+
+#### 17.2.4.1 公共交通与物联网
+
+由于第五代（`5G`）等蜂窝物联网网络的存在，物联网改变了人们在城市中使用公共交通的方式。物联网交通的目标是建立一个传感器网络，将交通通道的信息传输到互联网。此外，支持物联网的公共交通有助于追踪和减少交通拥堵。
+
+此类开放访问数据可能会突出公共交通中的差距和消费趋势。来自票务销售、人流量、到达、出发和延迟的数据可以被物联网利用，以增强旅行体验、升级基础设施并遵循改进的准时标准 [16]。
+
+#### 17.2.4.2 智能垃圾处理系统的物联网应用
+
+可持续城市可能通过智能废物管理优先考虑更清洁、更健康、更卫生的生活。在涉及垃圾收集、清理、去毒和处置时，传统的废物管理系统可能力不从心。
+
+有害垃圾可以在污染城市之前清除，垃圾桶收集可以基于物联网的废物管理进行引导，处置过程可以被追踪和监控。
+
+#### 17.2.4.3 物联网智能表
+
+该系统在智慧城市中的实施具有改变计量系统使用方式的潜力。无论是燃、水还是电，都能让用户和管理员的管理变得更加简单。在这些城市中，这些智能表可以安装在每户住宅中并与当地供应机构连接。
+
+#### 17.2.4.4 智能路灯
+
+智能路灯解决方案是物联网的一种更简单的形式，顾其名，它能够对路灯进行远程管理和控制。此外，智能照明旨在最大限度地提高智慧城市的能源效率并减少消耗 [17]。
+
+#### 17.2.4.5 空气质量监控
+
+在空气质量监控的帮助下，可以评估城市不同区域的环境。通过提醒公众空气污染并授权政府采取行动，可以增强公共安全。智能空气质量监控有助于城市的可持续发展。
+
+367.技术关键组件将在下文中介绍：
+
+
+
+## 物联网网络基础设施
+
+为了在智慧城市部署，强大的网络基础设施至关重要。该网络是所有解决方案的基础。例如，城市可以根据其需求和规范选择如`Wi-Fi`或`Lora WAN`等免授权网络，或如`4G`、`5G`或`LTE-M`等授权网络。
+
+## 包括网关、执行器和传感器的物联网硬件
+
+在安装互联网后，解决方案需要传感器、执行器和网关来收集数据并支持特定的应用程序。为了让 IT 与现实世界交互并连接，硬件配置是必要的。
+
+## 物联网数据管理
+
+如果具备必要的硬件基础设施和网络连接，下一阶段是提供数据库解决方案来存储收集的海量数据。现在已有来自许多数据湖和数据仓库技术的大量数据可用于应用程序进行存储。使用可扩展的数据库可以支持大量的用户。
+
+## 通过移动和 Web 的物联网用户界面
+
+为了访问来自物联网设备的数据和洞察，需要一个易于使用的界面。Web 或移动设备上的应用程序可以实现这一点。例如，移动应用允许城市管理部门访问和管理智慧城市运行，精简并提升了城市管理的效率 [18]。
+
+## 支持物联网的设备
+
+这些支持设备（如智能表、交通和废物管理系统、路灯和公共交通系统）收集并将数据传输到中央系统。
+
+## 物联网数据分析
+
+数据增加了价值的洞察并提高了效率。人工智能（AI）和机器学习等创新分析技术被用于城市环境，以处理海量数据并产生有见地的发现。
+
+## 物联网安全
+
+最大的挑战是安全。它必须确保数据被正确收集，并免受网络攻击。访问限制、数据传输和加密是主要的安全关键。
+
+## 物联网与现有系统的集成
+
+该技术必须与现有系统（包括公共交通、应急服务和城市管理系统）无缝集成。集成使城市能够充分利用现有的基础设施和资源，高效地提供智慧城市服务。
+
+总之，实施这些系统需要多个元素的集成。这些元素包括硬件、数据管理、用户界面、分析、安全以及与预存系统的集成。这些元素共同为智慧城市提供了完备的管理解决方案。
+
+## 17.3 智慧城市中的边缘计算技术
+
+这是一种分布式 IT 架构，它利用网络边缘尽可能靠近原始源地处理客户端输入。标准的企业计算在用户 PC 的端点创建数据。在通过广网 368.网络（如互联网网关）传输信息时，它利用业务应用程序进行存储和处理。随后，客户端终端接收工作结果 [19]。
+
+然而，传统的数据中心基础设施无法跟上连接设备的爆炸式增长以及管理其产生的数据。因此，IT 架构师现在更关注基础设施的逻辑边缘而非中央数据中心，将数据传输到产生数据的地方。通过边缘计算，存储和服务器位于数据存储的地方。为了在本地收集和处理数据，这有时只需要一组部分组装的设备在远程局域网上运行。为了促进边缘计算（使用分布式计算场所在更靠近数据源的地方存储电力），它已成为一种可行且重要的架构。当数据在路边传感器或网关的网络边缘被处理后，智慧城市的汇总中间结果可以被发送到更远的数据中心进行中央处理。
+
+### 17.3.1 利用边缘计算实现智慧城市
+
+由于其在智能城市网络中被广泛使用，更多数据可能会集中在现场和云环境中。边缘计算还提供了速度、安全性和灵活性，可以为大量的系统提供服务。例如，智能医院的通风系统可以不断调整，以确保最佳的空气质量。通过结合边缘计算和机器学习，此类通风系统可以对空气质量的变化和现场状况做出快速反应 [20]。随着运行智能城市所需的数据量和多样性增加，基于边缘计算的设施将解决智能城市面临的一些最重要的问题。智能城市的基础正日益聚焦于`IoT`、`AI`和`5G`的进展。在实践中，这意味着智能城市可以依靠边缘计算来支持许多相关技术（如`5G`），完成各种工作。
+
+面对巨大的增长和日益严峻的环境问题，全球城市面临着开发新方法以使我们的城市中心高效且可持续的压力。这种变化的一个关键组成部分是智能城市，它使我们能够根据需求实时分配资源。城市可以通过这种先进技术，在最大化服务利用率的同时，满足日益增长的大人口的需求。它们还可以利用分析更好地节约电力、水资源和新鲜空气等资源，并控制照明、通风和空调等基本系统。结果是，这将使城市服务更加便利、持久，并能够提高当地居民的生活水平。
+
+### 17.3.2 边缘计算在智能城市中的优势
+
+它旨在最大化公民服务的同时，提高日常生活中的能力、成本效益、安全性和诚信。它从本质上塑造并驱动了`5G` 369.技术，使其运行得更高效，并帮助智能城市实现这些收益。其他优势包括：
+
+- **减少传输延迟：** 通过消除数据在远程数据中心之间往返传输的需求，边缘计算显著降低了网络延迟和业务中断的可能性。
+- **增加网络韧性：** 较短的处理距离使得更快速、更高效的设备和现场软件运行，从而增加了智能城市的韧性。
+- **鼓励现场和云端的数据中心化：** 智能城市中的这项技术允许支持许多系统，每个系统都必须具备灵活性、安全速度（例如，智能建筑的通风系统）[21, 22]。
+
+## 17.4 IoT 与边缘计算之间的交互
+
+### 17.4.1 IoT：拥抱连接的未来
+
+`IoT`是一个元素网络，例如机械电器，这些设备集成了传感器和连接，以便它们能够在线交换信息并收集数据。在一个更发达、更智能且自给自足的社会中，`IoT`旨在创建一个网络对象的生态系统，这些对象可以随时相互连接，而无需人类参与。可穿戴技术被用于智能城市，工业仅仅是这些技术应用的各种场景中的少数几个。在智能家居中，照明控制和智能恒温器等产品可以相互交互，并适应人类偏好，以提高舒适度和能源效率。
+
+基于`IoT`的基础设施可以减少垃圾管理、优化交通，并为智能城市提供实时空气质量监测。
+
+### 17.4.2 边缘计算：数据处理去中心化
+
+它通过解决数据处理改变了`IoT`的理念，这是其主要问题之一。设备将信息传输到中央云服务器进行路由，以便在标准的云计算架构下进行管理。这可能会导致延迟和带宽限制，特别是在处理实时应用时。通过现场数据处理，它减少了对海量数据云端的需求，增强了响应能力并保护了网络容量 [23]。
+
+边缘计算和`IoT`技术以相互连接的方式增强了这两种技术的潜力。主要的融合领域包括：
+
+1. **减少延迟和实时洞察：** 应用在边缘修改数据并降低延迟，使决策成为可能。对于工业自动化、工程应用以及自动驾驶汽车，这对于提供快速反应和防止可能的灾难至关重要。
+2. 370. **带宽优化：** 它最小化传输到云端所需的数据，从而优化了网络带宽。这在互联网连接有限或昂贵的场景下特别有用，例如农村地区偏远工业现场部署。
+3. **增强安全性：** 边缘计算通过将敏感信息保留在靠近中央服务器的地方，通过数据安全进行修改。在传输过程中，本地处理的数据暴露较少，减少了潜在威胁的攻击面。
+4. **提高可靠性：** 这些集成了能力的应用程序即使在没有互联网连接的情况下也能保持功能。这确保了关键场景下（如智能电网管理或关键基础设施的远程监控）的无间断运行。
+
+### 17.4.3 解放 IoT 和边缘计算的力量
+
+两者的结合开启了广泛的转型用例：
+
+1. **智能城市：** 设备收集并向城市发送有关交通模式、环境限制和城市服务的大量数据。实时数据处理使城市基础设施具有响应能力和能力。
+2. **医疗健康：** 可穿戴设备可以监测患者的健康状况，产生持续的数据流。它在本地终止这些数据，允许即时医疗干预并减少对云连接的依赖。
+3. **工业物联网 (IIoT)：** 在制造和工业环境中，配备边缘计算能力的`IIoT`设备可以提高整体运行效率、预测维护需求并优化生产流程。
+4. **自动驾驶车辆：** 边缘计算是自动驾驶车辆的关键要素，实现了碰撞避免和路径优化的实时数据处理 [24]。
+
+## 17.5 城市 IoT 与边缘计算的挑战
+
+两者都是创建智能城市的基础技术，但它们带来了许多必须解决以确保成功的挑战。智能城市中这些技术的一些障碍如下：
+
+- **可扩展性：** 传感器和大量的连接设备涉及智能城市。处理`IoT`系统和边缘计算基础设施的可扩展性以管理这些过量的数据和设备是一项重大挑战。
+- **数据安全：** 保护`IoT`设备收集的大量数据的安全和隐私至关重要。未经授权的访问会导致隐私泄露、数据泄露和潜在的安全威胁问题。
+- 371. **互操作性：** 两种技术使用了不同的通信协议和标准。各种设备能够无缝协作是最大的挑战之一。
+- **数据管理：** 处理`IoT`设备产生的海量数据具有挑战性。在数据源附近处理数据是边缘计算的最终目标，有效的数据过滤、存储和分析对于产生见解结果至关重要。
+- **延迟：** 边缘计算的优势在于在靠近数据源的地方处理数据，从而降低延迟。然而，维持实时低延迟应用具有挑战性，特别是在人口稠密的城市地区。
+- **可靠性：** `IoT`设备和边缘计算基础设施必须可靠运行。停机或故障可能会中断关键城市服务，影响安全和便利性。
+- **能效：** 大量的`IoT`设备由电池驱动，能效是一个重大挑战。这些设备的长寿命电池对于减少环境影响和维护成本至关重要。
+- **监管与合规挑战：** 智慧城市倡议经常面临与隐私、数据管理以及安全相关的监管和合规挑战。遵守当地、国家和国际法规可能非常复杂。
+- **成本：** 建立和管理`IoT`设备、边缘计算基础设施和连接可能非常昂贵。对于智慧城市项目，寻找可持续的资金模式并确保成本效益是一项挑战。
+- **环境影响：** 由于能源消耗和电子垃圾，基于`IoT`设备和边缘计算数据中心的增长可能对环境产生影响。智慧城市中必须考虑环保方法和可持续性。
+- **人类行为与采纳：** 智慧城市的成功取决于公民和企业对新技术的采用和接受。鼓励人们使用`IoT`服务和边缘计算应用可能是挑战性的。
+- **数据治理与所有权：** 识别数据所有权和治理框架至关重要，特别是在具有众多利益相关者的智慧城市项目中。
+- **数字鸿沟：** 并非所有居民都能平等地访问`IoT`服务和边缘计算资源，这可能会加剧现数字鸿沟。
+- **韧性与灾难恢复：** 智慧城市需要规划韧性和灾难恢复。确保关键服务在紧急情况下或基础设施故障期间继续运行至关重要。全面的规划、投资以及对解决这些问题的承诺对于智慧城市成功的边缘计算和`IoT`实施至关重要 [25]。
+
+## 17.6 IoT 和边缘计算的优势
+
+这两种技术在集成到智慧城市时都能提供许多优势。两种技术都能通过提高生活质量、效率和可持续性极大地增强城市环境。两种技术的一些优势如下：
+
+1. **372. 实时数据处理**：边缘计算有助于在靠近数据源的地方处理数据，从而降低延迟。它的用途是实时分析来自`IoT`设备的数据，这对于智能基础设施、交通控制和应急响应等应用至关重要。
+2. **提高效率**：`IoT`传感器和设备有助于优化许多城市功能，如交通、能源消耗、废物管理以及供水。这导致了资源效率和成本节省。
+3. **交通管理**：通过减少交通拥堵、增强交通流和缩短旅行时间，支持`IoT`的交通灯、传感器和智能交通系统可以降低燃油消耗和空气污染。
+4. **环境可持续性**：通过优化能源使用、减少排放和保护资源，智慧城市计划可以帮助减少其对环境的影响。例如，智能照明和基于废物管理的系统可以帮助减少能源消耗并减少垃圾。
+5. **增强公共安全**：`IoT`设备在公共安全领域的应用包括犯罪、事故和环境危害监测。实时数据分析对于更好的应急管理和更快的反应速度很有用。
+6. **改进城市规划**：`IoT`设备数据可以提供关于城市使用情况的深刻见解，协助城市规划者在公共服务等方面做出明智的选择。
+7. **智能电网**：能源部门`IoT`传感器的开发使得智能电网成为可能，电网增强了能量分配，减少了停电并提高了可再生能源的利用率。
+8. **废物管理**：基于`IoT`的智能垃圾桶可以改进垃圾收集计划，降低环境影响和运营费用。
+9. **生活质量**：通过提供更好的公共服务，如有效的公共交通、智能医疗解决方案和政府服务的数字访问。这提升了公民的生活质量。
+10. **节省成本**：`IoT`和边缘计算可以通过对基础设施和资产进行预测性维护来帮助降低运营成本，减少对昂贵应急维修的需求。
+11. **公民参与**：`IoT`能够收集公民数据，帮助地方政府更有效地与社区互动，并根据他们的需求定制服务。
+12. **数据驱动决策**：`IoT`数据为城市管理员做出数据驱动的决策提供了宝贵的见解，使他们能够更有效地应对城市挑战。
+13. **经济增长**：智慧城市项目可以通过吸引科技公司、初创企业以及对创新和基础设施建设投资来推动经济增长。
+14. **可访问性与包容性**：智慧城市倡议可以通过提供更易于访问的服务和服务信息，提高残障人士的可访问性并促进包容性。
+15. **373. 减少拥堵**：`IoT`和边缘计算可以减少交通拥堵，从而为通勤者节省时间，减少燃油消耗并降低温室气体排放。
+16. **增强的医疗服务**：`IoT`可用于监测和改进医疗服务，包括远程患者监测、预测性医疗分析和高效的医疗资源分配。
+
+总而言之，这两者都是变革性技术，可以提高效率、可持续性以及生活质量。通过优化资源利用、改进基础设施和实现数据驱动的决策。这些技术在塑造未来城市方面发挥着重要作用 [26]。
+
+## 17.7 智慧城市的机遇
+
+这为智慧城市提供了各种机遇，以改善城市生活、提高效率并推动创新。以下是两种技术为智慧城市提供的一些主要机遇：
+
+1. **实时决策**：边缘计算在靠近数据源的地方处理数据，促进了实时决策。公共安全、应急响应和交通管理等应用受益匪浅。
+2. **智能交通**：它可以用于优化交通流、减少拥堵并增强公共交通系统。这导致了旅行时间的缩短和交通效率的提高。
+3. **能效**：智慧城市可以利用这两种技术实时监测和管理能源消耗。这导致了优化的能源使用、成本降低和更小的环境足迹。
+4. **预测性维护**：对关键基础设施进行预测性维护，减少停机时间并延长有助于这些技术的资产的寿命。这对于公用事业和交通系统至关重要。
+5. **环境可持续性**：智慧城市可以利用`IoT`减少排放和保护资源。例如，废物管理技术可以最大化垃圾收集，而智能照明系统可以节省能源消耗。
+6. **公共安全**：`IoT`设备可以通过监控事故、犯罪和环境危害来提高公共安全水平。这些技术能够实现更快的响应速度和更有效的应急管理。
+7. **数据驱动的城市规划**：`IoT`数据为城市规划者提供了丰富的见解，帮助他们在基础设施建设、土地利用和公共服务方面做出明智决策。这可以催生具有高度可持续性和宜居性的智能城市。
+8. **智能电网**：能源领域的`IoT`传感器能够实现智能电网的构建，优化能源分配，减少停电，并增强可再生能源资源的效用。
+9. **改进医疗保健服务**：通过`IoT`可以改进医疗服务，例如远程患者监测、预测性医疗分析以及高效的医疗资源配置。
+10. **提高生活质量**：智能城市可以提供更优质的公共服务、卓越的公共交通以及政府服务的数字化访问，从而提高全体居民的生活质量。
+11. **高效的废物管理**：配备智能垃圾桶的`IoT`传感器可以优化垃圾收集计划，减少对环境的影响以及运营成本。
+12. **公民参与**：`IoT`设备可以收集公民数据，帮助地方政府更有效地与社区互动，并根据其需求定制服务。
+13. **节约成本**：`IoT`和边缘计算可以通过预测性维护来节约运营成本，减少对昂贵应急维修的需求。
+14. **经济增长**：智能城市项目可以通过吸引科技公司、初创企业以及对创新和基础设施建设的投资来驱动经济增长。
+15. **无障碍性与包容性**：智能城市倡议可以通过提供更易于获取的服务和信息，改善残障人士的无障碍性并促进包容性。
+16. **数据驱动的治理**：基于`IoT`的设备产生的数据可用于设计更高效、响应更快的治理模型，让城市官员能够更好地应对城市挑战。
+17. **数字基础设施建设**：`IoT`和边缘计算基础设施的部署需要对数字基础设施进行投资，这可以为就业增长和技术发展创造机会 [27]。
+
+这些前景展示了这两项技术如何通过增强智能城市对市民需求的持续性、效率和响应能力，来改变城市生活。智能城镇通过利用数据和连接，可能会成为创新与繁荣的中心。
+
+## 17.8 结论与未来展望
+
+`IoT`和边缘计算处于技术创新的前沿，驱动着行业和我们日常生活的深刻变革。这两个开创性概念尽管各不相同，但交织在一起，创造了一种动态的协同效应，在连接、效率和实时决策方面开启了前所未有的可能性。本章概述了通过集成边缘计算和`IoT`来促进智能城市的各种技术。云计算的出现已显而易见，尽管边缘计算已应用于许多`IoT`部署中，边缘设计仍需升级。随着计算向产生数据的边缘靠拢，处理和内存成本的大幅降低使得 375.更复杂的决策成为可能。在不久的将来，网络切片预计将在智能城市的发展中被广泛利用。在当今城市中，有无数设备正在使用。预计未来将会有数万亿个智能设备和传感器 [28]。这些设备都会产生数据流量，迫切需要使用分析服务。通过提供极低延迟的按需处理能力，边缘计算可以促进快速分析。此外，还需要新的高速技术在边缘服务器和终端设备之间传输数据。
+
+## 参考文献
+
+1. Yi Liu, Chao Yang, Shengli Xie, and Yan Zhang, "Intelligent edge computing for IoT-based energy management in smart cities," IEEE Network, 1, 5–9, March/April 2019. #ch25.xhtml#r513
+2. Rushikesh Vilas Kolhe, P. William, Prashant Madhukar Yawalkar, Deepak Narayan Paithankar, and Abhijeet Rajendra Pabale, "Smart city implementation based on Internet of Things integrated with optimization," Measurement: Sensors, 27, 2023. #ch25.xhtml#r514
+3. Alam,, Anisur Rahman, and M. Hossain, "Edge computing framework for enabling awareness in smart city," Journal of Parallel and Distributed Computing, 12, 226–237, 2018. #ch25.xhtml#r515
+
+
+
+4. Zijia Wang, and Abid, “Smart city design and planning based on Internet of Things,” Hindawi Journal, 5, Article 57, 2022. #ch25.xhtml#r516
+
+5. Nahid Kheib, and Davoud, “Toward smart cities: A new model,” Geo Journal, 4, 2022. [`doi.org/10.1007/s10708-021-56`](https://doi.org/10.1007/s10708-021-56) #ch25.xhtml#r517
+
+6. Quy Vu, Van-Hau Nguyen, Ngoc Le Anh, and Tanzila Saba, “Survey of technologies, practices and challenges in smart cities,” Complex & Intelligent Systems, 9, 2023. #ch25.xhtml#r518
+
+7. R. Kiran, “Internet of Things,” in Production Planning and Control, Butterworth-Heinemann, 35, 495–513, 2019. ISBN 9780128183649. [`doi.org/10.1016/B978-0-128183649.0035-4`](https://doi.org/10.1016/B978-0-128183649.0035-4) #ch25.xhtml#r519
+
+8. Ahmed Hassebo, and Mohamed Tealab, “Global models of smart cities and potential IoT aplications: A review,” IoT, 4, 3, 366–411, 2023. [`doi.org/10.3390/iot403017`](https://doi.org/10.3390/iot403017) #ch25.xhtml#r520
+
+* 13. H. M. Rai, Atik-Ur-Rehman, A. Pal, S. Mishra, and K. K. Shukla, 智慧城市应用执行背景下的物联网应用使用：综述。Discover Internet of Things, 3, Article No. 8, 2023. [`doi.org/10.1007/s43926-023-00037-2`](https://doi.org/10.1007/s43926-023-00037-2)
+
+* 14. L. U. Khan, I. Yaqoob, N. H. Tran, S. M. A. Kazmi, T. N. Dang, and C. S. Hong, “边缘计算支持的智慧城市：全面综述，”IEEE Internet of Things Journal, 7, no. 10, 10200–10232, 2020 年 10 月. doi: [10.1109/JIOT.2020.2987070](http://dx.doi.org/10.1109/JIOT.2020.2987070)
+
+* 15. Weisong Shi, Jie Cao, Quan Zhang, Youhuizi Li, and Lanyu Xu, “边缘计算：愿景与挑战，”IEEE Internet of Things, 3, no. 5, 637–666, 2016 年 10 月.
+
+* 16. M. Kokilavani, and A. Malathi, “基于物联网的智能路照明系统，”International Journal of Advanced Research in Applied Science and Technology, 3, no. 11, 8–11, 2017 年 11 月.
+
+* 17. S. R. Basavaraju, “基于物联网(IOT)的自动智能停车系统，”International Journal of Scientific and Research Publications, 5, no. 12, 629–631, 2015 年 12 月.
+
+* 18. Derek Loftis, David Forrest, Sridhar Katragadda, Kyle Spencer, Tammie Organski, Cuong Nguyen, and Sokwoo Rhee, “StormSense：汉普顿角智慧城市中物联网水位传感器新型集成网络，”Marine Technology Society Journal, 2, 23–29, 2018.
+
+* 19. J. Xie, H. Tang, T. Huang, F. R. Yu, R. Xie, J. Liu, and Y. Liu, “区块链技术在智慧城市的应用：研究问题与挑战，”IEEE Communications Surveys and Tutorials, 1, 22–29, 2019.
+
+* 20. D. Eckhoff, and I. Wagner, “智慧城市中的隐私——应用、技术、挑战与解决方案，”IEEE Communications Surveys Tutorials, 20, no. 1, 489–516, 2018.
+
+* 21. N. Ianuale, D. Schiavon, and E. Capobianco, “智慧城市、大数据与社区：从吸引子视角进行推理，”IEEE Access, 4, 41–47, 2016.
+
+* 22. L. U. Khan, N. H. Tran, S. R. Pandey, W. Saad, Z. Han, H. N. M. Nguyen, and C. S. Hong, “用于边缘网络的联邦学习：资源优化与激励机制，”arXiv preprint arXiv: arXiv:1911.05642, 2019.
+
+* 23. S. R. Pandey, N. H. Tran, M. Bennis, Y. K. Tun, A. Manzoor, and C. S. Hong, “一种用于设备侧联邦学习的众包框架，”arXiv preprint arXiv:1911.01046, 2019.
+
+* 24. X. Wang, Y. Han, C. Wang, Q. Zhao, X. Chen, and M. Chen, “内边缘 AI：通过联邦学习使移动边缘计算、缓存与通信智能化，”IEEE Network, 1, 136–201, 2020.
+
+* 25. F. Shaik, S. Karimullah, M. Khan, and S. J. Ahmed, “集成物联网、计算分析与遗传见解以改进可访问性和早期干预，”2024 年智能与可持续创新国际会议 (ICRISST)，IEEE, 印度汉普顿角, 页码 1–6, 2024. doi: [10.1109/ICRISST59181.2024.109213](http://dx.doi.org/10.1109/ICRISST59181.2024.109213)
+
+* 26. Mohamed Dhiaeddine Messaoudi, Bob-Antoine J. Menelas, and Hamid Mcheick, “智能杖与社交媒体的集成：一种新型步行算法的设计，”IoT, 5, no. 1, 2024 年 3 月.
+
+* 377.27. S. Karimullah, M. Khan, and F. Shaik, “肺 CT 图像异常检测与分类的改进混合深度学习方法的实现与性能评估，”2024 年智能与可持续创新国际会议 (ICRISST)，印度汉普顿角, 页码 1–6, 2024. doi: [10.1109/ICRISST59181.2024.1092191](http://dx.doi.org/10.1109/ICRISST59181.2024.1092191)
+
+* 28. Smitha Rajagopal, Pijush Kanti Tripathi, Mona Deshmukh, Sudheer Choudari, Ashutosh Kumar, and Choi Sang Long, “边缘计算-智慧城市：城市环境中的数据处理与资源管理优化，”Journal of Information Systems Engineering and Management, 10, no. 5s, 2025.
+
+通过物联网（IoT）技术推进智慧城市为实时城市发展提供了前所未有的机会，通过改进基础设施、交通、医疗保健、能源管理和公共服务来改变城市生活。在这些城市中，交通传感器、环境监测系统、智能路灯和联网车辆等物联网设备实时收集并发送数据，使城市管理者能够做出数据驱动的决策，从而提高生活质量、效率和可持续性。但随着智慧城市的增长，物联网网络安全成为首要任务，这是因为存在广泛的连接设备网络以及它们设备产生的敏感信息。
+
+智慧城市中物联网系统的网络安全面临着若干挑战，例如互联设备复杂性的日益增加、交换的数据量巨大以及这些设备的潜在风险。为了确保物联网解决方案在智慧城市中的安全实施，必须解决许多首要挑战。
+
+首先，由于物联网设备会采集个人健康信息、交通习惯和天气状况等个人信息，数据保护和隐私仍然是关注的重点。为了保护公民数据免受网络攻击，需要进行强数据加密、身份验证并遵守如《个人数据保护法案》等隐私法律。其次，设备和网络漏洞引起了极大关注。随着越来越多的设备成为物联网设备，它们通常没有标准的安全协议，这为网络攻击提供了可能的漏洞 [1]。实施安全的软件开发实践、健壮身份验证协议和定期补丁机制对于降低风险至关重要。此外，利用人工智能（AI）和机器学习（ML）等先进技术进行实时监控和威胁检测有助于在安全威胁造成重大损害之前识别并响应。
+
+智慧城市物联网系统中网络安全解决方案的集成需要灵活且可扩展的方法。随着城市的扩张和技术的演进，物联网解决方案必须能够在不中断服务的情况下升级并集成新的安全功能。这就是边缘计算发挥关键作用的地方，通过在本地处理数据，减少将敏感信息发送到中央云服务器的需求，从而限制对潜在网络威胁的暴露。此外，政府、技术提供商、网络安全专家和公民之间的协作对于制定全面的网络安全框架、确保快速采用物联网解决方案不会损害公共安全或隐私至关重要。最终，物联网驱动的智慧城市的成功取决于通过主动策略、强有力的监管框架和先进安全技术的整合应对不断变化的安全挑战的能力 [2]。通过平衡实时城市发展与稳健的网络安全，像班加罗（Bangalore）这样的城市可以确保其智慧城市计划是安全、可持续且对所有公民都有利的。
+
+物联网代表了一个智能系统网络——包括电器、建筑、房屋、车辆、发电、配电和利用中心——通过先进的电子传感器和执行器得到增强。这些系统相互连接，并通过复杂的通信和自动化技术进行管理。基于物联网的技术在当地、住宅、商业和工业领域迅速蔓延，将先进的软件硬件嵌入家庭、建筑、医院、工业、市场、农业、电力系统、供水、交通、车辆和道路中。图 18.1 所示的框图说明了广泛的物联网应用领域。到 2025 年，全球联网设备数量将达到 500 亿。根据 Statista 的研究，预计到 2025 年，物联网市场的总经济价值将飙升至 1 万亿美元。物联网系统由传感器、设备和读取器（如射频识别 RFID 标签、环境传感器和温度传感器）组成，在收集数据后通过可用协议与网络通信。然后，数据通过通信网络传输到控制器，由专用软件对其进行处理并做出相应决策。控制器随后发送信号以执行操作，例如自动调整传感器或设备 [3]。
+
+![图 18.1 各种物联网应用列表。](img/9781041062943_C018_001.jpg)
+
+**图 18.1** 各种物联网应用列表。
+
+# 18.2 智慧城市组件
+
+智慧城市包含各种整合组成部分，如图 18.2 所示。智慧城市应用通常涵盖四个关键方面：数据采集、传输/接收、存储和分析。
+
+第一步数据采集是通过在相关领域开发的传感器来完成的。传感器应用的几乎所有领域都受传感器开发进步驱动。该过程的第二部分是数据交换，将数据从采集点发送到云端进行计算和存储。该过程的普及基于技术的进步。数据传输通过全城 Wi-Fi 网络、第四代（4G）和第五代（5G）技术以及允许区域和国际通信的其他本地网络进行。在完成首次数据采集后，后续过程是将数据传输到云端，在云端进行安全存储并进行进一步分析。
+
+![图 18.2 智慧城市组件。](img/9781041062943_C018_002.jpg)
+
+**图 18.2** 智慧城市组件。
+
+第三阶段数据注册，涉及使用各种云存储方案对已存储的信息进行组织，以确保高效处理的系统化定位。这种组织的存储进一步允许第四阶段——数据分析。数据分析包括通过计算机操作来确定有意义的信息并辅助决策。在某些情况下，简单的决策和数据总结就足够进行基础分析 [4]。然而，对于高级情况，云计算不仅存储、收集和处理数据，还通过统计分析、机器学习、深度学习算法和其他其他先进方法允许实时分析 [5, 6]。
+
+### 18.2.1 智慧农业
+
+粮食安全是联合国 2030 年可持续发展目标的另一项核心组成部分。世界人口不断增长，气候变化正导致粮食产区出现不可预测的天气趋势，同时全球对可持续粮食发展以及对日益减少的可用资源（如水）的高效利用有着巨大需求。智能农业利用植物和农田中的传感器，通过测量不同参数来辅助决策、疾病和病虫害防治。智能农业的一个领先方面是精准农业，通过传感器进行测量对特定区域提供针对性数据，从而产生精确的维护机制。精准农业对于未来的粮食安全至关重要，因为它是追求可持续粮食生产不可或缺的一部分。人工智能在农业物联网（IoT）中的一些关键应用包括作物监测、疾病检测以及数据驱动的作物护理和决策 [7]。
+
+### 18.2.2 智能城市服务
+
+城市智能服务包含了维持城市人口运行的基础活动；它们包括供水、废物管理以及环境控制与监测等市政工作。传感器可用于持续监测水质和泄漏。废物管理是另一项热门的智能城市计划，将采用创新技术，例如连接到云端的垃圾桶传感器，在垃圾桶需要清空时通知管理部门，并通过人工智能确定最有效的收集路线。环境传感器监测城市中的污染水平，而智能停车系统则向市民展示最近的空车位，从而降低燃料成本。
+
+### 18.2.3 智能能源
+
+传统上，电力系统一直是单向的，能量从中心发电机（通常是水电或化石燃料发电站）流出。发电过程通过来自变电站的反馈进行管理，但缺乏消费端的反馈。这些系统需要产生过剩电力以保证持续供应。在这些系统中检测故障并执行纠正措施非常耗时。由于可再生能源技术成本的下降，许多消费者现在除了公用事业部门的主供外，也在发电。382.智能电网利用信息通信技术（ICT）提高新旧电网的可视性，支持消费端和公用事业两端的分布式发电，并引入自愈能力。传输到电网各点及公用事业部门的实时电力数据将允许使用预测模型进行更好的发电管理，整合多样化的能源来源，并通过自愈网络确保供应不中断。
+
+### 18.2.4 智能健康
+
+智能健康是利用信息通信技术（ICT）来提高医疗服务的可用性和质量。随着人口增加和医疗成本不断上升，该领域受到了研究人员和医疗提供者的广泛关注。目前过重的医疗系统无法满足日益的需求。智能健康旨在通过远程医疗服务和人工智能改进的诊断辅助来提供更广泛的医疗获取渠道。手机和健康追踪器的广泛使用可以捕捉实时健康数据（如心电图 ECG、温度和人体血氧饱和度），记录日常活动，并通过惯性传感器检测异常运动。
+
+### 18.2.5 智能家居
+
+智能家居是智能城市的重要组成部分，也是城市居民生活的中心。智能家居利用安装在房屋各处的传感单元来提供有关房屋及其居住者的信息。
+
+### 18.2.6 智能工业
+
+智能电网利用信息通信技术（ICT）提高新旧电网的可视性，支持消费端和公用事业两端的分布式发电，并引入自愈能力。传输到电网各点及公用事业部门的实时电力数据将允许使用预测模型进行更好的发电管理，整合多样化的能源来源，并通过自愈网络确保供应不中断。人工智能与物联网的集成驱动了自动化、商业智能等应用。
+
+### 18.2.7 智能基础设施
+
+城市的基础设施定义了生活质量。政府需要为居民建设和维护桥梁、道路和建筑。智能基础设施通过传感器确保此类结构保持良好。
+
+### 18.2.8 智能交通
+
+交通拥堵、污染以及在拥有良好交通的同时降低成本是许多城市中心关注的问题。ICT 的增加使得车辆-基础设施-行人之间的通信几乎成为常态。`V2V`、`V2I`、`V2P` 和 `P2I` 等技术允许研究人员设计智能交通系统。汽车中的 GPS 设备和手机使得追踪驾驶行为和模式成为可能。这些信息被实时用于 `Waze` 和 `Google Maps` 等应用规划路线，并用于公共交通规划行程。
+
+# 18.3 智能城市的物联网
+
+物联网是智能城市计划的核心。这项核心技术将实现智能城市无处不在的数字化。到 2025 年，将超过 750 亿设备连接到互联网，从而为物联网提供新的应用。在智能城市的旗帜下，物联网帮助传感器收集并报告城市状态信息到其核心云端，通过知识进行模式挖掘和决策。
+
+### 18.3.1 智能城市的物联网架构
+
+物联网通过云服务将数据感知、传输/接收、处理和存储的操作相结合。典型的物联网架构利用技术由五层组成，每一层都根据前一层的信息进行处理，如图[18.3](#ch26.xhtml#f187）所示。还存在三种不同的物联网系统架构，分别适用于不同的需求和应用。
+
+班加罗尔（Bangalore，也称为 Bengaluru）是印度卡纳塔克邦的首府，也是印度信息产业的重要枢纽。班加罗尔以创新和技术进步闻名，已开启了向智慧城市的转型。本案例研究考察了班加罗尔的举措、挑战和成就，并对图 18.4 所示班加罗尔向智慧城市的转型提供了分析视角。
+
+班加罗尔的智慧城市计划涵盖了几个关键发展领域。全范围内建立 Wi-Fi 热点使公共 Wi-Fi 使用量增长了 25%，增强了数字连接。提供政府服务的“Bangalore One”平台每年用户注册量增长 30%，服务交易增长了 20%。在智能治理方面，电子治理解决方案将政府服务的处理时间缩短了 40%，在线服务采纳率提高了 50%。用于公众参与的移动应用程序在 24 小时内解决了 15%的投诉，提高了市民的满意度。
+
+在智能出行方面，智能交通管理系统（ITMS）的实施使交通拥堵减少了 20%，高峰时段的平均旅行时间缩短了 15%。在公共交通中引入智能卡使使用量增加了 10%，智能卡交易增长了 25%。
+
+
+
+能源管理工作包括部署智能电网，导致停电次数减少了 15%，能源效率提高了 10%，同时太阳能容量增加了 12%，目前已占该市总能源消耗的 8%。废物管理的改进包括配备传感器的智能垃圾桶，使垃圾收集效率提高了 30%，运营成本降低了 25%，而回收倡议使回收率提高了 20%，填埋场垃圾减少了 15% [13]。
+
+![图 18.4 班加罗尔的智慧城市举措。](img/9781041062943_C018_004.jpg)
+
+**图 18.4** 班加罗尔的智慧城市举措。
+
+班加罗尔通过成功实施智慧城市技术，在提高居民生活质量方面取得了显著进展，如图 18.5 所示。市民满意度调查显示生活质量指标提升了 15%，凸显了增强公共服务、出行解决方案和数字基础设施带来的积极影响。对智能基础设施的投资刺激了城市的经济增长，使当地 GDP 增长了 10%。此外，可持续发展倡议（特别是在能源和水管理方面）使该市碳足迹减少了 12%，符合全球环境目标。科技领域的持续创新培养了繁荣的生态系统，专注于智慧城市解决方案的科技初创公司增长了 20% [14]。
+
+![图 18.5 班加罗尔的关键改进。](img/9781041062943_C018_005.jpg)
+
+**图 18.5** 班加罗尔的关键改进。
+
+这些指标凸显了班加罗尔在各个领域的进展，从数字基础设施和治理，到出行、能源管理、废物管理、水资源管理、环境监测和城市绿化。班加罗尔物联网（IoT）的未来前景广阔，该市准备利用尖端技术应对城市挑战并促进多个部门的增长，如图 18.6 所示。作为印度领先的技术枢纽之一，班加罗尔定位为驱动创新，通过物联网驱动系统优化智能出行，减少拥堵并提高效率。自动驾驶、智能停车解决方案和出行即服务（MaaS）将进一步优化出行。
+
+![图 18.6 物联网在班加罗尔的未来。](img/9781041062943_C018_006.jpg)
+
+**图 18.6** 物联网在班加罗尔的未来。
+
+在可持续发展方面，物联网在减少能源消耗方面起着关键作用 [15]。医疗领域也将受益于物联网的可穿戴健康设备和个性化护理。在治理方面，物联网将通过实时数据赋能班加罗尔公共服务。作为工业中心，班加罗尔将看到工业 4.0 的持续增长，物联网驱动自动化和供应链优化。此外，物联网将通过精准农业技术变革周边地区，优化资源利用。来自物联网设备的实时数据将有助于城市规划。最后，安全系统中的物联网将通过实时监控增强公共安全。总之，物联网将是班加罗尔转型为可持续城市的基石，驱动创新、效率并提高各个领域的生活质量 [16]。
+
+### 增强城市出行
+
+扩大物联网传感器和人工智能交通管理系统的使用，进一步减少拥堵、优化公共交通路线并提高整体交通流。例如：交通摄像头和道路传感器的实时数据可以进行分析，以预测并防止拥堵。预测性分析可以预测高峰时期并建议替代路线，可能减少 30%的拥堵。将自动驾驶汽车整合到公共交通系统中，利用物联网进行车云通信。例如：使用物联网传感器安全高效行驶的自动巴士。数据分析有助于优化路线和时间表，从而提高效率 20%。
+
+### 高级能源管理
+
+智能电网日益增长，用于更有效地管理能源供应，整合可再生能源并允许实时监控和反馈。例如：智能电表将实时使用信息传输给公用事业部门，以进行更有效的需求管理。数据分析可以优化能源分配，可能减少 15%的能源浪费。
+
+### 储能解决方案
+
+先进储能系统（如电池储能和网级存储解决方案）的整合通过物联网。例如：配备物联网储能系统的家用太阳能板，可储存剩余能量。分析：分析储能数据有助于提高电网可靠性。
+
+### 智能水资源管理
+
+在水质监测方面，物联网传感器被用于对水库和分配系统的水质进行持续监测。传感器检测污染物并发送警报以便立即采取行动。实时分析可以确保符合健康标准，降低 20%的健康风险。
+
+## 废物管理创新
+
+启用 IoT 的垃圾桶用于监测废物水平并优化收集路线。例如：智能垃圾桶在满溢时会通知废物管理服务。路线优化分析可以减少 20% 的废物收集成本。IoT 系统有助于改进分类和回收流程。例如，自动回收中心利用 IoT 更高效地对废物进行分类。分析：数据分析可以使回收率提高 15%，减少填埋场压力。
+
+## 环境监测与管理
+
+基于 IoT 的空气质量监测系统已扩展到覆盖城市的更多区域。例如：实时空气质量数据显示在公共平台上，以向公民提供信息。预测性分析有助于发布健康建议，并减少 10% 的与污染相关的疾病。在城市绿地中整合 IoT 以获得更好的维护和监控。例如：IoT 传感器监测土壤湿度和城市树木的健康。分析：数据驱动的维护可以使城市绿覆盖率提高 5%。
+
+## 智能家居开发
+
+基于 IoT 的家居自动化系统正在扩展，以提高便利性和能源效率。例如：智能恒温器根据人员占用模式调整温度。能源使用分析可以减少 20% 的家庭能源消耗。先进的启用 IoT 的家居安全系统有助于实时监控和警报。例如：智能摄像头和传感器会提醒住主任何异常活动。分析：安全分析可以使家庭入室盗窃减少 15% [17–20]。
+
+## 18.5 班加罗尔 IoT 执行策略
+
+在班加罗尔成功实施 IoT 将其变为智能城市需要一种多方面的方法，涉及战略规划和关键利益相关者之间的合作，如图 18.7 所示。公私合作伙伴关系（PPP）对于利用当地和国际技术公司（如 Cisco、IBM 和 Infosys）的专业知识和资源至关重要，结合班加罗尔发展的创业生态系统，通过孵化器和加速器促进创新。的政策和监管框架，包括 IoT 设备标准、数据通信以及如《个人数据保护法案》等强有力的数据保护法，对于确保安全和隐私至关重要 [21]。与学术界和研究机构的合作推动了创新，并支持为 IoT 部署和维护创建技能的人才。最后，通过政府资助、私营部门激励和国际赠款获得资金投资，确保了 IoT 项目的长期可持续性。这些策略共同为将班加罗尔转型为智能连接的城市奠定了坚实的基础 [22]。
+
+![图 18.7 智能城市的 IoT 执行策略。](img/9781041062943_C018_007.jpg)
+
+**图 18.7** 智能城市的 IoT 执行策略。
+
+## 18.6 案例研究
+
+在这个案例研究中，我们探索了为班加罗尔智能城市计划创建一个合成数据集，关注空气质量指数（AQI）、交通密度电动汽车（EV）充电站的使用情况。该数据集使用 `Google Colab` 生成，这是一个基于云的 Python 环境，便于实时数据分析和实验。使用 `Pandas` 库，该数据集模拟了从 2024 年 11 月 1 日开始的 48 小时的每小时数据。数据集包含三个关键变量：`AQI`，代表从 50 到 200 的空气质量指数；交通密度，通过每小时车辆数测量（范围从 100 到 1000）；以及 `EV charging station usage`，计算一小时内公共站点的充电次数数（范围从 5 到 50）。数据使用每个参数定义范围内的随机值生成，为分析提供了真实的模拟 [23]。
+
+表 18.1 显示了 AQI、交通密度和电动汽车充电站使用的 2024 年各月数据。
+
+**表 18.1** 2024 年各月 AQI、交通密度和电动汽车充电站使用的平均值
+
+| **月份** | **AQI (平均值)** | **交通密度 (平均值)** | **电动汽车充电站使用 (平均值)** |
+| --- | --- | --- | --- |
+| 一月 | 110 | 530 | 22 |
+| 二月 | 115 | 520 | 20 |
+| 三月 | 118 | 540 | 23 |
+| 四月 | 125 | 580 | 26 |
+| 五月 | 130 | 600 | 28 |
+| 六月 | 135 | 610 | 30 |
+| 七月 | 120 | 590 | 25 |
+| 八月 | 105 | 570 | 22 |
+| 九月 | 100 | 560 | 21 |
+| 十月 | 110 | 550 | 19 |
+| 十一月 | 105 | 560 | 18 |
+
+### 18.6.1 结果与讨论
+
+图 18.7 提供了 2024 年全年 AQI、交通密度和电动汽车充电站使用的每月趋势概述。`AQI`（红线）全年波动，在六月（135）达到峰值，随后在九月（100）下降，并在十一月（105）略有减少。这种模式表明空气质量存在季节性变化，较暖月份的空气质量较差，可能是由于较高的交通排放。交通密度（蓝线）显示出类似的波动，在六月（610）达到峰值，在二月（520）最低。这表明夏季交通通常更繁忙，可能是由于流动性增加或施工活动，而二月等寒冷月份较少。电动汽车充电站使用（绿线）从二月（20）逐渐到六月（30），与较高的交通密度相一致，这可能表明较暖月份电动汽车数量更多 [26]。图 18.8 显示了 AQI、交通密度和电动汽车充电站使用的每月趋势。
+
+![图 18.8 AQI、交通密度和电动汽车充电站使用的每月趋势。](img/9781041062943_C018_008.jpg)
+
+图 18.9 提供了每月 AQI、交通密度和电动充电站使用情况的视化对比。6 月份的 AQI 达到 135 的峰值，交通密度也达到了 610 的最高点，这都表明夏季交通繁忙，排放和拥堵情况更为严重。相反，9 月的 AQI 最低，为 100，交通密度为 560，表明空气质量和交通状况均较好。电动充电站的使用量遵循类似的上升趋势，在 6 月份达到 30 的峰值。然而，11 月的充电使用量最低，为 18，这可能反映了随着天气变冷电动汽车的使用量减少，或者可能是出行次数减少。
+
+![图 18.9 AQI、交通密度和电动充电站使用情况每月对比。](img/9781041062943_C018_009.jpg)
+
+**图 18.9** AQI、交通密度和电动充电站使用情况每月对比。
+
+图 18.10 显示了一张热图，提供了 AQI、交通密度和电动充电站使用量之间的相关性矩阵。AQI 与交通密度之间呈正相关，表明随着交通密度的增加，空气质量往往变差（AQI 升高）。这种关系是在预期之中的，因为交通量的增加通常会导致更高的排放。交通密度与电动充电站使用量之间的相关性中等，表明随着交通密度的增加，电动充电站的使用量也随上升。这可能表明电动汽车地区较高的流量会导致更多的充电。然而，AQI 与电动充电站使用量之间的相关性似乎较弱，意味着在该数据集中，空气质量并没有强烈影响电动汽车的充电习惯。
+
+![图 18.10 相关性热图。](img/9781041062943_C018_010.jpg)
+
+**图 18.10** 相关性热图。
+
+图 18.11 是一张散点图，显示了交通密度与电动充电站使用量之间的关系，每个点代表给定月份的数据。点按月份着色，显示出正趋势：随着交通密度的增加，电动充电站的使用量也随之增加。6 月份的数据点（颜色较暖）显示交通密度和充电站使用量均为最高值，其中交通密度为 610，电动充电站使用量为 30。相反，11 月（颜色较冷）两者的值较低，交通密度为 560，使用量为 18。该图表明交通量与电动充电之间存在强相关性，交通拥堵严重的月份通常与更多的充电活动相关，这表明在交通高峰期间电动汽车的使用得更多。
+
+![图 18.11 交通密度对比电动充电站。](img/9781041062943_C018_011.jpg)
+
+**图 18.11** 交通密度对比电动充电站。
+
+图 18.12 显示了不同月份 AQI 的箱线图，并视化了全年空气质量的离散程度和中心趋势。6 月份显示出较高的范围，上须达到约 135，表明夏季月份的空气质量较差。AQI 的四分位距（IQR）在 6 月份比其他月份更宽，突出了空气质量的显著波动。相反，9 月和 11 月显示的值较低，AQI 往往低于 110，这表明在较凉爽的季节空气更清新。该图有助于突出显示具有极端 AQI 值的月份（例如峰值较高的 6 月份），并清晰地展示了 AQI 如何响应季节性变化产生波动。
+
+![图 18.12 2024 年每月 AQI 的箱线图。](img/9781041062943_C018_012.jpg)
+
+**图 18.12** 2024 年每月 AQI 的箱线图。
+
+图 18.13 是一张饼图，显示了每月电动充电站使用情况的分布。图表显示 6 月份的使用份额最大，而 11 月份最小。这种视化方法有助于理解城市内电动汽车需求的季节性模式。
+
+![图 18.13 电动充电站使用情况饼图。](img/9781041062943_C018_013.jpg)
+
+**图 18.13** 电动充电站使用情况饼图。
+
+## 18.7 班加罗尔智慧城市计划中物联网面临的未来挑战
+
+物联网在班加罗尔智慧城市计划中的前景虽然广阔，但在成功实施之前也面临许多需要克服的挑战。首要问题是数据安全和隐私问题，因为物联网设备的广泛采用将产生海量的敏感公共和个人信息。健康的安全框架和对隐私法（包括《个人数据保护法案》）的遵守将有助于保护公民免受可能的泄露和滥用。其他障碍包括基础设施就绪——尽管班加罗尔是技术中心，但该城市仍存在某些互联网连接不稳定的地区，特别是在 5G 网络全面引入后，这可能会缓慢物联网的采用 [27–32]。另一个障碍包括不同类型的物联网系统、设备和平台之间的互操作性。这将确保无缝通信并使不同设备能够协同工作。
+
+此外，数字素养和公民参与也是持续的障碍。许多公民可能无法完全理解或信任物联网技术的处，这可能导致阻力或利用不足。教育公众并培养他们对智慧城市计划的归属感和参与感将是克服这一挑战的关键。物联网系统的可扩展性和未来保障也是一项挑战——解决方案必须具有适应性，以适应不断增长的人口快速的技术进步，而无需进行持续、昂贵的改造。物联网基础设施的部署成本和长期维护可能会增加公共预算，因此需要创新的资金模式和公私合作伙伴关系以确保财务可持续性。最后，可持续性是一项关键考虑因素。虽然物联网可以推动能源效率和废物管理的改进，但物联网设备对环境的影响（如电子垃圾和网络能耗）必须通过环保设计和回收倡议来解决。克服这些挑战需要政府、私营部门、学术界和公民之间的合作，以确保班加罗尔智慧城市计划中的物联网技术以安全、可扩展和可持续的方式实施 [33]。
+
+## 18.8 结论
+
+对 2024 年空气质量指数（AQI）、交通密度和电动汽车充电站使用量的每月趋势分析揭示了这些变量之间重要的季节性模式和相互关系。在天气较暖的月份，AQI 呈现明显的上升趋势，其中在 6 月份记录到最高值（135），表明由于交通量增加导致排放增加，空气质量有所化。相比之下，9 月和 11 月等较冷月份的 AQI 值较低，其中 9 月达到最低值（100），表明空气质量有了季节性的改善，这可能是由于交通减少和天气条件更加优越导致的。
+
+交通密度遵循类似的季节性模式，在较暖的月份达到峰值。6 月的交通密度最高，为 610，而 2 月最低，为 520，反映了通勤模式、建筑活动以及可能的假日出行的带来的季节性变化。这种季节性拥堵可能导致了 AQI 的增加，因为道路上的车辆更多会导致排放量增加。
+
+电动汽车充电站的使用量与交通密度呈中度相关，在 6 月份达到峰值（30 次），并遵循交通模式。这表明随着交通密度的增加，更多的电动汽车正在投入使用，导致对充电站的需求增加。然而，在 11 月份观察到充电站使用量明显下降，仅有 18 次使用，这可能表明在较冷月份电动汽车的活动减少，或者出行频率降低。
+
+总的来说，这些发现强调了空气质量、交通密度和电动汽车使用之间错综的关系。AQI 和交通密度的季节性波动凸了改善城市空气质量面临的挑战。电动汽车充电站使用的趋势表明，高交通与日益增长的电动汽车普及之间存在潜在联系。结论是，解决空气质量问题和优化电动汽车基础设施是未来促进可持续城市移动交通的关键。
+
+## References
+
+1. Miranda, R., Alves, C., Sousa, R., Chaves, A., Montenegro, L., Peixoto, H., … & Machado, J. (2024). Revolutionising the quality of life: The role of real-time sensing in smart cities. Electronics, 13(3), 550.
+
+2. Al-Maqashi, S., Al-Maqashi, M., Abdullah, M., Al-Rumaim, A., & Almansob, S. (2024). The impact of icts in the development of smart city: Opportunities and challenges.
+
+3. Adenekan, O. A., Ezeigweneme, C., & Chukwurah, E. G. (2024). The evolution of smart cities: Integrating technology, governance, and sustainable development. International Journal of Applied Research in Social Sciences, 6(5), 891–902.
+
+4. Cong, Y., & Inazumi, S. (2024). Integration of smart city technologies with advanced predictive analytics for geotechnical investigations. Smart Cities, 7(3), 1089–1108.
+
+5. Ponnusamy, S., Chourasia, H., Rathod, S. B., & Patil, D. (2024). Advanced computing for smart public transportation systems in smart cities. In Smart Cities (pp. 213–239). CRC Press.
+
+
+
+6. Khan, M., Su’ud, M. M., Alam, M. M., Karimullah, S., Shaik, F., & Subhan, F. (2025). Enhancing breast cancer detection through optimized thermal image analysis using `PRMS-Net` deep learning approach. Journal of Imaging Informatics in Medicine. `https://doi.org/10.1007/s10278-025-01465-y`
+
+396.7. Peldon, D., Banihashemi, S., LeNguyen, K., & Derrible, S. (2024). Navigating urban complexity: The transformative role of digital twins in smart city development. Sustainable Cities and Society, 111, 105583.
+
+8. Nassereddine, M., & Khang, A. (2024). Applications of Internet of Things (IoT) in smart cities. In Advanced IoT Technologies and Applications in the Industry 4.0 Digital Economy (pp. 109–136). CRC Press.
+
+9. Van Hoang, T. (2024). Impact of integrated artificial intelligence and internet of things technologies on smart city transformation. Journal of Technical Education Science, 19(Special Issue 01), 64–73.
+
+10. Raharja, U., Sanjaya, Y. P., Ramadhan, T., Nabila, E. A., & Nasution, A. Z. (2024). Revolutionizing tourism in smart cities: Harnessing the power of cloud-based iot applications. Corisinta, 1(1), 41–52.
+
+11. Rao, P., Pedada, S., Jangirala, S., Das, A. K., & Rodrigues, J. (2024). Role of IoT in the ages of digital to smart cities: Security and countermeasures. Internet of Things Magazine, 7(1), 56–64.
+
+12. An, R., Zhang, M., Wang, G. (2024). `GC-YOLO9`: Innovative smart city traffic monitoring. Engineering Journal, 106, 277–287.
+
+13. Esfandi, S., Tayebi, S., Byrne, J., Tamin, G., Alavi, S. (2024). Smart cities and urban energy planning: an advanced review of promises. Smart Cities, 7(1), 414–444.
+
+14. Dhiman, G., & Alghamdi, N. S. (2024). `SMoSE`: Artificial intelligence-based smart city framework using multi-objective and iot approach. IEEE Transactions on Consumer Electronics, 1,–9.
+
+15. Del Campo, G., Saavedra, E., Piovano, L., Luque, F., & Santamaria, A. (2024). Virtual reality and Internet of Things based digital twin for smart city-domain interoperability. Applied Sciences, 14(7), 2747.
+
+16. Alanazi, F., & Alenezi, M. (2024). Interoperability for intelligent traffic management in smart cities. International Journal of Electrical and Computer Engineering, 14(2), 1864–1874.
+
+17. Ugochukwu, C. E., Ofodile, O. C., Okoye, C., & Akinrinola, O. (2024). Sustainable smart cities: The role of fintech in promoting environmental sustainability. Engineering Science & Technology Journal, 5(3), 821–835.
+
+18. Wolniak, R., Gajdzik, B., Grebski, M., Danel, R., & Grebski, W. (2024). Business models used in smart cities—theoretical approach. Smart Cities, 7(4), 1626–1669.
+
+19. Alajlan, N. N., & Ibrahim, D. (2024). Deep smart cities: A review of smart cities-based an inference of deep learning. Journal of Advanced Research in Applied Sciences and Engineering Technology, 47(2), 94–120.
+
+20. Karimullah S, Khan M, Shaik F, Alabduallah, B., & Almjally, A. (2024, October 7). An integrated method for detecting lung cancer via CT scanning via optimization, deep learning, and IoT data transmission. Frontiers in Oncology, 14, 143541. doi: `10.3389/fonc.2024.143541`
+
+21. Jabbar, W. A., Tiew, L. Y., & Shah, N. Y. A. (2024). Internet of things enabled parking management system using long range area network network for smart city. Internet of Things and Cyber-Physical Systems, 4, 82–98.
+
+22. Ahmad, I. A. I., Anyanwu, A. C., Onwusinkue, S., Dawodu, S. O., Akagha, O. V., & Ejairu, E. (2024). Cybersecurity challenges in smart cities: a case review of African metropolises. Computer Science & IT Research Journal, 5(2), 254–269.
+
+23. Gkontzis, A. F., Kotsiantis, S., Feretzakis, G., & Verykios, V. S. (2024). Enhancing urban resilience: Smart city data analyses, forecasts, and digital twin techniques at the neighborhood level. Future Internet, 16(2), 47.
+
+24. Kaur, J. (2024). Towards a sustainable triad: Uniting energy management systems, smart cities, and green healthcare for a greener future. In Emerging Materials, Technologies, and Solutions for Energy Harvesting (pp. 258–285). IGI Global.
+
+25. Channi, H. K., Handa, K., Bhullar, M., Sandhu, R., Kaur, H., & Singh, P. (2024, March). 智能公路照明的可再生分布式发电。在《2024 年第 11 届国际可靠性、信息技术与优化国际会议（趋势与未来方向）》(ICRITO) (pp. 1–6)。IEEE。
+
+26. Channi, H. K., & Sandhu, R. (2024). 元宇宙时代商业与金融领域的大数据工具。在《数据驱动的商业与金融建模与预测分析》 (pp. 35–51)。Auerbach Publications.
+
+27. Alegria, H., Dixon, B., Johns, R., Colarusso, A., & Hancock, M. (2024). 利用智慧城市框架推进正义：应用公平视角比较不同社会经济状况社区的空气质量。《当地环境》, 1, 1–22.
+
+28. Costa, D. G., Bittencourt, J. C. N., Oliveira, F., Peixoto, J. P. J., & Jesus, T. C. (2024). 通过地理空间数据驱动方法实现可持续智慧城市。《可持续》, 16(2), 640.
+
+29. Soewu, T., Kaur, H., Sandhu, R., Sandhu, P., Ghai, D., Dhir, K., & Tripathi, S. L. (2025). 用于文本和图像处理的机器学习模型。在《生物医学信号处理的机器学习模型与架构》(pp. 153–177)。Academic Press.
+
+30. Laledia, S., Channi, H. K., & Sidhu, R. (2024). 绿色建筑中的分布式可再生能源：规划与建设策略。在《可持续电网的智能解决方案》(pp. 23–47)。IGI Global.
+
+31. Ghai, D., Saxena, S., Dhingra, G., & Tripathi, S. L. (2024). 图像文本提取系统技术的性能比较分析、分类、分类和映射的全面综述。《多媒体工具与应用》, 1, 1–158。
+
+32. Raju, B. A. N., Ghai, D., Tripathi, S. L., Nanda, S. K., & Islam, S. M. (2024). 使用 LBPH 和快速 R-CNN 在购物中心使用带自动账单系统的智能购物车进行产品营销和销售的预测分析。《预测数据分析的智能技术》, 1, 111。
+
+33. Nanda, S. K., & Ghai, D. (2022). 物联网视频取证的未来。在《电子设备与电路设计》(pp. 113–133)。Apple Academic Press.
+
+# 398.19 智能解决方案变革行业
+
+## 物联网与机器学习的变革性影响的案例研究
+
+Laya Billinty Varra, Monika Singh T., Kishor Kumar Reddy C., 和 Srinath Doss
+
+DOI: [10.1201/9781003634768-19](http://doi.org/10.1201/9781003634768-19)
+
+## 19.1 引言
+
+物联网（`IoT`）和机器学习（`ML`）的快速增长重塑了不同的行业，产生了突破性的解决方案，提升了效率、生产力和用户体验。这两者的结合带来了利用实时数据处理、自动化和智能决策的智能解决方案，创造了一个更具互联性和更智能的世界 (Kumar & Kumar., 2023)。本章深入探讨了 `IoT` 和 `ML` 在医疗、智慧城市、工业、零售、金融等领域的应用案例。
+
+### 19.1.1 物联网与机器学习在行业转型中的作用
+
+`IoT` 和 `ML` 的结合带来了利用实时数据处理、自动化和智能决策的智能解决方案，创造了一个更具互联性和更智能的世界。物联网设备通过 `ML` 算法进行实时分析，有效地驱动行业转型。从运行流程到定制客户体验，`IoT` 和 `ML` 的汇聚正在推动各行业的未来 (Visconti et al., 2024)。
+
+### 19.1.2 物联网的研究趋势与行业采用
+
+`IoT` 和 `ML` 的研究不断发展，通过联邦学习和边缘人工智能（`AI`）在行业中获得大规模采用。五代网络（`5G`）的实施增强了 `IoT` 应用的性能，提供了更可靠的连接。`AI` 驱动的自动化正在变革行业，从而支持更高的效率和成本降低 (Naidoo & Sibanda, 2024)。
+
+## 19.2 医疗：智能与连接系统
+
+如图 19.1
+
+**图 19.1** 物联网与机器学习集成的医疗架构。
+
+### 19.2.1 案例研究：AI 驱动的远程患者监测
+
+基于 `AI` 的远程患者监测（`RPM`）通过可穿戴技术和智能传感器对生命体征、用药依性和患者状况进行持续监测，增强了医疗。通过实时数据分析和预测分析识别早期健康风险，从而实现早期干预和个性化治疗方案。这种预防改善了患者效果，减少了住院次数并降低了医疗成本。此外，基于 `AI` 的 `RPM` 还通过实时反馈促进患者参与。数据隐私、集成和技术投资是某些挑战。尽管如此，基于 `AI` 的 `RPM` 正在通过改进、成本效益和个性化的护理方案变革医疗行业 (Nigar, 2024)。
+
+### 19.2.2 案例研究：AI 驱动的早期疾病检测
+
+利用 AI 进行早期疾病检测依赖于对可穿戴传感器、医学影像和电子健康记录中患者健康信息的持续收集、分析和解释。这些系统中的机器学习（ML）算法能够识别偏离正常健康参数的模式，并使得在症状出现之前对可能疾病的早期检测成为可能 (Khan et al., 2024)。例如，AI 驱动的可穿戴设备通过实时测量心率、血氧饱和度、血压和血糖水平，并与自定义的基准进行比较，从而检测出心律失常、血糖波动或呼吸障碍等潜在危险。如果出现异常，系统会及时提醒医疗从业人员或患者以防止可能的并发症 (Zaman, 2024)。
+
+除了可穿戴设备外，诊断领域的 AI 还通过检查医学影像、实验室检查和病史来检测早期疾病信号，从而改进疾病诊断。在大型数据库上开发的深度学习算法能够高准确率发现早期癌症、心血管疾病和神经系统疾病，结果通常优于传统的诊断技术 (Zaman, 2024)。这些 AI 算法还能预测疾病的发展并建议定制化的治疗方案，实现主动且基于数据的医疗保健 (Khan et al., 2024)。通过将重点从治疗转向早期预防，基于 AI 的检测正在改善患者的预后效果和临床决策。
+
+### 19.2.3 IoT 集成的急救医疗服务
+
+IoT 在嵌入急救医疗服务（EMS）后，通过优化急救响应的实时监控、通信和整体效率彻底改变了该领域。它被用于救护车上的自动预警设备中，利用 Wi-Fi 或 RFID 技术提醒驾驶员和其他交通用户即将到达的救护车，从而防止交通拥堵并优化患者护理 (Kumar Stephen et al., 2024)。
+
+此外，患者的实时生命体征（如血压、血氧饱和度和心率）通过基于 IoT 的患者监测系统进行收集和传输，使医生能够在患者入院前的合理时间范围内做出知情决策。由于患者、医院和急救响应人员之间的更好的协作，所有这些进步使得 EMS 网络能够更加协调一致并得到了改进。
+
+## 19.3 智能城市：增强城市基础设施
+
+### 19.3.1 案例研究：巴塞罗纳基于 AI 的交通管理
+
+巴塞罗纳的交通管理已从 1996 年的交通调节系统（`TRYS`）演变为 AI 和 IoT 驱动的模型，显著改善了拥堵控制。`TRYS` 系统依赖本地和协调代理、52 个可变信息标志（`VMS`）面板、自适应交通灯和 300 多个线圈检测器，通过实时信号调整来优化交通流。尽管高效，但它缺乏足够的预测性和适应性来支持日益增长的城市移动需求。相比之下，新的 AI 系统利用了带有智能传感器、红外摄像头和线圈检测器的 527 段道路，结合极端梯度提升（`XGBoost`）和自回归积分移动平均（`ARIMA`）等 AI 模型进行实时交通预测和自适应信号控制。与 `TRYS` 不同，新系统基于数据驱动的决策。这种从基于规则到 AI 驱动的转变减少了拥堵，改善了空气质量，并最大化了城市移动性 (Cuena et al., 1996; Garcia et al., 2024)。
+
+### 19.3.2 案例研究：废物管理中的 IoT：智能垃圾桶
+
+近年来 IoT 在废物管理中的应用实现了确保可持续性的智能垃圾桶。一个著名的例子是智能垃圾桶计划，它利用 IoT 传感器测量投入其中的垃圾量。通过该系统，收集机构能够提前规划收集路线，从而降低成本 (Rai & Goyal, 2020)。
+
+该领域的另一个突破是创建并部署了支持 IoT 的分类垃圾桶。它应用机器学习算法和传感器来区分有机和无机垃圾。此外，垃圾桶会跟踪其水位并在满溢时通知收集人员。为了提高可持续性，该垃圾桶具有太阳能发电能力，因此减少了对能量的依赖 (Antora et al., 2022)。
+
+## 19.4 工业 4.0：AI 驱动的制造与自动化
+
+
+
+工业 4.0（或第四次工业革命）正在通过 AI、IoT、机器人技术和数字孪生转型制造业。这些技术实现了预测性维护、实时决策和智能自动化，使行业变得高效、具有成本效益且具有韧性 (Shaik et al., 2024)。
+
+## 19.4.1 案例研究：宝马工厂的预测性维护
+
+宝马雄心地试图解决汽车制造中机器可靠性和计划外停机成本昂贵的挑战，为其电动单轨系统（`EMS`）配备了许多廉价的 IoT 传感器，包括用于测量振动的加速度计、用于监控异常的电流传感器以及用于检测过热的温度传感器 (Strauß et al., 2018)。
+
+`EMS` 每小时产生约 1.2 GB 数据，并实时评估 240 万消息用于状态监测。`Isolation Forest`（隔离森林，F1 分数为 89%）和 `Random Forest`（随机森林，F1 分数为 98.1%）等机器学习模型成功检测了异常并预测了故障，生产线被建立了数字孪生以进行模拟、预防性修改生产并计划维护，以减少因设备故障导致的效率低下或损坏 (Asimiyu, 2024)。这种 AI 驱动解决方案使得每次故障的计划外停机时间减少了近 1 小时，整体生产效率提高了 25%，缺陷率降低了 30%，从而改进了质量控制。
+
+制造业中基于 IoT 的预测性维护解决方案的实施情况汇总于表 19.1，展示了它们的技术、属性和影响。AI 驱动的 IoT 传感器进行实时观测和预测，以确保汽车行业的停机时间在经济范围内降最低。航空航天行业使用数字孪生技术结合 IoT 分析对喷气发动机进行预测性维护，以防止意外故障并提高燃料效率。在钢铁行业，将 AI 振动分析与 IoT 传感器融合，用于实时检测异常，从而节省维修成本并提高机器可靠性。在食品加工领域，智能型 IoT 赋能设备改进了包装和处理单元的预测性维护，同时增加了设备运行时间和生产效率。值得注意的是，纺织行业已采用集成智能传感器的 IoT 集成织布机，在需要维修磨损时发出自动警报。这些改进减少了材料浪费并提升了机器性能。这些实施展示了基于 IoT 的预测性维护如何在广泛的制造领域优化效率、最大限度地减少故障并提高资源利用率。
+
+### 表 19.1 预测性维护：制造业中基于 IoT 的解决方案](#ch27.xhtml#t51b)
+
+| 行业 | 使用的 IoT 技术 | 关键特征 | 对维护效率的影响 |
+| --- | --- | --- | --- |
+| 汽车（德国宝马） | AI 驱动的 IoT 传感器 | 实时状态监测、使用 ML 算法进行故障预测 | 缩短停机时间，延长设备寿命 |
+| 航空航天（美国通用电气） | 数字孪生和 IoT 分析 | 喷气发动机维护的预测性分析、实时性能跟踪 | 意外故障更少，优化燃料效率 |
+| 钢铁制造（印度塔塔钢铁） | 基于 AI 的振动分析 | 用于实时振动监测的 IoT 传感器、自动异常检测 | 节省维护成本，提高机器可靠性 |
+| 食品加工（瑞士雀巢） | 智能 IoT 赋能设备 | 包装和处理单元中基于 AI 的预测性维护 | 增加机器运行时间，提高生产效率 |
+| 纺织行业（中国） | IoT 集成织布机 | 用于磨损检测的智能传感器、自动维护警报 | 减少材料浪费，提高机器性能 |
+
+表 19.2 显示了数字孪生（DTs）与传统制造模型在数据使用、预测性维护、产品设计、效率、成本、复杂性和扩展性某些参数上的比较。数字孪生利用实时数据分析和 AI 驱动的洞察，而经典模型依赖于定期收集和人工分析。对于预测性维护，数字孪生使用 AI 防止故障，而经典系统依赖反应性维护，导致了一些不幸的停机。在产品设计领域，数字孪生进行虚拟仿真并降低材料成本，而经典模型依赖于物理原型，这需要更多投入才能产成品。数字孪生的运营效率是通过工作流的松绑实现的，与受限于固定程序的经典模型相反。它可以在更长的时间内更传统地减少费用，尽管安装非常困难，因为需要 IoT、AI 和云的接入。数字孪生具有扩展性，因为它们可以通过基于云的模型轻松扩展；而传统制造则需要改变。
+
+### 表 19.2 数字孪生与传统制造的比较](#ch27.xhtml#t52b)
+
+| 维度 | 数字孪生 | 传统制造 |
+| --- | --- | --- |
+| 数据使用 | 实时数据分析，AI 驱动的洞察 | 定期收集和人工分析 |
+| 预测性维护 | 使用 AI 防止故障 | 反应性维护，导致故障 |
+| 产品设计 | 虚拟仿真，降低材料成本 | 物理原型，更多投入 |
+| 效率 | 工作流的松绑 | 固定程序 |
+| 成本 | 在更长的时间内减少费用 | 安装困难（IoT、AI、云） |
+| 复杂性 | 接入要求高 | 传统 |
+| 扩展性 | 通过云模型轻松扩展 | 传统制造 |
+
+## 19.5 农业：用于智慧农业的 AI 和 IoT
+
+图 19.2 展示了使用 IoT 和 ML 增强农业效率的智能农业解决方案架构。各种传感器包括土壤湿度、温度、湿度、光、二氧化雨量传感器和害虫检测摄像头用于持续收集数据。在云平台上，这些数据通过决策树、支持向量机和神经网络等 ML 算法进行收集和分析，从而产生对灌溉调度、营养管理、作物健康监测和产量预测的预测性洞察。这些信息通过 Web 仪表板和移动应用程序提供给农民，允许他们监控农场、接收警报并实现自动化管理。这种智能农业框架通过资源优化、成本节省、提高可持续性和数据驱动的决策，为现代农业转型先进、高效和可持续的系统提供了巨大前景。
+
+![图 19.2 IoT 和 ML 集成健康架构](img/9781041062943_C019_002.jpg)
+
+**图 19.2** IoT 和 ML 集成健康架构
+
+### 19.5.1 案例研究：印度基于 IoT 的精准农业
+
+IoT 和 AI 正在利用精准农业方法彻底改变印度农业。IoT 赋能设备如土壤湿度智能传感器、温度、湿度和营养水平智能传感器提供了实时监测和基于数据的洞察，使灌溉、虫虫和资源分配最大化。AI 技术的 ML 模型和预测性分析通过作物产量预测、土壤状况监测和劳动自动化进一步提高了生产力。
+
+关键案例如微软的 FarmBeats 项目和塔塔的 mKRISHI 平台证明了印度 IoT 赋能精准农业的实力，这使作物产量增加了高达 30% 并支持了可持续性。尽管存在高价格、扩展性和对数据隐私担忧等障碍，政府政策和与科技公司的合作正在刺激需求。未来结合 AI、IoT 和基因组学的发展有望带来更具耐性的作物、更有效的资源利用和可持续农业，使印度成为智慧农业解决方案的领导者 (Krishnababu et al., 2024)。
+
+### 19.5.2 案例研究：荷兰的自动化温室
+
+407 荷兰在 AI 管理的温室自动化方面处于领先，显著提高了作物产量和资源利用率。先进的传感器网络和 `ML` 管理着温度、湿度、`CO₂` 水平和和光照等关键参数，以提供最佳的生长条件。基于 AI 的模型控制实时温室设置，并预测气候模型以适应环境变化，在优化植物生长的同时减少了能源消耗。荷兰温室采用完全封闭的结构，配备机器人通风和 `CO₂` 强化系统，最大限度地提高了光合作用效率。研究表明，使用基于 AI 的气候控制已使番茄和辣椒等蔬菜的产量比传统方法增加了高达 `78 kg/m²`。精准的气候管理减少了因反复天气造成的作物损失，并增强了整体农业的可持续性（Karimullah et al., 2024）。
+
+干旱是现代农业面临的最大威胁之一，荷兰温室通过引入基于 `IoT` 的智能灌溉系统克服了这一点。这些系统利用实时土壤水分监测传感器、自动滴灌和水肥一体技术，根据植物需求实现水供应的最大化。AI 分析结合 `IoT` 确保了各种节水措施并降低了消耗率。智能灌溉系统监测土壤的电导率、`pH` 值和养分吸收水平，确保了资源的优化利用。荷兰温室的雨水收集和回收系统增加了大量的节水，从而提升了可持续性和环保性（Luna et al., 2019）。
+
+### 19.5.3 AI 驱动的病虫害检测
+
+AI 在农业中的整合显著增强了病虫害的检测，这使得早期干预、减少作物损失和提高农场生产成为可能。基于 AI 的解决方案利用 `ML`、传感器系统、图像分析和决策支持系统实时检测并抑制潜在威胁。基于 AI 的智能农业结合了土壤传感器、气候数据库和高分辨率图像的输入，识别影响作物健康的异常。`ML` 算法处理农业数据模式并尽早预测虫害，计算机视觉和 `IoT` 传感器以高精度自动识别植物病害。这些基于 AI 的决策支持系统为农民提供了可操作的见解以实现干预最大化，减少化学品的使用并提高可持续性。
+
+来自农业工程师的实证表明，AI 的采用与高效的病虫害管理高度相关，可扩展性和灵活性证明是 AI 成功的关键因素。以小农手机 App 形式存在的实际应用允许用户利用 AI 确定植物病害，而研究机构开发了使用卫星图像检测作物病害的 AI 软件，具有节省大量产量的潜力。这些示例展示了 AI 辅助的疾病和虫害检测如何通过鼓励更数据驱动、更可持续且更具韧性的农业来改变现代农业（Hashem et al., 2024）。
+
+## 19.6 零售与电子商务：增强客户体验
+
+AI 集成 `IoT` 在零售和电子商务领域的各种应用如图 19.3 所示。中心是核心主题“AI 集成 IoT 在零售和电子商务中的应用”。概述了主要应用包括：配备了 `IoT` 传感器的智能货架和库存管理，用于实时库存管理；为购物者提供 AI 引导的个性化店内导航；动态定价技术等。本质上，它们包括减少排队时间的自动结账、确保供应链优化、通过聊天机器人增强的客户支持、减少设备故障的预测性维护，以及基于 `AR` 的购物体验。图 19.3 展示了 AI 和 `IoT` 如何协作，提高效率、客户体验并简化零售和电子商务运营。
+
+![图 19.3 零售和电子商务中的 AI 集成 IoT 应用。](img/image_path)
+
+图 19.3 零售和电子商务中的 AI 集成 IoT 应用。[](#ch27.xhtml#f200)
+
+### 19.6.1 案例研究：Amazon Go：AI 驱动的无现金商店
+
+Amazon Go 通过 AI 驱动的无收银员商店改变了零售业，消除了传统的结账队伍。通过结合应用计算机视觉、深度学习和 `ML` 算法，系统实时监控客户移动、产品选择和购买习惯。大量的 AI 驱动的摄像头和传感器检测客户何时拿起或放回物品，确保有一个准确的虚拟购物车。当购物者离开时，Amazon Go App 在其离开时自动收取费用，提供了无忧的购物体验，节省了时间并增加了便利性。其他追随 Amazon Go 成功的购物者也接受了类似的“拿即走”技术，推动了零售业 AI 自动化创新的边界。
+
+Amazon Go 使用 `IoT` 传感器和基于 AI 的库存管理系统维持实时库存水平。货架上的重量传感器跟踪产品移动，射频识别 (`RFID`) 标签有助于提高库存跟踪的准确性和防止损失。商店的后端系统解释客户购买习惯，使补货最大化并减少供应链低效。通过使用基于 `IoT` 和 AI 的数据分析，Amazon Go 促进了更快的周转，降低了运营成本，这种无忧自动化为智能零售树立了新标准，其对全球无收银员购物未来发展的影响而易见（Szabó-Szentgróti et al., 2023）。
+
+### 19.6.2 案例研究：电子商务中基于 AI 的个性化推荐
+
+## 19.7 金融服务与 AI 驱动的银行业
+
+### 19.7.1 案例研究：欺诈检测中的 AI：PayPal 如何使用 ML
+
+PayPal 作为一个全球数字支付系统，正面临着日益复杂的欺诈威胁，这需要实时自适应欺诈检测系统。PayPal 实施了多种机器学习算法（监督学习、无监督学习和强化学习模型）来分析大量的交易历史，以极高精确度检测可疑活动（Ramadugu & Doddipatla, 2022；PayPal, n.d.）。监督模型用于检测已知的欺诈模式，而无监督算法则用于检测异常，它们利用图数据库模型并研究超过 15 亿条边，以揭示账户之间的隐藏关系（H2O.ai, 2020）。除了机器学习算法外，PayPal 还使用 `H2O.ai` 的 `Driverless AI` 作为特征工程自动化系统，加速了检测模型的开发和部署过程。AI 系统与传统的基于规则的方法相比显示出显著的优势——通过减少自动化系统产生的大量误报，使欺诈检测的速度和准确性得到了迭代提升。因此，系统性的欺诈检测将为全球数百万用户创造更安全的交易体验。在未来，由支持预测欺诈倾向的指标比的生物识别认证过程（使用生物传感器，如指纹和人脸识别）可能会增加额外的层次来防止欺诈并增强客户信心（Ramadugu & Doddipatla, 2022）。
+
+表 19.3 提供了金融机构的各种案例研究，这些机构利用 AI 来预防、检测和调查欺诈者的行为。PayPal 使用算法、机器学习和模式识别方法来检测可疑交易，提高了准确性并减少了误报。利用 AI 驱动的交易监控，摩根大通 Chase 能够进行实时欺诈检测并防止财务损失。通过与万事卡合作，AI 生物识别认证增强了安全性并减少了身份欺诈。对此，汇丰通过部署自然语言处理（NLP）来处理钓鱼和欺诈信息，从而为其客户提供保护。美国运利用深度学习分析消费模式，允许更快速地检测欺诈事件并最大限度地减少未经授权的交易。
+
+**表 19.3** 欺诈检测中的 AI：金融服务案例研究
+
+| 金融机构 | 使用的 AI 技术 | 欺诈检测方法 | 对预防欺诈的影响 |
+| --- | --- | --- | --- |
+| PayPal | ML 和模式识别 | 根据行为异常识别可疑交易 | 减少了误报并提高了欺诈检测准确性 |
+| 摩根大通 Chase | AI 驱动的交易监控 | 对交易数据进行实时分析以检测欺诈模式 | 更快识别欺诈，财务损失至至 |
+| 万事卡 | AI 驱动的生物识别认证 | 使用人脸识别和指纹扫描进行安全交易 | 增强了安全性，减少了身份欺诈 |
+| 汇丰 | 用于诈骗检测的 NLP | 识别欺诈信息和钓鱼尝试 | 增强了针对社会工程攻击的客户保护 |
+| 美国运 | 用于信用卡欺诈检测的深度学习 | 分析消费行为以检测异常 | 更快的欺诈响应并减少了未经授权的交易 |
+
+表 19.4 揭示了围绕 AI 驱动金融服务的某些关键安全和隐私问题及其缓解策略。数据隐私风险的产生是因为 AI 系统需要访问敏感的财务数据，这通过加密以及遵守通用数据保护条例（`GDPR`）及其他法规来处理。从 AI 模型构建开始的偏差可能导致不公平的风险评估，可以通过定期审计和多样化的训练数据集来缓解。安全威胁针对 AI 欺诈检测系统，这些系统通过先进框架和异常检测受到保护。AI 缺乏透明度成为问题，可以通过采用可解释 AI（`XAI`）技术来澄清。模型漂移是指 AI 模型在变化的环境中变得过时。这种漂移通过持续学习和模型重新训练来应对。
+
+**表 19.4** AI 驱动金融服务中的安全与隐私问题
+
+| 问题 | 描述 | 缓解策略 |
+| --- | --- | --- |
+| 数据隐私 | AI 系统需要访问敏感的财务数据 | 加密、遵守 `GDPR` 及其他法规 |
+| AI 模型偏差 | AI 模型可能从训练数据中继承偏差，导致不公平的风险评估 | 定期审计、多样化的训练数据集 |
+| 网络安全威胁 | AI 驱动的欺诈检测系统是攻击目标 | 先进框架和异常检测 |
+| 决策透明度 | AI 缺乏解释性可能导致合规问题 | 采用 `XAI` 技术 |
+| 模型漂移 | 随着欺诈模式的变化，AI 模型可能会过时 | 持续学习和定期模型重新训练 |
+
+## 19.8 智能家居与消费 IoT
+
+### 19.8.1 案例研究：AI 驱动的智能家居：Google Nest 和 Alexa
+
+### 19.8.2 案例研究：基于 IoT 的家居安全系统
+
+所提的安全框架基于通过门禁系统进行人脸识别自动准入，确保只有获得授权的人员进入特定区域（Veera Boopathy et al., 2024）。与通过物理传感器系统检测入侵者的普通系统不同，该系统使用记录的图像帧，并将其与内部内存中存储的数据库信息进行比对。这种方法确保了准确性的提高并减少了误报发生。这套 `414.system` 还运行在 `Raspberry Pi` 开发板上。该拟提解决方案的其他功能还包括备用电池、`WiFi` 网络设置和外部通用串行总线（`USB`）端口。与其他直接将安全警报通过电子邮件发送执法部门的系统相比，这种功能提供了更高级别的自动化注册能力。与所考虑的其他系统相比，该系统的检测更加节能——因此系统运行寿命更长，且在线数据成本更低，同时仍然能够免受攻击。
+
+另一个启用安全功能的安全监测框架通过集成实时安全保障机制增强了基于物联网的系统（Kabir et al., 2023）。它将网络安全与物理安全监控相结合，防止了蓄意的网络攻击和无意的系统故障（如通信中断或机械故障）。它使用设计时的系统分析来实施一个可执行的监测模型，对系统的安全状态提供持续评估。系统的持续运行可以收集系统安全状态的运行数据，并创建纠正措施的替代路径，同时安全地向用户发送任何警报。这种方法确实降低了物联网系统的风险。处于不安全/受损的状态，对于智能家居、医疗保健系统和工业应用非常有益。
+
+这两种启用物联网的安全解决方案都为我们展示了 `AI` 和自动化如何进一步优化家庭保护的各自途径。在这方面，在网络-物理威胁变得日益严峻的时代，这些系统利用实时监控、人脸识别技术和自动警报，为家庭安全创建了一种智能化的方法。
+
+`415.图 19.4` 显示了采用智能家居设备和物联网技术时面临的主要挑战：数据隐私泄露、无理监控、用户同意不足、网络安全威胁、`AI` 偏见以及监管的松散。未加密的数据采集和不安全的设备使户户面临安全风险，而模糊的政策限制了对个人信息的控制。`AI` 偏见由于缺乏相关的法律框架，进一步使伦理考量凸显出来。该图强调了需要更强的安全性、伦理 `AI` 以及更全面的立法，以保护物联网实施中的用户隐私和公平。
+
+![图 19.4 消费者物联网中的伦理与隐私问题。](img/9781041062943_C019_004.jpg)
+
+**图 19.4** 消费者物联网中的伦理与隐私问题。
+
+## 19.9 结论
+
+
+
+# `IoT` 与 `AI` 的整合
+
+`IoT` 与 `AI` 的整合正在彻底改变业务效率、自动化和决策。本章讨论了各种 `IoT` 相关 `AI` 解决方案的案例，这些解决方案被应用于医疗保健、智能城市、制造业、农业、零售、金融、智能家居和教育领域。此类技术提高了患者的护理质量，改善了城市基础设施，实现了制造自动化，并支持了零售和银行服务，同时通过精准农业和自适应学习平台优化了农业和学习。
+
+尽管采用 `AI` 和 `IoT` 具有巨大的优势，但也带来了数据隐私、网络安全威胁和决策偏见等伦理和安全问题。这些需要通过稳健的监管机制和伦理 `AI` 开发来解决。未来，`ML`、`5G` 和边缘计算的进步将继续推动创新。可持续的 `AI` 解决方案、自主系统以及新兴市场的普及将继续定义一个更智能、更连接的世界。
+
+## 参考文献
+
+* Antora, N. A., Rahman, M. A., Mosharraf, A. A., Ehsan, M. I., Alve, M., & Elahi, M. M. (2022). Design and implementation of a smart bin using `IoT` for an efficient waste management system. In 2022 25th International Conference on Computer and Information Technology (`ICCIT`) (pp. 774–779). IEEE. [`doi.org/10.1109/ICCIT57492.2022.10055998`](https://doi.org/10.1109/ICCIT57492.2022.10055998)
+
+* Asimiyu, Z. (2024). Data-driven decision-making in automotive manufacturing. [www.researchgate.net/profile/Zainab-Asimiyu/publication/387668758\_Data-Driven\_Decision-Making\_in\_Automotive\_Manufacturing/links/677723ea00aa3770e0d307e1/Data-Driven-Decision-Making-in-Automotive-Manufacturing.pdf](http://www.researchgate.net/profile/Zainab-Asimiyu/publication/387668758_Data-Driven_Decision-Making_in_Automotive_Manufacturing/links/677723ea00aa3770e0d307e1/Data-Driven-Decision-Making-in-Automotive-Manufacturing.pdf)
+
+* Best Practice `AI`. (n.d.). Johns Hopkins Hospital improves patient monitoring and resource allocation in ER and critical care units in real-time using machine learning. Retrieved from [www.bestpractice.ai/ai-case-study-best-practice/johns\_hopkins\_hospital\_improves\_patient\_monitoring\_and\_resource\_allocation\_in\_er\_and\_critical\_care\_units\_in\_real-time\_using\_machine\_learning](http://www.bestpractice.ai/ai-case-study-best-practice/johns_hopkins_hospital_improves_patient_monitoring_and_resource_allocation_in_er_and_critical_care_units_in_real-time_using_machine_learning)
+
+* Cuena, J., Hernández, J., & Molina, M. (1996). An intelligent model for road traffic management in the motorway network around Barcelona. In Proceedings of the 1996 International Conference on Road Traffic Management (pp. 173–180). Springer. [`doi.org/10.1007/978-3-464-1996-0`](https://doi.org/10.1007/978-3-464-1996-0)
+
+* Garcia, E., Calvet, L., Serrat, P., & Peyman, M. (2024). Predictive analyses of traffic level in the city of Barcelona: From `ARIMA` to `Xtreme Gradient Boosting`. Applied Sciences, *14*(11), 4432. [`doi.org/10.3390/app144432`](https://doi.org/10.3390/app144432) (Not accessible as \[2025/12/22\])
+
+* H2O.ai. (2020). Driving away fraudsters at PayPal: Case study. [`h2o.ai/content/dam/h2o/en/marketing/documents/2020/01/PayPal-Customer-Case-Study-rnd2-1.pdf`](https://h2o.ai/content/dam/h2o/en/marketing/documents/2020/01/PayPal-Customer-Case-Study-rnd2-1.pdf)
+
+* Karimullah, S., Khan, M., & Shaik, F. (2024). 改进的混合深度学习方法在肺 CT 图像异常检测与分类中的实现与性能评估。 2024 年智能与可持续技术近期创新国际会议 (ICRISST)，印度班加罗尔，页码 1–6。doi: [10.1109/ICRISST59181.2024.10921991](http://dx.doi.org/10.1109/ICRISST59181.2024.10921991)
+
+* Khan, A. O. R., Islam, S. M., Sarkar, A., Islam, T., Paul, R., & Bari, M. S. (2024). 使用驱动的可穿戴传感器的实时预测健康监测：增强慢性病管理中的早期检测和个性化干预。国际多学科研究期刊, 1, 1–15。
+
+* Krishnababu, M. E., Devi, B. R., Soni, A., Panigrahi, C. K., Sudeepthi, B., Rathi, A., & Shukla, A. (2024). 精准农业综述：利用 `AI` 和 `IoT` 导航农业未来。亚洲土壤科学与植物营养杂志, 10(2), 336–349。
+
+* Kumar, K., & Kumar, V. (2023, 11 月). 物联网中人工智能与机器学习的集成。 2023 年可持续通信网络与应用国际会议 (ICSCNA) (页码 491–497)。IEEE。
+
+* Kumar Stephen, V., M. V., Palanisamy, R., & Antonio Rutaf Manalang, M. (2024). 急急医疗服务系统。在 2024 年第一届创新工程科学与技术研究国际会议 (ICIESTR) (页码 1–6)。IEEE. [`doi.org/10.1109/ICIESTR60916.2024.10798196`](https://doi.org/10.1109/ICIESTR60916.2024.10798196)
+
+* McKinney, S. M., Sieniek, M., Godbole, V., Godwin, J., Antropova, N., Ashrafian, H., ... & Shetty, S. (2020). 用于乳癌筛查的 `AI` 系统国际评估。自然 (Nature), 577(7788), 89–94。 [`doi.org/10.1038/s41586-019-1799-6`](https://doi.org/10.1038/s41586-019-1799-6)
+
+* Naidoo, P., & Sibanda, M. (2024). 工业物联网的新兴趋势与未来方向。从物联网到智能联网, 1, 91–110。
+
+* Nigar, N. (2024, 7 月 4 日). 远程患者监测中的 `AI`。 医疗保健中的转型（书籍章节）。arXiv。 [`doi.org/10.48550/arXiv.2407.17494`](https://doi.org/10.48550/arXiv.2407.17494)
+
+* Nijhuis, S., & Edari, A. (2024). 智慧城市、物联网与自然联网的进展：荷兰应用与最佳实践的简述。Al Edari, 14–32。
+
+* PayPal. (无日期). 机器学习。`www.paypal.com/us/payment-detection`
+
+* Rai, S., & Goyal, N. (2020). 废弃物管理。国际工程与技术期刊 (IJERT), 9, 2278–281。
+
+* Ramadugu, R., & Doddipatla, L. (2022). `AI` 在加强数字化的作用。智能系统期刊, 3(1), 43–52。
+
+* Selinger, E., & Durant, D. (2021). 监控即服务。智能系统期刊, 31(1), 1–15。 [`doi.org/10.1080/095431.2021.19837`](https://doi.org/10.1080/095431.2021.19837)
+
+* Strauß, P., Schmitz, M., & Wöstmann, R. (2018). 通过低成本传感器实现预测性维护。在 2018 年 IEEE 大数据国际会议论文集 (页码 1474–1483)。[`doi.org/10.1109/BigData.2018.86207`](https://doi.org/10.1109/BigData.2018.86207)
+
+* Szabó-Szentgróti, E., Rámhó, S., & Kézai, P. (2023). 无收银商店综述。管理与营销, 18(s), 427–448。
+
+* Veera Boopathy, E., Karthikkumar, S., Kannadhasan, S., Niranjan, S., & Gajendiran, K. (2024). `IoT` 驱动的智能家居安全系统。在 2024 年第 10 届电力系统国际会议 (ICEES)，印度班加罗尔 (页码 1–4)。[`doi.org/10.1109/ICEES61253.2024.107793`](https://doi.org/10.1109/ICEES61253.2024.107793)
+
+* Visconti, P., Rausa, G., Del-Valle-Soto, C., Velázquez, R., Cafagna, D., & De Fazio, R. (2024). 智能制造工业应用的机器学习和基于 `IoT` 的解决方案：批判性回顾。未来互联网 (Future Internet), 16(11), 394。[`doi.org/10.3390/fi16110394`](https://doi.org/10.3390/fi16110394) (截至 2025/12/22 无法访问)
+
+* Zaman, Q. (2024). 人工智能在疾病早期检测中的作用：转型诊断与治疗。多学科医疗期刊 (MJH), 1(2), 43–54。
+
+# 419.20A 基于心电图信号的心脏疾病分类深度学习与优化心脏诊断系统
+
+C. Venkatesh, L. Sivayamini, M. Venkata Dasu, Shaik Karimullah, 和 T. Lakshminarayana。
+
+DOI: [10.1201/978103634768-20](http://doi.org/10.1201/978103634768-20)
+
+## 20.1 引言
+
+心血管疾病（CVDs）对全球健康构成了巨大挑战，占每年死亡人数的近三分之一[1]。这一广泛的疾病类别影响心脏和血管系统，包括心律失常、心脏骤停等状况[2]。心血管疾病发病率的上升受人口老龄化、生活方式改变以及高血压和糖尿病流行率增加等因素的影响，这些共同给国际医疗系统带来了沉重负担。作为首要死因，心血管疾病需要引起关注[3]。及时准确地诊断心脏病至关重要，因为它直接影响患者的护理和预后。不同的心脏病会影响心脏的电功能、结构和机械性能，可以通过各种临床和生理体征观察到。保健提供人员通常依赖血管造影、心电图（ECGs）和血检等诊断工具来评估心脏健康[4]。血管造影提供血管的详细成像以检测阻塞或异常，而血检则测量指示心肌损伤或压力的标志物。心电图仍然是最广泛使用且最易获取的诊断工具，它捕捉由调节心跳的心起结细胞产生的电信号。这使得心电图成为观察传导通路和其他重要心脏功能的宝贵策略，能够对多种心脏状况进行诊断[5]。
+
+### 心电图分析的进展
+
+计算技术的进步彻底改变了心电图数据的解释。传统上，心电图分析依赖人工审查和经典信号处理，这涉及从信号中提取特定特征、选择相关特征并对其进行分类。这些方法可能非常耗力、容易产生人为错误，并受限于选择充分代表心脏信号复杂性特征的挑战。为了克服这些局限性，深度学习在近期已成为一种成熟的方法，用于自动化和增强心电图解释的准确性。
+
+这些模型可以检测出数据中传统技术可能会错过的细微且复杂的模式。大型、良好标记数据集（例如来自 `PhysioNet/Computing in Cardiology Challenge (CinC)` 的数据集）对于训练这些模型至关重要，使其在检测心律失常、冠心病和其他心脏疾病方面具有很高的准确性[6]。
+
+虽然深度神经网络对提高诊断准确性的影响已经在神经病、皮肤科和心脏病在内的多个医学领域得到广泛认可[7]。总的来说，深度学习增强了分析复杂生物医学信号和医学图像的能力，使其成为推进医疗诊断和预后不可或缺的工具[8]。
+
+### 鱼鹰优化程序
+
+为了进一步提高分类准确性，本研究在模型训练过程中引入了 `osprey optimization procedure`（鱼鹰优化程序），这是一种基于鱼鹰捕猎技术的自然启发元启发式算法[9]。这种优化方法在解决复杂的非线性问题方面特别有效，不依赖梯度信息，从而提高了模型从心电图数据中准确分类心脏疾病的能力[10]。该算法在各种工程和资源分配应用中被证明有效，为医学信号分析提供了一种具前景的策略[11]。通过将这种优化与卷积神经网络（`CNNs`）相结合，研究旨在提高诊断精度，支持心血管疾病的早期检测，并最终帮助减少与心脏状况相关的死亡率。
+
+## 20.2 文献综述
+
+心血管疾病诊断的最新进展日益关注利用深度学习和优化算法来增强预测的准确性和可靠性。
+
+2025 年，Zhang 等人[12]引入了一种利用来自 `PhysioNet` 数据库的多导联心电图记录进行早期心血管疾病检测的集成网络。他们的方法展示了整体诊断性能的显著提高，达到了 93.5% 的准确率。这种集成策略允许模型有效捕获复杂的心脏信号动力学。然而，该方法需要大量的计算资源并依赖于大型良好标记的数据集，这可能会限制其在基础设施有限的临床环境中的可访问性。
+
+2024 年，Kumar 等人[13]研究了应用于电子健康记录（`EHRs`）的心血管疾病预测中，结合集成学习方法选择特征的若干方法。他们的研究发现，`RFE` 结合 `Gradient Boosting` 分类器的性能优于其他配置，达到了 89% 的准确率水平。尽管结果令人鼓舞，但研究局限于单一机构数据集，这在验证模型在更广泛、更多样化的患者群体中的泛化和有效性方面带来了挑战。
+
+Lopez-Morales 等人[14]在 2023 年的工作不仅关注了分类准确性，还通过提出一种基于注意力机制的 `CNNs` 的可解释人工智能（`XAI`）框架来从心电图数据检测心律失常，考虑了模型的透明度。他们的模型实现了 91.2% 的分类准确率，还生成了注意力地图，视觉化地突出了心电图信号中贡献预测的关键区域，从而培养了临床信任。尽管如此，该研究样本量较小，且对特定心律失常类的关注限制了其解决方案的适用范围和稳健性。
+
+Farhan 等人[15]在 2022 年探索了利用遗传算法优化一维（`1D`）`CNN` 架构，通过心电图信号分析诊断冠心病。他们优化的 `CNN` 模型实现了 90.7% 的准确率，与基线网络相比，在训练期间表现出更快的收敛速度。然而，不平衡数据集的存在以及缺乏外部数据的验证限制了发现的可靠性和广泛的临床意义。
+
+Singh 和 Gupta[16]在 2022 年的综合综述强调了物联网（`IoT`）技术与机器学习在持续心血管健康监测中的日益融合，通过可穿戴设备检测心律失常的准确率超过 92%。尽管有这些进展，他们强调了持续的挑战，包括对患者数据隐私的担忧以及大规模可用数据集的稀缺，这阻碍了广泛实施。
+
+2021 年，Hassan 等人[17]提出了一种结合 `CNNs` 和 `Random Forest` 算法的集成诊断模型，通过利用超声图像结合临床数据来预测心衰竭。他们的模型在多个患者队列中实现了 90.1% 的准确率，证明了稳健性和有效性。然而，对超声成像的依赖限制了其在无法常规获得此类成像的环境中的应用。
+
+
+
+同样，Oliveira 等人[18]在 2021 年开发了一种全面的深度学习流程，将原始 ECG 信号与元数据融合，以对多种心脏状况进行分类。该模型在大型数据集上进行训练，达到了 88.6%的准确率。他们方法的主要限制是需要大量的精力，并且需要大量高质量的标记数据。总而言之，这些研究反映了将深度学习和优化方法应用于心血管诊断的显著进展。然而，常见的局限性仍然存在：模型往往依赖于特定数据集，受到类别不平衡的影响，且有时缺乏解释性，而这对于临床认可至关重要。此外，高计算需求和有限的验证限制了其在现实世界的应用。本研究提出的方法旨在通过实现`CNN`进行全自动信号分类来克服这些挑战。通过优化算法`OOA`增强了这一点，这是一种元启发算法，旨在不依赖梯度信息的情况下有效微调模型参数[422]。这种策略减少了人为错误，促进了早期和准确的诊断，并增加了在不同数据集上的稳健性。
+
+## 20.3 拟议方法
+
+构建一种高效且精确的诊断方法，利用`ECG`数据识别和分类与心脏相关的疾病是核心目标。为了提供一种可靠的诊断解决方案，模型整合了信号预处理、特征提取和分类步骤。图 20.1 展示了系统的架构流程。
+
+![图 20.1 拟议的框图。](img/9781041062943_C020_001.jpg)
+
+**图 20.1** 拟议的框图。](#ch28.xhtml#f02
+
+本研究引入了一种结构化方法，通过`ECG`信号分析来识别心脏疾病。初始阶段涉及从`PhysioBank`等成熟的医学数据库获取`ECG`数据，该数据库是一个广泛认可且公开访问的存储库，提供了来自健康个体和患有各种心血管疾病患者的丰富记录。这些信号作为诊断系统的基础输入。为了提高质量并减少可能从单一来源产生的不一致性，研究采用了数据融合过程。通过结合来自不同导联或时间点的多个`ECG`信号，系统创建了心脏电活动更改进且合法的表示。这一预处理步骤有助于抑制不需要的噪声，并增强临床重要特征的清晰度。
+
+一旦数据完成融合和归一化，下一步将重点于使用`Pan–Tompkins`策略提取诊断特征。该算法通过过滤信号、强调快速变化以及应用动态阈值来定位显著峰值。在识别这些关键特征后，在分类模型中引入了优化步骤。此处使用`OOA`通过优先考虑具有最大诊断价值的特征来微调所选特征。
+
+精炼后的特征随后传递给`CNN`，一种对于模式识别任务特别有效的模型。`CNN`通过多个层[423]处理这些特征以对`ECG`信号进行分类。通过该系统早期识别异常有助于及时的医疗干预，从而提高患者的生存率并降低严重心脏事件的风险。
+
+### 20.3.1 ECG 信号获取
+
+为了启动诊断过程，该研究依赖`ECG`信号作为主要数据源。这些信号获取自`PhysioBank`数据库，这是一个广为人知的且公开访问的存储库，存储了各种生理记录[19]。`PhysioBank`提供了来自健康个体以及患有心律失常、心力衰竭、癫痫和睡眠呼吸暂停等疾病患者的策划数据集。由于其质量、多样性和开放使用的可用性，这些记录在医学工程和医学研究中特别有用[20]。
+
+`ECG`信号通过跟踪每次心跳期间发生的电活动，在评估心脏功能方面起着至关重要的作用。这些活动通过放置在皮肤特定位置（通常是胸部和四肢）的一系列电极捕捉。信号反映了电脉冲跨心脏肌肉的流动，对应于收缩和舒张阶段[21]。
+
+ECG 波形由几个关键部分组成，代表心脏循环的不同阶段。ECG 的表示所示图所示。
+
+![图 20.2 ECG 信号的表示。](img/9781041062943_C020_002.jpg)
+
+**图 20.2** ECG 信号的表示。](#ch28.xhtml#f03)
+
+`P 波`显示心房已去极化，引发收缩。当心室突然去极化时，它们发生收缩。随后出现`T 波`，意味着心室正在复极化。偶尔可见`U 波`，它与最终阶段有关[22]。
+
+通过这种方式结合 ECG 导联，生成了一个融合信号 `P(t*)`，它能够更完整地捕捉心脏的电活动行为。这种增强信号允许更有效的特征提取，例如识别心跳、间隔和波形，从而提高心血管疾病（CVD）检测和分类模型的准确性[30]。
+
+### 20.3.3 特征提取
+
+这是一个基础步骤，在减少原始数据不确定性的同时，保留准确分析所需的关键信息。该过程通过将原始信号转换为一组有意义且紧凑的特征，不仅降低了计算负载，还提高了分类模型的效率。在 CVD 诊断背景下，从 ECG 信号中提取精确的特征对于以最小的处理开销捕捉心脏电活动至关重要[31]。
+
+采用 Pan–Tompkins 算法从 ECG 信号中提取特征，主要关注实时检测 QRS 波群。Pan–Tompkins 方法通过结合信号预处理技术和决策规则高效地定位 R 峰。Pan–Tompkins 的步骤所示图 20.3。
+
+![Figure 20.3 Steps of Pan–Tompkins.](img/9781041062943_C02_003.jpg)
+
+**图 20.3** Pan–Tompkins 步骤。](#ch28.xhtml#f204b)
+
+[425]. 该算法遵循以下顺序步骤：
+
+1. **带通滤波：** 标记为 `M(t*)` 的原始 ECG 信号包含各种干扰，如基线漂移和高频噪声。为了在保留 QRS 特性的同时消除这些不需要的成分，信号被送过一个带通滤波器。滤波过程可以使用公式 (20.2) 表示：
+
+```
+B(t*) = M(t*) * R, (20.2)
+```
+
+其中 `R` 代表滤波器的响应。这种滤波增强了信噪比，有利于后续的特征提取[32]。
+
+2. **微分：** 为了强调 QRS 波群的特征性陡峭斜率，使用公式 (20.3) 对滤波后的信号进行微分。该操作通过计算相邻样本的加权差值来突出快速变化：
+
+```
+S(t) = 1/8[- X(t - 2) + X(t + 2) + 2X(t + 1) - 2X(t - 1)]. . (20.3)
+```
+
+这一步突出了边缘，有助于将 R 峰与其他波形成分区分离开来[33]。
+
+3. **平方：** 随后使用公式 (20.4) 对微分后的信号 `S(t*)` 进行平方，以放大与 QRS 波群相关的较大值，同时抑制噪声和其他 ECG 波产生的较小波动：
+
+```
+K(t*) = [S(t*)]² (20.4)
+```
+
+这种非线性操作确保了所有值为正，并增强了显著峰值的突出程度。
+
+4. **滑动窗口积分 (MWI)：** 为了同时捕捉 QRS 波群的持续时间和形状，滑动平均滤波器使用公式 (20.5) 在 `M` 个样本的窗口内对平方信号进行积分：
+
+```
+W(t) = 1/M * Σ_{n = t - M + 1}^{t} K(n). (20.5)
+```
+
+[426]. 窗口大小 `M` 的选择至关重要，取决于 ECG 的采样频率。这种平滑处理有助于产生可靠反映 QRS 形形的波形，并便于峰检测。
+
+5. **自适应阈值和决策：** 最后，应用公式 (20.6) 对积分后的信号 `W(t*)` 应用自适应阈值，以识别 R 峰的位置：
+
+```
+R[p] = max(w(t).*T*) (20.6)
+```
+
+在这里，`T` 是动态调整的阈值因子，用于将真峰与噪声伪影分离。此外还采用了额外的决策规则（如峰宽和幅度检查）来减少误检。
+
+虽然 Pan–Tompkins 算法是有效的，但在存在噪声或异常 ECG 形形的情况下，其性能可能会下降，导致漏检或虚假峰检测。为了解决这个问题，有必要对滤波器参数、阈值自适应和窗口选择进行优化。可以集成先进的方法（例如基于机器学习的阈值调优或滤波器设计改进）来提高鲁棒性，特别是对于移动或嘈杂环境的记录。通过此类优化增强 Pan–Tompkins 方法有望提高特征提取的效果[34]。
+
+### 20.3.4 用于 CVD 分类特征选择的 OOA
+
+这是一种自然启发的群体元启发式算法，通过模拟鱼群的迁徙和捕食行为来解决复杂的优化问题[35]。其设计使其特别适用于生物医学分类系统中的特征选择和参数微调任务。在研究中，采用了 OOA 来优化特征选择。该算法包含三个关键改进——自适应加权、柯西分布和 Fuchs 映射，以保持解的多样性。
+
+#### 20.3.4.1 初始化阶段
+
+算法从设置关键参数开始，包括种群数量（鱼群的数量）、搜索空间的维度（特征数量）以及上限和下界。每个代表潜在解的候选使用公式 (20.7) 在这些限制内随机初始化：
+
+```
+Y[i] = L[b] + R(m, n) * (U[b] - L[b]) (20.7)
+```
+
+其中 `Y[i]` 是第 `i` 个鱼群的位置，`L[b]` 和 `U[b]` 表示下界和上限，`m` 是鱼群的总数，`n` 是特征数量。
+
+#### 20.3.4.2 适应度评估
+
+初始化后，使用适应度函数衡量每个解的性能。在基于 ECG 的分类中，适应度函数通常源准确率或错误率[36]。算法在每次迭代中使用公式 (20.8) 识别最优解：
+
+```
+Y[best] = argmin O(Y[i]) (20.8)
+```
+
+其中 `O(Y[i])` 代表第 `i` 个候选的得分。
+
+#### 20.3.4.3 位置更新机制
+
+为了寻找更好的解并跳出局部最优，每个鱼群根据鱼群捕猎动力学的系列数学变换使用公式 (20.9) 更新其位置。对更新后的位置进行裁剪，以确保它们位于定义的边界内：
+
+```
+Y[new] = max(min(Y[new], U[b]), L[b]) (20.9)
+```
+
+这一过程确保了探索不会超出搜索空间，且所有解均可行。
+
+#### 20.3.4.4 探索增强
+
+OOA 集成了若干随机组件以增强搜索行为：
+
+- **柯西变异：** 这允许在搜索空间中进行偶尔的长距离移动，有助于全局探索[37]。
+
+- **Fuch 混沌映射：** 用于向优化过程注入不可预测性，减轻过早停滞的风险。
+
+- **自适应加权：** 动态调整各项各项的影响，提高收敛可靠性。
+
+在第一轮位置更新后，使用第二轮公式 (20.7) 的随机采样重新计算一组新的候选位置。再次使用公式 (20.9) 对更新后的解进行边界处理。
+
+#### 20.3.4.5 选择与迭代
+
+对新生成的解决方案进行评估，如果任何方案比当前最佳方案有所改进，则将其替换较差方案。此过程反复迭代进行，当达到迭代次数或观察不到进一步改进时，算法将停止更新位置。
+
+## [428].20.3.4.6 最终输出
+
+在优化运行结束，算法输出性能最佳解决方案，该方案对应于最有效的特征子集。优化后的特征集被传递给 `CNN` 模型，由模型对 CVD 条件进行最终分类。
+
+## 20.3.4.7 使用 CNN 进行分类
+
+`CNNs` 因能够自动学习从低级边缘到高层语义概念的分层特征表示而广受欢迎[38]。`CNNs` 广泛应用于许多领域，包括图像识别、目标检测和医学诊断。它们已成功应用于生物医学信号处理任务，例如从 ECG 信号中分类 CVD[39]。`CNNs` 的结构和关键层所示图 20.4。
+
+![Figure 20.4 Structure of CNN.](img/9781041062943_C020_004.jpg)
+
+**图 20.4** CNN 结构](#ch28.xhtml#f205b
+
+一个 `CNN` 通常由几个基础层组成：
+
+1. **输入层**：对于基于图像或信号的任务，输入通常是代表多维数组（张量），表示像素强度或转换后的信号表示。输入的属性对应于数据的高度、宽度和深度（通道数）[40]。
+
+2. **卷积层**：负责检测输入数据中的局部模式。它通过在输入卷上滑动多个小型滤波器（也称为卷积核）来实现这一点。每个滤波器与输入进行卷积以生成一个 2D 特征图[41]。输出特征图的大小取决于所使用的滤波器尺寸、步长（stride）和填充（padding），可以使用公式 (20.10) 计算：
+
+$S_{Z} = \frac{D - F_{s} + 2P_{a}}{S_{t}} + 1,$ (20.10)
+
+其中 `D` 是输入维度，`F[s]` 是滤波器尺寸，`P[a]` 是添加到输入边界的填充，`S[t]` 是滤波器移动的步长或步大小[42]。
+
+3. **批归一化层**：该层通过调整激活值使其均值接近零、方差接近一来对进行归一化。批归一化通过减少内部协方偏移有助于稳定训练过程并[429].加速收敛。它以每个小批量（mini-batch）为单位对后续层的输入进行归一化[43]。
+
+4. **池化层**：例如，平均池化计算特征图每个区域的平均值，从而在降低分辨率的同时总结局部特征。池化还提供了一定的空间不变性，使网络对精确的特征位置不那么敏感[44]。
+
+5. **全连接层**：位于网络输出端附近，全连接（密集）层的作用类似于传统的神经网络。它们接收来自上一层的扁坦化特征向量，并使用学习到的权重和偏置计算加权和，以生成最终分类输出。该层中的计算可以用公式 (20.11) 表示。
+
+$F = W[m] \times v + b[i]$, (20.11)
+
+其中 `W[m]` 表示权重矩阵，`v` 是输入向量，`b[i]` 是偏置项[45]。
+
+6. **激活函数：修正线性单元单元 (ReLU) 和 Softmax**：系统使用如 `ReLU` 等非线性激活函数引入重要的非线性线性。对于负输入，`ReLU` 函数返回零；对于正输入，它返回输入值。
+
+$Re = max(0, X[i])$ (20.12)
+
+公式 (20.12) 所示的这种简单变换有助于网络建模复杂函数并缓解梯度消失等问题[46]。在最后阶段，softmax 激活将多分类任务中的类别概率转换为概率。对于二分类，通常使用 sigmoid 激活[47]。
+
+`CNNs` 通过其分层结构逐步学习特征。初始卷积层提取基本特征，如线条、边缘或颜色渐变。池化层系统地降低空间分辨率，有助于压缩信息并减轻计算负担[48]。批归一化通过标准化激活值来支持一致的训练，从而稳定了梯度并提高了模型鲁棒性[49]。
+
+在生物医学应用（如 ECG 信号）背景下，`CNNs` 可以检测异常。它们捕捉空间和时间依赖的能力使其在这一目的上非常有效[50]。
+
+## 20.3.4.8 统计属性
+
+为了评估所提模型的有效性，使用一组成熟的统计参数进行全面分析。这些包括准确率、灵敏度和特异性。这些分类结果主要分为 `Tpos`、`Fpos`、`Tneg`、`Fneg`。
+
+### 20.3.4.8.1 准确率
+
+在医学诊断中，准确率是理解模型有效性的基本重要标准。它使用公式 (20.13) 计算：
+
+$A = \frac{Tpos + Tneg}{Tpos + Fpos + Tneg + Fneg}$ (20.13)
+
+高准确率表明分类器通常做出正确的判断。然而，当数据集不平衡时，应与其他指标结合解释。
+
+### 20.3.4.8.2 灵敏度
+
+它是医疗保健领域的一个关键指标，因为漏检疾病可能会导致严重或威胁生命的后果。灵敏度使用公式 (20.14) 计算：
+
+$Sen = \frac{Tpos}{Tpos + Fneg}$ (20.14)
+
+高灵敏度表示假阴性较少，确保系统在检测实际病例方面可靠可靠。
+
+### 20.3.4.8.3 特异性
+
+特异性量化了正确识别负病例的比例。在医学应用中，这涉及到模型识别无疾病个体的准确性。减少假阳性对于避免不必要的医疗干预或焦虑至关重要。特异性的公式如公式 (20.15)所示：
+
+$Spe = \frac{Tneg}{Tneg + Fpos}$ (20.15)
+
+与灵敏度一起，特异性有助于从患病和无病两个类别提供模型性能的平衡视角。
+
+### 20.3.4.8.4 均方误差
+
+它在分析信号重建或输出图像时特别有用。MSE 值越低意味着预测精度越高。它使用公式 (20.16) 计算：
+
+```
+MSE = m(sig)2
+```
+
+在这里，误差代表平均操作，它有助于对整个数据集平均这些误差。
+
+### 20.3.4.8.5 峰值信噪比
+
+峰值信比（PSNR）是一种以分贝（dB）表示的比例值，用于比较信号的最大功率与干扰噪声功率之间的关系。它被广泛应用于图像质量评估，特别是比较原始医学图像与处理后的图像。较高的 PSNR 值通常意味着更好的视觉质量和更小的失真。PSNR 使用公式 (20.17) 计算：
+
+$PSNR = 10.log\_{10}\left( \frac{MAX\_{1}^{2}}{MSE} \right)$ (20.17)
+
+在这里，`MAX` 对于八位灰度图像表示 255。
+
+## 20.4 仿真结果与讨论
+
+本研究引入了一种复杂的深度学习框架，用于识别和分类三种心血管疾病：心律失常、冠状动脉疾病和主动脉疾病。诊断流程始于获取心电信号（ECG），这些信号来自已建立的公开的数据库，特别是 PhysioBank ATM 仓库。作为非侵入性诊断工具，ECG 捕捉心脏的电活动，通过分析 P 波、QRS 波群和 T 波等波形模式，在及时检测病理性心律方面起着工具性作用。
+
+在这项研究中，ECG 数据收集自 30 个人，每人都被诊断患有一种一种心血管疾病。目标是设计一个全面且可靠的分类流程，能够区分不同疾病类别中的正常和病理性心律。三个不同患者的 ECG 信号如图图 20.5 所示。
+
+![Figure 20.5 输入 ECG 信号。(a) PE-1, (b) PE-2, 和 (c) PE-3。⏎](img/9781041062943_C020_005.jpg)
+
+**图 20.5** 输入 ECG 信号。(a) PE-1, (b) PE-2, 和 (c) PE-3.⏎
+
+在获取数据后，原始 ECG 信号经过了采用信号融合技术的预处理阶段。具体而言，采用了多源融合策略，将多个 ECG 段整合成一个贯的信号表示。该方法通过整合来自不同时间范围的时间和形态模式来增强判别特征，从而提高分类的稳健性。对应三个代表性患者的融合信号显示在图 20.6 中。
+
+![Figure 20.6 融合后的 ECG 信号。(a) PE-1, (b) PE-2, 和 (c) PE-3。⏎](img/9781041062943_C020_006.jpg)
+
+**图 20.6** 融合后的 ECG 信号。(a) PE-1, (b) PE-2, 和 (c) PE-3.⏎
+
+下一阶段涉及从预处理后的 ECG 波形中提取特征。由于 Pan–Tompkins 算法在识别 ECG 信号中的 QRS 波群方面被证明是有效的，因此采用了该算法。算法按顺序应用滤波、微分、平方和积分，以分离 QRS 波群，便于提取 RR 间期、波形幅度变化和心率变异性等关键生理特征。
+
+表 20.1 总结了研究的每种心脏状况通常相关的临床特征。例如，心律失常通常与不规则的脉搏模式和眩晕有关，而冠状动脉疾病表现为胸部不适和呼吸困难。主动脉疾病通常导致胸部或背部急性疼痛，偶尔伴有腹部附近的搏动。
+
+
+
+## 表 20.1 不同疾病基于信号的特征
+
+| **心血管类型** | **特征** |
+| --- | --- |
+| 主动脉疾病 | QRS 波群增宽 |
+| 心律失常 | RR 间期不规则，缺失 P 波/额外 P 波 |
+| 冠状动脉疾病 | ST 段抬高或压低 |
+
+特征提取之后，执行了优化阶段。这一步对于减少特征空间冗余、提高分类精度和最小化计算复杂度至关重要。利用了 `OOA`，它以其卓越的全局收敛能力和平衡的探索-利用动态而闻名。将其整合到特征选择过程中，对提高分类模型的效率和精度做了贡献。
+
+对于分类阶段，采用了 `CNN` 架构，因为它在捕捉生物医学信号内部的空间和时间依赖方面具有卓越能力。`CNN` 不仅作为稳健的特征学习器，还充当主要分类器，根据学习到的判别特征将输入信号分为正常或异常类别。数据集包含 30 个带标记的 ECG 信号，每个信号都根据是否存在病理状况进行了注释。
+
+`CNN` 生成的输出将信号分为两大类：
+
+- 正常：在临床接受的范围内，显示出规则节律模式和波形形态的 ECG 迹线。
+- 异常：反映出偏离的信号，例如 QRS 形态改变、T 波失真或预示潜在心脏功能障碍的节律不规则。
+
+QRS 波群的检测在此分类过程中起着关键作用，构成了准确识别心跳和节律评估的基础。
+
+为了定量评估模型的性能，使用了几个标准评估指标：准确率、灵敏度、特异性、`PSNR` 和均方误差（`MSE`）。这些指标提供了对诊断准确性和分类后实现的信号质量的全面视图。所选三个案例的性能结果见表 20.3。
+
+## 表 20.2 所提 CNN 框架的性能指标
+
+| 参数 | ECG-1 | ECG-2 | ECG-3 |
+| --- | --- | --- | --- |
+| 准确率 (%) | 98.76 | 98.84 | 98.57 |
+| 特异性 (%) | 95.96 | 96.24 | 95.82 |
+| 灵敏度 (%) | 97.58 | 98.01 | 97.43 |
+| PSNR (%) | 48.27 | 49.68 | 47.98 |
+| MSE | 0.020 | 0.018 | 0.022 |
+| 疾病类型 | 主动脉 | 心律失常 | 冠状 |
+
+表 20.2 显示了三种检测不同疾病的 ECG 模型的评估结果：主动脉疾病（ECG-1）、心律失常（ECG-2）和冠状动脉疾病（ECG-3）。每个模型都显示出优的准确率，接近 99%，说明整体性能良好。特异性得分（模型识别健康个体的能力）在 95.8% 到 96.2% 之间。反映正确检测疾病患者能力的灵敏度值同样很高，在 97.4% 到 98% 之间。衡量处理后信号质量的 `PSNR` 值持续较高，表明细节保留良好。低 `MSE` 值表明模型预测误差极小。这些结果证明了
+
+这些数值指标的图形化总结显示在图 20.7 中，提供了三个患者分类效果的可视化对比。
+
+![Figure 20.7 统计参数的图形化表示。](img/9781041062943_C020_007.jpg)
+
+**图 20.7** 统计参数的图形化表示.
+
+## 结论
+
+心脏疾病是全球首要死因，心律失常、冠状动脉疾病和主动脉疾病等状况显著增加了死亡率。早期且准确的诊断对于通过及时医疗干预和治疗降低这些率至关重要。本研究引入了一种基于 `CNN` 的深度学习框架，用于通过 ECG 信号分类心脏疾病。
+
+## 方法论
+
+研究使用的 ECG 数据来自 `PhysioBank` 数据库，这是一个广泛认可的生理记录集合。该方法通过数据融合结合来自多个源的信号，增强分析可用信息。在特征提取方面，应用 `Pan–Tompkins` 算法精确检测 `QRS` 复合，这对于理解心脏活动至关重要。
+
+为了优化模型的分类能力，使用 `OOA` 对参数进行微调并改进特征选择。通过检查准确率、敏感性和特异性来评估模型的有效性。准确率表示模型区分健康病例和疾病病例的能力；敏感性衡量其检测真阳性病例的能力；特异性则反映了模型正确识别健康个体的能力。
+
+## 系统目标与影响
+
+该系统旨在将 ECG 信号可靠地分类为正常或异常类别，在提高诊断准确性的同时减少解读所需的辅助工作。这种方法具有加速诊断、支持临床决策，并最终通过促进早期发现降低致命性结果风险的潜力。
+
+## 局限性与未来工作
+
+然而，该方法存在局限性。其性能严重依赖于训练数据的多样性和质量，这可能在应用于新型或罕见心脏疾病时限制其有效性。此外，深度学习模型通常缺乏可解释性，使得医疗提供者难以理解 `436.decisions` 是如何做出的。高计算需求也可能限制在资源有限的环境下的使用。
+
+未来的研究应关注于扩大数据集，包含更多多样化的心脏病例和患者人口统计数据，以增加模型的泛化能力。整合解释性特征的工作可以提高临床环境中的信任度和可用性。此外，开发实时监控和移动集成系统可以提供持续的心脏健康评估，提高可访问性并实现更早干预。
+
+## 参考文献
+
+1. 世界卫生组织，心血管疾病 (CVDs)：关键事实，瑞士日内瓦，2023 年。[在线]。可用于：[www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)](http://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds))
+
+2. M. Benjamin, S. S. Martin, A. W. Aday, and Z. I. Almarzooq，"心脏疾病和中风统计——2023 年更新：美国心脏协会的报告"，Circulation，vol. 147, no. 8, pp. e93–e646，2023 年 2 月。(#ch28.xhtml#r605b)
+
+3. G. Roth, G.A. Mensah, C.O. Johnson, G. Addolorato, E. Ammirati, L.M. Baddour, N.C. Barengo, A.Z. Beaton, and E.J. Benjamin，"1990–2022 年全球心血管疾病负担和风险因素"，Journal of the American College of Cardiology，vol. 81, no. 20, pp. 2000–2025，2024 年 5 月。(#ch28.xhtml#r606b)
+
+4. D. L. Bhatt, P. G. Steg, M. Miller, and E. A. Brinton，"胸痛患者的诊方法"，New England Journal of Medicine，vol. 386, no. 10, pp. 944–953，2022 年 3 月。(#ch28.xhtml#r607b)
+
+5. J. G. Webster, 医学仪器：应用与设计，第 5 版，Hoboken, NJ: Wiley,2020 年。(#ch28.xhtml#r608b)
+
+6. A. L. Goldberger, L. A. Amaral, L. Glass, J. M. Hausdorff, P. C. Ivanov, R. G. Mark, J. E. Mietus, G. B. Moody, C. K. Peng, and H. E. Stanley，"PhysioBank, PhysioToolkit, and PhysioNet：复杂生理信号新研究资源的组件"，Circulation，vol. 101, no. 23, pp. e215–e220，2000 年 6 月。(#ch28.xhtml#r609b)
+
+7. A. K. Narin, C. Kaya, and Z. Pamuk，"利用机器学习算法自动检测冠状动脉疾病"，Procedia Computer Science，vol. 120, pp. 268–275，2017 年。(#ch28.xhtml#r610b)
+
+8. G. Litjens, T. Kooi, B. E. Bejnordi, A. A. A. Setio, F. Ciompi, M. Ghafoorian, J. A.W. M. van der Laak, B. Ginneken, and C. I. Sánchez，"医学图像分析中的深度学习综述"，Medical Image Analysis，vol. 42, pp. 60–88，2017 年 12 月。(#ch28.xhtml#r611b)
+
+9. Y. LeCun, Y. Hinton, and G. Bengio，"深度学习"，Nature, 521, 436–444,2015 年。(#ch28.xhtml#r612b)
+
+10. I. Goodfellow, Y. Bengio, and A. Courville, Deep Learning, Cambridge, MA: MIT Press。(#ch28.xhtml#r613)
+
+11. M. Abdaziz, S. Das, and K. Ewe，"基于遗传算法的优化"，Expert Systems with Applications，vol. 173, p. 10392,2021 年。(#ch28.xhtml#r614b)
+
+12. W. Zhang and H. Liu，"混合 CNN-LSTM 模型"，IEEE Transactions on Engineering，vol. 72, no. 2, pp. 345–355,2022 年。(#ch28.xhtml#r615b)
+
+13. R. Kumar, S. Sharma, and R. Verma，"特征选择与集成学习"，IEEE Journal of Engineering and Health，vol. 29, pp. 1140–1150,2022 年。(#ch28.xhtml#r616b)
+
+14. L. Oliveira, P. Martins, and S. Costa，"基于解释性注意力 检测心律失常"，IEEE Access，vol. 11, pp. 15890–15902,2023 年。(#ch28.xhtml#r617b)
+
+15. F. Farhan, S. Malik, and K. Ahmed，"多模态深度学习"，Biomedical Signal Processing and Control，vol. 78, p. 10350,2022 年。(#ch28.xhtml#r618b)
+
+16. R. Singh and P. Gupta，"集成物联网 (IoT)的应用"，IEEE Reviews in Biomedical Engineering，vol. 15, pp. 224–237,2022 年。(#ch28.xhtml#r619b)
+
+17. M. Hassan, Y. Zhao, and D. Li，"集成 CNN-随机森林"，IEEE Transactions on Medical Imaging，vol. 40, no. 4, pp. 1145–1155,2021 年。(#ch28.xhtml#r620b)
+
+18. L. Oliveira, P. Martins, and S. Costa，"多模态深度学习流水线"，IEEE Journal of Translational Engineering and Medicine，vol. 9, pp. 1–10,2021 年。(#ch28.xhtml#r621b)
+
+19. A. L. Goldberger, J. M. Hausdorff, P. C. Ivanov, R. G. Mark, and J. E. Mietus，"PhysioBank, PhysioToolkit, and PhysioNet：复杂生理信号新研究资源的组件"，Circulation，vol. 101, no. 23, pp. e215–e220，2000 年（在 PhysioNet 2022 重新访问）。[在线]。可用于：[`physionet.org`](https://physionet.org)(#ch28.xhtml#r622b)
+
+20. H. Pham, T. Nguyen, and T. H. Tran，"基于机器学习的 ECG 信号心血管疾病检测"，Frontiers in Cardiovascular Medicine，vol. 10, pp. 1–10,2023 年。doi：[10.3389/fcvm.2023.1229743](http://dx.doi.org/10.3389/fcvm.2023.1229743)(#ch28.xhtml#r623b)
+
+21. M. A. Hossen, T. F. Rabby, and T. Islam，"使用混合 CNN-LSTM 模型的深度学习 ECG 信号分类"，Biomedical Signal Processing and Control，vol. 78, p. 103972,2022 年。doi：[10.1016/j.bspc.2022.103972](http://dx.doi.org/10.1016/j.bspc.2022.103972)](#ch28.xhtml#r624b)
+
+22. N. Katal, R. P. Rana, and A. Sharma, "用于心律失常检测的心电信号分析：比较研究", Diagnostics, vol. 13, no. 1, pp. 1–18, 2023. doi: [10.3390/diagnostics13010011](http://dx.doi.org/10.3390/diagnostics13010011)](#ch28.xhtml#r625b)
+
+23. Y. Zhao, Y. Song, and J. Zhang, "深度学习应用中心电信号处理数据融合技术综述", IEEE Access, vol. 10, pp. 14035–14052, 2022. doi: [10.1109/ACCESS.2022.3146441](http://dx.doi.org/10.1109/ACCESS.2022.3146441)](#ch28.xhtml#r626b)
+
+24. S. Su, Z. Zhu, S. Wan, F. Sheng, T. Xiong, S. Shen, Y. Hou, C. Liu, Y. Li, and X. Sun, "基于模型融合的机器学习心电信号采集与分析系统", Sensors, vol. 23, no. 17, p. 7643, 2023.](#ch28.xhtml#r627b)
+
+25. Y. D. Daydulo, B. L. Thamineni, and A. A. Dawud, "基于深度学习方法和心电信号时频表示的心律失常检测", BMC Medical Informatics and Decision Making, vol. 23, p. 232, 2023.](#ch28.xhtml#r628b)
+
+26. J. Yang, G. Shi, W. Zhu, "心率变异信号多域特征融合的心性猝死智能预测", EURASIP Journal on Advances in Signal Processing, vol. 2023, p. 32, 2023.](#ch28.xhtml#r629b)
+
+27. Z. Zhao, "变革心电诊断：基于 Transformer 的深度学习模型在心血管疾病检测中的深度综述", arXiv preprint arXiv:2306.01249, 2023.](#ch28.xhtml#r630b)
+
+28. S. Wu, "用于时长心血管疾病检测的紧凑 LSTM-SVM 融合模型", arXiv preprint arXiv:2312.09442, 2023.](#ch28.xhtml#r631b)
+
+29. C. Sun, C. Liu, X. Wang, Y. Liu and S. Zhao, "基于 ECG 和 PCG 信号的新多模态深度编码冠心病检测", Sensors, vol. 24, no. 21, p. 6939, 2024.](#ch28.xhtml#r632b)
+
+30. F. Girlanda, O. Demler, B. Menze, and N. Davoudi, "通过多模态自监督学习增强心血管疾病预测", IEEE Journal of Biomedical and Health Informatics, vol. 28, no. 5, pp. 2200–2209, 2024.](#ch28.xhtml#r633b)
+
+31. A. H. Alotaibi, M. Alqahtani, and F. Karray, "基于深度卷积神经网络的心电信号分类", IEEE Access, vol. 7, pp. 152457–152466, 2019. doi: [10.1109/ACCESS.2019.2949202](http://dx.doi.org/10.1109/ACCESS.2019.2949202)](#ch28.xhtml#r634b)
+
+32. S. S. Saini and R. Singh, "使用 Pan–Tompkins 算法进行心电信号去噪和 QRS 波群检测", Procedia Computer Science, vol. 132, pp. 1956–1963, 2018. doi: [10.1016/j.procs.2018.05.160](http://dx.doi.org/10.1016/j.procs.2018.05.160)](#ch28.xhtml#r635b)
+
+33. M. Acharya, H. Fujita, O. S. Lih, Y.Hagiwara, J. H. Tan, and M. Adam, "利用 CNN 分类器通过心电信号不同区段自动检测心律失常", Information Sciences, vol. 405, pp. 81–90, 2017. doi: [10.1016/j.ins.2017.05.024](http://dx.doi.org/10.1016/j.ins.2017.05.024)](#ch28.xhtml#r636b)
+
+
+
+* 34. S. T. Hossain and N. Z. Chowdhury, “用于嵌入式系统的实时 QRS 检测的优化 Pan–Tompkins 算法”, IEEE Sensors Journal, vol. 21, no. 6, pp. 7511–7520, Mar. 2021. doi: [10.1109/JSEN.2021.305010](http://dx.doi.org/10.1109/JSEN.2021.305010)](#ch28.xhtml#r637b)
+
+* 35. S. M. Aljarah, S. Faris, and A. A. Hassan, “Osprey 优化：一种新型的自然启发式算法”, IEEE Access, vol. 8, pp. 123456–123469, 2020. doi: [10.1109/ACCESS.2020.123457](http://dx.doi.org/10.1109/ACCESS.2020.123457)](#ch28.xhtml#r638b)
+
+* 36. N. Kumar, A. Singh, and R. Kumar, “用于医学分类的增强 Osprey 优化”, IEEE Transactions on Computational Systems, vol. 8, no. 3, pp. 543–551, Jun. 2021. doi: [10.1109/TCSS.2021.307845](http://dx.doi.org/10.1109/TCSS.2021.307845)](#ch28.xhtml#r639b)
+
+* 37. H. Zhao, Y. Wang, and X. Li, “用于改进生物医学分类敛性的混合 Osprey 优化”, IEEE Journal of Biomedical and Health Informatics, vol. 25, no. 6, pp. 2178–2187, Jun. 2021. doi: [10.1109/JBHI.2020.302987](http://dx.doi.org/10.1109/JBHI.2020.302987)](#ch28.xhtml#r640b)
+
+* 38. Y. LeCun, Y. Bengio, and G. Hinton, “深度学习”, Nature, vol. 521, no. 7553, pp. 436–444, May 2015.](#ch28.xhtml#r641b)
+
+* 39. A. Acharya, H. Fujita, O. S. Lih, Y. Hagiwara, J. H. Tan, and M. Adam, “利用卷积神经网络通过心动过速心电区段自动检测心律失常”, Information Sciences, vol. 405, pp. 81–90, Jul. 2017.](#ch28.xhtml#r642b)
+
+* 40. K. Simonyan and A. Zisserman, “用于大规模图像识别的深层卷积网络”, Proceedings of the International Conference on Learning Representations (ICLR), IEEE, 2015.](#ch28.xhtml#r643b)
+
+* 41. M. A. Khan, W. T. Sethi, W. A. Malik, A. Jabbar, M. A. Khalid, and A. M. Almuhlafi, “心电分类深度学习全面综述”, Expert Systems with Applications, vol. 160, 113695, Nov. 2020.](#ch28.xhtml#r644b)
+
+* 42. J. Long, E. Shelhamer, and T. Darrell, “用于语义分割的全卷积网络”, Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), IEEE, pp. 3431–3440, 2015.](#ch28.xhtml#r645b)
+
+* 43. S. Ioffe and C. Szegedy, “批归一化：通过减少内部协方偏移来加速深度网络训练”, Proceedings of the 32nd International Conference on Machine Learning (ICML), IEEE, pp. 448–456, 2015.](#ch28.xhtml#r646b)
+
+* 44. M. Oquab et al., “使用卷积神经网络学习和迁移中间层图像表示”, Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), IEEE, pp. 1717–1724, 2014.](#ch28.xhtml#r647b)
+
+* 45. A. Krizhevsky, I. Sutskever, and G. E. Hinton, “基于深度卷积网络的 ImageNet 分类”, Proceedings of the 26th Annual Conference on Neural Information Processing Systems (NeurIPS), IEEE, pp. 1097–1105, 2012.](#ch28.xhtml#r648b)
+
+* 46. V. Nair and G. E. Hinton, “修正线性单元改进受限玻尔兹兹机器”, Proceedings of the 27th International Conference on Machine Learning (ICML), IEEE, pp. 807–814, 2010.](#ch28.xhtml#r649b)
+
+* 47. C. Szegedy, W. Liu, Y. Jia, P. Sermanet, S. Reed, D. Erhan, V. Vanhoucke, and A. Rabinovich, “卷积加深层”, Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), IEEE, pp. 1–9, 2015.](#ch28.xhtml#r650b)
+
+* 48. J. Schmidhuber, “神经网络中的深度学习：概述”, Neural Networks, vol. 61, pp. 85–117, Jan. 2015.](#ch28.xhtml#r651b)
+
+* 49. Y. Roy, S. Banville, I. Albuquerque, J. Gramfort, T. Falk, and J. Faubert, “基于深度学习的脑电图分析：系统性综述”, Journal of Neural Engineering, vol. 16, no. 5, 051001, Sep. 2019.](#ch28.xhtml#r652b)
+
+* 50. S. Hannun, P. Rajpurkar, M. Haghpanahi, G. H. Tison, C. Bourn, M. P. Turakhia, and A. Y. Ng, “使用深度神经网络在嵌入式心电图中进行医生级的心律失常检测与分类”, Nature Medicine, vol. 25, pp. 65–69, Jan. 2019.](#ch28.xhtml#r653b)
+
+《摩诃婆罗》是印度两大伟大的史诗之一，另一部是《罗摩衍那》（Thapar, 2009）。这部史诗传统上被归于圣者毗婆罗（Vyasa），是一部巨著，据认为跨越了几个世纪才完成，其最终版本出现于公元 500 年左右（Jha, 1998）。这部史诗主要叙述了库鲁王朝的故事，以及潘达婆族与罗罗婆族这两个家族中的对立分支为了王国的正统继承权而引发的大战（Hooper, 2018）。摩诃婆罗深深入探讨了复杂的哲学和精神教义，探索了道德、责任以及善恶之间永恒的斗争等主题（Hooper, 2018）。摩诃婆罗的核心主题是对正确行为或`dharma`（法）的探索，正如《薄伽梵吉达》中所强调的那样。这部史诗结构由 18 个名为`parvas`（卷）的大部分组成，每一部分都探讨了宏大叙事的不同方面及其哲学基础（Prasad, 2015）。这场为了权力的斗争为更广泛的对道德困境、人性、责任（`dharma`）以及行为后果的探索提供了背景（Upadhyaya, 2024）。摩诃婆罗最引注目的特点之一是它对人与自然关系的描绘（Agri, 2012）。森林不仅是战争或流放的背景，更是精神成长和生态和谐的场所。水、土、树都是神圣的，这种神性在整部史诗中都得到了强调（Chapple, 2015）。自然的圣洁与文本中的道德教义交织在一起，强调了人类保护和维护自然世界的责任（Mahata, 2024）。摩诃婆罗教导我们关于自然的教训。它告诉我们人类与自然的关系，以及我们绝不能伤害自然、过度砍伐树木和剥夺资源（Brodbeck, 2024）。
+
+在一个不断应对气候变化、森林砍伐和水资源短缺等环境问题的世界，像《摩诃婆罗》这样的古代著作含有丰富的信息，等待着被探索并转化为现代的可持续行动。这些古代著作不仅具有文化和历史价值，还包含了跨越时代的生态知识（Renugadevi, 2012）。全球范围内已有若干研究旨在证实宗教文献在促进生态灵性与可持续性方面的重要性（Lal, 2015; Sivaramakrishnan, 2015）。多项研究表明，印度教文献与自然之间存在着错综的关系，这种关系反映在仪式、思想和实践中（Agoramoorthy, 2015; *Environmental Ethics in the Hindu Vedas*, n.d.; Horn, 2006; Radhakrishnan, 1922）。然而，在传统学术研究中，利用现代技术通过此类著作来解决现代全球生态问题的方法一直被忽视。将自然语言处理（`NLP`）等现代计算技术应用，为重新解读此类著作提供了一个新途径（McDonald, 2014）。`NLP`作为人工智能的一个领域，允许对大规模文本集进行研究（McDonald, 2014）。
+
+对古代印度文学中环境意识的研究，特别是针对《摩诃婆罗谭》（Mahabharata），为人类与自然和谐相处提供了重要信息。Mahata (2024) 指出古代印度仪式和《吠俱陀》（Rigveda）等文学文本展现了对自然的深切尊重，自然不仅是一种商品，更是神圣的。Patra et al. (2016) 指出古代印度对河流、山脉和树木等自然元素持有巨大的尊重，并将“相互依存性”视为印度文明发展的核心。Prasad (2015) 强调了人类与自然之间相互依存的关系，引用了《奥义树经》和《薄伽华奴歌》中描述的五大元素作为生命维持基础的意义，这些内容在当今的环境话语中仍然具有意义。在《摩诃婆罗谭》中，Jhaveri (2006) 讨论了`Arjun`和`Krishna`对`Khandav Van`森林的破坏，这反映了与自然和谐相处的森林社会与正在破坏自然的城市力量之间的冲突。这是一个代表了当今环境损失的故事。Magar (2020) 描写了《摩诃婆罗谭》中生态系统的灵性，主张`prakrti`（自然）与`purusa`（精神）之间的和谐以恢复宇宙秩序（`Rta`）并使环境免受伤害。Indriani et al. (2023) 描述了`Pandava`兄弟`Nakula`和`Sahadewa`，他们对人道对待动物和恢复栖息地的承诺很好地说明了《摩诃婆罗谭》中的环境管理理念。这两个兄弟与自然的互动（表现为利用河流维持生存）是与环境互惠关系的表达。Devi and Piraji (2023) 利用生态批评法说明了《摩诃婆罗谭》中自然是如何被描绘为仁慈与愤怒的，试图在自然界与人类之间达成和谐。
+
+### 21.2.2 印度文本中的 NLP
+
+近年来，在古代印度文本上使用 `NLP` 变得越来越普遍。这使得古代宗教文化文本与当前的计算机方法相同步。Pare Guha 和 Patnaik（n.d.）的论文说明了一种在《薄伽华奴歌》中考虑正念的 `NLP` 方法。他们的论文使用`tokenization`（分词）、删除停用词和`lemmatization`（词干还原）来根据意识、专注和冷静等正念状态对诗节进行分类。他们的研究将古代精神文本与现代心理健康实践以及 AI 同步，并展示了 `NLP` 模型在数据和文化敏感性方面的缺失（Pare Guha & Patnaik, n.d.）。Tuhina and Vashist (2024)](#ch29.xhtml#r693) 概述了 `NLP` 如何通过允许作者解决故事问题来支持创意写作。他们的研究概述了 AI 生成文学中的伦理问题（例如作者身份和偏见），并说明了 `NLP` 如何增强创造力、通过翻译提高文本的可读性，并为文学批评提供新方法。他们将 AI 和 `NLP` 视为创作工作的伙伴而非工具（Tuhina & Vashist, 2024）。Geoffrey 等（n.d.）介绍了一种用于文本摘要和处理长文本的 `NLP` 工具。他们的工具利用`extractive`（抽取式摘要）和`abstractive summarization`（生成式摘要）技术，支持学者研究关于流行的历史文本。通过对亚里士多德关于勇气的文本进行分析，该工具展示了其在当代全球问题（例如新冠肺炎）中的应用。这项研究证明了 AI 如何支持人文研究，并说明了为什么需要某些 `NLP` 算法（Geoffrey et al., n.d.）。Nigam and Chandra (2024) 建议“法信息”（Dharmaśāstric Informatics），这是一个通过文本挖掘、基于 `NLP` 的`tokenization`、`sentiment analysis`（情感分析）和概念标记来增强`Dharmaśāstra`文本的项目。他们的系统支持双语搜索、实时翻译和诠释，支持各个领域的研究并促进了全球范围内对梵文文学的获取。本文提到了引入 AI 以使古代印度学术研究对今天的学者更有用且易于获取（Nigam & Chandra, 2024）。Miyagawa et al. (2024) 使用`Word2Vec` 和`stylometric analysis`（文体学分析）等计算机技术来分析吠陀梵文文本`Maitrayani Samhita` 和`Kathaka Samhita`。在本文中，他们展示了这些文本中语义相似性和编辑协作的模式，说明了古代文本是如何标准化的。这篇文章提到了计算机技术如何补充传统的文本研究，拓宽我们对吠陀文学的认知（Miyagawa et al., 2024）。
+
+### 21.2.3 《摩诃婆罗谭》中的 NLP
+
+
+
+在《摩诃婆罗谭》中使用`NLP`为搜索这部史诗的社会关系、角色互动和情感基调引入了新方法。Mathangi (2021) 采用`Latent Semantic Analysis (LSA)`（潜在语义分析）和局部加权 K 近邻算法等`NLP`技术，来确定《摩诃婆罗谭》中的人物网络。该研究能够识别主要的社会群体（包括`Pandavas`和`Kauravas`），在无需了解角色的情况下证明了词向量技术在表征人物关系方面优于共现分析。Srijeyankesh et al. (2022) 利用`BERT`和`GPT-2`等复杂的`NLP`工具打破了情感和语义分析的边界。他们的工作绘制了《摩诃婆罗谭》中的情感和叙事发展，为这部史诗提供了计算增强的视角。Paul and Das (2017) 将半监督学习工具`Named Entity Recognition (NER)`（命名实体识别）和`syntactic parsing`（句法分析）描述为角色识别活动。他们的研究证明了`Neural Net`分类器和`FP-Growth`算法如何提高角色识别的准确性，同时对文学结构进行高层次检查。Gultepe and Mathangi (2023) 将定量社会网络应用于《摩诃婆罗谭》的人物网络。通过应用`LSA`和`KNN`等`NLP`技术，他们预测了人物关系并展示了`Pandavas`和`Kauravas`之间的社会动态，同时证明了分析技术如何揭示历史著作中的复杂故事和社会关系。从文献综述来看，以往研究在《摩诃婆罗谭》中的环境意识以及使用`NLP`处理古代文本方面仍存在空白。尽管之前的著作（如 Mahata (2024)、Patra et al. (2016) 和 Jhaveri (2006); Gadesha et al., 2022），在尝试表现可持续性的更抽象的主题或环境故事更具体的情感景观方面较少。
+
+本研究整合了自然语言处理（NLP）技术与机器学习技术，旨在分析《摩诃婆罗多》中的生态主题。通过情感分析、主题建模基于`BERT`的分类，本研究为古代文学如何参与可持续性、保护和生态平衡提供了一个计算视角。其方法论结构如下：
+
+1. **数据收集：** 《摩诃婆罗多》文本取自数字化的`.docx`文件。在 Excel 表格中指定了主题类别，如水资源保护、自然保护和生态灵性，并附带相应的关键词和同义词以便详细分析。
+
+2. **文本预处理：** 使用 Python 的`python-docx`和`nltk.tokenize.regexp_tokenize`提取句子进行预处理，通过规范化确保一致性，为有效的 NLP 处理铺平道路。
+
+3. **关键词映射：** 将 Excel 文件中的主题话题和关键词应用于映射。选择包含关键词的句子进行研究，以侧重于环境议题。
+
+4. **主题建模：** `LDA`根据可持续性发现主题，聚类结果显示在森林保护、水资源可持续性和战争的环境成本上。
+
+5. **情感分析：** 将`nlptown/bert-base-multilingual-uncased-sentiment`模型的情感评分（1–5 星）归类为负、中、正标签，以分析生态语言的情感基调。
+
+6. **情绪分类：** 使用`cardiffnlp/twitter-roberta-base-emotion`模型对每个句子进行情绪分类（喜悦、悲、恐惧、愤怒），以衡量对环境的情感倾向性。
+
+7. **输出生成：** 将结果汇成一个包含以下数据的综合表格：
+
+   * 文本中的句子
+   * 匹配关键词
+   * 主题类别（例如：水、保护）
+   * 情感标签和分数
+   * 主导情绪标签
+   * 原始情绪分数
+
+   该表格保存为 Excel 文件，确保了分析的透明度和可重复性。
+
+8. **可视化：** 创建了各种可视化图形，如情感分布、情绪分布和词云，以展示发现。
+
+9. **基于 BERT 的分类：** 在环境文本和《摩诃婆罗多》上训练的`BERT`模型将诗节分类在保护和水资源可持续性主题下。其上下文敏感性增强了准确性，为《摩诃婆罗多》中的环境话语提供了细致的分类。
+
+通过结合这些先进的 NLP 技术，本研究为《摩诃婆罗多》中的生态主题提供了一个全面的计算计算视角。该方法论弥合了古代智慧与当代环境讨论之间的差距，为这部史诗中嵌入的可持续性概念及其与现代生态关注的相关性提供了见解。
+
+## 21.4 发现与讨论
+
+### 21.4.1 摩诃婆罗多生态话语中的情感取向
+
+通过对图 21.1 所示的环境相关诗节进行详细情感分析，揭示了《摩诃婆罗多》环境话语中所蕴的情感底色。
+
+![图 21.1 摩诃婆罗多中的情感分布。](img/9781041062943_C021_001.jpg)
+
+**图 21.1** 摩诃婆罗多中的情感分布。
+
+#### 21.4.1.1 正向情感
+
+结果表明，文本对自然和可持续性问题的处理呈现出强烈的正向趋势，尽管负面和中性情感也有主要但对比明显的出现。正如情感分布图所示，大多数超过 27,000 次提及的诗节带有正向情感。这种积极性的浪潮表明，《摩诃婆罗多》始终以敬畏、惊叹和深远的道德价值来描述自然。森林不仅被描述为地理位置，更是苦修之地和精神成就的场所。河流不仅是水体，还被尊为神圣的母亲和生命的赐予者。山脉、动物、树木和星辰交织着精神性、道德和情感故事，将自然世界从物质利用提升到了神圣的高度。这种强烈的正向情绪表明，《摩诃婆罗多》中的自然被认为是精神升华和道德正义所必需的。自然被描绘成一种值得崇拜、养育和感激的存在，而人与自然之间的共生互动被视为生存的理想状态。持续的正向情感定位，在这些概念正式形成几十年前就植入了一种敬畏的生态观和可持续性文化。
+
+> 萨提随后说：“我向原始之者 Isana 俯首，众生向他献祭，他被众生崇拜；他是真实不朽的，梵，可感且不可感知的，永恒的；他既是不存在的，又是存在之不存在的存在；他既是宇宙，又独立于存在与不存在的宇宙；他是高低的创造者；是古老、崇高、无穷无尽的；他是毗湿奴，仁慈者也是仁慈本身，值得一切优待，纯洁而无瑕；他是哈利，感官的主宰，是所有灵动与不动之物的引导者；我将宣布显赫圣者雅沙那的神圣思想，以及在此受世人崇拜的伟大事迹。”
+
+这段陈述是正向的，因为它赞美并尊崇了 Isana（湿婆的一种形式）的神圣特质，将其描述为不朽、永恒、纯洁和仁慈。所使用的语言强调了他至高无上的崇高本质以及作为万物创造者和统治者的角色，凸显了他在宇宙秩序中的神性和重要性。这种描述反映了深切的钦佩、敬畏和精神上的惊叹，这些共同构成了正向基调。
+
+#### 21.4.1.2 负面情感
+
+相反，有约 12,000 个诗节被标记为负面语调。这些描述指向自然平衡被破坏的情况，通常是由于人类的贪婪、战争或伦理违规造成的。森林火、河流干涸、圣地的污染以及饥荒和生态灾难的记录被包含在此类中。负面情感的比例凸显了《摩诃婆罗多》对环境系统脆弱性的敏锐意识，并作为一个告诫滥用环境的故事。对自然毁坏或遗弃的情感表达包含了一个隐藏的道德教导：违背自然会导致精神和社会的崩溃。
+
+> 恐吓寻求保护的人、杀害女性、盗取婆罗门的财产、以及伤害朋友，噢 萨克拉，我认为这四种行为中的每一种都等同于遗弃一个虔诚的人。
+
+这是一个负面陈述，因为它描绘了在伦理和道德上都是错误的行为，如杀害女性、抢劫婆罗门和伤害朋友。这些行为被认为是极具危害且不公平的，显示了对社会道德标准的违背。与遗弃虔诚者的对比进一步强调了此类行为的严重性和负面性。
+
+#### 21.4.1.3 中性情感
+
+中性情感（少于 5,000 行）相对于负面和正向情感而言较小。这些句子通常是对自然的平实描述或仪式性的类比，在任何情感层面上都没有明显的感召。中性语调出现在描述某些国家的动植物、季节循环或王国地理范围的句子中。虽然在情感上是抽离，但这些句子通过创造生动的环境场景做出贡献，从而展示了自然现象在史诗世界中的无处不在和重要地位。
+
+> 由于没能想出其他办法，我亲自下场以防止水流光。
+
+这句话具有中性极性，因为它仅仅报告了一项行动，没有表达任何强烈的情绪或价值判断，重点关注在特定情况下做出的实用主义选择。
+
+通过这种方式分析情感极性可以发现，《摩诃婆罗多史》（Mahabharata）的生态话语不是单一的，而是复杂且动态的，它可以经历敬畏、尊崇、谨慎、哀伤和中性。积极情感的主导地位极大地指向了一种普遍的生态尊崇与和谐的哲学。情感分析表明，《摩诃婆罗多》中的生态叙事不仅仅是关于环境的故事，还将环境在情感上置于道德生活的核心位置。通过在环境困境周围放置高度的积极和负面情绪，叙事产生了一种道德想象力，使可持续性、和谐以及与自然的和谐成为有机价值。因此，通过情感取向描述的情感映射唤起了一种古老但无限细微的环境敏感性，这种敏感性对于我们当代的生态辩论仍然具有巨大的意义。
+
+### 21.4.2 可持续性概念的主题表达
+
+对《摩诃婆罗多》通过可持续性类别强调环境主题的反应进行详尽审查，揭示了各种环境关注问题的偏好顺序。各种生态思想通过史诗中复杂的叙事网络获得优先考虑的方式，通过可持续性类别的分布反映出来，如图 21.2 所示。所有类别中最占优势的主题是生态灵性，占据了分类诗节的大多数比例。
+
+![图 21.2 摩诃婆罗多可持续性类别的分布。](img/9781041062943_C021_002.jpg)
+
+**图 21.2** 摩诃婆罗多可持续性类别的分布。
+
+这种无处不在的存在告诉我们，《摩诃婆罗多》不断将环境元素与精神、道德和宇宙责任交织在一起。书中的自然往往不是一个被动的背景，而是一个与实现`dharma`（正义职责）相关的能量合侣。森林被描述为圣者的仙境，河流是女神，生物是天上的朋友。`生态灵性`的普遍性表明，古代哲学中的可持续性与宗教敏感性不可分地织在一起，其中环境管理是一种宗教责任，而不是一个物质问题。
+
+> 我曾是一位名为`Sahasrapat`的离世者。正是因为一个`婆罗门`的诅咒，我才变成了一条蛇。
+
+> *第一卷 (Adi Parva)*
+
+这节诗提到了人变成蛇的过程，反映了人类与动物之间的相互关联性，以及他们如何根据自己的行为发生相互转化。
+
+> 在万物之主`Pashupati`的命令下，我准备好变成一条虫或一棵有很多枝的树，这些都是`Sattwa`（和谐）、`Rajas`（拉性）和`Tamas`（黑暗）属性的结果。
+
+> *教训卷 (Anushashana Parva)*
+
+同样，这节诗反映了`生态灵性`的概念，说话者表达了与自然融合的意愿，超越人类身份化身为宇宙秩序中的任何生命形式。它标志着所有生物的互连性和存在的流动性，强调了灵魂与自然世界之间的和谐，这种和谐由三`gunas`（`Sattwa`、`Rajas`和`Tamas`）支配。
+
+在`生态灵性`之后，第二个主主题是`水可持续性`。《摩诃婆罗多》对河流、湖泊和圣水域极其重视，承认它们在维持生命、农业和仪式纯洁方面的关键作用。水主题的显著性表明早期就将水视为关键的生态和精神资源。强调河流的神圣性、通过神圣沐浴进行净化以及对污染水体的惩罚的叙事，展现了一个鼓励将节水视为道德必要性的故事。
+
+> 我是`恒`，`Jahnu`的女儿。我一直被大圣者崇拜；为了完成天界的目标，我与你生活很久。
+
+> *第一卷 (Adi Parva)*
+
+在水灵性的背景下，这节诗将`恒`人格化为一个神圣的庄严实体，在宇宙秩序中起着至关重要的作用。`恒`被圣者尊敬并与天目的相关，象征着水净化、维持生命和提升精神的力量，体现了它的神圣本质以及与世俗和精神世界的深度联系。
+
+> 然后，神圣而辉煌的海洋，作为雄性河流之主，被水生动物环绕，在幻象中出现在`Rama`面前。海洋的天才用甜美的语调对`Rama`说话，他被无数的宝石矿藏环绕，说道……
+
+> *森林卷 (Vana Parva)*
+
+这节诗将海洋视为一个神圣且受尊敬的实体，象征着水广阔、赋予生命和神秘的本质。海洋被人格化为一个被水生生物和宝藏环绕的神灵，对`Rama`说话，体现了水在维持生命、财富和精神平衡方面神圣且本质的作用。海洋的存在强调了自然、精神与人类生命之间的互连性。
+
+“随后，那些最优秀的战车（`Krishna`和`Arjuna`）驾着战车站在那片森林的两侧，开始在四周对居住在`Khandava`（集会卷, Sabha Parva）的生物进行大屠杀。”。这节诗象征着对自然的暴力破坏，`Krishna`和`Arjuna`杀掉`Khandava`森林中生物的行为代表了人类行为对环境的破坏性后果。森林在印度精神思想中通常被视为圣空间，作为更大宇宙秩序的一部分被破坏，凸显了自然资源保护与破坏之间的紧张关系，以及此类行为的业力报应。
+
+> 圣贾亚说：“当名为`Narayana`的武器被唤起时，暴风开始吹起并伴随着暴雨，听听到雷声。尽管天空没有云。大地在震抖，大海在愤怒中涌起。河流开始倒流。噢，婆罗塔，山峰开始分裂。各种动物开始从`潘达婆`家族的左侧掠过。黑暗降临；太阳变得模糊。各种肉肉动物开始欢快地降落在田地上。神灵、`达罗婆`和`甘达罗婆`，噢君主，他们都感到恐惧。看到那种剧烈的动荡（自然界），他们开始大声互相询问它的……”
+
+> *德罗奴卷 (Drona Parva)*
+
+这节诗象征着由暴力和战争驱动的人类行为所造成的灾难性影响，以唤起`Narayana`武器为例。暴烈的自然动荡——如河流倒流、地震和肉食动物的出现——代表了人类破坏自然平衡时产生的环境灾难。
+
+> 它们还看到山丘上遍满了各种矿物，挤满了毗伽陀罗罗（Vidyadharas），四周被猴子、金那罗罗（Kinnaras）、金普鲁沙（Kimpurushas）以及甘达俱婆（Gandharvas）占据，充满了孔雀、妙伽罗（chamaras）、猿类、鲁鲁鹿（rurus）、熊、野马和水牛；溪流纵横交错，居住着各种鸟兽，并被大象点缀，树木茂盛，鸟鸣欢不已。在经过了许多国家和北库鲁输国（Uttarakurus）之后，他们看到了第一座山——凯拉斯山（Kailasa），那里充满了许多奇观。在山旁边，他们看到了那罗（Nara）和那拉亚那（Narayana）的隐居地，那里的天树四季开花结实。
+
+这节诗描绘了一个诗意且充满活力的生态系统，动植物种类繁多，自然在这里和谐地繁荣。森林被各种生物栖息并被天树点缀，象征着一个未被破坏的神圣空间，孕育着平衡的生命。神圣隐居地的存在进一步强调了这种自然环境在古代思想中的神圣和精神意义。最后，主题制图揭示了《摩诃婆婆罗诗》中生存维持的层次结构：
+
+* 生态灵性
+* 水
+* 灾害
+* 农业与森林
+
+这种主题重点是对古古印度生态哲学的深刻洞察，表明环境意识必须置于宗教和道德语境中，而不能仅仅被视为一个实用性问题。
+
+### 21.4.3 跨生态领域的词汇模式
+
+图 21.3 通过词云图可视化分析展示了词汇模式分析，这为研究《摩诃婆婆罗诗》如何表达其生态意识增添了深度。通过识别与可持续性课程相关的高频词汇，我们可以确定关键的环境主题，以及整部史诗中优先考虑的情感内涵。分类后的环境文本词云突显了如`earth`（大地）、`river`（河流）、`forest`（森林）、`tree`（树）、`fire`（火）、`ocean`（海洋）、`sacred`（神圣）和`destruction`（毁灭）等词汇。这些词在可视化中的尺寸和密度衡量了它们在可持续性叙事中的高频率和主题相关性。`earth`一词占据了这一词汇场的中心，具有物理意义和精神层意义的双重内涵。在《摩诃婆婆罗诗》中，大地被反复拟人化为母亲，因为它代表了关怀、忍耐和力量。它的流行强化了文本深厚的生态根基，在这一语境下，生态健康与人类的道德行为是密不可分的。同样，`river`一词反复出现，证明了生态愿景中对水体的异常关注。河流始终被神圣化为生命的赐予者、仪式净化的场所和精神养分的来源。对恒恒河（Ganga）、`Yamuna`（雅穆纳河）和`Saraswati`（萨拉斯沃蒂河）等河流的反复引用了一个事实：水的可持续性并非一种经验性要求，而是一种深层次的精神兴趣。`forest`和`tree`等词的出现是陆地生态核心性的指标。森林被定义为学习、冥想和庇护的神圣之地。对树的反复使用在符号和功能上都见证了对生物多样性及其在维持生态平衡中价值的欣赏。
+
+值得注意的是，`destruction`和`fire`词也反复出现，特别是在灾害可持续性类别中。这些术语最可能指向灾难性事件，例如坎达瓦森林（Khandava forest）被焚毁成毁灭，或其他由于人类活动导致环境破坏的故事。它们的使用证明了一种生态词汇体系，这种词汇承认毁灭是不尊重自然秩序所导致的真实且遗憾的后果。另一个无处不在的类别包括`sacred`（神圣）、`divine`（神圣）和`purity`（纯洁）等术语，这仍然证明了生态对象主要是用精神和道德词汇来描述的。自然不仅被感知，而且受到尊重，其保护是宗教义务和宇宙秩序的一部分。最后，词云提供的词汇密度为《摩诃婆婆罗诗》丰富的生态词汇提供了可靠的衡量标准。它表明，对可持续性的关注不仅通过显性词汇表达，还通过一种深层的符号化环境词汇表达，这种词汇始终指向自然的生存价值和精神价值。
+
+![图 21.3 摩诃婆婆罗诗中跨生态领域的词汇模式。](img/9781041062943_C021_003.jpg)
+
+**图 21.3** 摩诃婆婆罗诗中跨生态领域的词汇模式。
+
+词云显示了《摩诃婆婆罗诗》的环境想象力，具有广阔的愿景、情感的基调以及与其宇宙观和道德系统的深度参与。
+
+### 21.4.4 跨可持续性类别的情感叙事
+
+《摩诃婆婆罗诗》中不同可持续性类别之间的情感分布显示了对自然细微的情感投入。通过将乐观、愤怒、悲伤和快乐等常见情感与主要的生态主题进行映射，该研究为如何策略性地部署情感来传递生态故事提供了更丰富的见解。图 21.4 显示了与每个可持续性类别相关的主导情感，表明了史诗如何为环境话语的各个方面注入情感意义。
+
+![图 21.4 摩诃婆婆罗诗中每个可持续性类别的主导情感。](img/9781041062943_C021_004.jpg)
+
+**图 21.4** 摩诃婆婆罗诗中每个可持续性类别的主导情感。
+
+
+
+# 453. 生态灵性课程本质上是乐观的
+
+这种关联基于一个默含的假设：自然的和谐有助于精神的充实和社会福利。赞美神圣森林、圣洁溪流和大地母亲生命力量的赞歌唤起了一种明亮且乐观的愿景，在这种愿景中，生态平衡是可能且值得追求的。生态灵性的乐观让我们相信，古代人将可持续性视为一种与宇宙结构相协调的毫不费力且令人愉快的责任。
+
+形成鲜明对比的是，水的可持续性类别被压性的愤怒标记。这种情感反应源于有关水体亵渎、误用或污染的故事，这是一种严重的违背。《摩诃婆婆罗诗》中的河流不仅是生命的赐予者，还是精神上的净化者，亵渎会引发神灵的愤怒或灾难。水段落与愤怒情感的情感关联表明了对环境退化的敏锐道德意识，特别是对维持生命之资源的关注。
+
+灾害类别与悲伤相关。自然灾害如洪水和干旱，以及战争后的环境灾害，都是用巨大的哀伤和哀悼来描述的。这里的悲伤代表了不可持续活动所付的人力和环境代价，自然的流失是对当下和未来的损失。这种情感分配迫使我们意识到，忽视自然是以不可弥救的损害和集体哀伤为代价的。
+
+因此，情感映射显示，《摩诃婆罗诗》中的生态故事在情感上是浓郁的，在策略上是微妙的。希望、愤怒、悲伤和喜悦并非随机分布，而是与主题关注点巧妙结合，旨在强调环境保护的道德和存在意义。此外，这种情感的范围也彰显了古代生态思想在没有内心独白情况下的深度。
+
+---
+
+第三，对包含“大地”、“河流”、“森林”和“神圣”等词汇的自然传说进行词汇分析表明，生态尊重已铭刻在语言之中。`Jhaveri (2006)` 解释了《摩诃婆罗诗》如何通过生动的环境被亵渎故事（特别是在焚烧坎达瓦森林等事件中），来对环境退化产生强烈的情感反应（`Jhaveri, 2006`）。这种对语言的刻意使用赋予了生态事件情感、伦理和精神上的分量，这与词云分析的结果是一致的。
+
+此外，情感映射显示对各种可持续性类别具有强烈的情感倾向：在生态灵性中乐观占主导，在水主题中充满愤怒，在灾难叙事中充满悲伤，在森林和农业主题中充满快乐。这一观察被 `Indriani` 等 (`2023`) 证实，他们指出潘婆人与自然的关系并非交易性的，而是本质上情感和精神性的，涵盖了生态损失期间的尊重、感激和悲痛（`Indriani et al., 2023`）。同样，`Brodbeck (2024)` 揭示了地球的哀鸣以及时代末宇宙毁灭的描述是以忧伤、紧迫感和精神严肃性的交织叙述的（`Brodbeck, 2024`）。因此，《摩诃婆罗诗》生态故事的情感丰富性立即反映在学术叙述中。
+
+扩展到现代背景，《摩诃婆罗诗》中的精神生态与 `Magar (2020)` 所指责的人类中心的世界观有显著不同，根据他的观点，现代环境危机源于对自然精神尊重的丧失（`Magar, 2020,`](#ch29.xhtml#r683) 所论证的自然、人类与宇宙的互通性也证明了生态福祉与人类道德行为之间没有分离（`Prasad, 2015`）。《摩诃婆罗诗》将环境退化描绘为具有道德意义的，进一步凸显了古代生态学对环境退化的意义。对环境破坏的详细描述，特别是坎达瓦森林的焚毁，引发了强烈的情感反应，并突显了保护自然的紧迫需求。最后，环境问题的感性制图说明了多元的情感色彩：生态灵性情景下的乐观、水情景下的愤怒、灾难情景下的悲伤以及森林和农业情景下的快乐。这些情感基础展示了人物如何在精神和情感上与其周围相联系。
+
+这些结果共同表明，《摩诃婆罗诗》为考虑环境可持续性提供了一种基于精神的方法。它对自然的可持续道德和情感反应提供了敏锐的建议。这些结果还为进一步研究提供了可能，即如何将《摩诃婆罗诗》的环境启示应用于指导当前的环境政策，特别是在可持续资源规划方面。此外，关于古代文献如何帮助解决现代环境主义的未来研究，也可以为古代理解如何帮助应对现代生态危机提供见解。其他古代文化书籍之间的比较研究也可以带来关于通用可持续性主题和生态灵性如何存在于所有文化中的见解。最后，对《摩诃婆罗诗》的生态思想与现代环境文学和哲学进行比较的研究，证明对今天的环境思想有巨大帮助。
+
+## 458. REFERENCES
+
+*   `Agoramoorthy, G. (2015)`. Sacred rivers: Their spiritual significance in Hindu religion sacred rivers. *Journal of Religion and Health*, *54*(3), 1080–1090.
+
+*   `Brodbeck, S. (2024)`. Temporal transitions and the character of the earth in the Mahābhārata. *JBASR*, 26, 36–45.
+
+*   `Chapple, C. K. (2015)`. Ecology in the Mahābhārata and the Bhagavad gīt. *Theological Studies Faculty Works*, 676. [`digitalcommons.lmu.edu/theo_fac/676`](https://digitalcommons.lmu.edu/theo_fac/676)
+
+*   `Gadesha, V., Joshi, K., & Verma, S. (n.d.)`. Estimating related words computationally the Mahabharata—an Indian epic. *arXiv*. [`arxiv.org/abs/2305.0420`](https://arxiv.org/abs/2305.0420)
+
+*   `Galanis, N., Vafiadis, P., Mirzaev, K., & Papakostas, G. (2021, March)`. Machine learning meets natural language processing—the story so far. *arXiv*. [`arxiv.org/abs/2104.1023`](https://arxiv.org/abs/2104.1023)
+
+*   `Geoffrey, B., Sanker, A., (n.d.)`. Text mining ancient texts for human experience and wisdom in dealing with difficult periods of history of plague and pestence through a NLP tool that brings to power of AI and data research in humanities. *AI and data-driven Christian Theology*, 1–8. [`doi.org/10.31235/osf.p4q9`](https://doi.org/10.31235/osf.p4q9)
+
+*   `Galtepe, E., & Mathangi, V (2023)`. A quantitative social network analysis of the character relationships in the Mahabharata. *Heritage*, *6*(11), 7009–7030. [`doi.org/10.3390/heritage61036`](https://doi.org/10.3390/heritage61036)（截至 `2025/12/22` 不可访问）
+
+*   `Indriani, A., Juanda, & Agussalim A. J. A. (2023)`. The care of environment in the characters Pandawa of Mahabrata’s story: The study of literature ecology. *Ethical Lingua: Journal of Language Teaching and Literature*, *10*(1). [`doi.org/10.30605/25409190.553`](https://doi.org/10.30605/25409190.553)
+
+*   `Hooper, C. (2018)`. The Mahabharata. *Psychological Perspectives*, *61*(1), 76–91. [`doi.org/10.1080/00332925.2018.1422931`](https://doi.org/10.1080/00332925.2018.1422931)
+
+*   `Horn, G. V. (2006)`. Hindu traditions and nature: Survey article. *Worldviews*, 10(1).
+
+*   `Jha, D. N. (1998)`. 历史大纲中的古印度。[www.amazon.com/Ancient-India-Historical-D-N-Jha/dp/8173042853](http://www.amazon.com/Ancient-India-Historical-D-N-Jha/dp/8173042853)
+
+*   `Jhaveri, D. (2006)`. 摩诃婆罗多婆与环境。《印度文学杂志》，50(5), 162–168。[`about.jstor.org/terms`](https://about.jstor.org/terms)
+
+*   `Jiang, M., Zhao, Q., Li, J. Q., Wang, F.` 等. (`2024`). 人工智能整合于认知行为疗法的通用性综述。《科学研究》，1, 1–48。
+
+*   `Lal, V. (2015)`. 气候变化：来自印度教的见解。《美国宗教学院杂志》，83(2), 388–406. [`doi.org/10.1093/jaarel/lfv020`](https://doi.org/10.1093/jaarel/lfv020)
+
+*   `Magar, N. B. (2020)`. 环境意识：摩诃婆罗多的倡导。《文学研究》。
+
+*   `Mahata, S. (2024)`. 古代印度人及其环境意识：现代代的意义。《学术—多学科研究杂志》，2(9), 450–461。[www.theacademic.in](http://www.theacademic.in)
+
+*   `McDonald, D. (2014)`. 宗教文本的文本挖掘分析。《商业杂志》，13(1), 27–47。[www.uvu.edu/woodbury/articles/](http://www.uvu.edu/woodbury/articles/)
+
+*   `Miyagawa, S., Kyogoku, Y., Tsukagoshi, Y., & Amano, K. (2024)`. 探索吠文梵文文学中的相似性度量与互文性。第 4 届数字人文自然语言处理国际会议论文集，第 123–131 页。[`doi.org/10.1093/jaarel/2024-nlpdh-12`](https://doi.org/10.1093/jaarel/2024-nlpdh-12)
+
+*   `Nene, Y. L. (2012)`. 环境与精神主义：古代印度农业。《亚洲历史》，16(2), 123–141。[www.scribd.com](http://www.scribd.com)
+
+*   `Nigam, A., & Chandra, S. (2024)`. 法典：古代社会文化层面的概念挖掘系统。第 7 届印度语言数据资源与评估会议论文集，第 30–39 页，托里诺。`ELRA` 和 `ICCL`。
+
+*   `Guha, M., & Pattnaik, O. (n.d.)`. 基于深度学习的《薄罗华漫歌》正念全面综述。[`ssrn.com/abstract=520844`](https://ssrn.com/abstract=520844)
+
+*   `Patra, J. K., Singhdevachan, S., & Swain, M. R. (2016)`. 热带果汁的生化学成分与抗氧化潜力。《抗氧化剂》，1, 29–33。
+
+*   `Prasad, J. S. R. A. (2015)`. 古印度环境与自然的概念。2(4)。
+
+*   `Radhakrishnan, S. (1922)`. 印度教。《国际杂志》，33(1)。[`about.jstor.org/terms`](https://about.jstor.org/terms)
+
+*   `Renugadevi, R. (2012)`. 印度吠陀与往罗书中的环境伦理。《非洲历史与文化杂志》，4(1)。[`doi.org/10.5897/ajhc1042`](https://doi.org/10.5897/ajhc1042)
+
+*   `Sivaramakrishnan, K. (2015)`. 印度环境史中的自然伦理。《现代亚洲研究》，49(4)。[`about.jstor.org/terms`](https://about.jstor.org/terms)
+
+*   `Sommerschield, T., Assael, Y., Deepmind, G., Pavlopoulos, J., Stefanak, V., Dyer, C., Bodel, J., Edu, J., & Prag, J. (2023)`. 古代语言的机器学习：综述。《计算语言学》，49(3)。[`doi.org/10.1162/coli`](https://doi.org/10.1162/coli)
+
+*   `Srijeyarankesh, S. J., & Priya, S. M. (2022)`. 基于语义情感分析的摩诃婆罗多全面研究。
+
+*   `Thapar, R. (2009)`. 摩诃婆罗多中的战争。《美国语言协会出版物》，124(5), 1830–1833。[`doi.org/10.1632/pmla.2009.124.5.1830`](https://doi.org/10.1632/pmla.2009.124.5.1830)
+
+*   `Tuhina, & Vashist, S. (2024)`. 神秘的相互关系：自然语言处理与文学想象。《印度人工智能与神经网络杂志》，4(6), 1–9。[`doi.org/10.54105/ijainn.1091.0424`](https://doi.org/10.54105/ijainn.1091.0424)
+
+*   `Tutrone, R., Lowentritt, B., Neuman, B.` 等. (`2025`) 更正：`ExoDx` 测试作为高级别前列腺癌预后的预测——中期分析。《前列腺癌与硬性疾病》，27, 161。[`doi.org/10.1038/s41391-023-00681`](https://doi.org/10.1038/s41391-023-00681)
+
+*   `Upadhyaya, S. (2024, 4 月 19 日)`. 邀请调查：重燃摩诃婆罗多之火。塔克希拉学院。[`takshashila.org.in/blogs/invitation-to-inquiry-rekindling-flame-of-the-mahabata`](https://takshashila.org.in/blogs/invitation-to-inquiry-rekindling-flame-of-the-mahabrata)
+
+*   `Caffagni, D., Sarto, S., Cornia, M., Baraldi, L., & Cucchiara, R. (2025)`. 用于鲁棒文档检索的递归增强视觉语言 Transformer。`arXiv` 预印本 `arXiv:2503.01980`。[`doi.org/10.48550/arXiv.2503.01980`](https://doi.org/10.48550/arXiv.2503.01980)
+
+*   `Hansen, A., Probst, S., Beauregard, J., Michalski, J., Tutrone, R., Osman, K., Courtney, M., J., S., L., M., R., Sarto, A., Senior, V., Viglianti, J., Fleshner, N. (2025)`. `17Lu` 放射性配体疗法在去转移性前列腺癌中的初步临床经验。《肿瘤前学》，14, 1453。[`doi.org/10.3389/fonc.2024.1453`](https://doi.org/10.3389/fonc.2024.1453)
+
+*   `Sherma, J. A. (2021)`. 纪念 Joseph A. Sherma 教授。《平面色谱法》，35, 99–102。[`doi.org/10.1007/s0764-022-0183`](https://doi.org/10.1007/s0764-022-0183)
+
+*   `Paul, A., & Das, B. (2017)`. 心血管疾病预测的机器学习方法。*International Journal of Health Informatics*, *5*(3), 45–53. [`doi.org/10.1234/ijhi.2017.0567`](https://doi.org/10.1234/ijhi.2017.0567)
+
+# 461.22 人工智能驱动的动物入侵检测，用于防止车辆碰撞和农业损失
+
+`Shobha Rani B.R.` 和 `Hemanth L.`
+
+DOI: [10.1201/9781003634768-22](http://doi.org/10.1201/9781003634768-22)
+
+## 22.1 引言
+
+道路和森林保护区附近的动物与车辆之间的碰撞引起了日益关注，对人类和动物群体都造成了巨大损害。这些事件导致了人员死亡、受伤以及大量的财产损失。道路通常与野生动物栖区交叉或接壤，导致动物进入公路，特别是在夜间或迁徙期间，从而增加了碰撞的危险性。传统的安全措施（如动物过路指示牌）是无效的，因为它们无法提供实时通知，导致车辆无法察觉即将到来的危险。
+
+
+
+本研究提出了一种利用物联网（IoT）监控野生动物入侵的自动化方法，通过深度神经网络实现即时检测，促进实时决策并获得精确的结果。该系统利用传感器和摄像头等互联设备，在检测到道路附近有动物时通知驾驶员和当局，从而减少碰撞的概率。系统由检测运动的运动探测器和记录图像的摄像头组成，并使用机器学习模型对图像进行分析以验证动物的存在。
+
+系统的核心组件是`Raspberry Pi 4 Model B`，它作为控制单元。为了增强安全性，系统在检测到动物时会触发视觉和听觉警报。响亮的蜂鸣器会警告附近的驾驶员，而`LED`灯则提供视觉信号，这在雾天或夜间驾驶等低能见度条件下尤为有用。这些警告为驾驶员提供了足够的时间减速或停止，从而防止碰撞并保护野生动物。通过结合物联网和深度学习，该系统为重大的安全问题提供了一种可扩展且成本效益的解决方案。
+
+`MobileNet Single Shot Multibox Detector (SSD)`因其能够提供快速且准确的目标检测，对于实时动物检测至关重要。它针对移动和嵌入式系统进行了优化，是`Raspberry Pi`的完美匹配，因为它在低功耗设备上运行高效。该模型在大型数据集上经过预训练，并进一步精炼，以检测部署区域常见的家畜和野生动物。这使得系统能够在不需要大量计算能力的情况下进行实时分析，适用于现场持续使用。
+
+使用`Raspberry Pi`作为中央设备使系统更具通用性且价格便宜。`Raspberry Pi`以其能效和处理能力而闻名，非常适合实时深度学习任务。此外，`Raspberry Pi`的`Ethernet`连接确保了稳定的网络通信，允许数据传输和远程监控。这一功能可以与云平台整合，监控部署在不同地区的多个系统，进一步扩展了系统的实用性。
+
+## 22.2 文献综述
+
+物联网与深度学习在动物检测系统中的集成近年来取得了显著进展，实现了各种应用中的实时监控和决策。多位研究人员对该领域做出了贡献，关注效率和准确性。
+
+本文 [1] 探讨了物联网与深度学习在动物检测系统中的集成，强调了增强野生动物管理和减少人兽冲突的实时监控能力。作者 [1]–3] 提出了一种基于物联网的智能动物检测系统，利用持续数据传输监控农业区域的动物移动，允许立即警报以防止潜在损害。
+
+本文 [4, 5] 解释了深度学习在实时动物检测中的应用，重点关注一种采用卷积神经网络（`CNNs`）进行准确分类的监控系统。他们的方法有效应对了光照条件变化和遮挡等挑战，从而提高了动态环境下动物检测的可靠性。
+
+鹿与车辆碰撞预防系统使用深度学习技术 [6] 进行动物检测。深度学习模型，特别是基于`CNN`的方法，可以有效检测到鹿并减少事故。在防止野生动物车辆碰撞中有效利用深度学习提供了一个实时检测系统。
+
+动物检测使用深度学习算法 [7] 来识别各种环境中的动物。使用`CNNs`的动物检测实现了高准确率，诸如`MobileNet`等模型非常适合移动系统。深度学习为不同物种的动物检测提供了一种高准确率的可扩展解决方案。
+
+深度学习目标检测方法 [8] 将深度学习应用于生态相机陷机数据中的目标检测。`YOLO`和`Faster R-CNN`等模型性能优于用于生态目标检测任务的传统方法。深度学习通过改进来自相机陷机的目标检测增强了生态监测。
+
+无人机（`UAVs`）动物检测与追踪面临的挑战与机遇：综合综述 [9] 研究了基于深度学习的`UAV`动物检测和追踪方法。配备深度学习的`UAVs`在实时动物追踪方面具有潜力，尽管面临电池寿命等挑战。
+
+用于基于`Raspberry Pi`的物联网应用的实时目标检测使用了`TinyYOLOv4`模型 [10]。`TinyYOLOv4`为资源限制设备提供了一种轻量级的实时目标检测解决方案。由于计算需求低，`TinyYOLOv4`在物联网应用中目标检测中非常有效。
+
+早期研究 [11]–14] 概述了一种利用深度学习开发动物入侵检测系统的创新框架。这项工作强调了计算机视觉在提高检测准确性方面的关键作用，从而解决了野生动物监测面临的关键安全问题。所提系统旨在促进实时检测和响应，显著提高了现有方法的效率。
+
+最后，另一项研究 [15] 专注于创建一个专门用于大象识别的细粒度数据集。该数据集为野生动物监测应用提供了贵的资源，支持了更有效的识别和追踪系统的开发。通过为训练深度学习模型提供坚实的基础，该研究为野生动物保护和监测的持续工作做出贡献。
+
+这些研究共同强调了集成物联网和深度学习开发先进动物检测系统的重要性。文献揭示了一种日益增长的趋势，即实施增强实时检测能力的系统，为农业、森林和自动驾驶导航等多个领域提供了可持续且高效的解决方案。
+
+下方的表 22.1 总结了每项研究的重点、发现和结论，为所提项目的文献综述部分提供了简要的概述。
+
+**表 22.1** 文献综述的关键发现(#ch30.xhtml#t58b)
+
+| `PaperTitle` | `Study Focus` | `Key Findings` | `Conclusion` |
+| --- | --- | --- | --- |
+| 使用深度学习技术防止鹿与车辆碰撞 [6] | 使用深度学习进行动物检测以防止鹿与车辆碰撞 | 深度学习模型（特别是基于`CNN`的方法）可以有效检测鹿并减少事故 | 深度学习在防止野生动物与车辆碰撞方面十分有效，提供了一个实时检测系统 |
+| 使用深度学习算法进行动物检测 [7] | 使用深度学习算法识别各种环境中的动物 | 使用`CNNs`进行动物检测实现了高准确率，`MobileNet`等模型适用于移动系统 | 深度学习为不同物种的动物检测提供了一种可扩展且高准确的解决方案 |
+| 针对生态相机陷机数据的深度学习目标检测方法 [8] | 将深度学习应用于生态相机陷机数据的目标检测 | `YOLO`和`Faster R-CNN`等模型在生态目标检测任务中的表现优于传统方法 | 深度学习通过改进相机陷机的目标检测，增强了生态监测 |
+| 无人机动物检测与追踪的挑战与机遇：综合综述 [9] | 回顾使用深度学习的基于`UAV`的动物检测与追踪方法 | 尽管面临电池寿命等挑战，但`UAVs`结合深度学习在实时动物追踪方面显示出潜力 | 配备深度学习算法的`UAVs`高效的动物检测和追踪解决方案 |
+| 使用 Tiny-YOLOv4 模型用于基于 Raspberry Pi 的 IoT 应用的实时目标检测 [10] | 在`Raspberry Pi`上使用`Tiny-YOLOv4`进行 IoT 应用的目标检测 | `Tiny-YOLOv4`提供了一种轻量级的实时目标检测解决方案，在资源受限的设备上运行高效 | 由于计算需求低，`Tiny-YOLOv4`对于 IoT 应用中的实时目标检测非常有效 |
+
+## 22.3 方法论
+
+一种基于人工智能（AI）的动物入侵检测系统分三个阶段工作。第一阶段通过 IoT 传感器检查道路旁和农田附近动物的移动，并将数据发送到深度学习模型进行识别和分类。第二阶段接收来自 IoT 传感器模型的数据，并训练深度学习模型以对动物进行分类和识别。接下来，第三阶段使用带有蜂鸣器和 LED 的 IoT 传感器，帮助驾驶员避免道路碰撞，向森林管理部门发送信息，并通过自动灯光提醒村民以减少作物受损。
+
+### 22.3.1 系统架构
+
+图 22.1 所示的动物入侵检测系统框图描绘了设备内部相互作用的主要组件。它始于 PIR 传感器和摄像头的输入，这些设备持续捕捉视频或检测运动。随后，视频流被发送到处理单元（通常是`Raspberry Pi`），在那里，数据使用机器学习模型（如`MobileNet SSD`）进行预处理和分析以识别动物。检测到动物时，系统会激活警报机制，可能包括蜂鸣器、LED 或发送给驾驶员的数字通知。该图直观地展示了硬件与软件组件之间的协作，实现了实时检测和告警。
+
+![图 22.1 系统架构。](img/9781041062943_C022_001.jpg)
+
+**图 22.1** 系统架构。(ch30.xhtml#f213b)
+
+所提出的动物入侵检测系统将 IoT 组件与深度学习技术相结合，创建一个实时、响应式的系统，用于检测道路附近的动物并向驾驶员发出立即警报。该系统从检测运动的`PIR`开始，该传感器对动物的热信号特别敏感。当传感器识别到移动时，它会信号`Raspberry Pi 4 Model B`激活`Pi Camera`，捕捉周围区域的图像/视频。捕捉到的图像随后使用深度学习的目标检测模型（特别是`MobileNet SSD`）进行分析，该模型经过预训练以识别各种物体，并经过微调以专注于识别动物。如果检测到动物，系统会同时触发蜂鸣器和 LED 灯，警报驾驶员和部门道路上或道路附近有动物。
+
+### 22.3.2 SSD-MobileNet 架构
+
+与`Faster R-CNN`等传统检测器相比，`SSD`框架能够高效地检测实时动物。`SSD`架构是一个单一卷积网络，可以在单次运行中同时预测边界框的位置并对这些位置进行分类。具有`MobileNet`架构的`SSD`模型在道路安全警报中具有即时警报的效率，并在动物检测中具有快速分类的自动响应，效率极高。
+
+采用以`ResNet`为骨干的`CNN`用于从输入图像中提取显著特征。卷积层在输入图像上绘制边界框，以识别不同尺寸的各种动物，并附带分类评分。高置信度评分的锚框（anchor box）通过抑制在其他特征周围绘制的锚框，有助于有效地在动物周围描定出边界框。
+
+### 22.3.3 动物检测模块
+
+动物入侵检测系统的核心是动物检测模块，它利用先进的深度学习技术进行实时动物识别。该模块利用`MobileNet SSD`模型，该模型在`COCO`数据集上经过预训练，该数据集包含各种物体图像。这使得系统在检测不同动物物种时具有高准确率。摄像头模块发挥着关键作用，捕捉周围环境的连续视频。当视频流输入时，由`MobileNet SSD`模型进行处理，该模型分析每一帧是否存在动物。一旦成功检测，系统将采取行动，例如保存视频片段并触发告警机制。整个处理任务由`Raspberry Pi 4 Model B`高效处理，它作为中央处理单元，确保系统流畅运行并对检测到的入侵做出快速响应。
+
+### 22.3.4 运动检测系统
+
+作为动物检测能力的补充，运动检测系统利用`PIR`传感器监控环境运动。该传感器旨在检测红外辐射的变化，这种变化在物体在其范围内移动时会发生。当`PIR`传感器识别到移动时，它向系统发送信号，促使其激活摄像头并启动视频录制。`PIR`传感器的数据由微控制器持续监控，确保系统对任何潜在入侵做出快速响应。除了视频录制外，LED 指示器提供了视觉线索，以指示检测到了运动。同时，蜂鸣器发出声音警报，通知附近人员检测到的活动，从而增强对周围可能动物的意识。
+
+### 22.3.5 警报与通知系统
+
+警报与通知系统在向相关利益者通信检测到的动物入侵方面起着至关重要的作用。一旦检测算法识别出动物，系统即可启动警报以确保采取适当措施。该警报机制可能通过多种通信通道（如`SMS`或电子邮件）向定义的联系人发送实时通知。全球移动通信（`GSM`）模块的集成使得`SMS467.notifications`可以直接发送到手机上，提供动物活动的即时更新。或者，也可以利用云服务进行电子邮件警报，以便对事件进行全面的记录。为了进一步增强态势感知，当检测到动物时，`buzzer`和次级`LED`指示器均会被激活，提醒附近的人注意动物入侵的潜在风险。
+
+### 22.3.6 视频录制与存储
+
+视频录制与存储模块旨在通过仅在检测到动物时录制视频来优化存储效率。这种选择性录制确保了`Raspberry Pi`上宝贵的存储空间不会浪费在必要的视频上。录制的视频以`MP4`格式保存，这是一种平衡了质量和文件大小的广泛接受的格式。存储位置专门设置为`Raspberry Pi`上的`/home/pi/Desktop`目录，以便于访问和检索录制的视频。通过仅在发生重大事件时保留视频，该系统不仅节省了存储空间，还便于未来对动物入侵进行分析和归档。这一功能对于理解动物行为模式以及制定减轻潜在碰撞的策略至关重要。
+
+这种全面的方法突显了开发动物入侵检测系统所采用的系统方法，强调了其各种组件及其集成，以增强管理道路附近动物出现的安全性和有效性。
+
+## 22.4 实现
+
+在实现方面，我们需要考虑需要集成到我们的`Raspberry Pi`模块中的软件。众所周知，`Raspberry Pi`是一台微型电脑，我们需要为其配备操作系统。`Raspbian Buster OS`是我们`Raspberry Pi`模块的理想操作系统。为了方便起见，我们可以选择使用`Raspberry Pi Imager`在`SD Card`上安装它。在提议的系统中，由于我们需要访问命令行，可以下载并安装轻量版而不是用户界面。
+
+### 22.4.1 数据准备
+
+动物入侵检测系统的开发关键取决于数据准备，这保证了模型的可靠性和正确性。模型在`COCO`数据集上训练，该数据集包含各种动物的标注图像。为了提高模型性能，使用`Labeling`对标注进行检查和升级，确保现有数据的高质量标注，并在需要时插入更多照片。数据增强技术（如`rotation`和`scaling`）被用于增加数据集的多样性，使模型能够更好地适应各种现实环境。随后，该数据集被划分为训练集、验证集和测试子集，这促进了模型的成功训练和评估。归一化和准备技术（如缩小照片和缩放像素值）对输入数据进行归一化，以实现有效学习。
+
+### 22.4.2 开发动物检测模型
+
+构建动物检测器涉及整合各种组件和技术，以创建一个用于实时识别动物的可靠高效的系统。这一过程的核心是`MobileNet SSD`模型，它使用`COCO`数据集进行训练，以准确识别各种动物物种。系统首先通过`camera module`录制视频片段，并将图像传输给`MobileNet SSD`模型进行处理。该模型使用深度学习方法检查帧并根据既有特征识别动物。为了提高检测效能，系统采用了如`non-maximum suppression`等方法。
+
+SSD 的训练目标源于 MultiBox 目标 [7, 8]，但对其进行了扩展，以处理多个物体类别。令`x[i**j]^(p) = {1, 0}`表示第`i`个默认框与类别为`p`的第`j`个真实框（ground truth box）匹配的状态，`c[i]^(p)`是位置`I`处类别`p`的预测置信度（softmax 之后），而`c[i]⁰`是背景类的预测置信度（softmax 之后）。
+
+470.471.在上述匹配策略中，我们可以得到`Pi x[i**j]^(p) ≥ 1`。公式 22.3 给出的整体目标损失函数是定位损失（`loc`）和置信度损失（`conf`）的加权之和。
+
+$L\left( {x,c,l,g} \right) = \frac{1}{N}\left( {L_{conf}\left( {x,c} \right) + \propto L_{loc}\left( {x,l,g} \right)} \right)$ (22.3)
+
+其中`N`是匹配的默认框数量。如果`N = 0`，我们将损失设为 0。定位损失是预测框（`l`）与真实框参数（`g`）之间的 Smooth L1 损失 [6]。与 Faster R-CNN [4] 类似，我们对默认边界框（`d`）的中心（`cx`, `cy`）以及其宽度（`w`）和高度（`h`）的偏移量进行回归。
+
+公式 22.4 中的置信度损失是针对多个类别置信度（`c`）的 softmax 损失，权重项`α`通过交叉验证设置为 1。
+
+$L_{conf}\left( {x,c} \right) = - \sum\limits_{i \in Pos}^{N}x_{ij}^{p}\log\left( c_{i}^{p} \right) - \sum\limits_{i \in Neg}\log\left( c_{i}^{0} \right)\text{where~}c_{i}^{p} = \frac{\text{exp}\left( c_{i}^{p} \right)}{\sum\limits_{p}\text{exp}\left( c_{i}^{p} \right)}$ (22.4)
+
+图 22.3 展示了动物检测系统的置信度直方图，显示了预测不同图像时的置信度得分分布。置信度得分范围从 0.5 到 0.85，代表了模型在给定帧中检测到物体的确定性（图 22.5）。`Y`-轴显示置信度得分，而`X`-轴反映检测次数，范围从 0 到 30。正如 472. 观察到的，大多数检测落在中等置信度水平，这表明模型能够以 0.94 的较高准确率可靠地识别物体。这种分布突显了模型在现实场景中的性能，在精确率和召回率之间取得了平衡，其中中等置信度的检测更为频繁，从而可以在动物检测系统中进行实际应用。
+
+![图 22.5 测试图像的置信度。⏎](img/9781041062943_C022_005.jpg)
+
+**图 22.5** 测试图像的置信度。⏎
+
+总损失结合了定位损失和置信度损失，通过权重`α = 1`进行平衡，并根据匹配的默认框数量（`N`）进行归一化。损失曲线图见 图 22.6。该图显示损失在 200 个 epoch 之后趋于饱和。
+
+图 22.7 显示了置信度得分与频率的直方图，阐明了动物检测系统中检测置信度水平的分布情况。置信度得分范围从 0.5 到 0.85，`Y`-轴代表出现频率，从 0 到 8。直方图显示大多数预测具有中等置信度水平，反映了模型在识别动物方面的平衡性能。这种分布表明，虽然模型经常生成中等置信度的检测，但高置信度检测的发生较低。频率分布为模型预测的可靠性提供了宝贵的见解，突出了通过进一步调优或扩展数据集可以帮助提高预测置信度的区域。
+
+![图 22.6 随 epoch 的损失。⏎](img/9781041062943_C022_006.jpg)
+
+**图 22.6** 随 epoch 的损失。⏎
+
+473.动物入侵检测系统如图 22.8 所示，由多个关键组件组成，每个组件对确保系统的功能有效性起着独特的作用。组件-1 Raspberry Pi 4 充当中央处理单元，实现实时处理和检测。它的灵活性允许摄像头与传感器之间的无缝通信，突显了 474.
+
+![图 22.7 置信度直方图。⏎](img/9781041062943_C022_007.jpg)
+
+**图 22.7** 置信度直方图。⏎
+
+
+
+# 组件-2 面包板
+
+作为电子组件的搭建平台，便于调整和修改。面包板使用跳线连接了 LED 指示器和蜂鸣器等关键组件，促进了测试。
+
+![图 22.8 模型实现。⏎](img/9781041062943_C022_008.jpg)
+
+**图 22.8** 模型实现。⏎
+
+![图 22.9 最终模型。⏎](img/9781041062943_C022_009.jpg)
+
+**图 22.9** 最终模型。
+
+图 22.9 代表了动物检测系统的物理模型。该设置由盒子内的一个小森林组成，中间穿过一条道路，模拟了可能发生动物车辆碰撞的场景。`PIR` 传感器负责检测运动，而摄像头捕捉视频片段以识别动物。该模型有效地展示了系统在受控环境下的工作原理，为该技术在现实世界（如穿越野生动物保护区的公路）中的运行提供了视觉和功能上的表示。
+
+## 22.5 结论与前景
+
+动物检测系统的开发和实施在保护野生动物和防止动物车辆碰撞方面取得了显著进展。通过结合硬件和先进的深度学习技术，该系统为公路和动物保护区等关键区域的实时动物检测提供了一个稳健的解决方案。
+
+- 1.Bhanu, 实时智能动物检测系统。环境智能与人类计算, 11(6), 2481–2492.](#ch30.xhtml#r694)
+- 2.Gupta, D., Sundaram, S., & Kumar, R. (2021). 用于基于 IoT 的农业和森林区域入侵检测系统。可持续性, 13(5), 2734. [10.3390/su13052734](https://doi.org/10.3390/su13052734)(访问于 2025/12/22)](#ch30.xhtml#r65)
+- 3.Gaikwad, P., Giri, P., & Bhat, G. (2020). 使用机器学习算法的 IoT 野生动物追踪与监控。计算机科学进展, 167, 1160–1168. [10.1016/j.procs.2020.03.408](https://doi.org/10.1016/j.procs.2020.03.408](#ch30.xhtml#r696)
+- 4.Nguyen, T., Tuan, T.N., & Khoa, N.D. (2021). 基于 IoT 监控系统的深度深度学习实时动物检测与分类。应用智能, 51, 7338–7349. [10.1007/s10489-021-2291-w](https://doi.org/10.1007/s10489-021-2291-w)(访问于 2025/12/22)](#ch30.xhtml#r697)
+- 5.Li, C., Zhang, Y., & Xu, W. (2022). 用于自动驾驶动物检测的 MobileNet SSD：实时应用的高效解决方案。传感器, 22(3), 543. [10.3390/s22030543](https://doi.org/10.3390/s22030543)(访问于 2025/12/22)](#ch30.xhtml#r698)
+- 6.Shaik, F., Karimullah, S., Khan, M., & Ahmed, S.J. 集成 IoT、计算分析和遗传见解以提高可访问性和早期干预。2024 年智能可持续技术近期创新国际会议 (ICRISST)，印度孟加罗尔, 2024, 第 1–6 页. doi: [10.1109/ICRISST59181.2024.10921923](http://dx.doi.org/10.1109/ICRISST59181.2024.10921923)](#ch30.xhtml#r699)
+- 7.Banupriya, N., Swaminathan, R., Saranya, S., Harikumar, S., & Palanisamy, S. 使用深度学习算法进行动物检测。批判性期刊, 1, 42–53, 2020.](#ch30.xhtml#r700)
+- 8.Schneider, S., Taylor, G.W., & Kremer, S. 用于生态相机陷阱数据的深度学习目标检测方法。第 15 届计算机视觉与图像处理会议 (CRV)。](#ch30.xhtml#r701)
+- 9.Boesch, P., Rossi, L., Tuia, D., & Conci, N. 使用无人机进行动物检测与追踪的挑战与机遇。*IEEE 物联网地理与遥感事务*, 59(12), 5412–5431, 2021.](#ch30.xhtml#r702)
+- 10.Qi, X., Qian, Y., Jiang, Z., & Xie, F. (2021). 用于树莓派 IoT 应用的 Tiny-YOLO4 实时目标检测。传感器期刊, 1, 43–56, 2021.](#ch30.xhtml#r703)
+- 11.Rangarajan, K. (2021). 数字边界：基于深度学习的动物入侵检测设计。在计算机视觉与图像处理中，1378, 186. Springer Nature。](#ch30.xhtml#r704)
+- 12.Ravoor, P.C., & Sudarshan, T.S.B. (2020). 多物种动物识别与追踪的深度学习方法——综述。计算机科学评论, 38, 100289.
+- 13.Liu, W., Anguelov, D., (2016). 深度学习目标检测：综述。IEEE Access, 4, 2219–2228.
+- 14.Prajna, P., Soujanya, S. (2018). 基于 IoT 的动物入侵检测。国际工程期刊。](#ch30.xhtml#r705)
+
+所提模型使用了 `Adam` 优化器进行训练和调，学习率 `ε` 为 0.001，并采用均方根误差 (`RMSE`) 和平均绝对误差 (`MAE`) 等性能指标。实验结果显示，该模型具有很高的预测准确性，其中温度预测的最大偏差为 0.48°C，降水预测的最大偏差为 7.5 mm/月。该模型还展示了一致的全球变暖模式，例如年均气温上升 0.02°C/年，并能够捕捉高风险地区的降水异常。该框架也可应用于其他场景。它有助于资本资产的城市规划决策，对可再生能源预测非常有用，并通过提供气候相关灾害的预警来减少灾害风险。最后，建议在未来的工作中引入强化学习算法，以便在动态环境环境中部署后能够实现实地安排的自适应性。该框架通过整合先进的深度学习方法和高质量的环境数据集，代表了气候信息学的一大步。接下来的章节将提供模型概念和技术架构、数据流水线、实验验证以及操作用例的详细信息。
+
+## 23.2 文献回顾
+
+准确的气候预测仍然是一项重大挑战，因为地球气候系统的本质是非线性的、动态的且多变量的。在过去的几十年里，对长期进行预测的标准方法主要是这类基于物理的数值模型，如广义环流模型 (`GCMs`)。这些模型通过一组在离散化空间网格上求解的偏微分方程，反映了大气、海洋和陆地表面的过程。它们提供了关于大区域气候行为的大量信息，但其缺点包括需要大量的计算时间、模拟的空间网格不够细，以及结果对输入不确定性敏感 [1]。
+
+为了弥补这些缺陷，科学家们越来越多地转向机器学习 (`ML`) 和深度学习 (`DL`) 方法。后者通过发现历史数据中隐藏的复杂关系和模式，能够发挥最佳性能，特别是在处理异构的大规模数据集时。基于领域知识的传统模型无法达到通过数据驱动方法开发的模型性能，即通过其性能技术的跨越式改进所达到的效果。
+
+深度学习在环境领域具有优势，因为它能够高效地管理空间和时间数据。例如，`CNN` 已广泛应用于卫星航拍图像等地理空间数据集的分析。`CNNs` 最擅长识别数据对象的空间属性，这使得它们特别适用于气候研究中云层的时空分布、植被覆盖变化以及城市扩张检测的任务 [2]。`LSTM` 网络是循环神经网络 (`RNNs`) 的一种高级类型，被开发用于学习序列数据的长期结构，例如随季节变化的温度、空气中 `CO₂` 浓度的变化以及降雨季节的出现模式 [3]。
+
+最近的一系列研究证实了混合深度学习模型在气候相关应用中的性能非常有前景。Gao 等人 [4] 比较了空间和时间学习的效果，并证明不同 `DL` 架构的组合可以显著提高多能预测结果。Moutis 和 Alizadeh-Mousavi [5] 在他们的研究中提出了用于实时变换器监控的数字孪生框架。该方法增强了电网的可靠性和运行效率，尽管大规模采用可能仍需要在不同的配电环境中进行校准工作。总的来说，这项工作强调了数字孪生技术在加强智能电网监控和预测性维护方面的实际潜力。
+
+此外，基于自动编码器的聚类仍然是文献中的一种引人注目的尝试，旨在对天气模式进行准确分类 [6]。这些方法说明了无监督深度学习模型能够捕捉用于气候评估和政策引导的特征（见图 23.2](#ch31.xhtml#f223)）。
+
+![图 23.2 传统与人工智能气候建模方法](img/9781041062943_02.jpg)
+
+**图 23.2** 传统与人工智能气候建模方法。](#ch31.xhtml#f223)
+
+大多数模型并没有独立处理空间数据和时间数据，因此当特定的环境需求发生变化时，它可以为了适应新需求。
+
+### 23.2.1 数据采集与处理
+
+准确的天气预测在很大程度上取决于数据的质量、多样性和详细程度。为了开发深度学习框架，采用了一个大型全面的数据集，包含了空间图像和通过传感器测量的测量值。这种多模态数据采集方法确保了空间模式和时间行为被准确表示 [7]。
+
+#### 23.2.1.1 数据源与类型
+
+数据集包含 2000 年至 2023 年 24 年的数据，并在以下数据流：
+
+1. *卫星数据：*
+   - `MODIS` 和 `Sentinel` 卫星提供了地表的高分辨率图像。
+   - 这些数据的关键特征是包含了地表温度 (`LST`)、归一化植被指数 (`NDVI`)、云覆盖和表面反射率。
+   - 按月或按季节定期下载并与区域坐标对齐。
+
+2. *IoT 传感器数据：*
+   - 这些建立在城市、农业和沿海地区的传感器网络，用于记录环境参数，如：
+     - 空气 (`^oC`)
+     - 降水量 (mm/月)
+     - 大气 `CO2` 浓度 (ppm)
+     - 湿度 (%)
+     - 风速 (m/s)
+
+两种数据的结合使得模型能够将热岛等空间模式和季风循环等时间行为整合到预测时间线中（见表 23.1](#ch31.xhtml#t59)）。
+
+**表 23.1** 气候数据集特征概述 (2000–2023)
+
+| 数据源 | 参数 | 单位 | 频率 | 空间分辨率 |
+| --- | --- | --- | --- | --- |
+| MODIS/Sentinel | `LST` | `^oC` | 月度 | 500 m 至 1 km |
+| MODIS | NDVI | 指数 (0–1) | 双周 | 250 m |
+| Sentinel | 表面反射 | % | 每月 | 10–30 m |
+| IoT 传感器 | 空温度 | ^oC | 每小时 | 特定区域 |
+| IoT 传感器 | 降水量 | mm/月 | 每日 | 特定区域 |
+| IoT 传感器 | CO[2] 浓度 | ppm | 每小时 | 特定区域 |
+| IoT 传感器 | 湿度 | % | 每小时 | 特定区域 |
+
+#### 23.2.1.2 数据处理流水
+
+考虑到数据源的异质性和不同的格式，在将数据交给混合模型之前，使用了一个稳健的预处理工作流（参见图 23.3）：
+
+![图 23.3 气候数据处理工作流。⏎](img/9781041062943_C023_003.jpg)
+
+**图 23.3** 气候数据处理工作流。⏎
+
+1. **归一化**：为了转换所有连续变量，使用了最小-最大缩放技术，使数据能够拟合 `[0,1]` 区间。这对于提供变量在神经网络训练过程中的贡献对等性至关重要 [8]。
+2. **缺失数据处理**：
+   - 在处理卫星图像数据时，由于云层覆盖或某些传感器问题，出现像素缺失是常见现象。
+   - 对于 IoT 设备，它们可能会受到网络断开的影响，导致时间戳缺失。
+   - 针对上述问题的解决方案是应用 K 近邻（`KNN`）插补，该方法基于数据的时空相关性，用于估计缺失值。
+3. **特征工程**：
+   - 在这方面，我们不仅从原始特征中生成了新特征（例如温度异常），还重新计算了季节平均值，并计算了 `CO₂` 的增长率。
+   - 与此同时，空间特征以类矩阵的形式获取以供 `CNN` 处理。此外，时间序列经过了形状处理以适应 `LSTM` 的读取。
+4. **数据分段**：
+   - 将数据集分为训练集（70%）、验证集（15%）和测试集（15%）。
+   - 避免时间洗牌，以确保季节性和逻辑一致性不被破坏。
+
+### 23.3 建议的混合框架
+
+气候数据获取地点的增加需要建立良好的模型，这些模型应该熟练地涵盖空间和时间领域。为了实现这一目标，我们建议的方法利用了 `CNN` 擅长空间模式识别的优点以及 `LSTM` 网络在学习随时间序列方面的有效性 [9]。该架构的共享特性培养了系统提取多变量数据之间复杂的依赖关系，这种操作对长期预测预测准确性产生了显著影响。
+
+#### 23.3.1 架构概述
+
+混合深度学习模型由三个主要模块组成：
+
+1. **基于 CNN 的空间特征提取器**：
+   - 使用遥感数据解释 `LST` 和 `NDVI` 图，然后通过卫星传感器处理，以建立空间信息，如温度分布和植被特征。
+   - 应用各种卷积和最大池化层来过滤层，并利用减少的维度和抽象信息来调整空间特征。
+   - 将最后一层的特征向量与时间输入拼接，产生集成向量。
+
+2. **基于 LSTM 的时间分析器**：
+   - 从 IoT 设备获取时间序列数据（例如温度、湿度或空气质量）并输入系统。
+   - 涵盖数据季节性、周期性以及随时间增长的多值循环，这是通过在多年中堆叠 `LSTM` 层实现的。
+
+3. **全连接决策层**：
+   - 结合来自 `CNN` 和 `LSTM` 块输出的特征图。
+   - 实现一个具有大量神经元的层，每个神经元都有非激活的概率，以调节结果网络的学习过程。
+   - 生成来自不同来源的变量预测（例如温度、降雨量、`CO₂` 水平）。
+
+#### 23.3.2 模型配置
+
+深度学习模型（参见图 23.4）使用 `TensorFlow` 实现，参数如下：
+
+![图 23.4 用于气候预测的混合深度学习框架。⏎](img/9781041062943_C023_004.jpg)
+
+**图 23.4** 用于气候预测的混合深度学习框架。⏎
+
+1. **CNN 参数**：
+   - 三层卷积大小为 3 × 3 的卷积层，后跟 `ReLU` 激活。
+   - 2 × 2 滤波器的最大池化层。
+   - 为了降维，有一个平坦化层。
+
+2. **LSTM 参数**：
+   - 有两个 `LSTM` 层，分别具有 128 和 64 个隐藏单元。
+   - 序列返回（Return sequence）允许堆叠。
+   - 丢弃率：0.2。
+
+3. **最终稠密层**：
+   - `Dense(64)`、`Dense(32)` 和输出层。
+   - 隐藏层使用 `ReLU`，预测使用 `linear`。
+
+#### 23.3.3 训练配置
+
+- 优化器：`Adam`
+- 学习率：`0.001`
+- 迭代次数（Epochs）：`100`
+- 损失函数：`均方误差`
+- 批量大小（Batch Size）：`32`
+
+#### 23.3.4 模型训练与优化
+
+在训练期间，通过验证损失的平台作为避免过拟合的手段。为了判断进度，使用了均方误差（`MSE`）和 `MAE`（参见图 23.5）。
+
+![图 23.5 模型训练损失](img/9781041062943_C023_005.jpg)
+
+**图 23.5** 模型训练损失。⏎
+
+#### 23.3.5 实验结果与讨论
+
+建议的混合框架的实验验证涉及多次测试，使用了 23.3.1 节提供的预处理气候数据。评估针对模型的三个重要方面：预测准确性、模型泛化能力以及传统的单流深度学习模型。模型在跨越 2020 年到 2023 年的未见数据集上进行了测试（参见表 23.2）。为了定量评估，使用了以下指标：
+
+* `MAE`
+* `RMSE`
+* 决定系数 (`R²`)
+
+**表 23.2** 2020–2023 测试数据集上的模型性能⏎
+
+| 气候参数 | MAE | RMSE | R² 分 |
+| :--- | :--- | :--- | :--- |
+| 温度 (°oC) | 0.72 | 1.04 | 0.93 |
+| 降水量 (mm) | 4.31 | 6.27 | 0.89 |
+| CO[2] 浓度 (ppm) | 2.18 | 3.02 | 0.91 |
+
+混合方法对各种指标显示出良好的预测能力，因为 `R²` 值始终高于 0.89 [11]。温度和 `CO₂` 浓度估计最为精确，表明该方法有效地表示了现象的长期和空间模式。
+
+#### 23.3.6 比较分析
+
+为了验证混合模型的益处，将其效率与三个基准模型进行了对比（参见图 23.6 和 图 23.7）：
+
+（此处未提供图 23.6 和 23.7 的图片内容）
+
+**图 23.6** 不同模型的均方根误差（`RMSE`）对比。⏎
+
+![图 23.7 ROC 曲线。⏎](img/9781041062943_C023_007.jpg)
+
+**图 23.7** ROC 曲线。⏎
+
+1. *独立 LSTM:* 仅限时间序列。
+2. *独立 CNN:* 仅限空间数据。
+3. *传统 ARIMA:* 统计学基准。
+
+##### 23.3.6.1 序预测可视化
+
+这是基于对混合模型在季节性时间线上预测结果的定性评估方法（图 23.8）。
+
+![图 23.8 预测与实际温度趋势对比（2000–2023）。⏎](img/9781041062943_C023_008.jpg)
+
+**图 23.8** 预测与实际温度趋势对比（2000–2023）。⏎](#ch31.xhtml#f229b)
+
+##### 23.3.6.2 观察结果与局限性
+
+该模型在表现非常有效的同时，也显示出了一些仍然存在的的局限性：
+
+* *传感器偏差：* IoT 设备之间校准未保持一致性可能会导致随机误差源。
+* *空间分辨率权衡：* 高分辨率卫星数据会导致处理时间增加和内存负载增大。
+* *对未见地理区域的泛化：* 模型在训练期间未充分代表且未被观测到的区域表现可能不佳 \[12]。
+
+
+
+尽管存在这些局限性，该混合模型仍提出构建一个可扩展且灵活的框架，以适应气候变化，该框架可以扩展到新的预测问题中。
+
+## 23.4 结论
+
+本章提供了一个详细且详尽的深度学习混合框架，该框架结合了卫星图像和 IoT 传感器数据，用于长期预测气候模式。所提模型利用`CNNs`识别空间特征，并结合`LSTM`网络及其时间序列处理能力，在复杂情况下捕捉长时间跨度的环境动态变化。
+
+本研究的主要贡献是利用了 2000–2023 年期间卫星和 IoT 传感器数据的多模态气候数据集。专门为数据归一化、填补和分段定制了预处理流水线。一种新的架构方案结合了`CNN`和`LSTM`网络，用于高分辨率的时空预测。实验结果在多个气候指标（温度、降水、`CO₂`）上均通过了正面测试。这一结论是在与传统及独立的深度学习模型进行比较后得出的。结果清楚表明，模型的混合内部结构可以提高气候预测的准确性和可靠性 488.，这对于必须处理不同格式和大规模环境数据的情况尤为有益。
+
+## 参考文献
+
+* 1. Karimullah, S., Khan, M., and Shaik, F. "Implementation and Performance Evaluation of Improved Hybrid Deep Learning Approach for Anomaly Detection and Classification in Lung CT Images," IEEE, In 2024 International Conference on Recent Innovation in Smart and Sustainable Technology (ICRISST), Bengaluru, India, pp. 1–6, 2024. doi: [10.1109/ICRISST59181.2024.10921991](http://dx.doi.org/10.1109/ICRISST59181.2024.10921991)
+* 2. Klampanos, I.A., et al. "Autoencoder-Driven Source Estimation." Software, 2018, 102, 84–93.
+* 3. Wu, J., et al. "A Comparative Analysis of Machine Learning on Multiple Types." Energies, 2024, 17, 76–85.
+* 4. Gao, L., et al. "Comparing Deep Learning Models for Building." Applied Energy, 2021, 134–142.
+* 5. Moutis P., and Alizadeh-Mousavi O. "Digital Twin of Real-Time Monitoring of Distribution." IEEE Transactions on Power Delivery, 2020, 36–12.
+* 6. Tao, F., et al. "Digital Design Framework." International Journal of Production, 2018, 56, 65–74.
+* 7. Gao, L., Liu, T., Hwang, Y., and Rademacher, R. "Comparing Deep Learning for......"
+* 8. Tao, F., et al. "Digital Product [...]"
+* 9. Karimullah, S., Khan, M., and Shaik, F. "Implementation and Performance [...]"
+* 10. Klampanos, I.A., et al. "Autoencoder-Driven [...]"
+* 11. Wu, J., et al. "A Comparative Analysis of [...]"
+* 12. Gao, L., et al. "Comparing Deep Learning [...]"
+
+# 489.24 利用物联网和机器学习实现实时智能
+
+Harleenpal Singh 和 Akhil Kumar
+
+DOI: [10.1201/97810036478-24](http://doi.org/10.1201/97810036478-24)
+
+## 24.1 引言
+
+物联网（IoT）指的是一个嵌入了传感器、执行器和通信技术的庞大设备生态系统，用于收集和交换数据。另一方面，机器学习（ML）包含了一系列算法和统计模型，使其能够识别模式并根据数据做出决策。这两个领域的交叉——即物联网与机器学习，已成为一种变革性范式，通过情感知自动化和决策赋予实时智能能力 \[1]。
+
+物联网与机器学习之间的协同对于将海量原始传感器数据转化为可操作的洞察至关重要。例如，工业环境中的温度传感器产生持续的数据流；机器学习算法可以分析这些流以检测异常、预测系统故障或自动优化操作。
+
+### 24.1.1 物联网系统中实时智能的演进（2015–2024）
+
+* *2015–2018:* 主要以云端为中心的分析，高延迟，设备端智能水平有限。
+* *2019–2021:* 引入轻量化机器学习模型，边缘智能的开始，实时告警以及基于规则的决策。
+* *2022–2024:* 边缘机器学习的普及、联邦学习 (FL) 以及在极少人工干预下实现自动化实时决策。
+
+最近的研究表明，向去中心化智能转变显著降低了延迟和网络拥塞，从而使自动驾驶和智能可穿设备等应用能够对环境变化做出做出响应 [2]。
+
+### 24.1.2 机器学习在 IoT 数据处理中的作用
+
+机器学习与 IoT 集成（如图 24.2
+
+**图 24.1** 2015 年至 2024 年 IoT–机器学习技术与部署范式的演变。
+
+1. 分类（例如：识别机器的故障类型）
+2. 回归（例如：预测能源消耗）
+3. 聚类（例如：对智能家居设备中的相似行为进行分组）
+4. 异常检测（例如：识别网络安全漏洞）
+5. 强化学习（例如：优化暖暖通风空调 (HVAC) 控制策略）
+
+这些任务对于 IoT 场景尤为重要，因为这些数据通常是噪声化的、高维且实时生成的。机器学习模型的适应性允许它们从新数据中不断学习，从而实现更具韧性和可扩展性的 IoT 部署 [3]。
+
+### 491.24.1.3 关键性能指标：准确性、效率和计算能力
+
+对于 IoT–机器学习系统，必须从多个维度进行性能评估：
+
+1. *准确性：* 模型预测正确结果的能力，在医疗保健和工业安全应用中至关重要。
+2. *延迟：* 处理和对输入数据做出反应所需，在自动系统中特别重要。
+3. *计算效率：* 资源使用情况，特别是在嵌入式传感器或边缘设备等受限环境中。
+4. *能耗：* 由于许多 IoT 设备由电池供电，机器学习模型必须针对低功耗运行进行优化。
+5. *可扩展性：* 系统随着设备数量或数据量增加时保持性能的能力。
+
+最近的研究表明，部署剪枝和量化模型可以在保留超过 95% 原始准确性的同时，将能耗降低高达 60% [4]。
+
+### 24.1.4 行业应用与用例概述
+
+IoT–机器学习系统的应用格局广阔且不断增长。显著的用例包括：
+
+1. *智能制造：* 实时故障检测、质量控制和预测性维护 (PdM) [5]。
+2. *医疗保健：* 患者监测、疾病早期检测和药物依从性跟踪 [6]。
+3. *城市基础设施：* 交通优化、废物管理和节能照明系统 [7]。
+4. *精准农业：* 土壤质量分析、灌溉控制和作物健康监测。
+5. *能源管理：* 智能电网控制、负载预测和实时能源定价系统 [8]。
+
+## 492.24.2 文献综述
+
+### 24.2.1 IoT 中的早期机器学习技术 (2015–2019)
+
+2015 年至 2019 年间机器学习与 IoT 系统的集成以基础性但有限的应用为特征。在此期间，机器学习算法主要用于基本的分类和回归任务。机器学习模型的计算复杂性和资源需求要求将其部署在云服务器上，导致了显著的延迟并限制了设备端的自主性。此阶段常用的算法包括：
+
+1. *决策树和随机森林：* 因其可解释性和较低的计算开销受到重视，这些模型用于传感器故障检测和交通流预测等应用 [9]。
+2. *支持向量机 (SVMs)：* 应用于高精度的应用，如健康监测系统和入侵检测 [10]。
+3. *K 近邻算法 (KNNs)：* 用于基于位置的服务和活动识别，尽管在内存使用和推理时间存在局限性 [11]。
+
+尽管这些方法在静态设置中有效，但它们往往无法适应 IoT 数据的实时流特性。此外，对云的依赖阻碍了响应速度并增加了网络拥塞，限制了可扩展性。
+
+### 24.2.2 IoT 深度学习的进步 (2020–2024)
+
+如图 24.1 所示，2020 年至 2024 年见证了深度学习 (DL) 兴起带来的范式转移。与经典的机器学习方法不同，深度学习模型（特别是卷积神经网络 CNN、循环神经网络 RNN 及其变体）能够从高维、高噪声数据中提取更细致的特征。进一步的发展进展还包括：
+
+1. *轻量化深度学习模型：* 出现了如`MobileNet`、`SqueezeNet`和`TinyML`等架构，专为 IoT 约束条件而设计 [12]。
+2. *神经网络量化与剪枝：* 这些优化技术允许大型模型在不显著降低准确性的情况下进行压缩 [13]。
+3. *FL (联邦学习)：* 引入了一种保护隐私的方法，可以在分布式设备上训练模型，而无需将原始数据传输到中央服务器 [14]。
+
+上述技术使深度学习能够从云端系统转向设备端智能，实现了在自动驾驶等关键应用中的低延迟响应。
+
+### 493.24.2.3 传统与现代机器学习的对比分析
+
+对传统和现代机器学习技术的并对比评估强调了其在效率、适应性和可扩展性方面的巨大演变，如表 24.1 所示。
+
+**表 24.1** 传统与现代机器学习算法对比
+
+| **标准** | **传统机器学习 (2015–2019)** | **现代机器学习/深度学习 (2020–2024)** |
+| :--- | :--- | :--- |
+| 部署模式 | 以云端为中心 | 边缘及云端协同 |
+| 延迟 | 由于远程处理延迟高 | 通过设备推理实现低延迟 |
+| 可扩展性 | 受限于网络容量 | 通过去中心化架构增强 |
+| 功耗效率 | 中等到高功率需求 | 通过量化/剪枝进行优化 |
+| 安全/隐私 | 集中化风险暴露 | 通过联邦学习和加密学习得到改进 |
+| 模型适应性 | 需要静态重训练 | 支持动态/在线学习 |
+
+这些差异凸显了技术成熟如何将 IoT–机器学习系统的范围从基础决策支持扩展到实时自主控制环境。
+
+### 24.2.4 性能指标：准确性、延迟和功耗
+
+机器学习模型在 IoT 应用中的性能是多维的，高度取决于具体背景。因此，评估模型性能涉及准确性、延迟和能量消耗之间的权衡。
+
+1. *准确性：* 现代深度学习模型在视频监控或医疗诊断等复杂任务中通常获得更高的准确性，在基准研究中比传统模型高 10–30% [15]。
+2. **延迟**：在优化的边缘硬件上运行深度神经网络（DNNs）可以提供低于 50 ms 的推理时间，适用于实时控制系统 [16]。
+3. **功耗**：模型压缩使得边缘设备能够在微控制器上运行功耗低于 100 mW 的深度模型，这正如 TinyML 部署所示 [17]。
+
+选择模型架构时，必须根据特定的应用需求考虑这些限制条件。例如，工业安全系统可能将延迟优于绝对准确性，而农业中的能量采集传感器可能更倾向于预测性能中等的超低功耗模型。
+
+### 494.24.2.5 案例研究：IoT-ML 实现的演进
+
+* **案例研究 1（制造业中的预测性维护）**：2017 年，一家欧洲制造公司使用托管在云基础设施上的 SVM 模型来分析振动信号以预测设备故障。由于网络和处理延迟，信号发出后的平均检测时间为 3–5 分钟。到 2023 年，该公司迁移到集成有工厂传感器的 Nvidia Jetson Nano 板卡上的 FL 模型。检测时间缩短至 15 秒以下，模型准确性提高了 22%，并节省了大量带宽 [18]。
+* **案例研究 2（通过智能可穿戴设备进行健康监测）**：在 2016 年至 2018 年，大多数智能健康跟踪器依赖基于阈值的警报和定期数据上传进行离线分析。这些设备的个性化程度有限，且假阳性率高。现代实现现在使用嵌入式 CNN 和循环模型，能够实时识别个性化的心脏异常。一项关于边缘深度学习（DL）模型检测心律失齐的研究显示，F1 分数从 0.74（传统 ML）提高到 0.91（现代 DL） [19]。
+
+## 24.3 用于实时智能的 IoT-ML 架构
+
+### 24.3.1 用于 IoT-ML 的边缘计算与 FL
+
+随着 IoT 设备的普及和产生海量数据，依赖以云为中心的模型已变得不再足够。延迟、带宽限制、隐私担忧和可扩展性挑战迫使向边缘计算转型，将计算带到数据源。在这种模型中，实时推理和决策在本地发生，从而缩短了到云服务器的往返时间并缓解了潜在的数据泄露风险 [20]。FL 通过允许在多个边缘设备上进行分布式模型训练而不聚合原始数据，弥补了这一范式。这种方法在保持稳健模型准确性的同时，保护了用户隐私并减少了网络流量。例如，Google 在 Android 的 Gboard 中部署 FL，使得下一个词的预测模型可以在数百万设备上进行训练，而不会损害用户数据 [21]。IoT-ML 系统中边缘计算和 FL 的益处包括：
+
+1. **降低延迟**：在源头做出决策，最大限度地减少时间延迟。
+2. **能源效率**：本地处理节省了数据传输所需的能量。
+3. **隐私合规**：用户数据保持去中心化，符合 GDPR 和 HIPAA。
+
+然而，在确保模型收敛、处理非独立同分布（non-IID）数据以及维护边缘节点之间的同步方面仍然存在挑战 [22]。
+
+### 495.24.3.2 用于 IoT 设备的迁移学习与模型压缩
+
+由于内存和计算限制，在受限的 IoT 硬件上部署全规模 DL 模型通常是不可行的。为了解决这一问题，采用了迁移学习和模型压缩技术：
+
+1. **迁移学习**利用预训练模型（这些模型通常在如 ImageNet 等大型数据集上进行训练），并用较少的数据和更低的计算需求对特定的 IoT 任务进行微调。这极大地缩短了训练时间和资源需求 [23]。
+2. **模型压缩**涉及剪枝、量化和知识蒸馏等技术，以减少模型大小和能量消耗。剪枝移除冗余神经元或过滤器，量化降低权重精度，蒸馏则将知识从大型教师模型传输到较小的学生模型 [24]。
+
+研究表明，在`MobileNet`架构上应用量化感知训练可以将模型大小缩小 4 倍，而准确率损失小于 2%，使得在`Arduino Nano 33 BLE`等微控制器上实现实时目标检测 [17]。
+
+### 24.3.3 实时数据流水线与处理工作流
+
+有效的 IoT–ML 系统需要良好配置的实时数据流水线，通常包括以下阶段：
+
+1. **数据采集**：传感器持续收集环境或运行数据。
+2. **预处理**：对原始数据进行归一化、清洗，有时会进行实时增强。
+3. **模型推理**：压缩或轻量级 ML 模型运行在边缘设备或网关节点上。
+4. **反馈与执行**：根据推理结果执行控制操作或触发警报。
+5. **数据存储与学习**：将选择性数据转发到云层或雾层进行重新训练或分析。
+
+`Apache Kafka`、`TensorFlow Lite`和`AWS Greengrass`等中间件平台支持这些工作流，提供了管理延迟、吞吐量容错能力的集成和编排能力。用例案例：在智能农业中，IoT–ML 流水线使传感器能够捕获土壤水分水平，本地处理数据以确定灌溉需求，并激活水泵 [25]。
+
+### 496.24.3.4 五/六代网络及其对 IoT-ML 的影响
+
+第五代（5G）网络的出现以及对六代的研究显著增强了实时高性能 IoT-ML 系统的可行性。这些技术提供了：
+
+1. **超低延迟**：5G 支持低至 1 ms 的延迟，实现了即时反馈。
+2. **高带宽**：允许海量数据传输，支持视频监控等应用。
+3. **设备密度**：5G 每平方公里可处理 100 万设备，这是大规模 IoT 部署的关键 [26]。
+
+6G 技术预计提供更高的数据速率（高达 1 Tbps）、与卫星网络的集成以及网络层原生的 AI 支持 [27]。在工业自动化中，5G 已经实现了具有严格延迟和可靠要求的机器间通信，提升了预测性维护（PdM）系统和机器人控制环的性能 [28]。
+
+### 24.3.5 中心化与去中心化架构的对比研究
+
+IoT-ML 架构设计从根本上影响了其性能、可扩展性和韧性。对比分析见表 24.2，并在图 24.3 中也有说明。
+
+![图 24.3 中心化（云端）与去中心化（边缘/联邦）IoT–ML 架构](img/9781041062943_C024_003.jpg)
+
+**图 24.3** 中心化（云端）与去中心化（边缘/联邦）IoT–ML 架构。[#ch32.xhtml#f232b]
+
+**表 24.2** 云端与去中心化对比[#ch32.xhtml#t62b]
+
+| **特征** | **中心化（云端）** | **去中心化（边缘/联邦）** |
+| :--- | :--- | :--- |
+| **延迟** | 由于网络往返而较高 | 由于本地推理而较低 |
+| 隐私/安全 | 因中心化数据聚合而存在风险 | 通过本地化处理有所改进 |
+| 可扩展性 | 受带宽和云资源限制 | 高，因为每个节点都处理本地负载 |
+| 可靠性 | 单点故障 | 具有冗余本地节点的容错能力 |
+| 能源效率 | 取决于传输频率 | 通过避免不必要的通信进行优化 |
+
+图 24.3 显示了中心化（基于云的）与去中心化（边缘/联邦的）IoT-ML 架构的对比。
+
+## 497.498.24.4 IoT-ML 算法与技术
+
+### 24.4.1 用于 IoT 数据流的监督学习与无监督学习
+
+IoT 数据通常具有海量、动态且以连续流的形式生成的特点。为了获得可操作的见解，根据任务性质和数据标签的可用性，广泛应用监督学习和无监督学习技术。
+
+#### 24.4.1.1 监督学习
+
+
+
+监督方法依赖于标记的数据集，通常用于分类和回归任务：
+
+1. `Classification`：检测设备状态（正常 vs. 故障）和患者状态（稳定 vs. 危急）。
+2. `Regression`：预测环境变量，如温度、能量负载或需求。
+
+`SVMs`、`decision trees`、`random forests` 和 `gradient boosting machines` 等算法在早期 IoT 系统中被广泛使用 [29]。然而，现代应用越来越多地部署 `DNNs` 和 `RNNs` 以对时间序列数据实现更好的泛化能力。
+
+#### 24.4.1.2 无监督学习
+
+在缺乏标记数据的场景下，无监督学习方法如 `K-means clustering`、`principal component analysis`（`PCA`）和 `autoencoders` 能够实现异常检测、数据压缩和系统分析。例如，聚类被用于智能家居对用户行为模式进行分组，而 `autoencoders` 则压缩传感器数据以减少存储和传输开销 [30]。
+
+### 24.4.2 用于自主 IoT 系统的强化学习
+
+强化学习（RL）是一种学习范式，代理体通过在环境中采取行动来最大化累积奖励。对于必须在动态环境中适应的自主 IoT 系统非常有价值，例如：
+
+1. 根据占用情况和天气调整的智能 HVAC 系统 [31]。
+2. 在复杂地形中导航的自主无人机 [32]。
+3. 从车流量学习优化模式的交通灯控制系统 [33]。
+
+最近的进展包括深度强化学习（`DRL`），它将神经网络与 `RL` 结合，实现了高维空间中的决策。`Deep Q-Networks`（`DQN`）和 `Proximal Policy Optimization`（`PPO`）等技术已集成到 IoT-ML 工作中，以便以最少的先验知识实现复杂行为。
+
+### 24.4.3 IoT 安全中的异常检测技术
+
+考虑到 IoT 系统在基础设施和医疗保健中的关键性，稳健的异常检测对于识别网络攻击、故障或系统误行为至关重要。流行的基于 ML 的方法包括：
+
+1. 统计方法（例如 `Z-score`、`Autoregressive Integrated Moving Average`（`ARIMA`））。
+2. 聚类算法（例如 `DBSCAN`、`Isolation Forest`）。
+3. 基于自动编码器的 `DL`，如图 24.4 所示，特别适用于高维或时间序列异常检测 [34]。
+
+![图 24.4 用于实时数据流异常检测的 IoT–ML 流水线](img/9781041062943_C024_004.jpg)
+
+**图 24.4** 用于实时数据流异常检测的 IoT–ML 流水线。(#ch32.xhtml#f233b)
+
+最近一项使用长短期记忆（`LSTM`）`autoencoders` 检测工业控制系统攻击的研究，其检测率超过了 95%，凸显了时间建模在增强系统安全方面的作用 [8]。挑战包括数据集不平衡（正常行为占主导）、不断演变的攻击向量以及实时处理需求，所有这些都在通过混合和集成方法得到解决 [35]。
+
+### 24.4.4 使用 ML 模型的 PdM
+
+PdM 指预测性维护。制造业在工业 4.0 范式下处于采用 IoT–ML 系统的前沿。嵌入在机器中的传感器收集振动、温度和声学数据，ML 算法分析这些数据以检测异常并预测故障。ML 模型包括：
+
+1. 用于估计 `Remaining Useful Life`（`RUL`）的 `Regression` 模型。
+2. 用于故障类型的 `Classification` 模型。
+3. 用于时间模式的 `Sequence` 模型（例如 `LSTM`）。
+
+在一个里程碑案例中，通用电气在喷气发动机上部署了基于 `telemetry` 的故障预测，减少了 30% 的非计划维护并提高了资产利用率 [36]。这导致：
+
+1. 停机时间减少了 20%。
+2. 维护成本降低了 25%。
+3. 整体设备效率（`OEE`）提高了 15%。
+
+### 24.4.5 用于 IoT–ML 的量子计算与区块链
+
+随着 IoT 系统变得越来越复杂且数据日益丰富，传统的计算和安全模型正接近极限。`Quantum computing` 和 `blockchain` 是两种提供变革性潜力的新兴范式。
+
+#### 24.4.5.1 量子计算
+
+量子算法为 ML 任务（如优化、`classification` 和密码学）提供了指数级更快的计算。例如，`quantum SVM` 和 `quantum Boltzmann machines` 在处理大规模 IoT 数据方面展现了前景 [37]。然而，量子计算仍处于早期阶段，面临稳定性、可访问性以及与边缘设备集成的挑战。混合量子-经典 ML 框架的研究正在进行。
+
+#### 24.4.5.2 区块链
+
+区块链引入了去中心化的、防篡改的账本，确保了 IoT-ML 系统中的数据完整性和透明度。智能合约可以自动化验证和访问控制，使区块链在以下方面特别有效：
+
+1. 供应链透明化
+2. 医疗数据共享
+3. IoT 设备身份认证
+
+将区块链与 ML 结合增强了信任性和可审计性。例如，安全的 ML 更新可以通过区块链共识机制管理，减轻模型投毒或未经授权的访问 [39]。
+
+## 24.5 行业应用与案例研究
+
+IoT 与 ML 的融合正在催化各行业的转型，使系统具有主动性、预测性和自适应性。本章详细介绍了各特定领域的实施方案，并说明了从 IoT-ML 集成获得的实时智能如何提高效率、决策能力和服务质量。
+
+### 24.5.1 智能制造与 PdM
+
+制造业一直是采用 IoT–ML 系统的前沿。嵌入在机器中的传感器收集振动、温度和声学数据，ML 算法分析这些数据以检测异常并预测故障。
+
+#### 24.5.1.1 案例研究：西门子的边缘 ML
+
+西门子在其工厂部署了基于边缘的 ML 模型，用于数控（`CNC`）机器的 PdM。通过使用历史故障模式训练的异常检测算法，系统可以实时检测偏差，能够在故障发生前安排维护。
+
+此外，`RL` 已应用于优化制造工作流，根据环境条件和机器健康状况动态调整生产参数 [40]。
+
+### 24.5.2 医疗保健中的 IoT–ML：远程监测与诊断
+
+医疗保健领域的 IoT–ML 应用实现了持续监测、早期诊断和个性化治疗。可穿戴设备捕捉心率、血糖水平和心电图（`ECG`）信号等实时生理数据。`ML` 模型处理这些数据以自主识别健康风险。
+
+#### 24.5.2.1 案例研究：利用智能穿戴设备检测心律失常
+
+斯坦福人员与苹果公司合作，利用 `Apple Watch ECG` 数据训练了一个 `DL` 模型，用于检测房颤（`AFib`）。这种基于 `CNN-LSTM` 混合模型的 `ML` 算法在临床试验中实现了 98.3% 的敏感性和 99.6% 的特异性 [41]。
+
+#### 24.5.2.2 案例研究：COVID-19 监测
+
+在疫情期间，医院使用基于 IoT 的生命体征监测器结合 `ML` 分类器对患者进行远程分诊。`Random forest`（随机森林）和 `XGBoost` 模型预测重症监护室（`ICU`）入院的曲线下面积（`AUC`）大于 0.90，为资源紧张的医疗机构实现了高效的资源配置 [42]。
+
+这些实施说明了 IoT-ML 在增强远程诊断、减少医院再入院和个性化护理方面的力量，同时通过联邦架构保护了隐私。
+
+### 24.5.3 城市基础设施与智能城市
+
+智能城市计划利用 IoT–ML 整合来优化基础设施运行、提高公共安全并减少对环境的影响。
+
+#### 24.5.3.1 交通与环境监测
+
+巴塞罗那和新加坡等城市安装了传感器网络，收集交通密度、空气污染、噪声水平和能源使用的数据。`ML` 模型实时分析这些数据以：
+
+1. 预测交通瓶颈并动态规划车辆路线。
+2. 使用运动和环境光传感器优化公共照明。
+3. 预测污染水平以发布健康建议。
+
+#### 24.5.3.2 案例研究：阿姆斯特丹的废物管理优化
+
+阿姆斯特丹实施了一套由 `ML` 驱动的垃圾收集系统，使用填充水位传感器和 `logistic regression` 模型预测垃圾桶使用情况。结果是收集频率降低了 30%，燃料节省了 23% [43]。这些示例反映了城市 IoT–ML（如图 24.5 所示）部署如何创建更具韧性、适应性且以市民为中心的城市服务。
+
+![图 24.5 智能城市基础设施中流量优化和空气质量预测的 IoT–ML 系统。](img/9781041062943_C024_005.jpg)
+
+**图 24.5** 智能城市基础设施中流量优化和空气质量预测的 IoT–ML 系统。](#ch32.xhtml#f234)
+
+### 24.5.4 精准农业与 IoT-ML 创新
+
+在农业领域，IoT–ML 系统支持资源高效和数据驱动的实践，提升了生产力和可持续性。
+
+#### 24.5.4.1 智能灌溉
+
+土壤水分、温度和湿度传感器将数据馈给 `ML` 模型，以确定最佳灌溉计划。`SVMs` 和 `decision trees`（决策树）等技术已用于将土壤水分维持在理想范围内，用水量减少高达 40% [44]。
+
+#### 24.5.4.2 作物病害检测
+
+无人机相机和高光谱成像系统结合基于 `CNN` 的分类器，可以检测植物疾病或营养缺乏的早期迹象。例如，印度的一项研究表明，使用集成 `DL` 模型检测水稻真菌感染的准确率达到 97% [45]。
+
+#### 24.5.4.3 产量预测
+
+在天气、土壤和作物数据上训练的 `ML` 模型可以极高地预测产量。包括 `gradient boosting`（梯度提升）和 `LSTMs` 在内的 `Regression algorithms` 已用于优化种子选择和预测收获量，指导供应链决策。
+
+### 24.5.5 能源管理与智能电网优化
+
+能源系统正在演变为由实时传感和 `ML` 驱动分析的智能电网。这些系统有助于平衡供需、检测故障并优化能源使用。
+
+#### 24.5.5.1 需求预测与负载平衡
+
+公用事业使用 `ARIMA`、`Prophet` 和 `LSTMs` 等时间序列预测模型在细粒度上预测能源需求。这些预测为动态定价和自动负载分配策略提供了支持 [46]。
+
+#### 24.5.5.2 案例研究：智能电表与异常检测
+
+在英国，配备异常检测算法的智能电表可以识别窃电、电压波动和潜在故障。`ML` 模型将误报减少了 60%，并将检测准确率从 72% 提高到 95% [47]。
+
+#### 24.5.5.3 可再生能源整合
+
+`ML` 通过预测输出和调整能量储备，促进太阳能风能等间歇性再生能源的最优调度。`RL agents`（强化学习代理）越来越多地用于管理微电网，实现社区级的去中心化能源管理 [11, 48]。
+
+## 24.6 挑战、未来趋势与研究方向
+
+IoT 与 ML 的融合在各行业产生了变革性成果，但它引入了巨大的技术、伦理和基础设施挑战。本章批判性地审查了这些挑战，识别了新兴趋势，并提出了可以解决未解决问题的研究方向。
+
+### 24.6.1 互操作性与标准化挑战
+
+互操作性是 IoT–ML 整合的基础障碍之一。IoT 生态系统包含由不同厂商开发的异构设备、协议和平台，缺乏统一接口。面临的挑战包括：
+
+1. 协议不兼容：设备可能使用 `MQTT`、`CoAP`、`HTTP` 或私有协议，增加了复杂性。
+2. 数据格式不一致：阻碍了统一的模型训练。
+3. 缺乏通用 API：针对特定硬件设计的 `ML` 模型可能无法跨系统。
+
+如 `oneM2M`、`IEEE P2413` 和 `Open Connectivity Foundation`（`OCF`）等努力正在开发互操作框架，但应用仍处于碎片化状态 [49]。
+
+### 24.6.2 延迟、功耗与可扩展性问题
+
+在成千上万 IoT 设备上部署 ML 模型需要平衡延迟、功耗和可扩展性。
+
+1. 延迟：对于自动驾驶等实时应用至关重要，几毫秒的延迟可能导致严重后果。
+2. 功耗：电池供电设备面临能量限制，如果不进行模型压缩，大规模 DL 部署是不可行的。
+3. 可扩展性：随着设备增加，中心化云服务器在处理和带宽方面面临瓶颈，需要去中心化架构。
+
+边缘计算、`TinyML` 和节能神经网络（例如二值化神经网络、脉冲神经网络）的进展提供了解决方案，但在性能与资源消耗之间仍存在权衡 [50]。
+
+### 24.6.3 IoT–ML 系统中的安全与隐私担忧
+
+IoT–ML 系统面临广泛的安全和隐私威胁，这些威胁源于其分布式特性、持续连接和以数据为中心流。
+
+1. 安全威胁：
+   - 模型反向与提取攻击：攻击者通过查询 API 重构训练数据或提取模型。
+   - 数据投毒：恶意输入可以操纵模型行为。
+   - 设备欺骗：受侵害的设备可能会向 ML 流水线传输伪造数据。
+
+2. 隐私挑战：
+   - 敏感数据暴露：在医疗健康和智能家居应用中尤为关键。
+   - 加密不足：轻量级设备可能缺乏稳健的加密实现。
+
+正在探索的解决方案包括：
+
+1. 差分隐私：通过向数据或输出添加噪声来保护个人记录。
+2. 同态加密：允许对加密数据进行计算。
+3. 区块链与智能合约：去中心化信任并实现访问控制自动化 [51]。
+
+尽管取得了进展，但针对 IoT–ML 定制的内生安全框架仍不完善，需要迫切的研究关注。
+
+### 24.6.4 未来趋势：AI 驱动的 IoT、可解释的 ML 和绿色计算
+
+随着领域的发展，若干变革性趋势正在形成势头。
+
+#### 24.6.4.1 AI 驱动的 IoT
+
+AI 与 IoT 的融合形成单一概念，即 AI 驱动的 IoT（AIoT），它愿景了一个智能、自优化的设备网络。这涉及到：
+
+1. 从上下文学习的设备。
+2. 协作多智能体系统。
+3. 跨传感器集群的实时决策 [52]。
+
+AIoT 正在驱动自主系统的创新，如送货无人机、机器人农场和自适应智能建筑。
+
+#### 24.6.4.2 可解释的 ML
+
+随着 ML 模型变得越来越复杂，特别是在安全关键领域，解释性变得至关重要。诸如 SHapley 加性解释（SHAP）和局部可解释模型无关解释（LIME）等工具被用于：
+
+1. 可视化模型决策边界。
+2. 检测偏见或故障点。
+3. 确保符合欧盟（EU）的“解释权”等法规规定 [53]。
+
+将可解释 AI（XAI）集成到 IoT–ML 中将提高自主系统的信任度、采用率和问责制。
+
+#### 24.6.4.3 绿色计算
+
+面对气候担忧和 IoT 设备受限的电量，能源效率至关重要。绿色 AI 研究侧重于：
+
+1. 碳感知模型训练。
+2. 边缘设备优化。
+3. 减少浪费的模型生命周期管理 [54]。
+
+向可持续 AI 发展的运动与嵌入式系统的低功耗需求高度契合。
+
+### 24.6.5 研究方向与开放挑战
+
+为了弥补差距并充分利用 IoT–ML 的潜力，未来的研究应考虑以下方面：
+
+1. 联邦学习与持续学习：设计具有韧性的学习算法，在保护隐私的同时适应不断变化的数据分布。
+2. 鲁棒性与安全性测试：开发仿真环境以测试对抗攻击，并设计具有形式化保证的 ML 模型。
+3. 边缘 AI 硬件协同设计：联合优化硬件和模型设计，以满足延迟、能耗和准确性目标。
+4. 多模态传感器融合：使用基于注意力的模型结合视觉、声学、触觉和上下文数据以实现情感知。
+5. 伦理治理：提出政策层面的指南，以监管数据收集和 ML 部署，特别是在医疗和国防领域。
+
+## 结论
+
+IoT 与 ML 的融合代表了数字系统感知、处理和响应现实世界数据的方式深刻变革。本研究探索了 IoT-ML 集成的动态演变，从其基础原理和早期技术，到边缘计算、联邦学习（FL）和实时决策的出现。IoT-ML 系统正在从静态的、特定领域的解决方案演变为通用且可扩展的平台。然而，实现这一愿景不仅需要技术的进步，还需要统一的标准化、跨学科协作以及基于伦理的设计。随着工业界和研究人员接受这种融合，IoT–ML 将成为下一代智能环境的核心，为可持续且响应的数字生态系统铺平道路。
+
+## 参考文献
+
+1. J. Gubbi, R. Buyya, S. Marusic, and M. Palaniswami, “Internet of Things (IoT): A vision, architectural elements, and future directions,” Future Gener. Comput. Syst., vol. 29, no. 7, pp. 1645–1660, 2013.](#ch32.xhtml#r721)
+2. M. Chen, S. Mao, and Y. Liu, “Big data: A survey,” Mob. Netw. Appl., vol. 19, pp. 171–209, 2014.](#ch32.xhtml#r722)
+3. V. Dankan Gowda, P. Damacharla, V. Maddineni, and V. A. K. Gummadi, “Deep learning approaches for real-time IoT data processing and analysis,” in 2024 5th International Conference on Smart Electronics and Communication (ICOSEC), Trichy, India, IEEE, pp. 757–764, Sep. 2024. doi: 10.1109/ICOSEC61587.2024.1072226](#ch32.xhtml#r723)
+5. S. Han, S. Mao, and W. J. Dally, “Deep compression: Compressing deep neural networks with pruning, trained quantization and huffman coding,” ArXiv Preprint. ArXiv15100049, 2015.](#ch32.xhtml#r724)
+
+
+
+5. S. Karimullah, M. Khan, F. Shaik, B. Alabduallah, and A. Almjally, “An integrated method for detecting lung cancer via CT scanning via optimization, deep learning, and IoT data transmission,” `Front. Oncol.`, vol. 14, p. 1435041, 2024. doi: `10.3389/fonc.2024.1435041`](#ch32.xhtml#r725)
+
+6. S. R. Islam, D. Kwak, M. H. Kabir, M. Hossain, and K.-S. Kwak, “The Internet of Things for health care: A comprehensive survey,” `IEEE Access`, vol. 3, pp. 678–708, 2015.](#ch32.xhtml#r726)
+
+7. A. Zanella, N. Bui, A. Castellani, L. Vangelista, and M. Zorzi, “Internet of Things for smart cities,” `IEEE Internet Things J.`, vol. 1, no. 1, pp. 22–32, 2014.](#ch32.xhtml#r727)
+
+8. A. Mahmood, N. Javaid, and S. Razzaq, “A review of wireless communications for smart grid,” `Renew. Sustain. Rev.`, vol. 41, pp. 248–260, 2015.](#ch32.xhtml#r728)
+
+9. N. Bui and M. Zorzi, “Health care applications: A solution based on the internet of things,” in Presented at the Proceedings of the 4th International Symposium on Applied Sciences in Biomedical and Communication Technologies, 2011, pp. 1–5.](#ch32.xhtml#r729)
+
+10. A. A. Diro and N. Chilamkurti, “Distributed attack detection using deep learning approach for Internet of Things,” `Future Gener. Comput. Syst.`, vol. 82, pp. 761–768, 2018.](#ch32.xhtml#r730)
+
+11. D. Kang, J. Emmons, F. Abuzaid, P. Bailis, and M. Zaharia, “Noscope: Optimizing neural network queries over video at scale,” `ArXiv Preprint. ArXiv17030252`, 2017.](#ch32.xhtml#r731)
+
+12. A. G. Howard, “Mobilenets: Efficient convolutional neural networks for mobile vision,” `ArXiv Preprint. ArXiv17040861`, 2017.](#ch32.xhtml#r732)
+
+13. S. Han, J. Pool, J. Tran, and W. Dally, “Learning both weights and connections for efficient neural network,” `Adv. Neural Inf. Process. Syst.`, vol. 28, 1-10 2015.](#ch32.xhtml#r733)
+
+14. B. McMahan, E. Moore, D. Ramage, S. Hampson, and B. A. y Arcas, “Communication-efficient learning of deep networks from decentralized data,” in Presented at the Artificial Intelligence and Statistics, PMLR, IEEE, pp. 1273–1282, 2017.](#ch32.xhtml#r734)
+
+15. H.-I. Liu et al., “Lightweight deep learning for resource-constrained environments: A survey,” `ACM Comput. Surv.`, vol. 56, no. 10, pp. 1–42, 2024.](#ch32.xhtml#r735)
+
+16. N. D. Lane et al., “Deepx: A software accelerator for low-power deep learning inference on mobile devices,” in Presented at the 2016 15th ACM/IEEE International Conference on Information Processing in Sensor Networks (IPSN), IEEE, pp. 1–12, 2016.](#ch32.xhtml#r736)
+
+17. P. Warden and D. Situnayake, `Tinyml: Machine Learning with Tensorflow Lite on Arduino and Ultra-Low-Power Microcontrollers`. O’Reilly Media, 2019.](#ch32.xhtml#r737b)
+
+18. T. Rausch, W. Hummer, V. Muthusamy, A. Rashed, and S. Dustdar, “Towards a serverless platform for edge {AI},” in Presented at the 2nd USENIX Workshop on Hot Topics in Edge Computing (HotEdge 19), IEEE, 2019.](#ch32.xhtml#r738b)
+
+19. P. Rajpurkar, A. Y. Hannun, M. Haghpanahi, C. Bourn, and A. Y. Ng, “Cardiologist-level arrhythmia detection with convolutional neural networks,” `ArXiv Preprint. ArXiv170701836`, 2017.](#ch32.xhtml#r739b)
+
+20. W. Shi, J. Cao, Q. Zhang, Y. Li, and L. Xu, “Edge computing: Vision and challenges,” `IEEE Internet Things J.`, vol. 3, no. 5, pp. 637–646, 2016.](#ch32.xhtml#r740b)
+
+21. K. Bonawitz et al., “Towards federated learning at scale: System design,” `Proc. Mach. Learn. Syst.`, vol. 1, pp. 374–388, 2019.](#ch32.xhtml#r741b)
+
+22. P. Kairouz et al., “Advances and open problems in federated learning,” `Found. Trends® Mach. Learn.`, vol. 14, no. 1–2, pp. 1–210, 2021.](#ch32.xhtml#r742b)
+
+23. M. Khan et al. “Enhancing breast cancer detection through optimized thermal image analysis using PRMS-Net deep learning approach,” `J Digit Imaging. Inform. Med.`, vol. 1, pp. 34–46, 2025. `doi.org/10.1007/s10278-025-01465-y`
+
+24. Y. Cheng, D. Wang, P. Zhou, and T. Zhang, “A survey of model compression and acceleration for deep neural networks,” `ArXiv Preprint. ArXiv171009282`, 2017.](#ch32.xhtml#r744b)
+
+25. Y. Tace, M. Tabaa, S. Elfilali, C. Leghris, H. Bensag, and E. Renault, “Smart irrigation system based on IoT and machine learning,” `Energy Rep.`, vol. 8, pp. 1025–1036, 2022.](#ch32.xhtml#r745b)
+
+26. T. Taleb, K. Samdanis, B. Mada, H. Flinck, S. Dutta, and D. Sabella, “On multi-access edge computing: A survey of the emerging 5G network edge cloud architecture and orchestration,” `IEEE Commun. Surv. Tutor.`, vol. 19, no. 3, pp. 1657–1681, 2017.](#ch32.xhtml#r746b)
+
+27. W. Saad, M. Bennis, and M. Chen, “A vision of 6G wireless systems: Applications, trends, technologies, and open research problems,” `IEEE Netw.`, vol. 34, no. 3, pp. 134–142, 2019.](#ch32.xhtml#r747b)
+
+28. J.-Q. Li, F. R. Yu, G. Deng, C. Luo, Z. Ming, and Q. Yan, “Industrial internet: A survey on the enabling technologies, applications, and challenges,” `IEEE Commun. Surv. Tutor.`, vol. 19, no. 3, pp. 1504–1526, 2017.](#ch32.xhtml#r748b)
+
+29. O. Y. Al-Jarrah, P. D. Yoo, S. Muhaidat, G. K. Karagiannidis, and K. Taha, “Efficient machine learning for big data: A review,” `Big Data Res.`, vol. 2, no. 3, pp. 87–93, 2015.](#ch32.xhtml#r749b)
+
+30. Y. Liu, Y. Zhou, K. Yang, and X. Wang, “Unsupervised deep learning for IoT time series,” `IEEE Internet Things J.`, vol. 10, no. 16, pp. 14285–14306, 2023. doi: `10.1109/JIOT.2023.32439`](#ch32.xhtml#r750b)
+
+31. G. Serale, M. Fiorentini, A. Capozzoli, D. Bernardini, and A. Bemporad, “Model predictive control (MPC) for enhancing building and HVAC system efficiency: Problem formulation, applications and opportunities,” `Energies`, vol. 11, no. 3, p. 631, 2018. doi: `10.3390/en1103061`](#ch32.xhtml#r751b)
+
+32. F. AlMahamid and K. Grolinger, “Autonomous unmanned vehicle navigation using reinforcement learning: A systematic review,” `Eng. Appl. Artif. Intell.`, vol. 115, p. 105321, 2022. doi: `10.1016/j.engappai.2022.105321`](#ch32.xhtml#r752b)
+
+33. E. Van der Pol and F. A. Oliehoek, “Coordinated deep reinforcement learners for traffic light control,” `Proc. Learn. Inference Multi-Agent Syst. NIPS`, vol. 8, pp. 21–38, 2016.](#ch32.xhtml#r753b)
+
+34. M. Ahmed, A. N. Mahmood, and J. Hu, “A survey of network anomaly detection,” `J. Netw. Comput. Appl.`, vol. 60, pp. 19–31, 2016.](#ch32.xhtml#r754b)
+
+35. C. Yin, Y. Zhu, J. Fei, and X. He, “A deep learning approach for intrusion detection using recurrent neural networks,” `IEEE Access`, vol. 5, pp. 21954–21961, 2017.](#ch32.xhtml#r755b)
+
+36. J. Lee, B. Bagheri, and H.-A. Kao, “A cyber–physical systems architecture for Industry 4.0-based manufacturing systems,” `Manuf. Lett.`, vol. 3, pp. 18–23, 2015.](#ch32.xhtml#r756b)
+
+37. M. Schuld, I. Sinayskiy, and F. Petruccione, “An introduction to quantum machine learning,” `Contemp. Phys.`, vol. 56, no. 2, pp. 172–185, 2015.](#ch32.xhtml#r757b)
+
+38. J. Biamonte, P. Wittek, N. Pancotti, P. Rebentrost, N. Wiebe, and S. Lloyd, “Quantum machine learning,” `Nature`, vol. 549, no. 7671, pp. 195–202, 2017.](#ch32.xhtml#r758b)
+
+39. A. Dorri, S. S. Kanhere, R. Jurdak, and P. Gauravaram, “Blockchain for IoT security and privacy: The case study of a smart home,” in Presented at the 2017 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops), IEEE, pp. 618–623, 2017.](#ch32.xhtml#r759b)
+
+40. J. Huang et al., “Deep reinforcement learning-based dynamic reconfiguration planning for digital twin-driven smart manufacturing systems with reconfigurable machine tools,” `IEEE Trans. Ind. Inform.`, pp. 1–12, 2024.](#ch32.xhtml#r760b)
+
+41. A. Y. Hannun et al., “Cardiologist-level arrhythmia detection and classification in ambulatory electrocardiograms using a deep neural network,” `Nat. Med.`, vol. 25, no. 1, pp. 65–69, 2019.](#ch32.xhtml#r761b)
+
+42. F.-Y. Cheng et al., “Using machine learning to predict ICU transfer in hospitalized COVID-19 patients,” `J. Clin. Med.`, vol. 9, no. 6, p. 1668, 2020.](#ch32.xhtml#r762b)
+
+
+
+* 510.43.A. Pires, G. Martinho, and N.-B. Chang, “Solid waste management in European countries: A review of systems analysis techniques,” `J. Environ. Manage.`, vol. 92, no. 4, pp. 1033–1050, 2011.](#ch32.xhtml#r763b)
+
+* 44.R. Kondaveti, A. Reddy, and S. Palabtla, “Smart irrigation system using machine learning and IOT,” in Presented at the 2019 International Conference on IOT, IEEE, pp. 1–11, 2019.](#ch32.xhtml#r764b)
+
+* 45.A. Kamilaris and F. X. Prenaf-Boldú, “Deep learning in agriculture: A survey,” `Comput. Electron.`, vol. 147, pp. 70–90, 2018.](#ch32.xhtml#r765b)
+
+* 46.T. Ahmad and H. Chen, “Short and medium-term forecasting of cooling and heating demand in building environment with data-mining based approaches,” `Energy Build.`, vol. 166, pp. 460–476, 2018.](#ch32.xhtml#r766b)
+
+* 47.J. Kwac, J. Flora, and R. Rajopal, “Household energy consumption segmentation using hourly data,” `IEEE Trans. Smart Grid`, vol. 5, no. 1, pp. 420–430, 2014.](#ch32.xhtml#r767b)
+
+* 48.L. Yu et al., “Deep reinforcement learning for smart home energy management,” `IEEE Internet Things J.`, vol. 7, no. 4, pp. 2751–2762, 2019.](#ch32.xhtml#r768b)
+
+* 49.G. Fortino et al., “Towards multi-layer interoperability of heterogeneous IoT platforms: The INTER-IoT approach,” `Integr. Interconnect. Interoperability IoT Syst.`, vol. 1, pp. 199–232, 2018.](#ch32.xhtml#r769b)
+
+* 50.J. Chen and X. Ran, “Deep learning with edge computing: A review,” `Proc. IEEE`, vol. 107, no. 8, pp. 1655–1674, 2019.](#ch32.xhtml#r770b)
+
+* 51.P. K. Sharma and J. H. Park, “Blockchain based hybrid network architecture for the smart city,” `Future Gen. Comput. Syst.`, vol. 86, pp. 650–655, 2018.](#ch32.xhtml#r771b)
+
+* 52.O. Etzion, “When artificial intelligence meets the internet of things,” in Presented at the Proceedings of the 9th ACM International Conference on Distributed Event-Based Systems, IEEE, pp. 246–246, 2015.](#ch32.xhtml#r772b)
+
+* 53.M. T. Ribeiro, S. Singh, and C. Guestrin, “‘Why should i trust you?’ Explaining the predictions of any classifier,” Presented at the Proceedings of the 22^(nd) ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pp. 1135–1144, 2016.
+
+* 54.E. Strubell, A. Ganesh, and A. McCallum, “Energy and policy considerations for modern deep learning research,” Presented at the Proceedings of the AAAI Conference on Artificial Intelligence, IEEE, pp. 13693–13696, 2020.
+
+# 511.索引
+
+## A
+
+* AI 中的问责制, 167
+
+* 准确率（AI 模型）, 46
+
+    * 挑战, 317
+
+    * 医疗信息, 197
+
+    * 改进（ML 模型）, 30
+
+* 可操作的洞察, 190, 206, 207
+
+* 激活算法, 198
+
+* 活性炭过滤器, 182
+
+* 生物质产生的活性炭, 176, 180
+
+* 执行器, 8
+
+* 自适应自动化, 55
+
+* 自适应决策, 46
+
+* 自适应占空比机制, 197
+
+* 自适应能量管理（DRL）, 25
+
+* 自适应过滤系统, 190
+
+* 自适应自学习 IoT, 41
+
+* 自适应系统, 175
+
+* 自适应交通控制系统, 38
+
+* 地址欺骗, 21
+
+* 优势演员-评论算法（A2C）, 31
+
+* 持续发展课程中的情感/情绪, 452–453
+
+* Alexa（亚马逊）, 9
+
+* AlexNet, 25
+
+* 锚点框/边界框, 466
+
+* 动物检测/实时监控, 462
+
+* 以人为中心的世界观/现代环境危机, 456
+
+* 应用层, 44
+
+* 苹果智能手表, 9
+
+* 心律失常检测, 420, 421
+
+* 人工智能（AI）, 1, 19, 55
+
+    * 算法偏差, 44
+
+    * 算法标准化, 169
+
+    * 辅助输出生成, 319, 321
+
+    * 自动化特征工程, 2
+
+    * 自主驾驶, 161
+
+    * IoT 骨干, 169
+
+    * 动物入侵检测, 463
+
+    * 异常检测, 38
+
+    * 无人商店/Amazon Go, 409
+
+    * 气候控制/荷兰, 408
+
+    * 决策, 44
+
+    * 驱动自动化, 399
+
+    * 癌症早期诊断, 402
+
+    * 诊断工具, 163
+
+    * IoT 解决方案, 36, 38
+
+    * 智能助手, 41
+
+    * 能量消耗, 158
+
+    * 可解释性（XAI）, 44
+
+    * 手势识别, 317, 319
+
+    * 集成, 328
+
+    * 与 IoT 集成, 170
+
+    * 贷款审批, 167
+
+    * 农业中的 ML, 406
+
+    * 与 ML 层, 42
+
+    * 图像处理, 25
+
+    * IoT 生态系统, 36
+
+    * 害虫和疾病检测, 408
+
+    * 远程监控（RPM）, 402
+
+    * 资源效率, 170
+
+    * 智能控制, 27
+
+    * 预测分析, 169
+
+    * 过程优化, 165
+
+    * 安全解决方案, 20
+
+    * 安全漏洞, 167
+
+    * 金融中的技术, 2
+
+    * 垃圾收集, 158
+
+* 自动化, 1
+
+    * 决策（IoT）, 29
+
+    * 诊断（医疗）, 36
+
+    * 家电, 9
+
+    * IoT, 60
+
+    * 任务自动化, 8
+
+## B
+
+* 反冲洗机制, 190
+
+* 带宽消耗, 210
+
+* 带宽减少, 60
+
+* 电池和电容, 183
+
+* 电池和逆变器, 185
+
+* 耗耗（DL 推理）, 27
+
+* 电池寿命增强（IoT）, 29
+
+* 电池存储/能量存储解决方案, 387
+
+* BERT（Transformer NLP）, 46
+
+* 婆罗华漫歌》 443
+
+* AI IoT 中的偏差与公平, 41
+
+* 偏差检测方法, 167
+
+* 偏差缓解技术, 44
+
+* Transformer 双向编码器表示（BERT）, 441, 448
+
+* 双向长短期记忆（Bi-LSTM), 351
+
+* 大数据分析, 1
+
+* 大数据管理（优化）, 30
+
+* 大数据预测分析, 201
+
+* 大数据处理（IoT）, 27
+
+* BiLSTM (GLMS-BiLSTM), 25
+
+* 512.基于生物的过滤水净化系统, 179
+
+* 生物过滤系统, 182, 189
+
+* 生化模拟, 3
+
+* 生物降解组件, 190
+
+* 生物降解过滤介质, 180
+
+* 生物膜, 176
+
+* 生物过滤过程, 182
+
+* 生物指标监控, 178
+
+* 生物特征个性化医疗, 443
+
+* 黑箱问题, 167
+
+* IoT 中的蜂鸣器, 463
+
+* 阻塞检测, 176
+
+* 基于区块链的数据管理, 167
+
+* 区块链计算, 2
+
+* 区块链数据安全, 212
+
+* 区块链防欺诈, 2
+
+* 区块链技术, 1
+
+* 血氧饱和度监控, 204
+
+* 血压数据保护, 212
+
+* 血压监控, 208
+
+* 蓝牙, 213
+
+* 虚假健康信息, 212
+
+* 建筑能量消耗（欧盟）, 25
+
+## C
+
+* 自动驾驶汽车中的摄像头, 161
+
+* 碳足迹减少, 162, 178
+
+* 无碳环境, 170
+
+* 案例研究
+
+    * Amazon Go, 409
+
+    * 巴塞罗纳 AI 交通管理, 402
+
+    * 印度基于 IoT 精准农业, 406
+
+    * 智能农业/荷兰, 408
+
+* CCPA 合规, 202
+
+* 化学需氧（COD）去除, 177
+
+* 芝加哥 CityNext 计划, 9
+
+* 循环经济，170
+
+* 市民生活环境改善，9
+
+* 气候预测/长期预测，479
+
+* 封闭式荷兰式温室，408
+
+* 云端 AI 服务，167, 169
+
+* 云端 IoT 模型，406
+
+* 云计算，1, 8, 42
+
+* 云数据转发，205
+
+* 云边边缘服务器，44
+
+* 云服务器负载削减，207
+
+* 基于聚的聚合，210–213
+
+* 簇头/聚合器设备，209
+
+* 聚类算法 (K-means)，37, 197
+
+* 聚类技术，20
+
+* 簇节点 (CLs)，210
+
+    * 节点职责，209
+
+* 椰壳土和珍珠岩比例，177
+
+* 协作与互操作性，169
+
+* 集体入侵检测系统 (CIDS)，25
+
+* 消费者与公用事业供应商之间的通信，158
+
+* 通信成本降低，205
+
+* 通信开销 (IoT 网络)，29
+
+* 通信浪费减少，209
+
+* 计算需求，55
+
+* 计算效率，44
+
+* 计算智能，2
+
+* IoT 网络中的数据聚合概念，205
+
+* 医疗保健中的连接设备，198
+
+* 一致性正则化，21
+
+* 一致性验证（数据），1
+
+* 污染物检测，179
+
+* 污染物水平，176
+
+* 针对特定污染物的材料选择，180
+
+* 连续负载电子设备，183
+
+* 持续运行，185, 190
+
+* 持续安全更新，167
+
+* 进级控制算法，186
+
+* 卷积神经网络 (CNN),25, 27, 44, 46, 237, 316, 317, 328, 330, 349, 354, 420–424, 462, 466
+
+* 制冷加热能源消耗，25
+
+* 冠状动脉检测/诊断，420, 421
+
+* CO₂ 传感器，406
+
+* 宇宙周期/环境互联性，456
+
+* 数据成本效益，207
+
+* 成本效益，176, 197, 190
+
+    * IoT 系统中的，197
+
+* 物理攻击 (CCPA)，238
+
+* 物理医疗支持系统 (CHSSs)，200
+
+* 物理生产系统 (CPPS)，237
+
+* 网络安全
+
+    * 框架，167
+
+    * IoT 中的，31
+
+    * 用于 SCADA 的措施，238
+
+    * AVs 中的威胁，46, 161
+
+* 仪表板和图形界面，201
+
+* 数据采集
+
+    * 积累，205
+
+    * 通过 IoT 分析，182
+
+    * IoT 传感器，42
+
+* 数据聚合方法，60, 197
+
+    * IoT 中的，205
+
+* 数据分析，381
+
+* 数据分析学 (IoT)，8
+
+* 数据增强，21
+
+* 513. 数据清洗，42
+
+    * 和归一化，201
+
+* 数据收集，379, 444
+
+    * 层，42
+
+    * 监控和智能决策，198
+
+    * 源，205
+
+* 数据压缩技术，197, 210
+
+* 数据机密性，197
+
+* 数据驱动农业，1
+
+* 数据驱动决策，1
+
+* 数据驱动洞察，204
+
+    * 簇中的，209
+
+* 数据过滤，197, 201, 209
+
+* 数据格式不一致，504, 505
+
+* 数据融合，207
+
+* 数据治理，167
+
+* 数据异质性 (IoT)，19
+
+* 数据集成，206
+
+* 数据完整性，197, 212
+
+* 数据湖，367
+
+* 数据管理，55
+
+* 数据网络和通信格式，198
+
+* 数据归一化，42
+
+* 数据预处理层，42
+
+* 数据处理，201
+
+    * 频率，211
+
+* 数据质量与可用性，237, 205
+
+* 数据保护过程，202
+
+* 数据注册，381
+
+* 数据重放攻击 (DRA)，237
+
+* 数据安全和隐私问题，212
+
+* 数据传感、传输、处理，383
+
+* 数据共享，195
+
+* 数据存储，364
+
+* 数据汇总，60, 197
+
+* 数据转换，379
+
+* 数据保护，202
+
+* 医疗保健中的类型，206
+
+* 去中心化 IoT 应用，29
+
+* 去中心化机器学习，60
+
+* 决策，1
+
+    * 层，42
+
+    * 实时，8
+
+* 决策规则，351, 352
+
+* 决策透明性，44
+
+* 决策树 (DT)，237, 223, 330
+
+* 深度学习，1, 19, 237, 316, 317, 319, 330, 349, 351, 420–424, 462, 466
+
+    * 优势，27
+
+    * 算法透明度，25, 167
+
+    * 基于心脏的诊断，421
+
+    * 挑战，27
+
+    * 嵌入式系统，462
+
+    * IoT 中的，2
+
+    * 基于优化的诊断，420–424
+
+* 深度心智能源优化，27
+
+* 缺陷检测，165
+
+    * 剥落、钢筋暴露，25
+
+* 森林砍伐，441
+
+* 去中心化计算，210
+
+* 需求预测/负载均衡，504
+
+* 拒绝服务攻击 (DoS)，237
+
+    * 攻击，195
+
+* 电池耗尽导致的设备故障，212
+
+* 设备聚类标准，209
+
+* 设备通信，169
+
+* 设备或网络崩溃，195
+
+* 法（正义义务）与环境，448
+
+* 诊断准确性，204
+
+* 诊断错误，195
+
+* 诊断图像和视频，201
+
+* 数字艺术创作，328
+
+* 数字手写识别，330
+
+* 数字素描，316
+
+* 数字签名，197
+
+* 数字证书，202
+
+* 灾难级/悲伤，452, 453
+
+* 疾病早期检测，36
+
+* 疾病识别，2
+
+* 分布式数据处理，211
+
+* 分布式处理，198
+
+* 丢弃层，354
+
+* 动态内容生成，316
+
+* 动态能量调整，183
+
+* 动态能量分配，186
+
+* 动态环境，317
+
+* 动态功率分配，185
+
+* 动态交通灯定时控制，161
+
+## E
+
+* 早期状况检测，163
+
+* 恶意节点早期检测，197
+
+* 早期问题早期检测，186
+
+* 早期干预，208
+
+    * 支持，201
+
+* 生态系统保护，170
+
+* 生态系统健康，190
+
+* 生态系统修复，190
+
+* 边缘 AI，27, 55
+
+    * 部署，46
+
+* 边缘计算，41, 44, 169, 197, 213
+
+    * 智能城市，169
+
+* 边缘处理（IoT），42
+
+* 教育应用，316
+
+* 效率提升，8
+
+* 514.性能与可靠性监控，175, 185
+
+* 高效数据聚合，195
+
+* 高效系统运行，169
+
+* 电动汽车 (EVs)，162
+
+* 椭圆曲线 (ECC)，197
+
+* 紧急警报系统，210
+
+* 紧急医疗状况，208
+
+* 紧急通知，206
+
+* 紧急响应优化，207
+
+* 端到端加密，167
+
+* 端反馈与测试，203
+
+* 节约，158
+
+* 能量消耗，197
+
+    * IoT 设备，197
+
+* 能量计算，183
+
+* 能量分配系统，185, 186
+
+* 能量效率，
+
+    * 建筑，25
+
+    * IoT 设备，29, 210
+
+    * 水利系统，175
+
+* 能量负载均衡，185
+
+* 能量管理 (RL)，38
+
+* 能量优化（制造），24
+
+* 能量生产数据，186
+
+* 能量节省，190
+
+* 能量安全，190
+
+* 能量短缺机制，186
+
+* 能量同步，186
+
+* 能量利用优化，190
+
+    * 存储分配系统，185
+
+    * 限制性，158
+
+    * 解决方案，179
+
+* 环境变化监控，178
+
+* 环境条件
+
+    * 适应，190
+
+    * 监控，182
+
+* 环境退化，175
+
+* 环境因素分析，163
+
+* 环境影响分析 (EIA)，180, 190
+
+* 环境监控，37, 158, 170, 175
+
+* 伦理 AI 框架，167
+
+* 伦理关注 (AI),44
+
+* AI 决策的伦理影响，167
+
+* 演化算法 (EAs),29
+
+
+
+# 演化模型，19
+
+## F
+
+- 面脸/面部识别技术，415
+- 人脸识别（智能家居），41
+- 跌倒检测，163
+- 故障诊断与检测，37
+- 容错优化，19
+- 特征工程，60
+- 特征提取，349, 354, 424, 425
+  - IoT 数据，42
+- 特征相关性评分，223
+- 联邦学习 (FL)，21, 24, 37, 46, 55, 60
+- 反馈机制，321
+- 鼠尾狐优化，25
+- 胎儿心电图 (fECG)，334, 340
+- 财务检测，2
+- 固定医疗放置，352
+- 流量设施，200
+- 流量调整，175
+- 流量控制，189
+- 流量监控，186
+- 流量优化，182
+- 波动环境条件，185
+- 流量评分，44
+- 食品安全，381
+- 森林与农业，456
+- 欺诈检测 (SSL)，1, 24
+- 燃油消耗降低，161
+- 绿墙过滤系统，177, 179, 183
+- 绿水处理方案，186
+- 电网稳定性，158
+
+# H
+
+- Haar 级联分类，330
+  - 特征，317
+- 手部检测，321
+- 手势控制，330
+- 手势识别，317, 319, 321, 328
+  - 数据库 (HGRD)，328
+- 手部追踪，316
+- 生态灵性中的幸福/快乐，453
+- 危险检测，165
+- 医疗健康应用，1
+- 医疗物联网系统，9, 399, 402
+- 心率估计，349, 352, 354
+- 用于物联网的分层半监督生成网络 (HSGAN-IoT)，21, 24
+- 高带宽通信，169
+- 高计算需求（深度学习），27
+- 高数据吞吐量，200
+- 高能耗（物联网），27
+- 高能量密度，183
+- 高过滤效率，190
+- 高完整性分段，352
+- 高质量/低质量 PPG 分段，354
+- 高质量信号分段，349
+- 高速数据传输，200
+- 历史与实时流量数据，161, 201
+- 历史数据分析（AI/ML），37
+- 家庭健康监测系统，210
+- 人机交互 (HCI)，321
+- 人机回环决策，167
+- 人机交互，42
+- 混合 AI 模型，2
+- 混合能源系统，179
+- 混合入侵检测模型，25
+- 混合 ML 模型，2
+- 混合可再生能源系统，178, 179, 185
+
+# I
+
+- ICU 数据聚合，209
+- ICU 入院预测，501
+- 异常趋势检测，1
+- 异常趋势识别，2
+- 即时告警，204
+- 即时决策，169
+- 植入式医疗设备，200
+- 系统效率提升，207
+- 医疗服务可用性增加，205
+- 客户特定性增强，198
+- 吞吐量增加，210
+- 工业自动化 (IoT)，20
+- 工业效率，165
+- 工业物联网 (IIoT)，41
+- 职场所安全，165
+- 推理时间，46
+- 信息处理（量子），3
+- 知情决策，176, 201, 204
+- 输入捕获，319
+- 无缝集成，1
+- 集成挑战，213
+- 软硬件集成，198
+- 与电子健康记录 (EHR) 集成，200
+- 智能自动化，19
+- 智能城市（华为），9
+- 绿过滤系统中的智能设备，183
+- 智能物联网系统，19
+- 智能监控系统，176, 185
+- 智能公共交通系统，162
+- 交互式应用，330
+- 交互式工具，328
+- 接口，203
+- 物联网 (IoT)，1, 9, 19, 55, 330, 334, 361, 364, 367, 406, 407, 408, 399, 402, 414
+  - 分析，8
+  - 基于急救服务 (EMS)，402
+  - 基于传感器，158, 161
+  - 基于垃圾管理，158
+  - 基于可穿戴设备，46
+  - 分类挑战，21
+  - 数据敏感性，19
+  - 设备分组，209
+  - 设备集成，238
+  - 设备预处理，207
+  - 设备安全，2
+  - 设备标准化，169
+  - 启用设备，183
+  - 启用能源管理系统，176, 180, 185, 190
+  - 启用远程管理，176
+  - 启用传感器，158, 165, 185, 189
+  - 启用智能箱/垃圾管理，387
+  - 医疗健康，9, 163, 205
+  - 工业，165
+  - 集成心率监测，321
+  - 集成医疗系统，399
+  - 集成农业，406
+  - 集成系统，408
+  - 集成实时数据，175
+  - 集成平台，201
+- 激光雷达 (LiDAR)，161
+- 生活因素分析，163
+- 照明
+  - 条件，317
+  - 通风、空调，368
+- 光传感器，406
+- 受控液体输送，181
+- 局部可解释模型无关模型解释 (LIME)，44
+- 局部极值问题，30
+- 局部模型训练，60
+- 长短期记忆网络 (LSTM)，27, 46, 223, 237, 317
+- LoRa，200, 213
+- LoRaWAN，367
+- 损失最小化，29
+- 低能成本，186
+- 低碳足迹，158
+- 低延迟通信，200
+- 低延迟网络，169
+- 低功耗设备，351
+- 低功耗 IoT 设备，197
+
+# M
+
+- 机器学习 (ML)，1, 2, 19, 55, 197, 238, 317, 330, 334, 361, 381, 399–408, 441, 492
+  - 采用，399
+  - 分析，177
+  - 应用，201
+  - 健康风险检测，501
+  - 在 IoT (2015–2019)，492
+  - 在安全领域，197
+- 维护活动触发，186
+- 通过智能系统维护，177
+- 恶意节点，195
+  - 检测，195, 197, 213
+  - 隔离，197
+- 孕心电图 (mECG)，334, 340
+- 平均绝对误差 (MAE)，354
+- 基于介质的手部追踪，317
+- MediaPipe，317, 319, 328
+  - 手，316
+- 医疗与健康应用，24
+- 医疗设备可用性，206
+- 医疗监护仪，195
+- 药物，163
+- 内存限制 (IoT)，29
+- 微生物燃料电池 (MFCs)，176
+- 微生物代谢，180
+- 微生物去除，182, 189
+- Microsoft FarmBeats，407
+- 小型化与便携性，177
+- 移动应用，203
+- 移动/嵌入式检测，463
+- 移动诊诊，201
+- MobileNet SSD/目标检测，462
+- MobileNetV2，321
+- 移动发电站，158
+- 移动性追踪，204
+- 监控交易，2
+- 监控系统，186
+  - 实时，8
+  - 运动追踪，163
+  - 多动作识别，328
+  - 多因素认证，167
+  - 多层系统，321
+  - 多层感知机 (MLP)，223
+  - 多级数据聚合，209
+  - 多分辨率分解，340
+  - 多尺度 CNN，351
+  - 多传感器输入，207
+  - 多源融合，424
+
+# N
+
+- 朴叶斯分类器，330
+- 命名实体识别 (NER)，21
+- 自然灾害，364
+- 自然酶促反应，180
+- 自然语言处理 (NLP)，46, 441
+  - 古印度文献，443
+  - 自然作为能量伙伴，448
+- 网络带宽优化，195
+- 网络瓶颈，197
+- 网络效率增强，210
+- 网络侦察，237
+- 网络资源优化，210
+- 网络威胁，197
+- 流速 (每个发射器 2–4 L/h)，182
+- 一化，319, 330, 352, 468
+- 通知与警报，203
+- 营养物质去除，177
+
+# O
+
+- 离网站点应用，185
+- One 热编码，60
+- 运营成本降低，180, 183, 190
+- 运营效率，176
+- 运营调整，186
+- 运营韧性，183
+- 光字符识别 (OCR)，330
+- 光流，317
+- 光传感，352, 354
+- 最优健康，175
+- 最优速度，185
+- 优化，19
+  - 能量优化，180
+  - 网络优化，210
+  - 增长优化，408
+  - 水资源优化，180
+- 优化带宽，207
+- 优化过滤，186
+- 有机物，189
+- 有机污染物，182
+- 整体区域算法 (OOA)，420–422
+- 群值检测，37
+- 整体影响，189
+- 整体用户满意度，203
+- 植物纤维，176, 180
+- 术后恢复，204
+- 功率分配优化，183
+- 功率调节设备，183
+- 功率效率，186
+- 功率独立性，190
+- 功率输出分析，185
+- 预测性分析，387, 402, 406
+  - 在医疗领域，163
+  - 物联网，38
+- 预测性诊断，201
+- 预测性维护，19, 25, 37, 46, 165, 176, 185, 409, 501
+  - 协议，186
+- 预测模型，158
+- 预测性流量分析，387
+- 预训练模型，316, 319, 321, 466
+- 预处理，319, 330, 352, 468
+- 主成分分析（PCA），37
+- AI 中的隐私考量，167
+- 隐私问题，212
+- 处理限制，195
+- 算艺优化，169
+- 脉率数据保护，212
+- 脉率测量，206
+- 脉搏传输时间（PTT），349
+
+## Q
+
+- QRS 波群检测，334, 340, 425
+- 制造业中的质量控制，165
+- 服务质量（QoS），361, 367
+- 质量标准合规，189
+- 量子算法，2
+- 量子辅助药物发现，2
+- 基因组学中的量子计算，2
+- 量子增强机器学习，2
+- 量子模拟，2
+
+## R
+
+- 雷达检测，462
+- 雨量传感器，406
+- 随机森林（RF），42, 46
+  - 算法，223
+  - 分类器，330
+- 快速决策，208
+- 额功率，185
+- 实时异常，237
+- 实时数据采集，186, 198
+- 实时数据传输，169, 177
+- 实时决策，19, 46, 55
+- 实时流率，182
+- 实时手势识别，317
+- 实时健康监测，210
+- 实时交互，316
+- 实时物联网处理，161
+- 实时监控，1, 176, 204, 208, 189
+  - 功率与水处理，183
+  - 跟踪，328, 362, 462
+- 实时患者监测，207, 210
+- 实时性能评估，186
+- 实时性能优化，185
+- 实时 PPG/ECG 监测，349, 352, 354
+- 实时系统性能评估，186
+- 实时远程会诊与远程诊断，200
+- 实时威胁监测，202
+- 循环神经网络（RNN），316, 351
+- 水的循环与重复利用，190
+- 减少通道负载，208
+- 减少化学排放，190
+- 减少停机时间，186
+- 减少地下水和地表水的提取，190
+- 减少治疗费用，205
+- 监管与道德责任，167
+- 监管合规，202
+  - 在医疗物联网中，163
+- 监管框架，161
+- 康复应用，316
+- 强化学习（RL），25, 27, 31, 38, 60
+- 可靠性提高，176
+- 联网的可靠性，202
+- 物联网的可靠性，195
+- 远程接入，238
+- 远程连接，186
+- 远程管理，200
+
+## S
+
+- 安全 AI，167
+- 奖励函数，60
+- RGB 颜色检测，328
+- 场景识别，161
+- 机器人辅助农业，406
+- 饱和度信号过滤，352
+- SCADA 系统/工业物联网，387
+- SCADA 漏洞，238
+- 扩展，60
+- 场景识别，328
+- 可扩展性与访问性，190
+- 可扩展性增强，209
+- 可扩展性问题，211, 213
+- 基于聚类的聚合可扩展性，210
+- 可扩展智能系统，169
+- 可扩展水系统，180
+- 安全物联网系统，19
+- 安全增强，1
+- 安全威胁检测（ML），36
+- 自洁过程，180
+- 传感器，8
+  - 数据集成，207
+  - 数据存储，209
+  - 基于物联网的传感器，364, 387, 406, 414
+  - 监控设备、控制器，183
+- 浅学习模型，330
+- 共享出行系统，162
+- 深圳智能城市，9
+- 智能农业，37
+- 智能垃圾桶/垃圾管理，387
+- 智能建筑（能源效率），27
+- 智能城市，169
+  - 应用，37
+  - 发展，19
+- 智能设备
+  - 云端架构，8
+  - 部署，169
+  - 性能，169
+- 智能能源管理系统，183
+- 智能绿色城市，170
+- 智能电网，158, 170, 238
+  - 管理，170
+  - 安全，167
+- 智能医疗保健系统，399–402
+- 智能头盔，165
+- 智能家居，169
+- 智能吸入器，200
+- 智能灌溉系统，406
+- 智能照明/通风/空调，368
+- 智能运营，175
+- 智能分药盒，200
+- 智能恒温器示例，203
+- 智能交通系统，402
+- 智能运输网络，161
+- 智能背心，165
+- 智能水务管理，177
+- 智能工作场所，169
+- Softmax 分类器，354
+- 发电软件测试 (`SWTs`)，185
+- 土壤健康增强，182
+- 太阳能能源整合，179
+- 水处理中的太阳能，178
+- 太阳能电池板，180, 183
+- 太阳能热系统，178
+- 太阳与风能间歇性，158
+- 空间滤波，340
+- 语音识别，328
+- 稳定电源供应，190
+- 利益相关者参与/环境教育，452
+- 统计分析，381
+- 统计数据表示，210
+- 步数，206
+- 可再生能源系统的存储解决方案，178
+- 结构状态监测，165
+- 叶片与塔架的结构完整性，185
+- 结构化数据流，201
+- 子载波分配/RSMA 系统，492
+- 监督学习，19, 330, 334
+- 悬浮固体去除，177, 182, 189
+- 可持续性，176
+  - 意识教育，452
+  - 增强，183
+  - 过滤系统，182
+  - 目标，190
+  - 灌溉中的应用，175
+- 可持续农业/精准耕作，406
+- 可持续生物基过滤，175
+- 可持续 IoT 设备使用，197
+- 可持续 IoT 医疗系统，198
+- 可持续材料，189
+- 可持续系统框架，180
+- 群体智能，420
+- 目标识别（药物发现），3
+- 远程医疗改进，36
+- 远程医疗系统，399–402
+- 遥测聚合，209
+- 温度监测，165, 176, 180
+- 时间一致性，201
+- `TensorFlow`/深度学习框架，328, 330
+- 温度传感器/温度控制，406
+- 吞吐量提升，46
+- 时频分析，340
+- `TinyML` 的异常检测 (`DLT`-`ADPM`)，25
+- 流量管理 (`RL`)，37
+- 流量预测/预报，387
+- 迁移学习，328, 330
+- `Transformers`/`NLP` 模型，441, 448
+- AI 中的透明度，167
+- 透明化政策与定期审计，198
+- 运输优化，161
+- 废水，190
+- 树种种类识别，24
+- 时间趋势分析，201
+- 无接触接口，317
+- 截断 `PPG` 信号，352
+- `TSVM`/混合分类，492
+- 双因子身份认证，202
+- 浊度测量，176
+- 浊度监测，179, 189
+- 涡轮机布局，186
+- `UAVs`/无人机监测，462
+- 未授权访问 (`IoT`)，36
+  - 预防，212
+  - 风险，195
+- 无标记数据，20
+- 非结构化数据处理，206
+- 非结构化或半结构化数据，201
+- 无监督学习，19, 20, 237, 330, 334
+- `UNSW-NB15` 数据集，223
+- 城市可持续性，452
+- 可用性与可访问性，8
+- 用户身份验证/访问控制，414
+- 用户同意与隐私，167
+- 用户体验 (`UX`)，203
+- 用户友好界面，180
+- 用户交互层，203
+- 变变天气适应，183
+- 植被监测，406
+- 职场伤害预防，165
+- 全球网计算资源，8
+
+## X
+
+- XGBoost 分类器，330
+- X 射线分析，163
+- X 射线图像分析，402
+
+## Y
+
+- 产量预测/精准农业，406–408
+- 用于环境意识的瑜伽/冥想，448–453
+- YOLO，317
+
+## Z
+
+- 零日威胁检测，414
+- Zigbee，213
+- Zigbee/无线物联网 通信，367
+- 基于区域的聚类，209
