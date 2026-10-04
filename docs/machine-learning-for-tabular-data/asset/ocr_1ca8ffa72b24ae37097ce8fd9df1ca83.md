@@ -1,0 +1,15 @@
+scene, helping you reduce the complexity of a linear model until it fits the problem.
+Regularization is a technique used to reduce overfitting in machine learning by limiting the complexity of the model, effectively improving its generalization performance.
+Regularization works because the linear regression model is penalized as it looks for the best coefficients for its predictions. Therefore, the regression model is incentivized to keep them as small as possible, if not to set them to zero. Constraining coefficients to limit their magnitude has two significant effects:
+
++   - It avoids any data memorization and overfitting (i.e., certain specific values to be taken when there is a large number of features compared to the available examples).
+- As coefficient shrinking happens, estimates are stabilized by multicolinear features will have the values of their coefficients resized or concentrated on one of the features.
+
+In the optimization process, coefficients are updated multiple times, and these steps are called iterations. At each step, each regression coefficient incorporates a correction toward its optimal value. The optimal value is determined by the gradient, which can be intended as a number representing the direction that greatly improves the coefficient at that step. A more detailed explanation closes this chapter. Penalization is a form of constraint that forces the weights deriving from the optimization of the model to have specific characteristics. We have two variants of regularization:
+
++   - The first variant is when the penalization is computed by summing the absolute values of the coefficients: this is called L1 regularization. It makes the coefficients sparse because it can push some coefficients to zero, making their related features irrelevant.
+- The second option is when the penalization is computed by summing the squared coefficients: this is called L2 regularization, and its effect is generally to reduce the size of the coefficients (it is also relatively fast to compute).
+
+L1 regularization (or Lasso regression) pushes many coefficients to zero values, operating an implicit selection of the useful features (setting a coefficient to zero means that a feature doesn't play any role in prediction). In addition, coefficients are always pushed toward zero with the same strength (the gradients towards the solution are all +1 or -1). Hence, the optimization steps, the features less associated with the target tend quickly to assign a zero coefficient and become totally irrelevant regarding the predictions. In short, if two or more features are multicolinear and each predictive, by applying L1 regularization, you will have only one of them with a coefficient different from zero.
+
+Instead, in L2 regularization (or Ridge regression), the fact that coefficients are squared prevents negative and positive values from canceling each other in the penalization and puts more weight on larger coefficients. The result is a set of generally smaller coefficients, and multicolinear features tend to have similar coefficient values. All the

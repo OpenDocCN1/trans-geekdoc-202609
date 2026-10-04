@@ -1,0 +1,16 @@
+# CHAPTER 5 Decision trees and gradient boosting
+
+A split happens based on a deliberate search of the algorithm features and, inside the feature, its observed values. As splitting criterion in a classification problem, the decision trees algorithm searches for the best feature and feature value combination that splits the data into subsets with a homogeneous target. The homogeneity of a target in a subset is typically measured in a classification problem using criteria such entropy, information gain, or Gini impurity:
+
++   - Entropy measures the degree of disorder or randomness in the distribution of labels.
+- Information gain, derived from entropy, measures the reduction in uncertainty about the class labels of the data, which is achieved by splitting the data based on a particular feature.
+- Gini impurity measures the probability of misclassifying a chosen element in the subset labeled randomly according to the distribution of labels in the subset.
+
+If the tree is used for regression, it resorts to different splitting criteria than classification. In regression, the goal is to split the data into subsets to minimize the mean squared error, the mean absolute error, or simplify the variance of the target variable within each subset. In the training process, there's an automatic selection of the best features, and most of the computations for a decision tree are to determine the best feature splits. However, once the tree is constructed, predicting the class label or target value for new data is relatively fast and straightforward, traversing the tree starting from the root and ending at the leaf based on the values of a limited set of features.
+
+Decision trees are simple to compute and are relatively easy to visualize. They don't require scaling or modeling nonlinearities or otherwise transforming your features or output target because they can approximate any nonlinear relationship between target and predictors since they can separate single parts of their distribution. Basically, they are cutting a curve into parts so that each looks like a line. On the other hand, decision trees are prone to overfitting and end up with an excessive number of splits that can fit the training data you are working on. Over time, different strategies have been devised to avoid overfitting:
+
++   - Limiting the number of splits in the tree
+- Pruning the splitting nodes backward after they have been built to reduce their overfitting
+
+Figure 5.2 shows a different perspective on a decision tree. Figure 5.1 visualizes a tree as a graph based on two features, while figure 5.2 visualizes a decision tree in terms of partitions of the data itself. Each split of the tree is a line in the chart, and are seven vertical lines (thus a result of binary conditions on the feature on the x-axis) and three horizontal ones (thus the feature on the y-axis) for a total of 10 splits. You can consider the decision tree a success because each class is well separated into its partitions (each partition is a terminal node in the end). However, by observation, it

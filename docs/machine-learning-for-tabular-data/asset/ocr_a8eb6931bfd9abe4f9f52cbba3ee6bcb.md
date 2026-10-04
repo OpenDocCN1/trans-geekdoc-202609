@@ -1,0 +1,15 @@
+# Selecting features
+
+In such cases, combining the numeric features by multiplying them will optimize your GDBT model faster and more effectively.
+
+# 6.2 Selecting features
+
+Feature selection is not always necessary. Still, when it is, it plays a vital role in identifying the most valuable features for training among the existing set of features, whether they derive directly from the data extraction or are the product of feature engineering work. By employing effective feature selection techniques, you can pinpoint and retain the most relevant features that contribute significantly to the learning process.
+
+In chapter 2, section 2.2.3, we discussed avoiding irrelevant and redundant deants based on your knowledge of the problem and exploratory data analysis. In the subsequent chapters, we discussed machine learning algorithms that handle irrelevant and redundant features.
+
+In classic machine learning, we have a large set of algorithms, including family of linear models, that are particularly susceptible to irrelevant and redundant features, reducing performance and accuracy. Uninformative and noisy features, deemed irrelevant because they lack a meaningful association with the target of the learning task, can cause significant changes for linear models. This is due to the possibility of random alignment between the feature values and the target, which can mislead the algorithm and assign undue importance to these features. Linear models utilize all the features provided, making them particularly vulnerable to the more noisy features there are, the more results will be degraded. Ensembles on decision trees are less affected by irrelevant and redundant features because they automatically select what features to use and ignore. This also happens with deep learning. Deep learning may not be as robust as decision tree ensemble methods when dealing with noisy or irrelevant features on tabular data. For optimal performance under such conditions, large amounts of data are required, as well as careful choice of architecture, such as using dropout, regularization, or batch normalization layers, and tuning of learning rates.
+
+Feature selection benefits classic machine learning algorithms such as linear models. However, it is also valuable in the case of decision tree-based ensembles and deep learning architectures, and it should not be ignored that it makes a learning process faster because of fewer columns to handle. By selecting the features before training, these complex algorithms can achieve improved clarity and explanation by distilling the most relevant and informative features and enabling a clearer understanding of the underlying patterns and relationships captured by the models. This simplification enhances interpretability and facilitates the communication of the algorithm’s decision-making process.
+
+In the following sections, we discuss and test few solutions that can work well, standalone or sequentially, to select only essential features for solving your tabular data problem with the best results. We discuss algorithms for figuring out both features
