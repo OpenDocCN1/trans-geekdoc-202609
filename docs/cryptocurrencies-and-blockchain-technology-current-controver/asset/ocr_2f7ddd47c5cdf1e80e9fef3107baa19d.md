@@ -1,0 +1,11 @@
+# Are Blockchain-Powered Cryptocurrencies Better than Hard Money?
+
+central bank could build up a stash of bitcoins that it could then funnel into the system, but that would do little good because people would know the stash was limited. And in any case, the central bank's demand for Bitcoin would drive up its price, which would make people more likely to hold onto it and be less willing to spend it—the opposite of what you want in a financial crisis.
+
+Bitcoin would also make it hard for governments to fight recessions, which they typically do by using what economists call countercyclical monetary and fiscal policy. Central banks slash interest rates, and—as the Federal Reserve did after the 2008 financial crisis—pump money into the system by buying assets (what's known as quantitative easing). And governments try to get the economy moving again by cutting taxes and increasing spending, typically paying for it by borrowing money, as with the Obama-era stimulus package.
+
+Here again, a Bitcoin economy would limit the government's options. Since the central bank would have no control over interest rates, and only a limited ability (depending on the size of its Bitcoin stash) to pour money into the economy. Fiscal policy, too, would be close to impotent. Today, when the government runs a deficit, it can have the Fed print money and then borrow that money from the Fed. That adds liquidity to the system. In the Bitcoin world, the government would have to borrow bitcoins to spend. And again, this would make bitcoins more valuable, making people less willing to spend them—the opposite of what you need to fight a recession.
+
+# But Don't Worry About It
+
+The good news is that it's an incredibly unlikely future. While the idea of making Bitcoin a universal currency may have impeccable logic to digital-age utopians, in practice it makes little sense. And the design of Bitcoin also makes it difficult to imagine. Since the supply of bitcoins is limited, if the demand for them rises, their value rises, too. But that means that if you own bitcoins, and you think they're going to become more popular, then the sensible thing

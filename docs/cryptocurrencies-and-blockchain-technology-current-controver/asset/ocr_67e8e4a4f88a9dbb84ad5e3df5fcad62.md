@@ -1,0 +1,11 @@
+# Cryptocurrencies and Blockchain Technology
+
+them confirmed and bundling them up into one block of transactions, which they add to the chain. In return for doing the work, the winning miner is also allowed to “print” some new bitcoin to pay themselves a reward in bitcoin, currently worth about $140,000.
+
+Anyone can be a miner—all you have to do is run mining mode. The tricky part is being a profitable miner. The actual work of bundling the transactions together is easy, but the real expense comes from the way winner is selected. Think of it as a raffle, where buying a ticket involves using your computer to solve a very complex, but ultimately useless, arithmetic problem. To be in with the most chance of getting that $140,000 reward, you need to solve those thousands or millions of times a second to enter the raffle with as many tickets as possible, and that means building specialised computers, negotiating cheaper sources of electricity, or just hacking innocent people and using their hardware for nothing instead.
+
+# How Are People Making So Much Money?
+
+That's the $190bn question—the value of all the bitcoin in the world at the time this article was published. The short answer is “buying low, and selling high”: the value of one bitcoin has increased from essentially nothing eight years ago, to $1,200 eight months ago, to a high of almost $20,000 in December and settling at $11,000 now. Anyone who got enough of bitcoin early enough is now really quite wealthy—on paper, at least.
+
+The real question is why one bitcoin is worth $11,000 (and why Ethereum is worth $1,040, and why one particular Cryptokit). You can find two answers. The sympathetic one is that all these cryptocurrencies are, by their nature, scarce assets—only a certain amount exist in the world. If they are to be widely adopted for real–world use, then people will need to buy those scarce assets, and so their value will necessarily be higher than they are today. The current price, in that story, simply reflects the probability that any particular cryptocurrency will actually be used.

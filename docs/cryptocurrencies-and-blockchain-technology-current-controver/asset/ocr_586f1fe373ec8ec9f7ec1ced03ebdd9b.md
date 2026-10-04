@@ -1,0 +1,11 @@
+# Corruption Is More Difficult with Cryptocurrencies
+
+Enrique Aldaz-Carroll and Eduardo Aldaz-Carroll
+
+Enrique Aldaz-Carroll is a senior economist in macroeconomics and fiscal management at the World Bank. Eduardo Aldaz-Carroll is Chief Technology Officer and a roboticist and electronic systems engineer at Betomorrow UK.
+
+Technological advances have made it possible to dramatically increase the accountability and transparency of public financing to reduce corruption. For example, if a government decides to construct a road, it can now track how each dollar is being spent, identify all the users of the funds, and ensure that those authorized to spend money do so on originally intended expenses within the permitted time. Fraud and corruption investigations that now take on average 15 months could be performed at the touch of a button and at a fraction of the cost. More importantly, this type of financial tracking in the public sector, which amount to between $1.5 trillion and $2 trillion annually, roughly 2 percent of global GDP. This in turn would increase development impact. All it would take is adopting a cryptocurrency and using blockchain software.
+
+The adoption of cryptocurrency—a digital currency that employs cryptography to ensure that transactions are secure—as a mode of payment for a project allows the identification of each user of the money, unlike with traditional modes of payment like notes and coins. Though most popular cryptocurrencies, like bitcoin, are anonymous and only use a key to identify a user, it is possible to include personal information, like the ID number, and make the
+
+> "Can cryptocurrencies and blockchain help fight corruption?" by Enrique Aldaz-Carroll and Eduardo Aldaz-Carroll, The Brookings Institution, February 1, 2018. Reprint by permission. Originally published by the Brookings Institution in its Future Development blog, https://www.brookings.edu/future-development/2018/02/01/can-cryptocurrencies-and-blockchain-help-fight-corruption/.
