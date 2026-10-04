@@ -1,0 +1,205 @@
+
+## Index
+
+- 3-puzzle, 119
+- A search, 10
+- A* search, 10
+- NP – complete, 93
+- nth root of unity, 247
+- 8-puzzle, 8, 139
+- conda, 41
+- conflict resolution, 8
+- controlled not gate, 36
+- copenhagen interpretation, 24
+- copy machine, 38
+- cross entropy, 282
+- AC difference, 249
+- active phase, 194, 221
+- Aer, 42
+- Aizenberg, Igor, 21
+- American Standard Code for Information Interchange (ASCII), 4
+- amplitude, 25, 79
+- amplitude encoding, 222
+- analog computer, 1
+- ancilla, 65, 93
+- artificial intelligence, 2
+- associative memory, 12
+
+- DC average, 249
+- Dechter, Rina, 21
+- decision problem, 76, 92
+- decoherence, 24
+- decomposable, 36, 37
+- deep learning, 21, 22
+- dendrite, 195
+- Deutsch algorithm, 55
+- digital computer, 2
+- Dirac, 26
+- direct product, 29
+- discrete Fourier transform (DFT), xxii, 246
+- Bachmann-Landau notation, 278
+- basis encoding, 167
+- basis state, 27, 32, 44
+- bias, 15, 265
+- big endian, 168
+- binary fraction, 250
+- bisecting line, 78
+- block elements, 6
+- blocks world, 145
+- Boolean satisfaction problem, 91
+- branching factor, 9, 143, 156
+- bucket brigade architecture, 242
+- distributed representation, 11
+- dot product, 11, 14
+- ebit, 36, 37
+- edge, 2
+- ENIAC,
+- entangled, 36, 37
+- Euler's formula, 200
+- Everett, Hugh, 25
+- exahaustive search, 76
+- fan-out operation, 36
+- feyman, Richard, 25, 60
+- firing, 8
+- children, 10
+- city-distance, 10
+- Clifford group, 63
+- cloning, 38
+- collapse, 30
+- combining states, 228
+- Gram matrix, 241
+- Greedy best-first search, 10
+- Grover, Lov K., 76
+- Hadamard gate, 33
+- Hadamard matrix, 33
+- Hamiltonian, xvi, 23, 269
+- Hamiltonian equation of motion, xvi, 23
+- Hamiltonian similarity, 269
+- HamiltonianGate, 273
+- Harrow, Aram, 268
+- Hassidim, Avistan, 268
+- Havliceck, 240
+- heuristic search, 10
+- HHL, 268
+- Hillbert space, 26
+- neuron, 195
+- nim game, 157
+- no solution, 100
+- node, 9
+- number of solutions, 67
+- NumPy, 80
+- OPS5, 107
+- parent, 9
+- Parve’s theorem, 247
+- path descriptor, 103, 133, 145
+- Pauli feature maps, 240
+- perceptron, 1, 15, 265
+- Hopfield network, 13
+- Householder reflection, 78
+- phase, 255
+- phase estimation algorithm, 255, 264
+- phase kick-back, 39
+- physical symbol system hypothesis, 4
+- input description, 193
+- stantiation, 118
+- inversion tes, 238
+- predicate calculus, 4
+- problem-solving, 8
+- processing branch, 168
+- production system, 8, 9
+- kernel machine, 18
+- Kitaev’s phase estimation algorithm, 255, 26
+- Kitaev, Alexei, 255
+- Kitaev’s phase estimation algorithm, 269
+- Kronecker product, 35
+- productions, 8
+- pure production system, 106
+- leaf, 9
+- learning, 196
+- Lernmatrix, 195
+- linearly separable, 51, 168
+- little endian,
+- Loyd, Seth, 268
+- Loss Function, 282
+- loss function, 282
+- lower bound, 76
+- qiskit, 41
+- quantum algorithm for linear systems of equations, 268
+- quantum associative memory (QuAM), 183
+- quantum coin, 27, 44
+- quantum computer, 25, 60
+- quantum counting, 259
+- quantum feature maps, 240
+- quantum Fourier transform (QFT), 247
+- quantum kernel, 236
+- McCarthy, John, 2
+- McCulloch-Pitts neuron, 1
+- memory branch, 168
+- mind, 117
+- minimax-algorithm, 166
+- modified version of Grover’s search, 187
+- Monte Carlo Lernmatrix, 199
+- multiverse, 25
+- quantum Lernmatrix, 199, 202
+- quantum nearest neighbor (QNN), 183
+- quantum not gate, 31
+- quantum perceptron, 265
+- quantum production system, 107
+- quantum random access memory, 242
+- quantum support vector machine, 241
+- quantum supremacy, 287
+- quantum tree search, 103
+- qubit, 28
+- n-puzzle, 139
+- Nearest Neighbor (NN), 12
+- random-access memory, RAM, 242
+- randomness, 24
+- register, 29, 33
+- retrieval, 197
+- root of a tree, 9
+- root of unity, 247
+- Rosenblatt, Frank. 1
+- Rumelhart, David, 2
+- teleportation, 36
+- tensor product, 35
+- Tofoli gate, 39, 65
+- top-down divide strategy, 223
+- trace, 121, 122, 139
+- transpiration, 74
+- tree, 9
+- tree-like associative memory, 218
+- SAT problem, 91
+- Schrödinger equation, xvi, 23
+- Schrödinger's cat, 24
+- Schrödinger, Erwin, xvi, 23
+- serial computation, 35
+- Simultaneous Perturbation Stochastic Approximation, (SPSA), 283
+- un-computing, 52, 94
+- unary quantum gate, 31
+- unified theories of cognition, 117
+- unitary matrix, 27
+- unsupervised learning, 10
+- sleep phase, 194, 221
+- SOAR, 117
+- sorting of a string, 107
+- sparse codes, 199
+- SRIPS, 5
+- sub-symbolical representation, 11
+- superposition, xvi, 23
+- supervised learning, 10
+- support vector machine, 16, 17
+- support vectors, 17
+- Suzuki-Trotter formula, 270
+- swap test, 231
+- symbol, 4
+- synapse, 195
+- Vandermonde matrix, 247
+- variational quantum classifier, 279
+- variational quantum classifier, (VQC), 283
+- what where principle, 102
+- Willshaw's associative memory, 195
+- Willshaw, David, 195
+- working memory, 8
+- Z-Y decomposition theorem, 74
+- zero game, 157
+- ZZFeatureMap, 239, 279

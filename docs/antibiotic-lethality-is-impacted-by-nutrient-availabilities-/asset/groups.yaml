@@ -1,0 +1,341 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Leading Edge
+
+    Previews
+
+
+    # # Antibiotic Lethality Is Impacted by Nutrient Availabilities: New Insights
+    from Machine Learning
+
+
+    Jens Nielsen¹²³*
+
+    ¹Bioinnovation Institute, Ole Maaes Vej 3, DK2200 Copenhagen N, Denmark
+
+    ²Department of Biology and Biological Engineering, Chalmers University of Technology,
+    SE41296 Gothenburg, Sweden
+
+    ³Novo Nordisk Foundation Center for Biostainability, Technical University of Denmark,
+    DK2200 Kgs. Lyngby, Denmark
+
+    *Correspondence: nielsen@chalmers.se
+
+    https://doi.org/10.1016/j.cell.2019.05.015
+
+
+    In this Cell Year, Wright et al. describe a machine learning approach that can
+    provide mechanistic insight from chemical agents. They use this to uncover the
+    nutritional availability for *Escherichia coli* impacts lethality through widely
+    used antibiotics.
+
+
+    With the rise of antibiotic resistance, there is a need for more antibiotics,
+    but more important is the need for efficient methods screening the mechanisms
+    governing antibiotic lethality. Chemical and genetic screens are used for drug
+    discovery, but they suffer from low throughput. Furthermore, new drugs are difficult
+    to identify the mode of action. For infectious diseases, it is often complicated
+    by complex interactions between the host and microbe; for example, the specific
+    mechanism that supports survival even in the presence of antibiotics.
+
+
+    In this Cell Year, Wright et al combine flux analysis with machine learning to
+    get new insight into the epistatic factors underlying the lethality of three different
+    antibiotics (Yang et al., 2019). *Escherichia coli* was grown in a wide range
+    of different media, including
+
+
+    many different carbon and nitrogen sources, with the objective of measuring the
+    effect of metabolic supplementation on the lethality of antibiotics (AMP, ciprofloxacin
+    (CIP), and GENT). For each case, the IC₅₀, the concentration of antibiotic to
+    inhibit growth, was measured in percentage of carbon sources that the bacteria
+    improved tolerance towards when the antibiotic availability changed. To identify
+    the cause of this effect, we used flux balance analysis (FBA) (O’Brien et al.,
+    2015) for the different media. By FBA, it is possible to calculate the flux of
+    the metabolic network in each condition and predict the phenotype at a detailed
+    level (Niessen, 2003) (Figure 1). For each condition, the calculated fluxes were
+    used as inputs for machine learning to identify which
+
+
+    changes alter lethality of three antibiotics, leading to the identification of
+    477 reactions that affected the antibiotic lethality. Next, we computed pathway
+    scores for each pathway and antibiotic by performing least-squares regression
+    on the changes in IC₅₀ of the central metabolism pathways (e.g., glycolysis and
+    TCA cycles and amino acid synthesis). This is surprising as flux through these
+    pathways is highly correlated with growth. More importantly, we found that decreased
+    flux through a cluster of pathways in pyruvate metabolism resulted in decreased
+    lethality of AMP and CIP but not of GENT. This was due to deletion of genes in
+    pyruvate metabolism or by inhibition of biosynthesis through addition. The authors
+    further showed that
+
+
+    ![](img/caccd506c2eaad50d8ff7602731c85f0_0_0.png)
+
+
+    **Figure 1:** Quantitative Approach to Understand How Media Composition Impacts
+    Flux analysis (FBA) is used to compute fluxes through all the different metabolic
+    pathways operating within the cell. By using the computed fluxes and the measured
+    IC₅₀ values in different media, it is possible to identify correlations between
+    fluxes’ reduced antibiotic lethality, i.e., which enables cells to better resist
+    the antibiotic. Here, there is mechanistic insight into why reduced antibiotic
+    lethality occurs to design new therapies.
+
+
+    Cell 177, May 30, 2019 © 2019 Elsevier Inc. 1373'
+  - '[PAGE 1]
+
+
+    supplementation with adenine, but not guanine, decreased antibiotic lethality
+    in wild-type cells.
+
+
+    The finding that there is a strong effect of adenine supplementation points to
+    a key role of energy metabolism, and indeed, the authors found that there is increased
+    respiratory metabolism in the presence of antibiotics, indicating an antibiotic
+    resistance. Adenine supplementation results in decreased activity of purine biosynthesis,
+    which further results in a decreased activity of energy metabolism, including
+    respiration.
+
+
+    This approach of using computed fluxes to represent cellular phenotype showed
+    that it is possible to identify how interactions between different pathways in
+    the metabolic network deanti-antibiotic lethality.
+
+
+    As approach by Yang, Wright et al. could easily be translated for use with other
+    cell types and types of chemical sensors, it is poised to significantly advance
+    our capability to gain mechanistic insight into the mode of action of many different
+    drugs beyond antibiotics.
+
+
+    The findings of the authors provide another important lesson: namely, the activity
+    of antibiotics is highly dependent on environmental conditions, Even if the environment
+    provides conditions that allow the cells to grow at an altered growth rate. In
+    this case, if adenine is present, the cells reduce the activity of energy metabolism,
+    i.e., respiration, which may result in reduced growth and, hence, less sensitivity
+    toward antibiotics.
+
+
+    # REFERENCES
+
+
+    +   Nielsen, J. (2003) It is all about metabolic fluxes. J. Bacter. 185, 7031–7035.
+
+
+    +   O''Brien, E.J., Monk, J.M., and Palsson, B.O. (2015) Using genome-scale models
+    to predict biosynthetic capabilities, Mol. Syst. 61, 971–978.
+
+
+    +   Yang, J.H., Wright, S.N., Hamlin, M., McClure, J., D. Alantar, M.A., Schrubbers,
+    L., Lopatin, A.J., Satish, S., Nil, Palsson, B.O., et al. (2019) Machine Learning
+    Approach for Revealing Antibiotic Mechanisms of Action, Cell 177, this issue,
+    1649–1661.
+
+
+    1374 Cell 177, May 30, 2019'
+  md: '
+
+    ## Leading Edge Previews
+
+
+    ## Antibiotic Lethality Is Impacted by Nutrient Availabilities: New Insights from
+    Machine Learning
+
+
+    Jens Nielsen¹²³*
+
+    ¹Bioinnovation Institute, Ole Maaes Vej 3, DK2200 Copenhagen N, Denmark
+
+    ²Department of Biology and Biological Engineering, Chalmers University of Technology,
+    SE41296 Gothenburg, Sweden
+
+    ³Novo Nordisk Foundation Center for Biosustainability, Technical University of
+    Denmark, DK2200 Kgs. Lyngby, Denmark
+
+    *Correspondence: nielsen@chalmers.se
+
+    https://doi.org/10.1016/j.cell.2019.05.015
+
+
+    In this Cell Year, Wright et al. describe a machine learning approach that can
+    provide mechanistic insight from chemical agents. They use this to uncover the
+    nutritional availability for *Escherichia coli* impacts lethality through widely
+    used antibiotics.
+
+
+    With the rise of antibiotic resistance, there is a need for more antibiotics,
+    but more important is the need for efficient methods screening the mechanisms
+    governing antibiotic lethality. Chemical and genetic screens are used for drug
+    discovery, but they suffer from low throughput. Furthermore, new drugs are difficult
+    to identify the mode of action. For infectious diseases, it is often complicated
+    by complex interactions between the host and microbe; for example, the specific
+    mechanism that supports survival even in the presence of antibiotics.
+
+
+    In this Cell Year, Wright et al combine flux analysis with machine learning to
+    get new insight into the epistatic factors underlying the lethality of three different
+    antibiotics (Yang et al., 2019). *Escherichia coli* was grown in a wide range
+    of different media, including many different carbon and nitrogen sources, with
+    the objective of measuring the effect of metabolic supplementation on the lethality
+    of antibiotics (AMP, ciprofloxacin (CIP), and GENT). For each case, the IC₅₀,
+    the concentration of antibiotic to inhibit growth, was measured in percentage
+    of carbon sources that the bacteria improved tolerance towards when the antibiotic
+    availability changed. To identify the cause of this effect, we used flux balance
+    analysis (FBA) (O’Brien et al., 2015) for the different media. By FBA, it is possible
+    to calculate the flux of the metabolic network in each condition and predict the
+    phenotype at a detailed level (Niessen, 2003) (Figure 1). For each condition,
+    the calculated fluxes were used as inputs for machine learning to identify which
+    changes alter lethality of three antibiotics, leading to the identification of
+    477 reactions that affected the antibiotic lethality. Next, we computed pathway
+    scores for each pathway and antibiotic by performing least-squares regression
+    on the changes in IC₅₀ of the central metabolism pathways (e.g., glycolysis and
+    TCA cycles and amino acid synthesis). This is surprising as flux through these
+    pathways is highly correlated with growth. More importantly, we found that decreased
+    flux through a cluster of pathways in pyruvate metabolism resulted in decreased
+    lethality of AMP and CIP but not of GENT. This was due to deletion of genes in
+    pyruvate metabolism or by inhibition of biosynthesis through addition. The authors
+    further showed that
+
+
+    ![](img/caccd506c2eaad50d8ff7602731c85f0_0_0.png)
+
+
+    **Figure 1:** Quantitative Approach to Understand How Media Composition Impacts
+    Flux analysis (FBA) is used to compute fluxes through all the different metabolic
+    pathways operating within the cell. By using the computed fluxes and the measured
+    IC₅₀ values in different media, it is possible to identify correlations between
+    fluxes’ reduced antibiotic lethality, i.e. which enables cells to better resist
+    the antibiotic. Here, there is mechanistic insight into why reduced antibiotic
+    lethality occurs to design new therapies.
+
+
+    Cell 177, May 30, 2019 © 2019 Elsevier Inc. 1373
+
+
+    supplementation with adenine, but not guanine, decreased antibiotic lethality
+    in wild-type cells.
+
+
+    The finding that there is a strong effect of adenine supplementation points to
+    a key role of energy metabolism, and indeed, the authors found that there is increased
+    respiratory metabolism in the presence of antibiotics, indicating an antibiotic
+    resistance. Adenine supplementation results in decreased activity of purine biosynthesis,
+    which further results in a decreased activity of energy metabolism, including
+    respiration.
+
+
+    This approach of using computed fluxes to represent cellular phenotype showed
+    that it is possible to identify how interactions between different pathways in
+    the metabolic network deanti-antibiotic lethality.
+
+
+    As approach by Yang, Wright et al. could easily be translated for use with other
+    cell types and types of chemical sensors, it is poised to significantly advance
+    our capability to gain mechanistic insight into the mode of action of many different
+    drugs beyond antibiotics.
+
+
+    The findings of the authors provide another important lesson: namely, the activity
+    of antibiotics is highly dependent on environmental conditions, Even if the environment
+    provides conditions that allow the cells to grow at an altered growth rate. In
+    this case, if adenine is present, the cells reduce the activity of energy metabolism,
+    i.e., respiration, which may result in reduced growth and, hence, less sensitivity
+    toward antibiotics.
+
+
+    ## REFERENCES
+
+
+    - Nielsen, J. (2003) It is all about metabolic fluxes. J. Bacter. 185, 7031–7035.
+
+    - O''Brien, E.J., Monk, J.M., and Palsson, B.O. (2015) Using genome-scale models
+    to predict biosynthetic capabilities, Mol. Syst. 61, 971–978.
+
+    - Yang, J.H., Wright, S.N., Hamlin, M., McClure, J., D. Alantar, M.A., Schrubbers,
+    L., Lopatin, A.J., Satish, S., Nil, Palsson, B.O., et al. (2019) Machine Learning
+    Approach for Revealing Antibiotic Mechanisms of Action, Cell 177, this issue,
+    1649–1661.
+
+
+    1374 Cell 177, May 30, 2019
+
+    '
+  mdcn: '
+
+
+    ## 前沿预览
+
+
+    ## 抗生素杀伤力受营养可用性影响：机器学习提供的新见解
+
+
+    Jens Nielsen¹²³*
+
+    ¹Bioinnovation Institute, Ole Maaes Vej 3, DK2200 Copenhagen N, Denmark
+
+    ²Chalmers 工理工大学生物学与生物工程系, SE41296 Gothenburg, Sweden
+
+    ³Novo Nordisk基金可持续性中心, 丹麦理工大学, DK2200 Kgs. Lyngby, Denmark
+
+    *联系邮箱: nielsen@chalmers.se
+
+    https://doi.org/10.1016/j.cell.2019.05.015
+
+
+    在今年的“细胞年度”中，Wright等人描述了一种机器学习方法，该方法可以从化学剂中提供机理见解。他们利用此方法揭示了大肠杆菌（*Escherichia coli*）的营养可用性如何影响广泛使用的抗生素的杀伤力。
+
+
+    随着抗生素耐性的兴起，我们需要更多的抗生素，但更重要的是需要高效的方法来筛选控制抗生素杀伤力的机制。化学和遗传筛选用于药物发现，但其通量量较低。此外，新药物难以确定其作用模式。对于感染性疾病，宿主与微生物之间复杂的相互作用往往使得问题变得复杂；例如，在存在抗生素的情况下仍能生存的特定机制。
+
+
+    在今年的“细胞年度”中，Wright等人将通量分析与机器学习相结合，获得了对三种不同抗生素杀伤力底层遗传上位效应因素的新见解（Yang等人，2019）。大肠杆菌培养在多种不同的培养基中，包括许多不同的碳源和氮源，目的是测量代谢补充对抗生素（氨苄西酰素
+    AMP、环丙沙星 CIP 和庆大素 GENT）杀伤力的影响。对于每种情况，当抗生素可用性变化时，IC₅₀（抑制生长的抗生素浓度）是以细菌耐受性提高的碳源百分比进行测量的。为了确定这种效应的原因，我们对不同培养基使用了通量平衡分析（FBA）（O’Brien等人，2015）。通过FBA，可以计算每种条件下代谢网络的通量，并在详细水平上预测表型（Niessen,
+    2003）（图1）。对于每种情况，计算出的通量被用作机器学习的输入，以识别哪些变化改变了三种抗生素的杀伤力，导致识别出477个影响抗生素杀伤力的反应。接下来，我们通过对中心代谢途径（如糖酵解、TCA循环和氨基酸合成）IC₅₀的变化进行最小二乘回归，计算了每个途径和抗生素的途径评分。这令人惊讶惊讶，因为通过这些途径的通量与生长高度相关。更重要的是，我们发现丙酮酸代谢中一组途径的通量减少会导致
+    AMP 和 CIP 的杀伤力降低，但对 GENT 则不然。这是由于丙酮酸代谢中基因的缺失或通过添加物抑制了生物合成导致的。作者进一步展示了：
+
+
+    ![](img/caccd506c2eaad50d8ff7602731c85f0_0_0.png)
+
+
+    **图1：** 理解培养基成分如何影响杀伤力的定量方法。通量分析（FBA）被用于计算细胞内运行的所有不同代谢途径的通量。通过使用计算出的通量和不同培养基中测量的IC₅₀值，可以确定通量减少与抗生素杀伤力降低之间的相关性，即哪些细胞能够更好地抵抗抗生素。这里提供了关于为何发生抗生素杀伤力降低的机理见解，用于设计新的治疗方案。
+
+
+    Cell 177, 2019年5月30日 © 2019 Elsevier Inc. 1373
+
+
+    补充腺嘌呤而非鸟嘌呤，会降低野生型细胞中抗生素的杀伤力。
+
+
+    腺嘌呤补充具有显著效应的发现指向了能量代谢的关键作用，事实上，作者发现在存在抗生素的情况下呼吸代谢增加，这表明存在抗生素耐性。腺嘌呤补充会导致嘌呤生物合成活性降低，进一步导致能量代谢（包括呼吸）活性降低。
+
+
+    这种使用计算通量表示细胞表型的方法表明，可以确定代谢网络中不同途径之间的相互作用如何抗抗生素杀伤力。
+
+
+    Yang、Wright等人的方法可以很容易转化用于其他细胞类型和化学传感器，它将有望提高我们获取抗生素之外许多不同药物作用模式机理见解的能力。
+
+
+    作者的发现提供了另一个重要教训：即抗生素的活性高度依赖于环境条件，即使环境提供了允许细胞以改变的速率生长的条件。在这种情况下，如果存在腺嘌呤，细胞会降低能量代谢（即呼吸）活性，这可能导致生长减少，从而对抗生素的敏感性降低。
+
+
+    ##参考文献
+
+
+    - Nielsen, J. (2003) It is all about metabolic fluxes. J. Bacter. 185, 7031–7035.
+
+    - O''Brien, E.J., Monk, J.M., and Palsson, B.O. (2015) Using genome-scale models
+    to predict biosynthetic capabilities, Mol. Syst. 61, 971–978.
+
+    - Yang, J.H., Wright, S.N., Hamlin, M., McClure, J., D. Alantar, M.A., Schrubbers,
+    L., Lopatin, A.J., Satish, S., Nil, Palsson, B.O., et al. (2019) Machine Learning
+    Approach for Revealing Antibiotic Mechanisms of Action, Cell 177, this issue,
+    1649–1661.
+
+
+    1374 Cell 177, 2019年5月30日
+
+
+    '
+  merge: -1
