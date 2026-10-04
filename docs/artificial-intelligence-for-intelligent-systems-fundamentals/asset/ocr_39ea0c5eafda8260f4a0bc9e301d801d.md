@@ -1,0 +1,15 @@
+# 134 Artificial intelligence for intelligent systems
+
+Nevertheless, the union of smart contracts with blockchain presents a potent instrument for protecting and automating IoT transactions. It creates new opportunities for IoT system implementation regarding trust, effectiveness, and innovation.
+
+# 7.4 LIMITATIONS AND CHALLENGES
+
+Limitations and difficulties in integrating blockchain with IoT security need to be resolved for widespread adoption. Given the vast scope of IoT deployments and the possible impact on blockchain's transaction processing capabilities, scalability is a major worry. To increase the scalability of blockchains in IoT contexts, researchers are actively investigating techniques like sharding and layer-two protocols. Additionally, energy efficiency is a significant factor, particularly for IoT devices with limited resources. Consensus methods can be improved, and energy-saving protocols might be investigated to reduce the energy consumption by blockchain integration in IoT contexts.
+
+# 7.4.1 Scalability and performance considerations
+
+When integrating blockchain with IoT systems, there are substantial hurdles related to scalability and performance. Due to the decentralized nature of blockchain technology and the consensus procedures used, scalability issues may affect the speed at which transactions are processed and the overall throughput. It is essential to solve these issues as IoT transactions and devices proliferate. Traditional networks, like bitcoin and ethereum, have scalability problems each transaction needs to be processed and validated by every node. As a result, there are restrictions on how many transactions can be handled per second, which causes bottlenecks in IoT systems that experience a huge influx of data. Researchers are investigating several solutions to this problem.
+
+Sharding is a method that divides the blockchain network into smaller shards, each of which can handle a subset of transactions. This parallel processing makes higher transaction throughput possible multiple shards can handle transactions simultaneously. Another method is to off-load transactions from the main blockchain using layer-two protocols, such as payment channels and side chains, to reduce congestion and improve scalability.
+
+To improve scalability, improvements in consensus techniques are also being pursued. Though secure, the PoW consensus method requires many resources and is computationally expensive. PoS and DPoS, two different consensus algorithms, provide a better transaction throughout while using less energy. These enable quicker transaction processing by allocating block validation responsibilities depending on stake ownership or delegation. Research and development aim to improve blockchain scalability for the IoT by integrating sharding, layer-two protocols, and better consensus methods. With the help of these strategies, blockchain will be able to handle the enormous scale and high transaction

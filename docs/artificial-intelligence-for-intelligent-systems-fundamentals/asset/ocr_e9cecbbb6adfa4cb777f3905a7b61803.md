@@ -1,0 +1,35 @@
+# 322 Artificial intelligence for intelligent systems
+
+[134] R. Fusaro, N. Viola, D. Ferretto, V. Vercella, V. Fernandez Village, and J. Steeland, “Life cycle cost estimation for high-speed transportation systems,” CEAS Sp. J., vol. 12, pp. 213–233, 2020.
+
+[135] N. C. Onat, M. Kucukvar, N. N. M. Abushaqrah, and J. Jabbar, “How sustainable is electricity mobility? A comprehensive sustainability assessment approach for the case of Qatar,” Appl. Energ., vol. 250, pp. 461–477, 2019.
+
+[136] L. A. Garrow, B. J. German, and C. E. Leonard, “Urban mobility: A comprehensive review and comparative analysis of autonomous and electric transport for future research,” Transp. Res. Part C Emerg. Technol., vol. 132, p. 103377, 2021.
+
+[137] K. B. Kovovic, J. Kester, L. Noel, and G. Z. de Rubens, “Energy injustice and Nordic electric mobility: The electrification of vehicle-to-grid (V2G) transport,” Ecol. Econ., vol. 157, pp. 205–217, 2019.
+
+[138] R. Mounce and J. D. Nelson, “On the potential for electric vehicle car sharing in mobility systems,” Transp. Res. A Policy Pract., vol. 120, pp. 17–30, 2019.
+
+[139] T. Skručány, M. Kendra, Stopka, S. Milošjević, T. Figlus, and C. Csisizár, “Impact of the electric mobility implementation on the greenhouse gas production in central european countries,” Sustainability, vol. 11, p. 4948, 2019.
+
+[140] G. Z. De Rubens, L. Noel, J. Kester, and B. K. Kovovic, “The market case for electric mobility: Investigating electric vehicle business models for mass adoption,” Energy, vol. 194, p. 116841, 2020.
+
+[141] A. Fahim, M. Hasan, and A. M Chowdhury, “Smart parking systems: Comprehensive review based on various aspects,” Heliyon, vol. 7, p. 5, 2021.
+
+[142] V. Duong, “Designing a full stack website with free parking for Kielo Solution visitors,” Thesis Report, 2023.
+
+[143] S. Kandis, Real Time and Multi-Agent Parking System using Computer for Smart cities, Altunbas Üniversitesi.
+
+[144] A. Saha, M. Abedin, and S. Palei, “Genetic engineering: A tool for sustainable production of biofuel from lignocellulosic biomass,” Genet. Metab. Eng. Imp.: Biofuel Prod. Biomass, pp. 97–101, 2020.
+
+[145] K. Mishra and P. S. Ahil, “Planning assessment of transport system: A case from Nepal,” Int. J. Appl. Manag. Lett., vol. 6, no. 1, pp. 280–300, 2022.
+
+[146] V. M. Mereea, A. M. Ahmad, M. S. Servati, and S. B. Sarvi, “Urban regeneration of neglected neighborhoods: The case of Al Ghanian neighborhood, Qatar,” Sustainability, vol. 14, no. 12, p. 6963, 2022.
+
+[147] H. Yang, J. Huo, Y. Bao, L. Yang, and C. Cherry, “Impact of e-scooter sharing on bike sharing in Shanghai,” Trans. Res. A Policy Pract., vol. 154, pp. 23–36, 2021.
+
+[148] D. Bylieva, V. Lobatyuk, and I. Shestakova, “Shared microobility: physical and digital reality,” Sustainability, vol. 14, no. 4, p. 2467, 2022.
+
+[149] I. Makarova, V. G. Mavrin, K. A. Shubenkova, and A. A. Khalyaev, “Integration of bike lanes with public transport routes to solve the last mile problem,” в Информационные технологии и инновации в транспорте, 2019, pp. 94–103.
+
+[150] H. Bencherif, T. Bendib, M. A. Abdi, and A. Medsour, “Environmental impact of flexible energy devices,” in Smart and Flexible Energy Devices, CRC Press, 2022, pp. 119–132.

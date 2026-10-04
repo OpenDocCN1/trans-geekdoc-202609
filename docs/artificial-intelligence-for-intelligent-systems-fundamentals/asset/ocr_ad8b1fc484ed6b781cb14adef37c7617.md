@@ -1,0 +1,11 @@
+# 264 Artificial intelligence for intelligent systems
+
+![](bbox=[0.137, 0.093, 0.862, 0.273])
+
+Figure 13.1 Proposed ensemble model's graphic representation.
+
+There are three network classifiers as illustrated in the above diagram, each of which is integrated into a different method at the top of the hierarchy. This example demonstrates how to operate an ensemble of three distinct classifiers. They are pretrained models that have been trained on a dataset, which we will employ in our task. We can achieve better results with transfer learning precisely because it allows us to initialize our new train in the correct direction by modifying the information we have already acquired. This is feasible by fine-tuning the operation based on our facts. Specifically, we are operating in the ensemble mode, and we are fine-tuning our three ensemble components as we are merging them. In all the approaches discussed, we run the ensemble using the base models VGG19, ResNet-50, and DenseNet-121. We fine-tune, allowing them to retrain on their respective last convolutional blocks of our operation. The ensemble is only capable of operating in two dimensions. We make the transition from 3D to 2D operation global pooling. Dense layers with fixed dimensions are used to equalize dimensionalities across all the networks that are sending the pooling outputs through them.
+
+# 13.4 RESULTS AND DISCUSSION
+
+The proposed diagnosis model was in comparison to an ensemble model that was tuned to fit 3D brain MRI data, and the results were inconclusive. The results showed that the proposed AD diagnosis model was a successful method of diagnosis, including accuracy, precision, recall, and F1-score, among other things, and found them to be useful. The dataset for magnetic resonance resonances 6,400 data samples. We partitioned the dataset into two parts: a training dataset and a test dataset, with an 80%:20% split between the two portions. It was decided to create a validation dataset using data from the training dataset, which accounted for around 20% of the entire dataset. The training with a mini-batch size of 64 was used as part of

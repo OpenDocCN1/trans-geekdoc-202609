@@ -1,0 +1,15 @@
+# 132 Artificial intelligence for intelligent systems
+
+for parallel transaction processing. Layer-two solutions use side chains or extra layers to manage large transactions independently.
+
+Blockchain performance—which includes transaction throughput and confirmation times—is essential for IoT applications. PoW, a consensus mechanism, can be computationally expensive and slow down transaction speeds. Faster validation improves performance in IoT applications. Alternative consensus algorithms include PoS, DPoS, and PBFT [36]. Efficient data structures, optimal data networks, and optimized protocols improve blockchain performance.
+
+Resource efficiency is a crucial factor for IoT devices with limited resources. IoT blockchain systems need to balance security and resource efficiency. Computing needs and energy usage can be decreased by using lightweight techniques like proof of authority (PoA) or directed acyclic graph (DAG) architectures [37]. Additionally, while maintaining the integrity of the blockchain, data compression methods like Merkle trees or data pruning can lower storage requirements [38].
+
+IoT integration is significantly influenced by network and hardware factors. IoT devices frequently have little storage, memory, and computing capabilities. Blockchain technologies should be created with these limitations in mind. Optimized communication protocols and network bandwidth allocation are crucial for handling increase traffic brought by blockchain integration without bottlenecks. Cryptographic techniques and hardware-accelerated encryption can guarantee data security while reducing the computing load on IoT devices [39].
+
+It might be challenging to balance scalability, performance, and resource efficiency when combining blockchain with IoT for security reasons. For blockchain solutions to successfully satisfy the requirements of IoT contexts, careful architecture design, consensus mechanism selection, protocol improvements, and consideration of hardware and network restrictions are required. By considering these factors, blockchain and IoT can increase security without sacrificing operational effectiveness. The factors for integrating blockchain technology to IoT security are shown in Figure 7.2, focusing on scalability, performance, resource efficiency, and hardware/network limits.
+
+# 7.3.5 Use of smart contracts for secure and automated transactions in IoT
+
+Blockchain technology–enabled smart contracts provide improved security and automation for transactions within the IoT [40]. Smart contracts offer a trustless tamperproof environment utilizing blockchain's immutability and decentralized characteristics. They do away with intermediaries, lowering the possibility of fraud and guaranteeing the accuracy of transactional data. Smart contracts allow for smooth and independent transactions between IoT devices to automated execution based on established circumstances [41, 42]. Automation improves efficiency and lowers costs by removing the need for intermediaries and streamlining processes [43].

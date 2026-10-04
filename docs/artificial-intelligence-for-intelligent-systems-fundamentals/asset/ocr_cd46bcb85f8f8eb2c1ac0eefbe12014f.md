@@ -1,0 +1,15 @@
+292 Artificial intelligence for intelligent systems
+
+# 15.4.9.8 Economic benefits
+
+Efficient transportation systems have positive economic impacts. Intelligent transportation systems enhance productivity and economic efficiency by reducing travel times and congestion. They also attract businesses and investment by providing a well-connected and accessible transportation infrastructure [65].
+
+# 15.4.10 Technologies enabling intelligent transportation channels
+
+# 15.4.10.1 Internet of things in transportation
+
+The transportation sector has radically transformed through the IoT, which has changed how infrastructure, cameras, and passengers are linked and communicated. The idea of linked automobiles is a crucial IoT application in transportation. Vehicles may interact with one another and the local infrastructure by being outfitted with connections, sensors, and actuators. This makes it possible for communication between vehicles (V2V) and vehicles and infrastructure (V2I), which enhances driving safety, efficiency, and convenience. Real-time data on traffic, accidents, and road dangers may be shared between connected cars, enabling drivers to make judgments and take preventive measures [66]. Intelligent traffic management is a driven use of IoT. Real-time information on traffic flow, congestion, and road conditions is gathered through IoT-based sensors and devices on roads, traffic signals, and infrastructure. The timing of traffic signals is then optimized, traffic lanes are managed dynamically, and drivers are given realtime information thanks to the analysis of this data. The ITMS helps more efficient transportation operations and with shorter times by easing traffic congestion and enhancing traffic flow [67].
+
+Smart parking deployment is also possible by IoT. Smart spot occupancy may be tracked in real-time using sensors and cameras placed in lots and on streets. Drivers receive this information via smartphone applications, which direct them to open parking spaces and shorten the time looking for parking. Urban parking congestion is minimized thanks to smart parking technologies, which also improve overall efficiency and reduce traffic. IoT is crucial in logistics and supply chain management for streamlining processes. Vehicles, containers, and ships can have IoT sensors added to them so that their position, temperature, and other details can be monitored the whole time they are being transported. Reducing delays, losses, and inventory management expenses through timely delivery of products is possible by effective route planning and real-time monitoring [67].
+
+Public transportation systems are being transformed by the IoT. The passenger experience is improved through connected buses and trains that deliver realtime updates on departure schedules, delays, and service interruptions [68]. Smart ticketing systems enabling contactless payments and seamless transfers between different modes of public transportation [69]. Additionally, IoT-based passenger counting
