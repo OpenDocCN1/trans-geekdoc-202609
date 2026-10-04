@@ -1,0 +1,9 @@
+charged under national legal systems or the fact that many ICOs need to register with the SEC in order to sell their token. In the human world, human social organisation still trumps code.
+
+At first glance this seems surely like an outright libertarian ideal — to remove humans in order to maximise what is under the control of free markets. They want less governance — as in human discretion and more free markets. But we will see as the book goes on that this is not exactly what has happened with smart contracts in practice and has ironically diversified and increased the amount of mutual human interaction through the Internet.
+
+The truth is that smart contracts are neither “smart” nor “contracts” in the ways that these two words are most commonly understood — they are more like automated scripts that handle data and code which many times happen to have financial consequences attached. But this is OK — just as bitcoin is not money, but still useful in certain situations, smart contracts certainly have their advantages over standard legal contracts. You can deploy a smart contract to facilitate mutual financial agreements faster than you can probably finish the legal bureaucracy for the first steps. We will be diving deeper into these intricacies throughout the rest of the book.
+
+# Decentralised Court Systems
+
+Blockchain is commonly hailed as a new mechanism to escape state regulations in ways that are similar to claims made by early Internet pioneers. The decentralised architecture of many blockchains (like the early Internet) make them resistant towards surveillance and control. This has led to some describing blockchains as “alegal”, in that they operate beyond the purview of the law, neither completely legal or illegal. Developers can easily create smart contract code-based systems that do not comply with the law and with little direct reaction possible by the state.

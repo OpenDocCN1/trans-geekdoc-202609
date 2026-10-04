@@ -1,0 +1,9 @@
+allow people to pool their crypto together in order to reach the 32 ether minimum needed to begin staking.
+
+A study by chainleft.eth compared the centralising forces of PoW against PoS assuming much higher operating costs for PoW, equal living expenses, a 2% annual depreciation on mining equipment, a 10% annual reward base for both and a 5% economies of scale on operational and equipment costs.22 The model showed that wealth inequality between rich and poor miners increased by 6.2% in the PoW system, whereas the number was 0.9% for PoS. The wealth gap between the rich and the poor increases more in a PoW network than in a PoS network according to their estimate. The conclusion to be drawn is that while both are centralising-over-time, PoS at least not centralise faster than PoW.
+
+Still, some may claim that neither is good enough and that all cryptocurrency networks should still be banned at a global scale. We've alluded to the reasons why this is problematic for activists but we will go into more detail later.
+
+# The Emergence of Regenerative Finance
+
+Discussions around energy use in the face of climate collapse often tend towards a moralistic judgement of what is and not worth doing. When some estimates say we have only a few years left to dramatically decrease our carbon emissions to prevent the worst from happening, it's easy to look at the way cryptocurrencies are reported on in the media and conclude that a decentralised network dedicated to gambling isn't something that should exist. This is a reasonable position to take and it is distressing seeing masses of pseudo-anonymous investors using this global coordination technology in order to risk their life savings on some of the most ludicrous financial products one could think of. In crypto speak, these types of people are referred to as “degens” (short for degenerates).

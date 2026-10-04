@@ -1,0 +1,3 @@
+internet is largely ahistor but it is used as a simple narrative for marketing. It is largely a way to talk about crypto-enabled tools, projects, and companies without saying crypto, which some people think has a negative connotation. The term was originally coined by Gavin Wood, a co-founder of Ethereum and now focused on his own crypto project, Polkadot. The term also sometimes refers to the semantic web, a concept created by Tim Berners-Lee, in which internet data becomes machine-readable to decode the meaning behind text.
+
+OceanoPDF.com

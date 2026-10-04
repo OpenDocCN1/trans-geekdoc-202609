@@ -1,0 +1,5 @@
+# SECTION 1
+
+# CRYPTO AS MONEY
+
+Derived from the original intention behind Bitcoin as a “peer-to-peer electronic cash system” that emulated certain properties of an idealised version of a gold standard — “It's a better form of money” is the most common framing for explaining what cryptocurrency is to newcomers. It is clear however that most if not all cryptocurrencies have not achieved the status of money. Critics will say that this means all cryptocurrencies are not fit for purpose. While cryptocurrencies do have some of the properties as money, the fact that cryptocurrencies are not money in fact can be a positive for subverting the constraints of the dominant monetary system, especially for those interested in challenging currently-existing capitalist institutions. The ability of cryptocurrency to circumvent financial blockades by states or banks through counter trade should be taken seriously as a tactic for any group with enemies among the financial elite. Additionally, the flexibility of the system allows us to explore alternative democratic monetary experiments that would otherwise be impossible.

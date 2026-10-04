@@ -1,0 +1,9 @@
+natural disasters caused by climate change are ever increasing, this seems like a money system with a death wish. It has been designed by and for the elites of a capitalist system to ensure their wealth and power keeps growing, no matter the cost. Pink Floyd had the right idea here: “money, it's a crime”. But it's also completely legal, even if most were to look at it with a critical eye, it would be seen as an illegitimate system for a democratic society.
+
+These are all issues however that you won’t hear about from most of the hardcore cryptocurrency enthusiasts, as this is a more complicated story to tell potential future buyers. While they will agree with me in saying that the monetary system is legal but illegitimate, their narrative stems from an Austrian School-inspired belief that simplifies many more complex socio-economic issues. This simplified narrative is a seductive one for many due its adherence to the ideologies promoted by many capitalist institutions: it does not prioritise the interest of a democratic society, as we’ll see soon.
+
+# Is Bitcoin Money?
+
+So, does Bitcoin achieve its goal as digital money? The answer will of course depend on who you ask. The more hard-line supporters of Bitcoin (commonly referred to as “bitcoin maxis”) will say unequivocally, “Yes, it has achieved that and should even be used as an accepted global payment system”. There are, however, some practical reasons to think this is not a desirable outcome, in part because Bitcoin does not fulfil every property of what money should have. The three functions of money are to be:
+
++   1. Store of value: Money that you hold onto should have the same or close to the same value from one day to the next or even to the next year, the value should stay relatively stable.

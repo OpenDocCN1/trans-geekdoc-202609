@@ -1,0 +1,3 @@
+the world for the better are serious, then it's not just about coordination but being able to enact change. This means engaging in politics and using the technology to not only enhance democratic systems, but also to enable forms of political resistance when inevitable pushback comes from those who want to keep the sinking ship of the status quo afloat. Only then can one be considered a Blockchain Radical.
+
+OceanofPDF.com

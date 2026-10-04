@@ -1,0 +1,9 @@
+Commonly referred to as a DAO, it is an ever-changing term for an organization using smart contracts to facilitate the governance of itself. It is sometimes simply defined as an online community with a multisignature wallet as a joint bank account, but this is contested by many as people have different ideas about decentralisation and autonomy. The original term was “Decentralised Autonomous Corporation” (DAC), which detailed a company that ran entirely on smart contracts, but Vitalik Buterin suggested changing the C to an O since contracts are not the only type of organizational structure amenable to smart contracts. Lately there has been a lot of interest in cooperatives by those who first came across DAOs since they share many of the same concerns and issues. DAOs will likely have a profound effect on labour in the future in either a dystopian or post-capitalist direction.
+
+# Decentralised Exchange (DEX)
+
+An exchange completely facilitated by smart contracts that does not need to collect your personal information to allow you to exchange. Instead of liquidity of exchangeable assets being provided by the exchange or its partners like in DEXs, DEXs allow for anyone to provide liquidity and be rewarded for doing so through trading fees paid by traders.
+
+# Decentralised Finance (DeFi)
+
+DeFi is a growing industry and ecosystem of protocols and dapps using smart contracts that give access to anyone with a cryptocurrency wallet to many of the same types of financial products available only to banking and investment professionals. Due to the composable design space allowed by smart contracts, many innovative forms of financial products have been created that were not possible before (for better or worse). The most active

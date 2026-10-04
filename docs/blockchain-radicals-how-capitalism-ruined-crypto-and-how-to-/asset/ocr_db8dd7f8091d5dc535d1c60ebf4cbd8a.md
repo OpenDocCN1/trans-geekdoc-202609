@@ -1,0 +1,9 @@
+license... No scarcity is being imposed on media, existing scarcity is being surfaced and experimented with.15
+
+The truth is that the real scarcity lies in the realm of the law and how rights over digital media are recognised. Although platforms make money off of the content created by users, the rights to that content is still owned by the user, even if not formally registered.16
+
+The financialisation of digital media has been happening for a long time at this point, mainly through advertising in order for big tech platforms to make revenue as users largely don't want to pay for digital media. For Dryhurst,"NFTs represent an elegant proposal to attempt what I would describe as feasible abundance, i., how we make media fair for the people creating it?” Tech platforms are essentially black boxes where we know financialisation happens, but we don't know all of the particular details since they are often considered business secrets.\Public blockchains, through making visible latent forces such as financing, unequal returns, or scarce and valuable ownership, are bringing long existing dynamics to the surface to be scrutinised. These forces are not new, they are nude.” And so, similarly to the moral panics from social conservatives about nudity or other forms of sexual expression in media, critics of NFTs seem to be uncomfortable with viewing the naked truth about digital media.
+
+# Platform Risk vs Hyperstructure
+
+While part of the distaste from the critics seems to also stem from their subjective feeling that NFT art lacks taste, this can't be the reason for the strong reaction NFTs have provoked. To understand this more deeply, we need to understand the incentives that the Big Tech platform economy runs on.
