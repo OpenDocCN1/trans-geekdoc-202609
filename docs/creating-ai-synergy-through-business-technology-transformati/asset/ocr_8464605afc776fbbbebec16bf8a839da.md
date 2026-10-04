@@ -1,0 +1,13 @@
+# INTRODUCTION
+
+Businesses can see significant benefits in critical areas by incorporating artificial intelligence (AI), potentially transforming their operations. The use of Artificial Intelligence allows companies to gather valuable information, make intelligent decisions and compete more effectively. Predictive Analytics, a subset of Artificial Intelligence, could transform how organizations anticipate future trends and potential risks enabling them to plan ahead for more effective resource allocation. Businesses can predict outcomes, keep pace with the curve, reduce risks and take advantage of new opportunities through analyzing data and identifying patterns. The use of AI to automate repetitive tasks, reduce errors, and save time can increase operational efficiency, resulting in improved productivity and product quality while reducing costs. This section provides an in-depth review of the current about AI and the alignment of information technology with business strategy. It introduces the key definitions of fundamental concepts as viewed by different authors in these areas.
+
+# Background and Literature of Artificial Intelligence
+
+Since the 1950s, the field of AI has evolved with two main approaches: human centered and rationalist. Human-Centered approaches involve hypothesis and experimental validation, connecting to empirical science (Bellman, 1978; Haugelend, 1985; Kurzweil, 1990; Rich & Knight, 1991). Rationalist approaches, on the other hand, combine engineering and mathematics (Charniak & McDermott, 1985; Luger & Stubfield, 1993; Schalkoff, 1990; Winston, 1970).
+
+AI is a field focused on developing software and hardware capable of executing actions that require cognition. From rationalist approaches, AI encompasses techniques that enable to simulate human behavior to achieve the best results, particularly in uncertain scenarios.
+
+In the early stages of AI development, the primary obstacle has been (and continues to be) the ability to execute tasks that come naturally to humans but are challenging to articulate using mathematical principles (Abramson, Braverman, & Sebestyen, 1963; Goodwill, Bengio, & Courville, 2016).
+
+The challenge of explaining this type of task through predefined rules demanded techniques to identify patterns in data and acquire knowledge autonomously (Abramson et al., 1963; Goodwill et al., 2016; Michie, 1968; Solomon, 1985). This capability is known as machine learning (Goodfellow et al., 2016), empowering computer- based applications to automatically recognize patterns in data and perform tasks without explicit programming (Murphy, 2012). As a result, the field of AI has evolved beyond simply following rules
