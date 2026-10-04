@@ -1,0 +1,5 @@
+# Acknowledgments
+
+This book would never have happened if not for the efforts of Debra Williams Cauley. I thank her for her patience and persistence. The efforts and talents of Neil Romanosky, S. B. Kleinman, and many others at IDG Books have made this book more lucid and attractive than we could have hoped. Richard Lynch's exacting eye and technical acumen kept our code clean, fast, and readable,
+
+Any book on open-source software owes debt to those who have created these great tools. So I thank everyone involved with PHP and MySQL, from the core developers to those who contribute to the documentation. Special thanks to Michael (Monty) Widenius, MySQL's lead developer. He has not only created a terrific relational database, but has offered his advice and expertise to the authors of this book.
