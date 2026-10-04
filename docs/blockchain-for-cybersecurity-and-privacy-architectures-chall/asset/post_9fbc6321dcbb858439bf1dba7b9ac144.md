@@ -1,0 +1,50 @@
+
+45. Kayes, A., Han, J., Rahayu, W., Dillon, T., Islam, M.S., Colman, A.: A policy model and framework for context-aware access control to information resources. The Computer Journal 62(5) (2019) 670–705.
+
+46. Kayes, A., Rahayu, W., Dillon, T: Critical situation management utilizing iot-based data resources through dynamic contextual modeling and activation. Computing 101(7) (2019) 743–772.
+
+47. Kayes, A., Han, J., Colman, A., Islam, M.S.: Relboss: A relationship-aware access control framework for software services. In: OTM Confederated International Conferences "On the Move to Meaningful Internet Systems", Heidelberg., Springer (2014) 258–276.
+
+48. Kayes, A., Rahayu, W., Dillon, T., Chang, E., Han, J.: Context-aware access control with imprecise context characterization for cloud-based data resources. Future Generation Computer Systems 93 (2019) 237–255.
+
+49. Sarda, P., Chowdhury, M.J.M., Colman, A., Kabir, M.A., Han, J.: Blockchain for fraud prevention: A work-history fraud prevention system. In: Trust-Com/BigDataSE 2018, IEEE (2018) 1858–1863.
+
+## 2 A Comparative Study of Distributed Ledger Technologies
+Blockchain vs. Hashgraph
+
+Ariba Aslam Zahoor, Muhammad Mubashir Khan, and Judaid Arshad
+
++ CONTENTS
+2.1 Introduction............................................................................... 29
+2.1.1 Overview............................................................................................... 30
+2.1.2 Blockchain........................................................................................... 31
+2.2 Decentralized Distributed Systems............................................................... 33
+2.2.1 Significance of Consensus for Decentralized Distributed Systems......... 34
+2.2.2 Building Block of Hashgraph.................................................................. 42
+2.3 Gossip Protocol – Building of Hashgraph............................................... 35
+2.3.1 Using Gossip Protocol to Achieve Consensus for Hashgraph.................. 37
+2.3.1.1 Gossip Protocol to Achieve Consensus for Decentralized Distributed Systems.... 38
+2.3.2 Shortcomings of Gossip Protocol in Hashgraph....................................... 42
+2.3.2.1 Fan-out........................................................................................... 42
+2.3.2.2 Maximum Rounds................................................................................ 42
+2.3.2.3 Built-in Redundancy of the Protocol.................................................. 42
+2.3.2.4 High Latency of Message Delivery...................................................... 43
+2.3.2.5 Message Exchange Is Done Periodically.............................................. 43
+2.3.3 Reflective Insight into the Limitations and Advantages......................... 43
+2.4 Performance Evaluation....................................................................... 45
+2.5 Conclusion....................................................................................... 53
+References................................................................................................ 54
+
+## 2.1 INTRODUCTION
+
+Distributed ledger technologies (DLT) has gained significant attraction lately, as it is a state-of-the-art technology for distributed data storage, utilizing cutting-edge advancements in peer-to-peer networking and cryptography and has transformed the manner in which we store, process, and transfer digital assets. A distributed ledger is referred to as a digital ledger, which is different from traditional, centralized arrangements, primarily because the information is stored by all participants, the modifications are replicated to all the nodes in a network concurrently, and all transactions are verified by digital signatures to ensure non-repudiation and data integrity (Khan, Arshad, and Khan, 2019; Nizamuddin et al., 2019). Typically, DLTs represent decentralized databases, without the requirement for a central authority to authenticate and validate transactions. Blockchain technology is such technology that provides a ledger of digital transactions that have been executed and validated by consensus of the majority partition (participants). It uses software, which processes on the order of the newly created and connected blocks via cryptographic means to ensure security and integrity. It has a verified record of each transaction that has been executed to date, which cannot be tampered with, thereby ensuring integrity of information. Although Bitcoin (Nakamoto, 2009) is the most popular application of blockchain, it has been used in diverse application domains such as healthcare, logistics, e-voting, and security, which is highlighted by (Corky, 2016; Khan, Arshad, and Khan, 2018; Nizamuddin et al., 2019). While Bitcoin enables fairness, integrity, and prevention from denial-of-service (DoS) attacks, it lacks efficiency with respect to transaction times when compared with credit cards and other online payment services. Hashgraph, another DLT, has emerged, which focuses on addressing this limitation, promising extraordinary improvement in tps (Schueffel, 2017). Although hashgraph was initially deployed in private settings, public deployment has been recently launched, enabling its adoption for wider application domains. Within this context, this chapter is focused on presenting a comparative study of these DLTs, identifying their individual strengths and weaknesses to highlight potential application domains.
+
+The rest of the chapter is organized as follows. Section 2.1 presents an overview of the demand for DLTs and the potential of blockchain to influence cutting-edge technological developments. Section 2.2 introduces discussion of one of the important challenges within DLTs, consensus, followed by a discussion of gossip protocols and the challenge of consensus within this domain in Section 2.3. Section 2.4 introduces the performance evaluation of blockchains and their comparative evaluation with blockchain. Section 2.5 concludes this chapter, with a description of potential future directions.
+
+### 2.1.1 Overview
+
+The digital economy currently relies on a particular third party upon which they place their trust. For instance, the certification body ensures that digital certificates are reliable. The bank ensures that funds are deposited in our account, and therefore, we depend on a third party to secure our digital possessions. However, these organizations could be hacked, or their data could be compromised. This is where blockchain can make an impact; i.e., it enables efficient verification of digital assets by consensus ensuring security and privacy. Blockchain works anonymously and without the involvement of any third-party sources and has established a system where distributed consensus takes place for the digital environment. It ensures individuals that an event had taken place by adding that event in the public ledger, which becomes part of an immutable record. Owing to its significant popularity within the blockchain community, in this chapter, the term blockchain is used to represent the Bitcoin cryptocurrency system. Other DLT under consideration is hashgraph, which uses a protocol known as gossiping for its fundamental operation. A typical gossip protocol works by sending messages to different individuals in a system; if individuals attempt to match up, they will inevitably succeed in the event that they attempt to send messages, regardless of aggressors, who attempt to control the system; they will at enable any genuine individuals to converge. Gossip ensures that when one individual sends messages to another, the receiving individual will acknowledge the messages with a substantial mark and hashes. While hashgraph is also a DLT, which is fundamentally different from blockchain, many differences are related to the information distribution and consensus formulation. Furthermore, as hashgraph is a directed acyclic graph – it does not require nodes to know each event at all times.
+
+### 2.1.2 BLOCKCHAIN
+
+Bitcoin is a peer-to-peer electronic cash system, as proposed by Satoshi Nakamoto in 2009. It uses many fundamental concepts within cryptography and peer-to-peer systems to achieve a distributed, decentralized, trustworthy infrastructure. In this context, blockchain is a decentralized public ledger bearing records of transactions. This database is shared with the community; however, no one has the authority to control it, and if two users want to initiate a transaction, both of them must have a private key and a public key in order to have a digital signature, which is secure, agile, and yields a solid control of possession. Being a digital signature just the authentication part in the network, whereas the authorization is done by approving transactions that took place. A typical blockchain network is illustrated in Figure 2.1. As blockchain works as a distributed network, when someone wants to transact some bitcoins, they broadcast to the data, i.e., their public key, the public key of the receiver, and the amount transferred to the network. The details transferred to the network have to be verified by other nodes in the network (MacDonald, Allen, and Potts, 2016). A transaction is referred to as a transfer of amount between two individuals bearing Bitcoin wallets. These wallets have private keys that are used to sign the transaction and act as proof that it belongs to the wallet's owner. After the issuance of a transaction, the digital signature helps avoid any kind of alteration. Transactions, once broadcast to the network, get confirmed in 10–20 minutes. After the verification of the transaction and labeling it to be a truthful transaction, it needs to be added to the blockchain as a newly created block. These blocks, have been added to the chain, are labeled as confirmed, whereas the unconfirmed blocks, whose verification has been done but have not yet been linked with the blockchain, are periodically broadcasted to the network (Garay, Kiyayas, and Leon, 2015). The transactions residing in a block are considered to have occurred at almost the same time.

@@ -1,0 +1,15 @@
+# Blockchain Security and Potential Use Cases
+
+The proposal for DID is not simplistic, with many elements in play, the foundation is built on blockchain, which quite simply is the most appropriate technology to make it happen. The blockchain can cope with the myriad of untrusted parties while also asserting the identity of individuals with the highest assurance of truth. Of course, there remain the usual caveats about scalability and the consensus protocol, but here is a proposal that does sense to implement via blockchain.
+
+# 4.4 THE FUTURE OF BLOCKCHAIN
+
+There are a number of potential use cases for blockchain such as a cryptocurrency based on an asset reserve, decentralized online identity, and electronic voting. We examine these scenarios here.
+
+# 4.4.1 DIGITAL CURRENCIES
+
+Libra is a digital currency built on the foundation of blockchain technology from Facebook and a number of other technology companies. The mission for Libra is a global secure and financial infrastructure, which is composed of three parts. These parts are secure, scalable, and reliable blockchain backed by a reserve of assets designed to give it intrinsic value and are given by the independent Libra Association, with evolving the ecosystem (Libra, 2019). The association is governed by the Libra Association Council, which is made up of one representative validator node. This council makes decisions on the governance of the network and reserve. In the beginning, the group consists of the founding members: businesses, non-profit and multilateral organizations, and academic institutions from around the world. The target launch is 2020.
+
+The security of the Libra Blockchain is built on correctly implementing aspects such as validators, Move moves, and the Move Virtual Machines (VM). We work to isolate aspects of code that contribute to a validator securing a block of transactions during consensus. They apply to ensure assurance in the correctness of these components through formal specification and verification. They also claim that they will code reviews, source control, and release management. This, of course, depends on the resources they allocate to it. There are additional security considerations that need to be given to blockchain applications such as capping the number of resources such as CPU, memory, and storage that can be given to nodes. This protects against denial of service to some degree. They also have verifiable functions to protect against targeted denial-of-service attacks. It is difficult at this early stage to secure how the Libra Blockchain is and whether the chain or the associated wallets can be hacked. At the start, the Libra Blockchain only grants votes to founding members, entities that predefined founding member eligibility criteria, so it is very unlikely any of them will act maliciously.
+
+They are working on validating the Libra protocol via an open-source libra core prototype implementation. This is written in Rust, primarily due to its focus on safe coding practices, systems programming support, and good performance.

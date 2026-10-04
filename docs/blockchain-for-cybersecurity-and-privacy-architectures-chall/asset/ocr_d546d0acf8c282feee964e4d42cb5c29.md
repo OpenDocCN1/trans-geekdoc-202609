@@ -1,0 +1,15 @@
+# Applications of Blockchain in Digital Forensics and Forensics Readiness 341
+
+and fragile characteristics. It is a big challenge for the investigating agencies to preserve the integrity and authenticity of the evidence from the heterogeneous digital gadgets for its admissibility in the court of law. Guaranteeing the authenticity of evidences and legality of process and procedure throughout the digital forensic investigation is a real challenge for the investigators. Digital evidence management becomes more complicated when multiple agencies and forensics examiners are involved in investigation. The capabilities of blockchain technology, i.e., immutability, auditability, provenance, integrity, security, and trustworthiness, make it the most promising solution against the challenges posed by digital forensics. Blockchain can provide robust platform for evidence management and chain of custody.
+
+The chapter is basically focused on applications of blockchain in digital forensics and forensics readiness. Section 15.2 gives a brief idea about digital forensics, followed by a basic understanding of blockchain. In Section 15.3, literature survey is shown, with research gap analysis. A blockchain-based digital forensics framework is discussed in detail with a prototype model in Section 15.4. Forensics readiness with use cases is discussed in Section 15.5, followed by conclusion in Section 15.6.
+
+A mix of different research approaches has been used here. Forensics products, recent research papers, journals, smartphones, and dissertations have been thoroughly analyzed and referred in the chapter. Interviews of the expert forensic examiners and forensics software developers were carried out to understand the weakness in the current system and how blockchain can be used to bridge the gap. A comparative analysis was done between the existing system and the prototype system based on blockchain. Further, a practical implementation and a case study are discussed as proof of concept.
+
+# 15.2 OVERVIEW OF DIGITAL FORENSICS PROCESS AND BLOCKCHAIN TECHNOLOGY
+
+# 15.2.1 DIGITAL FORENSICS
+
+Digital forensics is a specialized branch of forensic science. It deals with the electronic evidence collection, preservation analysis, and reporting of the findings in a scientific manner, which should be acceptable in the court. The whole life cycle of the evidence collection and analysis should strictly adhere to the standard procedure defined by the law. Any deviation in the process can make the whole evidence and its findings unacceptable during the trial in court.
+
+Electronic evidence is the information collected through various digital gadgets and information equipment that is suspected and might have been used in crime. It may be laptops, personal computers, smartphones, tablets, servers, network equipment, cloud storage, hard disk, memory stick, etc. Digital evidence is not only used in the prosecution of cybercrime but also used to prosecute all other types of crime.
