@@ -1,0 +1,1966 @@
+- pgno: 0
+  md: '# Ensemble Models Based on QuBiLS-MAS Features and Shallow Learning for the
+    Prediction of Drug-Induced Liver Toxicity: Improving Deep Learning and Traditional
+    Approaches
+
+
+    Jose R. Mora, Yovani Marquez-Ponce,‡ César R. García-Jacas, and Amileth Suarez
+    Causedo
+
+
+    Cite This: Chem. Res. Toxicol. 2020, 33, 1855–1873
+
+
+    Read Online
+
+
+    ACCESS | Metrics & Mere | Article Recommendations | Supporting Information
+
+
+    ![](img/d712c719d520e68489790616d7410fde_0_0.png)
+
+
+    ABSTRACT: Drug-induced liver injury (DILI) is a safety concern in drug development
+    and a regulatory concern. Thus, in many drugs are proposed to induce the hepatotoxicity
+    of organic chemicals. Here, classifiers for the prediction of DILI were developed
+    based on 2D-3D descriptors and machine learning techniques on a training set of
+    1075 molecules. The best ensemble model E13, was obtained with good statistical
+    parameters for the learning series, with the following accuracy = 0.840, sensitivity
+    = 0.890, precision = 0.761; MannWhitney''s correlation = 0.660, and under the
+    ROC curve = 0.904. The model was also validated with Y-sampling testing, and repeated
+    k-fold cross-validation and repeated k-fold-validation. In addition, external
+    validation was also carried out using two and five external test sets (accuracy
+    = 0.802, sensitivity = 0.845, precision = 0.715; 98.4% accuracy in its applicability
+    domain). A statistical analysis of the performance of the E13 model, with regard
+    to results and predictions, showed that DAE, Dropout SoftClassifier, Deep Learning,
+    and Random Forest were also presented in the literature. In general, E13 presented
+    the best global performance in all experiments. The sum of the ranking procedures
+    provided a similar grouping procedure to that of the MANOVA statistical analysis,
+    where E13 was identified as the best model for DILI predictions. A recommendation
+    tool for DILI prediction was also developed, which is freely available at http://tomcomond.com/api/ptoxra.
+    This software was used for screening of various data sets, containing natural
+    products, leads, toxic materials, and FDA approved drugs, to assess the usefulness
+    of the QSAR models in the DILI labeling of substances; the evaluated molecules
+    are DILI-like compounds. In all, it is stated that the E13 model is a relevant
+    method for the prediction of DILI risk in humans, and it shows the best results
+    among all of the methods used.
+
+
+    # ## INTRODUCTION
+
+
+    The liver is an organ major of toxins, because it is associated with drugs and
+    xenobiotic metabolism. The drug-induced liver injury (DILI)² is one of the most
+    expensive and dangerous types of toxicity. Decisions about the survival of many
+    clinical trials, rejection of new drugs, and withdrawal of drugs have been made
+    on the evidence of liver damage caused by hepatotoxic drugs. The identification
+    of DILI in an early stage is needed, although there exists a limited correlation
+    between vitro/in
+
+
+    elements in humans, and for the prediction of idiosyncratic effects in the liver
+    is observed when the population is exposed to the drug marketing.⁵⁶ Consequently,
+    in conjunction with the classic studies
+
+
+    Received: February 27, 2020
+
+    Published: May 14, 2020
+
+
+    ![](img/d712c719d520e68489790616d7410fde_0_1.png)
+
+
+    © 2020 American Chemical Society 1855
+
+    https://doi.org/10.1021/acs.ctrx.0.00030
+
+    Chem. Res. Toxicol. 2020, 33, 1855–1873'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Chemical Toxicology
+
+
+    with animals, reports are focused on the construction of many predictive models
+    using different methods, such as toxicogens, gene knockout or chemical mice; methods
+    of biological markers, chemical binding and in vitro methods. A sensitivity of
+    over 70% can be obtained for in vitro methods, with accuracy that can replace
+    in vivo methods. Although these in vitro experiments are easier to compare and
+    compare they have a costly cost and are limited by the availability of reagents
+    for the experiments. Toxicologists have been evaluated in a large number of compounds,
+    but using few animals or in vitro experiments as possible. Moreover, it has been
+    established that there will be the elimination of all animal testing requirements.
+
+
+    In sense, a potential alternative to the use of animals is to create molecular
+    rules, in silico models. In silico methods are then used before in vitro and in
+    vivo assays. It is important to mention that the biological test is required to
+    generate the data to be used in such experiments.
+
+
+    In the past 20 years, many models have been developed for data sets and techniques
+    for the prediction of hepatotoxicity. The main efforts have centered on the use
+    of shallow and deep learning approaches for different types of descriptors and
+    molecular encoding. Also, some of the groups involved in modeling for drug binding
+    prediction have developed different programs with user interfaces (UI), applications,
+    such as DILIweb-15, HepatProEL-21, and ProTox-22. With respect to the data, the
+    development of many data sets has been based on the binding affinity (positive
+    or negative) of drugs to human proteins. One of the most used data sets is the
+    one mentioned.
+
+
+    This data set is not enough and difficult to study nature; it contains drugs and
+    organic-like compounds. This fact has been addressed in recent years. Other important
+    data sets, such as the DILI database and DILshift, have also been employed; they
+    were approved by the FDA for drug labeling sets for DILI.
+
+
+    To the best of our knowledge, the performance/applicability domain of current
+    models is limited, and DILI prediction is still unsatisfactory for application
+    in early drug development. Thus, the development of new approaches is needed.
+
+
+    In the present study, the atom- and bond-based 0-2D algebraic indices, were obtained
+    using QChemBL-MS software, and QChemBL-MS descriptors have been widely used in
+    QSAR modeling, and have to retain more information than compound indices. Other
+    indices include MACCS, Daylight, Dragon, and Mordell. Here, for the first time
+    these topological models are used; new methods and a cross-platform for the binary
+    drug prediction were developed, which are available for free downloading at
+
+
+    pubs.org/
+
+
+    optimized (3D structure prediction using a UFF force field) by using RDK (https://www.rdkit.org/).
+    The training set (based on 0_TR_1075 and composed of 1075 compounds) and the test
+    set (based on the VALID set composed of 120 molecules (1_RS_120) and valBLOCK
+    set composed of 2 (2_BS_47) were evaluated by Li et al¹. This training set was
+    selected, because it is also enough to represent the chemical diversity of the
+    compounds, and were used to confirm the robustness and predictive power of the
+    classifiers used. Furthermore, we found that the data sets 3_HE_205, 4_DR_417,
+    5_DERS_928, and 6_AI_280 contained duplicated compounds with respect to the training
+    set. Thus, we decided to use a different set of compounds for training, and the
+    duplicated compounds were only used to evaluate the merit (predictive power) of
+    our models.
+
+
+    The performance of the data set 7_HE_554 was judged by 554 non-duplicated compounds
+    with respect to the training set. No models were used except the labels of the
+    compounds; i.e., the one used in the original papers. The 3D structure, the supporting
+    information, DILI labeling file, and II_i and II_j, respectively. Information
+    about the positive and negative cases in each data set is provided in Table 1.
+
+
+    # 1. Training, Validation, and External Data Sets
+
+
+    | data set | code | number of positive-DILI | number of negative-DILI |
+
+    |---|---|---|---|
+
+    | training set | 0_TR_1075 | 652 | 423 |
+
+    | test set | 1_RS_120 | 72 | 48 |
+
+    | | 2_BS_47 | 23 | 24 |
+
+    | external test set | 3_HE_205 | 130 | 75 |
+
+    | | 4_DR_417 | 178 | 239 |
+
+    | | 5_DERS_928 | 682 | 246 |
+
+    | | 6_AI_280 | 214 | 61 |
+
+    | | 7_HE_554 | 176 | 374 |
+
+
+    # Molecular Descriptor Classification.
+
+
+    The topological 0-2D MDs (atom- and bond-indices) and local linear, quadratic,
+    and binary indices were calculated using the QChemBL-MS software (http://www.chembl.org/).
+    These descriptors have been widely used in QSAR modeling, showing good performance
+    in many applications, such as for analyticity, pharmacophores, toxicophores, inhibitors,
+    and reactivity. These properties were predicted⁷.
+
+
+    In the classification, the program used the following validation approach for
+    data selection: (1) all Na (n-number) values were evaluated; (2) a Shannon entropy
+    was used to select descriptors with entropy higher than 60% of the maximum entropy
+    value; and (3) a pairwise correlation test was applied using a Pearson correlation
+    coefficient of 0.8⁸. Then, from the descriptor lines, three subsets were selected
+    based on different performance features. The first approach involved a supervised
+    selection based on the Jeffreys information-entropy ranking method implemented
+    in the IMMAN software (http://robust-hub.com/imman-software/)⁹.
+
+
+    # EXPERIMENTAL PROCEDURES
+
+
+    Chemical Data Sets. Data sets were used in this study. Several filters were applied
+    to remove inorganic, solid, mixture, and organic compounds. Then, the compounds
+    were removed
+
+
+    1856
+
+
+    https://doi.org/10.1016/j.ymchem.2023.06.050
+
+    Chem. Res. 2023, 5, 1855–1863'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Chemical Research in Toxicology
+
+
+    pubs.acs.org/crt
+
+
+    Article
+
+
+    Scheme 1. Data Preparation and Feature Selection of (A) an Individual Model Generation
+    and (B) Combinations of Base Models to Generate Ensembles
+
+
+    ![](img/d712c719d520e68489790616d7410fde_2_0.png)
+
+
+    (B) 10 base models
+
+
+    ![](img/d712c719d520e68489790616d7410fde_2_1.png)
+
+
+    Outputs [AP%]
+
+
+    ![](img/d712c719d520e68489790616d7410fde_2_2.png)
+
+
+    ![](img/d712c719d520e68489790616d7410fde_2_3.png)
+
+
+    ![](img/d712c719d520e68489790616d7410fde_2_4.png)
+
+
+    | Filters Criteria |
+
+    | Cross-Validation: ACC > 0.71; SE < 0.06; SP > 0.7; MCC > 0.37 |
+
+    | Random and Block: ACC > 0.74; SE < 0.64; SP > 0.76; MCC > 0.45 |
+
+
+    | 10 best models |
+
+    | M1-M10 |
+
+
+    | Filters Criteria |
+
+    | Cross-Validation: ACC > 0.68; SE < 0.08; SP > 0.6; MCC > 0.3 |
+
+    | Random and Block: ACC > 0.65; SE < 0.09; SP > 0.65; MCC > 0.35 |
+
+
+    | ML technique | Base model |
+
+    | E12 | M1, M2, M3, M6, M9 |
+
+    | E13 | M2, M3, M7, M8, M10 |
+
+
+    second was to a set of MD features highly correlated with the DILI point and with
+    low correlation, means of the subset method in the WEKA software. The subset was
+    constructed by joining the two subsets described in Scheme 1 follows the methodology
+    described above.
+
+
+    Modeling Process. We used the WEKA software, a wrapper selection method to select
+    the features that were identified as best. The forward, step-greedy, and genetic
+    algorithm strategies were used for selection, using the accuracy (ACC) as an evaluation
+    measure. The k-nearest neighbor (KNN), multilayer perceptron (ML), logistic regression
+    (LR), classification tree (C4.5), Fisher filter, and Naive Bayes (NB) were performed
+    for each method. The 14 configurations considered for machine learning techniques
+    were
+
+
+    performed through cross-validation (CV). The predictive ability of individual
+    and ensemble models was evaluated by considering the accuracy (ACC), sensitivity
+    (SE), specificity (SP), and Matthews correlation coefficient (MCC), geometric
+    mean
+
+
+    and, under the receiver operating characteristic (ROC) curve (AUC) atmospheric
+    measure (see the Supporting Information, S12) for more details. The results are
+    presented in Figure S1, Table S2, and Table S3, and
+
+
+    From best individual models, ensemble models were developed to enhance diversity.
+    The building of ensembles is based on the idea that the combination of different
+    individual classifiers may yield a better performance than the one achieved by
+    each base model. "In this study, looking for the best of features for selection,
+    we used ensemble methods to identify the best individual classifiers and best
+    way of combining them. To this, we used an ensemble strategy as the pathway to
+
+
+    to learn the relationship between the outputs of individual classifiers (AP%)
+    and that of the overall class (see Scheme 1 and section 2 in detail). If $p''
+    = 100 - p$, where $p$ is the probability to be positive and $p''$ is the probability
+    to be negative. The diversity among individual classifiers is vital to build ensemble
+    models. The diversity correlates the results of the
+
+
+    1857
+
+
+    https://doi.org/10.1021/j.chemtox.2023.03.002'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Chemical Research Toxicology
+
+
+    Table 2. Statistical Parameters for DILI Prediction of the Data Sets in this Study
+
+
+    | data set | code | no. of molecules | ACC | SE | SP | MCC |
+
+    |---|---|---|---|---|---|--|
+
+    | 0_TR_1075 | E13 | 1075 | 0.840 | 0.890 | 0.761 | 0.660 |
+
+    | | E12 | 1075 | 0.834 | 0.880 | 0.764 | 0.651 |
+
+    | | Xu''s data set¹⁵ | 1065 | 0.773 | 0.814 | 0.714 | - |
+
+    | | M2 | 1075 | 0.743 | 0.841 | 0.541 | 0.448 |
+
+    | | M9 | 1075 | 0.736 | 0.759 | 0.711 | 0.471 |
+
+    | | Lew''s data set¹² | 1028 | 0.681 | 0.668 | 0.667 | 0.361 |
+
+    | 1_R_TS_120 | Vilead | 120 | 0.825 | 0.889 | 0.667 | 0.634 |
+
+    | | E12 | 120 | 0.792 | 0.889 | 0.646 | 0.559 |
+
+    | | M2 | 120 | 0.794 | 0.947 | 0.563 | 0.526 |
+
+    | | Xu''s data set¹⁵ | 119 | 0.773 | 0.814 | 0.710 | - |
+
+    | | M9 | 120 | 0.767 | 0.862 | 0.625 | 0.505 |
+
+    | | Padel DDPredictor | 120 | 0.758 | 0.833 | 0.646 | 0.490 |
+
+    | | DL-Dili (DLIserver) | 120 | 0.750 | 0.819 | 0.646 | 0.473 |
+
+    | | DLI-Combined (DLLIserver) | 120 | 0.667 | 0.708 | 0.604 | 0.311 |
+
+    | 2_B_TS_47 | DLI-Combined | 47 | 0.583 | 0.514 | 0.698 | - |
+
+    | | | 47 | 0.936 | 0.957 | 0.917 | 0.873 |
+
+    | | M2 | 47 | 0.872 | 0.952 | 0.792 | 0.756 |
+
+    | | M9 | 47 | 0.851 | 0.913 | 0.792 | 0.709 |
+
+    | | Lew''s data set¹² | 47 | 0.809 | 0.957 | 0.667 | 0.648 |
+
+    | | E12 | 47 | 0.766 | 0.996 | 0.686 | 0.533 |
+
+    | | | 47 | 0.723 | 0.780 | 0.583 | 0.471 |
+
+    | | DL-Dili (DLIserver) | 47 | 0.617 | 0.783 | 0.458 | 0.254 |
+
+    | | E12 (with duplicates) | 205 | 0.888 | 0.977 | 0.733 | 0.660 |
+
+    | | E12 | 205 | 0.861 | 0.942 | 0.660 | 0.681 |
+
+    | | | 205 | 0.873 | 0.954 | 0.660 | 0.724 |
+
+    | | E13 (with duplicates) | 205 | 0.848 | 0.943 | 0.660 | 0.650 |
+
+    | | M9 | 158 | 0.868 | 0.946 | 0.733 | 0.713 |
+
+    | | M9 | 158 | 0.861 | 0.941 | 0.698 | 0.680 |
+
+    | | M2 | 158 | 0.863 | 0.942 | 0.695 | 0.704 |
+
+    | | M2 | 158 | 0.835 | 0.952 | 0.640 | 0.620 |
+
+    | | Padel DDPredictor | 205 | 0.834 | 0.885 | 0.747 | 0.639 |
+
+    | | | 205 | 0.771 | 0.931 | 0.493 | 0.490 |
+
+    | | DL-Dili (DLIserver) | 205 | 0.751 | 0.765 | 0.667 | 0.448 |
+
+    | | DLI-Combined (DLLIserver) | 205 | 0.730 | 0.715 | 0.773 | 0.472 |
+
+    | | He''s data set¹⁴ | 204 | 0.733 | 0.773 | 0.658 | - |
+
+    | 4_DR_ETS_417 | | 417 | 0.847 | 0.944 | 0.774 | 0.712 |
+
+    | | E12 | 151 | 0.809 | 0.914 | 0.666 | 0.621 |
+
+    | | | 417 | 0.842 | 0.932 | 0.770 | - |
+
+    | | | 151 | 0.798 | 0.901 | 0.657 | 0.581 |
+
+    | | M9 | 417 | 0.830 | 0.916 | 0.706 | 0.675 |
+
+    | | M9 | 151 | 0.763 | 0.864 | 0.645 | 0.523 |
+
+    | | M2 | 417 | 0.820 | 0.949 | 0.724 | 0.671 |
+
+    | | M2 | 151 | 0.768 | 0.938 | 0.571 | 0.556 |
+
+    | | Padel DDPredictor | 417 | 0.786 | 0.921 | 0.628 | 0.607 |
+
+    | | Wang''s data set¹¹ | 450 | 0.769 | 0.822 | 0.870 | 0.452 |
+
+    | | Hong''s data set¹¹ | 451 | 0.729 | 0.828 | 0.759 | 0.514 |
+
+    | 5_DR_ETS_928 | Vilead | 416 | 0.704 | 0.955 | 0.517 | 0.503 |
+
+    | | DL-Dili (DLIserver) | 397 | 0.693 | 0.712 | 0.595 | 0.387 |
+
+    | | E13 | 928 | 0.810 | 0.847 | 0.790 | 0.546 |
+
+    | | M2 | 570 | 0.802 | 0.827 | 0.740 | 0.535 |
+
+    | | M2 | 928 | 0.804 | 0.821 | 0.667 | 0.449 |
+
+    | | | 570 | 0.781 | 0.816 | 0.668 | 0.387 |
+
+    | | E12 (with duplicates) | 928 | 0.779 | 0.795 | 0.726 | 0.472 |
+
+    | | M9 | 928 | 0.787 | 0.799 | 0.752 | 0.511 |
+
+    | | M9 | 570 | 0.751 | 0.768 | 0.696 | 0.416 |
+
+    | | Vilead | 926 | 0.768 | 0.858 | 0.682 | 0.607 |
+
+    | | Padel DDPredictor | 924 | 0.740 | 0.761 | 0.682 | - |
+
+
+    1858'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Chemical Research in Toxicology
+
+
+    pubs.acs.org/crt
+
+
+    Article
+
+
+    Table 2. counted
+
+
+    | data set | code | no. molecules | ACC | SE | SP | MCC |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | | DL-Liew (DLLiew) | 925 | 0.719 | 0.719 | 0.718 | 0.395 |
+
+    | | DL-Combined (DLCombined) | | 925 | 0.674 | 0.615 | 0.837 | 0.399 |
+
+    | M2 (with duplicates) | | 280 | 0.939 | 0.950 | 0.903 | 0.830 |
+
+    | M2 (without duplicates) | | 197 | 0.934 | 0.938 | 0.917 | 0.799 |
+
+    | E13 (with duplicates) | | 280 | 0.931 | 0.936 | 0.919 | 0.816 |
+
+    | | E13 (without duplicates) | | 197 | 0.919 | 0.919 | 0.774 | 0|| E12 (with duplicates)
+    | |  28 |  0922 | .999 | | .996 | | 0.085 |
+
+    || E E2 ( duplicates)) | | 19 | 0.914 | 0.913 | 0.717 | 0.752 |
+
+    | M9 (with duplicates) | | 280 | 0.907 | 0.917 | 0.871 | 0.749 |
+
+    | Padel DDPictor | | 280 | 0.864 | 0.849 | 0.819 | 0.683 |
+
+    | Vlead | | 280 | 0.836 | 0.899 | 0.613 | 0.518 |
+
+    | Ai''s data set | | 286 | 0.843 | 0.886 | 0.754 | 0.904 |
+
+    | DL-Liew (DLLiew) | | 278 | 0.817 | 0.880 | 0.806 | 0.631 |
+
+    | DL-Combined (DLCombined) | | 278 | 0.781 | 0.733 | 0.951 | 0.574 |
+
+    | 7_ETS54 | | 554 | 0.792 | 0.832 | 0.708 | 0.537 |
+
+    | Vlead | | 554 | 0.760 | 0.819 | 0.599 | 0.499 |
+
+    | M2 | | 554 | 0.767 | 0.840 | 0.621 | 0.458 |
+
+    | M9 | | 554 | 0.756 | 0.801 | 0.663 | 0.454 |
+
+    | Padel DDPictor | | 552 | 0.727 | 0.769 | 0.640 | 0.397 |
+
+    | DL-Liew (DLLiew) | | 552 | 0.693 | 0.718 | 0.565 | 0.312 |
+
+    | DL-Combined (DLCombined) | | 523 | 0.625 | 0.564 | 0.723 | 0.266 |
+
+
+    > *The prediction is counted by the methods reported in the literature and our
+    classifiers. The results are sorted from largest to smallest according to the
+    ACC values. An ensemble models developed in this study; values from one model
+    are shown in bolded, and others*
+
+
+    individual classes are used in this disagreement function and the decoration were
+    used to quantify the diversity between base models (see S2, S3). The main results
+    for the ensembles are given in the Supporting Information, files S1 and S4.
+
+
+    **Evaluation of QSAR.** Finally, three kinds of validation were used to judge
+    the accuracy of QSARs (or other methods) see file S12, S4). Specifically, the
+    randomization used were k-fold cross-validation, external validation, and internal
+    validation. The Y-randomization test is performed to check the reliability of
+    the DLI (activity) in the training set; the k-fold cross validation was used to
+    shuffle the test sets obtained from the different training set. Moreover, several
+    k-fold iterations were also considered. For each fold and k-fold considered we
+    performed 1000 times. So, for each period we obtained in validation (see Supporting
+    Information, files S5 and S6) the values were considered from 10 to 50, with a
+    scale of 10. Finally, the final validation was performed by using calibration
+    and test sets (training/test set). All results are given in the Supporting Information,
+    files S1 and S4 and S5.
+
+
+    **Applicability domain.** The applicability domain (AD) was carried out to evaluate
+    the behavior of the models to perform reliably (see S7). In this study, we used
+    one method to determine the features that fall within the AD of a model. However,
+    there are several AD methods that characterize the interpolation and extrapolation
+    of models. So by the ideas of consensus-based prediction, we found that if a molecule
+    lies outside of the AD in at least three of the AD methods (consensus-then) it
+    is considered as unreliable.
+
+
+    AD methods were taken from the
+
+
+    Abstract discovery (see the Supporting Information, file S7).
+
+    **Multiple Comparison of QSAR models.** The comparison is the best way to select
+    among the strategies used. We aim to compare various criteria (ACC, SE, SP, and
+    MCC) of the models developed by using different methods (similarity), hierarchical
+    clustering analysis (HCA), PCA (SCA), one-way multivariate analysis of variance
+    (M-ANOVA, with regression parameters), and parameter-based descriptors (PBD).
+    The method was used to compare all group properties (each sample group per group);
+    that is a test also to perform analysis of the distribution of AD in the seven
+    data sets, using an alpha-value of 0.05 (for, see S5 in file S12). The results
+    of the distribution and AD values are given in the Supporting Information, files
+    S8 and S9. However, M-ANOVA, HCA, and PCA were performed with STATISTICS Software.
+
+
+    **Software Development and Predictive Screening.** We used the software named
+    SwissAD-PROTOX (the in silico screening and prediction of toxicity hazard and
+    risk assessment, developed by the University of Basel), consensus models M12,
+    and M24 were then incorporated into the aforementioned software in order to predict
+    the order organic toxicity of groups. The best estimates in this study were obtained
+    by the software written in the Java (version 1.8) programming language, and it
+    is cross-platform. The development used the Java Development Kit (JDK) (version
+    1.8.091), QQiBit-S, and AMBIT (version 0.0.4), which were used to calculate the
+    chemical properties, the calculation of applicability domain (AD), and prediction
+    of toxicity end points.
+
+
+    1859
+
+
+    https://doi.org/10.1021/acs.ct.0c06668
+
+
+    Chem. Res. Env. 2023, 23, 18855–18863'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Chemical Research in Toxicology
+
+
+    # pubs.acs.org/crt
+
+
+    # Article
+
+
+    ![](img/d712c719d520e68489790616d7410fde_5_0.png)
+
+
+    Figure 1. Graphical representation of the instance distribution in the training
+    [0_T_1075] with a 10-fold cross-validation for the M2, M9, E12, and E13 models.
+
+
+    leads, and toxic compounds. The description of each data set is shown in Table
+    S1.
+
+
+    # ## RESULTS
+
+
+    **Data Sets, Feature Selection, and Base Models.** From the selection process,
+    three subsets of MDs were built with 126, 125, and 251 MDs, denoted as Imman-126,
+    Weka-125, and IW-251, respectively. A wrapper-type method was applied to classify
+    these subsets. As a result, models were obtained (see files S2 and S3-II) with
+    ACC = 0.71, EP = 0.73, SP = 0.50, and MCC = 0.37 and ACC = 0.72, 0.76, SP = 0.58,
+    and MCC = 0.45 for the tests. It is important to note that the data sets used
+    are unbalanced; as they have more cases with positive-DILI than negative-DILI.
+    Consequently the synthetic oversampling technique (SMOTE) was applied. The method
+    described in the feature selection and model processing are summarized in Section
+    3.
+
+
+    By applying a cutoff on the validation sets for 1_T_100 [ACC > 0.76 and MCC >
+    0.5] and 2_B_75 [ACC > 0.77 and MCC > 0.4], the models M2, M9, and E18 were selected
+    as the most robust models. The model M9 was obtained using a SMOTE process of
+    50% on the test set, increasing the number of positive-DILI instances from 423
+    to 636, which is close to the number of positive-DILI instances of 652. The statistical
+    parameters for these models are presented in Table 2. In order to improve results
+    of individual models, several ensemble models were constructed using the previous
+    step. Another WEKA-wrapper type feature was selected to control the inclusion
+    of individual classes into the final ensemble. Each output Δ0% obtained from each
+    individual model was used as an input in the wrapper. The same ML techniques integrating
+    the best combinations were then applied. Approximately 100 possible ensembles
+    were generated. There were 19 ensembles (denoted from E1 to E19) selected as the
+    best ones according to ACC, SE, SP, and MCC statistical measures. The number of
+    ensembles with MCC less than or equal to was 7. The training accuracy was approximately
+    equal to 0.8, whereas the maximum ACC obtained by the individual models was 0.74.
+    With respect to the 1_T_120 test set, an increase of 0.07 was observed, and for
+    the 2_B_75 test set, an increase of 0.04 was obtained. To select the most robust
+    ensembles, some cutoffs in the statistics were applied as follows: for 1_T_1075,
+    ACC > 0.83, SE > 0.88, SP > 0.76, and MCC > 0.66 were the criteria applied. Then,
+    the E12 and E13 were selected as the best with 7 and 5 base models, respectively.
+    Detailed in
+
+
+    1860
+
+
+    https://doi.org/10.1016/j.chemtox.2023.106858
+
+
+    * Chem Res. Toxicol. 2023, 178, 106858 *'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Chemical Research in Toxicology
+
+
+    # pubs.acs.org/crt
+
+
+    # Article
+
+
+    ![](img/d712c719d520e68489790616d7410fde_6_0.png)
+
+
+    **Figure 2**. Values of the average accuracy (average MCC) versus the Y-randomization
+    test, from the different train k-fold distributions of the 1000 runs (see S1 for
+    more details).
+
+
+    both E12 and E13 were logistic regression, and the results are shown in Table
+    2 (see also file S4_ii).
+
+
+
+    In order to gain more insight about the performance of the models, Figure 1 shows
+    the performance graphs of M2, M9, E12, and E13 for the instances (similar for
+    tests for sets D1–D4, S1, S2, and S3, respectively). The distribution of the instances
+    and their predictions by the Δ% values for each class is observed. From the analysis,
+    it is clear that the robustness of the models is greater than their specificity.
+    This fact is related to substructure redundancy in the language, “by noting that
+    there are some attributes that improve the performance of DILI-based classifiers,
+    such as C-O-O moiety (fingerprint key: AP202), O-OH (fingerprint key: Estate34),
+    two aromatic rings, and conjugated bonds (fingerprint key: Pubchem-257); it is
+    important to note that this fingerprint (key: PF284) was performed on the training
+    set used in this study. The performance on the training set, with a 10-fold cross-validation,
+    was obtained for the E13 instance with ACC, SE, and P values equal to 0.84, 0.79,
+    and 0.76, respectively (Table 2). we shows the MCC values (obtained from 1000
+    iterations) versus the percent values considered. As it can be observed, the MCC
+    values showed a decreasing linear relationship; the E13 model showed MCC values
+    equal to 0.06, 0.45, 0.31, 0.18, and 0.05, respectively, which indicates its robustness.
+    The models were performed 1000 times for the repeated 6-fold cross-validation
+    and repeated holdout tests. The results of these two tests are presented in Figure
+    3 (see also file S6), where it can be seen that the average MCC values were different
+    for the different validation sets used. In general terms, it is stated that the
+    good classification outcomes obtained were due to neither random correlation between
+    the independent variables and response variable not redundancy in the training
+    set.
+
+
+
+    Finally, in order to analyze detail the performance of the four classifiers shown,
+    a validation on additional external sets (ETNs), as well as comparison with previously
+    reported in the literature, to find entry and complete analysis tools tools for
+    DILI where, indeed, PaeDDP, DILIPredor and Deep Learning Liver (two models), were
+    selected because they were freely available at the time to perform this study.
+    For the case of the PaeDDP, it was ordered to approximately maintain the same
+    size of the data set. Only thirty instances were not-number used. There are two
+    special cases for the S_DRTS_928 data set which were not processed by PaeDDP and
+    DILIPredor-based applications; they are Ellantine (C5H11N3O6S2), which is labeled
+    as negative-DILI, and trasylol
+
+
+    # **Validation of Binary and Multiclass classifiers**
+
+
+    The validation methods used to evaluate the relevance of best QARS were the Y-randomization,
+    repeated holdout validation, repeated k-fold cross-validation, and external validation
+    methods. In the Y-randomization method (see file S5), the training Y was scrambled
+    at 10%, 20%, 30%, 40%, and 50% from the true active/inactive instances. Figure
+    2'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Chemical Research in Toxicology
+
+
+    pubs.acs.org/grt
+
+
+    Article
+
+
+    ![](img/d712c719d520e68489790616d7410fde_7_0.png)
+
+
+    Figure 3. Distribution of prediction accuracy (mean MCC) of the 1000 runs of (a)
+    k-fold and (b) k-holdout cross-validation process showing the best one in each
+    set. (See S16 for more details).
+
+
+    ($C_{62}H_{112}N_{6}O_{5}$), which are labeled as positive-DILI. The results in
+    Table 2 are presented from the smallest to largest accuracy for each data set.
+    In general, our models are the best one in the predictions in ranking. The E13
+    model was the best one in prediction of these external data sets.
+
+
+    available QSARs for DILI prediction by using the M-ANOVA/ posthoc and SRC procedures.
+    Our goal was to study the ranking behavior of the computational tools aforementioned
+    in this report and the ones reported in literature across independent data sets.
+
+
+    To evaluate the differences between the results obtained in this report and in
+    the literature, a multiple comparison procedure was applied using an ‘average
+    ranking’, which was established on the rank achieved by each model in the results
+    presented in Table 2.
+
+
+    # ## DISCUSSION
+
+
+    **Deep Assessment of DILI Prediction and Comparison with Other Methods.** We present
+    a comparison of eight
+
+
+    1862
+
+
+    https://doi.org/10.1021/acs.chemrev.2c05650
+
+    Chem. Res. 2023, 33, 1865–1887
+
+
+    *'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Chemical Research in Toxicology
+
+
+    # pubs.acs.org/ct
+
+
+    of the ranking is well correlated with the average values of accuracy for each
+    model, which is graphically presented in Figure 4 (see SIF19), it can be concluded
+    that
+
+
+    variable significant, which supports the existence of a statistical difference
+    between means (variable levels). Therefore, there are significant differences
+    in the means of all the statistical parameters due to the QSAR models (Wilk =
+    0.067; F = 6.5, p < 0.001)
+
+
+    The difference between model pairs was also evaluated by performing a Tukey test
+    (multiple comparisons). Tukey''s method was used to compare all of the group pairs.
+    Significant values have been generated for the MCC between pairs of the QSAR model
+    (e.g./ E12/E13-D12/E13-Combined). Additionally analysis indicated that differences
+    exist between our models and the DL and DL-Combined models. There was no statistically
+    significant difference between Paedel-Pred and E13 model, and between Vethod and
+    E12 model.
+
+
+    ![](img/d712c719d520e68489790616d7410fde_8_0.png)
+
+
+    From SISC (Homogeneous Groups, alpha = 0.05) it was determined that E12 model
+    is the best QSAR, and not different from all of the models, except DL and DL-Combined.
+    However, the PaedelPred and Vethod models are not significant from all of the
+    models.
+
+
+    ![](img/d712c719d520e68489790616d7410fde_8_1.png)
+
+
+    The statistical method called sums of rankings (SRD) was also applied to the ranking
+    of another comparison of models based on a maximum vector as reference (see Figure
+    5; see SIF 19). The conclusion of
+
+
+    Figure 4 for analysis of the best classifiers and well-known tools for DILI prediction
+    in several data; (a) the M1 model have higher statistical parameters (both MCC
+    and ACC) than those of the others (b). The M-ANOVA showed
+
+
+    ![](img/d712c719d520e68489790616d7410fde_8_2.png)
+
+
+    the most robust classifiers are E12 and E13, however a direct comparison with
+    the results reported by other authors for some external data was also performed.
+    In this case, it can also be observed that the QSAR ensembles display a positive
+    correlation between the MCC and ACC values for all models.
+
+
+    Figure 5. Sum of rankings (SRD) for DILI prediction in several data sets. X-axis:
+    for different QSAR models (models 0 and 100, it on the same scale as the measures)
+    Y: it on the left-side bar shows the proportion of each model, and on the right-side
+    hand, the variances of SRD are reported for the black (filled) Gaussian curve
+    (X = 55, mean = 99 + SD = 19)
+
+
+    As ACC increases, the MCC tends to increase as well, for any given ACC, the E13
+    model has a MCC value higher than the other models, but not statistically significant
+    that these results are not different by change.
+
+
+    input matrix represents the models (n = 8); whereas the rows represent the statistical
+    parameters for several data sets (n = 28) see file SIF 19. In this case, the M-ANOVA
+    was applied to each QSAR model.
+
+
+    An ANOVA was conducted for each metric (see Table 2), for ACC, SE, SP, or MC.
+    The four ANOVA was performed by using the M-ANOVA (using all the ACC, SE, SP,
+    and MC parameters at the same time as multiple dependent variables) and this multivariate
+    approach showed the same statistical pattern as ANOAs. The QSAR model''s
+
+
+    Figure 5 depicts the SRD values for the QSAR models in the several data sets.
+    Statistical similarities (i.e., groupings) of models can be observed, as well
+    as their dissimilarities from an ordering point of view; i.e., an SRD value can
+    also be considered as similarity measure (the higher its value,
+
+
+    Article
+
+
+    1863
+
+
+    https://doi.org/10.1021/acs.chemres.0c0463a
+
+    Chem. Res. 2021, 23, 1863–1878'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Chemical Research in Toxicology
+
+
+    pubs.acs.org/crt
+
+
+    Article
+
+
+    more dissimilar than is to the reference value).$^{29}$ Thus, based on the ranked
+    QSAR models, according to the SRD values, the E13 and E12 models; they show the
+    SRD values of the best individuals. It can also be seen that the SRD values of
+    the best models (M8 and M9) indicate similar diversity in ILI prediction with
+    respect to E13 and E12 ensemble models. It can also be noted that the performance
+    of the literature demonstrated different methods. The DL-Liw, DL-Combined and
+    DL-Computational tools showed poor results in ILI prediction. It can also be seen
+    that the locations of the scales for the majority of the models are far from the
+    SRD values that were obtained, showing that their ranking is far from random.
+    However, the DL-Combined method was the best ranked method in ILI predictions.
+
+
+    Table 3. Diversity Measure Among the Most Proposed and QSAR Methods Most Used
+    in the List to Predict ILI Ends
+
+
+    | model | PadPred | DL-Liw | DL-View | E12 | E13 |
+
+    |---|---|---|---|---|--|
+
+    | PadPred | | 0.17 | 0 | 0.16 | 0.20 |
+
+    | DL-Combined | | | 0 | 0.08 | 0.07 |
+
+    | DL-Liw | | | | 0 | 0.23 |
+
+    | DL-View | | | | | 0.18 |
+
+    | E13 | | | | | |
+
+
+    A cluster analysis justified the findings based on the QSAR cluster. The grouping
+    result is depicted in Figure 6.
+
+
+    ![](img/d712c719d520e68489790616d7410fde_9_0.png)
+
+
+    Figure 6. Demonstration of the ranking of eight QSAR according to statistical
+    values in seven external data sets.
+
+
+    “Diversity measures (see eq 9 in section S3, file S2) were calculated from the
+    ILI data by each model in the E13 ensemble developed models in this study; values
+    from one shown by bold text, and those from the other model shown by italic text.
+
+
+    E12 methods showed a very low similarity to (-0.2) compared and E13 and E12 methods
+    also have moderate-high similarity with M8 in regard to the model PadPred and
+    M9 which is a logical result, because they use the learning series. In all, it
+    can be seen that E13 models and PadPred yield the least reliable (and less useless)
+    and results than the other QSAR methods used in the study of ILI database of organic-chemical
+    compounds,justifying their use in our prospective studies (see below).
+
+
+    To conclude this section, Table 4 presents the most relevant methods from the
+    data set for ILI prediction. Articles containing experimental variables such as
+    molecular construction methods were included. In this list, there are 13 key reports
+    in the area. As can be analyzed, different types of MDs have been used; this study
+    is the first one where the QSAR-BLS methods are applied to get the best results.
+
+
+    This hierarchical cluster analysis performed in the test and external data sets,
+    using the Euclidean distance (X-axis) and the Ward’s rank metric (Y-axis). There
+    is also an interesting relationship. The right side shows the best models (E13,
+    E12, ''ideal'' vector (M9)) and the left side shows the worst models (DL-Liw,
+    DL-Combined, and Vated).
+
+
+    On the other hand, an analysis based on diversity used. A diversity function measures
+    the quality of the different clusters. It is also noted that what is defined as
+    diversity, dependence, orientation, or complementarity is different.$34}$ The
+    measures between two clusters can be derived from the statistical hetero. Here
+    we used diversity measures based on cluster density which represents the output
+    of the cluster was, correct (1) or not (0) (for more detail, see file S2, section
+    S3). Table 3 shows the diversity (eq 9 in section S3, file S2) between the diversity
+    measures and double-feature$^{35}$ (see file S10 for more diversity measures),
+    which depict the same grouping pattern seen in cluster analysis. It can also be
+    seen that E13 and E12 models have high similarities; both models showed a high
+    correlation in predictions (collinearity). Also, E13 and
+
+
+    Coverage Analysis. An analysis of the applicability domain (AD) of the two best
+    models, as well as the two best models, with the purpose of determining whether
+    they are applicable to the ILI end point. This analysis was performed by considering
+    five different methods for the evaluation of the PCAR prediction, Euclidean distance,
+    cluster-block, Mahalanobis distance, and density. This was also applied to the
+    external data set 7_ETS 554 data Supporting Information for file S7 shows the
+    statistical analysis for the AD focus. For the best models (E13, E12, and M9)
+    the correlation results showed the best models and for E13 ensemble model, the
+    ACC, SE, and SPC statistical characteristics were not substantially presented
+    or followed with values of 0.792, 0.825, and 0.951. From respect, it can be seen
+    that in the prediction of the 7_ETS 554 data set the PadPred method, which is
+    lower than the results obtained by our models, it can be concluded that our models
+    perform highly trustworthy predictions according to the corresponding AD table.
+
+
+    Table 5 presents the statistical results for the two individual models (M2 and
+    M9) and for the best ensembles (E13 and E12) obtained after applying the AD method.
+
+
+    1864
+
+
+    https://doi.acs.org/10.1021/acs009335c
+
+    Chem. Res. Tox. 2020, 18855–1866'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Table 4. Published In In Silico Classification Models for DILI Prediction
+    (2010–2020)
+
+
+    | data set | size of set | ACC | SE | SP | year/classification technique | descriptor/software
+    |
+
+    |---|---|---|---|---|---|-|
+
+    | training (S-6C) | 295 | 0.585 | 0.585 | 0.681 | 2010/Laplacian-corrected Bayesian⁴
+    | ECFC: 6 structural fingerprints/Discovery Studio 2.5.5 |
+
+    | training (S-6C) | 1535 | 0.599 | 0.560 | 0.677 | 2011/An ensemble of 617 base
+    classifiers from the learning algorithms k-NN, SYM, and RF⁵ | 2D-topological/Padel
+    Descriptor |
+
+    | training (vRandForest) | 1644 | 0.708 | 0.681 | 0.700 | 2011/An ensemble of
+    617 base classifiers from the learning algorithms k-NN, SYM, and RF⁵ | 2D-topological/Padel
+    Descriptor |
+
+    | training (vJBRAC) | 427 | 0.738 | 0.750 | 0.800 | 2013/A decision forest was
+    constructed⁶⁷ | - |
+
+    | training (vSIPAR) | 210 | 0.697 | 0.579 | 0.737 | 2013/A decision forest was
+    constructed⁶⁷ | 22D topological molecular descriptors/Modell2 |
+
+    | training (S-6C) | 190 | 0.661 | 0.661 | 0.716 | 2015/two models were constructed
+    with deep learning⁸⁹ | 2D topological molecular descriptors/Modell2 |
+
+    | training (NCTRR) | 915 | 0.689 | 0.614 | 0.675 | 2015/two models were constructed
+    with deep learning⁸⁹ | 2D topological molecular descriptors/Modell2 and Padel
+    |
+
+    | training (X) | 324 | 0.700 | 0.700 | 0.661 | 2015/two models were constructed
+    with deep learning⁸⁹ | Descriptor |
+
+    | training (DILI-10) | 119 | 0.717 | 0.700 | 0.601 | 2016/a model constructed
+    with SYM learning¹⁰ | - |
+
+    | training (DILI-Lex) | 701 | 0.844 | 0.819 | 0.870 | 2016/a model constructed
+    with SYM learning¹⁰ | Fingerprints FP4 and MACCS/OpenBabel |
+
+    | training (DILI-Combined) | 476 | 0.859 | 0.825 | 0.899 | 2016/a model constructed
+    with SYM learning¹⁰ | - |
+
+    | training (S-6C) | 236 | 0.882 | 0.845 | 0.923 | 2016/a naïve Bayes classifier¹¹
+    | - |
+
+    | training (S-6C) | 1415 | 0.971 | 0.887 | 0.980 | 2017/a model constructed using
+    machine learning algorithm of decision¹² | 20D Molecular Descriptors/Discovery
+    Studio 3.1, 2D and 3D |
+
+    | training (S-6C) | 854 | 0.726 | 0.725 | 0.728 | 2017/a model trained with RF
+    and SVM learning algorithms¹³¹⁴ | weighted molecular fingerprints/PubChem/Padel
+    fingerprints/Morgan |
+
+    | training (S-6C) | 318 | 0.739 | 0.701 | 0.769 | 2017/a model trained with RF
+    and SVM learning algorithms¹³¹⁴ | weighted molecular fingerprints/PubChem/Padel
+    fingerprints/Morgan |
+
+    | training (S-6C) | 394 | 0.710 | 0.610 | 0.740 | 2018/an ensemble model combining
+    3 machine learning algorithms¹⁵ | molecular fingerprints/Padel Descriptor |
+
+    | training (S-6C) | 1268 | 0.869 | 0.839 | 0.854 | 2018/an RF baseline developed
+    with SMOTE¹⁶⁷ | MACCS molecular fingerprints/RDKit |
+
+    | training (S-6C) | 221 | 0.930 | 0.960 | 0.910 | 2018/an RF baseline developed
+    with SMOTE¹⁶⁷ | MACCS molecular fingerprints/Padel Descriptor |
+
+    | test (S-6C) | 1731 | 0.804 | 0.842 | 0.827 | 2018/a model developed with SVM
+    learning algorithms¹⁸¹⁹ | - |'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Chemical Research in Toxicology
+
+
+    Article
+
+
+    SiLS-PTOXRA Software for the DLI Prediction.
+
+    SiLS-PTOXRA software is a framework of a friendly desktop interface (see Figure
+    7), and the procedure can be summarized in 3 steps: (1) There is a selection of
+    compounds from the SDF and MDL files. It is important to take into account that
+    the 3D structure is produced it is possible to pass directly to the generation
+    of a 3D structure (RDKit) as an intermediate step. (2) There is a selection of
+    the predictive models and to the method(s) to evaluate. (3) There is a selection
+    of methods to report the results.
+
+
+    After the screening an interface for the process of results is displayed, and
+    with a folder of all the output information of the models is generated. Most,
+    the test sets used in this study are provided as data sets. An experiment on the
+    processing time per molecule was performed by using the test set 2_B_TS_47, and
+    it was found that the process takes about 3 seconds molecule with M2, M9, E12,
+    and E13 methods, considering the consensus method, which was used for the AD.
+    A computer with Intel i7 processor and 4 GB of RAM was used for this experiment.
+
+
+    A general and qualitative comparison of our software with some of the most relevant
+    software reported in the literature is given in Table 6. The software presented
+    here has many advantages with respect to that was previously reported, and can
+    be used for screening of data sets, which is described in the next section.
+
+
+    **Prospective Virtual Screening.** Finally, a large database of natural products,
+    drugs, and EAD-like compounds (described in file S2, Table S1) was used. The results
+    of computational DLI prediction using the in silico E13 model were presented in
+    the screening of 22,678 compounds. Surprisingly, less than 93% was found. Most
+    positive DLI compounds were found in all data sets (48), the data sets of leads
+    and toxic compounds showed that more than 65% of the results were positive-DLI.
+
+
+    Special attention is attracted by the results obtained for the malaria data set,
+    $^{73}$ showed 86% of the cases are positive. This set of molecules contains new
+    and interesting scaffolds (40 chemistries), which were selected to make a diverse
+    collection accessible for the prevention of diseases. Half of these compounds
+    were selected based on their drug properties (ADME-tox rules), and the others
+    were selected as molecular probes. The main factor to include a compound in the
+    malaria box is to show an activity of at least 4 μM with a selectivity ratio of
+    at least 10-fold more than that of cytotoxicity ($CC_{50}$), which was measured
+    using the HEK-293 cell line. In this fact, data set was requested by a pharmacological
+    test to make both data and compounds available. However, only 8% of these compounds
+    would be found in the present (negative-DLI for the E13 model), because the results
+    are hepatic to humans. All of the above scenarios demonstrate the applicability
+    of the in silico E13 model for DLI screening the new candidates in early days
+    of process.
+
+
+    For the 1_0_ADB data set composed of natural compounds, 3% of the molecules are
+    positive-DLI according to the E13 model
+
+
+    | size of set | ACC | SE | data set | descriptor/software | year/classification
+    technique |
+
+    |---|---|---|---|---|---||
+
+    | 151 (88±6) | 0.783 | 0.818 | training set (10-fold CV) | descriptors containing
+    physicochemical and topological properties (RDKit version 18.3.0) | 2019/ensemble
+    model combining 8 machine learning techniques $^{14}$ |
+
+    | 126 (66±18) | 0.817 | 0.744 | test set (10-fold CV) | 2D molecular descriptors
+    and fingerprints (Padel Descriptor) | 2019/ensemble vote classifier containing
+    9 machine algorithms $^{15}$ |
+
+    | 225 (78±30) | 0.867 | 0.889 | test set (5-fold CV) | | 2020/this study, the
+    results of ensemble for E13 are presented here |
+
+    | 105 (52±23) | 0.962 | 0.917 | test set (1_R_TS_120) | topological descriptors
+    $^{16}$ | |
+
+    | 47 (21±24) | 0.952 | 0.708 | test set (2_B_TS_47) | | |
+
+
+    Table 4 continued
+
+
+    1866
+
+
+    https://doi.org/10.1021/acs.chemchem.9b05552'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Chemical Research after Toxicology
+
+
+    Table 5. Statistical Parameters after the Application of the AD Consensus-3 on
+    the External Data Set (7_ETS_554)
+
+
+    | model | no. of molecules IN | ACC | SE | SP | MCC | coverage (%) |
+
+    |---|---|---|---|---|---||}{
+
+    | E12 | 544 | 0.780 | 0.811 | 0.688 | 0.488 | 98.2 |
+
+    | E13 | 544 | 0.793 | 0.835 | 0.690 | 0.506 | 98.4 |
+
+    | M2 | 547 | 0.762 | 0.841 | 0.594 | 0.444 | 98.7 |
+
+    | M9 | 545 | 0.763 | 0.802 | 0.680 | 0.469 | 98.4 |
+
+
+    > *An ensemble developed models in this study; values from one are bolded.*
+
+
+    ![](img/d712c719d520e68489790616d7410fde_12_0.png)
+
+
+    model, for the data set 1_bNPs, 52% of the compounds were labeled as positive-DILI
+    Moreover, with respect to the DILI labeling for the leadlike datasets, it can
+    be mentioned that they demonstrate the most alarming results, because the values
+    of hepatotoxic compounds are equal. These results range from 93 to 86% of the
+    total compounds for the 2_Mbos and 1_OTA data sets, respectively. These results
+    have been mentioned in recent literature, for the malaria box, 75th the author
+    established that it is necessary to develop deep consensus as possible to examine
+    other limiting toxicities of these drugs or proteins. On the other hand, the compounds
+    in the OTA library are named as leads, results found in this study also provide
+    a detailed analysis of the hepatotoxicity of the molecules.
+
+
+    In regards to the compounds labeled "toxic compounds" (3_0_T3DB), 65% of the molecules
+    were predicted as
+
+
+    positive-DILI, which is a smaller than the percent found for the lead candidate.
+    However, it is important to highlight that hepatotoxicity is a specific type of
+    toxicity, and these compounds can be identified as a hazardous compound with acute
+    toxicity, as that neurotoxic effects is; it is predicted as negative-DILI by elimination,
+    due to lack of mechanism.
+
+
+    With respect to the results obtained with the drugli dataset (3_Withdrawn), we
+    found that 59% of the molecules are positive-DILI. These results are in agreement
+    with the literature, which reported only 21%. Our results indicated that there
+    is a hepatic injury report, and the other type of toxicities for these compounds
+    are (i) cardiovascular, (ii) carcinogenic, (iii) respiratory, and others. In addition,
+    it is important to remember that some of the compounds have been drawn from the
+    generation of a'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Table 6. Key Features of Different Software Packages for DILI Prediction
+
+
+    | model | encoding | advantage | disadvantage | online reference |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 1. ensemble E13 with 7 base classifiers or 2. E12, M02, and M09 are available
+    to be downloaded | algebraic descriptors obtained from QSAR-based software | SILIS-PTOSX
+    (This Study) 1. graphic user interface (GUI) 2. visualization and generation of
+    3D structures with RDKit 3. supports different methods 4. free and open source
+    software 5. save as .rd or .csv files with results | 1. Only accepts 2D or 3D
+    structures in sdf and mol formats 1. does not allow visualization and generation
+    of 3D structures 2. does not allow the screening of big data sets | http://tox21.com/app-pacs
+    |
+
+    | ensemble with 617 base classifiers | molecular descriptors obtained from Padel
+    Descriptor software | 1. graphic DILI predictor 2. functionality by using 3. free
+    software 4. accepts the formats, mol., smi 5. save as .rd or .csv files with results
+    | 1. does not allow visualization and generation of 3D structures 2. does not
+    allow the screening of big data sets | http://www.chemicalinformatics.org/padel/
+    |
+
+    | 1. DL-Combined | topological UGRNN encoding | 2. free and available 3. accepts
+    smi, mol. 5. save a csv file with the final results | 1. does not allow visualization
+    and generation of 3D structures 2. does not allow the screening of big data sets
+    3. does not save a .txt or .csv file when running is allowed | http://www.reharma.com/DILI-home
+    |
+
+    | 2. DL-Liw | fingerprints obtained from Padel Descriptor | 1. free and available
+    2. web server | 1. is not working at the screening of big data sets; only molecule
+    in each allowed 2. does not save a .txt or .csv file with the results | http://csplb.nih.gov/toxicity/
+    |
+
+    | random forest model with SMOTE | molecule MACCS keys fingerprints obtained by
+    RDKit library in Python | 1. free and available 2. web server | 1. does allow
+    the screening of big data sets 2. does not save a .txt or .csv file with the results
+    | https://trials.org/practiceII |
+
+    | model developed with SVM learning algorithm | MACCS keys fingerprints generated
+    by the use of Padel Descriptor | 1. free and available 2. allow sdf and mol formats
+    3. free and available | 1. does not allow visualization and generation of 3D structures
+    2. does not save a .txt or .csv file with the results 4. allows the screening
+    of big data sets | |
+
+
+    1868
+
+
+    https://doi.org/10.1021/acs.chemtox.0c05336
+
+    Chem. Res. Tox. 2020, 13, 1835–1887'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Chemical Toxicology in Research
+
+
+    pubs.acs.org/ct
+
+    Article
+
+    new more specific or potent drug for a specific health
+
+    and not necessarily due to a presence of toxicity.
+
+
+    For the specific case of the FDA approved drugs, 2608
+
+    molecules were identified in the analysis and a coverage of 69
+
+    99% was obtained. From the set of molecules into 668
+
+    and the compounds were labeled as DILI and negative-DILI,
+
+    negative, respectively. In the screening of this
+
+    set with the Data-DL and DL-Lead methods, it is
+
+    noted that 49 and 51% of the total number of
+
+    compounds with with former method, and 61 and 93
+
+    of the compounds screened with DILI and negative-DILI, respectively.
+
+    Finally, 78 and 22% of the molecules were predicted as
+
+    positive-DILI and negative-DILI, respectively, when the
+
+    molecules were evaluated.
+
+
+    Likewise, in Table 3, when many measures were
+
+    applied to the analysis of the similarity of performance-based
+
+    prediction results on ETS, the results in Table 5, showing
+
+    performance of the FDA approved drugs ETS,
+
+    Padel DDPredictor, and Voxel yielded better
+
+    results than those of the other SDR (SDR means)
+
+    results). These results support that the models could be
+
+    used jointly to predict DILI labeling of
+
+    indazole. For the selection of several
+
+    of of these classes was carried out by a
+
+    majority vote (see SIl4), the performance
+
+    yielded results better than the E15 model for ETS.
+
+
+    A screening has been performed using a large
+
+    set of compounds in different development phases.
+
+    Distributions of DILI predictions illustrate the current status
+
+    ofrug discovery and development of these data sets. It is
+
+    anticipated that combination of computational approaches
+
+    could the best estimation of toxicity for drug
+
+    molecules in the early stages of discovery.
+
+
+    # ## SUMMARY AND CONCLUSIONS
+
+
+    DILI has been the most frequent cause of safety-related
+
+    drug market withdrawals for the past 50 years. The DILI
+
+    estimation is a major issue for both patients and
+
+    pharmaceutical industry. In fact humans remains a challenge for
+
+    ational models. It should be shown that models based on
+
+    QSAR-based 2D-SD molecular descriptors and shallow
+
+    machine learning techniques (by using different ensembles
+
+    generation and a rigorous internal and external validation
+
+    scheme) were employed to enhance the performance
+
+    and reliability of DILI predictions.
+
+
+    To end this, two robust models, were developed
+
+    (M2 and M9), which present training accuracies 0.735+0.76
+
+    test accuracies 0.76+0.84 for the random and black
+
+    validation test sets, respectively. By using the prediction
+
+    probability values from the individual models, we constructed
+
+    s some ensembles, being the E15 and
+
+    best ones in DILI prediction. These ensemble yielded
+
+    important enhancements with respect to the individual models,
+
+    achieving accuracies of AC, SE, and SD of 0.853,
+
+    0.88, and 0.76, respectively. Good results were obtained
+
+    by using internal validation tests and external
+
+    validation tests (two validation sets and five external
+
+    sets), to improve the robustness and reliability of
+
+    these.
+
+
+    | online reference | http://Imid-cust.edu.cn/admission2/ | https://livertox.univ.ie.ie/
+    | |
+
+    |---|---|---||
+
+    | disadvantage | 1. maximum of 10 molecules can be processed each time, 2. it
+    does not allow validation and generation of 3D structures 3. it is not a specific
+    software for DILI | 1. only one molecule can be predicted each time to perform
+    a set of data sets no limit on the number of requests, 2. it does not allow validation
+    and generation of 3D structures 3. it is not a specific software for DILI | 1.
+    free and available 2. free and available 3. free and available 4. allow same or
+    different 5. different available |
+
+    | | Admet56AR2 | 1. web server | 1. free and available 2. free and available 3.
+    free and available 4. allow same or different files 5. different properties at
+    the same time | |
+
+    | encoding | all molecular descriptors from RDKIT | MACCS, Morgan, and Atom descriptors
+    imported with RDKIT | models constructed with machine learning techniques, including
+    SMILES, and Fingerprint | not available |
+
+
+    Table 6. continued
+
+
+    https://doi.acs.org/10.1021/acs.chemms/3c00005
+
+    Chem. Environ. Res. 2023, 1885–1887*
+
+
+    1869'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# # Chemical Research in Toxicology
+
+
+    Table 7. Results Obtained for Virtual Screening using the E15 Ensemble Model
+
+
+    | software | code | no. of models | positive (+) | negative (-) | percent (%)
+    | percent (%) | coverage (%) |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | SILIS (this study) | 1_ADHB | 885 | 472 | 413 | 53 | 47 | 100 |
+
+    | | 1_KNPs | 657 | 330 | 327 | 50 | 50 | 99 |
+
+    | | 2_MBox | 400 | 344 | 288 | 52 | 8 | 93 |
+
+    | | 2_OTA | 14388 | 1477 | 1404 | 12 | 91 | - |
+
+    | | 3_TDBL | 2641 | 2032 | 556 | 79 | 21 | 98 |
+
+    | | 3_Wildhelm | 618 | 310 | 253 | 59 | 41 | 100 |
+
+    | | 4_FDAs | 2608 | 1779 | 824 | 68 | 32 | 99 |
+
+    | Padel DDPredictor | 2608 | 1486 | 806 | 65 | 35 | 88 |
+
+    | DL-Combined | 2608 | 1281 | 437 | 59 | - | - |
+
+    | DL-Liew | 2608 | 1593 | 1015 | 61 | 39 | - |
+
+    | Vlead | 2608 | 2047 | 563 | 78 | 22 | - |
+
+
+    Table 8. Similarity Comparison with E13 and QSAR Methods for the Prediction of
+    Hepatotoxicity
+
+
+    | QSAR | Padel DDPredictor | DL-Combined | DL-Liew | Vlead |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | E13 | 1.0 | 0.78 | 0.63 | 0.58 |
+
+    | Padel DDPredictor | | 1.0 | 0.54 | 0.64 | |
+
+    | DL-Combined (DLISever) | | | 1.0 | 0.49 | |
+
+    | DL-Liew (DLISever) | | | | 1.0 | 0.52 |
+
+
+    *The similarity (see S1 Table S2) were calculated from the DLI classes by each
+    model in the T7_ETS_S54. An ensemble developed models in this study: values from
+    one model are shown in bold.*
+
+
+    The best (and base models) in this study showed a significantly better performance
+    when based on a statistical and “risk analysis”, with regard to the results reported
+    by the literature for the same data sets. The ensemble also showed a better performance
+    compared to the prediction by the well-known Padel DDPredictor, as well as with
+    regard to DL-Combined, DL-Liew and Vlead models established in the literature.
+
+
+    A variety and free classification screening of drug toxicity was achieved with
+    DDPredictor (http://www.chem.com/priority). This software showed advantages over
+    other methods, and it is clear that the software has the capacity to create big
+    data sets.
+
+
+    In summary this study provides a highly accurate approach using a set of compounds
+    in different development phases, that highlights the potential of the DLI compounds.
+    This scenario demonstrates the necessity of a high priority hepatotoxicity in
+    silico evaluation, mainly in the early stages of preclinical trials.
+
+
+    # # ASSOCIATED CONTENT
+
+
+    +   ## Supporting Information
+
+
+    ### Supporting Information
+
+    - The Supporting Information is available free of charge at: https://doi.org/10.1016/j.chemex.2020.100030
+
+    - SII1, 3D structure of all data sets; SII2, molecules and compounds corresponding
+    DLI classes; SII3, performance measures, ensemble methods, diversity in classifier
+    ensembles, devalidation strategies, hyperparameters, and quality of QSAR methods;
+    SII4, sets of test and test models (files can be used in Weka software); SII5,
+    statistical parameters of models and headings of descriptors; SII6, structural
+    parameters of descriptors, DLI classes formed; SII7, summary of classification
+    methods used; SII8, report of and perform k-fold cross-validation and k-fold dropout
+    analysis; complete statistical parameters after the application of the applicability
+    domain by different methods; SII9, results of ranges of prediction density; SII10,
+    similarity measures and SII11, files of the optimized model for virtual screening
+    and results generated as csv files (ZIP)
+
+
+    # # AUTHOR INFORMATION
+
+
+    ## Corresponding Author
+
+    Yairo Vararro-Prose – Instituto de Simulación
+
+    Computational (ISC-USQ) / Grupo de Medicina Molecular y Tradicional (MeMoT), Facultad
+    de Ciencias de la Salud (UCSAL), Escuela de Medicina, Universidad San Francisco
+    de Quito (USQ). Quito-1700-0241, Ecuador. ORCID: https://orcid.org/0000-0323-2141-9;
+    Email: yaranero@usq.edu.ec; yaranero77@yahoo.com.
+
+
+    Jose R. Mora – Grupo de Química Computacional y Técnica Facultad de Ingeniería
+    Química e Instituto de Simulación Computacional (ISC-USQ), Universidad San Francisco
+    de Quito (USQ). Quito-1720-0801, ORCID: https://orcid.org/0000-0002-8163-3X
+
+
+    César R. García-Jaras – Catencaco– Departamento de Ciencias de la Computación,
+    Centro de Investigación Científica y Educación Superior de Ensenada (CISE), En
+    Baja Baja 22860, México; https://orcid.org/0000-0002-3962-7658
+
+
+    * Note'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Chemical Research in Toxicology
+
+
+    Article
+
+
+    Amileth Caussado – Grupo de Investigacion & Biomedica Aplicada a las Ciencias
+    Clinicas, Area de Bioquimica, Campos de Zagaleta, Facultad de Medicina, Universidad
+    de Cartagena, Cartagena de India 13001, Colombia
+
+
+    Complete information is available at: https://pubs.acs.org/10.1021/acschem.c000030
+
+
+    # Notes
+
+
+    The authors do not compete financial interest. A noncommercial and fully cross-platform
+    software for the DILI prediction, which is freely available at http://tomcond.com/ptrs.
+    New models as well as a cross-expert system for the binary DILI prediction are
+    available for free downloading at http://tomcond.com/ptrs. The QUBIS-M tool is
+    available at http://tomcond.com/qubis. The SilS-POTRA software is also available
+    at http://tomcond.com/ptrs.
+
+
+    #  ACKNOWLEDGMENTS
+
+
+    J.R.M. acknowledges the support from the USFQ Foundation Grant 2019-2020 (project
+    ID 16888). Y.M.P. thanks the funding for a postdoctoral fellowship at University
+    of Valencia in 2020. Y.M.P. acknowledges the support from USFQ Foundation Grant
+    2018 (project ID 15325) and CEDIA CEPRÁ 2018-2023. This project has been performed
+    by the research center ESQ High-performance computing (HPC-USFQ). C.R.G.-J. acknowledges
+    the program CONACYT Consejo Nacional de Ciencia y Tecnología (CONACYT), for the
+    support of the shared cost 2019 by the Departamento de Investigación Científica
+    y de Educación Superior de Enseñanza (CIES).
+
+
+    #  ABBREVIATIONS
+
+
+    QUBIS-M tools, linear, and non-linear maps for high-capacity genomic-transcriptomic
+    data and molecular targets; DILI; drug-induced liver injury; ACC; accuracy; sensitivity;
+    specificity; MCC; correlation coefficient; AURC; area under the ROC curve; QSAR;
+    significance values; Drug Administration; Shannon entropy; k-NN, nearest neighbor;
+    MLP; multilayer classifier; random forest; SVM; support vector machine; LR; linear
+    regression; CT-48, classification tree four; Fisher''s discriminant analysis;
+    neural networks; NN; machine learning; applicability domain; ANOVA, analysis of
+    variance; rank; sum of rank effects
+
+
+    #  REFERENCES
+
+
+    +   (1) Lee, W. W., and DuBois, J. (2009) Drug-Induced Hepatotoxicity. J. Engl.
+    Med. 349, 474–485.
+
+    (2) Salim, M., and Kaplowitz, N. (1999) Hepatotoxicity of drugs: mechanisms and
+    prospects. Toxicology 29, 1337–1351.
+
+    (3) Cheng, A., and Dixon, S. J. (2003) In silico Models for the Prediction of
+    Dose-Dependent Hepatotoxicity. J. Comput. Aid. Med. 22, 41–48.
+
+    (4) Wilke, R. A., Lin, D. W., Rosen, D. M., Watkins, P. B., Flockhart, D., Zhang,
+    Giacomini, K., and Kraus, R. M. (2007) Identifying genetic risk factors for adverse
+    drug reactions: Current progress and prospects. Nat. Curr Res. Drug 60, 904–916–
+
+
+    +   (5) Aleo, M. D., Shah, F., Allen, S., Barton, H. A., Contales, C., Lazarzo,
+    S., Seung, L., Nicholson, A., Obach, R. S., Rodriguez, A. D., and Wang, Y. (2020)
+    Moving beyond Predictions of Human Drug-Induced Liver Injury (DILI) toward Targeting
+    Relative Risk Potentials. Hepatology 91, 2223–2238.
+
+    (6) Ballet, F. (1997) Hepatotoxicity in Drug Development: Detection, Selection
+    and Solutions. J. Hepat. 26, 26–36.
+
+    (7) Zhang, M., Chen, X., and Tong, W. (2020) In Silico Toxicomics: a New Biomarker
+    for Clinical Toxicology from Rats to Drug-Induced Liver Injury in humans. Chem.
+    Toxicol. 55, 122–128.
+
+    (8) Nishimura, M., Takada, S., Yamaguchi, K., Yanamura, N., Oishi, Y., and Shimada,
+    N. (2019) Prediction of Hepatotoxicity by 2,3-dimethyl-1-naphthoquinone in vitro.
+    Drug. Sci. 52, 173–178.
+
+    (9) Flynn, T. J., and Fergus, S. M. (2008) Multilayer prediction of hepatotoxicity
+    in HEPG2 human liver cells and neural network architecture for development of
+    a prediction model for acute hepatotoxicity. Tox. in vitro 22, 1640–1651
+
+
+    +   (10) Bauer, J. A., Kelly, M. J., Tipton, S., Shao, L. W., and Wang, Y., Ober,
+    K. R., and Roth, R. S. (2004) In Vitro Metabolism-Dependent Constant Binding Data
+    for Predicting Hepatotoxicity from Nonhuman Hepatocytes. An Analysis Study Using
+    Human Liver Cells and S Fraction. Chem. Res. 22, 3332–3340.
+
+    (11) Chen, Y. L., Wang, J. J., Lu, Y. C., and Yap, Y. C. (2011) Using learning
+    algorithms and feature selection in hepatotoxicity prediction. J. Comput. Aid.
+    Med. 32, 999–1008.
+
+    (12) Chen, M., Hang, F., Huang, K., Helly, R., Zhou, S., Gordon, J., et al. (2012)
+    Quantitative structure-activity relationship models for predicting drug-induced
+    liver injury based on FDA approved drug labeling and using a large collection
+    of compounds. Mol. Cell. Biol. 38, e15015.
+
+    (13) Xu, X., Zhou, A. W., and Li, S. (2014) Hybrid system for DILI Prediction
+    of Drug-Induced Liver Injury Using Chemical Enrichment and In Vitro Cell Imaging.
+    J. Appl. Toxicol. 34, 281–288.
+
+    (14) Wang, J., Cao, S., Sun, J., and Zhang, Y. (2019) Deep Learning for Drug-Induced
+    Liver Injury. J. Comput. Aid. Med. 58, 205–215.
+
+    (15) Liang, R., Chen, F., Li, W., Liu, G., Lee, P., and Wang, Y. (2019) In silico
+    Prediction of Drug-Induced Liver Injury Using Subtraction Representation Pattern
+    Method. J. Mol. Struct. 5985, 12633.
+
+    (16) Zhang, H., Lu, J., Yan, Y., Qi, S., Huang, H. G., Kong, W., and Wang, J.
+    (2018) Predicting drug-induced liver injury using deep learning.
+
+    (17) Amberg, D., Schmidt, F., Molote, S., Morik, H.-P., Pich, A., and Amberg,
+    A. (2016) Computational Models for Human and Animal Toxicity with a Global Application
+    Scope. Chem. Res. Environ. 59, 2725–2735.
+
+    (18) Huang, N., Thacker, S., Chen, M., and Tong, W. (2017) Development of Decision
+    Forest Models for Prediction of Drug-Induced Liver Injury in Humans using a Large
+    Set of FDA-approved Drugs.
+
+    (19) Kim, E., and Han, N. (2018) Prediction methods for drug-induced liver injury
+    using ensemble learning methods and Molecular Fingerprints.
+
+    (20) Banerjee, P., Bhasin, D. O., and Reissner, R. (2018) Prediction Is a Balancing
+    Act: Importance of Sampling Methods to Balance Sensitivity and Specificity of
+    Predictive Models on Imbalanced Chemical Data Sets. Front. Chem. 6, 362.
+
+
+    1871
+
+
+    https://doi.org/10.1021/acschem.c000030
+
+    Chem. Res. 2020, 59, 1855–1873'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Chemical Toxicology
+
+
+    (23) Li, X., Chen, Y., Song, X., Li, H., and Zhao, Y. (2018) The development and
+    application of silico models for drug induced liver injury. ARC, 8, 8101–8110.
+
+
+    (24) Hu, J.-T., Wang, R., Zhang, C., Zhang, X., Sun, G., and Sun, X. (2019) In
+    Silico Method for Prediction of Drug Induced Liver Injury. Hepatol Int. Int, 25,
+    80–97.
+
+
+    (25) Wang, J., Xiao, Q., Chen, and Wang, B. (2019) Prediction of Induced Liver
+    Injury Based on Ensemble Cluster Method. J. Med. Sci. 20, 4106.
+
+
+    (26) La, N.-H., Shen, W., Lee, C.-C., Chen, J.-C., Hu, M.-C., Kuo, L.-N, Lu, Y.-M.,
+    and Chen, H.-Y (2020) Comparison of methods for predicting drug induced liver
+    toxicity by machine learning techniques. Comp. Meth. Biol. 188, 105–307.
+
+
+    (27) Sun, Y., Wu, H., and Li, X. (2021) Prediction of drug induced hepatotoxicity
+    based on molecular features and multiple classification strategies. BioStrategies,
+    1
+
+
+    (28) McKenna, J., Richard, A., Wagner, C., Newman, M., and Garside, C. (2007)
+    Review of Structure-Activity Relationships (SAR) in Toxicology. Toxicol. Sci.
+    56, 8–17.
+
+
+    (29) Grimm, D. U. (2019) US EPA to meet all maximum testing by. Toxicol. 59
+
+
+    (30) Fiesci, C., Merencato, F., Busella, N., Bursama, J., and Grimm, D. (2023)
+    Prediction of drug induced liver injury using machine learning methods. Data Sci.
+    5, 1005223.
+
+
+    (31) Takakura, S., Li, T., Zhou, Y., Wu, K., Hu, C., and Tok, Y. (2016) DILI ranking:
+    the evaluation of drug rank list by the risk of drug induced liver injury. Drugs
+    Hepatol. 39, 177–184.
+
+
+    (32) Takakura, S., Li, T., Liu, Z., Wu, L., Roberts, and Tok, Y. (2020) Drug-induced
+    liver injury and toxicity (DILI): binary classification of 1279 drugs by hepatotoxicity.
+    Data Sci. 5, 100510.
+
+
+    (33) Valde-Martini, J. R., Ramírez-Ponce, Y., García-García, C. R., Martínez-Mayoga,
+    K., Jari, A. V., Yanda, S. H., Pérez, J., and Meneses, M. C. (2017) QSARPER: a
+    free open-source software platform for activity-and-property-based molecular descriptors.
+    J.Chem. Info. Model. 9, 1
+
+
+    (34) Meneses, M., Ramírez-Ponce, Y., Jiménez-Isabelardo, A., Gómez-García, A.,
+    Garcia, J. S., Sun, X., Chen, G., C., Machados, Y.-G., Ruiz, J.-J., and Jari,
+    A. V. (2020) Machine learning-based prediction of antiprotozoic drugs using human
+    hepatotoxicity screening. Future Chem. Med. 10, 86–93.
+
+
+    (35) Meneses, M., Martínez-Ponce, Y., Castillo-Gillo, A. J., and Martínez-Fortermín,
+    A. R., Torres, F., Redondo, R., Ibarbarra-Valleera, F., and Valdivieso, A. (2016)
+    Predicting antidepressant toxicity using ensemble learning. Biom. Med. 14, 6520–6534.
+
+
+    (36) Carlos-Gillo, M. M., Martínez-Gomez, R., Khan, M. H., Altam, A. S., Sultan,
+    R., and Toledo, R. (2007) TOCOMAD-DART descriptors-based virtual screening of
+    tyrosine inhibition: Evaluation of different classification models using ligand-based
+    linear indices. J. Mol. Chem. 15, 1483–1503.
+
+
+    (37) García-García, R., Martínez-Ponce, Y., Cortés-Guzman, F., Suero-Lozano, J.,
+    Martínez-Fortermín, A., and Pérez, M. (2019) Assessing Acute Toxicity by Predictions
+    using Consensus Modeling and Algebric Form: 1D-to-2D Molecular Descriptors. Chem.
+    Res. Toxicol. 36, 799–806.
+
+
+    (38) Martínez-Ponce, Y., Yanda-Villa, M., Torres, A., Romero-Zaldívar, C., Brandi,
+    A. A., Avila, P. E., Kürchatter, K., and Machado, Y. (2005) Ligand-Based Virtual
+    Screening and in Silico Design of New Antimalarial Compounds Using Nonstochastic
+
+
+    pubs.acs.org/
+
+
+    Article
+
+
+    Stochastic Temporal and Atom-Type Quantitative Maps. J. Chem. Inf. Model. 45,
+    1082–1100.
+
+
+    (39) Guerrero-Ponce, Y., Huesca-Guillen, A., and Ibarraldo, F. (2005) QSAR maps
+    of the ''molecular'' playground''s drug affinity and steric features: a novel
+    approach for virtual screening and discovery of new pharmacophore compounds. J.
+    Med. Sci. THEOD. 27:995–1000.
+
+
+    (40) Gordon, J. W., Stahl, F. L., and Bajaj, J. (2000) Variability of Molecular
+    Descriptors in Compound Databases by Shannon Entropy Quantitative Indices. J.
+    Chem. Inf. Model. 40, 75–80.
+
+
+    (41) Ruiz, U. R., By Pérez, J. S., Martínez-Ponce, Y., García, C. R., Valdez-Martini,
+    J. R., and Pérez, G. M. (2015) FMAN: A machine learning framework for feature-based
+    combinatorial analysis. Method. Sci. 19, 305–319.
+
+
+    (42) Kovash, R., and John, G. H. (1997) Wrappers for subset selection. Artif.
+    Intell. 97, 273–284.
+
+
+    (43) Breiman, L. Random Forests. Machine Learning 45, 5–32.
+
+
+    (44) Kuncheva, L. I., and Wantaff, C. J. (2005) Prediction of Drug Toxicity Using
+    Multiple Descriptors and the Ensemble Method. Machine Learning 31, 181–187.
+
+
+    (45) Topić, A. (2010) Best Practices for QSAR Development and Validation. Curr
+    Medicinal Chemistry 29, 476–488.
+
+
+    (46) Faber, N. M., and Rajkki, R. (2007) How to avoid over-fitting in multilate
+    transformation: The conventional validation and application of QSAR.
+
+
+    (47) Costello, L. A. (1995) Validation of QSAR Results Validation Tools, Chemical
+    Methods in Drug Design (van Waterbaed, H., Ed.), VCH Publishers, Wiley-Germany.
+
+
+    (48) Drogos, G., Hilla, M., and Alexandrov, Y. (2009) Predicting the Affinity:
+    An approach to the Application Domain of QSAR Models. J. Chem. Inf. Model. 49,
+    1058–1065.
+
+
+    (49) Gastevez, S. R., Rillo, B., Daasti, A., and Consuelo, V. (2012) Comparison
+    of Different Approaches to Define the Application Domain of QSAR Models. 17, 2011.
+
+
+    (50) Roy, K. S., and Ahmed, A. P. (2015) A simple approach for determining application
+    domain of QSAR models. chem bio. 70, 115–120.
+
+
+    (51) Lee, C.-Y., Lin, Y., and Wang, W. C. (2017) Using machine learning features
+    and features in predicting toxicity. J. Biol. Acids. 225, 93–100.
+
+
+    (52) Jakuška, J., Nikolaeva-Jakova, N., and Oldenberg, T. (2005) QSAR application
+    domain estimation by the prediction of training data. Acta Chem. Sci. 58, 1775–1780.
+
+
+    (53) Netzka, T. A., Oldenberg, T., Benstein, R., Cronin, M., Gramatica, P., Pajauska,
+    J., Kahn, S., Klopman, G., March, A., Gytt., Nikolaeva-Jakova, N., Patewska, G.,
+    Yerki, R., Redondo, I., and van Wezel, D. W., Yeth, G., and Wang, C. S. (2005)
+    Current status of methods for identifying the affinity of drug (quantitative)
+    structure-activity relationship models: Evaluation of the ECYSAM Workshop. 57
+
+
+    (54) García-García, R., Martínez-Ponce, Y., Martínez-Korro, P., and Martínez-Fortermín,
+    A. (2017) Comparison for prediction of inhibitory activity of biomolecular modifiers.
+    SAR QSAR Res. 28, 41–58.
+
+
+    (55) Jaworski, J., and Nikolaeva-Jakova, N. (2008) Aminoit, Version 0.0.4.
+
+
+    1872'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Chemical Research
+
+
+    pubs.acs.org/crt
+
+
+    Article
+
+
+    (59) Heberger, K. (2010) Sum of ranking differences compares methods or ideals
+    faulty; TrAC, Trends Anal. Chem. 29, 101–109.
+
+
+    (60) Brown, R. D., and Martin, Y. C. (1996) Use of structure-activity to construct
+    data-based clustering methods and descriptors for virtual selection; J. Chem.
+    Inform. Comput. 36, 572–584.
+
+
+    (61) Barnard, J. M., and Downs, G. M. (1992) Clustering of chemical structures
+    on the basis of two-dimensional similarity measures; Acta Mol. 32, 644–649.
+
+
+    (62) Willett, P. (1987) Similarity and Clustering in Chemical Information Systems,
+    Research Press, Letchworth.
+
+
+    (63) Steinberg, A. (2006) STATISTICA Version 6, Tokyo, Japan.
+
+
+    (64) Steinbeck, C. H., Yang, Y. Ku, Sorthlar, O., Luttmann, E., and Willhagen,
+    E. L. (2003) The Chemistry Descriptor Library (CDK): An open-source Java library
+    for chemo- and bioinformatics; J. Chem. Inf. 65, 483–500.
+
+
+    (65) Steinbeck, C., Hoppe, C., Kuhn, S., Floris, M., Guha, R., and Willhagen,
+    E. (2006) Recent Developments of the Chemistry Descriptor Library: An Open Source
+    Java Library for Bioinformatics. Curr. Pharm. Dev. 12, 2111–2120.
+
+
+    (66) Valdés-Martini, J. R., Martínez-Ponce, Y., García-Garcia, J., Martínez-A.,
+    Burgo, S. J., and Varela, A. S. Tham-The, H., Pérez-Giménez, F., and Morell, C.
+    A. (2014) QChemBLMAS, Open Source Multi-Platform Software for Atom- and Bond-Based
+    Topological (2D) and Chemical (2.5D) Molecular Descriptors Computations. Journal
+    of Cheminformatics, 66, e1.
+
+
+    (67) Chawla, N. V., Boyer, K. W., Hall, L. O., and Kegeler, M. (2002) SMOTE: Minority
+    Over-Sampling Technique. J. Art Intell. Res. 9, 321–357.
+
+
+    (68) Rócza, A., Bajós, D., and Heberger, K. (2015) Consistency of QSAR models:
+    select of training and test sets, ranking models and performance parameters. SAR
+    Environ. Res. 26, 683–700.
+
+
+    (70) Smith, P., and Sokol, R. (1973) Numerical Taxonomy: the Principles of Numerical
+    Classification, W.H Freeman and Company, San Francisco, California, USA.
+
+
+    (71) Schapieire, R. (1999) Theoretical views of boosting, in 14th European Conference
+    on Computational Learning Theory, pp. 1–10.
+
+
+    (72) Guesmen, D., and Baek, F. (2001) Design of effective neural network ensembles
+    for classification processes. Image Vision and Application Journal 19, 699–727.
+
+
+    (73) Springer, J., Burrows, J. N., Kowalczyk, P., McDonald, S., Wells, T. N. C.,
+    and Wells, P. (2013) The Open Access Malaria: Base: A Drug Catalog for Neglected
+    Diseases. PLoS One 8, e62906.
+
+
+    (74) Tang, M., Sagar, P., Singh, H., Raghava, G. P. S., and Agarwal, S. M. (2013)
+    NAT: Plant-Based Compound-Activity-Target database. Nucleic Acids Res. 41, D1124–D1129.
+
+
+    (75) Spangenberger, T., Burrows, J., Kowalczyk, P., McDonald, S., Wells, T. N.
+    C., and Wells, P. (2013) The Open Access Malaria: Base: A Drug Catalog for Neglected
+    Diseases. PLoS One 8, e62906.
+
+
+    (76) Lee, M., Pons, A., Djoubon, Y., Kotes, C., Shivakumar, S., Guo, A. C., Nero,
+    V., and Wishart, D. S. (2010) T3DB: a comprehensively annotated database of common
+    toxins and their targets. Nucleic Acids Res. 38, D7781–D786
+
+
+    (77) Stamasletti, B. V., Nickel, J., Omiecznyski, C., Gohike, B.-O., Drued, M.,
+    and Reissner, R. (2016) WITHDRAWN—a resource for withdrawn and discontinued drugs.
+    Nucleic Acids Res. 44, D1080–D1086.'
+  merge: -1
+  img_proc: true
