@@ -1,0 +1,84 @@
++   - UTP (unshielded twisted pair), 152–158
+  - connectors, 153–156
+  - crossover, 157
+  - definition of, 148–150
+  - properties of, 152–153
+  - standards, 153–156
+  - straight-through, 157
+  - T568A/T568B standards, 157–158
+- cabling, fiber-optic, 158–164
+  - copper cabling versus, 163–164
+  - definition of, 652
+  - fiber patch cords, 162–163
+  - fiber-optic connectors, 161–162
+  - industry applications of, 160
+  - multimode fiber, 160
+  - properties of, 158–159
+  - single-mode fiber, 159
+  - summary of, 169
+- CAM (content addressable memory) table, 649
+- Canadian Standards Association (CSA), 141
+- Carrier Sense Multiple Access/Collision Avoidance (CSMA/CA), 165–166, 216, 219–220, 647
+- Carrier Sense Multiple Access/Collision Detect (CSMA/CD), 216, 217–219, 647
+- categories, UTP cabling, 154
+- CCNA (Cisco Certified Network Associate) certification, 35–36
+- CDP (Cisco Discovery Protocol), 609–610
+- CEF (Cisco Express Forwarding), 647
+- cellular internet, 18–19, 647
+- CENELEC (European Committee for Electrotechnical Standardization), 141
+- certifications, CCNA (Cisco Certified Network Associate), 35–36
+- CFRG (Crypto Forum Research Group), 109
+- channels, 87, 647
+- Checksum field
+  - TCP headers, 472
+  - UDP headers, 474
+- circuit switched systems, 647
+- Cisco AutoSecure, 558–559
+- Cisco Certified Network Associate (CCNA) certification, 35–36
+- Cisco Discovery Protocol (CDP), 609–610
+- Cisco Express Forwarding (CEF), 647
+- Cisco IOS
+  - access, 46–52
+  - access methods, 49–50
+  - GUIs (graphical user interfaces), 47–48
+  - operating systems, 46–47
+  - OSs (operating systems), 48–49
+  - summary of, 79
+  - terminal emulation programs, 50–52
+  - commands, 56–60
+    - basic structure of, 56
+    - hot keys and shortcuts for, 58–60
+    - summary of, 79
+    - syntax of, 57–58
+  - definition of, 648
+  - device configuration, 61–66
+    - banner messages, 65–66
+    - capturing to text file, 68–71
+    - configuration files, 67–68
+    - device names, 61–62, 321
+    - with Packet Tracer, 71
+    - password configuration, 63–64
+    - password encryption, 64–65
+    - password guidelines, 62–63
+    - running configuration, altering, 68
+    - small business network management, 573–574, 624
+    - summary of, 79–80
+    - with Syntax Checker, 66
+  - help, 58
+  - interfaces, 73–74
+  - IP (Internet Protocol) addresses, 618
+    - automatic configuration for end devices, 76–77
+    - manual configuration for end devices, 75–76
+    - structure of, 71–73
+    - summary of, 80
+    - switch virtual interface configuration, 77–78
+    - verification of, 77
+  - navigation, 52–56
+    - configuration mode, 53–54
+    - moving between modes, 54–55
+    - Packet Tracer, 60
+    - primary command modes, 52–53
+    - subconfiguration mode, 53–54
+    - summary of, 79
+  - Syntax Checker, 55–56
+  - Tera Term, 60

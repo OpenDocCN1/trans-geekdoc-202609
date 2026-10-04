@@ -1,0 +1,13 @@
+hosts. The internet is a network of networks that connects hundreds of millions of computers worldwide. The two most common network infrastructures are local-area networks (LANs), and wide-area networks (WANs). A LAN is a network infrastructure that spans a small geographic area. A WAN is a network infrastructure that spans a wide geographic area. An intranet is a private connection of LANs and WANs that belongs to an organization. An organization may use an extranet to provide secure and safe access to individuals who work for a different organization but require access to the organization’s data.
+
+# Internet Connections
+
+SOHO internet connections include cable, DSL, cellular, satellite, and dialup telephone. Business internet connections include dedicated leased lines, Metro Ethernet, business DSL, and satellite. The choice of connection varies depending on geographic location and service provider availability. Traditional separate networks used different technologies, rules, and standards. Converged networks deliver data, voice, and video between many different types of devices over the same network infrastructure. This network infrastructure uses the same set of rules, agreements, and implementation standards. Packet Tracer is a flexible software program that lets you use network representations and theories to build network models and explore relatively complex LANs and WANs.
+
+# Reliable Networks
+
+The term network architecture refers to the technologies that support the infrastructure and the programmed services and rules, or protocols, that move data across a network. As networks evolve, we have learned that there are four basic characteristics that network architects must address to meet user expectations: fault tolerance, scalability, quality of service (QoS), and security. A fault-tolerant network limits the number of devices affected by a failure. Redundancy means having multiple paths to a destination. A scalable network expands quickly to support new users and applications. Networks are scalable because the designers follow accepted standards and protocols. QoS is a primary mechanism for managing congestion and ensuring reliable delivery of content to users. Network administrators must address two types of network security concerns: network infrastructure security and information security. To achieve the goals of network security, there are three primary requirements: confidentiality, integrity, and availability.
+
+# Network Trends
+
+Several recent networking trends affect organizations and consumers: bring your own device (BYOD), online collaboration, video communications, and cloud computing.

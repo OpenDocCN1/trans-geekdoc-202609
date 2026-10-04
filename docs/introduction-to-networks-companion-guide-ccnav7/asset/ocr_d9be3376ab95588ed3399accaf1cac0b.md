@@ -1,0 +1,86 @@
+# U
+
++   - *default gateway issues*, 619–620
+- *DNS issues*, 621–623
+- *duplex operation*, 617
+- *IP addressing on end devices*, 619
+- *IP addressing on IOS devices*, 618
+- *mismatch issues*, 617
+- *resolution versus escalation in*, 613
+- *summary of*, 626–627
+- *terminal monitor command*, 615–616
+- **trust exploitation**, 548–549
+- **TTL (Time-to-Live) field**, 275, 446, 453, 665
+- **tunneling**, 400, 665
+- **twisted-pair**. See STP (shielded twisted pair); UTP (unshielded twisted pair)
+- **Type of Service (ToS) field (IPv4 packets)**, 275
+- **Type/Length field (Ethernet frames)**, 239
+- **UDP (User Datagram Protocol)**
+  - applications using, 475–476
+  - client processes, 495–498
+  - datagram reassembly, 494
+  - definition of, 102, 666
+  - features of, 473–474
+  - headers, 474
+  - overview of, 473
+  - reliability of, 468–470, 494
+  - server processes, 495
+  - summary of, 499, 501
+  - TCP (Transmission Control Protocol) compared to, 469–470
+- **undebugging command**, 614
+- **unicast**, 93
+  - IPv4, 349–350, 390
+  - IPv6, 406, 407–408, 436–437
+  - MAC addresses, 244–245
+  - unknown, 250
+- **unicast transmission**
+  - definition of, 665
+  - unknown, 666
+- **uniform resource locators (URLs)**, 515, 557
+- **unique local addresses**, 408, 665–666
+- **unknown unicast**, 250, 666
+- **unshielded twisted pair**. See UTP (unshielded twisted pair) cable
+
+# V
+
++   - unspecified addresses, 666
+- unused host IPv4 addresses, minimizing, 377–378
+- unused services, disabling, 563–564
+- updates, security, 554
+- uploads, 512
+- URG flag, 486
+- Urgent field (TCP headers), 472
+- URLs (uniform resource locators), 515, 557
+- User Datagram Protocol. See UDP (User Datagram Protocol)
+- user executive mode, 53, 666
+- user passwords. See passwords
+- username command, 562
+- uTorrent, 514
+- **UTP (unshielded twisted pair)**, 152–158
+  - connectors, 153–156
+  - crossover, 157
+  - definition of, 148–150, 666
+  - properties of, 152–153
+  - standards, 153–156
+  - straight-through, 157
+  - summary of, 169
+- T568A/T68B standards, 157–158
+- variable-length subnet masking. See VLSM (variable-length subnet masking)
+- **verification**. See also configuration
+  - of device connectivity, 78, 80
+  - of IP (Internet Protocol) configuration, 77
+  - of IPv6 addressing, 427–430
+  - of router interfaces, 325–330
+  - show interfaces command, 328
+  - show ip interface brief command, 326
+  - show ip interface command, 329
+  - show ip route command, 327
+  - show ipv6 interface brief command, 326–327
+  - show ipv6 interface command, 330
+  - show ipv6 route command, 327–328
+  - of small business network connectivity, 586–596
+    - network baselines, 593–596
+    - ping command, 586–590
+    - summary of, 624
+    - traceroute command, 590–594
+    - tracert command, 590–593

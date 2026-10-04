@@ -1,0 +1,242 @@
+
+- timing messages, 92–93
+- Token Ring LAN technologies, 214, 217
+- top-level domains, 525
+- topologies
+  - data link layer, 209–220
+  - access control methods, 216–217
+  - contention-based access, 216–220
+  - controlled access, 217
+  - data link frame, 229
+  - full-duplex communication, 215–216, 653
+  - half-duplex communication, 215, 653
+  - LAN (local area network), 213–214
+  - physical/logical, 209–211
+  - summary of, 228
+  - WAN (wide area network), 211–213
+    - definition of, 665
+  - small business networks, 572–573. See also small business network management
+  - topology diagrams, 8–11
+    - definition of, 10
+    - logical, 10–11
+    - network symbols for, 8–10
+    - physical, 10
+- ToS (Type of Service) field, 275
+- traceroute command
+  - definition of, 665
+  - IOS command syntax, 57
+  - small business network verification with, 590–594
+  - summary of, 454–455
+  - testing network connectivity with, 452–453, 455
+- tracert command, 590–593
+- Traffic Class field (IPv6 packets), 280
+- traffic management, 577–578
+- traffic prioritization, 665
+- translation, 400–401
+- Transmission Control Protocol. See TCP (Transmission Control Protocol)
+- transport input command, 320, 562
+- transport input ssh command, 563
+- transport layer
+  - definition of, 113, 114, 462
+  - overview of, 102
+  - port numbers
+    - definition of, 465
+    - groups of, 478
+    - multiple separation communications with, 476
+- netstat command, 479–480
+- socket pairs, 477–478
+  - well-known, 479
+- protocols, 467
+  - responsibilities of, 463–466
+  - role of, 462
+  - segments in, 463, 468
+- TCP (Transmission Control Protocol)
+  - applications using, 472–473
+  - congestion avoidance, 493
+  - connection establishment, 483–484
+  - data loss and retransmission, 489
+  - features of, 470–471
+  - flow control, 471, 490–494
+  - headers, 471–472
+  - MSS (maximum segment size), 491–492
+  - packet delivery, 486–487
+  - reliability of, 467–468, 486–490, 500–501
+  - server processes, 480–483
+  - session termination, 484–485
+  - summary of, 499
+  - three-way handshake, 485–486
+  - UDP (User Datagram Protocol) compared to, 469–471
+  - window size, 490–491
+- UDP (User Datagram Protocol)
+  - applications using, 475–476
+  - client processes, 495–498
+  - datagram reassembly, 494
+  - features of, 473–474
+  - headers, 474
+  - overview of, 473
+  - reliability of, 468–470, 494
+  - server processes, 495
+  - summary of, 499, 501
+  - TCP (Transmission Control Protocol) compared to, 469–470
+- Trivial File Transfer Protocol (TFTP), 101, 479, 511, 665
+- Trojan horses, 33, 547, 665
+- troubleshooting
+  - default gateways, 334
+  - definition of, 665
+  - small business networks, 611–623
+    - basic approach, 612–613
+    - debug command, 613–615
+- default gateway issues, 619–620
+- DNS issues, 621–623
+- duplex operation, 617
+- IP addressing on end devices, 619
+- IP addressing on IOS devices, 618
+- mismatch issues, 617
+- resolution versus in, 613
+- summary of, 626–627
+- terminal monitor command, 615–616
+- trust exploitation, 548–549
+- TTL (Time-to-Live) field, 275, 446, 453, 665
+- tunneling, 400, 665
+- twisted-pair. See STP (shielded twisted pair); UTP (unshielded twisted pair)
+- Type of Service (ToS) field (IPv4 packets), 275
+- Type/Length field (Ethernet frames), 239
+- UDP (User Datagram Protocol)
+  - applications using, 475–476
+  - client processes, 495–498
+  - datagram reassembly, 494
+  - definition of, 102, 666
+  - features of, 473–474
+  - headers, 474
+  - overview of, 473
+  - reliability of, 468–470, 494
+  - server processes, 495
+  - summary of, 499, 501
+  - TCP (Transmission Control Protocol) compared to, 469–470
+  - debugging command, 614
+- unicast, 93
+  - IPv4, 349–350, 390
+  - IPv6, 406, 407–408, 436–437
+  - MAC addresses, 244–245
+  - unknown, 250
+  - unicast transmission
+    - definition of, 665
+    - unknown, 666
+  - uniform resource locators (URLs), 515, 557
+  - unique local addresses, 408, 665–666
+  - unknown unicast, 250, 666
+  - unshielded twisted pair. See UTP (unshielded twisted pair) cable
+- unspecified addresses, 666
+- unused host IPv4 addresses, minimizing, 377–378
+- unused services, disabling, 563–564
+- updates, security, 554
+- uploads, 512
+- URG flag, 486
+- Urgent field (TCP headers), 472
+- URLs (uniform resource locators), 515, 557
+- User Datagram Protocol. See UDP (User Datagram Protocol)
+- user executive mode, 53, 666
+- user passwords. See passwords
+- username command, 562
+- uTorrent, 514
+- UTP (unshielded twisted pair), 152–158
+  - connectors, 153–156
+  - crossover, 157
+  - definition of, 148–150, 666
+  - properties of, 152–153
+  - standards, 153–156
+  - straight-through, 157
+  - summary of, 169
+- T568A/T68B standards, 157–158
+- variable-length subnet masking. See VLSM (variable-length subnet masking)
+- verification. See also configuration
+  - of device connectivity, 78, 80
+  - of IP (Internet Protocol) configuration, 77
+  - of IPv6 addressing, 427–430
+  - of router interfaces, 325–330
+  - show interfaces command, 328
+  - show ip interface brief command, 326
+  - show ip interface command, 329
+  - show ip route command, 327
+  - show ipv6 interface brief command, 326–327
+  - show ipv6 interface command, 330
+  - show ipv6 route command, 327–328
+  - of small business network connectivity, 586–596
+    - network baselines, 593–596
+    - ping command, 586–590
+    - summary of, 624
+    - traceroute command, 590–594
+    - tracert command, 590–593
+- Version field
+  - IPv4 packets, 275
+  - IPv6 packets, 280
+- video, file formats for, 509
+- video applications, 29, 582
+- virtual circuits, 666
+- virtual classrooms, 666
+- virtual private networks (VPNs), 35
+- virtual terminal (vty), 64
+- virtualization, 666
+- viruses, 33, 546, 666
+- VLANs (virtual local networks), 666
+- VLSM (variable-length subnet masking), 381–387
+  - address conservation, 381–383
+  - definition of, 666
+  - network assignments, 384–386
+  - overview of, 381
+  - summary of, 392
+- voice applications, 582
+- voice over IP (VoIP), 469, 572–667
+- volatile memory, 667
+- VPNs (virtual private networks), 35
+- vty (virtual terminal), 64, 666
+- vulnerabilities, 543, 544
+- WANs (wide area networks), 14–15
+  - definition of, 666
+  - topologies, 211–213
+    - hub-and-spoke, 211–212
+    - mesh, 212
+    - point-to-point, 211–213
+- WAN frames, 225–226
+- WAPs (wireless access points), 138, 166, 667
+- weak passwords, 559
+- web browsers, 515–517
+- web pages, opening, 515–517
+- web protocols, 515–518
+  - HTTP (Hypertext Transfer Protocol), 516–518
+  - HTTPS (HTTP Secure), 515–518
+  - summary of, 534
+- web servers, 580
+- well-known IPv6 addresses, 430, 667
+- well-known port number, 479
+- whois command, 547
+- wide area networks. See WANs (wide area networks)
+- Wi-Fi, 165–166, 169–170, 667
+- Wi-Fi Alliance, 165–166, 169–170
+- Wi-Fi analyzer, 667
+- WiMAX, 166, 169–170, 667
+- window size, 472, 490–491, 667
+- Window Size (TCP headers), 472
+- Windows computers
+  - ARP tables, displaying, 307
+  - Data Usage tool, 585
+  - dynamic LLAs (link-local addresses) on, 425–426
+  - IP (Internet Protocol) configuration on, 596–598
+- wireless access points, 138, 166, 667
+- wireless internet service providers (WISPs), 32, 668
+- wireless LANs (WLANs), 103, 166–167, 234, 668
+- wireless media, 164–167
+  - properties of, 164–165
+  - types of, 165–166
+  - wireless LANs (WLANs), 166–167
+- wireless mesh network, 668
+- wireless network interface card (NIC), 668
+- wireless networks, 32
+- wireless routers, 668
+- Wireshark, 129, 280, 583–584
+- WISPs (wireless internet service providers), 32, 668
+- WMN (wireless mesh network), 668
+- worms, 33, 547, 668
+- X.25, 225
+- zero-day attacks, 33
+- Zigbee, 166, 169–170, 668
