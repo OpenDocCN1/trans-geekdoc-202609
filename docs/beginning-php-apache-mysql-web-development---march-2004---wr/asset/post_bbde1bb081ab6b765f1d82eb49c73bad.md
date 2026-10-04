@@ -1,0 +1,376 @@
+
+## selling online (continued)
+
+- credit card processing, 500
+- customer feedback and, 501–502
+- customer service, 499
+- delivery services, 501
+- design of site, 499–500
+- information and, 498
+- merchandise for, 501
+- navigation of site, 500
+- options, payment, and tax, 602
+- view of, 457
+- pricing and, 501
+- privacy policy, 499
+- registering, login and order tracking, 603
+- return policy, 499
+- shopping cart application
+    - add_php.file, 472–473
+    - cart_php.file, 473–477
+    - cbashop.php.file, 467–469
+    - change_php.file, 477–478
+    - checkout_php.file, 478–483
+    - checkout2_php.file, 483–490
+    - checkout3_php.file, 490–497
+    - create_php.file, 460–463
+    - ctreatemp_php.file, 471–472
+    - delete_php.file, 477–478
+    - getprod_php.file, 469–471
+    - view of, 459–460
+    - products.php file, 463–466
+- session_unset command, 399
+- setcookie() function, 55–57
+- setcookie_php.file, 345
+- setcookie_pw.file, 345, 346
+- setcookie_un_php.file, 345, 346
+- setup_php
+    - code for, 506–510
+    - plan of for, 549–551
+    - screen for, 541–542
+- Seuss, Randy (inventor), 503
+- shopping cart application
+    - add_php.file, 472–473
+    - cart_php.file, 473–477
+    - cbashop.php.file, 467–469
+    - change_php.file, 477–478
+    - checkout_php.file, 478–483
+    - checkout2_php.file, 483–490
+    - checkout3_php.file, 490–497
+    - create_php.file, 460–463
+    - ctreatemp_php.file, 471–472
+    - delete_php.file, 477–478
+    - getprod_php.file, 469–471
+    - view of, 459–460
+    - products.php file, 463–466
+- short_open_tag setting (PHP), 19
+- showComments() function, 557, 562
+- showTopic() function, for mailing list
+- signup form for mailing list
+    - code for, 437–445
+    - element of, 446–454
+    - skeleton script
+        - creating, 151–158
+        - rational for, 158–159
+- slight() field type (MySQL), 89
+- smile, 568
+- semicolon (2)
+    - if statement and, and 64
+    - in PHP per 343
+- sending e-mail, 286–287
+- server, mail setup with PHP, 285–282. See also Apache Web server
+- session functions (PHP), 639–640
+- session tracking with PHP and MySQL
+    - code for, 327–337
+    - element of, 334–344
+- session_destroy() command, 399
+- session_id() function, 473
+- sessions
+    - cookies compared to, 55
+    - "headers already sent",
+    - login information and, 396
+    - passing variables through, 52–304
+- session_save_path setting (PHP), 20
+- session_start() function, 52, 399, 402
+- software
+    - log files, and 579–584
+    - open source program, 10–11
+    - phpMyAdmin, 109
+    - shopping cart, 459
+    - text editors, 655–656
+    - versions of, 3
+- sorting
+    - arrays, 73–74
+    - query results, 653
+    - sorting.php, 74
+    - source code, downloading, 3, 4
+    - spam, 454–455
+    - spelling functions (PHP), 638–639
+
+## testcookie.php file
+
+- SQL. See also SQL query
+- coding practices, 166
+## commands
+
+## T
+
+## table
+
+- CREATE DATABASE yourdatabase, 247–248
+- CREATE TABLE, 250–251
+- INNER JOIN, 435
+- SQL_CALC_FOUND_ROWS, 563
+- database interaction and, 163
+- timestamp generation using, 213–214
+- background color of of 272
+- DBB (MySQL), 94
+- calculating movie timings, 123–124
+- case-sensitivity of name, 590
+- creating comic book, 391–392
+- mailing list, 432–433
+- movie review, 128–129
+- shopping cart, 460–463
+- customers, 462
+- data, adding to, 122–123
+- for-database information, 326
+- defining headers for, 111–114
+- filling with data, 114–116
+- improving, 117–120
+- joining in database, 107–108
+- links, adding to, 120–122
+- movie details, displaying, 126–128
+- My (MySQL), 93
+- naming standards for, 246, 270
+- new information, displaying, 124–126
+- outlet, 463
+- products, 462
+- putting data together, 116–117
+- querying for review, 129–130
+- referencing in database, 106–107
+- relationship and, 128–133
+- retrieving from multiple, 653
+- views, displaying, 131–136
+- SQL query coding practices for, 114
+- naming, 130
+- testing in phpMyAdmin, 167
+- SQL_CALC_ROWS command (SQL), 563
+- ssql.php file, 425
+- square brackets, 556
+- standardization of database design, 246
+- startform.php file, 152–154, 160
+- statistics
+    - Apache and, 574–576
+    - MySQL and, 576–578
+    - overview of, 573–574
+    - PHP and, 576
+    - reports, analyzing, 584–586
+- software for analyzing, 579–584
+- string integer, 297–299
+- string functions (PHP), 640–644
+- string, manipulating as array, 150
+- string manipulation functions, 212
+- strstr(), 150
+- style sheet, 396, 504–567
+- subdirectories, map of, 566
+- submit buffer, 144–159
+- submitting form, 433
+- switch command, 277, 402
+- switch condition, 159
+- syntax array, 73
+- checking, 558
+- CREATE TABLE command (SQL), 251
+- else statement, 607
+- heredoc, 84, 113, 310
+- if statement (PHP), 64–606
+- MySQL, 94
+- nested if statement, 607
+- PHP 34–35, 83–84, 605
+- SELECT command (MySQL), 101–102
+- table1.php file, 111–112, 114–115
+- table2.php file, 116–119, 120–121
+- tags
+    - EOD, 116
+    - EOD and, 114, 128
+- HTML
+    - <fieldset>, 410
+    - <legend>, 410
+    - opening and closing (PHP), 34
+    - technical support, 4, 5
+- template.php file, 322
+- ternary operator, 150–151
+- testcookie.php file, 346, 377
+
+## testing
+
+- Apache installation, 15
+- environment, for, 592
+- MySQL installation, 20–23
+- PHP installation, 18
+- products.php file, 465–466
+- SQL query in phpMyAdmin, 167
+- text, displaying in browser, 605
+- text editors
+    - comparison of, 655–656
+    - troubleshooting and, 588
+- text field, editing, 189
+- text field type (MySQL), 89
+- thanks.php file
+    - code for, 441–443
+    - explanation of, 451–453
+- Third Normal Form, 245
+- third-party host
+    - Administration GUIs, 659
+    - bandwidth and site usage, 659–660
+    - criteria for, 657
+    - databases and languages supported, 658
+    - pricing, 260
+    - server control and access, 658–659
+- time field type (MySQL), 98
+- time, functions for, 618–619
+- timestamp, changing date info, 213–214
+- tinyblob field (MySQL), 90
+- tintlength field (MySQL), 89
+- tinytext field type (MySQL), 90
+- title page, setting density., 150
+- tracking number for shipment, 501
+- tracking number of times visitors log, 598
+- traffic, infringing, 556
+- trans-act.php file, 533–535
+- trans-affirm.php file, 539–541, 555
+- trans-article.php file
+    - code for, 369–371
+    - explanation of, 402–406
+- transaction page
+    - Management System, 398–402
+    - trans-post.php file, 535–536
+    - trans-user.php file
+    - shopping cart system, 536–539
+    - code for, 367
+- trapping errors, 215, 229–550
+- trend, analyzing, 585
+- trim() function, 212
+- trim() function, 392–394
+- troubleshooting debugging
+    - code, 232–233
+- "headers already sent" error, 590–591
+- installation, 587
+- parse errors, 588
+- variables, 589–590
+- trust and e-commerce, 498
+- type functions, 210–211
+## U
+
+- first() function, 150
+- Ultra, 588
+- UNIQUE keyword, 392
+- unique parameter (MySQL), 92
+- UNIX_TIMESTAMP() function (SQL), 213–214
+- unlogged.admin.php file, 349
+- unlogged.user.php file, 327
+- UPDATE command (MySQL), 94, 180–182
+- update page, 342, 443, 341
+- update query, 280
+- date_account.php file, 334–336
+- update.user.php file, 351–554
+- update data, 182–190
+- upload_max_files setting (PHP), 20
+- URL passing through, 46–50, 606
+- special characters in, 351
+- URL functions (PHP), 645
+- decode(), 51
+- user input
+    - checking for format errors, 203–214
+    - design of system and, 191–192
+    - limiting on, 141–144
+    - validation of, 192–202
+- useraccount.php file
+    - shopping cart system, 524–526
+    - code for, 373–375
+    - explanation of, 408–411
+- user_login.php file, 332–333
+- username
+    - authorizing, 322–325
+    - choosing and checking at registration, 340, 342
+- visitor between pages, 52–54
+- userOption() function, 554
+- user_personal.php file, 332–333
+
+## Web sites
+
+- user.php file
+    - code for, 437–439
+    - explanation of, 446–447
+    - screen for, 444
+- Users. See also user input:
+    - allowing posts to article, 361, 387
+    - anonymous, 320
+    - authentication of, 505, 551–552
+    - encouraging to return to site, 359–360
+    - references of, 585
+    - removing from mailing list, 453–454
+    - setting up in MySQL, 27–28
+    - showing error messages to, 218–219
+- user_transact.php file
+    - code for, 439–441
+    - explanation of, 447–451
+
+## V
+
+- validating user input, 203–214
+- value
+    - for array, 608
+    - default in, 149
+    - defining for form, 141–144
+    - editing, 189
+    - incrementing alternate to, 84
+    - list item, 159
+    - SQL, 277
+    - setting to variable, 605
+- varchar datatype, 251
+- varchar (length) field type (MySQL), 88
+- variable functions (PHP), 645–646
+- variables
+    - case-sensitivity of name, 590
+    - coding practices for, 313
+    - connection (MySQL), 95–96
+    - global, 68
+    - passing passes between view, 606
+    - register_globals, and 45–46
+    - through cookies, 55–58
+    - through forms, 58–63
+    - through sessions, 52–54
+    - through URL, 46–51
+    - PHP and, 43–44
+    - setting value to, 605
+    - troubleshooting, 232–233, 589–590
+- variable_order setting (PHP), 20
+- verification method, 200
+- viewarticle.php file, 381–382, 420–421
+- viewforum.php file, 528–529
+- viewpostcard.php file, 305–306
+- viewtoplic.php file, 527, 562
+- visitor to site
+    - hits, of, 585
+    - tracking number of pages loaded by, 598
+    - username, passing pages, 52–54
+    - using form to get information from, 59–63
+
+## W
+
+- warning, 225
+
+## Web browser
+
+- calling PHP program, 38
+- displaying text in, 605
+- opening, 590
+- transaction page and, 282
+
+## Web pages
+
+- displaying movie on, 600–601
+- passing variables between view, 606
+- register_globals, and 45–46, 58
+- through cookies, 55–58
+- through forms, 58–63
+- through sessions, 52–54
+- through URL, 46–51
+- passing visitor username between, 52–54
+- preventing unauthorized user from loading, 603
+- title for coding dynamically, 150
+- tracking number of times loads, 598
+
+Web server. Apache Web server
+Web sites. see also comic book for Web:
+review Web site
