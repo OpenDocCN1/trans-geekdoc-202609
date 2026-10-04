@@ -1,0 +1,13 @@
+# CHAPTER 5: Security Ecosystems
+
+from customer order and job completion to scheduling, timekeeping, and parts management. These apps interacted with remote business systems such as databases and accounting ledgers but not the equipment that technicians actually installed and configured. These apps welcomed cost savings, but they left a big part of the technician's workload unchanged. On-premise configuration tasks were still performed on laptops or, on client-server systems at the jobsite.
+
+That's where the new mobile ecosystem comes into play. The second generation of apps for field technicians leverages the ability of smartphones to interact with security equipment connected to the same IP network. They can configure equipment directly from their mobile devices, ending the days of laptops perched precariously on top of ladders or toolboxes. Installation apps save many trips up and down ladders for technicians and the accidental one-way trips too often take from those same ladders.
+
+The economics of these apps benefit everyone in the security value chain. Better tools for integrators mean fewer technical support calls and related expenses for suppliers. Faster and more accurate installation translates to cost savings for integrators and less business disruption for their customers. They also cut down on the dreaded callbacks—installation snuffs that require a remote visit to fix what could have been prevented in the first place. Clearly, mobile apps move this needle in the right direction.
+
+# MOBILE CREDENTIALS
+
+Mobile credentials are the phone-based equivalent of the familiar access cards and key fobs that building occupants, tenants, employees, residents, contractors, and customers have used since the dawn of electronic security. Increasingly, they're also used for membership-based services as health clubs, shared workspaces, and common areas multitunit dwellings.
+
+Mobile credentials are very early in their lifecycle, but it's already clear that everyone loves them. Salespeople tell stories of closing deals as soon as they show a prospect that they can unlock their doors with their smartphone. Integrators love them because they deliver new value to their customers. Property managers treat them as a high-tenacity amenity for modern buildings. Security teams appreciate the simplified management compared to fobs and keys. Users write going reviews about convenience and never having to worry about losing their cards. Mobile credentials come in three technical varieties, each with pros and cons for users and administrators. In the absence of widely accepted standards, they are mostly proprietary; each mobile app works only with the locks, readers, or software systems of a single supplier.

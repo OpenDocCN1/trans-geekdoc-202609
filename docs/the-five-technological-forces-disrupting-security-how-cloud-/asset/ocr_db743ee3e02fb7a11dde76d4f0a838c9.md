@@ -1,0 +1,11 @@
+# On the Internet, No One Knows You’re a Dog
+
+Or so goes the caption from the famous New Yorker cartoon depicting two dogs sitting in in front of a computer screen in the early days of the Internet. It is far-ical, of course, but in a single phrase, it captures the core problem of identity authentication in cyber space. Man or beast, you are nothing more than a log-in.
+
+In physical security, we have wrestled with identity and authentication since the very beginning. In person, it is easy to sort dogs from humans, sorting humans from each other proves more challenging. Badges, access cards, PIN codes, fingerprint, retinal scans, and facial recognition are all tools in our arsenal of authentication. Historically, we were physically based, disconnected from networks, and presumably immune to hacking, which made many feel that cyber worries could be left to "the IT guys."
+
+That’s no longer possible. Every aspect of electronic security is now mediated by what happens in cyber space, which makes online identity and authentication a fundamental problem as an industry as well. We could just update the New Yorker cartoon to say "on the Internet, no one knows you’re inside their building management system."
+
+In the age of digital documents and physical authentication procedures, it took a great deal of ingenuity and skill to create forged identity instruments. I marvel at Abagnale’s in Catch Me If You Can, the tale of his exploits as a con man and master forgery artist (one of the few movies that is as good, if not better, than the book). Not everyone has the nerves and skill to command a 90 ft long to make fake checks. Times have changed. As Abagnale points out, today, all you need is a laptop and decent printer, and you can make four-color checks in minutes.
+
+With digital identities, the hurdle is lower than that; you don’t even need the printer. What’s more, you can have as many identities as you want—ours or someone else’s. You can be one dog or a beast, and no one will know the difference.

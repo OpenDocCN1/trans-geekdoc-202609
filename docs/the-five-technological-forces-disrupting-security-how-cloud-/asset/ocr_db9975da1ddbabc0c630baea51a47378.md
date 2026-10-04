@@ -1,0 +1,13 @@
+# Security as a Customer Experience 207
+
+With these communication capabilities in place, social spaces could give rise to the possibility of what I would call social security, if the term wasn't already in use. Instead, let's call it “crowdsourced security.” The idea is that a social space could obtain services and surveillance from a large group of people who are part of an online community, rather than a traditional employee responsible for just function.
+
+In the 2013 novel *The Circle,*¹ one of three men leading the world's largest Internet company paints a picture of how universal video surveillance will make crime highly improbable, if not outright impossible. The vision opens with individuals deploying a handful of cameras for their own personal interests, like checking the surf at the beach. As more people place cameras in more location for more reasons, until there are billions of cameras around the globe. In this world, cameras are all shareable through social networks with friends, friends of friends, and so on. Eventually, the whole planet is viewable all the time, and there are always enough viewers that no one would think of doing anything illegal, because they know they will get caught. The fact that we are almost at that point makes truth stranger than fiction, but the emergence of what is effectively crowdsourcing is the real takeaway.
+
+Compare this with the usual for intelligence collection and protection of a building. It’s having one or more dedicated guards watching computer screens and cameras. This is an expensive process, and there’s no way that a small group of people can ever hope to be observant as large group. Many companies, small businesses in particular, can’t afford dedicated security departments. But every company has an employee base that could be plugged into a social network group that receives alerts or images of possible issues. Forewarned is foremost, and more awareness is always better.
+
+# SECURITY AS A CUSTOMER EXPERIENCE
+
+One of our challenges as security professionals is to make security a positive customer experience. I’ll say that again, because it’s not language that we hear often: make security a positive customer experience. One of my recent encounters involved a long wait in an elevator lobby with a guard who had to keep his eyes on more activities and points of entry that anyone could reason-ably expect. It was a marginally decent urban location, and he needed to check identification and ask everyone who they were and before he could track the person I was there to see.
+
+> ¹Eggers, D. (2016) *The Circle.* New York, New York: Alfred A. Knopf.

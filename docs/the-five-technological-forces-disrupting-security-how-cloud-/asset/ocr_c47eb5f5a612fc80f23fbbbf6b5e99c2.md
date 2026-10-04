@@ -1,0 +1,13 @@
+too arcane to mention here. But it also has a very specific meaning. The original sense of the terms, back in the 1970s, it meant building (software) a model of the world or a particular domain that could then be used to reason about things in that domain.
+
+To oversimplify, classic AI would be good at classic syllogisms as 'all men are mortal; Bob is a man; therefore, Bob is mortal.' While this type of AI indeed sort sorts from mortals in any data set, it's very different from machine learning in which an algorithm deduces all men on a training set in which everyone meets the demise. Classic AI did not move forward as quickly as anticipated over the years. It proved extremely difficult to build conceptual models of sufficient complexity to provide any useful value in real-time settings. It's not that the AI community has given up on this type of approach; it's that other approaches have been more fruitful.
+
+# MACHINE LEARNING
+
+Most of the problems we encounter or most of the data sets we are interested in are much more amenable to machine learning than they are to classic AI. There is some selection bias here. Machine learning has turned out to be good at solving problems that have business value, from medicine to self-driving cars to cybersecurity. Early success in these areas attracted additional investment and research, and the virtuous circle of positive results and reinforcements have continued to fuel growth.
+
+We've mentioned machine learning in passing earlier chapters of this book, but have not focused on a definition. Usually defined as a way for computers to gain new knowledge without being explicitly programmed, machine learning sounds like the holy grail of artificial intelligence: machines that can think for themselves. That's the part that excites the popular imagination, but there's a bit more to it than that. Machine needs to be exposed to data in order to learn, and there are multiple ways to accomplish that goal.
+
+There isn't just one type of machine learning. There are many types of machine learning algorithms, and they excel at solving different kinds of problems. It is not a one-size-fits-all intelligence (which, by way, is the pretty cool things about our own brains). The algorithms are usually categorized as one of the three general types: supervised learning, unsupervised learning, and reinforcement learning. They are all relevant to physical security analytics, but in different ways.
+
+In unsupervised learning, the algorithm combs through large data sets and draws inferences without having been given a specific goal. We discussed this earlier in the context of classification and segmentation. For example, an unsupervised algorithm might be used to answer the question: do the visitors to my

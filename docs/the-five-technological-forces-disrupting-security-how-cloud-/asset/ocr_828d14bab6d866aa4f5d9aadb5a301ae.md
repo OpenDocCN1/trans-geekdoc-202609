@@ -1,0 +1,13 @@
+center of your security system. In a small business setting where there is no-dedicated security staff, your security solution is in your pocket at all times, and you've effectively gained a virtual employee in the process.
+
+The second dimension of workforce multiplication is that apps are cheap (or should be, anyway) and you can give them to a much larger number of people in your organization that you might have in the client-server era. For this reason, your strategy should include an examination of the licensing or usage model for mobile apps from your suppliers. Ideally, you will be able to use as many users as you like, this means you have more eyes that can potentially focus on security issues or assist with administration. The fact that they can do from this mobile platform, where multitasking is the order of the day, means that they can be attending to security tasks ostensibly doing something else. This works because many security tasks require a minute here, a minute, or a quick check-in, not dedicated attention over long periods of time.
+
+# Mobile Credentials as an Engagement Accelerator
+
+Your mobile strategy should absolutely include mobile credentials. As discussed at earlier, mobile credentials provide a mechanism for engaging your population in the security process. On their face, mobile credentials are just a better way than any access for credentials across your whole organization. But beneath, they provide an interactive platform that can engage your users with security and other facility-related information distribution and incident reporting.
+
+# Leveraging Work-Life Integration
+
+Finally, your mobile strategy should take advantage of the fact that mobile applications leverage work-life integration for the security organization. Work-life integration recognizes the boundaries between work time and personal time have eroded since Internet connectivity made it possible for all of us to work from anywhere, whether for longer hours in a work-home setting or in microbursts, when we check e-mail on our own time.
+
+This is commonplace for many other corporate applications, most notably force administration, finance, and collaboration platforms. There isn't a salesman worth their salt who isn't glued to Salesforce.com or its equivalent throughout the day to see whether new orders have arrived, whether there have been support escalations for any of their customers, or whether their made quota yet. Collaboration platforms like Slack also engage their users on a round-the-clock basis. I look at our own Slack channels as an example, where

@@ -1,0 +1,15 @@
+# CHAPTER 10: IoT Technology and Standards
+
+however, we find ourselves in the familiar territory of large population's hardware devices geographically distributed and difficult to change out if we make poor standards choices early in the game. IoT standards also depend on cloud, mobile, and cyber standards, and so they pull a lot of threads all in one place. Allow me to highlight the aspects of emerging standards important to decision-makers as this new market goes through its burn-in period.
+
+Plug-and-play simplicity requires agreements about standards, and standards can only exist where there are common visions of how systems be put together—in short, their architecture. Standards have been an essential part of building the modern world, from bridges and skyscrapers to telecommunications and electric grids. They require agreement about how the pieces fit together.
+
+The first order of business is to understand what those pieces are—which technologies drive or enable the rise of IoT. Much of it will prove familiar to anyone versed in the electronic sector or consumer electronics business. What has changed is the way that familiar components have been reorganized into updated architectural paradigms. New roles and relationships among the parts of a system create the need for new standards on how they communicate and interact. An old shoe't always fit a new foot.
+
+For consumers, there's a lack of transparency in IoT. Most popular literature doesn't spend a lot of time explaining interoperability and security protocols follow, if any. This leaves the buyer in the dark. In many cases, it is challenging to evaluate the interoperability and security of new protocols and authentication mechanisms. Many are too young to be fully shaken out in real-world conditions. In practical terms, no security organization or system integrator can be expected to know how all of these devices will operate and which configurations and combinations are securable. You will need to pick a subset and become familiar with those.
+
+Many IoT devices are dangerously insecure. You could say they are insecure by design or by the lack of design. One reason is that many of small computing environments do not have the resources to run the kind of good security defenses available for standard operating systems and network stacks. Another reason is that to support a sufficient investment in cybersecurity or verification testing. Untested is unsafe until proved otherwise.
+
+We talked about the software update treadmill early, but that's not the worst of it. Many simple IoT devices have no provision to upgrade their
+
+> ¹With apologies to those interested in video surveillance, we will only be mentioning those standards in passing. Between ONVIF and MPEG, they are widely accepted and well covered by both organizations.

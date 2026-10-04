@@ -1,0 +1,13 @@
+# START-UPS SHOW UP TO THE GAME
+
+Cloud has provided a path between buildings and their owners as Uber between riders and drivers and as Facebook among friends. This is most evident in the residential space, where numerous smart lock, smart doorbell, and whatever start-ups have recently launched. Naturally, all of these consumer-facing security services are cloud companies through-and-human. Ironically, though, they don't have to explain that to anyone. It's not even part of their advertising copy. Nobody cares. It is assumed that every new company we see is a cloud company, and we're okay with that.
+
+Within commercial security, there has also been an increase in security start-ups making an entrance with cloud solutions, in video surveillance and increasingly, in access control. While the technology and quality differ considerably from one to the next, there were at this writing over 30-40 companies offering video surveillance as a service (VSaaS) or managed video as a service (MVaaS) offerings in the commercial space.
+
+There are several reasons that the video sector has seen more than growth, as access control. First, almost none of the companies develop their own camera products, which means they can leverage existing products already in the market. Second, this segment of the industry has benefited from the adoption of common standards, most notably ONVIF, which permits interoperability across many cameras and storage services. Finally, video surveillance is subject to fewer jurisdictional regulations than alarm or access control services. This means that products can be used in many places without creating specific versions for each, or by the product through lengthy and expensive regulatory approval processes.
+
+# THE INNOVATOR'S DILEMMA
+
+Many have wondered why few, if any, of established security software providers have jumped into the cloud space. In other words, if you have a good reputation in the industry, a deep understanding of customer requirements, and a proved go-to-market strategy, why not leverage your position to offer cloud-based services?
+
+While I was still in the consulting business, I worked with companies in other industries facing this same question. The conundrum for company management usually comes down to a combination of intertwined challenges. The first is cannibalization of existing product lines. The old guard within the company actively opposes disruptive product developments if they threaten cash cows. For example, passenger railroad companies stayed clear of the airline
