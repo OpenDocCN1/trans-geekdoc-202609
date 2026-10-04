@@ -1,0 +1,92 @@
+
+### Legislation
+
+*   `Artificial Intelligence Act, EU COM/2021/206, online: [https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1623335154975&uri=CELEX%3A52021PC0206](https://eur-lex.europa.eu)`.
+
+*   `Canadian Charter of Rights and Freedoms, Part 1 of the Constitution Act, 1982, being Schedule B to the Canada Act 1982 (UK), 1982, c 11`.
+
+*   `Charter of Human Rights and Freedoms, CQLR c C-12`.
+
+*   `Civil Code of Quebec, CQLR c CCQ-1991, art 1457`.
+
+*   `Competition Act, RSC 1985 c C-34`.
+
+*   `Consumer Protection Act, CQLR c P-40.1`.
+
+*   `Digital Markets Act, Regulation (EU) 2022/1925`.
+
+*   `General Data Protection Regulation, EU 2016/679`.
+
+### Jurisprudence
+
+*   `Jane Doe 464533 v DN, 2016 ONSC 4920`.
+
+*   `Jane Doe 72511 v Morgan, 2018 ONSC 660`.
+
+*   `Jones v Tsige, 2012 ONCA 32`.
+
+### Doctrine
+
+*   [Access Now](#ch20.xhtml#R_ref20_1). (2021, April 21). EU Takes Minimal Steps to Regulate Harmful AI systems, must go further to protect fundamental rights. Retrieved from [https://www.accessnow.org/eu-minimal-steps-to-regulate-harmful-ai-systems/](https://www.accessnow.org)
+
+*   [Andrus, McKane, Spitzer, E., Brown, J., & Xiang, A.](#ch20.xhtml#R_ref20_2) (2021). What We Can’t Measure, We Can’t Understand: Challenges to Demographic Data Procurement in the Pursuit of Fairness. In *Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency* (p. 249).
+
+*   [Angwin, J., Larson, J., Mattu, S., & Kirchner, L.](#ch20.xhtml#R_ref20_3) (2016, May 23). Machine Bias. Retrieved from ProPublica: [https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing](https://www.propublica.org)
+
+*   [Australian Government, Department of Industry, Science and Resources](#ch20.xhtml#R_ref20_4). (2019, November 7). Australia’s Artificial Intelligence Ethics Framework. Retrieved from [https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-framework](https://www.industry.gov.au)
+
+*   Bedoya, A. M. (2016, January 18). The Color of Surveillance: What an Infamous Abuse of Power Teaches Us About the Modern Spy Era. Retrieved from Slate: [https://slate.com/technology/2016/01/what-the-fbis-surveillance-of-martin-luther-king-says-about-modern-spying.html](https://slate.com)
+
+*   [Benjamin, R.](#ch20.xhtml#R_ref20_6) (2019). Race After Technology: Abolitionist Tools for the New Jim Code. Cambridge: Polity Press.
+
+*   [Birhane, A.](#ch20.xhtml#R_ref20_8) (2017). Descartes was wrong: ‘a person is a person through other persons’. Retrieved from Aeon: [https://aeon.co/ideas/descartes-was-wrong-aperson-is-a-person-through-other-persons](https://aeon.co)
+
+*   [Birhane, A.](#ch20.xhtml#R_ref20_7) (2021). Algorithmic Injustice: A Relational Ethics Approach. Patterns, *2*(2), 100205.
+
+*   [Boyd, D., & Crawford, K.](#ch20.xhtml#R_ref20_9) (2012). Critical Questions for Big Data: Provocations for a cultural, technological, and scholarly phenomenon. Information, Communication & Society, *15*(5), 662.
+
+*   [Broussard, M.](#ch20.xhtml#R_ref20_10) (2018). Artificial Unintelligence: How Computers Misunderstand the World. Cambridge: MIT Press.
+
+*   [Chander, A.](#ch20.xhtml#R_ref20_11) (2017). The Racist Algorithm. 115 Mich L Rev, 1023.
+
+*   [Chateauraynaud, F.](#ch20.xhtml#R_ref20_12) (2021). Des expérimentations démocratiques en tension. L’œuvre des citoyens dans le travail politique des bifurcations. Cahiers du GRM, *18*. Retrieved from [https://doi.org/10.4000/grm.3238](https://doi.org/10.4000/grm.3238)
+
+*   [China Daily](#ch20.xhtml#R_ref20_13). (2019, June 17). Governance Principles for the New Generation Artificial Intelligence – Developing Responsible Artificial Intelligence. Retrieved from [http://www.chinadaily.com.cn/a/201906/17/WS5d07486ba3103dbf14328ab7.html](http://www.chinadaily.com.cn)
+
+*   Costanza-Chock, S. (2020). Design Justice: Community-Led Practices to Build the Worlds We Need. Cambridge: MIT Press.
+
+*   [Council of Europe](#ch20.xhtml#R_ref20_15). (n.d.). Ethical Frameworks. Retrieved from [https://www.coe.int/en/web/artificial-intelligence/ethical-frameworks](https://www.coe.int)
+
+*   [Crawford, K.](#ch20.xhtml#R_ref20_16) (2021). Atlas of AI. New Haven: Yale University Press.
+
+*   [Delacroix, S.](#ch20.xhtml#R_ref20_17) (2022). Diachronic Interpretability & Machine Learning Systems. Journal of Cross-disciplinary Research in Computational Law.
+
+*   Equivant. (n.d.). Northpointe Suite Risk Needs Assessments. Retrieved from [https://www.equivant.com/northpointe-risk-need-assessments/](https://www.equivant.com)
+
+*   [Eubanks, V.](#ch20.xhtml#R_ref20_19) (2018). Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor. New York: St Martin’s Press.
+
+*   [European Commission, High-Level Expert Group on AI](#ch20.xhtml#R_ref20_20). (2019, April 8). Ethics Guidelines for Trustworthy AI. Retrieved from [https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai](https://ec.europa.eu)
+
+*   [Follows, T.](#ch20.xhtml#R_ref20_21) (2021). The Future of You: Can Your Identity Survive 21st-Century Technology? London: Elliot and Thompson.
+
+*   Foucault, M. (1995). Discipline and Punish. New York: Vintage Books.
+
+*   [Friedman, V.](#ch20.xhtml#R_ref20_23) (2019, April 10). Privacy UX: Better Cookie Consent Experiences. Smashing Magazine. Retrieved from [https://www.smashingmagazine.com/2019/04/privacy-ux-better-cookie-consent-experiences/](https://www.smashingmagazine.com)
+
+*   [Gentelet, K., & Bahary-Dionne, A.](#ch20.xhtml#R_ref20_25) (2022). Les angles morts des réponses technologiques à la Covid-19: des populations marginalisées invisibles. Éthique publique, *23*(2). Retrieved from [https://doi.org/10.4000/ethiquepublique.6441](https://doi.org/10.4000/ethiquepublique.6441)
+
+*   [Gentelet, K., & Mizrahi, S. K.](#ch20.xhtml#R_ref20_24) (2021, September 26). We Need Concrete Protections From Artificial Intelligence Threatening Human Rights. The Conversation. Retrieved from [https://theconversation.com/we-need-concrete-protections-from-artificial-intelligence-threatening-human-rights-168174](https://theconversation.com)
+
+*   [Germany, Daten Ethik Kommission](#ch20.xhtml#R_ref20_26). (October 2019). Opinion of the Data Ethics Commission. Retrieved from [https://www.iicom.org/feature/germany-opinion-of-the-data-ethics-commission/](https://www.iicom.org)
+
+*   Google Images. (2022a, December 6). Nurse. Retrieved from [https://www.google.com/search?q=nurse&rlz=1C1VDKB_enCA1015CA1015&sxsrf=ALiCzsZbocwC1J5Hn1WIE_O6aLIN1jPyMA:1670340387335&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjlm8PrpuX7AhUXk4kEHagsAg8Q_AUoAXoECAEQAw&biw=954&bih=944&dpr=1](https://www.google.com)
+
+*   Google Images. (2022b, December 6). Professor. Retrieved from [https://www.google.com/search?q=nurse&rlz=1C1VDKB_enCA1015CA1015&sxsrf=ALiCzsZbocwC1J5Hn1WIE_O6aLIN1jPyMA:1670340387335&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjlm8PrpuX7AhUXk4kEHagsAg8Q_AUoAXoECAEQAw&biw=954&bih=944&dpr=1](https://www.google.com)
+
+*   [Government of Canada. Algorithmic Impact Assessment Tool](#ch20.xhtml#R_ref20_29). (n.d.). Retrieved from [https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai/algorithmic-impact-assessment.html](https://www.canada.ca)
+
+*   [Harrington, C. N.](#ch20.xhtml#R_ref20_30) (2020). The Forgotten Margins: What is Community-Based Participatory Health Design Telling Us? Interactions, *27*(3), 24.
+
+*   [Hidvegi, F., Leufer, D., & Massé, E.](#ch20.xhtml#R_ref20_31) (2021, February 17). The EU Should Regulate AI on the Basis of Rights, Not Risks. Access Now. Retrieved from [https://www.accessnow.org/eu-regulation-ai-risk-based-approach/](https://www.accessnow.org)
+
+*   India. (2019, June 13). National Strategy for AI. Retrieved from [https://indiaai.gov.in/research-reports/national-strategy-for-artificial-intelligence](https://indiaai.gov.in)

@@ -1,0 +1,49 @@
+
+
+* [Johnson, R. L., Pistilli, G., Menédez-González, N., Duran, L. D. D., Panai, E., Kalpokiene, J., & Bertulfo, D. J.](#ch7.xhtml#R_ref7_17) (2022). The Ghost in the Machine has an American accent: value conflict in GPT-3. *arXiv preprint*, arXiv:2203.07785.
+* [Legg, S., & Hutter, M.](#ch7.xhtml#R_ref7_18) (2007). Universal Intelligence: A Definition of Machine Intelligence. Minds and Machines, 17(4), 391–444.
+* [Nilsson, N. J.](#ch7.xhtml#R_ref7_19) (2010). Quest for Artificial Intelligence: A History of Ideas and Achievements. Cambridge University Press, Cambridge.
+* [Noble, S. U.](#ch7.xhtml#R_ref7_20) (2018). Algorithms of Oppression: How Search Engines Reinforce Racism. New York University Press, New York. [https://doi.org/10.18574/nyu/9781479833641.001.0001](https://doi.org/10.18574/nyu/9781479833641.001.0001)
+* [Perrigo, B.](#ch7.xhtml#R_ref7_21) (2023). Exclusive: OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic. Time. Retrieved from [https://time.com/6247678/openai-chatgpt-kenya-workers/](https://time.com)
+* [Pichai, S.](#ch7.xhtml#R_ref7_22) (2023). An important next step on our AI journey. Google Blog. Retrieved from [https://blog.google/technology/ai/bard-google-ai-search-updates/](https://blog.google)
+* [Sadin, E.](#ch7.xhtml#R_ref7_23) (2018). Le technolibéralisme nous conduit à un ‘avenir régressif’. Hermès, La Revue, 80(1), 255–258.
+* [Searle, J.](#ch7.xhtml#R_ref7_24) (1980). Minds, brains, and programs. Behavioral and Brain Sciences, 3(3), 417–424. doi:[10.1017/S0140525X00005756](http://dx.doi.org/10.1017/S0140525X00005756)
+* [Tiku, N.](#ch7.xhtml#R_ref7_25) (2022). The Google engineer who thinks the company’s AI has come to life. The Washington Post. Retrieved from [https://www.washingtonpost.com/technology/2022/06/11/google-ai-lamda-blake-lemoine/](https://www.washingtonpost.com)
+* [Vaswani, A. et al.](#ch7.xhtml#R_ref7_26) (2017). Attention is All you Need. *ArXiv abs/1706.03762*.
+* [Vincent, J.](#ch7.xhtml#R_ref7_27) (2023). AI is being used to generate whole spam sites. The Verge. Retrieved from [https://www.theverge.com/2023/5/2/23707788/ai-spam-content-farm-misinformation-reports-newsguard](https://www.theverge.com)
+* [Wittgenstein, L.](#ch7.xhtml#R_ref7_28) (1953). Philosophische Untersuchungen (Philosophical Investigations), translated by G. E. M. Anscombe, 1953.
+
+# 8 Anand Rao’s Commentary
+
+Anand Rao
+
+PwC, Greater Boston, MA, USA
+
+DOI: [10.1201/9781003320791-10](https://dx.doi.org/10.1201/9781003320791-10)
+
+**What, in your opinion, is human-centered AI and what is its potential, its importance?**
+
+When I first encountered the term, I thought, “That’s a bit odd … If you go back to the beginning of AI, it has always been about understanding human intelligence and mimicking it—scholars like Roger Schank, in the ′70s and ′80s were very influenced by psychology.” So, at first, the idea of human-centered AI felt anachronistic to me. But then, as I thought about it, I realized that AI isn’t as closely related to psychology as it used to be. So, I felt that calling into question the lack of interaction between humans and AI could make a lot of sense. And when I started reading more about value alignment, especially what Stuart Russell wrote about that, it made even more sense to focus on a human-centric approach to AI—to reflect on common values we share as humans and think about how to implement them in AI. So I went from “human-centered AI is odd …” to “Yes, I understand now what human-centered AI means, and I get its appeal.”
+
+However, one thing that still bothers me with the idea of human-centered AI is that it elevates humans as the highest form of the ecosystem that we have. I come from an Eastern tradition. In the Indian philosophical tradition, life pervades everything and consciousness and sentience pervade everything: animals, objects, and even rocks. So, I worry that human-centered AI will focus on human benefits to the detriment of other things, both animate and inanimate. I think human-centered AI is too narrow. AI should really be for everything.
+
+**What would be the right label to use to capture the wider ecosystem?**
+
+Maybe we should be talking about something like human-led AI for the benefit of everything? Or human-enabled AI for the good of all? Or AI for all? But “for all” could be interpreted as including only people, so “AI for everything” is probably better. You know the Gaia concept? AI should be for the whole planet—human-led, of course, but not only centered on human needs.
+
+**Maybe we can dive into the articles you’ve read to see how they’ve changed some of your views on AI and your ideas about the challenges we’re facing. What article did you read?**
+
+I read “The Moral Landscape of General-Purpose Large Language Model” by Pistilli; “Privacy in the Era of AI” by Malone; and “Towards Addressing Inequality and Social Exclusion by Algorithms: Human-Centric AI through the Lens of Ubuntu” by Wójcik.
+
+**What did you make of them?**
+
+I liked the first one on general-purpose AI. It was very interesting. Pistilli highlights three issues with large language models, and I agree with most of what she says, but I’d like to focus on one fundamental question she raises: “What is the ultimate goal of large language models? What is the purpose of artificial general intelligence (AGI)?”
+
+Her point, I think, is that in order for AI ethics to be truly effective, AGI should be defined—and should be defined in such a way that makes it possible for us to evaluate its capabilities. But the thing is that defining AGI is a challenge. When you come up with a definition, there’s inevitably something that has been left out. So the risk is that you end up in an endless circle of defining and redefining what exactly AGI is.
+
+Just look at history. The term “AI” was first coined to describe AGI. Simon, Shaw, and Newell’s “General Problem Solver,” for instance, was meant to be AGI. They were saying, “Hey, we need a general problem solver. How do we do that?” But the task was too difficult, so people started focusing on more specific tasks: planning, reasoning, learning, etc. And then, after a while, people like John Searle came and said, “Oh no! That’s narrow AI. We should be thinking about AGI.” And we’ve been going back and forth between narrow AI and AGI ever since.
+
+I think it might be because there’s an inherent tension between defining AGI and evaluating AGI. If you want to evaluate AGI, you might come up with a definition that is very narrow so that your evaluation goes well. But then, you’ll come back and say: “Of course, it’s not general intelligence … We are just testing one of these things, right?” That’s how progress is made in AI: we give ourselves a particular goal, and once it’s achieved, we move the goalpost a little further and say, “That was easy, that’s not AGI, now try to do this.”
+
+Think of the way we’re assessing ChatGPT’s creativity. AGI would need to be creative, but what does it mean for an AI to be creative? And who’s deciding what’s creative? Humans, of course. So, right now, AI is coming up with new things, and humans are saying, “Hey, I don’t think that’s creative. It’s not mimicking my intelligence. It’s not doing it the way I do things.” But on the other hand, if AI comes up with something that we have not done—which in AI’s sense might be creative, as it produces something that wasn’t in the training data—then we say, “No, that’s not creative either, it’s not AI because it’s not mimicking what I do.”
+
