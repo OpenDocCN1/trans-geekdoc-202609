@@ -1,0 +1,10 @@
+
+```
+-----BEGIN CERTIFICATE-----
+
+MIIDdTCCAl2gAwIBAgILBAAAAAABFUtaw5Qw
+
+...
+
+-----END CERTIFICATE-----
+```
