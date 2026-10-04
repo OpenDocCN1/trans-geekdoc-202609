@@ -1,0 +1,104 @@
+
+
+在你创建并训练好估计器后，应该确保它能正常工作。测试估计器的目的就是 `evaluate` 方法：
+
+```
+evaluate(input_fn, steps=None, hooks=None, checkpoint_path=None, name=None)
+```
+
+`evaluate` 的参数与 `train` 类似。与 `train` 一样，`input_fn` 函数提供一个包含特征和标签的元组。唯一的区别是，这些特征和标签代表测试数据而不是训练数据。
+
+`checkpoint_path` 参数标识方法应存储其输出的目录。如果你将此参数设为 `None`，方法将使用估计器构造函数的 `model_dir` 参数。如果你不设置此参数，方法将把其输出存储在临时目录中。
+
+`evaluate` 以 dict 的形式返回测试结果，其内容取决于估计器的模型。TensorFlow 的文档没有列出此 dict 的任何必需键，但我使用过的每个估计器都提供了以下内容：
+* `accuracy`：正确预测的百分比
+* `loss`：模型预测与实际结果之间的差异
+* `average_loss`：loss 的平均值
+
+除了这些指标外，`evaluate` 返回的 dict 还包含全局步长的数值。应用程序可通过 `global_step` 键访问此值。
+
+## 运行一个估计器
+
+在你训练并测试估计器并且对测试结果满意后，就是展示时间了！你可以通过调用 `predict` 使用真实世界的数据点执行估计器：
+
+```
+predict(input_fn, predict_keys=None, hooks=None, checkpoint_path=None)
+```
+
+与 `train` 和 `evaluate` 一样，`predict` 接受一个函数作为其第一个参数。但与提供包含特征和标签的元组不同，此函数仅返回特征。即，`input_fn` 返回一个字典，将字符串（特征列的名称）映射到张量。这些张量包含你真实世界应用的数据点。
+
+`predict` 以 dict 的形式返回估计器的预测，该 dict 将名称映射到值。如果设置了 `checkpoint_path`，方法将把其输出文件存储在给定目录中。
+
+## 创建输入函数
+
+`train`、`evaluate` 和 `predict` 方法都需要将输入函数作为第一个参数。`tf.estimator.inputs` 中的两个函数简化了编码此输入函数的过程：
+* `numpy_input_fn`：接受 NumPy 数组并返回一个提供 `features`/`target` 元组的函数
+* `pandas_input_fn`：接受 pandas `DataFrame` 并返回一个提供 `features`/`target` 元组的函数
+
+`numpy_input_fn` 的签名如下所示：
+
+```
+numpy_input_fn(x, y=None, batch_size=128, num_epochs=1, shuffle=None, queue_capacity=1000, num_threads=1)
+```
+
+`x` 参数标识特征，`y` 参数为每个特征提供标签。`shuffle` 参数标识是否应打乱特征和标签。调用此函数时，你必须将 `shuffle` 设为 `True` 或 `False`。
+
+你必须将 `x` 和 `y` 参数设为 NumPy 数组，并且可以通过调用 [第 10 章](#16_9788126592555-ch10.xhtml) 中讨论的 `load_csv_with_header` 或 `load_csv_without_header` 函数从 CSV 文件加载这些数组。以下代码将 `load_csv_with_header` 的特征数据传递给 `numpy_input_fn`：
+
+```
+dataset = tf.contrib.learn.datasets.base.
+load_csv_with_header(filename='example.csv', target_dtype=np.int32, features_dtype=np.float32)
+...
+input_fn = tf.estimator.inputs.numpy_input_fn( x={'column': np.array(dataset.data)}, y=np.array(dataset.target), shuffle=True, num_epochs=1000)
+```
+
+`num_epochs` 参数对于训练尤其重要，因为它定义了会话将执行的 epoch 数。对于评估和预测，你应将 `num_epochs` 设为 1。
+
+pandas 工具集将数据存储在 `DataFrame` 中。你可以通过调用 `pandas_input_fn` 从 `DataFrame` 创建输入函数：
+
+```
+pandas_input_fn(x, y=None, batch_size=128, num_epochs=1, shuffle=None, queue_capacity=1000, num_threads=1, target_column='target')
+```
+
+此函数的参数几乎与 `numpy_input_fn` 相同。唯一的区别是 `target_column` 参数，它标识包含目标（标签）数据的列。
+
+### 配置一个估计器
+
+每个估计器类的构造函数都接受一个名为 `config` 的参数。通过将其设为 `tf.contrib.learn.RunConfig`，你可以配置估计器操作的许多方面，例如何时保存变量和生成摘要数据。
+
+你可以通过调用其构造函数创建 `RunConfig`。[表 12-1](#18_9788126592555-ch12.xhtml#c12-tbl-0001) 列出了构造函数的参数。
+
+[TABLE 12-1](#18_9788126592555-ch12.xhtml#rc12-tbl-0001) RunConfig 构造函数的参数
+
+| **Parameter** || **Default** || **Description** |
+| --- | --- | --- |
+| `master` || `None` || Target for running the estimator |
+| --- | --- | --- |
+| `num_cores` || `0` || Number of cores to use |
+| `log_device_placement` || `False` || Bool that identifiers whether the estimator should print which device(s) it runs on |
+| `gpu_memory_fraction` || `1` || Fraction of GPU memory to be used by the estimator |
+| `tf_random_seed` || `None` || Random seed for initializers |
+| `save_summary_steps` || `100` || Number of steps to wait before saving summaries |
+| `save_checkpoints_secs` || `600` || Number of seconds to wait before saving checkpoints |
+| `save_checkpoints_steps` || `--` || Number of steps to wait before saving checkpoints |
+| `keep_checkpoint_max` || `5` || Maximum number of checkpoint files to store |
+| `keep_checkpoint_every_n_hours` || `10000` || Number of hours between each checkpoint to be saved |
+| `log_step_count_steps` || `100` || Number of steps between logging of the global step per second |
+| `evaluation_master` || `''` || The gRPC target for evaluating the estimator |
+| `model_dir` || `None` || Directory to save graph and model parameters |
+| `session_config` || `None` || The ConfigProto used to configure the estimator's session |
+
+如 [第 11 章](#17_9788126592555-ch11.xhtml) 中所述，分布式应用程序依赖 gRPC 在远程服务器上执行会话。`master` 参数标识估计器的 gRPC 目标，而 `evaluation_master` 参数标识评估目标。如果你不设置这些参数，估计器将在本地运行。如果你将 `num_cores` 保持为 0，系统将使用目标处理器上的每个核心。
+
+`model_dir` 标识估计器应保存其数据的<|message|>。其他大部分字段指定数据应保存的频率。要指定何时保存检查点数据，你可以设置 `save_checkpoint_steps` 或 `save_checkpoint_secs`，但不能同时设置两者。
+
+`session_config` 参数定义估计器底层会话的属性。要配置会话，你需要将此参数分配给 `ConfigProto` 缓冲区，而 [第 11 章](#17_9788126592555-ch11.xhtml) 介绍了其字段。
+
+## 使用特征列
+
+应用程序使用类似于数据库表的结构向估计器提供特征。在数据库表中，每个列标识一个特定字段（`First name`、`Age` 等），并且列中的每个值具有相同的数据类型。每行包含单个记录的所有信息。
+
+在 TensorFlow 应用程序中，特征列的作用与数据库表中的列标题相同。即，它为列的数据提供名称并指示列值的<|message|>。特征列在此讨论中发挥重要作用，因为每个估计器类的构造函数都需要一个或多个特征列。
+
+`tf.feature_column` 包提供了一系列表示特征列的类。它们都扩展了 `_FeatureColumn` 类，而 [图 12-1](#18_9788126592555-ch12.xhtml#c12-fig-0001) 展示了类层次结构。
+
