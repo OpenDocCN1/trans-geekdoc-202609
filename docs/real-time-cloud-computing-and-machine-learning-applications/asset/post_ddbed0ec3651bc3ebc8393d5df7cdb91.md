@@ -1,0 +1,53 @@
+
+## Chapter 1
+## INTRODUCTION
+
+Cloud computing and machine learning are becoming the backbone of several real-time applications such as industrial process monitoring and control, critical healthcare analytics, environmental monitoring and predictive maintenance, etc. This chapter presents an overview of the applications and benefits of both cloud computing and machine learning as well as how the combination of these two techniques can be used in different real-time applications.
+
+## 1.1. OVERVIEW OF CLOUD COMPUTING, ITS BENEFITS AND APPLICATIONS
+
+Cloud computing can be defined as a paradigm whereby a computing architecture, which is perceived as a “cloud,” provides businesses and individuals with worldwide demand access to applications and services [1]. The provision of software as a service, storage and computing resources, form the basis of the paradigm [1]. From a technological, resources and connectivity viewpoint, cloud computing is not a completely novel concept. The approaches that allow a business to achieve more flexibility, the expansion and advancement of cloud computing techniques, form the basis of the novelty of cloud computing. Cloud computing is experiencing an unprecedented increase in adoption rates which is expected to keep rising in the field of computing, it has become an indispensable component. The daily professional and personal tasks of regular internet users are becoming highly reliant on the support of cloud hosted applications. By the use of the Internet to access applications, cloud computing has developed into a tool that has led to the realization of the utility model of computing. Standardized platforms and management support services, massive scalability, global access, flexible infrastructure, incremental usage controls and pricing are among the main strengths of cloud computing [2].
+
+T. P. Fowdar, L. Babooram, M. U-D-Ibn Nasir Rosun and M. Indoondonon
+
+### 1.1.1. Benefits of Cloud Computing
+
+The benefits of cloud computing can be classified as economic benefits and technical benefits. Economic benefits enhance the growth and profits of a business while technical benefits enhance the development and deployment of cloud based applications.
+
+Some of the main economic benefits can be summarized as follows:
+
+- I. Reduced capital investments: The decrease or complete removal of direct IT expenses, such as hardware, software and proprietorship costs are the most obvious economic reasons for spending on cloud-based IT resources. Huge expenses on hardware, software and licensing fees are also eliminated. Moreover, enterprises have the flexibility to start small and progressively increment IT resource provisioning as needed, thanks to the elimination or reduction of direct financial commitments. The capital can be channeled to the main business investment when up-front expenses are decreased [3].
+- II. Usage-based costing: The pricing follows the same model as for utilities and customers are charged only for the infrastructure they are using. Further cost savings are obtained via the pay-as-you-go policy whereby resources can be flexibly leased on short-term or long term to fit the customers’ requirements. It is also possible for a company which is building its own applications and services on top of a cloud service it has leased, to apply the same pricing policy to its own customers [4].
+- III. Globalize the workforce and reduce training needs: With the Internet, it is possible for employees to access the cloud from anywhere around the world. Moreover, the reduction in hardware and software issues, more can be accomplished by fewer people and it takes less time for employees to acquire the necessary skills [5].
+- IV. Streamlined and flexible business processes: The monitoring of projects is made more effective and the risks associated with changes in the work environment is significantly reduced. Productivity is also significantly increased as more output is generated with less inputs [5].
+- V. Increased availability and reliability: Business profits are highly dependent on the availability and reliability of IT resources. The usage and profit making potential of a business are significantly reduced by outages which limit the availability of an IT resource to its customers. During high-volume usage periods, the inability to address runtime failures immediately can have a more pronounced impact on the business. In addition to the inability of the IT resource to address customers’ requests, it can lead to a drop in the confidence of the customers altogether [3].
+
+Some of the main technical benefits can be summarized as follows [4]:
+
+### Introduction
+
+- I. Programmable Infrastructure: By making use of programmable Application Programming Interface (API) driven infrastructures, it is possible to create reproducible build and deployment systems.
+- II. Auto-scalability: It is possible to increase or decrease the scale of applications, without human intervention, to meet unforeseen demand. Auto-scalability promotes automation and enhances productivity.
+- III. Efficient development life cycle: Development and test environments can be easily obtained from production systems. It is also possible to upgrade staging environments to production.
+- IV. Improved testability: Throughout the development process, testing can be injected and automated at every stage, hence hardware for testing is always available. Preconfigured environments even be used to set up an ad-hoc test lab only for the duration of the testing phase.
+- V. Disaster recovery and business continuity: A fleet of disaster recovery servers and data storage can be maintained at a lower cost with the cloud. Moreover, geo-distribution of the environment in another location becomes possible within a short lapse of time.
+
+### 1.1.2. Applications of Cloud Computing
+
+Cloud computing has revolutionized different types of business processes. The cloud can be used for several applications ranging from telecommunications to backup and big data analytics. The applications of cloud computing and consulting services continue to increase as the technology keeps evolving. Some of the key application areas of cloud computing are as follows.
+
+#### 1.1.2.1. Cloud Application Development
+
+A cloud application is essentially an application program or software that operates or runs in the cloud. The characteristics of a pure desktop application and that of a pure web-based application can be presented in the cloud application. A desktop application is one that can operate solely with the resources found on a user device which can be a PC for example. A web application in contrast is hosted exclusively on a remote server. The user accesses the web application through a browser via an internet connection. Cloud applications can work without an internet connection and exhibit good responsiveness similar to desktop applications. Additionally, cloud applications provide the flexibility of being device independent and can be configured online. Interestingly, although cloud applications can be fully managed by the user, they do not necessarily require resources such as storage and processing power from the user's device. In essence, both the manageability of a web application and responsiveness of a desktop application can be obtained from a properly designed cloud application with a reliable internet connection [5].
+
+T. P. Fowder, L. Babooram, M. N-D-Ibn Nazir Rosun and M. Indoondonon
+
+One of the main service models in cloud computing Platform as a Service (PaaS) that provides several APIs for development, and automatic deployment of applications on virtual infrastructures. The cloud also allows the creation of the optimum test environments for applications. With cloud computing, it is no longer required to set up physical environments as it is possible to set-testing and development environments while reducing the costs [5].
+
+#### 1.1.2.2. Cloud as an Enabler for Industry 4.0
+
+Industry 4.0 is a digitalization process that has changed the core nature of the organisations associated mainly with the manufacturing sector, by totally distorting the value and production chain. The massive adoption of digital technologies and an autonomous information management system are the base of companies that integrate the Internet of Things (IoT) in their processes. Industry 4.0 is therefore a novel high-tech intelligent framework which is powered by the cloud and exhibits the characteristics of ubiquity and pervasiveness. It is not a purely machine and equipment-centered paradigm. Industry reports around the world mention that Cloud technology is a critical enabler of the Industrial Revolution 4.0. Research commissioned Oracle found that 60% of businesses see an integrated enterprise Cloud Platform as the route to unlocking the potential of disruptive technologies such as robotics or artificial intelligence at the heart of Industry 4.0. This is due to the scale and the connection backbone of Industry 4.0. It is the main enabler for the development of a pioneering, effective and efficient production strategy that combines sensors, AI and robotics. The downtime of production equipment is reduced to a minimum via the use of machine learning techniques, which also enhance the flow of materials in the manufacturing process. Enterprises adopting Industry 4.0 are also able to bring about the digital transformation process faster than the cloud [7, 8].
+
+#### 1.1.2.3. Cloud Radio Access Networks (C-RAN)
+
+In access networks that are based on emerging standards such as 5G, C-RAN is a central cloud computing architectural framework. Real-time virtualization functionalities, collaborative radio system support and massive deployment are some of the functions which are enabled by C-RAN. It becomes possible to manage complex features such resource slicing, statistical multiplexing, energy efficiency, and high capacity, thanks to the advanced mobile network architecture provided by C-RAN. The main state-of-the-art technologies that enable the realization of C-RAN are Software-Defined Networking (SDN) and the Network Function Virtualization (NFV). By using the same infrastructure with different access technologies, operators can achieve a more rapid deployment of mobile networks in C-RAN. To this end, the deployment cost is reduced, the network resources are effectively utilized, and the maintenance cost is low. Traditional base stations are replaced by distributed (passive) radio elements to a central baseband processing unit, in C-RAN systems. With centralized processing, the number of sites

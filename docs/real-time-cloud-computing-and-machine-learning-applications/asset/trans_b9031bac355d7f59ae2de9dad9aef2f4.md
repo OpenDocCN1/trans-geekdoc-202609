@@ -1,0 +1,175 @@
+
+
+# 386 T. P. Fowdur, L. Babooram, M. N-D-Ibn Nasir Rosun 和 M. Indoondonman
+
+```java
+// 将每个获取到的值依次打印到 JTextarea
+resultArea.append(String.valueOf(timestamp[i]) + ", ");
+    + String.valueOf(downspeed[i]) + ", ");
+    + String.valueOf(upspeed[i]) + ", ");
+    + String.valueOf(pacRec[i]) + ", ");
+    + String.valueOf(pacSent[i]) + ",\n");
+
+// 将 List 对象写入所选目标位置
+csvWriter csvWriter = new csvWriter(new FileWriter(filepath));
+csvWriter.write(records); // 写入记录
+csvWriter.close(); // 关闭流
+csvWriter.flush(); // 刷新流
+
+} catch (Exception ex) {
+    java.util.logging.Logger.getLogger(netmonitor.class.getName()).log(Level.SEVERE, null, ex);
+};
+// 为来自 localhost (XAMPP) 的值创建一个可运行线程
+Runnable downloadLocalhost = new Runnable() {
+    @Override
+    public void run() {
+        try {
+            // 点击按钮时清除结果区域
+            resultArea.setText("");
+            // 尝试将数据发送到本地服务器，如果处于激活状态
+            try {
+                // 从 GUI 获取 N
+                double length = Double.parseDouble(lastN.getText().toString());
+                // 与服务器的 Socket 连接
+                host = new InetAddress(getText()).toString();
+                socket = new Socket(host, port2);
+                // 使用 PrintWriter 对象将 JSONObject 参数写入 PC
+                PrintWriter out = new PrintWriter(socket.getOutputStream());
+                try {
+                    // 填充 JSONObject 以识别用于 PC 参数的 localhost 下载
+                    requestCode.put("requestCode", 6);
+                    requestCode.put("lengthSamples", length);
+                } catch (Exception ex) {
+                    System.out.println("Connection error");
+```
+
+```java
+}
+  // 通过 socket 连接发送值
+  out.println(requestCode);
+  // 每组一组数据后刷新流
+  out.flush();
+  // 从本地服务器接收结果
+  BufferedReader bufferedReader = new BufferedReader(new
+  InputStreamReader(socket.getInputStream()));
+  String str;
+  StringBuilder sb = new StringBuilder();
+  while ((str = bufferedReader.readLine()) != null) {
+    sb.append(str + "in");
+    resultArea.append(str + "in");
+  }
+  System.out.println("Message from local server: " + sb.toString());
+  try (PrintWriter writer = new PrintWriter(new File(finalpath))) {
+    writer.write(sb.toString());
+    writer.flush();
+    System.out.println("Done writing to csv...");
+  } catch (FileNotFoundException e) {
+    System.out.println(e.getMessage());
+  } catch (Exception e) {
+    System.out.println("Connection error");
+  } catch (Exception ex) {
+    System.out.println("Exception creating CSV");
+  }
+}
+// 根据 GUI 上选中的单选按钮启动上述定义的线程
+if (downloadCloudant.isSelected()) {
+  Thread downloadParameters = new Thread(download);
+  downloadParameters.start();
+}
+if (downloadLocal.isSelected()) {
+  Thread downloadParameters = new Thread(downloadLocalhost);
+  downloadParameters.start();
+}
+```
+
+# 388 T. P. Fowdur, L. Babooram, M. N-D-Ibn Nazir Rosun 和 M. Indoonon
+
+## 4.4.12.3. 按特定日期下载按钮
+
+此功能执行与上一个按钮相同的通用功能，但它是通过用户指定的日期来检索值。“Cloudant”选项的操作是从云端获取所有参数实现的（如 `fetchRegressionValuesPCI()` 方法所示），然后比较 `timestamp[]` 对象中包含的字符串值，该对象载有收集这些值的相应日期。一个 `for` 循环包含了整个过程，并选择与用户在 GUI 上指定的日期相同的值。对于使用本地服务器下载存储的值，则遵循上一一节的相同原理。该过程通过以下步骤详细阐述：
+
+- 1. 首先使用用户输入的日期和边缘设备（在本例中为“PC”）组合构造文件名。接着是创建日期格式的 String 可能性。例如，如果输入的日期是“Dec 18, 2020”，则与数据库进行 String 比较的可能可能是“Dec 18, 2020”和“18 Dec 2020”。这是因为边缘设备向 Cloudant 数据库推送日期时，PC 和 Android 设备格式略有不同。因此，String 对象 `type1` 和 `type2` 是不同的日期格式。
+
+## 4.72. 为按日期下载的 .csv 文件命名
+
+```java
+private void downloadDateButtonActionPerformed(java.awt.event.ActionEvent event) {
+    // 根据所选设备创建文件名
+    if (path.equals("") || dateFetch.toString().equals("")) {
+        System.out.println("Please browse for destination and enter date.");
+    } else {
+        // 根据日期自动生成文件名
+        filename = dateFetch.toString() + "_" + "PC";
+        // 为文件名添加 csv 扩展名
+        finalpath = path + "/" + filename + ".csv";
+        // 输出路径
+        System.out.println("File path: " + finalpath);
+        String date = dateFetch.getText();
+        String type1 = date;
+        String[] splits = date.split(",");
+        String[] splits2 = splits[0] + splits[1];
+        // 日期格式为: type1 和 type2
+        System.out.println("Date formats are: " + type1 + " and " + type2);
+    }
+```
+
+# Data Capture Client Architecture for Cloud-Based ... 389
+
+72. 按特定数据下载的 Threads
+
+```java
+// 为云数据库创建一个 Runnable 线程
+Runnable download = new Runnable() {
+    @Override
+    public void run() {
+        try {
+            // 点击按钮时清除结果区域
+            resultArea.setText("");
+            // 从云数据库获取所有值
+            fetchValuesPC();
+            // 创建包含字符串数组的列表
+            List<String> records = new ArrayList<>();
+            // 添加头部记录
+            records.add(new String("Timestamp", "Download Speed", "Upload Speed", "Packets Received", "Packets Sent"));
+            // 将头部信息添加到 GUI
+            resultArea.append("Timestamp, " + "Download Speed, " + "Upload " + "Packets Received, " + "Packets Sent" + "\n");
+            // 对于所有参数
+            for (int i = 0; i < numitems; i++) {
+                // 将日期与 timestamp 数组中的值进行比较
+                if (String.valueOf(timestamp[i]).contains(type1) ||
+                    String.valueOf(timestamp[i]).contains(type2)) {
+                    // 添加记录
+                    records.add(new String[]{
+                        String.valueOf(timestamp[i]),
+                        String.valueOf(downspeed[i]),
+                        String.valueOf(upspeed[i]),
+                        String.valueOf(pacRec[i]),
+                        String.valueOf(pacSent[i])
+                    ]);
+                    // 将每个获取到的值依次打印到 JTextarea
+                    resultArea.append(String.valueOf(timestamp[i]) + ", ");
+                        + String.valueOf(downspeed[i]) + ", ");
+                        + String.valueOf(upspeed[i]) + ", ");
+                        + String.valueOf(pacRec[i]) + ", ");
+                        + String.valueOf(pacSent[i]) + ",\n");
+                }
+            }
+        } catch (Exception ex) {
+            java.util.logging.Logger.getLogger(netmonitor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        // 检查特定日期是否存在记录
+        if (records.size() == 1) {
+            // 没有记录
+            resultArea.setText("");
+            resultArea.append("No records found for this date.");
+        } else {
+            // 如果存在记录，则将其写入目标位置
+            CSVWriter csvWriter = new CSVWriter(new FileWriter(finalpath));
+            csvWriter.writeAll(records); // 写入记录
+            csvWriter.close(); // 关闭流
+            csvWriter.flush(); // 刷新流
+        }
+    }
+}
+```
+

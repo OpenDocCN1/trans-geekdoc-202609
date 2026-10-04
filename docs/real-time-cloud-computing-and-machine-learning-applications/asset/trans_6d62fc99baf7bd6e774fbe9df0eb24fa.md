@@ -1,0 +1,215 @@
+
+
+# 云端实时...数据捕获与客户端架构 627
+
+适当的格式。提取后，通过以下步骤将数据转换为 CSV 文件：
+
+- * CSV 文件名根据当前时间戳自动生成，并创建一个带有“CSV”扩展名的新文件。
+* 创建一个 `StringBuilder` 对象来构建 CSV 文件的字符串表示。首先追加表头行。
+* 对 2D 数组进行嵌套循环。第一个循环从数组中获取一行。行中的每个值都使用 `String.valueOf()` 方法转换为等效的字符串。每个值之间用逗号作为分隔符。
+
+| 2D-数组 | CSV 文件 | 表头行 |
+| :--- | :--- | :--- |
+| [10,20,30,40] | A, B, C, D | 数组元素的字符串值 |
+| [11,22,33,44] | 10,20,30,40 | |
+| [12,23,45,56] | 11,22,33,44 | |
+| [21,32,54,65] | 12,23,45,56 | 逗号分隔符 |
+
+函数返回 CSV 文件的等效字符串。
+
+该方法的代码如列表 6.15 所示。
+
+# 列表 6.15. WriteToFileStorage 方法
+
+```java
+public String convertToCSV(Object[]) data {
+    double[][] readings = (double[][]) data[0];
+    String[] timestamps = (String[]) data[1];
+    //创建一个 StringBuilder 对象
+    StringBuilder sb = new StringBuilder();
+    //表示 CSV 文件表头的字符串
+    String header = "Time,"
+    + "Temperature,"
+    + "Wind Speed,"
+    + "Wind Direction,"
+    + "Pressure,"
+    + "Visibility,"
+    + "Humidity,"
+    + "Cloudiness,";
+    //为 CSV 文件中的每一行追加新行
+    sb.append(header).append("\n");
+    //将数组的每一行追加到新行
+    for (int i = 0; i < readings.length; i++) {
+```
+
+# 628 T. P. Fowdur, L. Babooram, M. N-U-Dbin Nasir Rosun 和 M. Indoonondon
+
+```java
+//获取参数的当前值
+    String date_time = timestamps[];
+    double[] element = readings[];
+    //追加读取数据的时间
+    sb.append(date_time.replace(",", "")).append(",");
+    for (double d : element) {
+        //用逗号 ","分隔每个值
+        sb.append(d).append(",");
+    }
+    //为每行追加新行
+    sb.append("\n");
+    //返回结果
+    return sb.toString();
+}
+```
+
+# 6.3.24.3. writeToFileStorage 方法
+
+该方法接受 CSV 文件的字符串表示并将其写入应用程序的默认下载位置。如果下载位置不存在，应用程序将自动生成该位置。将生成一个基于当前时间戳的唯一标识符并追加到文件名中。在下载位置创建一个文件并使用 `BufferedWriter` 将 CSV 数据写入文件。该函数的代码列在列表 6.16 中。
+
+# 列表 6.16. 将文件保存到应用程序内部存储
+
+```java
+public void writeToFileStorage(String data) {
+    //获取下载文件夹的绝对路径
+    String absolutePath = String.valueOf(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS));
+    //创建当前时间戳的字符串
+    String timestamp = new SimpleDateFormat("yyyyMMMddHHmm", Locale.ENGLISH).format(new Date());
+    //在选定的目录中创建一个新文件，并将时间戳作为唯一标识符追加到文件名中
+    File file = new File(absolutePath + "/Weather_Data_" + timestamp + "_dateT.CSV");
+    //从文件对象创建一个新的 BufferedWriter
+    try (BufferedWriter br = new BufferedWriter(new FileWriter(file))) {
+        br.write(data);
+        //将任何剩余数据刷新到文件
+        br.flush();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+```
+
+# 云端实时...数据捕获与客户端架构 629
+
+# 6.3.25. QueryDataCloudAsync 
+
+此内部类使用 `DataRet` 对象从 Cloudant 数据库获取数据。该类用于在后台线程上执行相关的网络操作。该类的构造函数接收一个布尔值“date”，表示获取的是特定日期的数据还是最后 N 个样本。网络操作在被调用的 `doInBackground()` 方法中完成，操作完成后，在 `onPostExecute()` 方法中执行，并在 `TextView` 中显示结果。文件也会通过调用 `writeToFileStorage()` 方法进行保存。该类的代码如列表 6.17 所示。
+
+列表 6.17. QueryDataCloud 类
+
+```java
+@SuppressLint("StaticFieldLeak")
+public class QueryDataCloud extends AsyncTask<Void, Void, Void> {
+    //存储从 servlet 获取结果的字符串
+    String returned_val = ""
+    boolean date;
+
+    public QueryDataCloud(boolean date) {
+        this.date = date;
+    }
+
+    @Override
+    protected void doInBackground(Void... voids) {
+        //检查是否有写入存储的权限
+        boolean hasPermission =
+            (Context.checkPermission(DownloadData.this,Manifest.WRITE_EXTERNAL_STORAGE
+            == PackageManager.PERMISSION_GRANTED);
+        //如果未授予权限，向用户请求权限
+        if (hasPermission) {
+            ActivityCompat.requestPermissions(DownloadData.this, new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE},
+            REQUEST_WRITE_STORAGE);
+        } else {
+            System.out.println("Permission granted successfully ...");
+        }
+        //创建一个 DataRetriever 对象从云端获取数据
+        DataRetriever dt = new DataRetriever();
+        Object[] databaseArray;
+        if (date) {
+            //获取输入的日期
+            String date_time = date.time.getText().toString();
+            //获取特定日期的读取数据
+```
+
+```java
+            databaseArray = dt.getDatabaseArray(date, 0);
+        } else {
+            //获取样本大小
+            int size = Integer.parseInt(sample_size.getText().toString());
+            // 获取最后 N 次读取数据，其中 N 是样本
+            databaseArray = dt.getDatabaseArray(date, size);
+        }
+        // 将 databaseArray 转换为 CSV
+        returned_val = convertToCSV(databaseArray);
+        // 将 returned_val 写入存储
+        writeToFileStorage(returned_val);
+        return null;
+    }
+
+    @Override
+    protected void onPostExecute(Void aVoid) {
+        super.onPostExecute(aVoid);
+        results.setText(returned_val);
+    }
+}
+```
+
+# 6.3.26. QueryDataTask
+
+此类负责从本地服务器下载天气数据。该类用于在后台线程上执行相关的网络操作。该类的构造函数接收一个布尔值“date”，表示获取的是特定日期的数据还是最后 N 个样本。网络操作在被调用的 `doInBackground()` 方法中完成，操作完成后，在 `onPostExecute()` 方法中执行，并在 `TextView` 中显示结果。文件也会通过调用 `writeToFileStorage()` 方法进行保存。该类的代码如列表 6.18 所示。
+
+列表 6.18. QueryDataClass
+
+```java
+@SuppressLint("StaticFieldLeak")
+public class QueryDataLocal extends AsyncTask<Void, Void, Void> {
+    // 存储从 servlet 获取结果的字符串
+    String returned_val = "";
+    boolean date;
+
+    public QueryDataLocal(boolean date) {
+        this.date = date;
+    }
+
+    @Override
+    protected void doInBackground(Void... void) {
+        /* 检查是否有写入存储的权限，如果未授予
+           向用户请求权限 */
+        if (Context.checkSelfPermission(DownloadData.this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE) !=
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(DownloadData.this, new
+                    String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    REQUEST_WRITE_STORAGE);
+        } else {
+            try {
+                // 创建一个 JSON 对象来存储请求参数
+                JSONObject request = new JSONObject();
+                // 根据 fetchDate 构建查询
+                if (date) {
+                    String date = date_time.getText().toString();
+                    // 通知服务器，我们请求特定日期的数据
+                    request.put("request", "date");
+                    // 发送所需的日期
+                    request.put("date", date);
+                } else {
+                    // 获取样本大小
+                    int size = Integer.parseInt(sample_size.getText().toString());
+                    // 通知服务器，我们请求特定数量的样本
+                    request.put("request", "size");
+                    // 发送我们需要下载的样本数量
+                    request.put("size", size);
+                }
+                // 打开到本地服务器的套接连接
+                // ... (剩余实现)
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+
+    @Override
+    protected void onPostExecute(Void aVoid) {
+        super.onPostExecute(aVoid);
+        results.setText(returned_val);
+    }
+}
+```
+
