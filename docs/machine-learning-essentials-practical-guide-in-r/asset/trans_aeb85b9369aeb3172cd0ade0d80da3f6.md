@@ -1,0 +1,101 @@
+
+
+*   变量类别图：上图显示了变量类别之间的关系。可以解释如下：
+    *   具有相似特征的变量类别被归为一组。
+    *   负相关变量类别位于图原点的相对两侧（相反象限）。
+    *   类别点与原点之间的距离衡量了变量类别在因子图上的质量。远离原点的类别点在因子图上表示良好。
+
+个体和变量的双标图。上图显示了数据中的整体模式。行（个体）用蓝色点表示，列（变量类别）用红色三角形表示。变量和个体呈正相关时位于图的同一侧。
+
+阅读更多：[多重对应分析](https://goo.gl/84XXw3/)
+
+## 36.4 聚类分析
+
+### 36.4.1 基础
+
+聚类分析用于识别来自营销、生物医学和地理空间等领域的多元数据集中的相似对象组。阅读更多：[http://www.sthda.com/english/articles/25-cluster-analysis-in-r-practical-guide/](http://www.sthda.com/english/articles/25-cluster-analysis-in-r-practical-guide/) 。
+
+**聚类类型**。有不同类型的聚类方法，包括：
+*   分区聚类：将数据细分为 k 个组。
+*   层次聚类：在不细分数据的情况下识别数据中的组。
+
+**距离度量**。将观测值分类到组中需要一些计算每对观测值之间距离或（不）相似性的方法。此计算的结果称为不相似性或距离矩阵。有不同的方法来测量距离，包括：
+*   欧氏距离
+*   基于相关性的距离
+
+**我们应该选择哪种类型的距离度量？** 距离度量的选择非常重要，因为它对聚类结果有很大影响。对于大多数常见的聚类软件，默认的距离度量是欧氏距离。
+
+根据数据类型和研究者问题，其他不相似性度量可能更受青睐。
+
+如果我们想识别具有相同整体特征而不考虑其大小的观测值聚类，那么我们应采用*基于相关性的距离*作为不相似性度量。这在基因表达数据分析中尤其如此，我们可能希望在它们一起“上调”和“下调”时认为基因相似。在营销中，如果我们想识别具有相同项目偏好的购物者群体，而不考虑他们购买的项目数量，也会出现这种情况。
+
+如果选择欧氏距离，则具有高特征值的观测值将被聚类在一起。对于具有低特征值的观测值也是如此。
+
+**数据标准化**。在聚类分析之前，建议对数据进行缩放（或归一化），以使变量具有可比性。当变量以不同的尺度测量时（例如：千克、公里、厘米……）尤其推荐这样做；否则，得到的不相似性度量将受到严重影响。用于缩放数据的 R 函数：`scale()`，对数据的列（变量）应用缩放。
+
+### 36.4.2 加载所需的 R 包
+
+*   `cluster` 用于聚类分析
+*   `factoextra` 用于聚类可视化
+
+### 36.4.3 数据准备
+
+我们将使用演示数据集 `USArrests`。我们首先对数据进行标准化：
+
+### 36.4.4 分区聚类
+
+分区算法是一种聚类技术，将数据集细分为 k 个组，其中 k 是分析人员预先指定的组数。
+
+有不同类型的分区聚类方法。最流行的是 **K-means 聚类**，其中每个聚类由属于该聚类的中心或数据点的均值表示。K-means 方法对异常值敏感。
+
+K-means 聚类的替代方法是 **K-medoids 聚类**或 PAM（围绕中心点分区），与 K-means 相比，对异常值不那么敏感。
+
+阅读更多：[分区聚类方法](http://www.sthda.com/english/articles/27-partitioning-clustering-essentials/) 。
+
+以下 R 代码显示了如何在 R 中确定最佳聚类数以及如何计算 K-means 和 PAM 聚类。
+
+1.  **确定最佳聚类数**：使用 `factoextra::fviz_nbclust()`
+
+建议的聚类数：3
+
+2.  **计算和可视化 K-means 聚类**：
+
+3.  同样，**K-medoids/pam** 聚类可以按如下方式计算和可视化：
+
+### 36.4.5 层次聚类
+
+层次聚类是识别数据集中组别的分区聚类的替代方法。它不需要预先指定要生成的聚类数。
+
+层次聚类的结果是对象的树状表示，也称为树状图。可以通过在期望的相似性水平处剪切树状图来将观测值细分为组。
+
+*   计算：R 函数：`hclust()`。它以不相似性矩阵作为输入，该矩阵使用函数 `dist()` 计算。
+*   可视化：`fviz_dend()` [在 factoextra 中]
+
+计算和可视化层次聚类的 R 代码：
+
+热图是可视化层次聚类的另一种方式。它也称为伪彩色图像，其中数据值转换为颜色刻度。热图允许我们同时可视化样本组和特征。您可以使用 R 包 `pheatmap` 轻松创建漂亮的热图。
+
+在热图中，通常列是样本，行是变量。因此我们在创建热图之前先转置数据。
+
+![多元数据热图](Image00050.jpg)
+
+多元数据热图
+
+## 36.5 讨论
+
+本章介绍了用于汇总和可视化大型多元数据集的最常用的无监督机器学习方法。您可以在 STHDA 网站上阅读更多内容：
+*   [主成分方法实用指南](http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/) 和
+*   [R 中聚类分析实用指南](http://www.sthda.com/english/articles/25-cluster-analysis-in-r-practical-guide/)
+
+# 参考文献
+
+Bovelstad, H.M., S. Nygård, H.L. Storvold, M. Aldrin, o. Borgan, A. Frigessi, and O.C. Lingjoerde. 2007. “Predicting Survival from Microarray Data—a Comparative Study.” *Bioinformatics* 23 (16): 2080–7. doi:[10.1093/bioinformatics/btm305](https://doi.org/10.1093/bioinformatics/btm305)。
+
+Bruce, Peter, and Andrew Bruce. 2017. *Practical Statistics for Data Scientists*. O’Reilly Media.
+
+Friedman, Jerome H. 1989. “Regularized Discriminant Analysis.” *Journal of the American Statistical Association* 84 (405). Taylor & Francis: 165–75. doi:[10.1080/01621459.1989.10478752](https://doi.org/10.1080/01621459.1989.10478752)。
+
+James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2014. *An Introduction to Statistical Learning: With Applications in R*. Springer Publishing Company, Incorporated.
+
+Zhang, Zhongheng. 2016. “Decision Tree Modeling Using R.” *Annals of Translational Medicine* 4 (15)。
+
