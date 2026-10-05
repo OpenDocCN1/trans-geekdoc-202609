@@ -1,0 +1,1162 @@
+- pgno: 0
+  md: '# nature machine intelligence
+
+
+    Article
+
+
+    https://doi.org/10.1038/s42256-025-01063-9
+
+
+    # # Enhancing deep learning-based field reconstruction with a differentiable learning
+    framework
+
+
+    Received: 1 October 2024
+
+
+    A list of authors and their affiliations appears at the end of the paper
+
+
+    Accepted: 21 May 2025
+
+
+    Published online: 22 July 2025
+
+
+    Achieving accurate reconstructions of complex high-dimensional fields from sparse
+    sensors remains a long-standing challenge. Frequently, reconstruction performance
+    is mainly constrained by models and placement. The placement of sparse and prohibitive
+    sensors restricts information quality, resulting in formidable reconstruction
+    tasks. Despite deep learning-based models having made strides, they typically
+    lack the ability to co-optimize neural network parameters versus low-dimensional
+    sensor placement further poses significant difficulties. Here we present a general
+    belief differentiable learning framework that effectively integrates models with
+    sensor placement optimization (DSPO), enabling search for placement and accurate
+    global field reconstruction. Within this framework, models are complemented with
+    a differentiable operator to achieve the differentiability of placement. A gradient-based
+    optimizer empowers models by dynamically updating placement. The alternating optimization
+    strategy is adopted to efficiently solve the joint optimization. We demonstrate
+    the efficiency and generalizability of the DSPO on baseline models across various
+    scenarios, including periodic and cyclic physical fields, regular and irregular
+    grid datasets, and noisy and nameless observations. Our results show that the
+    DSPO significantly improves the reconstruction accuracy of models and robustness
+    against baseline models comparable with the state-of-the-art performance. Our
+    framework provides a new general paradigm for the use of neural networks and placement
+    optimization techniques for real-world applications.
+
+
+    +   - Check for updates
+
+
+    Spatial field reconstruction from limited observations provides a substantial
+    challenge in state estimation¹ and control design² of complex high-dimensional
+    systems. Due to prohibitive costs, sensors generally extremely sparse coverage
+    for highly nonlinear phenomena, resulting in formidable reconstruction tasks.
+    Although traditional numerical methods model phenomena using partial differential
+    equations, the reconstruction problem is ill-posed and struggles to solve
+
+
+    numerically. With recent advances in deep learning, neural network (NN) based
+    strategies provide helpful advances and have become a major paradigm⁵ learn from
+    offline data and reconstruct global fields in data-driven manner. Various architectures
+    have been extensively investigated in a range of reconstruction techniques³⁴⁶
+    Some studies use a convolutional neural network (CNN) to learn the end-to-end
+    placement between observations and high-dimensional fields, but
+
+
+    E-mail: liux80448691@126.com; weipeng0098@126.com; weizenhou@outlook.com; wendy0782@126.com
+
+
+    Nature Machine Intelligence | Volume 7 | July 2025 | 1129–1140
+
+
+    1129'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "# Article\n\nhttps://doi.org/10.1038/s41466-020-01063-1\n\ntechniques classify\
+    \ highly unstructured data². To incorporate the machine perception (MLP) with\
+    \ CNN¹, which handle structured data often struggle with erratic and nonlinear\
+    \ features¹. Another approach using graph convolutional networks (GCN) has shown\
+    \ promise in processing cyclic and unstructured data³, it is often hampered by\
+    \ computational costs and demands⁴ GCN has limited efficiency in capturing large-scale\
+    \ graphs. Furthermore, when the field is relatively new, most research focuses\
+    \ on the Fourier reader approach to capture global densities in the Fourier domain,\
+    \ offering potential solutions for complex high-dimensional problems. A CNN-based\
+    \ method using Voronoi tessellation addresses the limitations of arbitrary shapes.\
+    \ However, as noted by Veins, a across struggle to handle spatially moving sensors,\
+    \ achieving better predictions with fewer sensors². Despite these, requirements\
+    \ such as lighting, update frequency, and sensor density remain challenges, limiting\
+    \ their accuracy.\n\nTo address these issues, we propose a general bilevel framework\
+    \ that integrates reconstruction models with sensor placement (SPO) for global\
+    \ field reconstruction. The operator is introduced into the bilevel framework\
+    \ without introducing any additional parameters. Gradient-based bilevel optimization\
+    \ is used to train and test models. Our framework has three major contributions:\
+    \ (1) We introduce an SPO-based framework for joint reconstruction and sensor\
+    \ placement. (2) By alternately optimizing different variables (blocks and placement),\
+    \ the alternating optimization strategy is designed to effectively resolve the\
+    \ trade-off between reconstruction quality and sensor numbers. (3) A differential\
+    \ operator is introduced to handle the non-differentiability of the global field\
+    \ with respect to placement. This enables a end-to-end bilevel framework to dynamically\
+    \ optimize sensor placement with global observations and their derivatives, which\
+    \ effectively handles both regular and irregular field densities. This framework\
+    \ can serve as a general paradigm, offering high generality and flexibility for\
+    \ various applications. This work is the first and systematic study on using NN-based\
+    \ models across various scenarios, including periodic and cyclic fields, regular\
+    \ and irregular grids. Throughout this article, we demonstrate the effectiveness\
+    \ of the proposed framework by applying it to various scenarios.\n\nThe goal of\
+    \ sensor placement optimization (SPO) is to place sensors in a way that maximizes\
+    \ information for reconstruction (objective function), which is one of the biggest\
+    \ difficulties in reconstruction models. Most SPO strategies have various criteria\
+    \ based on reduced number of sensors or optimality⁵. Others use an approach that\
+    \ limits sensor number with QB to determine sensor placement for the MLP-based\
+    \ model. Others⁷ optimize sensor placement using an enhanced clustering algorithm\
+    \ and reconstruct models with a linear operator. Each criterion is related to\
+    \ reconstruction quality and error difference by sensor placement model training,\
+    \ which helps to guarantee an improvement in accuracy for NN-based models. Detection\
+    \ of reconstruction error is also one of the main challenges in evaluating reconstruction\
+    \ efficiency. Training models with inner-level optimization require substantial\
+    \ computation. Expensive iterations in inner-level optimization can cause the\
+    \ model to converge slowly. Fast methods converge relatively with few iterations.\
+    \ However, NN-based models are not differentiable with respect to sensor placement\
+    \ due to two limitations. One limitation is the discrete nature of sensor placement,\
+    \ selecting a candidate element from an an index, which fails to smooth observations\
+    \ with respect to the placement. This Marcato et al.¹¹⁰ proposed a bilevel walk\
+    \ strategy on the discrete search space, enabling differentiable sensor placement\
+    \ through bilinear interpolation. A greater limitation arises from the fact that\
+    \ due to the differences in the required set sizes, update frequency and optimization\
+    \ strategies for high-dimensional NN parameters without sensor placement during\
+    \ optimization, sensor placement is limited in coverage and generalization performance.\
+    \ Furthermore, bilevel interpolation using\n\n# Work\n\nThe reconstruction model\
+    \ aims to capture the features of the global field $\boldsymbol{y}$ from a number\
+    \ of sensor observations $\boldsymbol{s}$ at $\boldsymbol{x}_i \\in \\mathcal{X},\
+    \ i=1,...,n$, where n denotes the number of points in the horizontal/vertical\
+    \ direction of a high-resolution grid, and m denotes the number of sensors. For,\
+    \ the SPO models can be formulated as a bilevel optimization. The objective is\
+    \ to enhance the reconstruction quality by optimizing models and placement within\
+    \ a unified framework. The goal of this study is to propose a general bilevel\
+    \ learning framework that efficiently optimizes sensor placement and reconstructs\
+    \ global fields, namely, respectively. A bilevel SPO framework is defined as follows\
+    \ (1):\n\n```\n$$\\boldsymbol{\theta}^* = \\arg\\min_{\boldsymbol{\theta}} \\\
+    mathcal{L}_f(\boldsymbol{y}, \\hat{\boldsymbol{y}}(\boldsymbol{s}; \boldsymbol{\t\
+    heta}))$, where $\boldsymbol{\\phi}^* = \\arg\\min_{\boldsymbol{\\phi}} \\mathcal{L}_s(\b\
+    oldsymbol{\\phi}; \boldsymbol{\theta})$\n```\n\nwhere $\theta$ denotes the global\
+    \ field, $\\phi$ denotes the train/validation parameters of NN-based models, and\
+    \ the $\\mathcal{L}$ denotes the objective function (criterion) to evaluate the\
+    \ reconstruction performance. Reconstruction error is considered as the criterion\
+    \ in this work.\n\nThe objective is to enhance the reconstruction quality by optimizing\
+    \ models and placement within a unified framework. The goal of this study is to\
+    \ propose a general bilevel learning framework that efficiently optimizes sensor\
+    \ placement and reconstructs global fields, namely, respectively. A bilevel SPO\
+    \ framework is defined as follows (1):\n\n(1)\n\nNature Intelligence | 7 (2023)\
+    \ | 11125–11130\n\n1130"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41586-025-01063-6
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_2_0.png)
+
+
+    Fig. 1: Overview of the DSPO framework. a A bilevel DSPO framework. The forward
+    process constructs the global field based on sensor observations and provides
+    the best model parameter for the current placement of the reverse process. The
+    reverse process dynamically updates placement through a gradient-based optimizer,
+    providing new placement for the forward process.
+
+
+    The forward and reverse processes are executed asynchronously. b. Differentiable
+    optimizer obtains the derivatives and activations at arbitrary locations on a
+    discrete dataset. c. Validation of the framework with NN-based models. The main
+    bodies of its main network networks are shown.
+
+
+    reverse processes executed alternately until there is no further improvement in
+    the objective function. As equations, this process is given by
+
+
+    $\theta^* = \arg \min_{\theta} \mathcal{L}_0(\theta, \mathcal{Q}(\mathbf{s}'',
+    \mathbf{x}))$$
+
+
+    $\mathbf{x}_{t+1} = D(\nabla_{\mathbf{x}} \mathcal{L}_0)).$$
+
+
+    where
+
+
+    $\nabla_{\mathbf{x}} \mathcal{L}_0 = \nabla_{\mathbf{s}''} \mathcal{L}_0 \cdot
+    \nabla_{\mathbf{x}} \mathbf{s}''.$$
+
+
+    $\nabla_{\mathbf{s}''} \mathcal{L}_0 = \nabla S(\mathbf{V}, \mathbf{x}_i, s''_i)
+    = \nabla S(\mathbf{V}, \mathbf{x}_i, s).$$
+
+
+    where $\mathbf{u}''_i$ denote the RFD-BF derivatives and $[\mathbf{x}__i]$ denote
+    the RFD-BF sensor. The generator $\mathcal{g}$ calculates the RFD-BF derivatives
+    with $l=0$ corresponding to the comparison of the sensor value at location $\mathbf{x}_i$.
+    The key idea of the strategy is to select $\mathbf{u}''_i$. The generator first
+    utilizes a combination of the radial basis function $\phi$ and polynomial $\theta$
+    to estimate the sensor value: $s_i = \sum_{j} \eta_j \phi(\mathbf{x}_i - \mathbf{x}_j)
+    + \mu_j \mathbf{x}_j$ (Fig. 1b).
+
+
+    $\mathbf{v}_i = \sum_{j=1}^M \mathbf{u}''_j s''_j$$
+
+
+    $\mathcal{L}_0$ and $\mathcal{L}_1$ denote to validate the reconstruction error.
+    It is noteworthy that when the model has only observations, the derivative $\nabla_{\mathbf{x}}
+    \mathcal{L}_0$ has to be computed through $\mathbf{AD}$ and $\mathbf{B}$. The
+    derivative can be computed using $\mathbf{AD}$ when the model includes-part as
+    of its inputs.
+
+
+    # Differentiable DSPO
+
+
+    where
+
+
+    $\mathbf{A}_j = \mathcal{g}(\mathbf{x}_i - \mathbf{x}_j), j=1, \dots, q; \mathbf{\mu}_j
+    = \mathbf{p}(\mathbf{x}_i), i=1, \dots, q.$
+
+
+    A differentiable optimizer operates based on radial-basis function generator to
+    place sensor observations at arbitrary locations with respect to the placement.
+    The optimizer is defined as $\G(\mathbf{V}, \mathbf{x}_i, s) = [\mathbf{v}_1,
+    \dots, \mathbf{v}_M], [\mathbf{x}_i]$ where $[\mathbf{x}_i]$ denotes sensor placement.
+    The RFD-BF technique is feasible and averages a weighted combination of generic
+    nodes and their nearest neighbors to approximate values and their derivatives.
+    Without loss of generality,
+
+
+    $\begin{bmatrix} \mathbf{A}^T & \mathbf{B} \ \mathbf{P} & 0 \end{bmatrix} \begin{bmatrix}
+    \mathbf{x} \ \mathbf{\lambda} \end{bmatrix} = \begin{bmatrix} \mathbf{a} \ \mathbf{b}
+    \end{bmatrix}$
+
+
+    $\mathbf{a}_j = \nabla_{\mathbf{x}} \mathcal{g}(\mathbf{x}_i - \mathbf{x}_j) j=1,
+    \dots, q; \mathbf{b}_j = \nabla_{\mathbf{x}} \mathbf{p}(\mathbf{x}_i) j=1, \dots,
+    q.$
+
+
+    T is the transpose matrix product and $\lambda$ is Lagrange multipliers enforcing
+    the computed constraint $\mathbf{Pw} = \mathbf{b}$. Using the optimizer, $\mathbf{q}$
+    derived from
+
+
+    Nature Intelligence | Volume 7 | 2025 | 1129–1140
+
+
+    1131'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # Article
+
+
+    https://doi.org/10.1038/s41586-025-01063-1
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_3_0.png)
+
+
+    Fig. 2: Performances and predictions of models using DSO and SPO benchmarks. r.r.m.s.e.
+    using three sensor configurations (DSO, RS and US) varying the number of sensors.
+    For RS, models are trained with 30 random placements (n=30; mean as the centre
+    line; 25% to 70% percent of the box width; whiskers extending to 1.5 times the
+    interquartile range) relative mean square error
+
+
+    two-dimensional discrete-correlated datasets, computing sensor observations and
+    their derivatives from RFB-based weights in equations (6).
+
+
+    # ## Result
+
+
+    We apply the general DSO framework for six reconstruction benchmarks, containing
+    strong nonlinear dynamics over a wide range of spatiotemporal scales. The relative
+    r.r.m.s.e. q = ||q - qhat|/q, is used to evaluate the reconstruction performance,
+    where q and qhat denote the reconstructed field and refer-
+
+
+    Baselines: six reconstruction baseline models are used to verify the DSO, MLP³,
+    PODNN³, CNN¹, Fourier neural operator (FNO), and Senseler¹¹, which cover the majority
+    of existing neural network architectures for reconstruction tasks. Furthermore,
+    DSO is compared with interpolation methods, namely, condition-based method (CNLY³⁷),
+    determined based
+
+
+    sampler (DSO)³⁴, enhanced-clustering sampler (EES)³⁰ and correlation-based clustering
+    sampler (CCS)¹⁶. These static methods optimize the bilinear field before model
+    interpolation (DWI)¹³ is also considered as the baseline, which simultaneously
+    optimizes the integrated bilinear field during placement. Furthermore, DSO integrated
+    bilinear field (ISH) is compared and serves as the baseline, where the differential
+    bilinear interpolation represents the results. The differential operator (US)
+    and random sampler (RS) are also considered as baselines.
+
+
+    # ## Laminar water
+
+
+    The first dataset considered a two-dimensional unsteady flow past a cylindrical
+    obstacle, a canonical benchmark in the reconstruction community³⁷. The study involves
+    a vortex street using a cylinder placed within a rectangular computational domain
+    to observe alternating vortex shedding. This simulation, an can be obtained by
+    direct numerical simulation to solve the incompressible Navier-Stokes
+
+
+    Nature Intelligence | July 2025 | 1129–1140 *
+
+
+    1132'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41526-025-01063-1
+
+
+    # Spatial coverage (%)
+
+
+    # Spatial coverage (%)
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_4_0.png)
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_4_1.png)
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_4_2.png)
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_4_3.png)
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_4_4.png)
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_4_5.png)
+
+
+    # Exact
+
+
+    # DSPO (e: 0.135)
+
+
+    # Exact
+
+
+    # DSPO (e: 0.197)
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_4_6.png)
+
+
+    # DSPO-I (e: 0.159)
+
+
+    # DSPO-I (e: 0.168)
+
+
+    # DSPO-I (e: 0.234)
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_4_7.png)
+
+
+    # CNS (e: 0.218)
+
+
+    # DS (e: 0.208)
+
+
+    # CNS (e: 0.293)
+
+
+    # DS (e: 0.288)
+
+
+    # ECC (e: 0.227)
+
+
+    # CCC (e: 0.222)
+
+
+    # ECC (e: 0.312)
+
+
+    # DS (e: 0.284)
+
+
+    **Fig. 3:** Performances and metrics of models using DSPO and baselines. a) t.m.s.e.
+    of models using DSPO and US with varying the number of sensors $n_s$. b) Comparison
+    between DSPO and baselines under $n_s=4, 64$. d) Representative performance of
+    GCN (c) and Sensiver (d) using DSPO and baselines under $n_s=256$.
+
+
+    equation¹, which contains 5,000 snapshots of the velocity field and the computational
+    size is a $192 \times 112$ grid. The domain is sized at 10 circumferences and
+    13.7 diameters. The target of interest is the velocity field. Supplementary information
+    provides more details.
+
+
+    To investigate dependence of DSPO for periodic physical problem, we evaluated
+    reconstructed performance of DSPO and the two baselines RS and US. The results
+    are shown in Fig. 2. RS exhibits large variance, under varying numbers of sensors,
+    DSPO consistently outperforms RS and US in all scenarios. (a) DSPO outperforms
+    RS and US in all models. (b) DSPO shows comparable performance with MLP. Additionally,
+    compared with U.S., DSPO outperforms PODN and Sensiver by 1-2 orders of magnitude.
+    We also show the absolute errors of MLP, PODN, and CNN. Models using DSPO show
+    significantly lower errors, especially in the flow direction. The optimized sensor
+    distribution is shown in Fig. 2b. The advantage of optimized sensor placement
+    consistently covers the wake area. More importantly, Fig. 2c also illustrates
+    the importance of the rank of optimized placement. Removing sensors from the wake
+    area
+
+
+    results in a greater decrease in reconstruction performance. This result highlights
+    the ability of DSPO to capture flow field characteristics and is more beneficial
+    for flow field reconstruction. Comparisons of DSPO with more extensive SPO baselines
+    are shown in Supplementary Table 1. DSPO provides lower reconstruction errors
+    compared to other methods. This demonstrates that algorithm sensor placement can
+    be better for the point of high-dimensional NN parameters and lower sensor variables.
+    DSPO can achieve better results than DSPO-1. Demonstrating the superiority of
+    the proposed method, the computational complexity of the algorithm is shown in
+    Supplementary Fig 2a. These results span computational complexity, structural
+    characteristics and their unique advantages, making them suitable for their application
+    scenarios.
+
+
+    # Turbulent flow
+
+
+    To further validate our approach, we consider cyclic and chaotic phenomena of
+    a turbulent flow. The second dataset is obtained through three-dimensional simulations
+    of incompressible flow in a channel. The total computational domain and the grid
+    is $(l_x, l_z) = (4\pi d_0, 269)$ and $(n_x, n_y, n_z) = (256, 96, 256)$. Here,
+    the x and y z
+
+
+    Natural Intelligence | July 2025 | 1129–1140
+
+
+    1133'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41466-025-01063-1
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_5_0.png)
+
+
+    **a** Performance of models and prediction using DSPO and SPO baseline for different
+    numbers of training snapshots $n_{train}$. a. Comparisons between DSPO and SPO
+    baselines. Note that the error of CNN is not the same for other baseline models.
+    b. Representative predictions and absolutes of MLP and FNO. The final locations
+    of DSPO are denoted as squares.
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_5_1.png)
+
+
+    ctions to the stream-wall, wall-normal and span-wise directions is the half-width
+    of the channel. A slice is extracted from the middle of the channel, resulting
+    in a computational size of $128 \times 48$ grid. This domain is non-dimensionalized
+    using the half-width ($L$) as the characteristic length scale, and the number
+    of velocity components is 3. The Reynolds number is $Re=1000$, which is the target
+    of interest.
+
+
+    We examine the dependency of DSPO framework on the memory number for this chaotic
+    and dynamically rich phenomena. As shown in Fig. 3, the different models of DSPO
+    provide lower qualitative reconstructions for six models compared with the initial
+    placement by US. This shows that DSPO dynamically improves model accuracy and
+    explores sensor placement during training. PODDNN-U DSPO achieves the SOTA performance
+    with fewer than 64 sensors, and CNN attains the SOTA performance with more than
+    64 sensors. MLP-DSPO outperforms PODDNN-U and G-U, reaching or even approaching
+    the SOTA performance. In particular, GAN exhibits excellent performance for this
+    task with anisotropic and turbulent flows, whereas FNO and DSPO perform effectively.
+    Additionally, the last collimatorates
+
+
+    performance (%) between models using DSPO and consistently those with the initial
+    placement. DSPO improves the performance by nearly 15% across all the models,
+    check PODDNN. PODDNN-U demonstrates superior performance for this task, limiting
+    the number of sensors needed. DSPO improves the reconstruction accuracy as the
+    number of sensors increases, with improvements exceeding 40%. Fig 3 shows the
+    comparisons between models using DSPO and SPO baselines. We evaluate absolutes
+    across six metrics of $r.m.s.e$. The representative fields of CNN and G-U are
+    also shown in Fig. 3c. The reconstructed velocity fields are in excellent agreement
+    with the velocity performance, outperforming others. In addition to $r.m.s.e.$,
+    the peak used to evaluate the reconstruction performance (Supplementary Table
+    5 and Supplementary Fig. 3). Models using DSPO achieve result closer to the reference
+    in these criteria. In particular, GAN-DSPO captures more reference and with DSPO
+    tend to capture turbulent phenomena than more
+
+
+    Nature Intelligence | 7 (July 2025) 1129–1140
+
+
+    1134'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # Article
+
+
+    https://doi.org/10.1038/s42256-025-01063-1
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_6_0.png)
+
+
+    a
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_6_1.png)
+
+
+    b
+
+
+    ![](img/02f17747727163aee1b900211c6e4d17_6_2.png)
+
+
+    **Fig. 5** Performance of models and prediction using DSPO and SPO baseline for
+    different SNR values. **a.** Comparisons between DSPO and SPO baselines. **b.**
+    Representative predictions and error maps of MLP and FNO using SPO. The final
+    locations of DSPO are denoted as.
+
+
+    Incompressible flow over airfoil
+
+    ating the flow over an airfoil is crucial for the design and control of aerial
+    vehicles. The third dataset is the two-dimensional incompressible flow over NACA0012,
+    which is subjected to an oncoming free stream that varies in angle of attack and
+    velocity. The flow field is characterized by turbulence, and Reynolds-averaged
+    Stokes are used to generate the data. The free-stream condition is randomly sampled
+    with a uniform distribution over the range of attack angles $\alpha \in [-10^{\circ},
+    10^{\circ}]$ and flow velocity $U \in [5, 15]$ m/s. We collect 1000 snapshots
+    and evaluate on a mesh of size $256 \times 256$. Sensors are placed to capture
+    the states of the flow field.
+
+
+    More details. We investigate the dependence of the reconstruction on the accuracy
+    of training data. The results are shown in Fig. 4. As shown, our method using
+    DSPO achieve the SOTA performance under different numbers of training snapshots,
+    and the error curves tend to decrease as the snapshots increase. Compared to DWI,
+    DSPO significantly outperforms MLP, PODNN, and FNO, and yields comparable results
+    proving the superiority of our deep learning framework. Different case study:
+
+
+    Ref. 39 provides more.
+
+
+    baselines have a minimal effect on FNO under the same $n_{train}$. Under the small
+    training count, using SPO baselines is inferior to GCN CNN. The regularization
+    of the convolutional layers and velocity change around the airfoil may improve
+    the methods to satisfy the static placement using 500 snapshots, whereas DSPO
+    using 100 snapshots achieves an accuracy comparable to CNN with static placement,
+    saving training snapshots. Figure 4 illustrates the representative predictions
+    and absolute errors of MLP and FNO using SPO baselines. DSPO significantly improves
+    the prediction accuracy around the airfoil, where dynamic velocity changes. From
+    the distribution of error, DSPO outperforms DWI, DNS, and ECS. By leveraging attention
+    mechanism to efficiently capture the spatial domain, with our DSPO framework provide
+    smooth and accurate predictions and rely dependent on sufficient amounts of training
+    data.
+
+
+    # Darcy flow
+
+
+    The importance of Darcy flow lies in its ability to model and predict fluid behaviour
+    in subsurface environments, which is essential for various applications. Some
+    examples include groundwater
+
+
+    Natural Intelligence | Volume 7 (2025) 1129–1140
+
+
+    1135'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Table 1 | Summary of results with DSPO across a range of canonical applications
+
+
+    | Problem | Cylinder wake (10 °) | Turbulent flow (10 °) | Flow over aerofoil
+    (10 °) | Darcy flow (10 °) |
+
+    |---|---|---|---|---|---|---|---|n| Setting | Model | Sensors | Model | Sensors
+    | Model | Snapshots | SNR |
+
+    | Baseline | MLP | 783.4 | 470.0 | MLP | 5.8 | 0.9 | MLP | 520 | 100 | 600 | 1.14
+    | MLP | 164 | 1.27 |n| SOTA | FNO | 8.5 | 7.6 | GCN | 5.4 | 0.8 | FNO | 3.47 |
+    0.42 | 0.03 | GCN | 153 | 1.31 |
+
+    | | FNO | 3.4 | 2.2 | GCN | 4.5 | 0.7 | FNO | 0.15 | 0.03 | GCN | 0.98 | 0.06
+    |
+
+
+    The baseline method (MLP) is compared with the DSPO model under different numbers
+    of sensors, training snaps and SNR values. Furthermore, with fixed sensor locations,
+    DSPO outperforms the baseline in all scenarios. We evaluate the performance of
+    DSPO. The best results are highlighted in bold.
+
+
+    management, pressure engineering and civil engineering. Our two-dimensional steady-state
+    Darcy flow is constructed under noisy data. The DSPO model is capable of solving
+    the partial differential equation $\partial_t u(x,t) + \nabla \cdot (au) = f$.
+    The domain $\Omega$ is $[0,1]^2$, and the source term $f$ is the identity function
+    in the domain.
+
+
+    Different coefficient functions are applied to samples to produce the desired
+    field. Specifically, the number of sensors, observations, and signal-to-noise
+    ratio (SNR) is set to
+
+
+    different levels: $n = {\frac{10^k}{2^{10}}}^{k=2..3}$. Here, $V$ is a random
+    variable with a normal distribution. Assume that the coefficient distribution
+    is noisy, and the goal is to reconstruct it from noise.
+
+
+    Figure 5 shows the performance and predictions of DSPO and SOTA baselines. We
+    find several cases to challenge the DSPO and SOTA baselines. Fig. 5 shows a slight
+    decrease in the r.m.s. values as SNR increases, indicating improved performance
+    with cleaner signals. Moreover, DSPO outperforms others across different models
+    and SNR levels, consistently showing the robustness of our approach. By using
+    DSPO, we demonstrate that it can generalize better to noisy scenarios.
+
+
+    Table 1 summarizes the results of DSPO across various canonical applications.
+    For Darcy, the MLP is used as the baseline method. The choice of MLP is due to
+    its limited capacity, making it difficult to reconstruct the field with high accuracy.
+    Nevertheless, the architecture of the RNN is suitable for its complex problems.
+    Furthermore, we select the model with superior performance as the baseline and
+    SOTA models that outperform others with different numbers of sensors, training
+    snaps and SNR values.
+
+
+    This section discusses the results of DSPO across various canonical applications.
+    For Darcy flow, we explore the performance of DSPO on the cylinder wake de-
+
+
+    with grids (Supplementary Fig. 2). Furthermore, to further validate the results
+    with real-world applications, we conducted experiments on turbulent plate boundary
+    flow and NOAA sea-surface height prediction. Fig. 4 demonstrates that models using
+    DSPO consistently outperform others using baselines with varying numbers of sensors
+    and independent baselines. Table 6 summarizes the results of DSPO models on various
+    scenarios.
+
+
+    # Discussion
+
+
+    Reconstruction of a global field from sparse sensors has a major challenge in
+    engineering and science. Models with sparse input are crucial for real-world applications.
+    We could include flow reconstruction in ocean experiments, health monitoring with
+    satellite data usage, and environmental sensing in robot control.
+
+
+    One advantage of DSPO is that reconstruction is performed within a differentiable
+    learning framework, which dynamically learns sensor placement and reconstruction
+    simultaneously. The bilevel framework is different from traditional placement
+    methods because it optimizes the model end-to-end.
+
+
+    This process not only optimizes the architecture but also the parameters. By using
+    different numbers of training data sizes and noise levels,
+
+
+    we perform comprehensive comparisons on baseline models using DSPO and static
+    placement optimization. These experimental results demonstrate that DSPO can achieve
+    remarkable accuracy, generalizability and robustness against given models for
+    sparse/noisy data. Especially, DSPO enhances other baselines to approach or even
+    reach the SOTA accuracy and performance-
+
+
+    This highlights that DSPO dynamically exploits the model''s capacity and expressivity,
+    alleviating the accuracy limitations imposed by network architectures.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# Article\n\nhttps://doi.org/10.1038/s41726-020-01063-x\n\nMore broadly, our\
+    \ framework can serve as a paradigm for efficient reconstruction. Having the flexibility\
+    \ allows for more diverse scenarios and exploration. Moreover, other methods,\
+    \ such as gradient-based optimization, could integrate seamlessly with our framework\
+    \ to improve the reconstruction accuracy and enhance the robustness of models.\
+    \ The fact that our work only scratches the flat surface for sparse sensing, can\
+    \ be extended to tackle reconstruction in three-dimensional volumetric spaces.\
+    \ Further, by incorporating manifold strategies, we aim to unlock the potential\
+    \ for reconstruction on manifolds in future.\n\nreconstruction performance. The\
+    \ differentiable operator is designed to acquire reconstructions on arbitrary\
+    \ locations and compute derivatives. With our approach, the learning framework\
+    \ enables the differentiability of the operator with respect to the placement.\
+    \ This use of gradient-based optimization techniques to perform the framework,\
+    \ by solving the optimization task in equation (1), opens a new pathway toward\
+    \ NN-based models, advancing the SOTA\n\n# Methods\n\n# Differentiable learning\
+    \ framework\n\nNN-based reconstruction methods according to different tasks can\
+    \ be divided into two categories, which methods are either end-to-end like MLP\
+    \ and FCN or decoder-based. In the latter, the decoder, represented as $\\mathcal{G}_{\t\
+    heta}(s_i, x_i)$, is differentiable with respect to $\theta, s_i$ and $x_i$. Here,\
+    \ $x_i$ represents the query locations, which correspond to all global coordinates\
+    \ in our global framework.\n\n# Validation of framework\n\nThe proposed framework\
+    \ is validated on six NN-based models, including MLP, PODN, FCN, GAN and SiN.\
+    \ We summarize the conceptual flow of our methods, and the detailed descriptions\
+    \ are as follows:\n\nMLP. A representative work is to use a MLP for fluid reconstruction,\
+    \ demonstrating superior performance characteristics without having reprocessing\
+    \ the raw data. Following the related work, we use the MLP-based model to validate\
+    \ the proposed framework for global fluid reconstruction (Supplementary Fig. 1-C).\
+    \ The MLP extracts key features of observations through several fully connected\
+    \ layers\n\n```\n$u^{(L)}(s) = \\sigma(W^{(L)}\\sigma(W^{(L-1)}(\\dots + W^{(1)}s\
+    \ + b^{(1)})\\dots) + b^{(L)}); \\quad (11)$\n```\n\nwhere $\\sigma$ denotes the\
+    \ activation function, and the decoder contains the weights $W^{(l)}$ and biases\
+    \ $b^{(l)}$. The training dataset $\\mathcal{D} = \\{s_i, u_i\\}_i$ consists of\
+    \ pairs of observations and reconstructions. With sufficient dataset, we aim to\
+    \ learn a loss function $\\mathcal{L}(u, \\hat{u}, \theta)$ as a class of CNNs.\
+    \ The learning process of this MLP is mathematically formulated as\n\nPODN. Reduced-order\
+    \ model using PODN is a well-established and widely used class of reduced-order\
+    \ model techniques for fluid reconstruction—it is used to perform online prediction\
+    \ to reduce the computational cost of high-dimensional simulations. Furthermore,\
+    \ proper orthogonal decomposition (POD) models are derived from a set of snapshots\
+    \ (snapshots) and NN is used to learn the mapping between observations and POD\
+    \ coefficients.\n\n```\n$\theta^* \\in \\arg\\min_{\\theta} \\sum_i ||a_i - a(s_i)||^2;\
+    \ \\quad (12)$\n```\n\nThe forward pass reconstructs global fluid fields based\
+    \ on limited observations, providing the best model parameters for the current\
+    \ placement. By default, uniform placement is used as the initial sensors for\
+    \ the first model. Then, through iterations, random adaptive placement strategies\
+    \ are used to update the locations.\n\nThe reverse process minimizes sensors locations\
+    \ and provides deployment for the forward process. Given the best model parameters\
+    \ $\theta^*$ is used to calculate the gradient information, derivative of objective\
+    \ function with respect to placement $s$. Consequently, automatic update of placement\
+    \ is performed for each iteration $\\gamma_t$. In this process, the gathering\
+    \ operator calculates the derivative of $s$ with respect to $x_i$, which is $\\\
+    frac{\\partial \\mathcal{L}}{\\partial x_i} = \\frac{\\partial \\mathcal{L}}{\\\
+    partial s} \\frac{\\partial s}{\\partial x_i}$.\n\nPODN is utilized to validate\
+    \ the proposed framework (Supplementary Fig. 1-2). We first collect snapshots\
+    \ such that $u_i = \\sum_j a_{ij} \\phi_j$, where $u_i$ are the POD models, $\\\
+    phi_j$ are the singular modes and $a_{ij}$ are the coefficients. The decomposition\
+    \ is obtained with sufficient dataset. Then the training dataset $\\mathcal{D}\
+    \ = \\{s_i, a_i\\}_i$ is constructed. With the training data, we aim to learn\
+    \ a mapping from observations to coefficients: $s \\rightarrow a$. The learning\
+    \ process is mathematically formulated as\n\n```\n$\theta^* \\in \\arg\\min_{\\\
+    theta} \\sum_i ||a_i - a(s_i)||^2; \\quad (13)$\n```\n\n```\n$x^{(t+1)} = x^{(t)}\
+    \ - \\alpha \\frac{\\partial \\mathcal{L}}{\\partial x^{(t)}}; \\quad (14)$\n\
+    ```\n\n$m^t = \\beta m^{t-1} + (1-\beta)g^t$, $m^t$ denotes the defined learning\
+    \ rate and $\beta$ and $\\alpha$ denote the attention rates. A higher learning\
+    \ rate affects the convergence speed (Supplementary Table 2).\n\nFinally, the\
+    \ forward and reverse processes are executed until there is no further improvement\
+    \ in the objective function or the maximum iteration of sensors $N^{max}$. This\
+    \ framework empowers models with differentiable placement optimization to handle\
+    \ The step of update is given by\n\nOnce the NN model is trained, it can be used\
+    \ to predict new fields by using input observations. Substituting the estimated\
+    \ coefficients $\\hat{a}_i$ into $u_i = \\sum_j \\hat{a}_{ij} \\phi_j$, the solution\
+    \ $u$ is obtained from the linear combination of POD modes.\n\nNature Intelligence\
+    \ | July 2025 | Pages 1129–1140\n\n1137"
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41466-020-01063-6
+
+
+    CNN has emerged as a powerful alternative to reconstruct high-dimensional data
+    from sparse observation in an efficient manner. The aforementioned CNN methods
+    suffer from limitations on regular grid data. Thus, a CNN has also been proposed
+    on the Voronoi embedding to address unstructured data. Subsequently, another representation
+    methods combine the MLP with CNN.
+
+
+    and for sets of all forms a map $H \mapsto \mathbb{R}^d$, where each row corresponds
+    to the features of a node. Graph convolution layer captures the features for the
+    next layer as follows:
+
+
+    ```
+
+    $H^{(l+1)} = \sigma(W^{(l)}A^{(l)}H^{(l)})$,
+
+    ```
+
+
+    where $A$ is the adjacency matrix, and $I$ the identity matrix. $D$ the degree
+    matrix of $A$, $D^{-1}AD$. The layer captures the features of updating and aggregating
+    neighbor features layers, leading both direct and indirect connections in the
+    network. The conceptual flow of GCNN shown in Supplementary Fig. I-3. Observations
+    are processed by MLP to generate initial feature values for each node in the input
+    graph.
+
+
+    Since the MLP is employed, we used the MLP-based encoder to transform the input
+    features into the global field representation. The high-dimensional representation
+    can be acquired through the MLP and $l+1$ convolutional layers, which are then
+    converted to convolutional layers. The multiple convolutional layers are further
+    stacked to enhance the model capacity and expressivity. The convolution layer
+    extracts features of input data through filtering operations,
+
+
+    ```
+
+    $X^{(l)}_i = \sigma \left( \sum_{j \ \in \mathcal{N}(i)} \frac{1}{\sqrt{d_id_j}}
+    W^{(l)} X^{(l-1)}_j + b^{(l)} \right)$
+
+    ```
+
+
+    where $X^{(l)}$ and $Y^{(l)}$ are input and output data at layer $l$; $W$ denotes
+    a filter with size $H \times d$; $h$ denotes the number of filters and $b$ the
+    bias; and $\sigma$ denotes a non-linear activation function and the operation.
+    With the training dataset $\mathcal{D} = \{\mathbf{s}_i\}_{i=1}^N$, we utilize
+    the CNN to learn the mapping $\mathcal{S} \mapsto \ \mathbf{u}$ for global field
+    reconstruction.
+
+
+    FNO operates as one of the most successful deep learning architectures, which
+    can efficiently learn mesh-independent architectures over infinite-dimensional
+    spaces. Leveraging Fourier transform, we let $\mathcal{I} \mapsto \mathcal{O}$
+    be FNO to learn the mapping between field domains. Due to the efficiency of the
+    fast Fourier transform, FNO is capable of generating data on complex domains.
+    With an MLP-based encoder, 20 utilized the multiple attention layers to learn
+    the mapping from global features to local fields.
+
+
+    The conceptual flow of GCNN is shown in Supplementary Fig. I-5. The F-SCNN adopts
+    an encoder-decoder architecture. The spatial encoder $E_s$ first maps the locations
+    $x$, to the features, and an attention-based encoder maps the features to a latent
+    space $Z$. Then, an attention-based decoder reconstructs the field from the query
+    locations $x$. This process may be formulated as
+
+
+    ```
+
+    $Z = E_s(\mathbf{s}), \\n \mathbf{u} = D_s(Z, x)$
+
+    ```
+
+
+    The encoder consists of a MLP and multiple attention blocks, whereas the decoder
+    is composed of MLP and multiple crossed attention layers. Each block is a multi-head
+    attention layer with a query, key, and value to learn the mapping $\mathcal{S}
+    \mapsto \ \mathbf{u}$. The Senser is used to reconstruct the complex field from
+    a few observations. Further details are provided in Ref. 22.
+
+
+    The kernel operator encoder processes the input with the Fourier transform and
+    inverse Fourier transform. Here $R$ is the parameter of the Fourier convolution.
+    The decoder processes the field using the inverse Fourier transform. With the
+    training data, we utilize the CNN to learn the mapping $\mathcal{S} \mapsto \
+    \mathbf{u}$. The conceptual flow of GCNN field reconstruction is shown in Supplementary
+    Fig. I-4.
+
+
+    All the datasets include the layer width, turbulent channel flow, inflow over
+    outwash, Darcy flow, flat-plate layer surface temperature, which were available
+    via Zenodo (https://doi.org/10.5281/zenodo.3253970 (45)). Source data are provided
+    with this paper.
+
+
+    # Code availability
+
+
+    The code has been archived in https://doi.org/10.5281/zenodo.2529285 (46) and
+    is available via codeCode at https://doi.org/10.24443/CC-0434598v2
+
+
+    # References
+
+
+    +   1. Wang, M., Tang, S. State estimation in turbulent channel flow from limited
+    observations. J. Fluid. Mech. 917, 99 (2023).
+
+    2. Malekei, A., Ozer, E., Alhaymadeh, M. & Ginolami, M. Machine learning and structural
+    health monitoring over uncertainty and high-dimensional data sources. Health Monitor,
+    21, 1906–1955 (2022).
+
+
+    Nature Intelligence | July 2025 | 1129–1140
+
+
+    1138'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41526-025-01063-9
+
+
+    3. Thelen, A. E. A comprehensive review of digital twin-part 1: modeling and engineering
+    techniques. Struct Mult. Opt. 65, 342 (2022).
+
+
+    4. Feizi, N., Patel, R., Kumari, M. R. & Atshazar, S. F. Adaptive wave reconstruction
+    using reconstructed-BLMFC for sensing over adhahoc enabled networks. IEEE Trans.
+    Robot. 38, 2928–2942 (2021).
+
+
+    5. Dong, G., Loy, C. C., & Kang, X. Super resolution imaging using deep convolutional
+    networks. IEEE Trans. Pattern. Math. Mach. 38, 295–307 (2015).
+
+
+    6. Lecun, Y., Bengio, Y., & Hinton, G. Deep learning. Nature 521, 436–444 (2015).
+
+
+    7. Brunton, S. L., Noel, B. R., & Kutzner, P. Machine learning for physics. Annu.
+    Fluid Rev. 52, 477–508 (2020).
+
+
+    8. Fukami, K., Fukagata, K., & Takakura, S. Super-resolution reconstruction of
+    turbulent-flows using machine learning. J. Fluid Mech. 876, 106–129 (2021).
+
+
+    9. Guillemes, A., Smith Villalc, C., & Desiot, S. Super-resolution generative
+    adversarial networks for random-sensing fields. Nat. Mach. 14, 1165–1173 (2022).
+
+
+    10. Sha, X., Yu, Y., & Wang, Q. Prediction of pressure drop for cavitation based
+    industrial equipment using improved deep learning methods. Sensors 21, 033621
+    (2021).
+
+
+    11. Peng, X., Li, G., Zhang, Z., Baek, H., & Yao, W. A deep learning method based
+    on reconstructing temperature field. Int. J. Therm. Sci. 182, 107631 (2022).
+
+
+    12. Fukami, An., No., Bohmi, M., Ulrich, T. Machine-learning-based reconstruction
+    of turbulent flows from sparse sensors in a pump fluid. J. Fluids 144, 125105
+    (2022).
+
+
+    13. Zhou, Y., Kumari, A. N., & Baira, K. Sparse sensor reconstruction of vortex-induced
+    wake angle using machine learning. Theor. Comput. Phys. 39, 269–273 (2022).
+
+
+    14. Shir, F., Permatal, M., & Romashed, A. A comprehensive review of reconstruction
+    and analysis on deep learning methods. J. Art. Appl. 6, 301–360 (2022).
+
+
+    15. He, X., Wang, Y. L. & Liu, J. Flow information network: the reconstruction
+    of fluid fields from dynamic imaging using neural networks. Phys. Mech. 34, 096002
+    (2022).
+
+
+    16. Ogiev, M., Hasein, H., Fischer, A., & Farish, B. Convolutional neural networks
+    to reconstruct optical flow field. Mach. Learn. Sci. Tech. 2, 045021 (2021).
+
+
+    17. Bian, A., Wang, H., Liu, G., Ma, J., & Guan, S. Deep learning on convolutional
+    networks: overview and latest applications in industrial engineering. Int. J.
+    Sens. It. 173, 8342014 (2023).
+
+
+    18. Liang, S., et al. EngGNN: a high-throughput and energy-efficient architecture
+    for large graph neural networks. IEEE Trans. Comput. 57, 7511–7525 (2022).
+
+
+    19. Ayyazazadeh, K., & Lee, A. Neural operators for reconstructing scientific
+    simulations and design. Nat. Rev. Phys. 6, 320–332 (2020).
+
+
+    20. Zhao, X., et al. ResFNR: a high-resolution fluid flow field reconstruction
+    from sparse measurements using Fourier neural operator. Int. J. Therm. Sci. 195,
+    108619 (2024).
+
+
+    21. Fukami, K. et al. Deep field reconstruction from sparse sensors with Voronoi-based
+    assimilation deep. Nat. Mach. Intell. 3, 945–951 (2021).
+
+
+    22. Santos, J. E., et al. Development of the Sensor for fluid field reconstruction
+    from sparse measurements. Nat. Mach. Intell. 5, 1317–1335 (2022).
+
+
+    23. Li, B. L., & Wang, R. Efficient sensor placement for signal reconstruction
+    based on recursive methods. IEEE Trans. Signal. 69, 1885–1898 (2021).
+
+
+    24. Manohar, K., Brun, W., Kutz, J. N., & Brun, S. L. Data-driven sparse sensor
+    reconstruction for reconstruction: benefits of known patterns. IEEE Control Syst.
+    Magazine 38, 68–76 (2021).
+
+
+    25. Nagata, T., et al. Data-driven sparse sensor selection based on proximal optimization
+    for high-dimensional data with correlated noise. IEEE Trans. Signal. Process.
+    70, 5251–5264 (2022).
+
+
+    26. Nagata, T., Yamada, K., Kamada, Y., & Sato, N. Random-group method for large-scale
+    sensor problems. IEEE J. Sens. 23, 9538–9548 (2023).
+
+
+    27. Koo, B., Shin, H., Kim, J. H., & Yoon, J. Deep learning based prediction technique
+    for temperature and sensor placement in chemical reactors using steam reformer
+    for HT-Pace. Chem. Anal. Appl. 173, 115513 (2023).
+
+
+    28. Zhang, Z., Wang, G., Gu, J., & Lu, M. A. A new deep learning method for virtual
+    sensing of composite chemical mixtures. Phys. Chem. 195, 1110319 (2023).
+
+
+    29. England, E. B. Shallow neural networks for fluid reconstruction with limited
+    resources. Ros. Soc. A. 476, 2020/200091 (2020).
+
+
+    30. Dubois, P., Gomez, J., Parquet, L., & Lert. Machine learning for fluid reconstruction
+    from limited measurements. J. Comput. Phys. 448, 110733 (2023).
+
+
+    31. Marcato, O., Maley, D., Viswanathan, H., Guiltman, E., & Santos, J. Reconstruction
+    of fluids from sparse sensors: deep learning placement enhancement. https://arxiv.org/abs/2312.09176
+
+
+    32. Marcato, O., et al. Journey over destination: sparse sensor placement enhancements,
+    Learn. Mach. Sci. Technol. 5, 025070 (2024).
+
+
+    33. Clark, E., Brun, S. L., & Kutz, J. N. Multi-fidelity sensor selection: greedy
+    algorithms to pick cheap and expensive sensors for fluid reconstruction. Sensors.
+    21, 115111 (2021).
+
+
+    34. Li, B. U., Hu, Y., & Wang, R. Data-driven sensor placement for efficient thermal
+    field reconstruction. Chin. Technol. Sci. 64, 1981–1994 (2021).
+
+
+    35. Fasse, A. M., et al. A-sensor-based evolutionary optimization algorithm for
+    cluster formation and fault detection in water distribution systems. J. Cleaner
+    Proc. 319, 128763 (2023).
+
+
+    36. Coleman, T. & Kirk, A. A fast immersed boundary method using a multi-mesh
+    approach and multi-domain fluid-structure boundary condition. Comput. Methods
+    Appl. Mech.. 192, 2131–2148 (2006).
+
+
+    37. Fukagata, K., Kasagi, N. & Koutaramakos, S. A theoretical prediction of drag
+    reduction in turbulent flow by superhydrophobic surfaces. Phys. Fluids. 18, 015703
+    (2006).
+
+
+    38. Zhao, X., Chen, G., Zhang, Z., & Wang, Y. A hybrid method based on proper
+    orthogonal decomposition and deep learning for neural networks and heat field
+    reconstruction. Exper Syst. Anal. 210, 114032 (2022).
+
+
+    39. Xiang, J., Li, T., Xie, F., Zhang, H., & Zheng, Y. Deep learning prediction
+    from sparse measurements by compressed reduced order modeling. Comput. Methods
+    Appl. Mech. 393, 115933 (2022).
+
+
+    40. Wu, J., & Luo, D. Deep-learning assisted order model for high-dimensional
+    fluid prediction from sparse data. Phys. Fluids. 35, 103115 (2023).
+
+
+    41. Lu, J., Jin, P., Wang, G., & Karniadakis, G. E. Learning nonlinear operators
+    via DeepNet based on the universal approximation theorem of operators. Nat. Mach.
+    Intell. 3, 218–229 (2021).
+
+
+    Nature Intelligence | Volume 7 | 2023 (1129–1140)
+
+
+    1139'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Additional information
+
+
+    Supplementary information The online version contains supplementary material available
+    at https://doi.org/10.1038/s42256-025-01063-1.
+
+
+    Correspondence requests for material should be addressed to Xu Liu, Wei Peng,
+    Weizen Zhou and Wen Yao.
+
+
+    Peer review Nature Machine Intelligence thinks Carlos Samniel Vila, Wuhan Xiao
+    and the anonymous, reviewer(s) for Dunhui the peer review of this work.
+
+
+    Reprints and permissions information is available at www.nature.com/reprints.
+
+
+    Publisher’s note Springer Nature remains neutral with regard to jurisdictional
+    claims in published maps and institutional affiliations.
+
+
+    Springer Nature or its licensor (e.g. a society or other partner) holds exclusive
+    rights to this article under a publishing agreement with the author(s) or other
+    rightful(s); self-archiving of the accepted manuscript version of this article
+    is solely governed by the terms of such publishing agreement and applicable law.
+
+
+    © The Author(s), under exclusive licence to Springer Nature Limited 2025
+
+
+    +   43. Li, Z et al. Fourier neural network for parametric differential equations.
+    In Proc. of ICLR (2021); https://openreview.net/pdf/53c478f49d1cd421b865ca7fd744e33b5.pdf
+
+    44. Path, J., et al. Efficient machine-learning-based reconstruction using graph
+    neural networks. Eur. Phys. J. C, 81 (2021), 381.
+
+    45. Liu, X, et al. The DSO dataset. https://zenodo.org/record/5615520 (2021).
+
+    46. Liu, X, et al. DSO-v1, codebase. https://doi.org/10.52581/zenodo.1559928 (2025).
+
+    47. Liu, X, et al. The DSO codebase. CodeOcean https://doi.org/10.24433/0c432598.v2
+    (2025).
+
+
+    # Acknowledgements
+
+
+    This work was supported by the National Science Foundation of China under grant
+    no. 92317206 (W.Y.). We thank G. Li, H. Zhang and many others for their valuable
+    support and expertise.:
+
+
+    # Author contributions
+
+
+    X.L., W.P. and W.Y. contributed to the idea and design of the research, X.C.,
+    X. Zhang, X. Zhao and W.J. supervised the research. X.L. and W.P. performed the
+    research. X.L. wrote the paper.
+
+
+    # Competing interests
+
+
+    The authors declare no competing interests.
+
+
+    Xu Liu 1,2*, Wei Peng 1,2*, Xiaoyao Zhang 1*, Weizen Zhou 1† Wen Yao 1‡ & Xiaiao
+    Chen 1
+
+
+    *Intelligent Game and Decision Laboratory, Beijing, China.² These authors contributed
+    equally: Xu Liu, Wei Peng. e-mail: liuxu18054448691@126.com; weipeng0098@126.com;
+    weizenzhou@outlook.com; wendy0782@126.com'
+  merge: -1
+  img_proc: true
