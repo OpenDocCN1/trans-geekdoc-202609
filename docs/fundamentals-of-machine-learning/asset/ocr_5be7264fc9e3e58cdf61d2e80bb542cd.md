@@ -1,0 +1,16 @@
+also be careful that the kernel functions still lead to convex optimization problems. In practice, only a small number of kernel functions are used. Besides the polynomial kernel mentioned so far, one of the most popular is the Gaussian kernel, also called radial basis function (RPF) kernel,
+
+```
+$K(x, z) = \exp - \frac{||x-z||^2}{2\gamma^2}$$
+```
+
+It is common to recognize the width of this Gaussian with the parameter $\gamma$, which is a prominent parameter of the SVM with an RBF kernel. It is interesting to note that this kernel corresponds to a feature map that is formally infinite.
+As mentioned earlier, a large feature space corresponds to a complex model with many parameters and hence the potential to overfit easily. We must therefore look into this problem. The key insight here is that we are already minimizing the sum of the components of the parameters, or more precisely the norm $||w||^2$. This can be viewed as regularization which favours a smooth decision hyperplane. Moreover, we have discussed two extremes in classifying complicated data: one was to have a high-dimensional non-linear mappings and have a separating hyperplane; the other method was to consider a low-dimensional separating hyperplane and interpret the data as overlapping. The last method includes a parameter $C$ that can be used to tune the number of data points that we allow to sit within the margin. Then we can combine these two approaches to classify non-linear data with overlaps where the soft margins will in addition allow us to favour smooth dividing hyperparameters.
+
+In practice, we have to consider several parameters when applying support vector machines and one of the first must be chosen which kernel function to use. Most packages have a number of choices implemented. In this example we used the Gaussian kernel function with width parameter $\gamma$. Setting a small value for $\gamma$ and allowing for a large number of support vectors (small $C$), corresponds to a complex model. Contrast, larger width and regularization of $C$ will increase the stiffness of the model and the complexity. In practice, we have to tune parameters to get good results. To do this need to use some form of validation set, and k-times cross-validation is often implemented in the related software packages.
+
+An example of SVM performance (accuracy) on some examples (iris dataset from the UCI repository; by Broadman and Trappenberg, 2006) is shown in Fig. 3.11 for several values of $\gamma$ and $C$. It is often that there is a large area where the SVM works well and only little variations in performance. This robustness has helped to make SVM practical methods that outperform other methods. However, there is also an abrupt onset of the region where the SVM fails, and some parameter tuning is hence required. While just trying a few settings might be sufficient, some more systematic methods such as grid search or simulated annealing recommended.
+
+# 3.6.4 Statistical learning theory and VC dimension
+
+SVMs are good and practical classification algorithms for several reasons. In particular, they are formulated as a convex optimization problem that has many good theoretical properties and that can be solved with quadratic programming. They are formulated to

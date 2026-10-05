@@ -1,0 +1,13 @@
+# 70 Neural networks and Keras
+
+neural networks can take advantage of these specialized processors as neural networks are based on matrix or tensor operations, including additions, multiplications, and convolution operations. Support for deep learning has specifically been developed by NVIDIA, so GPUs by this company are the main workhorses of deep learning.
+
+There are several implementations that realize the basic array operations on GPUs. This includes Theano, a Python toolbox for multi-dimensional array operations, the Microsoft Cognitive Toolkit (CNTK) for deep-learning with support of Python, C#, C++, and Tensorflow, which is Google's support for deep learning. The implementation can be written directly with the help of these toolboxes. Keras is a general layer on top of these applications that is ideal to outline the computational principles and support fast prototyping. We will use Keras in this book. A popular alternative is PyTorch that is recommended for further studies.
+
+Let us discuss our first deep neural network with a new example, that of handwritten character recognition, specifically the MNIST dataset. This dataset has nominated many of early DNN developments and must be considered a classic by. The data set consists of digitized examples of hand numbers from 0 to 9. Each image consists of 28 × 28 pixels. An example is shown as input in Fig. 4.4. We have already mentioned this data set in Chapter 2, but briefly, this benchmark dataset has 60,000 training examples and 10,000 test examples, and a developer is of course to choose any portion of the 60,000 training images as the validation set.
+
+![](bbox=[0.213, 0.477, 0.775, 0.649])
+
+**Fig. 4.4** A (relatively) deep neural network for the MNIST handwritten character recognition benchmark.
+
+A network with six layers is outlined in Fig. 4.4, and the corresponding program is included below. The first part of the program is concerned with the preparation of the data in the appropriate format such as gathering all the pixels in the image into a large vector of size 784 (28 × 28) and rescaling it to a range of [0, 1]. We will later discuss why such a normalization is useful. Also, we change the labels into a 1-hot representation, which is a vector of length equal to the number of classes with 0 in all components except the position that indicates the label of this class. For example, with three classes we could have 1 → [1, 0, 0], 2 → [0, 1, 0], 3 → [0, 0, 1]. We can use the Keras function to_categorical() for this purpose.
