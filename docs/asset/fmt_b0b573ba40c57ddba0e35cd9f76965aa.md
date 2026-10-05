@@ -1,0 +1,348 @@
+
+# 索引
+
+## 梯度相关
+
+- 梯度下降 (gradient descent), 138, 819
+- 梯度下降机 (gradient descent machine (GDM)), 711
+- 梯度剪枝 (gradient pruning), 222
+- 梯度
+
+## 高斯相关
+
+- 高斯滤波 (Gaussian filter), 997
+- 高斯过程 (Gaussian process), 690, 799
+- 高斯误差 (Gaussian error), 508
+- 高斯分布 (Gaussian distribution), 1078
+- 高斯采样 (Gbs sampling), 463, 475
+
+## 生成相关
+
+- 生成模型 (generative model), 778, 882
+- 生成编程 (generative programming), 39, 134
+- 生成对抗网络 (generative adversarial network (GAN)), 831, 838, 1022
+- 生成图像 (`GENERATE-IMAGE`), 660
+- 生成 (`GENERATE-LETS`), 660
+- 生成马尔可夫 (`GENERATE-MARKOV-LETS`), 662
+
+# 1136 索引
+
+- Hamori, S., 1086
+- 汉明治明治, 899
+- Han, J., 1078
+- Han, X., 2099
+- Hanan, S., 399, 1094
+- Hand, D. J., 1031, 1088
+- 手, 689
+- Handschkin, E., 516, 1098
+- Handscomb, D.C., 1072
+- Hansok, S., 4014
+- hansford, 1097
+- Hans, A., 872
+- Hansen, E., 127, 362, 389, 401, 587, 1998, 1118
+- Hensen, P., 256, 1098
+- Hansi, I., 808
+- Hanson, O., 127
+- 快乐快乐
+- hapy快乐, 679
+- Harabagus, S. M., 905, 1118
+- Hada, S., 586
+- Harlic, R. M., 1089
+- Hardy, G., 639, 1053
+- Hardwick, A., 1094, 1094, 1118
+- Harlet, D., 3299
+- Hariman, M., 901, 1085
+- Harnish, R., 103
+- HARPY (复制识别系统), 160
+- Harris, T., 1066
+- Harriz, Z., 1092
+- Hartley, A., 1031, 1098
+- Haruyana, A., 1072
+- 哈佛, 529
+- 哈佛大学密苏里州, 1045
+- Hashimoto, K., 1072
+- Haste, P., 398, 399, 1041
+- Hashis, S., 35, 47, 48, 922, 873, 1087, 1068, 1112, 1115
+- Hassum, A., 1069
+- Hasselt, C., 738, 800, 1095
+- Hastings, W. K., 1045
+- Hatelem, M., 1029, 1089
+- Hnaussler, D., 516, 1052
+- Hauissler, D., 738, 1082
+- Havelund, K., 327, 1098
+- Havenstein, N., 448, 1094
+- Hawking, S., 51
+- Hawkins, J., 836, 1098
+- Hay, N., 587, 1070, 1098
+- Hayes, P. J., 267, 358–360, 1057, 1095, 1098, 1105
+- Hays, J., 44, 1098
+- He, T., 236, 1058
+- He, K., 837, 1098, 1117
+- He, Y., 873, 1096
+- 头 (INL), 892
+- 头 (心脉头部), 248
+- Heast, M. A., 903, 1111
+- Heast, M., 734, 1097
+- Heath Robin, 32
+- 重型织面料, 1060
+- Heuber, P., 1034, 1098
+- Heb, D. O., 35, 390, 1098
+- 希伯来语, 35
+- Heber, M., 968, 970, 1036, 1095
+- Heckerman, D. A., 473, 516, 798, 1098, 1099, 1113
+- Hededa, V., 1021
+- 享乐的, 448
+- Heess, W., 998, 1094
+- Heidari, K., 1060
+- Heigerberg, M., 1057
+- Helein, R. A., 1071
+- Heita, S., 534
+- Held, M., 1297
+- Helman, S., 351, 1063
+- Helmet, M., 125, 398, 1099, 1110
+- Holholtz, J., 1027
+- Holmer, C., 25
+- Hemaf, B., 830, 1090
+- Hengley, G., 1098
+- Hennison, C., 189
+- Hendler, J., 357, 400, 402, 1085, 1094, 1191
+- Herry, S., 439, 473, 555, 1098, 1099
+- Hery, B., 873, 1066
+- Heitz, M., 1095, 1113
+- Heizner, T., 1098
+- Hephabois, 998
+- Hebrand's Theorem, 322, 328
+- Hebrand, J., 301, 326, 1098
+- Hebrand base, 322
+- Heuberg, 221, 328
+- Herrich, R., 667, 1096
+- Herster, M., 1093
+- Hearden, S., 548, 877
+- Hernander, E., 1069, 1085
+- Hernando, J., 1065
+- Herring, R., 516, 1094
+- Herskovit, E., 798, 1091
+- Hertz, J. A., 838, 1102
+- Hess, C., 1061, 1098
+- Hessian, 139
+- Hest, J., 906, 1090
+- Heulet, E., 1106
+- heuristic, 123
+  - admissible, 104, 371
+  - composite, 118
+  - for planning, 177, 282
+  - function, 102
+  - Manhattan, 116
+  - least-constraining, 177
+  - min-conflicts, 181
+  - minimum reasoning, 177, 189, 308, 396
+  - null, 222
+  - straight-line, 1034
+- Heuristic Programming (HPP)
+- Hewitt, C., 329, 1066
+- heypot, 975
+- Heyd, Z. Y., 670
+- 马尔可夫模型 (HMM), 43, 491, 496, 503, 515, 789
+- available, 448
+- 层化搜索, 377
+- hierarchical decomposition, 375
+- hierarchical reinforcement learning, 858
+- high-level optics, 375
+- Hilbert, M., 1097
+- Hilgard, E. R., 990
+- Hill, E., 930, 911
+- Hi-Clustering, 129
+- hill climbing, 129
+  - first-choice, 131
+  - random-list, 131
+  - stochastic, 131
+- Hinek, M., 1046, 1061, 1068, 1097
+- Hrogami, S., 67, 1091
+- Hinnrich, T., 225, 1094
+- Hinnrich, T. R., 305
+- Hintka, J., 358, 1098
+- Hinton, G. E., 35, 144, 136, 726, 836–832, 900, 1029, 1072, 1082, 1098, 1099, 1102, 1113
+- HIPAA, 101
+- Hipp, J. D., 48, 1104, 1113
+- Hirschberg, J., 45, 1114
+- Hirth, M., 1068, 1099
+- Hitachi, 377
+- Horvitz, E. J., 80, 43, 516, 547, 1090, 1099, 1088
+- 人类判断, 528
+- 人类性能, 19
+- HMM (马尔可夫模型), 43, 47, 391, 491–496, 503, 515, 783
+- Hoseini, S. S., 161, 1996
+- Holfield, T., 1068
+- Holtelling, A., 838, 1099
+- Holtz, H., 367, 1060
+- HOLUI (人机交互), 222
+- Husby, S., 113, 1137
+- Ho, J., 373, 985, 1052
+- Ho, M. K., 399, 415
+- Ho, T. K., 736, 737, 1099
+- Ho, Y.-C., 856, 889
+- Hoane, A., 222, 229
+- Hume, D., 24, 1999
+- Humphrys, M., 1035, 1099
+- Hung 算法, 658
+- Hankelson, T., 376, 1099
+- Hunsberger, L., 627, 639, 1099
+- Hunt, J. W., 986, 1014
+- Ho, R. J., 393, 391, 1094
+- Hobes, T., 24
+- Holstetter, C., 838, 1099
+- Hges, J., 735
+- Hoff, M. E., 39, 870, 1116
+- Holman, G., 986, 1116
+- Hunt, W., 330, 1099
+- Hunter, L., 779, 1099
+- Hags, A., 1052, 1099
+- Hurst, C., 668, 669
+- Hurst, M., 906, 1099
+- Hurst, S., 871, 871
+- Holman, G., 968, 798, 1094, 1115
+- Holman, S., 1047, 1060
+- Holman, J., 372, 394, 398
+- Holman, A., 1016, 1099
+- Holmeister, A., 516, 119
+- Hogan, N., 985, 1099
+- Hoi, D., 1021, 1030, 1091
+- Holenstein, R., 1987
+- Holland, J. I., 161, 996
+- Hollman, H., 81
+- Huygens, C., 426, 617, 1099
+- Hyn, N., 125, 1099
+- Hwa, A., 558, 1099
+- Hwang, C. H., 627, 1099
+- Hylaf, L., 734, 1099
+- `HYBRID-AGENT`, 260
+- hyperc, 588
+- hyperparameter, 648, 782
+- typeeth, 191
+- hypothesis, 669
+  - approximately correct, 691
+- Holl, R. C., 106, 114, 126, 637, 1085, 1094, 1099
+- Holman, J., 327, 1099
+- Holman, A. K., 1064, 1062
+- Hood, A., 209, 1099, 1115
+- Hoo, H. I., 160, 590, 747, 1088
+- Hofej, J., 736, 984, 1112
+- Hofield, 1068, 1099
+- Hofield network, 839
+- HORIZON (强化学习)
+  - platform, 873
+  - infinite, 586
+- horizon (in MDPs), 555
+- hor effect, 204
+- Ho, A., 266, 311
+- Hof, B. D., 1050, 1099
+- Hof, K. V., 428, 1029
+- Ho, W., 334, 1093
+- Ho class, 247
+- Hof form, 256, 286
+- Horning, 1099
+- Horowitz, M., 268, 1108
+- Horowick, J. C., 429, 1082
+- Horsfall, P., 667, 1082
+- Horswill, L., 987, 1099
+- Hoseini, S. S., 161, 1996
+- Holfield, T., 1068
+- Holtelling, A., 838, 1099
+- Holtz, H., 367, 1060
+- HOLUI (人机交互), 222
+- Husby, S., 113, 1137
+- Houtman, M., 488, 103
+- Howe, D., 473, 1099
+- Howard, J., 738, 930, 1095
+- Howard, R. A., 544, 550, 584, 1099
+- Howard, S., 516
+- How, A., 362, 398
+- Howie, D., 331, 1099
+- How, P., 737, 1061
+- Howson, C., 665, 1099
+- HSPC (启发式项目), 41
+- Hutchinson, C., 1046, 1116
+- Hutchinson, S., 79, 985, 1090
+- Hut, M., 297, 1099
+- Hutter, D., 928, 1099
+- Hutter, F., 339, 737, 1094, 1099, 1012
+- HSP (启发式搜索), 398
+- Hutter, H. P., 716, 1137
+- Hutter, F. E., 222, 1099
+- Hutter, C., 222, 1116
+- Hutter, J. S., 638, 1060, 1099
+- Hutter, Y. T., 1023, 1099
+- Hutter, A. S., 39, 1066
+- Huis, M. N., 480, 521, 109
+- Huis, E. E., 356, 399
+- Huis, M., 901, 109
+- Huis, B., 837, 1029, 1031
+- Huis, T., 45, 48, 220, 223, 821
+- Huis, D., 904, 1094, 1096, 1118
+- Huis, S., 48, 1099
+- Huis, X., 417, 1129
+- Huis, Y., 938, 1110
+- Huis, Z., 837, 1111
+
+# 1138 索引
+
+- ignore-deletes heuristic, 372
+- ignore-preconditions heuristic, 371
+- ida, 222, 2111
+- III, D., 1046, 1096
+- ICAI (国际人工智能会议)
+- ILOG (约束逻辑规划系统), 330
+- ILQR (迭代LQR), 962, 982, 985
+- image form, 989–995
+  - segmentation, 1001–1002
+- image caption, ImageNet
+- image data set, 34, 46, 1003, 1071
+- image transformation, 1020
+- IMDAR
+- iterative building, 864
+- iterative method, 620, 608
+- implementation (a high-level action), 375
+- implication
+- implication, 228
+- implicative native form, 317
+- implicit model, 831
+- imperfection sampling, 457
+  - sequential, 509
+- imputation
+- imputation, 617
+- inadmissibility heuristic, 107
+- insufficient,
+- incentive benefit, 625
+- inclusion-exclusion principle, 411
+- Information Comparisons, 1046
+- information content, 951
+- complete information gain, 968
+- impleteness, 334
+- the, 3723, 1023
+- indexical, 495
+- implication-difference, 415, 416
+  - absolute, 419
+  - absolute, 416
+  - conditional, 419, 424, 426
+  - absolute, 444, 472, 477
+  - context-specific, 438
+  - marginal, independent subproblems, 183
+- iterated learning, 905
+- index, 302, 304
+- indicator variable, 791
+- indifference, of, 427
+- indifference-free offer, 633
+- inductive rationality, 617
+- inductive learning, 671–674, 733
+- inductive logic programming (ILP), 428, 750, 767
+  - attribute-based learning, 759
+  - constructive induction, 760
+  - family tree, 760
+  - Journal of Molecular Biology, 766
+  - molecular experiments, 767
+  - NEW-LITERAL, 762–765
+  - positive and negative examples,
+  - PROGL system, 765
+  - trees-conditional, 758
+  - resvent C., 763
+- inductive learning methods, 761–763
