@@ -1,0 +1,759 @@
+- pgno: 0
+  md: '![](img/d513d62f05793611c13a01e05574c355_0_0.png)
+
+
+    Available online at www.sciencedirect.com
+
+
+    ![](img/d513d62f05793611c13a01e05574c355_0_1.png)
+
+
+    # ScienceDirect
+
+
+    Procedia Computer Science 215 (2022) 340–349
+
+
+    # 4th International Conference on Innovative Data Communication Technology and
+    Application
+
+
+    # Document Management System Empowered by Effective Amalgam of Blockchain and
+    IPFS
+
+
+    Shikhar Saranga*, Dhruv Rana*, Smit Patel^a, Darshil Salaviya*, Udai Pratap Rao*,
+    Akhil Chaurasia*†
+
+
+    *Department of Computer Science & Engineering, Darsh Vallabhhai National Institute
+    of Technology, Surat, 395007, Gujarat, India
+
+
+    # Abstract
+
+
+    The world has started digitization, even before the global market, which had led
+    to various processes, like verification and application of documents, going online.
+    This also leads to an increase in the amount of data and traffic on the internet,
+    causing an increase in cyber fraud, as document (digital) forgery. All this led
+    to the need for a secure digital document management platform. With the help of
+    Blockchain Technology, a safe alternative for the same can be developed. In this
+    paper, we have studied the cases where digital forms of documents are used, and
+    based on Blockchain Technology, we have created a secure web application for all
+    the processing of documents. The web application generates credentials as requested
+    for defined templates and stores them securely in the distributed network (Polygon)
+    and the document as an IPFS (InterPlanetary File System). It provides the facility
+    to verify the authenticity of the document. It also allows users to share access
+    to their documents for a specific time.
+
+
+    © 2023 The Authors. Published by Elsevier B.V.
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+    Peer-review under responsibility of the scientific committee of the 4th International
+    Conference on Innovative Data Communication Technologies and Application
+
+
+    Keywords: Blockchain Technology; Polygon (Matic); Decentralized Applications;
+    InterPlanetary File System
+
+
+    # 1. Introduction
+
+
+    With rapid digitalization, many government or private organizations have moved
+    to online platforms. Though the conventional onsite procedure continues for the
+    most of various reasons, it is evident that the online procedure provides a convenient
+    experience for both the applicant and the processing agency. Some underlying concerns
+    are also faced as the process goes online, infrastructural constraints for the
+    data and redundancy as the documents are required for different applications,
+    resulting in the requirement to provide the data and document under the constraints.
+    Including other minor concerns, the major concern is cyber fraud and digital forgery.
+
+
+    * Corresponding author.
+
+    E-mail address: akhilchaurasia47@gmail.com
+
+
+    1877-0069 © 2023 The Authors. Published by Elsevier B.V.
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+    Peer-review under responsibility of the scientific committee of the 4th International
+    Conference on Innovative Data Communication Technologies and Application
+
+    10.1016/j.procs.2022.12.030'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Shikhar Saraf et al. (Procedia Computer Science 215 (2022) 340-349 341
+
+
+    With the increasing accessibility of the internet throughout the country, the
+    rate of cybercrime is increasing, with an 18% rise in the cybercrime rate [1].
+    The number of cases of digital forgery is also increasing, with 580 cases in 2020,
+    515 cases in 2019, and 338 cases of digital document tampering were also seen
+    in the year 2020 [2]. In today''s world, the need for a more convenient and secure
+    way to authenticate, share, approve and official digital documents is rising.
+    The existing portals for online processes generally involve filling registration
+    forms, and then uploading a few documents for the verification of information
+    are typically stored in a centralized server, which makes data vulnerable to attacks.
+    The documents are stored at an onsite-server and, in most of the cases is digital
+    form of paper-based original document, which increases the chance of digital forgery
+    and tampering.
+
+    Thus, using Blockchain-based services for online applications and other processes
+    provides a solution to improve the security of the document and also result in
+    a decrease of counterfeiting.
+
+
+    # 1.1. Motivation
+
+
+    The cybercrime rate is constantly increasing with the use of digital space. However,
+    cybercriminals like digital forgery and document tampering can go unnoticed if
+    proper checking and inquiries are not made. Thus, there may be cases where the
+    crime has taken place, but due to unawareness of the victim, they are not noticed.
+    Moreover, in a country like India, where the percentage of the uneducated population
+    is considerable, and are dependent on third parties for their various work related
+    to documents, the act of crime against them is high. Thus, the Blockchain-based
+    management system will help improve this situation, especially against unaware
+    people, as it is a more secure option and will lead to a cleaner organization
+    in terms of fake or tampered documents.
+
+
+    # 1.2. Objectives
+
+
+    In this paper, we are analyzing the cases of Blockchain with the primary objective
+    of how it can be used to develop a prototype of the safe and secure online document
+    management portal. To begin, we will discuss Blockchain technology and its fundamentals
+    and understand how it can reduce the possibility of tampering, provide a reliable
+    way of approval of new documents and provide safe sharing features.
+
+
+    # 1.3. Contribution
+
+
+    Following are the contribution made by us in the direction of solving the problem
+    statement:
+
+
+    +   - Selection of distributed file system using centralised database for storage
+    of documentation by comparing them various parameters
+
+    - Secured and distributed storage of documents using Blockchain and Inter Planetary
+    File System (IPFS)
+
+    - Unification of generation, verification, storage and sharing of documents
+
+
+    # 1.4. Organization of Paper
+
+
+    This paper is divided into five sections. Section 1 presents a brief introduction
+    of the document management system, the limitations of existing systems, the motivation
+    behind choosing this topic, its objectives, and our contribution to the same.
+    Section 2 presents the theoretical background and literature review, which covers
+    Blockchain technology and file management system techniques. Section 3 presents
+    the proposed work and details of the methodology. Section 4 presents the simulation
+    and the results of the implementation of the proposed work. Section 5 presents
+    the concluded work and provides information about the future scope that can be
+    built upon the proposed system.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 2. Related Work
+
+
+    # 2.1. Blockchain
+
+
+    Blockchain is a decentralized network that updates a shared records database by
+    cryptography. A decentralized network eliminates the requirement for a middlemen:
+    one of the parties involved in the transaction requires a basic verification with
+    the Blockchain history to authorize it.
+
+
+    Unlike the traditional system, the Blockchain registry is distributed and stored
+    on computers and data centers. Thus, no single ownership of the data, and each
+    instance contains all the transactions. Blockchain is similar to a massive ledger
+    maintained by all participants in the system, in which transactions are irrevocably
+    revoked [3]. It is a compiled and validated sequence of all transactions in the
+    network since it is public, unique, and shared by system members.
+
+
+    # 2.1.1. Distributed Consensus
+
+
+    Distributed consensus is a critical component of Blockchain and cryptocurrencies
+    in distributed systems. Consensus signifies that many agrees, as opposed to unanimity,
+    which requires everyone to agree. The consensus in Blockchain occurs by methods
+    comprised of specific protocols and well-defined rules between the Peer-to-Peer
+    (P2P) network participants [4].
+
+
+    # 2.1.2. Transactions
+
+
+    With cryptocurrencies, the data structure that captures the semantics of the application
+    is similar to that of a credit balance sheet. It is made up of the following components:
+    A Timestamp, the Previous Transaction''s Hash, The Input Value, The Output Value,
+    the Receiver, Account Key of Receiver [5].
+
+
+    # 2.1.3. Chain of Blocks (Blockchain)
+
+
+    Merkle Tree is a tree structure based on hashes that connects transactions in
+    a block [6]. The leaves of the Merkle Tree represent transactions, and the hashes
+    of the children develop the hashes of the parents. The hashes of the leaves, and
+    the hashes of the intermediate branch are calculated using the hashes of the immediate
+    branches, until the hash of the tree''s root is included in the block.
+
+
+    # 2.1.4. Smart Contracts
+
+
+    A Smart Contract is defined as a piece of code written in some specific programming
+    language that can be deployed to the Blockchain network to create contract accounts.
+    The contract contains the instructions which define the contract account must
+    be. Smart contracts are self-executing and self-enforcing when the rules are met
+    at all stages. They are tamper-proof, as no one can change what''s been programmed,
+    directly written into lines of code. Smart contracts offer several advantages
+    such as [7]: speed and real-time updates, less execution risk, fewer intermediaries,
+    and lower costs.
+
+
+    # 2.1.5. Decentralized Applications (DApps)
+
+
+    Decentralized Applications (DApps) are open-source entities that a group of users
+    may deploy by agreement. They need the for centralized entities like governments
+    or public companies. DApps share some characteristics, which are as follows [8]:
+    open source, decentralized, incentivize, and proof of value protocol.
+
+
+    # 2.2. Applications
+
+
+    # 2.2.1. Blockcerts
+
+
+    A developed project was initiated by MIT Media Lab and Machine Learning, Now Hyland
+    Credentials. Blockcerts use an open standard for issuing, viewing, and verifying
+    certificates [9]. It was implemented in Blockchain, and now they are working on
+    expanding to the Ethereum chain. Their primary goal is to facilitate the maintenance
+    of all forms of certificates, including educational credentials, professional
+    certifications, workforce development, and public records.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'Shikhar Sarung et al. / Procedia Computer Science 215 (2022) 340–349
+
+
+    # 2.2. LegitDoc
+
+
+    LegitDoc is a flagship product developed by CrossForge Solutions Pvt. Ltd., which
+    has developed a DApp which can issue any digital documents (Government-issued
+    documents, educational certificates, records, banking documents, invoice papers,
+    lab reports, medical reports, etc.) to its stakeholders who can be verified within
+    10 seconds [10]. Using Ethereum as the underlying stack, LegitDoc has a proprietary
+    method to calculate and process hashes of documents generated by issuers. Original
+    document and its corresponding proof file are required for issues that can be
+    used for verification.
+
+
+    # 2.3. Blockchain Platforms
+
+
+    There are many Blockchain platforms that can be used for deploying DApps and smart
+    contracts. Let''s look at few of them with pros and cons.
+
+
+    # 2.3.1. Ethereum
+
+
+    Ethereum is an open-source Blockchain, which is widely used to develop and deploy
+    decentralized and reliable applications. Every node in the Ethereum network stores
+    a full copy of the Blockchain, so all the transactions are executed by the nodes
+    must agree upon the transaction.
+
+    Without incurring the expenditures of constructing their own, anyone may create
+    a Blockchain-based system and operate on Ethereum''s infrastructure. Ether is
+    used by the Ethereum network to reward nodes for computations and move money between
+    accounts/wallets. Downtime, censorship, fraud, or third-party intervention do
+    not affect Ethereum Blockchain applications.
+
+
+    # 2.3.2. Hyperledger Fabric
+
+
+    It is a business Blockchain network hosted by Linux Foundation, using a modular
+    architecture ensuring confidentiality and scalability. The platform allows developers
+    to build all types of private Blockchain apps. It is extremely popular for organizational
+    use [11]. The differences between Ethereum and Hyperledger Fabric are mentioned
+    in Table 1.
+
+
+    Table 1. Comparison between Ethereum and Hyperledger Fabric [12]
+
+
+    | Points To Consider | Ethereum | Hyperledger Fabric |
+
+    |---|---|--|
+
+    | Ideal For | Business-to-Consumer businesses and general apps | Business-to-Business
+    Businesses |
+
+    | Discretion | Transparent | Confident Transactions |
+
+    | Consensus Algorithm | Proof of Work (PoW) | Pluggable Consensus |
+
+    | Cryptocurrency Used | Ether is used to execute contracts | No Cryptocurrency
+    |
+
+    | Programming Language | Solidity is used to write Smart Contracts | Golang is
+    used to write Chainchains |
+
+
+    # 2.3.3. Polygon (Matic)
+
+
+    Polygon (Matic) is an L2 scaling solution developed on top of Ethereum to solve
+    some of the most significant barriers to DApp adoption: scalability, usability,
+    and speed. Since the users on Polygon can create off-chain actions for payments
+    and smart contract interactions, Polygon calls itself the "Ethereum of blockchains."
+    Polygon makes a distinctive approach to L2 scaling by plasma, a L2 scaling solution
+    that generates a tree-like set of "child Blockchains" that utilize the Ethereum
+    as a tree and arbitration layer.
+
+    Polygon''s new Blockchain is developed as a "commit chain" rather than a "side
+    chain." The main difference is noted that sidechains mostly rely on their validators
+    for security purposes. In contrast, for example, Polygon'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'Shikhar Sarung et al. / Procedia Computer Science 215 (2022) 340–349
+
+
+    commit chains can internalize Ethereum''s network security by utilizing Ethereum
+    validators. The differences between Ethereum and Polygon are mentioned in Table
+    2.
+
+
+    | Parameter | Ethereum | Polygon (Matic) |
+
+    |--- |--- |--- |
+
+    | Native Token | ETH | MATIC |
+
+    | Programming Language | Solidity | GoLang, Solidity, Viper |
+
+    | Number of Transactions per second | 13-15 | Upto 6500 |
+
+    | Consensus Mechanism | PoW (Proof of Work) | POS (Proof of Stake) |
+
+    | Architecture | Stateful Architecture | Multichain Architecture |
+
+    | Scalability | Limited Scalability | Better Scalability |
+
+
+    Table 2. Ethereum vs Polygon [13][14]
+
+
+    Polygon provides solution to these problems, it by providing the following benefits:
+
+
+    +   * Modular and "security as a service"
+
+    * One-click deployment of preset Blockchain networks
+
+    * Interoperability protocol for exchanging barycentric measures with Ethereum
+    and other Blockchain networks
+
+    * Adaptor modules for enabling interoperability for the currently existing Blockchain
+    networks
+
+    * Growing set of models for developing custom networks
+
+
+    # 2. Storing Data and Files
+
+
+    # 2.4.1. MongoDB
+
+
+    MongoDB is an open-source NoSQL relational database management system. MongoDB
+    can store and retrieve document-oriented data. MongoDB works using records that
+    contain data field and value pairs. Groups of documents that operate similarly
+    to a relational database table are known as collections. All collections can hold
+    any kind of data, this data cannot be distributed over many databases [15].
+
+
+    # 2.4.2. BigchainDB
+
+
+    BigchainDB is a scalable database. It was created to bring the advantages of two
+    worlds: "conventional" distributed databases and "traditional" Blockchains. BigchainDB
+    begins with a standard database (original RethinkDB) with the following properties:
+    scale and query ability. From that, we will build Blockchain features such as
+    decentralized, immutable assets.
+
+
+    # 2.4.3. IPFS
+
+
+    The Interetary File System (IPFS) is a distributed file protocol and a peer-to-peer
+    network. Using IPFS, we can store and share information. IPFS takes advantage
+    of a data structure called Directed Acyclic Graphs (DAGs). Specifically, we use
+    Merkle DAGs, where each node has a unique identifier that is a hash of its contents.
+    To identify an individual file in a global namespace that links the content, IPFS
+    uses content-addressing [16]. When you upload a file to IPFS, it is split into
+    smaller chunks of data, which are hashed cryptographically, and then assigned
+    a fingerprint termed Content Identifier (CID). The SHA-256 hashing algorithm guarantees
+    a unique CID for each default. This CID is a permanent record of your file as
+    it exists. When others search for your file, they inquire whether their peers
+    are storing the content referenced by the CID. They cache a copy of your file
+    when they view or download it, and becomes another source of you until their cache
+    is erased.
+
+    A node in the network keeps the just as it is concerned, and adding some information
+    to identify which node is storing what. When you upload a new version to IPFS,
+    its cryptographic hash changes, and it obtains a new CID. This indicates that
+    IPFS is resistant to manipulation and censorship – any modifications to a file
+    do not erase the original, and common portions across files may be reused to'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Shihar Sarung et al. / Procedia Computer Science 215 (2022) 340–349
+
+
+    mean you have to remember a long string of CIDs because IPFS can utilize the IPNS
+    decentralized naming system to locate the latest version of your, and DNSLink
+    can link CIDs to human-readable DNS names [17].
+
+
+    # 2.4. Evaluation of File Storage System
+
+
+    MongoDB is a centralized database. The problem with centralized databases or even
+    decentralized databases like Google Cloud is they are vulnerable to attacks. Also,
+    Distributed systems provide advantages like security, accessibility, accountability,
+    and cost reduction [18].
+
+
+    BigchainDB is a hybrid of distributed databases and Regularchains that combine
+    the best of both worlds [19]. Thus, being a perfect fit for DApps dealing with
+    NFTs (Non-Fungible Tokens) or Ethereum Tokens. However, our solution requires
+    storing documents in a safe system and getting them whenever needed. IPFS becomes
+    a better fit for the implementation as it provides simplicity and security.
+
+
+    # 3. Proposed Work
+
+
+    In this research, we aim to build a system that helps to manage, verify and share
+    Documents using Blockchain Technology. The workflow for this system includes starting
+    with a basic template for a specific document and utilizing the same to generate
+    documents with a unique Signature (hash) that will be used to verify the document.
+    It has three parts: generation, verification, and sharing.
+
+
+    # 3.1. Generating Certificate
+
+
+    First, the certificate is created and uploaded on the platform. Then the end users
+    can use these templates as application forms for getting the certificate. Afterward,
+    the approver can verify all the details provided by viewing other supporting documents
+    to be shared by the applicant on the approver dashboard, as identity card, and
+    the certificate for the applicant. Also, the details are added to the Blockchain,
+    and the applicant can download the PDF or use the platform service to share the
+    certificate.
+
+
+    # 3.1.1. Creating and Uploading Template
+
+
+    For applicants to apply for a new type of certificate, the document issuer must
+    provide the required fields and documents for approval. Then a template for the
+    form using the pdfLib npm package is created.
+
+
+    # 3.1.2. Getting the data
+
+
+    To provide the data, the applicant has to fill out the form template, available
+    in PDF format. After filling out the form template, the applicant needs to upload
+    the filled form with the required documents as a PDF or use the shared service
+    of the platform.
+
+
+    # 3.2. Verify the data and generate the certificate
+
+
+    Once the form is submitted, the approver completes the verification of all the
+    provided data and approves the certificate. On approval, the details of the certificate
+    holder are added onto the Blockchain, and the certificate is generated and made
+    available for download.
+
+
+    # 3.2.1. Storing the certificate onto the Blockchain
+
+
+    Once the certificate is approved and generated, it is stored in the IPFS, and
+    a unique CID is generated. This CID is saved in the Blockchain along with the
+    owner details.
+
+
+    # 3.3. Verifying Certificate
+
+
+    For verification of the certificate, it needs to be uploaded on the platform.
+    On uploading the certificate, we use the “pdf-lib” npm package to read the content
+    of the certificate, using the “load” method of the “PDFDocument” class, which
+    reads all the data fields in the form of metadata. Now, we search for the same
+    user’s certificate in the Blockchain'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'and the CID, the cryptographic hash of the data, for the certificate we generated.
+    Using this CID, we can get
+
+    original certificate from IPFS and, using the "pdf-lib" npm package, obtain all
+    the data fields. If matched, we can
+
+    that the certificate is verified, else the certificate is not verified and is
+    not credible.
+
+
+    # 3.4. Sharing Certificate & Other Features
+
+
+    The authenticated users have a Dashboard page on which they can see all their
+    generated certificates, with the
+
+    share option. Using it, the users can choose to give access to their documents
+    to a particular user in the system, be it
+
+    another user or prover, for a user-defined amount of time. The user that needs
+    the certificate needs to input the email
+
+    of of the recipient and the period in days for sharing. After this, the other
+    user can see this certificate on their
+
+    dashboard along with their certificates.
+
+    Since the CID of the document, stored securely on the Blockchain, is shared with
+    the recipient, not document
+
+    elf, this ensures the document''s security. To improve user experience, we have
+    implemented a notification system.
+
+    Relevant Notifications will be shown to the authenticated users.
+
+
+    # 4. Simulation and Results
+
+
+    This section describes the experimental results obtained by us. The implementation
+    is divided into three modules.
+
+    the first module is the generation of certificates, the second module highlights
+    the verification process, and the
+
+    third module is sharing certificates. We have used the IPFS, React.js, Node.js,
+    Express.js, and Polygon (Matic)
+
+    as a Blockchain. Smart Contracts are written in Solidity.
+
+
+    # 4.1. Software Specifications
+
+
+    +   * Frontend Development: ReactJS, Semantic UI
+
+    * Backend Development: NodeJS, IPFS, Polygon (Matic, Blockchain Network)
+
+    * Package Manager: Node Package Manager (NMP)
+
+
+    # 4.2. Interface of The Web-Portal
+
+
+    ![](img/d513d62f05793611c13a01e05574c355_6_0.png)
+
+
+    Fig. 1(a) shows the steps of how the applicant use to create a certificate. Select
+    the certificate to generated from
+
+    t available certificate and the form. On submitting it the applicant will be redirected
+    to the dashboard with the
+
+    new certificate added to it with pending status.
+
+    Fig. 1(b) depicts the process of approval of certificate. On applying for a new
+    certificate, the certificate appears on
+
+    t dashboard of the approver, who can approve or reject the certificate. Approver
+    can click on the “view” button to see'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "# Shikhar Sarang et al. / Procedia Computer Science 215 (2022) 340–349\n\n\
+    the details of the document. On approval or rejection the applicant is informed\
+    \ by a notification on his/her dashboard, and the status is also changed.\n\n\
+    ![](img/d513d62f05793611c13a01e05574c355_7_0.png)\n\nFig. 2. (a) View of Certificate\
+    \ for the prover before approval and (b) View of Certificate\n\nFor verification\
+    \ of the identification, before approval of certificate the prover can view the\
+    \ certificate as shown in Fig. 2(a).\nThe user can use the feature of verification\
+    \ of a certificate by uploading any existing certificate on the verify page as\
+    \ shown in Fig. 2(b).\n\n![](img/d513d62f05793611c13a01e05574c355_7_1.png)\n\n\
+    Fig. 3. Sharing of Certificate\n\nThe user can use the feature of sharing of the\
+    \ approved certificate. The receiver gets a notification on his/her dashboard\
+    \ once the certificate is shared as shown in Fig. 3.\n\n# 4.3. Smart Contracts\
+    \ Implementation\n\nContracts Implemented: IdentificationCertificateContract.sol,\
+    \ PassportCertiContract.sol, BirthCertificateContract.sol, Dashboard.sol,ShareCertificateContract.sol,\
+    \ Login.sol, NotificationContract.sol\nSome important functions are dotted below:\n\
+    \n```\nfunction newIdentificationCertificate(string memory accName, string memory\
+    \ _name _number, string memory _ipsfHash, string memory _description)\npublic\
+    \ {\n    IdentificationCertificate memory c;\n    c.ipsfHash = _ipsfHash;\n  \
+    \  c.description = _description;\n    c.name = _name;\n    c.number = _number;\n\
+    \    c.state = 0;\n    c.accName = _accName;\n    IdentificationCertificates[accName]\
+    \ = c;\n    IdentificationCertificateQueue memory b;\n    b.state = 0;\n```\n\n\
+    *"
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "b.accName = accName;\nenqueueIdentificationCertificate(b);\n\n```\nfunction\
+    \ approveIdentificationCertificate(string memory accName) public {\n    IdentificationCertificate\
+    \ memory c = IdentificationCertificates[accName];\n    if(c.state != 0) return;\n\
+    \    c.state = 2;\n    IdentificationCertificates[accName] = c;\n    updateIdentityCardQueue();\n\
+    }\n```\n\n```\nfunction getIdentificationCertificate(string memory accName) public\
+    \ view\n(IdentificationCertificate memory) {\n    return IdentificationCertificates[accName];\n\
+    }\n```\n\n```\nfunction shareCertificate(string memory sharerAccName, string memory\n\
+    sharedToAccName, uint typeOfCerti, uint time, string memory\ntimeOfSharing) public\
+    \ {\n    uint userId = accountName.userId[sharerAccName];\n    uint viewerId =\
+    \ accountName.userId[sharedToAccName];\n    require(userId >= 1, \"User not found\"\
+    );\n    require(viewerId >= 1, \"Viewer not found\");\n    require(userId != viewerId,\
+    \ \"You can't share certis with yourself\");\n    SharedCertis memory b;\n   \
+    \ b.sharerAccName = sharerAccName;\n    b.timeOfSharing = timeOfSharing;\n   \
+    \ b.time = time;\n    b.typeOfCerti = typeOfCerti;\n    userHasAccessToCertis[sharedToAccName].push(b);\n\
+    }\n```\n\n```\nfunction getSharedCertis(string memory accName) public view\n(SharedCertis\
+    \ memory b) {\n    b = userHasAccessToCertis[accName];\n}\n```\n\n# 4.4. Discussion\n\
+    \nWe demonstrated the prototype of a safe and secure document management system\
+    \ using the Polygon network\nand IPFS. We successfully tested the creation, verification,\
+    \ and sharing of documents, via deploying on Mumbai Test\nNetwork and local IPFS\
+    \ daemon server.\n\n# 5. Conclusion and Future Scope\n\n# 5.1. Conclusion\n\n\
+    After reviewing various research papers and blogs on Polygon, available Blockchain\
+    \ technologies, and application-\nlevel node modules and packages, we finalized\
+    \ a solution that would be most convenient for the end user. A thorough\nstudy\
+    \ on databases and file management systems was conducted, and we found that IPFS\
+    \ would be the best"
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'alternative for the proposed solution. We implemented the solution with features:
+    generation, verification, sharing of
+
+    duments, and a notification system.
+
+
+    # 5.2. Future Scope
+
+
+    In the future, the proposed solution can be improved. Documents can be encrypted
+    before uploading them to
+
+    t IPFS network. Furthermore, when requesting approval a document, its supporting
+    documents can be automat-
+
+    shared with the approver. Also, the application User Interface can be built to
+    make it more user-friendly.
+
+
+    # References
+
+
+    +   [1] "India reported 18% rise in cyber crime in 2020; 578 incidents of ''fake
+    news on social media:''" The Hindu, Sep. 2021. Accessed on
+
+    04.10.2021.
+
+
+    +   [2] NCR, Crime in India 2020.
+
+
+    +   [3] M. Pilkington, "Blockchain technology: principles and applications;" Sep.
+    2015.
+
+
+    +   [4] M. Miluniovic, W. He, H. Wu, and M. Kanwal, "Proof of luck: An efficient
+    blockchain consensus protocol," in proceedings of the 11th Workshop
+
+    s on Software Engineering for Trusted Systems, pp. 1–6, 2016.
+
+
+    +   [5] G. Meiklelein, M. Pomartile, G. Zheng, K. Skelenik, D. McCoy, G. M. Voeler,
+    and S. Savage, "A fistful of bitcoins: characterizing payments
+
+    am with names," pp. 127–140, 2013.
+
+
+    +   [6] M. Sherrier, "Performance and scalability of blockchain networks and smart
+    contracts," 2017.
+
+
+    +   [7] S. Nazva, "Smart Contracts Implementation, Applications, Benefits, and
+    Limitations," Journal of Information Engineering and Applications,
+
+    Oct. 2019.
+
+
+    +   [8] S. Wang, "What Are DApps? The Decentralized Future," May 2019. Accessed
+    on 03.12.2021.
+
+
+    +   [9] Blockcharts, "Introducing LEGITDOC;" Accessed on 04.10.2021.
+
+
+    +   [10] N. Mathis, "Introducing Blockchain." Accessed on 04.10.2021.
+
+
+    +   [11] Hyperledger, "Hyperledger - Open Source Blockchain Technologies;" Accessed
+    on 04.10.2021.
+
+
+    +   [12] V. Wood, "More Virtual Alternatives to Ethereum: A Handy Guide -- Blog,"
+    Apr. 2020. Accessed on 03.12.2021.
+
+
+    +   [13] W. Q. Team, "Ethereum vs Polygon: Which One Is Better for NFT?" Feb.
+    2022. Section: NFT.
+
+
+    +   [14] G. Weston, "Solana and Polygon: A Detailed Comparison," Feb. 2022. Accessed
+    on 16.03.2022.
+
+
+    +   [15] B. Boteloh, "What is MongoDB? A definition from Whabs.com." Accessed
+    on 16.03.2022.
+
+
+    +   [16] "InterPlanetary File System," Mar. 2022. Page Version ID: 107559789.
+
+
+    +   [17] "IPFS: Distributed File System." Accessed on 16.03.2022.
+
+
+    +   [18] A. Firica, "Will Blockchain Replace MySQL and SQL?" Wiredelta,” Accessed
+    on 16.03.2022.
+
+
+    +   [19] BigchainDB: The blockchain database..." Accessed on 16.03.2022.'
+  merge: -1
+  img_proc: true
