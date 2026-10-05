@@ -1,0 +1,13 @@
+The PAD character at the beginning of the sequence is called a leading pad and is either a 55 hex or an AA hex (01010101 or 10101010). The purpose of the leading pad is to ensure transitions occur in the data before transmission of the actual message. The transitions are needed for clock recovery in the receive mode to maintain bit synchronization. Immediately following the leading pad are SYN characters that establish character synchronization. EOT is used as a clearing character that places all secondary stations into the line-monitoring mode. The PAD character immediately following the second SYN character is simply a string of successive logic 1's serves as a time fill, giving each of the secondary stations time to clear. The number of 1s transmitted during this fill may not be a multiple of eight bits. Consequently, the two SYN characters are repeated to re-establish character synchronization. Two polling address (SPA) characters are transmitted for error detection (character redundancy). A secondary will not recognize or respond to a poll unless its SPA appears twice in succession. The two quotation marks signify that the poll is a general for any device that has a formatted message to send. If two or more devices have messages to transmit when a general poll is received, the station controller determines which device's message is transmitted.
+
+This allows the controller to prioritize the devices at the station. The enquiry (ENQ) character is sometimes called a format or line turnaround because it simply completes the polling sequence and initiates a line turnaround (i.e., the secondary station identified by the SPA is designated the master and must respond to the poll). The PAD character at the end of the polling sequence is called a trailing pad
+
+And is simply a 7F (DEL, or delete character). The purpose of the trailing pad is to ensure that the RLSD signal in the receive mode held active long enough for the received message to be demodulated.
+
+If the carrier were shut off immediately at the end of the polling sequence, RLSD would go inactive and disable the receive data pin. If the last character the polling sequence were not completely demodulated, the end of it would be cut off. Trailing pads are inserted at the end of all transmissions for the same purpose. With BSC, there is a second form of polling sequence called a specific poll.
+
+polling address is not a standard or widely recognized term. It's possible that you may be referring to a specific concept or protocol related to networking or data communication.
+
+169
+
+Data Link Protocols

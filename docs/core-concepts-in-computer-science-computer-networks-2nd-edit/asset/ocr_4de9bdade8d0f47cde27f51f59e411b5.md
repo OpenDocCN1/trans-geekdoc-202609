@@ -1,0 +1,15 @@
+notebook personal computer (PC) with a wireless NIC. A WLAN client may also be a desktop or handheld device (e.g., PDA, or custom device such as a barcode scanner) or equipment in a kiosk on a manufacturing floor or other publicly accessed area. Wireless laptops and notebooks—wireless enabled—are identical to laptops and notebooks except they use wireless NICs to connect to access points in the network. The wireless NIC is commonly inserted in the device's
+
+Personal Computer Memory Card Association (PCMCIA) slot or Serial Bus ( USB ) port. The NICs use radio signals to establish connections to the WLAN. The AP, which acts as a bridge between the wireless and wired networks, typically comprises a radio, wired network interface as 102.3, and bridging software. The AP functions as a base station for the wireless network, aggregating multiple wireless stations onto the wired network.
+
+> Universal Serial Bus is an industry standard that specifies the physical interfaces and protocols for connecting, data transferring and powering of hosts, such as computers, peripherals, keyboards and mobile devices, and intermediate hubs.
+
+# Range
+
+Long-range wireless is the sharing of information between wireless devices or computers. Also called WiFi, wireless technology typically transmits data at high speeds and allows users to connect from distances of up to 40 miles (about 64.37 km). In wireless technology, computer data is converted into radio waves and travels back through the air. A wireless router picks up these waves and translates them back into data. This process is similar to the technology used by cell phones, walkie-talkies, and other two-way communication devices.
+
+Due to the high speed of long-range wireless, more data can be transferred in shorter amounts of time. Although wireless technology is fast, there are some cases where more speed is necessary. The connection range and speed usually can be enhanced by special antennas or power amplifiers.
+
+Adding boosters can be a disadvantage, though not only do they increase speed they also make the connection more vulnerable to threats and other technical problems. Another minor concern with long-range wireless is the blocking of the line of sight (LOS). This means city users must consider obstructions such as buildings, microwave signals, and radio stations, while those who live in rural areas are more concerned with trees and loss of signal due to being located far outside of the connection range.
+
+Wireless technology is being used by millions worldwide. Businesses and educational institutions use wireless technology to establish coverage, provide remote support, and to complete research. Residential users of long-range wireless include remote access, access to reach rural areas, and local WiFi networks. For people who are away from home or at work, there are WiFi hotspots in public that allow users to connect to the Internet via a wireless transmitter.

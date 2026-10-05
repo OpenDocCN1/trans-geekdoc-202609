@@ -1,0 +1,15 @@
+Suppose we have a network as illustrated above. We have a source node (e.g. server) that is trying to send information (two packets) to two destination nodes (e.g. two mobile devices) - this is a typical multicast example.
+
+In a store-and-forward network, you would send packets 1 and 2 over possible routes and the network to handle the delivery of both packets to each receiving nodes. We can see that packet 1 could reach the destination node 1 via route s -> r1 -> d1. Similarly, packet 2 could reach destination node 2 via route s -> r2 -> d2. However, for the destination node 1 to get packet 2, we would need to rely on node r3 to send it to the destination node. Likewise, to deliver packet 1 to destination node 2, we would rely on r3 to send it to the destination node. This makes node r3 a bottleneck.
+
+In a coded network, the flow of information would be very similar. However, the data flowing through the network would be substantially different. What network coding proposes is nodes in a network can mix packets together (e.g. creating a packet that contains the XOR of multiple packets) and send these packets to the next node. This next node could again mix the packets it receives and send them to the next node. The process repeats until packets have reached their destination.
+
+What changed? Well, some relevant things. First, nodes in the network do not store-and-forward anymore but rather operate over the packets they receive, generating coded packets (the mixed packets). Second, the destination nodes do not receive the data packets as they were originally generated (now they receive coded packets!), so destination nodes must be able to “decode” these packets. How would they do that, may you ask? Let's go for an example.
+
+In algebraic formulations of network codes (e.g. linear network codes), coded packets are generated as linear combinations of packets (coded packets are of the form p=al1 + al2 + ... + an, where the a's are called coding coefficients, p's are data packets and n is the total number of packets we're mixing). Our goal is to recover p1, p2, ..., pn. So, what we need to do is to get enough packets, that we can solve a system of linear equations. If you remember from your algebra classes, this amounts to receiving n linearly independent combinations of packets (spoiler alert: this means that the way you choose your coefficients is really important to achieve high efficiency).
+
+So, let's get back to our butterfly network. How would the information flow through the network? Well, exactly in the way we are. Now, how would the bottleneck r3 generate coded packets?
+
+So instead of using two-time slots to send packets 1 and 2, node r3 can combine these two packets together and send this linear combination to the next node. The node r4 sends this coded packet to destination nodes d1 and d2.
+
+What happens at node d1? Well, it has received two packets: packet 1 via the route s -> r1 -> d1 and packet 3 (which contains packets 1 and 2) via the route s -> r4 -> d1. Since d1 received two linearly independent packets, it can now decode packets 1 and 2 by solving the following system of equations:

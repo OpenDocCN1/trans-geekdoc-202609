@@ -1,0 +1,13 @@
+# Cellular communications
+
+skipping the congestion avoidance phase. Another approach is for wireless link endpoints to cope TCP sending handoffs, by transparently closing the receiver's advertised window. The sender freezes all pending timers and starts periodically probing the receiver's window.
+
+are network where the last link is wireless. The network is distributed over land areas cells, each served by at least one fixed-location transceiver, but more normally three cells or base transceiver stations.
+
+After handoffs, congestion avoidance probes the capacity of the new link. With other wireless losses though, retransmissions are sufficient for recovery. Since end-to-end retransmissions are slow, TCP connections can be split using pivot routers connected to both wireless and wired links. End-to-end connections are decomposed into separate TCP schemes for the wired and wireless parts of the path. Another protocol optimized for error recovery may be substituted over the wireless links. Split schemes violate TCP semantics, as acknowledgments may reach the sender before data packets reach their destination. To preserve TCP semantics, acknowledgments must be delayed, reducing throughput. Pivot points face significant overhead, as packets undergo TCP processing twice, and considerable connection state is maintained there.
+
+# Link Layer Solutions
+
+In CC systems this is achieved by non-transparent mode RLPs. Another solution is to perform local error recovery (a link layer task) at the IP level, in Snoop TCP. Snoop tracks TCP data and acknowledgments by maintaining state of each connection traversing a pivot point. Snoop caches unacknowledged TCP packets and uses the loss indications conveyed by duplicate acknowledgments, plus local timers, to transparently retransmit lost data. It hides duplicate acknowledgments indicating wireless losses from the TCP sender, preventing redundant TCP recovery. Snoop exploits the information in TCP packets to avoid layer control overhead. It outperforms split TCP schemes, and it also avoids conflicting local and TCP retransmissions by suppressing duplicate acknowledgments. Snoop requires the TCP receiver to be located right after the pivot point. If a wireless host is sending data to a remote receiver, TCP acknowledgments are returned too late for efficient recovery, and they may even signify congestion losses. Explicit Loss Notification (ELN) is needed for TCP to distinguish between congestion and wireless losses. If the Snoop agent detects a non-congestion
+
+Explicit Loss Notification (ELN) is a mechanism by which the reason for the loss of a packet can be communicated to the TCP sender.
