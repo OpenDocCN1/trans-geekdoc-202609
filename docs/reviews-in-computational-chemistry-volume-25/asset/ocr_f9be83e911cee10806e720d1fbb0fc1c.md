@@ -1,0 +1,13 @@
+# 326 Recursive Solutions to Large Eigenproblems
+
+approaches²³⁷,²³⁸ have been reported. The former two approaches are similar to the SIL discussed above, whereas the latter is essentially an interpolation scheme similar to that in Eq. [95]. All of these methods are based on the recursive generation of Krylov subspace, and they are thus numerically efficient.
+
+# APPLICATIONS
+
+# Bound States and Spectroscopy
+
+The Lanczos algorithm has traditionally been an efficient way to extract the lowest few eigenvalues of a sparse matrix. However, many researchers have come to realize that it is equally powerful for mapping out large portions of, or even entire, bound-state spectra of polyatomic molecules. The equally powerful Chebyshev FD method, particularly the low-storage version, has also been used successfully for extracting bound-state spectra. Typical recursive diagonalization starts with an arbitrary initial vector, which is often chosen to minimize the possibility of missing certain eigenfunctions. The recursion, which is the most numerically costly part of the calculation, generates the correlation function or the tridiagonal matrix. The final step involves the diagonalization of a small generalized problem or a tridiagonal matrix. Some sorting and convergence testing might be needed to remove spurious eigenvalues. Several approaches exist, as discussed.
+
+In recent years, state-of-the-art recursive diagonalization methods have been applied to bound-states problems for LiCN¹¹⁵ H₂O¹¹²,¹¹⁷,²³⁹⁻²⁴¹ CH₄²⁴,¹³⁸,⁸⁰⁵⁻¹⁰⁷⁻²⁴¹ HOC⁴⁶⁰,²<h6>⁷,²⁴³⁻²⁴⁵ ArCHCl²⁶⁶ HOC¹¹²,¹¹⁶,²⁴⁷⁻²⁴⁸ NO₂⁷⁶,²⁴⁹⁻²⁵³ HCNCS₂₅ O₂²⁵,²⁵⁶⁻²⁶⁷ SO₂²⁶⁴,¹ much⁴,²⁴¹⁻²⁵⁵⁻²⁵⁹ DOOH¹¹²,¹ much⁸,²¹<h6>⁷⁻²¹⁶ HCCH¹¹⁰,¹۰³⁻¹⁹⁹ CS₂₅²⁹⁵,⁸⁹⁰,²₆⁸,²⁶¹⁻²⁶⁸ NH₃²⁶¹ HOCO¹¹⁶,¹³⁸,⁴⁸,²¹⁶⁶,²₆⁴,²⁶⁶,²₆⁸ HOCO⁶⁶ CH₄⁵⁷,¹¹₀⁻¹¹⁶ HFCO¹¹⁸,¹¹⁷⁻¹¹⁷ and several van der Waals scales. This list is by no means complete, but it does reflect major activity in the field. These complement the traditional sequential diagonalization and truncation approaches,⁵ have advanced our understanding of vibrational dynamics in polyatomic molecules and their roles in both unimolecular and biomolecular reactions significantly.
+
+The recursive solution of the ro-vibrational Schrödinger equation not only gives the eigenfunctions that form the spectrum but also additional information about the intermolecular coupling and dynamics. A significant question is how the energy injected in a particular vibrational mode is dispersed in a polyatomic molecule.⁵⁷,²⁸³⁻²⁸⁶ Experimentally, the intramolecular vibrational energy redistribution (IVR) can be investigated by overtone spectroscopy and stimulated emission pumping. A theoretical understanding of such problems often requires knowing the vibrational energy spectrum in regions with

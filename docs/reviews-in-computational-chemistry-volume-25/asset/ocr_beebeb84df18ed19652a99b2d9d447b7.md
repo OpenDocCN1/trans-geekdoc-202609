@@ -1,0 +1,9 @@
+![](bbox=[0.095, 0.096, 0.715, 0.403])
+
+**Figure 15** Comparison of relative composition of dominant species found in the MD simulation and in a thermodynamic calculation.
+
+the two vastly approaches needs to be established when using much longer simulation times. Also, the product-molecule set of the thermochemical code needs to be expanded with important species determined from quantum-based simulations. It should also be noted that the accuracy of DFT calculations for chemistry under extreme conditions needs further experimental validation.
+
+One expects the Cheetah results where more CO2 as CO is formed as final products, because disproportionation of CO to condensed C + CO2 is energetically favorable. The results displayed in Figure 14 show that at a simulation time of 40ps the system is in the second stage of reaction chemistry. At this stage, CO concentration is rising but has yet undergone the gas water shift reaction (CO + H2O → CO2 + H2) conversion. Interestingly, this occurs around 50ps in the simulation, when CO2 molecules are being formed while the CO concentration is correspondingly diminished.
+
+Although the simulation sheds light on the chemistry of HMX under extreme conditions, some methodological shortcomings need to be overcome in the future. The demanding computational requirements of the quantum-based MD method limit its applicability to short times and high-temperature conditions. For example, the simulations discussed on HMX took over a year of wall clock time. Moreover, the SCC-DFFT method is not as accurate as high-level quantum-based methods. Nonetheless, the SCC-DFFT approach could still be considered as a promising direction for future research on the chemistry of energetic materials.

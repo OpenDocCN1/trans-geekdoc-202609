@@ -1,0 +1,13 @@
+# 300 Recursive Solutions to Large Eigenproblems
+
+finding can be reconciled by considering the interpolation figure in Figure 4, where Lanczos interpolation points are needed to achieve the same resolution when $\Delta H$ is increased. Accordingly, it is extremely important to control the spectral range of the Hamiltonian in practical calculations, particularly when the DVR grid points are near singularities. A simple and commonly used strategy is to remove the DVR points above a certain cutoff. More sophisticated methods are discussed.
+
+The implementation of various forms of the Lanczos algorithm is straightforward, and a library of routines has been collected in the second volume of Cull and Willoughby's book.$^{27}$ Applications of the Lanczos algorithm to solve molecular vibration problems, pioneered by Wyatt,$^{43-47}$ Carrying-$12,13,15,48,49$ and others,$^{50-55}$ have been reviewed by several authors$^{56-60}$ and will be discussed in more detail. A list of other applications of the Lanczos algorithm in different fields of science can be found in the review by Wyatt.$^{56}$
+
+# Extensions of the Original Lanczos Algorithm
+
+As discussed, the original Lanczos algorithm generates eigenvalues easily, but it requires additional computational resources to obtain eigenvectors. A recently developed implicitly restarted Lanczos method (IRLM) for the accurate determination of the lowest eigenvalues and the corresponding eigenvectors$^{61}$ is achieved by storing and orthogonalizing a small number of Lanczos vectors and by combining an implicitly shifted QR method without additional matrix-vector multiplications. The advantages of this approach include the availability of eigenvectors and the avoidance of "spurious" eigenvalues. IRLM has a much larger memory requirement than the original Lanczos algorithm, even though the memory scaling is still linear. In addition, IRLM may not extract highly excited eigenpairs in the interior of the spectrum effectively.$^{62}$ IRLM routines are available in the public domain,$^{63}$ and several applications to molecular vibration problems have appeared recently.$64-67}$
+
+# Block Lanczos Algorithm
+
+One of the potentially fatal problems of the original Lanczos algorithm is its inability to handle degenerate eigenvectors. As we discuss, most degeneracy problems in molecular spectroscopy are caused by symmetry, but the degeneracy can be removed by symmetry adaptation. In cases where no physical insight can be used to remove the degeneracy, the block version of the Lanczos algorithm may be effective.$^{68}$ The basic idea here is to generate recursively not one but instead a few vectors simultaneously using the same three-term recursion (Eq. [25]). The resulting block tridiagonal matrix is

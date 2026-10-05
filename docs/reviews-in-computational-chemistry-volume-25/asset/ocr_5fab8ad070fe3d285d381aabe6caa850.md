@@ -1,0 +1,15 @@
+# 328 Recursive Solutions to Large Eigenproblems
+
+similarities with the time propagator, and a similar expansion (Eq. [70]) can be used.^125,126 The Chebyshev propagation is superior to time propagation because the action of the propagator on a vector can be calculated exactly with no approximation and a real algorithm is possible when the damped Chebyshev recursion^140,141 is used. Studies of reaction dynamics using the Chebyshev propagator have been advocated by several authors.
+
+Techniques for extracting the cumulative reaction probability^126,127,134,140,141,290–294^296,297 reactive flux and final state distribution have been reported for Chebyshev propagation.
+
+The applications of the Chebyshev recursion to reactive scattering problems have been discussed in recent reviews.^133,301 Lanczos-based methods have been similarly used for studying reaction dynamics. The most straightforward application involves the solving of a linear equation in the form of Eq. [87] using QMR or GMRES, which effectively compute the action of the Green operator on the initial vector |ψ_j⟩^93–97
+
+Recent progress in the area of reaction dynamics includes a Lanczos implementation of the artificial boundary inhomogeneity (ABI)^302 which allows for the calculation of S-matrix elements in real-symmetric Lanczos recursion^303,304 The Lanczos algorithm has also been used to diagnose the called reaction probability operator^305–307 which allows for the direct calculation of the cumulative reaction probability without the S-matrix elements. This operator has a few nonzero eigenvalues and is thus well suited for the Lanczos algorithm.
+
+Unlike the bound-state calculations where a random initial vector is commonly used, calculating the S-matrix element in Eq. [99] involves a well-defined initial vector. Such an initial vector consists of a translational wave packet and an eigenstate for the internal degrees of freedom, placed in the dissociation asymptote. Because each recursion produces a single column of the S-matrix, many recursions might be needed to obtain the entire matrix. However, Mandelshtam has argued that it is possible to obtain the S-matrix from cross-correlation functions from a single damped Chebyshev recursion starting with an arbitrary initial vector.^101,180^96,97,102,119,120
+
+The aforementioned applications of recursive methods in reaction dynamics do not involve diagonalization explicit. In quantum mechanical formulations of reactive scattering problems, however, diagonalization of sub-Hamiltonian matrices is needed. Recursive diagonalizers for Hermitian and real-symmetric matrices described earlier in this chapter have been used by several authors.^73,81
+
+Many bimolecular and unimolecular reactions are dominated by longlived resonances. As a result, having knowledge about the positions and lifetimes of such resonance states is highly desired. Recursive calculations of resonance states have been reported for many molecular systems, including

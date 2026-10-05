@@ -1,0 +1,1 @@
+Table 1 The Initial, Random Genetic Algorithm Population (The Significance of the Angles Marked in Bold is Discussed in the Text.)

@@ -1,0 +1,11 @@
+# 108 Atomistic Modeling of Friction
+
+indicate that for sub-monolayer coverages, commensurate systems exhibit μ that vanishes as $v_0$ goes to zero because the confined molecules move coherently which prevents first-order instabilities. Above one monolayer coverage, the confined molecules do not move in this manner and first-order instabilities occur, which leads to nonvanishing friction as $v_0$ goes to zero. The increase in first-order instabilities with coverage for commensurate systems is apparent from the data in Figure 18, where, in some cases, μ of the system is higher than that of systems with commensurate walls.
+
+First-order instabilities may not only involve the translational motion of atoms confined within contact, but may also involve chemical reactions within the confined fluid itself. This has been demonstrated recently in first-principles studies of zinc phosphates, which are found in protective films formed in automobile engines.$^{19,83}$ Here, we focus on simulations of systems containing phosphate molecules in which pressure-induced chemical reactions lead to hysteresis and energy dissipation. The reactions involving zinc phosphates are discussed below along other tribochemical reactions.
+
+Systems composed of phosphate molecules were exposed to isotropic pressures that were increased from 2.5 GPa to 32.5 GPa and returned to the initial pressure. The resultant equation of such (see Figure 19) exhibited a hysteresis loop between 18 GPa and 26 GPa. Such hystereses lead to energy dissipation and friction. Analysis of the dynamics of the system indicated that this hysteresis was the result of a reversible chemical reaction. Essentially, when the system was compressed to 26 GPa, a P–O bond formed abruptly between two neighboring phosphate molecules, as indicated by the rapid decrease in the relevant P–O distance shown in Figure 20. This rapid transition
+
+![](bbox=[0.258, 0.574, 0.725, 0.831])
+
+**Figure 19** V of phosphates as a function of pressure $p$. An initial compression cycle and a subsequent compression/decompression cycle is shown. A hysteresis occurs in the pressure range 18 GPa < $p < 26$ GPa, indicated by points A and B. Reproduced with permission from Ref. 19.

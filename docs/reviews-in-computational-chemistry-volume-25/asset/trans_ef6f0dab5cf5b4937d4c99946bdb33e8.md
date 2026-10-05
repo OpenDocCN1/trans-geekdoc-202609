@@ -1,0 +1,67 @@
+
+
+# 参考文献 63
+
+- CT, 1999, pp. 441–451. 非晶态硅的动力学：来自分子动力学计算机模拟的启示。
+- 131. T. G and W. Kob, Eur. Phys. J. B, 13, 83 (2000). 简单液体的 $\beta$ 弛豫。
+- 132. M. Aichele and J. Baschnagel, Rev. Phys. J. E, 5, 229 (2001). 模拟聚合物的玻璃态动力学：相干散射与相关函数。第一部分：$\beta$-弛豫区域的动力学。
+- 133. M. Aichele and J. Baschnagel, Rev. Phys. J. E, 5, 245 (2001). 模拟聚合物的玻璃态动力学：相干散射与相关函数。第二部分：$\alpha$-弛豫区域的动力学。
+- 134. C. Bennmann, W. Paul, J. Baschnagel and K. Binder, J. Phys.: Matter, 11, 2179 (1999). 研究不同热力学路径对玻璃形成聚合物结构动力学的影响。
+- 135. C. Bennmann, J. Baschnagel, W. Paul, and K. Binder, Comput. Theory. Polym. Sci., 9, 217 (1999). 玻璃聚合物 Rouse 模型与笼笼效应的分子动力学。
+- 136. J. Aichele, C. Bennmann, W. Paul, and K. Binder, J. Phys.: Matter, 12, 6365 (2000). 模式耦合临界温度以上超冷聚合物熔体的动力学：笼聚合物特异性效应。
+- 137. W. H. Kob and C. Andres, Phys. Rev. E, 51, 4625 (1995). 超冷二组廉纳-琼斯混合物的模式耦合理论 I：相关函数。
+- 138. S. H. Hong and M. Fuchs, Phys. Rev. Lett., 88, 187502 (2002). 聚合物结构与构象动力学的模式耦合理论。
+- 139. M. Aichele, S. H. Chong, J. Baschnagel and M. Fuchs, Phys. Rev. E, 69, 061801 (2004). 模拟超冷聚合物熔体的性质：结构、相对于质心的分布、以及三体相关函数。
+- 140. R. J. Roe, Chem. Phys., 100, 1610 (1994). 分子动力学研究聚合物液体和玻璃的短时间动力学。
+- 141. D. J. Right and R. J. Roe, in《聚合物模拟》，R. J. Roe 编， Prentice Hall, England Cliffs, NJ, 1991; pp. 79–93. 分子动力学研究聚苯乙烯的局部链运动。
+- 142. R. J. Roe, J. Non-Crist., 235–308 (1998). 聚苯乙烯短时间动力学的分子动力学模拟。
+- 143. O. Okada and H. Fuya, Polymer, 43, 977 (2002). 1,4-聚丁烯的分子动力学模拟。与实验数据及动力学性质的比较。
+- 144. O. Okada, H. Fuya, and T. Tanaka, Polymer, 45, 977 (2002). 顺式1,4-聚丁烯的分子动力学模拟。链运动与起源。
+- 145. T. Tanaka, K. Kaji, and K. Inoue, Macromolecules, 24, 1826 (1991). 熔体中顺式1,4-聚丁烯的局部运动。准弹性中子散射研究。
+- 146. K. Inoue, T. Tanaka, S. Ikeda, K. Kaji, M. Shibata, and Y. Kiganai, J. Chem. Phys., 95, 5532 (1991). 非晶态聚合物中的低能激发。
+- 147. A. von San and S. W. de Leuw, Phys. Rev. E, 58, R4100 (1998). 玻璃形成聚合物中的结构弛豫：分子动力学研究。
+- 148. A. von San and S. W. de Leuw, Phys. Rev. E, 60, 6942 (1999). 玻璃形成聚合物中的自旋-运动：分子动力学研究。
+- 149. A. V. Lyulin and M. A. J. Michels, Macromolecules, 35, 1463 (2002). 玻璃化转变温度 $T_g$ 附近体聚苯乙烯的分子学。
+- 150. A. V. Lyulin, N. Balabaev, and M. A. J. Michels, Macromolecules, 35, 9595 (2002). 非晶聚苯乙烯中的相关段动力学：分子动力学研究。
+
+# 确定聚合物的玻璃化转变
+
+- 151. A. V. Yulin, J. de Groot, and M. A. J. Michel, Macromol. Symp., 191, 167 (2003). 玻璃化转变附近体聚苯乙烯的计算机模拟研究。
+- 152. G. D. Smith, D. Y. Yoon, C. G. Wade, D. O'Leary, A. Chen, and R. L. Jaffe, J. Chem. Phys., 106, 3797 (1997). 聚氧乙烯甲基的动力学：与 $^{13}C$ 核磁共振-自旋弛豫以及通过模拟和实验测定的弛豫比较。
+- 153. J. In and R. H. Boyd, J. Chem. Phys., 88, 9912 (1998). 聚乙烯的亚玻璃态链动力学与弛豫：分子动力学模拟研究。
+- 154. S. U. U and R. H. Boyd, Macromolecules, 34, 7219 (2001). 非晶聚乙烯的链动力学与弛豫：分子动力学模拟研究。
+- 155. O. Borodin, D. Bedrov, and G. D. Smith, Macromolecules, 35, 2410 (2002). 水性聚乙烯溶液弛豫的分子动力学研究。
+- 156. G. D. Smith, O. Borodin, and W. Paul, J. Chem. Phys., 117, 10350 (2002). 1,4-聚丁烯弛豫的分子动力学研究。
+- 157. O. Borodin, R. Gul, G. D. Smith, F. Trouwe, and S. Petrucci, J. Chem. Phys., 107, 6813 (2003). 聚乙烯结构与动力学的分子动力学研究。
+- 158. M. Dostakis, D. N. Theodorou, G. Fytras, K. Kramer, F. Faller, and N. Hadjridis, J. Chem. Phys., 119, 6883 (2003). 实验探测异戊的链与动力学。
+- 159. G. D. Smith, W. Paul, D. Y. Yoon, A. Zirkel, and H. Schober, J. Chem. Phys., 107, 4751 (1997). 长链烷烃熔体的动力学。
+- 160. G. D. W. Paul, M. Monkenbusch, and D. Richter, J. Chem. Phys., 261, 6 (2000). 聚合物熔体的中子散射与计算机模拟比较。
+- 161. M. L. Saboun, D. Price, G. Mao, R. Ferrandez, and Armand. Howells, Solid State, 147, 225 (2002). PEO 与聚合物电解质的相干中子散射。
+- 162. J. Colmnero, A. Frye, M. Monkenbusch, D. Farago, and B. Frick, J. Phys. Matter, 15, S1127 (2003). 玻璃形成聚合物中的自运动与 $\alpha$-弛豫。分子动力学与准弹性中子散射。
+- 163. O. Ahumada, D. N. Theodorou, V. Arrighi, C. Karatos, and J. Ryckaert, Macromolecules, 35, 7110 (2002). 分子模拟与准弹性中子散射揭示的丙烯酸段。
+- 164. J. Colmnero, A. Narros, M. Monkenbusch, and D. Richter, Europhys. Lett., 71, 262 (2005). 局部链动力学对整体玻璃化转变的决定性影响。
+- 165. G. D. Smith, D. Y. Yoon, W. Zhu, and M. D. Ediger, Macromolecules, 27, 5563 (1994). 模拟与实验比较 $C_4H_{90}$ 聚合物熔体的平衡与动力学性质。
+- 166. S. J. Antoniakis, C. T. Sargent, and D. N. Theodorou, Macromolecules, 31, 7944 (1998). 聚乙烯的链动力学分析。
+- 167. X. H. Qiu and D. Ediger, Macromolecules, 33, 4990 (2000). $^{13}C$ NMR 测聚乙烯熔体的局部与全局动力学。
+- 168. G. D. Smith, O. Borodin, D. Bedrov, W. Paul, X. H. Qiu, and M. D. Ediger, Macromolecules, 24, 4270 (1991). 1,4-聚丁烯的局部 $^{13}C$ 自旋-晶格弛豫与构象动力学。
+- 169. D. J. Gisser, S. Glowinkowski, and M. D. Ediger, Macromolecules, 24, 4270 (1991). 聚合物熔体链动力学中的局部旋转能垒。
+- 170. S. Krushev, W. Paul, and G. D. Smith, Macromolecules, 35, 4198 (2002). 内部的作用。
+
+# 参考文献
+
+- 171. D. Bedrov and G.D. Smith, J. Chem. Phys., 115, 1121 (2001). 聚合物熔融相空间探索：并行趋势与传统分子动力学模拟的比较。
+- 172. A. Arbe, D. Richter, J. Colnero, and B. Farago, Phys. Rev. E, 54, 3853 (1996). 聚丁烯中 $\alpha$ 和 $\beta$ 弛豫的合并：中子自旋回声与电学研究。
+- 173. A. Audiadi, M. J. Lebanon, C. French, B. Strube, W. Steffen, A. Patkowski, and R. M. Pick, J. Phys.: Condens. Matter, 9, 3803 (1997). 1,4-顺式聚丁烯的光散射研究。
+- 174. F. Stickel, E. W. Fischer, and R. Richter, J. Chem. Phys., 102, 6251 (1995). 玻璃形成液体的动力学 I：弛豫数据的时间分析。
+- 175. F. Stickel, E. W. Fischer, and R. Richter, J. Chem. Phys., 104, 2043 (1996). 玻璃形成液体的动力学 II：弛豫、电导率与粘度的详细比较。
+- 176. W. Paul, D. Bedrov, and G. D. Smith, Phys. Rev. E, 74, 02151(2006) 使用化学真实模型的模式耦合理论研究1,4-聚丁烯玻璃化转变。
+- 177. B. Frick, F. Argo, and D. Richter, Phys. Rev. Lett., 64, 2921 (1990). 玻璃化转变附近聚丁烯的非易性参数温度依赖性。
+- 178. G.D. Smith and J. Binder, J. Phys. Polym. Sci., 45, 627 (2007). 聚丁烯中 $\alpha$ 和 $\beta$ 弛豫的关系：增长的长度尺度。
+- 179. H. Hilles, Annu. Rev. Phys., 51, 99 (2000). 玻璃系统中的充分性：
+- 180. E. D. Smith, J. Chem. Phys., 107, 4751 (1997). 超冷液体中的空间相关动力学。
+- 181. R. Richter, J. Phys. Cond. Matter, 14, 7703 (2002). 液体的异质性动力学。
+- 182. E. Dong, 玻璃化转变：无序材料，Springer, 2001。
+- 183. U. Tracht, M. Wilhelm, Phys.聚合物特异性效应。1,4-聚丁烯及其共聚物的分子动力学。
+- 184. L. Barthes, G. Biroli, J. Binder, L. Cipletti, F. Ladieu, and M. Pierre, Science, 310, 179 (2005). 玻璃化转变增长的长度尺度的直接实验证据。
+- 185. J. P. Bouchaud and G. Biroli, Phys. Rev. Lett., 91, 045702 (2003). 通过中子自旋回声与电学研究探测的空间相关动力学。
+

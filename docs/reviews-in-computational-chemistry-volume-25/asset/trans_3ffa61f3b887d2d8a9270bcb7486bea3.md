@@ -1,0 +1,195 @@
+
+
+# 参考文献 281
+
+26. M. Abe, T. Nakajima, and K. Hirao, J. Chem. Phys., 125, 234110 (2006). PrCu, PtAg 和 PtAu 分子的电子结构：狄拉克四分量相对论研究。
+
+27. N. Douglass and N. M. Kroll, Ann. Phys., 82, 89 (1974). 氦细结构的相对论电动力学修正。
+
+28. B. A. Hess, Phys. Rev. A, 33, 3742 (1986). 采用带有外场投影算符的双组无对形式的相对论电子结构计算。
+
+29. O. Roos and P.-A. Malmqvist, Phys. Chem. Chem., 6, 2919 (2004). 相对论量子化学——多构型方法。
+
+30. B. A. Hess, C. Urban, Wahlhagen, and O. Gropen, Chem. Phys. Lett., 251, 365 (1996). 用高斯波函数计算的平均场自旋轨道方法。
+
+31. O. Christensen, J. Gauss, and B. Schimmelpfenn, Phys. Chem. Phys., 2, 965 (2000). 来自耦合簇响应理论的自旋轨道耦合常数。
+
+32. P.-A. Malmqvist, Int. Quantum. Chem., 30, 479 (1986). 通过正则轨道变换计算密度矩阵。
+
+33. P.-A. Malmqvist and B. O. Roos, Chem. Phys. Lett., 155, 189 (1989). CASSCF 态相互方法。
+
+34. B. O. Roos, Lindh, P.-A. Malmqvist, V. Verazov, and P-O. Widmark, J. Phys. Chem. A, 108, 2851 (2004). 带有自旋轨道耦合的限制原子空间 (RAS) 态相互方法。
+
+35. B. O. Roos, V. Verazov, and P-O. Widmark, Theor. Acta, 111, 345 (2002). 针对相应动力学调整至基态势的碱及碱土原子相对论 ANO 基组。
+
+36. B. O. Roos, Lindh, P.-A. Malmqvist, V. Verazov, and P-O. Widmark, J. Phys. Chem. A, 109, 6575 (2005). 渡金属的新相对论 ANO 基组。
+
+37. B. O. Roos, Lindh, P.-A. Malmqvist, V. Verazov, and P-O. Widmark, Chem. Phys. Lett., 295, 409 (2005). 锕系元素的新相对论 ANO 基组。
+
+38. F. A. Cotton and B. B. Harris, Inorg. Chem., 4, 430 (1965). 八氯合��(III) 水合物 [ReCl6]·H2O 的晶体和分子结构。
+
+39. F. A. Cotton, Inorg. Chem., 4, 334 (1965). [ReX6]2−离子和其他金属簇中的金属结合。
+
+40. L. Gagliardi and B. W. Gray, Acc. Chem. Res., 11, 232 (1978). 含有四键金属-金属配合物的电子光谱和光化学。
+
+41. W. C. Troger, C. D. Cowan, H. B. Gray, and F. A. Cotton, J. Am. Chem. Soc., 99, 2993 (1977). ReCl6 和 ReBr6 电子光谱的进一步研究——650-350 nm 区域弱键的赋值——金属金属四键能量的估算。
+
+42. F. Ferrante, L. Gagliardi, B. E. Burden, and A. P. Saltelterberg, Inorg. Chem., 44, 8476 (2005). Cr(II), Mo(II), W(II) 和 Re(II) 八乙基盐的多构型理论研究：重新审视 M-M 键长与 Delta-Delta跃迁能量之间的关联。
+
+43. A. P. Saltelterberg and J. P. Fackler, J. Am. Chem. Soc., 99, 1258 (1977). 钼(II), 铼(III) 和铬(II) 八乙基盐的光谱研究——Delta-Delta*跃迁赋值。
+
+44. B. O. Roos, Collett, Cech, Chem. Mun., 66, 285 (2003). 铬二聚体的基态研究。
+
+# 过渡金属和锕系系统
+
+47. B. Simard, M.-A. Lebeault-Dorget, A. Marinijsen, and J. J. ter Meulen, J. Chem. Phys., 108, 9668 (1998). 铬和双钼的光电离光谱：电离电位和键。
+
+48. S. M. Casey and D. G. Leopold, J. Chem. Phys., 97, 816 (1993). Cr2 的负离子光电子光谱。
+
+49. K. Hilpert and K. Ruhardt, Ber. B. Physik., 91, 724 (1987). Cr2 的解离。
+
+50. O. Roos, A. C. Borin, and L. Gagliardi, Angew. Chem. Int. Ed., 46, 1469 (2007). 共价键的最大多重性。
+
+51. T. Nguyen, A. Sutton, M. Byrd, J. C. Fetter, J. Long, and P. Power, Science, 310, 844 (2005). 中心间五键稳定化合物的合成。
+
+52. M. Byrd, L. Gagliardi, P. O. Wadmark, and B. O. Roos, Angew. Chem. Int., 45, 3804. PhCr (Ph = 苯) 中两个铬之间的五键。线性几何。
+
+53. F. A. Compton, Chem. Soc. Rev., 4, 27 (1975). 四键和其他金属键。
+
+54. S. N. Ketkar and M. Jung, J. Am. Chem. Soc., 107, 338 (1985). 气相乙酸铬的结构。
+
+55. Andersson, J. C. Bauschlicher, B. Person, and B. O. Roos, J. Chem. Phys., 125, 238 (1996). 乙酸铬的结构。
+
+56. C. J. Kramer, M. Woloch, P. Pieuch, C. Puzzarini, and L. Gagliardi, J. Chem. A, 110, 191 (2001). UO2 的理论模型：氧和小分子相互作用的机理。
+
+57. C. J. Kramer, A. Kinal, M. Woloch, P. Pieuch, and L. Gagliardi, J. Chem. A, 110, 1157 (2006). 配位 UO2 端侧和侧配配的理论表征。
+
+58. Andersson and B. O. Roos, Chem. Phys., 191, 507 (1992). 使用完全活性空间 SCF 和二阶扰动计算镍原子的激发能。
+
+59. M. Merchán, P. Rou-Amig, and B. O. Roos, Chem. Phys., 252, 405 (1996). N2 解离的理论研究——对称破缺案例。
+
+60. A. Rehman, P.-A. Malmqvist, 待发表。
+
+61. L. Gagliardi and B. O. Roos, Chem. Phys., 331, 229 (2000). 三原子 UX：结合多构型二阶扰动和密度泛函。
+
+62. M. Zhou, J. Andrews, J. Yi, and E. Burden, J. Am. Chem. Soc., 121, 9712 (1999). 配体氧化铀与 CO 的反应：固体氖中 (eta^2)-C(2)-U(CO)=6 的红外光谱。
+
+63. L. Gagliardi, B. O. Roos, P.-A. Malmqvist, and J. Dyke, J. Phys. Chem. A, 105, 10602 (2001). UO2 分子的电子结构。
+
+64. J. Pavlovic, L. Gagliardi, J. M. Dyke, and K. Hirao, Chem. Phys., 122, 14317 (2005). 铀原子与氧原子气相化学离子反应的理论研究。
+
+65. L. Gagliardi, M. Heaven, W. Krogh, and B. O. Roos, J. Am. Chem. Soc., 127, 86 (2005). UO2 分子的电子光谱。
+
+66. J. Han, V. Goncharov, L. A. Kaledin, A. V. Komissarov, and M. C. Heaven, J. Chem. Phys., 120, 5155 (2004). 气相 UO2 的电子光谱和电离电位。
+
+67. C. Lu, J. Jin, J. M. Ortiz, J. C-Riera-Carco, and M. C. Heaven, J. Am. Chem. Soc., 124, 1812 (2004). 基质中 UO2 的电子光谱。
+
+# 参考文献 283
+
+68. L. Gagliardi, N. Manna, and B. O. Roos, J. Chem. Phys., 124, 57 (2003). 铬二聚体的基态研究。
+
+69. B. O. Roos, L. Gagliardi, and Angew.. Chem. Int. Ed., 46, 1469 (2007). 共价键的最大多重性。
+
+70. S. Li, B. W. Gray, J. Am. Chem. Soc., 121, 9712 (1999). 配体氧化铀与 CO 的反应：固体氖中 (eta^2)-C(2)-U(CO)=6 的红外光谱。
+
+71. S. Li, B. W. Gray, J. Am. Chem. Soc., 121, 9712 (1999). 配体氧化铀与 CO 的反应：固体氖中 (eta^2)-C(2)-U(CO)=6 的红外光谱。
+
+72. S. Li, B. W. Gray, J. Am. Chem. Soc., 121, 9712 (1999). 配体氧化铀与 CO 的反应：固体氖中 (eta^2)-C(2)-U(CO)=6 的红外光谱。
+
+73. S. Li, B. W. Gray, J. Am. Chem. Soc., 121, 9712 (1999). 配体氧化铀与 CO 的反应：固体氖中 (eta^2)-C(2)-U(CO)=6 的红外光谱。
+
+74. S. Li, B. W. Gray, J. Am. Chem. Soc., 121, 9712 (1999). 配体氧化铀与 CO 的反应：固体氖中 (eta^2)-C(2)-U(CO)=6 的红外光谱。
+
+75. S. Li, B. W. Gray, J. Am. Chem. Soc., 121, 9712 (1999). 配体氧化铀与 CO 的反应：固体氖中 (eta^2)-C(2)-U(CO)=6 的红外光谱。
+
+76. S. Li, B. W. Gray, J. Am. Chem. Soc., 121, 9712 (1999). 配体氧化铀与 CO 的反应：固体氖中 (eta^2)-C(2)-U(CO)=6 的红外光谱。
+
+77. S. Li, B. W. Gray, J. Am. Chem. Soc., 121, 9712 (1999). 配体氧化铀与 CO 的反应：固体氖中 (eta^2)-C(2)-U(CO)=6 的红外光谱。
+
+（注：OCR 在后页有大量重复和乱码。我将根据提示中的 OCR 重新清理。）
+
+*(自纠：我注意到 "Reaction of Ligand-Adapted Uranium Oxides with CO: Infrared Spectroscopy of (eta^2)-C(2)-U(CO)=6 in Solid Neon" 在源文件中出现了多次。我将提供要求的清理合并列表。)*
+
+[content]
+26. M. Abe, T. Nakajima, and K. Hirao, J. Chem. Phys., 125, 234110 (2006). PrCu, PtAg 和 PtAu 分子的电子结构：狄拉克四分量相对论研究。
+
+27. N. Douglass and N. M. Kroll, Ann. Phys., 82, 89 (1974). 氦细结构的相对论电动力学修正。
+
+28. B. A. Hess, Phys. Rev. A, 33, 3742 (1986). 采用带有外场投影算符的双组分无对形式的相对论电子结构计算。
+
+29. O. Roos and P.-A. Malmqvist, Phys. Chem. Chem., 6, 2919 (2004). 相对论量子化学——多构型方法。
+
+30. B. A. Hess, C. Urban, Wahlhagen, and O. Gropen, Chem. Phys. Lett., 251, 365 (1996). 用高斯波函数计算的平均场自旋轨道方法。
+
+31. O. Christensen, J. Gauss, and B. Schimmelpfenn, Phys. Chem. Phys., 2, 965 (2000). 来自耦合簇响应理论的自旋轨道耦合常数。
+
+32. P.-A. Malmqvist, Int. Quantum. Chem., 30, 479 (1986). 通过正则轨道变换计算密度矩阵。
+
+33. P.-A. Malmqvist and B. O. Roos, Chem. Phys. Lett., 155, 189 (1989). CASSCF 态相互方法。
+
+34. B. O. Roos, Lindh, P.-A. Malmqvist, V. Verazov, and P-O. Widmark, J. Phys. Chem. A, 108, 2851 (2004). 带有自旋轨道耦合的限制原子空间 (RAS) 态相互方法。
+
+35. B. O. Roos, V. Verazov, and P-O. Widmark, Theor. Acta, 111, 345 (2002). 针对相应动力学调整至基态势的碱及碱土原子相对论 ANO 基组。
+
+36. B. O. Roos, Lindh, P.-A. Malmqvist, V. Verazov, and P-O. Widmark, J. Phys. Chem. A, 109, 6575 (2005). 渡金属的新相对论 ANO 基组。
+
+37. B. O. Roos, Lindh, P.-A. Malmqvist, V. Verazov, and P-O. Widmark, Chem. Phys. Lett., 295, 409 (2005). 锕系元素的新相对论 ANO 基组。
+
+38. F. A. Cotton and B. B. Harris, Inorg. Chem., 4, 430 (1965). 八氯合��(III) 水合物 [ReCl6]·H2O 的晶体和分子结构。
+
+39. F. A. Cotton, Inorg. Chem., 4, 334 (1965). [ReX6]2−离子和其他金属簇中的金属结合。
+
+40. L. Gagliardi and B. W. Gray, Acc. Chem. Res., 11, 232 (1978). 含有四键金属-金属配合物的电子光谱和光化学。
+
+41. W. C. Troger, C. D. Cowan, H. B. Gray, and F. A. Cotton, J. Am. Chem. Soc., 99, 2993 (1977). ReCl6 和 ReBr6 电子光谱的进一步研究——650-350 nm 区域弱键的赋值——金属金属四键能量的估算。
+
+42. F. Ferrante, L. Gagliardi, B. E. Burden, and A. P. Saltelterberg, Inorg. Chem., 44, 8476 (2005). Cr(II), Mo(II), W(II) 和 Re(II) 八乙基盐的多构型理论研究：重新审视 M-M 键长与 Delta-Delta跃迁能量之间的关联。
+
+43. A. P. Saltelterberg and J. P. Fackler, J. Am. Chem. Soc., 99, 1258 (1977). 钼(II), 铼(III) 和 铬(II) 八乙基盐的光谱研究——Delta-Delta*跃迁赋值。
+
+44. B. O. Roos, Collett, Cech, Chem. Mun., 66, 285 (2003). 铬二聚体的基态研究。
+
+# 过渡金属和锕系系统
+
+47. B. Simard, M.-A. Lebeault-Dorget, A. Marinijsen, and J. J. ter Meulen, J. Chem. Phys., 108, 9668 (1998). 铬和双钼的光电离光谱：电离电位和键。
+
+48. S. M. Casey and D. G. Leopold, J. Chem. Phys., 97, 816 (1993). Cr2 的负离子光电子光谱。
+
+49. K. Hilpert and K. Ruhardt, Ber. B. Physik., 91, 724 (1987). Cr2 的解离。
+
+50. O. Roos, A. C. Borin, and L. Gagliardi, Angew. Chem. Int. Ed., 46, 1469 (2007). 共价键的最大多重性。
+
+51. T. Nguyen, A. Sutton, M. Byrd, J. C. Fetter, J. Long, and P. Power, Science, 310, 844 (2005). 中心间五键稳定化合物的合成。
+
+52. M. Byrd, L. Gagliardi, P. O. Wadmark, and B. O. Roos, Angew. Chem. Int., 45, 3804. PhCr (Ph = 苯) 中两个铬之间的五键。线性几何。
+
+53. F. A. Compton, Chem. Soc. Rev., 4, 27 (1975). 四键和其他金属键。
+
+54. S. N. Ketkar and M. Jung, J. Am. Chem. Soc., 107, 338 (1985). 气相乙酸铬的结构。
+
+55. Andersson, J. C. Bauschlicher, B. Person, and B. O. Roos, J. Chem. Phys., 125, 238 (1996). 乙酸铬的结构。
+
+56. C. J. Kramer, M. Woloch, P. Pieuch, C. Puzzarini, and L. Gagliardi, J. Chem. A, 110, 191 (2001). UO2 的理论模型：氧和小分子相互作用的机理。
+
+57. C. J. Kramer, A. Kinal, M. Woloch, P. Pieuch, and L. Gagliardi, J. Chem. A, 110, 1157 (2006). 配位 UO2 端侧和侧配配的理论表征。
+
+58. Andersson and B. O. Roos, Chem. Phys., 191, 507 (1992). 使用完全活性空间 SCF 和二阶扰动计算镍原子的激发能。
+
+59. M. Merchán, P. Rou-Amig, and B. O. Roos, Chem. Phys., 252, 405 (1996). N2 解离的理论研究——对称破缺案例。
+
+60. A. Rehman, P.-A. Malmqvist, 待发表。
+
+61. L. Gagliardi and B. O. Roos, Chem. Phys., 331, 229 (2000). 三原子 UX：结合多构型二阶扰动和密度泛函。
+
+62. M. Zhou, J. Andrews, J. Yi, and E. Burden, J. Am. Chem. Soc., 121, 9712 (1999). 配体氧化铀与 CO 的反应：固体氖中 (eta^2)-C(2)-U(CO)=6 的红外光谱。
+
+63. L. Gagliardi, B. O. Roos, P.-A. Malmqvist, and J. Dyke, J. Phys. Chem. A, 105, 10602 (2001). UO2 分子的电子结构。
+
+64. J. Pavlovic, L. Gagliardi, J. M. Dyke, and K. Hirao, Chem. Phys., 122, 14317 (2005). 铀原子与氧原子气相化学离子反应的理论研究。
+
+65. L. Gagliardi, M. Heaven, W. Krogh, and B. O. Roos, J. Am. Chem. Soc., 127, 86 (2005). UO2 分子的电子光谱。
+
+66. J. Han, V. Goncharov, L. A. Kaledin, A. V. Komissarov, and M. C. Heaven, J. Chem. Phys., 120, 5155 (2004). 气相 UO2 的电子光谱和电离电位。
+
+67. C. Lu, J. Jin, J. M. Ortiz, J. C-Riera-Carco, and M. C. Heaven, J. Am. Chem. Soc., 124, 1812 (2004). 基质中 UO2 的电子光谱。
+

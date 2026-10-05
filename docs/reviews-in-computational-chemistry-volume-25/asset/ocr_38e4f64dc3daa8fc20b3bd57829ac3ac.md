@@ -1,0 +1,11 @@
+# Measurement and Interpretation of the Magnetic Moments
+
+![](bbox=[0.265, 0.098, 0.735, 0.348])
+
+**Figure 7** predicted in binding energy of icosahedral and fcc isomers near Ni clusters as a function of cluster size. Reproduced with permission from Ref. 46.
+
+some molecular dynamics simulations,$^{53}$ is that the structures of Ni clusters are bulk-like fcc instead of icosahedral for cluster sizes near maxima. Using fcc structures the whole range of cluster sizes, Guevara et al.$^{21}$ predicted sharp maxima for $	ilde{\mu}$ at $Ni_{19}$ and $Ni_{143}$ and minima at $Ni_{28}$ and $Ni_{55}$. However, the measured $	ilde{\mu}$ shows a local minimum at $Ni_{19}$, and reactivity experiments suggest that $Ni_{19}$ is a double icosahedron. So only the clear prediction in favor of fcc structures is the maximum of $	ilde{\mu}$ at $Ni_{13}$. Rodríguez-López et al.$^{55}$ have performed additional TB calculations of $	ilde{\mu}$ for cluster structures that other authors have added using different semisemirical interatomic potentials. The conclusion is that the changes of $	ilde{\mu}$ arising from different cluster structures are not large. The oscillations of $	ilde{\mu}$ at small $N$ are accounted for reasonably well for all families considered; however, a fast approach of $\mu(N)$ toward the bulk limit occurs in all cases. These results do not resolve the discrepancies between TB calculations and experiment, which indicates that a possible misrepresentation of the exact geometry is not the only problem with the computational results. Other possibilities are explored in the next sections.
+
+# Influence of the $s$ Electrons
+
+An alternative model for explaining the behavior of the magnetic moment of Ni clusters has been proposed by Fujita and Yamaguchi(FY).$^{56}$ The interest of this model is because it may contain some ingredients required to explain the observed maxima of $	ilde{\mu}$. However, as a function of $N$, the FY model cannot predict the minima. It is intriguing that the observed maxima of $	ilde{\mu}$ are at $N=8$ and near $N=20$ and $N=40.$3 These numbers

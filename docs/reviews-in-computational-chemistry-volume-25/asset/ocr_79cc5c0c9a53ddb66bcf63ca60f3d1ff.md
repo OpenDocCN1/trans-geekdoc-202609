@@ -1,0 +1,9 @@
+# Measurement and Interpretation of the Magnetic Moments 213
+
+![](bbox=[0.233, 0.114, 0.766, 0.423])
+
+**Figure 4** Ground state geometries of Ni clusters with 5 to 16 atoms (symmetries are indicated), obtained using the Gupta potential. Reproduced with permission from Ref. 45.
+
+octahedron formed by atoms with coordination $Z = 4$. In Ni$_7$, which has the structure of a flattened pentagonal bipyramid, the coordination of two atoms increases to $Z = 6$ and remains 4 for the rest of the atoms. Ni$_8$ has four atoms with coordination $Z = 5$ and five atoms with coordination $Z = 4$, which leads to a mean coordination number that is slightly smaller than in Ni$_7$. The coordination increases again in Ni$_9$. This behavior of the mean coordination number would lead one to a maximum of $\mu$ in Ni$_8$, which is indeed observed in the experiments and a minimum at Ni$_7$. The observed minimum and the calculated minimum occur at Ni$_6$, and the reason for this is that the larger average-neighbor-distance $d_h$ has a local maximum at Ni$_7$ counteracts the increase of the coordination number when going from Ni$_6$ to Ni$_7$ and produces the minimum of $\mu$ at Ni$_6$. To summarize, the oscillations of the average magnetic moment in Ni clusters can be explained by two purely geometrical effects: (1) compact clusters, which with high average coordination number, have small values of $\mu$; and (2) clusters with large interatomic distances have large $\mu$.
+
+The densities of states of Ni$_5$, Ni$_6$, and Ni$_7$, decomposed into $d$ and $sp$ contributions, are compared in Figure 5. The occupied states of the majority-spin sub-band ($\uparrow$) have mainly $d$ character, except for a small peak with the $sp$ character at the Fermi level; on the other hand, $d$ holes are present in the minority-spin sub-band ($\downarrow$). Integration of the density of states gives average $d$

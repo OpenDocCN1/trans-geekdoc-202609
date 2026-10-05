@@ -1,0 +1,15 @@
+# Dynamics in Super-Cooled Polymer Melts 29
+
+This time $t'_{\sigma}$ actually is the maximum time for Equ. [48] is valid, $t_0 \ll t \ll t'_{\sigma}$. The exponent $\gamma$ characterizes the behavior of the $\alpha$-relaxation or structural relaxation. Typical $\alpha$ time scales diverge
+
+> $\tau_{\sigma} \sim (T-T_{c})^{-\gamma}$ [58]
+
+As indicated, the power law approximations to the $\beta$-correlated above are only valid asymptotically for $\sigma \to 0$, but corrections to these predictions have been worked out.$102,13$ More important, is the assumption of the idealized MCT that density fluctuations are the only slow variables. This assumption breaks down close to $T_{c}$. MCT has been augmented by coupling to mass currents, which are sometimes termed "inclusion of processes," but the extension of the theory to temperatures below $T_{c}$ or even down to $T_{c}$ has not been successful.$101$ Also, the theory is not often applied to experimental density fluctuations (observed by neutron scattering) but instead dielectric relaxation or to NMR experiments. These techniques probe reorientational motion of anisotropic molecules, whereas the MCT equation describes a scalar quantity. Using MCT results to compare with dielectric or NMR experiments forces one to assume a direct coupling of orientational correlations with density fluctuations exists. The different orientational correlation functions and the question to what extent they directly couple to the density fluctuations have been extended in like the standard MCT picture.$104-108$
+
+Of the available experimental techniques, the various neutron scattering methods mostly measure structural relaxation. However, their dynamic range is limited and several experimental setups have to be combined to obtain information on polymer relaxation from the picosecond scale to the longest time accessible in neutron spin echo experiments (~sim 100 ns depending on momentum transfer), with all the experimental correction and normalization issues involved in matching results from different experiments. To our knowledge, the reconstruction of a single relaxation curve $S(q,t)$ out of experimental information for the different frequency and time windows has not been tried. simulation studies of the glass transition will provide us with the most detailed information of the structural relaxation processes.$109$
+
+Before we examine in detail more the dynamics of a super-cooled melt of coarse-grained grains and of PB systems, let us first come the structure of these two glass-forming systems. Structure is obtained experimentally from either the neutron or the X-ray structure factors. The melt (or liquid) structure factor is given as$110$
+
+```
+$S_{m}(q) = \frac{1}{M} \sum_{n,m} b_{n}(q)b_{m}(q)e^{i\vec{q}\cdot(\\vec{r}_{n}-\vec{r}_{m})}$ [59]
+```
