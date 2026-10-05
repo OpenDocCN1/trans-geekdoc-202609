@@ -1,0 +1,1503 @@
+- pgno: 0
+  md: '# Journal Pre-proof
+
+
+    Automated Detection of Aortic Stenosis using Machine Learning
+
+
+    Benjamin S. Wessler, Zhe Huang, Gary Long, Stefano Pacifici, Nishant Prashar,
+    Samuel Karmily, Roman A. Sandler, Joseph Sokol, Daniel B. Sokol, Monica M. Dehn,
+    Luisa Maslon, Eileen May, Ayan R. Patel, Michael C. Hughes
+
+
+    PII: S0894-7317(23)0014-7
+
+
+    DOI: https://doi.org/10.1016/j.echo.2023.01.006
+
+
+    Reference: YMJE 5115
+
+
+    To appear in: Journal of the American Society of Echocardiography
+
+
+    Received Date: 2 December 2022
+
+
+    Revised Date: 2 January 2023
+
+
+    Accepted Date: 3 January 2023
+
+
+    > Please cite this article as: Wessler BS, Huang Z, Long G, Pacifici S, Prashar
+    N, Karmiy S, Sandler RA, Sokol J, Sokol DB, Hahn MM, Maslon L, Mai E, Patel AR,
+    Hughes MC, Automated Detection of Aortic Stenosis using Machine Learning, Journal
+    of the American Society of Echocardiography (2023), doi: https://doi.org/10.1016/j.echo.2023.01.006.
+
+
+    This is a PDF file of an article that has undergone enhancements after acceptance,
+    as the addition of a cover page and metadata, and formatting for readability,
+    it is not yet the definitive version of record. This version will undergo additional
+    copyediting, typesetting and review before it is published in its final form,
+    but we are providing this version to give early visibility of the article. Please
+    note that, during the production process, errors may be discovered which could
+    affect the content, and all legal disclaimers that apply to the journal pertain.
+
+
+    2023 Published by Elsevier Inc. on behalf of the American Society of Echocardiography.
+
+
+    ![](img/9e83ae159adbe9802ed604394e924f29_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Automated Detection of Aortic Stenosis using Machine Learning
+
+
+    Brief Title: Automated Detection of Aortic Stenosis
+
+
+    Benjamin S. Wexler^a, Zhe Huang^b, Gary Long^c, Stefano Pacifici^d, Nishant Prashar^d,
+    Samuel Karmiyd, Roman A. Sandler^d, Joseph Sokol^e, Daniel B. Sokol^e, Monica
+    M. Dehn^a, Luisa Maslon^a, Eileen Mai^a, Ayan R. Patel^b, Michael C. Hughes^b
+
+
+    +   a Cardiovascular Center, Tufts Medical Center, Boston MA
+
+    b Department of Computer Science, Tufts University, Medford, MA USA
+
+    c CVAI Solutions, Dorchester, MA
+
+    d Department of Medicine, Tufts Medical Center, Boston MA
+
+    eCardio.ai, Los Angeles, CA
+
+
+    Departments and institutions:
+
+
+    Address for correspondence
+
+    Benjamin S. Wexler, MD, MS
+
+    Tufts Cardiovascular Center,
+
+    Predictive Analytics and Comparative Effectiveness (PACE) Center,
+
+    Institute of Clinical Research and Health Policy Studies (ICRHPS)
+
+    Tufts Medical Center (TMC)
+
+    800 Washington Street, Box 63
+
+    Boston, MA 02111
+
+    Phone: 617-633-2273
+
+    Fax: 617-633-0022
+
+    Email: bwessler@tuftsmedicalcenter.org'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Abstract:
+
+
+    Aims: Aortic stenosis (AS) is a degenerative valve condition that is under-diagnosed
+    and undertreated. Detection of AS using limited 2D echocardiography could enable
+    screening and improve appropriate referral and treatment of this condition. We
+    aimed to develop methods for automated detection of AS from limited imaging datasets.
+
+
+    Methods: Convolutional neural networks were trained, validated, and tested using
+    limited 2D transthoracic echocardiogram (TTE) datasets. Networks were developed
+    to accomplish two sequential tasks; 1) view identification and 2) study-level
+    grade of AS. Balanced accuracy and area under the receiver operature curve (AUROC)
+    were the performance metrics used.
+
+
+    Results: Annotated images from 577 patients were included. Neural networks were
+    trained on data from 338 patients (average N = 10,253 labeled images), validated
+    on 119 patients (average N = 3,505 labeled images), and performance was assessed
+    on a test sets of 120 patients (average N = 3,511 labeled images). Fully automated
+    screening for AS was achieved with AUROC 0.96. Networks can identify no significant
+    (no, mild, mild/moderate) AS from significant (moderate, or severe) AS with an
+    AUROC = 0.86 and between early (mild or mild/moderate AS) and significant (moderate
+    or severe) AS with an AUROC of 0.75. External validation of these networks in
+    a cohort of 8502 outpatient TTEs showed that screening for AS can be achieved
+    using parasternal long-axis imaging only only with an AUROC of 0.91.
+
+
+    Conclusion: Fully-automated detection of AS using limited 2D datasets is achievable
+    using modern neural networks. These methods lay the groundwork for a novel method
+    for screening for AS.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '**Keywords:** aortic stenosis, screening, machine learning, echocardiography,
+    transtoracic echocardiography
+
+
+    # Abbreviations:
+
+
+    +   - AS = aortic stenosis
+
+
+    +   - TTE = transtoracic echocardiography
+
+
+    +   - ML = machine learning
+
+
+    +   - VHD = valvular heart disease
+
+
+    +   - AVR = aortic valve replacement
+
+
+    +   - SSL = semi-supervised learning
+
+
+    +   - DICOM = digital imaging and communications in medicine
+
+
+    +   - PLAX = parasternal long axis
+
+
+    +   - PSAX AoV = parasternal short axis at the level of the aortic valve
+
+
+    +   - TMED-2: Tufts Medical Echocardiogram Dataset, version 2
+
+
+    # Disclosures:
+
+
+    Declaration of interest: BW has done consulting work with iCardio.ai and US2.ai
+    unrelated to the present work and is co-founder of CVAI Solutions. CVAI Solutions
+    created the software for the de-identification procedures though currently has
+    no related commercial pursuits.
+
+
+    # Funding:
+
+
+    This work is supported by NCATS grant UL1TR002544
+
+    BW is supported by NIH grant K23AG055667'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Introduction
+
+
+    Aortic stenosis (A.S) is an enormous public health problem that affects over 12.6
+    million adults and worldwide causes an estimated 102,700 deaths annually.1 Recently,
+    there has been interest in earlier identification of AS and evidence that many
+    patients may not be appropriately treated.2,3
+
+    \These observations motivate the study of novel methods to identify AS. Here,
+    we evaluate whether machine learning (ML) methods can accurately identify AS using
+    limited 2D imaging datasets that are well suited for disease screening.
+
+
+    Little is known about how to improve identification and treatment of AS. Employing
+    a population-based comprehensive transthoracic echocardiogram (TTE) screening
+    approach would be prohibitively expensive. An automated interpretation of limited
+    echocardiography datasets is an attractive alternative approach to disease detection,
+    especially with the rise of point of care ultrasound (OCUS) devices, to automating
+    AS detection relate to the complex nature of this diagnosis, the need to integrate
+    information across multiple images for any given study, and datasets that are
+    not routinely annotated as part of routine clinical care.
+
+
+    Classically, accurate grading of AS relies on integration of numerous structural
+    and hemodynamic parameters from multiple imaging planes.4 From the perspective
+    of disease screening, certain features of AS such as valve thickness and calcium
+    burden are readily apparent on 2D images. While deep learning methods can now
+    surpass humans in certain medical image classification tasks5,6, common classifiers
+    take only individual images as input and applications in echocardiography have
+    so far focused only on viewpoint identification, segmentation, and assessments
+    of ventricular function and myocardial diseases.7-10 ML'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'approaches to AS so far are limited to using echocardiogram reports (thereby
+    requiring expert
+
+    image interpretation to work)11,12 or are limited to very small numbers13 focusing
+    only on
+
+    severe disease.14 None have focused on assessing the continuum of AS severity
+    using limited
+
+    images with the goal of establishing tools suitable for automated disease screening.
+    Here we
+
+    develop methods that can produce a coherent single diagnosis (severity of AS)
+    from limited 2D
+
+    dasets.
+
+
+    # Methods
+
+
+    # Echocardiograms
+
+
+    This work was approved by the Tufts Medical Center IRB. The echocardiograms originate
+    from
+
+    TTEs performed between 2011-2020 at a high-volume tertiary care center (Tufts
+    Medical Center,
+
+    Boston, MA). The echocardiograms were acquired as part of routine clinical care.
+    The
+
+    CardioVascular Imaging Center is Intersocietal Accreditation Commission (IAC)
+    accredited and
+
+    is equipped with ultrasound units from major vendors (Philips®, Toshiba®, Siemens®).
+    By using
+
+    standardized digital imaging and communications in medicine (DICOM) images, these
+    methods
+
+    ter intended to be vendor-independent. Echocardiograms were included based on
+    the presence or
+
+    abence of AS. Images were not selected for inclusion based on image quality. Patients
+    with
+
+    prior aortic valve replacements were excluded. Other cardiac findings including
+    other
+
+    concomitant structural heart disease and rhythm abnormalities (i.e. atrial fibrillation)
+    were not
+
+    excluded.
+
+
+    # Image acquisition and preprocessing
+
+
+    Images were acquired by trained sonographers with methods consistent with current
+    American
+
+    Society of Echocardiography (ASE) guidelines.15 For this study, we used metadata
+    to identify'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'and discard spectral Doppler, color-flow Doppler, and M-mode recordings, keeping
+    only 2D cardiac transthoracic echocardiogram (TTE) images. To minimize compute
+    time and enhance transportability and to position these networks for use in future
+    screening environments, the first frame of PLAX or SAX AoV loop was automatically
+    selected for use in the prediction models. If there were multiple PLAX or SAX
+    AoV acquisitions in a study (as is often the case) predictions used the first
+    frame from each acquisition to arrive at study-level AS prediction. All images
+    were standardized to 112x112 pixel resolution. Consistent with routine clinical
+    care, there are no view or diagnostic label annotations available for images when
+    they are collected.
+
+
+    # De-identification
+
+
+    Leveraging known region locations that are encoded within the DICOM storage format,
+    property software was created to automatically identify the image burn region
+    that contains protected health information (PHI). By excluding these imaging regions
+    from the data copy, images were reliably de-identified. A 10% samples of the included
+    de-identified images was manually reviewed to confirm no PHI was included.
+
+
+    # Limited View labels
+
+
+    The study setup followed the cognitive steps involved in diagnosing AS by echocardiography
+    (Figure 1), specifically view recognition followed by view interpretation. We
+    collected expert annotations of a limited number of view types with two goals
+    in mind; 1) to evaluate and validate automated view classification networks and
+    2) prioritized views are used in subsequent AS diagnostic models. Labels were
+    assigned to examples of the parasternal long axis (PLAX), parasternal short axis
+    at the level of the aortic valve (PSAX AoV). These views were purposely selected
+    because they are standard views that can visualize the AoV and can be prioritized
+    in a'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'limited screening environment. For evaluation of view the classification tasks
+    apical 2-chamber (A 2C), and apical 4-chamber (A4C) views were also labeled. An
+    ''Other'' super-category label that covered other 2D views was also collected.
+    Doppler imaging was not included in this study because these acquisitions are
+    not routinely collected during point-of-care ultrasound (POCUS) imaging studies
+    and because Doppler image acquisition requires a high level of skill that is often
+    only available in dedicated echocardiogram laboratories.
+
+
+    An echocardiogram annotation tool was built to facilitate view annotation (Supplemental
+    Figure 1). Annotators (board certified echocardiographers or American Registry
+    for Diagnostic Medical Sonography credentialed sonographers) assigned labels to
+    ≥ 2 examples of each imaging view for each of the 599 studies included in our
+    labeled set. A agreement between labelers was assessed on a set of 50 echocardiograms
+    that were labeled in duplicate (Supplemental Table 1, Supplemental Table 2).
+
+
+    # Diagnostic labels
+
+
+    The presence or absence of AS (if present) were assigned by a cardiologist with
+    specialty training in echocardiography. AS classification was assigned during
+    clinical care in standard fashion following an integrative approach as recommended
+    by current guidelines (i.e. integrating information across all available images
+    of all view types for a given patient).4 The reference grade of AS for this study
+    was taken directly from the clinical imaging report. AS labels for these experiments
+    are shown in Table 1. Echocardiograms representing the full spectrum of AS pathologies
+    were purposely included. To focus this work on potential automated screening use
+    cases, and with recognition that inter-reader agreement of disease severity is
+    modest,16 we grouped standard severity levels into 3 diagnostic classes: “no AS”,
+    “early AS” (combining mild and mild-to-moderate), and “significant AS” (combining
+    moderate and severe).'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'In a screening environment (upstream of the traditional echocardiogram laboratory),
+    the primary clinical question is which individuals should be referred for comprehensive
+    echocardiography and AS-related care.
+
+
+    # Datasets and Experimental Design
+
+
+    Our experiments focused on assessing performance on echocardiogram studies from
+    never-before-seen patients. These experiments were done in a manner consistent
+    with Proposed Requirements for Cardiovascular Imaging-Related Machine Learning
+    Evaluation (PRIME) checklist.^{17 The PRIME checklist for this study is available
+    upon request.
+
+
+    Our final dataset consisted of 599 fully-labeled TTE studies, where each study
+    has a diagnosis label (no AS, early AS, or significant AS) as well as some images
+    with view labels. We have released this dataset to researchers worldwide as the
+    Tufts Medical Echocardiogram Dataset, version 2 (TMED-2). Most patients contributed
+    only one study, but multiple studies from a small number of patients (22 out of
+    577) were included to improve dataset size. Each patient''s data were assigned
+    to exactly one set to properly assess generalization across individuals. The labeled
+    data were divided into training (60%), validation (20%), and test sets (20%).
+    We ensured that the ratio of diagnostic classes was the same across training,
+    validation, and test (~21% no AS, and ~50% significant AS). Dataset composition
+    by label is summarized in Table 2 (for diagnosis task) and Supplemental Table
+    3 (for view task).
+
+
+    Each ML method was allowed to fit parameters to the training set, select hyperparameters
+    based on performance on the validation set, and report results on the test set.
+    To improve the reliability of our results, we repeated the process of training
+    a model and evaluating its performance across 3 separate, independent random partitions
+    of all data into training, validation, and test sets. We'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'report average performance across these 3 test sets. In addition to using the
+    full training and validation set (479 studies), we also considered two levels
+    of reduction (165 and 56 studies), roughly 33% and 11% of the full size. The same
+    full-size test sets (120 studies) were always used to compare final performance.
+
+
+    # Deep Neural Nets for View and Diagnosis Classification
+
+
+    We trained two neural networks: one view classifier and one diagnosis classifier.
+    Each used the same backbone neural network architecture: a wide residual network
+    with 28 layers containing 5,931,683 parameters. Each network takes one image as
+    input and produces a predicted probability vector. We discuss how we aggregate
+    predictions across images in the next paragraph. The view classifier is trained
+    to produce a 5-way probabilistic view classification (PLAX, PSAX AOv, A4C, A2C,
+    or Other) given a single image. To train, we minimize 5-class entropy over all
+    view-labeled images in the labeled set. The diagnosis classifier is trained so
+    the same network produces two separate outputs given a single image: the primary
+    output is a 3-way probabilistic vector indicating the diagnosis (no, early, or
+    significant AS), and the auxiliary output is a 5-way probabilistic vector indicating
+    the view type. We use multi-task training, where the loss function is a sum of
+    the 3-class diagnosis cross entropy and 5-class view entropy, summed over all
+    view-labeled images. We found this multi-task training delivered better diagnosis
+    performance. After multi-task training, only the 3-class diagnosis output is used
+    (the separately trained view neural network is a better classifier than the auxiliary
+    output). Each model was trained via stochastic gradient descent until the validation
+    balanced accuracy for its primary task did not improve for at least 30 epochs.
+    The actual epochs needed vary from 150-1000 depending on the method used.
+
+
+    # cing One Study-Level Diagnosis from Many Images'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'The trained image-to-view and image-to-diagnosis classifier networks described
+    above, our goal was to automate assignment of a study-level AS severity diagnosis:
+    one vector summarizing the holistic interpretation of all images in a study. To
+    accomplish this, we applied an approach which we call Prioritized View weighting^{19},
+    which we developed on an earlier, smaller dataset. The intuitive motivation is
+    that diagnostic predictions made from images that show the aortic valve (PLAX
+    or PSAX AoV views) should be considered stronger evidence than predictions of
+    disease severity from other view types. Concretely, our Prioritized View procedure
+    obtains a study-level probabilistic prediction in three steps. First, using the
+    image-to-diagnosis classifier to produce a 3-class probability vector indicating
+    AS severity for every image in the study. Second, use the image-to-view classifier
+    to predict the probability of a relevant view (PLAX or PSAX) for every image.
+    Finally, compute a weighted average over the 3-class vectors from step one, weighting
+    each by the probability from step two. We compare this Prioritized View approach
+    to an alternative Simple Average that treats diagnoses from all images equally
+    without any weighting by the view classifier.
+
+
+    # Performance Metrics
+
+
+    the performance metric of interest. Standard accuracy does not adequately assess
+    performance when the data has imbalanced class distributions, as seen in both
+    view and diagnostic tasks. Balanced accuracy is computed in two steps: compute
+    the fraction of true members of each class that are correctly recognized, then
+    average this fraction across all classes.
+
+
+    To further assist our method''s utility as a screening tool, we use receiver operating
+    curve (ROC) analysis and report area-under-the-curve for several potential use
+    cases: (A) distinguishing no AS from any AS (early and significant), (B) distinguishing
+    early AS from significant AS, and (C)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'distinguishing non-significant (no AS or early AS) from significant (moderate,
+    moderate/severe, or severe) A.S.
+
+
+    # External Validations
+
+
+    External validation of the view classifier was done using the Stanford EchoNet
+    Dynamic dataset.²20 This dataset contains 10,030 images of the A4C view type,
+    gathered using completely different patient populations, clinical teams, and label
+    assignments as our Tufts-focused dataset. Since all 10,030 images are A4C views,
+    we report our view classifier’s accuracy at this dataset. We used all available
+    A4C images in this dataset, which are provided at 112x112 resolution (the same
+    resolution for our images).
+
+
+    Two external validation studies of the AS diagnostic classifiers were done. The
+    first was a temporal external validation performed on TTEs done at Tufts Medical
+    Center from May to July, 2022. These studies represent clinically indicated TTEs
+    with an AS classification that was independently reviewed for this study (no AS,
+    early AS, significant AS, defined in an identical fashion to the model derivation
+    tasks).
+
+
+    Next, we performed an external validation study on data provided by iCardio.ai.
+    The data consisted of TTEs performed between 2018-2020 by an outpatient diagnostic
+    imaging company. For this validation we had access to a single imaging view (PLAX)
+    and the AS diagnostic label for the study. This validation was designed to test
+    model performance on limited 2D acquisitions. The TTEs for this cohort were performed
+    for independent medical practices and clinics in over 13 states in the US and
+    data were acquired with ultrasound units from 4 major vendors (GE®, Philips®,
+    Teratech®, Acuson®). AS grade was assigned by COCATS level III echocardiographer.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Statistical Analysis
+
+
+    To evaluate the classification performance of each neural network, we report the
+    balanced accuracy on the test set. To assess binary discrimination between two
+    classes, we also report the area under the ROC curve. For each performance metric,
+    we report a 95% confidence interval computed using 5,000 bootstrapped samples
+    of the test set. We average this reporting across 3 independent partitions or
+    “splits” of the data into training and test.
+
+
+    # Results
+
+
+    The clinical characteristics of the patients included in this study are shown
+    in Table 3a. The primary labeled cohort included 577 patients. The median age
+    was 74 (IQR 63-82), 43% of the patients were women. 86% of the study population
+    was Caucasian. The hemodynamic parameters of the echocardiograms are shown in
+    Table 3b. The median aortic valve velocity was 2.89 m/s (2.29-3.67), the median
+    peak gradient was 34.6 mmHg (21.0-54.0 mmHg), and the average mean gradient was
+    18.1 mmHg (11.9-30.6 mmHg). The average LV ejection fraction was 60% (55-65%).
+
+
+    Partitioning of the dataset is shown in Table 2. The fully-labeled set contains
+    both diagnosis and view labels (599 students representing 577 patients, 43823
+    total images of which 17270 have view labels). After preprocessing, the median
+    study in our dataset contains 70 images (5th-95th) percentile range 48-105, min-max
+    range 15-181). The median number of images with view labels is 19 (5-95th) range
+    4.9-71, min-max range 1-107. Fully-labeled data were divided into training (60%,
+    360 studies), validation (20%, 119 studies), and test sets (20%, 120 studies).
+
+
+    # View classification'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'Our view classifiers deliver 97% balanced accuracy on test set when averaged
+    over the 3 partitions of TMED-2. Balanced accuracy for the view task increases
+    notably as the size of the available training and validation data increases from
+    90.3% with only 56 studies (95% bootstrap CI 87.5-90.4%) to all 97.0% with all
+    476 studies (95% bootstrap CI 95.9-97.5%),
+
+
+    **Supplementary Table 4.** Using power-law curve-fitting that has been empirically
+    successful in characterizing deep learning performance as dataset sizes increase$^{21}$,
+    we project that labeled-set-only balanced accuracy could improve to 98.5% if 1000
+    labeled studies were available for model training and validation (Supplemental
+    Figure 4).
+
+
+    To sanity-check prediction quality, we used Grad-CAM$^{22}$ to generate visual
+    explanation heat-maps for our view classifier on select images from our test set
+    (Figure 2). These visuals suggest that view predictions depend on relevant regions
+    of the aortic root and aortic valve instead of irrelevant background data.
+
+
+    # External validation of view classification
+
+
+    Accuracy at recognizing A4C views from the external EchoNet dataset is 93.4% (95%
+    bootstrap CI: 93.2-93.8%) averaged over 3 splits on the full labeled set (476
+    studies for training and validation, 120 for test). When the available labeled
+    data are smaller, performance is naturally less accurate: 81.1% when developed
+    on 165 studies and 66.1% when developed on 56 studies (Supplement Table 5).
+
+
+    Diagnosis performance using limited 2D images related to a patient
+
+
+    **Supplementary Figure 2** shows how study-level diagnosis classification improves
+    with more labeled data across two strategies for averaging across all images to
+    make a coherent study-level diagnosis (Prioritized View vs. Simple Average). On
+    our full dataset, the Prioritized View'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'strategy delivers 74.5% balanced accuracy for the 3-way AS diagnosis task compared
+    to 34.9% for Simple Average (**Supplementary Table 6**). Note that random guessing
+    baseline would achieve 33%.
+
+
+    On the largest training split, the multi-task training for our diagnosis classifier
+    took ~14 hours on a Nvidia® RTX 6000 Graphics Processing Unit (GPU). Using an
+    already-trained network, it takes approximately 0.4 seconds to get an AS diagnostic
+    prediction for a typical study.
+
+
+    Using automatic study-level diagnosis as a preliminary screening tool for AS
+
+
+    Discriminatory performance for various clinical use cases are shown in Table 4,
+    Figure 3. A) Using limited 2D images, AUROC = 0.96 for screening for any AS, B)
+    AUROC = 0.75 for identifying early (mild or mild/moderate) AS vs significant (moderate/severe,
+    severe) AS, and C) AUROC = 0.86 for no significant AS (no AS and early AS) vs
+    significant (moderate, moderate/severe, or severe) AS. Using these data, our methods
+    demonstrate sensitivity of 88.3% and specificity of 88% for detecting AS. The
+    confusion matrices for these predictions are shown the **Figure 4.**
+
+
+    External validation of AS classification
+
+
+    In the temporal validation the AS classifier was used to study 263 consecutive
+    TTEs acquired at Tufts Medical Center with independently verified AS grade as
+    assigned by a board certified echocardiographer. For the diagnostic screening
+    task of identifying AS (all grades) the AUROC was 0.95. In this external validation
+    cohort the prevalence of AS was 14.5%. The sensitivity was 94.7% and the specificity
+    was 78.7%. Positive predictive value (PPV) was 42.9% and negative predictive value
+    (NPV) was 98.9% (**Figure 5**). For the task of identifying significant AS'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '(moderate and severe) vs no significant AS (no AS, mild, mild-moderate AS)
+    the AUROC was 0.95 (Supplemental Figure 3).
+
+
+    In the fully external validation using a single PLAX view, the AS classifier was
+    used to screen for AS in 8502 echocardiograms. For the screening task the AUROC
+    was 0.91. In this cohort the prevalence of AS was 9.0%. 89.3% and the specificity
+    was 76.1%. The PPV was 27.0% and the NPV was 98.6% (Figure 6).
+
+
+    # Discussion
+
+
+    Novel approaches to AS case identification are needed to improve treatment rates
+    for this condition. Here we develop methods for fully automated detection of AS
+    from limited TTE datasets. We show that automated detection of AS is possible
+    using modern deep learning classifiers and that these networks are generalizable
+    across different datasets. These tools can broadly characterize the presence or
+    absence of AS and the severity of disease and are well suited for identifying
+    patients who should be referred for comprehensive echocardiography.
+
+
+    These results represent important steps toward establishing a novel approach to
+    AS case identification.
+
+
+    These models are not designed to comprehensively phenotype AS as can be done with
+    complete TTE. Instead, we view this work as a method to move case identification
+    upstream of the echocardiogram laboratory. With an estimated incidence rate of
+    severe AS of 4.4%/year in the general population >65 years of age, it is clear
+    that many patients go unrecognized.23 The sensitivity and specificity of contemporary
+    care with cardiac auscultation for detecting significant valve disease is only
+    44% and 69% respectively.24 Performance of auscultation is likely to be even lower
+    for detecting mild disease where murmurs are less intense. An'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'automated screening program that uses limited 2D datasets—embedded within or
+    upstream of hospital or clinic-based echocardiogram laboratories—might improve
+    case identification and referral. While the discriminatory performance of these
+    models appears excellent, the positive predictive value is modest. This is related
+    in part to the relatively low prevalence of AS and should be viewed in the context
+    of a very high negative predictive value (i.e. very few cases will be missed).
+
+
+    These tools could enable studies to address the profound treatment disparities
+    for patients with severe AS$^{25,26}$ or interrogate emerging evidence that many
+    patients with severe AS are not treated$^{3,27,28}$ An automated screening could
+    allow for large scale studies of the natural history of AS and also uncover potential
+    biases in the care pathway of patients with this condition. Certainly, additional
+    studies are needed to assess whether automation tools that enable effective screening
+    and timely referral can improve outcomes for patients with AS. Automated detection
+    of AS might also enable studies of early interventions to halt disease progression.$^{29}$
+    Classically, it has been challenging to study early stage disease since early
+    AS is asymptomatic. Fully automated interpretation of limited echocardiography
+    may be worthwhile if effective treatments emerge, or for enabling trial recruitment
+    for treatment of earlier stage disease. The methods presented here do not use
+    Doppler images and are so potentially suited to use with POCUS devices.
+
+
+    The modern networks studied here are attractive for the field of echocardiography
+    because they can learn competitive models from small labeled datasets. These models
+    used a single frame from the cine loops. Use of the time-varying feature sets
+    almost certainly contains additional information, however this added has to be
+    balanced against the computational requirements needed to process more complex
+    datasets. This network was designed to be scalable and require the least-information
+    necessary to be clinically valuable. Additionally, as'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'demonstrated with the external validation study, these networks can ingest
+    complete or partial studies and assign a diagnostic label. This flexibility positions
+    these methods for use with limited acquisitions in screening environments. Study-level
+    diagnoses were achieved using a novel view-prioritized approach which uses a view-classifier
+    to identify views deemed relevant for the diagnostic task of interest (here A.S.).
+    Diagnostic classifier predictions from these relevant views are then prioritized
+    via a weighted average to predict a coherent study-level diagnostic label. We
+    present validation studies of the sequential view and diagnostic tasks to emphasize
+    the tiered approach used here that we believe can be applied to automate other
+    complex imaging diagnoses.
+
+
+    The data used in these studies are released as part of our Tufts Medical Echocardiogram
+    Database version 2 (TMED-2, and code available at https://tmed.cs.tufts.edu/).
+    TMED-2 substantially increases the number of publicly released studies, increases
+    resolution to 112x112 from 64x64, and increases available view types compared
+    to our smaller earlier release.²19 This database covers a range of AS pathologies
+    and will support the development of novel methods to automate screening for complex
+    imaging diagnoses. The notable accuracy gains possible on external data with 3x
+    increases in dataset size illustrate the critical need for efforts to make labeled
+    datasets available to researchers worldwide.
+
+
+    There are a few limitations to this work that must be recognized. The presented
+    echocardiograms from a single academic center and diagnostic labels were assigned
+    as part of routine clinical care. Non-white patients were under-represented in
+    this cohort though the echocardiogram-based imaging diagnosis of AS should not
+    have any biologic differences based on race. This study did not include outcome
+    data or information from other imaging modalities to confirm disease severity.
+    While the number of labeled echocardiograms is modest, these networks are notable
+    in that they can learn from small labeled sets. This is important for future'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'Journal Pre-proof
+
+
+    model development where labels are expensive and time consuming. While more complex
+    low flow/ low gradient subtypes may be misclassified, we minimize this risk by
+    collapsing moderate and severe AS into a single ''significant AS'' category that
+    should be referred for comprehensive study and care. This is by design and is
+    important for future screening trials. Prior efforts that focus only on high flow/
+    high gradient subtypes¹⁴ would miss a significant number of cases that represent
+    severe disease with lower flow profiles. With release of our code and images,
+    we encourage additional external validations of our work. We expect performance
+    would improve with higher image resolutions, larger neural networks, or use of
+    all frames from cineloops rather than the first frame only; we keep resolutions
+    modest (112 x 112 pixels) and used only one frame to achieve a tractable balance
+    between accuracy and training time. On modern GPUs each neural network we trained
+    already requires dozens of hours on the largest version of our dataset.
+
+
+    # Conclusion
+
+
+    ML approaches optimized for echocardiography can successfully identify AS using
+    limited 2D datasets. These methods lay the groundwork for fully automated screening
+    for this disease and future study of interventions to improve outcomes.
+
+
+    Acknowledgements: This work was supported by the National Institutes of Health
+    Tufts CTSI NIH CTSA UL1TR002544. BW received funding from the National Institutes
+    of Health (K23 AG055667)
+
+
+    18'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# References
+
+
+    1. Yagdir S, Johnson CO, Aboyans V, et al. Global, Regional, and National Burden
+    of Calcific Aortic Valve and Degenerative Mitral Valve Diseases, 1990-2017. Circulation.
+    2020;1670–80.
+
+
+    2. Lindman BR, Sukul D, Dveck MR, et al. Evaluating Medical Therapy for Calcific
+    Aortic Stenosis: JACC State-of-the-Art Review. J Am Coll Cardiol. 2021;78(23):2354–76.
+
+
+    3. Li SX, Patel NN, Flanny LD, et al. Trends in Utilization of Aortic Valve Replacement
+    for Severe Aortic Stenosis. J Am Coll Cardiol. 2022 Mar 8;79(9):864–77.
+
+
+    4. Baumgartner H, Jung J, Bermejo J, et al. Recommendations on the Echocardiographic
+    Assessment of Aortic Valve Stenosis: A Focused Update from the European Association
+    of Cardiovascular Imaging and the American Society of Echocardiography. J Am Soc
+    Echocardiogr. 2017 Apr;30(4):372–92.
+
+
+    5. Gulshan V, Peng L, Coram M, et al. Development and Validation of a Deep Learning
+    Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs.
+    J JAMA. 2016;316(22):2402–10.
+
+
+    6. Esteva A, Kuprel B, Novo RA, et al. Dermatologist-level classification of skin
+    cancer with deep neural networks. Nature. 2017;542(7639):115–8.
+
+
+    7. Zhang J, Gajjala S, Agrawal P, et al. Fully Automated Echocardiogram Interpretation
+    in Clinical Practice. Circulation. 2018 Oct 16;138(16):1623–35.
+
+
+    8. Ouyang D, He B, Ghorbani A, et al. Video-based AI for beat-to-beat assessment
+    of cardiac function. Nature. 2020 Apr 9;580(7802):252–6.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '9. Duffy G, Cheng PP, Yuan N, et al. High-Throughput Precision Phenotyping
+    of Left Ventricular Hypertrophy With Cardiovascular Deep Learning. JAMA Cardiol.
+    2022 Feb 23;
+
+
+    10. Tromp J, Seekings PJ, Hung CL, et al. Automated interpretation of systolic
+    and diastolic function on the echocardiogram: a multicohort study. Lancet Digit
+    Heal. 2022 Jan;4(1):e46–54.
+
+
+    11. Sengupta PP, Shrestha S, Kagiyama N, et al. A Machine-Learning Framework to
+    Identify Distinct Phenotypes of Aortic Stenosis. JACC Cardiovasc Imaging. 2021
+    Sep;14(9):1707–20.
+
+
+    12. Playford D, Bordin E, Mohamad R, et al. Enhanced Diagnosis of Severe Aortic
+    Stenosis Using Artificial Intelligence: A Proof-of-Concept Study of 530,871 Echocardiograms.
+    JACC Cardiovasc Imaging. 2020 Apr;13(4):1087–90.
+
+
+    13. Yang C, Ojha BD, Aronoff ND, et al. Classification of aortic stenosis using
+    conventional machine learning and deep learning methods based on multi-dimensional
+    mechanical signals. Sci Rep. 2020 Dec 16;10(1):17521.
+
+
+    14. Dai W, Nazari H, Namasivyam M, et al. Identifying Aortic Stenosis with a Single
+    Parasteral Long-Axis Video Using Deep Learning. J Am Soc Echocardiogr. 2022 Oct
+    30;
+
+
+    15. Mitchell C, Rahko PS, Blauwet LA, et al. Guidelines for Performing a Comprehensive
+    Transtacic Echocardiographic Examination in Adults: Recommendations from the American
+    Society of Echocardiography. J Am Soc Echocardiogr. 2019;32(1):1–64.
+
+
+    16. Haji K, Wong C, Neil C, et al. Multi Reader Assessment of Accuracy and Interobserver'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'Variability in Aortic Stenosis by Echocardiography. Hear Lung Circ. 2019;28:S258.
+
+
+    +   17. Sengupta PP, Shrestha S, Berthon B, et al. Proposed Requirements for Cardiovascular
+    Imaging-Related Machine Learning Evaluation (PRIME): A Checklist. JACC Cardiovascular
+    Imaging. 2020 Sep;13(9):2017–35.
+
+
+    +   18. Zagoruyko S, Komodakis N. Wide Residual Networks. In: Proceedings of the
+    British Machine Vision Conference 2016. p. 87.1–87.12.
+
+
+    +   19. Huang Z, Long G, Weissler B, et al A New Semi-supervised Learning Benchmark
+    for Classifying View and Diagnosing Aortic Stenosis from Echocardiograms. Proc
+    Mach Learn Healthc Conf. 2021 Jul 30;
+
+
+    +   20. Ghorbani A, Ouyang D, Bid A, et al. Deep learning interpretation of echocardiograms.
+    npj Digit Med. 2020 Dec 24:3(1):10.
+
+
+    +   21. Hetness J, Narang S, Ardalani N, et al. Deep Learning Scaling is Predictable,
+    Empirically. ArXiv. 2017 Dec 1;
+
+
+    +   22. Selvaraju RR, Cogswell M, Das A, et al. Grad-CAM: Visual Explanations
+    from Deep Networks via Gradient-Based Localization. In: 2017 IEEE International
+    Conference on Computer Vision (ICCV). IEEE; 2017. p. 618–26.
+
+
+    +   23. Durko AP, Osnabrugge RL, Van Miehem NM, et al. A annual number of candidates
+    for transcatheter aortic valve implantation: current estimates and future projections.
+    Eur Heart J. 2018;39(28):2635–42.
+
+
+    +   24. Gardei SKM, Myerson SG, Chambers J, et al. Cardiac auscultation poorly
+    predicts the presence of valvular heart disease in asymptomatic primary care patients.
+    Heart.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '2018;104(22):1832–5.
+
+
+    +   25. Batchelor W, Anwaruddin S, Ross L, et al. Aortic Valve Stenosis Treatment
+    Disparities in the Underserved: JACC Council Perspectives. J Am Coll Cardiol.
+    2019;74(18):2313–21.
+
+
+    +   26. Clark KA, Chouairi F, Kay B, et al. Trends in transcatheter and surgical
+    aortic valve replacement in the United States, 2008–2018. Am Heart J. 2022;243:87–91.
+
+
+    +   27. Tang L, Gössel M, Ahmed A, et al. Contemporary reasons and clinical outcomes
+    for patients with severe, symptomatic aortic stenosis not undergoing aortic valve
+    replacement. Cardiovasc Inter. 2018;11(12):1–12.
+
+
+    +   28. Brennan JM, Bryant A, Boero I, et al. PROVIDER-LEVEL VARIABILITY IN THE
+    TREATMENT OF PATIENTS WITH SEVERE SYMPTOMATIC AORTIC VALVE STENOSIS. J Am Coll
+    Cardiol. 2019 Mar;73(9):1949.
+
+
+    +   29. Lindman BR, Merryman WD. Unloading the Stenotic Path to Identifying Medical
+    Therapy for Calcific Aortic Valve Disease. Circulation. 2021 Apr 13;143(15):1455–7.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# List of Tables
+
+
+    **Table 1.** Aortic Stenosis Reference Labels
+
+
+    **Table 2.** AS Diagnosis Label Cohorts across Train/Test Splits
+
+
+    **Table 3a, 3b.** Baseline Characteristics of Patients and Echocardiograms in
+    TMED-2 Dataset
+
+
+    **Table 4.** Model Discrimination (AUROC) for AS Screening Tasks
+
+
+    # List of Figures
+
+
+    **Figure 1.** Central Illustration: Approach to Automated Identification of Aortic
+    Stenosis
+
+
+    **Figure 2.** Saliency Maps of View Classifier on Two Example Images
+
+
+    **Figure 3.** Diagnosis Classification Receiver Operator Curves
+
+
+    **Figure 4.** Confusion Matrixes for AS predictions
+
+
+    **Figure 5.** Temporal Validation of Diagnostic Classifier'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'Figure 6. Fully External Validation of the Diagnostic Classifier
+
+
+    Table 1. Aortic Stenosis Reference Labels
+
+
+    | Reference AS Severity | Grading Thresholds |
+
+    | :--- | :--- |
+
+    | Severe | valve area of < 1.0 cm², peak velocity > 4.0 m/s, or mean gradient
+    > 40 mmHg |
+
+    | Moderate | valve area of < 1.0 cm², peak velocity < 4.0 m/s or mean gradient
+    < 40 mmHg and LVOT derived stroke volume < 35 mL/m2 |
+
+    | Mild | valve area of 1.0-1.5 cm², peak velocity 3.0-4.0 m/s, or mean gradient
+    20-40 mmHg; valve area of < 1.5 cm², peak velocity 2.6-2.9 m/s, or mean gradient
+    <20 mmHg |
+
+
+    **Table 1. AS Reference Labels.** Aortic severity was assigned using an integrative
+    approach consistent with current American Society of Echocardiography Guidelines.
+    The Severe AS reference label includes both high gradient and low gradient subtypes.
+    AS severity was pulled from the echocardiogram report as assigned by the clinical
+    reader. As part of routine care an additional label of ‘Mild to Moderate’ was
+    assigned when hemodynamic profiles overlap the ‘Mild’ and ‘Moderate’ severity
+    classes. Valve area represents the continuity equation derived valve area. LVOT
+    is the left ventricular outflow tract diameter. mmHg is millimeters of mercury,
+    m/s is meters per second.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'Table 2. AS Diagnosis Label Cohorts across Train/Test Splits
+
+
+    | | | Number of Studies | | | | Number of Labeled Images | | | |
+
+    |---|---|---|---|---|---|---|---|---||
+
+    | | Total | None | Early AS | Sig AS | Total | None | Early AS | Sig AS |
+
+    | Train* | 360 | 76 | 103 | 181 | 10253 | 999 | 1316 | 7938 |
+
+    | Valid | 119 | 25 | 34 | 60 | 3050 | 344 | 402 | 2759 |
+
+    | Test | 120 | 26 | 34 | 60 | 3511 | 339 | 408 | 2764 |
+
+
+    **Table 2: AS Diagnosis Label Cohorts across Train/Test Splits in TMED-2.** We
+    show the number of echocardiogram studies assigned to train/valid/test sets across
+    all 3 possible aortic (AS) severity levels for the fully-labeled dataset of 599
+    studies. Image counts represent the mean over 3 splits, as the exact number of
+    images per study differs across splits. No split deviates more than 12% from the
+    reported mean here. Each patient''s data were assigned to exactly one set to property
+    generalizability to new patients, while preserving proportions of each AS severity
+    level across train and test. * indicates indicates that the training set also
+    included an additional set with only view labels but no AS diagnosis label. This
+    view-only set contained 705 studies representing 7694 labeled images, see Supplement
+    Table 3.
+
+    Abbreviations: None represents no AS, Early AS represents mild and mild/mod AS,
+    Sig AS means moderate, moderate/severe, and severe AS.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# Journal Pre-proof\n\n| Patient Characteristics (N = 577) | 74 (IQR 63-82)\
+    \ |\n|---|---|\n| Age | - |\n| Sex (% women) | 43% |\n| Race | 85% Caucasian\n\
+    \ 4% Black\n 3% Latino\n 8% other |\n| Height (inches) | 66 (63-69) |\n| Weight\
+    \ (lbs) | 174 (146-208) |\n| BMI (kg/m²) | 27.8 (24.2-32.1) |\n| Systolic BP (mmHg)\
+    \ | 129 (116-144) |\n| Diastolic BP (mmHg) | 72 (63-79) |\n| Hypertension (%)\
+    \ | 80% |\n| Hyperlipidemia | 68% |\n| Congestive Heart Failure | 33% |\n| Diabetes\
+    \ | 31% |\n| Prior myocardial infarction | 13% |\n| Prior PCI | 17% |\n| Prior\
+    \ CABG | 13% |\n| Prior CVA | 10% |\n| Current smoking | 8% |\n\n**Table 3.**\
+    \ Baseline Characteristics of Patients and Echocardiograms.\n\nAll baseline characteristics\
+    \ refer to the entire cohort of 577 patients. All values are medians unless otherwise\
+    \ specified. IQR is interquartile range. BP is blood pressure, PCI is percutaneous\
+    \ coronary intervention. CABG is coronary artery grafting, CVA is cerebrovascular\
+    \ accident.\n\n27"
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Echocardiogram Study Characteristics
+
+
+    | Screening Task | All | No AS | Early AS (Mild AS) (Mild/moderate AS) | Significant
+    AS (Moderate AS) (Severe AS) |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | AS Grade | 399 | No AS | 127 (21.2%) | 144 (24.0%) | 27 (4.5%) | 132 (22.0%)
+    | 169 (28.2%) |
+
+    | Stroke Volume, mL (n = 566) | 59.6 (46-75.6) | 54 (41-70.8) | 61 (47-83.1) |
+    50 (43.0-69.7) | 66.0 (52.0-83.0) | 59.0 (47.8-72.0) |
+
+    | LV ejection fraction, % (n = 599) | 60 (55-65) | 55 (45-60) | 60 (55-65) | 60
+    (55-65) | 60 (55-65) | 60 (55-65) |
+
+    | V2 max, m/s (n = 507) | 2.89 (2.29-3.65) | 1.73 (1.28-2.00) | 2.45 (2.32-3.64)
+    | 2.89 (2.80-2.97) | 3.26 (3.11-3.47) | 4.32 (3.96-4.65) |
+
+    | AV mean gradient, mmHg (n = 508) | 34.4 (21.2-52.7) | 12.1 (6.8-16.1) | 24.1
+    (21.8-28.1) | 34.1 (32.1-35.2) | 42.6 (39.8-48.4) | 74.4 (63.0-87.0) |
+
+    | AV mean gradient, mmHg (n = 491) | 18.1 (11.9-30.0) | 6.7 (4.1-8.5) | 13.2 (11.6-15.1)
+    | 17.8 (15.8-19.4) | 23.0 (20.2-26.2) | 42.0 (35.0-50.0) |
+
+
+    **Table 3b. Echocardi in TMED-2 Dataset.** Hemodynamic values were extracted from
+    the medical record. Screening tasks correspond to the automated diagnostic tasks
+    studied: 1 Any AS (vs none), 2 Early AS vs Significant AS, 3 No significant AS
+    (vs significant AS). Not all values are available for every study, the number
+    reporting each value are shown in the left hand column. All values are measured
+    +/- interquartile range (IQR) unless otherwise specified. AS is aortic stenosis.
+    LV is left ventricle, V2 max is the peak continuous wave velocity. AV is aortic
+    valve. LV ejection fraction was assessed by integrating the biplane method of
+    disks summation (modified Simpson’s rule) with overall visual assessment. Max
+    gradient is the maximum continuous gradient across the aortic valve. Mean gradient
+    is the mean continuous gradient across the aortic valve. mmHg is millimeters of
+    mercury.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '| Model | AS absent vs AS present | Early AS vs Sig AS | Sig AS vs No Sig AS
+    |
+
+    |---|---|---|--|
+
+    | Simple Average | 0.86 (0.81 - 0.91) | 0.73 (0.67 - 0.79) | 0.84 (0.79 - 0.88)
+    |
+
+    | Prioritized View | 0.96 (0.93 - 0.97) | 0.75 (0.68 - 0.81) | 0.86 (0.82 - 0.90)
+    |
+
+
+    **Table 4.** Model Discrimination for three binary screening tasks: 1) AS absent
+    vs AS present, 2) Early AS vs. Significant AS, 3) no AS vs Significant AS. We
+    report the Area under the Receiver Operator Curves (AUROC) for each task, averaged
+    over 3 random validation-test splits of the data. The 95% bootstrap CI of this
+    average is in parentheses. Methods two methods of aggregating image-level predictions
+    to a study-level diagnosis: simple averaging or weighted averaged that prioritizes
+    specific views (PLAX or PSAX) that depict the aortic valve and are thus relevant
+    for AS diagnosis.
+
+
+    Table 4: Model Discrimination (AUROC) for AS Screening Tasks'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Figure 1. Approach to Automated Identification of Aortic Stenosis
+
+
+    ![](img/9e83ae159adbe9802ed604394e924f29_30_0.png)
+
+
+    Figure 1. Approach to Automated Identification of Aortic Stenosis. Convolutional
+    neural networks (CNN) were trained and tested to identify view type and AS diagnostic
+    category using limited 2D datasets.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# Figure 2. Grad-CAM Visualizations of View Predictions.
+
+
+    PLAX
+
+    PSAX of AoV
+
+
+    ![](img/9e83ae159adbe9802ed604394e924f29_31_0.png)
+
+
+    **Figure 2:** Showing examples of parasternal long axis (PLAX) (left) and parasternal
+    short axis at the level of the aortic valve (PSAX of AoV) (right) in our test
+    set and their Grad-CAM visualizations. The original image is shown on the top,
+    the corresponding Grad-CAM visualization is shown below (original image with heatmap
+    overlay on top of it). The model correctly predicted the images to be PLAX and
+    PSAX respectively, and correctly focused on the relevant region of the heart for
+    making the predictions. The hotter the color, the more important the pixel in
+    making the class discriminative decisions.
+
+
+    31'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Figure 3. Diagnosis Classification Receiver Curves
+
+
+    ![](img/9e83ae159adbe9802ed604394e924f29_32_0.png)
+
+
+    Figure 3. Diagnostic Classification Receiver Curves. Each set of experiments was
+    run with 3 random training-validation-test splits of the data (labeled split1,
+    split2, split3). The top row represents screening for AS: AS absent as present
+    (any severity). Middle row represents early AS (mild, mild/moderate) vs significant
+    AS (moderate, severe). Bottom row represents non-significant AS (none, mild, mild/moderate)
+    vs significant AS (moderate, severe). Each line gives the performance of one prediction
+    strategy for aggregating across all images in a study: Prioritized View and Simple
+    Average. Each column shows the results for one partition of the TMED-2 data into
+    training/test.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# Figure 4. Confusion Matrices for AS Severity classification
+
+
+    | | split1 | | | split2 | | | split3 | | |
+
+    |---|---|---|---|---|---|---|---|---||
+
+    | no | 22 | 2 | 1 | 24 | 0 | 0 | 26 | 0 | 0 |
+
+    | significant early | 8 | 19 | 7 | 9 | 14 | 11 | 8 | 16 | 10 |
+
+    | significant | 3 | 9 | 48 | 3 | 11 | 46 | 4 | 7 | 49 |
+
+    | | no | early | significant | | no | early | significant | | no | early | significant
+    |
+
+
+    Figure 4: Confusion Matrices for AS Severity classification. Each set of experiments
+    was run with 3 random training-validation-test splits of the data (labeled split1,
+    split2, split3). We report the test set confusion matrix from classifiers trained
+    on each of the 3 train/test splits of our TMED-2 dataset.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Figure 5. Temporal Validation of Diagnostic Classifier
+
+
+    ![](img/9e83ae159adbe9802ed604394e924f29_34_0.png)
+
+
+    Figure 5. Temporal Validation of the fully automated network for AS identification.
+    AUROC shown on the left for 263 consecutive TTEs at Tufts Medical Center. AS diagnosis
+    was independently reviewed for this study.
+
+
+    # Figure 6. Fully External Validation
+
+
+    ![](img/9e83ae159adbe9802ed604394e924f29_34_1.png)
+
+
+    Figure 6. Fully External Validation on 8502 echocardiograms from iCardio.ai. This
+    validation study used only the PLAX view. AS diagnosis was assigned by fully independent
+    echocardiographers.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# New Patient Study
+
+
+    ![](img/9e83ae159adbe9802ed604394e924f29_35_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '![](img/9e83ae159adbe9802ed604394e924f29_36_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '![](img/9e83ae159adbe9802ed604394e924f29_37_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Figure 4. Confusion Matrices for AS Severity classification
+
+
+    | | split1 | | | split2 | | | split3 | | |
+
+    |---|---|---|---|---|---|---|---||}{
+
+    | no | 22 | 1 | 24 | 0 | 0 | 26 | 0 | 0 |
+
+    | early | 8 | 19 | 7 | 9 | 14 | 11 | 8 | 16 | 10 |
+
+    | significant | 3 | 9 | -47 | 3 | 11 | 16 | 4 | 7 | -19 |
+
+
+    Figure 4: Confusion Matrices for AS Severity classification. Each set of experiments
+    was run with 3 random training/testing splits (split1, split2, split3). We report
+    the test confusion matrix from classifiers trained on each of the 3 train/test
+    splits of our TIED-2 dataset.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# Temporal Validation
+
+
+    ![](img/9e83ae159adbe9802ed604394e924f29_39_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# External Validation
+
+
+    ![](img/9e83ae159adbe9802ed604394e924f29_40_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# Highlights
+
+
+    +   - Automated detection of aortic stenosis (AS) is a novel approach to diagnosis.
+
+    - ML methods were trained to detect AS from limited 2D echo images
+
+    - Fully-automated screening for AS using limited datasets is achievable.
+
+    - Release of a TTE database will encourage collaboration.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Supplemental information:
+
+
+    **Supplemental Table 1.** Kappa for view agreement
+
+
+    **Supplemental Table 2.** View label agreement confusion matrix
+
+
+    **Supplemental Table 3.** View Label Cohorts across Train/Test Splits
+
+
+    **Supplemental Table 4.** Internal validation of view classifier on TMED-2 test
+    sets.
+
+
+    **Supplemental Table 5.** External validation of view classifier on Stanford EchoNet.
+
+
+    **Supplemental Table 6.** AS diagnosis classifier balanced accuracy on TMED-2
+    test set
+
+
+    **Supplemental Figure 1.** Image labeling tool
+
+
+    **Supplemental Figure 2.** Diagnosis Classification Accuracy as a Function of
+    Sample Size.
+
+
+    **Supplemental Figure 3.** Projections of View Classifier Error Rate vs Sample
+    Size'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# Supplemental Table 1 and Supplemental Table 2: View label agreement
+
+
+    | Kappa Statistics | Standard | | |
+
+    | --- | --- | --- |
+
+    | Statistic | Estimate | Error | 95% | Confidence Limits |
+
+    | Simple Kappa | 0.8262 | 0.0094 | 0.8077 | 0.8447 |
+
+    | Weighted Kappa | 0.8987 | 0.0065 | 0.8859 | 0.9115 |
+
+
+    | Table | | |
+
+    | --- | --- | --- |
+
+    | E(E) | L(L) | |
+
+    | Frequency | | A2C | A4C | CW AoV | No | PLAX | PSAX AoV | PW AoV | TEE | Vascular
+    | Total |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | A2C | | 117 | 1 | 0 | 0 | | 0 | 0 | 0 | | 126 |
+
+    | A4C | | 2 | 208 | 0 | 23 | 0 | | 0 | 00 | 0 | | 233 |
+
+    | CW AoV | | 0 | 0 | 109 | 124 | 0 | | 0 | 0 | 0 | | 233 |
+
+    | No Label | | 9 | 26 | 0 | 1399 | 44 | 1 | 5 | 0 | 0 | | 1513 |
+
+    | PLAX | | 0 | 0 | 0 | 12 | 220 | 0 | | 0 | 0 | 0 | | 232 |
+
+    | PSAX AoV | | 0 | 0 | 0 | 10 | 0 | 88 | | 0 | 0 | 0 | | 98 |
+
+    | PW AoV | | 0 | 0 | 18 | 0 | 0 | 0 | | 78 | 0 | 0 | | 96 |
+
+    | TEE | | 0 | 0 | 0 | 0 | 0 | 0 | | 0 | 158 | 0 | | 158 |
+
+    | Vascular | | 0 | 0 | 0 | 0 | 0 | 0 | | 0 | 0 | 60 | | 60 |
+
+    | Total | | 128 | 238 | 135 | 1594 | 264 | 89 | 83 | 158 | 60 | | 2749 |
+
+
+    **Supplemental Table 1 and Supplemental Table 2.** View label agreement 50 studies
+    were selected as a test set. These were heldout and labeled by two sonographers.
+    View labels representing A2C (apical 2 chamber), A4C (apical 4 chamber), CW AoV
+    (continuous wave Doppler across the aortic valve), PW AoV (pulse wave Doppler
+    across the aortic valve), PLAX (parasernal long axis), PSAX (parasternal short
+    axis of the aortic valve), TEE (transesophageal images), and vascular (non-cardiac
+    images) were labeled. Kappa for agreement was calculated.'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '| | PLAX | PSAX | A4C | A2C | Other-or-A4C-or-A2C | Total Unlabeled Images
+    |
+
+    |---|---|---|---|---|---|---||
+
+    | Train | 10253 | 2879 | 1008 | 1380 | 1050 | 3936 | 16112 |
+
+    | Valid | 3505 | 965 | 357 | 399 | 309 | 1473 | 5150 |
+
+    | Test | 3511 | 964 | 359 | 426 | 311 | 1451 | 5332 |
+
+    | View-only Train | 7694 | 2564 | 1005 | 2359 | 1766 | 0 | 37576 |
+
+    | Unlabeled Train | 353500 | - | - | - | - | - | |
+
+
+    Supplemental Table 3: View Label Cohorts. Dataset Counts for 5-way view classification
+    task. Arranged by Image number according to view label, reporting the mean over
+    3 splits. No split deviates more than 9% from the mean.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Supplemental Table 4: Internal validation of view classifier on TMED-2 test
+    sets
+
+
+    | Development Set Size | Split1 balanced | Split2 balanced | Split3 balanced |
+    Average balanced |
+
+    |---|---|---|---|--|
+
+    | number studies (train/valid) | accuracy (2.5, 97.5th) | accuracy (2.5, 97.5th)
+    | accuracy (2.5, 97.5th) | accuracy (2.5, 97.5th) |
+
+    | 479 (360 / 119) | 96.72 (95.84, 97.53) | 97.23 (96.41, 98.00) | 97.14 (96.61,
+    98.09) | 97.03 (95.85, 97.54) |
+
+    | 165 | 95.47 (94.47, 96.41) | 95.46 (94.44, 96.43) | 96.38 (95.49, 97.24) | 95.77
+    (94.46, 96.44) |
+
+    | 56 | 88.99 (87.55, 90.34) | 89.99 (88.47, 91.42) | 92.03 (90.72, 93.28) | 90.34
+    (87.52, 90.35) |
+
+
+    Supplemental Table 4: Internal validation of view classifier on TMED-2 test sets.
+    The view classifier is trained to produce a 5-way probabilistic classification
+    (PLAX, PSAX AoV, A4C, A2C, or Other) given a single image. We report balanced
+    accuracy across 3 training/test splits of the TMED-2 dataset with a 95% bootstrap
+    CI in parentheses.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# Supplemental Table 5: External validation of view classifier on Stanford
+    EchoNet
+
+
+    | Development Set Size | Split1 | Split2 | Split3 | Average |
+
+    | number studies (train/valid) | A4C accuracy (2.5, 97.5th) | A4C accuracy (2.5,
+    97.5th) | A4C accuracy (2.5, 97.5th) | A4C accuracy (2.5, 97.5th) |
+
+    | 479 (360 / 119) | 95.02 (94.61, 95.45) | 92.99 (92.31, 93.33) | 92.21 (92.11,
+    93.17) | 93.41 (93.21, 93.77) |
+
+    | 165 | 70.57 (69.69, 71.48) | 90.02 (89.43, 90.60) | 82.84 (82.11, 83.57) | 81.14
+    (80.72, 81.58) |
+
+    | 56 | 61.30 (60.33, 62.24) | 55.29 (54.34, 56.28) | 81.66 (80.90, 82.41) | 66.08
+    (65.55, 66.61) |
+
+
+    Supplemental Table 5: External validation of view classifier on Stanford EchoNet.
+    We evaluate the TMED-2 trained classifier on all 10030 A4C view images in the
+    Stanford EchoNet Dynamic dataset. We report accuracy (fraction of A4C views correctly
+    identified) across 3 training splits of the TMED-2 training set, with a 95% bootstrap
+    CI in parentheses.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Supplemental Table 6: AS diagnosis classifier balanced accuracy on TMED-2
+    test set
+
+
+    | Dev Size number | Method | Split1 balanced accuracy | Split2 balanced accuracy
+    | Split3 balanced accuracy | Average balanced |
+
+    |---|---|---|---|---|--|
+
+    | studies (train/valid) | | (2.5, 97.5th) | (2.5, 97.5th) | (2.5, 97.5th) | balanced
+    |
+
+    | 479 (360/119) | Simple Average | 35.16 (31.82, 38.97) | 35.29 (33.33, 38.27)
+    | 34.18 (31.37, 37.50) | 34.88 |
+
+    | | Prioritized View | 74.63 (66.73, 82.24) | 72.61 (66.05, 79.24) | 76.24 (69.62,
+    82.87) | 74.49 |
+
+
+    **Supplemental Table 6:** AS diagnosis classifier balanced accuracy on TMED-2
+    test set. We report balanced accuracy for this 3-class problem (no AS, early AS,
+    significant AS), with 95% bootstrap CI in parentheses. Random chance would have
+    33.33% balanced accuracy.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Supplemental Figure 1: Image Labeling Tool Diagram
+
+
+    ![](img/9e83ae159adbe9802ed604394e924f29_48_0.png)
+
+
+    Supplemental Figure 1: Image labeling tool diagram. Labeling tool displays de-identified
+    images in an array that allows rapid assignment of view labels using quick keys
+    for the labels of interest.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Supplemental Figure 2. Diagnosis Classification Accuracy as a Function of
+    Sample Size
+
+
+    # patient diagnosis classification
+
+
+    ![](img/9e83ae159adbe9802ed604394e924f29_49_0.png)
+
+
+    Supplemental Figure 2. Diagnosis Classification Accuracy as a Function of Sample
+    Size. We plot balanced accuracy across all studies in the TMED-2 test set (y-axis)
+    versus the number of studies available for model development (training and validation,
+    x-axis). Each line gives the performance of one prediction strategy for aggregating
+    across all images in a study: Prioritized View and Simple Average. Square markers
+    give the average over 3 splits, and the color bar represents standard deviation.'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# Supplemental Figure 3. Projections of View Classifier Error Rate vs Sample
+    Size
+
+
+    ![](img/9e83ae159adbe9802ed604394e924f29_50_0.png)
+
+
+    **Supplemental Figure 3.** Projections of View Classifier Error Rate as Training
+    Set Size Increases. As amount of available labeled data increases, using the power
+    law scaling rule $an^{-\beta}$ fit to minimize squared error with the three measurements
+    shown. With this prediction, 1000 labeled studies available for training and validation
+    (double our current release''s amount) would yield a balanced error rate of 1.5%,
+    equivalent to balanced accuracy of 98.5%.'
+  merge: -1
+  img_proc: true
