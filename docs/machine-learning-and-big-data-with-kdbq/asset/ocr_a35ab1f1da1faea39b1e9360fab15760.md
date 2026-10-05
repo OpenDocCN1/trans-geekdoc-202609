@@ -1,0 +1,14 @@
+# CHAPTER 29
+Economophysics: The Agent-Based Computational Models
+
+In this chapter, we step outside the main scope of this book and illustrate the usage of q for the analysis of models in the economophysics domain. This field is a fusion between theories developed in physics on the problems in social sciences and in particular in economics and financial economics. The emergence of economophysics dates back to the 1990s when some models from statistical physics were used to analyse data from stock markets. A very nice introduction of the methods from this period can be found in a seminal review by Mantegna and Stanley (1999). The main reason why the field itself appeared is likely due to the emergence of a large amount of financial data which required statistical methods to analyse them.
+
+It is worth noting that the influence of physics on finance appears before the 1990s. Among many achievements, we recall the utility-based theory developed by Bernoulli (2011), the theory of gravity of international trade developed by a trained physicist and the first laureate in Nobel Prize in Economics Jan Tinbergen, Tinbergen and Hekscher (1962), or the apparent resemblance of the famous Black–Scholes equation and the heat equation used for a long time in physics to describe heat conductors. The trend in merging physics and finance was further shown by the econometric physicist Jean-Philippe Bouchaud of the Year for 2016.
+
+In terms of economics, the most prominent trace of physics in finance is the widespread use of the power-law behaviour, which tends to be closer to reality than the famous and easy-to-model exponential or Gaussian laws. The power-law stands for the relationship between two variables, where one variable is a function of the power of the other variable. Such a behaviour describes the distribution of many phenomena in biology or physics ranging from the activity patterns of neurons to the magnitude of earthquakes or solar flares. In, particular, the power-law has been frequently used to model the distribution of magnitudes of price returns.
+
+It is worth pointing out that in physics, the presence of the power-law in certain distributions is linked to phase transitions of the systems. The exponents of the power-law behaviour are referred to as critical exponents of the physical system. It was shown that systems with similar critical exponents represent the same dynamics. Besides, distribution-wise the power-law behaviour forms a set of different attractors for which the central limit theorem and law of large numbers may not hold. Let us recall the requirements for finite mean and variance.
+
+583
+Machine Learning and Big Data with kob/q. First Edition. Jan Novotny, Paul A. Bikleon, Air Galiosatos and Frédéric Délice.
+© 2020 Jan Novotny, Paul A. Bikleon, Air Galiosatos and Frédéric Délice. Published 2020 by John Wiley & Sons, Ltd.

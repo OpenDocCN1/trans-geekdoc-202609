@@ -1,0 +1,1 @@
+The table `treeMCTS` with the game tree built so far is in a format which needs some manipulation in order to go through the game tree during the Selection and Expansion steps. For purpose, we define a local subset of the table, called relevantTrees, which contains entries from bucket[`treeMCTS` relevant for a given iteration of the M algorithm. The relevantTrees table is

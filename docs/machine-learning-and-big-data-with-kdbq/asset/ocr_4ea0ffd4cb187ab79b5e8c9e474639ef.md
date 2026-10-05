@@ -1,0 +1,3 @@
++   partitioned tables: suitable for “large” time series tables which span multiple dates, months, or years. This is the main way to save “big data” tables, and we have shown how to save but also append to these tables in a memory-efficient way.
+
+One challenge that is found when starting to build huge data sets with many partitioned tables is how to maintain them when, for example, we have a schema change, and we need to normalise or backfill a new column or change its datatype.
