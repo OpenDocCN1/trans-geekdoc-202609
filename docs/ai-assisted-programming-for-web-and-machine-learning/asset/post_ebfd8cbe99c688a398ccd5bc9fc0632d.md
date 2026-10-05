@@ -1,0 +1,352 @@
+
+## Key Hyperparameters 268
+- PyTorch 270
+- Transfer Learning 271
+- Collaboration 40
+- Collaboration, use cases 41
+- Collaboration, workflow
+- DVC Datasets, managing 41
+- Notebooks, converting 40
+- Resolve Merge 41
+- Containerized Deployment 300
+- Convolutional Neural Networks (CNNs) 264
+
+# D
+
+## Database Management 142
+- Database Management, terms
+- AI-driven Performance Monitoring 148
+- AI-Generated SQL Queries 144
+- AI-Powered Tools 143
+- Database Schema Design 147
+- Indexing 146
+- NoSQL Query Generation 145
+- Structured Query Language (SQL) 143
+- Data Cleaning 188
+- Data Cleaning, terms
+- Data Missing 188
+- Data Type Conversion 190
+- Final Checks/Validation 192
+- Outliers Detecting 189
+- Reusable Cleaning 193
+- Standardize Column Names 191
+- Structured/Unstructured Cleaning 194
+- Data Preprocessing 226
+- Data Preprocessing, workflow
+- Healthcare Patient 229
+- Online Transaction Chain 228
+- Retail Chain 226
+- Risk Analysis 227
+- Data Visualization 202
+- Data Visualization, terms
+- Bivariate Visualization 203
+- Correlation Visualizing 204
+- EDA 205
+- Feature Visualizing 207
+- Interactive Visualization 208
+- Univariate Distributions 202
+- Designing Regression 254
+- Designing Regression, sections
+- Data Preparation 254
+- House Price Prediction 258
+- Model Construction 255
+- Regression Evaluating 257
+- DevOps Integration 303
+- DevOps Integration, terms
+- Cloud-Based deployment 303
+- PyTorch 304
+- SageMaker 305
+- Sage Streamlines 306
+- Django REST Framework (DRF) 137
+- Docker 45
+- Docker, architecture 46
+- Docker, components 47
+- Docker, workflow 48
+
+# E
+
+## Effective Model Training 273
+- Effective Model Training, concepts
+- Batch Size 274
+- Epochs 274
+- Loss Function 274
+- Optimizer 274
+- Rate Learning 274
+- Effective Model Training, terms
+- Hyperparameter Tuning 279
+- Keras 275
+- PyTorch 276
+- TensorBoard 278
+- Validation 277
+- Effective Prompts 70
+- Effective Prompts, architecture 70
+- Effective Prompts, ensuring 71
+- Effective Prompts, tips 71
+- End-To-End AI Deployments 308
+- End-To-End AI Deployments, architecture 316
+- End-To-End AI Deployments, case study
+- Real-Time Image Classification 309
+- Sentiment Analysis 308
+- End-To-End AI Deployments, lifecycle
+- AWS Lambda 318
+- Data Ingestion 316
+- Feedback Loops 318
+
+# F
+
+## Model Design 317
+- Model Evaluation 317
+- TensorFlow 318
+- Feature Extraction 195
+- Feature Extraction, configuring 195
+- Feature Extraction, terms
+- Automated Feature Selection 199
+- Cyclical Encoding 197
+- Date/Time 197
+- Feature Visualizing 201
+- Pipeline Automating 200
+- Polynomial Features 198
+- Text Data 196
+- Fine-Tuning, concepts
+- AI-Assisted Workflow 297
+- GitHub Copilot 298
+- Performance Evaluation 298
+- Fine-Tuning Optimization, techniques
+- Knowledge Distillation 296
+- Model Format Conversion 297
+- Pruning 296
+- Quantization 294
+- full-Stack Web Development 319
+- full-Stack Web Development, ensuring 323
+- full-Stack Web Development, terms
+- AI-Assisted Pipeline 323
+- API Gateway Endpoints 321
+- CI/CD Integration 321
+- React/AI Assistance 320
+- Real-Time Product Recommendation 319
+- UI Responsiveness 321
+
+# G
+
+- Git 42
+- Git, commands 43
+- Git, fundamentals
+- Collaborate Seamlessly 42
+- Experiment Safely 42
+- Track Changes 42
+- GitHub Copilot 12, 167
+- GitHub Copilot, capabilities
+- Context-Aware Code 12
+- Debugging/Error Resolution 13
+- Framework-Specific Assistance 13
+- Multi-language 13
+- Real-Time Collaborating 13
+- Test Generation 13
+- GitHub Copilot/ChatGPT, concerns
+- Accuracy/Reliability 23
+- Cost Implementation 27
+- Curve Learning 25
+- Dependence/Proprietary 25
+- Ethical Bias 26
+- Ethical/Security 24
+- Existing Workflow 27
+- Future-Proofing 28
+- Lack Contextual 24
+- Proposed Mitigation 27
+- Regulatory/Compliance Barriers 27
+- GitHub Copilot, configuring 168
+- GitHub Copilot, 168
+- GitHub Copilot, workflow
+- API Development 14
+- Boilerplate Code 14
+- Cloud/DevOps 14
+- Data Analysis 14
+- Git, leveraging 43
+- Git, practices 45
+- Git, setting up 42
+- Git, tasks
+- Code Review Bots 44
+- Commitizen 44
+- GitHub Copilot 44
+- Pre-commit Hooks 44
+- Git, use cases
+- Academic Collaboration 45
+- ML Development 45
+- Open-Source Contributions 45
+- GraphQL API 138
+
+# H
+
+- High-Quality Code 174
+- High-Quality Code, ensuring 174
+- High-Quality Code, principles
+- Code Efficiency 175
+- Consistency/Standardization 175
+- Readability/Maintainability 175
+- Human-Centered Evaluation 282
+- Human-Centered Evaluation, use cases
+- Fraud Detection 283
+- Healthcare 283
+- Spam Detection 283
+- JavaScript 102
+- JavaScript, workflow
+- AI-Driven JavaScript 103
+- AI-Generated Listeners 103
+- AI-Generated JavaScript 102
+- AI-Powered JavaScript Optimization 105
+- API Request 106
+- Error Fixing 106
+- JavaScript Debugging 107
+- Seamless Integration 103
+- State Management 104
+- Jupyter Notebook 36
+- Jupyter Notebook, fundamentals
+- Advanced Setups 38
+- Customization Options 38
+- Troubleshooting, tips 38
+- Jupyter Notebook, key points 37
+- Jupyter Notebook, steps 37
+- Jupyter Notebook, tools
+- Great Expectation 39
+- OpenAI Integration 39
+- Pandas Profiling 39
+- Local API Deployment 299
+- Machine Learning (ML) 3
+- Decision Trees 3
+- K-Nearest Neighbors (KNN) 3
+- Vector Machines 3
+- ML Algorithms 244
+- ML Algorithms, configuring 244
+- ML Algorithms, efforts 289
+- ML Algorithms, terms
+- ML Algorithms, use cases
+- Advanced Hybrid 247
+- AI-Driven Guidance 249
+- AI-Recommendations 248
+- AI-Supported Algorithm 246
+- Education Analytics 287
+- Fintech 283
+- Healthcare Image Classification 285
+- Outcome/Business Value 287
+- Retail Demand Forecasting 286
+- MLPs, architecture 258
+- MLPs, terms
+- Keras 259
+- Keras Regressions 260
+- Key Functions 260
+- Loss Function 259
+- PyTorch 261
+- Regularization 262
+- MLPs, use case 263
+- ML Solutions, strategies
+- Containerized Deployment 300
+- Local API Deployment 299
+- TorchServe 301
+- Model Comparison 281
+- Model Comparison, practices 282
+- Model Construction 250
+- Model Construction, tools
+- Keras Neural Network Classifier 251
+- PyTorch Binary Classifier 251
+- Scikit-Learn Classifier 251
+- Modern Software Development 324
+- Modern Software Development, sections
+- Accelerating Prototyping 324
+- AI Integration 327
+- Code Comprehension 325
+- Collaboration Matrix 327
+- DevOps Assets 326
+- Issue Resolution 326
+- Unified Coding 325
+- Version Control 327
+- Multilayer Perceptrons (MLPs) 258
+- Neural Networks 3
+- Neural Networks, types
+- CNNs 4
+- RNNs 4
+
+# P
+
+- Performance Bottlenecks 170
+- Performance Bottlenecks, terms
+- Performance Bottlenecks, use cases
+- Developer Spot 172
+- Growing Complexity 170
+- Performance Optimization 173
+- High API Latency 171
+- Inefficient JavaScript Execution 172
+- Memory Leaks/High CPU Usage 171
+- Slow Database Queries 170
+- Performance Evaluation Metrics 280
+- Performance Evaluation Metrics, concepts
+- Human-Centered Evaluation 282
+- Model Comparison 281
+- Visual Evaluation 280
+- Profiling Tools 169
+- Profiling Tools, roles
+- Detecting Inefficient Code 169
+- Predicting Bottleneck 169
+- Real-Time Monitoring 169
+- Suggesting Optimizations 169
+- Prompt Engineering 64
+- Prompt Engineering, challenges
+- Hallucinations 68
+- Ethical Considerations 69
+- Prompt Injection Attacks 69
+- Prompt Engineering, evolution 65
+- Prompt Engineering, methods
+- Chain-of-Thought 73
+- Meta 73
+- Multi-Turn, steps 70
+- Context Analysis 66
+- Output, generating 66
+- Tokenization 65
+- Prompt Engineering, techniques
+- Chain-of-Thought 68
+- Few-Shot 67
+- Zero-Shot 67
+
+# R
+
+- Rapid Prototyping, points
+- Performance Benchmark 89
+- Tailwind UI Code 90
+- React 114
+- React, benefits 115
+- React, terms
+- AI-Assisted JSX Code 117
+- AI-Assisted Performance Optimization 120
+- AI-Generated API Calls 119
+- AI-Generated React Components 115
+- AI-Optimized State Management 116
+- Real-Time Performance Monitoring 179
+- Real-Time Performance Monitoring, case study
+- Financial Services 184
+- Netflix 183
+- Real-Time Performance Monitoring, configuring 180
+- Real-Time Performance Monitoring, integrating 182
+- Real-Time Performance Monitoring, roles 179
+
+# S
+
+- Server-Side Coding 130
+- Server-Side Coding, terms
+- AI-Assisted Code Refactoring 132
+- AI-Driven Security Enhancements 135
+- AI-Generated Server Boilerplate 130, 131
+- AI-Generated Server Setup 132
+- AI-Powered Debugging 133
+- Security Enhancements 134
+- Software Development 50
+- Software Development, architecture 50
+- Software Development, challenges 50
+- Software Development, integrating 52, 53
+- Software Development, lifecycle
+- AI-Powered Code Assistants 51
+- Code Review Agents 51
+- Documentation/Collaboration 52
+- Structured/Unstructured Data 230
+- Structured/Unstructured Data, tips
+- Image Data 233
+- Structured Employee Data 231
+- Text Data 232

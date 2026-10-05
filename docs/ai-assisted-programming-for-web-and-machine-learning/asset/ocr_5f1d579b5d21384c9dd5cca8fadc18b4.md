@@ -1,0 +1,7 @@
+# Preface
+
+Software development is entering a new era. What was once the sole domain of human coders is now a collaborative space where artificial intelligence (AI) works alongside us, suggesting improvements, generating code, catching errors, and even optimizing solutions before we run them.
+
+When we first explored AI-assisted coding, each of us approached it with a healthy mix of curiosity and skepticism. Could an AI understand the complexities and nuances of modern development workflows? We put it to the test, and within days, our initial doubts gave way to excitement. Tools like GitHub Copilot and ChatGPT were not only automating repetitive coding tasks but also suggesting elegant solutions and introducing innovative approaches none of us had anticipated. Experiencing this collectively changed the way we thought about programming. We realized that AI is not here to replace a developer’s creativity or expertise — it is here to amplify them. This book was born from that shared discovery, and we aim to help you experience AI as a trusted partner in your development journey.
+
+AI-assisted Programming for Web and Machine Learning is your complete, hands-on guide to integrating AI into your daily coding practice. We will start with the foundations — understanding AI’s role in programming, setting up an AI-ready environment, and mastering the art of prompt engineering. Then we will move into practical applications: using AI to accelerate front end and back end development,
