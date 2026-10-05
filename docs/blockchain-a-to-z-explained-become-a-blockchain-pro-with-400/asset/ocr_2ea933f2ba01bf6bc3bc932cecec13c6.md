@@ -1,0 +1,3 @@
+# Hash Function
+
+A hash function is any function that can be used to convert data of arbitrary sizes to fixed-size values. Values returned by a hash function are called hash values, hash codes, digests, or simply hashes. The values are usually used to index a fixed-size table called a hash table. MD5, SHA-1, SHA-2 are examples of different hash functions. Bitcoin uses hash function called double SHA-256. Hyperledger Fabric uses SHA-2 as the default hash function.

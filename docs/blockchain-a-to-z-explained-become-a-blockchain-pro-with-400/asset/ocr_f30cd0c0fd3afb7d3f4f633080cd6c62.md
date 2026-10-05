@@ -1,0 +1,3 @@
+# Block Reward
+
+Block reward is a cryptocurrency reward to a miner when he/she successfully validates the latest block. The block reward is made of two components: the block subsidy and the transaction fees. The block subsidy consists of newly generated coins and represents the biggest part of a block reward. The other part is made up of all fees paid by the transactions that are included in the block. In Bitcoin, the Block reward currently is 6.25 BTC for every valid block mined. However, this changes and gets half of the reward amount, every 4 years or every 210,000 blocks are mined

@@ -1,0 +1,3 @@
+# Channels
+
+In Hyperledger Fabric, there can be multiple ledgers and each ledger is referred to as a Channel. They help to promote Data Privacy by enabling private communications between various network members. They can be dynamically created and reconfigured. Parties transacting in a Channel should be authenticated to that particular Channel to ensure that external parties don't gain access to the communication. For eg: In a Supply Chain Blockchain, there will be a channel between the Customer and Supplier A and a separate Channel between Customer and Supplier B. This ensures that suppliers A and B transact privately and separately with the same Customer and don't have access to each other's channel.

@@ -1,0 +1,3 @@
+# P2P (Peer to Peer)
+
+Peer-to-peer is a decentralized interaction where in two individuals interact directly with each other without any intermediary or 3rd party in between. P2P computing or networking is a distributed application architecture that distributes or divides tasks or workloads between different personal computers also known as peers. P2P network shares processing power, network bandwidth and storage space. A Blockchain network operates using a P2P network which runs the protocol and maintains identical copies of ledgers with recorded transactions.

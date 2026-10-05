@@ -1,0 +1,3 @@
+# Faucet
+
+A faucet in cryptocurrency world is a website that either gives out small amounts of native cryptocurrency in exchange for users completing certain small tasks, or pays out a set quantity of a native cryptocurrency's coins on a testnet (a test network) which can be used for testing smart contracts and dApps, before deploying them on the main net (the main network). Cointiply, Bonus Bitcoin and Bchain Poker are well known Bitcoin faucets.

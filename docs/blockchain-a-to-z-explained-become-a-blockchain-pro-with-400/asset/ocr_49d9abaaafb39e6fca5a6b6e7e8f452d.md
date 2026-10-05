@@ -1,0 +1,3 @@
+# Plasma
+
+Created by Vitalik Buterin, Co-Founder of Ethereum, Plasma refers to a framework that allows creation of child blockchains that use the main Ethereum chain for arbitration and creating trust. It uses smart contracts and verification to offload transactions from the main Ethereum chain into a side chain. These side chains or plasma chains enable fast and lower cost transactions and their validation is preserved on the main Ethereum chain. In essence, Plasma will help Ethereum Blockchain handle much larger transactions and speed, thereby addressing the performance challenges.

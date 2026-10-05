@@ -1,0 +1,3 @@
+# Cold Wallet
+
+The cold wallet is an offline wallet carried on a hardware device or printed on a paper that stores the user’s address and private key and works in conjunction with compatible software in the computer. Since Cold Wallets are not connected to the internet, they are deemed much more secure than ‘Hot wallets’ that function on internet connected devices or portals. Ledger Nano, Trezor and KeepKey are the most popular Cold wallets.

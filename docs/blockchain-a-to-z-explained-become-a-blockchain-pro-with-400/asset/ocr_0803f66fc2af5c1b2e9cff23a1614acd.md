@@ -1,0 +1,3 @@
+# Quilt
+
+Hyperledger Quilt is one of the business Blockchain tools that aims to facilitate interoperability between ledger systems by implementing the Interledger protocol (ILP), which is a payments protocol used for moving value across both distributed and non-distributed ledgers. It facilitates distributed atomic transactions (data movement to validate transactions) between IOT companies’ wallets, Financial Institutions Ledgers and different supply chain systems. Everis, NTT Data and Ripple are pioneering development.

@@ -1,0 +1,3 @@
+# Hash
+
+It is created by Hashing algorithm which takes large sets of data and large range of values and converts them into a smaller set of values like 128 bit, 256 bit outputs. Hashing algorithms are usually one way function — can be used to convert an input into a Hash but cannot be reverse engineered to decipher the input based on the hashed algorithm output or hash. It acts as the backbone of blockchain network and provides immutability to transactions recorded on Blockchain. A hash is developed based on the information present in the block header.

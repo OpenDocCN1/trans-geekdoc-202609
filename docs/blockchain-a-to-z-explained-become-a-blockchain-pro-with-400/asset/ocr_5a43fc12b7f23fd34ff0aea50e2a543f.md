@@ -1,0 +1,3 @@
+# Gossip
+
+In technical terms, for a blockchain, Gossip is the information relayed by each participant repeatedly to another member chosen at random and tells them all they know about the transaction. For example, Peer A interacts with B, learns about the existence of Peer C and Peer D and connects with them. It mimics the way epidemics spread. Different protocols exist for Gossip like Dissemination and Compute aggregate protocols. Hedera Blockchain that uses Hashgraph consensus is based on Gossip protocol.

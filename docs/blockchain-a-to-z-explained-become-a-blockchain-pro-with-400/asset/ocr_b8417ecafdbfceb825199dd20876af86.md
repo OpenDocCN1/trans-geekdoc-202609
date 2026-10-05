@@ -1,0 +1,3 @@
+# XRP
+
+XRP is a digital asset built for payments by Jed McCaleb, Arthur Britto and David Schwartz. It is is the native digital asset on the XRP (Ripple) Ledger. Ripple began selling XRP in 2012. Its intent was to allow financial institutions to transfer money with negligible fees and wait time. Always positioned as a replacement for SWIFT by removing the settlement layer between major financial institutions.

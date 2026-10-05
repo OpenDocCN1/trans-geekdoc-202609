@@ -1,0 +1,3 @@
+# Besu
+
+Hyperledger Besu is an Ethereum client designed to be enterprise-friendly for both public and private permissioned Blockchain use cases. It can also be operated on test networks such as Rinkeby, Ropsten, and Görli. Hyperledger Besu includes several consensus algorithms including Proof of Work (PoW) and Proof of Authority (IBFT, IBFT 2.0, Etherhash, and Clique). Its comprehensive permissioning schemes are designed specifically for use in a consortium environment.

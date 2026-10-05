@@ -1,0 +1,3 @@
+# SGX (Software Guard Extension)
+
+Intel introduced SGX in 2015 and it represents security set instructions baked into Intel's x86 based Central Processing Units (CPUs). SGX facilitates better protection of user's sensitive information by splitting computer's memory into enclaves. Enclaves are private and predefined areas in memory. For Blockchain, SGX delivers enhanced privacy and security to protect the transactions and also helps in increasing consensus efficiency and throughput.

@@ -1,0 +1,5 @@
+# Blockchain
+
+Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network. By facilitating secured track, trace and trade of virtually anything of value in a trusted manner between parties, hitherto unknown to each other inside a network, Blockchain Technology vastly reduces risk and also cuts costs for all involved.
+
+It is a system of recording information in a manner that makes hacking or cheating the information difficult. It is essentially a record of transactions contained in a ledger maintained in Blocks that are replicated or distributed across the entire network. Thus changes are committed on the ledger only after consent for such changes is obtained by every participant in the network. The records in a Blockchain are therefore, tamper evident. Blockchain is also known as Distributed Ledger Technology (DLT). Public, Private and Hybrid are different types of Blockchains. Bitcoin, Ethereum and Litecoin are Public Blockchains, Hyperledger Corda are Private Blockchains and Enterprise Ethereum Alliance and TradeLens are Hybrid Blockchains

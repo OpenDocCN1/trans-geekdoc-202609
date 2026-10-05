@@ -1,0 +1,3 @@
+# Schnorr
+
+A Schnorr signature is a digital signature produced by the Schnorr signature algorithm that was described by Claus Schnorr. It is a digital signature scheme known for its simplicity, whose security is based on the intractability of certain discrete logarithm problems. It is efficient and generates short signatures. It was covered by US patent, which expired in 2 years on Feb 2008. It is used to implement ‘Proof of Knowledge’

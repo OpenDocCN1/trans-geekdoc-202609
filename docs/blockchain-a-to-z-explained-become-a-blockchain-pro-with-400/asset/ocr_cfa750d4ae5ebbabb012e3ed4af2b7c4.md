@@ -1,0 +1,3 @@
+# Kafka
+
+Kafka, created and open sourced by LinkedIn in 2011, is a community distributed event streaming platform capable of handling trillions of events a day. Initially conceived as a messaging queue, Kafka is based on abstraction of distributed commit logs. Commit log is basically a data structure that only appends; modifications or deletions are not possible. Later, Kafka evolved into a full-fledged event streaming platform. In Blockchain implementations, it helps in scalability, reliability, durability and high performance. It is designed to handle high loads of transactions. For lesser loads, message queues like RabbitMQ can be used.

@@ -1,0 +1,3 @@
+# Block Height
+
+Block height represents the number of blocks that were confirmed in the entire history of a particular blockchain network - from the genesis block (or block zero) until the most recent one. Unlike the genesis block, all other blocks contain a reference (hash) to the block that preceded it, and the block height is the number of each block in that sequence. The block height of the genesis block is #0, and the block height of the first block mined is #1. At the time of writing this description, Block Height of Ethereum is 12,657,904.

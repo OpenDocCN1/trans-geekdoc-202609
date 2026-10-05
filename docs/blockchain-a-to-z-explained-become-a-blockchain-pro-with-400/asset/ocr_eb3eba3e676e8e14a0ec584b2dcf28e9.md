@@ -1,0 +1,3 @@
+# Digital Assets
+
+The definition of a digital asset is “anything that exists in binary data which is self-contained, uniquely identifiable, and has a value or ability to use.” When the term originated in the mid-90s, digital assets were items such as videos, images, audio, and documentation. In today’s world, it is widely used to refer to cryptocurrencies that are decentralized and run on a network that is distributed across a large number of computers.

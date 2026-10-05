@@ -1,0 +1,3 @@
+# EVM (Ethereum Virtual Machine)
+
+Ethereum functions like a distributed state machine instead of being a distributed ledger. Ethereum has this machine state in addition to all accounts and balances. The data structure can change from block to block to a predefined set of rules which can execute machine code too. Every node in Ethereum network runs an EVM instance. EVM defines rules that govern changing the state from Block to Block. It allows developers to create Decentralized applications (DApps) using a specialized language called Solidity.

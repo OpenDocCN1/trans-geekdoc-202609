@@ -1,0 +1,3 @@
+# Chain Code
+
+Chaincode is a piece of code that is written in one of the supported languages such as Go or Java and runs on top of the Blockchain. It contains business logic pertaining to applications interaction with the ledger and runs in a secured Docker container isolated from peers that endorse transactions. For eg: It is installed and instantiated through a Software Development Kit (SDK) or Command Line Interface (CLI) onto a network of Hyperledger Fabric peer nodes, enabling interaction with that network’s shared ledger.

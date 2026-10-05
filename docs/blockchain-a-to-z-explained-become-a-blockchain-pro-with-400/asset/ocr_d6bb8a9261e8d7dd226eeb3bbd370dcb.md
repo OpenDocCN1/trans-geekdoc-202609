@@ -1,0 +1,3 @@
+# Fiat Currency
+
+When the government or the central bank of a nation issues a nation-wide currency, that is called a fiat currency. Fiat currency may not be backed by gold, silver, oil etc., its value is rather based on the faith that citizens have on the central authority issuing such currency. United States Dollar, Indian National Rupees, Canadian Dollar and Japanese Yen are examples of fiat currencies.

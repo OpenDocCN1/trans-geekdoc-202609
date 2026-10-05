@@ -1,0 +1,3 @@
+# IBFT (Istanbul Byzantine Fault Tolerance)
+
+Istanbul Byzantine Fault Tolerant (IBFT) consensus is inspired by Castro-Liskov 99 paper. IBFT inherits from the original Practical Byzantine Fault Tolerance by using a 3-phase consensus; Pre-prepare, Prepare and Commit. The system can tolerate at most F faulty nodes in an N validator network, where N = 3F + 1. It is considered as an alternative to Proof of Work in Ethereum and is quite appealing for Consortium and Private Blockchains. It was first implemented in Geth and then in Quorum.

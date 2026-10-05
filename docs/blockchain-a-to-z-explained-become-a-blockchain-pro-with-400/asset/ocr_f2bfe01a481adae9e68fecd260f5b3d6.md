@@ -1,0 +1,3 @@
+# Mist
+
+Mist is an all-in-one software to manage all assets and contracts of an individual in Ethereum Blockchain. Mist can browse DApps, manage contracts, manage Ether and other digital assets. It acts like a window to the Blockchain network and accesses different applications and services provided in the network. It also supports Whisper (decentralized communication protocol) and Swarm (decentralized storage platform).

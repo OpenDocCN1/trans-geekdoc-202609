@@ -1,0 +1,3 @@
+# Cryptojacking
+
+Cryptojacking is malicious crypto mining that happens when cybercriminals hack into both business and personal computers, laptops, and mobile devices to install malware. This software uses the computer's power and resources to mine for cryptocurrencies or steal cryptocurrency wallets owned by unsuspecting victims. Cryptojacking malware affects almost 55% of businesses the world over using as much as 65% of CPU power. Coinhive and MassMiner are some of the dangerous Cryptojacking malwares.

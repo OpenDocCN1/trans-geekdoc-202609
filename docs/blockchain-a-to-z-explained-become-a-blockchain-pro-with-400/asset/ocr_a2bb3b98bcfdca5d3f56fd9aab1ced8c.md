@@ -1,0 +1,3 @@
+# Indy
+
+Hyperledger Indy is a distributed ledger, purpose-built for decentralized identity. It supports Self Sovereign Identity that empowers individuals to control their identity information by allowing them to use it online or offline whenever they want and revoke access to such information whenever they don't want to share such information. This is quite different compared to existing systems where owners cease to have visibility into the shared identity documents and how they are being used or how many times they have been used. Developers can use the tools and libraries from Hyperledger Indy to create identity solutions that are interoperable across jurisdictions and agencies.

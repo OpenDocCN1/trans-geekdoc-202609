@@ -1,0 +1,3 @@
+# Syncing
+
+Syncing in blockchain represents synchronizing with the mainnet. When a new node is launched, it needs to sync with the current blockchain right from the genesis block. New nodes need to catch up and come to speed with the network before contributing to the network or validating transactions. Syncing may take lot of time depending on the protocol and node type. To speed up syncing of node with Blockchain, imaging technologies are being used.

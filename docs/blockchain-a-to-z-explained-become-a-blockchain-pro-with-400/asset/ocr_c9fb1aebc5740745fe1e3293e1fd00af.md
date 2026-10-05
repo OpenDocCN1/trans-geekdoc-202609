@@ -1,0 +1,3 @@
+# IOTA
+
+Created in 2015 by David Sonstebo, Dominik Schiener, Sergey Ivancheglo, and Sergei Popov, IOTA is an open-source distributed ledger and cryptocurrency designed for Internet of things. It uses a directed acyclic graph (also known as Tangle) to store transactions on its ledger that provide higher scalability over blockchain based distributed ledgers. It is designed to promote microtransactions as it does not use miners to validate transactions. In lieu of miners, nodes that enable new transactions on the network also approve previous transactions. MegaIOTA units represent IOTA trading on different crypto-currency exchanges.

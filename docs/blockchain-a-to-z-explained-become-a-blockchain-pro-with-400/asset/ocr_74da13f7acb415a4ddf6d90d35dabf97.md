@@ -1,0 +1,3 @@
+# Web3
+
+Web3 can be mentioned as a revolution of Internet Backend while Web2 was a front-end revolution. It is a set of protocols led by blockchain, that intends to reinvent how Internet is wired in the backend, combining the logic of Internet with the logic of the computer. It empowers users to control their data and also create a native settlement layer. It brings in a right to forget and delete on the Internet.

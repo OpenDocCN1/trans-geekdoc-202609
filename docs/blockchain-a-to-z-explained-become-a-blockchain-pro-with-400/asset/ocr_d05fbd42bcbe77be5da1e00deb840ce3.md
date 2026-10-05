@@ -1,0 +1,3 @@
+# CAP Theorem
+
+Consistency (Uniform & identical view of data for all clients), Availability (Continuous performance and uptime in presence of node failures) and Partition tolerance (Accurate performance and integrity of data despite node partitioning) are some of the key features of distributed systems. As per CAP theorem, any distributed system/database can offer only 2 of the above 3 mentioned properties choosing to offer C&A, A&P or P&C at any point in time. For example, Permissionless Blockchains such as Bitcoin, Ethereum chose to offer Availability and Partition tolerance while sacrificing immediate Consistency, thus offering ‘eventual consistency’ of data stored.

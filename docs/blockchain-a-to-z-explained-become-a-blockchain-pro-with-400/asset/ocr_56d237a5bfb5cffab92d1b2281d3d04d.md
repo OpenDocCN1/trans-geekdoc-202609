@@ -1,0 +1,3 @@
+# Nexledger
+
+Nexledger is an open-source hybrid, private-permissioned blockchain platform developed by Samsung SDS. Nexledger is a full-features platform with a core that integrates a range of components such as monitoring tools, external linkages, application programming interfaces and a structured DevOps environment. It comes in versions that are compatible with Ethereum (Nexledger E) and Hyperledger Fabric (Nexledger F). It has two offerings – Nexledger Universal that provides API libraries to integrate multitude Blockchain consensus algorithms and Nexledger Accelerator that helps in increasing Transaction Per Second (TPS) upto 15 times.

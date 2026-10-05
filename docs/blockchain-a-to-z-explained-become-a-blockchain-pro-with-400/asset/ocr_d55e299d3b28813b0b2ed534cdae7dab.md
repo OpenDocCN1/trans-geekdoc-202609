@@ -1,0 +1,3 @@
+# Steward
+
+Used in Sovrin Network that promotes usage of Self Sovereign Identity (SSI) on internet. Sovrin Stewards are organizations that operate the network by running validator nodes which write to and read the Sovrin ledger. These trusted volunteers donate time, resources, and computing power to operate and maintain the network while agreeing to abide by the requirements of the Sovrin Governance Framework. There are currently 50 Stewards from 13 countries over 6 continents.

@@ -1,0 +1,3 @@
+# PaaS (Platform as a Service)
+
+It's a business arrangement or model where users of PaaS need not install in-house hardware and software to develop or operate applications. The PaaS provider delivers software and hardware tools to users over the internet using cloud computing technology. Users will pay based on their usage – “Pay as you Go” pricing model. PaaS is delivered through public, private or hybrid cloud platforms. Various types of PaaS include Open PaaS, Mobile PaaS, Hybrid PaaS, Private PaaS and Public PaaS. Google, Red Hat, Oracle, IBM, Amazon Web Services (AWS) and Microsoft are leading PaaS providers.

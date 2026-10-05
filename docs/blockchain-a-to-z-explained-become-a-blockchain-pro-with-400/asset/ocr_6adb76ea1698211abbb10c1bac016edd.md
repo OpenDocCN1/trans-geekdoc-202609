@@ -1,0 +1,3 @@
+# Lightning_Network
+
+The Lightning Network is a layer 2 payment protocol that operates on top of a blockchain-based cryptocurrency. It is intended to enable fast transactions amongst participating nodes and has been proposed as a solution to address bitcoin scalability problem. Transactions between parties will be executed off the Blockchain i.e. as off-chain transactions. It will reduce transaction processing times and associated costs. Thaddeus Dryja and Joseph Poon formulated Bitcoin Lightning Network in 2015.

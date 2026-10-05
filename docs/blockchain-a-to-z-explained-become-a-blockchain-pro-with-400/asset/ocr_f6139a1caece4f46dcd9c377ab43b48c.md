@@ -1,0 +1,3 @@
+# KYC (Know Your Customer)
+
+KYC is a set of activities or guidelines in financial services where service providers make an effort to verify identity of customers, their suitability, and risks involved in maintaining a business relationship with them. KYC documents usually encompass Proof of Identity and Proof of Address documents like Passport, Driving License, Voters’ Identity and others. KYC helps Banks, Financial Institutions and Cryptocurrency exchanges to enforce and accomplish Anti-Money Laundering policies. eKYC refers to using internet or digital means to complete identity verification.

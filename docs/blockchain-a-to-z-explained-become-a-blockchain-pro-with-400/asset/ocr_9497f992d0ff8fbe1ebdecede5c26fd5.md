@@ -1,0 +1,3 @@
+# SDK (Software Development Kit)
+
+A software development kit (SDK) represents set of tools and programs provided by vendors to help developers and build applications for various uses. SDKs are usually associated with mobile apps. Eg: Android tool kit is used to build Android apps and iOS SDK is used to build Apple apps. APIs, Integrated Development Environment, tools pertaining to building, running, testing and debugging are included in SDKs. There are over 1000 SDKs available to build Blockchain and Cryptocurrency applications. Eg: Hyperledger Fabric SDKs, Corda Token SDK and Cosmos Ethereum Virtual Machine SDK.

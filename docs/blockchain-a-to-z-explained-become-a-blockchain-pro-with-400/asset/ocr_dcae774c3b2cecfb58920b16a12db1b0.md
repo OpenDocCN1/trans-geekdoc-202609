@@ -1,0 +1,3 @@
+# Turing Test
+
+Devised by Alan Turing in 1950, originally referred to as an imitation game, evaluates a machine's ability to exhibit intelligence and behavior equal to humans. A machine will be involved in conversation with humans and evaluator and if evaluator is not able to differentiate machine from humans, machine is said to have passed the test. Test results are based on how close the machine will provide answers compared to that of humans and not necessarily correct answers.

@@ -1,0 +1,3 @@
+# Air Drop
+
+Air Drop is a popular marketing campaign or technique used in Initial Coin Offerings (ICOs) whereby a certain allotment of the native cryptocurrency (tokens) is set aside for free distribution and given to contributors and the community in general. This is mostly done to increase awareness, create early value for tokens as recipients will begin to trade their airdropped tokens. It also promotes participation in ICOs, Blockchain network or enhance activities on the platform. Cryptocurrency start-ups have traditionally airdropped tokens to the wallet holders on Bitcoin and Ethereum networks. Uniswap (UNI) airdrop is believed to be one of the most lucrative airdrops in recent times.

@@ -1,0 +1,3 @@
+# CIA Triad
+
+CIA triad stands for Confidentiality, Information Security and Availability, the three fundamental tenets that stand as the goal of any system designed to perform in a secure manner. Blockchain implementation is deemed to enhance the resilience of the underlying systems and implementation based on CIA triad tenets. This triad has been formed over the years and doesn’t belong to a single creator.

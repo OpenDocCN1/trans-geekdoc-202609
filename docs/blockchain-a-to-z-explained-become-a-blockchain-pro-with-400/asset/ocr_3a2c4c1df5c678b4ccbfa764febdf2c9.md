@@ -1,0 +1,3 @@
+# Anti-Fragile
+
+An anti-fragile asset performs better when there is risk and uncertainty, and gains strength from adverse events. This concept was created by the famous author Nasim Nicholas Taleb. He said that “some things benefit from shocks; they thrive and grow when exposed to volatility, randomness, disorder, and stresses and love adventure, risk and uncertainty”. A classic example is Bitcoin (BTC), it has become stronger with every price hit it has suffered over the years.

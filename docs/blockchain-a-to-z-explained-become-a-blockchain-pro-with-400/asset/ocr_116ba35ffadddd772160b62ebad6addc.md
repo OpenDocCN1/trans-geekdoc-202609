@@ -1,0 +1,3 @@
+# Soft Fork
+
+Soft fork occurs when changes to Blockchain protocols are backward compatible and users only need to upgrade their software. Its pretty much like upgrading operating system of a smart phone, tablet or a smart watch to fix bugs and update security features. Post the soft fork, there will be only one Blockchain unlike Hard fork where Blockchain splits into two. Metropolis in Ethereum is a good example of soft fork

@@ -1,0 +1,3 @@
+# Polkadot
+
+Polkadot is a heterogeneous multi-chain interchange possessing a translation architecture that enables customized side-chains to connect with public blockchains. It allows data and tokens to be transferred across Blockchains thereby facilitating cross-chain registries and computations. Polkadot's first token sale closed on October 27, 2017 raising a total of 485,331 ETH. Gavin Wood, Thiel Fellow Robert Habermeier and Peter Czaban are the co-founders of Polkadot. Gavin Wood was previously the Chief Technology Officer and is co-founder of the Ethereum Project. It is also a flagship project by Web3 Foundation to build a fully functional and decentralized web.

@@ -1,0 +1,3 @@
+# ERC 20 (Ethereum Request for Comments - 20)
+
+ERC 20 is defined as the standard protocol for issuing tokens on the Ethereum network. According to the official sources, the protocol governs the tokens on the Ethereum blockchain. The suffix “20” is used for the sole purpose of representing the unique proposal ID. Developers use the ERC20 token to develop their project. It is a way to tokenize their project and at the the same time offers them a way to raise funds for their respective projects. ERC 20 defines six different functions for benefit of other tokens within the Ethereum system and has led to the birth of several alternate tokens (Alt Tokens) or Alternate Coins.

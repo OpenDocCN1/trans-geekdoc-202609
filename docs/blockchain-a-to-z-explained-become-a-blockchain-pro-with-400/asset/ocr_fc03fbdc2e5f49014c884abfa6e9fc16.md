@@ -1,0 +1,3 @@
+# Block
+
+Blocks are files where blockchain transactions are recorded permanently. Block is like a page of a ledger or record book. Each time a block is completed, it gives way to the next block in the blockchain. Blocks can also be created based on predefined time intervals like one block is created every 10 minutes in Bitcoin. A block is thus a permanent store of records which, once written, cannot be altered or removed. Current block height in Bitcoin is 676570. Blocks can be of different sizes varying from 1 MB to 8 MB.

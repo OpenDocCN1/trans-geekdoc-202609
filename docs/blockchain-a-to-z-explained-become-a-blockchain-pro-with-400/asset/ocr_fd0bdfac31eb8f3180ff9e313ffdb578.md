@@ -1,0 +1,3 @@
+# ConsenSys
+
+ConsenSys is Ethereum focused software company founded by Joseph Lubin in 2014. It offers next-generation applications and a modern financial infrastructure to access the decentralized web. Their product suite composed of Infura, Quorum, Truffle, Codefi, MetaMask, and Diligence, serves millions of users, supports billions of blockchain-based queries for the Ethereum ecosystem participants across the world and handles billions of dollars in digital assets.

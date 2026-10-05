@@ -1,0 +1,3 @@
+# Sovrin
+
+Sovrin Foundation, established in the year 2016, is a private-sector, international non-profit that was established to govern the Sovrin Identity Network. The Sovrin Network is a public, permissioned distributed ledger purpose built for protecting identities on internet wherein individuals should own and control their identities without the intervention of administrative authorities, hence known as Self Sovereign Identity (SSI). Sovrin Foundation provides lightweight governance that is needed to operate SSI network in a trustworthy manner.
