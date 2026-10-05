@@ -1,0 +1,11 @@
+# 4.6 CONCLUSIONS
+
+![](bbox=[0.17625, 0.08333, 0.70125, 0.23733])
+
+Figure 10: (Probability) that the latent has changed in the denoising process, corresponding to the latest marginal probability computed by BP; for the RHM with $\nu=32$, $m=8, s=2, L=10$. Each level of the tree, indicated in the legend, is represented with a different color. The black dashed lines are our mean-field predictions, which show agreement with the experiments. In particular, the inversion between colors for the top and bottom levels at the phase transition can be observed. (f) shows similarity between the postactivations following every a deep CNN trained on the RHM $(\nu=16, m=4, s=2, L=7)$ for the starting and sampled data. Each layer of the architecture, indicated in the legend, is represented with a different color. The curves showcase the same inversion predicted by our theory (cf. panel (a)).
+
+conditioning on the sampled class, and one latent variable $L-1$. We iterate this procedure node-by-node, descending the tree until we obtain a sampled configuration at the bottom layer [MMoj]. For each corrupting noise $\epsilon$ and each layer of the CNN, we compute the cosine similarity between post-activations for the initial and generated configurations. Panel (b) of Figure 10 shows the obtained curves. Remarkably, we observe the same qualitative behavior as in panel (a) of Figure 10, ultimately explaining the empirical observation of Figure 5.
+
+# 4.6 CONCLUSIONS
+
+We have argued that reversing in denoising diffusion models opens a window on the compositional nature of data. For synthetic hierarchical generative models of data, where the Bayes optimal denoising can be exactly computed, low-level features can change at small times, but the class remains often the same. At larger times, a phase transition is found where the probability of remaining in the same class suddenly drops to random chance. Yet, low-level features can persist and compose the new sample. Strikingly, this theoretical analysis characterizes the results well with ImageNet, where the denoising is performed by a trained U-Net. Intriguingly, the structure of the

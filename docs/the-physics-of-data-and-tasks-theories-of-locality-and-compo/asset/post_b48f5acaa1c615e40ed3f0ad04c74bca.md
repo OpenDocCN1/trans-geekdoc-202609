@@ -1,0 +1,122 @@
+
+# LAZY TRAINING REGIME See Neural Tangent Kernel (NTK) Regime.
+
+LOCALITY A structural property of data where interactions are primarily confined to small, local regions. For example, in an image, the value of a pixel is most strongly correlated with its immediate neighbors. This thesis shows that locality is a key property that allows CNNs to defeat the curse of dimensionality.
+
+LOCALLY CONNECTED NETWORK (LCN) A neural network architecture similar to a CNN but without weight sharing. It applies local filters to input patches, but each filter is unique to its location, capturing local structure without enforcing translational invariance.
+
+MEMORIZATION The phenomenon where a machine learning model, particularly an overparameterized one, learns to store and reproduce specific examples from its training set rather than learning the underlying data distribution. This typically leads to poor generalization.
+
+MODEL EDITING The process of modifying the behavior of a trained model to add new skills, correct errors, or remove undesired capabilities, often by directly manipulating its weights rather than retraining it.
+
+NEURAL SCALING LAWS Empirical findings showing that the performance of deep learning models improves predictably as a power-law function of the model size, dataset size, and computational budget.
+
+NEURAL TANGENT KERNEL (NTK) A deterministic kernel that describes the training dynamics of an infinitely wide neural network under gradient descent. In this 'lazy' regime, the network's parameters change very little, and the model behaves like a linear model in parameter space, equivalent to a kernel method with the NTK.
+
+OVERPARAMETERIZATION The modern practice of training neural networks with far more parameters than the number of training examples. Classically, this was expected to lead to severe overfitting, but in deep learning, it often results in excellent generalization, a phenomenon that challenges traditional learning theory.
+
+PROBABILISTIC CONTEXT-FREE GRAMMAR (PCFG) A type of generative grammar used in linguistics and computer science where production rules are assigned probabilities. The thesis uses PCFGs, specifically the Random Hierarchy Model, to model data with a hierarchical and compositional structure.
+
+RANDOM HIERARCHY MODEL (RHM) A synthetic generative model, based on probabilistic context-free grammars, used in the thesis to model data with a hierarchical and compositional structure. It consists of an ensemble of tree-like graphical models with random production rules, providing a tractable framework for studying how networks learn such structures.
+
+RECEPTIVE FIELD The region of the input space that a particular neuron in a neural network is sensitive to. In CNNs, the receptive field of a neuron is typically a small, local patch of the input.
+
+REPLICA METHOD A heuristic technique from statistical physics used to compute averages over disordered systems. In this thesis, it is applied to analyze the generalization error of kernel methods in teacher-student settings.
+
+SAMPLE COMPLEXITY The number of training examples required for a model to learn a task to a desired level of accuracy. A key goal of learning theory is to understand how sample complexity scales with factors like data dimension.
+
+SCORE FUNCTION In the context of diffusion models, the gradient of the log-probability density of the data at a given time during the diffusion process ($\nabla p_t(x)$). Learning this function is the central task for the backward (generation) process.
+
+SPECTRAL BIAS The tendency of neural networks trained with gradient descent to first learn the components of a target function that correspond to the largest eigenvalues of the model's kernel. This often translates to a preference for learning low-frequency (smooth) functions first.
+
+STATISTICAL MECHANICS A branch of physics that uses statistical methods and probability theory to study the macroscopic behavior of systems composed of a large number of microscopic constituents. The thesis applies concepts and tools from statistics to analyze deep learning systems.
+
+SUPERVISED LEARNING A machine learning paradigm where a model learns a mapping from inputs to outputs based on a labeled training set of input-output pairs.
+
+TASK ARITHMETIC An empirical phenomenon observed in pre-trained models where algebraic operations on the models' weight vectors (specifically, *task vectors*) correspond to semantic operations on the tasks the model can perform. For example, adding or subtracting task vectors can combine or remove skills.
+
+TASK VECTOR The difference in weights between a pre-trained model and a model that has fine-tuned on a specific task $(\tau = \theta_{\text{fine-tuned}} - \theta_{\text{pre-trained}})$. These vectors are the fundamental units used in task arithmetic.
+
+TEACHER-STUDENT SETTING A theoretical framework used to analyze learning, where a 'student' model (the learner) is trained on data generated by a 'teacher' model (the target function). This allows for precise control over the properties of the data.
+
+UNSUPERVISED LEARNING A machine learning paradigm where a model learns to find patterns and structure in unlabeled data, without explicit input-output examples. Generative modeling is a form of unsupervised learning.
+
+WEIGHT DISENTANGLEMENT A property identified in this as the key mechanism for task arithmetic. It describes a situation where distinct directions in a model's weight space are associated with localized, non-interfering changes in the model's function space. This allows different tasks to be manipulated independently.
+
+ZERO-SHOT GENERALIZATION The ability of a large model to perform a task it has never been explicitly trained on, often by following a natural language description or prompt. This is a key emergent capability of large-scale pre-trained models.
+
+# CURRICULUM VITAE
+
+## Contact Information
+EPFL
+Institute of Physics
+CH-1015 Lausanne
+Switzerland
+
+- Phone: +41-21-693-98-00
+- E-mail: alexandro.favero@epfl.ch
+- Website: alesaf.github.io
+- LinkedIn: linkedin.com/in/alesaf/
+
+## Research Interests
+- Theory & science of deep learning: generalization, data structure, composition, geometric priors, scaling laws, statistical physics of learning.
+- Foundation models: diffusion models, diffusion LLMs, vision-language models, multimodal LLMs, post-training, model editing, merging.
+
+## Education
+**EPFL, Lausanne, Switzerland**
+- Ph.D., Physics, AI
+- Dissertation: “The Physics of Data and Tasks: Theories of Locality and Compositionality in Deep Learning”
+- Advisors: Prof. Matthieu Wyart, Prof. Pascal Frossard.
+2025
+
+**Sorbonne Université, Paris, France**
+- M.S., Fundamental Physics, Specialization in Complex Systems
+- Mention très bien (highest honors).
+2020
+
+**SISSA, ICTP, Politecnico di Torino, Trieste-Torino, Italy**
+- M.S., Physics of Complex Systems
+- 110/130 cum laude (highest honors).
+- International Honors Track (competitive admission, 20 students per cohort).
+2020
+
+**Politecnico di Torino, Torino, Italy**
+- B.S., Engineering Physics
+2018
+
+## Industry Experience
+**Amazon Web Services Artificial Intelligence (AWS AI), Santa Clara, California**
+- Applied Scientist (July to October 2023)
+- Internship at AWS AI Labs working on the alignment and robustness of multimodal LLMs with the fundamental research team led by Prof. Stefano Saatto.
+
+## Academic Experience
+**EPFL, Lausanne, Switzerland**
+- Postdoctoral Research Scholar (November 2020 to April 2021)
+  - Master’s valorization research scholarship on the statistical physics of deep learning systems in the Institute of Physics.
+- Visiting Master’s Thesis Student (April 2020 to October 2020)
+  - Thesis project “Spectral analysis of infinitely-wide convolutional neural networks” in the Physics of Complex Systems Laboratory led by Prof. Matthieu Wyart.
+
+## Refereeed Publications
+**INRiM - Italian National Meteorology Research Institute, Torino, Italy**
+- Undergraduate Intern (October 2017 to January 2018)
+- Internship on space-time quantum correlations in the Quantum Optics Laboratory by Prof. Marco Genovese.
+
+See also my Google Scholar and Semantic Scholar profiles.
+
+* denotes co-first authorship.
+
+[1] Favero, A., Scalchio, A., Cagnetta, F., Frossard, P., and Wyart, M., 2025. How Compositional Generalization and Creativity Improve as Models are Trained. To appear in Proceedings of the 42nd International Conference on Machine Learning (ICML). PMLR 267-Workshop version presented at the ICLR 2025 Workshop on Deep Generative Models in Machine Learning: Theory, Principle and Efficiency.
+
+[2] Favero, A., Scalchio, A., and Wyart, M., 2025. Bigger Isn't Always Memorizing: Early Overparameterized Diffusion Models. In ICML 2025 Workshop on The Impact of Memorization on Foundation Models.
+
+[3] Abdullah, M., Favero, A., Bovet, G. and Frossard, P., 2025. Rethinking Backward Unlearning Through Linear Layer Decomposition. In ICML 2025 Workshop on Machine Learning for Generative AI.
+
+[4] Scalchio, A., Favero, A., Levi, N. I. and Wyart, M., 2025. Probing the Latent Hierarchical Structure of Data via Diffusion Models. The fifteenth International Conference on Learning Representations (ICLR). Workshop version presented at the NeurIPS 2024 Workshop on Scientific Methods for Understanding Deep Learning. Oral. Included in the 2025 special issue on the Physics aspects of Learning; Journal of Statistical Mechanics: Theory and Experiment, 2025(8), 084005.
+
+[6] Scalchio, A., Favero, A. and Wyart, M., 2025. A Transition in Diffusion Models Reveals the Hierarchical Nature of Data. In Proceedings of the National Academy of Sciences (PNAS), 122 (1), e2408799121.
+
+[7] Cagnetta, F., Petrini, L., Tomasini, U.M., Favero, A. and Wyart, M., 2024. How Deep Neural Networks Learn Compositional Data: The Hierarchical Model. In Physical Review, 14(3), 031001.
+
+[9] Favero, A., Zaccaro, L., Lu, M., Choudhary, S., Perera, P., Achille, A., Swaminathan, A. and Scatto, S., 2024. Multi-Modal Hallucination Control by Visual Information Grounding. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp.14303-14312.
+
+Also presented at MMFM2: The 2nd Workshop on What is Next in Multimodal Foundation Models? Seattle, WA, 2024.

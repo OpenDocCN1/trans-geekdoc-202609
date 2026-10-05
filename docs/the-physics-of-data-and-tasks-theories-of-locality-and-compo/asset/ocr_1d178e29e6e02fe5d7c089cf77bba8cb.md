@@ -1,0 +1,3 @@
+Enfin, nous explorons comment les tâches et les compétences elles-mêmes peuvent être localisées et composées dans l'espace des poids du modèle. En particulier, nous montrons empiriquement que des directions distinctes dans l'espace des poids de grands modèles entraînés sont associées à des zones sémantiques spécifiques et localisées dans l'espace des fonctions, et comment cette structure modulaire permet une arithmétique des tâches et l'édition de modèles à grande échelle.
+
+**MOTS-CLÉS** Apprentissage profond, généralisation, lois d'échelle, structure des données, localité, compositionnalité, modèles graphiques probabilistes, réseaux convolutifs, modèles de diffusion.

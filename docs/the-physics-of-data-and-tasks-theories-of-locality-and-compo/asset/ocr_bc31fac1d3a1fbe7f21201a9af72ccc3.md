@@ -1,0 +1,15 @@
+# 8.5 TOWARDS UNDERSTANDING TASK ARITHMETIC
+
+between task arithmetic and the spectral properties of the NTK. Then, we agree that task disentanglement and task arithmetic are emergent properties of pre-training.
+
+# 8.5.1 Eigenfunction localization
+
+Generally, a kernel $k$ admits a decomposition in terms of $\{\phi_p, \lambda_p\}_{p\in\mathcal{N}_k}$ which implies that $k$ can only represent functions of the form $f^*(\mathbf{x}) = \sum_p c_p\phi_p(\mathbf{x})$ as a finite kernel norm, i.e., $\|f^*\|_k^2 = \sum_p c_p^2/\lambda_p < +\infty$. Specifically, the coefficients $\{c_p\}_{p\in\mathcal{N}_k}$ constitute a representation of the function $f^*$ in the kernel basis.
+
+Consider $\mathcal{T}$ tasks $\{f_t\}_{t\in\mathcal{T}}$ supported in their respective intersecting domains $\mathcal{D}_t$. Furthermore, let $\{\phi_p\}_{p\in\mathcal{N}}$ be an orthogonal basis of eigenfunctions that diagonalizes the kernel on the union of all $\mathcal{D}_t$'s. The following proposition provides a sufficient condition on the representation of the tasks in this basis to ensure the task arithmetic property:
+
+**Proposition 1 (Simplified).** Suppose $\{f_t\}_{t\in\mathcal{T}}$ can be represented by the kernel $k$. The kernel $k$ is capable of performing task arithmetic with respect to $\{f_t\}_{t\in\mathcal{T}}$ and $\{\mathcal{D}_t\}$ if, for each task $t$, there exists a subset of localized eigenfunctions such that $\phi \in \text{supp}(\phi) \subseteq \mathcal{D}_t$ in the subset, and (ii) the representation of $f_t$ only involves these basis functions.
+
+The proof and formal statement are deferred to Section G.2. Intuitively, if each $k$ is represented with eigenfunctions that vanish outside the spatial region identified by the task support, the functions corresponding to different tasks do not interfere. Based on Property Proposition $\mathbf{1}_t$, it is natural to examine whether the NTK of CLIP displays eigenfunctions localized in each task domain and if it represents the different tasks using these functions. Using the representer form $\{f_{	ext{NTK}}\}_{t\in\mathcal{T}}$ for task $t$ with a training set $\{\mathbf{x}_i, y_i\}_{i\in\mathcal{I}}$ and $\mathbf{x}_w \sim \mu_t$, the CLIP's predictor evaluated at a new point $\mathbf{x}$ as a linear combination of its kernel $K_{	ext{NTK}}$ evaluated on $\mathbf{x}$ and the training data, $f_t(\mathbf{x}) = f(\mathbf{x}	heta_t) + \sum_i y_i K_{	ext{NTK}}(\mathbf{x}, \mathbf{x}_i)$.
+
+To explore how CLIP models used for task arithmetic, we analyze the matrix $(K_{	ext{NTK}})_{ij} = K_{	ext{NTK}}(\mathbf{x}_i, \mathbf{x}_j)$ with $\mathbf{x}_i \in \mathcal{D}_t$, the task on which we trained, and $\mathbf{x}_j \in \mathcal{D}_t \cup \mathcal{D}_{t'}$ If the eigenfunctions used to represent $f^*$ are localized, then the power of the eigenvectors of $K_{	ext{NTK}}$ will be concentrated in the points belonging to the dataset used for training. To measure this concentration, we introduce the local energy $\mathcal{E}_{	ext{loc}}(\mathbf{x}) = \sum_p \phi_p^2(\mathbf{x})$, which sums the power of all the eigenfunctions $\phi_p$ at a given point $\mathbf{x}$.

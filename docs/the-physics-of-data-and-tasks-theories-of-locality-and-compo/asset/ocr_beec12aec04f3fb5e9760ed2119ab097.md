@@ -1,0 +1,12 @@
+# 3.5 EXAMPLES AND EXPERIMENTS
+
+![](bbox=[0.175, 0.068, 0.718, 0.215])
+
+**Figure 3:** Learning curves for deep convolutional NTKs in a teacher-student setting. (A) Depth-four student learning-two, depth-three, and depth-four teachers. (B) Depth-three models caused by the effective input dimensionality $d_{eff}(L)$. The numbers inside brackets are the sequence of filters of the kernels. Solid lines are the results of experiments over 16 realizations with the shaded areas representing the empirical standard deviations. The predicted asymptotic scaling $\mathcal{E} \sim P^{-eta}$ are reported as dashed lines. Details on the numerical experiments are reported in Section B.7.
+
+mean and variance by another kernel (teacher). A learning problem is fully specified by the sets of filters, and smoothness exponents $
+u$ of student and teacher kernels. In particular, the depth and the set of filters of the teacher kernel control the effective dimensionality of the target function. Figure 3 shows the learning curves (solid lines) together with the predictions from Equation 66. Panel (A) of Figure 3 shows a depth-four student learning depth-two, depth-three, and depth-four teachers. This student is not curved in the first two cases and is curved in the third, which corresponds to a global target function. Panel (B) illustrates the curse of dimensionality with the effective input dimensionality $d_{eff}(L)$ by comparing the learning curves of depth-three students learning global target functions with an increasing number of variables. All our simulations are in excellent agreement with the predictions of Equation 66. The bounds coming from Equation 65 would display a slightly slower decay, as shown in Figure 2, right panel. All the details of numerical experiments are reported in Section B.7, with a comparison between the ridgeless and optimally-regularized cases (Figure 42) and additional results for Figure 3; kernels with overlapping patches (Figure 40); different input spaces (Figure 39) and the CIFAR-10 dataset (Figure 41).
+
+Notice that when the teacher kernel is a hierarchical RFK, the target is equivalent to the output of a randomly-initialized, infinitely-wide CNN [Nov+19b]. Although this target is highly structured, it leads to the same rate obtained for a global non-hierarchical target:
+
+**Lemma 3.5.1.** (Curse of dimensionality for hierarchical targets). The problem of regression of the output of a randomly-initialised and infinitely-
