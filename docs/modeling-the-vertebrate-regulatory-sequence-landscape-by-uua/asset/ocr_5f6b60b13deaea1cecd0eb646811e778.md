@@ -1,0 +1,3 @@
+(F) Enriched cell types associated with new and known cCREs.
+(G and H) Bar plots showing the CUT&Tag signals for H3K4me1, H3K4me3, and CTCF in the adrenal gland (G) and pituitary (H) for new cCREs.
+(I and J) Scatterplots showing the Pearson correlation between the number of open regions and genome size in four species (I) and eight species (J), respectively. The dashed line represents the linear regression fit, and the gray shaded area indicates the 95% confidence interval. The Pearson correlation coefficient (R) and the corresponding p value are shown.

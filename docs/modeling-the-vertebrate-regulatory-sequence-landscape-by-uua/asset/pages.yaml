@@ -1,0 +1,4777 @@
+- pgno: 0
+  md: '# Resource
+
+
+    # Modeling the vertebrate regulatory sequence landscape by UUATAC-seq and deep
+    learning
+
+
+    # Graphical abstract
+
+
+    # Authors
+
+
+    Xiaoping Han, Hanyu Wu, Xueyi Wang, ...,
+
+    Guoxia Wen, Danmei Jia, Guoji Guo,...
+
+
+    | 01 UUATAC-seq | 02 Cell Landscape | 03 NvwACE |
+
+    | --- | --- | --- |
+
+
+    # Correspondence
+
+
+    xan@zju.edu.cn (X.H.),
+
+    gj@zju.edu.cn (G.G.)
+
+
+    # In brief
+
+
+    Regulatory sequence landscapes from five vertebrate species were mapped using
+    high-resolution single-nucleus ATAC-seq. This comprehensive dataset enables a
+    systematic interpretation of vertebrate regulatory sequence grammar through deep
+    learning.
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_0_0.png)
+
+
+    # Highlights
+
+
+    +   - Efficient construction of chromatin accessibility landscapes by UUATAC-seq
+
+
+    +   - Mapping of cCRE landscapes across five vertebrate species using UUATAC-seq
+
+
+    +   - NvwACE deep-learning model predicts cCRE landscapes from genomic sequences
+
+
+    +   - NvwACE accurately predicts the impact of synthetic mutations on cCRE function
+
+
+    Han, et al., 2025, Cell 188, 5343–5362
+
+    September 18, 2025 © 2025 The Authors. Published by Elsevier Inc.
+
+    https://doi.org/10.1016/j.cell.2025.06.020
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_0_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Cell
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_1_0.png)
+
+
+    # Resource
+
+
+    # # Modeling the vertebrate regulatory landscape by UUATAC-seq and deep learning
+
+
+    Xiaoping Han,1,6 Hanyu Wang,1,5 Xueyi Wang,1,5 Daiyun Lu,1,8 Yuting Fu,1,6 Lei
+    Yang,1,5 Renying Wang,1,8 Peiping Zhang,1,8 Jijing Wang,2,5 Lifang Ma,1 Jizhou
+    Zhou, Lina Zhou, Siqi Wang,1 Xlinhan Zhan,1 Mengmeng Jia,1 Xinnu Wang, Guoxia
+    Wen,2 Daijie Lu, and Guo Qi**
+
+
+    *1Bone Marrow Transplantation Center of the First Affiliated Hospital and Center
+    for Stem and Regenerative Medicine, Zhejiang University School of Medicine, Hangzhou
+    310011
+
+    *2Laboratory, Zhejiang University, Hangzhou 311121
+
+    *3Zhengjiang Key Laboratory for Tissue Engineering and Regenerative Medicine,
+    Dr. Liu Sun & Yipio Center for Stem and Regenerative Medicine, Hangzhou 310008
+
+    *4Institute of Hematology, Zhejiang University, Hangzhou 310006
+
+    *5These authors contributed equally
+
+    *6Lead content
+
+    *Correspondence: xhan@zju.edu.cn (X.H.), ggji@zju.edu.cn (G.G.)
+
+    https://doi.org/10.1016/j.cell.2025.06.020
+
+
+    # SUMMARY
+
+
+    The regulatory sequences of vertebrate genomes remain largely understood. To address
+    this, we developed an ultra-throughput, ultra-sensitive single-nucleus assay for
+    transposase-accessible chromatin sequencing (UUATAC-seq) protocol that enables
+    the construction of chromatin landscapes for one-day experiment. Using UUATAC-seq,
+    we mapped cis-regulatory elements across five representative vertebrate species.
+    Our analysis revealed genome size differences across species influence the number
+    but not the size of CREs. We introduced NVAce, a deep learning framework, to identify
+    regulatory elements and predict dCRE landscapes dynamically from genomes with
+    high precision. NVAce demonstrated that regulatory grammar is more complex than
+    nucleotide sequences and that sequences govern distinct functional modules. Moreover,
+    NVAce predicted the effects of mutations on lineage-specific CRE function, using
+    causal trait loci (QTLs) and genome editing results. Our study provides a valuable
+    resource for decoding the vertebrate regulatory landscape.
+
+
+    # INTRODUCTION
+
+
+    Diverse cells in a multicellular organism share the same genome but exhibit highly
+    specialized functions due to gene expression. Regulatory sequences dictate gene
+    expression patterns by recruiting sequence-specific transcription factors (TFs)
+    in cell-specific manner. Chromatin accessibility is a master regulator of regulatory
+    DNA that can be measured by DNase hypersensitivity, assay for accessible chromatin
+    sequencing (ATAC-seq). While there have been several large-scale efforts using
+    these assays to map genome-wide regulatory sequences in mammals,9-11. However,
+    comprehensive cell-resolved maps of regulatory sequences are
+
+
+    Advances in single-cell technologies have greatly enhanced our ability to study
+    genetic regulation in biological systems,12-14. High-throughput single-cell sequencing
+    methods, based on dropout,15,16,17 or split-pool,18 enable massively profiling
+    of individual cells within
+
+
+    selected cell populations or regulatory lists. These novel sets provide new standards
+    for measurements of genomic transcriptomics,19 and proteomics,20 in biology and
+    organism-lineage-specific regulation. While transient ATAC-seq focuses on lineage-specific
+    gene expression, single-cell chromatin accessibility can capture the regulatory
+    landscape itself
+
+
+    landscape that governs transcription in each cell.21. Current technologies face
+    difficulties in throughput and sensitivity, drop of DNA fragments, or potentially
+    affecting data integration.
+
+
+    The application of deep-learning models for prediction of regulation and expression
+    signals from DNA sequences is a landmark in the genomic field,22. Very recently,
+    deep learning has been used to predict chromatin accessibility and gene expression
+    at the single-level,23. While NVAce achieves atlas-scale prediction of cell-type
+    specific expression with single-cell resolution,24, Huutuo has
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_1_1.png)
+
+
+    Cell 184, 533-548. 2025. The Authors publish. By Elsevier Inc 534
+
+    This is an open access article under the CC BY (https://creativecommons.org/licenses/by/4.0)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# CellPress
+
+    OPEN ACCESS
+
+    Cell Resource
+
+
+    # A
+
+
+    # In situ tagmentation with single adaptor transpos
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_2_0.png)
+
+
+    # Indexed hybridization & ligation
+
+
+    # Indexed adapter switch
+
+
+    # Gapfill & ligation
+
+
+    # Indexed PCR
+
+
+    # B
+
+
+    # Indexed adapter switch by temperature control
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_2_1.png)
+
+
+    # C
+
+
+    Non-empty duplicates: 1
+
+    Human duplicates: 492
+
+    Mouse duplicates: 511
+
+    Collision rate: 0.599%
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_2_2.png)
+
+
+    # D
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_2_3.png)
+
+
+    # E
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_2_4.png)
+
+
+    # F
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_2_5.png)
+
+
+    | No. of assays/ | Sampler Experiment | Median U(10) | Median TSS | Equipment
+    Requirement | FACS Fixing |
+
+    |---|---|---|---|---||
+
+    | scATAC | | 584,229 | 5-10 | 40-10 | | Y/N |
+
+    | scATAC v2 | 7,729 | 22-30 | 13-18 | 10x Genomics | Y/N |
+
+    | hscATAC | 46,653 | 1.5-23 | 10-25 | Bio-Rad dsSeq Single-Cell Library | N/N
+    |
+
+    | Human | 7,986 | 2.8-6.5 | 11-17 | Microfluidic droplet n | N/N |
+
+    | Paired-seq | 5,982 | 1-17 | 6-13.5 | | Y/N |
+
+    | s3-ATAC | 104,239 | 4-6 | 5-9 | | Y/N |
+
+    | scATAC-3 | 318,542 | 3-7 | 5-10 | | Y/N |
+
+    | SHAREseq | 34,774 | 2-6 | 10-12 | | Y/N |
+
+    | µATAC | 15,702 | 4-6 | 8-23 | SMARTer iCELL8 Thermal Cycler | N/N |
+
+    | µATAC | 1,618 | 2-19 | 8-16 | | N/N |
+
+
+    5344 Cell 188, 5343–5362, September 18, 2025
+
+
+    (legend on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Cell Resource
+
+
+    # CellPress
+
+    OPEN ACCESS
+
+
+    decode disease-related regulatory sequences at the single-nucleotide level in
+    nearly all cells.²⁹ Unfortunately, most-cell data have limitations in either sensitivity
+    or throughput, hindering the generative power of models with high accuracy. Optimization
+    of deep-learning models in the genomic realm faces ongoing challenges, whereas
+    protein structure models¹¹⁴-¹⁴ have achieved remarkable success.
+
+
+    In this study, we use homo-adapter transposase and temperature-controlled sequencing,
+    which increased the sensitivity and throughput of ATAC assay. We utilized a ultra-throughput,
+    viral-single-nucleus ATAC-seq (UATAC-seq) transposase to map open chromatin landscape
+    for zebrafish, gecko, chicken, and mice across a wide range of subphyla. The data
+    revealed us to identify common patterns for candidate regulatory elements (CREs)
+    across different species and lineages. We built a mega-scale deep-learning model,
+    Nva cis-regulatory elements that can be annotated with accessibility landscape,
+    evolutionary effects, and synthetic mutations from any given genome sequence.
+
+
+    50% limit of dual-adapter transposase, allowing for the amplification of 100%
+    of molecules.³⁰ UATAC-seq incorporates four indexing steps in a streamlined manner,
+    resulting in a processing time much higher throughput compared with s-ATAC. UATAC-seq
+    is easy to perform and does not require extensive equipment such as fluorescence-activated
+    cell sorting (FACS) or making it generally accessible for the 10x more researchers.
+
+
+    To assess the resolution and characteristics of the fragments, we performed two
+    independent experiments with human (2399) and mouse (373) cells. The observed
+    collisional ligation rate was 0.31% in the human experiment (Figure 1) and 1.2%
+    in the mouse experiment (Figure 2). The fragment size shows a size-number-based
+    distribution
+
+
+    # RESULTS
+
+
+    Construction of the single-cell sequencing platform suitable for high-resolution
+    landscape construction, we built UATAC-seq technology. In UATAC-seq, we used a
+    novo transposase to incorporate into the bounds of open genomic regions (Figure
+    1A). After end-split, the second round of DNA was handled via ligation and hybridization,
+    followed by another round of ligation with a temperature-controlled transposase
+    to add to both ends of reads (Figures 1A and 1B). We then used gap-fill and ligation
+    to prepare the template and then PCR to incorporate the fourth round of barcodes
+    and generate the sequencing library. The sequence quality is detailed in Table
+    S1.
+
+
+    This approach avoids cross-contamination from differing indexes and prevents sample
+    loss by reducing reagent changes. UATAC-seq has advantages over all single-nucleus
+    ATAC-seq (snATAC-seq) protocols, including s-ATAC, and 10x-ATAC (Figure 1A). UATAC-seq
+    uses a unbiased transposase, which overcomes
+
+
+    To benchmark UATAC-seq on tissue cells, we analyzed 41,672 adult mouse brain cells
+    using UATAC-seq. We observed the fixation of quality relative to the pipeline
+    (Figure 1) and used manifold alignment and projection (UMAP) for visualization.
+
+
+    Different DNA genes on library construction and found that the DNA ligation efficiency
+    improved by UATAC (Figure 1F).
+
+
+    To assess the efficiency, we found that the enrichment score of ATAC-seq degrades
+    under 55°C over 5 minutes (Table S2). Compared with other methods, UATAC-seq exhibits
+    advantages in terms of sensitivity, specificity, and cost (Figure 1).
+
+
+    FIGURE 1. UATAC-seq construction
+
+
+    +   (A) Standard of UATAC-seq library construction. The details are in the STAR
+    Methods. Note that BC3 is not complementary to its reverse strand.
+
+    (B) Design of unbiased transposase. Construction of libraries with counts of unique
+    reads aligned human or mouse chromosomes in the same reference genome. Points
+    are colored by species.
+
+    (C) Scatterplots of single-cell images to represent different species. Cells with
+    human or mouse proportions less than 0.8 were defined as mixed cells. Less than
+    1,000 cells were required.
+
+    (D) Fragment length distribution of 373 and 2967 nucleotides binding.
+
+    (E) UATAC Typical pooling of typical inserts in 4-8kb fragments using Tn5.
+
+    (F) E col enzyme improves detection of UFs compared with T4 enzyme, which has
+    less effect on enrichment (left). The enrichment score of UFs using fixed Tn3
+    (right).
+
+    (G) Comparison of UATAC-seq with current ATAC-seq methods on sensitivity, specificity,
+    and other experimental conditions.
+
+
+    See also Figure S1.
+
+
+    Cell 188, 5343–5362, September 18, 2023 5345'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# CellPress OPEN ACCESS
+
+
+    # Cell Resource
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_0.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_1.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_2.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_3.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_4.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_5.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_6.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_7.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_8.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_9.png)
+
+
+    # K Cumulative UF+TSS in a single experiment of 11 methods
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_10.png)
+
+
+    # Unique fragments and TSS enrichment at atlas-level datasets
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_11.png)
+
+
+    # Total molecule of scRNA/snATAC atlas-level datasets
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_4_12.png)
+
+
+    +   * UATAC-seq, adult mouse
+
+    * sc-ATAC-seq (2020, fetal mouse)
+
+    * sc-ATAC-seq (Causovich et al., 2016, adult mouse)
+
+    * sc-ATAC-seq (Zheng et al., 2019, adult mouse)
+
+    * Total Muris (2018, adult mouse)
+
+    * Tabula Seurat (2022, human)
+
+
+    +   * UATAC (this study)
+
+    * modified sc-ATAC-seq (Causovich et al., 2018)
+
+    * modified sc-ATAC-seq (Zheng et al., 2021)
+
+    * sc-ATAC-seq (Domke et al., 2020)
+
+
+    5346 Cell 188, 5343–5362, September 18, 2025 | (legend on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Cell Resource
+
+
+    peaks, and differentially (DA) peaks (Figure 2E) were significantly improved.
+    The middle sequencing depth (UM/UF=1.647) maximized cost-effectiveness since most
+    fragments were detected at this depth. In the main body, the peaks of majority
+    were assigned to introns, indicating that many contain abundant regulatory elements
+    (Table S2). Additionally, we used the rate of double-strand cutting events (7%)
+    to optimize the overall recovery efficiency (STAR Methods). A ratio of about 25%
+    for total molecule recovery should be the limit of coverage of open chromatin
+    peaks (Figure 2G).
+
+
+    We spent 1 day for library generation of more than one million barcoded nuclei
+    and 1 day for sequencing half of the library. With moderate sequencing depth,
+    284,269 nuclei passed the filter in a single experiment. The quality of this experiment
+    was exceptional compared with single-batch data of all other methods (Table S2).
+    Cumulative UF enrichment of nuclei recovered by a single UATAC-seq experiment
+    was much higher (Figure 2H). Overall, we believe that UATAC-seq offers ultra-high
+    throughput and ultra-efficiency for large-scale cell datasets.
+
+
+    Next, we benchmark UATAC-seq against nine other protocols on mouse brain, tissue
+    and tissues (Table S3). UATAC-seq outperformed all other methods because the number
+    of nuclei processed and sequenced were standardized pipeline. We found that UATAC-seq
+    showed the highest UF (Figure 2F), the highest peak number (Figure 2G), the highest
+    FPR (Figure 2H), the highest DA peaks (Figure 2I), and the highest duplicate rate
+    (Table S2). In addition, UATAC-seq showed high TSS enrichment (Table S2), the
+    highest reads in promoter (Figure 2S), and the highest promoter rate (Figure 2F).
+    With comparison to sequencing depth, UATAC-seq showed the best TSS score and accessibility,
+    showing a high level of sequencing efficiency, and we found that high FPR has
+    a negative correlation with TSS enrichment and UATAC-seq achieved high FPR values
+    regardless of sample size number (Figure 2S). UATAC-seq uses nuclei for chromatin
+    profiling, de-novo accessibility (Table S2) and better recovery of CRE in inactive
+    regions.¹17 Foot profiling analysis from UATAC-seq showed similar patterns with
+    the other methods. Finally, of all available mouse snATAC-seq methods, the cell
+    types identified were consistent with the published mouse models (16–48). UATAC-seq
+    detected all major cell types in the mouse brain (Figure 2J, Table S2).
+
+
+    The construction of chromatin accessibility layers for vertebrates
+
+
+    The performance of UATAC-seq prompted us to highlight the relationship between
+    genome sizes and regulatory mechanisms, which we covered with diverse genome species,
+    including zebrafish, gecko, chicken, and mouse. Due to the ultra-throughput UATAC-seq,
+    we were able to construct a chromatin accessibility layer for each organ in a
+    single-day and single-batch experiment. For gecko, male and female samples were
+    from three individuals; and for zebrafish, samples from three individuals; all
+    samples were pooled from each individual.
+
+
+    To evaluate the strength of UATAC-seq in the construction of high-throughput cell
+    landscapes, we performed experiment to all major tissues from mouse
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_5_0.png)
+
+
+    (A) Bar plot showing the UF of accessibility at low, mid, and high levels (merging
+    indicates merge all reads for the three levels) for the mouse brain sample. (B)
+    Plots of UATAC-seq (the number of UFs) and the FPRs (the FPRs) for four different
+    sequencing depths. (C) Total number of peaks and DA peaks from each snATAC-seq
+    method, with the bound to to peak density. Statistical significance for comparisons
+    as the sequencing depth increases. (D) Comparison of the UFs per nucleus and the
+    total number of peaks from 1,000 nuclei (G) and the FPRs per nucleus (H) and the
+    number of DA peaks from 3,000 nuclei (I). In (F), the comparisons are performed
+    on randomly sampled 3,000 nuclei from each method to capture the efficiency of
+    cell on content value across neurons.
+
+
+    (J) Joint U of UATAC-seq mouse brain data with other datasets comparison. accessibility
+    layers are colored by cell type. (K) Comparison of TSS enrichment (top) and number
+    of UFs (bottom) with other snATAC-seq chromatin accessibility layers derived from
+    UATAC-seq (adult mouse), modified scATAC-seq (adult human), and sci-scATAC-seq
+    (adult human). (L) Comparison is performed on the sample tissue of three methods.
+    (M) Bar plot showing the total number of cells from scRNA and snATAC-seq for mouse
+    and human datasets. The molecules identified UF for snATAC and UMI for scRNA,
+    uniquely mapped fragments; UFs, unique names; DA, differentially. See also Figure
+    2.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # CellPress
+
+    OPEN ACCESS
+
+
+    Erythroid Immune Hepatic Epithelial Secretory Muscular Neural Endothelial Stromal
+    Reproductive
+
+
+    # A Mouse (Female)  B Mouse (Male)
+
+
+    32 main clusters
+
+    181,878
+
+
+    39 main clusters
+
+    291,854
+
+
+    +   - Adrenal Gland
+
+    Bladder
+
+    Bone Marrow
+
+    Brain
+
+    Cerebellum
+
+    Cerebral Cortex
+
+    Heart
+
+    Large Intestine
+
+    Liver
+
+    Lymph Node
+
+    Ovary
+
+    Pancreas
+
+    Placenta
+
+    Small Intestine
+
+    Spleen
+
+    Stomach
+
+    Telencephalon
+
+    Uterus
+
+
+    +   - Bladder
+
+    Bone Marrow
+
+    Brain
+
+    Cerebellum
+
+    Cerebral Cortex
+
+    Heart
+
+    Kidney
+
+    Liver
+
+    Lymph Node
+
+    Ovary
+
+    Pancreas
+
+    Spleen
+
+    Stomach
+
+    Thymus
+
+    Tongue
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_6_0.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_6_1.png)
+
+
+    # C Chicken  D Gecko
+
+
+    32 main clusters
+
+    205,311
+
+
+    30 main clusters
+
+    154,190
+
+
+    +   - Airsac
+
+    Bowel
+
+    Brain
+
+    Brainstem
+
+    Cerebellum
+
+    Clocaca
+
+    Duodenum
+
+    Granular Stomach
+
+    Heart
+
+    Kidney
+
+    Liver
+
+    Lung
+
+    Mucous Stomach
+
+    Ovary
+
+    Pancreas
+
+    Spleen
+
+
+    +   - Bladder
+
+    Brain
+
+    Esophagus
+
+    Fat Body
+
+    Heart
+
+    Kidney
+
+    Liver
+
+    Lung
+
+    Muscular
+
+    Ovary
+
+    Skin
+
+    omach
+
+    Tail Root
+
+    Tongue
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_6_2.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_6_3.png)
+
+
+    # E Axolotl  F Zebrafish
+
+
+    28 main clusters
+
+    133,207
+
+
+    32 main clusters
+
+    94,654
+
+
+    +   - Bladder
+
+    Cloaca
+
+    Gall Bladder
+
+    Heart
+
+    Intestine
+
+    Kidney
+
+    Lung
+
+    Pancreas
+
+    Stomach
+
+    Vas
+
+    Vas Deferens
+
+
+    +   - Brain
+
+    CaudaFin
+
+    Gill
+
+    Heart
+
+    Intestine,Pancreas
+
+    Liver
+
+    Musc
+
+    spleen
+
+    Test
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_6_4.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_6_5.png)
+
+
+    5348 Cell 188, 5343–5362, September 18, 2025
+
+    (legend on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Cell Resource
+
+
+    # CellPress
+
+
+    OPEN ACCESS
+
+
+    RNA sequencing (scRNA-seq) and snATAC-seq cell databases, our resource encompassed
+    more molecules than previous works (Figure 2M).
+
+
+    We developed the large-scale scATAC-seq data with a standardized pipeline controlled
+    by the size of genome (STAR Methods) and used UMAP for visualization of the data
+    (Figures 3A–F). For each species, we identified major cells in the first round
+    of clustering and verified different cell-type identities. We are able to identify
+    rare subtypes from our mouse to uastac. In human, we identified 42 major clusters
+    and 71 subclasses; in mouse, we identified 9 major clusters and 77 subclasses;
+    in zebrafish, we identified 30 major clusters and 54 subclasses; in zrafish, we
+    identified 32 major clusters and 51 subclasses. We then annotated and assigned
+    the cell label for each cluster and subclass based on the accessibility of cell-specific
+    features (Table S1).
+
+
+    Most vertebrate cells share the same cell labels across species, including erythroid,
+    immune, hepatic, epithelial, neural, muscular, and endothelial cells (Figures
+    3A–F).
+
+
+    We observed many differences in cell-type diversity between species. For instance,
+    some immune-related fibroblasts were only seen in mouse, and gecko. We found many
+    unconventional and myotic and zebrafish-specific subtypes directly from the uastac
+    genome, whereas zebrafish has the least number of cell-specific types (https://bis.zju.edu/uastac).
+    Moreover, we observed different differences in accessibility of sub genomic regions
+    between zebrafish and uastac. We found that some open regions were open only in
+    mouse, and, and not zebrafish.
+
+
+    vent the limitations of arbitrary peak extension and offer a more accurate representation
+    of native accessibility. We showed that, compared with the conventional peak calling
+    method, we defined here a much higher correlation with DNase I hypersensitivity
+    levels (Figure 4B). We then merged these regions to identify non-overlapping cREs
+    for five species (Table S5). In mouse, 56.2% of cREs were verified by the ENCODE,
+    but 43.8% of cREs were previously undetected. These new cREs have higher GC content
+    and regulatory elements (Table S3–S4). Further investigation revealed that these
+    accessibility elements were originated from rare cells that the ENCODE consortium
+    misses, including neurons in birds, reptiles, and amphibians, as well as the adrenal
+    gland and somatosensory cells in the primate genome (Figure 5G).
+
+
+    To validate these cREs using multi-omics data, we performed CUT&TAG experiments
+    in mouse adrenal gland and primate cell types using antibodies against H3K4me3,
+    H3K4me1, and H3K27ac (H3 Lysine 4 trimethylation, acetylation, and CCCTDC-binding
+    factor). We found that 60–70% of new cREs defined using ATAC-seq could be verified
+    by CUT&TAG (Figure 5H). These regions were enriched in both primate adrenal gland
+    and zebrafish, and nearly all of the zebrafish-specific REs are new. In total,
+    we identified 6,182,084 cREs with high resolution (Figure 4D, Table S5).
+
+
+    With the vertebrate genome, we aimed to characterize a diversity of open regions
+    located at the promoter, UTR, exon, intron, and distal genomic regions (Figure
+    4E). We found that the number of total open regions for promoters varies with
+    the genome size (Figure 4F, S, and S3). We found the number of cREs in zebrafish
+    is lower than in mouse.
+
+
+    A landscape of cell-specific cREs. To develop a draft of cell-specific cREs for
+    zebrafish, we integrated chromatin accessibility profiles from all cell cluster
+    for each species and used an optimal region defining method. Our scATAC-seq normalizes
+    chromatin accessibility to 500 bp intervals, avoiding artificial boundaries on
+    regulatory elements. Our analysis circum-
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_7_0.png)
+
+
+    Figure 3. Construction of chromatin accessibility profiles over islands across
+    five species: mouse (A) and male (B) for mammals, (C) for birds, (D) for reptiles,
+    (E) for amphibians, and zebrafish (F). Each dot represents a cell identified by
+    tissue color, with the shading denoting the lineage assembly. The hierarchical
+    clustering tree shows construction of subclusters.
+
+
+    Cell 188, 5534–5362, 2018. 2025 5349'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # CellPress
+
+    OPEN ACCESS
+
+
+    # A
+
+
+    # B
+
+
+    Genes and CREs
+
+
+    Raw fragments
+
+
+    +   - Filter mapping quality
+
+    - Deduplicate
+
+    - High quality barcodes
+
+
+    Filtered mappings
+
+
+    Open region
+
+
+    Conventional
+
+
+    extend 250bp from summit
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_0.png)
+
+
+    # Spearman correlation Heatmap
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_1.png)
+
+
+    B cell
+
+
+    T cell
+
+
+    NK cell
+
+
+    Monocyte
+
+
+    # C
+
+
+    oCREs overlap with CTCF
+
+
+    43.68%
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_2.png)
+
+
+    +   - Known CREs
+
+    - New CREs
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_3.png)
+
+
+    # D
+
+
+    Endothel
+
+
+    Hepatic
+
+
+    Neural
+
+
+    Stromal
+
+
+    Erythroid
+
+
+    Muscular
+
+
+    Secondary
+
+
+    Global
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_4.png)
+
+
+    Mouse
+
+
+    Axolot
+
+
+    Zebrafish
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_5.png)
+
+
+    # E
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_6.png)
+
+
+    # F
+
+
+    R = 1
+
+    p = 5.8e-06
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_7.png)
+
+
+    # G
+
+
+    Genome size
+
+
+    Axolot
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_8.png)
+
+
+    R = -0.1
+
+    p = 0.87
+
+
+    Axolot
+
+
+    Mouse
+
+
+    Zebrafish
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_9.png)
+
+
+    # H
+
+
+    # Cellities
+
+
+    R = -0.34
+
+    p = 0.58
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_10.png)
+
+
+    Axolot
+
+
+    Mouse
+
+
+    Zebrafish
+
+
+    R = 0.4445
+
+    p = 0.1152
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_11.png)
+
+
+    0.75
+
+
+    1.00
+
+
+    0.85
+
+
+    0.95
+
+
+    0.65
+
+
+    0.85
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_12.png)
+
+
+    # J
+
+
+    Mouse
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_13.png)
+
+
+    Axolot
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_14.png)
+
+
+    0.5
+
+
+    0.6
+
+
+    0.7
+
+
+    0.8
+
+
+    0.9
+
+
+    cCREs
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_15.png)
+
+
+    88.1 - 88.3
+
+
+    cCREs
+
+
+    99.6 - 100.1
+
+
+    LOC11443159(ref/GAT2b)
+
+    chr21:99,151,900-126,404,3
+
+
+    # K
+
+
+    Mouse
+
+
+    Gecko
+
+
+    Axolot
+
+
+    Zebrafish
+
+
+    Promoter (<1kb)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_8_16.png)
+
+
+    Distal Intergenic
+
+    Downstream (<300bp)
+
+    Intron
+
+    3'' UTR
+
+    5'' UTR
+
+    Promoter (2-3kb)
+
+    Promoter (1-2kb)
+
+    Promoter (<1kb)
+
+
+    Mouse
+
+    Gecko
+
+    Axolot
+
+    Zebrafish
+
+    Axolot
+
+    Zebrafish
+
+
+    5350 Cell 188, 5343–5362, September 18, 2025
+
+
+    (legend on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Cell Resource
+
+    CellPress OPEN ACCESS
+
+
+    microscopy of axolotl and mouse nuclei notably larger areas of open and closed
+    chromatin regions in axolotl (Figure S-B). Nevertheless, gene abundance, transcription
+    abundance, and multi-gene regulatory elements appear to be different between axolotl
+    and mouse, as revealed by parallel scRNA-seq and snATAC-seq analyses (Figure S-C).
+
+
+    Important, diversity in the number of open regions, we found that some individual
+    regions are conserved among vertebrates, with the size distribution centered at
+    ~250 bp for most of the open regions. With 1 kb distance to the TSS, we observed
+    two patterns of regions: with ~250 bp and the other ~900 bp for most of the vertebrates.
+    The ~900 bp regions are located at the TSS of different genes (Figure S-D), suggesting
+    that the motifs that contribute to the functional unit of these two types of CREs.
+    Motif enrichment analysis indicates that the open regions are enriched with housekeeping
+    motifs related to the core transcriptional program, including SP1. The ~250 bp
+    regions in the promoters are enriched with CTCF and lineage-related motifs (Table
+    S5). While the ~250 bp regions are within 1 kb of some other open regions in both
+    size and enrichment (Figure S-E), the open regions are enriched with H3K4me3,
+    while the ~250 bp regions are enriched with H3K41 (Figure S-F). It can be seen
+    that there are two main classes of open regions in vertebrates: the ~900 bp regions
+    are shared among the classical promoters, and the ~250 bp regions correspond to
+    classical enhancers/repressors. Our results are in agreement with previous functional
+    characterization of CREs using CRISPR-i.
+
+
+    Encouraged by the individuality of cCRE patterns, we sought to explore conservation
+    across vertebrates. Using HOMER to identify the pattern of the TF binding site
+    on the CREs in a de novo function analysis (STAR Methods). We then performed quantify
+    to
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_9_0.png)
+
+
+    +   (A) Schematic of calling open regions with model-based alignment filters.
+
+    (B) Variation of of open region peaks across species. Open regions size, correlation
+    peaks, and DNAC-seq signals downloaded from ENCODE for four inclusion cells. The
+    color scale represents from 0.0 to 1.0.
+
+    (C) Pie chart showing the number of new CREs in this study and percentage of CREs
+    that overlapped with ENCODE CREs (gray).
+
+    (D) Bar plot showing the number of CREs in both the axolotl and genome level and
+    for score for the five species.
+
+    (E) Distribution of open region size in each species. Pie charts showing the proportion
+    of open regions to elements belonging to different classes across five species.
+
+    (F) Jicero co-accessibility at the binding window of the gene. Gata2 (chr6: 87,991,210-88,504,803)
+    and Gata2 (chr21: 99,151-102,260,484), respectively. Only connecting regions in
+    the axolotl and hepatocytes with co-accessibility above 0.02 (dashed line) are
+    shown.
+
+    (G) Ridge plots showing the distribution of open region size in each lineage element.
+    The open region in ~1 kb contains a batch of regions and new elements, as in the
+    other elements.
+
+
+    See Figure S3 and S4.
+
+
+    Cell 188, 5343-5362, September 18, 2023 5351'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# # CellPress OPEN ACCESS Cell Resource
+
+
+    # Conv1
+
+
+    # ResNeXt Block
+
+
+    # Bottleneck
+
+
+    # Final Layer
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_10_0.png)
+
+
+    # Model training
+
+
+    # ## INPUT
+
+
+    # ## OUTPUT
+
+
+    # ### Different ResNext layer
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_10_1.png)
+
+
+    # ### Different peak length
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_10_2.png)
+
+
+    # ### Different data quality
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_10_3.png)
+
+
+    # ### Different model architecture
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_10_4.png)
+
+
+    # ## Single-cell task
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_10_5.png)
+
+
+    # ## Pseudo-cell task
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_10_6.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_10_7.png)
+
+
+    5352 Cell 188, 5343–5362, September 18, 2025'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# # Cell Resource
+
+
+    # CellPress OPEN ACCESS
+
+
+    in axolotl and endothelial, the cell-relevant marker Mycn is actively active,
+    which may help explain their regenerative power. We further explored species-specific
+    cRE to understand the molecular basis for axolotl regeneration. Cross-species
+    element analysis identifies an axolotl-specific regulatory program (Figure S4h).
+    Pathways of this program suggest a role for regulation of TOR signaling (Table
+    S5). Axolotl chord shows the level of mTOR PI3K activity among five species (Figure
+    S4d). This further supports the current finding that rapid activation of the mTOR
+    is a unique feature for lung regeneration in the axolotl.¹
+
+
+    achieving overall area under the receiver operating-specific curve (AUROC) of
+    0.90 across single species (Figure S5). Using a pseudo-cell of 10, NWA achieves
+    an AUROC of 0.93 for the mouse landscape prediction (Figure 5h), which is a remarkable
+    improvement over the other pseudo-bulk-snATAC-seq methods,¹¹¹ We visualized the
+    cells extracted from the fully connected layer using t-distributed stochastic
+    neighbor embedding (t-SNE) and presented the cells and their linearity in the
+    clusters (Figure 5i). We observed an accuracy of our model in a small fraction
+    of the nuclei (Table S6). Take erythroid lineage in the axolotl, male in the mouse,
+    male in the chicken, and male in the zebrafish for evaluation of the model''s
+    robustness across different species.
+
+
+    Construction of the NWA model at the single-cell level and landscape
+
+    To explore the genomic landscape in diverse cREs, we used the deep-learning¹²[10.1038/s41586-xxx]
+    to build a predictive model with given features in different species. By including
+    NWA in the meta-deep learning network and built an NWA pipeline (Figure 5g). We
+    optimized the parameters of the model size, sequence length, and TCR quality of
+    the training datasets for snATAC-seq prediction. Our NWA model outperformed other
+    approaches, including axolotl, chicken and zebrafish, showing better chromatin
+    accessibility landscape prediction (Figure 5E). We found that higher quality data
+    is better for model performance. Using exactly the same model, the predictions
+    from our data landscape showed higher accuracy than the model from previous published-based
+    data line in all cells (Figure 5F). The final NWA uses 500 bp DNA sequences, which
+    go through connection block 128 hits with a set of 7 filters, with ReLU activation
+    function, a bottleneck layer, and a fully connected layer, and predict better
+    accessibility in each nucleus in a multitask way (Star Methods).
+
+
+    To capture the subvariety, we trained a NWA model using high-quality snATAC-seq
+    data from female axolotl, mouse, chicken, gecko, axolotl, and zebrafish, showing
+    differences in chromatin accessibility landscape (Star Methods). All codes and
+    training data are available at GitHub: https://github.com/olnhc23/NUWATAC. We
+    found that NWA predicted the robust chromatin accessibility,
+
+
+    NWA identifies conserved regulatory grammar in vertebrate cREs
+
+    Given the conservation of cRE motifs revealed by we then tested whether our model
+    is capable to predict chromatin accessibility landscapes from other vertebrate
+    genomes. By a priori of principle, we used the NWA model trained on mouse to scan
+    other vertebrate genomes with a 500 bp sequence. We found the most conserved motifs
+    in mouse, axolotl, chicken, gecko, and zebrafish are cREs when the cREs are in
+    the conserved regions (Figure 6A–D). Cross-species scanning using gecko or zebrafish
+    models identifies high accuracy for predicting cREs in the conserved regions.
+
+
+    We then aimed to analyze cross-mammal de novo prediction and used the NWA model
+    to scan along the
+
+
+    Figure 5. Construction of the NWA model at the single-cell level and landscape
+
+    (A) Schematic of the workflow of NWA. NWA is a deep convolutional neural network
+    to predict chromatin accessibility profiles from the genome dense sequence
+
+    (B) Performance of models with different layers on the ReXinet architecture evaluated
+    by AUROC. All of the results derived from dataset female mouse chromatin accessibility
+    profile of 0.5034, with a bottleneck in (C)-(E) using the same dataset.
+
+    (C) Performance of different model parameters evaluated by AUROC.
+
+    (D) Performance of models training on different quality evaluated by AUROC.
+
+    (E) Performance of accuracy: NWA, scblast, and on the snATAC-seq dataset evaluated
+    by AUROC. NWA showed the best accuracy,
+
+    (F) Comparison of accuracy: NWA using snATAC-seq data evaluated by AUROC and the
+    previously published-cell snATAC accessibility landscape using the NWA model.
+
+    (G and H) Performance of NWA prediction on high-level peaks evaluated by AUROC.
+    Number of nucleus: mouse: 50,040, male: 50,035, chicken: 50,029, axolotl: 50,028,
+    gecko: 50,027, zebrafish: 50,027.
+
+    (S1)-SNE visualization of cell embeddings for five species (mouse, male, mouse,
+    chicken, gecko, axolotl, and zebrafish) revealed by NWA as the results of the
+    dense layer, colored by cells line.
+
+
+    Cell 188, 5343–5362, September 2023, 5535
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_11_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Accessible UAs predicted by Mouse model in endothelial cell
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_12_0.png)
+
+
+    # Accessible UAs predicted by Mouse model in endothelial cell
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_12_1.png)
+
+
+    # Predicted human cCRE landscape
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_12_2.png)
+
+
+    # Predicted macaque cCRE landscape
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_12_3.png)
+
+
+    # Endothelial cell
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_12_4.png)
+
+
+    # Macrophage
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_12_5.png)
+
+
+    # Smooth muscle cell
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_12_6.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_12_7.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_12_8.png)
+
+
+    (legend on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Cell Resource
+
+    CellPress OPEN ACCESS
+
+
+    genome sequences for mammals, including human, macaw, pig, horse, sheep, and panda,
+    to predict their CRE landscapes (Figure, Table S9). It is important to emphasize
+    that the genomes for these species have never been revealed by NaWce. The mammalian
+    NaWce model successfully predicted lineage-specific chromatin accessibility for
+    all species (https://bi.ens.edu/cuvas). Peak calling from the predicted lineage-specific
+    consensus showed high overlap with real data based on the genome (Table S5). TAC-seq
+    data had high TSS enrichment and UFs higher than the published data^14 (Table
+    S6).
+
+
+    We found excellent performance of model prediction, despite gene structures and
+    accessibility level among these three species (Figure S4). We evaluated regulatory
+    chromatin at the functional level, which identified a relevant protein, hemoglobin
+    (hbb), in the lineage. The NaWce predicted that, in erythroid lineage, CRE of
+    hbf are absent in absent in human or mouse (Figure S8). This prediction is well-validated
+    by the actual experimental measurement of Hb promoter accessibility and expression
+    (Figures S6 and S7).
+
+
+    Application of NaWce
+
+    Since NaWce is an integrated deep-learning model that performs multitask jointly
+    to decode the genome to cell type, we extract its high-dimensional representation
+    of genome sequences to understand the cause of lineage-specific chromatin. At
+    the final layer, NaWce recognizes high-dimensional features in the genome sequence
+    which relate directly to our unsupervised clustering (Figure S7). These sequence
+    modules correspond to distinguished functions, such as module 1 for neural function,
+    module 2 for RNA processing, module 3 for immune function, and module 4 for lipid
+    metabolism (Figure S8). Our results show that NaWce identified cell-specific grammar
+    in the sequence which might be the cause for lineage-specific chromatin patterns.
+
+
+    To explore the sequences that are recognized by the NaWce model, we extracted
+    deep-learning-based motifs using Transcription Factor Discovery from Information
+    Source (TF-Motifs Disco) for each species. We visualized the predicted motifs
+    for each species (Table S9). We plotted the cell-specific CRE tree to demonstrate
+    the similarity among motifs (Figure S6). Deep-learning-based motifs can be mapped
+    to known motifs (Figure S5), but we discovered a large proportion of short motifs
+    not reported in existing studies^8,10. When we use the NaWce model to show the
+    ~900 and -250 regions, we observed the signals of the 1000 bp window for the ~900
+    regions were 5 times stronger than for the -250 regions. These provide new interpretation
+    of function of CREs but also supported the idea that promoters and enhancers have
+    a shared-chromatin architecture that is primarily defined by local features^5,66.
+
+
+    To reveal the functional sequences of regulatory evolution in vertebrate species,
+    we presented both and observed chromatin accessibility signals in the regions
+    not homologous for human, mouse, and,
+
+
+    > Figure 6. Prediction of chromatin accessibility landscape from genome sequences
+
+    (A and B) Plots showing the fraction of UFs in four species as predicted by model
+    and accessible by made mouse (a) and female mouse (b) endothelial cells, (B))
+    cells.
+
+    (C and D) Plots showing the fraction of UFs in accessible by made mouse (c) and
+    female mouse (d) myeloid cells.
+
+    (E) The correlation between accessibility prediction of models for human and t-seq
+    visualization. (F) For four cell types, prediction of the cell-type level in cells,
+    hematopoietic, macrophages and smooth muscle. The color scale represents the density.
+
+    (G) Bar plot showing the number of new CREs and known known CREs.
+
+    (H) Bar plot showing cell types associated with new and known CREs.
+
+    See Figures S5 and S6.
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_13_0.png)
+
+
+    Cell 188, 5334-5362, December 2023, 1555'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Cell
+
+    OPEN ACCESS Resource
+
+
+    # A rs11506772 (chr12:11576429 G>A)
+
+    Disease or Trait: Dialytic_blood_pressure
+
+
+    # rs3403877 (chr12:630843 C>G)
+
+    Disease or Trait: Lymphocyte_count
+
+
+    # rs168116 (chr12:628419 C>T)
+
+    Disease or Trait: Triglycerides
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_14_0.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_14_1.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_14_2.png)
+
+
+    # rs470946 (chr12:162169 C>T)
+
+    Disease or Trait: Hairs_gene_density
+
+
+    # rs5079019 (chr12:674157 C>T)
+
+    Disease or Trait: Eosinophil_count
+
+
+    # rs206888 (chr12:9307885 G>A)
+
+    Disease or Trait: LDL_cholesterol
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_14_3.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_14_4.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_14_5.png)
+
+
+    epithelial  hematopoietic  immune  muscle  reproductive  stromal
+
+
+    # B Causal SNPs in the promoter region of HBG
+
+
+    # Causal SNPs in the promoter region of HBG
+
+
+    # Causal SNPs in the promoter region of HBG
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_14_6.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_14_7.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_14_8.png)
+
+
+    # NwcaE prediction in CD34+ cells
+
+
+    # D Relative expression of HBG
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_14_9.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_14_10.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_14_11.png)
+
+
+    5356 Cell 188, 5343–5362, September 18, 2025
+
+
+    (legend on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Cell Resource
+
+
+    # CellPress OPEN ACCESS
+
+
+    predicted the effect of these functional cells. For example, NCas9 predicted –175–C
+    and –202–C–G will lead to activation of hemoglobin subunit gamma (HBG) in erythroid
+    lineage, –68–C–A and –90–T–C will lead to downregulation, and –20–T–A and –6–G
+    will lead to downregulation of hemoglobin subunit beta (HBB) in erythroid lineage,
+    and to others (Figure 7). Our results indicate the strength of NCas9 in predicting
+    the functional relevance of non-coding variants.
+
+
+    performed a gene editing of this site in a human myeloid lineage-derived Hue cell
+    line. We have achieved relatively low gene editing efficiency of 23.75% in the
+    culture, with observed a stable 30-fold increase in HB1G2 expression at the bulk
+    level (Figure S3). NCas9 was trained at large-scale landscape, so this prediction
+    of mutation effect might be applicable to all vertebrate cell types in our study.
+
+
+    Next, we tested the ability of the NCas9 model to predict somatic mutation effect.
+    We fine-tuned NCas9 with chromatin features from human CD34+ hematopoietic multipotent
+    progenitors (MPPs) and in silico by analyzing the variance at each base in the
+    reference sequence of HB1G2 and consensus sequence, we found multiple motifs affecting
+    the effect on the CRE (Figure S7). We computed the difference in predicted model
+    for each mutation relation and compare the result with the observed effect from
+    CD34+ cell experiments. The results indicate that...
+
+
+    Overall, our NCas9 model is capable of predicting chromatin accessibility landscapes
+    from a variant genome. Our study suggests that the regulatory grammar is conserved
+    among the sequence manner.
+
+
+    # DISCUSSION
+
+
+    Despite extensive efforts in atlas construction using scRNA-seq, these were limited
+    by the depth of reads with low expression. In UATAC-seq, we designed a protocol
+    to capture 4 copies of DNA regulatory elements per sequence, a four-fold increase,
+    empowering the protocol with a high-throughput limit.
+
+
+    By using UATAC-seq, we mapped the chromatin accessibility landscape for variant
+    species. We found that individual open regions and CRE regulatory elements. In
+    addition to the sequences, we mapped the chromatin to genome size variants. However,
+    with the limit of fused cells we found that the duplicate rate was we failed to...
+
+
+    +   Figure 7. NCas9 predictions and validations
+
+    (A) Dots show the predicted mutation effect of various effect (Zhang et al.) across
+    all lines and random mutations in the body order, (cell region)
+
+    (B) Dots show the predicted NCas9-predicted effect of each AT-target-based element
+    and score HB1G2/human line level model coefficients. The solid line represents
+    the regression fit, and the gray area indicates the 95% confidence interval. The
+    Pearson correlation coefficient (r) and the p-value are shown left. Measured absolute
+    effects on HBG/HBG2 expression compare the quantile with the lower. Compared to
+    p < 0.05 with t-test)
+
+    (C) Relative expression of HB1G2 (normalized by HPRT1) in the wild type and HBB
+    –68–A edited with an editing efficiency of 23.75% in cell culture. The bar represents
+    to standard deviation from three replicates.
+
+
+    We used NCas9 to predict a somatic mutation that is not in the Single Nucleotide
+    Polymorphism database (dbNP). We found that NCas9 predicts the –68–G–A mutation
+    to be the most effective A site for HB1G2/1 induction. In addition, the –68 region
+    shows a strong negative motif near TSS (Figure S6). This biological research was
+    not documented in db or published by papers.
+
+
+    The high-quality UATAC-seq data allowed us to build the NCas9 model with unprecedented
+    accuracy and specificity. With the exception of protein...
+
+
+    See Figure S7.
+
+
+    Cell 188, 5343-5362, 2023, 5235'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# # Cell OPEN ACCESS
+
+
+    # # Resource
+
+
+    DNA sequence-based models have recently demonstrated the ability to infer regulatory
+    logic across biological processes [7](10.1016/cell.abc6789). At present, deep
+    learning appears to be the most effective approach for interpreting transcriptional
+    emergence. In our work, we adopt the ResNet architecture, which is better suited
+    for large-scale, multitask learning on cellular landscape data. NWVAE is capable
+    of predicting tissue-specific regulatory sequences from genomes it has never encountered
+    before, highlighting strong enhancers.
+
+
+    Materials availability
+
+    This study did not generate new unique requests.
+
+
+    Data and availability
+
+    Data are available in the NCBI Gene Expression Omnibus (GEO) under accession number
+    GSE224819. Processed data can be accessed at figure: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE...
+    https.bsu.edu.cn. Code and scripts can also be accessed at: https://github.com/guoj/NWUATAC.
+    The pretrained model can be accessed from GitHub: https://github.com/guoj/NWUATAC.
+
+
+    Using NWVAE, we predicted the synthetic effect on cCRE with an accuracy that is
+    higher than the models generated from MFPRAs or ENCODE multi-mode data. While
+    large genomic models, such as Enformer and Evo, are still struggling to capture
+    cell-type specific regulatory elements, NWVAE not only captures tissue-specific
+    regulatory grammar (Table S7) but also covers all key elements in vivo. By interpreting
+    the deep-learning model, we presented a conserved regulatory logic and architecture
+    in learning genome. We observed that the first layer captures TF binding motifs
+    in the genome, the other layers represent motif interactions and genomic interactions,
+    and the output predicts different features for different lineages and finally
+    predicts the target gene at all.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    We thank P. Hu, X. Li, and J. Li for support on this work. We also thank X. Wang
+    (Hengyang), Y. Zhang (Hengai), Debiao Sheng (Shanghai), and B. Li (Shanghai) for
+    supporting the experiments and Yanjing Nanjing for providing the customized antibodies
+    used in the study. We also thank M. Chen and S. Li for support of our project.
+    We also thank H. Wu in the Center of Bioinformatics, Peking University for providing
+    the necessary resources and the facilities of Jianghui Laboratory for technical
+    support. This study was supported by the Key Program of Zhejiang (2024AS5502);
+    the National Natural Science Foundation of China (grants 32303001) and the Natural
+    Science Foundation of Jiangsu Province (2021Y730014). This paper is funded by
+    the Central Foundation for Creative Science and Education (https://www.ccsf.org/publications).
+
+
+    In summary, we present NWUATAC-seq, which enables efficient prediction of chromatin
+    architecture and landscape, and NWVAE for vertebrae chromatin landscape prediction.
+    Our study provides valuable resources for further investigation and designing
+    regulatory sequences.
+
+
+    # Limitations of the study
+
+
+    NWVAE is designed to predict chromatin accessibility and effects of mutations
+    in genomic sequences. However, it lacks the capacity to determine the function
+    of individual enhancers or to predict changes in gene expression caused by mutations
+    in enhancers or repressors. While our findings demonstrate that grammar plays
+    a critical role in euch and heterochromatin states, we cannot rule out the possibility
+    that chromatin mutations may affect gene expression in certain contexts. Moreover,
+    although NWVAE achieved high prediction accuracy across cell types, the functional
+    validation we presented focuses on the human lineage as a proof of principle.
+    Nonetheless, we believe NWVAE should demonstrate comparable accuracy in predicting
+    synthetic cCREs across all vertebrate cell types.
+
+
+    # RESOURCE AVAILABILITY
+
+
+    Lead contact
+
+    Data are available upon request to the lead contact, Guojiu Guo (@gg@edu.cn).
+
+
+    # DECLARATIONS OF INTEREST
+
+
+    The authors have two potential conflicts of interest regarding NWUATAC-seq and
+    the NWVAE model.
+
+
+    # STAR+METHODS
+
+
+    Detailed methods are provided in the online version of this paper and include
+    the following:
+
+
+    +   - KEY REGULATORY TABLE
+
+    - EXPERIMENTAL MODEL AND STUDY PARTICIPANT DETAILS
+
+    - Cell lines
+
+    - METHOD DETAILS
+
+
+    +   - Indexed Tag Enzyme Preparation for NWUATAC-seq
+
+    - Sample Collection from Mouse, Chicken, Geolot, and zebrafish
+
+    - Nuclei Isolation from Tissues
+
+    - Nuclei Isolation from Cultured Cells
+
+    - Truncation of Chromatin (First round of indexing)
+
+    - Adaptor Selection (Second round of indexing)
+
+    - Adaptor Switching and ligation (Third round of indexing)
+
+    - CCRE Fragment Assembly (Fourth round of indexing)
+
+    - Sequencing on Illumina DNSEQ-7
+
+    - CUT&RUN
+
+    - Collision Rate Test
+
+    - Axolotl peripheral blood neuronal cells
+
+
+    5338 Cell 188, 5338–5362, September 18, 2023'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Cell Resource
+
+
+    # CellPressnOPEN ACCESS
+
+
+    +   - Mouse monocyte/macrophage collection
+
+    - Chromatin staining and Super-resolution microscopy
+
+    - Functional validation of NVsAC predicted therapeutic site
+
+    - Preprocessing of snATAC
+
+    - Quality control and downstream method
+
+    - Double-strand capture and double-allele capture for each cell
+
+    - Evaluation of recovery by double-strand capture rate
+
+    - Benchmarking snATAC-seq
+
+    - Filtering analysis from single-cell ATAC-seq data
+
+    - Benchmarking with controlled sequencing
+
+    - Benchmarking methods in every experiment
+
+    - Clustering and annotations
+
+    - Matching cells across scRNA-seq and snATAC-seq data
+
+    - Constructing regulatory network using scENIC+ multi-omics
+
+    - Identifying CREs at global and innate level
+
+    - Comparison of open regions to canonical peaks
+
+    - Cell-type atlas based on the genomic region in five species
+
+    - Identifying putative loci
+
+    - TE analysis in variable regions
+
+    - BioATAC data analysis
+
+    - Identification and validation of new CREs
+
+    - Motif enrichment in CREs
+
+    - Quantitative motif conservation across species
+
+    - Identification and functional enrichment of unsignable elements
+
+    - Identification of allele-specific regulatory elements by cross-species analysis
+
+    - Validation analysis
+
+    - scATAC processing for deep learning
+
+    - Model architecture
+
+    - Training approach
+
+    - Performance evaluation
+
+    - Cell-type specificias for elements
+
+    - Evaluation of single-cell landscape for human and mouse
+
+    - Predicting genome-wide chromatin accessibility features for different species
+
+    - Comparison of predicted and actual elements
+
+    - Motif identification and validation from NVsAC
+
+    - Comparison of bounds and native across
+
+    - Cell-specific properties of homogeneous genome accessibility
+
+    - Regulatory sequence module
+
+    - Fine-mapped variants prediction and validation
+
+    - Functional prediction of synthetic methods
+
+    - Benchmarking of NVsAC predicted mutation effect with VarEffect
+
+    - Evaluation of CREs in lineage specific cell-type
+
+    * QUANTIFICATION AND STATISTICAL ANALYSIS
+
+
+    2. Shyaeva, D., Stamfler, G., and Stark, A. (2016). Translational enhancers: promoters
+    to genome-wide enhancers. Nat. Ren. Genet. 52, 272–286. https://doi.org/10.1038/nrg3662.
+
+    3. Hellerberg, J.R., Chen, X., Zhang, Z., Sabo, P. J., Sandstrom, R., Reynolds,
+    A. P., Thompson, R. E., Nech, K. M., Morse, M. S., and We, N. O. (2019). Global
+    mapping of predicted-DNA interactions in vivo by digital genome. Cell 178, 263–288.
+    https://doi.org/10.1016/j.cell.2019.03.010.
+
+    4. Buenardo, J. D., Page, G. L., Chang, H. Y., and Greenberg, J. W. (2018). Transcription
+    of chromatin fate for fast and efficient enhancer prediction using deep learning-based
+    chromatin profiling. Nat. Methods. 15, 1211–1218. https://doi.org/10.1038/meth.1018.128
+
+    5. ENCODE Project Consortium (2012). An integrated analysis of DNA elements in
+    the human genome. Nat. 489, 47–54. https://doi.org/10.1038/nature11474.
+
+    6. Kunada, A., Mewelar, R., Ernst, J., Milch, J. A., Heris-Mousavi, A., Kheradov,
+    P., Zhang, Z., Wang, J., and Rojadek, G. (2018). Epigenetic landscapes of human
+    brain cells during development. Science. 361, 317–323. https://doi.org/10.1126/science.aau1138-n.aau1138
+
+    7. Anderson, R., Gebel, C., Miguel-Escaluda, I., Horff, I., Bonhardi, J., Boyer,
+    M., Chen, X., Xiao, Z., Suzuki, S., et al. (2014). Identification and validation
+    of cell-specific enhancers in human tissues. Nature. 510, 107–112. https://doi.org/10.1038/nature13722
+
+    8. Weleman, W., Murtaev, A., Aynes, H., Lee, J., Lee, B., Ding, M., Dunn, D.,
+    Neris, F., and Seidelberg, Y. (2020). Epigenetic and chromatin analysis of single-cell
+    human tissues. Nature. 584, 235–244. https://doi.org/10.1038/s41586-020-2590-9
+
+    9. Rahman, R. E., Enser, H., Hubiert, V., Jaurano, M.T., Guan, E., Nefchel, S.,
+    Schnetzler, A., Wagner, W. B., Bernhard, O. L., and et al. (2020). A single-cell
+    atlas of the human brain. Cell. 182, 1034–1051. https://doi.org/10.1016/cell.05
+
+    10. Cuisenhac, D.H., Li, A., Aghizadeh, D., and Ramirez, R. M., Hahn, J. B., Finnigan,
+    J. P., Guan, X., Christians, L., DeWitt, W. S., et al. (2019). Cell. 179, 1032–1045.
+    https://doi.org/10.1016/cell.2019.05.062
+
+    11. Kar, Y., Hocker, J. D., Miller, M. U., Chen, X., Chou, P., Liu, O., Lee, J.
+    I., Lee, Y., Guan, K. A., and et al. (2021). Single-cell atlas of enhancers in
+    the human brain. Cell 184, 598–611. https://doi.org/10.1016/cell.2021.01.005
+
+    12. Tang, L., Li, J., Wang, Y., Norman, E., Lee, K., Xu, N., Wang, S., Bodeaux,
+    J., Turk, K. B., Siddiqui, A., and et al. (2019). Multi-omic single-cell profiling
+    of human hematopoietic development. Cell 176, 1053–1068. https://doi.org/10.1016/cell.2019.03.015
+
+    13. Guo, L., Li, Y., Wang, G. C., Liu, J. S., Clarke, N., and Robinson, P. (2016).
+    Recognition of cell fate decisions by single-cell gene expression analysis during
+    development. Cell 168, 675–683. https://doi.org/10.1016/cell.2019.05.016
+
+    14. Tang, Y., Li, J., Lee, C., Wang, E., Xiao, S. Y., and Suani, M. (2020). Mapping
+    the development of embryonic stem cells from the inner mass cell single-cell RNA-seq
+    analysis. Cell 180, 467–478. https://doi.org/10.1016/cell.2019.09.033
+
+    15. Masudo, M. E., Basu, A., Remesh, J., Seidelberg, K., Goldman, M., Miroshi,
+    T., Bialas, A. R., Marshall, K., Nartarket, E., and et al. (2015). Highly Spatial
+    Genomic-wide Profiling of Individual Cells in Human Placenta. Cell 162, 1261–1272.
+    https://doi.org/10.1016/cell.2015.05.002
+
+    16. Klein, A.M., Tashto, J., Lagazita, I., Nartargas, V., Perez, A. L., Peshin,
+    L., Davis, and Kramer, M. (2015). Droplet barcode for sequencing profiling-applied
+    to human cells. Cell 167, 1187–1201. https://doi.org/10.1016/cell.2015.04.044
+
+    17. Gierah, T.M., Wadsworth, M.D., Henry, J., Tryson, Y. K., Bodeaux, B. T., Alija,
+    A., Satria, F., Love, J. C., and Smith, A. J.
+
+
+    # SUPPLEMENTAL INFORMATION
+
+
+    Supplemental information can be found online at https://doi.org/10.1016/cell.2025.06.005.
+
+
+    Received: 10 December 2022
+
+    Revised: 25 March 2023
+
+    Accepted: 16 June 2023
+
+    Published: 8 July 2023
+
+
+    # REFERENCES
+
+
+    +   1. Young, R.A. (2011). Control of the embryonic stem cell. Cell 144, 940–954.
+    https://doi.org/10.1016/cell.2011.01.032.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Cell Resource ACCESS
+
+
+    Sep-water: low-cost RNA sequencing of single cell fetal transport. Nat, 74, 395–398.
+    https://doi.org/10.1038/s41592-022-01897-z
+
+
+    Han, X., Wang, R., Zhou, Y., Fei, L., Sun, H., Lai, S., Saadatpour, A., Aiphou,
+    Z., Chen, J., Hen, E. F., et al. (2018). Mapping the Mouse Atlas by Multi-cell
+    Seq. Cell, 172, 1091–1117. https://doi.org/10.1016/cell.2018.06.027
+
+
+    Cuisavanach, D.A., Raza, R., Aditya, P., Finley, H.A., Hansen, L., Gundberg, K.,
+    Stemers, J.F., Pastraj, P., Jackson, L., and June. (2015). Single-cell profiling
+    of chromatin accessibility in the developing human brain. Science, 349, eaab6010.
+    https://doi.org/10.1126/science.aab6010
+
+
+    Cao, J., Liu, R.M., Cuisavanach, D.A., Wang, R., Chen, D., Yao, Y., Xie, Q., Liu,
+    Sun, F., Shen, S.J., et al. (2017). Comprehensive single-cell-transcriptional
+    profiling of a multicellular organism. Science, 357, 661–667. https://doi.org/10.1126/science.aam6990
+
+
+    Roseberg, A. B., Coss, M. C., Karuka, R., Kaufman, S., Samie, P., Yang, J., Li,
+    J., Lee, T., Peiter, L., Chen, W., et al. (2018). Single-cell profiling of the
+    developing brain and spinal cord with split-pool sequencing. Science, 360, 176–182.
+    https://doi.org/10.1126/science.aam8132
+
+
+    Vlak, T., Aarkainen, C.K., Roseljki, J.R., Liedska, A.J., Jackson, L., White,
+    H.M., Cornbulk, C., Stein, S., and Finley, A.J. (2017). Single-cell RNA-seq of
+    human fetal development. Nature, 550, 308. https://doi.org/10.1038/s41586-017-0030-x
+
+
+    Domchek, S., Hill, A.J.D., Mao, C., Yao, Y., Dyer, P.R., Hahn, A.L., Lin, D. K.,
+    Kodak, P., Zhang, Z., F., Miao, H., et al. (2020). A multi-cell atlas of fetal
+    human cells. Science, 370, eabe6712. https://doi.org/10.1126/science.eabe6712
+
+
+    Cao, J., Cuisavanach, D.A., Wang, R., Ghamiani, A., Finley, H.A., Liu, R.M., Mac-Fischer,
+    J.C., Jackson, L., et al. (2016). Profiling of chromatin accessibility and expression
+    in single cells of the developing mouse brain. Science, 353, 744. https://doi.org/10.1126/science.aac5710
+
+
+    Han, Z., Zhou, F., Li, L., Wang, R., Chen, Y., Chen, H., Wang, J., Tang, C. (2019).
+    Construction of a landscape of 658 single-cell types in the human fetal body.
+    Nature, 571, 303. https://doi.org/10.1038/s41586-019-2154-7
+
+
+    Schaefer, M., Maieister, S., Wagner, W., Hock-Loom, B., Czartorykowski, P., Szwartkowski,
+    S., and Starr, S. A. (2017). Simultaneous protein and transcriptome sequencing
+    in human fetal embryos. Nat Methods, 14, 865–868. https://doi.org/10.1038/s41592-017-0436-5
+
+
+    Tarasov, O. V., et al. Organization collection, library preparation, and sequencing.
+    Data analysis, Cell type annotation, Workflow, Subgrouping and integration. (2018).
+    Single-cell atlas construction. Nature Methods, 15, 562–572. https://doi.org/10.1038/n41592-018-1
+
+
+    Jones, R. C., Karnacki, J., Krasnova, M. P., Aiao, O. Q., Smith, S. L., Saadatpour,
+    A., and the Tabrafish Consortium. (2022). The Tabrafish Atlas: A multi-organ single-cell
+    transcriptomics atlas. Science, 376, 1254–1260. https://doi.org/10.1126/science.abg4418
+
+
+    Li, J., Wang, J., Zhang, P., Wei, W. R., Yan, F., Sun, H., Lai, L., Jin, S., Chen,
+    J., Wang, F. F. B. P., and Ma, W. E., et al. (2022). Deep learning of species-specific
+    single-cell landscapes identifies conserved regulatory programs understanding
+    cell
+
+
+    types. Nat. Genet. 54, 1711–1720. https://doi.org/10.1038/s41588-022-01197-?
+
+
+    Barbiner, G., Droklyanskiy, E., Anad, S., Fiskin, E., Subramanian, A., Sylger,
+    M. W., Wang, J., Neuriroha, J., Jalman, J. M., et al. (2022). Single-cell cross-tissue
+    reference maps for understanding disease gene function. Science, 376, eab2490.
+    https://doi.org/10.1126/science.eab2490
+
+
+    Domingue, C., Cao, X. J., Javis, L., Barbier, R., Wells, D. B., Smith, G., Tommes,
+    H., Howard, S., Sukanhan, O., Polski, K., H. W., et al. (2022). Cross-tissue immune
+    cell atlas reveals tissue-specific features in human development. Science, 377,
+    eab5197. https://doi.org/10.1126/science.eab5197
+
+
+    Fincher, C. T., Wagner, O., van Hoog, T., Kravick, K. M., and Reddien, P. (2022).
+    The cell-type transcriptomics atlas for the mouse fetal brain. Science, 378, aad7964.
+    https://doi.org/10.1126/science.aad7964
+
+
+    Zhou, J., and Troyrov, A. G. (2019). Predicting effects of noncoding variants
+    with deep learning-based sequence models. Nat. Methods, 16, 931–934. https://doi.org/10.1038/s41592-019-
+
+
+    Zhou, J., Theelaf, C. L., Cao, K., Chen, M., Wang, A. K., and Troyrovsky, A. (2018).
+    Deep learning-based approach to identify variant-effect genes in the genome. Nat.
+    Genet., 50, 1171–1179. https://doi.org/10.1038/s41588-018-0110-6
+
+
+    Avice, Z., Agarwal, V., Visertin, D., Jler, L. J., Grabska-Bancovich, A., Taylor,
+    K. A., Usmani, J., Jordan, K., and Reddien, P. J. (2022). Deep learning-based
+    framework for predicting chromatin binding and long-range interactions. Nat. Methods,
+    19, 1196–1203. https://doi.org/10.1038/s41592-022-01252-y
+
+
+    Kelley, D. R., Stone, N., and Jain, R. L. (2021). Learning the regulatory landscape
+    of single-cell data with deep convolutional neural networks. RNA Res, 26, 990–999.
+    https://doi.org/10.1093/rnaac/rgab0553
+
+
+    Yan, H., and Reddien, P. J. (2022). scseq-based atlas: multi-cell ATAC-seq of
+    human fetal development. Nat. Methods, 19, 1098–1106. https://doi.org/10.1038/s41592-022-01568-8
+
+
+    Xiao, Y., Wang, J. L., Zhang, P., Li, J., Zhou, Y., Zhou, Q., Chen, M., Shen,
+    X., Liu, et al. (2023). An analytical framework for deciphering tumor cell type
+    heterogeneity. Science, 380, e1384. https://doi.org/10.1126/science.ade784-s4643-0295-3
+
+
+    Allen, A. E., Wang, R., Jordan, J. K., Springer, J. S., Chen, X., Liu, J., and
+    Briggs, B. C. (2020). Predicting protein structure and function using deep learning.
+    Nat, 577, 1066–1078. https://doi.org/10.1038/s41586-019-1983-9-n1n
+
+
+    Jumper, J., Evans, R., Roravkar, A., Pritzel, M., Cohen, A., Steerstig, R., et
+    al. (2021). Highly accurate protein structure prediction with AlphaFold2. Nature,
+    596, 588–593. https://doi.org/10.1038/s41586-021-03818-2
+
+
+    5630 Cell 18, 5334–5368, 15 2023'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Cell Resource
+
+
+    # OPEN ACCESS
+
+
+    47. He, J., Hu, X., Ge, G., Li, Y., Yan, Y., Yu, J., Hu, X., Yuan, J., Zheng,
+    Y., et al. (2024). Dual-role transcription factors stabilize differentiation expression
+    cells. Cell, 187: 246–276. https://doi.org/10.1016/j.cell.2023.03.023.
+
+
+    48. Pressain, S., Fang, R., Huang, H., Zhao, Y., Yuan, R., Ravikin, D., Jung,
+    Y., Zhang, Y., Yos, B.C., Aoki, D., Duarte, et al. (2016). Single-cell ATAC-seq
+    reveals chromatin accessibility landscapes during development cell-specific transcription.
+    Nature Neurosci, 22, 431–439. https://doi.org/10.1038/s41593-016-0138-6
+
+
+    49. Laneys, C.A., Davis, F.M., Chang, G.A., Hu, J., Burket, K., Zhou, J., Zhang,
+    Y., Zhao, S., Chen, L., Dyer, E. J., & Buenoert, J. (2019). Deep learning-based
+    integrative modeling for multi-scale chromatin accessibility in cancer stem cells.
+    Nature Biotechnol., 37, 915–926.
+
+
+    50. Deep, F.V., Ismail, J.N., Bravo-Gález, B.-S., Celsuis, G. G., Finn, F.C.,
+    Cansier, J., Thomas, K., Williams, V. M., Marshall, G., et al. (2022). Single-cell
+    Atlas of differentiation-biased single-cell ATAC-seq in human embryonic stem cells.
+    Cell, 185, e1791. https://doi.org/10.1016/j.cell.2022.10.015.
+
+
+    51. Kalukai, A., Rozi, L.P.F., Huang, G., Yan, Y., Mabery, B., Kijiyama, S., Zheng,
+    J., Zhang, X., K., et al. (2020). Single-cell Atlas of Muscle Differentiation
+    in Human Embryonic Stem Cells. Cell, 180: 764–789. https://doi.org/10.1016/j.cell.2020.10.010.
+
+
+    52. Moe, J.M., Puzerov, P. R., Har, F. E., Eptin, H. B., Schneider, N., L., Zhang,
+    J., et al. (2020). Expanded chromatin landscapes of DNA elements in the human
+    and mouse genomes. Nature, 585: 697–703. https://doi.org/10.1038/s41586-020-2310-X
+
+
+    53. Yang, J., Fu, T., Zhou, F., Wang, Y., Yang, D., Xiao, Q., X, X., Chen, M.,
+    et al. (2022). A reference single-cell genome and transcriptomic maps of mouse
+    cancers. Nat. Commun., 13, 4069.
+
+
+    54. Zhang, G., Fu, Y., Yang, L., Ye, F., Zhang, S., Ma, J., Li, Y., Han, H., X.,
+    et al. (2024). Characterization of single-cell cross-species chromatin accessibility
+    landscapes with chromatin-binding-associated ATAC-seq. Cell, 188, 102415.
+
+
+    55. Dao, Y., Liu, M., Zhang, J., Lee, A. Y., Zhou, J., Qian, H., S., and Ren,
+    R. B. (2019). A library of functional enhancers for CRISPR-mediated genome editing.
+    Genome Screen. 29, 395–407. https://doi.org/10.1186/s12967-022
+
+
+    61. Zuhlke, O., Rosenblatt, H.D., Shokat, L., Dai, S., Kusuguchi-Öztürk, D., Zhang,
+    Z., Zhang, J., D., Shai, K. M., and Mann, B. (2021). Evolutionary divergent chromatin
+    remodelers for tissue regeneration. Nature 620, 160–171. https://doi.org/10.1038/s41586-021-03665-6
+
+
+    62. Maaten, L. D., and Hinton, G. E. (2008). Visualizing data using t-SNE. J.
+    Machine Learning Research, 9, 2559–2585.
+
+
+    63. Dutley, K. M., Smith, S. C., Xu, J., and Zhou, J. (2004). Sequence analysis
+    of transcription factors in human development. Human genome, 134, eaj0116. https://doi.org/10.1126/science.aj0116
+
+
+    64. Chen, H., Yu, Y., He, G., and Su, X. D. (2023). DNA-Protein Binding is Dominated
+    by Short Anchoring Elements. Adv. Sci. (Wiley) 10, 22031142.
+
+
+    Weingberg-Gabatier, S., and Seidel, A. (2014). A single-cell atlas of enhancers
+    and promoters. Nat. Genet., 46, 1254–1260. https://doi.org/10.1038/https://doi.org/10.1038/ng.29512
+
+
+    65. Zadeh, Y., Chen, C. A., Carbo, J. C., and Mann, B. (2013). Multi-omic analysis
+    of active enhancer regions that reveals high levels of transcription factor binding
+    by ChIP-seq peaks. Proc. Natl. Acad. Sci. U.S.A., 110, 19572–19577. https://doi.org/10.1073/pnas.1204911110
+
+
+    66. Zhang, Y., Liu, M., Ackerley, E., Johnston, J. D., Bernstein, B. E., Cuzan,
+    N. M., Mann, R. B., Liu, L. W., and Zhou, S. S. (2018). Single-cell chromatin
+    accessibility maps of the human brain. Science, 9, aaj1118. https://doi.org/10.1126/science.ait.2018-09-908
+
+
+    67. Buenestro, J. C., Lerao, R. A., Cao, U. W., Bach, S. P., Anye, R. M., Raj,
+    H., Han, K., and Wei, G. W. (2018). Integrated analysis of chromatin accessibility
+    and gene expression in Human Hematopoietic Stem Cells. Cell, 173, 1538–1553. https://doi.org/10.1016/j.cell.2018.10.033
+
+
+    68. Grant, T. E., Bailey, T., and Noble, W. S. (2011). FMIC for characterizing
+    cancer stem cells. Bioinformatics, 27, 1017–1028. https://doi.org/10.1093/bioinformatics/btp061
+
+
+    69. Martin-Russo, J. D., Catano, N., Pang, M., Gray, J. E., Jourdain, S., Alistair,
+    A., White, L., Lu, J., X., Rios-Escada, M., et al. (2023). Multi-cell ATAC-seq
+    reveals regulatory diversity in cancers. Cell, 186, 2456–2474. https://doi.org/10.1016/j.cell.2023.03.005
+
+
+    70. Mayaramunth, T., Weinberg, N. G., Fang, R. A., Yang, Y., Maeda, B., Karadz-Z.
+    R., Li, Y. Y., Levie, R. M., Nimmagada, J., Enfield, E., et al. (2022). Science,
+    515, 5120–5125. https://doi.org/10.1038/s41586-021-0348-4
+
+
+    71. Baek, J. R., Bustriere, F., Funets, Y. V., Kim, J. M., Kim, S., Jung, J. U.,
+    Lee, C. C., Roche, R., Rao, A. S., et al. (2024). Characterization of single-cell
+    type-of-cell regulatory landscapes. Nature, 634, 1210–1221. https://doi.org/10.1038/s41586-024-02870-2
+
+
+    72. Thompson, A. R., Chen, X., E, J. J., Koznik, M. S., Kuda, Y., Zhang, J. J.,
+    et al. (2023). ChromBPAT: base-resolution deep learning models of chromatin accessibility
+    reveal sequence synthesis, transcription and regulatory variant effects. Prev
+    Rep of Bioinf., 24, bctac0125. https://doi.org/10.1093/bioinformatics/btac0125
+
+
+    73. Gott, E. R., and Co-Degan, R. (2025). As drug''s development relies on overlap
+    of transcription factor binding and regulatory targets. Science, 388, 1011. https://doi.org/10.1126/science.adjl0338
+
+
+    74. Mahendraja, A., Warfield, L., Donnercker, R., and Hahn, S. H. (2025). Nature,
+    642, 796–804.
+
+
+    Cell 188, 5543–5561, September 18, 2025 | 5333
+
+
+    56. Berner, S., Sanner, N., Bertin, E. L., Liu, Y., Chao, C. P., Jung, M. C.,
+    Smith, H. J., and Gao, X. X. (2010). Identification of lineage-distinguishing
+    transcription factors identify regulatory enhancers required for macrophage and
+    B cell identity. Cell, 38, 578–595.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# # Cell
+
+
+    OPEN ACCESS
+
+
+    78. Chen, J., Noorn, M., Wu, J., Sun, G., Viraj, M., Collins, A., Pirelo, N.,
+    Finn, J.J., and Steinbelt, B. (2023). Integrative dissection of gene regulatory
+    elements at resolution. Cell, 3, 100318. https://doi.org/10.1016/j.cell.2023.100318
+
+
+    79. Chen, K.M., Wu, A.K., Troyanskaya, O., and Zhou, J. (2022). A sequence-based
+    global map of regulatory activity for deciphering human variants. Nat Genet, 54,
+    496–502. https://doi.org/10.1038/s41588-021-01102-x
+
+
+    80. Dama-Toma, O., Lombardi, M., Lardelli, J., Perez, J., Gizawski, A. H., Dalli,
+    F., Cito, C., Trope, E., de Bampi, S., Sherbaknik, H., et al. (2023). Nucleotide
+    Transformer: Building and evaluating robust models for human genomes. Nat Methods,
+    20, 987–992. https://doi.org/10.1038/s41592-022-01897-z
+
+
+    81. Gangan, M. D., Moore, M., Li, J. J., Di, L. B., Barber, J., Thomas, A.W.,
+    Kim, S., Shin, B. H., et al. (2024). Deep learning for variant prediction from
+    genome to scale. Cell, 187, e10642. https://doi.org/10.1016/j.cell.2024.01.012
+
+
+    82. Garibaldi, D., Bifler, J. L., Smith, A. K., Chen, A., Nolan, P., O’White,
+    A., Keane, C. T., Davis, S. M., et al. (2022). Ten years of BAM2 and single-cell
+    Genomics. Cell, 185, e109912. https://doi.org/10.1016/j.cell.2022.109912
+
+
+    83. Li, H., and Durbin, R. (2009). Fast and accurate read alignment with Burrows-Wheeler
+    Transform. Bioinformatics, 25, 1754–1760. https://doi.org/10.1093/bioinformatics/btp245
+
+
+    85. Smith, C. E., Geur, G., and Meskov, J. P. (2021). Improving single-cell variant
+    analysis. Nat. Biotechnol., 39, 224–236. https://doi.org/10.1038/s41589-020-073-x
+
+
+    86. Bajaj, J. C., Coen, M. R., Pierce, S. E., Bagatti, T., Choudhary, H., Huang,
+    G. J., et al. (2019). SignRanger: A scalable software package for single-cell
+    chromatin accessibility analysis. Nat. Genet, 53, 401–413. https://doi.org/10.1038/s41588-019-0528-x
+
+
+    87. Stuart, T., Butler, A., Hoffman, M., McEliece, P., Adams, M. W., Sayna, D.,
+    and Young, L. R. (2019). Comprehensive Integration of Single-Cell Data. Cell,
+    177, 1888–1892. https://doi.org/10.1016/j.cell.2019.05.026
+
+
+    88. Lopez-Adrian, C., and Wang, S. (2021). Seurat v4 for integrating single-cell
+    gene expression. PLoS Biol, 19, e10338. https://doi.org/10.1371/journal.pcbi.103338
+
+
+    89. Hernandez-Hertas, J. P., Lenga, A., Lutnik, B., Booth, R., and Huerta-Hertas,
+    J. (2021). epigenmap-v2: Functional Annotation, Orientation Assignments, and Variant
+    Prediction at the Metagenomic Scale. Mol. Biol. 53, 5825–5829. https://doi.org/10.1093/mbo/bbaw358
+
+
+    smasb2021
+
+
+    90. Huerta-Hertas, J. P., Szklarzyk, D., Hell, D., Hernández-Pazloz, A., Forlund,
+    S., Cook, H., Mende, D. R., Lutnik, L., Ratte, T., Jensen, L. J., et al. (2020).
+    epigenmap-v1: A comprehensive and highly annotated orthology annotation resource
+    based on 5090 genomes and 2500 viruses. Nucleic Acids, 47, D309–D3114. https://doi.org/10.1093/nar/gky1093
+
+
+    91. Wang, Q., U, M., Wu, T., Tan, L., Li, L., Chen, M., Xie, Z., Hu, E., Xu, S.,
+    and Yu, G. (2022). Exploring Epigenetic Drivers by ChIPseeker. Cell. Protof.,
+    2, e685. https://doi.org/10.1002/cpt.e685
+
+
+    92. Yu, Q., Wang, G., L, H., and Ge, Y. E. (2015). ChIPseeker: An R/Bioconductor
+    for ChIP peak analysis, annotation comparison, and visualization. Bioinformatics,
+    31, 2382–2393. https://doi.org/10.1093/bioinformatics/btv044
+
+
+    93. Traccelli, C., Darmisky, G., Jailbray, K., Portel, L. P., Morse, M., Lennard,
+    J., Jacks, M., and Rin, R. J. (2014). Dynamics and genetics of fate regulation
+    are revealed by promoters-enhancer loops. Nature, 514, 333–337. https://doi.org/10.1038/ncell2889
+
+
+    94. Qiu, X., Ma, T., Yang, Y., Wang, C., Feng, P., Han, R., and Tran, P. (2017).
+    Deep learning residual embedding reveals chromatin states in single-cellseq profiles.
+    Nat Methods, 14, 979–982. https://doi.org/10.1038/s41592-017-4442-6
+
+
+    95. Cao, J., Ma, Y., Wu, Q., Xu, H., Zhang, B., Li, J., Hu, D., Marshall, J. F.,
+    Feijars, C. S., et al. (2019). The single-cell landscape of mammalian osteogenesis.
+    Nature Cell, 36, 10418. https://doi.org/10.1038/s41570-019-0964-x
+
+
+    96. Pohl, H. A., Peaks, J. B., Martínez-Fijera, D., Siverio, S. Q., Zhou, Z.,
+    Mirinkova, A., et al. (2019). scENAC: Predicts Cis Regulatory Factor Interactions
+    from Single-Cell Chromatin Accessibility Data. Nat Methods, 16, 777–781. https://doi.org/10.1038/s41592-019-0533-z
+
+
+    97. Schn, A. W., Butler, R., Jodziej, D., and Greenbank, J. (2017). chromatinVAR:
+    integrating transcription-factor-accessibility association from single-cell epigenetic
+    data. Nat Methods, 14, 975–978. https://doi.org/10.1038/s41592-017-0003-y
+
+
+    98. Wolf, F. A., England, P., and The, F. J. (2017). SCENICseq: large-scale single-cell
+    gene expression data analysis. Genome Biol, 19, 200. https://doi.org/10.1186/s13059-018-0216-05
+
+
+    99. Stuart, T., Sahlaglia, A., Macad, S., Reuther, A., and Stuart, J. (2017).
+    Single-cell type atlas analysis with Seurat. Nat Methods, 18, 1331. https://doi.org/10.1038/s41592-017-0016-6
+
+
+    100. Li, B., Garmstein, R., Zhou, Y., Dahl, I., Ihm, M., and Sherr, R. (2019).
+    Comparative transcriptomics for identification of conserved expression changes
+    across different types of bacteria. Genome Research, 29, 1211–1226. https://doi.org/10.1092/gr.2017-07-017
+
+
+    101. Zhang, Y., Smith, J. J., Woodrock, M. R., and Voss, S. R. (2018). motifbreak
+    for the analysis of transcription factor binding sites in single-cell data. Bioinformatics,
+    35, 8–15. https://doi.org/10.1093/bioinformatics/bty455
+
+
+    104. Granja, J. M., Klemmin, S., McGinnis, L. M., Kahn, A. J., Zhang, G.-X.Y.,
+    et al. (2019). Single-cell mutation analysis identifies regulatory programs in
+    mixed-acute leukemia leukemia. Nat. Biotechnol, 37, 1458–1465. https://doi.org/10.1038/s41589-019-0332-7
+
+
+    5362 Cell 18, 5334–5362, September 18, 2023'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Cell Resource
+
+
+    # CellPress OPEN ACCESS
+
+
+    # STAR★METHODS
+
+
+    # KEY RESOURCES TABLE
+
+
+    | REAGENT or RESOURCE | SOURCE | IDENTIFIER |
+
+    | --- | --- | --- |
+
+    | Antibodies | | |
+
+    | Mono-Methyl-Histone H3 (K4) (D19) XP Rabbit mab | Cell Signaling Technology
+    | Cat#5326T |
+
+    | Rabbit mab to Histone H3 (tri methyl K4) | Abcam | Cat#AB213224; RRID: AB_292013
+    |
+
+    | Rabbit mab to CTCF | Abcam | Cat#AB12873; RRID: AB_1144295 |
+
+    | Biological samples | | |
+
+    | Mouse: CBLTU/6 | Gemparatech Co., Ltd | Cat#N00013 |
+
+    | Zebrafish: D. rerio | Zhejiang University School of Medicine | N/A |
+
+    | Chicken: Gallus gallus | Zhanjang Hatchery | N/A |
+
+    | Geckos: Eublepharis macularis | Good Reptile Breeding Base | N/A |
+
+    | Axolotl: Amboma mexicanum | Jifei Lai at Guangdong | N/A |
+
+    | Chemicals, peptides, and recombinant proteins | | |
+
+    | IGEPAL®CA-630 | Sigma-Aldrich | CAS: 902-93-1 |
+
+    | Protease inhibitor: ©Complete EDTA-free, EASYPACK | Roch | Cat#0469312001 |
+
+    | Ethyl 3-aminobenzoate methanesulfonate salt | Sigma-Aldrich | Cat#A5040 |
+
+    | Critical assays | | |
+
+    | TrueFast Tagent Enzyme | Vazyme | Cat#S111-01/02 |
+
+    | E. coli | NEB | Cat#M0205 |
+
+    | Amplibase | Lucigen | Cat#A3202K |
+
+    | T4 DNA Polymerase | NEB | Cat#M0203 |
+
+    | VAHTS DNA Clean Bands | | Cat#411-01 |
+
+    | KAPA HI HotStart ReadyMix (2X) | Kappa Biosystems | Cat#KK2602 |
+
+    | VAHTS Circulation Kit for MGI | Vazyme | Cat#NM021-02 |
+
+    | Hyperactive p4-T5 Transposase | | Cat#S602-01 |
+
+    | VAHTS Concavavalin A-coated Magnetic Beads Pro | Vazyme | Cat#N515-02 |
+
+    | TruePrep CUTase& Amplification Mix | Vazyme | Cat#TD6012 |
+
+    | BioClick® EU RNA Synthesis | Beyotome | Cat#R0301S |
+
+    | Kit with Alexa Fluor 448 | | |
+
+    | Hoechst 3342 | Beyotome | Cat#C1025 |
+
+    | Deposited data | | |
+
+    | Raw and processed sequencing data | This paper | GEO: GSE28419 |
+
+    | Original code | This paper | GitHub: https://github.com/ehclic23/UUATAC |
+
+    | Processed and analyzed data | This paper | Figshare: https://figureshare.com/s/0df0ba97f5fb42a9f9;
+    https://biis.ju.edu/uuatac |
+
+
+    Experimental methods: Cell lines
+
+
+    | Mouse: NH/3T3 | Stuart Orkin Lab | RRID: CVCL0954 |
+
+    | Human: 293T | Stuart Orkin Lab | RRID: CVCL0063 |
+
+
+    (Continued on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# CellPress
+
+    OPEN ACCESS
+
+
+    Continued
+
+
+    | REAGENT or RESOURCE | SOURCE | IDENTIFIER |
+
+    | --- | --- | --- |
+
+    | Human: Hudep | Decode Biotech | N/A |
+
+    | Oligonucleotides | This paper | N/A |
+
+    | The structure of UUATAC-sec DNA fragment: 5''-GAACGT CATGCGTACGTACACTACTAC TCTTCGTATACACGnnnnnnnnnnn
+    AGAGTGTATATAAGACAG-insertion- CTCTCTGTATACACATACnnnnnnnnnnn GCTGTGGGGAGAGAGTGTAC
+    GGCGGTnnnnnnAAAGTGGAGG CCAACGGTCTTAGGAAGAAAA NNNNNNNACCTCTCTGTACA | | |
+
+    | T3_primer 5''-phospho-CTGTCTCT CAT-5'' | Sangon Biotech | N/A |
+
+    | T5_standard primer mB: TGTGCGGA GCGATAGAGTGTATAAGACAG | Sangon Biotech | N/A
+    |
+
+    | T8_standard primer: 5''-phospho-TGTCTCGT GCGGTGTAGAGTGTATAAGACAG | Sangon Biotech
+    | N/A |
+
+    | T5_primer: 5''-phospho-ACTCTTCTT TACACACGnnnnnnnnnnAGGTGTA TAAGACAG | Sangon
+    Biotech | N/A |
+
+    | Bridge: GGAAGGTAGGTAGCGGTC Hy As: 5''-TTGCTTCCTCAAG CGCGCTGCACGTACTnnnnnnnnnn
+    mGGAGGCGTC | Sangon Biotech | N/A |
+
+    | Hy B_oligo: 5''-phospho-GCTGTGTGGAG ACCATACnnnnnnnnnnAGCTAGAGCA TGTGGTC-invt-1-3
+    | Sangon Biotech | N/A |
+
+    | P5-ATAC: 5''-phospho-GAACACGAGT CATCGACGTAC | Sangon Biotech | N/A |
+
+    | MI-P5: 5''-phospho-GAACACGATGCT ACACGACCTTTCGTGCGGCGTC | Sangon Biotech | N/A
+    |
+
+    | MII-7: TGTTCGGAGAGTTGGGGTCTnnnnnnnnnTGTGTGGCTGG T7-ATGTGTACGGAGAGAGnnnnnnnnTTCTTACAAG
+    CGCGTTC | Sangon Biotech | N/A |
+
+
+    Software and algorithms
+
+
+    e2 Cell, 188, 5343-5362-e16, September 18, 2023 | (Continued on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# Cell Resource
+
+
+    # CellPress
+
+    OPEN ACCESS
+
+
+    Continued
+
+
+    | REAGENT OR RESOURCE | SOURCE | IDENTIFIER |
+
+    | --- | --- | --- |
+
+    | TxDb.Dreo.UCSC.danRen11.RefGeneV3.46 | Bioconductor | [https://bioconductor.org/packages/TxDb.Dreo.UCSC.danRen11.refGene/](https://bioconductor.org/packages/TxDb.Dreo.UCSC.danRen11.refGene/)
+    |
+
+    | org.Mmm.db.V37.0 | Bioconductor | [https://bioconductor.org/packages/org.Mmm.db.V37.0](https://bioconductor.org/packages/org.Mmm.db.V37.0)
+    |
+
+    | org.Ggg.db.V37.0 | Bioconductor | [https://bioconductor.org/packages/org.Ggg.eg.db/](https://bioconductor.org/packages/org.Ggg.eg.db/)
+    |
+
+    | org.Dr.db.V37.0 | Bioconductor | [https://bioconductor.org/packages/Org.Dr.eg.db/](https://bioconductor.org/packages/Org.Dr.eg.db/)
+    |
+
+    | GenomicFeaturesV1.32 | Lawrence et al.<sup>89,90</sup> | [https://bioconductor.org/packages/GenomicFeatures/](https://bioconductor.org/packages/GenomicFeatures/)
+    |
+
+    | EGGNog-mapper V2.1.12 | Carlos et al.<sup>87</sup> | [https://github.com/eggnogg/eggnogg-mapper](https://github.com/eggnogg/eggnogg-mapper)
+    |
+
+    | ChiPeakerV1.3.0 | Yu et al.<sup>91,92</sup> | [https://github.com/Yul-Lab-SMU-ChiPeaker](https://github.com/Yul-Lab-SMU-ChiPeaker)
+    |
+
+    | Monocle3V1.3 | Cao et al.<sup>93-95</sup> | [https://github.com/co-trap-lab/monocle-release](https://github.com/co-trap-lab/monocle-release)
+    |
+
+    | CiroV3.9 | Pliner et al.<sup>96</sup> | [https://github.com/Greenleaf/Leaf.motifr](https://github.com/Greenleaf/Leaf.motifr)
+    |
+
+    | motifr V22.0 | Greenleaf et al.<sup>97</sup> | [http://tf.ucsd.edu/homer/](http://tf.ucsd.edu/homer/)
+    |
+
+    | Homer V4.11.1 | Heinz et al.<sup>98</sup> | [https://me-sute.org/me/tools/tomer](https://me-sute.org/me/tools/tomer)
+    |
+
+    | Torrent V5.3 | Gupta et al.<sup>99</sup> | [https://genome.ucsd.edu/cgi-bin/hg/hgLiftOver](https://genome.ucsd.edu/cgi-bin/hg/hgLiftOver)
+    |
+
+    | UCSC liftOver tool | Hinrichle et al.<sup>100</sup> | [https://www.python.org/](https://www.python.org/)
+    |
+
+    | Python 3.8 | Foundation | [https://github.com/severse/scanspy](https://github.com/severse/scanspy)
+    |
+
+    | Scanspy V1.9.3 | Wolf et al.<sup>98</sup> | [https://github.com/sturat-lab/scanspy](https://github.com/sturat-lab/scanspy)
+    |
+
+    | Signac V1.10.0 | Sturat | [https://pytorch.org/](https://pytorch.org/) |
+
+    | Pyurat V2.4.0-cu121 | Paske et al. | [https://github.com/sigai/bosa2](https://github.com/sigai/bosa2)
+    |
+
+    | Malinois | Gosal et al.<sup>101</sup> | |
+
+    | ChromBPNet | Pamjari et al.<sup>102</sup> | [https://github.com/kundajelab/chrombnet](https://github.com/kundajelab/chrombnet)|
+
+
+    # EXPERIMENTAL METHOD AND STUDY PARTICIPANT DETAILS
+
+
+    Animals All animals studied followed protocols by the Animal Ethics Committee
+    of Zurich University. All experiments conform to the relevant standards of Zurich
+    University Laboratory Animal.
+
+
+    For wild-type mice, one-week-old male and one-week-old female C57BL/ mice were
+    obtained from Genepath Co., Ltd and maintained at Animal Center of Zurich in a
+    Specific Pathogen Free (SPF) facility with individually caged.
+
+
+    For wild-zebrafish, 4-week-old male and 16-week-old female zebrafish rerio strain
+    ABZ zebrafish were maintained at At Core Facilities, Zurich University School
+    of Medicine.
+
+
+    For wild-type chickens, one-~2-year-old female (Gallus gallus) were obtained by
+    whole genome mapping (genome mapping rate: 95.8% to Gallus gallus; 94.6% to Gallus
+    gallus; 85.6% to Bambusicolor).
+
+
+    For wild-type geckos, one-~year-old leopard gecko (Eublepharis macularis) was
+    obtained from Citizen Reptile Breeding Base. The strain was verified by whole
+    genome mapping analyses (genome mapping rate: 97.33% to Eublepharis macularis;
+    63.92% to Coleryny eggs; 60.36% to Gekko japonicus; 61.96% to Paedoera picta;
+    58.97% to Hemidactylus; 60.63% to Leptodactylus later; 59.50% to Herpetonia binoi.
+
+
+    For wild-type axolotls, three-~1-year-old male (d Ambystoma mexicanum) was obtained
+    from Jiteng Lab at Guang Provincial People''s Hospital.
+
+
+    # Cell lines
+
+
+    3T3 and 293T cell lines were obtained from Stuart H. Orkin at Harvard Medical
+    School. Cells were cultured in Dulbecco''s Medium (DMEM, ThermoFisher) with 10%
+    Fetal Serum (FBS, ThermoFisher) and 1% Penicillin-streptomycin (ThermoFisher).'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# METHOD DETAILS
+
+
+    Indexed Enzyme Preparation for UATAC-seq by Vazyme Biotech Co., Ltd., to a final
+    concentration of 100 µL. For Tn5 primers were dissolved in Annealing Buffer, 1
+    µL aliquots of Tn5_primerA and 1 µL of Tn5_primerB (see Table S1 for details)
+    were incorporated into individual wells of 96-well free plates, generating a total
+    of 192 unique barcodes distributed across two plates. The annealing reaction was
+    performed as follows: denaturation at 95°C for 3 minutes, followed by a gradual
+    temperature reduction at a controlled rate of -0.1°C/s through sequential incubation
+    steps at 75°C for 15 minutes, 60°C for 10 minutes, 50°C for 10 minutes, 40°C for
+    10 minutes, and 25°C for 30 minutes. The annealed primer complexes were stored
+    at 4°C until required for sequencing.
+
+
+    For Tn5 transposition assembly, 48 µL of Transpose Enzyme (2µg/mL), synthesized
+    by Vazyme (cat.S1110-01) was combined with 18 µL of Coupling Buffer, and 12 µL
+    of mixture were distributed to each of the annealed adapter plates. The 96-well
+    plates were sealed and centrifuged at 300 x g for 5 minutes at 4°C. The plates
+    were placed on a rotary mixer at 10 rpm and incubated at temperature (22-25°C)
+    for 10 minutes. The reaction was stopped after 60 minutes to complete adapter,
+    by adding 5 µL of Stop Buffer Vazyme Biotech Co., Ltd. which was added to each
+    well. The resulting product, denoted as Tn5 Transposase Assembly (TEA), was stored
+    at -20°C until one year.
+
+
+    # Sample Collection from Mouse, Chicken, Goose, Axolotl, and Zebrafish
+
+
+    Organs and tissues were collected from 5 mice, eight-week old female mouse, one-week
+    male mouse, two-year-old female chicken, one-year-old female goose, three-year-old
+    male mice, and 16-week-old zebrafish (4 females and 4 males).
+
+
+    For mouse tissue, the animals were first washed and subjected to anesthesia via
+    intravenous injection of 1% sodium perobarbital for mobility. The tissues were
+    dissected under perfusion with 20-30 µL of PBS-Buffered Saline (PBS). Organs were
+    collected in the following sequence: stomach, spleen, pancreas, lymph nodes (nodal,
+    abdominal aorta, carotid, and cervical nerves), thyroid, muscle, diaphragm, cerebellum,
+    brainencephalon, brainstem, pituitary, tencephalon, thymus, heart, liver, kidney,
+    adrenal, ovary and uterus (in females), bladder, prostate, and testis (in males),
+    muscle (hind legs), and bone marrow was extracted from the femur and tibia. Residual
+    muscle was removed from the bone site. The bone marrow shaft, which was then flushed
+    with PBS/2mM EDTA using a 1 mL syringe with a 26 gauge needle. The marrow was
+    collected in a tube.
+
+
+    Center the mixture to obtain cell suspension. The tissues were filtered through
+    a 40 µm strainer (Biologic), collected into a 15 mL centrifuge tube, and centrifuged
+    at 300 x g for 5 minutes. The organs were then collected: aorta, brain, cerebellum,
+    brainstem, cecum, cloaca, endocrine gland, glandular stomach, thymus, and pancreas.
+    For zebrafish, fish were anesthetized with an interperitoneal injection of 1%
+    sodium perobarbital and subjected to transfection with 20-30 µL of PBS. The tissues
+    used were dissected: bladder, brain, cloaca, eye, fat, heart, intestine, kidney,
+    liver, muscle, ovary, skin, skin, tail root and tip. Zebrafish were anesthetized
+    using 0.1% ethyl 3-amino-methanesulfonate under transfection with 0.8x PBS. The
+    collected tissues included: bladder, brain, cloaca, gallbladder, heart, kidney,
+    liver, lung, pancreas, stomach, and viscerera.
+
+
+    For all tissues except bone marrow, samples were frozen with cold (0.8x PBS) dry
+    ice-wrapped paper, and manually pulverized using mortar and pestle. For mouse,
+    the cell pellet was directly resuspended in 1 mL of NIB and incubated for 2 minutes.
+    The Nuclease inhibition formulation and incubation time were optimized for each
+    tissue. The nuclear suspension was transferred to a 15 mL centrifuge tube pre-primed
+    with 5 mL of cold water buffer (WB, 0.2% BSA and 3 mM MgCl in DPBS), filtered
+    through a 40 µm cell strainer, and centrifuged at 600 x g for 5 minutes.*
+
+
+    # Nuclease Inclusion from Tissues
+
+
+    For all tissues except bone marrow, samples were frozen with cold (0.8x PBS) dry
+    ice-wrapped paper, and manually pulverized using mortar and pestle. The pulverized
+    tissues were suspended in 1 mL of NIB and incubated for 1.5 to 3 minutes to allow
+    lysis. For mouse, the cell pellet was directly resuspended in 1 mL of NIB and
+    incubated for 2 minutes.
+
+
+    A detailed description of all experiments is provided in Table S2.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Cell
+
+    Resource
+
+    CellPress
+
+    OPEN ACCESS
+
+
+    at 4 °C. The nuclei was resuspended in WB and, filtered through a 20 µm filter
+    to remove nuclear mass. After a final centrifugation at 600 g for 5 minutes, the
+    nuclei were resuspended in an appropriate volume of PBS-Mg (5mM Mg2) in DPBS to
+    achieve a concentration of 5,000 nuclei per µL.
+
+
+    # Nuclei Isolation from Cultured Cells
+
+
+    2T3 and 293T cells were cultured in Dulbeco''s Medium (DMEM, ThermoFisher) with
+    10% FBS. Cells were harvested by trypsinization, ensuring that no more than 1
+    million cells were collected and resuspended in 1 mL of PBS. The cell suspension
+    was centrifuged at 300 g for 5 minutes at 4 °C. The resulting pellet of 293T cells
+    was reuspended in 1 mL of PBS and incubated for 5 minutes to release nuclei. The
+    nuclei suspensions were then transferred into 15 mL centrifuge tubes with 5 mL
+    of pre-washed WB, filtered through a 40 µm strainer, and centrifuged at 500 g
+    for 5 minutes at 4 °C. The nuclei were washed with 1 mL of WB. After centrifugation,
+    the nuclei were resuspended in an appropriate volume of PBS-Mg to achieve a concentration
+    of 5 million nuclei per µL. A mixed cell population was prepared to confirm the
+    rating of UATAC-seq, equal volumes of 2T3 and 293T nuclei suspensions, both at
+    the same concentration, and combined and thoroughly.
+
+
+    # Tn5 Tagging of Open Chromatin (First round)
+
+
+    A tagmentation buffer was prepared by combining 5 µL of 2x buffer (10 mM MgCl2
+    and 20% dimethylformamide in 10 mM Tris-HCl, pH 7.5), 5 µL of PBS, 0.1 mL of detergent,
+    and 0.1 mL of 10% Tween-20. A total of 11 mL of this was added to each well containing
+    100,0000 cells. The Tn5 tagging was initiated by adding 2 µL of ligated TTE. The
+    wells were sealed and centrifuged at 300 g for 5 minutes at 4 °C to achieve complete
+    homogenization of the reaction mixture. Next, 2 µL of nuclei-nucleus suspension
+    (containing 10,000 nuclei per µL) was added to each well to initiate Tn5 tagging.
+    The reactions were incubated at 55 °C for 30 minutes on a rotary mixer at 10 rpm
+    to facilitate extension. To stop the reaction, 15 mL of 40 mM ATAC and PBS (0.5%
+    Tween-20 in PBS) were added to each well. The reactions were incubated for 15
+    minutes. The supernatant was removed and the pellet was resuspended in 1 mL of
+    PBS to remove any residual reagent mix. This washing step was repeated twice to
+    ensure complete removal.
+
+
+    The scale of the tagmentation experiment, ensuring genome volumes and reaction
+    numbers (types of TTE), can be proportionally scaled up or down according to the
+    quantity and target yield of single-nuclei data required for subsequent analysis.
+
+
+    # Adapter Isolation (Second round)
+
+
+    For the second round of indexing, 1 µL of 10 mM Buffer (dissolved in 10 mM Tris-HCl,
+    pH 8.0) was dispensed into each well of 96-well plate using a multi-channel pipette.
+    Then, 5 µL of 78 HA antibody (with 78 unique barcodes, dissolved in 10 mM Tris-HCl,
+    pH 8.0) was added to each sequence. The wells were sealed and centrifuged at 300
+    g for 30 seconds to ensure thorough mixing. The wells were incubated using the
+    antibody for 90 minutes at 37 °C (75 °C for 1 min; 60 °C for 2 min; 50 °C for
+    20 min; 25 °C for 15 min), and a final hold at 4 °C with a cooling rate of -0.1
+    ℃/min.
+
+
+    For the ligation step, the pellet was resuspended in a reaction-ready max buffer
+    containing 38 µL of 0.1 U of DNA ligase (NEB), 768 µL of 5% PEG8000 and 498 µL
+    of PBS. 3 µL of this mixture was aliquated into each well containing the annealed
+    oligos, covering a total of 78 reactions. The eight plates were incubated at 16
+    °C for 2 hours using the cycling incubator. The reactions were then incubated
+    at room temperature for 5 minutes. Next, 10 µL of cold PFBS was added to each
+    well, and each was placed in a 5 mL centrifuge tube. The tube was centrifuged
+    at 600 g for 5 min at 4 °C. Finally, the nuclei were washed twice with PFBS as
+    described to remove any residual ligation reagents.
+
+
+    The scale of the ligation experiment, ensuring genome volumes and reaction numbers,
+    can be proportionally based on the sample size and the desired single-nuclei data
+    yield for downstream analysis.
+
+
+    # Adapter Switching and Gapping (Third round)
+
+
+    Taking barcodes of Y B objects, as outlined, the adapter switching and gapping
+    procedure is described below. 100 µL of lysis buffer (10 mM Tris-HCl;pH8.0, 1.2%
+    SDS, and 0.1 mg/mL Proteinase K (Sango)) was thawed with 6 µL of
+
+
+    Cell 188, 5343-5382-1-e16, September 18, 2025 e5'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# # CellPress
+
+    OPEN ACCESS
+
+
+    # # Resource
+
+
+    each 10M indexed hB, dissolved in 10mM Tris-HCl pH8.0. The 2 indexed lysis buffers
+    were allocated into 12-tube strips and distributed 3µL per well across 96-well
+    plates using a 12-channel pipette, with each column representing a unique barcode.
+    Nuclei were resuspended in (10mM NaCl and MgCl, 10mM Tris-HCl pH7.5) and adjusted
+    to a concentration of 50 to 100 nuclei/µL. The nuclear density is three-fold the
+    product of the number of Tn5 barcodes and Ligation barcodes. Nucle density reduces
+    the rate of dublet communication. Typically, we used a nuclear concentration of
+    100 (192*768/96 nuclei/µL). 3µL of suspension (150 to 147 nuclei) was added to
+    each of the well plates. Nucleus lysis and adapter switching were performed using
+    the following protocol: 55 min at 15°C; 65 min at 5°C; 55 min at 5°C; 5 min at
+    -1°C to 0°C; 50 min and 30 min at 0°C; to neutralize, 3µL of gapilling buffer
+    (1.5 + 10.0 - Reaction buffer, NEB1) was added to each well, followed by centrifugation
+    at 3000 g, 5 min at 4°C to remove the debris. Then, µL of 10mM DNTP was added
+    and incubated at 37°C for 30 min. The reaction to modify transposition concentration,
+    only 24 B oligonucleotides were used. If additional, their corresponding barcodes
+    could be obtained from the Sequencing insert (see Table S1). The scale of the
+    experiment, including the number of cells, B reagents, volumes, can be reasonably
+    adjusted according to the desired single-nucleus data required for subsequent
+    analyses. Based on this setup, one can generate data for 1 million nuclei.
+
+
+    The temperature-controlled adapter switching represents a key innovation in our
+    protocol, preventing thermal regulation to enable robust in vitro adapter switching
+    (Figure B). The bridge oligo (Tm 58°C) and Adapter I (A, Tm 56°C) were used; the
+    bridge oligo fully dissociates, ensuring high-affinity binding for h-B oligonucleotides
+    (at 10+ minutes). During the gradient phase, h-B preferentially binds to the genomic
+    DNA 3'' end, the adaptor region and the sequence within h-B, fully anneal to the
+    DNA end. The gap-filling phase completes two steps: first, the 9-nucleotide gap
+    between the two bases is filled and ligated to the nick to generate a continuous
+    DNA strand, which serves as the template for subsequent primer ligation. T4 DNA
+    ligase was used for strand ligation, and adapter B2 was incorporated into the
+    primer-phase because it operates effectively at higher temperature. The temperature
+    gradient allows for gap-ligation to occur at elevated temperatures necessary for
+    gap repair, simultaneously optimizing ligation efficiency. This temperature-sensitive
+    approach achieves near adapter replacement in the UIAAC-seq protocol. It ensures
+    highly specific PCR linker addition and resolves the issue of self-tagging in
+    hetero-adapter-ATAC-seq (Figure B).
+
+
+    # cRE Amplification (First round of indexing)
+
+
+    Using an 8-channel pipette, the gapfilling fragments from 96-well plates were
+    pooled. Specifically, the 12 µL from each well was collected and transferred to
+    1.5 µL of Epuffer buffer. This resulted in a total of 9 new volumes to remove.
+    5µL of VHAN DNA Polymerase (V3, no. C44011) was added to each tube, and PCR was
+    performed for full amplification. Each amplified product was diluted with 2µL
+    of 2X HotStart Taq (BiosKystems, no. K2020) and 1µL of 5''-ATAC primers. The products
+    were pooled on a 96-well plate. PCR was performed with mix of 2µL of 2X HotStart
+    Taq (per well) with the following conditions: 5 min; 2 min at 90°C; 20 min at
+    65°C; 2 min at 72°C; 11-14 min at 90°C; 20 min at 65°C; 30 min at 72°C; 3 min
+    at 80°C; and stop. To remove residual primers and fragments, the amplified products
+    were purified with VHAN DNA Clean Buffer. Briefly, 25µL of Clean Beads were added
+    to each well, and the supernatant was transferred to the mixture, and excess primers
+    were removed by centrifugation. An additional Clean Bead was added to the mixture
+    to capture the assembled strand. The scale of the fragment amplification setup,
+    including required reagent volumes and numbers, can be properly adjusted based
+    on the amount of nuclei required for a single experiment.
+
+
+    # Sequencing on Illumina DNSEQ-T
+
+
+    For NGS sequencing (PE1150.0, no. C940-002809-2), labeled with detection sequencing
+    indexes were used in molar ratios to achieve a total of 40 ng per cell, with an
+    expected output covering approximately 70,000 nuclei. The pooled libraries were
+    sequenced using the VANHT Kit for NGS (Vamine, no. NM2201) to generate single-stranded
+    cDNA, which was subsequently used for the sequencing of DNA Nanoblocks (DNA) in
+    accordance with the manufacturer'' guidelines. Following this, all sequences were
+    sequenced on the DNSEQ-T platform using a custom sequencing + 19 cycles: Read
+    1: 24 cycles + 10 cycles + 19 cycles + 90 cycles; Read 2: 10 cycles + 30 cycles
+    + 19 cycles + 91 cycles. Each chip runs can be performed simultaneously, with
+    a single chip loading approximately 5000 reads, corresponding to data for around
+    70,000 nuclei.
+
+
+    e6
+
+
+    Cell, 188,5343-5362-e1, September 18, 2025'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Cell
+
+
+    # CellProcess
+
+
+    Resource
+
+
+    OPEN ACCESS
+
+
+    # CUT&Tag
+
+
+    The assembly of pg-Trn5 was carried out following the manufacturer''s protocol
+    (Vazyme, cat no. SG601). Briefly, 20 µL of pg-Trn5 (500 ng/mL) was mixed with
+    adapter oligonucleotides to generate an adapter-loaded complex. The assembled
+    complex was subsequently diluted to a final volume of 180 µL using coupling buffer.
+    The final product, referred to as TT-cte, was stored at -20°C, where it remains
+    stable up to one year. And pituitary glands were isolated from three wild-type
+    mice, with biological replicates designated as follows: after dissection, CTCF
+    was collected in the nuclei of male mouse (WT1), H3K4me1 in a male mouse (WT2),
+    and H3K4me3 in a male mouse (WT3). For nuclei, CTCF, H3K4me1, and H3K4me3 were
+    assembled in male mouse WT_1, WT_2, and WT_3, respectively. Muscle tissue was
+    harvested and homogenized in lysis buffer. The previously pulsed cells were then
+    incubated in Nuclease Lysis Buffer B (containing 0.5% BSA, 0.05 mM NaCl, 1 mM
+    KCl, 0.1 mM DTT, and 1x Roche Phosphatase Inhibitor in DPI) and incubated for
+    0.5 min. For CUT&Tag tagging (Abcam, cat no. ab28837), nuclei were washed with
+    1% formaldehyde for 2 minutes at room temperature, and the reaction was followed
+    by adding glycine to a concentration of 50 nM. The mixture was then washed with
+    Dution Buffer (containing: 0.5% Triton-X100, 0.5 mM NaCl, and 0.2% BSA in PBS)
+    to a concentration of 1 microliter per nucleus using Dution Buffer and resuspended
+    in 5 µL of NaCl at 10 mM KCl. For CoX-tagging (cat no. ab12502), 5 µL of MnCl2
+    were activated activated before using 5 µL of beads per test in Binding Buffer
+    (10 mM KCl, 1 mM CaCl2, and 1 mM NaCl in 20 mM HEPES, pH 7.5) as the product material,
+    followed by suspension in 5 µL of Binding Buffer. The activated beads were then
+    striped on one ice. For each test, 5 µL of aliquot suspension was added to the
+    CoX-beads and mixed by gentle incubation for 30 minutes at 4°C. The mixture was
+    then washed twice with Dution Buffer (containing 0.5% Triton-X100, 0.5 mM NaCl,
+    and 0.2% BSA in PBS) and incubated with the primary antibody overnight at 4°C.
+    The beads were then placed on a magnet and the supernatant was discarded. The
+    remaining beads were then incubated on a rotator at 4°C for 30 min, after which
+    the mixture was finally incubated with the secondary antibody, the antibody-beads
+    were washed twice and placed in 50 µL of 2nd Secondary antibody (1:1000, 0.5%
+    BSA, and 1x Roche Phosphate Inhibitor in WB-pre mixed with anti-mouse IgG antibody
+    (cat no. ab7602)). The mixture was then centrifuged at 1000 x g for 5 min, and
+    the supernatant discarded. The beads were then resuspended in 50 µL of 2nd Secondary
+    antibody (1:1000, 0.5% BSA, and 1x Roche Phosphate Inhibitor in WB-pre mixed with
+    anti-mouse IgG antibody (cat no. ab7602)). The mixture was then incubated on a
+    rotator at room temperature for 30 min. The beads were then placed on a magnet
+    and the supernatant discarded. The beads were then resuspended in 50 µL of DNA
+    elution buffer (10 mM KCl, 1 mM CaCl2, and 1 mM NaCl in 20 mM HEPES, pH 7.5).
+    The DNA was then analyzed.
+
+
+    # Cohesatin Release Test
+
+
+    To evaluate the efficiency of UATAC-seq, we prepared a mixed nucleus population
+    containing 2937 (human) and E74 (mouse) cells. Nuclei from different cell types
+    were diluted to a solution of 5000 cells per µL. For the contamination test, 5
+    µL of 923 nuclei suspension was mixed with 20 µL nuclei suspension, to ensure
+    homogeneity enrichment. The evaluation involved four rounds of incubation, comprising
+    chromatin transposation of open chromatin, adapter ligation, adaptor switching
+    and gapfilling, and fragment amplification, as described in previous sections.
+    We performed a comprehensive indexing strategy using 96 Tn5 barcodes, density
+    during cell cycle rates. We tested two densities: 125 nuclei per well and 750
+    nuclei per well. This setup resulted in library-coverage of approximately 1000
+    (125 nuclei/well) x 8 indexed-H Y beads and 6000 (nuclei/well) x 8 indexed-H Y
+    beads, respectively. From each density, one sub-library was sequenced on the MGI
+    DNNBQ-T platform.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# # Cell
+
+    OPEN ACCESS
+
+
+    # Axolotl peripheral blood mononuclear cells
+
+
+    The axolotl was anesthetized and euthanized after a defined volume of blood was
+    collected from the heart using an EDTA-treated hematocrit capillary. The blood
+    was transferred into an Eppendorf tube containing an equal volume of 50 mM EDTA-PBS.
+    Cells were thawed five times. After centrifugation at 700 g for 5 minutes at 4
+    °C, the supernatant was removed, and the pellet was resuspended in 1 ml of distilled
+    water and set aside for 3 minutes. Usually, 80 μl of PBS was added and mixed briefly
+    by vortexing. The lysis step was repeated until the supernatant became clear.
+    The supernatant was removed, and 1 ml of Resowl Park Minimal Medium (RIMP) 1640
+    medium was added to suspend the cells. The cell count was determined, and the
+    cells were dispersed into a 6-well plate with a 10 mm cover at the top. The plate
+    was placed in an incubator (37 °C, 5% CO2) for 2 hours. Non-adherent cells were
+    carefully washed away with PBS. The cells were then incubated at 37 °C for 2.5
+    ml of RPMI-1640 medium containing 10% FBS per well.
+
+
+    # Mouse peritoneal/macrophage
+
+
+    The mouse was anesthetized and sterilized with 70% EtOH. The peritoneal abdomen
+    was opened, and 6 ml of 1 x PBS was injected into the peritoneal cavity. The mouse
+    abdomen was gently opened, and peritoneal fluid was collected and transferred
+    into a tube (20 ml containing of 0.1-1 x PBS). The supernatant was centrifuged
+    at 4 °C and 350 g for 5 minutes. After centrifugation, the supernatant was removed.
+    The cells were resuspended in RPMI-1640 medium containing 10% FBS and seeded into
+    a 6-well plate with a 10 mm cover at the top. Incubated at 37 °C for 2 hours.
+    Non-adherent cells were carefully washed away with PBS.
+
+
+    # Chromatin staining and Super-resolution microscopy
+
+
+    Cells were incubated for an 1 hour with 5 ml medium containing 1 μM EGF. Fixation
+    and permeabilization. EU cells were stained with α488-antibody (through a click
+    reaction, chromatin was stained with Dchst-3342 (Baychst)). Super-resolution images
+    were obtained using stimulated emission depletion (STED) or CellB STORM. Spherical
+    aberration was minimized using optical immersion with diffraction correction.
+    Data were collected at 2 nm with 0.5 power and 3-5 nm step size. Spherical aberration
+    was minimized. Data quality was assessed with SimMack-101 where modulation-contrast-to-noise
+    ratio (MNCR), spectral analysis, and, were reconstructed using Fourier plot, and
+    chromatin intensity values were verified.
+
+
+    # Functional validation of vN3-GCA predicted target site
+
+
+    The Hupe2-HGb-64A-G cell line was established using homologous recombination with
+    wild-type Hupe2 cells by DodeBio (Shanghai). Hgb-A sgRNA expression plasmid targeting
+    the -68 region and single-strand oligononucleotide repeat Hgb-A mutation was generated
+    by CRISPR/Cas9 by DodeBio (Shanghai). Detailed sequences were listed in Table
+    S1. RNA, single-strand DNA, was transfected into Hupe2 cells using Electroporation
+    (Lonza, V4XP). After 48 hours, a fraction of post-transformed pooled cells were
+    collected and then reseeded into a 6-well plate at a density of 1 × 10^5 cells
+    per well. The cells were collected and subjected to total RNA extraction. After
+    cDNA sequencing, expression levels of Hgb1/2 were measured by qPCR using universal
+    qPCR system (Heat, CF-G) and detected by qPCR (YaqGreen, Taq-92AM).
+
+
+    # Preprocessing of snATAC data
+
+
+    The FASTQ files generated by snATAC-seq were processed by the pipeline software
+    Velvet (v1.6; https://github.com/met-bioinformatics/snatac-seq). Reads were removed
+    if the base quality was less than 10 or if they had more than 30 cycles. Each
+    cell was tagged with the name of the query. Using Dro-Seq tools each cell read
+    contained four pairs of components: P7 index, BCCA barcode, BCD barcode and Tn5
+    barcode (128, 7, 8, and 192 indices, respectively). Barcodes were removed if their
+    original sequence had an error caused by amplification. In. BAM files with faulty
+    barcodes were removed by Tn5 barcodes and merged with tissue information. Fragments
+    with duplicate reads were removed. Sometimes, references were realigned using
+    Bowtie2 (v2.4.4) for mouse genome (mm39) and Danr111 for zebrafish (v0.7.5; https://github.com/deeptools/Tools4)
+    to count for Tn5 insertion bias. Reads measured with a quality higher than 30
+    were then converted to counts. Nucleotide fragments ranging in length from 100
+    to 10000 were sequenced, generating one file for each tissue. For axolotl, due
+    to the chromosome size, the coordinates of the GTF file and fragment files were
+    sequenced to less than 2^20 bp to meet the length limit of at-atin index. Segmentation
+    sites were located in intergenic region, where no gene existed between 50000 bp
+    upstream or downstream (Table S3). The assembled genome files (FASTA and GTF)
+    are available for download at Figshare: https://figishars.com/s/0fc0c9a7fb4b29ef
+
+
+    e8 cell, 5343-5362.e16-1, September 18, 2025'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Cell Resource
+
+
+    Quality control and doublet removal
+
+
+    We constructed genome annotation files for species other than mouse. For axolotl,
+    the annotation file is derived from sequenced FASTA and GTP files (Figure: https://github.com/0df50ba9f64b24af9).
+    The processed files were converted to arrow files using ArchR (v1.0.1, https://github.com/GenomicsLab/ArchR),²
+    with a TileMatrix and a GeneScoreMatrix added to each allele. For example, the
+    TileMatrix with 5 bp bin size was generated for axolotl and 500 bp bin for other
+    species. We applied cell barcode selection and doublet inference for each file.
+    Given different sequencing and doublet tissues, we calculated the TSS enrichment
+    score anding for different tissues to identify barcodes representing cells (Table
+    S3), UM unique mapped reads where UF is duplicated. Doublets were identified and
+    filtered using ArchR ‘selection’ and ‘FilterDuplicates’.
+
+
+    # Double-strand capture rate and doublet capture rate
+
+
+    10,000 barcodes in the BAM file of the mouse cerebellum. The BAM file of these
+    barcodes were converted to the BEDPE file and sorted. Top cells were selected
+    for analysis. For the double-strand capture rate evaluation, two fragments share
+    the same chromosome, start, and end site, while there were 1 read aligned to positive
+    or negative strand. The simultaneous framework and the double-reverse capturing
+    rate was calculated as double-strand capture fragments formed by the totals. To
+    calculate the double-capture rate for each locus, we retained a unique fragment
+    for each locus in individual. We assigned overlapping fragments to the same cell
+    in each cell, and the number of overlapping fragments with the number of total
+    fragments. This inserts randomly and removes most of the fragments. A 1 percent
+    double-doublet capture rate would suggest a reasonable amplification efficiency.
+
+
+    # Benchmarking scATAC methods
+
+
+    To evaluate the efficiency of molecule recovery, we analyzed the recovery rate
+    for either forward or reverse fragment in IUATAC can be set as x, the chance to
+    recover both the forward and reverse fragment should be x². We analyzed a sample
+    of 500 cells, examining the fragments from both forward and reverse strand to
+    determine the percentage of sampling capturing events. This metric reflects the
+    proportion of reads detected the DNA loci from both strands. We calculated the
+    percentage of total molecule recovery for each cell. The open locus recovery rate
+    here there are four copies of DNA for each locus.
+
+
+    We benchmark IUATAC using various scATAC methods to systematically evaluate performance.
+    The data of scATAC methods were obtained from the following sources: https://www.genomics.com/dataset/human-mouse-cortex-scatac-v1-1-human-chromosome-1
+    (10x-scATAC-v1)
+
+
+    For TSS enrichment score, we calculated the score for each cell. We randomly sampled
+    30000 cells for s-ATAC, which only (800 cells) to call peak effect on calling,
+    ranking, and calculated the number of UF, FR, the number of total peaks and DA
+    peaks, the number of reads in peaks and promoters. To evaluate quality, clustering
+    was performed on the integration of sampled brain data datasets from IUATAC and
+    other scATAC methods (Table S2). The accessible features (500 bp bin) were selected
+    using a threshold based on values for each cell. Based on the features, the similarity
+    of each cell was calculated (cosine) from R package and visualized using Seurat.
+    The analysis was performed for different cells.
+
+
+    For atlas-level datasets, we compared the doublets rate (https://www.ncbi.nlm.nih.gov/geo/query/acc=GSE164482
+    (scATAC-seq, adult human), https://www.ncbi.nlm.nih.gov/geo/query/acc=GSE119683
+    (scATAC-seq, fetal human), https://www.ncbi.nlm.nih.gov/geo/query/acc=GSE232272
+    (ATAC-seq), https://tabula-mouse-pancreas-datasets.dbzioob.org/(scRNA, mouse),
+    and UM and TSS enrichment were used as metrics for the scATAC method, and total
+    number of molecules was the metric for all.
+
+
+    Cell 188, 5343-5382-e1-16, September 18, 2023'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# TF footprinting from single-cell ATAC-seq data
+
+
+    We performed TF footprinting after obtaining the ArchRProject, and annotated motifs
+    in regions identified by MotifAnnotations. Aggregates were generated by combining
+    Tn5 insertion patterns across all lines of each motif. Footprints were visualized
+    using Footprint(), with the ''Subtract'' normalization method subtracting the
+    Tn5 bias.
+
+
+    # Benchmark with controlled sequencing depth
+
+
+    We compared between UATAC-seq and other scATAC-seq techniques with controlled
+    sequencing depth and controlled number of cells (Table S2). We applied the same
+    processing steps for each technique. Initial estimation of reads per cell of each
+    technique, chose three levels of sequencing depth (10,000, 20,000, and 30,000
+    reads per cell) for the assessment. Taking 30k reads per cell as example, we filtered
+    out cells with U<40 and downsampled the remaining cells to 2k (all cells were
+    reserved if the cell count passing was below 2,000), then downsampled The downsampled
+    fragments were used to calculate the metrics (in fragments, TSS, FPR, etc.) using
+    the ArchR pipeline. The procedures were repeated for 10k and 20k reads per cell.
+    The comparison result shows UATAC-seq performs best in
+
+
+    # Benchmarking with current methods
+
+
+    To systematically evaluate the quality and quantity of data from each experiment,
+    we compared the TSS score, UF and cell number in each experiment. To reflect the
+    overall quality, we compared the cumulative multiplicity (TSS * UF * cell number).
+    Simple experiment data for 11 scATAC methods were downloaded from http://catias.org/downloads/human/species/sc-atac-data/bam-files
+    (share), https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?GSE149883 (scATAC-seq),
+    and https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?GSE1514947 (scATAC), https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?GSE155608
+    (scATAC-seq), and https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?GSE142003 (scATAC-seq),
+    https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?GSE178881 (nanocell scATAC), https://www.genomics.org/datasets/dk-atlas-mouse-cells-atac-v1-chromosome-1-standard
+    (10x scATAC), https://www.genomics.org/datasets/dk-atlas-mouse-cells-atac-v1-chromosome-2-control
+    (10x scATAC), respectively. Of (TSS > 7 & UF=1,000) were used to filter cells
+    with lower quality, as in Table S2.
+
+
+    # Clustering and annotations
+
+
+    For each species, we used a two-round clustering strategy. The first round of
+    clustering was performed on overall cells of the list to identify the types of
+    cell markers. The major cell types were annotated and assigned to different lineages
+    (epithelial, hematopoietic, immune, muscle, neural, stromal and support). Next,
+    we performed the second round of clustering for cells with high heterogeneity;
+    endothelial, epithelial, immune, neural, stromal and for all species to refer
+    to zebrafish. We used the ''clusters'' function and then generated a two-dimensional
+    representation of the data using the ''ADUMAP'' function. Next, we identified
+    differentially accessible markers for each cluster using the ''geneMarkers'' function
+    with the gene score. Annotation of the clusters was based on the accessibility
+    score and cell type specific tissue information.
+
+
+    # Matching cell types across scRNA-seq and scATAC-seq data
+
+
+    To validate the accuracy of our annotation
+
+
+    FNY) using the ''kd tree'' algorithm with Euclidean distance. Then the FANN package
+    (v1.1.2, https://cran.project.org/web/packages/) cells were matched data-set cell
+    matches across both modalities.
+
+
+    # Constructing regulatory network using SCENIC+ at multi-omic level
+
+
+    We used SCENIC+ for iRegulators and robustly integrating scATAC-seq and scRNA-seq
+    datasets. Mouse scRNA-seq data was collected from the Mouse Cell Atlas (MCA),
+    and axolotl scATAC-seq data was prepared from Microwell-seq in this study. We
+    performed the SCENIC+ analyses based on the matching cell types between scRNA-seq
+    and'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# Cell Resource
+
+
+    # CellPress OPEN ACCESS
+
+
+    UUATACseq identified by label. For both species, differentially accessible regions
+    (DARs) were generated by pyscis-Topic with a binarized cell-peak as input. When
+    performing motif enrichment in these DARs, we generated a region-motifs database
+    for (ATex_v47-ATAMG,v6.0-DD) through custom scripts, while default database files
+    (https://resources.agerlab.org/databases/) `run_sciff` to integrate ATAC-seq and
+    scRNA-seq to predict jointly TF-specific motifs, when performing enrichment based
+    on the concordance of TF binding, TF target expression and gene subset. SCENIC+
+    identified cell-specific features and TF-ranked regulatory elements for mouse
+    and Axolotl.
+
+
+    Identifying CREs at global and lineage level
+
+    To identify CREs in diverse species, we aggregated the fragments from the upstream
+    processing. Fragments with a quality score below 30 were filtered and not deduplicated,
+    resulting in a collection of unique fragments. Further involved alignment based
+    on diverse databases, yielding a merged fragment in BED format for calling. We
+    used MACS3 (v3.0.0 beta 3, https://github.com/macs3-project/MACS) with the macs2-command.
+    This was executed for each cell type and lineage with the following parameters:
+    "-1 global" -g BEDPE -q 0.01 --mins 5 GLOBAL_ATAC_subset -B --callpeaks" for the
+    mouse. For each lineage of species, a distinct barcode list was generated, and
+    then called using the same parameters as the global level. We built a CCREs in
+    a narrowPeak format, containing the anthenic ranges of accessible regions, peak
+    sum counts and p-values and q-values.
+
+
+    # Comparison of regions to conventional peaks
+
+
+    Traditional ATAC-seq analysis naturally identifies peaks up to 500 bp, imposing
+    artificial boundaries on regulatory elements. In contrast, the CCRE database developed
+    here avoids the limitations of arbitrary peak selection, and of enrichment within
+    each cell type reveals patterns across genomes. Comparison of experimental data
+    with our CCRE set and the conventional peak set. scRNA-seq datasets with IDs (ENC339Y2,
+    ENCF358Y7, ENCF210B3G, ENCF191BSS, ENCF1519LF, ENCF57RRB, ENCF0409X, ENCF1401C,
+    ENCF14025, ENCF4057F, ENCF0502G, ENCF3052MY) were downloaded from The Encyclopedia
+    of Genomic Elements (ENCCODE), covering B cells, T cells, and neurons. For the
+    CCRE set, the BED file containing putative signals, generated after mac3 execution,
+    was converted into a big file. For the peak set, we observed the peak enrichment
+    around Arp1 nucleosome and summed it within a 2.5 kb window around the peak center.
+    For the peak set, we used 500, 10000, and 5000 bp flanking regions.
+
+    Next, using the MiniWigmap command from DeepTools (v5.3, https://github.com/deeptools/DeepTools)
+    in linux mode facilitated the correlation between fragment peaks and binding motifs.
+    The heatmap representation was generated using the correlationPlot from deeptools.
+
+
+    # Categorizing CREs in the genome region in five species
+
+
+    In the analysis of mouse
+
+
+    Peak matrices were extracted for each cell type (e.g., hepatocytes) in mouse and
+    axolotl. Only regions accessible in one cell were opened in the peak set. We ran
+    Monocle (v1.3.4, https://github.com/cell-trapnell-lab/monocle3) with default parameters
+    to transform the raw matrix into a standardized object for accessibility analysis.
+    Then Circero (v1.3.9, https://github.com/cell-trapnell-lab/circero) was used to
+    identify accessible regions, following the following parameters:
+
+
+    Peak accessibility value was set to k=5 with a distance of 500 kb. The accessibility
+    value k refers to the number of cells that are aggregated using k-nearest neighbors
+    prior to calculating co-accessibility scores, the window size parameter controls
+    the size of each model window, and the distance constraint parameter controls
+    the distance where the penalty is applied to reduce the majority of connections.
+    In conclusion, we identified regions that were accessible in aggregated groups
+    of cells within hepatocytes. A co-accessibility cutoff of 0.25 was used to construct
+    a global cis-
+
+
+    Cell 188, 5343-5382-e16, 18 November 2021 e11'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# CellPress
+
+    OPEN ACCESS Cell Resource
+
+
+    map of genome. Finally, we extended each gene by 2,000 bp flanking as the window
+    and calculated the number of loops within we conducted a comparative analysis
+    of loops between mouse and axolotl.
+
+
+    # TE analysis in vertebrate species
+
+
+    The TE annotations were downloaded from UCSC: https://download.soe.ucsc.edu/goldenPath/mm10/database/msk_txt.txt
+    (mouse), UCSC: https://download.cse.ucsc.edu/goldenPath/GalGa/6/database/msk_txt.txt
+    (fish); Figshare: https://figshare.com/articles/dataset/Eubaeusmarcelli_genome_MPM_Emac_v1_0206273
+    (gecko), https://axolotlomics.org/assemblies (axolotl), UCSC: https://download.soe.edu/goldenPath/Dan11/database/msk_txt.txt
+    (zebrafish); UCSC: https://download.soe.ucsc.edu/goldenPath/mm39/msk_txt.txt (file).
+    The coverage of TEs in both genome was computed using reference genome and base
+    count. The number of overlapping TEs were calculated using OverlapsPeaks from
+    ChIPpeak R package with arguments "minmapover=100"; The number of overlapping
+    levels were calculated using "bedtools intersect",
+
+
+    # Bulk CUT&tag data analysis
+
+
+    # Identification and validation of nCREs
+
+
+    The mouse ENCREs (mm10, Reg19) were downloaded from ENCODE: https://seqenh.org/ncre/.
+    The nCREs relative to axolotl were identified by using OverlapsPeaks from ChIPpeak
+    R package with arguments "minmapover=100"; To validate the reliability of nCREs
+    using IUATAC-seq data, we compared the nCREs with peaks by H3K4me3 and CTCF. CUT&tag
+    data was calculated using "macs3 calpeak" in narrow mode for H3K4me3 and CTCF,
+    for model for H3K9me3. For samples not covered in ENCODE, the adrenal gland and
+    pituitary gland, the nCREs marking markers of specific cell types in the tissue
+    were extracted. Then we compared the new nCREs with CUT&tag data of adrenal gland
+    and pituitary gland, calculating the fractions of overlapping regions.
+
+
+    # Motif enrichment in cross species
+
+
+    To investigate the functional aspects of various nCREs, motif enrichment analyses
+    were conducted for three categories: nCREs at TSSs, nCREs at promoters (<1kb),
+    and at distal regions (2-3kb). The nCREs annotated by Homer were computed by ChIPpeakseeker
+    to match nCREs at TSSs and nCREs at promoters (<1kb) using the argument "distanceTSS".
+    Then the matchMotif using the motifrichr R package (v1.22.0) was used to match
+    motifs for HOMER The enrichment score of each motif is represented by the weighted
+    average of scores across all nCREs, with a score of 0 assigned to nCREs lacking
+    a proper motif.
+
+
+    # Quantifying motif cross species conservation
+
+
+    To investigate regulatory patterns, we conducted the analyses at the lineage level.
+    Motif discovery was performed using findMotif.Genome from HOMER (v11.1, https://genome.com/avrigiguez/HOMER/)
+    with arguments "scale-300 to 4" for nCREs in each lineage of species. For each
+    lineage, using R (version 5.3.3) in two pairs of the species with similar motif
+    pattern. A motif with a weight meeting the cutoff of 0.01 was considered "matched".
+    For each motif in a particular species, we tabulated the number of nCREs with
+    a matched motif, identifying the conservation degree. We compared all pairs of
+    species.
+
+
+    # Identification and enrichment of substantial elements
+
+
+    We identified species-unique (UA) elements using UCSC Liftoools defined as elements
+    that could not be made from other species'' to the genome reference. For species
+    with UCSC Chain assemblies, such as zebrafish and chicken, we coordinated the
+    coordinates of nCREs to mouse genome reference (mm10) using the minimum match
+    rate of 0.10 for cross-species conversion. For gecko, we generated custom chain
+    files and applied the sample procedure. Elements that failed to align mouse genome
+    were defined as UA elements. To investigate their functional relevance, we identified
+    UA elements in specific cell types or tissues by intersecting cell-specific cCREs,
+    using a minimum length of 100 bp. For elements associated with species-specific
+    tissues, such as zebrafish and salamanders, we linked them to the nearest gene
+    using ChIPpeakseeker, generating sets for dense Gene Ontology enrichment analysis
+    using ClusterProfiler (default parameters, value threshold=0.03
+
+
+    e12 Cell, 588, 5343-5362-e11-e16, September 18, 2025'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# Cell Resource
+
+
+    # CellPress OPEN ACCESS
+
+
+    # Identification of axolotl-specific regulatory programs by cross-species regulatory
+    element
+
+
+    We extracted the gene score matrix from the ArchID object for each species, followed
+    by aggregation of stromal cell-type average scores with subsequent base-2 logarithmic
+    transformation. Orthologous gene identification employed species-optimized approaches;
+    (1) BioMart (Ensemble Release 11) for mouse and zebrafish homologs; (2) OrthoFinder
+    v5.0.1 (default parameters, DIAMOND algorithm for chicken, and axolotl). This
+    integrated pipeline identified 4,970 conserved genes across all species. Genes
+    exhibiting high (gene score) > 0.5 in 1 stromal subtype were retained for downstream
+    analyses. Cell-type-based matrices were constructed using hierarchical clustering
+    framework (v1.02). Gene Ontology (GO) enrichment analysis performed on axolotl-specific
+    gene modules showing high chromatin accessibility using theProfiler package.
+
+
+    # Axolotl regeneration analysis
+
+
+    To identify specific CCREs and potential gene regulatory networks utilizing the
+    unique regenerative power of the axolotl limb, we used a list of axolotl limb-related
+    genes from Drovarski et al. 102. We identified the cCREs within 500 bp upstream
+    and downstream of these genes using limb-related-cCREs. The overlap between limb
+    regeneration-related cCREs and all uncovered cCREs was determined using the Ranges
+    package (v3.6). To investigate the function of motifs among these regeneration-related
+    cCREs, we used the HOMER novo motif discovery tool (v1.22) and matched motifs
+    from the HOMER collection (homer.ucsd.edu/human/custom.motifs). Motif scores were
+    calculated using the weighted average of motifs across all cCREs, with a score
+    of 0 assigned to cCREs lacking a particular motif.
+
+
+    # scATAC preprocessing for deep learning
+
+
+    For each species, we selected high-quality peaks and called peaks based on cluster
+    nucleations using MACACS2; extending peaks by 25 bp on either side to a final
+    width of 500 bp. Our dataset contains approximately 50,000 cells, and the raw
+    data were converted into a peak-by-peak binary matrix. Peaks containing more than
+    1% of cells were assigned to positives. Negatively, we thinned each genome into
+    non-overlapping 500 bins, removing any overlaps with the total peak. These negatives
+    were considered inaccessible in all cell types. For deep learning we split data
+    into training, validation, and test sets. A standardized workflow was applied
+    to process single-cell chromatin accessibility data for each species, ensuring
+    the consistency of well-trained datasets. The full code is available at GitHub:
+    https://github.com/epic/scatacac
+
+
+    # Model Architecture
+
+
+    # A 2 Convolutional Layer
+
+
+    Consisting of 128 filters with a size of 7 x1, sequentially followed by batch
+    normalization, Rectified Linear Unit (ReLU), and max-pooling layers.
+
+
+    # A ResBlock Module
+
+
+    Comprising 4 layers, each with a size of number (3, 4, 6, 9). Each block consists
+    of two convolution layers, two batch normalization, and two ReLU layers.
+
+
+    # A Dense Bottleneck Layer
+
+
+    Integrating 324 features for representations, followed by a batch normalization
+    and a dropout layer with a dropout rate of 0.2.
+
+
+    # A final Layer
+
+
+    Concluding the architecture with a layer using the same number of units as used.
+    Predicting continuous accessibility probability for each cell using sigmoid activation.
+
+
+    This meticulously crafted architecture represents a thoughtful combination of
+    convolutional, residual, and dense layers, allowing NWACave to effectively capture
+    patterns within the DNA sequences. The model''s final layer employs an activation
+    function, facilitating the generation of predictions regarding the accessibility
+    of peaks at the single-cell level.
+
+
+    # Training approach
+
+
+    We used a binary cross-entropy loss (BCE Loss) as the objective function during
+    training to control the disparity between prediction and its target value. We
+    utilized the learning rate of 1e-3 and implemented an early stopping mechanism,
+    no decrease for 10 epochs to mitigate the risk of overfitting. A batch size of
+    100 was used for training, and model parameters were tuned using the Adam optimizer.
+    All models were implemented using PyTorch^{109} (https://pytorch.org), and the
+    Anaconda distribution of Python and trained on a computer cluster equipped with
+    NVIDIA GTX10880 GPUs. The computational time varied depending on the characteristics
+    of the datasets and the GPU devices employed in the training, ensuring efficient
+    and effective method.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Model performance evaluation
+
+
+    The prediction of models on different datasets was measured by the area under
+    the receiver operating characteristic curve (AUROC). The accessibility prediction
+    performance was evaluated on a completely held-out test chromosome, which was
+    not used during hyperparameter optimization and had never seen by the training
+    model to avoid information leakage.
+
+    We displayed the AUROC for each lineage for species-trained model. Using the binarized
+    peak matrix derived from the mouse chromatin profile of 5,034 nuclei, we produced
+    the dataset for model benchmark. Notably, our NvCA model outperformed models such
+    as Nwawa¹ and scBase²² and classical frameworks such as Transformer and Recurrent
+    Neural Network (RNN) evaluated by AUROC. To evaluate the predicted relationships
+    in the held-out chromosome for test, we computed correlations between predicted
+    and observed chromatin accessibility test profiles at the subcluster level. Adjusted
+    mutual information (AMI) was used in quantifying the extent to which the predicted
+    cell aligns with the actual cell types, offering a nuanced and informative assessment
+    of the model''s performance in capturing the underlying lineages.
+
+
+    # Cross-species prediction for UA elements
+
+
+    The unlabeled (UA) elements were defined by converting the coordinates of COREs
+    in chicken, zebrafish and zebrafish genome reference (mm10) using UCSC liftOver
+    and the available UCSC files. We made sequences uniform unifying the UA elements
+    (500bp size with 100bp step size) using the ‘builds makindows -b UIA -w 500 -s
+    100’ command. The accessibility of sequences was predicted by the pretrained model
+    and accelerate continuous signals. Based on the chromatin accessibility profiles,
+    we identified the predicted accessible regions by running “macc3 bdgapeak” command.
+    The conservation of sequences was represented by the ratio of UA elements predicted
+    accessible to all UA elements. This was repeated for all combinations of fish,
+    mouse, mouse, and zebrafish pretrained models with UA elements in other species.
+
+
+    # De novo prediction of single-cell tracks for human and mice
+
+
+    First, we firstly normalized accessibility profiles for each query with NvCA by
+    running a forward pass on the peak set. We used the input DNA sequence as the
+    output of bottleneck layer as a latent embedding for each peak. We then generated
+    the accessibility profiles across all cells by the product of bottleneck layer
+    with the weighted matrix extracted from the collected layer. The accessibility
+    profiles served as the base for further analysis, including dimension reduction
+    through uniform manifold projection (UMAP) and Singular Value Decomposition (SVD)
+    with a resolution of 0.2 in Signatures³ pipeline. Finally, we utilized t-SNE to
+    represent a representative predicted cell profile for human and mice.
+
+
+    # Predicting genome-wide chromatin accessibility for different species
+
+
+    We extracted 500bp window with a step size of 100bp to identify the different
+    species of elements. By using the ‘buildseqs makindows -w 500 -s 100’, we extracted
+    the sequences using the ‘to-getfasta fasta’ command. Applying the NvCA model trained
+    on human mouse datasets, we predicted chromatin accessibility profiles within
+    these windows. This enabled the generation of genome-wide predictions for each
+    individual nucleus, which were aggregated at the subcluster level. To provide
+    a comprehensive evaluation, we utilized the Genomics Viewer (IG-2-16),⁴⁵ displaying
+    the predicted open regions and the experimental data data.
+
+
+    # Comparison of predicted and experimental human CREs
+
+
+    To assess the consensus between predicted and experimentally measured regulatory
+    landscapes, we generated genome-wide cell-type specific sc-CREs (endothelial cells,
+    macrophages, and smooth muscle) from CATLAS⁴⁶ (https://catlas.org/downloads/human/sigwig).
+    The scATAC-seq signal charts were scaled to the [0,1] interval using min-max normalization
+    to match the distribution of predicted-accessibility scores. The correlation analysis
+    was performed using the ‘bi.wigSummary’ function from deeptools (v3.5.2) with
+    the ‘bins’ argument.⁴⁷ We retained the normalized signal with a resolution of
+    0.01 in both predicted and experimental scores to ensure robust correlation. We
+    identified the predicted signal and interacted with cCREs from NvCA encoder v3
+    (https://github.com/jue-lab/NvCA),⁴⁸-overlapping peaks were reported as “ne-CREs”.
+    With top peak categories, cell-type-specific distributions and nucleotide-resolution
+    profiles were computed and summarized.
+
+
+    # Motif identification and visualization from NvCA
+
+
+    To extract motifs from our NvCA, we utilized the TF-Motisif that combines single-nucleotide
+    importance scores for generic sequence patterns. By sampling 10,000 cells and
+    evaluated the saliency scores for each task, we improved the computational efficiency
+    of TF-Motisif. Motif similarity was then queried by the JASPAR2024 database using
+    TomTom algorithm⁴⁹ We applied motif⁵⁰ package to visualize the relationship between
+    motifs derived from NvCA trained for species.
+
+
+    e14 Cell 188, 5343–5362.e1–e16, September 18, 2024'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# Cell Resource
+
+
+    The mouse embryo cREs were categorized into two classes: broad and narrow cREs,
+    as described previously. We generated regions by tiling the cREs (500bp with 100bp
+    step size) using the "tools makewindows -b IU -s 100" command. For each region,
+    we extracted the sequences from the forward strand and input into the mouse model
+    to predict accessibility.
+
+
+    # Cross-species prediction of homologous gene chromatin accessibility
+
+
+    To validate the generalization ability of the model, we utilized the predicted
+    mouse model to predict the chromatin accessibility on homologous genes of HGB1,
+    mouse Hb-b and human HGB1. The sequences 500bp upstream of the target gene TSS
+    were extracted using "bedseq gefasta" and input as a forward propagation to get
+    the predicted accessibility levels. Furthermore, he predicted accessibility compared
+    to experimental accessibility and RNA expression profiles. The experimental accessibility
+    was characterized by the gene sequences by ACCh on scATAC-seq data. And the RNA
+    expression was measured using normalized count of scRNA-seq data.
+
+
+    # Regulatory sequence motif identification
+
+
+    We selected 55,397 cREs, with each length of 500bp located within 1000bp upstream
+    of the TSS. We performed forward passes and extracted predictions from the NextSeq
+    Nvace model to predict regulatory sequence to embedding. Dimensional reduction
+    and clustering of the 55,397 ~ 1,024 embeddings were implemented using the "scipy"
+    python package (v1.9.3) with default parameters. Regulatory sequences were then
+    classified into classes. For each class, GO ontology enrichment and the top five
+    terms were visualized in heatmap.
+
+
+    # Fine-mapped prediction and validation
+
+
+    We used 361 fine-noncoding risk variants as identified by Zhang et al.¹¹ For each
+    variant, we predicted a 500bp sequence centered on the target base, with 9 additional
+    sequences containing random mutations. Two forward passes were performed using
+    Nvace model for both the mutant and reference sequences. We computed the difference
+    in predicted model output for each mutant relation to reference: (mutant)-(reference)
+    across all loci.
+
+
+    # Causal non-coding QTL prediction and validation
+
+
+    We used non-coding QTLs using human gene discovery, as reported by D. Cooper.
+    To ensure precise identification of our variant analysis, we focused exclusively
+    on heterozygous humans. Homozygous alleles were excluded due to potential additive
+    damage effects. For each QTL located within the promoter region of the target
+    gene, the promoter sequences 500bp upstream of the TSS for HGB1, Hb-b and F9 were
+    extracted as reference sequences. Metrics were computed using insertion base analysis
+    at the location within the 500bp sequence, corresponding variants with a random
+    mutation. Two forward passes were then performed performed using Nvace model for
+    both the mutant and reference sequences. We computed the difference in predicted
+    model output for each mutant relation to reference: (mutant)-(reference) in erythroid
+    cell (HGB1, Hb-b) and hematopoietic (F9).
+
+
+    # Functional prediction of synthetic mutagenesis
+
+
+    We performed silico analysis and predicted the variant effect using gold standard
+    data from adenine-base (ABE) references. We then refined the prediction using
+    Biostart, to fine-tune Nvace model trained on female mouse model of hematopoietic
+    lineages. With a 500bp sequence centered around each ABE target (chr1:G4526781),
+    we included the fixed mutant and reference sequences. We computed the difference
+    in predicted model output for each mutant relation to reference. Using Pearson
+    correlation coefficient (P) and accuracy (ACC), we confirmed the capacity of Nvace
+    model for prediction of synthetic effect at single base-pair. Inefficient RNA
+    targets were measured by excluding signals between the 1st and 3rd quantiles of
+    observed changes (z-score HGB1 linear functional effect >>2 and <1.2). The result
+    showed that the correlation between predicted effect of each ABE sequence from
+    Nvace and the experimental phenotype is 0.9, and the prediction accuracy (ACC)
+    is 1. The top 10% effective mutations were predicted and shown in Figure 3.
+
+
+    # Benchmark of Nvace model in predicting effect with MPRA and multi-omic model
+
+
+    We performed silico analysis benchmark Nvace model with the MPRA model (Malinos
+    et al.³) and ENCODE predicted multi-omic model (ChromBPNet⁴) with dataset screening
+    from human lineage. Input sequences 200bp for Malinos, 214bp for ChromBPNet The
+    mutation is inserted in the first class of the locus of the input sequence for
+    each model. Computational pipelines were implemented under each framework''s recommended
+    parameters to quantify variant effect in erythroid lineage lines. For ChromBPNet,
+    a two step method was used for predicting the additive effect of two base pair
+    changes, but only one is allowed for the input at'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# In saturation mutagenesis
+
+
+    To compute the importance scores of all nucleotides in a sequence and identify
+    key regulatory elements that may significantly affect gene expression, we performed
+    in saturation mutagenesis (ISM) on the 500 bp upstream sequence of HBG1. For each,
+    we conducted three passes of NwaCE, mutating the reference nucleotide to alternative
+    each pass. For each, we computed the alternative accessibility prediction to the
+    reference nucleotide to compute the difference in accessibility for each cell.
+    We normalized the ISM scores for the four nucleotides (A/T/C/G) at each position,
+    ensuring that the scores summed to zero. The normalized ISM score for the reference
+    nucleotide at position was taken as the importance score, reflecting its contribution
+    to accessibility. By visualizing the importance scores for each base in the 500
+    bp upstream sequence of HBG1 and scanning the sequence with FIMO, we identified
+    several motifs previously reported, such as the CCAAT box and TAL1 motif.
+
+
+    # Evaluation of NwaCE in predicting lineage specific cRE
+
+
+    We selected the top optimal sequences from the cell-type specific CRE generated
+    by CODA platform (Malinois7). Specifically, we used sequences generated by the
+    FastSeqProt algorithm, which exhibited the highest cell-type specificity quantified
+    by the MinGap metric. For each of the three cell types, KS6, HepG2, and SK-N-SH,
+    we selected the top 10 sequences with the highest MinGap values. We directly input
+    these selected sequences to the NwaCE model, and predicted their accessibility
+    in Erythroid, Hepatocyte, and Neural lineages. Expected lineage specificity was
+    observed in 29 out of 30 input sequences (Table S7).
+
+
+    # QUANTIFICATION AND STATISTICAL ANALYSIS
+
+
+    Statistical analysis was performed using R (v. 4.3.1) and Python (v. 3.8). Comparisons
+    were conducted using the unpaired Wilcox rank-sum test, while paired sample comparisons
+    were performed with paired Student''s t-tests. Correlations were computed using
+    Spearman''s rho or Pearson''s r analysis. All statistical tests were two-tailed,
+    and a p value < 0.05 was considered statistically significant. Significances are
+    indicated as follows: *p < 0.05; **p < 0.01; ***p < 0.001; ****p < 0.0001. For
+    all boxplots, the middle line and the box represent the 25th percentile, 75th
+    percentile, and whiskers correspond to 1.5 times the interquartile range. qPCR
+    analysis of gene editing results, error bars correspond to standard deviation
+    from three replicates.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# # Supplemental figures
+
+
+    # A Single adaptor transposase
+
+
+    # UUATAC-seq
+
+
+    Index: 1. In situ ligation
+
+    9 base gap
+
+
+    Split
+
+
+    # s3-ATAC
+
+
+    Index: 1. In situ ligation
+
+    9 base gap
+
+
+    MI BC17
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_37_0.png)
+
+
+    single adapter
+
+    9 base gap
+
+
+    MI BC1 AD
+
+
+    DNA
+
+    9 base gap
+
+
+    Index: 2. Index hybridization & ligation
+
+
+    one adapter only (100%, viable)
+
+
+    Looping
+
+
+    DNA
+
+    9 base gap
+
+
+    one adapter only (100%, viable)
+
+
+    Pool and sort by cell then nuclei
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_37_1.png)
+
+
+    Pool then
+
+
+    Index: 3. Index adaptor switch
+
+
+    Bridge
+
+
+    DNA ligation
+
+
+    Gap fill with uracil-independent polymerase
+
+
+    LNA primer to append reverse primer
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_37_2.png)
+
+
+    Pool then sort
+
+
+    Index: 2. Indexing PCR with uracil-processing polymerase
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_37_3.png)
+
+
+    Gapfill & ligation
+
+
+    Index: 4. Indexed PCR
+
+
+    100% viable molecules
+
+
+    100% viable molecules but low PCR efficiency
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_37_4.png)
+
+
+    Dual adaptor switch
+
+
+    sci-ATAC-seq3
+
+
+    # 10xATAC
+
+
+    In situ ligation
+
+
+    Bulk fragmentation
+
+
+    9 base gap
+
+
+    MI BC1 N
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_37_5.png)
+
+
+    9 base gap
+
+
+    MI BC1 AD
+
+
+    9 base gap
+
+
+    MI BC1 N
+
+
+    + both sides same adaptor(50%, not viable)
+
+
+    + both sides same adaptor(50%, not viable)
+
+
+    Gapfill
+
+
+    Index: 1. Index hybridization & ligation
+
+
+    Index: 1. Gel bead ol priming
+
+
+    only 25% viable molecules
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_37_6.png)
+
+
+    DNA ligation
+
+
+    MI BC3
+
+
+    Bridge
+
+
+    Index: 2. Index hybridization & ligation
+
+
+    Nucleotide extension, linear amplification
+
+
+    Index: 2. Pool single-cell libraries and indexed PCR
+
+
+    Gapfill
+
+
+    Pool then sort
+
+
+    Index: 3. Indexed PCR
+
+
+    only 25% viable molecules
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_37_7.png)
+
+
+    PS Index
+
+
+    Pool then sort
+
+
+    and nuclei lysis
+
+
+    PS Index
+
+
+    B mix
+
+
+    Non-empty (6,076)
+
+    MMouse complex (6,272)
+
+    MMouse insert (2,534)
+
+    Human/Mouse (257)
+
+
+    Collision rate: 24.64%
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_37_8.png)
+
+
+    C291-rep
+
+
+    Cuffseq: TSS > 9: 8,000
+
+    Median TSS: 22,042
+
+    Median DN: 26,085
+
+    Median TSS: 12,757
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_37_9.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_37_10.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_37_11.png)
+
+
+    (legend on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'Figure S1. Comparison between schematic of UUATAC-seq and four scATAC methods,
+    related to Figure 1
+
+    (A) UUATAC-seq uses homo-adaptor transposase and temperature-controlled adaptor
+    switching to increase the sensitivity and four rounds of barcoding to the throughput.
+    It has significant advantages over s3-ATAC, sc-ATAC-seq3, Hydro-ATAC, and 10×
+    scATAC.
+
+    (B) Collision rate of the human/mouse cell mixing experiment with high cell number.
+    10,000 nuclei were collected in the same lysis well in this high cell number experiment.
+
+    (C) Distribution of TSS enrichment and the number of UFs in each cell (each dot)
+    from 293T (left) and 3T3 (right), colored by density, as indicated by the scale
+    bar. Black dashed lines represent the filters used for quality control.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# Cell Resource
+
+
+    # CellPress OPEN ACCESS
+
+
+    # A
+
+    41,672 nuclei
+
+
+    # B
+
+    8,557 nuclei
+
+
+    # C
+
+    Molecule capturing efficiency
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_39_0.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_39_1.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_39_2.png)
+
+
+    # D
+
+    Log(Reads per 3,000 nuclei)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_39_3.png)
+
+
+    # E
+
+    Provider rate
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_39_4.png)
+
+
+    # F
+
+    11,482 endothelial nuclei
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_39_5.png)
+
+
+    # J
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_39_6.png)
+
+
+    Tissue source of scRNA-seq and sci-ATAC-seq after CCA mapping
+
+
+    +   - brain
+
+    - heart
+
+    - intestine_colon
+
+    - intracellular_cell
+
+    - kidney
+
+    - liver
+
+    - muscle
+
+    - muscle_sedi
+
+    - spleen
+
+    - tests
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_39_7.png)
+
+
+    Figure S2. Data quality of UUATAC-seq, related to Figure 2
+
+    (A) Single-cell chromatin accessibility profiles of 41,672 adult mouse brain cells.
+    Six sequencing indexes are enabled. Each index marks about 1/6 samples.
+
+    (B) Single-cell chromatin accessibility profiles of 8,557 cells from one of the
+    sequencing indexes.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '(C) Boxplots showing the forward and reverse capturing efficiency, including
+    percentage of simultaneous forward and reverse capturing (left) and percentage
+    of total molecule recovery (right). In a random sample of 500 cells, the percentage
+    of simultaneous forward and reverse capturing (E) refers to the percentage of
+    reads from forward and reverse reads depicting the same DNA loci. The percentage
+    of total molecule recovery is calculated as the square of the percentage of simultaneous
+    forward and reverse capturing.
+
+
+    (D-F) Comparison of the number of reads in peaks (D), the number of reads in promoters
+    (E), and the promoter ratio (F) in sampled 3,000 nuclei. (G) Scatterplots with
+    linear regression fitting showing the positive correlation between FRIP and TSS
+    enrichment (left) and the negative correlation between FRIP and UF (right). Data
+    points are omitted.
+
+
+    (H) UMAP plot of the dataset of mouse endothelial cells, colored by scRNA cell-type
+    label (Kalucka et al. 5*) after CCA matching.
+
+
+    (I) Sankey plot showing matches between tissue source of scRNA endothelial cells
+    (Kalucka et al. 5*) and snATAC endothelial cells.
+
+
+    (J) The comparison of cell types between UIATAC-seq and sci-ATAC-seq.
+
+
+    *Note'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# # Cell Resource
+
+
+    # ## CellPress OPEN ACCESS
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_41_0.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_41_1.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_41_2.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_41_3.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_41_4.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_41_5.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_41_6.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_41_7.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_41_8.png)
+
+
+    **Figure S3.** The characteristic comparisons between new and known cCREs, related
+    to Figure 4
+
+    (A) Boxplot showing the GC content of new and known cCREs.
+
+    (B) Bar plot showing the TE accessibility within new and known cCREs.
+
+    (C) Bar plot showing the genome coverage of new and known cCREs.
+
+    (D) Density plot showing the peak size distribution of new and known cCREs.
+
+    (E) Bar plot showing the proportion of marker peaks for new and known cCREs.
+
+
+    (legend continued on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '(F) Enriched cell types associated with new and known cCREs.
+
+    (G and H) Bar plots showing the CUT&Tag signals for H3K4me1, H3K4me3, and CTCF
+    in the adrenal gland (G) and pituitary (H) for new cCREs.
+
+    (I and J) Scatterplots showing the Pearson correlation between the number of open
+    regions and genome size in four species (I) and eight species (J), respectively.
+    The dashed line represents the linear regression fit, and the gray shaded area
+    indicates the 95% confidence interval. The Pearson correlation coefficient (R)
+    and the corresponding p value are shown.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# Cell Resource
+
+
+    # CellPress OPEN ACCESS
+
+
+    # A
+
+
+    # Number of potential regulatory interactions
+
+
+    species Axolotl Mouse
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_43_0.png)
+
+
+    # B
+
+
+    Axolotl peripheral blood mononuclear cell
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_43_1.png)
+
+
+    # C
+
+
+    Comparison of mouse and axolotl in endothelial cells
+
+
+    +   - Open region at T53
+
+    - Open region at proximal promoter
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_43_2.png)
+
+
+    # E
+
+
+    Ga1 (cardiomyocyte) in heart
+
+
+    chr10:56,373-58,523
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_43_3.png)
+
+
+    # F
+
+
+    Nr51 (adrenal cortex marker) in adrenal gland
+
+
+    chr2:38,919-38,747.421
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_43_4.png)
+
+
+    # G
+
+
+    Six1 (pituitary stem cell marker) in pituitary gland
+
+
+    chr6:71,913-71,784
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_43_5.png)
+
+
+    # H
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_43_6.png)
+
+
+    # I
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_43_7.png)
+
+
+    (legend on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'Figure S4. Comparison of regulatory interactions in mouse and axolotl, related
+    to Figure 4
+
+
+    (A) Histogram showing the number of potential regulatory interactions per gene
+    in both mouse and axolotl. The right panel is an enlarged view of the left panel
+    to zoom in smaller values. Only interactions with Cicero co-accessibility above
+    0.5 were included in the comparison analysis. Scale bars, 2 µm (inset). One of
+    the 3D slices is shown.
+
+    (B) Nascent 60-min pulse RNA-seq occupies dechromatin space juxtaposed to Hoechst-stained
+    chromatin.
+
+    (C) Boxplots showing the number of genes (left) and the number of UMIs (right)
+    in axolotl and endothelial cells of scRNA seq dataset. Statistical significance
+    for pairwise comparisons was determined using Wilcoxon rank-sum test.
+
+    (D) Scatter plot showing the difference in size distribution between cCREs and
+    cCREs within a 1 kb distance to TSSs, with one around 250 bp while the other is
+    around 900 bp for all vertices.
+
+    (E) Visualization of broad and narrow cCRE signals in UATAC-seq alongside chromatin
+    immunoprecipitation (ChIP-seq) signals for H3K4me1 and H3K4me3 at gene regulatory
+    regions, as indicated by color.
+
+    (F and G) Visualization of broad and narrow cCRE signals in UATAC-seq CUT&Tag
+    signals for H3K4me1 and H3K4me3 in the Nr5a1 gene region for adrenal gland and
+    pituitary gland samples
+
+    (H) A gene accessibility heatmap showing the divergence of expression mode in
+    stromal lineage for five species, computed log2-transformed fold-change values,
+    as indicated by the scale bar.
+
+    (I) Feature maps showing the gene accessibility of the mTOR pathway in stromal
+    cells across five species. The color scale represents the log-transformed gene
+    accessibility scores.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Cell Resource
+
+
+    # CellPress
+
+    OPEN ACCESS
+
+
+    A chr1:161,244,053-161,684,796 440 kb 161,000 kb 161,000 kb 161,700 kb
+
+
+    | | PCGF41 | MPR | CDHC | CNAP128 | 3R_952374 | HSR46 | FGFR34 | FGFR3C | FGFR3B
+    | IRNA |
+
+    |---|---|---|---|---|---|---|---|---|---||
+
+    | [0-0.42] | | | | | | | | | | Endothelial_Hnd2 |
+
+    | [0-0.36] | | | | | | | | | | Endothelial_Nef |
+
+    | [0.0.30] | | | | | | | | | | Endothelial_Ramp3 |
+
+    | [0-0.25] | | | | | | | | | | Liver sinusoidal endothelium |
+
+    | [0-0.20] | | | | | | | | | | Lymphatic endothelium |
+
+    | [0-0.15] | | | | | | | | | | Muscular endothelium |
+
+    | [0-0.10] | | | | | | | | | | Neural endothelium |
+
+    | [0-0.05] | | | | | | | | | | Pulmonary endothelium |
+
+    | [0-0.05] | | | | | | | | | | Catas_EndothelialGeneral1 |
+
+    | [0-0.10] | | | | | | | | | | Catas_EndothelialGeneral2 |
+
+    | [0-0.15] | | | | | | | | | | Catas_EndothelialGeneral3 |
+
+    | [0-0.17] | | | | | | | | | | ChIP_P0mw2_endo |
+
+    | [0-0.20] | | | | | | | | | | ChIP_P0mw3_endo |
+
+    | [0-0.24] | | | | | | | | | | CAGE_minus_end |
+
+    | [0-0.29] | | | | | | | | | | CAGE_plus_end |
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_45_0.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_45_0.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_45_2.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_45_3.png)
+
+
+    (legend on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: 'Figure S5. NovaCE reveals regulatory sequence patterns, related to Figure B
+
+
+    (A) Visualization of the predicted signals for human endothelial cells in chr16:124,453–161,798
+    region, scATAC-seq data from Catias and DNase-seq/
+
+    CAGE-seq data downloaded from ENCODE were indicated in the side panel. The predicted
+    tRNA regions were highlighted.
+
+
+    (B) Dendrogram showing the clustering of motif patterns extracted using the TF-ModiS
+    algorithm for five species in erythroid cells.
+
+
+    (C) Comparison of known transcription factor binding sites (TFBS) identified by
+    querying RcisTarget using the TomTom algorithm with mouse patterns
+
+    extracted by the model.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Cell Resource
+
+
+    # CellPress OPEN ACCESS
+
+
+    # Cross-species generalization
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_47_0.png)
+
+
+    +   - Predicted-macrophage
+
+
+    +   - Predicted-macrophage
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_47_1.png)
+
+
+    +   - Target-macrophage
+
+
+    +   - Target-macrophage
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_47_2.png)
+
+
+    +   - Predicted-macrophage
+
+
+    +   - Predicted-macrophage
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_47_3.png)
+
+
+    +   - Target-macrophage
+
+
+    +   - Target-macrophage
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_47_4.png)
+
+
+    +   - Predicted-macrophage
+
+
+    +   - Predicted-macrophage
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_47_5.png)
+
+
+    +   - Target-macrophage
+
+
+    +   - Target-macrophage
+
+
+    # B
+
+
+    # D
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_47_6.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_47_7.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_47_8.png)
+
+
+    **Figure 6.** NwaCE cross-species predictions, related to Figure 6
+
+
+    (A) Visualization of the predicted genome-wide accessible sites and experimentally
+    measured genomics data around genes (C1QC and ZBTB48) in macrophage cells for
+    human, macaque, and mouse.
+
+    (B-D) Boxplots showing the expression and chromatin accessibility of HbF across
+    species (axolot, human, and mouse). The predictive accessibility for fine-tuned
+    NwaCE (B), expression levels from scRNA-seq (C), and accessibility from scATAC-seq
+    (D).'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# # CellPress OPEN ACCESS Cell Resource
+
+
+    # A
+
+
+    # Sequence cluster
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_48_0.png)
+
+
+    +   0
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    7
+
+    8
+
+    9
+
+    10
+
+    11
+
+    12
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_48_1.png)
+
+
+    # B
+
+
+    regulation of defense response
+
+    regulation of cell cycle
+
+    regulation of immune response
+
+    regulation of T cell activation
+
+    tuning of metabolic process
+
+    lolipid and metabolic process
+
+    sensation of chemical stimuli
+
+    sensation of chemical stimuli-mediated by sensory perception
+
+    sensation of external stimuli
+
+    sensation of light by receptor
+
+    regulation of stress response
+
+    regulation of response to cell
+
+    regulation(T cell activity)
+
+    regulation(T cell activation)
+
+    pattern process
+
+    pattern specification process
+
+    protein homeostasis
+
+    ubiquitination-dependent protein catabolic process
+
+    cell cycle
+
+    cell proliferation
+
+    RNA producing
+
+    regulation metal ion transport
+
+    cell transport
+
+    muscle cell development
+
+    mitotic tissue development
+
+
+    # C
+
+
+    # hg38 HBG1/HBG2 TSS upstream 220bp (chr11:5,254,781-5,255,001)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_48_2.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_48_3.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_48_4.png)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_48_5.png)
+
+
+    # D
+
+
+    # NWweca (basic prediction)
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_48_6.png)
+
+
+    # Malinois prediction
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_48_7.png)
+
+
+    # ChromBPnet prediction
+
+
+    ![](img/ec6056bce29330cd95ccbecfd3a26b35_48_8.png)
+
+
+    Figure 57. NWweca reveals regulatory sequences and mutation effects, related to
+    Figure 7
+
+    (A) UMAP visualization of sequence clusters extracted from the ResNet module layers
+    using NWweca model. The Z score of the enrichment q values.
+
+    (B) Heatmap showing top five terms for each sequence in GO ontology enrichment.
+    The color scale represents the significance
+
+    (continued on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Cell Resource
+
+
+    # CellPress OPEN ACCESS
+
+
+    (C) ISM scores calculated by fine-tuned NvCAE model for $\gamma$-globin (HbG)
+    TSS upstream 500 bp region at chr1:3,254,781–5,255,281 in erythroid cells. Sequences
+    that match the CCAAT box (positive effect) and potential TAL1 motif (negative
+    effect) are highlighted in blue and gray boxes, respectively.
+
+    (D) Correlation between the predicted impact of each ABE site and Z score HBG1/2
+    linear model coefficients measured by ABE base-editing screen in human CD34+ cells
+    for NvCAE model (left), Malinos model (middle), and ChromBPNet model (right).
+    The solid line represents the linear regression fit, and the gray shaded area
+    indicates the 95% confidence interval. The Pearson correlation coefficient (R)
+    and the corresponding $p$ value are shown.'
+  merge: -1
+  img_proc: true
