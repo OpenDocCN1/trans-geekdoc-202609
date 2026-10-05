@@ -1,0 +1,1 @@
+is moving to the cloud", where Amazon "appears to effectively balance innovation and invention: a focus on customer value with a bias to action”. In his role at Amazon Web Services, Gutmans manages Amazon Elasticsearch Service, Amazon CloudSearch, Amazon ElastiCache and Amazon Neptune.
