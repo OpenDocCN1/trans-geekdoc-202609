@@ -1,0 +1,15 @@
+# Security threats and their mitigation in big data recommender systems 239
+
+Node Security Enhance (NNSE) uses Bull Eye algorithm and provides redundant name nodes. This redundancy lets administrator to select different options for each node. One of these nodes works as master and the other one as a slave. Master and slave work together to decrease the data loss of server crash and prevent from natural disasters. If master node fails, the administrator asks NNSE about the permission to retrieve data from a slave node and accessing to unavailable data in secure way. Without NNSE permission, administrator does not retrieve data from slave. There is a risk if two nodes master role lead to decrease security, data accessibility and local area network (LAN) or wide area network (WAN) performance. It's recommended to use a vital configuration to enhance the security that guarantees data available in a secure way for clients. This achieves when NNSE copies HDFS blocks between many nodes in many clusters [5].
+
+# 11.3 Big data recommender system attacks
+
+In big data recommender systems, an attacker injects fake ratings to recommend the data that the attacker wants. These attacks are called "shilling" attacks [8–10]. This type of attack (profile injection attacks) is the only way to recommend a special product. The main goal of profile injection attacks is to change output of the recommender system. In a profile injection attack, an attacker creates a number of fake profiles to interact with big data recommender system. These fake profiles communicate with dummy identities to hide their original identities.
+
+# 11.3.1 Attack tactics
+
+In this chapter, we divide attacks into two types: namely push attacks and nuke attacks. The goals of these two types of attacks are increasing or decreasing the rating for items. All attacks are implemented as follows. A profile injection attacker to identities and builds a fake profile for each identity. It is in this manner that attack data are inserted into a system—no other accessing to database of the system is accepted. There are two issues attackers need to consider when building attack profiles. The first concerns the selection of items from which the profiles are constructed; the second relates to the ratings that are applied to the selected items [11].
+
+# 11.3.2 Probe attack strategy
+
+Attack profiles constructed using proper subdomain items have the potential drawback of being easy to detect, particularly if large numbers of profiles are created. While an attacker could attempt to vary the items that are used, nevertheless a distinctive attack signature may exist. Thus, a less conspicuous strategy is desirable. One such approach probing the big data recommender system and using the system’s recommendations as a means to select items. First an attacker rates to a small number of items and then increasingly fake profiles to make it close to the distribution of original users’ ratings. Thus, there will be high similarities between

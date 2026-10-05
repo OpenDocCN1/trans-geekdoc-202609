@@ -1,0 +1,15 @@
+# 142 Big data recommender systems, volume 1
+
+is capable to keep the coefficient vector's previous settings for future use. Two common angles that can be handled by the recommendation mechanism are mentioned below:
+1. One of the angles is responsible for the new information on the short-term interested objects. Imagine a user who is interested in US economy history, reading various texts on Franklin Roosevelt on the topic of economy policies. The user is probably making interest in Roosevelt (object). Then the user has a tendency to get more information about Roosevelt, but in other areas it may be in his dealings with WWII. The angles consist of dimensions of meaning here: (1) new stands for the high-rank texts and it means it should not concern economy, which is held by low-node match degree with long-term weight and (2) short-term interested objects means the high-rank texts should concern Roosevelt, which is held by high node match degree with short-term weight. Accordingly, the compound angle is a combination of the short-term object interest and the long-term object interest.
+2. The other angle is responsible for the new link structure holding the long-term interested objects. For instance, a user with a long-term interest in David Beckham deserves to find extra information that s/he has not known yet. Meeting the compound angle involves (1) meeting the long-term object interest, held by high node match degree with long-term weight, (2) not meeting the short-term link interest, held by low edge match degree with short-term weight, also (3) not meeting the long-term link interest, held by low-edge match degree with long-term weight2.
+
+Characteristics are all within this method:
+
++   1. This method is able to differentiate the four basic angles of interest; it does so by a user's reading history.
+2. Users must provide the interest in object and interest in link structure; two angles that are known as valuable elements in improving the effectiveness recommendation of texts. The interest in link structure emerges less frequently than the interest in object.
+3. Recommending texts, according to the interest in object, make this method superior to the baseline methods. Somehow the advantage does not seem so great since the interest in object and the angle is similar to preceding methods.
+4. Recommending texts according to the interest in link structure also makes this method superior than the baseline methods. Here, the advantage seems great while recommending a small number of texts. This is for the reason that the interest in link structure is not considered by preceding methods.
+5. This method is able to handle the compound angle. The effectiveness of the two compound angles (when the coefficient vector changes effectiveness is advanced) vigorously supporting its effectiveness on the complex angles.
+
+Recent experiments with news-scale text data confirm that the interest in object and in interest in link structure both have real requirements, and recommending texts according to the angles is definitely a useful approach.

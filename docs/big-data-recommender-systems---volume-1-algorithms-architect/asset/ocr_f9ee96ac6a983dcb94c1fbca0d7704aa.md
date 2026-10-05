@@ -1,0 +1,11 @@
+# # Chapter 6
+# Deep generative models for recommender systems
+Vineeth Rakesh1, Suhang Wang2, and Huan Liu3
+
+# ## 6.1 Introduction
+
+The complexity of modern recommender system has grown significantly with the evolution of web data. Therefore, conventional recommendation models such as collaborative and content-based filtering are quickly fading away due to their inability to capture complex heterogeneous relationships in data. For example, Figure 6.1 shows the layers of information that collectively impact the item-selection process of a user. Here, the movie Moana is chosen as the item; nonetheless, this example holds good for other products such as books, electronics, apps and games. One can observe that a user's interest to watch Moana is determined by five different layers, namely, social network layer, item layer, temporal layer, personal layer and geo-location layer. The social network layer is attributed by social media platforms such as Twitter, Facebook and Instagram where users are constantly exposed to promote products and celebrity endorsements. These social signals play a decisive role in influencing the purchase behavior of users. The item layer signifies the content quality of the movie. This includes attributes such as story line, music and visual effects. The personal layer represents the choice of individual users, which is usually determined by analyzing their historical data. In this example, this is the preference over the genre and the cast members of the movie. Finally, the geo-location of users also has a influence over the selection of items. For example, the movie Moana was a huge box success in the USA but had a mediocre reception in other parts of the world. Consequently, to build a robust recommendation model, it is important to incorporate such heterogeneous signals from various sources data. This chapter introduces some recent trends in generative and deep-learning (DL) models for hybrid recommendation systems that have proven to be extremely effective in integrating different modalities of data.
+
+^1Researcher (Machine Learning and AI) at Technicolor, Palo Alto, CA, USA
+2College of Information Sciences and Technology, The Pennsylvania State University, USA
+3Computer Science and Engineering, Ira A. Fulton Schools of Engineering, Arizona State University, USA
