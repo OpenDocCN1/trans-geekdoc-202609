@@ -1,0 +1,15 @@
+# COMMON AGREEMENTS
+
+IT personnel often have to sign a variety of agreements as a condition of employment and might also be party to the negotiation of agreements with clients, vendors, or partners. Some of these agreements are:
+
+**Nondisclosure Agreement (NDA)** Employees are sometimes party to proprietary internal information that could be damaging if disclosed the company. For reason, part of the employee on-boarding process for many companies is signing an NDA that limits the employee's rights to share company information. The NDA typically specifies the duration of the agreement, which might stretch well beyond the worker's separation from the company, as well as the penalties for violating the agreement.
+
+**Service-Level Agreement (SLA)** In a contract between a service provider and a client, the SLA specifies the amount of uptime guaranteed by the provider. Typically expressed as a percentage, the SLA is referred to as “the nines” because the agreement is nearly 99 percent or over. For example, a “four nines” SLA guarantees the service will be up 99.9 percent of the time, which allows the provider just under an hour of downtime before they are in violation of the agreed terms. A “six nines” SLA guarantees 99.9999 percent uptime, which allows the provider only 31 seconds of downtime per year. The SLA also specifies the penalties for which the provider is on breach of contract.
+
+**Memorandum of Understanding (MOU)** Sometimes called a *letter of intent*, an MOU specifies the terms of an agreement between two parties in a situation in which a formal contract is not appropriate. However, the terms of an MOU can be legally binding, particularly when the two parties already have a formal contract between them.
+
+# CERTMIKE EXAM EXAMPLES
+
++   - Well-organized IT departments begin with planning. The plans are eventually developed into policies, and the policies are implemented using documented procedures. The plans and procedures document regulate the changes the network undergoes, specify what to do in the event of a serious incident or disaster, and define the operational life cycle of network devices.
+- There are IT policies used in many organizations to enhance the security of the network. Employees typically must observe password policies that define how and when users must change passwords, acceptable use policies that specify how employees can utilize the network and its services, BYOD policies that define how employees can use their own smartphones, and remote access policies that specify restrictions for mobile users.
+- IT personnel should document all aspects of the company network by maintaining a library of diagrams and reports, including logical and physical network diagrams, floor plans, wiring diagrams, rack diagrams, and MDF/IDF documentation.

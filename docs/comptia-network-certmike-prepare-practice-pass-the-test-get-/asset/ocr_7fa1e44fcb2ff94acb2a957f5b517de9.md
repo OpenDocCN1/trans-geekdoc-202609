@@ -1,0 +1,15 @@
+# Storage Area Networking
+
+expertise to keep it all running. In addition, there is the question of fault tolerance. For many companies, at least one redundant data center—preferably at a remote location—is a necessity, to keep the network running and the company available in the event of a disaster.
+
+Another option is *colocation*, where an organization leases data center space from a third-party company that is responsible for the entire data center environment, including power, cooling, security, and fault tolerance. In many cases, these providers maintain large-purpose data centers that can outperform an on-premises data center retrofitted into an existing office building in many ways. Colocation providers can typically provide several levels of service. A client might just want to lease rack space for their own equipment in the provider's data center, or they might want to lease an entire data center for their use. The provider might also be able to supply services, such as onsite maintenance and technical support. Here again, the organization is dependent on WAN links for access to their data but service contracts nearly always a service-level agreement that guarantees a performance of uptime.
+
+Another issue is the question of whether an organization's branch offices should have their own data centers or just access the headquarters remotely. This is largely dependent on the size and computing requirements of the branch offices. A small branch office might not be worth the expense of constructing its own data center. There is also the question of whether the company—or even needs—full-time IT staff at each branch office. Remote access by a wide area network (WAN) links the branch offices fully dependent on the wide area network to the home office.
+
+# STORAGE AREA NETWORKING
+
+Data storage is, of course, one of the primary functions of a business network, and applications have constantly increasing demands for more storage space, new technologies for expanding the storage capacity of a network were developed. One of these technologies is the storage area network (SAN), which is a means by which servers can access storage devices directly through the network.
+
+# Fibre Channel
+
+In its original conception, a SAN is a completely separate local network to which servers and storage devices are attached. The server accesses the storage at block level, just as the drives were installed in the server itself. The SAN originally ran a protocol called Fibre Channel (FC) and typically used a dedicated Fibre Channel switch (or sometimes two, for fault tolerance), to the storage devices and servers are connected. FC is a serial protocol, in comparison to the parallel protocols commonly used for storage technologies, such as Small Computer Systems Interface (SCSI). In its current version, FC can support transmission rates of up to 128 gigabits per second (Gbps).

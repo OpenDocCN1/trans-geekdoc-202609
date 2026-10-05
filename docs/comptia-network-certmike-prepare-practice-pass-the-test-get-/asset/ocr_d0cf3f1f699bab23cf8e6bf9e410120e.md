@@ -1,0 +1,10 @@
+In addition to these standard Ethernet specifications, other technologies allow networks to make better use of the fiber-optic medium. Bidirectional wavelength multiplexing (WDM) is a transmission technique that enables a single fiber to carry multiple signals simultaneously by assigning them to different wavelengths. Coarse wavelength multiplexing (CWDM), by cable television networks, can transmit up to 18 signals in channels, upstream and downstream. Dense wavelength multiplexing (DWDM) is a more advanced technique that can isolate up to 80 wavelengths. It was used in the replacement for the optical regenerators that synchronous optical networking (SONET) and synchronous digital regeneration (SDH) networks once employed to amplify their signals.
+
+Another Ethernet-based technology, called HDMI Ethernet Channel (HEC), adds a high-speed data channel to the HDMI interface. High-Definition Multimedia Interface (HDMI) is a cable connection that is typically used to attach TV monitors to other home entertainment equipment. Adding the data channel eliminates the need for a separate cable network interface in each device. There are even protocols for transmitting Ethernet frames over Universal Serial Bus (USB) cables, such as Microsoft's Remote Network Driver Interface Specification (RNDIS).
+
+# CERTMKE EX ESSENTIALS
+
++   - Cabled networks can use a variety of cable types, including coaxial, shielded and unshielded twisted pair, and single-mode and multimode fiber-optic.
+- Twisted pair LANs nearly always use modular RJ45 connectors, but fiber-optic cables can use several different connector types, including ST, SC, LC, and MT-RJ.
+- Data centers can have cable management devices, such as patch panels and punchdown blocks of several types. The 66 block is obsolete and was used mainly for telephone connections. The 110 block is currently in use for both telephone and data connections.
+- The Ethernet standards currently include physical layer specifications for five copper cable options and six fiber-optic cable options.
