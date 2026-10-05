@@ -1,0 +1,38 @@
+
+> **NOTE**  The percentage of devices containing upgrade capabilities that will be updated by their owners varies significantly by type of device. Computing devices and phones are on the high end of upgrade percentages (likely 70 percent and higher). Almost every other type of device has tremendously smaller upgrade compliance. Wi-Fi routers and Internet-connected security cameras have compliance rates often at less than 10 percent. Some models are around 1 percent patched. The world would be a safer place if every hardware device routinely updated itself without owner interaction.
+
+## Beware of Easy Promises
+
+Be wary of claims from organizations that tell you updating their current quantum-susceptible standard and applications will not be difficult when needed. I frequently read these types of claims in cryptocurrency forums and from IoT vendors. Undoubtedly most of the participants in these organizations making these statements have never been involved a massive update endeavor. They are speaking from a place of inexperience. They think the upgrading process will be as simple as offering updated code and having the masses apply it. They don’t truly understand the real-world challenges, such as the following:
+
+* How much of their user base will not even hear of the need to update
+* How much of their user base is using old, unsupported forms of their product
+* How their “heavily tested” patch will not apply correctly to some percentage of impacted devices even when users try to do the right thing
+* How many owners of their products cannot simply apply an update right away even if it is needed
+* How difficult the upgrades will be and the power and challenges of the human psychology involved
+
+No one involved in a previous massive update endeavor would ever claim that the next one is going to be smooth and orderly. Beware of anyone claiming that the upgrade process to quantum-resistant software will be easy. That statement alone is enough reason to disregard their supposed “expertise.” Anyone who has been through a massive upgrade project is humbled by the experience and lowers their grand expectations. Upgrading is always harder than we imagine.
+
+Much of our computing world and most of our intelligent devices contain quantum-susceptible cryptography. More computing devices and services are susceptible to future quantum attacks than those that are quantum-resistant. Many of them can be upgraded to quantum-resistant algorithms when the time comes. Others will remain forever quantum-susceptible. [Chapter 9](#c09.xhtml) will show you how you and your organization should prepare and plan for this eventuality.
+
+## Quantum Computing
+
+I do not want this book to be all gloom and doom. Even though the focus on this book is on the threats to our computer security enabled by quantum computing, quantum computing will give us far more positive things than we can currently imagine or what we covered in [Chapter 2](#c02.xhtml). Here are some more detailed predictions.
+
+### Quantum Computers
+
+We already have many dozens, if not over a hundred, quantum computers (as of 2019). That number is steadily headed north, even before quantum supremacy. Once quantum supremacy has been reached, the number of quantum computers will explode exponentially. Every big company that was sitting on the fence waiting to see if quantum supremacy would really happen will buy in. No big company wants to have its interests surpassed by its competitors with better computing power. No one wants to have the slower, “older” technology computers. Even companies and vendors who do not truly understand what quantum is and what the benefits are will want it. It will be a “buzzword” that drives marketing just like cloud computing and artificial intelligence did before it.
+
+As covered in [Chapter 2](#c02.xhtml), there are over a dozen major types of quantum computers. Expect the number of types to decrease over time as the industry settles into the types with the most efficient benefits. Back in the early days of binary personal computers (PCs), there were dozens of distinct PC vendors (among them Apple, IBM, Altair, Micral, Wang, Tandy, Sinclair, Nippon Electric Company \[NEC\], Digital Equipment Corporation \[DEC\], Commodore, and Sun), many of which contained personalized vendor chips. Eventually, Apple and IBM-style and Linux PCs became the dominant models (Sun Microsystems was a major player for decades as well). The same consolidation is likely to happen to quantum computers as they mature.
+
+Whatever types and vendors win out, quantum computers are likely to get smaller and cheaper over time. The average PC in the 1980s cost several thousands of dollars, and that was for a monochrome screen, two floppy disks, and a very small hard drive (10 to 20 megabytes), with less than 1 megabyte of RAM. They often weighed 15 to 30 pounds and took up most of the room of the desktop they were placed on. Early external hard drives weighed over a hundred pounds and were the size of a filing cabinet. Today, you can find dozens of computers weighing less than 2 pounds for a few hundred bucks with performance parameters that would have been equated to supercomputers back in the 1980s.
+
+The same type of physical and performance consolidation is likely to happen in the quantum computing field. Humans excel at making things tinier. Expect quantum computers to get faster, cheaper, and in smaller form factors. One of the biggest form-factor limitations is the requirement for most quantum computers to be cooled to near 0 degrees Kelvin. Expect even super-cooled quantum computers to get smaller, although there are at least a few quantum computer designs (such as trapped ion) that do not need those extremely low temperatures. Perhaps one of those models will win out, allowing the form factor of quantum computers to shrink significantly right away.
+
+It remains to be seen if quantum computers can be shrunk down to the form factors we are used to today (e.g., desktop computers, laptops, pad devices, and smartphones). But we’ve decreased the size and expense of nearly every other computing device, while at the same time significantly decreasing the cost. Why should quantum computing be any different?
+
+### Quantum Processors
+
+We already have dozens of different types of quantum processors. The types, availability, and affordability will increase over time. Many prediction models point to the idea of a quantum coprocessor. Back in the early days of PCs, most computers could be upgraded by adding a separate math “coprocessor” chip to a slot on the motherboard. The math coprocessor was specifically created to do complex math faster than a PC’s regular processor could. Programs requiring the use of floating-point, complex math could “offload” that math to the coprocessor, which would perform the needed calculations and then hand off the result to the main processor so that the program could complete faster than without a math coprocessor.
+
+Performance tests routinely showed that computers using math coprocessors greatly outperformed computers without them. Pretty soon consumers insisted that any computer they bought have the “optional” math coprocessor installed. From a marketing perspective, it began to be not so optional. Demand for math coprocessors was so great that eventually the main PC processor manufacturers just added the advanced math routines into the regular processors. Around the time Intel introduced its 486 line of processors, the idea of needing a separate math coprocessor died a natural death. Today, everyone who buys a computer gets one with built-in advanced math components.

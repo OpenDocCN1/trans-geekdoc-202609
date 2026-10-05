@@ -1,0 +1,335 @@
+## 第 8 章
+## 第 9 章
+## 第 2 章，“量子计算机简介”
+## 第 3 章，“量子计算如何破解当今的密码学？”
+## 第 4 章，“量子密码破解何时会发生？”
+## 第 5 章，“后量子世界会是什么样子？”
+## 第 6 章，“抗量子密码学”
+## 第 7 章，“量子密码学”
+## 第 8 章，“量子网络”
+## 第 9 章，“现在就开始准备”
+## 量子计算入门
+## 量子力学导论
+### 量子力学违反直觉
+### 量子力学是真实的
+### 量子力学的基本属性
+#### 光子和量子力学
+#### 光电效应
+#### 波粒二象性
+##### 它是一个粒子
+#### *Interfering Waves*
+#### *Your Double-Slit Experiment*
+#### *Detection Strangeness*
+### Probability Principle
+### 不确定性原理
+#### 自旋态和电荷
+#### 量子隧穿
+#### 叠加
+#### 观察者效应
+### 无克隆定理
+### 诡异的纠缠
+### 退相干
+### 当今世界中的量子示例
+### 附加信息
+### 摘要
+## 量子计算机简介
+### 量子计算机有何不同？
+#### 传统计算机使用比特
+#### 量子计算机使用量子位
+##### 随时间推移的量子位增长
+### 并非所有量子比特都相等
+### 量子能力不止于量子比特
+#### 量子计算机尚未准备好迎接主流时刻
+#### 量子将在不久后称霸
+#### 量子计算机利用纠错改进量子比特
+##### 过早的量子比特退相干
+##### 改进相干时间
+##### 环境隔离
+##### 超冷却
+#### 重复计算
+#### 使用量子纠缠进行纠错
+#### 检查量子位
+### 量子计算机的组件
+#### 量子软件
+#### 量子堆栈
+### 量子国家指导
+#### 国家政策指导
+#### 资金资助和投资
+### 除计算机之外的其他量子信息科学
+### 更多信息
+### 摘要
+## 量子计算如何破解当今的密码学？
+### 密码学基础
+#### 加密
+#### Encryption Keys
+#### Symmetric Ciphers
+### Asymmetric Ciphers
+#### Integer Factorization Workload Effort
+### 公钥-私钥对
+### 数字签名
+### 密钥交换
+### 常见的非对称加密类型
+### 密钥信任与公钥基础设施
+### 非对称密码的弱点
+### 完整性哈希
+#### 哈希弱点
+### 密码学用途
+### 量子计算机如何破解密码学
+#### 缩短时间
+#### 量子算法
+##### Grover 算法
+##### 傅里叶变换
+#### Shor's Algorithm
+#### Beyond Shor's Algorithm
+#### What Quantum Can and Can't Break
+##### 量子计算能够破解的内容
+##### 量子计算无法破解的内容
+#### 仍属理论
+### 总结
+## 它一直是“10 年后”
+### 量子密码破解因素
+#### 量子力学是真实的吗？
+#### 量子计算机是真实的吗？
+#### 叠加态是真实的吗？
+#### 彼得·肖尔的算法是真实的吗？
+#### 我们有足够稳定的量子比特吗？
+##### 量子比特稳定性和纠错
+#### 量子资源与竞争
+#### 我们有稳步改进吗？
+#### 专家意见
+### 量子网络破解何时发生
+#### 时机情景
+##### 它已经发生了
+### 在未来几年内
+### 在未来几年之后
+### 它永远不会发生
+#### 你应该何时准备？
+#### NSA 表示现在
+#### 国家科学院表示现在
+#### Mosca 不等式
+### 突破场景
+#### 长期留在国家手中
+#### Used by Biggest Companies
+#### Mass Proliferation
+#### Most Likely Breakout Scenario
+### Summary
+## What Will a Post-Quantum World Look Like?
+### Broken Applications
+#### 受弱化的哈希和对称密码
+#### Broken Asymmetric Ciphers
+#### Weakened and Broken Random Number Generators
+#### Weakened or Broken Dependent Applications
+##### TLS
+### PKI 和数字证书应用
+### 数字签名
+#### 历史真实世界非对称攻击
+### Wi-Fi 网络安全
+### Microsoft Windows
+### 加密货币
+#### 区块链易受攻击性
+#### 其他加密货币的脆弱性
+### Bluetooth 和 NFC
+### IoT 和硬件设备
+### 警惕轻易的承诺
+### 量子计算
+#### 量子计算机
+#### 量子处理器
+#### 量子云
+### 量子密码学将被使用
+#### 量子完美隐私
+### 量子网络到来
+### 量子应用
+#### 更好的化学品和药物
+#### 更好的电池
+#### 真正的人工智能
+#### 供应链管理
+#### 量子金融
+### 改进的风险管理
+### 量子营销
+### 更好的天气预报
+### 量子货币
+### 量子模拟
+### 更精确的军事和武器
+### 量子隐形传态
+#### 传送协议
+### Summary
+## Part II Preparing for the Quantum Break
+### Chapter 6 Quantum-Resistant Cryptography
+#### NIST Post-Quantum Contest
+#### NIST 安全强度分类
+#### PKE vs. KEM
+#### 形式不可区分性保证
+#### 密钥和密文大小
+### 后量子算法的类型
+#### 基于代码的密码学
+### Hash-Based Cryptography
+### Lattice-Based Cryptography
+#### Multivariate Cryptography
+#### Supersingular Elliptic Curve Isogeny Cryptography
+#### Zero-Knowledge Proof
+### Symmetric Key Quantum Resistance
+### Quantum-Resistant Asymmetric Encryption Ciphers
+#### BIKE
+#### Classic McEliece
+#### CRYSTALS-Kyber
+#### FrodoKEM
+#### HQC
+#### LAC
+#### LEDAcrypt
+#### NewHope
+#### NTRU
+#### NTRU Prime
+#### NTS-KEM
+#### ROLLO
+#### Round5
+#### RQC
+#### SABER
+#### SIKE
+### ThreeBears
+### PKE 和 KEM 密钥和密文大小的总体观察
+### 抗量子数字签名
+#### CRYSTALS-Dilithium
+#### FALCON
+### GeMSS
+### LUOV
+### MQDSS
+### Picnic
+### qTESLA
+### Rainbow
+### SPHINCS+
+### 关于签名密钥和大小的总体观察
+### 谨慎建议
+#### 缺乏标准
+#### 性能问题
+#### 缺乏经过验证的保护
+### 供进一步了解
+### 摘要
+## 量子密码学
+### 量子随机数生成器
+#### 随机并不总是随机
+#### 为什么真正的随机性如此重要？
+##### *Debian OpenSSL RNG 错误*
+#### 基于量子的 RNG
+##### *贝尔不等式定理*
+##### Working QRNGs
+#### NIST QRNG 公共信标
+#### QRNG 缺点
+### 量子哈希和签名
+#### 量子哈希
+##### Holevo's Bound
+#### 量子数字签名
+#### 第一个量子数字签名算法
+#### 相位编码数字签名
+### 量子加密密码
+#### 量子密钥分发
+##### *BB84*
+### 纠缠 QKD
+### 光子数分裂攻击
+### 连续变量 QKD
+### 中继器问题
+### 其他 QKD 担忧
+### Kak 协议
+#### QKD Companies
+### Summary
+## Quantum Networking
+### Quantum Network Components
+#### Transmission Media
+##### Fiber-Optic Cables
+#### Free-Space Media
+#### Distance vs. Speed
+##### PLOB Bound
+#### Point-to-Point
+#### 受信任中继器
+#### 真正的量子中继器
+#### Entanglement Swapping
+### Quantum Network Protocols
+#### Entanglement Purification
+### Quantum Network Applications
+#### More Secure Networks
+#### Quantum Computing Cloud
+#### Better Time Syncing
+### 防止干扰
+### 量子互联网
+### 其他量子网络
+### 更多信息
+### 摘要
+## 现在开始准备
+### 四个主要后量子缓解阶段
+#### Stage 1: Strengthen Current Solutions
+#### 是否应增加非对称密钥大小？
+#### 密码敏捷性
+#### Stage 2: Move to Quantum-Resistant Solutions
+##### Securing PKI
+#### Get Other Quantum Devices and Services
+#### Stage 3: Implement Quantum-Hybrid Solutions
+#### Stage 4: Implement Fully Quantum Solutions
+### The Six Major Post-Quantum Mitigation Project Steps
+#### Step 1: Educate
+##### Quantum Computing Mailing Lists and Blog Sites
+### 幻灯片演示
+### 管理层两页简报
+#### Step 2: 创建计划
+##### 创建项目团队
+##### 创建项目计划
+##### 创建时间表
+### 关键依赖于后量子密码标准的选择
+### 创建紧急加速时间表情景
+### 创建项目阶段时间线估算
+#### Step 3: Collect Data
+### Step 4: Analyze
+#### Protect Some or All Data
+### Step 5: Take Action/Remediate
+#### Update Existing Policies and Standards
+#### Prevent Current-Day Future Data Leaks
+### Step 6: Review and Improve
+### Summary
+## 附录：附加量子资源
+### 书籍
+### 视频
+### 在线课程
+### 网站
+### 博客
+### Podcast
+### 量子杂志/通讯
+### 量子邮件列表
+### 杂项量子文章
+### 量子厂商
+### Twitter
+### 软件相关
+### 杂项量子联盟
+### 政府资助项目和非营利组织
+## 目录
+### B
+### C
+### 超奇异椭圆曲线同源
+### C
+### D
+### E
+### F
+### G
+### H
+### I
+### J
+### K
+### L
+### M
+#### M
+#### N
+#### O
+#### P
+### Q
+### R
+### S
+#### `S`
+#### `T`
+#### `U`
+#### `V`
+#### `W`
+#### `X`
+#### `Z`
+### 责任限制/免责声明
+### 美国国会图书馆控制号
+### 商标
+## 关于作者
+## 致谢
+## WILEY END USER LICENSE AGREEMENT
