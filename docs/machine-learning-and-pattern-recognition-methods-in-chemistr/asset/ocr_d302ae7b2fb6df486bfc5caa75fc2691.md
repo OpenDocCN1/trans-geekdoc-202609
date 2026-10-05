@@ -1,0 +1,8 @@
+# Table A.2 Logistic regression code—cont'd
+
+| evaluation measures on test samples in each fold |
+| acc_t.append(accuracy_score(y_test, y_pred)) f1_t.append(score(y_test, y_pred)) |
+| roc_t.append(roc_auc_score(y_test, y_pred)) # Print the results on training samples |
+| print(np.mean(np.array(acc))) print(np.mean(np.array(f1))) print(np.mean(np.array(roc))) |
+| # Print the results on test samples print(np.mean(np.array(acc_t)) |
+| print(np.mean(np.array(f1_t))) print(np.mean(np.array(roc_t))) |

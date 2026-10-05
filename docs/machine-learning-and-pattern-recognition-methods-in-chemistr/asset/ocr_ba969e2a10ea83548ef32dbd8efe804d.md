@@ -1,0 +1,11 @@
+# # MACHINE LEARNING
+AND PATTERN RECOGNITION
+METHODS IN CHEMISTRY FROM
+MULTIVARIATE AND DATA DRIVEN
+MODELING
+
+Edited by
+**JAHAN B. GHASEMI**
+Faculty of Chemistry, University of Tehran, Tehran, Iran
+
+![](bbox=[0.269, 0.816, 0.381, 0.903])

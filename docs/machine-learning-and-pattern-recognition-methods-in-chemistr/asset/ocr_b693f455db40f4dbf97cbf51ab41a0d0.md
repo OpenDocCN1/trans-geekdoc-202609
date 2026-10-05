@@ -1,0 +1,13 @@
+# Uniqueness in resolving multivariate chemical data 139
+
+constraint as “nonexistence information.” The circumstances that the nonexistence information can result in a unique solution derived and can be find in Akbari Lake, Rajkó, and Abdollahi (2017).
+
+Defining and introducing hard modeling constraint generally reduces the range of feasible solutions and often results in unique solutions. The hard constraint is introduced to force some or all of the concentration profiles to follow chemical model, which is refined at each iterative cycle of the optimization process of soft modeling. Therefore, the concentration and spectral profiles, and the physicochemical parameters (e.g., kinetic rate constants) can be obtained although there are compounds or interferences that do not take part in the explicit model.
+
+The mathematical concept of duality was initially introduced by Henry in the chemometrics literature (Henry, 2005). Later, Rajkó showed that it is possible to determine the feasible regions of two-component systems using the duality principles. Duality as a mathematical concept provides a relation between the row and column spaces of a data matrix. Simply, the duality principle states that each data point in a space (e.g., the column space) corresponds to one special directed hyperplane in the dual space (the row space).
+
+In this chapter, the circumstances and the rules that govern to achieve the unique real solutions through any of the constraint will be explained. A collected knowledge in this subject is completely rare in literature.
+
+# 2. Non-negativity constraint
+
+Non-negativity is the first and most general natural constraint in different fields of chemistry. For instance, when the data are measurements of counts, color intensities, amount of absorption, or spectral amplitudes, numbers do not have a physical interpretation. Thus, non-negativity is frequently applied as the minimal constraint of the multivariate curve resolution (MCR) studies. Under non-negativity constraints, feasible regions are bounded (Lawton & Sylvester, 1971). The non-negativity constraint reduces the range of feasible solutions of a curve resolution problem. In some favorable cases, a unique solution can be obtained by applying only the non-negativity constraints. Data-based uniqueness (DBU) refers to decompositions that non-negativity constraint is sufficient to get a unique solution (Rajkó et al., 2015). Different levels of uniqueness were defined in Rajkó et al. (2015) as non-uniqueness, fractional uniqueness, partial uniqueness, and full uniqueness.

@@ -1,0 +1,13 @@
+# Multivariate predictive modeling and validation
+
+information originally present in the X matrix is used to model the Y (and, accordingly, to estimate $B_{PCR}$), so that the method is said to be biased. In particular, only the variability in the X data by the scores T contributes to the definition of $B_{PCR}$ and, in turn, translates to the fact that a different model will be obtained depending on how many principal components are included in the calculation.
+
+As a consequence, differently than what happens in MLR, building a PCR model requires the optimization of an additional metameter, i.e., the number of principal components to be retained. This is normally achieved by testing models with an increasing number of principal components and selecting the one resulting in the lowest prediction error on the training data (usually computed by cross-validation or other resampling procedures, see Section 3).
+
+PCR, as discussed above, allows the possibility of calculating regression models also in the case of ill-conditioned predictor matrices, its two-step procedure (where each step has a different objective) makes it not necessarily the best option to rely on. The scores extracted from the X matrix by PCA provide the best approximation of the X data, but it is not guaranteed they are also the best predictors for the Y response.
+
+On the other hand, in partial least-squares (PLS) regression, which will be described in the following paragraph, this is outcome since the Y data are involved already at the data compression stage to orient the latent variables, so that scores relevant for describing at the same time the variance in the predictors and the responses are extracted.
+
+# 1.3 Partial least-squares regression (PLS)
+
+In PLS (Geladi & Kowalski, 1986; Martens, & Wold, 1983; Wold, Johansson & Cocchi, 1993; Wold, Sjöström, & Eriksson, 2001), the X and Y blocks matrices are jointly decomposed to produce scores with maximum covariance; those scores are then used as predictors for the response(s) through least-squares fitting. Accordingly, the resulting scores will represent a compromise between fitting the variance in X and approximating the dependent variable(s). On the other hand, since the Y-block is decomposed together with the predictor one, in the case of a multivariate response, building as many single-Y models considering all the Y variables or building a single model considering all the Yes usually leads to different results and one should decide carefully when to use which approach.
