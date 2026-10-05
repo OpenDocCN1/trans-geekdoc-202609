@@ -1,0 +1,118 @@
+
+expression that is equivalent to the orthogonality between the residuals and the explanatory variables when the model is linear.
+
+We can say that the least squares estimator of the model:
+
+![image](d2d_images/image386.png)
+
+is the vector of residues orthogonal to each of the components of the gradient vector of the function ![image](d2d_images/image216.png) evaluated at ![image](d2d_images/image411.png).
+
+Practical problems in the case of non-linearity arise when the non-linear system of normal equations has no or no unique solution or is very difficult to compute (in which case iterative algorithms such as Newton's, Marquardt's and others are used). Moreover, the estimator obtained may not be unbiased.
+
+For large sample sizes, the non-linear least squares estimator has a normal distribution with expectation `β` and variance-covariance matrix:
+
+![Diagrama Descripción generada automáticamente con confianza baja](d2d_images/image544.png)
+
+where the parameter ![image](d2d_images/image037.png) is estimated by means of ![image](d2d_images/image270.png) with ![image](d2d_images/image669.png)
+
+| ![image](d2d_images/chapter_title_corner_decoration_left.png) ||  || ![image](d2d_images/chapter_title_corner_decoration_right.png) |
+| --- | --- | --- |
+![image](d2d_images/chapter_title_above.png)
+
+# 1.4 STEPWISE OR SEGMENTED REGRESSION
+
+![image](d2d_images/chapter_title_below.png)
+
+Suppose a linear model with dependent variable `Y` and explanatory variable `X`. Assume that the relationship linking `Y` and `X` is not the same for values less than one `X*` value of `X` as it is for values of `X` greater than `X*`.
+
+In this case, it will be necessary to consider two legs of the variable ![image](d2d_images/image596.png). This regression will be approached by considering the dummy variable `D` which is 0 for values of `X` less than `X*` and one otherwise. The equation of the model to be fitted will be the following:
+
+![image](d2d_images/image162.png)
+
+![image](d2d_images/image617.png)
+
+Assuming `E(ut) = 0`, it follows that:
+
+![image](d2d_images/image232.png)
+
+It can be seen that `α2` corresponds to the slope of the regression line in the first leg ![image](d2d_images/image517.png) is the slope of the regression line in the second leg. ![image](d2d_images/image540.png)
+
+| ![image](d2d_images/chapter_title_corner_decoration_left.png) ||  || ![image](d2d_images/chapter_title_corner_decoration_right.png) |
+| --- | --- | --- |
+![image](d2d_images/chapter_title_above.png)
+
+# 1.5 SPSS AND NON-LINEAR AND SEGMENTED ESTIMATION
+
+![image](d2d_images/chapter_title_below.png)
+
+SPSS has procedures for fitting non-linear models. If the non-linear model to be fitted is polynomial, SPSS uses the procedure `Curvilinear estimation`, but if the non-linear model is defined by a more complicated equation, SPSS uses the procedure `Non-linear regression`.
+
+| ![image](d2d_images/chapter_title_corner_decoration_left.png) ||  || ![image](d2d_images/chapter_title_corner_decoration_right.png) |
+| --- | --- | --- |
+![image](d2d_images/chapter_title_above.png)
+
+## 1.5.1 Curvilinear estimation with SPSS
+
+![image](d2d_images/chapter_title_below.png)
+
+This SPSS procedure can be used to fit non-linear models, easily reduced to linear by appropriate transformations. One or more curvilinear regression estimation models can be selected. To determine which model to use, pre-plot the data. If the variables appear to be linearly related, use a simple linear regression model. When the variables are not linearly related, try transforming the data. When transformation is not useful, you may need a more complicated model. Inspect the scatterplot of the data and if the scatterplot resembles a recognisable mathematical function, fit the data to that type of model. For example, if the data resembles an exponential function, use an exponential model. The Curvilinear estimation procedure considers the following models:
+
+* Linear: model whose equation is ![image](d2d_images/image020.png). The values of the series are modelled as a linear function of time.
+* Logarithmic: model for which the equation is ![image](d2d_images/image610.png)
+* Inverse: model whose equation is ![image](d2d_images/image578.png)
+* Quadratic: model whose equation is ![image](d2d_images/image299.png) The quadratic model can be used to model a series that "takes off" or a series that is amortised.
+* Cubic: a model defined by the equation ![image](d2d_images/image140.png)
+* Potential: model whose equation is ![image](d2d_images/image650.png)
+* Composite: model whose equation is ![image](d2d_images/image453.png)
+* S-curve: model with equation ![image](d2d_images/image217.png)
+* Logistic: model whose equation is ![image](d2d_images/image603.png) ![image](d2d_images/image128.png) where `u` is the upper bound value. After selecting Logistic, specify a value for the upper bound to be used in the regression equation. The value must be a positive number greater than the maximum value of the dependent variable.
+* Growth: model whose equation is ![image](d2d_images/image641.png)
+* Exponential: model whose equation is ![image](d2d_images/image419.png)
+
+The Curvilinear Estimation procedure generates regression estimation statistics (regression coefficients, multiple R, R-squared, corrected R-squared, standard error of the estimate, analysis of variance table, predicted values, residuals and forecast intervals) and related graphs. You can also save predicted values, residuals and predicted intervals as new variables.
+
+As an example, from the file `cars.sav`, we look for the best polynomial fit for the model that explains the weight of the cars (`weight`) as a function of their displacement (`engine`). To do this we choose `Analyse→ Regression→ Curvilinear estimation` (Figure 1-1) and fill in the input screen as shown in Figure 1-2. In the Model field we tick Linear, Quadratic and Cubic to test the fit of the three polynomial model types. We also point to Include constant in equation and Represent models (to get an idea of the best fit). With the Save button the predicted values and residuals are stored (Figure 1-3). If we enter several dependent variables, a different model is fitted for each of them.
+
+![image](d2d_images/image081.png)![image](d2d_images/image500.png)
+
+Figure 1-1 Figure 1-2
+
+![image](d2d_images/image031.png)
+
+Figure 1-3
+
+Pressing Continue and OK results in the simultaneous fitting of the three polynomial models as output of the procedure.
+
+––––––––
+
+![image](d2d_images/scene_break.png)
+
+![image](d2d_images/image147.png)
+
+We observe that the fit to the linear model is quite good with a high value of adjusted R² and with a very high joint and individual significance of the parameters (p-values of F and T practically zero). The fitting equation is:
+
+![image](d2d_images/image477.png)
+
+The fit of the quadratic model is presented below.
+
+![image](d2d_images/image532.png)
+
+We observe that the fit to the quadratic model is very good with a high adjusted R-value² which improves the linear fit and with very high joint and individual parameter significance (p-values of F and T practically zero). The fitting equation is now:
+
+![image](d2d_images/image508.png)
+
+The fit of the cubic model is presented below:
+
+![image](d2d_images/image156.png)
+
+We observe that the fit to the cubic model is also good with a high value of adjusted R² which improves the linear fit and equals the quadratic fit and with a high joint and individual significance of the parameters (p-values of F and T practically null except for the motor² ). The significance is somewhat lower than in the quadratic case. The fitting equation is now:
+
+![image](d2d_images/image371.png)
+
+Based on the fit data, we would be left with the quadratic model, a choice that is confirmed by the plot of the variables in Figure 1-4.
+
+![image](d2d_images/image320.png)
+
+Figure 1-4
+
+| ![image](d2d_images/chapter_title_corner_decoration_left.png) ||  || ![image](d2d_images/chapter_title_corner_decoration_right.png) |

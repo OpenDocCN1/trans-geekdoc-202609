@@ -1,0 +1,48 @@
+
+
+We can define a neural network as a set of highly interconnected information processing elements, which are able to learn from the information fed to them. The main feature of this new neural network technology is that it can be applied to a large number of problems ranging from real complex problems to sophisticated theoretical models such as image recognition, speech recognition, signal analysis and filtering, classification, discrimination, financial analysis, dynamic prediction, etc.
+
+Neural Networks attempt to emulate the nervous system, so that they are able to reproduce some of the main tasks performed by the human brain by mirroring the fundamental behavioural characteristics of the human brain. What neural networks actually attempt to model is one of the physiological support structures of the brain, the neuron, and the structured and interconnected groups of several of them, known as networks of neurons. In this way, they build systems that exhibit a certain degree of intelligence. However, we must insist on the fact that Artificial Neural Systems, like any other man-made tool, have limitations and only bear a superficial resemblance to their biological counterparts. Neural networks, in relation to information processing, inherit three basic characteristics of biological neural networks: massive parallelism, non-linear response of neurons to incoming inputs, and information processing through multiple layers of neurons.
+
+One of the main properties of these models is their ability to learn and generalise from real examples. In other words, the network learns to recognise the relationship which is equivalent to estimating a functional dependency that exists between the set of inputs provided as examples and their corresponding outputs, so that, once learning is complete, when the network is presented with a new input even if it is incomplete or contains an error, based on the functional relationship established therein, it is capable of generalising it by offering an output. Consequently, we can define an artificial neural network as an intelligent system capable not only of learning, but also of generalising.
+
+A neural network is made up of processing units called neurons or nodes. These nodes are organised into groups called "layers". There are generally three types of layers: an input layer, one or more hidden layers and an output layer. Connections are established between adjacent nodes of each layer. The input layer, through which data is presented to the network, consists of input nodes that receive information directly from the outside. The output layer represents the response of the network to a given input and this information is transferred to the outside. The hidden or intermediate layers are responsible for processing the information and are interposed between the input and output layers and are the only ones that have no connection with the outside.
+
+The most common network structure is the so-called feedforward network, as the connections between neurons are established in one direction only, in the following order: input layer, hidden layer(s) and output layer. For example, Figure 6-1 shows a network with two hidden layers. However, there are also feedback networks, which can have backward connections, i.e. from nodes in one layer to processing elements in previous layers, as well as recurrent networks, which can have connections both between neurons in the same layer and from a node to itself. Figure 6-2 illustrates a network model in which the different types of connections we have discussed, i.e. forward, backward and recurrent, coexist, showing full interconnection.
+
+![image](d2d_images/image563.png)Input layer
+
+![image](d2d_images/image345.png)![image](d2d_images/image391.png)![image](d2d_images/image483.png)Hidden layers Output layer
+
+![image](d2d_images/image272.png)![image](d2d_images/image235.png)
+
+Figure 6-1    Figure 6-2
+
+| ![image](d2d_images/chapter_title_corner_decoration_left.png) ||  || ![image](d2d_images/chapter_title_corner_decoration_right.png) |
+
+| --- | --- | --- |
+
+![image](d2d_images/chapter_title_above.png)
+
+# 6.1.2 Output function and transfer or activation functions
+
+![image](d2d_images/chapter_title_below.png)
+
+––––––––
+
+![image](d2d_images/scene_break.png)
+
+The fully interconnected neural network is one in which the nodes in each layer are connected to all nodes in the next layer. The input layer has the sole task of distributing the information presented to the neural network for processing in the next layer. The nodes of the hidden layers and the output layer process the signals by applying processing factors, called `weights`. Each layer has an additional node called `bias`, which adds an additional term to the output of all nodes in the layer. All inputs at a node are weighted, combined and processed through a function, called a transfer function or activation function that controls the flow of output from that node to connect to all nodes in the next layer. This transfer function serves to normalise the output.
+
+An artificial neural network is nothing more than the connection of several neurons. Thus, artificial neurons, also called units, nodes or processing elements, constitute the basic unit of a neural network analogous to the biological neuron. These artificial neurons operate like simple microprocessors, whose function is to respond to a given input pattern. Each processing element, as in a biological neuron, receives inputs from other neighbouring nodes, or from the outside, in the case of the input layer, and its function is to transform, by means of simple internal calculations, these inputs into a single output value which it sends to the other nodes constituting their input or, if the neuron in question belongs to the output layer, to the outside. The connections between processing elements have a weight or connection strength `W` associated with them, which quantitatively determines the effect produced by some elements on others. In other words, the network information is stored in the weights, just as in biological neuron networks.
+
+Whether an input has an excitatory or inhibitory effect depends on whether the sign of the corresponding weight is positive or negative, respectively. The effectiveness of the inputs is determined by the strength of the connection, represented by the absolute value of the weights. Thus, each of the elements `Wij` of the weight matrix `W`, known as the pattern of connections, represents the strength and direction of the relationship of process element `j`, with respect to process element `i`.
+
+The process of transforming inputs into outputs in a forward-fed artificial neural network with `r` inputs, a single hidden layer composed of `q` processing elements, and an output unit can be summarised in the following formulation of the network output function:
+
+![image](d2d_images/image333.png)where, ![image](d2d_images/image524.png)is the output of the network, the vector![image](d2d_images/image005.png)represents the inputs of the network the 1 corresponds to the bias of a traditional model, ![image](d2d_images/image119.png)are the weights of the neurons of the input layer to those of the intermediate or hidden layer, ![image](d2d_images/image388.png), represents the connection strength of the hidden units to the output units `j=0` indexes the bias unit, `q` is the number of intermediate units, i.e. the number of nodes in the hidden layer, ![image](d2d_images/image475.png)is the activation function of the output unit and ![image](d2d_images/image447.png)corresponds to the activation function of the intermediate neurons. `W` is a vector that includes all the weights of the network, i.e. ![image](d2d_images/image492.png). Figure 6-3 represents the function![image](d2d_images/image215.png).
+
+![image](d2d_images/image288.png)
+
+Figure 6-3
+

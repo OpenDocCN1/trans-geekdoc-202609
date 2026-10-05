@@ -1,0 +1,280 @@
+name: MACHINE LEARNING. SUPERVISED LEARNING TECHNIQUES AND TOOLS： NONLINEAR MODELS.
+  Exercises with R, SAS, STATA, EVIEWS AND SPSS
+slug: machine-learning-supervised-learning-techniques-and-tools-no
+name_cn: 机器学习. 监督学习技术与工具：非线性模型. R、SAS、STATA、EVIEWS 和 SPSS 练习
+toc:
+- - '##'
+  - 机器学习与非线性建模
+- - '##'
+  - 非线性模型
+- - '###'
+  - 1.1 非线性模型
+- - '###'
+  - 1.2 简单非线性模型
+- - '###'
+  - 1.3 非线性最小二乘。牛顿和 Marquardt 算法
+- - '###'
+  - 1.4 分段或阶梯回归
+- - '###'
+  - 1.5 SPSS 与非线性及分段估计
+- - '####'
+  - 1.5.1 使用 SPSS 进行曲线估计
+- - '####'
+  - 1.5.2 使用 SPSS 进行一般和分段非线性估计
+- - '###'
+  - 1.6 SAS 与非线性估计。PROC NLIN
+- - '###'
+  - 1.7 SAS AND NON-LINEAR AND SEGMENTED ESTIMATION. MODEL PROCEDURE
+- - '###'
+  - '1.8 SAS AND NON-LINEAR SIMULTANEOUS EQUATION MODELS: THE MODELING PROCEDURE'
+- - '###'
+  - 1.9 EVIEWS AND NON-LINEAR EQUATION MODELS
+- - '###'
+  - 1.10 stata AND NON-LINEAR ECUATION MODELS
+- - '###'
+  - Exercise 1-1
+- - '###'
+  - Exercise 1-2
+- - '###'
+  - Exercise 1-3
+- - '###'
+  - Exercise 1-4
+- - '#'
+  - Chapter 2
+- - '##'
+  - GENERALISED LINEAR MODELS . TREATMENT WITH R, SAS, SPSS and STATGRAPHICS
+- - '###'
+  - 2.1  GENERALIZED LINEAR model
+- - '####'
+  - '2.1.1  Components of a generalised linear model:'
+- - '###'
+  - 2.2 LINK FUNCTIONS FOR LOGIT, PROBIT, POISSON AND NEGATIVE BINOMIAL MODELS
+- - '###'
+  - 2.3 EXPONENTIAL FAMILY OF DISTRIBUTIONS
+- - '###'
+  - 2.4 GENERALISED LINEAR MODELS WITH SAS
+- - '####'
+  - MODEL 语句的选项如下：
+- - '####'
+  - 链接函数的可能取值如下：
+- - '###'
+  - 2.5 使用 SPSS 的广义线性模型
+- - '####'
+  - 2.5.1 模型类型
+- - '#####'
+  - 尺度响应
+- - '#####'
+  - 顺序响应
+- - '#####'
+  - 计数
+- - '#####'
+  - 二元响应或事件/试验数据
+- - '#####'
+  - 组合
+- - '#####'
+  - 自定义
+- - '####'
+  - 分布
+- - '###'
+  - 2.5.2 联系函数
+- - '###'
+  - 2.6 GENERALISED LINEAR MODELS WITH R
+- - '###'
+  - 2.7 Generalised linear models IN R THROUGH MENUS
+- - '###'
+  - 2.8 Generalised linear models THROUGH STATGRAPHICS CENTURION
+- - '####'
+  - Exercise 2-1
+- - '####'
+  - Exercise 2-2
+- - '####'
+  - Exercise 2-3
+- - '#'
+  - Chapter 3
+- - '##'
+  - LIMITED DEPENDENT VARIABLE, DISCRETE CHOICE, COUNT, CENSORED, TRUNCATED AND SAMPLE
+    SELECTION MODELS. TREATMENT WITH STATA
+- - '###'
+  - 3.1 limited dependent variable models
+- - '###'
+  - 3.2 离散选择模型
+- - '###'
+  - 3.3 二元离散选择模型
+- - '####'
+  - 3.3.1 线性概率模型
+- - '####'
+  - 3.3.2 Probit 和 Logit 模型
+- - '###'
+  - 3.4 多项选择模型
+- - '####'
+  - 3.4.1 多项 Logit 模型
+- - '####'
+  - 3.4.2 条件 Logit 模型
+- - '####'
+  - 3.4.3 嵌套 Logit 模型
+- - '####'
+  - 3.4.4 多项 Probit 模型
+- - '###'
+  - 3.5 有序 Logit 和 Probit 模型
+- - '###'
+  - 3.6 计数数据模型
+- - '####'
+  - 3.6.1 Poisson 回归模型
+- - '#####'
+  - 3.6.2 负二项回归模型
+- - '#####'
+  - 3.6.3 指数回归模型
+- - '#####'
+  - 3.6.4 正态回归模型
+- - '###'
+  - 3.7 截断模型：托比特模型
+- - '####'
+  - 3.7.1 托比特模型中系数的解释
+- - '####'
+  - 3.7.2 托比特模型中的偏效应
+- - '####'
+  - 3.7.3 Tobit model with censorship in the data
+- - '####'
+  - 3.7.4 Maximum Likelihood (MV) estimation of the censored Tobit model
+- - '####'
+  - 3.7.5 Two-stage ordinary least squares estimation of the censored Tobit model
+- - '###'
+  - '3.8 SAMPLE SELECTION: TRUNCATED MODELS'
+- - '####'
+  - 3.8.1 Truncated Tobit model estimation
+- - '####'
+  - 3.8.2 Partial effects in the truncated Tobit model
+- - '####'
+  - 3.8.3 Maximum Likelihood (MV) estimation of the truncated Tobit model
+- - '####'
+  - 3.8.4 Amemiya 两步法估计
+- - '###'
+  - 3.9 样本选择校正：两阶段 Heckman 或 Heckman 两步估计
+- - '###'
+  - 3.10 STATA 中的有界因变量模型：Logit 和 Probit
+- - '###'
+  - 3.11 STATA 中的截尾和截断 Tobit 模型。Heckman 方法和 Mills 比率。
+- - '###'
+  - 3.12 STATA 中的 Poisson 模型
+- - '##'
+  - 使用 EVIEWS 处理 LOGIT、PROBIT、TOBIT、TRUNCATED、RECOUNTED、CENSORED 和 SAMPLE SELECTION
+    模型
+- - '###'
+  - 4.1 EVIEWS 中的有界因变量模型：MLP、LOGIT 和 PROBIT
+- - '####'
+  - 线性概率模型
+- - '####'
+  - Probit 模型
+- - '###'
+  - 4.2 EViews 中的计数模型：泊松、负二项和指数模型
+- - '###'
+  - 4.3 CENSORED AND TRUNCATED TOBIT MODELS WITH EVIEWS. HECKMAN'S METHOD AND MILLS'
+    RATIO
+- - '####'
+  - 第一阶段
+- - '####'
+  - 第二阶段
+- - '####'
+  - Exercise 4-1
+- - '####'
+  - Exercise 4-2
+- - '####'
+  - 练习 4-3
+- - '####'
+  - 练习 4-4
+- - '#'
+  - 第 5 章
+- - '##'
+  - 面板数据的广义线性模型。非线性面板模型
+- - '###'
+  - 5.1 面板数据的介绍：数据结构
+- - '####'
+  - 5.1.1 横截面数据
+- - '####'
+  - 5.1.2 时间序列数据
+- - '####'
+  - 5.1.3 数据结构。截面组合
+- - '####'
+  - 5.1.4 数据结构。面板或纵向数据
+- - '###'
+  - 5.2 纯面板和扩展面板
+- - '###'
+  - 5.3 年度样本、横截面组合（合并数据）与面板的比较
+- - '###'
+  - 5.4 面板数据的计量经济学模型
+- - '###'
+  - 5.5 具有常数系数的面板模型
+- - '####'
+  - '![image](img/image354.png)对任意观测值 i≠ j 且任意时间点 t≠ s 成立（无自相关）'
+- - '###'
+  - 5.6 固定效应面板模型
+- - '###'
+  - 5.7 随机效应面板模型
+- - '###'
+  - 5.8 面板数据的动态模型
+- - '###'
+  - 5.9 面板数据的 Logit 和 Probit 模型
+- - '###'
+  - 5.10 面板数据的单位根与协整
+- - '###'
+  - 5.11 stata 与面板数据模型
+- - '####'
+  - 5.11.1 面板数据的 Logit、Probit 和 Poisson 模型
+- - '####'
+  - 5.11.2 使用 Arellano-Bond 方法的动态面板估计
+- - '#'
+  - NEURONAL NETWORK 模型
+- - '##'
+  - 6.1 神经网络的描述
+- - '###'
+  - 6.1.1 定义
+- - '###'
+  - 6.1.2 Output function and transfer or activation functions
+- - '##'
+  - 6.2 NEURAL NETWORKS AND REGRESSION MODEL FITTING
+- - '##'
+  - 6.3 LEARNING IN NEURAL NETWORKS
+- - '###'
+  - 无监督学习神经网络
+- - '###'
+  - 有监督学习神经网络
+- - '###'
+  - 强化或混合学习
+- - '###'
+  - 6.4 神经网络的工作原理
+- - '##'
+  - 6.5 反向传播学习算法（BACK-PROPAGATION）
+- - '##'
+  - 6.6 通过感知器进行判别分析
+- - '##'
+  - 6.7 使用神经网络进行时间序列分析
+- - '##'
+  - 6.8 使用神经网络进行主成分分析
+- - '##'
+  - 6.9 使用神经网络进行聚类
+- - '##'
+  - 6.10 SPSS AND neural networks
+- - '###'
+  - 6.10.1 Multilayer Perceptron (MLP)
+- - '####'
+  - 网络输出规范
+- - '#####'
+  - 网络结构
+- - '#####'
+  - 网络性能
+- - '#####'
+  - 案例处理汇总
+- - '#####'
+  - 自变量重要性分析
+- - '###'
+  - 6.10.2 径向基函数（RBF）
+- - '##'
+  - 6.11 通过 R 进行神经网络
+- - '###'
+  - 6.11.1 neuralnet 库
+- - '###'
+  - 6.11.2 nnet bookshop
+- - '##'
+  - 6.12 R AND TIME SERIES USING NEURAL NETWORKS
+- - '###'
+  - Exercise 6-1
