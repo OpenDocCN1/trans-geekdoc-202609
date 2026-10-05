@@ -1,0 +1,11 @@
+# Responsive Gene Discovery
+
+division, one cluster is composed of genes with smaller transposon statistic values and the other cluster is composed of genes with greater transposon statistic values. The cluster of genes with smaller transposon statistic values is therefore treated as an essential gene cluster. Several density estimation algorithms have been developed for identifying essential genes based on some genome-wise transposon statistic [Langridge, *et al.*, 2009; Zomer, *et al.*, 2012; Yang, *et al.*, 2017]. Different models for essential gene discovery are based on different assumptions of the nature of transposon insertion profile. TraDIS discovers essential genes through estimating a density function based on the transposon insertion sites per gene statistic [Langridge, *et al.*, 2009]. ESSENTIALS discovers essential genes through estimating a density function based on the transposon insertions per gene statistic [Zomer, *et al.*, 2012]. DEM (distinct effect model) discovers essential genes through estimating a density function based on the mutation feature statistic which is the convolution between the transposon insertions per gene and the transposon insertion sites per gene [Yang, *et al.*, 2017].
+
+In addition to density estimation, cluster analysis can also be considered when dealing with the problems for separating essential genes from non-essential genes, especially in the context of multivariate analysis.
+
+# 2.2 Density estimation
+
+Very often, the future inference is required based on the knowledge learned from collected experimental data through a pattern discovery and analysis process. Various density estimation approaches are such a process of re-constructing an unknown data distribution from which data are believed to be sampled or drawn [Silverman, 1986; Duda, *et al.*, 2000]. For instance, a mean value and a standard deviation can be estimated for a data set if the data set is assumed to be a sample drawn from a Gaussian distribution. After these two parameters have been well-estimated, a distribution model of the data set can be constructed and be used for the future inference for novel data.
+
+It should be noted that an estimated density based on a collected data set may have some deviation from the expectation. This is not a surprise because a drawn sample always has a much smaller size than a whole

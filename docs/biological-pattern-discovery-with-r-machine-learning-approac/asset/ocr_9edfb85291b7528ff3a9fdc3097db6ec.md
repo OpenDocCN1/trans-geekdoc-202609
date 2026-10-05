@@ -1,0 +1,9 @@
+# Spectral Pattern Discovery
+
+density, a statistical learning process can be employed to evaluate this significance. This statistical learning process is to calculate the p values for all peak heights, no matter whether are the true peaks or the artifacts. Figure 5.15 shows the relationship between the peak heights and the p values from the Gamma density model which was fitted to peak heights for the smoothed peak spectrum shown in Figure 5.13. In this density model, those with significantly small p values can be discovered as the true peaks or signals.
+
+However, each peak not always be located in a single spectral analyser (the horizontal axis value in a spectrum). In other words, or a significant peak may occupy an interval of the spectral analyser. This means that a peak may gradually move up from the bottom (baseline) to its maximum peak height and gradually move down from the maximum peak height to the bottom. This can be seen in the smoothed peak spectrum shown in Figure 5.13. Because of this, a merging process is taken for each significant peak derived from the statistical learning model based on a Gamma density model. This is to merge significant peaks to generate a unique spectra analyser value for each true peak. Only merged spectra analyser values will finally be treated as the signals. Figure 5.16(a) shows an example after significant peaks have been discovered using a Gamma model fitted to peak heights. Figure 5,16(b) shows the result based on the pattern shown in Figure 5.16(a) to discover the merged and unique peaks.
+
+![](bbox=[0.193, 0.618, 0.796, 0.813])
+
+Fig. 5.16.(a) The significant peaks marked by the grey filled dots were selected by a Gamma model fitted to the peak heights from a smoothed peak spectrum. (b) The merged and unique significant peaks, which are marked by the grey filled dots, which were discovered by merging the significant peaks shown in (a) of this figure.

@@ -1,0 +1,9 @@
+The global pair-wise homology alignment using the Needleman-Wunsch algorithm was applied to these ten sequences used in Figure 7.21. The normalised scores are shown in Figure 7.22. It can be seen that the five USA sequences had high in-group mutual homology scores — the top-left corner of Figure 7.22. The homology alignment scores for the five India sequences show slightly divergent similarity. It means that these five sequences had a greater degree of dissimilarity, which was consistent as shown in Figure 7.22.
+
+![](bbox=[0.313, 0.303, 0.686, 0.506])
+
+Fig 7.22. The normalised global pairwise alignment scores using the Needleman-Wunsch algorithm for randomly selected five sequences from USA and five sequences from India. The first five (from one to five) correspond to the USA sequences and the last five (from six to ten) correspond to the India sequences.
+
+# ## 7.6.3 Genomics pattern evolving with time
+
+This pandemic has lasted for over one year. The GISAID has collected all sequences submitted in this period. Each submitted sequence has an accompanied submission date. For each country, the submission dates were extracted for each sequence and the submission date of the first submitted sequence was used as the beginning date. The rest of submission dates were subtracted by this first submission date. This generated a variable named as the time lag. Each country had one time lag value. This time lag was treated as the dependent variable and 64 3-mers were treated as the independent variables in regression models. A Lasso regression model was constructed between these variables for each country.

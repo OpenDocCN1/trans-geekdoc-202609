@@ -1,0 +1,11 @@
+# 82 Biological Pattern Discovery with R
+
+direction or the model parameters **w**. It is this vector that determines whether the density of the projections can be bimodal or not. Thus goes to the most basic question, which is how to find the optimal model parameters **w** for constructing a LDA model for a data set. The purpose is to deliver a bimodal density of the projections and ultimately an optimal LDA model with a good discrimination power between two classes of data points, i.e., peptides.
+
+![](bbox=[0.118, 0.287, 0.882, 0.469])
+
+**Fig. 3.1.** An illustration of how the weights (model parameters) determine the bimodality of a projection density. The triangles and the crosses represent two classes of this data set. The dotted line in each panel stands for the classification boundary corresponding to the projection direction **w**. The insert plot in each panel stands for the density of the projections based on a projection direction **w**. (a) A good projection direction leads to a bimodal density of projections. (b) A poor projection direction leads to a unimodal density of projections.
+
+Therefore, to estimate model parameters as $w_1$ and $w_2$, the bimodality of the projection density given a vector of model parameters **w** must be maximised. Unlike the bimodality of the projection density has been maximised, a LDA model won't be considered a useful classifier. For instance, the classifier in Figure 3.1(b) will not be considered a proper candidate and will not be selected because the classifier will deliver a greater error when it is used to classify data points, such as peptides. On the other hand, the classifier in Figure 3.1(a) has a better discrimination power due to an obvious bimodality of the projection density. It is believed that this classifier will separate two classes of data points, such as peptides, with a good discrimination power.
+
+The basic principle of LDA is thus to discover the best projection direction **(w)** among all possible projection direction candidates. The

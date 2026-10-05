@@ -1,0 +1,9 @@
+# Spectral Pattern Discovery
+
+between low and high cow milk concentration percentages. For instance, the spectra mapped to the cells in white (on the top) normally have great cow milk concentration percentages while the spectra mapped to the cells in red (on the left side) normally have small cow milk concentration values as 0, 0.125 and 0.25. Moreover, the second cell on the top row attracted two spectra profile with two cow milk concentration percentages as 0.75 and 0.625, which were close to each other. The last cell of the next row attracted two spectra as well. The cow milk concentration percentages were 0 and 0.125, which were also close to each other. Therefore the cow milk percentages may be correlated with spectra profiles based on this qualitative model.
+
+![](bbox=[0.237, 0.359, 0.762, 0.618])
+
+5.21. A self-organising map constructed on the self-organising map algorithm for the short-term Fourier transform of the milk data. Each figure printed in a cell of this map stands for a cow milk concentration percentage of a spectrum.
+
+A quantitative relationship between the cow milk concentration percentages and the spectra profiles represented by the short-term Fourier transform variables were also examined. A neural regression model was constructed for this relationship analysis. The R package brnn was used to construct a neural regression model. The Jackknife test was used for the generalisation test of the regression model. Afterwards, the predicted cow milk concentration percentages were compared with the measured cow milk concentration percentages. Figure 5.22 shows the outcome of this investigation. It can be seen that

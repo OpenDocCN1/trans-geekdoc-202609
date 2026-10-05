@@ -1,0 +1,9 @@
+# Gene Expression Pattern Discovery 297
+
+For each of 9,230 bimodal genes identified by the bimodal index test, a variance test was applied to two populations. 2,495 bimodal genes had variance test p values less than 0.01. When the variance test p value is less than 0.01, it means that the null hypothesis of identical variance between two clusters of expressions of a bimodal gene is rejected. In total, 27% predicted bimodal genes had significantly heterogeneous variances across two clusters of expressions. However, this will not happen when using the gap maximisation test approach. The gap maximisation test does not need a data distribution assumption.
+
+![](bbox=[0.283, 0.335, 0.703, 0.489])
+
+Fig. 6.39. The distribution of the variance test p values for the identified bimodal genes using the Bimodal Index test for the letrozole drug.
+
+The other problem of the bimodal index test is the uncertainty. This is because it involves a clustering process employing the mixture model algorithm, which can lead to different clustering results in different runs. The test was applied to the breast cancer letrozole drug treatment data ten times. Ten sets of predictions had different numbers of discovered bimodal genes. Figure 6.40 shows the result. It can be seen that the minimum number of the discovered bimodal genes in one model was 8,528 and the maximum number of the discovered bimodal genes in the other model was 10,431. The difference was 1,903, which was 18.24% of the maximum number of the discovered bimodal genes. This data set has 58 replicates, which is not small. Many gene expression data would have a much smaller number of replicates. Therefore such an uncertainty may be severely enlarged. On the other hand, the gap maximisation test algorithm has no distributional assumption, and the test result will be almost certain in different runs.

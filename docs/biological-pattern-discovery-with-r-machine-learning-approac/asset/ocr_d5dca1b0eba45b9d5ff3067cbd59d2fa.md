@@ -1,0 +1,9 @@
+A LDA model involves a weight assigned to each class. Such a weight is called the a priori probability, which is different from model parameters w. It is so because it is irrelevant with data collection and model construction. These a priori probabilities are assumed to exist before data collection as well as model construction.
+
+A naive interpretation of the a priori probabilities is the proportions of data points belonging to two classes. Suppose the two-class problem is denoted by $\pi_A$ and $\pi_B$. If two classes have the same number of data points
+
+> $$\pi_A + \pi_B \equiv 1$\n$\pi_A, \pi_B \geq 0$$  (1.14)
+
+At the same time, a discriminant model is constructed on a collected data set. This process is named as an experiment, which has nothing to do with the a priori probabilities. In other words, the commonly used maximum likelihood process of parameter optimisation of a discrimination model will not utilise any knowledge from the a priori probabilities. The two sets are independent from each other during a learning process. Such an experimental outcome, i.e., a discrimination model, is commonly called an empirical likelihood function or an empirical model because it is data-dependent.
+
+Based on two densities and two a priori probabilities and an empirical model, the posterior probabilities $(p_A$ and $p_B)$ for two classes can be derived. A posterior probability model is a convolution between the a priori probabilities and the likelihoods derived from an empirical model. Obviously, the posterior probabilities are derived in a post-experiment manner. Rather than defining an arbitrary threshold to make decisions or using a likelihood function for decision making, using the posterior

@@ -1,0 +1,7 @@
+means several sequences were perhaps haps into the areas where they should not go. For instance, some sequences of India were mapped to the area of neurons which was mainly occupied by USA sequences.
+
+![](bbox=[0.173, 0.185, 0.826, 0.532])
+
+Fig. 7.18. The SOM map constructed based on the 3-mer data of 58,897 SARS-CoV sequences from four countries. The letters a, b, c and d were used to stand for USA, India, Russia and Brazil, respectively. They were coloured in red, blue, green and black in this map.
+
+In order to examine whether the SOM map truly reflected the data structure of the sequences, the fitness of the SOM neuron occupancy percentages to the percentage distribution of the sequences from different countries in the whole data were tested. Table 7.22 shows the test result. The chi-square test p value of two percentages was 0.996 meaning that two percentage distributions were almost identical. Therefore, the SOM map has truly reflected the genomic deviation of these sequences from four countries. In addition, 53 neurons were mixed by sequences from more one country. In total, 1,355 sequences (2.3%) were mapped onto these 53 neurons. This error rate also implied that this SOM map has well- the original genomics pattern or structure hidden in these sequences from four countries.

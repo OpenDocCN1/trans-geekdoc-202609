@@ -1,0 +1,11 @@
+Certainly, different solutions or expressions shown in Figure 8.3 will generate different model outputs, leading to different model performance. Suppose this ten-variable system is a regression problem and $N$ sets of observations have been collected for both the dependent variable $y$ and ten independent variables, $x_1, x_2, \dots, x_{10}$. The regression error can be defined as below
+
+```
+$\varepsilon_{x_1,x_2,\dots,x_{10}} = \sum_{n=1}^{N} (y_{n} - f(x_1, x_2, \dots, x_{10}))^2$
+```
+
+When employing a subset of these ten variables, there will be different regression errors, such as $\varepsilon_{x_3,x_5,x_8,x_{10}}$ for $f(x_3, x_5, x_8, x_{10})$ and $\varepsilon_{x_2,x_4,x_7}$ for $f(x_2, x_4, x_7)$.
+
+Suppose there are $M$ candidate solutions, there are $M$ regression errors. A set of $M$ candidates can be a pool with the size $M$. These candidates can be ranked based on the regression errors. A candidate with a greater regression error will not be considered a good candidate solution to the system. A candidate with a smaller regression error will be treated as a good candidate solution to the system. If $M$ candidates have exhausted all possible combinations of ten variables, only the candidate with the least regression error is selected as the optimal solution. However, in most situations, the pool size denoted by $M$ is much smaller than the number of potential candidates due to the computing facility. Suppose the number of all potential candidates is $P$, in theory $M \ll P$. Therefore, it is not reasonable to select the top candidate with the least regression error in a pool of $M$ candidates in only one optimisation process. This is because some of the $P-M$ candidates may have even better performance compared with the $M$ candidates in a pool.
+
+The next question is how to proceed from the ranked candidates to produce (breed) new candidates. It is hoped that these candidates may have better ones to occur, i.e., the ones with smaller regression errors. In GA, a process of generating new candidates based on the existing candidates is called a breeding process. Importantly, it is believed that a breeding operation based on an existing candidate with a smaller regression error may have a greater chance to generate a new candidate with even smaller regression error. The breeding operations in

@@ -1,0 +1,11 @@
+the membership vector is zeros. By this way, each data point is assigned to one cluster only.
+
+The cluster centres of a model are normally unknown when starting a clustering process for a data set. Therefore, data points cannot be assigned to clusters without known cluster centres. A basic exercise used in the machine learning community comes to the front, which is the so-called trial and error learning strategy. Its basic principle is a repeated process of estimating model parameters. In the trial stage, a set of model parameters is either assigned by a set of random values or updated according to the direction by a pre-defined error function is decreased or minimised. In the error stage, a new error is estimated based on the fitness performance of the model with the current parameters. The new error thus provides a new parameter update direction.
+
+The cluster centres of a model as the model parameters are assigned by random values as guesses at the beginning although they are definitely inaccurate. These guessed cluster centres are then examined to see whether they are accurate or not. If not, they are updated towards a direction at which a pre-defined error function can be reduced. Gradually, the clustering error is diminishing or the cluster centres of a model stop to change when the optimal cluster structure has been found.
+
+A membership by which the $n^{th}$ data point $(\mathbf{x}_n)$ of a data set $\mathcal{D}$ belongs to the $k^{th}$ cluster is denoted by $f_{nk}$ and the K-means membership function is defined as,
+
+$f_{nk} = \begin{cases} \mathbf{x}_n & \text{belongs to cluster } k \ 0 & \text{otherwise} \end{cases} \quad (2.20)
+
+In the K-means algorithm, the error is defined as the sum of the squared distances between the data points and the cluster centres to which belong. Suppose there are $K$ clusters, each data point has $K$ distances. Each distance is the distance between a data point and a cluster centre. Only the least distance is counted into the total error, i.e., the objective function. The total error or the objective function of a K-means model is then defined as below, where $u_k$ is the centre of the $k^{th}$ cluster and $f_{nk}$ is the membership by which the $n^{th}$ data point $(\mathbf{x}_n)$ belongs to the $k^{th}$ cluster, which is either a zero or a one,

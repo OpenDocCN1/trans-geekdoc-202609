@@ -1,0 +1,9 @@
+Figure 6.43 shows another example of a bimodal gene. The GM test p value was 3.4e–28, which is very significant at all. The bimodal index value was 12.41, which was much greater than 1.84 (the threshold), hence the BI test identified it as a bimodal gene as well. However, the LR test value was one.
+
+# 6.5.5 Letrozole data analysis
+
+The letrozole data (GDS3116) was used to examine breast cancer therapy effectiveness using letrozole [Miller, et al., 2007; Miller, et al., 2010]. The aim was to investigate the changes of tumour expression profiling were associated with the short-term therapy. In total, 58 patients were treated using letrozole. Microarray analysis was carried out on RNA extracted from these patients. Samples were paired. The samples taken before the therapy were named as the baseline samples and the samples taken 14 days after the therapy were named as the letrozole samples. Miller *et al.* analyzed their data using the modified t test [Tusher, et al., 2001; Smyth, 2004]. They found no single gene showing consistently responding to the therapy. Most genes had partially changed the expressions after the therapy, i.e., only a subset of the patients (>45) were positively (up-differentiation) or negatively (down-differentiation) responding to the therapy.
+
+![](bbox=[0.331, 0.597, 0.668, 0.755])
+
+Figure 6.44 shows the Venn diagram of discovered bimodal genes using the BI test and the GM test. The BI test identified about 9,000 bimodal genes. As aforementioned, its identification varies with different runs. The GM test identified 4,726 bimodal genes. The LR test did not

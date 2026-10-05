@@ -1,0 +1,1 @@
+MT042778 is a DNA sequence of SARS-CoV-2, which was revealed in 2020. Having understood that SARS-CoV-2 is similar to SARS-CoV about 80% similarity [Caldaria, et al., 2020], how to find similar SARS-CoV sequences to MT042778 in a database can be done using the multiple sequence comparison approach such as BLAST. BLAST
