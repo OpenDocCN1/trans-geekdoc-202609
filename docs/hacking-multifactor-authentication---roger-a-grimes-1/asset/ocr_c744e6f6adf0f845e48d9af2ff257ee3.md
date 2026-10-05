@@ -1,0 +1,15 @@
+# Chapter 6 Access Control Token Tricks 147
+
+the criticality of the bug. A few have accused me of being a criminal hacker. I'm pretty clear with them. I have never done anything illegal or unethical on a computer. I'm not going to publicly report my finding or tell anyone else. But, if they don't fix it a long after time, an ethical hacker could be forgiven for publicly announcing the vulnerability so that the site's customers are aware of the problem and not risk personal information by remaining with the site unprotected. In my 30-year-plus computer security career I had to warn one website that I was going to go public (after a year) if they did not fix the problem. More often, my emails to numerous websites ended helping the website get rid of the vulnerability, and that makes everyone safer.
+
+Guessable IDs are a popular bug because programmers are rarely taught to avoid common session vulnerabilities in schools or using self-studying. It is the rare programming instruction covers development lifecycle topics. So, it is very common for new programmers, when designing a system involving authentication and access control tokens, to fail the process that generates session ID numbers. Unless they have trained about the importance of making authentication and access control tokens random they usually dont realize how easy they are to predict.
+
+Creating random, unique, and guessable session IDs becomes a part of the Web Application Security Project (OWASP) Top 10 list (https://owasp.org/images/7/72/OWASP_Top_10_2017_B2829.pdf). OWASP is a not-profit group dedicated to helping web programmers secure more. The OWASP Top 10 is considered one of the guides of its kind and has become a global de facto standard. OWASP explains poor session IDs and how to defend against them in its A2:2017 Broken Authentication. In particular, OWASP recommends to prevent insecure session IDs: "Use a server-side, built-in session manager that generates a new random session ID with high entropy after login. Session IDs should not be in the URL, be securely stored and invalidated after logout, and absolute timeouts."
+
+That's the long of saying that you should make sure that your session IDs are unique and unquestionable. When hackers can guess or predict session IDs, the IDs can be exploited to further compromise the website or its users. The patterns are so easy to see that they just stick out like a thumb. This is usually the case when an attacker can see sequential patterns that increment a single number or letter at a time (as shown in Figure 6.2). In this first example of insecure session IDs, the session IDs are located in the URL, where they are easier to examine and are identical except for the last digit. It doesn't get easy to spot the vulnerability that.
+
+| | www.examplewebsite.com/user/34u9ailb739fu62g90optil34556 |
+| | www.examplewebsite.com/user/34u9ailb739fu62g90optil34557 |
+| | www.examplewebsite.com/user/34u9ailb739fu62g90optil34558 |
+
+**Figure 6.2:** Example of sequentially incrementing session IDs in a URL

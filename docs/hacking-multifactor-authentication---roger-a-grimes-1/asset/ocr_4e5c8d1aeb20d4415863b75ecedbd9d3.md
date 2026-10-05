@@ -1,0 +1,11 @@
+# 112 Hacking Multifactor Authentication
+
+1990s, and if you did not apply the related patches, the attacks that exploited them could not stopped or even detected by anything in software or the operating system. We are just lucky that malicious hackers aren't exploiting hardware bugs more often.
+
+![](bbox=[0.095, 0.196, 0.703, 0.458])
+
+Figure 4.3: Most vulnerabilities have low complexity, meaning they are easy to exploit.
+
+If you read hardware "appliances," these certainly also have many security bugs. A computer appliance is a dedicated computer or special-purpose device running an operating system and application. Appliance vendors try to sell appliances as running "hardened" operating systems if they are harder to attack. If the vendor really does their job right—minimizing services and aggressively keeping on updating when impacted bugs are announced—that can be true. But many vendors do a poor job, and the claims of "hardened" are nonsense. Either way, appliances are often harder to patch and are usually patched with less frequency than software. If the hardening is done correctly, the appliance won't need nearly as much patching. If as many vendors do, they just become bug-ridden appliances rise for the picking.
+
+When I reviewed hardware appliances for a living for InfoWorld magazine Testing Center, I probably reviewed a hundred applications. None arrived to me, the tester, without multiple security bugs. Most had publicly known many years old. Most appliances could not be updated by the user, even if they knew a bug that had a patch out for it. The best appliances were updated at most once a quarter. Some were only updated when big sets of features for the primary software were updated by the vendor. Some appliances were never updated. There were several vendors that I had to threaten to publicly disclose their unpatched vulnerabilities to their customers if they did not patch it. When you see the words "appliance" or "firmware" just think, "harder-to-patch software," because that's all they really are.

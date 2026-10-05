@@ -1,0 +1,11 @@
+# 18 DNS Hijacking
+
+This chapter covers DNS and other namespace hijacking attacks. DNS attacks are the most popular type of namespace attack, but this chapter covers multiple types of namespaces used by the Internet, some of which not all readers may be aware of. Each may be involved as a dependency in an MFA solution and can be hacked and abused.
+
+# Introduction
+
+As discussed in Chapter 5, "Hacking MFA in General," most underlying MFA solutions rely on a digitally represented namespace of some, most often Domain Name System (DNS). There's no conclusive definition of namespace, but it can be most commonly thought of as a way of naming, locating, storing, and categorizing objects within a shared system. The governing domain of a namespace can be something used locally on a single device where it is located; used between multiple, remote participating entities who agree to use it (Extensible Markup Language [XML]); or used globally throughout the world. Namespaces govern the very small, as the natural taxonomy (kingdom, phylum, class, order, etc.) to classify microorganisms, bacteria to unimaginably large celestial objects, like galaxies and nebulae (named and classified by various space-related organizations such as the International Astronomical Union). Namespaces give participants easy and agreed upon way to classify, store, and locate objects.
+
+Our mailing addresses are a sort of namespace. You can point to any property in the world and it's likely to have a country, state/province, city, and code zip associated with it, even though each country can use its own labels and boundary definitions. The mailing namespace is thorough enough each of us can mail a package from our house or another house or business in any part of the world. We can do the same thing with emails and email addresses, which are based on DNS.
+
+It's easy to get millions or billions of objects in a digital domain, so it only made sense that namespaces would extend to our computer domains. There were earlier precursor implementations, but for the Internet, DNS became the official standard in the early 1980s. Many other digital

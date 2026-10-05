@@ -1,0 +1,15 @@
+# Chapter 17 Physical Attacks 365
+
+# Cold-Boot Attacks
+
+But suppose you don't have the money or time to run out your electron microscope. If you have $5, you might be able to reveal protected secrets with a can of compressed air. Let me explain.
+
+On most devices, in order for encryption and decryption to work, the encryption/decryption key(s) must be in plaintext in memory (or at least derivable to plaintext from what is located in memory). It has to be that way. You cannot encrypt the encryption/decryption key when it is actually used to encrypt or decrypt data. If you use a memory inspection tool, you can look for and locate the encryption key. And some types of memory chips, especially nonvolatile, will keep the encryption key in memory even when power is not supplied. For decades, it was popularly believed that if you powered off a computer, the information located in its memory chips would be gone. Turns out that wasn isn't always true.
+
+If lower the temperature or freeze the memory chips, it's more likely that memory contents will last longer after the power goes away. This new understanding led to what is now known as cold-boot attacks. Essentially, you lower the temperature of the memory chips as much as possible while they are still energized, and then pull off the power of the device which is currently located in and move the memory to another device, which can dump and analyze the contents of the memory in a static state. For a few years the first publications became all rage. Stopping them wasn't so easy because of how memory is inherently volatile. See www.windowsclub.com/cold-boot-attack and en.wikipedia.org/wiki/cold_boot_attack for more details.
+
+The first time I saw a cold-boot attack in person, I had just learned about these types of attacks in 2008. A Princeton University team, including well-known Java and voting machine hacker Edward Felten (en.wikipedia.org/wiki/Edward_Felten), announced (cltp.princeton.edu/our-work/memory/) to what they could have cracked a well-known disk encryption programs using a simple and inexpensive cold-boot attack using canned air, like the anyone can do to shut off their computer and keyboard. The programs they could unlock Microsoft's BitLocker Encryption.
+
+Even though BitLocker is named "Drive Encryption," it doesn't encrypt a whole disk as the name might. BitLocker, like many other disk encryption programs, just encrypt smaller, logical disk volumes and not the entire disk. It is a small but important distinction. True encryption usually requires equipment or software in the disk microcontroller or some external hardware encryption component sitting higher/prior in the execution stack than the disk itself.
+
+This was startling and noteworthy because Microsoft had just released Windows Vista with BitLocker to capture the trust of more enterprise customers with the promise of stronger, built-in, reliable disk encryption. And here were kids saying they

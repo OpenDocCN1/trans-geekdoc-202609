@@ -1,0 +1,15 @@
+# Chapter 5 Hacking MFA in General 133
+
+# Migrations
+
+Migration is a less common hacking method and is included here for completeness. Rarely does an organization or get a single authentication method that they the rest of their online life. Usually, the authentication system or its identity databases gets upgraded or newer, better methods. Organizations, through mergers and acquisitions, often change. These changes often require that older and existing authentication systems and users be migrated to a newer or another system. There are specific hacks that can occur in these migrations.
+
+For example, there is an older known escalation of privilege (EOP) hack known as a SID History attack (attack.mitre.org/techniques/T1098/) that can occur during Active Directory network migrations. All AD principal accounts (user, computer, group, etc.) have an attribute named SID History. This field was intended to allow administrators to populate a security principal's current and/or future group memberships when an security principal is migrated to a new AD forest. The SID History was not well known, protected, or monitored until Windows Server 2003 came along. Prior to that, a malicious admin could add elevated group memberships (e.g., Scheme, Admin Domains, Administrators) to a security principal's account, and when it migrated it would become a member of the elevated group, sometimes without the destination forest or domain admitting to be or even aware that it happened. It was a little but critical privilege escalation attack for many years. Starting with Windows Server 2003, AD "filtered" out SID values by default to stop the unintended security elevations. Even today, enabling or disabling SID Filtering only changing a single binary value in AD. All a malicious admin has to change a 1 to a 0 in order to allow the SID History attack to work. See docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2/cc794577 for more details.
+
+Here's another example of an attack which takes advantage of migrations: When everyone is migrated to a new system, the administrator assigns everyone a common, identical, or the assigned password for each user is different but based on an easily recognizable and predictable pattern (say, the user's first initial of their first name followed by the last name). Or when users are set up for the first time on a new MFA device, all MFA devices in the same system may have a common PIN of 1234 and everyone knows this fact. Any malicious user of the repeated password or password pattern could take advantage of it by using other user accounts.
+
+Migrations are usually frequent, irregular acts. Many processes do not check for potential mitigation exploits, and a lot of administrators do not check or worry about such attacks. Because of this, uncommon as migrations are, they are still a valid risk for any organization.
+
+# Deprovision
+
+To complete the authentication life cycles, deprovisioning is the process of deleting, or inactivating identities. This is usually done by the enrolling CSP, but it can be done or requested

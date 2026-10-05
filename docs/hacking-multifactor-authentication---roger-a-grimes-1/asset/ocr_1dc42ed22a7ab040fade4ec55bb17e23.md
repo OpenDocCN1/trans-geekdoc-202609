@@ -1,0 +1,15 @@
+# 48 Hacking Multifactor Authentication
+
+at an unusual speed, it's also done from a brand-new location and device that has never been detected before. At some point, the various weighted risk factors will create a risk profile and score that the vendor determines is too high to allow the user to log on and continue even though the user typed in all the right information. If the user is asked to reauthenticate or submit additional authentication factors on their detected behaviors or actions, it is known as step-up authentication. Overall, it's pretty cool, and it's likely to be part of the future of authentication, similar to how you get credit card transactions processed or denied today.
+
+There are discussions over whether these types of contextual factors can really be considered authentication factors. My feeling is that they are being used as part of an authentication trust decision, then it is an authentication factor, traditional or not. Authentication is usually done before the user is admitted to a protected resource site, but it can also be conducted at any time. Services will monitor what a user is doing and asking for reauthentication, or increasing levels of authentication assurance, for the user to be allowed to continue in their current or future factors. Any authentication factor verified and tied to a particular identity is known as a binding.
+
+# 1FA vs. 2FA vs MFA
+
+A single-factor authentication (1FA) requires only a single authentication proof for a subject to successfully authenticate. A two-factor authentication (2FA) requires two authentication proofs, and a multifactor authentication (MFA) requires two or more factors. All other things being equal, MFA is usually (but not always) better than single-factor authentication for better security, although a single MFA solution is rarely universally allowed across all subject scenarios, so 1FA or multiple MFA methods will usually be needed.
+
+> NOTE MFA includes 2FA, and many people will say MFA when speaking only about 2FA, and vice versa (even though MFA isn't 2FA if it includes more than two factors).
+
+For authentication factors to provide the best security protection in a multifauthentication process, there should be different types of factors. Using two or more of the same factor is still better than using a single factor when authentication but isn't perfect when using different types of factors. The thinking is, for example, that an attacker will have a harder time phishing a user may know (e.g., password, PIN) and a physical device the user uses to log on at the same time. So, all things considered equally, multiple factors of different types is preferred over multiple instances of the same type of factor.
+
+You will sometimes hear about MFA solutions that have more than three factors (e.g., five-factor), but what these solutions are usually referring to multiple instances of the same three traditional factors. In order for the factors to be most protective in an MFA solution, they should be different.

@@ -1,0 +1,11 @@
+# Chapter 3 Types of Authentication 85
+
+![](bbox=[0.093, 0.107, 0.358, 0.403])
+
+Figure 3.13: Example smartcard
+
+The smartcard usually contains both the public and private keys of each digital certificate. Smartcards are “smart” because the integrated chip cryptographically protects the private key from being accessed by external programs or intruders. The private key is stored on the card and remains there, even when used. Smartcards make it difficult to impossible for a private key associated with a digital certificate and public key to be accessed. All private key operations occur within the secure confines of the smartcard chip. Most smartcards require a user PIN to be input as a second factor whenever the digital certificates on the card are to be used.
+
+Smartcards are tamper resistant and can be permanently disabled if someone tries to hack them or physically access them in an unauthorized way. This is not to say they can't be hacked, especially if the attacker has physical access. Smartcard hackers have used specialized tools, acid, and specialized techniques to compromise smartcards.
+
+Disadvantages of smartcards include a fairly high cost of initialization and operation (e.g., initial purchase cost of the cards, readers, and solution; support personnel; and ongoing operational costs). The flexible plastic cards make them easy to damage and to lose. All of these issues have led some organizations to use virtual smartcards instead. With virtual smartcards, the smart certificate is stored on a specialized cryptographic chip on the computing device where the authentication is most used. The base computing device, in a sense, is the smartest. However, it could be argued that a true smartcard is always separate from the computing device, giving it an “extra” factor of authentication protection. The virtual smartcard, because it is always a part of the base computing device, is not separate. Virtual smartcards have become more popular over the last few years, since the overall support costs are significantly lower. All smartcard-based MFA solutions
