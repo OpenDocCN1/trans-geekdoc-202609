@@ -1,0 +1,102 @@
+
+The value `z(t*)` of the random variable `ŷ(t*)` is called the median for the time `t*`. Performing these calculations for all `t* ∈ 𝒯`, obtain a continuous curve, which will be called the median trajectory of the ensemble.
+
+### E). The evolution of the α-quantiles of the empirical PDF
+For a fixed time `t*`, introduce the empirical probability density function
+
+$$\begin{array}{r} {{\hat{F}}_{t^{\*}}(y) = {\int_{{\hat{y}}^{-}(t^{\*})}^{y}{\hat{P}}_{t^{\*}}}(v)dv.} \\ \\ \end{array}$$
+
+(4.106)
+
+According to the definition given in [104], the `α[t*]`-quantile (`α[t*] ∈ [0, 1]`) of the distribution `F̂[t*](y)` of a random variable `y` is the number `y[α[t*]]` satisfying the inequalities
+
+$$\begin{array}{r} {Pb\left\{ y \leq y_{\alpha_{t^{\*}}} \right\} \leq \alpha_{t^{\*}}} \\ \\ \end{array}$$
+
+(4.107)
+
+and
+
+$$\begin{array}{r} {Pb\left\{ y > y_{\alpha_{t^{\*}}} \right\} \leq 1 - \alpha_{t^{\*}},} \\ \\ \end{array}$$
+
+(4.108)
+
+where `Pb` denotes probability. The `α[t*]`-quantile is illustrated in [Fig. 4.25(b)](#chapter4.xhtml#f4_25). By analogy with items A)–C), consider different cutsets `t* ∈ 𝒯` of the ensemble to get the `α[t]`-quantile trajectory, see [Fig. 4.25(b)](#chapter4.xhtml#f4_25).
+
+### F). The evolution of the empirical confidence intervals and confidence levels
+The `α[t*]`-quantile allows us to define an interval (known as *the confidence interval*) that covers the values of the random variable `ŷ(t*)` with the probability `α[t*]` (*the confidence level*).
+
+By definition, the confidence interval
+
+$$\begin{array}{r} {C_{t^{\*}} = \lbrack y_{1 - \alpha_{t^{\*}}/2},y_{1 + \alpha_{t^{\*}}/2}\rbrack} \\ \\ \end{array}$$
+
+(4.109)
+
+covers the values of the random variable `ŷ(t*)` with the confidence level
+
+$$\begin{array}{r} {P\lbrack\hat{y}(t^{\*}) \in C_{t^{\*}}\rbrack = \alpha_{t^{\*}}.} \\ \\ \end{array}$$
+
+(4.110)
+
+Letting `t* = t ∈ 𝒯` in both formulas, construct the confidence domain `C(t)`, as illustrated in [Fig. 4.25(c)](#chapter4.xhtml#f4_25).
+
+![Figure 4.25](images/fig4_25.jpg)
+
+[Figure 4.25](#chapter4.xhtml#f4_25b)
+
+### 3. The moment characteristics of the ensemble
+
+Consider a one-dimensional ensemble `${\hat{\mathcal{Y}}}_{T}$` consisting of random trajectories `ŷ(t | a)`, where `t ∈ 𝒯`. The parameters `a` are randomized with a given PDF `P(a)`. Let `t = t*` be fixed. Then `ŷ(t* | a)` represents a function of the random argument `a`.
+
+Define its `kth moments` by
+
+$$\begin{array}{r} \left. M_{k}(t^{\*}) = \mathcal{M}\left\{ y(t^{\*}\, \middle| \,\mathbf{a}) \right\} = {\int_{\mathcal{A}}y^{k}}(t^{\*}\, \middle| \,\mathbf{a})P(\mathbf{a})d\mathbf{a}. \right. \\ \\ \end{array}$$
+
+(4.111)
+
+Introduce *the k-means* of these moments in the form
+
+$$\begin{array}{r} {m_{k}(t^{\*}) = M_{k}^{1/k}(t^{\*}).} \\ \\ \end{array}$$
+
+(4.112)
+
+For `k = 1`, the moment coincides with its mean, i.e., `M[1] = m[1]`.
+
+Assuming `t*` to be a variable that takes values within the interval `𝒯`, find the `kth moment trajectory M[k](t)` and the `k`-mean trajectory `m[k](t)`.
+
+In some applications, the object's output vector consists of the elements acting as the average functionals with random parameters. For example, consider option trading [[15](#refbib.xhtml#r15), [182](#refbib.xhtml#r182)]. Each of `r` financial derivatives contains `p` random parameters `a[1], …, a[p]`, which are realized in the course of trading with some PDF `P(a)`. The relations between the financial derivatives and parameters are described by functionals `𝒢[1](a), …, 𝒢[r](a)`. As a rule, they belong to the class of power functionals; in the elementary statement, these functionals have the form
+
+$$\begin{array}{r} {\mathcal{G}_{1}(\mathbf{a}) = {\sum\limits_{k = 1}^{p}c_{k}}a_{k},} \\ \\ \end{array}$$
+
+$$\begin{array}{r} {\mathcal{G}_{2}(\mathbf{a}) = {\sum\limits_{k = 1}^{p}c_{k}}a_{k} + {\sum\limits_{k_{1} = 1}^{r}{\sum\limits_{k_{2} = 1}^{r}c_{k_{1}k_{2}}}}a_{k_{1}}a_{k_{2}},} \\ \\ \end{array}$$
+
+$$\ldots \\ \\$$
+
+$$\begin{array}{r} {\mathcal{G}_{r}(\mathbf{a}) = {\sum\limits_{k = 1}c_{k}}a_{k} + {\sum\limits_{k_{1},k_{2}}c_{k_{1},k_{2}}}a_{k_{1}}a_{k_{2}} + \ldots + {\sum\limits_{k_{1},\ldots,k_{r}}c_{k_{1},\ldots,k_{r}}}a_{k_{1}}\cdots a_{k_{r}}.} \\ \\ \end{array}$$
+
+The more efficient models that are used to predict future mean prices involve the integral power functionals; their cores depend on the time variables, `c(τ), c(τ[1], τ[2]), …`.
+
+In both statements, the relations under consideration give the mean prices of the financial derivatives, i.e.,
+
+$$\begin{array}{r} {{\int_{\mathcal{A}}\mathcal{G}_{1}}(\mathbf{a})P(\mathbf{a})d\mathbf{a},\,{\int_{\mathcal{A}}\mathcal{G}_{2}}(\mathbf{a})P(\mathbf{a})d\mathbf{a},.....} \\ \\ \end{array}$$
+
+These mean price formulas represent the combinations of the weighted moments of the random vector `a`. In the option trading models, the object's output `y` is the predicted mean prices for the corresponding financial derivatives.
+
+# CHAPTER 5 ENTROPY-ROBUST ESTIMATION PROCEDURES FOR RANDOMIZED MODELS AND MEASUREMENT NOISES
+
+DOI: [10.1201/9781003306566-5](https://doi.org/10.1201/9781003306566-5)
+
+The main stage of each randomized machine learning procedure is to estimate the probability density functions. Estimation involves input and output data arrays. According to a common hypothesis, output arrays contain errors due to imperfect measurements. The core of the estimation procedures consists in a model with *randomized* interval-type parameters, which can be *original or relative*. A static model with randomized parameters generates an ensemble of random vectors, whereas a dynamic model an ensemble of random trajectories. They are characterized in terms of different-order moments, which serve for balancing the model's output with its input data.
+
+The PDF estimation problem is formulated as the problem to find the “best” functions under maximum uncertainty. The latter is measured using the information entropy of the model and measurement noises. Maximizing the entropy, we construct the entropy-optimal PDFs of the model parameters and the “worst” PDFs of the noises in the sense of this criterion.
+
+## 5.1 Structure of Entropy-Robust Estimation Procedure
+
+Consider the general phenomenological structure of the estimation procedure. It represents a sequence of stages shown in [Fig. 5.1](#chapter5.xhtml#f5_1). This procedure yields the estimated PDFs of the model parameters and noises—`P*(a)` and `$Q(\overline{\xi}),$` respectively.
+
+![Figure 5.1](images/fig5_1.jpg)
+
+[Figure 5.1](#chapter5.xhtml#f5_1b)
+
+**1. Data source (DS)** generates an array of input data vectors `x(t[1]), …, x(t[s])` and a corresponding array of output data vectors `y(t[1]), …, y(t[s])`, where `s` denotes the number of measurements, `x ∈ R^(n)` and `y ∈ R^(m)`. Sometimes, it seems convenient to write these data arrays in the form of matrices `$X = [\ x_{ij}\ |\ i = \overline{1,n};\ j = \overline{1,s}\ ]$` and `$Y = [\ y_{ij}\ |\ i = \overline{1,m};\ j = \overline{1,s}\ ].$` By a standard assumption, input data are measured perfectly and output data with errors, and this aspect should be taken in account for estimation procedure design.
+
+**2. Randomized parametric model (RPM)** generally represents a dynamic system with randomized *original* parameters `a ∈ R^(r)` that take values within the `r`-dimensional parallelepiped

@@ -1,0 +1,190 @@
+name: Entropy Randomization in Machine Learning
+slug: entropy-randomization-in-machine-learning
+name_cn: 机器学习中的熵随机化
+toc:
+- - '#'
+  - Preface
+- - '#'
+  - 数据科学与机器学习概述
+- - '#'
+  - Chapter 1
+- - '#'
+  - Chapter 2
+- - '#'
+  - 第三章
+- - '#'
+  - 第四章
+- - '#'
+  - 第五章
+- - '#'
+  - 第六章
+- - '#'
+  - 第七章
+- - '#'
+  - CHAPTER 1 GENERAL CONCEPT OF MACHINE LEARNING
+- - '#'
+  - CHAPTER 2 DATA SOURCES AND MODELS
+- - '###'
+  - 2.1.1 确定性函数
+- - '###'
+  - 2.1.2 随机函数
+- - '###'
+  - 均值
+- - '###'
+  - 相关函数
+- - '###'
+  - 1. 高斯随机函数
+- - '###'
+  - 2. 具有独立增量的随机过程
+- - '####'
+  - 3. Markov processes
+- - '###'
+  - 2.2 Digital Source of Data
+- - '####'
+  - 1. 缺失数据随机恢复程序的结构
+- - '###'
+  - 2. MDE 的优化算法
+- - '####'
+  - a. 输出数据中的遗漏
+- - '###'
+  - 3. 输入和输出数据中的遗漏
+- - '###'
+  - 3. 最优概率密度函数的采样
+- - '####'
+  - 1. 使参数和噪声的概率密度函数最大化的数据 (max-pn)
+- - '####'
+  - 2. 使 $k = \overline{0,N}$ 时观测轨迹的经验概率密度函数最大化的数据 (max-ePDF)
+- - '####'
+  - 3. 对应于平均轨迹的数据 (mean)
+- - '####'
+  - 4. 对应于中值轨迹的数据 (med)
+- - '#'
+  - 第 3 章 降维方法
+- - '###'
+  - 1. 矩阵的 Frobenius 范数
+- - '###'
+  - 2. 数据矩阵的信息容量
+- - '###'
+  - 3. 交叉熵约减算法
+- - '####'
+  - 1. ε 随对象数（样本量 m）的依赖关系
+- - '####'
+  - 2. m ≫ r 时的分类准确率
+- - '####'
+  - 3. ε 随信息容量允许下降 δ 的依赖关系（EDR 方法）
+- - '####'
+  - 4. 降维引起的的信息损失
+- - '###'
+  - 3. 投影到空间 *R*[*n*]^(*r*) (生成集合 ℨ[*n*]^(*r*))
+- - '####'
+  - 1. (0, 1)-投影矩阵的集合及其排序
+- - '##'
+  - 2. *MEE*-估计 DDF
+- - '#'
+  - CHAPTER 4 RANDOMIZED PARAMETRIC MODELS
+- - '###'
+  - 1. Linear static RPMs.
+- - '###'
+  - 2. Nonlinear static RPMs.
+- - '####'
+  - 2.1. Analytical nonlinearities.
+- - '####'
+  - 2.2. Continuous nonlinearities.
+- - '####'
+  - 1.1. 具有未知参数的给定函数
+- - '####'
+  - 1.2. 用具有未知权重的给定函数族逼近
+- - '####'
+  - 1.3. 离散输入函数
+- - '###'
+  - 4.2.5 具有多项式非线性的非线性动态模型
+- - '###'
+  - 1. 随机化参数的概率特性
+- - '###'
+  - 2. 系综的经验概率特性
+- - '###'
+  - E). The evolution of the α-quantiles of the empirical PDF
+- - '###'
+  - F). The evolution of the empirical confidence intervals and confidence levels
+- - '###'
+  - 3. The moment characteristics of the ensemble
+- - '#'
+  - CHAPTER 5 ENTROPY-ROBUST ESTIMATION PROCEDURES FOR RANDOMIZED MODELS AND MEASUREMENT
+    NOISES
+- - '###'
+  - 3. 测量误差生成器 (MEG)
+- - '###'
+  - 4. 测量模型 (MM)
+- - '###'
+  - 5. 矩评估器 (ME)
+- - '###'
+  - 6. 平衡模型 (BM)
+- - '###'
+  - 7. 机器学习算法 (ML-A)
+- - '##'
+  - 5.2 用于概率密度函数的熵鲁棒估计算法
+- - '###'
+  - 5.4 最优性条件与熵最优概率密度函数的结构
+- - '##'
+  - 2. 输出误差的 RPM-Rel 模型
+- - '##'
+  - 3. 输入和输出误差的 RPM-Orig 模型
+- - '#'
+  - 第 6 章 机器学习程序中归属概率的熵鲁棒估计方法
+- - '###'
+  - 1. 具有非结构化幂非线性的动态模型
+- - '###'
+  - 2. 具有结构化幂非线性的动态模型
+- - '###'
+  - 3. 具有结构化幂非线性的动态模型
+- - '###'
+  - 1. 归一化归属概率
+- - '##'
+  - 2. 区间型归属概率
+- - '#'
+  - 第 7 章 随机化机器学习的计算方法
+- - '###'
+  - 1. 具有积分分量的方程
+- - '##'
+  - 具有解析函数的方程
+- - '###'
+  - 7.2 用于全局优化的蒙特卡洛分组迭代
+- - '####'
+  - SeqLocMin 过程
+- - '###'
+  - '3. *Selection*—definition of the quasi global minimum for the packet and calculation
+    of the decrements:'
+- - '####'
+  - '**EstProb procedure**'
+- - '###'
+  - '2.'
+- - '###'
+  - '3.'
+- - '###'
+  - '4.'
+- - '#'
+  - 第 8 章 在紧集上具有给定概率密度函数的随机向量的生成方法
+- - '###'
+  - 1. *Q*—平行六面体 Π
+- - '###'
+  - 2. 任意紧集 *Q*
+- - '###'
+  - 1. 近似精度估计
+- - '##'
+  - 2. Optimization of lattice step (estimation of Lipschitz constant)
+- - '##'
+  - 3. Rough estimate of step
+- - '#'
+  - CHAPTER 9 INFORMATION TECHNOLOGIES OF RANDOMIZED MACHINE LEARNING
+- - '###'
+  - 3. 模型实现 (MI)
+- - '#'
+  - 第 10 章 熵分类
+- - '###'
+  - 单层感知器
+- - '###'
+  - 逻辑回归
+- - '###'
+  - 支持向量机
+- - '###'
+  - 指数近似

@@ -1,0 +1,62 @@
+
+
+$$\\begin{array}{r} \\left. {\\overset{\\rightarrow}{e}}^{(j)}(\\overset{\\rightarrow}{a}\\, \\middle| \\, X^{(j)},{\\overset{\\rightarrow}{y}}^{(j)}) = {\\overset{\\rightarrow}{y}}^{(j)} - {\\hat{\\overset{\\rightarrow}{y}}}^{(j)}(X^{(j)},\\overset{\\rightarrow}{a}),\\quad j = \\overline{1,s}, \\right. \\\\ \\end{array}$$  
+
+(1.4)
+
+and the closeness of the PM output to the output data of the object is characterized by its norm known as *the empirical risk*, i.e.,
+
+$$\\begin{array}{r} \\left. \\mathcal{Q}\_{X,Y}(\\overset{\\rightarrow}{a}) = \\frac{1}{s}{\\sum\\limits\_{j = 1}^{s}{\\|{\\overset{\\rightarrow}{e}}^{(j)}(}}\\overset{\\rightarrow}{a}\\, \\middle| \\, X^{(j)},{\\overset{\\rightarrow}{y}}^{(j)})\\|. \\right. \\\\ \\end{array}$$  
+
+(1.5)
+
+The empirical risk minimization methods are defined by the family of ML algorithms [[53](#refbib.xhtml#r53), [106](#refbib.xhtml#r106), [188](#refbib.xhtml#r188)] in which
+
+$$\\begin{array}{r} {\\hat{\\overset{\\rightarrow}{a}}(X,\\overset{\\rightarrow}{y}) = \\arg\\min\\mathcal{Q}\_{X,Y}(\\overset{\\rightarrow}{a}).} \\\\ \\end{array}$$  
+
+(1.6)
+
+An additional hypothesis about the properties of the data and parameters often lies in the assumption that the data *Z* = (*X*, *Y*) and the parameters $\\overset{\\rightarrow}{a}$ are *random objects* with a joint probability density function $P(Z,\\overset{\\rightarrow}{a}).$ Here *Z* denotes the universe of data and $\\overset{\\rightarrow}{a}$ is a random vector. In this case, the observable data arrays represent samples *Z*^((*j*)) from the universe *Z*. Note that each of them is random and independent with the PDF $P(Z^{(j)},\\overset{\\rightarrow}{a}).$
+
+The joint probability density function
+
+$$\\begin{array}{r} {L(Z^{(1)},\\ldots,Z^{(s)};\\overset{\\rightarrow}{a}) = {\\prod\\limits\_{j = 1}^{s}P}(Z^{(j)},\\overset{\\rightarrow}{a})} \\\\ \\end{array}$$  
+
+(1.7)
+
+is called the *likelihood* function for a sample {*Z*^((1)),…,*Z*^((*s*))} [[41](#refbib.xhtml#r41), [51](#refbib.xhtml#r51)]. Under a fixed sample, the likelihood function depends on the parameter $\\overset{\\rightarrow}{a}.$ A quite natural estimate of this parameter is the vector that maximizes the likelihood function. Instead of the likelihood function, a convenient approach is to use its logarithm *L̃* = log *L*, i.e.,
+
+$$\\begin{array}{r} {\\hat{\\overset{\\rightarrow}{a}}(Z^{(1)},\\ldots,Z^{(s)}) = \\arg\\max\_{\\overset{\\rightarrow}{a}}\\widetilde{L}(Z^{(1)},\\ldots,Z^{(s)};\\overset{\\rightarrow}{a}).} \\\\ \\end{array}$$  
+
+(1.8)
+
+The hypothesis about the random origin of the pair (*Z*, $\\overset{\\rightarrow}{a}$) also has another interpretation related to the accumulation of information about this pair during experiments. Here, we mean its characteristics expected *before experiments* and the real characteristics obtained *after experiments*. To describe this evolution, Bayes suggested the concept of conditional probability, distinguishing between the *prior* and *posterior* probabilistic characteristics of the data and parameters. As a result, the posterior conditional probability density function (or simply posterior conditional density) $\\left. p({\\mathbb{Z}}\\, \\middle| \\,\\overset{\\rightarrow}{a}) \\right.$ of data under fixed parameters, the prior conditional probability density function $\\left. w(\\overset{\\rightarrow}{a}\\, \\middle| \\,{\\mathbb{Z}}) \\right.$ of parameters under fixed data, and the prior probability density function *g*(ℤ) were introduced accordingly. They have a clear relation defined by Bayes' formula
+
+$$\\begin{array}{r} \\left. p({\\mathbb{Z}}\\, \\middle| \\,\\overset{\\rightarrow}{a}) = \\frac{\\left. w(\\overset{\\rightarrow}{a}\\, \\middle| \\,{\\mathbb{Z}})g({\\mathbb{Z}}) \\right.}{\\left. {\\int\\limits\_{\\mathbb{Z}}w}(\\overset{\\rightarrow}{a}\\, \\middle| \\,{\\mathbb{Z}})g({\\mathbb{Z}})d{\\mathbb{Z}} \\right.}. \\right. \\\\ \\end{array}$$  
+
+(1.9)
+
+The posterior conditional density maximization methods are defined by the family of Bayesian ML algorithms
+
+$$\\begin{array}{r} \\left. \\hat{\\overset{\\rightarrow}{a}}({\\mathbb{Z}}) = \\max\_{\\overset{\\rightarrow}{a}}p({\\mathbb{Z}}\\, \\middle| \\,\\overset{\\rightarrow}{a}). \\right. \\\\ \\end{array}$$  
+
+(1.10)
+
+Both of the families (1.8, 1.10) employ the joint probability density functions of the data and parameters under the accepted hypotheses about the probabilistic properties of random objects.
+
+## 1.4 Principles of Randomized Machine Learning Procedure
+
+The RML concept rests on two principles as follows. The first principle is the computer simulation principle for the *ensembles* of randomized decisions, vectors or trajectories caused by uncertainty. In other words, the existing uncertainty is compensated through the generation of an *ensemble* of decisions, vectors or trajectories. However, it is desirable to generate *optimal* ensembles in a certain sense, not any ensembles. This leads to the second principle known as the optimization principle for the generated ensembles, which *maximizes information entropy*.
+
+The following examples illustrate the new properties arising in the randomized models.
+
+Summarizing the aforesaid, one of the implementation principles of the RML concept lies in the generation of the ensembles of random events (decisions, vector or trajectories) with desired probabilistic characteristics. They are generated using the model (1.3) with the randomized parameters **a** obeying a desired PDF. In other words, it is necessary to generate an ensemble of the random vectors **a** with given PDFs.
+
+The second fundamental principle of the RML concept is the optimization principle of the randomized model adopted to calculate the optimal PDFs of the model parameters. Here an important stage consists on the choice of an appropriate quality functional. In our case, this (often debatable) question has a well-justified answer. As emphasize earlier, the RML concept is a tool to obtain best decisions under maximum uncertainty. Recall that the uncertain knowledge about an object under study is described by randomized model parameters, uncertain data by additional noises and uncertain estimates by probability density functions.
+
+In the sequel, **the information entropy functional** will be used to characterize the quality of a randomized model. The maximum of this entropy corresponds to the highest uncertainty of our knowledge about the object and noises intrinsic to measured data. An interpretation of information entropy as a measure of uncertainty (with the minus sign, as a measure of information) was first suggested by C. Shannon in his pioneering paper [[165](#refbib.xhtml#r165)], which motivated intensive research in mathematics, statistical thermodynamics, communication theory and other fields of science. A next surge of interest in information entropy is related to the name of E. Jaynes [[80](#refbib.xhtml#r80)], who proved that the entropy maximization principle yields best solutions under maximum uncertainty. In particular, this principle allows to find best solutions under the worst-case probabilistic characteristics of data measurement noises [[66](#refbib.xhtml#r66), [88](#refbib.xhtml#r88), [109](#refbib.xhtml#r109), [141](#refbib.xhtml#r141), [153](#refbib.xhtml#r153), [157](#refbib.xhtml#r157)]. This feature of the information entropy maximization principle is treated as the “entropy”-robust property of the resulting solutions.
+
+# CHAPTER 2 DATA SOURCES AND MODELS
+
+DOI: [`10.1201/9781003306566-2`](https://doi.org/10.1201/9781003306566-2)
+

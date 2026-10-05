@@ -1,0 +1,46 @@
+
+
+* [\[99\]](#`chapter9.xhtml#r99b`) G. E. Krasner, S. T. Pope, et al. 小谈 Smalltalk-80 系统中的模型-视图-控制器用户界面范式。Journal of Object Oriented Programming, 1(3):26–49, 1988.
+* [\[100\]](#`chapter4.xhtml#r100b`) M. A. Krasnoselskii, G. M. Vainikko, P. P. Zabreiko, Ya. B. Rutitskii, and V. Ya. Stetsenko. 算子方程的近似解。Nauka, Moscow, 1969.
+* [\[101\]](#`appA.xhtml#r101b`) M. A. Krasnosel'skii and P. P. Zabreiko. 非线性分析的几何方法, volume 263. Springer, 1984.
+* [\[102\]](#`chapter3.xhtml#r102b`) S. Kullback and R. A. Leibler. 关于信息与充分性。The Annals of Mathematical Statistics, 22(1):79–86, 1951.
+* [\[103\]](#`chapter9.xhtml#r103b`) S. D. Kuznetsov. 大俄罗斯百科全书, volume 11, chapter 信息技术, page 493. 2008.
+* [\[104\]](#`chapter4.xhtml#r104b`) M. B. Lagutin. 视觉数理统计。2013.
+* [\[105\]](#`chapter10.xhtml#r105b`) J. Langford. 分类实用预测理论教程。Journal of Machine Learning Research, 6(Mar):273–306, 2005.
+* [\[106\]](#`chapter1.xhtml#r106b`) A. V. Lapko, S. V. Chentsov, S. I. Krokhov, and L. A. Fel'dman. 数据处理与决策制定的学习系统。Nauka, Novosibirsk, 1996.
+* [\[107\]](#`chapter1.xhtml#r107b`) M. V. Lawson. 有限自动机。CRC Press, 2003.
+* [\[108\]](#`chapter3.xhtml#r108b`) M. Ledoux. *The concentration of measure phenomenon*. Number 89. American Mathematical Soc., 2001.
+* [\[109\]](#`chapter1.xhtml#r109b`) R. D. Levine and M. Tribus. 最大熵形式主义。In Maximum Entropy Formalism Conference (1978: Massachusetts Institute of Technology). MIT Press, 1979.
+* [\[110\]](#`chapter10.xhtml#r110b`) A. V. Levitin. 算法：设计与分析导论。Vil'yams, 2006.
+* [\[111\]](#`chapter1.xhtml#r111b`) P. Lévy. 泛函分析的特定问题。1967.
+* [\[112\]](#`chapter11.xhtml#r112b`) Qianqian Liu, Mark D. Rowe, Eric J. Anderson, Craig A. Stow, Richard P. Stumpf, and Thomas H. Johengen. 利用卫星遥感、原位观测和数值模拟对微囊藻毒素进行概率预测。Environmental Modelling & Software, 128:104705, 2020.
+* [\[113\]](#`chapter11.xhtml#r113b`) Miska Luoto and Matti Seppala. 冻融湖泊作为芬兰拉普兰苔原沼泽前分布的指示物。Permafrost and periglacial processes, 14(1):19–27, 2003.
+* [\[114\]](#`chapter5.xhtml#r114b`) L. A. Lusternik and V. I. Sobolev. 泛函分析基础。1965.
+* [\[115\]](#`chapter3.xhtml#r115b`) J. R. Magnus and H. Neudecker. 具有统计学和计量经济学应用的矩阵微分演算。*Wiley series in probability and mathematical statistics*, 1988.
+* [\[116\]](#`chapter3.xhtml#r116b`) O. Maillard and R. Munos. 压缩最小二乘回归。In Advances in neural information processing systems, pages 1213–1221, 2009.
+* [\[117\]](#`chapter10.xhtml#r117b`) J. K. Martin. 决策树分裂与停止的精确概率度量。Machine Learning, 28(2):257–291, 1997.
+* [\[118\]](#`chapter10.xhtml#r118b`) A. B. Merkov. 图像识别。统计学习方法导论。URSS, Moscow, 2010.
+* [\[119\]](#`chapter1.xhtml#r119b`) M. D. Mesarovic, D. Macko, and Y. Takahara. 层级、多级系统理论。Academic Press, 1970.
+* [\[120\]](#`chapter8.xhtml#r120b`) N. Metropolis and S. Ulam. 蒙特卡洛方法。Journal of the American Statistical Association, 44(247):335–341, 1949.
+* [\[121\]](#`chapter8.xhtml#r121b`) D. D. L. Minh and Do Le Minh. 理解 Hastings 算法。Communications in Statistics—Simulation and Computation, 44(2):332–349, 2015.
+* [\[122\]](#`chapter4.xhtml#r122b`) M. Minsky and S. Papert. 感知机：计算几何导论。MIT Press, Cambridge, 1969.
+* [\[123\]](#`chapter4.xhtml#r123b`) J. Neyman. 基于经典概率论的统计估计理论概要。Philosophical Transactions of the Royal Society of London. Series A, Mathematical and Physical Sciences, 236(767):333–380, 1937.
+* [\[124\]](#`chapter2.xhtml#r124b`) A. V. Oppenheim. 离散时间信号处理。Pearson Education India, 1999.
+* [\[125\]](#`chapter1.xhtml#r125b`) J. de D. Ortuzar and L.G. Willumsen. 交通建模。Wiley, 1995.
+* [\[126\]](#`chapter1.xhtml#r126b`) G. S. Osipov. 人工智能方法。Fizmatlit, 2011.
+* [\[127\]](#`chapter3.xhtml#r127b`) K. Pearson. 关于空间点系最近拟合的直线与平面。Philosophical Magazine, 2(6):559–572, 1901.
+* [\[128\]](#`chapter3.xhtml#r128b`) F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot, and E. Duchesnay. Scikit-learn：Python 中的机器学习。Journal of Machine Learning Research, 12:2825–2830, 2011.
+* [\[129\]](#`chapter11.xhtml#r129b`) Michiel Pezij, Denie CM Augustijn, Dimmie MD Hendriks, and Suzanne JMH Hulscher. 应用传递函数-噪声建模表征土壤湿度动态：利用遥感数据的数据驱动方法。Environmental Modelling & Software, 131:104756, 2020.
+* [\[130\]](#`chapter11.xhtml#r130b`) O.S. Pokrovsky, L.S. Shirokova, S.N. Kirpotin, S. Audry, J. Viers, and B. Dupre. 永久冻土融化对西西伯利亚热喀斯特湖中有机碳和痕量元素胶体赋存形态的影响。Biogeosciences, 8(3):565–583, 2011.
+* [\[131\]](#`chapter11.xhtml#r131b`) V Polishchuk and Yu Polishchuk. 利用卫星图像对热喀斯特湖群动态进行建模与预测。In Permafrost: Distribution, Composition and Impacts on Infrastructure and Ecosystems, pages 205–234. Nova Science Publisher, NY, 2014.
+* [\[132\]](#`chapter11.xhtml#r132b`) YuM Polishchuk, AN Bogdanov, IN Muratov, VYu Polishchuk, A Lim, RM Manasypov, LS Shirokova, and OS Pokrovsky. 西西伯利亚低地永久冻土影响区内陆水体中碳和甲烷库的小型融化池塘的微小贡献。Environmental Research Letters, 13(4):045002, 2018.
+* [\[133\]](#`chapter11.xhtml#r133b`) Yury M. Polishchuk, Alexander N. Bogdanov, Vladimir Yu Polishchuk, Rinat M. Manasypov, Liudmila S. Shirokova, Sergey N. Kirpotin, and Oleg S. Pokrovsky. 西西伯利亚低地永久冻土带热喀斯特湖的大小分布、表面覆盖率、水、碳和金属储量。Water, 9(3):228, 2017.
+* [\[134\]](#`chapter3.xhtml#r134b`) B. T. Polyak. 优化导论。Nauka, 1983.
+* [\[135\]](#`chapter7.xhtml#r135b`) B. T. Polyak and E. N. Gryazina. Hit-and-run：线性系统稳定化、鲁棒性和优化的新设计技术。IFAC Proceedings Volumes, 41(2):376–380, 2008.
+* [\[136\]](#`chapter3.xhtml#r136b`) B. T. Polyak and M. V. Khlebnikov. 主成分分析：鲁棒版本。Automation and Remote Control, 78(3):490–506, 2017.
+* [\[137\]](#`chapter1.xhtml#r137b`) A. D. Polyanin and A. V. Manzhirov. 积分方程手册。CRC press, 2008.
+* [\[138\]](#`chapter2.xhtml#r138b`) Yu. Popkov and A. Popkov. 有限数据下随机模型熵鲁棒估计的新方法。Entropy, 16(2):675–698, 2014.
+* [\[139\]](#`chapter3.xhtml#r139b`) Yu. S. Popkov. 大系统理论及其应用 (Lecture Notes in Control and Information Sciences, vol. 203). Springer, 1995.
+* [\[140\]](#`chapter7.xhtml#r140b`) Yu. S. Popkov. 约束熵最大化问题中直接乘性方法的收敛性。Automation and Remote Control, 59(4):534–544, 1998.
+* [\[141\]](#`chapter1.xhtml#r141b`) Yu. S. Popkov. 大系统理论。平衡模型。URSS, Moscow, 1999.
+
