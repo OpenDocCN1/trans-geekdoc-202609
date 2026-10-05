@@ -1,0 +1,15 @@
+# 4.5.1 Data Velocity and Volume
+
+The *velocity* of data refers to the speed at which it enters a system and must be processed. Examples of high velocity data are electronic trades on a stock exchange and TikTok posts. Assuming the ongoing operation of each of these exchanges, the flow of this data is rapid. An example of low velocity data is the recording of lab measurements for a single patient during a one-week hospital stay.
+
+We can think of *data volume* as the number of rows of data, such as the number of transactions, stock trades, and patient discharges. The volume of data in the stock exchange and TikTok examples can be treated as infinite. For the case of lab measurements, the volume is very low.
+
+Let now think about the relationship between volume and velocity, and how high levels of either can pose a challenge using snowfall as an example. When I was living outside Ottawa, one extreme winter brought so much snow, in both volume and velocity, the city buses were picking up customers in the middle of the streets. The city needed to multiply its workforce to move the snow and were running out places to put it. In this scenario, processing (the number of workers) and storage (to put the snow) was a challenge. Next, imagine a snowfall with high velocity, but lasting only a few hours. Knowing the duration in advance, a scaled workforce would have gone out to clear paths between bus stops and busy streets. In this beneficial scenario, the snow never accumulates, and there are plenty of places to move the snow. In these conditions, processing would be a slow but large accumulation over a longer period. In such a case, storage would be a bottleneck.
+
+From these different snowy conditions, we learned that the only easy scenario is when both the volume and velocity of snowfall is low. Perhaps this explained my move to California after winter! Bringing this back to the data, cases of high velocity, high volume, or both can cause challenges for a system in terms of storage and processing. In response to this data deluge and the growth of Big Data, new methods such as *map reduce* and new tools including Hadoop and Spark were born.
+
+# 4.5.2 Batch Versus Streaming
+
+A finite block of data is called *batch data*, and processing the data is called *batch processing*. Before sources like the web, mobile devices, and the internet of things, most data was batch data. A program can read in batch data from an input file, process the data, and store the results to an output file. After the results are stored, the job is finished, so things are straightforward.
+
+Now think about a system that connects to X (previously Twitter), ingests all of the posts, extracts the tweets (messages), computes the frequency of each hashtag, and saves the results to an output file. This is an example

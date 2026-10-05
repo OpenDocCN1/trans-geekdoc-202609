@@ -1,0 +1,11 @@
+# # Preface
+
+The amount of data generated in the world and the number of decisions to be made from this data has never been greater. Over 2.5 quintillion bytes of data are produced by humans every day [1], and new units of measure are on the way to quantify data of the future. From healthcare to retail care insurance finance every field that isn't in the technology sector is directly using technology, or likely should be using it. Many of these fields are spawning new fields with suffix: finance is FinTech, insurance is InsurTech, and WealthTech, MarTech(marketing), and AITech (advertising).
+
+This is exciting, but it is exceedingly difficult to find people who know the underlying field and the technology really well. In the early days of data science, there were some rare unicorns with strong quantitative and programming skills who could wizardry in these industries. The IT department lent a hand, or they were mathematicians or statisticians. One-off projects proved that understanding the organization's data could work wonders. Simple analytics, or perhaps regression analysis, caught the attention of management. As the desire to relate and produce the data assets grew, however, became a full-time job, or perhaps required an entire department of people. Data became a strategic asset, and the people needed to tap into this asset were in high demand.
+
+As of 2024, demand for this kind of work and the people who bring the magic has never been greater. The job functions of the AI-driven world are better understood, and they names like data scientist, data engineer, and machine learning engineer. These lucky people are some of the most desired knowledge workers in the world. Yet, there is a massive shortage of them.
+
+From the supply side
+
+As a passion project, I created a high school data science course with Matt Dakilios, who was one of my students from the University of Virginia (UVA) School of Data Science. As you might guess, it's a tremendous amount of work to create a high school course. Unfortunately for me, I can't seem to pick passion projects that are easy. The best I can hope for is that

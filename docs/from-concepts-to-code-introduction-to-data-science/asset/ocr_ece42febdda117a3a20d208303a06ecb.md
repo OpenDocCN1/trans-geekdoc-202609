@@ -1,0 +1,13 @@
+# Know Your Audience
+
+critically. For example, he might realize that a column of numbers should sum to one. Great managers and leaders can do this, so it's best to be careful and thoughtful. As you do the simple things properly, you will be trusted to do harder.
+
+A great scientist needs to be a thoughtful "trail guide." Like any technical field, data science uses abstractions, assumptions, complex ideas, and jargon. Data and models have limitations and weaknesses that may render your careful analysis useless. To earn trust, make everything clear to your audience. Statistics and limitations import upon. Explain why the approach is used in spite of the assumptions and limitations. Add a key for acronyms, define variables, explain the metrics. Are you summarizing customer satisfaction with a scale of 1-10? Explain how this is measured. If possible, test the assumptions and impact, and try things in different ways.
+
+When we review the work of others, we tend to look for logical fallacies. Methodology issues early in a presentation can quickly eradicate the interest of the audience. "Wait... this dataset is missing a key group of individuals. In that case, including them in this analysis." When sharing our work, it is ideal to avoid making errors, and to anticipate tough questions by the work. An effective strategy that Amazon uses when developing a new product is to write a PR/FAQ, which is a combined press release and question/answer section thinks around corners and gets ahead of reader questions and objectives.
+
+# 2.3 Know Your Audience
+
+As an advisor and consultant, I work with customers to conceptualize, plan, and implement applications of AI and machine learning. This includes working with their leadership to prioritize initiatives, plan a detailed proof of concept (POC), help with implementation, and report out the findings. From project to finish, the audiences will change and I need to be thoughtful on how to lead discussions. As a technical person, I need to avoid my temptation to talk about deep networks with a CEO, for example. I need to "know my audience," so let's get to know them a bit.
+
+My meetings with the leadership team may include the CEO, the Chief Officer, and the VP engineering. In these discussions, the focus will be at a strategic level: it is not about fighting fires to solve a small, immediate problem. We talk about things that can have a large impact on the business, such as creating a new product. If we discuss a metric, it will most often be return on investment (ROI), which reflects expected revenue and capital investment. The questions are focused on what should be done, and not how it should be done. Of course, machine learning is part of the how,
