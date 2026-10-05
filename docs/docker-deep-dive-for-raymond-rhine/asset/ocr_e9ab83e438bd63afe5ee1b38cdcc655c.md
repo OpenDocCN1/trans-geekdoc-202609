@@ -1,0 +1,7 @@
++   - **build:** tells Docker to build the image for this service’s container from the Dockerfile in the current directory.
+- **command: python app.py** is the command Docker will execute inside every container it creates for this service. **app.py** file must exist in the image, and the image must have Python installed. The Dockerfile takes care of both of these requirements.
+- **ports:** is where you map network ports from the service’s containers to the Docker host. This example maps port 5001 inside the container.
+- **networks:** tells Docker to attach this service’s containers to the **counter-net** network. The network should already exist or be defined in the **networks** top-level key.
+- **volumes:** tells Docker to mount the **counter-vol** volume to the `/app` directory inside all of the service’s containers. The volume should already exist or be defined in the **volumes** top-level key.
+
+In summary, Compose will instruct Docker to deploy a single container for the **web-fe** service. It will build a new image from the Dockerfile in the same directory and start the container from that image. When it starts, the container will have **web-fe** in its name and run the **python app.py** command. It will attach to the **counter-net** network, expose the web service on the host’s port 5001 , and mount the

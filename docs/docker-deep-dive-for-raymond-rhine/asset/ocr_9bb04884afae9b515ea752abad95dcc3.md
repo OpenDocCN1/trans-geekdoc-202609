@@ -1,0 +1,3 @@
+| Term | Definition (according to Nigel) |
+| Multi-architecture builds (sometimes called multi-platform builds) | Allows you to build images for multiple architectures and platforms with a single **docker build** command. For example, you can run a single **docker build** command on an AMD-based Windows system to build an AMD image **and** an ARM image. |
+| Multi-state build | Allows you to create very small images (slim images). You build your images in stages and only carry forward the necessary artifacts for each stage. Each build stage is represented by its own **FROM** instruction in your Dockerfile, and later build stages use the **COPY --from** instruction to use artifacts from previous stages and leave everything else behind. |

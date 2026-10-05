@@ -1,0 +1,1 @@
+You also learned the importance of the build cache for speeding up builds and how to optimize Dockerfiles to leverage the build cache.
