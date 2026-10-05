@@ -1,0 +1,17 @@
+# Zhai et
+
+![](bbox=[0.093, 0.068, 0.805, 0.303])
+
+**Figure 6** The selection of diagnostic markers from candidate olfactory molecule genes (CMGs), A, B, D, and E: The lower abscissa is the log lambda value, and the upper abscissa is the number of CMGs with non-zero coefficient; the vertical axis represents the Least Absolute Shrinkage and Selection Operator (LASSO) coefficient shows the variation trajectory of the coefficients of each gene. At cross-validation in The Cancer Genome Atlas (TCGA) data set, B: LASSO profiles of 33 candidate CMGs after the 10-fold cross-validation in the TCGA data set. C: Support Vector Machine–Recursive Feature Elimination (SVM-RFE) to identify markers in the TCGA data set. D: Definition of the number of CMGs with non-zero coefficients in the GSE31210 data set (https://www.ncbi.nlm.nih.gov/geo/query.acc=GSE31210). E: LASSO profiles of 21 candidate CMGs after the 10-fold cross-validation in the GSE31210 data set. F: SVM-RFE to identify markers in the data set. RMSE, mean square error.
+
+belongs to BT family. It regulates the balance between T-cell activation and suppression through its interactions with CD28 and CTLA-4 receptors on T. After interaction with CD28, CD80 can rescue costimulatory signal to T-cell activation, maintain T-cell function and survival, and may also block effector T-cell function through interactions with CTLA-4.¹⁴ mechanism may be a potential target for immunotherapy therapy, which has been explored in gastric cancer, follicular lymphoma, NSCLC, and others. LTBM, also known as non tumor necrosis factor member 3, belongs to the TNF family and is able to function in the membrane-bound protein LTBβ2, which binds to LTFR and further increases production of cytokines, pro-inflammatory cytokines and tumor necrosis via NF-κB pathways to regulate trafficking and positioning of desired immune cells. Thus, this peptide target might be used as a potent therapeutic strategy as many tumors have persistently activated LTFR signaling.
+
+response-antigen cell death protein T functions in tumor environment, progression-free survival, and overall.¹²
+
+These three biomarkers were used to establish a diagnostic program for LUAD, with CD80, LTB, and TNSF8 found to be classified with high TIME status. The diagnostic algorithm also exhibited high predictive performance in an independent cohort set (GSE180347). The GSE31210 data set was validated using TIME method, which involved estimation of lymphocytes in hematoxylin and eosin stain¹³ to verify its diagnostic validity. IHC analysis in the study revealed apparently positive correlations between these three biomarkers and the pathological response rate in the tumor. However, only the H-score of LTB and TNSF8 showed a significant correlation with response rate in the immune area. This result is limited to LUAD. Our diagnostic program on CMGs may provide potential targets for further experimental designs to pursue the molecular mechanisms behind them and explore novel therapeutic strategies for LUAD.
+
+Some limitations have been noted in the current study. First, although the characteristics and data of CMGs were analyzed in a comprehensive manner in patients with LUAD and the signature feature validated in
+
+1442
+
+ajpathol.org | The American Journal of Pathology
