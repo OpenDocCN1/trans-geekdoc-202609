@@ -1,0 +1,255 @@
+
+# Index
+
+## A
+- active hub 13
+- Add Round-Key Transformations 276
+- AES (Advanced Encryption Standard) 508–9
+  - vs. DES 270, 277
+  - parameters 271–6
+  - plaintext, processing of 271–6
+- AH (Authentication Header) 436–8
+- ANSI X09.17 Pseudo-Random Number Generator 284–6
+- APs (access points)
+- Arbitrated Digital Signature 350–2
+- ARP (Address Resolution Protocol) 7
+- AS (Authentication Server) 355, 397, 405
+- AS (Autonomous System) 8, 9
+- Birthday Attack 360–1
+- Birthday Paradox 357–9
+- Denning Protocol 353–3
+- digital signatures 349–52, 376–88
+- hash function 346–9
+  - MD5 algorithm 364–7, 370–1
+- Message Authentication 337–46
+- message words in various rounds 368
+- mutual authentication 352
+- Needham Schroeder Protocol 353
+- NEUM Protocol 354–5
+- one-way authentication 355–6
+- primitive functions 368–70
+- Public-Key encryption approaches 355, 356
+- Secure Hash Algorithm 371–5
+- symmetric encryption approaches 353, 356
+  - two sets overlapping, probability of 359
+- weak collision resistance 363
+- autocovariance 65–7
+- avalanche effect 239–45
+
+## B
+- balance equations 82, 89, 90, 96
+- BBS (Blum Blum Shub) Pseudo-Random Bit Generator 256–7
+- BC (Blockchain) technology
+  - advantages of 533–5
+  - benefits and challenges 532–3
+  - concept 531
+  - definition 530
+  - features of 531–2
+- security issues of 535–6
+- Bernoulli distribution 47–8
+- big data analysis 489–93
+  - characteristics 490
+  - flow 491
+  - security issues and privacy challenges 492–3
+- binomial distribution 48–9, 61
+- birth-and-death processes 73, 96
+- Birthday Attack 360–1
+- Birthday Paradox 357–9
+- Blockchain technology *see* BC
+- block cipher protocol 128
+  - CBC 254–6
+  - Cipher Feedback 256–9
+  - Counter Mode 262–5
+  - ECB 252–4
+  - Output Feedback 259–62
+- Bridge Table 13
+- brute force attack 130, 201, 203, 247, 270
+- bus topology 22–3
+
+## C
+- Caesar Cipher 112, 200–2
+- CAs (Certification Authorities)
+  - hierarchical organization of 413–14
+  - registration of 410
+- CBC (cipher block chaining) mode
+  - advantages of 256
+  - decryption of 255–6
+  - encryption of 254–5
+  - limitations 256
+- computer networks, definition 1
+- conditional probability 39–40, 46
+- continuous probability models
+  - erlang distribution 54–5
+  - exponential distribution 53–4
+  - gaussian distribution 55–7
+  - hyperexponential distribution 55
+  - properties of 57
+  - uniform distribution 52–38
+- continuous random process 62
+- co-prime 154
+- correlation coefficient 66
+- CDF (cumulative distribution function) 42–3, 63–5
+- central limit theorem 56, 60–1
+- centralized authentication service 391, 392
+  - kerberos v 397–404, 406–7
+  - kerberos v 505–7
+  - motivation for 392
+  - simple authentication exchange in open environment 393–7
+- certification affaires cas
+- certificate revocation list crl
+- cfpb (cipher feedback mode) 256–7
+  - advances 259
+- counter mode see ctr
+- crc (cipher: Redundancy Check) value 122
+- crl (Certificate Revocation List) 410, 414, 415
+  - decryption of 258
+  - encryption of 257–8
+  - limitations of 259
+- csma/cd (carrier sense multiple access with collision detection) 16–17
+- ctr (counter mode) 262–5
+- chinese theorem 189–94
+- cipher block mode see cbc
+- cipher-text 111–13, 116, 118, 126, 128–31, 202, 204, 207, 221–4, 239, 249, 241, 255, 262, 274, 333, 339
+- classical substitutions 199–213
+- classical transposition ciphers 213–15
+- hill 204–7
+- mono-alphabetic cipher 202–4
+- one-time pad 212–13
+- play-fair cipher 207–9
+- vigenere/poly-alphabetic cipher 209–12
+- cla shannon’s theory 223–4
+- cloud computing technology 493–4
+- cloud deployment models 495
+- consumer service 498
+- cryptanalysis 112, 115, 130
+- cryptographic primitives 117
+- cryptographic protocol 117
+- csprbg (cryptographically secure pseudo-random bit generator) 286
+- cyclic encryption 283–4
+- cumulative distribution function see cdf
+- data encryption algorithm see dea
+- data encryption standard see des
+- datagrams 7
+- data integrity 122, 124, 342
+- data origin authentication 121, 338
+- dea (data encryption algorithm) 116–117, 129, 130, 225, 239, 269, 294
+- security concerns and challenges 497–8
+- common modulus attack 298–300
+- decryption key 111, 116, 118, 131, 202, 426
+- geometric distribution 49–50
+- discrete-time random process 62
+- distributed ledger technology.see Blockchain (BC) technology
+- Denning protocol 353–4
+- DES (Data Encryption Standard) 219
+  - vs. Advanced Encryption Standard 276, 277
+- differential cryptanalysis attack 241–3
+- Feistel decryption algorithm 230–3
+- Feistel encryption algorithm 229
+- general depiction of 229
+- linear cryptanalysis 244–5
+- multiple 245–6
+- DNS (Domain Name System) 6
+- encryption 245–6
+- Meet-in-the-Middle Attack 247–8
+- strength of 247
+- S-box transformation 236–7
+- sub-keys, generation of 217–8
+- deterministic random process 62
+- ECB (Electronic Code Book) mode
+- ECC (Elliptic Curve Cryptography) 114, 309–11
+  - decryption of 252–3
+- DHCP (Dynamic Host Configuration Protocol) 7
+- Diffie-Hellman Key Exchange Algorithm 300, 450
+- Binary Curve 309
+- hardware implementation 331
+- decryption/encryption scheme 320–31
+- key-algorithm 318–20
+- Prime Elliptic Curve Set 310–12
+- strength of 318
+- Clogging Attack 304
+- global parameters 301–3
+- Electronic Code Book mode see ECB
+- Man-in-the-Middle Attack 304–5
+- ElGamal Encryption Scheme 305–8
+- ElGamal Digital Signature Scheme 378–8
+- digital list 124, 400, 338
+- Elliptic Curve Cryptography see ECC
+- emerging technology security of
+- BC technology 530–6
+- big data analytics 489–93
+- cloud computing 493–8
+- Arbitrated Digital Signature 350–2
+- Internet of Things 498–510
+- SCADA systems 515–18
+- Digital Signature 352–8
+- smart city 525–9
+- smart grids 515–11
+- Wireless Sensor Network 519–25
+- ElGamal's Digital Signature Scheme 378–
+- verification of 361
+- Digital Signature Algorithm see DSA
+- Digital Signature Standard see DSS
+- Dijkstra algorithm 9
+- direct digital signature 349–50
+- discrete logarithms 178–82
+- discrete probability models
+  - Bernoulli distribution 47–8
+  - binomial distribution 48–9
+- Encapsulating Security Payload see ESP
+- encryption algorithm 116, 129, 130, 225, 233, 239, 294, 406
+- encryption key 112, 116, 207
+- end-to-end encryption 133
+- Enigma Machine 112
+- Enveloped Data 432, 434
+- ergodic processes 62–3, 67–9
+- ESP (Encapsulating Security Payload) 439–42
+- Ethernet 7
+- ethical hacking 112, 115
+- Euclid’s algorithm 155–6, 164
+- Euler’s theorem 170–6
+- Euler’s Totient Function 168–70
+- Expansion Permutation 234–5
+- Exponentiation in Group 143–4
+- Finite Group 141–3
+- Infinite Group 141
+
+## F
+- Feistel cipher 224–7
+- Fermat’s Little Theorem 166–8
+- field 145–6
+- firewall
+  - application-level gateway 484
+  - Bastion host 483
+  - circuit-level gateway 484
+  - configurations 485
+  - control access, techniques to 483
+  - definition 482, 485
+  - packet filtering router 484
+  - state-full inspection firewalls 484
+
+## I
+- IaaS (Infrastructure as a Service) 496–7
+- ICV (Integrity Check Value) 437, 438–9
+- ICMP (Internet Control Message Protocol)
+- IDEA (International Data Encryption Algorithm)
+- Internet Control Message Protocol ICMP
+- Internet of Things IoT
+- Internet Security Protocol IPSec
+- Intermediate System–Intermediate System
+see ISIS
+- Management Protocol see ISAKMP
+- intrusion detection
+  - definition 478
+  - profile-based detection 479
+  - rule-based detection 479
+  - threshold detection 478–9
+
+## H
+- hash function 340–1, 346–9
+  - characteristics of 348–9
+  - signed message, symmetric encryption of 347, 348
+  - strengths of 363
+- hierarchical model 9–10
+- Hill Cipher 204–7
+- hybrid encryption technique 505–8
+- hybrid topology 26

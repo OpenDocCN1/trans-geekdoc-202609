@@ -1,0 +1,3 @@
+# ACKNOWLEDGMENTS
+
+It is my pleasure to acknowledge the outstanding help and support of the team at Mercury Learning and Information in preparing this book, especially from David Pallai and Jennifer Blaney. Thanks to Professor John Burghduff and Professor Mary Jane Ferguson for their support, understanding, and being great friends. Finally, the book would never have seen the light of day if not for the constant support, love, and patience of my family, my wife Lama, my children Mahmoud, Ibrahim, Khalid, and my mother-in-law, Moyassar.
