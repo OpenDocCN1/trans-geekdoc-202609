@@ -1,0 +1,942 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # NJC
+
+
+    # COMMUNICATION
+
+
+    View Article Online
+
+    View Journal | View Issue
+
+
+    ![](img/33f80a751675bc430670c4c1179ca0b2_0_0.png)
+
+
+    # A deep learning framework for predictions of excited state properties of luminescent
+    molecules†
+
+
+    Cite this: New J. Chem., 2023,
+
+    47, 9550
+
+
+    Received 12th March 2023.
+
+    Accepted 29th April 2023.
+
+    DOI: 10.1039/d3n0174g
+
+
+    rsc.nijc
+
+
+    Zheng Tan,a Yan Li,b Zying Zhang,c Thomas Penfold,d Weimei Shi,e
+
+    Shiqing Yang†a and Wanli Zhang†b
+
+
+    We have implemented a deep learning framework to forecast the excited state properties
+    for thermally activated delayed fluorescence (TADF) molecules with satisfactory
+    accuracy being achieved. In particular, for the oscillators, precisions have been
+    significantly improved when the torsional profile of the
+
+
+    and reducing the frontier orbital overlap. Currently, most of the TADF design
+    is based on the D-A dihedral twisting is properly adjusted to realize the separation
+    of the frontier orbitals (i.e., HOMO and LUMO), and the oscillator strength to
+    be accurately simultaneously.
+
+
+    Thermally activated delayed fluorescence (TADF) materials, as the third generation
+    of diodes, have been extensively studied in the past due to their high potential
+    in making organic light-emitting diode (OLED) devices. To simply demonstrate its
+    operation mechanism upon excitation, TADF molecules can getters via reverse intersystem
+    crossing (RISC) to the singlet energy gap. In Fig. 1, the triplet exciton can
+    get with a high internal quantum efficiency approaching 100%. By the conventional
+    fluorescent and phosphorescent materials, TADF have the advantages of larger material
+    space, low fabrication cost without the use of heavy atoms, and more blue-light
+
+
+    The design of TADF materials requires managing singlet-triplet gaps. It is known
+    that time-dependent density functional theory (TDDFT) can have reasonable accuracy
+    in describing the excited state properties, and it has been extensively used in
+    high throughput screening for the exploration of the TADF search space. However,
+    high throughput calculation can suffer from the large number of molecules. With
+    the advent of machine learning (ML), molecular discovery has entered a new era,
+    which can significantly shorten the material research and development cycle. For
+    particularly TADF molecules, deep neural network (DNN) has been used to predict
+    the physical properties including the TADF luminescence
+
+
+    The design of TADF molecules is challenging, since it requires the optimization
+    of opposing properties, i.e., the oscillator strength f and the first singlet-triplet
+    gap ΔEST. An efficient emission in TADF requires f to be maximized and ΔEST to
+    be minimized,
+
+
+    ![](img/33f80a751675bc430670c4c1179ca0b2_0_1.png)
+
+
+    aCheng Poly University, 63 Tian Street, Chengdu, 610000, P. R. China.
+
+    Email: zhengtan88@gmail.com
+
+    bState Key Laboratory of Information Electronic Films and Integrated Circuits,
+    University of Science and Technology of Chengdu, 617137, P. R. China.
+
+    cGuangzhou Information Technology, 2 Ruyi Road, Panyu District, Guangzhou, 511441,
+    P. R. China.
+
+    dDepartment of Chemistry and Environmental Sciences, Newcastle University, Newcastle
+    Tyne, NE8 7RU, UK.
+
+    eElectronic supplementary information (ESI). Available at: https://doi.org/10.1039/d3n0174g
+
+
+    9550 | New J. Chem., 2023, 47, 9550–9554
+
+
+    This is the Royal Society of Chemistry and the Centre National de la Recherche
+    Scientifique 2023'
+  - '[PAGE 1]
+
+
+    # R squared
+
+
+    constant,¹ singlet and triplet excitation and oscillator strengths². It is observed
+    that, for the transitions and the corresponding rate data, DNN can make high quality
+    predictions with an accuracy comparable to that of TDDFT calculations. Nevertheless,
+    for the oscillator strengths, the prediction is less accurate, especially for
+    the excited states. The reason has been attributed to the two-dimensional fingerprint
+    in DNN cannot figure out the 3-dimensional wishing, which is critical for the
+    estimation of energy. Similar results have also been encountered in Lu et al.³
+    and Kang et al.⁴ work, in which it claimed that the ML should be used for the
+    prediction of transition dipole moment
+
+
+    ![](img/33f80a751675bc430670c4c1179ca0b2_1_0.png)
+
+
+    # RMSE
+
+
+    In order to provide a comprehensive ML-assisted analysis of TAFD materials, this
+    article investigates the predictive performance of state-of-the-art deep learning
+    methods on the electronic properties that are directly related to the electronic
+    applications of DFT. Deep neural network (DNN), graph convolutional network (GCN),
+    message passing neural network (RNN) and SchNet models are employed to handle
+    the 1-dimensional and 3-dimensional representations of molecules for the fitting
+    of excited states and oscillator properties. A dataset (containing 1394 samples)
+    with better accuracy structure than TDDFT calculations is used to label, as described
+    in the supplementary material), is used for the model training, validation and
+    testing. Prediction accuracies are compared between different models, where SchNet
+    and message passing are also in to understand the others. The cut-off of the 3-dimensional
+    models (including SchNet and message passing) explains how the long-range interactions
+    can influence the electronic properties. We also examine how constructing models
+    based on the original 1-dimensional features of TAFD so that more information
+    can be included. It is observed that the predictive performance for the oscillator
+    strengths can be significantly improved when models are applied on the conformer
+    descriptor.
+
+
+    ![](img/33f80a751675bc430670c4c1179ca0b2_1_1.png)
+
+
+    # MAE
+
+
+    Detailed descriptions regarding the TAFD database construction and the learning
+    methodologies are given in the supplementary material.
+
+    Fig. 2 shows the performance details of the deep learning models for the excited
+    states properties of TAFD materials. Statistical estimates indicate the R², mean
+    squared error (RMSE) and mean absolute error (MAE) are evaluated. The R² for 1-dimensional
+    models, demonstrating the satisfactory performance for the transition predictions
+    when deep learning methods are applied, is in the range of 0.7-0.9. For 3-dimensional
+    models, the MAE is around 0.2, which is acceptable, but for the higher excited
+    states, it is significantly decreased. The observation is consistent with the
+    works in Lu et al.⁵ and Tan et al.⁶ where uncertainties are encountered when deep
+    learning is employed to predict the transition dipole. For the singlet-triplet
+    energy splitting, all models achieve a R² above 0.85, improving the robustness
+    of the models in simulating the fluorescence properties.
+
+
+    ![](img/33f80a751675bc430670c4c1179ca0b2_1_2.png)
+
+
+    > Fig. 2 Statistical estimates of prediction for excited state properties in the
+    test set. S₁, S₂, S₃ T₁, T₂, and T₃ represent the first singlet and triplet states,
+    respectively. Sᵢ denotes the oscillator strength, and ΔE_ST are the energies in
+    unit of eV, while f is. For MP and SchNet models, the cut-off is set to 2 and
+    5 Å, respectively.
+
+
+    To compare performances between models, DNN, RNN and SchNet give relatively better
+    accuracy on average (as shown in Table 1) than GAN and MI. It is interesting that
+    the 3-dimensional model (represented by SchNet) does not necessarily outperform
+    the 1-dimensional (represented by RNN) and 2-dimensional (represented by DNN)
+    models, even though it can capture more geometrical information of molecules.
+
+
+    Specifically for each model, DNN has the best prediction across the three oscillator
+    strengths. GCN'
+  - '[PAGE 2]
+
+
+    # View Article Online
+
+
+    # Communication
+
+
+    Table 1 Set average parameters of deep learning models for excited state properties.
+    For RMSE and MAE, sampling is performed over the ten targets using the units of
+    energies and oscillator strengths are different. Fig. 2, the cut-off of the MP
+    and SchNet models is set to 5 and 20 respectively.
+
+
+    ![](img/33f80a751675bc430670c4c1179ca0b2_2_0.png)
+
+
+    | Test average performance | RMSE | MAE |
+
+    |---|---|--|
+
+    | DNN | 0.7466 | 0.0892 | 0.0546 |
+
+    | GCN | 0.6925 | 0.1010 | 0.0516 |
+
+    | RNN | 0.7451 | 0.0080 | 0.0556 |
+
+    | MP | 0.7018 | 0.0039 | 0.0619 |
+
+    | SchNet | 0.7489 | 0.0047 | 0.0575 |
+
+
+    ![](img/33f80a751675bc430670c4c1179ca0b2_2_1.png)
+
+
+    ![](img/33f80a751675bc430670c4c1179ca0b2_2_2.png)
+
+
+    ![](img/33f80a751675bc430670c4c1179ca0b2_2_3.png)
+
+
+    moderate performance on all identified targets, indicating a possibility of modeling
+    the 2-dimensional graph in predicting excited state properties (note that the
+    reference structure does). Significant contrast with the ground state predictions
+    where GCN usually uses the best prediction^{(15)}, RNN performs good for many
+    of the properties although the model only takes the SMILES strings as input, without
+    any structural similarities. MP works well in excited state energies, especially
+    for three triplet states where $R''$ above 0.3. It performs poorly for the oscillator
+    strengths (except for the first excited state), with $R''$ of 0.01 for $S_{f,S_{j}}$.
+    The result shows that the 3D-model does not describe the higher order transitions.
+    Regarding SchNet, the average performance in the test set is observed compared
+    to other models (Table 1). The MAE of SchNet is in the range of 0.03-0.05 eV,
+    which is comparable with the predictive error of excited state for organic semiconductors^{(16)}$.
+    The fact that SchNet can deliver good results for the ground and excited state
+    (in this report) indicates that the model may capture the main features in quantum
+    manybody physics to resolve the electronic structure.
+
+
+    Fig.3 Flowchart for the conformer set, including generation via the stochastic
+    search algorithm, field geometry optimization and configuration filtering based
+    on the RMSE (root-mean square cut-off). Note that RMSE is defined as the root
+    mean square displacement of atoms between a generated conformer and the reference
+    structure. The difference denotes the mean error within the conformer generator.
+
+
+    The cut-off of the 3-dimensional models (MP and SchNet) is also examined, with
+    no correlation found between the prediction accuracy and cutoff radius. Detailed
+    analysis is provided in the supplementary material. Considering the possibility
+    of oscillator strengths, we developed a conformer dataset based on the original
+    D-A molecules by extending the molecular forces, so that much more information
+    (which is of importance for oscillator strengths) can be included in the training
+    input to evaluate the robustness. The conformer set is built through a stochastic
+    search algorithm (evolutionary algorithm) with distance constraints generating
+    conformers that satisfy various constraints using lower/upper bounds on distances
+    and torsional-angle preferences (using the module GetDKit3 as implemented in RDKit).
+    As illustrated in Fig.3, the initial configurations are produced by twisting the
+    molecular fragments along the torsional-angle preferences. As the rotatable bond
+
+
+    is located the donor-acceptor molecule for most TADF molecules, the electrons
+    are excited through a twisted D-A structure. A geometry optimization is then performed
+    on the generated conformations using the MMP4 field^{(18)} to settle the conformers
+    onto a local minimum. A configuration filtering procedure is implemented to rule
+    out the generated conformers with conformational deviations (measured in terms
+    of RMSE) from a cut-off value.
+
+
+    In total, 3650 conformers were generated. The conformers of the original D-A molecules,
+    on average it is equivalent to producing around 2-300 conformers for each molecule.
+    More details relevant to the conformer set construction are given in the supplementary
+    material. We show the SchNet model (which performs the best on the original dataset)
+    to examine the predictability of properties for TADF conformers. Fig.4 shows the
+    predictions of the oscillator strengths and singlet-triplet splitting for the
+    conformer. The accuracies are satisfactory for the test-sample $R''$ and $S_{f,S_{j}}$
+    found to be 0.922 and 0.9850 (Table 2). The accuracies for the higher excited
+    state strengths, the original set, which is consistent with the model properties
+    that the forecasting predictions of $S_{f,S_{j}}$ are significantly improved compared
+    to those for the TADF (where a 30%-170% of $R''$ is observed), demonstrating the
+    effectiveness of the predictability of oscillator strengths. By the the configuration,
+    we are highlighting the scattering of $S_{f,S_{j}}$ in Fig. 4, we found that the
+    SchNet prediction on the original set is to a branch of ''true'' oscillators with
+    the strengths being zero, but the predicted values are not, indicating reduced
+    accuracy for conformers with a null function within the original D-A set. The
+    phenomenon is
+
+
+    9552 | New J. Chem., 2023, 47, 9550–9554 This journal is © The Royal Society of
+    Chemistry and the Centre National de la Recherche Scientifique 2023'
+  md: "\n# NJC\n# COMMUNICATION\n\nView Article Online\nView Journal | View Issue\n\
+    \n![](img/33f80a751675bc430670c4c1179ca0b2_0_0.png)\n\n# A deep learning framework\
+    \ for predictions of excited state properties of luminescent molecules†\n\nCite\
+    \ this: New J. Chem., 2023, 47, 9550\n\nReceived 12th March 2023.\nAccepted 29th\
+    \ April 2023.\nDOI: 10.1039/d3n0174g\n\nrsc.nijc\n\nZheng Tan,a Yan Li,b Zying\
+    \ Zhang,c Thomas Penfold,d Weimei Shi,e Shiqing Yang†a and Wanli Zhang†b\n\nWe\
+    \ have implemented a deep learning framework to forecast the excited state properties\
+    \ for thermally activated delayed fluorescence (TADF) molecules with satisfactory\
+    \ accuracy being achieved. In particular, for the oscillators, precisions have\
+    \ been significantly improved when the torsional profile of the D-A dihedral twisting\
+    \ is properly adjusted to realize the separation of the frontier orbitals (i.e.,\
+    \ HOMO and LUMO), and the oscillator strength to be accurately simultaneously.\n\
+    \nThermally activated delayed fluorescence (TADF) materials, as the third generation\
+    \ of diodes, have been extensively studied in the past due to their high potential\
+    \ in making organic light-emitting diode (OLED) devices. To simply demonstrate\
+    \ its operation mechanism upon excitation, TADF molecules can getters via reverse\
+    \ intersystem crossing (RISC) to the singlet energy gap. In Fig. 1, the triplet\
+    \ exciton can get with a high internal quantum efficiency approaching 100%. By\
+    \ the conventional fluorescent and phosphorescent materials, TADF have the advantages\
+    \ of larger material space, low fabrication cost without the use of heavy atoms,\
+    \ and more blue-light emission.\n\nThe design of TADF materials requires managing\
+    \ singlet-triplet gaps. It is known that time-dependent density functional theory\
+    \ (TDDFT) can have reasonable accuracy in describing the excited state properties,\
+    \ and it has been extensively used in high throughput screening for the exploration\
+    \ of the TADF search space. However, high throughput calculation can suffer from\
+    \ the large number of molecules. With the advent of machine learning (ML), molecular\
+    \ discovery has entered a new era, which can significantly shorten the material\
+    \ research and development cycle. For particularly TADF molecules, deep neural\
+    \ network (DNN) has been used to predict the physical properties including the\
+    \ TADF luminescence.\n\nThe design of TADF molecules is challenging, since it\
+    \ requires the optimization of opposing properties, i.e., the oscillator strength\
+    \ f and the first singlet-triplet gap $\\Delta_{EST}$. An efficient emission in\
+    \ TADF requires f to be maximized and $\\Delta_{EST}$ to be minimized constant,¹\
+    \ singlet and triplet excitation and oscillator strengths².\n\n![](img/33f80a751675bc430670c4c1179ca0b2_0_1.png)\n\
+    \naCheng Poly University, 63 Tian Street, Chengdu, 610000, P. R. China.\nEmail:\
+    \ zhengtan88@gmail.com\nbState Key Laboratory of Information Electronic Films\
+    \ and Integrated Circuits, University of Science and Technology of Chengdu, 617137,\
+    \ P. R. China.\ncGuangzhou Information Technology, 2 Ruyi Road, Panyu District,\
+    \ Guangzhou, 511441, P. R. China.\ndDepartment of Chemistry and Environmental\
+    \ Sciences, Newcastle University, Newcastle Tyne, NE8 7RU, UK.\neElectronic supplementary\
+    \ information (ESI). Available at: https://doi.org/10.1039/d3n0174g\n\n9550 |\
+    \ New J. Chem., 2023, 47, 9550–9554\n\nThis is the Royal Society of Chemistry\
+    \ and the Centre National de la Recherche Scientifique 2023\n\n## R squared\n\n\
+    ## RMSE\n\n## MAE \n\nIt is observed that, for the transitions and the corresponding\
+    \ rate data, DNN can make high quality predictions with an accuracy comparable\
+    \ to that of TDDFT calculations. Nevertheless, for the oscillator strengths, the\
+    \ prediction is less accurate, especially for the excited states. The reason has\
+    \ been attributed to the two-dimensional fingerprint in DNN cannot figure out\
+    \ the 3-dimensional wishing, which is critical for the estimation of energy. Similar\
+    \ results have also been encountered in Lu et al.³ and Kang et al.⁴ work, in which\
+    \ it claimed that the ML should be used for the prediction of transition dipole\
+    \ moment.\n\n![](img/33f80a751675bc430670c4c1179ca0b2_1_0.png)\n\nIn order to\
+    \ provide a comprehensive ML-assisted analysis of TAFD materials, this article\
+    \ investigates the predictive performance of state-of-the-art deep learning methods\
+    \ on the electronic properties that are directly related to the electronic applications\
+    \ of DFT. Deep neural network (DNN), graph convolutional network (GCN), message\
+    \ passing neural network (RNN) and SchNet models are employed to handle the 1-dimensional\
+    \ and 3-dimensional representations of molecules for the fitting of excited states\
+    \ and oscillator properties. A dataset (containing 1394 samples) with better accuracy\
+    \ structure than TDDFT calculations is used to label, as described in the supplementary\
+    \ material), is used for the model training, validation and testing. Prediction\
+    \ accuracies are compared between different models, where SchNet and message passing\
+    \ are also in to understand the others. The cut-off of the 3-dimensional models\
+    \ (including SchNet and message passing) explains how the long-range interactions\
+    \ can influence the electronic properties. We also examine how constructing models\
+    \ based on the original 1-dimensional features of TAFD so that more information\
+    \ can be included. It is observed that the predictive performance for the oscillator\
+    \ strengths can be significantly improved when models are applied on conformer\
+    \ descriptor.\n\n![](img/33f80a751675bc430670c4c1179ca0b2_1_1.png)\n\nDetailed\
+    \ descriptions regarding the TAFD database and learning methodologies are given\
+    \ in the supplementary material. Fig. 2 shows the performance of the deep learning\
+    \ models for the excited states of TAFD materials. Statistical estimates indicate\
+    \ the $R^2$, mean squared error (RMSE) and mean absolute error (MAE) are evaluated.\
+    \ The $R^2$ for 1-dimensional models, demonstrating the satisfactory performance\
+    \ for transition predictions when deep learning methods are applied, is in the\
+    \ range of 0.7-0.9. For 3-dimensional models, the MAE is around 0.2, which is\
+    \ acceptable, but for the higher excited states, it is significantly decreased.\
+    \ The observation is consistent with the works in Lu et al.⁵ and Tan et al.⁶ where\
+    \ uncertainties are encountered when deep learning is employed to predict the\
+    \ transition dipole moment. all models achieve a $R^2$ above 0.85, improving the\
+    \ robustness of the models in simulating the fluorescence properties.\n\n![](img/33f80a751675bc430670c4c1179ca0b2_1_2.png)\n\
+    \n> Fig. 2 Statistical estimates of prediction for excited state properties in\
+    \ the test set. $S_1, S_2, T_1, T_2, T_3$ represent the first singlet and triplet\
+    \ states, respectively. S denotes the oscillator strength, and $\\Delta_{ST}$\
+    \ are the energies in unit of eV, while f. For MP and SchNet models, the cut-off\
+    \ is set to 2 and 5 Å. To compare performances between models, DNN, RNN and SchNet\
+    \ give better accuracy on average (as shown in Table 1) than GAN. It is interesting\
+    \ that the 3-dimensional model (represented by SchNet) does not necessarily outperform\
+    \ the 1-dimensional (represented by RNN) and 2-dimensional (represented by DNN)\
+    \ models even though it can capture more geometrical information. Specifically\
+    \ for each model, DNN has the best prediction across the oscillator strengths.\n\
+    \nTable 1 Set average of deep learning models for excited state properties. For\
+    \ RMSE and MAE, sampling is performed over the ten targets using the units of\
+    \ energies and oscillator strengths are different. Fig. 2, the cut-off of the\
+    \ MP and SchNet models is set to 5 and 20 respectively.\n\n| Test average performance\
+    \ | RMSE | MAE |\n|---|---|---|\n| DNN | 0.7466 | 0.0892 | 0.0546 |\n| GCN | 0.6925\
+    \ | 0.1010 | 0.0516 |\n| RNN | 0.7451 | 0.0080 | 0.0556 |\n| MP | 0.7018 | 0.0039\
+    \ | 0.0619 |\n| SchNet | 0.7489 | 0.0047 | 0.0575 |\n\n![](img/33f80a751675bc430670c4c1179ca0b2_2_0.png)\n\
+    ![](img/33f80a751675bc430670c4c1179ca0b2_2_1.png)\n![](img/33f80a751675bc430670c4c1179ca0b2_2_2.png)\n\
+    ![](img/33f80a751675bc430670c4c1179ca0b2_2_3.png)\n\nmoderate performance on all\
+    \ identified targets, indicating a possibility of modeling the 2-dimensional graph\
+    \ in predicting excited state properties (note that the reference structure).\
+    \ Significant contrast with the ground state predictions where GCN usually uses\
+    \ the best prediction¹⁵, RNN performs good for many of the properties although\
+    \ the model only takes the SMILES strings as input without any structural similarities.\
+    \ MP works well in excited state energies, especially for triplet states where\
+    \ $R^2$ above 0.3. It performs poorly for the oscillator strengths (except for\
+    \ the first excited state), with $R^2$ of 0.01 for $S_{f,j}$. The result shows\
+    \ that the 3D-model does not describe the higher order transitions. Regarding\
+    \ SchNet, the average performance in the test set is observed compared to other\
+    \ models (Table 1). The MAE of SchNet is in the range of 0.03-0.05 eV, which is\
+    \ comparable with the predictive error of excited state for organic semiconductors¹¹.\
+    \ The fact that SchNet can deliver good results for the ground and excited state\
+    \ (in this report) indicates that the model may capture the main features in quantum\
+    \ manybody physics to resolve the electronic structure.\n\nFig.3 Flowchart for\
+    \ the conformer set, including generation via the stochastic search algorithm,\
+    \ field geometry optimization and configuration filtering based on the RMSE (root-mean\
+    \ square cut-off). Note that RMSE is defined as the root mean square displacement\
+    \ of atoms between a generated conformer and the reference structure. The difference\
+    \ denotes the mean error within the conformer generator. The cut-off of the 3-dimensional\
+    \ models (MP and SchNet) is also examined, with no correlation found between the\
+    \ prediction accuracy and cutoff radius. Detailed analysis is provided in the\
+    \ supplementary material. Considering the possibility of oscillator strengths,\
+    \ we developed a conformer dataset based on the original D-A molecules by extending\
+    \ the molecular forces, so that much more information (which is of importance\
+    \ for oscillator strengths) can be included in the training input to evaluate\
+    \ the robustness. The conformer set is built through a stochastic search algorithm\
+    \ (evolutionary algorithm) with distance constraints generating conformers that\
+    \ satisfy various constraints using lower/upper bounds on distances and torsional-angle\
+    \ preferences (using the module GetDKit as implemented in RDKit). As illustrated\
+    \ in Fig.3, the initial configurations are produced by twisting the molecular\
+    \ fragments along the torsional-angle preferences. As the rotatable bond is located\
+    \ the donor-acceptor molecule for most TADF molecules, the electrons are excited\
+    \ through a twisted D-A structure. A geometry optimization is then performed on\
+    \ the generated conformations using the MMP4 field¹⁸ to settle the conformers\
+    \ onto a local minimum. A configuration filtering procedure is implemented to\
+    \ rule out the generated conformers with conformational deviations (measured in\
+    \ terms of RMSE) from a cut-off value.\n\nIn total, 3650 conformers were generated.\
+    \ The conformers of the original D-A molecules, on average it is equivalent to\
+    \ producing around 2-300 conformers for each molecule. More details relevant to\
+    \ the conformer set construction are given in the supplementary material. We show\
+    \ the SchNet model (which performs the best on the original dataset) to examine\
+    \ the predictability of properties for TADF conformers. Fig.4 shows the predictions\
+    \ of the oscillator strengths and singlet-triplet splitting for the conformer.\
+    \ The accuracies are satisfactory for the test-sample $R^2$ and $S_{f,j}$ found\
+    \ to be 0.922 and 0.9850 (Table 2). The accuracies for the higher excited state\
+    \ strengths, the original set, which is consistent with the model properties that\
+    \ the forecasting predictions of $S_{f,j}$ are significantly improved compared\
+    \ to those for the TADF (where a 30%-170% of $R^2$ is observed), demonstrating\
+    \ the effectiveness of the predictability of oscillator strengths. By the configuration,\
+    \ we are highlighting the scattering of $S_{f,j}$ in Fig. 4, we found that the\
+    \ SchNet prediction on the original set is to a branch of 'true' oscillators with\
+    \ the strengths being zero, but the predicted values are not, indicating reduced\
+    \ accuracy for conformers with a null function within the original D-A set.\n\n\
+    9552 | New J. Chem., 2023, 47, 9550–9554 This journal is © The Royal Society of\
+    \ Chemistry and the Centre National de la Recherche Scientifique 2023\n"
+  mdcn: "\n\n# NJC\n# 通信\n\n在线阅读文章\n查看期刊 | 查看期\n\n![](img/33f80a751675bc430670c4c1179ca0b2_0_0.png)\n\
+    \n# 一种用于发光分子激发态性质预测的深度学习框架†\n\n引用本文：New J. Chem., 2023, 47, 9550\n\n接收于：2023年3月12日。\n\
+    接纳：2023年4月29日。\nDOI: 10.1039/d3n0174g\n\nrsc.nijc\n\nZheng Tan,a Yan Li,b Zying\
+    \ Zhang,c Thomas Penfold,d Weimei Shi,e Shiqing Yang†a and Wanli Zhang†b\n\n我们实现了一个深度学习框架，用于预测热热活化延迟荧光（TADF）分子的激发态性质，并达到了令人满意的准确率。特别是对于振子，当通过适当调整D-A（给体-受体）二面角的扭转分布以实现前沿轨道（即HOMO和LUMO）的分离时，同时准确预测振子强度的精度显著提高。\n\
+    \n热热活化延迟荧光（TADF）材料作为第三代二极管，由于其在有机发光二极管（OLED）器件中的巨大潜力，过去已被广泛研究。为了简单演示其激发后的工作机制，TADF分子可以通过反系间跨越（RISC）获得单重能隙。如图1所示，三重态激子可以以接近100%的高内量子效率获得。与传统的荧光和磷光材料相比，TADF具有更大的材料空间、无需重原子的低制备成本以及更多的蓝光发射等优势。\n\
+    \nTADF材料的设计需要管理单三态能隙。众所周知，时间依赖密度泛函理论（TDDFT）在描述激发态性质方面具有合理的准确性，并被广泛用于高通量筛选以探索TADF搜索空间。然而，高通量计算可能会受到分子数量庞大的困扰。随着机器学习（ML）的出现，分子发现进入了一个新时代，可以显著缩短材料的研发周期。对于特定的TADF分子，深度神经网络（DNN）已被用于预测包括TADF荧光在内的物理性质。\n\
+    \nTADF分子的设计具有挑战性，因为它需要优化相反的性质，即振子强度 $f$ 和第一单三态能隙 $\\Delta_{EST}$。TADF的有效发射要求 $f$\
+    \ 最大化且 $\\Delta_{EST}$ 保持最小常¹，单态和三重态激发以及振子强度²。\n\n![](img/33f80a751675bc430670c4c1179ca0b2_0_1.png)\n\
+    \na成都理工大学, 63 Tian Street, Chengdu, 610000, P. R. China.\nEmail: zhengtan88@gmail.com\n\
+    b成都科技大学信息电子膜与集成电路国家重点实验室, 617137, P. R. China.\nc广州信息技术, 2 Ruyi Road, Panyu District,\
+    \ Guangzhou, 511441, P. R. China.\nd纽卡斯尔大学化学与环境科学系, Newcastle Tyne, NE8 7RU, UK.\n\
+    e电子补充信息（ESI）。可用于: https://doi.org/10.1039/d3n0174g\n\n9550 | New J. Chem., 2023,\
+    \ 47, 9550–9554\n\n这是英国皇家学会和法国国家科学中心2023版\n\n## R平方\n\n## RMSE\n\n## MAE（均绝对误差）\
+    \ \n\n观察到，对于跃迁和对应数据，DNN可以做出与TDDFT计算相当的高质量预测。然而，对于振子强度，其预测的准确性较低，尤其是对于激发态。其原因归于DNN的二维指纹无法识别三维结构，而这对于能量估计至关重要。在Lu等³和Kang等⁴的工作中也遇到了类似的结果，他们声称机器学习应用于跃迁偶极矩的预测。\n\
+    \n![](img/33f80a751675bc430670c4c1179ca0b2_1_0.png)\n\n为了对TADF材料提供全面的机器学习分析，本文研究了最先进的深度学习方法对电子性质的预测性能。深度神经网络（DNN）、图卷积网络（GCN）、消息传递网络（RNN）和SchNet被用于处理激发态和振子性质的一维和三维表示。一个包含1394个样本的数据集准确性优于TDDFT计算（如补充材料所述），用于模型的训练、验证和测试。比较了不同模型之间的预测准确率，SchNet和消息传递。三维模型（包括SchNet和消息传递）解释了长程相互如何影响电子性质。我们还检查了基于TADF一维特征构建的模型，以便包含更多信息。观察到，当对构象描述符应用模型时，振子强度的预测性能可以显著提高。\n\
+    \n![](img/33f80a751675bc430670c4c1179ca0b2_1_1.png)\n\n关于TADF数据库和学习方法的详细描述见补充材料。图2显示了深度学习模型对TADF材料激发态的性能。统计估计，$R^2$、均方根误差（RMSE）和均绝对误差（MAE）的评估结果如下。对于一维模型，当应用深度学习方法时，$R^2$在0.7-0.9范围内，表现出良好的跃迁预测性能。对于三维模型，MAE约为0.2，是可以接受的，但对于高激发态，它显著下降。这一观察与Lu等⁵和Tan等⁶的工作一致，在使用深度学习预测跃迁偶极矩时，所有模型的$R^2$均达到0.85，提高了模拟荧光性质的模型稳健性。\n\
+    \n![](img/33f80a751675bc430670c4c1179ca0b2_1_2.png)\n\n> 图2 测试集中激发态性质的预测统计估计，$S_1,\
+    \ S_2, T_1, T_2, T_3$ 分别代表单态和三重态。S表示振子强度，$\\Delta_{ST}$是eV单位的能量。对于MP和SchNet模型，截断值分别设置为2和5\
+    \ Å。为了比较DNN、RNN和SchNet模型之间的性能，SchNet在振子强度上的平均精度（如表1所示）优于GAN。有趣的是，三维模型（由SchNet表示）并不一定优于一维（由RNN表示）和二维（由DNN表示）模型，尽管它可以捕捉更多的几何信息。具体而言，对于每个模型，DNN在振子强度上具有最佳预测。表1\
+    \ 激发态性质模型平均。对于RMSE和MAE，使用能量和振子强度对十个目标进行了采样。图2，MP和SchNet模型的截断值分别设置为5和20。\n\n| 测试平均性能\
+    \ | RMSE | MAE |\n|---|---|---|\n| DNN | 0.7466 | 0.0892 | 0.0546 |\n| GCN | 0.6925\
+    \ | 0.1010 | 0.0516 |\n| RNN | 0.7451 | 0.0080 | 0.0556 |\n| MP | 0.7018 | 0.0039\
+    \ | 0.0619 |\n| SchNet | 0.7489 | 0.0047 | 0.0575 |\n\n![](img/33f80a751675bc430670c4c1179ca0b2_2_0.png)\n\
+    ![](img/33f80a751675bc430670c4c1179ca0b2_2_1.png)\n![](img/33f80a751675bc430670c4c1179ca0b2_2_2.png)\n\
+    ![](img/33f80a751675bc430670c4c1179ca0b2_2_3.png)\n\n在所有识别目标上均表现中等，这表明了二维图在预测激发态性质方面的可能性（注意参考结构）。与基态预测形成显著对比的是，GCN通常使用最好的预测⁵，尽管模型仅将SMILES字符串作为输入且没有任何结构相似性；RNN在许多性质上表现良好。MP在激发态能量方面表现良好，特别是对于三重态，$R^2$高于0.3。它在振子强度上的表现较差（除了第一个激发态），对于$S_{f,j}$，$R^2$为0.01。结果显示三D模型无法描述高阶跃迁。关于SchNet，与其他模型相比，测试集中的平均性能（表1）。SchNet的MAE在0.03-0.05\
+    \ eV范围内，与有机半体的激发态预测误差相当¹¹。SchNet能够为基态和激发态（在本报告中）提供良好结果这一事实表明，模型可能捕捉了量子多体物理中的主要特征以解决电子结构问题。\n\
+    \n"
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    # Communication
+
+
+    # View Article Online
+
+
+    # NJC
+
+
+    ![](img/33f80a751675bc430670c4c1179ca0b2_3_0.png)
+
+
+    Fig 4 SchNnet predictions of excited state properties for the TDFT conformer.
+    The test data indicates that the model is applied on and the blue is the line
+    indicator.
+
+
+    in addition to a sophisticated ML model, the torsional-angle profile between the
+    donor and acceptor can be equally important for the accurate prediction of the
+    transition dipoles.
+
+
+    In conclusion, this article proposed a deep learning approach to effectively capture
+    the electronic properties of fluorescent molecules. Deep neural network, convolutional
+    convolution, recurrent neural network, and message-passing models are able to
+    predict the transition energies, oscillator strengths, and single-triplet TDFT
+    materials. Satisfactory performances are achieved, with $R^2$ of the first oscillator
+    above 0.7 and that of energy shifts above 0.8, demonstrating the robustness of
+    deep learning methods in describing the TDFT mechanism. It showed that the 1-dimensional
+    representation (represented by RNN) and 2-dimensional representation (represented
+    by GNN) which we used can deliver comparable performances with the best 3-dimensional
+    model (predicted by SchNnet), using atomic features and dynamic interactions,
+    implying the diversity of the neural architectures that can be suitable for resolving
+    the electronic transition. The investigation has provided a comprehensive ML framework
+    for predictions of excited-state properties.
+
+
+    Test set performances for SchNnet applied on the original-D dataset and the generated
+    dataset. The cut-off is set to 20 for the first oscillator and 5 for the conformer.
+
+
+    | SchNnet for original | SchNnet for conformer |
+
+    |---|---|---|---||
+
+    | | RMSE | MAE | RMSE | MAE |
+
+    | $S_1$ | 0.7692 | 0.1309 | 0.0724 | 0.0548 |
+
+    | $S_f$ | 0.2567 | 0.1498 | 0.0718 | 0.0807 |
+
+    | $S_{\Delta E}$ | 0.2254 | 0.0689 | 0.0574 | 0.0435 |
+
+    | $S_{\mu}$ | 0.0877 | 0.0546 | 0.0103 | 0.0784 |
+
+
+    By developing the conformer in a stochastic search algorithm, we created a twisted
+    D-A molecule based on the original TDFT samples. High-throughput methods implemented
+    helped learn the transition properties of more than 60 conformers. SchNnet is
+    employed to test the prediction of the oscillator strengths and the energy gaps
+    for them.
+
+
+    suppressed the prediction of resonance where SchNnet can describe the null and
+    non-null values. No remarkable change is detected for the $S_{\Delta E}$ prediction
+    between original and test sets. We note that a 5 Å cut-off for the conformer,
+    as trained, provides the best average performance for excited state properties
+    compared to lower cut-offs.
+
+
+    Even though the performance improves for the prediction of the oscillator strengths,
+    $S_f$ and $S_{\Delta E}$ is still limited. The enriched twisting information may
+    help better to capture the first order oscillator strength (due to its relation
+    to the overlap), similarity improvement does not occur for $S_{\Delta E}$.
+
+
+    # Conflicts of interest
+
+
+    There are no conflicts to declare.
+
+
+    To the best of our knowledge, we have achieved a high quality prediction for the
+    oscillator strength with the out-of-sample $R^2$ around 0.92. The level is in
+    significant contrast with the previous works, where $R^2$ is reported in the limited
+    range of 0.7–0.8, and predictive uncertainties can be encountered. The current
+    research reveals
+
+
+    # Acknowledgements
+
+
+    The work is supported by the Foundation of Key Science Laboratory of Electronic
+    Chemistry and Integrated Devices (NC):'
+  - '[PAGE 4]
+
+
+    # Notes and references
+
+
+    KFJJ202205) and Research Platform Foundation of Chengdu Polytechnic (No: 19KYPT01;
+    20KYKTD07).
+
+
+    +   1. U. Hyoyama, K. Goishi, K. Shizu, H. Nomura and C. Adachi, Nature, 2012,
+    492, 234–238.
+
+    2. M. Y. Wang and E. Zisman-Colman, Adv. Mater., 2017, 29, 1605044.
+
+    3. D. S. M. Ravinson and E. Thompson, Mater. Horiz., 2020, 7, 1210–1217.
+
+    4. S. P. Huang, Q. S. Zhang, Y. Shiota, T. Nakagawa, K. Kuwabara, K. Yoshikawa
+    and C. Adachi, J. Chem. Theory Comp., 2013, 9, 3872–3887.
+
+    5. Z. Y. Yang, Mao, L. Xie, Y. Zhang, S. W. Liu, J. Zhang, J. Ru, Z. G. Chi and
+    M. P. Adler, Chem. Soc. Rev., 2017, 46, 915–1016.
+
+    6. X. Liang, Y. Li, L. Tu and X. W. Zheng, Eur. J. J., 2019, 25, 5625–5642.
+
+    7. Z. Tan, Y. Li, Z. Y, Zhang, X. Wu, T. Penfold, M. W. Shi and S. Q. Yan, Y.
+    Z. Zhang, ACS Omega, 2022, 7, 18179–18188.
+
+    8. H. Tanaka, S. C. Katsuki, J. Y. Lee and C. Adachi, J. Phys. Chem. C, 2015,
+    119, 2948–2955.
+
+    9. Y. J. Lee, Mater. Chem. C, 2015, 35, 21175–21181.
+
+    10. D. R. Lee, S. H. Hwang, S. K. Jeon, C. W and J. Y. Lee, Chem. Commun., 2015,
+    51, 8105–8107.
+
+
+    11. T. Hatakeyama, K. Shiren, K. Nakajima, S. Nomura, S. Nakatsu, K. Kinoshita,
+    J. P., Y. Ono and T. Ikuka, Adv. Mater., 2016, 28, 2777–2781.
+
+
+    12. R. G. Bombardelli, J. A. Iparaggurre, T. D. Hirzel, D. Dauvern, D. Maclurin,
+    M. A. B. Foryesha, S. H. Ma, M. Einzinger, D. G. Ha, T. Wu, G. Markopoulos, S.
+    Jung, H. Miyazaki, M. Nakamura, S. H. Kim, W. L, S. Hong, M. Baldo, R. P. Adams
+    and A. A. Zukic, Nat. Mater., 2016, 15, 762.
+
+
+    13. C. Lu, Q. Liu, M. Sun, C. Y. Hsieh, S. V. Zhang, and L. Kang and K. C. Lee,
+    J. Phys. Chem. C, 2020, 124, 7048–7060.
+
+
+    14. B. Kang, C. Seok and J. Y. Lee, J. Chem. Inf. Model., 2020, 60, 5984–5994.
+
+
+    15. Z. Tan, Y. Li, W. M. Shi and S. Q. Yang, J. Chem. Inf. Model., 2022, 61, 3824–3834.
+
+
+    16. K. Schmitt, H. E. Sauceudo, P. J. Kindermans, A. Katchenko, F. R. Müller,
+    J. Phys. Chem., 2018, 148, 241722.
+
+
+    17. S. Rith, J. G. A. Landrum, J. Chem. Inf. Model., 2015, 55, 2562–2574.
+
+
+    18. P. Tosco, N. Stief and G. Landrum, J. Cheminf., 2014, 6, 37.
+
+
+    19. B. Kang, C. Seok and J. Y. Lee, Bull. Korean Chem. Soc., 2022, 43, 38.
+
+
+    20. S. Ye, W. Hu, X. Li, J. X. Zhang, K. Zhong, G. Z. Zhang, Y. Luo, S. Mukamel
+    and J. Jiang, Proc. Nat. Acad. Sci. U. S. A., 2019, 116, 11612–11617.'
+  md: '
+
+    # Communication
+
+
+    # View Article Online
+
+
+    # NJC
+
+
+    ![](img/33f80a751675bc430670c4c1179ca0b2_3_0.png)
+
+
+    Fig 4 SchNnet predictions of excited state properties for the TDFT conformer.
+    The test data indicates that the model is applied on and the blue is the line
+    indicator.
+
+
+    In addition to a sophisticated ML model, the torsional-angle profile between the
+    donor and acceptor can be equally important for the accurate prediction of the
+    transition dipoles.
+
+
+    In conclusion, this article proposed a deep learning approach to effectively capture
+    the electronic properties of fluorescent molecules. Deep neural network, convolutional
+    convolution, recurrent neural network, and message-passing models are able to
+    predict the transition energies, oscillator strengths, and single-triplet TDFT
+    materials. Satisfactory performances are achieved, with $R^2$ of the first oscillator
+    above 0.7 and that of energy shifts above 0.8, demonstrating the robustness of
+    deep learning methods in describing the TDFT mechanism. It showed that the 1-dimensional
+    representation (represented by RNN) and 2-dimensional representation (represented
+    by GNN) which we used can deliver comparable performances with the best 3-dimensional
+    model (predicted by SchNnet), using atomic features and dynamic interactions,
+    implying the diversity of the neural architectures that can be suitable for resolving
+    the electronic transition. The investigation has provided a comprehensive ML framework
+    for predictions of excited-state properties.
+
+
+    Test set performances for SchNnet applied on the original-D dataset and the generated
+    dataset. The cut-off is set to 20 for the first oscillator and 5 for the conformer.
+
+
+    | SchNnet for original | SchNnet for conformer | | |
+
+    | :--- | :--- | :--- | :--- |
+
+    | | RMSE | MAE | RMSE | MAE |
+
+    | $S_1$ | 0.7692 | 0.1309 | 0.0724 | 0.0548 |
+
+    | $S_f$ | 0.2567 | 0.1498 | 0.0718 | 0.0807 |
+
+    | $S_{\Delta E}$ | 0.2254 | 0.0689 | 0.0574 | 0.0435 |
+
+    | $S_{\mu}$ | 0.0877 | 0.0546 | 0.0103 | 0.0784 |
+
+
+    By developing the conformer in a stochastic search algorithm, we created a twisted
+    D-A molecule based on the original TDFT samples. High-throughput methods implemented
+    helped learn the transition properties of more than 60 conformers. SchNnet is
+    employed to test the prediction of the oscillator strengths and the energy gaps
+    for them.
+
+
+    suppressed the prediction of resonance where SchNnet can describe the null and
+    non-null values. No remarkable change is detected for the $S_{\Delta E}$ prediction
+    between original and test sets. We note that a 5 Å cut-off for the conformer,
+    as trained, provides the best average performance for excited state properties
+    compared to lower cut-offs.
+
+
+    Even though the performance improves for the prediction of the oscillator strengths,
+    $S_f$ and $S_{\Delta E}$ is still limited. The enriched twisting information may
+    help better to capture the first order oscillator strength (due to its relation
+    to the overlap), similarity improvement does not occur for $S_{\Delta E}$.
+
+
+    # Conflicts of interest
+
+
+    There are no conflicts to declare.
+
+
+    To the best of our knowledge, we have achieved a high quality prediction for the
+    oscillator strength with the out-of-sample $R^2$ around 0.92. The level is in
+    significant contrast with the previous works, where $R^2$ is reported in the limited
+    range of 0.7–0.8, and predictive uncertainties can be encountered. The current
+    research reveals
+
+
+    # Acknowledgements
+
+
+    The work is supported by the Foundation of Key Science Laboratory of Electronic
+    Chemistry and Integrated Devices (NC):
+
+
+    KFJJ202205) and Research Platform Foundation of Chengdu Polytechnic (No: 19KYPT01;
+    20KYKTD07).
+
+
+    # Notes and references
+
+
+    - 1. U. Hyoyama, K. Goishi, K. Shizu, H. Nomura and C. Adachi, Nature, 2012, 492,
+    234–238.
+
+    - 2. M. Y. Wang and E. Zisman-Colman, Adv. Mater., 2017, 29, 1605044.
+
+    - 3. D. S. M. Ravinson and E. Thompson, Mater. Horiz., 2020, 7, 1210–1217.
+
+    - 4. S. P. Huang, Q. S. Zhang, Y. Shiota, T. Nakagawa, K. Kuwabara, K. Yoshikawa
+    and C. Adachi, J. Chem. Theory Comp., 2013, 9, 3872–3887.
+
+    - 5. Z. Y. Yang, Mao, L. Xie, Y. Zhang, S. W. Liu, J. Zhang, J. Ru, Z. G. Chi
+    and M. P. Adler, Chem. Soc. Rev., 2017, 46, 915–1016.
+
+    - 6. X. Liang, Y. Li, L. Tu and X. W. Zheng, Eur. J. J., 2019, 25, 5625–5642.
+
+    - 7. Z. Tan, Y. Li, Z. Y, Zhang, X. Wu, T. Penfold, M. W. Shi and S. Q. Yan, Y.
+    Z. Zhang, ACS Omega, 2022, 7, 18179–18188.
+
+    - 8. H. Tanaka, S. C. Katsuki, J. Y. Lee and C. Adachi, J. Phys. Chem. C, 2015,
+    119, 2948–2955.
+
+    - 9. Y. J. Lee, Mater. Chem. C, 2015, 35, 21175–21181.
+
+    - 10. D. R. Lee, S. H. Hwang, S. K. Jeon, C. W and J. Y. Lee, Chem. Commun., 2015,
+    51, 8105–8107.
+
+    - 11. T. Hatakeyama, K. Shiren, K. Nakajima, S. Nomura, S. Nakatsu, K. Kinoshita,
+    J. P., Y. Ono and T. Ikuka, Adv. Mater., 2016, 28, 2777.
+
+    - 12. R. G. Bombardelli, J. A. Iparagg, T. Hirzel, D. Dauvern, M. Macurin, S.
+    H. Ma, R. P, A. A. Zuk, Nat. Mater., 2016, 15, 762.
+
+    - 13. C. Lu, Q. Liu, M. Sun, C. Y. Hsieh, S. V. Zhang, L. Kang and K. Lee, J.
+    Phys. Chem. C, 2020, 124, 7048–7060.
+
+    - 14. B. Kang, C. Seok and J. Y. Lee, J. Chem. Inf. Model., 2020, 60, 5984–5994.
+
+    - 15. Z. Tan, Y. Li, W. M. Shi and S. Q. Yang, J. Chem. Inf. Model., 2022, 61,
+    3824–3834.
+
+    - 16. K. Schmitt, H. E. Sauceudo, P. J. Kinderman, A. Katchenko, F. R. Müller,
+    J. Phys. Chem., 2018, 148, 241722.
+
+    - 17. S. Rith, J. G. A. Landrum, J. Chem. Inf. Model., 2015, 55, 2562–2574.
+
+    - 18. P. Tosco, N. Stief and G. Landrum, J. Cheminf., 2014, 6, 37.
+
+    - 19. B. Kang, C. Seok and J. Y. Lee, Bull. Korean Chem. Soc., 2022, 43, 38.
+
+    - 20. S. Ye, W. Hu, X. Li, J. X. Zhang, K. Zhong, G. Z. Zhang, Y. Luo, S. Mukamel
+    and J. Jiang, Proc. Nat. Acad. Sci. U. S. A., 2019, 116, 11612–11617.
+
+    '
+  mdcn: '
+
+
+    # 通信
+
+
+    # 在线阅读
+
+
+    # NJC
+
+
+    ![](img/33f80a751675bc430670c4c1179ca0b2_3_0.png)
+
+
+    图 4 SchNnet 对 TDFT 构象体激发态性质的预测。测试数据表明模型已应用于此，蓝色为指示线。
+
+
+    除了复杂的机器学习模型外，供体和受体之间的扭角分布对于准确预测跃迁偶极可能同样重要。
+
+
+    总之，本文提出了一种深度学习方法来有效捕获荧光分子的电子性质。深度神经网络、卷积神经网络、循环神经网络和消息传递模型能够预测跃迁能量、振子强度以及单三线态
+    TDFT 材料。取得了满意的性能，第一个振子的 $R^2$ 高于 0.7，能量移的 $R^2$ 高于 0.8，证明了深度学习方法在描述 TDFT 机制方面的稳健性。结果表明，我们使用的
+    1 维表示（由 RNN 表示）和 2 维表示（由 GNN 表示）在使用原子特征和动态作用的情况下，可以提供与最佳 3 维模型（由 SchNnet 预测）相当的性能，这意味着适用于解决电子跃变的神经架构具有多样性。该研究为激发态性质的预测提供了一个全面的机器学习框架。
+
+
+    SchNnet 应用原始-D 数据集和生成数据集的测试集性能。第一个振子的截断值设置为 20，构象体设置为 5。
+
+
+    | 原始数据的 SchNnet | 构象体的 SchNnet | | | |
+
+    | :--- | :--- | :--- | :--- |
+
+    | | RMSE | MAE | RMSE | MAE |
+
+    | $S_1$ | 0.7692 | 0.1309 | 0.0724 | 0.0548 |
+
+    | $S_f$ | 0.2567 | 0.1498 | 0.0718 | 0.0807 |
+
+    | $S_{\Delta E}$ | 0.2254 | 0.0689 | 0.0574 | 0.0435 |
+
+    | $S_{\mu}$ | 0.0877 | 0.0546 | 0.0103 | 0.0784 |
+
+
+    通过在随机搜索算法中开发构象体，我们基于原始 TDFT 样本创建了一个扭曲 D-A 分子。实现的高通量方法帮助学习了 60 多种构象体的跃迁性质。采用 SchNnet
+    来测试它们振子强度和能隙的预测。
+
+
+    抑制了共振的预测，SchNnet 可以描述零值和非零值。在原始集和测试集之间，$S_{\Delta E}$ 的预测没有检测到显著变化。我们注意到，经过训练的构象体
+    5 Å 截断值与较低的截断值相比，提供了激发态性质的最的平均性能。
+
+
+    尽管振子强度预测性能有所提高，但 $S_f$ 和 $S_{\Delta E}$ 仍然受到限制。丰富的扭转信息可能有助于更好地捕获一阶振子强度（因为它与重叠性有关），但
+    $S_{\Delta E}$ 的相似性并未得到改善。
+
+
+    # 利益冲突
+
+
+    无需要声明的冲突。
+
+
+    据我们所知，我们对振子强度实现了高水平预测，样本外 $R^2$ 约为 0.92。这一水平与之前的工作形成鲜明对比，之前的工作报道的 $R^2$ 在 0.7–0.8
+    的有限范围内，且可能会遇到预测不确定性。目前的研究揭示了
+
+
+    # 致谢
+
+
+    工作感谢电子化学与集成器件重点实验室（NC）的支持：
+
+
+    KFJJ202205) 以及成都理工学院研究平台（No: 19KYPT01; 20KYKTD07）。
+
+
+    # 参考文献
+
+
+    - 1. U. Hyoyama, K. Goishi, K. Shizu, H. Nomura and C. Adachi, Nature, 2012, 492,
+    234–238.
+
+    - 2. M. Y. Wang and E. Zisman-Colman, Adv. Mater., 2017, 29, 1605044.
+
+    - 3. D. S. M. Ravinson and E. Thompson, Mater. Horiz., 2020, 7, 1210–1217.
+
+    - 4. S. P. Huang, Q. S. Zhang, Y. Shiota, T. Nakagawa, K. Kuwabara, K. Yoshikawa
+    and C. Adachi, J. Chem. Theory Comp., 2013, 9, 3872–3887.
+
+    - 5. Z. Y. Yang, Mao, L. Xie, Y. Zhang, S. W. Liu, J. Zhang, J. Ru, Z. G. Chi
+    and M. P. Adler, Chem. Soc. Rev., 2017, 46, 915–1016.
+
+    - 6. X. Liang, Y. Li, L. Tu and X. W. Zheng, Eur. J. J., 2019, 25, 5625–5642.
+
+    - 7. Z. Tan, Y. Li, Z. Y, Zhang, X. Wu, T. Penfold, M. W. Shi and S. Q. Yan, Y.
+    Z. Zhang, ACS Omega, 2022, 7, 18179–18188.
+
+    - 8. H. Tanaka, S. C. Katsuki, J. Y. Lee and C. Adachi, J. Phys. Chem. C, 2015,
+    119, 2948–2955.
+
+    - 9. Y. J. Lee, Mater. Chem. C, 2015, 35, 21175–21181.
+
+    - 10. D. R. Lee, S. H. Hwang, S. K. Jeon, C. W and J. Y. Lee, Chem. Commun., 2015,
+    51, 8105–8107.
+
+    - 11. T. Hatakeyama, K. Shiren, K. Nakajima, S. Nomura, S. Nakatsu, K. Kinoshita,
+    J. P., Y. Ono and T. Ikuka, Adv. Mater., 2016, 28, 2777.
+
+    - 12. R. G. Bombardelli, J. A. Iparagg, T. Hirzel, D. Dauvern, M. Macurin, S.
+    H. Ma, R. P, A. A. Zuk, Nat. Mater., 2016, 15, 762.
+
+    - 13. C. Lu, Q. Liu, M. Sun, C. Y. Hsieh, S. V. Zhang, L. Kang and K. Lee, J.
+    Phys. Chem. C, 2020, 124, 7048–7060.
+
+    - 14. B. Kang, C. Seok and J. Y. Lee, J. Chem. Inf. Model., 2020, 60, 5984–5994.
+
+    - 15. Z. Tan, Y. Li, W. M. Shi and S. Q. Yang, J. Chem. Inf. Model., 2022, 61,
+    3824–3834.
+
+    - 16. K. Schmitt, H. E. Sauceudo, P. J. Kinderman, A. Katchenko, F. R. Müller,
+    J. Phys. Chem., 2018, 148, 241722.
+
+    - 17. S. Rith, J. G. A. Landrum, J. Chem. Inf. Model., 2015, 55, 2562–2574.
+
+    - 18. P. Tosco, N. Stief and G. Landrum, J. Cheminf., 2014, 6, 37.
+
+    - 19. B. Kang, C. Seok and J. Y. Lee, Bull. Korean Chem. Soc., 2022, 43, 38.
+
+    - 20. S. Ye, W. Hu, X. Li, J. X. Zhang, K. Zhong, G. Z. Zhang, Y. Luo, S. Mukamel
+    and J. Jiang, Proc. Nat. Acad. Sci. U. S. A., 2019, 116, 11612–11617.
+
+
+    '
+  merge: 0
