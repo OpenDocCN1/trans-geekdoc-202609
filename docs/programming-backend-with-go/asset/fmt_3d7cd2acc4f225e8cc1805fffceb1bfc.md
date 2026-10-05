@@ -1,0 +1,140 @@
+
+# Deployment Strategies
+
+在现代应用部署中，拥有一个健壮的部署策略对于最小化停机时间并确保无缝的用户体验至关重要。我们将探索并演示三种流行的部署策略：`rolling`、`canary` 和 `blue-green` 部署。每种策略都有其优势，并适用于不同的场景，具体取决于对可靠性、速度和风险缓解的需求。
+
+## Rolling Deployment
+
+`rolling` 部署会逐步用新版本的应用实例替换旧版本的应用实例，而不会停机。它通常由 `Kubernetes` 等编排器自动管理。
+
+假设你有一个使用 `Docker` 容器化的基础 `Go` Web 应用，并且你想在 `Kubernetes` 环境中使用滚动更新部署新版本。
+
+* 首先，确保你有一个正在运行的 `Kubernetes` 集群。你可以使用 `Minikube` 进行本地设置。
+* 创建部署并暴露它：
+
+```yaml
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: go-app
+  template:
+    metadata:
+      labels:
+        app: go-app
+    spec:
+      containers:
+      - name: go-app
+        image: go-app:v1
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-app-service
+spec:
+  selector:
+    app: go-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
+```
+* 使用 `kubectl apply -f deployment.yaml` 部署它。
+* 要更新到 `go-app:v2`，你可以运行：`kubectl set image deployment/go-app-deployment go-app=go-app:v2 --record`
+
+`Kubernetes` 将开始逐个用新 `pod` 替换旧 `pod`，确保没有停机。
+
+## Canary Deployment
+
+`canary` 部署涉及在向所有人开放之前，先将新版本推出给一小部分用户。这种策略对于在实时环境中用一小部分流量测试新版本非常有用。
+
+考虑我们想要修改现有的 `Kubernetes` 配置以将一部分流量定向到新版本。在此，你将有两个部署：一个用于稳定版本，一个用于 `canary` 版本。
+
+```yaml
+# For the canary deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-app-canary
+spec:
+  replicas: 1 # fewer replicas for canary
+  selector:
+    matchLabels:
+      app: go-app
+      track: canary
+  template:
+    metadata:
+      labels:
+        app: go-app
+        track: canary
+    spec:
+      containers:
+      - name: go-app
+        image: go-app:v2
+        ports:
+        - containerPort: 8080
+```
+
+部署 `canary`。然后，调整服务以在稳定和 `canary` 版本之间负载均衡流量：
+
+```yaml
+spec:
+  selector:
+    app: go-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
+```
+
+## Blue-Green Deployment
+
+`blue-green` 部署是一种维护两个相同环境的策略。新版本部署到 `green` 环境，而 `blue` 环境提供实时流量。一旦新版本经过测试并准备就绪，流量就会从 `blue` 切换到 `green`。
+
+现在，对于 `blue-green` 部署，你需要两个环境。假设 `blue` 环境当前处于活动状态，你部署 `green` 环境：
+
+```yaml
+# Green deployment configuration
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-app-green
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: go-app
+      stage: green
+  template:
+    metadata:
+      labels:
+        app: go-app
+        stage: green
+    spec:
+      containers:
+      - name: go-app
+        image: go-app:v2
+        ports:
+        - containerPort: 8080
+```
+
+部署此配置。要将流量切换到 `green` 环境，请更新服务选择器：
+
+```yaml
+# Update to the service configuration
+spec:
+  selector:
+    app: go-app
+    stage: green # Change this from blue to green
+```
+
+根据你的运营需求和风险承受能力，以上提到的每种部署策略都提供了不同的优势。你可以使用 `canary` 发布在生产环境中进行有限范围的测试，使用 `blue-green` 部署获得最大控制权，并使用滚动更新避免停机。
