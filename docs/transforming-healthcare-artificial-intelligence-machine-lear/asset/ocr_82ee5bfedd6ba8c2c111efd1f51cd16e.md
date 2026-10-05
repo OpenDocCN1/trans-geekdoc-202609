@@ -1,0 +1,1 @@
+The DHT11 typically has a measurement range of 0°C–50°C (32°F–122°F), with a certain level of precision, which is ideal for applications that require monitoring within this range.

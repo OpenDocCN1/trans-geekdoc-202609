@@ -1,0 +1,13 @@
+# About the editors
+
+and Scopus-indexed International Bachelorader Conferences. His Cumulative Impact Factor is more than 205. He has published 37 edited books with reputed international publishers.
+
+He has received a project grant of 35,000 £ from the Government of UK (GCRF scheme) with collaborators from the University of Westminster, UK. He has completed a funded research project from CSIR, Govt. of India, and 1 ongoing funded project from DST, Govt. of India.
+
+He holds professional membership with ACM and the IEEE Technical Committee on Neural Networks and Soft Computing. Currently, he is working as an Associate Professor in the Department of ECE, Karunya University, Coimbatore, India. He also holds the position of Visiting Professor in the Faculty of Electrical Engineering and Information Technology at the University of Orade, Romania.
+
+V. Rukkamani received her Bachelor’s degree in Electronics and Instrumentation Engineering from Government College of Technology, Coimbatore, in 2004. Upon graduation, she started her career as a Lecturer in the Department of Electronics and Instrumentation Engineering at Sri Ramakrishna Engineering College, Coimbatore, in 2005. She received her Master’s degree in VLSI Design from Anna University of Technology, Coimbatore, in 2009. She received her PhD in Electrical Engineering from Anna University, in 2015.
+
+Presently, she is working as an Associate Professor in the Department of Electronics and Instrumentation Engineering at Sri Ramakrishna Engineering College, Coimbatore. She has more than 17 years of experience in teaching. Her research interests include VLSI design, transducers, and industrial instrumentation. She is the member of IEEE and a life member of ISTE and ISOI. She has published 32 technical papers in International Journals, 13 International Conferences, and 15 National Conferences. She has attended workshops, seminars, and faculty training programs.
+
+She received the Best Faculty Award for her excellence in teaching and research from the Nehru Group of Institutions, Coimbatore, for the academic year 2019–2020. She also received the Young Scholar and Educator award from NFED, Coimbatore, as well as the Young Scientist – Dr. APJ Abdul Kalam Award in 2018. She also received the Best Paper Award from Marina Labs, Chennai at an International Conference on Research Techniques in Engineering conducted by International Society for Scientific Research and Development (ISSR), Bangalore.

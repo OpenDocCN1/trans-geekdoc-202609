@@ -1,0 +1,10 @@
+# Table 4.1 Literature survey
+
+| Reference paper | Methodology | Pros | Cons | Inference |
+| --- | --- | --- | --- | --- |
+| Aryuni et al. (2023) | Decision tree, K-nearest neighbors (KNN), Naive Bayes.360 patients from Healthcareing Bihar Community Health Service | Decision tree performed best with 89.87% accuracy and 91.67% F-Score. Can track nutritional health of children under five | Limited to a specific dataset from South Bihar Community Health Service. May not be generalized to other population | C4.5 decision tree is recommended for predicting the nutritional status of children under five based the experiment data |
+| Khan and Yunus (2023) | Majority voting-based hybrid ensemble (MVBHE) learning model. Boosting, boosting and voting algorithms: Random Forest. Decision tree, eExtreme gradient boosting, KNN. Data from demographic and health surveys in sub-Saharan Africa | MVBHE model achieved 96% accuracy, outperforming individual algorithms | Complexity in implementing and tuning ensemble Requires substantial data for | MVBHE is recommended as the best model for predicting malnutrition in under-five children in sub-Saharan Africa |
+| Rahutomo et al. (2023) | Systematic literature review (SLR) of 22 curated manuscripts (2017–2022). Focus on XGBoost and random forest models | Provides a comprehensive landscape of ML implementation in childhood stunting research. Highlights increasing diversity of ML models | Limited to review. May not cover recent developments in ML for stunting | XGBoost and random forest are prominent models for stunting prediction based on recent ML research |
+| Maasti et al. (2023) | Machine learning classification techniques: Naive Bayes, Decision Tree, Random Forest, KNN | Provides diet recommendations based on predictions. User-friendly web application for healthcare professionals | Small dataset size impact generalizability. Limited to classification and algorithmic approaches | Naive Bayes and Random Forest show efficient results for malnutrition and anemia prediction |
+
+(Continued)

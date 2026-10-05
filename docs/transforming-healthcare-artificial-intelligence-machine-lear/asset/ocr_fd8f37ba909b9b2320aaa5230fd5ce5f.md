@@ -1,0 +1,1 @@
++   5. Blumenschlein, L.A., Kolin, D.A., Fabricant, P.D., Park, J., Gilmore, A., Seeley, M. and Mistovich, R.J., 2024. Prevalence of concomitant injuries in sport in pediatric patients with ACL rupture. Orthopaedic Journal of Sports Medicine, 12(8), p. 232596712260051.

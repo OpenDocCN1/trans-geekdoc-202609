@@ -1,0 +1,50 @@
+
+## 28 Transforming Healthcare
+
+- 63. Trivedi, Jigisha, "A review on identifying loose sounds using different ml and dl models." no. 3 (2024): 399–411.
+- 64. Khan, Rafiullah, Sajjad Ullah Khan, Ubaid Saeed, and In Soo Koo, "Auscultation pulmonary disease detection through parallel transfer and deep learning." Bioengineering, vol. 11, p. 586, 2024; doi: 10.3390/bioengineering11060586.
+- 65. Wu, Chenwen, Na Ye, and Jial Jiang. "Classification and recognition of lung sounds based on Improved ResNet model." IEEE Access no. 99 (2024): 1–10.
+- 66. Song, Wenjie, Jian Han, Guibin Zheng, Tian Zheng, and Yongjun He. "Modeling quasi-periodic dependency via self-supervised pre-training for respiratory sound classification." In ICASSP 2024–2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 1996–2000. IEEE, 2024.
+- 67. Zhang, Wei, and Xiaoyan Liu. "Decoding machine learning advances in diagnosing pulmonary diseases using lung sound analysis." Scientific and Engineering Letters 12, no. 1 (2024): 1–11.
+- 68. Wang, Zaoping, and Zhiqiang Sun. "Performance evaluation of lung sounds classification using under variable parameters." EASRIP Journal on Advances in Signal Processing 2024, no. 1 (2024): 51.
+- 69. Kim, No, Sangmin Bae, Won-Yang Cho, Byungje Lee, and Ho-Young Jung. "Stethoscope-guided supervised contrastive learning for cross-domain adaptation on respiratory sound classification." In ICASSP 2024–2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 1431–1435. IEEE, 2024.
+- 70. Mang, Loredina, Francisco González Ortiz, Manuel Martínez Muñoz, Sebastian García Galán, and Raquel Cortina. "Classification of adventitious sounds using breathing cochleogram and vision transformers." Sensors 24, no. 2 (2024): 682.
+- 71. Kumar, Ajay, Abhishek, Chinmay Chakraborty, and Natalia Krivkina. "Deep learning and internet of things based lung ailment recognition through coughing spectrograms." IEEE Access 9 (2021): 95938–95948.
+- 72. No, Dat, Lam Ham, Nguyen, Ben Kho, Tran, and Tru Nguyen. "Deep learning framework applied for predicting anomaly of respiratory sounds." In 2021 International Symposium on Electrical and Electronics Engineering (IEEE), pp. 42–47. IEEE, 2021.
+- 73. Saraiva, Aratê, Domingos S. Santos, Pedro Mateus Cunha Pimentel, Jose Vitor Moura Sousa, Nuno M. Fonseca Ferreira, Joao do Espírito Batista Netto, Silvano Soares, and Antonio Valle. "Classification of optical coherence tomography using convolutional neural networks." In Proceedings, 3 (2020): 168–175.
+- 74. Gwang, Cho-Ching, and Yong-Fa Li. "Performance evaluation and enhancement of lung sound recognition system in two real noisy environments." Computer Methods and Programs in Biomedicine 97, no. 2 (2010): 141–150.
+- 75. Pramono, Ramón Xaviero Duarte, Stuart Bowyer, and Esther Rodriguez-Villlegas. "Automatic adventitious respiratory sound analysis: A systematic review." PLS One, no. 5 (2017): e0177926.
+- 76. Bardou, Dalal, Kun Zhang, and Mohammad Mohammad Ahmed. "Lung sounds classification using convolutional neural networks." Artificial Intelligence in Medicine 88 (2018): 58–69.
+- 77. Psterkamp, Hans, Steve K. Kramer, and George R. Rodicka. “Respiratory sounds: Advance beyond the stethoscope.” American Journal of Respiratory and Critical Care Medicine 156, no. 3 (1997): 974–987.
+- 78. Bohadana, Abraham Izbicki, and Steve S. Kramer. “Fundamentals of lung auscultation.” New England Journal of Medicine 370, no. 8 (2014): 744–751.
+- 79. Olson, Dan, and Jeffrey Harvey Rammers. “Mechanisms of lung sound generation.” Seminars in Respiratory Medicine 6, no. 0 (1985): 171–179.
+- 80. Gavriel, Norman, Oren Remen Avraham Moshe Palti, and Gideon Alroy. “Spectral characteristics of normal breath sounds.” Journal of Applied Physiology 50, no. 2 (1981): 307–314.
+- 81. Weiss, Earle B., and C. Jeffrey Carlson. “Recording of breath sounds.” American Review of Respiratory Disease 105, no. 5 (1972): 835–839.
+- 82. Forgaks, Paul, Amin R. Nathoo, and Harold D. Richardson. “Breath sounds.” Thorax 26, no. 3 (1971): 288–295.
+- 83. Kramer, Steve S. “Vesicular (normal) lung sounds: How are they made, where do they come from, and what do they mean?” Seminars in Respiratory Medicine 6, no. 03 (1985): 183–191. Copyright© 1985 by Thieme Medical Publishers, Inc.
+- 84. Kramer, Steve S. “Determination of the production of respiratory sounds by sononography.” American Review of Respiratory Disease 122, no. 2 (1980): 303–309.
+- 85. Kramer, Steve S. “Does laryngeal noise contribute to vesicular lung sound?” American Review of Respiratory Disease 124, no. 3 (1981): 292–294.
+- 86. Gavriel, Norman, Moshe Nissan, Abraham H. Rubin, and David C. Kugell. “Spectral characteristics of chest wall breath sounds in normal subjects.” Thorax 50, no. 12 (1995): 1292–1300.
+- 87. Vyshedsky, Andrey, Ruqayah M., Rozanne Paciej, Marco, Inna Rudman, Jeffrey Fredberg, and Ralph Murphy. “Mechanism of inspiratory and expiratory cracks.” Chest 135, no. 1 (2009): 156–164.
+- 88. Fleetstra, Brian, Natasha Markuson, Andrey Vyshedsky, and R. Murphy. “Automated analysis of cracks in patients with interstitial fibrosis.” Pulmonary Medicine 2011, no. 1: 596.
+- 89. Munakata, Mitsuru, Hidekaki Ujima, Isamu Doi, Yoshinori Ohtsuka, Yoshitaka Masaki, Yukihiro Honda, and Yoshikazu Kawasaki. “Spectral and waveform characteristics of fine and coarse sounds.” Thorax 46, no. 9 (1991): 651–657.
+- 90. Forgaks, Paul. “The functional basis of analysis of lung sounds.” Chest 73, no. 3 (1978): 399–405.
+- 91. Jones, Alice. “A brief overview of lung sounds.” Physiotherapy 81, no. 1 (1995): 37–42.
+- 92. Murphy, Raymond, and Andrey Vyshedsky. “Acoustic findings in a patient with pneumonitis.” New England Journal of Medicine 363, no. 20 (2010): e131.
+- 93. Bohadana, Abraham B., Robin Pollin, and Hubert Uttloff. “Breath sounds in the clinical assessment of airway obstruction.” Thorax 33, no. 3 (1978): 345–351.
+- 94. Nagasaka, Yukio. “Lung sounds in bronchial asthma.” Allergology 61, no. 3 (2012): 353–363.
+- 95. American Thoracic Society. “Updated nomenclature for membership reaction.” ATS 3 (1977): 5–6.
+- 96. Russell, Stuart J., and Peter Novvig. “Artificial Intelligence: A Modern Approach.” Pearson, 2016.
+- 97. Goodfellow, Ian. “Deep learning.” MIT Press, Cambridge, 2016.
+- 98. Breiman, Leo. “Random forests.” Machine Learning 45 (2001): 5–32.
+- 99. Shalev-Shwartz, Shai, and Ben-David. “Understanding Machine Learning: From Theory to Algorithms.” Cambridge University Press, 2014.
+- 100. Khevsky, Alex, Ilya Sutskever, and Geoffrey E. “Imagen classification with deep convolutional networks.” Advances in Neural Processing Systems 25 (2012): 1097–1110.
+- 101. Simonyan, Karen, and Andrew Zisserman. “Very deep convolutional networks for large-scale image recognition.” arXiv:1409.1556, 2014.
+- 102. Al-Bakaa, Zainab H., and Alaa Taima Abo-Solih. “A review of ICBHI 2017 respiratory sounds analysis using deep learning.” Journal of Electronics and Computer Engineering 5, no. 2 (2024): 321–329.
+- 103. Al-Hasani, Ahmed, T., Mar Jan Edban Al-Juburi, Fousein Hisan, Ali J. Ramadhan, and Adelaja Oluwaseun. “Prediction of windy voice using machine learning.” In Bio Conference, vol. 97, p. 0107. EDP Sciences, 2024.
+- 104. Sabry, Ahmed H., Omar. Dallash Bahi, Hakimi Nik Aly, and Yasir Mahmoud Al Kabul. “Lung disease recognition methods using audio-based analysis with machine learning.” Heelyon (2024).
+- 105. Zhang, Han-Song, Huang-Yuan Zhou, Bin Dong, Fei Zhen, Fei Xiang, Jian-Liu et al. “Real-world verification of artificial intelligence algorithm-assisted resuscitation of breath sounds in children.” Frontiers in Pediatrics 9 (2021): 627337.
+- 106. Groove, Ethan, Chanjibiti Sitaela, Kenneth Tan, Lindsay Zhou, Arabella King, Ashwin Ramanathan, Atul Molhra, Guy G. Dum, and Fazez Marzband. “Prediction of neonatal respiratory distress in term babies by digital stethoscope recorded sounds.” In 2022 Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC), p. 4996–4999. IEEE, 2022.
+- 107. Oud, Mireille, Edo Hans Doojees, and Jari van der Zee. “Astmatic airways assessment based on detailed analysis of respiratory sound spectra.” IEEE Transactions on Biomedical Engineering 47, no. 11 (2000): 1450–1455.
+- 108. Mayorka, P., Cruzgalski, L. R. Morales, O. H. Gonzalez, and J. Vidales. “Acoustic based assessment of respiratory diseases using GMM classification.” In 2010 Annual International Conference of the IEEE Engineering in Medicine and Biology, p. 6312–6316. IEEE, 2010.
+- 109. Kahya, Yasemin P., E. Cagatay Guler, and Serdar Sah. “Respiratory ease diagnosis using lung sounds.” In Proceedings of the 19th Annual International Conference of the IEEE Engineering in Medicine and Biology Society. Magnificent Milestones and Emerging Opportunities in Medical Engineering’ (Cat. No. 97CH36136), vol. 5, p. 2051–2053. IEEE, 1997.

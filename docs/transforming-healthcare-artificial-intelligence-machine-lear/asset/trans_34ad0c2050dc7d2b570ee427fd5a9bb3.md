@@ -1,0 +1,52 @@
+
+
+## 28 医疗保健转型
+
+- 63. Trivedi, Jigisha, “使用不同机器学习和深度学习模型识别啰音的述。”no. 3 (2024): 399–411.
+- 64. Khan, Rafiullah, Sajjad Ullah Khan, Ubaid Saeed, and In Soo Koo, “通过并行传输和深度学习进行肺部疾病检测。”Bioengineering, vol. 11, p. 586, 2024; doi: 10.3390/bioengineering11060586.
+- 65. Wu, Chenwen, Na Ye, and Jial Jiang. “基于改进 ResNet 模型的肺音分类与识别。”IEEE Access no. 99 (2024): 1–10.
+- 66. Song, Wenjie, Jian Han, Guibin Zheng, Tian Zheng, and Yongjun He. “通过自监督预训练对呼吸音分类进行准周期依赖建模。”In ICASSP 2024–2024 IEEE 国际声学、语音和信号处理会议 (ICASSP), pp. 1996–2000. IEEE, 2024.
+- 67. Zhang, Wei, and Xiaoyan Liu. “解码利用肺音分析诊断肺部疾病的机器学习进展。”Scientific and Engineering Letters 12, no. 1 (2024): 1–11.
+- 68. Wang, Zaoping, and Zhiqiang Sun. “变变参数下的肺音分类性能评估。”EASRIP Journal on Advances in Signal Processing 2024, no. 1 (2024): 51.
+- 69. Kim, No, Sangmin Bae, Won-Yang Cho, Byungje Lee, and Ho-Young Jung. “用于呼吸音分类跨域适应的听诊器引导式监督对比学习。”In ICASSP 2024–2024 IEEE 国际声学、语音和信号处理会议 (ICASSP), pp. 1431–1435. IEEE, 2024.
+- 70. Mang, Loredina, Francisco González Ortiz, Manuel Martínez Muñoz, Sebastian García Galán, and Raquel Cortina. “使用呼吸蜗道图和视觉变换器对异常音分类。”Sensors 24, no. 2 (2024): 682.
+- 71. Kumar, Ajay, Abhishek, Chinmay Chakraborty, and Natalia Krivkina. “基于咳嗽频谱图的深度学习和物联网的肺部疾病识别。”IEEE Access 9 (2021): 95938–95948.
+- 72. No, Dat, Lam Ham, Nguyen, Ben Kho, Tran, and Tru Nguyen. “应用于预测呼吸音异常的深度学习框架。”In 2021 国际电气电子工程研讨会 (IEEE), pp. 42–47. IEEE, 2021.
+- 73. Saraiva, Aratê, Domingos S. Santos, Pedro Mateus Cunha Pimentel, Jose Vitor Moura Sousa, Nuno M. Fonseca Ferreira, Joao do Espírito Batista Netto, Silvano Soares, and Antonio Valle. “利用卷积神经网络进行光学相干断层分类。”In Proceedings, 3 (2020): 168–175.
+- 74. Gwang, Cho-Ching, and Yong-Fa Li. “两种真实噪声环境下肺音识别系统的性能评估与增强。”Computer Methods and Programs in Biomedicine 97, no. 2 (2010): 141–150.
+- 75. Pramono, Ramón Xaviero Duarte, Stuart Bowyer, and Esther Rodriguez-Villlegas. “异常呼吸音自动分析：系统性综述。”PLS One, no. 5 (2017): e0177926.
+- 76. Bardou, Dalal, Kun Zhang, and Mohammad Mohammad Ahmed. “使用卷积神经网络的肺音分类。”Artificial Intelligence in Medicine 88 (2018): 58–69.
+- 77. Psterkamp, Hans, Steve K. Kramer, and George R. Rodicka. “呼吸音：超越听诊器的进展。”American Journal of Respiratory and Critical Care Medicine 156, no. 3 (1997): 974–987.
+- 78. Bohadana, Abraham Izbicki, and Steve S. Kramer. “肺部听诊的基础。”New England Journal of Medicine 370, no. 8 (2014): 744–751.
+- 79. Olson, Dan, and Jeffrey Harvey Rammers. “肺音产生的机制。”Seminars in Respiratory Medicine 6, no. 0 (1985): 171–179.
+- 80. Gavriel, Norman, Oren Remen Avraham Moshe Palti, and Gideon Alroy. “正常呼吸音的频谱特征。”Journal of Applied Physiology 50, no. 2 (1981): 307–314.
+- 81. Weiss, Earle B., and C. Jeffrey Carlson. “呼吸音的记录。”American Review of Respiratory Disease 105, no. 5 (1972): 835–839.
+- 82. Forgaks, Paul, Amin R. Nathoo, and Harold D. Richardson. “呼吸音。”Thorax 26, no. 3 (1971): 288–295.
+- 83. Kramer, Steve S. “肺泡音（正常肺音）：它们是如何产生的？来自哪里？意味着什么？”Seminars in Respiratory Medicine 6, no. 0 (1985): 183–191. Copyright©1985 by Thieme Publishers.
+- 84. Kramer, Steve S. “通过声纳法确定呼吸音的产生。”American Review of Respiratory Disease 122, no. 2 (1980): 303–309.
+- 85. Kramer, Steve S. “喉噪音对肺音的影响？”American Review of Respiratory Disease 124, no. 3 (1981): 292–294.
+- 86. Gavriel, Norman, Moshe Nissan, Abraham H. Rubin, and David C. Kugell. “正常胸壁呼吸音的频谱特征。”Thorax 50, no. 12 (1995): 1292–1300.
+- 87. Vyshedsky, Andrey, Ruqayah M., Rozanne Paciej, Marco, Inna Rudman, Jeffrey Fredberg, and Adelaja Oluwaseun. “吸气和呼气啰音的机制。”Chest 135, no. 1 (2009): 156–164.
+- 88. Fleetstra, Brian, Natasha Markuson, Andrey Vyshedsky, and R. Murphy. “间质纤维化患者啰音的自动分析。”Pulmonary Medicine 2011, no. 1: 596.
+- 89. Munakata, Mitsuru, Hidekaki Ujima, Isamu Doi, Yoshinori Ohtsuka, Yoshitaka Masaki, Yukihiro Honda, and Yoshikazu Kawasaki. “使用机器学习预测风鸣音。”Thorax 46, no. 9 (1991): 651–657.
+- 90. Forgaks, Paul. “肺音分析的功能基础。”Chest 73, no. 3 (1978): 399–405.
+- 91. Jones, Alice. “肺音的简要综述。”Physiotherapy 81, no. 1 (1995): 37–42.
+- 92. Murphy, Raymond, and Andrey Vyshedsky. “肺炎患者的声学发现。”New England Journal of Medicine Medicine 363, no. 20 (2010): e131.
+- 93. Bohadana, Abraham B., Robin Pollin, and Hubert Uttloff. “气道阻塞临床评估中的呼吸音。”Thorax 33, no. 3 (1978): 345–351.
+- 94. Nagasaka, Yukio. “支气管哮喘中的肺音。”Allergology 61, no. 3 (2012): 353–363.
+- 95. American Thoracic Society. “成员反应的更新命名。”ATS 3 (1977): 5–6.
+- 96. Russell, Stuart J., and Peter Novvig. “人工智能：现代方法。”Pearson, 2016.
+- 97. Goodfellow, Ian. “深度学习。”MIT Press, Cambridge, 2016.
+- 98. Breiman, Leo. “随机森林。”Machine Learning 45 (2001): 5–32.
+- 99. Shalev-Shwartz, Shai, and Ben-David. “理解机器学习：从理论到算法。”Cambridge University Press, 2014.
+- 100. Khevsky, Alex, Ilya Sutskever, and Geoffrey E. “使用深度神经网络进行图像分类。”Advances in Neural Processing Systems 25 (2012): 1097–1110.
+- 101. Simonyan, Karen, and Andrew Zisserman. “用于大规模图像识别的深深神经网络。”arXiv:1409.1556, 2014.
+- 102. Al-Bakaa, Zainab H., and Alaa Taima Abo-Solih. “深度学习分析 ICBHI 2017 呼吸音综述。”Journal of Electronics and Computer Engineering 5, no. 2 (2024): 321–329.
+- 103. Al-Hasani, Ahmed, T., Mar Jan Edban Al-Juburi, Fousein Hisan, Ali J. Ramadhan, and Adelaja Oluwaseun. “使用机器学习预测风鸣音。”In Bio Conference, vol. 97, p. 0107. EDP Sciences, 2024.
+- 104. Sabry, Ahmed H., Omar. Dallash Bahi, Hakimi Nik Aly, and Yasir Mahmoud Al Kabul. “基于机器学习音频分析的肺部疾病识别方法。”Heelyon (2024).
+- 105. Zhang, Han-Song, Huang-Yuan Zhou, Bin Dong, Fei Zhen, Fei Xiang, Jian-Liu et al. “人工智能算法辅助儿童呼吸复苏的真实世界验证。”Frontiers in Pediatrics 9 (2021): 627337.
+- 106. Groove, Ethan, Chanjibiti Sitaela, Kenneth Tan, Lindsay Zhou, Arabella King, Ashwin Ramanathan, Atul Molhra, Guy G. Dum, and Fazez Marzband. “通过数字听诊器录音预测足月婴儿呼吸窘迫。”In 2022 Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC), p. 4996–4999. IEEE, 2022.
+- 107. Oud, Mireille, Edo Hans Doojees, and Jari van der Zee. “基于呼吸音频谱分析的哮喘气道评估。”IEEE Transactions on Biomedical Engineering 47, no. 11 (2000): 1450–1455.
+- 108. Mayorka, P., Cruzgalski, L. R. Morales, O. H. Gonzalez, and J. Vidales. “使用 GMM 分类进行呼吸疾病声学评估。”In 2010 Annual International Conference of the IEEE Engineering in Medicine and Biology, p. 6312–6316. IEEE, 2010.
+- 109. Kahya, Yasemin P., E. Cagatay Guler, and Serdar Sah. “利用肺音进行呼吸道诊断。”In Proceedings of the 19th Annual International Conference of the IEEE Engineering in Medicine and Biology Society. Magnificent Milestones and Emerging Opportunities in Medical Engineering’ (Cat. No. 97CH36136), vol. 5, p. 2051–2053. IEEE, 1997.
+
