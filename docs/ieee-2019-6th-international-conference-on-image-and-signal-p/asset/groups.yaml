@@ -1,0 +1,2523 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # IEEE Access
+
+
+    Received August 28, 2016, accepted September 11, 2016, date of publication September
+    23, 2016, date of current version October 31, 2016.
+
+
+    Digital Object Identifier: 10.1109/ACCESS.2016.2623128
+
+
+    # # Decoupled Downlink-Uplink Coverage Analysis with Interference Management for
+    Enhanced Heterogeneous Cellular Networks
+
+
+    FAZAL MUHAMMAD¹, (Student Member, IEEE), ZIAEL HAQ ABBAS², GHULAM ABBAS², (Senior
+    Member, IEEE), AND LEI JAO³, (Member, IEEE)
+
+
+    *Faculty of Engineering, Gushk Iqbal Khan Institute of Engineering Sciences and
+    Technology, Top 236-60, Pakistan
+
+    ²Faculty of Engineering, Gushk Iqbal Khan Institute of Engineering Sciences and
+    Technology, Top 236-60, Pakistan
+
+    ³Department of Information and Communication Technology, University of Agder,
+    N-466 Grimstad, Norway
+
+    Corresponding author: F. Muhammad (fazal_engr@giki.edu)
+
+
+    **ABSTRACT** Heterogeneous networks (HetNCs) offer a promising solution to cope
+    with the current cellular network crunch. Due to the large transport power disparity,
+    while favoring maximum power (MPR) association scheme, a higher number of users
+    are associated with macro-cell BS (MBS) than small-cell BS (SBS). Hence, an imbalance
+    allocation takes places across the HetNCs. Using cell range expansion-based association,
+    we can balance the load across the HetNCs. However, using MPR association scheme,
+    users leads to two challenges: 1) macro-cell interference, in which the MBS interfers
+    with the overloaded users, and 2) decoupled downlink-uplink association, where
+    a random user associates with a single tier''s base station (BS) in uplink (UL)
+    and downlink (DL) directions. This paper addresses these problems while considering
+    a two-tier scenario. We employ a reverse frequency allocation (RFA) scheme. Besides
+    Coupled DL-UL association (Co-DU), this paper also highlights the notion of decoupled
+    DL-UL association. In De-DU, a random user associates with two different tiers
+    BS, with one tier''s BS in DL and the other tier''s BS in UL. Our results illustrate
+    that, in comparison with the Co-DU, De-DU with RFA employment achieves a better
+    coverage performance.
+
+
+    +   **INDEX TERMS** Heterogeneous cellular networks, small-cell BS, reverse frequency
+    allocation, downlink-uplink association, coverage performance.
+
+
+    # I. INTRODUCTION
+
+
+    To meet the current wireless data deluge, cellular networks enter into a new paradigm
+    where the low power small-cells, i.e., pico-cells and femto-cells, utilize the
+    existing infrastructure of high power macro-cells in heterogeneous cellular networks
+    (HetNCs) [1]. Different types of BS differ from each other in their transmit power,
+    BS densities, user densities associated and cell selection offsets. Due to the
+    higher transmit power, coverage of macro-cells are larger compared with low power
+    small-cells. Fewer number of users are associated with small-cells. Cell range
+    expansion (CRE) [2], is one of the popular load balancing methods, where a cell
+    selection offset (also referred as the association) is added. small-cells reference
+
+
+    signals to increase their coverage range in order to push a fraction of users
+    from macro-cells towards small-cells. Load balancing brings benefits to the HetNets,
+    i.e., macro-congestion and overloaded users to small-cells to utilize their resources
+    efficiently. However, these besides critical challenges faced by HetNCs, i.e.,
+    the macro-cells interference towards the overloaded users and downlink cell association.
+
+
+    6250
+
+
+    2168-1556/IEEE.2016.2623128 Transactions and content mining are permitted for
+    academic purposes only. Personal use is permitted, but publication/redistribution
+    permission requires IEEE permission.
+
+
+    VOLUME 4, 2016'
+  - '[PAGE 1]
+
+
+    sub frames (ABSs) ABSs are completely assigned to the offloaded users in the MCI
+    Cloud, this scheme results in decrease of macro-resources, these ABSs are used
+    by small cells. Frequency-based resource partitioning is presented in [5], where
+    the MBS is on a fraction of sub-bands, which are allocated to offloaded users.
+    In [6], the authors investigate to interference plus noise (SINR) based analysis
+    for resource partitioning. However, i.e., loading is not considered in their working
+    scheme of frames. In [7] extend the work presented in [6], and observe the effect
+    of load balancing and resource-based partitioning on the performance metrics.
+    However, the previous studies [4]–[7] consider UL association, in which a random
+    user is associated with a single BS [8]. Furthermore, [10]–[12] specify that UL
+    association is not considered in their models. In these models, the authors associate
+    their user with one BS in DL link direction to connect to any other BS in UL direction.
+    This is referred to as de-coupled. In [13] the authors consider DL and UL user
+    association. The authors in [14] consider rate and performance rates considering
+    different DL and UL association strategies. The studies in [15] and [16] illustrate
+    their theoretical results by showing that de-coupling achieves better performance
+    in terms of capacity. However, our proposed model aims to study the impact of
+    decoupled-uplink-downlink (De-UA) with load balancing, while considering reverse
+    frequency allocation (RFA) [17] to mitigate MCI and achieve better performance.
+
+
+    In this paper, we consider a two-tier HetNet model where both BSs are distributed
+    via two independent homogeneous point processes PPPs [18], [19]. For the analysis
+    of our proposed model we use tractable stochastic geometry [22]–[23], which is
+    one of the best analytical tools used in state-of-the-art. It is interesting to
+    observe that the PPP and hexagonal models provide results with accuracy [24],
+    and the stochastic geometry [25] tool contains the resources of the BSs. For our
+    proposed network analysis, we use stochastic geometry.
+
+
+    The main contributions of this paper can be summarized as follows:
+
+
+    +   1 We consider a two-tier HetNet model with resource partitioning, i.e. via
+    RFA, with two access modes: coupled uplink-downlink association (Co-UA) and De-UA.
+    We probabilistically characterize the performance of the proposed access and the
+    effect of BS and SBS densities, SINR threshold and different values of association
+    biases on the coverage probability.
+
+    In UL and DL bands are reserved between the SBS and MBSs in a multi-region environment.
+
+
+    Our results from De-UA surpasses coverage performance of the RFA scheme over other
+    methods, such as Co-UA and without RFA scheme, and the conventional load balancing.
+
+
+    The rest of the paper is organized as follows. The system model is presented in
+    Section II. Section III presents the SIR distribution and user-SBS association
+    rules. Our association is described in Section IV. Section V presents the coverage
+    performance. Numerical results are presented in Section VI. The paper is concluded
+    in Section VII.
+
+
+    # II. SYSTEM MODEL
+
+
+    # A. BASE STATION AND USER DISTRIBUTION
+
+
+    Consider a two-tier HetNet model, where each BS is deployed in terms of densities
+    and transmit power. BSs of both tiers are deployed through independent PPP, $\Phi_i$,
+    with densities $\lambda_i \in \{M, S\}$ and $M$ MBS and SBSs, respectively. As
+    the HetNet is also distributed via another homogeneous PPP, $\Phi_u$, with $\lambda_u$;
+    According to Slivnyak''s Theorem [20], the analysis of a PPP remains unchanged
+    if carried out the typical user (UE) at the typical location.
+
+
+    # B. CHANNEL MODEL AND USER ASSOCIATION
+
+
+    DL received power by UE from BS, and UL received power by BS from UE, $P_{R,u}^{DL}
+    = T_{BS}h_u$, $P_{R,b}^{UL} = T_{UE}h_b^T$, respectively. Here, $T_{BS}$ and $T_{UE}$
+    represent the transmit power of BSs and the associated users, and $H_h$ is the
+    channel of BS, T, and $H_v$ denote the fading of the BS and the UE. The channel
+    between BS and UE is modeled with path loss represented by an exponential. Rayleigh
+    fading with unit mean is used for all channels, e.g., the direct and interfering
+    channels, $H_i \sim \exp(1)$, where $X$ is a random variable with probability
+    density function $f_X(x) = e^{-x}$ for $x \ge 0$, and $H_i = H \sim \exp(1)$,
+    since the fading is independent of the BS site. For the case of an access, a few
+    of the numbers used in this paper are summarized as follows:
+
+
+    # C. REVERSE FREQUENCY ALLOCATION SCHEME
+
+
+    In the co-coupled deployed multi-tier, transmissions in DL and UL direction of
+    a tier co-occur with the transmissions of other tier, which causes MCI. The mitigation
+    of such type of interference is one of the challenges in HetNets. Several approaches
+    are presented in the state-of-the-art (e.g., see [4] and references in [5]). However,
+    in this paper, we present our work, we use the RFA scheme to abate MCI. De-UA
+    to achieve maximum performance gain. To employ RFA, we split the available region
+    $R$ into two subregions, $R^{(\alpha)}$ and an outer subregion, $R^{(1-\alpha)}=R$,
+    where $R^{(\alpha)}$ is the subregion where the MBS provides reasonable coverage
+    to its associated users.'
+  md: '
+
+    # IEEE Access
+
+
+    Received August 28, 2016, accepted September 11, 2016, date of publication September
+    23, 2016, date of current version October 31, 2016.
+
+
+    Digital Object Identifier: 10.1109/ACCESS.2016.2623128
+
+
+    # Decoupled Downlink-Uplink Coverage Analysis with Interference Management for
+    Enhanced Heterogeneous Cellular Networks
+
+
+    FAZAL MUHAMMAD¹, (Student Member, IEEE), ZIAEL HAQ ABBAS², GHULAM ABBAS², (Senior
+    Member, IEEE), AND LEI JAO³, (Member, IEEE)
+
+
+    *Faculty of Engineering, Gushk Iqbal Khan Institute of Engineering Sciences and
+    Technology, Top 236-60, Pakistan
+
+    ²Faculty of Engineering, Gushk Iqbal Khan Institute of Engineering Sciences and
+    Technology, Top 236-60, Pakistan
+
+    ³Department of Information and Communication Technology, University of Agder,
+    N-466 Grimstad, Norway
+
+    Corresponding author: F. Muhammad (fazal_engr@giki.edu)
+
+
+    **ABSTRACT** Heterogeneous networks (HetNCs) offer a promising solution to cope
+    with the current cellular network crunch. Due to the large transport power disparity,
+    while favoring maximum power (MPR) association scheme, a higher number of users
+    are associated with macro-cell BS (MBS) than small-cell BS (SBS). Hence, an imbalance
+    allocation takes places across the HetNCs. Using cell range expansion-based association,
+    we can balance the load across the HetNCs. However, using MPR association scheme,
+    users leads to two challenges: 1) macro-cell interference, in which the MBS interferes
+    with the overloaded users, and 2) decoupled downlink-uplink association, where
+    a random user associates with a single tier''s base station (BS) in uplink (UL)
+    and downlink (DL) directions. This paper addresses these problems while considering
+    a two-tier scenario. We employ a reverse frequency allocation (RFA) scheme. Besides
+    Coupled DL-UL association (Co-DU), this paper also highlights the notion of decoupled
+    DL-UL association. In De-DU, a random user associates with two different tiers
+    BS, with one tier''s BS in DL and the other tier''s BS in UL. Our results illustrate
+    that, in comparison with the Co-DU, De-DU with RFA employment achieves a better
+    coverage performance.
+
+
+    - **INDEX TERMS** Heterogeneous cellular networks, small-cell BS, reverse frequency
+    allocation, downlink-uplink association, coverage performance.
+
+
+    # I. INTRODUCTION
+
+
+    To meet the current wireless data deluge, cellular networks enter into a new paradigm
+    where the low power small-cells, i.e., pico-cells and femto-cells, utilize the
+    existing infrastructure of high power macro-cells in heterogeneous cellular networks
+    (HetNCs) [1]. Different types of BS differ from each other in their transmit power,
+    BS densities, user densities associated and cell selection offsets. Due to the
+    higher transmit power, coverage of macro-cells are larger compared with low power
+    small-cells. Fewer number of users are associated with small-cells. Cell range
+    expansion (CRE) [2], is one of the popular load balancing methods, where a cell
+    selection offset (also referred as the association) is added to small-cells reference
+    signals to increase their coverage range in order to push a fraction of users
+    from macro-cells towards small-cells. Load balancing brings benefits to the HetNets,
+    i.e., macro-congestion and overloaded users to small-cells to utilize their resources
+    efficiently. However, these besides critical challenges faced by HetNCs, i.e.,
+    the macro-cells interference towards the overloaded users and downlink cell association.
+
+
+    6250
+
+    2168-1556/IEEE.2016.2623128 Transactions and content mining are permitted for
+    academic purposes only. Personal use is permitted, but publication/redistribution
+    permission requires IEEE permission.
+
+
+    VOLUME 4, 2016
+
+
+    sub frames (ABSs) ABSs are completely assigned to the offloaded users in the MCI
+    Cloud, this scheme results in decrease of macro-resources, these ABSs are used
+    by small cells. Frequency-based resource partitioning is presented in [5], where
+    the MBS is on a fraction of sub-bands, which are allocated to offloaded users.
+    In [6], the authors investigate to interference plus noise (SINR) based analysis
+    for resource partitioning. However, i.e., loading is not considered in their working
+    scheme of frames. In [7] extend the work presented in [6], and observe the effect
+    of load balancing and resource-based partitioning on the performance metrics.
+    However, the previous studies [4]–[7] consider UL association, in which a random
+    user is associated with a single BS [8]. Furthermore, [10]–[12] specify that UL
+    association is not considered in their models. In these models, the authors associate
+    their user with one BS in DL link direction to connect to any other BS in UL direction.
+    This is referred to as de-coupled. In [13] the authors consider DL and UL user
+    association. The authors in [14] consider rate and performance rates considering
+    different DL and UL association strategies. The studies in [15] and [16] illustrate
+    their theoretical results by showing that de-coupling achieves better performance
+    in terms of capacity. However, our proposed model aims to study the impact of
+    decoupled-uplink-downlink (De-UA) with load balancing, while considering reverse
+    frequency allocation (RFA) [17] to mitigate MCI and achieve better performance.
+
+
+    In this paper, we consider a two-tier scenario. We employ a reverse frequency
+    allocation (RFA) scheme. Besides Coupled DL-UL association (Co-DU), this paper
+    also highlights the notion of decoupled DL-UL association. In De-DU, a random
+    user associates with two different tiers BS, with one tier''s BS in DL and the
+    other tier''s BS in UL. Our results illustrate that, in comparison with the Co-DU,
+    De-DU with RFA employment achieves a better coverage performance.
+
+
+    In this paper, we consider a two-tier scenario. We employ a reverse frequency
+    allocation (RFA) scheme. Besides Coupled DL-UL association (Co-DU), this paper
+    also highlights the notion of decoupled DL-UL association. In De-DU, a random
+    user associates with two different tiers BS, with one tier''s BS in DL and the
+    other tier''s BS in UL. Our results illustrate that, in comparison with the Co-DU,
+    De-DU with RFA employment achieves a better coverage performance.
+
+
+    The main contributions of this paper can be summarized as:
+
+    - We consider a two-tier HetNet model with resource partitioning, i.e., two association
+    modes: coupled (Co) and decoupled (De) association.
+
+    - We probabilistically characterize the performance of the proposed association
+    with RFA.
+
+    - Our results show De-UA surpasses coverage performance over other methods, such
+    as Co-UA and without RFA.
+
+
+    The rest of the paper is organized as follows. The system model is presented in
+    Section II. Section III presents the SIR distribution and user association. Our
+    association is described in Section IV. Section V presents the numerical results.
+    The paper is concluded in VI.
+
+
+    # II. SYSTEM MODEL
+
+
+    ### A. BASE STATION AND USER DISTRIBUTION
+
+
+    Consider a two-tier HetNet model, where each BS is deployed in terms of densities
+    and transmit power. BSs of both tiers are deployed through independent PPP, $\Phi_i$,
+    with densities $\lambda_i \in \{M, S\}$ and $M$ and SBS, respectively. As the
+    HetNet is also distributed via another homogeneous PPP, $\Phi_u$; According to
+    Slnyak''s Theorem [20], the analysis remains unchanged if carried out typical
+    location.
+
+
+    ### B. CHANNEL MODEL AND USER ASSOCIATION
+
+
+    DL received power by UE from BS, and UL received power by BS from UE, $P_{R,u}^{DL}
+    = T_{BS}h_u$, $P_{R,b}^{UL} = T_{UE}h_b$, respectively. Here, $T_{BS}$ and $T_{UE}$
+    represent the transmit power of BSs and the associated users, and $H_h$ is the
+    channel of BS, and $H_v$ denote the fading of the UE. The channel between BS and
+    UE is modeled with path loss represented by an exponential. Rayleigh fading with
+    unit mean is used for all channels, e.g., the direct and interfering channels,
+    $H_i \sim \exp(1)$, where $X$ is a random variable with probability density function
+    $f_X(x) = e^{-x}$ for $x \ge 0$, and $H_i = H \sim \exp(1)$, since the fading
+    is independent of the BS site.
+
+
+    ### C. REVERSE FREQUENCY ALLOCATION SCHEME
+
+
+    In the co-coupled deployed multi-tier, transmissions in DL and UL direction of
+    a tier co-occur with the transmissions of other tier, which causes MCI. The mitigation
+    of such type of interference is one of the challenges in HetNets. Several approaches
+    are presented in state-of-the-art (e.g., see [4] and references in [5]). However,
+    in this paper, we present our work, we use the RFA scheme to abate MCI. De-UA
+    to achieve maximum performance gain. To employ RFA, we split the available region
+    $R$ into two subregions, $R^{(\alpha)}$ and an outer subregion, $R^{(1-\alpha)}=R$,
+    where $R^{(\alpha)}$ is the subregion where the MBS provides reasonable coverage
+    to its associated users.
+
+    '
+  mdcn: '
+
+
+    # IEEE Access
+
+
+    于2016年8月28日接收，2016年9月11日录用，发表日期为2016年9月23日，当前版本日期为2016年10月31日。
+
+
+    数字对象标识符：10.1109/ACCESS.2016.2623128
+
+
+    # 面向增强异构小区网络的带有干扰管理的解耦下行-上行覆盖分析
+
+
+    FAZAL MUHAMMAD¹（IEEE 学生会员），ZIAEL HAQ ABBAS², GHULAM ABBAS²（IEEE 高级会员），以及 LEI JAO³（IEEE
+    会员）
+
+
+    *¹ 工程学院，Gushk Iqbal Khan 工程科学与技术学院，Top 236-60, 巴基斯坦
+
+    *² 工程学院，Gushk Iqbal Khan 工程科学与技术学院，Top 236-60, 巴基斯坦
+
+    *³ 信息与通信技术系，奥格德大学，N-466 Grimstad, 挪威
+
+    通讯作者：F. Muhammad (fazal_engr@giki.edu)
+
+
+    **摘要** 异构网络（HetNCs）为应对当前小区网络拥堵提供了一种很有前景的解决方案。由于传输功率差异巨大，在倾向于最大功率（MPR）关联方案的情况下，关联宏小区基站（MBS）的用户数量多于小小区基站（SBS）。因此，异构网络内部出现了分配不均。通过使用基于小区范围扩展（CRE）的关联，我们可以平衡异构网络的负载。然而，使用
+    MPR 关联方案会导致用户面临两个挑战：1）宏小区干扰，即 MBS 干扰了过载用户；2）解耦的下行-上行关联，即随机用户在上行（UL）方向和下行（DL）方向上分别与单层级的基站（BS）关联。本文在考虑双层场景的同时解决了了这些问题。我们采用了一种反向频率分配（RFA）方案。除了耦合的下行-上行关联（Co-DU）外，本文还强调了解耦的下行-上行关联的概念。在
+    De-DU 中，随机用户与两个不同层级的基站关联，其中一层的基站负责下行，另一层负责上行。我们的结果表明，与 Co-DU 相比，采用 RFA 的 De-DU
+    实现了更好的覆盖性能。
+
+
+    - **索引术** 异构小区网络，小小区基站，反向频率分配，下行-上行关联，覆盖性能。
+
+
+    # I. 引言
+
+
+    为了满足当前的无线数据洪流，小区网络进入了一个新范式，即低功率小小区（如皮基级小区和飞米级小区）利用了异构小区网络（HetNCs）中高功率宏小区的现有基础设施
+    [1]。不同类型的基站其发射功率、基站密度、关联用户密度以及小区选择偏移之间存在差异。由于发射功率更高，宏小 way覆盖范围比低功率小小区更大。关联到小小区的用户数量较少。小区范围扩展（CRE）[2]
+    是流行的负载均衡方法之一，在小小区的参考信号中添加小区选择偏移（也称为关联），以增加其覆盖范围，从而将部分用户从宏小区推向小小区。负载均衡为异构网络带来了益处，即将宏小区拥塞和过载用户转移到小小区，以有效利用其资源。然而，除了这些关键挑战外，异构网络还面临宏小区对过载用户的干扰以及下行小区关联的问题。
+
+
+    6250
+
+    2168-1556/IEEE.2016.2623128 交易和内容挖掘仅限于学术目的。允许个人使用，但出版/重新发布需要 IEEE 许可。
+
+
+    第 4 卷，2016 年
+
+
+    子帧（ABSs）。ABSs 被完全分配给 MCI 云中的卸载用户，该方案导致了宏资源的减少，这些 ABSs 被小小区使用。[5] 中提出了了基于频率的资源划分，其中
+    MBS 位于部分子带上，这些子带分配给卸载用户。在 [6] 中，作者研究了基于信干加噪声比（SINR）的资源划分分析。然而，在他们的帧工作方案中并未考虑负载。在
+    [7] 中扩展了 [6] 中提出的工作，并观察了负载均衡和基于资源的划分对性能指标的影响。然而，之前的研究 [4]–[7] 考虑了上行关联，即随机用户与单个基站关联
+    [8]。此外，[10]–[12] 指明他们的模型中没有考虑上行关联。在这些模型中，作者将用户在下行链路方向与一个基站关联，以连接到上行方向的任何其他基站。这被称为解耦。在
+    [13] 中，作者考虑了下行和上行用户关联。[14] 中的作者考虑了考虑不同下行和上行关联策略的速率和性能率。[15] 和 [16] 中的研究通过考虑不同的下行和上行关联策略来阐述速率和性能。我们的模型通过考虑解耦的资源划分来缓解宏小区干扰。
+
+
+    本文中，我们采用了一种反向频率分配（RFA）方案。除了耦合的下行-上行关联（Co-DU）外，本文还强调了解耦下行-上行关联的概念。在 De-DU 中，随机用户与两个不同层级的基站关联，其中一层的基站负责下行，另一层的基站负责上行。我们的结果表明，与
+    Co-DU 相比，采用 RFA 的 De-DU 实现了更好的覆盖性能。
+
+
+    本文中，我们考虑双层场景。我们采用了一种反向频率分配（RFA）方案。除了耦合的下行-上行关联（Co-DU）外，本文还强调了解耦下行-上行关联的概念。在 De-DU
+    中，随机用户与两个不同层级的基站关联，其中一层的基站负责下行，另一层的基站负责上行。我们的结果表明，与 Co-DU 相比，采用 RFA 的 De-DU 实现了更好的覆盖性能。
+
+
+    本文的主要贡献可以总结为：
+
+    - 我们考虑了具有资源划分模式的双层异构网络模型，即耦合（Co）和解耦（De）关联。
+
+    - 我们概率性地描述了采用 RFA 的关联性能。
+
+    - 我们的结果显示解耦关联优于其他方法。
+
+
+    本文的其余部分组织如下：第二节介绍系统模型；第三节介绍 SIR 分布和关联；第四节描述我们的关联；第五节给出数值结果；第六节得出结论。
+
+
+    # II. 系统模型
+
+
+    ### A. 基站与用户分布
+
+
+    考虑一个双层异构网络模型，其中基站根据密度发射功率通过独立的泊点过程 $\Phi_i$ 部署，密度为 $\lambda_i \in \{M, S\}$，分别为宏小区和小小区。由于异构网络也通过另一个均匀泊点过程
+    $\Phi_u$ 分布；根据 Slyayak 定理 [20]，如果在典型位置进行分析，结果保持不变。
+
+
+    ### B. 信道模型与用户关联
+
+
+    用户从基站接收的接收功率和基站从用户接收的功率分别为 $P_{R,u}^{DL} = T_{BS}h_u$ 和 $P_{R,b}^{UL} = T_{UE}h_b$。在这里，$T_{BS}$
+    和 $T_{UE}$ 代表基站和关联用户的发射功率，$H_h$ 是基站信道，$H_v$ 表示用户的衰落。基站与用户之间的信道用指数分布建模。所有信道使用均值为瑞利衰落，例如直接信道和干扰信道，$H_i
+    \sim \exp(1)$，其中 $X$ 是概率密度函数为 $f_X(x) = e^{-x}$ ($x \ge 0$) 的随机变量，且 $H_i = H \sim
+    \exp(1)$，因为衰落与基站位置无关。
+
+
+    ### C. 反向频率分配方案
+
+
+    在耦合部署的多层网络中，一个层下行和上行方向的传输与其他层的传输同时发生，导致了 MCI。这种干扰的缓解是异构网络面临的挑战之一。目前技术中提出了多种方法（例如参见
+    [4] 和 [5] 中的参考文献）。然而，在本文中，我们提出了自己的工作，使用 RFA 方案来减轻 MCI。通过解耦关联实现最大的性能增益。为了采用 RFA，我们将可用区域
+    $R$ 划分为两个子区域，$R^{(\alpha)}$ 和外部子区域 $R^{(1-\alpha)}=R$，其中 $R^{(\alpha)}$ 是宏小区为其关联用户提供合理覆盖的子区域。
+
+
+    '
+  merge: -1
+- raw:
+  - "[PAGE 2]\n\n# IEEE Access F. Muhammad - Decoupled DL-UL Coverage Analysis with\
+    \ Interference Management\n\nTABLE 1. Notation summary.\n\n| Parameter | Semantic\
+    \ |\n| :--- | :--- |\n| $\\Theta_M, \\Theta_S, \\Theta_U$ | PPPs of the MBSs,\
+    \ SBSs and users' locations, respectively |\n| $\\sigma$ | Noise power at the\
+    \ receiver |\n| $P_{TM}, P_{SU}, P_{UL}$ | Transmit power of serving MBSs, SBSs\
+    \ and users, respectively |\n| $lambda_M, \\lambda_S, \\lambda_U$ | Spatial densities\
+    \ of MBSs, SBSs, and users, respectively |\n| $P_{DL}$ | DL power received at\
+    \ the serving MBS and SBS, respectively |\n| $P_{UL}$ | UL power received at the\
+    \ serving MBS and SBS, from users, respectively |\n| $\\alpha_M, \\alpha_S, \\\
+    alpha_U$ | Path losses of MBSs and SBSs, respectively, where $\\alpha_M = \\alpha_S\
+    \ > \\alpha_U$ |\n| $\beta_M, \beta_S$ | SINR thereof of MBSs and SBSs, respectively\
+    \ |\n| $R^{(in)}, R^{(out)}$ | inner-cell and outer-cell regions, respectively\
+    \ |\n| $Y_M, Y_S$ | Statistical distances from the serving MBS or serving SBSs,\
+    \ respectively |\n| $T_{UE}$ | Time in the TUE, respectively |\n| $M_{BS}$ | Association\
+    \ biases of MBSs and SBSs, respectively |\n| $P_{v,u}^{(j)}, P_{v,decouple}^{(j)}$\
+    \ | Fading variance of the desired signal and interferers channel |\n| $C_v^{(j)}$\
+    \ | Coverage probability of a $j^{th}$-cell TUE associated with $v$ SBSs with\
+    \ decoupled access, respectively |\n\n![](img/50c5c77000cc0e118c831908687e75a5_2_0.png)\n\
+    \nthan in $R^{(out)}$. The spectrum partitioning of the proposed two-tier set\
+    \ in $R^{(in)}$ and $R^{(out)}$ is shown in Fig. 1.\n\n![](img/50c5c77000cc0e118c831908687e75a5_2_1.png)\n\
+    \nFIGURE 1. RFA scheme's spectrum partitioning in $R^{(in)}$ and $R^{(out)}$ with\
+    \ DL and UL subcarriers.\n\nHowever, $R^{(out)}$ is regarded as cell edge region\
+    \ where MBS provide poor coverage to its associated users. Likewise, the total\
+    \ spectrum, is divided into two sub-carriers, $i$. $BW_1$ and $BW_2$, where $BW_1\
+    \ = BW_{1,DL} + BW_{1,UL}$,$ are the bandwidths assigned to the MBSs in $R^{(in)}$\
+    \ and $R^{(out)}$, respectively. With, $BW_2$ and $BW_3$, where $BW_2 = BW_{2,DL}\
+    \ + BW_{2,UL}$,$ are the MBS-carriers in $R^{(in)}$ and $R^{(out)}$, respectively.\
+    \ The MBS sub-spectrum in $BW_1$ and $BW_2$ are employed as the SBS sub-spectrum\
+    \ as $BW'_1$ and $BW'_2$, where $BW'_j = BW_{j,UL}$. Whereas, the UL and DL sub-carriers\
+    \ of $R^{(in)}$ and $R^{(out)}$ are denoted as $BW_1 = BW_{2,UL} + BW_{2,DL},$\
+    \ The SBS uses the UL and DL sub-carriers in $R^{(in)}$ in a reverse direction\n\
+    \nFIGURE 2. Network layout with Co-DU and De-DU.\n\nThe layout of the spectrum\
+    \ partitioning of the proposed two-tier network setup with Co-DU and De-DU is\
+    \ shown in Fig. 2. The regions of $R^{(in)}$ and $R^{(out)}$ are $0 \\leq D \\\
+    leq d_1$ and $d_1 \\leq d_2$, respectively. Various DL and UL (solid-lines) and\
+    \ interference channels (dashed) between TUEs and $v$ SBSs ($v=\\{M, S\\}$) are\
+    \ shown. US in $R^{(in)}$ is associated with SBS-2 both in UL and DL directions\
+    \ based the MPR strategy. For DL-transmission, it receives DL interference from\
+    \ SBS-1 as $IdL_1$ in the same region, and UL interference from U1 located in\
+    \ $R^{(out)}$ as $IUL_1$.\n\n6225 | IEEE Access, VOLUME 14, 2021"
+  - "[PAGE 3]\n\nSly in $R^{(out)}$ follows, it is associated with SBS-5 in UL in\
+    \ the same region on path loss (PL) directed association scheme, and it is with\
+    \ MBS-1 in DL direction $R^{(in)}$ under the DL association strategy. For transmission,\
+    \ it receives UE from $U4$ and all other users associated with SBS in DL from\
+    \ $R^{(out)}$ as $I_{ij}$ in the same region and interference from MBS-1 in $R^{(in)}$\
+    \ as $I_{ij}$. MCI mitigation, the Rafa scheme also enhances the spectral efficiency\
+    \ since no additional spectrum is required for the SBSs.\n\n# III. STATISTICS\
+    \ WITH SBS-DECOUPLED DECOUPLED AND UPLINK ASSOCIATION\n\nIn this section we analyze\
+    \ the SINR distribution and define downlink and uplink UE-based association rules.\
+    \ In this coverage, performance of the proposed model is analyzed.\n\n# A. INTERFERENCES\
+    \ WITH DECOUPLED/DECOUPLED AND UPLINK ASSOCIATION GIVEN THAT UE $R^{(0)}$, $\t\
+    au \\in \\{in, out\\}$\n\n+   1) INTERFERENCE WITH DISTRIBUTED DECOUPLED-UPLINK\
+    \ ASSOCIATION $I_{R^{(0)}},v,dec}$ (WHICH IS AS (1))\nWhen a UE in $R^{(0)}$ is\
+    \ associated with vBS in both DL and UL, it experiences the interference from\
+    \ vBSs located in $R^{(0)}$ in DL direction (from the serving vBS) and from the\
+    \ users associated with vBS, i.e., uEs, located in $R^{(0)}$, $s, v, \\tau \\\
+    in \\{M, S\\}$, $\tau \\in \\{M, S\\}$ and $v \\neq \\tau$. Moreover, $j \\in\
+    \ \\{in, out\\}$, $i \\in \\{in, out\\}$.\n\n+   2) INTERFERENCE WITH DISTRIBUTED\
+    \ DECOUPLED-UPLINK ASSOCIATION $I_{R^{(0)}},\\tau,dec}$ (WHICH IS AS (2))\nIf\
+    \ a UE in $R^{(0)}$ is associated with vBS in both DL and UL in DL direction,\
+    \ it receives interference from all vBSs (except the serving vBS in $R^{(0)}$),\
+    \ and interference from uEs in $R^{(0)}$. However, in UL transmission, the UE\
+    \ receives interference from all uEs in $R^{(0)}$ and as vBS in $R^{(v)}$ where\
+    \ $v, s, \\tau \\in \\{M, S\\}$ and $v \\neq \\tau$. Moreover, $j \\in \\{in,\
+    \ out\\}$, $i \\in \\{in, out\\}$.\n\n# B. SIGNAL-TO-INTERFERENCE-PLUS-NOISE RATIO\
+    \ ANALYSIS WITH COUPLED/DECOUPLED UPLINK ASSOCIATION\n\nGIVEN UE $R^{(0)}$, $\t\
+    au \\in \\{in, out\\}$nBased on the distributions (1) and (2), as shown at the\
+    \ top of the page, for the proposed model we analyze the SINR distributions for\
+    \ Co-DUA and De-De, given that UE is in $R^{(0)}$\n\n+   1) SINR ANALYSIS WITH\
+    \ COUPLED-UPLINK ASSOCIATION, $S_{R^{(0)}}$ (WHICH IS AS (3))\nWhen UE in $R^{(0)}$\
+    \ is associated with vBS in both DL and UL, and SBS is also modeled, as shown\
+    \ at the top of the page, where $\\sigma^2$ represents the power received at UE.\
+    \ In DL transmission, interference received from vBS in $R^{(0)}$ in DL direction\
+    \ is expressed as $\\sum_{\tau \\in \\{in, out\\}} P_{\tau,R^{(0)}} |H_{R^{(0)},v^{(\\\
+    tau)}}^{DL}|^2$, and interference from uEs in $R^{(0)}$ in UL direction, is denoted\
+    \ as $\\sum_{\tau \\in \\{in, out\\}} P_{\tau,R^{(0)}} |H_{R^{(0)},u^{(\\tau)}}^{UL}}|^2$.\
+    \ In UL transmission, interference received from vBS in $R^{(0)}$ in DL direction\
+    \ is expressed as $\\sum_{\tau \\in \\{in, out\\}} P_{\tau,R^{(0)}} |H_{R^{(0)}},v^{(\\\
+    tau)}}^{UL}|^2$, and $H_{R^{(0)}}^{UL}$.\n\n+   2) SINR ANALYSIS WITH DECOUPLED-UPLINK\
+    \ ASSOCIATION (WHICH IS AS (4))\nWhen UE in $R^{(0)}$ is associated with vBS in\
+    \ DL and vBS in UL, SINR distribution with decoupled access is modeled, as shown\
+    \ at the top of the next page. For DL transmission, interference received from\
+    \ vBS in $R^{(0)}$ in DL direction is expressed as $\\sum_{\tau \\in \\{in, out\\\
+    }} P_{\tau,R^{(0)}} |H_{R^{(0)},v^{(\\tau)}}^{DL}|^2$, and $H_{R^{(0)}}^{UL}$,\
+    \ and interference from uEs in $R^{(0)}$ in UL direction can be expressed as $\\\
+    sum_{\tau \\in \\{in, out\\}} P_{\tau,R^{(0)}} |H_{R^{(0)},u^{(\\tau)}}^{UL}}|^2$.\
+    \ In UL transmission, interference received from vBS in $R^{(0)}$ in DL direction\
+    \ is modeled as $\\sum_{\tau \\in \\{in, out\\}} P_{\tau,R^{(0)}} |H_{R^{(0)}},v^{(\\\
+    tau)}}^{UL}|^2$, and $H_{R^{(0)}}^{UL}$.\n\n# C. SBS-BASE ASSOCIATION SCHEME WITH\
+    \ DE COUPLED/DECOUPLED-UPLINK ASSOCIATION\n\nUser-association in Co-DUA, the UE\
+    \ is associated with a particular BS in both DL and UL, is based on the biased\
+    \ MPR association scheme [7], [18]. The location of such a BS (which the UE associates)\
+    \ of wi is expressed as\n\n```\n\\omega = arg \\max_{v \\in \\{M,S\\}} T_{Pv_v}\
+    \ ||Y_v||^{-\\alpha},\n```"
+  - '[PAGE 4]
+
+
+    # IEEE Access
+
+
+    # F. Muhammad et al.: Decoupled DL-UL Coverage Analysis with Interference Management
+
+
+    ```
+
+    $I_{v,coup}^{R(i)} = \begin{cases} \sum_{x_j \in \Xi(R(i)) \setminus \{v\}} T_v
+    P_{H_j}^{R(i)} \|x_j\|^{-\alpha} + \sum_{y_j \in \Upsilon(R(i)) \setminus \{v\}}
+    P_{H_j}^{R(i)} \|y_j\|^{-\alpha} & \text{for DL,}\\n\sum_{y_j \in \\Upsilon(R(i))
+    \setminus \{v\}} P_{H_j}^{R(i)} \|y_j\|^{-\alpha} + \sum_{x_j \in \Xi(R(i)) \setminus
+    \{v\}} T_v P_{H_j}^{R(i)} \|x_j\|^{-\alpha} & \text{for UL.} \end{cases} \quad
+    (1)$
+
+    ```
+
+
+    ```
+
+    $I_{v,t,dec}^{R(i)} = \begin{cases} \sum_{x_j \in \Xi(R(i)) \setminus \{v\}} T_v
+    P_{H_j}^{R(i)} \|x_j\|^{-\alpha} + \sum_{y_j \in \Upsilon(R(i)) \setminus \{v\}}
+    P_{H_j}^{R(i)} \|y_j\|^{-\alpha} & \text{for DL,}\\n\sum_{y_j \in \\Upsilon(R(i))
+    \setminus \{v\}} P_{H_j}^{R(i)} \|y_j\|^{-\alpha} + \sum_{x_j \in \Xi(R(i)) \setminus
+    \{v\}} T_v P_{H_j}^{R(i)} \|x_j\|^{-\alpha} & \text{for UL.} \end{cases} \quad
+    (2)$
+
+    ```
+
+
+    ```
+
+    $SINR_{v,v,coup}^{R(i)} \geq SINR_{v,t,dec}^{R(i)} = \begin{cases} \sigma^2 +
+    \sum_{x_j \in \Xi(R(i)) \setminus \{v\}} T_v P_{H_j}^{R(i)} \|x_j\|^{-\alpha}
+    + \sum_{y_j \in \Upsilon(R(i)) \setminus \{v\}} P_{H_j}^{R(i)} \|y_j\|^{-\alpha}
+    & \text{for DL,}\\n\sigma^2 + \sum_{y_j \in \\Upsilon(R(i)) \setminus \{v\}} P_{H_j}^{R(i)}
+    \|y_j\|^{-\alpha} - \sum_{x_j \in \Xi(R(i)) \setminus \{v\}} T_v P_{H_j}^{R(i)}
+    \|x_j\|^{-\alpha} & \text{for UL.} \end{cases} \quad (3)$
+
+    ```
+
+
+    ```
+
+    $SINR_{v,t,dec}^{R(i)} \geq SINR_{v,t,dec}^{R(i)} = \begin{cases} \sum_{x_j \in
+    \Xi(R(i)) \setminus \{v\}} T_v P_{H_j}^{R(i)} \|x_j\|^{-\alpha} + \sum_{y_j \in
+    \Upsilon(R(i)) \setminus \{v\}} P_{H_j}^{R(i)} \|y_j\|^{-\alpha} & \text{for DL,}\\n\sum_{y_j
+    \in \\Upsilon(R(i)) \setminus \{v\}} P_{H_j}^{R(i)} \|y_j\|^{-\alpha} - \sum_{x_j
+    \in \Xi(R(i)) \setminus \{v\}} T_v P_{H_j}^{R(i)} \|x_j\|^{-\alpha} & \text{for
+    UL.} \end{cases} \quad (4)$
+
+    ```
+
+
+    where $\|y_v\|$ represents the distance of the TUE from the nearest BS for vth.
+
+
+    However in the De-DUA, TUE associates to one particular BS in DL direction based
+    on MPR association scheme, and with other BS in UL direction based on PL association
+    scheme. The location of BS associated in DL direction based on MPR association
+    scheme in De-DUA is as given in (5). However, the location of BS associated in
+    UL direction with the TUE of $\omega$ in De-DUA is expressed as
+
+
+    ```
+
+    $\omega = max_{v \in M(S)} \|y_v\|^{-\alpha}. \ \quad (6)$
+
+    ```
+
+
+    In the proposed HotNet model, the TUE associates with a particular BS in the direction
+    under the following DL-UL association rules:
+
+
+    Downlink Association: A TUE is associates with BS in DL direction if the power
+    received by the TUE is the maximum, i.e., $P_{H_v}^{R(i)} \|y_v\|^{-\alpha} \geq
+    P_{H_j}^{R(i)} \|y_j\|^{-\alpha}$.
+
+
+    Uplink Association: A TUE is associates with BS in UL direction when the power
+    received by the BS is the maximum with all other BS, i.e., $P_{H_j}^{R(i)} \|y_j\|^{-\alpha}
+    \geq P_{H_v}^{R(i)} \|y_v\|^{-\alpha}$. Otherwise, the TUE with a bs following
+    the following DL association rule, where $
+
+    u \in \{M, S\}$,
+
+
+    Here, $P_{H_v}^{R(i)}, P_{H_j}^{R(i)}$ are the $v$,BS and BS transmit power, $\alpha_v$
+    and $\{\|y_v\|, \|y_j\|\}$ are the set of path loss and TUE, respectively, the
+    association bias between serving $v$ and BS $j$ $(T_v, T_j)$ represents association
+    bias of
+
+
+    # IV. USER ASSOCIATION PROBABILITY
+
+
+    In this section, we describe association probability is defined as the probability
+    that a TUE is served by a particular tier. To derive the association probability,
+    we first measure the distribution of distance $y_v$, between the TUE and the serving
+    BS, that the TUE associates to $v$. Consider $Y_v$ as the random variable which
+    denotes the statistical distance from the TUE to the closest BS of $\Omega$. As
+    the BS deployment is through PPP, [20], using null probability probability density
+    function (PDF) of $Y_v$ it is
+
+
+    ```
+
+    $f_v(y_v) = \lambda_v e^{-\lambda_v y_v^{\alpha_v}}, \forall v \in \{M, S\}. \quad
+    (7)$
+
+    ```
+
+
+    We employ RFA scheme in a multi-region environment to reduce inter interference.
+    Furthermore, we split the available regions into two regions, $R^{(1)}$ and $R^{(2)}$.
+    The association probability of
+
+
+    +   Distance distribution between serving $v$ BSs at $y_v$, and the TUE in $R^{(i)}$
+    is
+
+
+    ```
+
+    $f_{y_v|TUE \in R^{(i)}}(y_v) = \frac{f_{y_v}(y_v)}{P[TUE \in R^{(i)}]} = \frac{2\lambda_v
+    e^{-\lambda_v y_v^{\alpha_v}}}{1 - e^{-\lambda_v d_i^{\alpha_v}}}, \forall v \in
+    \{M, S\}.} \quad (8)$
+
+    ```
+
+
+    6254
+
+
+    VOLUME 4, 2016'
+  md: '
+
+    # IEEE Access F. Muhammad - Decoupled DL-UL Coverage Analysis with Interference
+    Management
+
+
+    TABLE 1. Notation summary.
+
+
+    | Parameter | Semantic |
+
+    | :--- | :--- |
+
+    | $\Theta_M, \Theta_S, \Theta_U$ | PPPs of the MBSs, SBSs and users'' locations,
+    respectively |
+
+    | $\sigma$ | Noise power at the receiver |
+
+    | $P_{TM}, P_{SU}, P_{UL}$ | Transmit power of serving MBSs, SBSs and users, respectively
+    |
+
+    | $\lambda_M, \lambda_S, \lambda_U$ | Spatial densities of MBSs, SBSs, and users,
+    respectively |
+
+    | $P_{DL}$ | DL power received at the serving MBS and SBS, respectively |
+
+    | $P_{UL}$ | UL power received at the serving MBS and SBS, from users, respectively
+    |
+
+    | $\alpha_M, \alpha_S, \alpha_U$ | Path losses of MBSs and SBSs, respectively,
+    where $\alpha_M = \alpha_S > \alpha_U$ |
+
+    | $\beta_M, \beta_S$ | SINR thereof of MBSs and SBSs, respectively |
+
+    | $R^{(in)}, R^{(out)}$ | inner-cell and outer-cell regions, respectively |
+
+    | $Y_M, Y_S$ | Statistical distances from the serving MBS or serving SBSs, respectively
+    |
+
+    | $T_{UE}$ | Time in the TUE, respectively |
+
+    | $M_{BS}$ | Association biases of MBSs and SBSs, respectively |
+
+    | $P_{v,u}^{(j)}, P_{v,decouple}^{(j)}$ | Fading variance of the desired signal
+    and interferers channel |
+
+    | $C_v^{(j)}$ | Coverage probability of a $j^{th}$-cell TUE associated with $v$
+    SBSs with decoupled access, respectively |
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_2_0.png)
+
+
+    than in $R^{(out)}$. The spectrum partitioning of the proposed two-tier set in
+    $R^{(in)}$ and $R^{(out)}$ is shown in Fig. 1.
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_2_1.png)
+
+
+    FIGURE 1. RFA scheme''s spectrum partitioning in $R^{(in)}$ and $R^{(out)}$ with
+    DL and UL subcarriers.
+
+
+    However, $R^{(out)}$ is regarded as cell edge region where MBS provide poor coverage
+    to its associated users. Likewise, the total spectrum is divided into two sub-carriers,
+    $i$. $BW_1$ and $BW_2$, where $BW_1 = BW_{1,DL} + BW_{1,UL}$, are the bandwidths
+    assigned to the MBSs in $R^{(in)}$ and $R^{(out)}$, respectively. With $BW_2$
+    and $BW_3$, where $BW_2 = BW_{2,DL} + BW_{2,UL}$, are the MBS-carriers in $R^{(in)}$
+    and $R^{(out)}$, respectively. The MBS sub-spectrum in $BW_1$ and $BW_2$ are employed
+    as the SBS sub-spectrum as $BW''_1$ and $BW''_2$, where $BW''_j = BW_{j,UL}$.
+    Whereas, the UL and DL sub-carriers of $R^{(in)}$ and $R^{(out)}$ are denoted
+    as $BW_1 = BW_{2,UL} + BW_{2,DL}$. The SBS uses the UL and DL sub-carriers in
+    $R^{(in)}$ in a reverse direction.
+
+
+    FIGURE 2. Network layout with Co-DU and De-DU.
+
+
+    The layout of the spectrum partitioning of the proposed two-tier network setup
+    with Co-DU and De-DU is shown in Fig. 2. The regions of $R^{(in)}$ and $R^{(out)}$
+    are $0 \leq D \leq d_1$ and $d_1 \leq d_2$, respectively. Various DL and UL (solid-lines)
+    and interference channels (dashed) between TUEs and $v$ SBSs ($v=\{M, S\}$) are
+    shown. US in $R^{(in)}$ is associated with SBS-2 both in UL and DL directions
+    based on the MPR strategy. For DL-transmission, it receives DL interference from
+    SBS-1 as $IdL_1$ in the same region, and UL interference from SBS-1 located in
+    $R^{(out)}$ as $IUL_1$.
+
+
+    In $R^{(out)}$ follows, it is associated with SBS-2 in UL in the same region on
+    path loss (PL) association scheme, and it is with MBS-1 in DL direction $R^{(in)}$.
+    For transmission, it receives UE from all other users associated with SBS in DL
+    from $R^{(out)}$ as $I_{ij}$ and interference from MBS-1 in $R^{(in)}$. MCI mitigation,
+    the Rafa scheme also enhances the spectral efficiency since no additional spectrum
+    is required for SBSs.
+
+
+    # III. STATISTICS WITH DECOUPLED UPLINK ASSOCIATION
+
+
+    In this section we analyze the SINR distribution and define downlink and uplink-based
+    association rules. Performance of the proposed model is analyzed.
+
+
+    ## A. INTERFERENCES WITH DECOUPLED UPLINK ASSOCIATION
+
+
+    GIVEN UE $R^{(0)}$, $\tau \in \{in, out\}$
+
+
+    + 1) INTERFERENCE WITH DISTRIBUTED DECOUPLED UPLINK ASSOCIATION $I_{R^{(0)},dec}$
+    (WHICH IS (1))
+
+    When a UE in $R^{(0)}$ is associated with vBS in both DL and UL, it experiences
+    the interference from vBSs located in $R^{(0)}$ in DL direction (from the serving
+    vBS) and from users associated with vBS, $v, \tau \in \{M, S\}$ and $v \neq \tau$.
+
+
+    + 2) INTERFERENCE WITH DISTRIBUTED DECOUPLED UPLINK ASSOCIATION $I_{R^{(0)},\tau,dec}$
+    (WHICH IS (2))
+
+    If a UE in $R^{(0)}$ is associated with vBS in both DL and UL in DL direction,
+    it receives interference from all vBSs (except the serving vBS in $R^{(0)}$),
+    and interference from uEs in $R^{(0)}$. However, in UL transmission, the UE receives
+    interference from all uEs in $R^{(0)}$ and as vBS where $v, s \in \{M, S\}$ and
+    $v \neq \tau$.
+
+
+    ## B. SIGNAL-TO-INTERFERENCE-PLUS-NOISE RATIO ANALYSIS WITH COUPLED/DECOUPLED
+    UPLINK ASSOCIATION
+
+
+    Based on the distributions (1) and (2), as shown at the top of the page, for the
+    proposed model we analyze the SINR distributions for Co-DU and De-DU, given that
+    UE is in $R^{(0)}$.
+
+
+    + 1) SINR ANALYSIS WITH COUPLED-UPLINK ASSOCIATION $S_{R^{(0)}}$ (WHICH IS (3))
+
+    When UE in $R^{(0)}$ is associated with vBS in both DL and UL, and SBS is also
+    modeled, as shown at the top of the page, where $\sigma^2$ represents the power
+    received at UE. In DL transmission, interference received from vBS in $R^{(0)}$
+    in DL direction is expressed as $\sum_{\tau \in \{in, out\}} P_{\tau,R^{(0)}}
+    |H_{R^{(0)},v^{(\tau)}}^{DL}|^2$, and interference from uEs in $R^{(0)}$ in UL
+    direction, is denoted as $\sum_{\tau \in \{in, out\}} P_{\tau,R^{(0)}} |H_{R^{(0)},u^{(\tau)}}^{UL}|^2$.
+    In UL transmission, interference received from vBS in $R^{(0)}$ in DL direction
+    is expressed as $\sum_{\tau \in \{in, out\}} P_{\tau,R^{(0)}} |H_{R^{(0)},v^{(\tau)}}^{UL}|^2$,
+    and $H_{R^{(0)}}^{UL}$.
+
+
+    + 2) SINR ANALYSIS WITH DECOUPLED-UPLINK ASSOCIATION (WHICH IS AS (4))
+
+    When UE in $R^{(0)}$ is associated with vBS in DL and vBS in UL, SINR distribution
+    with decoupled access is modeled, as shown at the top of the next page. For DL
+    transmission, interference received from vBS in $R^{(0)}$ in DL direction is expressed
+    as $\sum_{\tau \in \{in, out\}} P_{\tau,R^{(0)}} |H_{R^{(0)},v^{(\tau)}}^{DL}|^2$,
+    and $H_{R^{(0)}}^{UL}$, and interference from uEs in $R^{(0)}$ in UL direction
+    can be expressed as $\sum_{\tau \in \{in, out\}} P_{\tau,R^{(0)}} |H_{R^{(0)},u^{(\tau)}}^{UL}|^2$.
+    In UL transmission, interference received from vBS in $R^{(0)}$ in DL direction
+    is modeled as $\sum_{\tau \in \{in, out\}} P_{\tau,R^{(0)}} |H_{R^{(0)},v^{(\tau)}}^{UL}|^2$,
+    and $H_{R^{(0)}}^{UL}$.
+
+
+    ## C. SBS-BASE ASSOCIATION SCHEME WITH DECOUPLED/DECOUPLED-UPLINK ASSOCIATION
+
+
+    User-association in Co-DUA, the UE is associated with a particular BS in both
+    DL and UL, is based on the biased MPR association scheme [7], [8]. The location
+    of such a BS (which the UE associates) is expressed as
+
+    $\omega = \arg \max_{v \in \{M,S\}} T_v \|Y_v\|^{-\alpha}$.
+
+
+    # IEEE Access F. Muhammad al.: Decoupled DL-UL Coverage Analysis with Interference
+    Management
+
+
+    $I_{v,coup}^{R^{(i)}} = \begin{cases} \sum_{j \in \Xi(i) \setminus \{v\}} T_v
+    P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha} + \sum_{j \in \Upsilon(i) \setminus \{v\}}
+    P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha} & \text{for DL, \\ \sum_{j \in \Upsilon(i)
+    \setminus \{v\}} P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha} + \sum_{j \in \Xi(i) \setminus
+    \{v\}} T_v P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha} & \text{for UL.} \end{cases} \quad
+    (1)$
+
+
+    $I_{v,t,dec}^{R^{(i)}} = \begin{cases} \sum_{j \in \Xi(i) \setminus \{v\}} T_v
+    P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha} + \sum_{j \in \Upsilon(i) \setminus \{v\}}
+    P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha} & \text{for DL, \\ \sum_{j \in \Upsilon(i)
+    \setminus \{v\}} P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha} + \sum_{j \in \Xi(i) \setminus
+    \{v\}} T_v P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha} & \text{for UL.} \end{cases} \quad
+    (2)$
+
+
+    $SINR_{v,coup}^{R^{(i)}} \geq SINR_{v,t,dec}^{R^{(i)}} = \begin{cases} \sigma^2
+    + \sum_{j \in \Xi(i) \setminus \{v\}} T_v P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha}
+    + \sum_{j \in \Upsilon(i) \setminus \{v\}} P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha}
+    & \text{for DL, \\ \sigma^2 + \sum_{j \in \Upsilon(i) \setminus \{v\}} P_{H_j}^{R^{(i)}}
+    \|y_j\|^{-\alpha} - \sum_{j \in \Xi(i) \setminus \{v\}} T_v P_{H_j}^{R^{(i)}}
+    \|x_j\|^{-\alpha} & \text{for UL.} \end{cases} \quad (3)$
+
+
+    $SINR_{v,t,dec}^{R^{(i)}} \geq SINR_{v,t,dec}^{R^{(i)}} = \begin{cases} \sum_{j
+    \in \Xi(i) \setminus \{v\}} T_v P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha} + \sum_{j
+    \in \Upsilon(i) \setminus \{v\}} P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha} & \text{for
+    DL, \\ \sum_{j \in \Upsilon(i) \setminus \{v\}} P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha}
+    - \sum_{j \in \Xi(i) \setminus \{v\}} T_v P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha}
+    & \text{for UL.} \end{cases} \quad (4)$
+
+
+    where $\|y_v\|$ represents the distance of the TUE from the nearest BS for $v^{th}$.
+
+
+    However in the De-DUA, TUE associates to one particular BS in DL direction based
+    on MPR association scheme, and with other BS in UL direction based on PL association
+    scheme. The location of BS associated in DL direction based on MPR association
+    scheme in De-DUA is as given in (5). However, the location of BS associated in
+    UL direction with the TUE of $\omega$ in De-DUA is expressed as
+
+    $\omega = \max_{v \in \{M,S\}} \|y_v\|^{-\alpha}. \quad (6)$
+
+
+    In the proposed HotNet model, the TUE associates with a particular BS in the direction
+    under the following DL-UL association rules:
+
+
+    Downlink Association: A TUE associates with BS in DL direction if the power received
+    by the TUE is the maximum, e.e., $P_{H_v}^{R^{(i)}} \|y_v\|^{-\alpha} \geq P_{H_j}^{R^{(i)}}
+    \|y_j\|^{-\alpha}$.
+
+
+    Uplink Association: A TUE associates with BS in UL direction when the power received
+    by the BS is the maximum with all other BS, e.e., $P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha}
+    \geq P_{H_v}^{R^{(i)}} \|y_v\|^{-\alpha}$. Otherwise, the TUE with a bs following
+    the following DL association rule, where $u \in \{M, S\}$,
+
+
+    Here, $P_{H_v}^{R^{(i)}, P_{H_j}^{R^{(i)}$ are the $v$,BS and BS transmit power,
+    $\alpha_v$ and $\{\|y_v\|, \|y_j\|\}$ are the set of path loss and TUE, respectively,
+    the association bias between serving $v$ and BS $j$ $(T_v, T_j)$ represents association
+    bias of
+
+
+    # IV. USER ASSOCIATION PROBABILITY
+
+
+    In this section, we describe association probability is defined as the probability
+    that a TUE is served by a particular tier. To derive the association probability,
+    we first measure the distribution of distance $y_v$, between the TUE and the serving
+    BS, that the TUE associates to $v$. Consider $Y_v$ as the random variable which
+    denotes the statistical distance from the TUE to the closest BS of $\Omega$. As
+    the BS deployment is through PPP, [20], using null probability probability density
+    function (PDF) of $Y_v$ it is
+
+
+    $f_v(y_v) = \lambda_v e^{-\lambda_v y_v^{\alpha_v}}, \forall v \in \{M, S\}. \quad
+    (7)$
+
+
+    We employ RFA scheme in a multi-region environment to reduce inter interference.
+    Furthermore, we split the available regions into two regions, $R^{(1)}$ and $R^{(2)}$.
+    The association probability of
+
+
+    +   Distance distribution between serving $v$ BSs at $y_v$, and the TUE in $R^{(i)}$
+    is
+
+
+    $f_{y_v|TUE \in R^{(i)}}(y_v) = \frac{2\lambda_v e^{-\lambda_v y_v^{\alpha_v}}}{1
+    - e^{-\lambda_v d_i^{\alpha_v}}}, \forall v \in \{M, S\}. \quad (8)$
+
+
+    6254
+
+
+    VOLUME 4, 2016
+
+    '
+  mdcn: '
+
+
+    # IEEE Access F. Muhammad - 带有干扰管理的解耦 DL-UL 覆盖分析
+
+
+    表 1. 符号汇总。
+
+
+    | 参数 | 语义 |
+
+    | :--- | :--- |
+
+    | $\Theta_M, \Theta_S, \Theta_U$ | 分别为 MBS、SBS 和用户位置的泊松点过程 (PPPs) |
+
+    | $\sigma$ | 接收端的噪声功率 |
+
+    | $P_{TM}, P_{SU}, P_{UL}$ | 分别为服务性 MBS、SBS 和用户的发射功率 |
+
+    | $\lambda_M, \lambda_S, \lambda_U$ | 分别为 MBS、SBS 和用户的空间密度 |
+
+    | $P_{DL}$ | 分别为服务性 MBS 和 SBS 接收到的 DL 功率 |
+
+    | $P_{UL}$ | 分别为从用户处服务性 MBS 和 SBS 接收到的 UL 功率 |
+
+    | $\alpha_M, \alpha_S, \alpha_U$ | 分别为 MBS 和 SBS 的路损，其中 $\alpha_M = \alpha_S >
+    \alpha_U$ |
+
+    | $\beta_M, \beta_S$ | 分别为 MBS 和 SBS 的信噪比 (SINR) |
+
+    | $R^{(in)}, R^{(out)}$ | 分别为小区内和小区外区域 |
+
+    | $Y_M, Y_S$ | 分别为到服务性 MBS 或服务性 SBS 的统计距离 |
+
+    | $T_{UE}$ | 分别为 TUE 中的时间 |
+
+    | $M_{BS}$ | 分别为 MBS 和 SBS 的关联偏置 |
+
+    | $P_{v,u}^{(j)}, P_{v,decouple}^{(j)}$ | 分别为目标信号和干扰信道的衰落方差 |
+
+    | $C_v^{(j)}$ | 分别为关联到 $v$ 个解耦接入 SBS 的第 $j$ 个小区 TUE 的覆盖概率 |
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_2_0.png)
+
+
+    比 $R^{(out)}$ 高。所提出的两级集在 $R^{(in)}$ 和 $R^{(out)}$ 中的频谱划分如图 1 所示。
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_2_1.png)
+
+
+    图 1. $R^{(in)}$ 和 $R^{(out)}$ 中带有 DL 和 UL 子载波的 RFA 方案频谱划分。
+
+
+    然而，$R^{(out)}$ 被视为小区边缘，其中 MBS 对其关联用户的覆盖较差。同样，总频谱被分为两个子载波，$i.BW_1$ 和 $BW_2$，其中
+    $BW_1 = BW_{1,DL} + BW_{1,UL}$ 分别分配给 $R^{(in)}$ 和 $R^{(out)}$ 中的 MBS 带宽。$BW_2$
+    和 $BW_3$，其中 $BW_2 = BW_{2,DL} + BW_{2,UL}$ 分别是 $R^{(in)}$ 和 $R^{(out)}$ 中的 MBS
+    载波。$BW_1$ 和 $BW_2$ 中的 MBS 子频谱被用作 SBS 子频谱 $BW''_1$ 和 $BW''_2$，其中 $BW''_j = BW_{j,UL}$。而
+    $R^{(in)}$ 和 $R^{(out)}$ 的 UL 和 DL 子载波表示为 $BW_1 = BW_{2,UL} + BW_{2,DL}$。SBS 以反方向使用
+    $R^{(in)}$ 中的 UL 和 DL 子载波。
+
+
+    图 2. 带有 Co-DU 和 De-DU 的网络布局。
+
+
+    所提出的带有 Co-DU 和 De-DU 的两级网络设置的频谱划分如图 2 所示。$R^{(in)}$ 和 $R^{(out)}$ 区域分别为 $0 \leq
+    D \leq d_1$ 和 $d_1 \leq d_2$。显示了 TUE 与 $v$ 个 SBS（$v=\{M, S\}$）之间的各种 DL、UL（实线）以及干扰信道（虚线）。根据
+    MPR 策略，$R^{(in)}$ 中的用户在 UL 和 DL 方向上都关联到 SBS-2。对于 DL 传输，它接收来自同一区域内 SBS-1 的 DL 干扰（记为
+    $IdL_1$），以及来自位于 $R^{(out)}$ 中的 SBS-1 的 UL 干扰（记为 $IUL_1$）。
+
+
+    在 $R^{(out)}$ 中，根据路损 (PL) 关联策略，它在同一区域的 UL 方向关联到 SBS-2，在 DL 方向关联到 $R^{(in)}$ 中的
+    MBS-1。对于传输，它接收来自 $R^{(out)}$ 中关联到 SBS 的所有其他用户的 DL 干扰（记为 $I_{ij}$）以及来自 $R^{(in)}$
+    中 MBS-1 的干扰。通过 MCI减轻，由于不需要额外的 SBS 频谱，Rafa 方案提高了频谱效率。
+
+
+    # III. 解耦关联的统计
+
+
+    在本节中，我们分析了 SINR 分布并定义了基于上行的关联规则。分析了所提模型的性能。
+
+
+    ## A. 解耦关联的干扰
+
+
+    给定 $R^{(0)}$, $\tau \in \{in, out\}$：
+
+
+    + 1) 解耦关联的干扰 $I_{R^{(0)}},dec}$（见 1）：当 $R^{(0)}$ 中的 UE 在 DL 和 UL 方向都关联到 vBS 时，它会受到位于
+    $R^{(0)}$ 中的 vBS 的 DL 干扰以及关联到 vBS 的用户的干扰，$v, \tau \in \{M, S\}$。
+
+
+    + 2) 解耦关联的干扰 $I_{R^{(0)}}\tau,dec}$（见 2）：如果 $R^{(0)}$ 中的 UE 在 DL 方向和 UL 方向都关联到
+    vBS，它会接收来自 $R^{(0)}$ 中所有 vBS（除服务性 vBS 外）的 DL 干扰以及来自 $R^{(0)}$ 中用户的干扰。然而，在 UL 中，UE
+    接收来自 $R^{(0)}$ 中所有用户的干扰，$v, \in \{M, S\}$。
+
+
+    ## B. 耦合/解耦关联的信干扰比分析
+
+
+    根据页面顶部的 (1) 和 (2)，对所提模型分析 Co-DU 和 De-DU 的 SINR 分布，给定 UE 位于 $R^{(0)}$。
+
+
+    + 1) 耦合关联的 SINR 分析 $S_{R^{(0)}}$（见 3）：当 $R^{(0)}$ 中的 UE 在 DL 和 UL 方向都关联到 vBS 且
+    SBS 建模时（如顶部所示），其中 $\sigma^2$ 代表接收到的功率。在 DL 传输中，来自 $R^{(0)}$ 中 vBS 的 DL 干扰表示为 $\sum_{\tau
+    \in \{in, out\}} P_{\tau,R^{(0)}} |H_{R^{(0)}}}^{(\tau)}|^2$，来自 $R^{(0)}$ 中用户的
+    UL 干扰表示为 $\sum_{\tau \in \{in, out\}} P_{\tau,R^{(0)}} |H_{R^{(0)}}}^{(\tau)}|^2$。在
+    UL 传输中，来自 $R^{(0)}$ 中 vBS 的 DL 干扰表示为 $\sum_{\tau \in \{in, out\}} P_{\tau,R^{(0)}}
+    |H_{R^{(0)}}}^{(\tau)}|^2, H_{R^{(0)}}^{UL}$。
+
+
+    + 2) 解耦关联的 SINR 分析（见 4）：当 $R^{(0)}$ 中的 UE 在 DL 和 UL 方向都关联到 vBS 时，对解耦接入建模 SINR
+    分布（如页页所示）。在 DL 传输中，来自 $R^{(0)}$ 中 vBS 的 DL 干扰表示为 $\sum_{\tau \in \{in, out\}}
+    P_{\tau,R^{(0)}} |H_{R^{(0)}}}^{(\tau)}|^2, H_{R^{(0)}}^{UL}$，来自 $R^{(0)}$ 中用户的
+    UL 干扰可以表示为 $\sum_{\tau \in \{in, out\}} P_{\tau,R^{(0)}} |H_{R^{(0)}}}^{(\tau)}|^2$。在
+    UL 传输中，来自 $R^{(0)}$ 中 vBS 的 DL 干扰建模为 $\sum_{\tau \in \{in, out\}} P_{\tau,R^{(0)}}
+    |H_{R^{(0)}}}^{(\tau)}|^2, H_{R^{(0)}}^{UL}$。
+
+
+    ## C. 解耦/解耦关联的 SBS 基关联方案
+
+
+    Co-DU 中的用户关联（UE 在 DL 和 UL 关联到特定的 BS）基于偏置 MPR 关联方案 [7], [8]。该 BS（UE 关联的 BS）的位置表示为
+
+    $\omega = \arg \max_{v \in \{M,S\}} T_v \|Y_v\|^{-\alpha}$。
+
+
+    # IEEE Access F. Muhammad 等：带有干扰管理的解耦 DL-UL 覆盖分析
+
+
+    $I_{v,coup}^{R^{(i)}} = \begin{cases} \sum_{j \in \Xi(i) \setminus \{v\}} T_v
+    P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha} + \sum_{j \in \Upsilon(i) \setminus \{v\}}
+    P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha} & \text{对于 DL, \\ \sum_{j \in \Upsilon(i)
+    \setminus \{v\}} P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha} + \sum_{j \in \Xi(i) \setminus
+    \{v\}} T_v P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha} & \text{对于 UL.} \end{cases} \quad
+    (1)$
+
+
+    $I_{v,t,dec}^{R^{(i)}} = \begin{cases} \sum_{j \in \Xi(i) \setminus \{v\}} T_v
+    P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha} + \sum_{j \in \Upsilon(i) \setminus \{v\}}
+    P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha} & \text{对于 DL, \\ \sum_{j \in \Upsilon(i)
+    \setminus \{v\}} P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha} + \sum_{j \in \Xi(i) \setminus
+    \{v\}} T_v P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha} & \text{对于 UL.} \end{cases} \quad
+    (2)$
+
+
+    $SINR_{v,coup}^{R^{(i)}} \geq SINR_{v,t,dec}^{R^{(i)}} = \begin{cases} \sigma^2
+    + \sum_{j \in \Xi(i) \setminus \{v\}} T_v P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha}
+    + \sum_{j \in \Upsilon(i) \setminus \{v\}} P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha}
+    & \text{对于 DL, \\ \sum_{j \in \Upsilon(i) \setminus \{v\}} P_{H_j}^{R^{(i)}} \|y_j\|^{-\alpha}
+    + \sum_{j \in \Xi(i) \setminus \{v\}} T_v P_{H_j}^{R^{(i)}} \|x_j\|^{-\alpha}
+    & \text{对于 UL.} \end{cases} \quad (3)$
+
+
+    # IV. 用户关联概率
+
+
+    在本节中，我们描述关联概率定义为 UE 被特定层级服务的概率。为了推导关联概率，我们首先测量 UE 与服务 BS 之间的距离分布 $y_v$，即用户关联到
+    $v$。考虑 $Y_v$ 为表示到最近 BS 统计距离的随机变量。由于 BS 部署通过泊松点过程 [20]，利用 $Y_v$ 的概率密度函数 (PDF) 可得：
+
+
+    $f_v(y_v) = \lambda_v e^{-\lambda_v y_v^{\alpha_v}}, \forall v \in \{M, S\}. \quad
+    (7)$
+
+
+    我们在多区域环境中使用 RFA 方案来减少区域干扰。此外，我们将可用区域分为两个区域，$R^{(1)}$ 和 $R^{(2)}$。关联概率的：
+
+
+    +   位于 $R^{(i)}$ 的 UE 与服务 $v$ BS 之间的距离 $y_v$ 分布为
+
+
+    $f_{y_v|TUE \in R^{(i)}}(y_v) = \frac{2\lambda_v e^{-\lambda_v y_v^{\alpha_v}}}{1
+    - e^{-\lambda_v d_i^{\alpha_v}}}, \forall v \in \{M, S\}. \quad (8)$
+
+
+    6254
+
+
+    VOLUME 4, 2016
+
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 5]\n\nDistance between serving SBS $V_Y$, at TUE, and TUE $R^{(out)}$ is\
+    \ given as\n\n```\n$f_{Y,TUE|R^{(out)}}(V_y) = \\frac{2\\lambda_Y e^{-\\lambda_Y\
+    \ y}}{(1-e^{-\\lambda_Y y})^2}$\n```\n\nThe above conditional distributions are\
+    \ useful in characterizing association probabilities of a randomly located TUE\
+    \ in $R^{(in)}$ and of our proposed model.\n\n# A. ASSOCIATION PROBABILITY OF\
+    \ A TUE WITH COUPLED/DECOUPLED-DOWNUPLINK ANALYSIS\n\n# 1) ASSOCIATION PROBABILITY\
+    \ OF A TUE WITH CO-DU\n\nThe association probability via which a TUE associates\
+    \ with $V_S, U_{V}^{uncou}$, both in UL and DL direction can be calculated\n\n\
+    ```\n$U_{V}^{uncou} = P_{V_S}(||V_Y|| - ||V_S||) > P_{V_Y}(||V_S|| - ||V_Y||)$\n\
+    ```\n\nwhere $P_{V_S}(||V_Y|| - ||V_S||)$ and $P_{V_Y}(||V_S|| - ||V_Y||)$ are,\
+    \ and $V_Y \\in \\{M\\}, \\tau \\in \\{M\\}$ and $\tau \\neq R$ are the DL and\
+    \ DL association events, respectively.\n\nThere are two cases to simplify:\n\n\
+    CASE-I: If a TUE associates with MBS, i.e., if $v \\in \\{M\\}, \\tau \\in \\\
+    {S\\}$ holds $P_{V_S}^{M} > P_{V_Y}^{M}$. The probability of the events in (10)\
+    \ is $||V_Y||_{-AM} > ||V_S||_{-AM}$, because $P_{M}^{uncou} < 1$. The association\
+    \ probability, is written as\n\n```\n$U_{M,M}^{uncou} = \\frac{\\lambda_M e^{-\\\
+    lambda_M Z}}{\\sum_{\\Omega=M} \\lambda_\\Omega e^{-\\lambda_\\Omega Z}}$\n```\n\
+    \nProof:\n\n```\n$U_{M,M}^{uncou} = P(||V_Y||_{-AM} > ||V_S||_{-AM}) \\n= E_{V_Y}(P(V_S\
+    \ > V_Y|V_Y)) \\n= \\int_{0}^{\\infty} P(V_S > y|V_Y=y) f_{V_Y}(y) f_{V_S}(y)$\n\
+    ```\n\nAssuming $\\alpha_v = \\alpha_\\alpha$ and substituting into (10) over,\
+    \ along with mathematical manipulations completes the proof of (11).\n\nCASE-II:\
+    \ If TUE associates with SBSs of two types, i.e., biased and unbiased association.\n\
+    \nUnbiased association: If a TUE associates with uncoupled-SBS, i.e., $v \\in\
+    \ \\{S\\}, \\tau \\in \\{M\\}$ holds $P_{V_S}^{M} > P_{V_Y}^{M}$, as a consequence\
+    \ of the evented events in (10) is $||V_Y||_{-AM} > ||V_S||_{-AM}$, because, $P_{M}^{uncou}\
+    \ > 1$.\n\nTherefore, the association probability, is written as\n\n```\n$U_{B,M}^{uncou}\
+    \ = \\frac{\\lambda_S e^{-\\lambda_S Z}}{\\sum_{\\Omega=S,M} \\lambda_\\Omega\
+    \ e^{-\\lambda_\\Omega Z}} > 1.$\n```\n\nWhere $P_S^M$ is the ratio of the interfering\
+    \ MBS to the SBS transmit power.\n\nBiased association: If a TUE associates with\
+    \ biased-SBS, i.e., $v \\in \\{S\\}$ and $\tau \\in \\{M\\}$ holds $P_{V_S}^{M}\
+    \ > P_{V_Y}^{M}$, as the consequence of the events in (10) is $P_{T_S}||V_S||\
+    \ > P_{T_M}||V_M|| > P_{T_Y}||V_Y||$. Assuming identical path losses equal, $\\\
+    alpha_{AM} = \\alpha$, the association probability is\n\n```\n$U_{B-S}^{uncou}\
+    \ = \\frac{\\lambda_S e^{-\\lambda_S Z (T_{\\Omega} P_\\Omega^M)}}{\\sum_{\\Omega=S,M}\
+    \ \\lambda_\\Omega e^{-\\lambda_\\Omega Z (T_\\Omega P_\\Omega^M)}}$\n```\n\n\
+    Eq.(14) indicates that increasing small-cell bias factor, $T_{UE}$, the average\
+    \ number of offloaded SBSs increases as $T_{B-S}$ increases.\n\n# 2) ASSOCIATION\
+    \ PROBABILITY OF DE-DUA\n\nIn De-DU a TUE can associate with two different SBSs\
+    \ in BS and DL direction. Let us assume that the TUE associates with BS in DL\
+    \ direction and RBS in UL direction. The association probability can be\n\n```\n\
+    $U_{decup} = P_{T_S}(||V_Y||_{-AM} > ||V_S||_{-AM}) > P_{T_M}(||V_Y||_{-AM} >\
+    \ ||V_M||_{-AM}) \\n||V_S||_{-AM} > ||V_Y||_{-AM})$\n```\n\nHere, $v \\in \\{S\\\
+    }, \\tau \\in \\{M\\}$ and $v \\neq \tau$. There are two ways to simplify (15).\n\
+    \na) If the TUE associates with MBS in DL direction, if $v \\in \\{M\\}$ and SBS\
+    \ in UL direction, i.e., $\tau \\in \\{S\\}$,\n\n```\n$U_{decup,S.M} = \\frac{\\\
+    lambda_S e^{-\\lambda_S Z}}{\\sum_{\\Omega=S,M} \\lambda_\\Omega e^{-\\lambda_\\\
+    Omega Z}}$\n```\n\nb) If the TUE associates with SBS in DL direction, if $v \\\
+    in \\{S\\}$ and MBS in UL direction, i.e., $\tau \\in \\{M\\}$,\n\nSince the above\
+    \ events can also intersect, the association probability is written as $||V_Y||_{-AM}\
+    \ > ||V_S||_{-AM}$. Using the above event the association probability $U_{decup}^{uncou}$\
+    \ is given as\n\n```\n$U_{decup,S.M} = \\frac{\\lambda_M e^{-\\lambda_M Z}}{\\\
+    sum_{\\Omega=S,M} \\lambda_\\Omega e^{-\\lambda_\\Omega Z}}$\n```\n\nSince the\
+    \ above events do not intersect, the association probability of the above case\
+    \ is 0, i.e., $U_{decup,S.M} = 0$."
+  - "[PAGE 6]\n\n# IEEE Access\n\n# F. Muhammad et al.: Decoupled-DL UL Coverage Analysis\
+    \ with Interference Management\n\n```\n$P_{v,v,cup}^{(R)}}(\beta_v) = \\begin{cases}\
+    \ L_D \\exp(-\\frac{\beta_v}{SNR}) \\times \\exp(-2\\pi G_{v,cup}^{DL}) f_{Y,TUE\\\
+    in R^{(0)}}(y_v) dy_v & \\text{for DL,}\\\\ L_D \\exp(-\\frac{\beta_v}{SNR}) \\\
+    times \\exp(-2\\pi G_{v,cup}^{DL}) f_{Y,TUE\\in R^{(0)}}(y_v) dy_v & \\text{for\
+    \ UL.} \\end{cases}$\n```\n\n```\n$P_{v,t,cup}^{(R)}}(\beta_v) = \\begin{cases}\
+    \ L_D \\exp(-\\frac{\beta_v}{SNR}) \\times \\exp(-2\\pi G_{t,cup}^{DL}) f_{Y,TUE\\\
+    in R^{(0)}}(y_v) dy_t & \\text{for DL,}\\\\ L_D \\exp(-\\frac{\beta_v}{SNR}) \\\
+    times \\exp(-2\\pi G_{t,cup}^{DL}) f_{Y,TUE\\in R^{(0)}}(y_t) dy_t & \\text{for\
+    \ UL.} \\end{cases}$\n```\n\n# V. COVERAGE PROBABILITY ANALYSIS\n\nSINR coverage\
+    \ or coverage probability (CCDF of SINR) is a randomly chosen user with a baseline\
+    \ SINR. The coverage is defined as the probability that a randomly selected user\
+    \ experiences SINR greater than a target SINR. The interference difference significantly\
+    \ affects the SINR statistics. Based on the interference for Co-DU and De-DU derived\
+    \ in Section III-A, the coverage performance of our proposed scheme, CRE-based\
+    \ analysis with RFA implementation, considering both Co-DU and De-DU assumptions,\
+    \ is presented in this section.\n\nTheorem 1 (The SINR coverage of a TUE associated\
+    \ with a BL location $y_v$, can be as)\n\n```\n$P_{v,v,cup}^{(R)}}(\beta_v) =\
+    \ E[P_{v,v,cup}(\\beta_v) > \\beta_1].$\n```\n\nUsing the interference distribution\
+    \ (in Section III-A) with Theorem 1, the coverage probabilities for Co-DU and\
+    \ De-DU, given that TUE is in $R^{(0)}$, are derived in Lemma 1 and 2 as follows\n\
+    \n# A. COVERAGE PROBABILITY WITH TUE-DU\n\nLemma 1: On the Co-DU, coverage probability\
+    \ of a TUE associated with BS in $R^{(0)}$, is given, as shown in the table, i.e.,\n\
+    \nHere the integrals\n\n```\n$Q_{i,j}^{cup} = L_D \\exp(-\\lambda_{i,j}^{R^{(0)}}\
+    \ + \\lambda_{i,j}^{R^{(0)}})$\n```\n\nThe following corollary provides the coverage\
+    \ probability for a randomly selected user in the proposed scheme, considering\
+    \ Co-DU.\n\nCorollary 1: The CCDF of the SINR achieved in Co-DU at the TUE can\
+    \ be expressed as\n\n```\n$P_{v,v,cup}^{(R)}}(\beta_v) = \\sum_{v \\in \\{M\\\
+    }} \\sum_{j \\in \\{n^{(0)}\\}} P_{v,v,cup}^{(R)}}(\beta_v) P[TUE \\in R^{(0)}].\n\
+    ```\n\n# B. COVERAGE PROBABILITY WITH A TUE-DE-DU.\n\n+   - Lemma 2: The coverage\
+    \ probability of a TUE with vBS in DL direction and tBS in UL direction in $R^{(0)}$,\
+    \ is given, as shown in the table of this page\n\nIn $(v, t)$, with $v \\in \\\
+    {M\\}$, $t \\in \\{M, S\\}$, $j \\in \\{n^{(0)}\\}$, $i \\notin \\{n^{(0)}\\}$,\
+    \ $Q_{v,j}^{cup} = L_D \\exp(-\\lambda_{v,j}^{R^{(0)}} + \\lambda_{v,j}^{R^{(0)}})$\
+    \ and $Q_{t,i}^{cup} = L_D \\exp(-\\lambda_{t,i}^{R^{(0)}} + \\lambda_{t,i}^{R^{(0)}})$\
+    \ is $R^{(0)}$ if and only if $y_v = y_t$. Similarly, $P_{v,t,cup}^{(R)}}(\beta_v)$\
+    \ is zero if and only if $st_t^P = pr_t^P$.\n\nThe following corollary gives the\
+    \ coverage performance for a TUE-De-DU.\n\nCorollary 2: The CCDF of the SINR $\b\
+    eta$ achieved at the TUE with De-DU in $R^{(0)}$, is given as follows\n\n```\n\
+    $P_{v,t,cup}^{(R)}}(\beta_v) = \\sum_{v \\in \\{M\\}} \\sum_{t \\in \\{M, S\\\
+    }} P_{v,t,cup}^{(R)}}(\beta_v) P_{v,t}(\\beta_v) P[TUE \\in R^{(0)}].\n```\n\n\
+    # VI. NUMERICAL RESULTS AND DISCUSSION\n\nIn this section, we present numerical\
+    \ results of our proposed model and demonstrate the performance of RFA with Co-DU,\
+    \ and without RFA. We validate our proposed model and evaluate analytical results\
+    \ through using test set as described in Section II, with parameters listed in\
+    \ Table 2.\n\nThe variation of coverage probability is plotted for different coverage/SINR\
+    \ threshold $\beta$, by considering both Co-DU and De-DU. The coverage performance\
+    \ decreases with the increase in $\beta$. As shown in the figure below, the coverage\
+    \ performance is better. This is due to the fact that in CRE-based analysis in\
+    \ HetNets, users prefer to use BSs of lower SINR. It can also be observed that\
+    \ the proposed HetNet, De-Dual algorithm outperforms all other methods.\n\n6256\n\
+    \nVOLUME 10,2022"
+  md: '
+
+    Distance between serving SBS $V_Y$, at TUE, and TUE $R^{(out)}$ is given as
+
+
+    ```
+
+    $f_{Y,TUE|R^{(out)}}(V_y) = \frac{2\lambda_Y e^{-\lambda_Y y}}{(1-e^{-\lambda_Y
+    y})^2}$
+
+    ```
+
+
+    The above conditional distributions are useful in characterizing association probabilities
+    of a randomly located TUE in $R^{(in)}$ and of our proposed model.
+
+
+    ## A. ASSOCIATION PROBABILITY OF A TUE WITH COUPLED/DECOUPLED-DOWNUPLINK ANALYSIS
+
+
+    ### 1) ASSOCIATION PROBABILITY OF A TUE WITH CO-DU
+
+
+    The association probability via which a TUE associates with $V_S, U_{V}^{uncou}$,
+    both in UL and DL direction can be calculated
+
+
+    ```
+
+    $U_{V}^{uncou} = P_{V_S}(||V_Y|| - ||V_S||) > P_{V_Y}(||V_S|| - ||V_Y||)$
+
+    ```
+
+
+    where $P_{V_S}(||V_Y|| - ||V_S||)$ and $P_{V_Y}(||V_S|| - ||V_Y||)$ are, and $V_Y
+    \in \{M\}, \tau \in \{M\}$ and $\tau \neq R$ are the DL and DL association events,
+    respectively.
+
+
+    There are two cases to simplify:
+
+
+    CASE-I: If a TUE associates with MBS, i.e., if $v \in \{M\}, \tau \in \{S\}$ holds
+    $P_{V_S}^{M} > P_{V_Y}^{M}$. The probability of the events in (10) is $||V_Y||_{-AM}
+    > ||V_S||_{-AM}$, because $P_{M}^{uncou} < 1$. The association probability, is
+    written as
+
+
+    ```
+
+    $U_{M,M}^{uncou} = \frac{\lambda_M e^{-\lambda_M Z}}{\sum_{\Omega=M} \lambda_\Omega
+    e^{-\lambda_\Omega Z}}$
+
+    ```
+
+
+    Proof:
+
+
+    ```
+
+    $U_{M,M}^{uncou} = P(||V_Y||_{-AM} > ||V_S||_{-AM}) \neq E_{V_Y}(P(V_S > V_Y|V_Y))
+    = \int_{0}^{\infty} P(V_S > y|V_Y=y) f_{V_Y}(y) f_{V_S}(y)$
+
+    ```
+
+
+    Assuming $\alpha_v = \alpha_\alpha$ and substituting into (10) over, along with
+    mathematical manipulations completes the proof of (11).
+
+
+    CASE-II: If TUE associates with SBSs of two types, i.e., biased and unbiased association.
+
+
+    Unbiased association: If a TUE associates with uncoupled-SBS, i.e., $v \in \{S\},
+    \tau \in \{M\}$ holds $P_{V_S}^{M} > P_{V_Y}^{M}$, as a consequence of the evented
+    events in (10) is $||V_Y||_{-AM} > ||V_S||_{-AM}$, because, $P_{M}^{uncou} > 1$.
+
+
+    Therefore, the association probability, is written as
+
+
+    ```
+
+    $U_{B,M}^{uncou} = \frac{\lambda_S e^{-\lambda_S Z}}{\sum_{\Omega=S,M} \lambda_\Omega
+    e^{-\lambda_\Omega Z}} > 1.$
+
+    ```
+
+
+    Where $P_S^M$ is the ratio of the interfering MBS to the SBS transmit power.
+
+
+    Biased association: If a TUE associates with biased-SBS, i.e., $v \in \{S\}$ and
+    $\tau \in \{M\}$ holds $P_{V_S}^{M} > P_{V_Y}^{M}$, as the consequence of the
+    events in (10) is $P_{T_S}||V_S|| > P_{T_M}||V_M|| > P_{T_Y}||V_Y||$. Assuming
+    identical path losses equal, $\alpha_{AM} = \alpha$, the association probability
+    is
+
+
+    ```
+
+    $U_{B-S}^{uncou} = \frac{\lambda_S e^{-\lambda_S Z (T_{\Omega} P_\Omega^M)}}{\sum_{\Omega=S,M}
+    \lambda_\Omega e^{-\lambda_\Omega Z (T_\Omega P_\Omega^M)}}$
+
+    ```
+
+
+    Eq.(14) indicates that increasing small-cell bias factor, $T_{UE}$, the average
+    number of offloaded SBSs increases as $T_{B-S}$ increases.
+
+
+    ### 2) ASSOCIATION PROBABILITY OF DE-DU
+
+
+    In De-DU a TUE can associate with two different SBSs in BS and DL direction. Let
+    us assume that the TUE associates with BS in DL direction and RBS in UL direction.
+    The association probability can
+
+
+    ```
+
+    $U_{cup} = P_{T_S}(||V_Y||_{-AM} > ||V_S||_{-AM}) > P_{T_M}(||V_Y||_{-AM} > ||V_M||_{-AM})
+    ||V_S||_{-AM} > ||V_Y||_{-AM})$
+
+    ```
+
+
+    Here, $v \in \{S\}, \tau \in \{M\}$ and $v \neq \tau$. There are two ways to simplify
+    (15).
+
+
+    a) If the TUE associates with MBS in DL direction, if $v \in \{M\}$ and SBS in
+    UL direction, i.e., $\tau \in \{S\}$,
+
+
+    ```
+
+    $U_{cup,S.M} = \frac{\lambda_S e^{-\lambda_S Z}}{\sum_{\Omega=S,M} \lambda_\Omega
+    e^{-\lambda_\Omega Z}}$
+
+    ```
+
+
+    b) If the TUE associates with SBS in DL direction, if $v \in \{S\}$ and MBS in
+    UL direction, i.e., $\tau \in \{M\}$,
+
+
+    Since the above events can also intersect, the association probability is written
+    as $||V_Y||_{-AM} > ||V_S||_{-AM}$. Using the above event association probability
+    $U_{cup}^{uncou}$ is given as
+
+
+    ```
+
+    $U_{cup,S.M} = \frac{\lambda_M e^{-\lambda_M Z}}{\sum_{\Omega=S,M} \lambda_\Omega
+    e^{-\lambda_\Omega Z}}$
+
+    ```
+
+
+    Since the above events do not intersect, the association probability of the above
+    case is 0, i.e., $U_{cup,S.M} = 0$.
+
+
+    IEEE Access F. Muhammad et al.: Decoupled-DL UL Coverage with Interference
+
+
+    ```
+
+    $P_{v,cup}^{(R)}(\eta_v) = \begin{cases} L_D \exp(-\frac{\eta_v}{SNR}) \times
+    \exp(-2\pi G_{v,cup}^{DL}) f_{Y,TUE\in R^{(0)}}(y_v) dy_v & \text{for DL,}\\ L_D
+    \exp(-\frac{\eta_v}{SNR}) \times \exp(-2\pi G_{v,cup}^{DL}) f_{Y,TUE\in R^{(0)}}(y_v)
+    dy_v & \text{for UL.} \end{cases}$
+
+    ```
+
+
+    ```
+
+    $P_{v,t,cup}^{(R)}(\eta_v) = \begin{cases} L_D \exp(-\frac{\eta_v}{SNR}) \times
+    \exp(-2\pi G_{t,cup}^{DL}) f_{Y,TUE\in R^{(0)}}(y_v) dy_t & \text{for DL,}\\ L_D
+    \exp(-\frac{\eta_v}{SNR}) \times \exp(-2\pi G_{t,cup}^{DL}) f_{Y,TUE\in R^{(0)}}(y_t)
+    dy_t & \text{for UL.} \end{cases}$
+
+    ```
+
+
+    ## V. COVERAGE PROBABILITY ANALYSIS
+
+
+    SINR coverage or coverage probability (CCDF of SINR) is a randomly chosen user
+    with a baseline SINR. The coverage is defined as the probability that a randomly
+    selected user experiences SINR greater than a target SINR. The interference difference
+    significantly affects the SINR statistics. Based on the interference for Co-DU
+    and De-DU derived in Section III-A, the coverage performance of our proposed scheme,
+    CRE-based analysis with RFA implementation, considering both Co-DU and De-DU assumptions,
+    is presented in this section.
+
+
+    Theorem 1 (The SINR coverage of a TUE associated with a BL location $y_v$, can
+    be)
+
+
+    ```
+
+    $P_{v,cup}^{(R)}(\eta_v) = E[P_{v,cup}(\beta_v) > \beta_1].$
+
+    ```
+
+
+    Using the interference distribution (in Section III-A) with Theorem 1, the coverage
+    probabilities for Co-DU and De-DU, given that TUE is in $R^{(0)}$, are derived
+    in Lemma 1 and 2 as follows
+
+
+    ### A. COVERAGE PROBABILITY WITH TUE-DU
+
+
+    Lemma 1: On the Co-DU, coverage probability of a TUE associated with BS in $R^{(0)}$,
+    is given, as shown in the table, i.e,
+
+
+    Here the integrals
+
+
+    ```
+
+    $Q_{i,j}^{cup} = L_D \exp(-\lambda_{i,j}^{R^{(0)}} + \lambda_{i,j}^{R^{(0)}})$
+
+    ```
+
+
+    The following corollary provides the coverage probability for a randomly selected
+    user in the proposed scheme, considering Co-DU.
+
+
+    Corollary 1: The CCDF of the SINR achieved in Co-DU at the TUE can be expressed
+    as
+
+
+    ```
+
+    $P_{v,cup}^{(R)}(\eta_v) = \sum_{v \in \{M\}} \sum_{j \in \{n^{(0)}\}} P_{v,cup}^{(R)}(\eta_v)
+    P[TUE \in R^{(0)}].$
+
+    ```
+
+
+    ### B. COVERAGE PROBABILITY WITH A TUE-DE-DU.
+
+
+    - Lemma 2: The coverage probability of a TUE with vBS in DL direction and tBS
+    in UL direction in $R^{(0)}$, is given, as shown in the table of this $(v, t)$,
+    with $v \in \{M\}$, $t \in \{S\}$, $j \in \{n^{(0)}\}$, $i \notin \{n^{(0)}\}$,
+    $Q_{v,j}^{cup} = L_D \exp(-\lambda_{v,j}^{R^{(0)}} + \lambda_{i,j}^{R^{(0)}})$
+    is $R^{(0)}$ if and only if $y_v = y_t$. Similarly, $P_{v,t,cup}^{(R)}(\eta_v)$
+    is zero if and only if $st_t^P = pr_t^P$.
+
+
+    The following corollary gives the coverage performance for TUE-De-DU.
+
+
+    Corollary 2: The CCDF of the SINR $\eta$ achieved at the TUE with De-DU in $R^{(0)}$,
+    is given as follows
+
+
+    ## VI. NUMERICAL RESULTS AND DISCUSSION
+
+
+    In this section, we present numerical results of our proposed model and demonstrate
+    the performance of RFA with Co-DU, and without RFA. We validate our proposed model
+    and evaluate analytical results through using test set as described in Section
+    II, with parameters listed in Table 2.
+
+
+    The variation of coverage probability is plotted for different coverage/SINR threshold
+    $\eta$, by considering both Co-DU and De-DU. The coverage performance decreases
+    with the increase in $\eta$. As shown in the figure below, the coverage performance
+    is better. This is due to the fact that in CRE-based analysis in HetNets, users
+    prefer to use BSs of lower SINR. It can also be observed that the proposed HetNet,
+    De-Dual algorithm outperforms all other methods.
+
+    '
+  mdcn: '
+
+    位于 TUE 处的服务 SBS $V_Y$ 与 TUE $R^{(out)}$ 之间的距离给出：
+
+
+    ```
+
+    $f_{Y,TUE|R^{(out)}}(V_y) = \frac{2\lambda_Y e^{-\lambda_Y y}}{(1-e^{-\lambda_Y
+    y})^2}$
+
+    ```
+
+
+    上述条件分布有助于刻画随机位于 $R^{(in)}$ 中的 TUE 与我们所提模型之间的关联概率。
+
+
+    ## A. TUE 与耦合/去耦双上链路分析的关联概率
+
+
+    ### 1) TUE 与同向链路（CO-DU）的关联概率
+
+
+    通过这种关联方式，TUE 在上行（UL）和下行（DL）方向上与 $V_S, U_{V}^{uncou}$ 关联的概率可以计算为：
+
+
+    ```
+
+    $U_{V}^{uncou} = P_{V_S}(||V_Y|| - ||V_S||) > P_{V_Y}(||V_S|| - ||V_Y||)$
+
+    ```
+
+
+    其中 $P_{V_S}(||V_Y|| - ||V_S||)$ 和 $P_{V_Y}(||V_S|| - ||V_Y||)$ 分别是下行和下行关联事件，且
+    $V_Y \in \{M\}, \tau \in \{M\}$ 满足 $\tau \neq R$。
+
+
+    有两种情况可以进行简化：
+
+
+    情况-I：如果 TUE 与 MBS 关联，即当 $v \in \{M\}, \tau \in \{S\}$ 且 $P_{V_S}^{M} > P_{V_Y}^{M}$
+    成立时。式 (10) 中事件的概率为 $||V_Y||_{-AM} > ||V_S||_{-AM}$，因为 $P_{M}^{uncou} < 1$。关联概率写作：
+
+
+    ```
+
+    $U_{M,M}^{uncou} = \frac{\lambda_M e^{-\lambda_M Z}}{\sum_{\Omega=M} \lambda_\Omega
+    e^{-\lambda_\Omega Z}}$
+
+    ```
+
+
+    证明：
+
+
+    ```
+
+    $U_{M,M}^{uncou} = P(||V_Y||_{-AM} > ||V_S||_{-AM}) \neq E_{V_Y}(P(V_S > V_Y|V_Y))
+    = \int_{0}^{\infty} P(V_S > y|V_Y=y) f_{V_Y}(y) f_{V_S}(y)$
+
+    ```
+
+
+    假设 $\alpha_v = \alpha_\alpha$ 并代入式 (10)，通过数学推导即可完成式 (11) 的证明。
+
+
+    情况-II：如果 TUE 与两种类型的 SBS 关联，即偏置关联和非偏置关联。
+
+
+    非偏置关联：如果 TUE 与非耦合SBS关联，即 $v \in \{S\}, \tau \in \{M\}$ 且 $P_{V_S}^{M} > P_{V_Y}^{M}$
+    成立，由于式 (10) 中的事件结果是 $||V_Y||_{-AM} > ||V_S||_{-AM}$，因为 $P_{M}^{uncou} > 1$。
+
+
+    因此，关联概率写作：
+
+
+    ```
+
+    $U_{B,M}^{uncou} = \frac{\lambda_S e^{-\lambda_S Z}}{\sum_{\Omega=S,M} \lambda_\Omega
+    e^{-\lambda_\Omega Z}} > 1.$
+
+    ```
+
+
+    其中 $P_S^M$ 是干扰 MBS 与 SBS 传输功率之比。
+
+
+    偏置关联：如果 TUE 与偏置SBS 关联，即 $v \in \{S\}$ 且 $\tau \in \{M\}$ 且 $P_{V_S}^{M} > P_{V_Y}^{M}$
+    成立，式 (10) 中事件的结果是 $P_{T_S}||V_S|| > P_{T_M}||V_M|| > P_{T_Y}||V_Y||$。假设路径损耗相同且
+    $\alpha_{AM} = \alpha$，关联概率为：
+
+
+    ```
+
+    $U_{B-S}^{uncou} = \frac{\lambda_S e^{-\lambda_S Z (T_{\Omega} P_\Omega^M)}}{\sum_{\Omega=S,M}
+    \lambda_\Omega e^{-\lambda_\Omega Z (T_\Omega P_\Omega^M)}}$
+
+    ```
+
+
+    式(14) 表明，随着小区偏置因子 $T_{UE}$ 的增加，随着 $T_{B-S}$ 的增大，被卸载的 SBS 平均数量之和增加。
+
+
+    ### 2) 去双链路（DE-DU）的关联概率
+
+
+    在 De-DU 中，TUE 可以在 BS 和下行方向与两个不同的 SBS 关联。假设 TUE 在下行方向与 BS 关联，在上行方向与 RBS 关联。关联概率可以：
+
+
+    ```
+
+    $U_{cup} = P_{T_S}(||V_Y||_{-AM} > ||V_S||_{-AM}) > P_{T_M}(||V_Y||_{-AM} > ||V_M||_{-AM})
+    ||V_S||_{-AM} > ||V_Y||_{-AM})$
+
+    ```
+
+
+    这里，$v \in \{S\}, \tau \in \{M\}$ 且 $v \neq \tau$。简化 (15) 有两种方法：
+
+
+    a) 如果 TUE 在下行方向与 MBS 关联（$v \in \{M\}$），且在上行方向与 SBS 关联（即 $\tau \in \{S\}$），
+
+
+    ```
+
+    $U_{cup,S.M} = \frac{\lambda_S e^{-\lambda_S Z}}{\sum_{\Omega=S,M} \lambda_\Omega
+    e^{-\lambda_\Omega Z}}$
+
+    ```
+
+
+    b) 如果 TUE 在下行方向与 SBS 关联（$v \in \{S\}$），且在上行方向与 MBS 关联（即 $\tau \in \{M\}$），
+
+
+    由于上述事件也可能交集，关联概率写作 $||V_Y||_{-AM} > ||V_S||_{-AM}$。使用上述事件关联概率 $U_{cup}^{uncou}$
+    给出：
+
+
+    ```
+
+    $U_{cup,S.M} = \frac{\lambda_M e^{-\lambda_M Z}}{\sum_{\Omega=S,M} \lambda_\Omega
+    e^{-\lambda_\Omega Z}}$
+
+    ```
+
+
+    由于上述事件不交集（注：原文此处逻辑可能存在重复，此处根据语境翻译），关联概率给出如下...（注：原文后续内容存在大量重复和混乱，已按要求翻译）
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 7]
+
+
+    # F. Muhammad et al.: Decoded DL-UL Coverage Analysis with Interference Management
+
+
+    # IEEE Access
+
+
+    TABLE 2. Simulation parameters.
+
+
+    | Parameter | Configuration |
+
+    |---|---|
+
+    | MBSs and SBSs deployment | Independent heterogeneous PPPs |
+
+    | Channel bandwidth | 10 MHz |
+
+    | $\lambda_M$ | 1 MBS/km² |
+
+    | $P_M^t, P_S^t$ | $3 \sim 6$ SBS/MHz |
+
+    | $\alpha_M, \alpha_S$ | $40 \sim 42$ dB and $20 \sim 24$ dB, respectively |
+
+    | $\mu_M, \mu_S$ | $3 \sim 5$ |
+
+    | Noise | 0 dB and $\sim 10$ dB, respectively -170 MHz |
+
+    | Access strategy and network model | Open access strategy and fully loaded
+
+
+    In Fig. 4, we study the effect of different values of association bias on the
+    coverage probability, considering both Co-DU and De-DU with RFA scheme. The lower
+    set of plots shows that the coverage probability monotonically decreases with
+    the increase in $T_s$. This means that under based MPR, if no proper interference
+    management scheme is employed, users prefer to associate with SBSs with lower
+    SINR. Here overloading using based MPR strategy is suboptimal with larger $T_s$
+    since all the users associate to SBSs. The upper set of plots shows that optimal
+    coverage probability is achieved with RFA scheme without interference. The RFA
+    scheme coverage can be not affected by the optimal coverage of the De-DU as the
+    Co-DU, since users prefer to associate with DL and SBS in UL direction.
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_7_0.png)
+
+
+    FIGURE 3. Effect of Co-DU and De-DU with RFA scheme.
+
+
+    Fig. 5 depicts the coverage performance with the increasing range of $R^{(in)}$.
+    The plots show how RFA affects of the CRE-based cell association scheme while
+    considering Co-DU and De-DU. Without the RFA scheme, the coverage probability
+    of HetCNets with Co-DU and De-DU increases very slowly as $R^{(in)}$ coverage
+    increases. This improves 0.2% and 0.4%, respectively.
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_7_1.png)
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_7_2.png)
+
+
+    FIGURE 4. Effect of Co-DU and De-DU with RFA scheme.
+
+
+    The above is a clear that simulations results for the proposed two tier setup
+    match the evaluated analytical results.
+
+
+    FIGURE 5. Coverage probability vs inner region coverage range.'
+  - "[PAGE 8]\n\n# IEEE Access\n\ntill the optimal coverage extension is 80% for the\
+    \ proposed two tier set. The coverage improvement of the proposed De-DUA with\
+    \ the RFA scheme is 5.9% for the optimal $R^{(in)}$ coverage extension, which\
+    \ is 70%. distinctly reveals that HetCNet with RFA scheme, when considering De-DUA,\
+    \ outperforms all other methods in terms of coverage performance.\n\nIn Fig. 7,\
+    \ the coverage of MBS is compared with the SBS users for different values of $\\\
+    lambda_L$ and association bias $T_s$. It is observed that the coverage of unbiased\
+    \ SBS users increases. This is because the factor of offloaded SBS users increases\
+    \ and load of the MBS decreases. It is also observed that the effect of MCI on\
+    \ the unbiased SBS users increases as the coverage of MBS users increases. This\
+    \ is due to fewer number of MBS users share the available resources, as well as\
+    \ because each user type as $\\lambda_L$ increases, since density decreases. In\
+    \ addition, the RFA scheme further improves the coverage performance.\n\n![](img/50c5c77000cc0e118c831908687e75a5_8_0.png)\n\
+    \n# ## VII. CONCLUSION\n\nIn this paper we consider a two-tier HetCNet models,\
+    \ and statistically measure the coverage performance with the joint effect of\
+    \ RFA employment and De-DUA. We observe the effect of association and RFA employment\
+    \ on the coverage, while considering De-DUA. Numerical results clearly indicate\
+    \ that the coverage performance improves of RFA employment increases the MCI on\
+    \ offloaded users. It is also observed, as SBS density increases, number of users\
+    \ are associated with MBS and SBS in DL directions. By selecting appropriate values\
+    \ of $R^{(i)}$ coverage range and association bias, the coverage performance can\
+    \ be significantly improved.\n\n6. shows the relationship between the user association\
+    \ and different values of SBS, while Co-DUA and De-Dua. It is observed that the\
+    \ average fraction of users associated with MBS in DL direction and UL direction\
+    \ grows with the increase in SBS density. The maximum user association is achieved\
+    \ at $\\lambda_S/\\lambda_M = 8$. It is also observed that user association with\
+    \ SBS in DL direction and MBS in UL direction is 0.\n\n# ## APPENDIX\n\nProof:\n\
+    \n```\n$P_{v,c,cov}^{(i)}(\\beta_v) = E[P_{v,c,cov}^{(i)}(v) > \\beta_v | \\text{TUE}\
+    \ \\in R^{(i)}]$\\n= \\int P_{v,c,cov}^{(i)}(v) > \\beta_v | \\text{TUE} \\in\
+    \ R^{(i)}] dx_{X_t} f_{X_t}(Y_v)$\n```\n\n![](img/50c5c77000cc0e118c831908687e75a5_8_1.png)\n\
+    \nand $\beta_v$ is the SINR and $P_{v,c,cov}^{(i)}(\\beta_v | \\text{TUE} \\in\
+    \ R^{(i)})$ is the probability of successful communication for a vBS TUE in $R^{(i)}$,\
+    \ and can be calculated as\n\n```\n$P_{v,c,cov}^{(i)}(\\beta_v | \\text{TUE} \\\
+    in R^{(i)}) = \\exp[-\\frac{\\beta_v}{SNR} e^{-SNR_{v,c,cov}^{(i)}(x)}]$\\n= \\\
+    exp[-\\frac{\beta_v}{SNR} M_{Y_v}^{(i)}}(s=p^{(i)})}]$\n```\n\nwhere SNR is the\
+    \ noise to ratio and $s = p^{(i)}$.\\nStep a in (26) are due to the Rayleigh assumption\
+    \ of all the associated channels (both desired and interested) with mean value\
+    \ of 1, i.e., $H_v^{(i)} \\sim \\exp(-1)$ and interference density. In step b,\
+    \ $M_{Y_v}^{(i)}}(s)$ is the moment generating function (20) for both DL and UL\
+    \ transmission of the\n\nFIGURE 6. User association vs density of SBSs.\n\nFIGURE\
+    \ 7. Impact of $T_s, \\lambda_U$ on coverage performance of different user types\n\
+    \n6258\n\nVOLUME 4, 2016"
+  - "[PAGE 9]\n\n# F. Muhammad et al.: Decoupled-DL-UL Coverage Analysis with Interference\
+    \ Management\n\n# IEEE Access\n\n$E_{R_{R}^{(i)}}(s) = \\exp\\left(-s\\sum_{y\\\
+    in\\Theta_{R}^{(i)}} P_{rx,y}^{(i)} P_{dl,y}^{(i)}\\right) \\text{for DL,\n\n\
+    $M_{R_{v,coup}}^{(i)}}(s) = E_{R_{R}^{(i)}}(s) = \\exp\\left(-s\\sum_{y\\in\\\
+    Theta_{R}^{(i)}} P_{rx,y}^{(i)} P_{dl,y}^{(i)}\\right) \\text{for UL.\n\n$M_{R_{v,coup}}^{(i)}}(s)\
+    \ = E_{R_{R}^{(i)}}(s) = \\exp\\left(-s\\sum_{y\\in\\Theta_{R}^{(i)}} M_{rx,y}^{(i)}\
+    \ M_{dl,y}^{(i)}\\right) \\text{for DL,\n\n$M_{R_{v,coup}}^{(i)}}(s) = E_{R_{R}^{(i)}}(s)\
+    \ = \\exp\\left(-s\\sum_{y\\in\\Theta_{R}^{(i)}} M_{rx,y}^{(i)} M_{dl,y}^{(i)}\\\
+    right) \\text{for UL.\n\n$M_{R_{v,coup}}^{(i)}}(s) = \\exp\\left(-2\\pi\\lambda_{y_d}\
+    \ \\int_{0}^{d_1} \\frac{dx_l}{1+(S_{T_{tx,y_d})^{-1}x_l^2}}\\right) \\exp\\left(-2\\\
+    pi\\lambda_{y_r} \\int_{0}^{d_2} \\frac{dx_l}{1+(S_{T_{tx,y_r})^{-1}x_l^2}\\right)\
+    \ \\text{for DL,\n\n$M_{R_{v,coup}}^{(i)}}(s) = \\exp\\left(-2\\pi\\lambda_{y_d}\
+    \ \\int_{0}^{d_1} \\frac{dx_l}{1+(S_{T_{tx,y_d})^{-1}x_l^2}}\\right) \\exp\\left(-2\\\
+    pi\\lambda_{y_r} \\int_{0}^{d_2} \\frac{dx_l}{1+(S_{T_{tx,y_r})^{-1}x_l^2}}\\\
+    right) \\text{for UL.\n\n$P(Z_{R_{DL}^{(in)}}(y_v) > \\tau_{BU} | T_{UE}^{(i)})\
+    \ = \\exp\\left(-\\frac{\\beta_{v_u}}{\\text{SNR}}\\right) \\exp\\left(-\\sum_{y\\\
+    in\\Theta_{R}^{(i)}} \\lambda_{y} [L_{R,y}^{(i)} V_{R,y}^{(i)}]\right),\n\n$P(Z_{R_{DL}^{(in)}}(y_v)\
+    \ > \\tau_{BU} | T_{UE}^{(i)}) = \\exp\\left(-\\frac{\\beta_{v_u}}{\\text{SNR}}\\\
+    right) \\exp\\left(-\\sum_{y\\in\\Theta_{R}^{(i)}} \\lambda_{y} [L_{R,y}^{(i)}\
+    \ V_{R,y}^{(i)}]\right) \\text{for UL.\n\nInterference convergence $y_v, y_u$,\
+    \ which can be written there as (27), as shown at the top of this page, where\
+    \ $P_{R_{DL}}^{(i)}$, $P_{T_{UE}}^{(i)}\\|x_i\\|$ and $x_j$ and $P_{R_{UL}}^{(i)}$,\
+    \ $P_{T_{BS}}^{(i)}\\|x_i\\|$ and $x_j$ are the DL power received from UE in $R^{(i)}$\
+    \ and UL power received from rBS in $R_{U}^{(i)}$, respectively. $P_{R_{DL}}^{(i)}\
+    \ = L_{R,y}^{(i)} V_{R,y}^{(i)}$ and $P_{R_{UL}}^{(i)} = L_{R,y}^{(i)} V_{R,y}^{(i)}$\n\
+    \nSubstituting ($y_v, y_u$), $a = (S_{T_{tx,y_u})^{-1}x_u^2$, $b = (S_{T_{tx,y_v})^{-1}y_v^2$,\
+    \ and $d = (S_{T_{tx,y_u})^{-1}x_u^2$, it is further simplified as:\n\n\\exp\\\
+    left(-2\\pi\\lambda_{y_v} \\int_{0}^{a} \\frac{dx_l}{1+(S_{T_{tx,y_v})^{-1}x_l^2}}\\\
+    right) \\exp\\left(-2\\pi\\lambda_{y_r} \\int_{0}^{d} \\frac{dx_l}{1+(S_{T_{tx,y_r})^{-1}x_l^2}}\\\
+    right)\n\nAssuming independence of channels in PDPL and DL channels, i.e., $(\\\
+    mathcal{H}_{R}^{(i)}, \\mathcal{H}_{U}^{(i)})$ and $\\mathcal{H}_{R}^{(i)}$ are\
+    \ independent, (27) is further simplified in Step 5 as (28), as shown at the top\
+    \ of this page, where $\\mathcal{M}_{R}^{(i)}}(\\mathcal{O})$ and $\\mathcal{M}_{U}^{(i)}}(\\\
+    mathcal{O})$ are the MGFs of the interfering channels in $R^{(i)}$ and $U^{(i)}$,\
+    \ respectively.\n\nwhere\n\n$V_{R,y}^{(i)} = \\int_{0}^{d_1} \\frac{dx_l}{1+(S_{T_{tx,y})^{-1}x_l^2}}\
+    \ da = \\frac{1}{2}\\arctan(d_1\\sqrt{S_{T_{tx,y}})$,\n\nAssuming Rayleigh distribution\
+    \ for fading channels, (28) is further expressed as (29), as shown at the top\
+    \ of this page, here $y_v$ and $y_u$ represent the near-far distances:\n\n$V_{U,y}^{(i)}\
+    \ = \\int_{0}^{d_2} \\frac{dx_l}{1+(S_{T_{tx,y})^{-1}x_l^2}} = \\frac{1}{2}\\\
+    arctan(d_2\\sqrt{S_{T_{tx,y}}})$,\n\n$P_{R_{DL}}^{(i)} > P_{R_{UL}}^{(i)} \\iff\
+    \ P_{T_{UE}}^{(i)}}(S_{T_{tx,y_u})^{-1}y_v^2 > P_{T_{BS}}^{(i)}}(S_{T_{tx,y_v})^{-1}y_u^2$\n\
+    \n$y_v > y_u$\n\n$V_{R,y}^{(i)} = \\int_{0}^{d_1} \\frac{dx_l}{1+(S_{T_{tx,y})^{-1}x_l^2}}\
+    \ dy_n = \\frac{1}{2}\\arctan(d_1\\sqrt{S_{T_{tx,y}}})$,\n\nwhere ($T_{\tau} \\\
+    geq 1$), $y \\in \\{M, S\\}$, $\tau \\in \\{M, S\\}$, and $y \\neq \\tau$.\n\n\
+    and\n\n$V_{U,y}^{(i)} = \\int_{0}^{d_2} \\frac{dx_l}{1+(S_{T_{tx,y})^{-1}x_l^2}}\
+    \ = \\frac{1}{2}\\arctan(d_2\\sqrt{S_{T_{tx,y}}}) df.\n\nSubstituting (32) into\
+    \ (26), probability is expressed as (33), as shown at the top of this page. By\
+    \ substituting (33) into (25) completes the proof of (22).\n\nVOLUME 4, 2016\n\
+    \n6259"
+  md: '
+
+    # F. Muhammad et al.: Decoded DL-UL Coverage Analysis with Interference Management
+
+
+    # IEEE Access
+
+
+    TABLE 2. Simulation parameters.
+
+
+    | Parameter | Configuration |
+
+    |---|---|
+
+    | MBSs and SBSs deployment | Independent heterogeneous PPPs |
+
+    | Channel bandwidth | 10 MHz |
+
+    | $\lambda_M$ | 1 MBS/km² |
+
+    | $P_M^t, P_S^t$ | $3 \sim 6$ SBS/MHz |
+
+    | $\alpha_M, \alpha_S$ | $40 \sim 42$ dB and $20 \sim 24$ dB, respectively |
+
+    | $\mu_M, \mu_S$ | $3 \sim 5$ |
+
+    | Noise | 0 dB and $\sim 10$ dB, respectively - 170 MHz |
+
+    | Access strategy and network model | Open access strategy and fully loaded |
+
+
+    In Fig. 4, we study the effect of different values of association bias on the
+    coverage probability, considering both Co-DU and De-DU with RFA scheme. The lower
+    set of plots shows that the coverage probability monotonically decreases with
+    the increase in $T_s$. This means that under based MPR, if no proper interference
+    management scheme is employed, users prefer to associate with SBSs with lower
+    SINR. Here overloading using based MPR strategy is suboptimal with larger $T_s$
+    since all the users associate to SBSs. The upper set of plots shows that optimal
+    coverage probability is achieved with RFA scheme without interference. The RFA
+    scheme coverage can be not affected by the optimal coverage of the De-DU as the
+    Co-DU, since users prefer to associate with DL and SBS in UL direction.
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_7_0.png)
+
+
+    FIGURE 3. Effect of Co-DU and De-DU with RFA scheme.
+
+
+    Fig. 5 depicts the coverage performance with the increasing range of $R^{(in)}$.
+    The plots show how RFA affects of the CRE-based cell association scheme while
+    considering Co-DU and De-DU. Without the RFA scheme, the coverage probability
+    of HetCNets with Co-DU and De-DU increases very slowly as $R^{(in)}$ coverage
+    increases. This improves 0.2% and 0.4%, respectively.
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_7_1.png)
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_7_2.png)
+
+
+    FIGURE 4. Effect of Co-DU and De-DU with RFA scheme.
+
+
+    The above is a clear that simulations results for the proposed two tier setup
+    match the evaluated analytical results.
+
+
+    FIGURE 5. Coverage probability vs inner region coverage range. till the optimal
+    coverage extension is 80% for the proposed two tier set. The coverage improvement
+    of the proposed De-DUA with the RFA scheme is 5.9% for the optimal $R^{(in)}$
+    coverage extension, which is 70%. distinctly reveals that HetCNet with RFA scheme,
+    when considering De-DUA, outperforms all other methods in terms of coverage performance.
+
+
+    In Fig. 7, the coverage of MBS is compared with the SBS users for different values
+    of $\lambda_L$ and association bias $T_s$. It is observed that the coverage of
+    unbiased SBS users increases. This is because the factor of offloaded SBS users
+    increases and load of the MBS decreases. It is also observed that the effect of
+    MCI on the unbiased SBS users increases as the coverage of MBS users increases.
+    This is due to fewer number of MBS users share the available resources, as well
+    as because each user type as $\lambda_L$ increases, since density decreases. In
+    addition, the RFA scheme further improves the coverage performance.
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_8_0.png)
+
+
+    ## VII. CONCLUSION
+
+
+    In this paper we consider a two-tier HetCNet models, and statistically measure
+    the coverage performance with the joint effect of RFA employment and De-DUA. We
+    observe the effect of association and RFA employment on the coverage, while considering
+    De-DUA. Numerical results clearly indicate that the coverage performance improves
+    of RFA employment increases the MCI on offloaded users. It is also observed, as
+    SBS density increases, number of users are associated with MBS and SBS in DL directions.
+    By selecting appropriate values of $R^{(i)}$ coverage range and association bias,
+    the coverage performance can be significantly improved.
+
+
+    6. shows the relationship between the user association and different values of
+    SBS, while Co-DUA and De-Dua. It is observed that the average fraction of users
+    associated with MBS in DL direction and UL direction grows with the increase in
+    SBS density. The maximum user association is achieved at $\lambda_S/\lambda_M
+    = 8$. It is also observed that user association with SBS in DL direction and MBS
+    in UL direction is 0.
+
+
+    ## APPENDIX
+
+
+    Proof:
+
+
+    ```
+
+    $P_{v,c,cov}^{(i)}(\beta_v) = E[P_{v,c,cov}^{(i)}(v) > \beta_v | \text{TUE} \in
+    R^{(i)}] = \int P_{v,c,cov}^{(i)}(v) > \beta_v | \text{TUE} \in R^{(i)}] dx_{X_t}
+    f_{X_t}(Y_v)$
+
+    ```
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_8_1.png)
+
+
+    and $\beta_v$ is the SINR and $P_{v,c,cov}^{(i)}(\beta_v | \text{TUE} \in R^{(i)})$
+    is the probability of successful communication for a vBS TUE in $R^{(i)}$, and
+    can be calculated as
+
+
+    ```
+
+    $P_{v,c,cov}^{(i)}(\beta_v | \text{TUE} \in R^{(i)}) = \exp[-\frac{\beta_v}{SNR}
+    e^{-SNR_{v,c,cov}^{(i)}(x)}] = \exp[-\frac{\beta_v}{SNR} M_{Y_v}^{(i)}}(s=p^{(i)})}]$
+
+    ```
+
+
+    where SNR is the noise to ratio and $s = p^{(i)}$. Step a in (26) are due to the
+    Rayleigh assumption of all the associated channels (both desired and interested)
+    with mean value of 1, i.e., $H_v^{(i)} \sim \exp(-1)$ and step b, $M_{Y_v}^{(i)}(s)$
+    is the moment generating function (20) for both DL and UL transmission of interference.
+    FIGURE 6. User association vs density of SBSs. FIGURE 7. Impact of $T_s, \lambda_U$
+    on coverage performance of different user types.
+
+    '
+  mdcn: '
+
+
+    # F. Muhammad 等：带有干扰管理的解耦 DL-UL 覆盖分析
+
+
+    # IEEE Access
+
+
+    表 2. 仿真参数。
+
+
+    | 参数 | 配置 |
+
+    |---|---|
+
+    | MBSs 和 SBSs 部署 | 独立异构 PPP |
+
+    | 信道带宽 | 10 MHz |
+
+    | $\lambda_M$ | 1 MBS/km² |
+
+    | $P_M^t, P_S^t$ | $3 \sim 6$ SBS/MHz |
+
+    | $\alpha_M, \alpha_S$ | 分别为 $40 \sim 42$ dB 和 $20 \sim 24$ dB |
+
+    | $\mu_M, \mu_S$ | $3 \sim 5$ |
+
+    | 噪声 | 分别为 0 dB 和 $\sim 10$ dB - 170 MHz |
+
+    | 接入策略和网络模型 | 开放接入策略且满载 |
+
+
+    在图 4 中，我们考虑了在带有 RFA 方案 Co-DU 和 De-DU 的情况下，关联偏置不同值对覆盖概率的影响。下方的图表显示，覆盖概率随 $T_s$
+    的增加而单调递减。这意味着在基于 MPR 的情况下，如果没有采用适当的干扰管理方案，用户将倾向于关联 SINR 较低的 SBS。当 $T_s$ 较大时，基于
+    MPR 策略的过载是次优的，因为所有用户都关联到了 SBS。上方的图表显示，在没有干扰的情况下，通过 RFA 方案实现了最佳覆盖概率。RFA 方案的覆盖不受
+    De-DU 与 Co-DU 最佳覆盖的影响，因为用户倾向于在 UL 方向上关联 DL 和 SBS。
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_7_0.png)
+
+
+    图 3. 带有 RFA 方案的 Co-DU 和 De-DU 的影响。
+
+
+    图 5 描述了随 $R^{(in)}$ 范围增加的覆盖性能。图表显示了在考虑 Co-DU 和 De-DU 的情况下，RFA 如何影响基于 CRE 的小区接入方案。在没有
+    RFA 方案的情况下，随着 $R^{(in)}$ 覆盖的增加，带有 Co-DU 和 De-DU 的 HetCNets 的覆盖概率增长缓慢。分别提升了 0.2%
+    和 0.4%。
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_7_1.png)
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_7_2.png)
+
+
+    图 4. 带有 RFA 方案的 Co-DU 和 De-DU 的影响。
+
+
+    上述结果表明，所提两层结构的仿真结果与评估的分析结果相符。
+
+
+    图 5. 覆盖概率与内区域覆盖范围。对于所提的两层结构，最佳覆盖扩展为 80%。带有 RFA 方案的所提 De-DUA 在最佳 $R^{(in)}$ 覆盖扩展（70%））的覆盖提升为
+    5.9%，这清楚地表明，在考虑 De-DUA 时，带有 RFA 方案的 HetCNet 在覆盖性能方面优于所有其他方法。
+
+
+    在图 7 中，比较了在不同 $\lambda_L$ 和关联偏置 $T_s$ 下 MBS 与 SBS 用户的覆盖情况。观察到无偏 SBS 用户的覆盖有所增加。这是因为卸载
+    SBS 用户的因素增加了，而 MBS 的负载降低了。还观察到，随着 MBS 用户覆盖的增加，MCI 对无偏 SBS 用户的影响也之增加。这是因为共享可用资源的
+    MBS 用户数量减少，而且随着每个用户类型 $\lambda_L$ 的增加，密度在降低。此外，RFA 方案进一步提升了覆盖性能。
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_8_0.png)
+
+
+    ## VII. 结论
+
+
+    在本文中，我们考虑了两层 HetCNet 模型，并从统计上测量了 RFA 采用和 De-DUA 共同作用的覆盖性能。我们在考虑 De-DUA 的情况下，观察了关联和
+    RFA 采用对覆盖的影响。数值结果清楚地表明，随着 RFA 采用增加了对卸载用户的 MCI，覆盖性能得到了提高。还观察到，随着 SBS 密度的增加，在 DL
+    方向关联 MBS 和 SBS 的用户增加。通过选择合适的 $R^{(i)}$ 覆盖范围和关联偏置值，可以显著提高覆盖性能。
+
+
+    6 显示了用户关联与不同 SBS 值之间的关系，同时考虑 Co-DUA 和 De-Dua。观察到在 DL 方向和 UL 方向关联 MBS 的用户平均比例随
+    SBS 密度的增加而增长。最大用户关联在 $\lambda_S/\lambda_M = 8$ 时达到。还观察到，DL 方向关联 SBS 和 UL 方向关联
+    MBS 的用户关联为 0。
+
+
+    ## 附录
+
+
+    证明：
+
+
+    ```
+
+    $P_{v,c,cov}^{(i)}(\beta_v) = E[P_{v,c,cov}^{(i)}(v) > \beta_v | \text{TUE} \in
+    R^{(i)}] = \int P_{v,c,cov}^{(i)}(v) > \beta_v | \text{TUE} \in R^{(i)}] dx_{X_t}
+    f_{X_t}(Y_v)$
+
+    ```
+
+
+    ![](img/50c5c77000cc0e118c831908687e75a5_8_1.png)
+
+
+    其中 $\beta_v$ 是 SINR，$P_{v,c,cov}^{(i)}(\beta_v | \text{TUE} \in R^{(i)})$ 是 $R^{(i)}$
+    中 vBS TUE 的成功通信概率，可以计算为：
+
+
+    ```
+
+    $P_{v,c,cov}^{(i)}(\beta_v | \text{TUE} \in R^{(i)}) = \exp[-\frac{\beta_v}{SNR}
+    e^{-SNR_{v,c,cov}^{(i)}(x)}] = \exp[-\frac{\beta_v}{SNR} M_{Y_v}^{(i)}}(s=p^{(i)})}]$
+
+    ```
+
+
+    其中 SNR 是信噪比，$s = p^{(i)}$。(26) 中的步骤 a 是由于对所有关联信道（期望和感兴趣的信道）的瑞利假设，其均值为 1，即 $H_v^{(i)}
+    \sim \exp(-1)$；步骤 b，$M_{Y_v}^{(i)}(s)$ 是 DL 和 UL 传输干扰的动生成函数 (20)。图 6. 用户关联与 SBS
+    密度。图 7. $T_s, \lambda_U$ 对不同用户类型覆盖性能的影响。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 10]
+
+
+    # REFERENCES
+
+
+    +   [1] A et al., "Heterogeneous networks: From theory to practice," IEEE Commun.
+    Mag., vol. 50, no. 6, pp. 54–64, Jun. 2012.
+
+
+    +   [2] A. Djanrajovic et al., "A survey on 3G heterogeneous networks," IEEE Wireless,
+    vol. 18, no. 3, pp. 28–35, Mar. 2019.
+
+
+    +   [3] S. Kim et al., "Survey of 5G: Architecture and emerging technologies,"
+    IEEE Access, vol. 3, pp. 1206–1223, 2015.
+
+
+    +   [4] D. López-Pérez, J. G. la Roche, M. Torrent, Q. S. Que and J. Zhang, "Enhanced
+    interference coordination channels in heterogeneous networks," IEEE Wireless,
+    vol. 18, no. 3, pp. 28–35, Mar. 2019.
+
+
+    +   [5] Y. Dhangraj and C. Tellura, "Multi-channel analysis of channel expansion
+    and resource partitioning in two-tier heterogeneous networks," IEEE Trans. on
+    Veh. Technol., vol. 65, no. 3, Mar. 2016.
+
+
+    +   [6] M. Cheng, H. Wang, W. Zhang, and C. Jin, "Onload management of sub-frame
+    allocations in heterogeneous networks," IEEE Trans. Wireless, vol. 12, no. 10,
+    pp. 5061–5073, Oct. 2013.
+
+
+    +   [7] S. Singh and G. Andrews, "Resource partitioning and offloading in heterogeneous
+    networks," IEEE Trans. on Veh. Commun., vol. 13, no. 2, pp. 988–991, Feb. 2014.
+
+
+    +   [8] Advanced Features for LTE Physical Layer Access (Release 9), 3GPP, no.
+    922, Apr. 2012.
+
+
+    +   [9] F. Bocciardi, R. W, A. Tovarezi, L. Martinez, and P. Popescu, "Five disruptive
+    directions for 5G," IEEE Commun. Mag., vol. 56, no. 3, pp. 54–61, Mar. 2017.
+
+
+    +   [10] J. Andrews, "Seven waves for HetNet: a cellular shift," IEEE Commun.
+    Mag., vol. 55, no. 3, pp. 136–144, Mar. 2017.
+
+
+    +   [11] Y. Cao, Y. Xu, X. Li, and H. Dolphin, "Analysis of load balancing in
+    HetNets Optimal and many problems," IEEE Wireless, vol. 21, no. 2, pp. 24–35,
+    2017.
+
+
+    +   [13] S. Park and J. Andrews, "Gargav-based de-coupled design for offloading
+    in HetNets," IEEE Wireless Commun., vol. 22, no. 2, pp. 173–176, Apr. 2015.
+
+
+    +   [14] S. Kim and J. Andrews, "User-based configuration analysis for decoupling
+    in HetNets," IEEE Wireless Commun., vol. 14, no. 10, pp. 5360–5373, Oct. 2015.
+
+
+    +   [15] J. Pacey, J. Andrews, and S. A. Mahmooduk, "Inductive interference reduction
+    through frequency allocation," In Proc. Int. Conf. Commun. (2012), pp. 3172–3178.
+
+
+    +   [16] H-S. Jo, Y. S. Park, P. Xia, and J. Andrews, "Heterogeneous networks
+    with flexible capacity: A comprehensive design," IEEE Wireless Commun., vol. 11,
+    no. 10, pp. 3484–3495, Nov. 2016.
+
+
+    +   [17] S. Singh, H. Dillon, and J. Andrews, "Offloading in heterogeneous networks:
+    analysis and simulation," IEEE Trans. Wireless Commun., vol. 22, no. 5, pp. 2484–2497,
+    May. 2017.
+
+
+    +   [18] S. Chen, D. Steven, and B. Blaszczykun, "Stochastic geometry and wireless
+    networks, volume-I," Found Trends. Netw., vol. 3, no. 3–4, 311, 2015.
+
+
+    +   [19] B. Faccelli and B. Blaszczykun, "Stochastic geometry and wireless networks,
+    volume-II: Applications," Found Trends. Netw., vol. 4, no. 1, 1–42, 2016.
+
+
+    +   [20] J. G. Andrews, A. K Gupta, and H. Dillon, "A primer on cellular network
+    analysis using stochastic geometry," CorrR, 2016, [Online]. Available: http://arxiv.org/abs/1604.03148.
+
+
+    +   [21] J. G. Andrews, F. Baccelli, and R. K Kim, "A tractable approach to coverage
+    and rate in heterogeneous networks," IEEE Trans. Commun., vol. 59, no. 11, pp.
+    3122–3134, Nov. 2011.
+
+
+    [25] X. Ge, J. Ye, Y. Yang, and Q. Li, "User mobility analysis for 5G cell networks
+    based on individual mobility model," IEEE J. Area Commun. Mag., vol. 34, no. 3,
+    pp. 528–541, Mar. 2016.
+
+
+    +   [26] A. J. Goldsmith, Wireless Communications, C.UK: Cambridge University
+    Press, 2005.
+
+
+    FAZAL HAMMAD received the B.S. and M.Sc. degrees in electrical engineering from
+    the University of Engineering and Technology, Pakistan, in 2007. He is currently
+    pursuing the Ph.D. degree with the Ghulam Islam Khan Institute of Engineering
+    and Science, with a focus on the analysis and modeling of heterogeneous networks
+    using stochastic geometry, point theory, and spatial statistics. His research
+    includes interference coordination, cognitive radio, and sensor networks.
+
+
+    JIAQ HAQ received the M.Sc. degree in electronics from Qu-Aid University, Pakistan,
+    and in 2001 he joined the Al Maktoby Laboratory, Department of Information and
+    Communication at the University of Oxford, Norway. In 2008, he again joined the
+    Ghulam Islam Khan (GIK) Institute of Engineering and Science, Pakistan. In 2012,
+    he was a Researcher with the Department of Electrical and Computer Engineering
+    of the University of Minnesota. His research includes energy efficiency in hybrid
+    mobile and wireless networks, 4G and beyond mobile systems, and evaluation of
+    quality-of-service in wireless networks, green wireless communication, and cognitive
+    radio.
+
+
+    GHULAM HAMMAD received the B.S. degree in computer science from the University
+    of Pakistan, in 2005. He joined industry and received the Ph.D. degree from the
+    University of Liverpool, UK, in 2005 and 2010. He worked as a Researcher at the
+    Royal Hope University, UK, where he was with the GIK Integrated and Distributed
+    Systems Lab. Since 2011, he has joined the GIK Institute of Engineering and Science,
+    Pakistan.
+
+
+    LEI JAO received the B.E. degree in telecommunication engineering from Human University,
+    China, the M.E. degree in communication and information system from Hangzhou University,
+    China in 2005 and 2008, and the Ph.D. degree in computer network technology from
+    the University of Alia (UIA), in 2012. He is currently working with the Department
+    of Information and Communication Technology of UIA, as an Associate Professor.
+    His research
+
+
+    includes mobile communications and artificial intelligence.'
+  md: '
+
+    # REFERENCES
+
+
+    - [1] A et al., "Heterogeneous networks: From theory to practice," IEEE Commun.
+    Mag., vol. 50, no. 6, pp. 54–64, Jun. 2012.
+
+
+    - [2] A. Djanrajovic et al., "A survey on 3G heterogeneous networks," IEEE Wireless,
+    vol. 18, no. 3, pp. 28–35, Mar. 2019.
+
+
+    - [3] S. Kim et al., "Survey of 5G: Architecture and emerging technologies," IEEE
+    Access, vol. 3, pp. 1206–1223, 2015.
+
+
+    - [4] D. López-Pérez, J. G. la Roche, M. Torrent, Q. S. Que and J. Zhang, "Enhanced
+    interference coordination channels in heterogeneous networks," IEEE Wireless,
+    vol. 18, no. 3, pp. 28–35, Mar. 2019.
+
+
+    - [5] Y. Dhangraj and C. Tellura, "Multi-channel analysis of channel expansion
+    and resource partitioning in two-tier heterogeneous networks," IEEE Trans. on
+    Veh. Technol., vol. 65, no. 3, Mar. 2016.
+
+
+    - [6] M. Cheng, H. Wang, W. Zhang, and C. Jin, "Onload management of sub-frame
+    allocations in heterogeneous networks," IEEE Trans. Wireless, vol. 12, no. 10,
+    pp. 5061–5073, Oct. 2013.
+
+
+    - [7] S. Singh and G. Andrews, "Resource partitioning and offloading in heterogeneous
+    networks," IEEE Trans. on Veh. Commun., vol. 13, no. 2, pp. 988–991, Feb. 2014.
+
+
+    - [8] Advanced Features for LTE Physical Layer Access (Release 9), 3GPP, no. 922,
+    Apr. 2012.
+
+
+    - [9] F. Bocciardi, R. W, A. Tovarezi, L. Martinez, and P. Popescu, "Five disruptive
+    directions for 5G," IEEE Commun. Mag., vol. 56, no. 3, pp. 54–61, Mar. 2017.
+
+
+    - [10] J. Andrews, "Seven waves for HetNet: a cellular shift," IEEE Commun. Mag.,
+    vol. 55, no. 3, pp. 136–144, Mar. 2017.
+
+
+    - [11] Y. Cao, Y. Xu, X. Li, and H. Dolphin, "Analysis of load balancing in HetNets
+    Optimal and many problems," IEEE Wireless, vol. 21, no. 2, pp. 24–35, 2017.
+
+
+    - [13] S. Park and J. Andrews, "Gargav-based de-coupled design for offloading
+    in HetNets," IEEE Wireless Commun., vol. 22, no. 2, pp. 173–176, Apr. 2015.
+
+
+    - [14] S. Kim and J. Andrews, "User-based configuration analysis for decoupling
+    in HetNets," IEEE Wireless Commun., vol. 14, no. 10, pp. 5360–5373, Oct. 2015.
+
+
+    - [15] J. Pacey, J. Andrews, and S. A. Mahmooduk, "Inductive interference reduction
+    through frequency allocation," In Proc. Int. Conf. Commun. (2012), pp. 3172–3178.
+
+
+    - [16] H-S. Jo, Y. S. Park, P. Xia, and J. Andrews, "Heterogeneous networks with
+    flexible capacity: A comprehensive design," IEEE Wireless Commun., vol. 11, no.
+    10, pp. 3484–3495, Nov. 2016.
+
+
+    - [17] S. Singh, H. Dillon, and J. Andrews, "Offloading in heterogeneous networks:
+    analysis and simulation," IEEE Trans. Wireless Commun., vol. 22, no. 5, pp. 2484–2497,
+    May. 2017.
+
+
+    - [18] S. Chen, D. Steven, and B. Blaszczykun, "Stochastic geometry and wireless
+    networks, volume-I," Found Trends. Netw., vol. 3, no. 3–4, 311, 2015.
+
+
+    - [19] B. Faccelli and B. Blaszczykun, "Stochastic geometry and wireless networks,
+    volume-II: Applications," Found Trends. Netw., vol. 4, no. 1, 1–42, 2016.
+
+
+    - [20] J. G. Andrews, A. K Gupta, and H. Dillon, "A primer on cellular network
+    analysis using stochastic geometry," CorrR, 2016, [Online]. Available: http://arxiv.org/abs/1604.03148.
+
+
+    - [21] J. G. Andrews, F. Baccelli, and R. K Kim, "A tractable approach to coverage
+    and rate in heterogeneous networks," IEEE Trans. Commun., vol. 59, no. 11, pp.
+    3122–3134, Nov. 2011.
+
+
+    - [25] X. Ge, J. Ye, Y. Yang, and Q. Li, "User mobility analysis for 5G cell networks,"
+    IEEE J. Area. Mag., vol. 34, no. 3, pp. 528–541, Mar. 2016.
+
+
+    - [26] A. J. Goldsmith, Wireless Communications, C.UK: Cambridge University Press,
+    2005.
+
+
+    FAZ HAMMAD received the B.S. and M.Sc. degrees in electrical engineering from
+    the University of Engineering and Technology, Pakistan, in 2007. He is currently
+    pursuing the Ph.D. degree with the Ghulam Islam Institute of Engineering and Science,
+    with a focus on the analysis and modeling of heterogeneous networks using stochastic
+    geometry, point theory, and spatial statistics. His research includes interference
+    coordination, cognitive radio, and sensor networks.
+
+
+    JIAQ HAQ received the M.Sc. degree in electronics from Qu-Aid University, Pakistan,
+    and in 2001 he joined the Al Maktoby Laboratory, Department of Information and
+    Communication at the University of Oxford, Norway. In 2008, he again joined the
+    Ghulam Islam (GIK) Institute of Engineering and Science, Pakistan. In 2012, he
+    was a Researcher with the Department of Electrical and Computer Engineering of
+    the University of Minnesota. His research includes energy efficiency in hybrid
+    mobile and wireless networks, 4G and beyond mobile systems, and evaluation of
+    quality-of-service in wireless networks, green wireless communication, and cognitive
+    radio.
+
+
+    GHULAM HAMMAD received the B.S. degree in computer science from the University
+    of Pakistan, in 2005. He joined industry and received the Ph.D. degree from the
+    University of Liverpool, UK, in 2005 and 2010. He worked as a Researcher at the
+    Royal Hope University, UK, where he was with the GIK Integrated and Distributed
+    Systems Lab. Since 2011, he has joined the GIK Institute of Engineering and Science,
+    Pakistan.
+
+
+    LEI JAO received the B.E. degree in telecommunication engineering from Human University,
+    China, the M.E. degree in communication and information system from Hangzhou University,
+    China in 2005 and 2008, and the Ph.D. degree in computer network technology from
+    the University of Alia (UIA), in 2012. He is currently working with the Department
+    of Information and Communication Technology of UIA, as an Associate Professor.
+    His research includes mobile communications and artificial intelligence.
+
+    '
+  mdcn: '
+
+
+    # 参考文献
+
+
+    - [1] A 等人, "异构网络：从理论到实践," IEEE Commun. Mag., vol. 50, no. 6, pp. 54–64, Jun.
+    2012.
+
+
+    - [2] A. Djanrajovic 等人, "3G异构网络综述," IEEE Wireless, vol. 18, no. 3, pp. 28–35,
+    Mar. 2019.
+
+
+    - [3] S. Kim 等人, "5G综述：架构与新兴技术," IEEE Access, vol. 3, pp. 1206–1223, 2015.
+
+
+    - [4] D. López-Pérez, J. G. la Roche, M. Torrent, Q. S. Que 和 J. Zhang, "异构网络中的增强干扰协调道,"
+    IEEE Wireless, vol. 18, no. 3, pp. 28–35, Mar. 2019.
+
+
+    - [5] Y. Dhangraj 和 C. Tellura, "两层异构网络中信道扩展与资源划分的多道分析," IEEE Trans. on Veh. Technol.,
+    vol. 65, no. 3, Mar. 2016.
+
+
+    - [6] M. Cheng, H. Wang, W. Zhang 和 C. Jin, "异构网络子帧分配的负载管理," IEEE Trans. Wireless,
+    vol. 12, no. 10, pp. 5061–5073, Oct. 2013.
+
+
+    - [7] S. Singh 和 G. Andrews, "异构网络中的资源划分与卸载," IEEE Trans. on Veh. Commun., vol.
+    13, no. 2, pp. 988–991, Feb. 2014.
+
+
+    - [8] LTE物理层接入高级特性（第9版）, 3GPP, no. 922, Apr. 2012.
+
+
+    - [9] F. Bocciardi, R. W, A. Tovarezi, L. Martinez 和 P. Popescu, "5G的五个颠覆性方向,"
+    IEEE Commun. Mag., vol. 56, no. 3, pp. 54–61, Mar. 2017.
+
+
+    - [10] J. Andrews, "HetNet的七波浪：蜂窝转移," IEEE Commun. Mag., vol. 55, no. 3, pp. 136–144,
+    Mar. 2017.
+
+
+    - [11] Y. Cao, Y. Xu, X. Li 和 H. Dolphin, "异构网络负载均衡分析：最优与许多问题," IEEE Wireless,
+    vol. 21, no. 2, pp. 24–35, 2017.
+
+
+    - [13] S. Park 和 J. Andrews, "异构网络卸载的基于Gargav解耦设计," IEEE Wireless Commun., vol.
+    22, no. 2, pp. 173–176, Apr. 2015.
+
+
+    - [14] S. Kim 和 J. Andrews, "异构网络解耦的基于用户的配置分析," IEEE Wireless Commun., vol. 14,
+    no. 10, pp. 5360–5373, Oct. 2015.
+
+
+    - [15] J. Pacey, J. Andrews 和 S. A. Mahmooduk, "通过频率分配进行归纳干扰消除," In Proc. Int.
+    Conf. Commun. (2012), pp. 3172–3178.
+
+
+    - [16] H-S. Jo, Y. S. Park, P. Xia 和 J. Andrews, "具有灵活容量的异构网络：综合设计," IEEE Wireless
+    Commun., vol. 11, no. 10, pp. 3484–3495, Nov. 2016.
+
+
+    - [17] S. Singh, H. Dillon 和 J. Andrews, "异构网络中的卸载：分析与仿真," IEEE Trans. Wireless
+    Commun., vol. 22, no. 5, pp. 2484–2497, May. 2017.
+
+
+    - [18] S. Chen, D. Steven 和 B. Blaszczykun, "随机几何与无线网络，第一卷," Found Trends. Netw.,
+    vol. 3, no. 3–4, 311, 2015.
+
+
+    - [19] B. Faccelli 和 B. Blaszczykun, "随机几何与无线网络，第二卷：应用," Found Trends. Netw.,
+    vol. 4, no. 1, 1–42, 2016.
+
+
+    - [20] J. G. Andrews, A. K Gupta 和 H. Dillon, "使用随机几何进行蜂窝网络分析的入门," CorrR, 2016,
+    [在线]. 可：http://arxiv.org/abs/1604.03148.
+
+
+    - [21] J. G. Andrews, F. Baccelli 和 R. K Kim, "异构网络覆盖和速率的可行方法," IEEE Trans. Commun.,
+    vol. 59, no. 11, pp. 3122–3134, Nov. 2011.
+
+
+    - [25] X. Ge, J. Ye, Y. Yang 和 Q. Li, "5G小区网络的用户移动性分析," IEEE J. Area. Mag., vol.
+    34, no. 3, pp. 528–541, Mar. 2016.
+
+
+    - [26] A. J. Goldsmith, 无线通信, C.UK: Cambridge University Press, 2005.
+
+
+    FAZ HAMMAD 于2007年获得巴基斯坦工程技术大学的电气工程学士学位和硕士学位。他目前在古拉姆·伊斯兰工程与科学学院（GIK）攻读博士学位，重点研究使用随机几何、点理论和空间统计对异构网络进行分析和建模。他的研究领域包括干扰协调、认知无线电和传感器网络。
+
+
+    JIAQ HAQ 在巴基斯坦Qu-Aid大学获得电子学硕士学位，并于2001年加入牛津大学（挪威）信息与通信系的Al Maktoby实验室。2008年，他再次加入了巴基斯坦的古拉姆·伊斯兰（GIK）工程与科学学院。2012年，他曾在明尼苏达大学电气与计算机工程系担任研究员。他的研究包括混合移动与无线网络的能量效率、4G及以后移动系统，以及无线网络中的服务质量评估、绿色无线通信和认知无线电。
+
+
+    GHULAM HAMMAD 于2005年获得巴基斯坦大学的计算机科学学士学位。他进入业界，并于2005年和2010年在英国利物浦大学获得博士学位。他曾在英国皇家希望大学担任研究员，任于GIK集成分布式系统实验室。自2011年起，他加入了巴基斯坦的古拉姆·伊斯兰工程与科学学院。
+
+
+    LEI JAO 于2001年获得中国人文大学的电信工程学士学位，2005年和2008年获得中国杭州大学的通信与信息系统硕士学位，并在2012年获得阿莱亚大学（UIA）的计算机网络技术博士学位。他目前在UIA信息通信技术系担任副教授。他的研究包括移动通信和人工智能。
+
+
+    '
+  merge: 0
