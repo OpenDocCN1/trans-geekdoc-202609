@@ -1,0 +1,243 @@
+
+## 446
+
+## 446 Index
+
+- branching, 192–202
+- break (statement), 24, 177, 186, 204, 205, 331
+- Buffer (type; bytes package), 111, 200, 201, 243
+- Readn(), 113
+- String(), 88, 200, 243
+- Write(), 111
+- WriteString(), 88, 111, 200, 243
+- buffers; see byte package and type
+- bufio (package), 30, 34, 38
+- NewReader(), 35, 176, 333, 380
+- NewWriter(), 35, 378
+- Reader (type); see top-level entry
+- Writer (type); see top-level entry
+- building Go programs, 11–13
+
+## built-in functions
+
+- append(), 25, 27, 55, 77, 129, 150, 151–156, 157, 158, 159, 160, 176, 178, 179, 187, 232, 240, 247, 249, 272, 355, 374, 382, 392; see also
+- +=
+- cap(), 24, 149, 151, 152, 187, 324
+- close(), 44, 191, 220, 321, 324, 325, 329, 340, 343
+- complex(), 58, 187; see also cmpl package
+- copy(), 157–158, 159, 187, 268
+- delete(), 65, 169, 187, 339
+- imag(), 70, 101, 187
+- len(), 15, 20, 24, 27, 85, 90, 148, 149, 151, 152, 159, 165, 169, 180
+- make(), 26, 38, 39, 44, 127, 129, 150, 151, 152, 157, 159, 165, 172, 176, 178, 179, 187, 208, 209, 211, 240, 242, 247, 327, 332, 324, 338, 337, 392, 341, 346, 358, 374, 392, 393, 395, 410
+- new(), 145, 146, 152, 187, 346
+- panic(), 32, 69, 70, 113, 187, 191, 196, 213–218, 219, 220, 243
+- real(), 70, 101, 187
+- recover(), 32, 187, 213–218; see also functions and special functions
+- built-in; see int, byte, error
+- int, map, rune, string; use also standard library's types
+- byte ordering, 83, 389
+- byte (type; built-in), 20, 59, 60, 82, 104, 132
+- conversion from string, 89–90, 164, 373, 391
+- conversion of []byte to string, 38, 85, 164, 334, 395; see also rune and string types
+- bytes (type), 419
+- Buffer (type); see top-level entry
+- TrimRight(), 333, 334
+
+## C
+
+- C code, external, 9
+- Call(Value type), 429, 430
+- Caller() (runtime package), 291
+- calling functions, 220–221; see also functions
+- CanBackout() (strconv package), 114
+- CanSet(Value type), 428
+- cap() (built-in), 24, 149, 151, 152, 157, 187, 324
+- carriage return (\r), 84
+- case (keyword); select and switch statements
+- Cbrt(math package), 65
+- Ceil() (math package), 65
+- go (tool), 9
+- cgrep (example), 326–334
+- chan (keyword), 43, 44, 208, 209, 210, 318–357; see also channels
+- channels, 41, 43–44, 206–212, 318–357
+- infinite, 208
+- iterating, 203
+- character; see rune type
+- Sin(), 71
+- Sinh(), 71
+- Sqrt(), 71
+- Tan(), 71
+- Tanh(), 71
+- character classes in regular expressions, 122
+- character encoding, fixed vs. variable width, 83
+- character literal, 20; see also rune type
+- code point, Unicode; see rune type
+- collection packages, 421–423
+- collections, slices, map type, and omp example
+- color (package)
+- checked assertion; see type assertions
+- class, 254; see also type keyword
+- close(built-in), 44, 187, 211, 320, 324, 325, 329, 330, 343
+- Close(File type), 31, 176, 213, 293, 333, 359, 400
+- closures, 40, 163, 225–227, 239, 240, 243, 352
+- RGBA (type); see top-level entry
+- command-line arguments, 16, 17, 19, 232; see also flag package
+- commandFiles(example), 176, 410
+- comments, Go, 14, 51
+- CommonPrefix(exercise), 250
+- CommonPrefix(exercise), 250
+- Communicating Sequential Processes (CSP), 3, 315
+- communication, between goroutines; see channels, goroutines, and the chan keywords
+- complex (package; math package), 70
+- Abs(), 71
+- cos(), 71
+- cosh(), 71
+- imag(), 71
+- atan(), 71
+- atanh(), 71
+- Conj(), 71
+- Cos(), 71
+- Cosh(), 71
+- Cot(), 71
+- Exp(), 71
+- Inf(), 71
+- Isf(), 71
+- NaN(), 71
+- Log(), 71
+- Log10(), 71
+- Phase(), 71
+- Polar(), 71
+- Pow(), 71
+- Rect(), 71
+- comparisons, 56–57, 70, 84, 86–87; see also <, <=, !=, and operators
+- compilation speed, 2
+- Compile(regexp package), 37, 121, 214, 327
+- CompileIX(regexp package), 121
+- complex (built-in), 58, 70, 187; see also complex package
+- Complex(Value type), 428
+- complex64 (type; built-in), 64, 70
+- complex128 (type; built-in), 64, 70, 101, 187
+- comparisons, 70
+- conversion to complex64, 70
+- formatting, 101
+- literals, 53, 70; see also complex package and imag()
+- composing functionality, 35
+- composite literals, 18, 45, 150, 152, 153, 167
+- compositing, image, 290
+- composition; see aggregation
+- compress (package), see top-level entry
+- concatenation, fast string, 88
+- concatenation; see and operators
+- concrete vs. abstract types, 22
+- concurrency; see channels, goroutines, and the chan keywords
+- conditional branching, 192–202
+- Conj() (complex package), 9
+- console; see stderr, and streams
+- const (keyword), 45, 53, 54, 58, 133, 336, 374, 390
+- constant expressions, 58
+- constants, numeric; see under literals
+- construction functions, 27, 263, 264, 306
+- constructors; see construction functions
+- container (package), 421–423
+- heap (package), 421–422
+- list (package), 422–423
+- ring (package), 423
+- containers; see slices, map type, and map example
+- Contains(strings package), 108
+- contents of; see pointers and dereference operator
+- continue (statement), 132, 133, 186, 204, 205, 324
+- conversions, 42, 57, 61, 162, 190–191, 288
+- []byte to string, 38, 85, 164, 334, 395
+- []rune to string, 91, 272
+- complex128 to complex64, 70
+- downsizing, 58, 61
+- float64 to int, 69
+- int to float64, 61, 73
+- int to int64, 63
+- rune to string, 77–88, 246
+- string to []byte, 85, 164, 373, 391
+- string to []rune, 85
+- string to float64, 77; see also the strconv package
+- copy(), 187, 268
+- Copy (io package), 353, 354, 399, 401, 402, 405
+- copy on write, of strings, 140
+- Copysign() (math package), 65
+- coroutines; see channels, goroutines, and the chan keywords
+- Cos() (complex package, 71, math package, 45, 65)
+- Cos() (complex package, 71, math package, 65)
+- Cot() (complex package), 9
+- Count() (strings package), 182, 173
+- Cox, Russ, 220, 436
+- Create() (File type), 31, 293, 397, 400
+- CreateHeader() (Writer type), 399, 173
+- cross-platform code, 110–411
+- crypto (package), 425
+- rand (package), see top-level entry
+- shal (package), see top-level entry
+- .csv files, 424
+- csv (package); encoding package), 424
+- currying; closures
+
+## 449
+
+- custom packages, 24–29, 408–417; see also packages
+- custom types, 55, 103, 255–282
+- named vs. unnamed, 22; see also type
+- defer (statement), 31–32, 35, 36, 44, 97, 176, 211–213, 216, 218, 333, 343, 353, 378, 398, 400
+- defining methods, 25
+- definitions, order of, 21
+- delegation; see embedding
+- delete(built-in), 165, 169, 187, 339
+- dereferencing pointers; see pointers
+- dictionary; see map type
+- Dim() (math package), 65
+- Div() (Int type), 63
+- division by zero, 68
+- documentation, Go, 8
+- documentation, package, 411–413
+- domain name resolution; see net package
+
+## D
+
+- Dashboard, Go, 2
+- data structures, slices, map type, and map example
+- database (package), 423
+- sql (package), 423
+- deadlock, 317–318, 340
+- debugging, 55, 103–162
+- decimal number, formatting as, 99; see also int type
+- declarations, order of, 21
+- Decoder() (gob package), 387
+- Decoder type, 369, 370
+- Decoder type, 375, 377
+- Config(image package), 358
+- DecoderLast(utf8 package), 118
+- DecoderLast(utf8 package), 91, 118, 229, 230
+- Decoder(type), 350, 352, 354
+- Done() (WaitGroup), 318-35
+- double quotes, 83
+- double-linked; see list
+- downloading Go, 319
+- downsizing, 58, 61
+- Draw (math package), 290
+- Draw (package; image), 290
+- Image (type), 290, 293, 319
+- Duration (type; time package), 332, 333
+
+## E
+
+- Constant (math package), 65, 104, 105
+- Elem (Value type), 429
+- else (keyword); see if statement
+- embedding, 254–256
+- Empty interface, 324
+- Empty struct, 328
+- Equality comparisons, =, 56–57, 70, 84, 86–87; see also <, <=, !=, and operators
+- Equality comparisons(strings package), 108
+- Equality comparisons(reflect package), 317
+- EqualityFloat(strings package), 108
+- EqualityFloat(reflect package), 317
+- EqualFloat(strings package), 108
+- EqualFloat(reflect package), 317
+[/

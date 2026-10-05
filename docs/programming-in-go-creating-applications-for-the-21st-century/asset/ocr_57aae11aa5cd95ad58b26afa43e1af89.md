@@ -1,0 +1,3 @@
+# 1.8. Exercise
+
+It would be much easier to handle command-line arguments using a package designed for the purpose. Go's standard library includes a rather basic command line parsing package, flag, that supports X11-style options (e.g., -option). In addition, several option parsers that support GNU-style short and long options (e.g., -o and --option) are available from godashboard.appspot.com/project.

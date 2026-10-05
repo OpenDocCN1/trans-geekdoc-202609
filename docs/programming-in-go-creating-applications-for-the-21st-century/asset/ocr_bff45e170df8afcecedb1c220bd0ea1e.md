@@ -1,0 +1,15 @@
+# 2.3. Numeric Types
+
+A common practice is to store integers in memory using the int type, and to convert to or from the explicitly signed and sized integer types when writing or reading integers. The byte (uint8) type is used for reading and writing raw bytes—for example, handling UTF-8 encoded text. We saw the basics of reading and writing UTF-8 encoded text in the previous chapter's american example (29 ⟙), and will see how to read and built-in and custom data in Chapter 8.
+
+Go integers support all the arithmetic operations listed in Table 2.4 (59 ⟙), and in addition they support all the arithmetic and bitwise operations listed in Table 2.6 (60 ⟙). All of these operations have the expected standard behaviors, so they are not discussed further, especially since we will see plenty of examples throughout the book.
+
+It is always safe to convert an integer of a smaller type to one of a larger type (e.g., from an int16 to int32); but downsizing an integer that is too big for the target type or converting a negative integer to an unsigned integer will result in a truncated or otherwise unexpected value. In such cases it is better to use a custom downsizing function such as downsize to a level (e.g., int8(200)), the compiler will detect the problem and report an overflow error. Integers can also be converted to floating-point numbers using the Go syntax (e.g., float64(integer)).
+
+Go's support for 64-bit integers makes it realistically possible to use scaled integers for precise calculations in contexts. For example, computing the finances for a business using int64 to represent millions of cents in the range of billions of dollars with sufficient accuracy for most purposes—especially if we are careful about divisions, and if we need to do financial calculations with perfect accuracy and avoiding rounding errors we use the big.Rat type.
+
+# 2.3.1.1. Big Integers
+
+In some situations we need to perform perfectly accurate computations with whole numbers whose range exceeds that of int64 and uint64. In such cases we cannot use floating-point numbers because they are represented by approximations. Fortunately, Go's standard library provides two unsigned integer types: big.Int for integers and big.Rat for rationals (i.e., for numbers that can be represented as fractions such as 1/1496, but not rationals like e or n). These integers can hold an arbitrary number of digits—providing only that the machine has sufficient memory—but are potentially a lot slower to process than built-in integers.
+
+Since Go—like C and Java—does not support operator overloading, the methods provided for big Int and Rats have names—for example, Add() and Mul(). In most cases they modify their receiver (i.e., the big integer they are called on), and also return their receiver as their result to support the chaining
