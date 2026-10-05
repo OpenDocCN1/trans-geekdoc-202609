@@ -1,0 +1,202 @@
+
+
+| 方法 | 语法 | 值 | 课程 |
+|---|---|---|---|
+| getContainerData() | getContainerData() | string | |
+| getContainerDataURL() | getContainerData($URL) | String | 12 |
+| getErrors() | getErrors($FileName) | array | 12 |
+| getFetchCount() | getFetchCount() | integer | 25 |
+| getField() | getField($FileName, $Repetition) | string | N/A |
+| getFieldTimestamp() | getFieldTimestamp($FileName, $Repetition) | integer | 35 |
+| getFields() | getFields() | array | 27 |
+| getFieldUnencoded() | getFieldUnencoded($FileName, $Repetition) | string | 36 |
+| getFirstRecord() | $result = $request->getFirstRecord() | FileMarker_Record | 22 |
+| getFoundSetCount() | getFoundSetCount() | integer | 14 |
+| getLastRecord() | $result = $request->getLastRecord() | FileMarker_Record | 21 |
+| getLayout() | getLayout() | FileMarker_Layout | 13 |
+| getLocalValidationRules() | getLocalValidationRules() | array | N/A |
+| getMessage() | getMessage() | string | 1 |
+| getModificationID() | getModificationID() | integer | 20 |
+| getName() | getName() | string | 25 |
+| getParent() | getParent() | FileMarker_Record | N/A |
+| getProperties() | getProperties() | array | N/A |
+| getProperty() | getProperty($PropertyName) | string | N/A |
+| getRecordByID() | getRecordByID($layoutName, $recordID) | FileMarker_Record | 4 |
+| getRecordID() | getRecordID() | string | N/A |
+| getRecords() | getRecords() | array | 1 |
+| getRelatedSets() | getRelatedSets($tableName) | array | 8 |
+| getRelatedSetsFilters() | getRelatedSetsFilters() | array | N/A |
+| getRepetitionCount() | getRepetitionCount() | integer | N/A |
+| getResult() | getResult() | string | 27 |
+| getStyleType() | getStyleType() | string | N/A |
+| getTableRecordCount() | getTableRecordCount() | integer | 14 |
+| getTypeValue() | getTypeValue() | string | N/A |
+| getValidationMask() | getValidationMask() | array | N/A |
+| getValidationRules() | getValidationRules() | string | 13 |
+| getValueList() | getValueList($valueList) | array | N/A |
+| getValueTwoFields() | getValueListTwoFields($valueList) | array | N/A |
+| hasValidationRule() | hasValidationRule($number) | Boolean | N/A |
+| isAutoEntered() | isAutoEntered() | Boolean | N/A |
+| isError() | isError() | Boolean | N/A |
+| isValidationError() | isValidationError() | array | N/A |
+| listFields() | listFields() | FileMarker | dbaccess.php |
+| newFile() | newFile($DatabaseName, $HostSpec, $UserName, $Password) | FileMarker_Command | 5 |
+| newCommand() | newCommand($layoutName, $fieldValues) | FileMarker_Command | 26 |
+| newFindCommand() | newFindCommand($layoutName) | FileMarker_Command | N/A |
+| newDeleteCommand() | newDeleteCommand($layoutName, $recordID) Note: As Document | | |
+| newDuplicateCommand() | newDuplicateCommand($layoutName, $recordID) | FileMarker_Command | 30 |
+| newEditCommand() | newEditCommand($layoutName, $recordID, $fieldValues) | FileMarker_Command | 7 |
+| newFindCommand() | newFindCommand($layoutName) | FileMarker_Command | 3 |
+| newAllFindCommand() | newAllFindCommand($layoutName) | FileMarker_Command | 1 |
+| newAnyFindCommand() | newAnyFindCommand($layoutName) | FileMarker_Command | 29 |
+| newConfigRequest() | newConfigRequest($layoutName) | FileMarker_Command | 26 |
+| newPerformScriptCommand() | newPerformScriptCommand($LayoutName, $ScriptName, $ScriptParameter) | FileMaker_Command | 17 |
+| numErrors() | | integer | 25 |
+| setField() | setField($FieldName, $Value) | void | 5 |
+| setFieldFromTimestamp() | setFieldFromTimestamp($FieldName, $Timestamp) | void | N/A |
+| setLogicalOperator() | setLogicalOperator($operator) | void | 27 |
+| setModificationId() | setModificationId($ModificationID) | void | 20 |
+| setOmit() | setOmit($Value) | void | 26 |
+| setPreScriptCommand() | setPreScriptCommand($ScriptName, $ScriptParameter) | void | N/A |
+| setPreSortScript() | setPreSortScript($ScriptName, $ScriptParameter) | void | N/A |
+| setRange() | setRange($skip, $max) | void | 18 |
+| setRelatedSetsFilters() | setRelatedSetsFilters($RelatedSetsFilter, $RelatedSets) | void | 35 |
+| setResultLayout() | setResultLayout($LayoutName) | void | 27 |
+| setScript() | setScript($Scriptname, $ScriptParameter) | void | 45 |
+| validate() | validate($FieldName) | Boolean | 5 |
+# 索引
+
+- access log, 368, 369
+- Accounts and Privileges, 66
+- action, 61
+- add(), 227
+- database, 26, 71
+- Date field, 85, 221, 277, 284
+- date_create(), 278
+- date_diff(), 278, 102, 276
+- database_job, 17, 55, 74
+- decrement(), 58, 173
+- default, 11, 15, 29
+- delete page, 105
+- delete portal record, 131
+- delete related record, 105, 179
+- decode(105), 108, 136
+- decode url, 140
+- decode display field, 138
+- decode display image, 138
+- decode related records, 115, 157
+- decode_errors, 260
+- addCriterion(), 87, 90, 93, 105, 110, 115, 119, 124, 131, 160, 166, 171, 174, 179, 183, 186, 191, 196, 201, 209, 213, 217, 222, 227, 231, 239, 241, 245, 262, 267, 276, 280, 283, 289, 293, 297, 302, 307, 310, 316, 322, 336, 340, 351
+- addSort(), 82, 85, 227, 289, 293, 376
+- Admin Console, 35
+- Adobe, 61
+- AJAX, 43, 73, 62
+- alternate_row, 171
+- alternate background color, 171
+- anchor tag, 339
+- Apache, 11, 251, 354, 357
+- array, 43, 60
+- associative array, 60, 155, 304, 323
+- AWStats, 368
+- backspace character, 56
+- bandwidth, 360
+- bar chart, 293
+- BEdit, 41
+- boolean, 209, 376
+- box, 209
+- cache flush, 364
+- Calendar, 267
+- ALS, 358
+- return, 213, 229, 321
+- check box, 66, 209, 213, 336
+- date(), 100
+- chunk_split(), 324
+- Class, 376
+- clients, 26
+- commenting code, 55
+- commit(), 119, 124, 131, 377
+- compound search, 227
+- concatenation, 18, 74, 366
+- Container.php, 76, 138, 149, 231
+- cost, 369
+- CLRF, 321
+- CSS, 5, 43, 171, 267, 280, 319
+- CURL, 256
+- custom function, 52, 145, 264, 304, 313, 354
+- echo, 55
+- edit portal record, 124
+- edit record, 110, 196
+- edit related record, 124
+- else, 59
+- elise, 58
+- em tag, 6
+- mail address, 69, 100, 102, 161, 167, 183, 236, 319
+- mail attachments, 319
+- enable PHP, 23, 32, 171
+- end(), 146
+- error codes, 370
+- error log, 368
+- escape character, 56
+- event log, 369
+- executing, 82, 85, 98, 90, 93, 100, 105, 110, 115, 119, 124, 131, 138, 140, 142, 149, 151, 157, 160, 166, 171, 174, 183, 186, 191, 196, 201, 209, 213, 217, 222, 227, 231, 239, 241, 245, 262, 267, 276, 280, 283, 289, 293, 297, 302, 307, 310, 316, 322, 336, 340, 351
+- extext, 58
+- export, 283
+- explode(), 100, 102, 145, 203, 218
+- externally stored field, 149
+- Documents folder, 201, 206, 286
+- DocumentsPath, 65
+- DocumentsListing, 205
+- Dreamweaver, 41
+- drop list, 187, 213, 217
+- duplicate record, 241
+- duplicate related records, 245
+- dynamic DNS, 361
+- close(), 324
+- field validation, 65, 221
+- file size, 286, 323
+- FileMaker API for PHP, 48
+- FileMaker API for PHP Reference, 376
+- FileMaker API for PHP Tutorial, 42
+- FileMaker Insert, 199, 177, 201, 256, 359, 341, 360
+- FileMaker Server Group, 366
+- FileMaker Server Advanced, 359
+- FileMaker Server installation, 191
+- FileMaker Command, 376
+- FileMaker_FIND_OR, 232
+- FileMaker_Layout, 376
+- FileMaker_Record, 376
+- FileMaker_SORT_ASC, 83, 229
+- FileMaker_SORT_DESC, 83, 229
+- FilePSys.php, 354
+- filter_var, 100
+- FILTER_SANITIZE_EMAIL, 100
+- FILTER_SANITIZE_INT, 100
+- FILTER_SANITIZE_STRING, 100
+- VALIDATE_EMAIL, 100
+- VALIDATE_INT, 100
+- VALIDATE_URL, 100
+- find all records, 79
+- find(), 145, 203
+- fireworks, 360
+- flush(), 287
+- folder permissions, 205
+- fopen(), 324
+- for, 60
+- foreign key, 52, 64, 249
+- form tag, 61
+- pdf, 332
+- geocoding, 332
+- GetScriptParameter, 52, 175, 180, 185, 206, 249, 305
+- getContainerData(), 138, 149, 150
+- Errors(), 222
+- get(), 60, 79, 80, 82, 85, 87, 90, 97, 100, 105, 115, 119, 124, 131, 138, 140, 142, 151, 157, 171, 179, 184, 186, 191, 201, 209, 213, 217, 222, 227, 231, 239, 241, 245, 262, 267, 276, 280, 283, 289, 297, 303, 302, 330, 332, 338, 344
+- getField(), 205
+- getFirstRecord(), 149, 150, 209, 210, 217, 222, 239, 276, 280, 281
+- getFoundCount(), 157, 158, 160, 186, 191
+- Layout(), 151, 154, 217, 231, 316
+- getMessage(), 79, 82, 85, 87, 90, 97, 100, 105, 115, 119, 124, 131, 138, 140, 142, 151, 157, 171, 179, 184, 186, 191, 201, 209, 213, 217, 222, 227, 231, 239, 241, 241
+- getNames(), 21
+- getByID(), 93, 110, 115, 121, 132, 141, 142, 196, 201, 209, 213, 217, 222, 239, 241, 245
+- getRecordID(), 93, 104, 105, 110, 115, 119, 121, 131, 196, 201, 209, 213, 217, 222, 239, 241, 245
+- getRecords(), 51, 82, 85, 90, 93, 100, 105, 110, 115, 119, 124, 131, 138, 140, 142, 151, 157, 171, 179, 184, 186, 191, 196, 201, 209, 213, 217, 222, 227, 231, 239, 241, 245
+
