@@ -1,0 +1,14 @@
+domain at all, that the only role for a military is to remain as the ultimate watchdog in the physical world. This is, however, a choice every nation will make on their own, meaning that there will be a varying degree of military involvement in the goings-on of the cyber domain. The global reach of this interconnected domain means that within this operational theatre, there will be different national solutions, different roles for militaries and as there will be variation within the level of engagement and rules of engagement between various nation' armed forces. The fact remains, that the various cyber threats need to be confronted by some appropriate means. It should be pointed out that the line between what is military and what is in the cyber domain is not always clear. As such, it can be concluded that unless there be a new Tallinn Manual concerning military influence operations in the cyber, for the time being the restrictions concerning military operations in the cyber are obfuscated at best.
+
+Ultimately, if advancing technologies will allow military operations’ targets to be achieved in the cyber domain alone, it is plausible to expect militaries to operate in the cyber domain much in the way they control the skies today, with technologies of intelligence, attack and defense. Although this idea may appear far-reaching, it can be argued that any technology that we can weaponized typically ends up being such, and thus the militaries should not prepare for today’s but for tomorrow’s wars. In the end, it only takes one actor to claim dominance in a military domain, forcing others to admit defeat or to engage in new frontiers and new weapons.
+
+# Target audience analysis in influence operations’ framework
+
+To look at the plausibility of military influence operations within the cyber domain, we examine the intelligence part of such operations, namely the investigation and selection of suitable audiences. This procedure is often called target audience analysis (TAA), within the framework of psychological operations (PSYOPS). As a reference for conduction of psychological operations, we use U.S. Field Manual 3-001, Psychological Operations Tactics, Techniques and Procedures, which provides one example of the TAA process.
+
+According to FM3-05-301, TAA is a detailed and systematic process of selecting the most viable TAs that can be reached and influenced and whose behavioural change will effectively produce results that support the overall military operation (FM3-05-301, 5-1).
+
+According to FM3-05-301, TAA seeks to answer five key questions:
+
++   * What TAs will be most effective in accomplishing the Psychological Operations objectives
+* What are the reasons for the TA’s current behaviour?

@@ -1,0 +1,13 @@
+# Sociocultural approach to the Russian sense
+
+existence of a distinct object or space or a collective 'we' (Schmidt, Teubener & Konradova, 2006, p. 14). Information is produced in Russian language and controlled within the 'RuNet community' that provides a sense of belonging and has a significant role in the Russian information security thinking.
+
+‘Russian segment of the ‘Internet’ as a concept represents the national technical control of the information infrastructure. It is a multilayered project and a ‘system of systems’ that aims to control the Russian national networks (cf. Kukkola, 2018c). Kukkola (2018a) has explained in detail the categories of infrastructure, services and authors controlling this segment from both the civilian and military perspective. Whereas, the system of systems is a defence that could enable Russia to withstand cyberattacks against its critical national assets. The subsystems of this entity have different functions and are controlled by various actors but can be joined to a centrally controlled system (cf. Kukkola, 2018c).
+
+Consequently, it could be argued that the ‘Unified information space’ ‘Russian segment of the Internet’ and ‘RuNet’ safeguards the ‘spiritual–moral values’ (ukhovno-nravstvennye tsennost) from outside interference (cf. Kukkola, 2018a), i.e. the synthesis of control and free spirit forms a harmony that produces the essence of the Russian sense of information security. According to the Russian Information Doctrine (2016), ‘increased information influence on the population of Russia, mainly on the young generation, at erosion of traditional Russian spiritual and moral values poses a serious threat to Russian information security. As noted earlier, the planning for the technical disconnecting of the ‘Russian segment of the Internet’ started at least in 2014. Nevertheless, the mental isolation and othering of ‘RuNet’ has started considerably earlier. In the following, we aim to explain how the Russian sense of information security and how it is sociocurally, historically and instantaneously situated.
+
+# Sociocultural approach to the Russian sense of information security
+
+Sociocultural approaches emphasize the interdependence of social and cultural processes in the production of knowledge (John-Steiner & Mahn, 1996, pp. 191–192). In this chapter, the feeling of safety,³ i.e. the sense of information security is understood as a sociocultural construct.
+
+> ³Feeling of safety is understood in this chapter as the absence of threats, freedom from something; or in a positive sense, freedom to be or do something

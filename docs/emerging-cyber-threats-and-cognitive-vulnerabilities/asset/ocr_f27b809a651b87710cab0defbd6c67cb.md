@@ -1,0 +1,13 @@
+# Legislation concerning privacy issues 199
+
+Geo-targeting or Geo-fencing with Wi-Fi, cell towers and beacons create a privacy-restricting advertisement atmosphere that aims to influence consumer behaviour.
+
+The main purpose of this chapter was to find local- and state-level factors concerning privacy issues, which affect the utilization of proposed hybrid emergency response model (Simola & Rajamki, 2017). Privacy issues with ethical aspects are an important part of continuity management the government cannot accept and produce services that are illegal.
+
+The rest of this chapter is divided as follows. Section 2 handles the overview of legislation concerning privacy issues in the United States and Europe. Section 3 presents central concepts and framework of this article. Sections 4 handles the organizational and management perspective of situational awareness. Section 5 presents location-based technologies. Section 6 handles the research process of this study. Section 7 presents findings. Section 8 presents discussion about usage of the proposed Hybrid Emergency Response Model. Section 9 handles expectations of implementation when the proposed model is applied on CI.
+
+# Legislation concerning privacy issues
+
+European Data Protection Reform (EDPR) partly harmonizes data protection regulation in European Union (EU) countries. The EU General Data Protection Regulation (GDPR) replaces the Data Protection Directive 95/46/EC and was designed to harmonize data privacy laws across Europe, to protect and empower all EU citizens' data privacy and to reshape the way organizations approach data privacy. GDPR applies to all businesses offering goods and/or services to the EU That means the organizations that do not reside in the EU area or in Europe; if you are holding information about an EU citizen whom you provide services, GDPR applies (European Commission, 2016a). The regulation introduces stronger citizens' transparency requirements. It strengthens the rights of information, access and the right to be forgotten. Regulation gives all data protection authorities the right to impose fines up to EUR 20 million or 4% of the worldwide annual turnover on companies (European Commission, 2016a).
+
+The EU's new GDPR regulates the processing by an individual, a company or an organization of processing personal data relating to individuals in the EU. For this purpose, personal data are comprised of any information that we

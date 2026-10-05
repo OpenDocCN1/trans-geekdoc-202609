@@ -1,0 +1,13 @@
+# Factors influencing perceptions of risk and reactions to risk
+
+2007; locus of control (Ajzen, 2002), culture of fear (Stekel, 1930), the online disinhibition effect (Suler, 2004) and protection motivation (Blythe & Camp, 2012; Maddux & Rogers, 1983; Rogers, 1975), among others. Also, within scope of our assessment are the range of potential factors which can influence the public's level of perceived risk, such as the perpetrator's identity and the scale of the cyberattack.
+
+Beliefs form an important component of our investigation. This is because a user's reaction to security and motivation to apply security mechanisms—if the chance—depends on their beliefs about the perceived severity of an event, the susceptibility to the threat, the perceived self-efficacy and the cost and efficacy of preventive or mitigating behaviors (Blythe & Camp, 2012). These factors make it difficult to motivate protective cybersecurity practices (behaviours) as well as to predict public social and psychological responses to a cyberattack. This can be any form of attack ranging from existing threats to new concerns such as the cyber risks with Internet of Things or Artificial Intelligence (Nurse, Creese, & De Roux, 2017).
+
+Another element of relevance is the general culture of fear related to crime and cyber events. Fear of crime can promote people to change their behaviour. At the level of the individual, people generally respond to the fear of crime by adopting protective or avoidance behaviours (Reid, Roberts, & Hickard, 1998). Phobophobia—the psychological fear of fears (Furedi, 2002)—can lead to stress, intense anxiety and unrealistic and persistent public of such fears. This phenomenon may also relate to the crime complex (Hale, 1996) and therefore cyberattacks and cybercrime.
+
+Having discussed risk and attack perceptions, protection motivation theories and theories regarding public reactions to attacks and online crimes, we then critically reflect on two real-world cyberattack scenarios from 2017: the global WannaCry attack and the cyberattack on the Lloyds Banking Group. This seeks to understand the social and psychological impacts resulting from these attacks on an individual basis as well as the wider society. These are all important topics for discussion and analysis as we aim to advance research into cyber threats from a cyberpsychology perspective.
+
+# Factors influencing perceptions of risk and reactions to risk
+
+A user's motivation to react to perceived risk and apply security measures depends on their beliefs about the perceived severity of an event, the susceptibility to the threat, the perceived self-efficacy and the cost and efficacy of preventive or mitigating behaviours (Blythe &
