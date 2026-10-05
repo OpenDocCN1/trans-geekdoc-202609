@@ -1,0 +1,1 @@
+The voting systems at present are inefficient and prone to manipulation. Blockchain technology can improve this system to identify the rationality of individual citizens. Distributed Ledger Systems (DLT) used to store the

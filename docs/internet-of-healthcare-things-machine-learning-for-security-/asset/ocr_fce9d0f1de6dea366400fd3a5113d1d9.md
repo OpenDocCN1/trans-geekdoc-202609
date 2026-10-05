@@ -1,0 +1,11 @@
+# TRUST IN IOHT & Machine Learning-BRAIN CANCER 269
+
+is cancer associated with brain and another nervous system [2]. The estimation for death from a primary cancerous brain tumor and CNS tumor in 2020 consists of 10,190 men and 7,830 women (18,020 adults) [2]. A vigorous brain comprised of ordinary brain matters but when this brain tissue shows some anomalous tissues with the ordinary tissues then these anomalous tissues are baptized as a brain tumor and tumor's name is given on the tumor it originates from or on the origin of their location in the brain. A brain tumor can be homogeneous or heterogeneous depending on the kinds of tumor. The visual of tumor varies depends on its intensity level. The intensity level varies depending on the type of tumor. If a patient has a benign tumor with the high-intensity level means tumor's section seems brighter than the immediate area while a patient with a low-level intensity tumor means the tumor's section seems darker than the immediate area, but the borderline seems to be brighter than the tumor's section.
+
+# 12.3.2 Types of Brain Tumors
+
+Diverse kinds of brain cancer are available which can be approximately over 120 tumors, but brain tumor can be mainly to be of two types such as primary brain tumor (non-cancerous or benign), andsecondary brain tumor (cancerous or malignant).
+
++   **Primary Brain Tumor:** Primary brain tumor have their own borderline to grow gradually, and these restrictions cover only brain parts but not the additional portions of the body. Generally, for a primary tumor the signal intensity level remains unwavering. In 2020, the estimation of total patients to be diagnosed from primary cancerous tumors of the brain and spinal cord in the United States are 13,590 men and 10,300 women (23,890 adults) [2]. Some of the benign tumors are Meningiomas, Schwannoma, and Gliomas with its types such as astrocytoma (Grades I to IV), and Oligodendroglioma, etc.
+
++   **Malignant Brain Tumor:** Secondary brain tumor (Malignant) does not follow any borderline to obey which makes these types of tumor more complex as well as deadly. This type of tumor grows faster than non-cancerous tumors. In the case of this type of tumor, the signal intensity level continues deviating as it might start from diverse locations and reach to brain. In 2020, the estimation of 3,700 cases

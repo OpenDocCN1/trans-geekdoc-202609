@@ -1,0 +1,10 @@
+The survival rate for different grades of tumor varying depending on the different tumor. Figure 12.4 exhibits astrocytoma's survival rate in the US in the year 2001–2015 after diagnosis based on grade of tumor.
+
++   - Grade I tumor has a long-term survival rate if treated properly and it does not recur once treated. A 5-year survival rate for pililocytic astrocytoma (Grade I) was greater than 90% [6].
+- Grade II tumor sometimes recurs and recurring it may be in the form of a high-grade tumor. In case of diffuse astrocytoma, patients of age 20–44 years had 73% 5-year survival rate, 46% for patients of age 25 and patients of age 55–64 years. [6].
+- In case of anaplastic astrocytoma, patients of age 20–44 years had 58% 5-year survival rate, 29% for patients of age 45–54 years, and 15% for patients of age 55–64 years [6].
+- In case of glioblastoma multiforme, patients of age 20–44 years had 22% 5-year survival rate, 9% for patients of age 45–54 years, and 6% for patients of age 55–64 years [6].
+
+# 12.6 Conclusion
+
+The healthcare sector is the most prominent industry which needed many innovations as well as smart in its technology, but innovation should be accompanied by responsibility. In the healthcare sector, automation of brain tumor detection and segmentation in a limited timeframe, cost, resources, and accuracy are always hailed by medical professionals. This chapter has provided some basic concept and case study about the internet of things (IoT) and the use of machine learning in the field of brain cancer. These case studies are just parts of the research on the Internet of Healthcare Things (IoHT) field. Trust in IoHT enables diagnosis and provide the treatment without the actual interaction of the patient with the doctor which otherwise might not have been possible for every patient. To reduce mortality rates, this chapter has also focused on a brief explanation of brain cancer along with its categories, symptoms, and challenges. IoT can provide real remote monitoring which can save many lives through early diagnosis of diseases. Therefore, in future, many novel and advanced IoT enabled devices as well various
