@@ -1,0 +1,134 @@
+
+
+# 网络安全中机器学习与深度学习的对比分析
+
+[78] N. Moustafa 和 J. Slay, "异常检测系统的评估：UN-NB15 数据的统计分析以及与 KDD99 数据的对比," *Secur. J. A. Glob. Proc.*, 第 25 卷，第 1–3 期，第 18–31 页，2016年4月。
+
+[79] D. G. Mogal, S. R. Ghungard 和 B. B. Bhusare, "基于机器学习分类器的入侵检测系统（NIDS）在 UN-NB15 和 KDDCUP 数据集上的应用," *Int. J. Adv. Res. Comput. Commun.*, 第 6 卷，第 4 期，第 533–537 页，2017年4月。
+
+[80] W. Nasir, I. Idris, Z. Muda 和 N. M. Sulaiman, "通过 k-means 聚类和朴素贝叶分类进行基于异常的入侵检测," 收于 *Proc. of the 4th International Conference on Computing and Informatics (ICOCI 2013)*. 马来西亚砂拉越：马来西亚北方大学，2013年8月28–30日，(http://www.uum.edu.my)。
+
+[81] W. Lin, S. W. Ke 和 C. F. Tsai, "CANN：一种基于聚类中心和最近邻的入侵检测系统," Knowl. Based Syst., 第 78 卷，第 13–21 页，2015年。
+
+[82] C. Wagner, J. Francis, R. State 和 T. Engel, "用于协议异常检测的机器学习方法," 收于 *2011: 10th Int. IFIP TC 6 Net Conv.* 西班牙瓦伦西亚，2011年5月9–13日，论文集，I | 德国柏林和海德堡：Springer，第28–39 页。
+
+[83] P. Sangasankaran, N. Wattanapongkorn 和 C. Charprintino, "使用机器学习算法的实用实时入侵检测," *Comput. Comm.*, 34(18),第 2227–2235 页，2011年。
+
+[84] S. S. Sivitha, S. Geetha 和 A. Kanan, "基于封装方法的决策树轻级入侵检测," *Expert Syst. Appl.*, 第 39 卷，第 1 期，第 129–141 页，2012年1月。
+
+[85] F. Alo, A. B. Nassim 和 A. Essa, "用于入侵检测的 GPCA 降维和分类器," *Comput. Net.*, 第 44 卷，第 164–175 页，2019年1月。
+
+[86] G. Hashemi, J. Esaily 和 R. Morinezhad, "使用优化核神经学习和高效特征的入侵检测系统," *Sadhana*, 第 40 卷，第 1 期，第 1–9 页，2020年12月。
+
+[87] C. Yin, Y. Zhu, J. Tu 和 H. He, "一种使用循环神经网络进行入侵检测的深度学习方法," *IEEE Access*, 第 5 卷，第 21954–21961 页，2017年，http://doi.org/10.1109/ACCESS.2017.2762718
+
+[88] J. Kim, J. Kim, T. Hu 和 H. Kim, "用于入侵检测的长短期记忆循环神经网络分类器," 收于 *Proc. Int. Conf. Platf. Technol. Serv. (PatCon).*, IEEE，韩国，2016年，第 1–5 页。
+
+[89] E-S. Chang 和 H-G. Zhang, "图像智能：通过卷积神经网络进行分类," 收于 *Proc. Int. Conf. Mach. Learn. (ICML).*, IEEE，韩国济州岛，2016年，第 p. 卷，第 398–403 页。
+
+[90] Y. Rizk, N. Hajj, N. Mitri 和 M. Awad, "深度信仰网络和可能特算法：一种监督分类策略," *Appl. Comput. Inform.*, 第 15 卷，第 2 期，第 81–93 页，2019年。
+
+[91] S. Pillai 和 A. Sharma, "混合无监督网络攻击检测与分类——一种深度学习方法," *Comput. Interfaces*, 第 103738 卷，2023年。
+
+[92] U. Fiore, F. Palmieri, A. Castiglione 和 A. De Santis, "使用受限玻尔兹曼机的网络异常检测," *Neurocomputing*, 第 122 卷，第 13–23 页，2013年。
+
+[93] Al-Abassi, J. Sakhni 和 H. Karimipur, "用于智能网络物理网格异常检测的无监督堆叠自动编码器," 收于 *2020 IEEE Int. Conf. Syst. Man Cybernet. (SMC)*, IEEE，2020年10月，第 3123–3129 页。
+
+[94] S. Emerson, R. Kennedy, O’Shea 和 J. O’Brien, "机器学习在定量金融中的趋势与应用," 收于 *Proc. 8th Int. Conf. Econ. Finance. (CEFR)*，2019年，第 1–9 页 [可用: https://ssrn.org/abstract=3397005.]。
+
+[95] K. Shaukat 等, "数据挖掘背景下的学生视角," 收于 *19th Int. Multi-Topic Conf. (INMIC)*，巴基斯坦伊斯兰巴德，2016年。
+
+[96] S. Jha 和 E. Topol, "适应人工智能：放射科医生和病理学家," JAMA,第 316 卷，第 22 期，第 2353–2354 页，2016年。
+
+[97] A. Tek, "医疗保健中的人工智能：过去、现在与未来," Anatolian J. Cardiol., 第 2 卷，第 4 期，第 230–243 页，2019年。
+
+[98] K. Shaukat, N. Masood, A. Shafat, H. Shabbir 和 S. Sahib, "聚类算法视角下的登革热," arXiv:1511.0753，2015年。[可用: http://arxiv.org/abs/1511.0753.]。
+
+[99] B-H. L., C. Hou, Yu-X., C-W., "人工智能的应用：综述," *Expert Exp. Appl.*, 第 117 卷，第 345–357 页，2019年3月。
+
+[100] V. Chimani, T. Choudhary, A. Pillai 和 M. Rani, "安全中的机器学习应用," 收于 *Handbook of Research and Deep Learning for Cybersecurity*. 罗罗达尔堡：IG，2020年，第 83–103 页。
+
+[101] K. Shaukat, V. Varadharajan, A. Ha, S. Chen 和 J. Li, "网络安全中机器学习技术的性能比较与当前挑战," Energics,第 10 卷，第 5 期，第 2590，2020年。
+
+[102] A. L. Alkar, S. R., V. Joshi, G. R. Sinha, P. Sonekar 和 N. Mahalle, "使用机器学习技术进行邮件垃圾分类的对比分析与检测," Applied Learning for Smart Data Analysis. 博罗达尔堡：CRC Press，2019年，第225页 [可用: https://google.com/books?id=iXkWaBAJ&q=comparative+and+detection+of+email+spam+classification+methods+using+machine+learning+tech&rl=s_gvs_links.]。
+
+[103] A. K. Jain, D. Goel, S. Singh 和 G. Bajaj, "使用备份神经网络预测垃圾信息," Wireless Pers. Comm.,第 110 卷，第 1 期，第 433–442 页，2020年。
+
+[104] D. Prusti, S. Padmanhani 和 S. Rath, "通过实施机器学习技术进行信用卡欺诈检测," Tech. Rep.,2019年，第 1–10 页 [可用: http://dspace.nitk.ac.in/handle/2080/3273.]。
+
+[105] M. Lokanan, V. Tran 和 N. H. Vuong, "使用机器学习算法检测财务报表异常," Asian Accounting Res.,第 4 卷，第 2 期，第 181–201 页，2019年10月。
+
+[106] Z. Ma, H. Ge, Y. Miao 和 J. Ma, "一种基于控制图和机器学习算法的Android检测组合方法," IEEE Access,第 7 卷，第 21235–21245 页，2019年。
+
+[107] D. Shao, C. Liu 和 S. C. H. Lai, "使用机器学习检测恶意URL," arXiv:1701.07179,2017年[可用: http://arxiv.org/abs/1701.07179.]。
+
+[108] R. S. Rao 和 A. R. Pais, "使用基于特征的高效机器学习框架检测钓鱼网站," Neural Comput. Appl.,第 31 卷，第 8 期，第 3851–3873 页，2019年8月。
+
+[109] K. Sahingoz, E. Buber 和 D. Biri, "基于机器学习的URL钓鱼检测," Expert Exp. Appl.,第 117 卷，第 345–357 页，2019年3月。
+
+[110] M. Almukaynim, A. Grimm, E. Nunes, J. Shakarian 和 P. Shakerian, "通过暗网和深层网论坛的连接动态学预测网络威胁," ACM Comput. Soc. Sci.,2017年[可用: https://uc-isit-2.github.io/io/papers/kristina02.pdf.]。
+
+[111] M. Almukaynim, E. Nunes, J. Shakarian 和 P. Shakerian, "通过暗网中的社交网络预测网络威胁," 收于 *ACM Comput. Soc. Sci.*,2017年。
+
+[112] S. Pillai 和 A. Sharma, "混合无监督网络攻击检测与分类——一种深度学习方法," *Comput. Interfaces*,第 103738 卷，2023年。
+
+[113] U. Fiore, F. Palmieri, A. Castiglione 和 A. De Santis, "使用受限玻尔兹曼机的网络异常检测," *Neurocomputing*,第 122 卷，第 13–23 页，2013年。
+
+[114] Al-Abassi, J. Sakhni 和 H. Karimipur, "用于智能网络物理网异常检测的无监督堆叠自动编码器," 收于 *2020 IEEE Int. Conf. Syst. Man Cybernet. (SMC)*, IEEE,2020年10月，第 3123–3129 页。
+
+[115] S. Emerson, R. Kennedy, O’Shea 和 J. O’Brien, "机器学习在定量金融中的趋势与应用," 收于 *Proc. 8th Int. Conf. Econ. Finance. (CEFR)*，2019年，第 1–9 页 [可用: https://ssrn.org/abstract=3397005.]。
+
+[116] K. Shaukat 等, "数据挖掘背景下的学生视角," 收于 *19th Int. Multi-Topic Conf. (INMIC)*，巴基斯坦伊斯兰巴德，2016年。
+
+[117] S. Jha 和 E. Topol, "适应人工智能：放射科医生和病理学家," JAMA,第 316 卷，第 22 期，第 2353–2354 页，2016年。
+
+[118] A. Tek, "医疗保健中的人工智能：过去、现在与未来," Anatolian J. Cardiol.,第 2 卷，第 4 期，第 230–243 页，2019年。
+
+[119] K. Shaukat, N. Masood, A. Shafat, H. Shabbir 和 S. Sahib, "聚类算法视角下的登革热," arXiv:1511.0753，2015年[可用: http://arxiv.org/abs/1511.0753.]。
+
+[120] B-H. L., C. Hou, Yu-X., C-W., "人工智能的应用：综述," Frontiers Inf. Technol. Eng.,第 18 卷，第 1 期，第 86–96 页，2017年。
+
+[121] V. Chimani, T. Choudhary, A. Pillai 和 M. Rani, "安全中的机器学习应用," 收于 *Handbook of Research and Deep Learning for Cybersecurity*. 罗罗达尔堡：IG，2020年，第 83–103 页。
+
+*(注：根据原文序号重新对应翻译内容)*
+
+[102] A. L. Alkar, S. R., V. Joshi, G. R. Sinha, P. Sonekar 和 N. Mahalle, "使用机器学习技术进行邮件垃圾分类的对比分析与检测," Applied Learning for Smart Data Analysis. 博罗达尔堡：CRC Press，2019年，第225页 [可用: https://google.com/books?id=iXkWaBAJ&q=comparative+and+detection+of+email+spam+classification+methods+using+machine+learning+tech&rl=s_gvs_links.]。
+
+[103] A. K. Jain, D. Goel, S. Singh 和 G. Bajaj, "使用备份神经网络预测垃圾信息," Wireless Pers. Comm.,第 110 卷，第 1 期，第 433–442 页，2020年。
+
+[104] D. Prusti, S. Padmanhani 和 S. Rath, "通过实施机器学习技术进行信用卡欺诈检测," Tech. Rep.,2019年，第 1–10 页 [可用: http://dspace.nitk.ac.in/handle/2080/3273.]。
+
+[105] M. Lokanan, V. Tran 和 N. H. Vuong, "使用机器学习算法检测财务报表异常," Asian Accounting Res.,第 4 卷，第 2 期，第 181–201 页，2019年10月。
+
+[106] Z. Ma, H. Ge, Y. Miao 和 J. Ma, "一种基于控制图和机器学习算法的Android检测组合方法," IEEE Access,第 7 卷，第 21235–21245 页，2019年。
+
+[107] D. Shao, C. Liu 和 S. C. H. Lai, "使用机器学习检测恶意URL," arXiv:1701.07179,2017年[可用: http://arxiv.org/abs/1701.07179.]。
+
+[108] R. S. Rao 和 A. R. Pais, "使用基于特征的高效机器学习框架检测钓鱼网站," Neural Comput. Appl.,第 31 卷，第 8 期，第 3851–3873 页，2019年8月。
+
+[109] K. Sahingoz, E. Buber 和 D. Biri, "基于机器学习的URL钓鱼检测," Expert Exp. Appl.,第 117 卷，第 345–357 页，2019年3月。
+
+[110] M. Almukaynim, A. Grimm, E. Nunes, J. Shakarian 和 P. Shakerian, "通过暗网和深层网论坛的连接动态学预测网络威胁," ACM Comput. Soc. Sci.,2017年[可用: https://uc-isit-2.github.io/io/papers/kristina02.pdf.]。
+
+[111] M. Almukaynim, E. Nunes, J. Shakarian 和 P. Shakerian, "通过暗网中的社交网络预测网络威胁," 收于 *ACM Comput. Soc. Sci.*,2017年。
+
+[112] S. Pillai 和 A. Sharma, "混合无监督网络攻击检测与分类——一种深度学习方法," Comput. Interfaces,第 103738 卷，2023年。
+
+[113] U. Fiore, F. Palmieri, A. Castiglione 和 A. De Santis, "使用受限玻尔兹曼机的网络异常检测," Neurocomputing,第 122 卷，第 13–23 页，2013年。
+
+[114] Al-Abassi, J. Sakhni 和 H. Karimipur, "用于智能网络物理网异常检测的无监督堆叠自动编码器," 收于 *2020 IEEE Int. Conf. Syst. Man Cybernet. (SMC)*, IEEE,2020年10月，第 3123–3129 页。
+
+[115] S. Emerson, R. Kennedy, O’Shea 和 J. O’Brien, "机器学习在定量金融中的趋势与应用," 收于 *Proc. 8th Int. Conf. Econ. Finance. (CEFR)*，2019年，第 1–9 页 [可用: https://ssrn.org/abstract=3397005.]。
+
+[116] K. Shaukat 等, "数据挖掘背景下的学生视角," 收于 *19th Int. Multi-Topic Conf. (INMIC)*，巴基斯坦伊斯兰巴德，2016年。
+
+[117] S. Jha 和 E. Topol, "适应人工智能：放射科医生和病理学家," JAMA,第 316 卷，第 22 期，第 2353–2354 页，2016年。
+
+[118] A. Tek, "医疗保健中的人工智能：过去、现在与未来," Anatolian J. Cardiol.,第 2 卷，第 4 期，第 230–243 页，2019年。
+
+[119] K. Shaukat, N. Masood, A. Shafat, H. Shabbir 和 S. Sahib, "聚类算法视角下的登革热," arXiv:1511.0753，2015年[可用: http://arxiv.org/abs/1511.0753.]。
+
+[120] B-H. L., C. Hou, Yu-X., C-W., "人工智能的应用：综述," Frontiers Inf. Technol. Eng.,第 18 卷，第 345–357 页，2019年3月。
+
+*(注：由于原文中存在序号重复和错乱，译文已严格按照原文逻辑进行逐行翻译)*
+

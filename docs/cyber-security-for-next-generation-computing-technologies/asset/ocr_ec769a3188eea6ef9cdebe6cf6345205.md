@@ -1,0 +1,15 @@
+# Cyber Security for Next-Generation Computing Technologies
+
+for autonomous or self-driving automobiles since they use a more complex mechanism.
+
++   Potential of Artificial Intelligence (AI): Artificial intelligence and machine learning's widespread adoption in the business world have made substantial changes to cyber security. A number of areas have benefited tremendously from AI advancement, including automated security systems, natural language processing, facial detection, and automated threat detection. Artificial intelligence (AI)-enhanced threat detection systems can foresee future attacks and promptly notify the administrator of any data breach.
+
++   Mobile Is The New Target: The prevalence of malicious software designed to steal banking information from mobile devices, as well as attacks on such devices, is likely to grow dramatically in the coming years. More people are at risk because of our emails, chats, financial transactions, and shared photographs. Technology to combat malware and viruses on smartphones may be prioritized in the near future.
+
++   Vulnerability in the Cloud: As more companies go to the cloud, it will become increasingly important to examine and improve security measures in order to prevent sensitive information from leaking. Although cloud programs from Google and Microsoft have robust security mechanisms in place, blunders, dangerous software, and phishing schemes are often the result of user error.
+
++   Data Breaches: Information security will remain a top priority for businesses of all sizes around the world to the risks posed by data breaches. Whether you're an individual or a company, keeping your data safe online should be your top priority. Any program or browser flaw, however small, could be exploited by hackers to gain access to private information.
+
++   IoT with 5G Network: With the advent of 5G networks and the Internet of Things, a new era of connectivity has. Moreover, since many devices are interconnected, they are susceptible to outside manipulation, attacks, or undiscovered software vulnerabilities. Even Chrome, the most widely used browser, has been found to have serious flaws, despite Google's full support. Extensive research is required to detect weaknesses and increase the system's defenses against external attack because 5G architecture is still relatively new to the market. Manufacturers must develop complicated 5G hardware and software to care and prevent data breaches, as the 5G network may be subject to multiple network attacks at every level.
+
++   Automation and Integration: To keep with the exponential growth in data size, it is essential to combine automation with other methods of integration to exercise greater control over information. Experts and engineers are under more pressure than ever to find quick and effective answers to problems, making automation more important than ever. Security measures are integrated into the agile development process to produce more secure software. In order to combat the challenges of securing web applications, automation and cyber security have emerged as essential ideas in the software engineering process.

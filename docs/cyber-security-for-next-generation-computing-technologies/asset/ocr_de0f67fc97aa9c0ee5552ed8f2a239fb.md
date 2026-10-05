@@ -1,0 +1,17 @@
+# Cyber Security for Next-Generation Computing Technologies
+
+# 15.5 CONCLUSIONS AND REMARKS
+
+In this chapter, we have thoughtfully investigated and discussed blockchain networks and their security solutions as countermeasures against cyber criminals. Blockchain has been widely used to provide several security services, such as authentication, digital signature, and encipherment. Therefore, the development of blockchain-based resilience countermeasures and systems to defend users against the exploitations of cyber criminals is in demand. Several state-of-the-art techniques were proposed in the literature to construct defense systems against cyber criminals/cyber crimes. Such systems mainly depended on either signature-based detection or anomaly-based detection. In this chapter, we shed light on the blockchain solutions for cyber criminals, concepts, elements, structure, and other aspects of blockchain utilization. Specifically, this chapter extended the elaboration on blockchain, blockchain architecture, its features, types, and limitations. Also, this chapter extended the elaboration on cyber criminals, their types, their security needs, blockchain solutions, as well as the issues, challenges, and difficulties of using blockchain technology to fight cyber crimes. This chapter deepened the knowledge of blockchain solutions for cyber criminals and provides more insight to readers about blockchain, cyber attacks, cyber criminals, and relevant countermeasures.
+
+# REFERENCES
+
++   1. Coin-desk (2023) Crypto-Currency Market Capitalizations. https://coinmarketcap.com
+2. Al-Hajqa, Q.A., Alnabhan, M., Saleh, E. and Al-Omari, M. (2023 Jan. 1) Applications of Blockchain Technology for Improving Security in the Internet of Things (IoT). In Blockchain Technology Solutions for the Security of IoT-Based Healthcare Systems (pp. 199–221). Academic Press.
+3. Peters, GW., Panayi, E. and Chapelle, A. (2015) Trends in Crypto-Currencies and Blockchain Technologies: A Monetary Theory and Perspective. arXiv preprint arXiv:1508.04364.
+4. Foroglou, G. and Tisilou, A.-L. (2015) Further Applications of the Blockchain. In 12th Conference on Managerial Science and Technology, Athens University of Economics and Business, Athens, Greece, vol. 9.
+5 Kosba, A., Miller, A, Wen. and Papamantouch, C. (2016) Hawk: Blockchain model of cryptography and privacy-preserving smart contracts. In Proceedings of IEEE Symposium on Security and Privacy (SP), Jose, CA, IEEE, pp. 839–858.
+6. Al-Hajqa, Q.A. and Aslubami, A.A. (2021) High Performance Classification Model to Identify Ransom Payments for Heterogeneous Bitcoin Networks. Electronics, 10(17), https://doi.org/10.3390/electronics101772113
+7. Zhang, Y. and Wen, J. (2015) An IoT Electric Business Model Based on the Protocol. In Proceedings of 18th International Conference on Intelligence in Next Generation Networks (ICIN), Paris, France, IEEE, pp. 184–191.
+8. Abulyahi, K. and Al-Hajqa, Q.A. (2022 Dec. 29) Security and Privacy Challenges in Blockchain Application. In The Data-Driven Blockchain Ecosystem (pp. 207–226). CRC Press.
+9. Eyal, I. and Sirer, E.G. (2014) Majority Is Not Enough: Blockchain Mining is Valuable. In Proceedings of International Conference on Financial Cryptography and Data Security. Berlin, Heidelberg, ACM, pp. 436–454.

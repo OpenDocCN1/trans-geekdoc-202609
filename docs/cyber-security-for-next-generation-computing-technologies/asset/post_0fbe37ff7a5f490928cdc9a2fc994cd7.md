@@ -1,0 +1,37 @@
+
+# Cyber Security for Next-Generation Computing Technologies
+
+- 12. Ibrahim, A.S., Youssef, K.Y., Eldee, A.H., Aboueletta, M. and Kamel, H., 2022. Adaptive aggregation based IoT traffic patterns for optimizing smart city network performance. Alexandria Engineering Journal, 6(12), pp. 9553–9568.
+- 13. Tsai, D.R., Tai, W.P., and Chang, C.F., 2003. A hybrid intelligent intrusion detection system to recognize novel attacks. In IEEE 37th Annual 2003 International Carnahan Conference on Security Technology, 2003. Proceedings (pp. 428–434).
+- 14. Islam, S.R., Kumar, D., Kabir, M.H., Hossain, M. and Kwak, K.S., 2015. The internet of things for health: a comprehensive survey. IEEE Access, 3, pp. 678–708.
+- 15. Xia, F., Yang, L.T., Wang, L., and Vinel, A., 2012. Internet of things. International Journal of Communication Systems, 25(9), p. 1101.
+- 16. Wu, M., Lu, J., Ting, F., Sun, J. and Du, H., 2010. Research on the architecture of Internet of Things. In 2010 3rd International Conference on Advanced Computer Theory and Engineering (ICACTE) (Vol. 5, pp. V5–484).
+- 17. Tekinerodag, Bökkal, O. and Çelik, T., 2023. System architecture design of IoT-based smart cities. Applied Sciences, 13(3), p. 1703.
+- 18. Zhang, H. and Zhu, L., 2011. Internet of things: Key technology, architecture and challenging problems. In 2011 International Conference on Computer Science and Automation Engineering (Vol. 4, pp. 507–512).
+- 19. Hammoudeh, M. and Arioua, M., 2018. Sensors and actuators in Smart Cities. Journal of Sensor and Actuator Networks,(71), p. 8.
+- 20. Hu, X., Ji, H. and Lu, L., 2019. Adaptive target birth intensity multi-Bernoulli filter with noise-based threshold. Sensors, 19(5), p. 1120.
+- 21. Solojucu-Cisan, C., Cisan, C. and Butanoi, B.P., 2021. An IoT-based smart home automation system. Sensors, 2(11), 3184.
+- 22. Sundkaar, H., Guillemin, P., Friess, P. and Woolf, S., 2020. Vision and challenges for realising the internet of things. Cluster of European Research Projects on the Internet of Things, European Commission,(3), pp. 34–36.
+- 23. Chourabi, H., Nam, T., Walker, S., Gil-García, J.R., Melloufi, S., Nahon, K., Pardo, T.A. and Schol, H.J., 2012. Understanding smart cities: An integrative framework. In 2012 Hawaii International Conference on Systems Systems (pp. 2289–2297).
+- 24. Su, K., Li, J. and Fu, H., 2011. Smart city and its applications. In 2011 International Conference on Electronics, Communications and Control (ICECC) (pp. 1028–1031).
+- 25. Hall, J., Barbeau, M. and Kranakis, E., 2005. Anomalous-intrusion detection using mobile profiles of traffic users. IEEE International Conference on Wireless and Mobile Computing, Networking and Communications, 2005 (Vol. 2, pp. 17–24). IEEE.
+- 26. Kawan, K.S., Gautam, R. and Dhatarkar, J.S., 2022. Introduction to DSS system for smart cities. In Decision Support Systems for Smart City Applications (pp. 53–76). Wiley Online Library.
+- 27. Jara, A.J., Song, H., Bie, R., Genoud, D. and Bochi, Y., 2015. March Internet of things for cultural heritage of smart cities and smart regions. In 2015 29th International Conference on Advanced Information Networking and Applications Workshops (pp. 668–675). IEEE.
+- 28. Logota, E., Mantas, G., Rodriguez, J. and Marques, H., 2015. Analysis of the impact of denial of service attacks on centralized smart in cities. In Wireless Internet: 18th International Conference, WICON 2014, Lisbon, Portugal, November 13–14, 2014, Revised Selected Papers 8 (pp. 91–96). Springer Publishing.
+- 29. Tsai, D.R., Tai, W.P. and Chang, C.F., 2003. A hybrid intelligent intrusion detection system to recognize novel attacks. In IEEE 37th Annual 2003 International Carnahan Conference on Security Technology, 2003. Proceedings (pp. 428–434).
+- 30. Kim, G., Lee, S. and Kim, S., 2014. A novel hybrid intrusion detection method with misuse detection. Expert Systems with Applications, 41(4), pp. 1690–1700.
+- 31. Ayo, E.F., Forunso, S.O., Abayomi-Alli, A.A., Adelekun, A.O. and Awuntunde, J.B. 2020. Network intrusion detection by deep learning model based hybrid feature selection. Information Security Journal: A Global Perspective, 29(6), pp. 267–283.
+- 32. Abadeh, M.S., Habibi, J. and Lucas, C., 2007. Intrusion detection using a fuzzy genetics-based learning algorithm. Journal of Network and Computer Applications, 30(1), pp. 414–428.
+- 33. Mustafa, N. and Slay, J., 2015, November. UNSW-B15: A comprehensive data set for network intrusion detection systems (UNSW-B15 network data set). In 2015 Military Communications and Information Systems Conference (MICIS) (pp. 1–6).
+- 34. Yassin, W., Udzir, N., Muda, Z. and Sulaiman, M.N. Anomaly-based intrusion detection through k-means clustering and Bayes classification. Proceedings of the 4th International Conference on Computing and Informatics (IOCI 2013), 28–30 August 2013 Sarawak, Malaysia, Universiti Utara Malaysia. http://www.uum.edu.my.
+- 35. Aghuaele, E. and Serpent, G., 2017. Ensemble classification for misuse detection using N-gram feature vectors through operating system calls. Journal of Systems, 14(3), pp. 141–154.
+- 36. Subba, B., Biswas, S. and Karmakar, S., 2017. Intrusion detection using frequency of n-gram. In TENCON 2017.
+- 37. Xie, M., Hu, J. and Slay, J., 2012. Evaluating anomaly-based intrusion detection algorithm. In 2012 Hawaii International Conference on Systems Systems (pp. 978–982).
+- 38. Hall, J., Barbeau, M. and Kranakis, E., 2005. Anomalous-intrusion detection using mobile profiles of traffic users. IEEE International Conference on Wireless and Mobile Computing, Networking and Communications, 2005 (Vol. 2, pp. 17–24). IEEE.
+- 39. Tong, X., Wang, Z. and Hu, J., 2009. Research on the architecture of Internet of Things. Journal of Electronics, 12(4), pp. 255–275.
+- 40. Tan, M., Ahmad, A. and Luo, Y., 2014. Analysis of the impact of denial of service attacks on centralized smart in cities. Journal of Security and Forensics, 10(2), pp. 1–19.
+- 41. Sundkaar, H., Guillemin, P., Friess, P. and Woolf, S., 2020. Vision and challenges for realising the internet of things. Cluster of European Research Projects on the Internet of Things, European Commission,(3), pp. 34–36.
+- 42. Hindy, H., Byrne, E., Atkinson, R., Tachtaziz, C. and Bellekens, X., 2021. Machine learning for IoT intrusion detection. In 12th International Conference (pp. 73–84).
+- 43. Ibrahim, A.S., Youssef, K.Y., Eldee, A.H., Aboueletta, M. and Kamel, H., 2022. Adaptive aggregation based IoT traffic patterns for optimizing smart city network performance. Alexandria Engineering Journal, 6(12), pp. 9553–9568.
+- 44. Khan, M., Khan, M., Jan, S., Jan, S., Pitopakis, N. and Buchanan, W., 2021. A deep learning-based intrusion detection system for enabled IoT. Sensors, 2(21), p. 7016.
+- 45. Hindy, H., Byrne, E., Atkinson, R., Tachtaziz, C. and Bellekens, X., 2020. MQTT-IoT-IDS2020: Internet of things intrusion detection. IEEE Dataport [Online]. Available: https://ieee-datapaport.org/open-access/mqtt-iot-ids2020-internet-things-intrusion-dataset.
