@@ -1,0 +1,4089 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # UNSUPERVISED DEEP LEARNING
+
+
+    HTTP://LAZYPROGRAMMER.ME
+
+
+    LAZYPROGRAMMER
+
+
+    ![](img/6a1ceac8fa2fd0cda459693f13163e4e_0_0.png)'
+  - '[PAGE 1]
+
+
+    # # Unsupervised Deep Learning in Python
+
+
+    Master Data Science and Machine Learning with Modern Neural Networks written in
+    Python and Theano
+
+
+    By: The LazyProgrammer (http://lazyprogrammer.me)'
+  - '[PAGE 2]
+
+
+    # Introduction
+
+
+    +   Chapter 1: Principal Components Analysis
+
+
+    +   Chapter 2: t-SNE
+
+
+    +   Chapter 3: Autoencoders and Stacked Denoising Autoencoders
+
+
+    +   Chapter 4: Restricted Boltzmann Machines and Deep Belief Networks
+
+
+    +   Chapter 5: Feature Visualization
+
+
+    +   Chapter 6: Tricking a Neural Network
+
+
+    +   Conclusion'
+  - '[PAGE 3]
+
+
+    <!-- no content -->'
+  - '[PAGE 4]
+
+
+    # Introduction
+
+
+    When we talk about modern deep learning, we are often not talking about vanilla
+    neural networks - newer developments, like using Autoencoders and Restricted Boltzmann
+    Machines to do unsupervised pre-training.
+
+
+    Deep neural networks suffer from the vanishing gradient problem, and for many
+    years researchers couldn''t get around it - that is, until new unsupervised deep
+    learning methods were invented.
+
+
+    That is what this book aims to teach you.
+
+
+    Aside from that, we are also going to look at Principal Components Analysis (PCA)
+    and t-Distributed Stochastic Neighbor Embedding (t-SNE), which are not only related
+    to deep learning mathematically, but often are part of a deep learning or machine
+    learning pipeline.
+
+
+    Mostly I am just frustrated by the way PCA is usually taught! So I''m using this
+    platform to teach you Principal Components Analysis in a clear, logical, and intuitive
+    way without you having to imagine rotating globes and spinning vectors and all
+    that nonsense.
+
+
+    One major comfort of unsupervised learning is visualization. We are going to do
+    a lot of that in this book. PCA and t-SNE both help you visualize data from high
+    dimensional spaces on a flat plane.
+
+
+    Autoencoders and Restricted Boltzmann Machines help you visualize what each hidden
+    node in a neural network has learned. One interesting feature researchers have
+    discovered that is neural networks learn hierarchically. Take images of faces
+    for example. The first layer of a neural network will learn some basic strokes.
+    The next layer will combine the strokes into combinations of strokes. The next
+    layer might form the pieces of a face, like the eyes, nose, ears, and mouth. It
+    truly truly amazing!
+
+
+    Perhaps this might provide insight into how our own brains take simple electrical
+    signals and combine them to perform complex reactions.
+
+
+    We will also see in this book how you can "trick" a neural network after training
+    it! You may think it has learned to recognize all the images in your dataset,
+    but add some'
+  - '[PAGE 5]
+
+
+    intelligently designed noise, and the neural network will think it’s seeing something
+    else, even when the picture looks exactly the same to you!
+
+
+    So if the machines ever end up taking over the world, you’ll at least have some
+    tools to combat them.
+
+
+    Finally, in this book I will show you exactly how to train a deep neural network
+    so that you avoid the vanishing gradient problem - a method called “greedy-layer-wise
+    pretraining”.
+
+
+    # “Hold up… what’s deep learning and all this other crazy stuff you’re talking
+    about?”
+
+
+    If you are completely new to deep learning, you might want to check out my earlier
+    books and courses on the subject:
+
+
+    +   Deep Learning in Python
+
+
+    +   Deep Learning in Python Prerequisites
+
+
+    Much like how IBM’s Deep Blue beat world champion chess player Garry Kasparov
+    in 1996, Google’s AlphaGo recently made headlines when it beat world champion
+    Lee Sedol in March 2016.
+
+
+    What was amazing about this win was that experts in the field didn’t think it
+    happen for another 10 years. The search space of Go is much larger than that of
+    chess, meaning that existing techniques for playing games with artificial intelligence
+    were infeasible. Deep learning was the technique that enabled AlphaGo to correctly
+    predict the outcome of its moves and defeat the world champion.
+
+
+    Deep learning progress has accelerated in recent years due to more processing
+    power (see: Tensor Processing Unit or TPU), larger datasets, and new algorithms
+    like the ones discussed in this book.'
+  - '[PAGE 6]
+
+
+    # Formatting
+
+
+    I know that the e-book format can be quite limited on many platforms. If you find
+    the formatting in this book lacking, particularly for the code or diagrams, please
+    shoot me an email at info@lazyprogrammer.me along with a proof-of-purchase, and
+    I will send you the original ePub from which this book was created.'
+  - '[PAGE 7]
+
+
+    <!-- no content -->'
+  - '[PAGE 8]
+
+
+    <!-- no content -->'
+  - '[PAGE 9]
+
+
+    # Chapter 1: Principal Components Analysis
+
+
+    In this chapter we are going to talk about PCA or principal components analysis.
+    There are 2 components to their description:
+
+
+    +   1) describing what PCA does and how it is used
+
+    2) the math behind PCA.
+
+
+    What does PCA do? Firstly, it is a linear transformation.
+
+
+    If you think about what happens when you multiply a vector by a scalar, you’ll
+    see that it never changes direction. It only becomes a vector of different length.
+    Of course, you could multiply it by -1 and it would face the opposite direction,
+    but it can’t be rotated arbitrarily.
+
+
+    Ex. 2(1, 2) = (2, 4)
+
+
+    If you multiply a vector by a matrix - it CAN change direction and be rotated
+    arbitrarily.
+
+
+    Ex. [[1, 1], [1, 0]]T = [3, 1]T
+
+
+    What does PCA do? Simply put, a linear transformation on your data matrix:
+
+
+    Z = XQ
+
+
+    It takes an input data matrix X, which is NxD, multiplies it by a transformation
+    matrix Q, which is DxD, and outputs the transformed data Z which is also NxD.
+
+
+    If you want to transform an individual vector x to a corresponding individual
+    vector z, which would be z = Qx. It’s in a different order because x is in a data
+    matrix it’s 1xD row vector, but when we talk about individual vectors they are
+    Dx1 column vectors. It’s just convention.
+
+
+    What makes PCA an interesting algorithm is how it chooses the Q matrix.'
+  - '[PAGE 10]
+
+
+    Notice that because this is unsupervised learning, we have an X but no Y, or no
+    targets.
+
+
+    # On Rotation
+
+
+    Another view of what happens when you multiply by a matrix is not that you are
+    are rotating the vectors, but instead are rotating the coordinate system in which
+    the vectors live.
+
+
+    Which view we take will depend on which problem we are trying to solve.
+
+
+    # Dimensionality Reduction
+
+
+    One use of PCA is dimensionality reduction. When you’re looking at the MNIST dataset,
+    which is 28x28 images, or vectors of size 784, that’s a lot of dimensions, and
+    it’s definitely not something you can visualize.
+
+
+    28x28 is a very tiny image, and most images these days are much larger than that
+    - so we either need to have the resources to handle data that can have millions
+    of dimensions, or we could reduce the data dimensionality using techniques like
+    PCA.
+
+
+    We course can’t take arbitrary dimensions from X - we want to reduce the data
+    size but at the same time capture as much information as possible.
+
+
+    So if we want to go from 784 to 2 dimensions - so that we can visualize it - we
+    want those 2 dimensions to have as much information as possible.
+
+
+    Ex. info(1st col of Z) > info(2nd col of Z) > ...
+
+
+    How do we measure this information? In traditional PCA and many other traditional
+    statistical methods we use variance. If something varies more, it carries more
+    information.'
+  - '[PAGE 11]
+
+
+    You can imagine the opposite situation, where a variable is completely deterministic,
+    i.e. it has no variance. Then measuring this variable would not give us any new
+    information, because we already knew what it was going to be.
+
+
+    So when we get our transformed data Z, what we want is for the first column to
+    have the most information, the second column to have the second most information,
+    and so on.
+
+
+    Thus, when we take the 2 columns with the most information, that would mean taking
+    the first 2 columns.
+
+
+    # De-correlation
+
+
+    Another thing PCA does is de-correlation.
+
+
+    If we find correlations, that means some of the data is redundant, because we
+    can predict one column from another column.
+
+
+    ![](img/6a1ceac8fa2fd0cda459693f13163e4e_11_0.png)
+
+
+    So now if you take the coordinate system rotation view, you can imagine that if
+    we rotated our coordinate system to be aligned with the spread of these points,
+    then the data would'
+  md: '
+
+    # UNSUPERVISED DEEP LEARNING
+
+
+    HTTP://LAZYPROGRAMMER.ME
+
+
+    LAZYPROGRAMMER
+
+
+    ![](img/6a1ceac8fa2fd0cda459693f13163e4e_0_0.png)
+
+
+    # Unsupervised Deep Learning in Python
+
+
+    Master Data Science and Machine Learning with Modern Neural Networks written in
+    Python and Theano
+
+
+    By: The LazyProgrammer (http://lazyprogrammer.me)
+
+
+    # Introduction
+
+
+    - Chapter 1: Principal Components Analysis
+
+    - Chapter 2: t-SNE
+
+    - Chapter 3: Autoencoders and Stacked Denoising Autoencoders
+
+    - Chapter 4: Restricted Boltzmann Machines and Deep Belief Networks
+
+    - Chapter 5: Feature Visualization
+
+    - Chapter 6: Tricking a Neural Network
+
+    - Conclusion
+
+
+    <!-- no content -->[content]
+
+
+    # Introduction
+
+
+    When we talk about modern deep learning, we are often not talking about vanilla
+    neural networks - newer developments, like using Autoencoders and Restricted Boltzmann
+    Machines to do unsupervised pre-training.
+
+
+    Deep neural networks suffer from the vanishing gradient problem, and for many
+    years researchers couldn''t get around it - that is, until new unsupervised deep
+    learning methods were invented.
+
+
+    That is what this book aims to teach you.
+
+
+    Aside from that, we are also going to look at Principal Components Analysis (PCA)
+    and t-Distributed Stochastic Neighbor Embedding (t-SNE), which are not only related
+    to deep learning mathematically, but often are part of a deep learning or machine
+    learning pipeline.
+
+
+    Mostly I am just frustrated by the way PCA is usually taught! So I''m using this
+    platform to teach you Principal Components Analysis in a clear, logical, and intuitive
+    way without you having to imagine rotating globes and spinning vectors and all
+    that nonsense.
+
+
+    One major comfort of unsupervised learning is visualization. We are going to do
+    a lot of that in this book. PCA and t-SNE both help you visualize data from high
+    dimensional spaces on a flat plane.
+
+
+    Autoencoders and Restricted Boltzmann Machines help you visualize what each hidden
+    node in a neural network has learned. One interesting feature researchers have
+    discovered that is neural networks learn hierarchically. Take images of faces
+    for example. The first layer of a neural network will learn some basic strokes.
+    The next layer will combine the strokes into combinations of strokes. The next
+    layer might form the pieces of a face, like the eyes, nose, ears, and mouth. It
+    truly truly amazing!
+
+
+    Perhaps this might provide insight into how our own brains take simple electrical
+    signals and combine them to perform complex reactions.
+
+
+    We will also see in this book how you can "trick" a neural network after training
+    it! You may think it has learned to recognize all the images in your dataset,
+    but add some intelligently designed noise, and the neural network will think it’s
+    seeing something else, even when the picture looks exactly the same to you!
+
+
+    So if the machines ever end up taking over the world, you’ll at least have some
+    intelligently designed noise, and the neural network will think it’s seeing something
+    else, even when the picture looks exactly the same to you!
+
+
+    So if the machines ever end up taking over the world, you’ll at least have some
+    intelligently designed noise, and the neural network will think it’s seeing something
+    else, even when the picture looks exactly the same to you!
+
+
+    So if the machines ever end up taking over the world, you’ll at least have some
+    intelligently designed noise, and the neural network will think it’s seeing something
+    else, even when the picture looks exactly the same to you!
+
+
+    - the data:
+
+
+    - Deep Learning in Python
+
+    - Deep Learning Prerequisites
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+    - Deep Learning in Python
+
+
+    - we want to reduce the data size but at the same time capture as much information
+    as possible.
+
+
+    So if we want to go from 784 to 2 dimensions - so that we can visualize it - we
+    want those 2 dimensions to have as much information as possible.
+
+
+    Ex. info(1st col of Z) > info(2nd col of Z) >
+
+
+    How do we measure this information? In traditional PCA and many other statistical
+    methods we use variance. If something varies more, it carries more information.
+
+
+    You can imagine the opposite situation, where a variable is completely deterministic,
+    i.e. it has no variance. Then measuring this variable would not give us any new
+    information, because we already knew what it was going to be.
+
+
+    So when we get our transformed data Z, what we want is for the first column to
+    have the most information, the second column to have the second most information,
+    and so on.
+
+
+    Thus, when we take the 2 columns with the most information, that would mean taking
+    the first 2 columns.
+
+
+    What makes PCA an is how it chooses the.
+
+
+    So now if you take the coordinate system rotation view, you can imagine that if
+    we rotated our coordinate system to be aligned with the spread of these points,
+    then the data would
+
+
+    - Which view we take will depend on which problem we are trying to solve.
+
+
+    # Dimensionality Reduction
+
+
+    One use of PCA is dimensionality reduction. When you’re looking at the MNIST dataset,
+    which is 28x28, or vectors of size 784, that’s a lot of dimensions, and it’s definitely
+    not something you can visualize.28x28 is a very tiny image, and most images these
+    days are much larger than that - so we either need to have the resources to handle
+    data that can have millions of dimensions, or we could reduce the data using techniques
+    like PCA.
+
+
+    We course can’t take arbitrary dimensions from X - we want to reduce the data
+    size but at the same time capture as much information as possible.
+
+
+    So if we want to go from 784 to 2 dimensions - so that we can visualize it - we
+    want those 2 dimensions to have as much information as possible.
+
+
+    # De-correlation
+
+
+    Another thing PCA does is de-correlation.
+
+
+    If we find correlations, that means some of the data is redundant, because we
+    can predict one column from another column.
+
+
+    ![](img/6a1ceac8fa2fd0cda459693f13163e4e_11_0.png)
+
+
+    So now if you take the coordinate system rotation view, you can imagine that if
+    we rotated our coordinate system to be aligned with the spread of these points,
+    then the data would'
+  mdcn: '
+
+
+    # 无监督深度学习
+
+
+    HTTP://LAZYPROGRAMMER.ME
+
+
+    LAZYPROGRAMMER
+
+
+    ![](img/6a1ceac8fa2fd0cda459693f13163e4e_0_0.png)
+
+
+    # Python 中的无监督深度学习
+
+
+    使用 Python 和 Theano 编写的现代神经网络掌握数据科学与机器学习
+
+
+    作者：The LazyProgrammer (http://lazyprogrammer.me)
+
+
+    # 引言
+
+
+    - 第1章：主成分分析 (PCA)
+
+    - 第2章：t-SNE
+
+    - 第3章：自动编码器与堆叠去噪自动编码器
+
+    - 第4章：受限玻尔兹曼机与深度信念网络
+
+    - 第5章：特征可视化
+
+    - 第6章：欺骗神经网络
+
+    - 结论
+
+
+    <!-- no content -->
+
+
+    # 引言
+
+
+    当我们谈论现代深度学习时，我们通常指的不是原始的神经网络——而是较新的进展，例如使用自动编码器和受限玻尔兹曼机进行无监督预训练。
+
+
+    深度神经网络深受梯度消失问题的困扰，多年来研究人员一直无法有效解决这个问题——直到新的无监督深度学习方法被发明。
+
+
+    这正是一本书想要教给你的。
+
+
+    此外，我们还将介绍主成分分析 (PCA) 和 t-分布随机邻域嵌入 (t-SNE)，这些方法在数学上与深度学习相关，而且通常是深度学习或机器学习流水线的一部分。
+
+
+    很大程度上，我对通常 PCA 的教学方式感到沮丧！因此，我利用这个平台以一种清晰、逻辑化且直观的方式向你教授主成分分析，而不需要让你想象什么旋转的地球仪、旋转向量之类的无意义的内容。
+
+
+    无监督学习的一个主要优势是可视化。我们将在书中进行大量的可视化工作。PCA 和 t-SNE 都能帮助你在平面上可视化来自高维空间的数据。
+
+
+    自动编码器和受限玻尔兹曼机可以帮助你可视化神经网络中每个隐藏节点学习了什么。研究人员发现的一个有趣特性是神经网络是分层学习的。以人脸图像为例，神经网络的第一层将学习一些基础笔画。下一层将这些笔画组合成笔画的组合。再一层可能会形成脸部的部位，如眼睛、鼻子、耳朵和嘴巴。这真的、太神奇了！
+
+
+    这或许为我们的大脑如何获取简单的电信号并将其组合以执行复杂的反应提供了见解。
+
+
+    在本书中，我们还将看到如何在训练一个神经网络后“欺骗”它！你可能认为它已经学会了识别数据集中的所有图像，但只要添加一些智能设计的噪声，神经网络就会认为它看到了其他东西，即使这些图片在在你看来看起来完全一样！
+
+
+    所以，如果机器最终接管了世界，你至少拥有一些智能设计的噪声，而神经网络会认为它看到了其他东西，即使这些图片在在你看来看起来完全一样！
+
+
+    所以，如果机器最终接管了世界，你至少拥有一些智能设计的噪声，而神经网络会认为它看到了其他东西，即使这些图片在在你看来看起来完全一样！
+
+
+    所以，如果机器最终接管了世界，你至少拥有一些智能设计的噪声，而神经网络会认为它看到了其他东西，即使这些图片在在你看来看起来完全一样！
+
+
+    - 数据：
+
+
+    - Python 中的深度学习
+
+    - 深度学习先备知识
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+    - Python 中的深度学习
+
+
+    - 我们希望在减少数据规模的同时，尽可能捕捉多的信息。
+
+
+    所以，如果我们想从 784 维降到 2 维——以便我们可视化——我们希望这 2 个维度包含尽可能的信息。
+
+
+    例如：info(Z 的第一列) > info(Z 的第二列) >
+
+
+    我们如何衡量这些信息呢？在传统的 PCA 和许多其他统计方法中，我们使用方差。如果某个东西变化越大，它携带的信息就越多。
+
+
+    你可以想象相反的情况，即一个变量是完全确定的，也就是说它没有方差。那么测量这个变量就不会为我们提供任何新信息，因为我们已经知道它将是什么了。
+
+
+    所以，当我们得到转换后的数据 Z 时，我们希望第一列包含最多的信息，第二列包含次多的信息，以此此类推。
+
+
+    因此，当我们取信息最多的两列时，意味着选取前两列。
+
+
+    PCA 的独特之处在于它如何选择。
+
+
+    所以现在，如果你从坐标系旋转的角度来看，你可以想象如果我们旋转坐标系使其与这些点的分布对齐，那么数据就会……
+
+
+    - 我们采取哪种视角取决于我们正在尝试解决的问题。
+
+
+    # 降维
+
+
+    PCA 的用途之一是降维。当你查看 MNIST 数据集时，它是 28x28 的或者是大小为 784 的向量，维度非常多，这绝对不是你可以直接可视化的。28x28
+    是一个非常小的图像，而现在的大多数图像比这大得多——所以我们要么拥有资源来处理数百万维度的数据，要么就可以使用 PCA 等技术来还原数据。
+
+
+    我们当然不能从 X 中任意选取维度——我们希望在减少数据规模的同时，尽可能捕捉多的信息。
+
+
+    所以，如果我们想从 784 维降到 2 维——以便我们可视化——我们希望这 2 个维度包含尽可能的信息。
+
+
+    # 去相关
+
+
+    PCA 做的另一件事是非相关。
+
+
+    如果我们发现相关性，意味着某些数据是冗余的，因为我们可以从其中一列预测另一列。
+
+
+    ![](img/6a1ceac8fa2fd0cda459693f13163e4e_11_0.png)
+
+
+    所以现在如果你从坐标系旋转的角度来看，你可以想象如果我们旋转坐标系使其与这些点的分布对齐，那么数据就会……'
+  merge: -1
+- raw:
+  - '[PAGE 12]
+
+
+    become uncorrelated.
+
+
+    Again the question is - how do we find Q so that we rotate the data in exactly
+    this way?
+
+
+    # Visualization
+
+
+    Once we have the information of our data sorted in descending order in each dimension,
+    we can just take the top 2 and make a scatter plot. This will then give us an
+    idea of the separation of the data points, and it allows us to create a visual
+    representation of high-dimensional data.
+
+
+    # Pre-processing and Overfitting
+
+
+    The last application of PCA we''ll talk about is pre-processing and overfitting.
+
+
+    You can imagine that our data is often noisy. Hopefully, the noise is small compared
+    to the true pattern. In that case, the variance of the noise, which should be
+    small, would go into the last columns of our transformed data Z, at which point
+    we could just discard it.
+
+
+    We could then feed this new data into a supervised machine learning model such
+    as logistic regression - in fact we did this in my previous courses.
+
+
+    So by getting rid of the noise we are preventing overfitting by making sure we
+    are not fitting to the noise.
+
+
+    To make this clear, here''s an imaginary data pipeline:
+
+
+    Input: X (data), Y (targets)
+
+
+    +   1) Convert X to Z → Z = XQ
+
+    2) Take the first K columns of Z, call that Z_K'
+  - "[PAGE 13]\n\n+   3) Train your model on (Zₖ, Y), i.e. model.fit(Zₖ, Y)\n4) Any\
+    \ further predictions can use the same model and pipeline:\n   1) Zₖ = Qx\n  \
+    \ 2) prediction = model.predict(Zₖ)\n\n# Latent Variables\n\nAnother view of PCA\
+    \ is that the transformed variables Z are the “latent variables”, as in they are\
+    \ some sort of underlying cause of the data X.\n\nThen it makes sense that they\
+    \ should be uncorrelated, because they are just independent hidden causes.\n\n\
+    It also makes sense that some of the data in X is correlated because they are\
+    \ just measurements you’re taking of some data that is produced by a combination\
+    \ of those hidden causes.\n\nWhat we are assuming when we do PCA is that the data\
+    \ is a linear combination of those hidden causes.\n\nIn fact with PCA the linearity\
+    \ goes both ways - the latent variable Z is a linear combination of the observed\
+    \ variable X, but if you were to do a reverse transformation, the observed data\
+    \ X is also a linear combination of the latent variable Z.\n\nZ = XQ\nX = ZQ⁻¹\n\
+    \nYou’ll recall that we first encountered the idea of latent variables in my first\
+    \ unsupervised learning course on clustering and Gaussian mixture models - because\
+    \ those models assumed that the identities of the clusters were the latent variable."
+  - '[PAGE 14]
+
+
+    # The Math Behind PCA
+
+
+    Now let us turn to the second part of the PCA description - how to actually find
+    the transformation matrix Q.
+
+
+    To recap, I''ve just told you about all the magical things this Q matrix can do:
+
+
+    +   1) Make Z uncorrelated even though X is correlated
+
+    2) Order each column in Z by its information content (variance)
+
+
+    A lot of the steps here may seem arbitrary at first, but you''ll see how it all
+    fits together in the end and results in all the properties I talked about in the
+    previously.
+
+
+    The first step is to calculate the covariance of X.
+
+
+    C(x(i), x(j)) = E[ (x(i) - m(i))(x(j) - m(j)) ] = sum(n=1..N){ (x_n(i) - m(i))(x_n(j)
+    - m(j)) } / N
+
+
+    Where m(i) is the mean of all x(i).
+
+
+    If i = j then it''s just the regular variance. In other words, the diagonals of
+    the C matrix are the variances of each dimension of X. This will be important
+    later.
+
+
+    In matrix form:
+
+
+    C = (X - m)^T(X - m) / N
+
+
+    This gives us a DxD matrix. Remember, D is the dimensionality and N is the number
+    of data points.
+
+
+    Technically you can''t subtract the mean like that because it has a different
+    shape than X, but we will assume that broadcasting is being used.'
+  - '[PAGE 15]
+
+
+    # Eigenvalues and Eigenvectors
+
+
+    Recall that a DxD matrix has D eigenvalues and D eigenvectors. If you don''t know
+    what eigenvalues and eigenvectors are, I''m going to give you a short introduction.
+
+
+    Remember that matrices in general change the direction of, or rotate, a vector.
+    Eigenvectors of a matrix are special vectors which are NOT rotated by the matrix,
+    but just change in length. The change in length is called the eigenvalue.
+
+
+    So we can relate the covariance matrix, its eigenvector, and its eigenvalue, using
+    this equation, where e is the eigenvalue and v is the eigenvector.
+
+
+    Cv = ev
+
+
+    There are some theorems which we won''t prove, but basically there will be D eigenvectors
+    and D corresponding eigenvalues, and the eigenvalues will be greater than or to
+    0.
+
+
+    Finding eigenvectors and eigenvalues is itself not a trivial task, and there are
+    many algorithms that can do this, including gradient descent. Since numpy already
+    has a function to do this, we''re not going to worry about it - just the theory
+    is important to give you the right perspective.
+
+
+    Now we have these D eigenvalues, what do we do with them?
+
+
+    Again an arbitrary step, but let''s sort the eigenvalues in descending order.
+    This means that the corresponding eigenvectors have to be sorted in the same way.
+
+
+    e1 > e2 > e3 > ... > eD
+
+
+    Once we''ve done this, we can put them into matrices of size DxD. The eigenvalues
+    will go in a diagonal matrix of size DxD we''ll call E, and the eigenvectors will
+    be lined beside each other in a matrix we''ll call V.'
+  - '[PAGE 16]
+
+
+    Ex. In 2 dimensions:
+
+
+    ```
+
+    E = [ e1 0 ]
+
+    [ 0 e2 ]
+
+    ```
+
+
+    ```
+
+    V = [ v11 v12 ]
+
+    [ v21 v22 ]
+
+    ```
+
+
+    Where v(i,j) is the ith component of the jth eigenvector.
+
+
+    It’s easy to prove that:
+
+
+    ```
+
+    CV = VE
+
+    ```
+
+
+    Try it yourself on paper with the scalar components.
+
+
+    One last ingredient is that the matrix V is orthonormal. This means that any eigenvector
+    dotted with itself is 1, and any eigenvector dotted with another different eigenvector
+    is 0.
+
+
+    Ex.
+
+
+    ```
+
+    viᵀVj = 0 if i != j
+
+    viᵀTVi = 1
+
+    ```
+
+
+    In matrix form:
+
+
+    ```
+
+    VTV = I (the identity matrix)
+
+    ```
+
+
+    Finally, we’ll now look at the transformed data, Z. Remember that we still don’t
+    know what Q is. But let’s solve for its covariance. Notice how we can express
+    the covariance of Z in terms of the covariance of X.'
+  - '[PAGE 17]
+
+
+    ```
+
+    C_z = (Z - mz)^T(Z - mz) / N
+
+    C_z = (XQ - mQ)^T(XQ - mQ) / N
+
+    C_z = Q^T(X - m)^T(X - m)Q / N
+
+    C_z = Q^T[(X - m)^T(X - m) / N ] Q
+
+    C_z = Q^T C Q
+
+    ```
+
+
+    We can express the covariance of Z in terms of the covariance of X and Q!
+
+
+    Next, look what happens if we choose Q = V.
+
+
+    ```
+
+    C_z = V^TCV
+
+    ```
+
+
+    But remember that CV = VE.
+
+
+    ```
+
+    C_z = V^TV E
+
+    ```
+
+
+    And remember that V is orthonormal so V^TV = I (the identity matrix). Thus:
+
+
+    ```
+
+    C_z = E
+
+    ```
+
+
+    We get that the covariance of Z is just equal to E, which is the diagonal matrix
+    of eigenvalues.
+
+
+    What does this all mean?
+
+
+    Since all the off-diagonal elements of E are 0, that means any dimension i is
+    not correlated with any other dimension j, which means there are no correlations
+    in the transformed data.
+
+
+    So by choosing Q = V, we''ve decorrelated Z.
+
+
+    Next, because we sorted E by the eigenvalues in descending order, that means the
+    first'
+  - '[PAGE 18]
+
+
+    dimension of Z has the most variance, the second dimension of Z has the second
+    most variance, and so on.
+
+
+    # The PCA Objective
+
+
+    One thing that is not immediately obvious with the PCA derivation is that it actually
+    minimizes an objective function.
+
+
+    The objective function is what you would naturally expect - it''s the squared
+    reconstruction error of the data.
+
+
+    ```
+
+    J = || X - XQQ¹ ||²
+
+    ```
+
+
+    Since Q is orthonormal, we know that Qᵀ = Q⁻¹.
+
+
+    In other words, the transpose of Q is equal to the inverse of Q.
+
+
+    We can thus reconstruct X using the transpose instead of the inverse.
+
+
+    We''ll encounter this again when we look at autoencoders.
+
+
+    Q_k is just the first k eigenvectors of the covariance of X - meaning that it''s
+    a Dkx matrix.
+
+
+    By multiplying X by Q��, we get Z��, the first k columns of Z. Remember, this
+    gives us Z “without the noise”.
+
+
+    Since we are now not using the full Q, there will be a non-zero reconstruction
+    error.
+
+
+    And we can get back the reconstruction by multiplying by Qₖ.
+
+
+    Xhat = Zₖᵀ'
+  - '[PAGE 19]
+
+
+    $J = ||X - XQ_kQ_k^T||^2$
+
+
+    You’ll want to keep this idea of the PCA objective function in your memory because
+    we are going to encounter it again later.
+
+
+    # Exercises
+
+
+    Try PCA on the MNIST dataset. (Use the sci-kit learn library or try writing PCA
+    yourself)'
+  md: "\nbecome uncorrelated.\n\nAgain the question is - how do we find Q so that\
+    \ we rotate the data in exactly this way?\n\n# Visualization\n\nOnce we have the\
+    \ information of our data sorted in descending order in each dimension, we can\
+    \ just take the top 2 and make a scatter plot. This will then give us an idea\
+    \ of the separation of the data points, and it allows us to create a visual representation\
+    \ of high-dimensional data.\n\n# Pre-processing and Overfitting\n\nThe last application\
+    \ of PCA we'll talk about is pre-processing and overfitting.\n\nYou can imagine\
+    \ that our data is often noisy. Hopefully, the noise is small compared to the\
+    \ true pattern. In that case, the variance of the noise, which should be small,\
+    \ would go into the last columns of our transformed data Z, at which point we\
+    \ could just discard it.\n\nWe could then feed this new data into a supervised\
+    \ machine learning model such as logistic regression - in fact we did this in\
+    \ my previous courses.\n\nSo by getting rid of the noise we are preventing overfitting\
+    \ by making sure we are not fitting to the noise.\n\nTo make this clear, here's\
+    \ an imaginary data pipeline:\n\nInput: X (data), Y (targets)\n\n- 1) Convert\
+    \ X to Z → Z = XQ\n- 2) Take the first K columns of Z, call that Z_K\n- 3) Train\
+    \ your model on (Zₖ, Y), i.e. model.fit(Zₖ, Y)\n- 4) Any further predictions can\
+    \ use the same model and pipeline:\n  - 1) Zₖ = Qx\n  - 2) prediction = model.predict(Zₖ)\n\
+    \n# Latent Variables\n\nAnother view of PCA is that the transformed variables\
+    \ Z are the “latent variables”, as in they are some sort of underlying cause of\
+    \ the data X.\n\nThen it makes sense that they should be uncorrelated, because\
+    \ they are just independent hidden causes.\n\nIt also makes sense that some of\
+    \ the data in X is correlated because they are just measurements you’re taking\
+    \ of some data that is produced by a combination of those hidden causes.\n\nWhat\
+    \ we are assuming when we do PCA is that the data is a linear combination of those\
+    \ hidden causes.\n\nIn fact with PCA the linearity goes both ways - the latent\
+    \ variable Z is a linear combination of the observed variable X, but if you were\
+    \ to do a reverse transformation, the observed data X is also a linear combination\
+    \ of the latent variable Z.\n\nZ = XQ\nX = ZQ⁻¹\n\nYou’ll recall that we first\
+    \ encountered the idea of latent variables in my first unsupervised learning course\
+    \ on clustering and Gaussian mixture models - because those models assumed that\
+    \ the identities of the clusters were the latent variable.\n\n# The Math Behind\
+    \ PCA\n\nNow let us turn to the second part of the PCA description - how to actually\
+    \ find the transformation matrix Q.\n\nTo recap, I've just told you about all\
+    \ the magical things this Q matrix can do:\n\n- 1) Make Z uncorrelated even though\
+    \ X is correlated\n- 2) Order each column in Z by its information content (variance)\n\
+    \nA lot of the steps here may seem arbitrary at first, but you'll see how it all\
+    \ fits together in the end and results in all the properties I talked about in\
+    \ the previously.\n\nThe first step is to calculate the covariance of X.\n\nC(x(i),\
+    \ x(j)) = E[ (x(i) - m(i))(x(j) - m(j)) ] = sum(n=1..N){ (x_n(i) - m(i))(x_n(j)\
+    \ - m(j)) } / N\n\nWhere m(i) is the mean of all x(i).\n\nIf i = j then it's just\
+    \ the regular variance. In other words, the diagonals of the C matrix are the\
+    \ variances of each dimension of X. This will be important later.\n\nIn matrix\
+    \ form:\n\nC = (X - m)^T(X - m) / N\n\nThis gives us a DxD matrix. Remember, D\
+    \ is the dimensionality and N is the number of data points.\n\nTechnically you\
+    \ can't subtract the mean like that because it has a different shape than X, but\
+    \ we will assume that broadcasting is being used.\n\n# Eigenvalues and Eigenvectors\n\
+    \nRecall that a DxD matrix has D eigenvalues and D eigenvectors. If you don't\
+    \ know what eigenvalues and eigenvectors are, I'm going to give you a short introduction.\n\
+    \nRemember that matrices in general change the direction of, or rotate, a vector.\
+    \ Eigenvectors of a matrix are special vectors which are NOT rotated by the matrix,\
+    \ but just change in length. The change in length is called the eigenvalue.\n\n\
+    So we can relate the covariance matrix, its eigenvector, and its eigenvalue, using\
+    \ this equation, where e is the eigenvalue and v is the eigenvector.\n\nCv = ev\n\
+    \nThere are some theorems which we won't prove, but basically there will be D\
+    \ eigenvectors and D corresponding eigenvalues, and the eigenvalues will be greater\
+    \ than or 0.\n\nFinding eigenvectors and eigenvalues is itself not a trivial task,\
+    \ and there are many algorithms that can do this, including gradient descent.\
+    \ Since numpy already has a function to do this, we're not going to worry about\
+    \ it - just the theory is important to give you the right perspective.\n\nNow\
+    \ we have these D eigenvalues, what do we do with them?\n\nAgain an arbitrary\
+    \ step, but let's sort the eigenvalues in descending order. This means that the\
+    \ corresponding eigenvectors have to be sorted in the same way.\n\ne1 > e2 > e3\
+    \ > ... > eD\n\nOnce we've done this, we can put them into matrices of size DxD.\
+    \ The eigenvalues will go in a diagonal matrix of size DxD we'll call E, and the\
+    \ eigenvectors will be lined beside each other in a matrix we'll call V.\n\nEx.\
+    \ In 2 dimensions:\n\n```\nE = [ e1 0 ]\n[ 0 e2 ]\n```\n\n```\nV = [ v11 v12 ]\n\
+    [ v21 v22 ]\n```\n\nWhere v(i,j) is the ith component of the jth eigenvector.\n\
+    \nIt’s easy to prove that:\n\n```\nCV = VE\n```\n\nTry it yourself on paper with\
+    \ the scalar components.\n\nOne last ingredient is that the matrix V is orthonormal.\
+    \ This means that any eigenvector dotted with itself is 1, and any eigenvector\
+    \ dotted with another different eigenvector is 0.\n\nEx.\n\n```\nviᵀVj = 0 if\
+    \ i != j\nviᵀTVi = 1\n```\n\nIn matrix form:\n\n```\nVTV = I (the identity matrix)\n\
+    ```\n\nFinally, we’ll now look at the transformed data, Z. Remember that we still\
+    \ don’t know what Q is. But let’s solve for its covariance. Notice how we can\
+    \ express the covariance of Z in terms of the covariance of X.\n\n```\nC_z = (Z\
+    \ - mz)^T(Z - mz) / N\nC_z = (XQ - mQ)^T(XQ - mQ) / N\nC_z = Q^T(X - m)^T(X -\
+    \ m)Q / N\nC_z = Q^T[(X - m)^T(X - m) / N ] Q\nC_z = Q^T C Q\n```\n\nWe can express\
+    \ the covariance of Z in terms of the covariance of X and Q!\n\nNext, look what\
+    \ happens if we choose Q = V.\n\n```\nC_z = V^TCV\n```\n\nBut remember that CV\
+    \ = VE.\n\n```\nC_z = V^TV E\n```\n\nAnd remember that V is orthonormal so V^TV\
+    \ = I (the identity matrix). Thus:\n\n```\nC_z = E\n```\n\nWe get that the covariance\
+    \ of Z is just equal to E, which is the diagonal matrix of eigenvalues.\n\nWhat\
+    \ does this all mean?\n\nSince all the off-diagonal elements of E are 0, that\
+    \ means any dimension i is not correlated with any other dimension j, which means\
+    \ there are no correlations in the transformed data.\n\nSo by choosing Q = V,\
+    \ we've decorrelated Z. Next, because we sorted E by descending order, that means\
+    \ the first dimension of Z has the most variance, the second dimension of Z has\
+    \ the second most variance, and so on.\n\n# The PCA Objective\n\nOne thing that\
+    \ is not immediately obvious with the PCA derivation is that it actually minimizes\
+    \ an objective function.\n\nThe objective function is what you would naturally\
+    \ expect - it's the squared reconstruction error of the data.\n\n```\nJ = || X\
+    \ - XQQ¹ ||²\n```\n\nSince Q is orthonormal, we know that Qᵀ = Q¹.\n\nIn other\
+    \ words, the transpose of Q is equal to the inverse of Q.\n\nWe can thus reconstruct\
+    \ X using the transpose instead of the inverse.\n\nWe'll encounter this again\
+    \ when we look at autoencoders.\n\nQ_k is just the first k eigenvectors of the\
+    \ covariance of X - meaning that it's a Dkx matrix. By multiplying X by Q��, we\
+    \ get Z��, the first k columns of Z. Remember, this gives us Z “without the noise”.\n\
+    \nSince we are now not using the full Q, there will be a non-zero reconstruction\
+    \ error.\n\nAnd we can get back the reconstruction by multiplying by Qₖ.\n\nXhat\
+    \ = Zₖᵀ\n\n$J = ||X - XQ_kQ_k^T||^2$\n\nYou’ll want to keep this idea of the PCA\
+    \ objective function in your memory because we are going to encounter it again\
+    \ later.\n\n# Exercises\n\nTry PCA on the MNIST dataset. (Use the sci-kit learn\
+    \ library or try writing PCA yourself)\n"
+  mdcn: "\n变得不相关。\n\n再次回到问题——我们如何找到 Q 以便按照这种特定的方式旋转数据？\n\n# 可视化\n\n一旦我们对每个维度的数据信息按降序排序，我们就可以取前两个并绘制散点图。这将让我们对数据点之间的分离有一个直观认识，并允许我们创建高维数据的视觉表示。\n\
+    \n# 预处理与过拟合\n\n我们将讨论的 PCA 最后一个应用是预处理和过拟合。\n\n你可以想象我们的数据通常是有噪声的。希望噪声与真实模式相比很小。在这种情况下，噪声的方差（本应该很小）会进入我们转换后的数据\
+    \ Z 的最后几列，此时我们只需将其丢弃即可。\n\n然后我们可以将这些新数据输入到监督机器学习模型中，例如逻辑回归——事实上，在我之前的课程中做过这一点。\n\
+    \n所以，通过消除噪声，我们通过确保不对噪声进行拟合，从而防止了过拟合。\n\n为了让这一点清晰，这里有一个想象的数据流水线：\n\n输入：X (数据),\
+    \ Y (目标)\n\n- 1) 将 X 转换为 Z → Z = XQ\n- 2) 取 Z 的前 K 列，称之为 Z_K\n- 3) 在 (Zₖ, Y) 上训练你的模型，即\
+    \ model.fit(Zₖ, Y)\n- 4) 任何进一步预测可以使用相同的模型和流水线：\n  - 1) Zₖ = Qx\n  - 2) prediction\
+    \ = model.predict(Zₖ)\n\n# 隐变量\n\nPCA 的另一个视角是，转换后的变量 Z 是“隐变量”，它们是数据 X 的某种底层原因。\n\
+    \n那么它们应该是不相关的就很合理了，因为它们仅仅是独立的隐藏原因。\n\nX 中的某些数据是相关的也是合理的，因为它们只是你对某些由这些隐藏原因组合产生的数据所进行的测量。\n\
+    \n我们在进行 PCA 时假设假设数据是这些隐藏原因的线性组合。\n\n事实上，在 PCA 中，线性关系是双向的——隐变量 Z 是观测变量 X 的线性组合，但如果你进行反变换，观测数据\
+    \ X 也是隐变量 Z 的线性组合。\n\nZ = XQ\nX = ZQ⁻¹\n\n你会记得我们在我的第一门关于聚类和高斯混合模型的无监督学习课程中首次遇到隐变量的概念——因为那些模型假设聚类的身份就是隐变量。\n\
+    \n# PCA 背后的数学原理\n\n现在让我们转向 PCA 描述的部分——如何实际找到变换矩阵 Q。\n\n回顾一下，我刚刚告诉了你这个 Q 矩阵可以做的所有魔法：\n\
+    \n- 1) 即使 X 是相关的，也能让 Z变得不相关\n- 2) 按其信息内容（方差）对 Z 的每一列进行排序\n\n这里的许多步骤初看起来似乎是任意的，但你将看到它们最终是如何结合在一起的，并产生我之前提到过的所有属性。\n\
+    \n第一步是计算 X 的协方差。\n\nC(x(i), x(j)) = E[ (x(i) - m(i))(x(j) - m(j)) ] = sum(n=1..N){\
+    \ (x_n(i) - m(i))(x_n(j) - m(j)) } / N\n\n其中 m(i) 是所有 x(i) 的平均值。\n\n如果 i = j，那么就是普通的方差。换句话说，C\
+    \ 矩阵的对角线是 X 每个维度的方差。这在以后将非常重要。\n\n矩阵形式为：\n\nC = (X - m)^T(X - m) / N\n\n这给了我们一个\
+    \ DxD 矩阵。记住，D 是维度，N 是数据点的数量。\n\n技术上，你不能那样减去平均值，因为它的形状与 X 不同，但我们将假设使用了广播（broadcasting）。\n\
+    \n# 特征值与特征\n\n记得 DxD 矩阵有 D 个特征值和 D 个特征。如果你不知道什么是特征值和特征，我将给你一个简短的介绍。\n\n记住矩阵通常会改变向量的方向或旋转向量。矩阵的特征是特殊的向量，它们**不会**被矩阵旋转，只是改变长度。长度的变化被称为特征值。\n\
+    \n所以我们可以通过这个方程将协方差矩阵、它的特征及其特征值联系起来，其中 e 是特征值，v 是特征。\n\nCv = ev\n\n有些定理我们不会证明，但基本上会有\
+    \ D 个特征和 D 个对应的特征值，且特征值大于或等于 0。\n\n寻找特征和特征值本身并不是一项轻易的任务，有很多算法可以做到这一点，包括梯度下降。由于\
+    \ numpy 已经有了执行此操作的函数，我们不需要担心它——理论部分对于给你提供正确的视角是重要的。\n\n现在我们有了这些 D 个特征值，我们要对它们做什么呢？\n\
+    \n同样是一个任意的步骤，但让我们按降序排列特征值。这意味着对应的特征也必须以相同的方式排序。\n\ne1 > e2 > e3 > ... > eD\n\n\
+    一旦我们完成了这些，就可以将它们放入大小为 DxD 的矩阵中。特征值将进入大小为 DxD 的对角矩阵 E，而特征将并排放在一个矩阵 V 中。\n\n例如。在\
+    \ 2 维中：\n\n```\nE = [ e1 0 ]\n[ 0 e2 ]\n```\n\n```\nV = [ v11 v12 ]\n[ v21 v22\
+    \ ]\n```\n\n其中 v(i,j) 是第 j 个特征的第 i 个分量。\n\n证明这一点很容易：\n\n```\nCV = VE\n```\n\n\
+    自己在纸上用标量分试试。\n\n最后一个成分是矩阵 V 是正交的。这意味着任何特征与自身的点积为 1，而任何特征与另一个不同特征的点积为 0。\n\n例如。\n\
+    \n```\nviᵀVj = 0 if i != j\nviᵀTVi = 1\n```\n\n矩阵形式：\n\n```\nVTV = I（单位矩阵）\n```\n\
+    \n最后，我们现在来看转换后的数据 Z。记住我们仍然不知道 Q 是什么。但让我们求解它的协方差。注意我们如何用 X 的协方差来表示 Z 的协方差。\n\n\
+    ```\nC_z = (Z - mz)^T(Z - mz) / N\nC_z = (XQ - mQ)^T(XQ - mQ) / N\nC_z = Q^T(X\
+    \ - m)^T(X - m)Q / N\nC_z = Q^T[(X - m)^T(X - m) / N ] Q\nC_z = Q^T C Q\n```\n\
+    \n我们可以用 X 的协方差和 Q 来表示 Z 的协方差！\n\n接下来看看如果我们选择 Q = V 会发生什么。\n\n```\nC_z = V^TCV\n\
+    ```\n\n但记得 CV = VE。\n\n```\nC_z = V^TV E\n```\n\n记住 V 是正交的，所以 V^TV = I（单位矩阵）。因此：\n\
+    \n```\nC_z = E\n```\n\n我们得到 Z 的协方差等于 E，即特征值的对角矩阵。\n\n这一切意味着什么？\n\n由于 E 的所有离对角元素均为\
+    \ 0，这意味着任何维度 i 都与任何其他维度 j 相关，这意味着转换后的数据没有相关性。\n\n所以通过选择 Q = V，我们让 Z 去了相关。接下来，因为我们按降序排序了\
+    \ E，这意味着 Z 的第一个维度具有最大的方差，第二个维度具有次大的方差，以此此类推。\n\n# PCA 目标\n\nPCA 推导中一个并不立即明显的点是它实际上最小化了一个目标函数。\n\
+    \n目标函数是你自然预期的——它是数据的平方重建误差。\n\n```\nJ = || X - XQQ¹ ||²\n```\n\n由于 Q 是正交的，我们知道\
+    \ Qᵀ = Q¹。\n\n句话说，Q 的转置等于 Q 的逆。\n\n因此我们可以使用转置代替逆来重建 X。\n\n当我们观察自动编码器时会再次遇到这一点。\n\
+    \nQ_k 只是 X 协方差的前 k 个特征——这意味着是一个 Dkx 矩阵。通过将 X 乘以 Q��，我们得到 Z��，即 Z 的前 k 列。记住，这给了我们“没有噪声”的\
+    \ Z。\n\n由于我们现在没有使用完整的 Q，将存在非零重建误差。\n\n我们可以通过乘以 Qₖ 获取重建结果。\n\nXhat = Zₖᵀ\n\n$J\
+    \ = ||X - XQ_kQ_k^T||^2$\n\n你会希望将 PCA 目标这个想法留在记忆中，因为我们以后会再次遇到它。\n\n# 练习\n\n在 MNIST\
+    \ 数据集上尝试 PCA。（使用 sci-kit learn 库或尝试自己编写 PCA）\n"
+  merge: 1
+- raw:
+  - '[PAGE 20]
+
+
+    <!-- no content -->'
+  - '[PAGE 21]
+
+
+    # Chapter 2: t-SNE
+
+
+    In this lecture we are going to talk about another dimensionality reduction and
+    visualization method called t-SNE. The t means we are going to incorporate the
+    t-distribution and SNE stands for “stochastic neighbor embedding”.
+
+
+    One big advantage of t-SNE is that it''s a nonlinear method, so it is more expressive
+    than PCA.
+
+
+    Why study t-SNE?
+
+
+    2 reasons:
+
+
+    +   1) t-SNE was jointly developed by Geoffrey Hinton, who as you know, is one
+    of the main figures of deep learning.
+
+
+    +   2) by doing t-SNE, we are seeing how the limitations of PCA can be overcome
+    by using a more complex mathematical model.
+
+
+    One key difference between PCA and t-SNE, other than the fact that t-SNE is non-linear,
+    is that there is no transformation model with t-SNE.
+
+
+    Instead, t-SNE just modifies the outputs directly in order to minimize the cost
+    function.
+
+
+    What this means is that, you won’t have any train and test sets, and you can’t
+    transform data after fitting on some other data.
+
+
+    The way that t-SNE works is essentially it tries to preserve the distances between
+    each input vector.
+
+
+    We will start with symmetric SME since it intuitively makes more sense.
+
+
+    On the original data X, we define a joint probability distribution p(i,j) which
+    is equal to:'
+  - '[PAGE 22]
+
+
+    p(i,j) = exp(-|xi - xj|^2 /(2s^2)) / sum[k!=m]{ exp(-|xm - xk|^2 /(2s^2))
+
+
+    Note that i and j are not the index for the dimensions like we did with PCA, but
+    rather the ith and jth data point in the dataset, i.e. i and j are the ith and
+    jth sample.
+
+
+    Notice it kind of looks like a Gaussian distribution. You can think of “s” as
+    a hyperparameter. It’s controlling the “spread” of the distribution.
+
+
+    Next, we have our low-dimensional mapping Y, which we define in the same way,
+    but there is no s term.
+
+
+    q(i,j) = exp(-|yi - yj|^2) / sum[k!=m]{ exp(-|ym - yk|^2) }
+
+
+    Note that we just set p(i,i) = q(i,i) = 0.
+
+
+    So we’ve defined 2 probability distributions, one between every pair of points
+    in X, and one between every pair of points in Y.
+
+
+    We usually just initialize every data point in Y randomly.
+
+
+    i.e. If we’re looking for a 2-D representation, we’ll create Y as:
+
+
+    Y = np.random.randn(N, 2)
+
+
+    Once we’ve done that, we can try to find a better Y by optimizing some objective
+    function that relates p(i,j) and q(i,j).
+
+
+    If you are not familiar with how we compare 2 probability distributions, we usually
+    use the Kullback-Leibler divergence or KL divergence for short.
+
+
+    C = D_KL(P || Q) = sum[p(i,j)log( p(i,j) / q(i,j) ) }
+
+
+    If P and Q are exactly the same, this would be 0.'
+  - '[PAGE 23]
+
+
+    How we solve this problem is the same as we solve all other problems of this type
+    - we take the derivative of the objective and do gradient descent.
+
+
+    Notice how with this type of model we don''t have weights - we just have Y. So
+    we are taking the gradient with respect to Y, which is the output mapping itself.
+
+
+    i.e.
+
+
+    Y <- Y - learning_rate*dC/dY
+
+
+    One problem with symmetric SNE and the SNE that came before it is known as the
+    “crowding problem”, which prevents gaps from forming around the natural clusters.
+
+
+    What t-SNE does it uses slightly different distributions for Q and P, which helps
+    space out the clusters better.
+
+
+    The new P and Q are defined as follows:
+
+
+    ```
+
+    p(i,j) = [ p(i | j) + p(j | i) ] / 2N
+
+    ```
+
+
+    Where:
+
+
+    ```
+
+    p(j | i) = exp(-|xi - xj|^2 /(2si²)) / sum[k=1i{ exp(-|xi - xk|^2 /(2si²)) }
+
+    ```
+
+
+    Notice here each sample has its own “s”.
+
+
+    The Q distribution uses the t-distribution, hence the name.
+
+
+    The cost function remains the same as before.'
+  - '[PAGE 24]
+
+
+    Note that we won''t actually implement t-SNE - even though it should be relatively
+    simple given the definitions above.
+
+
+    It''s easy to define the cost and find its derivative, which is more than we can
+    say for many of the deep learning models we''ve worked with.
+
+
+    The problem is that it''s slow and has huge RAM requirements - in fact t-SNE will
+    probably crash on your computer with the full MNIST dataset.
+
+
+    Why? Because we need to calculate q(i,j) and p(i,j) for i=1..N and j=1..N, this
+    is naturally O(N^2) algorithm.
+
+
+    There is a variant of it, which is called Barnes-Hut, that is O(NlogN) run time,
+    but still has huge RAM requirements. This is the default method used in Sci-Kit
+    Learn.
+
+
+    One solution is to take a sample of just a few hundred data points and do t-SNE
+    on that, but of course you can increase this amount if you''re willing to wait
+    longer and you have enough RAM.
+
+
+    # Exercises
+
+
+    Try t-SNE (from the sci-kit learn library) on the MNIST dataset.
+
+
+    Try writing your own naive implementation given the definitions above, and take
+    advantage of Theano’s automatic differentiation.'
+  - '[PAGE 25]
+
+
+    <!-- no content -->'
+  - '[PAGE 26]
+
+
+    <!-- no content -->'
+  - '[PAGE 27]
+
+
+    # Chapter 3: Autoencoders and Stacked Denoising
+
+    Autoencoders
+
+
+    In this chapter we are going to talk about autoencoders. Autoencoders are actually
+    nothing really new, just a small twist on something you already know.
+
+
+    I always say that a supervised machine learning model has 2 main functions as
+    its API, train or fit, and predict.
+
+
+    Usually when we call a neural network, we call model.fit(X, Y), and then to make
+    predictions we call model.predict(X).
+
+
+    But what if we just make a neural network try to predict itself? So we call model.fit(X,
+    X) instead.
+
+
+    o—o—
+
+    x z x''
+
+
+    That''s exactly what an autoencoder is.
+
+
+    In most of my previous courses, we did classification, but remember that our X
+    can be any real value.
+
+
+    So if you are trying to predict real values in general, you can use the squared
+    error, and it becomes more like a regression.
+
+
+    You can alternatively still use the cross-entropy error, and consider your inputs
+    and outputs to be binary variables, even for variables that are not exactly binary.
+
+
+    You''ll see that we do this with both autoencoders and RBMs, and you''ll see that
+    both error functions can work.
+
+
+    You can think of images like MNIST as having pixel intensities. 0 would be no
+    intensity at all, and 1 would be maximum intensity, since we always scale by 255.'
+  - '[PAGE 28]
+
+
+    To make the outputs go between 0 and 1, we are going to use the sigmoid function
+    at both the hidden layer and output layer.
+
+
+    One slight modification we sometimes use for both autoencoders and RBMs is the
+    idea of shared weights.
+
+
+    So instead of using another weight at the output layer, we just use the transpose
+    of the first weight.
+
+
+    Ex.
+
+
+    ```
+
+    Z = sigmoid(XW + b)
+
+    X_{hat} = sigmoid(ZW^T + c)
+
+    ```
+
+
+    We first encountered the idea of shared weights when we looked at convolutional
+    neural networks, since it was the same filter getting passed along each part of
+    the image.
+
+
+    Remember that having shared weights is a kind of regularization because we are
+    reducing the number of parameters, thereby reducing the chance of overfitting.
+
+
+    Next, let’s return to the squared error objective.
+
+
+    If we write it out in terms of the weights and the inputs (ignoring biases), we
+    get:
+
+
+    ```
+
+    J = ||X - s(XW)W^T||²
+
+    ```
+
+
+    Remember back when we were doing PCA, I asked you to remember the objective function?
+
+
+    ```
+
+    J = ||X - XQQ^T||²
+
+    ```
+
+
+    Well consider what would happen if we did NOT use the sigmoid here.'
+  - '[PAGE 29]
+
+
+    $J = ||X - XWW^T||^2$
+
+
+    We would in fact, just get back PCA!
+
+
+    You can in fact think of autoencoders as a sort of nonlinear PCA.
+
+
+    This is doing a nonlinear mapping, just like t-SNE.
+
+
+    Note that this isn''t really the full picture because we are not considering biases,
+    and we don''t have any requirement that each column of the weight has length 1,
+    or that each column is orthogonal, or that they are ordered in any particular
+    way.
+
+
+    So while the functional form looks “like” PCA, it’s not doing everything PCA is
+    doing.
+
+
+    # Denoising Autoencoders
+
+
+    In this section we are going to talk about yet another method of regularization.
+
+
+    Remember that when we’re given a dataset, we don''t have to only train on that
+    dataset. First we saw when we talked about images. An upside-down cat is still
+    a cat, so we should add that to our dataset. Similarly, a sideways cat is still
+    a cat. A cat on the top right of a photo is still the same cat as cat shifted
+    to the bottom left.
+
+
+    Therefore, there are ways we can modify our data to improve our neural network’s
+    generalization capabilities.
+
+
+    Another way to modify data other than moving things around explicitly is to add
+    noise.
+
+
+    One way is to add Gaussian noise to the input, another way is to simply set some
+    of the values to 0.'
+  md: '
+
+    ## Chapter 2: t-SNE
+
+
+    In this lecture we are going to talk about another dimensionality reduction and
+    visualization method called t-SNE. The t means we are going to incorporate the
+    t-distribution and SNE stands for “stochastic neighbor embedding”.
+
+
+    One big advantage of t-SNE is that it''s a nonlinear method, so it is more expressive
+    than PCA.
+
+
+    ### Why study t-SNE?
+
+
+    2 reasons:
+
+
+    - 1) t-SNE was jointly developed by Geoffrey Hinton, who as you know, is one of
+    the main figures of deep learning.
+
+    - 2) by doing t-SNE, we are seeing how the limitations of PCA can be overcome
+    by using a more complex mathematical model.
+
+
+    One key difference between PCA and t-SNE, other than the fact that t-SNE is non-linear,
+    is that there is no transformation model with t-SNE.
+
+
+    Instead, t-SNE just modifies the outputs directly in order to minimize the cost
+    function.
+
+
+    What this means is that, you won’t have any train and test sets, and you can’t
+    transform data after fitting on some other data.
+
+
+    The way that t-SNE works is essentially it tries to preserve the distances between
+    each input vector.
+
+
+    We will start with symmetric SME since it intuitively makes more sense.
+
+
+    On the original data X, we define a joint probability distribution $p(i,j)$ which
+    is equal to:
+
+
+    $p(i,j) = \frac{\exp(-|x_i - x_j|^2 /(2s^2))}{\sum_{k \neq m} \exp(-|x_m - x_k|^2
+    /(2s^2))}$
+
+
+    Note that i and j are not the index for the dimensions like we did with PCA, but
+    rather the ith and jth data point in the dataset, i.e. i and j are the ith and
+    jth sample.
+
+
+    Notice it kind of looks like a Gaussian distribution. You can think of “s” as
+    a hyperperameter. It’s controlling the “spread” of the distribution.
+
+
+    Next, we have our low-dimensional mapping Y, which we define in the same way,
+    but there is no s term.
+
+
+    $q(i,j) = \frac{\exp(-|y_i - y_j|^2)}{\sum_{k \neq m} \exp(-|y_m - y_k|^2)}$
+
+
+    Note that we just set $p(i,i) = q(i,i) = 0$.
+
+
+    So we’ve defined 2 probability distributions, one between every pair of points
+    in X, and one between every pair of points in Y. We usually just initialize every
+    data point in Y randomly. i.e. If we’re looking for a 2-D representation, we’ll
+    create Y as:
+
+
+    `Y = np.random.randn(N, 2)`
+
+
+    Once we’ve done that, we can try to find a better Y by optimizing some objective
+    function that relates $p(i,j)$ and $q(i,j)$. If you are not familiar with how
+    we compare probability distributions, we usually use Kullback-Leibler divergence
+    for short:
+
+
+    $C = D_{KL}(P || Q) = \sum p(i,j) \log\left(\frac{p(i,j)}{q(i,j)}\right)$
+
+
+    If P and Q are exactly the same, this would be 0. How we solve this problem is
+    the same as we solve all other problems of this type - we take the derivative
+    of the objective and do gradient descent. Notice how with this type of model we
+    don''t have weights - so we are taking the gradient with respect to Y, which is
+    the output mapping. i.e.
+
+
+    `Y <- Y - learning_rate * dC/dY`
+
+
+    One problem with symmetric SNE that came before is known as the “crowding problem”,
+    which prevents clusters from forming naturally. t-SNE does use slightly different
+    distributions for Q and P, which helps space out clusters. These are defined as
+    follows:
+
+
+    $p(i,j) = \frac{p(i | j) + p(j | i)}{2}$
+
+
+    Where:
+
+
+    $p(j | i) = \frac{\exp(-|x_i - x_j|^2 /(2s^2))}{\sum_{k} \exp(-|x_i - x_k|^2 /(2s^2))}$
+
+
+    Notice each sample has its own “s”. Even though it is relatively simple given
+    the definitions above, the cost function remains the same. The problem is that
+    it''s slow and has huge RAM requirements because we need to calculate $q(i,j)$
+    and $p(i,j)$ for $i=1..N$ and $j=1..N$, which is naturally $O(N^2)$. There is
+    a variant of it which is called Barnes-Hut that is $O(N \log N)$ run time, but
+    still has huge RAM requirements. This is the default method used in SciKit Learn.
+    One solution is to take a sample of just a few hundred points and do t-SNE on
+    that, or if you are willing to wait and have enough RAM.
+
+
+    ### Exercises
+
+
+    - Try t-SNE (from scikit learn) on the MNIST dataset.
+
+    - Try writing your own implementation given the definitions above, and take advantage
+    of automatic differentiation.
+
+
+    ## Chapter 3: Autoencoders
+
+
+    In this chapter we are going to talk about autoencoders. Autoencoders are actually
+    nothing new, just a small twist on something you already know. A supervised learning
+    model has 2 main functions as its API, fit and predict. Usually when we call a
+    neural network we call `model.fit(X, Y)`, and then to make predictions we call
+    `model.predict(X)`. But what if we just make the neural network try to predict
+    itself? So we call `model.fit(X, X)` instead.
+
+
+    That''s exactly what an autoencoder is. In most of my previous courses we did
+    classification, but remember that X can be any real value. So if you are trying
+    to predict real values in general, you can use squared error, and it becomes more
+    like regression. You can alternatively still use cross-entropy error and consider
+    your inputs and outputs to be binary, even for variables that are not exactly
+    binary. You''ll see that we do this with both autoencoders and RBMs, and you''ll
+    see that both error functions work. You can think of images like MNIST as having
+    pixel intensities: 0 would be no intensity at all, and 1 would be maximum intensity,
+    since we always scale by 255.
+
+
+    To make the outputs go between 0 and 1, we are going to use the sigmoid function
+    at both the hidden layer and output layer. One slight modification we sometimes
+    use for both autoencoders and RBMs is the idea of shared weights. So instead of
+    using another weight at the output layer, we just use the transpose of the first
+    weight.
+
+
+    `Z = sigmoid(XW + b)`
+
+    `X_hat = sigmoid(ZW^T + c)`
+
+
+    We first encountered the idea of shared weights when we looked at convolutional
+    neural networks, since it was the same filter passed along each part of the image.
+    Remember that having shared weights is a kind of regularization because we are
+    reducing the number of parameters, thereby reducing the chance of overfitting.
+
+
+    Next, let’s return to the squared error objective. If we write it out in terms
+    of the weights and the inputs (ignoring biases), we get:
+
+
+    $J = \|X - \sigma(XW)W^T\|^2$
+
+
+    Remember back when we were doing PCA, I asked you to remember the objective function?
+
+
+    $J = \|X - XX^T\|^2$
+
+
+    Well consider what would happen if we did NOT use the sigmoid here:
+
+
+    $J = \|X - XWW^T\|^2$
+
+
+    We would in fact just get back PCA! You can in fact think of autoencoders as a
+    sort of nonlinear PCA. This is doing a nonlinear mapping, just like t-SNE. Note
+    that this isn''t really the full picture because we are not considering biases,
+    and we don''t have any requirement that each column of the weight has length 1,
+    or that each column is orthogonal, or that they are ordered in any particular
+    way. So while the functional form looks “like” PCA, it’s not doing everything
+    PCA is doing.
+
+
+    ### Denoising Autoencoders
+
+
+    In this section we are going to talk about yet another method of regularization.
+    Remember that when we’re given a dataset, we don''t have to only train on that
+    dataset.
+
+    '
+  mdcn: '
+
+
+    ## 第 2 章：t-SNE
+
+
+    在本节课程中，我们将讨论另一种名为 t-SNE 的降维和可视化方法。t 代表我们引入了 t 分布，而 SNE 代表“随机邻域嵌入”（stochastic neighbor
+    embedding）。
+
+
+    t-SNE 的一个很大优势是它是一种非线性方法，因此比 PCA 具有更表达能力。
+
+
+    ### 为什么要学习 t-SNE？
+
+
+    有两个原因：
+
+
+    - 1) t-SNE 由 Geoffrey Hinton 共同开发，如你所知，他是深度学习领域的灵魂人物之一。
+
+    - 2) 通过使用 t-SNE，我们可以看到通过更复杂的数学模型如何克服 PCA 的局限性。
+
+
+    PCA 和 t-SNE 之间的一个关键区别（除了 t-SNE是非线性的之外）是 t-SNE 并没有转换模型。
+
+
+    相反，t-SNE 只是直接修改输出以最小化代价函数。
+
+
+    这意味着你不会有任何训练集和测试集，而且在对某些数据进行拟合后无法对数据进行转换。
+
+
+    t-SNE 的工作原理本质是尝试保持每个输入向量之间的距离。
+
+
+    我们将从对称 SNE 开始，因为它在直觉上更符合逻辑。
+
+
+    在原始数据 $X$ 上，我们定义了一个联合概率分布 $p(i,j)$，它等于：
+
+
+    $p(i,j) = \frac{\exp(-|x_i - x_j|^2 /(2s^2))}{\sum_{k \neq m} \exp(-|x_m - x_k|^2
+    /(2s^2))}$
+
+
+    注意，$i$ 和 $j$ 不是像我们在处理 PCA 时那样的维度索引，而是数据集中的第 $i$ 个和第 $j$ 个数据点，即第 $i$ 个和第 $j$ 个样本。
+
+
+    注意它看起来有点像高斯分布。你可以将“s” 思考为一个超参数。它控制着分布的“扩散程度”。
+
+
+    接下来，我们有了低维映射 $Y$，我们以相同的方式定义它，但没有 $s$ 项。
+
+
+    $q(i,j) = \frac{\exp(-|y_i - y_j|^2)}{\sum_{k \neq m} \exp(-|y_m - y_k|^2)}$
+
+
+    注意我们只是设置了 $p(i,i) = q(i,i) = 0$。
+
+
+    我们定义了两个概率分布，一个位于 $X$ 中每对点之间，另一个位于 $Y$ 中每对点之间。我们通常只是随机初始化 $Y$ 中的每个数据点。即：如果我们正在寻找一个
+    2 维表示，我们会创建 $Y$ 为：
+
+
+    `Y = np.random.randn(N, 2)`
+
+
+    一旦完成这些，我们就可以尝试通过优化关联 $p(i,j)$ 和 $q(i,j)$ 的目标函数来寻找更好的 $Y$。如果你不熟悉如何比较概率分布，我们通常使用
+    Kullback-Leibler 散度（KL 散度）：
+
+
+    $C = D_{KL}(P || Q) = \sum p(i,j) \log\left(\frac{p(i,j)}{q(i,j)}\right)$
+
+
+    如果 $P$ 和 $Q$ 完全相同，该值将为 0。我们解决这个问题的方法与解决其他此类类型的方法相同——对目标函数求导并进行梯度下降。注意，在这类模型中我们没有权重——所以我们是关于输出映射
+    $Y$ 求梯度。即：
+
+
+    `Y <- Y - learning_rate * dC/dY`
+
+
+    之前的对称 SNE 有一个问题被称为“拥挤问题”（crowding problem），它阻止了簇的自然形成。t-SNE 对 $Q$ 和 $P$ 使用了稍微不同的分布，这有助于拉开簇。它们的定义如下：
+
+
+    $p(i,j) = \frac{p(i | j) + p(j | i)}{2}$
+
+
+    其中：
+
+
+    $p(j | i) = \frac{\exp(-|x_i - x_j|^2 /(2s^2))}{\sum_{k} \exp(-|x_i - x_k|^2 /(2s^2))}$
+
+
+    注意每个样本都有自己的“s”。尽管根据上面的定义相对简单，但代价函数保持不变。问题在于它是慢的，并且对内存有巨大，因为我们需要为 $i=1..N$ 和 $j=1..N$
+    计算 $q(i,j)$ 和 $p(i,j)$，这自然是 $O(N^2)$ 的。它有一个变体称为 Barnes-Hut，运行时间为 $O(N \log N)$，但仍然对内存有巨大需求。这是
+    SciKit Learn 中使用的默认方法。一种解决方案是仅抽取几百个点并对其执行 t-SNE，或者如果你愿意等待并有足够的内存。
+
+
+    ### 练习
+
+
+    - 在 MNIST 数据集上尝试使用 scikit-learn 中的 t-SNE。
+
+    - 根据上面的定义尝试编写你自己的实现，并利用自动微分。
+
+
+    ## 第 3 章：自动编码器
+
+
+    在本章中，我们将讨论自动编码器。自动编码器其实并不新奇，只是对你已经熟悉的东西进行了一小改动。监督学习模型作为 API 有两个主要功能：`fit` 和 `predict`。通常我们调用神经网络时，会调用
+    `model.fit(X, Y)`，然后在进行预测时调用 `model.predict(X)`。但如果我们只是让神经网络尝试预测它自己呢？所以我们改用 `model.fit(X,
+    X)`。
+
+
+    这正是自动编码器的本质。在我之前的很多课程中，我们做的是分类，但请记住 $X$ 可以是任何实值。所以如果你正在尝试预测一般的实值，可以使用平方误差，它会变得更像回归。你也可以仍然使用交叉熵误差，并将你的输入和输出视为二值，即使这些变量并不是严格的二值。你会看到我们在自动编码器和
+    RBM 中都这样这样做，并且你会发发现这两种误差函数都是有效的。你可以认为像 MNIST 这样的图像具有像素强度：0 表示完全没有强度，1 表示最大强度，因为我们总是通过
+    255 进行缩放。
+
+
+    为了让输出介于 0 和 1 之间，我们将在隐藏层和输出层都使用 sigmoid 函数。我们有时对自动编码器和 RBM 使用的一种轻微修改是权重共享（shared
+    weights）的理念。因此，我们不再在输出层使用另一个权重，而是直接使用第一个权重的转置。
+
+
+    `Z = sigmoid(XW + b)`
+
+    `X_hat = sigmoid(ZW^T + c)`
+
+
+    当我们在观察卷积神经网络时首次遇到权重共享的概念，因为同一个过滤器传递到图像的每个部分。记住，权重共享是一种正则化，因为我们减少了参数的数量，从而减少了过拟合概率。
+
+
+    接下来，回到平方误差目标。如果我们用权重和输入来表示它（忽略偏置），我们得到：
+
+
+    $J = \|X - \sigma(XW)W^T\|^2$
+
+
+    记得我们在做 PCA 的时候，我要求你记住目标函数吗？
+
+
+    $J = \|X - XX^T\|^2$
+
+
+    考虑一下如果我们在这里**不**使用 sigmoid 会发生什么：
+
+
+    $J = \|X - XWW^T\|^2$
+
+
+    我们实际上只是变回 PCA！你实际上可以将自动编码器视为一种非线性 PCA。这是在进行非线性映射，就像 t-SNE 一样。注意这不是全貌，因为我们没有考虑偏置，而且我们没有要求权重的每列长度为
+    1，或者每列正交，或者它们以任何特定方式排序。所以虽然函数形式看起来“像”PCA，但它并没有做 PCA 所做的所有事情。
+
+
+    ### 去噪自动编码器
+
+
+    在本节中，我们将讨论另一种正则化方法。记住，当我们被给一个数据集时，我们不必只在该数据集上进行训练。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 30]
+
+
+    This is almost trivial to do since it''s just adding a bitmask to your input,
+    or in other words, you generate a random vector of 0s and 1s, and do an element
+    by element multiplication on X, to get your new X.
+
+
+    Ex.
+
+
+    ```
+
+    from theano.tensor.shared_randomstreams import RandomStreams
+
+    ng = RandomStreams()
+
+    bitmask = rng.binomial(n=1, p=p, size=X.shape)
+
+    X = bitmask * X
+
+    ```
+
+
+    Typically, we set the probability of generating a 0 to something less than 50%,
+    so perhaps maybe something something like 30%, but researchers have found that
+    up to 50% still provides good results.
+
+
+    # Stacked Autoencoders
+
+
+    In this section we are going to explore what happens when we take a bunch of autoencoders
+    and put them together in layers.
+
+
+    The basic algorithm is this.
+
+
+    You train one autoencoder, and then fix its weights. Then you throw out the last
+    layer, keeping only the input to hidden part.
+
+
+    Next, you take the output of the hidden layer of the first autoencoder, and you
+    make that the input to another autoencoder.
+
+
+    And you just repeat this process for multiple autoencoders.
+
+
+    Ex:'
+  - '[PAGE 31]
+
+
+    Train:
+
+    —o—
+
+    x z x''
+
+
+    Keep:
+
+    —o
+
+    x z
+
+
+    Train another:
+
+    —o—
+
+    z z2 z''
+
+
+    Keep another:
+
+    —o
+
+    z z2
+
+
+    Train another:
+
+    —o—
+
+    z2 z3 z2''
+
+
+    Keep another:
+
+    —o
+
+    z2 z3
+
+
+    Finally, you end up with a stack of autoencoders, each designed simply to learn
+    a more compact version of the previous layer.
+
+
+    What you end up with is a deep unsupervised network:
+
+
+    —o—o—
+
+    z z2 z3'
+  - '[PAGE 32]
+
+
+    Since each time we use an autoencoder, we are trying to get a more compact representation
+    than what we had in the previous layer, we are going to want each layer to be
+    smaller in size than the previous layer.
+
+
+    Note that this doesn''t necessarily have to be the case. We could in fact have
+    a huge number of hidden units in the middle layer. Theoretically, if we had N
+    training samples, and N hidden units, then we could get a perfect reconstruction
+    because each of the N columns of W could be responsible for reproducing a different
+    sample.
+
+
+    You would think that this would lead to severe overfitting, however researchers
+    found it does not overfit, and even a number of hidden units greater than N can
+    work.
+
+
+    In our code, we will use classes and objects to represent the ANN and Autoencoder.
+
+
+    This will help us compartmentalize our code much better, given the fact that we
+    can have an arbitrary number of autoencoders.
+
+
+    We can then simply make the hidden output of each autoencoder the input into the
+    next autoencoder.
+
+
+    # Greedy layer-wise pretraining
+
+
+    The process that we''ve just talked about is called “greedy layer-wise pretraining”.
+
+
+    The reason it is called greedy you should understand if you have ever studied
+    algorithms. Greedy intuitively means you make the best short-sighted decision,
+    which in our case is simply training one layer of the autoencoder.
+
+
+    While it is theoretically not optimal, it actually helps a lot with supervised
+    training, which is the next step, and that is why we call it pretraining.
+
+
+    The last step in the process is to add a logistic regression layer to the end
+    of the stacked autoencoders.'
+  - "[PAGE 33]\n\nOnce you’ve done that, you’ve made what is called a deep neural\
+    \ network.\n\nSince the last layer with logistic regression will have randomized\
+    \ weights, we will still need to do some backpropagation.\n\nBut what we find\
+    \ is that doing backpropagation at this point doesn’t take long, because the autoencoder\
+    \ weights already put us in the neighborhood of the correct answer.\n\nSo we just\
+    \ need to do a few epochs of backpropagation to “fine-tune” the network.\n\nNotice\
+    \ that there are new things here in terms of architecture and functional forms,\
+    \ just a new concept using old ideas.\n\nYou already know how to do all this -\
+    \ build a neural network, build a neural network with multiple layers, do gradient\
+    \ descent in Theano, etc.\n\nIn the code, note that we assume as usual that we\
+    \ have a function getData() that returns some NxD matrix for the input data and\
+    \ an Nx1 vector for the output targets.\n\nWe will load training data and test\
+    \ data, so we’ll have Xtrain of size NTrainXD, Ytrain of size NTrainX1, Xtest\
+    \ of size NtestXD, and Ytest of size NtestX1.\n\nNote that there is code for both\
+    \ the squared error objective and cross-entropy objective. Typically we use cross-entropy\
+    \ for 0/1 targets, but you’ll see that it works even better than squared error.\
+    \ We will explain why later in the book.\n\nLet’s see the code:\n\n```\ndef relu(x):\n\
+    \  return x * (x > 0)\n```\n\n```\ndef error_rate(p, t):\n  return np.mean(p !=\
+    \ t)\n```"
+  - "[PAGE 34]\n\n```\ndef init_weights(shape):\n    return np.random.randn(*shape)\
+    \ / np.sqrt(sum(shape))\n```\n\n```\nimport numpy as np\nimport theano\nimport\
+    \ theano.tensor as T\nimport matplotlib.pyplot as plt\n```\n\n```\nfrom sklearn.utils\
+    \ import shuffle\n\nclass AutoEncoder(object):\n    def __init__(self, M):\n \
+    \       self.M = M\n```\n\n```\ndef fit(self, X, learning_rate=0.5, mu=0.99, epochs=1,\
+    \ batch_sz=100, show_fig=False):\n    N, D = X.shape\n    n_batches = N / batch_sz\n\
+    \n    W0 = init_weights(D, self.M)\n    self.W = theano.shared(W0)\n    self.bh\
+    \ = theano.shared(np.zeros(self.M))\n    self.bo = theano.shared(np.zeros(D))\n\
+    \    self.params = [self.W, self.bh, self.bo]\n    self.forward_params = [self.W,\
+    \ self.bh]\n```\n\n```\nself.dW = theano.shared(np.zeros(W0.shape))\nself.dbh\
+    \ = theano.shared(np.zeros(self.M))\nself.dbo = theano.shared(np.zeros(D))\n```"
+  - '[PAGE 35]
+
+
+    ```
+
+    self.dparams = [self.dW, self.dbh, self.dbo]
+
+    self.forward_dparams = [self.dW, self.dbh]
+
+
+    X_in = T.matrix(''X_%s'' % self.id)
+
+    X_hat = self.forward_output(X_in)
+
+
+    # attach it to the object so it can be used later
+
+    # must be sigmoid because the output is also a sigmoid
+
+    H = T.nnet.sigmoid(X_in.dot(self.W) + self.dbh)
+
+    self.hidden_op = theano.function(
+
+    inputs=[X_in],
+
+    outputs=H,
+
+    )
+
+
+    # cost = ((X_in - X_hat) * (X_in - X_hat)).sum() / N
+
+    cost = -(X_in * T.log(X_hat) + (1 - X_in) * T.log(1 - X_hat)).sum() / N
+
+    cost_op = theano.function(
+
+    inputs=[X_in],
+
+    outputs=cost,
+
+    )
+
+
+    updates = [
+
+    (p, p + mu*dp - learning_rate*T.grad(cost, p)) for p, dp in zip(self.params, self.dparams)
+
+    ] + [
+
+    (dp, mu*dp - learning_rate*T.grad(cost, p)) for p, dp in zip(self.params, self.dparams)
+
+    ]
+
+    train_op = theano.function(
+
+    inputs=[X_in],
+
+    updates=updates,
+
+    )
+
+    ```'
+  - "[PAGE 36]\n\n```\ncosts = []\nfor i in xrange(epochs):\n    print \"epoch:\"\
+    , i\n    X = shuffle(X)\nfor j in xrange(n_batches):\n    batch = X[j*batch_sz:(j*batch_sz\
+    \ + batch_sz)]\n    train_op(batch)\n    the_cost = cost_op(X) # technically we\
+    \ could also get the cost for Xtest\n    print \"j / n_batches:\", j, \"/\", n_batches,\
+    \ \"cost:\", the_cost\n    costs.append(the_cost)\n```\n\n```\nif show_fig:\n\
+    \    plt.plot(costs)\nplt.show()\n```\n\n```\ndef forward_hidden(self, X):\n \
+    \   Z = T.nnet.sigmoid(X.dot(self.W) + self.bh)\n    return Z\n```\n\n```\ndef\
+    \ forward_output(self, X):\n    Z = self.forward_hidden(X)\n    Y = T.nnet.sigmoid(Z.dot(self.W.T)\
+    \ + self.bo)\n    return Y\n```\n\n```\n@staticmethod\ndef createFromArrays(W,\
+    \ bh, bo):\n    ae = AutoEncoder(W.shape[1])\n    ae.W = theano.shared(W)\n  \
+    \  ae.bh = theano.shared(bh)\n    ae.bo = theano.shared(bo)\n    ae.params = [ae.W,\
+    \ ae.bh, ae.bo]\n    ae.forward_params = [ae.W, ae.bh]\n```"
+  - "[PAGE 37]\n\n```\nclass DNN(object):\ndef __init__(self, hidden_layer_sizes,\
+    \ UnsupervisedModel=AutoEncoder):\n    self.hidden_layers = []\n    for M in hidden_layer_sizes:\n\
+    \        ae = UnsupervisedModel(M)\n        self.hidden_layers.append(ae)\n```\n\
+    \n```\ndef fit(self, X, Y, Xtest, Ytest, pretrain=True, learning_rate=0.01, mu=0.99,\
+    \ reg=0.1,\nepochs=1, batch_sz=100):\n    # greedy layer-wise training of autoencoders\n\
+    \    pretrain_epochs = 1\n    if not pretrain:\n        pretrain_epochs = 0\n\n\
+    \    current_input = X\n    for ae in self.hidden_layers:\n        ae.fit(current_input,\
+    \ epochs=pretrain_epochs)\n\n    # create current_input for the next layer\n \
+    \   current_input = ae.hidden_op(current_input)\n\n    # initialize logistic regression\
+    \ layer\n    N = len(Y)\n    K = len(set(Y))\n    W0 = init_weights(self.hidden_layers[-1].M,\
+    \ K)\n    self.W = theano.shared(W0)\n    self.b = theano.shared(np.zeros(K))\n\
+    \n    self.params = [self.W, self.b]\n```"
+  - '[PAGE 38]
+
+
+    ```
+
+    for ae in self.hidden_layers:
+
+    self.params += ae.forward_params
+
+
+    # for momentum
+
+    self.dW = theano.shared(np.zeros(W0.shape))
+
+    self.db = theano.shared(np.zeros(K))
+
+    self.dparams = [self.dW, self.db]
+
+    for ae in self.hidden_layers:
+
+    self.dparams += ae.forward_dparams
+
+
+    X_in = T.matrix(''X_in'')
+
+    targets = T.vector(''Targets'')
+
+    pY = self.forward(X_in)
+
+
+    # squared_magnitude = [(p*p).sum(p) for p in self.params]
+
+    # reg_cost = T.sum(squared_magnitude)
+
+    cost = -T.mean(T.log(PY[T.arange(p.shape[0]), targets])) )+# reg*reg_cost
+
+    prediction = self.predict(X_in)
+
+    cost_predict_op = theano.function(
+
+    inputs=[X_in, targets],
+
+    outputs=[cost, prediction],
+
+    )
+
+
+    updates = [
+
+    (p, p + mu*dp - learning_rate*T.grad(cost, p)) for p, dp in zip(self.params, self.dparams)
+
+    ] + [
+
+    (mu, mu*dp - learning_rate*T.grad(cost, p)) for p, dp in zip(self.params, self.dparams)
+
+    ]
+
+
+    train_op = theano.function(
+
+    inputs=[X_in, targets],
+
+    ```'
+  md: "\nThis is almost trivial to do since it's just adding a bitmask to your input,\
+    \ or in other words, you generate a random vector of 0s and 1s, and do an element\
+    \ by element multiplication on X, to get your new X.\n\nEx.\n\n```\nfrom theano.tensor.shared_randomstreams\
+    \ import RandomStreams\nng = RandomStreams()\nbitmask = rng.binomial(n=1, p=p,\
+    \ size=X.shape)\nX = bitmask * X\n```\n\nTypically, we set the probability of\
+    \ generating a 0 to something less than 50%, so perhaps maybe something something\
+    \ like 30%, but researchers have found that up to 50% still provides good results.\n\
+    \n# Stacked Autoencoders\n\nIn this section we are going to explore what happens\
+    \ when we take a bunch of autoencoders and put them together in layers.\n\nThe\
+    \ basic algorithm is this.\n\nYou train one autoencoder, and then fix its weights.\
+    \ Then you throw out the last layer, keeping only the input to hidden part.\n\n\
+    Next, you take the output of the hidden layer of the first autoencoder, and you\
+    \ make that the input to another autoencoder.\n\nAnd you just repeat this process\
+    \ for multiple autoencoders.\n\nEx:\n\nTrain:\n—o—\nx z x'\n\nKeep:\n—o\nx z\n\
+    \nTrain another:\n—o—\nz z2 z'\n\nKeep another:\n—o\nz z2\n\nTrain another:\n\
+    —o—\nz2 z3 z2'\n\nKeep another:\n—o\nz2 z3\n\nFinally, you end up with a stack\
+    \ of autoencoders, each designed simply to learn a more compact version of the\
+    \ previous layer.\n\nWhat you end up with is a deep unsupervised network:\n\n\
+    —o—o—\nz z2 z3\n\nSince each time we use an autoencoder, we are trying to get\
+    \ a more compact representation than what we had in the previous layer, we are\
+    \ going to want each layer to be smaller in size than the previous layer.\n\n\
+    Note that this doesn't necessarily have to be the case. We could in fact have\
+    \ a huge number of hidden units in the middle layer. Theoretically, if we had\
+    \ N training samples, and N hidden units, then we could get a perfect reconstruction\
+    \ because each of the N columns of W could be responsible for reproducing a different\
+    \ sample.\n\nYou would think that this would lead to severe overfitting, however\
+    \ researchers found it does not overfit, and even a number of hidden units greater\
+    \ than N can work.\n\nIn our code, we will use classes and objects to represent\
+    \ the ANN and Autoencoder.\n\nThis will help us compartmentalize our code much\
+    \ better, given the fact that we can have an arbitrary number of autoencoders.\n\
+    \nWe can then simply make the hidden output of each autoencoder the input into\
+    \ the next autoencoder.\n\n# Greedy layer-wise pretraining\n\nThe process that\
+    \ we've just talked about is called “greedy layer-wise pretraining”.\n\nThe reason\
+    \ it is called greedy you should understand if you have ever studied algorithms.\
+    \ Greedy intuitively means you make the best short-sighted decision, which in\
+    \ our case is simply training one layer of the autoencoder.\n\nWhile it is theoretically\
+    \ not optimal, it actually helps a lot with supervised training, which is the\
+    \ next step, and that is why we call it pretraining.\n\nThe last step in the process\
+    \ is to add a logistic regression layer to the end of the stacked autoencoders.\n\
+    \nOnce you’ve done that, you’ve made what is called a deep neural network.\n\n\
+    Since the last layer with logistic regression will have randomized weights, we\
+    \ will still need to do some backpropagation.\n\nBut what we find is that doing\
+    \ backpropagation at this point doesn’t take long, because the autoencoder weights\
+    \ already put us in the neighborhood of the correct answer.\n\nSo we just need\
+    \ to do a few epochs of backpropagation to “fine-tune” the network.\n\nNotice\
+    \ that there are new things here in terms of architecture and functional forms,\
+    \ just a new concept using old ideas.\n\nYou already know how to do all this -\
+    \ build a neural network, build a neural network with multiple layers, do gradient\
+    \ descent in Theano, etc.\n\nIn the code, note that we assume as usual that we\
+    \ have a function getData() that returns some NxD matrix for the input data and\
+    \ an Nx1 vector for the output targets.\n\nWe will load training data and test\
+    \ data, so we’ll have Xtrain of size NTrainXD, Ytrain of size NTrainX1, Xtest\
+    \ of size NtestXD, and Ytest of size NtestX1.\n\nNote that there is code for both\
+    \ the squared error objective and cross-entropy objective. Typically we use cross-entropy\
+    \ for 0/1 targets, but you’ll see that it works even better than squared error.\
+    \ We will explain why later in the book.\n\nLet’s see the code:\n\n```\ndef relu(x):\n\
+    \  return x * (x > 0)\n```\n\n```\ndef error_rate(p, t):\n  return np.mean(p !=\
+    \ t)\n```\n\n```\ndef init_weights(shape):\n    return np.random.randn(*shape)\
+    \ / np.sqrt(sum(shape))\n```\n\n```\nimport numpy as np\nimport theano\nimport\
+    \ theano.tensor as T\nimport matplotlib.pyplot as plt\n```\n\n```\nfrom sklearn.utils\
+    \ import shuffle\n\nclass AutoEncoder(object):\n    def __init__(self, M):\n \
+    \       self.M = M\n```\n\n```\ndef fit(self, X, learning_rate=0.5, mu=0.99, epochs=1,\
+    \ batch_sz=100, show_fig=False):\n    N, D = X.shape\n    n_batches = N / batch_sz\n\
+    \n    W0 = init_weights(D, M)\n    self.W = theano.shared(W0)\n    self.bh = theano.shared(np.zeros(M))\n\
+    \    self.bo = theano.shared(np.zeros(D))\n    self.params = [self.W, self.bh,\
+    \ self.bo]\n    self.forward_params = [self.W, self.bh]\n\n    self.dW = theano.shared(np.zeros(W0.shape))\n\
+    \    self.dbh = theano.shared(np.zeros(M))\n    self.dbo = theano.shared(np.zeros(D))\n\
+    \    self.dparams = [self.dW, self.dbh, self.dbo] # Inferred from context logic\n\
+    \n    X_in = T.matrix('X_%s' % self.id)\n    X_hat = self.forward_output(X_in)\n\
+    \n    # attach it to the object so it can be used later\n    # must be sigmoid\
+    \ because the output is also a sigmoid\n    H = T.nnet.sigmoid(X_in.dot(self.W)\
+    \ + self.dbh)\n    self.hidden_op = theano.function(\n    inputs=[X_in],\n   \
+    \ outputs=H,\n    )\n\n    # cost = ((X_in - X_hat) * (X_in - X_hat)).sum() /\
+    \ N\n    cost = -(X_in * T.log(X_hat) + (1 - X_in) * T.log(1 - X_hat)).sum() /\
+    \ N\n    cost_op = theano.function(\n    inputs=[X_in],\n    outputs=cost,\n \
+    \   )\n\n    updates = [\n    (p, p + mu*dp - learning_rate*T.grad(cost, p)) for\
+    \ p, dp in zip(self.params, self.dparams)\n    ] + [\n    (dp, mu*dp - learning_rate*T.grad(cost,\
+    \ p)) for p, dp in zip(self.params, self.dparams) # Note: OCR error corrected\
+    \ 'mu'\n    ]\n    train_op = theano.function(\n    inputs=[X_in],\n    updates=updates,\n\
+    \    )\n\n```\ncosts = []\nfor i in xrange(epochs):\n    print \"epoch:\", i\n\
+    \    X = shuffle(X)\nfor j in xrange(n_batches):\n    batch = X[j*batch_sz:(j*batch_sz\
+    \ + batch_sz)]\n    train_op(batch)\n    the_cost = cost_op(X) # technically we\
+    \ could get the cost for Xtest\n    print \"j / n_batches:\", j, \"/\", n_batches,\
+    \ \"cost:\", the_cost\n    costs.append(the_cost)\n```\n```\nif show_fig:\n  \
+    \  plt.plot(costs)\n    plt.show()\n```\n\n```\ndef forward_hidden(self, X):\n\
+    \    Z = T.nnet.sigmoid(X.dot(self.W) + self.bh)\n    return Z\n```\n\n```\ndef\
+    \ forward_output(self, X):\n    Z = self.forward_hidden(X)\n    Y = T.nnet.sigmoid(Z.dot(self.W.T)\
+    \ + self.bo)\n    return Y\n```\n\n```\n@staticmethod\ndef createFromArrays(W,\
+    \ bh, bo):\n    ae = AutoEncoder(W.shape[1])\n    ae.W = theano.shared(W)\n  \
+    \  ae.bh = theano.shared(bh)\n    ae.bo = theano.shared(bo)\n    ae.params = [ae.W,\
+    \ ae.bh, ae.bo]\n    ae.forward_params = [ae.W, ae.bh]\n```\n\n```\nclass DNN(object):\n\
+    \    def __init__(self, hidden_layer_sizes, UnsupervisedModel=AutoEncoder):\n\
+    \        self.hidden_layers = []\n        for M in hidden_layer_sizes:\n     \
+    \       ae = UnsupervisedModel(M)\n            self.hidden_layers.append(ae)\n\
+    ```\n\n```\ndef fit(self, X, Y, Xtest, Ytest, pretrain=True, learning_rate=0.01,\
+    \ mu=0.99, reg=0.1,\nepochs=1, batch_sz=100):\n    # greedy layer-wise training\
+    \ of autoencoders\n    pretrain_epochs = 1\n    if not pretrain:\n        pretrain_epochs\
+    \ = 0\n\n    current_input = X\n    for ae in self.hidden_layers:\n        ae.fit(current_input,\
+    \ epochs=pretrain_epochs)\n\n    # create current_input for the next layer\n \
+    \   current_input = ae.hidden_op(current_input)\n\n    # initialize logistic regression\
+    \ layer\n    N = len(Y)\n    K = len(set(Y))\n    W0 = init_weights(self.hidden_layers[-1].M,\
+    \ K)\n    self.W = theano.shared(W0)\n    self.b = theano.shared(np.zeros(K))\n\
+    \n    self.params = [self.W, self.b]\n```\n\n```\nfor ae in self.hidden_layers:\n\
+    \    self.params += ae.forward_params\n\n# for momentum\nself.dW = theano.shared(np.zeros(W0.shape))\n\
+    self.db = theano.shared(np.zeros(K))\nself.dparams = [self.dW, self.db]\nfor ae\
+    \ in self.hidden_layers:\n    self.dparams += ae.forward_dparams\n\nX_in = T.matrix('X_in')\n\
+    targets = T.vector('Targets')\npY = self.forward(X_in)\n\n# squared_magnitude\
+    \ = [(p*p).sum(p) for p in self.params]\n# reg_cost = T.sum(squared_magnitude)\n\
+    cost = -T.mean(T.log(pY[T.arange(pY.shape[0]), targets]))+# reg*reg_cost\nprediction\
+    \ = self.predict(X_in)\ncost_predict_op = theano.function(\ninputs=[X_in, targets],\n\
+    outputs=[cost, prediction],\n)\n```\n"
+  mdcn: "\n这几乎是轻而易举的，因为只需要给输入添加一个位掩码（bitmask），换句话说，你生成一个由 0 和 1 组成的随机向量，并对 X 进行逐元素乘法，从而得到新的\
+    \ X。\n\n示例：\n\n```\nfrom theano.tensor.shared_randomstreams import RandomStreams\n\
+    ng = RandomStreams()\nbitmask = rng.binomial(n=1, p=p, size=X.shape)\nX = bitmask\
+    \ * X\n```\n\n通常，我们将生成 0 的概率设置为小于 50% 的值，也许可能是 30% 左右，但研究人员发现，高达 50% 仍然能获得良好的的结果。\n\
+    \n# 堆叠自动编码器 (Stacked Autoencoders)\n\n在本节中，我们将探索当我们取一组自动编码器并将它们分层组合时会发生什么。\n\n\
+    基本算法如下：\n\n你训练一个自动编码器，然后固定它的权重。接着丢弃最后一层，只保留到隐藏部分的输入。\n\n接下来，你取第一个自动编码器的隐藏层输出，并将其作为另一个自动编码器的输入。\n\
+    \n你对多个自动编码器重复此过程。\n\n示例：\n\n训练：\n—o—\nx z x'\n\n保留：\n—o\nx z\n\n训练另一个：\n—o—\n\
+    z z2 z'\n\n保留另一个：\n—o\nz z2\n\n训练另一个：\n—o—\nz2 z3 z2'\n\n保留另一个：\n—o\nz2 z3\n\n\
+    最后，你得到了一堆堆叠的自动编码器，每个自动编码器的设计仅仅是为了学习前一层更紧凑的版本。\n\n你最终得到的是一个深度无监督网络：\n\n—o—o—\n\
+    z z2 z3\n\n由于我们每次使用自动编码器时，都试图获得一个比上一层更紧凑的表示，因此我们希望每一层的尺寸都比前一层更小。\n\n注意，这并非必须如此。事实上，我们可以在中间层拥有大量的隐藏单元单元。从理论上讲，如果我们有\
+    \ N 个训练样本和 N 个隐藏单元，那么我们可以获得完美的重建，因为 W 的 N 列中的每一列都可以负责复制一个不同的样本。\n\n你可能会认为这会导致严重的过拟合，然而研究人员发现它并不会过拟合，即使隐藏单元的数量大于\
+    \ N 也可以工作。\n\n在我们的代码中，我们将使用类和对象来表示人工神经网络（ANN）和自动编码器。\n\n这将有助于我们更好地模块化代码，考虑到我们可以拥有任意数量的自动编码器。\n\
+    \n然后我们可以简单地将每个自动编码器的隐藏输出作为下一个自动编码器的输入。\n\n# 贪婪逐层预训练 (Greedy layer-wise pretraining)\n\
+    \n我们刚刚讨论的过程被称为“贪婪逐层预训练”。\n\n如果你学习过算法，就应该理解为什么被称为“贪婪”。直观上，贪婪意味着你做出最好的短视决策，在我们的案例中这仅仅是训练自动编码器的一层。\n\
+    \n虽然这在理论上不是最优的，但它实际上对下一步——监督训练有很大帮助，这就是我们称其为预训练的原因。\n\n该过程的最后一步是在堆叠自动编码器的末尾添加一个逻辑回归层。\n\
+    \n一旦你完成了这一步，你就得到了所谓的深度神经网络。\n\n由于带有逻辑回归的最后一层权重是随机的，我们仍然需要进行一些反传播。\n\n但我们发现，在此时进行反传播并不花费长时间，因为自动编码器的权重已经把我们带了正确答案的邻域。\n\
+    \n所以我们只需要进行几次轮次（epochs）的反传播来“微调”网络。\n\n注意，在架构和函数形式方面这里有新东西，只不过是使用旧思想的新概念。\n\n\
+    你已经知道如何做这这一切了——构建神经网络、构建多层神经网络、在 Theano 中进行梯度下降等。\n\n在代码中，请注意我们像常一样假设有一个函数 `getData()`，它返回一个用于输入数据的\
+    \ N×D 矩阵和一个用于输出目标的 N×1 向量。\n\n我们将加载训练数据和测试数据，因此我们将有大小为 NTrainXD 的 Xtrain、大小为 NTrainX1\
+    \ 的 Ytrain、大小为 NtestXD 的 Xtest 以及大小为 NtestX1 的 Ytest。\n\n注意，代码中包含了平方误差目标和交叉熵目标。通常我们对\
+    \ 0/1 目标使用交叉熵，但你会发现它的效果甚至比平方误差更好。我们将在书的后面解释原因。\n\n让我们来看看代码：\n\n```\ndef relu(x):\n\
+    \  return x * (x > 0)\n```\n\n```\ndef error_rate(p, t):\n  return np.mean(p !=\
+    \ t)\n```\n\n```\ndef init_weights(shape):\n    return np.random.randn(*shape)\
+    \ / np.sqrt(sum(shape))\n```\n\n```\nimport numpy as np\nimport theano\nimport\
+    \ theano.tensor as T\nimport matplotlib.pyplot as plt\n```\n\n```\nfrom sklearn.utils\
+    \ import shuffle\n\nclass AutoEncoder(object):\n    def __init__(self, M):\n \
+    \       self.M = M\n```\n\n```\ndef fit(self, X, learning_rate=0.5, mu=0.99, epochs=1,\
+    \ batch_sz=100, show_fig=False):\n    N, D = X.shape\n    n_batches = N / batch_sz\n\
+    \n    W0 = init_weights(D, M)\n    self.W = theano.shared(W0)\n    self.bh = theano.shared(np.zeros(M))\n\
+    \    self.bo = theano.shared(np.zeros(D))\n    self.params = [self.W, self.bh,\
+    \ self.bo]\n    self.forward_params = [self.W, self.bh]\n\n    self.dW = theano.shared(np.zeros(W0.shape))\n\
+    \    self.dbh = theano.shared(np.zeros(M))\n    self.dbo = theano.shared(np.zeros(D))\n\
+    \    self.dparams = [self.dW, self.dbh, self.dbo] # 从上下文逻辑推断\n\n    X_in = T.matrix('X_%s'\
+    \ % self.id)\n    X_hat = self.forward_output(X_in)\n\n    # 将其附加到对象以便以后使用\n \
+    \   # 必须是 sigmoid，因为输出也是 sigmoid\n    H = T.nnet.sigmoid(X_in.dot(self.W) + self.dbh)\n\
+    \    self.hidden_op = theano.function(\n    inputs=[X_in],\n    outputs=H,\n \
+    \   )\n\n    # cost = ((X_in - X_hat) * (X_in - X_hat)).sum() / N\n    cost =\
+    \ -(X_in * T.log(X_hat) + (1 - X_in) * T.log(1 - X_hat)).sum() / N\n    cost_op\
+    \ = theano.function(\n    inputs=[X_in],\n    outputs=cost,\n    )\n\n    updates\
+    \ = [\n    (p, p + mu*dp - learning_rate*T.grad(cost, p)) for p, dp in zip(self.params,\
+    \ self.dparams)\n    ] + [\n    (dp, mu*dp - learning_rate*T.grad(cost, p)) for\
+    \ p, dp in zip(self.params, self.dparams) # 注意：OCR 错误修正了 'mu'\n    ]\n    train_op\
+    \ = theano.function(\n    inputs=[X_in],\n    updates=updates,\n    )\n\n```\n\
+    costs = []\nfor i in xrange(epochs):\n    print \"epoch:\", i\n    X = shuffle(X)\n\
+    for j in xrange(n_batches):\n    batch = X[j*batch_sz:(j+1)*batch_sz]\n    train_op(batch)\n\
+    \    cost = cost_op(batch)\n    print \"j:\", j, \"/\", n_batches, \"cost:\",\
+    \ cost\n    costs.append(cost)\nif show_fig:\n    plt.plot(costs)\n    plt.show()\n\
+    ```\n\n```\ndef forward_hidden(self, X):\n    Z = T.nnet.sigmoid(X.dot(self.W)\
+    \ + self.dbh)\n    return Z\n```\n\n```\ndef forward_output(self, X):\n    Z =\
+    \ self.forward_hidden(X)\n    Y = T.nnet.sigmoid(Z.dot(self.W) + self.bo)\n  \
+    \  return Y\n```\n\n```\n@staticmethod\ndef createFromArrays(W, bh, bo):\n   \
+    \ ae = AutoEncoder(W.shape[1])\n    ae.W = theano.shared(W)\n    ae.bh = theano.shared(bh)\n\
+    \    ae.bo = theano.shared(bo)\n    ae.params = [ae.W, ae.bh, ae.bo]\n    ae.forward_params\
+    \ = [ae.W, ae.bh]\n```\n\n```\nclass DNN(object):\n    def __init__(self, hidden_layer_sizes,\
+    \ UnsupervisedModel=AutoEncoder):\n        self.hidden_layers = []\n        for\
+    \ M in hidden_layer_sizes:\n            ae = UnsupervisedModel(M)\n          \
+    \  self.hidden_layers.append(ae)\n\n    def fit(self, X, Y, Xtest, Ytest, pretrain=True,\
+    \ learning_rate=0.01, mu=0.99, reg=0.1, epochs=1, batch_sz=100):\n        # 自动编码器的逐层训练\n\
+    \        pretrain_epochs = 1\n        if not pretrain:\n            pretrain_epochs\
+    \ = 0\n\n        current_input = X\n        for ae in self.hidden_layers:\n  \
+    \          ae.fit(current_input, epochs=pretrain_epochs)\n            # 为下一层创建\
+    \ current_input\n            current_input = ae.forward_op(current_input)\n\n\
+    \        # 初始化逻辑回归层\n        N = len(Y)\n        K = len(set(Y))\n        W0 =\
+    \ init_weights(self.hidden_layers[-1].M, K)\n        self.W = theano.shared(W0)\n\
+    \        self.b = theano.shared(np.zeros(K))\n\n        self.params = [self.W,\
+    \ self.b]\n        for ae in self.hidden_layers:\n            self.params += ae.forward_params\n\
+    \n        # 动量\n        self.dW = theano.shared(np.zeros(W0.shape))\n        self.db\
+    \ = theano.shared(np.zeros(K))\n        self.dparams = [self.dW, self.db]\n  \
+    \      for ae in self.hidden_layers:\n            self.dparams += ae.forward_dparams\n\
+    \n        X_in = T.matrix('X_in')\n        targets = T.vector('Targets')\n   \
+    \     pY = self.forward(X_in)\n\n        # squared_magnitude = [(p*p).sum(p) for\
+    \ p in self.params]\n        # reg_cost = T.sum(squared_magnitude)\n        cost\
+    \ = -T.mean(T.log(pY[T.arange(pY.shape[0]), targets]))+# reg*reg_cost\n      \
+    \  prediction = self.predict(X_in)\n        cost_predict_op = theano.function(\n\
+    \        inputs=[X_in, targets],\n        outputs=[cost, prediction],\n      \
+    \  )\n```\n"
+  merge: 0
+- raw:
+  - '[PAGE 39]
+
+
+    ```
+
+    updates=updates
+
+    ```
+
+
+    ```
+
+    def predict(self, X):
+
+    return T.argmax(self.forward(X), axis=1)
+
+    ```
+
+
+    ```
+
+    def forward(self, X):
+
+    current_input = X
+
+    for ae in self.hidden_layers:
+
+    Z = ae.forward_hidden(current_input)
+
+    current_input = Z
+
+    ```
+
+
+    ```
+
+    # logistic layer
+
+    Y = T.nnet.softmax(T.dot(current_input, self.W) + self.b)
+
+    ```'
+  - "[PAGE 40]\n\n```\nreturn Y\n```\n\n```\ndef main():\n    Xtrain, Ytrain, Xtest,\
+    \ Ytest = getKaggleMNIST()\n    # TRY BOTH!\n    # dnn = DNN([1000, 750, 500])\n\
+    \    dnn.fit(Xtrain, Ytrain, Xtest, Ytest, epochs=3)\n    # vs\n    dnn = DNN([1000,\
+    \ 750, 500])\n    dnn.fit(Xtrain, Ytrain, Xtest, Ytest, pretrain=False, epochs=10)\n\
+    ```\n\n```\nif __name__ == '__main__':\n    main()\n```\n\n# Exercises\n\nAdd\
+    \ denoising to the autoencoder.\n\n# Cross-Entropy vs. KL Divergence\n\nYou have\
+    \ already seen that KL Divergence can be used to compare the similarity of probability\
+    \ distributions, as we did with t-SNE.\n\nOne identity to remember is that cross-entropy\
+    \ is equivalent to KL divergence up to an additive constant.\n\ni.e."
+  - '[PAGE 41]
+
+
+    H(P, Q) = cross-entropy between P and Q
+
+    H(P) = entropy of P
+
+    D_{KL}(P || Q) = KL divergence between P and Q
+
+
+    H(P,Q) = -sum[i]{ P(i) logQ(i) }
+
+    H(P) = -sum[i]{ P(i) logP(i) }
+
+    D_{KL}(P || Q) = sum[i]{ P(i)log( P(i) / Q(i) }
+
+
+    We can show that:
+
+
+    H(P,Q) = H(P) + D_{KL}(P || Q)
+
+
+    Why is this significant?
+
+
+    The derivative of a constant is 0. Therefore, the gradient, and thus gradient
+    descent, is the same for both cross-entropy and KL divergence.
+
+
+    So when we use cross-entropy on the autoencoder, what we''re really saying is
+    the distribution of the input X is the target distribution, and the distribution
+    of the reconstruction of X is the output distribution, and we would like them
+    to be the same.
+
+
+    # Summary
+
+
+    The MOST important concept to get out of this is that for the single autoencoder,
+    the “Z” is a “low-dimensional representation” of the input data X. We saw this
+    same concept with PCA. We will see it again with RBMs.'
+  - '[PAGE 42]
+
+
+    <!-- no content -->'
+  - '[PAGE 43]
+
+
+    # # Chapter 4: Restricted Boltzmann Machines and Deep Belief Networks
+
+
+    In this chapter we are going to talk about Restricted Boltzmann Machines and deep
+    belief networks, which is just stacked Restricted Boltzmann Machines - used in
+    exactly the same way we stacked autoencoders.
+
+
+    It’s interesting to look back at what we’ve learned at this point.
+
+
+    When we did linear regression - we were able to calculate the derivative of the
+    cost, set it to 0, and solve for the weights to get the best weights.
+
+
+    With logistic regression and neural networks, you know that we can’t directly
+    solve for the weights, so we take the derivative of the cost with respect to the
+    weights, and take small steps in that direction.
+
+
+    With RBMs, we enter an even more difficult situation. We can’t even calculate
+    the derivative, so instead we try to estimate it approximately using Gibbs sampling,
+    which is a special case of Markov Chain Monte Carlo.
+
+
+    To understand RBMs, we first have to talk a little bit about Markov random fields.
+
+
+    A Markov random field is just a graph of states, where each node is a state, which
+    is a random variable.
+
+
+    A B
+
+    0—
+
+    |V|
+
+    |/
+
+    0—0
+
+    C D
+
+
+    P(A, B, C, D)'
+  - '[PAGE 44]
+
+
+    A Markov random field represents a joint probability distribution, i.e. the probability
+    of all those random variables.
+
+
+    2 things to note about the MRF:
+
+
+    First: that the Markov property holds, i.e.:
+
+
+    P(s(t) | s(t-1), s(t-2), ...) = P(s(t) | s(t-1))
+
+
+    The next state only depends on the current state, and not on any states before
+    that.
+
+
+    Second: the graph is undirected, so you can move along any edge in any direction.
+
+
+    This brings us to the concept of Boltzmann machines.
+
+
+    Boltzmann machines are Markov random fields where everything is connected to everything.
+
+
+    The idea is you define an energy on the network, and your goal is to find the
+    minimum energy state, much like how physical systems do.
+
+
+    In fact, the Boltzmann distribution, which is the distribution we use when we
+    talk about Boltzmann machines and restricted Boltzmann machines, is from statistical
+    mechanics.
+
+
+    The energy is defined as:
+
+
+    E(s) = -( sum[i,j]{ w(i,j)s(i)s(j) } + sum[i]{ b(i)s(i) }
+
+
+    It’s not super important since we won’t be using this exact form, but recognize
+    the “structure” here. There’s a 2-D weight that gets multiplied by “interaction
+    terms” and a 1-D linear weight.
+
+
+    Now we can go from Boltzmann machines to restricted Boltzmann machines.'
+  - '[PAGE 45]
+
+
+    Here instead of everything being connected to everything, we instead have a “bipartite
+
+    graph”.
+
+
+    ![](img/6a1ceac8fa2fd0cda459693f13163e4e_45_0.png)
+
+
+    This means that everything on the left is connected to everything on the right,
+    and vice
+
+    versa.
+
+
+    We usually label the nodes on the left the visible units (v), and the nodes on
+    the right the
+
+    hidden units (h). This gives us a latent variable model, just like with PCA and
+
+    autoencoders.
+
+
+    Note that the Markov property still holds. What this means in this graph is that
+    we have
+
+    conditional independence. So the probability p(h(i) | v) is independent of the
+    probability
+
+    p(h(j) | v).
+
+
+    Similarly, if you go in the other direction (remember, this graph is undirected),
+    the
+
+    proability p(v(i) | h) is independent of the probability p(v(j) | h).
+
+
+    With RBMs we technically assume both the visible units and hidden units are binary
+    units.
+
+
+    This is why we used the sigmoid for autoencoders also, and why we only use the
+    sigmoid
+
+    uniformly throughout this book.
+
+
+    We know that this works just fine for MNIST, and in fact a lot of data is binary.
+    All
+
+    categorical variables, since we use one-hot encoding, are binary, as are bag of
+    words
+
+    models, so basically anything to do with NLP will work here too.'
+  - '[PAGE 46]
+
+
+    There is some material out there that goes over at a high level how you could
+    have Gaussian units, but these other formulations have been reported to have stability
+    issues, so we won''t cover them here.
+
+
+    We are ready to talk about the math behind RBMs.
+
+
+    Note that this is very similar to the regular Boltzmann machine, there is one
+    term that depends on the interaction of 2 different nodes, and then a bias-like
+    term that depends only on one node.
+
+
+    The total energy is E(v,h) = -bᵀv - cᵀh - vᵀh
+
+
+    So if v is Dx1 and h is Mx1, then W must be DxM, which is what we usually have
+    in a neural network.
+
+
+    b is Dx1 and c is Mx1 to give us a valid dot product.
+
+
+    Note that in terms of these variables, the conditional probabilities we talked
+    about earlier are:
+
+
+    p(h | v) = sigmoid(Wᵀv + c) (forward direction)
+
+    p(v | h) = sigmoid(Wh + b) (backward direction)
+
+
+    Like autoencoders, we again use shared weights.
+
+
+    Now that we have an expression for our energy function, we can now define the
+    joint probability of v and h.
+
+
+    P(v,h) = exp(-E(v,h)) / Z
+
+
+    Where:'
+  - '[PAGE 47]
+
+
+    ```
+
+    Z = sum{ exp(-E(v,h) }
+
+    ```
+
+
+    We call Z the partition function, which just ensures that all the probabilities
+    add up to 1.
+
+
+    Note that this itself is intractable to calculate, because the summations mean
+    summing over all possible values of v and h. Since they are both binary variables,
+    that is O(2^N) for each of them.
+
+
+    Ex. if M=3, then the possible values for h are:
+
+
+    +   000
+
+    001
+
+    010
+
+    011
+
+    100
+
+    101
+
+    110
+
+    111
+
+
+    And and must sum over all of them.
+
+
+    What we want then, given this model, is to maximize P(v), which is P(v,h) marginalized
+    over h. This is because we don''t actually care about the values of h, we just
+    want to maximize the probability of what we have seen, which is v.
+
+
+    i.e.
+
+
+    ```
+
+    P(v) = sum[h]{ P(v, h) }
+
+    ```
+
+
+    As usual, we don''t maximize P(v) directly, but rather the log of P(v). So let''s
+    begin by trying to take its derivative with respect to some arbitrary parameter
+    w.
+
+
+    ```
+
+    d(-log(P(v))/dw
+
+    ```'
+  - '[PAGE 48]
+
+
+    ```
+
+    d(-log(sum[h]) { P(v,h) } / dw
+
+    d=(-log(sum[h]) { exp(-E(v,h)) } / Z )
+
+    d=sum[h]{ P(h | v)E(v,h) -sum[v,h]{ P(v,h)E(v,h) }
+
+    =Eh|v{ E(v,h) - Ev,h{ E(v,h) }
+
+    ```
+
+
+    This is read as “the expected value of E(v,h) over the conditional distribution
+    P(h | v)” - “the expected value of E(v,h) over the joint distributoon P(v, h)”.
+
+
+    Since we end up with is the difference between 2 expectations. The first expectation
+    is easy but the second expectation is hard because it requires an infinite number
+    of Gibbs samples. We usually call the first term the clamped term and the second
+    term unclamped term.
+
+
+    Let’s take the previous expression and expand it. Let’s do the input to hidden
+    weights explicitly.
+
+
+    ```
+
+    J = sum[h]{ P(h | v)E(v,h) -sum[v,h]{ P(v,h)E(v,h) }
+
+    dJ/dW(i, j) = -sum[h]{ P(h | v) h(j|i) } +sum[v]{ P(v,h)P(h | v)h(j|i) }
+
+    dJ/dW(i, j) = -prob(i|j=1 | v(i))+sum[v]{ P(v)p(h|j=1 | v(i) }
+
+    dJ/dW(i, j) = -sigmoid(c(j) + vW*(;j))v(i)+sum[v]{ P(v)sigmoid(c(j) + vW*(;j))v(i)
+    }
+
+    ```
+
+
+    We can denormalize the biases and use these 3 update equations:
+
+
+    ```
+
+    dJ/dW(i, j) = -sigmoid(c(j) + vW*(;j))v(i)+sum[v]{ P(v)sigmoid(c(j) + vW*(;j))v(i)
+    }
+
+    dJ/b(i) = v(i)-sum[v]{ P(v)v(i) }
+
+    dJ/dc(j) = sigmoid(c(j) + vW*(;j))-sum[v]{ P(v)sigmoid(c(j) + vW*(;j)) }
+
+    ```
+
+
+    Now you see what we mean by the clamped term and unclamped term. We are going
+    to get the first term simply by direct calculation, but we are going to get the
+    second term - which requires a sum over all v - which is infeasible - by sampling.
+
+
+    Note that if we were to code the RBM using numpy, we would use the actual gradient
+    expressions directly as I previously defined them, but since Theano automatically
+    finds gradients we don’t have to.'
+  md: "\n```python\nupdates=updates\n```\n\n```python\ndef predict(self, X):\nreturn\
+    \ T.argmax(self.forward(X), axis=1)\n```\n\n```python\ndef forward(self, X):\n\
+    current_input = X\nfor ae in self.hidden_layers:\nZ = ae.forward_hidden(current_input)\n\
+    current_input = Z\n```\n\n```python\n# logistic layer\nY = T.nnet.softmax(T.dot(current_input,\
+    \ self.W) + self.b)\n```\n\n```python\nreturn Y\n```\n\n```python\ndef main():\n\
+    \    Xtrain, Ytrain, Xtest, Ytest = getKaggleMNIST()\n    # TRY BOTH!\n    # dnn\
+    \ = DNN([1000, 750, 500])\n    dnn.fit(Xtrain, Ytrain, Xtest, Ytest, epochs=3)\n\
+    \    # vs\n    dnn = DNN([1000, 750, 500])\n    dnn.fit(Xtrain, Ytrain, Xtest,\
+    \ Ytest, pretrain=False, epochs=10)\n```\n\n```python\nif __name__ == '__main__':\n\
+    \    main()\n```\n\n# Exercises\n\nAdd denoising to the autoencoder.\n\n# Cross-Entropy\
+    \ vs. KL Divergence\n\nYou have already seen that KL Divergence can be used to\
+    \ compare the similarity of probability distributions, as we did with t-SNE.\n\
+    \nOne identity to remember is that cross-entropy is equivalent to KL divergence\
+    \ up to an additive constant.\n\ni.e.\n\nH(P, Q) = cross-entropy between P and\
+    \ Q\nH(P) = entropy of P\nD_{KL}(P || Q) = KL divergence between P and Q\n\nH(P,Q)\
+    \ = -sum[i]{ P(i) logQ(i) }\nH(P) = -sum[i]{ P(i) logP(i) }\nD_{KL}(P || Q) =\
+    \ sum[i]{ P(i)log( P(i) / Q(i) }\n\nWe can show that:\n\nH(P,Q) = H(P) + D_{KL}(P\
+    \ || Q)\n\nWhy is this significant?\n\nThe derivative of a constant is 0. Therefore,\
+    \ the gradient, and thus gradient descent, is the same for both cross-entropy\
+    \ and KL divergence.\n\nSo when we use cross-entropy on the autoencoder, what\
+    \ we're really saying is the distribution of the input X is the target distribution,\
+    \ and the distribution of the reconstruction of X is the output distribution,\
+    \ and we would like them to be the same.\n\n# Summary\n\nThe MOST important concept\
+    \ to get out of this is that for the single autoencoder, the “Z” is a “low-dimensional\
+    \ representation” of the input data X. We saw this same concept with PCA. We will\
+    \ see it again with RBMs.\n\n# # Chapter 4: Restricted Boltzmann Machines and\
+    \ Deep Belief Networks\n\nIn this chapter we are going to talk about Restricted\
+    \ Boltzmann Machines and deep belief networks, which is just stacked Restricted\
+    \ Boltzmann Machines - used in exactly the same way we stacked autoencoders.\n\
+    \nIt’s interesting to look back at what we’ve learned at this point.\n\nWhen we\
+    \ did linear regression - we were able to calculate the derivative of the cost,\
+    \ set it to 0, and solve for the weights to get the best weights.\n\nWith logistic\
+    \ regression and neural networks, you know that we can’t directly solve for the\
+    \ weights, so we take the derivative of the cost with respect to the weights,\
+    \ and take small steps in that direction.\n\nWith RBMs, we enter an even more\
+    \ difficult situation. We can’t even calculate the derivative, so instead we try\
+    \ to estimate it approximately using Gibbs sampling, which is a special case of\
+    \ Markov Chain Monte Carlo.\n\nTo understand RBMs, we first have to talk a little\
+    \ bit about Markov random fields.\n\nA Markov random field is just a graph of\
+    \ states, where each node is a state, which is a random variable.\n\nA B\n0—\n\
+    |V|\n|/\n0—0\nC D\n\nP(A, B, C, D)\n\nA Markov random field represents a joint\
+    \ probability distribution, i.e. the probability of all those random variables.\n\
+    \n2 things to note about the MRF:\n\nFirst: that the Markov property holds, i.e.:\n\
+    \nP(s(t) | s(t-1), s(t-2), ...) = P(s(t) | s(t-1))\n\nThe next state only depends\
+    \ on the current state, and not on any states before that.\n\nSecond: the graph\
+    \ is undirected, so you can move along any edge in any direction.\n\nThis brings\
+    \ us to the concept of Boltzmann machines.\n\nBoltzmann machines are Markov random\
+    \ fields where everything is connected to everything.\n\nThe idea is you define\
+    \ an energy on the network, and your goal is to find the minimum energy state,\
+    \ much like how physical systems do.\n\nIn fact, the Boltzmann distribution, which\
+    \ is the distribution we use when we talk about Boltzmann machines and restricted\
+    \ Boltzmann machines, is from statistical mechanics.\n\nThe energy is defined\
+    \ as:\n\nE(s) = -( sum[i,j]{ w(i,j)s(i)s(j) } + sum[i]{ b(i)s(i) }\n\nIt’s not\
+    \ super important since we won’t be using this exact form, but recognize the “structure”\
+    \ here. There’s a 2-D weight that gets multiplied by “interaction terms” and a\
+    \ 1-D linear weight.\n\nNow we can go from Boltzmann machines to restricted Boltzmann\
+    \ machines.\n\nInstead of everything being connected to everything, we instead\
+    \ have a “bipartite graph”.\nimg/6ac8fa20cda45963f131e45_0.png\n\nThis means that\
+    \ everything on the left is connected to everything on the right, and vice versa.\
+    \ We usually label the nodes on the left visible units (v), and the nodes on the\
+    \ right hidden units (h). This gives us a latent variable model, just like PCA\
+    \ and autoencoders.\n\nNote that the Markov property still holds. What this means\
+    \ in this graph is that we have conditional independence. So the probability p(i\
+    \ | v) is independent of the probability p(j | v). \n\nSimilarly, if you go in\
+    \ the other direction (remember, this graph is undirected), the probability p(i\
+    \ | h) is independent of the probability p(j | h).\n\nWith RBMs, we technically\
+    \ assume both the visible units and hidden units are binary. This is why we used\
+    \ sigmoid for autoencoders, and why we only use sigmoid throughout this book.\
+    \ We know that this works fine for MNIST, and in fact a lot of data is binary,\
+    \ since we use one-hot encoding, so basically anything to do with NLP will work\
+    \ too.\n\nThere is some material out there that could have Gaussian units, but\
+    \ these formulations have been reported to have stability issues, so we won't\
+    \ cover them here.\n\nWe are ready to talk about the math behind RBMs. Note that\
+    \ this is very similar to regular Boltzmann machines: there is one term that depends\
+    \ on interaction of different nodes, and then a bias-like term that depends only\
+    \ on one node. The total energy is E(v,h) = -bᵀ - cᵀ - vᵀh. If v is Dx1 and h\
+    \ is Mx1, then W must be DxM, which is what we usually have in neural network.\
+    \ In terms of these variables the conditional probabilities we talked about are:\n\
+    \np(h | v) = sigmoid(Wᵀ + c) (forward direction)\np(v | h) = sigmoid(Wh + b) (backward\
+    \ direction)\n\nLike autoencoders, we again use shared weights. Now that we have\
+    \ an expression for our energy function, we can now define the joint probability\
+    \ of v and h.\n\nP(v,h) = exp(-E(v,h)) / Z\n\nWhere:\n\nZ = sum{ exp(-E(v,h))\
+    \ }\n\nWe call Z the partition function, which just ensures that the probabilities\
+    \ add up to 1. Note that this itself is intractable to calculate, because the\
+    \ summations mean summing over all possible values of v and h. Since they are\
+    \ both binary variables, that is O(2^N) for each of them. Ex. if M=3, then the\
+    \ possible values for h are:\n\n000\n001\n010\n011\n100\n101\n110\n111\n\nAnd\
+    \ must sum over all of them. What we want then, given this model, is to maximize\
+    \ P(v), which is P(v,h) marginalized over h. This is because we dont actually\
+    \ care about the values of h, we just want to maximize the probability of what\
+    \ we have seen, which is v. i.e.\n\nP(v) = sum[h]{ P(v, h) }\n\nAs usual, we don't\
+    \ maximize P(v) directly, but rather the log of P(v). So let's begin by trying\
+    \ to take its derivative with respect to some parameter w.\n\nd(-log(P(v))/dw\n\
+    \nd(-log(sum[h]) { P(v,h) } / dw\nd=(-log(sum[h]) { exp(-E(v,h)) } / Z )\nd=sum[h]{\
+    \ P(h | v)E(v,h) -sum[v,h]{ P(v,h)E(v,h) }\n=Eh|v{ E(v,h) - Ev,h{ E(v,h) }\n\n\
+    This is read as “the expected value of E(v,h) over the conditional distribution\
+    \ P(h | v)” – “the expected value of E(v,h) over the joint distribution P(v, h)”.\n\
+    \nSince we end up with the difference between 2 expectations, the first expectation\
+    \ is easy but the second expectation is hard because it requires an infinite number\
+    \ of Gibbs samples. We usually call the first term the clamped term and the second\
+    \ term unclamped term. Let’s take the previous expression and expand it. Let’s\
+    \ do the input to hidden weights explicitly.\n\nJ = sum[h]{ P(h | v)E(v,h) -sum[v,h]{\
+    \ P(v,h)E(v,h) }\ndJ/dW(i, j) = -sum[h]{ P(h | v) h(j|i) } +sum[v]{ P(v,h)P(h\
+    \ | v)h(j|i) }\ndJ/dW(i, j) = -prob(i|j=1 | v(i))+sum[v]{ P(v)p(h=1 | v(i)) }\n\
+    dJ/dW(i, j) = -sigmoid(c(j) + vW*(;j))v(i)+sum[v]{ P(v)sigmoid(c(j) + vW*(;j))v(i)\
+    \ }\n```\n\nWe can denormalize the biases and use these 3 update equations:\n\n\
+    dJ/dW(i, j) = -sigmoid(c(j) + vW*(;j))v(i)+sum[v]{ P(v)sigmoid(c(j) + vW*(;j))v(i)\
+    \ }\ndJ/b(i) = v(i)-sum[v]{ P(v)v(i) }\ndJ/dc(j) = sigmoid(c(j) + vW*(;j))-sum[v]{\
+    \ P(v)sigmoid(c(j) + vW*(;j)) }\n\nNow you see what we mean by the clamped term\
+    \ and unclamped term. We are going to get the first term simply by direct calculation,\
+    \ but we are going to get the second term - which requires a sum over all v -\
+    \ which is infeasible - by sampling.\n\nNote that if we were to code the RBM using\
+    \ numpy, we would use the actual gradient expressions directly as I previously\
+    \ defined them, but since Theano automatically finds gradients we don’t have to.\n"
+  mdcn: "\n\n```python\nupdates=updates\n```\n\n```python\ndef predict(self, X):\n\
+    return T.argmax(self.forward(X), axis=1)\n```\n\n```python\ndef forward(self,\
+    \ X):\ncurrent_input = X\nfor ae in self.hidden_layers:\nZ = ae.forward_hidden(current_input)\n\
+    current_input = Z\n```\n\n```python\n# logistic layer\nY = T.nnet.softmax(T.dot(current_input,\
+    \ self.W) + self.b)\n```\n\n```python\nreturn Y\n```\n\n```python\ndef main():\n\
+    \    Xtrain, Ytrain, Xtest, Ytest = getKaggleMNIST()\n    # 尝试两种！\n    # dnn =\
+    \ DNN([1000, 750, 500])\n    dnn.fit(Xtrain, Ytrain, Xtest, Ytest, epochs=3)\n\
+    \    # 对\n    dnn = DNN([1000, 750, 500])\n    dnn.fit(Xtrain, Ytrain, Xtest,\
+    \ Ytest, pretrain=False, epochs=10)\n```\n\n```python\nif __name__ == '__main__':\n\
+    \    main()\n```\n\n# 练习\n\n为自动编码器添加去噪功能。\n\n# 交叉熵 vs. KL 散度\n\n你已经看到 KL 散度可以比较概率分布的相似性，就像我们在\
+    \ t-SNE 中做过的那样。\n\n需要记住的一个等式是交叉熵在加常数范围内等同于 KL 散度。\n\n即：\n\nH(P, Q) = P 和 Q 之间的交叉熵\n\
+    H(P) = P 的熵\nD_{KL}(P || Q) = P 和 Q 之间的 KL 散度\n\nH(P,Q) = -sum[i]{ P(i) logQ(i)\
+    \ }\nH(P) = -sum[i]{ P(i)logP(i) }\nD_{KL}(P || Q) = sum[i]{ P(i)log( P(i) / Q(i)\
+    \ }\n\n我们可以证明：\n\nH(P,Q) = H(P) + D_{KL}(P || Q)\n\n为什么这很重要？\n\n常数的导数为 0。因此，梯度（以及梯度下降）对于交叉熵和\
+    \ KL 散度来说是相同的。\n\n所以当我们在自动编码器上使用交叉熵，，实际上是在说输入 X 的分布是目标分布，而 X 的重构分布是输出分布，我们希望它们是相同的。\n\
+    \n# 总结\n\n从中得到的**最重要**的概念是：对于单个自动编码器来说，“Z”是输入数据 X 的“低维表示”。我们在 PCA 中见过这个相同的概念。我们将在\
+    \ RBM 中再次看到它。\n\n# # 第 4 章：受限玻尔兹曼机与深度置信网络\n\n在这一章中，我们将讨论受限玻尔兹曼机和深度置信网络，后者本质上就是堆叠的受限玻尔兹曼机——其使用方法与我们堆叠自动编码器的方法完全相同。\n\
+    \n回顾一下我们目前为止所学的内容是有意思的。\n\n当我们进行线性回归时——我们能够计算代价的导数，将其设为 0，并求解权重以获得最佳权重。\n\n对于逻辑回归和神经网络，你知道我们无法直接求解权重，因此我们对权重对代价求导数，并沿着该方向迈出小步。\n\
+    \n对于 RBM，我们进入了一个更困难的境地。我们甚至无法计算导数，因此我们尝试使用吉布斯采样（Gibbs sampling）来进行近似估计，这是马尔可夫链蒙特卡洛（MCMC）方法的一种特殊情况。\n\
+    \n为了理解 RBM，我们首先得介绍一下马尔可夫随机场。\n\n马尔可夫随机场只是状态图，其中每个节点都是一个状态，即一个随机变量。\n\nA B\n0—\n\
+    |V|\n|/\n0—0\nC D\n\nP(A, B, C, D)\n\n马尔可夫随机场表示联合概率分布，即所有这些随机变量的概率。\n\n关于 MRF\
+    \ 有两点需要注意：\n\n第一：马尔可夫性质成立，即：\n\nP(s(t) | s(t-1), s(t-2), ...) = P(s(t) | s(t-1))\n\
+    \n下一个状态仅取决于当前状态，而不取决于之前的任何状态。\n\n第二：图是无向的，因此你可以沿着任何边边向任何方向移动。\n\n这引出了玻尔兹曼机的概念。\n\
+    \n玻尔兹曼机是万物都相互连接的马尔可夫随机场。\n\n主思想是在网络上定义一个能量，你的目标是找到最小能量状态，就像物理系统那样。\n\n事实上，玻尔兹曼分布（我们在谈论玻尔兹曼机和受限玻尔兹曼机时使用的分布）源自统计力学。\n\
+    \n能量定义为：\n\nE(s) = -( sum[i,j]{ w(i,j)s(i)s(j) } + sum[i]{ b(i)s(i) }\n\n这并不是超级重要，因为我们不会使用这种精确的形式，但要识别这里的“结构”。这里有一个\
+    \ 2 维权重与“交互项”相乘，以及 1 维线性权重。\n\n现在我们可以从玻尔兹曼机转向受限玻尔兹曼机。\n\n我们不再是万物都相互连接，而是拥有一个“二分图”。\n\
+    img/6ac8fa20cda45963f131e45_0.png\n\n这意味着左侧的所有节点都与右侧的所有节点，反之亦然。我们通常将左侧的节点标记为可见单元\
+    \ (v)，将右侧的节点标记为隐藏单元 (h)。这给了我们一个隐变量模型，就像 PCA 和自动编码器一样。\n\n注意马尔可夫性质依然成立。这在图中意味着我们具有条件独立性。因此概率\
+    \ p(i | v) 独立于概率 p(j | v)。\n\n同样，如果你从另一个方向进入（记住，这个图是无向的），概率 p(i | h) 独立于概率 p(j\
+    \ | h)。\n\n对于 RBM，我们在技术上假设所有可见单元和隐藏单元都是二元的。这就是为什么我们对自动编码器使用 sigmoid，以及为什么我们在整本书中只使用\
+    \ sigmoid。我们知道这对于 MNIST 效果良好，而且事实上，很多数据是二元的（因为我们使用 one-hot 编码），所以基本上任何与自然语言处理（NLP）有关的内容也适用。\n\
+    \n现有一些材料可以包含高斯单元，但这些表述据报道存在稳定性问题，因此我们不使用。\n\n玻尔兹曼分布（我们在谈论玻尔兹曼机和受限玻尔兹曼机时使用的分布）源自统计力学。\n\
+    \n能量定义为：\n\ns(s) = -( sum[i,j]{ w(i,j)s(i)s(j) } + sum[i]{ b(i)s(i) }\n\n这并不是超级重要，因为我们不会使用这种精确的形式，但要识别这里的“结构”。这里有一个\
+    \ 2 维权重与“交互项”相乘，以及 1 维线性权重。\n\n现在我们可以从玻尔兹曼机转向受限玻尔兹曼机。\n\n我们不再是万物都相互连接，而是拥有一个“二分图”。\n\
+    img/6ac8fa20cda45963f131e45_0.png\n\n这意味着左侧的所有节点都与右侧的所有节点，反之亦然。我们通常将左侧的节点标记为可见单元\
+    \ (v)，将右侧的节点标记为隐藏单元 (h)。这给了我们一个隐变量模型，就像 PCA 和自动编码器一样。\n\n注意马尔可夫性质依然成立。这在图中意味着我们具有条件独立性。因此概率\
+    \ p(i | v) 独立于概率 p(j | v)。\n\n同样，如果你从另一个方向进入（记住，这个图是无向的），概率 p(i | h) 独立于概率 p(j\
+    \ | h)。\n\n对于 RBM，我们在技术上假设所有可见单元和隐藏单元都是二元的。这就是为什么我们对自动编码器使用 sigmoid，以及为什么我们在整本书中只使用\
+    \ sigmoid。我们知道这对于 MNIST 效果良好，而且事实上，很多数据是二元的（因为我们使用 one-hot 编码），所以基本上任何与自然语言处理（NLP）有关的内容也适用。\n\
+    \n"
+  merge: 0
+- raw:
+  - '[PAGE 49]
+
+
+    Another method, which is the method we are going to use, makes use of a function
+    called the free energy.
+
+
+    We define the free energy as the negative log of the sum over all h of the top
+    part of the joint probability.
+
+
+    F(v) = -log(sum[h]{ exp(-E(v,h)) })
+
+
+    It''s hard to prove because you can''t just use direct algebraic notation, but
+    if you are interested in learning more this is a result of all the units conditionally
+    independent, and it is related to something called the sum-product algorithm.
+    In any case, the free energy reduces to:
+
+
+    F(v) = -b^Tv - sum[j=1..M]{ log(1+exp(c(j)) + v^T W(:;j)) }
+
+
+    So that it now no longer depends on h at all.
+
+
+    When you use this in the cost function and take the derivative, what you get is
+    a simpler expression with only one expected value.
+
+
+    dJ(v)/dw = dF(v)/dw - sum[v''] P(v'')dF(v'')/dw
+
+
+    Notice how this actually gives us the same update rules as before.
+
+
+    We call the first term the positive phase and the second term the negative phase.
+
+
+    Since the first term goes in the direction of the free energy at the sample v,
+    it''s basically trying to reduce the energy for that particular v, which corresponds
+    to a higher probability for that sample v.
+
+
+    The other term, the negative phase, tries to lower the probability for ALL possible
+    values of v.'
+  - '[PAGE 50]
+
+
+    One last note about RBMs is that we can stack just like how we stack autoencoders
+    and do “greedy layer-wise pretraining”.
+
+
+    Except when we stack RBMs they get a special name - they are called deep belief
+    networks.
+
+
+    One small note about the proper terminology here - “deep belief network” refers
+    to the unsupervised model, whereas if you train it in a supervised way it is called
+    a “deep neural network”.
+
+
+    Sometimes “deep belief network” can also refer to the stacked autoencoder configuration
+    from the last chapter.
+
+
+    # Contrastive Divergence
+
+
+    In this section we are going to talk about the sampling algorithm, called contrastive
+    divergence, that we use to estimate the gradient we derived in the last section.
+
+
+    If you found the material in the last lecture hard, don’t worry too much about
+    it, because following the steps of the CD algorithm is actually much easier.
+
+
+    Contrastive divergence is usually called CD-k, meaning you do k steps of Gibbs
+    sampling.
+
+
+    What that means, given a training sample v0, we are going to calculate p(h0|v0)
+    which is just the usual forward pass on the network. Next, we are going to use
+    those probabilities to draw a sample of h - call that h0.
+
+
+    So if p(h_j | v) is 0.3, then h_j will be 1 with probability 0.3.
+
+
+    Next, we do a backwards pass, so we calculate p(v1|h0). Now we use these probabilities
+    to draw a sample of samples v1.
+
+
+    Next, we calculate p(h1|v1), and take a sample of h again. We keep repeating this
+    process to infinity.'
+  - '[PAGE 51]
+
+
+    0-0-0-0-...
+
+    v0 h0 v1 h1...
+
+
+    By going to infinity, we get an exact answer, but we obviously cannot train the
+    neural network for that long.
+
+
+    What researchers have found is that k=1 works just fine. We will use k=1 also,
+    which will allow us to avoid having to do any loops.
+
+
+    In pseudocode, the process might look something like this:
+
+
+    ```
+
+    def derivative(v0):
+
+    p_h0 = self.forward(v0)
+
+    h0 = sample(p_h0)
+
+    p_v1 = self.backward(h0)
+
+    v1 = sample(p_v1)
+
+    p_h1 = self.forward(v1)
+
+    return v0.dot(p_h0.T) - v1.dot(p_h1.T)
+
+    ```
+
+
+    Of course, that would work fine if we were using numpy, but we are going to use
+    Theano,
+
+    which will find the gradients automatically.
+
+
+    What we will do instead, is after we calculate v1 from v0, we will set the objective
+    to the
+
+    free_energy(v0) - free_energy(v1), and let Theano calculate the gradient for us.
+
+
+    One interesting thing is, because we don''t actually want to calculate P(v), we
+    still want to
+
+    plot some cost function as training progresses.
+
+
+    We are going to continue to use the cross-entropy error like we did with autoencoders,
+    and
+
+    if you run the code you''ll see that despite a completely different training algorithm
+
+    and theoretical framework, this error function still decreases as we train.'
+  - "[PAGE 52]\n\nLet's get to the code. Assume relu, error_rate, getData, and init_weights\
+    \ are defined the same as the last example.\n\n```\nimport numpy as np\nimport\
+    \ theano\nimport theano.tensor as T\nimport matlab.pyplot as plt\n```\n\n```\n\
+    from sklearn.utils import shuffle\nfrom theano.tensor.shared_randomstreams import\
+    \ RandomStreams\nfrom autoencoder import DNN\n```\n\n```\nclass RBM(object):\n\
+    \    def __init__(self, M):\n        self.M = M\n        self.rng = RandomStreams()\n\
+    \n    def fit(self, X, learning_rate=0.1, epochs=1, batch_sz=100, show_fig=False):\n\
+    \        N, D = X.shape\n        n_batches = N / batch_sz\n\n        W0 = init_weights(D,\
+    \ self.M)\n        self.W = theano.shared(W0)\n        self.c = theano.shared(np.zeros(self.M))\n\
+    \        self.b = theano.shared(np.zeros(D))\n        self.params = [self.W, self.c,\
+    \ self.b]\n        self.forward_params = [self.W, self.c, self.c]\n```\n\n# we\
+    \ won't use this to fit the RBM but we will use these for backpropagation later\n\
+    self.dW = theano.shared(np.zeros(W0.shape))\nself.dc = theano.shared(np.zeros(self.M))"
+  - '[PAGE 53]
+
+
+    ```
+
+    self.db = theano.shared(np.zeros(D))
+
+    self.dparams = [self.dW, self.dc, self.db]
+
+    self.forward_dparams = [self.dW, self.dc]
+
+    ```
+
+
+    ```
+
+    X_in = T.matrix(''X_in'')
+
+
+    # attach it to the object so it can be used later
+
+    # must be sigmoidal because the output is also a sigmoid
+
+    H = T.nnet.sigmoid(X_in.dot(self.W) + self.c)
+
+    self.hidden_op = theano.function(
+
+    inputs=[X_in],
+
+    outputs=H,
+
+    )
+
+    ```
+
+
+    ```
+
+    # we won''t use this cost to do any updates
+
+    # but we would like to see how this cost function changes
+
+    # as we do contrastive divergence
+
+    X_hat = self.forward_output(X_in)
+
+    cost = -(X_in * T.log(X_hat) + (1 - X_in) * T.log(1 - X_hat)).sum() / N
+
+    cost_op = theano.function(
+
+    inputs=[X_in],
+
+    outputs=cost,
+
+    )
+
+    ```
+
+
+    ```
+
+    # do one round of Gibbs sampling to obtain X_sample
+
+    H = self.sample_h_given_v(X_in)
+
+    X_sample = self.sample_v_given_h(H)
+
+
+    # define the objective, updates, and train function
+
+    objective = T.mean(self.free_energy(X_in)) - T.mean(self.free_energy(X_sample))
+
+    ```'
+  - "[PAGE 54]\n\n```\ndef free_energy(self, V):\n    return -V.dot(self.b) - T.Sum(log(1\
+    \ + T.Exp(V.dot(self.W) + self.c)), axis=1)\n```\n\n```\ndef sample_h_given_v(self,\
+    \ V):\n    p_h_given_v = T.nnet.sigmoid(V.dot(self.W) + self.c)\n    h_sample\
+    \ = self.rng.binomial(size=p_h_given_v.shape, n=1, p=p_h_given_v)\n    return\
+    \ h_sample\n```\n\n```\ndef sample_v_given_h(self, H):\n```"
+  - "[PAGE 55]\n\n```\np_v_given_h = Tnnet.sigmoid(H.dot(self.W.T) + self.b)\n\nv_sample\
+    \ = self.rng.binomial(size=p_v_given_h.shape, n=1, p=p_v_given_h)\nreturn v_sample\n\
+    ```\n\n```\ndef forward_hidden(self, X):\n\n    return T.nnet.sigmoid(X.dot(self.W)\
+    \ + self.c)\n```\n\n```\ndef forward_output(self, X):\n\n    Z = self.forward_hidden(X)\n\
+    \    Y = T.nnet.sigmoid(Z.dot(self.W.T) + self.b)\n    return Y\n```\n\n```\n\
+    @staticmethod\ndef createFromArrays(W, c, b, an_id):\n    rbm = AutoEncoder(W.shape[1],\
+    \ an_id)\n    rbm.W = theano.shared('W', '_W_%s' % rbm)\n    rbm.c = theano.shared('c',\
+    \ '_c_%s' % rbm)\n    rbm.b = theano.shared('b', '_b_%s' % rbm)\n    rbm.params\
+    \ = [rbm.W, rbm.c, rbm.b]\n    rbm.forward_params = [rbm.W, rbm.c]\n    return\
+    \ rbm\n```\n\n```\ndef main():\n\n    Xtrain, Ytrain, Xtest, Ytest = getKaggleMNIST()\n\
+    \    dnn = DNN([1000, 750, 500], UnsupervisedModel=RBM)\n    dnn.fit(Xtrain, Ytrain,\
+    \ Xtest, Ytest, epochs=3)\n```\n\n```\n# we compare with no pretraining in autoencoder.\n\
+    ```"
+  - "[PAGE 56]\n\n```\nif __name__ == '__main__':\n    main()\n```"
+  - '[PAGE 57]
+
+
+    <!-- no content -->'
+  - '[PAGE 58]
+
+
+    # Chapter 5: Feature Visualization
+
+
+    One good exercise is to look at what each hidden node at each hidden layer actually
+    learned once training is complete.
+
+
+    This is one way to interpret what a neural network has learned.
+
+
+    How can we do this?
+
+
+    Assume we want h(i,j) - the jth hidden node in the ith hidden layer - to be maximal,
+    and all other hidden nodes in that layer to be minimal.
+
+
+    This is just a calculus problem!
+
+
+    Maximize h(i,j) with respect to X.
+
+
+    Unfortunately, it''s not as easy as simply finding dh(i,j)/dX, setting it to 0,
+    and solving for X.
+
+
+    You can solve for the optimal X in closed-form for the first input-to-hidden layer.
+
+
+    You will need to use the method of Lagrange multipliers.
+
+
+    What you find is that to optimize the jth hidden node, X should be proportional
+    to W(;j) - the jth column of the input-to-hidden weight matrix W.
+
+
+    Recall that W is a DxM matrix, so taking 1 column will give us a D-dimensional
+    vector.
+
+
+    To plot the image, we simply reshape the jth column of W to the original image
+    size (28x28 for MNIST) and use plt.imshow() from matplotlib.
+
+
+    Use:'
+  md: "\nAnother method, which is the method we are going to use, makes use of a function\
+    \ called the free energy.\n\nWe define the free energy as the negative log of\
+    \ the sum over all h of the top part of the joint probability.\n\nF(v) = -log(sum[h]{\
+    \ exp(-E(v,h)) })\n\nIt's hard to prove because you can't just use direct algebraic\
+    \ notation, but if you are interested in learning more this is a result of all\
+    \ the units conditionally independent, and it is related to something called the\
+    \ sum-product algorithm. In any case, the free energy reduces to:\n\nF(v) = -b^Tv\
+    \ - sum[j=1..M]{ log(1+exp(c(j)) + v^T W(:;j)) }\n\nSo that it now no longer depends\
+    \ on h at all.\n\nWhen you use this in the cost function and take the derivative,\
+    \ what you get is a simpler expression with only one expected value.\n\ndJ(v)/dw\
+    \ = dF(v)/dw - sum[v'] P(v')dF(v')/dw\n\nNotice how this actually gives us the\
+    \ same update rules as before.\n\nWe call the first term the positive phase and\
+    \ the second term the negative phase.\n\nSince the first term goes in the direction\
+    \ of the free energy at the sample v, it's basically trying to reduce the energy\
+    \ for that particular v, which corresponds to a higher probability for that sample\
+    \ v.\n\nThe other term, the negative phase, tries to lower the probability for\
+    \ ALL possible values of v.\n\nOne last note about RBMs is that we can stack just\
+    \ like how we stack autoencoders and do “greedy layer-wise pretraining”.\n\nExcept\
+    \ when we stack RBMs they get a special name - they are called deep belief networks.\n\
+    \nOne small note about the proper terminology here - “deep belief network” refers\
+    \ to the unsupervised model, whereas if you train it in a supervised way it is\
+    \ called a “deep neural network”.\n\nSometimes “deep belief network” can also\
+    \ refer to the stacked autoencoder configuration from the last chapter.\n\n# Contrastive\
+    \ Divergence\n\nIn this section we are going to talk about the sampling algorithm,\
+    \ called contrastive divergence, that we use to estimate the gradient we derived\
+    \ in the last section.\n\nIf you found the material in the last lecture hard,\
+    \ don’t worry too much about it, because following the steps of the CD algorithm\
+    \ is actually much easier.\n\nContrastive divergence is usually called CD-k, meaning\
+    \ you do k steps of Gibbs sampling.\n\nWhat that means, given a training sample\
+    \ v0, we are going to calculate p(h0|v0) which is just the usual forward pass\
+    \ on the network. Next, we are going to use those probabilities to draw a sample\
+    \ of h - call that h0.\n\nSo if p(h_j | v) is 0.3, then h_j will be 1 with probability\
+    \ 0.3.\n\nNext, we do a backwards pass, so we calculate p(v1|h0). Now we use these\
+    \ probabilities to draw a sample of samples v1.\n\nNext, we calculate p(h1|v1),\
+    \ and take a sample of h again. We keep repeating this process to infinity.\n\n\
+    0-0-0-0-...\nv0 h0 v1 h1...\n\nBy going to infinity, we get an exact answer, but\
+    \ we obviously cannot train the neural network for that long.\n\nWhat researchers\
+    \ have found is that k=1 works just fine. We will use k=1 also, which will allow\
+    \ us to avoid having to do any loops.\n\nIn pseudocode, the process might look\
+    \ something like this:\n\n```\ndef derivative(v0):\np_h0 = self.forward(v0)\n\
+    h0 = sample(p_h0)\np_v1 = self.backward(h0)\nv1 = sample(p_v1)\np_h1 = self.forward(v1)\n\
+    return v0.dot(p_h0.T) - v1.dot(p_h1.T)\n```\n\nOf course, that would work fine\
+    \ if we were using numpy, but we are going to use Theano,\nwhich will find the\
+    \ gradients automatically.\n\nWhat we will do instead, is after we calculate v1\
+    \ from v0, we will set the objective to the\nfree_energy(v0) - free_energy(v1),\
+    \ and let Theano calculate the gradient for us.\n\nOne interesting thing is, because\
+    \ we don't actually want to calculate P(v), we still want to\nplot some cost function\
+    \ as training progresses.\n\nWe are going to continue to use the cross-entropy\
+    \ error like we did with autoencoders, and\nif you run the code you'll see that\
+    \ despite a completely different training algorithm\nand theoretical framework,\
+    \ this error function still decreases as we train.\n\nLet's get to the code. Assume\
+    \ relu, error_rate, getData, and init_weights are defined the same as the last\
+    \ example.\n\n```\nimport numpy as np\nimport theano\nimport theano.tensor as\
+    \ T\nimport matlab.pyplot as plt\n```\n\n```\nfrom sklearn.utils import shuffle\n\
+    from theano.tensor.shared_randomstreams import RandomStreams\nfrom autoencoder\
+    \ import DNN\n```\n\n```\nclass RBM(object):\n    def __init__(self, M):\n   \
+    \     self.M = M\n        self.rng = RandomStreams()\n\n    def fit(self, X, learning_rate=0.1,\
+    \ epochs=1, batch_sz=100, show_fig=False):\n        N, D = X.shape\n        n_batches\
+    \ = N / batch_sz\n\n        W0 = init_weights(D, M)\n        self.W = theano.shared(W0)\n\
+    \        self.c = theano.shared(np.zeros(M))\n        self.b = theano.shared(np.zeros(D))\n\
+    \        self.params = [self.W, self.c, self.b]\n        self.forward_params =\
+    \ [self.W, self.c]\n\n# we won't use this to fit the RBM but we will use these\
+    \ for backpropagation\n        self.dW = theano.shared(np.zeros(W0.shape))\n \
+    \       self.dc = theano.shared(np.zeros(M))\n        self.db = theano.shared(np.zeros(D))\n\
+    \        self.dparams = [self.dW, self.dc, self.db]\n        self.forward_dparams\
+    \ = [self.dW, self.dc]\n\n```\nX_in = T.matrix('X_in')\n\n# attach it to the object\
+    \ so it can be used later\n# must be sigmoid because the output is also a sigmoid\n\
+    H = theano.sigmoid(X_in.dot(self.W) + self.c)\nself.hidden_op = theano.function(\n\
+    inputs=[X_in],\noutputs=H,\n)\n\n```\n# we won't use this cost to do any updates\n\
+    # but we would like to see how this function changes\n# as we do contrastive divergence\n\
+    X_hat = self.forward_output(X_in)\ncost = -(X_in * T.log(X_hat) + (1 - X_in) *\
+    \ T.log(1 - X_hat)).sum() / N\ncost_op = theano.function(\ninputs=[X_in],\noutputs=cost,\n\
+    )\n\n```\n# do one round of Gibbs sampling to obtain X_sample\nH = self.sample_h_v(X_in)\n\
+    X_sample = self.sample_v_h(H)\n\n# define the objective, updates, and train function\n\
+    objective = T.mean(self.free_energy(X_in)) - T.mean(self.free_energy(X_sample))\n\
+    ```\n\n```\ndef free_energy(self, V):\n    return -V.dot(self.b) - T.sum(T.log(1\
+    \ + T.exp(V.dot(self.W) + self.c)), axis=1)\n```\n\n```\ndef sample_h_v(self,\
+    \ V):\n    p_h_given_v = theano.sigmoid(V.dot(self.W) + self.c)\n    h_sample\
+    \ = self.rng.binomial(size=p_h_given_v.shape, n=1, p=p_h_given_v)\n    return\
+    \ h_sample\n```\n\n```\ndef sample_v_h(self, H):\n```\n\n```\np_v_given_h = theano.sigmoid(H.dot(self.W.T)\
+    \ + self.b)\n\nv_sample = self.rng.binomial(size=p_v_given_h.shape, n=1, p=p_v_given_h)\n\
+    return v_sample\n```\n\n```\ndef forward_hidden(self, X):\n\n    return theano.sigmoid(X.dot(self.W)\
+    \ + self.c)\n```\n\n```\ndef forward_output(self, X):\n\n    Z = self.forward_hidden(X)\n\
+    \    Y = theano.sigmoid(Z.dot(self.W.T) + self.b)\n    return Y\n```\n\n```python\n\
+    @staticmethod\ndef createFromArrays(W, c, b, an_id):\n    rbm = AutoEncoder(W.shape[1],\
+    \ an_id)\n    rbm.W = theano.shared('W', '_W_%s' % rbm)\n    rbm.c = theano.shared('c',\
+    \ '_c_%s' % rbm)\n    rbm.b = theano.shared('b', '_b_%s' % rbm)\n    rbm.params\
+    \ = [rbm.W, rbm.c, rbm.b]\n    rbm.forward_params = [rbm.W, rbm.c]\n    return\
+    \ rbm\n```\n\n```\ndef main():\n\n    Xtrain, Ytrain, Xtest, Ytest = getKaggleMNIST()\n\
+    \    dnn = DNN([1000, 750, 500], UnsupervisedModel=RBM)\n    dnn.fit(Xtrain, Ytrain,\
+    \ Xtest, Ytest, epochs=3)\n```\n\n```\n# we compare with no pretraining in autoencoder.\n\
+    ```\n\n```python\nif __name__ == '__main__':\n    main()\n```\n\n# Chapter 5:\
+    \ Feature Visualization\n\nOne good exercise is to look at what each hidden node\
+    \ at each hidden layer actually learned once training is complete.\n\nThis is\
+    \ one way to interpret what a neural network has learned.\n\nHow can we do this?\n\
+    \nAssume we want h(i,j) - the jth hidden node in the ith hidden layer - to be\
+    \ maximal, and all other hidden nodes in that layer to be minimal.\n\nThis is\
+    \ just a calculus problem!\n\nMaximize h(i,j) with respect to X.\n\nUnfortunately,\
+    \ it's not as easy as simply finding dh(i,j)/dX, setting it to 0, and solving\
+    \ for X.\n\nYou can solve for the optimal X in closed-form for the first input-to-hidden\
+    \ layer.\n\nYou will need to use the method of Lagrange multipliers.\n\nWhat you\
+    \ find is to optimize the jth hidden node, X should be proportional to W(:j) -\
+    \ the jth column of the input-to-hidden weight matrix W.\n\nRecall that W is a\
+    \ DxM matrix, so taking 1 column will give us a D-dimensional vector.\n\nTo plot\
+    \ the image, we simply reshape the jth column of W to the original image size\
+    \ (28x28 for MNIST) and use plt.imshow() from matplotlib.\n\nUse:\n"
+  mdcn: "\n另一种方法，也是我们将要使用的方法，利用了一个被称为自由能量（free energy）的函数。\n\n我们将自由能量定义为所有 $h$ 的联合概率顶部和的负对数。\n\
+    \nF(v) = -log(sum[h]{ exp(-E(v,h)) })\n\n这很难证明，因为你不能直接使用代数符号，但如果你有兴趣学习更多的话，这是所有单元条件独立的结果，而且它与一种称为乘积算法（sum-product\
+    \ algorithm）的东西有关。在任何情况下，自由能量简化为：\n\nF(v) = -b^Tv - sum[j=1..M]{ log(1+exp(c(j))\
+    \ + v^T W(:;j)) }\n\n这样它现在就不再依赖于 $h$ 了。\n\n当你在代价函数中使用它并求导数时，你得到的是一个只有一个期望值的简单表达式。\n\
+    \ndJ(v)/dw = dF(v)/dw - sum[v'] P(v')dF(v')/dw\n\n注意这实际上带带了我们与之前相同的更新规则。\n\n我们将第一项称为正相（positive\
+    \ phase），第二项称为负相（negative phase）。\n\n由于第一项沿着样本 $v$ 处自由能量的方向移动，它基本上是在尝试降低该特定 $v$\
+    \ 的能量，这对应于更高的概率。\n\n另一项，即负相，试图降低 $v$ 的所有可能值的概率。\n\n关于 RBM 的最后一点是，我们可以像堆叠自动编码器那样进行“逐层贪心预训练”（greedy-wise\
+    \ pretraining）。\n\n关于术语的一个小说明——“深度信念网络”（deep belief network）指的是无监督模型，而如果你以监督的方式训练它，它被称为“深度神经网络”（deep\
+    \ neural network）。有时“深度信念网络”也可以指上一节中的堆叠自动编码器配置。\n\n# 对比散度 (Contrastive Divergence)\n\
+    \n在本节中，我们将讨论一种名为对比散度的采样算法，用于估计我们在上一节中推出的梯度。如果你发现了材料，不要太担心它，因为遵循 CD 算法实际上要简单得多。对比散度通常被称为\
+    \ CD-k，意味着执行 $k$ 步吉尔斯采样。\n\n这意味着，给定一个样本 $v_0$，我们将计算 $p(h|v_0)$，这只是通常的前向传播。接下来，我们将使用这些概率绘制一个样本\
+    \ $h_0$。如果 $p(h_j|v)$ 是 0.3，那么 $h_j$ 将具有 0.3 的概率。接下来，我们进行反向传播以计算 $p(v_1|h_0)$。现在我们使用这些概率绘制一个样本\
+    \ $v_1$。接下来，我们计算 $p(h_1|v_1)$ 并再次绘制一个 $h$。我们重复这个过程直到无限。0-0-0-... $v_0, h_1$...\n\
+    \n通过无限迭代，我们可以得到精确答案，但显然不需要这样训练神经网络。研究人员发现 $k=1$ 效果良好。我们将使用 $k=1$，这将避免任何循环。在伪代码中，过程可能如下：\n\
+    \n```\ndef derivative(v0):\np_h0 = self.forward(v0)\nh0 = sample(p_h0)\np_v1 =\
+    \ self.backward(h0)\nv1 = sample(p_v1)\np_h1 = self.forward(v1)\nreturn v0.dot(p_h0.T)\
+    \ - v1.dot(p_h1.T)\n```\n\n当然，如果我们使用 numpy，这将可行，但我们将使用 Theano，它会自动寻找梯度。相反地，我们在从\
+    \ $v_0$ 计算 $v_1$ 后，将目标设定为 free_energy(v0) - free_energy(v1)，并让 Theano 为我们计算梯度。\n\
+    \n有趣的一点是，由于我们实际上并想计算 $P(v)$，随着训练的进行，我们将继续使用像之前处理自动编码器那样的交叉熵误差函数。如果你运行代码，你会看到尽管有不同的训练框架，误差函数仍然会下降。让我们来看看代码。假设\
+    \ `relu`、`getData` 和 `init_weights` 与上节定义的相同。\n\n```\nimport numpy as np\nimport\
+    \ theano\nimport theano.tensor as T\nimport matlab.pyplot as plt\n```\n\n```\n\
+    from sklearn.utils import shuffle\nfrom theano.tensor.shared import RandomStreams\n\
+    from autoencoder import DNN\n```\n\n```\nclass RBM(object):\n    def __init__(self,\
+    \ M):\n        self.M = M\n        self.rng = RandomStreams()\n\n    def fit(self,\
+    \ X, learning_rate=0.1, epochs=1, batch_sz=100, show_fig=False):\n        N, D\
+    \ = X.shape\n        n_batches = N / batch_sz\n\n        W0 = init_weights(D,\
+    \ M)\n        self.W = theano.shared(W0)\n        self.c = theano.shared(np.zeros(M))\n\
+    \        self.b = theano.shared(np.zeros(D))\n        self.params = [self.W, self.c,\
+    \ self.b]\n        self.forward_params = [self.W, self.c]\n\n# 我们不会用这个来拟合 RBM，但我们将将其用于反向传播\n\
+    \        self.dW = theano.shared(np.zeros(W0.shape))\n        self.dc = theano.shared(np.zeros(M))\n\
+    \        self.db = theano.shared(np.zeros(D))\n        self.dparams = [self.dW,\
+    \ self.dc, self.db]\n        self.forward_dparams = [self.dW, self.dc]\n```\n\
+    X_in = T.matrix('X_in')\n\n# 将其附加到对象以便以后使用\n# 必须是 sigmoid，因为输出也是 sigmoid\nH =\
+    \ theano.sigmoid(X_in.dot(self.W) + self.c)\nself.hidden_op = theano.function(\n\
+    inputs=[X_in],\noutputs=H,\n)\n\n```\n\n```\n# 我们不会用这个代价进行任何更新\n# 但我们想看到执行对比散度时这个函数是如何变化的\n\
+    X_hat = self.forward_output(X_in)\ncost = -(X_in * T.log(X_hat) + (1 - X_in) *\
+    \ T.log(1 - X_hat)).sum() / N\ncost_op = theano.function(\ninputs=[X_in],\noutputs=cost,\n\
+    )\n```\n\n```\n# 执行一轮吉尔斯采样以获得 X_sample\nH = self.sample_h_v(X_in)\nX_sample =\
+    \ self.sample_v_h(H)\n\n# 定义目标、更新和训练函数\nobjective = T.mean(self.free_energy(X_in))\
+    \ - T.mean(self.free_energy(X_sample))\n```\n\n```\ndef free_energy(self, V):\n\
+    \    return -V.dot(self.b) - T.sum(T.log(1 + T.exp(V.dot(self.W) + self.c)), axis=1)\n\
+    ```\n\n```\ndef sample_h_v(self, V):\n    p_h_given_v = theano.sigmoid(V.dot(self.W)\
+    \ + self.c)\n    h_sample = self.rng.binomial(size=p_h_given_v)\n```\n\n```\n\
+    def sample_v_h(self, H):\n    p_v_given_h = theano.sigmoid(H.dot(self.W.T) + self.b.T)\n\
+    \    v_sample = self.rng.binomial(size=p_v_given_h)\n```\n"
+  merge: 0
+- raw:
+  - '[PAGE 59]
+
+
+    ```
+
+    plt.imshow(X, cmap=''gray'')
+
+    ```
+
+
+    To ensure the image is grayscale rather than a heatmap.
+
+
+    For the layers beyond the input-to-hidden, we can''t solve in closed-form, so
+    we return to our old friend gradient descent.
+
+
+    This should be simple since Theano can calculate gradients for us. The only caveat
+    is that you now need to take the derivative with respect to the input, not the
+    weights, like we usually do during training.'
+  - '[PAGE 60]
+
+
+    <!-- no content -->'
+  - '[PAGE 61]
+
+
+    # # Chapter 6: Tricking a Neural Network
+
+
+    Now that you know how to take the derivative of a variable with respect to the
+    inputs instead of the weights, we are ready to talk about how to trick a neural
+    network.
+
+
+    The key is the cost function, J.
+
+
+    We want to increase the cost function as much as possible, while inducing minimal
+    changes in X.
+
+
+    To do that, we simply ask, "in what direction should I change X, such that it
+    results in the maximum change in J?"
+
+
+    This is again just a calculus problem - we want to find dJ/dX.
+
+
+    And again, we use Theano to automatically calculate the gradient.
+
+
+    Once you''ve done that, we simply change X by a small amount in that direction.
+
+
+    ```
+
+    X = X + eps*dJ/dX
+
+    ```
+
+
+    Where eps is a small number.
+
+
+    What you should find that is the image itself doesn''t look any different (remember,
+    matplotlib will scale your values to be from 0..255), but the neural network has
+    a good chance of classifying the image wrong, even when it classifies the original
+    image right.
+
+
+    What implications does this have in terms of training a neural network?
+
+
+    You surely don''t want your neural network to be so easily fooled, and the key
+    here is something we''ve already talked about before:
+
+
+    Data augmentation.'
+  - '[PAGE 62]
+
+
+    The example I like to give: an upside-down cat is still a cat. A cat shifted to
+    the left is still a cat. A rotated cat is still a cat.
+
+
+    So if you only have one cat, you should create these invariant transformations
+    and include them as training data.
+
+
+    Similarly, a cat with some noise is still a cat.
+
+
+    This is like what we did with autoencoders - set some of the inputs to 0. A cat
+    with some 0s is still a cat, so add that as training data.
+
+
+    And like we''ve seen in this chapter, a cat + some “intelligently designed” noise
+    is still a cat, so include that as training data too.
+
+
+    By including all these forms of data augmentation, you are making your neural
+    network more robust.'
+  - '[PAGE 63]
+
+
+    <!-- no content -->'
+  - '[PAGE 64]
+
+
+    # Conclusion
+
+
+    I really hope you had as much fun reading this book as I did making it.
+
+
+    Did you find anything confusing? Do you have any questions?
+
+
+    I am always available to help. Just email me at: info@lazyprogrammer.me
+
+
+    I do 1:1 coaching and consulting as well.
+
+
+    Do you want to learn more about deep learning? Perhaps online courses are more
+    your style. I happen to have a few of them on Udemy.
+
+
+    My first course in deep learning is a lot like the book, but you get to see me
+    derive the formulas and write the code live:
+
+
+    Data Science: Deep Learning in Python
+
+
+    https://udemy.com/data-science-deep-learning-in-python
+
+
+    Are you comfortable with this material, and you want to take your deep learning
+    skillset to the next level? My follow-up Udemy course on deep learning is for
+    you. Similar to this book, I take you through the basics of Theano and TensorFlow
+    - creating functions, variables, expressions, and build up neural networks from
+    scratch. I teach you about ways to accelerate the learning process, including
+    batch gradient descent, momentum, and adaptive learning rates. I also show you
+    how to create a GPU instance on Amazon AWS EC2, and prove to you that training
+    a neural network with GPU optimization can be orders of magnitude faster than
+    on your CPU.
+
+
+    Data Science: Practical Deep Learning in Theano and TensorFlow
+
+
+    https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow
+
+
+    When you''ve got the basics of deep learning down, you''re ready to explore alternative'
+  - '[PAGE 65]
+
+
+    architectures. One popular alternative is the convolutional neural network, created
+    specifically for image classification. These have promising applications in medical
+    imaging, self-driving vehicles, and more. In this course, I show you how to build
+    convolutional nets in Theano and TensorFlow.
+
+
+    # Deep Learning: Convolutional Neural Networks in Python
+
+
+    https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow
+
+
+    In part 4 of my deep learning series, I take you through unsupervised deep learning
+    methods (that''s this book!). We study principal components analysis (PCA), t-SNE
+    (jointly developed by the godfather of deep learning, Geoffrey Hinton), deep autoencoders,
+    and restricted Boltzmann machines (RBMs). I demonstrate how unsupervised pretraining
+    on a deep network with autoencoders and RBMs can improve unsupervised learning
+    performance.
+
+
+    # Unsupervised Deep Learning in Python
+
+
+    https://www.udemy.com/unsupervised-deep-learning-in-python
+
+
+    Would you like an introduction to the basic building block of neural networks
+    - logistic regression? In this course I teach the theory of logistic regression
+    (our computational model of the neuron), and give you an in-depth look at binary
+    classification, manually creating features, and gradient descent. You might want
+    to check this course out if you found the material in this book too challenging.
+
+
+    # Data Science: Logistic Regression in Python
+
+
+    https://udemy.com/data-science-logistic-regression-in-python
+
+
+    To get an even simpler picture of machine learning in general, where we don''t
+    even need gradient descent and can solve for the optimal model parameters directly
+    in “closed-form”, you''ll want to check out my first Udemy course on the classical
+    statistical method - linear regression:
+
+
+    # Data Science: Linear Regression in Python'
+  - '[PAGE 66]
+
+
+    https://www.udemy.com/data-science-linear-regression-in-python
+
+
+    If you are interested in learning about how machine learning can be applied to
+    language, text, and speech, you’ll want to check out my course on Natural Language
+    Processing, or NLP:
+
+
+    Data Science: Natural Language Processing in Python
+
+
+    https://www.udemy.com/data-science-natural-language-processing-in-python
+
+
+    If you are interested in learning SQL - structured query language - a language
+    that can be applied to databases as large as the ones sitting on your iPhone,
+    to databases as large span multiple continents - and not learn the mechanics of
+    the language but know how to apply it to real-world data analytics and marketing
+    problems? Check out my course here:
+
+
+    SQL for Marketers: Dominate data analytics, data science, and big data
+
+
+    https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data
+
+
+    Are you interested in stock prediction, time series, and sequences in general?
+    My Hidden Markov Models course is where you want to be. I teach you not all the
+    classical theory of HMMs, but I also show you how to write in Theano using gradient
+    descent! This is great practice for writing deep learning models and it will prepare
+    you for its sequel, Deep Learning Python Part 5: Recurrent Neural Networks in
+    Python. You can get the HMM course here:
+
+
+    Unsupervised Machine Learning: Hidden Markov Models in Python
+
+
+    https://udemy.com/unsupervised-machine-learning-hidden-markov-models-in-python
+
+
+    Finally, I am always giving out coupons and letting you know when you can get
+    my stuff for free. But you can only do this if you are a current student of mine!
+    Here are some ways I notify my students about coupons and free giveaways:'
+  - '[PAGE 67]
+
+
+    My newsletter, which you can sign up for http://lazyprogrammer.me (it comes with
+    a free 6-week intro to machine learning course)
+
+
+    My Twitter, https://twitter.com/lazy_scientist
+
+
+    My Facebook page, https://facebook.com/lazyprogrammer.me (don’t forget to hit
+    “like”!)'
+  md: '
+
+    ```python
+
+    plt.imshow(X, cmap=''gray'')
+
+    ```
+
+
+    To ensure the image is grayscale rather than a heatmap.
+
+
+    For the layers beyond the input-to-hidden, we can''t solve in closed-form, so
+    we return to our old friend gradient descent.
+
+
+    This should be simple since Theano can calculate gradients for us. The only caveat
+    is that you now need to take the derivative with respect to the input, not the
+    weights, like we usually do during training.
+
+
+    ## Chapter 6: Tricking a Neural Network
+
+
+    Now that you know how to take the derivative of a variable with respect to the
+    inputs instead of the weights, we are ready to talk about how to trick a neural
+    network.
+
+
+    The key is the cost function, J.
+
+
+    We want to increase the cost function as much as possible, while inducing minimal
+    changes in X.
+
+
+    To do that, we simply ask, "in what direction should I change X, such that it
+    results in the maximum change in J?"
+
+
+    This is again just a calculus problem - we want to find dJ/dX.
+
+
+    And again, we use Theano to automatically calculate the gradient.
+
+
+    Once you''ve done that, we simply change X by a small amount in that direction.
+
+
+    ```python
+
+    X = X + eps*dJ/dX
+
+    ```
+
+
+    Where eps is a small number.
+
+
+    What you should find that is the image itself doesn''t look any different (remember,
+    matplotlib will scale your values to be from 0..255), but the neural network has
+    a good chance of classifying the image wrong, even when it classifies the original
+    image right.
+
+
+    What implications does this have in terms of training a neural network?
+
+
+    You surely don''t want your neural network to be so easily fooled, and the key
+    here is something we''ve already talked about before:
+
+
+    Data augmentation.
+
+
+    The example I like to give: an upside-down cat is still a cat. A cat shifted to
+    the left is still a cat. A rotated cat is still a cat.
+
+
+    So if you only have one cat, you should create these invariant transformations
+    and include them as training data.
+
+
+    Similarly, a cat with some noise is still a cat.
+
+
+    This is like what we did with autoencoders - set some of the inputs to 0. A cat
+    with some 0s is still a cat, so add that as training data.
+
+
+    And like we''ve seen in this chapter, a cat + some “intelligently designed” noise
+    is still a cat, so include that as training data too.
+
+
+    By including all these forms of data augmentation, you are making your neural
+    network more robust.
+
+
+    ## Conclusion
+
+
+    I really hope you had as much fun reading this book as I did making it.
+
+
+    Did you find anything confusing? Do you have any questions?
+
+
+    I am always available to help. Just email me at: info@lazyprogrammer.me
+
+
+    I do 1:1 coaching and consulting as well.
+
+
+    Do you want to learn more about deep learning? Perhaps online courses are more
+    your style. I happen to have a few of them on Udemy.
+
+
+    My first course in deep learning is a lot like the book, but you get to see me
+    derive the formulas and write the code live:
+
+
+    Data Science: Deep Learning in Python
+
+
+    https://udemy.com/data-science-deep-learning-in-python
+
+
+    Are you comfortable with this material, and you want to take your deep learning
+    skillset to the next level? My follow-up Udemy course on deep learning is for
+    you. Similar to this book, I take you through the basics of Theano and TensorFlow
+    - creating functions, variables, expressions, and build up neural networks from
+    scratch. I teach you about ways to accelerate the learning process, including
+    batch gradient descent, momentum, and adaptive learning rates. I also show you
+    how to create a GPU instance on Amazon AWS EC2, and prove to you that training
+    a neural network with GPU optimization can be orders of magnitude faster than
+    on your CPU.
+
+
+    Data Science: Practical Deep Learning in Theano and TensorFlow
+
+
+    https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow
+
+
+    When you''ve got the basics of deep learning down, you''re ready to explore alternative
+    architectures. One popular alternative is the convolutional neural network, created
+    specifically for image classification. These have promising applications in medical
+    imaging, self-driving vehicles, and more. In this course, I show you how to build
+    convolutional nets in Theano and TensorFlow.
+
+
+    ### Deep Learning: Convolutional Neural Networks in Python
+
+
+    https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow
+
+
+    In part 4 of my deep learning series, I take you through unsupervised deep learning
+    methods (that''s this book!). We study principal components analysis (PCA), t-SNE
+    (jointly developed by the godfather of deep learning, Geoffrey Hinton), deep autoencoders,
+    and restricted Boltzmann machines (RBMs). I demonstrate how unsupervised pretraining
+    on a deep network with autoencoders and RBMs can improve unsupervised learning
+    performance.
+
+
+    ### Unsupervised Deep Learning in Python
+
+
+    https://www.udemy.com/unsupervised-deep-learning-in-python
+
+
+    Would you like an introduction to the basic building block of neural networks
+    - logistic regression? In this course I teach the theory of logistic regression
+    (our computational model of the neuron), and give you an in-depth look at binary
+    classification, manually creating features, and gradient descent. You might want
+    to check this course out if you found the material in this book too challenging.
+
+
+    ### Data Science: Logistic Regression in Python
+
+
+    https://udemy.com/data-science-logistic-regression-in-python
+
+
+    To get an even simpler picture of machine learning in general, where we don''t
+    even need gradient descent and can solve for the optimal model parameters directly
+    in “closed-form”, you''ll want to check out my first Udemy course on the classical
+    statistical method - linear regression:
+
+
+    ### Data Science: Linear Regression in Python
+
+
+    https://www.udemy.com/data-science-linear-regression-in-python
+
+
+    If you are interested in learning about how machine learning can be applied to
+    language, text, and speech, you’ll want to check out my course on Natural Language
+    Processing, or NLP:
+
+
+    Data Science: Natural Language Processing in Python
+
+
+    https://www.udemy.com/data-science-natural-language-processing-in-python
+
+
+    If you are interested in learning SQL - structured query language - a language
+    that can be applied to databases as large as the ones sitting on your iPhone,
+    to databases as large span multiple continents - and not learn the mechanics of
+    the language but know how to apply it to real-world data analytics and marketing
+    problems? Check out my course here:
+
+
+    SQL for Marketers: Dominate data analytics, data science, and big data
+
+
+    https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data
+
+
+    Are you interested in stock prediction, time series, and sequences in general?
+    My Hidden Markov Models course is where you want to be. I teach you not all the
+    classical theory of HMMs, but I also show you how to write in Theano using gradient
+    descent! This is great practice for writing deep learning models and it will prepare
+    you for its sequel, Deep Learning Python Part 5: Recurrent Neural Networks in
+    Python. You can get the HMM course here:
+
+
+    Unsupervised Machine Learning: Hidden Markov Models in Python
+
+
+    https://udemy.com/unsupervised-machine-learning-hidden-markov-models-in-python
+
+
+    Finally, I am always giving out coupons and letting you know when you can get
+    my stuff for free. But you can only do this if you are a current student of mine!
+    Here are some ways I notify my students about coupons and free giveaways:
+
+
+    - My newsletter, which you can sign up for http://lazyprogrammer.me (it comes
+    with a free 6-week intro to machine learning course)
+
+    - My Twitter, https://twitter.com/lazy_scientist
+
+    - My Facebook page, https://facebook.com/lazyprogrammer.me (don’t forget to hit
+    “like”!)
+
+    '
+  mdcn: "\n\n```python\nplt.imshow(X, cmap='gray')\n```\n\n为了确保图像是灰度图而不是热力图。\n\n对于输入到隐藏层之外的层，我们无法通过闭式解来求解，因此我们回到我们的老朋友——梯度下降法。\n\
+    \n这应该是简单的，因为 Theano 可以为我们计算梯度。唯一的注意事项是，你现在需要对输入求导，而不是像我们通常在训练期间做的那样对权重求导。\n\n\
+    ## 第 6 章：欺骗神经网络\n\n现在你已经学会了如何对变量相对于输入而非权重的求导数，我们已经准备好讨论如何欺骗神经网络了。\n\n关键在于代价函数\
+    \ $J$。\n\n我们希望尽可能增加代价函数，同时对 X 引起最小的变化。\n\n为了做到这一点，我们只需要问：“我应该哪个哪个改变 X，才能使 J 的变化最大？”\n\
+    \n这仍然仅仅是一个微积分问题——我们想要找到 $dJ/dX$。\n\n我们再次使用 Theano 来自动计算梯度。\n\n完成这一步后，我们只需要在该方向上微调\
+    \ X 即可。\n\n```python\nX = X + eps*dJ/dX\n```\n\n其中 eps 是一个很小的数字。\n\n你会发现，图像本身看起来并没有任何不同（记住，matplotlib\
+    \ 会将你的值缩缩到 0..255），但神经网络有很大的概率错误地分类图像，即使它能正确地分类原始图像。\n\n这在训练神经网络方面有什么意义？\n\n你肯定不希望你的神经网络如此容易被欺骗，而这里的关键是我们之前已经讨论过的东西：\n\
+    \n数据增强（Data augmentation）。\n\n我喜欢举的例子是：一只倒过来的猫还是猫。一只向左移动的猫还是猫。一只旋转过的猫还是猫。\n\n\
+    所以，如果你只有一只猫，你应该创建这些不变性变换并将它们作为训练数据包含进来。\n\n同样，带有某些噪声的猫还是猫。\n\n这就像我们对自动编码器所做的那样——将某些输入设置为\
+    \ 0。带有一些 0 的猫仍然是猫，所以将其作为训练数据添加。\n\n正如我们在这一章中看到的，猫 + 一些“精心设计”的噪声仍然是猫，所以也将将其包含在训练数据中。\n\
+    \n通过包含所有形式的数据增强，你正在让你的神经网络更加健壮。\n\n## 结论\n\n我真心希望你读这本书的乐趣就像我制作它时的乐趣一样。\n\n你发现有任何困惑的地方吗？你有任何问题吗？\n\
+    \n我随时为你提供帮助。请发送邮件给我：info@lazyprogrammer.me\n\n我也提供 1:1 的辅导和咨询。\n\n你想学习更多关于深度学习的知识吗？也许在线课程更符合你的风格。我在\
+    \ Udemy 上有几门课程。\n\n我的第一门深度学习课程非常像这本书，但你可以看到我现场推导公式并编写代码：\n\n数据科学：Python 深度学习 \n\
+    \nhttps://udemy.com/data-science-deep-learning-in-python\n\n你对这些材料熟悉吗，并且想将你的深度学习技能提升到下一个水平吗？我在\
+    \ Udemy 上的深度学习后续课程是为你准备的。与这本书类似，我带你学习 Theano 和 TensorFlow 的基础知识——创建函数、变量、表达式并从零开始构建神经网络。我教你加速学习过程的方法，包括批量梯度下降、动量和自适应学习率。我向你展示如何在\
+    \ Amazon AWS EC2 上创建 GPU 实例，并向你证明使用 GPU 优化的神经网络训练比在 CPU 上快几个数量级。\n\n数据科学：Theano\
+    \ 和 TensorFlow 深度学习实战\n\nhttps://www.udemy.com/data-science-deep-learning-in-theano-tensorflow\n\
+    \n当你掌握了深度学习的基础后，你就准备好探索替代架构了。一种流行的替代方案是专门为图像分类创建的卷积神经网络。它们在医学成像、自动驾驶等领域具有广阔的应用。在这门课程中，我向你展示如何在\
+    \ Theano 和 TensorFlow 中构建卷积。\n\n### 深度学习：Python 卷积神经网络\n\nhttps://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow\n\
+    \n在我深度学习系列的第 4 部分，我将带你学习无监督深度学习方法（这就是这本书！）。我们学习了主成分分析 (PCA)、t-SNE（由深度学习之父 Geoffrey\
+    \ Hinton 联合开发）、深度自动编码器和受限玻尔兹曼机 (RBMs)。我演示了使用自动编码器和 RBM 在深度网络上进行无监督预训练如何提高无监督学习的性能。\n\
+    \n### Python 无监督深度学习\n\nhttps://www.udemy.com/unsupervised-deep-learning-in-python\n\
+    \n你想学习神经网络的基础构建模块——逻辑回归介绍吗？在这门课程中，我教你逻辑回归的理论（我们对神经元的计算模型），并让你深入了解二分类、手动创建特征和梯度下降。如果你觉得书中的材料太有挑战性，你可能想去看看这门课程。\n\
+    \n### 数据科学：Python 逻辑回归\n\nhttps://udemy.com/data-science-logistic-regression-in-python\n\
+    \n为了获得对通义机器学习更简单的直观理解（其中我们甚至不需要梯度下降，并且可以直接以“闭式解”求解最优模型参数），你想要查看我关于经典统计方法——线性回归的第一门\
+    \ Udemy 课程：\n\n### 数据科学：Python 线性回归\n\nhttps://www.udemy.com/data-science-linear-regression-in-python\n\
+    \n如果你对机器学习如何应用于语言、文本和语音感兴趣，查看我关于自然语言处理（NLP）的课程：\n\n数据科学：Python 自然语言处理\n\nhttps://www.udemy.com/data-science-natural-language-processing-in-python\n\
+    \n如果你对学习 SQL——结构查询语言——一种可以应用于 iPhone 数据库，也可以应用于跨越多个大陆的大型数据库的语言——并且不仅学习语言机制，还想如何将其应用于真实世界的数据分析和营销问题？请查看我的课程：\n\
+    \n营销人员 SQL：主宰数据分析、数据科学和大数据\n\nhttps://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data\n\
+    \n你对股票预测、时间序列和一般的序列感兴趣吗？我的隐马尔可夫模型课程是你去的地方。我不仅教你 HMM 的所有经典理论，还向你展示如何使用梯度下降编写 Theano！这是编写深度学习模型的极佳练习，并将为其续集《深度学习\
+    \ Python 第5 部分：Python 递归神经网络》做好准备。你可以在这里获取 HMM 课程：\n\n无监督机器学习：Python 隐马尔可夫模型\n\
+    \nhttps://udemy.com/unsupervised-machine-learning-hidden-markov-models-in-python\n\
+    \n最后，我一直在发放优惠并告诉你何时可以免费。但只有我的学生才能这样做！以下是我通知学生优惠和免费赠送的方式：\n\n- 我的邮件列表，你可以订阅 http://lazyprogrammer.me（包含一个免费的六周机器学习入门课程）\n\
+    - 我的 Twitter，https://twitter.com/lazy_scientist\n- 我的 Facebook 页面，https://facebook.com/lazyprogrammer.me（别忘了点“赞”！）\n\
+    \n"
+  merge: 0
