@@ -1,0 +1,34 @@
+# 24.10 Privacy-Enhanced Mail (PEM)
+
+# Certificates
+
+PEM is compatible with the authentication framework described in [304]; see also [826]. PEM is a superset of X.509 it establishes procedures and conventions for a key-management infrastructure for use with PEM and with other protocols (from both the TCP/IP and OSI suites) in the future.
+
+The keymanagement infrastructure establishes a single root for all Internet certification. The Internet Policy Registration Authority (IPRA) establishes global policies that apply to all certification under this hierarchy. Beneath the IPRA root are Policy Certification Authorities (PCAs), each of which establishes and publishes its policies for registering users or organizations. Each PCA is certified by the IPRA. Below PCAs Cas certify users and subordinate organizational entities (such as departments, offices, subsidiaries). Initially the majority of users are expected to be registered with some organization.
+
+Some PCAs provide certification for users who register independent of any organization. For users whose anonymity taking advantage of PEM privacy facilities one or more PCAs are expected to be established with policies that allow for registration of users who do not wish to disclose their identities.
+
+# PEM Messages
+
+PEM's heart is its message format. Figure 24.4 shows an encrypted message using symmetric key management. Figure 24.5 shows an authenticated and encrypted message using public-key management, and Figure 24.6 shows an authenticated (unencrypted) message using public-key key management.
+
+The first field is "Proc-Type" and identifies the type of processing performed on the message. There are three possible types of messages: The "ENCRYPTED" spec-
+
+```
+-----BEGIN PRIVACY-ENHANCED MESSAGE----
+Proc-Type: 4,ENCRYPTED
+Content: RFC822
+Dek-ID: DES-CBC,8B4143EDE596D59
+Originator: schneler@counterpane.com,
+Recipient-ID: schneler@chinet.com,pt-kmc,4
+Key-Info:
+DES-ECB,RSA-M02,9F0AD3AF269B1A9,B70665B8BF7CA60159BA4F727D3
+Recipient-ID: dev-pem@gmail.com,pt-kmc,4
+DES-ECB,RSA-M02,1631A7F5DBC8E47J25J/I72n0HcNukJ2HEU50hl1nNSIW1LM
+LLrHoEJyh/fFSTdw8Z0wEnkr4X72SJ/IJbVPXROUROUzybBknopAgG2VIzupk
+E6Jfmf/x+bTMMPXJWzl8X5fZ5FrDcuM1K16270dbcGWSDlptTpScnot
+dx/HLMDw0NonwpPcQUIHT-----
+-----END PRIVACY-ENHANCED MESSAGE-----
+```
+
+Figure 24.4 Example of an encapsulated message (symmetric case).

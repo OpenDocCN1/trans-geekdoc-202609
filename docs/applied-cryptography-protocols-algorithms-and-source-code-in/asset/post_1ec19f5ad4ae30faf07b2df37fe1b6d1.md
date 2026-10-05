@@ -1,0 +1,76 @@
+
+# 678
+
+# References
+
+- 66. D. Atkins, M. Graff, A.K. Lenstra, and P.C. Leyland, "The Magic Words are Squeamish Ossifrage," *Advances in Cryptography—ASYACRYPT ’94* *Proceedings.*, Springer-Verlag, 1995, pp. 263–277.
+- 67. AT&T, "T700 Random Number Generator," *Data Sheet*, Aug. 1986.
+- 68. AT&T, "Analysis Reading New-Proof Phone for Mobile and Civilian Markets," *The Report on AT&T* 2, Jun 1986, pp. 6–7.
+- 69. AT&T, "T700B2 Slice Multiplier," public announcement, 1987.
+- 70. AT&T, "Telephone Service Desktop 3600—User’s Manual," *AT&T*, 20 Sep 1992.
+- 71. Y. Aumann and U. Feige, "On Mesh Proof Systems with Space Varieties," *Advances in Cryptography—CRYPTO 93* *Proceedings*, Springer-Verlag, 1994, pp. 45–59.
+- 72. R.G. Ayub, *Introduction to the Theory of Provinces*, American Mathematical Society, 1963.
+- 73. A. Aziz and W. Dill, "Privacy and Authentication for Wireless Local Access Networks," *IEEE Communications*, v. 1, n. 1, 1994, pp. 25–31.
+- 74. A. Bahman, and J. Dill, "Certified Electronic Mail," *Proceedings of the Internet Network 1994 Workshop on Network and Distributed System Security*, The Internet Society, 1994, pp. 3–19.
+- 75. D. Dalton, "Authentication of Cryptographic Keys Using the Institutional Key Standard," *IEEE Communications*, v. 23, n. 9, Sep 1985, pp. 41–46.
+- 76. D. Dalton, C. Ellis, S.B. Lipner, and S.T. Walker, "A New Approach to Safe Key Encryption," *TIS Report #520*, Trusted Information Systems, Aug. 94.
+- 77. R. Ball, *Mathematical Recreations and Essays*. New York: Macmillan, 1960.
+- 78. J. Bamford, *The Puzzle Palace*, Boston: Houghton Mifflin, 1982.
+- 79. I. Bamford and W. Madsen, *The Puzzle Palace*, Second Edition, Penguin Books, 1995.
+- 81. S.K. Banerjee, "High Implementation of DES," *Computers & Security*, v. 1, 1982, pp. 261–267.
+- 82. Z. Baodong, "MC-Veiled Linear Transform Public Cryptosystem," *Acta Electronica*, v. 20, n. 4, Apr 1992, pp. 21–24.
+- 83. P.H. Bardell, "Analysis of Cellular Automata Used as Pseudorandom Generators," *Proceedings of 1990 International Crypto Conference*, pp. 325–334.
+- 84. T. Bartaud, H. Gilbert, and G. Mitrai, "FF Hashing is not Collision-Free," *Advances in Cryptography—EUROCRYPT 92* *Proceedings*, Springer-Verlag, 1993, pp. 35–52.
+- 85. C. Barker, "An Identity Protocol for the CCEP," *2nd Annual AAAAI Security Conference*, 1986.
+- 86. G. Barker, *Analysis of the Helen Cryptograph*, Asecurity Report 1994.
+- 87. P. Parrett, "Implementation of the Shamir and Adleman Public Key Encryption on a Digital Signature Processor," *Advances in Cryptography—CRYPTO 86*, 1987, pp. 311–323.
+- 88. T.C. Barrie and J.D. Schneider, "Computer with Finite Fields," *Computator*, v. 6, n. 6, Jun 1983, pp. 79–98.
+- 89. U. Baum and S. Blackburn, "Controlled Pseudorandom Generators on Finite Groups," K.U. Leuven Workshop on Cryptographic Algorithms, Springer-Verlag, 1998, appear.
+- 90. K.R. Bauer, T.A. Berstein, and R.J. Feijert, "A Key Distribution Protocol Using Early Markers," *ACM Transactions on Computer Systems*, v. 1, n. 3, 1983, pp. 298–325.
+- 91. F. Bauer and E. Durrett, "Requirements for Cryptographic Functions," *Computers & Security*, v. 1, n. 5, Sep 1992, pp. 427–437.
+- 92. D. Bayer, S. Haber, and W.S. Stanton, "Improving the Efficiency and Reliability of Digital Time-Stamping," *Seasons '91: Methods in Communication, Security, and Computer Science*, Springer-Verlag, 1992, pp. 325–334.
+- 93. R. Bayer and J. Metzger, "On the Encryption of Search Trees and Random Access Files," *ACM Transactions on Database Systems*, v. 1, n. 1, 1976, pp. 37–52.
+- 100. P. Beauchemin, G. Grassard, C. Crépeau, and C. Mathmin, "The Generation of Random Numbers with a Large Prime," Journal of Cryptography, v. 1, 1998, pp. 53–64.
+- 101. D. Deaver, J. Feigenbaum, and V. Shoup, "Holding Instances in Zero-Knowledge," *Advances in CRYPTO* 1990, pp. 326–338.
+- 102. H. Beker, J. Farid and P. Hall, "Multiplying Key Management in Electronic Funds Transfer of Electronics Letters, v. 19, n. 12, pp. 442–444.
+- 103. H. Beker and J. Piper, "Ciphers: The Protection of Communications," London: Northrop, 1982.
+- 104. D.E. Bell and J. LaPadula, "Computer Systems: Mathematical Foundations," MITRE Report-7375, 1973.
+- 105. D.E. Bell and J. LaPadula, "Computer Systems: A Mathematical Model," MITRE Report-3547, MITRE Corp., 1975.
+- 106. D.E. Bell and J. LaPadula, "Computer Systems: Unified Exposition and Interrogation," MITRE Report-3056, MITRE Corp., 1976.
+- 107. M. Bellare and G. Goldwasser, "New Paradigm for Digital Signatures and Message Authentication Based on Non-Interactive Proofs," *Advances in CRYPTO–89*, Springer-Verlag, 1990, pp. 199–211.
+- 108. M. Bellare and S. Micali, "Non-Interactive Oblivious Transfer and Applications," *Advances in CRYPTO–99*, Springer-Verlag, 1990, pp. 547–557.
+- 106. M. Bellare, S. Micali, and R. Ostrovsky, "Perfect Zero-Knowledge in Constant Rounds," Proceedings of the 22nd ACM Symposium on the Theory of Computing, 1990, pp. 482–493.
+- 107. S.M. Bellare, "A Preliminary Analysis of Clipper and Skipjack," unpublished manuscript, 20 Apr 1993.
+- 108. S.M. Bellare and M. Meritt, "Limitations of the Kerberos Protocol," Winter USENIX 1991, USENIX Association, pp. 253–267.
+- 109. S. Bellare and M. Meritt, "Encrypted Key Exchange: Password-Based Dictionary Attacks," Proceedings of the 1992 IEEE Computer Society on Research and Privacy, 1992, pp. 72–84.
+- 110. S. Bellare and M. Meritt, "Attack on the Interlock Protocol Used for Authentication," IEEE Transactions on Information Theory, vol. 30, jan 1984, pp. 273–275.
+- 111. S. Bellare and M. Meritt, "Cryptographic Protocol for Secure Communication," U.S. Patent 5,241,599, 31 Aug 93.
+- 112. E-A. Rogaway and E. Biham, "Differential Cryptanalysis of Lucas," *Advances in CRYPTO–93*, Springer-Verlag, 1994, pp. 177–186, 223–
+- 113. J. Boneh, "Cryptographic Capsules: A Disjunctive Primitive for Interactive Protocols," *Advances in CRYPTO–86*, Springer-Verlag, 1997, pp. 217–223.
+- 114. J. Boneh, "Secret Sharing Morphisms: Keys of the Secret Sharing," *Advances in CRYPTO–87*, Springer-Verlag, 1998, pp. 251–260.
+- 115. J. Boneh, "Verifiable Secret-Ballot Elections," F. doctoral thesis, Yale University, YALEU/CS-561, Dec 1997.
+- 116. J. Boneh and M. Mace, "Alternating Accumulator for Digital Signatures," *Advances in EUROCRYPT–93 Proceedings*, Springer-Verlag, 1994, pp. 278–285.
+- 117. J. Boneh and M. Yung, "Distributing the Power of a Government to Enhance the privacy of Voters. Proceedings of the 5th ACM Symposium on the Principles in Distributed Computing, 1988, pp. 52–62.
+- 119. A. Bender and G. Castagno. "On Implementation of Elliptic Curve Cryptosystems." *Advances in Cryptography—CRYPTO 89*. Springer-Verlag, 1990, pp. 186–192.
+- 120. S. Bengio, G. Brassard, and Y. Desmiche C. Gou.-J. Quisquater, "Secure implementation of Identification Systems." Journal of Cryptography, v. 4, n. 3, 1991, pp. 175–184.
+- 121. C. H. Bennett, E. Brassard, and Y. Desmiche C. Gou.-J. Quisquater, "Experimental Cryptography," *Advances in EUROCRYPT–93 Proceedings*, Springer-Verlag, 1994, pp. 253–265.
+- 122. C. H. Bennett, E. Brassard, and Y. Desmiche C. Gou.-J. Quisquater, "Public-Key," Journal of Cryptography, v. 1, n. 4, 1992, pp. 50–57.
+- 123. C. H. Bennett, E. Brassard, and Y. Desmiche C. Gou.-J. Quisquater, "How to Recover Your Information," *Advances in CRYPTO–85*, Springer-Verlag, 1990, pp. 468–476.
+- 124. C. H. Bennett, E. Brassard, and Y. Desmiche C. Gou.-J. Quisquater, "Fault-Tolerant," Proceedings of the 20th ACM Symposium on the Theory of Computing, 1988, pp. 1–10.
+- 125. C. H. Bennett, E. Brassard, and Y. Desmiche C. Gou.-J. Quisquater, "The New Era," *Advances in CRYPTO–88*, Springer-Verlag, 1990, pp. 37–56.
+- 126. M. Bellare, S. Micali, and R. Ostrovsky, "Perfect Zero-Knowledge in Constant Rounds," Proceedings of the 22nd ACM Symposium on the Theory of Computing, 1990, pp. 482–493.
+- 127. S.M. Bellare, "A Preliminary Analysis of Clipper and Skipjack," unpublished manuscript, 20 Apr 1993.
+- 128. S.M. Bellare and M. Meritt, "Limitations of the Kerberos Protocol," Winter USENIX 1991, USENIX Association, pp. 253–267.
+- 129. S. Bellare and M. Meritt, "Encrypted Key Exchange: Password-Based Dictionary Attacks," Proceedings of the 1992 IEEE Computer Society on Research and Privacy, 1992, pp. 72–84.
+- 130. P. Beauchemin, G. Grassard, C. Crépeau, and C. Mathmin, "The Generation of Random Numbers with a Large Prime," Journal of Cryptography, v. 1, 1998, pp. 53–64.
+- 131. D. Deaver, J. Feigenbaum, and V. Shoup, "Holding Instances in Zero-Knowledge," *Advances in CRYPTO* 1990, pp. 326–338.
+- 132. H. Beker, J. Farid and P. Hall, "Multiplying Key Management in Electronic Funds Transfer of Electronics Letters, v. 19, n. 12, pp. 442–444.
+- 133. H. Beker and J. Piper, "Ciphers: The Protection of Communications," London: Northrop, 1982.
+- 134. D.E. Bell and J. LaPadula, "Computer Systems: Mathematical Foundations," MITRE Report-7375, 1973.
+- 135. D.E. Bell and J. LaPadula, "Computer Systems: A Mathematical Model," MITRE Report-3547, MITRE Corp., 1975.
+- 136. D.E. Bell and J. LaPadula, "Computer Systems: Unified Exposition and Interrogation," MITRE Report-3056, MITRE Corp., 1976.
+- 137. M. Bellare and G. Goldwasser, "New Paradigm for Digital Signatures and Message Authentication Based on Non-Interactive Proofs," *Advances in CRYPTO–89*, Springer-Verlag, 1990, pp. 199–211.
+- 138. M. Bellare and S. Micali, "Non-Interactive Oblivious Transfer and Applications," *Advances in CRYPTO–99*, Springer-Verlag, 1990, pp. 547–557.
+- 139. M. Bellare, S. Micali, and R. Ostrovsky, "Perfect Zero-Knowledge in Constant Rounds," Proceedings of the 22nd ACM Symposium on the Theory of Computing, 1990, pp. 482–493.
+- 140. E.R. McEllek, Algebraic Coding Theory, Academic Press Press, 1984.
+- 141. S. Serikot, J. Kowalski, and B. Shannon, "Implementing Public-Key Scheme," IEEE Communications Magazine, v. 17, n. 3, May 1979, pp. 2–3.

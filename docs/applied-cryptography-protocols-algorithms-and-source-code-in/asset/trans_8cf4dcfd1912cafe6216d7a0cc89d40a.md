@@ -1,0 +1,77 @@
+
+
+# 参考文献
+
+- 215. J. Boar, C. Lund, and R. Peralta, "零知识证明的通信复杂度，”Journal of Cryptology, v. n. 2, 1993, 65–88.
+- 216. J. Boar and R. Peralta, "论零知识证明的复杂度，”Advances in Cryptography—CRYPTO 89 Proceedings, Springer-Verlag, 1990, 50–525.
+- 217. C. Boar, "多密钥密码的一些应用，”Advances in Cryptography—EUCRYPT 88, Springer-Verlag, 1988, 445–467.
+- 218. C. Boar, "数字多重图与编码，”H.I. Baker and F. J. Cobs, Oxford: Clarendon Press, 1999, 201–246.
+- 219. C. Boar, "一种新型多密码和改进的投票系统，”Advances in Cryptography—EUCRYPT 89, Springer-Verlag, 1990, 195–215.
+- 220. C. Boar, "重审多图，”Cryptography and Coding III, M.J. Ganley, et al., Oxford: Clarendon Press, 1993, 21–53.
+- 221. C. Boar and W. Ma, "论BAN逻辑的局限性，”Advances in Cryptography—EUCRYPT 93, Springer-Verlag, 1994, 240–347.
+- 222. C. Boar and W. Ma, "密钥交换协议的设计，”Computer Security—ORICS 94, Springer-Verlag, 1994, 217–230.
+- 223. B.O. Brassard, D. Coppersmith, M.M. Hyden, S.M. Cyas, C.H. Meyer, I. Silpel, and P. Schilling, "使用单向函数的数字修改码进行数据认证，”U.S. Patent 4,908,861, 13.
+- 224. J. Brant, I.Damman, Landrock, and T. Peterson, "带密钥交换的零认证方案，”Advances in Cryptography—CRYPTO 89, Springer-Verlag, 1990.
+- 225. S.A. Brands, "基于反射问题的离线电子现金系统，”Computer Science/RS-89323, Algorithms and Architecture, CWI, Mar 1993,
+- 226. S.A. Brands, "带服务器的不可追踪离线现金，”Advances in Cryptography—CRYPTO 93, Springer-Verlag, 1994, 302–318.
+- 227. S.A. Brands, "互联网上的电子现金，”Internet Society 1995 Network and Distributed Systems Security会议论文，IEEE Computer Society 1995, 64–84.
+- 228. D.K. Brandast, "Hellman的数据不支持他的碰撞结果，”IEEE Spectrum, v. 16, n. 7, 1979.
+- 229. D.K. Brandast, G. Gait, and S. Kratz, "计算机安全密码学工作报告，”NISBR 77-121, National Bureau of Standards, S. 21–22, September 1976.
+- 230. G. Brass, "关于密码学复杂的笔记，”IEEE Transactions on Information Theory, IT-25, n. 2, Mar 1979, 232–233.
+- 231. G. Brass, "随机密码学，”IEEE 20th Annual Symposium on the Foundations of Computer, 1979, 385–389.
+- 232. G. Brass, "随机密码学中的时间锁交易，”IEEE 21st Annual Symposium on the Foundations of Computer, 1980, 381–386.
+- 233. G. Brass, "随机密码学中的时间锁，”journal of Computer and System Sciences, v. 22, n. 3, 1990, 283–311.
+- 234. G. Brass, "一种最优安全的随机系统，”SIGACT News, v. 15, n. 1, 1983, 28–33.
+- 235. G. Brass, "随机密码学，”IEEE Transactions on Information Theory, IT-29, n. 6, 1983, 877–894.
+- 236. G. Brass, "量子密码学：参考文献，”SIGACT News, v. 24, n. 3, 1993, 16–20.
+- 237. G. Brass, D. Chaum, and C. Crepeau, "最小披露简介，”QUARTER, v. 1, n. 1, 3–17.
+- 238. G. Brass, D. Chaum, and C. Crepeau, "最小知识证明，”journal of Computer and System Sciences, v. 37, n. 2, 1988, 156–189.
+- 239. G. Brass, "非传递性传输：用于SAT的交互式零知识协议，”IEEE 27th Symposium on Computer Science, 1986, 188–195.
+- 241. G. Grassard and C. Crepeau, "布尔电路的零知识模拟，”Advances in Cryptography—86, Springer-Verlag, 1999, 223–238.
+- 242. B. Grassard and C. Crepeau, "排序知识，”Advances in Cryptography-EUROCRYPT '89, Proceedings, Springer-Verlag, 1990, 181–191.
+- 243. G. Grassard and C. Crepeau, "量子比特承诺与代价，”Advances in Cryptography-'90, Springer-Verlag, 1991, 49–61.
+- 244. G. Grassard, C. Crepeau, R. Jossa, and D. Landass, "双方均不可破解的量子承诺方案，”IEEE 34th Symposium on Foundations of Computer Science, 1993, 362–371.
+- 245. G. Grassard, C. Crepeau, and J.-M. Robert, "信息论归约，”IEEE 27th Symposium on Computer Science, 1986, 168–173.
+- 246. G. Grassard, C. Crepeau, and J.-M. Robert, "全或无秘密披露，”Advances in Cryptography-'86, Springer-Verlag, 1997, 234–238.
+- 247. G. Grassard, C. Crepeau, and M. Young, "有界回合内的自由零知识，”16th International Conference on Automata, Languages, and Programming, Springer-Verlag, 1998, 123.
+- 248. R.P. Brent, "改进的蒙特卡洛因子分解，”BIT, v. 20, n. 2, 1980, 176–184.
+- 249. R.P. Brent, "论斐波那契递归的周期，”Mathematics of Computation, v. 63, n. 20, 1994, 381–390.
+- 250. R.P. Brent, "整数分解的并行算法，”Research Report-R49, Computer Science Library, The Australian National University, Oct 1989.
+- 251. D.M Brass, "因子分解与模测试，”Springer-Verlag, 1993.
+- 252. E.F. Brickell, "带双密钥密码学的快速模划分算法，”Advances in Cryptography: Proceedings of Cryptography 82, Press, 1982, 51–60.
+- 253. E.F. Brickell, "大多数低密度背包可以在多项式时间内求解吗？，”14th International Conference on Combinatorics, Graph Theory, and Computing, 1983.
+- 254. E.F. Brickell, "求解密密背包，”Advances in Cryptology: Proceedings of Cryptography 83, Press, 1984, 25–37.
+- 255. E.F. Brickell, "破解集成背包，”Advances in Cryptology: Proceedings of Cryptography 84, Springer-Verlag, 1985, 535–558.
+- 256. E.F. Brickell, "公钥系统的密码分析，”EUROCRYPT '86, p. 20–22.
+- 257. E.F. Brickell, "背包的密码分析，”Applications of Discrete Mathematics, R. Rengin and J.S. Roberts, editors, Journal of Industrial and Applied Mathematics, Philadelphia, 1988, p. 3–23.
+- 258. E.F. Brickell, "硬件实例调查，”Advances in Crypto-'89, Springer-Verlag, 1990, p. 368–370.
+- 259. E.F. Brickell, D. Chau, I.B. Damgard, and J. van Graaf, "可验证与可变秘密，”Advances in Crypto-'97, Springer-Verlag, 1998, p. 154–166.
+- 260. E.F. Brickell and G. Simons, "关于 Merkle-Hellman背包的初步报告，”Advances in Cryptology: Proceedings of Cryptography 82, Press, 1983, 289–303.
+- 261. E.F. Brickell and J. DeLaurent, "对 Okamoto 和 Shirashi 方案的攻击，”Advances in Cryptology-'95, Springer-Verlag, 1996, p. 28–32.
+- 262. E.F. Brickell, D. Denny, S. T. Kent, and W. Tuckman, "迭代背包的评估，”unpublished, Jul 1993.
+- 263. E.F. Brickell, J. Lagarias, and A. M. Odlyko, "分析，”Advances in Cryptology: Proceedings of Cryptography 83, Plenum, 1984, p. 39–42.
+- 264. E.F. Brickell, P.J. Lee and Y. Yacobi, "密码学中的安全音频，”Advances in Cryptography–CRYPT 87 Proceedings, Springer-Verlag, 1988.
+- 265. E.F. Brickell and K.S. Simmons, "离散对数，”Advances in Cryptography–EUROCRYPT 90 Proceedings, Springer-Verlag, 1991, p. 63–71.
+- 266. E.F. Brickell, J. Moore, and M.R. Purill, "DES 的结构，”Advances in Cryptography–CRYPT 86, Springer-Verlag, 1987, p. 3–8.
+- 267. E.F. Brickell and A. Odzyko, "密码分析：近期结果调查，”Proceedings of the IEEE, v. 76, n. 5, May 1988, p. 37–58.
+- 268. E.F. Brickell and A. Odzyko, "密码分析：近期结果调查，”Contemporary Cryptography: The Science of Information Security, IEEE Press, 1991, p. 501–568.
+- 269. E.F. Brickell and G. Simmons, "背包状态，”Cryptogenesis volume 7, 1992, p. 72.
+- 270. E.F. Brickell and D.R. Stein, "线程方案检测，”Advances in Cryptography–CRYPT 88 Proceedings, Springer-Verlag, 1990, p. 564–577.
+- 271. A. Grosch and J.M. Smith, "DES 实现中的并行性，”Advances in Cryptography–CRYPT 91 Proceedings, Springer-Verlag, 1992, p. 367–369.
+- 272. L. Brown, W. Kam, and J. Pieprzyk, "抗差分分析分析与 LOKI 设计，”Advances in Cryptography–ASIAC 97 Proceedings, Springer-Verlag, 1993, p. 36–50.
+- 273. L. Brown, J. Pieprzyk, and J. Sebery, "LOKI：用于认证和加密的密码学原语，”Advances in Cryptography–AUSCRYPT 90 Proceedings, Springer-Verlag, 1990, p. 229–236.
+- 274. L. Brown, J. Pieprzyk, and J. Sebery, "DES 类型系统中的密钥调度，”Advances in Cryptography–AUSCRYPT 90 Proceedings, Springer-Verlag, 1990, p. 221–228.
+- 275. L. Brown and J. Sebery, "DES 类型系统的置换设计，”Advances in Cryptography–EUROCRYPT 89 Proceedings, Springer-Verlag, 1990, p. 696–705.
+- 276. W. Brown, "秘密通信的量子飞跃，”New Scientist, n. 156, Jan 1993, pp. 21–22.
+- 277. I. O Brie, "作为密码学生成器的伪随机序列，”International Seminar on Digital, Switzerland, 1984.
+- 278. Nelson, "论移位寄存器的局限性，”Advances in Cryptography–EUROCRYPT 85, Springer-Verlag, 1986, p. 156–166.
+- 279. J. Buchmann, L. Loeb, and J. Java, "数域筛的实现，”Advances in Cryptography–CRYPT 93 Proceedings, Springer-Verlag, 1994, p. 159–165.
+- 280. M. Burmister and Y. Desmed, "广播交互证明，”Advances in Cryptography–EUROCRYPT 91 Proceedings, Springer-Verlag, 1991, p. 81–95.
+- 281. M. Burmister and Y. Desmed, "秘密与会议密钥分发系统，”Advances in Cryptography–EUROCRYPT 94 Proceedings, Springer-Verlag, 1995, p. 70–72.
+- 282. D. Burns, "NASA 寻找 5000 台手机，”The New York Times, Oct 6, 1994.
+- 283. M. Burrows, A. Abadi, and R. Needham, "认证逻辑，”Report 09, Digital Equipment Corp. Systems Research Center, Feb 1998.
+- 284. M. Burrows, M. Abadi, and R. Needham, "认证逻辑，”ACM Transactions on Systems, v. 8, n. 1, Feb 1990, pp. 18–20.
+- 285. M. Burrows, M. Abadi, and R. Needham, "从重新到嵌套，”Operating System Review, v. 20, n. 2, April 1990, pp. 39–42.
+- 286. J. Cade, “公钥密码的修改，”Advances in Cryptography–CRYPT 86 Proceedings, Springer-Verlag, 1987, pp. 64–83.
+- 287. T.R. Cain and A.T. Sherman, “如何破解 Gifford 在第二届 ACM 会议上的密码”
+

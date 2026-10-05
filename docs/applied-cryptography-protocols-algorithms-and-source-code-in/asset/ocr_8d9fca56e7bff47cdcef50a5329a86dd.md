@@ -1,0 +1,5 @@
+A different rumor is that if the NSA has a large amount of plaintext and cipher-text, its experts can perform some kind of statistical calculation and then go out to an array of optical disks and retrieve the key.
+
+These are just rumors, but they don't give me a warm, fuzzy feeling about DES. It has just been too big a target for too long. Almost any change to DES will be more annoying; maybe the resultant cipher will be easier to break, but the NSA might not have the resources to devote to the problem.
+
+My recommendation is to use Biham's construction for key-dependent loadable S-boxes. It is easy to implement in software and in hardware chips that have loadable and has no performance penalty over DES. It increases the algorithm's resistance to a brute-force attack, makes differential and linear cryptanalysis harder, and gives the NSA something at least as strong as DES—but different—to worry about.

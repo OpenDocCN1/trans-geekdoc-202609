@@ -1,0 +1,17 @@
+# 23.16 Quantum Cryptography 555
+
+unlimited computing power, even if P = NP. Charles Bennett, Gilles Brassard, Claude Crépeau, and others who have expanded on this idea, describing quantum key distribution, quantum coin flipping, quantum bit commitment, quantum oblivious transfer, and quantum multiparty computation. Their work is described in [128,129,123,124,125,136,394,134,392,243,517,132,240,393,396]. The best overview of quantum cryptography can be found in [131] is a good nontechnical overview. A complete bibliography of quantum cryptography is in [237].
+
+This would be still on the fringe of cryptography, by Bennett and Brassard actually went and built a working model of the thing [127,121,122]. Now we have experimental quantum cryptography.
+
+So back, get yourself to learn, and relax. I'm going to explain what this is all about.
+
+According to quantum mechanics, particles do not actually exist in any single place. They exist in several places at once, with probabilities of being in different places if someone looks. However, it's not until a scientist along means the particle that "collapses" into a single location. But you cannot measure every aspect (for example, position and velocity!) of a particle at the same time. If you measure one of two quantities, the act of measuring it destroys the possibility of measuring the other. The quantum world has a fundamental uncertainty and there's no way to avoid it.
+
+That uncertainty can be used to create a secret key. As they tell, photons vibrate in some direction; up and down, left to right, or more like some angle. Normal sunlight is unpolarized, the photons vibrate every way which. When a large group of photons vibrate in the same direction they are polarized. Polarization filters allow only photons that are polarized in a certain direction through, the rest are blocked; for example, a horizontal filter only allows horizontally photons through, that turns 90 degrees, and vertically polarized photons can come through.
+
+Let's say you have a pulse of horizontally polarized photons. If they try to pass through a horizontally polarized filter, they turn 90 degrees; the number of photons getting smaller and smaller, until none get through. This is counterintuitive. You'd think turning the filter just a little will block all the photons, since the photons are horizontally. But in quantum mechanics, each photon has a probability of suddenly switching its polarization to match the filter. If the filter is a little bit off, it has a high probability. If the angle is 90 degrees off. it has zero probability. And if the angle is 45 degrees, it has a 50 percent probability of passing through the filter.
+
+Polarization can be measured in any basis: two directions at right angles. An example basis is rectilinear: horizontal and vertical. Another is diagonal: left-diagonal and right-diagonal. A photon pulse is polarized in a given basis and you measure it in the same basis, you learn the polarization. If you measure it in the wrong basis, you get a random result. We're going to use this property to generate a secret key:
+
++   (1) Alice sends Bob a string of photon pulses. Each of the pulses is randomly polarized in one of four directions: horizontal, vertical, left-diagonal, and right-diagonal.
