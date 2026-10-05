@@ -1,0 +1,277 @@
+
+
+# PHP 数组遍历与排序
+
+进入 `/path/to/xxx` 目录，找到 `xxx.json`。
+
+## 使用 `foreach` 遍历关联数组
+
+```php
+<?php
+$salary = array ('Adam'=>1000, 'Smith'=> 2000, 'Mary'=> 2500, 'Sally'=>1800);
+print"The original array looks like this. <br>";
+foreach($salary as $emp => $amount){
+print"$emp:$amount<br>";
+}
+?>
+```
+
+The output for this code will look like this.
+
+![](images/00021.jpeg)
+
+The loop is a special version of for. Notice in this example the key is a word and the value is a number unlike the earlier example of car models where both key and value were text.
+
+If the output expected is the values of the array and not the index or key along with it then the above code can be modified as in the table below.
+
+The difference is in the `foreach` loop where the index reference is dropped and the value is mentioned.
+
+The print is only of the amount and not the index value. Note if the array has no shown index such as `$name = array ('Tom','Harry','Smith','Adam');` Then also this method shown below will work.
+
+```php
+<?php
+$salary = array ('Adam'=>1000, 'Smith'=> 2000, 'Mary'=> 2500, 'Sally'=>1800);
+print"The original array looks like this. <br>";
+foreach($salary as $amount){
+print"$amount<br>";
+}
+?>
+```
+
+### 无键的数组示例
+
+```php
+<?php
+$name = array ('Tom','Harry','Smith','Adam');
+print"The original array looks like this. <br>";
+foreach($name as $emp){
+print"$emp<br>";
+}
+?>
+```
+
+The output is as follows.
+
+![](images/00022.jpeg)
+
+## 数组排序函数
+
+Sorting arrays can be done by using the following functions.
+
+`sort()` - This sorts by values but does not maintain the key values.
+
+`rsort()` - This reverses the values and does not maintain the key values.
+
+`asort()` - These sorts by values and does maintain the key values.
+
+`arsort()` - The values are sorted in inverse manner and it does maintain the key values.
+
+`ksort()` - The sorting is done by keys and it maintains the key values.
+
+`krsort()` - Sorting is by keys in inverse and it maintain the key values.
+
+Let us look at an example:
+
+```php
+<?php
+$salary = array ('Adam'=>1000, 'Smith'=> 2000 , 'Mary'=> 2500, 'Sally'=>1800);
+print"The original array looks like this.<br>";
+foreach($salary as $emp => $amount){
+print"$emp:$amount<br>";
+}
+print"The sort using sort() looks like this:<br>";
+sort($salary);
+foreach($salary as $emp => $amount){
+print"$emp:$amount<br>";
+}
+print"The sort using rsort() looks like this:<br>";
+rsort($salary);
+foreach($salary as $emp => $amount){
+print"$emp:$amount<br>";
+}
+?>
+```
+
+The output will be as follows.
+
+![](images/00023.jpeg)
+
+The code for the other sort functions is below.
+
+```php
+<?php
+$salary = array ('Adam'=>1000, 'Smith'=> 2000, 'Mary'=> 2500, 'Sally'=>1800);
+print"The sort using asort() looks like this:<br>";
+asort($salary);
+foreach($salary as $emp => $amount){
+print"$emp:$amount<br>";
+}
+print"The sort using arsort() looks like this:<br>";
+arsort($salary);
+foreach($salary as $emp => $amount){
+print"$emp:$amount<br>";
+}
+?>
+```
+
+The output is as follows.
+
+![](images/00024.jpeg)
+
+To sort by keys, we use the last two sort functions listed earlier as follows.
+
+```php
+<?php
+$salary = array ('Adam'=>1000, 'Smith'=> 2000, 'Mary'=> 2500, 'Sally'=>1800);
+print"The sort using ksort() looks like this:<br>";
+ksort($salary);
+foreach($salary as $emp => $amount){
+print"$emp:$amount<br>";
+}
+print"The sort using krsort() looks like this:<br>";
+krsort($salary);
+foreach($salary as $emp => $amount){
+print"$emp:$amount<br>";
+}
+?>
+```
+
+The output will be as follows.
+
+![](images/00025.jpeg)
+
+The `shuffle()` function randomly reorganizes the order of an array.
+
+The following code can be used to see its working.
+
+```php
+<?php
+$salary = array ('Adam'=>1000, 'Smith'=> 2000, 'Mary'=> 2500, 'Sally'=>1800);
+print"The shuffle() looks like this:<br>";
+shuffle($salary);
+foreach($salary as $emp => $amount){
+print"$emp:$amount<br>";
+}
+?>
+```
+
+The output looks like this.
+
+![](images/00026.jpeg)
+
+If the code is run again another order will be seen. In other words, it shuffles randomly and reorganizes the order of an array.
+
+## `explode` 与 `implode`
+
+There are times when one of the following has to be done:
+
+1. Convert an array into a string to pass its values to a URL.
+2. Convert an array into a string to store the information in a database.
+3. Convert a string into an array to convert comma delimited text field into separate parts.
+
+There are two functions `explode` and `implode` to do these above things. Let us look at an example.
+
+In this example we will create two files. One is an HTML file that will send the second file which is in PHP a bunch of words to alphabetize. The words will be separated by a coma. The separator can be something other than a coma also, say for example just empty space.
+
+The HTML file code looks like this.
+
+```html
+<html><body>Enter some words separated by commas. <br><p><form action="array.php" method="post"><input type="text" name="words" size="100"><p><input type="submit" name="submit" value="Submit"></form></body></html>
+```
+
+The webpage will look like this.
+
+![](images/00027.jpeg)
+
+The associated PHP file is as follows:
+
+```php
+<?php
+$words=explode(',',$_POST['words']);
+sort($words);
+$string = implode('<br>',$words);
+print"<p> The alphabetized version of the list entered is:<br> $string<p>";
+?>
+```
+
+The output of running this code is as follows.
+
+![](images/00028.jpeg)
+
+The words are received from the HTML page and then converted into an array which is sorted. The sorting done here is without a need to maintain a key value association. One may try to other sorts as an experiment.
+
+Then a new string is created from the sorted array and the string is then printed.
+
+Let us look at an example of an HTML code below.
+
+```html
+<html><head><title>Price Checker</title></head><body><form action="array.php" method="post"> Widget1.<input type="radio" name="item[]" value="Widget1."/>Widget2.<input type="radio" name="item[]" value="Widget2."/>Widget3.<input type="radio" name="item[]" value="Widget3"/><p><input type ="submit" name="submit" value="Send my response"></form></body></html>
+```
+
+The output of this is as follows.
+
+![](images/00029.jpeg)
+
+The code is not new. The difference here is the `item[]` used in the check box options. This will create an associated array in the PHP file being called. The code for the associated PHP file is as follows.
+
+```php
+<?php
+print"This is to demonstrate the use of arrays in a form. <p>";
+$w=$_POST['item'];
+foreach ($w as $item){
+print"$item<br>";
+}
+?>
+```
+
+The output of the PHP file is as follows.
+
+![](images/00030.jpeg)
+
+In itself the purpose of these two codes is to show how an array can be created from a form.
+
+## 多维数组
+
+Lastly, arrays can be multidimensional. These can be simple and naturally some can be more complex. The purpose of such an array is to provide more information than a standard array.
+
+Let us create a multidimensional array.
+
+`$programming =array('C++','Java');`
+
+`$hardware = array('Networking','Security');`
+
+Here we have two arrays one for programming and one for hardware subjects.
+
+Both being books on two different subjects can be kept under a second array called books.
+
+`$books = array ( 'Software' =>$programming, 'Hardware' => $hardware);`
+
+Thus we have created a multidimensional array.
+
+To point to an element in an array within array is at best the same way as done for a single dimensional array by using the index or key number.
+
+So a command `print "Print the second book in programming is {$books['Software'][1]}";`
+
+will print the word Java.
+
+Let us look at the full PHP code.
+
+```php
+<?php
+$programming =array('C++','Java');
+$hardware = array('Networking','Security');
+$books = array (
+  'Software' =>$programming, 'Hardware' => $hardware);
+print "The second book in programming is {$books['Software'][1]}<p>";
+print "The first book in networking is{$books['Hardware'][0]}";
+?>
+```
+
+The output will be as follows.
+
+![](images/00031.jpeg)
+
+Let us modify the above script to use the `print_r()` seen in the beginning of this chapter or `var_dump()` function to print out the entire multidimensional array.
+
+The code is as follows.
+
