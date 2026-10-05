@@ -1,0 +1,2003 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Seminars in Cancer Biology 89 (2023) 30–37
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Seminars in Cancer Biology
+
+
+    journal homepage: www.elsevier.com/locate/semcancer
+
+
+    # Artificial intelligence in lung cancer diagnosis and prognosis: Current application
+    and future perspective
+
+
+    Shigao Huang¹¹, Jie Yang¹¹, Na Shen², Qingshou Xu⁴, Qi Zhao⁵,ᵉ*
+
+
+    +   * Department of Radiology, The First Affiliated Hospital, Air Force Medical
+    University, Xantai, Shenxi, China
+
+    * Chongqing University of Technology, Chongqing, China
+
+    * The Chinese University of Hong Kong
+
+    * Cancer Center, Institute of Translational Medicine, Faculty of Health Sciences,
+    University of Macau, Taipa, Macau SAR, China
+
+    * Mo Frontier Science Center for Precision Oncology, University of Macau, Taipa,
+    Macau SAR, China
+
+    * Faculty of Science and Technology, University of Macau, Taipa, Macau SAR, China
+
+
+    # ARTICLE
+
+
+    # ABSTRACT
+
+
+    +   Keywords:
+
+    Artificial intelligence
+
+    Lung cancer diagnosis
+
+    Natural language processing
+
+    Machine learning and deep learning
+
+    Precision oncology
+
+
+    Lung cancer is one of the malignant tumors with the highest incidence and mortality
+    in the world. The overall five-year survival rate of lung cancer is relatively
+    lower than leading cancers. Early diagnosis and prognosis of lung cancer are essential
+    to improve the patient''s survival. With artificial intelligence widely applied
+    in lung cancer, diagnosis and prediction have achieved excellent performance in
+    recent years. This review summarizes various types of AI algorithms in lung cancer,
+    including natural language processing (NLP), machine learning and reinforcement
+    learning. In addition, we provide reference regarding the application of AI in
+    lung cancer diagnostic and clinical prognosis. This review aims to evaluate the
+    utility of AI in lung cancer diagnosis and prognosis as the novel screening de-selection
+    making for the treatment of lung cancer.
+
+
+    # 1. Introduction
+
+
+    Lung cancer is one of the malignant tumors with the highest incidence and mortality
+    in the world of lung cancer is less than 20% [1,2]. In early-stage lung cancer
+    patients, postoperative 5-year survival rate with micro-invasive adenocarcinoma
+    and carcinoma was also over 90% [3,4], while the 5-year survival rate of advanced-stage
+    lung cancer patients was only 2% [5,6]. Clinical diagnosis is still a major challenge
+    to suggest treatment to patients who have advanced-stage lung cancer [3,7]. Early
+    diagnosis of lung cancer and suitable treatment can effectively improve the survival
+    rate of patients by 20% [6,8]. However, the outcome of lung cancer is still not
+    optimal for many advanced-stage lung cancer patients in China.
+
+
+    biom markers are expected to solve the current challenges in lung cancer diagnosis
+    [11,12]. It remains challenging to deeply interpret the information from data
+    and with clinical statistics.
+
+
+    Recently, with the development of computer technology and statistics, AI has become
+    an effective tool in lung cancer diagnosis. Fig 1 shows the historical milestones
+    of AI in lung cancer diagnosis. It has made remarkable progress for tumor imaging.
+    In recent years, machine learning and deep learning have been used increasingly
+    to improve the diagnosis and treatment of lung cancer [13, 14]. This review summarizes
+    various types of AI applications in lung cancer, including natural language processing,
+    machine learning and reinforcement learning. In addition, it provides evidence
+    regarding the application of AI in lung cancer diagnostic and clinical prognosis.
+    The purpose of this study is to illustrate the status and development trend of
+    AI in lung cancer diagnosis and prognosis, and provides novel screening decision-making
+    for theing treatment of lung cancer patients.
+
+
+    To diverse strategies and treatment of lung cancer have been applied in clinical
+    practice. The survival of lung cancer patients is still not optimal [9]. Several
+    studies show that population screening for lung cancer is cost-effective and has
+    the value of population early detection [1–10]. Medical radi and
+
+
+    > * Corresponding author: Cancer Center, Institute of Translational Medicine,
+    Faculty of Health Sciences, University of Macau, Taipa, Macau SAR, China.
+
+    E-mail: zhaoqiao@um.edu (Q. Zhao).
+
+    Shigao Huang and Jie Yang are also corresponding authors
+
+
+    https://doi.org/10.1016/j.semcancer.2023.01.006
+
+    Received 7 December 2022; Received in revised form 18 January 2023; Accepted 18
+    January 2023
+
+    Available online 20 January 2023
+
+    1044-5798/© 2023 Elsevier Ltd. All rights reserved.'
+  - '[PAGE 1]
+
+
+    # 2. Types of artificial intelligence applied in lung cancer
+
+
+    The diagnosis of lung cancer has a long history. Pathological findings and analysis
+    of tumor markers have become important diagnostic tools. However, these approaches
+    have limitations. Firstly, for pathological findings, the current gold for lung
+    cancer diagnosis is mainly performed through invasive procedures and lacks extensive
+    clinical accuracy. Secondly, tumor markers used in clinical applications, some
+    of which are cancer nonubigen, which may lead to many errors in clinical diagnosis.
+    Diagnostic approaches (e.g., X-ray, computed tomography) have revolutionized the
+    diagnosis of lung cancer, but small lymph nodes or nodal markers are still not
+    readily detectable and may be missed. As discussed here the various types of artificial
+    intelligence applied in lung cancer. They include NLP, deep learning and machine
+    learning. As shown in Fig. 2, we have the schematic of classical AI in lung cancer
+    screening and detection.
+
+
+    # 2.1. Machine learning and deep learning
+
+
+    In recent years, there are big data technologies to contribute to a spurt in the
+    scale of medical data. The wide variety of data has placed greater demands on
+    data processing, storage, analysis, and utilization. Advances in these fields
+    have been widely incorporated with clinical applications in lung cancer [4]. All
+    technologies include machine learning, deep learning, and natural language processing,
+    and the relationship between them is shown in Fig. 3.
+
+
+    Despite of the wide range of applications in lung cancer AI diagnosis, AI faces
+    many difficulties in achieving the full process from automatic slide viewing to
+    medical report compilation and using digital health records. Electronic health
+    records are helping the lung cancer diagnosis process and have important implications
+    for pathologists, both in the first and in communicating with patients. However,
+    information systems are only able to extract and translate this knowledge to the
+    manual processing. Manual processing of information is costly, error-prone and
+    has inherent limitations. Information extraction can be improved by deep learning,
+    which is represented by deep layers. As input datasets include high arithmetic
+    requirements and difficulties in data circulation. The process of intelligent
+    health diagnosis can be improved by a deep fusion of NLP. It enables us to understand
+    unstructured text or verbal data for potential applications in complex mining
+    elements including information extraction and relation extraction, etc.
+
+
+    data, and provide to assist decision-making in the treatment of cases. Machine
+    learning techniques are currently achieving significant clinical value in the
+    screening, diagnosis, and prognosis of lung cancer. Deep learning, such as Convolutional
+    Neural Networks (CNN), Recursive Neural Network (RNN), Generative Adversarial
+    Networks (GAN), and others, empower clinicians by deep learning and automate complex
+    real models to achieve powerful learning capabilities and functional genomics.
+    The differences between machine learning and deep learning are shown in Fig. 2.
+
+
+    # 2.2. Natural language processing
+
+
+    | ARTIFICIAL INTELLIGENCE | MACHINE LEARNING | DEEP LEARNING |
+
+    |--- |---|---|
+
+    | Any technique which enables computers to mimic human behavior | Ability to learn
+    without explicitly programmed | A subset of which make the composition of multi-layer
+    neural network |
+
+    | 1954: Computer used for radiotherapy to diagnose disease and develop treatment
+    plans. | 1968: Computer-aided diagnosis (CAD) was first introduced, leading to
+    the formation of medical radiology. | 2020: FDA approval for deep learning-assisted
+    testing |
+
+    | 1950S: Mathematical models were introduced into the diagnosis of a group of
+    lung cases, setting a precedent for computer-aided diagnosis. | 1980s: "Explanation"
+    Clinical Support Systems, which contained 2,200 cases and 5,000 systems. | 2019:
+    Google''s lung cancer detection AI overperformed human experts |
+
+    | 1992: The first intelligent computer-aided system was recognized, with a knowledge
+    base of 572 cases and about 4200 cases. | | 2022: Mining Lung-information by AI:
+    Predicting EGFR genotype and Targeted Response in Lung cancer.|
+
+
+    Fig.1. Historical milestones of AI in lung cancer diagnosis. The development and
+    application of computer-aided diagnosis (CAD) in lung cancer can be traced back
+    to the 1950s. Various studies to process and analyze medical images with the assistance
+    of computer analysis, storage, and utilization have been conducted. In particular,
+    automated detection methods were developed, which created a precedent for CAD
+    [71]. In 1986, Lee et al developed computer-aided markers for clinical diagnosis
+    with medical use using Reed and Bobdens algorithm to build a powerful computerized
+    diagnostic model, and analyzed a group of lung cancer cases, pioneering the application
+    of CAD in clinical medical imaging [72]. In 1991, Barnett et al. published "Explanation"
+    software containing 2200 cases and 5000 systems [83]. In 2019, Google used AI
+    to mine lung-information for predicting growth factor receptor (EGFR) genotype
+    and targeted therapy response in lung cancer, which detected that genotype and
+    genetic information could be obtained from the lung instead instead of only tumors
+    [83].'
+  md: '
+
+    # Seminars in Cancer Biology 89 (2023) 30–37
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Seminars in Cancer Biology
+
+
+    journal homepage: www.elsevier.com/locate/semcancer
+
+
+    # Artificial intelligence in lung cancer diagnosis and prognosis: Current application
+    and future perspective
+
+
+    Shigao Huang¹¹, Jie Yang¹¹, Na Shen², Qingshou Xu⁴, Qi Zhao⁵,ᵉ*
+
+
+    * Department of Radiology, The First Affiliated Hospital, Air Force Medical University,
+    Xantai, Shenxi, China
+
+    * Chongqing University of Technology, Chongqing, China
+
+    * The Chinese University of Hong Kong
+
+    * Cancer Center, Institute of Translational Medicine, Faculty of Health Sciences,
+    University of Macau, Taipa, Macau SAR, China
+
+    * Mo Frontier Science Center for Precision Oncology, University of Macau, Taipa,
+    Macau SAR, China
+
+    * Faculty of Science and Technology, University of Macau, Taipa, Macau SAR, China
+
+
+    # ARTICLE
+
+
+    # ABSTRACT
+
+
+    **Keywords:**
+
+    Artificial intelligence
+
+    Lung cancer diagnosis
+
+    Natural language processing
+
+    Machine learning and deep learning
+
+    Precision oncology
+
+
+    Lung cancer is one of the malignant tumors with the highest incidence and mortality
+    in the world. The overall five-year survival rate of lung cancer is relatively
+    lower than leading cancers. Early diagnosis and prognosis of lung cancer are essential
+    to improve the patient''s survival. With artificial intelligence widely applied
+    in lung cancer, diagnosis and prediction have achieved excellent performance in
+    recent years. This review summarizes various types of AI algorithms in lung cancer,
+    including natural language processing (NLP), machine learning and reinforcement
+    learning. In addition, we provide reference regarding the application of AI in
+    lung cancer diagnostic and clinical prognosis. This review aims to evaluate the
+    utility of AI in lung cancer diagnosis and prognosis as the novel screening decision-making
+    for the treatment of lung cancer.
+
+
+    # 1. Introduction
+
+
+    Lung cancer is one of the malignant tumors with the highest incidence and mortality
+    in the world, where the survival rate is less than 20% [1,2]. In early-stage lung
+    cancer patients, postoperative 5-year survival rate with micro-invasive adenocarcinoma
+    and carcinoma was also over 90% [3,4], while the 5-year survival rate of advanced-stage
+    lung cancer patients was only 2% [5,6]. Clinical diagnosis is still a major challenge
+    to suggest treatment to patients who have advanced-stage lung cancer [3,7]. Early
+    diagnosis of lung cancer and suitable treatment can effectively improve the survival
+    rate of patients by 20% [6,8]. However, the outcome of lung cancer is still not
+    optimal for many advanced-stage lung cancer patients in China.
+
+
+    Biomarkers are expected to solve the current challenges in lung cancer diagnosis
+    [11,12]. It remains challenging to deeply interpret information from data with
+    clinical statistics. Recently, with the development of computer technology, AI
+    has become an effective tool in lung cancer diagnosis. Fig 1 shows the historical
+    milestones of AI in lung cancer diagnosis. In recent years, machine learning and
+    deep learning have been used increasingly to improve the diagnosis and treatment
+    of lung cancer [13]. This review summarizes various types of AI applications in
+    lung cancer, including natural language processing, machine learning and reinforcement
+    learning. In addition, we provide reference regarding the application of AI in
+    lung cancer diagnostic and clinical prognosis. The purpose of this study is to
+    illustrate and provide novel screening decision-making for the treatment of lung
+    cancer. Diverse strategies and treatment of lung cancer have been applied in clinical
+    practice. The survival of lung cancer patients is still not optimal [9]. Several
+    studies show that population screening for lung cancer is cost-effective and has
+    the value of early detection [10].
+
+
+    # 2. Types of artificial intelligence applied in lung cancer
+
+
+    The diagnosis of lung cancer has a long history. Pathological findings and analysis
+    of tumor markers have become important tools. However, these approaches have limitations.
+    Firstly, for pathological findings, the current gold for lung cancer diagnosis
+    is mainly performed through invasive procedures and lacks accuracy. Secondly,
+    tumor markers used in clinical applications (e.g., X-ray, computed tomography)
+    have revolutionized the diagnosis of lung cancer, but small lymph nodes or nodal
+    markers are still not readily detectable and may be missed. As discussed here
+    the various types of artificial intelligence applied in lung cancer include NLP,
+    deep learning and machine learning. As shown in Fig 2, we have the schematic of
+    classical AI in lung cancer screening and detection.
+
+
+    ## 2.1. Machine learning and deep learning
+
+
+    In recent years, there are big data technologies to contribute to a spurt in the
+    scale of medical data. The wide variety of data has placed greater demands on
+    data processing, storage, and utilization. Advances in these fields have been
+    widely incorporated with clinical applications in lung cancer [4]. All technologies
+    include machine learning, deep learning, and natural language processing, and
+    the relationship between them is shown in Fig 3.
+
+
+    Despite the wide range of applications in lung cancer, AI diagnosis faces many
+    difficulties in achieving the full process from automatic slide viewing to medical
+    report compilation using digital health records. Electronic health records are
+    helping the lung cancer diagnosis process and have important implications for
+    pathologists, both in the first and in communicating with patients. However, information
+    systems are only able to extract and translate this knowledge to manual processing.
+    Manual processing of information is costly, error-prone and has inherent limitations.
+    Information extraction can be improved by deep learning, which is represented
+    by deep layers. The process of intelligent health diagnosis can be improved by
+    deep fusion of NLP. It enables us to understand unstructured text or verbal data
+    for potential applications in complex mining including information extraction
+    and relation extraction, etc., and to assist decision-making in the treatment
+    of cases. Machine learning techniques are currently achieving significant clinical
+    value in the screening, diagnosis, and prognosis of lung cancer. Deep learning,
+    such as Convolutional Neural Networks (CNN), Recursive Neural Network (RNN), Generative
+    Adversarial Networks (GAN), and others, empower clinicians by automating complex
+    realworld models to achieve powerful learning capabilities and functional genomics.
+
+
+    ## 2.2. Natural language processing
+
+
+    | ARTIFICIAL INTELLIGENCE | MACHINE LEARNING | DEEP LEARNING |
+
+    | :--- | :--- | :--- |
+
+    | Any technique which enables computers to mimic human behavior | Ability to learn
+    without explicitly programmed | A subset of which make the composition of multi-layer
+    neural network |
+
+    | 1954: Computer used for radiotherapy to diagnose disease and develop treatment
+    plans. | 1968: Computer-aided diagnosis (CAD) was first introduced, leading to
+    the formation of medical radiology. | 2020: FDA approval for deep learning-assisted
+    testing |
+
+    | 1950s: Mathematical models were introduced into the diagnosis of a group of
+    lung cases, setting a precedent for computer-aided diagnosis. | 1980s: "Explanation"
+    Clinical Support Systems, which contained 2,200 cases and 5,000 systems. | 2019:
+    Google''s lung cancer detection AI overperformed human experts |
+
+    | 1992: The first intelligent computer-aided system was recognized, with a knowledge
+    base of 572 cases and about 4200 cases. | | 2022: Mining Lung-information by AI:
+    Predicting EGFR genotype and Targeted Response in Lung cancer. |
+
+
+    Fig.1. Historical milestones of AI in lung cancer diagnosis. The development and
+    application of computer-aided diagnosis (CAD) in lung cancer can be traced back
+    to the 1950s. Various studies to process and analyze medical images with the assistance
+    of computer analysis, storage, and utilization have been conducted. In particular,
+    automated detection methods were developed, which created a precedent for CAD
+    [71]. In 1986, Lee et al developed computer-aided markers for clinical diagnosis
+    with medical use using Reed and Bobdens algorithm to build a powerful computerized
+    diagnostic model, and analyzed a group of lung cancer cases, pioneering the application
+    of CAD in clinical medical imaging [72]. In 1991, Barnett et al. published "Explanation"
+    software containing 2200 cases and 5000 systems [83]. In 2019, Google used AI
+    to mine lung-information for predicting EGFR genotype and targeted therapy response
+    in lung cancer, which detected that genotype and genetic information could be
+    obtained from the lung instead instead of only tumors [83].
+
+    '
+  mdcn: '
+
+
+    # 癌症生物学研讨会 89 (2023) 30–37
+
+
+    ScienceDirect 提供可用目录
+
+
+    # 癌症生物学研讨会
+
+
+    期刊主页：www.elsevier.com/locate/semcancer
+
+
+    # 肺癌诊断与预后中的人工智能：现状应用与未来展望
+
+
+    Shigao Huang¹¹, Jie Yang¹¹, Na Shen², Qingshou Xu⁴, Qi Zhao⁵,ᵉ*
+
+
+    * 中国新疆信西县，空军医大学第一附属医院放射科
+
+    * 中国重庆，重庆理工大学
+
+    * 香港中文大学
+
+    * 中国澳门大学，健康科学学院医学转化研究所癌症中心，澳门特别行政区氹
+
+    * 中国澳门大学精准肿瘤学前沿科学中心，澳门特别行政区氹
+
+    * 中国澳门大学科学与科技学院，澳门特别行政区氹
+
+
+    # 论文
+
+
+    # 摘要
+
+
+    **关键词：**
+
+    人工智能
+
+    肺癌诊断
+
+    自然语言处理
+
+    机器学习与深度学习
+
+    精准肿瘤学
+
+
+    肺癌是世界上发病率和死亡率最高的恶性肿瘤之一。肺癌的总体五年生存率低于其他主要癌症。肺癌的早期诊断和预后对于提高患者生存率至关重要。随着人工智能在肺癌中的广泛应用，其诊断和预测在近年来取得了卓越性能。本综述总结了肺癌中各种类型的
+    AI 算法，包括自然语言处理（NLP）、机器学习和强化学习。此外，我们提供了关于人工智能在肺癌诊断和临床预后中应用的参考。本综述旨在评估人工智能在肺癌诊断和预后中的作用，作为肺癌治疗的新型筛选决策依据。
+
+
+    # 1. 引言
+
+
+    肺癌是世界上发病率和死亡率最高的恶性肿瘤之一，生存率低于 20% [1,2]。在早期肺癌患者中，微浸润性腺癌和癌患者的术后五年生存率也超过了 90% [3,4]，而晚期肺癌患者的五年生存率仅为
+    2% [5,6]。对于为晚期肺癌患者提供治疗建议，临床诊断仍是一项重大挑战 [3,7]。肺癌的早期诊断和适当治疗可以有效提高 20% 的生存率 [6,8]。然而，对于中国许多晚期肺癌患者来说，预后仍然不理想。
+
+
+    生物标志物有望解决肺癌诊断中的当前挑战 [11,12]。从临床统计数据中深度解释信息仍然具有挑战性。最近，随着计算机技术的发展，人工智能已成为肺癌诊断的有效工具。图
+    1 显示了人工智能在肺癌诊断中的历史里程碑。近年来，机器学习和深度学习越来越多地用于改善肺癌的诊断和治疗 [13]。本综述总结了肺癌中各种类型的 AI 应用，包括自然语言处理、机器学习和强化学习。此外，我们提供了关于人工智能在肺癌诊断和临床预后中应用的参考。本研究的目的是为肺癌治疗说明并提供新的筛选决策。临床实践中应用了多种肺癌策略和治疗方法。肺癌患者的生存率仍不理想
+    [9]。多项研究表明，肺癌人群筛查具有成本效益，并具有早期检测的价值 [10]。
+
+
+    # 2. 应用于肺癌的人工智能类型
+
+
+    肺癌诊断有着悠久。病理发现和肿瘤标志物的分析已成为重要工具。然而，这些方法具有局限性。首先，对于病理发现，目前肺癌诊断的金标准主要通过侵入性程序进行，缺乏准确性。其次，临床应用中使用的肿瘤标志物（如
+    X 射线、计算机断层扫描）彻底了肺癌诊断，但小淋巴结或结节标记仍无法轻易检测，并可能被遗漏。如本文所述，应用于肺癌的各种类型人工智能包括 NLP、深度学习和机器学习。如图
+    2 所示，我们有了肺癌筛查和检测中经典 AI 的示意。
+
+
+    ## 2.1. 机器学习与深度学习
+
+
+    近年来，大数据技术促进了医疗数据规模的飞跃。多样化的数据对数据处理、存储和利用提出了更高要求。这些领域的进展已广泛纳入肺癌的临床应用中 [4]。所有技术包括机器学习、深度学习和自然语言处理，它们之间的关系如图
+    3 所示。
+
+
+    尽管人工智能在肺癌中应用广泛，但 AI 诊断在实现从自动切片查看到使用数字健康记录编制医学报告的全过程中面临着许多困难。电子健康记录正在帮助肺癌诊断过程，并对病理学家在第一阶段和与患者沟通方面具有重要意义。然而，信息系统仅能够提取并将这些知识翻译为手动处理。信息的手动处理成本高昂、容易出错并具有固有的局限性。信息的提取可以通过深度学习来改进，深度学习由深层表示。智能健康诊断可以通过
+    NLP 的深度融合改进。它使我们能够理解非结构化文本或口头数据，用于复杂挖掘（包括信息提取和关系提取等）的潜在应用，并在病例治疗中辅助决策。机器学习目前在肺癌的筛选、诊断和预后方面实现了显著的临床价值。深度学习，如卷积神经网络（CNN）、递归神经网络（RNN）、生成对抗网络（GAN）等，通过自动化复杂的真实世界模型，赋予了临床医生强大的学习能力和功能基因组学能力。
+
+
+    ## 2.2. 自然语言处理
+
+
+    | 人工智能 | 机器学习 | 深度学习 |
+
+    | :--- | :--- | :--- |
+
+    | 任何使计算机模拟人类行为的技术 | 无需显式编程即可学习 | 其子集，由多层神经网络组成 |
+
+    | 1954 年：计算机用于放射治疗诊断和制定治疗计划 | 1968 年：计算机辅助诊断（CAD）首次引入，导致了放射学的形成 | 2020 年：深度学习辅助检测获得
+    FDA 批准 |
+
+    | 1950 年代：数学模型引入一组病例的诊断，为计算机辅助诊断奠定了先例 | 1980 年代：“解释”临床支持系统，包含 2200 个病例和 5000 个系统
+    | 2019 年：Google 的肺癌检测 AI 优于专家 |
+
+    | 1992 年：第一个智能计算机辅助系统获得，知识库包含 572 个病例和约 4200 个病例 | | 2022 年：通过 AI 挖掘肺信息：预测肺癌 EGFR
+    基因型和靶向反应 |
+
+
+    图1。人工智能在肺癌诊断中的历史里程碑。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # Huang et al.
+
+
+    # Seminars in Cancer Biology 89 (2023) 30-37
+
+
+    ![](img/fbb3a28917ea7454539e81aa3e8afb3a_2_0.png)
+
+
+    Fig. 2. Application of AI in screening and detection of lung cancer. a. the relationship
+    between AI, ML, DL, NLP, and various needs for lung cancer. b. the type and differences
+    between machine learning and deep learning for lung cancer diagnostic applications
+    [84], c. the concept of NLP techniques in EHR-based lung cancer data and comparison
+    with traditional methods. AI: AI; NLP: Natural Language Processing; ML: Machine
+    Learning; DL: Deep Learning Health Research
+
+
+    methods for NLP. Fig. 2c illustrates a paradigm for the application of NLP techniques
+    to medical data. Some researchers have been developed to train NLP models using
+    clinical data from a wide range of centers. Kennedy et al. [16] demonstrated the
+    feasibility of training natural language medical models that extract results from
+    imaging reports of non-cell lung cancer patients and screening reports. [18] demonstrated
+    the general feasibility of such method in medical records, and further assisted
+    the association between NLP-driven clinical annotation and overall survival probability.
+
+
+    Gomez et al. confirmed consistency in the detection of lung nodules by NLP-recognized
+    chest CT reports [17]. Another study found that NLP techniques were used to automatically
+    classify quality assurance tools from radiology reports and thereafter. The transformer
+    has emerged as a major algorithm in NLP. Agnila Khastraya et al. demonstrated
+    the effectiveness of representation learning using the hybrid models of Bidirectional
+    LSTM addressed the need for essential medical record features from electronic
+    health records which generated the amount of training data required by most deep
+    learning models [19]. Fei et al. proposed the first approach to Chinese radiology
+    reports to improve the quality of reports. A bidirectional log or short memory
+    with a random field based model was deployed to extract entities from lung cancer
+    radiology reports. Key information related to follow-up recommendations were proposed
+    based on malignant knowledge graphs and rule templates [20].
+
+
+    diagnosis. Recent advances are obtained for deep learning models for lung cancer
+    image feature [21]. In recent, reinforcement learning has been widely employed
+    to analyze lung cancer localization, segmentation and classification [22]. Deep
+    learning models with reinforcement learning have emerged to create new models,
+    such as deep Q-learning and deep networks, which have [24] representative-deep
+    learning models for lung cancer detection and diagnosis. The common types of lung
+    cancer and the main features of each type are unique. Deep reinforcement learning
+    identifies different patients through the accurate location of tumours [25]. However,
+    application of reinforcement learning models to lung cancer screening still faces
+    many challenges. It is still unclear how to define an appropriate reward for updating
+    the Q-value for each case.
+
+
+    # 3. Applications in lung cancer diagnostic
+
+
+    3.1. In lung node screening and detection
+
+
+    At present, a large number of lung nodules have been found in the physical examination.
+    Although most of lung nodules are benign, there is still a high frequency of early
+    lung nodules larger than 3 cm in diameter which have a high probability of malignancy
+    [26,27]. It is necessary to emphasize on mapping lung nodules for transformation.
+    However, to provide an early treatment, the clinicians can accurately distinguish
+    benign and malignant lung nodules. After currently, many researchers and enterprises
+    have invested resources for developing AI
+
+
+    # 2.3. Reinforcement learning
+
+
+    Image analysis of lung cancer is an important part of computer-aided
+
+
+    32'
+  - '[PAGE 3]
+
+
+    S. Hung et al.
+
+
+    Seminars in Cancer Biology 89 (2023) 30–37
+
+
+    to assist physicians in lung screening nodules (32). Their inventions will help
+    radiologists quickly locate nodules and provide diagnosis and treatment to reduce
+    misdiagnosis and missed. Various applications of AI in lung screening and detection
+    are summarized in Table 1
+
+
+    Artificial intelligence-aided computer diagnosis (CAD) tools have been developed.
+    CAD systems can help radiologists identify and locate missed nodules in the early
+    stages of cancer (33). They can be used to evaluate the degree of malignancy and
+    treatment prognosis, improving the clinical workflow (34). The available databases,
+    which are used for the detection, classification and quantitative assessment of
+    lung nodules, include Lung Data Consortium (LIDC)/Image Database Access Retrival
+    (IDRI) and Early Lung Cancer Atlas (ELCAP) (35). The LIDC/IDRI provides an open
+    reference for the medical research community as an important resource for promoting
+    the development, validation, and translation of AI algorithms. These algorithms
+    were developed and tested using data sets from LIDC/IDRI (37–39). A total of 6400
+    images were selected from 80 CT scans and 6 images were labeled by 4 radiologists
+    (37). The CAD system developed in this study achieved fast segmentation through
+    a fast segmentation mechanism using random forest (RF). We evaluated the sensitivity,
+    specificity, and accuracy of the receiver operating characteristic (ROC) for the
+    diagnosis of benign and malignant lung nodules. Compared with the support vector
+    machine (SVM), our method reduce the false positive rate and achieve a higher
+    AUC (40).
+
+
+    # Table 1
+
+    Application of AI in lung screening and detection.
+
+
+    | Year | Method | Sample size | Reference |
+
+    |---|---|---|--|
+
+    | 2018 | SVM-based model constructed a prediction by using SVM with CT radiomic
+    features, achieved an accuracy of 84.6%, which was 12.8% higher than lung-Rads.
+    | 72 PN (benign and malignant) | [73] |
+
+    | 2020 | FGD-PET/CT AI-based algorithm for detection and segmentation of lung
+    nodules | 320 patients (histologically confirmed cases) | [74] |
+
+    | 2020 | AI algorithm tests detection and segmentation of nodules on digital radiographs
+    | Baseline (TO) postors from 485 participants | [75] |
+
+    | 2021 | DL-based algorithm for detection of lung nodules and cancer | 57 patients
+    with 92 FD-PET/CT scans and 882 lung images | [76] |
+
+    | 2021 | DL neural network for fusion detection and prediction using advanced
+    object detector to provide support for radiologists in the interpretation of PN
+    discrimination. | 2 CNNs used to identify lung nodules and CAC on LDCT scans |
+    [77] |
+
+    | | AI prototype identifies significant factors for cardiogenesis and standard
+    screening low-dose CT to improve diagnosis accuracy and decrease healthcare costs
+    | 81 benign and 77 malignant from 158 patients | [78] |
+
+    | 2022 | Adaboost-SVM-CNN has good accuracy for the detection of lung nodules
+    and anticipate its potential | 1018 CT scans from LIDC-IDRI and low-dose CT (1.25
+    mm thickness in ELCAP) | [79] |
+
+
+    X-ray tomography (CT) has been used for decades in the management of lung cancer,
+    including screening, diagnosis and treatment. The quantitative value of CT for
+    lung nodules has also been recognized. However, multiple lung nodules are still
+    common in clinical practice (41–42). For lung nodules, different shapes and sizes
+    may and affect the patterns of metastasis [36,43]. CT images of lung nodules are
+    multi-dimensional images. 3D convolutional neural networks (CNN) can utilize the
+    full spatial content of lung nodule detection, which can improve the accuracy
+    of 2D CNN for for lung nodules and reduce the false positive rate (44). The recent
+    progression of CT in lung detection of automated 3-D tomography has been reported
+    (34,45). These studies focus on the improvement of the detection accuracy and
+    shapes of the different types of nodules detection capability. The work will able
+    to build electronic medical record system and picture archive (46,47).
+
+
+    AI is used in the diagnosis of benign and malignant nodules. For lung nodules,
+    CT analysis can accurately determine benign and malignant nodules (48). Regular
+    shape, ground shadow, margin spin, and sign are important for the basis for the
+    analysis. The study reported that the detection rate of true positives by CT nodules
+    by professional clinicians was 66.5%, much lower than 98.4% by AI technology (49).
+    There are risks of misdiagnosis and misdiagnoses in CT scans. Some nodules are
+    also related to mimic small lung special nodules, resulting in missed diagnosis
+    and misdiagnoses. However, AI can effectively detect small lung nodules and reduce
+    missed diagnoses (59–51). The true positive diagnosis rate of AI-based SVM is
+    significantly higher than that of professional physicians (52,53).
+
+
+    # 3.2. Application in classification and diagnosis of lung cancer
+
+
+    Lung cancer is divided into non-small cell lung cancer (NSCLC) and small cell
+    lung cancer (SCLC). NSCLC accounts
+
+
+    (continued on next page)
+
+
+    33'
+  md: '
+
+    # Huang et al.
+
+
+    # Seminars in Cancer Biology 89 (2023) 30-37
+
+
+    ![](img/fbb3a28917ea7454539e81aa3e8afb3a_2_0.png)
+
+
+    Fig. 2. Application of AI in screening and detection of lung cancer. a. the relationship
+    between AI, ML, DL, NLP, and various needs for lung cancer. b. the type and differences
+    between machine learning and deep learning for lung cancer diagnostic applications
+    [84], c. the concept of NLP techniques in EHR-based lung cancer data and comparison
+    with traditional methods. AI: AI; NLP: Natural Language Processing; ML: Machine
+    Learning; DL: Deep Learning Health Research methods for NLP. Fig. 2c illustrates
+    a paradigm for the application of NLP techniques to medical data. Some researchers
+    have been developed to train NLP models using clinical data from a wide range
+    of centers. Kennedy et al. [16] demonstrated the feasibility of training natural
+    language medical models that extract results from imaging reports of non-cell
+    lung cancer patients and screening reports. [18] demonstrated the general feasibility
+    of such method in medical records, and further assisted the association between
+    NLP-driven clinical annotation and overall survival probability.
+
+
+    Gomez et al. confirmed consistency in the detection of lung nodules by NLP-recognized
+    chest CT reports [17]. Another study found that NLP techniques were used to automatically
+    classify quality assurance tools from radiology reports and thereafter. The transformer
+    has emerged as a major algorithm in NLP. Agnila Khastraya et al. demonstrated
+    the effectiveness of representation learning using the hybrid models of Bidirectional
+    LSTM addressed the need for essential medical record features from electronic
+    health records which generated the amount of training data required by most deep
+    learning models [19]. Fei et al. proposed the first approach to Chinese radiology
+    reports to improve the quality of reports. A bidirectional log or short memory
+    with a random field based model was deployed to extract entities from lung cancer
+    radiology reports. Key information related to follow-up recommendations were proposed
+    based on malignant knowledge graphs and rule templates [20].
+
+
+    diagnosis. Recent advances are obtained for deep learning models for lung cancer
+    image feature [21]. In recent, reinforcement learning has been widely employed
+    to analyze lung cancer localization, segmentation and classification [22]. Deep
+    learning models with reinforcement learning have emerged to create new models,
+    such as deep Q-learning and deep networks, which have [24] representative-deep
+    learning models for lung cancer detection and diagnosis. The common types of lung
+    cancer and the main features of each type are unique. Deep reinforcement learning
+    identifies different patients through the accurate location of tumours [25]. However,
+    application of reinforcement learning models to lung cancer screening still faces
+    many challenges. It is still unclear how to define an appropriate reward for updating
+    the Q-value for each case.
+
+
+    # 3. Applications in lung cancer diagnostic
+
+
+    ## 3.1. In lung node screening and detection
+
+
+    At present, a large number of lung nodules have been found in the physical examination.
+    Although most of lung nodules are benign, there is still a high frequency of early
+    lung nodules larger than 3 cm in diameter which have a high probability of malignancy
+    [26,27]. It is necessary to emphasize on mapping lung nodules for transformation.
+    However, to provide an early treatment, the clinicians can accurately distinguish
+    benign and malignant lung nodules. After currently, many researchers and enterprises
+    have invested resources for developing AI image analysis of lung cancer is an
+    important part of computer-aided to assist physicians in lung screening nodules
+    (32). Their inventions will help radiologists quickly locate nodules and provide
+    diagnosis and treatment to reduce misdiagnosis and missed. Various applications
+    of AI in lung screening and detection are summarized in Table 1.
+
+
+    Artificial intelligence-aided computer diagnosis (CAD) tools have been developed.
+    CAD systems can help radiologists identify and locate missed nodules in the early
+    stages of cancer (33). They can be used to evaluate the degree of malignancy and
+    treatment prognosis, improving the clinical workflow (34). The available databases,
+    which are used for the detection, classification and quantitative assessment of
+    lung nodules, include Lung Data Consortium (LIDC)/Image Database Access Retrival
+    (IDRI) and Early Lung Cancer Atlas (ELCAP) (35). The LIDC/IDRI provides an open
+    reference for the medical research community as an important resource for promoting
+    the development, validation, and translation of AI algorithms. These algorithms
+    were developed and tested using data sets from LIDC/IDRI (37–39). A total of 6400
+    images were selected from 80 CT scans and 6 images were labeled by 4 radiologists
+    (37). The CAD system developed in this study achieved fast segmentation through
+    a fast segmentation mechanism using random forest (RF). We evaluated the sensitivity,
+    specificity, and accuracy of the receiver operating characteristic (ROC) for the
+    diagnosis of benign and malignant lung nodules. Compared with the support vector
+    machine (SVM), our method reduce the false positive rate and achieve a higher
+    AUC (40).
+
+
+    # Table 1
+
+    Application of AI in lung screening and detection.
+
+
+    | Year | Method | Sample size | Reference |
+
+    |---|---|---|---|
+
+    | 2018 | SVM-based model constructed a prediction by using SVM with CT radiomic
+    features, achieved an accuracy of 84.6%, which was 12.8% higher than lung-Rads.
+    | 72 PN (benign and malignant) | [73] |
+
+    | 2020 | FGD-PET/CT AI-based algorithm for detection and segmentation of lung
+    nodules | 320 patients (histologically confirmed cases) | [74] |
+
+    | 2020 | AI algorithm tests detection and segmentation of nodules on digital radiographs
+    | Baseline (TO) postors from 485 | [75] |
+
+    | 2021 | DL-based algorithm for detection and segmentation of lung nodules | 57
+    patients 982 images | [76] |
+
+    | 2021 | DL neural network for fusion of nodules to provide support for radiologists
+    | 81 benign and malignant | [77] |
+
+    | 2022 | AI identifies significant factors for cardiogenesis and standard screening
+    to decrease healthcare costs | 158 patients | [78] |
+
+    | 2022 | Adaboost-SVM-CNN has good accuracy for the detection of lung nodules
+    and anticipate its potential | 1018 CT scans | [79] |
+
+
+    ## 2.3. Reinforcement learning
+
+
+    X-ray tomography (CT) has been used for decades in the management of lung cancer,
+    including screening, diagnosis and treatment. The quantitative value of CT for
+    lung nodules has also been recognized. However, multiple lung nodules are still
+    common in clinical practice (41–42). For lung nodules, different shapes and sizes
+    may and affect the patterns of metastasis [36,43]. CT images of lung nodules are
+    multi-dimensional images. 3D convolutional neural networks (CNN) can utilize the
+    full spatial content of lung nodule detection, which can improve the accuracy
+    of 2D CNN for lung nodules and reduce the false positive rate (44). The recent
+    progression of CT in lung detection of automated 3-D tomography has been reported
+    (34,45). These studies focus on the improvement of the detection accuracy and
+    shapes of the different types of nodules detection capability. The work will able
+    to build electronic medical record system and picture archive (46,47).
+
+
+    AI is used in the diagnosis of benign and malignant nodules. For lung nodules,
+    CT analysis can accurately determine benign and malignant nodules (48). Regular
+    shape, ground shadow, margin spin, and sign are important for the basis for the
+    analysis. The study reported that the detection rate of true positives by CT nodules
+    by professional clinicians was 66.5%, much lower than 98.4% by AI technology (49).
+    There are risks of misdiagnosis and misdiagnoses in CT scans. Some nodules are
+    also related to mimic small lung special nodules, resulting in missed diagnosis
+    and misdiagnoses. However, AI can effectively detect small lung nodules and reduce
+    missed diagnoses (59–51). The true positive diagnosis rate of AI-based SVM is
+    significantly higher than that of professional physicians (52,53).
+
+
+    ## 3.2. Application in classification and diagnosis of lung cancer
+
+
+    Lung cancer is divided into non-small cell lung cancer (NSCLC) and small cell
+    lung cancer (SCLC). NSCLC accounts
+
+    '
+  mdcn: '
+
+
+    # Huang 等人
+
+
+    # 癌症生物学杂志 89 (2023) 30-37
+
+
+    ![](img/fbb3a28917ea7454539e81aa3e8afb3a_2_0.png)
+
+
+    图 2. AI 在肺癌筛查和检测中的应用。a. AI、ML、DL、NLP 与肺癌各种需求的关系。b. 肺癌诊断应用中机器学习与深度学习的类型及差异 [84]，c.
+    基于电子健康记录（EHR）的肺癌数据中 NLP 技术的概念以及与传统方法的比较。AI：人工智能；NLP：自然语言处理；ML：机器学习；DL：深度学习用于 NLP
+    的健康研究方法。图 2c 展示了 NLP 技术在医学数据中的应用范式。一些研究人员已利用来自多个中心的临床数据来训练 NLP 模型。Kennedy 等 [16]
+    证明了训练自然语言医学模型的可性，该模型可以从非细胞肺癌患者的影像报告和筛查报告中提取结果。[18] 证明了此类方法在病记录中的通用可行性，并进一步辅助了
+    NLP 驱动的临床标注与总生存率之间的关联。
+
+
+    Gomez 等证实了通过 NLP 识别的胸部 CT 报告检测肺结节的一致性 [17]。另一项研究发现 NLP 技术用于自动分类放射学报告及之后的质量保证工具。Transformer
+    已成为 NLP 中的主要算法。Agnila Khastraya 等证明了使用双向长短期记忆（LSTM）混合模型进行表示学习的有效性，这解决了电子健康记录中基本病历特征的需求，并生成了大多数深度学习模型所需的训练数据量
+    [19]。Fei 等提出了针对中文放射学报告的首种方法以提高报告质量。部署基于随机场的双向逻辑或短期记忆（LSTM）模型从肺癌放射学报告中提取实体。基于恶性知识图谱和规则模板提出了与随访建议的关键信息
+    [20]。
+
+
+    诊断。深度学习模型在肺癌图像特征方面取得了近期进展 [21]。近期，强化学习被广泛用于分析肺癌定位、分割和分类 [22]。结合强化学习的深度学习模型出现并创建了新模型，例如深度
+    Q 学习和深度神经网络，这些具有 [24] 用于肺癌检测和诊断的代表性深度学习模型。肺癌的常见类型和每类型的主要特征是独特的。深度强化学习通过肿瘤的准确定位识别不同患者
+    [25]。然而，强化学习模型在肺癌筛查中的应用仍面临许多挑战。目前尚不清楚如何每个病例更新 Q 值定义适当的奖励。
+
+
+    # 3. 在肺癌诊断中的应用
+
+
+    ## 3.1. 在肺结节筛查和检测中
+
+
+    目前，体检中发现了大量的肺结节。虽然大多数肺结节是良性的，但直径大于 3 cm 的早期肺结节发生频率仍然很高，且具有较高的恶性概率 [26,27]。有必要强调肺结节映射以转化。然而，为了提供早期治疗，临床医生可以准确区分良性和恶性肺结节。目前，许多研究人员和企业已投入资源开发肺癌的
+    AI 图像分析，这是计算机辅助协助医生进行肺结节筛查的重要部分 (32)。他们的发明将帮助放射科医生快速定位结节并提供诊断和治疗，以减少误诊和漏诊。AI 在肺部筛查和检测中的各种应用总结在表
+    1 中
+
+
+    人工智能辅助计算机诊断 (CAD) 工具已经开发。CAD 系统可以帮助放射科医生在癌症早期识别和定位漏诊结节 (33)。它们可用于评估恶性程度和治疗预后，改善临床工作流
+    (34)。用于肺结节检测、分类和定量评估的可用数据库包括肺部数据联盟 (LIDC)/图像数据库访问与检索 (IDRI) 和早期肺癌图谱 (ELCAP) (35)。LIDC/IDRI
+    为医学研究社区提供了一个开放参考，是促进 AI 算法开发、验证和转化的重要资源。这些算法是使用 LIDC/IDRI 的数据集进行开发和测试的 (37–39)。从
+    80 次 CT 扫描中总共选择了 6400 张图像，6 张图像由 4 名放射科医生进行标记 (37)。本研究中开发的 CAD 系统通过使用随机森林 (RF)
+    的快速分割机制实现了快速分割。我们评估了用于良性和恶性肺结节诊断的接收者操作特征 (ROC) 的灵敏性、特异性和准确性。与支持向量机 (SVM) 相比，我们的方法降低了假阳性率并实现了更高的
+    AUC (40)。
+
+
+    # 表 1
+
+    AI 在肺部筛查和检测中的应用。
+
+
+    | 年份 | 方法 | 样本量 | 参考文献 |
+
+    |---|---|---|---|
+
+    | 2018 | 基于 SVM 的模型使用 CT 放射组特征通过 SVM 构建预测，实现了 84.6% 的准确率，比肺-Rads 高 12.8%。 | 72
+    例 PN（良恶性） | [73] |
+
+    | 2020 | 基于 AI 的 FGD-PET/CT 算法用于肺结节检测和分割 | 320 名患者（病理证实病例） | [74] |
+
+    | 2020 | AI 算法在数字 X 线片上测试结节检测和分割 | 来自 485 人的基线 (TO) 标记者 | [75] |
+
+    | 2021 | 基于 DL 的肺结节检测和分割算法 | 57 名患者 982 张图像 | [76] |
+
+    | 2021 | 用于结节融合的 DL 神经网络为放射科医生提供支持 | 81 例良性和恶性 | [77] |
+
+    | 2022 | AI 识别心脏生成的显著因素和标准筛查以降低医疗成本 | 158 名患者 | [78] |
+
+    | 2022 | Adaboost-SVM-CNN 对肺结节检测具有良好的准确性并预测了其潜力 | 1018 次 CT 扫描 | [79] |
+
+
+    ## 2.3. 强化学习
+
+
+    断层扫描 (CT) 多年来一直用于肺癌的管理，包括筛查、诊断和治疗。CT 对肺结节的定量价值也得到了认可。然而，多发肺结节在临床实践中仍然常见 (41–42)。对于肺结节，不同的形状和大小可能会影响转移
+    [36,43]。肺结节的 CT 图像是多维图像。3D 卷积神经网络 (CNN) 可以利用全 空间内容，从而提高 2D CNN 检测肺结节的准确性并降低假阳性率
+    (44)。CT 在肺自动断层扫描方面的近期进展已有报道 (34,45)。这些研究侧重于提高不同类型结节检测的准确性和形状。这些工作能够建立电子病历系统和影像存档
+    (46,47)。
+
+
+    AI 用于良性和恶性结节的诊断。对于肺结节，CT 分析可以准确判断良性和恶性结节 (48)。规则形状、毛玻璃影、边缘和征象是分析的重要依据。研究报告说，专业医生通过
+    CT 检测结节的真阳性率为 66.5%，远低于 AI 技术的 98.4% (49)。CT 扫描中存在误诊和漏诊的风险。
+
+
+    ## 3.2. 在肺癌分类和诊断中的应用
+
+
+    肺癌分为非小细胞肺癌 (NSCLC) 和小细胞肺癌 (SCLC)。NSCLC 占
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    # S. Huang et al.
+
+
+    # Seminars in Biology 89 (2022) 30–37
+
+
+    # Table 1 (continued)
+
+
+    | Year | Method | Sample size | Reference |
+
+    |---|---|---|---|
+
+    | | application in the clinical diagnosis of lung cancer | function normalizes
+    the layers by dropout and tested using ELAC (2018) | | |
+
+
+    Abbreviation: Artificial intelligence; AI; deep learning; CNN; neural networks;
+    pulmonary; NLST; Lung Screening Trial; BSEM; block sequential expectation algorithm;
+    OSEM; expected subset maximization; Lung-RADS; CT Cancer Reporting and Data System;
+    SVM; support vector machine; LASSO; least absolute shrinkage and selection; cross-validation.
+
+
+    rarely. We attempted to automatically classify histological subtypes of adenocarcinoma
+    using deep learning. CNN method, they identify regions and then aggregate these
+    classifications to infer the primary and histological patterns of the whole image.
+    The model performance in detail was evaluated. The results were compared to the
+    interpretation of these techniques.
+
+
+    Histocytopathological and diagnostic are essential parts of the diagnosis and
+    treatment of lung cancer. To improve the accuracy of pathological diagnosis, several
+    researchers have attempted to classify different types of lung cancer using AI.
+    In one study, an automated classification scheme with deep convolutional network
+    (CNN) was developed, with multiple layers of features. The resolution of the microscopic
+    images was 256 × 255 pixels. To prevent over-fitting, the image was enhanced,
+    blurred, and filtered by rotation correction. The classification accuracy was
+    effectively obtained at 88%. The test results showed that about 71% of the images
+    were correctly classified. Logical types of and incorrect inaccuracy in the identification
+    of lung cancer types were also seen in [54].
+
+
+    # 3.3. Prediction of lung cancer by mutant types
+
+
+    Lung tumors of different subtypes may differ at the molecular level and therefore
+    respond to their therapies. Genetic alterations with prognostic/predictive significance
+    in NSCLC [52] include EGFR and anaplastic lymphoma kinase (ALK) gene mutations.
+    EGFR status is the key to select appropriate treatment. Cox et al. developed a
+    model for gene mutations in adenocarcinoma using deep learning technique [36].
+    They trained and input into the model to predict mutation-related features from
+    the cancer genome atlas.
+
+
+    80%–90% of lung cancer have different histologies and include their main subtypes,
+    namely squamous cell carcinoma, adenocarcinoma, and large cell carcinoma. Due
+    to the differences in the subtypes of lung cancer, it is important to accurately
+    classify the types of lung cancer in clinical practice. Deep learning could be
+    used to identify the pathological patterns of lung cancer. Tracheobronchial cytology
+    has been used to identify the different types of lung cancer. Teramato et al.
+    analyzed the classification of 76 cases of lung cancer, including squamous cell
+    carcinoma, adenocarcinoma, and large cell carcinoma. They used feature extraction
+    to determine the type with an accuracy of 71.1%, which was compared to the classification
+    of trained cytopathologists [54]. Khorani et al developed a new fine-tuned transformer
+    model for the classification of adenocarcinoma from 100% high-resolution localization
+    images with an accuracy of 75%–90% [55]. Cox and al normally used 1634 slide images
+    (1176 tumor cases and 458 normal samples) to train the model with a 70% training
+    set, a 15% validation set, and a 15% test set [56]. The method of image segmentation
+    data were used to train input v-3, and further was used to verify and test in
+    an independent data set. The results showed that the morphological characteristics
+    of the images, such, nuclear shape, were normal, squamous cell carcinoma, and
+    adenocarcinoma. The results showed comparable performance with pathologists''
+    results with an accuracy of 97%.
+
+
+    Lung adenocarcinoma has significant heterogeneity in histological, molecular,
+    radiological, and pathological features [57]. The growth and pattern of lung adenocarcinoma
+    vary in subtype, including micro-acinar adenocarcinoma, lepidic adenocarcinoma,
+    glandular papillary adenocarcinoma, micropapillary adenocarcinoma, solid adenocarcinoma.
+    These major subtypes of lung adenocarcinoma present different prognosis, outcomes
+    [58] and responses to treatment [59]. The classification of subtypes remains a
+    challenge. Accurate classification of each type which is time-consuming and inaccurate
+    is, very necessary. At present, the research of deep learning in lung cancer typing
+    mainly focuses on the classification of squamous cell type and adenocarcinoma.
+    The classification of lung adenocarcinoma subtypes is
+
+
+    One of the most important aspects of digital pathology is to predict patient prognosis
+    and treatment, which is to facilitate patient outcome based on pathological histography.
+    Other pathological features, such as lung cancer and subtypes, have been reported
+    in order predicting the pathological images with SVM. This remains a great challenge
+    [66]. To compare the tumor-non-small cell cancer (NSCLC) types of lung and provide
+    prognostic information. If AI is rapid and fast, it is important for the clinical
+    diagnosis and treatment of lung cancer. Deep learning can obtain quantitative
+    feature information that is useful for the prediction of patient response. Wang
+    et al. used 205 images of NSCLC patients into distribution patterns of lymphocytes,
+    tumor cells, and mesenchymal cells by training convolutional neural networks (CNN)
+    [65]. They effectively observed and multiple features to predict the patient survival.
+    The model is input into the deep model, parameters parameters strengthening the
+    strength of the interaction can be obtained. Meanwhile, the interaction between
+    tumor cells, stromal cells, and
+
+
+    34'
+  - '[PAGE 5]
+
+
+    lymphocytes be quantified. Regression model analysis showed that the strength
+    of the interaction between tumor cells and stromal cells was significantly associated
+    with good prognosis (P = 0.005). To verify the gene-network construction, Lo et
+    al. performed gene expression training on clinicopathological data of 510 patients
+    and validated it on 100 patients. The 20 genes most related to survival were selected
+    and included in the CNN model. The output provided reliable predictions for survival
+    hazards.
+
+
+    image storage, image analysis, and system reliability is highly, resulting in
+    the narrow use of AI in the field. Third, there are a number of challenges. Although
+    the AI technology can enhance the performance of experienced physicians or experts
+    in lung diagnosis, it lacks the ability to identify subtle patterns and mechanisms
+    like lymphatic features. Furthermore, there is still a long way to go before AI
+    can make lung cancer diagnosis. Although diagnosis of lung cancer based on AI
+    cannot be used in clinical practice, with the development of AI and image recognition
+    technology, its performance will improve to make accurate diagnosis in lung cancer.
+
+
+    The vascular-related features were manually labeled by HE images in a training
+    set. After fine-tuning the convolutional neural networks (CNN), the final model
+    identified the presence of micro-vessels. The total area of micro-vessels and
+    the percentage of tumor cells around micro-vessels can be obtained by outputting
+    HE images. The degree of micro-vessel infiltration significantly affected the
+    prognosis; the high-risk group was significantly lower than [67]. In another study,
+    Yu et al. demonstrated that the Cox model used for lung cancer analysis successfully
+    predicted the survival of patients with HE features [69].
+
+
+    # 5.2. Future
+
+
+    With the development of medical technology, non-invasive AI detection of tumors,
+    and analysis of PET/CT and CT images, comprehensive profiling by deep sequencing
+    (CAP-Seq) has been used in clinical setting. The detection of tumor DNA (ctDNA)
+    in peripheral blood is reported by CAP-Seq. The detection of RNAs and other chemical
+    markers in peripheral blood is expected to be achieved within a few years.
+
+
+    To optimize the evaluation and the efficacy of the different methods still need
+    to be addressed. To date, therapy of lung cancer is not based on the use of AI.
+    Because effective therapy is primarily dependent on PD-1 expression levels in
+    tumors, the PD-1 detection method still needs efficiency and convenience by staining
+    in tumor tissues. However, there are many challenges in the development of AI
+    technology for tumor segmentation, morphology and heterogeneity.
+
+
+    The prognosis of lung patients can be accurately based on the information in pathological
+    sections. A study analyzed 2186 patients with lung adenocarcinoma and squamous
+    carcinoma from TCGA (microarray) database [69]. The quantitative features of images
+    were extracted and the features were the most significant for predicting survival.
+    The results showed that the Cox model could well predict the survival of patients
+    with lung adenocarcinoma (P = 0.03) and lung squamous carcinoma (P < 0.02). In
+    addition, data from the TCGA was used to verify the efficacy of the prediction.
+    There was no significant difference in the accuracy of the prediction of these
+    two types of tumors (P < 0.036), which indicated that the application of automated
+    pathological image features predicted the prognosis of lung patients (60). However,
+    AI application in lung cancer prognosis is likely to advance and will provide
+    novel decision-making for clinicians.
+
+
+    As a bridge toward prediction, AI-based lung cancer analysis has shown excellent
+    performance and potential. In some studies, the performance of AI can be comparable
+    to that of physicians. Especially with the development of Positron Emission Tomography
+    (PET/CT), it is widely used as the method for early diagnosis of lung cancer.
+    Recent years have shown the early diagnosis of lung cancer, which has cancer significance
+    in the differentiation of benign and malignant nodules [70]. However, the application
+    of AI is still under development. Due to various limitations and challenges, such
+    as image quality control and lack of an authoritative lung cancer AI diagnosis
+    tool may affect the accuracy of the AI system.
+
+
+    # 6. Conclusion
+
+
+    In summary, AI technology has made progress in early screening, pathological diagnosis,
+    and classification, prognosis assessment, surgical navigation, and immunotherapy
+    of lung cancer. Here, we evaluated the value of AI in lung cancer diagnosis and
+    prognosis, which provide novel decision-making for the precision treatment of
+    lung cancer patients.'
+  md: '
+
+    # S. Huang et al.
+
+
+    # Seminars in Biology 89 (2022) 30–37
+
+
+    # Table 1 (continued)
+
+
+    | Year | Method | Sample size | Reference |
+
+    |---|---|---|---|
+
+    | | application in the clinical diagnosis of lung cancer | function normalizes
+    the layers by dropout and tested using ELAC (2018) | | |
+
+
+    Abbreviation: Artificial intelligence; AI; deep learning; CNN; neural networks;
+    pulmonary; NLST; Lung Screening Trial; BSEM; block sequential expectation algorithm;
+    OSEM; expected subset maximization; Lung-RADS; CT Cancer Reporting and Data System;
+    SVM; support vector machine; LASSO; least absolute shrinkage and selection; cross-validation.
+
+
+    rarely. We attempted to automatically classify histological subtypes of adenocarcinoma
+    using deep learning. CNN method, they identify regions and then aggregate these
+    classifications to infer the primary and histological patterns of the whole image.
+    The model performance in detail was evaluated. The results were compared to the
+    interpretation of these techniques.
+
+
+    Histocytopathological and diagnostic are essential parts of the diagnosis and
+    treatment of lung cancer. To improve the accuracy of pathological diagnosis, several
+    researchers have attempted to classify different types of lung cancer using AI.
+    In one study, an automated classification scheme with deep convolutional network
+    (CNN) was developed, with multiple layers of features. The resolution of the microscopic
+    images was 256 × 255 pixels. To prevent over-fitting, the image was enhanced,
+    blurred, and filtered by rotation correction. The classification accuracy was
+    effectively obtained at 88%. The test results showed that about 71% of the images
+    were correctly classified. Logical types of and incorrect inaccuracy in the identification
+    of lung cancer types were also seen in [54].
+
+
+    ## 3.3. Prediction of lung cancer by mutant types
+
+
+    Lung tumors of different subtypes may differ at the molecular level and therefore
+    respond to their therapies. Genetic alterations with prognostic/predictive significance
+    in NSCLC [52] include EGFR and anaplastic lymphoma kinase (ALK) gene mutations.
+    EGFR status is the key to select appropriate treatment. Cox et al. developed a
+    model for gene mutations in adenocarcinoma using deep learning technique [36].
+    They trained and input into the model to predict mutation-related features from
+    the cancer genome atlas.
+
+
+    80%–90% of lung cancer have different histologies and include their main subtypes,
+    namely squamous cell carcinoma, adenocarcinoma, and large cell carcinoma. Due
+    to the differences in the subtypes of lung cancer, it is important to accurately
+    classify the types of lung cancer in clinical practice. Deep learning could be
+    used to identify the pathological patterns of lung cancer. Tracheobronchial cytology
+    has been used to identify the different types of lung cancer. Teramato et al.
+    analyzed the classification of 76 cases of lung cancer, including squamous cell
+    carcinoma, adenocarcinoma, and large cell carcinoma. They used feature extraction
+    to determine the type with an accuracy of 71.1%, which was compared to the classification
+    of trained cytopathologists [54]. Khorani et al. developed a new fine-tuned transformer
+    model for the classification of adenocarcinoma from 100% high-resolution localization
+    images with an accuracy of 75%–90% [55]. Cox et al. normally used 1634 slide images
+    (1176 tumor cases and 458 normal samples) to train the model with a 70% training
+    set, a 15% validation set, and a 15% test set [56]. The method of image segmentation
+    data were used to train input v-3, and further was used to verify and test in
+    an independent data set. The results showed that the morphological characteristics
+    of the images, such as nuclear shape, were squamous cell carcinoma, and adenocarcinoma.
+    The results showed comparable performance with pathologists'' results with an
+    accuracy of 97%.
+
+
+    Lung adenocarcinoma has significant heterogeneity in histological, molecular,
+    radiological, and pathological features [57]. The growth and pattern of lung adenocarcinoma
+    vary in subtype, including micro-acinar adenocarcinoma, lepidic adenocarcinoma,
+    glandular papillary adenocarcinoma, micropapillary adenocarcinoma, solid adenocarcinoma.
+    These major subtypes of lung adenocarcinoma present different prognosis, outcomes
+    [58] and responses to treatment [59]. The classification of subtypes remains a
+    challenge. Accurate classification of each type which is time-consuming and inaccurate
+    is, very necessary. At present, the research of deep learning in lung cancer typing
+    mainly focuses on the classification of squamous cell type and adenocarcinoma.
+    The classification of lung adenocarcinoma subtypes is
+
+
+    One of the most important aspects of digital pathology is to predict patient prognosis
+    and treatment, which is to facilitate patient outcome based on pathological histography.
+    Other pathological features, such as lung cancer and subtypes, have been reported
+    in order predicting the pathological images with SVM. This remains a great challenge
+    [66]. To compare the tumor-non-small cell cancer (NSCLC) types of lung and provide
+    prognostic information. If AI is rapid and fast, it is important for the clinical
+    diagnosis and treatment of lung cancer. Deep learning can obtain quantitative
+    feature information that is useful for the prediction of patient response. Wang
+    et al. used 205 images of NSCLC patients into distribution patterns of lymphocytes,
+    tumor cells, and mesenchymal cells by training convolutional neural networks (CNN)
+    [65]. They effectively observed and multiple features to predict the patient survival.
+    The model is input into the deep model, parameters strengthening the strength
+    of the interaction can be obtained. Meanwhile, the interaction between tumor cells,
+    stromal cells, and lymphocytes be quantified. Regression model analysis showed
+    that the strength of the interaction between tumor cells and stromal cells was
+    significantly associated with good prognosis (P = 0.005). To verify the gene-network
+    construction, Lo et al. performed gene expression training on clinicopathological
+    data of 510 patients and validated it on 100 patients. The 20 genes most related
+    to survival were selected and included in the CNN model. The output provided reliable
+    predictions for survival hazards.
+
+
+    image storage, image analysis, and system reliability is highly, resulting in
+    the narrow use of AI in the field. Third, there are a number of challenges. Although
+    the AI technology can enhance the performance of experienced physicians or experts
+    in lung diagnosis, it lacks the ability to identify subtle patterns and mechanisms
+    like lymphatic features. Furthermore, there is still a long way to go before AI
+    can make lung cancer diagnosis. Although diagnosis of lung cancer based on AI
+    cannot be used in clinical practice, with the development of AI and image recognition
+    technology, its performance will improve to make accurate diagnosis in lung cancer.
+
+
+    The vascular-related features were manually labeled by HE images in a training
+    set. After fine-tuning the convolutional neural networks (CNN), the final model
+    identified the presence of micro-vessels. The total area of micro-vessels and
+    the percentage of tumor cells around micro-vessels can be obtained by outputting
+    HE images. The degree of micro-vessel infiltration significantly affected the
+    prognosis; the high-risk group was significantly lower than [67]. In another study,
+    Yu et al. demonstrated that the Cox model used for lung cancer analysis successfully
+    predicted the survival of patients with HE features [69].
+
+
+    ## 5.2. Future
+
+
+    With the development of medical technology, non-invasive AI detection of tumors
+    and analysis of PET/CT has been used in clinical setting. The detection of tumor
+    DNA (ctDNA) in peripheral blood is reported by CAP-Seq. The detection of RNAs
+    and other chemical markers in peripheral blood is expected to be achieved within
+    a few years. To optimize the evaluation and efficacy of different methods still
+    need to be addressed. To date, therapy of lung cancer is not based on the use
+    of AI. Because effective therapy is primarily dependent on PD-1 expression levels
+    in tumors, and because there are many challenges in the development of AI technology
+    for tumor segmentation, morphology, and heterogeneity.
+
+
+    The prognosis of lung patients can be accurately based on the information in pathological
+    sections. A study analyzed 2186 patients with lung adenocarcinoma and squamous
+    carcinoma from TCGA database [69]. The quantitative features of images were extracted
+    and the features were the most significant for predicting survival. The results
+    showed that the Cox model could well predict the survival of patients with lung
+    adenocarcinoma (P = 0.03) and lung squamous carcinoma (P < 0.02). In addition,
+    data from the TCGA was used to verify the efficacy of the prediction. There was
+    no significant difference in the accuracy of the prediction of these two types
+    of tumors (P < 0.036), which indicated that the application of automated image
+    features predicted the prognosis of lung patients (60). However, AI application
+    in lung cancer prognosis is likely to advance and will provide novel decision-making
+    for clinicians.
+
+
+    ## 6. Conclusion
+
+
+    In summary, AI technology has made progress in early screening, pathological diagnosis,
+    and classification, prognosis assessment, surgical navigation, and immunotherapy
+    of lung cancer. Here, we evaluated the value of AI in lung cancer diagnosis and
+    prognosis, which provide novel decision-making for the precision treatment of
+    lung cancer patients.
+
+    '
+  mdcn: '
+
+
+    # S. Huang 等人
+
+
+    # 生物学讲座 89 (2022) 30–37
+
+
+    # 表 1（续）
+
+
+    | 年份 | 方法 | 样本量 | 参考文献 |
+
+    |---|---|---|---|
+
+    | | 在肺癌临床诊断中的应用 | 通过 dropout 归一化层并使用 ELAC 进行测试 (2018) | | |
+
+
+    缩写：人工智能；AI；深度学习；CNN；神经网络；肺部；NLST；肺癌筛查试验；BSEM；块顺序期望算法；OSEM；期望子集最大化；Lung-RADS；CT
+    癌症报告与数据系统；SVM；支持向量机；LASSO；最小绝对收缩与选择；交叉验证。
+
+
+    ……罕见。我们尝试使用深度学习自动对腺癌的组织学亚型进行分类。通过 CNN 方法，他们识别了区域并聚合这些分类，以推断整幅图像的原发部位和组织学模式。详细评估了模型的性能。并将结果与这些技术的解释结果进行了比较。
+
+
+    细胞病理学和诊断是肺癌诊疗中不可或缺的部分。为了提高病理诊断的准确性，一些研究人员尝试使用 AI 对不同类型的肺癌进行分类。在一项研究中，开发了一种具有多层特征的深度卷积网络（CNN）自动分类方案。微图像的分分辨率为
+    256 × 255 像素。为了防止过拟合，对图像进行了增强、模糊和旋转修正滤波。成功获得了 88% 的分类准确率。测试结果显示，约 71% 的图像被正确分类。[54]
+    还观察到了肺癌类型识别中的逻辑类型和错误不准确之处。
+
+
+    ## 3.3. 突变类型对肺癌预测
+
+
+    不同亚型的肺肿瘤在分子水平上可能存在差异，因此对治疗的反应也不同。非小细胞肺癌（NSCLC）（52] 中具有预后/预测意义的遗传变异包括 EGFR 和间质性淋瘤酶（ALK）基因突变。EGFR
+    状态是选择合适治疗的关键。Cox 等人利用深度学习技术开发了一种腺癌基因突变模型 [36]。他们训练并输入了模型，以预测癌症基因组谱中的突变相关特征。
+
+
+    80%–90% 的肺癌具有不同的组织学特征，包括其主要亚型，即鳞状细胞癌、腺癌和大细胞癌。由于肺癌亚型之间的差异，在临床实践中准确分类肺癌类型至关重要。深度学习可用于识别肺癌的病理模式。气管支气管细胞学已用于识别不同类型的肺癌。Teramato
+    等人分析了 76 例肺癌的分类，包括鳞状细胞癌、腺癌和大细胞癌。他们使用特征提取来确定类型，准确率为 71.1%，并与经过培训的细胞病理学家的分类结果进行了比较
+    [54]。Khorani 等人开发了一种新的微调 Transformer 模型，用于从 100% 高分辨率定位图像中对腺癌进行分类，准确率达到 75%–90%
+    [55]。Cox 等人通常使用 1634 张切片图像（1176 例肿瘤病例和 458 正常样本）来训练模型，分为 70% 的训练集、15% 的验证集和 15%
+    的测试集 [56]。图像分割数据方法用于训练输入 v-3，进一步在独立数据集中进行验证和测试。结果显示，图像的形态特征（如细胞形状）为鳞状细胞癌和腺癌。结果显示其与病理学家的结果相当，准确率为
+    97%。
+
+
+    肺腺癌在组织学、分子、放射学和病理特征具有显著的异质性 [57]。肺腺癌的生长和模式随亚型而异，包括微腺腺癌、肺润腺癌、腺状乳头腺癌、微乳头腺癌和实性腺癌。这些肺腺癌的主要亚型表现出不同的预后、结果
+    [58] 和治疗反应 [59]。亚型的分类仍然是一个挑战。对每类型进行准确分类是非常必要的，尽管这耗时且不准确。目前，肺癌分型的深度学习研究主要集中在鳞细胞和腺癌的分类上。腺癌亚型的分类是
+
+
+    数字病理最重要的方面之一是预测患者的预后和治疗，即根据病理组织学结果改善患者预后。已有报道通过 SVM 预测肺癌及其亚型等病理特征以预测图像。这仍然是一个巨大的挑战
+    [66]。以比较肺部非小细胞肺癌（NSCLC）类型并提供预后信息。如果 AI 是快速高效的，对于肺癌的临床诊断和治疗至关重要。深度学习可以获取量化特征信息，这对预测患者反应有用。Wang
+    等人通过训练卷积神经网络（CNN），将 205 张 NSCLC 患者图像分布到淋巴细胞、肿瘤细胞和间质细胞的模式中 [65]。他们有效地观察并利用多个特征来预测患者的生存情况。模型被输入深度模型，可以获得增强相互作用的参数。同时，肿瘤细胞、间质细胞和淋巴细胞之间的相互作用被定量。回归模型分析显示，肿瘤细胞与间质细胞之间的相互作用强度与良好预后显著相关（P
+    = 0.005）。为了验证基因网络的构建，Lo 等人对 510 名患者的临床病理数据进行了基因表达训练，并在 100 名患者中进行了验证。筛选了与生存率最相关的
+    20 个基因并纳入 CNN 模型。输出结果为生存风险提供了可靠的预测。
+
+
+    图像存储、图像分析和系统可靠性非常高，导致 AI 应用狭窄。第三，在 AI 领域仍面临许多挑战。尽管 AI 技术可以提高经验丰富的医生的表现并做出肺癌诊断，但基于
+    AI 的肺癌诊断仍有很长的路要走。
+
+
+    血管相关特征是在训练集中手动标记的 HE 图像。通过对卷积神经网络（CNN）进行微调，模型识别了血管的存在。血管的总面积和周围肿瘤细胞的百分比可以获得。结果显示血管浸润程度显著影响预后；高风险组显著低于
+    [67]。在另一项研究中，Yu 等人证明了用于肺癌分析的 Cox 模型成功预测了生存情况 [69]。
+
+
+    ## 5.2. 未来
+
+
+    随着医疗技术的发展，非侵入性 AI 检测肿瘤和 PET/CT 分析已应用于临床。外血中肿瘤 DNA（ctDNA）的检测已有报道。外血中 RNA 和其他化学标志物的检测预计将在几年内实现。优化不同方法的评估和效果仍需解决。到目前，肺癌的治疗尚未基于
+    AI 的使用。由于有效治疗主要取决于肿瘤中的 PD-1 表达水平，且 AI 技术在肿瘤分割、形态和异质性方面的开发面临许多挑战。肺癌的预后可以根据病理切片信息进行准确预测。通过
+    AI 预测肺癌的准确性将会提高。
+
+
+    一项研究分析了 TCGA 数据库中 2186 例腺癌和鳞癌患者 [69]。提取了图像的量化特征，这些特征对预测生存最为显著。结果显示，Cox 模型可以很好地预测腺癌（P
+    = 0.03）和肺鳞癌（P < 0.02）患者的生存情况。此外，使用 TCGA 数据验证了预测效果。两种类型的预测准确率无显著差异（P < 0.036），表明自动图像特征的应用预测了肺患者的预后（60）。然而，AI
+    在肺癌预后方面的应用有望进展，为临床医生提供新的决策依据。
+
+
+    ## 6. 结论
+
+
+    总之，AI 技术在肺癌的早期筛查、诊断分类、预后评估、手术导航和免疫治疗方面取得了进展。在这里我们评估了 AI 在肺癌诊断和预后方面的价值，为肺癌患者的精准治疗提供了新的决策依据。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 6]
+
+
+    # Authors contributions
+
+
+    S.HJ initiated the study; S.J and JY drafted the manuscript; N.S, Q.X and J edited
+    and revised the manuscript. All authors approved this version of the article.
+
+
+    # Funding
+
+
+    MOE (Ministry of Education in China) of Human and Social Science (Project No.2019Y0063213),
+    and the National R&D Program of Science and Technology (KZD-2020030301, JQN202003602,
+    JQN202003607), the Science and Technology Research Fund of the University of Macau
+    (MYRG2019-Science and Technology Development Fund, Macau (SFD/2023/041/A and FDCT/2020/021/AK),
+    Science and Technology (QGT20201103928031), the National Medical Foundation of
+    Guangdong Province (NSZ-2021016).
+
+
+    # Declaring of Interest
+
+
+    None.
+
+
+    # Data availability
+
+
+    No data was used for the research of this article
+
+
+    # Acknowledgments
+
+
+    Not applicable.
+
+
+    # References
+
+
+    +   [1] J. Sung, F. Bray, R.L. Siegel, M. Soeane, V. Ierer, A. Jemal, et al.,
+    GLOBOCAN estimates of cancer incidence and mortality for 36 cancers in 185 countries.
+    Cancer Statistics 2021;71(1):1-24.
+
+
+    +   [2] C. Fitzmaurpatrick, A. Davies, N. Heibat, B. Al-Haddad, F. Al-Abdah, O.
+    Morgan, R. Global Research, et al., Global burden of cancer incidence and mortality
+    worldwide, 1990–2017: A Systematic Analysis for the Global Burden of Disease Study
+    2017. The Lancet 2018;392(10159):2241-2428.
+
+
+    +   [3] F.H. Ries, G.Y. Scaglioli, J. Jungner, R. Rukman, W. Jordan, Y. Yuan,
+    X.-Lu, et al., Epidemiology of lung cancer: new challenges and emerging targets.
+    Nature Reviews 2019;100(4):297-311.
+
+
+    +   [4] J. Bray, Lung cancer. Nature 578 (2020) 294-30.
+
+
+    +   [5] H.-X. Wang, G. Xu, J.-Du, F.-Chen, W.-Wu, C.-Fan, H.-Lu, Y.-Pei, Epidemiology
+    and survival of lung cancer in China. J Med Res 2019;8(12):100819.
+
+
+    +   [6] H.-T. Lin, C. Liu, Y. Wang, and K. Huai, Screening for lung cancer: a
+    review. Med Sci J. 2021;10(2):224-238.
+
+
+    +   [7] H.S. Wang, G. Guo, J. Sun, J. Chen, X. Zhang, J. Wang, et al., Comparison
+    of deep learning algorithms for lung cancer detection in CT images. Radi. Clin
+    Oncol.
+
+
+    +   [8] P. Li, J. Chen, Y. Liu, Y. Wu, Deep reinforcement learning for lung cancer
+    detection in Medical Imaging. Future Comput. Syst. Anal. 2022;9:255-268.
+
+
+    +   [9] M. Li, H. Xiao, Prediction of metastasis in non-small cell lung cancer.
+    Thorac Oncol 2020;33:187-198.
+
+
+    +   [10] Y. Chen, Y. Hu, H. Zhang, M. Ma, Z. Liu, Y. Ai, et al., Value of biomarkers
+    in early diagnosis of non-small cell lung cancer. Clin Med 2020;9(12):745-752.
+
+
+    +   [11] J.L. Espina, T. Du, J. Wang, T. Tang, P.K. Tang, N. Yang, et al., Artificial
+    intelligence for lung cancer risk prediction. J Clin Med 2022;9(2):123.
+
+
+    +   [12] C. Wang, X. Xu, J. Lu, X. Shen, Y. Yang, and J. An, DeepAn artificial
+    intelligence for automated lung cancer detection on CT scans. Ann R Med (2022);18(8):e20112.
+
+
+    +   [13] C.M. MacC, L. Winter, Artificial Intelligence for Classification of Lung
+    Nodules: A Review. J Med Imaging 2021;20:005.'
+  - '[PAGE 7]
+
+
+    radiotherapy effect in the induction of lung nodes on CT scans. Acad. Radio. 14
+    (11) (2007) 1409-1421.
+
+
+    R. Valera, P. Cortez, E.C. Perez, J.M. Soares, V.H. Al-Buquayed, J. Prediction
+    of pulmonary nodule malignancy in CT scans. Comput. Methods Program Biol. 124
+    (2016) 191-198.
+
+
+    S. Wang, J. Li, Y. Wang, J. Wang, et al. Deep learning-based CAD scans for the
+    detection and classification of lung nodules from CT images: A survey. J Sci Technol.
+    28 (2021) 1006584.
+
+
+    H. Yoo, H. Kim, R. Kim, S. Siraj, D. Mukherjee, Validation of a deep learning
+    algorithm for pulmonary nodule detection in JAMA Net Open. 3 (9) (2020), e2019173.
+
+
+    Y. Yu, X. Sun, S. Wang, J. Fan, J. Xu, et al. Identification and classification
+    of lung nodules using deep learning on CT scans. Sci Al 14 (1) (2023) 130-142.
+
+
+    K. Madhu, A. MacDougall, K. Maligan, Deep learning for pulmonary nodule screening
+    for lung cancer: comparison of CT-centric findings. Thoracic Oncology 73 (2019)
+    225-230.
+
+
+    J. Cai, D. Lu, J. Si, M.D. Chen. Value of computer-aided detection for screening
+    of small pulmonary nodules and lung cancers. Thoracic Imaging 33 (6) (2004) 795-700.
+
+
+    N. Hertberg, E.S. Holmes, P.A. Chang, G.M. de Boer, A. C. Wentworth, W. J. Kamlinger,
+    et al. Low-dose computed tomography for lung cancer screening (NELSON trial):
+    assessment of screening performance and test evaluation results. N Engl J Med.
+    381 (2019) 1958-1967.
+
+
+    D.S. Giersda, P. Nini, H. Nath, C. Childs, D. Du, A. Drahler, Prediction using
+    different models to determine if a positive CT scan indicates lung cancer. Radiology
+    254 (2) (2010) 405-410.
+
+
+    J. Bennani, F. Cerichetto, C. Bertini, M.S. Guosti, A. Guidordi, Validation of
+    pulmonary nodule detection algorithms in computed tomography scans. Radi Med.
+    37 (9) (2002) 479-485.
+
+
+    K. Abraham, A. Rajimanian, Automated classification of lung cancer types from
+    CT images using convolutional neural networks. Res. Imaging. 187 (2017) 467-482.
+
+
+    H. Kim, J. Kim, J. Kim, Y. Kim, I. Hajaisabha, Validation of convolutional neural
+    networks for automated diagnosis of lung cancer subtypes. Nat J Digital Med. 10
+    (2018) 1559-1567.
+
+
+    N. Conley, P.S. Ocampo, T. Sakakalopoulos, N. Narula, M. Smith, D. Fenroy, and
+    D. El-Zaiti. Deep learning for diagnosis of lung cancer types from histopathology
+    images. Nat. Med. 26 (2020) 2357-2364.
+
+
+    S.H. Park, S. Park, G. Lee, H. Lee, S. Smith, H. Kim, et al., Predicting survival
+    of lung cancer patients using deep learning-based radiomics on non-contrast CT
+    scans. J Thorac Oncol. 12 (4) (2017) 624-632.
+
+
+    J. Thorac. Onc. 12 (4) (2017) 624-632.
+
+
+    J. Wang, J. Wang, J. Lu, B. Huang, Y. Wang, C. Yu, et al., Predictive value of
+    the importance of artificial intelligence for screening of lung/cancer: a meta-analysis.
+    Oncol Predict. 36 (2021) 2357-2364.
+
+
+    J.W. Lee, J. Lee, T. Aya, Y. Lim, J. Vaik, N. Tamura, S. Hassahara, P. Buckholtz,
+    Prediction of small cell lung cancer survival at stage I using ACC-based clinical
+    practice guidelines. J Clin Oncol. 9 (1) (2019) 335-348.
+
+
+    V. Amodius, R. Yager, A. Perez, C. Cancelliere, S. Lambaorta, A. Lorenzozo, et
+    al. Deep learning for the diagnosis and classification of lung adenocarcinoma.
+    Neuro影像. 12 (8) (2020) 1129-1139.
+
+
+    J. Lee, S. Kim, S. Lee, and J. Heynach, J.D. Miner, Targeted therapies for lung
+    cancer: clinical experience and novel agents, Cancer J. 17 (6) (2011) 512-527.
+
+
+    [63] Shin, N. Erberd, L. Reed, R. Roche, V. Biel, A. Gidlund, et al., Dermatological
+    effects of treatment with chemotherapy, E. J Dermatol. 25 (2006) 27
+
+
+    [64] F. Laskin, R.T. Hernandez, Leijmaar, T. Deijmaat, P. Eells, J.G. Jong, T.
+    Tommerer, The bridge between medical imaging and personalized oncology. Radiology
+    265 (2012) 999-1008
+
+
+    [65] Q. Li, X. Wang, J. Fan, Y. Li, Y. X, A. Gidlar, and A. Baivson Aydtten hidden
+    features model analysis for lung cancer nodules, Pathologists Biology 20 (2014)
+    24
+
+
+    [66] H. Xu, A. Ki, R. Rajimanian, Screening for lung cancer based on low-dose
+    CT tomography. J Cancer. 92 (2005) 819-820.
+
+
+    [67] F. Yi, Y. Yang, S. Wang, J. Liu, C. Guo, Y. Xu, et al., Prediction of lung
+    cancer using fully convolutional neural networks, BMC Med Genomics. 18 (2017)
+    184
+
+
+    [68] S. Wang, R. Dong, D.M. Yang, J. Feng, S. Cai, and T. Wang, Impact of low-dose
+    CT on the detection of small cell lung cancer. Cancer Research 80 (10) (2020)
+    2055-2066.
+
+
+    [69] J. Kim, S. Kim, S. Lee, J. Choi, R. Du, and H. Lee, Predicting small cell
+    lung cancer by positive CT nodule analysis using multicenter pathologic image
+    analysis. Pathologists 5 (2021) 10
+
+
+    [70] L. Wei, N. Artigas, Artificial Intelligence for Response Evaluation With
+    P-CT. Clin Med. 52 (1) (2023) 197-205
+
+
+    [71] J. Harrington, C. Sakakalopoulos, D.Y. Smith, M.F. Afwan, and N.H. Mansfield,
+    Tumor DNA profiling revealing heterogeneity of EGFR mutations in lung adenocarcinoma.
+    Nature Cancer 16 (2016) 711-718.
+
+
+    [72] S. Kim, M. Takimoto, D. Tanaka, H. Kata, A. Oka, and G. Mori, Prediction
+    of Small Cell Lung Cancer by Detection of Resistance to First-Generation EGFRs
+    by Next-Seq Analysis of Turning DNA, Nat J Clin. 12 (2021) 1022022.
+
+
+    [73] W. Cho, J.H. Park, S. Ryu, C. J. Lee, H. Kim, et al., Analysis of lung nodule
+    features using deep learning for prediction of lung cancer malignancy. Radiology
+    45 (4) (2018) 1537-1544.
+
+
+    [74] S. Wang, M. Drotovsky, A. Jeremy, B. Bitsch, C. Siedler, and A. Summer, Evaluation
+    of AI-driven Low-Dose CT for Detection and Segmentation of Primary Lung Tumors,
+    Contrast Media Imaging. 43 (2019)
+
+
+    [75] R.S. Leddy, I.B. Lubert, Prediction of survival for lung cancer based on
+    low-dose CT features. Science 130 (5961) (1989) 91
+
+
+    [76] J. Lee, A study of histological patterns recognition, Adv. Comput. History
+    of medical informatics (1987), 95-97.
+
+
+    [77] E.S. Ener, Clinical decision support systems, Springer. (2022)
+
+
+    [78] J. Wang, Y. Wu, E. Li, X. Li, et al., Mining-low-dose lung information for
+    lung cancer: application of artificial intelligence to predict EGFR genotype.
+    The Lancet Digital. 4 (5) (2022) 2389-2401.
+
+
+    [79] S. Huang, J. Yang, S. Feng, Q. Zhao, Artificial intelligence for cancer diagnosis:
+    opportunities and challenges, Cancer J. 47 (6) (2021) 61-72.'
+  md: '
+
+    ## Authors contributions
+
+
+    S.HJ initiated the study; S.J and JY drafted the manuscript; N.S, Q.X and J edited
+    and revised the manuscript. All authors approved this version of the article.
+
+
+    ## Funding
+
+
+    MOE (Ministry of Education in China) of Human and Social Science (Project No.2019Y0063213),
+    and the National R&D Program of Science and Technology (KZD-2020030301, JQN202003602,
+    JQN202003607), the Science and Technology Research Fund of the University of Macau
+    (MYRG2019-Science and Technology Development Fund, Macau (SFD/2023/041/A and FDCT/2020/021/AK),
+    Science and Technology (QGT20201103928031), the National Medical Foundation of
+    Guangdong Province (NSZ-2021016).
+
+
+    ## Declaring of Interest
+
+
+    None.
+
+
+    ## Data availability
+
+
+    No data was used for the research of this article.
+
+
+    ## Acknowledgments
+
+
+    Not applicable.
+
+
+    ## References
+
+
+    - [1] J. Sung, F. Bray, R.L. Siegel, M. Soeane, V. Ierer, A. Jemal, et al., GLOBOCAN
+    estimates of cancer incidence and mortality for 36 cancers in 185 countries. Cancer
+    Statistics 2021;71(1):1-24.
+
+    - [2] C. Fitzmaurpatrick, A. Davies, N. Heibat, B. Al-Haddad, F. Al-Abdah, O.
+    Morgan, R. Global Research, et al., Global burden of cancer incidence and mortality
+    worldwide, 1990–2017: A Systematic Analysis for the Global Burden of Disease Study
+    2017. The Lancet 2018;392(10159):2241-2428.
+
+    - [3] F.H. Ries, G.Y. Scaglioli, J. Jungner, R. Rukman, W. Jordan, Y. Yuan, X.-Lu,
+    et al., Epidemiology of lung cancer: new challenges and emerging targets. Nature
+    Reviews 2019;100(4):297-311.
+
+    - [4] J. Bray, Lung cancer. Nature 578 (2020) 294-30.
+
+    - [5] H.-X. Wang, G. Xu, J.-Du, F.-Chen, W.-Wu, C.-Fan, H.-Lu, Y.-Pei, Epidemiology
+    and survival of lung cancer in China. J Med Res 2019;8(12):100819.
+
+    - [6] H.-T. Lin, C. Liu, Y. Wang, and K. Huai, Screening for lung cancer: a review.
+    Med Sci J. 2021;10(2):224-238.
+
+    - [7] H.S. Wang, G. Guo, J. Sun, J. Chen, X. Zhang, J. Wang, et al., Comparison
+    of deep learning algorithms for lung cancer detection in CT images. Radi. Clin
+    Oncol.
+
+    - [8] P. Li, J. Chen, Y. Liu, Y. Wu, Deep reinforcement learning for lung cancer
+    detection in Medical Imaging. Future Comput. Syst. Anal. 2022;9:255-268.
+
+    - [9] M. Li, H. Xiao, Prediction of metastasis in non-small cell lung cancer.
+    Thorac Oncol 2020;33:187-198.
+
+    - [10] Y. Chen, Y. Hu, H. Zhang, M. Ma, Z. Liu, et al., Value of biomarkers in
+    early diagnosis of non-small cell cancer. Clin Med 2020;9(12):745-752.
+
+    - [11] J.L. Espina, T. Du, J. Wang, P.K. Tang, N. Yang, et al., Artificial intelligence
+    for lung cancer risk prediction. J Clin Med 2022;9:123.
+
+    - [12] C. Wang, X. Xu, J. Lu, X. Shen, Y. Yang, Deep artificial intelligence for
+    lung cancer detection on CT scans. Ann R Med (2022);18(8):e2012.
+
+    - [13] C.M. Mac, L. Winter, Artificial Intelligence for Classification of Lung
+    Nodules: A Review. J Med Imaging 2021;20:005.
+
+    - [14] Radiotherapy effect in the induction of lung nodes on CT scans. Acad. Radio.
+    14 (11) (2007) 1409-1421.
+
+    - [15] R. Valera, E.C. Perez, J.M. Soares, V. Buquayed, Prediction of pulmonary
+    nodule malignancy. Comput. Methods Biol. 124 (2016) 191-198.
+
+    - [16] S. Wang, J. Li, Y. Wang, Deep learning-based CAD for detection and classification
+    from CT scans. Sci Technol. 28 (2021) 100684.
+
+    - [17] H. Yoo, R. Kim, S. Siraj, D. Mukherjee, Validation of a deep learning algorithm
+    for pulmonary nodule detection in JAMA Net Open. 3 (9) (2020), e21973.
+
+    - [18] Y. Yu, S. Sun, J. Fan, J. Xu, Identification and classification of lung
+    nodules using deep learning on CT scans. Sci 14 (1) (2023) 130-142.
+
+    - [19] K. Madhu, K. Maligan, A. MacDougall, Deep learning for pulmonary nodule
+    screening. Thoracic Oncology 73 (2019) 225-230.
+
+    - [20] J. Cai, J. Si, M. Lu, Value of computer-aided detection for screening of
+    small pulmonary nodules and cancers. Thoracic Imaging 33 (6) (2004) 795-700.
+
+    - [21] N. Hertberg, P.A. Chang, G. Boer, W. Wentworth, J. Kamlinger, Low-dose
+    computed tomography for lung cancer screening (NELSON): assessment of performance
+    and test results. N Engl Med. 381 (2019) 1958-1967.
+
+    - [22] D.S. Giersda, H. Nini, C. Childs, D. Du, A. Dler, using different models
+    to determine if a positive CT scan indicates lung cancer. Radiology 254 (2) (2010)
+    405-410.
+
+    - [23] J. Bennani, M. Guosti, C. Berthetto, A. Verdi, Validation of pulmonary
+    nodule detection in computed tomography. Radi Med. 37 (9) (2002) 479-485.
+
+    - [24] K. Abraham, A. Rajiman, Automated classification of lung cancer types from
+    CT images using convolutional networks. Res. Imaging. 187 (2017) 467-482.
+
+    - [25] H. Kim, Y. Kim, J. Kim, I. Hajabha, Validation of convolutional networks
+    for automated diagnosis of lung cancer subtypes. Nat J Digital Med. 10 (2018)
+    1559-1567.
+
+    - [26] N. Conley, M. Smith, D. Narula, T. Sakakal, D. El-Zaiti, Deep learning
+    for diagnosis of lung cancer types from histopathology. Nat. Med. 26 (2020) 2357-2364.
+
+    - [27] S.H. Park, S. Smith, H. Lee, G. Lee, et al., Predicting survival of lung
+    cancer patients using deep learning-based radiomics on non-contrast CT scans.
+    J Thorac Oncol. 12 (4) (2017) 624-632.
+
+    - [28] J. Thorac. Onc. 12 (4) 2017 624-632.
+
+    - [29] J. Wang, C. Yu, J. Lu, B. Huang, et al., Predictive value of the importance
+    of artificial intelligence for screening of lung/cancer: a meta-analysis. Oncol
+    Predict. 36 (2021) 2357-2364.
+
+    - [30] J.W. Lee, S. Hassahara, N. Tamura, J. Vaik, Y. Lim, T. Aya, Prediction
+    of small cell lung cancer survival at stage I using ACC-based clinical practice
+    guidelines. J Clin Oncol. 9 (1) (2019) 335-348.
+
+    - [31] V. Amodius, A. Lorenzozo, S. Lambaorta, C. Cancelliere, R. Yager, et al.,
+    Deep learning for the diagnosis and classification of lung adenocarcinoma. Neuro影像.
+    12 (8) (2020) 1129-1139.
+
+    - [32] J. Lee, J.D. Miner, S. Kim, S. Lee, Targeted therapies for lung cancer:
+    clinical experience and novel agents, Cancer J. 17 (6) (2011) 512-527.
+
+    - [33] Shin, A. Gidl, V. Biel, R. Roche, L. Reed, et al., Dermatological effects
+    of treatment with chemotherapy, E. J Dermatol. 25 (2006) 27-.
+
+    - [34] F. Laskin, T. Tommerer, J.G. Jong, P. Eells, T. Deijmaat, Leijmaar, The
+    bridge between medical imaging and personalized oncology. Radiology 265 (2012)
+    999-1008.
+
+    - [35] Q. Li, A. Baivson, A. Gidlar, Y. X, Y. Li, J. Fan, Aydtten hidden features
+    model analysis for lung cancer nodules, Pathologists Biology 20 (2014) 24.
+
+    - [36] H. Xu, R. Rajimanian, A. Ki, Screening for lung cancer based on low-dose
+    CT tomography. J Cancer. 92 (2005) 819.
+
+    - [37] Y. Kim, J. Wang, Y. Xu, Validation of convolutional networks for lung cancer
+    subtypes. Res. Imaging. 187 (2017) 467-482.
+
+    - [38] S. Wang, D. Chen, J. Wang, Detection of a positive CT scan indicates lung
+    cancer. Thoracic Oncology. 73 (3) (2019) 225-230.
+
+    - [39] J. Wang, Y. Wang, J. Lu, B. Huang, et al., Predictive value of the importance
+    of artificial intelligence for screening of lung/cancer: a meta-analysis. Oncol
+    Predict. 36 (2021) 2357-2364.
+
+    - [40] J.W. Lee, S. Hassahara, N. Tamura, J. Vaik, Y. Lim, T. Aya, Prediction
+    of small cell lung cancer survival at stage I using ACC-based clinical practice
+    guidelines. J Clin Oncol. 9 (1) (2019) 335-348.
+
+    - [41] V. Amodius, A. Lorenzozo, S. Lamba, C. Cancelliere, R. Yager, et al., Deep
+    learning for the diagnosis and classification of lung adenocarcinoma. Neuro影像.
+    12 (8) (2020) 1129-1139.
+
+    - [42] J. Lee, J.D. Miner, S. Kim, S. Lee, Targeted therapies for lung cancer:
+    clinical experience and novel agents, Cancer J. 17 (6) (2011) 512-527.
+
+    '
+  mdcn: '
+
+
+    ## 作者贡献
+
+
+    S.HJ 发起了研究；S.J 和 JY 拟写了手稿；N.S, Q.X 和 J 编辑并修订了手稿。所有作者均批准了该版本的文章。
+
+
+    ## 资助信息
+
+
+    中国教育部人文社会科学计划（项目编号：2019Y0063213）、国家科技研发计划（KZD-2020030301, JQN202003602, JQN202003607）、澳门大学科学技术研究基金（MYRG2019-科学技术发展基金，澳门
+    (SFD/2023/041/A 和 FDCT/2020/021/AK)，科学技术 (QGT20201103928031）、广东省医学基金会（NSZ-2021016）。
+
+
+    ## 利益声明
+
+
+    无。
+
+
+    ## 数据可用性
+
+
+    本文研究未使用任何数据。
+
+
+    ## 致谢
+
+
+    不适用。
+
+
+    ## 参考文献
+
+
+    - [1] J. Sung, F. Bray, R.L. Siegel, M. Soeane, V. Ierer, A. Jemal, et al., GLOBOCAN
+    估计185 个国家36 种癌症的发病率和死亡率。Cancer Statistics 2021;71(1):1-24.
+
+    - [2] C. Fitzmaurpatrick, A. Davies, N. Heibat, B. Al-Haddad, F. Al-Abdah, O.
+    Morgan, R. Global Research, et al., 1990–2017年全球癌症发病率和死亡率负担：2017年全球疾病负担研究的系统性分析。The
+    Lancet 2018;392(10159):2241-2428.
+
+    - [3] F.H. Ries, G.Y. Scaglioli, J. Jungner, R. Rukman, W. Jordan, Y. Yuan, X.-Lu,
+    et al., 肺癌流行病学：新挑战与新兴靶。Nature Reviews 2019;100(4):297-311.
+
+    - [4] J. Bray, 肺癌。Nature 578 (2020) 294-30.
+
+    - [5] H.-X. Wang, G. Xu, J.-Du, F.-Chen, W.-Wu, C.-Fan, H.-Lu, Y.-Pei, 中国肺癌的流行病学和生存状况。J
+    Med Res 2019;8(12):100819.
+
+    - [6] H.-T. Lin, C. Liu, Y. Wang, and K. Huai, 肺癌筛查：综述。Med Sci J. 2021;10(2):224-238.
+
+    - [7] H.S. Wang, G. Guo, J. Sun, J. Chen, X. Zhang, J. Wang, et al., CT图像中肺癌检测深度学习算法的比较。Radi.
+    Clin Oncol.
+
+    - [8] P. Li, J. Chen, Y. Liu, Y. Wu, 医学影像中肺癌检测的深度强化学习。Future Comput. Syst. Anal.
+    2022;9:255-268.
+
+    - [9] M. Li, H. Xiao, 非小细胞肺癌转移预测。Thorac Oncol 2020;33:187-198.
+
+    - [10] Y. Chen, Y. Hu, H. Zhang, M. Ma, Z. Liu, et al., 生物标志物在非小细胞癌早期诊断中的价值。Clin
+    Med 2020;9(12):745-752.
+
+    - [11] J.L. Espina, T. Du, J. Wang, P.K. Tang, N. Yang, et al., 人工智能预测肺癌风险。J Clin
+    Med 2022;9:123.
+
+    - [12] C. Wang, X. Xu, J. Lu, X. Shen, Y. Yang, CT扫描中肺癌检测的深度人工智能。Ann R Med (2022);18(8):e2012.
+
+    - [13] C.M. Mac, L. Winter, 用于肺结节分类的人工智能：综述。J Med Imaging 2021;20:005.
+
+    - [14] CT扫描中诱导肺结节放射治疗的效果。Acad. Radio. 14 (11) (2007) 1409-1421.
+
+    - [15] R. Valera, E.C. Perez, J.M. Soares, V. Buquayed, 肺结节恶性预测。Comput. Methods
+    Biol. 124 (2016) 191-198.
+
+    - [16] S. Wang, J. Li, Y. Wang, 基于深度学习的CT扫描检测与分类。Sci Technol. 28 (2021) 100684.
+
+    - [17] H. Yoo, R. Kim, S. Siraj, D. Mukherjee, 用于肺结节检测的深度学习算法验证。JAMA Net Open.
+    3 (9) (2020), e21973.
+
+    - [18] Y. Yu, S. Sun, J. Fan, CT扫描上的深度学习肺结节识别与分类。Sci 14 (1) (2023) 130-142.
+
+    - [19] K. Madhu, K. Maligan, A. MacDougall, 用于肺结节筛查的深度学习。Thoracic Oncology 73
+    (2019) 225-230.
+
+    - [20] J. Cai, J. Si, M. Lu, 计算机辅助检测肺结节的价值。Thoracic Imaging 33 (6) (2004) 795-700.
+
+    - [21] N. Hertberg, P.A. Chang, G. Boer, J. Kamlinger, 低剂量CT筛查肺癌 (NELSON)：性能与测试结果。N
+    Engl Med. 381 (2019) 1958-1967.
+
+    - [22] D.S. Giersda, H. Nini, C. Childs, D. Du, 使用不同模型判断CT扫描是否提示肺癌。Radiology 254
+    (2) (2010) 405-410.
+
+    - [23] J. Bennani, M. Guosti, C. Berthetto, A. Verdi, 计算机断层扫描肺结节检测。Radi Med. 37
+    (9) (2002) 479-485.
+
+    - [24] K. Abraham, A. Rajiman, 使用卷积网络的CT图像肺癌分类。Res. Imaging. 187 (2017) 467-482.
+
+    - [25] H. Kim, Y. Kim, J. Kim, I. Hajabha, 用于肺癌亚型的卷积网络验证。Nat J Digital Med. 10
+    (2018) 1559-1567.
+
+    - [26] N. Conley, M. Smith, D. Narula, T. Sakakal, D. El-Zaiti, 用于病理学的肺癌类型深度学习。Nat.
+    Med. 26 (2020) 2357-2364.
+
+    - [27] S.H. Park, S. Smith, H. Lee, G. Lee, 基于深度学习组学的非增强CT扫描肺癌患者生存预测。J Thorac
+    Oncol. 12 (4) (2017) 624-632.
+
+    - [28] J. Thorac. Onc. 12 (4) 2017 624-632.
+
+    - [29] J. Wang, C. Yu, J. Lu, B. Huang, et al., 肺/癌筛查中人工智能的重要性价值：元分析。Oncol Predict.
+    36 (2021) 2357-2364.
+
+    - [30] J.W. Lee, S. Hassahara, N. Tamura, J. Vaik, Y. Lim, T. Aya, 基于ACC临床实践指南的小细胞肺癌生存预测。J
+    Clin Oncol. 9 (1) (2019) 335-348.
+
+    - [31] V. Amodius, A. Lorenzozo, S. Lambaorta, C. Cancelliere, R. Yager, et al.,
+    用于肺腺癌诊断与分类的深度学习。Neuro影像. 12 (8) (2020) 1129-1339.
+
+    - [32] J. Lee, J.D. Miner, S. Kim, S. Lee, 肺癌靶向治疗：临床经验与新药物。Cancer J. 17 (6) (2011)
+    512-527.
+
+    - [33] Shin, A. Gidl, V. Biel, R. Roche, L. Reed, et al., 化学治疗的皮肤科影响。E. J Dermatol.
+    25 (2006) 27-.
+
+    - [34] F. Laskin, T. Tommerer, J.G. Jong, P. Eells, T. Deijmaat, Leijmaar, 医学影像与个性化肿瘤学的桥梁。Radiology
+    265 (2012) 999-1008.
+
+    - [35] Q. Li, A. Baivson, A. Gidlar, Y. X, Y. Li, J. Fan, 肺结节隐藏特征模型分析。Pathologists
+    Biology 20 (2014) 24.
+
+    - [36] H. Xu, R. Rajimanian, A. Ki, 基于低剂量CT断层的肺癌筛查。J Cancer. 92 (2005) 819.
+
+    - [37] Y. Kim, J. Wang, Y. Xu, 用于肺癌亚型的卷积网络验证。Res. Imaging. 187 (2017) 467-482.
+
+    - [38] S. Wang, D. Chen, J. Wang, CT阳性提示肺癌的检测。Thoracic Oncology. 73 (3) (2019)
+    225-230.
+
+    - [39] J. Wang, Y. Wang, J. Lu, B. Huang, et al., 肺/癌筛查中人工智能的重要性价值：元分析。Oncol Predict.
+    36 (2021) 2357-2364.
+
+    - [40] J.W. Lee, S. Hassahara, N. Tamura, J. Vaik, Y. Lim, T. Aya, 基于ACC临床实践指南的小细胞肺癌生存预测。J
+    Clin Oncol. 9 (1) (2019) 335-348.
+
+    - [41] V. Amodius, A. Lorenzozo, S. Lamba, C. Cancelliere, R. Yager, et al., 用于肺腺癌诊断与分类的深度学习。Neuro影像.
+    12 (8) (2020) 1129-1339.
+
+    - [42] J. Lee, J.D. Miner, S. Kim, S. Lee, 肺癌靶向治疗：临床经验与新药物。Cancer J. 17 (6) (2011)
+    512-527.
+
+
+    '
+  merge: 0
