@@ -1,0 +1,17 @@
+# 9.4 ADVERSARIAL EXAMPLES
+
+The defense of machine learning models against cyber attacks is a new part of the field of cybersecurity.
+
+Bigio et al. (2018)^43 give a nice review of ten years of research on adversarial machine learning, on which this section is based. Cybersecurity is an arms-race in which attackers and defenders outwit each other time and again.
+
+There are three golden rules in cybersecurity: 1) know your adversary 2) be proactive and 3) protect yourself.
+
+Different applications have different adversaries. People who try to defraud other people via email for money are adversarial agents of users and providers of email services. The providers want to protect their users, so that they can continue using their mail program, the attackers want to get people them money. Knowing your adversaries means knowing their goals. Assuming you do not know that spammers exhaust and the only abuse of the email service is sending paired copies of music, then the defense would be different (e.g. scanning the attachments for copyrighted material instead of analyzing the text for spam indicators).
+
+Being proactive actively testing and identifying weak points of the system. You are proactive when you actively try to decide the model with adversarial examples and defend against them. Using interpretation methods to understand which features are important and how features affect the prediction is also a proactive step in understanding the weaknesses of a machine learning model. The data scientist, do you trust your model in this dangerous world without having looked beyond the predictive power on a rise of dataset? Have you analyzed how the model behaves in different scenarios, identified the most important inputs, checked the predictions for some examples? Have you tried to find adversarial inputs? The interpretability of machine learning models plays a major role in cybersecurity. Being reactive, the opposite of proactive, means waiting until the system has been attacked and only understanding the problem and installing some defensive measures.
+
+How can we protect our machine learning systems against adversarial examples? A proactive approach is the iterative retraining of the classifier with adversarial examples, also called adversarial training. Other approaches are based on game theory, such as learning invariant transformations or robust optimization (regularization). Another proposed method is to use multiple classifiers instead of just one and have them vote the prediction (ensemble), but has no guarantee to work, since they could suffer from similar adversarial examples. Another approach that does not work well is gradient masking, which constructs a model without gradients using a nearest neighbor classifier instead of the original model.
+
+We can distinguish types of attacks by how much an attacker knows the system. The attackers may have perfect knowledge (white box attack), meaning everything about the model the type of model, the parameters and the training data; the attackers may have partial knowledge (gray box attack), meaning they might only know the feature representation and the type of model that was used, but have no access to the training data
+
+> ^43Bigio, Battista, and Fabio Robli. "Wild Patterns: Ten years after the rise of adversarial machine learning." Pattern Recognition 84 (2018): 317-331.

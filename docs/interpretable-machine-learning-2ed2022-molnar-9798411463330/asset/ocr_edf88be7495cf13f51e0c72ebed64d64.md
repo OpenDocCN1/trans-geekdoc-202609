@@ -1,0 +1,17 @@
+# CHAPTER 2 INTERPRETABILITY
+
+the explanation has high fidelity, the explanation also has accuracy. Some explanations offer only local fidelity, the explanation only approximates well to the model prediction for a subset of the data (e.g. local surrogate models) or even for only an individual data instance (e.g. Shapley Values).
+
++   **Consistency**: How much does an explanation differ between models that have been trained on the same task and produce similar predictions? For example, I train a support vector machine and a linear regression model on the same task and both produce very similar predictions. I compute explanations using a method of my choice and analyze how different the explanations are. If the explanations are very similar, the explanations are highly consistent. I find this somewhat tricky, since the two models could use different features, but get similar predictions (also called Rashomon Effect). In this case high consistency is not desirable because the explanations have to be different. High consistency is desirable if the models really rely on similar relationships.
+
++   **Stability**: How are the explanations for similar instances? While consistency compares explanations between models, stability compares explanations between similar instances for a fixed model. High stability means slight variations in the features of an instance do not substantially change the prediction (unless these slight variations also strongly change the prediction). A lack of stability can be the result of a high variance of the explanation method. In other words, the explanation method is strongly affected by slight changes of the features of the instance to be explained. A lack of stability can also be caused by non-deterministic components of the explanation method, such as data sampling step, like the local surrogate method uses. High stability is always desirable.
+
++   **Comprehensibility**: How well do humans understand the explanations? This looks just like one among many, but it is the elephant in the room. Difficult to define, and extremely important to get right. Many people agree that comprehensibility depends on the audience. Ideas for measuring comprehensibility include measuring the size of the explanation (number of features with a non-zero weight in a linear model, number of decision rules, ...) or testing how well people can predict the behavior of the machine learning model from the explanations. The comprehensibility of features used in the explanation should also be considered. A complex transformation of features might be less comprehensible than the original features.
+
++   **Certainty**: Does the explanation reflect the certainty of the machine learning model? Many machine learning models only give predictions without a statement about the models confidence that the prediction is correct. If the model predicts a 4% probability of cancer for one patient, is it as certain as the 4% probability that another patient, with different feature values, received? An explanation that includes the model's certainty is very useful.
+
++   **Degree of Importance**: How well does the explanation reflect the importance of features or parts of the explanation? For example, if a decision rule is generated as an explanation for an individual prediction, is it clear that the conditions of the rule were the most important?
+
++   **Novelty**: Does the explanation reflect whether a data instance is to be explained
+
+> 8https://en.wikipedia.org/wiki/Rashomon_effect

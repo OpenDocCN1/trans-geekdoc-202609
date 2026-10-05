@@ -1,0 +1,9 @@
+Figure 7.18: ALE plot of the 2nd-order effect of pregnancies and age. The interpretation of the plot is a bit inconclusive, showing what seems like overfitting. For example, the plot show an odd model behavior at age of 18-20 and more than 3 pregnancies (up to 5 percentage point increase in cancer probability). There are not many women in the data with this constellation of age and number of pregnancies (actual data are displayed as points), so the model is not severely penalized during the training for making mistakes for those.
+
+Second-order ALE estimates have a varying stability across the feature space, which is not visualized in any way. The reason for this is that each estimation of a local effect in a cell uses a different number of data instances. As a result, all estimates have a different accuracy (but they are still the best estimates). The problem exists in a severe version for main effect ALE plots. The number of instances is the same in all intervals, but in some areas there will be many intervals and the ALE curve will consist of many more estimates. For long intervals, which can make up a big part of the entire curve, there are comparatively fewer instances. This happened in the cervical prediction ALE plot for high age for example.
+
+Second-order effect plots can be a bit annoying to interpret, as you always have to keep the main effects in mind the total effect of the two features, but it is only the additional effect of the interaction. The pure second-order effect is interesting for discovering and exploring interactions, and for interpreting what the effect looks like, I think it makes more sense to integrate the main effects into the plot.
+
+The implementation of ALE plots is much more complex and less intuitive compared
+
+![](bbox=[0.173, 0.093, 0.755, 0.455])
