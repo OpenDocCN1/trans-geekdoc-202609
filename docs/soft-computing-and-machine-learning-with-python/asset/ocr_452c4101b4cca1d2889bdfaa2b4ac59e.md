@@ -1,0 +1,11 @@
+# Polyglot Programming in Applications Used for Genetic Data Analysis 325
+
+mixtures, the CodonHmm application for protein back-translation, the WebOmicsViewer application for storing and analyzing genomes, the PETConn application to create scaffolds using paired-end tags, and the DNAAssembler for assembling DNA using next-generation sequencing data. The source code for these applications is available on the project website. This genetic data analysis software development project was performed in academia and it supports students who have a limited amount of time and who also lack experience in design and programming. I found that agile methodologies [22] worked well in this project because they support the transfer of biological and medical knowledge from the users of the application. They let us avoid the duplication of information and allowed minimal documentation process, as a task could be completed relatively quickly by new users. In particular, the SCRUM (XP) [24] techniques were used, that is, SCRUM roles (product owner, development team, and scrum master), SCRUM iterations (s planning meeting, end meetings), SCRUM task management and prioritizing, XP test-driven development, and XP coding and documentation.
+
+Presented framework is still being developed; the Guncorn [25] Python HTTP Server is this Flanc on Unix platforms and accelerates data transfer between client and server.
+
+Availability and Requirements(i)project homepage: http://biow.sourceforge.net;(ii)operating systems(s): OS Portable:(iii)programming language: C++ and Python and JavaScript:(iv)GNU Library or Lesser General Public License version 3.0 (LGPLv3)(v)getting started: to build a “Hello World” application download the latest version, extract the files from the archive, install additional software as described in README_EN (text file in main bioweb directory), and run scons command in the directory where you placed the bioweb. To start the scons locally run scons f=1.
+
+# ACKNOWLEDGMENTS
+
+This work was supported by the statutory research of Institute of Electronic Systems of Warsaw University of Technology. The author is grateful to the students of the Faculty of Electronics of Electronics and Information Technology of Warsaw University of Technology, who acted as the early users of this software, and to Hanna Markiewicz for the proofreading.

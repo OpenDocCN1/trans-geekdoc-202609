@@ -1,0 +1,13 @@
+# Survey of Machine Learning Algorithms for Disease Diagnostic
+
+# Diabetes Disease
+
+Iyer et al. [11] has performed a work to predict diabetes disease by using decision tree and Naive Bayes. Diseases occur when production of insulin is insufficient or by improper use of insulin. Data used in this work is Pima Indian diabetes data set. Various tests were performed using WEKA data mining tool. In this data-set percentage split (70:30) predict better than cross validation. J48 shows 76.8698% and 76.9565% accuracy by using Cross Validation and Percentage Split Respectively. Naive Bayes presents 79.5622% correctness by using PS. Algorithms shows highest accuracy by utilizing percentage split test.
+
+Meta learning algorithms for diabetes disease diagnosis has been discussed by Sen and Dash [12]. The employed data set is Pima Indians diabetes that is received from UCI Machine learning laboratory. WEKA is used for analysis. CART, Adaboost, Logiboost and grading algorithms are used to predict that has diabetes or not. Experimental results are compared on the benefit of correct or incorrect classification. CART offers 78.646% accuracy. The Adabo obtains 77.864% exactness. Logiboost offers the correctness of 77.479%. Grading has correct classification rate of 66.406%. CART offers highest accuracy of 78.646% and misclassification Rate of 21.354%, which is smaller as other techniques.
+
+An experimental work to predict diabetes disease is done by the Kumari and Chitra [13]. Machine learning technique that is used by the scientist in this experiment is SVM. RBF kernel is used in SVM for the purpose of classification. Pima Indian diabetes set is provided by machine learning laboratory at University of California, Irvine. MATLAB 2010a are used to conduct experiment. SVM offers 78% accuracy.
+
+Sarwar and Sharma [14] have suggested the work on Naive Bayes to predict diabetes Type-2. Diabetes disease has 3 types. First type is Type-1 diabetes, Type-2 diabetes is the second type and third is gestational diabetes. Type-2 diabetes comes from the growth of Insulin resistance. Data set consists of 415 cases and for purpose of variety; data are gathered from dissimilar sectors of society in India. MATLAB with SQL server is used for development of model. 95% correct prediction is achieved by Naive Bayes.
+
+Ephizhab [15] has constructed a model for diabetes diagnosis. Proposed model joins the GA and fuzzy logic. It is used for the selection of best subset of features and also for the enhancement of classification accuracy. For experiment, dataset is picked up from UCI Machine learning laboratory

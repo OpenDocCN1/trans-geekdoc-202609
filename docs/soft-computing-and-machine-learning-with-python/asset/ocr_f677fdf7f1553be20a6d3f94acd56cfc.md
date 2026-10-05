@@ -1,0 +1,7 @@
+# CONCLUSION
+
+The application of machine learning models in the prediction of academic achievement/performance, especially the tree-based models, represents an innovative complement to the traditional techniques such as linear and logistic regression, as well as structural equation modelling (Blanch & Aluja, 2013) . More than the advantages pointed earlier, the tree-based models can help us understand the non-linear interactions between psycho- educational variables in the prediction of academic outcomes. These machine learning models not only only represent an advance in terms of prediction accuracy, but also represent an advance in terms of inference. Future studies could benefit from employing a larger and broader sample, involving students from different schools. It would also be interesting to investigate, in the future, the impact of varying the tuning parameters of the random forest model in the accuracy, sensitivity, specificity and variability of the prediction.
+
+# ACKNOWLEDGEMENTS
+
+Hudson F. Golino, Cristiano Mauro Assis Gomes, Diego Andrade (FAPEMIG) to the authors. The authors also receive grants provided by the Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP) and by the Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) of the Brazil’s Ministry of Science, Technology and Innovation.

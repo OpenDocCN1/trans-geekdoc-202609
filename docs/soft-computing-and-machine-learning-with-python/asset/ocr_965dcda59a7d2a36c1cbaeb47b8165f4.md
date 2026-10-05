@@ -1,0 +1,3 @@
+# SOFT COMPUTING AND MACHINE LEARNING WITH PYTHON
+
+Edited by: Zoran Gacovski
