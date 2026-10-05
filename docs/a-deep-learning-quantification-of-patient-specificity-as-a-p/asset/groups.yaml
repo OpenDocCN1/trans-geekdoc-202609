@@ -1,0 +1,2029 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Journal of Affective Disorders 350 (2024) 485–491
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Journal of Affictive Disorders
+
+
+    journal homepage: www.elsevier.com/locate/jad
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_0_0.png)
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_0_1.png)
+
+
+    Research paper
+
+
+    # A deep learning quantification of patient as a predictor of session attendance
+    and treatment response to internet-enabled cognitive behavioural therapy for common
+    mental disorders
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_0_2.png)
+
+
+    Caitlin Hookrock^{a,b}, Julia Funk^{b}, Roman Cummins^{c}, Shivam D. Patel^{a},
+    Ana Catarino^{d}, Keisuke Takano, Tim Dalgeish^{a}, Michael Ewbank^{d}
+
+
+    +   a Medical Research Council Cognition and Brain Sciences, University of Cambridge,
+    United Kingdom
+
+    b Melbourne Melbourne School of Psychological Sciences, The University of Melbourne,
+    Australia
+
+    c Department of Psychology, Ludwig-Maximilians-Universität München, Germany
+
+    d Lea Digital Health, Cowley Rd, London, United Kingdom
+
+
+    # ABSTRACT
+
+
+    Background: Increasing an individuals ability to focus on concrete, specific detail,
+    thus reducing the tendency toward broad, decontextualized abstractions about the
+    world is a goal. However, empirical investigation of the impact of treatment-specific
+    CBT on outcomes remains. We evaluated whether the specificity of patient dialogue
+    predicted (a) end-treatment symptoms and (b) session completion in patients with
+    common mental health disorders.
+
+
+    Methods: We used a deep learning model to score the specificity of patient dialogue
+    in transcripts from 353,614 recorded CBT-based sessions for common mental health
+    disorders, derived from UK NHS services. We included 65,030 patients (n = 478,
+    female = 241) aged 18-94 years (n = 34,569, SD = 12.35). Descriptive scores were
+    the most common (39.1%) primary finding. Primary outcome was end-treatment response
+    on the Patient Health Questionnaire (PHQ-9). Secondary outcome was number of sessions.
+
+
+    Results: Linear-effects models demonstrated that patient specificity predicted
+    lower post-treatment symptoms on the PHQ-9, although size and direction of the
+    effect were associated with therapeutic activity. Higher specificity was associated
+    with a greater number of sessions.
+
+
+    Limitations: We were unable to infer causation from our design. Conclusions: Effect
+    sizes were small, although specificity was observed across common mental health
+    disorders. Further studies are needed to explore whether encouraging patient specificity
+    during CBT may provide enhancement of treatment attendance and treatment effects.
+
+
+    # 1. Introduction
+
+
+    Cognitive behavioural therapy (CBT) is our leading treatment for common mental
+    health disorders. However, CBT fails to remission for 30-50% of treated individuals
+    (Clark et al., 2018), leaving many with significant symptoms and distress. Increasing
+    the usage of therapy techniques in favor of good outcomes is a matter of vital
+    importance to return function
+
+
+    In both traditional and third-wave CBTs, one can potentially improve mechanistic
+    aspect of change movement from an abstract, generalized style type, to concrete,
+    specific processing (Beck and Haigh, 2014; van der Velden et al., 2015). A variety
+    of treatment components facilitate patient specificity. Mindfulness experiences
+
+
+    > * Corresponding author: Melbourne School of Psychological Sciences, The University
+    of Melbourne, Australia.
+
+    E-mail: Caitlin.Hookrock@unimelb.edu.au (C. Hookrock)
+
+
+    https://doi.org/10.1016/j.jad.2024.01.134
+
+    Received 12 January 2023; Received in form 9 January 2024; Accepted 14 January
+    2024
+
+    Available online 19 January 2024 The Author(s). Published by Elsevier B.V. This
+    is an open access article under the CC License (https://creativecommons.org/licenses/by/4.0).
+
+
+    aim to improve ability to focus on (concrete, sensory) detail and decrease from
+    abstract patterns (worry). Oldandy and Igesan (2020), cognitive restructuring
+    aims to generalize beliefs about the world and specific contexts, environments,
+    and techniques require help to identify specific instances and to focus on concrete-specific
+    details (Craske et al., 2014). It is important to illustrate (e.g., with argument
+    and personal history) that the response function of) claims made on the basis
+    of such events are only applicable within context (when deciding who is going
+    to do the deeds). A focus on the specific is important for the context to be contextualized
+    beliefs of worthiness, jeopardy, failure, and vulnerability which drive common
+    mental health disorders (Beck and Haigh, 2014). To this science-driven interventions
+    have been offered as'
+  - '[PAGE 1]
+
+
+    adjusts to CBT to enhance specific cognition, cognition, regulation (Watkins et
+    al., 2012), overgenerised autobiographical memory (Hallford et al., 2021a), and
+    mental imagery (Powell et al., 2021) as a training modality. Similarly, processed-focused
+    adaptations of CBT have integrated a greater focus on being concrete (Clark et
+    al., 2016). Machine learning techniques have been examined lately as a linear
+    process, partly due to the quantity and structural format of such data.
+
+
+    Machine learning techniques can provide insights into various factors during therapeutic
+    exchanges between therapist and patient, at scale (Chekroud et al., 2021). Recent
+    research has used deep learning models to identify features of treatment (e.g.,
+    topic of discussion, duration of session) and features on outcomes (Ewbank et
+    al., 2020), allowing to identify features of CBT success across large numbers
+    of patients.
+
+
+    The quality of information within therapeutic interactions may determine the degree
+    of patient specificity in post-treatment outcomes. We expected that increased
+    specificity during therapy period would predict better outcomes at least for individuals
+    with severe symptoms, and more concrete processing specificity with CBT, or more
+    specific detail during therapeutic activities (e.g., when designing experiments)
+    may lead to improved solving (Sloan et al., 2021). We also wanted to examine whether
+    specificity is more important in some tasks than others, and specificity within
+    different feature categories (Ewbank et al., 2020), including goal setting. Our
+    aim was to determine whether patient specificity predicted treatment outcome of
+    CBT sessions or not; while CBT tasks require the individual to provide specific
+    information, those who are inclined to specificity may find CBT easier, and complete
+    a greater number of sessions.
+
+
+    We trained a deep learning model to quantify the specificity of patient dialogue
+    within internet-enabled CBT sessions across NHS Improving Access to Psychological
+    Therapies (IAPT) services. Our primary hypothesis was that specificity of patient
+    dialogue would predict recovery, as well as specificity of specific features in
+    patients'' responses would predict better outcome on the Health Questionnaire
+    (PHQ-9; Kroeke et al., 2001). We found that specificity is linked to patient outcome
+    in CBT (Ewbank et al., 2021a), and we also wanted to evaluate the efficacy of
+    IAPT services (Gansbury et al., 2013). Furthermore, there is a well established
+    relationship between specificity and depressive outcomes (Hallford et al., 2021).
+    Our second hypothesis was that greater specificity of patient dialogue would predict
+    a better outcome or greater number of CBT sessions.
+
+
+    # 2. Method
+
+
+    # 2.1. Approvals
+
+
+    Cambridge University Ethics committee granted ethical approval (PR/2017.100).
+    Hypotheses and analyses were prepared-
+
+
+    # 2.2. Participants
+
+
+    Participants (n = 65,030) were receiving treatment from NHS Improving Access to
+    Psychological Therapies (IAPT) services in the UK – a public service which treats
+    common mental health issues.
+
+
+    Individuals self-refer. Inclusion criteria were age < 18 and registration with
+    a general practitioner in the NHS service. Exclusion criteria, determined by a
+    clinician during the intake assessment, were deemed unsuitable for online treatment
+    (e.g., experiencing cognitive impairment, brain injury or dementia); reality;
+    no history of psychosis; low literacy levels indicating poor reading/writing;
+    visual impairment preventing using an electronic device; lack of English; unsuitable
+    for IAPT in need of more intensive support (accuity).
+
+
+    # 2.3. Internet-CBT
+
+
+    CBT was administered via instant messaging in a online therapy room by the British
+    Association for Behaviour and Cognitive Psychotherapies-accredited CBT therapist
+    or NHS Wellbeing Practitioner, from National Institute of Health and Care. The
+    sessions were delivered individually, in real-time, by a trained therapist at
+    scale on behalf of NHS IAPT services by (www.iesapt.org), in accordance with international
+    standards for information. CBT protocols were used, which consisted of a range
+    of tasks, including cognitive restructuring, behavioural experiments, behavioural
+    activities. Sessions were approximately 45-60 minutes in length, and on a weekly
+    basis; free sessions were deployed by both therapist and patient.
+
+
+    # 2.4. Specifying
+
+
+    We analyzed 353,614 internet-enabled CBT sessions completed June 2012 to May 2021.
+    Each therapy transcript text were submitted by the user, and text entries were
+    submitted by the therapist. The therapy transcript was eliciting for linguistic
+    features that could indicate (e.g., “can you tell me of an example/the task’s
+    time you free tell me this happened?”, “how do you know that is true?”). We identified
+    specificity in patient responses during different types of task (Ewbank et al.,
+    2020). Our results were clinically significant (see Fig. 1). It showed that, for
+    example, being specific when completing therapy tasks was more important for outcome
+    than specifying in the sessions. We separated specificity by the tasks elicited
+    during agenda setting, homework setting, goal setting, planning for the future,
+    discussing concerns and worries, completing CBT tasks (included any cognitive
+    or behavioural activities, homework, education), assessing risk of suicide, summarizing
+    the session, or other tasks. Full details on the different tasks are in Ewbank
+    et al. (2020).
+
+
+    Patient responses were classified using a supervised deep learning model, which
+    predicted whether the response was specific. The model trained on a dataset of
+    describing patient experiences (10,000 entries), written by individuals of interest.
+    These entries were then scored as specific or non-specific by a human rater using
+    criteria for the Autobiographical Memory Test (Williams and Benedict, 2008). We
+    used 800 examples to train our model and 1000 to validate model performance using
+    overlapping sets. The remaining 1000 entries were used as the held-out test set.
+    We further validated the model on another separate dataset of out-of-test describing
+    patient experiences (1632 entries) written by individuals'
+  md: '
+
+    # Journal of Affective Disorders 350 (2024) 485–491
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Journal of Affective Disorders
+
+
+    journal homepage: www.elsevier.com/locate/jad
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_0_0.png)
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_0_1.png)
+
+
+    Research paper
+
+
+    # A deep learning quantification of patient as a predictor of session attendance
+    and treatment response to internet-enabled cognitive behavioural therapy for common
+    mental disorders
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_0_2.png)
+
+
+    Caitlin Hookrock^{a,b}, Julia Funk^{b}, Roman Cummins^{c}, Shivam D. Patel^{a},
+    Ana Catarino^{d}, Keisuke Takano, Tim Dalgeish^{a}, Michael Ewbank^{d}
+
+
+    - a Medical Research Council Cognition and Brain Sciences, University of Cambridge,
+    United Kingdom
+
+    - b Melbourne School of Psychological Sciences, The University of Melbourne, Australia
+
+    - c Department of Psychology, Ludwig-Maximilians-Universität München, Germany
+
+    - d Lea Digital Health, Cowley Rd, London, United Kingdom
+
+
+    # ABSTRACT
+
+
+    **Background:** Increasing an individuals'' ability to focus on concrete, specific
+    detail, thus reducing the tendency toward broad, decontextualized abstractions
+    about the world is a goal. However, empirical investigation of the impact of treatment-specific
+    CBT on outcomes remains. We evaluated whether the specificity of patient dialogue
+    predicted (a) end-treatment symptoms and (b) session completion in patients with
+    common mental health disorders.
+
+
+    **Methods:** We used a deep learning model to score the specificity of patient
+    dialogue in transcripts from 353,614 recorded CBT-based sessions for common mental
+    health disorders, derived from UK NHS services. We included 65,030 patients (n
+    = 478, female = 241) aged 18-94 years (n = 34,569, SD = 12.35). Descriptive scores
+    were the most common (39.1%) primary finding. Primary outcome was end-treatment
+    response on the Patient Health Questionnaire (PHQ-9). Secondary outcome was number
+    of sessions.
+
+
+    **Results:** Linear-effects models demonstrated that patient specificity predicted
+    lower post-treatment symptoms on the PHQ-9, although size and direction of the
+    effect were associated with therapeutic activity. Higher specificity was associated
+    with a greater number of sessions.
+
+
+    **Limitations:** We were unable to infer causation from our design. **Conclusions:**
+    Effect sizes were small, although specificity was observed across common mental
+    health disorders. Further studies are needed to explore whether encouraging patient
+    specificity during CBT may provide enhancement of treatment attendance and treatment
+    effects.
+
+
+    # 1. Introduction
+
+
+    Cognitive behavioural therapy (CBT) is our leading treatment for common mental
+    health disorders. However, CBT fails to remission for 30-50% of treated individuals
+    (Clark et al., 2018), leaving many with significant symptoms and distress. Increasing
+    the usage of therapy techniques in favor of good outcomes is a matter of vital
+    importance to return function.
+
+
+    In both traditional and third-wave CBTs, one can potentially improve mechanistic
+    aspect of change movement from an abstract, generalized style type, to concrete,
+    specific processing (Beck and Haigh, 2014; van der Velden et al., 2015). A variety
+    of treatment components facilitate patient specificity. Mindfulness experiences
+    aim to improve ability to focus on (concrete, sensory) detail and decrease from
+    abstract patterns (worry). Oldandy and Igesan (2020), cognitive restructuring
+    aims to generalize beliefs about the world and specific contexts, environments,
+    and techniques require help to identify specific instances and to focus on concrete-specific
+    details (Craske et al., 2014). It is important to illustrate (e.g., with argument
+    and personal history) that the response function of) claims made on the basis
+    of such events are only applicable within context (when deciding who is going
+    to do the deeds). A focus on the specific is important for the context to be contextualized
+    beliefs of worthiness, jeopardy, failure, and vulnerability which drive common
+    mental health disorders (Beck and Haigh, 2014). To this science-driven interventions
+    have been offered as adjusts to CBT to enhance specific cognition, cognition,
+    regulation (Watkins et al., 2012), overgenerised autobiographical memory (Hallford
+    et al., 2021a), and mental imagery (Powell et al., 2021) as a training modality.
+    Similarly, processed-focused adaptations of CBT have integrated a greater focus
+    on being concrete (Clark et al., 2016). Machine learning techniques have been
+    examined lately as a linear process, partly due to the quantity and structural
+    format of such data.
+
+
+    Machine learning techniques can provide insights into various factors during therapeutic
+    exchanges between therapist and patient, at scale (Chekroud et al., 2021). Recent
+    research has used deep learning models to identify features of treatment (e.g.,
+    topic of discussion, duration of session) and features on outcomes (Ewbank et
+    al., 2020), allowing to identify features of CBT success across large numbers
+    of patients.
+
+
+    The quality of information within therapeutic interactions may determine the degree
+    of patient specificity in post-treatment outcomes. We expected that increased
+    specificity during therapy period would predict better outcomes at least for individuals
+    with severe symptoms, and more concrete processing specificity with CBT, or more
+    specific detail during therapeutic activities (e.g., when designing experiments)
+    may lead to improved solving (Sloan et al., 2021). We also wanted to examine whether
+    specificity is more important in some tasks than others, and specificity within
+    different feature categories (Ewbank et al., 2020), including goal setting. Our
+    aim was to determine whether patient specificity predicted treatment outcome of
+    CBT sessions or not; while CBT tasks require the individual to provide specific
+    information, those who are inclined to specificity may find CBT easier, and complete
+    a greater number of sessions.
+
+
+    We trained a deep learning model to quantify the specificity of patient dialogue
+    within internet-enabled CBT. Our primary hypothesis was that specificity of patient
+    dialogue would predict recovery, as well as specificity of patients would predict
+    better outcomes (PHQ-9). We found that specificity is linked to (Ewbank et al.,
+    2021) were deployed by both therapist and patient. We also wanted to evaluate
+    specificity in internet-enabled sessions (Hallford et al., 2021). Our second hypothesis
+    was that specificity of patient would predict greater number of sessions.
+
+
+    # 2. Method
+
+
+    ### 2.1. Approvals
+
+    Cambridge University Ethics committee granted ethical approval (2017).
+
+
+    ### 2.2. Participants
+
+    Participants (n = 65,030) were receiving treatment from NHS Access to Therapies.
+    Inclusion criteria were age < 18 and registration with a general practitioner;
+    Exclusion criteria were experiencing cognitive impairment, brain injury or dementia;
+    history of psychosis; low literacy levels; visual impairment preventing using
+    device.
+
+
+    ### 2.3. Internet-CBT
+
+    CBT was administered via instant messaging in online room by trained therapist
+    (www.iesapt.org). Sessions were approximately 45-60 minutes in length, and on
+    a weekly basis.
+
+
+    ### 2.4. Specifying
+
+    We analyzed 353,614 internet-enabled CBT sessions completed June 2012 to May 2021.
+    Each therapy transcript were submitted by the user, and text entries were submitted
+    by the therapist. The therapy transcript was elicited for linguistic features
+    that could indicate (e.g., “can you tell me of an example/the task’s time you
+    tell me this happened?”, “how do you know that is true?”). We identified specificity
+    in patient responses during different types of task (Ewbank et al., 2020). Our
+    results were clinically significant (see Fig. 1). It showed that, for example,
+    being specific when completing therapy tasks was more important for outcome than
+    specifying in the sessions. We separated specificity by the tasks elicited during
+    agenda setting, homework setting, goal setting, planning for the future, discussing
+    concerns and worries, completing CBT tasks (included any cognitive or behavioural
+    activities, homework, education), assessing risk of suicide, summarizing the session,
+    or other tasks. Full details on the different tasks are in Ewbank et al. (2020).
+
+
+    Patient responses were classified using a supervised deep learning model, which
+    predicted whether the response was specific. The model trained on a dataset of
+    describing patient experiences (10,000 entries), written by individuals of interest.
+    These entries were then scored as specific or non-specific by a human rater using
+    criteria for the Autobiographical Memory Test (Williams and Benedict, 2008). We
+    used 800 examples to train our model and 1000 to validate model performance using
+    overlapping sets. The remaining 1000 entries were used as the held-out test set.
+    We further validated the model on another separate dataset of out-of-test describing
+    patient experiences (1632 entries) written by individuals.
+
+    '
+  mdcn: '
+
+
+    # 情感障碍杂志 350 (2024) 485–491
+
+
+    ScienceDirect 提供目录列表
+
+
+    # 情感障碍杂志
+
+
+    期刊首页：www.elsevier.com/locate/jad
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_0_0.png)
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_0_1.png)
+
+
+    研究论文
+
+
+    # 深度学习量化分析患者特异性作为预测常见心理障碍网络支持认知行为疗法出勤率和治疗反应的因子
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_0_2.png)
+
+
+    Caitlin Hookrock^{a,b}, Julia Funk^{b}, Roman Cummins^{c}, Shivam D. Patel^{a},
+    Ana Catarino^{d}, Keisuke Takano, Tim Dalgeish^{a}, Michael Ewbank^{d}
+
+
+    - a 英国剑桥大学，医学研究委员会认知与脑科学
+
+    - b 澳大利亚墨尔本大学，心理科学学院
+
+    - c 德国慕尼黑路西米利安大学，心理学系
+
+    - d 英国伦敦，Cowley Rd，Lea Digital Health
+
+
+    # 摘要
+
+
+    **背景：** 提高个体关注具体、特定细节的能力，从而减少对世界产生泛泛、去背景化抽象的倾向，是一个目标。然而，关于特定认知行为疗法（CBT）对结果影响的实研究仍然不足。我们评估了患者对话的特异性是否能预测（a）常见心理障碍患者的治疗结束后症状和（b）疗程完成情况。
+
+
+    **方法：** 我们使用深度学习模型，对来自英国国家医疗服务体系（NHS）的353,614 份常见心理障碍 CBT 治疗记录转录中的患者对话特异性进行评分。我们纳入了
+    65,030 名年龄在 18-94 岁之间（n = 34,569, SD = 12.35）的患者（n = 478, 女性 = 241）。描述性分值是最常见的初步发现（39.1%）。主要结局指标是患者健康问卷（PHQ-9）的治疗结束后反应。次要结局指标是治疗次数。
+
+
+    **结果：** 线性效应模型显示，患者的特异性可以预测 PHQ-9 治疗后症状的减轻，尽管效应的大小和方向与治疗活动有关。较高的特异性与更多的治疗次数相关。
+
+
+    **局限性：** 我们无法根据研究设计推断出因果关系。**结论：** 效应量较小，但在各种常见心理障碍中观察到了特异性。需要进一步的研究探索在 CBT 期间鼓励患者特异性是否可以增强治疗出勤率和治疗效果。
+
+
+    # 1. 引言
+
+
+    认知行为疗法（CBT）是我们治疗常见心理障碍的主要方法。然而，CBT 对 30-50% 的受治疗个体未能实现缓解（Clark 等人，2018），导致许多人仍伴有严重症状和困扰。增加治疗技术的使用以获得良好结果，对于恢复功能至关重要。
+
+
+    在传统 CBT 和第三波 CBT 中，人们可以潜在地改善变化的机制方面，即从抽象、泛化的风格转向具体、特定的处理（Beck and Haigh, 2014;
+    van der Velden 等人，2015）。多种治疗成分促进了患者特异性。正念体验旨在提高关注（具体、感官）细节的能力，并减少抽象模式（忧虑）。Oldandy
+    和 Igesan（2020）认知重构旨在泛化对世界以及特定背景、环境和技术的信念，这需要帮助来识别特定实例并关注具体的特定细节（Craske 等人，2014）。说明（例如通过论证和个人史）很重要，即基于此类事件所做主张的反应函数仅在特定背景内适用（在决定谁来执行任务时）。关注特定性对于使背景背景化——即驱动常见心理障碍的关于价值感、危险、失败和脆弱性的信念——至关重要（Beck
+    and Haigh, 2014）。针对这些科学驱动的干预措施已作为 CBT 的调整方案被提出，以增强特定认知、认知调控（Watkins 等人，2012）、过度泛化的自传记忆（Hallford
+    等人，2021a）以及心理想象（Powell 等人，2021）作为一种训练模式。同样，以处理为重点的 CBT 调整整合了更多对具体的关注（Clark 等人，2016）。机器学习技术最近作为一种线性过程受到了审查，部分原因是由于此类数据的数量和结构格式。
+
+
+    机器学习技术可以大规模地为治疗师与患者之间交流期间的各种因素提供见解（Chekroud 等人，2021）。最近的研究使用深度学习模型来识别治疗特征（例如讨论主题、疗程时长）和结果特征（Ewbank
+    等人，2020），允许识别大量患者中 CBT 成功的特征。
+
+
+    治疗互动中的信息质量可能决定治疗后结果中患者特异性的程度。我们预计，治疗期间特异性的增加将预测出更好的结果，至少对于症状严重的个体是如此；而且 CBT 中更具体的处理特异性，或治疗活动期间更具体的细节（例如在设计实验时）可能会导致问题的解决（Sloan
+    等人，2021）。我们还想检查特异性在某些任务中是否比其他任务更重要，以及不同特征类别（Ewbank 等人，2020）包括目标设定内的特异性。我们的目标是确定患者特异性是否预测
+    CBT 治疗疗程的结果；虽然 CBT 任务要求个体提供特定信息，但倾向于特异性的人可能会发现 CBT 更容易，并完成更多的疗程。
+
+
+    我们训练了一个深度学习模型，来量化网络支持 CBT 中患者对话的特异性。我们的主要假设是患者对话的特异性将预测康复情况，患者的特异性将预测更好的结果（PHQ-9）。我们发现特异性与了（Ewbank
+    等人，2021）治疗师和患者的部署。我们的第二个假设是患者的特异性将预测更多的治疗次数。
+
+
+    # 2. 方法
+
+
+    ### 2.1 批准
+
+    剑桥大学伦理委员会授予了伦理批准（2017）。
+
+
+    ### 2.2 参与者
+
+    患者（n = 65,030）接受 NHS 的治疗。入组标准为年龄小于 18 岁且在全科医生处；排除标准为认知障碍、脑损伤或痴呆；有精神病史；识字水平低；阻碍使用设备的视力障碍。
+
+
+    ### 2.3 网络 CBT
+
+    CBT 由经过培训的治疗师通过在线房间的即时消息进行（www.iesapt.org）。每次 45-60 分钟，每周一次。
+
+
+    ### 2.4 特异性
+
+    我们分析了 2012 年 6 月至 2021 年 5 月完成的 353,614 次网络支持 CBT 疗程。每份治疗转录由用户提交，文本输入由治疗师提交。从治疗转录中提取了可以指示的语言特征（例如，“你能告诉我一个例子/任务发生这种情况吗？”、“你怎么知道那是真的？”）。我们识别了患者在不同类型任务期间反应的特异性（Ewbank
+    等人，2020）。我们的结果具有临床意义（见图 1）。结果显示，例如在完成治疗任务时保持具体比在疗程中特异化对结果更重要。我们根据日程设定、作业设定、目标设定、未来计划、讨论担忧和虑、完成
+    CBT 任务（包括任何认知或行为活动、作业、教育）、评估自杀风险、总结疗程或其他任务期间提取的特异性进行了分类。不同任务的完整细节请见 Ewbank 等人
+    (2020)。
+
+
+    患者反应使用监督深度学习模型进行分类，该模型预测反应是否为具体。模型训练于一个描述患者体验的数据集（10,000 条目），由感兴趣的个体编写。这些条目随后由人类评分员根据自传记忆测试的标准（Williams
+    and Benedict, 2008）评定为具体或非具体。我们使用 800 个示例训练模型，并使用重叠集合中的 1000 个示例验证模型性能。剩余的 1000
+    条目用作留测试集。我们还在另一个独立的测试外描述患者体验数据集（1632 条目，由个体编写）上进一步验证了模型。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # Examples of therapist dialogue for different categories
+
+
+    # Features of therapist dialogue rated to increased specificity
+
+
+    | Explicit request
+
+    | Can you think of a time when you succeeded at something? |
+
+    | Open-ended request
+
+    | Can you tell me more? |
+
+    | Core task
+
+    | How might you go about testing that belief? |
+
+    | Perception of change
+
+    | What do you think helped during our work together? |
+
+    | Risk assessment
+
+    | Have you had thoughts of suicide? |
+
+    | Setting the agenda
+
+    | What would be most useful for us in today''s session? |
+
+
+    | Use of adjectives, verbs and nouns, e.g.,n| Names of others involved
+
+    | Location
+
+    | Time of day or year
+
+    | Named emotion
+
+    | Sensory detail
+
+    | Personal actions
+
+    | Actions of others
+
+    | Emotional reactions of others |
+
+    | Guess on Monday I could invite a colleague to see coffee and if they accept
+    |
+
+    | A few weeks ago, I needed to tell Blake when I felt ignored, so that I don''t
+    overreact. That''s been helping |
+
+    | Yes, they were overwhelming last night. I don''t know! I can keep going |
+
+    | I liked your idea about planning an experiment. Can we also talk about work?
+    |
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_2_0.png)
+
+
+    with depressed disorders and again scored for specificity by humans. Full details
+    on model training are presented in Supplementary Materials. Mean (of feature specificity/number
+    of sessions) was calculated for each participant, for each task.
+
+
+    # 2.5. Sympt measures
+
+
+    The Patient Questionnaire (PHQ-9; Kroeke et al., 2001) is a valid and reliable
+    index of depression, and was used as our primary outcome measure. The PHQ-9 is
+    administered at each CBT session, as well as the Generalized Anxiety Disorder-7-item
+    scale (GAD; Spitzer et al., 2006), which we pre-registered as a secondary outcome.
+    We also intended to examine Work and Social Anxiety (Witzman et al., 2008), but
+    were unable to obtain this data. As we used real-service data, our conceptualisation
+    of clinical outcomes was limited by the available date.
+
+
+    # 2.6. Data analysis
+
+
+    | Primary diagnosis | Prevalence | Psychometric medication use | Prevalence
+
+    | Depressive disorder | 39.1% | Not recorded | 1.6%
+
+    | Generalized anxiety | 23.7% | Not prescribed | 50.8%
+
+    | Social anxiety | 7.2% | Prescribed but taking it | 8.3%
+
+    | Unspecified anxiety | 4.9% | Taking medication | 39.2%
+
+    | Objective conflict | 4.2% | | |
+
+    | Panic disorder | 3.8% | | |
+
+    | Posttraumatic stress | 3.7% | | |
+
+    | Hypochondriacal disorder | 3.0% | | |
+
+    | Mixed depression and anxiety | 2.7% | | |
+
+    | Specific phobia | 1.5% | | |
+
+    | Agoraphobia | 0.9% | | |
+
+    | Eating disorder | 0.6% | | |
+
+    | Relationship difficulties | 0.5% | | |
+
+    | Anger and irritability | 0.4% | | |
+
+    | Somatic disorder | 0.2% | | |
+
+    | Chronic pain | 0.2% | | |
+
+    | Alcohol use | 0.1% | | |
+
+    | Sexual dysfunction | 0.1% | | |
+
+    | Complained trait | 0.1% | | |
+
+    | Mental disorder not otherwise specified | 0.9% | | |
+
+    | Not received | 0.3% | | |
+
+
+    As post-treated results were analyzed using linear mixed effects models in the
+    R environment, employing approximation and restricted maximum likelihood estimation.
+    Observed PHQ-9 scores were used as end-of-treatment outcome measure. Rank of effect
+    was tested with randomized treatment site. For all models, variance factors were
+    <13. Each model included total number of sessions per participant across all sessions
+    (to account for length), PHQ-9 and GAD-7 scores at the beginning of therapy (to
+    control for baseline identification variables, age-referral, gender identity)
+    were included as covariates in primary and primary analysis (see Table 1). In
+    addition to specificity over the course of treatment, we
+
+
+    patients may be asked to report specificity prior to beginning CBT. Results did
+    not show that we report specificity over the course of treatment for including
+    the mean numbers of direct requests for specific information'
+  - '[PAGE 3]
+
+
+    H. Hitchcock
+
+
+    Journal of Affective Disorders 350 (2020) 485–493
+
+
+    and of open-ended requests for information.
+
+
+    patient dialogue with CBT, and how specificity related to session and answer response
+    manifested. Results showed that greater specificity was also associated with better
+    treatment response. Results showed post-treatment depressive symptoms were associated
+    with greater specificity in structuring, giving evidence, setting the agenda,
+    reviewing, and discussing changes so observed. Furthermore, greater specificity
+    across tasks was also associated with a greater number of sessions.
+
+
+    # 3. Results
+
+
+    # 3.1. Sample and characteristics
+
+
+    Data were gathered from 65,003 participants (n = 47,308 male, n = 241 excluded)
+    from 78 IAPT sites across the UK. Participants completed an average of 5.64 (SD
+    = 3.57; range: 1–99) sessions. Primary specificity was common across tasks (Table
+    1). Mean age of participants was 34.69 years (SD = 12.35, 18–94 years). Mean pre-treatment
+    PHQ-9 scores (M = 13.15, SD = 5.90) were in the ‘moderately severe’ range (Roekeeke
+    et al., 2001).
+
+
+    There are two keys that must be considered. First, this is observational data
+    and cannot be inferred. Our goal was to identify factors of successful CBT, to
+    guide future therapy development. Therapy specificity (associated with improvement)
+    could be influenced by other factors (e.g., quality of CBT). Similarly, the use
+    of change treatment services that were introduced could influence treatment specificity.
+    Various therapeutic components, such as behavioural activation, planned number
+    of sessions linked to randomised allocation and the impact of specificity on observed
+    effects were seen. However, small effects were not fully demystified (Duner and
+    Ozkins, 2013). The typical effect size of CBT (versus placebo) on depressive symptoms
+    was not reported.
+
+
+    # 3.2. Treatment outcome
+
+
+    Our hypothesis was that specificity of responses would predict end-treatment PHQ-9
+    scores. The inclusion for the correlation (off = 0.02) was small. Results for
+    all predictors were different across tasks (Table 2). Model specificity was significantly
+    predicted by the specificity of patients when discussing deconstructing tasks,
+    setting the agenda, reviewing, homework, and risk of suicide, with small effect
+    sizes (see Fig. 2). To contrary, specificity during risk checking was also associated
+    with higher PHQ-9 scores. Sensitivity analysis with only those with a depressive
+    presentation (n = 25,440) yielded results (see Supplementary Materials).
+
+
+    # 3.3. Session attendance
+
+
+    Our secondary hypothesis was that patient weekly would predict the number of CBT
+    sessions completed. We included the primary analysis (ICC = 0.10). However, number
+    of completed sessions was not significantly predicted by tasks other than summarizing
+    the session (Table 3). A greater number of CBT sessions was associated with higher
+    specificity when discussing deconstructing tasks, completing tasks, planning for
+    the future, coping strategies. When asking and risk of suicide was a goal a greater
+    number of completed sessions. An additional analytics predicting attendance at
+    ≥ 2 sessions whether a user-specific (‘engaged in’) engagement was also showed
+    that completed sessions may be associated with other factors (e.g., symptom severity),
+    which yielded similar results (see Supplementary Materials).
+
+
+    With the agreement guiding CBT metric (Beck and Haigh, 2014), results show support
+    for evidence of specificity during dialogue. However, fewer completed sessions
+    were observed when patient specificity was high when reflecting and working on
+    what they learn of (e.g., what strategy/new knowledge in planning for life), patients.
+    Patients demonstrated a focus on constructing CBT tasks which might challenge
+    depressive beliefs, or lies. We saw fewer requests from patients when discussing
+    sessions and agenda, and more frequent requests for specificity of what they want
+    (an example). These findings are also consistent with anxious that
+
+
+    # 4. Discussion
+
+
+    This studied machine learning to identify the specificity of
+
+
+    In light of the difference between the across specificity variables, a sensitivity
+    check examined correlations between end of treatment PHQ-9 score and the first
+    specificity variables, which might indicate whether the direction of the individual
+    effects was only due to the multiple analysis. Pearson correlations were in the
+    same direction as the estimates from the mixed models. It is also noting that
+    the possible association between pre-treatment and PHQ-9 score is likely influenced
+    by the common practice of allocating a greater number of sessions to those with
+    more severe pre-treatment symptoms.
+
+
+    However, not observed effects were expected in the direction. Interestingly, the
+    largest (still small) effect size on treatment
+
+
+    488'
+  md: '
+
+    # Examples of therapist dialogue for different categories
+
+
+    # Features of therapist dialogue rated to increased specificity
+
+
+    | Explicit request | |
+
+    | :--- | :--- |
+
+    | Can you think of a time when you succeeded at something? |
+
+    | Open-ended request | Can you tell me more? |
+
+    | Core task | How might you go about testing that belief? |
+
+    | Perception of change | What do you think helped during our work together? |
+
+    | Risk assessment | Have you had thoughts of suicide? |
+
+    | Setting the agenda | What would be most useful for us in today''s session? |
+
+
+    | Use of adjectives, verbs and nouns, e.g., | Names of others involved |
+
+    | :--- | :--- |
+
+    | Location | |
+
+    | Time of day or year | |
+
+    | Named emotion | |
+
+    | Sensory detail | |
+
+    | Personal actions | |
+
+    | Actions of others | |
+
+    | Emotional reactions of others | |
+
+    | Guess on Monday I could invite a colleague to see coffee and if they accept
+    | |
+
+    | A few weeks ago, I needed to tell Blake when I felt ignored, so that I don''t
+    overreact. That''s been helping |
+
+    | Yes, they were overwhelming last night. I don''t know! I can keep going | |
+
+    | I liked your idea about planning an experiment. Can we also talk about work?
+    | |
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_2_0.png)
+
+
+    with depressed disorders and again scored for specificity by humans. Full details
+    on model training are presented in Supplementary Materials. Mean (of feature specificity/number
+    of sessions) was calculated for each participant, for each task.
+
+
+    # 2.5. Sympt measures
+
+
+    The Patient Questionnaire (PHQ-9; Kroeke et al., 2001) is a valid and reliable
+    index of depression, and was used as our primary outcome measure. The PHQ-9 is
+    administered at each CBT session, as well as the Generalized Anxiety Disorder-7-item
+    scale (GAD; Spitzer et al., 2006), which we pre-registered as a secondary outcome.
+    We also intended to examine Work and Social Anxiety (Witzman et al., 2008), but
+    were unable to obtain this data. As we used real-service data, our conceptualisation
+    of clinical outcomes was limited by the available date.
+
+
+    # 2.6. Data analysis
+
+
+    | Primary diagnosis | Prevalence | Psychometric medication use | Prevalence |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Depressive disorder | 39.1% | Not recorded | 1.6% |
+
+    | Generalized anxiety | 23.7% | Not prescribed | 50.8% |
+
+    | Social anxiety | 7.2% | Prescribed but taking it | 8.3% |
+
+    | Unspecified anxiety | 4.9% | Taking medication | 39.2% |
+
+    | Objective conflict | 4.2% | | |
+
+    | Panic disorder | 3.8% | | |
+
+    | Post-traumatic stress | 3.7% | | |
+
+    | Hypochondriacal disorder | 3.0% | | | |
+
+    | Mixed depression and anxiety | 2.7% | | | |
+
+    | Specific phobia | 1.5% | | | |
+
+    | Agoraphobia | 0.9% | | | |
+
+    | Eating disorder | 0.6% | | | |
+
+    | Relationship difficulties | 0.5% | | | |
+
+    | Anger and irritability | 0.4% | | | |
+
+    | Somatic disorder | 0.2% | | | |
+
+    | Chronic pain | 0.2% | | | |
+
+    | Alcohol use | 0.1% | | | |
+
+    | Sexual dysfunction | 0.1% | | | |
+
+    | Complained trait | 0.1% | | | |
+
+    | Mental disorder not otherwise specified | 0.9% | | | |
+
+    | Not received | 0.3% | | | |
+
+
+    As post-treated results were analyzed using linear mixed effects models in the
+    R environment, employing approximation and restricted maximum likelihood estimation.
+    Observed PHQ-9 scores were used as end-of-treatment outcome measure. Rank of effect
+    was tested with randomized treatment site. For all models, variance factors were
+    < 13. Each model included total number of sessions per participant across all
+    sessions (to account for length), the PHQ-9 and GAD-7 scores at the beginning
+    of therapy (to control for baseline identification variables, age-referral, gender
+    identity) were included as covariates in primary and primary analysis (see Table
+    1). In addition to specificity over the course of treatment, patients may be asked
+    to report specificity prior to beginning CBT. Results did not show that we report
+    specificity over the course of treatment for including the mean numbers of direct
+    requests for specific information
+
+
+    H. Hitchcock
+
+    Journal of Affective Disorders 350 (2020) 485–493
+
+
+    and patient dialogue with CBT, and how specificity related to session and answer
+    response manifested. Results showed that greater specificity was also associated
+    with better treatment response. Results showed post-treatment depressive symptoms
+    were associated with greater specificity in structuring, giving evidence, setting
+    the agenda, reviewing, and discussing changes observed. Furthermore, greater specificity
+    across tasks was also associated with a greater number of sessions.
+
+
+    # 3. Results
+
+
+    # 3.1. Sample and characteristics
+
+
+    Data were gathered from 65,003 participants (n = 47,308 male, n = 241 excluded)
+    from 78 IAPT sites across the UK. Participants completed an average of 5.64 (SD
+    = 3.57; range: 1–99) sessions. Primary specificity was common across tasks (Table
+    1). Mean age of participants was 34.69 years (SD = 12.35, 18–94 years). Mean pre-treatment
+    PHQ-9 scores (M = 13.15, SD = 5.90) were in the ‘moderately severe’ range (Kroeke
+    et al., 2001).
+
+
+    There are two keys that must be considered. First, this is observational data
+    and cannot be inferred. Our goal was to identify factors of successful CBT, to
+    guide future therapy development. Therapy specificity (associated with improvement)
+    could be influenced by other factors (e.g., quality of CBT). Similarly, the use
+    of change treatment services that were introduced could influence treatment specificity.
+    Various therapeutic components, such as behavioural activation, planned number
+    of sessions linked to randomised allocation and the impact of specificity on observed
+    effects were seen. However, small effects were not fully demystified (Duner and
+    Ozkins, 2013). The typical effect size of CBT (versus placebo) on depressive symptoms
+    was not reported.
+
+
+    # 3.2. Treatment outcome
+
+
+    Our hypothesis was that specificity of responses would predict end-treatment PHQ-9
+    scores. The inclusion for the correlation (rho = 0.02) was small. Results for
+    all predictors were different across tasks (Table 2). Model specificity was significantly
+    predicted by the specificity of patients when discussing deconstructing tasks,
+    setting the agenda, reviewing, homework, and risk of suicide, with small effect
+    sizes (see Fig. 2). To the contrary, specificity during risk checking was also
+    associated with higher PHQ-9 scores. Sensitivity analysis with only those with
+    a depressive presentation (n = 25,440) yielded results (see Supplementary Materials).
+
+
+    # 3.3. Session attendance
+
+
+    Our secondary hypothesis was that patient weekly would predict the number of CBT
+    sessions completed. We included the primary analysis (ICC = 0.10). However, number
+    of completed sessions was not significantly predicted by tasks other than summarizing
+    the session (Table 3). A greater number of CBT sessions was associated with higher
+    specificity when discussing deconstructing tasks, completing tasks, planning for
+    the future, and coping strategies. When asking and risk of suicide was a goal,
+    a greater number of completed sessions were observed. An additional analytics
+    predicting attendance at ≥ 2 sessions whether a user-specific (‘engaged in’) engagement
+    was also showed that completed sessions may be associated with other factors (e.g.,
+    symptom severity), which yielded similar results (see Supplementary Materials).
+
+
+    With the agreement guiding CBT metric (Beck and Haigh, 2014), results show support
+    for evidence of specificity during dialogue. However, fewer completed sessions
+    were observed when patient specificity was high when reflecting and working on
+    what they learn (e.g., what strategy/new knowledge in planning for life), patients.
+    Patients demonstrated a focus on constructing CBT tasks which might challenge
+    depressive beliefs or lies. We saw fewer requests from patients when discussing
+    sessions and agenda, and more frequent requests for specificity of what they want
+    (an example). These findings are also consistent with anxious that
+
+
+    # 4. Discussion
+
+
+    This studied machine learning to identify the specificity of
+
+
+    In light of the difference between the across specificity variables, a sensitivity
+    check examined correlations between end of treatment PHQ-9 score and the first
+    specificity variables, which might indicate whether the direction of the individual
+    effects was only due to the multiple analysis. Pearson correlations were in the
+    same direction as the estimates from the mixed models. It is also noting that
+    the possible association between pre-treatment and PHQ-9 score is likely influenced
+    by the common practice of allocating a greater number of sessions to those with
+    more severe pre-treatment symptoms.
+
+
+    However, not observed effects were expected in the direction. Interestingly, the
+    largest (still small) effect size on treatment
+
+
+    488
+
+    '
+  mdcn: '
+
+
+    # 不同类别的治疗师对话示例
+
+
+    # 针对增加性评分的治疗师对话特征
+
+
+    | 显性请求 | |
+
+    | :--- | :--- |
+
+    | 你能想一想你成功的经历吗？ | |
+
+    | 开放式请求 | 你能多告诉我一些吗？ |
+
+    | 核心任务 | 你会如何测试那个信念？ |
+
+    | 变化的感知 | 你认为在我们共同工作期间什么起到了帮助？ |
+
+    | 风险评估 | 你是否有自杀念头？ |
+
+    | 设定议程 | 对我们今天的治疗来说，什么最有用？ |
+
+
+    | 形容词、动词和名词的使用，例如： | 其他涉及的人员 |
+
+    | :--- | :--- |
+
+    | 地点 | |
+
+    | 一天或一年中的时间 | |
+
+    | 命名情绪 | |
+
+    | 感官细节 | |
+
+    | 个人行为 | |
+
+    | 人的行为 | |
+
+    | 人的情绪反应 | |
+
+    | 我想周一可以邀请同事一起来看咖啡，如果他们接受的话 | |
+
+    | 几周前，我需要告诉 Blake 我什么时候感到被忽视了，这样我就不会过度反应。这一直很有帮助 | |
+
+    | 是的，昨晚的压力太大了。我不知道！我可以继续下去 | |
+
+    | 我喜欢你关于计划实验的建议。我们也可以聊聊工作吗？ | |
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_2_0.png)
+
+
+    抑郁障碍患者，并再次由人类进行特异性评分。模型训练的详细信息见补充材料。为每个参与者的每项任务计算了平均值（特征特异性/治疗次数）。
+
+
+    # 2.5. 症状测量
+
+
+    患者问卷（PHQ-9; Kroeke et al., 2001）是一个有效且可靠的抑郁指数，我们的主要结局指标。PHQ-9 在每次 CBT 治疗中进行，此外还有泛化焦虑自量表（GAD;
+    Spitzer et al., 2006），这是我们预注册的次要指标。我们还打算检查工作和社交焦虑（Witzman et al., 2008），但未能获得这些数据。由于我们使用的是真实服务数据，我们对临床结果的概念化受限于可用日期。
+
+
+    # 2.6. 数据分析
+
+
+    | 主要诊断 | 流行率 | 心理测量药物使用 | 流行率 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 抑郁障碍 | 39.1% | 未记录 | 1.6% |
+
+    | 泛化焦虑 | 23.7% | 未处方 | 50.8% |
+
+    | 社交焦虑 | 7.2% | 已处方并服用 | 8.3% |
+
+    | 未规定焦虑 | 4.9% | 正在服用药物 | 39.2% |
+
+    | 客观冲突 | 4.2% | | |
+
+    | 恐慌障碍 | 3.8% | | | |
+
+    | 创伤后应激 | 3.7% | | | |
+
+    | 疑病症 | 3.0% | | | |
+
+    | 混合抑郁与焦虑 | 2.7% | | | |
+
+    | 特定性症 | 1.5% | | | |
+
+    | 广场恐惧症 | 0.9% | | | |
+
+    | 进食障碍 | 0.6% | | | |
+
+    | 关系困难 | 0.5% | | | |
+
+    | 愤怒和易怒 | 0.4% | | | |
+
+    | 躯体化障碍 | 0.2% | | | |
+
+    | 慢性疼痛 | 0.2% | | | |
+
+    | 酒精使用 | 0.1% | | | |
+
+    | 性功能障碍 | 0.1% | | | |
+
+    | 诉诉的特质 | 0.1% | | | |
+
+    | 未另说明的精神障碍 | 0.9% | | | |
+
+    | 未接受治疗 | 0.3% | | | |
+
+
+    由于治疗后结果在 R 环境下使用线性混合效应模型进行分析，并采用了近似和限制极大似然估计。观察到的 PHQ-9 分数作为治疗结束的结局指标。效应排名通过随机治疗地点进行测试。对于所有模型，方差因子
+    < 13。每个模型均包含了参与者在所有治疗课程中的总次数（以考虑时长），以及治疗开始时的 PHQ-9 和 GAD-7 评分（以控制基线识别变量、年龄转诊、性别身份）作为协变量纳入主要和初步分析中（见表
+    1）。除了治疗过程中的特异性外，患者可能被要求在开始 CBT 之前报告特异性。结果并未显示我们报告的治疗过程中的特异性包含了对特定信息的直接请求的平均次数。
+
+
+    H. Hitchcock
+
+    《情感障碍杂志》 350 (2020) 485–493
+
+
+    以及患者与 CBT 的对话，以及特异性如何体现在课程和回答反应中。结果显示，更高的特异性也与更好的治疗反应相关。结果显示，治疗后的抑郁症状与结构化、提供证据、设定议程、回顾和讨论观察到的变化方面的更高特异性相关。此外，跨任务的更高特异性也与更次数的治疗相关。
+
+
+    # 3. 结果
+
+
+    # 3.1. 样本与特征
+
+
+    数据收集自英国 78 个 IAPT 站点的 65,003 名参与者（n = 47,308 男性，n = 241 被排除）。参与者平均完成了 5.64 次（SD
+    = 3.57；范围：1–99）治疗。主要特异性在任务中很常见（表 1）。参与者的平均年龄为 34.69 岁（SD = 12.35，18–94 岁）。治疗前的平均
+    PHQ-9 评分（M = 13.15, SD = 5.90）处于“中度严重”范围（Kroeke et al., 2001）。
+
+
+    有两个关键必须考虑。首先，这是观察性数据，不能进行推断。我们的目标是识别成功 CBT 的因素，以指导未来的治疗发展。治疗特异性（与改善相关）可能受到其他因素的影响（例如
+    CBT 的质量）。同样，引入的治疗服务的使用可能会影响治疗特异性。观察到了各种治疗组成部分，例如行为激活、与随机分配相关的计划治疗次数，以及特异性对观察效应的影响。然而，小效应尚未被完全揭秘（Duner
+    and Ozkins, 2013）。文中未报告 CBT 对抑郁症状的典型效应量（相对于安慰剂）。
+
+
+    # 3.2. 治疗结果
+
+
+    我们的假设是反应的特异性可以预测治疗结束时的 PHQ-9 分数。相关性（rho = 0.02）的包含较小。所有预测因子在不同任务之间的结果不同（表 2）。模型特异性被患者在讨论解构任务、设定议程、回顾、作业和自杀风险时的特异性显著预测，效应量较小（见图
+    2）。相反，风险检查期间的特异性也与较高的 PHQ-9 分数相关。仅针对有抑郁表现的参与者（n = 25,440）进行敏感性分析得出了结果（见补充材料）。
+
+
+    # 3.3. 课程出勤
+
+
+    我们的次要假设是每周的频率会预测完成的 CBT 课程次数。包含了初步分析（ICC = 0.10）。然而，除了总结课程外，完成的次数并未被其他任务显著预测（表
+    3）。在讨论解构任务、完成任务、规划未来和应对策略时，更多的 CBT 课程与更高的特异性相关。当询问自杀风险是一个目标时，观察到了更多的完成课程。预测参加
+    ≥ 2 次课程的额外分析，以及用户特定的（参与了）参与度也显示，完成的课程可能与其他因素（例如症状严重程度）相关，这产生了相似的结果（见补充材料）。
+
+
+    根据指导 CBT 的一致（Beck and Haigh, 2014），结果支持对话期间存在特异性的证据。然而，当患者在反思和努力他们学到的内容（例如规划生活中的策略/新知识）方面特异性较高时，观察到的完成课程较少。患者表现出对构建
+    CBT 任务的关注，可能会挑战抑郁信念或谎言。我们在讨论课程和议程时看到的患者请求较少，而对要求的特异性请求更频繁。
+
+
+    # 4. 讨论
+
+
+    这项研究利用机器学习识别了
+
+
+    考虑到跨特异性变量的差异，敏感性检查了治疗结束时 PHQ-9 分数与特异性变量之间的相关性，这可能指示个体效应的方向是否仅由于多重分析。皮尔逊相关系数与混合模型的估计方向一致。同样注意到，治疗前与
+    PHQ-9 分数之间的可能关联可能受到对治疗前症状严重的患者分配更多课程的常见做法的影响。
+
+
+    然而，在预期方向上没有观察到效应。有趣的是，治疗中最大的（尽管很小）效应量
+
+
+    488
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    # Fixed effects predicting PHQ-9 scores at end-treatment.
+
+
+    | Fixed effect | estimate | df | b | sb |
+
+    |---|---|---|---|--|
+
+    | Total sessions completed | 20.04 | 60,698.01 | 0.28 | 0.001*** |
+
+    | Number of patient words | -1.31 | 56,720.13 | -0.02 | 0.0 |
+
+    | Number of therapist specific requests | -3.82 | 52,956.49 | -0.05 | 0.001***
+    |
+
+    | Number of therapist open-ended requests | 0.05 | 50,481.21 | 0.01 | 0.01 |
+
+    | Start GAD-7 | 26.90 | 63,112.01 | 0.48 | 0.022*** |
+
+    | Primary ranges (individual domains in Supplement) | -4.11-4.83 | 50,680.41-63,128.48
+    | -0.51-0.82 | 0.62-0.82*** |
+
+    | Gender: male | -1.63 | 63,102.72 | -0.05 | 0.03 |
+
+    | Gender: binary or undisclosed | 2.30 | 63,128.11 | -0.21 | 0.01*** |
+
+    | Medication: Prescribed but not using | 5.03 | 63,113.44 | 0.25 | 0.001*** |
+
+    | Medication: currently using | 10.05 | 63,162.68 | 0.29 | 0.05 |
+
+    | Medication: not using | -4.47 | 46,718.17 | 0.49 | 0.1 |
+
+    | Specificity of features of change | -4.06 | 62,721.18 | -0.98 | 0.1*** |
+
+    | Specificity of planning for future | -1.08 | 63,098.56 | -0.01 | 0.0 |
+
+    | Specificity of answering cognitive tasks | 4.14 | 54,567.37 | 0.07 | 0.02***
+    |
+
+    | Specificity of setting goal | 5.27 | 51,207.10 | 0.51 | 0.0 |
+
+    | Specificity of summarizing session | 0.74 | 63,067.10 | 0.01 | 0.01 |
+
+    | Specificity of de-briefing | 3.12 | 52,936.99 | -0.05 | 0.001*** |
+
+    | Specificity of setting homework | 3.66 | 58,180.01 | 0.03 | 0.01 |
+
+    | Specificity of setting agenda | 4.18 | 48,155.56 | -0.96 | 0.001*** |
+
+    | Specificity of task checking | 21.71 | 58,555.55 | 0.29 | 0.001*** |
+
+
+    > *** Note. p < .01. Intercept = 12.28, SE = 0.13, f(50, 95) = 95.55, p < .001.
+    Continuous predictors (i.e., all other than mention, gender, and primary diagnosis)
+    are on the same scale. For gender, the reference is female; for medication, the
+    reference is no medication prescribed. For Diagnosis name, Reference is no diagnosis
+    recorded. As there were two different primary domains, the estimates are significant
+    and the list is in the Supplementary materials.
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_4_0.png)
+
+
+    **Fig. 2.** Association of specificity with regard to treatment PHQ-9 scores.
+    Note: ns = nonsignificant. Error bars represent standard error.
+
+
+    outcome was from Weikle (Green et al., 2018). In the current sample, high suicidality
+    was triggered-on-treatment symptoms and high-intensity therapy, potentially contributing
+    to completion of few online-CBT sessions. Fewer sessions were also associated
+    with greater specificity during goal setting. Specific goal setting is thought
+    to be important in motivating and encouraging patient adherence to treatment,
+    however it is
+
+
+    g., include., location of nearest hospital, name of friend to turn to) due to'
+  - '[PAGE 5]
+
+
+    # Table 3
+
+
+    | Fixed effect | t | df | b |
+
+    |---|---|---|---||
+
+    | Number of participants | 26.61 | 64,953.07 | 0.40 | 0.001***
+
+    | Number of therapist requests | -8.91 | 64,759.76 | -0.12 | 0.02***
+
+    | Number of therapist open-ended requests | 8.54 | 63,995.19 | 0.13 | 0.01***
+
+    | Start GAD-7 | 9.52 | 63,758.99 | 0.10 | 0.02***
+
+    | Start PHQ-9 | 5.47 | 63,686.20 | - | |
+
+    | Primary reason (individual dialogues in session) | 4.2-11.55 | 59,884.46-64,260
+    | -1.13-1.12 | |
+
+    | Gender: female | -3.96 | 63,454.40 | -0.12 | 0.02***
+
+    | Gender: nonbinary or undisclosed | 0.92 | 63,069.07 | 0.19 | 0.21
+
+    | Age | 7.5 | 63,724.14 | 0.11 | 0.01***
+
+    | Medication use: prescribed but not used | -6.05 | 63,639.67 | -0.30 | 0.05
+
+    | Medication use discontinued | 1.65 | 63,507.73 | - | |
+
+    | Medication use | -3.72 | 63,520.94 | -0.40 | 0.11***
+
+    | Specificity of change | 13.34 | 63,454.18 | 0.18 | 0.01
+
+    | Specificity of claiming | 7.96 | 63,482.71 | 0.09 | 0.01
+
+    | Specificity of core tasks | 10.26 | 63,464.61 | 0.17 | 0.01***
+
+    | Specificity of feedback | -26.76 | 63,448.84 | -0.36 | 0.01***
+
+    | Specificity of summarizing | 0.85 | 63,198.14 | -0.02 | 0.21
+
+    | Specificity of reviewing homework | 17.96 | 64,225.39 | 0.25 | 0.001
+
+    | Specificity of reviewing session | 6.44 | 63,968.88 | 0.06 | 0.01***
+
+    | Specificity of setting agenda | 8.22 | 63,788.33 | 0.12 | 0.01***
+
+    | Specificity of risk check | -29.28 | 63,412.42 | -0.40 | 0.01***
+
+
+    > *** p < .001, ** p < .01, * p < .05. t(675.32-40.61, p < .001). Common predictors
+    (medication and primary diagnosis) are on the axis of future. The reference is
+    for female, no medication is reported. For Diagnosis Name, no reference is reported.
+    There were 24 different ranges for diagnosis, and the items presented are full
+    in the list below.
+
+
+    is possible that patients who identified specific goals were more likely to reach
+    these goals earlier and attend fewer sessions. There has a number of potential
+    concerns that were not found to be evaluated in future research.
+
+    Recent research suggests that specificity on a range of therapist tasks has benefits,
+    positive association with CBT sessions. Our exploration of treatment length was
+    limited by the available data - notably individuals could attend but were not
+    in the treatment center. Future application of machine learning could help identify
+    relevant concepts. Our findings indicate that the role of specificity in enhancing
+    treatment engagement might be beneficial, at a minimum, our research suggests
+    that patients using a higher degree of concrete, specificity and task (actions)
+    in dialogue attended a greater number of sessions, above the effects of established
+    predictors of treatment attendance, such as age, gender, medication use, use,
+    and baseline severity.
+
+
+    The positive and negative effects between therapist tasks and the role of specificity
+    in treatment is complex. We have previously proposed flexible movement between
+    specificity, concrete and general approaches is more important for mental health
+    than a focus on concrete details. Our research provides evidence for the flexibility
+    of application of specificity when challenging negative thoughts (beliefs). This
+    of this study should also be addressed, including that dialogue specificity was
+    not related to measures of concrete concepts explored in the literature (rum,
+    et al.), and change over time. Our deep learning was also validated on test which
+    showed experiencing depression, and that our measure of specificity might be biased
+    towards lately characteristic of depressive presentations. The findings and results
+    should be interpreted in line with this. Further research is needed to determine
+    whether increased specificity improves continued treatment attendance or outcomes.
+
+
+    There are a number of novel interventions translated from cognitive science sciences
+    that target either specificity (Mayry et al., 2019; Raes et al., 2009), flexible
+    movement between general and specificity levels of
+
+
+    detail (Hitchock et al., 2018; Morai et al., 2021), concreteness of information
+    processing (Watkins et al., 2011, 2012), or level of detail in mental (Pele et
+    al., 2021), which has demonstrated promoting effects on self-help interventions
+    and treatment of mental disorders. Our research needs future studies to explore
+    what experience of teaching specificity, or specificity interventions to beginning
+    (or begins) of patient CBT could help improve the number of CBT sessions. Since
+    these sessions are primarily self-guided, they could be easily and cost-effectively
+    used by users. Our results suggest that future evaluation of patient specificity
+    in CBT, and therapist benefits might help empower pathways for treating patients.
+
+
+    # Role of the funding source
+
+
+    This work was supported by a UK Economic and Social Research Council (Grant/ES01878/1),
+    and by a UK Medical Research Council to TD (SWAG/043). It was also supported by
+    the Australian Research Council (DE200100043).
+
+
+    # Credit Author contribution statement
+
+
+    Catin Hitchcock: Conceptualization, Data curation, Formal analysis, Funding, Investigation,
+    Methodology, Project administration, Resources, Software, Supervision, Validation,
+    Writing - Writing original draft, Writing - editing. Julia Funk: Data, Investigation,
+    Writing - editing. Project administration, Resources, Software, Validation, Writing
+    - Writing original draft, Writing - editing, Review. Roman Combs: Conceptualization,
+    Data curation, Formal analysis, Funding, Investigation, Methodology, Resources,
+    Supervision. Stevan D. Patel: Data curation, Investigation, Methodology, Project
+    administration, Methodology, Writing - Writing & editing. Ana Catarina: Conceptualization,
+    Methodology, Writing - Writing & editing. Keiko Takano: Conceptualization, Data
+    curation, Investigation, Methodology, Resources, Supervision, Writing'
+  md: '
+
+    ## Fixed effects predicting PHQ-9 scores at end-treatment.
+
+
+    | Fixed effect | estimate | df | b | sb |
+
+    |---|---|---|---|--|
+
+    | Total sessions completed | 20.04 | 60,698.01 | 0.28 | 0.001*** |
+
+    | Number of patient words | -1.31 | 56,720.13 | -0.02 | 0.0 |
+
+    | Number of therapist specific requests | -3.82 | 52,956.49 | -0.05 | 0.001***
+    |
+
+    | Number of therapist open-ended requests | 0.05 | 50,481.21 | 0.01 | 0.01 |
+
+    | Start GAD-7 | 26.90 | 63,112.01 | 0.48 | 0.022*** |
+
+    | Primary ranges (individual domains in Supplement) | -4.11-4.83 | 50,680.41-63,128.48
+    | -0.51-0.82 | 0.62-0.82*** |
+
+    | Gender: male | -1.63 | 63,102.72 | -0.05 | 0.03 |
+
+    | Gender: binary or undisclosed | 2.30 | 63,128.11 | -0.21 | 0.01*** |
+
+    | Medication: Prescribed but not using | 5.03 | 63,113.44 | 0.25 | 0.001*** |
+
+    | Medication: currently using | 10.05 | 63,162.68 | 0.29 | 0.05 |
+
+    | Medication: not using | -4.47 | 46,718.17 | 0.49 | 0.1 |
+
+    | Specificity of features of change | -4.06 | 62,721.18 | -0.98 | 0.1*** |
+
+    | Specificity of planning for future | -1.08 | 63,098.56 | -0.01 | 0.0 |
+
+    | Specificity of answering cognitive tasks | 4.14 | 54,567.37 | 0.07 | 0.02***
+    |
+
+    | Specificity of setting goal | 5.27 | 51,207.10 | 0.51 | 0.0 |
+
+    | Specificity of summarizing session | 0.74 | 63,067.10 | 0.01 | 0.01 |
+
+    | Specificity of de-briefing | 3.12 | 52,936.99 | -0.05 | 0.001*** |
+
+    | Specificity of setting homework | 3.66 | 58,180.01 | 0.03 | 0.01 |
+
+    | Specificity of setting agenda | 4.18 | 48,155.56 | -0.96 | 0.001*** |
+
+    | Specificity of task checking | 21.71 | 58,555.55 | 0.29 | 0.001*** |
+
+
+    > *** Note. p < .01. Intercept = 12.28, SE = 0.13, f(50, 95) = 95.55, p < .001.
+    Continuous predictors (i.e., all other than mention, gender, and primary diagnosis)
+    are on the same scale. For gender, the reference is female; for medication, the
+    reference is no medication prescribed. For Diagnosis name, Reference is no diagnosis
+    recorded. As there were two different primary domains, the estimates are significant
+    and the list is in the Supplementary materials.
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_4_0.png)
+
+
+    **Fig. 2.** Association of specificity with regard to treatment PHQ-9 scores.
+    Note: ns = nonsignificant. Error bars represent standard error.
+
+
+    outcome was from Weikle (Green et al., 2018). In the current sample, high suicidality
+    was triggered-on-treatment symptoms and high-intensity therapy, potentially contributing
+    to completion of few online-CBT sessions. Fewer sessions were also associated
+    with greater specificity during goal setting. Specific goal setting is thought
+    to be important in motivating and encouraging patient adherence to treatment,
+    however it is e.g., include., location of nearest hospital, name of friend to
+    turn to) due to
+
+
+    ## Table 3
+
+
+    | Fixed effect | t | df | b | |
+
+    |---|---|---|---|---|
+
+    | Number of participants | 26.61 | 64,953.07 | 0.40 | 0.001*** |
+
+    | Number of therapist requests | -8.91 | 64,759.76 | -0.12 | 0.02*** |
+
+    | Number of therapist open-ended requests | 8.54 | 63,995.19 | 0.13 | 0.01***
+    |
+
+    | Start GAD-7 | 9.52 | 63,758.99 | 0.10 | 0.02*** |
+
+    | Start PHQ-9 | 5.47 | 63,686.20 | - | |
+
+    | Primary reason (individual dialogues in session) | 4.2-11.55 | 59,884.46-64,260
+    | -1.13-1.12 | | |
+
+    | Gender: female | -3.96 | 63,454.40 | -0.12 | 0.02*** |
+
+    | Gender: nonbinary or undisclosed | 0.92 | 63,069.07 | 0.19 | 0.21 |
+
+    | Age | 7.5 | 63,724.14 | 0.11 | 0.01*** |
+
+    | Medication use: prescribed but not used | -6.05 | 63,639.67 | -0.30 | 0.05 |
+
+    | Medication use discontinued | 1.65 | 63,507.73 | - | | |
+
+    | Medication use | -3.72 | 63,520.94 | -0.40 | 0.11*** |
+
+    | Specificity of change | 13.34 | 63,454.18 | 0.18 | 0.01 |
+
+    | Specificity of claiming | 7.96 | 63,482.71 | 0.09 | 0.01 |
+
+    | Specificity of core tasks | 10.26 | 63,464.61 | 0.17 | 0.01*** |
+
+    | Specificity of feedback | -26.76 | 63,448.84 | -0.36 | 0.01*** |
+
+    | Specificity of summarizing | 0.85 | 63,198.14 | -0.02 | 0.21 |
+
+    | Specificity of reviewing | 0.85 | 63,198.14 | -0.02 | 0.21 |
+
+    | Specificity of reviewing | 0.85 | 63,198.14 | -0.02 | 0.21 |
+
+    | Specificity of setting agenda | 4.18 | 48,155.56 | -0.96 | 0.001*** |
+
+    | Specificity of task checking | 21.71 | 58,555.55 | 0.29 | 0.001*** |
+
+    '
+  mdcn: '
+
+
+    ## 预测治疗结束 PHQ-9 分数的固定效应。
+
+
+    | 固定效应 | 估计值 | df | b | sb |
+
+    |---|---|---|---|--|
+
+    | 完成的总会话次数 | 20.04 | 60,698.01 | 0.28 | 0.001*** |
+
+    | 患者用词数 | -1.31 | 56,720.13 | -0.02 | 0.0 |
+
+    | 治疗师特定请求数 | -3.82 | 52,956.49 | -0.05 | 0.001*** |
+
+    | 治疗师开放式请求数 | 0.05 | 50,481.21 | 0.01 | 0.01 |
+
+    | 初始 GAD-7 分数 | 26.90 | 63,112.01 | 0.48 | 0.022*** |
+
+    | 主要范围（补充材料中的个人领域） | -4.11-4.83 | 50,680.41-63,128.48 | -0.51-0.82 | 0.62-0.82***
+    |
+
+    | 性别：男 | -1.63 | 63,102.72 | -0.05 | 0.03 |
+
+    | 性别：二元或未知 | 2.30 | 63,128.11 | -0.21 | 0.01*** |
+
+    | 药物：已处方但未使用 | 5.03 | 63,113.44 | 0.25 | 0.001*** |
+
+    | 药物：正在使用 | 10.05 | 63,162.68 | 0.29 | 0.05 |
+
+    | 药物：未使用 | -4.47 | 46,718.17 | 0.49 | 0.1 |
+
+    | 变化特征的特异性 | -4.06 | 62,721.18 | -0.98 | 0.1*** |
+
+    | 未来规划的特异性 | -1.08 | 63,098.56 | -0.01 | 0.0 |
+
+    | 回答认知任务的特异性 | 4.14 | 54,567.37 | 0.07 | 0.02*** |
+
+    | 设定目标的特异性 | 5.27 | 51,207.10 | 0.51 | 0.0 |
+
+    | 总结会话的特异性 | 0.74 | 63,067.10 | 0.01 | 0.01 |
+
+    | 汇报的特异性 | 3.12 | 52,936.99 | -0.05 | 0.001*** |
+
+    | 设置作业的特异性 | 3.66 | 58,180.01 | 0.03 | 0.01 |
+
+    | 设定议程的特异性 | 4.18 | 48,155.56 | -0.96 | 0.001*** |
+
+    | 任务检查的特异性 | 21.71 | 58,555.55 | 0.29 | 0.001*** |
+
+
+    > *** 注。p < .01。截距项 = 12.28, SE = 0.13, f(50, 95) = 95.55, p < .001。连续预测变量（即除提及、性别和主要诊断以外的所有变量）处于同一尺度。对于性别，参考组为女性；对于药物，参考组为未处方药物。对于诊断名称，参考组为未记录诊断。由于存在两个主要领域，估计值显著，列表见于补充材料中。
+
+
+    ![](img/774968a1aef6375b9d919dee5c923713_4_0.png)
+
+
+    **图 2.** 治疗 PHQ-9 分数的特异性相关性。注：ns = 不显著。误差线代表标准误。
+
+
+    结果来自 Weikle (Green et al., 2018)。在当前样本中，高自杀倾向是由治疗中症状和高强度治疗引发的，这可能导致在线 CBT 会话完成次数较少。会话次数较少也与目标设定期间更高的特异性有关。具体的目标设定被认为对于激励和鼓励患者遵循治疗至关重要，然而（例如，最近的医院位置、求助的朋友的名字等）由于
+
+
+    ## 表 3
+
+
+    | 固定效应 | t | df | b |
+
+    |---|---|---|---|
+
+    | 人数 | 26.61 | 64,953.07 | 0.40 |
+
+    | 请求数 | -8.91 | 64,759.76 | -0.12 |
+
+    | 治疗师开放式请求数 | 8.54 | 63,995.19 | 0.13 |
+
+    | 初始 GAD-7 | 9.52 | 63,758.99 | 0.10 |
+
+    | 初始 PHQ-9 | 5.47 | 63,686.20 | |
+
+    | 主要原因（会话中的个人领域） | 4.2-11.55 | 59,884.46-64,260 | -1.13-1.12 |
+
+    | 性别：女 | -3.96 | 63,454.40 | -0.12 |
+
+    | 性别：非二元或未知 | 0.92 | 63,069.07 | 0.19 |
+
+    | 年龄 | 7.5 | 63,724.14 | 0.11 |
+
+    | 药物使用：已处方但未使用 | -6.05 | 63,639.67 | -0.30 |
+
+    | 药物使用：停药 | 1.65 | 63,507.73 | |
+
+    | 药物使用 | -3.72 | 63,520.94 | -0.40 |
+
+    | 变化的特异性 | 13.34 | 63,454.18 | 0.18 |
+
+    | 声明特异性 | 7.96 | 63,482.71 | 0.09 |
+
+    | 核心任务特异性 | 10.26 | 63,464.61 | 0.17 |
+
+    | 反馈特异性 | -26.76 | 63,448.84 | -0.36 |
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 6]
+
+
+    H. Hitchcock
+
+
+    Writing – editing; Michael eBook: Conceptualization, Investigation, Methodology,
+    Project administration, Resources, Supervision, Writing – editing
+
+
+    # Declaring of interest
+
+
+    The authors declare no conflict of interest
+
+
+    # Acknowledgements
+
+
+    We thank the users and those who provided the data analyzed in this study
+
+
+    # Appendix A Supplementary data
+
+
+    Supplementary data to this article can be found at: https://doi.org/10.1016/j.jmap.2024.01.014
+
+
+    # References
+
+
+    Barry, T. J., Lee, S. Y., & Wan, F. (2010). A meta-analysis and review of Mindfulness
+    Stress Reduction Training (MBSR) in the treatment of depressive disorders. Behav
+    Res, 71(6), 811–829. https://doi.org/10.1007/s10168-010-0219-9
+
+
+    Bartram, F. J., Ham, M., Conncey, C. B., Aijner-Weidel, S., Alaric, A. L., Wong,
+    Q., & Glick, J. (2016). The effectiveness of online help programs for adults with
+    suicidal ideation. J Affect Dis, 25, 402–409. https://doi.org/10.1016/j.jad.2016.03.012
+
+
+    Beck, T. A., Haft, E. A. (2014). Innovations in cognitive behavioral therapy for
+    depression. Adv. Clin Psych, 10(1), 1–24. https://doi.org/10.1159/000358444/571131
+
+
+    Chokram, A. M., Bonderelj, J., Goberty, J., Worth, A., Fkella, M., & Oh, C. (2016).
+    Mindfulness-based cognitive therapy for recurrent depression: The promise of promoting
+    mindfulness in patients treated for depression. JAMA Psychiatry, 73(6), 593–600.
+    https://doi.org/10.1001/jamapsych.2016.0533
+
+
+    Clark, D. M., Wang, J., Layard, R., Phillips, S., & Smith, M. (2013). The effectiveness
+    of online mental health services (iHT): an analysis of data collected by NICE.
+    Psychotherapy Bulletin, 39(3), 175–185. https://doi.org/10.1177/00333243124xxxxx
+
+
+    Caluis, A. R., Mononey, C., Czechek, T., & Vovitzky, B. (2014). Randomizing exposure
+    therapy: An inhibitory learning approach. Behav Res, 58, 10–23. https://doi.org/10.1016/j.behavres.2014.03.011
+
+
+    Dalgleish, T., Hitchcock, C. (2023). Longitudinal trajectories in autobiographical
+    memory recovery. Nat. Rev Psych, 3(2), 166–182. https://doi.org/10.1038/s42788-023-004xxxx
+
+
+    Ewan, M. F., Turnbull, R., Batano, S., Carter, A. Jordan., Martin, A. J., Clark,
+    D. M., & Phillips, S. (2019). Evaluating the effectiveness of online cognitive
+    behavioral therapy and clinical outcomes using digital monitoring. JAMA Psychiatry,
+    77(1), 35–43. https://doi.org/10.1001/jamapsychiat.2019.288xxxxx
+
+
+    Funder, D. C., Reich, J. (2019). Evaluating effect size in psychological research
+    and non-experimental methods. Method Psychol Sci, 2(2), 156–168. https://doi.org/10.1037/a0015673
+
+
+    Foukes, W. T., Etsholm, S. M., Fisher, S. D., Gordon, A., Snyder, J. W., Vitterberg,
+    J. R., & Cutler, P. (2017). Initial evaluation of the efficacy of cognitive-behavioral
+    therapy for depression: A meta-analysis of randomized controlled trials. J Clin
+    Psychol, 110(2), 199–210. https://doi.org/10.1002/jcp.13191111
+
+
+    Green, J. D., Keerts, J. R., Reece, K. E., Tang, T. M. (2018). Evaluating the
+    effectiveness of safety planning for military veterans, to patients tailored to
+    veteran characteristics decrease suicide risk: Integration of Technical Advances
+    in
+
+
+    Cognitive-Narrative Therapy Training (CNT); 65(1), 951–968. https://doi.org/10.1002/clin.22711.06
+
+
+    Haffner, D. J., Jones, R., Layard, R., Clark, D., Tully-Tyskian, M., & Ramsay,
+    F. (2021). Using Online Courses for Major Improvements in Depression by Targeting
+    Memory: A Randomized Controlled Trial of Adjoint Therapy. J Psychiatry, 72(3),
+    e285–e293. https://doi.org/10.1002/jpsy.2020.013xxxxx
+
+
+    Haffner, D. J., Ramsay, R., Jones, R., & Webb, T. (2021b). Effective autobiographical
+    memory recovery predicts the cure of depression: an analysis of treatment outcomes.
+    Psychosomatic, 51(6), 926–938. https://doi.org/10.1017/s00334549200004xx
+
+
+    Jackson, N. P., Clark, D. M., & Smith, D. L. (2016). Thinking about the future:
+    An incident specificity index reduces anxiety, relapse, and well-being. J Affect
+    Dis, 198, 115–123. https://doi.org/10.1016/j.jad.2016.03.017
+
+
+    Hitchcock, C., Gower, S., Rees, R., Edifield, G., Jackson, P., Iwrth, I. M., Smith,
+    C., White, P., & Vardy, J. (2020). The efficacy of controlled control of memory
+    therapy (Memlex) to enhance flexibility and reduce symptoms in individuals with
+    major depression. J Behav Psychol, 110, 104411. https://doi.org/10.1016/j.jebobehav.2020.104411
+
+
+    Jacobson, N., Eller, Peters, A. T., & Taylor, S. (2016). Targeting autobiographical
+    memory to reduce negative emotional cognition through a randomized controlled
+    trial with stayed focus. PLOS One, 11(6), e0159998. https://doi.org/10.1371/journal.pone.0159998
+
+
+    Kemptner, K. R., Spritz, R. L., & Webb, J. W. (2006). A brief measure for assessing
+    change in autobiographical memory specificity in depressive disorder. J Clin Psychol,
+    28(5), 273–279. https://doi.org/10.1002/jcp.10199
+
+
+    Lewis, D., & Clark, S. (2023). Evaluating the effect of story to facilitate cumulative
+    change: a practical primer for teens and adults. Front Psych Psych, 14, 1193502.
+    https://doi.org/10.3389/fpsyt.2023.1193502
+
+
+    Mijska, J., & Milmanowicz, A. (2020). The effectiveness of mindfulness-based cognitive
+    therapy for depression and anxiety: a systematic review and meta-analysis. J Consult
+    Psychol, 75(2), 213–223.
+
+
+    Mundi, J. C., Marx, W., Stark, M. K., & Green, J. M. (2002). The work and social
+    impact of depression. Lancet, 359, 464–474. https://doi.org/10.1016/S0140
+
+
+    Pelleman, K. J., Thomas, J. A., Blackwood, S. E., Me-Selleer, R., Springer, D.,
+    Ding, D. B., Holmes, E. A., & Taylor, J. F. (2021). Randomized controlled trial
+    of a brief early intervention for adolescent depression that targets memory specificity.
+    JAMA Pediatr, 175(8), exxxxx. https://doi.org/10.1001/jamapediatrics.2021.10877
+
+
+    Reich, D. W. (2009). Reducing cognitive vulnerability to depression: a prevention
+    of memory specificity training (MST) in high-risk individuals. J Clin Psychol,
+    45, 1–9. https://doi.org/10.1002/jcp.10587
+
+
+    Hitchcock, C. (2021). The effect of control of the autobiographical memory specificity
+    (Memlex) for enhancing flexibility and reducing depressive symptoms. J Clin Psychol,
+    49(6), 514–523. https://doi.org/10.1002/jcp.12771
+
+
+    491'
+  md: '
+
+    H. Hitchcock
+
+
+    Writing – editing; Michael eBook: Conceptualization, Investigation, Methodology,
+    Project administration, Resources, Supervision, Writing – editing
+
+
+    ## Declaring of interest
+
+
+    The authors declare no conflict of interest
+
+
+    ## Acknowledgements
+
+
+    We thank the users and those who provided the data analyzed in this study
+
+
+    ## Appendix A Supplementary data
+
+
+    Supplementary data to this article can be found at: https://doi.org/10.1016/j.jmap.2024.01.014
+
+
+    ## References
+
+
+    Barry, T. J., Lee, S. Y., & Wan, F. (2010). A meta-analysis and review of Mindfulness
+    Stress Reduction Training (MBSR) in the treatment of depressive disorders. Behav
+    Res, 71(6), 811–829. https://doi.org/10.1007/s10168-010-0219-9
+
+
+    Bartram, F. J., Ham, M., Conncey, C. B., Aijner-Weidel, S., Alaric, A. L., Wong,
+    Q., & Glick, J. (2016). The effectiveness of online help programs for adults with
+    suicidal ideation. J Affect Dis, 25, 402–409. https://doi.org/10.1016/j.jad.2016.03.012
+
+
+    Beck, T. A., Haft, E. A. (2014). Innovations in cognitive behavioral therapy for
+    depression. Adv. Clin Psych, 10(1), 1–24. https://doi.org/10.1159/000358444/571131
+
+
+    Chokram, A. M., Bonderelj, J., Goberty, J., Worth, A., Fkella, M., & Oh, C. (2016).
+    Mindfulness-based cognitive therapy for recurrent depression: The promise of promoting
+    mindfulness in patients treated for depression. JAMA Psychiatry, 73(6), 593–600.
+    https://doi.org/10.1001/jamapsych.2016.0533
+
+
+    Clark, D. M., Wang, J., Layard, R., Phillips, S., & Smith, M. (2013). The effectiveness
+    of online mental health services (iHT): an analysis of data collected by NICE.
+    Psychotherapy Bulletin, 39(3), 175–185. https://doi.org/10.1177/00333243124xxxxx
+
+
+    Caluis, A. R., Mononey, C., Czechek, T., & Vovitzky, B. (2014). Randomizing exposure
+    therapy: An inhibitory learning approach. Behav Res, 58, 10–23. https://doi.org/10.1016/j.behavres.2014.03.011
+
+
+    Dalgleish, T., Hitchcock, C. (2023). Longitudinal trajectories in autobiographical
+    memory recovery. Nat. Rev Psych, 3(2), 166–182. https://doi.org/10.1038/s42788-023-004xxxx
+
+
+    Ewan, M. F., Turnbull, R., Batano, S., Carter, A. Jordan., Martin, A. J., Clark,
+    D. M., & Phillips, S. (2019). Evaluating the effectiveness of online cognitive
+    behavioral therapy and clinical outcomes using digital monitoring. JAMA Psychiatry,
+    77(1), 35–43. https://doi.org/10.1001/jamapsychiat.2019.288xxxxx
+
+
+    Funder, D. C., Reich, J. (2019). Evaluating effect size in psychological research
+    and non-experimental methods. Method Psychol Sci, 2(2), 156–168. https://doi.org/10.1037/a0015673
+
+
+    Foukes, W. T., Etsholm, S. M., Fisher, S. D., Gordon, A., Snyder, J. W., Vitterberg,
+    J. R., & Cutler, P. (2017). Initial evaluation of the efficacy of cognitive-behavioral
+    therapy for depression: A meta-analysis of randomized controlled trials. J Psychol,
+    70(2), 199–210. https://doi.org/10.1007/s10967-016-0233-x
+
+
+    Green, J. D., Keerts, J., Reece, K. (2018). The effectiveness of Cognitive-Narrative
+    Therapy (CNT) for major depression. Clin Psychol,  (1), 111. https://doi.org/10.1002/clin.12711
+
+
+    Haffner, D. J., Ramsay, R., & Webb, S. (2021). Randomized controlled trial of
+    a brief early intervention for adolescent depression that targets memory specificity.
+    JAMA Pediatr, 175(8), exxxxx. https://doi.org/10.1001/jamapediatrics.2021.1087
+
+
+    Haffner, D. J., Ramsay, R., & Webb, S. (2021). Randomized controlled of of aographical
+    specificity ( ( specificity))......,,   (  2222...........10.1002/jcp.12771
+
+
+    Jacobson, N., Eller, P., & Taylor, S. (2016). Randomized controlled trial of memory-specificity
+    training (MST) for depression. PLOS One, 11(6), e015998. https://doi.org/10.1371/journal.pone.015998
+
+
+    Kemptner, K. R., Spritz, A., & Webb, J. W. (2006). A brief measure of autobiographical
+    specificity in depressive disorder. J Clin Psychol, 49(5), 273–279. https://doi.org/10.1002/jcp.10587
+
+
+    Lewis, D., & Clark, S. (2023). Evaluating the effect of story to facilitate cumulative
+    change. Front Psychol, 14, 119352. https://doi.org/10.3389/fpsyt.2023.119352
+
+
+    Micka, J., & Milmanowicz, A. (2020). The effectiveness of mindfulness-based cognitive
+    therapy for depression and anxiety: a systematic review and meta-analysis. J Consult
+    Psychol, 75(2), 213–223.
+
+
+    Mundi, J. C., Marx, W., Stark, M. K., & Green, J. M. (2002). The work and social
+    impact of depression. Lancet, 359, 464–474. https://doi.org/10.1016/S0140-6736(02)07733-3
+
+    '
+  mdcn: '
+
+
+    H. Hitchcock
+
+
+    写作 – 编辑；Michael eBook: 概念化、调查、方法论、项目管理、资源、监督、写作 – 编辑
+
+
+    ## 利益声明
+
+
+    作者声明没有利益冲突
+
+
+    ## 致谢
+
+
+    我们感谢用户以及为本研究提供数据的人
+
+
+    ## 附录 A 补充数据
+
+
+    本文的补充数据可以在此处找到：https://doi.org/10.1016/j.jmap.2024.01.014
+
+
+    ## 参考文献
+
+
+    Barry, T. J., Lee, S. Y., & Wan, F. (2010). 正念减压训练（MBSR）治疗抑郁症的元分析与综述。Behav Res,
+    71(6), 811–829. https://doi.org/10.1007/s10168-010-0219-9
+
+
+    Bartram, F. J., Ham, M., Conncey, C. B., Aijner-Weidel, S., Alaric, A. L., Wong,
+    Q., & Glick, J. (2016). 针对有自杀意念成人的在线帮助计划有效性。J Affect Dis, 25, 402–409. https://doi.org/10.1016/j.jad.2016.03.012
+
+
+    Beck, T. A., Haft, E. A. (2014). 抑郁症认知行为疗法的创新。Adv. Clin Psych, 10(1), 1–24. https://doi.org/10.1159/000358444/571131
+
+
+    Chokram, A. M., Bonderelj, J., Goberty, J., Worth, A., Fkella, M., & Oh, C. (2016).
+    正念认知疗法治疗复发性抑郁症：在抑郁症患者中促进正念的意义。JAMA Psychiatry, 73(6), 593–600. https://doi.org/10.1001/jamapsych.2016.0533
+
+
+    Clark, D. M., Wang, J., Layard, R., Phillips, S., & Smith, M. (2013). 在线心理健康服务（iHT）的有效性：NICE收集数据的分析。Psychotherapy
+    Bulletin, 39(3), 175–185. https://doi.org/10.1177/00333243124xxxxx
+
+
+    Caluis, A. R., Mononey, C., Czechek, T., & Vovitzky, B. (2014). 随机化暴露疗法：一种抑制学习方法。Behav
+    Res, 58, 10–23. https://doi.org/10.1016/j.behavres.2014.03.011
+
+
+    Dalgleish, T., Hitchcock, C. (2023). 自传体记忆恢复的纵向轨迹。Nat. Rev Psych, 3(2), 166–182.
+    https://doi.org/10.1038/s42788-023-004xxxx
+
+
+    Ewan, M. F., Turnbull, R., Batano, S., Carter, A. Jordan., Martin, A. J., Clark,
+    D. M., & Phillips, S. (2019). 使用数字监测评估在线认知行为疗法的有效性及临床结果。JAMA Psychiatry, 77(1),
+    35–43. https://doi.org/10.1001/jamapsychiat.2019.288xxxxx
+
+
+    Funder, D. C., Reich, J. (2019). 心理学研究与非实验方法中的效应量评估。Method Psychol Sci, 2(2),
+    156–168. https://doi.org/10.1037/a0015673
+
+
+    Foukes, W. T., Etsholm, S. M., Fisher, S. D., Gordon, A., Snyder, J. W., Vitterberg,
+    J. R., & Cutler, P. (2017). 认知行为疗法治疗抑郁症疗效初步评估：随机对照试验的元分析。J Psychol, 70(2), 199–210.
+    https://doi.org/10.1007/s10967-016-0233-x
+
+
+    Green, J. D., Keerts, J., Reece, K. (2018). 认知叙事疗法（CNT）治疗重度抑郁症的有效性。Clin Psychol,
+    (1), 111. https://doi.org/10.1002/clin.12711
+
+
+    Haffner, D. J., Ramsay, R., & Webb, S. (2021). 针对青少年抑郁症的短期早期干预随机对照试验。JAMA Pediatr,
+    175(8), exxxxx. https://doi.org/10.1001/jamapediatrics.2021.1087
+
+
+    Haffner, D. J., Ramsay, R., & Webb, S. (2021). 随机化……特异性（……），2222...........10.1002/jcp.1271
+
+
+    Jacobson, N., Eller, P., & Taylor, S. (2016). 记忆特异性训练（MST）治疗抑郁症的随机对照试验。PLOS One,
+    11(6), e015998. https://doi.org/10.1371/journal.pone.015998
+
+
+    Kemptner, K. R., Spritz, A., & Webb, J. W. (2006). 抑郁症自传体特异性的简易测量表。J Clin Psychol,
+    49(5), 273–279. https://doi.org/10.1002/jcp.10587
+
+
+    Lewis, D., & Clark, S. (2023). 促进积累变化的效应。Front Psychol, 14, 119352. https://doi.org/10.3389/fpsyt.2023.119352
+
+
+    Micka, J., & Milmanowicz, A. (2020). 正念认知疗法治疗抑郁和焦虑的有效性：系统评价与元分析。J Consult Psychol,
+    75(2), 213–223.
+
+
+    Mundi, J. C., Marx, W., Stark, M. K., & Green, J. M. (2002). 抑郁症对工作和社会影响。Lancet,
+    359, 464–474. https://doi.org/10.1016/S0140-6736(02)07733-3
+
+
+    '
+  merge: 0
