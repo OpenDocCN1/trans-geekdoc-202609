@@ -1,0 +1,821 @@
+- pgno: 0
+  md: '# Sustainable Chemistry and Pharmacy 21 (2021) 100425
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Sustainable Chemistry and Pharmacy
+
+
+    journal homepage: http://www.elsevier.com/locate/scp
+
+
+    # # Cytotoxicity of photosynthesized silver nanoparticles: A meta-analysis by
+    machine learning algorithms
+
+
+    Lei Liu $^{a,b}$, Zhaolan Zhang $^{a,b,c}$, Liha Chao $^{a}$, Ziyi Xiang $^{a,b}$,
+    Ying Tang $^{a,b,c,*}$, Yao Pan $^{a,b,c}$
+
+
+    +   $a$ Department of Cosmetics, College of Chemistry and Materials Engineering,
+    Beijing Technology and Business University, 100008, China
+
+    $b$ Beijing Key Laboratory of Plant Research and Development, College of Chemistry
+    and Materials Engineering, Beijing Technology and Business University, 100008,
+    China
+
+    $c$ Key Laboratory of Cosmetics, China National Light Industry, Beijing Technology
+    and Business University, 100008, China
+
+
+    # ABSTRACT
+
+
+    +   Keywords:
+
+    Silver nanoparticles
+
+    Cytotoxicity
+
+    Meta-analysis
+
+    Machine learning
+
+    Random forest
+
+    Decision tree
+
+
+    The rapid demand and increasing use of silver nanoparticles (AgNPs) synthesized
+    by ''green'' methods such as plants, textile and healthcare applications have
+    raised concerns regarding their potential impacts on human health. This study
+    presents a meta-analysis of the cytotoxicity of photosynthesized AgNPs with heterogeneous
+    features using two classification-based machine learning approaches, decision
+    tree (DT) and random forest (RF). The inclusion of plant biosynthesis-related
+    feature clearly improved the accuracy and generalization performance of models,
+    revealing key parameters on the cytotoxicity effects of photosynthesized AgNPs.
+    A measure of mean difference Gini in the model identifying that exposure (including
+    time and dose), plant and cell type were the most important predictors of variables
+    (including intrinsic toxicity properties, and reactions used in biosynthesis)
+    of AgNP-mediated cytotoxicity and model performance was performed to focus data.
+    This meta-analysis of published data algorithms provides guidance and key to tangible
+    variables affecting AgNP-mediated cytotoxicity, which may guide future studies
+    toward better experimental design as well as the vitro optimization of Ag nanoparticles
+    for specific applications.
+
+
+    # 1. Introduction
+
+
+    Silver nanoparticles (AgNPs) are one of the most commonly fabricated nanomaterials
+    with attractive applications in biomedical, textile and however products due to
+    their physicochemical features (especially conductivity and antimicrobial activities).
+    In recent years, the green approach for synthesizing AgNPs using naturally-biomolecules
+    from plants acts as extracts and reducing and stabilizing agents has attracted
+    growing interest to their use. Since the report of photosynthesized AgNPs by Miguel
+    et al. in 2003 such photosynthesized AgNPs have been developed with great potential
+    in diverse applications
+
+
+    Despite the benefits, Ag nanoparticles are considered a double-edged sword as
+    they can cause cytotoxicity in microorganisms and human cells (Liao et al., 2019).
+    The behavioral toxicity (or toxicity) of AgNPs-mediated damage requires careful
+    use of selectivity to target specific cells. Over the past decades, many researchers
+    have shown that different factors influence the toxicity of AgNPs and their underlying
+    molecular mechanisms. For example, mitochondrial dysfunction and induction of
+    oxidative stress by the $Ag^+$ ions released from intracellular Ag nanoparticles
+    are the main drivers of AgNP-mediated cytotoxicity (Gardo-Torres et al., 2003,
+    Chandra 2005). As shown by Liao et al. (2019), In Fig 1, AgNPs can enhance the
+    cellular levels of toxic $Ag^+$ ions, cause overexpression of reactive oxygen
+    species (ROS) and induce caspase-dependent apoptosis via direct effects on mitochondria
+    or the release of cytochrome c (Todd et al., 2011; it) Small-sized AgNPs can penetrate
+    into the nucleus
+
+
+    Despite the benefits, Ag nanoparticles are considered a double-edged sword as
+
+
+    > * Corresponding author. Department of Cosmetics, College of Chemistry and Materials
+    Engineering, Beijing Technology and Business University, 100008, China.
+
+    E-mail: 139746317@qq.com (L. Liu), 2294272404@qq.com (Z. Zhang), clh1013506883@163.com
+    (L. Gao), xiongziyi1999@16.com (Z. Xiong), panyo@btnu.edu (Y. Pan).
+
+
+    https://doi.org/10.1016/j.chemx.2021.100425
+
+
+    Received 6 December 2020; Revised in reform 17 March 2021; Accepted 20 March 2021
+
+    Available online 27 March 2021
+
+    ©2021 Elsevier R.V. All rights reserved.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'molecular pores, resulting in DNA damage and cell cycle arrest (Asharani et
+    al., 2009). The Ag+ ions released from AgNPs can damage the membrane integrity
+    directly via binding with the thiol groups (Jiravov et al., 2016).
+
+
+    The cellular uptake of AgNPs plays a role in their behavior and the process influenced
+    by many physical properties of nanoparticles such as size, surface chemistry,
+    shape, aggregation/aggregation and colloidal stability (Riaz Ahmed et al., 2017).
+    Generally, smaller nanoparticles are more likely to penetrate the cell membrane
+    easily than Ag+ ions owing to their higher specific surface area (Akter et al.,
+    2018). However, there is no consensus on the relationship between size and toxic
+    effects, as there are other factors, such as surface chemistry, shape, and coating,
+    of nanoparticles and their interactions with cells. For green AgNPs, the plants
+    or plants used as biosynthesis/capping agents contain various phytochemicals that
+    can modify the chemical nature of the results and other parameters related to
+    toxicity. A high variability in cytotoxicity of AgNPs of similar size synthesized
+    by different plant extracts has been reported, suggesting that different phytochemical
+    agents used in synthesis may influence the toxicity (Arumai Seivan et al., 2018;
+    Fazhirzadeh et al., 2019). Thus, establishing the predictive relationships between
+    cytotoxicity and affecting properties or parameters is critical for the health
+    risk evaluation of biogenic AgNPs.
+
+
+    In recent years, considerable efforts have been made to develop and attribute
+    the toxic effects in silico ''meta-models'' to describe the quantitative nanotructure-toxicity
+    relationship (nano-QSTR) of
+
+
+    nanomaterials. The development of classic QSTR models is usually challenged by
+    the limited number of relevant photochemical data in the dataset (Burello, 2017).
+    Literature mining, as meta-analysis, is a method for establishing predictive relationships
+    between structural attributes and toxic effects of nanoparticles (Labousta et
+    al., 2016; Gerard and Casman, 2014). Compared with QSTR, meta-analysis is a more
+    effective approach to extract pertinent data from wide-ranging publications rather
+    than from an individual study, revealing predictive relationships and toxic effects
+    of nanoparticles that are not evident in the literature (Labousta et al., 2019;
+    Oh et al., 2016; Gerard and Casman, 2014). Recent work by Labousta has demonstrated
+    the successful application of machine learning for the assembly and generalization
+    of heterogeneous cytotoxicity to provide simple, accurate and predictive classifiers
+    for a spectrum of nanoparticles (Labousta et al., 2019). However, the intrinsic
+    physical properties of nanoparticles are often insufficient to represent the complex
+    interactions between AgNPs, biosynthesis agents and cytotoxicity.
+
+
+    Here, we report a more rigorous and comprehensive meta-analysis of cytotoxicity
+    of green AgNPs. We hypothesize that the cell viability outcomes can be determined
+    by a set of features including physical properties of nanoparticles (size, Zeta
+    potential), cell types (human/animal/normal), exposure regime (dose and time),
+    and the biosynthesis-related variables (plant factors, extraction method). Two
+    machine learning algorithms, decision tree and random forest, were used to identify
+    key. The results are expected to identify
+
+
+    # Cell-membrane damage
+
+
+    ![](img/8c32ae42ac011ec1d29cc8e95689cdb6_1_0.png)
+
+
+    Fig. 1. Possible mechanisms of AgNPs-mediated cytotoxicity in mammalian cells.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# L. Li et al.
+
+
+    # Sustainable Chemistry and Pharmacy (2021) 100425
+
+
+    variables differ cytotoxicity of photoshesized AGNs as to provide guidance to
+    the development of green AGNs that can be categorized as "by-design",
+
+
+    plant-related attribute. The data mining yielded a total of 690 points from 81
+    articles with describing the photosynthesizing agents (identifying, extraction
+    solvent), particle size, zeta potential, cell type (natural cells, animal cells/human
+    cells), expose time and duration in the cytotoxicity assay (Fig. 2). Prior to
+    matching article and dose (mg/mL) harmonized Labauty et al. (2019), All information
+    being analyzed (Yes or No) of the stability test result as well as the use of
+    control substances were recorded in Supplementary document 1.
+
+
+    #  2. Methodology
+
+
+    # 2.1. Data acquisition and harmonization
+
+
+    A literature search of photoshesized AGNs with cytotoxicity was performed using
+    various public databases (e.g., PubMed, Scopus, Web of Science, Elsevier, Springer,
+    Wiley-Blackwell, Taylor & Francis and Research, from December 23 to October 4,
+    2020) and different combinations of (e.g., silver nanoparticles, AGNs + + cytotoxicity,
+    AGNs + nanoparticles + toxicity). This initial analysis resulted in 876 reviewed
+    original articles between 2003 and 2020. After removal of replicates and AGNs
+    synthesized by non-biological methods (e.g., microorganisms, minerals), or without
+    cytotoxicity or nanomaterial characterization, 178 publications meeting the following
+    criteria were: i) AGNs synthesized by extracts of plants that can be attributed
+    to a certain species; ii) cytotoxicity assay with time and expose dose but not
+    restricted to the indicator of cell viability; iii) nanoparticles includes particle
+    size (by TEM examination) and Zeta potential; which each has been reported more
+    than once. The remaining AGNP-synthesizing plants that are most commonly reported
+    in the literature, i.e. Cosaceae, Labiatae, Leguminaceae, Liliaceae, Rosaceae,
+    Solanaceae, Theaceae and Verbenaceae, were selected
+
+
+    # 2.2. Machine learning
+
+
+    # 2.2.1. Design
+
+
+    Decision tree (DT) models were constructed using C4.5 algorithm of WEKA 3 data
+    tool for the binary classification reported by Labauty et al. (2019). The data
+    prepared for machine learning file was in csv format, with 690 data points and
+    p corresponds to different features. In this work, two combinations of features
+    were developed: DT1 used input set with 7 features (particle size, extraction
+    solvent, expose dose, Zeta potential, Normal cell type and exposure time) and
+    DT2 were based on the selection of 8 features (the 7 features used for DT1 and
+    plus an additional feature of family). Each model produced classifiers that classify
+    some feature with the label of cell viability (0 or 1). The subtree and the desired
+    classifiers are supposed to have higher accuracy than the baseline classifier.
+    As a supervised learning algorithm, the DT modeling consists of two stages: generation
+    and pruning. In the first step,
+
+
+    | Records in the literature search:\ (n = 876)
+
+
+    | Records removed\ (n = 178)
+
+
+    | Records finally selected\ (n = 81)
+
+    690 data points
+
+
+    | Extraction solvent | Cell viability: |
+
+    |---|---|
+
+    | Aqueous (66.6%) | MTT (90.7%) |
+
+    | Organic solvent (23.1%) | Others (9.3%)
+
+
+    | Family | Cancer/Normal cells |
+
+    |---|---|
+
+    | Leguminaceae (17%) | Cancer cells (88.3%) |
+
+    | Composaceae (24%) | Normal cells (21.1%) |
+
+    | Labiatae (8%) | |
+
+    | Liliaceae (7%) | |
+
+    | Verbenaceae (6%) | |
+
+    | Rosaceae (6%) | |
+
+    | Theaceae (6%) | |
+
+    | Solanaceae (6%) | |
+
+    | Spicaceae (6.5%) |
+
+
+    | Animal/Human cells |
+
+    | Animal cells (15.3%) |
+
+    | Human cells (84.7%)
+
+
+    | Particle size - 4 - 80 nm
+
+
+    | Exposure time - 6 - 72 h
+
+
+    | Zeta potential - -59 - -5 mV
+
+
+    | Exposure dose - 0.01 - 1000 mg /L
+
+
+    +   * Exclusion Criteria
+
+    * Without cytotoxicity data
+
+    * Without the use of reducing agents
+
+    * Without NPs characteristics
+
+
+    +   * Inclusion Criteria
+
+    * The plants used in biosynthesis can be
+
+    group into one of nine families
+
+
+    ![](img/8c32ae42ac011ec1d29cc8e95689cdb6_2_0.png)
+
+
+    3'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# L. Liu et al.
+
+
+    # Sustainable Chemistry & Pharmacy 21 (2021) 100425
+
+
+    a tree of binary split was generated recursively by answering Yes or question
+    and evaluating the measurement by the information gain rate accordingly. In the
+    pruning step, leaves with 2 or less instances (nodes branches) were deleted to
+    avoid over-fitting. Graphviz (https://graphviz.org/), a graphical software, was
+    used to visualize the DT.
+
+
+    # 2.2. Random forest
+
+
+    Random forest (RF) models were constructed from the same dataset using 10-fold
+    cross-validation (Chen et al., 2020). As an ensemble learning built upon DT, RF
+    handles multiple classifications and regression tasks. Each DT or tree of RF was
+    generated using the method (i) the original data was sampled a number of times
+    (ii) at each step with bootstrap and each node of the tree was selected by the
+    first best segmentation algorithm (iii) each tree was generated by aggregating
+    a random set of features (iv) and left tree based on the best classification performance.
+    With classifier models, RF is usually more accurate than other classifiers.
+
+
+    The RF model provides two importance of variables, i.e., mean accuracy decrease
+    and mean Gin, for the ranking of variables. Mean accuracy decrease (MDI) measures
+    the importance of a variable by calculating the change in the model accuracy when
+    this variable is removed while mean Gin (MDI).
+
+
+    # 2.3. Evaluation of model performance
+
+
+    A 10-fold cross-validation was used to evaluate the accuracy of the DT and RF
+    models. The data was divided into k independent subsets, D1/D2/D3/.../DK (k=10),
+    and in each step (k-1) subsets of data were used to train and the remaining subset
+    was used for verification, and the average value of k test results were finally
+    finalized. The performance of each model was evaluated using precision (PR), recall
+    (RE), accuracy (AC) and F-measured from the following equations TP, FN, TN and
+    FP represent the values of true positive, false negative, true negative and false
+    positive respectively (Deshmukh et al., 2016).
+
+
+    ```
+
+    PR = TP / (TP + FP) Eq.(1)
+
+    ```
+
+
+    ```
+
+    RE = TN / (TN + FN) Eq.(2)
+
+    ```
+
+
+    ```
+
+    F-measured = 2 * TP * TN / (TP + FP + FN) Eq.(3)
+
+    ```
+
+
+    Values of these metrics indicate the prediction capabilities of the model where
+    a higher value indicates a better model, and a value of 1 indicates high performance
+    (Chen et al., 2018). In the case of biological data, classification models showed
+    >70% are accurate for classification. Additionally, receiver operating characteristic
+    (ROC) analysis was used in the evaluation of performance in the prediction ability.
+    The ROC curve is plotted by drawing all combinations of FP and TP rates, which
+    is obtained by calculating the area under the curve (AUC). AUC > 0.9 is “excellent”,
+    (0.9 ≥ AUC ≥ 0.8) is “good”, (0.8 > AUC ≥ 0.7) is “fair” (0.8 > 0.7)
+
+
+    # 3. Results and discussion
+
+
+    # 3.1. Model comparison and validation
+
+
+    Table 1 shows the evaluation results for feature characteristics and classification
+    models, decision tree (DT) and random forest (RF). All models (DT, RF1, RF2) showed
+    significant improvement in accuracy (0.731-0.825) compared to the baseline accuracy
+    (0.556), indicating that the algorithms learned from diverse cell viability information
+    based on nanoparticle properties and experimental factors. DT and RF2 were constructed
+    based on the set of attributes/features that were selected by correlation analysis,
+    while RF1 was constructed using all features.
+
+
+    RF2 > RF1 > DT1 > DT2. The RF models showed better performance in predicting toxicity
+    than DT, and the complexity of the model clearly has an impact on the cytotoxicity
+    of AgNPs. Although the RF prediction accuracy is high, DT is simpler and less
+    complex than RF. (3).
+
+
+    # 3.2. Variable importance of AgNP-mediated toxicity
+
+
+    In this study, MDA had the best performance which demonstrated higher stability
+    and accuracy. The toxicity of different cell lines was reported (Valobouseix et
+    al., 2012), we examine the various factors that contribute to the cytotoxicity
+    of phythesized AgNPs.
+
+
+    # 3.3. The effects of cell type
+
+
+    Cytotoxicity is intrinsic of nanoparticles in a given cell line under environmental
+    conditions. Exposure degree, exposure time were identified as the primary factors
+    of the cell viability results as shown in the ranking of attribute importance
+    (Fig. 4) and the DT (Fig. 3). It is important to note that many previous studies
+    used exposure period of 24h or 48h, which is frequently used for the change of
+    cell line toxicity. While the toxicity was different for different cell lines
+    even 72h, leading to significant decrease in the cell viability of AgNPs
+
+
+    In addition to exposure, different cells were selected in accordance with the
+    probability of AgNP exposure and therapy application. In the development of machine
+    learning algorithms, it has been generating pertaining data to represent a wide
+    range of cell types of different types representing different anatomical/biological
+    roles. We also noted that 88% of original data in our was obtained from immortalized
+    cancer cells are more sensitive to AgNPs than normal cells.
+
+
+    4'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Table 1
+
+
+    Summary of the features and learning results.
+
+
+    | | Decision 1 | Decision 2 | Random forest 1 | Random forest 2 |
+
+    |---|---|---|---|--|
+
+    | Selected | 0.556 | 0.556 | 0.556 | 0.555 |
+
+    | | > Particle size | > Family of plants | > Particle size | > Family of plants
+    |
+
+    | | > Extraction solvent | Extraction solvent | > Extraction solvent | > Extraction
+    solvent |
+
+    | | > Zeta potential | > Particle size | > Zeta potential | > Zeta potential |
+
+    | | > Normal/Cancer cells | > Normal/Cancer cells | > Normal/Cancer cells | >
+    Normal/Cancer cells |
+
+    | | > Animal/Human cells | > Animal/Human cells | > Animal/Human cells | > Animal/Human
+    cells |
+
+    | | > Exposure time | Exposure dose | > Exposure dose | Exposure time |
+
+    | Accuracy | 0.731 | 0.758 | 0.792 | 0.825 |
+
+    | Recall | 0.779 | 0.777 | 0.816 | 0.840 |
+
+    | F-measure | 0.763 | 0.762 | 0.802 | 0.843 |
+
+    | RMSE | 0.813 | 0.839 | 0.866 | 0.904 |
+
+
+    toxicity in concerns has been suggested to result from their higher membrane permeability,
+    more vigorous cytotoxicity, and mediated around surrounding cells caused by nanoparticles
+    (Mello et al., 2016b). The biogenesis on the surface of functionalized AgNPs may
+    provide antioxidant ergative effects through chemical methods (Mukherjee et al.,
+    2014; Kup, 2020). The type of end-points used in analysis can affect therapy efficacy
+    with current experiments. Data on the development of biogenic AgNPs are mainly
+    obtained by toxic salt based assays (MTT and MTT) in 92 of reports. The other
+    indicators include leukocyte dehydrogenase (LDH), cytotoxicity and oxidative stress.
+    However, care should be considered when the MTT passing viability is validated.
+    For example, the output could be under- or over-estimated by potential MTT reduction
+    by AgNPs or nanoparticle absorption at various wavelengths. The evaluation of
+    nanoparticles (Kumar et al., 2015; Mello et al., 2018). It has been reported that
+    AgNPs may cause fluorescence quenching of Hoechst and Red dyes where the fluorescence
+    of DNA was due to the presence of nanoparticles. The toxicity also depends on
+    the size and charge of the nanoparticles and the types of dyes (Mello et al.,
+    2020). However, the potential for AgNP interference as well as the use of appropriate
+    controls and complementary assays mentioned in reports, may result in false positives
+    and therefore consider the reliability of the data.
+
+
+    potentials are been seen from 61% of the reports, which may limit the limits of
+    therapy; particular interactions with protein-containing biological factors (e.g.
+    formation of protein corona) have been observed in nanoparticles (Lee et al.,
+    2019; Monteiro-Rivière et al., 2013). The presence of serum albumin has been shown
+    to enhance the colloidal stability of AgNPs dispersions and the difference of
+    their toxicity. Furthermore, the presence of proteins in the culture medium may
+    change the characteristics of nanoparticles (Aj et al., 2019). We that morphology
+    and colloidal stability of nanoparticles in biogenic fluids (e.g. cell medium
+    or blood) were not given in publications. It is still necessary to investigate
+    how these dimensions (such as size, shape, charge, and binding molecules) affect
+    cell interaction and the mode of action.
+
+
+    # 3.2.3. Effects of parameters used in biogenesis
+
+
+    Particle size, shape, cluster/aggregation factors and own stability are inherited
+    properties of nanoparticles. Particle size has been identified as a factor controlling
+    the toxicity of biogenic AgNPs. The effects include cell uptake, ROS production
+    and damage to DNA, mitochondria and cell membrane (Vasek et al., 2014; Albanese
+    et al., 2012). However, there are no standard techniques for size measurements
+    of AgNPs in biological media. The hydrodynamic size measured by light scattering
+    (DLS) may be affected by aggregation of nanoparticles and interaction with the
+    test media, particularly.
+
+
+    As well as size, charge is a closely related to the colloidal stability and fate
+    of nanoparticles in cells. However, the measurement of Zeta potential used for
+    the characterization of surface charge is not equivalent to the surface charge
+    density. Density, as well
+
+
+    Other important factors like cytotoxicity used in nanoparticles are plant materials,
+    reaction conditions and time. The distribution of AgNPs in cancer cells (Fig.
+    5), nanoparticles synthesized by plant leaves, four. Legaceae, Lamiaceae, Sapindaceae,
+    and Terbaceae, exhibited significantly higher values of ROS generation, cytotoxicity
+    and cell uptake. The plant leaf type used to synthesize the nanoparticles may
+    be more important than the toxicotic effects of the biogenic AgNPs and some plant
+    species might be more advantageous in the development of antidepressant therapeutics.
+    However, there are still many uncertainties to correlate the plant extracts with
+    the toxicity of the biogenic AgNPs. First, several chemical methods of plant extracts
+    and over control of nanoparticles (e.g. size and surface area) are needed to identify
+    the link between the biological/toxic properties of nanoparticles. Furthermore,
+    the chemical constituents of plant extracts are directly affected by the surface
+    and reaction methods. Reports indicate that the AgNPs synthesized by methanol,
+    acetone and acetonitrile showed different effects (Doddson et al., 2017) and that
+    the toxicity of nanoparticles by acetonitrile exhibited significantly lower cytotoxicity
+    than those synthesized by ethanol. The toxicity of AgNPs was varied by the plant
+    family (Fig. 3). In the RF modeling, this attribute was mainly correlated with
+    the concentration of nanoparticles. For Cinnamon leaf, differences in the reaction
+    temperature and the silver-polyphenolic ratio have found to significant impact
+    on the nucleation and growth of'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# (A) Decision tree (DT1)
+
+
+    ![](img/8c32ae42ac011ec1d29cc8e95689cdb6_5_0.png)
+
+
+    # (B) Decision tree (DT2)
+
+
+    ![](img/8c32ae42ac011ec1d29cc8e95689cdb6_5_1.png)
+
+
+    Fig. 3. Decision tree 1 (DT1) learned from 7 features (particle size, extraction
+    solvent, expose dose, Zeta) learned from 8 features (i.e., AgNP-synthesizing plants,
+    particle size, extraction solvent, expose dose, Zeta, cancer(c/normal) cells,
+    animal(a)/(human) cells, and exposure time.
+
+
+    nanoparticles (Lin et al., 2020). These studies emphasize the need for controlled
+    synthesis of AgNPs with respect to size and other factors that influence toxicity.
+
+
+    # 4. Conclusions
+
+
+    This meta-analysis reveals that, despite the intrinsic properties, the cytotoxicity
+    of AgNPs is also closely related to other'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Exposure dose and time
+
+
+    # Exposure dose and time
+
+
+    Cell type
+
+
+    Primary particle size
+
+
+    Plant family
+
+
+    Cell type
+
+
+    Primary particle size
+
+
+    Plant family
+
+
+    Zeta potential
+
+
+    Zeta potential
+
+
+    Extraction solvent
+
+
+    Extraction solvent
+
+
+    Mean Decrease Accuracy
+
+
+    Mean Decrease Gini
+
+
+    Fig. 4. A ranking of the variance importance to predict cell viability as quantified
+    by mean decrease accuracy or mean decrease in Gini used in random forests.
+
+
+    ![](img/8c32ae42ac011ec1d29cc8e95689cdb6_6_0.png)
+
+
+    the accuracy (0.625) and prediction ability (AUC - 0.904). With continuous integration
+    of more representative data, the current model can be developed to enhance prediction
+    accuracy and to guide the AI to design or optimization of green AgNPs for tailored
+    applications.
+
+
+    # Acknowledgement
+
+
+    This work was supported by the National Science Foundation of China (51403006).
+
+
+    # Credit author contribution statement
+
+
+    Lei Liu: Methodology, Software, Visualization, Funding acquisition, Data curation
+    and writing – Original draft preparation. Zhanhan Zhang: Literature search, data
+    acquisition, Software, Visualization. Lihua Cao: Acquisition, Literature search,
+    data acquisition. Ziyi Xiong: Funding acquisition, Literature search, data acquisition.
+    Yong Tang: Conceptualization, writing – editing. Yao Pan: Conceptualization.
+
+
+    Supplementary data related to this article can be found at https://doi.org/10.1016/j.yscym.2021.100425.
+
+
+    # References
+
+
+    Aslan, A., Jin, H., Park, Y., (2019). Evaluating the antioxidant, antioxidant,
+    cytotoxic, shape and wound healing properties of silver nanoparticles synthesized
+    by plant extracts. Mater. Sci. Process. Eng. 101, 204–216. Akter, S., Alam, M.
+    S., Ullah, A., Hossain, K.F., Rashid, S., Hoskawa, T., Saito, S., Tsurumi, K.,
+    (2018). A systematic review of silver nanoparticles-induced toxicity: physicochemical
+    properties and perspectives. Alabangar, A., Tang, P.S., Pash, Chao, W.C. (2012).
+    The effect of nanoparticle size, shape and surface charge on antibacterial activity.
+    Anander, M., Poorsi, G., Boned, P., Varasekumar, K., Anand, K., Chatterjee, A.,
+    (2019). Synthesis of silver nanoparticles from the leaf extract of Dioscore vimacea
+    for antimicrobial and antioxidant activities. Process Biochem. 80, 80–88.
+
+
+    The authors declare that they have no conflicting financial interests or personal
+    relationships that could have influenced the work reported in this paper.
+
+
+    7'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Araslan, S., Rahimdar, D., Seifaddin, N., Kumar, Bakir, A., 2018. Green tea
+    and turmeric extracts green synthesis of silver nanoparticles: antioxidant, and
+    in vitro cytotoxicity. J. Photochem. 290, 252–255.
+
+
+    Ashwani, P.M., Gul, K.H., Handke, M.V., Vayavathi, S., 2009. Green synthesis of
+    silver nanoparticles using plant extracts and antibacterial activity. Nanotechnology
+    20(14), 2435–2440.
+
+
+    Bouaicis, A., Abdel, L., Borenberg, J., Sporejo, S.L., 2012. Forest green synthesis
+    favors NPs with large negative size index: sources, resources and applications.
+    Biomass and Bioenergy, 36, 2155–2160.
+
+
+    Buresh, E., 2017. Evaluation of QSAR models for nanoparticle activity. Nanotoxicology
+    12(1), 99–105.
+
+
+    Chandra, S., Kumar, P., Bonestein, E., Yadav, S., 2020. Medicinal plant resources
+    for the synthesis of silver nanoparticles and their biological applications. Biotechnology
+    and Agrochemical Research 34, 100234.
+
+
+    Chen, F., Poigenberg, W.J., Kovalinin, V., Young, M.G., 2018. Development of nanomaterials-based
+    characterization for risk assessment and regulatory de-risking. Action Res. 65,
+    52–62.
+
+
+    Chen, W., Zhang, S., Li, H., Hu, J., 2018. Evaluation of silver nanoparticle toxicity
+    in soil for forest and landscape susceptibility monitoring. Int. Environ. Sci.
+    Vol. 104, 1061–1068.
+
+
+    Deshmukh, A., Chandra, S., Singh, D., Siddiqui, M., Bijapur, M., 2017. Identification
+    of therapeutic agents against silver nanoparticle induced toxicity by network-based
+    consensus virtual screening. Mol. Drug. 2013, 1630–1639.
+
+
+    El-Sady, A.A., El-Ghorashi, M., Hassan, J.H., El-Yacoub, M., 2019. Synthesis and
+    therapeutic potential of silver nanoparticles using plant extracts. Nanoscale.
+    158, 269–278.
+
+
+    Garcia-Luna, A., Rodriguez-Velas, J.P., Parsons, T.J., Hirani-Yacaman, M., 2013.
+    Adifolia species as a natural source for the synthesis of silver nanoparticles.
+    Nanotechnology 24, 445005.
+
+
+    Gerand, J.M., Caman, E.A., 2014. A meta-analysis of carbon nanoparticle toxicity
+    studies-how physical properties affect the toxicity of carbon nanoparticles. Nanotoxicology,
+    9(1), 11––20.
+
+
+    Gu, X., Qian, Y., Li, L., Aason, A., 2018. Assessment model for predicted cell
+    toxicity of silver nanoparticles. Nanotoxicology, 138, 145–153.
+
+
+    He, Y., Du, Z., Liu, Y., Li, J., Huang, J., Sheng, S., Wei, Y., Wang, Z., Zhang,
+    K., 2020. Toxicity of silver nanoparticles on lung cancer cells in vitro and grown
+    stem cells in vitro. Int. J. Nanomed. 10, 1879–1887.
+
+
+    Ivak, A., Kuenschel, I., Kasetny, B., Iloleva, A., Vuppi, S., Vija, H., Hakkinen,
+    A., Titma, T., Hernstein, M., Minassov, P., Moller, D., Iskhan, A., 2014. Size-
+    and shape-dependent toxicity of silver nanoparticles on mammalian cells in vitro.
+    PLoS One 9, e102108.
+
+
+    Jaiswal, S., Singh, S., Kumar, A., Molla, A., Jha, L., Panacek, A., Manisova,
+    B., Kolizova, K., 2016. The effect of silver nanoparticles and silver ions on
+    mantle and plant cells in vitro. Food Chem. Tox. 96, 55–61.
+
+
+    Jorge de Souza, T.A., Rosa Souza, L.R., Franchi, L.P., 2019. Silver nanoparticles:
+    an green synthesis methods, transformation, and the in vitro toxicity. Ecotoxicol.
+    Environ. 177, 114233.
+
+
+    Kuo, C.Y., Goring, G.L., 2015. Flow cytometry of in vitro cell necrosis and apoptosis
+    induced by silver nanoparticles. Food Chem. 182, 215–220.
+
+
+    Kup, F.O., Ciosny, S., Damian, F., 2020. Biosynthesis of silver nanoparticles
+    using leaf extract of Eucalyptus asiculosa (heart bush): evaluation of their antibacterial
+    and antioxidant activities. J. Clean. Prod. 267, 122033.
+
+
+    Lohani, A., Nagarajin, R., Kratky, D., 2019. Meta-analysis of nanoparticle toxicity
+    according to the Nanotoxicity Classification System. International Nano 13, 1553–1564.
+
+
+    Li, H., Zhang, Y., Li, Y., Yu, J.H., 2018. Nanoparticle-induced apoptosis in H-52Y
+    cancer cells via endoplasmic-mitochondrial pathway and mitochondrial ROS production.
+    Nanotoxicology. 139, 215–223.
+
+
+    Li, C., Li, J., Teng, C., 2019. Effect of the size of silver nanoparticles on
+    the growth of zebrafish embryos using microscope kinetics analysis. Arabian Journal
+    of Chemistry 13, 1011–1019.
+
+
+    Marquardt, A., Seifrin, F.B., Souza, N.S., Badem, M., Beklan, M., Hashim, R.,
+    2019. Green synthesis of silver nanoparticles with plant extract and antioxidant
+    activity against breast and colon cancer cell lines. Nanomaterials 9(9), 1333.
+
+
+    Montado-Vieiro, N.A., Sembley, M., Oldenburg, J., Riviere, J., 2013. Protein binding
+    modulates the cellular uptake of silver nanoparticles into human cells via macropinocytosis.
+
+
+    Mukherjee, S., Chowdury, D., Kotercherka, A., Petra, S., B., V., Bhadra, M., 2015.
+    Antioxidant and anticancer properties of bio-synthesized silver nanoparticles
+    (4-in-3 system). Nanotherics 4, 316–335.
+
+
+    Oh, E., Liu, R., Vol, A., Gemill, B., Milan, C., Yoon, Y., Medina, L., 2016. Meta-analysis
+    of nanoparticle toxicity in human cell lines. Nanotoxicology 14, 477–486.
+
+
+    Riaz Ahmed, K.B., Nay, A.M., Rao, R.P., Zhang, G., Saleem, S., Goring, G.L., 2015.
+    Evaluation of properties of silver nanoparticles interference on the interpretation
+    of in vitro cytotoxicity. Toxid. 38, 664–670.'
+  merge: -1
+  img_proc: true
