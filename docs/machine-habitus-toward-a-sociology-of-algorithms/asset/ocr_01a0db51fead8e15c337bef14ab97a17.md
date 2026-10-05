@@ -1,0 +1,7 @@
+# #1
+
+# # Why Not a Sociology of Algorithms?
+
+# ## Machines as sociological objects
+
+Algorithms of various kinds hold the social world together. Financial transactions, dating, advertising, news circulation, work organization, policing tasks, music discovery, hiring processes, customer relations — all are to a large extent delegated to non-human agents embedded in digital infrastructures. For some years we have all been aware of this, thanks to academic research and popular books, journalistic reports and documentaries. Whether from the daily news headlines or the dystopian allegories of TV series, we have come to recognize that almost everything is now ‘algorithmic’ and that artificial intelligence is revolutionizing all aspects of human life (Amore and Piotukh leaving aside simplifications of popular media and the wishful thinking of techno-chauvinists, this is true for the most part (Brouard 2018; Sumpter 2018). Yet, many sociologists and social scientists continue to ignore algorithms and AI technologies in their research, or consider them at best a part of the supposedly inanimate material background of social life. When researchers study everyday life, consumption, social interactions, media, organizations, cultural taste or social representations, they often unknowingly observe the consequences of the opaque algorithmic processes at play

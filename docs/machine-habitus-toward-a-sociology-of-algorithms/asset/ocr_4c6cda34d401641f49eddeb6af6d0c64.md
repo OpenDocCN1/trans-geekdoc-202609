@@ -1,0 +1,11 @@
+# Culture in the Code
+
+of Instagram, Facebook or Twitter, give rise to distinct, user-centric ‘filter bubbles’ (Pariser 2011). Reinforcement learning – an unsupervised deep learning approach through which machine training is done ‘in situ’ by the machine itself (Kelleher 2019: 29) – is also based on local data contexts, extracted from the environment where the AI system autonomously operates (Rahwan et al. 2019).
+
+Most real-life machine learning applications rely on a combination of global and local data contexts. For instance, it can be argued that recommender systems such as those of Amazon, Netflix and YouTube are socialized to a hybrid, ‘glocal’ culture. On the one hand, global data contexts are analysed to suggest ‘similar’ items based on platform-level behavioural trends (i.e. co-purchases and co-views), through a process known as collaborative filtering (Celna 2010; Kostan and Riedl 2012). Roughly speaking, this global cultural logic informs YouTube’s ‘related videos’ as well as Amazon’s ‘also bought’ (Airoldi, Beraldo 2016; Smith and Linden 2017). On the other hand, the local data contexts characterizing users – e.g. the historical traces of their tastes and behaviours, location data, socio-demographic information – are used to formulate highly personalized predictions targeting narrower consumer profiles (Prey 2018; A. Mackenzie 2018), as with the videos, movies and products ‘recommended for you’.
+
+The balance between global and local data cultures, as well obviously vary from machine to machine, and across fields of application. What remains relatively constant is the socialization processes through which the specific data contexts encountered by machine learning systems become habitus. These are examined and theorized in the following, concluding section of the present chapter.
+
+# Machine socialization
+
+Practical reason and machine habitusnHabitus is the embodied product of what Berger and Luckmann (1966) call the ‘internalization of reality’ by social agents. Despite the inner ‘predispositions towards
