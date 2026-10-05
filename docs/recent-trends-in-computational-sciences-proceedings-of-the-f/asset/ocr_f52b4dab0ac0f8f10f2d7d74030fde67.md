@@ -1,0 +1,14 @@
+# Continued
+
+| Sl No | Author-Year | Evaluation algorithms | Results |
+|---|---|---|--|
+| | | multilayer perception neural network | 99.65% and 98.38% for binary and 3-class classification, respectively |
+| [3] | Bambang Tutuko, *et al.* 14 July, 2021 | Convolutional neural network | The evaluation results of a deep learning model for AF detection using the DL Cloud System that achieved high accuracy, sensitivity, and specificity when tested with unseen data at a sample point of 0.02 seconds. The accuracy was 98.94%; the sensitivity and specificity were both 98.7%. Additionally, when the number of instances was increased for the three-class classification problem, the accuracy was found to be 96.65%, sensitivity was 93.65%, and specificity was 96.92 |
+| [4] | Alexandros Karagiannis, *et al.* August 23, 2011 | Empirical Decomposition- | The implemented algorithm is able to estimate the level of Gaussian noise present in ECG time series data and provide a 95% confidence interval for estimation. This can be useful in evaluating the quality of the ECG signal and identifying any sources of interference or noise that may be affecting the accuracy of any analyses or diagnoses based on that data |
+| [5] | YUE SUN, *et al.* December 2019 | Convolutional neural network | The model achieved a high overall accuracy of 91% using two-fold cross-validation on a dataset of 6,534 and 260 10,300 video frames from 24 infants. Additionally, the model was able to accurately detect comfort at a rate of 90% and discomfort frames at a rate of 92%. This is promising and suggests that the model may be useful in accurately detecting and distinguishing between comfort and discomfort in infants |
+| [6] | S.E. Barajas-Montiel, *et al.* 28-30 November 2005 | Neural networks and support vector machines | The study evaluated the performance of neural networks (NN) and support vector machines (SVM) for classifying pain and hunger cries in infants. The results indicate that the ensemble achieved 96.41% accuracy for pain and pain cry classification, while the SVM ensemble achieved 85.16% accuracy. For hunger and no classification, the NN ensemble achieved 78.61% accuracy. It also seems that the SVM ensemble had a variation of 2% to 3% in correct classification in each loop. Overall, the study suggests that NN perform better than SVM for this |
+| [7] | Cheng Li, *et al.* January 2021 | Faster RCNN and H | The high average precision indicates that the system is accurately able to classify different expressions and detect discomfort in both clinical and daily settings. This suggests that the system could potentially be useful for a variety of applications in healthcare and beyond
+
+# DATA AUGMENTATION TECHNIQUES
+
+Data augmentation methods for audio include such techniques as cropping out a portion of data, noise injection, shifting time, speed tuning, changing pitch, backing-ground noise and masking frequency.

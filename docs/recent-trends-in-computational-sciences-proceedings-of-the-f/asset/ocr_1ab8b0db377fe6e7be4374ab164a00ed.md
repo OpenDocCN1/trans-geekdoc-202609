@@ -1,0 +1,17 @@
+head movements and facial expressions in real-time, as well as subtle wrinkles, lighting, and albedo. The refinement of the shadow surface from the human face shape is also reliably using the new hierarchical reconstruction techniques. [4]
+
+From these papers, it can be inferred that a novel rigid stabilization method can be used via a dynamic rigidity approach to stabilize monotonic real-time face tracking given a realistic performance data set created using rigid expression parameters that are based on ground truth. In this study, Chen Cao, Menglei Chai, and colleagues make that an effective rigid tracking system uses a unique method for learning the parameters of dynamic rigidity using facial performance data set. [5]
+
+Guo Zhou, Beeler et al., show a monocular real time face tracking that blends an expressive region base model with the restrictions of features and dense image processing techniques. Also,the system is required to solve jaw pose which plays the main role in visual pipelines is achieved by the system by learning a non-linear mapping from the skin to the underlying jaw motion on a data set where the jaw poses have been acquired by direct observation, and to re-target the mapping to subjects. [6]
+
+Another approach by Jian Li, Zhengfei Kuang et al., show a self-supervised neural network to learn blends from a template of expressions which, a comprehensive library of over 400 facial scans consists of varying pore details, different expressions, and identities. [7]
+
+Shou-I Yu Hyun Park, Jae Shin Yoon et al., provide another approach to circumvent by using a novel network that can directly generate a face from a 2D picture, we can eliminate the need for specific input data. The domain mismatch between the labeled and uncontrolled states is addressed by self-supervised domain adaptation based on “consecutive frame consistency”. [9]
+
+Paula Toledo, Javier Rivera and Acosta, propose a technique for acquiring dynamic features of face appearance. This study presents a time-varying model of appearances and surface details that may be inferred from multiview pictures without the need for multiplexed lighting. However, due to the passive acquisition arrangement, the authors impose a few limits on the appearing estimation by modeling the time diffused reflectance as a shift in albedo rather than any underlying scattering factors. [10]
+
+# 3 SURVEY ON FACIAL ANIMATION
+
+Chen Cao, Agarwal et al., in their demonstrate how to use video to produce real-time face animation on a 3D avatar. In order to account for fluctuations caused by light and other elements frequently found in nature, such as facial hair growth, cosmetics, and skin imperfections, this approach utilizes a highly accurate custom face model. There are two steps in method, the first is to learn Real-time inference from face regression with room to avatar 3D forms and other textures solving the lighting model’s parameters analytically by brief using the model’s parameter pairs (rigid, non-rigid) and source photos. A real-time regression model is then improved using a free video. In the paper, it only models the face for animation but not the following features as hair, neck, or shoulder. [11]
+
+Cheng, Wu, Takashi Shirotake et al., propose an iterative learning framework for effective and precise tracking of face performance. This method alternates between the modeling step, which uses monitored meshes and contour maps to teach the deep learningbased statistical method, and the monitoring step, which takes the model’s predictions of
