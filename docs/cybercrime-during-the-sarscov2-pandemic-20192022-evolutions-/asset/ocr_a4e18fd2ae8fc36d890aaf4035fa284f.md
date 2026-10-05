@@ -1,0 +1,11 @@
+# A South African Perspective on Cybercrime During the Pandemic 187
+
+separate and unrelated. However, the Department of Justice incident also coincided with activity related to the case.
+
+Sophos indicates that 24% of organizations in South Africa responded that they have experienced ransomware attacks in 2020, with an average remediation cost of 450,000 USD (ZAR 6.7 million) [SOP 21, VAN 21]. In 2019, 24% of South African organizations reported ransomware incidents, with an average remediation cost of 266,817 USD [SOP 20]. Therefore, there was a 68.7% increase in the cost from 2019 to 2020; however, research by Mimecast shows that ransomware prevalence increased from 45% in 2019, to 47% in 2020 and to 60% in 2021. In 2020, 53% of ransomware victims paid the random, although 40% of those did not get their data back; in 2021, 35% paid the random and 43% of those did not recover their data. The average downtime due to a ransomware incident increased from 7 days in 2020 to 11 days in 2021 [MIM 21b, MIM 22]. The average random paid by South African organizations was ZAR 261,352 [MIM 21a].
+
+A survey by KnowBe4 and ITWeb in 2021 showed that 32% of respondents had been affected by ransomware, and 13% of those had experienced multiple incidents. In addition, a third of respondents who had suffered a ransomware attack reported data encryption, 7% experienced data encryption and exfiltration while 7% experienced all of the aforementioned as well as a distributed denial-of-service attack. While 85% of respondents indicated they were concerned about ransomware, 28% of respondents indicated their organizations were well prepared, 36% were prepared, 21% were somewhat prepared and 8% said they should be more prepared, and 7% said they were not prepared for a ransomware attack [KNO 21].
+
+In the analysis by Pieterse [PI 21], only one significant ransomware incident was listed prior to 2020; therefore, three major incidents in 2020 indicate a shift in cyber tactics targeting South Africa. Kaspersky indicated a 24% increase in ransomware in Q1 2021 to Q2 2021 [APO 21], indicating a further shift in tactics or increase in cybercrime.
+
+Overall, there are multiple indications of an increased cost of ransomware during the pandemic period, as well as an increase of remediation and downtime due to ransomware incidents. This therefore presents a rapidly

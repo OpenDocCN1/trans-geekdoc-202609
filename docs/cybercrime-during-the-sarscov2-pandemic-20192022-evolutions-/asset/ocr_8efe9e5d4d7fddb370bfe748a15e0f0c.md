@@ -1,0 +1,11 @@
+# Cybercrime During the SARS-CoV-2 Pandemic (2019-2022)
+
+The chapter investigates cybercrime activity during the Covid-19 pandemic from a South African perspective. There is disagreement whether South Africa saw an increase in cybercrime as reported by van der Merwe [VAN 20a], whether there was a shift in cybercrime tactics during the pandemic as indicated by Van Walt [VAN 20b]. The chapter provides exploratory research to investigate cybercrime trends in South Africa, and attempts to clarify the question of whether there was an increase, a shift in tactics or both. International rankings, national legislature and regulations and reports of incidents are considered to analyze the trends. A limitation experienced is the lack of formal reporting of cybercrime and cyber security incidents in South Africa. Therefore, the information required is obtained from news reports on incidents and industry reports and whitepapers illustrating trends.
+
+The chapter is structured as follows: the remainder of the introduction presents a background to South Africa’s experience of Covid-19 pandemic in section 6.1.1 and describes the methodology in section 6.1.2. The three focal aspects, the international rankings, the national legislation and regulations and the incident analysis, are presented in sections 6.2–6.4, respectively. Section 6.5 discusses and triangulates the outcomes from the analysis, and the chapter is concluded in section 6.6.
+
+# 6.1.1. Background to South Africa and the pandemic
+
+South Africa announced a state of disaster in March 2020 in relation to the pandemic [VAN 20a]. The national disaster regulations were strict: implementing curfews, limiting sales to only essential items and outlawing the spread of disinformation. The initial intent was to delay the increase of cases to allow the health sector to prepare for what was to come.
+
+The first wave peaked in mid-2020 and had subsided by August. The second wave occurred from December 2020 to January 2021, the third wave largely driven by the Delta variant occurred in mid-2021. At the time of writing, South Africa was experiencing its fourth wave (December 2021 to January 2022), driven by the Omicron variant. Figure 6.1 presents the new cases of Covid-19 in South Africa from January 2020 to December 2021, and the four waves can clearly be seen.

@@ -1,0 +1,11 @@
+# Has Covid-19 Changed Fear and Victimization of Online Identity Theft in Portugal?
+
+familiar attachments in e-mails that they have received, (4) clicked on any of the web-links in emails that they have received, (5) opened any file or attachment they received through their instant messengers, (6) clicked on a pop-up message or (7) visited risky websites. Answers were measured dichotomously (yes = 1; no = 0). After performing factorial analysis, dimensions were created: (1) interaction with strangers (items 1 and 2), (2) opening dubious links (items 3, 4 and 5) and (3) visiting risky contents (items 6 and 7).
+
+Online capable guardianship operationalization was also adapted from previous studies (Ngo and Moser 2011; Williams 2016). Thirteen items were used, asking participants to rate, with two options (0 = no; 1 = yes), “security reasons do you..." (1) avoid online banking, (2) avoid online shopping, (3) use only computer, (4) use an e-mail spam filter, (5) change security settings, (6) use different passwords for different sites, (7) avoid avoiding emails from people you do not know, (8) visit only trusted websites, (9) install and update antivirus software, (10) install and update antispyware software, (11) install and participate in public education workshops on cybercrime or (13) visits websites aimed at public education on cybercrime. A factorial analysis was also performed and four types of security behaviors were aggregated, namely, (1) avoiding behaviors (items 1 and 2), (2) protective software/hardware (items 9, 10 and 11), (3) protective behaviors (items 4–6) and, (4) information/education was included in order to measure participants’ perception of their computer skills, varying between one (1) and 3 (high).
+
+# 5.6.2. Results
+
+The sociodem characteristics of both samples (before and after the Covid-19 pandemic) are presented in Table 5.1.
+
+Table 5.2 presents the descriptive results of the dependent and independent variables considered in this study. The results show that victimization of OIT in the last 12 months significantly increased compared to the period before the Covid-19 pandemic crisis (p = .039). In fact, 8.5% of the individuals report to have been a victim of OIT, while 5.8% were victims of OIT in the pre-Covid-19 sample. The same tendency can be

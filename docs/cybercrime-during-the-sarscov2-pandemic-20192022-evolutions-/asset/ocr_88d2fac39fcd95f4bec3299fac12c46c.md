@@ -1,0 +1,13 @@
+# x Cybercrime During the SARS-CoV-2 Pandemic (2019-2022)
+
+time, constitute major challenges for supervisory, governmental, industrial, public or private bodies. The detection and recovery phases can be affected by those capacity limits, making systems non-operational, or exposing them to multiple risks.
+
+Network security and protection are considered a shared responsibility between security and law enforcement agencies, government bodies, businesses, organizations and individuals. Several social changes have taken place in recent years with the increasing dependence on and use of cyberspace. Policies and surveillance do not always keep pace with the advances in this space. This is especially true in the event of a crisis such as the experienced by all the States during the SARS-CoV-2 (or Covid-19) pandemic in 2020.
+
+During this crisis, cyber risks and cyber threats seem to have increased. Cyber risk is the product of the level of threat with the level of vulnerability. While cyber risk determines the likelihood of a successful cyber attack [SAN 22], cyberthreat represents a potential violation of security, which exists when there is a circumstance, capability, or event that can breach security and cause harm [SAN 22]. These two notions are fundamental, the cyberization that societies have experienced over the past 20 years has contributed to the complexity of cybersecurity issues. In 2001, U. Beck heralded that the social production of wealth is accompanied by the social production of risks [BEC 92]. The SARS-CoV-2 pandemic in 2020 and its following multidimensional crisis (social, economic, political, etc.) represent a contextual window, which perfectly illustrates the risk society that Beck referred to, featuring the multiplication and diffusion of systemic and cross-sector risks resulting from technological and industrial developments. Globalization and the expansion of cyberspace increase such risks [BEC 92]. During this period, cybercrime evolved in a context of globalization and hybridization.
+
+Cybercrime research primarily focuses on two broad categories of crime:
+
++   - Organized cybercrime, large-scale cyber attacks, could be part of the more general framework in the study of major crime. Jean-François Gayraud proposes four main characteristics for appraising “major crimes":
+
++   - i) major crime is chiefly manifest by polycriminality; major criminal groups are opportunistic and pragmatic in criminal markets, meaning that they do not necessarily develop a specialization of their criminal practices;
