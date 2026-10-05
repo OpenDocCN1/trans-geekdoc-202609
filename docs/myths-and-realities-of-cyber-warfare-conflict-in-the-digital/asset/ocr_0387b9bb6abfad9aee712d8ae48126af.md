@@ -1,0 +1,13 @@
+# The Attribution Paradox and Organizations’ Impact on Cyberwar
+
+networking programs to write that “the capitalists behaved like socialists while the socialists behaved like capitalists” through “unregulated competition among self-interested institutions” and Soviet apparatchiks.91 This interpretation confronts a common perception of the internet standing as the crowning achievement and proof of the capacity of a free society, and of the implicit theme that free societies out-innovate closed or autocratic ones. That interpretation is summarized and advanced by Alexander Klimburg.
+
+Only liberal democratic societies were able to give birth and nurture the Internet into its young adulthood, and … the ascent of cyberspace and the current governance of the Internet is one of the most perfect proofs that political freedoms do exist, and that they made a meaningful difference in the most practical and measurable of ways.92
+
+The complex arena of internet governance invites various interpretations.93 It is quite possible to understand the emergence of the internet reflecting U.S. support for research yielding progress toward functioning interconnection of the various “internets” into an overarching “Internet,” and to see U.S. government activities in the 1990s generally moving toward a degree of privatization that divested the government of its previous authority over cyberspace. This ran parallel to widespread expectations, evident in government policy and even appearing in academia, that the new millennium would reveal a quasi-utopian democratic-capitalist era, in which globalism would advance hand-in-hand with ever-wider access to information.
+
+Shifts from direct U.S. government authority to a multi-stakeholder system in which the U.S. government maintained an indirect presence can arguably be understood as an attempt to short-circuit the prospect of a strong precedent of national sovereignty in cyberspace and also a signal of the innovative benefits of a U.S. system that yielded the internet and opened it to the world. Indeed, instilling a cooperative zeitgeist in potential partners is likely to prescribe the modeling of these same values.94
+
+# SOVEREIGNTY, CENSORSHIP, AND A TRANSNATIONAL LANDSCAPE
+
+The internet has persuasively been likened to a “giant, globally distributed, always-copying machine, and digital systems collapse the distinction between transmitting, copying, and using information.”95 One might consider whether a similar effect might be envisioned between the tracking of data, its potential exploitation, and its censorship. As a transnational environment, another question quickly follows: whether such tracking or censorship activities can be kept to one’s own sandbox,

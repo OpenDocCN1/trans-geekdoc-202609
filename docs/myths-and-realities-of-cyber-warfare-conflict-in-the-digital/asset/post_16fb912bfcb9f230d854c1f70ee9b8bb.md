@@ -1,0 +1,92 @@
+
+# Notes
+
+- 27. Marks, “Unmasking the Spy”; Sanger, The Perfect Weapon, 213.
+- 28. Kello, “The Meaning of Cyber Revolution,” 32.
+- 29. Bill Gertz, Iwar: War and Peace in the Information Age (New York City: Threshold, 2017), 189.
+- 30. Thomas, Cyber Silhouettes, 279–80.
+- 31. Cheng, Cyber Dragon, 89.
+- 32. Sanger, The Perfect Weapon, 29.
+- 33. Tighe, “Cyber Warfare in the Maritime Domain.”
+- 34. Libicki, Cyberspace in Peace and War, 132.
+- 35. Matthew M. Roff, “Cyber Perfidery, Rise, and Deception,” Binary Bullets, 221.
+- 36. Libicki, Cyberdeterrence and Cybersecurity, 54–55, 155–56.
+- 37. Singer and Friedman, Cyberdeterrence and Cybersecurity, 153.
+- 38. Mazanec and Thayer, Deterring Cyber Warfare, 16.
+- 39. Clarke, Cyber War, 145.
+- 40. Mandel, Optimizing Cyberdeterrence, 158; Pope, A Better State of War, 47.
+- 41. Lord and Sharp, America’s Cyber Fight, 12; “Keynote by Mr. Bruce Schneier–CyberCon 2018.
+- 42. Gochhayev et al., Cyber Deterrence, 1.21.
+- 43. In a subsequent book published years later, Libicki reframed this by writing “that the popular nation often dominates cyberspace, countermeasures are often cheaper to develop than measures, what can make countermeasures expensive to test and distributing them” Libicki, Cyberdeterrence and Warfare, 32; Libicki, Cyberspace in Peace and War, 156.
+- 44. Weed, US Policy Response, 28.
+- 45. Brant, The Decision to Attack, 159.
+- 46. Brant, The Decision to Attack, 74.
+- 47. Hayden, on “Citizen Soldier.”
+- 48. Corera, Cyberspies, 284.
+- 49. Mandel, Optimizing Cyberdeterrence, 123.
+- 50. Conti and Raymond, On Cyber, 2.
+- 51. Regarding the declaration of capabilities and vulnerabilities, Gochhayev et al., Cyber Deterrence, 1.35. For a description of the psychological impact of a cyberweapon’s effectiveness, see Mandel, Optimizing Cyberdeterrence.
+- 52. Rid, Cyber War, 168.
+- 53. Libicki, Cyberspace in Peace and War, 61.
+- 54. Libicki, Cyberspace in Peace and War, 311, italics in original.
+- 55. Lee et al., “German Steel Attack”; Liptak, “Information Warfare and Cybersecurity,” 100–101.
+- 56. Jason Healy, on “Citizen Soldier.”
+- 57. Conti and Raymond, On Cyber, 139, 257.
+- 58. Jasper, Strategic Cyberdeterrence, 113.
+- 59. Arguably, official characterizations caused further consternation. Director of National Intelligence James Clapper refused during his testimony to Congress to refer to the OPM hack as an “attack,” specifically to point instead being an intelligence action formally deemed acceptable rather than illicit—and in contrast to OPM’s handling of compromised persons’ identification, which was handled as it were the result of cybercrime. Sanger, The Perfect Weapon, 116–17.
+- 60. Libicki, Cyberspace in Peace and War, 24, 154, 163.
+- 61. Libicki, Cyberspace in Peace and War, 78.
+- 62. Libicki, Cyberspace in Peace and War, 25, italics in original.
+- 63. Dorothy Denning, “Cyberwarriors: Activists and Terrorists Turn to Cypace,” Harvard International Review 23, no. 2 (Summer 2001): 74; Libicki, Cyberspace in Peace and War, 25, 36.
+- 64. Valentiniano and Ryan C. Mann, Cyber War versus Realities: Cyber Conflict in the International System (Oxford: Oxford University, 2015), 220; Blunden and Cheung, Behind a Pale Face, 422.
+- 65. Jones, “Discussion.”
+- 66. Mandel, Optimizing Cyberdeterrence, 100.
+- 67. Yanakogeorgos and Adam B. Lowther, eds., Conflict and Cooperation in Cyberspace: The Challenge to National Security (Boca Raton: Taylor & Francis, 2014), 142.
+- 68. The Russo-German Cyber War 2008: The Role of Cyber Attacks (Fairfax: Armed Forces Communications Association), 23; Libicki, Cyberdeterrence and Cyberwar, 137.
+- 69. Conti and Raymond, On Cyber, 47; Mandel, Optimizing Cyberdeterrence, 154.
+- 70. Conti and Raymond, On Cyber, 228.
+- 71. Thomas, Cyber Silhouettes, 112; Cheng, Dragon, 91; Conway, “Reality Check,” Information Warfare and Cyberwar, 94.
+- 72. Brant, The Decision to Attack, 58.
+- 73. Tighe, “Cyber Warfare in the Maritime Domain.”
+- 74. Kello, “The Meaning of Cyber Warfare,” 19; Libicki, Cyberspace in Peace and War, 324–29.
+- 75. Chris Wells, “2012: Cyber Attacks: The Operators Perspective,” U.S. Naval College, October 10, 2012. https://www.youtube.com/watch?v=pO1aItfKc
+- 76. Conti and Raymond, On Cyber, 192.
+- 77. Clarke, Cyber War, 79.
+- 78. Rid, Cyber War, 79.
+- 79. David P. Fiddler, “The Path to Less Lethal and Destructive War?” International Humanitarian Law, 324.
+- 80. Pope, A Better State of War, 60.
+- 81. Jenkins, “Cyberfare as Ideal War,” 99; Matthew Beard, “Beyond Toll: The Code of the Warrior?” Binary Bullets, 155; Daphne Caffetti et al., “Immune from Cyberfire? The Psychological and Physiological Effects of Cyberwar,” Binary Bullets, 172.
+- 82. Rabbin and Yoo, Striking Power, 55.
+- 83. George A. Lucas, “Emerging Norms for Cyberwar,” Binary Bullets, 30.
+- 84. Martin C. Libicki, “Sub Rosa Cyber War,” The Virtual Battlefield, 53.
+- 85. Corera, Cyberspecies, 298; Lord and Sharp, America’s Future, 23.
+- 86. Conti and Raymond, On Cyber, 45.
+
+# CHAPTER IV
+
+- 1. Brant, The Decision to Attack, 87, 159; Mandel, Optimizing Cyberdeterrence, 5; Gertz, Iwar, 161.
+- 2. Emilio Iasiello, “Is Cyber Deterrence an Illusory Course of Action?” ASPJ Africa & Francophonie 8, no. 1 (2018), 39.
+- 3. Corera, Cyberspies, 181.
+- 4. Christopher A. Ford, “Here Come the Cyber-Privates,” Hudson Institute, July 19, 2010. https://www.hudson.org/research/9112-here-come-the-cyber-privateates
+- 5. Bruce Schneider, “How to Survive a Cyberattack, Bruce Schneider on Cyberwar in the 21st Century,” Hidden Forces, September 18, 2018, https://www.youtube.com/watch?v=Oja9ngwRg
+- 6. Nic Mocusu and Stanislav Secriu, “Russian—From Digital Outlier to Great Superpower,” Hacks, Leaks and Disruptions, 117.
+- 7. Libicki, Cyberspace in Peace and War, 37.
+- 8. Libicki, Cyberspace in Peace and War, 183.
+- 9. Lee, “German Steel Mill Attack,” 5.
+- 10. Thomas, Cyber Silhouettes, 278. https://www.youtube.com/watch?v=pOa7fKZak
+- 11. Donald Boyd, “ILD 2012 Panel Discussion,” https://www.youtube.com/watch?v=pOa7fKZak
+- 12. Wennart, “Strategic Cyber Deterrence,” 208.
+- 13. Libicki, Cyberspace in Peace and War, 214; Herpig and Reinhold, “Spotting the Bear,” 37.
+- 14. Guitton, Inside the Enemy’s Computer, 14–50.
+- 15. Yanakogeorgos and Lowther, Conflict and Cooperation, 55.
+- 16. Neil C. Rowe, “The Attribution of Cyber Warfare,” Cyber Warfare, 61–72; Nazario, “Politically Motivated Denial of Service Attacks,” 166.
+- 17. Zetter, Zero Days, 307.
+- 18. Mandel, Optimizing Cyberdeterrence, 204; Conti and Raymond, On Cyber, 243; Rid, Cyber War, 152; Jasper, Strategic Cyberdeterrence, 42.
+- 19. Guitton, Inside the Enemy’s Computer.
+- 20. Yanakogeorgos and Lowther, Conflict and Cooperation, 58, 71; Yanakogeorgos, Strategies for Resolving the Attribution Challenge, 15, 27, 65.
+- 21. Yanakogeorgos and Lowther, Conflict and Cooperation, 202.
+- 22. Petriarakos, War in 140 Characters, 171–90. Koen Gijs, a Dutch research fellow at the University of Oxford, has suggested that improved attribution may not deliver better enforcement of international behavior: “There is hard evidence that the rocket [used to shoot down MH-17] came from Russia. Russia denies [it]; And what’s going to happen–the international community is not doing much; two nations have made Russia liable for the activity, Australia and the Netherlands... And that 300 people called rather than with attribution of a non-cyberattack. Koen Gijs, cited, in “Panel: Defending a Nation against Cyber Attack—CyCon 2018,” June 20, 2018, https://www.youtube.com/watch?v=SM2hQicYOE.
+- 23. Atwan, Islamic State, 17, 29, 62.
+- 24. Blunden and Cheung, Behold a Pale Force, 94.
+- 25. Andrei Soldatov and Irina Borogan, The Red Web: The Kremlin’s War on the Internet (Net: Public Affairs, 2015); Andrei Soldatov and Irina Borogan, “Russia’s Approach to Cyber: The Best Defense is a Good Offensive,” “Hacks, Leaks and Disruptions,” 23.
+- 26. Libicki, Cyberspace in Peace and War, 248.
