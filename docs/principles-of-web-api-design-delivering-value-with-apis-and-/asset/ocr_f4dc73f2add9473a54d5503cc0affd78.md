@@ -1,0 +1,3 @@
+# Summary
+
+Teams can benefit from shifting the API design approach from strictly request/response APIs to thinking in terms of how APIs offer both synchronous request/response operations and asynchronous events. These events enable the API to push notifications to other teams that can build entirely new capabilities and perhaps product offerings on top of the original API. The result will be increased innovation and more transformative APIs as part of an API product or API platform initiative.

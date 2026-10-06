@@ -1,0 +1,3 @@
+# Summary
+
+HTTP is a powerful protocol with a robust set of capabilities, including some that are less known. Using content negotiation allows API clients and servers to agree on a supported media type. Cache control directives provide client-side and intermediary caching support. HTTP preconditions can be used to determine if expired caches are still valid while protecting resources from overwriting changes. By applying these techniques, teams are able to build robust APIs that drive complex applications in a resilient and evolvable way.

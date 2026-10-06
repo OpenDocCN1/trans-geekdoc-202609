@@ -1,0 +1,11 @@
+# Share: Communicating the EventStorming Session
+
+Achieving a successful EventStorming session requires preparation and effective communication before a session, and after the start of a session, after has been completed. The following are suggestions for facilitators to communicate effectively via email, video, and to face before the session:
+
++   - Product management attendance is essential. Insist that product owners and product managers attend. A developer-heavy session will focus on how things work today, existing systems, and delivering the status quo. In addition, alignment will occur, rendering an incorrect understanding of the domain and desired outcomes.
+- Share the purpose and scope of the session. If the purpose and scope are not shared ahead of time, many will be confused or fail to participate. Communicating the purpose and scope will also ensure the right people are in the room, which is key for EventStorming to be most effective. Establish expectations initially and reinforce at the start of the session.
+- Establish mutual expectations. Confusion or unmet expectations will lead to an ineffective session or a poor view of EventStorming. Establish expectations regarding the process, desired outcome, and design assets to be produced. Reiterate these at the start of the session to reinforce the goals and establish a proper mindset.
+- Ensure that API design has not started yet. Teams that have already started API design will likely ignore the output of the session in favor of moving forward with the current design. The session should be used to guide vision with immediate execution. Teams unwilling or unable to incorporate the output of the session will likely fail to obtain the highest possible value of an EventStorming session. Ensure team buy-in from everyone before proceeding.
+- Reinforce how EventStorming fits into the overall API design. Share a progress indicator or revisit the overall process often to demonstrate where the session fits into the bigger picture. Remind the audience that EventStorming produces valuable insights that will inform the upcoming API modeling and design steps. Otherwise, the session may seem like busy work.
+
+At session kickoff, review the items once more. Reviewing everything the day of the session helps to bring everything top-of-mind and sets the expectations for the session.
