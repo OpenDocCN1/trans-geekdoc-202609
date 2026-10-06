@@ -1,0 +1,68 @@
+
+
+## 参考文献
+
+- 71. J. Hahn, 非凸优化中的无导数有根树。Pure Appl. Funct. Anal. 3, 603–623 (2018)
+- 72. J. Hahn, 非线性优化理论导论，第4版. (Springer, Cham, 2020)
+- 73. J. Hahn, 非凸集优化中较序关系的刻画。J. Opt. Theory Appl. 193, 523–544 (2022)
+- 74. J. Hahn, Bishop-Phelps定理与标量化泛子的统一方法。J. Appl. Numer. neural Networks. 5, 5–25 (2023)
+- 75. J. Hahn, T.D. Ha, 集优化中的新序关系。J. Opt. Theory Appl. 148, 209–236 (2011)
+- 76. J. Hahn, A.K. Khan, 具有序结构的非线性向量优化的条件。Pure Appl. Funct. Anal. 6, 1317–1331 (2021)
+- 77. J. Hahn, M. Knossalla, 散凸非线性优化的拉格朗日。J. Nonlinear Var. Anal. 2, 317–342 (2018)
+- 78. B. Jiménez, N. Novo, V. Alicher, 基于定向方向及其与其它标量化关系的集分解法。Optimization 67, 2091–2116 (2018)
+- 79. B. Jiménez, N. Novo, V. Alicher, 通过定向距离的扩展刻画集关系。Math. Methods Oper. Res. 99, 89–115 (2020)
+- 80. F. Hahn, 集优化中的带不等式极值问题，收录于《Essays, Courant Anniversary Volume》，K.O. Friedrichs, O.E. Neugebauer, J.J. Stokes 编 (Interscience, New York, 1948)
+- 81. N. Khanna, K. Desale, R. More, C. Palghand, 使用神经网络识别手写数字：综述，收于计算智能博士研讨会论文，A. Hahn, D. Gupta, V. Kansal, G. Fortune, A.E. Hassan 编 (Springer, Singapore, 2023), pp. 783–792
+- 82. S. Kan, Y. Cen, Y. Li, Madeneovic, Z. He, 无监督深度学习的相对分析与优化，收于2021 IEEE/CVF 计算机视觉与模式识别会议 (CVPR)(2021), pp. 13994–14003
+- 83. D. Karimi, S. ElSource, 卷积神经网络减少医学图像分割中的豪夫距离。IEEE Trans. Imag. 39, 499–513 (2020)
+- 84. M. Kelly, R. Longjohn, N. Kotter, UCI机器学习库，cs.uci.edu. https://archive.ics.uci.edu
+- 85. A.A. Hahn, B. Adam: 一种随机优化方法，收于神经信息应用专题会议 (Springer, Berlin, 2015)
+- 86. D.P. Kingma, J.L. Ba, ICLR 2015, pp. 1–15. https://doi.org/10.48550/arXiv.1412.6980
+- 87. N. Klinger, 深度学习：理解和使用AI模型的终极指南 (2024)，2023年11月13日访问。https://arxiv.org/abs/ml-ai-models
+- 88. E. König, M.A. König, 通过非线性线性传递集序关系：完全刻画。Optimization 65, 1805–1827 (2016)
+- 89. E. König, T.T. Le, C. Tanner, J.S. Xiao, 针对方向的集优化函数方法新方法。J. Appl. Opt. 301–326 (2017)
+- 90. E. König, T.T. Le, C. Tanner, 针对方向结构的集优化广义标量化方法。J. Math. 46, 95–125 (2018)
+- 91. D. Kuroi, 集值优化的自然标准，手稿（日本志南大学，1998）
+- 92. D. Kuroi, T. Tanaka, T.D. Ha, 关于集值映射的凸性。Nonlinear Anal. 30, 1487–1496 (1997)
+- 93. P. Lancaster, 参数矩阵的特征值。Numer. Math. 6, 377–387 (1964)
+- 94. N. Roux, M. Schmidt, F. Bach, 针对有限集的指数级随机梯度法，收于《神经处理进展》，F. Pereira, C. Bottou, Q. Weinberger 编
+- 95. N. Le, M. Schmidt, F. Bach, 针对拟合集的指数级随机梯度法，arXiv (2023)。2023年8月28日访问。https://arxiv.org/abs/1202.6258
+- 96. C. Lémer, 柯西与梯度法。Doc. Math. Extra ISMP, 251–254 (2012)
+- 97. J. Liu, 576：随机“下降”算法，罗彻斯特大学计算机科学系 (2015)
+- 98. L. Liu, Y. Jiang, 连续性模数与利普希茨优化。J. Math. Anal. 46, 239–251 (2018)
+- 99. K. T. Löner, 单调函数。Math. Z. 38, 177–216 (1934)
+- 100. J.R. Magnus, 关于特征值和特征向量。Eigen Theory, 1, 179–191 (1985)
+- 101. MathWorks, 电路中的AI，MathWorks。2023年11月26日访问。https://www.mathworks.com/matlab/new
+- 102. W.S. McCulloch, A. Pitts, 神经细胞的逻辑计算。Bull. Math. 5, 115–133 (1943)
+- 103. P. Helhitz, 带约束数学问题的稳定性与约束限定条件。Math. Program. 181, 149–186 (2020)
+- 104. Y. Jénérou, I.M. Ameri, 径向距离的匹配森林分析。Int. Geogr. Inf. Sci., 37, 438–475 (2023)
+- 105. R. Merritt, 什么是Transformer？NVIDIA，2023年11月28日访问。https://blog.nvidia.com/blog/what-is-transformer-model/
+- 106. T.Szkin, 二次型。单调算子的固定点。Russian Acad. Sci. 41, 489–491 (1984)
+- 107. Z.Sigmanidze, N. Wianka, J. Aghagan, S. Marshall, 深度学习实践与研究趋势比较，收于第2届计算科学与技术会议 (INCCOST 20) (2020)，pp. 124–133
+- 108. W. Oetti, 涉及映射的规划最优性，收于《现代应用数学、优化与运筹学》，B. Kort (North-Holland, Amsterdam, 1980)
+- 109. A. Oppermann, 神经网络中的激活函数：Sigmoid，Rel.Utoermann。2023年7月20日访问。https://oppermann.com/de/aktivierungsfunktionen/
+- 110. V. Pareto, 政治经济学。Societa Editrice Libaria, Milano (1906)。V. Pareto 著，A.S. Schwer 译 (Augustus M. Kelley, New York, 1971)
+- 111. R.R. Phelps, 拿赫空间支撑及其应用。Acad. Math. 13, 1–19 (1961)
+- 112. C. Plnider, X. Wang, 凸函数的极小值。Convex Anal. 23, 877–892 (2016)
+- 113. D. Pompeiu, 多元函数的稳定性（博士论文） (Gauthier-Villiers, Paris, 1905); Ann. Fac. Ecole. 7, 264–315 (1906)
+- 114. C.R. Qi, H. S. Ku, L. Gui, PointNet：3D分类与分割的深度学习，收于2017 IEEE 计算机视觉与模式识别会议 (2017), pp. 77–85
+- 115. M. Raydan, 最速梯度法。IMA J. Anal. 13, 321–326 (1993)
+- 116. M. Raydan, 无约束最小问题的梯度法。SIAM J. Opt. 7, 26–33 (1997)
+- 117. B. Ricci, 极大极小理论及其应用的进展，收于《帕累托优化、博弈论与均衡》，A. Chinchul, P.M. Pardalos, L. Pitouls (Springer, New York, 2008), pp. 23–55
+- 118. H. Robbins, S. Monro, 随机近似法。Ann. Math. Statist., 400–407 (1951)
+- 119. J. Rodriguez, 人工智能学习类型，Medium。2023年11月11日访问，https://medium.com/types-of-artificial-intelligence-models
+- 120. H.H. Rosenberg, 求函数最大值的自动方法。Comput. J. 3, 175–180 (1960)
+- 121. S. Schaffer, 全局优化 - 随机方法 (Springer, New York, 2012)
+- 122. M. Schmidt, N. Leu, F. Bach, 使用随机平均梯度最小化函数，arXiv (2023)。2023年8月8日访问。https://arxiv.org/abs/1309.238
+- 123. M. Schmidt, N. Leu, F. Bach, 随机平均梯度，针对方向的集优化函数方法新方法。J. Appl. Opt. 301–326 (2017)
+- 124. E. König, T.T. Le, C. Tanner, 针对方向结构的集优化广义标量化方法。J. Math. 46, 95–125 (2018)
+- 125. E. König, T.T. Le, C. Tanner, 通过非线性线性传递集序关系：完全刻画。Optimization 65, 1805–1827 (2016)
+- 126. E. König, T.T. Le, C. Tanner, J.S. Xiao, 针对优化中的集函数方法新方法。J. Appl. Opt. 301–326 (2017)
+- 127. E. König, T.T. Le, C. Tanner, 针对方向结构的集优化广义标量化方法。J. Math. 46, 95–125 (2018)
+- 128. D. Kuroi, 集值优化的自然标准，手稿（志南大学，日本，1998）
+- 129. D. Kuroi, T. Tanaka, T.D. Ha, 关于集值映射的凸性。Nonlinear Anal. 30, 1487–1496 (1997)
+- 130. P. Lancaster, 参数矩阵的特征值。Numer. Math. 6, 377–387 (1964)
+- 131. C.R. Qi, PointNet：3D分类与分割的深度学习，收于2017 IEEE 计算机视觉与模式识别会议 (2017), pp. 77–85
+- 132. M. Raydan, 最速梯度法。IMA J. Anal. 13, 321–326 (1993)
+- 133. M. Raydan, 无约束最小问题的梯度法。SIAM J. Opt. 7, 26–33 (1997)
+

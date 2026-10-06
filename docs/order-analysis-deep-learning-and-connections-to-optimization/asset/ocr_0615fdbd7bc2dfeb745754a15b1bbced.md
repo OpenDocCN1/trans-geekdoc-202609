@@ -1,0 +1,11 @@
+# Preface
+
+This book provides an introduction to the two important areas of order analysis and deep learning from a mathematical perspective. The focus is on the connection to optimization, which forms a bracket as a key technology driver. Specifically, this means that applications of order analysis in optimization is a central point and that optimization is an essential tool in deep learning.
+
+# Order Analysis
+
+Algebraic order theory and analysis are important fields in mathematics with only a few overlaps. If the order theory fulfils an appropriate condition, then order analysis is a suitable tool for the treatment of order theory problems with methods of analysis. Order analysis summarizes methods of analysis that can be used to address problems in order theory. The term order analysis is used in this sense for the first time. However, in the context of mathematical modelling it used earlier. And in engineering, order analysis means the analysis of vibration signals and noise from rotating machinery. In the field of unsupervised deep metric learning, Kan, Cen, Li, Mladenovic, and He [82] used relative orders to decide which images belong to a certain class or not; this so-called relative order analysis is then combined with performance optimization of metric learning.
+
+The main approach in order analysis is the fact that an inequality in order theory often be replaced by an inequality in R, making functional analysis the appropriate tool for studying problems in order theory. This book introduces order analysis and describes important applications in optimization. These applications include nonlinear optimization as well as vector and set optimization with fixed and variable order structures. Problems of so-called conditional optimization can be treated. In these optimization-related applications, order analysis can also be applied to problems in economy and finance.
+
+The connection between order theory and analysis is given by a certain functional representing a negative convex cone in a real space as a sublevel set of this functional with respect to the level 0. Since a negative convex cone equals the set of all negative elements (including zero) of a real line space with respect to a
