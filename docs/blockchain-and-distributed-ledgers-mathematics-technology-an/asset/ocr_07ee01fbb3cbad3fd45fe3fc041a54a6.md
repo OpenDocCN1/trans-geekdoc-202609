@@ -1,0 +1,17 @@
+# Chapter 8 Central Digital Currencies and Stablecoins | 249
+
+# 8.4 Stablecoins
+
+# 8.4.1 Background
+
+Since none of the existing blockchain ecosystems have banks worthy of the name, they have to rely on algorithmic monetary policies for cryptocurrency creation. Regardless of their creators' statements, they resurrect, in one way or the other, old ideas of central planning, without fully recognizing the consequences. More important and counterintuitive is that emerging DLT-based cryptoんですよ suffer from the same drawbacks as the current banking system because they continue commingling payments and monetary creation (both primitive and ill-advised).
+
+Bitcoin, Ethereum, and Ripple have tried to play the role of money but have ended up as a new speculative asset class. Despite their impressive technical achievements, existing crypto cannot replace money for at least four reasons. First, they are not stable enough, even for short transaction times, which prevents their use for commerce. Recent evidence shows that all decentralized crypto coins exhibit extreme volatility and thus are unsuitable for use as a de facto medium of exchange. Second, cryptocurrencies are operationally inconvenient for an average economic agent, which is a prerequisite for their wide adoption as a means of payment. Realistically, for such an agent, the only way to use cryptocurrencies is to buy them on a centralized exchange, which is both costly, inconvenient, and adds rather than removes an extra intermediary. Third, as already mentioned, most crypto protocols' built-in monetary policies are simple and inflexible. Some observers suggest this as an advantage, see Chapter 3. However, historical experience suggests and shows that having a fixed supply of money results in numerous economic distortions, of which are hard to anticipate in advance. Fourth, as explained in Chapters 5–7, cryptocurrencies are not truly decentralized while pretending to be so.
+
+Not surprisingly, the status quo in the cryptocurrency land is less than satisfactory. As a result, developers and entrepreneurs directed much attention to designing stable crypto coins, which can play the role of tokenized cash and be viewed as private versions of CBDCs. Stablecoins come in several flavors. We give a brief discussion of the most visible types.
+
+An adequately designed stablecoin can serve as the cornerstone of a fully digital financial ecosystem, facilitating fast payments on a commercial scale with minimal reliance on the existing banking system, yet doing so in a regulatory-compliant fashion. According to Sila (2018) and Hadorno et al. (2019a), such a coin addresses the gap left in the open access Transmission Control Protocol (TCP) and the Internet Protocol (IP), also known as TCP/IP, namely, the lack of specifications for money.
+
+It is easy to see why stablecoins are necessary within the cryptocurrency universe. The vast majority of transactions occur on exchanges not fully integrated with the existing banking system. Accordingly, having a stable token to quickly and cheaply get in and out
+
+> ¹An aphorism by Viktor Chernomyrdin (1938–2010), a former Prime Minister of Russia, jumps to mind. "We wanted it as good as possible, but it turned out as always."

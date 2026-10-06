@@ -1,0 +1,16 @@
+# Chapter 9 Wallets and Key Management | 285
+
+requests, were compromised and instantly preempted by the attacker. Other wallets subject to higher security standards, less automation, and more isolation from public networks, were seemingly unaffected.
+
+# 9.6.4 The QuadrigaCX fraud
+
+At the same period, the bankruptcy of another exchange, Quadriga CX, provides a painful demonstration of what a central point of trust can lead to. On February 5, 2019, Canadian exchange Quadriga CX goes down owning 76,000 users around CA$215 million in total, or US$163 million at the time. The wife of the founder Gerald Cotton claims that her husband in a trip to India and that he knows the password allowing the decryption of the Quadriga main vaults. The valuable coins are still under the control of the exchange, but with no knowledge of the password, they cannot be accessed and distributed to their clients. The specific conditions of Mr. Cotton's death, or the reasons of his trip to India, remain uncommunicated. If this alleged situation is already a powerful example of the risks of centralized trust: for a company, for reasons or not, is he the only individual with access to the reserves of a whole company managing millions of dollars. Despite his apparent intentions, this man may be subject to memory loss, health issues, an accident, or he could unexpectedly die as he allegedly died. These possibilities in themselves are enough to consider alternative implementations of a wallet.
+
+However on June 19, 2019, the exchange's court-appointed monitor Stikeman Elliott releases an interim report on the investigations into the business and affairs of Quadriga CX and its previous director Mr. Cotton. Their preliminary conclusions identify the principal concerns, which affected the facing status Quadriga CX and its users. We summarize the executive summary as published by the authors of the report below:
+
++   (1) The company activities were largely directed by a single individual, and as a result, typical segregation of duties and internal controls did not appear to exist; identified and appear to be no segregation of assets between Quadriga CX's funds and user funds. Funds received from and held by Quadriga CX appear to have been used by the company for a number of purposes other than to fund withdrawals.
+(2) Users' cryptocurrencies were not maintained exclusively in Quadriga CX's wallets. Significant volumes were transferred off the platform to competitor exchanges into personal accounts controlled by Mr. Cotton. It appears that users' cryptocurrencies were traded on these exchanges and in some circumstances used as security for a margin trading account established by Mr. Cotton. Trading losses incurred and incremental fees caused by exchanges may have adversely affected the company reserves.
+
+What started as a loss of access to the wallet actually transformed into another elaborate fraud with Ponzi characteristics. Mr. Cotton apparently used his clients' deposits to trade for his own account long before the announcement of his alleged death.
+
+His ability to defraud his customers is in fact very little to do with the specifics of cryptocurrencies: similar fraudulent activities may have been —and have been —applied in

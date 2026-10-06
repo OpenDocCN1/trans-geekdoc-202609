@@ -1,0 +1,67 @@
+
+
+# 参考文献 | 409
+
+- Bene, J. and Kumhof, M. (2012). 重新审视芝加哥计划。华盛顿特区：International Monetary。
+- Beniiche, A. (2020). 区块链预言机研究。arXiv预印本，arXiv:2004.07140。
+- Berenten, A. and Schär, F. (2017). 比特币、区块链与加密货币：全面介绍；汉堡：BoD, Nordostadt。
+- Bernanke, B.S. and Blinder, A.S. (1998). 信贷、货币与总需求 (No. w2534)。剑桥：美国经济研究局。
+- Bernstein, D.J., Chow, T., Chuangsiatap, C., Hüsing, A., Lambooij, E., Lange, T., Niederhagen, R. and Van Rendelaela (2015). 管理货币曲线：面向黑帽的论文。在：安全标准研究国际会议。冠军市；第 109–139 页。
+- Bernstein, D.J., Duif, N., Lange, T., Schwabe, P. and Yang, B.Y. (2012). 高速安全签名。《密码工程学杂志》，2(2)，第 77–89 页。
+- Bheemiah, K. (2017). 区块链替代方案：重新思考宏观政策和经济理论。纽约：Press。
+- Bitoria, R. (2020). 解决持续的比特币批评问题。在：数字资产论文。
+- Bais, B., Biseaire, C., Bouvard, M. and Casamatta, C. (2019). 区块链民俗理论。《金融研究评论》，32(5)，第 1662–1715 页。
+- Bible, W., Raphael, J., Taylor, P and Valle, I. (2017). 区块链技术及其审计和保证性能的潜在影响。[在线] 杜伦：美国注册会计师协会。获取地址：https://www.aicpa.org/content/dam/acpa/pasteras/assuranceservices/downloadabledocuments/blockchain-technology-and-potential-impact-on-audit-and-assurance-performance.pdf。
+- Bias, G., Levine, N. and Thibodeau, D. (2018). 使用经济风险模拟加密货币中的矿工哈希率分配。在：数据管理、加密货币与区块链技术。钱姆：Springer，第 155–172 页。
+- Bistarelli, S., Mazzatte, G., Micheletti, Mostarda, L. and Tiezzi, F. (2019). 以太坊智能合约和操作分析。在：高级信息网络与应用国际会议。钱姆：Springer，第 546–558 页。
+- Black, F. (1987). 具有双重反馈和近零储备的金标准。在：Black, F., 编辑，《业务周期与均衡》。霍霍肯：Wiley & Sons，第 115–120 页。
+- Blandin, A., Cloots, A.S., Hussain, H., Rauchs, M., Saleuddin, R., Allen, J.G., Zhang, B.Z. and Cloud, G. (2019). 全球加密货币监管研究。在：剑桥大学法学论文。
+- Bohden, H. A. 《美国银行史：国家建设时期的金融市场与经济发展》。剑桥：大学出版社。
+- Bodo, D. and Giannopoulos, A. (2019). 技术去中心化的逻辑：分布式账本技术的案例。在：M Ragna and Gestefanis, 编辑，《区块链与 Web 3.0：社会、经济与拓扑挑战》。Routledge，16 页。
+- Bordo, M.D. and Levin, A.T. (2017). 中央银行数字货币与货币政策的未来。在：工作论文 23741。剑桥：美国经济研究局。
+- Borogo, E., Casilli, S., Cillo, A., Masciando, D. and Rabitti, G. (2018). 加密货币、央行数字现金、传统货币：隐私重要吗？在：工作论文 1895 号。米兰：国际市场银行金融与监管应用研究中心，博康尼大学。
+- Bovet, A., Campajola, C., Lazio, J.F., Mottes, Pozzana, I., Restocchi, V., Sagesse, P., Vallarano, N., Squartini, and Tesso, C.J. (2018). 基于网络的比特币泡沫指标。arXiv预印本，arXiv:1805.04460。
+- Bowman, A. W., and Azzalini, A. (1997). 用于数据分析的应用平滑曲线技术。纽约：牛津出版社。
+- Box, G.E., Jenkins, G.M. and Reinsel, G.C. (2011). 时间序列分析：预测与控制。霍霍肯：John Wiley & Sons。
+- Boyle, T. (2000). 公共交易库 (PTR) 项目。在：白皮书。GL Dialtone。
+- Brands, S. (1993). 带服务器的不可追踪离线现金。在：年度国际密码会议。柏林，海德堡：Springer，第 302–318 页。
+- Brauer, F., Driessche, P. and Wu, J. (2008). 数学讲笔记。柏林：Springer。
+- Brown, E. (2000). 椭圆曲线的三种方法。《学院杂志》，31(3)，第 162–172 页。
+- Brown, R.G., Carlyle, J., Grigg, I. and Hearn, M. (2016). Corda：简介。在：Corda 白皮书。
+- Brown, R.G., Carlyle, J., Grigg, I. and Hearn, M. (2016). Corda：简介。在：第三届，8月1日，第 15 页。
+- Burniske, C. and Tatar, J. (2017). 加密资产：创新投资者的比特币及其他指南。纽约。
+- Buterin, V. (2013). 下一代智能合约和去中心化应用平台。在：白皮书。获取地址：https://github.com/ethereum/
+- Buterin, V. (2016). 链互操作性。在：研究论文。
+- Cachin, C. and Vuković, M. (2017). 区块链协议。arXiv预印本，arXiv:1707.01873。
+- Cai, C.W. (2019). 三记账法：我们走了多远？在：会计与金融，doi:10.1111/acfi.2556。
+- Campbell-Verdyn, M. (2018). 加密货币与全球反洗钱治理。《犯罪、法律与社会变化》，69(2)，第 283。
+- Casino, F., Dasakis, T. and Patsakis, C. (2019). 基于区块链的应用系统综述：现状与开放问题。《电信与信息学》，36，第 55–81 页。
+- Castro, M. and Liskov, B. (1999). 实用拜占庭容错。在：设计与实现第三研讨会。纽约：计算机协会，第 173–186 页。
+- Catalani, C. and Gans, J. (2016). 区块链的经济学。在：NBER 工作论文 22952。
+- Certicom (2009). SEC：椭圆曲线密码。[在线] 获取地址：https://www.sec.org/sec/
+- Chan, S., Chu, J., Nagararaj, S. and Osterheld, J. (2017). 加密货币的统计分析。《风险与管理杂志》，10(2)，第 12–34 页。
+- Chase, B. and MacBrough, E. (2018). XRP 协议分析。arXiv预印本，arXiv:1802.0742。
+- Chaudhry, N. and Yousaf, M. (2018). 区块链中的共识算法。在：2018 第12 届开源系统与技术国际会议 (ICOSST)，IEEE。
+- Chaum, D. (1983). 用于匿名支付的盲签名。在：密码学进展。波士顿：Springer，第 199–203 页。
+- Chaum, F., Fiat, and Naor, M. (1988). 不可踪电子现金。在：密码学的理论与应用。纽约：Springer，第 319–327 页。
+- Chen, T., Zhu, Y., Li, Z., Chen, J., Luo, X., Lin, Z. and Zhange, X. (2018). 通过图分析理解以太坊。在：IEEE INFOCOM 2018 计算机通信会议。IEEE，第 1484–1992 页。
+- Chu, J., Nadarajah, S. and Chan, S. (2015). 比特币汇率的统计分析。《PLOS ONE》，10(7)，e013678。
+- Chu, S. and Wang, S. (2018). 区块链去中心化。arXiv预印本，arXiv:1811.02937。
+- Clanch, M. (1979). 从记忆到记录。第3版。Oxford：Blackwell。
+- Clark, D. (1988). DARPA 协议的设计哲学。在：通信架构与协议研讨会。纽约：计算机协会，第 106–114 页。
+- Cochrane, H.J. (2014). 通向无挤兑金融系统。在：M.N. Bailey and J.B. Taylor 编辑，《跨越鸿沟：金融危机的新视角》。斯坦福：大学，第 214–215 页。
+- Collomb, A. and Sok, K. (2016). 区块链/分布式账本技术 (DLT)：对金融部门的影响？《数字经济杂志》，卷103。获取地址：https://search.proquest.com/openview/b5f5b4a9be78fd54d74
+- Conti, M. (2018). 分布式节点账户平台。美国专利申请 15/946,381。
+- Conti, R. (1987). 收敛熵估计。《信息论杂志》，24(4)，第 413–421 页。
+- Crisp, R. (2014). 《亚里士多德伦理学》。剑桥：大学出版社。
+- D’Amiano, S. and Di Creszo, G. (1994). 基于通用密码学的数字货币方法。在：密码技术的理论与应用。柏林：Springer，第 156–170 页。
+- Damgard, L. (1988). 个人可证明安全的支付系统与凭证机制。在：密码学理论与应用会议。纽约：Springer，第 328–335 页。
+- Danezis, G. and Meiklejohn, S. (2015). 中心化构建加密货币。arXiv预印本，arXiv:15.06895。
+- Davies, E., Kirby, N., Bond, J., Gordon, T., Moore, A., Rocha, N., Rose, A., Tasca, P. and Vagdam, N. (2020). 英国住宅所有证的分布式账本研究。在：Mishcon de Reya。
+- Davies, G. (2010). 《货币史》。卡迪夫：大学出版社。
+- De Fippi, P. and Wright, A. (2018). 《区块链与代码规则》。剑桥：哈佛大学出版社。
+- De Leon, D.C., Stalic, A.-Q., Jellyalli, A., Haney, M. and Sheldon, D.T. (2017). 属性与关联。《亚洲创新与创业杂志》，11(3)，第 286–300 页。
+- De Roover, R. (1956). 根据中世纪市场账本研究的卢卡·帕西奥之前的会计演变史。伦敦：Sweet & Maxwell。
+- Decker, C. and Wattenhofer, R. (2013). 比特币网络中的信息传播。在：IEEE P2P 论文集。IEEE，第 1–10 页。
+- Deutsche Bundesbank, (2020). 可编程资产中的货币：来自德国经济的跨部门视角。在：白皮书。
+

@@ -1,0 +1,13 @@
+# Chapter 12 Present and Future of DLT | 405
+
+DLT applications in finance are conceptually straightforward, they often remain difficult to implement in practice. These difficulties are only amplified when broadening the application of DLT outside of finance, since many of these use cases stumble on problems detailed throughout the book that require resolution outside DLT. Moreover, these projects will take a long time to move from the proof-of-concept stage to the production-ready state. Still, given the long-term advantages in many areas, including healthcare, supply chain management, and real estate, to mention but a few, it is justifiable for governments, private companies, and academic institutions to pursue them. Our overall impression is that DLT holds a lot of promise, but it will require competence, effort, resources, and patience to achieve its full potential.
+
+Many non-financial applications represent a somewhat scaled-down version of the original vision of a fully distributed, decentralized ledger. As such, one should not undervalue the utility of DLT and its innumerable applications as a driver of change. That said, the real barrier to reshaping the backbone of our society using a globalized implementation of DLT remains our ability to practically translate its ideas and requirements into a full infrastructure and ecosystem that can be used by anyone and everyone. The enthusiasm expressed by multiple professionals shows that DLT is slowly moving its into various areas of human activity. To satisfy this, several universities and business schools are offering courses in DLT and all things crypto, the Hebrew University of Jerusalem (HUI), where one of the authors (AL) reads the course; the École Polytechnique Fédérale de Lausanne (EPFL), where both authors give lectures and practical seminars on the subject; as well as Oxford, University College London (UCL), Imperial College, and many other schools.
+
+In short, the overhaul of everyday life using DLT technology has already begun, but it will take time for the promised all-encompassing blockchain revolution to materialize.
+
+# 12.8 Exercises
+
++   1. Compare and contrast double- and triple-entry accounting. Which aspects of triple-entry accounting are used in the Bitcoin protocol?
+2. Describe how one can use DLT for central clearing. What are the obstacles to its wide adoption in this area?
+3. Choose a particular healthcare-related topic, for instance, EHRs access, and design a DLT-based system that can remove some of its most egregious pain points.
