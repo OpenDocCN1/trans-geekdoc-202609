@@ -1,0 +1,5 @@
+# About the Authors
+
+Hauwa Mohammed Mustafa is an Academic Lecturer in the Department of Pure and Applied Chemistry, Kaduna State University (KASU), Nigeria. She obtained her Doctorate Degree from Universiti Tenaga Nasional (UNITEN), Malaysia. Her research areas focus on Wastewater Treatment, Bioenergy, IoT, Artificial Intelligence, and Material Science.
+
+Gasim Hayder is a Senior Lecturer and the Head of the Water & Environmental Engineering Unit at the Civil Engineering Department, College of Engineering, Universiti Tenaga Nasional (UNITEN), Malaysia. He is also a Chartered Engineer-MIET (CEng) from the Engineering Council (UK). He received his Ph.D. in Civil Engineering from Universiti Teknologi PETRONAS (UTP), Malaysia. His research focus is in the field of Environmental Engineering and Water and Wastewater Assessment, Treatment, Modelling, and Monitoring.

@@ -1,0 +1,11 @@
+# Phytoremediationation of Domestic Wastewater
+
+![](bbox=[0.118, 0.083, 0.865, 0.303])
+
+**FIGURE 6.24** Graph of nitrate analysis against sampling days at 24 hours retention time.
+
+the influent sample was reduced from 3.8±0 to 2.2±0 mg/L (P. stratiotes), 1.0±0 mg/L (S. molesta) and 1.43±0.05 mg/L (E. crassies). Similarly, the nitrate level of the influent sample was reduced from 9.52±0.10 to 3.01±0.02 mg/L for P. stratiotes, 2.2±1 mg/L for S. molesta and 3.04±0.01 for E. crassies treatment system. The highest removal efficiencies of 68.38% (P. stratiotes) and 68.06% (E. crassies) were recorded on the 14th day, whereas the maximum reduction efficiency of 82.9% was recorded for S. molesta treatment system on the fourth day. Additionally, the ANOVA analysis between the influent and the treatment systems indicated a significant difference (p<0.05).
+
+Figure 6.24, the average nitrate level of the influent samples was lowered from 5.4–20 mg/L. The nitrate concentration of the influent samples was lowered from 20±0.1 to 9.05±0.01 mg/L (P. stratiotes), 13.6±0 mg/L (S. molesta) and 9.8±0.17 mg/L (E. crassies) on the second day. Similarly, 5.4±0.1 mg/L value of the influent sample was decreased by 1.2±0.1 mg/L (P. stratiotes), 1.0 mg/L (S. molesta) and 1.7±0.1 mg/L (E. crassies). Furthermore, the lowest and highest nitrate removal efficiencies for P. stratiotes were recorded on the 2nd and 12th day with values of 54.75% and 83.6%, respectively, with the lowest and high-est removal efficiencies for S. molesta were observed to be 32% and 92.1% on the 2nd and 14th day, respectively. In addition, the minimum and maximum percentage reduction efficiency for E. crassies was found to be 41% and 93% on the 6th and 14th day of the experiment, respectively. Moreover, the ANOVA analysis between the influent and the treatment systems revealed a significant difference (p<0.05).
+
+The overall outcome demonstrated that the tests were effective in lowering the nitrate content in the influent samples. Similarly, the overall average nitrate reduction of 2.74 mg/L (P. stratiotes), 4.1 mg/L (S. molesta) and 3.47 mg/L (E. crassies) attained 7.05 mg/L average nitrate reduction of the influent samples was observed at 6 hours retention time, while the overall average nitrate reduction of 3.6 mg/L (P. stratiotes),
