@@ -1,0 +1,15 @@
+# Ensemble methods: Bagging and boosting
+
+In the preceding chapters we have seen several examples of different machine learning models, from k-NN to deep neural networks. In this chapter we will introduce a new way of constructing models, by combining multiple instances of some basic model. We refer to this as an ensemble of base models, and the resulting methods are consequently referred to as ensemble methods. The key idea behind ensemble is the "wisdom of crowds"; by training each model in a slightly different way they can all contribute to learning the input-output relationship. Specifically, to obtain a prediction from an ensemble, we use a (weighted) average or majority vote to obtain the final prediction. With a carefully constructed ensemble, the prediction obtained in this is better than the predictions of the individual base models.
+
+In Section 7.1 we introduce a general technique referred to as bootstrap aggregation, and bagging for short. To create multiple different "versions" of the training data by, randomly sample overlapping subsets of the data (the so-called bootstrap). In this way, one base model is trained from each "version" of the training data. In an ensemble of similar but identical models obtained, it is possible to reduce the variance (without any increase in bias) by using only a single base model from the trained data. In practice this means that by using bagging the risk of overfitting decreases, compared to using the base model itself.
+
+In Section 7.3-7.4 we introduce another ensemble method called boosting. Boosting is different from bagging because its models are trained sequentially, one after the other, where each model tries to "correct" for the "mistakes" made by the previous ones. On the contrary to bagging, the main effect of boosting is to reduce bias compared to the base model. Thus, boosting is able to turn an ensemble of "weak" base models (e.g., linear classifiers) into one "strong" ensemble model (e.g., a heavily non-linear classifier).
+
+# 7.1 Bagging
+
+As discussed in Chapter 4, a central concept in machine learning is the variance-trade-off. Roughly speaking, the more flexible a model is, the lower its bias be. That is, a flexible model is capable of representing complicated input-output relationships. Examples of simple yet flexible models are k-NN with a small value of k and classification tree that is deep enough. Highly flexible models are sometimes needed for solving real-world machine learning problems, where relationships are far from linear. Despite their high variance, the downside, is the risk of overfitting, or equivalently, high variance. These models are not useless. By using them as base models in bootstrap aggregation, and bagging, we can
+
+> reduce the variance of the base model, without increasing its bias.
+
+We outline the main idea of bagging with the example below.

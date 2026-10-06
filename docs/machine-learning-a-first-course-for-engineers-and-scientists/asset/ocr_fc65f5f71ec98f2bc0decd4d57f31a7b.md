@@ -1,0 +1,19 @@
+# User aspects of model learning
+
+Hopefully, the model will perform well the naive baselines stated above. In addition, it is also good to define an achievable performance which is on par with the maximum performance we can expect from the model. For a regression problem this performance is limited by the irreducible error presented in Chapter 4 and for classification problems the analogue is the so-called Bayes error rate. In practice, we may not have access to these theoretical bounds but there are a few strategies to estimate them. For supervised problems that are easily solved by human annotations, the human-level performance can serve as the achievable performance. Consider for example an accuracy of 99%, which serves as a reference point for what we can expect to achieve from our model. The achievable performance can also be based on what other state-of-the-art models on the same or similar problem achieve. Compare the achievable performance gives us a reference point to assess the quality of the model. Also, if the model is close to the achievable performance we might not be able to improve our future.
+
+# 11.2 Improving a machine learning model
+
+As already mentioned, solving a machine learning problem is an iterative procedure where we train, evaluate and suggest actions for improvement, by changing some hyperparameters or tuning another models. How do we start this iterative procedure?
+
+# Try simple things
+
+A good strategy is to try things first. This could example be to start with basic methods like k-NN or linear/logistic regression. Also, do not add extras-on like regularization for the first model—this will come at a later stage when the basic model is up and running. A simple thing can also be to start with an existing solution to the same or similar problem you trust. For example, when building an image classifier can be simpler with using an pretrained neural network and fine-tune one later also mean using only a subset of the available data for the first model, and retrain the model on all if it looks promising. Also, avoiding doing more pre-processing than necessary for the first step does not involve writing code for learning your first model, but also for evaluating it on your validation data using clear number evaluation metrics.
+Trying simple things first allows us to explore the iterative procedure of finding a good model. This is important, since it might reveal important aspects of the problem formulation that we need to re-think before it makes sense to proceed with more complicated models. Also, if we start with a low-complexity model it reduces the risk of ending up with a too complicated model, when a simpler model would be just as good (or even better).
+
+# Debugging your model
+
+Before proceeding we make sure that the code we have doing what we are expecting it to do. The first objective is to make sure that the code runs without any errors or warnings. If it does not, use a debugging tool to spot the error. The trigger books are those where the code is syntactically correct and runs without warnings, but is still not what we expect it to do. The procedure how depends on the model you have picked, but there are a few general tips:
+
++   **Compare with baseline.** Compare model performance on validation data with the baselines we have stated (see Section 11.1). If we do not manage these baselines or are even worse than then, the code for learning and evaluating the model might not work as expected.
+**Overfit a small subset.** Try to overfit the model on a very small subset (e.g., as small as two data points) of the training data and make sure that we achieve the best possible performance
