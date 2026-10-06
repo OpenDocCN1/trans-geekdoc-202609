@@ -1,0 +1,17 @@
+# Utilizing Blockchain and Interplanetary File System
+
+enhances data availability, resilience, and privacy because there isn't a single control or point of failure [3].
+
+By bringing together blockchain with IPFS, organizations can create an impeccable and privacy-enhancing framework for data sharing. The combination of blockchain's tamper-proof ledger and IPFS's decentralized file storage provides a robust infrastructure for storing, sharing, and accessing sensitive data while preserving user privacy. Blockchain technology ensures the integrity of data transactions, whereas IPFS facilitates secure and efficient content distribution across the network [4].
+
+Automating access control on the blockchain can further improve user privacy. Smart contracts are contracts embedded into the blockchain with preset rules and conditions. Organizations can edit sensitive information for data sharing [5].
+
+The probability of cyberattacks is lowered by the decentralized structure of IPFS and blockchain. Because blockchain and IPFS disperse data over a network of nodes rather than centralized servers, which are vulnerable to hacking and data breaches, it is far more difficult for malicious actors to take place. Additionally, using techniques related to cryptography as encryption and digital signatures enhances the security of data transactions, further mitigating the risk of unauthorized access [6].
+
+In addition to enhancing user privacy and security, the combination of blockchain and IPFS offers other benefits for data-sharing environments. For example, the transaction and immutable ledger of blockchain provides a verifiable record of data transactions, enhancing accountability and auditability. Meanwhile, IPFS's distributed storage improves data availability and resilience, ensuring that files can be accessed even in the event of network disruptions or failures [7].
+
+The Internet of Things (IoT) is quickly changing the industry and previously unheard-of levels of automation, data analysis, and collecting by linking gadgets, sensors, and machines to the internet. As IoT networks grow in stature and complexity, scalability, security and privacy confront traditional centralized designs. Blockchain technology has come as a potential solution for these issues, improving the security, privacy, and effectiveness of IoT networks [8].
+
+Originally intended to serve as the foundational technology that facilitates safe transactions among a network of dispersed nodes, blockchain reduces the danger by going away with the need for intermediaries by recording transactions in immutable and tamper-proof manner. Blockchain technology, when combined with IoT devices, can offer a decentralized and safe architecture for controlling access control, data transfers, and device IDs in IoT networks [9].
+
+Updated and upgraded security is an important advantage of using blockchain with IoT. As opposed to systems that store data centrally, which often collect and monetize user data for targeted advertising or other purposes, blockchain and IPFS enables users to retain data control. By data storage on a decentralized network and employing encryption techniques, blockchain, and IPFS make sure that private and inaccessible information stays out of the reach of unauthorized people. Conventional IoT designs are vulnerable to cyberattacks and single points of failure since they frequently rely on centralized servers for data processing and storing. On the flip side, blockchain technology uses decentralized data that is dispersed over a network
