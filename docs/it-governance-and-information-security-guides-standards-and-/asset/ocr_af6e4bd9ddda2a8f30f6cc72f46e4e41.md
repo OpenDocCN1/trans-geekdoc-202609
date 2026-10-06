@@ -1,0 +1,19 @@
+# 268 IT Governance and Information Security
+
+The case study took place at a large organization in Morocco. The extended time required for the study resulted from difficult access to the subjects and multiple visits to subjects. The security officer was interviewed four times, and the CIO was interviewed three times. During the study, both the CIO and security officer have been removed from their positions and new employees replaced them. This required yet more follow-up interviews.
+
+The objective is to draw a macroscopic inventory of the level of security of all information systems, assets, and people at the organizational and technological levels. For this purpose, we have developed a questionnaire whose analysis of the responses received in it will make it possible to evaluate the levels of maturity of the IS. In this context, we refer, for this exhaustive questionnaire, to the standard ISO/IEC 27002:2013 as defined in Appendix 1 (Table 8.4).
+
+The study found that the organization has an information security policy and helps the organization successfully manage information security. The organization's security maturity is at level 2 (initial). The organization agrees that the information security policy is an important tool that organizations should have to manage the proper implementation of information security.
+
+The information security policy is deployed during an awareness session and is explained to senior management and the heads of each section. Following the session, each head section is responsible for communicating and disseminating all information regarding the information security policy to end-users within each section.
+
+The organization uses a type of information security policy, which helps to protect the information in general.
+
+The organization's information security policy document is understandable, which means that employees can understand the content of the policy. One interviewee explained that ‘Our organization information security policy is written to be understood by all to follow the meaning of the policy’. It is also placed on a very easy access place on the net, internal (Intranet) and external (web).
+
+The person responsible for creating the information security policy is the security manager with the support of the IT department. The municipality uses ISO 27001 and ISO 27002 as a guide in it. The organization places high priority on information security policy, starting with senior management and reaching end users.
+
+The information security policy is the main document that was intended for the organization. Organizations should have a structure and procedures on which policies should exist and how they are developed, and the organization should take this into account. What do you call policies? For example, operational policy (which includes elements other than information security), security policy (which addresses security issues) or information security policy is the responsibility of each organization. The important thing is that management must show its intentions regarding information security.
+
+The policy should not contain concrete rules of conduct without expressing management's intentions and frame other documents that it goes. A policy should be accessible to all. More information and explanations can be presented on the web, for example. The policy expresses the general intentions of management. When it comes to information security policy, it can be called information security policy or security policy to all security work. The policy should be developed at an early stage, before or at the same time as activities determine security design and security processes. It is important to identify all existing policy documents to know what material you need
