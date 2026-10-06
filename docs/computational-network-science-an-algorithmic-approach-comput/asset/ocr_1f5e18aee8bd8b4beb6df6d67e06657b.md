@@ -1,0 +1,7 @@
+# 6.4.4 Independent Contagion Model
+
+In a related independent contagion model, a few nodes are initially active and every edge has a probability (i.e., tie strength) of propagation. An active node activates its neighbor with a probability on that particular edge. There are no threshold values for nodes. Nodes are activated in an arbitrary order. Initially, node A is active at time t and is said to be contagious. This node has one chance for influencing its neighbor node B at time stamp t+1. There could be multiple active neighbors influencing node B. Node B becomes active after the activation attempts. The probability of success of node A's attempts in activating B is denoted by P_B(A). If node B has the set S of neighbors, who already attempted to activate node B but failed, node A's success probability is denoted by P_B(A, S). When node completes influencing its neighbors, it remains in an active state but is not contagious. This process completes when all the nodes are free from contagious. The network in Figure 6.17 is an example of 10 family members A–J. Each edge shows a probability (i.e., weight) of influencing other family members.
+
+![](bbox=[0.135, 0.517, 0.858, 0.874])
+
+Fig. 6.17. An example network of family members and their weight in influencing other members.
