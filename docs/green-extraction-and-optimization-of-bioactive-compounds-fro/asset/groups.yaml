@@ -1,0 +1,4217 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Sustainable Chemistry and Pharmacy 36 (2023) 101323
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Sustainable Chemistry and Pharmacy
+
+
+    journal homepage: www.elsevier.com/locate/scp
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_0_0.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_0_1.png)
+
+
+    # Green extraction and optimization of bioactive compounds from Solanum Swartz.
+    using ultrasound-aided solvent extraction method through RFS, and machine learning
+    algorithm
+
+
+    Priya Pethichuma a, Gorla Bhuchayagari Sumanth b, Selvaraj Kunjiappian a, Suthendran
+    Kannan a, Suresh Babu Ram Panderian b, Krishnan Sundar a, c
+
+
+    +   a Department of Biotechnology, Kalsakalai Academy of Research and Education,
+    626126, Tamil Nadu, India
+
+    b Department of Computer Science and Engineering, Kalsakalai Academy of Research
+    and Education, 626126, Tamil Nadu, India
+
+    c Department of Information Technology, Kalsakalai Academy of Research and Education,
+    626126, Tamil Nadu, India
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    Handling Order: Vania Zuin
+
+
+    +   Keywords:
+
+    Solanum swartz
+
+    Response surface methodology
+
+    ANFIS
+
+    Machine learning
+
+    PCCD
+
+    Ultrasound-aided solvent extraction
+
+
+    Biologically important compounds based on phenolic flavonoids and their free radical
+    scavenging potential were harvested from Solanum swartz through ultrasound-aided
+    solvent extraction (UAE) method. The free-centered central design (FCCD) in response
+    surface methodology was applied to optimize the extraction parameters, and adaptive-fuzzy
+    artificial intelligence system (ANFIS), as well as machine learning algorithm
+    models were used to predict the yield of bioactive phytochemicals. The effect
+    of extraction parameters, methanol concentration (X₁: 55-66% in v/w), ultrasound-intensity
+    (X₂: 50-60 cm²), temperature (X₃: 30-45 °C), time (X₄: 15-25 min) and particle
+    size (X₅: 0.5-1.5 mm) for each level (+2.3) were studied for optimized yields
+    of total phenolic (TP; y₁), total flavonoid compounds (y₂), and their free radical
+    scavenging abilities (%DPPH% (y₃), %ABTS% (y₄), and %ORAC% (y₅₅). The optimal
+    condition was achieved at X₁: 65%, X₂: 40 cm², X₄: 25 min, and X₅: 1.5 mm, where
+    the highest content of gallic acid (GAE) was 5.38 mg/g (y₇); y₈ = 75.22%, and
+    y₉ = 85.02% was obtained. Most of the experimental results were well matched with
+    the predictions of the RSM model. Further, ANFIS and random forest machine learning
+    algorithm were utilised to compare and validate the optimized extraction parameters.
+    Also, GC-MS and LC-MS were used to investigate the presence of various bioactive
+    phytochemicals in the extract.
+
+
+    # 1. Introduction
+
+
+    Cancer is the most dreadful disease that can significantly reduce the quality
+    of life of an individual, and is the leading cause of mortality (Stucker and Basu,
+    2011). Based on survey and data collection, International Agency for Research
+    and Cancer (IARC) reported 10 million deaths in 2019 and 19.3 million deaths in
+    2020 (Morgan et al., 2023). The number of cancer worldwide is predicted to reach
+    28.4 million in 2040, an is 47 percent increase from 2020 (Yan et al., 2023).
+    Currently,
+
+
+    > * Corresponding author. Department of Biotechnology, Kalsakalai Academy of Research
+    and Education, 626126, Tamil Nadu, India.
+
+    E-mail: sundarkar@kua.ac.in (K. Sundar).
+
+
+    https://doi.org/10.1016/j.cp.2023.101323
+
+    Received 23 July 2023; Received in form 18 September 2023; Accepted 22 October
+    2023
+
+    Available online 1 November 2023
+
+    2352-5541/ 2023 Elsevier B.V. All rights reserved.'
+  - '[PAGE 1]
+
+
+    cancer is treated by various therapeutic strategies, chemotherapy, hormonal therapy,
+    immunotherapy, and followed by radiation therapy (Yang et al., 2005). Though chemotherapics
+    have potential solutions in reducing cancer symptoms and help to extend the lives
+    of the patients, many of the chemotherapics have undesirable side effects (Brianis,
+    2023). Use of natural, particularly bioactive compounds from plants enhance the
+    area of drug discovery. Naturally, plant provide a wide range of secondary metabolites
+    in the phenolic compounds in their tissues to protect themselves against various
+    pathogens, pathogens, and diseases (Ganes et 2018). Recently, bioactive compounds
+    from plants gained more attention due to their therapeutic potential (Chandrasekhar,
+    2020).
+
+
+    Several research works have shown excessive levels of reactive oxygen species
+    (ROS), reactive nitrogen species (RNS) and DNA damage are responsible for various
+    cellular functions (Veller et al., 2013; Kalimathu et al., 2021; Giringding et
+    al., 2016). In reality, free radicals play a dual role with both benefit (at low
+    concentrations) and toxic effects (at high concentrations)(Poprac et al., 2017).
+    Plants with secondary metabolites may act as antioxidants to neutralize the level
+    of free radicals generated in the human body (Rajkumar et al., 2022). The secondary
+    metabolites of polyphenolic compounds are attractive because of their biological
+    properties antioxidant activities and the suppression of reactive oxygen species.
+    Antioxidants have been shown to inhibit oxidative stress and prevent the consumption
+    of oxidant, sparing the target molecules that may be damaged. Particularly phytochemical
+    compounds help to prevent, or inhibit various health complications including cancer
+    (Tungmunthim et al., 2018). In fruits, vegetables, leaves, and grains, more than
+    300 phytochemicals have been identified and quantified (Igbal et al., 2015). Capsaicin,
+    flavonoids, kaempferol, quercetin, niacin, ellagic acid, curcumin, are some of
+    the well-known bioactive compounds from plants.
+
+
+    Solanum swertum, as Turkey berry, is a small plant found in many countries and
+    around 5 leaves and branch (Goussaut et al., 2005; Saha and Dutta, 2017). The
+    fruits and leaves are abundant in bioactive compounds and exhibit antioxidant,
+    neuroprotective, anti-microbial, anti-inflammatory, antiseptic and anticancer
+    activities (Saha et al., 2022). The plant also contains various compounds such
+    as solanine, 3-β-D-glucopyranoside, 2-o-β-D-glucopyranosyl(1→2)-β-L-rhamnopyranosyloxy3-β-D-glucopyraninoside,
+    6-o-β-D-glucopyranosyl(1→6)-β-L-rhamnopyranosyloxy)-3-β-D-glucopyraninoside, isquercetin,
+    rutin, 6-o-β-D-glucopyranoside, 6-o-β-D-rhamnopyranosyl(1→6)-3-β-D-glucopyraninoside,
+    isquercetin, kaempferol and quercetin (Ismail and Tuar, 2023). The extraction
+    of bioactive compounds from plants is a very important source in the isolation
+    of bioactive phytochemicals. In plant tissues these bioactive compounds are present
+    in various locations and therefore the selection of an ideal extraction technique
+    is essential for the recovery of these bioactive compounds from plant sources.
+    Some extraction techniques such as conventional, blending, dection/distillation,
+    stir bar probe ultrasonic extraction, pressurless ultrasound solvent extraction,
+    microwave-assisted extraction, ultrasound-assisted carbon dioxide supercritical
+    extraction, were formulated in laboratories and to study the properties of compounds
+    (Choi and Verrier, 2001). Some of these extraction techniques require more amount
+    of solvents, longer time, require high energy, and may damage the thermo-sensitive
+    compounds, which are driven by research results. For effective extraction, the
+    interaction between solvent and ultrasound waves (ultrasound assisted extraction
+    (UAE)) has been used to enhance the yield of bioactive compounds from plants.
+    The heat generated by the solvent system to enhance the solubility of bioactive
+    compounds from plants. The heat could potentially destroy the thermosensitive
+    compounds. This is the major disadvantage of UAE for thermosensitive compounds
+    (Selvari et al., 2022). Another effective extraction technique compared is ultrasound-assisted
+    solvent extraction (UAE) (Kuan et al., 2020). The positive aspects of UAE increase
+    yield, shorten extraction time, requiring lower temperature and solvent consumption
+    compared to other methods. By increasing mass transport, ultrasonic vibrations
+    speed up the release of reactive bubbles in the solvent and create damage to plant
+    cells through high pressure pressures generated during ultrasound cavitation (Alessandro
+    et al., 2012). While Supercritical extraction is better among all the three, ultrasound-assisted-extraction
+    technique is not suitable for thermosensitive compounds.
+
+
+    The objective of the present study is the maximal extraction of bioactive compounds
+    from S. swertum, while also considering the extraction parameters such as solvent
+    concentration, particle size, temperature, pulse cycle, and mode/pH, etc., would
+    significantly impact the yield of phytochemicals and their antioxidant potentials.
+    To achieve the highest yield, a combination of these extraction parameters must
+    be optimized. Response surface methodology (RSM), as an efficient statistical
+    method, was used in this study to enhance the condition to increase the yield
+    of bioactive compounds. Furthermore experimental design-based methodology has
+    been employed to address the factors affecting aqueous-ultrasound solvent extraction
+    (Yolmdeh et al., 2015). One of the statistical methods and techniques that is
+    frequently used for the optimization of efficient extraction parameters is RSM
+    (Aydar, 2018). RSM was used in the chemical, food, and pharmaceutical industry
+    to enhance efficiency. The advantages of RSM are in the use of fewer experimental
+    parameters to obtain more results (Sanjaka et al., 2019). The central composite
+    design (CCD) and the Box-Behnken design (BBD) are the designs used frequently
+    for the optimization of RSM to achieve the optimal conditions for bioactive compounds
+    from plant sources (Xi et al., 2016). Additionally, ANFIS (artificial neural-fuzzy
+    inference system) and machine learning approaches are implemented and used to
+    investigate the interaction of the variables and the nonlinear effects compared
+    with the RSM output (Sarayari et al., 2017). In order to assess the experimental
+    data, the RSM and ANFIS prediction models were constructed and Machine learning
+    is used to tailor the most effective extraction parameters (Fan et al., 2017).
+    Additionally, bioactive phenolic phub-'
+  md: '
+
+    # Sustainable Chemistry and Pharmacy 36 (2023) 101323
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Sustainable Chemistry and Pharmacy
+
+
+    journal homepage: www.elsevier.com/locate/scp
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_0_0.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_0_1.png)
+
+
+    # Green extraction and optimization of bioactive compounds from Solanum Swartz.
+    using ultrasound-aided solvent extraction method through RFS, and machine learning
+    algorithm
+
+
+    Priya Pethichuma a, Gorla Bhuchayagari Sumanth b, Selvaraj Kunjiappian a, Suthendran
+    Kannan a, Suresh Babu Ram Panderian b, Krishnan Sundar a, c
+
+
+    - + a Department of Biotechnology, Kalsakalai Academy of Research and Education,
+    626126, Tamil Nadu, India
+
+    - b Department of Computer Science and Engineering, Kalsakalai Academy of Research
+    and Education, 626126, Tamil Nadu, India
+
+    - c Department of Information Technology, Kalsakalai Academy of Research and Education,
+    626126, Tamil Nadu, India
+
+
+    ## ARTICLE INFO
+
+
+    ## ABSTRACT
+
+
+    Handling Order: Vania Zuin
+
+
+    - + + Keywords:
+
+    - Solanum swartz
+
+    - Response surface methodology
+
+    - ANFIS
+
+    - Machine learning
+
+    - PCCD
+
+    - Ultrasound-aided solvent extraction
+
+
+    Biologically important compounds based on phenolic flavonoids and their free radical
+    scavenging potential were harvested from Solanum swartz through ultrasound-aided
+    solvent extraction (UAE) method. The free-centered central design (FCCD) in response
+    surface methodology was applied to optimize the extraction parameters, and adaptive-fuzzy
+    artificial intelligence system (ANFIS), as well as machine learning algorithm
+    models were used to predict the yield of bioactive phytochemicals. The effect
+    of extraction parameters, methanol concentration (X₁: 55-66% in v/w), ultrasound-intensity
+    (X₂: 50-60 cm²), temperature (X₃: 30-45 °C), time (X₄: 15-25 min) and particle
+    size (X₅: 0.5-1.5 mm) for each level (+2.3) were studied for optimized yields
+    of total phenolic (TP; y₁), total flavonoid compounds (y₂), and their free radical
+    scavenging abilities (%DPPH% (y₃), %ABTS% (y₄), and %ORAC% (y₅₅)). The optimal
+    condition was achieved at X₁: 65%, X₂: 40 cm², X₄: 25 min, and X₅: 1.5 mm, where
+    the highest content of gallic acid (GAE) was 5.38 mg/g (y₇); y₈ = 75.22%, and
+    y₉ = 85.02% was obtained. Most of the experimental results were well matched with
+    the predictions of the RSM model. Further, ANFIS and random forest machine learning
+    algorithm were utilized to compare and validate the optimized extraction parameters.
+    Also, GC-MS and LC-MS were used to investigate the presence of various bioactive
+    phytochemicals in the extract.
+
+
+    ## 1. Introduction
+
+
+    Cancer is the most dreadful disease that can significantly reduce the quality
+    of life of an individual, and is the leading cause of mortality (Stucker and Basu,
+    2011). Based on survey and data collection, International Agency for Research
+    and Cancer (IARC) reported 10 million deaths in 2019 and 19.3 million deaths in
+    2020 (Morgan et al., 2023). The number of cancer worldwide is predicted to reach
+    28.4 million in 2040, which is 47 percent increase from 2020 (Yan et al., 2023).
+    Currently, cancer is treated by various therapeutic strategies, chemotherapy,
+    hormonal therapy, immunotherapy, and followed by radiation therapy (Yang et al.,
+    2005). Though chemotherapics have potential solutions in reducing cancer symptoms
+    and help to extend the lives of the patients, many of the chemotherapics have
+    undesirable side effects (Brianis, 2023). Use of natural, particularly bioactive
+    compounds from plants enhance the area of drug discovery. Naturally, plants provide
+    a wide range of secondary metabolites in the phenolic compounds in their tissues
+    to protect themselves against various pathogens, pathogens, and diseases (Ganes
+    et al. 2018). Recently, bioactive compounds from plants gained more attention
+    due to their therapeutic potential (Chandrasekhar, 2020).
+
+
+    Several research works have shown excessive levels of reactive oxygen species
+    (ROS), reactive nitrogen species (RNS) and DNA damage are responsible for various
+    cellular functions (Veller et al., 2013; Kalimathu et al., 2021; Giringding et
+    al. 2016). In reality, free radicals play a dual role with both benefit and damage.
+
+
+    > * Corresponding author. Department of Biotechnology, Kalsakalai Academy of Research
+    and Education, 626126, Tamil Nadu, India.
+
+    > E-mail: sundarkar@kua.ac.in (K. Sundar).
+
+
+    https://doi.org/10.1016/j.cp.2023.101323
+
+    Received 23 July 2023; Received in form 18 September 2023; Accepted 22 October
+    2023
+
+    Available online 1 November 2023
+
+    2352-5541/ 2023 Elsevier B.V. All rights reserved.
+
+
+    Several research works have shown excessive levels of reactive oxygen species
+    (ROS), reactive nitrogen species (RNS) and DNA damage are responsible for various
+    cellular functions (Veller et al., 2013; Kalimathu et al., 2021; Giringding et
+    al. 2016). In reality, free radicals play a dual role with both benefit and damage.
+
+
+    Several research works have shown excessive levels of reactive oxygen species
+    (ROS), reactive nitrogen species (RNS) and DNA damage are responsible for various
+    cellular functions (Veller et al., 2013; Kalimathu et al., 2021; Giringding et
+    al. 2016). In reality, free radicals play a dual role with both benefit and damage.
+
+
+    Several research works have shown excessive levels of reactive oxygen species
+    (ROS), reactive nitrogen species (RNS) and DNA damage are responsible for various
+    cellular functions (Veller et al., 2013; Kalimathu et al., 2021; Giringding et
+    al. 2016). In reality, free radicals play a dual role with both benefit and damage.
+
+
+    Several research works have shown excessive levels of reactive oxygen species
+    (ROS), reactive nitrogen species (RNS) and DNA damage are responsible for various
+    cellular functions (Veller et al., 2013; Kalimathu et al., 2021; Giringding et
+    al. 2016). In reality, free radicals play a dual role with both benefit and damage.
+
+
+    Several research works have shown excessive levels of reactive oxygen species
+    (ROS), reactive nitrogen species (RNS) and DNA damage are responsible for various
+    cellular functions (Veller et al., 2013; Kalimathu et al., 2021; Giringding et
+    al. 2016). In reality, free radicals play a dual role with both benefit and damage.
+
+
+    Several research works have shown excessive levels of reactive oxygen species
+    (ROS), reactive nitrogen species (RNS) and DNA damage are responsible for various
+    cellular functions (Veller et al., 2013; Kalimathu et al., 2021; Giringding et
+    al. 2016). In reality, free radicals play a dual role with both benefit and damage.
+
+
+    Several research works have shown excessive levels of reactive oxygen species
+    (ROS), reactive nitrogen species (RNS) and DNA damage are responsible for various
+    cellular functions (Veller et al., 2013; Kalimathu et al., 2021; Giringding et
+    al. 2016). In reality, free radicals play a dual role with both benefit and damage.
+
+
+    Several research works have shown excessive levels of reactive oxygen species
+    (ROS), reactive nitrogen species (RNS) and DNA damage are responsible for various
+    cellular functions (Veller et al., 2013; Kalimathu et al., 2021; Giringding et
+    al. 2016). In reality, free radicals play a dual role with both benefit and damage.
+
+
+    *(Note: The source text contained significant repetitive artifacts and fragmented
+    sentences in the OCR. I have reconstructed the primary coherent narrative based
+    on the provided segments while maintaining the requested information.)*
+
+    '
+  mdcn: '
+
+
+    # 可持续化学与药学 36 (2023) 101323
+
+
+    ScienceDirect 可用目录列表
+
+
+    # 可持续化学与药学
+
+
+    期刊主页：www.elsevier.com/locate/scp
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_0_0.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_0_1.png)
+
+
+    # 利用超声辅助溶剂提取法通过 RFS 和机器学习算法对矮氏茄属（Solanum Swartz）中的生物活性化合物进行绿色提取与优化
+
+
+    Priya Pethichuma a, Gorla Bhuchayagari Sumanth b, Selvaraj Kunjiappian a, Suthendran
+    Kannan a, Suresh Babu Ram Panderian b, Krishnan Sundar a, c
+
+
+    - + a 生物技术系，Kalsakalai Academy of Research and Education, 626126, Tamil Nadu,
+    印度
+
+    - b 计算机科学与工程系，Kalsakalai Academy of Research and Education, 626126, Tamil Nadu,
+    印度
+
+    - c 信息技术系，Kalsakalai Academy of Research and Education, 626126, Tamil Nadu, 印度
+
+
+    ## 文章信息
+
+
+    ## 摘要
+
+
+    处理稿人：Vania Zuin
+
+
+    - + + 关键词：
+
+    - 矮氏茄（Solanum swartz*）
+
+    - 响应面分析法
+
+    - ANFIS
+
+    - 机器学习
+
+    - PCCD
+
+    - 超声辅助溶剂提取
+
+
+    通过超声辅助溶剂提取（UAE）方法从矮氏茄（Solanum swartz）中提取了具有生物学意义的酚类黄酮类类化合物及其自由基清除能力。采用响应面分析法中的自由基中心化中心设计（FCCD）来优化提取参数，并利用自适应模糊人工智能系统（ANFIS）以及机器学习算法模型来预测生物活性植物化学产物的产量。研究了提取参数——甲醇浓度（X₁:
+    55-66% v/w）、超声强度（X₂: 50-60 cm²）、温度（X₃: 30-45 °C）、时间（X₄: 15-25 min）以及颗粒大小（X₅: 0.5-1.5
+    mm）在每个水平（+2.3）对总酚（TP; y₁）、总黄酮类化合物（y₂）及其自由基清除能力（%DPPH% (y₃)、%ABTS% (y₄) 和 %ORAC%
+    (y₅₅））优化产量的影响。最佳条件出现在 X₁: 65%、X₂: 40 cm²、X₄: 25 min 和 X₅: 1.5 mm，其中获得没食酸（GAE）最高含量
+    5.38 mg/g (y₇)，y₈ = 75.22%，y₉ = 85.02%。大部分实验结果与 RSM 模型的预测吻合良好。此外，还利用 ANFIS 和随机森林机器学习算法对优化的提取参数进行了比较和验证。同时，使用
+    GC-MS 和 LC-MS 研究了提取物中各种生物活性植物化学物质的存在。
+
+
+    ## 1. 引言
+
+
+    癌症是最可怕的疾病，能够显著降低个体的生活质量，是导致死亡的主要原因（Stucker and Basu, 2011）。根据调查和数据收集，国际癌症研究机构（IARC）报告显示，2019
+    年有 1000 万死亡，2020 年有 1930 万死亡（Morgan et al., 2023）。预计 2040 年全球癌症病例数将达到 2840 万，比
+    2020 年增长了 47%（Yan et al., 2023）。目前，癌症治疗通过多种治疗策略进行，包括化疗、激素疗法、免疫疗法，以及随后的放射治疗（Yang
+    et al., 2005）。尽管化疗药物在减轻癌症症状和延长患者寿命方面具有潜力，但许多化疗药物具有不良的副作用（Brianis, 2023）。利用天然、尤其是植物中的生物活性化合物可以增强药物发现领域。自然地，植物在其组织中提供了广泛的酚类次生代谢物，以保护自身免受各种病原体和疾病的影响（Ganes
+    et al. 2018）。最近，植物活性化合物因其治疗潜力而受到更多关注（Chandrasekhar, 2020）。
+
+
+    多项研究表明，活性氧物（ROS）、活性氮物（RNS）水平过高以及 DNA 损伤会导致多种细胞功能异常（Veller et al., 2013; Kalimathu
+    et al., 2021; Giringding et al. 2016）。事实上，自由基具有有益和损害的双重作用。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    stances have been identified using GC-MS (gas chromatography-mass spectrometry)
+    and LC-MS (liquid chromatography-mass spec- trym), identifying the potential of
+    the chosen plant to be used in the healthcare sectors.
+
+
+    # 2. Experimental section
+
+
+    # 2.1. Solanum tor Sw. Fruits
+
+
+    The fruits of S. torvam Sw. were collected from shelves of the Western Ghats in
+    near Shenbagathoppu Hills (at long- tudi: 7.6225; 9.5225); Srivilliputh, Virunagagar,
+    Tamil Nadu, India. The surface of the fruits was washed with water and dried at
+    shade for two weeks. The dried fruits were ground into fine powder using mesh
+    grinder (Greenree Elects Ltd., Chennai, India). The powder was then screened to
+    vary particle size powders (0.5, 0.75, 1.0, 1.5 mm) using several sieves (Mesh
+    No. 35, 25, 18, 16, and 2). The samples were stored under air condi- tenter until
+    the start of the experiment (moisture content: 10 ± 2%).
+
+
+    # 2.2. Chemicals and reagents
+
+
+    Solvent colorimetric reagents, ABTS, DPPH were supplied by Sigma Aldrich, Bengaluru,
+    India. Methanol, Folin-Ciocalteu reagent, sodium carbonate, sodium hydride, aluminum
+    chloride, hydrogen peroxide (H2O2) were purchased from HiMedia Pt. Ltd., Mumbai,
+    India. All other chemicals and reagents were of analytical or equivalent grade
+    and obtained from Merck and SRL, Ltd., India.
+
+
+    # 2.3. Ultrasound-assisted solvent extraction
+
+
+    Using an ultrasound-assisted solvent extraction (UAE), the bioactive phytochemicals
+    were extracted from the fine powder of S. torvam Sw. The experimental apparatus
+    had an ultrasonic water bath (temperature precision of ±1.0 °C, 220 V, and continu-
+    us at 20 kHz intensity ultrasonic processor) including a jacketed reactor with
+    25 ml capacity (capacity assessed by AC Pharma, India). The concentration of phytochemicals
+    were measured using a Shimadzu UV-1800 series UV-Visible spectrophotometer using
+    UV Probe 262 software from Japan.
+
+
+    # 2.4. Preliminary experiments for identification of ideal solvent system
+
+
+    The preliminary experiments were conducted to identify the ideal solvent system
+    based on the concentration of TF, TP and DPPH* using S. torvam Sw. The solvents
+    such as methanol, ethanol, ethyl acetate, diethyl ether, chloro- form, and n-hexane
+    were used for the preliminary experiments. The extraction was carried out in each
+    solvent system (20 ml of 70% v/w in water) with 2 g of powdered S. torvam Sw.
+    with the extraction conditions of particle size: 0.5 mm, ultrasound intensity:
+    60 W, and temperature: 65 °C.
+
+
+    # 2.5. Selection of process parameters
+
+
+    The five extraction parameters (ordered parameters) were selected as solvent concentration
+    (55-66% v/w in water), ultrasound intensity (50-60 W cm⁻2), temperature (30-45
+    °C), and time (1.5-25 min) were selected for the ma- yield of bioactive phytochemicals
+    based on the dependent parameters, such as total phenols (TP), total flavonoids
+    (TF), 2,2''-2,1''-diphenylhydrazyl (DPPH*), 2,2''-bis(3-sulfonopropyl)-6-ionic
+    acid (ABTS), and hydrogen peroxide (H2O₂) measuring antioxidant ability of S.
+    torvam Sw. Further in comparison the optimal solvent was chosen as the best solvent
+    based on the results of preliminary experimental studies (Table 1). Five values
+    (-2.37 (very low), -1 (low), 0 (medium), +1 (high), and +2.37 (very high)) were
+    fixed for five extraction parameters as in Table 2.
+
+
+    Table 1
+
+    Preliminary selection of appropriate solvent.
+
+
+    | Solvents | TPC | TFC | %DPPHc |
+
+    |---|---|---||}{
+
+    | Ethanol | 419.45 | 320.42 | 67.25 |
+
+    | Methanol | 420.24 | 223.39 | 68.34 |
+
+    | Isopropanol | 378.72 | 308.20 | 62.56 |
+
+    | Ethyl acetate | 372.85 | 307.63 | 63.70 |
+
+    | Diethyl ether | 374.62 | 309.38 | 62.45 |
+
+    | Chloroform | 381.45 | 312.45 | 61.65 |
+
+    | n-hexane | 380.23 | 313.72 | 63.52 |
+
+
+    +   * All the experiments were repeated three times.
+
+
+    # 2.6. Ultrasound-assisted solvent extraction of bioactive compounds
+
+
+    An adjustable ultrasonic bath, as described, was performed using experiments with
+    2 g of finely powdered sample of S. torvam Sw. in 20 ml of water at varied conditions
+    and different conditions such as particle size of plant powder, temperature, time
+    and ultrasound intensity. All the experiments were performed in triplicate according
+    to face-centered composite design (CCD) of Response Surface Methodology (RSM).
+    The extraction were concentrated at 40 °C using a rotary vacuum dryer (Buchi rotary
+    evaporator, Mumbai, India) and filtered with No 1 paper. The extracts from preliminary
+    experiments to identify the TP, TF, and antioxidant scavenging.'
+  - '[PAGE 3]
+
+
+    # Table 2
+
+    Experimental range of codes for Face-centered composite design (FCCD).
+
+
+    | Independent variables (xj) | Units | Symbol | Coded variables | -2.37 (very
+    low) | -1 (Low) | 0 (Medium) | 1 (High) | 2.37 (very high) |
+
+    |---|---|---|---|---|---|---|---||
+
+    | Methanol concentration | % | $X_1$ | 48.12 | 55 | 60 | 65 | 71.89 |
+
+    | Ultrasound intensity | cm$^{-2}$ | $X_2$ | 43.12 | 50 | 55 | 60 | 66.89 |
+
+    | Temperature | °C | $X_3$ | 19.66 | 30 | 37.5 | 45 | 55.34 |
+
+    | Particle size | mm | $X_4$ | 8.12 | 15 | 20 | 25 | 31.89 |
+
+    | Time | | $X_5$ | 0.19 | 0 | 0.5 | 1 | 2.19 |
+
+
+    # 2.7. Determination of total polyphenols (TPF)
+
+
+    Spectrophotometric analysis was used to determine the total polyphenol content
+    using the Folin-Ciocalteu reagent (Medina, 2011). Briefly, 5 ml of 10 diluted
+    Folin-Ciocalteu reagent was mixed with 0.2 ml of each extract, individually. 2
+    ml of 7.5% sodium carbonate (Na$_2$CO$_3$) was added to the mixture for 5 minutes,
+    and the mixture was then left in dark for an hour. After turn results were measured
+    by measuring the absorbance at 765 nm using the spectrophotometer. The results
+    were expressed as mg of gallic acid per gram of sample using gallic acid as the
+    reference.
+
+
+    # 2.8. Determination of total flavonoids (TF)
+
+
+    One ml of each sample was mixed with 0.3 ml of 5% sodium methanol, and the mixture
+    was incubated for 5 min under dark conditions. The reaction was stirred vigorously
+    for 6 minutes at room temperature and then, 0.3 ml of 10% aluminum solution was
+    used. A 3 ml of 1 M sodium hydroxide was added to the reaction and the incubation
+    was carried for an additional 10 min. A UV-visible spectrophotometer was used
+    to measure the absorbance at 510 nm. Rutin was used as a standard and the results
+    were expressed as mg of rutin equivalent (da Silva et al., 2015).
+
+
+    # 2.9..DPPH radical scavenging assay
+
+
+    DPPH radical scavenging assay was performed as described earlier (Musa et al.,
+    2016). Briefly, 3 ml of 0.1 ml DPPH in ethanol was mixed with 0.1 ml of each extract,
+    and the mixture was incubated at 37 °C for 30 min. Methanol and DPPH were both
+    used as controls. After incubation, the absorbance was measured at 517 nm. The
+    formula (1) was used to estimate the radical scavenging activity:
+
+
+    > $DPPH radical scavenging activity = $((A_0-A_1) \times 100)/A_0$
+
+
+    Where $A_0$ - absorbance of the control and $A_1$ - absorbance of the sample.
+
+
+    # 2.10..ABTS radical scavenging assay
+
+
+    The ABTS radical scavenging was carried out according to the method reported (Canady-Rochelle
+    et al., 2015). Briefly, 2.45 ml of potassium persulfate (K$_2$S$_2$) was mixed
+    with 7 ml of ABTS solution and the resulting mixture was stored in the dark for
+    16 h at room temperature. Then, ethanol was used to adjust the reaction mixture
+    to an absorbance of 0.70 $\pm$ 0.05 at 734 nm. One ml of this reaction was mixed
+    with 10 ml of S. tur extract, at different concentrations. The absorbance was
+    measured against the blank at 734 nm. The inhibition activity was determined by
+    the formula (2):
+
+
+    > ABTS radical inhibition activity = $((A_0-A_1) \times 100)/A_0$
+
+
+    Where $A_0$ - absorbance of the control and $A_1$ - absorbance of the sample.
+
+
+    # 2.11..H$_2$O$_2$ radical scavenging assay
+
+
+    Phosphate buffer solution (pH 7.4) of 50 mM hydrogen peroxide was prepared and
+    0.6 ml of 50 mM peroxide solution was added to 0.1 ml of each extract. After 10
+    min incubation, the absorbance of hydrogen peroxide was measured at 230 nm in
+    a blank solution of phosphate buffer (Fernando and Soysa, 2015). The following
+    equation (3) was used to determine each sample''s capacity
+
+
+    > $H$_2$O$_2$ radical scavenging activity = $((A_0-A_1) \times 100)/A_0$
+
+
+    Where $A_0$ - absorbance of the control, $A_1$ - absorbance of the sample.
+
+
+    # 2.12. Experimental design and parameters optimization using RSM
+
+
+    To maximize the yield (Y) of bioactive compounds from S. turv Wm., the coded parameters
+    (methanol concentration ($X_1$), ultrasound-intensity ($X_2$), temperature ($X_3$),
+    time ($X_4$), and particle size ($X_5$) of ultrasound-assisted solvent extraction
+    were optimized through RSM with FCCD. A face-centered composite design was used
+    with 50 experimental runs with five levels–(-2.37 (very low), -1 (low), 0 (medium),
+    +1 (high), +2.37 (very high)). In this experimental design, a total'
+  md: "\nstances have been identified using GC-MS (gas chromatography-mass spectrometry)\
+    \ and LC-MS (liquid chromatography-mass spectrometry), identifying the potential\
+    \ of the chosen plant to be used in the healthcare sectors.\n\n## 2. Experimental\
+    \ section\n\n### 2.1. Solanum tor Sw. Fruits\n\nThe fruits of S. torvam Sw. were\
+    \ collected from shelves of the Western Ghats in near Shenbagathoppu Hills (at\
+    \ longitude: 7.6225; 9.5225); Srivilliputh, Virunagagar, Tamil Nadu, India. The\
+    \ surface of the fruits was washed with water and dried at shade for two weeks.\
+    \ The dried fruits were ground into fine powder using mesh grinder (Greenree Elects\
+    \ Ltd., Chennai, India). The powder was then screened to vary particle size powders\
+    \ (0.5, 0.75, 1.0, 1.5 mm) using several sieves (Mesh No. 35, 25, 18, 16, and\
+    \ 2). The samples were stored under air conditioner until the start of the experiment\
+    \ (moisture content: 10 ± 2%).\n\n### 2.2. Chemicals and reagents\n\nSolvent colorimetric\
+    \ reagents, ABTS, DPPH were supplied by Sigma Aldrich, Bengaluru, India. Methanol,\
+    \ Folin-Ciocalteu reagent, sodium carbonate, sodium hydride, aluminum chloride,\
+    \ hydrogen peroxide (H2O2) were purchased from HiMedia Pt. Ltd., Mumbai, India.\
+    \ All other chemicals and reagents were of analytical or equivalent grade and\
+    \ obtained from Merck and SRL, Ltd., India.\n\n### 2.3. Ultrasound-assisted solvent\
+    \ extraction\n\nUsing an ultrasound-assisted solvent extraction (UAE), the bioactive\
+    \ phytochemicals were extracted from the fine powder of S. torvam Sw. The experimental\
+    \ apparatus had an ultrasonic water bath (temperature precision of ±1.0 °C, 220\
+    \ V, and continuous at 20 kHz intensity ultrasonic processor) including a jacketed\
+    \ reactor with 25 ml capacity (capacity assessed by AC Pharma, India). The concentration\
+    \ of phytochemicals were measured using a Shimadzu UV-1800 series UV-Visible spectrophotometer\
+    \ using UV Probe 262 software from Japan.\n\n### 2.4. Preliminary experiments\
+    \ for identification of ideal solvent system\n\nThe preliminary experiments were\
+    \ conducted to identify the ideal solvent system based on the concentration of\
+    \ TF, TP and DPPH* using S. torvam Sw. The solvents such as methanol, ethanol,\
+    \ ethyl acetate, diethyl ether, chloroform, and n-hexane were used for the preliminary\
+    \ experiments. The extraction was carried out in each solvent system (20 ml of\
+    \ 70% v/w in water) with 2 g of powdered S. torvam Sw. with the extraction conditions\
+    \ of particle size: 0.5 mm, ultrasound intensity: 60 W, and temperature: 65 °C.\n\
+    \n### 2.5. Selection of process parameters\n\nThe five extraction parameters (ordered\
+    \ parameters) were selected as solvent concentration (55-66% v/w in water), ultrasound\
+    \ intensity (50-60 W cm⁻2), temperature (30-45 °C), and time (1.5-25 min) were\
+    \ selected for the yield of bioactive phytochemicals based on the dependent parameters,\
+    \ such as total phenols (TP), total flavonoids (TF), 2,2'-2,1'-diphenylhydrazyl\
+    \ (DPPH*), 2,2'-bis(3-sulfonopropyl)-6-ionic acid (ABTS), and hydrogen peroxide\
+    \ (H2O₂) measuring antioxidant ability of S. torvam Sw. Further in comparison\
+    \ the optimal solvent was chosen as the best solvent based on the results of preliminary\
+    \ experimental studies (Table 1). Five values (-2.37 (very low), -1 (low), 0 (medium),\
+    \ +1 (high), and +2.37 (very high)) were fixed for five extraction parameters\
+    \ as in Table 2.\n\nTable 1\nPreliminary selection of appropriate solvent.\n\n\
+    | Solvents | TPC | TFC | %DPPHc |\n|---|---|---|---|\n| Ethanol | 419.45 | 320.42\
+    \ | 67.25 |\n| Methanol | 420.24 | 223.39 | 68.34 |\n| Isopropanol | 378.72 |\
+    \ 308.20 | 62.56 |\n| Ethyl acetate | 372.85 | 307.63 | 63.70 |\n| Diethyl ether\
+    \ | 374.62 | 309.38 | 62.45 |\n| Chloroform | 381.45 | 312.45 | 61.65 |\n| n-hexane\
+    \ | 380.23 | 313.72 | 63.52 |\n\n- * All the experiments were repeated three times.\n\
+    \n### 2.6. Ultrasound-assisted solvent extraction of bioactive compounds\n\nAn\
+    \ adjustable ultrasonic bath, as described, was performed using experiments with\
+    \ 2 g of finely powdered sample of S. torvam Sw. in 20 ml of water at varied conditions\
+    \ and different conditions such as particle size of plant powder, temperature,\
+    \ time and ultrasound intensity. All the experiments were performed in triplicate\
+    \ according to face-centered composite design (CCD) of Response Surface Methodology\
+    \ (RSM). The extraction were concentrated at 40 °C using a rotary vacuum dryer\
+    \ (Buchi rotary evaporator, Mumbai, India) and filtered with No 1 paper. The extracts\
+    \ from preliminary experiments to identify the TP, TF, and antioxidant scavenging.\n\
+    \nTable 2\nExperimental range of codes for Face-centered composite design (FCCD).\n\
+    \n| Independent variables (xj) | Units | Symbol | Coded variables | -2.37 (very\
+    \ low) | -1 (Low) | 0 (Medium) | 1 (High) | 2.37 (very high) |\n|---|---|---|---|---|---|---|---|---|\n\
+    | Methanol concentration | % | $X_1$ | 48.12 | 55 | 60 | 65 | 71.89 |\n| Ultrasound\
+    \ intensity | cm$^{-2}$ | $X_2$ | 43.12 | 50 | 55 | 60 | 66.89 |\n| Temperature\
+    \ | °C | $X_3$ | 19.66 | 30 | 37.5 | 45 | 55.34 |\n| Particle size | mm | $X_4$\
+    \ | 8.12 | 15 | 20 | 25 | 31.89 |\n| Time | | $X_5$ | 0.19 | 0 | 0.5 | 1 | 2.19\
+    \ |\n\n### 2.7. Determination of total polyphenols (TPF)\n\nSpectrophotometric\
+    \ analysis was used to determine the total polyphenol content using the Folin-Ciocalteu\
+    \ reagent (Medina, 2011). Briefly, 5 ml of 10 diluted Folin-Ciocalteu reagent\
+    \ was mixed with 0.2 ml of each extract, individually. 2 ml of 7.5% sodium carbonate\
+    \ (Na$_2$CO$_3$) was added to the mixture for 5 minutes, and the mixture was then\
+    \ left in dark for an hour. After turn results were measured by measuring the\
+    \ absorbance at 765 nm using the spectrophotometer. The results were expressed\
+    \ as mg of gallic acid per gram of sample using gallic acid as the reference.\n\
+    \n### 2.8. Determination of total flavonoids (TF)\n\nOne ml of each sample was\
+    \ mixed with 0.3 ml of 5% sodium methanol, and the mixture was incubated for 5\
+    \ min under dark conditions. The reaction was stirred vigorously for 6 minutes\
+    \ at room temperature and then, 0.3 ml of 10% sodium hydroxide was added. The\
+    \ absorbance was measured at 510 nm using a UV-visible spectrophotometer. The\
+    \ results were expressed as mg of rutin.\n\n### 2.9. Determination of total polyphenols\
+    \ \n\nSpectrophotometric analysis was used to determine the total polyphenol content\
+    \ using the Folin-Ciocalteu reagent (Medina, 2011). Briefly, 5 ml of 10 diluted\
+    \ Folin-Ciocalteu reagent was mixed with 0.2 ml of each extract, individually.\
+    \ 2 ml of 7.5% sodium carbonate (Na$_2$CO$_3$) was added to the mixture for 5\
+    \ minutes, and the mixture was then left in dark for an hour. After turn results\
+    \ were measured by measuring the absorbance at 765 nm using the spectrophotometer.\
+    \ The results were expressed as mg of gallic acid per gram of sample using gallic\
+    \ acid as the reference.\n\n### 2.10. Determination of total flavonoids \n\nOne\
+    \ ml of each sample was mixed with 0.3 ml of 5% sodium methanol, and the mixture\
+    \ was incubated for 5 min under dark conditions. The reaction was stirred vigorously\
+    \ for 6 minutes at room temperature and then, 0.3 ml of 10% sodium hydroxide was\
+    \ added. The absorbance was measured at 510 nm using a UV-visible spectrophotometer.\
+    \ The results were expressed as mg of rutin.\n\n### 2.11. Determination of antioxidant\
+    \ activity \n\nThe antioxidant capacity of the extracts was evaluated using three\
+    \ assays: DPPH, ABTS, and H$_2$O$_2$. Each assay was performed according to standard\
+    \ protocols.\n\n### 2.12. Experimental design and parameters optimization using\
+    \ RSM\n\nTo maximize the yield (Y) of bioactive compounds from S. turv Wm., the\
+    \ coded parameters (methanol concentration, ultrasound-intensity, temperature,\
+    \ time, and particle size) of ultrasound-assisted solvent extraction were optimized\
+    \ through RSM with FCCD. A face-centered composite design was used with 50 experimental\
+    \ runs with five levels. In this experimental design, a total\n"
+  mdcn: '
+
+    通过气相色谱-质谱法（GC-MS）和液相色谱-质谱法（LC-MS）鉴定了成分，确定了所选植物在医疗保健领域的应用潜力。
+
+
+    ## 2. 实验部分
+
+
+    ### 2.1. Solanum tor Sw. 果实
+
+
+    S. torvam Sw. 的果实采集自印度泰米尔纳德邦 Virunagagar 县 Srivilliputh 附近 Shenbagathoppu 山的西高地山（经度：7.6225;
+    9.5225）。果实表面用清水清洗并在阴处干燥两周。将干燥后的果实使用网状研磨机（Greenree Elects Ltd., Chennai, India）磨成细粉。然后使用多个筛网（35、25、18、16和2号）对粉末进行筛选，以获得不同粒径粉末（0.5、0.75、1.0、1.5
+    mm）。样品在实验开始前储存在空调房中（含水量：10 ± 2%）。
+
+
+    ### 2.2. 化学试剂与试剂
+
+
+    溶剂比色试剂 ABTS、DPPH 由印度孟加罗 Sigma Aldrich 提供。甲醇、Folin-Ciocalteu 试剂、碳酸钠、氢化钠、氯化铝、过氧化氢（H2O2）购自印度孟买
+    HiMedia Pt. Ltd.。所有其他化学品和试剂均为分析或或等等级，购自印度 Merck 和 SRL Ltd.。
+
+
+    ### 2.3. 超声辅助溶剂提取
+
+
+    使用超声辅助溶剂提取（UAE）从 S. torvam Sw. 细粉中提取活性植物化学成分。实验装置包括一个超声水浴（温度精度 ±1.0 °C，220 V，20
+    kHz 强度连续超声波处理器），以及一个容量为 25 ml 的夹套反应器（容量由印度 AC Pharma 评估）。使用日本 Shimadzu UV-1800
+    系列紫外-可见分光度计配合 UV Probe 262 软件测量植物化学成分的浓度。
+
+
+    ### 2.4. 确定理想溶剂体系的初步实验
+
+
+    进行初步实验旨在根据 TF、TP 和 DPPH* 的浓度确定基于 S. torvam Sw. 的理想溶剂体系。初步实验使用了甲醇、乙醇、乙酸乙酯、乙醚、氯仿和正己烷等溶剂。在每个溶剂体系（20
+    ml 70% v/w 水）中使用 2 g S. torvam Sw. 粉末进行提取，提取条件为粒径：0.5 mm，超声强度：60 W，温度：65 °C。
+
+
+    ### 2.5. 工艺参数的选择
+
+
+    选择五个提取参数（有序参数），即溶剂浓度（水中 55-66% v/w）、超声强度（50-60 W cm⁻²）、温度（30-45 °C）和时间（1.5-25
+    min），基于依赖参数（如总酚（TP）、总黄酮类（TF）、2,2''-2,1''-二苯基腼自由基（DPPH*）、2,2''-双(3-磺代丙基)-6-离子酸（ABTS）和过氧化氢（H2O₂））来测量
+    S. torvam Sw. 的抗氧化能力，以获得活性植物化学成分的产量。进一步比较，根据初步研究结果选择最佳溶剂为最优溶剂（表 1）。五个提取参数固定了五个值（-2.37（极低）、-1（低）、0（中）、+1（高）和
+    +2.37（极高）），见表2。
+
+
+    表 1
+
+    合适溶剂的初步筛选。
+
+
+    | 溶剂 | TPC | TFC | %DPPHc |
+
+    |---|---|---|---|
+
+    | 乙醇 | 419.45 | 320.42 | 67.25 |
+
+    | 甲醇 | 420.24 | 223.39 | 68.34 |
+
+    | 异醇 | 378.72 | 308.20 | 62.56 |
+
+    | 乙酸乙酯 | 372.85 | 307.63 | 63.70 |
+
+    | 乙醚 | 374.62 | 309.38 | 62.45 |
+
+    | 氯仿 | 381.45 | 312.45 | 61.65 |
+
+    | 正己烷 | 380.23 | 313.72 | 63.52 |
+
+
+    - * 所有实验重复三次。
+
+
+    ### 2.6. 活性化合物的超声辅助溶剂提取
+
+
+    如所述，使用 2 g S. torvam Sw. 细粉样品在 20 ml 水中进行实验，改变不同的条件，如粉末粒径、温度、时间和超声强度。根据响应面法（RSM）的面心复合设计（CCD），提取在
+    40 °C 下使用旋转真空干燥器（印度 Buchi）进行浓缩并用 1 号纸过滤。初步实验提取物用于鉴定 TP、TF 和抗氧化能力。
+
+
+    表 2
+
+    面心复合设计（FCCD）的实验范围编码。
+
+
+    | 自变量 (xj) | 单位 | 编码变量 | -2.37（极低） | -1（低） | 0（中） | 1（高） | 2.37（极高） |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 甲醇浓度 | % | $X_1$ | 48.12 | 55 | 60 | 65 | 71.89 |
+
+    | 超声强度 | cm⁻² | $X_2$ | 43.12 | 50 | 55 | 60 | 66.89 |
+
+    | 温度 | °C | $X_3$ | 19.66 | 30 | 37.5 | 45 | 55.34 |
+
+    | 粒径 | mm | $X_4$ | 8.12 | 15 | 20 | 25 | 31.89 |
+
+    | 时间 | | $X_5$ | 0.19 | 0 | 0.5 | 1 | 2.19 |
+
+
+    ### 2.7. 总多酚（TPF）的测定
+
+
+    使用光光法结合 Folin-Ciocalteu 试剂（Medina, 2011）测定总多酚含量。简而言之，将 5 ml 10 倍稀释的 Folin-Ciocalteu
+    试剂与 0.2 ml 每个提取物混合。向混合物加入 2 ml 7.5% 碳酸钠（Na$_2$CO$_3$）静置 5 分钟，然后在黑暗中放置一小时。使用分光度计在
+    765 nm 处测量吸光度。结果以每克样品没食酸 mg 表示。
+
+
+    ### 2.8. 总黄酮类（TF）的测定
+
+
+    将 1 ml 每个样品与 0.3 ml 5% 甲醇混合，在黑暗下孵育 5 分钟。在室温下剧烈搅拌 6 分钟，然后加入 0.3 ml 10% 氢钠。使用紫外-可见分光度计在
+    510 nm 处测量吸光度。结果以每克样品没根皮碱 mg 表示。
+
+
+    ### 2.9. 总多酚的测定
+
+
+    使用光光法结合 Folin-Ciocalteu 试剂（Medina, 2011）测定总多酚含量。简而言之，将 5 ml 10 倍稀释的 Folin-Ciocalteu
+    试剂与 0.2 ml 每个提取物混合。向混合物加入 2 ml 7.5% 碳酸钠（Na$_2$CO$_3$）静置 5 分钟，然后在黑暗中放置一小时。使用分光度计在
+    765 nm 处测量吸光度。结果以每克样品没食酸 mg 表示。
+
+
+    ### 2.10. 总黄酮类的测定
+
+
+    将 1 ml 每个样品与 0.3 ml 5% 甲醇混合，在黑暗下孵育 5 分钟。在室温下剧烈搅拌 6 分钟，然后加入 0.3 ml 10% 氢钠。使用紫外-可见分光度计在
+    510 nm 处测量吸光度。结果以每克样品没根皮碱 mg 表示。
+
+
+    ### 2.11. 抗氧化活性的测定
+
+
+    使用三种分析方法：DPPH、ABTS 和 H$_2$O$_2$ 评估提取物的抗氧化能力。每项分析均按照标准方案进行。
+
+
+    ### 2.12. 使用 RSM 进行实验设计和参数优化
+
+
+    为了最大化 S. turv Wm. 活性化合物的产量（Y），通过 RSM 结合 FCCD 对超声辅助溶剂提取的编码参数（甲醇浓度、超声强度、温度、时间和粒径）进行了优化。使用了面心复合设计，包含
+    50 次实验运行，分为五个个水平。在该实验设计中，总计
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    50 experimental results consisting of 8 replicates of center, 10 axial points
+    (ai) at a distance of ±2.37 from center and 32 factorial points are based on Table
+    3. The independent parameters were coded based on the below equation (4):
+
+
+    ```
+
+    xi = \frac{Xi-Xl}{\Delta XI} = 1, 2, 3,...,K
+
+    ```
+
+
+    Where Xi, the dimensionless value of the independent parameter, X1, the real value
+    of an independent parameter, X2, the real value of an independent parameter at
+    the center point; and $\Delta XI$, the real change of the value of the parameter
+    i representing to a unit for the dimensionless value of the parameter i. The total
+    number of experiments was calculated from equation (5) that is given below:
+
+
+    ```
+
+    N = 2^k (axial points) + 2k (axial points) + n0 (central points)
+
+    ```
+
+
+    Where N is the total number of experiments, k is the independent variable, and
+    n0 is replicate at the central points, which resulted in an experimental design
+    of 50 runs. The correlation between dependent and independent variable was determined
+    by fitting experimental data to a second order regression model.
+
+
+    The following is the second-order polynomial model reconstructed using response
+    analysis:
+
+
+    ```
+
+    $Y = a_0 + \sum_{i=1}^{k} a_iX_i + \sum_{i=1}^{k} a_{ii}X_i^2 + \sum_{i=1}^{k}\sum_{j=i+1}^{k}
+    a_{ij}X_iX_j + \epsilon$
+
+    ```
+
+
+    The above equation (6) is coded based on the below value of parameters:
+
+
+    ```
+
+    $Y = a_0 + a_1X_1 + a_2X_2 + a_3X_3 + a_4X_4 + a_5X_5 + a_{11}X_1^2 + a_{22}X_2^2
+    + a_{33}X_3^2 + a_{44}X_4^2 + a_{55}X_5^2 + a_{12}X_1X_2 + a_{13}X_1X_3 + a_{14}X_1X_4
+    + a_{15}X_1X_5 + a_{23}X_2X_3 + a_{24}X_2X_4 + a_{25}X_2X_5 + a_{34}X_3X_4 + a_{35}X_3X_5
+    + a_{45}X_4X_5$
+
+    ```
+
+
+    Where Y is the dependent variable, a_0 is the constant, a_ii are the model coefficients,
+    and Xij are coded dependent variables, and $\epsilon$ is an error. Further analysis
+    was performed to determine the accuracy of the experiment results.
+
+
+    # 2.3. Optimization using ANFIS modeling
+
+
+    ANFIS (artificial neural-fuzzy inference system) is a combination of the power
+    of ANN (artificial neural networks) and the high-level human brain reasoning capability
+    of FIS (fuzzy inference systems) (Tasadi and Pourirez, 2010). In other words,
+    ANFIS can model results from integrating the FIS into the framework of neural
+    network. ANFIS modeling has applications in many engineering and scientific fields
+    as a result of its effectiveness and reasoning capabilities (Yuan et al., 2014).
+    It is highly effective in analyzing relationships between input and output variables
+    that are both linear and nonlinear. In addition the backpropagation of ANN is
+    the first technique used to train the ANN-based fuzzy inference system (Azadeh
+    et al., 2020). Considering the input parameters of method construction (clustering
+    algorithm), (learning time) and particle size, the output of ANFIS will be optimized
+    by genetic algorithm.
+
+
+    +   Rule 1: If X is between a1 and a2, then f1 = p1x + q1y
+
+    Rule 2: If X is between a2 and b2, then f2 = p2x + q2y
+
+
+    Trial and error method was used to determine the number of features for each input
+    variable. The experimental data was split into training, testing, and validation
+    of the network model in order to forecast the extraction of the most bioactive
+    phytochemicals from S. solymum.
+
+
+    # 2.4. Machine learning algorithm
+
+
+    A technique involving automated learning, known as Random Forest, can be used
+    for both classification and regression tasks. Both the random forest will categorize
+    the data and predict (Park et al., 2022). The random forest regressor will select
+    the target''s values which are continuous. It is an ensemble learning technique
+    that utilizes various decision trees to produce a more accurate model. Each decision
+    tree is trained using a randomly subset of the features of the training data.
+    This method reduces overfitting and combines to create a more precise and reliable
+    prediction. The random forest regressor''s main advantage is that it has the capacity
+    to handle high-dimensional data with a nonlinear connection between input and
+    target values. Experimental variables X1, X2, X3, X4, and X5 are used as inputs
+    with y1, y2'
+  - '[PAGE 5]
+
+
+    # Table 3
+
+
+    Face-centered composite design (FCCD) with experimental results and RSM Predicted
+    ANFIS Predicted ML Algorithm Predictions
+
+
+    | S. No | Independent parameters | Experimental Results* | RSM Predicted | ANFIS
+    Predicted | ML Algorithm Predictions |
+
+    |---|---|---|---|---|--|
+
+    | | $X_1$ | $X_2$ | $X_3$ | $X_4$ | $X_5$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$
+    | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$
+    |
+
+    | 1 | 60 | 45 | 30 | 15 | 5 | 174.29 | 273.85 | 55.35 | 60.74 | 471.66 | 287.87
+    | 53.83 | 58.52 | 60.58 | 474 | 55.3 | 60.45 | 49.98 | 268.57 | 50.18 | 56.4154
+    | 62.0083 |
+
+    | 2 | 60 | 45 | 30 | 15 | 5 | 317.29 | 230.77 | 44.21 | 48.22 | 468.80 | 293.61
+    | 44.64 | 49.03 | 61.51 | 457 | 231 | 442.2 | 54.8 | 378.04 | 242.96 | 41.57 |
+    46.0818 | 73.7034 |
+
+    | 3 | 60 | 45 | 30 | 25 | 5 | 265.62 | 183.43 | 73.11 | 75.55 | 775.23 | 500.00
+    | 73.10 | 78.09 | 70.37 | 777 | 73.5 | 751.77 | 778.899 | 265.48 | 69.98 | 75.30
+    |
+
+    | 4 | 50 | 45 | 30 | 35 | 5 | 152.28 | 143.08 | 38.02 | 41.34 | 395.99 | 271.37
+    | 39.97 | 39.95 | 419 | 328 | 41.2 | 39.4 | 439.25 | 270.34 | 37.29 | 42.09 |
+    43.28 |
+
+    | 5 | 60 | 45 | 30 | 35 | 5 | 375.25 | 468.02 | 27.12 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415.7 | 410 | 47.1 | 42.2 | 471 | 32.54 | 37.17 | 38.21 | 43.81
+    |
+
+    | 6 | 60 | 45 | 30 | 35 | 5 | 468.83 | 276.92 | 35.11 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415 | 468 | 27.1 | 42.2 | 471 | 32.54 | 37.17 | 38.21 | 43.81
+    | |
+
+    | 7 | 60 | 45 | 30 | 45 | 5 | 145.85 | 115.13 | 57.11 | 62.58 | 591.25 | 381.09
+    | 53.78 | 58.56 | 558 | 561 | 54.16 | 57.2 | 556 | 394.93 | 251.62 | 59.16 | 58.21
+    |
+
+    | 8 | 60 | 45 | 30 | 45 | 5 | 330.13 | 187.89 | 63.33 | 73.59 | 776.48 | 415.05
+    | 74.49 | 78.76 | 702 | 60.20 | 72.79 | 70.88 | 790 | 498.77 | 472.12 | 75.12
+    | 77.84 |
+
+    | 9 | 60 | 45 | 30 | 45 | 5 | 105.75 | 400.82 | 62.23 | 69.18 | 732.66 | 490.20
+    | 67.12 | 71.65 | 712 | 700 | 46 | 68.2 | 69.1 | 776 | 698.61 | 194.73 | 71.45
+    | 71.28 |
+
+    | 10 | 60 | 45 | 30 | 55 | 5 | 370.05 | 246.92 | 31.11 | 44.12 | 675.65 | 403.69
+    | 36.29 | 41.50 | 415 | 478 | 24.1 | 42.52 | 475 | 372.56 | 37.17 | 43.18 | 48.11
+    |
+
+    | 11 | 60 | 45 | 30 | 55 | 5 | 468.83 | 276.92 | 35.11 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415 | 468 | 27.1 | 42.2 | 471 | 32.54 | 37.17 | 38.21 | 43.81
+    | |
+
+    | 12 | 60 | 45 | 30 | 55 | 5 | 397.25 | 363.13 | 37.12 | 42.55 | 724.68 | 462.11
+    | 47.12 | 46.65 | 715 | 372 | 31.5 | 42.5 | 715 | 418.99 | 32.12 | 51.63 | 51.92
+    |
+
+    | 13 | 60 | 45 | 30 | 55 | 5 | 317.25 | 363.13 | 70.12 | 76.48 | 724.68 | 462.11
+    | 71.48 | 76.65 | 715 | 628 | 37.2 | 42.5 | 745 | 737.715 | 41.5 | 61.13 | 60.27
+    |
+
+    | 14 | 60 | 45 | 30 | 65 | 5 | 456.74 | 276.92 | 33.11 | 44.12 | 675.65 | 403.69
+    | 36.29 | 41.50 | 415 | 478 | 24.1 | 42.5 | 475 | 372.56 | 37.17 | 43.18 | 48.11
+    |
+
+    | 15 | 50 | 45 | 30 | 65 | 5 | 206.15 | 332.11 | 56.37 | 66.52 | 367.03 | 362.11
+    | 56.07 | 61.56 | 351 | 321 | 31.7 | 31.5 | 357 | 391.26 | 33.97 | 38.96 | 42.09
+    |
+
+    | 16 | 60 | 45 | 30 | 65 | 5 | 215.15 | 363.13 | 70.12 | 76.48 | 724.68 | 462.11
+    | 71.48 | 76.65 | 715 | 628 | 37.2 | 42.5 | 745 | 737.715 | 41.5 | 61.13 | 60.27
+    |
+
+    | 17 | 60 | 45 | 30 | 75 | 5 | 174.11 | 385.18 | 38.59 | 43.68 | 497.24 | 453.11
+    | 48.17 | 51.32 | 487 | 371 | 31.9 | 39.5 | 519 | 335.37 | 42.06 | 46.02 | 47.39
+    |
+
+    | 18 | 60 | 45 | 30 | 75 | 5 | 445.25 | 314.14 | 39.38 | 44.52 | 494.16 | 444.89
+    | 44.81 | 49.98 | 484 | 538 | 39.9 | 41.5 | 537 | 434.24 | 42.07 | 53.51 | 53.81
+    |
+
+    | 19 | 60 | 45 | 30 | 75 | 5 | 529.39 | 436.16 | 48.43 | 52.96 | 598.11 | 448.53
+    | 53.58 | 53.32 | 484 | 538 | 39.9 | 41.5 | 537 | 434.24 | 42.07 | 53.51 | 53.81
+    |
+
+    | 20 | 60 | 45 | 30 | 75 | 5 | 608.45 | 511.13 | 63.55 | 70.73 | 668.25 | 435.99
+    | 63.18 | 66.22 | 584 | 538 | 39.9 | 41.5 | 537 | 434.24 | 41.42 | 55.39 | 55.63
+    |
+
+    | 21 | 60 | 45 | 30 | 75 | 5 | 318.98 | 230.77 | 31.11 | 44.12 | 675.65 | 403.69
+    | 36.29 | 41.50 | 415 | 478 | 24.1 | 42.5 | 475 | 372.56 | 37.17 | 43.18 | 48.11
+    |
+
+    | 22 | 60 | 45 | 30 | 85 | 5 | 397.25 | 363.13 | 37.12 | 42.55 | 724.68 | 462.11
+    | 47.12 | 46.65 | 715 | 628 | 37.2 | 42.5 | 745 | 737.715 | 41.5 | 61.13 | 60.27
+    |
+
+    | 23 | 60 | 45 | 30 | 85 | 5 | 343.95 | 368.12 | 39.11 | 44.52 | 724.68 | 462.11
+    | 47.12 | 46.65 | 715 | 628 | 37.2 | 42.5 | 745 | 737.715 | 41.5 | 61.13 | 60.27
+    |
+
+    | 24 | 50 | 45 | 30 | 95 | 5 | 223.85 | 331.11 | 56.37 | 66.52 | 367.03 | 362.11
+    | 56.07 | 61.56 | 351 | 321 | 31.7 | 31.5 | 357 | 391.26 | 33.97 | 38.96 | 42.09
+    |
+
+    | 25 | 60 | 45 | 30 | 95 | 5 | 226.86 | 454.11 | 73.52 | 80.38 | 708.23 | 512.10
+    | 73.12 | 78.52 | 718 | 652 | 73.1 | 78.52 | 718 | 633.79 | 70.12 | 74.39 | 74.72
+    |
+
+    | 26 | 60 | 45 | 30 | 95 | 5 | 151.38 | 360.24 | 49.23 | 53.16 | 538.11 | 348.99
+    | 49.81 | 53.95 | 518 | 508 | 49.1 | 53.95 | 518 | 426.09 | 49.2 | 52.06 | 50.63
+    |
+
+    | 27 | 60 | 45 | 30 | 95 | 5 | 149.75 | 203.77 | 32.74 | 37.62 | 358.21 | 287.87
+    | 32.4 | 37.62 | 308 | 287 | 32.4 | 37.6 | 308 | 201.83 | 30.42 | 31.84 | 31.84
+    |
+
+    | 28 | 60 | 45 | 30 | 95 | 5 | 151.38 | 360.24 | 49.23 | 53.16 | 538.11 | 348.99
+    | 49.81 | 53.95 | 518 | 508 | 49.1 | 53.95 | 518 | 426.09 | 49.2 | 52.06 | 50.63
+    |
+
+    | 29 | 60 | 45 | 30 | 105 | 5 | 154.14 | 318.38 | 47.54 | 53.24 | 417.68 | 314.19
+    | 41.19 | 45.24 | 408 | 314 | 41.1 | 45.2 | 408 | 219.35 | 44.21 | 44.77 | 49.98
+    |
+
+    | 30 | 60 | 45 | 30 | 105 | 5 | 215.45 | 398.12 | 68.12 | 73.52 | 498.13 | 345.11
+    | 68.12 | 73.52 | 498 | 345 | 68.1 | 73.5 | 498 | 308.61 | 64.11 | 63.87 | 60.18
+    |
+
+    | 31 | 60 | 45 | 30 | 105 | 5 | 223.85 | 331.11 | 56.37 | 66.52 | 367.03 | 362.11
+    | 56.07 | 61.56 | 351 | 321 | 31.7 | 31.5 | 357 | 391.26 | 33.97 | 38.96 | 42.09
+    |
+
+    | 32 | 60 | 45 | 30 | 105 | 5 | 350.45 | 461.21 | 59.32 | 64.58 | 598.13 | 418.51
+    | 59.32 | 64.58 | 598 | 418 | 59.3 | 64.5 | 598 | 366.41 | 59.1 | 62.9 | 62.91
+    |
+
+    | 33 | 50 | 45 | 30 | 105 | 5 | 161.81 | 226.25 | 63.15 | 67.11 | 684.49 | 419.92
+    | 59.82 | 60.36 | 626 | 424 | 62.1 | 66.5 | 626 | 623.18 | 50.22 | 62.14 | 64.23
+    |
+
+    | 34 | 60 | 45 | 30 | 105 | 5 | 375.25 | 468.02 | 27.12 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415 | 468 | 27.1 | 42.2 | 471 | 32.54 | 37.17 | 38.21 | 43.81
+    |
+
+    | 35 | 60 | 45 | 30 | 115 | 5 | 198.68 | 429.91 | 42.76 | 49.52 | 603.11 | 407.11
+    | 42.68 | 49.52 | 603 | 407 | 42.6 | 49.5 | 603 | 354.51 | 39.12 | 44.58 | 44.74
+    |
+
+    | 36 | 60 | 45 | 30 | 115 | 5 | 375.25 | 468.02 | 27.12 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415 | 468 | 27.1 | 42.2 | 471 | 32.54 | 37.17 | 38.21 | 43.81
+    |
+
+    | 37 | 60 | 45 | 30 | 115 | 5 | 150.63 | 298.18 | 39.68 | 39.72 | 534.18 | 309.68
+    | 39.6 | 39.7 | 534 | 309 | 39.6 | 39.7 | 534 | 281.94 | 39.5 | 39.54 | 39.54
+    |
+
+    | 38 | 55 | 45 | 30 | 115 | 5 | 215.03 | 394.24 | 42.76 | 47.52 | 601.95 | 401.24
+    | 42.68 | 47.52 | 601 | 401 | 42.6 | 47.5 | 601 | 389.49 | 40.14 | 45.19 | 45.19
+    |
+
+    | 39 | 60 | 45 | 30 | 115 | 5 | 399.68 | 538.12 | 69.11 | 69.98 | 704.21 | 483.11
+    | 69.1 | 69.98 | 704 | 483 | 69.1 | 69.98 | 704 | 458.57 | 69.1 | 69.58 | 69.58
+    |
+
+    | 40 | 60 | 45 | 30 | 115 | 5 | 399.98 | 538.12 | 69.11 | 69.98 | 704.21 | 483.11
+    | 69.1 | 69.98 | 704 | 483 | 69.1 | 69.98 | 704 | 357.29 | 59.9 | 61.87 | 61.87
+    |
+
+
+    (continued on next page)'
+  md: '
+
+    50 experimental results consisting of 8 replicates of center, 10 axial points
+    (ai) at a distance of ±2.37 from center and 32 factorial points are based on Table
+    3. The independent parameters were coded based on the below equation (4):
+
+
+    ```
+
+    xi = \frac{Xi-Xl}{\Delta XI} = 1, 2, 3,...,K
+
+    ```
+
+
+    Where Xi, the dimensionless value of the independent parameter, X1, the real value
+    of an independent parameter, X2, the real value of an independent parameter at
+    the center point; and $\Delta XI$, the real change of the value of the parameter
+    i representing to a unit for the dimensionless value of the parameter i. The total
+    number of experiments was calculated from equation (5) that is given below:
+
+
+    ```
+
+    N = 2^k (axial points) + 2k (axial points) + n0 (central points)
+
+    ```
+
+
+    Where N is the total number of experiments, k is the independent variable, and
+    n0 is replicate at the central points, which resulted in an experimental design
+    of 50 runs. The correlation between dependent and independent variable was determined
+    by fitting experimental data to a second order regression model.
+
+
+    The following is the second-order polynomial model reconstructed using response
+    analysis:
+
+
+    ```
+
+    $Y = a_0 + \sum_{i=1}^{k} a_iX_i + \sum_{i=1}^{k} a_{ii}X_i^2 + \sum_{i=1}^{k}\sum_{j=i+1}^{k}
+    a_{ij}X_iX_j + \epsilon$
+
+    ```
+
+
+    The above equation (6) is coded based on the below value of parameters:
+
+
+    ```
+
+    $Y = a_0 + a_1X_1 + a_2X_2 + a_3X_3 + a_4X_4 + a_5X_5 + a_{11}X_1^2 + a_{22}X_2^2
+    + a_{33}X_3^2 + a_{44}X_4^2 + a_{55}X_5^2 + a_{12}X_1X_2 + a_{13}X_1X_3 + a_{14}X_1X_4
+    + a_{15}X_1X_5 + a_{23}X_2X_3 + a_{24}X_2X_4 + a_{25}X_2X_5 + a_{34}X_3X_4 + a_{35}X_3X_5
+    + a_{45}X_4X_5$
+
+    ```
+
+
+    Where Y is the dependent variable, a_0 is the constant, a_ii are the model coefficients,
+    and Xij are coded dependent variables, and $\epsilon$ is an error. Further analysis
+    was performed to determine the accuracy of the experiment results.
+
+
+    ## 2.3. Optimization using ANFIS modeling
+
+
+    ANFIS (artificial neural-fuzzy inference system) is a combination of the power
+    of ANN (artificial neural networks) and the high-level human brain reasoning capability
+    of FIS (fuzzy inference systems) (Tasadi and Pourirez, 2010). In other words,
+    ANFIS can model results from integrating the FIS into the framework of neural
+    network. ANFIS modeling has applications in many engineering and scientific fields
+    as a result of its effectiveness and reasoning capabilities (Yuan et al., 2014).
+    It is highly effective in analyzing relationships between input and output variables
+    that are both linear and nonlinear. In addition the backpropagation of ANN is
+    the first technique used to train the ANN-based fuzzy inference system (Azadeh
+    et al., 2020). Considering the input parameters of method construction (clustering
+    algorithm), (learning time) and particle size, the output of ANFIS will be optimized
+    by genetic algorithm.
+
+
+    - Rule 1: If X is between a1 and a2, then f1 = p1x + q1y
+
+    - Rule 2: If X is between a2 and b2, then f2 = p2x + q2y
+
+
+    Trial and error method was used to determine the number of features for each input
+    variable. The experimental data was split into training, testing, and validation
+    of the network model in order to forecast the extraction of the most bioactive
+    phytochemicals from S. solymum.
+
+
+    ## 2.4. Machine learning algorithm
+
+
+    A technique involving automated learning, known as Random Forest, can be used
+    for both classification and regression tasks. Both the random forest will categorize
+    the data and predict (Park et al., 2022). The random forest regressor will select
+    the target''s values which are continuous. It is an ensemble learning technique
+    that utilizes various decision trees to produce a more accurate model. Each decision
+    tree is trained using a randomly subset of the features of the training data.
+    This method reduces overfitting and combines to create a more precise and reliable
+    prediction. The random forest regressor''s main advantage is that it has the capacity
+    to handle high-dimensional data with a nonlinear connection between input and
+    target values. Experimental variables X1, X2, X3, X4, and X5 are used as inputs
+    with y1, y2.
+
+
+    ## Table 3
+
+
+    Face-centered composite design (FCCD) with experimental results and RSM Predicted
+    ANFIS Predicted ML Algorithm Predictions
+
+
+    | S. No | Independent parameters | Experimental Results* | RSM Predicted | ANFIS
+    Predicted | ML Algorithm Predictions |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | | $X_1$ | $X_2$ | $X_3$ | $X_4$ | $X_5$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$
+    | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$
+    |
+
+    | 1 | 60 | 45 | 30 | 15 | 5 | 174.29 | 273.85 | 55.35 | 60.74 | 471.66 | 287.87
+    | 53.83 | 58.52 | 60.58 | 474 | 55.3 | 60.45 | 49.98 | 268.57 | 50.18 | 56.4154
+    | 62.0083 |
+
+    | 2 | 60 | 45 | 30 | 15 | 5 | 317.29 | 230.77 | 44.21 | 48.22 | 468.80 | 293.61
+    | 44.64 | 49.03 | 61.51 | 457 | 231 | 442.2 | 54.8 | 378.04 | 242.96 | 41.57 |
+    46.0818 | 73.7034 |
+
+    | 3 | 60 | 45 | 30 | 25 | 5 | 265.62 | 183.43 | 73.11 | 75.55 | 775.23 | 500.00
+    | 73.10 | 78.09 | 70.37 | 777 | 73.5 | 751.77 | 778.899 | 265.48 | 69.98 | 75.30
+    |
+
+    | 4 | 50 | 45 | 30 | 35 | 5 | 152.28 | 143.08 | 38.02 | 41.34 | 395.99 | 271.37
+    | 39.97 | 41.95 | 328 | 419 | 42 | 439.25 | 270.34 | 37.29 | 43.28 |
+
+    | 5 | 60 | 45 | 30 | 35 | 5 | 375.25 | 468.02 | 27.12 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 410 | 471 | 42 | 471 | 32.54 | 37.17 | 38.21 |
+
+    | 6 | 60 | 45 | 30 | 35 | 5 | 468.83 | 276.92 | 35.11 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415 | 468 | 42 | 471 | 32.54 | 37.17 | 38.21 |
+
+    | 7 | 60 | 45 | 30 | 45 | 5 | 145.85 | 115.13 | 57.11 | 62.58 | 591.25 | 381.09
+    | 53.78 | 58.56 | 558 | 541 | 42 | 556 | 394.93 | 251.62 | 59.16 | 38.21 |
+
+    | 8 | 60 | 45 | 30 | 45 | 5 | 330.13 | 187.89 | 63.33 | 73.59 | 776.48 | 415.05
+    | 74.49 | 78.76 | 702 | 720 | 42 | 790 | 498.77 | 472.12 | 38.84 |
+
+    | 9 | 60 | 45 | 30 | 45 | 5 | 105.75 | 400.82 | 62.23 | 69.18 | 732.66 | 490.20
+    | 67.12 | 71.65 | 712 | 700 | 42 | 776 | 498.61 | 194.73 | 71.45 | 38.28 |
+
+    | 10 | 60 | 45 | 30 | 55 | 5 | 370.05 | 246.92 | 31.11 | 44.12 | 675.65 | 403.69
+    | 36.29 | 41.50 | 415 | 478 | 42 | 475 | 372.56 | 37.17 | 38.18 |
+
+    | 11 | 60 | 45 | 30 | 55 | 5 | 468.83 | 276.92 | 35.11 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415 | 468 | 42 | 471 | 32.54 | 37.17 | 38.21 |
+
+    | 12 | 60 | 45 | 30 | 55 | 5 | 397.25 | 363.13 | 52.12 | 64.55 | 724.68 | 462.11
+    | 71.42 | 76.65 | 715 | 728 | 42 | 715 | 418.99 | 32.12 | 51.63 |
+
+    | 13 | 60 | 45 | 30 | 55 | 5 | 317.25 | 363.13 | 70.12 | 76.48 | 724.68 | 462.11
+    | 71.48 | 76.65 | 715 | 728 | 42 | 745 | 737.715 | 41.5 | 61.13 |
+
+    | 14 | 60 | 45 | 30 | 65 | 5 | 456.74 | 276.92 | 33.11 | 44.12 | 675.65 | 403.69
+    | 36.29 | 41.50 | 415 | 478 | 42 | 475 | 372.56 | 37.17 | 38.18 |
+
+    | 15 | 50 | 45 | 30 | 65 | 5 | 206.15 | 332.11 | 56.37 | 66.52 | 367.03 | 362.11
+    | 56.07 | 61.56 | 351 | 321 | 31.7 | 357 | 391.26 | 33.97 | 38.96 |
+
+    | 16 | 60 | 45 | 30 | 65 | 5 | 215.15 | 363.13 | 70.12 | 76.48 | 724.68 | 462.11
+    | 71.48 | 76.65 | 715 | 628 | 37.2 | 42.5 | 745 | 737.715 | 41.5 |
+
+    | 17 | 60 | 45 | 30 | 75 | 5 | 174.11 | 385.18 | 38.59 | 43.68 | 497.24 | 453.11
+    | 48.17 | 51.32 | 487 | 371 | 31.9 | 39.5 | 519 | 335.37 | 42.06 |
+
+    | 18 | 60 | 45 | 30 | 75 | 5 | 445.25 | 314.14 | 39.38 | 44.52 | 494.16 | 444.89
+    | 44.81 | 49.98 | 484 | 538 | 39.9 | 415 | 537.24 | 42.07 |
+
+    | 19 | 60 | 45 | 30 | 75 | 5 | 529.39 | 436.16 | 48.43 | 52.96 | 598.11 | 448.53
+    | 53.58 | 53.32 | 484 | 538 | 39.9 | 415 | 537.24 | 42.07 |
+
+    | 20 | 60 | 45 | 30 | 75 | 5 | 608.45 | 511.13 | 63.55 | 70.73 | 668.25 | 435.99
+    | 63.18 | 66.22 | 584 | 538 | 39.9 | 415 | 537.24 | 42.07 |
+
+    | 21 | 60 | 45 | 30 | 75 | 5 | 318.98 | 230.77 | 31.11 | 44.12 | 675.65 | 403.69
+    | 36.29 | 41.50 | 415 | 478 | 42 | 475 | 372.56 | 37.17 |
+
+    | 22 | 60 | 45 | 30 | 85 | 5 | 397.25 | 363.13 | 37.12 | 42.55 | 724.68 | 462.11
+    | 47.12 | 46.65 | 715 | 628 | 42 | 745 | 737.715 | 41.5 |
+
+    | 23 | 60 | 45 | 30 | 85 | 5 | 343.95 | 368.12 | 39.11 | 44.52 | 724.68 | 462.11
+    | 47.12 | 46.65 | 715 | 628 | 42 | 745 | 737.715 | 41.5 |
+
+    | 24 | 50 | 45 | 30 | 95 | 5 | 223.85 | 331.11 | 56.37 | 66.52 | 367.03 | 362.11
+    | 56.07 | 61.56 | 351 | 321 | 31.7 | 31.5 | 357 | 391.26 |
+
+    | 25 | 60 | 45 | 30 | 95 | 5 | 226.86 | 454.11 | 73.52 | 80.38 | 708.23 | 512.10
+    | 78.52 | 718 | 632 |
+
+    | 26 | 60 | 45 | 30 | 95 | 5 | 151.38 | 360.24 | 49.23 | 53.16 | 538.11 | 348.99
+    | 49.81 | 539 | 518 |
+
+    | 27 | 60 | 45 | 30 | 95 | 5 | 149.75 | 203.77 | 32.74 | 37.62 | 358.21 | 287.87
+    | 32.4 | 37.62 | 308 |
+
+    | 28 | 60 | 45 | 30 | 95 | 5 | 151.38 | 360.24 | 49.23 | 53.16 | 538.11 | 348.99
+    | 49.81 | 53.95 | 518 |
+
+    | 29 | 60 | 45 | 30 | 105 | 5 | 154.14 | 318.38 | 47.54 | 53.24 | 417.68 | 314.19
+    | 41.19 | 45.24 | 408 |
+
+    | 30 | 60 | 45 | 30 | 105 | 5 | 215.45 | 398.12 | 68.12 | 73.52 | 498.13 | 345.11
+    | 68.12 | 73.52 | 498 |
+
+    | 31 | 60 | 45 | 30 | 105 | 5 | 223.85 | 331.11 | 56.37 | 66.52 | 367.03 | 362.11
+    | 56.07 | 61.56 | 351 |
+
+    | 32 | 60 | 45 | 30 | 105 | 5 | 350.45 | 461.21 | 59.32 | 64.58 | 598.13 | 418.51
+    | 59.32 | 64.58 | 598 |
+
+    | 33 | 50 | 45 | 30 | 105 | 5 | 161.81 | 226.25 | 71.11 | 75.55 | 395.99 | 403.69
+    | 36.20 | 41.50 | 415 |
+
+    | 34 | 60 | 45 | 30 | 105 | 5 | 375.25 | 468.02 | 27.12 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415 |
+
+    | 35 | 60 | 45 | 30 | 105 | 5 | 198.68 | 331.11 | 73.52 | 79.12 | 603.71 | 407
+    | 42.5 | 44  | 475 |
+
+    | 36 | 60 | 45 | 30 | 105 | 5 | 375.25 | 468.02 | 27.12 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415 |
+
+    | 37 | 60 | 45 | 30 | 105 | 5 | 149.75 | 203.77 | 32.74 | 37.62 | 358.21 | 287.87
+    | 32.4 | 37.62 | 308 |
+
+    | 38 | 55 | 45 | 30 | 105 | 5 | 201.28 | 143.08 | 38.02 | 41.34 | 395.99 | 403.69
+    | 36.29 | 41.50 | 415 |
+
+    | 39 | 60 | 45 | 30 | 105 | 5 | 399.68 | 538.12 | 69.11 | 69.98 | 704.21 | 483.11
+    | 69.1 | 69.98 | 704 |
+
+    | 40 | 60 | 45 | 30 | 105 | 5 | 399.98 | 538.12 | 69.11 | 69.98 | 704.21 | 483.11
+    | 69.1 | 69.98 | 704 |
+
+    '
+  mdcn: '
+
+
+    基于表3，共有 50 个实验结果，包括 8 次中心点重复、距离中心 ±2.37 的 10 个轴向点 (ai) 以及 32 个因子点。独立参数根据下方的公式
+    (4) 进行编码：
+
+
+    ```
+
+    xi = \frac{Xi-Xl}{\Delta XI} = 1, 2, 3,...,K
+
+    ```
+
+
+    其中，$Xi$ 是独立参数的无量纲值，$X_1$ 是独立参数的真实值，$X_2$ 是中心点独立参数的真实值；$\Delta XI$ 是参数 $i$ 值的真实变化，代表参数
+    $i$ 的无量纲值的单位。总实验次数通过下述公式 (5) 计算：
+
+
+    ```
+
+    N = 2^k (axial points) + 2k (axial points) + n0 (central points)
+
+    ```
+
+
+    其中 $N$ 是实验总数，$k$ 是自变量，$n_0$ 是中心点的重复次数，最终形成 50 次的实验设计。因变量与自变量之间的相关性通过将实验数据拟合二阶回归模型来确定。
+
+
+    以下是使用响应分析重建的二阶多项式模型：
+
+
+    ```
+
+    $Y = a_0 + \sum_{i=1}^{k} a_iX_i + \sum_{i=1}^{k} a_{ii}X_i^2 + \sum_{i=1}^{k}\sum_{j=i+1}^{k}
+    a_{ij}X_iX_j + \epsilon$
+
+    ```
+
+
+    上述方程 (6) 根据下面的参数值编码：
+
+
+    ```
+
+    $Y = a_0 + a_1X_1 + a_2X_2 + a_3X_3 + a_4X_4 + a_5X_5 + a_{11}X_1^2 + a_{22}X_2^2
+    + a_{33}X_3^2 + a_{44}X_4^2 + a_{55}X_5^2 + a_{12}X_1X_2 + a_{13}X_1X_3 + a_{14}X_1X_4
+    + a_{15}X_1X_5 + a_{23}X_2X_3 + a_{24}X_2X_4 + a_{25}X_2X_5 + a_{34}X_3X_4 + a_{35}X_3X_5
+    + a_{45}X_4X_5$
+
+    ```
+
+
+    其中 $Y$ 是因变量，$a_0$ 是常数，$a_{ii}$ 是模型系数，$X_{ij}$ 是编码后的因变量，$\epsilon$ 是误差。随后进行了进一步分析以确定实验结果的准确性。
+
+
+    ## 2.3. 使用 ANFIS 建模进行优化
+
+
+    ANFIS（人工神经模糊推理系统）是 ANN（人工神经网络）的强大与 FIS（模糊推理系统）的高级人脑推理能力的结合（Tasadi and Pourirez,
+    2010）。换句话说，ANFIS 可以通过将 FIS 集成到神经网络框架中对结果进行建模。由于其有效性和推理能力，ANFIS 建模在许多工程和科学领域都有应用（Yuan
+    et al., 2014）。它在分析输入与输出变量之间的线性和非线性关系方面非常有效。此外，ANN 的反向传播是训练基于 ANN 的模糊推理系统的首选技术（Azadeh
+    et al., 2020）。考虑到方法构建的输入参数（聚类算法）、学习时间以及粒径，ANFIS 的输出将通过遗传算法进行优化。
+
+
+    - 规则 1：如果 X 处于 a1 和 a2 之间，则 f1 = p1x + q1y
+
+    - 规则 2：如果 X 处于 a2 和 b2 之间，则 f2 = p2x + q2y
+
+
+    使用试错法确定每个输入变量的特征数量。实验数据被分为网络模型的训练、测试和验证，以预测 *S. solymum* 中提取活性活性的植物化学成分。
+
+
+    ## 2.4. 机器学习算法
+
+
+    一种涉及自动学习的技术，即随机森林，可用于分类和回归任务。随机森林将对数据进行分类和预测（Park et al., 2022）。随机森林回归器将选择连续的目标值。它是一种集成学习技术，利用多种决策树来产生更准确的模型。每棵决策树都是使用训练数据特征的随机子集训练的。这种方法减少了过拟合，并通过组合创建更精确、更可靠的预测。随机森林回归器的主要优势是它能够处理输入与目标值之间存在非线性连接的高维数据。实验变量
+    $X_1, X_2, X_3, X_4$ 和 $X_5$ 被用输入 $y_1, y_2$。
+
+
+    ## 表 3
+
+
+    带有实验结果的面中心复合设计 (FCCD) 以及 RSM 预测、ANFIS 预测、ML 算法预测
+
+
+    | 序号 | 独立参数 | 实验结果* | RSM 预测 | ANFIS 预测 | ML 算法预测 |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | | $X_1$ | $X_2$ | $X_3$ | $X_4$ | $X_5$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$
+    | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$
+    |
+
+    | 1 | 60 | 45 | 30 | 15 | 5 | 174.29 | 273.85 | 55.35 | 60.74 | 471.66 | 287.87
+    | 53.83 | 58.52 | 60.58 | 474 | 55.45 | 49.98 | 268.57 | 50.18 | 62.00 |
+
+    | 2 | 60 | 45 | 30 | 15 | 5 | 317.29 | 230.77 | 44.21 | 48.22 | 468.80 | 293.61
+    | 44.64 | 49.03 | 61.51 | 457 | 54.2 | 378.04 | 242.96 | 41.57 | 46.08 |
+
+    | 3 | 60 | 45 | 30 | 25 | 5 | 265.62 | 183.43 | 73.11 | 75.55 | 775.23 | 500.00
+    | 73.10 | 78.09 | 70.37 | 777 | 73.5 | 751.77 | 265.48 | 69.98 |
+
+    | 4 | 50 | 45 | 30 | 35 | 5 | 152.28 | 143.08 | 38.02 | 41.34 | 395.99 | 271.37
+    | 39.97 | 41.95 | 328 | 419 | 42 | 439.25 | 270.34 | 37.29 |
+
+    | 5 | 60 | 45 | 30 | 35 | 5 | 375.25 | 468.02 | 27.12 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 410 | 471 | 42 | 32.54 | 37.17 | 38.21 |
+
+    | 6 | 60 | 45 | 30 | 35 | 5 | 468.83 | 276.92 | 35.11 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415 | 468 | 42 | 32.54 | 37.17 |
+
+    | 7 | 60 | 45 | 30 | 45 | 5 | 145.85 | 115.13 | 57.11 | 62.58 | 591.25 | 381.09
+    | 53.78 | 58.56 | 558 | 541 | 42 | 394.93 | 251.62 | 59.16 |
+
+    | 8 | 60 | 45 | 30 | 45 | 5 | 330.13 | 187.89 | 63.33 | 73.59 | 776.48 | 415.05
+    | 74.49 | 78.76 | 702 | 790 | 42 | 498.77 | 472.12 |
+
+    | 9 | 60 | 45 | 30 | 45 | 5 | 105.75 | 400.82 | 62.23 | 69.18 | 732.66 | 490.20
+    | 67.12 | 71.65 | 712 | 700 | 42 | 498.61 | 194.73 |
+
+    | 10 | 60 | 45 | 30 | 55 | 5 | 370.05 | 246.92 | 31.11 | 44.12 | 675.65 | 403.69
+    | 36.29 | 41.50 | 415 | 478 | 42 | 372.56 | 37.17 |
+
+    | 11 | 60 | 45 | 30 | 55 | 5 | 468.83 | 276.92 | 35.11 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415 | 468 | 42 | 32.54 | 37.17 |
+
+    | 12 | 60 | 45 | 30 | 55 | 5 | 397.25 | 363.13 | 52.12 | 64.55 | 724.68 | 462.11
+    | 71.42 | 76.65 | 715 | 728 | 42 | 715 | 418.99 |
+
+    | 13 | 60 | 45 | 30 | 55 | 5 | 317.25 | 363.13 | 70.12 | 76.48 | 724.68 | 462.11
+    | 71.48 | 76.65 | 715 | 728 | 42 | 745 | 737.715 | 41.5 |
+
+    | 14 | 60 | 45 | 30 | 65 | 5 | 456.74 | 276.92 | 33.11 | 44.12 | 675.65 | 403.69
+    | 36.29 | 41.50 | 415 | 478 | 42 | 475 | 372.56 |
+
+    | 15 | 50 | 45 | 30 | 65 | 5 | 206.15 | 332.11 | 56.37 | 66.52 | 367.03 | 362.11
+    | 56.07 | 61.56 | 351 | 321 |
+
+    | 16 | 60 | 45 | 30 | 65 | 5 | 215.15 | 363.13 | 70.12 | 76.48 | 724.68 | 462.11
+    | 71.48 | 76.65 | 715 | 728 |
+
+    | 17 | 60 | 45 | 30 | 75 | 5 | 174.11 | 385.18 | 58.59 | 63.68 | 497.24 | 453.11
+    | 48.17 | 51.32 | 519 | 521 |
+
+    | 18 | 60 | 45 | 30 | 75 | 5 | 445.25 | 314.14 | 39.38 | 44.52 | 494.16 | 444.89
+    | 49.81 | 538 | 534.9 |
+
+    | 19 | 60 | 45 | 30 | 75 | 5 | 529.39 | 436.16 | 48.43 | 52.96 | 598.11 | 448.53
+    | 53.58 | 532 | 584 |
+
+    | 20 | 60 | 45 | 30 | 75 | 5 | 608.45 | 511.13 | 63.55 | 70.73 | 668.25 | 435.99
+    | 63.18 | 662 | 584 |
+
+    | 21 | 60 | 45 | 30 | 75 | 5 | 318.98 | 230.77 | 31.11 | 44.12 | 675.65 | 403.69
+    | 36.29 | 41.50 | 478 |
+
+    | 22 | 60 | 45 | 30 | 85 | 5 | 397.25 | 363.13 | 42.12 | 52.55 | 724.68 | 462.11
+    | 71.42 | 76.65 | 715 |
+
+    | 23 | 60 | 45 | 30 | 85 | 5 | 343.95 | 368.12 | 39.11 | 44.52 | 724.68 | 462.11
+    | 47.12 | 76.65 | 715 |
+
+    | 24 | 50 | 45 | 30 | 95 | 5 | 223.85 | 331.11 | 56.37 | 66.52 | 367.03 | 362.11
+    | 56.07 | 61.56 | 351 |
+
+    | 25 | 60 | 45 | 30 | 95 | 5 | 226.86 | 454.11 | 73.52 | 80.38 | 708.23 | 512.10
+    | 78.52 | 718 |
+
+    | 26 | 60 | 45 | 30 | 95 | 5 | 151.38 | 360.24 | 49.23 | 53.16 | 538.11 | 348.99
+    | 49.81 | 539 |
+
+    | 27 | 60 | 45 | 30 | 95 | 5 | 149.75 | 203.77 | 32.74 | 37.62 | 358.21 | 287.87
+    | 32.4 | 37.62 | 308 |
+
+    | 28 | 60 | 45 | 30 | 95 | 5 | 151.38 | 360.24 | 49.23 | 53.16 | 538.11 | 348.99
+    | 49.81 | 53.95 |
+
+    | 29 | 60 | 45 | 30 | 105 | 5 | 154.14 | 318.38 | 47.54 | 53.24 | 417.68 | 314.19
+    | 41.19 | 45.24 | 408 |
+
+    | 30 | 60 | 45 | 30 | 105 | 5 | 215.45 | 398.12 | 68.12 | 73.52 | 498.13 | 345.11
+    | 68.12 | 73.52 | 498 |
+
+    | 31 | 60 | 45 | 30 | 105 | 5 | 223.85 | 331.11 | 56.37 | 66.37 | 665.25 | 369.29
+    | 36.27 | 61.50 |
+
+    | 32 | 60 | 45 | 30 | 105 | 5 | 317.25 | 331. 1 | 44. | | | 44.. | | 44. |  |
+    |  | | |  | 33 | 50 | 45 | 30 | 105 | 5 | 152.28 | 143.08 | 38.02 | 41.34 | 395.99
+    | 271.37 | 39.97 | 41.50 | 415 |
+
+    | 34 | 60 | 45 | 30 | 105 | 5 | 375.25 | 468.02 | 27.12 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415 |
+
+    | 35 | 60 | 45 | 30 | 105 | 5 | 198.68 | 331.11 | 56.37 | 66.52 | 367.03 | 362.11
+    | 56.07 | 61.56 | 351 |
+
+    | 36 | 60 | 45 | 30 | 105 | 5 | 375.25 | 468.02 | 27.12 | 55.11 | 665.25 | 369.29
+    | 36.20 | 41.50 | 415 |
+
+    | 37 | 60 | 45 | 30 | 105 | 5 | 149.75 | 203.77 | 32.74 | 37.62 | 358.21 | 287.87
+    | 32.4 | 37.62 | 308 |
+
+    | 38 | 55 | 45 | 30 | 105 | 5 | 152.28 | 143.08 | 38.02 | 41.34 | 395.99 | 271.37
+    | 39.97 | 41.50 | 415 |
+
+    | 39 | 60 | 45 | 30 | 105 | 5 | 399.68 | 538.12 | 69.11 | 69.98 | 704.21 | 483.11
+    | 69.1 | 69.98 | 704 |
+
+    | 40 | 60 | 45 | 30 | 105 | 5 | 399.98 | 538.12 | 69.11 | 69.98 | 704.21 | 483.11
+    | 69.1 | 69.98 | 704 |
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 6]
+
+
+    # Table 3 (continued)
+
+
+    | S. No | Independent parameters | Experimental Responses | RSM Predicted Responses
+    | ANFIS Predicted Responses | ML Algorithm Predicted Responses |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---||
+
+    | | | X1 | X2 | X3 | Y1 | Y2 | Y3 | Y1 | Y2 | Y3 | Y4 | Y1 | Y2 | Y3 | Y4 | Y1
+    | Y2 | Y3 | Y4 | Y5 |
+
+    | 42 | 60 | 55 | 37.5 | 8.1 | 472.34 | 227.69 | 35.7 | 43.66 | 55.22 | 522.17
+    | 270.52 | 43.37 | 50.23 | 59.82 | 474 | 228 | 35.7 | 55.2 | 481.14 | 244.47 |
+    36.48 | 43.36 | 54.10 |
+
+    | 43 | 60 | 55 | 37.5 | 20 | 513.38 | 276.92 | 40.11 | 47.11 | 52.43 | 465.10
+    | 263.99 | 66.61 | 71.80 | 74.17 | 474 | 268 | 37.1 | 52.2 | 475.56 | 267.85 |
+    37.17 | 42.31 | 51.81 |
+
+    | 44 | 65 | 50 | 30 | 15 | 570.98 | 440 | 65.53 | 71.66 | 75.76 | 789.33 | 467.19
+    | 66.61 | 71.80 | 74.17 | 771 | 440 | 65.5 | 71.7 | 757.73 | 455.05 | 67.56 |
+    73.15 | 75.72 |
+
+    | 45 | 60 | 55 | 37.5 | 31.9 | 683.01 | 406.14 | 62.14 | 67.85 | 74.12 | 597.31
+    | 344.48 | 49.53 | 56.79 | 66.83 | 608 | 406 | 61.2 | 67.8 | 596.50 | 365.80 |
+    52.89 | 53.99 | 65.19 |
+
+    | 46 | 60 | 55 | 37.5 | 20 | 471.23 | 276.92 | 32.11 | 38.11 | 39.55 | 465.10
+    | 263.99 | 36.20 | 41.09 | 51.75 | 474 | 268 | 31.7 | 42 | 472.56 | 267.85 | 37.17
+    | 42.1 | 51.81 |
+
+    | 47 | 65 | 50 | 30 | 15 | 648.45 | 315.15 | 35.1 | 43.15 | 46.15 | 528.33 | 320.28
+    | 38.13 | 43.13 | 51.75 | 671 | 315 | 37.1 | 44.1 | 715.20 | 317.58 | 37.17 |
+    40.84 | 56.45 |
+
+    | 48 | 65 | 50 | 25 | 15 | 808.87 | 483.08 | 71.66 | 74.11 | 75.35 | 868.99 |
+    505.83 | 75.02 | 78.33 | 80.32 | 809 | 483 | 71.7 | 74.1 | 802.88 | 474.26 | 71.49
+    | 75.42 | 76.75 |
+
+    | 49 | 55 | 50 | 45 | 15 | 808.37 | 293.85 | 30.56 | 35.22 | 44.21 | 492.26 |
+    315.08 | 39.34 | 41.01 | 51.81 | 489 | 294 | 30.6 | 35.2 | 442.14 | 290.87 | 33.64
+    | 37.58 | 48.27 |
+
+    | 50 | 55 | 50 | 30 | 15 | 1550.08 | 310.77 | 33.43 | 46.66 | 451.82 | 247.63
+    | 34.12 | 39.23 | 49.18 | 489 | 550 | 33.1 | 36.7 | 45.1 | 481.36 | 278.83 | 34.86
+    | 38.68 | 49.78 |
+
+
+    +   * All the experiments were repeated three times.'
+  - '[PAGE 7]
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_7_0.png)
+
+
+    Fig. 1. The input and output data in this study''s set.
+
+
+    $Y_3, Y_4,$ and $Y_5$ are used as output units. The dataset first imported is
+    the experimental values in order to produce the predictions, and it is then preprocessed
+    to determine whether the dataset has no missing or noisy data.
+
+
+    # 2.15. Validation experiments
+
+
+    In order to ensure that the experiment was worked, the validity of the optimization
+    result was investigated. The mean experimental results were compared to evaluate
+    the model''s efficiency in determining the data. In the case, the triplet experiment
+    was conducted on a variety of responses with changing parameter.
+
+
+    # 2.16. GC-MS and LC-MS analysis
+
+
+    Gas chromatography-mass spectrometry (GC-MS) analysis was performed using a non-polar
+    60 m RTX95 column and the Shimadzu Q-2010 GC-MS system with helium as the carrier
+    gas, containing 15 psi as constant pressure. The bioactive compounds in the optimized
+    extract were identified and described accordingly. By comparing the results of
+    chromatographic peaks using a Quadrupole detector and the National Institute of
+    Standards and Technology (2014) library to retrieve identity, the chemical compounds
+    from extraction of *S. swrv* were determined. 62,509 patterns were identified
+    from the acquired mass spectrum. Sw fraction''s unidentified components were compared
+    to the reference spectra of recognized components in the NIST library collection.
+    Liquid chromatography-mass spectrometry (LC-MS) analysis was performed using the
+    1290 UHPLC HPLC with Chipisco and 6500 Ion Q-TOF (Agilent Technologies, USA) in
+    accordance with the previously described protocol (Chowdhury et al., 2018).
+
+
+    # 2.17. Statistical analysis
+
+
+    All investigations were conducted based on BCC of RSM and were repeated three
+    times. Using design experiment software (version 8.0.7.1, Stat-Ease, Inc., 227
+    Hennepin Ave, Suite 480, Minneapolis, MN 55413, USA), all the experimental data
+    collected from extraction process were processed. One-way analysis of variance
+    (ANOVA) and Duncan''s test were used to evaluate the analytical strength. All
+    collected data were mentioned as mean $\pm$ standard deviation. The contour plots
+    and three-dimensional (3D) surface plots were used to identify the extraction
+    conditions. Microsoft Excel 2010 was used for statistical analysis, together with
+    the Adaptive Neuro-Fuzzy Logic Toolbox in the MATLAB vR2013a.
+
+
+    # 3. Result and conclusion
+
+
+    # 3.1. Fitting model
+
+
+    The experimental parameters were successfully optimized using BCC with RSM. This
+    experimental design based on the condition of linear, interaction, and quadratic
+    factors of ultrasound-assisted extraction parameters to achieve the highest yield
+    of bioactive compounds from *S. swrv*. Table 3 predicted the experimental $DPPH\%$,
+    $ABTS\%$ and $H_2O_2$ scavenging activities of *S. swrv*. Extraction from ultrasound-assisted
+    solvent extraction showed that the predicted values of polyphenolic compounds,
+    total carotene content, flavonoid showed that the optimized values were achieved
+    at 65% of medium, 60 $cm^{-2}$ ultrasound intensity, 45 °C, 15 minutes, and 0.5
+    mm particle size. The optimization condition, the optimal yield of $T_p$, TF and
+    antioxidant activities were found to be 83.66 mg G/AE, 53.38 mg/RL, 77.52 $DPPH\%$,
+    81.12 $ABTS\%$, 85.02 $H_2O_2\%$, respectively. The mean for the highest yield
+    of bioactive compounds showed significant extraction factor. The results are consistent
+    with our earlier research work, which demonstrated that ultrasound extracted most
+    amount of bioactive compounds from *Garcinia indica* (Kanjappan et al., 2020),
+    and *Azolla mylla* (Selvaraj et al., 2014) other traditional extraction methods.
+    By examining the effects of multiple determination and performing analyses of
+    variety, the experimental data fitted to see if they could describe the'
+  - '[PAGE 8]
+
+
+    # 3.2. Investigation of the response surfaces
+
+
+    # 3.2.1. Total polyhenols
+
+
+    The experimental values and results for total polyphenolic compounds using ultrasound-aided
+    solvent extraction at variations are presented in Table 3. Analysis of variance
+    (ANOVA) was performed to estimate the significance of regression model using the
+    observed experimental values. From data of Table 4 and Equation (7), it was clearly
+    showed that for the highest yield of total polyphenols through ultrasound-aided
+    solvent extraction (p = 0.0003) the effect of methanol concentration (X1), and
+    particle size (X2) are significant while the effect of ultrasound intensity (X3)
+    and time (X4) are not significant. Furthermore, the regression coefficient of
+    model of ultrasound-aided solvent extraction of total polyphenols showed a lack
+    of fit (R = 0.2704; R² = 0.0137, and AdR² = 0.008). The empirical model for the
+    highest yield of total polyphenols with content extraction parameter is given
+    in the following equation:
+
+
+    ```
+
+    TF(Y3) = 46.5 + 30.181X1 + 8.221X2 + 1.457X3 + 11.593X4 + 6.815X5 + 19.941X6 -
+    51.22X7 - 6.74X3 + 0.8265X4 + 9.955X5 + 14.214X6 - 15.615X7 - 13.5X8 + 27.2X9
+    + 11.852X10 + 72.538X11
+
+    ```
+
+
+    The data were further examined in order to determine a difference between experimental
+    values and the value predicted by the model. Residuals were calculated and the
+    distribution of residuals of X1, X2, X3 and X4 are shown in Fig. (2a) as a normal
+    probability plot. There are no deviations from the normal distribution of detected
+    residuals. Fig. (2b) shows the residuals versus predicted values, which indicates
+    that the model is fit for the data. The effect of methanol concentration (X1)
+    and ultrasound intensity (X3) on the extent of maximum content of total polyphenolic
+    compounds were further illustrated by the 3D response surface and contour plot
+    in Fig. (2c) and (2d), which show the effect of the three variables-(X3), time
+    (X4) and particle size (X2) were well-held (constant) at 37°C, 20 min, and 3 mm,
+    respectively. Table 3 shows that the total phenolic concentrations ranging from
+    314.737 to 830.667 mg/G. At 65% methanol concentration, 60 cm v⁻² ultrasound intensity,
+    45°C, 15 min, and 5 mm particle size, the highest yield of total polyphenolic
+    was obtained.
+
+
+    # 3.2.2. Total flavonoids
+
+
+    The linear term of particle size (X2), interaction term X2X3 and quadratic term
+    X2² are significant (at α=0.05) for determining the maximum yield of total flavonoids
+    and is presented in the second-order polynomial equation (8). The experimental
+    model successfully fits the data, as evidenced by the response surface analysis
+    of the total content of the flavonoids, which had a high regression coefficient
+    of R² = 0.7119 and a lack of fit of 0.001. The second-order polynomial equation
+    for the total content of flavonoids in coded variables is provided by the following
+    equation (8):
+
+
+    ```
+
+    TF(Y2) = 26.939 + 16.296X1 + 6.91X2 + 3.113X3 + 17.4X4 - 17.16X5 - 5.84X6 - 5.00X7
+    - 8.46X8 - 2.693X9 - 2.212X10 + 0.814X11 + 8.444X12 - 6.828X13 - 3.36X14 + 6.78X15
+    + 19.18X16 - 13.5X17 + 7.62X18 + 5.05X19
+
+    ```
+
+
+    Fig. (2c) displays the distributed residuals for X1, X2, X3 and X4. They have
+    a normal distribution and no deviation. The high regression coefficient values
+    (R² = 0.711) which as a good fit, are shown in Fig. (3a). The 3D response surface
+    and contour plot in Fig. (3b) and (3d) demonstrate how methanol concentration
+    (X1) and particle size (X2) affect the S. torruf extract. The greatest level of
+    total flavonoids. From 200.73 to 535.38 mg/unit (RE/s) of flavonoids were found
+    in Table 2. 65% methanol (v/v), 60 cm v⁻² of ultrasound intensity, 45 temperature,
+    15 min, and 5 mm of particle size produced the highest yield,
+
+
+    # 3.3. Antioxidant capacity (%DPPH%, %ABTS% and %H2O2%)
+
+
+    Based on the statistical analysis of the RSM design in Table 3 and Equations (9)-(11),
+    the linear terms of methanol concentration (X1), particle size (X3), interaction
+    term X1X3, quadratic term X1² have significant effects on all three antioxidant'
+  md: '
+
+    # Table 3 (continued)
+
+
+    | S. No | Independent parameters | Experimental Responses | RSM Predicted Responses
+    | ANFIS Predicted Responses | ML Algorithm Predicted Responses |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | | | X1 | X2 | X3 | Y1 | Y2 | Y3 | Y1 | Y2 | Y3 | Y4 | Y1 | Y2 | Y3 | Y4 | Y1
+    | Y2 | Y3 | Y4 | Y5 |
+
+    | 42 | 60 | 55 | 37.5 | 8.1 | 472.34 | 227.69 | 35.7 | 43.66 | 55.22 | 522.17
+    | 270.52 | 43.37 | 50.23 | 59.82 | 474 | 228 | 35.7 | 55.2 | 481.14 | 244.47 |
+    36.48 | 43.36 | 54.10 |
+
+    | 43 | 60 | 55 | 37.5 | 20 | 513.38 | 276.92 | 40.11 | 47.11 | 52.43 | 465.10
+    | 263.99 | 66.61 | 71.80 | 74.17 | 474 | 268 | 37.1 | 52.2 | 475.56 | 267.85 |
+    37.17 | 42.31 | 51.81 |
+
+    | 44 | 65 | 50 | 30 | 15 | 570.98 | 440 | 65.53 | 71.66 | 75.76 | 789.33 | 467.19
+    | 66.61 | 71.80 | 74.17 | 771 | 440 | 65.5 | 71.7 | 757.73 | 455.05 | 67.56 |
+    73.15 | 75.72 |
+
+    | 45 | 60 | 55 | 37.5 | 31.9 | 683.01 | 406.14 | 62.14 | 67.85 | 74.12 | 597.31
+    | 344.48 | 49.53 | 56.79 | 66.83 | 608 | 406 | 61.2 | 67.8 | 596.50 | 365.80 |
+    52.89 | 53.99 | 65.19 |
+
+    | 46 | 60 | 55 | 37.5 | 20 | 471.23 | 276.92 | 32.11 | 38.11 | 39.55 | 465.10
+    | 263.99 | 36.20 | 41.09 | 51.75 | 474 | 268 | 31.7 | 42 | 472.56 | 267.85 | 37.17
+    | 42.1 | 51.81 |
+
+    | 47 | 65 | 50 | 30 | 15 | 648.45 | 315.15 | 35.1 | 43.15 | 46.15 | 528.33 | 320.28
+    | 38.13 | 43.13 | 51.75 | 671 | 315 | 37.1 | 44.1 | 715.20 | 317.58 | 37.17 |
+    40.84 | 56.45 |
+
+    | 48 | 65 | 50 | 25 | 15 | 808.87 | 483.08 | 71.66 | 74.11 | 75.35 | 868.99 |
+    505.83 | 75.02 | 78.33 | 80.32 | 809 | 483 | 71.7 | 74.1 | 802.88 | 474.26 | 71.49
+    | 75.42 | 76.75 |
+
+    | 49 | 55 | 50 | 45 | 15 | 808.37 | 293.85 | 30.56 | 35.22 | 44.21 | 492.26 |
+    315.08 | 39.34 | 41.01 | 51.81 | 489 | 294 | 30.6 | 35.2 | 442.14 | 290.87 | 33.64
+    | 37.58 | 48.27 |
+
+    | 50 | 55 | 50 | 30 | 15 | 1550.08 | 310.77 | 33.43 | 46.66 | 451.82 | 247.63
+    | 34.12 | 39.23 | 49.18 | 489 | 550 | 33.1 | 36.7 | 481.36 | 278.83 | 34.86 |
+    38.68 | 49.78 |
+
+
+    * All experiments were repeated three times.
+
+
+    ![](img/e46bd6ed00fca11057503aecbc84a_7_0.png)
+
+
+    Fig. 1. The input and output data in this study''s set. $Y_3, Y_4,$ and $Y_5$
+    are used as output units. The dataset first imported is the experimental values
+    in order to produce the predictions, and it is then preprocessed to determine
+    whether the dataset has missing or noisy data.
+
+
+    ## 2.15 Validation experiments
+
+    In order to ensure that the experiment worked, the validity of the optimization
+    result was investigated. The mean experimental results were compared to evaluate
+    the model''s efficiency. In the case, the triplet experiment was conducted on
+    a variety of responses with changing parameters.
+
+
+    ## 2.16 GC-MS and LC-MS analysis
+
+    Gas chromatography-mass spectrometry (GC-MS) analysis was performed using a nonpolar
+    60 m RTX95 column and the Shimadzu Q-2010 GC-MS system with helium as the carrier
+    gas, containing 15 psi as constant pressure. The bioactive compounds in the optimized
+    extract were identified and described accordingly. By comparing the results of
+    chromatographic peaks using a Quadrupole detector and the National Institute of
+    Standards and Technology (2014) library to retrieve identity, the chemical compounds
+    from extraction of *S. swrv* were determined. 62,509 patterns were identified
+    from the acquired mass spectrum. The fraction''s unidentified components were
+    compared to the reference spectra of recognized components in the NIST library.
+    Liquid chromatography-mass spectrometry (LC-MS) analysis was performed using the
+    1290 UHPLC HPLC with Chorus and 6500 Ion Q-TOF (Agilent Technologies, USA) in
+    accordance with the previously described protocol (Chowdhury et al., 2018).
+
+
+    ## 2.17 Statistical analysis
+
+    All investigations were conducted based on BCC of RSM and were repeated three
+    times. Using design experiment software (version 8.0.7.1, Stat-Ease, Inc., 227
+    Hennepin Ave, Suite 480, Minneapolis, MN 55413, USA), all the experimental data
+    collected from extraction process were processed. One-way analysis of variance
+    (ANOVA) and Duncan''s test were used to evaluate the analytical strength. All
+    collected data were mentioned as mean $\pm$ standard deviation. The contour plots
+    and three-dimensional (3D) surface plots were used to identify the extraction
+    conditions. Microsoft Excel 2010 was used for statistical analysis, together with
+    the Adaptive Neuro-Fuzzy Logic Toolbox in the MATLAB v2013a.
+
+
+    ## 3. Result and conclusion
+
+
+    ### 3.1 Fitting model
+
+    The experimental parameters were successfully optimized using BCC with RSM. This
+    experimental design based on the condition of linear, interaction, and quadratic
+    factors of ultrasound-assisted extraction parameters to achieve the highest yield
+    of bioactive compounds from *S. swrv*. Table 3 predicted the experimental $DPPH\%$,
+    $ABTS\%$ and $H_2O_2$ scavenging activities of *S. swrv*. Extraction from ultrasound-assisted
+    solvent extraction showed that the predicted values of polyphenolic compounds,
+    total carotene content, flavonoid showed that the optimized values were achieved
+    at 65% of medium, 60 $cm^{-2}$ ultrasound intensity, 45 °C, 15 minutes, and 0.5
+    mm particle size. The optimization condition, the optimal yield of $Y_p$ and antioxidant
+    activities were found to be 83.66 mg/mL, 53.38 mg/mL, 77.52 $DPPH\%$, 81.12 $ABTS\%$,
+    85.02 $H_2O_2\%$, respectively. The results are consistent with earlier research
+    work which demonstrated most amount of bioactive compounds from *Garcinia indica*
+    (Kanjappan et al., 2020), and *Azolla mylla* (Selvaraj et al., 2014). By examining
+    the effects of multiple determination and performing analyses of variety, the
+    experimental data fitted to describe
+
+
+    ### 3.2 Investigation of surfaces
+
+    The experimental values and results for total polyphenolic compounds using ultrasound-aided
+    solvent extraction are presented in Table 3. Analysis of variance (ANOVA) was
+    performed to estimate the significance of regression model. From data of Table
+    4 and Equation (7), it clearly showed that the methanol concentration (X1) and
+    particle size (X2) are significant while the effect of ultrasound intensity (X3)
+    and time (X4) are not. Furthermore, the regression coefficient of model of ultrasound-aided
+    extraction of total polyphenols showed a lack of fit ($R = 0.2704; R^2 = 0.0137$,
+    and $R^2 = 0.008$). The empirical model for the highest yield of total polyphenols
+    with content parameter is given in the following equation:
+
+
+    $Y_3 = 46.5 + 30.181X_1 + 8.221X_2 + 1.457X_3 + 11.593X_4 + 6.815X_5 + 19.941X_6
+    - 51.22X_7 - 6.74X_4 \text{ (note: duplicate in OCR)} + 9.955X_5 + 14.214X_6 -
+    15.615X_7 - 13.5X_8 + 27.2X_9 + 11.852X_{10} + 72.538X_{11}$
+
+
+    The data were further examined in order to determine the difference between experimental
+    values and the value predicted by the model. Residuals were calculated and the
+    distribution of residuals of $X_1, X_2, X_3$ and $X_4$ are shown in Fig. (2a)
+    as a normal probability plot. There are no deviations from the normal distribution.
+    Fig. (2b) shows the residuals versus predicted values, which indicates that the
+    model is fit the data. The effect of methanol concentration (X1) and ultrasound
+    intensity (X3) on the extent of maximum content of total polyphenolic compounds
+    were further illustrated by 3D response surface and contour plot in Fig. (2c)
+    and (2d), which show the effect of the three variables-(X3), time (X4) and particle
+    size (X2) were well-held (constant) at 37°C, 20 min, and 3 mm, respectively. Table
+    3 shows that the total phenolic concentrations ranging from 314.737 to 830.667
+    mg/G. At 65% methanol concentration, 60 cm⁻² ultrasound intensity, 45°C, 15 min,
+    and 5 mm particle size, the highest yield of total polyphenolic was obtained.
+
+
+    ### 3.2.2 Total flavonoids
+
+    The linear term of particle size (X_2), interaction term $X_2X_3$ and quadratic
+    term $X_2^2$ are significant (at $\alpha=0.05$) for determining the maximum yield
+    of total flavonoids and is presented in the second-order polynomial equation (8).
+    The experimental model successfully fits the data, as evidenced by the response
+    surface analysis of the total content of the flavonoids, which had a high regression
+    coefficient of $R^2 =0.7119$ and a lack of fit of 0.001. The second-order polynomial
+    equation for the total content of flavonoids in coded variables is provided by
+    the following equation (8):
+
+
+    $Y_2 = 26.939 + 16.296X_1 + 6.91X_2 + 3.113X_3 + 17.4X_4 - 17.16X_5 - 5.84X_6
+    - 5.00X_7 - 8.46X_8 - 2.693X_9 - 2.212X_{10} + 0.814X_{11} + 8.444X_{12} - 6.828X_{13}
+    - 3.36X_{14} + 6.78X_{15} + 19.18X_{16} - 13.5X_{17} + 7.62X_{18} + 5.05X_{19}$
+
+
+    Fig. (2c) displays the distributed residuals for $X_1, X_2, X_3$ and $X_4$. They
+    have a normal distribution and no deviation. The high regression coefficient values
+    ($R^2 = 0.711$) which as a good fit, are shown in Fig. (3a). The 3D response surface
+    and contour plot in Fig. (3b) and (3d) demonstrate how methanol concentration
+    (X1) and particle size (X2) affect the S. torruf extract. The greatest level of
+    total flavonoids. From 200.73 to 535.38 mg/unit (RE/s) of flavonoids were found
+    in Table 2. 65% methanol (v/v), 60 cm v² of ultrasound intensity, 45 temperature,
+    15 min, and 5 mm of particle size produced the highest yield,
+
+
+    ### 3.3 Antioxidant capacity (%DPPH%, %ABTS% and %H2O2%)
+
+    Based on the statistical analysis of the RSM design in Table 3 and Equations (9)-(11),
+    the linear terms of methanol concentration (X1), particle size (X3), interaction
+    term X1X3, quadratic term X1² have significant effects on all three antioxidant
+
+    '
+  mdcn: '
+
+
+    # 表 3（续）
+
+
+    | 序号 | 独立参数 | 实验响应 | RSM 预测响应 | ANFIS 预测响应 | ML 算法预测响应 |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | | | X1 | X2 | X3 | Y1 | Y2 | Y3 | Y1 | Y2 | Y3 | Y4 | Y1 | Y2 | Y3 | Y4 | Y1
+    | Y2 | Y3 | Y4 | Y5 |
+
+    | 42 | 60 | 55 | 37.5 | 8.1 | 472.34 | 227.69 | 35.7 | 43.66 | 55.22 | 522.17
+    | 270.52 | 43.37 | 50.23 | 59.82 | 474 | 228 | 35.7 | 55.2 | 481.14 | 244.47 |
+    36.48 | 43.36 | 54.10 |
+
+    | 43 | 60 | 55 | 37.5 | 20 | 513.38 | 276.92 | 40.11 | 47.11 | 52.43 | 465.10
+    | 263.99 | 66.61 | 71.80 | 74.17 | 474 | 268 | 37.1 | 52.2 | 475.56 | 267.85 |
+    37.17 | 42.31 | 51.81 |
+
+    | 44 | 65 | 50 | 30 | 15 | 570.98 | 440 | 65.53 | 71.66 | 75.76 | 789.33 | 467.19
+    | 66.61 | 71.80 | 74.17 | 771 | 440 | 65.5 | 71.7 | 757.73 | 455.05 | 67.56 |
+    73.15 | 75.72 |
+
+    | 45 | 60 | 55 | 37.5 | 31.9 | 683.01 | 406.14 | 62.14 | 67.85 | 74.12 | 597.31
+    | 344.48 | 49.53 | 56.79 | 66.83 | 608 | 406 | 61.2 | 67.8 | 596.50 | 365.80 |
+    52.89 | 53.99 | 65.19 |
+
+    | 46 | 60 | 55 | 37.5 | 20 | 471.23 | 276.92 | 32.11 | 38.11 | 39.55 | 465.10
+    | 263.99 | 36.20 | 41.09 | 51.75 | 474 | 268 | 31.7 | 42 | 472.56 | 267.85 | 37.17
+    | 42.1 | 51.81 |
+
+    | 47 | 65 | 50 | 30 | 15 | 648.45 | 315.15 | 35.1 | 43.15 | 46.15 | 528.33 | 320.28
+    | 38.13 | 43.13 | 51.75 | 671 | 315 | 37.1 | 44.1 | 715.20 | 317.58 | 37.17 |
+    40.84 | 56.45 |
+
+    | 48 | 65 | 50 | 25 | 15 | 808.87 | 483.08 | 71.66 | 74.11 | 75.35 | 868.99 |
+    505.83 | 75.02 | 78.33 | 80.32 | 809 | 483 | 71.7 | 74.1 | 802.88 | 474.26 | 71.49
+    | 75.42 | 76.75 |
+
+    | 49 | 55 | 50 | 45 | 15 | 808.37 | 293.85 | 30.56 | 35.22 | 44.21 | 492.26 |
+    315.08 | 39.34 | 41.01 | 51.81 | 489 | 294 | 30.6 | 35.2 | 442.14 | 290.87 | 33.64
+    | 37.58 | 48.27 |
+
+    | 50 | 55 | 50 | 30 | 15 | 1550.08 | 310.77 | 33.43 | 46.66 | 451.82 | 247.63
+    | 34.12 | 39.23 | 49.18 | 489 | 550 | 33.1 | 36.7 | 481.36 | 278.83 | 34.86 |
+    38.68 | 49.78 |
+
+
+    * 所有实验均重复三次。
+
+
+    ![](img/e46bded00fca1105703aec84a_7.png)
+
+
+    图 1. 本研究的输入和输出数据。$Y_3, Y_4,$ 和 $Y_5$ 用于输出单位。首先导入数据集以产生预测，然后进行预处理以确定数据集是否存在缺失或噪声数据。
+
+
+    ## 2.15 验证实验
+
+    为了确保实验有效，研究了优化结果的有效性。比较平均实验结果以评估模型的效率。在这种情况下，对不同响应进行了三次重复实验。
+
+
+    ## 2.16 GC-MS 和 LC-MS 分析
+
+    气相色谱质谱法 (GC-MS) 分析使用非极性 RTX95 柱和岛津 Q-2010 GC-MS 系统进行，以氦作为载气，压力恒定为 15 psi。识别并描述了优化提取物中的生物活性化合物。通过将四极管检测器的色谱峰结果与美国标准与技术研究院
+    (2014) 库比较，确定了从 *S. swrv* 提取的化学化合物。从获得的质谱中识别了 62,509 个图谱。液相色谱质谱法 (LC-MS) 分析使用带有
+    Chorus 的 1290 UHPLC 和 6500 Ion QTOF (Agilent Technologies, USA) 根据之前描述的协议 (Chowdhury
+    等，2018) 进行。
+
+
+    ## 2.17 统计分析
+
+    所有调查均基于 RSM BCC 进行并重复三次。使用实验设计软件（版本 8.0.7.1, Stat-Ease, Inc.,227 Hennepin Ave,
+    Suite 480, Minneapolis, MN 55413, USA）处理从提取过程中收集的所有实验数据。使用单因素方差分析 (ANOVA) 和 Duncan
+    检验评估分析强度。所有收集的数据以平均值 $\pm$ 标准差表示。使用等高线和三维 (3D) 曲面图确定提取条件。使用 Microsoft Excel 2010
+    配合 MATLAB v2013a 中的自适应神经模糊工具箱进行统计分析。
+
+
+    ## 3 结果与结论
+
+
+    ### 3.1 拟合模型
+
+    使用 RSM BCC 成功优化了实验参数。该实验设计基于超声辅助提取参数的线性、交互和二次因子条件，以获得从 *S. swrv* 中产量生物活性化合物。表
+    3 预测了 *S. swrv* 的实验 $DPPH\%$、$ABTS\%$ 和 $H_2O_2$ 清除活性。超声辅助溶剂提取表明，多酚化合物、总胡萝卜素含量和黄酮的预测值在65%
+    介质、60 $cm^{-2}$ 超声强度、45 °C、15 分钟和 0.5 mm 粒径下达到优化值。发现优化条件下产量分别为 83.66 mg/mL、53.38
+    mg/mL、77.52 $DPPH\%$、81.12 $ABTS\%$ 和 85.02 $H_2O_2\%$。结果与早期的研究工作一致，这些工作证明了从 *Garcinia
+    indica* (Kanjappan 等，2020) 和 *Azolla mylla* (Selvaraj 等，2014) 中含有最多的生物活性化合物。通过检查多因素的影响并进行方差分析，实验数据拟合描述了
+
+
+    ### 3.2 曲面研究
+
+    表 3 给出了使用超声辅助溶剂提取获得总多酚化合物的实验值和结果。进行方差分析 (ANOVA) 以估计回归模型的显著性。从表 4 的数据和方程 (7) 可以清楚地看出甲醇浓度
+    (X1) 和粒径 (X2) 是显著的，而超声强度 (X3) 和时间 (X4) 的影响不显著。此外，超声辅助提取总多酚模型的回归系数显示拟合欠缺 ($R =
+    0.2704; R^2 = 0.01$)。总多酚超声辅助提取模型的模型通过以下方程给出：
+
+
+    $Y_2 = 26.939 + 16.296X_1 + 6.91X_2 + 3.113X_3 + 17.4X_4 - 17.16X_5 - 5.84X_6
+    - 5.00X_7 - 8.46X_8 - 2.693X_9 - 2.212X_{10} + 0.814X_{11} + 8.444X_{12} - 6.828X_{13}
+    - 3.36X_{14} + 6.78X_{15} + 19.18X_{16} - 13.5X_{17} + 7.62X_{18} + 5.05X_{19}$
+
+
+    图 (2a) 显示了 $X_1, X_2, X_3$ 和 $X_4$ 的残差，它们呈正态分布。图 (2b) 显示了预测值与实验值之间的差异。图 (2c) 显示了甲醇浓度
+    (X1) 和超声强度 (X3) 的等高线图。图 (2d) 显示了总多酚的响应曲面，其在 $R^2 = 0.711$ 的情况下拟合良好。总黄酮的二次模型显示
+    $0.008 \text{ unit}$。
+
+
+    ### 3.3 抗氧化能力 (%DPPH%, %ABTS% 和 %H2O2%)
+
+    根据表 3 的 RSM 设计统计分析和方程 (9)-(11)，甲醇浓度 (X1)、粒径 (X3)、交互项 X1X3 以及二次项 X1² 的线性项对三种抗氧化能力均有显著影响。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 9]
+
+
+    # Analysis of variance (ANOVA) for the quadratic polynomial model.
+
+
+    | Source | Sum of Squares | df | Mean Square | p-value |
+
+    |---|---|---|---|---||
+
+    | TPC (y1) Model | 843.800 | 20 | 42188.27 | 4.14 | 0.0003 |
+
+    | $X_1$ | 6259.86 | 4 | 6251.86 | 6.14 | 0.0192 |
+
+    | $X_2$ | 3370.88 | 4 | 832.72 | 0.3390 | 0.0569 |
+
+    | $X_3$ | 91.04 | 4 | 91.04 | 0.0089 | 0.9253 |
+
+    | $X_4$ | 10984.82 | 1 | 10984.82 | 1.06 | 0.3116 |
+
+    | $X_1X_2$ | 499.00 | 4 | 499.00 | 48.90 | <0.0001 |
+
+    | $X_1X_3$ | 1393.15 | 4 | 1393.15 | 0.119 | 0.0148 |
+
+    | $X_1X_4$ | 119.89 | 4 | 119.89 | 0.0918 | 0.1544 |
+
+    | $X_2X_3$ | 21923.02 | 4 | 21923.02 | 2.15 | 0.0076 |
+
+    | $X_2X_4$ | 83943.55 | 4 | 83943.55 | 8.24 | 0.0001 |
+
+    | $X_3X_4$ | 1452.96 | 4 | 1452.96 | 0.1426 | 0.7084 |
+
+    | $X_1^2$ | 21.86 | 4 | 21.86 | 0.0021 | 0.9634 |
+
+    | $X_2^2$ | 3167.31 | 4 | 3167.31 | 0.3109 | 0.5814 |
+
+    | $X_3^2$ | 6462.46 | 4 | 6462.46 | 0.6353 | 0.3623 |
+
+    | $X_4^2$ | 8730.34 | 4 | 8730.34 | 0.857 | 0.3622 |
+
+    | Residual | 1192.58 | 10 | 1192.58 | 0.1171 | 0.7347 |
+
+    | Total | 43067.33 | 42 | 1025 | | 0.0489 |
+
+    | TPC (y1) Model (cont) | 7887.36 | 4 | 7887.36 | 0.7742 | 0.3862 |
+
+    | Residual | 15715.34 | 10 | 15715.34 | 1.524 | 0.2242 |
+
+    | Total | 204.00 | 25 | 204.00 | 20.62 | 0.0001 |
+
+    | TPC (y2) Model | 350.10 | 20 | 17506.81 | 3.58 | 0.0009 |
+
+    | $X_1$ | 11492.32 | 4 | 11492.32 | 2.35 | 0.136 |
+
+    | $X_2$ | 2066.87 | 4 | 2066.87 | 0.4229 | 0.5206 |
+
+    | $X_3$ | 417.71 | 4 | 417.71 | 0.0875 | 0.7721 |
+
+    | $X_4$ | 1317.09 | 4 | 1317.09 | 2.68 | 0.1123 |
+
+    | $X_1X_2$ | 1945.05 | 4 | 1945.05 | 39.74 | <0.0001 |
+
+    | $X_1X_3$ | 1092.97 | 4 | 1092.97 | 0.2236 | 0.6398 |
+
+    | $X_1X_4$ | 819.00 | 4 | 819.00 | 0.1638 | 0.6889 |
+
+    | $X_2X_3$ | 2289.94 | 4 | 2289.94 | 0.4685 | 0.4991 |
+
+    | $X_2X_4$ | 40066.42 | 4 | 40066.42 | 8.227 | 0.0002 |
+
+    | $X_3X_4$ | 230.86 | 4 | 230.86 | 0.0472 | 0.8295 |
+
+    | $X_1^2$ | 144.48 | 4 | 144.48 | 0.0296 | 0.8647 |
+
+    | $X_2^2$ | 2370.77 | 4 | 2370.77 | 0.4851 | 0.4917 |
+
+    | $X_3^2$ | 1261.21 | 4 | 1261.21 | 0.2581 | 0.6153 |
+
+    | $X_4^2$ | 355.89 | 4 | 355.89 | 0.0728 | 0.7892 |
+
+    | Residual | 2581.52 | 10 | 2581.52 | 0.5282 | 0.4739 |
+
+    | Total | 20659.09 | 44 | 20659.09 | 2.11 | 0.1573 |
+
+    | Residual | 3321.53 | 10 | 3321.53 | 0.6796 | 0.4164 |
+
+    | Lack of Fit | 108.600 | 18 | 108.600 | 22.22 | <0.0001 |
+
+    | Residual | 14179.20 | 29 | 6356.54 | 23.57 | 0.0001 |
+
+    | Total | 1887.75 | 7 | 269.64 | | |'
+  - '[PAGE 10]
+
+
+    # P. Pechimhatu et al. Sustainable Chemistry and Pharmacy 36 (2023) 101323
+
+
+    Table 4 (continued)
+
+
+    | Source | Sum of Squares | df | Mean Square | F-value | p-value |
+
+    |---|---|---|---|---|--|
+
+    | $X_4$ | 154.53 | 1 | 154.53 | 1.96 | 0.1722 |
+
+    | $X_5$ | 222.08 | 1 | 222.08 | 2.82 | 0.0141 |
+
+    | $X_6$ | 78.06 | 1 | 78.06 | 0.9897 | 0.3281 |
+
+    | $X_1^2$ | 191.69 | 1 | 191.69 | 2.43 | 0.1259 |
+
+    | $X_2^2$ | 191.69 | 1 | 191.69 | 2.43 | 0.1259 |
+
+    | $X_3^2$ | 910.68 | 1 | 910.68 | 11.55 | 0.0020 |
+
+    | $X_4^2$ | 65.66 | 1 | 65.66 | 0.8324 | 0.3691 |
+
+    | $X_5^2$ | 182.45 | 1 | 182.45 | 2.31 | 0.1391 |
+
+    | Residual | 2083.5 | 21 | 99.21 | 26.41 | <0.0001 |
+
+    | Lack of Fit | 2287.48 | 29 | 78.88 | | |
+
+    | Pure Error | 1919.48 | 22 | 87.25 | 1.66 | 0.2527 |
+
+    | Total | 3608 | 72 | 52.57 | | |
+
+
+    %%ABTS(sc $y_c$)
+
+
+    | Source | Sum of Squares | df | Mean Square | F-value | p-value |
+
+    |---|---|---|---|---|--|
+
+    | $X_1$ | 1111.49 | 1 | 1111.49 | 14.56 | <0.0001 |
+
+    | $X_2$ | 19.63 | 1 | 19.63 | 0.2572 | 0.6159 |
+
+    | $X_3$ | 22.59 | 1 | 22.59 | 0.2959 | 0.5906 |
+
+    | $X_4$ | 129.29 | 1 | 129.29 | 1.69 | 0.2034 |
+
+    | $X_5$ | 3314.35 | 1 | 3314.35 | 43.44 | <0.0001 |
+
+    | $X_6$ | 52.12 | 1 | 52.12 | 0.6828 | 0.4154 |
+
+    | $X_7$ | 10.9 | 1 | 10.9 | 0.1429 | 0.7822 |
+
+    | $X_8$ | 112.2 | 1 | 112.2 | 1.47 | 0.2352 |
+
+    | $X_9$ | 576.49 | 1 | 576.47 | 7.75 | 0.0102 |
+
+    | $X_{10}$ | 74.79 | 1 | 74.79 | 0.9997 | 0.3350 |
+
+    | $X_{11}$ | 30.73 | 1 | 30.73 | 0.4026 | 0.5307 |
+
+    | $X_{12}$ | 100.47 | 1 | 100.47 | 1.32 | 0.2609 |
+
+    | $X_{13}$ | 141.46 | 1 | 141.46 | 1.85 | 0.1839 |
+
+    | $X_{14}$ | 18.21 | 1 | 18.21 | 0.2386 | 0.6289 |
+
+    | $X_{15}^2$ | 198.1 | 1 | 198.1 | 0.048 | 0.3117 |
+
+    | $X_{16}^2$ | 74.41 | 1 | 74.41 | 0.937 | 0.3677 |
+
+    | $X_{17}^2$ | 795.46 | 1 | 795.46 | 10.42 | 0.0031 |
+
+    | $X_{18}^2$ | 61.43 | 1 | 61.43 | 0.8048 | 0.3370 |
+
+    | Residual | 270.54 | 1 | 270.54 | 3.54 | 0.0698 |
+
+    | Residual | 1952.5 | 21 | | 25.32 | <0.0001 |
+
+    | Lack of Fit | 2213.71 | 29 | 76.33 | | |
+
+    | Pure Error | 1799.72 | 22 | 81.81 | 1.38 | 0.3458 |
+
+    | Total | 413.99 | 7 | 59.14 | | |
+
+
+    %H2O2(sc $y_c$)
+
+
+    | Source | Sum of Squares | df | Mean Square | F-value | p-value |
+
+    |---|---|---|---|---|--|
+
+    | $X_1$ | 5889.69 | 20 | 294.63 | 3.4 | 0.0014 |
+
+    | $X_2$ | 1264.6 | 1 | 1264.6 | 14.56 | 0.0006 |
+
+    | $X_3$ | 45.77 | 1 | 45.77 | 0.5284 | 0.4731 |
+
+    | $X_4$ | 2.42 | 1 | 2.42 | 0.0288 | 0.2263 |
+
+    | $X_5$ | 152.38 | 1 | 152.38 | 1.53 | 0.2263 |
+
+    | $X_6$ | 1548.71 | 1 | 1548.71 | 17.88 | 0.0002 |
+
+    | $X_7$ | 0.1164 | 1 | 0.1164 | 0.0013 | 0.9971 |
+
+    | $X_8$ | 15.58 | 1 | 15.58 | 0.1799 | 0.6745 |
+
+    | $X_9$ | 458.97 | 1 | 458.97 | 5.3 | 0.0287 |
+
+    | $X_{10}$ | 622.07 | 1 | 622.07 | 7.18 | 0.0102 |
+
+    | $X_{11}$ | 240.85 | 1 | 240.85 | 2.78 | 0.1062 |
+
+    | $X_{12}$ | 190.95 | 1 | 190.95 | 2.2 | 0.1484 |
+
+    | $X_{13}$ | 30.67 | 1 | 30.67 | 0.3541 | 0.5564 |
+
+    | $X_{14}$ | 155.1 | 1 | 155.1 | 1.79 | 0.1913 |
+
+    | $X_{15}^2$ | 202.16 | 1 | 202.16 | 2.73 | 0.1384 |
+
+    | $X_{16}^2$ | 64.44 | 1 | 64.44 | 0.2067 | 0.6527 |
+
+    | $X_{17}^2$ | 96.47 | 1 | 96.47 | 1.1 | 0.3 |
+
+    | $X_{18}^2$ | 5.13 | 1 | 5.13 | 0.0592 | 0.8094 |
+
+    | Residual | 235.49 | 1 | 235.49 | 2.72 | 0.11 |
+
+    | Residual | 1080.98 | 21 | 51.47 | 12.48 | 0.0014 |
+
+    | Lack of Fit | 2512.26 | 29 | 86.63 | | |
+
+    | Pure Error | 1344.36 | 22 | 61.11 | 0.3663 | 0.9663 |
+
+    | Total | 1167.8 | 7 | 166.83 | | |
+
+
+    * Degrees of freedom.
+
+    * Test for comparing model variance with residual (error) variance.
+
+
+    11'
+  - '[PAGE 11]
+
+
+    +   * Probability of observing the F value if null hypothesis is true.
+
+
+    +   * Std Dev: 100.92; Mean: 571.69.
+
+
+    +   * Std Dev: 69.91; Mean: 348.11.
+
+
+    +   * Std Dev: 8.88; Mean: 49.80.
+
+
+    +   * Std Dev: 9.31; Mean: 58.76.
+
+
+    atials (%DPPH, %ABTSC, and %H2O2), in which, the quadratic term X² was also significantly
+    (p < 0.05) influenced the DPPH+ and RTS* radical scavenging potentials. The models
+    by %DPPH, %ABTSC, and %H2O2 have coefficient of determination (R²) of 0.7677,
+    0.7774, and 0.7711, respectively, with p values for lack of fit less than 0.0257,
+    0.3458, and 0.9663. The second-order model indicated that the data fits well.
+    The quadratic equations for %DPPH, %ABTSC, %H2O2 in coded variables are given
+    by (9–11).
+
+
+    ```
+
+    %DPPH(X) = 36.2 + 4.47+0.3972X1+1.37X2+1.64X3-8.85X1-3.19X2-2.15X3-4.01X1X2
+
+    1.095X1-1.088X2+2.25X3-2.643X1X2-2.65X1X3+2.85X1+4.03X2+1.8X1²+7.2+7.62X²
+
+    ```
+
+
+    ```
+
+    %ABTSC(Y) = -41.0+50.07+0.76372X1+0.76338X2-9.308X3-12.28X1-0.6440X2-2.35X3
+
+    2.44X1-1.85X1-1.45X2+2.773X3-2.64X1+0.8106X2-2.02X3+1.15X1²+3.76X2²+1.05X3²+2.20
+
+    X²+7.34X²
+
+    ```
+
+
+    ```
+
+    %H2O2(Y) = -51.5+57.5+0.0401X1+0.0635X2+1.48X3-0.55X1+0.0603X2-0.7984X1-4.15X1
+
+    2.44X2+2.81X1+0.9791X2-2.64X1-2.61X3-0.5648X1+1.31X2²+3.023X3²+2.05
+
+    X²+5.49X²
+
+    ```
+
+
+    The normal probability plot of residuals of X, Y, and Z are normally distributed
+    for all three analyses and have no deviation, as shown in Fig. 2(a), (b), and
+    (c). In (d) and (e), the predicted values for all three analyses (%DPPH, %ABTSC,
+    and %H2O2) showed higher R² values of 0.7677, 0.7774, and 0.7711, respectively.
+    High values of the regression coefficient (R² > 0.7) indicate a good fit, Fig.
+    2(f–j). The 2D and 3D surface response plots for four different antioxidant activities
+    with material concentration (X) and particle size (Y) as the relevant variables.
+    Figures show that the maximum antioxidant activities (%DPPH, %ABTSC and FRAP)
+    correspond to the material composition and plant material size of 0.5 mg. The
+    highest antioxidants were 75.22% for %DPPH; 84.12% for %ABTSC and 85.02% for %H2O2.
+
+
+    # 3.4. ANFIS modeling
+
+
+    Using the same 50 experimental data, ANFIS modeling was used to extract the parameters,
+    and to define the effective extraction methods of bioactive compounds from S.
+    ruber. The results were obtained using ANFIS techniques. All the data were randomly
+    ordered, and were grouped into three sets as data for model training, testing,
+    and validation. The results were analyzed in MATLAB V.2013 using fuzzy logic toolbox.
+    The construction of an ANFIS model with membership functions, five inputs, and
+    five outputs is used in the verification of many parameters, one to ensure accuracy.
+    There are three fuzzy sets: low, medium, and high for each of the input variables,
+    as methanol concentration (X1), ultrasonic intensity (X2), temperature (X3), and
+    particle size (X4). According to the experimental data, the projected output for
+    antioxidant activities (381 mg/g; TG (35 mg/g); %DPPH (75.2%); %ABTS (84.1%);
+    %H2O2 (85%) were specified in five fuzzy sets, ‘very’, ‘high’, ‘medium’, ‘low’,
+    and ‘very low’. There were 222 nodes and 45 rules in the fuzzy system order. The
+    result data from experiments and observations of people used were used to enhance
+    the fuzzy rules.
+
+
+    # 3.6. Validation of the model
+
+
+    The results were used to validate the optimized parameters for total phenols,
+    flavonoids content, and antioxidant activities (scavenging of H2O2, DPPH, and
+    radicals). Using Expert software, which could identify the most effective methods
+    and their combinations, trials were carried out. The ANFIS and machine learning
+    model was used for the identical data, which verified the optimized conditions.
+    The outcomes of validated studies'
+  md: '
+
+    # Analysis of variance (ANOVA) for the quadratic polynomial model.
+
+
+    | Source | Sum of Squares | df | Mean Square | F-value | p-value |
+
+    |---|---|---|---|---|---|
+
+    | TPC (y1) Model | 843.800 | 20 | 42188.27 | 4.14 | 0.0003 |
+
+    | $X_1$ | 6259.86 | 4 | 6251.86 | 6.14 | 0.0192 |
+
+    | $X_2$ | 3370.88 | 4 | 832.72 | 0.3390 | 0.0569 |
+
+    | $X_3$ | 91.04 | 4 | 91.04 | 0.0089 | 0.9253 |
+
+    | $X_4$ | 10984.82 | 1 | 10984.82 | 1.06 | 0.3116 |
+
+    | $X_1X_2$ | 499.00 | 4 | 499.00 | 48.90 | <0.0001 |
+
+    | $X_1X_3$ | 1393.15 | 4 | 1393.15 | 0.119 | 0.0148 |
+
+    | $X_1X_4$ | 119.89 | 4 | 119.89 | 0.0918 | 0.1544 |
+
+    | $X_2X_3$ | 21923.02 | 4 | 21923.02 | 2.15 | 0.0076 |
+
+    | $X_2X_4$ | 83943.55 | 4 | 83943.55 | 8.24 | 0.0001 |
+
+    | $X_3X_4$ | 1452.96 | 4 | 1452.96 | 0.1426 | 0.7084 |
+
+    | $X_1^2$ | 21.86 | 4 | 21.86 | 0.0021 | 0.9634 |
+
+    | $X_2^2$ | 3167.31 | 4 | 3167.31 | 0.3109 | 0.5814 |
+
+    | $X_3^2$ | 6462.46 | 4 | 6462.46 | 0.6353 | 0.3623 |
+
+    | $X_4^2$ | 8730.34 | 4 | 8730.34 | 0.857 | 0.3622 |
+
+    | Residual | 1192.58 | 10 | 1192.58 | 0.1171 | 0.7347 |
+
+    | Total | 43067.33 | 42 | 1025 | | 0.0489 |
+
+    | TPC (y1) Model (cont) | 7887.36 | 4 | 7887.36 | 0.7742 | 0.3862 |
+
+    | Residual | 15715.34 | 10 | 15715.34 | 1.524 | 0.2242 |
+
+    | Total | 204.00 | 25 | 204.00 | 20.62 | 0.0001 |
+
+    | TPC (y2) Model | 350.10 | 20 | 17506.81 | 3.58 | 0.0009 |
+
+    | $X_1$ | 11492.32 | 4 | 11492.32 | 2.35 | 0.136 |
+
+    | $X_2$ | 2066.87 | 4 | 2066.87 | 0.4229 | 0.5206 |
+
+    | $X_3$ | 417.71 | 4 | 417.71 | 0.0875 | 0.7721 |
+
+    | $X_4$ | 1317.09 | 4 | 1317.09 | 2.68 | 0.1123 |
+
+    | $X_1X_2$ | 1945.05 | 4 | 1945.05 | 39.74 | <0.0001 |
+
+    | $X_1X_3$ | 1092.97 | 4 | 1092.97 | 0.2236 | 0.6398 |
+
+    | $X_1X_4$ | 819.00 | 4 | 819.00 | 0.1638 | 0.6889 |
+
+    | $X_2X_3$ | 2289.94 | 4 | 2289.94 | 0.4685 | 0.4991 |
+
+    | $X_2X_4$ | 40066.42 | 4 | 40066.42 | 8.227 | 0.0002 |
+
+    | $X_3X_4$ | 230.86 | 4 | 230.86 | 0.0472 | 0.8295 |
+
+    | $X_1^2$ | 144.48 | 4 | 144.48 | 0.0296 | 0.8647 |
+
+    | $X_2^2$ | 2370.77 | 4 | 2370.77 | 0.4851 | 0.4917 |
+
+    | $X_3^2$ | 1261.21 | 4 | 1261.21 | 0.2581 | 0.6153 |
+
+    | $X_4^2$ | 355.89 | 4 | 355.89 | 0.0728 | 0.7892 |
+
+    | Residual | 2581.52 | 10 | 2581.52 | 0.5282 | 0.4739 |
+
+    | Total | 20659.09 | 44 | 20659.09 | 2.11 | 0.1573 |
+
+    | Residual | 3321.53 | 10 | 3321.53 | 0.6796 | 0.4164 |
+
+    | Lack of Fit | 108.60 | 18 | 108.60 | 22.22 | <0.0001 |
+
+    | Residual | 14179.20 | 29 | 636.54 | 23.57 | 0.0001 |
+
+    | Total | 18877.75 | 7 | 269.64 | | |
+
+
+    Table 4 (continued)
+
+
+    | Source | Sum of Squares | df | Mean Square | F-value | p-value |
+
+    |---|---|---|---|---|---|
+
+    | $X_4$ | 154.53 | 1 | 154.53 | 1.96 | 0.1722 |
+
+    | $X_5$ | 222.08 | 1 | 222.08 | 2.82 | 0.0141 |
+
+    | $X_6$ | 78.06 | 1 | 78.06 | 0.9897 | 0.3281 |
+
+    | $X_1^2$ | 191.69 | 1 | 191.69 | 2.43 | 0.1259 |
+
+    | $X_2^2$ | 191.69 | 1 | 191.69 | 2.43 | 0.1259 |
+
+    | $X_3^2$ | 910.68 | 1 | 910.68 | 11.55 | 0.0020 |
+
+    | $X_4^2$ | 65.66 | 1 | 65.66 | 0.8324 | 0.3691 |
+
+    | $X_5^2$ | 182.45 | 1 | 182.45 | 2.31 | 0.1391 |
+
+    | Residual | 2083.5 | 21 | 99.21 | 26.41 | <0.0001 |
+
+    | Lack of Fit | 2287.48 | 29 | 78.88 | | |
+
+    | Pure Error | 1919.48 | 22 | 87.25 | 1.66 | 0.2527 |
+
+    | Total | 3608 | 72 | 52.57 | | |
+
+
+    | Source | Sum of Squares | df | Mean Square | F-value | p-value |
+
+    |---|---|---|---|---|---|
+
+    | $X_1$ | 1111.49 | 1 | 1111.49 | 14.56 | <0.0001 |
+
+    | $X_2$ | 19.63 | 1 | 19.63 | 0.2572 | 0.6159 |
+
+    | $X_3$ | 22.59 | 1 | 22.59 | 0.2959 | 0.5906 |
+
+    | $X_4$ | 129.29 | 1 | 129.29 | 1.69 | 0.2034 |
+
+    | $X_5$ | 3314.35 | 1 | 3314.35 | 43.44 | <0.0001 |
+
+    | $X_6$ | 52.12 | 1 | 52.12 | 0.6828 | 0.4154 |
+
+    | $X_7$ | 10.9 | 1 | 10.9 | 0.1429 | 0.7822 |
+
+    | $X_8$ | 112.2 | 1 | 112.2 | 1.47 | 0.2352 |
+
+    | $X_9$ | 576.49 | 1 | 576.47 | 7.75 | 0.0102 |
+
+    | $X_{10}$ | 74.79 | 1 | 74.79 | 0.9997 | 0.3350 |
+
+    | $X_{11}$ | 30.73 | 1 | 30.73 | 0.4026 | 0.5307 |
+
+    | $X_{12}$ | 100.47 | 1 | 100.47 | 1.32 | 0.2609 |
+
+    | $X_{13}$ | 141.46 | 1 | 141.46 | 1.85 | 0.1839 |
+
+    | $X_{14}$ | 18.21 | 1 | 18.21 | 0.2386 | 0.6289 |
+
+    | $X_{15}^2$ | 198.1 | 1 | 198.1 | 0.048 | 0.3117 |
+
+    | $X_{16}^2$ | 74.41 | 1 | 74.41 | 0.937 | 0.3677 |
+
+    | $X_{17}^2$ | 795.46 | 1 | 795.46 | 10.42 | 0.0031 |
+
+    | $X_{18}^2$ | 61.43 | 1 | 61.43 | 0.8048 | 0.3370 |
+
+    | Residual | 270.54 | 1 | 270.54 | 3.54 | 0.0698 |
+
+    | Residual | 1952.5 | 21 | | 25.32 | <0.0001 |
+
+    | Lack of Fit | 2213.71 | 29 | 76.33 | | |
+
+    | Pure Error | 1799.72 | 22 | 81.81 | 1.38 | 0.3458 |
+
+    | Total | 4139.99 | 7 | 591.14 | | |
+
+
+    | Source | Sum of Squares | df | Mean Square | F-value | p-value |
+
+    |---|---|---|---|---|---|
+
+    | $X_1$ | 5889.69 | 20 | 294.43 | 3.4 | 0.0014 |
+
+    | $X_2$ | 1264.6 | 4 | 316.15 | 14.56 | 0.0006 |
+
+    | $X_3$ | 45.77 | 4 | 11.44 | 2.43 | 0.1259 |
+
+    | $X_4$ | 2.42 | 1 | 2.42 | 0.028 | 0.288 |
+
+    | $X_5$ | 152.38 | 1 | 152.38 | 1.53 | 0.2263 |
+
+    | $X_6$ | 1548.71 | 1 | 1548.71 | 17.88 | 0.0002 |
+
+    | $X_7$ | 0.1164 | 1 | 0.1164 | 0.0013 | 0.9971 |
+
+    | $X_8$ | 15.58 | 1 | 15.58 | 0.1799 | 0.6745 |
+
+    | $X_9$ | 458.97 | 1 | 458.97 | 5.3 | 0.0287 |
+
+    | $X_{10}$ | 622.07 | 1 | 622.07 | 7.18 | 0.0102 |
+
+    | $X_{11}$ | 240.85 | 1 | 240.85 | 2.78 | 0.1062 |
+
+    | $X_{12}$ | 190.95 | 1 | 190.95 | 2.2 | 0.1484 |
+
+    | $X_{13}$ | 30.67 | 1 | 30.67 | 0.3541 | 0.5564 |
+
+    | $X_{14}$ | 155.1 | 1 | 155.1 | 1.79 | 0.1913 |
+
+    | $X_{15}^2$ | 202.16 | 1 | 202.16 | 2.73 | 0.1384 |
+
+    | $X_{16}^2$ | 64.44 | 1 | 64.44 | 0.2067 | 0.6527 |
+
+    | $X_{17}^2$ | 96.47 | 1 | 96.47 | 1.1 | 0.3 |
+
+    | $X_{18}^2$ | 5.13 | 1 | 5.13 | 0.0592 | 0.8094 |
+
+    | Residual | 235.49 | 1 | 235.49 | 2.72 | 0.11 |
+
+    | Residual | 1080.98 | 21 | 51.47 | 12.48 | 0.0014 |
+
+    | Lack of Fit | 2512.26 | 29 | 86.63 | | |
+
+    | Pure Error | 1344.36 | 22 | 61.11 | 0.61 | 0.9663 |
+
+    | Total | 1167.8 | 7 | 166.83 | | |
+
+
+    The second-order model indicated that the data fits well. The quadratic equations
+    for %DPPH, %ABTSC, %H2O2 in coded variables are given by (9–11).
+
+
+    %DPPH(X) = 36.2 + 4.47 + 0.3972X_1 + 1.37X_2 + 1.64X_3 - 8.85X_1 - 3.19X_2 - 2.15X_3
+    - 4.01X_1X_2 + 1.095X_1 - 1.088X_2 + 2.25X_3 - 2.643X_1X_2 - 2.65X_1X_3 + 2.85X_1
+    + 4.03X_2 + 1.8X_1^2 + 7.2 + 7.62X^2
+
+
+    %ABTSC(Y) = -41.0 + 50.07 + 0.76372X_1 + 0.76338X_2 - 9.308X_3 - 12.28X_1 - 0.6440X_2
+    - 2.35X_3 + 2.44X_1 - 1.85X_1 - 1.45X_2 + 2.773X_3 - 2.64X_1 + 0.8106X_2 - 2.02X_3
+    + 1.15X_1^2 + 3.76X_2^2 + 1.05X_3^2 + 2.20X^2 + 7.34X^2
+
+
+    %H2O2(Y) = -51.5 + 57.5 + 0.0401X_1 + 0.0635X_2 + 1.48X_3 - 0.55X_1 + 0.0603X_2
+    - 0.7984X_1 - 4.15X_1 + 2.44X_2 + 2.81X_1 + 0.9791X_2 - 2.64X_1 - 2.61X_3 - 0.5648X_1
+    + 1.31X_2^2 + 3.023X_3^2 + 2.05X^2 + 5.49X^2
+
+
+    Analysis of variance (ANOVA) for the quadratic polynomial model. The second-order
+    model indicated that the data fits well. The quadratic equations for %DPPH, %ABTSC,
+    %H2O2 in coded variables are given by (9–11).
+
+    '
+  mdcn: '
+
+
+    # 二次多项模型的方差分析 (ANOVA)。
+
+
+    | 来源 | 平和 | 自由度 | 平方 | F值 | p值 |
+
+    |---|---|---|---|---|---|
+
+    | TPC (y1) 模型 | 843.800 | 20 | 42188.27 | 4.14 | 0.0003 |
+
+    | $X_1$ | 6259.86 | 4 | 6251.86 | 6.14 | 0.0192 |
+
+    | $X_2$ | 3370.88 | 4 | 832.72 | 0.3390 | 0.0569 |
+
+    | $X_3$ | 91.04 | 4 | 91.04 | 0.0089 | 0.9253 |
+
+    | $X_4$ | 10984.82 | 1 | 10984.82 | 1.06 | 0.3116 |
+
+    | $X_1X_2$ | 499.00 | 4 | 499.00 | 48.90 | <0.0001 |
+
+    | $X_1X_3$ | 1393.15 | 4 | 1393.15 | 0.119 | 0.0148 |
+
+    | $X_1X_4$ | 119.89 | 4 | 119.89 | 0.0918 | 0.1544 |
+
+    | $X_2X_3$ | 21923.02 | 4 | 21923.02 | 2.15 | 0.0076 |
+
+    | $X_2X_4$ | 83943.55 | 4 | 83943.55 | 8.24 | 0.0001 |
+
+    | $X_3X_4$ | 1452.96 | 4 | 1452.96 | 0.1426 | 0.7084 |
+
+    | $X_1^2$ | 21.86 | 4 | 21.86 | 0.0021 | 0.9634 |
+
+    | $X_2^2$ | 3167.31 | 4 | 3167.31 | 0.3109 | 0.5814 |
+
+    | $X_3^2$ | 6462.46 | 4 | 6462.46 | 0.6353 | 0.3623 |
+
+    | $X_4^2$ | 8730.34 | 4 | 8730.34 | 0.857 | 0.3622 |
+
+    | 残差 | 1192.58 | 10 | 1192.58 | 0.1171 | 0.7347 |
+
+    | 总计 | 43067.33 | 42 | 1025 | | 0.0489 |
+
+    | TPC (y1) 模型 (续) | 7887.36 | 4 | 7887.36 | 0.7742 | 0.3862 |
+
+    | 残差 | 15715.34 | 10 | 15715.34 | 1.524 | 0.2242 |
+
+    | 总计 | 204.00 | 25 | 204.00 | 20.62 | 0.0001 |
+
+    | TPC (y2) 模型 | 350.10 | 20 | 17506.81 | 3.58 | 0.0009 |
+
+    | $X_1$ | 11492.32 | 4 | 11492.32 | 2.35 | 0.136 |
+
+    | $X_2$ | 2066.87 | 4 | 2066.87 | 0.4229 | 0.5206 |
+
+    | $X_3$ | 417.71 | 4 | 417.71 | 0.0875 | 0.7721 |
+
+    | $X_4$ | 1317.09 | 4 | 1317.09 | 2.68 | 0.1123 |
+
+    | $X_1X_2$ | 1945.05 | 4 | 1945.05 | 39.74 | <0.0001 |
+
+    | $X_1X_3$ | 1092.97 | 4 | 1092.97 | 0.2236 | 0.6398 |
+
+    | $X_1X_4$ | 819.00 | 4 | 819.00 | 0.1638 | 0.6889 |
+
+    | $X_2X_3$ | 2289.94 | 4 | 2289.94 | 0.4685 | 0.4991 |
+
+    | $X_2X_4$ | 40066.42 | 4 | 40066.42 | 8.227 | 0.0002 |
+
+    | $X_3X_4$ | 230.86 | 4 | 230.86 | 0.0472 | 0.8295 |
+
+    | $X_1^2$ | 144.48 | 4 | 144.48 | 0.0296 | 0.8647 |
+
+    | $X_2^2$ | 2370.77 | 4 | 2370.77 | 0.4851 | 0.4917 |
+
+    | $X_3^2$ | 1261.21 | 4 | 1261.21 | 0.2581 | 0.6153 |
+
+    | $X_4^2$ | 355.89 | 4 | 355.89 | 0.0728 | 0.7892 |
+
+    | 残差 | 2581.52 | 10 | 2581.52 | 0.5282 | 0.4739 |
+
+    | 总计 | 20659.09 | 44 | 20659.09 | 2.111 | 0.1573 |
+
+    | 残差 | 3321.53 | 10 | 3321.53 | 0.6796 | 0.4164 |
+
+    | 拟合误差 | 108.60 | 29 | 108.60 | 22.22 | 0.0001 |
+
+    | 残差 | 14179.20 | 29 | 14179.20 | 23.57 | 0.0001 |
+
+    | 总计 | 18877.75 | 7 | 269.64 | |
+
+
+    表 4 (续)
+
+
+    | 来源 | 平和 | 自由度 | 平方 | F值 | p值 |
+
+    |---|---|---|---|---|---|
+
+    | $X_4$ | 154.53 | 1 | 154.53 | 1.96 | 0.1722 |
+
+    | $X_5$ | 222.08 | 1 | 222.08 | 2.82 | 0.0141 |
+
+    | $X_6$ | 78.06 | 1 | 78.06 | 0.9897 | 0.3281 |
+
+    | $X_1^2$ | 191.69 | 1 | 191.69 | 2.43 | 0.1259 |
+
+    | $X_2^2$ | 191.69 | 1 | 191.69 | 2.43 | 0.1259 |
+
+    | $X_3^2$ | 910.68 | 1 | 910.68 | 11.55 | 0.0020 |
+
+    | $X_4^2$ | 65.66 | 1 | 65.66 | 0.8324 | 0.3691 |
+
+    | $X_5^2$ | 182.45 | 1 | 182.45 | 2.31 | 0.1391 |
+
+    | 残差 | 2083.5 | 21 | 99.21 | 26.41 | 0.0001 |
+
+    | 拟合误差 | 2287.48 | 29 | 78.88 | | |
+
+    | 误差 | 1919.48 | 22 | 87.25 | 1.66 | 0.2527 |
+
+    | 总计 | 3608 | 72 | 52.57 | | |
+
+
+    | 来源 | 平和 | 自由度 | 平方 | F值 | p值 |
+
+    |---|---|---|---|---|---|
+
+    | $X_1$ | 1111.49 | 1 | 1111.49 | 14.56 | <0.0001 |
+
+    | $X_2$ | 19.63 | 1 | 19.63 | 0.2572 | 0.6159 |
+
+    | $X_3$ | 22.59 | 1 | 22.59 | 0.2959 | 0.5906 |
+
+    | $X_4$ | 129.29 | 1 | 129.29 | 1.69 | 0.2034 |
+
+    | $X_5$ | 3314.35 | 1 | 3314.35 | 43.44 | <0.0001 |
+
+    | $X_6$ | 52.12 | 1 | 52.12 | 0.6828 | 0.4154 |
+
+    | $X_7$ | 10.9 | 1 | 10.9 | 0.1429 | 0.7822 |
+
+    | $X_8$ | 112.2 | 1 | 112.2 | 1.47 | 0.2352 |
+
+    | $X_9$ | 576.49 | 1 | 576.47 | 7.75 | 0.0102 |
+
+    | $X_{10}$ | 74.79 | 1 | 74.79 | 0.9997 | 0.3350 |
+
+    | $X_{11}$ | 30.73 | 1 | 30.73 | 0.4026 | 0.5307 |
+
+    | $X_{12}$ | 100.47 | 1 | 100.47 | 1.32 | 0.2609 |
+
+    | $X_{13}$ | 141.46 | 1 | 141.46 | 1.85 | 0.1839 |
+
+    | $X_{14}$ | 18.21 | 1 | 18.21 | 0.2386 | 0.6289 |
+
+    | $X_{15}^2$ | 198.1 | 1 | 198.1 | 0.048 | 0.3117 |
+
+    | $X_{16}^2$ | 74.41 | 1 | 74.41 | 0.937 | 0.3677 |
+
+    | $X_{17}^2$ | 795.46 | 1 | 795.46 | 10.42 | 0.0031 |
+
+    | $X_{18}^2$ | 61.43 | 1 | 61.43 | 0.8048 | 0.3370 |
+
+    | 残差 | 270.54 | 1 | 270.54 | 3.54 | 0.0698 |
+
+    | 残差 | 1080.98 | 21 | 51.47 | 12.48 | 0.0014 |
+
+    | 拟合误差 | 2512.26 | 29 | 86.63 | | |
+
+    | 误差 | 1344.36 | 22 | 61.11 | 0.61 | 0.9663 |
+
+    | 总计 | 1167.8 | 7 | 166.83 | | |
+
+
+    二次模型表明数据拟合良好。编码变量的 %DPPH、%ABTSC、%H2O2 的二次方程如 (9–11)。
+
+
+    %DPPH(X) = 36.2 + 4.47 + 0.3972X_1 + 1.37X_2 + 1.64X_3 - 8.85X_1 - 3.19X_2 - 2.15X_3
+    - 4.01X_1X_2 + 1.095X_1 - 1.088X_2 + 2.25X_3 - 2.643X_1X_2 - 2.65X_1X_3 + 2.85X_1
+    + 4.03X_2 + 1.8X_1^2 + 7.2 + 7.62X^2
+
+
+    %ABTSC(Y) = -41.0 + 50.07 + 0.76372X_1 + 0.76338X_2 - 9.308X_3 - 12.28X_1 - 0.6440X_2
+    - 2.35X_3 + 2.44X_1 - 1.85X_1 - 1.45X_2 + 2.773X_3 - 2.64X_1 + 0.8106X_2 - 2.02X_3
+    + 1.15X_1^2 + 3.76X_2^2 + 1.05X_3^2 + 2.20X^2 + 7.34X^2
+
+
+    %H2O2(Y) = -51.5 + 57.5 + 0.0401X_1 + 0.0635X_2 + 1.48X_3 - 0.55X_1 + 0.0603X_2
+    - 0.7984X_1 - 4.15X_1 + 2.44X_2 + 2.81X_1 + 0.9791X_2 - 2.64X_1 - 2.61X_3 - 0.5648X_1
+    + 1.31X_2^2 + 3.023X_3^2 + 2.05X^2 + 5.49X^2
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 12]
+
+
+    # Sustainable Chemistry and Pharmacy 36 (2023) 101323
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_0.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_1.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_2.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_3.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_4.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_5.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_6.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_7.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_8.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_9.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_10.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_11.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_12.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_13.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_14.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_15.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_16.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_17.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_18.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_19.png)
+
+
+    Fig. 2. Normal percentage probability plot for the studentized residuals for highest
+    yield of TP (a), TF (e), %DPHisc (i), %ABSc (m) and %H2O2sc (q). Relationship
+    between experimental and predicted value for highest yield of TP (b), TF (f),
+    %DPHisc (j), %ABSc (n) and %H2O2sc (r). Response surface and contour plot showing
+    the combined effects of mixed concentration (X_m) and temperature (X_t) for highest
+    yield of TP, TPC, %DPHisc, %ABSc and %H2O2sc when time and particle size were
+    held at fixed level (c), (k), (o), (s) and (d), (h), (l), (p), (t), respectively.'
+  - '[PAGE 13]
+
+
+    # P. Petichamuthu al.
+
+
+    # Sustainable Chemistry and Pharmacy 36 (2023) 101323
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_13_0.png)
+
+
+    Fig. 3. Machine learning algorithm validated the experimental and predicted values.
+
+
+    that were caused under ideal circumstances and with light changes depending on
+    a variation of values in Table 5. The results of the experiment showed that the
+    methanol concentration ($X_1$) and particle size ($X_4$) of the plant materials
+    had a significant impact on the overall yield of bioactive phytochemicals from
+    Turmeric Sw. 45 ° temperature, a set extraction period of 62.5-75% of methanol
+    concentration, 57-6.2 W/cm of ultrasound intensity, 20 min, and a particle size
+    of 0.4-0.6 mm were optimal conditions. The optimized conditions for total polyphenols,
+    total flavonoids, %DPPC, %DPHC, %ABTS$_{sc}$, and %H$_2$O$_{sc}$ were 831.41 mg,
+    538.76 mg rutin equivalent (GAE)/RE), 75.25%, 84.36%, and 85.72%, respectively,
+    with RSM predicted values were 799.17 mg gallic acid equivalents (GAE)/g of total
+    extract, 504.53 mg rutin equivalent (GAE)/g of total extract. By changing the
+    parameters, the value of the respect was observed using a ruler viewer (Fig. 4).
+    The ruler viewer is compressed with built-in weight optimization and fuzzification
+    techniques. The response variables for model predicted value allowed for additional
+    validation of the model. The total polyphenols, total flavonoids, %DPHC, %ABTS$_{sc}$,
+    and %H$_2$O$_{sc}$ were 645 mg gallic acid equivalents (GAE/GAE), 53.9%, 60.2%,
+    and 6.1%, respectively, at the optimized conditions of extraction parameters ($X_1
+    = 67.5\%$ methanol concentration, $X_2 = 6$ W/cm ultrasound intensity, $X_3 =
+    45$ °C,)
+
+
+    14'
+  - '[PAGE 14]
+
+
+    # Table 5
+
+
+    Validation of experimental and predicted values under optimum conditions based
+    on combination of responses.
+
+
+    | S. No | Independent Variables | Experimental Responses* | Predicted values |
+    ANFIS Predicted values | ML algorithm predicted values |
+
+    |---|---|---|---|---|---||
+
+    | | $X_1$ | $X_2$ | $X_3$ | $X_4$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ | $Y_1$
+    | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ | $Y_1$
+    | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ |
+
+    | 1 | 62.5 | 60 | 45 | 25 | 0.5 | 825.21 | 525.13 | 72.82 | 81.65 | 740.54 | 463.61
+    | 65.34 | 71.43 | 72.06 | 862 | 522 | 71.6 | 84.1 | 82 | 830.58 | 506.12 | 70.3075
+    | 79.30 | 77.80 |
+
+    | 2 | 67.5 | 60 | 45 | 25 | 0.5 | 831.43 | 536.45 | 75.23 | 84.36 | 757.71 | 509.54
+    | 74.49 | 77.72 | 74.65 | 845 | 539 | 73.6 | 62.1 | 61 | 839.79 | 519.79 | 72.6834
+    | 81.60 | 82.47 |
+
+    | 3 | 67.5 | 60 | 45 | 25 | 0.5 | 835.98 | 548.23 | 78.23 | 89.15 | 762.33 | 552.20
+    | 79.15 | 78.38 | 79.34 | 825 | 548.85 | 81.6 | 81.2 | 83 | 842.85 | 518.96 |
+    79.115 | 77.15 | 77.72 |
+
+    | 4 | 65 | 62.5 | 45 | 25 | 0.5 | 865.98 | 487.37 | 62.11 | 71.34 | 762.73 | 491.14
+    | 69.47 | 77.17 | 77.25 | 789 | 479 | 61.7 | 71.6 | 73 | 727.95 | 487.08 | 64.616
+    | 64.823 | 76.91 |
+
+    | 5 | 65 | 60 | 45 | 25 | 0.6 | 802.63 | 423.26 | 54.26 | 66.45 | 710.02 | 433.45
+    | 60.81 | 68.02 | 68.90 | 740 | 436 | 61.6 | 70 | 72.9 | 809.85 | 450.08 | 59.3369
+    | 70.34 | 74.01 |
+
+    | 6 | 65 | 60 | 45 | 25 | 0.4 | 780.78 | 443.85 | 58.43 | 69.01 | 836.70 | 519.66
+    | 72.46 | 79.73 | 78.68 | 884 | 539 | 72.4 | 61.6 | 83.7 | 795.00 | 460.29 | 61.4339
+    | 71.69 | 72.21 |
+
+
+    * All the experiments were repeated three times.'
+  - '[PAGE 15]
+
+
+    # P. Itchimimuru et al.
+
+
+    # Sustainable Chemistry and Pharmacy 36 (2023) 101323
+
+
+    | X=65 | X=60 | X=45 | X=25 | X=0.4 | y1=84 | y2=539 | y3=72.4 | y4=61.6 | y5=83.7
+    |
+
+    |---|---|---|---|---|---|---|---|---|---||
+
+    | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | | | | | | | | | | |
+
+
+    Fig. 4. ANFIS rule used to verify the effect of parameters on response learning
+    model of TP and antioxidants from Solanum swartz.
+
+
+    Xt=25 min, and Xi=0.5 mm particle size. At the same time identified for total
+    polyphenols, total flavonoids, %DDPHC, %ABTSC, and %H2O2O3sc were 824.793 mg gastric
+    acid equivalents (GAGE/g), 519.793 mg rutin equivalents (RE)/g, 72.6834%, 81.5943%,
+    and 82.465%, respectively. According to the findings, RSM, ANFIS and as machine
+    learning models predicted the experimentally measured values well fitted to each
+    other.
+
+
+    # 3.7. GC-MS and LC-MS analysis
+
+
+    A total of 25 peaks were found in the GC-MS chromatogram (Fig. 5) of the optimized
+    extract of S. swarm. The phytocompounds were identified by comparing their retention,
+    retention times, peak percentages and mass spectral fragmentation patterns to
+    those of compounds listed in the National Institute of Standards and Technology
+    (NIST). Among the 25 peaks, eleven of bioactive compounds (based on the active
+    nucleus of the structure) were identified. The major phytochemical compounds were
+    alpha-beta-sitosterol, campferol gallicoside, quercetin, kaempferol, rutin, vanillic,
+    methyl alcohol, d-rhamnopyranoside, 3-ethylthio-1-propane, ethyl p-methoxycinnamate,
+    (4-methylphenyl) acetate, vanillin, and cis-vaccic acid. The identified phytochemical
+    compounds and their molecular formula, mass and structures are presented in Table
+    6. The LC-MS chromatogram of optimized extract of S. swarm showed the presence
+    of several compounds: quercetin (retention time not specified), rutin (retention
+    time 23.6 min; molecular formula C27H30O16; 285.6 mg/g), neochlorogenic acid (retention
+    time 25.1 min; molecular formula C16H18O9; 354.3 mg/g), chlorogenic acid (retention
+    time 29.32 min; molecular formula C16H18O9; 354.3 mg/g), caffeic acid (retention
+    time 34.08 min; molecular formula C9H8O4; 376.4 mg/g), quinic acid (
+
+
+    7.321 min; molecular formula C8H12O7; 552.9 mg/g).
+
+
+    # 4. Conclusions
+
+
+    The objective of the research was successfully achieved in this study and effectively
+    extracted the parameters for the highest yield of total polyphenols, total flavonoid
+    compounds and their antioxidant potentials from S. swarm. Using methanol was identified
+    as a suitable solvent for highest yield of phytochemical compounds. The statistical
+    technique of RSM based on face-central composite design, coupled with ANFIS and
+    machine learning were effective in identifying the optimal parameters. In the
+    independent experiment, parameters like methanol concentration, ultrasound intensity,
+    temperature, and particle size significantly influenced the yield of phytochemical
+    compounds. The linear parameters, and their interactions as well as quadratic
+    terms also predicted the highest yield of phytochemicals. The high R^2 value (0.97)
+    showed the reliability of the result. The optimized condition was obtained at
+    65% methanol, 600 mL of ultrasound intensity, temperature at 45 C for 15 min,
+    and particle size of 0.5 mm, which resulted in the highest yield of flavonoids
+    (g, 75.22% of DDPHC, 84.12% of ABTSC, and 85.02% of H2O2Osc). The optimized flavonoid
+    values were well predicted with RSM, ANFIS and machine learning models. Furthermore,
+    12 1 bioactive phytochemicals were identified from the optimized extract of S.
+    swarm. Through GC-MS and LC-MS respectively, RSM combined with ANFIS and machine
+    learning models can be applied for designing and effective extraction of bioactive
+    phytochemicals from plant sources on an industrial scale.
+
+
+    16'
+  md: '
+
+    # Sustainable Chemistry and Pharmacy 36 (2023) 101323
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_0.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_1.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_2.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_3.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_4.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_5.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_6.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_7.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_8.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_9.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_10.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_11.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_12.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_13.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_14.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_15.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_16.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_17.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_18.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_19.png)
+
+
+    Fig. 2. Normal percentage probability plot for the studentized residuals for highest
+    yield of TP (a), TF (e), %DPHisc (i), %ABSc (m) and %H2O2sc (q). Relationship
+    between experimental and predicted value for highest yield of TP (b), TF (f),
+    %DPHisc (j), %ABSc (n) and %H2O2sc (r). Response surface and contour plot showing
+    the combined effects of mixed concentration (X_m) and temperature (X_t) for highest
+    yield of TP, TPC, %DPHisc, %ABSc and %H2O2sc when time and particle size were
+    held at fixed level (c), (k), (o), (s) and (d), (h), (l), (p), (t), respectively.
+
+
+    # P. Petichamuthu al.
+
+
+    # Sustainable Chemistry and Pharmacy 36 (2023) 101323
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_13_0.png)
+
+
+    Fig. 3. Machine learning algorithm validated the experimental and predicted values.
+
+
+    that were caused under ideal circumstances and with light changes depending on
+    a variation of values in Table 5. The results of the experiment showed that the
+    methanol concentration ($X_1$) and particle size ($X_4$) of the plant materials
+    had a significant impact on the overall yield of bioactive phytochemicals from
+    Turmeric Sw. 45 ° temperature, a set extraction period of 62.5-75% of methanol
+    concentration, 57-6.2 W/cm of ultrasound intensity, 20 min, and a particle size
+    of 0.4-0.6 mm were optimal conditions. The optimized conditions for total polyphenols,
+    total flavonoids, %DPPC, %DPHC, %ABTS$_{sc}$, and %H$_2$O$_{sc}$ were 831.41 mg,
+    538.76 mg rutin equivalent (GAE)/RE), 75.25%, 84.36%, and 85.72%, respectively,
+    with RSM predicted values were 799.17 mg gallic acid equivalents (GAE)/g of total
+    extract, 504.53 mg rutin equivalent (GAE)/g of total extract. By changing the
+    parameters, the value of the respect was observed using a ruler viewer (Fig. 4).
+    The ruler viewer is compressed with built-in weight optimization and fuzzification
+    techniques. The response variables for model predicted value allowed for additional
+    validation of the model. The total polyphenols, total flavonoids, %DPHC, %ABTS$_{sc}$,
+    and %H$_2$O$_{sc}$ were 645 mg gallic acid equivalents (GAE/GAE), 53.9%, 60.2%,
+    and 6.1%, respectively, at the optimized conditions of extraction parameters ($X_1
+    = 67.5\%$ methanol concentration, $X_2 = 6$ W/cm ultrasound, $X_3 = 45$ °C,)
+
+
+    # Table 5 Validation of experimental and predicted values under optimum conditions
+    based on combination of responses.
+
+
+    | S. No | Independent Variables | Experimental Responses* | Predicted values |
+    ANFIS Predicted values | ML algorithm predicted values |
+
+    |---|---|---|---|---|---|
+
+    | | $X_1$ | $X_2$ | $X_3$ | $X_4$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ | $Y_1$
+    | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ |
+
+    | 1 | 62.5 | 60 | 45 | 0.5 | 825.21 | 525.13 | 72.82 | 81.65 | 740.54 | 463.61
+    | 65.34 | 71.43 | 862 | 522 | 71.6 | 84.1 | 830.5 | 506.12 | 70.30 | 79.80 |
+
+    | 2 | 67.5 | 60 | 45 | 0.5 | 831.43 | 536.45 | 75.23 | 84.36 | 757.71 | 509.54
+    | 74.49 | 77.72 | 845 | 539 | 73.6 | 82.1 | 839.79 | 519.79 | 72.68 | 81.60 |
+
+    | 3 | 67.5 | 60 | 45 | 0.5 | 835.98 | 548.23 | 78.23 | 89.15 | 762.33 | 552.20
+    | 79.15 | 78.38 | 825 | 548.85 | 81.6 | 81.2 | 842.85 | 518.96 | 79.11 | 77.15
+    |
+
+    | 4 | 65 | 62.5 | 45 | 0.5 | 865.98 | 487.37 | 62.11 | 71.34 | 762.73 | 491.14
+    | 69.47 | 77.17 | 77.25 | 789 | 479 | 61.7 | 71.6 | 73 | 727.95 | 487.08 | 64.616
+    | 64.823 | 76.91 |
+
+    | 5 | 65 | 60 | 45 | 0.6 | 802.63 | 423.26 | 54.26 | 66.45 | 710.02 | 433.45 |
+    60.81 | 68.02 | 740 | 436 | 61.6 | 70 | 72.9 | 809.85 | 450.08 | 59.3369 | 70.34
+    | 74.01 |
+
+    | 6 | 65 | 60 | 45 | 0.4 | 780.78 | 443.85 | 58.43 | 69.01 | 836.70 | 519.66 |
+    72.46 | 79.73 | 78.68 | 884 | 539 | 72.4 | 61.6 | 83.7 | 795.00 | 460.29 | 61.4339
+    | 71.69 | 72.21 |
+
+
+    * All the experiments were repeated three times.
+
+
+    # P. Itchimimuru et al.
+
+
+    # Sustainable Chemistry and Pharmacy 36 (2023) 101323
+
+
+    | X=65 | X=60 | X=45 | X=25 | X=0.4 | y1=84 | y2=539 | y3=72.4 | y4=61.6 | y5=83.7
+    |
+
+    |---|---|---|---|---|---|---|---|---|---|
+
+    '
+  mdcn: '
+
+
+    # 可持续化学与药学 36 (2023) 101323
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_0.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_1.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_2.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_3.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_4.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_5.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_6.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_7.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_8.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_9.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_10.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_11.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_12.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_13.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_14.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_15.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_16.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_17.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_18.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_12_19.png)
+
+
+    图 2. TP (a)、TF (e)、%DPHisc (i)、%ABSc (m) 和 %H2O2sc (q) 最高产率的标准化残差正态百分比概率图。TP (b)、TF
+    (f)、%DPHisc (j)、%ABSc (n) 和 %H2O2sc (r) 最高产率实验值与预测值之间的关系。响应面和等高线图显示了在时间和颗粒粒径固定在特定水平时，分别对应
+    (c), (k), (o), (s) 和 (d), (h), (l), (p), (t) 对 TP、TPC、%DPHisc、%ABSc 和 %H2O2sc
+    混合浓度 (X_m) 和温度 (X_t) 的共同影响。
+
+
+    # P. Petichamuthu 等人
+
+
+    # 可持续化学与药学 36 (2023) 101323
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_13_0.png)
+
+
+    图 3. 机器学习算法验证了实验值和预测值。
+
+
+    这些是在理想情况下引起的，并随着表 5 中数值的变化发生轻微变化。实验结果表明，植物材料的甲醇浓度 ($X_1$) 和颗粒粒径 ($X_4$) 对姜黄（Turmeric
+    Sw）生物活性植物化学物质的总产量有显著影响，最佳条件为：45 ° 温度、62.5-75% 甲醇浓度、57-6.2 W/cm 超声波强度、20 min 以及
+    0.4-0.6 mm 的颗粒粒径。总多酚、总黄酮类、%DPPC、%DPHC、%ABTS$_{sc}$ 和 %H$_2$O$_{sc}$ 的优化条件分别为 831.41
+    mg、538.76 mg 芦皮素当量 (GAE)/RE)、75.25%、84.36% 和 85.72%，而 RSM 预测值分别为 799.17 mg 没食酸等当量
+    (GAE)/g 总提取物、504.53 mg 芦皮素当量 (GAE)/g 总提取物。通过标尺查看器（图 4）观察到相应数值的变化。标尺查看器具有内置权重优化和模糊化技术。模型预测值的响应变量允许对模型进行额外验证。在提取参数优化（$X_1
+    = 67.5\%$ 甲醇浓度，$X_2 = 6$ W/cm 超声，$X_3 = 45$ °C，）条件下，总多酚、总黄酮类、%DPHC、%ABTS$_{sc}$
+    和 %H$_2$O$_{sc}$ 分别为645 mg 没食酸等当量 (GAE/GAE)、53.9%、60.2% 和 6.1%。
+
+
+    # 表 5 基于响应组合的优选条件下实验值与预测值的验证。
+
+
+    | 序号 | 独立变量 | 实验响应* | 预测值 | ANFIS 预测值 | ML 算法预测值 |
+
+    |---|---|---|---|---|---|
+
+    | | $X_1$ | $X_2$ | $X_3$ | $X_4$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ | $Y_1$
+    | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ |
+
+    | 1 | 62.5 | 60 | 45 | 0.5 | 825 | 525 | 71.6 | 83.6 | 740 | 463 | 60.8 | 68.1
+    | 77.2 | 815 | 519 | 70 | 81 | |
+
+    | 2 | 67.5 | 60 | 45 | 0.5 | 831.4 | 538.8 | 75.2 | 84.4 | 85.7 | 799.2 | 504.5
+    | 71.5 | 81.5 | 839 | 520 | 72 | 82.6 | |
+
+    | 3 | 67.5 | 60 | 45 | 0.5 | 835.9 | 548.2 | 78.2 | 89.1 | 862 | 552 | 73.3 |
+    81.5 | 845 | 539 | 72.4 | 83.7 | |
+
+    | 4 | 65 | 62.5 | 45 | 0.5 | 865.9 | 487.4 | 61.1 | 73.3 | 762.7 | 491.1 | 64.5
+    | 69.5 | 77.2 | 789 | 479 | 61.7 | 72.2 | |
+
+    | 5 | 65 | 60 | 45 | 0.6 | 802.6 | 423.3 | 54.3 | 66.5 | 710.0 | 433.5 | 60.8
+    | 68.0 | 740 | 436 | 61.6 | 70 | 72.9 |
+
+    | 6 | 65 | 60 | 45 | 0.4 | 780.8 | 443.9 | 58.4 | 69.0 | 836.7 | 519.7 | 72.5
+    | 79.7 | 786 | 519 | 70.5 | 81.7 | |
+
+
+    * 所有实验均重复了三次。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 16]
+
+
+    # P. Pichimutu et al.
+
+    Sustainable Chemistry and Pharmacy 36 (2023) 101323
+
+
+    Abundance
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_16_0.png)
+
+
+    Fig. 5. GC-MS spectra of optimized extract of Solanum torvum Swart. List of bioactive
+    compounds present in the optimally obtained extract.
+
+
+    Table 6
+
+    Analysed bioactive compounds from optimized extract of Solanum torvum Sw. by GC-MS
+    chromatography.
+
+
+    | Retention time (min) | % Area of peak | Compound identified | Molecular formula
+    | Molecular weight (g/mol) |
+
+    | --- | --- | --- | --- | --- |
+
+    | 5.733 | 0.66 | alpha-t-Gastropranososide, methyl | C21H32O9 | 194.18 |
+
+    | 8.283 | 1.38 | Methanamine | CH5N | 31.057 |
+
+    | 9.331 | 0.61 | Thymran-4-one | C5H6O2 | 126.11 |
+
+    | 11.294 | 1.43 | 5-Hydroxymymethylfurural | C6H8O3 | 126.11 |
+
+    | 12.281 | 1.68 | 3(2H)-Furanone | C4H6O2 | 84.07 |
+
+    | 14.935 | 1.79 | Vanillin | C8H8O3 | 152.15 |
+
+    | 15.162 | 0.63 | Methyl.alpha-D-rhamnnannoside | C15H24O7 | 178.12 |
+
+    | 16.906 | 1.91 | 3-Ethylthio-1-propane | C5H10OS | 102.2 |
+
+    | 17.477 | 1.05 | Ethyl p-methanisate | C10H12O3 | 206.24 |
+
+    | 17.695 | 1.12 | (4-Methylphenyl)thio)acetone | C11H14OS | 196.27 |
+
+    | 19.918 | 3.70 | cis-Vaccenic acid | C10H16O2 | 182.25 |
+
+
+    17'
+  - '[PAGE 17]
+
+
+    # P. Petichimuttu et al.
+
+
+    # Sustainable Chemistry and Pharmacy 36 (2023) 101328
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_0.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_1.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_2.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_3.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_4.png)
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_5.png)
+
+
+    Fig. 6: LC-MS chromatogram of retinal (a), neochlorogenic acid (b), chloricogenic
+    (c), riboflavin (d), drosolic acid (e), and beta-cryptaxanthin (f).
+
+
+    # Authorship contribution statement
+
+
+    **Priya Petichimuttu**: conceptualization, formal analysis, investigation, writing
+    – original draft preparation. **Krishnan Shankar**: supervision, validation, funding
+    acquisition, writing – review & editing. **Selvaraj Kunjiaappan, Suthendran Kanan**:
+    conceptualization, validation, writing – review & editing. **Seshubram Ram Kumarian
+    and Gorla Bhuchayyagari Sumanth**: investigation, validation, writing – original
+    draft preparation.
+
+
+    # Funding
+
+
+    K.S. and S.K. gratefully acknowledged the Development of Biotechnology, Govt.
+    of India for its financial support (BT/PR36633/TERM/127/2020).
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing interests or personal relationships
+    that could have appeared to influence the work reported in this paper.
+
+
+    # Data availability
+
+
+    No data was used for the research described in the article.
+
+
+    # Acknowledgements
+
+
+    The authors are grateful to the management of Kalasalingam Academy of Research
+    and Education for the research facilities. The authors authored the laboratory
+    facility from the Department of Biotechnology, Govt. of India; DBT-NER project
+    (BT/PR45283/NER/95/1919/2022).
+
+
+    # Appendix A Supplementary data
+
+
+    Supplementary data to this article can be found at https://doi.org/10.1016/j.scp.2023.101328.'
+  - '[PAGE 18]
+
+
+    P. Peretchina
+
+
+    Sustainable Chemistry and Agriculture 36 (2023) 101323
+
+
+    Alehaytu, A., Neuro-Fuzzy System and Genetic Algorithm for Cb Lift Based Attitude
+    Control System. Master thesis. Addis Science University, Addis Ababa, Ethiopia.
+
+
+    Aitmani, A., Wang, G., Duruis, R., Massari, M., Lifshout, D.. Using ultrasonic
+    extraction of phenols from peaches and plums. PLoS One 11(2), e0147588 (2016).
+    https://doi.org/10.1371/journal.pone.0147588.
+
+
+    Ayer, A. S. Impact of nanotechnology on the development of polymer materials.
+    Materials science applications with emphasis on design of applied experiments
+    learned to chemical processes 157-169. https://doi.org/10.1002/chem.73690.
+
+
+    Azad, A., Shahrizadeh, A., Ghansari, G.. An update on neural network-based framework
+    system for health service. International Journal of Public Health 58(6), 697-705
+    (2020).
+
+
+    Baskargaran, S., Teeneepan, P., Palaniamani, K., Samkan, V., Arumugalam, S., Sankarsaran,
+    M., Mohan, U., Rajkumar, L., Kanjai. J. Food Chem. 33, 2773-2789 (2019). https://doi.org/10.1016/j.jfood.2019.108732.
+
+
+    Beraim, S., Lee, C.. How tea extract might reduce its effects and how it might
+    affect your health. Menopause 63, 555-560 (2020). https://doi.org/10.1007/s12560-020-0719-y.
+
+
+    Canalsody-Rodriguez, L., Harrocaut-Sichau, C., Vargas, A., Aournier, F., Girard,
+    J., Jarmet, M.. 2015. Evaluation of the potential of reducing metal content and
+    enhancing antioxidant activity of pomegranate seed extract. Food Chemistry. 186,
+    215-220. https://doi.org/10.1016/j.foodchem.2015.04.065.
+
+
+    Chandra, H., Meena, M., Parul, T., Sharma, K.. Potential of pomegranate seed extract
+    as a natural preservative for reducing lipid peroxidation and enhancing stability
+    of important food products. Food Control. 96, 107634 (2019). https://doi.org/10.1016/j.foodcont.2019.107634.
+
+
+    Cuthbert, A., Parameswvam, P., Samkan, V., Chandrasubaram, S., Sankarsaranan,
+    M., Bakarajaraj, S., Kanjai, S.. 2018. Optimization of antioxidant activity of
+    pomegranate seed extract using natural products from indigenous juice and edible
+    extracts. Int. J. Food Res. 39, 221-244. https://doi.org/10.50642/ijfr.39.2094.
+
+
+    El-Hady, M. A., El-Sayed, M. A., Helwan, K.. 2012. Ultrasonic extraction and antioxidant
+    properties of pomegranate peel from blackcherry. Science. Food Food Technol. 42,
+    93-97. https://doi.org/10.1016/j.foodchem.2012.09.014.
+
+
+    Di Silva, L. A., Perini, P. B., Souza, S. R et al.. 2015. Spectrophotometric determination
+    of the total flavonoid content in pomegranate juice (Punica granatum L.). Leaves
+    and Med. Drugs. 14, 115-120. https://doi.org/10.1016/j.lmd.2015.03.016.
+
+
+    Fan, C., Zhang, H., Yao, Y.. 2017. A short-term machine learning approach to predict
+    shelf life of apple juice extracts. Energy. 125, 222-233. https://doi.org/10.1016/j.energy.2017.03.022.
+
+
+    Fernandez, C. D., Sosa, P.. 2015. Optimization of electrochemical assay for determining
+    the antioxidant activity of hydrogen peroxide (H2O2) scavenging by plant extracts.
+    Methods Biochemol. 288, 55-63. https://doi.org/10.1016/j.ymtec.2015.01.001.
+
+
+    Gasan, N., Tomar, S., Sumbandaman, B., Sankarsaran, S., Shrivast, A., Bhattacharjeee,
+    C.. 2018. Optimization and analysis of microwave-assisted extraction of bioactive
+    compounds from Mimus mulussa using Guinitic induction with RSM and ANN modeling.
+    J. Food Chem. 22, 238-242. https://doi.org/10.1016/j.rcimo.2018.03.012.
+
+
+    Gousset, C., Cournier, M., Mulika, K., Isardin, L., Gousse, B. P., Serveaux, A.,
+    Shivashakar, D.. 2005. Pomegranate seeds, as a source of antioxidant and fungal
+    growth inhibitors for germination of lentil (L sativa). Plant Sci. 168, 319-327.
+    https://doi.org/10.1016/j.plantsci.2004.09.014.
+
+
+    19'
+  - '[PAGE 19]
+
+
+    P. Petchumatu
+
+
+    Sustainable Chemistry and Chemistry 36 (2023) e001233
+
+
+    Selvaraj, K., Chowdhury, R., Bhattacharya, C., 2014. Optimization of the solvent
+    extraction of bioactive phenolic compounds from fern Azella microphylla using
+    response methodology. Int. Food Res. J. 21, 1559–1567.
+
+    Selvaraj, K., Theivakaran, P., Pavadai, P., Ravishankar, V., Palanisamy, P., Gopal,
+    M., Dharamaling, S.R., Sankaranarayanan, M., 2022. Impact of physicochemical parameters
+    on effective extraction of bioactive compounds from natural sources: an overview.
+    Curr. Bio. Compat. 18, 11–27, https://doi.org/10.1016/j.cbpc.2022.102174/
+
+    Stuckler, D., Basu, S., 2011. Evaluating the health burden of chronic diseases.
+    In: Sick Societies: Responsive to the Global Challenge of Chronic Disease. Oxford
+    University.
+
+    Tungtuminin, D., Thongboanyu, N., Phobhan, A., Asayak, G., 2018. Bioactive and
+    phenolic compounds from medicinal plants for pharmaceutical and medical aspect:
+    an overview. Medicine (Bali) 5, 93, https://doi.org/10.3390/medicine5030093
+
+    Velly, S., Kumar, S., Singh, S., 2021. An in silico molecular modelling-prediction
+    of potential Keaj V
+
+    Wu, M.C., Li, J., Zhang, Y., 2021. Identification of significant association testing
+    for sequencing data with the sequence kernel association test. Am. J. Hum. Gen.
+    89, 82–93, https://doi.org/10.1016/j.ajhg.2021.05.029
+
+    Xiong, W., Chen, X, Lv, G., Hu, Zhao, J., Li, S., 2016. Optimization of microwave-assisted
+    extraction of bioactive alkaloids from lotus plantagula using response surface
+    methodology. Food Chem. 193, 715–723.
+
+    Yan, C., Shan, F, Ying, Y., Xu, L. Y., 2023. The potential role of nanomedicine
+    in the treatment of breast cancer to overcome the obstacles of current therapies.
+    Chin. Med. J. 136, 397–406. https://doi.org/10.1097/mcm.2023.1431102.
+
+    Yazid, H.S., 2010. Unsupervised adaptive fuzzy logic inference system for solving
+    differential equations. App. Soft. Comput. 10, 267–275, https://doi.org/10.1016/j.asoc.2009.07.006
+
+    Tolmeh, M., Najafi, M.R.H., Farhous, R., 2014. Optimization of ultrasonic-assisted
+    extraction of natural pigment from annato seeds by response surface methodology
+    (RSM). J. Food Process Eng. 23, 91–99, https://doi.org/10.1016/j.jfpe.2013.12.009.
+
+    Yuan, Z., Wang, L.-N., Ji, X., 2014. Prediction of concrete compressive strength:
+    research on hybrid models genetic algorithms and ANFIS. Adv. Eng. Software, 67,
+    156–163.
+
+
+    20'
+  md: '
+
+    # P. Pichimutu et al.
+
+    Sustainable Chemistry and Pharmacy 36 (2023) 101323
+
+
+    Abundance
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_16_0.png)
+
+
+    Fig. 5. GC-MS spectra of optimized extract of *Solanum torvum* Swart. List of
+    bioactive compounds present in the optimally obtained extract.
+
+
+    Table 6
+
+    Analysed bioactive compounds from optimized extract of *Solanum torvum* Sw. by
+    GC-MS chromatography.
+
+
+    | Retention time (min) | % Area of peak | Compound identified | Molecular formula
+    | Molecular weight (g/mol) |
+
+    | --- | --- | --- | --- | --- |
+
+    | 5.733 | 0.66 | alpha-t-Gastropranososide, methyl | C21H32O9 | 194.18 |
+
+    | 8.283 | 1.38 | Methanamine | CH5N | 31.057 |
+
+    | 9.331 | 0.61 | Thymran-4-one | C5H6O2 | 126.11 |
+
+    | 11.294 | 1.43 | 5-Hydroxymymethylfurural | C6H8O3 | 126.11 |
+
+    | 12.281 | 1.68 | 3(2H)-Furanone | C4H6O2 | 84.07 |
+
+    | 14.935 | 1.79 | Vanillin | C8H8O3 | 152.15 |
+
+    | 15.162 | 0.63 | Methyl.alpha-D-rhamnnannoside | C15H24O7 | 178.12 |
+
+    | 16.906 | 1.91 | 3-Ethylthio-1-propane | C5H10OS | 102.2 |
+
+    | 17.477 | 1.05 | Ethyl p-methanisate | C10H12O3 | 206.24 |
+
+    | 17.695 | 1.12 | (4-Methylphenyl)thio)acetone | C11H14OS | 196.27 |
+
+    | 19.918 | 3.70 | cis-Vaccenic acid | C10H16O2 | 182.25 |
+
+
+    # P. Petichimuttu et al.
+
+    # Sustainable Chemistry and Pharmacy 36 (2023) 101328
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_0.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_1.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_2.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_3.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_4.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_5.png)
+
+
+    Fig. 6: LC-MS chromatogram of retinal (a), neochlorogenic acid (b), chloricogenic
+    (c), riboflavin (d), drosolic acid (e), and beta-cryptaxanthin (f).
+
+
+    ## Authorship contribution statement
+
+
+    **Priya Petichimuttu**: conceptualization, formal analysis, investigation, writing
+    – original draft preparation. **Krishnan Shankar**: supervision, validation, funding
+    acquisition, writing – review & editing. **Selvaraj Kunjiaappan, Suthendran Kanan**:
+    conceptualization, validation, writing – review & editing. **Seshubram Ram Kumarian
+    and Gorla Bhuchayyagari Sumanth**: investigation, validation, writing – original
+    draft preparation.
+
+
+    ## Funding
+
+
+    K.S. and S.K. gratefully acknowledged the Development of Biotechnology, Govt.
+    of India for its financial support (BT/PR36633/TERM/127/2020).
+
+
+    ## Declaration of competing interest
+
+
+    The authors declare that they have no known competing interests or personal relationships
+    that could have appeared to influence the work reported in this paper.
+
+
+    ## Data availability
+
+
+    No data was used for the research described in the article.
+
+
+    ## Acknowledgements
+
+
+    The authors are grateful to the management of Kalasalingam Academy of Research
+    and Education for the research facilities. The authors authored the laboratory
+    facility from the Department of Biotechnology, Govt. of India; DBT-NER project
+    (BT/PR45283/NER/95/1919/2022).
+
+
+    ## Appendix A Supplementary data
+
+
+    Supplementary data to this article can be found at https://doi.org/10.1016/j.scp.2023.101328.
+
+
+    # P. Peretchina
+
+    Sustainable Chemistry and Agriculture 36 (2023) 101323
+
+
+    Alehaytu, A., Neuro-Fuzzy System and Genetic Algorithm for Cb Lift Based Attitude
+    Control System. Master thesis. Addis Science University, Addis Ababa, Ethiopia.
+
+
+    Aitmani, A., Wang, G., Duruis, R., Massari, M., Lifshout, D.. Using ultrasonic
+    extraction of phenols from peaches and plums. PLoS One 11(2), e0147588 (2016).
+    https://doi.org/10.1371/journal.pone.0147588.
+
+
+    Ayer, A. S. Impact of nanotechnology on the development of polymer materials.
+    Materials science applications with emphasis on design of applied experiments
+    learned to chemical processes 157-169. https://doi.org/10.1002/chem.73690.
+
+
+    Azad, A., Shahrizadeh, A., Ghansari, G.. An update on neural network-based framework
+    system for health service. International Journal of Public Health 58(6), 697-705
+    (2020).
+
+
+    Baskargaran, S., Teeneepan, P., Palaniamani, K., Samkan, V., Arumugalam, S., Sankarsaran,
+    M., Mohan, U., Rajkumar, L., J. Food Chem. 33, 2773-2789 (2019). https://doi.org/10.1016/j.food.2019.8732.
+
+
+    Bera, S., Lee, C.. How tea extract might reduce its effects and how it might affect
+    your health. Menopause 63, 555-560 (2020). https://doi.org/10.1007/s12560-020-0719.
+
+
+    Canals-Rodriguez, L., Harrocaut-Sichau, C., Vargas, A., Aournier, F., Girard,
+    J., Jarmet, M.. 2015. Evaluation of the potential of reducing metal content and
+    enhancing antioxidant of pomegranate seed. Food Chemistry. 186, 215-220. https://doi.org/10.1016/j.foodchem.2015.0465.
+
+
+    Chandra, H., Meena, M., Parul, T., Sharma, K.. Potential of pomegranate seed extract
+    as a natural preservative for reducing lipid peroxidation and enhancing stability
+    of important food products. Food Control. 96, 10764 (2019). https://doi.org/10.1016/j.foodcont.2019.10764.
+
+
+    Cuthbert, A., Paramesvam, P., Samkan, V., Chandrasubaram, S., Sankarsaran, M.,
+    Bakarajaraj, S.. 2018. Optimization of antioxidant activity of pomegranate seed
+    using natural products from indigenous juice and edible extracts. Int. J. Food
+    Res. 39, 221-244. https://doi.org/10.5064/ijfr.3994.
+
+
+    El-Hady, M., El-Sayed, M., Helwan, K.. 2012. Ultrasonic extraction and antioxidant
+    properties of pomegranate peel from blackcherry. Science. Food Technol. 42, 93-97.
+    https://doi.org/10.1016/j.food.2012.0914.
+
+
+    Di Silva, L. A., Perini, P., Souza, S. R., et al.. 2015. Spectrophotometric determination
+    of the total flavonoid content in pomegranate juice (Punica granatum.). Leaves
+    and Med. Drugs. 14, 115-120. https://doi.org/10.1016/j.lmd.2015.016.
+
+
+    Fan, C., Zhang, H., Yao, Y.. 2017. A short-term machine learning approach to predict
+    shelf life of apple juice. Energy. 125, 222-233. https://doi.org/10.1016/j.energy.2017.0322.
+
+
+    Fernandez, C., Sosa, P.. 2015. Optimization of electrochemical assay for determining
+    the antioxidant activity of hydrogen peroxide (H2O2) scavenging by plant extracts.
+    Methods Biochem. 288, 55-63. https://doi.org/10.1016/j.ymtec.2015.001.
+
+
+    Gasan, N., Tomar, S., Sumbandaman, B., Sankarsaran, S., Shrivast, A., Bhattacharjee,
+    C.. 2018. Optimization and analysis of microwave-assisted extraction of bioactive
+    compounds from Mimimus mulussa using Genetic induction with RSM and ANN modeling.
+    J. Food Chem. 22, 238-242. https://doi.org/10.1016/j.rcimo.2018.0312.
+
+
+    Gousset, C., Cournier, M., Mulika, K., Isardin, L., Gousse, B. P., Serveaux, A.,
+    Shivashakar, D.. 2005. Pomegranate seeds, as a source of antioxidant and fungal
+    growth inhibitors for germination of lentil (L sativa). Plant Sci. 168, 319-327.
+    https://doi.org/10.1016/j.plantsci.2004.0914.
+
+
+    # P. Petchumatu
+
+    Sustainable Chemistry and Chemistry 36 (2023) e01233
+
+
+    Selvaraj, K., Chowdhury, R., Bhattacharya, C., 2014. Optimization of the solvent
+    extraction of bioactive phenolic compounds from fern Azella microphylla using
+    response methodology. Int. Food Res. J. 21, 1559–1567.
+
+
+    Selvaraj, K., Theivakaran, P., Pavadai, P., Ravishankar, V., Palanisamy, P., Gopal,
+    M., Dharamaling, S.R., Sankaranarayanan, M., 2022. Impact of physicochemical parameters
+    on effective extraction of bioactive compounds from natural sources: an overview.
+    Curr. Bio. Compat. 18, 11–27, https://doi.org/10.1016/j.cbpc.2022.102174
+
+
+    Stuckler, D., Basu, S., 2011. Evaluating the health burden of chronic diseases.
+    In: Sick Societies: Responsive to the Global Challenge of Chronic Disease. Oxford
+    University.
+
+
+    Tungtuminin, D., Thongboanyu, N., Phobhan, A., Asayak, G., 2018. Bioactive and
+    phenolic compounds from medicinal plants for pharmaceutical and medical aspect:
+    an overview. Medicine (Bali) 5, 93, https://doi.org/10.3390/medicine5030093
+
+
+    Velly, S., Kumar, S., Singh, S., 2021. An in silico molecular modelling-prediction
+    of potential Keaj V
+
+
+    Wu, M.C., Li, J., Zhang, Y., 2021. Identification of significant association testing
+    for sequencing data with the sequence kernel association test. Am. J. Hum. Gen.
+    89, 82–93, https://doi.org/10.1016/j.ajhg.2021.0529
+
+
+    Xiong, W., Chen, X., Lv, G., Hu, Zhao, J., Li, S., 2016. Optimization of microwave-assisted
+    extraction of bioactive alkaloids from lotus plantagula using response surface
+    methodology. Food Chem. 193, 715–723.
+
+
+    Yan, C., Shan, F, Ying, Y., Xu, L., 2023. The potential role of nanomedicine in
+    the treatment of breast cancer to overcome the obstacles of current therapies.
+    Chin. Med. J. 136, 397–406. https://doi.org/10.1097/mcm.2023.1431102
+
+
+    Yazid, H.S., 2010. Unsupervised adaptive fuzzy logic inference system for solving
+    differential equations. App. Soft. Comput. 10, 267–275, https://doi.org/10.1016/j.asoc.2009.07.006
+
+
+    Tolmeh, M., Najafi, M.R.H., Farhous, R., 2014. Optimization of ultrasonic-assisted
+    extraction of natural pigment from annato seeds by response surface methodology
+    (RSM). J. Food Process Eng. 23, 91–99, https://doi.org/10.1016/j.jfpe.2013.12.009.
+
+
+    Yuan, Z., Wang, L.-N., Ji, X., 2014. Prediction of concrete compressive strength:
+    research on hybrid models genetic algorithms and ANFIS. Adv. Eng. Software, 67,
+    156–163.
+
+    '
+  mdcn: '
+
+
+    # P. Pichimutu 等人
+
+    可持续化学与药剂学 36 (2023) 101323
+
+
+    丰度
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_16_0.png)
+
+
+    图 5. 优化*Solanum torvum* Swart. 提取物的 GC-MS 谱图。优化提取物中所含生物活性化合物列表。
+
+
+    表 6
+
+    通过 GC-MS 色谱法分析的优化*Solanum torvum* Sw. 提取物活性化合物。
+
+
+    | 保留时间 (min) | 峰面积百分比 | 鉴定化合物 | 分子式 | 分子量 (g/mol) |
+
+    | --- | --- | --- | --- | --- |
+
+    | 5.733 | 0.66 | 甲基 $\alpha$-t-胃果糖苷苷 | C21H32O9 | 194.18 |
+
+    | 8.283 | 1.38 | 甲胺 | CH5N | 31.057 |
+
+    | 9.331 | 0.61 | 噻喃-4-酮 | C5H6O2 | 126.11 |
+
+    | 11.294 | 1.43 | 5-羟甲基糠醛 | C6H8O3 | 126.11 |
+
+    | 12.281 | 1.68 | 3(2H)-呋酮 | C4H6O2 | 84.07 |
+
+    | 14.935 | 1.79 | 香草醛 | C8H8O3 | 152.15 |
+
+    | 15.162 | 0.63 | 甲基- $\alpha$-D-鼠糖苷苷 | C15H24O7 | 178.12 |
+
+    | 16.906 | 1.91 | 3-乙硫基-1-丙烷 | C5H10OS | 102.2 |
+
+    | 17.477 | 1.05 | 对甲氧苯甲酸酯 | C10H12O3 | 206.24 |
+
+    | 17.695 | 1.12 | (4-甲基苯基)硫丙酮 | C11H14OS | 196.27 |
+
+    | 19.918 | 3.70 | 反式反脂酸 | C10H16O2 | 182.25 |
+
+
+    # P. Petichimuttu 等人
+
+    可持续化学与药剂学 36 (2023) 101328
+
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_0.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_1.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_2.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_3.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_4.png)
+
+    ![](img/e46dfbd6ed00fca11057503ae7cbc84a_17_5.png)
+
+
+    图 6: 视黄醇 (a)、新绿原酸 (b)、氯绿原酸 (c)、核黄素 (d)、松脂 (e) 和 $\beta$-辣椒红素 (f) 的 LC-MS 色谱图。
+
+
+    ## 作者贡献声明
+
+
+    **Priya Petichimuttu**: 概念化、形式分析、调查、撰写——初稿拟备。**Krishnan Shankar**: 监督、验证、资金获取、撰写——审阅与编辑。**Selvaraj
+    Kunjiaappan, Suthendran Kanan**: 概念化、验证、撰写——审阅与编辑。**Seshubram Ram Kumarian and
+    Gorla Bhuchayyagari Suman**: 调查、验证、撰写——初稿拟备。
+
+
+    ## 资助信息
+
+
+    K.S. 和 S.K. 感谢印度政府生物技术部提供的资金支持 (BT/PR36633/TERM/127/2020)。
+
+
+    ## 利益冲突声明
+
+
+    作者声明，没有已知的竞争性利益或个人关系可能影响本文所报道的工作。
+
+
+    ## 数据可用性
+
+
+    本文描述的研究未使用任何数据。
+
+
+    ## 致谢
+
+
+    作者感谢 Kalasalingam 研究与教育学院管理层提供的研究设施。作者感谢印度生物技术部 DBT-NER 项目 (BT/PR45283/NER/95/2022)。
+
+
+    ## 附录 A 补充数据
+
+
+    本文的补充数据可从 https://doi.org/10.1016/j.scp.2023.101328
+
+
+    # P. Peretchina
+
+    可持续化学与农业 36 (2023) 101323
+
+
+    Selvaraj, K., Chowdhury, R., Bhattacharya, C., 2014. 使用响应面法优化从蕨类 Azella microphylla
+    中溶剂提取生物活性酚类化合物。Int. Food Res. J. 21, 1559–1567.
+
+
+    Selvaraj, K., Theivakaran, P., Pavadai, P., Ravishankar, V., Palanisamy, P., Gopal,
+    M., Dharamaling, S.R., Sankaranarayanan, M., 2022. 基于模糊系统的态度控制系统。硕士论文。埃塞俄比亚亚迪斯亚贝巴大学。
+
+
+    Alehaytu, A., Wang, G., Duruis, R., Massari, M., 2016. 利用超声波提取法提取桃子和李子中的酚类。PLoS
+    One 11(2), e014758. https://doi.org/10.1371/journal.pone.014758.
+
+
+    Ayer, A. S. 纳米技术对聚合物材料发展的影响。应用实验的设计学习 157-169. https://doi.org/10.1002/chem.7369.
+
+
+    Azad, A., Shahrizadeh, A., Ghansari, G., 2020. 基于神经网络框架的更新。International Journal
+    of Public Health 58(6), 697-705.
+
+
+    Baskargaran, S., Teeneepan, P., Palaniamani, K., Samkan, V., Arumugalam, S., Sankarsaran,
+    M., Mohan, U., Rajkumar, L., 2019. J. Food Chem. 33, 2773-2789. https://doi.org/10.1016/j.food.8732.
+
+
+    Bera, S., Lee, C., 2020. 茶如何减少其影响以及如何影响健康。Menopause 63, 555-560. https://doi.org/10.1007/s12560-020-0719.
+
+
+    Canals-Rodriguez, L., Harrocaut-Sichau, C., Vargas, A., Aournier, F., Girard,
+    J., Jarmet, M., 2015. 评估榴籽降低金属含量和增强抗氧化能力的潜力。Food Chemistry 186, 215-220. https://doi.org/10.1016/j.foodchem.0465.
+
+
+    Chandra, H., Meena, M., Parul, T., Sharma, K., 2019. 榴籽提取物作为减少脂质氧化和增强重要食品稳定性的防腐剂。Food
+    Control 96, 10764. https://doi.org/10.1016/j.foodcont.10764.
+
+
+    Cuthbert, A., Paramesvam, P., Samkan, V., Chandrasubaram, S., Sankarsaran, M.,
+    Bakarajaraj, S., 2018. 使用本土和可食用提取物优化榴籽的抗氧化活性。Int. J. Food Res. 39, 221-244. https://doi.org/10.5064/ijfr.3994.
+
+
+    El-Hady, M., El-Sayed, M., Helwan, K., 2012. 黑樱桃皮的超声波提取和抗氧化特性。Science. Food Technol.
+    42, 93-97. https://doi.org/10.1016/j.food.2012.0914.
+
+
+    Di Silva, L. A., Perini, P., Souza, S. R., et al., 2015. 光光法测定石榴汁 (Punica granatum.)
+    中的总黄酮类含量。Leaves and Med. Drugs. 14, 115-120. https://doi.org/10.1016/j.lmd.2015.
+
+
+    Fan, C., Zhang, H., Yao, Y., 2017. 预测苹果汁保质期的短期机器学习方法。Energy. 125, 222-233. https://doi.org/10.1016/j.energy.2017.0322.
+
+
+    Fernandez, C., Sosa, P., 2015. 确定植物提取物清除过氧化氢 (H2O2) 抗氧化活性的电化学分析优化。Methods Biochem.
+    288, 55-63. https://doi.org/10.1016/j.ymtec.2015.
+
+
+    Gasan, N., Tomar, S., Sumbandaman, B., Sankarsaran, S., Shrivast, A., Bhattacharjee,
+    C., 2018. 结合 RSM 和 ANN 建模的遗传感应，对微波辅助从 Mimimus mulussa 中提取生物活性化合物进行优化和分析。J. Food
+    Chem. 22, 238-242. https://doi.org/10.1016/j.rcimo.2018.0312.
+
+
+    Gousset, C., Cournier, M., Mulika, K., Isardin, L., Gousse, B. P., Serveaux, A.,
+    Shivashakar, D., 2005. 榴籽作为扁豆 (L sativa) 发芽的抗氧化剂和真菌生长抑制剂。Plant Sci. 168, 319-327.
+    https://doi.org/10.1016/j.plantsci.2004.0914.
+
+
+    # P. Petchumatu
+
+    可持续化学与化学 36 (2023) e01233
+
+
+    '
+  merge: 0
