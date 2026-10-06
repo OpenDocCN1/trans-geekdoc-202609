@@ -1,0 +1,11 @@
+# Recap:
+
++   - **Reverse KL-divergence**: Variational Inference
+
+$$KL(q(x)||p^*(x)) = \int_{x} q(x) \log \frac{q(x)}{p^*(x)}dx$$
+- **Zero forcing**: If $p^*(x)$ is small, $q(x)$ needs to be small
+
++   - **Forward KL-divergence**: Maximum Likelihood (implicitly)
+
+$$KL(p^*(x)||q(x)) = \int_{x} p^*(x) \log \frac{p^*(x)}{q(x)}dx$$
+- **Probability forcing**: If $p^*(x)$ is high, $q(x)$ needs to be high
