@@ -1,0 +1,2 @@
++   [2021第四届国际计算智能与通信技术会议 (CCICT)(印度索内帕特 2021.7.3-2021.7.3) 2021第四届国际计算智能](README.md)
++   [2021第四届国际计算智能与通信技术会议 (CCICT)(印度索内帕特 2021.7.3-2021.7.3) 2021第四届国际计算智能](2021-fourth-international-conference-on-computational-intell.md)

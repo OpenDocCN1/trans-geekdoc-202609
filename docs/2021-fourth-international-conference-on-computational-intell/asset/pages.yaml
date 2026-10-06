@@ -1,0 +1,635 @@
+- pgno: 0
+  md: '# Analysis of Automated text generation using Deep learning
+
+
+    Dr. Manoj Kumar
+
+    Dept. of Computer Science and Engineering
+
+    Delhi Technological University
+
+    New Delhi, India
+
+    mankumar@dtu.ac.in
+
+
+    Abhishek Singh
+
+    Dept. of Computer Science and Engineering
+
+    Delhi Technological University
+
+    New Delhi, India
+
+    abhishekkams26@gmail.com
+
+
+    Anrav Kumar
+
+    Dept. of Computer Science and Engineering
+
+    Delhi Technological University
+
+    New Delhi, India
+
+    arnavkumar1999@gmail.com
+
+
+    Ankit Kumar
+
+    Dept. of Computer Science and Engineering
+
+    Delhi Technological University
+
+    New Delhi, India\ankitukumar50417@gmail.com
+
+
+    Abstract—A chatbot that can converse with humans artificial is increasingly increasing
+    in messaging platforms. The goal is to improve and enhance deep learning techniques
+    for making an efficient chatbot. Current chatbots are developed using rule-based
+    techniques, machine learning algorithms or retrieved-based chatbots which don''t
+    generate responses. In this paper we will evaluate the performance of three chatbots
+    by using RNU, RNN and LSTM. The chatbots are are used by different companies,
+    organizations and
+
+
+    approaches in making chat box some are AI approaches or Non-AI approaches in this
+    paper we will be talking about the AI approaches i.e. Retrieved and Generative
+    Models. The model in this head or heads unless they are unreliable.
+
+
+    # I. INTRODUCTION
+
+
+    Text generation is that of giving our sentences as input and getting a response
+    from the machine/computer. It is done using deep learning algorithms which are
+    subset of Neural networks and they give the result and accurate output in the
+    form of Natural Language Processing. We have used a supervised learning for text
+    generation and that text is present in sequence models of the RNNs. This project
+    is intended to analyze every type of sequence model for generating text which
+    should be meaningful to the user (not random). We find out the difference in our
+    performance we have also looked at other papers for the performance on basic RNN
+    and LSTM we used the Corpus Dataset. We tried to fix using the existing learning
+    algorithm like GRU we can improve it to get it with LSTM Ease of
+
+
+    # B. Intelligent Models
+
+
+    +   1) Retrieved Base: Retrieval Base Chat bot has the getting the best response
+    from the collection of responses. In this model all the responses are normal.
+    It doesn''t generate any new responses so we don''t need to worry about accuracy.
+    It has a limited set of responses which it tends to be rigid responses to non-human.
+    It is basic job to select the most optimal response from the set of responses.
+
+
+    +   2) Generative Model: This model does not have predefined response it generates
+    itself word by word to which are prone to grammatical errors. This method is used
+    for generating a more human like chatbot that are quite adequate in natural.Its
+    responses are unpredictable quality quite complex, we compare the performance
+    of the generative model algorithms further in the paper.
+
+
+    # II. RELATED WORK
+
+
+    They are many open source API on the internet, giving any way to develop chatbots.
+    But those like Mitsuko are a pattern matcher but the smartest chatbot. But in
+    this project we used to write a pattern that that when matching it responds with
+    one of the types. Base rule made it easy for everyone to create a bot but it is
+    inconvenient how to make chatbot answers complex queries. there are many
+
+
+    # C. Related Work
+
+
+    Previously,Seq2Seq All chatbots were developed using an encoder-decoder architecture.
+    The encoder-decoder was built using a Long Short Term Memory Neural Network as
+    its cell state is updated by unit without considering what it might say “I don''t
+    know what you are saying” which is also experienced in such issues Deep Reinforcement
+    learning is used which is beyond the scope of this paper. We used the Adam optimizer
+    which computes inductive adaptive learning rates for different parameters of first
+    and second moments of the gradient. It was selected as a combination of proper
+    of AdaRad and RProp [8]. Bidirectional LSTM were also used before encoder and
+    attention mechanism used in decoder side to improve model'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'performance. The advantage that the Bidirectional LSTM is that it works two
+    independent Recurrent Network put together enabling the network to have both forward
+    information of the sequence at every step of the word generation [10] it can transfer
+    information from future to past just as it runs backwards preserve information
+    from the future and using the two hidden states you are able to in any point in
+    time to preserve information from past and future.
+
+
+    # III. PRELIMINARIES
+
+
+    Here we will discuss some deep learning techniques for using embeddings.
+
+
+    # A. Text Generation
+
+
+    Text generation comes under the branch of Natural Language processing where we
+    use different learning algorithms and methods like sequence-to-sequence model
+    with recurrent networks, gated recurrent units and long short-term memory techniques
+    [1]. We can also use deep learning techniques to categorize words and generate
+    sentences like Naive Bayes.
+
+
+    # B. Recurrent Neural Network
+
+
+    Special Type of Neural Network designed for natural language processing. Here
+    we use our embeddings or the bag of words model just as the recurrent network
+    when they''ll produce an output model (for this case it is text generation). The
+    architecture of such Networks seems so complex as it is not very good when we
+    have different contexts. RNN normally it is difficult to distinguish or as the
+    plural or singular words gets past or as it doesn''t have any memory to store
+    the form of sentence.
+
+
+    # C. Short Long Term Memory
+
+
+    Short-term, long-term memory is a type of recurrent neural network (RNN). LSTM
+    (Sepp Hochreiter et al [4]) are designed for learning and classifying sequences.
+    Networks aim to solve the problem of fading gradients by using gates to select
+    the information to update and forget irrelevant details [3]. Sensitivity to time
+    inputs makes LSTM networks better than RNN for data analysis tasks.
+
+
+    Architecture: The architecture of the LSTM (Sepp Hochreiter et al [4]) is shown
+    below. An LSTM unit has a cell state, input gate, exhale valve, and bypass valve
+    in addition to the state of the RNN. The entry gates and offsets control how the
+    new value in the cell enters. Likewise, the weights and offsets for the output
+    gate control the extent to which the value remains in the cell and is used to
+    calculate the output activation of the LSTM-Block [4].
+
+
+    ![](img/d75975420a2b45cb26b95046322bec03_1_0.png)
+
+
+    The important part of LSTM is its cell state. The line passing through all LSTM
+    units act as a memory to carry certain aspects of sentence [3] as we know plural
+    words cause issues for basic RNN, LSTM doesn''t suffer from that.
+
+
+    ```
+
+    $i_t = \sigma(W_{ix}x_t + b_i h_{t-1} + b_i)$
+
+    ```
+
+
+    ```
+
+    $f_t = \sigma(W_{fx}x_t + b_f h_{t-1} + b_f)$
+
+    ```
+
+
+    ```
+
+    $g_t = \tanh(W_{gx}x_t + b_{g} h_{t-1} + b_g)$
+
+    ```
+
+
+    ```
+
+    $o_t = \sigma(W_{ox}x_t + b_o h_{t-1} + b_o)$
+
+    ```
+
+
+    ```
+
+    $c_t = f_t \odot c_{t-1} + i_t \odot g_t$
+
+    ```
+
+
+    ```
+
+    $h_t = o_t \odot c_t$
+
+    ```
+
+
+    where $h_t$ is the hidden state at time $t$, $c_t$ is the cell state at time $t$,
+    $x_t$ is the input at time $t$, $h_{t-1}$ is the hidden state of time $t-1$ or
+    the initial state at time $t$, and $f_t, g_t, o_t$ are the input, forget and output
+    gates respectively [4]. $\sigma$ is the sigmoid function, and $\odot$ is the Hadamard
+    product. In the layer LSTM, the input of the $l^{th}$ layer ($l$) is the hidden
+    of the $(l-1)^{th}$ layer multiplied by $\delta^{(l-1)}$ where $\delta^{(l-1)}$
+    is a Bernoulli random variable which is 0 with probability dropout
+
+
+    # D. Gated Recurrent Unit
+
+
+    The gated recurrent unit (GRU) is a gating mechanism in recurrent network (RNN),
+    similar to the LSTM block without the output gate. Proposed (Jun Chung et al [5])
+    to solve the problem of the vanishing gradient that can occur with such recurrent
+    networks. It can be thought of as a type of LSTM block which is as similar and
+    in some cases gives similar results.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Encoder Decoder Model with Attention layer
+
+
+    GRU can solve the disappearing gradient problem with update and reset gate. The
+    update gateway manages information flowing out of memory, and the reset gateway
+    uses a useful mechanism to solve the problem of vanishing gradients in recurrent
+    neural networks. The gradient problem occurs in machine learning when the gradient
+    becomes vanishingly small, which prevents the weight from changing its value.
+
+
+    +   1) Encoder: It is a Stack of recurrent unit (of whichever model being used
+    like LSTM or GRU) which takes element of input sequence or sequence and passes
+    on its information to further layers Encoder for hidden states [6, 17).
+
+
+    ```
+
+    $h_t = \sigma_g(W_{hh}h_{t-1} + W_{xh}x_t)$
+
+    ```
+
+
+    This equation defines final hidden vector by the encoder helps in combining all
+    information from the input and then it to decoder for receive prediction or in
+    this case vector. This vector is directly given as first input of the decoder,
+    [6]; hidden memory and value of each is given to the attention layer [2].
+
+
+    +   1) Architecture: The of GRU block is shown below. GRU unit has a forget, update
+    and reset gate in addition to the state of the RNN it lacks the output. The update
+    gateway and the reset valve are two vectors decide which information is transmitted
+    to the output. We can train it remember information from the past or delete information
+    unrelated to the forecast [5].
+
+
+    ![](img/d75975420a2b45cb26b95046322bec03_2_0.png)
+
+
+    +   2) Advantages:
+
+    - GRU perform better than LSTM when working with small data.
+
+    - GRU is computationally less expensive as compared to LSTM when we have fewer
+    parameters to compare. It works with Smaller Datasets.
+
+
+    +   2) Attention: Computes 4 elements which are soft of each encoder state, attention
+    weights using Softmax over the attention scores, Context vector by multiplying
+    hidden layer and attention weights and concatenate with previous time step and
+    this to the decoder with last layer vector [2]. We have 2 types of attention models
+    which as follows:
+
+
+    +   3) Disadvantages:
+
+    - Performs worse in larger datasets as compared to LSTM.
+
+    - Leser better than LSTM.
+
+
+    ![](img/d75975420a2b45cb26b95046322bec03_2_1.png)
+
+
+    +   1) Global attention layer: Here all encoder states are considered for obtaining
+    the context vector
+
+
+    ![](img/d75975420a2b45cb26b95046322bec03_2_2.png)
+
+
+    ```
+
+    $z_t = \sigma_g(W_{zx}x_t + U_{hz}h_{t-1} + b_z)$ (7)
+
+    $r_t = \sigma_g(W_{rx}x_t + U_{hr}h_{t-1} + b_r)$ (8)
+
+    $\tilde{h}_t = \phi_h(W_{hx}x_t + U_{hr}(r_t \odot h_{t-1}) + b_h)$ (9)
+
+    $h_t = (1 - z_t) \odot h_{t-1} + z_t \odot \tilde{h}_t$ (10)
+
+    ```
+
+
+    +   4) Equations:
+
+
+    Fig. 4 Global attention layer - 1 at each time step t, the model refers a variable-length
+    alignment vector vector based on the current state h, and all source states h.
+    A global context c is then computed as the weighted, according to it, over all
+    the source state (Minh-Thang Luong et al [2]).
+
+
+    Fig. 2: GRU unit'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '2. Local Attention layer: Global attention has a few drawbacks like it all
+    words on the encoder side for all target words that could be computationally expensive.
+    Here local attention could potentially become anywhere when we have a small set
+    of source positions per target word [2]. Equation for attention vector are referred
+    from Minh-Thang Luong et al [2].
+
+
+    # VI. TRAINING MODEL
+
+
+    We trained the model for 2 configurations as we discussed above using Adam Optimization
+    which can vary the learning rate using learning decay technique [8], we had around
+    82000 sentences in Cornell dataset after tokenization. We used Bidirectional GRU
+    in encoder side and decoder is made with help of Luong attention layer [2].
+
+
+    3: Decoder is used to generate text in case of Seq2Seq which takes the context
+    vector from the attention layer and last hidden vector from the encoder and gives
+    output accordingly.
+
+
+    # VII. HARDWARE SPECIFICATION
+
+
+    Training on google colab for GRU and RNN Basic Seq2seq and my local machine configuration
+    is set below
+
+
+    # TABLE II: Specification
+
+
+    | Hardware | Specification |
+
+    | --- | --- |
+
+    | Processor | Core-i5 6400 @3.3 GHz |
+
+    | RAM | DDR4 16GB @2400MHz |
+
+    | GPU | Radeon RX 5700 XT 8GB |
+
+
+    ![](img/d75975420a2b45cb26b95046322bec03_3_0.png)
+
+
+    # IV. METHODOLOGY
+
+
+    We will judge performance of aforementioned algorithms and we will use our model
+    in the mix as well.
+
+
+    # VIII. COMPARISON
+
+
+    Algorithm: Deep Neural Network, Recurrent Neural Network.
+
+
+    We chose a LSTM based research paper [9] for the project in order to compare performance
+    of this model with LSTM based implementation to use our model is good or not.
+    As other GRU implementations we saw were basic implementations so it would not
+    be a fair comparison for our work. All in it, we compared ours to the base GRU
+    implementations and by observing the results then there is an improvement we were
+    unable to include the comparisons because limited resources. We have mentioned
+    all the parameters we needed to obtain our results in the configuration section
+    of this paper.
+
+
+    Main Technique: We used the Seq2Seq model with attention layer [2] with GRU for
+    this paper we will be comparing our outputs with paper has implemented same model
+    on dataset using LSTM.
+
+
+    frameworks used: We used deep learning frameworks using PyTorch for respective
+    implementation.
+
+
+    Optimization technique: For this paper we have used Adam optimization technique
+    to get the best results we can get.
+
+
+    # V. CONFIGURATION
+
+
+    We used 3 different algorithms 2 of which are implemented by use is from the paper.
+
+
+    # TABLE I: Configuration Table
+
+
+    | Parameters | LSTM | RNN | GRU |
+
+    | --- | --- | --- | --- |
+
+    | size | 32 | 64 | 128 |
+
+    | embedding size | 1024 | 1024 | 1024 |
+
+    | RNN Size | 1024 | 1000 | 1250 |
+
+    | learningrate | 0.001 | 0.001 | 0.0001 |
+
+    | epochs | 50 | 35 | 46 |
+
+    | midlearningrate | 0.0001 | 0.00001 | 0.00001 |
+
+    | learning decay rate | 0.9 | 0.9 | 0.9 |'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# IX. RESULT
+
+
+    # REFERENCES
+
+
+    Here is a test from all 3 models after training time and responses GRU is the
+    best option for this dataset to create chatbot if the dataset is more complex
+    than LSTM is the best choice which is still being done on GRU it has scope to
+    improve further.
+
+
+    +   [1] Peng H., Parikh A., Farqi M., Dhingra B., and Das D. (2019) "Text generation
+    with exemplar-based adaptive decoding," arxiv preprint:1904.04428.
+
+
+    +   [2] Luong M.-T., Phan H., and Manning C D. (2015). "Effective attention-based
+    neural machine translation," arxiv preprint arXiv:1508.04025.
+
+
+    +   Human here
+
+    Bot hi
+
+    > : here
+
+    Human what doing
+
+    > : Bot
+
+    Bot what doing
+
+    > : what you doing
+
+    Human when will you okay with me?
+
+    > : Bot
+
+    Bot just few days
+
+    > : still tell you okay
+
+    Human when you are from
+
+    > : I sorry
+
+    Human from California
+
+    > : sorry
+
+    Human want to come with me?
+
+    > : you want to come with me
+
+    Human how much do you like me
+
+    > : how much do you like me
+
+    Human you are not cold today
+
+    > : I sorry
+
+    Bot doctor Livingston
+
+    > : you are not
+
+    Human what''s your hobby
+
+    > : about weather in NV
+
+    Bot eat
+
+    > : right here
+
+    Human wore you are best
+
+    > : your hobby
+
+    Human really well
+
+    > : I sorry
+
+
+    +   [3] Sherostinsky A. (2020). "Functional architectures of recurrent neural
+    network and long-term memory (lstm) network," Neural Physics and Applications,
+    2(1):112306.
+
+
+    +   [4] Hochreiter S. and Schmidhuber J. (1997). "Long-term memory," Neural computation,
+    vol. 9, no. 8, pp. 1735–1780.
+
+
+    +   [5] Chen J., Guillemot C., Cho K., and Bengio Y. (2014). "Learning phrase
+    representations using recurrent neural networks in sequence modeling," arxiv preprint
+    arXiv:1409.3215.
+
+
+    +   [6] Sunmer, V., Vinyals O., and Lee Q. V. (2014). "Sequence to sequence learning
+    with neural networks," arxiv preprint arXiv:1409.3215.
+
+
+    # (a) LSTM [09] conversation
+
+
+    # (b) RNN with Seq2Seq
+
+
+    +   > : hey
+
+    Bot : hey
+
+    > : what you are doing
+
+    Bot I am going to see
+
+    > : where you are from
+
+    Bot you want to come with me
+
+    > : goth
+
+    Bot I don''t know
+
+    > : how much do you like me
+
+    Bot gosh
+
+    > : about weather in NY
+
+    Bot right here
+
+    > : your''s hobby
+
+    Bot gosh
+
+    > : are you happy
+
+    Bot I am not sure
+
+    > : Oh yeah
+
+    Bot right here
+
+    > : bye
+
+    Bot : bye
+
+
+    +   [7] Cho, K., Van Merwe, R., Bengue C., Bahdanau A., Bougares G., Schmidhuber
+    H., and arxiv preprint arXiv:1412.6980.
+
+
+    +   [8] Kingma D. P. and Ba J. (2014). "Adam: A method for stochastic optimization,"
+    arxiv preprint arXiv:1412.6980.
+
+
+    +   [9] Soisajajar A. (2020). "Seq2Seq ai chatbot with attention," arxiv preprint
+    arXiv:2006.02767.
+
+
+    +   [10] Graves A., fenner S., and Schmidhuber J. (2005). "Bidirectional lstm
+    networks for improved phrase classification and recognition," In International
+    conference on artificial neural networks, pp. 799–804.
+
+
+    +   [11] Hochreiter M., Muller A., and Newman Y (2012). "LSTM Neural Networks
+    for Language Modeling," In Interpeach, pages 194–197.
+
+
+    +   [12] Bengio Y., Duchample Rejan, Vincent Pascal, and Pavlou J (2000). "A probabilistic
+    language model," 13th International Conference on Neural Information Processing
+    Systems, pp 893–899.
+
+
+    +   [13] Bengio Y., Boulangerger-Lewandowski N., and Pascua R. (2013). "Advanced
+    recurrent networks," DOI 10.1109/ICASASP.2013.6639349
+
+
+    +   [14] Casky R. (2019). "Deep learning based chatbot models," arxiv preprint
+    arXiv:1908.08835.
+
+
+    FIG. 6 OF ALL 3 ALGORITHMS
+
+
+    # (c) GRU'
+  merge: -1
+  img_proc: true
