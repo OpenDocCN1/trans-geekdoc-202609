@@ -1,0 +1,3721 @@
+- pgno: 0
+  md: '# Neuron
+
+
+    NeuroResource
+
+
+    # # Interpretable deep learning for deconvolutional analysis of neural signals
+
+
+    # ## Graphical abstract
+
+
+    | Generative model properties: | |
+
+    | --- | --- |
+
+    | DUNL: Deconvolutional Unrolled Neural Learning | Single trial analysis |
+
+    | Interpretable deep learning using algorithm unrolling | Unstructured/naturalistic
+    tasks |
+
+    | Generative sparse coding | Source signal agnostic |
+
+    | Versatile: domain-based constraints | Limited training data |
+
+    | Sample use cases: | Multiplexed signals |
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_0_0.png)
+
+
+    # ## Authors
+
+
+    Bahare Toloosham, Sara Matias, Hao Wu, ..., Venkatesh N. Murthy, Paul Demmest,
+    Demba Ba
+
+
+    # ## Correspondence
+
+
+    paul.masset@mcgill.ca (P.M.), demba@harvard.edu (D.B)
+
+
+    # ## In brief
+
+
+    Recent methods applying deep learning to model neural activity often rely on "black-box"
+    approaches that lack an interpretable connection between neural activity and network
+    parameters. Here, building on advances in interpretable AI, Toloosham et al. propose
+    a new method, deconvolutional unrolled neural learning (DUNL), and apply it to
+    seven datasets.
+
+
+    # ## Highlights
+
+
+    +   - DUNL is a method for designing interpretable AI algorithms to analyze neural
+    data
+
+    - It deconvol neural data into a sparse set of interpretable, local components
+
+    - It performs single-trial analysis across brain areas and recording modalities
+
+    - It is scalable with dataset size in both trial-based and naturalistic settings
+
+
+    Toloosham et al., 2025, Neuron 113, 1151–1168
+
+    April 16, 2025 Elsevier Inc. All rights are reserved, including those for text
+    and data mining, AI training, and similar technologies.
+
+    https://doi.org/10.1016/j.neuron.2025.02.006
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_0_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Neuron
+
+
+    # CellPress
+
+
+    # NeuroResource
+
+    Interpretable deep learning for deconvolutional analysis of neural signals
+
+
+    Baireh Toholoosh,1,2,3,8,9 Sara Matias,1,4,6 Hao Wu,1,4 Simona Temereenca,1,4
+    Naoshige Uchida,1,4,8
+
+    Venkadesh N. Murthy,1,4,9 Paul Masset,1,4,6,7,10 and Demba Ba,1,10,11,*
+
+
+    ^1Center for Brain Science, Harvard University, Cambridge, MA 02138 US
+
+    2John A. Paul School of Engineering and Applied Sciences, Harvard University,
+    Cambridge, MA 02138 US
+
+    3Computational Institute of Technology, Pasadena, CA 91125
+
+    4Department of Molecular and Biology, Harvard University, Cambridge, MA 02138
+    US
+
+    5Carney Institute for Brain Science, Brown University, Providence, RI 02906
+
+    6Department of Psychology, McGill University, Montreal, QC H3G 1G1
+
+    7Milton Milton Artificial Institute, Montreal, QC H3Z 3H1
+
+    8Kempner Institute for the Study of Natural & Artificial Intelligence, Harvard
+    University, Cambridge, MA 02138 US
+
+    9These authors contributed equal work
+
+    10Senior author
+
+    11Lead author
+
+
+    *Correspondence: paul.masset@mcgill.ca (P.M.), demba@seas.harvard.edu (D.B.)
+
+    https://doi.org/10.1016/j.neuron.2025.02.006
+
+
+    # SUMMARY
+
+
+    The widespread adoption of deep learning to neural activity relies on "black-box"
+    approaches that lack an interpretable connection between neural activity and network
+    parameters. We propose using algorithm, a method for interpretable deep learning,
+    to design the architecture of deconvolutional neural networks and obtain a direct
+    interpretation of neural weights in stimulus-driven single-neuron activity through
+    a generative model. We introduce method deconvolutional neural network (DUNL),
+    and demonstrate its versatility by applying it to deconvolve single-trial signals
+    across multiple areas and recording modalities. We uncovered multiple salience
+    and prediction error signals in dopamine neuronsatosatosensory thalamus and characterize
+    the heterogeneity of neural responses in the motor cortex and striatum under unstructured,
+    naturalistic experiments. Our work leverages advantages in interpretable deep
+    learning to provide a mechanistic understanding of neural activity.
+
+
+    # INTRODUCTION
+
+
+    Understanding neural activity at both the single-neuron and population levels,
+    and their relationship to behavior and environmental factors, is a key goal in
+    neuroscience. Recent advances allow for long recordings of neurons during complex
+    tasks. When neural signals vary over time or subsets of neurons exhibit complex
+    codes with varying levels of selectivity. For example, neurons in the visual hierarchy
+    select tasks,5-9 and neuromodulatory pathways, such as dopamine neurons, respond
+    to various environmental and internal stimuli.
+
+
+    activity and non-overlapping components that capture heterogeneity in the population.
+    We present a deeplearning-based deconvolution method to address this.
+
+    A reasonable deconvolution method should first handle single data inputs without
+    requiring trials or assemblies. It should work for both natural and artificial
+    tasks, with minimal or no trial length.11-12-
+
+
+    Second, the method should relate to the signal source, whether spike count or
+    point signals such as calcium levels measured via fluorescent channels.
+
+    Third, the method should employ expressive mappings from layers to capture neural
+    data complexity.
+
+    Fourth, it should be interpretable (supplemental discussion), addressed here in
+    two contexts: (1) within the network, where architecture, weights, and representations
+    are linked to the optimization process and a generative model
+
+
+    To understand how single neurons support multiple representations, scalable methods
+    are needed to deconvolve neuronal
+
+
+    Neuron 175, 1511-1568, April 2025 © Elsevier Inc. 151
+
+
+    All rights reserved, including those for text and data mining, AI, and similar
+    technologies.
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_1_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# CellPress
+
+
+    # Neuron
+
+    NeuroScience
+
+
+    (2) providing a mapping between stimuli (internal or external) and latent variables.
+    For instance, a probabilistic model adaptable to various data types can capture
+    neural response logic and temporal sparsity, through neural impulses. This interpretability
+    relies on domain knowledge, which structure data or hypotheses. The method should
+    be scalable and practical for analyzing large-scale neuroscience datasets.
+
+
+    Most statistical neural data methods are primarily designed for dimensionality
+    reduction to find a low-rank structure that governs the neural data, which makes
+    them suitable for deconvolution. Examples include principal-component analysis
+    (PCA)$^{25-27}$, non-negative matrix factorization (NMF)$^{28-30}$, sparse component
+    analysis (SCA)$^{31}$, v-MIF$^{32}$, and ICA deconvolution methods which recover
+    low-rank structures with the data methods.
+
+
+    generalized linear model (GLM)$^{36}$ and point processes for neural sequences-$^{37}$
+    point out data with low-rank structures and offer interpretability by separating
+    data activity from noise. However, none of these methods fully meet all of the
+    discussed requirements, such as scalability or adherence to the statistics of
+    the signal.
+
+
+    The limitations of methods and the scalability of deep learning have motivated
+    the exploration of approaches for neural data. Prior work has many desiderata—extracting
+    high-dimensional latent spaces from neural data using non-deep architectures$^{38}$.
+    However, these methods lack a direct link between latent variables and neural
+    counts, making deconvolution difficult due to the "black-box" nature of such models$^{39-41}$.
+
+
+    Here, we propose a novel framework, deconvolved neural learning (DNL), combining
+    convolutional sparse coding (dictionary, learning), which provides a flexible
+    framework to deconvolve single-trial activity into interpretable, localized components.
+    This is enabled by the use of convolutional sparse coding as our generative model.
+    Our model is designed to be flexible, user-friendly, and adaptable through simple
+    modifications to the neural network''s non-linearities and training loss functions,
+    without requiring users to redefine an optimization algorithm for their specific
+    application.
+
+
+    To showcase DNL''s versatility, we applied it to five experiments. First, we decoded
+    stable and reward prediction (RPE) events from multiplexed reward signals in dopamine
+    neurons. Second, we deconvolved outcomes from low calcium spikes during associative
+    learning. Third, we performed simulations of decoding and prediction in the thalamus
+    using high signal-to-noise ratio (SNR) conditions. Fourth, we extracted neural
+    responses from the piriform with low SNR conditions without overlapping pulses.
+    Fifth, we characterized axonal dopamine activity in
+
+
+    the striatum during a realistic experiment. Finally, we evaluated DUNL, highlighting
+    its strengths: local interpretability, scalability, and generalization in data-limited
+    scenarios.
+
+
+    # RESULTS
+
+
+    Sparse deconvolution learns uncovers structures in single-trial, single-neuron
+    activity
+
+    We aim to decompose single-trial activity into pulse-like responses, to recurring
+    events, by identifying low-rank structures in neural data. Observed neural activity
+    is represented as convolution of sparse codes and a "dictionary" with varying
+    shapes and magnitudes. Our goal is to reconstruct data by learning these kernels
+    through model optimization. We want to account for the sparsity of spikes by modeling
+    the mean activity through a passed function like the nonparametric exponential
+    (e.g., Gaussian, Binomial, or Poisson) (see Table S1) for spiking activity and
+    Gaussian with mean $\mu$.
+
+
+    Neural activity $y_t$ is modeled as the convolution of kernels $h_k$ and sparse
+    codes $x_{ki}$, along with a baseline activity $b_t$ (Figure 1B). Deconvolution
+    identifies local temporal patterns and discovers low-rank structures (but) can
+    only capture long-term features). Kernel learning goes beyond the pre-defined
+    methods by learning them automatically. The learned kernels and sparse codes are
+    interpretable: kernels represent shared characteristics across trials, and sparse
+    codes represent individual responses.
+
+
+    indices indicate time events associated with kernel $k$, with amplitudes $x_{ki}$
+    representing neural response strength. In functional system identification, this
+    method captures cause-effect relationships: sparse codes represent the timing
+    of the effect, while kernels represent the response strength. However, the kernels
+    in the model are non-parametric and fully learned from data, without adhering
+    to a user-parametric form, and codes are sparse. We learn the kernels and $x_{ki}$
+    by minimizing the loss $\sum (y - \hat{y})^2$, regularized by desired properties
+    in the kernels and codes. Specifically, we use a sparsity prior to promote a few
+    activations in time, and optionally, a second-order covariance structure to capture
+    dedependencies among kernels (e.g., discouraging simulating)
+
+
+    1152 Number 17, 1151–1168, April 16, 2023
+
+
+    Wei Ting Wei with'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Neuron NeuroResource
+
+
+    # CellProcess
+
+
+    # Deep Learning Tools for Data Analysis
+
+
+    Figure 1. Interpretable deep learning with deconvolutional neural learning: DUNL
+
+
+    | Algorithm unfolding
+
+    |---|---|n| Generative model | Kalman filter
+
+    | Sparse coding
+
+    | Versatile: domain-based constraints
+
+    | Unstructured/natural tasks
+
+    | Source agnostic
+
+    | Limited data architecture
+
+    | Multiplexed signals
+
+
+    | "Black box" | Deep learning approaches | Interpretable approaches
+
+    |---|---|---|n| Unsupervised or self-supervised dimensionality reduction | To
+    explain "black-box" approaches (model agnostic) | Model-based deep learning to
+    explain representation architecture
+
+
+    (A) Categorization of deep learning tools for neural data analysis and the benefits
+    of algorithm sparsity.
+
+
+    (B) Generative model, DUNL estimates neural architecture as the sum of convolutions
+    between kernels and sparse codes.
+
+
+    (C) DUNL, schematic: the inference network (y-hat) estimates sparse codes, with
+    weights shared with the generative (decoder). The decoder''s outputs optimize
+    the kernels and codes.
+
+
+    (D) Demonstration of DUNL''s ability to deconvolve two recurrent events from a
+    synthetic noise in an unstructured set (left). DUNL recovers the kernels (colored)
+    closely matching the true kernels (gray).
+
+
+    Estimated measure $y_{\mu}^*$ from two interpretable latent variables:
+
+
+    ```
+
+    $y_{\mu}(t) = \sum_{k=1}^{K} y_{k}(t) * h_{k}(t)$
+
+    ```
+
+
+    ```
+
+    $y_{k}(t) = \sum_{n=1}^{N} y_{n}(t) * h_{kn}(t)$
+
+    ```
+
+
+    ```
+
+    $h_{kn}(t) = \sum_{j=1}^{J} w_{kj} * c_{j,n}(t)$
+
+    ```
+
+
+    $y$ data
+
+    $y_{n}$ expectation of expectation from $g_{n}$
+
+    Kernels $h_{k}$
+
+    $c_{j,n}$ generative of the $k^{th}$ kernel
+
+    represent sparse event onsets
+
+    $J$ data
+
+    Gaussian $G$
+
+    Bomial $B$
+
+    $n$ neuron index
+
+    $k$ kernel index
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_3_0.png)
+
+
+    # Interpretable Decoder Network: DUNL
+
+
+    Encoder: Inference network
+
+    (estimated sparse codes)
+
+
+    Forward inference
+
+
+    Probabilistic generative model
+
+
+    Generic Decoder
+
+
+    ```
+
+    Optimization
+
+    $\min_{h,c} L(y, h, c)$
+
+    nwith constraints
+
+    ```
+
+
+    backpropagated gradient descent
+
+
+    # Synthetic raster
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_3_1.png)
+
+
+    Underlying rate
+
+    Smoothed rate
+
+    Estimated rate
+
+    Components obtained from DUNL
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_3_2.png)
+
+
+    Kernels
+
+    Time [ms]
+
+    Codes
+
+
+    +   - Code 1
+
+    - Code 2
+
+    - Deconvolution 1
+
+    - Deconvolution 2
+
+
+    $(h_{k})_{k=1}^{K}$ This latent code represents estimated/event onsets and the
+    strength of the neural response to each event. The decoder, a shadow network based
+    on the generative model, maps the sparse representations into a time series of
+    mean neural activity. Both the encoder and decoder are defined by the kernels
+    $(h_{k})_{k=1}^{K}$ which act as the artificial neural network and are trainable
+    via backpropagation. While this focuses on explainability and low-rank structures,
+    DUNL can be extended to learn dense representations across entire timescales using
+    sparse codes.
+
+
+    addition of event types. The sparsity is applied to the kernels when necessary$^{L1}$
+    (see supplemental information—STAR Methods).
+
+
+    Notably, DUNL can only find the locations of decoding when the input is sparse
+    or if it is provided for each application. Whether the support is provided as
+    shown below$^{49}$ (Figure 1C and S1), we map the optimization into an encoder-decoder
+    neural architecture.
+
+
+    The encoder is a deep-structured recurrent convolutional network that shares the
+    same parameters as the generative model (decoder). It takes single-neuron, single-trial
+    observations $y_{i}$ as input and encodes them into sparse representations $x_{i}^{j}$,
+    which explain the data via temporarily locally kernelsn
+
+
+    a backward pass (for the codes and kernel training); see supplemental information—STAR
+    Methods), and is parallelizable across neurons and trials.
+
+
+    To demonstrate the capability of DUNL, we first attempt to synthesize spiking
+    data. The experiment consists of two types of events characterized by local kernels.
+    With single trials, events occur times, at random. We estimate the underlying
+    rate, the timing and magnitude of the events—whether sparse or dense (events composed
+    of multiple kernels). DUNL successfully synthesizes the neural data into kernels
+    and codes (Figure 1) and achieves this by
+
+
+    In, we introduce a novel framework to recover time series data as a sparse superposition
+    of kernels. This framework generalizes GLMs to a convolutional setting, with both
+    kernels and codes are trainable—unlike GLMs,
+
+
+    Neuron 17, 1151–1168, April 2022 1023'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# CellPress
+
+
+    # Neuron NeuroResource
+
+
+    which we defined based on binary functions.^34 Notably, DUNL puts a response amplitude
+    for each event occurrence, per trial and neuron, interval of length, offering
+    features in other encoding methods.
+
+
+    codes (rew) highly correlate with size for both individual neurons and population
+    averages(Figure 2D). The value code carries information about reward size through
+    mean firing rate over over-trial averages (Figures 2F and 2G). Combining the rew
+    kernels by aligning their amplitudes improves the representation of reward, confirming
+    that the salience-like code does not contain information about value.
+
+
+    # DUNL extracts salience and value signals from dopamine neurons
+
+
+    We applied DUNL to decode multiplexed signals in dopamine neurons. Midbrain dopamine
+    neurons, particularly in the ventral tegmental area, are crucial for modulating
+    behaviors and during TD reinforcement learning.^54–59. A transient RPS signals
+    an increase in unexpected value. Reward neurons have been identified with two
+    overlapping representations: one representing salience and the other the subjective
+    value (utility) of reward. This is significant, as the value-like component aligns
+    with the Rew driving learning. However, unlike other methods, the overlapping
+    representations of reward responses can be separated.^20–21 or using ad-hoc windows
+    to isolate these constituents.^43 Using DUNL we investigated reward can be decomposed
+    into these two components and whether they are differently modulated by value.
+
+
+    We showed using an ad-hoc window to exclude attributed salience, the representation
+    of reward size (rew) remained, the ad-hoc window excludes the first 125 ms for
+    expected trials and 150 ms for unexpected trials from reward. However, even with
+    this inspection, DUNL''s code still contains information about reward size.
+
+
+    DUNL''s successful deconvolution of noisy responses to ad-hoc windows, demonstrates
+    that the amplitudes from the kernel size are powerful measures of turning reward
+    to size. We showed that the inferred reward sizes from this experiment under different
+    initial conditions obtained results consistent with those in Figure 2 (Figures
+    S1D, S1E, and S1F). Overall, DUNL provides a powerful tool to precisely quantify
+    the relationship between the salience-like component and the response of individual
+    neurons in an unbiased manner.
+
+
+    We performed electrophysiology from 40 identified dopamine neurons.^62 recorded
+    in a mimicking task as part of a previous study.^66. In "unexpected" trials of
+    variable size (rew), the reward was delivered without a cue. In "expected" trials,
+    an odor preceded reward delivery by 1 s (Figure 2A and 2B). We used either the
+    value code or the rew response to model the response to reward (Figures 2C and
+    2D). The kernels were aligned by shifting the reward and population jointly across
+    neurons. DUNL was built with the timing of the cue and expected events but not
+    the trials (except, the rewards). Ground truth was used only in support of the
+    c.^x. Notably, the data were not aligned to any specific event, yet DUNL is capable
+    of handling the kernels associated with the cue and expected events by using raw
+    trial data. Across the population of the neurons, we decoded for each neuron in
+    single trial (Figure 2D, bottom), allowing us to characterize its unique uniqueness
+    of the estimated firing rate. In this study, DUNL''s outputs encode specific codes
+    with back-ground firing rate estimates.
+
+
+    DUNL decodes salience
+
+
+    To demonstrate DUNL''s flexibility with modalities beyond dopamine neurons in
+    spikes, we applied it to two-photon calcium imaging. We recorded data from 55
+    dopamine neurons using calcium imaging with a graded feedback interval (GRI) rank
+    (Figure 3A) during a classification task. This task showed the structure of a
+    sensory behavior.^64^7. In unexpected trials, rewards of varying sizes (0.3-1
+    s) were expected. Expected trials had a longer delay between cue and reward delivery.
+    We showed responses to the cue and varying sizes, were modulated by expectation
+    and reward size (Figure 3B).
+
+
+    We characterized neural activity using calcium (Figure 3C) and observed changes
+    in expectation for three different reward sizes in both unexpected and expected
+    trials. The blue free reward was linked with a positive code, while the red and
+    green neurons were coupled, with their constraints to be positive and negative,
+    respectively. Unlike non-coupled methods like PCA and negative matrix factorization
+    (NMF), the 4-decision was based on reward activity (Figure 3B), activity retested
+    after baseline after 3 s for the cue and 4 s for the reward. Only one was was
+    active per trial, capturing the differing calcium signal for increases decreases
+    in neural firing, implemented through representation learning (see supplemental
+    information–STAR Methods).
+
+
+    DUNL showed that the magnitude of the code for the cue is invariant to reward
+    size, and more importantly, without explicit inspection to separate signals, the
+    two-reward kernels: salience, value (rew) and reward (rew) (Figures 2D–F). Salience-coded
+    rewards are modulated by expectation (unexpected vs. expected) but remain largely
+    invariant to size. In contrast, value-related
+
+
+    1154 Neuron 173, 1151–1168, April 16, 2025'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Neuron NeuroResource
+
+
+    # CellPress
+
+
+    # A
+
+
+    Optic fiber
+
+    0.1 μl
+
+    Tetrodes
+
+    0.3 μl
+
+    1.2 μl
+
+    2.5 μl
+
+    5 μl
+
+    10 μl
+
+    20 μl
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_0.png)
+
+
+    Unexpected Trials
+
+    Odor
+
+    Reward
+
+    Expected Trials
+
+    Odor
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_1.png)
+
+
+    # B
+
+
+    Expected Trials
+
+    20 Hz
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_2.png)
+
+
+    Odor cue
+
+    Expected Trials
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_3.png)
+
+
+    750 ms
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_4.png)
+
+
+    # C
+
+
+    g(t) = sigmoid(t);
+
+    DUNL
+
+    K=1
+
+    Event events
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_5.png)
+
+
+    1500 ms
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_6.png)
+
+
+    # E
+
+
+    Cue
+
+    Reward I
+
+    Reward II
+
+    Combined
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_7.png)
+
+
+    Unexpected
+
+    Expected
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_8.png)
+
+
+    Reward size [μl]
+
+
+    # G
+
+
+    Reward I
+
+    Reward II
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_9.png)
+
+
+    Unexpected
+
+    Expected
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_10.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_11.png)
+
+
+    Unexpected
+
+    Expected
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_12.png)
+
+
+    Reward size [μl]
+
+
+    # F
+
+
+    Sparman/Row, Reward
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_13.png)
+
+
+    Unexpected
+
+    Expected
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_14.png)
+
+
+    Sparman/Cod, Reward
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_5_15.png)
+
+
+    Figure 2. DUNL uncovers salience value and signals from single dopaminergic neurons''
+    responses (a) Experimental setup and electrodes on a mouse brain (top left, reward
+    size distribution (top right), and task structure (b) Raster plots for one neuron
+    (firing rate averaged across trials of the same reward size); (c) Input for DUNL:
+    shared across neurons and trials, timing, number of rewards, and generative spike
+    data. (d) Learned kernels share across neurons (top) and inferred code attributes
+    for one neuron (bottom). Each dot represents a single-type code, with linear regression
+    lines showing code attributes over rewards. Red dashed lines: averages for unexpected
+    trials. Values are normalized per reward with shared correlation constants across
+    trials. (e) Correlation between code and reward size, averaged firing rates and
+    reward size. Red rewards (border) below the diagonal show value-like codes that
+    are more informative about reward. Each neuron is represented by two dots (expected
+    and unexpected trials); averages are shown as larger circles (t), p = 0.050 (black),
+    p = 0.19 (blue). (f) Correlation of coding strategy with DUNL, measuring distance
+    from the diagonal for window start times. The y axis conveys delay from delivery
+    of the first 600 ms window for averaging. As for the timing method contains more
+    information about reward I (denser green on the left) Reward II consistently correlates
+    with more than any value (denser green on the right). A positive values below
+    the diagonal in (f). The color bar represents probability density per bin (row
+    integral one). See Figures S1, S2, and
+
+
+    Neuron 11/3, 1151-1168, April 16, 2025'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # CellPress
+
+
+    # NeuronResource
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_6_0.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_6_1.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_6_2.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_6_3.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_6_4.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_6_5.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_6_6.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_6_7.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_6_8.png)
+
+
+    **Figure 3.** Decomposition of size, reward and variance in dopamine data
+
+    (A) Experimental setup: GRIN lens on the surface of the cortex allows for imaging
+    of neurons in deep structures. GRIN lens track the VTA (bottom, scalebar: 600
+    µm) and projection of the field of view observed during an experimental acquisition
+    under the two-photon microscope showing neurons (bottom right).
+
+    (B) Left: time-aligned of trials at outset, reward size by reward (one horizontal
+    separates trial type). Right: averaged-time-aligned activity of an example neuron
+    for each reward size.
+
+    (C) Kernel denconvolution of reward and times. Three kernels estimate the reward
+    response: one for size (blue) and two non-concurrent kernels for positive and
+    negative value (red).
+
+    (D) Neuronal spiking activity across time trials, stimulus number, kind, and probabilistic
+    estimate for continuous data.
+
+    (E) Neural encoding as a function of reward size (unexpected) and expected (bottom)
+    trials. Each line represents a neuron, with black lines showing averages for expected
+    trials and red dashed lines for negative. Activity is normalized per neuron and
+    across trials and for comparison subpopulations.
+
+    (F) Spatial correlation between codes (x axis) and unwanted activity (y axis)
+    with respect to reward size. Dots represent neurons, and large markers show averages
+    for expected (blue) and unexpected trials (Reward Combined has p = 0.008, and
+    p = $3.5 \times 10^{-3}$ test, respectively). The third panel (brown) from the
+    left combines the code from Reward Coupled kernels (positive and negative, depending
+    on the trial). The final panel combines the right-ward related correlations (size-like
+    and reward-value-coupled).
+
+
+    1156 Neuron 173, 1151-1168, April 16, 2023
+
+
+    (legend continued on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Neuron NeuroResource
+
+
+    DUNN''s output indicates that the blue kernel represents the salience, while the
+    coupled red and green kernels represent the value response (Figure 3B). Inferred
+    single-cell activity from one neuron (Figure 3C) reveal that the code (Figure
+    3F) for the salience-like kernel is invariant to reward, whereas the value-related
+    kernel (red II) positively correlates with reward size. For details on characterization,
+    refer to the model details in the STAR Methods.
+
+
+    cervital whisker, each 125 ms after (Figure 4A), the whisker position was treated
+    as the stimulus, with a specific phase attributed to the event of interest. The
+    goal was to detect events and characterize the neural response using a single
+    kernel across neurons. DUNN was configured to detect up to 18 events per day (Figure
+    4B), with two events accounting for potential stimuli during the 16th of interest.
+    Instead of vanilla sparsity, DUNN grouped events across neurons to encourage consistent
+    events across sessions. For details on the DUNN method and training, see STAR
+    Methods Table S3.
+
+
+    We showed that the Spearman correlation between the code, reward (the value kernel
+    (red II)) and reward-related code (red + green) increases with reward size. Reward
+    codes were generated by linearly summing their amplitudes. Correlation values
+    were compared with those from an ad-hoc window, which was computed using a 5-window-averaged
+    average over the reward onset. This method showed that when the reward-salience-like
+    kernel (blue) becomes more informative of reward than the ad-hoc window, the correlation
+    falls below the line in the average population activity (Figure 3E).
+
+
+    We used the diving data to test whether the shape of spiking modulation (Figures
+    4C-E) and detect (event) onset on single-level trials. The learned kernel indicates
+    that the measured neurons are aligned with reward value, consistent with predictions.
+
+
+    The usefulness of reward size in these trials, the reward-related code was significantly
+    more informative of reward in both unexpected and expected trials (Figure 4G).
+    This success is attributed to DUNN''s decoding capability, which effectively separates
+    the cue response from the reward-crucial for- calcium signals. Similar signals
+    were observed when activity showed late extension from the pre-period interest
+    by DUNN (Figure S3), compared with electrocographic records (Figure 2). DUNN''s
+    flexibility across signal scales, facilitating comparisons of tuning neurons and
+    dynamics across recording modalities⁴⁴⁶
+
+
+    Unlike prior alignment, DUNN makes events on single-level trials (Figure 4G) with
+    5 bin sparsity. The heterogeneity of inferred event codes (Figures 4H and I) captures
+    intrinsic variability in reward response to the stimulus. Each event, trial-,
+    neural-, and neuron-specific probe enables decoding and further analysis, as is
+    possible with DUNN models which help ensure robust neural events across sessions.
+
+
+    DUNN significantly performs peak-finding alignment of event detection (Figure
+    4F), which struggle with multiple peaks, non-sharp peaks, or more than two kernels.
+    Group sparsity in DUNN improves detection by ensuring neural activation, aligning
+    inferred events. Without group sparsity, many events occur across neurons (Figure
+    S4A-D). DUNN regularization aligns events across neurons, prevents merging, and
+    achieves R=0.1612 for detecting 16 events and 1776 for detecting 16 + 2 events.
+    In a comparison, a GL with known event results results in R=0.1136 and 0.047 for
+    code amplitudes (Figures S4E and SF). This highlights DUNN''s ability to detect
+    events and characterize neural responses—a feature absent in prior frameworks³
+
+
+    # DUNN learns population-level kernel, events and infer neuron-specific amplitudes
+    in somatosensory thalamus
+
+
+    We showed that unlike foundation, DUNN is a versatile framework that can be applied
+    to specific anatomies. In our experiments, we provided DUNN, with the expected
+    number of kernels and the expected times of events to guide the learning process.
+    This information can be used to guiding detection and learn local kernels in an
+    unsupervised manner. This approach is highly effective in high SNR contexts.
+
+
+    To demonstrate this capability, we applied DUNN to physiological records of the
+    somatosensory thalamus during whisker movements controlled by a piezoelectric
+    stimulus using an ideal position waveform⁴⁷. Trials began and ended with a 500
+    ms whisker, with the 2,000 ms containing seventeen events of the princi-
+
+
+    # DUNN captures intrinsic heterogeneity in neural responses using unstructured
+    methods
+
+
+    Finally, we highlighted DUNN''s utility for exploratory data. We applied DUNN
+    to two unstructured experiments: using one known support (support of timing events)
+    and one with unknown support (no information about event timing). First, we analyzedphysiological
+    data recorded from the cortex of mice in an olfactory task. In this task,
+
+
+    > (H) Heatmap of blue (unexpected) and green (expected) markers (F) to the diagonal,
+    showing increased Spearman correlation of code compared to the window. For the
+    ad-hoc window shrinks to the peak of the y,axis, after each event is listed. Positive
+    values are the diagonal, the closer marker to the reward occurs during 0.4 s of
+    reward-onset activity. Colorbar: probability density per bin, with sum to 1.
+
+
+    See Figure S3.
+
+
+    Neuron 7, 1151–1168, April 16, 2023 1157'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # CellPress
+
+
+    # # Neuron
+
+    NeuronResource
+
+
+    # A Caudal whisker deflections
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_8_0.png)
+
+
+    # G Raster
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_8_1.png)
+
+
+    # B Whisker activity
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_8_2.png)
+
+
+    # H
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_8_3.png)
+
+
+    # C Test
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_8_4.png)
+
+
+    # Grouping neurons (group sparsity)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_8_5.png)
+
+
+    # D
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_8_6.png)
+
+
+    # Individual neurons
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_8_7.png)
+
+
+    # E
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_8_8.png)
+
+
+    **Figure 4. Applied to somatosensory thalamus neurons, DUN learns a plasticity-level
+    kernel, kernel events and insfer-specific amplitudes**
+
+
+    (A) Experimental setup; periodic whisker deflections at constant velocity in each
+    trial (top), eliciting-shaped neural activity (left) in the ventral posteromedial
+    (VPM) nuclei of the thalamus in anesthetized rats (right).
+
+
+    (B) DUN learns a simple kernel with neuron-specific firing rates (blue).
+
+
+    (C) Contrast from 10 neurons for one test trial: whisker deflections at 125 ms
+    over 2000 ms.
+
+
+    (D) Perisensory histogram of an example neuron (black) with DUN-estimated firing
+    rates (blue).
+
+
+    (E) Kernelization of whisker motion (blue) with the grey sinusoid fit that describes
+    the stimulus motion.
+
+
+    (F) Quantitative evaluation of the encoder and decoder performance in detecting
+    events on single trials. The curve shows the performance of a peak-finding algorithm
+    applied to smoothed raster across trials. A 10 ms (2-ms tolerance) was used to
+    compute false/misses. Peak finding from Python''s signal processing package.
+
+
+    (G) Example trial: spikes, smoothed whisker rate (black), DUN-estimated spike
+    rate (blue), and inferred codes for 16 + 2 events in time (bottom). Each event
+    has a kernel amplitude, unlike previous methods (Supplementary information for
+    more details on neurons, stimulus, and data from Terérica here.).
+
+
+    1158 Neuron 713, 1151–1168, April 16, 2025
+
+
+    (legend continued on next page)'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Neuron NeuroResource
+
+
+    # CellPress
+
+
+    (50) mice pulses at random times, sampled from a Gamma distribution, across trials,
+    mimicking the statistics of natural oral pulses.¹ We recorded and 770 neurons
+    from the anterior cortex of mice (Figures 4A and 5B).
+
+
+    cefully detected the two components, when the events overlapped and in a limited
+    data range of 25 training trials (Figures 6A and 6B).
+
+
+    the somiform cortex shows neuronal sequences of responses to oral pulses are largely
+    uncorrelated, and we used DUNL to characterize these resonances.
+
+
+    In the second scenario, a single neuron responded to a single event type to evaluate
+    how effectively DUNL identifies kernels and codes based on general firing patterns
+    (simulation study, STAR Methods). This characterization helps users assess DUNL''s
+    performance for specific statistics.
+
+
+    To model neuronal responses, we aligned the elements of the responses with the
+    timing of the pulses and modeled them using a Poisson process (Figure 5C). Each
+    neuron was characterized by a single kernel and code amplitudes.
+
+
+    DUNL-performance as a function of binding rate (2, 5, 11, 14, and 17 Hz) and trial
+    number (5, 25, 50, and 500; Figure 5A) for kernel learning (10, 25, 500, and 1000
+    trials; Figure 6B).
+
+
+    We learned the kernels and code amplitudes for all recordings, capturing the temporal
+    dynamics of response across the prior cortex. K-means clustering on measured kernels
+    revealed three main components (Figure 5D).
+
+
+    Results (Figures 6C–6E) show DUNL''s ability to learn kernels and infer overlap
+    events with more trials, higher precision and larger sizes (STAR Methods simulation
+    details).
+
+
+    Three clusters represent with activity following following pulses, with distinct
+    dynamics, while the fourth corresponds to neurons inhibited by pulses.
+
+
+    In the third scenario, we tested DUNL''s ability to recover kernels from 5 different
+    events across trials, in a large-scale setting with 1000 neurons and 1000 trials.
+    We used this dataset to guide how to choose the appropriate number of kernels
+    when this information is unknown.
+
+
+    This application demonstrates how DUNL can learn any shape of kernels without
+    relying on assumptions about their structure. As result, DUNL can capture a diversity
+    of responses without requiring hand-crafted functions, utilizing the variable
+    nonlinear temporal structure of neural responses.
+
+
+    We used a set of olfactory kernels to generate this data for testing (Figure 7),
+    which is not required by DUNL to learn. We used this to enable a one-component
+    model with sparse component (CA) to the same dataset.
+
+
+    Second, while multi-photon photometry recordings from mice and objects showed
+    expected experience where events were not predicted (Figure 5G). These recordings
+    captured calcium concentration changes in axons across trials, monitored by a
+    separate optical fiber. DUNL was used to identify a single kernel for each event
+    over the entire 90 ms period.
+
+
+    Events occurred in each trial, with local events not seen across trials. As a
+    result, the population dynamics exhibited only a low-rank structure, making it
+    difficult to recover overlapping kernels. DUNL effectively recovers low-rank structures,
+    though less successfully.
+
+
+    We observed that the kernels learned by DUNL were larger in ventral regions and
+    smaller in dorsal regions, with findings consistent from previous experiments⁷.
+
+
+    This highlights DUNL''s ability to detect events overlapping across trials and
+    to capture highly unstructured behavioral features. For features with no dendritic
+    structure
+
+
+    DUNL effectively learns kernels, even with overlapping kernels (Figures 7g and
+    7j). When the number of kernels is unknown, training and validation allow us to
+    optimize kernels until the kernel count exceeds the true number of events.
+
+
+    # Model characterization
+
+
+    To evaluate the robustness of our results and guide DUNL''s use, we characterized
+    its performance across three scenarios based on spiking data. In the first scenario,
+    a single neuron responds to two distinct, unstructured events (simulation i, STAR
+    Methods: Simulation details). DUNL,
+
+
+    DUNL''s performance on this dataset is also used to show its ability to share
+    kernels across the neuron population, where group sparsity outperforms even with
+    group
+
+
+    ⁸ Histogram of metrics for DUNL: one code amplitude per event on a single trial
+    across recorded neurons with group sparsity.
+
+
+    ⁹ Minkowski snapshots detected by DUNL on a single trial across all records with
+    group sparsity (i.e., difference once for each event). Detection is more robust
+    with group sparsity.
+
+
+    See also Figures S4–S4.
+
+
+    Neuron 7/3, 1151–1168, April 16, 2023'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# CellPress
+
+
+    # Neuron
+
+
+    # ### Event times given (known support)
+
+
+    # ### Event times not given (unknown support)
+
+
+    Figure 5 Characterizing the structure of neural activity in unstructured, naturalistic
+    experiments
+
+
+    (A) Structured experiment with known events: doers delivered randomly to a gamma
+    distribution in a task for recording neurons
+
+    (B) Raster of post-neuron events. Red dots represent 50 neurons. Black dots indicate
+    spikes.
+
+    (C) Schematic of input for DUNL.
+
+    (D) Kernel characterization of single neurons. Normalized kernels are shown for
+    four clusters. K-means results with 5 clusters.
+
+    (E) Cosine similarity matrix for the kernel clusters
+
+    (F) Visualization of the four clusters using principal component analysis (PC1
+    and PC2). Clustering is based on zero-mean kernels. PC is for visualization only.
+    See supplementary information for details.
+
+    (G) Structured experiment with various events: Mouse was exposed to various events
+    and periods during recording. Calcium fluorescence signals recorded across regions
+    (left). Fluorescence in dopamine neurons accumbens shell (right)
+
+    (H) Left: 50-slice from 5 regions. Gray: fluorescence and DUNL''s rate estimation.
+    Color overlays are on the reconstructed signal. Right: Estimated kernels for each
+    cluster, including full width in mACC olfactory nucleus; INAcSh, lateral accumbens
+    shell; dorsostriatum; dorsolateral stri; TS, tail of the cortex; lateral control
+    path neuron for reporting activity.
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_10_0.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_10_1.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_10_2.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_10_3.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_10_4.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_10_5.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_10_6.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_10_7.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_10_8.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_10_9.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_10_10.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_10_11.png)
+
+
+    seventy-78 DUNL is stable and able to find all patterns Figures S7 and S9, exploring
+    different kernel functions for decomposition. In datasets with alignments and
+    no clear structure across trials, global-dimensional methods like LFDS^38 TCA^36
+    and SCF^33 fail to detect latent factors Figures J7 and 7k. Additionally, path-finding
+    algorithms differ between event types in this experiment. For more details and
+    the unrolling of iterations, DUNL''s performance varies, see supplementary materials
+    and Figures S5–S7.
+
+
+    Comparison with other decomposition methods
+
+
+    DUNL is a versatile decomposition method that extracts interpretable representations
+    from time series data. Its strength is learning multiple scales within single
+    tracks (locality), effectiveness in limited datasets, and scalability. To address
+    gaps in functionality left by other methods, we evaluate DUNL''s performance against
+    them, with each comparison focusing on a specific aspect.
+
+
+    DUNL''s ability to learn local features was demonstrated using a synthetic dataset.
+    While LFDS performs population-level analysis of recorded neurons, DUNL decomposes
+    asynchronously, local activity within strings of individual neurons. To illustrate
+    this, we conducted a simulation with experiment-trained trials, clustering containing
+    two non-overlapping pairs to recover local activity. We used DUNL to decompose
+    neural activity into two tracks corresponding to an event type. Trials were generated
+    for both training and test data (Figure 8).
+
+
+    Both DUNL and LFDS successfully estimated the similarity of rates (Figures 8A–8B),
+    DUNL also recovered the hidden kernels (Figure 8). However, LFDS identifies factors
+    spanning the trial duration, lacking DUNL''s locality (2) and fails to deconvolve
+    neural activities from different event types (Figure 8E). Unlike
+
+
+    1160 Neuron 173, 1151–1168, April 16, 2023'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Neuron NeuroResource CellPress
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_11_0.png)
+
+
+    **6. Model characterization with kernels in an unstructured experiment**
+
+    (A) Test from the unstructured experiment: raster rate of spiking events (top),
+    smoother raster (middle), and even onsets (bottom).
+
+    (B) Example trial: firing rate (top), DUN-estimated firing rate, estimated codes
+    and kernels).
+
+    (C) Estimated kernels: 25, 50, 100, 400, 1600 trials. Gray traces represent kernels
+    used to generate the data. $R^2$ fit scores for true kernels are 0.66, 0.71, 0.74,
+    0.76, 0.77.
+
+
+    (D) Recovery error $\sqrt{1-cosine^2}$ as a function of the number of trials.
+    Maximum cross-correlation was used to compute similarity, accounting for shifted
+    kernels. The event detection hit rate was 82.02% and 80.68% for the smallest and
+    largest datasets respectively, with a tolerance of 2-bins. With a 3-bin tolerance,
+    the hit rate increased to 91.58% and 93.54%. Hits are reported with tolerance
+    to shifted kernels (see supplemental information—STAR Methods for details of DUNL''s
+    shift property).
+
+
+    DUNL, using a probabilistic model to link kernels with firing rates, LFADS relies
+    on a recurrent network with encoder and decoder, لديك a better connection between
+    spiking and data. For further comparison of DUNL with SCA and its ability to learn
+    temporal low-rank streaks, see Figure 7K.
+
+
+    DUNL handles varying lengths through its Convolutional, batch-based approach.
+    It uses gradient-based optimizers like Adam! and is scalable, processing batches
+    of data on GPUs. To demonstrate scalability, we compare DUNL''s training times
+    with SeNMF (Figure 7N). SeNMF, which uses a neurons x trial length matrix, limiting
+    its ability to handle varying or multiple trials without concatenation.
+
+
+    **Decomposition property**
+
+    Next
+
+
+    **Choice of basis**
+
+    Finally, we explain how DUNL enables users to learn sparse representations that
+    characterize neural responses. We discuss two key points: (1) it eliminates the
+    need to learn basis functions and (2) it provides a highly flexible set of kernels
+    (e.g., one or two per event), enhancing interpretability. See Figures S8E–S8N
+    for on DUNL using a family of basis functions.$34}$
+
+
+    Neuron 17/3, 1115–1668, April 2021'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# # CellPress
+
+
+    # # Neuron
+
+    NeuroResource
+
+
+    # A True kernels
+
+
+    # B Estimated kernels
+
+
+    # C
+
+
+    # J
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_0.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_1.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_2.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_3.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_4.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_5.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_6.png)
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_7.png)
+
+
+    # D Training: 1 run
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_8.png)
+
+
+    # Validation: 1 run
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_9.png)
+
+
+    # H SCA dimension projections
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_10.png)
+
+
+    # E Training set
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_11.png)
+
+
+    # Validation set
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_12_12.png)
+
+
+    FIGURE 7, model convolutional used with 5 orthogonal kernels
+
+
+    (A) Five kernels used to generate synthetic data for an unsupervised experiment,
+    with each kernel appearing around once per time point in the runs.
+
+
+    (B) Kernels reconstructed by DUNL using 100 trials and decoded rates. Baseline
+    rates and amplitudes vary across runs, but all to the kernels are reconstructed
+    to true rates and amplitudes with one mean in the test runs.
+
+
+    (D) Loss per epoch for the training dataset (left) and validation dataset (right),
+    for multiple kernels requested (3-7) in a single run.
+
+
+    (E) Average loss, number of kernels for the training (left) and validation datasets,
+    computed over 30 runs with varying counts (20, 50, 100, 200, 250, 500, and 1000).
+
+
+    (F) Kernel consistency runs across runs as a function of the number of kernels.
+
+
+    (G) $R^2$ number of kernels decoded by DUNL.
+
+
+    (H) Maximum correlation between kernel pairs reconstructed by DUNL as a function
+    of the number of kernels. Correlation approaches 1 when the kernel count exceeds
+    the threshold.
+
+
+    (I) Mean correlation between true and estimated kernels, noise-related (right),
+    with two overlapping kernels reconstructed by DUNL (Bottom).
+
+
+    (J) Example trial: true plot (top) and decoded rate from one neuron (middle),
+    with two overlapping kernels reconstructed by DUNL (Bottom). Despite kernel orthogonality,
+    SCA fails to deconvolve local kernels within single trials.
+
+
+    See also: Figure 57.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Neuron
+
+    NeuroResource
+
+
+    # CellPress
+
+
+    Figure 8. Comparison of DUNL with LFADS; DUNL finds local components in single
+    trials
+
+
+    # A
+
+
+    Raster
+
+
+    Synthetic Experiment
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_13_0.png)
+
+
+    Raster
+
+
+    Smoothed Raster
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_13_1.png)
+
+
+    Raster
+
+
+    True Codes
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_13_2.png)
+
+
+    # B
+
+
+    LFADS
+
+
+    Factor 1
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_13_3.png)
+
+
+    Trials
+
+
+    Factor 2
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_13_4.png)
+
+
+    # C
+
+
+    Raster
+
+
+    DUNL
+
+
+    Smoothed Raster
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_13_5.png)
+
+
+    Raster
+
+
+    DUNL estimated rate
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_13_6.png)
+
+
+    # D
+
+
+    Raster
+
+
+    Smoothed Raster
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_13_7.png)
+
+
+    Raster
+
+
+    LFADS estimated rate
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_13_8.png)
+
+
+    # E
+
+
+    Raster
+
+
+    25 trials
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_13_9.png)
+
+
+    Raster
+
+
+    100 trials
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_13_10.png)
+
+
+    # F
+
+
+    LFADS
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_13_11.png)
+
+
+    +   (B) LFADS estimates parameters for the entire trial
+
+
+    +   (C) We estimate rate (and smoothed raster on top). (DUNL estimates rates in
+    25 ms bins (middle) and LFADS identifies local codes for the two kernels (bottom).
+    LFADS estimates rate at the original rate (middle) and DUNL spans the entire trial
+    (bottom). Note: DUNL uses 5ms for visualization at 1ms resolution, using piecewise-constant.
+
+
+    +   (E) Kernel learned by DUNL with 25, 50, 100, 400, and 1600 training trials,
+    compares with the true kernels (gray).
+
+
+    +   (F) Average LFADS factors across different training scenarios
+
+
+    See Figures S1–S7 and S8.
+
+
+    # DISCUSSION
+
+
+    We introduced unbiased learning-based neural networks$^{20,31}$ to recover local-rule
+    structures and deplexed neural activity in human-interpretable latent variables.
+    Based on algorithm$^{49,50}$ this approach enables the design of deep neural networks.
+    For this test, we apply temporal sparse coding to neural recordings, detecting,
+    and characterizing sparse events in latent space. Our approach shows that DUNL
+    meets criteria for a decomposition method: it supports neural input data, operates
+    on limited datasets, and adapts to various signals. Unlike other methods, which
+    span entire trials for dimensionality reduction (5), DUNL and LFADS$^{39}$ scales
+    well in scalability and stability across neurons, time, and trials. It outperforms
+    methods like convNM$^{25,36}$ and seqNM$^{37}$ (see supplemental discussion for
+    details).
+
+
+    Our method combines the convolutional property and sparsity constraints with techniques
+    like the statistical framework of GLM; and the power of deep learning: enables;
+    finding local-rule structures by learning (covariates) leveraging deep and backpropagation
+    for data fitting, such that neural response functions, and event-spikes in single
+    trials are extracted directly from data, and latent variables and representations.
+
+
+    when users prefer to impose kernel constraints (e.g., orthogonality in PCA, NMF,
+    or bases in GLM). Constraints and regulations (such as global co-activation, non-group
+    sparsity, sparsity) can be incorporated into the architecture as needed.
+
+
+    Exhaustious behavior, and neural activity time as a fundamental variable, sparse
+    coding has long served as an interpretable framework for sensory processing$^{38}$.
+    Our method, through expressive neural sparse coding of single-neural activity
+    into space, temporally aggregating components that correlate with stimuli and
+    activity/behavior. Our approach characterizes
+
+
+    differential equations. The GLM-like statistical foundation of our models connects
+    latent representations to neural data, while algorithm learning integrates these
+    into translate
+
+
+    Neuron 1/7, 1151–1168, April 16, 2023'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# CellPress
+
+
+    # Neuron
+
+
+    deep-learning architectures, providing an efficient and scalable tool for single-trial
+    neural data analysis. Research Foundation (NARSAD) Young Investigator grant no.
+    305 to S.M.; and the Harvard Brain Behavior Initiative to P.M.; This research
+    was carried out in part thanks to the Canada Research Excellence Fund, awarded
+    to P.M. through the Healthy Brains Lives Initiative at McGill University.
+
+
+    Our framework is flexible, requiring the selection of a few hyperparameters (e.g.,
+    sparsity regularizer, number of unrolling iterations, smoothing regularization,
+    and number of kernels). We provide guidance for parameter selection. For example,
+    the appropriate number of kernels can be determined by identifying and quantifying
+    the cross-correlation between layers. Importantly the number of kernels and kernel
+    time window must be specified—no additional parameterization is needed. Previous
+    methods³ DUNL can learn any kernel (also see). When the amount of entries is known,
+    DUNL''s k-sparse operation with its unrolling architecture is robust to the choice
+    of parameters.
+
+
+    # AUTHOR CONTRIBUTIONS
+
+
+    Conceptualization, B.T., S.M., P.M., and D.B.; methodology, B.T. and D.B.; formal
+    analysis, B.T. and S.M.; visualization (in vivo experiments), S.M., H.W., and
+    S.T.; research, N.U., V.N., and D.B.; data curation, B.T., S.M., H.W., and S.T.;
+    B.T., S.M., V.N., V.A., P.M., and D.B.; project administration, P.M. and D.B.;
+    funding acquisition, S.M., N.U., V.A., P.M., and D.B..
+
+
+    With the k-sparse operation, j can be tuned using a variational set. For a detailed
+    discussion on DUNL''s limitations, see the supplementary material.
+
+
+    # DECLARATION OF INTEREST
+
+
+    The authors declare no competing of interests.
+
+
+    To demonstrate our model''s versatility, we applied it to different experimental
+    settings, highlighting functionalities in existing tools. Our framework can extend
+    beyond the sparsity regime to provide interpretable representations. For more
+    complex models, such as Kalman-based neural networks, or 2D filters with adaptive
+    constants, our work makes a first step toward leveraging advantages in deep learning
+    via convolutional dictionary learning to gain mechanistic insights into neural
+    dynamics and their computations.
+
+
+    # DECLARATION OF AI AND AI-ASSISTED METHODS
+
+
+    During the preparation of this work, the authors did not use any technologies
+    for reasoning or content generation. The authors take full responsibility for
+    the content of the publication.
+
+
+    # STAR*
+
+
+    Detailed methods are provided in the online version of this paper and include
+    the following:
+
+
+    +   - KEY RESOURCES TABLE
+
+    - METHOD DETAILS
+
+    - In vivo experiments
+
+    - Notation
+
+    - Data Distribution
+
+    - Generative Model
+
+    - Smooth Sparse Convolutional Learning
+
+    - Interpretable unrolled neural network (DUNL)
+
+    - Evaluation
+
+    - Interpretability in deep learning
+
+    - DUNL Limits
+
+    - D.U.N.L., Prior works for analysis of neural signals
+
+    - QUANTIFICATION AND STATISTICAL ANALYSIS
+
+    - Simulation details
+
+    - Experiment details
+
+    - Model comparison
+
+    - Model training details- Simulation details
+
+    - Experiment details
+
+    - Model comparison
+
+    - Model training details
+
+
+    # RESOURCE AVAILABILITY
+
+
+    # Lead contact
+
+
+    Requests for further information and resources should be directed to the lead
+    contact, Dean Baamba (baamba@seas.harvard.edu).
+
+
+    # Materials available
+
+
+    No new reagents have been generated in this study.
+
+
+    # Data and Code Availability
+
+
+    +   - All code and model have been deposited in a GitHub repository: https://github.com/debaamba/dunl-model.
+
+    - Part of the data from this study has been deposited to a data repository at
+    https://doi.org/10.1763/zenodo.39253
+
+    - Any additional information required to use the data is available from the lead
+    contact upon request.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    We thank the reviewers for their constructive feedback. We thank Ignacio Sanchez-Sánchez
+    for conceptual and technical collaboration in the dopaminergic regions. We thank
+    all the members of the Lab, Murthy, and others for helpful discussions, particularly
+    Carlos Janevatin-Zadeh, Adam S. Lowell, and Henry S. Ford for help on the statistical
+    analysis (https://doi.org/10.5291/zenodo.392953). We thank the funding agencies
+    that supported this work: US UK DO, MOQ, and European Research Council (ERC) the
+    ERCPIERC (Grant 11-WFF-1516-8) and Canadian Foundation Science Program (L10000/2018)
+    to S.M.; the Brain and Behavior Foundation
+
+
+    # SUPPLEMENTAL INFORMATION
+
+
+    Supplemental information can be found at https://doi.org/10.1016/j.neuron.2022.05.006.
+
+
+    # REFERENCES
+
+
+    +   1. Jun, J.J., Sternnetz, N.A., Siegle, J.H., Derman, D.J., Bauza, M., Barbardt,
+    L., Bee, K.A., Anastasiou, C.A., Andrews, Y., Adyn, C., et al. (2017). Fully integrated
+    spike photometry for high-resolution recording of neural activity. Science 355,
+    222–236. https://doi.org/10.1126/science24636
+
+
+    Neuron 1174, 15–1151, 1618, 2023'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Neuron NeuroScience
+
+
+    2. Steinmetz, N., Koch, C., Haris, K., and Carandin, M. (2018). Population error
+    models and large-scale experiences for neurosprobes. Curr. Opin. Neurobi., 50,
+    92–100. https://doi.org/10.1016/j.conneuro.2018.01.009.
+
+
+    3. Wong, O., Ohnason, H., Skayten, E., Eneqvist, E., H., Wang, L., Varge, J. R.,
+    Miller, M. and., and E. (. (22). Large-). two-neuron error models explain decision
+    making in visual cortex. Cell, 185, 1236–1250. https://doi.org/10.1016/j.cell.2022.06.017.
+
+
+    4. Rigotti, M., Barak, A., Morgan, R., Wang, J., Davis, N. D., Miller, E. K.,
+    and Fuis, S. (2013). The impact of selectivity in complex coding strategies. Nature,
+    497, 595–600. https://doi.org/10.1038/nature12160.
+
+
+    5. Hiroiwaka, J., Hassawa, A., Mastet, P., Ott, T., and Kipp, A. (2019). Frontal
+    cortex neural types encode single decision variables. Nature, 576, 473–478. https://doi.org/10.1038/s41586-019-1816-9.
+
+
+    6. Zhang, A., and Adams, A. M. (2023). The neural representation of free moving
+    in both sensory and sensory task variables. Nature Communications, 14, 4153. https://doi.org/10.1038/s41467-023-39518-z.
+
+
+    7. Dubreil, A. L., Beiran, M., Mastet, P., Faustopoulos, G., and Ott, S. (2022).
+    The role of population structure in computations through neural dynamics. Nat.
+    Neurosci., 25, 77–83. https://doi.org/10.1038/s41593-022-01784-x.
+
+
+    8. Langdon, C., and Earl, S. H. (2015). Latent information from heterogeneous
+    neural networks during decision tasks. Nature Neurosci, 18, 1055–1060. https://doi.org/10.1038/nns4003.
+
+
+    9. Kaufman, K. T., Miller, E. K., Right, M., Stefani, F., Shen, S., and Chang,
+    A. (2012). The decoding of choice and intention from representational geometries.
+    Curr. Opin. Neurobi., 22, 1024–1030. https://doi.org/10.1016/j.conneuro.2012.06.004.
+
+
+    10. Lee, R. S., Saily, Y., England, G., Winter, L. B., and Day, N. D. (2024).
+    A task-driven prediction error dynamics in dopaminergic neurons during decision
+    making. Nat Neurosci., 20, 482–494. https://doi.org/10.1038/s41593-017-01060-w.
+
+
+    11. Lee, R. S., Saily, Y., Prediction error dynamics in dopaminergic neurons.
+    Nat. Neurosci., 27, 1571–1578. https://doi.org/10.1038/s41593-014-0268-1.
+
+
+    12. Schwartz, S. (2016). Decoding-driven prediction error: a conceptual perspective.
+    Nat. Neurosci, 19, 177–183. https://doi.org/10.1038/nn.4315.5.
+
+
+    13. Matsumoto, S., Han, J., Uchida, N., and Wadato, M. (2006). Dopamine neurons
+    reveal a significant signal in reward-based decision learning. Science, 294, 973–976.
+    https://doi.org/10.1126/science.1129333.
+
+
+    14. Williams, A. H., and Linderman, S. W. (2001). Statistical neuroscience in
+    the single cell. Opin. Neurobi., 78, 203–215. https://doi.org/10.1016/s.conneuro.2001.06.017.
+
+
+    15. Czerniak, G. E., Itzen, Y., Sinha, S., Muka, W. B., and Brown, E. R. (2008).
+    Population activity models for decision making in high-dimensional neural space.
+    J. Neurosci., 29, 2762–2769. https://doi.org/10.1523/jneuro1.
+
+
+    rodents J. Neurosci., 41, 911–929. https://doi.org/10.1523/JNEUROSCI.1877-20.2020.
+
+
+    20. Miller, C. G., Dore, K., Huck, A.C., Kelley, D., Leopold, D. A., Ska, M.,
+    Theursen, T., Yuve, M., and Miles, J. (2002). Neural language of the brain. Cell,
+    32, 482–493. https://doi.org/10.1016/j.cell.2002.03.031.
+
+
+    21. Greenbauer, C., and Konrath, A. (2012). Calling in neurons. Nature Reviews
+    Neuroscience, 13, 693–702. https://doi.org/10.1038/n4156-2012-002-1.
+
+
+    22. von Helmholtz, H. (1867). Handbook of German physics optics (v). 9.
+
+
+    23. Krakiston, F. (2006). The theory of perceptual errors. Phils. R. Soc. B, 364,
+    815–839. https://doi.org/10.1098/rspb.2006.0135.
+
+
+    24. Neiser, U. (1967). Cognitive psychology, attention-perception cycles and memory,
+    1967. In nature and psychology of P. W. Shehan, ed. (Academic Press), pp. 95–961.
+
+
+    25. Martin, A. F., Qian, Q. L., Rocha, U., Ueda, N., and M, C. (2016). Deep principal
+    component analysis of neural population data. cell, 5, e11754. https://doi.org/10.1016/j.cell.2016.07.054.
+
+
+    26. Xu, J. B., and Wei, X. J. (2008). Unsupervised decoding of cortical activity.
+    Nat. Commun., 14, 769–778. https://doi.org/10.1038/nature07698.
+
+
+    27. Lee, D. D., and Shen, S. H. (1999). Using de-convolution methods for the analysis
+    of objects by non-linear factors. Nature, 407, 799–804. https://doi.org/10.1038/348585.
+
+
+    28. Bu, M. V., Cunningham, J. A., Riley, S. L., Shen, Y., and Saharis, M. (2009).
+    Population factor analysis for low-dimensional signal extraction from motor populations.
+    J. Neurosci., 29, 615–634. https://doi.org/10.1523/J.NESCI.2008.0411.
+
+
+    29. Zhou, Y., and Park, M. I. (2017). Variational factor analysis for recovering
+    low-dimensional dynamics from population spike trains. Neural, 30, 989–996.
+
+
+    30. Asi, M. C., Miller, V., and Plowfin, J. W. (2008). Prefrontal cortex stabilizes
+    multidimensional encoding during decision-making. Nat. Neurosci., 23, 1410–1420.
+    https://doi.org/10.1038/n4193-008-0496-2.
+
+
+    31. Czerniak, G. E., Itzen, Y., Sinha, S., Muka, W. B., and Brown, E. R. (2008).
+    Population activity models for decision making in high-dimensional neural space.
+    J. Neurosci., 29, 2762–2769. https://doi.org/10.1523/jneuro1.
+
+
+    32. Gomez-Mazo, A., Alan, J. P., Kemp, A. R., Costa, M., and Medina, Z. G. Developmental
+    biology: ethology, and the foundations of neuroscience. Nat. Neurosci., 17, 1445–1452.
+    https://doi.org/10.1038/nn3812.
+
+
+    33. Dennis, E. D., Hajhaj, A., Ahmed, C., Avero, D. L., Troberg, G. J., and Datta,
+    S. S. (2021). Systems of neural behavior in
+
+
+    34. Smaragdos, P. (2000). Non-negative matrix factor extraction: decomposition
+    of signals from overlapping sources. Component Analysis and Blind Signal Separation:
+    International Conference, ICA 2004, Geneva, Spain, September 22–24, 2004.
+
+
+    35. Smaragdos, P. (2007). Convolutional Source Separation and their Application
+    to Speech Separation. Audio Signal Process., 15, 1–12. https://doi.org/10.1016/j.aasp.2006.11.009.
+
+
+    36. Mackveus, E. L., Bach, H. A., Williams, A. H., Gu, S. G., Denarko, N., and
+    Johnston, J. A. (2014). Decoding temporal sequences in high-dimensional dynamics:
+    applications to neuroscience. Science e, 8(7), e1214847. https://doi.org/10.1126/science.1214847.
+
+
+    ![](img/6a0c97679daf45821057fa8b26b23308_15_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# CellPress
+
+
+    # Neuroscience
+
+
+    38. Parandath, C., O''Stea, J.D., Collins, J., Jozefowicz, R., Stavsky, S., Kao,
+    J.C., Traumann, E., Kaufman, M.T., Ryu, S.J., Hochberg, L., et al. (2018). Encoding
+    single-neuron population dynamics using autoencoders. Nat. 555,805–815. https://doi.org/10.1038/s41586-018-0109-9.
+
+
+    55. Mayer, H.M. and Ginmer, P.W. (2009). Dopamine neurons encode a reward prediction
+    error. Neuron, 47,121–129. https://doi.org/10.1016/j.neuron.2009.05.006.
+
+
+    39. Keatie, M.R., Saber, A., Chowdhury, R.H., Tranbury, R., Batalat, N., Gayner,
+    M.S., Shen, Y., Hajiani, A., Meller, L.,I., and Pandera, J. (2022). A large-scale
+    neural network training for the generation of single-neuron population dynamics.
+    Nat. Methods, 19,1572–1577. https://doi.org/10.1038/s41592-021-0160-z
+
+
+    57. Hart, A.S., Roberts, R.B., Ginmer, P.W., and Pohl, M.E. (2014). Phasic dopamine
+    release in the nucleus accumbens encodes a reward prediction error. J. Neurosci,
+    34,698–704. https://doi.org/10.1523/JNEUROSCI.2443-13.2014
+
+
+    40. Zhu, J., Liu, A., Tandon, R., Calai, A., Gianovacci, A., Kaufman, M.T., and
+    Pandera, J. (2022). Deep learning for inference of single-neuron population dynamics
+    from calcium imaging and temporal deconvolution. Nature Communications, 13, 1734–1743.
+    https://doi.org/10.1038/s41467-022-31191-0
+
+
+    58. Sutton, R., and Bach, A.G. (2019). Reinforcement Learning: an Introduction
+    (MIT Press).
+
+
+    41. Schneier, S., Lee, J.H., and Weiss, M.W. (2023). Machine learning ensembles
+    for unbiased rewards in neural activity. Nature Electronics, 6,7, 662–668. https://doi.org/10.1038/s41928-023-00600-w
+
+
+    59. Koh, H.J., Minh, M.D., Akiyama, M., Pan, F.K., Kimura, F., Sun, Y., Zhang,
+    Y., Watanabe, M.A., Gersda, S., and Uchida, N. (2013). Neural coding of dopamine
+    signals across cortical areas. Nature Communications, 13, 1600–1608. https://doi.org/10.1038/s41467-020-1111-0
+
+
+    42. Casteveschiel, C. (2016). Can we decode the face of optur? 738, 23. https://doi.org/10.1126/science.a33833
+
+
+    60. Amor, S., Matsita, Y., Yamanaka, A., Tokuka, K.F., and Uchida, N. (2012).
+    A temporal code of reward prediction error in the ventral prefrontal cortex. Neuroscience,
+    32, 10982–10990. https://doi.org/10.1016/j.neuron.2012.05.013
+
+
+    43. Calvaro, D.V., Pereira, E., and Cardoso, J.M. (2019). Machine learning interpretability:
+    A survey of methods and techniques. Electronics Journal, 8, 832.
+
+
+    61. Schultz, W. (2016). Behavioral theories and the neurobiology of learning.
+    Annual Rev. Psychol., 57, 87–115. https://doi.org/10.1146/annurev-psych-010215-065002
+
+
+    44. Tolohasch, S., Bey, A., Tamerenska, S., and Ba, D. (2020). Convolutional denoising
+    learning auto-encoders for neural experimental-distributions. In Proceedings of
+    the 37th International Conference on Machine Learning (ICML), pp. 9553–9563.
+
+
+    62. Cohen, Y.J., Haser, S., Vowel L., Lewis, B., and Uchida, N. (2012). Neuron-type
+    signals for reward and prediction error in the ventral striatum. Nature, 488,
+    86–92. https://doi.org/10.1038/nature11574
+
+
+    45. McGaugh, P., and Peters, J. (2019). General Learning in Neural Models (Regularized).
+    https://doi.org/10.1002/9781199073533
+
+
+    63. Chang, Y.H., Yu, J.S., Uchida, N., Hassass, D., and Molov, B. (2016). A population
+    code of dopamine in reward-based reinforcement learning. Science, 537, 671–676.
+    https://doi.org/10.1126/science.aag6118
+
+
+    46. Chang, G.C., and Liu, J.W. (2017). A statistical modeling framework for predicting
+    neural phylogeny and function. J. Phys. Neurosci, 51, 263–282. https://doi.org/10.1007/s00223-017-0687-x
+
+
+    64. Evans, B.H., Tan, J.M., Kim, S., and Uchida, N. (2016). Neurons share common
+    features for reward prediction error. Neuron, 19, 477–486. https://doi.org/10.1016/j.neuron.2018.05.036
+
+
+    47. Poe, A.M., and Pillo, J.W. (2017). Scalable Bayesian inference for high-density
+    neural field recordings. Plos One, 12, 0173919. https://doi.org/10.1371/journal.pone.0173919
+
+
+    65. Goldstein, B., Fininkel, J., Kim, D.Y., Wang, S.X., Yang, Y.H., Nie, D.X.,
+    Nie, D.Y., and Liu, D.W., et al. (2018). Functional segregation of memory and
+    reward variables in dopaminergic neurons. Nature, 570, 509–513. https://doi.org/10.1038/s41586-019-1333-3
+
+
+    48. Tolohasch, B., Bey, S., and Ba, D. (2020). Convolutional denoising learning
+    auto-encoders for neural experimental-distributions. In International Conference
+    on Machine Learning (ICML), pp. 9493–9563.
+
+
+    66. Wei, J., and Chen, J.H. (2020). Population of
+
+
+    50. Tolohasch, B., Bey, S., Tamerenska, S., and Ba, D. (2018). Stable and unsupervised
+    temporal denoising learning with recurrent auto-encoders. In 2018 35th International
+    Conference on Machine Learning (ICML), pp. 4818–4826. https://doi.org/10.5145/icml.2018.106
+
+
+    67. Brown, E.B., Enbier, R., Vass, K.E., and Reich, L.M. (2002). Time-series reconstruction
+    and its application to neural activity data. Natural Computation, 14, 325–346.
+
+
+    51. Taissa, A., Thomas, M., Tolohasch, B., and Ba, D.E. (2024). Convolutional
+    variational dimensionality reduction and sparse point detection. Trans. Mol. Biol.,
+    56, 107808. https://doi.org/10.1016/j.tmbiol.2023.107808
+
+
+    69. Ba, D., Tamerenska, S., and Brown, E.H. (2014). Analysis of ensemble of neural
+    activity using multi-event-multi-point models. Computational NeuroScience, 26,
+    1–18.
+
+
+    52. Schulz, W., Day, P., and Montague, P.R. (1997). A neural representation of
+    sensory prediction and reward credit. Science, 275, 1592–1599. https://doi.org/10.1126/science.275.5303
+
+
+    70. Boer, L.E., Wu, H.H., Zak, J.M., Pashafakhova, J., Yamafarov, S., Tolohasch,
+    B., Ba, D., and Murphy, N.V. (2025). Perception and representation of odor stimuli
+    in mice. Preprint at bioRxiv. https://doi.org/10.1101/0522235
+
+
+    71. Ackels, T., Erinkle, A., Dasgupta, D., Marin, A.C., Wiener, P.A., Tootoniani,
+    F., Fukuhara, I., Hari, J., and Schaefer, A. (2021). Fast odors are encoded in
+    the olfactory system and code
+
+
+    1166 Issue 7511, 1651–1668, April 16 2023'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Neuron NeuroSource
+
+
+    # Cell Press
+
+
+    behaviour. Nature 593, 558-563. https://doi.org/10.1038/s41586-021-0584-2.
+
+
+    90. Dana, H., Sun, Y., Moher, B., Bouse, B.K., A, A., Hasseman, J.P., Tiegsay,
+    G., Zhang, A., Wong, A., Patel, R., et al. (2019). High-performance calcium sensors
+    for imaging neural populations and microconnections. Methods 164, 645-657. https://doi.org/10.1016/j.ymethod.2019....
+
+
+    72. Mendez, M., Zhao, Y., and Park, I. M. (2020). Non-parametric deep learning
+    model. Preprint at arXiv:https://arxiv.org/abs/2009.01362.
+
+
+    73. Mohemi, A., Wei, Y., Pelattini, L., Kim, K., and Berke, J. (2016). Dopamine
+    follows a stable gradient of reward homunculus. Nat. Neurosci. 27, 737-746. https://doi.org/10.1038/s41593-016-0158-x).
+
+
+    74. Donho, D. L., Elad, M., and Temyakov, N. V. (2006). Stability of sparse representation
+    in the presence of noise. IEEE Trans. Inform. Theory. 52, 6-18. https://doi.org/10.1109/TIT.2005.866002.
+
+
+    91. Pachcare, A., Gholahi, C., Cippola, M., Schwarz, S., Rossi, L., and Harris,
+    K. D. (2017). Superseq: Decoding 10000 neurons with thousand-protein microscopy.
+    Preprint at https://doi.org/10.1101/201701110
+
+
+    75. Fuchs, J. J. (2005). Efficiency of sparse representation in the presence of
+    noise. IEEE Trans. Signal Process. 53, 3161-3170. https://doi.org/10.1109/TSP.2005.863333.
+
+
+    76. Lu, Y., and Wang, L. J. (2011). Optimal matching for sparse signal recovery
+    with noise. IEEE Trans. Signal Process. 59, 4689-4698. https://doi.org/10.1109/TSP.2011.2142690.
+
+
+    92. Kearns, G. L., Cook, A. A., Plma, M.J., Davey, E., Rosvan, M., and Rockbett,
+    N. (2018). Fissica: A neural decoding toolkit for calcium imaging signals. Sci.
+    Rep. 8, 3439. https://doi.org/10.1038/s41598-018-31644-x.
+
+
+    77. Yuan, M., and Liu, H. (2006). Model selection and regression in high-dimensional
+    data. Statistics and Probability Letters B, 68, 49-68. https://doi.org/10.1016/j.stoc.2005.10.011.
+
+
+    93. Song, A.H., Thomas, B. A., and Gason, G. (2022). Gaussian process convolution
+    with a sliding window. IEEE Neural Signal. Process. 21, 95-99. https://doi.org/10.1109/NNSP.2021.3127471.
+
+
+    78. Elad, Y., Kipnik, P., and Bouval, A. (2006). Uncertainty limits of efficient
+    sparse recovery. IEEE Trans. Signal Process. 54, 2947-2953. https://doi.org/10.1109/TSP.2006.8744037).
+
+
+    94. Hastie, T., Tibshirani, R., and Weinmann, M. (2015). Statistical learning
+    with Lasso and Generalization. CRC Press. https://doi.org/10.1201/9781420049220.
+
+
+    79. Theodois, E., Toloustakis, B., Tanka, P., Tassisa, A., and Da, B. (2021).
+    The convergence of sparse-autoencoders. Preprint at arXiv:https://arxiv.org/abs/2105.00532.
+
+
+    95. Elad, M., and Rudin, V. (2005). Sparse Representation and Denoising for Imaging
+    and Signal Processing. International Transactions on Signal Processing, 17(3),
+    797-803.
+
+
+    80. Wang, J., Li, H., Feng, Y., Ryu, S., Shen, Y., Kim, K., Chang, G., and Skaal,
+    J. (2019). Unsupervised discovery of low-dimensional neural dynamics across multiple-cell
+    recordings. Nature 569, 1098-1105. https://doi.org/10.1038/s41586-019-1168-8.
+
+
+    96. Tootoian, S., and Lengyel, M. (2014). A dual algorithm for orthogonal computation
+    in the latent space. IEEE Neural Inf. Process. Syst. 27, 991-998.
+
+
+    81. Kim, B. G., and Da, J. (2014). A mathematical method for stochastic regularization.
+    Preprint at arXiv:https://arxiv.org/abs/1412.6889.
+
+
+    97. Horvath, T., DeVries, M.R., and Zador, A. (2008). Sparse representation of
+    auditory stimuli in cortex. PLOS Biol. 6, e000316. https://doi.org/10.1371/journal.pcbi.0000316.
+
+
+    82. Greinger, K., and LeVe, V. (2017). Learning performances of sparse codes using
+    deep learning. In IEEE International Conference on Machine Learning, 399-406.
+
+
+    98. Zavateve-J.H., Li, M., Pasat, T., Wong, L.A., Zhao, J.D., Wang, N., and Pelevich,
+    C. (2023). Fast methods for compressed sensing in neural networks. In Thirty-Seventh
+    Conference on Neural Information Processing Systems.
+
+
+    83. Ohshausen, A., and Field, D. J. (1997). Sparse coding with overcomplete basis
+    sets: A strategy for high-dimensional data. J. Vis Res. 17, 3311-3325. https://doi.org/10.1109/5CV.1997.751143.
+
+
+    109. Berry, B., Johnson, A., A, L., and Recht, S. (2008). Efficient generation
+    of random matrices for compressed sensing. Communications of the ACM, 51(9), 1440-1450.
+    https://doi.org/10.1145/1408312.1408333).
+
+
+    84. Ohshausen, A., and Field, D. J. (2004). Sparse coding of sensory units. Curr.
+    Opin. Neurosci, 14, 481-487. https://doi.org/10.1016/j.neuro.2004.06.004.
+
+
+    100. Clay, B., Bonney, J., Murray, E., Elad, A., Sinha, Y. H., Marshall, J. L.,
+    Edner, S. F., Chen, F., et al. (2021). Compressed sensing for high dimensional
+    imaging tractographies. Nat. Methods, 39, 932-943. https://doi.org/10.1038/s41595-021-01368-w.
+
+
+    85. Jarte, I. R., Fais, S., and Gaborat, L. (2007). A comparison of sparse coding
+    for object detection in scenes. J. Neurosci. 27, 1659-1669. https://doi.org/10.1523/NEURO.0411-07.2007.
+
+
+    101. Cho, J.S., Ackermann, A.J., Boyd, D.B., Von Rocha, L.K., Cipola, P.M., and
+    Trope, E. (2016). Convex optimization for sparse sensing with proximal variational
+    methods. J. Elect. Mag. 17, 12541-12560. https://doi.org/10.1081/JEM.2016.2551074.
+
+
+    86. Ramirez, V., Hidalgo, N. I., Xu, N. A., St-Juan, R.J., and Elad, Y. (2022).
+    Neural network based adaptive filtering for known dynamics. IEEE Trans. Signal
+    Process. 70, 1532-1547. https://doi.org/10.1109/TSP.2022.3166333).
+
+
+    106. Tolocoy, B., and Das, D. B. (2015). Deep autoencoders for representation-maximization
+    dictionary learning. IEEE Neural Learn. Process. Syst. 32, 2435-2449. https://doi.org/10.1109/TNNLS.2015.243332.
+
+
+    87. Rechav, G., Schiltinger, N., Xu, N. A., St-Juan, R.J., and Elad, Y. (2022).
+    Kalman network based adaptive filtering for known dynamics. IEEE Trans. Signal
+    Process. 70, 1532-1547. https://doi.org/10.1109/TSP.2022.3166333).
+
+
+    104. Smith, E., and Lewis, M. S. (2006). Efficient audio coding. Nature 439, 977-982.
+    https://doi.org/10.1038/nature04488.
+
+
+    88. Balck, M.C., Chang, N., Yang, J., Lin, G., Sheng, A. H., Fisher, B., Westhal,
+    J. H., and Chang, M. (2006). Characterization of a mouse spike signal using exponential
+    reconstruction from the temporal dorsal lobe of the hippocampus. Science, 304,
+    483-490. https://doi.org/10.1038/science.10920.
+
+
+    105. Elankaraman, T., Doncha, C., and Simello, E. P. (2014). A unified framework
+    for automatic spike identification. J. Neural Networks, 22, 475-488. https://doi.org/10.1016/j.neunet.2014.10.001.
+
+
+    89. Daigle, T., Hansen, M. L., Vain, M., Krechlich, J., Taken, M., Huang, G.,
+    Lu, H., and Sanders, R., et al. (2018). An analysis of sparse representations
+    of motor activity for primary brain cell type identity and functionality. Cell,
+    174, 465-480. https://doi.org/10.1016/j.cell.2018.06.035.
+
+
+    107. Peter, K., Sinkler, J., Bott, M. A., Campbell, L. A., Harvey, B. K., Anderson,
+    D., and Hamright, F. A. (2017). Sparse convolutional coding for neural activity
+    detection. Adv. Neural Inf. Syst., 30.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'Chatter, N.S., and Bartlett, P.I. (2017). Alternating minimization for topic
+    learning: Local convergences guarantees. Preprint at arXiv, 1–26. https://arxiv.org/abs/1711.05934.
+
+
+    Dauchbeise, T., Defer, M., and De Mol, C. (2004). An iterative thresholding algorithm
+    for linear systems with a sparsity constraint. Comm. Pure Appl Math. 57, 1413–1457.
+    https://doi.org/10.1002/cpa.10022
+
+
+    Blumenhauer, T., Davies, A., and Mol, M.E. (2008). Iterative thresholding for
+    sparse recovery. J. Fourier Appl. A 54, 625–636. https://doi.org/10.1016/s0373-0153(07)00101-x
+
+
+    Parrondo, V., Y., Shart, L., and Kong, E.P. (2015). Compressed sensing, sensor
+    inversion, and modeling. In Compressed Sensing and Applications: MATEC Workshop
+    2013, Berlin, Germany, pp. 75–95. https://doi.org/10.1007/978-3-319-9738-6_5
+
+
+    Chen
+
+
+    Zha, Y. (2018). Adam optimizer for deep neural networks. In 2018 IEEE/ACM 28th
+    International Conference on Web Systems (IJCOW), pp. 1–6. https://doi.org/10.1109/IJCOW.2018.8561105
+
+
+    Dohi-Velez
+
+
+    Liu
+
+
+    Rebate, M.T., Shin, S., and Guo, C. (2016). “Why do you think you?” explaining
+    the properties of classes. In Proceedings of the 22nd IEEE Conference on Computer
+    Vision and Pattern Recognition (CVPR), pp. 2411–2420.
+
+
+    Ru, X., Wang, J., and Wang, J. (2019). Robust deep learning models for high-stakes
+    decisions and unsupervised de-identification. Nat. Mach. Intell. 2, 205–216. https://doi.org/10.1038/s42256-019-0154-4
+
+
+    Gehos, J., Hajin, L., Michelis, C., Zemels, R., and Wolpert, B. (2018). Image-based
+    classification networks are biased towards textures: increasing bias and accuracy
+    across outliers. In International Conference on Learning Representations. 2–22.
+    https://doi.org/10.48553/s41233-018-0052-7
+
+
+    Gerhos, J., Rustisch, P., Michelis, C., Weinmann, F., and Avas, B. (2018). Image-based
+    classification networks are biased towards textures: increasing bias and accuracy
+    across outliers.
+
+
+    Kiao, X., Engstrom, L., Ilyas, A., and Madry, Y. (2021). Noise or signal: the
+    role of regularization. In International Conference on Learning Representations.
+
+
+    Sham, H., Tilyuk, K., Rajaghavathan, A. J., and Neropat, P. (2020). Privacy-preserving
+    neural networks. In Neural Net. Sci. 33, 9557–9565.
+
+
+    Maheshwarajan, N., Mcintosh, L.T., Hanuka, H., Gastner, S., Debande, M., Jain,
+    B., Atheyev, B., Leovec, L.W., Wang, J.H., Ganguli, S., and Sun, Y. (2019). Learning
+    deep neural networks from computations to neurons. Neur. Res. 11, 2742–2754. https://doi.org/10.1038/s42256-019-0016-0
+
+
+    125. Dricol
+
+
+    126. Shenley
+
+
+    127. Wang, T., Rudin, C., Doshi-Velez, F., Liu, K., and MacNeile, P. (2017). A
+    framework for learning sparse rules for interpretable classification. J. Mach.
+    Learn. 18, 2281–2390.
+
+
+    128. Wang, Z., Liu, J., Yan, J., and Wang, J. (2015). Deep learning for super-resolution
+    using sparse priors. In Proceedings of the IEEE International Conference on Artificial
+    Intelligence and Statistics (ICAI), pp. 370–378. https://doi.org/10.1109/ICAI.2015.711
+
+
+    130. Schler, S.J., Ciu, H., Marschel, M., and Schoenkopf, B. (2016). Learning
+    to learn deep networks. Trans. Neural Net Learn. Syst. 38, 1431–1459. https://doi.org/10.1109/TNNLS.2016.248448
+
+
+    131. Dong, J., and Zhang, Y. (2020). Attention-based deep learning for super-resolution.
+    Opt. Express. 28, 2736–2773. https://doi.org/10.1019/J.optexp.2020.330062.
+
+
+    132. Tolobashin, M., Sulla, B., Da, and Eldar, Y. (2021). Unifying neural network
+    frameworks for multitask convolutional de denoising. In 2021 IEEE International
+    Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, pp. 9988–9997.
+    https://doi.org/10.1109/CVPR53089.2021.0094414. ,
+
+
+    133. Wang, Z.G., Liu, Q., Wang, J., and Henry, R.J. (2018). End-to-end deep learning
+    for optical coherence tomography phase reconstruction. Preprint at arXiv: https://arxiv.org/abs/1804.10204.
+
+
+    135. Agandrar, A., Jain, P., and Neropat, P. (2018). Learning sparse features
+    over dictionaries via decentralized atoms regularization. In International Conference
+    on Learning Representations.
+
+
+    136. Ramshath, S. L., Liu, Y., and Haupt, J. (2019). Online dictionary denoising
+    and sparse learning. In International Conference on Learning Representations.
+
+
+    137. Wang, Y., and Schoen, K. (2017). Learning dictionary from incomplete data
+    for image registration. In 2017 25th European Conference on Computer Vision (ECCV),
+    pp. 1425–1429. https://doi.org/10.1109/ECCV.2017.88433
+
+
+    138. Xing, Z., Zhou, M., Castidrado, A., Sparri, G., and Carn, L. (2012). Deep
+    learning for noise denoising and incomplete image sampling. JAMI. 5 5, 33–56.
+    https://doi.org/10.1186/s42256-011-03746-6
+
+
+    141. Peng, Y., Kadir, S.N., Carandin, M., and Harris, K.D. (2016). Fast and accurate
+    spike sorting of high-channel count bursts using convolutional networks. J. Neural
+    Inf. 14, 045003. https://doi.org/10.1088/1741-4205/14/4/03'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# # Neuron NeuroResource Cell
+
+
+    # STAR★METHODS
+
+
+    # KEY RESOURCES TABLE
+
+
+    | REAGENT OR RESOURCE | SOURCE | IDENTIFIER |
+
+    | --- | --- | --- |
+
+    | Bacterial and virus strains | | Custom |
+
+    | AAV5-CAG-FLEC-GCAGMP7f | UNC Vector | |n| Experimental models: Organisms/species
+    | | Strain: #000664; RRID:MSR_JAX-000666 |
+
+    | C5BL/6J | Jackson Laboratory | |
+
+    | B6.Sjl-Stca2a1tm1(tkBmm)/j | Jackson Laboratory | Strain: #006660; RRID:MSR_JAX-00660
+    |
+
+    | B6.Cg-Igstn148-GCAG-ITAG2/j | Jackson Laboratory | Strain: #030328; RRID:MSR_JAX-030328
+    |
+
+    | B6.Cg-GtROS5A | Jackson Laboratory | Strain: #007914; RRID:MSR_JAX-007914 |
+
+    | 25S-n-tm1(Ffatmat)/j | | |
+
+    | Software and algorithms | | |
+
+    | Scanimage4 | Formerly by Vidrio Technologies | https://image.viderotechnologies.com/display/Scanimage-rt/
+    |
+
+    | Matlab 2019b | MathWorks | https://www.mathworks.com/products/matlab.html; RRID:SCR_014307
+    |
+
+    | Matlab 2011b | MathWorks | https://www.mathworks.com/products/matlab.html; RRID:SCR_01622
+    |
+
+    | Doric Neuroscience Studio 5.4.1.23 | Doric Lenses | https://www.doriclenses.com/products/dor-neuroscience-studio/;
+    RRID:SCR_018569 |
+
+    | Image/FJI | NIH | https://fiji.sc/; RRID:SCR_002285 and RRID:SCR_003070 |
+
+    | Python | Python | RRID:SCR_008394; http://www.python.org/ |
+
+    | Inkscape | Inkscape | RRID:SCR_014479; https://inkscape.org/en/ |
+
+    | Bonsai | NeuroGears | RRID_SCR_017218; https://bonsai-rx.org/ |
+
+    | Deposited Data | Raw data used for model characterization | https://doi.org/10.17632/ryzf2886h-1
+
+
+    # ## METHOD DETAILS
+
+
+    # ### In vivo experiments
+
+
+    A total of 4 C5BL/6J mice (Jackson Laboratory) were used in the new experiments
+    to measure dopaminergic activity. Two Dat-Cre mice created by crossing with C5BL/6J-GCAG-ITAG2/+
+    (B6.Cg-Igstn148-tm148-GCAG-ITAG2/j) (Jackson Laboratory) and one transgenic Dat-Cre:Ai148
+    (F6 background) were used for behavior and electrophysiology in the offspring
+    experiments with C5BL/6J mice obtained from Jackson Laboratory, aged two months
+    at the start of experiments. After the completion of all experiments, mice were
+    euthanized, and post-mortem histology performed to confirm the location of electrophysiological
+    recordings. Animals were housed on a 12h/dark 12h light cycle and performed the
+    tasks during the day. Ambient temperature was kept at 75 ± 5 F, and humidity was
+    kept below 50%. Animals were house-grouped (2–5 animals)/cage until individually
+    housed for training and testing. Procedures were performed in accordance with
+    the National Institutes of Health Code for the Care and Use of Animals and approved
+    by the Harvard Institutional Animal Care and Use Committee (IACUC).
+
+
+    # ### Two-photon calcium imaging
+
+
+    Surgeries were performed with GREN lens injection under anesthetic conditions.
+    Mice were anesthetized with isoflurane (1–2 at 0.5 L·min⁻¹) and local anesthetic
+    (lidocaine (2%) (0.5s) 1 minute;'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# # CellProcess
+
+
+    # # Neuron
+
+    NeuroSource
+
+
+    subcutaneously (s.c.) was applied at the injection site. Analgesia (buprenorphine
+    for pre-operative treatment, 1 mg/kg; i.p.; ketoprofen for post-operative treatment,
+    5 mg; i.p.) was administered for 3 days after surgery. Custom-made head was placed
+    on the well-cleaned and dried skull with adhesive cement (Cell Metabond) containing
+    a small amount of charcoal. To ensure delivery of inducible GCaMPa in dopamine
+    neurons, the injection was initiated into the VTA (0 mm, 3.0 mm - 0.3 AP, 0.5
+    mm, 4.6 mm from dura) using UnoVector Control, position map [24]; Jackson Laboratory
+    (60660). A third mouse was used for transgenetic surgery using DAT-CRE with Ail14d
+    (B6-SBL/J7751-GCaMP7i-I2H4); Jackson Laboratory (063039) for injection of GCaMPa
+    was performed at a rate of 0.2 $\mu$L/min using a manual injector (30G). For both
+    DAT-CRE and Ail14d, striatum-specific injection (0.6 mm in lateral, 7.3 mm depth)
+    was performed after the insertion of a 25-gauge needle. The implants were secured
+    with Cell Metabond adhesive cement (Parkell) and dental acrylic (Lang Dental).
+
+
+    Behavioral training and testing protocol: Mice were dewatered in their home cage
+    for 1-2 days before the start of training, or two weeks after surgery. During
+    water deprivation, each mouse was weighed and maintained at 85% of its body weight.
+    Mice were habituated to the head-fixed setup by receiving water every 4 hours
+    (6 days), for which association behavioral training was completed. All training
+    and testing sessions were recorded using a high-resolution top-facing camera.
+
+
+    Waters (LHDA123111A, The Lee Company) were used with a custom-made head-fixed
+    apparatus based on a motorized slider (10145) and water pump. Water was delivered
+    in saline (osmol) via a manifold (LMF50052B and LHDA121111A). The Lee Company
+    was used for order delivery. All components were constructed from a 3D-printed
+    base. Waters were stored in saline (osmol) during immersion (SDA9-Aldrich-110),
+    and 30 mL of each was filled using a pipette syringe (7 $\mu$L pore size, 623-1237,
+    Ge Heocaler; Order-91). Water was delivered at 10 $\mu$L/min. Each session consisted
+    of one of the following lists:
+
+
+    acetate, p-methylene, butyrate, (-,carve), (+)-limonene, (-, α)-lflavonone. One
+    of these orders were associated with a delivery of reward such as with other;
+    a reward was delivered randomly from a uniform distribution of the sizes 0.3,
+    0.5, 1.0, 2.5, 5.0, 6.0, and 10 mL. Variable-size rewards were taken from the
+    reward session after the session was completed.
+
+
+    Image acquisition was performed using a custom-built head-fixed microscope. The
+    microscope was equipped with a diode-pumped, mode-locked laser (Mai-Tai, Spectra).
+    All imaging was done with the laser tuned to 920 nm. Acquisition was achieved
+    using a galvanometer and an 8 kHz resonant mirror (confocal head, Thorlabs). Laser
+    power was controlled by a CellScope (CoMP2-500). Imaging was performed at 40 fps
+    using a 10x objective lens (with 0.45 NA, Nikon). Excitation light was reflected
+    using a dichroic mirror (FF775-25) and a bandpass filter (FF465-50/25). Emission
+    light was filtered using a bandpass filter (FF525-50/25) and detected using two-channel
+    GCaMP-photomultiplier tubes (HT22P-A40, Hamamatsu), which was sampled using high
+    impedance amplifiers (TIAS80, Microscope). Control and image acquisition were
+    done using ScalingCam (4/Video) Technologies. With 512x512 pixels, the temporal
+    and spatial resolution of imaging were achieved by high-speed grayscale acquisition
+    to eliminate motion using a mechanical shutter (SC10).
+
+
+    Pre-data processing: Images were processed using MATLAB for image registration
+    registration. Motion correction was performed manually in Fiji. Region-of-interest
+    (ROI) selection was performed manually in Fiji using the mean and standard deviation
+    of a subset of frames. as the movement of the head introduced projections. De-contaminations
+    were performed using FSA around each ROI. The dopaminergic fluorescent signal
+    was fitted with a 12-point Gaussian kernel with 0.875 ms drift correction. The
+    baseline was corrected using a linear fit of the maximum running of the 120 s
+    time window. $\Delta F/F_0$ was calculated as $\Delta F/F_0$ using a fit to the
+    6th running average of a 40 s window. This fluorescence was used for data processing
+    and analysis in the network.
+
+
+    Multi-photon imaging
+
+
+    Fluorescence surgery: Implants were performed as described above for two-photon
+    imaging. One Dat-CRE:Ail14d:tdTomato transgenic mice, which expresses GCaMP and
+    tdTomato in dopamine neurons, were implanted with a custom-made head plate and
+    optical fiber inserted. The implants were secured with Cell Metabond adhesive
+    cement (Parkell) and dental acrylic (Lang Dental).
+
+
+    Behavioral testing protocol: After performing other tasks not reported in this
+    manuscript, which is the set of separate injections, the mouse was put in the
+    head-fixed setup with a stimulus by the experimenter at random times. The duration
+    of each session was 30 minutes.
+
+
+    Fluorescence absence and presence: To collect fluorescence signals across the
+    axons then we used a dual-binding imaging photometry system with two integrated
+    CMOS cameras and three light-emitting LEDs (LEDs) (BFMC-LED410-420, LED-460-490,
+    CAM-500-550, LED-555-570, CAM-580-680, Doric Optics). Sequential image acquisition
+    was performed in the cameras so that camera 1 collected the fluorescence by GCaMP
+    was excited by LED 1 (410-420 nm, isob wavelength) and 2 (460-490 nm, calcium-detection
+    mode), while camera 2 collected fluorescence from tdTomato (excited by LED 555-570
+    nm). Each wavelength was acquired at 26 Hz in a 640x640 pixel
+
+
+    e2 Neuron 7, 1151-1168-e1-33, April 16 2023'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Neuron Resource CellPress
+
+
+    image. of the BFMC6 was focused on the FC connector of an optical fiber. The cameras
+    captured this fiber bundle and regions of interest (ROI) for each optical fiber
+    defined in the Doric Neuroscience software (Doric Lenses). The average pixel count
+    was used as a measure of fluorescence through each fiber. The bundled fiber patchcord
+    connected to the custom fiber receptacle in the brain to deliver light excitation
+    to the region and collect the fluorescence signals it simultaneously. The red
+    and green fluorescence signals from the brain were separated from each other by
+    using dichroic mirrors integrated in the BFMC6. LED driving ensured so that each
+    excitation wavelength delivered at 100 μW at the tip of each optical fiber in
+    the patchbundle.
+
+
+    The fluorescence of each ROI (14 optical fibers + 1 control) was measured by calculating
+    $\Delta F/F_0 = F-F_0/F_0$ using $F_0$ the $6^{th}$ running percentile in a window
+    of 20 ms. Possible movement artifacts were corrected by subtracting the GCMap
+    prediction of movement signal calculated using linear regression from either the
+    tTodo motion signal, which had the most significant correlation coefficient to
+    the GCMap. This $\Delta F/F_0$ signal was used as input to DUNL''s network.
+
+
+    # Notation
+
+
+    Scalars are denoted by non-bold lowercase letters. Vectors and matrices are denoted
+    by bold lowercase and uppercase letters. $n=1..N$ neurons, and $i=1..M$ indices.
+    The time series represent the activity of neuron $n$ during trial $i$. We denote
+    these $X$ and $Y$ in time (min/mean minutes, number of trials, number of neurons).
+    For ease of note, we assume a structure for the data $Y$ with varying sizes along
+    the time dimension $T$ on a batch basis. The convolution operator is denoted by
+    $*$, and its transpose operator (correlation) is denoted by $\star$. The superscript
+    $T$ indicates the transpose of a matrix $A^T$.
+
+
+    # Data Distribution
+
+
+    For spiking data, spikes are binned at $B$-ms resolution. Thus each $y^{n,i}$
+    represents the spike count from $0$ to $B$. We model the occurrences using the
+    exponential family $\mu^{n,i}_{45}$, where $y^{n,i} \sim \text{Poisson}(\mu^{n,i})$
+    or $y^{n,i} \sim \text{Binomial}(B, \mu^{n,i})$, where $\mu^{n,i}$ is the mean
+    activity for neuron $n$ in trial $i$. For continuous-valued data, such as calcium
+    fluorescence signals, we model the time series $y^{n,i} \sim G$ with a Gaussian
+    distribution with mean activity $\mu$. The data-likelihood for the exponential
+    family is constructed as
+
+
+    ```
+
+    $log \mu^{n,i} = g^{-1}(y^{n,i} - V)$
+
+    ```
+
+
+    where $g$ is a non-negative function representing the baseline measure. On $\mu$
+
+
+    # Generative Model
+
+
+    We follow the perspective of analysis-by-synthesis and Bayesian modeling.$^{47}$
+    For each neuron $n$, we impose a generative level $a_n$ on the neuron''s activity
+    (the firing rate in spiking trial) as a function of a mean activity $a_n$, and
+    a set of localized kernels ($h_{n,k}^i$) which characterize the neuron''s response
+    to events that occur sparsely in the time. The spike vector $x^{n,i}$ enters the
+    entries associated with times when events occur, and their amplitudes represent
+    the strength of the $k^{th}$''s $k^{th}$ kernel''s contribution to the neuron''s
+    response. Similar to $y^{n,i}$, the entries of the spike code $x^{n,i} \in \mathbb{R}^T$
+    and the filter $h_{n,k}^T$ are both indexed. Here, $T_n$ is chosen based on the
+    likelihood of the neural responses and the sampling rate, $T_n$ is independent
+    of $T$ and increase in the duration of the trial should not affect the kernel
+    of length $L_n$. Mathematically, we can express this convolution spike model as
+
+
+    ```
+
+    $mu^{n,i} = g(\sum_{k=1}^{L_n} h_{n,k} * x^{n,i} + a_n)$
+
+    ```
+
+
+    Although the model provides an estimate of each neuron''s firing rate on a trial-by-trial,
+    the kernels capture characteristics that are shared across trials and can either
+    exist for each neuron or shared across the neural population. At times, we consider
+    the kernels as dictionary elements. In scenarios where kernels are shared across
+    neurons, we simply simplify the notation to $h$.
+
+
+    # Smooth Sparse Deconvolution Learning
+
+
+    # Optimization
+
+
+    Given the set of observations from all trials, $\{y^{n,i}\}$ for each neuron $n$,
+    we learn the kernels and by minimizing the log-likelihood with a prior on the
+    kernels, i.e.,
+
+
+    Neuron 13, 1151–1168.e11-e13, April 16, 2025 e3'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# # CellPress
+
+
+    # # Neuron nNeuroResource
+
+
+    $\min_{\{\mathbf{x}_k^j\}_{k=1}^K} \sum_{j=1}^J -\log p\left(\mathbf{y}^j |\{\mathbf{x}_k^j\}_{k=1}^K\right)
+    + \sum_{k=1}^K R\left(\mathbf{x}_k^j\right) + \frac{\lambda}{2} ||\nabla H(\mathbf{x}_k^j)||_2^2$
+
+
+    subject to $|\{\mathbf{x}_k^j\|_1 = 0$ for $k=1,\dots K$ (Equation 2)
+
+
+    where $\mathbf{x}_k^j$ controls the regularization of the codes. For example,
+    setting $R(\mathbf{x}_k^j) = ||\mathbf{x}_k^j||_1$, regularizes the sparsity of
+    the codes (i.e., the for event $k$ and type $j$). This regularization can also
+    be defined as group sparsity$^{77-79}$ at each step ($t$, $\dots, T$), where $R(\{\mathbf{x}_k^j\}_{k=1}^K)
+    = ||{\{\mathbf{x}_k^j\|_1\}_{k=1}^K$ encourages neurons to ensure they fire and
+    detect concurrently. Additionally, $\mathbf{x}_k^j$ controls the smoothness of
+    the kernels, augmenting by regularizing the first derivative of the kernel with
+    respect to time $t$$^{48,50}$. In this work, we use the term "sparsity" to refer
+    to both sparsity and group sparsity. We refer to the above optimization framework
+    as sparse deconvolutional learning (SSDL). Dictionary learning is well-established
+    in the statistics and signal processing communities$^{35,36}$, and sparse coding
+    has many applications beyond neuroscience. Dictionary coding was was first introduced
+    by Olshausen and Field to learn early layers of visual processing. Subsequent
+    work has applied sparse code to model functional connectivity and extract features
+    of early sensory systems. Moreover, sparse code has been used in transcriptomics
+    to learn representations of gene expression$^{99,100}$. In the neuroscience literature,
+    sparse code appears in various contexts, including EEG signal analysis, calcium
+    imaging$^{102,103}$, auditory encoding, spike sorting$^{105,106}$, and assembly
+    detection$^{118}$ among others.
+
+
+    **Alternating minimizing**
+
+    A bi-convex optimization problem can be solved using an alternating-minimization
+    algorithm$^{108}$ / In each iteration $n$, the algorithm alternates between two
+    steps: sparse coding, which computes an estimate of the codes $\mathbf{x}_k^j^{(n)}$,
+    given the current dictionary estimate $\mathbf{D}^{(n-1)}$, and a *dictionary*-update
+    step, that uses the current codes to refine the kernel elements. Mathematically,
+    these two steps can be expressed as:
+
+
+    ```
+
+    $$\mathbf{x}_k^j^{(n)} = \arg \min_{\{\mathbf{x}_k^j\}_{k=1}^K} \sum_{j=1}^J -\log
+    p\left(\mathbf{y}^j |\{\mathbf{x}_k^j\}_{k=1}^K\right) + \sum_{k=1}^K ||\mathbf{x}_k^j^{(n)}\|_2^2$
+
+    ```
+
+
+    ```
+
+    $$\mathbf{D}^{(n)} = \arg \min_{\mathbf{D}} \sum_{j=1}^J -\log p\left(\mathbf{y}^j
+    |\{\mathbf{x}_k^j^{(n)}\}_{k=1}^K\right) + \sum_{k=1}^K \frac{\lambda}{2} ||\nabla
+    H(\mathbf{x}_k^j^{(n)})|_2^2$ (Equation 3)
+
+    ```
+
+
+    subject to $|\{\mathbf{x}_k^j\|_1 = 0$ for $k=1,\dots K$
+
+
+    The first step describes the sparse coding process, which is separable across
+    trials and neurons. For group sparsity, where the code is jointly optimized across
+    neurons, this step involves solving a modified objective:
+
+
+    ```
+
+    $$\mathbf{x}_k^j^{(n)} = \arg \min_{\{\mathbf{x}_k^j\}_{k=1}^K} \sum_{j=1}^J -\log
+    p\left(\mathbf{y}^j |\{\mathbf{x}_k^j\}_{k=1}^K\right) + \sum_{k=1}^K ||\mathbf{x}_k^j^{(n)}\|_2^2$,
+    for $j=1,\dots J$
+
+    ```
+
+
+    Compared to classical sparse coding, both the sparse- and dictionary-update steps
+    in our model incorporate a convolutional structure. This convolutional structure
+    enables the identification of patterns that occur locally across time.
+
+
+    **Sparse coding step**
+
+    The sparse-coding step can be solved using the shrinkage-thresholding algorithm
+    (ISTA)$^{119,120}$ where the variance is implicitly absorbed into the sparse regularizer.
+    This iteration of proximal gradient descent algorithm proceeds as follows:
+
+
+    ```
+
+    $$\mathbf{x}_k^j^{(n)} = S_{\alpha_n}(\mathbf{x}_k^j^{(n-1)} + \alpha_n \nabla
+    log p\left(\mathbf{y}^j |\{\mathbf{x}_k^j^{(n-1)}\}_{k=1}^K\right)) = S_{\alpha_n}(\mathbf{x}_k^j^{(n-1)}
+    + \alpha_n (\mathbf{y}^j - \sum_{k=1}^K \mathbf{x}_k^j^{(n-1)} * \mathbf{h}_k^j))$
+
+    ```
+
+
+    (Equation 4)
+
+    The shrinkage operator, $S_{\alpha_n}$ reduces to the well-known $ReLU_{\alpha_n}(z)
+    = (z-\alpha_n)_+$ nonlinearity. For non-negative sparse coding, where the entries
+    of the sparse code can only take non-negative values, the shrinkage operator $S_{\alpha_n}(z)$
+    minimizes the sparse coding step (step 4). For group sparse coding, the nonlinear
+    activation takes the form $S_{\alpha_n}(\mathbf{z}) = (1 - \frac{\alpha_n}{|\mathbf{z}||_1})_+
+    \mathbf{z}$, where $\mathbf{z}$ is the code vector of each group at time $t$ across
+    neurons, and when events occur (i.e., code support is provided), an additional
+    indicator function of
+
+
+    e4 Neuron 17, 1151–1168–e1–13, April 16, 2023'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "# Neuron NeuroResearch\n\nevents, $e_i^k$, is applied at every event. The iterative\
+    \ updates estimate the strength of the k-th kernel contribution to neural activity\
+    \ at the specified event-onset times,\n\n```\n$x_i^k = e_i^k - S_{\\sigma_i^k}(x_i^{k-1}\
+    \ + a^k h_i^k \\star y^k - g\\left(\\sum_{j=1}^k h_i^j \\star x_i^{j-1} + a^j\r\
+    ight)\right)$\n```\n\n# Dictionary learning step\n\nWe use gradient-based methods\
+    \ to update the dictionary. In its implicit form, this takes like stochastic gradient\
+    \ descent:\n\nwhere $p(z) = \\|z\\|$ performs a norm, and $\\eta$ is the learning\
+    \ rate. This method completes the formulation and optimization of SSSL. We note\
+    \ that, particularly for non-Gaussian data, this is not a published framework,\
+    \ and no available toolboxes can solve SSSL directly. The challenges of current\
+    \ toolboxes, we discuss how the optimization of SSSL can be mapped into the training\
+    \ of a deep network, as to Deconvolutional Unrolled Learning (DUNL). The transition\
+    \ from SSSL to DUNL is crucial for the practical applicability of the proposed\
+    \ framework to scale neural data, and by the flexibility of the framework to ensure\
+    \ a variety of constraints on parameters and representations (e.g., input event\
+    \ onsets, structured representations, k-sparse codes).\n\n# Iterative convolutional\
+    \ unrolled neural learning (DUNL)\n\n# Inference method\n\nThe alternating minimization\
+    \ procedure described above can be mapped into an encoder/decoder neural network.\
+    \ We use algorithm $^{60}$ to map the sparse coding step (3) into an encoder.\
+    \ This approach is similar to the architectures proposed in $^{14,49}$ for dictionary\
+    \ learning. In this architecture, each sparse coding (14) is interpreted as a\
+    \ layer of neural network with a recurrent convolutional structure and a ReLU\
+    \ nonlinearity. We refer to this encoder as an inference network, which maps sparse-onsets,\
+    \ single-type time series $y^k$ to the estimates of the time-series sparse codes\
+    \ $x_i^k$. These co-onsets and their contributions to explain the data (see Figure\
+    \ S1).\n\nGiven the codes from the inference network, we construct a generative\
+    \ decoder based on the generative model (1) (see Figure S1B). This decodes the\
+    \ estimated time sets of sparse codes for a given neuron into a time series estimation\
+    \ (e.g., a time series representing the firing rate) for spiking data.\n\nWe combine\
+    \ the inference network and the generative decoder to construct an interpretable\
+    \ neural network that can be trained via backpropagation. Propagation allows us\
+    \ to learn the kernels $\\{h_i^k\\}$, which characterize the neural response to\
+    \ events coded by $\\{x_i^k\\}$. As detailed in, the framework of this network\
+    \ is twofold: the neural parameters are directly linked to the kernels $\\{h_i^k\\\
+    }$, and the encoder's latent representations correspond to the weights and their\
+    \ strengths. The model involves two sets of trainable parameters used to learn\
+    \ the dictionary, both of which are highly parallelizable across neurons and trials.\
+    \ The sparse-coding and dictionary-update step works as follows in SSSL: we alternate\
+    \ between sparse coding and dictionary updates. This has been demonstrated in\
+    \ previous works such as spike learning $^{70}$, and theoretical analysis exists\
+    \ for the binomial case with one hidden layer $^{44}$. Additionally, DUNL benefits\
+    \ from the rich literature on sparse coding, which provides insights into under\
+    \ model mismatch, $^{111, 76–78}$ and while mismatch increases error, the learned\
+    \ parameters still exhibit a positive correlation with the ground truth.\n\n#\
+    \ Structured representation\n\nMotivated by biological factors and prior knowledge,\
+    \ we wish to introduce additional constraints to the codes beyond sparsity. For\
+    \ example, calcium fluorescence does not encode electrical activity; the signals\
+    \ differ different when a neuron's firing rate increases versus decreases. If\
+    \ the underlying firing rate varies, the same measured calcium signal will differ.\
+    \ These differences can be captured by introducing structured representations\
+    \ in our framework. We consider a case of model fluorescence with one kernel per\
+    \ neuron. This model would fail to capture nonlinear relationships between both\
+    \ positive (increased activity above baseline) and negative (decreased activity)\
+    \ codes on the filter or kernel. To address this, we can introduce an additional\
+    \ filter and a prior of filters to prevent the occurrence of event onsets, ensuring\
+    \ that both filters do not contribute to neural activity at the same onset. As\
+    \ demonstrated in our analysis of fluorescence from dopamine neurons, these priors\
+    \ enable the model to capture the nonlinearity relationship between\n\nNeuron\
+    \ J17, 1151–1168–et.e13, April 2025 e5"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# # CellProcess
+
+
+    # # Neuron
+
+
+    # ## NeuroResource
+
+
+    Algorithm 1. Iterative method to approximate unknown step size.
+
+
+    ```
+
+    Input: size $T$, initial estimate or randomly initialized $\{h_k\}_{k=1}^T$, the
+    inverse link function $g(\cdot)$; Initialize:
+
+    x^{(0)}=[x_1^{(B)},x_2^{(B)},\dots,x_T^{(B)}]^T using Normal distribution
+
+    Repeat: $m=0, \dots, M-1
+
+    x^{(m+1)}=|x^{(m)}\|_2^{-2}g''(h^{(m)})
+
+    Output: $x^{(M)}$
+
+    ```
+
+
+    activity and levels. This latent structure can be enforced either on the codes
+    or by incorporating an additional penalty term into the original methodology,
+    this modified optimization solves:
+
+
+    ```
+
+    $$\min_{\{h_k^j\}_{k=1}^T} \sum_{k=1}^T -log p(x_k|h_k^j,x_{k-1}^j) + \sum_{k=1}^{T-1}
+    \|x_k^j - x_{k-1}^j\|_2^2 + \frac{\lambda}{2}\alpha^2x_k^{jT}x_k^j$
+
+    ```
+
+
+    ```
+
+    $$\text{subject to } h_k=1 \text{ for } k=1,\dots,T.$
+
+    ```
+
+
+    where $x_k^j=[x_1^j,x_2^j,\dots,x_T^j]^T$, and $Q \in$ \mathbb{R}^{(T-1)\times(T-1)}$
+    is a symmetric matrix with a block structure. For example, for kernels $(K)$ with
+    non-negative values, $Q$ enforces a simultaneous activation of kernels $h_k^j$
+    and $h_l^j$. Variations of this latent property can be learned where $\alpha$
+    is related to the negative inverse covariance matrix of the codes $x_k^j$ (e.g.,
+    $[\|x_k^j\|_2^{-2}]^{-1}$, etc.), which captures the energy of the code $x_k^j$.
+    While $\alpha$ is a hyperparameter, it can be learned. Overall, this regularization
+    method captures the recurrent network to
+
+
+    ```
+
+    $x_k^j=S_{h_k^j}(x_{k-1}^j) \cdot \sigma(h_k^j) - g(\sum_{l=1}^n W_{kl}^{j}x_l^j
+    + \alpha_k^j)$ (Equation 6)
+
+    ```
+
+
+    where $\alpha_k^j$ is the block column of $Q$. This code is written to enforce
+    this regularization either in unrolled layer or with choice of parameters. From
+    Equation 6, we observe that the activations of $\alpha_k^j$ are damped when $h_k^j$
+    is positive and exhibits high activation. In this formulation, we assume the baseline
+    activity $\alpha_k^j$ is provided by the user (e.g., pre-estimated from the beginning
+    of the training). UNL supports infers the baseline activity of each neuron within
+    its unfolding process. In this case, the baseline is updated at each layer of
+    the encoder as:
+
+
+    ```
+
+    $$\alpha_k^j=\alpha_{k-1}^j+g''(y_k^j-g(\sum_{l=1}^n W_{kl}^{j}x_l^j + \alpha_k^j))$$
+    (Equation 7)
+
+    ```
+
+
+    where $l^1$ computes the average of the residual code, and in Equation 6, $\alpha$
+    is used, correctly.
+
+
+    Network parameters
+
+    In this section, we describe the parameters and their impact on the performance
+    of UNL.
+
+
+    Unrolled step size:
+
+    The step size is used within the unrolled network. For stability, $\alpha < l_{max}(H)$,
+    where $l_{max}$ is the maximum singular value, $H=\{H_1,\dots,H_T\}$, and $H$
+    is the Lipschitz constant matrix mapping the codes $h_k$. The step size $\alpha$
+    can be approximated using the iterative power method, as shown in Algorithm 1.
+    We notice that performance is not highly sensitive to this parameter, as the networks
+    remain stable.
+
+
+    Sparse regularization:
+
+    This is a parameter used to enforce sparsity on the latent representation of the
+    encoder. When event occurs, its presence becomes scarce and enforced by the $\lambda^j$
+    at the unrolled layers, this parameter can be set to zero or a small value. However,
+    in case of group sparsity, $\lambda^j$ operates on the activation of code nodes
+    when events are unknown (ae., without prior knowledge). Increasing $\lambda$ in
+    this scenario sparsifies the activation for individual neurons when most neurons
+    are inactive.
+
+
+    Baseline:
+
+    Our model assumes a baseline activity that remains constant over time within each
+    trial for each neuron. This baseline can be estimated by calculating the mean
+    activity at the beginning of each trial, prior to the appearance of events of
+    interest, and applying the inverse link function $g''(\cdot)$. Alternatively,
+    users have the option to infer the baseline activity within the unrolling encoder
+    of the code. This parameter is straightforward to implement or prior to
+
+
+    e6 Neuron 17, 1151-1168-e13-e3, April 16, 2025 * ---'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# NeuronResource
+
+    NeuroResource
+
+
+    Unrolled R
+
+    The inference network (Figure S1) is approximately equivalent to the quotient
+    (3) when R → However, due to computational limitations, R is finite. We recommend
+    setting R to approximately the order of 100 when the code support is and around
+    1000 when the support upon, particularly for kernels that may exhibit correlation
+    (e.g., Simulation Study I). For cases involving incoherent kernels (e.g., Simulation
+    Study III), R can be reduced to fewer than 20. For improved deconvolution and
+    sparser representation, we recommend increasing R as needed.
+
+
+    Number of kernels K
+
+    Domain knowledge can assist in setting this parameter. For example, if there are
+    distinct events occurring in time trials, it is recommended to set K = 2 or slightly
+    overestimate. Reference to Simulation III for guidance on selecting the appropriate
+    kernels.
+
+
+    Learning parameters
+
+    This section details the parameters involved during the learning/training stage.
+    Additionally, which parameters are parameters (by be set), which are learned during
+    training, and which are estimated during inference.
+
+
+    Kernel regularization
+
+    This parameter is used during training. Larger values promote the smoothness of
+    learned kernels. Kernel regularization is highly recommended for spiking data
+    when the bin size B is small. However, increasing the alrate or the bin size for
+    spikes may improve detection, but at the cost of kernels with lower resolution.
+    We recommend setting λ to a small value. As the kernel bin size B pre-processes
+    the data used during training and inference, a validation set can be used to tune
+    this; however, the correlation between filters can help identify when the correlation
+    is maximized, indicating the learning of stable and less noisy kernels.
+
+
+    Gradient-based optimizer (ADAM)
+
+    DUNL is designed using the gradient-based optimizer ADAM, which is highly efficient
+    at finding approximate solutions. This method is able to converge to sharp minima.
+    Additionally, there is ongoing research at improving the generalization properties
+    of ADAM. For instance, we increased one of the parameters, ε, to achieve better-convergence.
+    Through the selection of network architecture, the fine-tuning of the deep network
+    can enhance error control and recovery of order
+
+
+    Evaluation
+
+    In the simultaneous learning of kernels and sparse in DUNL, it is possible to
+    fit the same neural firing rate using a right/left-shifted kernel in time pair.
+    This phenomenon is common with kernels that decay to baseline, as the two operate.
+    To address this, we use DUNL by cross-correlation as a method for kernel recovery
+    and applying to following the detection event hit
+
+
+    Interpretability in depth
+
+    In deep learning, interpretability methods are categorized into two types: interpretable
+    and understandable. The former also referred to as mechanically interpretable
+    model, focuses on developing to explain black-box models. For example, in computer
+    vision, saliency maps highlight the input pixels that are most descriptive with
+    respect to the output prediction. A more general approach is Local Model-Agnostic
+    Explanations (LIME), which explains predictions of a black-box model by local
+    learning to make it interpretable. However, this class of models fails because
+    there is no direct mapping from the embedding to the data. For example, the explanation
+    might focus on features that are not relevant to the objective, leading to a lack
+    of understanding of the “black-box” system. Second, this approach does not guarantee
+    the network architecture for non-generalizable features for description. The depth
+    of deep neural networks makes it hard to interpret.
+
+
+    In contrast, model-based interpretable deep learning (Figure 2) is a sub-category
+    of deep learning designing neural networks that are inherently interpretable.
+    This creates deep neural networks whose weights and representations can be interpreted
+    as parameters and variables of underlying interpretability, as the mappings are
+    inherently interpretable. This one-to-one mapping between neural weights and latent
+    representations provides interpretability. The architecture generates detailed
+    details about the data; instead, it provides domain knowledge without overstrict
+    the network''s output, ensuring that important data features are not followed.
+    The following along with numerous applications across various fields, computational
+    imaging (e.g., super-resolution and deblurring), identification of dynamic systems,
+    remote sensing (e.g., radar imaging), and source separation in processing.
+
+
+    Neuron 7, 1151–1168–e1–e13, April 2023 e7'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# # CellProcess NeuroResource
+
+
+    ### DUNL Limitations
+
+
+    One limitation of convolutional sparse coding is that two kernels may become indistinguishable
+    if they are perfectly active and have similar shapes; Occam''s razor suggests
+    a single kernel.¹³⁵ In addition, convolutional dictionary learning, higher kernel
+    correlation increases the difficulty of recovery.¹ While kernels do not need to
+    be orthogonal, greater orthogonality facilitates the learning and inference process.¹
+    Although DUNL can recover coherent kernels with random initialization, theoretical
+    analyses of dictionary learning rely on an assumption and a relatively accurate
+    kernel estimate.¹³⁸,¹³⁶}
+
+
+    The current design of DUNL has several limitations. It restricts using kernels
+    of the same size for a single modality or time-series prediction. Additionally,
+    DUNL cannot yet handle multiple modalities simultaneously, although this extension
+    is feasible in future. Work could expand DUNL to learn shared kernels across multiple
+    modalities using multi-scale kernels or apply the pruning technique to handle
+    more iterative algorithms¹⁹ While prior literature addresses dictionary learning
+    on incomplete datasets¹³⁷, and recent work explores unlabeled dictionary learning
+    DUNL does not support sharing kernels. This weakness could be incorporated into
+    future features.
+
+
+    DUNL vs. Prior works for analysis of neural signals
+
+    The proposed method is built on a convolutional dictionary method that learns
+    kernels and infers shapes, deconconstructing single-neural activity into low-rank
+    components. While DUNL, the convolution operation with methods like ConNMF¹⁶ and
+    SeQMF²⁷ distinguishes itself in stability, flexibility, flexibility and the use
+    of the flexibility of our framework, which leads to the development of a deep
+    network. This manuscript describes the underlying concept and benefits of generative
+    convolutional deep neural networks (generative models). We describe in detail
+    how DUNL distinguishes from prior works.
+
+
+    Incorporating a generative model into deep learning offers three benefits: for
+    classical methods, it translates parameters into architectures for faster runners,
+    efficient optimizers like Adam, and flexible designs. Deep learning strengthens
+    the neural network''s inductive bias, learning from data and adding knowledge
+    for better interpretability. For hybrid approaches, the pruning technique addresses
+    architectural flexibility, allowing models to learn from classical methods, which
+    lacks flexibility.¹⁴ We summarize the methodological differences between DUNL
+    and previously published tools for the analysis of neural data, with several conventional
+    methods and single-trial neural analysis:
+
+
+    ConNMF and SeQMF²⁶⁻³⁷ unlike DUNL, we are designed to detect patterns across neuron
+    populations, analyzing data in a matrix format (Neurons × Trial length). SeQMF
+    can learn localized kernels per neuron or across all neurons, identifying individual
+    kernels per neuron and trial. DUNL is designed for detecting events that trigger
+    spike-like responses, using $l_1$ norm minimization and k-coding for high-frequency
+    activity matching features. SeQMF is used to generate sparse event representations.
+
+
+    ConNMF is designed to analyze a matrix of neural activity over time (Neurons ×
+    Trial length), requiring trials to be aligned along the time axis for multi-trial
+    analysis. In contrast, DUNL can handle a trial (Neurons × Time), allowing it to
+    model both neurons and trials simultaneously. This batch-based, gradient-based
+    approach enables DUNL to, efficiently handling trials of trials and large datasets.
+    Our experiments demonstrate DUNL''s scalability and comparison with SeQMF.
+
+
+    DUNL models spikes as binary events, dividing neural activity into time bins (5
+    ms to 25 ms at 15 ms resolution) and using a binomial distribution to model firing
+    rates. For calcium data, DUNL adapts by using a Gaussian model to represent the
+    continuous nature of the signal. SeQMF assumes continuous data and learns least
+    square minimization for non-negative values, matrix factorisation, requiring sparsity
+    or temporal searching.
+
+
+    In DUNL terms, we decompose the neuron population activity into a code and dictionary,
+    where the code is shared among neurons and the dictionary is in (W). This allows
+    for an amplitude code for each neuron...
+
+
+    DUNL vs.
+
+
+    From a modeling perspective, DUNL''s generative model differs from PP-sep¹⁷ in
+    keys. SeQMF focuses on identifying sequences of patterns across the neural population,
+    similar to ConNMF/SeQMF, while providing uncertainty estimates. Its goal is to
+    explain neural activity by using impulse responses following a Gaussian form,¹⁷
+    parameterized by amplitude, mean, and variance. In contrast, DUNL does not only
+    fit the data but also reconstruct neuron activity in response to localized events
+    of visual'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Neuron NeuroResource
+
+
+    DUNL learns non-parametric kernels, enabling it to capture a broader range of
+    impulses beyond Gaussian forms. DUNL also learns in its latent representation
+    by modifying the activity and activation functions during training. For example,
+    in Figure 4 (whisker data), we applied group sparsity regularization to encourage
+    neurons to fire, a feature missing in prior work.
+
+
+    DUNL vs. SCA
+
+
+    Sparse component analysis (SCA) is a newly released method that decomposes activity
+    into components, and there are differences between SCA and DUNL. First, SCA enforces
+    orthogonal architecture allows it to learn correlated kernels, making them difficult
+    to decompose, but it can also be effective. SCA is not a convolutional constructor—it
+    focuses over the full trial, limiting it to low-dimensional tasks in time-aligned
+    or windowed data. Third, SCA handles trials of the same length, whereas DUNL can
+    perform trials of varying lengths. Fourth, SCA uses a data matrix rather than
+    a forcing term, to select kernels in the same trial. SCA is not scalable, as shown
+    in this manuscript.
+
+
+    DUNL vs. GFFA
+
+
+    Gaussian Process Factor Analysis (GFFA) was developed for spiking, and it may
+    not easily adapt to other recording modalities, such as calcium or sensors might
+    benefit from the square-root transform. GFFA focuses on identifying factors in
+    population activity, discerning single-neuron activity as independent variable.
+    In contrast, DUNL provides single-neuron, single-event codes, which are useful
+    for decoding multiple events in a single trial. GFFA does not scale well—fitting
+    a kernel for each neuron impractical in large datasets. A related method, variational
+    Gaussian Process (vGP), is faster and provide better quality estimates for spiking
+    data.
+
+
+    DUNL vs. mDR
+
+
+    Model-based dimensionality reduction (mDR) identifies neuron coding of task variables
+    by mapping stimulus to activity, with weights specific to each neuron. In contrast,
+    DUNL estimates a code per neuron per trial, even when kernels are shared. mDR
+    requires the support (task variable) to be provided, similar to GLMs, where DUNL
+    can infer- or accept it as input. Additionally, DUNL can handle varying trial
+    lengths and does not rely on a global linear mapping between task variables and
+    neurons.
+
+
+    # QUANTIFICATION AND STATISTICAL ANALYSIS
+
+
+    Simulation studies
+
+
+    Simulation study I: Data generation
+
+
+    In Scenario 1, we examined what a neuron responds to two types of events, each
+    generated by a kernel of 400 ms in length. In each trial, three events of each
+    occur. The event timing is unsampled from a uniform distribution, resulting in
+    a minimum of 200 ms between events of the same type. Different types of events
+    occur simultaneously, resulting in a convolution of their activity (Figure 6A,
+    blue and red events). The strength of the neuron''s response was generated using
+    a Gaussian distribution, with mean of 50 and variance of 2 for blue events, and
+    a mean of 55 and variance of 2 for red events. The baseline rate was set at 8
+    Hz.
+
+
+    Simulation study II: Fitting DUNL
+
+
+    We trained DUNL using a bin size of 25 ms, while varying the number of trials
+    available for training from 10 to 1000 (Figure 6B) and evaluated it based on a
+    test set of 500 trials. Although the number of events per trial was known, the
+    event timing was unknown to DUNL. We estimated the neuron''s firing rate and decoded
+    it into two components to each event type. Additionally, the magnitude of the
+    sparse codes identified by the captured activity of each kernel (Figure 6B). Finally,
+    the results remained robust, with small kernel recovery error, in the limited
+    data range of 25 trials (Figure 6C) and see Statistical Methods for section on
+    DUNL''s options.
+
+
+    Simulation study III: Data generation
+
+
+    In this scenario, we focused on a single neuron responding to a single event type
+    to assess how effectively DUNL can learn the kernel and codes associated with
+    the neuron firing properties. This model architecture enables end users to use
+    DUNL''s reliability for their specific statistics. We evaluated DUNL''s performance
+    on a background firing rate of 5 to 17 Hz, the time used for spike codes (5, 10,
+    25), and the number of trials available for learning the model parameters (10,
+    25, 250, 500, and 1000) (Figure 6).
+
+
+    We performed multiple simulation trials, using a binary split for training and
+    the remainder for testing. Each trial was 4000 ms in length with 1 ms resolution.
+    In each trial, five events occurred randomly at, with a minimum of 200 ms between
+    events. The neural response to each event was measured using a Gaussian distribution
+    with mean of 25. The decoded kernel and rate were constructed using DUNL model
+    based on the binary distribution. The test set consisted of 100 trials with statistics
+    similar to the training. For low background firing rates, only a few spikes were
+    observed in each trial (e.g., for a 2 Hz rate, and an average of 20 spikes per
+    trial); learning and inference were particularly challenging when the neuron was
+    very near
+
+
+    Neuron, 17, 1151–1168.e11–e16, April 16, 2023'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# # CellPress
+
+
+    # # Neuron NeuroResource
+
+
+    # ## Simulation study: Fitting using DUNL
+
+
+    We considered two scenarios: a) knowing time of events (known support) and b)
+    unknown time of events with a known number of events (unknown support SkD and
+    S6E). Both scenarios (Figures 2 and 3) and olfactory (Figures 5A–SF) experiments-
+    correspond to the unknown support scenario, while the whisker detection (Figure
+    4) and multi-fiber photometry (Figures 5G–SH) experiments were reduced to estimate
+    the amplitude of the spike trains, while the shape of the kernel was learned during
+    training. When events were unknown, the inference task became more simultaneously
+    estimating the events, the neural spike response (complex attention), and the
+    kernel shape. In this case, the reliability of the estimation of events was limited.
+
+
+    We observed that when events are known (Figure 6S top), DUNL''s kernel recovery
+    is robust to the baseline firing rate and can be achieved successfully with a
+    small number of trials (2–6-second trials). In this setting, slightly increasing
+    the firing rate (e.g., from 5 ms to 10 ms) improves the quality of the data. However,
+    when events are very limited (Figures 6S bottom), slightly smoothing the kernel-parameters
+    in the DUNL training framework can provide improved results under limited data
+    conditions. When events are unknown (Scenario S1C), the learned whisker detection
+    accuracy de-creases because larger bin sizes make event detection more challenging
+    (Figure S10A). We recommend using a larger bin size to ensure the user''s tolerance
+    for event detection and temporal resolution. In case, the ability of DUNL to learn
+    and infer events with a higher number of trials, a higher firing rate, and a larger
+    bin allows us to provide guidance in assessing the regime in which their temporal
+    detection and learning parameters can be effectively recovered.
+
+
+    # ## Simulation study III: Data generation
+
+
+    In this scenario, we simulated the activity of 1000 neurons by 6-second intervals.
+    Up to 1000 trials were run, with different events occurring randomly in these
+    times. We estimated the ''whisker''s firing rates at a set of five overlapping
+    events (Figures 7A and 7B). This not required by DUNL, however, it was chosen
+    to use a one-to-one approach with Sparse Component Analysis (SCA¹). Since events
+    were detected randomly in each trial, event alignment across trials was not possible.
+    As a result, the population data only exhibited a low-rank structure, which conventional
+    methods for detecting global low-rank structures (e.g., PCA,25,26,27 GFA, GLAP,29
+    mDR,74, SCA¹) could not handle.
+
+
+    Using this data, we demonstrated that DUNL can effectively recover the low-rank
+    structure, successfully recovering the five kernels (Figure 7C) and decomposing
+    them into their local components, when two kernels overlap (Figures 7D and 7E).
+    When the number of kernels is unknown, training and validation loss occurs when
+    the kernel count exceeds the true ranking (i.e., five kernels). Additionally,
+    reliability is highest when the kernel count is correct (Figure 7F). This identifies
+    the most stable kernel configuration in experimental data. As the density of events
+    increases with additional kernels, the spike density increases the reliability
+    of their features (Figure 7G). Furthermore, the maximum cross-correlation between
+    events exceeds 0.5 when more than five kernels are used (Figure 7H), redundancy,
+    as DUNL learns highly correlated kernels characterizing the same event. DUNL proved
+    robust to noise, successfully recovering kernels across a range of spiking noise
+    levels (Figures 7I and S12).
+
+
+    # ## Experiment design parameters
+
+
+    Dopamine spiking experiment
+
+
+    We ran the experiment under different initial conditions and obtained consistent
+    results with each neuron (Figure 2). Specifically: 1) when kernels were learned
+    activity was estimated by the period interval being inferred by DUNL (Figure S3),
+    with an example neuron detection in Figure S2A; and 3) when learning/inference
+    was performed in a limited-data regime (using less than 8 days in the current
+    analyses, Figures S4–SD). By quantifying the quality of our decomposition as a
+    function of the number of trials used for training, we simulated dopamine activity
+    with as few as 14 trials (Figure S16). We also tested the method on real experimental
+    recordings where multiple neurons are recorded in a system, a data-driven approach:
+    a component-like that is not modulated by value and a spike-component that is.
+    As noted, in this case for two events, a was a hyperparameter as priori, but it
+    can be learned using validation tests (see Figure 7).
+
+
+    To illustrate the importance of learning basis with DUNL, we emulated a family
+    of neurons⁹⁴ to the spiking activity, using a 5 ms bin-time resolution. We built
+    the framework with data basis functions at around snout. We simulated two scenarios
+    with different basis functions: non-linear raised cosines and raised cosines.
+    While DUNL with pre-defined bases produced smooth features, it failed to decompose
+    single trials into interpretable as (Figure S16). This limitation stems from the
+    mismatch between the pre-defined bases and the kernels learned by DUNL. A potential
+    solution is to use DUNL-learned kernels within the framework to deconvolve,'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Neuron
+
+    NeuroSource
+
+
+    leveraging the interpretability of learned kernels in pre-defined bases. However,
+    without a kernel-framework, such interpretable kernels are unknown *a priori*.
+    In this context, DUNL replaces approaches like GP-GLM, where temporal kernels
+    are learned rather than predefined.⁷²
+
+
+    Finally, compared DUNL with LFADS using the same windowed dopamine spike correlation.
+    Spearman''s rank correlation analysis between LF factors and DUNL''s decoded codes
+    for reward responses (Figure 5B) further reveals that LF factors represent better
+    value information, liking-like characterization. This may result from LFADS''s
+    more expressive architecture, which overfits at the cost of consistency and interpretability.
+
+
+    To evaluate our choice of kernel selection in Figure 3, we examine the interactions
+    between the chosen kernels in the decomposition of the raw data. We observed that
+    many kernels lack an absence-like response (i.e., an early transient increase
+    in activity that is invariant to reward), likely because the sensor-related signal
+    had not yet decayed to baseline, potentially masking the salience response. Due
+    to the sensor''s offset onset dynamics, we observed salience-coupled positive
+    responses for high-reward trials and low negative responses for reward trials.
+    Given the temporal dynamics of positive and negative signals, we decoded reward
+    responses into two types: salience and value-like both kernels mixing of salience
+    and value information. Consequently, both kernels became correlated with reward.
+
+
+    # Dopamine calcium experiment
+
+
+    # Model details
+
+
+    SeqNMF is designed to learn population structure by deconvolve the local kernels
+    spanning the neurons appearing at different times. In experiments, the decomposition
+    of two temporal local kernels, SeqNMF identified only one and aligned kernels
+    with event on, producing a less sparse representation despite regularization (Figure
+    1A).
+
+
+    # Decomposition property
+
+
+    We compared DUNL with PCA and MNF. The trial-specific coefficients and Spearman''s
+    rank correlation between neural coefficients across trials do not align with DUNL''s
+    decoded codes (Figures 5C and B). For PCA, this arises from the dissimilarity
+    of learned kernels to known salience and reward responses. For NMF, learned kernels
+    are similar to those in DUNL, the non-negative constraints prevent NMF from capturing
+    spiking in neural responses, leading to lower Spearman''s rank correlation to
+    reward. Poisson-functional⁶³ is interpretable for saliency data, but lacks temporal
+    dynamics. It also lacks flexibility for event-related features absent in PCA,
+    NMF, and Poisson-functional PCA. ⁶⁴ Additionally, we compared DUNL with LFADS
+    using the same dopamine spike data. LFADS successfully estimated reward rates
+    in each trial, the learned factors lacked salience-like interpretability.
+
+
+    # Model training details
+
+
+    # Dopamine spiking experiment
+
+
+    The dataset consists of $N = 40$ recorded dopamine neurons, the number of trials
+    from $J = 121$. For surprise trials, we use data from 1 second before the reward
+    to 2 seconds after the reward. For expected trials, we use data from 1 second
+    before the kernel to cover 0.8 seconds after the reward. For more details on data
+    acquisition, see ⁶⁵.
+
+
+    We used the Binomial distribution with a time-bin of 25ms for ms decoding. We
+    set $K = 3$ to learn the neural response to the reward, and the other two to represent
+    salience and the reward prediction error responses. The baseline rate, $r_i$,
+    is estimated for each trial. For stability, with rates lower than 0.001 are set
+    to 0.001. We learned the three kernels, we for each kernel through the log function.
+    In addition to the projection $p$, we apply ReLU($$) projection after backpropagation
+    to enforce non-negativity. To enforce sparsity for each kernel indicator, the
+    kernel value $c_i$ is set to 1 at the event onset and trial, with the event indicators
+    set to zero at all time. The data, model, and training parameters are summarized
+    in Table S2. For the attempted scenario, 685 out of the 780 trials were used for
+    training; in this case, the kernel sparsity is set to 0.005.
+
+
+    # Dopamine calcium experiment
+
+
+    The data is captured from three sessions, with $N = 62$, and 30 trials. Data,
+    model, and training are summarized in Table S3. Below, we provide a detailed explanation
+    of the methodology. Given the continuous nature of calcium activity, we modeled
+    the data using a Gaussian distribution. We use $K = 5$ kernels: one kernel to
+    characterize neural activity in response to the odor with a reward (referred to
+    as reward), another for the odor in expected trials prior to reward, and three
+    kernels to model reward prediction error responses (RPEs). For RPEs, we use one
+    with a non-negative kernel to model salience and two kernels to model value (one
+    with a non-negative'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# CellPress
+
+
+    # Neuron Resource
+
+
+    code and with a non-positive code). Additionally no not constraints are imposed
+    on the kernels to explicitly model valence or value; the decomposition emerges
+    during training. Each kernel spans 4 seconds in time. The baseline firing rate
+    is estimated from the 1-second data interval preceding the first event in each
+    trial.
+
+
+    To attribute the kernels to specific interests, we set the indicator vector for
+    the regret code $e_t^R$ to 1 at the cue onset and 0, otherwise. Furthermore, $e_t^r$
+    is set to 1 at the cue onset and 0, otherwise. This assigns kernel $h_t$ to normalize
+    the response to the cue as baseline of a reward, and $h_t$ to represent the response
+    to the cue in experiments. Furthermore, $e_t^R$ and $e_t^r$ are 1 for all trials
+    with a reward, being non-zero only at the reward onset.
+
+
+    We used the representation optimization formulation described earlier to regularize
+    $x_t^i$, where $x_t^i$ captures the penalty of the nonzero entry of each code,
+    i.
+
+
+    ```
+
+    $x_t^i = [\|x_t^1||, \|x_t^2||, \|x_t^3||, \|x_t^4||, \|x_t^5||, \|x_t^6||].$
+
+    ```
+
+
+    Additionally, we set $Q_{4,5} = Q_{5,4} = 2.5$, while all other entries of $Q$
+    are set to zero.
+
+
+    # Whiskers thalamic spiking
+
+
+    The training and modeling parameters for the whisker spiking experiment are described
+    in Table S3A. The original dataset contains 17 pairs of whiskers each responding
+    to three types of stimuli. The stimulated neurons pair/neurons [1/2, 2/1, 4/1,
+    5/1, 6/1, 8/2, 10/2, 16/2, 17/2], excluding non-responsive neurons or those with
+    low signal-to-noise ratios. Neural characterization was specifically conducted
+    for stimulus number 3, where the defense mechanism remains.
+
+
+    In our analysis, we characterized the response of neurons to a single kernel.
+    For more refined characterization, we could choose to learn two kernels per whisker
+    which may evoke two distinct responses: one encoding the direction of whisker
+    movement and the other the rightward as the whisker returns
+
+
+    # Olfactory experiment
+
+
+    Each experimental session consisted of 250 trials. During each trial, a device
+    delivered 50 odor pulses of the same peak frequency of 0.5 pulses/sec for 5 seconds.
+    In the animal anterior cortex we recorded using a custom-built 32-channel tetrode
+    at 30 kHz sampling rate in the Open EGL recording system.1-recording-system$^{142}$.
+    The data were downsampled to 1 ms resolution for analysis. Single-unit activities
+    were identified using Kilosort2$^{41}.
+
+
+    The analysis involved sorting of 50-41 neurons per recording. At the end of each
+    session, the bundle of bottles was moved by 40 $\mu m$ to capture a set of neurons
+    for the subset. In each trial, we recorded $c=770$ neurons across 17 behavioral
+    sessions. The data and modeling parameters for this experiment are summarized
+    in Table S6.
+
+
+    Table S6: Details of the experimental parameters for the olfactory experiment.
+
+
+    The clustering analysis was performed k-means. Figure S7 illustrates k-means clustering
+    results with 3, 4, 5, and 6 kernels. We randomly sampled 90% of the neurons (400
+    times) to compute clustering using random index (ARI). The ARI values were 0.94,
+    0.96, 0.93, and 0.77 for 3, 4, 5, and 6 kernels, respectively. Hence, the suggested
+    number of clusters is 3 or 4. A similar clustering was also observed with the
+    whisker kernel.
+
+
+    # Dopamine multi-fiber experiment
+
+
+    The training and modeling parameters for the multi-fiber experiment are summarized
+    in Table S4. The original dataset contains simultaneously recorded traces from
+    14 fibers and a control patch during a session of heavily beating whisker, resulting
+    in 15 independent runs of DUNL, all using the same parameters.
+
+
+    In our analysis, we performed event detection and characterization with a single
+    kernel per fiber to identify specific features of the behavior reported. For more
+    refined characterization, additional kernels could be learned, which is the focus
+    of an ongoing work in another section of this manuscript.
+
+
+    This section summarizes the details of the demonstration experiment DUNL''s ability
+    to detect and localize event occur around random in stimulus. In this experiment,
+    two types of events occur three times per trial. A minimum interval of 200 ms
+    is maintained between events of the same type, and events of different types are
+    fully covered. The parameters are summarized in Table S5.
+
+
+    # Simulated unstruct experiment with overlapping events
+
+
+    LFADS experiment used the source code at https://github.com/tensorflow/models/tree/research/lfads
+    to run experiments with LFADS. Default parameters were used, with the exception
+    of using FACTORS_DIM to match the number of kernels in the experiment.
+
+
+    # Simulated model characterization experiment
+
+
+    Table S5 summarizes all the parameters used for the DUNL characterization in Simulation
+    II. For this we used the sparse coding framework developed in the STAR method
+    to model the mean rates of neurons. These firing rates are used at each time point
+    to sample from a Bernoulli distribution.
+
+
+    # Simulated model characterization with five orthogonal kernels
+
+
+    Table S6 summarizes the parameters used in the DUNL characterization with five
+    orthogonal kernels. For the noise experiments, the kernels and their lengths are
+    approximately orthogonal: DUNL uses kernels of length 84.
+
+
+    e12 Neuron 173, 1151-1168.e1-13, April 16, 2023'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# Neuron
+
+    NeuroResource
+
+
+    Moreover, for noise experiments, noise is sampled from a Binomial distribution
+    with a spiking probability ranging from 0.05 to 0.8 for each time-bin window.
+    This noise is then either added or subtracted from the ground-truth spike counts.
+    The noisy data is constrained to remain within the range of 0 to 0.5, which is
+    the maximum possible number of spikes in each bin. We used this dataset to compare
+    DUNL to SCA [55]. The parameters used for SCA are summarized in Table S6B.
+
+
+    **Simulated structured spiking experiment with non-overlapping events**
+
+
+    This section summarizes the data used to compare DUNL and LFADS in their ability
+    to capture local characteristics from single trials. Table S7A outlines the parameters
+    used of this experiment.
+
+
+    **Simulated dopamine spiking experiment**
+
+
+    The dopamine spiking simulation closely follows the structure of the real dopamine
+    spiking experiment. Table S7B summarizes the parameters used in this simulation.
+
+
+    **Simulated unstructured spiking experiment with overlapping events**
+
+
+    This section summarizes the data used to compare DUNL and SeqNMF in their ability
+    to capture local characteristics from single trials. Table S8A outlines the parameters
+    used for DUNL. Notably, while the dataset contains two underlying kernels, estimates
+    learns three kernels from the data. For SeqNMF, we used the GitHub source code
+    available at https://github.com/FeelLab/seqnmf, with key parameters summarized
+    in Table SIB.'
+  merge: -1
+  img_proc: true
