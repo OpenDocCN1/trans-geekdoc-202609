@@ -1,0 +1,7 @@
+4 EXPLORING VARIANT PARAMETERS FOR INVARIANT LEARNING
+
+Additional Hessian Spectrum on SAM and REx. Since the effective generalization performance, as we have demonstrated in Section 4.5.9, we further validate that the proposed EVIL framework can still produce improved Hessian spectrum when compared to other methods such as SAM and REx. As shown in Figs. 4.8a and 4.8b, we observe the same phenomenon as in the main paper: when combined with EVIL, the largest eigenvalue of both SAM and REx is smaller than its original ones, and the spectrum more compact when using our EVIL framework. Therefore, we can again conclude that EVIL indeed helps produce flat minima.
+
+# 4.6 Conclusion
+
+In this Chapter, we aim to address the problem that existing sparse invariant learning methods fail to fully capture invariant information in OOD generalization problems, owing to the misleading influence of distribution shifts. Therefore, we propose EVIL by leveraging the distribution knowledge to explore the variant parameters that are highly sensitive to distribution shift, we can identify a robust subnetwork that effectively extracts invariant features. Moreover, we propose to improve our identification dynamically during network training. As a result, the EVIL framework can effectively and efficiently improve the OOD generalization performance of many invariant learning methods, while surpassing all compared sparse invariant learning methods. Exhaustive analyses are conducted to comprehensively validate the performance of EVIL.

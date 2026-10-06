@@ -1,0 +1,9 @@
+be selected because they generate gradients when calculating the distribution regularization, thus easy to find. Meanwhile, the variant parameters can still be excluded to avoid learning spurious features. Moreover, based on the error bounds, our method is insensitive to the spurious correlation $1-p^ho$ compared to the common strategy. In a difficult scenario where $p^ho$ is small, our method can still be robust to distribution shift.
+
+# 4.4 Methodology
+
+In this section, we introduce our EVIL framework as shown in Figure 4.2. In the learning flow of EVIL, there are two procedures: Parameter Exploration, in which we propose to not study invariant parameters but also explore the variant ones; and Invariant Learning, where we train the identified subnetwork to optimize the invariant parameters.
+
+# 4.4.1 The Proposed EVIL Framework
+
+In order to get a good initialization, a few steps of pre-training are commonly conducted by minimizing a learning objective $\mathcal{L}(f_	heta(x))$ [202, 203, 200, 182], where $f_	heta$ is a deep model with parameters $	heta \in \mathbb{R}^N$. To sparsify the deep model, a binary mask $\mathbf{m}$ is often applied through element-wise product $\mathbf{m} \circ 	heta$. Such a mask $\mathbf{m}$ is learned through optimization [204, 203, 205, 183, 184], or obtained based on certain criteria, such as connection sensitivity [199], weight value [200], fisher information [201], or even random initialization [179, 206]. By setting the sparsity ratio $R=1-\frac{\|\mathbf{m}\|_0}{\|	heta\|_0}$, we can decide how many parameters are rejected from sparse training. Then, we start from a pre-trained model with an initialized mask $\mathbf{m}$.
