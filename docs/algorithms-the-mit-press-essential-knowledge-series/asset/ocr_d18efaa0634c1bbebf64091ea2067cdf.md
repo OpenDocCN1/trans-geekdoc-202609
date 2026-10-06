@@ -1,0 +1,7 @@
+The neuron will have only two inputs. It will take each $(x_1,x_2)$ pair and calculate an output. If we are using the sigmoid activation function, the output will be between 0 and 1. We'll take the values greater than 0.5 to fall into one group and the other values to fall into the other. In this way the neuron will act as a classifier, sorting our data into distinct classes. But how does it do that? How can the neuron get to the point of being able to classify data?
+
+# The Learning Process
+
+At the moment of its creation, our neuron cannot recognize any kind of data; it learns to recognize them. The way it learns is by example. The whole process is akin to having a student learn something by giving them a large bunch of problems on a subject, along with their solutions. We ask the student to study each problem and its solution. If they are diligent, we expect that after the student has gone through a number of problems, they will have figured out how to get from a problem to its solution and will even be able to solve new problems, related to the ones they studied, but this time without having recourse to any solutions.
+
+When we do this, we train the computer to find the solutions; the set of solved example problems is called the training data set. This is an instance of supervised learning

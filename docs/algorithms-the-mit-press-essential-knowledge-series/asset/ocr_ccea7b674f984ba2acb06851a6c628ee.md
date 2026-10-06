@@ -1,0 +1,7 @@
+the number 100 billion, or $10^{11}$; this is one with 11 zeros behind it. If you take 100 billion hamburgers and lay them end to end, you can circle the earth 216 times, or go to the moon, and come back.
+
+A billion of something is usually called *giga* something, at least in computers. Next after the billion, or giga, comes the trillion, or *tera*, which is 1,000 billion, $10^{12}$. If you start counting one number per second, you will need 31,000 years to get to one trillion. Up by 1,000 again and *peta*; we get to one quadrillion, $10^{15}$, the total number of ants that live on the earth is between 1 and 10 quadrillion, according to biologist E. O. Wilson. In other words, we have between 1 and 10 petaants on our planet.
+
+After quadrillion comes quintillion, or *exa*; a quintillion is $10^{18}$ and is about the number of grains of sand in 10 large beaches. For example, 10 Copacabana Beaches have one exagrain of sand. Up again, we arrive at $10^{21}$, one sextillion, or *zeta*. The number of stars in the observable universe is one zettastars. We run out of prefixes after *yotta*, which stands for $10^{24}$, one septillion. But numbers can get larger. The number $10^{100}$ is called *googol*—yes, you probably know a company that has named itself after a purposeful misspelling. And then there is 10 raised to the googol power, $10^{10^{100}}$, which is one googolplex.
+
+These analogies will help us appreciate the merits of specific algorithms that we will examine in the rest of the book. Although we could have

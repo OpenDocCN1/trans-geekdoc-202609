@@ -1,0 +1,7 @@
+choreography may be more complex. But the three control structures suffice to describe the way the steps of any algorithm should be put together.
+
+The steps of an algorithm, among other things, operate on the input we provide. The input is the data that are processed by the algorithm. If we adopt a data-centric view, we use an algorithm to transform some data, which describe a problem, to some form that corresponds to the problem's solution.
+
+We found an algorithm behind musical rhythms that is an application of division, but in reality, we need not look that far; the act of division itself is an algorithm. Even if you have not heard of Euclid's algorithm, you know how to divide two large numbers; we all have spent time in our early years learning to perform multiplication and long division. Our teachers spent hours drilling into our heads to perform these operations: a set of steps for putting numbers in the right places and doing things with them—they are algorithms. But algorithms are not simply about numbers, as we have just seen. We just found that they are about how we can produce music. Yet there is nothing mystifying about that. A rhythm is a way to distribute stresses in a time interval, and the same principle is at work when we pack crackers and cheese.
+
+The application of Euclid's algorithm to rhythms had an unlikely source: a neutron source facility in the Oak Ridge National Laboratory in Tennessee. The Spallation

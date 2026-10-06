@@ -1,0 +1,7 @@
+it an observation it has not seen before, it should classify it with reasonable success.
+
+The behavior of a neuron for any input is determined by its weights and bias. When we start, we set them at random values; the neuron knows nothing, like a student. We give the neuron one input in the form of a (x1, x2) pair. The neuron will produce an output. As we have random weights and bias, the output will also be random. For each of our observations in the training data set, however, we do know what the correct answer from the neuron should be. We can then calculate how far off the neuron's output is from the desired one. This is called the loss: a measure of how wrong the neuron is for a given input.
+
+For example, if for an input neuron produces output the value 0.2, while the desired output is 1.0, we can calculate the loss by the difference between the two values. To avoid having to deal with signs, we usually take as the loss the square of the difference; here it would be (1.0–0.2)² = 0.64. If the desired output is 0.0, then the loss would be (0.0–0.2)² = 0.04. Be it as it may, having calculated the loss, we can now adjust the weights and bias so as to minimize it.
+
+Going back to the human student, after each failed attempt to solve an exercise, we nudge them to perform better. The student figures out that they have to change their approach a bit and try with the next example. If they

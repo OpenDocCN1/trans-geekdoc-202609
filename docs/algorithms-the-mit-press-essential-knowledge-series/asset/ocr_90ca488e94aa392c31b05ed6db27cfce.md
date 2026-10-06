@@ -1,0 +1,7 @@
+3. Continue with the rest of candidates. Pick the first one that is better than your benchmark, and stop.
+
+The algorithm will not always find the best candidate; after all, the best candidate overall may be the benchmark candidate you identified in the first 37 percent, and that you have rejected. It can be proved that it will find the best candidate in 37 percent (again, 1 / e) of all cases; more-over, there is no other method that will manage to find the best candidate in more cases. In other words, the algorithm is the best you can do: although it may fail to give you the best candidate in 63 percent of the cases, any other strategy you may decide to follow will fail in more cases than that.
+
+Going back to cars, suppose we decide to visit 10 car dealerships. We should visit the first four and take note of the best offer by these four, without buying. Then we start visiting the remaining six dealerships and we'll buy from the first dealership that gives us an offer better than the one we noted down (we'll skip the rest). We may discover that all six dealerships make worse-offers then the first four that we visited without buying. But no other strategy can give us better odds of getting the best deal.
+
+We have assumed that we want to find the possible candidate and will settle for nothing less. But what if we can in fact settle for something less? That means that

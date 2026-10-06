@@ -1,0 +1,7 @@
+algorithms are taken to be some form of higher authority when they are used to organize political campaigns, follow our traces in the online realm, shadow our shopping and target us with advertising, suggest dating partners, or monitor our health.¹
+
+There is an aura of mystery around all that, which perhaps flatters the acolytes of algorithms. Being described a “programmer” or “computer scientist” marks you as a decent, albeit somewhat technical, character. How much better to be a member of the tribe that is about to change almost everything in our lives?
+
+There is definitely a sense in which algorithms are a sort of god. They are mostly held unaccountable, like gods; things happen, not because of human agency, but because they were decided by an algorithm, and the algorithm sits beyond the pale of responsibility. Machines, running algorithms, can surpass human performance in more and more fields so that it appears the area of human superiority is reduced day by day; some believe that the day computers will be able to surpass humans in every aspect of cognition is not far away.
+
+But there is also a sense in which algorithms are nothing like gods, although we often lose sight of it. An algorithm does not produce its results by an act of revelation. We know exactly the rules that it follows and kinds of steps it takes. No matter how wonderful the outcome, it can always be traced back to some elementary

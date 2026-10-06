@@ -1,0 +1,5 @@
+The new matrix that will be derived is called the Google matrix, and we use the symbol G. If the behavior of the random surfer is determined by the Google matrix, it will work out as we want: the surfer will appear to be following the $S$ matrix with probability $a$ and move independently with probability $(1 - a)$. In our example, the Google matrix is:
+
+\begin{pmatrix} 3 & 54 & 3 & 3 & 54 & 3 \ 120 & 120 & 120 & 120 & 120 & 120 \ 3 & & 54 & 54 & & 3 \ 120 & 120 & 120 & 120 & 120 & 120 \ 3 & 54 & 3 & 3 & & 54 \ 120 & 120 & 120 & 120 & 120 & 120 \ 54 & 3 & 3 & 54 & 3 & 3 \ 120 & 120 & 120 & 120 & 120 & 120 \ 3 & 37 & 37 & 3 & 3 & 37 \ 120 & 120 & 120 & 120 & 120 & 120 \ 3 & 3 & 3 & & 105 & 3 \ 120 & 120 & 120 & 120 & 120 & 120 \end{pmatrix}
+
+Compare that to the $S$ matrix. Observe that in the first row, we had two entries with $1 / 2$ and the rest were zero. Now in the Google matrix, we have the two $1 / 2$ entries turned to $54 / 120$, and the rest of the entries turned from $0$ to $3 / 120$. Similar transformations have occurred in the other rows. If, then, the random surfer lands on page 1, the possible moves out are to pages 2 and 5 with probability

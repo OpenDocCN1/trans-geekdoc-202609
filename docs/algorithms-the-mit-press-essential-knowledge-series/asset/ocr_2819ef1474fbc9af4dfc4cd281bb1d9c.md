@@ -1,0 +1,2 @@
+> The world is untranslatable but it is not incomprehensible, as long as you know the simple rule that nothing of what it expresses through its myriad lives and creatures is followed by a question mark, only by exclamation marks.
+—Karl Ove Knausgaard, *Summer*

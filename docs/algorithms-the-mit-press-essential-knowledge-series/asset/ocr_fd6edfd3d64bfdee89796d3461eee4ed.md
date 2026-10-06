@@ -1,0 +1,7 @@
+It's nice to have a way of producing a sorted group from two sorted groups, but this does not seem to solve our problem of sorting a single group of unsorted items. It is true it does not, yet it is an important component of the solution.
+
+Imagine now that we have a group of people. We give to one of them a group of items to sort. That person does not know how to sort them, but they know that if somehow they had two sorted parts of the items, they could produce a final sorted group. So what they do is this: they split the group in two and pass it on to two other people. They say to the first of them, “Take this group and sort it. Once you are done, return it to me.” They say the same thing to the second person. Then they wait.
+
+Although our first point of contact does not know how to sort the items, if the two new contacts manage somehow to sort their own parts and return them, then the first person would return to us the final, completely sorted group. But the two other contacts know more than our initial contact—they don't know how to sort but rather only how to merge sorted stuff using the algorithm above—so has anything really been achieved?
+
+The answer is yes, provided that they do the same: they split their part in two, and each delegates their part to two other persons, waiting for *them* to do their bidding and provide them with two sorted parts.

@@ -1,0 +1,7 @@
+advised him to reconsider the fourth candidate instead. But then he was turned down by her. In the end, after examining all 11 candidates, Kepler did marry the fifth one: 24-year-old Susanna Reuttering.
+
+This little story is a stretched example of a search; Kepler was searching for an ideal match, among a pool of possible candidates. Yet there was a kink in the process that he was probably not aware of when he started: it might not be possible to go back to a possible match after he had rejected it.
+
+We can recast the problem in more contemporary terms, looking for the best way to decide which car to buy. We have decided beforehand that we will visit a number of car dealerships. Also, our amour propre will not allow us to return to a car dealership after we have walked away from it. If we declined a car, saving face is paramount, so that we cannot go back and say that we changed our mind. Or perhaps somebody walked in and bought the car after we left. Be it as it may, we have to make a final decision at each dealership, to buy the car or let go, and not come back.
+
+This is an instance of an optimal stopping problem. We have to take an action, while trying to maximize a reward or minimize a cost. In our example, we want to decide to buy the car, when this decision will result in the best car we can buy. If we decide too early, we may settle on a car that is worse than a car we have not seen yet. If we decide
