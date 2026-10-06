@@ -1,0 +1,4184 @@
+- pgno: 0
+  md: '# # Domain 4: Communication and Network Security
+
+
+    # 5
+
+
+    # ## Exam objectives in this chapter:
+
+
+    +   - Network Architecture and Design
+
+    - Secure Network Devices and Protocols
+
+    - Secure Communications
+
+
+    # ## Unique Terms and Definitions
+
+
+    +   - The OSI model—a network model with seven layers: physical, data link, network,
+    transport, session, presentation, and application
+
+    - The TCP/IP model—a simpler network model with four layers: network access, Internet,
+    transport, and application
+
+    - Packet-switched network—a form of networking where bandwidth is shared and data
+    is carried in units packets
+
+    - Switch—a layer 2 device that carries traffic on one LAN, based on MAC addresses
+
+    - Router—a layer 3 device that routes traffic from one LAN to another, based on
+    IP addresses
+
+    - Carrier Sense Multiple Access (CSMA)—a method used by Ethernet networks to allow
+    shared usage of a baseband (one-channel) network and avoid collisions (multiple
+    interfering signals)
+
+
+    # ## Introduction
+
+
+    Communication and Network Security is fundamental to our modern life. The Internet,
+    the World Wide Web, online banking, instant messaging email, and many other technologies
+    rely on network security: our modern world cannot exist without it. Communications
+    and Network Security focuses on the confidentiality, integrity, and availability
+    of data in motion.
+
+
+    Communications and Network Security is one of the largest in the Common Body of
+    Knowledge and contains more concepts than any other domain. This domain is also
+    one of the most technically deep domains, requiring technical edge down to packets,
+    segments, frames, and their headers. Understanding this domain is critical to
+    ensure success on the exam.
+
+
+    225'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Network Architecture and Design
+
+
+    Our first section is network architecture and design. We will discuss how networks
+    should be designed and the controls they may contain, focusing on deploying defense-in-depth
+    strategies, and weighing the cost and complexity of a network control versus the
+    benefit provided.
+
+
+    # Network Defense-in-Depth
+
+
+    Communications and Network Security employs defense-in-depth, as we do in all
+    8 domains of the Common Body of Knowledge. Any one control may fail, multiple
+    controls are always recommended. Before *malware* (malicious software) can reach
+    a server, it may be analyzed by: routers, firewalls, intrusion detection systems,
+    and host-based protections as antivirus software. Hosts are patched, and users
+    have been provided with awareness of malware risks. The failure of any one of
+    these controls should not to compromise.
+
+
+    No single concept described in this chapter (or any other) provides sufficient
+    defense against possible attacks: these concepts should be used in concert.
+
+
+    # Fundamental Network Concepts
+
+
+    Before we can discuss Communications and Network Security concepts, we need to
+    understand the fundamental concepts behind them. Terms like “broadband” are often
+    used informally: the exam requires a precise understanding of information security
+    terminology.
+
+
+    # Simplex, Half-Duplex, and Full-Duplex Communication
+
+
+    *Simplex* is one-way, like a radio tuned to a music station. *Half-duplex* communication
+    sends or receives at one time only (not simultaneously), like a walkie-talkie.
+    *Full-duplex* communications send and receive simultaneously, like two people
+    having a face-to-face conversation.
+
+
+    # Baseband and Broadband
+
+
+    Baseband networks have one channel and can send only one signal at a time. Ethernet
+    networks are baseband; “100baseT” UTP cable means 100 megabit, base and twisted
+    pair. Broadband networks have multiple channels and can send multiple signals
+    at a time, like cable TV. The “channel” derives from communications like radio.
+
+
+    # Analog and Digital
+
+
+    Analog communications are what our ears hear, a continuous wave of information.
+    The original phone networks were analog networks, designed to carry the human
+    voice. Digital communications transfer data in bits: ones and zeros. A vinyl record
+    is analog; a compact disc is digital.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Network Architecture and Design 227
+
+
+    # LANs, WANs, MANs, GANs, and PANs
+
+
+    LAN is a Local Area Network. A LAN is a comparatively small network, typically
+    confined to a building or an area one. A MAN is a Metropolitan Area Network, which
+    is typically confined to a city, a zip code, a campus, or office park. A WAN is
+    a Wide Area Network, typically covering cities, states, or countries. A GAN is
+    a Global Area Network, a global collection of WANs.
+
+
+    The Global Information Grid (GIG) is the US Department of Defense (DoD) global
+    network, one of the largest, the smallest of these private networks in the world.
+
+
+    At the other end of the spectrum, the smallest of these networks are PANs: Personal
+    Area Networks, with a range of 100 meters or less. Low-power wireless technologies
+    such as Bluetooth use PANs.
+
+
+    # Exam Warning
+
+
+    The exam is simpler and more clear-cut than the real world. There are realworld
+    exceptions to statements like “A LAN is typically confined to a building or area
+    within one.” The exam will be more clear-cut, as this will. If you read examples
+    given in this book, and “that’s usually true, but a bit simplistic,” then you
+    are correct. Simplicity is by design, to help you pass the exam.
+
+
+    # Internet, Intranet, and Extranet
+
+
+    The Internet is a global collection of peered networks running TCP/IP, providing
+    best effort service. An Intranet is a privately owned network running TCP/IP,
+    such as a company network. An Extranet is a connection between private Intranets,
+    such as connections to business partners Internet.
+
+
+    # Circuit-Switched and Packet-Switched Networks
+
+
+    The original voice networks were circuit-switched: a dedicated circuit or channel
+    (portion of a circuit) was dedicated to two nodes. Circuit-switched networks can
+    provide dedicated bandwidth to point-to-point connections, such as a T1 connecting
+    offices.
+
+
+    One drawback of circuit-switched networks: once a channel or circuit is connected,
+    it is dedicated to purpose, even when no data is transferred. Packet-switched
+    networks were designed to address this issue, as well as handle network failures
+    more robustly.
+
+
+    The original research on packet-switched networks was conducted in the early 1960s
+    on behalf of Defense Advanced Research Projects Agency (DARPA). That research
+    led to the creation of the ARPANet, the predecessor of the Internet. For more
+    information see the Internet Society’s “A Brief History of the Internet,” at https://www.isoc.org/internet/history-internet/brief-history-internet/
+
+
+    Early packet-switched network research by the RAND Corporation described a survive
+    a “nuclear” scenario, but reports that the ARPANet was designed to survive a nuclear
+    war are not. The Internet Society’s History of the Internet reports “... work
+    on'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    Interneting emphasize robustness and survivability, including the capability to
+    withstand large portions of the underlying networks” [1].
+
+
+    Instead of dedicated circuits, data is broken into packets, each sent individually.
+    If multiple routes are available between two points on a network, packet switching
+    can choose the best route, and fall back to secondary routes in case of failure.
+    Packets may take any path (different paths) across a network and are then reassembled
+    by the receiving node. Missing packets are retransmitted, and out-of-order packets
+    can be re-sequenced.
+
+
+    Unlike circuit-switched networks, packet-switched networks made unused bandwidth
+    available for other connections. This can give packet-switched networks a cost
+    advantage over circuit-switched.
+
+
+    # Quality of Service
+
+
+    Using unused bandwidth available for other applications presents a challenge:
+    what happens when all bandwidth is consumed? Which applications “win” (receive
+    required bandwidth?) This is not an issue with circuit-switched networks, which
+    applications have exclusive access to dedicated circuits or channels.
+
+
+    Packet-switched networks use Quality of Service (QoS) to give specific traffic
+    over other traffic. For example: QoS is often available to Voice over IP (VoIP)
+    traffic (voice via packet-switched data networks), to avoid interruption of phone
+    calls. Less time-sensitive traffic, such as SMTP (Simple Mail Transfer Protocol,
+    a store-and-forward protocol used to exchange email between servers), receives
+    a lower priority. Delays in exchanging emails are less likely to be noticed compared
+    to dropped calls.
+
+
+    # Layered Design
+
+
+    Network models as OSI and TCP/IP are designed in layers. Each layer performs a
+    specific function, and the complexity of that functionality is contained within
+    its layer. Changes in one layer do not directly affect another: changing your
+    physical network connection from wired to wireless (at Layer 1, as described below)
+    has no effect on your Web browser (at Layer 7), for example.
+
+
+    # Models and Stacks
+
+
+    A network model is a description of how a network protocol operates, such as the
+    OSI Model or TCP/IP Model. A network stack is a network protocol suite programmed
+    in software or hardware. For example, the TCP/IP Model describes TCP/IP, and your
+    laptop runs the TCP/IP stack.
+
+
+    # The OSI Model
+
+
+    The OSI (Open System Interconnection) Reference Model is a layered network model.
+    The model is abstract: we do not utilize the OSI model in our systems (most now
+    use the TCP/IP model); it is used as a reference point, so “Layer 1” (physical)
+    is universally understood, whether you are running Ethernet or ATM, for example.
+    “Layer X” in this book refers to the OSI model.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Network Architecture and Design 229
+
+
+    # Table 5.1 The OSI Model.
+
+
+    | | |
+
+    |---||
+
+    | 7 | Application |
+
+    | 6 | Presentation |
+
+    | 5 | Session |
+
+    | 4 | Transport |
+
+    | 3 | Network |
+
+    | 2 | Data Link |
+
+    | 1 | Physical |
+
+
+    The OSI model has seven layers, as shown in Table 5.1. The layers may be listed
+    in top-to-bottom or bottom-to-top. Using the latter, they are Physical, Data Link,
+    Network, Transport, Session, Presentation, and Application.
+
+
+    > The OSI model was developed by the International Organization for Standardization
+    (ISO), so some sources confusingly call it the ISO model, or even the OSI model.
+    The model is formally calledX.200: Information technology—Open Systems Interconnection—Basic
+    Reference Model.
+
+    The X.200 recommendation may be downloaded from https://www.itu.int/rec/T-X.200-199407-Icn.
+    The term "OSI model" is the most prevalent, so that is the term used in this book.
+
+
+    # Layer 1—Physical
+
+
+    The Physical Layer is Layer 1 of the OSI model. Layer 1 describes units of data
+    as bits represented by energy (such as light, electricity, or radio waves) and
+    the medium used to carry them (such as copper or fiber cables). WLANs have a physical
+    layer, even though we cannot physically touch it.
+
+    Cabling standards such as Thinnet, Thicknet, and Unshielded Twisted Pair (UTP)
+    exist at layer 1, among others. Layer 1 devices include hubs and repeaters.
+
+
+    # Layer 2—Data Link
+
+
+    The Data Link Layer handles access to the physical layer as well as local network
+    communication. An Ethernet card and its MAC (Media Access Control) address are
+    at Layer 2, as switches and bridges.
+
+    Layer 2 is divided into two sublayers: Media Access Control (MAC) and Logical
+    Link Control (LLC). The MAC layer transfers data to and from the physical layer.
+    LLC handles LAN communications. MAC touches Layer 1, and LLC touches Layer 3.
+
+
+    # Layer 3—Network
+
+
+    The Network Layer describes routing: moving data from one system to another on
+    IP. IP addresses and routers exist at Layer 3. Network protocols include IPv4
+    and IPv6, among others.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Layer 4—Transport
+
+
+    The Transport Layer handles packet sequencing, flow control, and error detection.
+    TCP and UDP are Layer 4 protocols.
+
+
+    Layer 4 makes several features available, such as resending or re-sequencing packets.
+    Taking advantage of these features is a protocol implementation decision. As we
+    see later, TCP takes advantage of these features, at the expense of speed. Many
+    of these features are not implemented in UDP, which chooses speed over reliability.
+
+
+    # Layer 5—Session
+
+
+    The Session Layer manages sessions, which provide maintenance on connections.
+    Mounting a file share via a network requires several maintenance sessions, as
+    Remote Procedure Calls (RPCs); these exist at session layer. A good way to remember
+    the session layer’s function is “connections between applications.” The Session
+    Layer uses simplex, half-duplex, and full-duplex communication.
+
+
+    > Note
+
+    The transport and session layers are often confused. For example, “maintenance
+    of connections” a transport layer or session issue? Packets are sequenced at the
+    transport layer, and network file shares are mounted at the session layer: you
+    may consider either to be maintenance. Words “maintenance” imply more work than
+    packet sequencing or retransmission: it requires “heavy lifting,” like removing
+    a network share that has been un-mounted, so session layer is the best answer.
+
+
+    # Layer 6—Presentation
+
+
+    The Presentation Layer presents data to the application (and user) in a comprehensive
+    way. Presentation Layer includes data conversion, character sets such as ASCII,
+    and image formats as GIF (Graphics Interchange Format), JPEG (Joint Photographic
+    Experts Group), and TIFF (Tagged Image File Format).
+
+
+    # Layer 7—Application
+
+
+    The Application Layer is where you interface with your computer application. Web
+    browser, processor, and instant messaging client exist at Layer 7. The protocols
+    Telnet and FTP are Application Layer protocols.
+
+
+    > Note
+
+    Many mnemonics help remember the OSI model. From bottom to top, “Please Do Not
+    Sausage Pizza Away” (Physical Data-Link Network Transport Session Presentation
+    Application) is a bit silly, but that makes it memorable. Also silly: “Please
+    Do Not Sell People Anything.” From top to bottom, “All People See To Need Data
+    Processing” is popular.
+
+
+    # The TCP/IP Model
+
+
+    The TCP/IP model (Transmission Control Protocol/Internet Protocol) is a popular
+    network model created by DARPA in the 1970s (see https://www.internetsociety.org/internet/internet/brief-history-internet/
+    for more information). TCP/IP is an informal name (named after the first two protocols
+    created); the formal name'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Network Architecture and Design 231
+
+
+    ### Table 5.2 The OSI Model vs. TCP/IP Model.
+
+
+    | OSI Model | TCP/IP Model |
+
+    |---|-|
+
+    | 7 Application | Application |
+
+    | 6 Presentation | |
+
+    | 5 Session | Host-to-Host Transport |
+
+    | 4 Transport | |
+
+    | 3 Network | Internet |
+
+    | 2 Data Link | Network |
+
+    | 1 Physical | Access |
+
+
+    is the Internet Protocol Suite. The TCP/IP model is simpler than the OSI model,
+    as shown in Table 5.2.
+
+    While TCP and IP receive top billing, TCP/IP is actually a set of protocols including
+    UDP (User Datagram Protocol) and ICMP (Internet Control Message Protocol), among
+    many others.
+
+
+    > Note
+
+    The names of the TCP/IP layers are a subject of much debate, with “authoritative”
+    sources disagreeing with each other. Confusingly, some use Link Layer in place
+    of Network Access Layer, and Network layer in place of Internet Layer. This book
+    follows the conventions described in TCP/IP references listed in the exam''s Candidate
+    Information Bulletin, such as Cisco/IP Routing Professional Reference (McGraw-Hill)
+    by Chris Lewis.
+
+
+    # ### Network Access Layer
+
+
+    The Network Access Layer of the TCP/IP model combines Layers 1 (Physical) and
+    2 (Data Link) of the OSI model. It describes Layer 1 issues such as energy, bits,
+    and the medium used to carry them (copper, fiber, wireless, etc.). It also describes
+    Layer 2 issues as converting bits into protocol units such as Ethernet frames,
+    MAC (Media Access Control) addresses, and Network Interface Cards (NICs).
+
+
+    # ### Internet Layer
+
+
+    The Internet Layer of the TCP/IP model aligns with the Layer 3 (Network) of the
+    OSI model. This is where IP addresses and routing live. When data is transmitted
+    from a node on one LAN to a node on a different LAN, the Internet Layer is used:
+    IPv4, IPv6, ICMP, and routing protocols (among others) are Internet Layer TCP/IP,
+    protocols.
+
+
+    # ### Exam Warning
+
+
+    Layer 3 of the OSI model is called “Network.” Do not confuse OSI’s Layer 3 with
+    the “Network Access” TCP/IP layer, which aligns with Layers 1 and 2 of the OSI
+    model.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Host-to-Host Transport Layer
+
+
+    The Host-to-Host Transport Layer (sometimes called either “Host-to-Host” or, more
+    commonly, “Transport” alone; this book will use “Transport”) connects the Internet
+    to the Application Layer. It is where applications are addressed on a network,
+    via ports. TCP and UDP are the two Transport Layer protocols of TCP/IP.
+
+
+    # Application Layer
+
+
+    The TCP/IP Application Layer combines Layers 5 through 7 (Session, Presentation,
+    and Application) of the OSI model. Most of these protocols use a client-server
+    architecture, where a client (such as ssh) connects to a listening server (called
+    a daemon on UNIX systems) as ssh. The clients and servers use either TCP or UDP
+    (and sometimes both) as a Transport Layer protocol. TCP/IP Application Layer protocols
+    include SSH, Telnet, and FTP, among many others.
+
+
+    # Encapsulation
+
+
+    Encapsulation takes information from a higher layer and adds a header to it, treating
+    the higher layer information as data. It is often said, “One layer header is another
+    layer data” [2]. For example, as the data moves down the stack, application layer
+    data is encapsulated in a Layer 4 TCP segment. That TCP segment is encapsulated
+    in a Layer 3 IP packet. That IP packet is encapsulated in a Layer 2 Ethernet frame.
+    The frame is converted into bits and sent across the local network. Data, segments,
+    packets, frames, and bits are examples of Protocol Data Units (PDUs).
+
+
+    > SPF1 is helpful for remembering PDUs: Segments, Packets, Frames, and Ones
+
+
+    The reverse of encapsulation is called de-multiplexing (sometimes de-encapsulation).
+    As the PDUs move up the stack, frames are converted to Ethernet frames, frames
+    are converted to IP packets, packets are converted to TCP segments, and segments
+    are converted to application data.
+
+
+    # Network Access, Internet, and Transport Layer Protocols and Concepts
+
+
+    TCP/IP is a protocol suite, including (but not limited to): IPv4 and IPv6 at the
+    Internet layer; TCP and UDP at the Transport layer; a multitude of higher-level
+    protocols, including Telnet, FTP, SSH, and many others. Let us focus on the lower
+    layer protocols, spanning from the Network Access to Transport layers. Some protocols,
+    such as IP, fit neatly into one layer (Internet). Others, as Address Resolution
+    Protocol (ARP), help one layer to another (Network Access to Internet in ARP’s
+    case).'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Network Architecture and Design 233
+
+
+    # MAC Addresses
+
+
+    A Media Access Control (MAC) address is the unique hardware address of an Ethernet
+    network interface card (NIC), typically “burned in” at the factory. MAC addresses
+    may be changed in software.
+
+
+    > Note Burn-in MAC addresses should be unique. There are real-world exceptions
+    to this, often due to mistakes by NIC manufacturers, but MAC addresses are considered
+    unique on the exam.
+
+
+    Historically, MAC addresses are 48 bits long. They have two halves: the first
+    24 bits form the Organizationally Unique Identifier (OUI) and the last 24 bits
+    form a serial number (formerly called an extension identifier).
+
+
+    Organizations that manufacture NICs, such as Cisco, Juniper, HP, IBM, and many
+    others, produce 24-bit OUIs from the Institute of Electrical and Electronics Engineers
+    (IEEE), Incorporated Registration Authority. A list of registered OUIs is available
+    at https://www.ieee.org/products-programs/regauth/.
+
+
+    Juniper owns 00-05-85, for example. Any NIC with a MAC address begins with 00:05:85
+    is a Juniper NIC. Juniper can then assign MAC addresses based on their OUI: the
+    first would have MAC address 00:05:85:00:00:00, the second 00:05:85:00:00:02.
+    This process continues until the serial numbers for that OUI have been exhausted.
+    A new OUI is needed.
+
+
+    # EUI-64 MAC Addresses
+
+
+    The IEEE created the EUI-64 (Extended Unique Identifier) standard for 64-bit MAC
+    addresses. The OUI is still 24 bits, but the serial number is 40 bits for far
+    more MAC addresses, compared with 48-bit addresses. IPv6 autoconfiguration is
+    compatible with types of MAC addresses.
+
+
+    # IPv4
+
+
+    IPv4 is Internet Protocol version, 4, commonly called “IP.” It is the fundamental
+    protocol of the Internet, designed in the 1970s to support packet-switching networking
+    for the United States Defense Research Projects Agency (DARPA). IPv4 was used
+    for the ARPANET, which later became the Internet.
+
+
+    IP is a simple protocol, designed to carry data across networks. It is so simple
+    that it requires a “helper protocol” called ICMP (see below). IP is connectionless
+    and unreliable; it provides “best effort” delivery of packets. If connections
+    and reliability are required, they must be provided by a higher-level protocol
+    by IP, such as TCP.
+
+
+    IPv4 uses 32-bit source and destination addresses, usually shown in “dotted quad”
+    format, such as “192.168.2.4.” A 32-bit address field allows $2^{32}$, or nearly
+    4.3 billion, addresses. A lack of IPv4 addresses in a world where humans (and
+    their'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 234 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+    9 | 0 | 1 |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---||
+
+    | Version | | IHL | | Type of Service | | | | | | Total Length | | | | | | | |
+    | | |
+
+    | | Identification | | | Flags | | | Fragment Offset | | | | | | | | |
+
+    | | Time to Live | | Protocol | | | Header Checksum | | | | | | | | | | |
+
+    | | | | Source Address | | | | | | | | | | | | | | | |
+
+    | | | | Destination Address | | | | | | | | | | | | | | | | |
+
+    | | Options | | | | | | | | | | Padding | | | | | | | | | |
+
+
+    FIG. 5.1 IPv4 header [3].
+
+
+    outnumber available IPv4 addresses is a fundamental problem: this was one of the
+    factors leading to the creation of IPv6, which uses larger 128-bit addresses.
+
+
+    IPv4 Header Fields
+
+    An header in Fig. 5.1, is 20 bytes (with options), and contains a number of fields.
+    Key fields are:
+
+
+    +   * Version: IP version (4 for IPv4)
+
+    * IHL: Length of the IP header
+
+    * Type of Service: originally used to set the precedence of the packet, but now
+    used for Differentiated Services (DiffServ), a method for providing Quality of
+    Service (QoS)
+
+    * Identification, Flags, Offset: used for IP fragmentation
+
+    * Time To Live: to rooting loops
+
+    * Protocol: embedded protocol (protocol number representing TCP, UDP, etc.)
+
+    * Source and Destination IP addresses
+
+    * Optional: Options and padding
+
+
+    IP Fragmentation
+
+    If a packet exceeds the Maximum Transmission Unit (MTU) of a network, a router
+    along the path it may fragment. Fragmentation breaks a large packet into multiple
+    smaller packets. A typical MTU size for an IP packet is 1500 bytes. The IP identification
+    field (IPID) is used to reassociate fragmented packets (they will have the same
+    IPID). The flags are used to determine if fragmentation is allowed, and whether
+    more fragments are coming. The fragment offset gives the data offset the current
+    fragment carries: "Copy this data beginning at offset 1480."'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Network Architecture and Design 235
+
+
+    Path MTU uses fragmentation to discover the largest size packet allowed across
+    a network. A large packet is sent with the DF (not fragment) flag set. A router
+    with a smaller MTU than the packet size will seek to fragment, that it cannot,
+    and drop it, sending a "Fragmentation needed" ICMP message. The sending node increases
+    smaller packets with the DF flag set, they pass cleanly across the network.
+
+
+    # IPv6
+
+
+    IPv6 is the successor to IPv4, featuring larger address space (128-bit addresses
+    compared to IPv4''s 32 bits), simpler routing, and simpler address assignment.
+    A lack of IPv4 addresses was the primary factor that led to the creation of IPv6.
+
+
+    IPv6 has become more prevalent since the release of the Microsoft Vista operating
+    system, the first Microsoft client system to support IPv6 and it enabled by default.
+    All versions through Windows 11 have the same. Other modern operating systems,
+    such as OS X, Linux, UNIX, also enable IPv6 by default.
+
+
+    > Note
+
+    The IPv6 address space is 2^128, which is big: there are over 34 undecillion IPv6
+    addresses, which is 340,282,966,920,938,463,463,741,678,211,456. IPv4 has just
+    3 billion addresses, which is a 10-digit number in decimal: 4,294,967,296. If
+    all 4.3 billion IPv4 addresses weighed 1 kilogram, all IPv6 addresses would weigh
+    79,228,162,514,264,337,543kg, as as 13,263 Planet Earths. Another useful comparison:
+    if all IPv4 addresses fit into a golf ball, all IPv6 addresses would nearly fill
+    the sun.
+
+
+    The IPv6 header, shown in Fig. 5.2, is larger and simpler than IPv4. Fields include:
+
+
+    +   - Version: IP version (for IPv6)
+
+    - Traffic Class Flow Label: used for QoS (Quality of Service)
+
+    - Payload Length: length of IPv6 data (not including the IPv6 header)
+
+    - Next header: next embedded protocol header
+
+    - Hop Limit: to end routing loops
+
+
+    # IPv6 Addresses and Stateless Autoconfiguration
+
+
+    IPv6 hosts statically autoconfigure unique IPv6 address, omitting the need for
+    static addressing or DHCP. IPv6 autoconfiguration (SLAAC) takes the host''s MAC
+    address and it configures the IPv6 address. The ifconfig (interface configuration)
+    output in Fig. 5.3, shows the MAC address as hardware address (HWAddr) 00:0c:29:feef:1136.
+
+
+    IPv6 addresses are 128 bits long and use colons instead of dots to delineate sections.
+    Sections of zeroes are condensed into two colons ("::"). The "ifcon-fig" in Fig.
+    5.3 shows two IPv6 addresses:
+
+
+    +   - fc01::00:29:feef:1136/64 (Scope:Global)
+
+    - fe80::00:29:feef:1136/64 (Scope:Link)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "# 236 CHAPTER 5 Domain 4: Communication and Network Security\n\n| Version |\
+    \ Traffic Class | Flow Label |\n| Payload Length | Next Header | Hop Limit |\n\
+    | Source Address |\n| Destination Address |\n\nFIG. 5.2\nIPv6 header [4].\n\n\
+    ```\nroot@ubuntu:~# ifconfig\neth0 link encap:Ethernet Haddr:00:0c:29:ef:11:36\n\
+    \       inet addr:192.168.2.122 Broadcast:192.168.2.255 Mask:255.255.255.0\n \
+    \      inet6 addr fc01::20c:29ff:feef:1136/64 Scope:Global\n       inet6 addr\
+    \ fe80::20c:29ff:feef::/64 Scope:Link\n       UP BROADCAST MULTICAST MTU:1500\
+    \ Metric:1\n       RX packets:17662 errors:0 dropped overruns:0 frame:0\n    \
+    \   TX packets:10215 errors:0 dropped overruns:0 carrier:0\n          collisions:0\
+    \ txqueuelen:10000\n       RX bytes:100817254 (18.0 MB) TX bytes:654975 (654.9\
+    \ KB)\n          Interrupt:19 Base address:0x2000\n```\n\nFIG. 5.3\n\"ifconfig\"\
+    \ showing MAC address and IPv6 addresses.\n\nThe first address (fc01::...) is\
+    \ a “global” (routable) address, used for communication beyond the local network.\
+    \ IPv6 hosts rely on IPv6 routing advertisements to assign the global address.\
+    \ In 5.3, a local router sends a route advertisement for the fc01 network, which\
+    \ the host used to configure its global address.\nThe second address (fe80::...)\
+    \ is a link-local address, used for local network communication only. Systems\
+    \ assign link-local addresses independently, without the need for an IPv6 router\
+    \ advertisement. Even without any centralized IPv6 infrastructure (such as routers\
+    \ sending IPv6 route advertisements), any IPv6 system will assign a link-local\
+    \ address, and use that address to communicate with other link-local IPv6 addresses\
+    \ on the LAN."
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Network Architecture and Design 237
+
+
+    /64 the network size in CIDR format: see **Classless Inter-Domain Routing** section
+    below. This means the network prefix is 64 bits long: the global prefix is fc01:0000:0000:0000.
+
+
+    The host is in Fig. 5.3 repeating to constantly configure its global address:
+
+
+    +   * Take the MAC address: "fffe" in the middle two bytes: 00:0c:29:ff:fe:ef:36
+
+    * Embed the "Universal Bit": 00:0c:29:ff:fe:ef:36
+
+    * Prepend the network prefix and convert to "::" format: fc01:0000:0000:0020:29ff:fe:1136
+
+    * Convert one string repeating zeros to "::": fc01::20c:29ff:fe:1136
+
+
+    This process is shown in Table 5.3.
+
+
+    Only one exclusive of series (shown in gray in the add prefix step shown in Table
+    5.3) may be summarized with ":". The "fffe" is added to 48-bit MAC addresses to
+    make them 64 bits long. Support for a 64-bit embedded MAC address ensures that
+    the stateless autoconfiguration process is compatible with EUI-64 MAC addresses.
+    The Universal/Local (U/L) bit is used to determine whether the MAC address is
+    unique. Our MAC is, without the U/L bit.
+
+
+    Stateless autoconfiguration removes the requirement for DHCP (Dynamic Host Configuration
+    Protocol, see section), but DHCP may be used with IPv6: this is called "static
+    autoconfiguration," part of DHCP6. IPv6''s much larger address space makes NAT
+    see "Network Address Translation" unless necessary, but particular IPv6 NAT schemes
+    have been proposed, mainly to allow easier transition from IPv4 to IPv6.
+
+
+    Stateless autoconfiguration raises privacy concerns: a system''s hardware address
+    is designed to be globally unique, so embedding it into the IPv6 address allows
+    tracking, regardless of the network it''s on. SLAAC supports privacy extensions,
+    where a temporary random host address is generated frequently.
+
+
+    Note that systems are "dual stack" and use both IPv4 and IPv6 simultaneously,
+    as Fig. 5.3 shows. That system uses IPv6, and also has the IPv4 address
+
+
+    # Table 5.3 IPv6 Address Stateless Autoconfiguration.
+
+
+    | MAC Address | 00 0c 29 ff fe ef 11 36 |
+
+    |---|---|
+
+    | Add "fffe" Constant | 00 0c 29 ff fe ef 11 36 |
+
+    | Set Universal/Local Bit | 02 0c 29 ff fe ef 11 36 |
+
+    | Add prefix & use "::" format fc01:0000:0000:0020:29ff:fe:1136 |
+
+    | Convert repeating 0s to "::" fc01::20c:29ff:fe:1136 |'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# 238 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    192.168.2.122. Hosts may access IPv6 networks via IPv4; this is tunneled. Another
+    IPv6 address worth noting is the loopback address: ::1. This is equivalent to
+    the IPv4 address of 127.0.0.1.
+
+
+    # IPv6 Security Challenges
+
+
+    IPv6 solves many problems, including adding sufficient address space and autoconfiguration,
+    making routing much simpler. Some of these solutions, such as autoconfiguration,
+    can introduce security problems.
+
+
+    An IPv6-enabled system will automatically configure a link-local address (beginning
+    with fe80::...) without the need for any other IPv6-enabled infrastructure. That
+    can communicate with other link-local addresses on the same LAN. This is true
+    if the administrators are unaware that IPv6 is flowing on their network.
+
+
+    ISPs are also enabling IPv6 service, sometimes without the customer''s knowledge.
+    Modern network tools, such as network intrusion detection systems, can “see” IPv6,
+    but are often not configured to do so. And many network professionals have limited
+    experience or understanding of IPv6. From an attacker''s perspective, this can
+    offer a golden opportunity to launch attacks or exfiltrate data via IPv6.
+
+
+    All services that are not required be disabled is a fundamental part of system
+    hardening. If IPv6 is not required, it should be disabled. To disable IPv6 on
+    a Windows host, open the network adapter, and choose properties. Then uncheck
+    the “Internet Protocol Version 6” box, as shown in Fig. 5.4.
+
+
+    # Classful Networks
+
+
+    The original IPv4 networks (before 1993) were “classful,” classified into classes
+    A through E. Classes A through C were used for normal network use. Class D was
+    multicast, and Class E was reserved. Table 5.4 shows the IPv6 address range of
+    each.
+
+
+    Classful networks are inflexible: used for normal hosts in three sizes: 16,777,216
+    addresses (Class A), 65,536 addresses (Class B), and 256 addresses (Class C).
+    The smallest routable network is a Class C network with 256 addresses; a suitable
+    point-to-point link using classful networks requires a network between the two
+    points, wasting over 250 IP addresses.
+
+
+    # Classless Inter-Domain Routing
+
+
+    Classless Inter-Domain Routing (CIDR) allows far more flexible network sizes than
+    those allowed by classful addresses. CIDR allows for many network sizes beyond
+    the arbitrary classful boundaries.
+
+
+    The Class A network 10.0.0.0 contains addresses that begin with: 10.1.2.3, 10.187.24.8,
+    10.396.223, etc. In other words, 10.* is a Class A address. The first 8 bits of
+    the dotted-quad IPv4 address is the network (10); the remaining 24 bits are the
+    host address: 3.962.223, the last IP address in the previous example. The CIDR
+    notation for a Class A network is /8 for 10.0.0.0. The “/8” is the netmask, which
+    means the network portion is 8 bits long, leaving 24 bits for the host.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Network Architecture and Design 239
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_14_0.png)
+
+
+    FIG. 5.4
+
+
+    Disabling IPv6 on Windows.
+
+
+    | Class | IP Range |
+
+    |---|---|
+
+    | Class A | 0.0.0.0-127.255.255 |
+
+    | Class B | 128.0.0.0-191.255.255 |
+
+    | Class C | 192.0.0.0-233.255.255 |
+
+    | Class D (multicast) | 224.0.0.0-239.255.255 |
+
+    | Class E (reserved) | 240.0.0.0-255.255.255 |
+
+
+    Similarly, the Class C network of 192.0.2.0 contains any IP address that begins
+    with 192.0.2.0:22.177, 192.0.2.253, etc. That Class network is 192.0.2.0/24 in
+    CIDR format: the first 24 bits (192) describe the network; the remaining 8 bits
+    (177 or 253 in the previous example) describe the host.
+
+
+    Once networks are described in CIDR notation, additional routable network sizes
+    are possible. Need 128 IP addresses? Chop a Class C (/24) in half, resulting in
+    two /25 networks. Need 64 IP addresses? Chop /24 network into quarters, resulting
+    in four / 26 networks with 64 IP addresses each.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# 240 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    # RFC 1918 Addressing
+
+
+    RFC 1918 addresses are private IPv4 addresses that may be used for internal traffic
+    that does not route via the Internet. This allows for conservation of scarce IPv4
+    addresses: countless Intranets can use the same overlapping RFC 1918 addresses.
+    Three blocks of IPv4 addresses are set aside for this purpose:
+
+
+    +   - 10.0.0.0–10.255.255.255 (10.0.0.0/8)
+
+    - 172.16.0.0–172.31.255.255 (172.16.0.0/12)
+
+    - 192.168.0.0–192.168.255.255 (192.168.0.0/16)
+
+
+    Any public Internet connection using un-translated RFC 1918 addresses as a destination
+    will fail; there are no public routes for these networks. Internet traffic sent
+    with an un-translated RFC 1918 source address will never return. Using the classical
+    terminology, the 10.0.0.0/8 is a Class A network, the 172.16.0.0/12 is 16 continuous
+    Class B networks, and 192.168.0.0/16 is 256 Class C networks.
+
+
+    RFC 1918 addresses are used to conserve public IPv4 addresses, which are in short
+    supply. RFC stands for “Request for Comments,” a way to discuss and publish standards
+    on the Internet. More information about RFC 1918 is available at: https://www.rfc-editor.org/rfc/rfc1918.txt.
+
+
+    > Note
+
+    Memorizing RFCs is not generally required for the exam: RFC 1918 addresses are
+    exception to that rule. The exam is designed to test knowledge of the universal
+    language of information security. The term “RFC 1918” is commonly used by network
+    professionals and should be understood by information security professionals.
+
+
+    # Network Address Translation
+
+
+    Network Address Translation (NAT) is used to translate IP addresses. It is frequently
+    used to translate RFC 1918 addresses as they pass from Intranets to the Internet.
+    If you were wondering how you could surf the web using a PC configured with a
+    private RFC 1918 address, NAT is one answer (proxying another).
+
+
+    Three types of NAT are static NAT, pool NAT (also known as dynamic NAT), and Port
+    Address Translation (PAT, also known as NAT overloading). Static NAT makes a one-to-one
+    translation between addresses, such as 192.168.1.47→192.0.2.2. Pool NAT reserves
+    a number of public IP addresses in a pool, such as 192.0.2.10→192.0.2.19. Addresses
+    can be assigned from the pool, and returned. Finally, PAT typically makes a many-to-one
+    translation from multiple private addresses to one public IP address, as 192.168.1.*→192.0.2.20.
+    PAT is a common solution for homes and small offices: multiple internal devices
+    such as laptops, desktops, and mobile devices share one public IP address. Table
+    5.5 summarizes examples of the NAT types.
+
+
+    NAT hides the origin of a packet: the source address is the NAT gateway (usually
+    a router or a firewall), not the host itself. This provides some limited security'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Network Architecture and Design 241
+
+
+    Table 5.5 Types of NAT.
+
+    | NAT Type | Example |
+
+    | --- | --- |
+
+    | Static | 192.168.1.47 -> 192.0.2.252 |
+
+    | Pool | 192.168.1.17 -> 192.0.2.10
+
+    192.168.1.21 -> 192.0.2.11
+
+    192.168.1.56 -> 192.0.2.12 |
+
+    | PAT | 192.168.1.* -> 192.0.2.20 |
+
+
+    benefits: an attack on system''s NAT-translated address will often target the
+    NAT gateway, not the end host is limited and should never be considered a primary
+    security control. Defense-in-depth is always required.
+
+    NAT can cause problems with applications and protocols that change IP addresses
+    or contain IP addresses in upper layers, such as the data layer of TCP/IP, IPsec,
+    VoIP, and active FTP are affected protocols.
+
+
+    # ARP and RARP
+
+
+    ARP is the Address Resolution Protocol, used to translate Layer 2 MAC addresses
+    and Layer 3 IP addresses. ARP resolves IPs to MAC addresses by asking, "Who has
+    IP address 192.168.2.140, tell me." An example of an ARP reply is "192.168.2.140
+    is at 00:0c:29:69:16".
+
+
+    arp who has 192.168.2.140 tell 192.168.2.4
+
+    arp reply 192.168.2.140 is-at 00:0c:29:69:16
+
+
+    > Note
+
+    Protocols such as ARP are trusty; attackers may use this to their advantage in
+    hijacking traffic by spoofing ARP requests. Any local system could cause the ARP
+    request, including an attacker. This can lead to ARP cache poisoning attacks,
+    which victim systems cause ARP entries point to malicious systems. ARP cache poisoning
+    is often used in Man-in-the-Middle (MitM) attacks, where an attacker frequently
+    poses the ARP entry for a critical system (such as the default gateway), redirecting
+    traffic to the attacker''s system.
+
+    Secure networks should hard-coding ARP entries for this reason.
+
+
+    RARP was used by legacy diskless workstations to determine their IP addresses.
+
+    A node says "Who has MAC address at 00:40:96:29:06:51, tell 00:40:96:29:06:51."
+
+
+    ARP, Reverse Request is 00:40:96:29:06:51 tell 00:40:96:29:06:51
+
+
+    In words, RARP asks: "Who am I? Tell me." A RARP server answers with the node''s
+    IP address.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Unicast, Multicast, and Broadcast Traffic
+
+
+    Unicast is one-to-one traffic, such as a client surfing the Web. Multicast is
+    one-to-many, and the “many” are preselected. Broadcast is one-to-all on a LAN.
+
+    Multicast traffic uses “Class D” addresses when used over IPv4. Nodes are placed
+    into multicast groups. A common multicast is streaming audio or video. Sending
+    1000 via unicast would require a large amount of bandwidth, so multicast is used.
+    It works like a tree; the initial stream is the root, and each member of the multicast
+    group a leaf. One stream is sent from the streaming server, and it branches on
+    the network as it reaches with multiple routes for nodes in the multicast group.
+    Multicast typically uses UDP.
+
+
+    # Limited and Directed Broadcast Addresses
+
+
+    Broadcast traffic is sent to all stations on a LAN. There are two types of IPv4
+    broadcast-addresses: limited broadcast and directed broadcast. The limited broadcast
+    address is 255.255.255. It is “limited” because it is never forwarded across a
+    router, unless across a directed router.
+
+
+    The directed (also called-directed) broadcast address of the 192.0.2.0/24 network
+    is 192.0.2.255 (the host portion of the address is all “1” in binary, or 255).
+    It is called “directed” because broadcast to these addresses may be sent from
+    remote nodes (it may be “directed”).
+
+
+    # Layer 2 Broadcast Traffic
+
+
+    Layer 2 broadcast traffic reaches all nodes in a “broadcast domain.” Devices on
+    the same LAN (or VLAN) are in the same broadcast domain. The Ethernet broadcast
+    address is MAC address “FF:FF:FF:FF:FF:FF”: traffic sent to that address on an
+    Ethernet switch is received by all connected nodes.
+
+
+    # Promiscuous Network Access
+
+
+    Accessing unicast traffic on a network segment requires “promiscuous” network
+    access. Systems as Network Intrusion Detection Systems (NIDS) require promiscuous
+    network access in order to monitor all traffic on a network. Network nodes normally
+    only “see” unicast traffic directly to them. Accepting unicast traffic requires
+    two things: a network interface card (NIC) configured in promiscuous mode and
+    the ability to access other unicast traffic on a network segment.
+
+
+    Placing a NIC in promiscuous mode normally requires super-user access, such as
+    the root user on a UNIX system. Devices such as switches provide traffic isolation,
+    so that each host will only receive unicast traffic sent to it (in addition to
+    broadcast and multicast traffic). As we will see in a later section, a hub, switch
+    span port, or TAP is typically used to provide promiscuous network access.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Network Architecture and Design 243
+
+
+    # TCP
+
+
+    TCP is the Transmission Control Protocol, a reliable Layer 4 protocol. TCP uses
+    a three-way handshake to create reliable connections across a network. TCP can
+    reorder segments that arrive out of order, and retransmit missing segments.
+
+
+    # Key TCP Header Fields
+
+
+    A TCP header, shown in Fig. 5.5, is 20 bytes long (with options), and contains
+    a number of fields. Important fields include:
+
+
+    +   - Source and Destination port
+
+    - Sequence and Acknowledgment Numbers: Keep full-duplex communication in sync
+
+    - TCP Flags
+
+    - Window Size: Amount of data that may be sent before receiving acknowledgment
+
+
+    # TCP Ports
+
+
+    TCP connects from a source port to a destination port, as from source port 51178
+    to destination port 22. The TCP port is 16 bits, allowing port numbers from 0
+    to 65535.
+
+
+    There are two types of ports: reserved and ephemeral. A reserved port is 1023
+    or lower; ephemeral ports require super-user privileges to open a reserved port.
+    Any user may open an (unused) ephemeral port.
+
+    Common services like HTTP use well-known ports. The Internet Assigned Numbers
+    Authority (IANA) maintains a list of well-known ports at https://www.
+
+
+    0 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 0 1
+
+    ++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+
+
+    | Source Port | Destination Port |
+
+    ++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+
+
+    | Sequence Number | |
+
+    ++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+
+
+    | Acknowledgment Number | |
+
+    ++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+
+
+    | Data | U|A|R|S|P|F| | Window |
+
+    | Offset | Reserved | R|C|S|S|X|I|I| |
+
+    | | G|K|H|T|N|N| |
+
+    ++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+
+
+    | Checksum | Urgent Pointer |
+
+    ++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+
+
+    | Options | Padding |
+
+    ++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+
+
+    | data |
+
+    ++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+
+    Fig. 5.5 TCP header [5].'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml.
+    Most Linux and UNIX systems have a smaller list of well-known ports in /etc/services.
+
+
+    # Socket Pairs
+
+
+    A socket is a combination of an IP address and a TCP or UDP port on one node.
+    A socket pair describes a unique connection between two nodes: source port, source
+    IP, destination port, and destination IP. The netstat output in Fig. 5.6 shows
+    a socket pair between source IP 192.168.80.144, TCP source port 51178, and destination
+    IP 192.168.2.44, TCP destination port 22.
+
+
+    A socket may “listen” (wait for a connection); a listening socket is shown as
+    127.0.0.1:631 in Fig. 5.6. A socket pair is then “established” during a connection.
+    You may have multiple connections from the same host (such as 192.168.80.144),
+    to the same host (192.168.2.4), and even to the same port (22). The OS and intermediary
+    devices such as routers are able to keep these connections unique due to the socket
+    pairs. In the previous example, two connections from the same source IP and to
+    the same IP/destination port would have different source ports, making the socket
+    pairs (connections) unique.
+
+
+    # TCP Flags
+
+
+    The original six TCP flags are:
+
+
+    +   - URG: Packet contains urgent data
+
+    - ACK: Acknowledge received data
+
+    - PSH: Push data to application layer
+
+    - RST: Reset (tear down) a connection
+
+    - SYN: Synchronize a connection
+
+    - FIN: Finish a connection (gracefully)
+
+
+    Two new TCP flags were added in 2001: CWR (Congestion Window Reduced) and ECE
+    (Explicit Congestion Notification Echo), using formerly reserved bits in the TCP
+    header. A third new flag was added in 2003: NS (Nonce Sum). These flags are used
+    to manage congestion (slowness) along a network path. All 9 TCP flags are shown
+    in Fig. 5.7.
+
+
+    ```
+
+    root@ubuntu:~# netstat -nat
+
+    Active Internet connections (servers and established)
+
+    Proto Recv-Q Send Local Address         Foreign Address         State
+
+    tcp     0       0 0.0.0.0:*               *:*                    LISTEN
+
+    tcp     0       0 192.168.80.144:51178  192.168.2.44:ESTABLISHED
+
+    ```
+
+
+    FIG. 5.6
+
+
+    Socket pair.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# Network Architecture and Design 245
+
+
+    | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---||
+
+    | | | | | | | N | C | E | U | A | P | R | S | F |
+
+    | Header Length | Reserved | | | | | S | W | E | R | G | K | S | H | T | N |
+
+
+    FIG. 5.7 Nine TCP flags [6].
+
+
+    # The TCP Handshake
+
+
+    TCP uses a three-way handshake to establish a reliable connection. The connection
+    is full duplex, and both synchronize (SYN) and acknowledge (ACK) each other. The
+    exchange of these four flags is performed in three steps: SYN, SYN-ACK, ACK, as
+    shown in Fig. 3.8.
+
+
+    The client chooses an initial sequence number, set in the first SYN packet. The
+    server also chooses its own initial sequence number, set in the SYN/ACK packet
+    shown in Fig. 5.8. Each side acknowledges the other''s sequence number by incrementing
+    it: this is the acknowledgement number. The use of sequence and acknowledgement
+    numbers both sides to detect missing or out-of-order segments.
+
+
+    Once a connection is established, ACKs typically follow for each segment. The
+    connection will eventually end with a RST (reset or tear down the connection)
+    or FIN (gracefully end the connection).
+
+
+    # UDP
+
+
+    UDP is the User Datagram Protocol, a simpler and faster cousin to TCP, UDP has
+    no handshake, session, or reliability: it is formally called “Send and Pray” for
+    this reason. UDP has a simpler and shorter 8-byte header (shown in Fig. 5.9),
+    compared to TCP''s default header size of 20 bytes. UDP header fields include
+    source IP, destination IP, packet length (header and data), and a simple (optional)
+    checksum. If used, the checksum provides limited integrity to the UDP header and
+    data. Unlike
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_20_0.png)
+
+
+    FIG. 5.8 TCP three-way handshake.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# 246 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    | 0 | 7 8 | 15 16 | 23 24 | 31 |
+
+    |---|---|---|---|---|
+
+    | Source | Destination |
+
+    | Port | Port |
+
+    | Length | Checksum |
+
+    | data octets ... | | | |
+
+
+    FIG. 5.9
+
+    UDP header [7].
+
+
+    TCP, data usually is transferred immediately, in the first UDP packet. UDP operates
+    at Layer 4.
+
+
+    UDP is commonly used for applications that are “lossy” (can handle packet loss),
+    such as streaming audio and video. It is also used for query-response applications,
+    such as DNS queries.
+
+
+    # ICMP
+
+
+    ICMP is the Internet Control Protocol, a helper protocol that helps Layer 3 (IP,
+    see note). ICMP is used to troubleshoot and report error conditions: Without ICMP
+    to help, IP would fail when faced with routing loops, ports, hosts, or networks,
+    etc., that are down. ICMP has no concept of ports, as TCP and UDP do, but instead
+    uses types and codes. Commonly used ICMP types are echo request and echo reply
+    (using ping) and time to leave exceeded in transit (traceroute).
+
+
+    # Note
+
+
+    > "Which protocol runs at layer 4?” is often a subject of fierce debate. We call
+    this the “bucket game.” For example, which bucket does ICMP go into: Layer 3 or
+    Layer 4? ICMP headers are at Layer 4, just like TCP and UDP, so many will answer
+    “Layer 4.” Others argue ICMP is a Layer 3 protocol, since it assists IP (a Layer
+    3 protocol), and has no ports.
+
+
+    This shows how arbitrary the bucket game is: a packet capture shows the ICMP header
+    at Layer 4, so many network engineers will want “Layer 4” never agree with a packet.
+    The same argument exists for many routing protocols; for example, BGP is used
+    to route at Layer 3, but BGP is carried by TCP (IP). This book will clear-cut
+    bucket game protocol/layers in the text and tests, but avoid murky examples (just
+    as the exam should).
+
+
+    # Ping
+
+
+    Ping (named after sonar used to “ping” submarines) sends an ICMP Echo Request
+    to a node and listens for an ICMP Echo Reply. Ping was designed to determine whether
+    a node is up or down.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# Network Architecture and Design 247
+
+
+    Ping was a reliable indicator of a node''s status on the ARPanet or older Internet,
+    when firewalls were uncommon (or not exist). Today, an ICMP Echo Reply is a fairly
+    reliable indicator that a node is up. Attackers use ICMP to map target networks,
+    so many sites filter type of ICMP such as Echo Request and Echo Reply.
+
+
+    An unanswered ping (an ICMP Echo Request with no Echo Reply) does not mean a host
+    is down. The node may be down, or the node may be up and the Echo Request or Echo
+    Reply may have been filtered at some point.
+
+
+    # Traceroute
+
+
+    The traceroute command uses ICMP Time Exceeded messages to trace a network route.
+    As discussed IP, the Time to Live is used to avoid routing loops: every time a
+    packet passes through a router, the router decrements the TTL field. If the TTL
+    reaches zero, the router drops the packet and sends an ICMP Time Exceeded message
+    to the original sender.
+
+
+    Traceroute takes advantage of this TTL feature in a clever way. Assume a client
+    is four hops away from a server: the client with a TTL of 1. The router A decrements
+    the TTL to 0, drops the packet, and sends an ICMP Time Exceeded message to the
+    client. Router B is now identified. The client sends a packet with a TTL of 2
+    to the server. Router A decrements the TTL to 1 and passes the packet to router
+    B. Router B decrements the TTL to 0, drops it, and sends an ICMP Time Exceeded
+    message to the client. Router C is now identified. The process continues until
+    the server is reached, as shown in Fig. 5.10, identifying all routers along UNIX
+    the route.
+
+
+    Most traceroute clients (such as UNIX and Cisco) send UDP packets outbound. The
+    outbound packets will be dropped, so the protocol does not matter. The Windows
+    tracer client sends ICMP packets outbound; Fig. 5.11 shows Windows tracer output
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_22_0.png)
+
+
+    FIG. 5.10
+
+
+    Traceroute.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# 248 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_23_0.png)
+
+
+    **FIG. 5.1**
+
+
+    for a route to www.sysnergy.com. Both client types usually send three packets
+    for each hop (the "ms" columns in the Fig. 5.11 output).
+
+
+    # Application Layer TCP/IP Protocols and Concepts
+
+
+    A multitude of protocols exist at TCP/IP''s Application Layer, which combines
+    the Session, Presentation, and Application Layers of the OSI model.
+
+
+    # Telnet
+
+
+    Telnet provides terminal emulation over a network. "Terminal" means text-based
+    VT100-style terminal access. Telnet servers listen on TCP port 23. Telnet was
+    the standard way to access an interactive command shell over a network for 20
+    years.
+
+
+    Telnet is weak because it lacks confidentiality; all data transmitted during a
+    session is plaintext, including the username and password used to authenticate
+    to the system. Attackers can sniff network traffic to steal authentication credentials
+    in this way.
+
+
+    Telnet also has limited integrity: attackers with access to a network can alter
+    data, or seize control of Telnet sessions. Secure Shell (SSH) provides secure
+    authentication, confidentiality, and integrity and is a recommended replacement
+    for Telnet.
+
+
+    # FTP
+
+
+    FTP is the File Transfer Protocol, used to transfer files to and from servers.
+    Like Telnet, FTP has no confidentiality or integrity and should not be used to
+    transfer sensitive data over insecure channels.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Network Architecture and Design 249
+
+
+    # Note
+
+
+    When discussing insecure protocols such as Telnet and FTP, statements like “no
+    confidentiality” assume that they are used with default settings, with no additional
+    hardening or encryption (such as using them via an IPSec VPN tunnel). You may
+    mitigate the lack of confidentiality by using Telnet or FTP over an encrypted
+    VPN tunnel or using SSH in place, among other options. Also, “no integrity” means
+    there is little or no integrity at the application layer: some integrity may be
+    provided at a lower layer, such as the transport layer.
+
+
+    FTP uses two ports: the control connection (where commands are sent) is TCP port
+    21; “Active FTP” uses a data connection (where data is transferred) that originates
+    from TCP port 20. Here are the two socket pairs (the next two examples use arbitrary
+    endpoints):
+
+
+    +   - Client:1025 → Server:21 (Control Connection)
+
+    - Server:20 → Client:1026 (Data Connection)
+
+
+    Notice that the data connection originates from the server, in the opposite direction
+    of the control channel. This breaks classic client-server data flow direction.
+    Firewalls will block the active FTP connection for this reason, breaking Active
+    FTP. Passive FTP addresses this issue by keeping all communication from client
+    to server:
+
+
+    +   - Client:1025 → Server:21 (Control Connection)
+
+    - Client:1026 → Server:1025 (Data Connection)
+
+
+    The FTP server tells the client which listening data connection port to connect
+    to; the client then makes a second connection. Passive FTP is more likely to pass
+    through firewalls cleanly, since it flows in classic client-server direction.
+
+
+    # TFTP
+
+    TFTP is the Trivial File Transfer Protocol, which runs on UDP port 69. It provides
+    a simpler way to transfer files and is often used for saving router configurations
+    or “bootstrapping” (downloading an operating system) via a network by diskless
+    workstations.
+
+
+    TFTP has no authentication or directory structure: files are read and written
+    to one directory, usually called /ftpboot. There is also no confidentiality or
+    integrity. Like Telnet and FTP, TFTP is not recommended for transferring sensitive
+    data over an insecure channel.
+
+
+    # SSH
+
+    SSH was designed as a secure replacement for Telnet, FTP, and the UNIX “R” commands
+    (rlogin, rshell, etc.). It provides confidentiality, integrity, and secure authentication,
+    among other features. SSH includes SFTP (SSH FTP) and SCP (Secure Copy) for transferring
+    files. SSH can also be used to securely tunnel other protocols, such as HTTP.
+    SSH servers listen on TCP port 22 by default.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# 250 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    SSH version 1 was the original version, which has since been found vulnerable
+    to man-in-the-middle attacks. SSH version 2 is the current version of the protocol,
+    and is recommended over SSHv1, Telnet, FTP, etc.
+
+
+    # SMTP, POP, and IMAP
+
+
+    SMTP is the Simple Mail Transfer Protocol, used to transfer email between servers.
+    SMTP servers listen on TCP port 25. POPv3 (Post Office Protocol) and IMAP (Internet
+    Access Protocol) are used for client-server access, using TCP ports 110 and 143,
+    respectively.
+
+
+    # DNS
+
+
+    DNS is the Domain Name System, a distributed hierarchical database that translates
+    names to IP addresses, and versa. DNS uses both TCP and UDP: small answers use
+    UDP port 53; large answers (such as zone transfers) use TCP port 53. Core DNS
+    functions are getbyname() and gethostbyaddr(). Given a name (such as www.syngress.com),
+    getbyname returns an IP address, such as 192.0.2.187. Given an address such as
+    192.0.2.187, gethostbyaddr returns the name, www.syngress.com.
+
+
+    Authoritative name servers provide the "authoritative" resolution for names within
+    a domain. A recursive name server will resolve names that it does not already
+    know. A caching server will temporarily cache names previously resolved.
+
+
+    # DNS Weaknesses
+
+
+    DNS uses unreliable UDP protocol for most requests, and native DNS provides no
+    authentication. The security of DNS relies on a 16-bit source port and 16-bit
+    query ID. Attackers are able to blind gust numbers to easily forge UDP DNS responses.
+
+
+    A cache poisoning attack is an attempt to trick a DNS server into caching a forged
+    response. If bank.example.com is at 192.0.2.193, and evil.example.com is at 198.18.8.17,
+    an attacker may try to poison a DNS server''s cache by sending the forged response.
+    If the caching DNS server accepts the response, it will return the poisoned response
+    for subsequent bank.example.com requests (until the record expires).
+
+
+    # DNSSEC
+
+
+    DNSSEC (Domain Name Server Security Extensions) provides authentication and integrity
+    to DNS responses via the use of public key encryption. It does not provide confidentiality;
+    it acts like a digital signature for DNS responses.
+
+
+    Building an Internet-scale Public Key Infrastructure is a difficult task, and
+    DNSSEC has been solely adopted for this security. Researcher Dan Kaminsky publicized
+    an improved DNS poisoning attack in 2008, which has led to renewed calls for wider
+    adoption of DNSSEC. https://www.kb.cert/org/vuls/id/800113 for more details on
+    the improved cache poisoning attack and defenses.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Network Architecture and Design 251
+
+
+    DoT and DoH
+
+    DNS over TLS (DoT) and DNS over HTTPS (DoH) are two competing standards that transfer
+    and encrypt DNS traffic via TLS, DoT uses a dedicated port (TCP port 853), while
+    DoH uses HTTPS on TCP port 443. Unlike DNSSEC, both provide confidentiality between
+    the client resolver and the DoH server. DoH has won a larger market share, and
+    is currently used by default by Firefox in the United States.
+
+
+    # SNMP
+
+
+    SNMP is the Simple Network Management Protocol, primarily used to monitor network
+    devices. Network monitoring software like MRTG uses SNMP to poll agents on network
+    devices, and interface status (up/down), bandwidth utilization, CPU temperature,
+    and many more metrics. SNMP agents use UDP port 161.
+
+    MPv1 and v2c use read and write community strings to access network devices. Devices
+    use default community strings as "public" for read and "private" for write. Additionally,
+    these community strings are usually changed infrequently (if at), and are typically
+    seen in the clear across a network. An attacker who can sniff or guess a community
+    string can access the network device via SNMP. Access to a write string allows
+    changes to a device, including shutting down or reconfiguring interfaces, among
+    many other options.
+
+    MPv3 was designed to provide confidentiality, integrity, and authentication to
+    SNMP via use of encryption. While SNMPv2c usage remains highly prevalent, use
+    of SNMPv3 is strongly encouraged due to the lack of security in all previous versions.
+
+
+    # HTTP and HTTPS
+
+
+    HTTP is the Hypertext Protocol, which is used to transfer encrypted Web-based
+    data. HTTPS (Hypertext Transfer Protocol Secure) secures encrypted Web-based data
+    via SSL/TLS ("SSL and TLS" section below). HTTP uses TCP port 80 and HTTPS uses
+    TCP port 443, HTML (Hypertext Markup Language) is used to display content.
+
+
+    > Note
+
+    HTTP and HTML are often confused. The difference: you transfer Web data via HTTP
+    and view it via HTML.
+
+
+    # BOOTP and DHCP
+
+
+    BOOTP is the Bootstrap Protocol, for bootstrapping a network by diskless systems.
+    Many system BIOSs now support BOOTP directly, allowing the BIOS to load the operating
+    system by a network without a disk. BOOTP startup occurs in two phases: BOOTP
+    to determine the IP address and OS image name, and then use TFTP to download the
+    operating system.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    DHCP (Dynamic Host Configuration Protocol) was designed to replace and improve
+    on BOOTP by adding additional features. DHCP allows more configuration options,
+    well as assigning IP address leases to systems. DHCP systems can be configured
+    to receive IP address leases, DNS servers, and default gateways.
+
+
+    Both BOOTP and DHCP use the same ports: UDP port 67 for servers and UDP port 68
+    for clients.
+
+
+    # Transmission Media
+
+
+    Transmission Media includes the Layer 1 technologies that transfer bits: network
+    cabling and wireless technologies. We will discuss cabling and wireless later
+    in this chapter. The simplest part of the OSI model is the part you can touch:
+    network cables, at Layer 1. It is important to understand the types of cabling
+    that are commonly used, and the benefits and drawbacks of each.
+
+
+    Fundamental network cabling terms to understand EMI, noise, crosstalk, and attenuation.
+    Electromagnetic Interference (EMI) is caused by magnetism created by electricity.
+    Any unwanted signal (such as EMI) on a network cable is called noise. Crosstalk
+    occurs when a signal crosses from one cable to another. Attenuation is the weakening
+    of signal as it travels further from the source.
+
+
+    # Twisted Pair Cabling
+
+
+    Unshielded Twisted Pair (UTP) network cabling, shown in Fig. 5.12, uses pairs
+    of wires twisted together. All electricity creates magnetism; taking two wires
+    that send electricity in opposite directions (such as sending and receiving) and
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_27_0.png)
+
+
+    FIG. 5.12
+
+    UTP cable.
+
+
+    Source: https://upload.wikimedia.org/wikipedia/commons/c/cb/UTP_cable.jpg. Image
+    by Baran Ivo. under permission of Creative Commons'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Network Architecture and Design 253
+
+
+    Table 5.6 Category Cabling Speed.
+
+    | Category | Speed |
+
+    | Cat 3 | 10 Mbps |
+
+    | Cat 4 | 16 Mbps |
+
+    | Cat 5 | 100 Mbps |
+
+    | Cat 5e | 1 Gbps |
+
+    | Cat 6 | 1+ Gbps |
+
+    | Cat 6a | 10 Mbps |
+
+    | Cat 7 | 10–100 Gbps |
+
+
+    twisting them farther dampens the magnetism. This makes Twisted Pair cabling less
+    susceptible to EMI.
+
+
+    Twisted pairs are classified by categories according to rated speed. Tighter results
+    in more dampening: A Category 6 UTP cable designed for gigabit networking has
+    farther twisting than a Category 3 Ethernet cable. Shielded Twisted Pair (STP)
+    carries additional metallic shielding around each pair of wires. This makes STP
+    cables less susceptible to EMI, but more rigid and more expensive. Table 5.6 summarizes
+    the types and speeds of Category cabling.
+
+
+    Note that Cat 3, Cat 4, and Cat 5 are legacy standards (Cat 1 and Cat 2 were never
+    formally standardized). Both Cat 5e and Cat 6 operate at 1000 Mbps (aka 1 Gbps)
+    at lengths up to 100 meters, but Cat 6 can operate at 10 Gbps at lengths up to
+    55 meters. Cat 6a can operate at 10 Gbps at lengths up to 100 meters, Cat 7 operates
+    at 10 Gbps at lengths up to 100 meters, but can operate at 100 Gbps at up to 15
+    meters.
+
+
+    # Coaxial Cabling
+
+
+    A coaxial network, shown in Fig. 5.13, has an inner core (marked “D”) separated
+    by an insulator (marked “C”) from a metallic braid or shield (marked “B”). The
+    outer layer is a plastic shield (marked “A”). The insulator prevents the core
+    from touching the metallic shield, which would create an electrical shock. Coaxial
+    cables are often used for satellite and cable TV service.
+
+
+    The core and shield used by coaxial cable are thicker and better insulated than
+    other types, such as twisted pair. This makes coaxial more resistant to EMI and
+    allows higher bandwidth and longer connections compared with twisted pair cable.
+
+
+    Two types of coaxial cable are Thinnet and Thickened, for Ethernet bus networking.
+
+
+    # Fiber Optic Network Cable
+
+
+    Fiber Optic network cable (simply called “fiber”) uses light to carry information,
+    which can carry a tremendous amount of information. Fiber can be used to transmit
+    via long distances: past 50 miles, further than any copper cable such as twisted
+    pair or coaxial. Fiber’s advantages are speed, distance, and immunity to EMI.
+    Disadvantages include cost and complexity.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# 254 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_29_0.png)
+
+
+    FIG. 5.13
+
+
+    Coaxial cable.
+
+    Source: https://commons.wikimedia.org/wiki/File:RG-59.jpg, Image by Arj. Image
+    under permission of Creative Commons.
+
+
+    Multimode fiber carrier uses multiple modes (paths) of light, resulting in light
+    dispersion. Single-mode fiber uses a strand of fiber, and the light uses one mode
+    (path) down the center of the fiber. Multimode fiber is used for shorter distances;
+    single-mode fiber is used for long haul, high-speed networking.
+
+
+    Multiple signals may be carried via the same fiber via the use of Wavelength Division
+    Multiplexing (WDM), where multiple light "colors" are used to transmit different
+    channels of information via the same fiber. Combined speeds of a terabit/second
+    can be achieved when WDM is used to carry 10 gigabits per color.
+
+
+    # Ethernet Technologies and Protocols
+
+
+    Local Area Network concepts focus on layer 1–3 technologies such as network cabling
+    types, physical and logical network topologies, Ethernet, and others.
+
+
+    # Ethernet
+
+
+    Ethernet is a dominant local area networking technology that transmits network
+    data via frames. It originally used a physical bus topology, but later added support
+    for physical star. Ethernet describes Layer 1 issues such as frames. Ethernet
+    is baseband (one channel), so it must address issues such collisions, where two
+    nodes attempt to transmit data simultaneously.
+
+
+    Ethernet has evolved from 10-megabit buses that used "thinnet" or "thicknet" coaxial
+    cable. The star-based physical layer uses Twisted Pair cables that range in'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "# Network Architecture and Design 255\n\nTable 5.7 Types of Ethernet.\n\n|\
+    \ Name | Type | Speed | Max. Distance |\n| --- | --- | --- | --- |\n| 10Base2\
+    \ \"Thinnet\" | Bus | 10 megabits | 185 meters |\n| 10Base5 \"Thicknet\" | Bus\
+    \ | 10 megabits | 500 meters |\n| 10BaseT | Star | 10 megabits | 100 meters |\n\
+    | 100BaseT | Star | 100 megabits | 100 meters |\n| 1000BaseT | Star | 1000 megabits\
+    \ | 100 meters |\n\nspeed from 10 megabits to 1000 megabits and beyond. A summary\
+    \ of these types is listed in Table 5.7.\n\n# CSMA\n\nCarrier Sense Multiple Access\
+    \ (CSMA) is designed to address collisions. Ethernet is baseband media, which\
+    \ is the equivalent of a “party line,” In the early days of phone service, many\
+    \ people did not have a dedicated phone line for their house: they shared a party\
+    \ line with their neighbors. A protocol emerged for using the shared line:\n\n\
+    +   1. Lift the receiver and listen to determine if the line is idle\n2. If the\
+    \ line is not idle, hang up and wait before trying again\n3. If the line is idle,\
+    \ dial\n\nEthernet works in the same fashion, but there is one state that has\
+    \ not been accounted for: two neighbors lift their receivers and listen to hear\
+    \ if the line is in use. Hearing nothing, both dial simultaneously. Their calls\
+    \ “collide”: the integrity of theirs is ruined. CSMA is designed to address collisions.\n\
+    \nCarrier Sense Multiple Access with Collision Detection (CSMA/CD) is used to\
+    \ immediately detect collisions within a network. It takes the following steps:\n\
+    \n+   1. Monitor the network to see if it is idle\n2. If the line is not idle,\
+    \ wait a random amount of time\n3. If the line is idle, transmit\n4. While transmitting,\
+    \ monitor the network\n5. If more electricity is sent, another station must also\
+    \ be sending\n   (a) Send signal to all nodes to stop transmitting\n   (b) Wait\
+    \ a random amount of time before retransmitting\n\nCSMA/CD is used for systems\
+    \ that can send and receive simultaneously, such as wired Ethernet. CSMA/CA (Collision\
+    \ Avoidance) is used for systems such as 802.11 wireless that cannot send and\
+    \ receive simultaneously. CSMA/CA relies on receiving an acknowledgment from the\
+    \ receiving station: if no acknowledgment is received, there must have been a\
+    \ collision, and the node will wait and retransmit. CSMA/CD is superior to CSMA/CA\
+    \ because collision detection detects a collision almost immediately."
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# LAN Physical Network Topologies
+
+
+    Physical Network Topologies describe Layer 1 locally: how the cables are physically
+    run. There have been many popular physical topologies over the years; many, many,
+    such as the bus and ring, have faded as the star topology has become dominant.
+
+
+    # Legacy LAN Topologies
+
+
+    A physical bus connected network nodes in a string. Each node inspected the data
+    as it passed along the bus. Ethernet Thinnet and Thicket were bus technologies.
+    A physical ring connected network nodes in a ring: if you followed the cable from
+    node to node, you would finish where you began. FDDI (Fiber Distributed Data Interface)
+    was a LAN ring technology. All are considered legacy LAN technologies that have
+    been overtaken by star.
+
+
+    # Star
+
+
+    Star topology has become the dominant physical topology for LANs. The star was
+    adopted by Ethernet (which originally supported bus only). Each node is connected
+    directly to a central device such as a hub or a switch, as shown in Fig. 5.14.
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_31_0.png)
+
+
+    FIG. 5.14
+
+
+    Star topology.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Network Architecture and Design 257
+
+
+    Stars feature fault tolerance: any single local cable cut or NIC failure affects
+    one node. Since each node is wired back to a central point, more cable is required
+    as opposed to bus (where one cable run connects to each other). This cost disadvantage
+    is usually outweighed by the fault tolerance advantages.
+
+
+    # Mesh
+
+
+    A mesh interconnects network nodes to each other. Fig. 5.15 shows two mesh networks.
+    The left mesh is fully connected, with four servers interconnected. The right
+    mesh is partially connected: each node has multiple connections to the mesh, but
+    every node does not connect to every other.
+
+
+    Meshes have superior availability and are often used for highly available (HA)
+    server clusters. Each of the four Web servers shown on the left in Fig.5.15 can
+    share the load of Web traffic and maintain state information between each other.
+    If any Web server in the mesh goes down, the others remain up to shoulder the
+    traffic load.
+
+
+    # WAN Technologies and Protocols
+
+
+    ISPs and other “long-haul” network providers, whose networks span from cities
+    to countries, often use Wide Area Network technologies. Many of us have hands-on
+    experience configuring LAN technologies such as connecting Cat5 network cabling;
+    it is less common to have hands-on experience building WANs.
+
+
+    # T1s, T3s, E1s, E3s
+
+
+    There are several international circuit standards: the most prevalent are T Carriers
+    (United States) and E Carriers (Europe). A T1 is a dedicated 1,544-megabit circuit
+    that carries twenty-four 64-bit DS0 (Digital Signal 0) channels (as 24 circuitswitched
+    phone calls). Note the terms DS1 (Digital Signal 1) and T1 are often used interchangeably.
+    DS1 describes the flow of bits (via any medium, such as copper, fiber, and wireless);
+    a T1 is a telephone circuit that carries a DS1.
+
+
+    A T3 is 28 bundled T1s, forming a 44.736-megabit circuit. The terms T3 and DS3
+    (Digital Signal 3) are also used interchangeably, with the same T1/DS1 distinction
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_32_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# 258 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    noted above. E1s are dedicated 2.048-megabit circuits that carry 30 channels,
+    and 16
+
+    e1s form an E3, at 34.368 megabits.
+
+
+    > Note
+
+    T1 and T3 speeds are often rounded off to 1.5 and 45 megabits, respectively. This
+    book will use those
+
+    numbers (and they are also shorthand for the exam). Beyond the scope of the exam
+    is the small
+
+    amount of bandwidth required for circuit overhead. The reason is 28 T1s 1.544
+
+    megabits 43.232 megabits, a bit lower than the T3 speed of 44.736 megabits. The
+    same is true for
+
+    E1—E3 math.
+
+
+    SONET (Synchronous Optical Networking) carries multiple T-carrier circuits via
+
+    fiber optic cable. SONET uses a physical fiber ring for redundancy.
+
+
+    # Frame Relay
+
+
+    Frame Relay is a packet-switched Layer 2 WAN protocol that provides no error
+
+    recovery and focuses on speed. Higher layer protocols carried by Frame Relay,
+    such
+
+    as TCP/IP can be used to provide reliability.
+
+
+    Frame Relay multiplexes logical connections over a single physical con-
+
+    ection create Virtual Circuits; this shared bandwidth model is an alternative
+    to
+
+    ededicated circuits as T1, a PVC (Permanent Virtual Circuit) is always con-
+
+    ected to a real dedicated circuit like a T1. A Switched Virtual Circuit
+
+    (SVC) sets up "call," transfers data, and terminates the connection after an idle
+
+    timeout. Frame Relay is addressed locally via Data Connection Identifiers
+
+    (DLCI), pronounced "delce".
+
+
+    # X.25
+
+
+    X.25 is an older packet-switched WAN protocol. X.25 provided a cost-effective
+    way
+
+    to transmit data over long distances in the 1970s through the early 1990s, when
+    the
+
+    most common option was a direct call via analog modem. X.25''s popularity has
+
+    faded as the Internet has become ubiquitous.
+
+
+    The global packet-switched X.25 network is separate from the global IP-based
+
+    Internet. X.25 performs error correction which can add latency on long links.
+    It can
+
+    carry other protocols such as TCP/IP, but since TCP/IP contains its own reliability,
+
+    there is no need to take the extra performance by also providing reliability at
+
+    t X.25 layer. Other protocols such as frame relay are usually used to carry
+
+    TCP/IP.
+
+
+    # ATM
+
+
+    Asynchronous Transfer Mode (ATM) is a WAN technology that uses fixed
+
+    length cells. ATM cells are 53 bytes long, with a 5-byte header and 48-byte data
+
+    portion.
+
+
+    ATM allows reliable network throughput compared to Ethernet. The answer to
+
+    "How many Ethernet frames can I send per second" is "It depends." Normal Ethernet'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Network Architecture and Design 259
+
+
+    frames can range in size from under 100 bytes to over 1500 bytes. In contrast,
+    all ATM cells are 53 bytes.
+
+
+    SMDS (Switched Mult Gigabit Data Service) is older and similar to ATM, also using
+    53-byte cells.
+
+
+    # MPLS
+
+
+    Multiprotocol Label Switching MPLS provides a way to forward WAN data via labels,
+    via a shared MPLS cloud network. This allows MPLS networks to carry many types
+    of network traffic, including ATM, Frame relay, IP, and others. Decisions based
+    on labels, such as an IP header), MPLS can carry data and be used to simplify
+    WAN routing. If T1s were used, the data center would require T12 circuits (one
+    to each office); with MPLS, the data center and each office would require a single
+    connection to connect to the MPLS cloud.
+
+
+    # SDLC and HDLC
+
+
+    Synchronous Data Link Control (SDLC) is a synchronous Layer 2 protocol that uses
+    polling to transmit data. Combined nodes can act as primary or secondary. SDLC
+    supports NRM transmission only (below).
+
+    High-Level Data Link Control (HDLC) is the successor to SDLC. HDLC adds error
+    correction and flow control, as well as two additional modes (ARM and ABM). The
+    three modes of HDLC are:
+
+
+    +   - Normal Response Mode (NRM)—Secondary nodes can transmit when permission
+    by the primary
+
+    - Asynchronous Response Mode (ARM)—Secondary nodes may initiate communication
+    with the primary
+
+    - Asynchronous Balanced Mode (ABM)—Combined mode where nodes act as primary or
+    secondary, initiating transmissions without receiving permission
+
+
+    # Converged Protocols
+
+
+    “Convergence” is a recent network buzzword. It means providing services such as
+    industrial controls, storage, and voice (that were delivered via non-IP devices
+    and networks) via Ethernet and TCP/IP.
+
+
+    # DNP3
+
+
+    The Distributed Network Protocol (DNP3) provides an open standard primarily within
+    the energy sector for interoperability between various vendors’ SCADA and smart
+    grid applications. According to the US Department of Energy, “Smart grid” generally
+    refers to a class of technology people who are bringing utility electricity delivery
+    systems into the 21st century, using computer-based remote control and automation.
+    These systems are made possible by two-way communication technology and computer
+    processing that has been used for decades in other industries. They are beginning
+    to be used on electricity networks, from the power plants and wind farms all'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# 260 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    the way to the consumers of electricity in homes and businesses. They offer many
+    benefits to utilities and consumers—mostly seen in big improvements in energy
+    efficiency on the electricity grid and in the users'' homes and offices [8].
+
+
+    Some protocols, as SMTP, fit into one layer. DNP3 is a multipayer protocol and
+    may be carried via TCP/IP (another protocol): "Many vendors offer products that
+    use TCP/IP to transport DNP3 messages in lieu of the media discussed above. Link
+    layer frames, which we have not talked about yet, are embedded into TCP/IP packets.
+    This approach has enabled DNP3 to take advantage of Internet technology and permitted
+    economical data collection and control between widely separated devices" [9].
+
+
+    Recent improvements in DNP3 allow for "Secure Authentication," which addresses
+    challenges with the original specification that could have allowed, for example,
+    spoofing or replay attacks. DNP3 became an IEEE standard in 2010, called IEEE
+    1815-2010 (now deprecated). It allowed pre-shared keys only. IEEE 1815-2012 is
+    the current standard; it supports Public Key Infrastructure (PKI).
+
+
+    # Storage Protocols
+
+
+    Fibre Channel over Ethernet (FCoE) and Internet Computer System Interface (iSCSI)
+    are both Storage Area Network (SAN) protocols that provide cost-effective ways
+    to leveraging network infrastructure technologies and protocols to interface with
+    storage. A Storage Area Network allows block-level access across a network, like
+    a directly attached drive. However fibre channel uses the Canadian/UK spelling
+    of "fiber," while fiber optic cable uses the American spelling of "fiber."
+
+
+    FCoE leverages Fibre Channel, which has long been used for storage networking,
+    but with the requirements for completely different cabling and hardware. Instead,
+    FCoE can be transmitted across Ethernet networks. In FCoE, Fibre Channel''s HBA
+    (Host Bus Adapters), which were historically unique cards to interface with storage,
+    are combined with the network interface (NIC) for economies of scale. FCoE uses
+    Ethernet, but not TCP/IP. Fibre Channel over IP (FIP) encapsulates Fibre Channel
+    frames via TCP/IP.
+
+
+    Like FCoE, iSCSI is a SAN protocol that allows for leveraging network infrastructure
+    and protocols to interface with storage. Fibre uses Ethernet for communication
+    and can be routed like any IP protocol (the same is for FCIP). By employing protocols
+    beyond Layer 2 (Ethernet), iSCSI can be transmitted beyond the local network.
+    Thus, iSCSI could allow even for accessing storage that resides across a WAN.
+    iSCSI uses Logical Unit Numbers (LUNs) to provide a way of addressing storage
+    across the network. LUNs can also be used for basic access control for network
+    accessible storage.
+
+
+    # Virtual SAN
+
+
+    Storage Area Networks have historically tended to be proprietary and used dedicated
+    hardware and protocols that did not easily interoperate. Though many implementations
+    now leverage protocols such as FCoE, FCIP, or iSCSI that'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Network Architecture and Design 261
+
+
+    can allow for converged traditional networking technologies and protocols, the
+    scalability and security of the Storage Area Networking has proven cumbersome.
+
+
+    Traditional approaches to storage security often required hard-coding changes
+    to switches or the HBAs to achieve access control. One approach to a virtual SAN
+    feels analogous to the switching of VLANs and tries allow for a conceptually simplistic
+    approach to isolation within the SAN. This concept of the virtual SAN as analogous
+    to VLANs is commonly employed by networking vendors.
+
+
+    The concept of a virtual SAN is not limited to security concerns from networking
+    vendors. Recent use of the virtual SAN leans heavily on the virtual side of the
+    phrase. Virtualization vendors employ the virtual SAN to imply an approach to
+    the SAN that allows for more rapid provisioning of virtualized storage. Beyond
+    provisioning, virtualization vendors tour the virtual SAN as a means to leverage
+    virtualization to afford simpler linear scalability to the storage area network.
+
+
+    # VoIP
+
+
+    Voice over Internet Protocol (VoIP) carries voice via data networks, a fundamental
+    change from analog POTS (Plain Old Telephone Service), which remains in use after
+    100 years. VoIP brings the advantages of packet-switched networks, such as lower
+    cost and resiliency, to the telephone.
+
+
+    Recently, many organizations have maintained at least two distinct networks: a
+    phone network and a data network, each with associated maintenance costs. The
+    reliability of packet-switched data networks has grown as organizations have made
+    substantial investments. With the advent of VoIP, many organizations have lowered
+    costs by combining voice and data services on packet-switched networks.
+
+
+    Common VoIP protocols include Real-time Transport Protocol (RTP), which rely upon
+    session and signaling protocols including SIP (Session Initiation Protocol, a
+    signaling protocol) and H.323. SRTP (Real-time Transport Protocol) may be used
+    to provide secure VoIP, including confidentiality, integrity, and security authentication.
+
+
+    While VoIP can provide cost advantages (especially for new sets, without a large
+    voice investment), there are security concerns. If the network goes down, both
+    voice and network data go down. Also, there is no true "out of band" channel for
+    wired voice. If an attacker has compromised a network, may be able to compromise
+    the confidentiality or integrity of the VoIP calls on that network. VoIP protocols,
+    such as RTP, provide little or no security by sniffing with a tool like Wireshark
+    (a high-quality free network protocol analyzer, as sees https://www.wireshark.org),
+    selecting the "Telephony → VoIP Calls" menu, choosing a call and pressing "Player,"
+    as shown in Fig. 5.16.
+
+
+    Organizations that deploy VoIP must ensure reliability by making sufficient investments
+    in their data networks, and in staff expertise to support them. In the event of
+    network compromise, use other methods such as cell phones for'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# 262 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_37_0.png)
+
+
+    FIG. 5.16
+
+
+    Wireshark "VoIP Calls."
+
+
+    out-of-band communication. Finally, any VoIP traffic via insecure networks should
+    be secured by SRTP, or other methods as IPsec. Never assume VoIP traffic is secure
+    by default.
+
+
+    # Micro-segmentation
+
+
+    Micro-segmentation describes the process of filtering in all systems, whether
+    physical or cloud-based:“Micro-segmentation is a method of creating zones in data
+    centers and cloud environments to isolate workloads from one another and secure
+    them individually. With microsegmentation, system administrators can create policies
+    that limit network traffic between workloads on a Zero Trust approach. Organizations
+    use micro-segmentation to reduce the network attack surface, improve breach containment
+    and strengthen regulatory compliance” (https://www.paltonetworks.com/cyberperedia/what-is-microsegmentation).
+
+
+    Microsegmentation is a core Zero Trust (previously discussed in Chapter 4, Domain
+    3: Security Architecture and Engineering) concept, and uses technologies such
+    as Software-Defined Networking (SDN), Software-Defined Wide Area Network (SD-WAN),
+    and Virtual Extensible Local Area Network (VXLAN), discussed network.
+
+
+    # Software-Defined Networks
+
+
+    Through virtualization and cloud services, storage and compute are increasingly
+    decoupled from the traditional server and disk-dense datacenter. Software-Defined
+    Networking (SDN) seeks a similar paradigm shift in organizations’ approach to
+    networking. A helpful oversimplification can be to think of SDN as an approach
+    to virtualize networking and decouple networking from the hardware typically employed
+    for this purpose.
+
+
+    Software-Defined Networking (SDN) separates a router’s control plane from the
+    data (forwarding) plane. The control plane makes routing decisions. The data plane
+    forwards data (packets) through the router. With SDN routing decisions are made
+    remotely, instead of on each individual router.'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Network Architecture and Design 263
+
+
+    One of the goals of SDN is to allow micro-segmentation: nimble and customizable
+    networking capabilities. A hallmark of SDN is the potential for achieving flexibility
+    using inexpensive "white-box" networking hardware and open protocols rather than
+    traditional proprietary hardware, firmware, and software. Another common goal
+    with SDN is to accommodate dynamic instantiation of networking capabilities rules
+    as they become needed within the infrastructure.
+
+
+    The well-known protocol in this space is OpenFlow, which can, among other capabilities,
+    allow for control of switching rules to be designated or updated at a central
+    controller. OpenFlow is a TCP protocol that uses TLS encryption.
+
+
+    # Software-Defined Wide Area Network
+
+
+    Software-Defined Wide Area Network (SD-WAN) takes the concept of Software-Defined
+    Networks and scales it to the cloud. It uses a combination of various technologies,
+    including MPLS, cellular, and broadband: A Software-defined Wide Area Network
+    (SD-WAN) is a virtual WAN that allows enterprises to leverage any combination
+    of transport services—including MPLS, LTE and broadband services—to connect users
+    to applications. An SD-WAN uses a centralized function to securely and intelligently
+    direct traffic across the WAN and directly to SaaS and IaaS providers. This increases
+    application performance and delivers a high-quality user experience, which increases
+    business productivity and agility and reduces IT costs [10].
+
+
+    SD-WAN can automatically provide the best connection for any user or application
+    lets networks route traffic based on centrally managed rules, no matter the entry
+    and exit points of the traffic are, and with full security. For example, if a
+    user in a branch office is working in Office365, SD-WAN can route their traffic
+    directly to the closest cloud data center for that app, improving networking responsiveness
+    for the user and lower bandwidth costs for the business [11].
+
+
+    # Virtual Extensible Local Area Network
+
+
+    Virtual Local Area Network (VXLAN) extends the concept of VLANs (Virtual Local
+    Area Networks, discussed later in this chapter) to cloud. VLAN support 4096 segment
+    IDs (or VLANs), VXLAN supports 16 million segment IDs (hence "extensible”), allowing
+    global scale. VXLAN encapsulates data via UDP port 4789; the encapsulation and
+    de-encapsulation is done by VTEPs (Virtual Tunnel Endpoints).
+
+
+    VXLAN is a technology that allows you to segment your networks (as VLANs do) but
+    also solves the scaling limitation of VLANs and provides benefits that VLANs cannot.
+    Some of the important benefits of using VXLANs include:
+
+
+    +   - You can theoretically segment as many as 16 million VXLANs in an administrative
+    domain (as opposed to 4094 VLANs).
+
+    - VXLANs provide network segmentation at the scale required by cloud builders
+    to support large numbers of tenants.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    +   - With traditional Layer 2 networks you are constrained by Layer 2 boundaries
+    and forced to create large or geographically stretched Layer 2 domains, VXLAN’s
+    functionality allows you to dynamically allocate resources within between data
+    centers and enables migration of virtual machines between servers that exist in
+    separate Layer 2 domains by tunneling the traffic over Layer 3 networks [12].
+
+
+    # Wireless Local Area Networks
+
+
+    Wireless Local Area Networks (WLANs) transmit information via electromagnetic
+    waves (such as radio) or light. Historically, wireless data networks have been
+    very insecure, often relying on the (perceived) difficulty in attacking the confidentiality
+    or integrity of the traffic. This perception is usually misplaced. The most common
+    form of wireless data networking is the 802.11 wireless standard, and the first
+    802.11 stan-
+
+
+    # DoS and Availability
+
+
+    WLANs have no way to ensure availability. An attacker with physical proximity
+    can have a variety of Denial-of-Service attacks, including polluting the wireless
+    spectrum with noise. If you think of the CIA triad as a three-legged stool, “wireless
+    security” is missing a leg. Critical applications that require a reliable network
+    should use wired connections.
+
+
+    # Unlicensed Bands
+
+
+    A “band” is a small amount of contiguous radio spectrum. Industrial, Scientific,
+    and Medical (ISM) bands are set aside for unlicensed use, meaning you do not need
+    to acquire a license from an organization such as the Federal Communications Com-
+    mission (FCC) to use them. Many wireless devices such as cordless phones, 802.11
+    wireless, and Bluetooth use ISM bands. Different countries use different ISM bands:
+    two popular ISM bands used internationally are 2.4 and 5 GHz.
+
+
+    # FHSS, DSSS, and OFDM
+
+
+    Frequency Hopping Spread Spectrum (FHSS) and Direct Sequence Spread Spectrum (DSSS)
+    are two methods for sending traffic via a radio band. Some bands, like the 2.4-GHz
+    ISM band, can be quite polluted with interference: Bluetooth, cordless phones,
+    some 802.11 wireless, baby monitors, and even microwaves can broadcast or interfere
+    with this band. Both DSSS and FHSS are designed to maximize throughput while minimizing
+    the effects of interference.
+
+
+    DSSS uses the entire band at once, “spreading” the signal throughout the band.
+    FHSS uses a number of small frequency channels throughout the band and “hops”
+    through them in pseudandom order.
+
+
+    Orthogonal Frequency-Division Multiplexing (OFDM) is a multiplexing method, allowing
+    simultaneous transmission using multiple independent wireless frequencies that
+    do not interfere with each other.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# 802.11
+
+
+    802.11 wireless has many standards, using various frequencies and speeds. The
+    original mode is simply called 802.11 (sometimes 802.11-1997, based on the year
+    it was created), which operated at 2 megabits per second (Mbps) using the 2.4
+    GHz frequency; it was quickly supplanted by 802.11b, at 11 Mbps. 802.11g was designed
+    to be backwards compatible with 802.11 devices, offering speeds up to 54 Mbps
+    using the 2.4 GHz frequency. 802.11a offers the same top speed, using the 5 GHz
+    frequency.
+
+
+    802.11 uses 2.4 and 5 GHz frequencies, and is able to use multiple antennas with
+    multiple-input-output (MIMO). This allows speeds up to 600 Mbps. 802.11ac uses
+    the 5 GHz frequency, offering speeds up to 3 Gbps. Finally, 802.11ax uses the
+    2.4, 5, and 6 GHz bands, offering speeds up to 10 Gbps.
+
+
+    Table 5.8 summarizes the major types of 802.11 wireless.
+
+
+    The 2.4 GHz frequency can be crowded: cordless phones and baby monitors use its
+    frequency, as Bluetooth and some other wireless devices. Microwave ovens can interfere
+    with 2.4 GHz devices. The 5 GHz frequency is usually crowded, with shorter waves;
+    it does not penetrate walls and obstructions as well as the longer 2.4 GHz waves.
+    6 GHz (used by 802.11ax, aka Wi-Fi 6) is even less
+
+
+    # Managed, Master, Ad-Hoc, and Monitor Modes
+
+
+    802.11 wireless NICs operate in four modes: managed, master, ad hoc, and monitor
+    mode.
+
+
+    802.11 wireless clients connect to an access point in managed mode (also called
+    client mode). Once connected, clients communicate with the access point only;
+    they cannot directly communicate with other clients.
+
+
+    Master mode (also called infrastructure mode) is the mode used by wireless access
+    points. A wireless card can only communicate with connected clients in managed
+    mode.
+
+
+    Table 5.8 Types of 802.11 Wireless.
+
+
+    | Type | Top Speed | Frequency |
+
+    | --- | --- | --- |
+
+    | 802.11 | 2 Mbps | 2.4 GHz |
+
+    | 802.11a | 54 Mbps | 5 GHz |
+
+    | 802.11b | 11 Mbps | 2.4 GHz |
+
+    | 802.11g | 54 Mbps | 2.4 GHz |
+
+    | 802.11n | 72–600 Mbps | 2.4 and/or 5 GHz |
+
+    | 802.11ac | 422 Mbps–1.3 Gbps | 5 GHz |
+
+    | 802.11ax | Up to 10 Gbps | 2.4, 5, and/or 6 GHz |'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'Ad hoc mode is a peer-to-peer mode with no central access point. A computer
+    connected to the Internet via a wired NIC may advertise an ad hoc WLAN to allow
+    Internet sharing.
+
+
+    Finally, monitor mode is a read-only mode for sniffing WLANs.
+
+
+    # SSID and MAC Address Filtering
+
+
+    802.11 WLANs use a Service Set Identifier (SSID), which acts as a network name.
+    Wireless clients know the SSID before joining WLAN, so the SSID is a configuration
+    parameter. SSIDs are normally broadcasted; some WLANs are configured to disable
+    SSID broadcasts, as a security feature. Relying on the secrecy of the SSID is
+    a poor security strategy: a wireless sniffer in monitor mode can detect the SSID
+    used by clients as they join WLANs; this is true if SSID broadcasts are disabled.
+
+
+    Another common 802.11 wireless security precaution is restricting client access
+    by filtering the MAC address, allowing only trusted clients. This provides limited
+    security. MAC addresses are exposed in plaintext on 802.11 WLANs; trusted MACs
+    can be sniffed, and an attacker may reconfigure a non-trusted device with a trusted
+    MAC address in software. Then the attacker can wait for the trusted device to
+    leave (or launch a DoS against the device) and join the network with a trusted
+    MAC address.
+
+
+    # WEP
+
+
+    WEP is the Wired Equivalent Privacy protocol, an early attempt (first ratified
+    in 1999) to protect 802.11 wireless security. WEP has proven to be critically
+    weak: new attacks can break any WEP key in minutes. WEP effectively provides little
+    integrity or confidentiality protection. WEP is considered broken, and it is strongly
+    discouraged. The encryption algorithms used in 802.11 and/or other encryption
+    methods such as VPN should be used in place of WEP.
+
+
+    WEP was designed at the time when export of encryption was more regulated than
+    it is today and was designed specifically to avoid conflicts with existing laws
+    at time. In other words, WEP was designed to be "not strong." cryptographically,
+    and it turned out to be even weaker than anticipated. WEP has 40- and 104-bit
+    key lengths and uses the RC4 cipher. WEP frames have no timestamp and no replay
+    protection: attackers can inject traffic by replaying sniffed WEP frames.
+
+
+    # 802.11i
+
+
+    802.11i is the first 802.11 wireless security standard that provides reasonable
+    security. 802.11i describes a Robust Security Network (RSN), which allows pluggable
+    authentication modules. RSN allows changes to cryptographic ciphers as new vulnerabilities
+    are discovered.
+
+
+    RSN is commonly referred to as WPA2 (Wi-Fi Protected Access 2), a full implementation
+    of 802.11i. By default, WPA2 uses AES encryption to provide'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Network Architecture and Design 267
+
+
+    confidentiality, and CCMP (Counter Mode CBC MAC Protocol) to create a Message
+    Integrity Check (MIC), which provides integrity. The less secure WPA (without
+    the “2”) was designed for access points that lack the power to implement the full
+    802.11i standard, providing a better security alternative to WEP. WPA uses RC4
+    for confidentiality and TKIP for integrity. Use of WPA2 is recommended over WPA.
+
+
+    # Bluetooth
+
+
+    Bluetooth, described by IEEE standard 802.15.1, is a Personal Area Network (PAN)
+    wireless technology, operating in the same 2.4-GHz frequency as many types of
+    802.11 wireless devices. Bluetooth can be used by small low-power devices as cell
+    phones to transmit data over short distances. Bluetooth versions 2.1 and older
+    operate at 3 Mbps or less; Versions 3 and higher offer faster speeds.
+
+
+    Bluetooth has three classes of devices, summarized below. Although Bluetooth is
+    designed for short-distance networking, it is worth noting that class 1 can transmit
+    up to 100 meters
+
+
+    +   - Class 3: under 10 meters
+
+    - Class 2: 10 meters
+
+    - Class 1: 100 meters
+
+
+    Bluetooth uses the 128-bit EO stream cipher. Cryptanalysis of E0 has proven it
+    to be weak; practical attacks show the true strength to 38 bits or less.
+
+    Sensitive devices should disable automatic discovery by the secrecy of the 48-bit
+    MAC address of the Bluetooth adapter. Even when disabled, Bluetooth devices may
+    be discovered by guessing the MAC address. The first 24 bits are the OUI, which
+    may be easily guessed; the last 24 bits may be determined by brute-force attack.
+    For example, many Nokia phones use the OUI of 00:02:EE. If an attacker knows that
+    a target device is a Nokia phone, the remaining challenge is guessing the last
+    24 bits of the MAC address.
+
+
+    # ZigBee
+
+
+    ZigBee, originally described by IEEE standard 802.15.4, is another Personal Area
+    Network (PAN) wireless technology. It is low-power, low-range wireless mesh technology
+    that is heavily used in warehouses, Internet of Things (IoT), Building Automation
+    and Control (BAC), and Bluetooth. It also operates at 2.4 GHz frequency which
+    follows the following frequencies on region: 784 MHz (China), 868 MHz (Europe),
+    and 915 MHz (United States and Australia). It supports speeds up to 250kbps at
+    a distance of up to 100 meters.\ZigBee uses battery-powered antennas, and the
+    ZigBee standard requires 2 years of battery life.
+
+
+    NIST describes ZigBee: ZigBee is a wireless technology developed as an open global
+    standard to address the unique needs of low-cost low-power wireless sensor networks.
+    This standard takes full advantages of the IEEE 802.15.4 physical radio'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# 268 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    specification and operates in unlicensed bands worldwide at different frequencies.
+    ZigBee-Wireless Mesh Networks (ZigBee-WMNs) are recognized as a cost-effective
+    and flexible solution for building automation and control. They have the potential
+    to unify the methods of data communication for sensors, actuators, appliances,
+    and asset-tracking devices. They offer a means to build a reliable but affordable
+    backbone that supports battery-operated devices with a low data rate and low duty
+    cycle to facilitate building automation and control systems (BACs) [13]. ZigBee
+    offers three security modes: unsecured mode, ACL (Access Control List), and secured
+    mode. As the name implies, unsecured modes have no encryption or filtering: data
+    is still plaintext. ACL mode adds firewall-style ACLs, restricting which devices
+    can send data to/from others, but it is still plaintext. Secured mode uses 128-bit
+    AES to encrypt data. Secured mode is strongly recommended over the other modes
+    of ZigBee.
+
+
+    # Li-Fi
+
+
+    Li-Fi (Light Fidelity) uses LED (Light Emitting Diodes) to transfer data. It pulses
+    LEDs so quickly that the human eye sees lights and dots no flickering. This technology
+    requires line-of-sight between the LEDs and the sending/receiving devices. Li-Fi
+    is used in areas where wired devices are not (easily) used, and in areas where
+    electromagnetic interference (EMI) makes traditional wireless technologies such
+    as 802.11 or Bluetooth difficult or impossible to use. Traditional wireless technologies
+    can also risk interfering with critical equipment, such as some medical equipment
+    or devices. Hospitals often face these challenges.
+
+
+    Light has considerably more potential bandwidth than radio waves, so Li-Fi can
+    light at 100 Gbps, faster than any current Wi-Fi technology: "Li-Fi is a Visible
+    Light Communications system transmitting internet communications at very high
+    speeds. The technology makes a LED light emit pulses of light that are undetectable
+    by the human eye and within emitted pulses, data can travel to and from receivers.
+    Then, the receivers collect information and interpret the transmitted data. This
+    is conceptually similar to decoding code but at a much faster rate—millions of
+    times a second—Li-Fi transmission speeds can go over 100 Gbps, 14 times faster
+    than WiGig, also known as the world''s fastest WiFi! [14].
+
+
+    # RFID
+
+
+    Radio Frequency Identification (RFID) is a technology used to create readable
+    tags for animals or objects. There are three types of RFID tags: semi-passive,
+    and passive. Active and semi-passive RFID tags have a battery. An active tag broadcasts
+    a signal; semi-passive RFID tags rely on a RFID reader''s signal for power. Passive
+    RFID tags have no battery, and also rely on the RFID reader''s signal for power.
+
+
+    Active RFID tags can operate over larger distances. Devices like toll transders
+    (allowing automatic payment of highway tolls) use active tags. Passive RFID'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "# Network Architecture and 269\n\ntags are more inexpensive; they are used\
+    \ for applications such as tracking inventory\nin a warehouse.\n\nRFID signals\
+    \ may be blocked by a Faraday Cage, which shields enclosed\nobjects from EMI.\
+    \ Electricity will seek to go around a conductive object rather than\nthrough\
+    \ it (like lightning hitting a car: the occupants inside are usually unharmed).\n\
+    A Faraday Cage is a metal cage or enclosure that acts as the conductive object,\
+    \ protect-\ning objects inside. This blocks many radio signals, including RFID.\
+    \ The cage can be\nas simple as aluminum foil wrapped around an object.\n\n# Cellular\
+    \ Networks\n\nCellular networks use cellphone towers (aka “cells”) to connect\
+    \ to cellular devices\n(such as cellphones) wirelessly. The cells are connected\
+    \ to each other (and to the\nInternet) with high-speed wired connections. Current\
+    \ cellular technologies include\n4G (fourth generation) and 5G (fifth generation).\
+    \ Note that 4G uses macrocells,\nand 5G uses small cells (which, as the name implies,\
+    \ smaller). Small cells can\n placed on objects as streetlights.\n\nThe primary\
+    \ differences between 4G and 5G are ground speed and latency.\nDownload speed\
+    \ describes how many gigabits may be transferred per second.\nLatency describes\
+    \ the delay (or lag) before data is received. When compared with wired networks,\
+    \ cellular historically had low download speeds and high\nlatency. 5G offers 10–20\
+    \ times the download speed when compared with 4G,\nmuch lower latency. Fig. 5.17,\
+    \ from the United States General Account Office\n(GAO), shows the major differences\
+    \ between 4G and 5G.\n\n# Satellite\n\nSatellite communications provide voice\
+    \ and data services via geostationary satellites\nthat match the Earth’s orbit\
+    \ and appear to be stationary in the sky. Satellite commu-\nics often used in\
+    \ areas that have broadband Internet or cellphone services,\nsuch as rural areas.\
+    \ While satellite communications can provide high download\nsspeeds, latency is\
+    \ much higher when compared with wired or cellular networks\ndue the distance\
+    \ traveled/from the satellite: “Radio waves sent from a satellite\n\n![](img/0bbd5f5bd171414c5e2c49247aab35d6_44_0.png)\n\
+    \nFIG. 5.17\nSource: GAO depiction of International Telecommunication union data\
+    \ | GAO-21-26SP\n\n4G, vs. 5G [15]."
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'are moving at the speed of light, but because of the greater distances the
+    signal must travel, the latency is higher than that of terrestrial providers.
+    A cable internet, for example, may have an average latency of 30 milliseconds
+    (ms), while a signal from a satellite in geostationary orbit might be 600 ms”
+    [16].
+
+
+    # Secure Network Devices and Protocols
+
+
+    Let us look at network devices ranging from Layer 1 through Application-Layer
+    Proxy firewalls that operate up to Layer 7. Many of these network devices, such
+    as routers, have protocols dedicated to their, such as routing protocols.
+
+
+    # Repeaters and Hubs
+
+
+    Repeaters and hubs are Layer 1 devices. A repeater receives bits on one port,
+    and “repeats” them out the other port. The repeater has no understanding of protocols;
+    it simply repeats bits. Repeaters are often used to extend the length of a network.
+
+
+    A hub is a device with more than two ports. It receives bits on one port and repeats
+    them across all ports.
+
+    Hubs were quite common before switches became common and inexpensive.
+
+    Hubs provide no traffic isolation or integrity; all nodes send all traffic by
+    the hub. Hub means an attacker connected to a hub may read and potentially alter
+    traffic via the hub.
+
+    Hubs are also half-duplex devices; they cannot send and receive simultaneously.
+    Any device connected to a hub will negotiate to half-duplex mode, which can cause
+    network congestion. Hubs also have “collision domain”: any node may send traffic
+    with another (for more information on collisions, see “CSMA section). The lack
+    of security, half-duplex mode, and large collision domain hubs are unsuitable
+    for most modern purposes.
+
+
+    # Bridges
+
+
+    Bridges and switches are Layer 2 devices. A bridge has two ports and connects
+    work segments together. Each segment typically has multiple nodes, and the bridge
+    learns the MAC addresses of nodes on either side. Traffic between two nodes on
+    the same side of the bridge will not be forwarded across the bridge. Traffic sent
+    from a node on one side of the bridge to the other side will forward across. The
+    bridge provides traffic isolation and makes forwarding decisions by learning the
+    MAC addresses of connected nodes.
+
+
+    In Fig. 5.18, traffic sent from Computer 1 to Computer 2 will not be forward across
+    the bridge. Traffic sent from Computer 1 to Computer 3 will be forwarded across
+    the bridge.
+
+
+    A bridge has two collision domains. A network protocol analyzer (informally called
+    a “sniffer”) on the right side of the network shown in Fig. 5.18 can sniff traffic'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# Secure Network Devices and Protocols 271
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_46_0.png)
+
+
+    **FIG. 5.18**
+
+    Network bridge.
+
+
+    sent to or from Computers 3 and 4, but not sniff Computer 1 or 2 traffic (unless
+    sent to
+
+    Computers 3 or 4).
+
+
+    # # Switches
+
+
+    A switch is a bridge with two ports. Also, it is best practice to only connect
+
+    oneone device per switch port. Otherwise, everything that is true about a bridge
+    is
+
+    true about a switch.
+
+
+    > Fig. 5.19 shows a network switch. The switch provides traffic isolation by asso-
+
+    ciating the MAC address of each computer and server with its. Traffic sent
+
+    between Computer 1 and Server 1 remain isolated to their ports only: a net-
+
+    work running on Server 3 will not see that traffic.
+
+
+    A switch shrinks the collision domain to a single port. You will normally have
+
+    collisions assuming one device is connected per port (which is best practice).
+
+    Trunks are used to connect multiple switches.
+
+
+    # # VLANs
+
+
+    A VLAN is a Virtual LAN, which can be thought of as a virtual switch. In Fig.
+    5.19,
+
+    imagine you would like to create a computer LAN and a server LAN. One option is
+    to
+
+    buy a second switch and dedicate one for computers and one for servers.
+
+
+    Another option is to create a VLAN on the original switch, which is shown in Fig.
+    5.20.
+
+    That switch has two VLANs and acts as two switches: a computer switch and
+
+    a server switch.
+
+
+    The VLAN in Fig. 5.20 have two broadcast domains. Traffic sent to MAC address
+
+    FF:FF:FF:FF:FF by computers 1–3 will reach the other computers, but not the
+
+    servers on the Server VLAN. Inter-VLAN communication requires Layer 3 routing,
+
+    disc in the next section.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_47_0.png)
+
+
+    FIG. 5.19
+
+    Network switch.
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_47_1.png)
+
+
+    FIG. 5.20
+
+    Switch VLAN.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: 'VLANs may also add defense-in-depth protection to networks; for example, using
+    VLANs to segment data traffic and management traffic.
+
+
+    # Port Isolation
+
+
+    The concept of port isolation is not new but has been revitalized and more commonly
+    employed with the increasing density of virtualized systems in datacenters. Traditional
+    port isolation focused on using software in a managed switch to isolate a port
+    so that could only communicate with the designated uplink. Port isolation, commonly
+    referred to as a Private VLAN or PVLAN, can be used to ensure that individual
+    systems cannot interact with other resources if logically on the same subnet.
+    From a security standpoint this could severely limit the ability of an adversary
+    to pivot or move laterally within an organization after successfully compromising
+    a system.
+
+
+    Architecture, implementing widespread traditional port isolation/PVLANs has seemed
+    to prove cumbersome for many organizations. However, with heavily virtualized
+    infrastructures, port isolation has found a resurgence. Port isolation can provide
+    tremendously useful in multi-tenant environments to ensure isolation amongst customers
+    being served by the same hypervisor. Likewise, even in internal virtual infrastructures,
+    there are often systems that have no need of direct access to one another but
+    are fronted by a single switch. Port isolation can help to ensure logical segmentation
+    within a single switch (virtual).
+
+
+    # SPAN Ports
+
+
+    Since switches provide traffic isolation, a Network Intrusion Detection System
+    (NIDS) connected to a 24-port switch will not see traffic sent to and from other
+    devices on the same switch. Configuring a Switched Port Analyzer (SPAN) port is
+    one way to solve this problem, by mirroring traffic from multiple switches to
+    one “SPAN.” SPAN is a Cisco term; HP switches use the term “Mirror port.”
+
+
+    One drawback to using a SPAN port is bandwidth overload. A 100-megabit, 24-port
+    switch can mirror twenty-three 100-megabit streams of traffic to a 100-megabit
+    SPAN port. The aggregate traffic could easily exceed 100megabits, meaning the
+    SPAN port (and connected NIDS) will miss traffic.
+
+
+    # Network Taps
+
+
+    A network tap provides a way to “tap” into network traffic and see all traffic
+    (including all connections) to a network. Taps are the preferred way to provide
+    meticulous Network Intrusion Detection System.
+
+
+    Taps can “fail open,” so that network traffic will pass in the event of a failure.
+    Taps can also provide access to all traffic, including malformed Ethernet frames.
+    A switch will often “clean” that traffic and not pass it. Finally, Taps can be
+    purchased with memory buffers, which cache traffic bursts.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# 274 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    # Routers
+
+
+    Routers are Layer 3 devices that route traffic from one LAN to another. IP-based
+    routers make decisions based on the source and destination IP addresses.
+
+
+    > Note
+
+    in the real world, chassis, such as a Cisco 6500, can be many devices at once:
+    a router, a switch, a firewall, a NIDS. The exam is likely to give more-clear
+    examples: a firewall, a dedicated switch, or if the exam references a multifunction
+    device, that will be made clear.
+
+    Regardless, it is helpful to know how to think of these devices as distinct concepts.
+
+
+    # Static and Default Routes
+
+
+    For simple routing needs, static routes may suffice. Static routes are fixed routing
+    entries, saying “The route for network 10.0.0.0/8 routes via router 192.168.2.7;
+    the route for network 172.168.0.0/12 routes via router 192.168.2.8,” most SOHO
+    (Small/Home/Office Network) routers have a “default route” that sends all external
+    traffic to (typically controlled by the ISP).\ Here is an example of a typical
+    home LAN configuration:
+
+
+    +   - Internal network: 192.168.1.0/24
+
+    - Internal Firewall IP: 192.168.1.1
+
+    - External Network: 192.0.2.0/30
+
+    - External Firewall IP: 192.0.2.2
+
+    - Next hop address: 192.0.2.1
+
+
+    The firewall has an internal and external interface, with IP addresses of 192.168.1.1
+    and 192.0.2.2, respectively. Internal (trusted) hosts receive address addresses
+    on the 192.168.1.0/24 subnet via DHCP. External traffic is NAT-translated to the
+    external firewall IP of 192.0.2.2. The default route for internal hosts is 192.168.1.1.
+    The default route is 192.0.2.1. This is a router owned and controlled by the ISP.
+
+
+    # Routing Protocols
+
+
+    Static routes work for simple networks with limited or no redundancy, like SOHO
+    networks have more complicated routing needs.
+
+
+    The network in Fig. 5.21 has redundant paths between all four sites. Should any
+    single circuit or site go down, at least one alternate path is available. The
+    fastest circuits are 45-megabit T3 that connect Office A to B, and B to C. Additional
+    1.5-megabit T1s connect the data center to each office.
+
+
+    Should the left-most T3 go down, between the data center and Office A, there are
+    multiple paths available from the data center to Office A: the fastest is the
+    T3 to Office B, and then the T1 to Office A.
+
+
+    You could use static routes for this network, preferring the faster T3s over the
+    slower T1s. The problem: what happens if a T3 goes down? Network engineers like'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# Secure Network Devices and Protocols 275
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_50_0.png)
+
+
+    FIG. 5.21
+
+    Redundant network architecture.
+
+
+    to say that all circuits go down eventually. Static routes would require manual
+    reconfiguration.
+
+    Routing protocols are the answer. The goals of routing protocols are to automat-ically
+    learn a network topology and learn the best routes between all network points.
+    The should route go down, backup routes should be chosen, and chosen quickly.
+    Ideally this should happen even while the network engineers are asleep.
+
+    Convergence means that all routers on a network agree on the state of routing.
+    A network that has no recent outages is “converged”: all routers see routes as
+    available. Then a circuit goes down. The routers closest to the outage know right
+    away; routers that are further away will know. The network lacks convergence:
+    some believe all circuits are up, while others know one is down. A goal of routing
+    protocols is to make convergence as fast as possible.
+
+    Routing protocols come in two basic varieties: Interior Gateway Protocols (IGPs),
+    like RIP and OSPF, and Exterior Gateway Protocols (EGPs), like BGP. Private networks
+    use Intranets and EGPs are used on public networks like the Internet. Routing
+    protocols support Layer 3 (Network) of the OSI model.
+
+
+    # Distance Vector Routing Protocols
+
+
+    Metrics are used to determine the “best” route across a network. The simplest
+    metric is hop count. In Fig. 5.21, the hop count from the data center to each
+    office via T3 is 1. Additional paths are available from the data center to each
+    office, such as the T3 to Office B, followed by the T1 to Office A.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    The latter route is two hops, and the second hop is a slower T1. Any network engineer
+    would prefer the single-hop T3 connection from the data center to Office A, instead
+    of the two-hop detour via Office B to Office A. And all routing protocols would
+    do the same, choosing the one-hop T3.
+
+
+    Things get trickier when you consider connections between the offices. Should
+    traffic route from Office A to B? The shortest hop count is the direct T1. But
+    if link only has 1.5 megabits: taking the two-hop route from Office A down to
+    the data center and back up to Office B offers 45 megabits, at the expense of
+    an extra hop.
+
+
+    A distance vector routing protocol such as RIP would choose the direct T1 connection
+    and consider one hop at 1.5 megabits “faster” than two hops at 45 megabits. Most
+    Engineers (and all Link state routing protocols, as described in the next section)
+    would disagree.
+
+
+    Distance vector protocols use metrics such as hop count, and are prone to routing
+    loops, which packets loop between routers. The following output is a Linux traceroute
+    of a route, starting between hops 16 and 17. The nyc and bos core routers will
+    keep forwarding the packets back and forth each other, each achieving the correct
+    route.
+
+
+    ```
+
+    14 pwc-03.inet.example.com (10.11.37.141) 165.484 ms 164.335 ms 175.928 ms
+
+    15 pwc-02.inet.example.com (10.11.23.9) 162.291 ms 172.713 ms 171.532 ms
+
+    16 nyc-01.inet.example.com (10.11.5.101) 296.967 ms 193.454 ms 199.457 ms
+
+    17 bos-01.inet.example.com (10.11.5.103) 212.967 ms 212.383 ms 189.592 ms
+
+    18 nyc-02.inet.example.com (10.11.5.101) 210.201 ms 225.674 ms 208.124 ms
+
+    19 bos-02.inet.example.com (10.11.5.103) 189.089 ms 201.505 ms 201.659 ms
+
+    20 nyc-03.inet.example.com (10.11.5.103) 334.19 ms 320.39 ms 245.182 ms
+
+    21 bos-02.inet.example.com (10.11.5.103) 218.519 ms 210.519 ms 246.635 ms
+
+    ```
+
+
+    # RIP
+
+
+    RIP (Routing Information Protocol) is a distance vector routing protocol that
+    uses hop count as its metric. RIP will route traffic from Office A to Office B
+    in Fig. 5.2 via the direct T1, since it is the “closest” route at 1 hop.
+
+
+    RIP does not have a full view of the network: it can only “see” directly connected
+    routers. Convergence is slow. RIP sends updates every 30 seconds, regardless of
+    changes. RIP routers that are on a network that is converged for weeks will send
+    updates every 30 seconds, around the clock.
+
+
+    RIP’s maximum hop count is 15; 16 is considered “infinite.” RIP2 added support
+    for CIDR. RIP is used by the UNIX command and is the only routing protocol universally
+    supported by UNIX.
+
+
+    RIP uses split horizon to avoid routing loops. In Fig. 5.22, the circuit between
+    the NYC and BOS routers has gone down. That moment, the NYC and BOS routers know
+    the route is down; but others do not. The network lacks convergence.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Secure Network Devices and Protocols 277
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_52_0.png)
+
+
+    **FIG. 5.22**
+
+    Sample network with down circuit.
+
+
+    NYC calls the PWM router “The route between NYC and BOS is down.” On PWM’s other
+    interface, the ATL router may claim that the link is up. Split horizon means the
+    PWM router will not “argue back”: it will not send a route update via interface
+    it learned the route. In our case, the PWM router will not send a NYC → BOS routing
+    update to the NYC router. *Poison reverse* is an addition to Split Horizon: instead
+    of sending nothing to NYC regarding the NYC → BOS route, with a cost of 16 (infinite).
+    NYC will ignore any “infinite” route.
+
+
+    RIP loses a down timer to avoid “flapping” (repeatedly changing a route’s status
+    from “down” to up). Once RIP changes a route’s status to “down,” RIP will “hold”
+    to that decision for 180 seconds. In Fig. 5.22, the PWM router will keep the NYC
+    → BOS route “down” for 180 seconds. The hope is that the network will have reached
+    convergence during that time. If not, after 180 seconds, RIP may change its status.
+
+
+    RIP is quite limited. Each router has a partial view of the network and updates
+    every 30 seconds, regardless of change. Convergence is slow. Hold-down timers,
+    Split Horizon, and Poison Reverse are small fixes that do not compensate for RIP’s
+    weaknesses. Link State routing protocols such as OSPF are superior.
+
+
+    # Link State Routing Protocols
+
+
+    Link state routing factors factor in additional metrics for determining the best
+    route, including bandwidth. A link state protocol would see multiple routes from
+    Office A to Office B in Fig. 5.21, including the direct T1 link, and the two-hop
+    T3 route via the data center. The additional bandwidth (45 via 1.5 megabits) would
+    make the two-hop T3 route the winner.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# OSPF
+
+
+    Open Shortest First (OSPF) is an open link state routing protocol. OSPF routers
+    learn the entire network topology for their “area” (the portion of the network
+    maintain routes for, usually the entire network for small networks). OSPF routers
+    send event-driven updates. If a network is converged for a week, the OSPF routers
+    will send no updates. OSPF has far faster convergence than distance vector protocols
+    as RIP. In Fig. 5.21, OSPF would choose the two-hop T3 route from Office A to
+    B, over the single-hop T1 route.
+
+
+    > Note
+
+    The example strongly prefers over proprietary standards, which is why proprietary
+    routing protocols like Cisco’s EIRGP are not discussed here.
+
+
+    # BGP
+
+
+    BGP is the Border Gateway Protocol, the routing protocol used on the Internet.
+    BGP routes between autonomous systems, which are networks with multiple Internet
+    connections. BGP has some distance vector properties but is formally considered
+    a path routing protocol.
+
+
+    # Modem
+
+
+    A Modem is a Modulator/Demodulator. It takes binary data and modulates it into
+    analog sound that can be carried on phone networks designed to carry the human
+    voice. The receiving modem demodulates the analog sound back into binary data.
+    Modems are asynchronous devices: they do not operate with a clock signal.
+
+
+    # DTE/CEU and DSU
+
+
+    A DTE (Data Terminal Equipment) is a network “terminal,” meaning any type of network-connected
+    user machine, such as a desktop, server, or actual terminal. A DCE (Data Circuit-Terminating
+    Equipment, or called Data Communications Equipment) is a device that connects
+    DTEs, such as a router. The most common use of these terms is DTE/DCE, and the
+    meaning of each is more specific: the DCE marks the end of an ISP’s network. It
+    connects to Terminal Equipment (DTE), which is the responsibility of the customer.
+    The point where the DCE meets the DTE is called the demarc: the demarcation point,
+    where the ISP’s responsibility ends and the customer’s begins.
+
+
+    The circuit carried via DCE/DTE is synchronous (it uses a clock signal). Both
+    sides must synchronize to a clock signal, provided by the DCE. The DTE device
+    is a modem or a CSU/DSU (Channel Service Unit/Data Service Unit).
+
+
+    # Operation of Hardware
+
+
+    Operation of hardware involves day-to-day operational issues such as redundant
+    power, maintaining proper warranties, and support contracts.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# Secure Communications 279
+
+
+    # Redundant Power
+
+
+    Critical equipment such as routers and firewalls should be equipped with redundant
+    power supplies. Each power supply should be connected to different electrical
+    outlets that are also on different electrical circuits. Surge protectors and UPSs
+    should be used, and generator backup should be available for critical devices.
+    We will discuss surge protectors, UPSs, and generators in Chapter 8, Domain 7:
+    Security Operations.
+
+
+    # Warranty and Support
+
+
+    All devices should be covered under active vendor warranty and have proper support
+    contracts. Support contracts are often priced based on response time and other
+    variables (faster response costs than slower). Cisco SmartNet offers levels of
+    coverage:
+
+
+    +   - 24 × 7: 2-hour response, 24 hours a day, 7 days per week, including holidays
+
+    - 24 × 7: 4-hour response, 24 hours a day, 7 days a week, including holidays
+
+    - 8 × 5: 4-hour response, local business hours based on depot time, 5 days a week,
+    no holidays
+
+    - 8 × 7 Next Calendar Day: Next-calendar-delivery, local business hours based
+    on depot time, 7 days a week, including holidays
+
+    - 8 × 5 Next Business Day: Next-business-delivery, local business hours based
+    on depot time, 5 days a week, no holidays [17]
+
+
+    Note that Cisco SmartNet itself is not testable; the example above was used because
+    these types of tiered levels are common throughout the industry. There is no "right
+    answer" for which level of support to choose: the desired response time may be
+    determined after a risk assessment. Business Continuity Planning metrics such
+    as Maximum Allowed Downtime (MAD, discussed in Chapter 8, Domain 7: Security Operations)
+    can determine which level to purchase. Critical devices should be retired before
+    reaching End-of-Support (EoS), as discussed in Chapter 3, Asset Security). Note
+    that organizations may choose to self-ins for less critical devices including
+    commodity PCs, but a thorough risk assessment must be conducted before self-insuring.
+
+
+    # Secure Communications
+
+
+    Protecting data in motion is one of the most complex challenges we face. The Internet
+    provides global communication—with little or no built-in confidentiality, integrity,
+    or availability. To secure our data, we must do it ourselves; secure communications
+    describes ways to accomplish that goal.
+
+
+    # Authentication Protocols and Frameworks
+
+
+    An authentication protocol authenticates an identity claim over the network. Good
+    security design ensures that a network eavesdropper may sniff all packets between
+    the client and authentication server: the protocol should remain secure. As we
+    see shortly, PAP fails this test, but CHAP and EAP pass.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# PAP and CHAP
+
+
+    PAP (Password Authentication Protocol) is a very weak authentication protocol.
+    It sends the username and password in cleartext. An attacker who is able to sniff
+    the authentication process can launch a simple replay attack, byplaying the username
+    and password, using them to log in. PAP is insecure and should not be used.
+
+
+    CHAP (Challenge-Handshake Authentication Protocol) is a more secure authentication
+    protocol that does not expose the cleartext password and is not susceptible to
+    replay attacks. CHAP relies on a shared secret: the password is securely created
+    (as during account enrollment) and stored on the CHAP server. Since both the user
+    and the CHAP share a secret (the plaintext password), they can use that secret
+    to securely communicate.
+
+
+    To authenticate, the client first creates an initial (unauthenticated) connection
+    via LCP (Link Control Protocol). The server then begins the three-way CHAP authentication
+    process:
+
+
+    +   - Server sends a challenge, which is a small random string (also called a
+    nonce).
+
+    - The user takes the challenge string and the password, uses a hash cipher as
+    MD5 to create a hash value, and sends that value back to the CHAP server as the
+    response.
+
+    - The CHAP server hashes the password and challenge, creating the expected response.
+    It compares the expected response with the response received from the user.
+
+
+    If the responses are identical, the user must have entered the appropriate password,
+    and is authenticated. If they are different, the user entered the wrong password,
+    and access is denied.
+
+
+    The CHAP server may re-authenticate by sending a new (and different) challenge.
+    The challenges must be different each time; otherwise, an attacker could authenticate
+    by replaying an older encrypted response.
+
+
+    A drawback of CHAP is that the server stores plaintext passwords of all client.
+    An attacker who compromises a CHAP server may be able to steal the passwords stored
+    on it.
+
+
+    # 802.1X and EAP
+
+
+    802.1X is "Port Based Network Access Control," and includes EAP (Extensible Authentication
+    Protocol). EAP is an authentication framework that describes many specific authentication
+    protocols. EAP is designed to provide authentication at Layer 2 (it is "port based",
+    like ports on a switch), before a node receives an IP address. It is available
+    for both wired and wireless, but is more commonly deployed on WLANs.
+
+
+    The 802.1X roles are:
+
+
+    +   - Supplicant: An 802.1X client
+
+    - Authentication Server (AS): a server that authenticates a supplicant
+
+    - Authenticator: a device such as an access point that allows a supplicant to
+    authenticate and connect'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# Exam Warning
+
+
+    Do not confuse 802.1X (EAP) with 802.11 (Wireless).
+
+
+    EAP addresses many issues, including the “roaming infected laptop” problem. A
+    user with an infected laptop plugs into a typical office network and requests
+    an IP address from a DHCP server. Once you get an IP, the malware installed on
+    the laptop begins attacking other systems on the network.
+
+
+    By the time it is late to request an IP address, it is already in a position to
+    cause harm on the network, including confidentiality, integrity, and availability
+    attacks. This problem is most acute on WLANs (where an outside laptop 100 feet
+    away from a building may be able to access the network). Ideally, authentication
+    should be required before the laptop can join the network: EAP does exactly this.
+
+
+    Fig.3.2 shows Step 1 shows the Supplicant authenticating via EAPOL, Layer 2 EAP
+    implementation. Step 2 shows the Authenticator receiving the EAPOL (EAP Over LAN)
+    traffic and using RADIUS or Diameter to carry EAP traffic to the Authentication
+    Server (AS). Step 3 shows the Authenticator allowing Supplicant access to the
+    internal network after successful authentication.
+
+
+    There are many types of EAP, we will focus on EAP-MD5, EAP-FAST, EAP-TLS, EAP-TTLS,
+    and PEAP:
+
+
+    +   - EAP-MD5 is one of the weakest forms of EAP. It offers client-server authentication
+    (all other forms of EAP discussed in this section support mutual authentication
+    of client and server); this makes it vulnerable to man-the-middle attacks. EAP-MD5
+    is also vulnerable to password cracking attacks.
+
+    - LEAP (Lightweight Extensible Authentication Protocol) is a Cisco-proprietary
+    protocol released before 802.1X was finalized. LEAP has significant security flaws
+    and should not be used.
+
+    - EAP-FAST (EAP-Flexible Authentication via Secure Tunneling) was designed by
+    Cisco to replace LEAP. It uses a Protected Access Credential (PAC), which acts
+    as a pre-shared key.
+
+
+    ![](img/0bbd5f5bd171414c5e2c49247aab35d6_56_0.png)
+
+
+    FIG. 5.23 Successful 802.1X authentication.'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# 282 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    +   - EAP-TLS (EAP-Transport Layer Security) uses PKI requiring both server-side
+    and client-side certificates. EAP-TLS establishes a secure TLS tunnel for authentication.
+    EAP-TLS is very secure due to the use of PKI but is complex and costly for the
+    same reason. The other major versions of EAP attempt to create the same TLS tunnel
+    without requiring a client-side certificate.
+
+    - EAP-TTLS (EAP Tunneled Transport Layer Security), developed by Funk Soft and
+    Cisco, simplifies EAP-TLS by dropping the client-side requirement, allowing other
+    authentication methods (such as password) for client-side authentication. EAP-TTLS
+    is thus easier to deploy than EAP-TLS, but less secure when omitting the client-side
+    certificate.
+
+    - PEAP (Protected EAP), developed by Cisco Systems, Microsoft, and RSA Security,
+    is like (and may be considered a competitor to) EAP-TTLS, including not requiring
+    client-side certificates.
+
+
+    # VPN
+
+
+    Virtual Private Networks (VPNs) secure data via insea networks such as the Internet.
+    The goal is to provide the privacy provided by a circuit such as a TI, virtually.
+    The nuts and bolts of VPNs involve secure authentication, cryptographic hashes
+    using SHA-1 to provide integrity, and ciphers as AES to provide confidentiality.
+
+
+    > The cryptographic details of the VPN protocols discussed here are covered in
+    depth in Chapter 4, Domain 3: Security Architecture and Engineering.
+
+
+    # SLIP and PPP
+
+
+    SLIP (Serial Line Protocol) is a Layer 2 protocol that provides IP connectivity
+    via asynchronous connections as serial lines and modems. When SLIP was first introduced
+    in 1988, it allowed routing packets via modem links for the first time (previously,
+    modems were primarily used for non-terminal access). SLIP is a bare-bones protocol
+    that provides no built-in confidentiality, integrity, or authentication. SLIP
+    has largely faded from use, replaced with PPP.
+
+    PPP (Point-to-Point Protocol) is a Layer 2 protocol that has largely replaced
+    PPP. SLIP is based on HDLC (discussed previously), and adds confidentiality, integrity,
+    and authentication via point-to-point links. PPP supports synchronous links (such
+    as T1) in asynchronous links such as modems.
+
+
+    # PPTP and L2TP
+
+
+    PPTP (Point-to-Point Tunneling Protocol) tunnels PPP via IP. A consortium of vendors,
+    including Microsoft, 3COM, and others, developed it. PPTP uses GRE (Generic Routing
+    Encapsulation) to pass PPP via IP and uses TCP for a control channel (using TCP
+    port 1723).'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# Secure Communications 283
+
+
+    L2TP (Layer 2 Tunneling Protocol) combines PPTP and L2F (Layer 2 Forwarding, designed
+    to tunnel PPP). L2TP focuses on authentication and does not provide confidentiality:
+    it is frequently used with IPsec to provide encryption. Unlike PPTP, L2TP can
+    also be used on non-IP networks, as ATM.
+
+
+    # IPsec
+
+
+    IPv4 has no built-in confidentiality; higher-layer protocols as TLS are used to
+    provide security. To address this lack of security at Layer 3, IPsec (Internet
+    Protocol Security) was designed to provide confidentiality, integrity, and authentication
+    via encryption for IPv6. IPsec has been ported to IPv4. IPsec is a suite of protocols;
+    the major are Encapsulating Security Protocol (ESP) and Authentication Header
+    (AH). Each has an IP protocol number: ESP is protocol 50; AH is protocol 51.
+
+
+    # Note
+
+
+    This chapter describes the network aspects of IPsec, SSL, and TLS: see Chapter
+    4, Domain 3: Security Architecture and Engineering, for the cryptographic aspects
+    of these protocols.
+
+
+    # IPsec Architectures
+
+
+    IPsec has three architectures: host-to-gateway, gateway-to-gateway, and host-to-host.
+    Host-to-gateway mode (also called client mode) is used to connect one system that
+    runs IPsec client software to an IPsec gateway. Gateway-to-gateway (also called
+    point-to-point) connects two IPsec gateways, which form an IPsec connection that
+    acts as a shared routable network connection, like a T1. Finally, host-to-host
+    mode connects two systems (such as file servers) to each other via IPsec. Many
+    modern operating systems, such as Windows 10 or Ubuntu Linux, can run IPsec natively,
+    allowing them to form host-to-gateway or host-to-connections.
+
+
+    # Tunnel and Transport Mode
+
+
+    IPsec can be used in tunnel mode or transport mode. Tunnel mode provides confidentiality
+    (ESP) and/or authentication (AH) to the entire packet, including the original
+    IP headers. New IP headers are added (with the source and destination addresses
+    of the IPsec gateways). Transport mode protects the IP data (layers 4–7), leaving
+    only the original IP headers unprotected. Both modes add extra IP headers (an
+    AH header or an ESP header). Fig. 5.24 shows the differences between tunnel and
+    transport modes.
+
+
+    | Original Packet | IP Header | Data |
+
+    |---|---|---||
+
+    | Transport Mode | IP Header | IPsec Header (s) | Protected Data |
+
+    | Tunnel Mode | New IP Header | IPsec Header (s) | Protected IP Header Data |
+
+
+    FIG. 5.24
+
+    IPsec tunnel and transport modes.'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# 284 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    # SSL and TLS
+
+
+    Secure Sockets Layer (SSL) was designed to protect HTTP (Hypertext Transfer Protocol)
+    data: HTTPS uses TCP port 443. TLS (Transport Layer Security) 1.0 was equivalent
+    to SSL version 3.1. The current version of TLS is 1.3, described in RFC 8446 (https://datatracker.ietf.org/doc/html/rfc8446).
+
+
+    Though initially Web-focused, SSL or TLS may be used to encrypt many types of
+    data and can be used to tunnel other IP protocols to form VPN connections. VPNs
+    can be simpler than IPsec equals: IPsec makes fundamental changes to IP networking,
+    so installation of IPsec software changes the operating system (which requires
+    super-user privileges). SSL client software does not require the operating system.
+    Also, Ipsec is difficult to firewall; SSL is simpler.
+
+
+    # Remote Access
+
+
+    In an age of telecommuting and the mobile workforce, secure remote access is a
+    critical control. This includes connecting mobile users via methods such as DSL
+    or Cable Modem, security mechanisms such as callback, and newer concerns such
+    as instant messaging and remote meeting technology.
+
+
+    # ISDN
+
+
+    Integrated Services Digital Network (ISDN) was an earlier attempt to provide digital
+    service via "copper pair," the POTS (Plain Old Telephone Service) prevalent in
+    homes and small offices around the world. This is called the "last mile," providing
+    high-speed digital service via the (historically copper pair) last mile has been
+    a longstanding challenge.
+
+
+    ISDN devices are called terminals. ISDN Basic Rate Interface (BRI) service provides
+    two 64K digital channels (a 16K signaling channel) a PRI (Primary Rate Interface)
+    provides twenty-three 64K channels, plus one 16K signaling channel.
+
+
+    ISDN never found widespread use; it was eclipsed by DSL and cable modems. ISDN
+    is commonly used for teleferencing and videoconferencing.
+
+
+    # DSL
+
+
+    Digital Subscriber Line (DSL) has a "last mile" solution to ISDN: using copper
+    pairs to provide digital service to homes and small offices. DSL has found widespread
+    use due to higher speeds compared with ISDN, reaching speeds of 10megabits and
+    more.
+
+
+    Common types of DSL are Symmetric Subscriber Line (DSL, with matching upload and
+    download speeds), Asymmetric Digital Subscriber Line (ADSL, featuring faster download
+    speeds than upload), and Very High Rate Digital Subscriber Line (VDSL, featuring
+    faster asymmetric speeds). Another option is HDSL (High-data-rate DSL), which
+    matches DSL speeds using two pairs of copper; DSL is used to provide inexpensive
+    T1 service.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Secure Communications 285
+
+
+    Table 5.9 DSL Speeds and Distances [18].
+
+
+    | Type | Download Speed | Upload Speed | Distance from CO |
+
+    |---|---|---|--|
+
+    | ADSL | 1.5-9 Mbps | 16-640 Kbps | 18,000 feet |
+
+    | SSDL | 1.544 Mbps | 1.544 Mbps | 10,000 feet |
+
+    | HDSL | 1.544 Mbps | 1.544 Mbps | 10,000 feet |
+
+    | VDSL | 20-50+ Mbps | Up to 20 Mbps | <5000 feet |
+
+
+    Symmetric DSL is also called Single-Line DSL. An advantage of ADSL is that it
+    allows the simultaneous use of a POTS line, often filtered from the DSL traffic.
+    Generally, the closer the site is to the Central Office (CO), the faster the available
+    service.
+
+    Table5.9 summarizes the speeds and modes of DSL.
+
+
+    # Cable Modems
+
+
+    Cable modems are used by Cable TV providers to provide Internet access via broadband
+    TV. Cable TV access is not ubiquitous but is available in many large towns and
+    cities in industrial areas. Broadband, unlike baseband, has multiple channels
+    (like TV channels), dedicating bandwidth for network services requiring dedicated
+    channels for that purpose. Cable modems provide a compelling “last mile” solution
+    for the Cable TVs; they have already invested in connecting the last mile, and
+    the Internet service offers another revenue stream based on investment.
+
+    Unlike DSL, Modem bandwidth is typically shared with neighbors on the same network
+    segment.
+
+
+    # Callback and Caller ID
+
+
+    Callback is a modem-authentication system. When a callback account is created,
+    the modem user will call for entered into the account. The user later connects
+    via modem and authenticates. The system hangs up and calls the user back at the
+    preconfigured number.
+
+    Caller ID is a similar method; in addition to username and password, it requires
+    calling from the correct phone number. Caller ID can be easily forged: many providers
+    allow the end user to select any Caller ID of their choice. This makes Caller
+    ID a weak form of authentication.
+
+
+    # Remote Desktop Console Access
+
+
+    Many users require remote access to computers’ consoles. Naturally, some form
+    of secure indent using an IPsec VPN, SSH, or SSL tunnel should be used to ensure
+    confidentiality of the connection, especially if the connection originates from
+    outside the organization. The “VPN” section above for additional details on this
+    layer of the remote console access.
+
+
+    Remotely accessing consoles has been common practice for decades by protocols
+    such as the clear and poorly authenticated login and rsh on UNIX-like operating
+    systems, which leverage TCP port 513 and TCP port 514, respectively. Two'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    common modern protocols for remote access to a desktop are Virtual Network Computing
+    (VNC), which typically runs on TCP 5900, and Remote Desktop Protocol (RDP), which
+    typically runs on TCP port 3389. VNC and RDP allow for graphical access of remote
+    systems, as opposed to the older terminal-based approach to remote access. RDP
+    is a Microsoft protocol.
+
+
+    Increasingly, users are expecting access to a graphical desktop over the Internet
+    that can be established quickly and from any number of devices. These expectations
+    can prove difficult with traditional VNC and RDP based approaches, which for security
+    purposes, are frequently tunneled over an encrypted channel such as a VPN.
+
+
+    Recent alternative to these approaches is to use a reverse tunnel, which allows
+    a user who established an outbound encrypted tunnel to connect back through the
+    same tunnel. This usually requires a small agent installed on the user''s computer
+    to initiate an outbound connection using HTTPS over TCP 443. This connection will
+    terminate at a central server, which the user can authenticate to (from outside
+    the office) to take control of their office desktop machine. Two of the most prominent
+    solutions that employ this style of approach are GoToMyPC and LogMeIn.
+
+
+    # Desktop and Application Virtualization
+
+
+    In addition to accessing standalone desktop systems remotely, another approach
+    to providing remote access to computing resources is desktop and application virtualization.
+    Desktop virtualization is an approach that provides a centralized structure that
+    hosts a desktop image that can be remotely leveraged by the workforce. Desktop
+    virtualization is often referred to as VDI, which, depending on the vendor stands
+    (for either Virtual Desktop Infrastructure or Virtual Desktop Interface), is also
+    called DaaS (Desktop as an Infrastructure).
+
+
+    As opposed to providing a full desktop environment, an organization can choose
+    to simplify key applications that will be served centrally. Like desktop virtualization,
+    the centralization associated with application virtualization allows the organization
+    to employ strict access control, and perhaps more quickly patch the application.
+    Additionally, application virtualization can also be used to run legacy applications
+    that would otherwise be unable to run on the systems employed by the workforce.
+
+
+    While the terms and particulars of the approach are relatively new, the underlying
+    concepts of both desktop and application virtualization have existed for decades
+    in the form of thin clients, mainframes, and terminal servers. The main premise
+    of the refreshed and more traditional approaches is that there might more organizational
+    benefits to having more centralized and consolidated computing systems and infrastructure
+    rather than a large number of more complex systems. In addition to general "economies
+    of scale" justifications, there could be security advantages to more tightly controlled
+    desktop and application environments. Patching more complex applications in a
+    centralized environment can be easier to manage. Likewise, developing and maintaining
+    desktops to be easier to'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# Secure Communications
+
+
+    accomplish when there is one, or even several, central master images that determine
+    the settings of each corresponding virtual desktop.
+
+
+    # Screen Scraping
+
+
+    Screen scraping presents approach to graphical remote access to systems. Screen
+    scraping protocols packetize and transmit information to draw the assessed system''s
+    screen on the display of the system used for remote access. VNC (Virtual Network
+    Computing), a commonly used technology for accessing remote desktops, is fundamentally
+    a screen scraping approach to remote access. Not all remote access protocols are
+    built as screen scrapers. For example, Microsoft''s popular Remote Desktop Protocol
+    (RDP), does not employ screen scraping to graphical remote access.
+
+
+    # Multimedia Collaboration
+
+
+    Multimedia collaboration includes a suite of technologies, including instant messaging
+    and remote meeting technologies. Many of these technologies allow transfer, remote
+    control of PCs, recording audio and video, and other capabilities that can introduce
+    risk to an organization.
+
+
+    # Instant Messaging
+
+
+    Instant Messaging allows two-to-one or more users to communicate with each other
+    via realtime."Chat may be one-to-one, or many-to-many via chat groups. In addition
+    to chatting, most modern instant messaging software allows file sharing, and some
+    audio and video conferencing.
+
+
+    Older instant messaging protocols include Internet Relay Chat (IRC), AOL Instant
+    Messenger, and Extensible Messaging and Presence Protocol (XMPP, formerly known
+    as Jabber). These older instant messaging technologies often used plaintext TCP/IP
+    protocols to transfer data and are easy to monitor. Modern instant messaging solutions
+    (such as Google Talk, Discord, and Slack) use HTTPS to communicate, and are far
+    more difficult to monitor.
+
+
+    Chat software may be subject to various security issues, including remote exploitation.
+    The file sharing capability of chat software may violate policy by distributing
+    sensitive documents, and similar issues can be raised by the audio and video sharing
+    capability of many of these programs. Organizations should have a policy controlling
+    the use of chat software and technical controls in place to monitor and, if necessary,
+    block their usage.
+
+
+    # Remote Meeting Technology
+
+
+    Remote meeting technology is a newer technology that allows users to conduct online
+    meetings via the Internet, including desktop sharing functionality. Commercial
+    remote meeting solutions include Zoom, GoToMeeting by Citrix Systems, and Microsoft
+    Live Meeting. These technologies usually include displaying slides on all PCs
+    connected to a meeting, sharing documents as spreadsheets,'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    and sometimes sharing audio or video. Some solutions allow users to remotely control
+    another connected PC.
+
+
+    Many of these solutions are designed to tunnel through SSL or TLS traffic, which
+    can often pass via firewalls and Web proxies. If a site''s remote access policy
+    requires an VPN connection using strong authentication to allow remote control
+    of an internal PC, these solutions may bypass controls as a requirement for strong
+    authentication and violate policy. Usage of remote meeting technologies should
+    be understood, controlled, and compliant with all applicable policy.
+
+
+    # Securing Third-Party Connectivity
+
+
+    Many organizations maintain etec connections to/from third parties via VPN, leased
+    lines, Extrans are commonly used for remote offices, to provide connectivity to
+    organizations that partner together, and vendor support. These third-party connections
+    represent a significant risk: the third party could become compromised, and the
+    attacker or malware could pivot via the extrac connection and attack the organization
+    itself. These types of connections require an organization to trust party security
+    to a certain degree.
+
+
+    Extranet connections should always occur via leased lines or encrypted VPN. Access
+    Control Lists (ACLs) should strictly control which systems may be reached via
+    an extrac connection. From a detective standpoint: enhanced monitoring should
+    be blocked by ACL. Strong host-based controls should be deployed to systems reachable
+    via extrac connections: patching, hardening, and use of dual-factor authentication,
+    etc.
+
+
+    # Wireless Application Protocol
+
+
+    The Wireless Application Protocol (WAP) was designed to provide secure Web services
+    to handheld devices such as smartphones. WAP is based on HTML and includes HTML
+    (Handheld Device Markup Language). Authentication is provided by Wireless Transport
+    Layer Security (WTLS), which is based on TLS.
+
+
+    A WAP browser is a microbrowser, simpler than a Full Web browser, and requiring
+    resources. It connects to a WAP gateway, which is a proxy server designed to translate
+    web pages. The microbrowser accesses sites written (or converted to) WML (Wireless
+    Markup Language), which is based on XML.
+
+
+    Note
+
+
+    WAP is an overloaded acronym, mapping to multiple technologies and protocols.
+    It is especially confusing regarding wireless: WAP may stand for Wireless Access
+    Point or Wireless Application Protocol. And WPA (Wi-Fi Protected Access) has the
+    same letters in different order.
+
+
+    Do not confuse these wireless protocols and technologies: the exam will be clear
+    on which a question may refer to; do not rush through a question and miss the
+    context. Also, do confuse 802.11 wireless security standards (including WEP and
+    802.11i/WPA2) with handheld device WAP security (WTLS).'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "# Self-Test 289\n\n# Content Distribution Networks\n\nContent Distribution\
+    \ Networks (CDN, also called Content Delivery Networks) use a series of distributed\
+    \ caching servers to improve performance and lower the latency of downloaded content.\
+    \ They automatically determine the servers closest to end users, download content\
+    \ from the fastest and closest servers on the Internet. Examples include Akamai,\
+    \ Amazon CloudFront, Cloudflare, and Microsoft Azure.\n\nCDNs also increase availability\
+    \ and can reduce the effects of denial-of-service attacks: \"While content delivery\
+    \ networks solve all ancillary problems such as improving availability and reducing\
+    \ bandwidth, the main problem they address is: the amount of time it takes for\
+    \ the host server to receive, process, and deliver on request a page resource\
+    \ (images, CSS files, etc.). Latency depends largely on how far away the user\
+    \ is from the server, and it’s compounded by the number of resources a web page\
+    \ contains.\n\nFor example, if all resources are hosted in San Francisco, and\
+    \ a user is visiting your page in London, then each request has to make a long\
+    \ round trip from London back to SF. If your web page contains 100 objects (which\
+    \ is at the low end of normal), your browser has to make 100 individual requests\
+    \ to your server in order to retrieve these objects\" [19].\n\n# Summary of Exam\
+    \ Objectives\n\nCommunication and Network Security is a large and complex domain,\
+    \ requiring broad and sometimes deep understanding of technical issues. Our world\
+    \ relies on networks, and those networks must be kept secure. It is important\
+    \ to not only understand why we use concepts like packet-switched networks and\
+    \ the OSI model, but also how we implement these concepts.\n\nWe have evolved\
+    \ from hubs to switches that provide traffic isolation. We have added detective\
+    \ devices such as HIDS and NIDS and preventive devices such as HIPS and NIPS.\
+    \ We have deployed secure protocols such as TLS and IPsec.\n\nWe have improved\
+    \ our network defense-in-depth every step of the way, and increased the confidentiality,\
+    \ integrity, and availability of our network data.\n\n# Self-Test\n\n> Note\n\
+    Please see the Self-Test Appendix for explanations of all correct and incorrect\
+    \ answers.\n\n+   1. Which protocol should be used for an audio streaming server,\
+    \ where some less is acceptable?\n   A. IP\n   B. ICMP\n   C. TCP\n   D. UDP"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '2. What network technology uses fixed-length cells to carry data?
+
+
+    +   A. 802.11
+
+    B. ATM
+
+    C. Ethernet
+
+    D. FDDI
+
+
+    3. Secure Shell (SSH) servers listen on what port and protocol?
+
+
+    +   A. TCP port 20
+
+    B. TCP port 21
+
+    C. TCP port 22
+
+    D. TCP port 23
+
+
+    4. Which network cable type can transmit the most data at the longest distance?
+
+
+    +   A. Coaxial
+
+    B. Fiber Optic
+
+    C. Shielded Twisted Pair (STP)
+
+    D. Unshielded Twisted Pair (UTP)
+
+
+    5. Which device operates at Layer 2 of the OSI model?
+
+
+    +   A. Hub
+
+    B. Firewall
+
+    C. Switch
+
+    D. Router
+
+
+    6. What are the names of the OSI model, in order from bottom to top?
+
+
+    +   A. Physical, Data Link, Transport, Network, Session, Presentation, Application
+
+    B. Physical, Network, Data Link, Transport, Session, Presentation, Application
+
+    C. Physical, Data Link, Network, Transport, Session, Presentation, Application
+
+    D. Physical, Data Link, Network, Transport, Presentation, Application
+
+
+    7. Which of the following authentication protocols uses a three-way authentication
+    handshake?
+
+
+    +   A. CHAP
+
+    B. EAP
+
+    C. Kerberos
+
+    D. PAP
+
+
+    8. Restricting Bluetooth device discovery relies on the secrecy of what?
+
+
+    +   A. MAC Address
+
+    B. Symmetric Key
+
+    C. Private Key
+
+    D. Public Key
+
+
+    9. Which wireless security protocol is also known as the RSN (Robust Network),
+    and implements the full 802.11i standard?
+
+
+    +   A. AES
+
+    B. WEP'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# Self-Test Quick Answer Key 291
+
+
+    +   C. WPA
+
+    D. WPA2
+
+
+    +   10. What is the correct order of TCP/IP encapsulation?
+
+    A. Data, segments, packets, frames, bits
+
+    B. Data, frames, segments, packets, bits
+
+    C. Data, frames, packets, segments, bits
+
+    D. Data, packets, segments, frames, bits
+
+
+    +   11. Which transmission mode is supported by both HDLC and SDLC?
+
+    A. Asynchronous Balanced Mode (ABM)
+
+    B. Asynchronous Response Mode (ARM)
+
+    C. Normal Balanced Mode (NBM)
+
+    D. Normal Response Mode (NRM)
+
+
+    +   12. What is the most secure type of EAP?
+
+    A. EAP-TLS
+
+    B. EAP-TTL
+
+    C. LEAP
+
+    D. PEAP
+
+
+    +   13. What WAN Protocol has no error recovery, relying on higher-level protocols
+    to provide reliability?
+
+    A. ATM
+
+    B. Frame Relay
+
+    C. SMDS
+
+    D. X.25
+
+
+    +   14. What frequencies are used by ZigBee in the United States?
+
+    A. 784MHz and 2.4 MHz
+
+    B. 868 MHz and 2.4 MHz
+
+    C. 915 MHz and 2.4 MHz
+
+    D. 2.4 MHz and 6MHz
+
+
+    +   15. Accessing an IPv6 network via an IPv4 network is called what?
+
+    A. CIDR
+
+    B. NAT
+
+    C. Translation
+
+    D. Tunneling
+
+
+    # Self-Test Quick Answer Key
+
+
+    +   1. D
+
+    2. B
+
+    3. C
+
+    4. B
+
+    5. C
+
+    6. C'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# 292 CHAPTER 5 Domain 4: Communication and Network Security
+
+
+    +   7. A
+
+    8. A
+
+    9. D
+
+    10. A
+
+    11. D
+
+    12. A
+
+    13. B
+
+    14. C
+
+    15. D
+
+
+    # References
+
+
+    +   [1] Brief History of the Internet. https://www.isoc.org/internet/history-internet/brief-history-internet/
+    (Accessed 19 May 2022).
+
+    [2] S. Northcott, J. Novak, Network Intrusion Detection, third ed., New Riders,
+    Boston, MA, 2003.
+
+    [3] RFC 791—Transmission Protocol, Darpa Internet Protocol, Protocol Specification.
+    https://www.rfc-editor.org/rfcrfc791.txt. (Accessed 19 May 2022).
+
+    [4] RFC 2460—Internet Protocol, Version 6 (IPv6) Specification. https://www.rfc-editor.org/rfc2460.txt.
+    (Accessed 19 May 2022).
+
+    [5] RFC 793—Transmission Control Protocol, Darpa Internet Protocol, Specification.
+    https://www.rfc-editor.org/rfc793.txt (Accessed 19 May 2022).
+
+    [6] RFC 3540—Robust Explicit Congestion Notification (ECN) Signaling with Nonces.
+    https://www.rfc-editor.org/rfc3540.txt. (Accessed 19 May 2022).
+
+    [7] RFC 768—User Datagram Protocol. https://www.rfc-editor.org/rfc768.txt. (Accessed
+    19 May 2022).
+
+    [8] Smart Grid. https://www.energy.gov/oe/activities/technology-development/grid-mod-enrollment-and-smart-grid.
+    (Accessed 19 May 2022).
+
+    [9] A DNP3 Protocol. https://www.dnp.org/Portals/0/AboutUs/DNP320Primer%20VersionA.pdf.
+    (Accessed 19 May 2022).
+
+    [10] What is SD-WAN? https://www.arubanetworks.com/faq/what-is-sd-wan/ (Accessed
+    19 May 2022).
+
+    [11] What is SDN and when software-defined networking is useful. https://www.networkworld.com/article/330913/what-sdn-is-and-where-is-going.html.
+    (Accessed 19 May 2022).
+
+    [12] What is VXLAN? https://www.viper.net/us/en/research-topics/what-is-vxlan.html.
+    (Accessed 19 May 2022).
+
+    [13] ZigBee-Wireless Mesh Networks for Building Automation and Control. https://www.nist.gov/publications/zigbee-wireless-mesh-networks-building-automation-and-control.
+    (Accessed 19 May 2022).
+
+    [14] What is LiFi? https://lififi.com/what-is-lififi. (Accessed 19 May 2022).
+
+    [15] 5G Network: Capabilities and Challenges for an Evolving Network. https://www.gao.gov/products/ga-21-26sp.
+    (Accessed 19 May 2022).
+
+    [16] Satellite internet latency: What''s the big deal? https://www.viasat.com/about/newsroom/blog/satellite-internet-latency-whats-the-big-deal/
+    (Accessed 19 May 2022).'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '[17] Cisco Smart Net Total Care Service Data Sheet. https://www.cisco.com/c/en/us/produts/collateral/cloud-systems-management/smart-net-total-care/datasheet-c78-735459.html.
+    (Accessed 19 May 2022).
+
+
+    [18] DSL and Cable Modem Networks. https://www.ciscopress.com/articles/article.asp?p=31289.
+    (Accessed 19 May 2022).
+
+
+    [19] I Already Use a CDN. Why Do I Need Front-End Performance Optimization? https://blog.radware.com/applicationdelivery/applicationaccelerationoptimization/2013/08/cdn-front-end-performance-optimization/.
+    (Accessed 19 May 2022).'
+  merge: -1
+  img_proc: true
