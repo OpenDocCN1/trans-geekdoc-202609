@@ -1,0 +1,50 @@
+
+| 75-100 | Unknown-Student-Housemaid-Unemployed-Entrepreneur-Blue-Collar | Divorced-Single-Married | Unknown-Primary-Tertiary-Secondary | 499 |
+| 75-100 | Unknown-Student-Housemaid-Unemployed-Entrepreneur-Blue-Collar | Divorced-Single-Married | Unknown-Primary-Tertiary-Secondary | 1381 |
+| 75-100 | Unknown-Student-Housemaid-Unemployed-Entrepreneur-Blue-Collar | Divorced-Single-Married | Unknown-Primary-Tertiary-Secondary | 1381 |
+| 75-100 | Unknown-Student-Housemaid-Unemployed-Entrepreneur-Blue-Collar | Divorced-Single-Married | Unknown-Primary-Tertiary-Secondary | 1381 |
+| 75-100 | Unknown-Student-Housemaid-Unemployed-Entrepreneur-Blue-Collar | Divorced-Single-Married | Unknown-Primary-Tertiary-Secondary | 2140 |
+| 75-100 | Unknown-Student-Housemaid-Unemployed-Entrepreneur-Blue-Collar | Divorced-Single-Married | Unknown-Primary-Tertiary-Secondary | 0 |
+| 75-100 | Unknown-Student-Housemaid-Unemployed-Entrepreneur-Blue-Collar | Divorced-Single-Married | Unknown-Primary-Tertiary-Secondary | 5944 |
+| 75-100 | Unknown-Student-Housemaid-Unemployed-Entrepreneur-Blue-Collar | Divorced-Single-Married | Unknown-Primary-Tertiary-Secondary | 2140 |
+| 75-100 | Unknown-Student-Housemaid-Unemployed-Entrepreneur-Blue-Collar | Divorced-Single-Married | Unknown-Primary-Tertiary-Secondary | 0 |
+
+![](img/45337a4ebc080d57809e4aa3a88e37fc_145_0.png)
+
+**FIG. 15** K-匿名与启发式匿名技术熵度量比较。
+
+13.5%，从 `0.3823` 降至 `0.3308`。然而，在同一数据集上实施启发式匿名技术后，熵仅减少了 `0.75%`，这与 K-匿名技术（`13%`）相比要低得多。这清楚地表明，启发式匿名技术在保持数据熵方面表现更优，与原始数据的差异百分比很小。需要注意的是，熵度量取决于数据。此外，启发式匿名技术的熵度量被观察到与原始数据的熵度量非常接近。这表明启发式匿名技术的熵度量优于 K-匿名的熵度量。此外，熵被认为对 `K` 的取值不敏感。这可以用相对于 `K` 取值较小范围的大量数据来解释。
+
+### 隐私度量
+
+隐私是熵的互补。启发式匿名技术的隐私度量使用 `UTD 匿名工具箱` 进行评估。观察到隐私随着信息内容的增加而减少。K-匿名和启发式匿名技术的隐私度量在图 16 中进行了比较。发现 K-匿名存在时隐私水平得到增强。因此，可以确定启发式匿名比常规 K-匿名具有更高的效用。由于这一属性，启发式匿名技术在不增加信息损失的情况下保护隐私，其中保留的隐私水平是 `>65%`。此外，即使信息增加，百分比也保持不变，且原始数据的保留熵不超过 `10%`。确实，这是启发式技术的良好性能指标。
+
+### 执行时间
+
+K-匿名和启发式匿名技术的计算复杂度根据其执行时间进行评估，如图 17 所示。显然，启发式匿名技术所需的执行时间少于 K-匿名。在启发式匿名技术中嵌入其他模型（如 `L-多样性` 和 `(α, k)-匿名`）可在不影响执行时间的情况下确保强隐私。
+
+![](img/45337a4ebc080d57809e4aa3a88e37fc_145_1.png)
+
+**FIG. 16** K-匿名与启发式匿名技术隐私比较。
+
+**FIG. 17** K-匿名与启发式匿名技术的执行时间。
+
+![](img/45337a4ebc080d57809e4aa3a88e37fc_146_0.png)
+
+## 5 验证讨论
+
+本章重点关注为智慧城市云数据发布保护隐私。启发式匿名技术已与 `[17]` 进行了评估和比较。`Zhang et al.` 提出了一种理论方法。`UTD 匿名工具箱` 用于比较启发式匿名技术与 `[17]` 的结果。图 18 清楚地显示，启发式匿名技术实现了比基准技术 `[17]` 更高的信息保留（更高的熵值）。当 `K` 在 `4` 到 `8` 之间变化时，启发式匿名技术能够将熵水平维持在 `>0.37`，而在 `[17]` 中，匿名化导致熵水平接近 `0.35`。这意味着启发式匿名技术比基准技术提高了 `7.38%`。图 19 显示了启发式匿名技术与 `[17]` 之间隐私的比较。启发式匿名技术显示出比 `[17]` 更稳定的隐私水平，尽管 `K` 的取值发生变化。
+
+**FIG. 18** 启发式匿名技术与 Zhang et al. 的熵度量比较
+
+![](img/45337a4ebc080d57809e4aa3a88e37fc_146_1.png)
+
+**FIG. 19** 启发式匿名技术与 Zhang et al. 的隐私比较
+
+![](img/45337a4ebc080d57809e4aa3a88e37fc_146_2.png)
+
+对于 `K = 5, 6`，`[17]` 的隐私从 `0.68` 下降到 `0.60`，而在启发式匿名中，该技术能够在不降低的情况下保持相同的隐私水平。因此，实验结果验证了启发式匿名技术显著提高了 `[17]` 相对于现有技术的性能，而不受 K-匿名参数的影响。
+
+## 6 摘要
+
+智慧城市的概念复杂而吸引人。多样的概念、应用和技术相互作用，涵盖数字生活的方方面面。然而，高水平的互联互通增加了隐私问题的负担。将来自不同数据持有者、设备、技术和应用的众多数据源合并可以提高服务质量和可用性，但也会通过关联增加隐私泄露的风险。智慧城市的创新和新颖之处不在于应用本身，而在于使之成为可能的底层技术的使用。智慧城市中使用的一项技术是 `CC`。本章提供了匿名化模型的基本概念，并证明了不同隐私保护模型的协同作用可以在信息利用的同时提供强大的隐私平衡。云计算与已发布数据隐私保护之间的详细关联得以举例说明。随着 CC 技术的
