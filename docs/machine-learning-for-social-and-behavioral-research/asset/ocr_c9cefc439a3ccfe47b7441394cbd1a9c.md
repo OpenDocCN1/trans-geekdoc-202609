@@ -1,0 +1,7 @@
+![](bbox=[0.209, 0.213, 0.791, 0.004933])
+
+coefficients. Bayesian regularization can also be used in scenarios where uncertainty exists as to whether a parameter should be included, allowing the user to fit a more complex model, placing priors on parameters that are not of interest, resulting in a more holistic modeling procedure that does not necessarily have to be performed in a series of several steps, removing or adding variables based on the previous model's results.
+
+Although we get results similar to that of the lasso in Frequentist estimation, because we used a smaller subset of the data to speed the computational time (Bayesian estimation typically takes longer with increasing samples), it is necessary to remember that variable selection can depend heavily on the sample size. Larger sample sizes generally result in larger numbers of selected variables.
+
+One of the main benefits of the Bayesian framework is the flexibility it allows users to specify models that reflect not only their theoretical ideas, but also a combination of different aims. For instance, the different forms of regularization discussed earlier, such as the lasso, group lasso, and the lasso for interactions, can also be specified using Bayesian regularization. This requires manual specification, however, the principles described in applying Bayesian regularization to linear regression scale to more complex scenarios such as multilevel or structural equation modeling. Our main

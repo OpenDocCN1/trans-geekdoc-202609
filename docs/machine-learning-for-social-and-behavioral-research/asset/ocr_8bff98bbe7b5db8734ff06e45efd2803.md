@@ -1,0 +1,5 @@
+# FIGURE 8.3. MIMIC model using the 63 personality and demographic variables as predictors of both Grit factors.
+
+![](bbox=[0.223, 0.215, 0.776, 0.55])
+
+In this model, we have 10 predictors each from the extraversion, conscientiousness, openness, neuroticism, and agreeableness facets of the Five theory of personality. Additionally, we have measures of education, religion, age, race/ethnicity, and family (13 total). Once these predictors are included in the model, we can determine what percent of variance is accounted for in each latent variable. In this, the predictors explain 69.8% of $Grit_1$ (persistence) and 90.0% of $Grit_2$ (hard work). Note that this is calculated from the parameters within the SEM model, not by creating factor scores. To see the attenuation of effect results from creating factor scores, we created factor scores for the training set. With predictors explained 58.9% and 73.6% of the variance of both factors, respectively. Here we see the decrease in fit from adopting a two-step approach as compared to staying within the SEM framework.

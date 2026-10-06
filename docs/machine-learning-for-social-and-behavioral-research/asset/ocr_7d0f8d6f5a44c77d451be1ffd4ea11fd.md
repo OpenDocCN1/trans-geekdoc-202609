@@ -1,0 +1,11 @@
+these responses despite each negative valence item being reverse scored prior to analysis. They in fact found support for 4 – 10% of cases falling in the minority class that could be characterized as inattentive responders.
+
+To demonstrate the use of factor mixture models, we used some Grit data as above, so we can extend our search for heterogeneity to include the same two-factor model for the observed Grit indicators as detailed in Chapters 7 and 8. Although there isn't a perfect way to depict the application of mixtures to this CFA model, we provide a heuristic depiction in Figure 10.2.
+
+**FIGURE 10.2.** Two-factor CFA (left panel) and heuristic depiction of the factor mixture model (right panel). C represents the latent class variable, with the parameter estimates in the CFA varying across classes.
+
+![](bbox=[0.223, 0.395, 0.776, 0.555])
+
+The most notable change in this model is that each parameter estimate has added an subscript, $k$, that denotes that each class has a separately estimated CFA model. Constraints can be placed on this, for instance, to only allow the factor covariance matrix to have class-specific estimates, while the loadings, observed variable intercepts, and variances are constrained to be the same across classes, drastically reducing the number of estimated parameters. A more commonly applied form of factor mixture model examines the direct effect of the latent class on the latent means. This involves constraining the mean of each latent variable to be zero in one class, while freeing the latent means in the other classes. This can be visually depicted as in Figure 10.3.
+
+To apply this to the Grit data, we first start with estimating a twlass solution, only allowing the means to vary across classes. Note that since the observed variable intercepts are estimated, we need to constrain the latent means in one class to zero, thus allowing for a comparison across classes. We also estimate a model that allows the latent means, and variance-covariance matrix, to vary across classes. The model fit results are displayed in Table 10.3.

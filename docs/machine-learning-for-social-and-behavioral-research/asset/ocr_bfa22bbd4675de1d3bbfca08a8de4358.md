@@ -1,0 +1,9 @@
+# FIGURE 3.13. Confusion matrix from the depression example.
+
+![](bbox=[0.363, 0.187, 0.636, 0.442])
+
+(FN). From these values, a host of additional metrics can be calculated. Sensitivity (or true positive) and Recall the rate to correct classification for positive cases, or in case of those diagnosed with depression, how many do we correctly classify. Specificity (or true negative) is typically used to characterize the flip side of sensitivity, which calculates the rate of correct classification for negative cases. Both specificity and negative predictive value (NPV) measure the rate of classification for negative cases, with NPV using false negatives in the denominator (stead of FP) to characterize classification rate in relation to those predicted to be negative cases (not depression; TN = TP + FN). Finally, precision and predictive value (PPV) assesses the prediction of positive cases and recall, by using those predicted to be positive in the denominator instead (TP). If one wants to on assessing how well a model predicts positive cases, it would be most appropriate to use both recall (sensitivity) and precision.
+
+There are a host of additional metrics that characterize different aspects of the classification of positive and negative cases. One of the best ways to assess these metrics is the confusionmatrix from the caret package in R. From our logistic regression model, and the resulting predicted classes, we created the confusion matrix displayed in Figure 3.13.
+
+The first thing to note in Figure 3.13 is the small number of cases that had a diagnosis of depression (14 + 39). This is reflected in both the prevalence (0.229; TP + FN/total), as well the information rate (NIR; 1-Prevalence).

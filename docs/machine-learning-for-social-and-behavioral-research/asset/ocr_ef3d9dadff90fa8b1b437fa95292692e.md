@@ -1,0 +1,5 @@
+FIGURE 8.8. MIMIC model using an EFA model to derive five latent variables as predictors of both grit factors. Note that the demographic variables are not pictured.
+
+![](bbox=[0.207, 0.233, 0.792, 0.613])
+
+As a first attempt, we can extract three latent variables for personality indicators. This model explained 32.4% and 39.6% of the variance respectively, in the Grit latent variables in the training set. Five latent variables improved our prediction, with 46.9% and 59.9% of the variance, respectively. At the upper limit, we tested the extraction of 10 latent variables, which explained 52.3% and 60.4% of the variance, respectively. The five exploratory latent variables explained similar amounts of variance when specified with simple structure (no cross-loadings), while the 10 improved our prediction of *Grit_1*. However, these values were still far below the variance explained by manifest predictors (69.8% for *Grit_1*; 90.0% of *Grit_2*). Although the 10-factor model fit relatively well, with an RMSEA of 0.036 and CFI of 0.89 and 0.86, respectively, we can see that the improvement in prediction is marginal, particularly given the increase in

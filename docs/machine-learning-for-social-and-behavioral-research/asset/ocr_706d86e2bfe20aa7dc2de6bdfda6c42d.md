@@ -1,0 +1,1 @@
+less than half a second on our desktop computer. The computing time also increases quickly with the increase of the network size.

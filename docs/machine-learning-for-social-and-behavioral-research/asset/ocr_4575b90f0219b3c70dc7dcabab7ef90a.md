@@ -1,0 +1,9 @@
+# FIGURE 6.14. Performance across the tuning parameters of gradient boosting.
+
+![](bbox=[0.287, 0.198, 0.603, 0.41])
+
+on the test sample. Again, we see similar performance across the five algorithms. We note that this is a visual depiction of the AUC as assessed on the test dataset. If researchers do not have access to a test dataset, we recommend creating these plots with the training data because they will show overoptimistic results. Instead, researchers should use the predicted probabilities created on the OOB samples with algorithms such as random forests.
+
+Given these results, we have two potential courses of action. The first would be to conclude that the machine learning algorithms did not produce results that were a significant improvement over those from logistic regression to warrant further interpretation into the results. The second would be to deeper into the results of the best performing model, producing variable importance and possibly partial dependence plots. We opt for this option both for pedagogical purposes and because an improvement in prediction of 0.01 or 0.02 could represent an important improvement, particularly in research areas with hard to model outcomes.
+
+To interpret the results, we chose the gradient boosting model, but note that we could just easily opted for the results from extreme gradient boosting. For gradient boosting, there was some differentiation in performance across the tuning parameters, which can be seen in Figure 6.14. The thing to note in Figure 6.14 is the effect of maximum tree depth, with greater performance for depths greater than one. Additionally, lower shrinkage values (0.01 and 0.001) produced desired slightly higher AUC values. From this, we chose to interpret the gradient boosting model with 2,000 trees, a maximum tree depth of 2, and a shrinkage of 0.001. Then, we produced a variable importance plot, displayed in Figure 6.15. In the

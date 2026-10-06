@@ -1,0 +1,9 @@
+# 86 Machine Learning for Social and Behavioral Research
+
+in the average fit of the model. The best fitting model is denoted by the first (furthest left) vertical dashed line, while the second line displays the maximum value of $\lambda$ that has an average model no worse than one standard error of the best fitting model. After this model, increasing values of penalty result in drastically worse MSE values. We chose one standard error metric as a basis for a final model, which had 4 nonzero regression coefficients. All of the noise parameters were set to 0, as well as the coefficients for gender and BMI.
+
+**FIGURE 4.5.** Cross-validated MSE for each $\lambda$ value. The left-most vertical line indicates the model with the lowest MSE, while the rightmost line indicates the most parsimonious model within one standard error of the lowest MSE.
+
+![](bbox=[0.283, 0.396, 0.675, 0.673])
+
+One drawback to the use of lasso regression is that it tends to penalize parameters that were not set to 0 (Fan & Li, 2001; Hastie et al., 2009). A number of additional types of regularization have been proposed to overcome this problem, however, one simpler solution is to use a two-stage fitting process. In the first step, the lasso is paired with cross-validation to identify which variables are estimated with non zero coefficients. In the second step, a linear (or other type depending on the outcome) regression model is fit with only those variables screened out in the first step. This process is known as the *relaxed lasso* (Meinshausen, 2007). One thing to note is not to use the $p$-values from this second model

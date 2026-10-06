@@ -1,0 +1,11 @@
+come many of the problems with decision trees, often evidencing superior predictive performance than less complex algorithms. In our discussion of ensembles, we mainly focused on boosting and random forests, as these are two of the most commonly used algorithms. We also noted a number of drawbacks to ensembles, such as loss of interpretability. For social and behavioral research, it is important to keep in mind the quality of the data, as this can have a large impact on whether the use of ensembles adequately capture more complex relationships. We demonstrated that measurement error can have a larger impact on ensembles as opposed to linear regression. For these reasons, we almost always recommend pairing the use of ensembles with simpler methods, such as linear (logistic regression).
+
+# 6.8.1 Further Reading
+
++   - For interpreting the results from ensembles and other "black box" algorithms, see the book by Molnar (2019). This further discusses the use and application of partial dependence plots, local interpretation, and other methods.
+
++   - One additional algorithm that can be considered a form of ensemble is support vector machines (SVM; Cortes & Vapnik, 1995), as they perform L2 regularized model fitting in a high-dimensional representation of the predictors (Hastie et al., 2009). Interested readers should consult either Hastie et al. (2009) or James et al. (2013) for overviews.
+
++   - Similarly to SVM, deep learning can be seen as a type of method, or perhaps more importantly, it is often used as a comparison technique to random forests and boosting in prediction applications. However, the most important advantages of deep learning are evidenced with alternative data types, such as images, video, text, and others. For a more technical overview, see Goodfellow et al. (2016). For a more accessible overview with a focus on R, see Chollet and Allaire (2018).
+
++   - We highly recommend the caret package for implementing all of the methods discussed in this chapter. See Kuhn and Johnson (2013) for further detail on the use of this package and many of the implemented methods.

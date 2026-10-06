@@ -1,0 +1,13 @@
+Machine Learning for Social and Behavioral Research
+
++   * Pruning. The process of creating a large decision tree, followed by pruning or removing splits to create a smaller, more generalizable tree.
+
++   * Variable importance. A summary statistic for how much an individual predictor contributes to explaining variability in the outcome. This is used primarily as a way to understand which predictors are important in algorithms (trees and ensembles; see Chapter 6) that are not as interpretable as linear regression.
+
+# 5.2 Introduction
+
+Decision trees were first introduced in the 1960s by Morgan and Sonquist (1963). However, the use of the method did not capture the attention of the statistics community until 20 years later with the work of Breiman, Friedman, Olshen, and Stone (1984). First termed automatic interaction detection, the purpose of the algorithm was to efficiently identify interactions when the number of predictors was large. In large datasets, the sequential testing of a large number of models and possible combinations of variables quickly decreases the statistical properties of the models (i.e., false positives; Morgan, 2005).
+
+As there are a number of variants to decision tree algorithms, we refer to decision trees as the umbrella methodology, and refer to specific algorithms that fall under this decision trees terminology as such. For instance, the most popular variant of decision trees is classification and regression trees (CART, Breiman et al., 1984). Note that classification and regression trees is also commonly used to refer to decision trees, while CART refers to a specific algorithm.
+
+Decision trees' popularity can be attributed to their easy-to-understand tree structure, that mimics the way that humans make decisions. We elaborate on this further below. To create a tree structure, the predictor space into all possible unique values. Across these unique values, the algorithm iteratively partitions the dataset to determine an improvement in model fit. This involves placing each observation into one of two groups, of which each member receives the same predicted response. The actual partitioning of the dataset functions differently based on the type of each predictor variable. For quantitative variables, each unique value is tested in order: For example, if predictor values range from 50 to 100, the process is as follows: Everyone with a predictor value equal to 50 versus everyone with a predictor value greater than 50, then everyone with a

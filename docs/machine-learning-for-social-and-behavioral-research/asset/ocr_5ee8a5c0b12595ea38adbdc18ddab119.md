@@ -1,0 +1,9 @@
+# The Practices of Machine Learning
+
+The important thing to note is that while this example highlights a flaw in the use of the AUC with imbalanced outcomes, it is an extreme simulated example. In more realistic scenarios of imbalance, the AUC has not been found to be problematic for use in model assessment (Jacobucci & Li, 2022). However, the ROC plot and AUC still focus equally on positive and negative cases, which in the case of imbalanced outcomes, we likely care more about the prediction of the positive cases. While a number of metrics and visualizations have been developed to help focus on positive cases, the most commonly used is the area under the precision recall curve (AUPRC; Davis & Golich, 2006).
+
+# Area under the Precision Recall Curve
+
+In comparison to the AUC, the AUPRC is more sensitive and provides more information particularly when classes are imbalanced (Saito & Rehmemeier, 2015). AUPRC does not take into account true negatives, instead focusing on the classification of positives (with a diagnosis of depression). In fact, going back to the simulated examples in the prior section, the AUPRC stays approximately the same (0.29) when adding a large number of negative cases, which is what we would want to see in a metric.
+
+With the AUC, a value of 0.50 denotes change level prediction. However, with the AUPRC, change depends on the distribution of the outcome, with minimum values calculated as the ratio of positives (P) and negatives (N) as $y = P/(P+N)$ (Saito & Rehmemeier, 2015). This plot is depicted in Figure 3.18, and tells a different story than the AUC. We see that across the range of cutoffs, there is no “ideal” value that results in both a high precision and recall. Our AUPRC value of 0.57 is difficult to interpret but can hold more value when comparing different models.

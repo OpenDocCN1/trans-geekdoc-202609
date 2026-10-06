@@ -1,0 +1,12 @@
+# The Principles of Machine Learning Research
+
+the labels exploratory or confirmatory. Namely, both the phrases theory-guided exploration and semi-confmatory are aimed at theory generation and development, specifically addressing the drawbacks to strict adherence to hypothetico-deductive reasoning: "Explicit hypotheses tested with military usually do not spring from an intellectual value but instead are gained through exploratory research" (Jaeger & Halliday, 1998, p. 564). While exploration is most discussed in terms of theory generation, often using the moniker fishing to denote a search for effects, most new algorithms address theory development, which is aligned with the right pane of Figure 2.7. In this, the mediation model has theoretical support from prior studies, but can be expanded through the inclusion of confounding variables or those that account for heterogeneity.
+
+# 2.5.4 Types of Relationships
+
+The second complication that has arisen more recently with respect to hypothesis testing is the type of relationship specified. Historically, social and behavioral research has almost solely considered linear relationships, either in the form of analysis of variance or regression models. This occurred for many reasons, partially due to difficulties in obtaining large sample sizes, thus power was a main concern, or due to the available computational machinery. Currently, researchers have access to larger sample sizes than in the past, and there are generally few limitations to the type of analyses that can be run (e.g., supercomputing infrastructures). This has opened up the door to a researcher’s ability to specify interactions or various types of nonlinear relationships as a hypothesis. The difficulty in this lies in the higher degree of detail needed; is it a linear interaction and at what values of X, or what type of nonlinear relationships, quadratic, cubic, alternative? Simply putting, this increased complexity may not be in line with traditional hypothesis testing. Instead, softer forms of hypothesis testing may be more amenable. For example:
+
++   - It is hypothesized that interactions exist between a subset of Xi through Xs.
+- A model that allows for interactions between predictors will fit better than a main effects model.
+- Nonlinear relationships exist between Xi through Xj and Y, thus a boosting model with stumps will fit better than linear regression.
+- A model that allows for a higher degree of nonlinearity will be a better fit to a model with all possible interaction and quadratic effects.
