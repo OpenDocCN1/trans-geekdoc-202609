@@ -1,0 +1,17 @@
+# Nanoelectronic Devices for Security
+
+where the Const is defined by the TFET dimension and material parameter. It is seen from equation (2.26) that the $SS_{TFET}$ depends greatly on the gate to source bias as the TFET geometrical parameters. There are two types of subthreshold swing in TFET: point subthreshold ($SS_{point}$) and average subthreshold swing ($SS_{avg}$), is specified as the least value of the subthreshold swing on the transfer characteristic graph, generally measured at the steepest point in the curve as soon the tunneling current starts, while the $SS_{avg}$ is measured from the point where the TFET begins to turn up to the threshold current ($I_t$) (typically at $10^{-7}$ A). It is usually measured using constant current method.
+
+# 2.4.5 Threshold Voltage
+
+Previously, the TFETs threshold voltage ($V_{TH}$) had been defined on the basis of a constant current method, where the gate voltage for which the drain current is $10^{-7}$ A is widely employed. Nevertheless, this technique utilizes a random value and possesses no practical significance. However, a recent concept of the $V_{TH}$ of TFETs has emerged. It is specified as the voltage for which the energy band narrowing begins to get saturated with the application of the gate bias.
+
+# 2.4.6 Total Gate Capacitance
+
+In TFETs, the contributions to the total gate capacitance ($C_{gg}$) are mainly due to the gate to drain capacitance ($C_{gd}$) also remarkably large to $C_{gg}$ as a result of the source/channel tunnel barriers. Consequently, $C_{gs}$ increases when a positive gate voltage is applied, which reduces the channel/drain potential barriers. For a silicon-based TFET, it is seen that the gate to source as well as the drain to source voltages the $C_{gg}$ is solely dominated by the $C_{gs}$. The pinch-off point in TFET is at a higher value of the drain to source voltage at higher gate voltage. The primary explanation is that for higher gate to source voltage, the band bending at the source/channel side is much higher, implying that a huge portion of the drain to source voltage appears on the source end. Therefore, the drain bias for a certain gate to source voltage tends to affect the barrier on the source side of the tunnel barrier until a decent voltage (say 1 V) is attained); beyond this point, the gate to drain capacitance tends to reduce gradually.
+
+# 2.5 A FE TECHNIQUES FOR IMPROVING THE PERFORMANCE OF TFETs
+
+Although TFETs are deemed to replace the traditional MOSFET technologies, as discussed earlier, due to the physical operating principle, that is, BTBT of electrons, which is accountable for the current transport in TFETs, give a low ON-state current ($I_{ON}$). Hence, the ON-state current acquired by the conventional TFET is remarkably low and therefore generally does not satisfy the criteria by several orders of magnitude ($I_{ON}$ should be at least 100 $\mu$A/µm, making the $I_{ON}/I_{OFF}$ ratio $\sim 10^4$ for $V_{DD} =0.5$ V or lower). This is the major drawback of TFETs, and until this issue is resolved, TFETs are not suitable to be implemented for modern standard-CMOS technologies. In this regard, much work on TFETs was developed
+
+The drive current or tunneling currents in TFETs, which is directly proportional to the tunneling probability, is given by the approximated equation of Wentzel–Kramers–Brillouin (WKB), which is expressed as [21], [22]:

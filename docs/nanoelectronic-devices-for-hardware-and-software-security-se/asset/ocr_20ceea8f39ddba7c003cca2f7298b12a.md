@@ -1,0 +1,11 @@
+# 16 • Graphene SymFET and SiNW FET 331
+
+![](bbox=[0.096, 0.081, 0.903, 0.375])
+
+FIGURE 16.9 Reprogrammable silicon nanowire FET.
+
+that are coupled electrostatically by Schottky junction separately from each other. The p-polarity or n-polarity is achieved by one gate, and another gate is used to vary the conductance through the nanowire. The signal transmission across the Schottky junction can be controlled by applying an external voltage source. Device configuration can be addressed by Schottky junctions in Schottky barrier field-effect transistors separately. One junction is used to block one type of carrier while another is tuned to change its conductance to the other type of carrier (A. Heinig et.al.) [22]. The choice of heterostructure materials is Si/intrinsic – Si/NiSi, as shown in Figure 16.9. The materials are aligned in an axial and embedded in a SiO shell, the thermally grown SiO used as a gate dielectric in which silicon has a low interface trap density. The presence of two Schottky junctions at each end of the nanowire is the key factor that empowers reconfigurability. Gate 2 is a program gate used to configure the device in p-FET or n-FET, and gate 1 is a control gate used to control the conductance through the nanowire.
+
+# 16.7.3 Electrical Characteristics and Working Principle of the SiNW FET
+
+The devices can be operated in a bidirectional mode. The similar values are attained by exchanging the signals between Vg/Vdg and source/drain, as shown in Figure 16.10. This property of symmetry added the advantage of flexibility and adaptability in the circuit design. The p-FET mode can be programmed by fixing the gate voltage (Vg) program set to -3 V and the voltage (Vg) of the drain-source set to -1 V. At the drain electrode, electron injection is effectively blocked by the applied potential in Vdg. The gate voltage (Vg) of the control gate is varied between positive and negative values. The value Vgc<0 stimulates the hole injection into the active region of the FET at the source side, changing the Vg, positive values results in closing off the FET by blocking the injection of holes, as shown in Figure 16.10. The electrical characteristics of the SiNW FET were studied and measured as shown in Figure 16.10 by A. Heinig et al. [22].

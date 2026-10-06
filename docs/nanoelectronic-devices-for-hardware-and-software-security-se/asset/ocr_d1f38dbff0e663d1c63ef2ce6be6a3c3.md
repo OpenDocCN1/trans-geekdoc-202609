@@ -1,0 +1,15 @@
+# 10 Effect of Dielectric Material 203
+
+with the simulator [13]. An analytical model for drain current in TFET considering SiGe layer source and channel region is presented in the literature [26]. This model is verified with a simulator for different molecule fraction, gate bias, and dielectric constant.
+
+The ON current ($I_{ON}$) and SS of a TFET are enhanced using a high-k as a gate dielectric material, with the expense of degradation in leakage and ambipolar current [27]. K. Boucart [28] reported that the tunneling mechanism in a double gate TFET is improved by using high-k dielectrics at the tunnel junction. The electrical parameters of a gate dielectric TFET (HG-TFET) is highlighted in literature, and this device has SS and ON current compared to TFETs [17]. A HG-TFET with back gate is reported, and the subthreshold characteristic of this device is not affected by the scaling of the dimensions [18]. The research reported that ON current of TFET is not a function of back gate bias. The DC, RF/analog and linearity performance of junctionless HG-JT (JL HG-TFET) due to interface trap is compared with JL TFET [29]. Results reveal that HG engineering in TFET increases the transconductance and provides better linearity and lower distortion compared to JL TFET. The RF and linearity performance of hetero BOX BOX (HDB TFET) was investigated through a TCAD simulator, and results concludes that it has superior characteristics in transconductance, cut-off frequency, and distortion parameters [30].
+
+S. Moerkaet al. have reported the HCE in TFET, and results show a large horizontal field at the tunnel junction, carrier heating [31]. In high-k based TFET was investigated experimentally in the presence of trap charge, and the transfer characteristic degraded compared to TFET with $SiO2$ as the gate dielectric [32]. A dual functional n-TFET and p-type impact ionization FETs (p-IFETs) was designed using the ATLAS simulator [33]. The hot carrier injection (HCI) stress in TFET is studied in the drain region having $p/n$ junction [34], and analysis reveals that the device degrades due to the presence of an interfacial layer at the drain side.
+
+# 10.3 DEVICE STRUCTURE AND COMPUTATIONAL DETAILS
+
+The 2D representation of the hetero-gate dielectric TFET (HG-TFET) designed in this research is portrayed in Figure 10.1. To improve the ON current and subthreshold characteristic of HG-TFET, the high-k gate dielectric is constructed near the tunnel junction, $SiO_2$ ($k=3.9$) is at the drain side. The various high-k materials are considered $Al_2O_3$ ($k=10$), $HfO_2$ ($k=22$), and $La_2O_3$ ($k=27$). The length of high-k and $SiO_2$ are represented by $L_{h-k}$ and $L_{SiO2}$, respectively. The intrinsic channel is made of silicon, and the gate length ($t_{si}$) is 10 nm is for HG-TFET.
+
+![](bbox=[0.31667, 0.76, 0.68333, 0.9])
+
+FIGURE 10.1 A 2D cross-section of HG-TFET.

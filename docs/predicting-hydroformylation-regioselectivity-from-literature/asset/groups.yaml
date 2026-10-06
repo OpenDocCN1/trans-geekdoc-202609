@@ -1,0 +1,435 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Chem Catalysis
+
+
+    # CellPress
+
+
+    Preview
+
+
+    # Predicting hydroformylation regioselectivity from literature data machine learning
+
+
+    Shai Chen¹ and Robert Police²*
+
+
+    In this issue of Chem Catalysis, Mao et al. develop machine learning models that
+    predict terminal alkene regioselectivity in catalytic hydroformylation, showing
+    that high temperature, low pressure and low metal concentration favor linear products.
+    These models enable high-throughput screening, potentially advancing innovations
+    in this industrial.
+
+
+    most olefins, oct-1-ene and styrene. The general-olefin models are created by
+    using all data for a single model, as opposed to the specialized models where
+    data are split by olefin. Unlike the general-like model, the specialized gradient
+    boosting models for oct-1-ene and styrene achieve achieve useful performance with
+    R² of 0.850 and 0.789, respectively, outperforming the general-olefin model significantly
+    for these substrates.
+
+
+    ![](img/4b2aa915a163b752e3c571e656a6cb7d_0_0.png)
+
+
+    Hydroformylation of olefins (HPOs) is a chemical transformation that converts
+    olefins, carbon monoxide, and molecular hydrogen into linear or branched aldehydes
+    (Figure 1). It is one of the most large-scale homogeneous-catalyzed transformations
+    in the chemical industry and is a prototype of a highly atomic-economic conversion.
+    In the 1970s, rhodium complexes were discovered both the most effective and chemolective
+    hydroformylation catalysts. Later, other catalysts based on cobalt, ruthenium,
+    iridium, palladium and platinum were developed as alternatives.²
+
+
+    The full representation used in this case is 4 dimensional and encompasses descriptors
+    for the olefin, reaction metal catalyst, solvent, and reaction conditions. The
+    researchers applied principal component analysis to reduce the dimensionality
+    of the reaction representation and improve the robustness of the supervised ML
+    models. When reduced to eight dimensions, prediction performance was best for
+    olefins. When only oct-1-ene was used as a substrate, reducing the representation
+    to four dimensions showed the highest prediction accuracy. In contrast to the
+    oct-1-ene-specific model, reducing the representation to 15 dimensions maximized
+    prediction for the styrene-specific model.
+
+
+    Recently, machine learning (ML) has emerged as a transformative tool in organic
+    synthesis and chemical engineering. This development has led to breakthroughs
+    in guiding synthesis, optimizing reactions, and discovering new pathways.³ One
+    of the ML approaches is supervised learning, which aims to learn the relationship
+    between a set of inputs and outputs and to predict the outcome of unseen chemical
+    reactions. In general, constructing robust and accurate supervised models hinges
+    on the use of high-quality chemical databases, and the selection of appropriate
+    representations, and the choice of ML algorithms.
+
+
+    The first trained models to predict the outcome of all olefins in their database,
+    which used the general-olefin model, and analyzed them found that these models
+    could not distinguish between olefins as various olefins were clustered and, consequently,
+    the performance was not good enough. Specifically, the researchers proposed specialized
+    models for the
+
+
+    The researchers were also interested in understanding the most important features
+    of the models. The shapley explanations (SHAP) were applied to the models constructed,
+    and the corresponding results were averaged over the three models with the best
+    predictive performance. This approach revealed that, in the general-olefin model,
+    low bite
+
+
+    > ¹Institute of Chemistry, Groningen, Germany
+
+    ²Correspondence: r.police@uio.no
+
+    https://doi.org/10.1016/j.chemchem.2024.101111
+
+
+    Chem Catalysis 4 (101111), September 2024 | Elsevier © 2024
+
+    All rights reserved; except for text and data mining, AI training, and other services.'
+  - "[PAGE 1]\n\n# # CellProcess\n\n# # Chem Catalysis\nPreview\n\n![](img/4b2aa915a163b752e3c571e656a6cb7d_1_0.png)\n\
+    \n# A\n\n# B\n\n# Olefin Substrate Distribution\n\n# Catalyst Element Distribution\n\
+    \n![](img/4b2aa915a163b752e3c571e656a6cb7d_1_1.png)\n\n![](img/4b2aa915a163b752e3c571e656a6cb7d_1_2.png)\n\
+    \n+   - 1-Octane (25.4%)\n Styrene (22.4%)\n Vinyl Acetate (9.0%)\n- Alkyl Cyanide\
+    \ (7.8%)\n Other (35.4%)\n- Rh (99.8%)\n Pd (1.3%)\\ Ir (2.3%)\n\n# C\n\n# Solvent\
+    \ Distribution\n\n# Publication Year Distribution\n\n![](img/4b2aa915a163b752e3c571e656a6cb7d_1_3.png)\n\
+    \n![](img/4b2aa915a163b752e3c571e656a6cb7d_1_4.png)\n\n+   - Toluene (64.3%)\n\
+    \ THF (11.5%)\n Benzene (10.6%)\n- DCM (2.9%)\n Other (11.6%)\n- 2020-2024 (8.0%)\n\
+    \ 2015-2019 (14.7%)\n 2010-2014 (28.6%)\n- 2005-2009 (12.7%)\n 2000-2004 (22.9%)\n\
+    \ 1995-1999 (11.1%)\n\n![](img/4b2aa915a163b752e3c571e656a6cb7d_1_5.png)\n\nFigure\
+    \ 1. Summary of predicting hydroformylation regioselectivity via machine learning\n\
+    \n(A) Mechanism of HFOs.\n(B) Distribution of the chosen olefin substrate, catalyst\
+    \ element, solvent, and year.\n(C) Workflow of predicting hydroformylation regioselectivity.\n\
+    \nangle values are associated with low L B ratios, consistent with previous literature.\
+    \ Additionally, containing electron-substituted alkenes tend to form branched\
+    \ products. In terms of reaction conditions, high temperatures are conducive to\
+    \ induce L/B ratios. For specific to oct-1, longer reaction times generally increase\
+    \ the probability of L/B. In addition, low pressure favors the occurrence of β-hydrogen\
+    \ elimination, which reduces the selectivity of branched products and styrene-products.\
+    \ SHAP analysis revealed a novelty in the importance of the conditions to the\
+    \ substrates and for the styrene-specific model. Lower catalyst concentrations\
+    \ can accelerate β-hydrogen elimination, forming less branched products. The oct-1-specific\
+    \ and the styrene-specific models show that higher\n\ntemperature, pressure, and\
+    \ lower L/B concentration values. Additionally, while the researchers used descriptors\
+    \ to differentiate between the solvents present in the dataset, the descriptors\
+    \ were inconsistent, consistent with the absence of a solvent effect on the hydroformylation\
+    \ regioselectivity.\n\nOverall, this study by Mao and coworkers presented the\
+    \ construction of a comprehensive database for terminal olefin hydroformylation.\
+    \ The developed workflows to cluster molecular features for both catalysts and\
+    \ solvents facilitate physicochemical choices. Regarding regioselectivity, ML\
+    \ models for oct-1 and styrene were constructed with practically perfect accuracy.\
+    \ The data was biased toward specific chemical species\n\ncatalysts and olefins,\
+    \ and even the best-performing ML models do not generalize to use rare substrates,\
+    \ as the presented workflow is an important contribution demonstrating the power\
+    \ of ML in chemistry to accelerate the prediction of catalyst performance. 10\n\
+    \n# ACKNOWLEDGMENTS\n\nS.C acknowledges funding from the China Scholarship Council\
+    \ (grant No. 2023.2006.1903266)\n\n# DECLARATION OF INTEREST\n\nThe authors declare\
+    \ not have competing interests.\n\n# REFERENCES\n\n+   1. Hood, D.M., Johnson,\
+    \ R.A., Carpenter, A.E., Ymerlin, J.J., Vinayrd, D.J., and Stanley, G.G. (2020).\
+    \ Highly active carbonyl catalyst(s) hydroformylation reaction. Chemical Science,\
+    \ 36(5), 542–548. https://doi.org/10.1039/C9CT004772A\n2. Brest, B. (2003). Synthetic\
+    \ applications of enanti- and stereoselective hydroformylation. Angew. Chem. Soc.,\
+    \ 42(27), 2664–2675. https://doi.org/10.1002/ac020596\n\n2 Chem Catalysis, 4(101191),\
+    \ 2024, 19 * Wei-Wei"
+  - '[PAGE 2]
+
+
+    # Chem Catalysis Preview
+
+
+    +   3. Jowner, K., Tomberg, A., Bauer, C., Gold, C., and Norby, P.-O. (2023).
+    Organic reactivity from mechanisms to machine learning. Nat. Rev. Chem, 5, 240–255.
+    https://doi.org/10.1038/s41744-023-00506-x
+
+
+    +   4. Cole, J., Wang, J., Jaskola, T.S., Green, W. H., and Jensen, K. F. (2017).
+    Prediction of organic reaction outcomes using machine learning. Science, 356,
+    eaaa7064. https://doi.org/10.1126/science.aar7064
+
+
+    +   5. Wang, H., Chen, Y., Yu, H., Qi, M., Xia, D., Liu, Y., Lu, B., Gao, R.,
+    Wang, Y., and Mao, S. (2024). Generalized machine learning models of terminal
+    olefin-
+
+
+    +   hydroformation for regioselectivity prediction. Chem. Catal., 4, 101079. https://doi.org/10.1016/j.cccat.2024.101079.
+
+
+    +   6. Pedrosrosa, F., Varqueaux, G., Gramfort, A., Michel, V., Thion, B., Gisel,
+    O., Blondel, N., Usnay, J., and V derberg, V., et al. (2011). Scikit-learn: Machine
+    learning in Python. J. Machine Learning Res., 12, 2825–2830.
+
+
+    +   7. Lundberg, S.M., and Lee, S.-I. (2017). A unified approach to interpreting
+    model predictions. Advances in Neural Information Processing Systems, 30, pp.
+    4765–4774.
+
+
+    +   8. van Leeuwen, P.W.N.M., and Claver, C. (2002). Rhodium Catalysis. Wiley-VCH,
+    Dordrecht.
+
+
+    +   9. Vches-Herrera, M., Domke, L., and Börner, A. (2014). Hydroformylation:
+    tandem reactions. ACS Catal., 4, 1706–1713. https://doi.org/10.1021/acsacatal.500273
+
+
+    +   10. Xiang, K., Luo, S., Liu, K., Jiang, S., Ma, J., Jiang, J., and Shu, Z.
+    (2024). Artificial intelligence and automation to power the future of chemistry.
+    Chem. Rep. Phys. Chem. Sci., 3, 102499. https://doi.org/10.1016/j.crcp.2024.102499.'
+  md: '
+
+    # Chem Catalysis
+
+
+    # CellPress
+
+
+    Preview
+
+
+    # Predicting hydroformylation regioselectivity from literature data machine learning
+
+
+    Shai Chen¹ and Robert Police²*
+
+
+    In this issue of *Chem Catalysis*, Mao et al. develop machine learning models
+    that predict terminal alkene regioselectivity in catalytic hydroformylation, showing
+    that high temperature, low pressure and low metal concentration favor linear products.
+    These models enable high-throughput screening, potentially advancing innovations
+    in this most olefins, oct-1-ene and styrene. The general-olefin models are created
+    by using all data for a single model, as opposed to the specialized models where
+    data are split by olefin. Unlike the general-like model, the specialized gradient
+    boosting models for oct-1-ene and styrene achieve useful performance with R² of
+    0.850 and 0.789, respectively, outperforming the general-olefin model significantly
+    for these substrates.
+
+
+    ![](img/4b2aa915a163b752e3c571e656a6cb7d_0_0.png)
+
+
+    Hydroformylation of olefins (HPOs) is a chemical transformation that converts
+    olefins, carbon monoxide, and molecular hydrogen into linear or branched aldehydes
+    (Figure 1). It is one of the most large-scale homogeneous-catalyzed transformations
+    in the chemical industry and is a prototype of a highly atomic-economic conversion.
+    In the 1970s, rhodium complexes were discovered both the most effective and chemolective
+    hydroformylation catalysts. Later, other catalysts based on cobalt, ruthenium,
+    iridium, palladium and platinum were developed as alternatives.²
+
+
+    The full representation used in this case is 4 dimensional and encompasses descriptors
+    for the olefin, reaction metal catalyst, solvent, and reaction conditions. The
+    researchers applied principal component analysis to reduce the dimensionality
+    of the reaction representation and improve the robustness of the supervised ML
+    models. When reduced to eight dimensions, prediction performance was best for
+    olefins. When only oct-1-ene was used as a substrate, reducing the representation
+    to four dimensions showed the highest prediction accuracy. In contrast to the
+    oct-1-ene-specific model, reducing the representation to 15 dimensions maximized
+    prediction for the styrene-specific model.
+
+
+    Recently, machine learning (ML) has emerged as a transformative tool in organic
+    synthesis and chemical engineering. This development has led to breakthroughs
+    in guiding synthesis, optimizing reactions, and discovering new pathways.³ One
+    of the ML approaches is supervised learning, which aims to learn the relationship
+    between a set of inputs and outputs and to predict the outcome of unseen chemical
+    reactions. In general, constructing robust and accurate supervised models hinges
+    on the use of high-quality chemical databases, and the selection of appropriate
+    representations, and the choice of ML algorithms.
+
+
+    The first trained models to predict the outcome of all olefins in their database,
+    which used the general-olefin model, and analyzed them found that these models
+    could not distinguish between olefins as various olefins were clustered and, consequently,
+    the performance was not good enough. Specifically, the researchers proposed specialized
+    models for the
+
+
+    The researchers were also interested in understanding the most important features
+    of the models. The shapley explanations (SHAP) were applied to the models constructed,
+    and the corresponding results were averaged over the three models with the best
+    predictive performance. This approach revealed that, in the general-olefin model,
+    low bite values are associated with low L/B ratios, consistent with previous literature.
+    Additionally, containing electron-substituted alkenes tend to form branched products.
+    In terms of reaction conditions, high temperatures are conducive to induce L/B
+    ratios. For specific to oct-1, longer reaction times generally increase the probability
+    of L/B. In addition, low pressure favors the occurrence of β-hydrogen elimination,
+    which reduces the selectivity of branched products and styrene-products. SHAP
+    analysis revealed a novelty in the importance of the conditions to the substrates
+    and for the styrene-specific model. Lower catalyst concentrations can accelerate
+    β-hydrogen elimination, forming less branched products. The oct-1-specific and
+    the styrene-specific models show that higher catalyst concentrations, pressure,
+    and lower L/B values were present in the general-olefin model. Additionally, while
+    the researchers used descriptors to differentiate between catalysts and solvents,
+    the best-performing ML models do not generalize to rare substrates, as the data
+    was biased toward common chemical species. Overall, this study by Mao and coworkers
+    presented a comprehensive framework for terminal hydroformylation regioselectivity.
+
+
+    > ¹Institute of Chemistry, Groningen, Germany
+
+    ²Correspondence: r.police@uio.no
+
+    https://doi.org/10.1016/j.chemchem.2024.101111
+
+
+    Chem Catalysis 4 (101111), September 2024 | Elsevier © 2024
+
+    All rights reserved; except for text and data mining, AI training, and other services.
+
+
+    ![](img/4b2aa915a163b752e3c571e656a6cb7d_1_0.png)
+
+
+    ## A Olefin Substrate Distribution
+
+    - 1-Octane (25.4%)
+
+    - Styrene (22.4%)
+
+    - Vinyl Acetate (9.0%)
+
+    - Alkyl Cyanide (7.8%)
+
+    - Other (35.4%)
+
+
+    ## B Catalyst Element Distribution
+
+    - Rh (99.8%)
+
+    - Pd (1.3%)
+
+    - Ir (2.3%)
+
+
+    ## C Solvent Distribution
+
+    - Toluene (64.3%)
+
+    - THF (11.5%)
+
+    - Benzene (10.6%)
+
+    - DCM (2.9%)
+
+    - Other (11.6%)
+
+
+    ## Publication Year Distribution
+
+    - 2020-2024 (8.0%)
+
+    - 2015-2019 (14.7%)
+
+    - 2010-2014 (28.6%)
+
+    - 2005-2009 (12.7%)
+
+    - 2000-2004 (22.9%)
+
+    - 1995-1999 (11.1%)
+
+
+    ![](img/4b2aa915a163b752e3c571e656a6cb7d_1_1.png)
+
+    ![](img/4b2aa915a163b752e3c571e656a6cb7d_1_2.png)
+
+    ![](img/4b2aa915a163b752e3c571e656a6cb7d_1_3.png)
+
+    ![](img/4b2aa915a163b752e3c571e656a6cb7d_1_4.png)
+
+    ![](img/4b2aa915a163b752e3c571e656a6cb7d_1_5.png)
+
+
+    Figure 1. Summary of predicting hydroformylation regioselectivity via machine
+    learning
+
+
+    (A) Mechanism of HFOs.
+
+    (B) Distribution of the chosen olefin substrate, catalyst element, solvent, and
+    year.
+
+    (C) Workflow of predicting hydroformylation regioselectivity.
+
+
+    ## ACKNOWLEDGMENTS
+
+    S.C acknowledges funding from China Scholarship Council (grant No.20231926)
+
+
+    ## DECLARATION OF INTEREST
+
+    The authors declare no interests.
+
+
+    ## REFERENCES
+
+    - 1. Vches-Herrera, M., Domke, L., and Börner, A. (2014). Hydroformylation: tandem
+    reactions. ACS Catal., 4, 1706–1713. https://doi.org/10.1021/acsacatal.500273
+
+    - 2. van Leeuwen, P.W.N.M., and Claver, C. (2002). Rhodium Catalysis. Wiley-VCH,
+    Dordrecht.
+
+    - 3. Xiang, K., Luo, S., Liu, K., Jiang, S., Ma, J., Jiang, J., and Shu, Z. (2024).
+    Artificial intelligence and automation to power the future of chemistry. Chem.
+    Rep. Phys. Chem. Sci., 3, 102499. https://doi.org/10.1016/j.crcp.2024.102499
+
+    - 4. Cole, J., Wang, J., Jaskola, T., Green, W., and Jensen, K. (2017). Prediction
+    of organic reactions using machine learning. Science, 356, aaa764. https://doi.org/10.1126/science.aaa764
+
+    - 5. Wang, H., Chen, Y., Yu, H., Qi, M., Xia, D., Liu, Y., Lu, B., Gao, R., Wang,
+    Y., and Mao, S. (2024). Generalized machine learning models of terminal hydroformylation
+    for regioselectivity. Chem. Catal., 4, 10179. https://doi.org/10.1016/j.cccat.2024.10179
+
+    - 6. Pedrosrosa, F., Varqueaux, G., Gramfort, A., Michel, V., Thion, B., Gisel,
+    O., Blondel, N., Usnay, J., and V derberg, V., et al. (2011). Scikit-learn: Machine
+    learning in Python. J. Machine Learning Res., 12, 2825–2830.
+
+    - 7. Lundberg, S.M., and Lee, S.-I. (2017). A unified approach to interpreting
+    model predictions. Advances in Neural Information Processing Systems, 30, pp.
+    4765–4774.
+
+    '
+  mdcn: "\n\n# 化学催化 (Chem Catalysis)\n\n# CellPress \n\n预览\n\n# 基于文献数据的机器学习预测氢甲化区域选择性\n\
+    \nShai Chen¹ 和 Robert Police²*\n\n在在本期 *Chem Catalysis* 期中，Mao 等人开发了机器学习模型，用于预测催化氢甲化中末端烯烃的区域选择性，表明高温度、低压力和低金属浓度有利于线形产物。这些模型能够实现高通量筛选，有望推动此类最重要烯烃——1-辛烯和苯乙烯的创新。通用烯烃模型通过使用所有数据创建一个单一模型创建，这与按烯烃划分数据的专用模型不同。与通用模型不同，针对\
+    \ 1-辛烯和苯乙烯的专用梯度提升模型实现了 R² 分别为 0.850 和 0.789 的实用性能，在这些底物上的表现显著优于通用烯烃模型。\n\n![](img/4b2aa915a163b752e3c571e656a6cb7d_0_0.png)\n\
+    \n烯烃氢甲化 (HPOs) 是一种将烯烃、一氧化碳和分子氢转化为线形或分支醛的化学转化（图 1）。它是化学工业中规模最大的均相催化转化之一，是高原子经济性转化的范例。20世纪70年代，人们发现铑配合物均是最有效且具有化学选择性的氢甲化催化剂。随后，开发了基于钴、钌、铱、钯和铂的其他替代催化剂。²\n\
+    \n该案例使用的完整表示是 4 维的，涵盖了烯烃、反应金属催化剂、溶剂和反应条件的描述符。研究人员应用主成分分析来降低反应表示的维度，并提高监督机器学习（ML）模型的稳健性。当维度降低到八维时，烯烃的预测性能最佳。当仅使用\
+    \ 1-辛烯作为底物时，将表示减少到四维显示出最高的预测准确率。与 1-辛烯专用模型相比，将表示减少到 15 维使苯乙烯专用模型的预测最大化。\n\n最近，机器学习\
+    \ (ML) 已成为有机合成和化学工程领域一种变革性的工具。这一进展在引导合成、优化反应和发现新途径方面取得了突破。³ 机器学习的方法之一是监督学习，其旨在学习一组输入和输出之间的关系，并预测未见化学反应的结果。通常情况下，构建稳健且准确的监督模型取决于高质量化学数据库的使用、适当表示的选择以及\
+    \ ML 算法的选取。\n\n首批训练以预测其数据库中所有烯烃结果的训练模型使用了通用烯烃模型，并对其进行了分析，结果发现这些模型无法区分烯烃，因为各种烯烃被聚类在一起，因此性能不够理想。具体而言，研究人员为以下情况提出了专用模型：\n\
+    \n研究人员对理解模型最重要的特征也感兴趣。Shapley 解释 (SHAP) 被应用于构建的模型，并在三个预测性能最好的模型上对相应结果取平均值。这种方法揭示了在通用烯烃模型中，低咬合角（bite\
+    \ values）与低 L/B 比率相关，这与先前的文献一致。此外，含电子取代烯烃倾向于形成分支产物。在反应条件方面，高温有利于诱导 L/B 比率。对于特定的\
+    \ 1-烯，较长的反应时间通常会增加 L/B 的概率。此外，低压力有利于 β-氢消除的发生，这降低了分支产物和苯乙烯产物的选择性。SHAP 分析揭示了底物条件以及苯乙烯专用模型重要性的新发现。较低的催化剂浓度可以加速\
+    \ β-氢消除，形成较少的分支产物。1-烯专用和苯乙烯专用模型显示，通用烯烃模型存在较高的催化剂浓度、压力和较低 L/B 值。此外，虽然研究人员使用了描述符来区分催化剂和溶剂，但最佳\
+    \ ML 模型无法推广到稀有底物，因为数据偏向常见的化学种类。总体而言，Mao 同事的这项研究为末端氢甲化的区域选择性提供了一个全面的框架。\n\n> ¹德国格罗宁根化学研究所\n\
+    ² 通信邮箱：r.police@uio.no\nhttps://doi.org/10.1016/j.chemchem.2024.101111\n\nChem\
+    \ Catalysis 4 (101111), 2024年9月 | Elsevier © 2024\n保留所有权利；但文本和数据挖掘、AI 训练和其他服务除外。\n\
+    \n![](img/4b2aa915a163b752e3c571e656a6cb7d_1_0.png)\n\n## A 烯烃底物分布\n- 1-辛烷 (25.4%)\n\
+    - 苯乙烯 (22.4%)\n- 醋酸乙烯 (9.0%)\n- 烷基腈 (7.8%)\n- 其他 (35.4%)\n\n## B 催化剂元素分布\n- Rh\
+    \ (99.8%)\n- Pd (1.3%)\n- Ir (2.3%)\n\n## C 溶剂分布\n- 甲甲苯 (64.3%)\n- THF (11.5%)\n\
+    - 苯苯 (10.6%)\n- DCM (2.9%)\n- 其他 (11.6%)\n\n## 出版年份分布\n- 2020-2024 (8.0%)\n- 2015-2019\
+    \ (14.7%)\n- 2010-2014 (28.6%)\n- 2005-2009 (12.7%)\n- 2000-2004 (22.9%)\n- 1995-1999\
+    \ (11.1%)\n\n![](img/4b2aa915a163b752e3c571e656a6cb7d_1_1.png)\n![](img/4b2aa915a163b752e3c571e656a6cb7d_1_2.png)\n\
+    ![](img/4b2aa915a163b752e3c571e656a6cb7d_1_3.png)\n![](img/4b2aa915a163b752e3c571e656a6cb7d_1_4.png)\n\
+    ![](img/4b2aa915a163b752e3c571e656a6cb7d_1_5.png)\n\n图 1. 通过机器学习预测氢甲化区域选择性的总结\n\
+    \n(A) HFOs 机理。\n(B) 所选烯烃底物、催化剂元素、溶剂和年份的分布。\n(C) 预测氢甲化区域选择性的工作流。\n\n## 致谢\nS.C\
+    \ 感谢中国留学基金会的资助（基金号：20231926）\n\n## 利益声明\n作者声明无利益冲突。\n\n## 参考文献\n- 1. Vches-Herrera,\
+    \ M., Domke, L., and Börner, A. (2014). 氢甲化: 串反应.ACS Catal., 4, 1706–1713. https://doi.org/10.1021/acsatal.500273\n\
+    - 2. van Leeuwen, P.W.N., and Claver, C. (2002). 铑催化. Wiley-VCH, Dordrecht.\n\
+    - 3. Xiang, K., Luo, S., Liu, K., Jiang, S., Ma, J., Jiang, J., and Shu, Z. (2024).\
+    \ 人工智能和自动化驱动化学未来.Chem. Rep. Phys. Chem., 3, 102499. https://doi.org/10.1016/j.crcp.2024.10299\n\
+    - 4. Cole, J., Wang, J., Jaskola, T., Green, W., and Jensen, K. (2017). 使用机器学习预测有机反应.Science,\
+    \ 356, aaa764. https://doi.org/10.1126/science.aaa764\n- 5. Wang, H., Chen, Y.,\
+    \ Yu, H., Qi, M., Xia, D., Liu, Y., Lu, B., Gao, R., Wang, Y., and Mao, S. (2024).\
+    \ 末端氢甲化区域选择性的通用机器学习模型.Chem Catal., 4, 10179. https://doi.org/10.1016/j.cccat.2024.10179\n\
+    - 6. Pedrosrosa, F., Varqueaux, G., Gramfort, A., Michel, V., Thion, B., Gisel,\
+    \ O., Blondel, N., Usnay, J., and V derberg, V., et al. (2011). Scikit-learn:\
+    \ Python 中的机器学习.J. Machine Learning Res., 12, 2825–2830.\n- 7. Lundberg, S.M.,\
+    \ and Lee, S.-I. (2017). 解释模型预测的统一方法.Advances in Neural Information Processing\
+    \ Systems, 30, pp. 4765–4774.\n\n"
+  merge: -1

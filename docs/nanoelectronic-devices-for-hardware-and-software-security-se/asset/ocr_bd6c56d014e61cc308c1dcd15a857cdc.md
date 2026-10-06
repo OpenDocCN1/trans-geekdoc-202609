@@ -1,0 +1,7 @@
+# 2.8 MIXED MODE GE SOURCE DD VERTICAL TFET
+
+Due to various attributes such as its low leakage currents, the sub-60 mV per decay subthreshold slope and the controllability of ambipolarities, TFETs are suited for various ultra-low power applications. A digital inverter, the basic building blocks of any modern circuit, is the best method to determine the performances of a TFET in circuit application. In TFET inverters, the power capacitance is 2.6 times higher than the total gate capacitances, unlike the MOSFET inverters, which the output capacitances and the total gate capacitances are equal. The evaluation of the drive currents for TFTET have been performed [53]. The digital inverter realization showing the implementation of a complementary TFET (C-TFET) inverter circuit and comparison of the transient characteristic for the conventional TFET inverter and the germanium source doped vertical TFET inverter are illustrated in Figures 2.15a and b, correspondingly. The mixed-mode complementary TFET for both transistors is where the load capacitance ($C_L$) is constant at 0.65 femtoarad with an input voltage of
+
+![](bbox=[0.148, 0.373, 0.852, 0.856])
+
+FIGURE 2.15 (a) Complementary TFET inverter. (b) Transfer characteristic curve of conventional TFET and Ge Source Vert TFET for both p-type and n-type. (c) Transient characteristic of the conventional TFET and Ge Source Vert TFET.

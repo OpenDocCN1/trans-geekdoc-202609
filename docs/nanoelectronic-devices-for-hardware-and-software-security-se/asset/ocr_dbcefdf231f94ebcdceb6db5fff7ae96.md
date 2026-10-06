@@ -1,0 +1,18 @@
+# 14 • Photodetectors for Security Application 281
+
+# 14.2 SEMICONDUCTOR PHOTODECTECTORS
+
+To detect photons, as optical radiation in a particular spectral regime, the internal and external photoemission effects of electrons are employed. Although external photoemission devices such as vacuum photodiodes and photomultiplier tubes meet certain performance standards, they are very heavy and need high voltages for their operation. Conversely, internal photoemission devices such as semiconductor photodetectors or without internal gain offer better compatibility and performance. These photodetectors are designed with a growing number of semiconductor materials, for example, silicon (Si) [9], germanium (Ge) [10], III-V alloys [11], II-VI alloys [12], and numerous novel two-dimensional (2D) materials [13], all of which many photodetection utilize in numerous ways. They have significant applications in all the major existing fiber optics communication systems
+
+The internal photoemission effect can occur in both the intrinsic and extrinsic regime of semiconductors. In intrinsic absorption, the incident photons excite electrons from the band to the conduction band. Moreover, for efficient absorption with rapid response, the intrinsic absorption phenomenon is impurity created in the material. Generally, all photodetectors utilize intrinsic p–n junction for optical fiber communications.
+
+A basic photodiode is a reverse-biased p–n optoelectronic device with a junction exposed to light. Photodetectors absorb most of the requirements and hence are widely utilized as photodetectors. A photodetector absorbs the incident optical radiation and converts it into the electrical signal, called photocurrent, which is amid before possible processing. Thus, when taking into account signal attenuation associated with the link, the performance of the system is estimated at the photodetector. The enhancement of the photodetector performance enables the installation of fewer repeater stations and reduces the operating costs and capital investment. Under equilibrium conditions, a potential barrier exists across the depleted areas on either side of the p–n junction. Generally, the photodetectors are sufficiently reversebiased, meaning that there is no current flow without incident light; the intrinsic area has been depleted by carriers. The photodetection process involves the following basic steps [14]:
+
+Such photodetectors are extensively utilized in optical communication systems, where the detector receives the transmitted optical pulses and converts them into electrical pulses. Therefore, the detector should be sensitive to optical signals with high noise and bandwidth and be cost-effective [9]. They are used in numerous applications ranging from directing automatic lighting in stores to sensing radiation from the outer galaxy as well as security-related applications. Moreover, photodetectors may vary from simple devices supermarket stores to receivers on the television remote controls.
+
+# 14.2.1 Basic Requirements for Photodetector
+
+A photodetector must meet severe requirements in performance and compatibility with optical communication systems when converting an optical signal to an electrical signal. The optical signal weakened and distorted after emerging from the fiber end, so the photodetector must satisfy the following stringent performance requirements [9], [15]
+
++   i. Smaller size, that is, the photodetector must be well-matched with the physical sizes of the optical fiber.
+ii. Better sensitivity (responsivity) in the desired spectral regime, that is, wavelength selectivity.

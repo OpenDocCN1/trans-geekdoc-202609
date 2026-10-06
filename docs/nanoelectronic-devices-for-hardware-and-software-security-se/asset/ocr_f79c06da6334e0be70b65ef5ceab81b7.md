@@ -1,0 +1,9 @@
+# Nanoelectronic Devices for Security
+
+depletion mode, the channel is completely depleted of majority carriers. The depletion region composed of positive ions engulfs the whole device thickness. On the application of positive gate voltage in n-JLT, the neutral region (bulk n-type) is uncovered in the middle of nanowire. The depletion region begins to shrink with the application of gate voltage. Some part of the channel remains depleted, and a neutral n-type region begins to appear in the center, facilitating the current flow. This mode is called the partial depletion mode. The threshold voltage for JLT is defined as the voltage where the neutral n-type region disappears due to the fusion of the depletion region realized by the work function gate electrodes, as shown in Figure 1.7b. On further application of gate voltage ($V_{GS} \gg V_{TH}$), the depletion regions contributed by the gate electrodes disappear completely, and the whole channel thickness becomes conducting, shown in Figure 1.7c. This condition is called the flat band condition, shown in Figure 1.7d. The energy bands of the channel become flat, and the whole channel comes out of depletion. On further increase in gate voltage ($V_{GS} > V_{FB}$), the electrons accumulate at the surface, forming a layer of electrons at the semiconductor surface. This mode of operation is called the accumulation mode. JLFETS are biased to function in flat
+
+![](bbox=[0.084, 0.353, 0.918, 0.606])
+
+![](bbox=[0.084, 0.634, 0.918, 0.887])
+
+**FIGURE 1.7** A nanowire JLFET [8]. (a) Full depletion mode. (b) At threshold voltage $V_{GS} = V_{TH}$; (c) Above threshold voltage $V_{GS} > V_{TH}$; (d) Flat band mode.
