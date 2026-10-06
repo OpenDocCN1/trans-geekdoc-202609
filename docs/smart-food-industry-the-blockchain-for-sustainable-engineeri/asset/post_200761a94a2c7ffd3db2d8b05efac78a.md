@@ -1,0 +1,52 @@
+
+# 84 Smart Food Industry: The Blockchain for Sustainable Engineering
+
+![](img/456d62956459ae12abbe8bcaa76dab9d_91_0.png)
+
+Figure 10. Worldwide suppliers of plant protein ingredients (Partial list).
+
+Not all plant-based ingredients and products are really sustainable? I would say: "Not of all, at least not ideal enough". There are two reasons. First, those plant proteins are not equally sustainable, some of tree nuts consume more than cereal grains and beans (SPINS and C.A.). Fortune has stated similar opinion in their recent report, "The State of Plant-Based Innovation" (SPINS Natural Enhanced Channel and SPINS Conventional Multi Outlet 2021). Second, the current production method of extracting plant proteins by acid-base method may not be "green.". The wastewater treatment and the energy consumption are facing challenges. Drying processing is the final step to produce plant protein powders. Does the spray drying out the best quality of protein powder? Some novel drying technologies, such as ultrasonic, deserve more investigation.
+
+## 6.4 Blockchains in different Supply Chains bring Challenges
+
+Through the "Distributed Ledger Technology", IBM blockchain supply chain provides participants great visibility across all supply chain activities. IBM Food Trust™ is the first network to connect participants including ingredient suppliers, distributors, retailers, and consumers, through a secured, and shared record of food data system, which can increase food safety and supply chain efficiency. Carrefour, Nestle, Walmart, and Tyson Foods are co-operating with IBM to create a more transparent and trustworthy global food supply. In the food traceability system, the blockchain technology keeps a record of the supply chain with time clocks and the process-flow of single unit food from the producing to retailing. Although blockchain tracking has been proven to benefit of meat, milk, eggs, fresh vegetables and fruits, the application of blockchain technology to meet the demands for a more efficient large-scale application of plant-based food ecosystem is still facing challenges. Specific challenges include; firstly, large-scale application of plant-based industry is being very complicated; furthermore, the number of these novel plant-based food is growing every day. Secondly, a traceability system involves multiple sourced plant-based food suppliers who are totally different from conventional animal-derived industries (meat, seafood, eggs). Thirdly, there is lack of international standards for plant-based food quality and safety control.
+
+On the other side, there are some blockchains' platforms gathering information to understand customer shopping preferences and pushing recommendations based on the big data analysis. Blockchain technology is also co-operative work with the technology-driven loyalty industry, such as Qibee, to retain their customers better. We expect that more companies, associations, and government agencies will apply the blockchain traceability in their plant-based food practices.
+
+## 6.5 Sensorial and Mouthfeel Challenges—Taste REAL?
+
+One of the major challenges faced by plant-based foods manufacturers is associated with its sensory properties that affect the consumer acceptance. Animal products confer a unique flavor and texture to products that are not easily attained if substituted with plant proteins in dairy or meat analogues. Plant-based products are also observed to be beanie, bitter or chunky taste as well as off-odor notes in plant product products (Racicks et al. 1979). Moreover, plant foods have a rigid structure and therefore plant-based products normally do not have the bite and chewness of meat and can feel crumbly (Sun et al. 2021).
+
+In order to overcome these challenges with plant proteins and mimic the key quality attributes of dairy and meat, food scientists need to fully understand the major components and drivers behind these undesirable, flavor and texture perception in dairy or meat analogues. Furthermore, utilization of processing techniques such as extrusion cooking or freezing to modify the fibrous structure of proteins may be useful to bridge the texture gap of plant-based products (Dekkers et al. 2018).
+
+## 6.6 Allergy Problems
+
+A food allergy can generally be defined as an adverse reaction of the immune system to otherwise harmless food or component, called allergens. Overall, approximately 90% of all food allergies are associated with a small number of specific proteins: peanuts, tree nuts, cow's milk, eggs, crustaceans (shrimp), and soybeans. These soy, tree nuts and wheat are among the six most commonly causing food allergies caused by products that are plant-based (Protujevic et al. 2020). Given the prevalence, plant protein allergy is still a major concern for the food industry and consumers. Consequently, it's important to carefully food and monitor the diet so that children and adults who are allergic to proteins have their nutritional needs met. Recently, pea protein is gaining a level of interest in the market of foods and is reported to have low allergenicity compared to other legumes such as soybean or pea (Zhao et al. 2020). buckwheat protein has also been shown to have great potential as a gluten-free plant-based protein to meet the global demand for keeping allergies view (Jin et al. 2020). Available studies also show the utilization of various technological and processing techniques to increase the digestibility and reduce the allergenicity of proteins (Huang et al. 2014, Sathe and Sharma 2009). Similarly, other techniques like genetic engineering are also being investigated to enhance the safety of plant-based food products from slicing of allergen-encoding genes (Herman et al. 2003, Singh and Balla 2008).
+
+## References
+
+- Abboufali, F., Baba, A.S. and Misran, M. 2015. Effects of fermentation by Bifidobacterium on the rheology and physical properties of ice creams made with coconut and vegetable milks. International Journal of Food Science & Technology 50(4): 942–949.
+- Alam, M., Kaur, J., Khaira, H. and Gupta, K. 2016. Extrusion and extruded products: changes in quality as affected by extrusion parameters. Food science and nutrition 56(3): 445–477.
+- Alcorta, J., Porta, A., Tárrega, A., Alvarez, M.D. and Vaquero, M. 2021. Foods for plant-based diets: caused by proteins and innovations. 10(2): 293.
+- Aschemann-Witzel, J. and Peschel, A. 2019. Which will you eat? The sustainability challenge in food and consumer reaction to avoid unused ingredients. Food Quality and Preference 77: 1–20.
+- Aschemann-Witzel, J., Jiménez, A., Granholm, A., and Ares, G. 2020. Avoiding household waste, one at a time: The role of self-efficacy, convenience orientation, and good in distinct contexts. Journal of Consumer Affairs 54(2): 581–606.
+- Bachmann, H. 2001. Cheese analogues: a review. International Dairy Journal, 11(4-7): 505–515.
+- Beck, S., Koerzer, K., Forster, M., Mayo, P., Shilp, C., and Arot, J. 2018. Low moisture extrusion of pea fiber and pea starch. Food Engineering 23:61.
+- Beegum, P., Nair, J., Manikantan, M., Pandiselvam, R., Neeni, S., et al. 2022. Effect of coconut milk, peanut content on the sensory properties and development of ice cream. Journal of Food Science and Technology, 21:1–12.
+- Boudik, F. 2021. Plant-based analogues: From niche to mainstream. European Food Research and Technology, 247(2):297–308.
+- Brückner-Gühmann, M., Benitha, A., and Dusch, S. 2019. Evaluation of yogurt with oat protein: Structure formation, textural properties and sensory evaluation. Food Hydrocolloids, 86:146–153.
+- Cig, J.J., Loveland, S.M., Hardare, A.K., and Park, M.E. 2019. Effect of soy protein to wheat grain ratio on the physicochemical properties of extruded meat. Food Quality, 199:10102.
+- Circus, V. E. and Vobis, R. 2019. Exploring perceptions of plant-based proteins and meat with dairy. British Food Hydrocolloids, 121:523–535.
+- Cornet, S.H., Jüller, J.M., Gonçalves, R., Bruins, M.e., and den Stan, R.G. and van Goot, A.J. 2021. Application universality of legume proteins in sieving and formation when mixed with gluten. Food Hydrocolloids, 120:10686. Craig, W.J., Johnston, C.J. 2021. Consumer trust and health profile of non-dairy plant-based yogurt. Nutrients, 13(9): 4069.
+- Dekkers, B.L., Elin, M.A., Carmo, S., Hmalia, G., Dessay, T., Gray, A., Zobel, H., et al. 2021. Meat analogues from a plant-based base can be generated by high moisture extrusion. Future Foods, 5:10014.
+- Fang, Y., Zhang, B. and Wei, J. 2024. Effects of the chemical properties of textured soy protein by high moisture extrusion cooking. Journal of Food Engineering, 121:32–38.
+- Ferawhi, F., Henfi, M., Östrberg, K., and Withthoff, C. 2021. The application of pulse flows in the development of plant-based cheese analogues: Composition, color, and texture properties. Food, 109:10298.
+- Gorrapetti, K., Balasubramanian, S., and Chandra, P. 2015. Plant-based blends. Journal of Food Science and Technology, 52 3962–3976.
+- Grasso, N., Roos, Y.H., Cowley, S.V., Arend, E.K. and O’Mahan, J.A. 2020. Physicochemical and sensory properties of commercial plant-based yogurts. Food, 4:100048.
+- Roos, N., Roos, Y.H., Cowley, S.V., Arend, E.K. and O’Mahan, J.A. 2021. Physicochemical and sensory properties of plant-based-block-based products to achieve cheese. Food, 7:100048.
+- Greisin, M., Saina, T., Kindcha, A., Altina, N., Polen, R., et al. 2020. Dynamic texture perception in plant-based yogurt alternatives: Identifying drivers of liking by TDS. Food Quality and Preference, 8:10419.
+- Henchen, M., Monley, A.P., Hyland, J., Zimmermann, J. and McCarthy, S. 2021. Trends for milk, meat and egg consumption for the next decade and the role played by soy substitutes in the global production. Food Industries, 15:10287.
+- Herman, E.M., Helm, R.M., Jung, R. and Kinney, A.J. 2003. Genetic modification to improve an immunomodant soybean. Plant Physiology, 132(1): 36–43.
+- Höven, L., Lina, M., Tuorila, H., and Dijkhuster, J. 2005. Perception of milk flavor and release of ice cream containing different types and contents of fat. Journal of Dairy Science, 86(4): 1130–1138.
+- Jaske, S., Santorini, J., and Arend, E. 2018. Past and future: The strength of plant-based dairy products based on gluten-free raw materials. Research International, 110:42–51.
+- Kazir, M., and Livney, Y.D. 2021. Plant-based seafood analogues. Molecular Chemistry, 26:1559.

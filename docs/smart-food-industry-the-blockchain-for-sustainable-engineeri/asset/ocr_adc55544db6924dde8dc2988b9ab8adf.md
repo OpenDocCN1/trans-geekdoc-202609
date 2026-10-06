@@ -1,0 +1,16 @@
+# 226 Smart Food Industry: The Blockchain for Sustainable Engineering
+
+...Table 1 contd.
+
+| Action: | Process/product | Where/Who | Effect/Food safety issues |
+|---|---|---|--|
+| Recovery of water | Reverse osmosis, an innovative treatment technology, reuses water for dairy industry operations after recycling wastewater over by recycling water | EU Dairy Association | Reducing the impact of water basins and reusing the water from the waste water |
+| Steam wasted by burning fuel household is transferred by underground pipes of 1.2 km distance to the chocolate factory | The heat is used for buildings mainly for melting chocolate for M&M's producing | Mars Chocolate France | It has reduced the factory's emissions from energy consumption by 60% and CO2 emissions by 8,700 ton; annually; 90% of the steam is represented by the green steam system |
+| Capture and use of heat as an energy source. Advanced heat pump system was installed on the waste treatment system for water cooling tanks to the needed temperature, and to recover the heat used for cleaning | Project initiated by Wexham factory to recover exhaust systems for using it, and further, to reheat the water is entering into the boiler | Kellogg factors in Wexham and Manchester | Reducing consumption; 25% of the factory's water demand is assured by the heat pump; 24% reduction of GHG emissions at Manchester factory; 17% reduction of GHG at 10 years |
+| Water condensate is wasted. This heat and wasting can be used in the oil and marine processing | Water condensate obtained is pumped back into the heating facility, and after heating at the steam stage, it will return to process | The largest producer of edible oils in Croatia, Zvijezda | Re-using the water and heat, the company savings are approx. 80,000 Euro on an annual basis |
+| The International Food Waste Coition, 2015 | In several countries, pilot projects in schools are to identify, in the different steps of the food chain, where food waste is happening | PepsiCo, Food Solutions, McCain, WWF and Sodexo | Efficient solutions to build up awareness among students and teachers |
+| Awareness campaign: including tea bags as part of food waste | Education, and changing behavior of UK consumers | UK brand - | Reducing the amount of waste in tea bags that are for disposal at landfill |
+| An interactive game about food waste reduction ("JEUX NE GASILLE PAS") | Consumers tips about how to keep food in the best conditions and where to store food in the fridge | ANIA - French Association for Food and Drink Industry | Raise awareness about food waste |
+| A behavioral change initiative for LongLife was launched in March 2013 under the Waste & Resources Action Programme (WRAP) Love Food Hate Waste campaign | Demonstrations about better use of packaging and the information from label can lead help consumers reduce the food waste at home, saving money and environment | UK Food and Drink Federation | Reducing food waste |
+
+Source: Adapted by authors, FoodDrinkEurope 2016

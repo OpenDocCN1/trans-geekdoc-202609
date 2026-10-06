@@ -1,0 +1,19 @@
+Smart Food Industry: The Blockchain for Sustainable Engineering
+
+# 2.5.2 Nutrition Labelling
+
+The impact of nutrition labels in educating the general public on healthy food choices is indisputable. There are different formats for nutrition labels, the more visible the labels, the more easily they are understood and hence the greater possibility for them to be used. In this regard, Front of pack (POP) labels have proven to be successful (Talati et al. 2016, Oswald et al. 2022, Meijer et al. 2021). Most countries mandate the inclusion of a nutrition label on pre-packed foods, but the format and information may vary from country to country (Becker et al. 2015). The importance of nutrition labels as an educational tool for consumers also needs to be recognised by the food industry. A recent study investigated the preferences of English food manufacturers and retailers (n = 35) on labels and their use in consumers' purchasing decisions. It revealed that 20% of the respondents did not know the importance of FOPs to the consumers, 48% were unsure whether POP labelling is mandatory, and 60% agreed that including FOP labels would incur higher costs to their businesses (Odundio et al. 2022).
+
+# 2.5.3 Reinforcement of Regulatory Measures
+
+The global supply chain impacts the types of foods offered and, hence, food consumption (IPES-Food 2017). This raises a fundamental question: Should food be driven by profit or its implications on public health and the environment? The food industry continues to produce highly profitable UPFs mainly due to the significant incentives they receive. Open trade policies allow transnational food and beverage corporations to easily sell foods associated with unhealthy diets containing salt, sugar and saturated fat (Willett et al. 2019, Baker et al. 2020).
+
+Governments can implement a spectrum of policies ranging from voluntary to mandatory to support improvements in diets and health (Hawkes et al. 2013, Mozaffarian et al. 2018, Willett et al. 2019, UNSCN 2009). Good examples of this can be seen in low to middle-income countries, such as Latin America and South Africa, which instituted national policies to change the food environment to facilitate healthier food choices (Popkin et al. 2021, UNSCN 2019).
+
+Fiscal incentives and disincentives can be imposed on consumers, producers and retailers. Disincentives can include taxes on unhealthy foods such as sugar-sweetened beverages (the UK, Mexico and South Africa) and UPFs, and the removal of tax benefits (HLPE 2017, Mozaffarian et al. 2018, Popkin et al. 2021).
+
+Comprehensive marketing controls and restrictions for unhealthy foods, which governments introduced to be successful—the ban on the marketing of UPFs in Brazilian schools is an excellent example of Chile's multi-dimensional obesity prevention programme, combined the use of FOP labels, marketing restrictions, school-based restrictions and future taxation plans, the effective use of a combination of linked strategies rather than single policies implemented in solution (Popkin et al. 2021).
+
+# 3. The Food Industry as Part of the Food System
+
+The food industry has an essential role in processing food and making it available for everyone globally (Knorr and August 2021). It has been trying to respond to the world changes and challenges with producing safe and healthy food that consumers are increasingly demanding. "Foodsystems 4.0 for a sustainable world" drives the food industry to adopt technical and scientific knowledge for drives consumer-oriented innovation (Rosenthal et al. 2021). The responsibilities of the food industry are vast and diverse, and they can be grouped into two categories: process-targeted and nutrition-targeted.

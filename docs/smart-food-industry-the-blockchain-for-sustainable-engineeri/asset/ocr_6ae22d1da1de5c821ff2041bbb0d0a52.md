@@ -1,0 +1,15 @@
+# 308 Smart Food Industry: The Blockchain for Sustainable Engineering
+
+![](bbox=[0.188, 0.089, 0.813, 0.358])
+
+The notion of WF was proposed in 2002 to provide a consumption-based measure of water use in addition to the traditional production-sector-based measures of water use (Chapagen and Hoekstra 2013). Water consumption and pollution may be analyzed using the WF concept, which differentiates between a blue WF (consumption of surface and groundwater), a grey WF (amount of water required to dil the pollution of surface or groundwater) and a green WF (consumption of rainfall). The WF related to agricultural production obtains the largest share of the total WF. Globally, agriculture contributes to 92% of the global WF; 29% of the water in agriculture is directly or indirectly used for an annual (Mendomken and Green-Lees 2020).
+
+A high blue WF indicates considerable amounts of irrigation water used agricultural production, which can be significant in regions where surface and groundwater sources are overexposed (Mendomken and Hoekstra 2016). A WF with a high concentration of green or total (green + blue) could suggest low yields or insufficient water consumption in countries (Harris et al. 2020). A high blue and green WF indicates that rainwater has been used sustainably, which may lead to surface and groundwater overexploitation (Aleksandrowic et al. 2016).
+
+Several studies have demonstrated the significance of virtual water in available water conservation and scarcity management, and it will effectively reduce the threat of water crisis for food production (Chapagen et al. 2006). This chapter aims to provide an overview of the water demand for food products and diets, as well as the WF of waste. Finally, the chapter highlights the global WF status of food and dietary habits along with a review of different methods of WF calculations. This also gives an insight into the WF of food waste and global policies highlighting essential measures toward food sustainability, highlighting the contributions of major countries and crops to the unsustainable WF and various measures leading toward food sustainability.
+
+# 2. Water Consumption Pattern and Virtual Water Trade Status
+
+# 2.1 Water Consumption in Global-Agriculture
+
+Agricultural production reportedly accounts for 85% of global water usage (Shiklmanov and Rodda 2004), with this figure expected to quadruple by 2050 (Tilman et al. 2002). Around 90% of the growth in worldwide food production required by 2050 is expected to occur in developing countries, where share of world food production is expected to increase by 2050—it will have risen to 74% (from 67% in 2007) (FAO 2017). By 2050, the irrigated area is predicted to increase by a factor of 1.9, while climate change is exacerbating water stress by altering water supply patterns in many

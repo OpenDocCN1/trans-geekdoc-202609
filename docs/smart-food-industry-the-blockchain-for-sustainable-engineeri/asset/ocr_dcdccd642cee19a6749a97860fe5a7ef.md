@@ -1,0 +1,19 @@
+196 Smart Food Industry: The Blockchain for Sustainable Engineering
+
+# 2.3.1.2 Texture
+
+3D printing enables the production of foods with adjustable textures, which guarantees the access of a broad range of population, including people with masticatory diseases. For instance, the texture is linked to the structural profile of foods, so textural analysis is an essential element to understand the stability of 3D printed foods, as well as to identify the most appropriate sensory characteristics. Therefore, the texture is one of the main parameters used to evaluate the quality of the 3D printed food, since Mathis et al. 2020, Zhang et al. 2018). Texture can also influence both the stability after printing and the material extrusion out of the syringe.
+
+Reported texture profile (TPA) includes parameter hardness, chewiness, cohesion, resilience, and shininess (Nishinari et al. 2019). Toughness, resilience, cohesion are good indicators of structural integrity, as they represent the resistance and resilience to external forces. Chewability and stickiness can provide information about the quality and mouthfeel of 3D printed food (Zhang et al. 2021).
+
+Keerlana et al. (2020) used 3D printing technology to produce fiber-enriched snacks from different foods. It was observed that the formation (53 N) and adhesion (-197.8 N) was easy to extract. Pant et al. (2021) produced 3D printing of fresh vegetables (pea, carrot, and Chinese cabbage) showed wide texture range observed for the printed food with hardness ranging from 60 to 320 g, adhesiveness 1.7-6.7 mJ, and 27-30 g, depending on the type of viscosity, concentration, and type of hydrocolloids added. (2020 presented FoodFab that allows users to modify the texture and internal structure of foods via two 3D printing methods: infill pattern and infill density. The authors evaluated how to modify the chewing time by changing the infill pattern (honeycomb, rectangle, and Hilbert) and density (25%). In addition, they observed that the higher bite force was necessary for the snacks with Hilbert pattern, and the longer chewing time affect people's sense of satiety.
+
+In general, it has been reported in the literature that 3D printed food has values from 4.5 to 60.0 N for hardness and springiness ratio below 1 (Zhang et al. 2021). Foods with springiness ratio below 1 are much fragile and present poor structural stability (Kim et al. 2017)
+
+# 2.3.1.3 Composition and Ingredient Concentration
+
+The composition and concentration of ink ingredients, influence the printability the composition of nutrients and the additives, which can directly affect the viscosity and texture of the final product (Zhang et al. 2021).
+
+Food inks can be prepared from a single to a multicomponent composition, achieving different levels of effectiveness when printed. Chen et al. (2019b) prepared using a mixture of protein isolate (SPI) with poor printability and low structural integrity, led to inadequate behavior (1.18 N). The authors evaluated the addition of alginate (0.5% wt.) and gelatin (0, 2, 6, and 10 wt%) to the SPI-based inks. The most synergistic effect of materials prepared when SPI was mixed with alginate and gelatin (2–10%). The hardness increased up to 15.6 N in their studies.
+
+Yang et al. (2018a) highlighted in their study the quality of 3D printing of dough for baking. They observed that the rheology of the ink and the physical properties of the product were affected by the concentration of water, sucrose, flour, butter, and egg. The gel strength, elasticity, and viscosity increased while the ductility was reduced with an increased concentration of sucrose, butter, and flour.

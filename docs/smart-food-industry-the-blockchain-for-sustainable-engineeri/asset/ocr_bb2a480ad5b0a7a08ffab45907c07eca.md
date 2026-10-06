@@ -1,0 +1,21 @@
+To reinforce these assumptions, studied by Li and Kallas (2021) concluded that the willingness to pay depended on the product, that is, the greater of a product in the family's monthly expenditure, the lower the willingness to pay for it. In addition, other factors significantly influencing variations in the purchasing power of products. However, Canavari and Coderoni (2020), few consumers look for carbon certificates in agri-food products, remaining an obscure gap that needs further investigation.
+
+On the other hand, it is important to strengthen the recognition of sustainability as a fundamental factor for the protection of the ecosystem, by consumers, companies and governance. Additionally, as there is greater awareness on the part of consumers, and measures taken by public and private companies to adopt, from outside standardized, carbon footprint labeling criteria and other indicators, there will be significant reductions in the carbon footprint of food baskets. Therefore, it will benefit if manufacturers are able to provide more information on this subject so that people can understand its meaning. At the same time, policymakers should also aim to support measures to reduce the price of foods labeled with a carbon footprint to buy them (Roni and Grasso 2021). By the application of these market strategies, it will then likely be that consumers will opt for more ecologically correct choices, increasing demand and sales for these products, and consequently, driving a low-carbon, and sustainable, food model.
+
+# ## 5. Conclusions
+
+Managing the carbon footprint of food products through the supply chain is a key step in the effort to mitigate climate change. Using robust methodologies such as the carbon footprint to assess processes and products is essential, although there are some limitations. In the near future, the hotspots of the regions are identified, the application of facilitating strategies may help in the journey towards a more carbon-constrained ecosystem. However, not only efforts on the side of agriculture, industry, and research will be crucial, but also economic policies and financial reinforcements will be essential to bring about the correct dissemination of sense marketing towards sustainable products, through educational labels about the carbon footprint of food products. Finally, it is necessary that everyone is willing to broaden their horizons so that we work collaboratively to create knowledge, build positive influences between farm-industry-product-society, reduce carbon emissions, and generate financial returns.
+
+# ## References
+
+Akins, E.F. and Ramanathan, U. 2020. Key factors of carbon footprint in the UK food supply chain: a new perspective of life cycle assessment. International Journal of Operations & Production Management. DOI: 10.1108/IJOPM-06-2019-0478.
+
+Birkenberg, A., Martinez, M.E., Weiner, M., and Biner, R. 2021. The potential of carbon neutral labeling to engage consumer behavior in climate change mitigation. Journal of Cleaner Production, 278: 123621. DOI: 10.1016/j.jclepro.2020.123621.
+
+Canavari, M. and Coderoni, S. 2020. Consumer stated preferences for dairy products with carbon footprint labels in Italy. Agricultural and Food Economics, 10.1186/s40067-019-0149-1.
+
+Del Borghi, A., Pardi, S., Moreschi, L., and Gallo, M. 2021. Sustainable packaging: an evaluation of credits through a life cycle assessment. The International Journal of Life Cycle Assessment, 26(4): 753-766. DOI: 10.1007/s11167-016-0073-6.
+
+Djpa, M., Santos, R.S., Silva, L.A., and Mendezes, C.R., Zepka, L.Q. and Jacob-Lopes, E. 2020. Carbon dioxide capture and use in photoreactors: The role of carbon dioxide loads in the carbon footprint. Biosource Technology 314: 123745. DOI: 10.1016/j.biotech.2020.123745.
+
+El Cheney, S., Baumeister, S., Govigli, V.M., Orfanidou, T. and Vallius, W. 2021. The carbon footprint of a knowledge organization and emission scenarios for a post-COVID-19 world. Environmental Impact Assessment Review, 91: 106645. DOI: 10.1016/j.envia.2021.106645.

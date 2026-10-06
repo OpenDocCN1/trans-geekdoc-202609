@@ -1,0 +1,45 @@
+# 184 Smart Industry: The Blockchain for Sustainable Engineering
+
+Mehariya, S., Goswami, R.K., Karthikeyesan, O.P. and Verma, P. 2021. Microalgae for high-value products: a way towards green nutraceutical and pharmaceutical compounds. Chemosphere 280: 130553. https://doi.org/10.1016/j.chemosphere.2021.130553.
+
+Morandi, P. and Saidi, M. 2022. Biodiesel production from microalgae-derived oil via electrochemical and thermal processes. Fuel Processing Technology 228: 107158.
+
+Nascimento, T., Nass, P.N., Fernandes, A.S., Nürnberg, M., Lepka, L.Q and Jacob-Lopes, E. 2022. Microalgal carotenoids: on review of biomedical applications. Applied Biotechnology, 409: 42-55
+
+National Health and Family Commission of PRC. The lists of novel food ingredients and common food additives-usage-standard, 2019.
+
+Niccolai, A., Chiniti, G., Rolofodi, L., Bonini, I. and Nredi, M.R. 2019. Microalgae as food source: biochemical composition and digestibility. Applied Research 42: 101617.
+
+Nberg, M.L., Nass, P.N., Tascimento, C., Fernandes, A.S., Jacob-Lopes, E. and Lepka, Z. 2021. Carotenoid profile of Desifurrum spp. in microalgae. Brazilian Journal of Dermatology 7(3): 33017-33029.
+
+Nberg, M.L., Borloti, C., Minela, E. and Nürnberg, J. 2022a. Use of barley flour as a source of protein in bakery products. Food Chemistry 382(2): 10344-10353.
+
+Nberg, M.L., Caetano, P.A., Nass, P.P., Vieira, K.R., Wagner, R., Jacob-Lopes, E., et al. 2022b. Limbena production in microalgal photobioreactor. Brazilian Journal of Dermatology 8(2): 10241-10254.
+
+Nberg, M.L., Nass, P.N., Tascimento, C., Fernandes, A.S., Jacob-Lopes, E., and Lepka, J. 2022c. Microalgae compounds in different cultivation conditions. Brazilian Journal of Dermatology 8(2): 10226-10230.
+
+Bioactive components in carotenoids and fatty acids. Brazilian Journal of Dermatology 9(2): 10270-10280.
+
+Perez-García, O., Alcaide, F.M., Fernandes-D.E., and Labehan, Y. 2011. Heterotrophic cultures of microalgae: Metabolism and potential products. Water Research 45(1): 11-36. https://doi.org/10.1016/j.watres.2010.08.037.
+
+Khan M. 2020. Food and high value products from microalgae: market opportunities and challenges. In: Alam, M.A., Xu, J.-L. and Wang, Z. (eds.). Microalgae for Food, Health and High Value Products, 483, 57-80.
+
+Shu, H.-M., Patel, D., and Holtz, Z., K. and Andubakar, S. 2013. Anti-inflammatory, gastroprotective and anti-allergic effects of red algae Gracilaria chaguaraensis (Rhodophyta) extract. Complementary and Alternative Medicine 19:133. https://doi.org/10.1186/14715-6882-12-6.
+
+Souza, M.P., Holtz, M., Gresser, P.D., Benedict, L.B and Schneider, R.C.S. 2019. Potential utilization of microalgal products: general perspectives and methods involved. Waste and Bioprocessing 10: 2139-2156.
+
+Subrahmani, A., Asha, V., Nair, S.S., Somasumar, P.K., Rajendran, K.N., et al. 2012. Chlorella previously inhibited: anti-inflammatory activities of chlorophyll and inhibition of expression of TNF-α gene by inflammation. 35: 959-966.
+
+Tang, D.Y., Kho, C., Kim, K., W, W., Tao, Y., Hu, S. and Show, P. 2020. Potential utilization of biodiesel from microalgae for the enhancement of nutrient value products. Bioresource Technology 304: 12297.
+
+Tiberk, C.F. and Tokogi, U. 2003. Microalgae as natural food sources. Endeavour: 10:31–36. Toxicology and nutritional profiles of Spirulina platensis, Chlor Journal of Food Science 68(4): 1144-1148.
+
+Torres-Tijji, Y., Fields, F.J. and May, P. 2022. Microalgae as a food source biotechnology. Bioresource Technology 341(105): 107536. https://doi.org/10.1016/j.biortech.2021.107536.
+
+Vedabhan, M., Nasser, S., Mukbiah, D., Xu, S., and Han, Y. 2021. Using different cultivation strategies for the production of microalgal biomass as a raw material for the generation of cosmetics. Chemosphere 285: 114336. https://doi.org/10.1016/j.chemosphere.2021.134136.
+
+Vendrusco, R.G., Fernandes, A.S., Gomes, M.B., Lepka, L.Q., Mendez, C.R., Jacob-Lopes, E., et al. 2021. Development of a new method for extraction of chlorophylls and antioxidants from microalgal biomass. Journal of Applied Physiology 33(4): 1987–1997.
+
+Vesenick, D.C., Paula, N.A., Niwa, A.M. and Mantovani, M. 2012. Evaluation of the effects of chlorophyll on apoptosis induction, inhibition of cellular proliferation and mRNA expression of CASP8, 99APC, and β-catenin. Current Research Journal of Biological Sciences 14: 315–322.
+
+Wu, J., Gu, X., Yang, D., Xu, S., Wang, S., et al. 2021. Bioactive substances and potential of marine microalgae. Food Science and Nutrition 9(9): 5279–5292.

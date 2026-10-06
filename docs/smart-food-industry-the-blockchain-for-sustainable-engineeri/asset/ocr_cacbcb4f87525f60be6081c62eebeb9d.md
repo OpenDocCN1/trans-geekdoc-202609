@@ -1,0 +1,5 @@
+| Rice bran | Isolation of Arabinoxylan Fecal sample collection Fermentation | Arabinoxylans | Rice bran AX increased the number of Collinsella, Blautia and Bifidobacterium and decreased the number of Sutterella, Bifophila and Parabacteroides in human fecal samples. | Prebiotics | Gu et al. (2021) |
+|---|---|---|---|---||
+| Wheat straw | Alkaline extraction Enzymatic hydrolysis | Xylo Oligosaccharides (XOS) | XOS hydrolyzate produced from wheat straw was found to be a suitable carbon source for probiotic Lactobacillus brevis strain. | Prebiotics | Faryan et al. (2015) |
+| Corn bran | Alkaline extraction | Arabinoxylans | Increasing hardness of alkali treatment caused a decrease in average ferulic acid content of AXs and elasticity of gels. | Gelling | Kale et al. (2013) |
+| Dehulled barley bran | Ultrasonic extraction (UE) Hot water extraction (HWE) Microwave extraction (ME) Microwave-assisted ultrasonic extraction (MUE) | $eta$-glucan | $eta$-glucan extracted with MUE showed stronger emulsification stability, while the one extracted with UE showed stronger foaming ability. | Emulsifier Foaming capability | Liu et al. (2021) |

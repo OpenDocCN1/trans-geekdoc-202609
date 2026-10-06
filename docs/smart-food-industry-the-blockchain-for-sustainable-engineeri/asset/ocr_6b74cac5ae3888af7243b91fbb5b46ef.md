@@ -1,0 +1,19 @@
+influence at attenuating concerns related to such alternatives (Ricci et al. 2018). Companies should develop an authentic brand, build a solid consumer-brand relationship, and inspire transparency to boost consumers' trust. Like in the farmers' market, short distribution circuit allows consumers to communicate directly with the producer, limit uncertainties, and strengthen transparency. Other strategies include introducing blockchain technologies to ensure traceability and will be discussed further in the following section.
+
+# 5. Embedding Industry 4.0 into Society 5.0 for Ecosystem Transformation
+
+The acceptability challenges that sustainable food innovations are present diverse, complex, and volatile, which entails addressing them a convergent innovation approach (Dubé et al. 2014) rather than a ‘technical fix’ (Keogh et al. 2020). Interestingly, the vision of Society 5.0 merges both technological advances of Industry 4.0 as well as human-behavioral knowledge (Keogh et al. 2020), which would fit perfectly in the market, help overcome the challenges, and generate value through both technologies and behavioral creativity. In the following, we will discuss the potential of behavioral changes and industry 4.0 technologies in bridging the acceptability gap in a convergent innovation perspective on critical challenges.
+
+Industry 4.0 has given rise to new developmental orientations in the era, and most importantly, it has emphasized the flexibility, decentralization, and individualization of product development and commercialization (Lasi et al. 2014). Human-behavioral interventions offer fertile soil for the resolution of such acceptability challenges, mainly the attitude-behavior gap and the bounded rationality; the nascent technological advances address the challenges relating to consumer trust and product quality.
+
+For starters, the connectivity between the different supply chain nodes, and the real-time surveillance of food conditions made by the integration of industry 4.0 technologies, play a pivotal role in harnessing and resurrection of trust in sustainable food products. The internet of things, for instance, coupled with sensors and drones, allows for consistent monitoring of the weather conditions, health, and well... blockchain technology promotes food authentication and distribution transparency (Antonucci et al. 2019), and can restore sustainable foods’ credibility, especially but not exclusively, the labeled and processed foods.
+
+Furthermore, technologies could tackle the product attributes from naturalness to health and taste perception. To illustrate, the potential of 3D printing in molding the internal structures of food products, their dimensions, shapes, appearances, and also personalized formulas (Keogh et al. 2020). As vegan or insect-based meat would have an appearing taste, and aspect to that of standard meat. Although this solution addresses the actual taste and not the taste perception, appropriate interventions and communication plan would resolve the attitude perception’ discrepancy. This interdependence between technological advances and behavioral knowledge will be discussed in what follows.
+
+Table 2. Acceptability challenges and selected solutions from the convergent innovation approach.
+| | Farming | Production | Distribution/Commercialization | Consumption | Waste Management |
+|---|---|---|---|---||
+| Attitude-Behavior Gap | 3D printing | Green Bounding Cost/ Sludge analysis | Influencer Marketing | Predictive analytics |
+| Bounded Rationality | | Awareness Marketing Framing | Gamification |
+| Intangibility and credibility | IoT Blockchain | IoT Blockchain | Framing communities IoT Blockchain | Authentic branding IoT Blockchain | IoT Blockchain |
+| Product attributes | 3D printing | | | |
