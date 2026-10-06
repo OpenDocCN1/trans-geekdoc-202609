@@ -1,0 +1,1442 @@
+- pgno: 0
+  md: '# Chinese Journal of Chemical Engineering 31 (2021) 227–239
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Chinese Journal of Chemical Engineering
+
+
+    journal homepage: www.elsevier.com/locate/CjChe
+
+
+    ELSEVIER
+
+
+    ![](img/0b56e4ff16105a90fd2efb280b7d8a4a_0_0.png)
+
+
+    # Review
+
+
+    # Machine learning for molecular thermodynamics
+
+
+    Jiaqi D¹, Nan Xu¹, Manh Hien Nguyen², Qi Qiao², Yao Shi¹,³, Yi He¹,⁴*, Qing Shao²*
+
+
+    ^¹College of Chemical and Biological Engineering, Zhejiang University, Hangzhou
+    310027, China
+
+    ²Chemical and Materials Engineering Department, University of Kentucky, Lexington,
+    KY 40506, USA
+
+    ³Key Laboratory of Chemical Engineering Ministry of Education, Zhejiang University,
+    Hangzhou 310027, China
+
+    ⁴Department of Chemical Engineering, University of Washington, Seattle, WA 98195,
+    USA
+
+
+    ![](img/0b56e4ff16105a90fd2efb280b7d8a4a_0_1.png)
+
+
+    ARTICLE INFO
+
+
+    ABSTRACT
+
+
+    Article history
+
+
+    Received 21 August 2020
+
+
+    Received in form 2 October 2020
+
+
+    Accepted 28 October 2020
+
+
+    Available online 8 January 2021
+
+
+    Keywords
+
+
+    Thermodynamics
+
+    Molecular engineering
+
+    Molecular simulation
+
+
+    Force field
+
+
+    Thermodynamic properties of complex systems play an essential role in driving
+    chemical engineering research. It remains a challenge to predict the thermodynamic
+    properties of complex systems in a wide range and describe the behavior of ions
+    and molecules in complex systems. Machine learning emerges as a powerful tool
+    to resolve this issue it can describe complex properties beyond the capacity of
+    traditional mathematical functions. This review will summarize the discovery of
+    traditional machine learning methods and explore the different aspects of machine
+    learning using several examples. The first aspect is to apply machine learning
+    to predict the thermodynamic properties of a broad spectrum of systems based on
+    known data. The second aspect is to integrate machine learning and molecular simulations
+    to accelerate the discovery of new materials. The third aspect is to develop machine
+    learning models that handle both harmonic and all-atom molecular dynamics simulations.
+    The applications in these three aspects illustrate the potential of machine learning
+    in thermodynamics of chemical engineering. We will also discuss the perspective
+    of the broad applications of machine learning in chemical engineering.
+
+
+    © 2021 The Chemical Industry and Engineering Society of China, and The Chemical
+    Industry Press, Co., Ltd. All rights reserved.
+
+
+    # Introduction
+
+
+    Machine learning has emerged as a versatile tool to predict and investigate the
+    thermodynamics of complex systems. One task for molecular thermodynamics is to
+    predict the thermodynamic properties of complex systems with high accuracy. The
+    theoretical or semi-theoretical models have been used for learning of various
+    systems [1–11]. However, it remains a challenge to develop robust models that
+    can predict the thermodynamic properties of complex systems at the molecular level
+    using the traditional mathematical framework. Machine learning offers to computer
+    algorithms that can learn from [12,13]. The machine learning methods are known
+    for their extraordinary performance in self-driving vehicles and games against
+    humans [14–16]. Due to the ability of learning to describe complex relationship
+    between variables, we have witnessed growing accuracy of these models in the material
+    and chemical engineering
+
+
+    fields, ranging from [17–22], exploration to molecular thermodynamics prediction
+    [28–34].
+
+
+    Machine learning has helped the research of molecular dynamics from three aspects
+    (Fig. 1). First, it can help develop robust molecular models for complex systems.
+    Obtaining accurate thermodynamic properties of a system is essential for developing
+    processes. Nevertheless, theoretical or empirical models have been developed for
+    predicting thermodynamic properties of various systems. These models use although
+    consist of mathematical functions using hypothesis-driven functions and the parameters
+    derived from theory or experiment. Most of the limitations of these methods rely
+    heavily on the intuition of a "trial-and-error" approach. Deep machine learning
+    methods provide a new way of learning and predicting the thermodynamic properties
+    of complex systems. Many learning methods such as the neural network and decision
+    tree can quantify the relationship between the targeted properties with the selected
+    molecular database provide opportunity to develop such machine learning models
+    [39–42].
+
+
+    *Corresponding authors at: College of Chemical and Biological Engineering Zhejiang
+    University, Hangzhou 310027, China (Y. He). E-mail: yhe@zju.edu.cn (Y. He), qhao@zju.edu.cn
+    (Q. Shao).
+
+
+    https://doi.org/10.1016/j.jce.2020.101044
+
+
+    1004-9541/2021 The Chemical Industry and Engineering Society of China, and The
+    Chemical Industry Press, Co., Ltd. All rights reserved.
+
+
+    * Name*'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Predicting thermodynamic properties
+
+
+    | Machine learning | Designing materials | Molecular thermodynamics |
+
+    |---|---|---|
+
+    | | Developing many-body force field |
+
+
+    **Fig. 1.** Three contributions of machine learning to molecular thermodynamics
+    (1) predicting thermodynamic properties based on molecular descriptors; (2) designing
+    materials with large-scale molecular simulations; and (3) developing many-body
+    force fields that enable the simulations of complex systems.
+
+
+    Second, machine learning can predict the complex behavior of systems by combining
+    with classical modules. Molecular simulations show their essential role in revealing
+    mechanisms governing thermodynamics. They provide coordinates and velocities of
+    atoms or particles that we use to analyze their thermodynamic and kinetic properties
+    [43–45]. This analysis is usually using a “hypothesis-driven” strategy. Machine
+    learning, however, operates using the “data-driven” strategy. High-throughput
+    molecular simulations contribute to this “data-driven” strategy by providing a
+    large amount of data [13–46–50]. These data far exceed the scale of classical
+    databases and thus enhance the performance of the machine learning model.
+
+
+    Third, machine learning can provide “many-body” force fields for molecular simulations,
+    enabling a fast and accurate description of complex interactions. Classical MD
+    simulations [55–59] have well-known force fields that are relatively fast but
+    limited in their potential overlap over bonding and formation. In contrast, quantum
+    molecular simulations can describe complex systems but the computational cost
+    is immense. Their unique feature originates from the ability of the machine learning
+    models to describe complex interactions. The systems using machine learning force
+    fields can achieve the accuracy of quantum calculations while improving the efficiency
+    of classical MD.
+
+
+    This minreview introduces several examples in the applications of machine learning
+    in the three aspects mentioned above. The goal of this review is to inspire the
+    application of machine learning in molecular thermodynamics and introduce necessary
+    knowledge of machine learning. Many comprehensive reviews
+
+
+    have showcased the applications of machine learning in the development of materials
+    and processes [60–65]. Section 2 will introduce some basic concepts of machine
+    learning. Section 3 will illustrate the applications of machine learning in complex
+    relation-ship problems based on experiment. Section 4 will discuss the applications
+    of machine learning based on high-throughput simulations using the methods of
+    peptide design and prediction of thermodynamic properties. Section 5 will discuss
+    machine learning in complex domains that enables high speed and accurate simulations.
+    Finally, we will present a perspective of machine learning in thermodynamic contexts.
+
+
+    # 2. Data, Descriptor, and Algorithm
+
+
+    As stated, machine learning refers to the methods that can predict the output
+    of a system based on selected features (descriptors) using algorithms from a set
+    of databases. The development of a machine learning model includes four critical
+    steps: (1) data collection, (2) selecting the descriptors and algorithm, (3) training
+    the algorithm based on the dataset, and (4) using the trained model to predict
+    the output of a test set. The process of developing a machine learning model depends
+    on three ingredients: dataset, descriptors, and algorithms [66–68]. The research
+    on these ingredients and many comprehensive reviews have covered the relevant
+    knowledge of them [62,66,67]. This section will only introduce them.
+
+
+    # 2.1. Database
+
+
+    A database refers to the collection of experimental and computational results
+    that could be used to train and validate the machine learning model [66]. Quite
+    few thermodynamic databases have been published [70]. Indeed, these databases
+    are playing an important role in the development of machine learning models for
+    chemical properties. The rapid progress in machine learning researchers. Users
+    need to develop their own databases for specific purposes. Such efforts are critical
+    for developing a database: the quality and scale of data (72). The quality data
+    determines how well the machine learning model can perform many predictions [71,72].
+    Data cleaning also allows us to prepare quality dataset by removing irrelevant,
+    duplicated or modified overlapping data [66,73]. The scope
+
+
+    ![](img/0b56e4ff16105a90fd2efb280b7d8a4a_1_0.png)
+
+
+    **Fig. 2.** A general process of developing a machine learning model.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# J. Ding et al./Chinese Journal of Chemical Engineering 31 (2021) 227–239
+
+
+    and diversity of the data also determine the performance of the machine learning
+    model [17,72,74],
+
+
+    # 3. Learning in Predicting Thermodynamic Properties
+
+
+    The development of chemical processes such as reaction, separation and purification
+    rely on the thermodynamic properties of industrial substances. However, researchers
+    have many databases making it difficult to collect data for all attributes and
+    their combinations. A predictive model is critical
+
+
+    # 2.2. Descriptor
+
+
+    Descriptors refer to the features that can be used to characterize the system
+    [67]. They are attributes of the data and selected inputs for the machine learning
+    model. A molecular descriptor can describe the system qualitatively or quantitatively.
+    For instance, a descriptor for a molecule could be its molecular weight. Another
+    descriptor can be its molecular structure. Another widely used descriptor is group
+    description; however, the frequency of each distinct group [75–78]. Thousands
+    of descriptors have been developed up to date but importance of selecting right
+    ones. Generally, the descriptors should be relevant to the target, and not contain
+    highly correlated ones (e.g., solubility and water solubility). Several methods
+    have been developed to select descriptors in terms of eliminating and retaining
+    the most relevant features [81–85]. Some novel methods to construct descriptors
+    were inspired by using molecular language [86–89] and treating structures as “words”
+    (Section 3.2). These methods learn the features of structures from classical molecular
+    representations such as simplified input line entry (SMILES) and molecular graphs
+    [90]. Descriptors describe such as crystalline structures and atomic properties
+    are quite different from molecular descriptors.
+
+
+    Traditional predictive models use mathematical functions, such as data-driven
+    methods. Machine learning provides an alternative and efficient way to predict
+    thermodynamic properties, bypassing the mechanism and prior knowledge of the equation
+    of state. A large number of databases provide the bases of thermodynamic properties
+    such as the National Institute of Standards and Technology (NIST) chemical handbook
+    [71] and the Design and Engineering Physics Institute (DEPI) database [70]. The
+    combination of machine learning and these databases have been used to predict
+    industrial properties, enthalpy of phase change and other properties.
+
+
+    We will illustrate the ability of machine learning using neural network vector
+    models to predict the density and viscosity of fuel compounds. The example predicts
+    predictions for free energy of organic solvents in generic solvents.
+
+
+    # 3.1. Liquid density and viscosity
+
+
+    Liquid density and viscosity are critical thermodynamic properties for petroleum,
+    aviation fuel, and other fields [109,110]. The Creton group [111] developed machine
+    learning to predict density (ρ) and viscosity (η) of compounds. They used experimental
+    data from the DEPI database that contains hydrocarbons and organic compounds collected
+    from different sources.
+
+
+    They compared two sets of descriptors, including molecular descriptors and functional
+    group descriptors (FCCD). Molecular descriptors include geometric, topological
+    and electronic properties. Functional group descriptors are computed for each
+    molecule by size, bonds, branching and dipole moment. Some of these descriptors
+    are related to molecular weight and properties, and Other features may determine
+    physicochemical behaviors of molecules, for instance, hydrocarbons
+
+
+    # 2.3. Algorithm
+
+
+    Algorithms refer to mathematical models that can be used to predict a variable
+    based on other variables [99]. Algorithms recognize the descriptors and predict
+    either qualitatively or quantitatively. Such a connection helps the system to
+    predict new data [99]. Selecting an appropriate algorithm is another key to building
+    a successful machine learning model. The algorithm is probably one of the most
+    active areas in machine learning [100–105]. These algorithms have been grouped
+    into two categories: supervised learning and unsupervised learning.
+
+
+    Supervised learning involves learning with labeled data (known), where the model
+    predicts the values of interest. For applications in molecular thermodynamics,
+    these output values can be either the category of unknown compounds (classification)
+    or variables of a system (regression). Gaussian regression [103] and support vector
+    methods (SVM). However, unsupervised learning methods use unlabeled data to train
+    models, which classify input data with no labels. These methods are used for clustering
+    hierarchical clustering [106] and gaussian mixture model [107]. The features of
+    these two categories have been extensively used in textbooks and literature
+
+
+    * Asterisk'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# J. Ding et al./Chinese Journal of Chemical Engineering 31 (2021) 227–239
+
+
+    is another important model in the machine learning. Combining with the kernel
+    method [115], SVM can transform inseparable to linear separable ones in high-dimensional
+    space.
+
+
+    mental severity for several groups of homologs, they found that the predicted
+    results are lower in the region with higher temperatures. To verify the distinguishability
+    of isomers, they used the trained model to predict T(t) of tetrahydrofuran and
+    itiso isomers. As shown in Fig. 5, the Andrade equation with corrected parameters
+    can predict the T(t) of the isomers as well.
+
+
+    They constructed machine learning models from combinations of descriptors and
+    algorithms. All models yielded accurate predictions with the coefficient of determination
+    (R²) higher than 0.98. FVN and SVM have a better performance in R² and p. Compared
+    with other methods, GCFD model had a lower mean absolute error (MAE). However,
+    several models provided better consensus by using experimental data. Then they
+    built a consensus model of predicted models.
+
+
+    These machine learning might be applied at different steps for predicting system
+    properties. Researchers can use machine learning to map the mapping from features
+    to properties, or use it to estimate the parameters in empirical equations. The
+    advantage of the latter is that fewer parameters are obtained, convenient to use.
+
+
+    The models performance and the plot of all predicted results against experimental
+    data. The result shows that consensus models are more robust than individual ones.
+
+
+    # 3.2. Solution free
+
+
+    Solution affects many processes such as phase equilibrium. Solution free is another
+    important thermodynamic property and attracts researchers in the fields of chemical
+    and biological engineering [118–120]. Three methods can derive the solution free:
+    (a) from the formation of a cavity within the solvent, which is both physically
+    and chemically; (b) from the solute particles from the bulk, which is entropically
+    highly unfavorable but enthalpy favorable; (c) from the solvent-solute interactions
+    in terms of entropy and enthalpy. It lot of methods have been made to derive solution
+    free from thermodynamic properties or to calculate it with quantum mechanics.
+
+
+    Another study by Cai et al. [116] focuses on the viscosity temperature characteristic
+    of hydrocarbons using machine learning to predict the parameters of empirical
+    equation. They obtained the NIST database of 21 pure hydrocarbons and used them
+    to regress an Andrade equation [117], which determines T(η) through two parameters
+    A and B. A neural network was developed to predict B and T by 35 chemical and
+    molecular descriptors used to classify groups in hydrocarbons (paraffins, naphthenes,
+    and aromatics), and genetic algorithms to depict isomers.
+
+
+    The prediction of B and T was measured by the test set. The correlation coefficients
+    R and p are 0.987 and 0.994, and the relative errors are 4.08% and 2.50%, respectively.
+    The predicted values are in good agreement with the experimental data; however,
+    comparing the predicted and
+
+
+    information from, collected solvent parameters, such as ESOL (Estimated Solubility)
+    [41], FreeSol (The Free Solubility Database) [124] and MnSol (the Minnesota Solubility
+    Database) [125]. The two provide solubility and solution free energy
+
+
+    ![](img/0b56e4ff16105a90fd2efb280b7d8a4a_3_0.png)
+
+
+    | | Training set | Validation set | Test set | Total |
+
+    |---|---|---|---|---|---|---|---||}{
+
+    | R² | 0.997 | 0.996 | 0.997 | 0.997 | R² | 0.997 | 0.994 | 0.989 | 0.996 |
+
+    | RMSE | 9.5 | 10.5 | 9.2 | 7.9 | RMSE | 0.136 | 0.186 | 0.220 | 0.157 |
+
+    | AAE | 5.0 | 5.5 | 5.4 | 5.1 | AAE | 0.071 | 0.095 | 0.012 | 0.001 |
+
+    | bias | 0.4 | 0.2 | -0.3 | 0.3 | bias | 0.000 | 0.011 | -0.012 | 0
+
+
+    Fig. 3. Statistical performance of the consensus model and the plot of predicted
+    results against experimental data. Reproduced (adapted) with permission from [111].
+    (2020) American Chemical Society.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# J. Ding et./Chinese Journal of Chemical Engineering 31 (2021) 227–239
+
+
+    # 231
+
+
+    # Generated Chemical Features
+
+
+    # # Hidden Nodes
+
+
+    ![](img/0b56e4ff16105a90fd2efb280b7d8a4a_4_0.png)
+
+
+    Fig. 4. Schematic structure of the neural network used in [116]. Two neural networks
+    were used to predict B and Tp which were used to calculate η(T) through the Andre
+    equation. Repainted (adapted) with permission from [116]; Copyright (2020) American
+    Chemical Society.
+
+
+    ![](img/0b56e4ff16105a90fd2efb280b7d8a4a_4_1.png)
+
+
+    Fig. 5. Comparison of experimental and predicted values of tetramethylethylbenzene
+    and ethyloluene isomers using the neural network and Andre equation. Repainted
+    (with permission from [116]; Copyright (2020) American Chemical Society.
+
+
+    in solvents, Mol केमिस्ट्री contains experimental data of 3037 solvation energies
+    (or transfer free energies), covering 790 salts and 920 solvents.
+
+    Lim and co-developers Deep (deep learning model for solvation free energies in
+    organic compounds [126]) based on MNo, demonstrating a learning approach that
+    extracts dominant features from the molecular data. In Narii, 2495 pairs of solvent-interactions
+    of 418 salts and 901 solvents. Molecular descriptors mentioned in previous cases,
+    structure information can also be expressed as a sequence of characters by SMILES,
+    for instance, Mo2Vec [90] was used in this case. Mo2Vec recognizes properties
+    from Word2Vec [127] in the field of NLP. This method yields the high-dimensional
+    embedding of molecules from SMILES and molecular fingerprints [95]. The resulting
+    vector space is related to their chemical or physical properties. This new method
+    has been successfully used to express protein sequences and inspired some studies
+    of molecular properties prediction [87, 128].
+
+
+    Fig. 6 describes the primary architecture of DeepSol. Bidirectional recurrent
+    neural networks (BRNNs) [28] were employed as an encoder to extract crucial features
+    from both solvents and solutes. Inspired by NLP, an attention layer was used to
+    recognize important features from RNNs output. Attention mechanism [130] is an
+    approach that can interpret the alignment between input and output. It has been
+    used to improve RNN performance in sequence recognition and machine translation.
+    This approach develops chemists'' interests for it to produce interpretable results
+    from machine learning studies [131,132]. In this study, the attention mechanism
+    dominates the free energy prediction. The results show that polarity and hydrophobicity
+    of molecular structures play important roles during solvation, showing consistent
+    chemical intuition. Prediction of properties measured through 10-fold set all
+    compounds in the test set, the RMSE and MAE were 0.657 kcal mol⁻¹ (1 cal=4.1868
+    J) and 0.330 kcal mol⁻¹, and the Pearson correlation coefficient was up to 0.96.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/0b56e4ff16105a90fd2efb280b7d8a4a_5_0.png)
+
+
+    D. Ding et al./Chinese Journal of Chemical Engineering 31 (2021) 227–239
+
+
+    22
+
+
+    The prediction error was quite small and as accurate as some other quantum mechanical
+    hydration energy calculations [133]. With COSMO-RS [134], an QM method provided
+    similar accuracy for non-aqueous organic solvents with 59% of COSMO-RS. At the
+    same time, it needed to improve the performance of cross-cluster consolidation
+    with complete training sets. The clustering algorithm classifies substructures
+    (or solvents) of the same family into different clusters. Some substructures involved
+    in the test set may not be trained during consolidation; if substructure exists
+    only in the test set, the prediction deviation increases dramatically.
+
+
+    **Fig. 6.** The fundamental architecture of Delfensor. Each encoder network has
+    one encoder and one recurrent layer, while the predictor has a fully connected
+    MLP layer. Two encoders share an attention layer, which weights outputs from recurrent
+    layers. Black arrows indicate the flow of input data. Reprinted with permission
+    from [126] Published by The Royal Society of Chemistry.
+
+
+    (e.g. active learning) embedded into the high-throughput process, the dataset
+    derived from molecular simulation can obtain great diversity.
+
+
+    We will show how molecular simulation and high-throughput approaches can generate
+    datasets and combine them by two examples. The first one is peptide design, and
+    the second example will predict the thermodynamic properties of peptides.
+
+
+    # ### 4.1. Peptide design
+
+
+    One might obtain insights from the machine-learning-based prediction of thermodynamic
+    properties: (1) experimental chemical databases have potential benefits when combining
+    (2) datasets which are thorough and as many possible substructures in the test
+    set (3) test with enough data fitting to replace the accuracy of internal mechanism
+    completely; perhaps it will help researchers understand the mechanism while providing
+    more accurate and targeted data.
+
+
+    Peptides can self-assemble into ordered structures [135,136]. Their assembly can
+    be built using empirical forces. The π-conjugated peptides contain aromatic and
+    symmetrical oligomers on both sides. The sequence order of aromatic residues determines
+    the specific interactions between the aromatic rings [137–240]. DXX-DXX is a peptide
+    with two terminal amino acids (Asp) and X which represents 20 of non-polar amino
+    acids. In these peptides, the pH-charged moieties are protonated at a low pH,
+    inhibiting the electrostatic repulsion between adjacent molecules.
+
+
+    Molecular dynamics and DFT simulations have been conducted to discuss the effects
+    of sequence properties and π-cores on the self-assembly process and interactions.
+    In the framework of the Fergus group [141], the self-assembly of DAFAC was investigated
+    using molecular simulation, in which OPV is oligo-phenylenevinyl; the aggregate
+    forms a β-sheet-like structure, which is driven by aromatic cores, hydrophobic
+    interaction, and hydrogen bonding. The peptide-based conjugated peptides benefit
+    from the electron delocalization along the π-core.
+
+
+    # ### 4. Learning with High-throughput Molecular Simulation
+
+
+    Molecular simulations can provide massive data for machine learning. Small features
+    are hard to be obtained using experiments. For instance, there are few diffusion
+    property datasets due to the experimental difficulty and nearly countless solvent-solvent
+    combinations. High-throughput frameworks enable us to produce datasets with orders
+    of magnitude larger than the expectations.
+
+
+    Another DFT study [142] calculated similar oligopeptides, suggesting that the
+    spectral absorption comes from the C2p orbital transition, and large residues
+    on peptide lead to'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# J. Ding et al./Chinese Journal of Chemical Engineering 31 (2021) 227–239
+
+
+    a large twist between adjacent $\pi$-cores, reducing the electron transfer efficiency.
+
+
+    These properties are determined by cores and amino acid sequences, while the variety
+    of sequences grows exponentially with the chain length. It is difficult for traditional
+    methods to explore this chemical space. High-throughput computing and machine
+    learning can be used to predict and direct properties directly,
+
+
+    The fusion group trained a machine learning model [143] to predict the properties
+    of DXXP-XXD oligomers with different $\pi$-cores, including naphthalimide (NAD)
+    and pyrimidine (PYD). The property was measured by an alignment metric determined
+    by association distance and pylendimide. We validated the oligomerization energies
+    of 26 oligptides using MD simulations, and the regression as a function of selected
+    descriptors using multiple linear regression (MLR) model. The alignment metric
+    was fitted to the oligomerization energies. We utilize this method for high-throughput
+    screening of 9826 sequences of the DXXP-XXD family.
+
+
+    The selection of candidates includes three steps. First, more than 5000 candidates
+    were generated by the PADEL software framework [144]. Then, 247 candidates were
+    selected based on the following criteria: (1) first descriptor should be stable
+    and not change significantly with respect to the length of the peptide, (2) descriptors
+    should be informative, (3) redundant descriptors should be removed. Finally, eight
+    descriptors were selected after stepwise forward selection.
+
+
+    The screening results indicated that, compared with N, the larger PDE core increased
+    the oligomerization free by 15 $k_BT$. The larger residues, especially phenylalanine
+    (Phe), could increase the oligomerization free by 2.5 $k_BT$. Even though that
+    the prediction metric is only qualitative, it predicts a promising candidate DAVG-PEG-GVAD
+    with good self-assembly performance that has
+
+
+    not been studied before. This work is accurate for polar groups due to the small
+    size of the training set and the insufficient number of residues considered; however,
+    its affinity-based machine learning for prediction of complex systems future work
+    [146] combined active learning and coarse-grained molecular dynamics (CGMD) simulation
+    to predict self-assembly property. This work used the DXXP-OPV3-XXD oligomers
+    with different $\pi$-cores. Our research screens the chemical of 1331 members.
+    The framework demonstrates the workflow of active learning and CGMD simulation.
+    First, CGMD simulations were conducted for an analysis of 90 peptides to obtain
+    data for the various $\pi$-core cores in the terminal aggregates. The variational
+    autoencoder (VAE) [147] was used to generate the latent space embedding of the
+    DXXP-OPV3-XXD family. In the model, we used the peptide position vectors, and
+    GAE constructs a Gaussian distributed latent space embedding with high dimension;
+    represents the latent (A, T), from the latent space. In the third step, Gaussian
+    regression (GPR) was used to train a surrogate model relating the latent space
+    embedding to the free energy of conformation. Finally, active learning was used
+    to improve the accuracy of the GPR in the model. CGMD simulation results of 4
+    extras were added to the model after every prediction cycle until a cycle was
+    completed. The selection of extras was guided by the previous model and Bayesian
+    optimization. The researchers collected 25 additional candidates to obtain a stable
+    model by sampling of 186 peptides and 5-fold-validation $R^2$ of 0.78.
+
+
+    The GPR model trained 1331 acid sequences, revealing the key factors of self-assembly
+    performance. The trends showed that amino acids with aromatic residues, such as
+    phenylalanine, tryptophan, and tyrosine, are more likely to hinder the
+
+
+    ![](img/0b56e4ff16105a90fd2efb280b7d8a4a_6_0.png)
+
+
+    Fig. 7. The active workflow of learning [145]. The cycles consist of: CGMD simulations,
+    latent space embedding, GPR training and active learning. (adapted with permission
+    from [145]). Copyright (2020) American Chemical Society.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# J. Ding et al./ Journal of Chemical Engineering 31 (2021) 227–239
+
+
+    π-core stacking, especially when residues are located close to the core. The highly
+    ranked peptides contain abundant hydrophobic. Through constant understanding,
+    the active learning model predicted that the presence of methionine at the nearest
+    position to π-core might improve self-assembly, while that hydrophobic groups
+    seem to disfavor hydrophobic interaction.
+
+
+    Using unsupervised clustering, researchers explored the average composition of
+    amino acids and peptides with different properties. Then, the initial labeled
+    188 sequences were divided into three clusters-good, intermediate, and poor-weight
+    using hierarchical clustering. Then the remaining 1145 peptides were assigned
+    to these clusters. The weight composition of positions in the VA latent space
+    was analyzed over total 1331 peptides. Bulky aromatic residues tyrosine and phenylalanine
+    were found in all sequences. The smaller residues enriched in good clusters, glycine,
+    leucine, glutamic acid, and methionine do not have an obvious effect on performance.
+    These results can be further interpreted as a steric hindrance effect promotion/hindrance
+    to core stacking, guiding the next step of researches.
+
+
+    of new compounds, Sun and his group[46] developed a high-throughput force field
+    simulation (HT-FFS). Combined with machine learning and neural networks, HT-FS
+    is used to calculate and predict the thermodynamic properties of alkanes. The
+    selected properties of 876 bekanes and alkenes were verified by comparison with
+    experimental data from NIST [71]. The descriptors were calculated by OpenBabel
+    [146]. The feature representation includes temperature state point, the descriptor
+    list has 225 descriptors. Then the number of descriptors was reduced using recursive
+    feature elimination with a linear support vector machine. The predicted properties
+    were analyzed. For the numbers, the tertiary carbon and quaternary carbon are
+    the most sensitive properties for Cp, corresponding to the influence of dispersion
+    energy caused by the bulky side group. The methyl group attached to quaternary
+    carbon is the most difficult factor to predict.
+
+
+    4.2. Thermodynamic properties of alkanes
+
+
+    Alkanes are one of the most critical petroleum-based materials in chemical engineering.
+    Obtaining their thermodynamic properties is necessary for chemical engineering
+    design and discovery
+
+
+    The Sun group developed an FNN (Fig. 9) to predict the thermodynamic properties,
+    including density (ρ), and heat capacity (Cp). The building of the model was based
+    on HT-FFS results. They divided the results into three parts, the training (70%),
+    validation (20%) and the test (10%).
+
+
+    The prediction performance was measured by the predicted value and HT-FFS result.
+    For all thermodynamics properties, ρ, Ei and Cp FNN prediction is in excellent
+    agreement with simulation. The RMSEs in the test set are 3.1 × 10⁻³ g cm⁻³ for
+    ρ, 0.30 J mol⁻¹ K⁻¹ for Ei and 2.8 J mol⁻¹ K⁻¹¹ for Cp.
+
+
+    ![](img/0b56e4ff16105a90fd2efb280b7d8a4a_7_0.png)
+
+
+    Fig. 8. The workflow of HT-FFS used in [46]. Reprinted (adapted) with permission
+    from [46], Copyright (2020) American Chemical Society.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Output Layer
+
+
+    ```
+
+    y = H(Wx_{n-1} + b_n)
+
+    ```
+
+
+    # Hidden Layer
+
+
+    ```
+
+    x_2 = h(W_2x_0 + b_2)
+
+    ```
+
+
+    # Input Layer
+
+
+    ```
+
+    x_1 = h(W_1x_0 + b_1)
+
+    ```
+
+
+    x_0
+
+
+    Fig. 9. Schematic representation of PNN with N hidden layers. (adapted) with permission
+    from [46]. Chemistry (2020)
+
+
+    For C_m0 the maximum absolute relative error (MARE) is less than 0.75 for all
+    properties. Due to the high-throughput process, more data could be used to train
+    the machine learning model than in previous studies. Since the scale of data influences
+    the accuracy of models, procedures are critical for data preparation. This shows
+    the potential of big-data based machine learning in predicting the properties
+    of compounds, though PNN is a relatively small neural network. However, similar
+    frameworks could be used for other systems and tasks.
+
+
+    aches quantum chemical calculations while the speed is 20 times faster than the
+    quantum mechanical MD simulations.
+
+
+    Five alloys, LiSi, LiSi₂, LiSi₃, LiSi₄ and Li₂Si₄ were used as the starting structures
+    in the construction of the data system. Different Li-Si ratio data sets allow
+    the machine learning model to describe Li-Si alloys comprehensively. A melting
+    quenching was used to generate amorphous samples of these components to enable
+    descriptions of crystalline and amorphous phases.
+
+
+    Descriptor symmetry functions (ACFS)[66,98] were used as descriptors to extract
+    the local energy of each atom. Each atom i is passed to a neural network to decode
+    the atomic energy E of i. The potential of the system is obtained by averaging
+    over each atom. The network is optimized via a supervised regression using the
+    potential energies in the data set. Fig. 104 shows the configuration of the optimized
+    Li-Si alloy and depicts an atom to encode the local environment of the Li-Si alloy.
+
+
+    The new machine learning forces are promising the molecular simulation from several
+    aspects. First, the others of developing quality force fields for complex compounds
+    and materials is significant. Second, providing an avenue to investigate long
+    time-scale processes at an accurate level. However, some issues remain to be solved
+    during the development of machine learning forces. One issue is how to handle
+    data set with realistic data distribution and how counts [155] provide several
+    methods to solve the issue.
+
+
+    # 5.2. Machine learning force field for water molecules
+
+
+    The machine learning force field is capable of describing energy change accuracy.
+    Controlling long-time-scale process is challenging for all-atom force fields in
+    MD simulations. As shown in [57,58], coarse grained simulation of water calculations
+    with the mW molecular force field. Without explicit hydrogen, the CG model can
+    accelerate the nucleation process by several orders of magnitude. The limitation
+    of CG models is the phase-changing mechanism. However, the dependence of the all-atom
+    machine learning force field on energy AD has had bias effect. From the all-atom
+    machine learning force field, Zhang et al [150] proposed a machine learning force
+    field for water free from the constraints.
+
+
+    They developed a coarse-grained machine learning force field for water. Each water
+    molecule was treated as a particle, which contains only the oxygen atom, so that
+    the oxygen correlation functions produced by the coarse grained machine learning
+    force field agree well with those calculated by the all-atom machine learning
+    force field. The coarse-grained model can describe the water phase accurately
+    while retaining the description of the structural features.
+
+
+    The data sets were constructed using MD simulations driven by both quantum mechanical
+    and all-atom machine learning models.
+
+
+    # 5. Machine Learning Forces
+
+
+    The machine learning force field could investigate the dynamics of complex systems
+    with an accuracy of quantum calculations and efficiency far exceeding MD. The
+    new force field can describe different systems ranging from nanostructures [148,150]
+    to complex organic and inorganic materials [151–154]. In the training process,
+    quantum calculations were used to generate the data set with appropriate amount
+    of data and corresponding properties to extract local structural interactions
+    of multiple atoms from the system.
+
+
+    # 5.1. Atom-specific machine learning force field
+
+
+    Xu et al [155] developed a machine learning force field for cry- and amorphous
+    Li-Si alloys with Li/Si ratio ranging from 0 to 42 MD simulations. The force field
+    predicted the volume change during the initial lithiation, consistent with the
+    experiments. The authors also reported that the force field could predict bulk
+    densities, the radial distribution functions, and the diffusivity of in Li-Si
+    alloys as well and with the accuracy'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 236 D. et al./Chinese Journal of Chemical Engineering 31 (2021) 227–239
+
+
+    ![](img/0b56e4ff16105a90fd2efb280b7d8a4a_9_0.png)
+
+
+    **Fig. 10. (a) A snapshot of LiSi4 used for the construction of the initial dataset.
+    (b) A scheme of calculating the atomic energy of Li from its local environment
+    using a neural network. Reprinted (adapted) with permission from [155]. Copyright
+    (2020) American Chemical Society.
+
+
+    ![](img/0b56e4ff16105a90fd2efb280b7d8a4a_9_1.png)
+
+
+    **Fig. 11. (a) Schematic plot of extracting descriptors for CG particle. O atoms
+    are shown as red balls, H atoms are shown as white pearls. Balls centered at the
+    positions of the O atoms, dense CG particles on molecules. (b) A scheme of calculating
+    the Landau free energy of particle from its descriptor using a neural network.
+    Reprinted from [150], with permission of AIP Publishing.
+
+
+    ionic force has a 7.5 times speed than the atomic force. The huge improvement
+    in speed shows that the coarse-grained machine learning field has the ability
+    to capture the dynamics of big molecules like polymers. The explicit consideration
+    of Landau free energy enables the coarse-grained machine learning field to capture
+    changing process in MD simulations (Fig. 11).
+
+
+    machine learning models. For example, the weights of different models in deep
+    neural networks are difficult to be directly related to the descriptors of molecules.
+    Emerging algorithms computer science can provide a reference for chemical engineering.
+    In recent years, such as active learning, neural network, and attention mechanism
+    have been adopted by chemistry. These advanced methods provide new opportunities
+    for broader applications of machine learning in thermodynamics.
+
+
+    # 6. Perspective
+
+
+    The examples above show the promising role of machine learning in predicting and
+    modeling properties of chemical materials. Material design also benefits from
+    the combination of machine learning and high-throughput simulations. Machine learning
+    force field can accelerate the computation of thermodynamics in complex systems.
+    However, application of machine learning in chemical engineering remains in a
+    primitive stage, due to the scarcity of datasets in this area of champions. Some
+    methods may be expensive, unlike in NLP or computer vision, prediction models
+    in chemistry and material science are often scarce. The challenges include the
+    uncertainty of the model. Thus, establishing databases with high data diversity
+    and reliability is of great significance for future machine learning applications.
+    We expect more applications that combine high-throughput simulation and machine
+    learning. Another issue is the interpretability of
+
+
+    machine learning is another important application in the field of quantum mechanics
+    and all-atomic molecular dynamics. Current machine learning potential fields face
+    some challenges, such as the limitation of element type and sensitivity with input
+    configurations. Machine learning potentials have been developed and successfully
+    accelerated simulations and it is becoming a powerful tool for computational chemistry.
+
+
+    # Declaration of Interest
+
+
+    The authors declare that they have no competing interests or personal relationships
+    that could have appeared influence the work reported in this paper.
+
+
+    # Acknowledgements
+
+
+    Jiaqi Jin, Nan Xu, Yao Shi and Dr. Yi acknowledge financial support from the National
+    Natural Science Foundation of'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'J. Ding et al./Chinese Journal of Chemical Engineering 31 (2021) 227–229
+
+
+    237
+
+
+    China (2176245 and 5193309), the National Research and Development Program of
+    China (2017YB0702502), and the Innovation and Entrepreneur Introduction Program
+    of Zhejiang (2018J010006); Manh Nguyen, Di Tran, Qi Q and Qiao Shang thank the
+    financial support provided by the Startup Fund of the University of Kentucky.
+
+
+    # References
+
+
+    +   [1] P. Possenacker, S. Jamshidi, Development of a generalized characterization
+    to physical properties of polymers and petroleum fluids. Fluids Chem. 32 (2000)
+    199–204.
+
+
+    +   [2] Z.A. Makrodimit, A. Heller, T. Mueller, M.K. Rausch, M.S.H. Fays, N.R.
+    Bos, C.P. Guo, J. Muller, Prediction of transport and diffusion of gases based
+    on molecular dynamics and empirical correlation. Chem. Phys. Therm. 91 (2015)
+    101–107.
+
+
+    +   [3] M. Müller, Molecular simulation of PMMA swelling and multiphase property
+    analysis using Sanchez-Laflamme models. Int. Macromol Polym. 32 (2002) 49–55.
+
+
+    +   [4] H.W. Wang, S. Li, A predictive method for the solubility of oils in supercritical
+    carbon dioxide. Energy 85 (2014) 81–88.
+
+
+    +   [5] K. Wang and Y. Li, Prediction of thermodynamic properties of multicomponent
+    mixtures using a machine learning model for EOS; Chem. Fluid Phase 421 (2019)
+    298–3006.
+
+
+    +   [6] C. Chen, X. Wang, J. Wang, J. Wang and Y. Li, Application of machine learning
+    to transport properties of liquids. Fluid Phase 35 (2018) 306–314.
+
+
+    +   [7] D.A. Everington, E. Li, S.H. Heck, Prediction of the thermodynamic properties
+    of water-alcohol mixtures. Acta Chem. 66 (1997) 3991–4000.
+
+
+    +   [8] T.D. Iord own, C.K. Wang, On the absolute thermodynamics of water from
+    computer simulations: a first-principles molecular dynamics study. J. Phys. Chem.
+    B 104 (2000) 75–83.
+
+
+    +   [9] E.W. Lewis, R.T. Jacobson, Sensitivity analysis of thermodynamic properties:
+    A general approach to improve accuracy of property models.
+
+
+    +   [10] A. Serra, P. Galdi, R. Taglierni, Machine learning for the thermodynamic
+    properties of polymer mixtures. Sci. Rep. 10 (2020) 1511–12.
+
+
+    +   [11] K.R. Vashisdev, K. Chauchary, H. Martinez, A. Risch, G. Guita, F. Tavazella,
+    L. Vitka, M. Ziatdin, S. Vivanov, Deep learning, machine learning and reinforcement
+    learning, and applications to the prediction of self-driving cars.
+
+
+    +   [12] C. Wang, X. Xu, End-to-end learning for lane keeping of self-driving
+    cars. Nature 549 (2017) 433–437.
+
+
+    +   [13] D. Silver, A. Huang, C.J. Maddison, A. Geiger, S. Li, G. Van Denchelle,
+    J. Schrivestier, I. Antonopoulos, V. Pasqueveral, M. Salcin, L. D.tran, G. Gromov,
+    Deep learning for molecular dynamics.
+
+
+    +   [14] T. Aspplund, D. Hernandez, J. Terras, G. Lee, L. A. Madhavan, M. Sharif,
+    P. Stadter, Applications of machine learning in drug discovery. Science 363 (2019)
+    1034–1035.
+
+
+    +   [15] N. Ou, V. Wang, A.P. Qvaer, Prediction of toxicity of drugs using ANN
+    and SVM analyses, Eur J. Med. Chem. 95 (2019) 4010–4018.
+
+
+    +   [16] J. Yan, Y. Liang, H. Wang, J. Xu, Machine learning for drug property
+    prediction: an artificial intelligence framework for drug discovery in big data.
+    Era 9 (2021) 108–110.
+
+
+    +   [17] J. Zhang, J. Tan, H. Wang, Machine learning for drug property prediction:
+    a deep learning approach. Methods 222 (2021) 118005.
+
+
+    +   [25] B. Sanchez-Lenganzel, A. Aspurzu-Guzik, Inverse molecular design using
+    machine learning: Generative models for material science. Science 361 (2018) 895–900.
+
+
+    +   [26] T. Tominaga, D. Tu, Y. Lin, A. Frenkel, Supervised machine-learning prediction
+    of three-dimensional structure of metallic nanomaterials. Nature Materials 17
+    (2018) 995–1000.
+
+
+    +   [27] A. Seth, T. Makikawa, K. Tsuda, I. Tanaka, Machine learning with deep
+    neural networks for predicting thermodynamic properties of binary- and complex
+    compounds. Phys. Chem. B 89 (2015) 055104.
+
+
+    +   [28] L. Wang, J. Li, J. Huang, H. Wang, C. Zheng, N. Yang, Thermodynamic properties
+    and transport predictions in water mixtures using machine learning. Chem. Fluid
+    Phase 413 (2019) 115–120.
+
+
+    +   [29] L. Walter, C. Antonelli, Atomic calculations and materials information:
+    A review. Adv. Mater. 3 (2021) 200154.
+
+
+    +   [30] Y. Wei, J. Xu, K. Sun, J. Huang, J. Chen, J. Wei, Y. Mei, Machine learning
+    for molecular property prediction. Int. Macromol Polym. 138 (2018) 331–348.
+
+
+    +   [31] S. Zhang, J. J. Lee, Predicting the entropy and solubility of gas CO2
+    using supercritical fluids. Sci. Rep. 8 (2018) 1–8.
+
+
+    +   [32] J. Wang, Y. Li, Generative models for predicting the critical properties
+    of chemical mixtures. Chem. Fluid Phase 377 (2019) 777–785.
+
+
+    +   [33] Z. Zhang, J. Li, H. Zhang, J. Pan, X. Lu, Machine learning framework
+    for thermodynamic properties in solution. J. Col. 70 (2020) 105333.
+
+
+    +   [34] L. Wang, Y. Zhang, Z. Zheng, X. Wang, J. Zhou, New methods for predicting
+    thermodynamic properties of chemical mixtures using machine learning. Comput.
+    Mater. 138 (2018) 137–148.
+
+
+    +   [35] W. Henderson, P. Nicola, C. A. Sanchez, Machine learning for calculation
+    of adsorption and thermodynamic properties of condensed organic hydrocarbons.
+    J. Anal. Chem. 111 (1992) 41–47.
+
+
+    +   [36] V.K. Kim, P.G. Gulshani, A. Aspurzu-Guzik, A. Artemenko, Optimization
+    of SAR models based on random forest methods. Methods 60 (2007) 53–60.
+
+
+    +   [37] D.S. Palmer, N.M. O''Rourke, R.C. Jin, J.B. Mitchell, Random forest models
+    for prediction of organic molecules'' toxicity. Chem. Biol. 573 (2006) 1745–1750.
+
+
+    +   [38] K. Ramakrishna, M. Tamitarman, A. Petrovska, O. Van Lee Frenkel, Ensemble
+    of deep learning and machine learning in chemistry. J. Phys. Chem. B 120 (2016)
+    8545–8551.
+
+
+    +   [39] Q. Cao, J. Li, Y. Liu, J. Wang, Predicting solubility directly from molecular
+    structure. Chem. Eng. Chem. 54 (2012) 2004–2005.
+
+
+    +   [40] M. Chen, R. Bergentold, C. Wang, J. Haase, M. Schuler: A molecular simulation
+    for thermodynamic properties of polymer mixtures. Chem. Fluid Phase 222 (2011)
+    2255–2260.
+
+
+    +   [41] S. Cao, J. Li, J. Liu, G. Cao, J. Vatela: Molecular dynamics simulations
+    and the thermodynamic properties of water-based ionic liquids. J. Phys. Chem.
+    B 115 (2011) 8838–8846.
+
+
+    +   [42] Q. Wang, V. L. Wu, H. Sun, Predicting thermodynamic properties of ionic
+    liquids using machine learning. Chem. Mater. 158 (2018) 2512–2520.
+
+
+    +   [43] A. J. Elahi, T. Emtran, S. D. Thomas, L. Gard, Deep learning for predicting
+    the mechanical properties of sulfide compounds. Chem. Mater. 28 (2016) 7726–7734.
+
+
+    +   [44] S. Kirklin, R. Bergentold, C. Wang, High-throughput computational screening
+    of lithium-ion battery materials. Adv. Mater. 31 (2019) 1606334.
+
+
+    +   [45] L. Zheng, Z. Cao, Chemical trends in the thermodynamic stability and
+    reactivity of lithium-ion battery materials. Adv. Mater. 32 (2020) 1906111.
+
+
+    +   [46] M. W.A. Ward, J. Thiele, Extending the accuracy of the SNAP atomic potential
+    energy form. J. Phys. Chem. 148 (2014) 2418–2421.
+
+
+    +   [47] J. Wang, J. Liu, Machine learning for atomic forces and accelerated simulations.
+    Phys. Mater. B: Cond. Matter, 32 (2020) 015105.
+
+
+    +   [48] H. Wang, J. Zhang, J. Wan, E.W. DeepMD-kit: a deep learning framework
+    for molecular potential energy and molecular dynamics. Comput. Phys. Chem. 228
+    (2018) 177–184.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# J. Ding et al. Chinese Journal of Chemical Engineering 2021 227–239
+
+
+    [55] A. Khorshidi, A.A. Pearson, A. modular approach to machine learning in atomic
+    simulations, Phys. Chem. Commun. (2016) 310–324.
+
+
+    [56] V. Huang, J. Wang, J. Zhou, M. J. Machine learning of the AO/BBO off force
+    field for conformational predictions of organic liquids, J. Mol. Chem. Sci. 118
+    (2019) 11225–1236.
+
+
+    [57] R. Wang, J. Wang, J. Wang, J. Liu, J. Liu, J. Zhang, J. Zhang, J. Zhang,
+    Deep learning-based prediction of torsional potentials of the OPLS-AA force field,
+    J. Chem. Theory. Mol. 16 (2020) 10989–10000.
+
+
+    [58] R.B. Brooks, R.E. Berkeley, B.D. Olson, S. Dayton, M. X. Karpathy, CHARMM:
+    A machine learning framework for molecular dynamics, energy minimization and interaction
+    modeling.
+
+
+    [59] I. Bai, Y. Chen, M.D. J. Gordon, W. Cordell, F. T. J. Cwell, K. Parrillo,
+    A. Mueller, Deep learning-based property predictions of organic molecules, Phys.
+    Rev. Lett. 118 (2017) 068001.
+
+
+    [60] D. E. Tonkov, A. Vukovic, M.F.P. Puig, J. French, Deep learning for molecular
+    design – a review of the state of the art, Mod. Sci. Tech. Eng. 4 (2020) 4.
+
+
+    [61] K. Rampratz, R. Bhatt, C. Plana, and A. Maniaraj-Khanakul, C. Kim, Machine
+    learning for molecular discovery and optimization, Nature 552 (2017) 1022–1028.
+
+
+    [62] S. Wang, J. Wang, J. Zhou, and J. Wang, Deep learning for molecular design
+    and materials science, Nature 579 (2020) 575–578.
+
+
+    [63] V. Dinger, M. Aoki, C. Gasy, Machine learning interatomic potentials for
+    force fields, J.Phys. Chem. Lett. 8 (2017) 10091.
+
+
+    [64] A.P. Bartik, S. C. de Jong, P. Kerninan, J. Bertsch, G. Gyslein, C. Gasy,
+    and M. Mensotti, Machine learning of interatomic potentials with neural networks,
+    Sci. Adv. 7 (2021) eaau4112.
+
+
+    [65] M. C. Nunes, C. Morgan, and O. Rupprecht, Machine learning for molecular
+    simulation, Phys. Rev. Chem. 71 (2021) 360–369.
+
+
+    [66] Y. Liu, T. Wang, S. Wu, and J. Shi, Machine learning for drug discovery and
+    design, Nat Rev. Dis. 9 (2020) 528–535.
+
+
+    [67] J. Schimdinger, M.R. Rogers, S. Wolcott, M. Baker, Molecular properties and
+    binding affinity predictions for drug discovery, Nature 552 (2018) 1–9.
+
+
+    [68] L. M. Linhburg, J. Vital, S. Svensson, C. Drock, and M. Schiefeler, Deep
+    learning for the design of molecules, Journal of Chemical Physics, 144 (2016)
+    025105.
+
+
+    [69] X. Cao, Y. Wang, J. Wang, Y. Sun, and Y. Qiu, Machine learning-based computation
+    methods: Applications in lithium-ion battery and energy storage, Energy Storage
+    Mater. 23 (2020) 10111.
+
+
+    [70] ACID; National Institute of Physical Research, NIST standard reference database
+    99, NIST Chemistry.
+
+
+    [71] P. Linston, NIST Webbook (2003), https://webbook.nist.gov/
+
+
+    [72] A. J. Kim and J. Wang, Machine learning in chemical engineering and medical
+    science review, Int. J. Eng. Med. Sci. 35 (2013) 2010–2016.
+
+
+    [73] M. J. Wang, The role of machine learning in data-driven research, 2021 In:
+    Energy Storage Mater. 23, 101111.
+
+
+    [74] G. Peng, P. Zhang, and H. Wang, Machine learning in energy discovery, IEEE
+    Access 7 (2019) 3.
+
+
+    [75] R. Tedeschi, C. Volchenini, Handbook of Molecular Dynamics, Wiley-VCH, 2009.
+
+
+    [76] S. J. Ser, S. T. Turk, Unsupervised machine learning strategy for cluster-based
+    molecular modeling for environmental properties, Green Phys. Chem. Environ. 2
+    (2022) 3867–3885.
+
+
+    [77] P. W. Wang, J. Wang, R. Xu, and J. Hao, Quantum property prediction using
+    machine learning, J. Chem. Phys. 28 (2018) 1013–1019.
+
+
+    [78] F. Frey, Pattern classification and learning, Springer Media, 2006.
+
+
+    [79] A. Seko, A. Takagi, T. Tanaka, Description of Machine Learning for Molecular
+    Properties, J. Bio.Molecular Modeling 48 (2020) 1–10.
+
+
+    [80] I. Guyon, A. Elliott, Feature selection to variable and feature selection,
+    Machine Learning 37 (2002) 215–238.
+
+
+    [81] L. Yu, Hu. Sun, Feature selection via analysis of variance and regression,
+    J. Mach. Learn.Res. 5 (2004) 1201–1218.
+
+
+    [82] C. J. Lee, Feature selection with the bootstrap package, J. Stat. 36 (2014)
+    1–28.
+
+
+    [83] M. J. Li, Feature selection in machine learning: A survey and perspective,
+    Neurocomputing 200 (2010) 705–716.
+
+
+    [84] Y. Wang, S. Sun, J. Wen, R. M. J. Ed, An architecture of deep learning for
+    prediction of critical properties of molecular molecules, AIACS 6 9 (2019) 1–11.
+
+
+    [85] E. J. Kim and S. J. Kim, Deep learning representation of protein binding
+    sites for genomics and proteomics, PLOS One 11 (2016) e016005.
+
+
+    [86] M. Olvervea, T. Schabler, O. Engqvist, and J. Wen, Chemical-novo design through
+    deep reinforcement learning, J. Chemin 9 (2018) 487–498.
+
+
+    [87] Z. Wang, S. Wu, S. Sun, J. J. Clark, J. Chen, X. Zhang, Predictive deep learning
+    models for environmental properties: The direct calculation of cluster partitions
+    for molecular graphs, Green Chem 21 (2020) 15.
+
+
+    [88] S. Jaeger, F. Sul, S. T. Turk, Unsupervised machine learning for molecular
+    property prediction, Green Phys. Chem. Environ. 2 (2020) 15.
+
+
+    [89] J. Rogers, H. Main, Extended-connectivity fingerprints, J. Chem. Inf. 50
+    (2019) 1111.
+
+
+    [90] D. Weinberger, Chemical space and information system: Introduction to methodology
+    and machine learning chemistry, J. Chem. Inf. Sci. 38 (2007) 1221.
+
+
+    [91] A. P. Bartik, K. Rogers, G. Gyslein, On representing chemical elements, Nature
+    Chem. 9 (2017) 492–497.
+
+
+    [92] A. Gaiskal, D.M. Wilkins, G. Gyslein, M. Ceriotti, Symmetry-adapted machine
+    learning for thermodynamic properties of organic molecules, Phys. Rev. Lett. 120
+    (2018) 038002.
+
+
+    [93] H. Finamochi, A.J. Vieira, E. Morovsky, F. Cerasani, S. Y. Ranasvat, D. Z.
+    Butler, High-dimensional potentials with machine learning in materials science,
+    Chem. Phys. 572 (2019) 106949.
+
+
+    [94] J. Wang, Machine learning of high-dimensional energy-surface potentials,
+    Neural force fields for large-scale simulations, Chem. Phys. Chem. 43 (2019) 11031.
+
+
+    [95] I. Behler, Cluster-based functional clustering for high-dimensional data,
+    Bioinformatics 26 (2010) 1443–1450.
+
+
+    [96] A. J. C. O’Brien, Introduction to Machine Learning, for Edition, MIT Press,
+    2020.
+
+
+    [97] Y. Schmid, Deep learning in neural networks: An overview, Neural Rel. 61
+    (2015) 85–98.
+
+
+    [98] C. W. Cao, X.-B. J, M. J. Li, Y.-H. Liu, Y.-W. Wang, Using machine learning
+    for molecular property prediction and design, Adv. Mater. 31 (2019) 190193.
+
+
+    [99] A.Y. Wu, An efficient k-clustering algorithm and application to cluster analysis,
+    Bioinformatics 26 (2010) 3045–3050.
+
+
+    [100] S. Salavija, P. Chen, The number of clusters/elements in clustering/segmentation
+    algorithms, 14th IEEE Conf. Inf. Soc. (ICE) (2001) 1–6.
+
+
+    [101] D.A. Reynolds, T.F. Chatur, B.R. Stone, Verification of unsupervised learning
+    by cluster analysis, Science 316 (2006) 990–993.
+
+
+    [102] S. Sharma-Tvesh, S. Berry, Unsupervised Machine Learning and Cluster Analysis,
+    Springer, 2013.
+
+
+    [103] W. Hu, J. Xie, Energy loss in prediction due to one force field in vitro,
+    Phys. Mol. Mol 8 (2014) 1–5.
+
+
+    [104] C. Rasmussen, Gaussian Processes in Machine Learning, In: Lect. Statist.
+    Comput. (Springer, 2006).
+
+
+    [105] J. J. Lee, Deep learning in chemical engineering, Chem. Chem. 12 (2020)
+    111001–11015.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# D. Jing et al. / Journal of Chemical Chemistry 2021 (35) 221–229
+
+
+    [124] D.M. Lively, P. Guthrie, Freeol: A database of evaluated and calculated
+    hydration free energies with implicit solvent, Comput. Aided Mol. 28 (7) (2007)
+    693–706
+
+
+    [125] A.M. Pernavec, K. Jelly, J. Thompson, D. Jordan, Harvey, C. Chambers, C.J.
+    Dobson, E. Grieman, P. Genter, C. Craig, D. Truhlar, Molecular Database: Validation
+    of force field parameters, J. Chem. Phys 131 (2009) 074101
+
+
+    [126] M. Wang and J. Wang, Deep learning model for prediction of solvation free
+    energies in organic solvents, Chem. Sci. 10 (36) (2013) 8306–8315.
+
+
+    [127] T. Michino, K. Garrer, G. Jordan, Estimation of efficient work for molecular
+    dynamics simulations using neural networks, Phys. Rev. Lett. 121 (2018) 158301.
+
+
+    [128] S. Kim, C.N. Bedbrook, F.H. Arnold, Protein learned models for predicting
+    protein properties using machine learning, Bioinformatics 34(15) (2018) 2642–2648.
+
+
+    [129] D. Bahmanour, K.H. Yu, Neural machine translation for identifying protein
+    functions using convolutional neural networks, Bioinformatics 35(15) (2019) 211–15.
+    https://doi.org/10.1093/bioinformatics/btac449
+
+
+    [130] X. Dong, W. Wang, F. Zhang, X. Wan, L. Li, Z. Lu, X. Chen, H. Jiang, M.
+    Zhang, Deep learning on molecular representation for drug discovery and development,
+    J. Med. Chem 61 (2018) 8746–8758.
+
+
+    [131] A. Ramasudner, F. Eierlich, G. Gomez, E. Seis, A. Papp, K. Lewing, V. Pande,
+    MolDock: A benchmark for molecular machine docking, Chem. Rev. 117 (2) (2017)
+    1138.
+
+
+    [132] A. Klamart, The COSMO and COSMO-RS solvation models, Self-assembled proteins
+    and peptides for regenerative medicine, Chem. Rev. 113 (7) (2017) 4837–4861.
+
+
+    [133] J. Sun, Assembly of semiconductor peptide nanostructures, Nature 4 (2022)
+    604–6047
+
+
+    [134] D.B. Wall, A.E. Zacca, A.M. Sutton, W. Wilson, D. Jordan, Interactions between
+    $\pi$-conjugated peptide nanostructures dictated by primary amino acid sequence,
+    https://doi.org/10.1021/acs.jpcbb.7b030
+
+
+    [135] H.A.M. Ardoña, K. Besar, M. Topagni, H.E. Katz, J. Jordan, Sequence-dependent
+    properties of $\pi$-conjugated peptide hydrogelators, J. Mater. Chem. C 25 (25)
+    (2016) 6505–6514.
+
+
+    [136] X., Baumgartner, K. Müller, Structure and properties of $\pi$-conjugated
+    polymer hydrogels, J. Phys. Chem B 118 (32) (2014) 1832–1840.
+
+
+    [137] K. Besar, H.A.M. Ardoña, J. Jordan, H.E. Katz, Demonstration of hole transport
+    and luminescence in self-assembled $\pi$-conjugated peptide nanostructures using
+    field-effect transport architectures, ACS Nano 9 (12) (2015) 12401–12409.
+
+
+    [141] R.A. Thornton, J. Jordan, T. Jordan, A. Ferguson, Thermodynamics, morphology,
+    and kinetics of self-step assembly of $\pi$-conjugated oligonucleotides, J. Mol.
+    Chem. Soc. 45 (2021) 11993.
+
+
+    [142] B.A. Thornton, P. Shapera, J. Jordan, A. Schiele, L. Ferguson, Revealing
+    the sequence-structure property of self-assembling $\pi$-conjugated oligonucleotides,
+    Nature Communications 12 (1) (2021) 5469–5471–.
+
+
+    [143] C.W. VASP, Ab-Schrödinger: An open software to calculate molecular properties
+    by density functional theory, J. Phys. Chem. B 107 (4) (2003) 1033–1040.
+
+
+    [144] K.S. Yamaguchi, M. Rashid, H. Odesley, Y. Sun, D. Panda, J. Jordan, A. Ferguson,
+    Deep learning-driven coarse-grained molecular simulation, J. Phys. Chem. B 128
+    (14) (2024) 811–818.
+
+
+    [145] C. Kim, A. Asadrakha, A. Raja, M. Ramprasad, Active and machine learning
+    for design of organic materials with high charge transport mobility, Science Mater.
+    7 (10) (2021) 310.
+
+
+    [146] K. Calandar, P. E. Setters, M. Ramprasad, D. Manifield, Gaussian process
+    learning for molecular design, Int. J. Neural Netw. IEEE, 338 (2020) 3549–3550.
+
+
+    [147] S. Müller, M. Ransford, J. Gomez, C. Mueller, C. Hucklich, Open Babel: An
+    open chemical toolset, J. Chem. Phys. 133 (10) 201010.
+
+
+    [148] R.K.Sankaramajan, M. Cherukha, A. Ramadayan, N. Toffler, C. B Bremmer, S.G.
+    Gray, Machine learning coarse-grained models for drug discovery, Nat. Commun.
+    12 (2021) 10533.
+
+
+    [149] L. Zheng, J. Han, Wang, R. Car, W. Weinan, P.G. Lee, Constructing coarse-grained
+    models via deep neural network potentials, J. Chem. Phys. 145 (3) (2017) 034102.
+
+
+    [150] J. Smith, I. Oyaev, A. Eitberg, N. Olaisev, A. Eitberg, Weiss is is more:
+    Sampling chemical space with active learning, Chem. Phys. 148 (24) (2017) 392.
+
+
+    [151] N. Wu, Y. Shi, H. Y. Q, J. Jordan, J. Behler, G. Cündy, A. Ferguson, T.
+    Schiele, A deep-learning learned potential for crystallization and amorphous Li-Si
+    alloys, J. Phys. Chem C 124 (44) (2020) 16278–16288.
+
+
+    [152] M. Schöllmann, Machine learning potentials for carbon and silicon, J. Phys.
+    Chem B 113 (13) (2009) 4008–4016.,
+
+
+    [153] E.B. Moore, V. Molinero, Structural transformation in supercooled water
+    the crystallization rate of, Nature 473 (2011) 7074–7077'
+  merge: -1
+  img_proc: true
