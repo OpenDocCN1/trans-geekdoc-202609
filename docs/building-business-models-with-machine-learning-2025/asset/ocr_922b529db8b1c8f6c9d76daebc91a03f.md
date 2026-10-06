@@ -1,0 +1,13 @@
+# 5. Multiple Task Models
+
+Advanced machine learning and artificial intelligence models known as “multi-task models” are able to manage and carry out several tasks or goals at once on a single system. These models require less training and resources because they are able to learn and generalize different tasks simultaneously.
+
+# CONCLUSION
+
+Business analytics has more secured its place as a cornerstone of the modern business model—it has shifted how companies leverage data into action and inform decision-making. Businesses using advanced analytics and methodology can investigate large volumes of data to identify patterns, trends, and correlations which otherwise lay dormant to streamline operations, build customer relationships, and identify new markets, making analytics a vehicle for continuous improvement and innovation in business.
+
+The facts around business analytics suggest a compelling story. Companies that use analytics think that decisions are more valuable with improvements in processes and overall competitive advantages. Companies employing data-driven strategies; are benefiting on decreased costs, increased profitability, and increased customer satisfaction. Companies big and small are utilizing new technologies like machine learning, artificial intelligence, and big data to maximize potential analytics opportunities.
+
+Looking forward, business analytics suggests an even greater future of integration and sophistication usage than any time before. As the amount of data continues to rise, the need for real-time analytics and predictive modeling increases. In addition, the problem of ethical use of data and privacy are not just pieces of analytics process, but of the ever-complex process of management that businesses undertake. Security business will make sure that stakeholders maintain trust and confidence in their analytics development, and the actual use of analytics.
+
+Business analytics is not a fad, and will continue to move businesses along a fundamental progression on how to operate and compete. Businesses who utilize data, may predictably outperform organizations who don't, they navigate the ever-complex process of business marketplace with clarity, agility, and strategy. Transparency tends to politically shield organizations as their continuing to think at opportunities for advancement, that analytics will offer businesses in the future because innately are capable of innovating, in the future market ages of rapidly processing the answers of asking the right questions in business analytics.
