@@ -1,0 +1,17 @@
+# Text Separation From Document Images
+
+print them. OCR is a technique to make a document readable by a machine. OCR is utilized extensively in industries such as finance, banking, healthcare as well as in governmental agencies, and education. Physical books or files stored for long periods can get degraded, destroyed, or damaged. Converting these documents/books into digital copies helps preserve the heritage value associated with them. For example, a large number of old papers/books/documents present in libraries will be replaced digitally by computer file images. These digital files can be searched content-wise and accessed by many people at the same time. Therefore, it is necessary to develop a complete Document Analysis System. Before OCR can process a document, a system needs to identify or segment the text in a present document from the non-text part of image like tables, figures, graphs, etc. K. Santos, et al., 2012; Viet Phuong, et al., 2015; Oyeyade K. Oydentun, et al., 2016). The text separation is essential as the OCR system does not process non-text contents. The text part is the central informative part of many applications. Segmenting the text from the non-text areas of the document image helps found many solutions to text separation from document images to date (Tran, T., et al., 2015; Oyeyade K. Oydentun, et al., 2016).
+
+The main goal of the chapter is to compare methods used to separate or segment regions from printed Devnagari documents using traditional image processing techniques and different methods of deep learning. Conventional methods of image processing discussed in the chapter include pre-processing, features extraction, and text segmentation. On the other hand, deep learning methods involve the use of different models/architecture (U-Net and ResU-Net) required for semantic segmentation by making use of transfer learning. Deep learning methods learn the features automatically. The segmentation results obtained from deep learning models give better results without handicrafting the features when compared with the conventional methods which require various steps for feature extraction
+
+# BACKGROUND
+
+Document segmentation uses three approaches: top-down, bottom-up, and a hybrid approach. Each of the three approaches, top-down, bottom-up, and hybrid, in turn, consists of three steps: pre-processing, segmentation, and classification or feature extraction. The deep learning approach does not require pre-processing and feature extraction steps. Some work has been carried out using the deep learning approach by making use of Semantic Segmentation. Literature reviewed explains text segmentation using top-down, bottom-up, hybrid, and deep learning approaches.
+
+# Top-Down Approach
+
+This approach first detects large-scale features also called the highest level of the text (like images, columns, etc.) in the input data. It splits the highest-level structure into small segments until it reaches the small-scale features (like individual characters). Thus, top-down methods require prior knowledge of the input image (e., document image).
+
+Jean Duong and Hubert Emptoz (202) sed printed documents for text separation. They introduced entropic discrimination, which is a simple separation using one. Entropy heuristics are used to separate text and non-text areas. The non-text region regular histograms with the text region gives regular horizontal projection histograms.
+
+224

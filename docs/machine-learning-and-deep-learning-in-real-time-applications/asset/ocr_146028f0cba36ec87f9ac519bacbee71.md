@@ -1,0 +1,1 @@
+Zhao, H., & Malik, H. (2012, August). Audio forensics using acoustic environment traces. In 2012 IEEE Statistical Signal Processing Workshop (SSP) (pp. 373-376). IEEE. doi:10.1109/SSP.2012.6319707

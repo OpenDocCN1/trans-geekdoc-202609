@@ -1,0 +1,13 @@
+# Preface
+
+The currently applied Artificial Intelligence techniques are penetrating into every domain and reaching its limits. We might not be noticing, but we keep accumulating intelligent agents and AI bots around us now and then. One of the most exciting tools that have entered in recent years is Machine/Deep Learning. There are several real time-applications of machine and deep learning in the field of higher education, medicals, manufacturing, marketing, finance, and potentially for making predictions; machine and deep learning algorithms used in lots of places exactly. This collection of statistical methods and the availability of large datasets combined with the improvement in algorithms has already proved to be of considerably speeding up both fundamental and applied research and led to a unparalleled surge of interest in the topic of machine learning.
+
+Machine Learning paradigms defined in two types, namely supervised learning (SL) and unsupervised learning (UL). In Supervised Learning, objects in a given collection are classified using a set of attributes or features. The classification process is a set of rules that prescribe assignments or allocations of objects to unique classes based on values of features. The objective of supervised learning is to design a reliable system that is able to precisely predict the class group of new objects based on the available attributes or features. Whereas in unsupervised learning (UL), all the data are unlabeled, and the learning process consists of both defining the labels and associating objects with them.
+
+Deep learning defined in different ways of apprehension. For example, deep learning is used to realize a functionality containing huge number of parameters. Deep learning is also a complex system of equations that uses different mathematical functions to produce trained output. Deep learning is essentially an advanced technique for classifying data patterns having higher order multiple layers neural networks.
+
+The objective of this book is to introduce the reader to the Challenges and applications in the area of Machine Learning and Deep Learning. In particular, the book looks into the use of Machine Learning techniques and Artificial Intelligence to model various technical problems of the real world.
+
+# ORGANIZATION OF THE BOOK
+
+The book is organized in 13 chapters written by researchers, scholars and professors from prestigious laboratories and educational institution across the globe. A brief description of each of the chapters in this section given below.
