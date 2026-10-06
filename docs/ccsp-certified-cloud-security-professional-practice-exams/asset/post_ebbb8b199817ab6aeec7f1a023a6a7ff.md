@@ -1,0 +1,38 @@
+
+![](img/f996c9e49b2229de41b7962ad01290b5_258_0.png)
+
+# Don’t Let the Real Test Be Your First Test!
+
+This highly effective self-study guide covers all six domains of the challenging Certified Cloud Security Professional exam as well as the CCSP Common Body of Knowledge, developed by the International Information Systems Certification Consortium (ISC)². To reinforce important skills and facilitate retention, every question is accompanied by in-depth explanations for both correct and incorrect answers. Designed to help you pass the test with ease, this book is also an ideal companion to the bestselling CCSP Certified Cloud Security Professional All-in-One Exam Guide.
+
+Covers all six domains:
+
+- Architectural Concepts & Design Requirements
+- Cloud Data Security
+- Cloud Platform & Infrastructure Security
+- Cloud Application Security
+- Operations
+- Legal & Compliance
+
+Electronic content includes:
+
+- 250 practice questions
+- Secured book PDF
+
+**ABOUT THE AUTHOR:**
+
+Daniel Carter, CISSP, CCSP, CISM, CISA, has over 20 years of experience in the IT and security worlds, in both the higher education and healthcare sectors. He has worked at state and federal government levels and is currently a senior systems engineer at Johns University & Medicine.
+
+Learn more. Do more.
+MHPROFAL.COM
+
+Follow us on Twitter @MHCComputing
+
+ALSO AVAILABLE AS AN EBOOK
+
+$40.00 USD
+ISBN 978-1-260-03135-5
+MHDID 1-260-03135-7
+5400
+9781260031355
+BOOK P/N: 9781260031331 | 126003133100

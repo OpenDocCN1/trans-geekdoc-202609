@@ -1,0 +1,17 @@
+the cloud service provider and the cloud customer. It outlines the key characteristics of cloud computing, including on-demand self-service, broad network access, multitenancy, rapid elasticity and scalability, resource pooling, and measured service. It also introduces the key blocks for a cloud environment, such as virtualization, storage, networks, and the underlying infrastructures that host and control them.
+
+# Domain 2: Cloud Data Security
+
+The Cloud Data Security domain delves into design, principles, and best practices for systems and applications to protect data, taking into account all types of systems, services, virtual machines, networks, and storage technologies within the hosting environment. Domain 2 outlines the cloud data lifecycle, which shows how data flows from its creation through its disposal, and how it is handled through various uses and activities while it remains within a system or application.
+
+# Domain 3: Cloud Platform and Infrastructure Security
+
+A cloud environment consists of both physical and virtual infrastructure, and both carry with them unique security concerns and requirements. Whereas cloud systems are built on virtualization and components, underneath virtualization layers are physical hardware and security requirements, the same as a traditional data center. This includes access to physical systems, such as the BIOS and hardware layers, as well as the software that hosts and maintains the virtualized environments on top of them. Any breach of security or controls on the physical layer could put all virtual hosts managed within it at risk. Security controls within a cloud environment apply to the standard set of resources: network and communications, storage, and computing. However, the use of virtualization also requires the the consideration of security in regard to the management plane that is used to control and manage the virtual machines. Domain 3 delves into the cloud-specific risks, the risks associated with virtualization, and the specific count-measure strategies that can be employed to offset them.
+
+# Domain 4: Cloud Application Security
+
+Using cloud environments and cloud technologies is quickly gaining in popularity for both their cost and flexibility. Cloud environments offer incredible efficiencies and ease with quick bringing-environments and virtual machines online for developers, and costs are incurred only while they are live and operating; the lead time and costs associated with procuring environments or testers in a traditional data center are largely mitigated in a cloud environment. In order for optimal cloud development to be leveraged, especially with security in mind, the Cloud Security Professional and the developers will need a solid understanding of the realities of cloud environments, what is required to secure them, as well as the common threats and vulnerabilities facing the cloud.
+
+# Domain 5: Operations
+
+The Operations domain outlines the planning for data centers, including both the physical and logical layers and technologies employed. This also incorporates environmental concerns and needs are addressed with physical requirements, including reliable and redundant access to cooling and electrical resources, as well as adequate protection from natural disasters and environmental issues.
