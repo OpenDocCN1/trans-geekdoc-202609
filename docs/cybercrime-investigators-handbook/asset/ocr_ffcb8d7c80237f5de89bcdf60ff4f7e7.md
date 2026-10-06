@@ -1,0 +1,2 @@
+Computer Law and Security Review 29, no. 2 (2013): 152–163, https://www.sciencedirect.com/science/article/pii/S0267364913000241.
+4. Roderic Broadhurst, “Developments in the Global Law Enforcement of Cyber-Crime,” Policing: An International Journal of Police Strategies and Management 29, no. 3 (2006): 408–433, https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2089650.

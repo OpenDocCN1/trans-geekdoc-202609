@@ -1,0 +1,11 @@
+crime, as victims state they find it hard to understand which was worse: losing their money in the fraud or being defrauded emotionally.
+
+A victim may be located on a relationship site or through social media. The relationship sites are particularly valuable to the attacker as they can identify a lot about their profile, including their background, current status, their likes and dislikes, their hopes for the future, and the attributes they are looking for in a future partner. The fraudster will use a technique called “mirroring” to reflect the values and desires of their target back to them by creating a profile for that purpose or modifying an existing fraudulent profile. For example, if the target likes long walks on the beach with their Labrador dog and having an evening glass of red wine, then the fraudster's profile will say exactly the same things. If a victim's profile says they have lost a partner due to a specific disease, the fraudster will disclose a very similar event, providing a strong emotional connection. As stated, these are particularly crude crimes.
+
+In the initial communication
+
+Over the coming days and weeks they will receive numerous positive messages, “I love you.” While it may seem very unusual to fall in love with a person you have never physically met, there are literally hundreds of thousands of normal people throughout the world who have been socially engineered by this form of crime with the psychological trigger of loneliness abused.
+
+Victims will send money to the fraudster to assist them in traveling to the victim's country, including the cost of completing business ventures, required government charges, and so on. Each payment is met with a new request for more money. The cyber is very skilled at, as they will have learned when the victim receives their pay, when accounts are due, and the like.
+
+The cruelty of this crime type is shown by the manner in which the victim is socially engineered. In a relationship where people live together, the last person you usually speak to in the morning is your partner. In relationship fraud, the cybercriminal will call last thing in the evening to tell their victim, “I love you ... Goodnight,” and again thing in the morning to make a comment about the lines of, “I have

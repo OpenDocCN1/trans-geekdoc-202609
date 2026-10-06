@@ -1,0 +1,7 @@
+store receipts located at the suspect's address, which will provide information as spending activities.
+
+These are common investigation techniques of the fraud examiner. Locating receipts or photos of high-value purchases will provide dates of expenditure, which in turn can be linked to the time of the alleged offense.
+
+Depending upon the circumstances and your legal authority, evidence of large expenditures can be traced back through bank accounts to find out where this money came from. At this time, bringing in an accountant with specialist skills in financial investigations and/or a fraud examiner will provide the cyber-crime investigator valuable support.
+
+Once you have reviewed the investigation and evidence, there comes the time when you decide whether to commence a prosecution. Should this occur, Chapter 18 will provide some ideas for presenting your evidence, digital and otherwise, to the court. You will find there when despite the extensive nature of your investigations you are unable to locate a suspect. This may be because the evidence you need such as log files do not exist, the attacker has used technology such as proxy servers, anonymizers or compromised devices or alternatively they cannot be located in a foreign jurisdiction. Preparing a detailed report on your investigation and findings provides the complainant information to understand the extent of the attack and damage, providing them information to understand the attack and how to remediate the compromise of the systems and data.

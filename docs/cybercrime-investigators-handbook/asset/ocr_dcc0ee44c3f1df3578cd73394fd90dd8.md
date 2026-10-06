@@ -1,0 +1,13 @@
+with limited information, which may mean many valuable questions will not be asked. Although this is not always the case, suspects usually only interview once and the skilled investigator will want to make sure that they have all the information they need. Interviews are discussed in more detail in Chapter 16.
+
+# Plan for Evidence Control and Capture, and for Preservation of Its Integrity
+
+As not all scenes you attend will involve an IR team, plan to prevent any person from interfering with the evidence. Controlling the movement of people in the scene and you will go a long way towards controlling the preservation of the physical evidence. When dealing with a situation in which the suspect is possibly present, even apparently innocent action as a person using their phone may hinder your evidence capture, as they may be sending a prepared code to an associate to destroy potential evidence. Ensure the suspect has no direct or indirect access to digital devices, including remote access via mobile devices.
+
+When devices are cloud based, any person can access the service with a mobile device. Therefore, while you and your team are at a scene, a suspect or their associate could cloud-based services to delete the crucial evidence you are seeking. Mobile phones may contain a remote wiping service through features as Find My iPhone.
+
+Plan also to prevent the evidence from being altered in any way. This is particularly relevant to volatile digital evidence, such as that in RAM and VMs, that cannot be recovered. Discuss this activity with the digital investigator prior to leaving for the scene. Evidence may also be lost if a device is closed and the data source was on an encrypted volume or device.
+
+Evidence may also be damaged by innocent actions as storing digital devices near liquids or electromagnetic sources. Static electricity may damage digital evidence, securing devices in boxes, bags, or Faraday bags will assist in the preservation of the integrity of the evidence. Prevent the potential for electromagnetic discharge damaging the digital evidence by touching a safe metal object to remove any static electricity on your person prior to picking up the digital evidence. In a perfect situation, there will be no changes to the status of the evidence obtained: however, if there is, document it immediately and explain the reasons why changes were made.
+
+Some suspects especially concerned about the potential of being identified build a kill switch into devices, so if law enforcement or another investigator

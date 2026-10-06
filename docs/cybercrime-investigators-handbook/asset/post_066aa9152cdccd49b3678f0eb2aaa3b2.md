@@ -1,0 +1,26 @@
+
+# 4 Introduction
+
+Although this book makes some references to material from third parties, it is not intended to be an academic book. This is because much of the material is from academic literature or web sources, but from the experience of the author as a cybercrime investigator. The major exception to this is Chapter 12, which relies on evidence from the author's doctoral thesis on cybercrime investigation in a cloud-computing environment and where academic references from a literature review are noted. Where explanations are provided, in the glossary, they are largely kept at a low-level technical definition to allow those new to this field of work to understand the material and its relevance without having to learn a whole new language technology.
+
+Due to the dynamic nature of evidence, advances in technology, and the evolution/legal/court decisions, this book is not intended to be an exclusive guide in every legal jurisdiction or to cover every potential cyber event. Where material in this book conflicts in any way with the laws of your jurisdiction, the legal environment(s) you operate in will always take precedence. The book intends to provide critical to a cyber event is to fix the system and prevent an attack from happening again, we will also ask whether there is a responsibility on the part of the data owner to identify the attacker and attempt to get the stolen data back before it is exploited.
+
+Once we have an understanding of offenses, offenders' motivations, initial alerts, and attack methodology, in Chapter 6 we will learn about the role of the law in your investigation. Should an attacker be identified and presented before the court, every aspect of your investigation is subject to critical examination by the defendant's lawyers, and your actions and their legality may be as much on trial as the activity of the defendant.
+
+Whether you are conducting a civil or criminal investigation, the complainant will provide direction to the investigation they want from you. You will have information on which to base your investigation as well as the authority to provide the resources you require. In Chapter 7 we will cover the many aspects of your initial meeting with the complainant, including numerous questions you may find relevant to ask them at this meeting.
+
+Chapter 8 provides a general introduction to the role of the digital investigator for the cyber investigator. Although the cyber investigator will not necessarily be involved in the technical aspect of the incident response while the attack is underway, it will be of benefit to them to understand what the IR examiners are doing and the consequences of their actions influencing the digital evidence.
+
+The cyber investigator will be involved in preserving evidence and in discussion with the digital investigator and IR teams as to the seizure of evidence, including a priority on preserving digital evidence, especially that which is most volatile.
+
+The cyber environment provides unique challenges to the investigator, and a variety of these challenges are introduced in Chapter 9. As you are operating in a dynamic environment, the challenges you face vary according to the circumstances of your case and the evidence you are seeking.
+
+In Chapter 10 we move into the cybercrime scene investigation and cover many of the areas of a search you need to be aware of and understand. Cybercrime investigations involve unique challenges to the investigator and these are identified and discussed. As you are operating in a physical and digital environment the challenges faced will differ among investigations, and the investigator will need to expand their thinking to understand their changing environment.
+
+Log files are critical to cybercrime investigations: when activated and secured, they will tell you lot about the attacker, their methodologies, and the data they accessed. In Chapter 11 we will introduce many log types, which can be found, and what they mean to you as an investigator.
+
+Log files are like video cameras at a crime scene. Like a camera, if they are turned off or not preserved, they can be totally unusable. Log record activity on a device and network may provide very valuable evidence as to what happened, how it happened, when the breach occurred, and in some instances, what was behind it. The investigator may need to work with the digital investigator to understand what the logs are saying; however, this form of technical evidence may be crucial to your investigation—to the point where you might be criticized in court if you did not follow this potential evidence trail.
+
+Chapter 12 addresses legal and technical issues involved in locating and lawfully seizing evidence from a cloud-computing platform. As data is now stored on multiple computer servers in multiple legal jurisdictions, identification and preservation has become a far more complex procedure than when the examiner could physically seize a device that was suspected of being breached. Chapter 12 covers many of the legal and technical issues to be considered by the investigator, with suggested pathways to advancing your investigation in the cloud.
+
+Chapter 13 provides a very brief introduction to the Internet of Things (IoT), which includes the multitude of devices connected online.
