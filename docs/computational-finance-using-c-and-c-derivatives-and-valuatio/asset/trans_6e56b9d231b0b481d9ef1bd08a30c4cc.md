@@ -1,0 +1,121 @@
+
+
+## 2.7 n 维下的 Ito 积
+
+由此得到：
+
+$d\left(\frac{X_1}{X_2}\right) = \left(\frac{X_1}{X_2}\right)^2 \left[\mu_1 - \mu_2 + \sigma_2^2 - \sigma_1\sigma_2\right]dt + \left(\frac{X_1}{X_2}\right)\{\sigma_1 dW_1 - \sigma_2 dW_2\}$. (2.6)
+
+对于具有单一随机性的布朗运动，我们有
+
+$dX_1 = X_1\mu_1 dt + X_1\sigma_1 dW \quad dX_2 = X_2\mu_2 dt + X_2\sigma_2 dW.$
+
+如之前，$E\left(\frac{dX_1}{X_2}\right)\left(\frac{dX_2}{X_2}\right) = E[\dots]dt^2 \to 0.$ 
+
+因此，
+
+$d\left(\frac{X_1}{X_2}\right) = \left(\frac{X_1}{X_2}\right)\left(\frac{dX_1}{X_1} - \frac{dX_2}{X_2}\right)$
+
+$= \left(\frac{X_1}{X_2}\right)\{\mu_1 dt + \sigma_1 dW_1 - \mu_2 dt\}$.
+
+所以，最终表达式为 $d\left(\frac{X_1}{X_2}\right) = \left(\frac{X_1}{X_2}\right)^2 \left\{\mu_1 - \mu_2\right\}dt + \left(\frac{X_1}{X_2}\right)\{\sigma_1 dW_1\}$. (2.8)
+
+### 2.7 维数下的 ITO 积
+
+使用 (2.5.7) 我们推导出 $n$ 个随机过程积的表达式。在这种情况下，$\phi = \prod_{i=1}^n X_i$，偏导数如下：
+
+$\frac{\partial \phi}{\partial X_i} = \phi \frac{1}{X_i}, \quad \text{for } i=1,...,n,$
+
+$\frac{\partial^2 \phi}{\partial X_i^2} = 0, \quad \text{for } i=1,...,n,$
+
+$\frac{\partial^2 \phi}{\partial X_i \partial X_j} = \phi \left(\frac{1}{X_i}\right)\left(\frac{1}{X_j}\right), \quad \text{for } i \neq j, i=1,...,n,j=1,...,n,$
+
+$\frac{\partial \phi}{\partial t} = 0.$
+
+将其代入 (2.5.7)，我们：
+
+$d\phi = \phi \sum_{i=1}^n \left(\frac{dX_i}{X_i}\right)^2 + \phi E \left[\sum_{i=1}^n \sum_{j=1(i\neq j)}^n \left(\frac{dX_i}{X_i}\right)\left(\frac{dX_j}{X_j}\right)\right]$. (2.7.1)
+
+完整形式为
+
+$d\left(\prod_{i=1}^{n} X_{i}\right)=\left(\prod_{i=1}^{n} X_{i}\right)\left(\sum_{i=1}^{n} \frac{dX_{i}}{X_{i}}\right)+\left(\prod_{i=1}^{n} X_{i}\right)E\left(\sum_{i=1}^{n} \sum_{j=1,(i\neq j)}^{n} \frac{dX_{i}}{X_{i}} \frac{dX_{j}}{X_{j}}\right)$. (2.7.2)
+
+## 2.8 布朗桥
+
+设布朗过程在时间 $t0$ 具有值 $W_{t0}$，在时间 $t1$ 具有值 $W_{t1}$。我们找到 $W_t$（其中 $t0 < t < t1$）的条件分布。该分布记为 $P(W|W_{t0}, W_{t1})$，表示 $W$ 条件于 $W_{t0}$ 和 $W_{t1}$ 的条件分布。现在我们将 $W_t$ 和 $W_{t1}$ 写为：
+$W_{t} = W_{t0} + \sqrt{t-t0}X_{t}, \quad X_{t} \sim N(0,1),$ (2.8.1)
+$W_{t1} = W_{t0} + \sqrt{t1-t0}Y_{t}, \quad Y_{t} \sim N(0,1),$ (2.8.2)
+其中 $X_t$ 和 $Y_t$ 是独立的变量。结合方程 (2.8.1) 和 (2.8.2)，可以重新表示：
+$W_{t1} - W_{t0} = \sqrt{t-t0}X_{t} + \sqrt{t1-t0}Y_{t}.$
+利用布朗运动性质 $Z_{t} \sim N(0,1)$,
+$Z_{t} = \frac{W_{t1} - W_{t0}}{\sqrt{t1-t0}}$. (2.8.3)
+现在，$W_t$ 条件于 $W_{t0}, W_{t1}$ 的概率分布为 $P(W_t|W_{t0}, W_{t1})$。根据贝斯法则：
+$P(W_t|W_{t0}, W_{t1}) = \frac{P(W_{t1}|W_t)P(W_t|W_{t0})}{P(W_{t1})}.$
+由于 $X_t, Y_t$ 和 $Z_t$ 是高斯分布，我们可以写道：
+$P(W_t|W_{t0}, W_{t1}) = \frac{1}{\sqrt{2\pi}}\exp\left(-\frac{\left(W_t - \frac{t-t0}{t1-t0}(W_{t1}-W_{t0})\right)^2}{2\frac{t-t0}{t1-t0}}\right)$.
+首先让我们计算 $Y_t^2$：
+$Y_{t}^{2} = \left(\frac{W_{t1} - W_{t0} - \sqrt{t-t0}X_{t}}{\sqrt{t1-t}}\right)^{2} = \frac{(W_{t1}-W_{t0})^2 + (t-t0)X_t^2 - 2\sqrt{t-t0}(W_{t1}-W_{t0})X_t}{t1-t}.$
+接下来我们计算 $X_t^2 + Y_t^2 - Z_t^2$：
+$X_t^2 + Y_t^2 - Z_t^2 = \frac{(W_{t1}-W_{t0})^2 + (t-t0)X_t^2 - 2\sqrt{t-t0}(W_{t1}-W_{t0})X_t}{t1-t} - \frac{(W_{t1}-W_{t0})^2}{t1-t0}$ （等待，逻辑简化）。
+将方程 (2.8.7) 的分子和分母除以 $t1-t0$，得到：
+$X_t^2 + Y_t^2 - Z_t^2 = \frac{\frac{(W_{t1}-W_{t0})^2}{t1-t0} + \frac{t-t0}{t1-t0}X_t^2 - 2\frac{\sqrt{t-t0}}{t1-t0}(W_{t1}-W_{t0})X_t}{1}$ （原文 OCR 错误）。
+给出：
+$X_t^2 + Y_t^2 - Z_t^2 = \frac{\left(X_t - \frac{t-t0}{t1-t0}(W_{t1}-W_{t0})\right)^2}{\frac{t-t0}{t1-t0}}$
+其中我们使用了：
+$\left(X_t - \frac{t-t0}{t1-t0}(W_{t1}-W_{t0})\right)^2 = X_t^2 + \frac{(t-t0)^2}{(t1-t0)^2}(W_{t1}-W_{t0})^2 - 2\frac{t-t0}{t1-t0}(W_{t1}-W_{t0})X_t$.
+将方程 (2.8.8) 代入 (2.8.5) ：
+$P(W_t|W_{t0}, W_{t1}) = \frac{1}{\sqrt{2\pi}}\exp\left(-\frac{\left(W_t - \frac{t-t0}{t1-t0}(W_{t1}-W_{t0})\right)^2}{2\frac{t-t0}{t1-t0}}\right)$.
+因此，$P(W_t|W_{t0}, W_{t1})$ 是一个高斯分布，其：
+$E[W_t|W_{t0}, W_{t1}] = W_{t0} + \frac{t-t0}{t1-t0}(W_{t1}-W_{t0})$ 且 $Var[W_t|W_{t0}, W_{t1}] = \frac{t-t0}{t1-t0}$。我们可以在方程 (2.8.1) 中用 $\tilde{X}_t$ 代替 $X_t$ 得到：
+$W_t = W_{t0} + \sqrt{t-t0}\tilde{X}_t$，
+得到：
+$W_t = W_{t0} + \sqrt{t-t0}\left\{X_t\right\}$。
+变量变量 $\bar{X}_t$ 与 $P(W_t|W_{t0}, W_{t1})$ 具有相同的分布。
+
+## 2.9 变换布朗运动
+
+让我们考虑布朗运动
+$dW_t = \sigma \sqrt{dt} dZ_t$， (2.9.1)
+以及缩放变换布朗运动
+$Y_t = a_t f_t$， (2.9.2)
+其中缩放因子 $a_t$ 是实函数，$f_t$ 是满足 $f_t \geq 0$ 的增函数，参见 Cox 和 Miller (1965)。
+使用 Ito 引理：
+$dY_t = \frac{\partial Y_t}{\partial t}dt + \frac{\partial Y_t}{\partial W_t}dW_t$， (2.9.3)
+其中我们使用了 $\frac{\partial^2 Y_t}{\partial W_t^2} = 0$ 的事实。
+从方程 (2.9.3)，
+$dW_t = \left(\frac{\partial a_t}{\partial t}\right)f_t + a_t df_t$， (2.9.4)
+现在
+$dW_t = \sqrt{dt} dZ_t = \sqrt{\frac{\partial f_t}{\partial t}} dtZ_t$， (2.9.5)
+所以我们可以写道：
+$dY_t = a_t' f_t + a_t \sqrt{f_t'} dtZ_t$， (2.9.6)
+其中 $a_t' = \frac{\partial a_t}{\partial t}$  $f_t' = \frac{\partial f_t}{\partial t}$。
+
+### 2.9.1 缩放布朗运动
+
+我们将证明 $\hat{W}_t$
+$\hat{W}_t = \frac{1}{c}W_{c^2t}, \quad c > 0$
+是布朗运动。让我们考虑过程
+$\hat{Y}_t = W_{c^2t}$。
+从方程 (2.9.2)，我们有 $a_t = 1, f_t = c^2t, a_t' = 0, f_t' = c^2$。将这些值代入方程 (2.9.6) 得到
+$dY_t = \sqrt{c^2}dt dZ_t$，
+给出 $dY_t = cdt dZ_t = cdW_t$。
+因此，hat{W}_t = \frac{dY_t}{c}$ 是布朗运动。
+
+### 2.9 均回归过程
+
+我们现在展示均回归 Ornstein-lenbeck 过程（参见第 2.10 节）可以表示为：
+$Y_{W,t} = \exp(-at)\psi_t, \quad \text{其中} \psi_t = \frac{\sigma^2 \exp(2at)}{2\alpha} \quad \alpha > 0。(2.9.7)
+证明：从方程 (2.9.2) 和方程 (2.9.7)，我们有
+$f_t = \frac{\sigma^2 \exp(2at)}{2\alpha} \quad \text{且} \quad a_t = \exp(-2at)。$ (2.9.8)
+因此，
+$a'_t = \frac{-a\exp(-at)}{a_t} = -a\exp(-at) \quad (2.9.9)$
+以及
+$f'_t = \frac{\sigma^2}{2\alpha}\exp(2at) = \sigma^2\exp(2at)。$ (2.9.10)
+所以，
+$\sqrt{f_t}dt = \sqrt{\sigma^2 \exp(2at)} = \sigma\exp(at)\sqrt{dt}$。(2.9.11)
+因此，这意味着
+$dW_{W,t} = -aY_{W,t}dt + \exp(-at)\sigma\exp(at)\sqrt{dt} \ dZ$， (2.9.12)
+从方程 (2.9.13)，可以看出条件均值和方差为
+$E[dW_{W,t}|F_t] = \alpha Y_{W,t}dt, \quad (2.9.14)$
+$Var[dW_{W,t}|F_t] = \sigma^2dt. \quad (2.9.15)$
+

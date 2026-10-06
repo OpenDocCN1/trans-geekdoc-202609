@@ -1,0 +1,15 @@
+of de grain and 20% annum for loans of silver. All loan contracts had to be drawn up in the presence of an official witness. To protect the creditor, pledges and sureties were well allowed. Any property, real or personal, could be pledged – wife, concubine, children, slaves and utensils. However, for debt was limited to three years. The temples were also active in finance and they granted loans of silver and grain, making loans to the poor without interest.
+
+Figures 9.1 and 9.2 show a financial loan from the second millennium BC. It was excavated at Sippar and in the British Museum. The contract was written in cuneiform on clay tablets and consists of both inner and outer sections. The outer envelope bears a duplicate text of the inner tablet as well as the impressions of the cylinder seals of the debtor and three of the witnesses. These clay tablets record a charitable loan of silver, issued by the temple of the sun-god Šamas of Sippar, the so-called Ebabbat. The temple provides a man called Kišuš with the means to satisfy his creditor Ilum-abi, without charging any interest. Kišuš is to pay back the loan to the temple after he has brought in his harvest. This was the commonest time of year for paying debts, as Mesopotamian landowners were usually solvent. The witnesses include high temple authorities. The first one, Lip-Ishtar, impressed his father’s seal on the upper edge of the envelope.
+
+# 9.2.2 Biblical Times
+
+The Old Testament contains various directives and references relating to loans, the purchase of property and debts. Many of these are concerned with protecting the poor and preventing a skewed distribution of wealth.
+
+Leviticus 25:8-17 states that every fifty years (the year of the Jubilee) all property was to be restored to its original owners, and in Leviticus 25:35-43 we are told to help the poor but not charge on loans. Deuteronomy 24:10-13 gives the following description of a collateralised loan:
+
+10 When you make a loan of any kind to your neighbour, do not go into his house to get what he is offering as a pledge. 11 Stay outside and let the man to whom you are making the loan bring the pledge out to. 12 If the man is poor, do not go to sleep with his pledge in your possession. 13 Return his cloak by sunset so he may sleep in it. Then he will thank you, and it will be regarded as a righteous act in the light of the LORD your God (New International Version)
+
+Money also played an important part in the marriage contract. Usually it was the fathers who arranged the match, and had to give a dowry to the prospective father-in-law. Genesis relates the story of Abraham’s servant, Eliezer, who was sent to find a bride for Isaac, see Fig. 9:3:
+
+22 When the camels had finished drinking, the man took out a gold ring weighing a beka and two gold bracelets weighing ten shekelas. Genesis 24:2 (New International Version)
