@@ -1,0 +1,7 @@
+# Blockchain: Next-Generation Technology
+
+![](bbox=[0.121, 0.087, 0.878, 0.526])
+
+FIGURE 11.7 Existing KYC details maintenance system.
+
+The same data being stored in the centralized database causes redundancy and wastage of money. The KYC information is unnecessarily replicated by multiple banks for creating an account. From the bank side, the banks maintain a vast amount of data in a centralized database and spent over for their maintenance. Such data do not give any incentive to the corresponding banks. Since the data are stored in a centralized database, they lack security. There is no insurance given to the customer's information from the bank side. The blockchain-based KYC verification system can create a block for each bank and the customer add the KYC information and store it into the blockchain network by creating account on blockchain through the customer account. They can request the bank they need to create an account for which the details stored in the blockchain will be modified or changed only by the customer and customer's permission. The requested bank can view the customer KYC document by giving a request to the customer profile, and the customer may give an option of either allow or deny if the customers allow the view request, and then the blockchain provides a transparent view to the bank and government can be able to verify the KYC document that is issued by the government. The information stored in the blockchain is additional security (Figure 11.8).
