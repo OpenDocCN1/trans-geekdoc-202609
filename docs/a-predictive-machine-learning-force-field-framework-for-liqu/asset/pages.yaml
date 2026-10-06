@@ -1,0 +1,986 @@
+- pgno: 0
+  md: '# nature machine intelligence
+
+
+    Article
+
+
+    https://doi.org/10.1038/s42256-025-01009-7
+
+
+    # # A predictive machine learning force-field framework for liquid electrolyte
+    development
+
+
+    Received: 9 May 2024
+
+    Accepted: 10 February 2025
+
+    Published: 1 April 2025
+
+
+    Sheng Gong¹,³, Yumin Zhang¹,³, Zhenliang Mu²,³, Zhichen Pu²,
+
+    Hongyi Wang², Xu Han², Zhaiao Yu¹, Mengyi Chen²,, Tianze Zheng²,, Zhi Wang¹,,
+
+    Lifei Chen¹,, Zhenze Yang¹,, Xiaojie Ji, Shaochen Shi²,, Weihao Gao²,,⁵
+
+    Wen Wan¹⁵
+
+
+    Despite the widespread applications of machine learning fields (MLFFs) in solids
+    and small molecules, there is a notable gap in applying MLFFs to simulate liquid
+    electrolytes—a critical component of commercial lithium-ion batteries. We introduce
+    ByteDance Artificial Intelligence Molecular simulation Booster BAMBO, a predictive
+    framework for molecular dynamics, with a demonstration of its capability in the
+    context of liquid electrolytes for lithium batteries. We design a physics-inspired
+    graph equivariant transformer architecture as the backbone of BAMBO to learn from
+    quantum mechanical simulations. Additionally, we introduce an ensemble knowledge
+    distillation approach and apply it to MLFFs to reduce the fluctuation of observations
+    from molecular dynamics simulations. Finally, we propose a density alignment algorithm
+    alongside BAMBO which demonstrates state-of-the-art accuracy in predicting key
+    electrolyte properties such as density, viscosity and ionic conductivity across
+    various solvents and salts. The current model, trained on more than 15 chemical
+    species, achieves an average density of 0.01 g cm⁻³ on various
+
+
+    Liquid electrolyte is an indispensable component of the current commercial lithium-ion
+    batteries¹. The existing commercial electrolytes are mostly carbonate-based, and
+    composed of five to ten different materials. Experimentally exploring molecular
+    interactions for the rational design of electrolytes is expensive, time consuming
+    and heavily reliant on chemists'' intuition and experience. Limitations poses
+    challenges in transitioning from proof-concept experiments to products markets,
+    particularly due to the increasing complexity in optimizing the properties of
+    multiplicity
+
+
+    Atomistic simulation is an accessible and feasible alternative to exhaustive experimentation.
+    However, to achieve reliable requirements, such as high accuracy and sufficient
+    timescale and lengthscale. Quantum mechanical simulations offer high accuracy
+    in describing electronic properties, yet they are computationally intensive and
+    impractical for large-scale and complex systems like liquid electrolytes. While
+    classical methods, although efficient, often sacrifice accuracy in capturing molecular
+    structures and behavior of electrolytes, there presents a need for a balanced
+    and general approach that can reconcile the difference between
+
+
+    ¹ByteDance Research, Bellevue, WA, USA.ByteDance Research, Beijing, China. *These
+    authors contributed equally: Sheng Gong, Yumin Zhang, Zhenliang M. e-mail: liverover001@gmail.com,
+    wen@bydance.com
+
+
+    Nature Intelligence | Volume 7 | April 2025 | 542–553
+
+
+    543'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41467-025-01009-7
+
+
+    and in modeling liquids with electrolytes: multiple solvents and varying types
+    of ions.
+
+
+    liquids, with a particular focus on electrolytes. The main contributions of this
+    paper are summarized as follows: (1) We present a ML model that integrates a graph
+    equivariant transformer (GET) architecture to capture both semi-local and direct
+    electrostatic interactions. (2) We demonstrate the application of an ensemble
+    knowledge distillation algorithm to reduce the fluctuation of results obtained
+    from ML-based MD simulations. (3) We propose a physics-informed data algorithm
+    aligning MLFF-MD simulations with experimental data, which ensures physical consistency
+    and demonstrates considerable limitations to liquids not included in the alignment
+    process. As a result, BAMBOO shows state-of-the-art accuracy in predicting the
+    density, viscosity and ionic conductivity of various liquids.
+
+
+    In recent years, there has been a growing utilization of machine learning force
+    fields (MLFFs) to perform molecular dynamics (MD) simulations. This trend is primarily
+    attributed to the ability of MLFF to deliver results faster than initio quantum
+    mechanical simulations, as well as chemical quality data with comparable accuracy.
+    The development of MLFFs has been limited by the lack of high-quality data for
+    diverse fields of matter. This field has also seen a shift from descriptor-based
+    rotation-invariant MLFFs$^{1-16}$ towards graph neural networks (GNNs) with rotation-equivariant
+    representations$^{17-20}$ and transformers. On the other, progress has been made
+    by incorporating constraints derived from general physical consistency into MLFFs.
+    This includes electrostatic interactions$^{21-24}$ and spin-spin interactions.
+
+
+    # Results
+
+
+    Advances in the architecture of ML models and the concept of ‘universal’ ML, which
+    allows a single model to simulate a wide range of systems, have gained increasing
+    attention within the field of solid-state materials$^{25-30}$ and bio-organic
+    molecules$^{31-32}$. However, when it comes to electrolytes, which are complex
+    mixtures, the ability of ML to predict multiple properties across various solvents
+    and salts is still lacking. This limitation may arise from the complex challenges
+    inherent in electrolytes, such as the coexistence of different species and the
+    formation of ion pairs and clusters (AGG). As a result, utilizing to simulate
+    aqueous systems$^{33-34}$, molecular liquids and ionic liquids$^{35}$ remains
+    a notable research difficulty focused on MLFF for electrolytes.
+
+
+    We illustrate the workflow of BAMBOO. In Ia., we simulate local environments within
+    lithium electrolyte as gas clusters and subsequently use density functional theory
+    (DFT) to compute their energies, structures, and properties. In Ib., we demonstrate
+    the broad accuracy of BAMBOO on various molecules and salts in the DFT dataset
+    (Fig. 1). In particular, our focus encompasses compounds commonly found in electrolytes
+    utilizing lithium ions, such as carbonates. In Ic., we incorporate two most frequently
+    used organic liquids—ethanol (EO) and acetone (AC)—to show the generalizability
+    of the trained model. The quantities calculated using DFT are used to train a
+    GNN to generate the MLFF. The MLFF is then used to perform MD simulations. These
+    independently trained GNNs are then compared with measured data, specifically
+    density in this context, to evaluate their performance. Details of methodology,
+    distillation and alignment algorithm are provided in the following sections.
+
+
+    Prior to this work, several efforts have been made to simulate electrolytes using
+    MLFFs: Ref29 utilized deep potential to calculate the density and solution structure
+    of LiTFSI in water; Ref36 used a charge reactive neural network to predict the
+    ionic conductivity of electrolytes in solvents. Despite achieving some success,
+    these studies lack clear evidence regarding the generalizability of their findings
+    across a wide range of electrolytes. For instance, Ref30 used a charge reactive
+    neural network to achieve high accuracy only for specific salt systems.
+
+
+    In addition to the scarcity of MLFFs for electrolytes, there are two major challenges
+    encountered with MLFFs: we have encountered issues of data scarcity and fluctuation
+    of results, which stem from the inherent nature of ‘machine-learning’ and the
+    partial usability of MLFFs. Most deep learning-based models are solely relying
+    on quantum mechanical simulations, which lack the flexibility to match experimental
+    data of diverse systems across different scales.
+
+
+    Despite the conceptual challenge of universal molecular fields$^{37-39}$, deep
+    learning-based MLFFs are available parameters are limited by optimized experimental
+    results.
+
+
+    In this work, we introduce the ByteDance Artificial Intelligence Molecular Booster
+    (BAMBOO) workflow, designed for constructing MLFFs for the MD simulations of organic
+
+
+    In II, we describe the setup of semi-local, electrostatic and direct interactions
+    in BAMBOO. In gallery, we explicitly compute the interactions between corresponding
+    types of atoms and the two types of atoms to calculate the total energy. (1) The
+    semi-local interaction is generated by a GNN with message layers to decode the
+    data in the following section. The GET takes the atom types $\{i\}$ and the relative
+    coordinates $r_{ij} = |r_i - r_j|$ as input, and outputs the energy $E_{ij}$ to
+    encode the local environment. We further input $\{i\}$ to a multilayer perceptron
+    to output the predicted predicted energy $E_i^{sc}$. (2) The electrostatic energy
+    is computed by summing all $E_{ij}$. The representations of $\{i\}$ are fed into
+    another neural network to output the predicted electrostatic energy $E_{ij}^{el}$.
+    The total electrostatic energy $E^{el}$ is based on the predicted charge distribution
+    under the framework of charge equilibrium$^{40}$. (3) Dispersion energy is directly
+    computed on DFT-B3LYP correction$^{41}$. Finally, we sum the dispersion energy
+    $E^{disp}$ to obtain the total energy $E$ of the system.
+
+
+    The details of the energy model we used are provided in the Methods section. For
+    example, as the energy is computed on relative coordinates $r_{ij}$ rather than
+    absolute coordinates $r_i$, the force is naturally defined and satisfying Newton''s
+    third law for computing
+
+
+    Nature Intelligence | Volume 7 | 2024 | 545–553
+
+
+    544'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Article
+
+
+    https://doi.org/10.1038/s42256-025-0069-7
+
+
+    ![](img/ac51b572e1f4f05e6515577021393961_2_0.png)
+
+
+    Fig. 1 | Overview of BAMBOO. The training process of BAMBOO. Separation of interactions
+    in BAMBOO. MLP, vector equilibrium model, (c). Schematic of the GNN (d). The GEL
+    layer inside the GNN and the transformer inside the GEL layer (e). f). Schematic
+    of ensemble knowledge (g) and density alignment of BAMBOO.
+
+
+    the microscopic scale. The atomic force is computed by summing the pairwise forces:
+    $f_i = \sum_j f_{ij}$. exchange information with one another through the transformer,
+    and scalar and vector representations also exchange information with each. Details
+    of the GEL architecture are provided in the Methods.
+
+
+    # Architecture of GEL layers
+
+
+    In Fig. 2c, the GEL architecture used in BAMBOO draws inspiration mainly from
+    the TorchM-NET. Beginning with the atom blocks $[Z_i]$ and the positions between
+    atoms $[\mathbf{r}_{ij}]$, we first initialize the scalar representation $x_i^0$
+    and the vector representation $v_i^0$, as well as the scalar edge blocks. We feed
+    $x_i^0$ and $v_i^0$ into the GEL layers to be transformed iteratively (c). As
+    indicated in Fig. 1d, each GEL layer transforms each scalar block within a cut-off
+    radius ($r=5$ Å). This figure illustrates how information is exchanged between
+    nodes and edges. After the transformer block, on the scalar side, we update with
+    $x_i^l$; the vector representation $v_i^l$ is transformed into a scalar $u_i^l$.
+    The transformation from vector to scalar is achieved through the inner-product
+    operation to maintain rotational invariance. Finally, we combine $x_i^l$ and $u_i^l$
+    to obtain the next-layer scalar representation $x_i^{l+1}$, and $v_i^l$ and $u_i^l$
+    to obtain the next-layer vector representation $v_i^{l+1}$. In this process, scalar
+    $x_i^l$ is multiplied to prevent the vector representation. Overlap, with each
+    GEL layer, all the neighboring atoms
+
+
+    Nature Intelligence | 7 | April 2025 | 543–552
+
+
+    545'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Article
+
+
+    https://doi.org/10.1038/s42256-025-01009-7
+
+
+    ![](img/ac51b572e1f4f05e6515577021393961_3_0.png)
+
+
+    **Fig. 2, c–f** of of DeFT layers, ensemble knowledge density and density alignment.
+    **a.** Effects of equivariance, transform and shape in BAMBOO for predicting energy
+    (a), **b** and density (c). All the models are using the same DFT training set,
+    ensemble knowledge density and density alignment. The metrics include the mean
+    square error (m.s.e.) and mean absolute error (m.a.e.). Here the bars plot the
+    mean values and standard deviation from models trained with different seeds. **d.**
+    Effect of ensemble knowledge density on the standard (m.a.d.) of density from
+    models generated by randomly trained MLFs. Data are presented as s = 13 samples
+    shown
+
+
+    In Supplementary Material, **e.** Effect of density alignment (AI) on the predictions
+    of density, viscosity and conductivity from MD. Mean absolute deviation (m.a.d)
+    is used as a metric in percent data. Data are presented as s = 11, 15, 27 and
+    45 samples shown in Supplementary Fig. 10 and Supplementary Tables 12–15. **g.**
+    Inference speed comparison between BAMBOO and Torch-MD 2.0. We compare the three-layer
+    BAMBOO with the two-layer Torch-Net module in Torch-MD 2.0 (ref. 48). We delineate
+    the inference speed in steps per day and in times step per millisecond. Speeds
+    are tested on a single NVIDIA GPU.
+
+
+    Nature Intelligence | July 2025 | 542–553
+
+
+    543'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Article
+
+
+    Table 1 | Comparison of inference speed of BAMBO on a gas-phase molecule with
+    other GNN MLFFs (3-benzyl)pyridine-2-amine, on fair comparison
+
+
+    | Model | Allegro (L+1) | VisNet (L+1) | BAMBO |
+
+    |---|---|---|--|
+
+    | Speed (ms) | 17.5 | 13.0 | 6.2 |
+
+
+    BAMBO is compared with other MLFFs using spherical harmonic order of L=1, as BAMBO
+    uses scalar and vector embeddings. The experiments are conducted on NVIDIA A100
+    GPU.
+
+
+    with previous methods we utilize transformer, efficient computation of electrostatic
+    interactions. The results of the study, along with the adapted models, will be
+    presented in Supplementary Table 5.
+
+
+    Compared with TorchMD-Net, our method enhances efficiency through two strategies.
+    On one hand, we utilize attention mechanism to reduce the computational complexity
+    from O(N^2) to O(N). On the other hand, we maintain certain characteristics and
+    neural networks that do not significantly contribute to the capacity of the model.
+    As our method benefits from a significant inference speed (e.g., In this work,
+    we use the large-scale dataset of 10,000 molecules to run the MD simulations),
+    we can demonstrate the potential of BAMBO to accelerate the MD simulation process,
+    which will be introduced in the future.
+
+
+    transformation, further illustrating the generalizability of ensemble knowledge-based
+    distillation.
+
+
+    the final step of training BAMBO, we introduce the concept of density alignment.
+    We identify two potential sources of systematic bias between MLFFs and experimental
+    data. On one hand, the choice of DFT functional, basis set and correction may
+    lead to systematic errors on intermolecular interactions. On the other hand, the
+    deviation from the training data set of small gas phase clusters and molecules.
+
+
+    To address this, we align BAMBO with experimental data. Given the limited experimental
+    data and the high dimensionality of MLFFs, alignment must ground itself in physics
+    to ensure its transparency. Here, we use the macroscopic observer for alignment,
+    leveraging pressure as the link between the macroscopic and microscopic experiments.
+    Our results show that the required alignment with MD simulations (density fig.)
+    is that we can correct these systematic errors with intermolecular forces, followed
+    by utilizing the adjusted force to refine the BAMBO parameters.
+
+
+    # Ensemble distillation and density alignment
+
+
+    In Fig. 2, we illustrate the concept of ensemble knowledge-distillation in machine
+    learning can introduce various challenges into MD simulations. With particular,
+    if we use electrolytes that GNNs trained with different datasets report, the density
+    results vary, yielding divergent macroscopic properties. This density fluctuation
+    is an inherent process which, in particular, an MD simulation in liquids, can
+    be treated as fluctuations of density around 0.004 g/cm³ across different random
+    seeds of the BAMBO MLFFs.
+
+
+    In Fig. 6, we show that density alignment effectively reduces density errors from
+    0.005 g/cm³ to 0.001 g/cm³. Importantly, the reduction in error achieved, using
+    only 13 experimental data points included in the alignment, transfers to not only
+    the tested molecules but also those with higher salt concentrations (Supplementary
+    Figs 10a and 12a). For example, the density of molecules with hydrogen bonding
+    characteristics is significantly improved.
+
+
+    To address this issue we aim to mitigate the discrepancy among MD simulations
+    by using ensemble of MLFFs to predict the energy and forces of MD trajectories.
+    We aggregate the mean and use this mean value to optimize the MLFFs. In Fig. 2
+    and Supplementary Table 7, we demonstrate the standard deviation of density predictions
+    from five models by more than 50%, from 0.030 g/cm³ to 0.014 g/cm³. In particular,
+    ensemble knowledge distillation does not require new DFT bodies. By BAMBO and
+    electrolytes used, this concept can be applied to any MLFF for systems. In Supplementary
+    Table 8, we provide another example of utilizing ensemble knowledge-distillation
+    on the fluctuation results of M3GN* in simulating solid-state phase
+
+
+    Furthermore, in Fig. 7, we illustrate that density alignment decreases the errors
+    of predicted properties such as viscosity and ionic conductivity. Through theoretical
+    analysis, the requirements of density alignment, and the relationship between
+    density, viscosity and ionic conductivity are demonstrated in the Methods. Our
+    results show that BAMBO represents an average error of 0.001 g/cm³, viscosity
+    reduction of 27% and ionic conductivity deviation of 26% across a wide range of
+    molecular liquids and solutions with varying salt concentrations. The level of
+    error achieved by BAMBO represents the state-of-the-art in this field (Supplementary
+    Materials 8).
+
+
+    Beyond pure solvents and electrolytes, we also provide the results of BAMBO on
+    more practical electrolytes (from four to eight components) in Supplementary tables
+    9 and 10. The density alignment process is mostly
+
+
+    Nature Intelligence | Volume 7 | April 2023 543–552
+
+
+    547'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41586-025-01009-7
+
+
+    Li concentrations in DMC:EC (5.49 wt%)
+
+
+    ![](img/ac51b572e1f4f05e6515577021393961_5_0.png)
+
+
+    1.12 m 2.25 m 3.74 m
+
+
+    Li atomic charges
+
+
+    Approximate structure functions
+
+
+    | | SSSP 0.751 | SSSP 0.484 | SSSP 0.182 |
+
+    |---|---|---||
+
+    | CIP | 0.171 | 0.260 | 0.276 |
+
+    | AGG | 0.078 | 0.246 | 0.542 |
+
+
+    ![](img/ac51b572e1f4f05e6515577021393961_5_1.png)
+
+
+    O atomic charges of FSI
+
+
+    Fig. 1: Atomic charge distributions and structure functions of lithium-solvated
+    Li in BAMEO. To the left: Li charge distributions of 1.12 m, 2.25 m and 3.74 m
+    LiF in DMC:EC environment of 5.49 wt%. The dotted lines in each panel, representing
+    freedom from left to right, are higher than the distributions of O_{mc}. The second
+    and third dashed lines represent the two oxygen-linked distributions of unpaired
+    intramolecular interactions. The charge values correlate with the CIP and AGG
+    solutions. To the left: O charge distributions and structure functions
+
+
+    based on systems such as pure solvents and electrolytes with fewer components,
+    BAMEO shows a similar degree of prediction accuracy for density, viscosity and
+    conductivity compared to simple systems (Supplementary Information 1), where we
+    further consider the transfer properties of ions in the system. More importantly,
+    we show that for these multicomponent systems, BAMEO achieves a higher prediction
+    accuracy than the current state-of-the-art methods such as Optimized Potentials
+    for Liquids Simulation (All-Atoms (OPAX) classical framework) for simulating the
+    liquid electrolyte and predicting liquid properties.
+
+
+    all the MD simulations of solvents (ethylene carbonate (EC), DMC) and electrolyte
+    (EA) remain stable within a temperature range of 28-343 K. For density prediction,
+    we find that the more unlike the unf solvated complex is compared with the base
+    molecule, the more accurate is the prediction. BAMEO performs remarkably well.
+
+
+    As transferability to molecules not in the DFT dataset, we employ the degree of
+    transferability of BAMEO to chemical species. Whether BAMEO can simulate unstable
+    molecules with bond types similar to those included in the DFT training set (Supplementary
+    Figure 1). We find that for systems with unsuns elements and unsaturated bonds,
+    BAMEO can accurately predict the properties through long-time MD simulations.
+    The molecules that can be simulated by BAMEO, we see that BAMEO has a density
+    of mean of 0.045 g/cm³ (0.011 g/cm³ and 16.7%), respectively. To refer to the
+    value of density on unknown molecules we conduct simulations on solvated molecules,
+    which we find
+
+
+    To make BAMEO perform to out-of-sample systems, we need enough effort to improve
+    the transferability of methods. The first approach is to consider the better machine
+    learning potentials, such as MACE-FF (ref. 24), which is trained on millions of
+    configurations. Using the strategy of large-scale training is very popular in
+    the realm of universal force field field models. However, the construction of
+    machine learning potentials with strong physical constraints, such as our work
+    that we use machine learning models to parametrize force fields with functional
+    forms, which ensure the force field can satisfy physical constraints, allows for
+    MD simulation. However, such restrictions also limit the use of ML for bond-breaking
+    events. Therefore, it is important to develop better methods that can stabilize
+    systems as many molecules as possible and preserve the ability to model bond-breaking
+    events when necessary. In a recent work, it is shown that the GNN-based model
+    is more robust to new molecules than a local descriptor-based model, which we
+    can hope inspire
+
+
+    Nature Intelligence | 7 | 2025 | 543–552
+
+
+    548'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41466-021-01009-7
+
+
+    development of machine learning architecture for transferability of fields.
+
+
+    the simulated 1/2 LiSi environment. An additional peak (f.g., yellow dotted line)
+    is visually identified in its similarity charge correlation with those shown in
+    Fig. 3c. We observe that the peak concentration increases from 1/2 m to 3.7 m.
+    This watershed is associated with ion pairing, and in peak height the solution
+    structure and charge prediction from BAMBOO are provided in Supplementary Figures
+    15 and 16.
+
+
+    # Solution structures and atomic charges
+
+
+    In addition to the accurate predictions of macroscopic properties, BAMBOO to explicitly
+    predict atomic charges enables it to provide additional insights about solution
+    structures in liquids. Here we present the Li- and O- charge-histograms derived
+    from the three Li electrolyte environments simulated at 1/2 m, 3.7 m, and salt
+    concentration of salt per kilogram. The weight ratio of Li to DC, 1:49, remains
+    consistent across all these environments. The histograms of all three FST are
+    presented in Supplementary Figures 15-16.
+
+
+    # Discussions
+
+
+    Three distinct peaks are observed in Fig. 3a. Each peak peaks the axis (Li+) at
+    approximately 0.622, 0.626, and 0.632. As respect from 1/2 m to 3.7 m, the peaks
+    shift, albeit with varying heights. Specifically, the highest peak corresponds
+    to the lowest Li concentration increases from 1/2 m to 3.7 m.
+
+
+    In summary, we present the BAMBOO framework for MD simulations of liquids. First,
+    we use a GET architecture that separates local (atomic) electrostatic and dispersion
+    interactions, leveraging knowledge from DFT calculations. We introduce an ensemble
+    decoding of results from MD simulations from BAMBOO. Moreover, we propose a physics-based
+    alignment approach to establish a consistent relationship between macroscopic
+    and microscopic scale results. Our results demonstrate the effectiveness of the
+    alignment process in reducing disparities.
+
+
+    This shift in charge distributions reveals the evolving solution structure across
+    different concentrations. We deconstruct the frames of the 3 ns of MD simulations,
+    and examine the solution structures for Li+ ions. The types of solution structure
+    and their fractions are tabulated and shown in each charge histogram. These fractions
+    are consistent with the observed trajectory for the first solution around shell
+    _, followed by extracting the central trajectory for the first solution around
+    shell _, surrounded by solvent molecules.
+
+
+    We conduct a comprehensive assessment for the performance of BAMBOO on solvents
+    and electrolytes. Our simulated results demonstrate that a single BAMBOO model
+    can predict properties, structures, and charges with high accuracy. The BAMBOO
+    model is able to simulate up to 15 species in various compositions. This robustness
+    underscores BAMBOO''s value in facilitating the design and optimization of practical
+    molecular systems.
+
+
+    In general, the solution structures are classified as SIP, CIP and AG. SEG denotes
+    the structure composed of solvent molecules; CIP structure contains one anion;
+    and AG, the structure composed of solvent and anion. Our analysis of radii of
+    FST is 0.791, 0.494 and 0.182 for LiSi environments of 1/2 m, 2.2 m, and 3.7 m,
+    respectively. The CIP radii are 0.171, 0.260 and 0.322, and the AG radii are 0.076,
+    0.142. The differences between SIP, CIP and AG are shown as a function of Li+
+    concentration. We visualize the peak height effect
+
+
+    # Methods
+
+
+    It is well known that solution interactions between Li+ and the surrounding molecules,
+    including solvents and anions, are proportional to the Li+ based coordination
+    environments. Electrolytes may lead to polarization induced changes in the partial
+    charge within the solution environment. We wish to demonstrate this, by aligning
+    the Li+ charge distributions across different environments within the FST. We
+    observe that three overlapping distributions (Fig. 3d–f), whereas the other show
+    a single distribution for all concentrations (Supplementary Figure 17).
+
+
+    # GET
+
+
+    As shown in Fig. 3, two peaks are right and right highlighted by the red dotted
+    lines. We posit that these peaks originate from two types of oxygen atoms in the
+    Li+ environment. This matches our observation from the simulation that at 1/2
+    m, Li+ is surrounded by solvent and anion atoms due to low concentration and AG
+    interactions. In these units, appearances are probably not stabilized by solvent
+    molecules. In lithium-ion electrolytes, solvent molecules are charged and DM are
+    designed to polarize positive ions, resulting in anions being free from solvent
+    molecules. The charge distributions at -0.370 and -0.360 are indicative of potential
+    tetrahedral differences in free FST of
+
+
+    Given the atomic structures
+
+
+    Nature Intelligence | Volume 7 | 2024 | 543–553
+
+
+    549
+
+
+    ![](img/ac51b572e1f4f05e6515577021393961_6_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "# Article\n\nhttps://doi.org/10.1038/s41586-025-01009-7\n\nnode level and edge.\
+    \ More of the GET model are provided in Supplementary Equations (1)–(2).\n\nas\
+    \ the labels to fine-tune the randomly selected model by the loss function (Supplementary\
+    \ Equation (52)). More details of the ensemble knowledge deconstruction of BAMBOO\
+    \ are provided in Supplementary Equations (47–53), Supplementary 3 and 4 and Supplementary\n\
+    \n# Separation of interactions\n\nOnce we reach the first layer, we use neural\
+    \ network-based per atom energy $E_i$ and atomic charges $q_i$ using two fully\
+    \ connected networks. Then, we define the electrostatic energy based on charge\
+    \ density theory. In this work, we improve the charge density using MLFF for efficiency.\
+    \ We use a regularization strategy to GNN to generate that an expensive equilibrium\
+    \ solver by MD timestep is also included. In addition, the structures, we can\
+    \ define the potential energy surface by density $D^{(i)}$. Finally, we combine\
+    \ the neural network, electrostatic and dispersion interactions to compute the\
+    \ total energy and force of each atom. More details of separation of interactions\
+    \ are provided in Supplementary Equations (22–45), Supplementary Table 1 and Supplementary\n\
+    \n# Density alignment\n\nWe use the ensemble model as the baseline for performing\
+    \ density alignment. To align the mixture, we first calculate the probability\
+    \ $P(\rho)$ of each liquid. By training the BAMBOO model to adapt to uniformly\
+    \ pressures ($\\Delta P$). Using these different MLFFs, we use 600 pN steps to\
+    \ generate the density profiles. We then establish a linear correlation between\
+    \ $\\Delta\rho$ and the $\\Delta P$ for each liquid. Leveraging this, we can determine\
+    \ the value $V$ for each liquid. Using this we identify the specific $\\Delta\
+    \ P$ that should be incorporated into the MLFF for each liquid to achieve alignment.\
+    \ Finally, we use the results provided in Supplementary Equation (58)–the appropriate\
+    \ $\\Delta P$ value identified for each liquid–align the baseline model with the\
+    \ ensemble data. Details on the density alignment of BAMBOO are provided in Supplementary\
+    \ Equations (54–58) and Supplementary Figures 9–13.\n\n# Initial training of BAMBOO\n\
+    \nWe use the GET architecture and structure to generate different interactions,\
+    \ using a loss function combining energy, force, viral and stress to train the\
+    \ neural networks in BAMBOO. Specifically, the charge is trained by BAMBOO is\
+    \ by four aspects: first is to train the neural network, force and charge and\
+    \ other with the electrostatic potential from charge density from electric potential;\
+    \ the third is to train the density, a macroscopic observable from charge densities\
+    \ by DFT $D$; and the fourth is to align the equilibrium structures.\n\nIn this\
+    \ work, we build neural networks in BAMBOO using PyTorch, and use the AdamMax\
+    \ optimizer at a learning rate of $10^{-2}$. In the training, the weight decay\
+    \ is set to 0.0001, while the learning rate decreases at a rate of $10^{-4}$.\
+    \ The batch size is 128. The model consists of three layers with an embedding\
+    \ dimension of 64. It features 16 attention heads, uses a cut-off of 0.5 Å per\
+    \ message passing layer and includes the fully connected networks with two layers\
+    \ for predicting energy and force.\n\n# MLFFs\n\nWe use LAMMPS for the MD simulations\
+    \ for BAMBOO. For each system, the initial step is energy minimization, which\
+    \ is constrained to a maximum of 10000 iterations and 100000 evaluations. Following\
+    \ this, the systems are subjected to equilibration with a step size maintained\
+    \ at at least 1 fs. The density values are provided in the following table. We\
+    \ then run 4-ns of production run under the DFT ensemble to estimate the density\
+    \ and conductivity of the liquids. We calculate the conductivities using the Einstein-Nernst\
+    \ and a method described in previous work 'On-surface of Maxwell-Wagner'. Details\
+    \ of the MD simulations are provided in Supplementary Equations (64).\n\n# Data\
+    \ availability\n\nDatasets are available at https://huggingface.co/datasets/ml-bamboo.\
+    \ The full dataset includes parameters, atomic structures for LAMMPS, and the\
+    \ final results, ensemble data and the results are also available in Zenodo at\
+    \ https://doi.org/10.5281/zenodo.6460320 (ref).\n\n# Code availability\n\nThe\
+    \ source codes, the GET training model and the LAMMPS input for simulations, are\
+    \ available at https://github.com/bydentance/bamboo and at Zenodo at https://doi.org/10.5281/record.6460320\
+    \ (ref).\n\n# Ensemble knowledge discovery for MLFF\n\nIn this work, we test four\
+    \ models using DFT with random seeds. Subsequently, we select one model from 600\
+    \ ps-isotropic (NPT) MD and 400 ps-canonical (NVT) MD for all the systems (Supplementary\
+    \ Fig. 7). With this objective, we train the model to predict the energy and force\
+    \ of 100 randomly selected samples from the trajectory of each system. Finally,\
+    \ we use the predict means\n\n# References\n\n+   1. Xu, K.. Nanoscale electrolytes\
+    \ for lithium-based rechargeable batteries. Chem. Rev. 104, 4303–4318 (2004).\n\
+    2. Xu, K., et al.. Interfaces and Functions: Applications in Batteries (Royal\
+    \ Society of Chemistry, 2023).\n3. Meng, Y., S., Viswan, V., & Xu, K.. Designing\
+    \ electrolytes. Science 378, e3750 (2022).\n4. Unke, O. T., et al.. Machine learning\
+    \ for fields. Chem. Rev. 121, 10102–10133 (2021).\n5. Frenkel, D. & Smith, B..\
+    \ Understanding Molecular Simulation: From Atoms to Applications (Elsevier, 2023).\n\
+    \nNature Intelligence | Volume 7 | 2024 | 543–552\n\n550"
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41467-025-01009-7
+
+
+    6. Behler, J., & Parrinello, M. Generalized neural-network representation of high-dimensional
+    potential-energy surfaces. *Phys. Rev. Lett.* 98, 146002 (2007).
+
+
+    7. Zhang, L., Wang, H., Car, R., & E. W. Deep potential quantum mechanics: a scalable
+    model with the accuracy of quantum mechanics. *Phys. Rev.* 120, 143018 (2018).
+
+
+    8. Montes-Campos, H., Carrette, J., Bichemeier, S., Varela, L. & M. Madsen, K.
+    H. A differentiable neural-network force field for ionic liquids. *Chem. Inf.*
+    62, 81–98 (2021).
+
+
+    9. Wang, J., & Wang, C. Deep learning architectures for glycine-based molecules
+    by machine learning. *Chem. J.* 42, 100061 (2023).
+
+
+    10. Batner, S. et al. E(3)-equivariant neural network frameworks for diverse and
+    accurate atomic interactions. *Nat. Commun.* 13, 24453 (2022).
+
+
+    11. Yao, Y.-J. & Smith, J. Equivariant graph neural transformer for 3D atomic
+    systems. In *Proc. Eleventh International Conference on Learning Representations*
+    (2023). [https://arxiv.org/abs/2206.01738](https://arxiv.org/abs/2206.01738).
+
+
+    12. Thölke, P. B. & Debaris, G. TorchMD-NET equivariant transformers for neural
+    network based models. In *Proc. Eleventh International Conference on Learning
+    Representations* (2023).
+
+
+    13. Ko, T. W., Finker, J. A., Goedicker, S., & Behler, J. Fourth-generation deep
+    neural network potential with accurate interactions including non-local charge
+    transfer. *Nature Phys.* 19, 895–900 (2023).
+
+
+    14. Dojcrow, S. et al. High-dimensional neural network potential for liquid electrolyte
+    simulations. *J. Phys. Chem B* 126, 8 (2022).
+
+
+    15. Jackson, L. et al. Equivariant neural network force field for small organic
+    molecules: extension to ions. *J. Chem. Theory* 18, 03 (2023).
+
+
+    16. Fu, X. et al. Ero is not benchmark: challenge and evaluation of learning force
+    fields with small molecular systems. *Learn Rep.* (2023). [https://openreview.org/forum/](https://openreview.org/forum/).
+
+
+    17. Onke, U. & Muhovsky, M. PhysNet: A neural network potential for predicting
+    molecular energies, forces, dipole moments and charges, and organic molecules.
+    *Nature Communications.* [https://doi.org/10.1038/s41467-023-3996-v3](https://doi.org/10.1038/s41467-023-3996-v3).
+
+
+    18. Onke, U. et al. SpotNet: Neural network force fields with electric degrees
+    of freedom and non-local effects. *Nat. Comm.* 12, 122 (2021).
+
+
+    19. Yu, H. et al. Spin-aware deep neural network potential for magnetic materials.
+    *Phys. Rev. B* 99, 144226 (2021).
+
+
+    20. Chen, C. & Wang, S. A universal deep learning potential for the periodic table.
+    *Nat. Comput.* 7, 718–728 (2022).
+
+
+    21. Deng, N. et al. CHNet: A pretrained universal neural network potential for
+    charged-atom interaction. *Nat. Comput.* 105, 1041 (2021).
+
+
+    22. Zhang, D. et al. D2b: a universal deep learning model for molecular and material
+    simulation. *Nat. Comput.*. [https://doi.org/10.1038/s41467-022-01494-2](https://doi.org/10.1038/s41467-022-01494-2).
+
+
+    23. Batista, I. et al. Scaling force learning for atomic materials. *Nature Communications*
+    (2022). [https://arxiv.org/abs/2201.00026](https://arxiv.org/abs/2201.00026).
+
+
+    24. Kovacs, D. P. et al. ACE-MPFF2: transferable neural network force field for
+    organic molecules. *Preprint at [https://arxiv.org/abs/2302.15121](https://arxiv.org/abs/2302.15121)*
+
+
+    25. Wang, J. Force field for water in aqueous liquids. *J. Chem. Phys.* 119, 3223–3240
+    (2018).
+
+
+    26. Zhang, J., Pagotto, L., Gould, T., & Daughin, T. T. Accurate and first principles
+    machine learning simulation of aqueous solutions. *Preprint at [https://arxiv.org/abs/2312.02935](https://arxiv.org/abs/2312.02935)*.
+
+
+    27. Magradí, L. B. & Torelli. Machine learning force fields for liquid carbonate
+    systems. *Nat. Comput.* 13, 946 (2023).
+
+
+    28. Chander, W. E., Jordan, J. D. A., & Andersen, H. C. Van der Waals pictures
+    of liquids, phases, and solids. *Physica A: Statistical Mechanics and its Applications*,
+    254(2-3), 778–794 (1998).
+
+
+    29. Morgan, C. D., Morbis-Morgado, A., Böhmer, S., & Thorne, T. K. The-Debye-Hückel
+    theory and importance in modeling electrolyte solutions. *J. Chem. Phys.* 62,
+    132–150 (1980).
+
+
+    30. Poier, G., Langler, L., Piquemal, J.-P., & Fischer, J. Molecular dynamics
+    using neural network force fields: boundary condition invariance and application
+    to the body capacity model. *J. Chem. Phys.* 2019, 09 (2019).
+
+
+    31. Schneider, H., Creon, A. S., & Schwaluber, T. Reformulation of the (B96)/Becke-Johnson)
+    dispersion correction without relating to dispersion coefficients. *J. Chem. Theory
+    Comput.* 11, 3163–3170 (2015).
+
+
+    32. Vaswani, A. et al. Attention is all you need. In *Advances in Neural Information
+    Processing Systems* 33, 6098–6108 (2017).
+
+
+    33. Gong, S. et al. Scaling graph neural networks for chemical structures: limitations
+    and opportunities for property discovery. *Sci Adv.* 9, ead2955 (2023).
+
+
+    34. Thorne, D. et al. LAMMPS: a flexible simulation tool for particle-based molecular
+    models at the atomic, mesoscopic and continuous scale. *Comp. Phys. Phys.* 271,
+    108871 (2022).
+
+
+    35. Musaleik, A. et al. Using local atomic representations for molecular mechanics.
+    *Nature Physics*, 14, 589 (2018).
+
+
+    36. Wang, Y. et al. Learning equivariant representations for molecules with vector-scalar
+    interaction passing. *Nat. Commun.* [https://doi.org/10.1038/s41467-022-4370-2](https://doi.org/10.1038/s41467-022-4370-2).
+
+
+    Nature Intelligence | Volume 7 | April 2023 | 543–552
+
+
+    551'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Article
+
+
+    https://doi.org/10.1038/s41586-025-01009-7
+
+
+    48. Pezeikh, P. R., et al. DeepMD-net: fast neural network potentials for molecular
+    simulations. Preprint at https://arxiv.org/abs/2407.09666 (2024).
+
+
+    70. Shao, Y., et al. Attention machine learning for molecular quantum chemistry
+    in the Q-chem package. Nature chemistry, 11, 184–195 (2023).
+
+
+    49. Mathias, G. A., & Lang, C. H. Extrapolation and learning equations. In: 35th
+    International Conference on Machine Learning https://proceedings.mlr.org/v801.html
+    (PMLR, 2018).
+
+
+    71. Wang, L. J., Zhang, Z., & Srinivasan, V. On relative importance of vehicle
+    and structural designs in electrolyte transport. J. Electro. Soc., 170, 110536
+    (2023).
+
+
+    50. Dove, A. R. Automated Design and Discovery of Electrolytes for Lithium-ion
+    Batteries: Phethio Cell, Nature Medicine (2023).
+
+
+    72. Mu, Z., & Wolf, Bao. Hugging Face https://doi.org/10.5795/hf/39971 (2021).
+
+
+    51. Higashiyama, K., et al. Physical properties and solvation of substituted 1,3-dioxane-water
+    mixtures. Nature Chem., 7, 210–218 (2016).
+
+
+    73. Mu, Z., & Zhang, Y. Bamboo: v0.1. Zenodo https://doi.org/10.52811/zenodo.4463052
+    (2020).
+
+
+    52. Sasaki, Y., & Furimoto, H. Materials for Energy Conversion and Storage. In:
+    Takajima, J., & Furimoto, H., Energy (Elsevier Science, 2005).
+
+
+    74. Simon, G., & Fischer, B. GraphNet: Transformer-based representations for learning
+    of molecular potentials. Neural. Inf. Process. Syst., 36, 37333–37354 (2022).
+
+
+    53. Janssen, A., Thorbersen, S., Jung, J., & Luust, E. Electrochemical properties
+    of fluoro-ionic-liquid-based electrolytes for supercapacitors. ECS Trans., 358,
+    51 (2007).
+
+
+    54. Goes, J. H., et al. In: Handbook of Battery Technology 525–626 (Wiley & Sons,
+    2011).
+
+
+    55. Dove, A. R. An autonomous optimization of quasi-aqueous-ion batteries via
+    robotic experimentation and machine learning. Nature Commun., 13, 5542 (2022).
+
+
+    # Acknowledgments
+
+
+    We acknowledge A. Misty, an Assistant Professor at the Colorado School of Mines.
+    We also acknowledge data provided by A. Dove, a researcher at Carnegie Mellon
+    University, upon request. H.W. and M.C. were marked as work at Database Research
+    during this study.
+
+
+    56. Logan, E. R., et al. A study of the properties of ethylene-carbonate-based
+    electrolytes. J. Electrochem. Soc., 165, A473 (1960).
+
+
+    # Author contributions
+
+
+    Conceptualization: Y.Z., W.G., M. Z., Y. U., S. Z., X.H., K. Yan, Z.W., L.C.,
+    X.W., S.X. and L.S. Methodology: S.G., Y.Z., Z.P., M.W., M.H., H.C., Y.W., and
+    M.G.W. Supervision: S.G., Y.Z., Z.P., M.W., M.H., H.C., Y.W. Writing – original
+    draft: S.G., Y.Z.; Writing – review and editing: S.G., Z.P., M.W., H.W.
+
+
+    # Competing interests
+
+
+    All authors declare no competing interests. Research project has received funding
+    from Nature Research. No conflicts are presented here. Furthermore, the innovations
+    described here have been filed in a patent application (application no. 202331222469.2),
+    which is currently pending.
+
+
+    # Additional information
+
+
+    Supplementary information The online version contains supplementary material for
+    article at https://doi.org/10.1038/s41586-025-01009-7
+
+
+    Correspondence and requests for materials should be addressed to
+
+
+    Weihao Gao or Or Wen
+
+
+    Peer review information Nature Intelligence thanks
+
+
+    Jia Yu and the other, reviewer(s) for the peer review of this work.
+
+
+    Reprints and permissions information is available at
+
+
+    https://www.nature.com/reprints
+
+
+    Publisher’s note Nature Research remains neutral with regard to jurisdictions
+    in public matters and institutional affiliations.
+
+
+    Springer Nature or its licensor (or an agent or other partners) holds exclusive
+    rights to the article under a publishing agreement with the author(s) or other
+    holder(s); self-authoring of the accepted manuscript version of this article is
+    solely governed by the terms of such agreement and applicable law.
+
+
+    © The Author(s) by Springer Nature Limited 2025
+
+
+    Nature Intelligence | Volume 7 | 2025 | 543–552
+
+
+    552
+
+
+    57. Zhu, S., et al. Differentiable modeling and optimization of non-aqueous-based
+    battery solutions using deep geometric learning. Nature Chem., 15, 5884 (2023).
+
+
+    58. Li, Y., Ko, J., & Wang, G. E. Determining cation-ion transport from molecular
+    electrochemical potentials. Preprint at https://arxiv.org/abs/2111.067450 (2021).
+
+
+    59. Beneman, C. M. & Wieberg, K. Determining cation-molecules from molecular electrochemical
+    potentials. J. Chem. Phys. Conformational analysis, 1, 01109 (2021).
+
+
+    60. Paske, A. T., et al. PyTorch: An intuitive style, high-performance deep learning
+    library. Neural Net. Inf. Process. Syst., 31, 80–98 (2019).
+
+
+    61. Kingma, D. P., & Ba, J. A. Adam: An method for stochastic optimization. Preprint
+    at https://arxiv.org/abs/1412.6980 (2014).
+
+
+    62. Beck, A. D. Functional benefit theory III. The role of exchange. J. Chem.
+    Phys., 88, 5568–5573 (1993).
+
+
+    63. Helweg, A. R. & Scharfetter, D. Development of new auxiliary bases for the
+    Kohn-Sham functions (DZS, 2DZVP, and def-2DZVP) for RI-MP2 and RI-CC calculations.
+    Phys. Chem. Chem., 17, 1010–1017 (2015).
+
+
+    Weigert, F. Hartree-Fock exchange fitting sets for H to Na. J. Comput. Chem.,
+    29, 167–178 (2008).
+
+
+    64. Wu, X., et al. PyTorch-based quantum chemistry calculations with GPU acceleration.
+    Preprint at https://arxiv.org/abs/2404.09452v1 (2024).'
+  merge: -1
+  img_proc: true
