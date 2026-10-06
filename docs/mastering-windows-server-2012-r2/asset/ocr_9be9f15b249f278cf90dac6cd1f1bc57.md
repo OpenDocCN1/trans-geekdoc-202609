@@ -1,0 +1,17 @@
+We've already typed in the description for the group. This form of documentation makes it immediately clear to administrators what the purpose of the group is. We discussed the need to do this when we covered local groups. It's infinitely more important to document this in this way when dealing with medium-to-large Active Directory setups where may be teams of administrators working with the servers.
+
+# GROUP NAMING STANDARDS
+
+It is important to adopt a naming standard for groups if your domain will be large or if it will be part of a forest. Remember that groups can be used anywhere within a domain or even an Active Directory forest. Even with just two domain controllers, you can support a large user base and a complex organization. How meaningful do you think the name Management would be in an organization containing hundreds or thousands of users? What about a corporate or government forest with many departments and tens of thousands of employees? Management is possible for a small/medium organization with a single site and a small IT team.
+
+If you have an organization with many departments or sites, you might consider having Milan-Accounts Management and Milan-IT Management, for example. It's immediately visible that each of these group names is associated with one in the city of Milan and that the members of the groups are members of a department. If you have many departments in a forest, you could consider something like BigFirm-Milan-Senior Management. Any administrator in your domain that the group is from the BigFirm domain, the members are from the Milan office, and all members are from the senior management team in that office.
+
+We also recommend adding some sort of prefix to the group to show what kind of group it is, for example, the prefix DL for local domain, DG for global domain, or UG for universal groups. This would end up in a group name like DG-ITManagement-Milan or DL-ITManagement-Milan. If you do this you can easily distinguish between the group types, which could be helpful while searching or scripting groups.
+
+The bottom of the General tab shows the type and scope of the group. You may notice that you can change these. However, there are some things to consider before making changes here.
+
+Changing from being a security group to a distribution group means that it cannot be used for assigning permissions anyone. You are warned that any permission assigned using this group may fail. This is especially important if you are denying access to critical resources using this group.
+
+We tested this with files to see how it worked. We shared a folder using a security group and added some members. We applied permissions to the folder on the file system. We verified that the members had access to share and everything worked. We changed the group to a distribution group. We checked the share and folder permissions, and the distribution group still had rights. Testing user access showed that the user still had rights to the folder. So far, so. We then logged out and back in. Uh-oh, the user lost rights. The group that became a distribution group still had rights but was no longer effective. We reversed the group back to being a security group. A logout and login were required to give the test user access to the share again.
+
+This behavior doesn't have to be something bad—not at all. Let's think about a scenario where you have many global security groups that have been assigned somewhere-permissions

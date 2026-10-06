@@ -1,0 +1,17 @@
+If you plan to support 100 sessions, for example, and you measured 5 sessions, you'd multiply by 20 to get to 100 sessions (20 × 5 = 100 sessions). So if you need 4 GB of RAM to support 5 Sessions you need 4 GB × 20 which will require you to have 80 GB of RAM to support 100 sessions. By the way, the multiplier 20 is obtained by dividing the total number of sessions you want (100 in this) by the sample number of sessions (5 in this case).
+
++   4. Add the total resources needed for the resources needed for the operating system.
+
+Although this seems like simple math, it never seems to work out that way. Synergy is often hard to predict. (where the whole is greater than the sum of its parts) often results in something unexpected. Additionally, if the deployment is successful and users are happy with what they can do, they may end up using more than you anticipated.
+
+You don't need to tell this to budget, but it's best to add a buffer for the unknowns and plan for expansion. Several vendors publish "reference architectures" for their hardware platforms that you can also use if you decide on the resources for the platform.
+
+# Core HARDWARE RESOURCES
+
+For the purposes of running an efficient RD Session Host server, the bare minimum required to run Server 2012 R2 won't cut it. There are no hard-and-fast specifications for RDS server, some general guidelines for their sizing following:
+
+Processor Faster is better than a fast processor one with enough cache so that it doesn't have to reach out to the (slow) memory for code and data. Faced with a choice between more cache and more processors, and these processors have multiple cores. Although RDS servers today have multiple processors, only multithreaded applications will actually use more than one processor at a time, if there are multiple processors, the threads needing execution can line up at.
+
+Memory servers tend to be memory bound, not processor bound. High-speed, error-correcting memory; plenty of it; and be prepared to add as much as you add more users or applications to the RDS server. Sometimes adding another box to reduce the load is better because there is so much memory you can add before it negatively impacts the system. The amount of memory depends on applications that people use, the number of sessions, and the demands of the files opened in those sessions—computer-aided design (CAD) programs will stress the system more than may, Notepad. Frankly, the 64-bit operating system goes well beyond the 4 GB limit. Start your calculations with at least 8 GB of RAM for the server, and starting based on the number of users and memory required by the applications they'll run on the server. Windows 2012 R2 will support up to 4 TB of RAM.
+
+Disk Consider using Serial Computer Interface (SCSI) disks on an RDS server if it is all possible. SCSI disk controller can multitask among all the devices in the SCSI chain. Most people believe SCSI performs much better than both Serial Advanced Attachment (SATA) and Enhanced Integrated Drive Electronics (EIDE) devices, although some are starting to find that high-end SATA solutions perform better than low-end SCSI solutions. Disk performance is an important capability in any server but especially in an RDS server.

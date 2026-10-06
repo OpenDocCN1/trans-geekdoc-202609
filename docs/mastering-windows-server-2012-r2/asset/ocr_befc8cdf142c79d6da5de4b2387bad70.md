@@ -1,0 +1,17 @@
+Active Directory administrator should be to use as many OU as necessary to apply delegation of control and to control the object in the OU through GPOs.
+
+**Default Domain Policy** The Default Domain Policy is created as soon as you create your first domain. This policy contains settings for users and computers that will apply to the entire domain. It is important to understand that this policy is essential for your environment and should not be deleted. You can modify this policy, but we don't recommend it. If you need to apply custom settings to domain, you should create a new policy on the domain level and store your custom settings in your newly created policy.
+
+**Default Domain Controllers Policy** The Default Domain Controllers Policy is also a very important policy that is linked to the Domain Controllers container in your Active Directory. The settings configured in the Default Domain Controllers Policy are specific configurations that apply only to the domain controllers. If you promote a member to a domain controller, this server is automatically placed into the Domain Controllers container. There are few cases where you need to touch this.
+
+Forest is a single instance of Active Directory. In a forest you can have one or multiple domains that share the same schema. If you set up a single domain controller, you are basically creating the smallest possible forest. It is also called single-domain forest. A forest is also referred as a security boundary in which users, computers, and objects are accessible.
+
+Global Catalog A global catalog contains information about every object in a multidomain Active Directory forest. The global catalog is stored on domain controllers that have been enabled as global catalog servers, and its data is distributed through Active Directory replication. There is only one global catalog per forest but multiple copies of it. Applications like Exchange query the global catalog to get information about objects within the forest. A global catalog contains only partial information about objects within the domain. A global catalog provides other services as well, as providing references to other objects in different domains, resolving user principal names (UPN), and user group membership caching.
+
+Trust is a connection between domains to access their resources, such as servers or applications. For example, this could be used if some users need to access files or information in the opposite domain. If you install a domain and children domain, Active Directory automatically creates a transitive trust. You can access objects from the root domain in the children, and vice versa. If you need access to resources in another forest, you could create some form of trust to connect both forests.
+
+If you have one or more domains within the same forest that have contiguous namespace/or share the same schema root name, you create a tree. A contiguous namespace is for example, the root domain is bigforest.com and a possible contiguous namespace is marketing.bigforest.com. An Active Directory tree is a collection of domains that are built in a transitive hierarchy.
+
+# Creating a Single-domain Forest
+
+As you learned, a single-domain forest is the simplest Active Directory topology you can build. The general recommendation is to create an Active Directory domain if you have 10 or more users. You could also create a domain if you have fewer users because there is no limit in place; it's just a matter of complexity and cost. The advantages are:

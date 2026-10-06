@@ -1,0 +1,571 @@
+
+# 1662 SERVER MESSAGE BLOCK - SIDS (identities)
+
+- promoting service to DC, 283
+- covering deleted objects from service (SRV) records. Server SRV (service) records bin, 158–179
+- hidden shares, 732–734
+- recovery folder from a backup, 257
+- home directories and, 1272–1276
+- 1567–1638
+- inherited permissions, 964–966
+- service group de-amp, 143
+- molecular mappings, 719–720
+- starting and stopping AD DS, 1570, 1582
+- NTFS permissions, 715–717
+- endpoint and, 40–41
+- overview of, 703–708
+- Server Message Block, SMB (SMB), 57
+- removing user shares, 711–712
+- Server Manager, in System Center 212\viewing user rights, 725–727
+- Server Performance Assist, SPA (SPA Server), 570–579
+- Shared Name Migration (cluster, 1441)
+- Server Print Services, 887
+- Server Role Page, Role Features and 654
+- adding first node to, 575–585
+- Wizard, 653
+- adding second node to, 587–598
+- server virtualization, or Hyper-V
+- clustering, 567–569
+- overview of, 1399–1341
+- configuring clusters, 567–569
+- using of, 1341
+- VMs with, 567–573
+- server-based computing, or thus thinclients, 440
+- configuring clusters, 574–575
+- adding sites, 112
+- CSVs (Cluster Shared Volumes), 568
+- adding to, 712
+- File and Storage, 594–596
+- service communication, 536
+- HA (high availability) and, 591
+- 1524
+- overview of, 591–592
+- service-level administrators (SAs), Hyper-V Qos
+- queries over, 570–571
+- and, 163
+- SANs (Storage Area Networks), 592
+- adding to Web Server, 986–988
+- setting up guest, 567–568
+- connecting to network resources, 955–956
+- setup over, 669–672
+- monitoring server groups, 1482
+- when shared, 669–671
+- from RDS services, 1450–1451
+- Files, 652
+- selecting from views services accessed, 455
+- shares, 653
+- role, 772
+- Folder shares, 752
+- SCEs (SC Endpoint Services), 597
+- Allow and Deny permissions, 713
+- local users, 392–393
+- overview of, 720
+- sessions, 667–672
+- defining permissions, 712
+- from, 1470–1476
+- detail interface for working
+- connecting to, 1359–1460
+- deploying access policies and, 792–
+- overview of, 1441
+- 728–732
+- Performance Monitoring for,
+- shared shares, 750
+- RDS Server and, 1441
+- mapping to, 650–
+- SetDomainAccount, 448
+- over permissions of, 748
+- OSAccountPassword, 447
+- connecting to, 956
+- SetUserAccount, 448
+- creating from, 705–
+- installing Server, 106
+- demoting, 700–701
+- running-in-place, 332, 1248
+- defining permissions, 712–
+- shared permissions, 713
+- Allow and Deny permissions, 713
+- assigning access to,
+- directory permissions, 720
+- security of, 736
+- atoms permissions, 715–
+- 711–712
+- 712–732
+- managing permissions, 667
+- molecular mappings, 719–720
+- shared shares, 750
+- detail interface for working with
+- permissions, 728–732
+- remoting service, 602
+- authentication of, 894–895
+- configuring Remote Management, 917
+- over Server Desktop, 884–885
+- configuring for single-domain forest,
+- 263–264
+- connecting to, 886–887
+- custom views by server, 487
+- DNS DNS servers, 578
+- federation services,
+- file shares, 652
+- installing IIS, 1801
+- Installing Remote Desktop Services, 897–902
+- IMAP management, 188–189
+- managing with IIS, Ser (identity)
+- managing with Remote Desktop, 119–120
+- nameservices, 212
+- placing clients, 317
+- print services, 587
+- promoting server services, 290
+- RDS servers, 578
+- RRAS servers, 572
+- recovering objects from RODICS, 1167
+- service discovery, 184–185
+- SMTP, 679, 924
+- SQL Server, and SQL Server
+- updating, 116–117
+- viewing remote views, 71
+- VPN and, 710 servers
+- web web services, 135
+- Windows. Her Windows Services
+- creating to, 627–676
+- creating on remote computers, 660–661
+- enabling online files on server, 699–701
+- File Role when shared, 665
+- file shares, 652
+- Folder shares, 752
+- linking to network resources, 955–956
+- managing Windows Server 2008
+- netshare command, 139
+- publishing in, 624
+- viewing service, 662–666
+- Sharing tab, printer properties, 862–863
+- short lists, types of relationships,
+- 1229
+- SIDs (security identifiers)
+- caution in use, 424
+- linking, 1263
+
+## SIMPLE LAYOUT OF VIRTUAL DISKS
+## START BUTTON IN WINDOWS SERVER
+
+- share/NFS permissions, 666
+- understanding of, 411
+- simple layout, of disks, 607
+- Simple Mail Transfer (SMTP)
+- Simple Network Time Protocol (NTP), 1224–1225
+- Simple Access Protocol (SOAP), 102
+- simple-master. For also, 1220
+- simple binds, 1137
+- simple directs, 1138
+- simple-, 1140
+- simple, 1141
+- simple, 1141
+- simple, 1147
+- simple, 1148
+- simple, 1150
+- simple, 1151
+- simple, 1162
+- simple, 1163
+- simple, 1167
+- simple, 1184
+- simple, 1196
+- simple, 1196
+- simple, 1200
+- simple, 1202
+- simple, 1204
+- simple, 1207
+- simple, 1209
+- simple, 1221
+- simple, 1223
+- simple, 1224
+- simple, 1228
+- simple, 1230
+- simple, 1231
+- simple, 1236
+- simple, 1237
+- simple, 1241
+- simple, 1242
+- simple, 1245
+- simple, 1246
+- simple, 1247
+- simple, 1248
+- simple, 1249
+- simple, 1250
+- simple, 1252
+- simple, 1254
+- simple, 1255
+- simple, 1256
+- simple, 1258
+- simple, 1259
+- simple, 1260
+- simple, 1263
+- simple, 1264
+- simple, 1265
+- simple, 1269
+- simple, 1270
+- simple, 1271
+- simple, 1272
+- simple, 1273
+- simple, 1274
+- simple, 1275
+- simple, 1276
+- simple, 1277
+- simple, 1279
+- simple, 1280
+- simple, 1281
+- simple, 1282
+- simple, 1283
+- simple, 1284
+- simple, 1285
+- simple, 1286
+- simple, 1287
+- simple, 1288
+- simple, 1289
+- simple, 1290
+- simple, 1291
+- simple, 1292
+- simple, 1293
+- simple, 1294
+- simple, 1295
+- simple, 1296
+- simple, 1297
+- simple, 1298
+- simple, 1299
+- simple, 1300
+- simple, 1301
+- simple, 1302
+- simple, 1303
+- simple, 1304
+- simple, 1305
+- simple, 1306
+- simple, 1307
+- simple, 1308
+- simple, 1309
+- simple, 1310
+- simple, 1311
+- simple, 1312
+- simple, 1313
+- simple, 1314
+- simple, 1315
+- simple, 1316
+- simple, 1317
+- simple, 1318
+- simple, 1319
+- simple, 1320
+- simple, 1321
+- simple, 1322
+- simple, 1323
+- simple, 1324
+- simple, 1325
+- simple, 1326
+- simple, 1327
+- simple, 1328
+- simple, 1329
+- simple, 1330
+- simple, 1331
+- simple, 1332
+- simple, 1333
+- simple, 1334
+- simple, 1335
+- simple, 1336
+- simple, 1337
+- simple, 1338
+- simple, 1339
+- simple, 1340
+- simple, 1341
+- simple, 1342
+- simple, 1343
+- simple, 1344
+- simple, 1345
+- simple, 1346
+- simple, 1347
+- simple, 1348
+- simple, 1349
+- simple, 1350
+- simple, 1351
+- simple, 1352
+- simple, 1353
+- simple, 1354
+- simple, 1355
+- simple, 1356
+- simple, 1357
+- simple, 1358
+- simple, 1359
+- simple, 1360
+- simple, 1361
+- simple, 1362
+- simple, 1363
+- simple, 1364
+- simple, 1365
+- simple, 1366
+- simple, 1367
+- simple, 1368
+- simple, 1369
+- simple, 1370
+- simple, 1371
+- simple, 1372
+- simple, 1373
+- simple, 1374
+- simple, 1375
+- simple, 1376
+- simple, 1377
+- simple, 1378
+- simple, 1379
+- simple, 1380
+- simple, 1381
+- simple, 1382
+- simple, 1383
+- simple, 1384
+- simple, 1385
+- simple, 1386
+- simple, 1387
+- simple, 1388
+- simple, 1389
+- simple, 1390
+- simple, 1391
+- simple, 1392
+- simple, 1393
+- simple, 1394
+- simple, 1395
+- simple, 1396
+- simple, 1397
+- simple, 1398
+- simple, 1399
+- simple, 1400
+- simple, 1401
+- simple, 1402
+- simple, 1403
+- simple, 1404
+- simple, 1405
+- simple, 1406
+- simple, 1407
+- simple, 1408
+- simple, 1409
+- simple, 1410
+- simple, 1411
+- simple, 1412
+- simple, 1413
+- simple, 1414
+- simple, 1415
+- simple, 1416
+- simple, 1417
+- simple, 1418
+- simple, 1419
+- simple, 1420
+- simple, 1421
+- simple, 1422
+- simple, 1423
+- simple, 1424
+- simple, 1425
+- simple, 1426
+- simple, 1427
+- simple, 1428
+- simple, 1429
+- simple, 1430
+- simple, 1431
+- simple, 1432
+- simple, 1433
+- simple, 1434
+- simple, 1435
+- simple, 1436
+- simple, 1437
+- simple, 1438
+- simple, 1439
+- simple, 1440
+- simple, 1441
+- simple, 1442
+- simple, 1443
+- simple, 1444
+- simple, 1445
+- simple, 1446
+- simple, 1447
+- simple, 1448
+- simple, 1449
+- simple, 1450
+- simple, 1451
+- simple, 1452
+- simple, 1453
+- simple, 1454
+- simple, 1455
+- simple, 1456
+- simple, 1457
+- simple, 1458
+- simple, 1459
+- simple, 1460
+- simple, 1461
+- simple, 1462
+- simple, 1463
+- simple, 1464
+- simple, 1465
+- simple, 1466
+- simple, 1467
+- simple, 1468
+- simple, 1469
+- simple, 1470
+- simple, 1471
+- simple, 1472
+- simple, 1473
+- simple, 1474
+- simple, 1475
+- simple, 1476
+- simple, 1477
+- simple, 1478
+- simple, 1479
+- simple, 1480
+- simple, 1481
+- simple, 1482
+- simple, 1483
+- simple, 1484
+- simple, 1485
+- simple, 1486
+- simple, 1487
+- simple, 1488
+- simple, 1489
+- simple, 1490
+- simple, 1491
+- simple, 1492
+- simple, 1493
+- simple, 1494
+- simple, 1495
+- simple, 1496
+- simple, 1497
+- simple, 1498
+- simple, 1499
+- simple, 1500
+- simple, 1501
+- simple, 1502
+- simple, 1503
+- simple, 1504
+- simple, 1505
+- simple, 1506
+- simple, 1507
+- simple, 1508
+- simple, 1509
+- simple, 1510
+- simple, 1511
+- simple, 1512
+- simple, 1513
+- simple, 1514
+- simple, 1515
+- simple, 1516
+- simple, 1517
+- simple, 1518
+- simple, 1519
+- simple, 1520
+- simple, 1521
+- simple, 1522
+- simple, 1523
+- simple, 1524
+- simple, 1525
+- simple, 1526
+- simple, 1527
+- simple, 1528
+- simple, 1529
+- simple, 1530
+- simple, 1531
+- simple, 1532
+- simple, 1533
+- simple, 1534
+- simple, 1535
+- simple, 1536
+- simple, 1537
+- simple, 1538
+- simple, 1539
+- simple, 1540
+- simple, 1541
+- simple, 1542
+- simple, 1543
+- simple, 1544
+- simple, 1545
+- simple, 1546
+- simple, 1547
+- simple, 1548
+- simple, 1549
+- simple, 1550
+- simple, 1551
+- simple, 1552
+- simple, 1553
+- simple, 1554
+- simple, 1555
+- simple, 1556
+- simple, 1557
+- simple, 1558
+- simple, 1559
+- simple, 1560
+- simple, 1561
+- simple, 1562
+- simple, 1563
+- simple, 1564
+- simple, 1565
+- simple, 1566
+- simple, 1567
+- simple, 1568
+- simple, 1569
+- simple, 1570
+- simple, 1571
+- simple, 1572
+- simple, 1573
+- simple, 1574
+- simple, 1575
+- simple, 1576
+- simple, 1577
+- simple, 1578
+- simple, 1579
+- simple, 1580
+- simple, 1581
+- simple, 1582
+- simple, 1583
+- simple, 1584
+- simple, 1585
+- simple, 1586
+- simple, 1587
+- simple, 1588
+- simple, 1589
+- simple, 1590
+- simple, 1591
+- simple, 1592
+- simple, 1593
+- simple, 1594
+- simple, 1595
+- simple, 1596
+- simple, 1597
+- simple, 1598
+- simple, 1599
+- simple, 1600
+- simple, 1601
+- simple, 1602
+- simple, 1603
+- simple, 1604
+- simple, 1605
+- simple, 1606
+- simple, 1607
+- simple, 1608
+- simple, 1609
+- simple, 1610
+- simple, 1611
+- simple, 1612
+- simple, 1613
+- simple, 1614
+- simple, 1615
+- simple, 1616
+- simple, 1617
+- simple, 1618
+- simple, 1619
+- simple, 1620
+- simple, 1621
+- simple, 1622
+- simple, 1623
+- simple, 1624
+- simple, 1625
+- simple, 1626
+- simple, 1627
+- simple, 1628
+- simple, 1629
+- simple, 1630
+- simple, 1631
+- simple, 1632
+- simple, 1633
+- simple, 1634
+- simple, 1635
+- simple, 1636
+- simple, 1637
+- simple, 1638

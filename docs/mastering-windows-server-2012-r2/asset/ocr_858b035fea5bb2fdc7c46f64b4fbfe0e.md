@@ -1,0 +1,464 @@
+# FIGURE 12.9
+Storage cmdlets
+
+```
+PS C:\Users\Administrator> get-command *StoragePool* | where {$_.ModuleName -eq 'Storage'}
+CommandType  Name                ModuleName
+Function     Get-StoragePool     Storage
+Function     New-StoragePool     Storage
+Function     Set-StoragePool     Storage
+Function     Update-StoragePool  Storage
+```
+
+# FIGURE 12.10
+Sample output for -storagepool
+
+```
+PS C:\Users\Administrator> get-storagepool
+PrimodialName  OperationalStatus  HealthStatus  IsPrimordial  IsReadOnly
+StoragePool     OK                  Healthy        True          False
+PS C:\Users\Administrator> get-storagepool | f *
+PrimodialName  OperationalStatus  HealthStatus  IsPrimordial  IsReadOnly
+StoragePool     OK                  Healthy        True          False
+
+Properties:
+Name:
+StoragePool
+OperationalStatus:
+OK
+HealthStatus:
+Healthy
+IsPrimordial:
+True
+IsReadOnly:
+False
+TypeId:
+Unknown
+Access:
+Unknown
+FriendlyName:
+StoragePool
+IsDetached:
+False
+IsRetired:
+False
+IsProvisioned:
+False
+HealthStatus:
+OK
+FaultStatus:
+None
+Description:
+OSSystem:
+Windows Server 2012
+StoragePoolType:
+StoragePool
+StoragePoolFriendlyName:
+Storage
+Capabilities:
+{
+    Location:
+    {
+        Path:
+        C:\
+    }
+    Disk:
+    {
+        0
+    }
+}
+ResourceType:
+{
+Type:
+    StoragePool
+}
+ObjectType:
+{
+    Name:
+    StoragePool
+}
+Properties:
+Name:
+StoragePool
+OperationalStatus:
+OK
+HealthStatus:
+Healthy
+IsPrimordial:
+True
+IsReadOnly:
+False
+TypeId:
+Unknown
+Access:
+Unknown
+FriendlyName:
+StoragePool
+IsDetached:
+False
+IsRetired:
+False
+IsProvisioned:
+False
+HealthStatus:
+OK
+FaultStatus:
+None
+Description:
+Unknown
+OSSystem:
+Windows Server 2012
+StoragePoolType:
+StoragePool
+StoragePoolFriendlyName:
+Storage
+Capabilities:
+{
+    Location:
+    {
+        Path:
+        C:\
+    }
+    Disk:
+    {
+        0
+    }
+}
+ResourceType:
+{
+    Type:
+    StoragePool
+}
+ObjectType:
+{
+    Name:
+    StoragePool
+}
+Properties:
+Name:
+StoragePool
+OperationalStatus:
+OK
+HealthStatus:
+Healthy
+IsPrimordial:
+True
+IsReadOnly:
+False
+TypeId:
+Unknown
+Access:
+Unknown
+FriendlyName:
+StoragePool
+IsDetached:
+False
+IsRetired:
+False
+IsProvisioned:
+False
+HealthStatus:
+OK
+FaultStatus:
+None
+Description:
+Unknown
+OSSystem:
+Windows Server 2012
+StoragePoolType:
+StoragePool
+StoragePoolFriendlyName:
+Storage
+Capabilities:
+{
+    Location:
+    {
+        Path:
+        C:\
+    }
+    Disk:
+    {
+        0
+    }
+}
+ResourceType:
+{
+    Type:
+    StoragePool
+}
+ObjectType:
+{
+    Name:
+    StoragePool
+}
+Properties:
+Name:
+StoragePool
+OperationalStatus:
+OK
+HealthStatus:
+Healthy
+IsPrimordial:
+True
+IsReadOnly:
+False
+TypeId:
+Unknown
+Access:
+Unknown
+FriendlyName:
+StoragePool
+IsDetached:
+False
+IsRetired:
+False
+IsProvisioned:
+False
+HealthStatus:
+OK
+FaultStatus:
+None
+Description:
+Unknown
+OSSystem:
+Windows Server 2012
+StoragePoolType:
+StoragePool
+StoragePoolFriendlyName:
+Storage
+Capabilities:
+{
+    Location:
+    {
+        Path:
+        C:\
+    }
+    Disk:
+    {
+        0
+    }
+}
+ResourceType:
+{
+    Type:
+    StoragePool
+}
+ObjectType:
+{
+    Name:
+    StoragePool
+}
+Properties:
+Name:
+StoragePool
+OperationalStatus:
+OK
+HealthStatus:
+Healthy
+IsPrimordial:
+True
+IsReadOnly:
+False
+TypeId:
+Unknown
+Access:
+Unknown
+FriendlyName:
+StoragePool
+IsDetached:
+False
+IsRetired:
+False
+IsProvisioned:
+False
+HealthStatus:
+OK
+FaultStatus:
+None
+Description:
+Unknown
+OSSystem:
+Windows Server 2012
+StoragePoolType:
+StoragePool
+StoragePoolFriendlyName:
+Storage
+Capabilities:
+{
+    Location:
+    {
+        Path:
+        C:\
+    }
+    Disk:
+    {
+        0
+    }
+}
+ResourceType:
+{
+    Type:
+    StoragePool
+}
+ObjectType:
+{
+    Name:
+    StoragePool
+}
+Properties:
+Name:
+StoragePool
+OperationalStatus:
+OK
+HealthStatus:
+Healthy
+IsPrimordial:
+True
+IsReadOnly:
+False
+TypeId:
+Unknown
+Access:
+Unknown
+FriendlyName:
+StoragePool
+IsDetached:
+False
+IsRetired:
+False
+IsProvisioned:
+False
+HealthStatus:
+OK
+FaultStatus:
+None
+Description:
+Unknown
+OSSystem:
+Windows Server 2012
+StoragePoolType:
+StoragePool
+StoragePoolFriendlyName:
+Storage
+Capabilities:
+{
+    Location:
+    {
+        Path:
+        C:\
+    }
+    Disk:
+    {
+        0
+    }
+}
+ResourceType:
+{
+    Type:
+    StoragePool
+}
+ObjectType:
+{
+    Name:
+    StoragePool
+}
+Properties:
+Name:
+StoragePool
+OperationalStatus:
+OK
+HealthStatus:
+Healthy
+IsPrimordial:
+True
+IsReadOnly:
+False
+TypeId:
+Unknown
+Access:
+Unknown
+FriendlyName:
+StoragePool
+IsDetached:
+False
+IsRetired:
+False
+IsProvisioned:
+False
+HealthStatus:
+OK
+FaultStatus:
+None
+Description:
+Unknown
+OSSystem:
+Windows Server 2012
+StoragePoolType:
+StoragePool
+StoragePoolFriendlyName:
+Storage
+Capabilities:
+{
+    Location:
+    {
+        Path:
+        C:\
+    }
+    Disk:
+    {
+        0
+    }
+}
+ResourceType:
+{
+    Type:
+    StoragePool
+}
+ObjectType:
+{
+    Name:
+    StoragePool
+}
+Properties:
+Name:
+StoragePool
+OperationalStatus:
+OK
+HealthStatus:
+Healthy
+IsPrimordial:
+True
+IsReadOnly:
+False
+TypeId:
+Unknown
+Access:
+Unknown
+FriendlyName:
+StoragePool
+IsDetached:
+False
+IsRetired:
+False
+IsProvisioned:
+False
+HealthStatus:
+OK
+FaultStatus:
+None
+Description:
+Unknown
+PS C:\Users\Administrator>
+```
+
+# Creating a Storage Space
+
+Storage Spaces is an incredibly powerful feature, and as we have mentioned, storage spaces bring many benefits to an organization. They are also simple to configure. No specialized training is required.
+
+In the next few pages we will walk you through the process of creating a storage space and show you how simple it really is. The general process is as follows:
+
++   1. Obtain physical disks.
+2. Create storage pools
+3. Create virtual disks
+
+We will show you how to create a storage space via the GUI and PowerShell. First, however, we will give you a quick introduction to our lab. We have a single server with multiple physical disks, two 100 GB SAS drives, and one 300 GB SATA drive.
