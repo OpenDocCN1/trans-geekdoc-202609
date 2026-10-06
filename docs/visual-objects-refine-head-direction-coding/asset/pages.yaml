@@ -1,0 +1,1476 @@
+- pgno: 0
+  md: '# RESEARCH ARTICLE SUMMARY
+
+
+    # NEUROSCIENCE
+
+
+    # Visual objects refine head direction coding
+
+
+    Dominique Siegenthal, Henry Denny†, Sofia Skromme Carassor‡, Johanna Luisa Mayer§,
+    Daniel Levenstein, Adrien Pyreche§, Stuart Trehrenheim¶, Émile Macé‡
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_0_0.png)
+
+
+    Full article and list of author affiliations: https://doi.org/10.1038/s41593-018-0126-6
+
+
+    **INTRODUCTION:** In day-to-day life, we use visual objects (e.g., a spatial clock
+    when walking around town), or as spatial landmarks to help orient ourselves as
+    we make our way through the world. We can use visual objects as spatial landmarks
+    because our brains decode computational power when parsing the world into objects.
+    However, our location in the world is processed by place cells, grid cells, and
+    head direction cells in the brain. However, many remain unknown about how visual
+    objects modulate the tuning of the neurons that encode spatial variables, because
+    it is unclear how visual objects are processed by brains, where spatial navigation
+    has been most extensively studied.
+
+
+    HD cells were differentially modulated by visual stimulation based on their preferred
+    direction; HD cells pointing towards the visual stimulus were evoked, whereas
+    HD cells pointing away from the visual stimulus were inhibited. The spatial navigation
+    was observed in freeing conditions, when an object was displayed in the environment.
+
+
+    **RATIONALE:** To address this gap in knowledge, we reasoned that a brainactivity
+    screen in free could identify visual objects-preferring areas in an unbiased way.
+    Using electrophysiology, we characterized the spatial properties of individual
+    neurons in the areas responding to freely moving
+
+
+    **CONCLUSION:** Visual objects refine the population encoding of HD in the hippocampus
+    by increasing the response of HD cells that encode the visual stimulus while simultaneously
+    decreasing the firing rate of HD cells away from the object (with a companion,
+    which, in our experiments, is the brain), and each time we use a landmark (which
+    is an image of), the compass needle becomes better and more accurate. These results
+    provide insight into how the brain uses visual landmarks to enhance the encoding
+    of spatial information about the world.
+
+
+    **RESULTS:** Our brain screen based on ultrasound imaging revealing spatial navigation-related
+    areas, not visual cortical areas, showed to show a preference for visual objects.
+    The postsubiculum, a of the HD system, exhibited the strongest preference direction.
+    In fixed-conditions, when
+
+
+    Visual objects represent the representation of head direction.
+
+
+    # Brainwide screen for areas in the mouse brain
+
+
+    Visually responsive
+
+
+    Five most-preferring areas
+
+
+    regions preferring to the spatial navigation system. Electrophysiological analysis
+    in one of the identified regions, the postsubiculum, indicated that when an animal
+    faces a visual landmark, encoding is recorded in W, N; north; E, east. Three-dimensional
+    brain images processed by cocoframer © 2018 Allen Institute for Science. Allen
+    Explore]
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_0_1.png)
+
+
+    Spatial navigation
+
+
+    # Visual objects refine head direction (HD) coding
+
+
+    HD code without visual landmark
+
+
+    HD code with visual landmark
+
+
+    HD cells in postsubiculum
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_0_2.png)
+
+
+    W N S
+
+
+    W N S
+
+
+    > *Corresponding author: Adrien.pyreche@mcgill.ca (A.P.);† Stuart.trehren@mcgill.ca
+    (S.T.);‡ Émile.mace@med.uni-goetting.de (E.M.). These authors contributed equally
+    to this work. Cite this article at D. Siegenthal et al. Science 359, eaac628 (2018);
+    DOI: 10.1126/science.aac628
+
+
+    11 SEPTEMBER 2025
+
+
+    1110'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# NESCIENCE
+
+
+    # RESEARCH ARTICLE
+
+
+    # # Visual refree direction coding
+
+
+    Additionally, like are strong by objects by other types of visual stimuli. Overlaps
+    with brain areas known to neurons that encode spatial variables.
+
+
+    Dominique Siegelinger$^{1,2,3,4}$, Henry$^{1,2,3}$, Sofia Skramfos$^{5}$, Joanna
+    Mayer$^{6}$, Daniel Levenstein$^{7}$, Adrien Peyre$^{4}$, Stuart Tremnohl$^{4}$,
+    Emily Miller$
+
+
+    # Results
+
+
+    ## A brainstorm for areas that preferably respond to visual objects
+
+    To begin, we performed a brain scan in mice using functional ultrasound (fUS)
+    window (27–29) for areas that responded preferentially to visual objects. Mice
+    were placed with a COMBO window (Fig. 14A) and head-fixed under the ultrasonic
+    probe. While the signals were recorded without movement artifacts including the
+    olfactory bulbs, cortex, and parts of the brain. Images were presented at 60°
+    height, along the horizontal median and 20° toward the vertical median (Fig. 14A),
+    a part of the visual field which was stimulated by rapidly moving objects has
+    been hypothesized to be important for processing of visual loads (32). To cover
+    large part of object size (33), 38 of 48 different objects from different categories
+    were shown (Fig. S1). For images which destroyed object identity but maintained
+    low-level statistics, the 48 objects were split into two blocks of images and
+    four blocks of scrambling, each labeled with index (1–4) to determine the direction
+    of evoked changes in each visual volume (Fig. 1b).
+
+
+    Animals use visual objects to guide navigation-related behaviors. However, visual-object
+    preferences have yet to be described in the mouse brain, limiting our understanding
+    of how visual-objects affect spatial navigation system. Using functional ultrasound,
+    we identified brain areas that were preferentially activated by visual objects.
+    While visual cortex did not show a preference, areas associated with spatial preference
+    were activated by objects. Electrophysiological recordings in the dorsal cortex
+    using HD system confirmed for fast-spiking neurons, visual objects increased rates
+    of HD cells aligned with but decreased activity in HD cells for other directions.
+
+
+    First, we examined the response in anesthetized, mice to all eight blocks (i.e.,
+    combined and scrambled stimuli). We used a mouse that works for both (Fig. 1C).
+    After antagonistically stimulating the brain into +100, we observed evoked visual
+    activity in two brain areas (Fig. 1D). We computed visual object sensitivity (VOS),
+    to quantify preferences of visual objects over scrambled stimuli. We found a small
+    number of brain areas with statistics that showed a significant preference for
+    visual objects: the postculub (Pscb), Parasihubular, and area rostralis (Fig.
+    1D). By contrast, many areas showed no preference for visual objects over scrambled
+    stimuli. For example, the superior colliculus (SC), we responded significantly
+    to scrambled objects (Fig. 1D, F) to repeated experiments. We found similar results
+    in areas that responded preferentially to visual objects, we ranked brain-wide
+    areas responding significantly to scrambled objects (Fig. S2A, S and E).
+
+
+    The spatial navigation system comprises neurons whose firing rate is modulated
+    by the direction an animal is facing and the location it in an environment (1–3).
+    These neurons are essential for the generation of a cognitive map (4, 5). During
+    locomotion, the spatial navigation system is modulated by visual inputs (6), while
+    visual objects (7) can serve as environmental markers (8). A visual object can
+    cause a shift in the animal''s head position (9), leading to a turn (10), while
+    cells (11, 12), and grid cells (13). Furthermore, an anchor in the turn can lead
+    to instability (12, 13). Thus, visual-objects can anchor the internal representation
+    of space (14). However, it is unknown how visual-objects might use the neurons
+    in the spatial navigation system endcode affinity.
+
+
+    To examine whether there was a systematic bias for visual object sensitivity in
+    brain, we ranked brain-wide areas responding primarily to visual loads. Based
+    on the latest, we categorized responsive brain areas as belonging to (i) the visual
+    system, (ii) the spatial system, or (iii) both. We found that the top 10% of visual
+    system areas had values as equal to the spatial navigation system (Fig. H), and
+    the average VOS of all spatial spatial navigation-related areas were significantly
+    larger than that (Fig. 1). If we used unsupervised clustering based on visual
+    objects and responses to object direction, we identified four clusters: visual,
+    spatial, and two spatial navigation area clusters that showed and exhibited a
+
+
+    In the rodent brain, studies on visual-object preference have been performed primarily
+    in primates (19). This has revealed a series of brain areas, arranged in a hierarchical
+    manner and referred to as the ''visual system'', which areas are sensitive to
+    high-level representations of visual objects (19, 20). In rodents, lateral visual
+    cortex appears to excite vertical-stream-like properties (21–23), and perform
+    neurons can respond to turn visual objects (24, 25, 26). However, it remains unknown
+    whether visual-objects influence spatial navigation.
+
+
+    Brain Networks Group, University of Göttingen, Center for Molecular Genetics,
+    Cluster of Excellence “Molecular Biology from Molecules to Cells (MBoC)”, University
+    of Göttingen, “Brain-Wide Circuits for Behavior Research and Cognitive Technology”,
+    National Neuroscience Institute, McGill University, Montreal, Quebec, Canada;
+    Marie-Louise Montana, Montreal, QC, Canada; Dominique Siegelinger, Institute of
+    Molecular and Cell Biology, University of Basel, Basel, Switzerland; Thomas Wei,
+    Yale School of Medicine, New Haven, CT, USA. These authors Dominique Siegelinger,
+    et al. contributed to this work. This is their work. Dominique Siegelinger, et
+    al. These authors contributed to this work
+
+
+    1 of 12'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# RESEARCH ARTICLE
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_2_0.png)
+
+
+    preference for visual objects by scrambling the response;images to the response
+    (Object-scrambled); Neurons in PO and RSC exhibited a preference for visual objects.
+    VI, and RSC cortex did not respond to visual objects, although, with the concordance
+    results, there was a merged trend toward Object-scrambled (Fig 2d). For all five
+    areas, recapitulated FS preferences for visual scrambled, with a strong correlation
+    between the then objects with visual objects under both coding modifications (Fig
+    2e); Pearson''s correlation coefficient (R) = 0.97. No significant differences
+    were found between diffeomorphic transformations (Fig. 2f to H). From this point
+    forward, we considered areas that show visual preferences for objects over both
+    scrambled and Scrambled; this was the case for PO and RSC (Fig 2c, G and H). By
+    contrast, VI and V showed no preference for objects (Fig. 2e). General features
+    of neurons in these five areas are respond to visual stimuli up to 50 ms.
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_2_1.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_2_2.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_2_3.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_2_4.png)
+
+
+    Fig. 1. Visual object-sensitive areas revealed with scrambled image; (A) Schematic
+    of scrambling with visual stimulation. (B) The timeline of a schematic of the
+    scrambled images with full-field gray stimulus. At the bottom are pooled FS responses
+    (± SEM) from each stimulus block (n = 56 subjects with anesthetized animals; the
+    same data were used for all positions). (C) Visually focused FS responses (all
+    image blocks as rows) reconstructed on cortical brain images at positions. T-scores
+    are significant to identify differences from zero using false discovery rate (F)-corrected-mixed
+    models. (D) Visually active cells (colored blue) were identified as showing a
+    preference for visual objects. (E) Visually focused FS responses to Object and
+    Scrambled; from PO, V1, VI, and SC. Significant to right (p<0.001; 0.359, n=6
+    and n=100) using Bonferroni-H, mixed-models. (F) Rank of ordering visual preferences
+    for scrambled (orange) or other (green) networks. (G) Spatial preference comparing
+    the difference between the two networks, p = 7×10⁻⁵ using Mann-Whitney’s test.
+    (H) Spatial preference foring value, networks not significantly different from
+    zero, z(spatial) p=(0.008) and p=(0.952) using Wilcoxon-signed-rank test. For
+    rank whiskers, the center is the maximum and minimum value contours (indicated
+    by CI 95% – -15 and +135).
+
+
+    # A preference for visual objects in postsynaptic neurons
+
+
+    To ensure visual objects were identified with visual by driven neural (37), we
+    performed electrophysiological recordings from several areas in head-anesthetized
+    mice (Fig 2a and 5). From the areas of the spatial system—RSC (which had a preference
+    for visual objects), as well as dorsal and lateral stream—we recorded data from
+    our experiments, RSC, but RSC; trended toward preference object images.
+
+
+    We compared FS responses to single-unit spike responses, for focusing on the difference
+    between preferences to objects and Scrambled-images (Fig. 2, c to E). For single-cells,
+    we tested for the
+
+
+    (III) With an open-field recordings, which were moved, to a different part of
+    the front monitor, head-in-retrained and shown to be suitable for anesthetized
+    animals.
+
+
+    First, we examined the rate of light-activated neurons. Visual stimulation increased
+    the rate of some neurons, but visual stimulation did not decrease the rate of
+    Phob neurons in anesthetized animals, and visually exposed neurons in PO were
+    not shift in transient- and absent and showed an off response preference for visual
+    objects in physiological recordings, and negatively modulated visual objects.
+
+
+    The preference for visual objects was specific to visually modulated cells (Fig.
+    3, C and D).
+
+
+    SCIENCE 11 NOVEMBER 2025
+
+
+    2 of 12'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# RESEARCH ARTICLE
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_3_0.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_3_1.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_3_2.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_3_3.png)
+
+
+    were performed in a different environment, it unclear how the preferred directions
+    that were in the freely moving condition remained or took advantage of advantageous
+    population responses in the HD system. There were several hallmarks of a continual
+    anchoring (4). First, only cells with similar preferred directions can be activated
+    at a given time, resulting in a localization of activity. Second, the angular
+    pair of cells is held across different environments, making it possible to compare
+    responses of stimuli between environments. We tested whether the skewed distribution
+    of visually and numerically responsive HD cells returned to the activity in the
+    HD attracted region or remained anchored in the HD connected region. HD cells
+    continue to persist even when an environment is rotated by (3, 4), the lack of
+    activity indicates that HD cells are still anchored in the HD connected region
+    of the ring that exhibited visually responsive responses (4, C, and D), and HD
+    cells pointing towards the stimulus were the ones that were modulated by the visual
+    stimulus. We also found that the absence of preferred direction in neighboring
+    HD cells (5) suggests that the visual stimulus did not affect the differential
+    effect between object and scrambled cells.
+
+
+    Fig. 2. a for visual responses of PoSc and RSC in scrambled condition (A). A schematic
+    of the experiment and the recording sessions. (© Creative: 2018 Allen Institute
+    for Brain, Science Brain). (B) From left, actual object (scrambled; blue boxes),
+    and, object (scrambled; green boxes). (C) On the right is a left plot showing
+    spiking responses in neuron to PoSc (object) and RSC (scrambled) (blue). At the
+    top is the mean (solid line) ± (shaded area) responses to object (scrambled) and
+    RSC (images from the same cell). At the bottom are the mean (solid line) ± (shaded
+    area) responses to scrambled (object).
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_3_4.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_3_5.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_3_6.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_3_7.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_3_8.png)
+
+
+    Fig. 2. a for visual responses of PoSc and RSC in scrambled condition (A). A schematic
+    of the experiment and the recording sessions. (© Creative: 2018 Allen Institute
+    for Brain, Science Brain). (B) From left, actual object (scrambled; blue boxes),
+    and, object (scrambled; green boxes). (C) On the right is a left plot showing
+    spiking responses in neuron to PoSc (object) and RSC (scrambled) (blue). At the
+    top is the mean (solid line) ± (shaded area) responses to object (scrambled) and
+    RSC (images from the same cell). At the bottom are the mean (solid line) ± (shaded
+    area) responses to scrambled (object).
+
+
+    Furthermore, using visual responses of HD cells with scrambled stimuli for using
+    FUS (V0; x, mean = 56 sessions) and directions (x, y, mean, which are the same
+    as the (G) and (F) The (C) and (D) show object and scrambled pointing towards
+    the stimulus, and (0.456 RSC) Wilcoxon signed-rank test are the same (mean [solid
+    line ± and p values from the five different regions (mean [solid line ± p values
+    are the same as for (A) and for (B)).
+
+
+    in present here, most negatively modulated HD cells were in HD (FC). Focusing
+    on our selection, we found that for visual objects (i.e., PoSc; object-scrambled)
+    responses were present in HD and FSC cells, but not in HD-sc (Fig 3, G to 1).
+
+
+    # Visual modulation firing rates of HD cells as a function of preferred direction
+    firing
+
+
+    We next examined whether a relationship between the different effects of visual
+    stimulation on the preferred direction of PoSc HD cells exists. We focused on
+    HD cells that had a preferred firing direction for PoSc. For any given animal,
+    we recorded the firing rates of direction of all stimuli presented to HD cells
+    and each positioned cell on the ring. We
+
+
+    For the HD cells, we observed a clustering of positive responses on the ring.
+    Pairs of positively modulated cells had similar preferred directions. The distribution
+    was more similar than that of HD cells with opposite responses to the visual stimulation
+    (4, A and B). However, because the HD cells were anchored in one environment and
+    in the head-turned we
+
+
+    To find the link between visually responsive HD cells, we healed the region of
+    the ring that the visually modulated cells were centered at (Fig. 4e). We found
+    a correlation between response and the angle of the HD cell pointing to the stimulus.
+    The HD cells pointing preferred directions pointed (0° or 45°) relative to the
+    stimulus remained the remaining cells (HD healed) preferred firing of 180° ± 45°
+    respond significantly to the visual input (Fig. 4g and h).
+
+
+    However, not every responsive HD cell had a preferred direction with the visual
+    cue. We noted that this is ''anchored'' in HD turning, because many HD cells are
+    exclusively tuned to a single HD, show second peak, usually with a lower peak
+    rate than the first one.
+
+
+    Science 11 NOVEMBER 2025
+
+
+    3 of 12'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# # RESEARCH ARTICLE
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_4_0.png)
+
+
+    the visual input to all units being sensed, and evoked differential effects on
+    each model''s angular distance from the center (Fig. 4L). The model recalculated
+    the experimental data, with visual input producing an increase in firing of model
+    units coding HD and a decrease in firing of model units coding HD away from the
+    center. These results were robust to parameter variations (Fig. S1). This effect
+    was present even when visual stimulus was suppressed to a decrease in global input.
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_4_1.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_4_2.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_4_3.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_4_4.png)
+
+
+    # ## Visual dynamics reflect re-encoding of HD in freely moving
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_4_5.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_4_6.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_4_7.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_4_8.png)
+
+
+    The visual experiments described in the previous sections were performed in head-fixed
+    conditions. Do visual experiments in freely moving HD-cell retain our analysis
+    to time points when presented? To test this–an open-eye visual model–we re-oriented
+    the animal by facing away from the landmarks (Off landmark). While making sure
+    to show that the distributions of HD were encoded in the two conditions, eye movements
+    are length-locked and move steadily to stabilize the visual field (Fig. S47).
+    Our analysis showed that the visual model subtracted the Off landmark frequency
+    rate from the average HD frequency rate and normalized to the Off landmark rate.
+    The rate of HD-cells with preferred directions that were aligned with the direction
+    of the landmark (0°±40°) was significantly higher than those that coded for directions
+    not aligned with the landmark (180°±140°, Fig. S5). This arose because the firing
+    rate of HD-cells aligned with the landmark is higher when the mouse faced the
+    landmark (Fig. 5C), whereas when
+
+
+    Fig. 3. A preference for visual objects is present in HD and sensory neurons in
+    PoSub. (On A) is the schematic of the experimental paradigm. In the freely moving
+    world, the mounted landmark was a White. On the right poles for four hundred recorded
+    HD-cells in the PoSub (top) and the responses of the same 500 randomly selected
+    visual stimuli (perturbations), both plotted as rate versus phase (bottom). (B)
+    The average evoked responses of all recorded cells in the PoSub in animals (n=319
+    cells from frontal), driven by response strength. Sensory neurons are highlighted
+    (in green). Green line (mean S) with a shaded area representing the either positively
+    or negatively modulated neurons for Object-Oriented; Object-Responses (n=129 and
+    n=65) for HD-cells with positively modulated neurons (mean S) for Object-Oriented,
+    range=4 to 15°±30° (*** and***) and Object-Oriented, range=1 to 120°±30° (***
+    and***) and Object-Oriented, range=0.97 m (n=94) with HC-corrected Wilcoxon rank-sum
+    test (n=129 and n=65) for HD-cells with negatively modulated neurons (mean S)
+    for Object-Oriented, range=15 to 160°±30° (***) and Object-Oriented, range=120
+    to 180°±30° (***), based on baseline firing rate, visual stimulus (top graph),
+    and HD-phase (bits). Cell type (bits) is determined by baseline firing rate and
+    visually modulated neurons. Group rate (right) is an example of firing rate of
+    HD-cells in head-fixed conditions compared to those in freely moving conditions.
+
+
+    We used a spiking neural network (RNN) to model our扉, as we have previously demonstrated
+    for tuning-specific experiments when model units were generated in a ring architecture
+    (45, 46) and the RNN activity properties depend on the strength of the ring (45).
+    Here, the units of the RNN were generated by matching the activity within the
+    HD ring attractor representing the HD (Fig. 4, H to J). We examined the effect
+    of visual input to PoSub, as an input unit to the RNN network (46). Despite
+
+
+    # ## Discussion
+
+
+    Using fusions-based head-fixed and freely moving electrophysiological recordings
+    in mice, we made two central
+
+    from the HD-cells in a two-landmark environment, with an object from the set that
+    we used in our head-fixed experiments and the experiment by learning
+
+    hthe visual response, as described in the previous paragraph, for the landmark
+    and for the landmark. We found a significant
+
+    by the object landmark (Fig. 5G) but not the
+
+
+    SCIENCE 11 NOVEMBER 2025 4 of 12'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# RESEARCH ARTICLE
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_5_0.png)
+
+
+    object and decrease the firing rate of HD cells
+
+    other HDs.
+
+    Unlike humans and primates our brainstem did not reveal
+
+    ventral visual objects that were more strongly
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_5_1.png)
+
+
+    Although it is possible that spatial resolution limits
+
+    imposed by visual fields (~250 µm) and
+
+    image registration constraints could impede our\ability to detect visual objects
+    by small
+
+    larly brain areas, our interests consist of
+
+    single-cell imaging experiments from
+
+    mouse ventral streams that have failed to
+
+    reveal individual neurons with
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_5_2.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_5_3.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_5_4.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_5_5.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_5_6.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_5_7.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_5_8.png)
+
+
+    Fig. 4. Visual similarity demonstration models HD cells with a preferred direction.
+    (A) Schematic
+
+    of how we simulated the visual response and preferred firing direction for in-
+
+    simulated cells. The firing rate is indicated by the angle of the
+
+    on the left side of (C). (B) The difference in preferred direction for HD cells
+    that
+
+    were modulated by visual stimulation (or angle) and for cells of HD cells
+
+    which was 12° for unsimulated data from the sample on the left side of. (C) The
+    difference in preferred direction for HD cells that were one visually
+
+    modulated by visual stimulation (or angle) and for cells of HD cells
+
+    which was 12° for unsimulated data from the sample on the left side of. (D) Comparison
+    of
+
+    firing preferred direction and firing rate (n = 50 and n = 77) for preferred
+
+    direction of 0°, 45°, and or 180° (p = 1.3 * 10^-4) using Mann-Whitney U
+
+    test to compare between preferred direction (HD firing left) and firing rate (in-
+
+    hed) for preferred direction (HD right). The dotted red line represents the mean
+
+    curve for the object. (E) For each example, the mean response of visual objects
+    is placed
+
+    aligned with the preferred direction. (F) In the centered region, the wrist
+
+    mean response across all balls and the dots from the direction. (G) Absolute
+
+    difference in preferred direction between modulated cells (n = 50 and n = 77)
+    using Mann-Whitney U
+
+    test (p = 2 * 10^-5).
+
+
+    findings related to visual objects and the brain''s spatial
+
+    system. First, at level of mean activity in brain areas, visual
+
+    spospitive spatial areas exhibit a preference for visual objects
+
+    or covered versions of the same images. Visual inputs
+
+    directly coding HD in Poisson: Visual objects show the firing
+
+    rate of HD cells with preferred direction pointing towards the
+
+
+    other work studying auditory and whisker responses in the
+
+    stem (57) and potentially respond to visual objects. Both
+
+    areas are known material layers that are involved in the
+
+    process of sounds and visuals (14, 58, 59). It is
+
+    cris critical for aligning features, transgenic ectopic cells
+
+    to allocative information, the HD signal (59, 60, RC
+
+
+    September 11 2025
+
+
+    10 of 12'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# RESEARCH ARTICLE
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_6_0.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_6_1.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_6_2.png)
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_6_3.png)
+
+
+    Open open area
+
+
+    +   - On landmark
+
+
+    +   - Off landmark
+
+
+    0°
+
+
+    +   - On landmark
+
+
+    +   - Off landmark
+
+
+    0°
+
+
+    +   - On landmark
+
+
+    +   - Off landmark
+
+
+    0°
+
+
+    +   - On landmark
+
+
+    +   - Off landmark
+
+
+    Visual = FR_on - FR_off
+
+
+    Free moving two visually cuesulated
+
+
+    +   - Object
+
+
+    +   - On landmark
+
+
+    +   - Scrambled
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_6_4.png)
+
+
+    F
+
+
+    Scrambled,
+
+
+    +   - Object
+
+
+    +   - On landmark
+
+
+    +   - Scrambled
+
+
+    ![](img/63a3bc1539b69f0a7e4670d593b6c59a_6_5.png)
+
+
+    Fig. 5. Visual dynamics refine fine-tuning HD encoding. (A) On the left schematic
+    shows how HD can utilize the visual cues, from some positions, the mice cue directly
+    at the landmark (landmark), while for others, the mice do not detect the landmark
+    (landmark). On the right, the location time is shown (for one mice, mice with
+    off) colored by the meters when the mouse is On landmark (black) or Off landmark
+    (gray). The visual cue is only when the mouse is On landmark.
+
+
+    (B) For cells with HD preferences been shown within the range of -22° (blue) and
+    105° (red) Mann-Whitney test (n=7). (C) For cells with HD preferences shown where
+    the range of 0° to 140° and 180° to 360° (0.003) Mann-Whitney test (n=7, p=0.0485)
+    using Wilcoxon test. (D) Same as for Off landmark (mice with off landmark preferences,
+    p=0.029) using Wilcoxon test within the range of 0° to 140° Mann-Whitney test
+    (n=5). (E) In a subset of mice, which were performed in an open area containing
+    two visual landmarks: one object landmark and one scrambled version of the same
+    area. As in time, the mice were near the landmark (Object) and scrambled (Scrambled)
+    extracted (F). When the mice did not detect the landmark (Object) or scrambled
+    (Scrambled) extracted (F), the visual response was experienced by the object with
+    higher preferences for higher direction in the direction of the object: p=0.0008
+    using Mann-Whitney test (n=16) and 41 (red). (G) The refinement effect in t (n=5)
+    for visual responses experienced by the differentiated scrambled version of the
+    object: p=0.0723 (ns) using Mann-Whitney U test (n=13) and blue (red) cells).
+
+
+    detects visual information in the environment with subcortical HDIs, which are
+    primarily driven by vestibular and proprioceptive signals, the HD signal to the
+    external world (60) and (38, 65–69). The piriform cortex is the HD with visual
+    orientation (9). It is the HD signal with the entorhinal cortex and hippocampus
+    (68). While the HD signal is in the medial entorhinal cortex (70, 69), hippocampal
+    neurons also show HD in the preference of certain visual cues (72). For visual
+    preferences for objects in area postisria, which with HD encoding in other areas
+    as the lateral entorhinal cortex (72), which is mediated between V1 and the hippocampus
+    and involved in forming process, primarily through the spatial memory (71), which
+    could provide fast access to spatial information (73, 75).
+
+
+    The visual preferences for objects in the spatial navigation system that we describe
+    do not appear to arise from highly specific regions but are represented by many
+    neurons in the head to reflect a general preference for objects over scrambled,
+    which could arise from a preference for natural spatial statistics present in
+    objects. This visual preference could be useful for using
+
+
+    # Materials and methods
+
+
+    Experiments performed in Germany with the institutional guidelines of the Planck
+    Society and were approved by the local government (Leierungring von Bayern). Experiments
+    were performed in accordance with the Canadian Committee on Animal Care and Institute.
+    Male C57BL/6 mice aged 6–12 weeks old in weight were used. Experiments in groups
+    of ten under the Institute''s Animal Care Committee, and followed by
+
+
+    Cranial surgery
+
+    Surgeries were performed anesthetized with a subcutaneous injection of ketamine
+    (0.05 mg/kg), midazolam (5 mg/kg) and medetomidineidine (FMM complex). We were
+    using a heating pad and kept at 37°C with a temperature-controlled probe during
+    surgery. Local anesthesia was performed with lidocaine (Bayer, Bayern). A large
+    cranial window was created using a skull dental drill, extension from +2.5 mm
+    after peri, ensuring the dura remained intact. The wound was closed with sutures
+    and cyanoacrylate (glue) and it was reinforced with dental cement (Sper-Bound).
+    Anesthesia was reverted by administering intravenous bupentaniline (0.5 mg/kg)
+    and injections of buprenorphine (0.1 mg/kg). After a 2-day recovery period the
+    head was prepared, and the anesthesia was reverted by the REM combo, with ketamine
+    (2.5 mg/kg), and naloxone (1.2 mg/kg). Mice were allowed at least 5 days of recovery
+    before gradually becoming examined, the behavioral setups, and tasks
+
+
+    # Habituation to fearation
+
+
+    For AVIS recording sessions, all animals general were habituated to a head-fixed
+    context. For the first 1 to 2 days, we
+
+
+    SCIENCE NOVEMBER 2025
+
+
+    6 of 12'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# RESEARCH ARTICLE
+
+
+    allowed to behave Rig. Over the next 5+ days, the duration of head fixation increased
+    from 10 min to 60 min.
+
+
+    Electrophysiological recordings in awake animals
+
+    The probe was lowered below the postmusculature during the motor cruise of 2-8
+    hours before the start of recording. Neurophysiological signals were recorded
+    at 20 kHz using a 26-channel system (Intan Technologies Headboard Interchanger
+    and with) recording software.
+
+
+    fUS acquisition
+
+    fUS-imaging was collected using a 32-channel matrix probe (15 MHz, 1024 channels,
+    resolution: 220 x 175 µm; Vernon) connected to a Vantage 256 system (Vernon, Inc.)
+    and connected to a custom fUS acquisition module (Intan AUTC). A multiplexer linked
+    the 1024-channel probe to the 256-channel system with hardware and software buffering.
+
+
+    Behavior of the mice during freely moving assays was tracked using infrared markers
+    that were mounted on the skull. Data were recorded using 30 infrared cameras and
+    a 20 motion camera system (Optitrack). Behavior was captured by an additional
+    mounted camera. Behavioral tracking was acquired at a rate of 120 Hz and synchronized
+    with the fUS acquisition via the Intan USB Interface.
+
+
+    The head was fixed in a head-holding tube and the probe was moved by a manipulator.
+    fUS recordings were performed under the FCM coil and kept at 37°C with a temperature
+    control. The mouse was viewed through a small quartz window. The compound ultrasound
+    image was generated from the summation of planes at -45°, -3°, -1°, 0°, 1°, 3°,
+    and 45°. A Power-weightedweighted fUS image was generated from the incoherent
+    image of 160 compound images. Data reconstruction was performed in real time using
+    the decomposition algorithm. Only 20% of significant signals were reconstructed.
+
+
+    Visual stimuli
+
+    Images were presented at a size of 60° with the center of the image at -30° width
+    and +20° elevation on a 60 cm monitor (Dell U2415). The monitor was placed in
+    front of the mouse. For experiments, we employed a design of 12 groups of 8 stimuli
+    for 12 seconds (12 minutes total, with a 30-second interval between groups). Stimuli
+    were presented in random order. Each recording lasted 10 minutes for 5 s and interleaved
+    with at least 0.5 s of each.
+
+
+    # Electrophysiology recordings under anesthesia
+
+
+    Data was recorded at 20 kHz using silicon probes (Cambridge NeuroTech, type III)
+    connected via a SPI interface (Intan Technologies). The probe was inserted into
+    a USB interface board. The FCM was fixed in a head-holding tube, to control the
+    probe by the manipulator''s coordinate system. Performance (0.5 minute) was measured
+    after recording impedance stability. Recordings were performed for 2 brain at
+    10 days after the start of recording. For different days, sessions were secured
+    with Wilsk-steel cannula. CM-DM (Thermo Fisher, Cambridge) was used to stabilize
+    the probe before brain insertion or identifying recording sites post.
+
+
+    Silicon probe insertion for (chronic) anesthesia
+
+    Animals were anesthetized with 5% isoflurane and prepared with a stereostatic
+    apparatus. During the surgery we maintained with 1-2% isoflurane. We gave a subcutaneous
+    injection (-0.8 mg body weight) and medobarbital (20 mg/kg, as a subcutaneous
+    dose of 1 mL) at the incision site or as they were placed in the stereostatic.
+
+
+    A craniotomy was performed over the target area, creating a hole slightly larger
+    than the probe insertion, at 0.1 mm lateral to the Bregma. We recorded coordinates:
+    AP (from Lambda) +0.3, -2.35, -0.10. The probe was carefully fixed into position
+    and anchored to the skull using dental cement (Unif Tread). To minimize electrical
+    noise during recording, a mesh was attached to the skull using dental cement (Postite
+    Funio).
+
+
+    After surgery, we gave a subcutaneous injection and placed on the head pad until
+    fully recovered. Post-surgery, animals were housed individually and received daily
+    carprofen injections for for three days. Animals were allowed to recover for 7
+    days post-surgery before further examination.
+
+
+    Image preparation
+
+    Images were resized to 1024 x 1024 pixels and on a dark gray background. For these
+    images we created a composite image and extracted statistics using the described
+    texture statistics (36) with 25 generics. With इतना, we generated a scrambled
+    image by matching permutation of features (vorticity, linear filter responses
+    and many) of local features in the starting image without taking account the spatial
+    location (33) and (34) for the description of the alignment. Additionally, images
+    were corrected and the SHINE toolbox (81) was used to enhance luminance match.
+    Finally, to avoid edge effects a small margin was used. For electrophysiological
+    experiments we additionally demonstrated with two scrambling methods, the full
+    amplitude spectrum (specMatch.m) as well as the luminance (highMatch.m)
+
+
+    # Pupil size
+
+
+    During functional recordings in awake, head-fixed mice'' pupil of eye was observed
+    via video. For this IR we used a light and a monochrome camera (BlackSentry) with
+    an IR filter
+
+
+    SCIENCE 15 NOVEMBER 2025
+
+
+    Downloaded from https://www.science.org/article/xxxx on September 26, 2025
+
+
+    7 of 12'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# RESEARCH ARTICLE\n\nwas pooled at the level of the mouse. Videos were triggered\n\
+    PsyCo by the fusion of the visual stimuli and\ncol 10 Hz. For analysis, FaceMap\
+    \ (82) was used to extract\npool size. Each featured pool size was zeroed and-\n\
+    at the trial level pool size before onset was subtract-\nted to account for fluctuations\
+    \ in object\npresentation or scrambled.\nThen, the mean pool size before onset\
+    \ was subtracted\nthe mean pool size stimulus presentation to get an average pool\n\
+    response of the response for either stimulus or Scrambled.\n\n(window very short\
+    \ start/stop point before/after stimulus onset\noffet), a generic stimulus window\
+    \ (from stimulus onset to stimulus\noffset) was used.\n\n# Data analysis\n\nAll\
+    \ analysis was performed using MATLAB (Mathworks) or Python.\n\n# fUS preprocessing\n\
+    \nThe fUS series was processed using the Allen Brain Institute\nmouse brain atlas.\
+    \ For this, all sessions of a mouse were\naligned using an approach based on the\
+    \ MATLAB importnunction. A high-resolution power map was created by\naveraging\
+    \ 100 fUS frames from a single session, which was\nregistered to the atlas using\
+    \ masks to create a\ntemporal registration. This was applied to all frames of\
+    \ the same mouse. The\n\nfUS series was processed using custom MATLAB scripts\
+    \ on\nvoxel-by-voxel basis. Temporal inversion was performed to\ncalculate the\
+    \ hemodynamic response. The BOLD signal was\ncalculated by subtracting the baseline\
+    \ signal from each\npoint and dividing by the baseline. Slow drifts were removed\n\
+    using a fifth-order Butterworth bandpass filter with a cutoff of\n0.05 Hz. Movement\
+    \ artifacts occurring during awake\nsessions were removed using templates extracted\
+    \ from\nnon-brain voxels or\n\nTo preprocess, and trial-averaged (of the same\
+    \ stimulus\nfUS) data of visual events were clustered using a MATLAB\nUMAP (implementation,\
+    \ Version 4.6) was created with\ndistance metric and the following parameters:\
+    \ n_neighbors=5, cluster-\nn=15. Trial-averaged fUS data of visual events was\
+    \ clustered\nusing MATLAB dendrogram.m (distance metric +\nlinkage method = used).\
+    \ For clustering at the level of voxels, pre-\nprocessed fUS data of visual events\
+    \ were denoised using the\nsilhouette method.\n\n# Electrophysiological preprocessing\n\
+    \nElectrophysiological records were processed with Kilwho, and\ntimes were analyzed\
+    \ using the Phy software at\nhttps://github.com/kelly/phy/). Only units that showed\n\
+    responded to the stimulus and exhibited high Spike quality\nresponses were included\
+    \ in the analysis. To estimate stimulus\nframes, single-unit events were binned\
+    \ with 100 ms bin size and\nthat a 2 ms zero-overlap. A Gaussian kernel with 10\
+    \ ms\nwas used for smoothing. For except trials, the rasters were averaged.\n\
+    Raster plots were plotted using the Graph toolbox.\n\n# fUS activation\n\nTo assess\
+    \ activation at the voxel-level, the fUS data was\ntemporally (forward and filtered)\
+    \ and using a General\nLinear Model (GLM) using MATLAB glfit.m model\nincluded\
+    \ the visual stimulus block,\nwith a single-hemoglobin response function. The\
+    \ resulting\nT-scores were averaged across animals/sessions and plotted on top\n\
+    the Allen Brain atlas (by threshold p values, see below).\nTo compare the activation,\
+    \ we averaged all fUS and\ntrial-averaged (of the same type of stimulus; or\n\
+    texture) data was segmented into individual\nregions. For animals, areas from\
+    \ the Allen brain atlas\nwere averaged over 100 trials. All voxels within\neach\
+    \ area were averaged. Next, the correlation between\nthe stimulus and the fUS\
+    \ signal of each brain area was calculated.\nTo remove areas that only responded\
+    \ to texture objects\nresponses, we excluded sessions that were\nscrambled and\
+    \ only both. With significant p values we\nexcluded for one or more of the three\
+    \ correlations defined\nas follows.\n\nSimilarly, to find differences between\
+    \ object and\nstimulus, we averaged two response types calculated\nfrom the processed\
+    \ and trial-averaged data. For this,\nwe calculated area under the curve during\
+    \ the response stimulus\nwindow was subtracted from the stimulus onset and normal-\n\
+    response for each trial. We averaged all data of\nresponse for each animal, all\
+    \ trials up to a single\n response. The start of the response window was defined\n\
+    as as the onset of the stimulus. The end was defined\nas the point where the response\
+    \ dropped 70% of the peak\nresponse (30% for fUS due to different temporal dynamics).\n\
+    in this method did not result in a meaningful response window\n\n# Reception field\
+    \ mapping\n\nWhite and black squares (30×30 pixels) were flashed at 12 different-\n\
+    positions (three elevation plus five azimuth) of the screen\nat random order.\
+    \ Each position was repeated 20 times. The stimulus\nduration was 200 ms with\
+    \ a gap of 200 ms. We used 0.5 as\nthat a 2 ms bin had a larger response than\
+    \ 1 Hz\nfor any of the areas. To analyze how many\npositions of the screen resulted\
+    \ in an activation, we tested\nbinned the firing rates around the peak by comparing\n\
+    the firing rates from the\nstimulus (Wilcox signed rank, B-test).\n\n# Spatial\
+    \ frequency tuning\n\nBlack and white squares of different spatial frequencies\
+    \ and were presented at\ntwo orientations (horizontal and vertical), the area\
+    \ of stimulus presented 60° angle\nwas centered at 0° and +60° azimuth, and were\n\
+    displayed for 50 ms 0.5 full field gray. Each stimulus\nwas shown 20 times. With\
+    \ a significant response to\n\nSCIENCE NOVEMBER 10 2025\n\n8 of 12\n\n![](img/63a3bc1539b69f0a7e4670d593b6c59a_8_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: "# RESEARCH ARTICLE\n\none stimulus (Wilcox signed rank test, FDR corrected)\
+    \ was included in the analysis. For each cell and stimulus, the maximum firing\
+    \ rate during the response window was calculated. This resulted in a cell specific\
+    \ preferred tuning curve (which represents the preferred stimulus) that, for visualization\
+    \ of different rates, was scaled between 0 and 1.\n\npositive response was assigned\
+    \ to the modulated group (and accordingly for negatively modulated cells). To\
+    \ visualize the responses with respect to cell head direction tuning (activity\
+    \ bump) in ring F4, the cells of all mice were binned into 20 angular bins based\
+    \ on their preferred direction. The then responses were normalized (0.1 scaling\
+    \ factor) from the average (dashed line).\n\n# Chirp stimulus\n\nA full-length\
+    \ chirp stimulus was presented 20 times, interleaved with 10 of full-field gray.\
+    \ The stimulus intensity smoothly shifted from black to white with increasing\
+    \ frequency from 0.3 Hz to 8 Hz. With a stimulus with amplitude larger than 3\
+    \ Hz the analysis was performed. In response to the chirp stimulus, the normalized\
+    \ firing rates of each cell were decomposed using i-D wavelet transform (MATLAB\
+    \ cwt.function). Then, after all frequencies were analyzed, the power below 5\
+    \ ms of the pre-test stimulus was presented before the last chirp presented the\
+    \ maximal frequency the cell responded to.\n\nIn each mouse we observed an accumulation\
+    \ of cells with head direction tuning and increased activity (activity bump).\
+    \ This activity was stable each mouse because there was no systematic mapping\
+    \ when moving from the freely moving to the head-fixation setup. As requested,\
+    \ we used the HD preferred directions which were strongly modulated around 0°.\
+    \ For, in each mouse circular the mean of the preferred directions of the cells\
+    \ was compared to the visual stimulus was determined, and then subtracted from\n\
+    \n# HD tuning\n\nHD tuning curves were calculated as previously described (4).\
+    \ Briefly, markers on the animal's head were tracked and connected to a horizontal\
+    \ orientation (yaw of direction). The yaw was measured in coordinates (i, aligned\
+    \ with the environment's axes, consistent throughout the study). HD tuning curves\
+    \ were generated as the ratio of time spent in each direction, using 1° bins and\
+    \ with a Gaussian kernel (3 standard deviation). The preferred direction of a\
+    \ cell is defined as the mean of the tuning curve.\n\nTo determine whether a cell\
+    \ is tuned to head direction, we used the head direction as previously described\
+    \ (6) with this method:\n\n```\n$i = \\frac{\\lambda(\\theta)}{\\sum\\lambda(\\\
+    theta)} \\times p(\\theta)$\n```\n\nHere, $n$ represents the total rate of the\
+    \ cell in the ith bin $\theta$, $\\lambda(\\theta)$ represents the neuron's average\
+    \ firing rate during election, and $p(\\theta)$ denotes the occupancy (mean time\
+    \ spent in) $\theta$. The information rate (expressed in bits per second) was\
+    \ then adjusted by the mean firing rate to align with the cell metric (head direction,\
+    \ measured in bits).\n\n# Cell-type classification\n\nPoSB cells were classified\
+    \ as previously described (4). Briefly, cells with a higher firing rate than 10\
+    \ Hz during the moving and a peak duration shorter than 0.4 ms were classified\
+    \ as fast-spinning neurons. In contrast, cells with firing rates below 10 Hz and\
+    \ durations longer than 0.4 ms were classified as slow-spinning neurons. This\
+    \ group was further divided into HD cells (HD cells with head direction information\
+    \ above 0.1 bit) or slow-HD cells (HD direction information below 0.1 bit). All\
+    \ other cells were excluded.\n\n# Visual responses in head-fixed conditions and\
+    \ relating\n\nTo determine whether a cell was positively or negatively modulated\
+    \ by the visual presentation we compared the mean firing rate during the stimulus\
+    \ OFF period across all trials of a cell with a Wilcoxon signed rank test. Cells\
+    \ with corrected p values (B-H correlation) and more\n\n# Visual responses in\
+    \ free moving mice and two landscapes\n\nThe same tests were used, as in the experiment\
+    \ above where cues were placed on two walls 160° off from each other. The visual\
+    \ images were of one and dichromorphic screens used in the head-fixed setup (experiment\
+    \ objects) were presented on a graph). The width of the window was 15 cm and the\
+    \ object or scrambled was 13 cm. Then we only counted points when the animal looked\
+    \ at the visual field (we only counted time points when the animal looked at the\
+    \ visual field (we only counted time points when the animal looked at the visual\
+    \ field (we only counted time points when the animal looked at the visual field\
+    \ (we only counted time points when the animal looked at the visual field (we\
+    \ only counted time points when the animal looked at the visual field (we only\
+    \ counted time points when the animal looked at the visual field (we only counted\
+    \ time points when the animal looked at the visual field (we only counted time\
+    \ points when the animal looked at the visual field (we only counted time points\
+    \ when the animal looked at the visual field (we only counted time points when\
+    \ the animal looked at the visual field (we only counted time points when the\
+    \ animal looked at the visual field (we only counted time points when the animal\
+    \ looked at the visual field (we only counted time points when the animal looked\
+    \ at the visual field (we only counted time points when the animal looked at the\
+    \ visual field (we only counted time points when the animal looked at the visual\
+    \ field (we only counted time points when the animal looked at the visual field\
+    \ (we only counted time points when the animal looked at the visual field (we\
+    \ only counted time points when the animal looked at the visual field (we only\
+    \ counted time points when the animal looked at the visual field (we only counted\
+    \ time points when the animal looked at the visual field (we only counted time\
+    \ points when the animal looked at the visual field (we only counted time points\
+    \ when the animal looked at the visual field (we only counted time points when\
+    \ the animal looked at the visual field (we only counted time points when the\
+    \ animal looked at the visual field (we only counted time points when the animal\
+    \ looked at the visual field (we only counted time points when the animal looked\
+    \ at the visual field (we only counted time points when the animal looked at the\
+    \ visual field (we only counted time points when the animal looked at the visual\
+    \ field (we only counted time points when the animal looked at the visual field\
+    \ (we only counted time points when the animal looked at the visual field (we\
+    \ only counted time points when the animal looked at the visual field (we only\
+    \ counted time points when the animal looked at the visual field (we only counted\
+    \ time points when the animal looked at the visual field (we only counted time\
+    \ points when the animal looked at the visual field (we only counted time points\
+    \ when the animal looked at the visual field (we only counted time points when\
+    \ the animal looked at the visual field (we only counted time points when the\
+    \ animal looked at the visual field (we only counted time points when the animal\
+    \ looked at the visual field (we only counted time points when the animal looked\
+    \ at the visual field (we only counted time points when the animal looked at the\
+    \ visual field (we only counted time points when the animal looked at the visual\
+    \ field (we only counted time points when the animal looked at the visual field\
+    \ (we only counted time points when the animal looked at the visual field (we\
+    \ only counted time points when the animal looked at the visual field (we only\
+    \ counted time points when the animal looked at the visual field (we only counted\
+    \ time points when the animal looked at the visual field (we only counted time\
+    \ points when the animal looked at the visual field (we only counted time points\
+    \ when the animal looked at the visual field (we only counted time points when\
+    \ the animal looked at the visual field (we only counted time points when the\
+    \ animal looked at the visual field (we only counted time points when the animal\
+    \ looked at the visual field (we only counted time points when the animal looked\
+    \ at the visual field (we only counted time points when the animal looked at the\
+    \ visual field (we only counted time points when the animal looked at the visual\
+    \ field (we only counted time points when the animal looked at the visual field\
+    \ (we only counted time points when the animal looked at the visual field (we\
+    \ only counted time points when the animal looked at the visual field (we only\
+    \ counted time points when the animal looked at the visual field (we only counted\
+    \ time points when the animal looked at the visual field (we only counted time\
+    \ points when the animal looked at the visual field (we only counted time points\
+    \ when the animal looked at the visual field).\n\nSCIENCE NOVEMBER 2015\n\nDownloaded\
+    \ from https://www.nature.com/articles/... September 26 2015\n\n9 of 12\n\n![](img/63a3bc1539b69f0a7e4670d593b6c59a_9_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "# RESEARCH ARTICLE\n\nviewing angles, only where the point head direction pointed\
+    \ out or at least at the cue (θ < 45°). As also described, head directions for\
+    \ On and Off were marked and the normalized vision response was calculated. From\
+    \ the setup of this experiment we compared the preferred direction aligned with\
+    \ the object (270° pointing cells) with different cells with preferred direction\
+    \ aligned with the diffeomorphic angle (90° pointing cells). However, cells with\
+    \ preferred direction non-aligned were the same in cases (0° and 180° pointing\
+    \ cells).\n\nwhich consists of a count at θ_min = 0 with high V_max and magnitude\
+    \ an uncertain component of M. We assumed that I and M units on a head are driven\
+    \ equally strongly by the stimulus.\n\nThe final firing rate of each cell is a\
+    \ power-law function of its orientation.\n\n```\n$V(θ) = V_{max}e^{-|θ-θ₀|}$\n\
+    ```\n\nParameters were taken as defined in (46) (see table S7). To test the robustness\
+    \ of our results, a population of 12250 neurons with different weights were sampled\
+    \ from a uniform distribution (see table S7). For each neuron with the input HD\
+    \ (0°), change in rate of neurons aligned to HD (0°, HD-field) and to that HD\
+    \ (180°) was calculated using a small change in input (Δθ=).\n\n# Response delay\n\
+    \nFor each HD, all trials and stimuli were presented to get an overall response\
+    \ of the cell. The response delay was defined as the point when the firing rate\
+    \ of the cell rose above twice the standard deviation of the preceding.\n\n# Perfusion\
+    \ and histology\n\nFollowing the termination of the electrophysiological experiments,\
+    \ an animal was deeply perfused using pentobarbitalobarbital (100 mg/kg) and urea\
+    \ (16 mg/kg) then perfused concurrently with 0.5% phosphate-buffered saline solution\
+    \ fixed by 4% formaldehyde.\n\nIn case of chronic recording, the electrode was\
+    \ retracted to remove the probe. Brain were inserted and kept for 4 hours after\
+    \ changing the solution to 30% sucrose phosphate-buffered saline until. After\
+    \ freezing in a -20°C, brains were frozen with a freezing microtome at 50μm thickness.\n\
+    \nSections were stained with DAPT and mounted in Mifogli medium. Sections containing\
+    \ probes were incubated with a primary anti-IIIβ antibody (1:200) and a secondary\
+    \ antibody labeled with fluorophore 488 overnight at 4°C, followed by\n\nfluorescence\
+    \ microscopy was used to obtain images of neurons and the tracks of silicon probes.\n\
+    \nIn case of acute recording, neurons were collected and collected in ACSF solution.\
+    \ Brains were washed and embedded in 4% ACSF. Coronal slices were cut using a\
+    \ vibr microtome (Vibrotome TX) with a thickness of 100μm and stained with DAPT\n\
+    \nImages were captured using a Leica TCS laser confocal microscopy with a 20x\
+    \ objective (Leica Microsystems). Images processed using LAS software and Adobe\
+    \ Photoshop.\n\n# SSN model\n\nThe supragranular ring network model (46), the\
+    \ cytopically connected network N=50 and N=51 neurons are placed around a ring\
+    \ with θ = [-π, π]. The following equations describe\n\n```\n$V_i = V_{rest} +\
+    \ V_{max} - \\sum_{j} W_{ij}(V_j)$\n```\n\nwhere $V_i$ and $V_j$ refer to the\
+    \ membrane potential and current of an unit neuron at θ₀ and θ respectively, $V_{max}$\
+    \ is external input, and $W_{ij}$ is the strength of synaptic connection from\
+    \ θ₀ to θ, which is fixed such that the sum of the weights $W_{ij}$, $W_{ji}$\
+    \ and $I$ is\n\n```\n$I_{h}(\theta_0) = I(t) + I_{max} \\left[ \\frac{\\cos(\\\
+    theta - \\theta_0)}{\\sin^2\\theta} \\right]$\n```\n\n# REFERENCES\n\n+   1. J.\
+    \ Keck, and J. Harvey. A spatial map of activity in the macaque cortex during\
+    \ free-running behavior. Nature 274(5681): 317–321 (1986). doi: 10.1038/274317a\n\
+    2. S. J. Rau, U. B. Müller, and J. Banks. Head-direction cells in the postsubercular\
+    \ area of mice. Science 281(5379): 925–928 (1998). doi: 10.1126/science.2819925\n\
+    3. T. Haft, M. Simon, G Müller, M. E. Moser, and I. Strohl. Spatial and orientation\
+    \ selectivity in the macaque visual cortex. Nature 436(7052): 806–809 (2005).\
+    \ doi: 10.1038/nature03721\n4. E. C. Taylor, M. Gauss, and R. Jensen, L. E. Moser,\
+    \ and M. B. Path. Representation of head tuning in the macaque visual cortex.\
+    \ Nature 441(7094): 763–768 (2006). doi: 10.1038/nature05032\n5. S. J. Burgess,\
+    \ R. Jensen, and L. E. Moser. Head-direction cells in the monkey cortex during\
+    \ natural navigation. Nature 425(6981): 247–250 (2003). doi: 10.1038/nature02113\n\
+    6. Y. J. Yang and S. Y. Chen. A Functional Map of the Visual Cortex. Science 313(5790):\
+    \ 2055–2060 (2006). doi: 10.1126/science.1129034\n7. G. J. Glyn, M. J. Hassler,\
+    \ and P. B. Matley. From objects to landmarks: functional location of visual information\
+    \ in the postsubercular area. Journal of Front. Neurosci 3(4): 1093–1100 (2009).\
+    \ doi: 10.3189/jnnc.2009.00013\n8. R. K. Müller, J. J. Keck. The effects of changes\
+    \ in the firing rate of the hippocampal-complex cells. Science 271(5249): 1958–1961\
+    \ (1995). doi: 10.1126/science.2715249\n9. U. B. Müller. Head-direction cells-like\
+    \ cells in the postsubercular area. Journal of Neurosciences 28(12): 4442–4450\
+    \ (2008). doi: 10.1553/JNEUROSCI.04242-07\n10. K. J. Leavy. Learning and stability\
+    \ in the hippocampal formation. Nature 377(6536): 667–668 (1995). doi: 10.1038/377668a\n\
+    11. A. K. Ainhauer, S. Pétrigl, and A. D. Okan. Visual reality and theta-phase-locked\
+    \ spatial cells in the entorhinal cortex and hippocampus. Nature Commun. 13(1):\
+    \ 5432 (2022). doi: 10.1038/s41467-022-33514-6\n12. L. F. Fisher, R. Jensen, E.\
+    \ Buluk, and F. M. Haft. Representation of visual information in the entorhinal\
+    \ cortex. eLife 9(5): e09518 (2014). doi: 10.7751/elife.09518\n13. J. J. DeCardilli,\
+    \ C. Ortiz, and N. Rust. How does the brain solve visual orientation problems?\
+    \ Nature Communications 10(1): 2216 (2019). doi: 10.1038/s41467-019-12160-y\n\
+    14. L. G. Winterlager, M. Mishkin, and A. Vidal. D. J. In, and R. W. Mash. Neural\
+    \ encoding in the visual cortex. Cell 168(5): 1003–1012 (2017). doi: 10.1016/j.cell.2017.04.022\n\
+    \nSeptember 11 2022\n\n10 of 12\n\n![](img/63a3bc1539b69f0a7e4670d593b6c59a_10_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# RESEARCH ARTICLE
+
+
+    S. Tadmori et al. Efficiency of transformation-representation of visual stimuli
+    in lateral rostrital cortex. Nature 574, e22974 (2019). doi: 10.1038/s41586-019-22637-7
+
+
+    E. Miller et al. Visual-in-brain 2020. eBO.2020.052898 (Preprint (2021); https://doi.org/10.21504/ebvo.2020.052898)
+
+
+    J. Y. Shin, H. Sharma, C. R. Smith, Selective representations of motion and features
+    in lateral visual areas. Brain. 138, 2810–2820 (2015); doi: 10.1093/brain/aww066;
+
+
+    R. Tong, et al. Visual brain 2021. eBO.2021.033565 (Preprint (2023); https://doi.org/10.21504/ebvo.2021.033565)
+
+
+    D. Zoccan, N. Itzelberg, J. Duncan, D. C. Cohen. A generative model of visual
+    stimuli for human perception. Proc. Natl. Acad. Sci. U.S. 116, 935–940 (2019);
+    doi: 10.1073/pnas.1809333116
+
+
+    J. H. Ivory, V. Weber, M. C. Milner. Vision drives attentional control during
+    prey capture in late memory. Brain. 236, 2046–2052 (2023); doi: 10.1093/brain/awac019;
+
+
+    E. Macht, et al. Functional organization of the visual system. Nat. Neurosci.
+    8, 662–674 (2005); doi: 10.1038/nn10113
+
+
+    C. Bruner, et al. Functional visual integration in human face-body recognition.
+    Proc. Natl. Acad. Sci. U.S. 117, 19447–19452 (2020); doi: 10.1073/pnas.1918114117
+
+
+    Bipolar visual integration circuit in primates. PLOS ONE. 12, e0183364 (2017);
+    doi: 10.1371/journal.pone.0183364
+
+
+    S. D. Oshman. The hierarchy of visual processing in human vision. Nature. 414,
+    67–71 (2001); doi: 10.1038/350700
+
+
+    Y. Yao, et al. A map of space representation in primate cortex. Nature. 508, 1038–1043
+    (2014); doi: 10.1038/s41586-014-22490-x
+
+
+    N. R. Luck, J. Duncan. Visual attention and voluntery in human visual search.
+    Science. 313, 969–972 (2006); doi: 10.1126/science.1129952
+
+
+    J. J. Rich, et al. Backward integration of visual evidence during decision. Neuron.
+    32, 10190–10218 (2012); doi: 10.1016/j.neuron.2012.06.022
+
+
+    A. N. Duncan, et al. Spatial resolution of blood flow measurements by harmonic
+    phase imaging. J. Neurosci. 30, 27581–27590 (2010); doi: 10.1523/JNEURO.0443-09
+
+
+    K. H. Seo, M. K. Sargent. Coordination of visual-hand movements in the macaque
+    monkey. Nature Communications. 14, 3918 (2023); doi: 10.1038/s41467-023-37701-y
+
+
+    R. Liu. Voluntary control of saccadic eye-body movements by the basal ganglia.
+    Nature Neuroscience. 27, 772–778 (2004); doi: 10.1038/nnn.3633
+
+
+    Y. J. Kim, et al. The basal ganglia in the control of saccadic eye movements.
+    Brain. 136, 2111–2125 (2013); doi: 10.1093/brain/awt190
+
+
+    S. S. Cardoso, et al. Role of the basal ganglia in attention and motivation. Nature
+    Reviews Neuroscience. 8, 675–686 (2007); doi: 10.1038/nnron1511-11
+
+
+    J. R. Miller, et al. Lateral motor organization in the macaque prefrontal cortex.
+    Nature. 411, 716–720 (2001); doi: 10.1038/35073
+
+
+    D. B. Sun, et al. The role of the premotor cortex in motor control. Nature Neuroscience.
+    15, 1250–1261 (2012); doi: 10.1038/nn.25061
+
+
+    G. Yamashita, et al. Dynamics of dopaminergic signaling in the prefrontal cortex.
+    Nature Neuroscience. 9, 846–850 (2006); doi: 10.1038/nn.1511
+
+
+    N. A. Sato, et al. Functional representation of motor planning in the macaque
+    monkey. Science. 287, 3268–3273 (2000); doi: 10.1126/science.287.5453.1
+
+
+    D. Keeler, E. T. Akayuki, J. S. Teller, and G. Wagner: Visual aspects of social
+    behaviors in monkey. Brain. 131, 509–524 (2008); doi: 10.1093/brain/aww364
+
+
+    E. J. Miller, et al. Types of eye-head coordination in human visual pursuit. Brain.
+    130, 3431–3445 (2007); doi: 10.1093/brain/awc042
+
+
+    A. H. E. McNaughton. Dynamics of gaze control in free moving eye. Eye. 125, 7554–7568
+    (2019); doi: 10.1098/eye.19.11.54
+
+
+    C. J. Liu, et al. Visual behavior in humans is maintained by the pursuit-related
+    left hemisphere with optic flow. Eye. 108, e70308 (2020); doi: 10.1016/j.eye.2020.e70308
+
+
+    B. Cohen, et al. The face area: A model of human face. Nature Neuroscience. 17,
+    4302–4317 (2014); doi: 10.1038/nn.3933
+
+
+    A. D. Hey, R. S. Stanley, A. D. Anderson, and M. E. Moser: Object-visual control
+    and attention of circular circuits. Nature. 454, 1038–1043 (2008); doi: 10.1126/science.1153338
+
+
+    B. Brunner, et al. Functional visual integration of human face and attention of
+    circular circuits in macaque area. Brain. 138, 871–886 (2015); doi: 10.1093/brain/awu290
+
+
+    T. N. Han, J. W. Hu, J.-H. Shin, and C. M. Kim: MRI responses to visual attention
+    in the macaque visual area. Nature Neuroscience. 11, 2254–2262 (2008); doi: 10.1038/nn.2172
+
+
+    E.-H. Galález, M. Behavioral and modulation of human-directed attention. Nature
+    Neuroscience. 27, 223–238 (2014); doi: 10.1038/nn.3863
+
+
+    S.-L. Ding. Anatomy of the prefrontal subcallosum, subiculum, and parahahippocampus
+    in human attention and memory. J. Neurosci. 52, 9993–1000 (2002); doi: 10.1523/J.NEURO.52.9
+
+
+    A. S. Alexander, P. Rice, J. M. Staristi, and E. R. Ditch: Retinal representations
+    of saccades and attention. Nature Neuroscience. 11, 1155–1160 (2008); doi: 10.1038/nn.21155
+
+
+    J. P. Petty, et al. Landmark-directed head direction in human saccadic eye movements.
+    Nature Neuroscience. 23, 2781–2798 (2020); doi: 10.1038/s41593-020-1118-x
+
+
+    H. A. Kim, J. J. Donnelly: Landmark-based control of the head direction system
+    by the prefrontal and parietal cortex. Brain. 128, 2018–2033 (2005); doi: 10.1093/brain/aw001
+
+
+    S. G. Müller, I. E. Regter. Regional control of saccades by the prefrontal cortex.
+    Nature Neuroscience. 5, 1454–1460 (2002); doi: 10.1038/nn.766
+
+
+    J. S. Taube. Head direction signals and sensory-motor integration. Nature Neuroscience.
+    19, 17411–17428 (2016); doi: 10.1038/nn.4396
+
+
+    F. Galgó, et al. Functional representation of position, direction, and velocity
+    in the cortex. Science. 312, 758–762 (2006); doi: 10.1126/science.1125572
+
+
+    SCIENCE 11 November 2023
+
+
+    11 of 12'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'H.-V. Hu, A. T. Chaplin, A. J. Davies, R. Mena, M. G. Rocha. A localized area
+    in the cortex for enhancement of visual perception. Nature Communications 13,
+    3597 (2022). doi: 10.1038/s41467-022-329905-5
+
+
+    M. R. Gray, et al. Representation of cells and arborization in the human brain.
+    Brain Bull. 228, 217–219 (2018). doi: 10.1016/j.cbrain.2017.11.006; 2918413
+
+
+    K. S. Rockstrand. Visual system. Prospective–visual area cells in the cat brain.
+    Brain Bull. 222, 85–92 (2018). doi: 10.1016/j.cbrain.2017.01.006
+
+
+    H. Tanaka, K. Manamura. Visual properties of receptive cells of the macaque inferotemporal
+    cortex. Cortex 11, 3084–3099 (2001). doi: 10.1097/0000-2440-200107000-00015
+
+
+    T. Dalwig, L. Esch, R. R. Azededo da Silva-bostov 2021.02.11.67850 [Preprint]
+    (2021). doi: 10.1101/2021.0211
+
+
+    S. V. Gong, et al. A large-scale mapping of macaque corticocortical connections
+    across ventral and dorsal sensory streams. Nature 508, 247–252 (2014). doi: 10.1038/nature13186;
+    2446259
+
+
+    X. J. Yang, et al. Functional mapping of corticocortical connections in the ventral
+    and dorsal visual systems. J Neurosci. 32, 4386–4399 (2012). doi: 10.1523/JNEURO.05665-12-2042
+
+
+    A. M. Yates, et al. Visual control of low-level image properties: The SHIBox:
+    High-density chronic recording of electrophysiological activity in the human visual
+    cortex. Nat. Commun. 13, 503 (2022). doi: 10.1038/s41467-022-30825-y
+
+
+    A. Syeda et al. Facememap: A framework for decoding neural activity by ongoing
+    facial tracking in the human brain. Nat Sci Rep. 11, 19223 (2021). doi: 10.1038/s41598-021-99233-0-46
+
+
+    L. Moreaux, J. Healy, and M. Melville. UMAP: Uniform manifold approximation and
+    projection for data visualization. arxiv.org/abs/1801.02426 [stat.ML] (2018).
+
+
+    P. Grafner. Grammar of plotting in Matplotlib. J. Open Source Soft. 6, 3568 (2021).
+
+
+    B. Dieghaeser et al. Visual objects reflect head direction. Dryad (2025). https://doi.org/10.5061/dryad.jr2n8sts11
+
+
+    # ACKNOWLEDGMENTS
+
+
+    We thank L Mainville for providing histology for post hoc identification of cells.
+
+    We thank T. Frank, A. Krishnaswamy, J. M. Martínez de Paz, P. Warden, T. Golitsch,
+    G. Politte
+
+
+    and N. Golia for helpful discussions and feedback on the manuscript. We thank
+    K. Monondo and A. Jordan for technical support. We thank A. Rocha for help with
+    data collection. Funding: D-S was supported by the Swiss National Foundation (SNF)
+    Early Postdoctoral Fellowship (Grant 25.041-19). A.R. was supported by the European
+    Research Council (ERC) under the Horizon Grant (Grant 832433) and ERC Synergy
+    (Grant 901033) and the National Science Foundation (NSF) (Grant 1917458). This
+    work was funded by the Max Planck Society under the Alexander Kreiser Foundation
+    (Excellence Strategy 2019–2027) and the German Research Foundation (DFG) (Cluster
+    of Excellence Computational Interaction and Communication, DFG Project 1678-1-1;
+    DFG Project 2933540).
+
+
+    We acknowledge funding from the National Science Foundation and Research Network
+    of the United States government. No specific grant from any federal agency or
+    commercial-profit funding agency was used to support the research in this study.
+    We acknowledge Research Council Canada of the UK government grant. This work was
+    supported by the US National Institutes of Health Research Project Grant (R05933)
+    and the Canadian Institutes of Health Foundation.
+
+
+    D.S., E.M., and E.S. experiments were performed by D.S. Anesthetized electrophysiological
+    experiments were performed by H.D. and S.C.C. Data modeling was performed by H.D.
+    and S.C.C. Data analysis was performed by all authors.
+
+
+    # SUPPLEMENTARY MATERIALS
+
+
+    science.org/10.1126/science.abj828
+
+
+    Figs S1 to S33, Tables S1 to S57; References (86–102); MDAR Reproducibility Checklist
+
+    Submitted 29 November 2023; accepted 18 April 2024
+
+
+    10.1126/science.au9828'
+  merge: -1
+  img_proc: true
