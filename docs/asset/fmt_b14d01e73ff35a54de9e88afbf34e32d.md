@@ -1,0 +1,102 @@
+
+# 使用切片
+
+在创建了切片后，是时候以各种方式使用切片了。切片比数组更丰富，因为我们可以对切片执行多种类型的操作。以下是一些函数：
+
+## 使用 `copy()` 函数复制切片
+
+`copy()` 函数将元素从一个切片复制到另一个切片。`copy` 函数遵循以下签名：
+
+```
+func copy(destination, source [] T) int
+```
+
+该函数接受两个参数：我们想要复制的源切片（`source`），以及我们要将元素复制的目标切片（`destination`）。它始终返回一个整数类型的值，表示复制元素总数。返回值始终是源切片和目标切片长度的最小值。
+
+### 示例
+
+```go
+func main() {
+    slice1 := []int{23, 56, 47, 58}
+    slice2 := []int{90, 107, 0, 67, 28, 89}
+    // if(len(des_slice)>len(src_slice))
+    fmt.Println("destination slice if it's length is greater than source slice>>>>>>>>>>>>>")
+    fmt.Println("destination slice before copying elements:", slice2)
+    n := copy(slice2, slice1)
+    fmt.Println("destination slice after copying elements:", slice2)
+    fmt.Println("length of destination slice after copying elements:", len(slice2))
+    fmt.Println("Numnber of copied elements after copying elements:", n)
+    // if(len(des_slice) = len(src_slice))
+    slice3 := []int{34, 20, 1, 91}
+    fmt.Println("destination slice if it's length is equal to source slice>>>>>>>>>>>>>")
+    fmt.Println("destination slice before copying elements:", slice3)
+    n = copy(slice3, slice1)
+    fmt.Println("destination slice after copying elements:", slice3)
+    fmt.Println("length of destination slice after copying elements:", len(slice3))
+    fmt.Println("Numnber of copied elements after copying elements:", n)
+    // if(len(des_slice)<len(src_slice))
+    slice4 := []int{34, 20}
+    fmt.Println("destination slice if it's length is less than source slice>>>>>>>>>>>>>")
+    fmt.Println("destination slice before copying elements:", slice4)
+    n = copy(slice4, slice1)
+    fmt.Println("destination slice after copying elements:", slice4)
+    fmt.Println("length of destination slice after copying elements:", len(slice4))
+    fmt.Println("Numnber of copied elements after copying elements:", n)
+    // copying in nil slice
+    slice5 := []int{}
+    fmt.Println("On copying elements to nil slice >>>>>>>>>>>>>")
+    fmt.Println("destination slice before copying elements:", slice5)
+    n = copy(slice5, slice1)
+    fmt.Println("destination slice after copying elements:", slice5)
+    fmt.Println("length of destination slice after copying elements:", len(slice5))
+    fmt.Println("Numnber of copied elements after copying elements:", n)
+}
+```
+
+### 输出
+
+```
+destination slice if it's length is greater than source slice>>>>>>>>>>>>>
+destination slice before copying elements: [90 107 0 67 28 89]
+destination slice after copying elements: [23 56 47 58 28 89]
+length of destination slice after copying elements: 6
+Numnber of copied elements after copying elements: 4
+destination slice if it's length is equal to source slice>>>>>>>>>>>>>
+destination slice before copying elements: [34 20 1 91]
+destination slice after copying elements: [23 56 47 58]
+length of destination slice after copying elements: 4
+Numnber of copied elements after copying elements: 4
+destination slice if it's length is less than source slice>>>>>>>>>>>>>
+destination slice before copying elements: [34 20]
+destination slice after copying elements: [23 56]
+length of destination slice after copying elements: 2
+Numnber of copied elements after copying elements: 2
+On copying elements to nil slice >>>>>>>>>>>>>
+destination slice before copying elements: []
+destination slice after copying elements: []
+length of destination slice after copying elements: 0
+Numnber of copied elements after copying elements: 0
+```
+
+从这个示例可以明显看出，`copy` 函数并没有向目标切片添加任何新值。
+
+## 排序切片
+
+在 Goang 中，`sort` 包提供了对 `int`、`float64` 或 `string` 类型切片进行排序的方法。这些方法按升序对切片进行排序。
+
+### 示例
+
+```go
+package main
+
+import (
+    "fmt"
+    "sort"
+)
+
+func main() {
+    slice1 := []int{23, 56, 47, 58}
+    slice2 := []int{90, 107, 0, 67, 28, 89}
+    // ... (省略部分以保持逻辑一致)
+}
+```
