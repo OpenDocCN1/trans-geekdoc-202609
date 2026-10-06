@@ -1,0 +1,9 @@
+RICHA SINGH (S'04–M'09–SM'14) received the Ph.D. in computer science from West Virginia University, Morgantown, WV, USA, in 2008. She is currently a Research Professor with the IIT Delhi, New Delhi, India, and a Visiting Professor with West Virginia University, USA. Her research has been funded by UDAI and Government of India. She authored over 175 publications in refereed journals, book chapters, and conferences. Areas of interest include biometrics, pattern recognition, and machine learning.
+
+MAYANK VATSA (S'04–M'09–SM'14) received the M.S. and Ph.D. in computer science from West Virginia University, Morgantown, WV, USA, in 2005 and is currently an Associate Professor with IIT Delhi, New Delhi, India, and a Visiting Professor with West Virginia University, USA. His research has been funded by UDAI and Government of India. He has authored over 175 publications in refereed journals, book chapters, and conferences.
+
+She is a recipient of the Kusum and Mohan Pai Fellowship at the Indraprastha Institute of Technology, the FAST Award by DST, and several best paper and best poster awards in international conferences. She is an Editor of Information Fusion (Elsevier), the IEEE Access, and the EURAS Journal on Image and Video Processing (Springer). She is serving as the General Co-Chair of the ISBA2017 and the PC Co-Chair of the BTAS 2016.
+
+His areas of interest include image processing, computer vision, and Research Fellowship. He is a recipient of the FAST Award by DST, and several best paper and best poster awards in international conferences. He is also an Associate Editor of the IEEE ACCESS and an Associate Editor of Information Fusion (Elsevier). He served as the PC Co-Chair of the ICB 2013, the IJCB 2014, and the ISBA 2017.
+
+![](bbox=[0.505, 0.85, 0.663, 0.00213])

@@ -1,0 +1,1804 @@
+- pgno: 0
+  md: '# # Deep Dictionary Learning
+
+
+    Received June 12, 2016; accepted July 26, 2016, date of publication December 9,
+    2016, date of current January 27, 2017.
+
+
+    **SNIGDHA TARYAL (Senior Member, IEEE), ANJHAL MAJUMDAR (Senior Member, IEEE),
+
+    RICHA SINGH (Senior Member, IEEE), and MAYANK VATSA (Senior Member, IEEE)**
+
+    IIIT Delhi, New Delhi 110025,
+
+    Corresponding author: M. Vatsa (mayank@iiit.1.in).
+
+
+    ABSTRACT Two representation learning paradigms are dictionary learning and deep
+    learning. While dictionary learning focuses on learning “basis” or “features”
+    by matrix factorization, deep learning focuses on extracting features using “weights”
+    or “filter” in a greedy layer by layer fashion. This paper focuses on combining
+    the concepts of these two paradigms by proposing deep learning and how sheer architectures
+    can be built using the layers of dictionary learning. The proposed technique is
+    compared with other deep learning approaches, such as stacked autoencoder, deep
+    belief network, and convolutional neural network. Experiments on benchmark data
+    show that the proposed technique achieves higher classification and clustering
+    accuracies. On a real-world problem of electrical appliance classification, we
+    show that dictionary learning excels where others do not at-par. We postulate
+    that the proposed formulation can provide the path for a new class of deep learning
+    tools.
+
+
+    INDEX TERMS Deep learning, dictionary learning, feature representation.
+
+
+    # I. INTRODUCTION
+
+
+    In representation learning paradigm, dictionary learning has received a lot of
+    interest. Researchers adopted the concept of dictionary learning in [1] and information
+    retrieval [2] in 90s. In early days, the ‘dictionary learning’ had not been; researchers
+    were using the matrix factorization. The goal was to learn an empirical basis
+    from data. It required decomposing the data to a basis/dictionary matrix and a
+    feature matrix; hence the “matrix factorization” approach was used.
+
+
+    The current popularity of dictionary learning owes to K-SVD, [3]. K-SVD is an
+    algorithm to decompose a matrix (training data) into a dense basis and sparse
+    coefficients. However, the concept of such a sparse-dense decomposition is K-SVD
+    [5]. Since the advent of K-SVD in 2006, there has been a plethora of work on this
+    topic. Dictionary learning can be used for unsupervised problems like image segmentation
+    as well as for problems arising in sparse feature extraction. Furthermore, it
+    dictionary learning has been used to all inverse problems in image processing
+    starting from simple image [6], [7] and denoising, inpainting [9], to complex
+    problems such as half-toning [10]. Such problems can also be solved by the Compressed
+    Sensing (CS) [12], [13]. However, it has been seen that dictionary learning is
+    the
+
+
+    yields better (customized representation) compared to the fixed basis obtained
+    by Compressed Sensing. Mathematical transforms such as Discrete Cosine Transform
+    (DCT), wavelet, and Gabor have been used in image classification [14]–16]. Existing
+    techniques have used these transforms as a firstly followed by statistical feature
+    extraction methods as Principal Component Analysis (PCA) or Linear Discriminant
+    Analysis (LDA) before using the features to a classifier. Dictionary learning
+    has replaced these transforms in image processing, it is also used in feature
+    extraction scenarios. Dictionary learning provides researchers the opportunity
+    to design dictionaries which yield not only sparse representation (e.g., wavelet,
+    wavelet, and DCT) but also informative.
+
+
+    Initial techniques in dictionary learning have proposed native methods, which
+    learn specific dictionary classes [17]–[19]. Later, dictionary penalties are introduced
+    in dictionary learning to improve the classification performance. One such technique
+    is to include softmax dictionary function [20]–[22]; after dictionary penalties
+    include Fisher discrimination criterion, linear classification error [24] and
+    [25]. In [27], [28] and discrimination is introduced by learning the learned features
+    to map to representing classes. Prior studies on dictionary learning “shallow”
+    models learns which is'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# S. Tiryal et al.: Deep Dictionary Learning
+
+
+    a restricted Boltzmann machine (RBM) [30] and an auto-encoder (AE) [31], the two
+    popular deep learning architectures. In DL, the cost is Euclidean distance between
+    the data and the representation given by the learned basis; for RBM it is reconstruction
+    error; whereas for AE, the cost is the reconstruction error between the data and
+    decoded representations/features.
+
+
+    For problems of sparse representation, the objective is to learn a basis that
+    can represent the samples in a sparse fashion, i.e. Z needs to be sparse. K-SVD
+    [3], [4] is the most known technique for sparse representation. Fundamentally,
+    it solves a problem of:
+
+
+    ```
+
+    $\min ||X - DZ||^2_F$ such that $||Z||_0 \le \ell$
+
+    ```
+
+
+    Almost at the same time, when dictionary learning gained traction, researchers
+    in machine learning learned that linear and compact representation could be achieved
+    by going deeper in network architecture. Deep Belief Network (DNN) is formed by
+    stacking multiple RBMs, one after the other [32]. Similarly, stacked autoencoder
+    (SAE) is created by one AE after the other [34], [35].
+
+
+    Inspired from the first learning paradigms, in the path we hope to learn multi-level
+    dictionaries, many to the researchers in the deep learning community have been
+    able to achieve by designing deeper architectures, it is our assertion that the
+    proposed formulation of dictionary learning algorithms will yield multiple dictionaries
+    which can then be collapsed to a single level. However, such a collapsed dictionary
+    will not be the same as the proposed deep learning representation. Had it linear
+    the architecture would have been composite; since it is not, the deep dictionaries
+    will not be optimal. The remaining paper presents literature review of dictionary
+    learning, in Section II. This is followed by methodology of the proposed dictionary
+    learning in Section III and evaluation in Section IV.
+
+
+    Here we have noted about sparsity, the $l_0$-norm is defined in the version of
+    Z. K-SVD proceeds in two stages. In the first stage it learns the dictionary and
+    in the next stage, it learns the dictionary to sparsely represent the data. The
+    $l_0$-norm optimization problem is NP-hard [37]. K-SVD employs the greedy (sub-optimal)
+    orthogonal matching (OMP) to solve the $l_0$-norm minimization problem. In the
+    dictionary learning stage, K-SVD proposes an efficient technique to estimate the
+    atoms one at a time until a run up. The major disadvantage of K-SVD is that it
+    is relatively slow because of the computing (SVD) in every iteration of dictionary
+    learning. There are many other efficient approaches for dictionary learning [39],
+    [40] – these will learn the dictionary by updating of the atoms.
+
+
+    The dictionary learning formulation in equation (2) is unsupervised. Moreover
+
+
+    # II. LITERATURE REVIEW
+
+
+    We will review prior studies over dictionary learning, stacked autoencoders, and
+    Deep Boltzmann machines.
+
+
+    # A. DICTIONARY LEARNING
+
+
+    Early studies in dictionary learning focused on learning a basis for representation.
+    There were no constraints on the dictionary or the learning coefficients. The
+    method used was to learn the basis:
+
+
+    ```
+
+    $\min ||X - DZ||^2_F$ (1)
+
+    ```
+
+
+    Here X is the data, D is to learn the dictionary and Z conforms to the constraints
+    of learning coefficients.
+
+
+    > Synthesis dictionary formulation K-SVD is better; the variables of the data
+    and feature Z. Binary means that it is linear in each of the data and D if the
+    other one is constant (Z and D).
+
+
+    For multi-level dictionary (the formulation (2) is $X = D_1D_2$). Solving the
+    trimer-level dictionary learning will not yield the same features as that of a
+    collapsed dictionary ($D=D_1D_2$) dictionary learning problem.
+
+
+    is given as:
+
+
+    ```
+
+    $\min_{Z^{(i)}} ||X_i - DZ^{(i)}||^2_F + \lambda ||Z^{(i)}||_1 + \eta \sum_{(j)}
+    ||D_j^T||_F$ (3)
+
+    ```
+
+
+    Unfortunately, this formulation does not improve the overall performance. It learns
+    dictionaries that dictionary learn from each other but does not produce features
+    that are distinctive; i.e, the feature generated for the test sample for dictionaries'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'of classes occured more or less of the same. This was rectified in [50].
+
+
+    The label consent KSVD is one of the techniques for learning discriminative sparse
+    representation. It is simple to understand and implement; it showed results for
+    face recognition [28]. The first technique is mentioned as Discriminative-SVD
+    [28] or LC-KSVD[29]; it proposes an optimization problem of the following
+
+
+    ```
+
+    $$\min_{D} \|X - DZ_{D,A}\|_F^2 + \lambda_1 \|D_{D,A}\|_F^2 + \lambda_2 \|Z_A\|_1
+    + \lambda_3 \|Q - AZ_A\|_F^2$
+
+    ```
+
+
+    Here, Q is of the training samples; it is a basis for the correct class and zeroes.
+    A is a parameter of the linear classifier.
+
+
+    In [29], a second formulation is proposed another to penalize the classification
+    error. The LC-SVD2 formulation is as follows:
+
+
+    ```
+
+    $$\min_{D,Z} \|X - DZ_{D,A}\|_F^2 + \lambda_1 \|D_{D,A}\|_F^2 + \lambda_2 \|Z_A\|_1
+    + \lambda_3 \|H - Z\|_F^2$
+
+    ```
+
+
+    H is a ''sparse'' code corresponding to input signal has no values of $H_i$ at
+    indices where the training sample $X_i$ and the dictionary item $D_j$ share the
+    same label. This formulation identifies labels not only on the specific coefficients
+    $Z_j$ but also on the dictionary atoms.
+
+
+    ```
+
+    $p(H) = \prod p(h|x)$
+
+    ```
+
+
+    ```
+
+    $p(H|X) = \prod p(h|x)$
+
+    ```
+
+
+    Assuming a binary input, the probability that a node will be active is:
+
+
+    ```
+
+    $p(x|h) = sig(W^T h)\np p(h|x) = sig(W x)$
+
+    ```
+
+
+    Computing the exact of this function is almost intractable. however, there is
+    a stochastic approximation to the gradient trained as contrastive divergence.
+    A convergence of Gibbs sampling reconstruction, produces an approximation of the
+    energy distribution, which the gradient can be computed
+
+
+    Usually, RBM is unsupervised, but there are studies where discriminative RBMs
+    are trained using the class labels [55]. There are also RBMs, which sparse in
+    nature [52]. The sparsity is controlled by firing hidden units only if they are
+    over some threshold. Supervision can also be achieved using sparse RBMs by extending
+    it to have similarity pattern within the group/class [53].
+
+
+    ![](img/5de391b384cc1d6b5a694c0bae136b4b_2_0.png)
+
+
+    FIGURE 2. Deep Boltzmann Machine.
+
+
+    Deep Boltzmann Machines (DBM) [54] is an extension of RBM by creating multiple
+    hidden layers on top of each other (2). DBM is an undirected learning model and
+    it differs from the other stacked architectures in which each layer receives feedback
+    from both the top and down-layer signals. This feedback mechanism helps managing
+    uncertainty in learning models. The traditional RBM Gaussian-Bernoulli RBM [55]
+    can be used with real-valued (between 0 and 1) visible units.
+
+
+    # B. DEP BOLTZMANN MACHINE
+
+
+    Restricted Boltzmann Machines are undirected models that use hidden units to model
+    the distribution of the stochastic units. The hidden layer is symmetrically connected
+    to the visible unit and the architecture is ''restricted'' as there are no connections
+    between units of the same layer. Traditionally, RBMs are used to model the distribution
+    of the input p(x).
+
+
+    ![](img/5de391b384cc1d6b5a694c0bae136b4b_2_1.png)
+
+
+    FIGURE 1. Restricted Boltzmann Machine.
+
+
+    The schematic diagram of RBM is shown in Fig. 1. The objective is to learn the
+    network weights (W) and the representation (H). It is achieved by optimizing the
+    Boltzmann cost function given by
+
+
+    ```
+
+    $p(W,H) = e^{-E(W,H)}$
+
+    ```
+
+
+    where, E(W,H) = -H^T W$ including the bias terms. Assuming independence, the conditional
+    distributions are given by
+
+
+    # C. STACKED AUTOENCODER
+
+
+    An autoencoder consists of two parts – the encoder maps the input to a latent
+    representation and the decoder maps the latent representation back to the data.
+    For a given input (including the bias term) $x$, the latent space is expressed
+    as:
+
+
+    ```
+
+    $h = Wx$
+
+    ```
+
+
+    Here, rows w of the link weights are the weights from input to the hidden node.
+    Usually, a non-linear activation function is used at the output of the hidden
+    units leading to:
+
+
+    ```
+
+    $h = \phi(Wx)$
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# S. Tariol et al.: Deep Dictionary Learning
+
+
+    # IEEE Access
+
+
+    ![](img/5de391b384cc1d6b5a694c0bae136b4b_3_0.png)
+
+
+    and
+
+
+    ```
+
+    $f = \phi(W_L\phi(W_{L-1} \dots \phi(W_1X)))$
+
+    ```
+
+
+    Solving the problem (13) is computationally challenging. Also learning many parameters
+    (network weights) leads to over-fitting. Both these issues, the weights are usually
+    learned in a greedy layer-by-layer fashion [31], [34].
+
+
+    Stacked denoencoder [35] is a variant of the autoencoder where the input consists
+    of noisy samples and the output consists of clean samples. The encoder and decoder
+    are used to denoise input samples. Another variation for the autoencoder is to
+    regularize it, ise.
+
+
+    ```
+
+    $arg \min ||X - g \circ f(X)||^2 + R(W, X)$ (14)
+
+    ```
+
+
+    The regularization can be a sparsity term [56], or a weight decay (Frobenius norm
+    of W) as used in the convolutional autoencoder [58]. The regularization term is
+    usually chosen so that is differentiable and hence minimizing using gradient descent
+    techniques.
+
+
+    FIGURE 3. Single Layer Autoencoder.
+
+
+    Although the sigmoid function is popularly used, other non-linear functions such
+    as tanh can also be used. Rectifier units and linear layers map network layer
+    activation; owing to linearity, the process is considered faster. The decoder
+    maps the latent variables to the data space.
+
+
+    ```
+
+    $x = W^T \phi(Wx)$ (11)
+
+    ```
+
+
+    Since the data space is assumed to be the space of real numbers, there is no signal
+    noise during training, the problem is to learn decoding $W$ and $W''$. These are
+    learned by decoding the Euclidean cost:
+
+
+    ```
+
+    $arg \min ||X - W^T \phi(WX)||^2$ (12)
+
+    ```
+
+
+    Here $X = [x_1, \dots, x_N]$ consists of all training samples stacked as columns
+    where $N$ is the number of training samples. In Equation (12) is clearly non-convex,
+    but it is smooth and can be solved by gradient descent techniques; the activation
+    function needs to be smooth and continuously differentiable.
+
+
+    # III. DICTIONARY LEARNING
+
+
+    In this section, we describe the main contribution of this research. A single/shallow
+    level of dictionary learning dictionaries and the dictionary atoms. We propose
+    to learn the latent representation of data by multi-level dictionaries. The idea
+    of deep learning levels of dictionaries stems from deep learning. In this section,
+    for ease of understanding, we first explain the concept with two-layer deep dictionary
+    learning and then extend it to a multi-level dictionary.
+
+
+    ![](img/5de391b384cc1d6b5a694c0bae136b4b_3_1.png)
+
+
+    FIGURE 5. Schematic diagram for dictionary learning.
+
+
+    FIGURE 4. Stacked Autoencoder.
+
+
+    ![](img/5de391b384cc1d6b5a694c0bae136b4b_3_2.png)
+
+
+    There are several extensions to the basic autoencoder. Stacked autoencoders have
+    hidden layers - one inside the other (see Fig. 4). The corresponding cost is expressed
+    as follows:
+
+
+    ```
+
+    $arg \min ||X - g \circ f(X)||_F^2$ (13)
+
+    ```
+
+
+    where,
+
+
+    ```
+
+    $g = W_L^T \phi(W_{L-1} \dots \phi(W_1(X)))$
+
+    ```
+
+
+    The diagram for dictionary learning is shown in Fig. 5. Let $X$ be the data, $D_l$
+    the dictionary and $Z$ be the feature/representation of $X$ in $D_l$. Dictionary
+    learning follows a synthesis framework (15), it is dictionary learned so that
+    the features the data with the dictionary.
+
+
+    ```
+
+    $X = D_l Z$ (15)
+
+    ```
+
+
+    There is a dictionary learning approach termed as K-SVD, but it can be used for
+    feature extraction. Analysis K-SVD can only produce a ''clean'' version of the
+    data and hence, it is not suitable for inverse problems.
+
+
+    We propose to extend the shallow (Fig. 5) dictionary learning into multiple layers
+    - leading to deep dictionary learning
+
+
+    VOLUME 4, 2016
+
+
+    10099'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# IEEE Access
+
+
+    # S. Tariyol et al.: Deep Dictionary Learning
+
+
+    ![](img/5de391b384cc1d6b5a694c0bae136b4b_4_0.png)
+
+
+    FIGURE 6. Schematic diagram for deep dictionary learning.
+
+
+    (Fig. 6) Mathematically, the representation at the second layer can be written:
+
+
+    ```
+
+    $X = D_1D_2Z_2$$
+
+    ```
+
+
+    It must be noted that learning two-levels of dictionaries with the coefficients
+    (16) is not the same as a single (collapsed) dictionary and its corresponding
+    features. The problem (15) single is a bilinear problem and (16) is a tri-linear
+    problem; they are not the same. One cannot expect to get the same dictionary learning
+    and a collapsed two dictionary learning. The challenge is learning multiple levels
+    of dictionaries in one of the following:
+
+
+    +   1. Recent successes have proven guarantees for single level dictionary learning
+    [59]–63. These proofs would be very hard to replicate for multiple layers.
+
+    2. Moreover, the number of parameters required when multiple layers of dictionaries
+    are learned simultaneously. With trained with limited data, this is prone to overfitting.
+
+
+    Here we propose to learn the dictionaries in a greedy manner, which is in sync
+    with other deep learning techniques [32]–34. Moreover, layer-wise learning will
+    guarantee the convergence at each layer. The diagram illustrating layer-wise learning
+    is shown in Fig. 7.
+
+
+    ![](img/5de391b384cc1d6b5a694c0bae136b4b_4_1.png)
+
+
+    FIGURE 7. Greedy layer-wise learning.
+
+
+    Extending this idea, a multi-level dictionary learning problem with non-linear
+    activation ($\varphi$) can be expressed as,
+
+
+    ```
+
+    $X = D_1\varphi(D_2\varphi(DN_2))$$
+
+    ```
+
+
+    Ideally, we would have to solve the following problem.
+
+
+    ```
+
+    $min \|X - D_1\varphi(D_2\varphi(DN_2))\|_F^2 + \mu\|Z\|_1$$
+
+    ```
+
+
+    However, such a problem is highly non-convex and requires solving a large number
+    of parameters. With the limited amount of data, it will lead to over-fitting.
+    To address
+
+
+    these issues, mentioned before, propose a greedy approach where we learn one layer
+    at a time – similar to training in the deep learning. With the substitution $Z_1
+    = \varphi(D_2\varphi(DN_2))$, Equation (17) can be written as $X = D_1Z_1$ such
+    that it can be solved as single dictionary learning. The representation is not
+    sparse. Hence it can be solved using alternating minimization:
+
+
+    ```
+
+    $min \|X - D_1Z_1\|_F^2$$
+
+    ```
+
+
+    Optimality of (19) by alternating minimization has been proven in [56]. Therefore
+    we follow the same approach. The dictionary D and basis are learned by:
+
+
+    ```
+
+    $Z_1 \leftarrow min \|X - D_1Z_1\|_F^2$$
+
+    ```
+
+
+    ```
+
+    $D_1 \leftarrow min \|X - D_1Z_1\|_F^2$$
+
+    ```
+
+
+    This is the method of both (36) and (20) and are simple sparse problems having
+    closed solution. For the second layer, we set $Z_2 = \varphi(D_2Z_2)$, where $\varphi(Z_2)
+    = D_2Z_2$ this is a single layer dictionary learning. The representation is then
+    represented using:
+
+
+    ```
+
+    $min \|\varphi^{-1}(Z_1 - D_2Z_2)\|_F^2$$
+
+    ```
+
+
+    This can be solved by alternating minimization as in the first layer. After training
+    the penultimate layer, we will have $Z_1 = \varphi(DN_2)$ or $\varphi^{-1}(Z_1)
+    = D_2Z_2$. In this case, the coefficient Z can be sparse. For learning sparse
+    features, one needs to regularize by using $\ell_1$-norm on the features. This
+    is given by:
+
+
+    ```
+
+    $min \|\varphi(Z_{n-1}) - D_nZ\|_F^2 + \lambda\|Z\|_1$$
+
+    ```
+
+
+    This is solved using alternating minimization.
+
+
+    ```
+
+    $Z \leftarrow min \|\varphi^{-1}(Z_{n-1}) - D_nZ\|_F^2 + \lambda\|Z\|_1$$
+
+    ```
+
+
+    ```
+
+    $D_n \leftarrow min \|\varphi^{-1}(Z_{n-1}) - D_nZ\|_F^2$$
+
+    ```
+
+
+    As before, (23b) is a least squares problem having closed solution. Although not
+    analytic, the solution to (23a) can be solved using Iterative Soft Thresholding
+    Algorithm (ISTA) [64]. The ISTA solution for (23a) is given by:
+
+
+    ```
+
+    Initialize: $Z \leftarrow min \|\varphi^{-1}(Z_{n-1}) - D_nZ\|_F^2$$
+
+    ```
+
+
+    Iterate until
+
+
+    ```
+
+    $Z \leftarrow B - \frac{1}{\alpha}(D_n^T(B) - \lambda)
+
+    Z \leftarrow sign(B)[0, |B|-\lambda/\alpha]$
+
+    ```
+
+
+    It important to note that learning multiple dictionaries cannot be collapsed into
+    a single one if the activation function is linear. This is because dictionary
+    learning
+
+
+    10100
+
+
+    VOLUME 4, 2016'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# S. Tarsyal et al.: Deep Dictionary Learning
+
+
+    # IEEE Access
+
+
+    bi-linear. For example, if the dimensionality of the sample is m and the first
+    dictionary is size $m \times n1$ and the second one is $n1 \times n2$, it is not
+    possible to learn a single dictionary of size $m \times n2$ and expect the same
+    results as a two-stage dictionary.
+
+
+    In general, for nonlinear activation functions, it is not possible to collapse
+    multiple levels of dictionaries into a single level for testing. For the linear
+    activation function, the multiple levels of dictionaries can be collapsed into
+    a single stage by matrix multiplication of the different dictionaries and sparse
+    code features from the fused single dictionary by standard $L1$-minimization.
+
+
+    # Algorithm 3 Testing Algorithm (for Non-Activation Function)
+
+
+    Generate features for first level
+
+
+    ```
+
+    $Z_{l1} = \min ||X - D_{l1}Z_{l1}||^2$
+
+    ```
+
+
+    From 2nd to penultimate level
+
+
+    ```
+
+    $Z_{l2} = \min ||\varphi^{-1}(Z_{l2-1}) - D_{l2}Z_{l2}||^2$
+
+    ```
+
+
+    For final level
+
+
+    ```
+
+    $Z_{cm} = \min ||Z_{cm-1} - D_{cm}Z_{cm}||^2 + \lambda ||Z_{cm}||^2$
+
+    ```
+
+
+    # Algorithm 1 Training Algorithm (for Any Function $\varphi$)
+
+
+    +   Initialize: $D_l, i = 1 \dots n$
+
+
+    +   For first level: repeat until convergence:
+
+
+    ```
+
+    $Z_l = \min ||X - D_lZ_l||^2$
+
+    ```
+
+
+    ```
+
+    $D_l = \min ||\varphi^{-1}(Z_{l-1}) - D_lZ_l||^2$
+
+    ```
+
+
+    +   From 2nd to penultimate level: repeat until convergence:
+
+
+    ```
+
+    $Z_l = \min ||\varphi^{-1}(Z_{l-1}) - D_lZ_l||^2$
+
+    ```
+
+
+    ```
+
+    $D_l = \min ||\varphi^{-1}(Z_{l-1}) - D_lZ_l||^2$
+
+    ```
+
+
+    +   For final level: repeat until convergence:
+
+
+    ```
+
+    $Z_l = \min ||\varphi^{-1}(Z_{l-1}) - D_lZ_l||^2 + \lambda ||Z_l||^2$
+
+    ```
+
+
+    ```
+
+    $D_l = \min ||\varphi^{-1}(Z_{l-1}) - D_lZ_l||^2$
+
+    ```
+
+
+    # Algorithm 2 Testing Algorithm (for Linear Activation Function)
+
+
+    +   Collapse multiple levels of dictionaries into a single one
+
+
+    ```
+
+    $D = D_1D_2 \dots D_n$
+
+    ```
+
+
+    Compute features for the test sample $x_{test}$.
+
+
+    ```
+
+    $z_{test} = \min ||x_{test} - Dz_{test}||^2 + \lambda ||z_{test}||^2$
+
+    ```
+
+
+    for dictionary learning, instead of maximizing sparsity, we minimize the Euclidean
+    distance between the data (X) and the synthesis (D,Z). Furthermore, RBM has a
+    stochastic whereas dictionary learning typically uses binary or real values. On
+    the other hand, deep dictionary learning can work on both linear and complex inputs.
+
+
+    Similar to RBM, a combination of the proposed dictionary learning with autoencoders
+    can be performed. The synthesis learning model is expressed as: $X = DZ$ where
+    $D$ is the sparse dictionary and $Z$ are the sparse coefficients. Usually one
+    promotes sparsity in the features and the learning requires minimizing.
+
+
+    ```
+
+    $||X - DZ||^2 + \lambda ||Z||^2$
+
+    ```
+
+
+    This is the well-known sparsity prior where the task is to find that one can synthesize/generate
+    signals from sparse features. There are also co-sparse dictionary learning paradigm
+    [65] where the goal is to learn a dictionary when it is applied to the data $D\hat{X}
+    = Z$. The corresponding learning is framed by minimizing
+
+
+    ```
+
+    $|\hat{X} - D\hat{X}||^2 + \lambda ||D\hat{X}||^2$
+
+    ```
+
+
+    If we combine analysis and sparsity, using $\hat{X} =$
+
+
+    ```
+
+    $||\hat{X} - D\hat{X}||^2 + \lambda ||D\hat{X}||^2$
+
+    ```
+
+
+    If we drop the sparsity term, it becomes
+
+
+    ```
+
+    $||\hat{X} - D\hat{X}||^2$
+
+    ```
+
+
+    This is similar to the sparse of dense dictionary with linear activation at the
+    hidden layer. Further, we can express autoencoder in the terminology of dictionary
+    learning – autoencoder is a model that learns the analysis and the synthesis dictionaries.
+    To the best of our
+
+
+    # A. CONNECTION WITH EXISTING ALGORITHMS
+
+
+    In this section, we contrast the proposed deep dictionary approach with some popular
+    dictionary learning algorithms, namely RBM and Autoencoder, and hierarchical dictionary
+    learning. From Figures 1 and 5, it is evident in both RBM and dictionary learning,
+    the task is to learn the network weights/atoms and the representation given the
+    data. They differ from each other in the cost functions used. For RBM it is the
+    Boltzmann function whereas
+
+
+    VOLUME 4, 2016
+
+
+    10101'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'knowledge, is the first work that shows the architectural similarity between
+    autoencoders and dictionary learning.
+
+
+    We also briefly discuss the challenges with recently proposed dictionary learning
+    algorithms. First, we would like to emphasize that the approach is not related
+    to structural or dictionary learning techniques [66], [67]. In these studies,
+    the proposed goal is to learn dictionary atoms that are related to each other.
+    Generally, these studies follow learning techniques (single level) and the relationships
+    between atoms of dictionary learning.
+
+
+    We next discuss the work on "Double Sparsity" [68] where the authors decompose
+    the dictionary into a part of fixed basis (e.g., wavelet, and DCT) and a set of
+    coefficients; instead of learning the full dictionary (as is in standard dictionary
+    learning), they learn a dictionary that can be represented as a linear combination
+    of fixed basis. The learning mechanism is formulated as follows:
+
+
+    In this formulation, $\Phi T = D$; instead of learning the full dictionary, the
+    authors learned to synthesize the dictionary $D$ from a fixed basis $\Phi$. The
+    advantage of this approach is that the learned dictionary has fast forward and
+    ad-joint operators (since it is synthesized from an efficient operator) and is
+    useful for large-scale inverse problems. Clearly, the proposed algorithm is different
+    from Equation (28) [68]. We learned the full dictionary in each level and continue
+    process for multiple levels with a goal to learn abstract representations.
+
+
+    +   4. bg-img (smaller subset with random image background)
+
+    5. bg-rot (smaller subset with random image plus rotation)
+
+
+    These datasets are challenging to empirically deep learning algorithms [69]. Samples
+    for each of the datasets are shown in Fig. 8.
+
+
+    ![](img/5de391b384cc1d6b5a694c0bae136b4b_6_0.png)
+
+
+    FIGURE 8. Top to bottom, basic-rot, bg-band, bg-img, bg-img-rot.
+
+
+    The second database is related to text documents and the problem of classifying
+    documents into their corresponding news topic. We have used a version of the commonly
+    used 20-new dictionary [70] for the training and test sets documents collected
+    at different times, a setting that is more of practical application. The training
+    set contains 11,269 samples and the test set includes 7,505 examples. We use many
+    relevant features and follow the same pattern as outlined in [51].
+
+
+    # IV. EXPERIMENTAL EVALUATION
+
+
+    The effectiveness of the proposed deep dictionary learning is evaluated on multiple
+    benchmarks from different areas such as images, text, and signals. The results
+    are compared with state-of-the-art algorithms. We use a linear activation function
+    for all.
+
+
+    # A. DATASETS
+
+
+    We evaluated the performance on several benchmarks datasets. The first one is
+    MNIST which consists of 28 x 28 handwritten digits ranging from 0 to 9. The dataset
+    has 60,000 images for training and 10,000 samples for testing. It is noted that
+    we have not performed any preprocessing on this dataset.
+
+
+    Related to matrix learning, MNIST variants are also used. They are challenging
+    because, primarily have different training samples (10,000) and a larger number
+    of test samples (50,000). The valued set of 20000 samples are not used in this
+    work because our method does not require tuning and SAE as BDN are already optimized
+    for MNIST. Here is the list of these datasets:
+
+
+    +   1. basic (smaller subset of MNIST)
+
+    2. basic-rot (smaller subset with random rotations)
+
+    3. bg-band (smaller subset with uniformly distributed noise in background)'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# S. Tariyal et al.: Deep Dictionary Learning
+
+
+    TABLE 1. Deep vs shallow dictionary learning.
+
+
+    | Dataset | Shallow (50) | 1 layer (300) | 2 layer (300-150) | 3 layer (300-150)
+    |
+
+    |---|---|---|---||
+
+    | MNIST | 97.35 | 96.52 | 97.30 | 97.75 |
+
+    | basic | 95.02 | 94.39 | 95.27 | 95.80 |
+
+    | basic-root | 84.19 | 83.37 | 85.39 | 87.00 |
+
+    | bg-round | 87.19 | 86.52 | 87.49 | 89.35 |
+
+    | bg-img | 78.86 | 77.56 | 79.20 | 81.00 |
+
+    | bg-img-rot | 54.40 | 54.06 | 55.93 | 57.77 |
+
+    | 20-newgroup | 60.96 | 65.22 | 68.93 | |
+
+    | GTZAN | 76.57 | 75.70 | 79.68 | 83.31 |
+
+
+    ![](img/5de391b384cc1d6b5a694c0bae136b4b_7_0.png)
+
+
+    FIGURE 1. First level dictionary learning for MNIST.
+
+
+    # B. EFFECT OF DICTIONARY LEARNING
+
+
+    We analyze the results of the proposed deep dictionary learning and the effect
+    of increasing the number of layers. The objective of this experiment is to show
+    that the representations learned from a single level of dictionary and multi-level
+    dictionaries different and yield better classification performance. For example,
+    with just one level, we learn 50 atoms for MNIST; 625 atoms for the bg-newgroup
+    and 148 for GTZAN; compared to the last level of deep learning, we performed experiments
+    with up to three levels. For the MNIST database and its variants, the number of
+    atoms in the multi-level dictionaries: 300-150.5. For the 20-newgroup and the
+    GTZAN (music database), the number of atoms varies from the previous layer. The
+    classifier is performed with a simple K-Nearest Neighbor (K=1). Column 2 shows
+    the results for shallow dictionary and Column 3 shows the results with different
+    levels of deep learning. The results show that for all the databases, deep learning
+    offers improvements over shallow dictionary learning. The improvement in accuracy
+    is possibly owing to more abstract representation learned from layers. Depending
+    on the complexity of the dataset, the difference in performance varies from 0.4%
+    to 9%. Table 2 indicates the first layer dictionary on MNIST database.
+
+
+    Generally, the atoms are initialized by random choices from the training set;
+    this leads to variability. In this research, we propose a deterministic initialization
+    based on the QR decomposition of the dictionary matrix. Orthogonal factors from
+    Q (in order) are used to initialize the dictionary.
+
+
+    We show that multi-level dictionaries cannot be collapsed into a single one and
+    should not be expected to yield the results. The difference between performance
+    of multi-level dictionary learning and single level learning is evident in Table
+    1; see columns 2 and 5. If the learning is linear, it is possible to collapse
+    multiple
+
+
+    TABLE 2. Comparing the accuracy of DDL with DBN and SAE with KNN (K = 1) Classification.
+
+
+    | Dataset | DDL | DBN | SAE |
+
+    |---|---|---||
+
+    | MNIST | 97.75 | 97.05 | 97.33 |
+
+    | basic | 95.37 | 95.25 | 95.80 |
+
+    | basic-root | 87.00 | 81.44 | 84.83 |
+
+    | bg-round | 89.35 | 77.11 | 86.42 |
+
+    | bg-img | 81.00 | 83.66 | 77.16 |
+
+    | bg-img-rot | 57.77 | 50.47 | 52.21 |
+
+    | 20-newgroup | 70.48 | 70.09 | 67.98 |
+
+    | GTZAN | 83.31 | 80.99 | 82.29 |
+
+
+    TABLE 3. Comparing the accuracy of DDL with DBN and SAE with SVM Classification.
+
+
+    | Dataset | DDL | DBN | SAE |
+
+    |---|---|---||
+
+    | MNIST | 98.64 | 98.53 | 98.50 |
+
+    | basic | 97.28 | 88.44 | 97.40 |
+
+    | basic-root | 90.34 | 76.59 | 79.83 |
+
+    | bg-round | 92.38 | 78.59 | 85.34 |
+
+    | bg-img | 86.17 | 75.22 | 74.99 |
+
+    | bg-img-rot | 63.85 | 48.53 | 49.14 |
+
+    | 20-newgroup | 71.97 | 71.12 | 70.49 |
+
+    | GTZAN | 84.92 | 81.50 | 83.37 |
+
+
+    dictionaries one; but dictionary learning is inherently non-linear. It is not
+    feasible to learn a single level of dictionary in multiple levels and to get the
+    same output.
+
+
+    # C. COMPARISON WITH DEEP LEARNING APPROACHES
+
+
+    Since the proposed deep architecture is inspired by existing deep learning approaches,
+    we have our results with a stacked autoencoder (SAE) and deep belief network (DBN).
+
+
+    VOLUME 4, 2016
+
+
+    1010'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# IEEE Access
+
+
+    TABLE 4: Comparing the classification accuracy of DDL+SVM with various architectures
+    and methods.
+
+
+    | Dataset | DDL-SVM | Supervised DL | LC-KSVD | D-KSVD | DBN | SDAE-Softmax |
+    CNN |
+
+    |---|---|---|---|---|---|---||
+
+    | MNIST | 98.64 | 98.95 | 93.30 | 93.6 | 97.1 | 96.69 | 99.06 |
+
+    | basic | 97.28 | 95.14 | 92.70 | 92.20 | 96.69 | 98.56 |
+
+    | basic-rot | 90.34 | 88.27 | 48.60 | 50.01 | | 90.47 | 89.45 |
+
+    | bg-rand | 92.38 | 88.23 | 87.70 | 87.70 | 93.27 | | 93.23 |
+
+    | bg-img | 86.17 | 80.92 | 80.65 | 81.20 | 83.32 | 88.89 |
+
+    | bg-img-rot | 63.85 | 74.31 | 75.40 | 75.40 | 52.61 | | 57.97 |
+
+    | 20-newgroup | 71.97 | 69.22 | 68.90 | 69.45 | 72.40 | |
+
+    | GTZAN | 84.92 | 79.86 | 76.85 | 71.68 | 83.98 |
+
+
+    The implementation of these has been obtained from [72] and [73] respectively.
+    Similar to deep learning, SAE and DBN also have a three-layer architecture. The
+    number of nodes is halves in every subsequent layer and comparison with K-Nearest
+    Neighbor (KNN) and Support Vector Machine (SVM). To ensure a fair comparison of
+    techniques, we have kept the classifier for these experiments. The results are
+    shown in Tables 2 and 3.
+
+
+    All the algorithms were run on a machine with Intel(Core™ i5) running at 3 GHz
+    with 8 GB RAM, Windows 10 (64 bit) running Matlab 2014a. For the small MNIST accuracies
+    are nearly as same as the. We only report the results for the larger dataset (KNNK
+    and the basic). We do not include the training and testing time for classification
+    here; since these will be the same for all the techniques as the dimensionality
+    of the features remains the same.
+
+
+    We observe that one case in Tables 2 and 3, the proposed algorithms yield better
+    results than DBN and SAE. For KNN, the results of deep dictionary are better;
+    however, with SVM classifier, deep dictionary yields considerably better.
+
+
+    TABLE 5. Training feature generation time (seconds).
+
+
+    | Dataset | DDL | DBN | SAE |
+
+    |---|---|---|--|
+
+    | MNIST | 107 | 3071 | 12408 |
+
+    | basic | 26 | 597 | 2420 |
+
+
+    We have compared the performance of the proposed algorithm with dictionary learning
+    techniques as D-KSVD [28], and supervised learning [21]. These individuals are
+    finely-tuned to yield the best possible results. The proposed algorithm is in
+    the top two best results and achieves better accuracy than highly tuned models
+    such as DDL, SDAE, and CNN. The CNN-20-newgroup dataset does not have local correlation
+    and cannot be represented as a linear time invariant system—an aspect required
+    for the convolution operation based unit.
+
+
+    TABLE 6. Test feature generation time (seconds).
+
+
+    | Dataset | DDL | DBN | SAE |
+
+    |---|---|---|--|
+
+    | MNIST | 79 | 50 | 61 |
+
+    | basic | 257 | 151 | 185 |
+
+
+    # D. ELECTRICAL APPENDIX CLASSIFICATION
+
+
+    The following sections demonstrate results on benchmark datasets. In this section,
+    we evaluate the effectiveness of deep dictionary learning for solving a real-world
+    problem. Gupta et al.: the problem of classification of electrical instruments
+    from their energy-magnetic interference (EMI) signatures. They showed results
+    on appendix classification
+
+
+    We next compare the proposed algorithm with other deep learning in terms of computational
+    speed (train feature generation + test feature generation).'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# IEEE Access
+
+
+    **TABLE 7. Correct classification for Appliance Database.**
+
+
+    | | ElectSense | CLM+SVM | LC-KSVD | Proposed |
+
+    |---|---|---|---||
+
+    | | [72] | [77] | | |
+
+    | Fold 1 | 25.0 | 62.5 | 55.0 | 85.0 |
+
+    | Fold 2 | 30.0 | 60.0 | 55.0 | |
+
+    | Fold 3 | 32.5 | 67.5 | 62.5 | 90.0 |
+
+    | Fold 4 | 32.5 | 67.5 | 62.5 | 87.5 |
+
+    | Fold 5 | 30.0 | 60.0 | 60.0 | 87.5 |
+
+    | **Aggregate** | **30.0** | **63.5** | **68.0** |
+
+
+    not able to surpass the results with random assignment, and the classification
+    accuracy is pegged at 1/number of appliances). The technique for classifying appliances
+    with EMI signatures is [78]; therefore we compared our technique using ElectSense[78]
+    and features extracted using Conditional Likelihood Maximization (CLM) by SVM
+    classification. The marks, are also compared using LC-KSVD and the results are
+    shown for 5-fold validation. For the proposed method, two levels of classification
+    are identified, in the first level the number of atoms is 500 and in the second
+    level 100. The second level generates sparse features. Table 7 shows that the
+    proposed algorithm outperforms all others. ElectSense yields around 30% correct
+    classification accuracy and CLM yields around 60–67%, whereas the proposed dictionary
+    learning yields more 85% for all others. This also suggests that the proposed
+    algorithm can be extended to other interesting where deep learning techniques
+    may not provide an acceptable level of performance.
+
+
+    from different EMI; but EMI harmonics have an inherent overlap. The power signal
+    and its harmonics analysis based on such signatures is not regrettable [76]. In
+    a technical report [77], it has been shown that, using rudimentary heuristics
+    one can achieve results from CM EMI based classification. The details regarding
+    the development of the CM EMI sensor, sensor acquisition and data are given in
+    [77]:
+
+
+    ![](img/5de391b384cc1d6b5a694c0bae136b4b_9_0.png)
+
+
+    **FIGURE 10. Block view of EMI sensor.** The data is collected for collection.
+
+
+    Fig. 10 shows the setup for five devices—CPU, CPU, Laptop, Charger and Background
+    Noise (when nothing is in). There are five instances of each appliance. 1500 traces
+    are collected for each instance of each appliance. Each trace is of 1-millisecond
+    duration and constitutes a vector of length 16,384. The training set consists
+    of samples from 1 instance for each appliance while forming 4 instances of each
+    appliance constitutes the test set. For every problem, the training data for each
+    class has 100 traces and the test data is 4 × 1500 = 6000.
+
+
+    The protocol has been described in [77]. For testing, all 1500 traces should be
+    considered as a single task; the task is to identify the appliance from traces.
+    Therefore the classified label of the 1500 samples used majority voting to a single
+    appliance. Cepstrum features [78] are used as the feature set for classification;
+    some examples of cepstrum features are shown in Fig. 11. It can be seen that the
+    cepstrum features for the same appliance look similar and those from different
+    appliances look different.
+
+
+    On the other, stacked autoencoders and deep belief networks, even before pre-processing
+    and normalization, are
+
+
+    Deep learning methods are for classification problems. A recent study [80] GraphEncoder,
+    which uses a stacked feature learning with K-means clustering. In this research,
+    we compare the results of the proposed algorithm with GraphEncoder on datasets
+    (we only use those datasets with ground-truth) we follow the same experimental
+    protocol. We extract features using deep learning and use K-means clustering on
+    the learned features. The datasets for this experiment are described below:
+
+
+    # E. CLUSTERING
+
+
+    1 WINE [81]
+
+    The dataset is derived from the UCI Machine Learning Repository, consisting of
+    178 instances with 13 attributes. Every instance corresponds to a wine with its
+    chemical analysis as the attributes. All instances are labeled with three categories.
+    We use a cosine similarity graph using these instances and the labels as the truth.
+
+
+    2 NO-NEWGROUP [69]
+
+    The dataset has been discussed before. Our discovery as a vector of tf-idf (term
+    frequency - inverse document) frequencies of scores; the cosine similarity graph
+    was built on the tf-idf scores. To detect the robustness of our algorithms with
+    different cluster numbers, we constructed three graphs from 3, 6, and 9 different
+    groups respectively. The new groups respects respectively. Each instance in each
+    graph is listed as the following, where the abbreviation NG used in graph is for
+    Newgroup.
+
+
+    +   * 3-NG:corp.graph.ics, rec.sport.basketball, talk.politics, guns.
+
+
+    S. Tiyal et al.: Deep Dictionary Learning
+
+
+    VOLUME 4, 2016
+
+
+    10105'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# IEEE Access
+
+
+    # S. Tariyol et al.: Deep Dictionary Learning
+
+
+    ![](img/5de391b384cc1d6b5a694c0bae136b4b_10_0.png)
+
+
+    FIGURE 11. Cepstrum features – frequency in kHz and spectral analysis – Vol.
+
+
+    +   * 6-NG: alt.atheism, comp.sys.hardware, motorcycles, rec.sport.hobby, soc.religion,
+    christian, talk.religion.
+
+    * 9-NG: talk.politics, mediate, talk.politics, dbn.misc, comp.os, mswind.misc,
+    comp.sys.ibn.barcode, sci.electronics, electro.scrit, sci.med, sci.space, sci.misc
+
+    For each group, 200 documents are randomly selected and the three graphs contain
+    600, 1200, and 1800 results. The document labels serve as the ground truth.
+
+
+    the superiority of their technique over spectral clustering and K-means, we compare
+    the results with the GraphEncoder formulation only. Along with that, we use a
+    DBN-framework for feature extraction followed by K-clustering. The DBN uses the
+    same architecture as shown in the first method. The metric used for evaluation
+    is normalized mutual information (NMI).
+
+    The results clearly demonstrate that for the 3-NG database on which DDL and GraphEncoder
+    used, the algorithm yields better results than DBN as GraphEncoder.
+
+    In this research, we propose to use the idea of deep dictionary learning, where,
+    by learning one shallow dictionary we learn multiple levels of dictionaries. Learning
+    all the dictionaries simultaneously makes the problem highly non-converse. Also
+    solving many parameters is always fraught with the problem of overfitting. To
+    account for these issues, we learn the dictionaries in a greedy fashion – one
+    at a time. The representations/features from each level are used as input to learn
+    the next. Thus, the deep dictionary learning is a shallow dictionary learning
+    algorithm; which is well known and solved. We perform experiments for both classification
+    and clustering problems. We compare the proposed algorithm with existing methods
+    such as stacked autoencoder, deep belief network, and convolutional neural network.
+    We observe that the proposed method yields comparable or
+
+
+    # TABLE 8. Network clustering.
+
+
+    | Dataset | #nodes/basis |
+
+    | Wine | 178-128-64 |
+
+    | 3-NG | 600-512-256 |
+
+    | 6-NG | 1200-1024-512-256 |
+
+    | 9-NG | 1800-1024-512-256 |
+
+
+    # TABLE 9. Clustering performance.
+
+
+    | Dataset | GraphEncoder | DBN | Proposed DDL |
+
+    |---|---|---||}{
+
+    | Wine | 0.85 | 0.79 | 0.86 |
+
+    | 3-NG | 0.81 | 0.75 | 0.81 |
+
+    | 6-NG | 0.60 | 0.53 | 0.63 |
+
+    | 9-NG | 0.40 | 0.35 | 0.44 |
+
+
+    Table 8 shows the architecture proposed in [80]. We use the same number of basis
+    in our deep dictionary learning framework and the results are summarized in Table
+    9. Since the previous method (GraphEncoder) has already shown
+
+
+    10106
+
+
+    VOLUME 8, 2016'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'better on benchmark datasets. Experiments on a practical approach of application
+    classification show that our method offers higher accuracies where other deep
+    learning techniques significantly lower results. Similar to the advancements made
+    in "deep learning", it is our assertion that the formulation of dictionary learning
+    provides the basis to develop more efficient dictionary algorithms and help in
+    advancing state-of-the-art.
+
+
+    In the future, we plan to test the robustness of dictionary learning in the presence
+    of noise, and limits of training sample. We also plan to apply this technique
+    to other problems such as biometrics, vision, and speech processing. Further,
+    there has been a lot of work on supervised dictionary learning; we expect to improve
+    the results ever by incorporating techniques from supervised learning.
+
+
+    # ACKNOWLEDGMENT
+
+
+    The authors would like to thank Dr. Shoba Kumar and Mr Manoj Gulati for providing
+    the EMI sensing data. We would also thank the editor and reviewers for their constructive
+    feedback.
+
+
+    # REFERENCES
+
+
+    +   [1] B. A. Bashir and D. J. Field, "Dictionary coding over baseline sets: A
+    strategy for coding by VI," IEEE Trans. Res., Vol. 27, no. 3, pp. 3311–3325, 2001.
+
+
+    +   [2] J. D. H. Shen, "Learning the parts of objects using matrix factorization,"
+    Vol. 401, pp. 778–791, Oct. 1999.
+
+
+    +   [3] R. Rubinstein, A. M. Rustamov, and M. Elad, "Dictionary representation
+    for pattern recognition," IEEE Proc. Match., Vol. 98, no. 6, pp. 1045–1057, Jun.
+    2006.
+
+
+    +   [4] M. Moran, A. Elad, and M. K-VD, "An algorithm for dictionary learning
+    in face recognition," IEEE Trans. Signal Process., Vol. 54, no. 4, pp. 4311–4332,
+    2006.
+
+
+    +   [5] J. Eggert and K. Ross, "Sparse coding and NIF, in Proc. IEEE Int. Conf.
+    Comput. Vis.,, pp. 435–440, 2005.
+
+
+    +   [6] M. Elad and A. Moran, "Learning dense and sparse representations over
+    dictionaries," IEEE Trans. Image Process., Vol. 17, no. 8, pp. 2198–2212, 2009.
+
+
+    +   [7] M. Elad and Moran, "Learning dense sequencing and sparse representation,
+    in Proc. IEEE Comput. Conf. Vis. Pattern Rec., Vol. 10, no. 2, pp. 715–722, 2007.
+
+
+    +   [8] M. Pryor and M. Elad, "Dictionary learning with redundant representations,"
+    IEEE Trans. Image Process., Vol. 18, no. 2, pp. 1777–1788, 2009.
+
+
+    +   [9] K-Min Sun and E. Rodriguez-Marquez, "Turing inbuilt: Iterating K-VD with
+    a new dictionary, in Proc. IEEE Int. Workshop on Machine Learning, pp. 333–340,
+    2009.
+
+
+    +   [10] C.-Sun and H.-J. Lee, "Local patches based dictionary learning for orientation
+    invariance," IEEE Trans. Image Process., Vol. 23, no. 7, pp. 3089–3099, 2014.
+
+
+    +   [11] J. Caballero, A. N. Pierre, D. Ruckert, and J. V. Hanhaj, "Dictionary
+    learning and sparsity for machine date recognition," IEEE Trans. Pattern Recogn.
+    Mach. Intell., Vol. 33, no. 1, pp. 55, 2011.
+
+
+    +   [12] L. D. Donoho, "Compressed sensing," IEEE Trans. Inf., Vol. 52, no. 12,
+    pp. 2228–2333, 2006.
+
+
+    +   [13] E. Candès and T. Tao, "Non-adaptive signal recovery from random projections:
+    Universal encoding strategies," IEEE Trans. Inf. Theory, Vol. 55, no. 12, pp.
+    4635–4652, 2009.
+
+
+    +   [14] A. Majumdar and R. Winter, "Multiresolution methods in face recognition,
+    in Recent Advances in Face Recognition, M. S. Bartlet, K. Melton, G. Mimic, Vienna,
+    Austria: It-Tech Ed, 2009, pp. 79–99.
+
+
+    +   [15] D. Yang, "Robust face recognition using Radons and wavelet transforms
+    with application to face recognition," Neurocomputing, Vol. 72, no. 7, pp. 1951–1959,
+    Mar 1999.
+
+
+    +   [16] S. Dubbagchian, P. M. Ghammaghami, and A. Aghadeh, "Feature extraction
+    using discrete cosine transform and discrimination analysis by face recognition,"
+    IEEE Post. Recolt., Vol. 43, no. 4, 2010.
+
+
+    +   [17] J. Marisal, F. Bach, J. Ponce, G. Sartiro, and A. Zaserman, "Discriminative-learned
+    dictionaries for local image recognition, in IEEE Int. Conf. Comput. Vis.,, pp.
+    605–610, 2007.
+
+
+    +   [18] L. Wang, R. Zhang, Y. Zhang, and F. Jue, "Unifying visual code coding
+    for classifier training with recognition," IEEE Int. Conf. Comput. Vis. Pattern
+    Recolt., 2010.
+
+
+    +   [19] W. Jin, W. Wang, Z. Zeng, and R. Fu, "Classification of clusters in sparse
+    unsupervised learning over dictionary-based sparse representation," Pattern Vol.
+    48, no. 1, pp. 48–58, 2009.
+
+
+    +   [20] Y.-Louau, F. Bach, Y. LeCun, and J. Ponce, "Learning-based features for
+    sparse representation," in IEEE Int. Conf. Comput. Vis. Pattern Recolt., 2008.
+
+
+    +   [21] J. Marisal, F. Bach, J. Ponce, and A. Zaserman, "Sparse-learned dictionary
+    learning," in IEEE Adv. Neural Inf. Syst., 2007, pp. 321–327.
+
+
+    +   [22] K. Khan and F. M. Tappen, "Sparse dictionary dictionary learning and
+    discriminative," in Proc. Int. Conf. Pattern. Recolt., 2012.
+
+
+    +   [23] K. Huang and A. Sivantye, "Sparse representation for signal classification,"
+    in IEEE Adv. Neural Inf. Syst., 2007, pp. 609–614.
+
+
+    +   [24] A. Elad, M. Miles, and P. Froward, "Dictionary learning for fast classification
+    based on soft-thresholding," [Online]. Available in Proc IEEE Comput. Conf. Vis.
+    Pattern Recolt., 2006.
+
+
+    +   [25] J. Marisal, A. Leiford, F. Hebert, and J. Ponce, "Discriminative dictionary
+    learning for multi-scale image classification and detection," in IEEE Int. Conf.
+    Comput. Vis. Opt. Conf., 2008, pp. 2353–2358.
+
+
+    +   [26] Q. Zhang and B. Li, "K-VD-dictionary learning for face recognition,"
+    IEEE Trans. Pattern Recogn. Mach. Intell., Vol. 31, no. 6, pp. 2601–2614, 2009.
+
+
+    +   [27] Z. Yang, J. Jin, and L. S. Berry, "Local constant K-VD dictionary learning
+    for recognition," IEEE Tran. Pattern Anal. Mach. Intell., Vol. 35, no. 1, pp.
+    2651–2664, 2009.
+
+
+    +   [28] G. E. Hinton and R. Salakhdin, "The reduction of dimensionality by sparsity,"
+    Science, Vol. 315, no. 5814, pp. 504–507, 2006.
+
+
+    +   [29] H. Bottou and Y. Yang, "Stochastic gradient descent with regularization
+    at large scale," Comput. Biol., Vol. 53, no. 9, pp. 291–294, 1998.
+
+
+    +   [30] Y. Bengio, P. Paliwal, P. Pooyeg, and H. Lauricella, "Greedy linear learning
+    for sparse representation," in IEEE Adv. Neural Inf. Syst., 2007, pp. 1552–1564.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# IEEE Access
+
+
+    # S. Tiyal et al.: Deep Dictionary Learning
+
+
+    [40] R. Rakomainen, ''Applying alternating direction of multiple methods for dictionary
+    classification.'', *Neurocomputing*, vol. 106, pp. 126–130, 1998.
+
+
+    [41] W. Wright, Y. Yang, A. Ganesh, S. Sry, and M. Wang, ''Robust sparse classification
+    using learned dictionaries.'', *IEEE Trans. Pattern Anal. Mach.Int.*, vol. 31,
+    no. 2, pp. 210–227, Feb. 2009.
+
+
+    [42] A. Majumdar and R. Wang, ''Dictionary with learned coherence and inference.'',
+    *IEEE Trans. Pattern Anal. Mach.Int.*, vol. 35, no. 5, pp. 1359–1371, 2010.
+
+
+    [43] N. H. Kim and J. C. Lee, ''Fast group class classification.'', *IEEE Conf.
+    Elect.*, vol. 34, no. 4, pp. 136–144, 2009.
+
+
+    [44] A. Majumdar and R. Wang, ''Improved sparse class classifier.'', *Proc. IEEE
+    Int. Conf. Comput Vis.*, 2011.
+
+
+    [45] Y. Jin, Z. Liu, and Y. Wang, ''Kernel sparse-based dictionary classification.'',
+    *Neurocomputing*, vol. 77, no. 1, pp. 120–128, 2012.
+
+
+    [46] J. Zhou and Y. Chen, ''Sparse kernel-based class classification.'', *IEEE
+    Trans. Signal Process. Rem.*, vol. 51, no. 1, pp. 217–231, 2013.
+
+
+    [47] M. L. Wang, J. Yang, and D. Zhang, ''Danzha learning for sparse representation
+    and classification.'', *Proc. IEEE Int. Conf. Inf. Process.*, Sep. 2010, pp. 1601–1604.
+
+
+    [48] I. Ramachandran, P. Ganesh and S. Ghosh, ''Sparse dictionary and clustering
+    for visual representation.'', *Proc. IEEE Int. Conf. Comput. Vis. Pattern Recognit.*,
+    2010, pp. 3501–3508.
+
+
+    [49] M. Wang, X. Feng, and D. Zhang, ''Dictionary discrimination dictionary learning
+    for sparse representation.'', *Proc. IEEE Int. Conf. Inf. Process.*, Vol. 2013,
+    pp. 5113–5118.
+
+
+    [50] Y. Li and Y. Beng, ''Binary classification using dictionary learning.'',
+    *Proc. Int. Conf. Mach. Learn.*, 2009, pp. 885–890.
+
+
+    [51] Z. Cao, S. C. J. Yao, and J. Wang, ''Analysis of different sparsity methods
+    in constrained RBD for sparse representation and online classification.'', *J.
+    Robot Res. Soc.*, vol. 18, no. 1, pp. 121–125, 2011.
+
+
+    [52] D. Lee, ''Dictionary learning for Robust Boltzmann Machines.'', [Online].
+    http://arxiv.org/abs/1008.4988
+
+
+    [53] R. Salakhubundam and G. Hinton, ''Dictionary-based RBD.'', *Proc. IEEE Int.
+    Conf. Mach. Learn.*, 2012, pp. 2733–2741.
+
+
+    [54] K. H. Cho, T. Raiki, and A. Li, ''Gaussian-Bernoulli Boltzmann dictionary
+    learning.'', *Proc. Int. Conf. Neural Net. Art.*, vol. 6, pp. 661–673.
+
+
+    [55] A. Makhdani and B. Frey, ''K-sparse autoencoders.'', [Online]. http://arxiv.org/abs/1212.5643
+
+
+    [56] K. Kho, ''Sparse priors impose sparse denoising in noisy images.'', *Proc.
+    Int. Conf. Mach. Learn.*, 2013, pp. 1389–1396.
+
+
+    [57] S. Rifaï, P. Vincent, X. Muller, and G. Bengio, ''Contrastive autoencoders:
+    Explicit invariance during feature extraction.'', *Proc. Int. Conf. Mach. Learn.*,
+    2014, pp. 1883–1892.
+
+
+    [58] J. Paine, N. Petralia, and S. Sanghavi, ''Low-rank matrix completion using
+    alternating minimization.'', *Proc. Theory Comput.*, vol. 90, 2014.
+
+
+    [59] A. Goopravand, A. Majumdar, and P. Petralia, ''Sparse overcomplete dictionaries
+    via alternating minimization.'', *Proc. Int. Conf. Inf. Process.*, 2014, pp. 1–6.
+
+
+    [60] D. L. Spielman, H. Wang, and R. Wright, ''Exact recovery of sparse dictionaries.'',
+    *Proc. Int. Conf. Neural Net. Art.*, 2012, pp. 47–57.
+
+
+    [61] A. Right, S. Lee, and J. Ma, ''Robust dictionary learning from noisy data.'',
+    2014. [Online]. http://arxiv.org/abs/1401.0579
+
+
+    [62] L. Duchesy, F. Gilles, and C. De Mo, ''An iterative backtracking algorithm
+    for linear inverse problems with a sparsity constraint.'', *Pattern Recognition*,
+    vol. 47, no. 11, pp. 2445–2455, Nov 2014.
+
+
+    [63] K. Ramasith, T. Peel and M. El, ''ADKD-VD: A dictionary learning algorithm
+    for sparse space analysis.'', *IEEE Trans. Signal Process.*, vol. 61, no. 3, pp.
+    661–673, 2013.
+
+
+    [64] S. Lee, J. Kim, J. Yoon, and D. T. Tran, ''Structured dictionary learning
+    for classification.'', (Jun. 2014). [Online]. http://arxiv.org/abs/1406.1943
+
+
+    [67] L. Bar and G. Sapiro, ''Hierarchical dictionary learning for invariant classification.'',
+    *Proc. IEEE ICASSP*, 2010, pp. 3575–3588.
+
+
+    [68] R. Rubinstein, M. Zibachevsky, and M. El, ''Double sparsity: Learning sparse
+    dictionaries for signal approximation.'', *IEEE Trans. Signal Process.*, vol.
+    59, no. 12, pp. 3983–3996, 2011.
+
+
+    [69] H. Larcherolle, D. Erthan, A. Courville, J. Berengard, and Y. Bengio, ''An
+    empirical evaluation of dictionary learning on problems with small samples.'',
+    *arXiv preprint*, 2013.
+
+
+    [70] Newsweek, Access: 25 Dec, 2016. [Online]. https://people.cs.cornell.edu/j20/Newsweek-by-english
+
+
+    [71] G. Tritsakas and M. Gifuk, ''Visual graph-based learning.'', *IEEE Access*,,
+    vol. 10, no. 5, pp. 291–302, Jul. 2022.
+
+
+    [72] Autencoder Implementation, set 25 Dec, 2016. [Online]: https://www.youtube.com/watch?v=MatlabForSparseEncoder
+
+
+    [73] T-H. Chen, K. Lu, S. Gao, J. Lu, and M. Wang, ''PANCAT: A sparse dictionary
+    learning framework for classification.'', *IEEE Trans. Signal Process.*, vol.
+    60, no. 12, pp. 5017–5032, 2012.
+
+
+    [75] S. Gupta, M. R. Sies, and S. Y. Bengio, ''Encoder-sparse networks for image
+    segmentation and classification.'', *Proc. NIPS*, vol. 21, pp. 999–1006, 2008.
+
+
+    [76] M. Gulati, S. Ram, and A. Singh, ''In depth about using EMI for sparse dictionary
+    learning and classification.'', *ACM BuildSys*, 2014, pp. 70–77.
+
+
+    [77] M. Gulati, S. Ram and A. Singh, ''In depth about using EMI for sparse dictionary
+    learning and classification.'', [Online]. https://arxiv.org/abs/1408.2632
+
+
+    [78] K. Roy, S. Sengupta, K. Ho, and M. Mujian, ''Conditional dictionary learning
+    using sparsity-based method.'', *IEEE Trans. Pattern Anal. Mach.Int.*, vol. 34,
+    no. 9, pp. 1733–1744, 2012.
+
+
+    [79] G. Brown, A. Peach, J. Ma, and L. Mujian, ''Conditional learning: a unified
+    framework for information theory based clustering.'', *Machine Learning*, vol.
+    81, pp. 1–30.
+
+
+    [80] F. Tan, J. Gui, C. Chen, and T. Liu, ''Learning deep representations for
+    graph clustering.'', *AAAI*, 2014, pp. 1293–1299.
+
+
+    [81] wianner, Access: 25 Dec, 2016. [Online]: https://people.cs.cornell.edu/j200/Newsweek-by-english
+
+
+    SNIGHA Tiyal is the lead researcher of the IIIT Delhi. She is currently a Teaching
+    Fellow at The Indian Institute of Information Technology, Delhi. Her area of research
+    includes signal processing and dictionary learning.
+
+
+    ANGUSH MAJUMDAR is a graduate of Bengal from Engineering College, master’s and
+    the Ph.D.
+
+
+    In 2009 he joined the University of British Columbia. He is currently an Assistant
+    Professor at the IIIT Delhi,ㅎㅎ. He has contributed over 120 papers in journals
+    and conferences. His research focuses on signal and image processing and machine
+    learning. He is the author of
+
+
+    Compressed Sensing for Magnetic Resonance Image Reconstruction and structure and
+    analysis (CRC Press). He is currently serving as the Chair of the IEEE Chapters''
+    Committee and the head of the IEEE IEEE Delhi
+
+
+    10108
+
+
+    VOLUME 4, 2016'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'RICHA SINGH (S''04–M''09–SM''14) received the Ph.D. in computer science from
+    West Virginia University, Morgantown, WV, USA, in 2008. She is currently a Research
+    Professor with the IIT Delhi, New Delhi, India, and a Visiting Professor with
+    West Virginia University, USA. Her research has been funded by UDAI and Government
+    of India. She authored over 175 publications in refereed journals, book chapters,
+    and conferences. Areas of interest include biometrics, pattern recognition, and
+    machine learning.
+
+
+    MAYANK VATSA (S''04–M''09–SM''14) received the M.S. and Ph.D. in computer science
+    from West Virginia University, Morgantown, WV, USA, in 2005 and is currently an
+    Associate Professor with IIT Delhi, New Delhi, India, and a Visiting Professor
+    with West Virginia University, USA. His research has been funded by UDAI and Government
+    of India. He has authored over 175 publications in refereed journals, book chapters,
+    and conferences.
+
+
+    She is a recipient of the Kusum and Mohan Pai Fellowship at the Indraprastha Institute
+    of Technology, the FAST Award by DST, and several best paper and best poster awards
+    in international conferences. She is an Editor of Information Fusion (Elsevier),
+    the IEEE Access, and the EURAS Journal on Image and Video Processing (Springer).
+    She is serving as the General Co-Chair of the ISBA2017 and the PC Co-Chair of
+    the BTAS 2016.
+
+
+    His areas of interest include image processing, computer vision, and Research
+    Fellowship. He is a recipient of the FAST Award by DST, and several best paper
+    and best poster awards in international conferences. He is also an Associate Editor
+    of the IEEE ACCESS and an Associate Editor of Information Fusion (Elsevier). He
+    served as the PC Co-Chair of the ICB 2013, the IJCB 2014, and the ISBA 2017.
+
+
+    ![](img/5de391b384cc1d6b5a694c0bae136b4b_13_0.png)'
+  merge: -1
+  img_proc: true
