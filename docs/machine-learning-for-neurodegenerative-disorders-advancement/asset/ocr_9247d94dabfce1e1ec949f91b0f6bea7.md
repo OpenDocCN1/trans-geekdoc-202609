@@ -1,0 +1,12 @@
+# TABLE 4.4
+Enhanced Therapeutic Pharmacological Targets for Amyotrophic Lateral Sclerosis (ALS)
+
+
+
+neurogeneration and neuroprotection in ALS [84]. Each of these reflects the ongoing efforts and innovations in tackling the challenges of ALS, offering hope for more effective treatments in the future.
+
+# 4.2.2 TRADITIONAL APPROACHES TO DRUG DISCOVERY AND REPURPOSING
+
+The traditional drug discovery pipeline is a complex and multifaceted process that often spans more than a decade and involves a significant investment of resources. Typically, target identification and validation involve identifying and confirming the biological target, usually a protein or gene, that is implicated in a disease [86]. The rationale is modulating this target through a drug will have a therapeutic effect. This stage is crucial and requires a deep understanding of disease biology, often derived from basic research in areas such as genetics, molecular biology, and cell biology [87]. Following target validation, researchers have engaged in high-throughput screening, where libraries of chemicals are tested for their ability to interact with the target. This opens up the use of advanced robotics, data processing, and sensitive detectors to assess thousands of compounds rapidly [9].
+
+After identifying potential compounds, the next phase is lead optimization. In this stage, researchers focused on improving the properties of compounds to improve their effectiveness as drugs. This involves refining their binding to the target, increasing their stability in the body, reducing potential side effects, and improving their ability to reach the target within the body. This process of optimization requires a series of iterative cycles in which compounds are chemically modified, tested, and refined. Once a candidate has shown promise in these preclinical trials, it enters clinical trials, which are rigorous tests in humans for assessing the drug's safety, efficacy, dosage, and side effects. Clinical trials are typically conducted in three phases: phase I assess a small group of people; phase II trials evaluate efficacy and side effects; and phase III trials compare the new drug to standard treatments in a larger population. Population is not only time-consuming but also expensive, with costs running to billions of dollars [9].

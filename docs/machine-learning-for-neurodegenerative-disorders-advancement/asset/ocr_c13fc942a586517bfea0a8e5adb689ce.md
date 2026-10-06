@@ -1,0 +1,16 @@
+# TABLE 4.2
+Enhanced Therapeutic Pharmacological Targets for Parkinson's Disease
+
+| Approach | Target | Description | Example and Additional Information | Reference |
+| Dopaminergic therapy | Dopamine levels | It aims to replenish or mimic dopamine in the brain to manage symptoms. | Example: Levodopa (often combined with carbidopa). The most effective treatment for motor symptoms, long-term use can lead to dyskinesia. | [55] |
+| Monoamine oxidase B (MAO-B) inhibitors | Dopamine breakdown | It inhibits the MAO-B enzyme to prevent dopamine breakdown, enhancing dopaminergic activity. | Examples: Rasagiline. Used in early stages or advanced stages with levodopa for slow disease progression. | [56] |
+| Dopamine agonists | Dopamine receptors | Mimics dopamine by directly stimulating dopamine receptors. | Examples: Ropinirole, pramipexole. It is less potent than levodopa with fewer long-term complications. | [57] |
+| COMT Inhibitors | Dopamine metabolism | Inhibits the COMT enzyme, prolonging the effect of levodopa. | Example: Entacapine, tolcapone. Used with levodopa, it helps reduce "off" periods and improve motor control. | [52] |
+| Anticholinergics | Acetylcholine balance | Reduces acetylcholine activity to balance dopamine-acetylcholine levels. | Example: Trihexyphenidyl. Effective for tremor but ineffective for bradykinesia or rigidity. | [52] |
+| Amantadine | Glutamate receptors | Modulates glutamatergic transmission and mild antipinsonian effects. | Used for dystonia associated with levodopa use, it also provides symptomatic relief in the early stages. | [53] |
+
+These treatments help manage symptoms, do not slow the progression of the disease [54]. Research into Parkinson's disease continues to advance; however, studies have focused on understanding the genetic causes of the disease, developing new and more effective treatments, and exploring potential disease-modifying therapies that can slow or stop its progression [12].
+
+# 4.2.1.3 Huntington's Disease
+
+Huntington's disease is a hereditary and progressive brain disorder that causes uncontrolled movements, emotional problems, and loss of thinking ability (cognition) [58]. This rare condition results from a genetic mutation in a single gene [14]. This disease has been the subject of numerous studies from 2011 to 2022. These studies suggest that the worldwide incidence of Huntington's disease is approximately 4.88/100,000 individuals, with a 95% confidence interval ranging from 3.38 to 700 [59]. This disease is characterized by the gradual breakdown of nerve cells in the brain, leading to a decline in motor control, cognitive function, and stability [33]. Huntington's disease can appear at any age [59]. The disease is known for its wide range of symptoms, which can vary greatly among individuals [60]. The most common symptoms include involuntary jerking or writing movements (chorea); muscle problems such as rigidity or muscle contraction (dystonia); or abnormal eye movements; impaired gait, posture, and balance; and difficulty in speech or swallowing [61].

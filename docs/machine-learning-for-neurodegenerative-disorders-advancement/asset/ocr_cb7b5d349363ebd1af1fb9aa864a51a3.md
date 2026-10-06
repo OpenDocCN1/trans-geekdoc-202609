@@ -1,0 +1,19 @@
+# 11.2.3 ADAPTING TO HETEROGENEITY AND INDIVIDUALITY
+
+What happens if we try to fit a square peg into a round hole? The problem arises when we attempt to generalize these one-size-fits-all models for the infinite world of neurodegenerative disorders. Each individual's disease journey is unique, with distinct symptoms, genetic variations, and environmental factors contributing to its progression. This inherent heterogeneity presents obstacles as follows [40]. These differences provide the following challenges.
+
+# 11.2.3.1 Model Generalizability
+
+ML models are a major promise that could dramatically change how neurodegenerative diseases are diagnosed, treated, or even prevented. However, there is a major obstacle that lies ahead: model generalization. Models trained on specific datasets may be suboptimal when deployed in different populations or scenarios [41], like a tailored suit will not fit anybody else. The result is a lack of generalizability that reduces the real-world accuracy and increases potential harmful bias in models. One can create an impressively predictive model for a disease only to realize it does not work on patients from other clinics. Some limitations contribute to this lack of "generalizability" [23].
+
+One is that limited datasets can include bias the models could scale, resulting in biased prediction across diverse populations. However, the substantial heterogeneity within neurodegenerative diseases specific to their phenotypic presentation and how many manifest over time can also prevent a model trained on one "subtype" of disease from applying generally across others [44]. Furthermore, real-world issues such as variations in data collection procedures across different providers or variations in clinical practices and healthcare access lead to additional challenges for implementing the model's performance variability. To accomplish this, a broader range of high-quality data is needed at scale, which requires investment in resources and infrastructure [30] with strong data governance and ensure respect for patient privacy. There is an urgent need for the development of regulatory bodies around data sharing and model validation to promote responsible use and the generalizable application of these technologies in healthcare [47].
+
+To realize the full potential of disease prediction models, addressing these obstacles and challenges is essential. Global efforts among researchers, clinicians, and policymakers navigating regulatory pathways [46]. This will allow powerful software to make precise predictions of how the disease will evolve, providing a better clinical solution for an ever-wider range of sufferers. Despite the obstacles to creating reliable and generalizable ML models in neurodegenerative pathology, it has considerable potential [38]. Together, merging diverse datasets, interrogating new and old methods, with a commitment to ethics, can bridge this gap between what these models promise on paper and real-world application for all individuals facing these insidious diseases [66].
+
+# 11.2.3.2 Individualized Treatment in Neurodegenerative Disorders
+
+Neurogeneration as seen in Alzheimer's, Parkinson's and ALS are a notoriously complex process that uniquely affects each patient [8]. Conflicting data raise the issue of whether one-size-fits-all approaches should be abandoned in favor of individualized treatment. However, ML offers some hope for personalized interventions unique for each patient journey [17].
+
+Consider treating everyone with the same drug, despite their genetic variability or lifestyle similarity and concurrent symptoms [67]. That old-fashioned "one-size-fits-all" strategy is insufficient within neurodegenerative diseases such as Alzheimer's and Parkinson's.
+
+And the offender is heterogeneity: the great variety of symptoms that these diseases manifest. Symptoms are a mixture of memory and motor control difficulties in discriminating

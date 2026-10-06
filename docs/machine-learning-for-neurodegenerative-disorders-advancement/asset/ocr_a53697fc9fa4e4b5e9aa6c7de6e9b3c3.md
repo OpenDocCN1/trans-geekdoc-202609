@@ -1,0 +1,12 @@
+# A Unique Machine Learning Approach to Intracranial Lesion Detection by Dual Segmentation for Anisotropically Diffused MRI Images
+
+R. Reeba Jennifer and V. R. Balaji
+Sri Krishna College of Engineering and Technology, Coimbatore,
+A. Albert Raj
+DMI Engineering College, Tamil Nadu, India
+
+# 9.1 INTRODUCTION
+
+The human brain is the most complex and important organ in the body. The brain is made up of fragile nerve tissues that control bodily function. Brain tumors, also known as intracranial tumors, are growths of cells inside or near the brain. The cerebellum is the control focus of the human body and is one of the perplexing organs that consolidate the tangible information and administers the motor responses. Any abnormal growth inside the brain induces pressure on the cerebellum and the surrounding tissue causing disorders of the nervous system. Sometimes, the abnormal growth or mass may indicate malignancy of brain [1]. It is also possible for brain tumors to develop brain tissue. In close proximity to one other are neural networks, the pituitary, spinal, and brain surface membranes. Tumors in the brain can originate from its tissue. Brain tumors are the term used to describe this. Every in a while cancer can spread to the brain from adjacent body parts. Metastatic or secondary brain tumors are the terms used to describe these cancers. Brain tumors can be of many kinds. The kind of cells that compose the tumor determines the type of brain tumor. Specific laboratory tests performed on the tumor cells provide cell-specific information. This information helps the medical team identify the sort of brain tumor. Usually, certain kinds of brain tumors are not malignant, or noncancerous brain tumors. Typically, certain kinds of brain tumors are malignant. These kinds are referred to as malignant brain tumors or malignancies. Certain kinds of brain tumors can be either benign or malignant.
+
+The side effects of the brain tumor might vary in view of the growth. The most widely recognized side indicating the presence of lesion headache, balance issues, and vision and hearing problems, accompanied by seizures and paralytic attacks. The primary investigation involves diagnosis through a computed tomography (CT) or magnetic resonance imaging (MRI) of the brain. Conventional X-rays are not informative about the structure and composition of the brain as brain CT scans. CT can be used to stack the slices to create three-dimensional images of the brain. However, the posterior cerebellar hemispheres are

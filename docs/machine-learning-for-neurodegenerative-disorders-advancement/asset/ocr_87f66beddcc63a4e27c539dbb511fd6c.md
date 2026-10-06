@@ -1,0 +1,19 @@
+Machine Learning for Neurodegenerative Disorders
+
+# 1.6.2 CLUSTERING ANALYSIS AND FEATURE EXTRACTION
+
+ML algorithms cluster neurons based on their spike patterns, revealing groups of neurons that share similar firing patterns (Jaison et al., 2023). Clustering helps research identify functional cell types, uncover assemblies, and understand how neurons work together in different brain regions. Feature extraction involves transforming raw spike data into informative features that capture characteristics of neural activity (Turnski et al., 2023). These features can include spike rates, burst patterns, or spike shapes. ML aids in selecting and engineering these features for downstream analysis.
+
+# 1.6.3 CLASSIFICATION AND DECODING
+
+Classification involves assigning data to predefined categories based on learned features using algorithms like support vector machines or neural networks. For example, classification models can differentiate between healthy and pathological state in medical imaging. Decoding on the other hand, interprets neural or sensory data to infer underlying cognitive or behavioral states, employing like linear discriminant analysis or deep learning. In neuroscience, decoding neural activity from EEG or fMRI to predict states or intentions. Both processes are essentially for accurately interpreting data and deriving actionable insights in various domains, from medical diagnostics to cognitive research (Jaison et al., 2023). For instance, in BCIs, these models can decode motor intentions from spike data to control external devices.
+
+# 1.6.4 PREDICTIVE MODELING AND NETWORK ANALYSIS
+
+Predictive modeling employs statistical and ML algorithms to anticipate future outcomes based on historical data. Analyzing patterns and relationships within datasets, such as regression, decision trees, and deep learning networks can predict events or conditions not observed. For instance, predictive models in healthcare can forecast disease progression or patient responses to treatments, enhancing proactive and personalized medicine (Rodriguez et al., 2023). Network analysis, on the other hand, examines the structure and dynamics of relationships within systems, represented as nodes and edges. In neuroscience, network analysis investigates brain connectivity, assessing how different brain regions interact to support cognitive functions or how disruptions in these networks relate to neurological disorders. Techniques such as graph theory, centrality measures, and connection detection help map these interactions and identify components of the network (Zhang & Vargas, 2023). ML techniques analyze connectivity patterns between neurons to infer functional and structural networks. This unravels how information flows and is processed within neural circuits.
+
+# 1.6.5 TEMPORAL DYNAMICS, REAL-TIME ANALYSIS, AND INTEGRATION WITH OTHER MODALITIES
+
+ML models capture temporal dynamics by analyzing spike sequences over time. These models reveal information processing patterns and contribute to our understanding of neural computations. Moreover ML has been applied in real-time processing of spike data, enabling immediate feedback in closed-loop experiments and BCIs (Volonté, 2023). This has implications for neuroprosthetics and cognitive training. ML integrates spike data with other neural modalities, such as fMRI or EEG. This fusion provides a comprehensive view of brain activity and connectivity, enhancing our understanding of neural processes (Shafik, 2023a). The application of ML in processing and analyzing neural data, including spike data, enables us to decode complex neural activity patterns, identify functional cell types, understand neural dynamics, and extract meaningful insights into brain function and behavior. These techniques significantly enhance the body's understanding of the intricacies of the brain (Rutkowski et al., 2023).
+
+24
