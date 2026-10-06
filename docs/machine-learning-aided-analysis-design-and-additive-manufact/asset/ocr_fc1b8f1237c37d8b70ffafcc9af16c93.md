@@ -1,0 +1,8 @@
+400 FG porous composite structures
+
+highest-density region near the support end begins to unload. The lowest-density region is compacted gradually as the nominal strain increases and then the applied load brings the secondary loading to the highest-density region, causing increasing compressive stress. As a result, there is a sharp fluctuation at the beginning of the plateau stage. On the contrary, a negatively graded M1-NG (Fig. 15.17E) is considered, the lowest-density region is close to the support bar and initial plastic deformation occurs near the support end. The deformation gradually extends to lowest-density regions, entering into an increasing plateau stage in the stress-strain curve. Finally, the stress equilibrium of specimens can be achieved after their two ends have a similar load-bearing capacity, hence specimens M1-PG and M1-NG have similar stress-strain curves with different graded parameters are depicted in Fig. 15.18. It can be observed that the foams with a higher gradient
+
+![](bbox=[0.209, 0.292, 0.79, 0.763])
+
+**Figure 15.18**–strain curves of graded foams with different monotonic gradient distributions: (A) positive and (B) negative gradients; strain contours of graded foams with different monotonic gradient distributions; (C) positive and (D) negative gradients.
+Source: Reproduced with permission from Duan Y, Zhao X, Liu Z, Hou N, Liu H, Du B, et al. Dynamic response of additively manufactured graded foams. Compos Part B Eng 2020:183:107630. Copyright 2020, Elsevier

@@ -1,0 +1,15 @@
+Performance evaluations of functionally graded porous structures
+
+printed, all the six concrete segments were transported to the construction site for on-site bridge assembly. During the assembly, the prestressing action was implemented along the direction of the primary span via posttensioned rods that were fed across the empty regions in each structure. More details on the project of the bicycle bridge in Ghent were found in [112,113]. The second example is a large-scale geometrically optimized concrete slab, which was cast with the utilization of 3D-printed foam frameworks (114). At the initial stage of conceptual design, the material layout of the concrete slab was designed and optimized to reduce material usage while maintaining adequate quality. After, the lightweight frameworks with complex geometry were fabricated via an extrusion-based 3D printing arm. Once finished, all the foam frameworks were manually placed onto the specific locations in the conventional timber framework prior to the casting of ultra-high-performance fiber-reinforced concrete. Finally, once the curing was completed the timber framework the optimized concrete slab was finished. Depending on the function, the foam frameworks can be either in-place or removed from the cast concrete lab for recycling and de-in-utilization in future projects.
+
+# 13.6 Conclusions
+
+This chapter reviewed recent research on the mechanical performance of functionally graded porous structures (FPGSs) and their current design and manufacturing techniques. These lightweight cellular structures are preferred for the construction industry because of their superior attributes such as energy absorption properties, high strength-weight ratio, enhanced heat dissipation, and acoustic insulation characteristics. The following specific conclusions are drawn:
+
++   1. Design of FPGSs was described in detail, in which the topology of TPMS to lattice structures with functionally relative density was depicts clearly.
+2. Fabrication methods of these FPGSs were investigated on both composite and concrete materials. Here, the AM of composite materials and digital fabrication of lightweight concrete structures were critically reviewed.
+3. For the results and discussion, the mechanical performance of the TPMS composite-based and concrete-based structures under different types of loads were reported. Besides, some potential applications of such FPGSs were proposed. By using the advantage of AM technology, these intricate designs have been made easier than ever.
+
+# Acknowledgments
+
+Research is supported by Vingroup Innovation Foundation (VINIF) in project code VINIF.2019.DA04. The authors also acknowledge the facilities and the scientific and technical assistance of the Advanced Manufacturing Precinct, RMIT University, Melbourne.

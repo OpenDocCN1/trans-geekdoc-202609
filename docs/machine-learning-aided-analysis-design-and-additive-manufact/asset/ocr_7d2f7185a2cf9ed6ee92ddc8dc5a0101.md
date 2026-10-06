@@ -1,0 +1,10 @@
+the printed concrete beams with different hollow patterns. Each structure was printed through a concrete nozzle (12 mm diameter) at the printing speed and layer thickness of 4.5 mm/min and 5 mm, respectively.
+
+Recently, there has another innovative study on the lightweight 3D-printed concrete filament via the extrusion of hollow-core filaments. Ramakrishnan et al. [78] combined two types of extruded hollow filaments, including the rectangular hollow shape and U-shape (Fig. 13.8). Compared with the solid filament, the density of rectangular hollow shape and U-shape decreased by 35% and 20%, respectively. Nanoclay was added to the mix design of concrete that improves the stability of the overhang from the extruded hollow filament at a fresh state. The innovative design of the nozzle has therefore another pathway to produce hollow concrete filament with less weight corner components. However, future works are expected regarding the fabrication of an integrated structure using such hollow concrete.
+
+Another feasible way to produce a lightweight concrete structure is to utilize foam concrete inside of conventional mortar as the feeding material in 3DCP. Cho et al. [179] developed 3D-printable foam concrete with different ranges of density, 700, 1000, and 1400kg/m³. Nanopower and calcium sulfoaluminate cement replacing 2% and 10% of cement by weight were incorporated into the mix design for improving the fresh property of the foam concrete. For practical purposes, two types of lightweight facade structures were printed, including the honeycomb-patterned rectangular façade and the one with a pattern resembling
+
+![](bbox=[0.303, 0.535, 0.696, 0.768])
+
+**Figure 13.8** Printed concrete filament with different cross-section, from left to right: rectangular hollow core; solid core, U-shape.
+Source: From Ramakrishnan S, Muthakrishnan S, Sananjan J, Pasupathy K. Concrete 3D printing of lightweight elements using hollow-core extrusion of filaments. Cem Concr Compos 2021;123:104220. https://doi.org/10.1016/j.cemconcomp.2021.104220.

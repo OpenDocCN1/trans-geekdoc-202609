@@ -1,0 +1,134 @@
+
+
+## 功能梯度（FG）多孔复合结构
+
+- [21] Bari K, Bollenbach L. 用于航空天应用的增材层制造蜘蛛网状胞窝结构。J Compos Sci 2022:6:133.
+- [22] Kumar S, Reddy KVVSM, Kumar A, Devi GR. 用于航空天应用的聚合物陶瓷连续纤维增强功能梯度复合材料的开发与表征。Aerospace Sci Technol 2013:26:185–91.
+- [23] de Carvalho TP, Morvan HP, Hargreaves D. 开孔泡沫的数值模拟及其发动机分离器应用。Proc ASME Turbo Technical Control Expo 2014:10033.
+- [24] Liu CS, Zhu G, Han FS, Banshart J. 声学范围内铝泡沫的内摩擦力。J Mater Sci 1998;33:1769–75.
+- [25] YAO Yao, Peicht M. 金属泡沫磁多阻尼器的动态响应时间模型。于 J Appl Electromagnetics Mag 2022:36:491–500.
+- [26] Wang Z, Wang GB, Li T, Yan X. 金属泡沫磁流体阻尼器的参数优化。于 Mech Des 2020:16:1623–30.
+- [27] Zhao D, Jabal JB, Zhao ZH, Li Y, Li SG, Wang SH. 基于内多极磁芯的多孔金属磁多阻尼器设计与实验研究。2017:298–70.
+- [28] Ding MN, Gonabiah MA. 使用锤击测试铝夹层结构的吸能量数量。J Sandw Struct Mater 2019;21:3–8.
+- [29] Xu Q, Zhang X, Li Y, Wang J. 铝泡沫夹层板的隔音性能及其优化。Mater Eng 2018;42:81–6.
+- [30] Liu QZ, Gong WL, Li Shen J, Yi H, Huang J, et al. 使用闭孔泡沫板的高频隧道降噪现场场测量。App Sci 2022:12.
+- [31] Zhang G, Q. 铝泡沫在建筑中的应用及工艺准备。Foundry Technol 2014;35:2924–6.
+- [32] Xu P. 通过梯度厚度结构增强吸收器的效率。Thin Wall Struct 2017:95:250–65.
+- [33] Bai L, Long G, Chen X, Sun Y, Xin Hu, et al. 功能梯度点阵结构的力学性能和吸能能力：实验与仿真。于 Mech Sci 2020;175:106387.
+- [34] Gupte N A. 压缩下高吸能的功能梯度结构泡沫材料。Mater Lett 2007;61:97–92.
+- [35] Xiao F, Fang JG, Sun GY, Li Q. 功能梯度泡沫减震器的工艺性设计。Adv Eng Sci 2015;58:81–95.
+- [36] Mohammadammara E, Beheshti A, Alzadeh FH. 斜向冲击下功能梯度蜂窝点阵吸能条的多目标优化。Int J Materials 2015;20:44–59.
+- [37] Bantu J. Thomas J, Cerraillat T, Petit B, Das M, Braalovski V. 多孔金属股股的发展：设计、制造、仿真和机械测试。Mater Med Des 2017:546–56.
+- [39] Onal E, Frith JE, Jung R, Mu XH, Moltonikov A. 制造良好的功能梯度 Ti6Al4V 多孔骨支架的力学性能和体外行为。Metals 2018;8.
+- [40] Sureneva MA, Suremene R, Chudinova EA, Koptiou A, Tkachev MS, Gorozdha SN, et al. 电子束制造多层梯度金属骨架用于骨重建。Mater Des 2017;133:195–204.
+
+## 功能梯度材料制复合结构的应用：概述
+
+- [41] Hind A, Faramdat F, Pourdanesh F, Aljanabi M, Rasoulianborou, et al. 3D打印功能梯度合金的合成与表征。J Mater Sci 2020;55:908–24.
+- [42] Erickson B, Nardo S, Patel S. 快速压缩下弹性柱承受最大载荷的实验研究。Proc Soc Exp 1956;14:13–20.
+- [43] Imbalzaju G, Tran P, Lee P. 用于局部冲击的负泊夹层板的三维建模。J Sandr Mater 2017;19:291–316.
+- [44] Kushan M, Geiger S. 应用性结构与制造。Springer 2022.
+- [45] Yao G, Luo HJ, Cao Z. 铝泡沫材料的制造技术及设备。2015材料科学与应用国际会议 (ICMSA)，雅典；p. 869–74.
+- [46] Wu JS, Zhao Y, Cai JT, Bai Y, Pang L. 多孔介质对隧道内天然气体爆炸的抑制。Fire Saf 2022;128.
+- [47] Fortier R, Loh A, Wang BG, Li X. 用于锌空气电池的多孔泡沫交换器建模。Electchem Sci 2018;165:9–18.
+- [48] Yang Y, Gupta MC. 用于电磁干扰的纳米管-聚苯烯泡沫复合材料。Nano Lett 2005;5:21–4.
+- [49] Singh AK, Shushkin A, Koppel T, Gupta N. 轻质屏蔽复合材料综述。Compos Part B-Eng 2018;149:97.
+- [50] Jia XC, Shen B, Zhang WG. 用于自适应机械变形屏蔽的形状记忆泡沫复合材料。Chem Eng 2021;305.
+- [51] Fan ZM, Wang DL, Yuan Y, Sheng JL, Liu YY, et al. 轻质MX烯/石墨烯泡沫。Chem Eng 2020;381.
+- [52] Eswaraiah V, Sankuramagan V, Ramaprabhu S. 功能化石墨烯-PVDF泡沫用于EMI屏蔽。Macromol Eng 2011;296:8–4.
+- [53] Saleh B, Jiang JH, Fathi R, Alhabibi T, Xu Q, Wang LS. 功能梯度材料30年：制造方法、应用与挑战。Compos Part B-Eng 2020;201.
+
+# 索引
+
+注意：页码后的“f”和“r”分别指图表和表格。
+
+- ABAQUS软件，160–161, 243
+- 绝对最大误差，289
+- 加速度速度，151–152, 296
+- 增材制造功能梯度多孔结构
+    - 介观几何模型，413–414
+    - 动态结果与讨论，396–401
+    - 两种冲击场景，396–398
+    - 梯度分布的影响，398–401
+    - 动态结果，396
+    - 泡沫填充管的相对密度，419
+    - 实验组，392–383, 413
+    - 动态加载，383
+    - 准静态加载，382–383
+    - 数值结果与讨论，420–422
+    - 梯度填充管中泡沫与之间的相互作用，421–422
+    - 均匀填充管中泡沫与之间的相互作用，420
+    - 预测模型，401–407
+    - 梯度泡沫与均匀泡沫的比较，401–404
+    - 建立，404–407
+    - 梯度泡沫预测模型，423–426
+    - 现有泡沫预测模型，424–426
+    - 新梯度泡沫预测模型，424–426
+    - 准静态结果与讨论，389–395
+    - 梯度泡沫的压缩行为，393–395
+    - 均匀泡沫的压缩行为，391–393
+    - 可重复性与特征力学参数，389–391
+    - 实验重复性与仿真验证，415–416
+    - 有限元仿真设置，414–415, 416
+    - 试备准备，384–389
+    - 均匀泡沫建模，384
+    - 增材制造，388–389
+    - 梯度泡沫的分级，385–388
+    - 泡沫填充管的典型力学响应，417–418
+    - 梯度填充管的典型力学响应，419–420
+- 增材制造 (AM)，7, 9–10, 315–316, 350–354, 371, 382, 388–389, 412
+- 混凝土增材制造 (AM方法)，316, 322–329
+- AI增强有限多尺度建模，252–259
+    - 有限均匀化的代表单元，253–254
+    - 结构分析，259–266
+    - FG多孔梁的验证与讨论，261–263
+- 飞机软材料，251
+- 氧化铝 (Al)，386
+- 铝 (Al)，282, 303
+- 铝合金，320–322, 411–412
+- 铝合金，305
+- AM. 见增材制造
+- ANSYS软件，110
+- 附录单元，241
+- 人工神经网络 (ANNs)，272, 279, 294–296, 280–298
+- 人工多孔材料，3
+- 人工弹簧技术，90, 140
+- Ashby-Gibson模型，330, 330, 334
+- Ashby模型，176
+- 非对称性单元，241
+- 注意 U-Net，257
+- 负泊松夹层板，412
+- 轴向位移，217–218
+- 振动分析，223–233
+- 双向孔隙率分布 (BPD)，174, 175
+- 粘结 (BJ)，328–329
+- 生物医学工程，433–434, 438–439
+- BJ. 见粘结 (BJ)
+- 二进制描述，381
+- 体心立方晶 (BCC)，363–364
+- Bolton方法，141–142
+- BP算法. 见反向传播算法 (BP algorithm)
+- BPD. 见双向孔隙率分布 (BPD)
+- 可制造性，323
+- 理论框架，216–222
+- 针对简易支接功能梯度梁的解析解，221–222
+- 能量计算，219–222
+- 位移和应变场，217–218
+- 控制方程，220–221
+- CAD. 见计算机辅助制图 (CAD)
+- 碳纤维增强系统，251
+- 碳纳米管，195
+- 直卡尔坐标系，60, 144, 261, 294–296
+- CDFs. 见累积密度函数 (CDFs)
+- CDQM. 见切比夫微分分法 (CDQM)
+- 单元，381
+- 单元形状，3–5
+- 单元尺寸，3–5, 381
+- 细胞复合材料，412
+- 细胞材料，3, 241, 347–348, 381
+- 细胞固体，348–371, 433
+- 闭孔，358–360
+- 梯度固体，361–363
+- 点阵结构，365–366
+- 开孔单元，355–359
+
