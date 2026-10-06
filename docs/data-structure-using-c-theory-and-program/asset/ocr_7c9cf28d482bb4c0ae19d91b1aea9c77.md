@@ -1,0 +1,39 @@
+```
+void display (struct node*);
+
+void main ()
+{
+  char ch='1';
+  struct node *next;
+  node=(struct node*)malloc(sizeof(struct node));
+  if(node==NULL)
+{
+    printf("\n out of memory space");
+    exit(0);
+  }
+  start=node;
+  printf("\n Creation of a Linked List\n");
+  create(node);
+  while (ch!='3')
+{
+    printf("\n 1. Insert at Particular Location\");
+    printf("\n 2. Display\");
+    printf("\n 3. Exit\");
+    printf("\n Enter your choice\");
+    ch=getchar();
+    switch(ch)
+    {
+      case '1':
+      insert(node);
+      node=start;
+      break;
+      case '2':
+      display (node);
+      break;
+      case '3':
+      break;
+      default:
+        printf("\n Wrong Choice\");
+    }
+  }
+```

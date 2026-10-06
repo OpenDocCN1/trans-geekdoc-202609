@@ -1,0 +1,37 @@
+```
+printf("Wrong Choice");
+}
+}
+void create (struct dllnode *node)
+{
+struct dllnode *curr;
+char ch;
+int i=1;
+printf("\n Enter the value of %d node:", i);
+scanf("%d", &nodenode->info);
+node->prev=NULL;
+node->next=NULL;
+i=i+1;
+printf("\n Press 'E' key to exit and Press 'Y' key to continue:");
+ch=getchar();
+while(ch!=='N')
+{
+curr=(struct dllnode *)malloc(sizeof(struct dllnode));
+if(curr==NULL)
+{
+printf("\n Out of memory");
+exit(0);
+}
+node->next=curr;
+curr->prev=node;
+node->next=next;
+printf("\n Enter the value of %d node:", i);
+scanf("%d", &node->info);
+node->next=NULL;
+printf("\n Press 'E' key to exit and Press 'Y' key to continue:");
+ch=getchar();
+i=i+1;
+}
+}
+void insert (struct dllnode *node)
+```
