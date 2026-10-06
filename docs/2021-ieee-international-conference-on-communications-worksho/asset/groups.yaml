@@ -1,0 +1,1691 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Blockchain and AI-integrated vehicle-based dynamic parking pricing scheme
+
+
+    Dakshit Reetwahi¹, Rajesh Gupta¹, Student Member, IEEE, Aparna Kumari¹, Student
+    Member, IEEE, Sandeep Tanwar³, Senior Member, IEEE, Department of Computer Science
+    and Engineering, Institute of Technology. Nirma University, Ahmedabad, Gujarat,
+    India *19nmce2@nirmau.ac.in, *18vphde31@nirmau.ac.in, *17fphde22@nirmau.ac.in,
+    sandeep.tanwar@nirmau.ac.in
+
+
+    **Abstract—Nowadays**, searching for parking is tedious and causing stress. Also,
+    parking traffic leads to congestion, air pollution, and illegal parking in parking
+    areas because the driver chooses the most nearest parking. Intelligent Transportation
+    System (ITS) mainly focuses on roadside traffic and is generally considered. However,
+    parking a vehicle consumes a major part of time. In this article, we have proposed
+    Artificial Intelligence (AI) and Blockchain (BC) integrated architecture to predict
+    parking availability and pricing rates based on vehicle type and time (i.e., demand).
+    Our system provides various parking services, where vehicle type is connected
+    to the BC Network, using smart contracts for management of driver''s preferences
+    and requirements. We have ensured security and privacy and provide performance
+    evaluation and analysis of the proposed model.
+
+
+    **Index Terms**—Artificial intelligence, blockchain, parking pricing prediction,
+    ethereum, IEEE
+
+
+    # I. INTRODUCTION
+
+
+    The exponential growth of vehicles in India from 2011 to 2020 (1) raises various
+    troubling issues such as traffic congestion, road accidents, and time-consuming
+    due to limited public space as well as inadequate parking management. These are
+    on top to the priorities of transportation agencies and effective public publishing
+    (2). This requires automation and intelligence to enhance the transportation system,
+    which the Intelligent Transportation System (ITS) is a viable solution, which
+    offers to improve traffic management (3). Conventional ITS focuses on road travelling
+    issues, while parking management is also one of the major issues besides traffic
+    congestion due to on-street parking. It consumes ≈ 40% of the total time spent
+    for parking.
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_0_0.png)
+
+
+    higher than the current price, then it will make my vehicle unnecessarily. The
+    dynamic pricing sets base according to the available slots and distance from other
+    parking vendors [7]. As the number of vehicles increases rapidly, the demand for
+    parking is also increasing. So, the ITS has to manage the parking in such a scalability
+    and parking needs.
+
+
+    Recently, the researchers and computer scientists worked on the Parking Guidance
+    and Information (PGI) system [8], which provides real-time information to the
+    drivers for finding parking lot availability. Availability of parking and traffic
+    details to the user can enhance the performance by reducing their searching time
+    for parking. Implementing the dynamic pricing, which is based on ML algorithms,
+    plays a major role in the prediction of parking space for on-street and off-street
+    parking, so that drivers can reach the destination before reaching the place.
+
+
+    AVs collect and sensitive information from vehicle networks exchanging ideal data
+    can result in faster parking trips. AV systems are those to the users and management
+    of information, where every time need access to Cloud for processing and intelligence
+    [10]. This leads to latency due to the distance between the vehicle and server,
+    which can be solved using Edge Computing (FC). FC is also decentralized information
+    center, where intelligence is located at Local Area Network (LAN) [11]. Hence
+    is located in data center but CCS and QQS for quick access, but this can lead
+    to privacy and authentication issues. Because the malicious user can join with
+    the network with a fake address and steal communicated data'
+  - "[PAGE 1]\n\n[12]. Also, the device needs to access another device (i.e., LAN\
+    \ server) for intelligence and processing, which may lead to latency.\n\nTo meet\
+    \ an issue, Edge Computing (EC) is introduced, where intelligence is applied at\
+    \ the data source (i.e., closer to the edge user). EC reduces latency and enhances\
+    \ reliability by processing data at edge server and then results are stored at\
+    \ CCS for permanent storage. For large and complex data, edge servers require\
+    \ data storage capacity and processing power, which requires dedicated resources.\
+    \ If transferring data to the other device results in privacy issues, EC allows\
+    \ users to connect to the network and access service which is easy for a malicious\
+    \ user to theft information and mislead ITS. The attackers try to damage the system\
+    \ by controlling the communication path, passing invalid information into online\
+    \ transactions where an attacker can steal information such as account ID, online\
+    \ transaction ID as details. Centralized authority processes and raw data as valid\
+    \ data, so if data is compromised then it can damage the entire entity's system.\
+    \ Such issues can be handled using authenticated access and strict data storage.\n\
+    \nBlockchain (BC) provides a decentralized connection between servers where transactions\
+    \ are distributed by implementing cryptography and public block hash [15]. BC-based\
+    \ parking prediction allows users to maintain tracking and sensing activities\
+    \ because BC eliminates third party (centralized) by introducing Smart Contract\
+    \ (SC) which includes rules and consensus to protect AV system from a malicious\
+    \ user. User parking service is connected to the BC network (BN) [16]. Each parking\
+    \ service provides a record and the right to validate transactions. Drivers and\
+    \ vehicles are verified using user ID and vehicle ID respectively, which protects\
+    \ the AV system. Malicious users need to have access to high-level benefits and\
+    \ crypto-currencies to be paid based on tasks such as Proof-of-Work (PoW), Proof-of-Stake\
+    \ (PoS), Byzantine. Thus, BC ensures safe communication among the entire BN [17].\n\
+    \n# A. Motivation\n\nCentralized AV services carry security, privacy and latency\
+    \ issues. Following are the main motivation for this survey paper:\n\n+   1. Current\
+    \ parking systems take considerably long time for predicting occupancy and rate\
+    \ of parking.\n2. Static pricing does not cope with the market condition because\
+    \ it can be higher or lower than the optimal value. While dynamic pricing generally\
+    \ changes according to the demand each up to the optimal value (i.e., price with\
+    \ higher demand and lower price with lower demand).\n3. Dynamic pricing also solves\
+    \ congestion issues by varying prices between the distance parking and location.\
+    \ PG system predicts parking slots availability\n\nso that users can occupy parking\
+    \ with basic rules and suitable pricing.\n\n4. Private BC enhances security and\
+    \ data integrity by restricting access and authentication to the BN. Also, the\
+    \ user needs to perform the pre-decided task to join the BN, thus the malicious\
+    \ user has fewer to harm the AV system.\n\n# B. Research Contributions\n\n+  \
+    \ Article has been proposed for the importance of parking prediction and availability\
+    \ research.\nWe have have proposed a distributed architecture for a fully automated\
+    \ Artificial Intelligence (AI) based trusted and secure management system.\nThis\
+    \ article highlights fair parking prediction distribution for managing congestion\
+    \ and peak time at parking areas.\n\n# II. SYSTEM MODEL AND ARCHITECTURE\n\n![](img/0f753980fc8b53ff3a6b207cde399cda_1_0.png)\n\
+    \nSystem model (2) involves roles such as driver, parking service, which are connected\
+    \ to Ethereum Smart Contract (ESC) using potential communication for database\
+    \ management. The driver requests parking according to the location which is validated\
+    \ using user ID and stored on BC blockchain with hashing. The parking service\
+    \ acts as a block in BN and provides parking service location, position, and provides\
+    \ prices to drivers for fair and better pricing. The parking service is distributed\
+    \ de-central based on real-time demand.\n\nHere let $R = \\{R_1, R_2, ..., R_p\\\
+    }$, represent $p$ sets of parking service. These roles are associated with city\
+    \ $N$ number of parking areas, each associated with parking service, i.e., $\\\
+    {P_1, P_2, ..., P_n\\} \\in R$. Parking area of any parking service can be driven\
+    \ by $\\{D_1, D_2, ..., D_m\\} \\in \\{V_1, V_2, ..., V_k\\} \\in S$. Constraints\
+    \ and mapping of entries are as follows:\n\n```\n$f_1 : P \rightarrow D(n, m)$,n$f_2\
+    \ : D \rightarrow V(k)$\n```"
+  md: '
+
+    # Blockchain and AI-integrated vehicle-based dynamic parking pricing scheme
+
+
+    Dakshit Reetwahi¹, Rajesh Gupta¹, Student Member, IEEE, Aparna Kumari¹, Student
+    Member, IEEE, Sandeep Tanwar³, Senior Member, IEEE, Department of Computer Science
+    and Engineering, Institute of Technology. Nirma University, Ahmedabad, Gujarat,
+    India *19nmce2@nirmau.ac.in, *18vphde31@nirmau.ac.in, *17fphde22@nirmau.ac.in,
+    sandeep.tanwar@nirmau.ac.in
+
+
+    **Abstract—Nowadays**, searching for parking is tedious and causing stress. Also,
+    parking traffic leads to congestion, air pollution, and illegal parking in parking
+    areas because the driver chooses the most nearest parking. Intelligent Transportation
+    System (ITS) mainly focuses on roadside traffic and is generally considered. However,
+    parking a vehicle consumes a major part of time. In this article, we have proposed
+    Artificial Intelligence (AI) and Blockchain (BC) integrated architecture to predict
+    parking availability and pricing rates based on vehicle type and time (i.e., demand).
+    Our system provides various parking services, where vehicle type is connected
+    to the BC Network, using smart contracts for management of driver''s preferences
+    and requirements. We have ensured security and privacy and provide performance
+    evaluation and analysis of the proposed model.
+
+
+    **Index Terms**—Artificial intelligence, blockchain, parking pricing prediction,
+    ethereum, IEEE
+
+
+    # I. INTRODUCTION
+
+
+    The exponential growth of vehicles in India from 2011 to 2020 (1) raises various
+    troubling issues such as traffic congestion, road accidents, and time-consuming
+    due to limited public space as well as inadequate parking management. These are
+    on top to the priorities of transportation agencies and effective public publishing
+    (2). This requires automation and intelligence to enhance the transportation system,
+    which the Intelligent Transportation System (ITS) is a viable solution, which
+    offers to improve traffic management (3). Conventional ITS focuses on road travelling
+    issues, while parking management is also one of the major issues besides traffic
+    congestion due to on-street parking. It consumes ≈ 40% of the total time spent
+    for parking.
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_0_0.png)
+
+
+    higher than the current price, then it will make my vehicle unnecessarily. The
+    dynamic pricing sets base according to the available slots and distance from other
+    parking vendors [7]. As the number of vehicles increases rapidly, the demand for
+    parking is also increasing. So, the ITS has to manage the parking in such a scalability
+    and parking needs.
+
+
+    Recently, the researchers and computer scientists worked on the Parking Guidance
+    and Information (PGI) system [8], which provides real-time information to the
+    drivers for finding parking lot availability. Availability of parking and traffic
+    details to the user can enhance the performance by reducing their searching time
+    for parking. Implementing the dynamic pricing, which is based on ML algorithms,
+    plays a major role in the prediction of parking space for on-street and off-street
+    parking, so that drivers can reach the destination before reaching the place.
+
+
+    AVs collect and sensitive information from vehicle networks exchanging ideal data
+    can result in faster parking trips. AV systems are those to the users and management
+    of information, where every time need access to Cloud for processing and intelligence
+    [10]. This leads to latency due to the distance between the vehicle and server,
+    which can be solved using Edge Computing (FC). FC is also decentralized information
+    center, where intelligence is located at Local Area Network (LAN) [11]. Hence
+    is located in data center but CCS and QQS for quick access, but this can lead
+    to privacy and authentication issues. Because the malicious user can join with
+    the network with a fake address and steal communicated data
+
+
+    [12]. Also, the device needs to access another device (i.e., LAN server) for intelligence
+    and processing, which may lead to latency.
+
+
+    To meet an issue, Edge Computing (EC) is introduced, where intelligence is applied
+    at the data source (i.e., closer to the edge user). EC reduces latency and enhances
+    reliability by processing data at edge server and then results are stored at CCS
+    for permanent storage. For large and complex data, edge servers require data storage
+    capacity and processing power, which requires dedicated resources. If transferring
+    data to the other device results in privacy issues, EC allows users to connect
+    to the network and access service which is easy for a malicious user to theft
+    information and mislead ITS. The attackers try to damage the system by controlling
+    the communication path, passing invalid information into online transactions where
+    an attacker can steal information such as account ID, online transaction ID as
+    details. Centralized authority processes and raw data as valid data, so if data
+    is compromised then it can damage the entire entity''s system. Such issues can
+    be handled using authenticated access and strict data storage.
+
+
+    Blockchain (BC) provides a decentralized connection between servers where transactions
+    are distributed by implementing cryptography and public block hash [15]. BC-based
+    parking prediction allows users to maintain tracking and sensing activities because
+    BC eliminates third party (centralized) by introducing Smart Contract (SC) which
+    includes rules and consensus to protect AV system from a malicious user. User
+    parking service is connected to the BC network (BN) [16]. Each parking service
+    provides a record and the right to validate transactions. Drivers and vehicles
+    are verified using user ID and vehicle ID respectively, which protects the AV
+    system. Malicious users need to have access to high-level benefits and crypto-currencies
+    to be paid based on tasks such as Proof-of-Work (PoW), Proof-of-Stake (PoS), Byzantine.
+    Thus, BC ensures safe communication among the entire BN [17].
+
+
+    # A. Motivation
+
+
+    Centralized AV services carry security, privacy and latency issues. Following
+    are the main motivation for this survey paper:
+
+
+    - 1. Current parking systems take considerably long time for predicting occupancy
+    and rate of parking.
+
+    - 2. Static pricing does not cope with the market condition because it can be
+    higher or lower than the optimal value. While dynamic pricing generally changes
+    according to the demand each up to the optimal value (i.e., price with higher
+    demand and lower price with lower demand).
+
+    - 3. Dynamic pricing also solves congestion issues by varying prices between the
+    distance parking and location. PG system predicts parking slots availability so
+    that users can occupy parking with basic rules and suitable pricing.
+
+    - 4. Private BC enhances security and data integrity by restricting access and
+    authentication to the BN. Also, the user needs to perform the pre-decided task
+    to join the BN, thus the malicious user has fewer to harm the AV system.
+
+
+    # B. Research Contributions
+
+
+    - Article has been proposed for the importance of parking prediction and availability
+    research.
+
+    - We have proposed a distributed architecture for a fully automated Artificial
+    Intelligence (AI) based trusted and secure management system.
+
+    - This article highlights fair parking prediction distribution for managing congestion
+    and peak time at parking areas.
+
+
+    # II. SYSTEM MODEL AND ARCHITECTURE
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_1_0.png)
+
+
+    System model (2) involves roles such as driver, parking service, which are connected
+    to Ethereum Smart Contract (ESC) using potential communication for database management.
+    The driver requests parking according to the location which is validated using
+    user ID and stored on BC blockchain with hashing. The parking service acts as
+    a block in BN and provides parking service location, position, and provides prices
+    to drivers for fair and better pricing. The parking service is distributed de-central
+    based on real-time demand.
+
+
+    Here let $R = \{R_1, R_2, ..., R_p\}$, represent $p$ sets of parking service.
+    These roles are associated with city $N$ number of parking areas, each associated
+    with parking service, i.e., $\{P_1, P_2, ..., P_n\} \in R$. Parking area of any
+    parking service can be driven by $\{D_1, D_2, ..., D_m\} \in \{V_1, V_2, ...,
+    V_k\} \in S$. Constraints and mapping of entries are as follows:
+
+
+    ```
+
+    $f_1 : P \rightarrow D(n, m)$,n$f_2 : D \rightarrow V(k)$
+
+    ```
+
+    '
+  mdcn: '
+
+
+    # 集成区块链与人工智能的车辆动态停车定价方案
+
+
+    Dakshit Reetwahi¹, Rajesh Gupta¹, Student Member, IEEE, Aparna Kumari¹, Student
+    Member, IEEE, Sandeep Tanwar³, Senior Member, IEEE, Department of Computer Science
+    and Engineering, Institute of Technology. Nirma University, Ahmedabad, Gujarat,
+    India *19nmce2@nirmau.ac.in, *18vphde31@nirmau.ac.in, *17fphde22@nirmau.ac.in,
+    sandeep.tanwar@nirmau.ac.in
+
+
+    **摘要——如今**，寻找停车位既乏味又令人压力。由于驾驶员选择最近的停车位，停车交通会导致拥堵、空气污染以及停车区域违章。智能交通系统（ITS）主要关注路侧交通并通常被予以考虑。然而，停车消耗了大部分时间。在本文中，我们提出了一种集成人工智能（AI）和区块链（BC）架构，根据车辆类型和时间（即需求）预测停车可用性和定价率。我们的系统提供了多种停车服务，其中车辆类型连接到区块链网络，使用智能合约管理驾驶员的偏好和需求。我们确保了安全性和隐私，并对所提模型进行了性能评估和分析。
+
+
+    **索引术**——人工智能，区块链，停车定价预测，以太坊，IEEE
+
+
+    # I. 引言
+
+
+    印度车辆从2011年至2020年的指数级增长（1）引发了各种令人困的问题，如交通拥堵、交通事故以及由于公共空间有限和停车管理不善导致的时间耗费。这些是交通机构和有效公共发布（2）中的首要考虑之事项。这需要自动化和智能化来增强交通系统，而智能交通系统（ITS）是一个可行的解决方案，提供了改进交通管理的方法（3）。传统的ITS聚焦于道路行驶问题，而除了路边停车导致的交通拥堵外，停车管理也是主要问题之一。它消耗了停车总时间的约
+    40%。
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_0_0.png)
+
+
+    如果价格高于当前价格，它将使我的车辆变得没有必要。动态定价根据可用空位以及与其他停车供应商的距离设定基准 [7]。随着车辆数量的快速增加，对停车的需求也在增加。因此，ITS
+    必须根据这种扩展性和停车需求来管理停车。
+
+
+    最近，研究人员和计算机科学家致力于停车引导和信息（PGI）系统 [8]，该系统为驾驶员提供寻找停车位可用性的实时信息。向用户提供停车可用性和交通详情可以通过减少他们寻找停车位的时间来提高性能。实施基于
+    ML 算法的动态定价，在路边和路外停车位的预测中起着重要作用，以便驾驶员在到达地点之前到达目的地。
+
+
+    自动驾驶车辆（AVs）从车辆网络收集敏感信息，交换理想数据可以带来更快的停车行程。AV 系统对于用户和信息管理而言，是每次都需要访问云端进行处理和智能化 [10]。这导致了由于车辆与服务器之间的距离产生的延迟，可以使用边缘计算（FC）解决。FC
+    也是一个去中心化的信息中心，智能位于局域网（LAN）中 [11]。因此它位于数据中心，但为了快速访问使用了 CCS 和 QQS，这可能导致隐私和身份验证问题。因为恶意用户可以使用假地址加入网络并窃取通信数据
+
+
+    [12]。此外，设备需要访问另一个设备（即 LAN 服务器）来获取智能和处理，这可能会导致延迟。
+
+
+    为了解决这一问题，引入了边缘计算（EC），智能被应用于数据源（即靠近边缘用户）。EC 通过在边缘服务器处理数据减少延迟并增强可靠性，然后结果存储在 CCS
+    中永久存储。对于大型复杂数据，边缘服务器需要存储容量和处理能力，这需要专用资源。如果将数据传输到其他设备会导致隐私问题，EC 允许用户连接到网络并访问服务，恶意用户可以容易窃取信息并误导
+    ITS。攻击者试图通过控制通信路径破坏系统，向在线交易中传递无效信息，攻击者可以在那里窃取账户 ID、在线交易 ID 等信息。中心化机构处理原始数据作为有效数据，因此如果数据遭到破坏，可能会损坏整个实体的系统。此类问题可以使用认证访问和严格的数据存储来处理。
+
+
+    区块链（BC）提供了服务器之间的去中心化连接，通过实现密码学和公共区块哈希分布交易 [15]。基于区块链的停车预测允许用户维护跟踪和感知活动，因为区块链通过引入智能合约（SC）消除了第三方（中心化），智能合约包含了规则和共识，以保护
+    AV 系统免受恶意用户侵害。用户停车服务连接到区块链网络（BN） [16]。每项停车服务提供记录和验证交易的权利。驾驶员和车辆分别使用用户 ID 和车辆 ID
+    进行验证，从而保护了 AV 系统。恶意用户需要拥有高级权限和加密货币，以便根据工作量证明（PoW）、权益证明（PoS）、拜占庭等任务获得支付。因此，BC 确保了整个
+    BN 之间的安全通信 [17]。
+
+
+    # A. 动机
+
+
+    中心化的 AV 服务存在安全、隐私和延迟问题。以下是本综述论文的主要动机：
+
+
+    - 1. 目前的停车系统预测占用率和费率花费大量时间。
+
+    - 2. 静态定价无法应对市场状况，因为它可能高于或低于最优值。而动态定价通常根据需求变化达到最优值（即需求高时价格较高，需求低时较低）。
+
+    - 3. 动态定价通过改变距离停车和位置之间的价格来解决拥堵问题。PG 系统预测停车位可用性，使用户可以使用基本规则和适当的价格占用停车位。
+
+    - 4. 私有区块链通过限制对 BN 的访问和认证来增强安全性和数据完整性。此外，用户需要执行预设任务才能加入 BN，因此恶意用户损害 AV 系统的机会较少。
+
+
+    # B. 研究贡献
+
+
+    - 本文针对停车预测和可用性研究的重要性提出了建议。
+
+    - 我们提出了一种基于全自动人工智能（AI）的受信且安全管理系统的分布式架构。
+
+    - 本文强调了公平的停车预测分布，用于管理停车区域的拥堵和高峰。
+
+
+    # II. 系统模型与架构
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_1_0.png)
+
+
+    系统模型 (2) 涉及驾驶员、停车服务等角色，它们通过潜在通信连接到以太坊智能合约（ESC）用于数据库管理。驾驶员根据位置请求停车，使用用户 ID 进行验证并经过哈希处理存储在区块链（BC）上。停车服务作为
+    BN 中的一个区块，提供停车服务位置、方位，并为驾驶员提供价格以实现公平和更好的定价。停车服务根据实时需求进行去中心化分布。
+
+
+    这里 $R = \{R_1, R_2, ..., R_p\}$ 表示 $p$ 组停车服务。这些角色与城市 $N$ 个停车区域相关，每个区域与一个停车服务相关，即
+    $\{P_1, P_2, ..., P_n\} \in R$。任何停车服务的停车区域都可以由 $\{D_1, D_2, ..., D_m\} \in \{V_1,
+    V_2, ..., V_k\} \in S$ 驱动。条目的约束和映射如下：
+
+
+    ```
+
+    $f_1 : P \rightarrow D(n, m)$,n$f_2 : D \rightarrow V(k)$
+
+    ```
+
+
+    '
+  merge: -1
+- raw:
+  - "[PAGE 2]\n\n# $f_3 \rightarrow V(n:k)$\n\nHence, corresponding matrices are $[PD]_{n\t\
+    imes m}, [DV]_{1\times k}[PV]_{n\times k}$ can be written with constraints as\
+    \ follows:\n\n```\n$[PD]_{n\times m} = \\begin{cases} 1, & P_i \\in D_j \\vee\
+    \ R_p, \\ 0, & \\text{otherwise.} \\end{cases} \\quad (1)$\n```\n\n```\n$[DV]_{1\t\
+    imes k} = \\begin{cases} 1, & D_i \\in V_j \\vee R_d, \\ 0, & \\text{otherwise.}\
+    \ \\end{cases} \\quad (2)$\n```\n\n```\n$[PV]_{n\times k} = \\begin{cases} 1,\
+    \ & P_i \\in V_j \\vee R_p, \\ 0, & \\text{otherwise.} \\end{cases} \\quad (3)$\n\
+    ```\n\n$\\{n, m, r, k, i, a\\} > 0$\n\nParking prices are allocated by the demand\
+    \ as Peak and Non-Peak time (NPT). NPT is the time to zero when demand is low.\
+    \ When the demand is high NPT is 0, when NPT is set to y, when $x > y$, the demand\
+    \ is high then the price is set to z, where $x > z > y$. The following equations\
+    \ show constraints for required changes in prices based on demand and availability,\n\
+    \n```\n$A_p = \\begin{cases} 1, & \\text{if slot is empty} \\ 0, & \\text{otherwise.}\
+    \ \\end{cases} \\quad (4)$\n```\n\n```\n$NPT = \\begin{cases} 1, & \\text{if demand\
+    \ is low} \\ 0, & \\text{otherwise.} \\end{cases} \\quad (5)$\n```\n\n```\n$price\
+    \ = \\begin{cases} high, & NPT = 0 \\ low, & NPT = 1. \\end{cases} \\quad (6)$\n\
+    ```\n\n```\n$price = \\begin{cases} high, & NPT > 0 \\ \\text{&} A_p > 0 \\ \\\
+    text{&} demand < 70 \\ low, & NPT = 1 \\ \\text{&} A_p \\ge 70 \\ \\text{&} demand\
+    \ \\ge 70. \\end{cases} \\quad (7)$\n```\n\nWhere $\\text{price} > 0, \\text{high}\
+    \ < z < low$\n\n```\n$price = fc + sc + cvt \\pmpm dc \\quad (8)$\n```\n\nWhere\
+    \ $fc$ is fixed cost, $sc$ is service base charge, $cvt$ is charge based on vehicle\
+    \ type, $dc$ is distance charge\n\npayment is performed using wallet address $W_b,\
+    \ W_w, W_p$, where $W_w$ is wallet address, $W_p$ is parking service and $W_d$\
+    \ is driver's address in BN. $W_{vw}$ is wallet address issued following entities:\n\
+    \n```\n$W_b = \\{Sendaddr, Nonce_{stamp}, GAS_{value}, M_{tree}\\}\\nW_p = \\\
+    {PK^{kp}, P^{hash}, P^{hash}_{stamp}, GAS_{value}, M_{tree}\\}\\nW_d = \\{PK^{pd},\
+    \ P^{pd}, P^{hash}_{stamp}, GAS_{value}, M_{tree}\\}$\n```\n\nEach role can make\
+    \ and accept payment in a cryptographic wallet as per the equations. These payments\
+    \ are validated using consensus mechanisms such as PoW, PoB or Rp. If performed\
+    \ successfully, the transaction is conducted on a public ledger and the driver\
+    \ can access the vehicle. Here we use IPFS protocol for storing and sharing data,\
+    \ because it has high bandwidth and low latency, and reliability which results\
+    \ in\n\n# III. PROPOSED ARCHITECTURE\n\nTraditional parking management systems\
+    \ suffer from traffic congestion, time pressure, and pollution because the users\
+    \ need to find parking manually is much difficult while requirement is high. In\
+    \ this paper, we propose an AI and BC-based integrated solution for security and\
+    \ performance of parking management. Fig. 3 shows that the proposed architecture\
+    \ consists of four layers as Driver layer, AI layer, BC layer. Parking service\
+    \ layer providing detail. The structure of such layers is\n\n# A. Driver layer\n\
+    \nThe driver layer is the entry point of interaction with the system. The driver\
+    \ may have more than one heterogeneous vehicle (e.g., 2-wheeler, 3-wheeler, 4-wheeler),\
+    \ according to which price is decided. The driver can request the BC parking for\
+    \ reservation by providing vehicle id, vehicle type, arrival date and time, and\
+    \ location. The system identifies and predicts available lots in each parking\
+    \ area as per driver request. The system responds to this predicted information.\
+    \ By analyzing reliable preference, services, and price, the driver can confirm\
+    \ the reservation. Payment is performed using BC-based either, where the driver\
+    \ uses cryptographic wallet. This is encrypted using the private key, cryptography\
+    \ and time stamp. Drivers can make payment to the BC layer, which is validated\
+    \ by performing consensus mechanisms. After validation of payment, the driver\
+    \ can park the vehicle to the located spot\n\nAI layer to perform checking availability\
+    \ and predict prices according to the peak status and vehicle. This application\
+    \ searches for parking lot with the specific time and vehicle type which is processed\
+    \ by the algorithm to determine availability of parking and price based on demand\
+    \ and time. The algorithm will notify the user about the nearest parking area\
+    \ by analyzing the peers (i.e., other users) and rates based on demand and time.\
+    \ Pricing is applied at a data server where parking occupancy occurs. When a driver\
+    \ stays and checks availability for the parking lot, an AI-based algorithm process\
+    \ dataset and checks as per driver request. This dataset consists of vehicles\
+    \ such as date, time, locations, vehicle type, required services. For accurate\
+    \ prediction, the model is trained and tested based on previous data and the fusion\
+    \ matrix. The matrix shows the actual price and predicted price based on a result.\
+    \ Based on availability, system provides the driver with area locations and available\
+    \ lots with\n\n# B. AI layer"
+  - '[PAGE 3]
+
+
+    # Parking service provider layer
+
+
+    # Driver interface
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_3_0.png)
+
+
+    # AI layer
+
+
+    Processing for price prediction
+
+
+    # Blockchain layer
+
+
+    +   - Request for parking with license ID
+
+    - Response with slot and price
+
+    - Make payment
+
+    - Update if valid
+
+
+    +   - Check for availability
+
+    - Response to the driver interface
+
+    - Request for payment and driver validation
+
+    - Park vehicle
+
+
+    Fig. 3: The proposed blockchain and AI-based parking price prediction system.
+
+
+    predicted price, according to which driver can choose suitable parking location.
+
+
+    then the parking slot is represented as free. Also, if the user makes changes
+    for booked parking then changes are increased as changes. Data is saved on the
+    blockchain for future use and secured with crypto-Hashing.
+
+
+    # C. BC Layer
+
+
+    BC layer is involved to enhance the security of system roles and sensitive information.
+    All the parking service providers are connected to the BN which each parking provider
+    acts as a block and local copy of the public ledger. The new parking service provider
+    can join the BN with authentication. For adding a new node, the parking service
+    provider needs to compute the nonce value. The parking service provider finds
+    nonce to get a chance to the BN. Each starts a smart contract to change parking
+    status according to the reservation among the ente. Parking service providers
+    are responsible to verify and validate each new entry and transaction. The driver
+    can book parking as per, for which the system will build a block. When a user
+    requests parking, ESC checks availability by performing intelligence and computation
+    on the AI. If the driver confirms the reservation, payment is done using a BC-based
+    wallet and using consensus mechanisms. BC-based ESC is responsible for validation
+    of driver and transaction lot. If the transaction is valid, the particular parking
+    lot is reserved. Getting to the parking reservation, the public ledger will be
+    updated with its license id, vehicle type, transaction id, parking lot number,
+    but this is made for a specific-time only. If the user does not occupy parking
+    within the time-slot
+
+
+    # D. Parking Service Provider Layer
+
+
+    Each parking area has a parking service provider who acts as a block in BN. The
+    parking service provider can join BN for fair and transparent parking allocation.
+    Parking service provider updates information about unpaid parking. The BC, as
+    reported, can reserve a suitable parking lot, where parking service providers
+    (i.e., people) are responsible to verify and validate each entry and transaction.
+    Each parking service provider contains copy of the public ledger and smart contract
+    for validation. Using consensus mechanisms, the public ledger is updated with
+    value. Parking service providers are responsible to update the data when drivers
+    occupy or leave the parking lot. Each post contains cryptographic wallet which
+    is encrypted using the private key, cryptographic hash, timestamp, game value.
+
+
+    # IV. PERFORMANCE Evaluation
+
+
+    In this section, we discuss experimental results and evaluate the performance
+    of the proposed system. It is implemented using python programming language on
+    Windows operating system having Intel(R) Core(iTM) CPU @ 2.60GHz, 16GB RAM. The
+    vehicle price data is generated'
+  md: '
+
+    # $f_3 \rightarrow V(n:k)$
+
+
+    Hence, corresponding matrices are $[PD]_{n \times m}, [DV]_{1 \times k}[PV]_{n
+    \times k}$ can be written with constraints as follows:
+
+
+    ```
+
+    $[PD]_{n \times m} = \begin{cases} 1, & P_i \in D_j \vee R_p, \ 0, & \text{otherwise.}
+    \end{cases} \quad (1)$
+
+    ```
+
+
+    ```
+
+    $[DV]_{1 \times k} = \begin{cases} 1, & D_i \in V_j \vee R_d, \ 0, & \text{otherwise.}
+    \end{cases} \quad (2)$
+
+    ```
+
+
+    ```
+
+    $[PV]_{n \times k} = \begin{cases} 1, & P_i \in V_j \vee R_p, \ 0, & \text{otherwise.}
+    \end{cases} \quad (3)$
+
+    ```
+
+
+    $\{n, m, r, k, i, a\} > 0$
+
+
+    Parking prices are allocated by the demand as Peak and Non-Peak time (NPT). NPT
+    is the time to zero when demand is low. When the demand is high NPT is 0, when
+    NPT is set to y, when $x > y$, the demand is high then the price is set to z,
+    where $x > z > y$. The following equations show constraints for required changes
+    in prices based on demand and availability,
+
+
+    ```
+
+    $A_p = \begin{cases} 1, & \text{if slot is empty} \ 0, & \text{otherwise.} \end{cases}
+    \quad (4)$
+
+    ```
+
+
+    ```
+
+    $NPT = \begin{cases} 1, & \text{if demand is low} \ 0, & \text{otherwise.} \end{cases}
+    \quad (5)$
+
+    ```
+
+
+    ```
+
+    $price = \begin{cases} high, & NPT = 0 \ low, & NPT = 1. \end{cases} \quad (6)$
+
+    ```
+
+
+    ```
+
+    $price = \begin{cases} high, & NPT > 0 \text{\ \& } A_p > 0 \text{\ \&} demand
+    < 70 \ low, & NPT = 1 \text{\ \&} A_p \ge 70 \text{\ \&} demand \ge 70. \end{cases}
+    \quad (7)$
+
+    ```
+
+
+    Where $\text{price} > 0, \text{high} < z < low$
+
+
+    ```
+
+    $price = fc + sc + cvt \pm dc \quad (8)$
+
+    ```
+
+
+    Where $fc$ is fixed cost, $sc$ is service base charge, $cvt$ is charge based on
+    vehicle type, $dc$ is distance charge
+
+
+    payment is performed using wallet address $W_b, W_w, W_p$, where $W_w$ is wallet
+    address, $W_p$ is parking service and $W_d$ is driver''s address in BN. $W_{vw}$
+    is wallet address issued following entities:
+
+
+    ```
+
+    $W_b = \{Sendaddr, Nonce_{stamp}, GAS_{value}, M_{tree}\}\nW_p = \{PK^{kp}, P^{hash},
+    P^{hash}_{stamp}, GAS_{value}, M_{tree}\}\nW_d = \{PK^{pd}, P^{pd}, P^{hash}_{stamp},
+    GAS_{value}, M_{tree}\}$
+
+    ```
+
+
+    Each role can make and accept payment in a cryptographic wallet as per the equations.
+    These payments are validated using consensus mechanisms such as PoW, PoB or Rp.
+    If performed successfully, the transaction is conducted on a public ledger and
+    the driver can access the vehicle. Here we use IPFS protocol for storing and sharing
+    data, because it has high bandwidth and low latency, and reliability which results
+    in
+
+
+    # III. PROPOSED ARCHITECTURE
+
+
+    Traditional parking management systems suffer from traffic congestion, time pressure,
+    and pollution because the users need to find parking manually is much difficult
+    while requirement is high. In this paper, we propose an AI and BC-based integrated
+    solution for security and performance of parking management. Fig. 3 shows that
+    the proposed architecture consists of four layers as Driver layer, AI layer, BC
+    layer. Parking service layer providing detail. The structure of such layers is
+
+
+    # A. Driver layer
+
+
+    The driver layer is the entry point of interaction with the system. The driver
+    may have more than one heterogeneous vehicle (e.g., 2-wheeler, 3-wheeler, 4-wheeler),
+    according to which price is decided. The driver can request the BC parking for
+    reservation by providing vehicle id, vehicle type, arrival date and time, and
+    location. The system identifies and predicts available lots in each parking area
+    as per driver request. The system responds to this predicted information. By analyzing
+    reliable preference, services, and price, the driver can confirm the reservation.
+    Payment is performed using BC-based either, where the driver uses cryptographic
+    wallet. This is encrypted using the private key, cryptography and time stamp.
+    Drivers can make payment to the BC layer, which is validated by performing consensus
+    mechanisms. After validation of payment, the driver can park the vehicle to the
+    located spot
+
+
+    AI layer to perform checking availability and predict prices according to the
+    peak status and vehicle. This application searches for parking lot with the specific
+    time and vehicle type which is processed by the algorithm to determine availability
+    of parking and price based on demand and time. The algorithm will notify the user
+    about the nearest parking area by analyzing the peers (i.e., other users) and
+    rates based on demand and time. Pricing is applied at a data server where parking
+    occupancy occurs. When a driver stays and checks availability for the parking
+    lot, an AI-based algorithm process dataset and checks as per driver request. This
+    dataset consists of vehicles such as date, time, locations, vehicle type, required
+    services. For accurate prediction, the model is trained and tested based on previous
+    data and the fusion matrix. The matrix shows the actual price and predicted price
+    based on a result. Based on availability, system provides the driver with area
+    locations and available lots with predicted price, according to which driver can
+    choose suitable parking location. then the parking slot is represented as free.
+    Also, if the user makes changes for booked parking then changes are increased
+    as changes. Data is saved on the blockchain for future use.
+
+
+    # B. AI layer
+
+
+    # Parking service provider layer
+
+
+    # Driver interface
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_3_0.png)
+
+
+    # AI layer
+
+
+    Processing for price prediction
+
+
+    # Blockchain layer
+
+
+    - Request for parking with license ID
+
+    - Response with slot and price
+
+    - Make payment
+
+    - Update if valid
+
+
+    - Check for availability
+
+    - Response to the driver interface
+
+    - Request for payment and driver validation
+
+    - Park vehicle
+
+
+    Fig. 3: The proposed blockchain and AI-based parking price prediction system.
+
+
+    # C. BC Layer
+
+
+    BC layer is involved to enhance the security of system roles and sensitive information.
+    All the service providers are connected to the BN which each parking provider
+    acts as a block and local copy of the public ledger. Using consensus mechanisms,
+    the public ledger is updated with value. For adding a new node, the parking service
+    provider needs to compute the nonce. The parking service provider finds nonce
+    to get a chance to the BN. Each starts a smart contract to change parking status
+    according to the ente.
+
+
+    # D. Parking Service Provider Layer
+
+
+    Each parking area has a parking service provider who acts as a block in BN. The
+    parking service provider can join BN for fair and transparent parking allocation.
+    Parking service provider updates information about unpaid parking. The BC, as
+    reported, can reserve a suitable parking lot, where parking service providers
+    (i.e., people) are responsible to verify and validate each entry and transaction.
+    Each contains copy of the public ledger and smart contract for validation.
+
+
+    # IV. PERFORMANCE Evaluation
+
+
+    In this section, we discuss experimental results and evaluate the performance
+    of the proposed system. It is implemented using python programming language on
+    Windows operating system having Intel(R) Core(iTM) CPU @ 2.60GHz, 16GB RAM. The
+    vehicle price data is generated
+
+    '
+  mdcn: '
+
+
+    # $f_3 \rightarrow V(n:k)$
+
+
+    因此，相应的矩阵 $[PD]_{n \times m}, [DV]_{1 \times k}[PV]_{n \times k}$ 可以根据如下约束条件写入：
+
+
+    ```
+
+    $[PD]_{n \times m} = \begin{cases} 1, & P_i \in D_j \vee R_p, \ 0, & \text{otherwise.}
+    \end{cases} \quad (1)$
+
+    ```
+
+
+    ```
+
+    $[DV]_{1 \times k} = \begin{cases} 1, & D_i \in V_j \vee R_d, \ 0, & \text{otherwise.}
+    \end{cases} \quad (2)$
+
+    ```
+
+
+    ```
+
+    $[PV]_{n \times k} = \begin{cases} 1, & P_i \in V_j \vee R_p, \ 0, & \text{otherwise.}
+    \end{cases} \quad (3)$
+
+    ```
+
+
+    $\{n, m, r, k, i, a\} > 0$
+
+
+    停车价格根据需求分配为高峰和非高峰期（NPT）。NPT 是需求低低时归零的时间。当需求高时，NPT 为 0；当 NPT 设置为 y 且 $x > y$ 时，需求高，则价格设置为
+    z，其中 $x > z > y$。以下方程显示了根据需求和可用性对价格更改所需的约束条件：
+
+
+    ```
+
+    $A_p = \begin{cases} 1, & \text{if slot is empty} \ 0, & \text{otherwise.} \end{cases}
+    \quad (4)$
+
+    ```
+
+
+    ```
+
+    $NPT = \begin{cases} 1, & \text{if demand is low} \ 0, & \text{otherwise.} \end{cases}
+    \quad (5)$
+
+    ```
+
+
+    ```
+
+    $price = \begin{cases} high, & NPT = 0 \ low, & NPT = 1. \end{cases} \quad (6)$
+
+    ```
+
+
+    ```
+
+    $price = \begin{cases} high, & NPT > 0 \text{\ \& } A_p > 0 \text{\ \&} demand
+    < 70 \ low, & NPT = 1 \text{\ \&} A_p \ge 70 \text{\ \&} demand \ge 70. \end{cases}
+    \quad (7)$
+
+    ```
+
+
+    其中 $\text{price} > 0, \text{high} < z < low$
+
+
+    ```
+
+    $price = fc + sc + cvt \pm dc \quad (8)$
+
+    ```
+
+
+    其中 $fc$ 是固定成本，$sc$ 是基础服务费，$cvt$ 是基于车辆类型的费用，$dc$ 是距离费用。
+
+
+    支付使用钱包地址 $W_b, W_w, W_p$ 进行，其中 $W_w$ 是钱包地址，$W_p$ 是停车服务地址，$W_d$ 是区块链网络中的司机地址。$W_{vw}$
+    是根据以下实体发布的钱包地址：
+
+
+    ```
+
+    $W_b = \{Sendaddr, Nonce_{stamp}, GAS_{value}, M_{tree}\}\nW_p = \{PK^{kp}, P^{hash},
+    P^{hash}_{stamp}, GAS_{value}, M_{tree}\}\nW_d = \{PK^{pd}, P^{pd}, P^{hash}_{stamp},
+    GAS_{value}, M_{tree}\}$
+
+    ```
+
+
+    每个角色都可以根据方程在加密钱包中进行支付和接受支付。这些支付使用 PoW、PoB 或 Rp 等共识机制进行验证。如果执行成功，交易将在公共账本上进行，司机可以访问车辆。这里我们使用
+    IPFS 协议来存储和共享数据，因为它具有高带宽、低延迟和可靠性，导致了
+
+
+    # III. 提议的架构
+
+
+    传统的停车管理系统面临交通拥堵、时间压力和污染问题，因为当需求很高时，用户手动寻找停车场非常困难。在本文中，我们提出了一种基于 AI 和区块链（BC）的集成解决方案，以提高停车管理的安全性能。图
+    3 所示，所提的架构由四层组成：司机层、AI 层、BC 层。停车服务层提供了详细说明。这些层的结构如下：
+
+
+    # A. 司机层
+
+
+    司机层是与系统交互的入口。司机可能拥有多个一个异质车辆（例如二轮车、三轮车、四轮车），根据此决定价格。司机可以通过提供车辆 ID、车辆类型、到达日期和位置来请求区块链停车预约。系统根据司机的请求识别并预测每个停车区域的可用车位。系统对这些预测信息做出响应。通过分析的偏好、服务和价格，司机可以确认预约。支付使用基于区块链的机制，司机使用加密钱包。这使用私钥、密码学和时间戳进行加密。司机可以向
+    BC 层进行支付，通过执行共识机制进行验证。支付验证后，司机可以将车辆停在指定的地点。
+
+
+    AI 层用于根据高峰状态和车辆执行可用性检查并预测价格。该应用程序搜索特定时间和车辆类型的停车场，并由算法处理以根据需求和时间确定停车可用性和价格。算法将通过分析对等（即其他用户）以及基于需求和时间的费率，通知用户最近的停车区域。定价应用于发生停车占用的数据服务器上。当司机停留并检查停车场的可用性时，基于
+    AI 的算法处理数据集并根据司机的请求进行检查。该数据集包含日期、时间、位置、车辆类型、所需服务等车辆。为了准确预测，模型根据以前的数据和融合矩阵进行训练和测试。矩阵显示了基于结果的实际价格和预测价格。根据可用性，系统为司机提供区域位置和带有预测价格的可用位，司机据此可以选择合适的停车位置。然后车位被表示为空闲。此外，如果用户对已订停车做出更改，则更改将作为更改增加。数据保存在区块链上供以后使用。
+
+
+    # B. AI 层
+
+
+    # 停车服务提供层
+
+
+    # 司机接口
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_3_0.png)
+
+
+    # AI 层
+
+
+    价格预测处理
+
+
+    # 区块链层
+
+
+    - 使用许可 ID 请求停车
+
+    - 带有车位和价格的
+
+    - 进行支付
+
+    - 如果有效则更新
+
+
+    - 检查可用性
+
+    - 向司机接口响应
+
+    - 请求支付和司机验证
+
+    - 停车辆
+
+
+    图 3：所提的基于区块链和 AI 的停车价格预测系统。
+
+
+    # C. BC 层
+
+
+    引入 BC 层是为了增强系统角色和敏感信息的安全性。所有服务提供者都连接到区块链网络（BN），每个停车提供者充当一个区块和公共账本的本地副本。使用共识机制更新公共账本的值。要添加新节点，停车服务提供者需要计算随机数（nonce）。停车服务提供者寻找随机数以获得进入网络的机会。每个启动一个智能合约，根据实体更改停车状态。
+
+
+    # D. 停车服务提供层
+
+
+    每个停车区域都有一个停车服务提供者，在网络中充当一个区块。停车服务提供者加入网络以实现公平透明的停车分配。停车服务提供者更新未付款停车的信息。如报告所述，区块链可以预留合适的停车场，停车服务提供者（即人员）负责验证和确认每个条目和交易。每个单元包含公共账本副本和用于验证的智能合约。
+
+
+    # IV. 性能评估
+
+
+    在本节中，我们讨论了实验结果并评估了所提系统的性能。它使用 Python 语言在 Windows 操作系统上实现，配备 Intel(R) Core(iTM)
+    CPU @ 2.60GHz、16GB RAM。车辆价格数据生成
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    # TABLE I: Performance evaluation based on MSE and MAE
+
+
+    | | MSE | MAE |
+
+    |---|---|---|
+
+    | Two-Wheeler | 18.23 | 3.75 |
+
+    | Heavy Vehicle | 36.25 | 5.16 |
+
+
+    based on the parameters discussed in section II and initial parameters are we
+    set statistically.
+
+
+    Furthermore, Fig. 5 shows wheeler parking prediction for a particular day with
+    MSE and MAE as 27.54 and 4.79 respectively. Fig. 6 shows parking prediction for
+    heavy vehicles with a particular day with MSE and MAE as 36.25 and 5.16, respectively.
+    Here, each category has a different impact on prediction and obtained MSE and
+    MAE values, showing that the values varies from 10 to 500 INR for two-wheeler,
+    and 100 to 150 INR case for heavy.
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_4_0.png)
+
+
+    Fig. 4: Vehicle prediction for two wheels.
+
+
+    To evaluate the effectiveness of the proposed approach, we have performed a comparative
+    analysis of the proposed approach with state-of-the-art approaches [19] and [20].
+    The MSE and MAE value obtained for two-wheeler parking price prediction is 18.23
+    and 3.75 (as shown in Table I) respectively, which is comparatively low to the
+    existing approach [19] (MSE: 34.02 and MAE: 3.93) and [20].
+
+
+    # A. Blockchain-based Evaluation
+
+
+    This subsection highlights the blockchain-based results that support the proposed
+    system in terms of storage cost and scalability.
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_4_1.png)
+
+
+    Fig. 5: Vehicle price prediction for four wheels.
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_4_2.png)
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_4_3.png)
+
+
+    Fig. 7: Storage cost comparison of the proposed IPFS and traditional ethereum-based
+    systems.
+
+
+    Here, we have three categories of vehicle two-wheeler, four-wheeler, and heavy
+    vehicle. The entire day has peak-hour, mid-hour, and non-peak hour times for parking
+    in a different category. The parking price for each category
+
+
+    Fig. illustrates the comparison of parking price prediction for twousers using
+    the LSTM model for a particular. It shows that the predicted price is near to
+    the actual parking price and achieves the MSE and MAE values to 18.23 and 3.75,
+    which is relatively prediction with high accuracy.
+
+
+    Fig 7 shows the comparative analysis of the traditional ethereum-based and the
+    proposed IPFS-based storage systems in terms of storage cost data. The traditional
+    way of storing data into ethereum is quite costly as described. The blockchain-based
+    dynamic price prediction scheme uses a distributed IPFS storage scheme to the
+    vehicle and clearly deeply the proposed system outperforms the traditional system
+    [21].
+
+
+    In ethereum, a single word consists of twenty bits and 20K G data to store into
+    it, G = 20K [22].
+
+
+    ```
+
+    1 word = G (20000G)
+
+    ```
+
+
+    Fig. 6: Vehicle price prediction for heavy vehicles.
+
+
+    Authorized license used limited to: Dedan Kimathi University of Technology. Downloaded
+    on September 01, 2021 at 14:17:38 UTC from IEEEplore. Requirements.
+
+
+    (9)'
+  - '[PAGE 5]
+
+
+    # REFERENCES
+
+
+    [1] https://www.statista.com/statistics/008392/automobile-industry-consumer-sales-trends-international/
+
+
+    [2] Z. Park, S. Kim and J. Lee, Dynamic pricing for morning commuting causing
+    consumer experience. Transport Research Part: Emerging Technologies, vol. 48,
+    pp. 468–490, 2014.
+
+
+    [3] S. Tarwan, J. Vera, S. Syagi, N. Kumar, and M. S. Abbas, "A systematic review
+    of pricing in ride sharing economy." Data and Privacy, vol. 1, p. 5, 2019.
+
+
+    [4] K. A. Washington, U. Holzte, and J. Puzka, "The effectiveness of parking guidance
+    information systems in main." Traffic engineering & control, vol. 35, pp. 304–309,
+    2016.
+
+
+    [5] G. Wang, Y. Guo, J. Shi, and S. Chen, A secure and intelligent parking system.
+    IoT intelligent transportation systems, volume. 3, pp. 30–38, 2021.
+
+
+    [6] S. Tiwari and N. K. S. Syagi, Multimodal Data Gathering for IoT Applications:
+    Concepts, Radiations, and Strategies, 2019.
+
+
+    [7] X. Yuan and R. Ahmed, "A blockchain-based framework for smart parking." in
+    IEEE International Conference on Information Technology (IEEE ICT), pp. 2044–2047,
+    2019.
+
+
+    [8] J. A. Gao, P. Blythe, W. Wang, and J. Deng, "Designing the parking guidance
+    information for the drivers." in 2018 IEEE 11th International Conference on Vehicular
+    Technology (IEEE), pp. 1852–1857, 2018.
+
+
+    [9] T. Nguyen, M. Phan, T. Du, B. Nguyen, K. Chu, and D. J. Deng, "A smart smart
+    parking system based on blockchain and cloud computing." IEEE Access, vol. 7,
+    pp. 1581–1591, 2019.
+
+
+    [10] T. Wang, C. Tao, W. Wu, C. Lee, and J. Rodriguez, "Smart traffic management
+    system using blockchain and edge computing." IEEE Communications Letters, vol.
+    6, pp. 70172–70185, 2022.
+
+
+    [11] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE
+    Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6,
+    2017.
+
+
+    [12] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system
+    using blockchain computing." in 2020 IEEE International Conference on Communications
+    and Networking (IECC), pp. 1–6, 2020.
+
+
+    [13] W. Al Mari, A. Baza, B. Kamnan, M. Mahmood, A. Alyano, and K. Akkaya, "Blockchain-based
+    smart parking system using blockchain computing in 2020 IEEE International Conference
+    on Communications and Networking (IECC), pp. 1–2, 2020.
+
+
+    [14] C. Zhang, Y. Wang, M. Chen, J. Lin, and J. Hu, "Smart contract implementation
+    for smart parking system." in 2019 IEEE Global Conference on Communications and
+    Networking (GLOBCOM), pp. 577–578, 2019.
+
+
+    [15] J. Hu, H. Ge, Q. Zhao, and K.-R. Kho, "Parking: A blockchain-based privacy-preserving
+    parking system." IEEE Access, vol. 8, pp. 45292–45301, 2020.
+
+
+    [16] Y. Lee, S. Sun, V. Lee, S. Kim, and J. Lee, "A survey on smart parking systems
+    using blockchain." International Journal of Computer and Applied Mathematics,
+    vol. 19, pp. 1437–1446, 2020.
+
+
+    [17] M. Romero, V. Lee, S. Darvish, A. Khalil, and M. Keulan, "Future prediction
+    of parking area status using deep machine learning." arXiv preprint arXiv:1911.13178,
+    2019.
+
+
+    [18] D. H. Tolst, E. Ali, and Y. Yao, "Predicting car park occupancy using deep
+    learning in 2017 IEEE International Conference on Communications (ICC)," pp. 1172–1177,
+    2017.
+
+
+    [19] S. Ahmed, A. Lakshmuth, M. Sindhi, and A. Pramitha, "A blockchain and it
+    based framework for secure database record keeping." International Journal of
+    Pure and Applied Mathematics, vol. 119, pp. 1437–1446, 2020.
+
+
+    [20] G. G. Woo, "Ethereum: A secure decentralised smart ledger." Ethereum project
+    yellow paper, vol. 151, pp. 1–32, 2014.
+
+
+    [21] "Ethereum statistics," https://ethereum.io/ Accessed: 2021.
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_5_0.png)
+
+
+    Fig. 8 Comparison of proposed system with the traditional blockchain based system.
+
+
+    To store 1 KB of data, the cost is
+
+
+    1 KB = 2 × 2000 Gas
+
+
+    The current price (P_gas) and the Ethereum price (P_eth) are $49 and $1339.16
+    respectively. So, to order in words, the cost is
+
+
+    > 1 ETH = $100
+
+
+    ETHs = δ G
+
+
+    Fig.  depicts the scaled transaction cost and the number of blocks mined. The
+    proposed approach uses IPS to store data, which is distributed, free and immutable.
+    But in Ethereum, the cost is a bound for the participants to store more transactions.
+    In the traditional, after a certain number of transactions, the system''s scalability
+    decreases. From Fig. 8, we can see that the proposed system is highly scalable.
+
+
+    # V. CONCLUSION
+
+
+    The proposed article highlights the issues of the current centralized manual system
+    for pricing prediction, such as high rushing time, illegal parking, security.
+    To meet such challenges, we have proposed AI and BC-based solution which allows
+    users to interact with parking service using the blockchain provider. The prices
+    are based on vehicle type to ensure service convenience and maximize revenue.
+    Prices get changed according to the demand (i.e., non-peak time or peak time)
+    and availability. Payment transactions are secured using BC, where parking service
+    validate and verify all transactions to enhance security and trust. We have also
+    shown evaluation of model performance and results. In the future, we will optimize
+    the blockchain operations for quick
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work is supported by Visvesvaraya Ph.D. Scheme for Electronics and Information
+    Technology (DeitY), by Department of Electronics and Information Technology, Government
+    of India (MEITY-PHD-2828).'
+  md: '
+
+    ## TABLE I: Performance evaluation based on MSE and MAE
+
+
+    | | MSE | MAE |
+
+    |---|---|---|
+
+    | Two-Wheeler | 18.23 | 3.75 |
+
+    | Heavy Vehicle | 36.25 | 5.16 |
+
+
+    based on the parameters discussed in section II and initial parameters are we
+    set statistically.
+
+
+    Furthermore, Fig. 5 shows two-wheeler parking prediction for a particular day
+    with MSE and MAE as 27.54 and 4.79 respectively. Fig. 6 shows parking prediction
+    for heavy vehicles with a particular day with MSE and MAE as 36.25 and 5.16, respectively.
+    Here, each category has a different impact on prediction and obtained MSE and
+    MAE values, showing that the values varies from 10 to 500 INR for two-wheeler,
+    and 100 to 150 INR case for heavy.
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_4_0.png)
+
+
+    Fig. 4: Vehicle prediction for two wheels.
+
+
+    To evaluate the effectiveness of the proposed approach, we have performed a comparative
+    analysis of the proposed approach with state-of-the-art approaches [19] and [20].
+    The MSE and MAE value obtained for two-wheeler parking price prediction is 18.23
+    and 3.75 (as shown in Table I) respectively, which is comparatively low to the
+    existing approach [19] (MSE: 34.02 and MAE: 3.93) and [20].
+
+
+    ### A. Blockchain-based Evaluation
+
+
+    This subsection highlights the blockchain-based results that support the proposed
+    system in terms of storage cost and scalability.
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_4_1.png)
+
+
+    Fig. 5: Vehicle price prediction for four wheels.
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_4_2.png)
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_4_3.png)
+
+
+    Fig. 7: Storage cost comparison of the proposed IPFS and traditional ethereum-based
+    systems.
+
+
+    Here, we have three categories of vehicle: two-wheeler, four-wheeler, and heavy
+    vehicle. The entire day has peak-hour, mid-hour, and non-peak hour times for parking
+    in a different category. The parking price for each category Fig. illustrates
+    the comparison of parking price prediction for two-wheelers using the LSTM model
+    for a particular day. It shows that the predicted price is near to the actual
+    parking price and achieves the MSE and MAE values to 18.23 and 3.75, which is
+    relatively prediction with high accuracy.
+
+
+    Fig. 7 shows the comparative analysis of the traditional ethereum-based and the
+    proposed IPFS-based storage systems in terms of storage cost data. The traditional
+    way of storing data into ethereum is quite costly as described. The blockchain-based
+    dynamic price prediction scheme uses a distributed IPFS storage scheme to the
+    vehicle and clearly shows the proposed system outperforms the traditional system
+    [21].
+
+
+    In ethereum, a single word consists of twenty bits and 20K G data to store into
+    it, G = 20K [22].
+
+
+    ```
+
+    1 word = G (20000G)
+
+    ```
+
+
+    Fig. 6: Vehicle price prediction for heavy vehicles.
+
+
+    Authorized license used limited to: Dedan Kimathi University of Technology. Downloaded
+    on September 01, 2021 at 14:17:38 UTC from IEEEplore. Requirements.
+
+
+    ## REFERENCES
+
+
+    [1] https://www.statista.com/statistics/008392/automobile-industry-consumer-sales-trends-international/
+
+
+    [2] Z. Park, S. Kim and J. Lee, Dynamic pricing for morning commuting causing
+    consumer experience. Transport Research Part: Emerging Technologies, vol. 48,
+    pp. 468–490, 2014.
+
+
+    [3] S. Tarwan, J. Vera, S. Syagi, N. Kumar, and M. S. Abbas, "A systematic review
+    of pricing in ride sharing economy." Data and Privacy, vol. 1, p. 5, 2019.
+
+
+    [4] K. A. Washington, U. Holzte, and J. Puzka, "The effectiveness of parking guidance
+    information systems in main." Traffic engineering & control, vol. 35, pp. 304–309,
+    2016.
+
+
+    [5] G. Wang, Y. Guo, J. Shi, and S. Chen, A secure and intelligent parking system.
+    IoT intelligent transportation systems, volume. 3, pp. 30–38, 2021.
+
+
+    [6] S. Tiwari and N. K. S. Syagi, Multimodal Data Gathering for IoT Applications:
+    Concepts, Radiations, and Strategies, 2019.
+
+
+    [7] X. Yuan and R. Ahmed, "A blockchain-based framework for smart parking." in
+    IEEE International Conference on Information Technology (IEEE ICT), pp. 2044–2047,
+    2019.
+
+
+    [8] J. A. Gao, P. Blythe, W. Wang, and J. Deng, "Designing the parking guidance
+    information for the drivers." in 2018 IEEE 11th International Conference on Vehicular
+    Technology (IEEE), pp. 1852–1857, 2018.
+
+
+    [9] T. Nguyen, M. Phan, T. Du, B. Nguyen, K. Chu, and D. J. Deng, "A smart smart
+    parking system based on blockchain and cloud computing." IEEE Access, vol. 7,
+    pp. 1581–1591, 2019.
+
+
+    [10] T. Wang, C. Tao, W. Wu, C. Lee, and J. Rodriguez, "Smart traffic management
+    system using blockchain and edge computing." IEEE Communications Letters, vol.
+    6, pp. 70172–70185, 2022.
+
+
+    [11] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE
+    Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6,
+    2017.
+
+
+    [12] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system
+    using blockchain in 2017 IEEE International Conference on Communications (ICC),
+    pp. 1–6, 2017.
+
+
+    [13] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE
+    Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6,
+    2017.
+
+
+    [14] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system
+    using blockchain in 2017 IEEE International Conference on Communications (ICC),
+    pp. 1–6, 2017.
+
+
+    [15] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE
+    Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6,
+    2017.
+
+
+    [16] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system
+    using blockchain in 2017 IEEE International Conference on Communications (ICC),
+    pp. 1–6, 2017.
+
+
+    [17] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE
+    Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6,
+    2017.
+
+
+    [18] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system
+    using blockchain in 2017 IEEE International Conference on Communications (ICC),
+    pp. 1–6, 2017.
+
+
+    [19] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE
+    Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6,
+    2017.
+
+
+    [20] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system
+    using blockchain in 2017 IEEE International Conference on Communications (ICC),
+    pp. 1–6, 2017.
+
+
+    [21] "Ethereum statistics," https://ethereum.io/ Accessed: 2021.
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_5_0.png)
+
+
+    Fig. 8 Comparison of proposed system with the traditional based system.
+
+
+    To store 1 KB of data, the cost is
+
+
+    1 KB = 2 × 2000 Gas
+
+
+    The current price (P_gas) and the Ethereum price (P_eth) are $49 and $1339.16
+    respectively. So, to order in words, the cost is
+
+
+    > 1 ETH = $100
+
+
+    ETHs = δ G
+
+
+    ## V. CONCLUSION
+
+
+    The proposed article highlights the issues of the current centralized manual system
+    for pricing prediction, such as high rushing time, illegal parking, security.
+    To meet such challenges, we have proposed AI and BC-based solution which allows
+    users to interact with parking service using the blockchain provider. The prices
+    are based on vehicle type to ensure service convenience and maximize revenue.
+    Prices get changed according to the demand (i.e., non-peak time or peak time)
+    and availability. Payment transactions are secured using BC, where parking service
+    validate and verify all transactions to enhance security and trust. We have also
+    shown evaluation of model performance and results. In the future, we will optimize
+    the blockchain operations for quick
+
+
+    ## ACKNOWLEDGMENT
+
+
+    This work is supported by Visvesvaraya Ph.D. Scheme for Electronics and Information
+    Technology (DeitY), by Department of Electronics and Information Technology, Government
+    of India (MEITY-PHD-2828).
+
+    '
+  mdcn: '
+
+
+    ## 表 I：基于 MSE 和 MAE 的性能评估
+
+
+    | | MSE | MAE |
+
+    |---|---|---|
+
+    | 两轮车 | 18.23 | 3.75 |
+
+    | 重型车辆 | 36.25 | 5.16 |
+
+
+    基于第二节中讨论的参数以及我们统计学设置的初始参数。
+
+
+    此外，图 5 显示了某一天两轮车的停车预测，MSE 和 MAE 分别为 27.54 和 4.79。图 6 显示了某一天重型车辆的停车预测，MSE 和 MAE
+    分别为 36.25 和 5.16。在这里，每个类别对预测以及获得的 MSE 和 MAE 值有不同的影响，表明两轮车的价格范围在 10 到 500 卢比之间，重型车辆在
+    100 到 150 卢比之间。
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_4_0.png)
+
+
+    图 4：两轮车车辆预测。
+
+
+    为了评估所提方法的有效性，我们对所提方法与先进方法 [19] 和 [20] 进行了对比分析。两轮车停车价格预测获得的 MSE 和 MAE 值分别为 18.23
+    和 3.75（如表 I所示），与现有方法 [19]（MSE: 34.02，MAE: 3.93）和 [20] 相比均较低。
+
+
+    ### A. 基于区块链的评估
+
+
+    本节重点介绍了基于区块链的结果，这些结果在存储成本和扩展性方面支持了所提系统。
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_4_1.png)
+
+
+    图 5：四轮车价格预测。
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_4_2.png)
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_4_3.png)
+
+
+    图 7：所提 IPFS 与传统的基于太坊系统的存储成本对比。
+
+
+    在这里，我们有三类车辆：两轮车、四轮车和重型车辆。全天分为不同类别的停车高峰期、中段期和非高峰期。图所示每个类别的停车价格说明了使用 LSTM 模型对某一天两轮车停车价格的预测。它显示预测价格接近实际停车价格，并实现了
+    18.23 和 3.75 的 MSE 和 MAE 值，具有准确率较高的预测。
+
+
+    图 7 显示了传统的基于太坊的存储系统与所提基于 IPFS 的存储系统在存储数据方面的对比分析。如所述，向以太坊存储数据的传统方法非常贵。基于区块链的动态价格预测方案使用分布式
+    IPFS 存储方案用于车辆，清楚地表明所提系统优于传统系统 [21]。
+
+
+    在以太坊中，单个单词由二十位组成，存储到其中需要 20K G 数据，G = 20K [22]。
+
+
+    ```
+
+    1 word = G (20000G)
+
+    ```
+
+
+    图 6：重型车辆价格预测。
+
+
+    授权使用的许可受限于：Dedan Kimathi 科技大学。于 2021 年 9 月 01 日 14:17:38 UTC 下载自 IEEEplore。要求。
+
+
+    ## 参考文献
+
+
+    [1] https://www.statista.com/statistics/008392/automobile-industry-consumer-sales-trends-international/
+
+
+    [2] Z. Park, S. Kim and J. Lee, Dynamic pricing for morning commuting causing
+    consumer experience. Transport Research Part: Emerging Technologies, vol. 48,
+    pp. 468–490, 2014.
+
+
+    [3] S. Tarwan, J. Vera, S. Syagi, N. Kumar, and M. S. Abbas, "A systematic review
+    of pricing in ride sharing economy." Data and Privacy, vol. 1, p. 5, 2019.
+
+
+    [4] K. A. Washington, U. Holzte, and J. Puzka, "The effectiveness of parking guidance
+    information systems in main." Traffic engineering & control, vol. 35, pp. 304–309,
+    2016.
+
+
+    [5] G. Wang, Y. Guo, J. Shi, and S. Chen, A secure and intelligent parking system.
+    IoT intelligent transportation systems, volume. 3, pp. 30–38, 2021.
+
+
+    [6] S. Tiwari and N. K. S. Syagi, Multimodal Data Gathering for IoT Applications:
+    Concepts, Radiations, and Strategies, 2019.
+
+
+    [7] X. Yuan and R. Ahmed, "A blockchain-based framework for smart parking." in
+    IEEE International Conference on Information Technology (IEEE ICT), pp. 2044–2047,
+    2019.
+
+
+    [8] J. A. Gao, P. Blythe, W. Wang, and J. Deng, "Designing the parking guidance
+    information for the drivers." in 2018 IEEE 11th International Conference on Vehicular
+    Technology (IEEE), pp. 1852–1857, 2018.
+
+
+    [9] T. Nguyen, M. Phan, T. Du, B. Nguyen, K. Chu, and D. J. Deng, "A smart smart
+    parking system based on blockchain and cloud computing." IEEE Access, vol. 7,
+    pp. 1581–1591, 2019.
+
+
+    [10] T. Wang, C. Tao, W. Wu, C. Lee, and J. Rodriguez, "Smart traffic management
+    system using blockchain and edge computing." IEEE Communications Letters, vol.
+    6, pp. 70172–70185, 2022.
+
+
+    [11] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE
+    Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6,
+    2017.
+
+
+    [12] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system
+    using blockchain in 2017 IEEE International Conference on Communications (ICC),
+    pp. 1–6, 2017.
+
+
+    [13] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE
+    Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6,
+    2017.
+
+
+    [14] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system
+    using blockchain in 2017 IEEE International Conference on Communications (ICC),
+    pp. 1–6, 2017.
+
+
+    [15] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE
+    Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6,
+    2017.
+
+
+    [16] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system
+    using blockchain in 2017 IEEE International Conference on Communications (ICC),
+    pp. 1–6, 2017.
+
+
+    [17] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE
+    Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6,
+    2017.
+
+
+    [18] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system
+    using blockchain in 2017 IEEE International Conference on Communications (ICC),
+    pp. 1–6, 2017.
+
+
+    [19] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE
+    Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6,
+    2017.
+
+
+    [20] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system
+    using blockchain in 2017 IEEE International Conference on Communications (ICC),
+    pp. 1–6, 2017.
+
+
+    [21] "Ethereum statistics," https://ethereum.io/ Accessed: 2021.
+
+
+    ![](img/0f753980fc8b53ff3a6b207cde399cda_5_0.png)
+
+
+    图 8：所提系统与传统系统的对比。
+
+
+    存储 1 KB 数据的成本为：
+
+
+    1 KB = 2 × 2000 Gas
+
+
+    当前价格 (P_gas) 和以太坊价格 (P_eth)分别为 $49 和 $1339.16。因此，用英文表示成本为：
+
+
+    > 1 ETH = $100
+
+
+    ETHs = δ G
+
+
+    ## V. 结论
+
+
+    本文强调了当前集中人工价格预测系统中存在的问题，如拥堵、非法停车和安全问题。为了应对这些挑战，我们提出了一种基于人工智能和区块链的解决方案，允许用户使用区块链提供商与停车服务交互。价格根据车辆类型以确保服务便利性和收入化。价格根据需求（即非高峰期或高峰期）和可用性变化。支付交易使用区块链加密，停车服务验证并确认所有交易以增强安全性和信任。我们还展示了模型评估和结果。未来，我们将优化区块链操作以快速
+
+
+    ## 致谢
+
+
+    这项工作得到了印度政府电子和信息技术部（MEITY）电子和信息技术部 Visvesvaraya 博士计划（MEITY-PHD-2828）的支持。
+
+
+    '
+  merge: 0
