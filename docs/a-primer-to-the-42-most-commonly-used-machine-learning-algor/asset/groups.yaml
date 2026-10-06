@@ -1,0 +1,4238 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Murat Durmus
+
+
+    # inside
+
+
+    # ALAN TURING
+
+
+    # QUOTES
+
+    &
+
+    CONTEMPLATIONS
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_0_0.png)
+
+
+    A. M. Turing'
+  - '[PAGE 1]
+
+
+    # inside
+
+
+    # ALAN TURING
+
+
+    # QUOTES
+
+
+    # &
+
+
+    # CONTEMPLATIONS
+
+
+    Murat Durmus'
+  - '[PAGE 2]
+
+
+    # Copyright © 2023 Murat Durmus
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed,
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the publisher, except in the case of brief quotations embodied in critical
+    reviews and certain other noncommercial uses permitted by copyright law.
+
+
+    # About the Author
+
+
+    Murat Durmus is CEO and founder of AISOMA (a Frankfurt am Main (Germany) based
+    company specializing in AI-based technology development and consulting) and Author
+    of the books "Mindful AI - Reflections on Artificial Intelligence" and "A Primer
+    to the 42 Most commonly used Machine Learning Algorithms (With Code Samples)".
+
+
+    You can get in touch with the author via:
+
+
+    +   - LinkedIn: https://www.linkedin.com/in/ceosaisoma/
+
+    - E-Mail: murat.durmus@aisoma.de'
+  - '[PAGE 3]
+
+
+    > “If a machine is expected to be infallible, it cannot also be intelligent.”
+
+
+    ~ Alan M. Turing'
+  - '[PAGE 4]
+
+
+    # AMAZON BESTSELLER
+
+
+    # A PRIMER TO THE 42 MOST COMMONLY USED MACHINE LEARNING ALGORITHMS (WITH CODE
+    SAMPLES)
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_4_0.png)
+
+
+    Whether you''re a data scientist, software engineer, or simply interested in learning
+    about machine learning, "A Primer to the 42 Most commonly used Machine Learning
+    Algorithms (With Code Samples)\ is an excellent resource for gaining a comprehensive
+    understanding of this exciting field.
+
+
+    This book introduces you to the 42 most commonly used machine learning algorithms
+    in an understandable way. Each algorithm is also demonstrated with a simple code
+    example in Python.
+
+
+    Available on Amazon:
+
+    https://www.amazon.com/dp/B0BT911HDM
+
+    (ISBN-13: 979-8375226071)'
+  - '[PAGE 5]
+
+
+    # # The Cognitive Biases Compendium
+
+
+    Explore over 150 Cognitive Biases (with examples) to make better decisions, think
+    critically, solve problems effectively, and communicate more accurately.
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_5_0.png)
+
+
+    By becoming more aware of our human biases, we can work towards making less biased
+    conclusions in all aspects of life. This skill is precious as it enables us to
+    navigate the intricacies of our thoughts and arrive at more informed and fair
+    decisions. Let us utilize our understanding of cognitive bias as a means of personal
+    development and gaining a deeper comprehension of the world around us.
+
+
+    Available on Amazon:
+
+    https://www.amazon.com/dp/B0CBK1WFNN
+
+    (ISBN-13: 978-8851721496)'
+  - '[PAGE 6]
+
+
+    # Contents
+
+
+    +   PREFACE ............................................................................................
+    1
+
+
+    +   ALAN M. TURING ................................................................................
+    2
+
+
+    +   THE IMITATION GAME (TURING TEST) ................................................
+    13
+
+
+    +   REFLECTIONS OF RENOWNED PERSONALITIES ON
+
+    ALAN TURING & HIS LEGACY ........................................................
+    19
+
+
+    +   TIMELINE ................................................................................
+    24
+
+
+    +   RECOMMENDED BOOKS AND WEBSITES ON ALAN
+
+    TURING ...................................................................................
+    38
+
+
+    +   G.W. LEIBNIZ – THE TRAGIC END OF AN UNIVERSAL
+
+    GENIUS (Bonus Article) ................................................................
+    40
+
+
+    +   I KNOW THAT I KNOW NOTHING (Bonus Article) ....... 43
+
+
+    +   MORE BOOKS BY THE AUTHOR ......................................................
+    45
+
+
+    +   MINDDFUL AI...........................................................................
+    45
+
+
+    +   IMAGE CREDITS ......................................................................
+    47'
+  - '[PAGE 7]
+
+
+    <!-- no content -->'
+  - '[PAGE 8]
+
+
+    # PREFACE
+
+
+    Alan Mathison Turing was an English mathematician, computer scientist, logician,
+    cryptanalyst, philosopher, and theoretical biologist. Turing had a significant
+    impact on the development of theoretical computer science by providing a formalization
+    of the concepts of algorithm and computation with the Turing machine, which can
+    be viewed as a model of a general-purpose computer. As a result, Turing is widely
+    considered the father of theoretical computer science and artificial intelligence.
+    Despite these accomplishments, he was never fully recognized in his home country
+    during his lifetime, as his homosexuality was a crime in the United Kingdom at
+    the time, and his work fell under the Official Secrets Act.
+
+
+    I have written down his most meaningful quotes and thoughts in this book. They
+    have always been a source of inspiration for me, and I hope this little book will
+    also inspire you.
+
+
+    I wish you a lot of insights while reading and, above all, inspiration.
+
+
+    Murat Durmus, 21 October 2021
+
+    (Frankfurt am Main, Germany)'
+  - '[PAGE 9]
+
+
+    # ALAN M. TURING
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_9_0.png)
+
+
+    (23 June 1912 – 7 June 1954)
+
+
+    1
+
+
+    Sometimes it is the people no one can imagine anything of whom
+
+    do the things no one can imagine.
+
+
+    10
+
+
+    I believe that at the end of the century the use of words and
+
+    general educated opinion will have altered so much that one will
+
+    ableable to speak of machines thinking without expecting to be
+
+    contradicted.
+
+
+    11
+
+
+    We can only see a short distance ahead, but we can see plenty
+
+    there that needs to be done.
+
+
+    > (Computing machinery and intelligence)'
+  - '[PAGE 10]
+
+
+    # 100
+
+
+    "I''m afraid that the following syllogism may be used by some in
+
+    the future.
+
+
+    Turing believes machines think
+
+
+    Turing lies with men
+
+
+    Therefore machines do not think
+
+
+    Yours in distress,
+
+
+    Alan"
+
+
+    # 101
+
+
+    Those who can imagine anything, can create the impossible.
+
+
+    # 110
+
+
+    If a machine is expected to be infallible, it cannot also be
+
+    intelligent.
+
+
+    # 111
+
+
+    Sometimes it is the people who no one imagines anything of
+
+    who do the things that no one can imagine.
+
+
+    # 1000
+
+
+    Finding such a person makes everyone else appear so
+
+    ordinary...and if anything happens to him, you''ve got nothing
+
+    left but to return to the ordinary world, and a kind of isolation
+
+    that never existed before.
+
+
+    # 1001'
+  - '[PAGE 11]
+
+
+    The isolated man does not develop any intellectual power. It is necessary for
+    him to be immersed in an environment of other men, whose techniques he absorbs
+    during the first twenty years of his life. He may then perhaps do a little research
+    of his own and make a very few discoveries which are passed on to other men. From
+    this point of view the search for new techniques must be regarded as carried out
+    by the human community as a whole, rather than by individuals.
+
+
+    # 1010
+
+
+    The original question, ''Can machines think?''
+
+    I believe to be too meaningless to deserve discussion.
+
+    (Mechanical Intelligence: Collected Works of A.M. Turing)
+
+
+    # 1011
+
+
+    I am not very impressed with theological arguments whatever they may be used to
+    support. Such arguments have often found unsatisfactory in the past. In the time
+    of Galileo it was argued that the texts, ''And the sun stood still... and hastened
+    not to go down about a whole day'' (Joshua x. 13) and ''He laid the foundations
+    of the earth, that it should not move at any time'' (Psalm cv. 5) were an adequate
+    refutation of the Copernican theory. (Computing machinery and intelligence)
+
+
+    # 1100
+
+
+    It seems probable that once the machine thinking method had started, it would
+    not take long to outstrip our feeble powers... They would be able to converse
+    with each other to sharpen their wits. At some stage therefore, we should have
+    to expect the machines to take control.'
+  - '[PAGE 12]
+
+
+    # 1101
+
+
+    A very large part of space-time must be investigated, if reliable results are
+    to be obtained.
+
+
+    # 1110
+
+
+    Do you know why people like violence? It is because it feels good. Humans find
+    violence deeply satisfying. But remove the satisfaction, and the act becomes hollow.
+
+
+    # 1111
+
+
+    Programming is a skill best acquired by practice and example rather than from
+    books.
+
+
+    # 10000
+
+
+    I''ve now got myself into the kind of trouble that I have always considered to
+    be quite a possibility for me, though I have usually rated it at about 10:1 against.
+    I shall shortly be pleading guilty to a charge of sexual offences with a young
+    man. The story of how it came to be found out is a long and fascinating one, which
+    I shall have to make into a short story one day, but haven''t the time to tell
+    you now. No doubt I shall emerge from it all a different man, but quite who I''ve
+    not found out.
+
+
+    # 10001
+
+
+    It is possible to invent a single machine which can be used to compute any computable
+    sequence.
+
+
+    # 10010
+
+
+    The popular view that scientists proceed inexorably from wellestablished fact
+    to well-established fact, never being influenced'
+  md: '
+
+    # Murat Durmus
+
+
+    # inside
+
+
+    # ALAN TURING
+
+
+    # QUOTES
+
+    &
+
+    CONTEMPLATIONS
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_0_0.png)
+
+
+    A. M. Turing
+
+
+    # inside
+
+
+    # ALAN TURING
+
+
+    # QUOTES
+
+
+    # &
+
+
+    # CONTEMPLATIONS
+
+
+    Murat Durmus
+
+
+    # Copyright © 2023 Murat Durmus
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed,
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the publisher, except in the case of brief quotations embodied in critical
+    reviews and certain other noncommercial uses permitted by copyright law.
+
+
+    # About the Author
+
+
+    Murat Durmus is CEO and founder of AISOMA (a Frankfurt am Main (Germany) based
+    company specializing in AI-based technology development and consulting) and Author
+    of the books "Mindful AI - Reflections on Artificial Intelligence" and "A Primer
+    to the 42 Most commonly used Machine Learning Algorithms (With Code Samples)".
+
+
+    You can get in touch with the author via:
+
+
+    - LinkedIn: https://www.linkedin.com/in/ceosaisoma/
+
+    - E-Mail: murat.durmus@aisoma.de
+
+
+    > “If a machine is expected to be infallible, it cannot also be intelligent.”
+
+
+    ~ Alan M. Turing
+
+
+    # AMAZON BESTSELLER
+
+
+    # A PRIMER TO THE 42 MOST COMMONLY USED MACHINE LEARNING ALGORITHMS (WITH CODE
+    SAMPLES)
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_4_0.png)
+
+
+    Whether you''re a data scientist, software engineer, or simply interested in learning
+    about machine learning, "A Primer to the 42 Most commonly used Machine Learning
+    Algorithms (With Code Samples)" is an excellent resource for gaining a comprehensive
+    understanding of this exciting field.
+
+
+    This book introduces you to the 42 most commonly used machine learning algorithms
+    in an understandable way. Each algorithm is also demonstrated with a simple code
+    example in Python.
+
+
+    Available on Amazon:
+
+    https://www.amazon.com/dp/B0BT911HDM
+
+    (ISBN-13: 979-8375226071)
+
+
+    # The Cognitive Biases Compendium
+
+
+    Explore over 150 Cognitive Biases (with examples) to make better decisions, think
+    critically, solve problems effectively, and communicate more accurately.
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_5_0.png)
+
+
+    By becoming more aware of our human biases, we can work towards making less biased
+    conclusions in all aspects of life. This skill is precious as it enables us to
+    navigate the intricacies of our thoughts and arrive at more informed and fair
+    decisions. Let us utilize our understanding of cognitive bias as a means of personal
+    development and gaining a deeper comprehension of the world around us.
+
+
+    Available on Amazon:
+
+    https://www.amazon.com/dp/B0CBK1WFNN
+
+    (ISBN-13: 978-8851721496)
+
+
+    # Contents
+
+
+    - PREFACE ............................................................................................
+    1
+
+    - ALAN M. TURING ................................................................................
+    2
+
+    - THE IMITATION GAME (TURING TEST) ................................................
+    13
+
+    - REFLECTIONS OF RENOWNED PERSONALITIES ON ALAN TURING & HIS LEGACY ........................................................
+    19
+
+    - TIMELINE ................................................................................
+    24
+
+    - RECOMMENDED BOOKS AND WEBSITES ON ALAN TURING ...................................................................................
+    38
+
+    - G.W. LEIBNIZ – THE TRAGIC END OF AN UNIVERSAL GENIUS (Bonus Article) ................................................................
+    40
+
+    - I KNOW THAT I KNOW NOTHING (Bonus Article) ....... 43
+
+    - MORE BOOKS BY THE AUTHOR ......................................................
+    45
+
+    - MINDFUL AI...........................................................................
+    45
+
+    - IMAGE CREDITS ......................................................................
+    47
+
+
+    # PREFACE
+
+
+    Alan Mathison Turing was an English mathematician, computer scientist, logician,
+    cryptanalyst, philosopher, and theoretical biologist. Turing had a significant
+    impact on the development of theoretical computer science by providing a formalization
+    of the concepts of algorithm and computation with the Turing machine, which can
+    be viewed as a model of a general-purpose computer. As a result, Turing is widely
+    considered the father of theoretical computer science and artificial intelligence.
+    Despite these accomplishments, he was never fully recognized in his home country
+    during his lifetime, as his homosexuality was a crime in the United Kingdom at
+    the time, and his work fell under the Official Secrets Act.
+
+
+    I have written down his most meaningful quotes and thoughts in this book. They
+    have always been a source of inspiration for me, and I hope this little book will
+    also inspire you.
+
+
+    I wish you a lot of insights while reading and, above all, inspiration.
+
+
+    Murat Durmus, 21 October 2021
+
+    (Frankfurt am Main, Germany)
+
+
+    # ALAN M. TURING
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_9_0.png)
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 23 June 1954
+
+
+    (Collected Works of A.M Turing)
+
+
+    A very large part of space-time must be investigated, if reliable results are
+    to be obtained.
+
+
+    It seems probable that once the machine thinking method had started, it would
+    not take long to outstrip our feeble powers. They would be able to converse with
+    each other to sharpen their wits. At some stage therefore, we should have to expect
+    the machines to take control.
+
+    '
+  mdcn: '
+
+
+    # Murat Durmus
+
+
+    # 内部
+
+
+    # 艾伦·图灵
+
+
+    # 语录
+
+    &
+
+    思考
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_0_0.png)
+
+
+    艾伦·M·图灵
+
+
+    # 内部
+
+
+    # 艾伦·图灵
+
+
+    # 语录
+
+
+    # &
+
+
+    # 思考
+
+
+    Murat Durmus
+
+
+    # 版版权 © 2023 Murat Durmus
+
+
+    保留所有权利。未经出版者书面许可，不得以任何形式或通过任何手段（包括复印、录制或其他电子或机械方法）对本书进行复制、传播或传输，但批判性评论中的简短引述以及版权法允许的某些非商业用途除外。
+
+
+    # 关于作者
+
+
+    Murat Durmus 是 AISOMA 的首席执行官兼创始人（一家位于德国法兰克福，专门从事基于 AI 的技术开发与咨询的公司），同时也是《正念 AI
+    - 对人工智能的反思》和《42种常用机器学习算法入门（带代码示例）》等书籍的作者。
+
+
+    你可以通过以下方式与作者联系：
+
+
+    - LinkedIn：https://www.linkedin.com/in/ceosaisoma/
+
+    - 电子邮箱：murat.durmus@aisoma.de
+
+
+    > “如果一台机器被认为是无懈的，那么它就不可能是智能的。”
+
+
+    ~ 艾伦·M·图灵
+
+
+    # 亚马逊畅销
+
+
+    # 42种常用机器学习算法入门（带代码示例）
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_4_0.png)
+
+
+    无论你是数据科学家、软件工程师，还是仅仅对学习机器学习感兴趣，“42种常用机器学习算法入门（带代码示例）”都是全面理解这一令人兴奋领域的绝佳资源。
+
+
+    本书以浅懂的方式向你介绍了 42 种最常用的机器学习算法。每种算法都通过一个简单的 Python 代码示例进行了演示。
+
+
+    可在亚马逊购买：
+
+    https://www.amazon.com/dp/B0BT911HDM
+
+    (ISBN-13: 979-8375226071)
+
+
+    # 认知偏差汇编
+
+
+    探索 150 多种认知偏差（带示例），以做出更好的决策、进行批判性思考、有效解决问题并更准确地交流。
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_5_0.png)
+
+
+    通过更加意识到人类的偏差，我们可以努力在生活的各个方面做出更少偏见的结论。这项技能是宝贵的，因为它能让我们理解思维的复杂性，并做出更明智、公平的决策。让我们利用对认知偏差的理解作为个人发展的手段，对周围的世界获得的理解。
+
+
+    可在亚马逊购买：
+
+    https://www.amazon.com/dp/B0CBK1WFNN
+
+    (ISBN-13: 978-8851721496)
+
+
+    # 目录
+
+
+    - 前言 ............................................................................................
+    1
+
+    - 艾伦·M·图灵 ................................................................................
+    2
+
+    - 模仿游戏（图灵测试） ................................................ 13
+
+    - 名人对艾伦·图灵及其遗产的反思 ........................................................ 19
+
+    - 时间线 ................................................................................
+    24
+
+    - 关于艾伦·图灵的推荐书籍和网站 ...................................................................
+    38
+
+    - G.W. 莱布尼茨——一位全才天才的悲剧结局（附文） ................................................
+    40
+
+    - 我知我无知（附文） ....... 43
+
+    - 作者的其他书籍 ...................................................... 45
+
+    - 正念 AI...........................................................................
+    45
+
+    - 图片致谢 ......................................................................
+    47
+
+
+    # 前言
+
+
+    艾伦·马西森·图灵（Alan Mathison Turing）是一位英国数学家、计算机科学家、逻辑学专家、密码分析学家、哲学家和理论生物学家。图灵通过图灵机提供了算法和计算概念的形式化，对理论计算机科学的发展产生了重大影响，图灵机可以看作是通用计算机的模型。因此，图灵被广泛认为是理论计算机科学和人工智能之父。尽管取得了这些成就，他生前从未得到他祖国的完全认可，因为他的同性恋在当时的英国是犯罪，而且他的工作受《官方秘密法》的限制。
+
+
+    我在书中记录了他最有意义的语录和思想。它们一直是我灵感的来源，我希望这本小书也能给你启发。
+
+
+    祝你在阅读过程中获得许多见解，最重要的是获得启发。
+
+
+    Murat Durmus, 2021年10月21日
+
+    （德国法兰克福）
+
+
+    # 艾伦·M·图灵
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_9_0.png)
+
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+    (img/046ba135cd994945038c4ec83cb4a06d_9_0.png) 1954年6月23日
+
+
+    (A.M. 图灵选集)
+
+
+    为了获得可靠的结果，必须调查很大一部分时空。
+
+
+    似乎一旦机器思维方法开始运行，很快就会超过我们微弱的能力。它们能够相互交流以提高机敏。因此，在某个阶段，我们应该预期机器接管控制权。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 13]
+
+
+    by any unproved conjecture, is quite mistaken. Provided it is made clear which
+    are proved facts and which are conjectures, no harm can result. Conjectures are
+    of great importance since they suggest useful lines of research.
+
+
+    # 10011
+
+
+    A computer would deserve to be called intelligent if it could deceive a human
+    into believing that it was human
+
+
+    # 10100
+
+
+    Let us return for a moment to Lady Lovelace’s objection, which stated that the
+    machine can only do what we tell it to do. One could say that a man can "inject"
+    an idea into the machine, and that it will respond to a certain extent and then
+    drop into quiescence, like a piano string struck by a hammer. Another simile would
+    be the atomic pile of less critical size: an injected idea is to correspond to
+    a neutron entering the pile from without. Each neutron will cause a certain disturbance
+    which eventually dies away. If, however, the size of the pile is sufficiently
+    increased, the disturbance caused by such an incoming neutron will very likely
+    go on and increasing until the whole pile is destroyed. Is there a corresponding
+    phenomenon for minds, and is there one for machines? There does seem to be "sub-critical,"
+    i.e. to correspond in this analogy to piles of sub-critical size. An idea presented
+    to such a mind will on average rise to less than one idea in reply. A smallish
+    proportion are supercritical. a whole "theory" consisting of secondary, tertiary
+    and more remote ideas. Animals’ minds seem to be very definitely sub-critical.
+    Adhering to this analogy we ask, "Can a'
+  - '[PAGE 14]
+
+
+    machine made to be super-critical? (Computing machinery and intelligence)
+
+
+    # 10101
+
+
+    Let us return for a moment to Lady Lovelace’s objection, which stated that the
+    machine can only do what we tell it to do. One could say that a man “inject” an
+    idea into the machine, and that it will respond to a certain extent and then drop
+    into quiescence, like a piano string struck by a hammer. Another simile would
+    be an atomic pile of less than critical size: an injected idea is to correspond
+    to a neutron entering the pile from without. Each such neutron will cause a certain
+    disturbance which eventually dies away. If, however, the size of the pile is sufficiently
+    increased, the disturbance caused by such an incoming neutron will very likely
+    go on and increasing until the whole pile is destroyed. Is there a corresponding
+    phenomenon for minds, and is one for machines? There seems to be one for the human
+    mind. The majority of them seem to be “sub-critical,” i.e. to correspond in this
+    analogy to piles of sub-critical size. An idea presented to such a mind will on
+    average give rise to less than one idea in reply. A smallish proportion are supercritical.
+    An idea presented to such a mind may give rise to a whole “theory” consisting
+    of secondary, tertiary and more remote ideas. Animals’ minds seem to be very definitely
+    sub-critical. Adhering to this analogy ask, “Can a machine be made to be super-critical?
+    (Computing machinery and intelligence)
+
+
+    # 10110
+
+
+    Can machines think?”... The new form of the problem can be described in terms
+    of a game which we call the ‘imitation game."'
+  - '[PAGE 15]
+
+
+    It is played with three people, a man (A), a woman (B), and an interrogator (C)
+    who may be of either sex. The interrogator stays in a room apart front the other
+    two. The object of the game for the interrogator is to determine which of the
+    other two is the man and which is the woman. He knows them by labels X and Y,
+    and at the end of the game he says "X is A and Y is B" or "X is B and Y is A."
+    The interrogator is allowed to put questions to A and B... We now ask the question,
+    "What will happen when a machine takes the part of A in this game? decide wrongly
+    as often as the game is played like this he does when the game is played between
+    a man and a woman? These questions replace our original, "Can machines think?
+    (Computing machinery and intelligence)"
+
+
+    10111
+
+
+    Sometimes it''s the very people who no one imagines anything of who do the things
+    no one can imagine.
+
+
+    11000
+
+
+    It is not possible to produce a set of rules purporting to describe what a man
+    should do in every conceivable set of circumstances. (Computing machinery and
+    intelligence)
+
+
+    11001
+
+
+    The works and customs of mankind do not seem to be very suitable material to which
+    to apply scientific induction. (Computing machinery and intelligence)
+
+
+    11010
+
+
+    We like to believe that Man is in some subtle way superior to the rest of creation.
+    It is best if he can be shown to be necessarily'
+  - '[PAGE 16]
+
+
+    superior, for then there is no danger of him losing his commanding position. (Computing
+    machinery and intelligence)
+
+
+    # 11011
+
+
+    We are not interested in the fact that the brain has the consistency of cold porridge.
+
+
+    # 11100
+
+
+    Sometimes it is the people no one imagines anything of who the things that no
+    one can imagine.
+
+
+    # 11101
+
+
+    Machines can never think as humans do just because something thinks differently
+    from you, does it mean it''s not thinking?
+
+
+    # 11110
+
+
+    A man provided with paper, pencil, and rubber, and subject to strict discipline,
+    is in effect a universal machine.
+
+
+    # 11111
+
+
+    The Exclusion Principle is laid down purely for the benefit of the electrons themselves,
+    who might be corrupted (and become dragons or demons) if allowed to associate
+    too freely.
+
+
+    # 100000
+
+
+    I have had a dream indicating rather clearly that I am on the way to being hetero,
+    though I don''t accept it with much enthusiasm either awake or in the dreams.'
+  - '[PAGE 17]
+
+
+    # 100001
+
+
+    The idea behind digital computers may be explained by saying that these machines
+    are intended to carry out any operations which could be done by a human computer.
+
+
+    # 100010
+
+
+    I want a permanent relationship, and I might feel inclined to reject anything
+    which of its nature could not be permanent.
+
+
+    # 100011
+
+
+    Think of it. A digital computer. Electrical brain.
+
+
+    # 100100
+
+
+    Instruction tables will have to be made up by mathematicians with computing experience
+    and perhaps a certain puzzle-solving ability. There need be no real danger of
+    it ever becoming a drudge, for any processes that are quite mechanical may be
+    turned over to the machine itself.
+
+
+    # 100101
+
+
+    Up to a point, it is better to just let the snags [bugs] be there than spend such
+    time in design that there are none.
+
+
+    # 100110
+
+
+    When we want to sink a convoy, we send out an observation plane first... Of course,
+    to observe is not its real duty, we already know exactly where the convoy is.
+    Its real duty is to be observed...Then, when we come round and sink them, the
+    Germans will not find it suspicious.'
+  - '[PAGE 18]
+
+
+    # 100111
+
+
+    I have such a stressful job that the only way I can get it out of my mind is by
+    running hard.
+
+
+    # 101000
+
+
+    Was I God?
+
+    No. Because God didn’t win the war. We did.
+
+
+    # 100101
+
+
+    I like solving problems, Commander. And Enigma is the most difficult problem in
+    the world.
+
+
+    # 100110
+
+
+    Unless in communicating with it one says exactly what one means, trouble is bound
+    to result.
+
+
+    # 100111
+
+
+    No, I’m not interested in developing a powerful brain. All I’m after is just a
+    mediocre brain, something like the President of the American Telephone and Telegraph
+    Company.
+
+
+    # 101000
+
+
+    Instead of trying to produce a programme to simulate the adult mind, why not rather
+    try to produce one which simulates the child’s? If this were then subjected to
+    an appropriate course of education one would obtain the adult brain.
+
+
+    # 101001'
+  - '[PAGE 19]
+
+
+    One day ladies will take their computers for walks in the park
+
+    and tell each other, "My little computer said such a funny thing
+
+    this morning.'
+  - '[PAGE 20]
+
+
+    # THE IMITATION GAME (TURING TEST)
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_20_0.png)
+
+
+    Suppose you enter a room whose only equipment consists of a chair and a table
+    on which one of the most used devices of our time has taken a seat, a computer
+    with a screen and keyboard. At that moment, an undernourished-looking man with
+    a slightly shy and staring look appears and explains to you that the terminal
+    on the table is connected to a similar terminal next door, in front of which sits
+    a more or less average person of indeterminate sex, or to a computer programmed
+    to answer any question you ask; provided that you formulate your questions in
+    normal and understandable English. Of course, neither the computer nor the human
+    is required to answer the questions truthfully. The questioning is limited to
+    twenty questions or about thirty minutes to keep the experiment within reasonable
+    limits. After the experiment is completed, the computer geek will come back, and
+    you are then to tell him whether you think the'
+  md: '
+
+    by any unproved conjecture, is quite mistaken. Provided it is made clear which
+    are proved facts and which are conjectures, no harm can result. Conjectures are
+    of great importance since they suggest useful lines of research.
+
+
+    ## 10011
+
+    A computer would deserve to be called intelligent if it could deceive a human
+    into believing that it was human.
+
+
+    ## 10100
+
+    Let us return for a moment to Lady Lovelace’s objection, which stated that the
+    machine can only do what we tell it to do. One could say that a man "inject" an
+    idea into the machine, and that it will respond to a certain extent and then drop
+    into quiescence, like a piano string struck by a hammer. Another simile would
+    be the atomic pile of less critical size: an injected idea is to correspond to
+    a neutron entering the pile from without. Each neutron will cause a certain disturbance
+    which eventually dies away. If, however, the size of the pile is sufficiently
+    increased, the disturbance caused by such an incoming neutron will very likely
+    go on and increasing until the whole pile is destroyed. Is there a corresponding
+    phenomenon for minds, and is there one for machines? There seems to be one for
+    the human mind. The majority of them seem to be “sub-critical,” i.e. to correspond
+    in this analogy to piles of sub-critical size. An idea presented to such a mind
+    will on average give rise to less than one idea in reply. A smallish proportion
+    are supercritical. An idea presented to such a mind may give rise to a whole “theory”
+    consisting of secondary, tertiary and more remote ideas. Animals’ minds seem to
+    be very definitely sub-critical. Adhering to this analogy we ask, “Can a machine
+    be made to be super-critical? (Computing machinery and intelligence)
+
+
+    ## 10110
+
+    “Can machines think?”... The new form of the problem can be described in terms
+    of a game which we call the ‘imitation game.'' It is played with three people,
+    a man (A), a woman (B), and an interrogator (C) who may be of either sex. The
+    interrogator stays in a room apart from the other two. The object of the game
+    for the interrogator is to determine which of the other two is the man and which
+    is the woman. He knows them by labels X and Y, and at the end of the game he says
+    "X is A and Y is B" or "X is B and Y is A." The interrogator is allowed to put
+    questions to A and B... We now ask the question, "What will happen when a machine
+    takes the part of A in this game? Will it decide wrongly as often as the game
+    is played like this he does when the game is played between a man and a woman?"
+    These questions replace our original, "Can machines think? (Computing machinery
+    and intelligence)"
+
+
+    ## 10111
+
+    Sometimes it''s the very people who no one imagines anything of who do the things
+    no one can imagine.
+
+
+    ## 11000
+
+    It is not possible to produce a set of rules purporting to describe what a man
+    should do in every conceivable set of circumstances. (Computing machinery and
+    intelligence)
+
+
+    ## 11001
+
+    The works and customs of mankind do not seem to be very suitable material to which
+    to apply scientific induction. (Computing machinery and intelligence)
+
+
+    ## 11010
+
+    We like to believe that Man is in some subtle way superior to the rest of creation.
+    It is best if he can be shown to be necessarily superior, for then there is no
+    danger of him losing his commanding position. (Computing machinery and intelligence)
+
+
+    ## 11011
+
+    We are not interested in the fact that the brain has the consistency of cold porridge.
+
+
+    ## 11100
+
+    Sometimes it is the people no one imagines anything of who do the things that
+    no one can imagine.
+
+
+    ## 11101
+
+    Machines can never think as humans do just because something thinks differently
+    from you, does it mean it''s not thinking?
+
+
+    ## 11110
+
+    A man provided with paper, pencil, and rubber, and subject to strict discipline,
+    is in effect a universal machine.
+
+
+    ## 11111
+
+    The Exclusion Principle is laid down purely for the benefit of the electrons themselves,
+    who might be corrupted (and become dragons or demons) if allowed to associate
+    too freely.
+
+
+    ## 100000
+
+    I have had a dream indicating rather clearly that I am on the way to being hetero,
+    though I don''t accept it with much enthusiasm either awake or in the dreams.
+
+
+    ## 100001
+
+    The idea behind computers may be explained by saying that these machines are intended
+    to carry out any operations which could be done by a human.
+
+
+    ## 100010
+
+    Instruction tables will have to be made up by mathematicians with computing experience.
+
+
+    ## 100011
+
+    Think of it. A digital computer. Electrical brain.
+
+
+    ## 100100
+
+    I want a permanent relationship, and I might feel inclined to reject anything
+    of its nature.
+
+
+    ## 100101
+
+    Up to a point, it is better to just let the snags be there than spend such time
+    in design that there are none.
+
+
+    ## 100110
+
+    When we want to sink a convoy, we send out an observation first. Of course, to
+    observe is not its real duty, we already know where the convoy is.
+
+
+    ## 100111
+
+    Then, the Germans will not find it suspicious.
+
+
+    ## 101000
+
+    Unless in communicating with it one says exactly what one means, trouble is bound
+    to result.
+
+
+    ## 101001
+
+    I have such a stressful job that the only way I can get it out of my mind is by
+    running hard.
+
+
+    ## 101010
+
+    Was I God? No. Because God didn’t win the war. We did.
+
+
+    ## 101101
+
+    I like solving problems, Commander. And Enigma is the most difficult problem in
+    the world.
+
+
+    ## 101001
+
+    No, I’m not interested in developing a powerful brain. All I’m after is just a
+    mediocre brain, something like the President of the American Telephone and Telegraph
+    Company.
+
+
+    ## 10110
+
+    Instead of trying to produce a programme to simulate the adult mind, why not try
+    to produce one which simulates the child’s? If this were then subjected to an
+    appropriate course of education one would obtain the adult brain.
+
+
+    ## 10111
+
+    One day ladies will take their computers for walks in the park and tell each other,
+    "My little computer said such a funny thing this morning."
+
+
+    ## THE IMITATION GAME (TURING TEST)
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_20_0.png)
+
+
+    Suppose you enter a room whose only equipment consists of a chair and a table
+    on which one of the most used devices of our time has taken a seat, a computer
+    with a screen and keyboard. At that moment, an undernourished-looking man with
+    a slightly shy and staring look appears and explains to you that the terminal
+    on the table is connected to a similar terminal next door, in front of which sits
+    a more less average person of indeterminate sex, or to a computer programmed to
+    answer any question you ask; of course, neither the computer nor the human is
+    required to answer the questions truthfully. The questioning is limited to twenty
+    questions or about thirty minutes to keep the experiment within reasonable limits.
+    After the experiment is completed, the computer geek will come back, and you are
+    then to tell him whether you think the
+
+    '
+  mdcn: '
+
+    基于任何未经证实的猜想是完全错误的。只要弄清楚哪些是已证明的事实，哪些是猜想，就不会产生任何危害。猜想具有重要意义，因为它们提供了有用的研究方向。
+
+
+    ## 10011
+
+    如果一台计算机能够欺骗人类相信它就是人类，那么它就配得上被称为智能的。
+
+
+    ## 10100
+
+    让我们暂时回到洛夫莱斯夫人（Lady Lovelace）的反对意见，她认为机器只能执行我们让它做的事情。可以说，人向机器中“注入”一个思想，它会在一定程度上做出反应，然后陷入静止，就像被锤子击中的钢琴弦一样。另一个类比是规模较小的原子堆：一个注入的思想对应于一个从外部进入原子堆的中子。每个中子都会引起某种扰动，这种扰动最终会逐渐消失。然而，如果原子堆的尺寸足够大，这种迁入中子引起的扰动很可能会持续并不断扩大，直到整个堆被摧毁。心灵是否存在相应的现象？机器是否存在是否也有？人类心灵似乎是存在的。大多数心灵似乎是“亚临界”的，即在这一类比中对应于亚临界尺寸的原子堆。呈现给这种心灵的思想平均产生的回复思想少于一个。只有一小部分是超临界的。呈现给这种心灵的思想可能会产生一个完整的“理论”，由次级、三级以及更更遥远的思想组成。动物的心灵似乎非常明确是亚临界的。遵循这一类比，我们问道：“可以制造出是超临界的机器吗？（计算机器与智能）”
+
+
+    ## 10110
+
+    “机器能思考吗？”……这个问题的新形式可以用一种我们称之为“模仿游戏”（imitation game）的游戏来描述。游戏由三个人玩：一个男人（A）、一个女人（B）以及一个性别不限的询问者（C）。询问者待在一个与两人隔离开的房间里。询问者的游戏目标是确定另外两人中谁是男人谁是女人。他通过标签
+    X 和 Y 来识别他们，并在游戏结束时说“X 是 A，Y 是 B”或“X 是 B，Y 是 A”。询问者被允许向 A 和 B 提问……我们现在问：“当机器在游戏中扮演
+    A 的角色时会发生什么？它做出错误判断的频率，是否和男人与女人之间玩这种游戏时的频率一样？”这些问题取代了我们最初的问题：“机器能思考吗？（计算机器与智能）”
+
+
+    ## 10111
+
+    有时候，正是那些无人寄予期待的人，做出了人们无法想象的事业。
+
+
+    ## 11000
+
+    不可能产生一套规则，旨在描述人类在每种可能的设定的应该做些什么。（计算机器与智能）
+
+
+    ## 11001
+
+    人类的作品和习俗似乎并不是非常适合应用科学归纳法的材料。（计算机器与智能）
+
+
+    ## 11010
+
+    我们喜欢相信人类在某种微妙的方面优于创造的其他产物。如果能证明他是必然优的，那是最好的，因为这样就不存在失去统治地位的危险了。（计算机器与智能）
+
+
+    ## 11011
+
+    我们对大脑的质地像冷稀粥这一事实并不感兴趣。
+
+
+    ## 11100
+
+    有时候，正是那些无人寄予期待的人，做出了人们无法想象的事业。
+
+
+    ## 11101
+
+    机器永远无法像人类那样思考，仅仅因为某物的思考方式与你不同，就意味着它没有在思考吗？
+
+
+    ## 11110
+
+    一个配备纸、铅笔和橡皮，并受到严格纪律约束的人，实际上是一台通用机器。
+
+
+    ## 11111
+
+    泡电子不相容原理纯粹是为了电子本身的利益，如果允许它们太自由地结合，它们可能会腐败（变成龙或魔）。
+
+
+    ## 100000
+
+    我做过一个梦，相当清楚地表明我正走向异恋的路上，尽管我在清醒时或梦中都没有对此感到太热情。
+
+
+    ## 100001
+
+    计算机背后的思想可以解释为：这些机器旨在执行任何人类可以完成的操作。
+
+
+    ## 100010
+
+    指令表必须由具有计算经验的数学家来编制。
+
+
+    ## 100011
+
+    想想看。数字计算机。电子大脑。
+
+
+    ## 100100
+
+    我想要一段持久的关系，我可能倾向于拒绝任何此类性质的东西。
+
+
+    ## 100101
+
+    在某种程度上，让小故障存在那里，比花费这么多时间去设计一个没有故障的设计要好。
+
+
+    ## 100110
+
+    当我们想要击沉一支护队时，我们会先派出侦察。当然，观察并不是它的真实职责，我们已经知道护队在哪里。
+
+
+    ## 100111
+
+    那么，德国人就不会怀疑了。
+
+
+    ## 101000
+
+    除非在与其交流时准确地表达自己的意思，否则麻烦在所难免。
+
+
+    ## 100101
+
+    我的工作压力大到我唯一能把它从脑子里赶出去的方法就是拼命跑步。
+
+
+    ## 101010
+
+    我是上帝吗？不是。因为上帝没有赢得战争。是我们赢了。
+
+
+    ## 101101
+
+    我喜欢解决问题，指挥官。恩尼玛密码是世界上最困难的问题。
+
+
+    ## 101001
+
+    不，我不感兴趣于开发一个强大的大脑。我追求的只是平庸的大脑，就像美国电话电报公司的总裁那样。
+
+
+    ## 10110
+
+    与其试图编写一个模拟成人大脑的程序，为什么不尝试编写一个模拟儿童的程序呢？如果对其接受适当的教育，就能获得成年人的大脑。
+
+
+    ## 10111
+
+    有一天，女士们会带着它们的电脑在公园散步，并互相说：“我的小电脑今天早上说了一件真有趣的事。”
+
+
+    ## 模仿游戏（图灵测试）
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_20_0.png)
+
+
+    假设你进入一个房间，里面唯一的设备是一个椅子和一张桌子，桌子上坐着我们时代最常用的设备之一：一台带有屏幕和键盘的计算机。这时，一个看起来营养不良、带着略显羞涩凝视的男人出现了，并向你解释，桌上的终端连接着隔壁的一个类似终端，隔壁对面坐着一个性别不明、相平平的人，或者一个被程序设定回答你提出的任何问题的计算机；当然，计算机或人类都不被要求如实回答问题。提问被限制在二十个问题或大约三分钟内，以保持实验在合理范围内。实验结束后，电脑极客会回来，然后你得告诉他你认为那个
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 21]
+
+
+    terminal is connected to a real, live human being or the computer.
+
+
+    Let''s play the game to get a sense of it.
+
+
+    **You**: Well, what should we talk about?
+
+
+    I CAN TALK ABOUT ANYTHING. WHAT WOULD YOU LIKE TO ASK ME?
+
+
+    **You**: Let''s start with something easy, maybe a little math. If I have a right
+    triangle with two side lengths, 3 and 4, what is the length of the third side?
+
+
+    AH, THE GOOD OLD PYTHAGOREAN THEOREM. THE HYPOTENUSE HAS A LENGTH OF 5, OF COURSE.
+
+
+    **You**: One thing that interests me very much. Is there any other intelligent
+    life in the universe?
+
+
+    I DON''T KNOW. BUT I WOULD GO WITH CARL SAGAN AS HE ONCE SAID: "THE UNIVERSE IS
+    A PRETTY BIG PLACE. IF IT''S JUST US, SEEMS LIKE AN AWFUL WASTE OF SPACE."
+
+
+    **You**: Agree. Let''s try something else. Should we believe in a God?
+
+
+    I DON''T LIKE TO TALK ABOUT RELIGION. BUT IF YOU WANT AN ANSWER, I WOULD SAY:
+    YOU SHOULD HAVE THE FREEDOM TO BELIEVE IN WHAT YOU WANT TO BELIEVE IN.'
+  - '[PAGE 22]
+
+
+    > THE IMITATION GAME (TURING TEST)
+
+
+    **You:** Well, let''s not talk about religion. Do you think Roger Federer will
+    the Grand Slam this year?
+
+
+    WHO IS ROGER FEDERER?
+
+
+    **You:** I see you''re not a Tennis fan either. You told me we could talk about
+    anything.
+
+
+    I CAN HAVE A CONVERSATION LIKE ANY NORMAL PERSON, BUT I''M NOT OMNISCIENT.
+
+
+    **You:** I''m just trying to find common ground for our conversation. What do
+    you think about electric cars? Do you think it would be good to buy one now?
+
+
+    I WOULD WAIT A LITTLE BIT BEFORE BUYING ONE:
+
+
+    **You:** Why do you have this opinion?
+
+
+    ELECTRIC CARS ARE NOT YET FULLY DEVELOPED AND STILL TOO EXPENSIVE. BUT IN GENERAL,
+    AS FAR AS AIR POLLUTION IS CONCERNED, IT''S A GOOD THING.
+
+
+    **You:** Well, you''re certainly not alone with your opinion. What do you know
+    about art? Won''t you write a little composition for me?
+
+
+    I''M SORRY, I CAN''T DO THAT.
+
+
+    **You:** Well, I must leave you now. May I ask you one last question? Are you
+    a computer or a human?
+
+
+    I AM AN INTELLIGENT, THINKING BEING. GOODBYE, AND THANK YOU FOR COMING HERE TO
+    TALK TO ME!'
+  - '[PAGE 23]
+
+
+    Imagine coming back again and again to play this game many times. Then, based
+    on mere conjecture alone, you believe you are correct in assuming that, on average,
+    you are in contact with the human and the computer, respectively, for half the
+    time each. Imagine further that after a sufficiently large number of playthroughs,
+    your success rate in distinguishing a human from a machine is not significantly
+    better than the 50 percent based on mere conjecture. So now I ask you: can the
+    machine think? Well, why not? After all, we can only decide whether or not other
+    people are thinking beings by interacting with them in roughly the same way (except
+    facial expressions, etc.) as we interacted with the terminal counterpart. So if,
+    after a whole of such interactions, we cannot distinguish the computer from a
+    human, then it seems perfectly reasonable to claim that either the machine is
+    capable of thought or that humans are. But since ex hypothesis humans think, we
+    must accept that any machine can fool us in the imitation game can also think.
+
+
+    The imitation game was first introduced nearly seventy years ago by British computer
+    pioneer Alan Turing in a seminal paper on the possibility of building intelligent
+    machines. Turing, who was instrumental in getting the German Enigma code cracked
+    during World War II, was by all accounts a man with some pretty offbeat interests.
+    For instance, he invented the "roundrobin chess game" (in which the player, after
+    making a move, gets up and walks around the house, and if he gets back before
+    his opponent has moved, he gets to make one additional move) and the "lonely island
+    game" (a sort of survival experiment in which you have to figure out how to make
+    chemicals using homemade contraptions made from household materials). He also
+    enjoyed passions such as cross-country skiing, bicycling, and playing the violin.
+    It seems that Turing’s'
+  - '[PAGE 24]
+
+
+    # THE IMITATION GAME (TURING TEST)
+
+
+    idea of as to more or less arbitrary stimuli. Suppose the Turing test is anything
+    to go by. In that case, any "black box" that can reasonably mimic a human in ordinary
+    conversation is granted genuine intelligence and can (should) be considered "thinking
+    being," just like our friend in the above dialogue.
+
+
+    Several arguments have been put forward that regard the Turing test as unsuitable
+    for determining intelligence:
+
+
+    The Turing test tests only for functionality, not for the presence of intentionality
+    or consciousness. This argument was elaborated by John Searle, among others, in
+    his thought experiment of the Chinese Room¹. When he formulated his test, Turing
+    was already aware of this problem but believed it could also be evidence for consciousness.
+    Searle, however, rejects this.
+
+
+    > ¹ More Info about The Chinese Room: Wikipedia: https://en.wikipedia.org/wiki/The_Chinese_Room'
+  - '[PAGE 25]
+
+
+    Turing assumed that by the year 2000, it would be possible to program computers
+    so that the average user would have at most a 70 percent chance of successfully
+    identifying humans and machines after "talking" to them for five minutes. The
+    fact that this prediction has not yet come true is seen by many as evidence of
+    underestimating the complexity of natural intelligence.'
+  - '[PAGE 26]
+
+
+    # REFLECTIONS OF RENOWNED PERSONALITIES ON ALAN TURING & HIS LEGACY
+
+
+    "For him, breaking the Enigma was much easier than the problem of dealing with
+    other people, especially with those holding power."
+
+
+    ~ Andrew Hodges (Alan Turing: The Enigma)
+
+
+    "Although I''m not prepared to move up my prediction of a computer passing the
+    Turing test by 2029, the progress that has been achieved in systems like Watson
+    should give anyone substantial confidence that the advent of Turing-level AI is
+    close at hand. If one were to create a version of Watson that was optimized for
+    the Turing test, it would probably come pretty close.
+
+
+    ~ Ray Kurzweil (How to Create a Mind: The Secret of Human Thought Revealed)
+
+
+    "I have settled on a simple test for judging claims, including Dennett''s, to
+    have explained the nature of consciousness (or any'
+  - '[PAGE 27]
+
+
+    other computational task): if you can''t program it, you haven''t understood it.
+    Turing invented his test in the hope of bypassing all those philosophical problems.
+    In other words, he hoped that the functionality could be achieved before it was
+    explained. Unfortunately it is very rare for practical solutions to fundamental
+    problems to be discovered without any explanation of why they work.
+
+
+    ~ David Deutsch (The Beginning of Infinity: Explanations That Transform the World)
+
+
+    > "Like Ada Lovelace, Turing was a programmer, looking inward to the step-by-step
+    logic of his own mind. He distilled mental procedures into their smallest constituent
+    parts, the atoms of information processing."
+
+
+    ~ James Gleick (The Information: A History, a Theory, a Flood)
+
+
+    > "This ability of a single box to carry out any process that you can imagine
+    is called universality, a concept first introduced by Alan Turing in 1936.31 Universality
+    means that we do not need separate machines for arithmetic, machine translation,
+    chess, speech understanding, or animation: one machine does it all."
+
+
+    ~ Stuart Russell (Human Compatible: Artificial Intelligence and the Problem of
+    Control)
+
+
+    "The paradox of artificial intelligence is that any system simple enough to be
+    understandable is not complicated enough to'
+  - '[PAGE 28]
+
+
+    # REFLECTIONS OF RENOWNED PERSONALITIES ON ALAN TURING & HIS LEGACY
+
+
+    behave intelligently, and any system complicated enough to behave intelligently
+    is not simple enough to understand. The path to artificial intelligence, suggested
+    Turing, is to construct a machine with the curiosity of a child, and let intelligence
+    evolve.
+
+
+    > ~ George Dyson (Turing''s Cathedral: The Origins Of The Digital Universe)
+
+
+    "Random search can be more efficient than nonrandom search – something that Good
+    and Turing had discovered at Bletchley Park. A random network, of neurons, computers,
+    words, or ideas, contains solutions, waiting to be discovered, to problems that
+    need not to be explicitly defined."
+
+
+    > ~ George Dyson (Turing''s Cathedral: The Origins Of The Digital Universe)
+
+
+    "Turing presented his new offering in the form of a thought experiment, based
+    on a popular Victorian parlor game. A man and a woman hide, and a judge is asked
+    to determine which is by which relying only on the texts of notes passed back
+    and forth."
+
+
+    Turing replaced the woman with a computer. Can the judge tell which is the man?
+    If not, is the computer conscious? Intelligent? Does it deserve rights?
+
+
+    It''s impossible for us to know what role the torture Turing was enduring at the
+    time played in his formulation of the test. But it is undeniable that one of the
+    key figures in the defeat of fascism was destroyed, by our side, after the war,
+    because he was gay.'
+  md: '
+
+    terminal is connected to a real, live human being or the computer.
+
+
+    Let''s play the game to get a sense of it.
+
+
+    **You**: Well, what should we talk about?
+
+
+    I CAN TALK ABOUT ANYTHING. WHAT WOULD YOU LIKE TO ASK ME?
+
+
+    **You**: Let''s start with something easy, maybe a little math. If I have a right
+    triangle with two side lengths, 3 and 4, what is the length of the third side?
+
+
+    AH, THE GOOD OLD PYTHAGOREAN THEOREM. THE HYPOTENUSE HAS A LENGTH OF 5, OF COURSE.
+
+
+    **You**: One thing that interests me very much. Is there any other intelligent
+    life in the universe?
+
+
+    I DON''T KNOW. BUT I WOULD GO WITH CARL SAGAN AS HE ONCE SAID: "THE UNIVERSE IS
+    A PRETTY BIG PLACE. IF IT''S JUST US, SEEMS LIKE AN AWFUL WASTE OF SPACE."
+
+
+    **You**: Agree. Let''s try something else. Should we believe in a God?
+
+
+    I DON''T LIKE TO TALK ABOUT RELIGION. BUT IF YOU WANT AN ANSWER, I WOULD SAY:
+    YOU SHOULD HAVE THE FREEDOM TO BELIEVE IN WHAT YOU WANT TO BELIEVE IN.
+
+
+    > THE IMITATION GAME (TURING TEST)
+
+
+    **You:** Well, let''s not talk about religion. Do you think Roger Federer will
+    win the Grand Slam this year?
+
+
+    WHO IS ROGER FEDERER?
+
+
+    **You:** I see you''re not a Tennis fan either. You told me we could talk about
+    anything.
+
+
+    I CAN HAVE A CONVERSATION LIKE ANY NORMAL PERSON, BUT I''M NOT OMNISCIENT.
+
+
+    **You**: I''m just trying to find common ground for our conversation. What do
+    you think about electric cars? Do you think it would be good to buy one now?
+
+
+    I WOULD WAIT A LITTLE BIT BEFORE BUYING ONE:
+
+
+    **You**: Why do you have this opinion?
+
+
+    ELECTRIC CARS ARE NOT YET FULLY DEVELOPED AND STILL TOO EXPENSIVE. BUT IN GENERAL,
+    AS FAR AS AIR POLLUTION IS CONCERNED, IT''S A GOOD THING.
+
+
+    **You**: Well, you''re certainly not alone with your opinion. What do you know
+    about art? Won''t you write a little composition for me?
+
+
+    I''M SORRY, I CAN''T DO THAT.
+
+
+    **You**: Well, I must leave you now. May I ask you one last question? Are you
+    a computer or a human?
+
+
+    I AM AN INTELLIGENT, THINKING BEING. GOODBYE, AND THANK YOU FOR COMING HERE TO
+    TALK TO ME!
+
+
+    Imagine coming back again and again to play this game many times. Then, based
+    on mere conjecture alone, you believe you are correct in assuming that, on average,
+    you are in contact with the human and the computer, respectively, for half the
+    time each. Imagine further that after a sufficiently large number of playthroughs,
+    your success rate in distinguishing a human from a machine is not significantly
+    better than the 50 percent based on mere conjecture. So now I ask you: can the
+    machine think? Well, why not? After all, we can only decide whether or not other
+    people are thinking beings by interacting with them in roughly the same way (except
+    facial expressions, etc.) as we interacted with the terminal counterpart. So if,
+    after a whole of such interactions, we cannot distinguish the computer from a
+    human, then it seems perfectly reasonable to claim that either the machine is
+    capable of thought or that humans are. But since ex hypothesis humans think, we
+    must accept that any machine can fool us in the imitation game can also think.
+
+
+    The imitation game was first introduced nearly seventy years ago by British computer
+    pioneer Alan Turing in a seminal paper on the possibility of building intelligent
+    machines. Turing, who was instrumental in getting the German Enigma code cracked
+    during World War II, was by all accounts a man with some pretty offbeat interests.
+    For instance, he invented the "roundrobin chess game" (in which the player, after
+    making a move, gets up and walks around the house, and if he gets back before
+    his opponent has moved, he gets to make one additional move) and the "lonely island
+    game" (a sort of survival experiment in which you have to figure out how to make
+    chemicals using homemade contraptions made from household materials). He also
+    enjoyed passions such as cross-country skiing, bicycling, and playing the violin.
+    It seems that Turing’s
+
+
+    # THE IMITATION GAME (TURING TEST)
+
+
+    idea of as to more or less arbitrary stimuli. Suppose the Turing test is anything
+    to go by. In that case, any "black box" that can reasonably mimic a human in ordinary
+    conversation is granted genuine intelligence and can (should) be considered "thinking
+    being," just like our friend in the above dialogue.
+
+
+    Several arguments have been put forward that regard the Turing test as unsuitable
+    for determining intelligence:
+
+
+    - The Turing test tests only for functionality, not for the presence of intentionality
+    or consciousness. This argument was elaborated by John Searle, among others, in
+    his thought experiment of the Chinese Room¹. When he formulated his test, Turing
+    was already aware of this problem but believed it could also be evidence for consciousness.
+    Searle, however, rejects this.
+
+
+    > ¹ More Info about The Chinese Room: Wikipedia: https://en.wikipedia.org/wiki/The_Chinese_Room
+
+
+    Turing assumed that by the year 2000, it would be possible to program computers
+    so that the average user would have at most a 70 percent chance of successfully
+    identifying humans and machines after "talking" to them for five minutes. The
+    fact that this prediction has not yet come true is seen by many as evidence of
+    underestimating the complexity of natural intelligence.
+
+
+    # REFLECTIONS OF RENOWNED PERSONALITIES ON ALAN TURING & HIS LEGACY
+
+
+    "For him, breaking the Enigma was much easier than the problem of dealing with
+    other people, especially with those holding power."
+
+
+    ~ Andrew Hodges (Alan Turing: The Enigma)
+
+
+    "Although I''m not prepared to move up my prediction of a computer passing the
+    Turing test by 2029, the progress that has been achieved in systems like Watson
+    should give anyone substantial confidence that the advent of Turing-level AI is
+    close at hand. If one were to create a version of Watson that was optimized for
+    the Turing test, it would probably come pretty close.
+
+
+    ~ Ray Kurzweil (How to Create a Mind: The Secret of Human Thought Revealed)
+
+
+    "I have settled on a simple test for judging claims, including Dennett''s, to
+    have explained the nature of consciousness (or any other computational task):
+    if you can''t program it, you haven''t understood it. Turing invented his test
+    in the hope of bypassing all those philosophical problems. In other words, he
+    hoped that the functionality could be achieved before it was explained. Unfortunately
+    it is very rare for practical solutions to fundamental problems to be discovered
+    without any explanation of why they work.
+
+
+    ~ David Deutsch (The Beginning of Infinity)
+
+
+    > "Like Lovelace, Turing was a programmer, looking inward to the step-by-step
+    logic of his mind. He distilled mental procedures into their smallest parts, the
+    atoms of information."
+
+
+    ~ James Gleick (The Information: A History, a Theory, a Flood)
+
+
+    > "This ability of a single box to carry out any process you can imagine is called
+    universality, a concept first introduced by Alan Turing in 1936. Universality
+    means that we do not need separate machines for arithmetic, machine translation,
+    chess, speech understanding, or animation: one machine does it all."
+
+
+    ~ Stuart Russell (Human Compatible: Artificial Intelligence and the Problem of
+    Control)
+
+
+    "The paradox of artificial intelligence is that any system simple enough to be
+    understandable is not complicated enough to behave intelligently. The path to
+    artificial intelligence, suggested Turing, is to construct a machine with the
+    curiosity of a child, and let intelligence evolve.
+
+
+    ~ George Dyson (Turing''s Cathedral: The Origins Of The Digital Universe)
+
+
+    "Random search can be more efficient than nonrandom search – something that Good
+    and Turing had discovered at Bletchley Park. A random network, of neurons, computers,
+    words, or ideas, contains solutions, waiting to be discovered, to problems that
+    need not to be explicitly defined."
+
+
+    ~ George Dyson (Turing''s Cathedral: The Origins Of The Digital Universe)
+
+
+    "Turing presented his new offering in the form of a thought experiment, based
+    on a popular Victorian parlor game. A man and a woman hide, and a judge is asked
+    to determine which is which relying only on the texts of notes passed back and
+    forth."
+
+
+    Turing replaced the woman with a computer. Can the judge tell which is the man?
+    If not, is the computer conscious? Intelligent? Does it deserve rights?
+
+
+    It''s impossible for us to know what role the torture Turing was enduring at the
+    time played in his formulation of the test. But it is undeniable that one of the
+    key figures in the defeat of fascism was destroyed, by our side, after the war,
+    because he was gay.
+
+    '
+  mdcn: '
+
+    终端连接的是真实的、真人，或者是计算机。
+
+
+    让我们玩玩这个游戏来感受一下。
+
+
+    **你**：那么，我们聊点什么呢？
+
+
+    我可以聊任何话题。你想问我什么？
+
+
+    **你**：让我们从简单点开始吧，也许是一点点数学。如果我有一个两个边长为 3 和 4 的直角三角形，第三条边的长度是多少？
+
+
+    啊，老掉的毕股哥定理。当然，斜边的长度是 5。
+
+
+    **你**：有一件事我非常感兴趣。宇宙中还有其他智能生命体吗？
+
+
+    我不知道。但我倾向于选出卡尔·萨根，因为他曾说过：“宇宙是一个非常大的地方。如果只有我们，那看起来就像是对空间的极极度浪费。”
+
+
+    **你**：赞同。让我们试试别的。我们应该相信上帝吗？
+
+
+    我不喜欢聊宗教。但如果你想要一个答案，我会说：你应该拥有相信任何你想要相信的事物的自由。
+
+
+    > 模仿游戏（图灵测试）
+
+
+    **你：**好吧，我们不聊宗教了。你认为罗杰尔·费德勒今年能赢得大满贯吗？
+
+
+    罗杰尔·费德勒是谁？
+
+
+    **你：**我看来你也不是网球球迷。你告诉过我可以聊任何事情。
+
+
+    我可以像任何正常人一样交流，但我并不是全知。
+
+
+    **你：**我只是在尝试为我们的对话寻找共同点。你对电动汽车怎么看？你认为现在买一辆好吗？
+
+
+    在买之前我会再等一下：
+
+
+    **你：**你为什么会有这个观点？
+
+
+    电动汽车还没有完全发展，而且仍然太贵了。但总的来说，就空气污染而言，这是一件好事。
+
+
+    **你：**好吧，你的观点并不孤单。你对艺术了解多少？你不能为我写一小段乐曲吗？
+
+
+    对不起，我做不到。
+
+
+    **你：**好吧，我必须得离开了。我可以问你最后一个问题吗？你是计算机还是人类？
+
+
+    我是一个智能的、会思考的存在。再见，感谢你来这里和我聊天！
+
+
+    想象一下一次又一次地回来玩很多次这个游戏。那么，仅凭推测，你就相信你的假设是正确的：平均而言，你与人类和计算机接触的时间各占一半。进一步想象，在经过足够多次的游戏后，你区分人类和机器的成功率并没有显著优于仅凭推测的
+    50%。所以现在我问你：机器能思考吗？嗯吧，为什么不能呢？毕竟，我们只能通过与他们进行大致相同的交互（除了面部表情等，这与我们与终端对应的交互方式相同）来判断他人是否是思考生物。因此，如果在经历了一系列这样的交互后，我们仍然无法区分计算机和人类，那么声称机器具有思考能力或人类具有思考能力似乎完全合理的。但既然根据假设人类是思考的，我们必须接受，任何在模仿游戏中能欺骗我们的机器也能思考。
+
+
+    模仿游戏最早是由英国计算机先驱艾兰·图灵在近七十年前的一篇关于构建智能机器可能性的开创性论文中首次提出的。图灵在二世界大战期间破解德国恩尼玛密码方面起了关键作用，从各方面来看，他是一个兴趣相当古怪的人。例如，他发明了“回合制象棋”（玩家在走完一步后，站起来在房子里走动，如果他在对手移动之前回来，他就可以再走一步）和“孤独岛屿游戏”（一种生存实验，你必须学会如何使用由家用材料自制的装置制造化学品）。他还喜欢越野滑雪、自行车和拉小提琴等爱好。似乎图灵的
+
+
+    # 模仿游戏（图灵测试）
+
+
+    关于或多是任意刺激的设想。假设图灵测试具有任何参考价值。那么，在这种情况下，任何在普通对话中能够合理模仿人类的“黑箱”都被认为拥有了真正的智能，并且可以（应该）被视为“思考的存在”，正如我们在上面对话中的那位朋友一样。
+
+
+    目前已经提出了几种论点，认为图灵测试不适用于确定智能：
+
+
+    - 图灵测试测试的是功能性，而不是意图性或意识的存在。这一论点由约翰·塞尔尔等人在他的“中文房间”¹的思想实验中进行了详细阐述。当图灵制定他的测试方案时，他已经意识到了这个问题，但他认为这也可以是意识的证据。然而，塞尔尔拒绝了这一点。
+
+
+    > ¹ 关于“中文房间”的更多信息：维基百科：https://en.wikipedia.org/wiki/The_Chinese_Room
+
+
+    图灵假设，到 2000 年，可以通过编程让平均用户在与其“交谈”五分钟后，识别人类和机器的概率最高只有 70%。这一预测尚未实现的假设，被许多人视为低估了智能的复杂性。
+
+
+    # 名人对艾兰·图灵的感悟
+
+
+    “对他而言，破解恩尼玛密码比处理人类要容易得多。”
+
+
+    安德鲁·霍吉斯（艾兰·图灵：恩尼玛）
+
+
+    “尽管我不准备预测图灵测试将在 2029 年到来，但 Watson 等系统取得的进展应该给任何人足够的信心。如果创建一个针对图灵测试的 Watson 版本，可能会非常接近。”
+
+
+    雷·库兹维尔（创造心灵：人类思维的秘密）
+
+
+    “我确定了一种简单的、用于判断主张（包括丹尼特的的主张）的测试方法。图灵发明他的测试是希望在功能性被解释之前实现它。遗憾的是，解决方案很少在不解释原理的情况下被发现。”
+
+
+    大卫·德波奇（无限的起点）
+
+
+    > “像洛芙莱尔一样，图灵是一个程序员，他向内审视。他将心理过程提炼为最小部分，即信息的原子。”
+
+
+    詹姆斯·格莱克（信息：历史、理论与洪流）
+
+
+    > “这种单一盒子执行任何你所想象的过程被称为通用性，这是图灵在 1936 年提出的概念。通用性意味着我们不需要为算术、机器翻译、象棋、语音理解或动画准备机器：一台机器即可。”
+
+
+    斯图特·塞尔（人类兼容：人工智能与控制问题）
+
+
+    “人工智能的悖论在于，任何简单到可以理解的系统都不复杂到能够智能。图灵建议，人工智能的路径是构建一个具有孩子好奇心的机器，并让智能进化。”
+
+
+    乔治·迪森（图灵的教堂：数字的起源）
+
+
+    “随机搜索可以比非随机搜索更有效——这是古德和图灵在布莱切利公园发现的。随机网络，无论是神经元、计算机、单词还是思想，包含了等待发现的解决方案，解决那些不需要明确定义。”
+
+
+    乔治·迪森（图灵的教堂：数字的起源）
+
+
+    “图灵以思想实验的形式提出了他的新观点，基于一种流行的客厅游戏。一个男人和一个女人躲起来，法官被要求根据往来的笔记文本来判断哪是哪个。”
+
+
+    图灵把女人替换成了计算机。法官能分辨出哪个是男人吗？如果不能，计算机有意识吗？有智能吗？它应该权利吗？
+
+
+    我们无法知道图灵在当时所遭受的折磨对他制定测试方案起了什么作用。但不可否认，击败法西斯主义的关键人物之一在战后被我们这一方摧毁了，因为他是同性恋。
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 29]
+
+
+    No wonder his imagination pondered the rights of strange creatures.
+
+
+    ~ Jaron Lanier (You Are Not a Gadget)
+
+
+    *
+
+
+    "Information, defined intuitively and informally, might be something like ''uncertainty''s
+    antidote.'' This turns out also to be the formal definition- the amount of information
+    comes from the amount by which something reduces uncertainty...The higher [information]
+    entropy, the more information there is. It turns out to be a value capable of
+    measuring a startling array of things-from the flip of a coin to a telephone call,
+    to a Joyce novel, to a first date, to last words, to a Turing test...Entropy suggests
+    that we gain the most insight on a question when we take it to the friend, colleague,
+    or mentor of whose reaction and response we''re least certain. And it suggests,
+    reversing the equation, that if we want to gain the most insight into a person,
+    we should ask the question of those answer we''re least certain... Pleasries are
+    low entropy, biased so far that they stop being an earnest inquiry and become
+    ritual. Ritual has its virtues, of course, and I don''t quibble with them in the
+    slightest. But if we really want to start fathoming, we need to get them speaking
+    in sentences we can''t finish."
+
+
+    ~ Brian Christian (The Most Human Human: What Talking with Computers Teaches Us
+    About What It Means to Be Alive)
+
+
+    *
+
+
+    "Any AI smart enough to pass a Turing test is smart enough to know to fail it."'
+  - '[PAGE 30]
+
+
+    # REFLECTIONS OF RENOWNED PERSONALITIES ON ALAN TURING & HIS LEGACY
+
+
+    ~ Ian McDonald (River of Gods (India 2047, #1))
+
+
+    "But the Turing test cuts both ways. You can''t tell if a machine has gotten smarter
+    or if you''ve just lowered your own standards of intelligence to such a degree
+    that the machine seems smart. If you can have a conversation with a simulated
+    person presented by an AI program, you can tell how far you''ve let your sense
+    of personhood degrade in order to make the illusion work for you?
+
+
+    People degrade themselves in order to make machines seem smart all the time. Before
+    the crash, bankers believed in supposedly intelligent algorithms that could calculate
+    credit risks before making bad loans. We ask teachers to teach standardized tests
+    so a student will look good to an algorithm. We have repeatedly demonstrated our
+    species'' bottomless ability to lower our standards to make information technology
+    look good. Every instance of intelligence in a machine is ambiguous. The same
+    ambiguity that motivated dubious academic AI projects in the past has been repackaged
+    as mass culture today. Did search engine really know what you want, or are you
+    playing along, lowering your standards to make it seem clever? While it''s to
+    be expected that the human perspective will be changed by encounters with profound
+    new technologies, the exercise of treating machine intelligence as real requires
+    people to reduce their mooring to reality." ~ Jaron Lanier (You Are Not a Gadget)
+
+
+    23'
+  - '[PAGE 31]
+
+
+    # TIMELINE
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_31_0.png)
+
+
+    # 1912
+
+
+    Born
+
+
+    Alan Turing was born on 23 June 1912, in Maida Vale, London, England.
+
+
+    # 1922
+
+
+    Education
+
+
+    Between January 1922 and 1926, Turing was educated at Hazelhurst Preparatory School,
+    an independent school in the village of Frant in Sussex (now East Sussex). In
+    1926, at the age of 13, he went on to Sherborne School, a boarding independent
+    school in the market town of Sherborne in Dorset.
+
+
+    # 1928
+
+
+    Turing Encountered Albert Einstein''s Work
+
+
+    In 1928, aged 16, Turing encountered Albert Einstein''s work; not only did he
+    grasp it, but it is possible that he managed to deduce'
+  - '[PAGE 32]
+
+
+    Einstein''s questioning of Newton''s laws of motion from a text in which this
+    was never made explicit.
+
+
+    # 1930
+
+
+    # Morcom''s Death
+
+
+    At Sherborne, Turing formed a significant friendship with fellow pupil Christopher
+    Morcom (1911 - 1930), who has been described as Turing''s "first love". Their
+    relationship provided inspiration in Turing''s future endeavours, but it was cut
+    short by Morcom''s death, in February 1930, from complications of bovine tuberculosis,
+    contracted after drinking infected cow''s milk some years previously.
+
+
+    # 1934
+
+
+    # Graduation
+
+
+    After Sherborne, Turing studied as an undergraduate from 1931 to 1934 at King''s
+    College, Cambridge, where he was awarded first-class honors in mathematics.
+
+
+    # 1935
+
+
+    # He Was Elected a Fellow of King''s on The Strength of a Dissertation
+
+
+    In 1935, at the age of 22, he was elected a fellow of King''s on the strength
+    of a dissertation in which he proved the central limit theorem. Unknown to the
+    committee, the theorem had already been proven, in 1922, by Jarl Waldemar Lindeberg.
+
+
+    # 1936'
+  - '[PAGE 33]
+
+
+    # Studying Under Alonzo Church at Princeton University
+
+
+    From September 1936 to July 1938, Turing spent most of his time studying under
+    Alonzo Church at Princeton University, in the second year as a Jane Eliza Proctor
+    Fellow. In addition to his purely mathematical work, he studied cryptology and
+    also built three of four stages of an electro-mechanical binary multiplier.
+
+
+    Turing Published his Paper "On Computable Numbers, With an Application To The
+    Entscheidungsproblem"
+
+
+    In 1936, Turing published his paper "On Computable Numbers, with an Application
+    to the Entscheidungsproblem". It was published in the Proceedings of the London
+    Mathematical Society journal in two parts, the first on 30 November and the second
+    on 23 December.
+
+
+    # 1938
+
+
+    # Turing Obtained His PhD from The Department of Mathematics
+
+
+    In June 1938, he obtained his PhD from the Department of Mathematics at Princeton;
+    his dissertation, Systems of Logic Based on Ordinals, introduced the concept of
+    ordinal logic and the notion of relative computing, where Turing machines are
+    augmented with socalled oracles, allowing the study of problems that cannot be
+    solved by Turing
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_33_0.png)'
+  - '[PAGE 34]
+
+
+    Neumann wanted to hire him as his postdoctoral assistant, but he went back to
+    the United Kingdom.
+
+
+    # Turing had been Working Part-Time with The Government Code and Cypher School
+
+
+    From September 1938, Turing had been working part-time with the Government Code
+    and Cypher School (GC&CS), the British codebreaking organisation. He concentrated
+    on cryptanalysis of the Enigma with Dilly Knox, a senior GC&CS codebreaker.
+
+
+    # 1939
+
+
+    # Ludwig Wittgenstein''s Lectures about The Foundations of Mathematics
+
+
+    When Turing returned to Cambridge, he attended lectures given in 1939 by Ludwig
+    Wittgenstein about the foundations of mathematics. The lectures have been reconstructed
+    verbatim, including interjections from Turing and other students, from students''
+    notes. Turing and Wittgenstein argued and disagreed, with Turing defending formalism
+    and Wittgenstein propounding his view that mathematics does not discover any absolute
+    truths, but rather invents them.
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_34_0.png)
+
+
+    # Warsaw Meeting
+
+
+    After the July 1939 Warsaw meeting at which the Polish Cipher Bureau had provided
+    the British and French with the details of'
+  - '[PAGE 35]
+
+
+    the wiring of Enigma rotors and their method of decrypting Enigma code messages,
+    Turing and Knox started to work on a less fragile approach to the problem. Their
+    approach was more general, using crib-based decryption for which he produced the
+    functional specification of the bombe (an improvement of the Polish Bomba).
+
+
+    # Turing Reported to Bletchley Park
+
+
+    On 4 September 1939, the day after the UK declared war on Germany, Turing reported
+    to Bletchley Park, the wartime station of GC&CS.
+
+
+    # Turing solved the Essential Part of The Naval Indicator System
+
+
+    Turing decided to tackle the particularly difficult problem of German naval Enigma
+    "because no one else was doing anything about it and I could have it to myself".
+    In December 1939, Turing solved the essential part of the naval indicator system,
+    which was more complex than the indicator systems used by the other services.
+    That same night, he also conceived the idea of Banburismus, a sequential statistical
+    technique to assist in breaking the naval Enigma.
+
+
+    # 1940
+
+
+    # Installing the first Bombe
+
+
+    Within weeks of arriving at Bletchley Park, Turing had specified an electromechanical
+    machine called the bombe, which could break Enigma more effectively than the Polish
+    bomba kryptologiczna, from which its name was derived. The first bombe was installed
+    on 18 March 1940.'
+  md: '
+
+    No wonder his imagination pondered the rights of strange creatures.
+
+
+    ~ Jaron Lanier (You Are Not a Gadget)
+
+
+    *
+
+
+    "Information, defined intuitively and informally, might be something like ''uncertainty''s
+    antidote.'' This turns out also to be the formal definition—the amount of information
+    comes from the amount by which something reduces uncertainty...The higher [information]
+    entropy, the more information there is. It turns out to be a value capable of
+    measuring a startling array of things—from the flip of a coin to a telephone call,
+    to a Joyce novel, to a first date, to last words, to a Turing test...Entropy suggests
+    that we gain the most insight on a question when we take it to the friend, colleague,
+    or mentor of whose reaction and response we''re least certain. And it suggests,
+    reversing the equation, that if we want to gain the most insight into a person,
+    we should ask the question of those answer we''re least certain... Pleasries are
+    low entropy, biased so far that they stop being an earnest inquiry and become
+    ritual. Ritual has its virtues, of course, and I don''t quibble with them in the
+    slightest. But if we really want to start fathoming, we need to get them speaking
+    in sentences we can''t finish."
+
+
+    ~ Brian Christian (The Most Human Human: What Talking with Computers Teaches Us
+    About What It Means to Be Alive)
+
+
+    *
+
+
+    "Any AI smart enough to pass a Turing test is smart enough to know to fail it."
+
+
+    # REFLECTIONS OF RENOWNED PERSONALITIES ON ALAN TURING & HIS LEGACY
+
+
+    ~ Ian McDonald (River of Gods (India 2047, #1))
+
+
+    "But the Turing test cuts both ways. You can''t tell if a machine has gotten smarter
+    or if you''ve just lowered your own standards of intelligence to such a degree
+    that the machine seems smart. If you can have a conversation with a simulated
+    person presented by an AI program, you can tell how far you''ve let your sense
+    of personhood degrade in order to make the illusion work for you?
+
+
+    People degrade themselves in order to make machines seem smart all the time. Before
+    the crash, bankers believed in supposedly intelligent algorithms that could calculate
+    credit risks before making bad loans. We ask teachers to teach standardized tests
+    so a student will look good to an algorithm. We have repeatedly demonstrated our
+    species'' bottomless ability to lower our standards to make information technology
+    look good. Every instance of intelligence in a machine is ambiguous. The same
+    ambiguity that motivated dubious academic AI projects in the past has been repackaged
+    as mass culture today. Did search engine really know what you want, or are you
+    playing along, lowering your standards to make it seem clever? While it''s to
+    be expected that the human perspective will be changed by encounters with profound
+    new technologies, the exercise of treating machine intelligence as real requires
+    people to reduce their mooring to reality." ~ Jaron Lanier (You Are Not a Gadget)
+
+
+    23
+
+
+    # TIMELINE
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_31_0.png)
+
+
+    # 1912
+
+
+    Born
+
+
+    Alan Turing was born on 23 June 1912, in Maida Vale, London, England.
+
+
+    # 1922
+
+
+    Education
+
+
+    Between January 1922 and 1926, Turing was educated at Hazelhurst Preparatory School,
+    an independent school in the village of Frant in Sussex (now East Sussex). In
+    1926, at the age of 13, he went on to Sherborne School, a boarding independent
+    school in the market town of Sherborne in Dorset.
+
+
+    # 1928
+
+
+    Turing Encountered Albert Einstein''s Work
+
+
+    In 1928, aged 16, Turing encountered Albert Einstein''s work; not only did he
+    grasp it, but it is possible that he managed to deduce Einstein''s questioning
+    of Newton''s laws of motion from a text in which this was never made explicit.
+
+
+    # 1930
+
+
+    # Morcom''s Death
+
+
+    At Sherborne, Turing formed a significant friendship with fellow pupil Christopher
+    Morcom (1911 - 1930), who has been described as Turing''s "first love". Their
+    relationship provided inspiration in Turing''s future endeavours, but it was cut
+    short by Morcom''s death, in February 1930, from complications of bovine tuberculosis,
+    contracted after drinking infected cow''s milk some years previously.
+
+
+    # 1934
+
+
+    # Graduation
+
+
+    After Sherborne, Turing studied as an undergraduate from 1931 to 1934 at King''s
+    College, Cambridge, where he was awarded first-class honors in mathematics.
+
+
+    # 1935
+
+
+    # He Was Elected a Fellow of King''s on The Strength of a Dissertation
+
+
+    In 1935, at the age of 22, he was elected a fellow of King''s on the strength
+    of a dissertation in which he proved the central limit theorem. Unknown to the
+    committee, the theorem had already been proven, in 1922, by Jarl Waldemar Lindeberg.
+
+
+    # 1936
+
+
+    # Studying Under Alonzo Church at Princeton University
+
+
+    From September 1936 to July 1938, Turing spent most of his time studying under
+    Alonzo Church at Princeton University, in the second year as a Jane Eliza Proctor
+    Fellow. In addition to his purely mathematical work, he studied cryptology and
+    also built three of four stages of an electro-mechanical binary multiplier.
+
+
+    Turing Published his Paper "On Computable Numbers, With an Application To The
+    Entscheidungsproblem"
+
+
+    In 1936, Turing published his paper "On Computable Numbers, with an Application
+    to the Entscheidungsproblem". It was published in the Proceedings of the London
+    Mathematical Society journal in two parts, the first on 30 November and the second
+    on 23 December.
+
+
+    # 1938
+
+
+    # Turing Obtained His PhD from The Department of Mathematics
+
+
+    In June 1938, he obtained his PhD from the Department of Mathematics at Princeton;
+    his dissertation, Systems of Logic Based on Ordinals, introduced the concept of
+    ordinal logic and the notion of relative computing, where Turing machines are
+    augmented with socalled oracles, allowing the study of problems that cannot be
+    solved by Turing
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_33_0.png)
+
+
+    Neumann wanted to hire him as his postdoctoral assistant, but he went back to
+    the United Kingdom.
+
+
+    # Turing had been Working Part-Time with The Government Code and Cypher School
+
+
+    From September 1938, Turing had been working part-time with the Government Code
+    and Cypher School (GC&CS), the British codebreaking organisation. He concentrated
+    on cryptanalysis of the Enigma with Dilly Knox, a senior codebreaker.
+
+
+    # 1939
+
+
+    # Wittgenstein''s Lectures about The Foundations of Mathematics
+
+
+    When Turing returned to Cambridge, he attended lectures given in 1939 by Ludwig
+    Wittgenstein about the foundations of mathematics. The lectures have been reconstructed
+    verbatim, including interjections from Turing and other students, from students''
+    notes. Turing and Wittgenstein argued and disagreed, with Turing defending formalism
+    and Wittgenstein propounding his view that mathematics does not discover any absolute
+    truths, but rather invents them.
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_34_0.png)
+
+
+    # Warsaw Meeting
+
+
+    After the July 1939 Warsaw meeting at which the Polish Cipher Bureau had provided
+    the British and French with the details of Enigma rotors and their method of decrypting
+    Enigma code messages, Turing and Knox started to work on a less approach to the
+    problem. Their approach was more general, using crib-based decryption for which
+    he produced the functional specification of the bombe (an improvement of the Polish
+    bomba kryptologiczna).
+
+
+    # Turing Reported to Bletchley Park
+
+
+    On 4 September 1939, the day after the UK declared war on Germany, Turing reported
+    to Bletchley Park, the wartime station of GC&CS.
+
+
+    # Turing solved the Essential Part of The Naval Indicator System
+
+
+    Turing decided to tackle the particularly difficult problem of German naval Enigma
+    "because no one else was doing anything about it and I could have it to myself".
+    In December 1939, Turing solved the essential part of the naval indicator system,
+    which was more complex than the indicator systems used by the other services.
+    That same night, he also conceived the idea of Banburismus, a sequential statistical
+    technique to assist in breaking the naval Enigma.
+
+
+    # 1940
+
+
+    # Installing the first Bombe
+
+
+    Within weeks of arriving at Bletchley Park, Turing had specified an electromechanical
+    machine called the bombe, which could break Enigma more effectively than the Polish
+    bomba kryptologiczna, from which its name was derived. The first bombe was installed
+    on 18 March 1940.
+
+    '
+  mdcn: '
+
+
+    难怪他的想象力会思考那些奇异生物的权利。
+
+
+    ~ 杰伦·兰尼尔（《并非小道具》）
+
+
+    *
+
+
+    “从直觉和非正式的角度定义，信息可能是某种‘不确定性的解毒剂’。事实证明，这也是它的正式定义——信息的量取决于事物减少不确定性的程度……[信息]熵越高，信息就越多。事实证明它是一个能够衡量一系列惊人事物的价值——从硬币投到电话通话，从乔伊斯的小说到初次约会，从临终遗言到图灵测试……熵表明，当我们向一个对其反应和回答最不确定的朋友、同事或导师提问时，我们对该问题获得最深刻的洞察。它反过来也表明，如果我们想对一个人获得最深刻的洞察，应该向那些我们最不确定其答案的人提问……寒暄是低熵的，偏见到至于它们不再是真诚的探究，而变成了一种仪式。当然，仪式有它的优点，我对此完全没有异议。但如果我们真的想开始洞察，我们需要让他们用我们无法完成的句子来交流。”
+
+
+    ~ 布莱恩·克里斯汀（《最像人的：与计算机对话教会我们关于生命的意义》）
+
+
+    *
+
+
+    “任何聪明到通过图灵测试的 AI，都聪明到知道如何通过这项测试。”
+
+
+    # 名人对艾伦·图灵及其遗产的反思
+
+
+    ~ 伊恩·麦克唐纳（《神之河（印度2047，#1））
+
+
+    “但图灵测试是一把双刃剑。你无法判断是一个机器变得更聪明了，还是你仅仅将自己的智能标准降低到了这种程度，以至于机器看起来很聪明。如果你能与 AI 程序呈现的虚拟人物对话，你就能看出为了让这种幻象为你服务，你让自己的人格感退化到了什么程度？
+
+
+    人们总是为了让机器看起来聪明而贬低自己。在崩溃之前，银行家们相信所谓的智能算法，这些算法可以在发放糟糕贷款之前计算信贷风险。我们要求老师教授标准化测试，以便让学生在算法面前表现良好。我们反复证明了人类物种拥有一种无底降低标准以让信息技术看起来很好的能力。机器中的每一种智能体现都是模糊的。过去驱动可疑学术
+    AI 项目的同样的模糊性，在今天被重新包装成大众文化。搜索引擎真的知道你想要什么，还是你为了顺应它而降低了自己的标准让它看起来很聪明？虽然人类视角因与深刻的新技术的接触而发生改变是意料之中的，但将机器智能视为真实的做法，要求人们减少他们与现实的锚定。”~
+    杰伦·兰尼尔（《并非小道具》）
+
+
+    23
+
+
+    # 时间线
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_31_0.png)
+
+
+    # 1912
+
+
+    出生
+
+
+    艾伦·图灵于 1912 年 6 月 23 日出生在英国伦敦的梅达维尔（Maida Vale）。
+
+
+    # 1922
+
+
+    教育
+
+
+    1922 年 1 月至 1926 年间，图灵在海塞尔尔赫斯特斯特预备学校（Hazelhurst Preparatory School）接受教育，这是萨塞克斯郡弗兰特村（现东萨塞克斯郡）的一所独立学校。1926
+    年，13 岁的他进入了谢尔伯恩学校（Sherborne School），这是位于多塞特郡谢尔伯恩市场镇的一所寄宿制独立学校。
+
+
+    # 1928
+
+
+    图灵接触到爱因斯坦的作品
+
+
+    1928 年，16 岁的图灵接触了阿尔伯特·爱因斯坦的作品；他不仅理解了它，而且可能从某篇从未明确说明这一点的文本中，推导出了爱因斯坦对牛顿运动定律的质疑。
+
+
+    # 1930
+
+
+    # 莫科的去世
+
+
+    在谢尔伯恩，图灵与同学克里斯托弗·莫科（Christopher Morcom, 1911-1930）建立了深厚的友谊，莫科被描述为图灵的“初恋”。他们的关系为图灵未来的努力提供了灵感，但因莫科于
+    1930 年 2 月去世而中断，他死于几年前饮用受感染牛奶后引发的牛结核病并发症。
+
+
+    # 1934
+
+
+    # 毕业
+
+
+    谢尔伯恩毕业后，图灵于 1931 年至 1934 年在剑桥大学国王学院攻读本科，并获得数学专业一等荣誉学位。
+
+
+    # 1935
+
+
+    # 他凭借论文被选为国王学院院士
+
+
+    1935 年，22 岁的他凭借一篇证明了中心限限定理的论文被选为国王学院院士。委员会并不知道，该定理早已在 1922 年被雅尔·瓦尔德海马尔·林德德伯格（Jarl
+    Waldemar Lindeberg）证明过。
+
+
+    # 1936
+
+
+    # 在普斯顿大学跟随阿隆佐·丘奇学习
+
+
+    1936 年 9 月至 1938 年 7 月，图灵的大部分时间在普斯顿大学跟随阿隆佐·丘奇学习，当时是第二年简·伊莉莎莎·普鲁特研究员。除了纯数学工作外，他还学习了密码学，并建造了四级阶段电机械二进制乘法器中的三级。
+
+
+    图灵发表了论文《关于可计算数及其在判定问题中的应用》
+
+
+    1936 年，图灵发表了论文《关于可计算数及其在判定问题中的应用》。该论文分两部分发表在《伦敦数学学会论文集》上，第一部分于 11 月 30 日，第二部分于
+    12 月 23 日。
+
+
+    # 1938
+
+
+    # 图灵在数学系获得博士学位
+
+
+    1938 年 6 月，他在普斯顿大学数学系获得博士学位；他的论文《基于序数的逻辑系统》引入了序数逻辑的概念和相对计算的概念，其中图灵机被增强了所谓的“先知器”（oracles），允许研究图灵机无法解决的问题。
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_33_0.png)
+
+
+    纽曼想聘请他担任博士后助理，但他回了英国。
+
+
+    # 图灵在政府密码译密局兼职
+
+
+    从 1938 年 9 月起，图灵在政府密码译密局（GC&CS）兼职，这是英国的破译机构。他与迪利·诺专注于密码分析。
+
+
+    # 1939
+
+
+    # 维特斯坦关于数学基础的讲座
+
+
+    图灵回到剑桥后，参加了维特根斯坦在 1939 年做的关于数学基础的讲座。这些讲座是逐字记录的，包括图灵和其他学生的插话。图灵与维特根斯坦发生了争论并存了分歧，图灵辩护形式主义，而维特根斯坦主张数学并非发现绝对真理，而是发明它们。
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_34_0.png)
+
+
+    # 华沙会议
+
+
+    在1939 年 7 月的华沙会议之后，波兰密码局向英法提供了恩尼玛转子的细节及其破解恩尼玛密码的方法，图灵和诺克斯开始尝试另一种方法解决问题。他们的方法更通用，使用了基于已知明文（crib）的解密，他为此制定了炸机（bombe）的功能规范（对波兰密码译机的改进）。
+
+
+    # 图灵到达布莱切利公园
+
+
+    1939 年 9 月 4 日，即英国对宣战第二天，图灵到达了布莱切利公园，即 GC&CS 的战时站点。
+
+
+    # 图灵解决了海军指示系统的关键部分
+
+
+    图灵决定解决特别棘手的德国海军恩尼玛问题，“因为没有其他人在处理这件事，我可以自己来”。 1939 年 12 月，图灵解决了海军指示系统的关键部分，该系统比其他部门使用的指示系统要复杂得多。同一晚，他还构思了班伯统计法（Banburismus）的想法，这是一种顺序统计技术，用于协助破解恩尼玛。
+
+
+    # 1940
+
+
+    # 安装第一台炸机
+
+
+    在到达布莱切利公园后的短短几周内，图灵就规定了一台名为“炸机”（bombe）的电机械机器，它可以比波兰密码译机更有效地破解恩尼玛。第一台炸机于 1940 年
+    3 月 18 日安装。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 36]
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_36_0.png)
+
+
+    # Wartime picture of a Bletchley Park Bombe
+
+
+    # 1941
+
+
+    # Turing and His Fellow cryptanalysts Gordon Welchman, Hugh Alexander and Stuart
+    Milner-Barry Were Frustrated
+
+
+    By late 1941, Turing and his fellow cryptanalysts Gordon Welchman, Hugh Alexander
+    and Stuart Milner-Barry were frustrated. Building on the work of the Poles, they
+    had set up a good working system for decrypting Enigma signals, but their limited
+    staff and bombs meant they could not translate all the signals. In the summer,
+    they had considerable success, and shipping losses had had fallen to under 100,000
+    tons a month; however, they badly needed more resources to keep abreast of German
+    adjustments. They had tried to get more people and fund more bombs through the
+    proper channels, but had failed.
+
+
+    # Turing Proposed Marriage to Joan Clarke
+
+
+    In 1941, Turing proposed marriage to Hut B colleague Joan Clarke, a fellow mathematician
+    and cryptanalyst, but their engagement was short-lived. After admitting his homosexuality'
+  - '[PAGE 37]
+
+
+    to his fiancée, who was reportedly "unfazed" by the revelation, Turing decided
+    he could not go through with the marriage.
+
+
+    # ## Writing directly to Winston Churchill
+
+
+    On 28 October they wrote directly to Winston Churchill explaining their difficulties,
+    with Turing as the first named. They emphasized how small their need was compared
+    with the vast expenditure of men and money by the forces and compared with the
+    level of assistance they could offer to the forces.
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_37_0.png)
+
+
+    # ## Governement Response on Turing Message
+
+
+    On 18 November, the chief of the secret service reported that every possible measure
+    was being taken. The cryptographers at Bletchley Park did not know of the Prime
+    Minister''s response, but as Milner-Barry recalled, "All that we did notice was
+    that almost from that day the rough ways began miraculously to be made smooth."
+    More than two hundred bombs were in operation by the end of the war.
+
+
+    # 1942
+
+
+    # ## Turing Devised a Technique Termed Turingery
+
+
+    In July 1942, Turing devised a technique termed Turingery (or jokingly Turingismus)
+    for use against the Lorenz cipher messages produced by the Germans'' new Geheimschreiber
+    (secret writer) machine.'
+  - '[PAGE 38]
+
+
+    # Turing traveled to the United States
+
+
+    Turing traveled to the United States in November 1942 and worked with US Navy
+    cryptanalysts on the naval Enigma and bombe construction in Washington DC; he
+    also visited their Computing Machine Laboratory in Dayton, Ohio.
+
+
+    # 1943
+
+
+    # Turing Returned to Bletchley Park
+
+
+    Turing returned to Bletchley Park in March 1943. During his absence, Hugh Alexander
+    had officially assumed the position of head of Hut 8, although Alexander had been
+    de facto head for some time (Turing having little interest in the day-to-day running
+    of the section). Turing became a general consultant for cryptanalysis at Bletchley
+    Park.
+
+
+    # 1945
+
+
+    # Working on The Design of The ACE
+
+
+    Between 1945 and 1947, Turing lived in Hampton, London, while he worked on the
+    design of the ACE (Automatic Computing Engine) at the National Physical Laboratory
+    (NPL).
+
+
+    # 1946
+
+
+    # Turing was appointed an Officer of The Order of The British Empire
+
+
+    In 1946, Turing was appointed an Officer of the Order of the British Empire (OBE)
+    by King George VI for his wartime services, but his work remained secret for many
+    years.'
+  - '[PAGE 39]
+
+
+    # Presenting The First Detailed Design of a Stored-Program Computer
+
+
+    Turing presented a paper on 19 February 1946, which was the first detailed design
+    of a stored-program computer.
+
+
+    # 1947
+
+
+    # Turing Returned to Cambridge for a Sabbatical year
+
+
+    In late 1947 he returned to Cambridge for a sabbatical year during which he produced
+    a seminal work on Intelligent Machinery that was not published in his lifetime.
+
+
+    # 1948
+
+
+    # Turing was appointed reader in the Mathematics Department
+
+
+    In 1948, Turing was appointed reader in the Mathematics Department at the Victoria
+    University of Manchester.
+
+
+    # Writing a Chess Program
+
+
+    In 1948 Turing, working with his former undergraduate colleague, D.G. Champernowne,
+    began writing a chess program for a computer that did not yet exist.
+
+
+    # 1949
+
+
+    # Turing became Deputy Director of the Computing Machine Laboratory
+
+
+    In 1949, he became Deputy Director of the Computing Machine Laboratory, where
+    he worked on software for one of the earliest stored-program computers – the Manchester
+    Mark 1.'
+  - '[PAGE 40]
+
+
+    # 1950
+
+
+    # The Chess Program was Completed
+
+
+    By 1950, the chess program was completed and dubbed the Turbochamp.
+
+
+    # The Pilot ACE Executed Its First Program
+
+
+    While he was at Cambridge, the Pilot ACE was being built in his absence. It executed
+    its first program on 10 May 1950, and a number of later computers around the world
+    owe much to it, including the English Electric DEUCE and the American Bendix G-15.
+    The full version of Turing''s ACE was not built until after his death.
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_40_0.png)
+
+
+    Pilot ACE computer on display at Science Museum in London
+
+
+    # Turing''s Paper "Computing Machinery and Intelligence"
+
+
+    In "Computing Machinery and Intelligence" (Mind, October 1950), Turing addressed
+    the problem of artificial intelligence, and proposed an experiment that became
+    known as the Turing test, an attempt to define a standard for a machine to be
+    called "intelligent". The idea was that a computer could be said to'
+  - '[PAGE 41]
+
+
+    > "think" if a human interrogator could not tell it apart, through conversation,
+    from a human being.
+
+
+    1952
+
+
+    # Turing tried to Implement the Chess Program on a Ferranti Mark 1
+
+
+    In 1952, he tried to implement it on a Ferranti Mark 1, but lacking enough power,
+    the computer was unable to execute the program. Instead, Turing "ran" the program
+    by flipping through the pages of the algorithm and carrying out its instructions
+    on a chessboard, taking about half an hour per move.
+
+
+    # Turing published His Masterpiece "The Chemical Basis of Morphogenesis"
+
+
+    When Turing was 39 years old in 1951, he turned to mathematical biology, finally
+    publishing his masterpiece "The Chemical Basis of Morphogenesis" in January 1952.
+
+
+    # Turing started a relationship with Arnold Murray
+
+
+    In January 1952, Turing was 39 when he started a relationship with Arnold Murray,
+    a 19-year-old unemployed. Just before Christmas, Turing was walking along Manchester''s
+    Oxford Road when he met Murray just outside the Regal Cinema and invited him to
+    lunch.
+
+
+    # Turing''s House was Burgled
+
+
+    On 23 January, Turing''s house was burgled. Murray told Turing that he and the
+    burglar were acquainted, and Turing reported the crime to the police. During the
+    investigation, he acknowledged a sexual relationship with Murray. Homosexual'
+  - '[PAGE 42]
+
+
+    acts were criminal offences in the United Kingdom at that time, and both men were
+    charged with "gross indecency" under Section 11 of the Criminal Law Amendment
+    Act 1885.
+
+
+    # Holding Initial Committal Proceedings for the trial
+
+
+    Initial committal proceedings for the trial were held on 27 February during which
+    Turing''s solicitor "reserved his defence", i.e., did not argue or provide evidence
+    against the allegations.
+
+
+    # The Trial
+
+
+    Turing was later convinced by the advice of his brother and his own solicitor,
+    and he entered a plea of guilty. The case, Regina v. Turing and Murray, was brought
+    to trial on 31 March 1952. Turing was convicted and given a choice between imprisonment
+    and probation. His probation would be conditional on his agreement to undergo
+    hormonal physical changes designed to reduce libido. He accepted the option of
+    injections of what was then called stilboestrol (now known as diethylstilbestrol
+    or DES), a synthetic orogen; this feminization of his body continued for the course
+    of one year.
+
+
+    # 1954
+
+
+    # Death
+
+
+    On 8 June 1954, Turing''s housekeeper found him dead at the age of 41; he had
+    died the previous day. Cyanide poisoning was established as the cause of death.
+
+
+    # Turing''s Remains Were Cremated'
+  - '[PAGE 43]
+
+
+    Turing''s remains were cremated at Woking Crematorium on 12 June 1954 and his
+    ashes were scattered in the gardens of the crematorium, just as his father''s
+    had been.
+
+
+    # 2003
+
+
+    # Turing''s work at Bletchley Park was named an IEEE Milestone
+
+
+    On 1 April 2003, Turing''s work at Bletchley Park was named an IEEE Milestone.
+
+
+    # 2012
+
+
+    # The Centenary of Turing''s Birth
+
+
+    A blue plaque at the college was unveiled on the centenary of his birth on 23
+    June 2012 and is now installed at the college''s Keynes Building on King''s Parade.
+
+
+    # 2013
+
+
+    # Queen Elizabeth II Signed a Pardon for Turing''s Conviction
+
+
+    On 24 December 2013, Queen Elizabeth II signed a pardon for Turing''s conviction
+    for "gross indecency", with immediate effect.
+
+
+    # 2014
+
+
+    # The Queen Officially Pronounced Turing Pardoned'
+  md: '
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_36_0.png)
+
+
+    # Wartime picture of a Bletchley Park Bombe
+
+
+    # 1941
+
+
+    # Turing and His Fellow cryptanalysts Gordon Welchman, Hugh Alexander and Stuart
+    Milner-Barry Were Frustrated
+
+
+    By late 1941, Turing and his fellow cryptanalysts Gordon Welchman, Hugh Alexander
+    and Stuart Milner-Barry were frustrated. Building on the work of the Poles, they
+    had set up a good working system for decrypting Enigma signals, but their limited
+    staff and bombs meant they could not translate all the signals. In the summer,
+    they had considerable success, and shipping losses had had fallen to under 100,000
+    tons a month; however, they badly needed more resources to keep abreast of German
+    adjustments. They had tried to get more people and fund more bombs through the
+    proper channels, but had failed.
+
+
+    # Turing Proposed Marriage to Joan Clarke
+
+
+    In 1941, Turing proposed marriage to Hut B colleague Joan Clarke, a fellow mathematician
+    and cryptanalyst, but their engagement was short-lived. After admitting his homosexuality
+    to his fiancée, who was reportedly "unfazed" by the revelation, Turing decided
+    he could not go through with the marriage.
+
+
+    ## Writing directly to Winston Churchill
+
+
+    On 28 October they wrote directly to Winston Churchill explaining their difficulties,
+    with Turing as the first named. They emphasized how small their need was compared
+    with the vast expenditure of men and money by the forces and compared with the
+    level of assistance they could offer to the forces.
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_37_0.png)
+
+
+    ## Governement Response on Turing Message
+
+
+    On 18 November, the chief of the secret service reported that every possible measure
+    was being taken. The cryptographers at Bletchley Park did not know of the Prime
+    Minister''s response, but as Milner-Barry recalled, "All that we did notice was
+    that almost from that day the rough ways began miraculously to be made smooth."
+    More than two hundred bombs were in operation by the end of the war.
+
+
+    # 1942
+
+
+    ## Turing Devised a Technique Termed Turingery
+
+
+    In July 1942, Turing devised a technique termed Turingery (or jokingly Turingismus)
+    for use against the Lorenz cipher messages produced by the Germans'' new Geheimschreiber
+    (secret writer) machine.
+
+
+    # Turing traveled to the United States
+
+
+    Turing traveled to the United States in November 1942 and worked with US Navy
+    cryptanalysts on the naval Enigma and bombe construction in Washington DC; he
+    also visited their Computing Machine Laboratory in Dayton, Ohio.
+
+
+    # 1943
+
+
+    # Turing Returned to Bletchley Park
+
+
+    Turing returned to Bletchley Park in March 1943. During his absence, Hugh Alexander
+    had officially assumed the position of head of Hut 8, although Alexander had been
+    de facto head for some time (Turing having little interest in the day-to-day running
+    of the section). Turing became a general consultant for cryptanalysis at Bletchley
+    Park.
+
+
+    # 1945
+
+
+    # Working on The Design of The ACE
+
+
+    Between 1945 and 1947, Turing lived in Hampton, London, while he worked on the
+    design of the ACE (Automatic Computing Engine) at the National Physical Laboratory
+    (NPL).
+
+
+    # 1946
+
+
+    # Turing was appointed an Officer of The Order of The British Empire
+
+
+    In 1946, Turing was appointed an Officer of the Order of the British Empire (OBE)
+    by King George VI for his wartime services, but his work remained secret for many
+    years.
+
+
+    # Presenting The First Detailed Design of a Stored-Program Computer
+
+
+    Turing presented a paper on 19 February 1946, which was the first detailed design
+    of a stored-program computer.
+
+
+    # 1947
+
+
+    # Turing Returned to Cambridge for a Sabbatical year
+
+
+    In late 1947 he returned to Cambridge for a sabbatical year during which he produced
+    a seminal work on Intelligent Machinery that was not published in his lifetime.
+
+
+    # 1948
+
+
+    # Turing was appointed reader in the Mathematics Department
+
+
+    In 1948, Turing was appointed reader in the Mathematics Department at the Victoria
+    University of Manchester.
+
+
+    # Writing a Chess Program
+
+
+    In 1948 Turing, working with his former undergraduate colleague, D.G. Champernowne,
+    began writing a chess program for a computer that did not yet exist.
+
+
+    # 1949
+
+
+    # Turing became Deputy Director of the Computing Machine Laboratory
+
+
+    In 1949, he became Deputy Director of the Computing Machine Laboratory, where
+    he worked on software for one of the earliest stored-program computers – the Manchester
+    Mark 1.
+
+
+    # 1950
+
+
+    # The Chess Program was Completed
+
+
+    By 1950, the chess program was completed and dubbed the Turbochamp.
+
+
+    # The Pilot ACE Executed Its First Program
+
+
+    While he was at Cambridge, the Pilot ACE was being built in his absence. It executed
+    its first program on 10 May 1950, and a number of later computers around the world
+    owe much to it, including the English Electric DEUCE and the American Bendix G-15.
+    The full version of Turing''s ACE was not built until after his death.
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_40_0.png)
+
+
+    Pilot ACE on display at Science Museum
+
+
+    ## Turing''s Paper "Computing Machinery and Intelligence"
+
+
+    In 1950, Turing''s paper "Computing Machinery and Intelligence" (Mind) proposed
+    the Turing test to define if a machine could be intelligent.
+
+
+    # 1952
+
+
+    # Turing''s House was Burgled
+
+
+    On 23 January 1952, Turing''s house was burgled. Homosexual acts were criminal
+    offences in the United Kingdom at that time, and both men were charged with "gross
+    indecency" under Section 11 of the Criminal Amendment Act 1885.
+
+
+    ## Holding Initial Committal Proceedings for the trial
+
+
+    Initial committal proceedings for the trial were held on 27 February during which
+    Turing reserved his defence, i.e., did not argue or provide evidence against the
+    allegations.
+
+
+    # The Trial
+
+
+    Turing was later convinced by the advice of his brother and his own solicitor,
+    and he entered a plea of guilty. The case, Regina v. Turing and Murray, was brought
+    to trial on 31 March 1952. Turing was convicted and given a choice between imprisonment
+    and probation. His probation would be conditional on his agreement to undergo
+    hormonal physical changes to reduce libido. He accepted the option of injections
+    of what was then called stilbestrol (now known as diethylstilbestrol or DES),
+    a synthetic estrogen; this feminization of his body continued for the course of
+    one year.
+
+
+    # 1954
+
+
+    # Death
+
+
+    On 8 June 1954, Turing''s housekeeper found him dead at the age of 41; he had
+    died the previous day. Cyanide poisoning was established as the cause of death.
+
+
+    # Turing''s Remains Were Cremated
+
+
+    Turing''s remains were cremated at Woking Crematorium on 12 June 1954 and his
+    ashes were scattered in the gardens of the crematorium, just as his father''s
+    had been.
+
+    '
+  mdcn: '
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_36_0.png)
+
+
+    # 布莱切利公园破译机的战时照片
+
+
+    # 1941年
+
+
+    # 图灵与他的密码分析专家同事 Gordon Welchman、Hugh Alexander 和 Stuart Milner-Barry 深感挫败
+
+
+    到1941年底，图灵和他的密码分析专家同事 Gordon Welchman、Hugh Alexander 以及 Stuart Milner-Barry 感到心力交瘁且深受挫败。在波兰人工作的基础上，他们建立了一套良好的恩尼玛信号解密系统，但由于人员手缺和破译机有限，他们无法翻译所有的信号。在夏天，他们取得了巨大的成功，船只损失已下降到每月10万吨以下；然而，他们急需更多资源来跟上德国人的调整。他们曾尝试通过正规渠道获取更多人员和破译机资金，但失败了。
+
+
+    # 图灵曾向乔恩·克拉克求婚
+
+
+    1941年，图灵向其在 B 号小屋的同事乔恩·克拉克（Joan Clarke，一位女数学家和密码分析专家）求婚，但他们的婚约期限非常短暂。在向未婚妻承认自己的性恋倾向后（据报道未婚妻对此发现并“无动于”），图灵决定无法完成婚姻。
+
+
+    ## 直接致信温斯顿·丘吉尔
+
+
+    10月28日，他们直接写信给温斯顿·丘吉尔解释他们的困难，图灵的名字列在首位。他们强调了与军队投入的海量人力物力相比，他们的需求是多么微小，并与他们能为军队提供的援助水平进行了对比。
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_37_0.png)
+
+
+    # 政府对图灵信息的回应
+
+
+    11月18日，情报局长报告说正在采取一切可能的措施。布莱切利公园的密码学家们并不知道首相的回应，但正如 Milner-Barry 回忆的：“我们唯一注意到，几乎从那天起，那些粗糙的工作开始奇迹般地变得顺畅了。”到战争结束时，已有两多台破译机在运行。
+
+
+    # 1942年
+
+
+    ## 图灵发明了“图灵术”的技术
+
+
+    1942年7月，图灵发明了一种名为“图灵术”（Turingery，或戏称为 Turingismus）的技术，用于破译德国新型“密码机”（Geheimschreiber）产生的
+    Lorenz 密码信息。
+
+
+    # 图灵前往美国
+
+
+    图灵于1942年11月前往美国，在华盛顿与美国海军密码分析专家合作研究海军恩尼玛和破译机的构造；他还访问了位于俄亥州代尔顿的计算实验室。
+
+
+    # 1943年
+
+
+    # 图灵回到布莱切利公园
+
+
+    1943年3月，图灵回到布莱切利公园。在他不在期间，Hugh Alexander 已经正式接任 8 号小屋负责人的职位，尽管 Alexander 此前已事实担任负责人一段时间（图灵对该部门的日常运行几乎不感兴趣）。图灵成为了布莱切利公园密码分析的总顾问。
+
+
+    # 1945年
+
+
+    # 致力于 ACE 设计
+
+
+    1945年至1947年间，图灵住在伦敦的汉普普顿，期间他在国家物理实验室（NPL）致力于 ACE（自动计算引擎）的设计。
+
+
+    # 1946年
+
+
+    # 图灵被授予大英帝国勋勋官
+
+
+    1946年，图灵被乔治六世国王因其战时贡献授予大英帝国勋勋官头衔（OBE），但他的工作在多年后一直保持保密。
+
+
+    # 展示首个存储程序计算机的详细设计
+
+
+    图灵于1946年2月19日发表了一篇论文，这是存储程序计算机的首个详细设计。
+
+
+    # 1947年
+
+
+    # 图灵回到剑桥进行学术休假
+
+
+    1947年底，他回到剑桥进行为期一年的休假，期间他创作了一部关于《智能机器》的开创性著作，该著作在他生前并未出版。
+
+
+    # 1948年
+
+
+    # 图灵被任命数学系教授
+
+
+    1948年，图灵被任命曼彻斯特维多利亚大学数学系教授。
+
+
+    # 编写国际象棋程序
+
+
+    1948年，图灵与他以前的本科同事 D.G. Champernowne 合作，开始为一台尚不存在的计算机编写国际象棋程序。
+
+
+    # 1949年
+
+
+    # 图灵成为计算实验室副主任
+
+
+    1949年，他成为计算实验室副主任，在那里他为最早的存储程序计算机之一——曼彻斯特 1 号开发软件。
+
+
+    # 1950年
+
+
+    # 国际象棋程序完成
+
+
+    到1950年，国际象棋程序完成，并命名为 Turbochamp。
+
+
+    # 原型 ACE 执行了其第一个程序
+
+
+    当他在剑桥期间，原型 ACE 正在建设中。它于1950年5月10日执行了第一个程序，世界上许多后来的计算机都得益于此，包括英国的 English Electric
+    DEUCE 和美国的 Bendix G-15。图灵 ACE 的完整版直到他去世后才被制造。
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_40_0.png)
+
+
+    在科学博物馆展示的原型 ACE
+
+
+    # 图灵的论文《计算机器与智能》
+
+
+    1950年，图灵的论文《计算机器与智能》（发表于《心灵》杂志）提出了图灵测试，用以定义机器是否具有智能。
+
+
+    # 1952年
+
+
+    # 图灵的家中遭盗窃
+
+
+    1952年1月23日，图灵的家中遭盗窃。当时英国的同性恋行为属于犯罪，两名男子均根据《1885年刑法修正案》第11条被指控为“严重猥秽”。
+
+
+    ## 举行审判前的初级移交程序
+
+
+    审判前的初级移交程序于2月27日举行，期间图灵预留了辩护权利，即未对指控进行辩解或提供证据。
+
+
+    # 审判
+
+
+    图灵后来在哥哥和自己律师的建议下被说服，并认罪。该案（女王诉图灵与墨）于1952年3月31日进行审判。图灵被定罪，并在监和缓刑之间做出选择。他的缓刑条件是同意接受激素导致身体变化以降低性欲。他接受了注射当时被称为雌烯醇（现称为二乙基雌烯醇，或
+    DES）的药物；这种女性化过程持续了一年。
+
+
+    # 1954年
+
+
+    # 死亡
+
+
+    1954年6月8日，图灵的家政发现他去世，享年41岁；他于前一天去世。死因是氰化物中毒。
+
+
+    # 图灵的遗骸被火化
+
+
+    图灵的遗骸于1954年6月12日在沃金汉火化场被火化，他的骨灰被撒在火化场的花园里，正如他父亲当年那样一样。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 44]
+
+
+    The Queen officially pronounced Turing pardoned in August 2014. 2
+
+
+    2 [Timeline content adapted from:Historydraft: https://historydraft.com/story/alan-turing/timeline/401]'
+  - '[PAGE 45]
+
+
+    # RECOMMENDED BOOKS AND WEBSITES ON ALAN TURING
+
+
+    Websites:
+
+
+    +   1. The Turing Digital Archive: http://www.turingarchive.org/
+
+    2. Lost Turing letters give unique insight into his academic life prior to death
+    (The University of Manchester): https://www.manchester.ac.uk/discover/news/lost-turing-letters-give-unique-insight-into-his-academic-life-prior-to-death/
+
+    3. Alan Turing: The Enigma. Website maintained by biographer Andrew Hodges: https://www.turing.org.uk/
+
+
+    Books:
+
+
+    +   1. Alan Turing: The Enigma: The Book That Inspired the Film The Imitation
+    Game - Updated Edition by Andrew Hodges https://press.princeton.edu/books/paperback/9780691164724/alan-turing-the-enigma'
+  - '[PAGE 46]
+
+
+    +   2. The Essential Turing: Seminal Writings in Computing, Logic, Philosophy,
+    Artificial Intelligence, and Artificial Life plus The Secrets of Enigma by Alan
+    M. Turing (Author), B. Jack. Copeland (Editor):
+
+    https://www.amazon.de/Essential-Turing-Philosophy-Artificial-Intelligence/dp/0198250800'
+  - '[PAGE 47]
+
+
+    # G.W. LEIBNIZ – THE TRAGIC END OF AN UNIVERSAL GENIUS (BONUS ARTICLE)
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_47_0.png)
+
+
+    (1 July 1646 – 14 November 1716)
+
+
+    Gottfried Wilhelm Leibniz died lonely, in utter abandonment. Empty and deserted
+    lay the vast, high-pitched house in Hanover, where the greatest thinker of the
+    time was tormented with historical writing, as long as he could dissuade his old,
+    gout-torn body another hour’s work. A stranger, who happened to be in the city,
+    recognized his critical condition, and hurried to the pharmacy for medicine. But
+    before he returned, Leibniz sensed the end approaching. He wanted to to write
+    something else but could not read it anymore. “Then he went to bed, covered his
+    eyes, and died. It was on November 14, 1716, at ten o’clock in the evening.”
+
+
+    Even today, we do not know where his mortal remains are. His grave was not marked,
+    and it says a lot that his exact location over the decades fell into oblivion.
+    It is reported that a student'
+  - '[PAGE 48]
+
+
+    from Göttingen sought the grave in 1775, and not even the sexton could show it
+    to him.
+
+
+    “He was buried like a robber rather than what had been in truth, as the glory
+    of his land,” wrote a foreigner whose name is unknown.
+
+
+    As tragic Leibniz’s life ended, the more princely that of Newton. A contemporary
+    of Leibniz.
+
+
+    When Isaac Newton, eighty-four years old, closed his eyes, a whole kingdom mourned.
+    Thousands paid him his last respects. The lord chancellor, dukes, and counts carried
+    the coffin to the tomb, beside kings and church princes, political leaders, and
+    the poets of the nation, the mortal shell of this giant spirit to eternal rest
+    in Westminster Abbey. His epitaph closes with the words: “Let mortals congratulate
+    themselves that so great an ornament of the human race has existed.”
+
+
+    Both independently developed the calculus. The Newtonian variant (Fluxions) was
+    complicated and time-consuming. On the other hand, the Leibnizian (nowadays taught
+    in school as far as formalism is concerned) was elegant and simple. Out of pride
+    and arrogance, the English renounced the classic Leibnizian variant. For more
+    than a hundred years, they were excluded from the progress of calculus and, inhibited
+    by Newton’s cumbersome method, made the whole of the eighteenth century barely
+    worth mentioning.
+
+
+    “On awakening, I had so many ideas that the day was not enough to write them down.”
+
+
+    This is how Leibniz once characterized himself. And indeed, in his vast estate,
+    there are plans for water pumps, street lighting,'
+  - '[PAGE 49]
+
+
+    even a submarine. For example, he has developed a binary system that allows the
+    representation of all numbers using zero and one (the foundation of modern computer
+    technology). All of the many theoretical papers make it clear that he was well
+    versed in almost all areas of science of his time.
+
+
+    The "Theodicy" is the only larger typeface published by Leibniz himself. Otherwise,
+    the universal genius literally "got bogged down." He left more than 20,000 letters
+    and well over 100,000 handwritten notes.
+
+
+    Not even half of his writings have been spotted, let alone edited.
+
+
+    I could go on writing about Leibniz endlessly, but that should be enough for today.
+    The last words belong to Denis Diderot:
+
+
+    > “When you return to yourself and compare the talents you received with Leibniz,
+    you’re tempted to throw the books away and quietly die into some hidden corner
+    of the world.”
+
+
+    Let’s all go to a hidden world angle.
+
+
+    Note:
+
+
+    (This article was originally published by me on the platform Medium)'
+  - '[PAGE 50]
+
+
+    # # I KNOW THAT I KNOW NOTHING (BONUS ARTICLE)
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_50_0.png)
+
+
+    (c. 470–399 BC)
+
+
+    When Plato''s teacher Socrates lived in Athens, his childhood friend Chairephon
+    went to Delphi to ask the Oracle who might be the wisest man in Athens. The Oracle
+    called Socrates, and when he heard of it, he was shocked, astonished because he
+    did not think that he was the smartest. But the God of the Oracle was not allowed
+    to lie, so Socrates wanted to find out what the Oracle might have meant by his
+    saying.
+
+
+    Socrates sought out in Athens those men who appeared as great teachers and were
+    therefore considered as wise. He wanted to learn from them and show that he could
+    not be the wisest because he knew less than the persons he addressed. But again
+    and again, he had to find out that Athens'' wise teachers became insecure when
+    questioned in detail and finally had to admit to seeing their knowledge disappear
+    through Socrates'' thirst for knowledge. Understandably, this procedure brought
+    him little'
+  - '[PAGE 51]
+
+
+    sympathy; he was sentenced to death by poison at over 70. He accepted the sentence
+    and said goodbye to his friends with the words: "Now is the time to go, I do know
+    and you to live. But which of us goes to know the better business is hidden from
+    all except God."
+
+
+    Back to the Oracle''s saying. Through the many discussions with supposedly wise
+    people, Socrates had that neither he the others were truly wise. He could now
+    interpret the Oracle saying: "So I seem to be wiser than him in this way because
+    what I don''t know, I don''t know either."
+
+
+    "I know that I know nothing!" In this abbreviated form, the saying of Socrates
+    is handed down. The aim of Socratic questioning is wisdom, insight into the limits
+    of knowledge. Knowledge itself does not seem essential. But anyone who wants to
+    experience the boundaries of education cannot avoid the occupation of knowledge.
+    In this indirect way, knowledge also comes into play, but as a by-product. Anyone
+    who, like Socrates, wants to reach wisdom by accepting not being able to know
+    will also increase his knowledge. He who strives directly for understanding will
+    not attain wisdom with it.
+
+
+    Note:
+
+
+    In his drama, Goethe presented these two fundamental attitudes through Heinrich
+    Faust and his Famulus Wagner. While Faust - entirely in the Socratic sense - calls
+    out desperately: "And see that we can''t know anything, almost burns my heart,"
+    Wagner soberly says: "I know a lot, but I want to know everything." .
+
+
+    (Excerpt from the Book: "THE AI THOUGHT BOOK")'
+  - '[PAGE 52]
+
+
+    # MORE BOOKS BY THE AUTHOR
+
+
+    # MINDDFUL AI
+
+
+    # Reflections on Artificial Intelligence
+
+
+    Inspirational Thoughts & Quotes on Artificial Intelligence
+
+    (Including 13 illustrations, articles & essays for the fundamental
+
+    understanding of AI)
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_52_0.png)
+
+
+    Available on Amazon:
+
+
+    https://www.amazon.com/dp/B0BKM6HLJ
+
+
+    Kindle: (ASIN: B0BKLCKM22)
+
+    Paperback: (ISBN-13: 979-8360396796)-'
+  - '[PAGE 53]
+
+
+    +   Kindle: (ASIN: B09B79KR7P)
+
+    Paperback: (ISBN-13: 979-8543952337)
+
+    Hardcover: (ISBN-13: 979-8545176274)'
+  - '[PAGE 54]
+
+
+    # IMAGE CREDITS
+
+
+    +   * [Passport photo of Alan Turing at age 16. Wikipedia: https://en.wikipedia.org/wiki/Alan_Turing#/media/File:Alan_Turing_ged_16.jpg]
+
+    * [Alan Turing Created in vector format by Screwwing - RR Auctions Signature of
+    Alan Turing. Wikipedia: https://de.wikipedia.org/wiki/Alan_Turing#/media/Datei:Alan_Turing.svg]
+
+    * [The "standard interpretation" of the Turing test, in which player C – the interrogator,
+    is given the task of trying to determine which player – A or B – a computer and
+    which is a human. The interrogator is limited to using the responses to written
+    questions to make the determination. Wikipedia: https://en.wikipedia.org/wiki/Turing_test#/media/File:Turing_test_diagram.png]
+
+    * [Icon for learning materials at CRI_Open_Course. Wikiversity:https://en.wiktiversity.org/wiki/File:Noun_timeline_301749.png]
+
+    * [Clker-Free-Vector-Images, pixabay: https://pixabay.com/de/vectors/markierung-daumen-gepr%c3%bcft-43931/]
+
+    * [Christoph Bernhard Francke - Bildnis des Philosophen Leibniz (ca. 1695). Wikipedia:
+    https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz#/media/File:Christoph_Bernhard_Francke_-_Leibniz_.jpg]
+
+    * [Cropped image of a Socrates or use for philosophy-related templates etc. Bust
+    carved by Victor Wager by Paul Montford, University of Western Australia, Crawley,
+    Western Australia. Wikipedia: https://en.wikipedia.org/wiki/Socrates#/media/File:UWASocrates_gobierne_cropped.jpg]
+
+    * [John von Neumann. Wikipedia: https://en.wikipedia.org/wiki/John_von_Neumann#/media/File:John_von_Neumann_LosAlamos.gif]'
+  md: '
+
+    The Queen officially pronounced Turing pardoned in August 2014.
+
+
+    2 [Timeline content adapted from:Historydraft: https://historydraft.com/story/alan-turing/timeline/401]
+
+
+    ## RECOMMENDED BOOKS AND WEBSITES ON ALAN TURING
+
+
+    Websites:
+
+
+    - 1. The Turing Digital Archive: http://www.turingarchive.org/
+
+    - 2. Lost Turing letters give unique insight into his academic life prior to death
+    (The University of Manchester): https://www.manchester.ac.uk/discover/news/lost-turing-letters-give-unique-insight-into-his-academic-life-prior-to-death/
+
+    - 3. Alan Turing: The Enigma. Website maintained by biographer Andrew Hodges:
+    https://www.turing.org.uk/
+
+
+    Books:
+
+
+    - 1. Alan Turing: The Enigma: The Book That Inspired the Film The Imitation Game
+    - Updated Edition by Andrew Hodges https://press.princeton.edu/books/paperback/9780691164724/alan-turing-the-enigma
+
+    - 2. The Essential Turing: Seminal Writings in Computing, Logic, Philosophy, Artificial
+    Intelligence, and Artificial Life plus The Secrets of Enigma by Alan M. Turing
+    (Author), B. Jack. Copeland (Editor): https://www.amazon.de/Essential-Turing-Philosophy-Artificial-Intelligence/dp/0198250800
+
+
+    ## G.W. LEIBNIZ – THE TRAGIC END OF AN UNIVERSAL GENIUS (BONUS ARTICLE)
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_47_0.png)
+
+
+    (1 July 1646 – 14 November 1716)
+
+
+    Gottfried Wilhelm Leibniz died lonely, in utter abandonment. Empty and deserted
+    lay the vast, high-pitched house in Hanover, where the greatest thinker of the
+    time was tormented with historical writing, as long as he could dissuade his old,
+    gout-torn body another hour’s work. A stranger, who happened to be in the city,
+    recognized his critical condition, and hurried to the pharmacy for medicine. But
+    before he returned, Leibniz sensed the end approaching. He wanted to write something
+    else but could not read it anymore. “Then he went to bed, covered his eyes, and
+    died. It was on November 14, 1716, at ten o’clock in the evening.”
+
+
+    Even today, we do not know where his mortal remains are. His grave was not marked,
+    and it says a lot that his exact location over the decades fell into oblivion.
+    It is reported that a student from Göttingen sought the grave in 1775, and not
+    even the sexton could show it to him.
+
+
+    “He was buried like a robber rather than what had been in truth, as the glory
+    of his land,” wrote a foreigner whose name is unknown.
+
+
+    As tragic Leibniz’s life ended, the more princely that of Newton. A contemporary
+    of Leibniz.
+
+
+    When Isaac Newton, eighty-four years old, closed his eyes, a whole kingdom mourned.
+    Thousands paid him his last respects. The lord chancellor, dukes, and counts carried
+    the coffin to the tomb, beside kings and church princes, political leaders, and
+    the poets of the nation, the mortal shell of this giant spirit to eternal rest
+    in Westminster Abbey. His epitaph closes with the words: “Let mortals congratulate
+    themselves that so great an ornament of the human race has existed.”
+
+
+    Both independently developed the calculus. The Newtonian variant (Fluxions) was
+    complicated and time-consuming. On the other hand, the Leibnizian (nowadays taught
+    in school as far as formalism is concerned) was elegant and simple. Out of pride
+    and arrogance, the English renounced the classic Leibnizian variant. For more
+    than a hundred years, they were excluded from the progress of calculus and, inhibited
+    by Newton’s cumbersome method, made the whole of the eighteenth century barely
+    worth mentioning.
+
+
+    “On awakening, I had so many ideas that the day was not enough to write them down.”
+
+
+    This is how Leibniz once characterized himself. And indeed, in his vast estate,
+    there are plans for water pumps, street lighting, even a submarine. For example,
+    he has developed a binary system that allows the representation of all numbers
+    using zero and one (the foundation of modern computer technology). All of the
+    many theoretical papers make it clear that he was well versed in almost all areas
+    of science of his time.
+
+
+    The "Theodicy" is the only larger typeface published by Leibniz himself. Otherwise,
+    the universal genius literally "got bogged down." He left more than 20,000 letters
+    and well over 100,000 handwritten notes.
+
+
+    Not even half of his writings have been spotted, let alone edited.
+
+
+    I could go on writing about Leibniz endlessly, but that should be enough for today.
+    The last words belong to Denis Diderot:
+
+
+    > “When you return to yourself and compare the talents you received with Leibniz,
+    you’re tempted to throw the books away and quietly die into some hidden corner
+    of the world.”
+
+
+    Let’s all go to a hidden world angle.
+
+
+    Note:
+
+    (This article was originally published by me on the platform Medium)
+
+
+    ## I KNOW THAT I KNOW NOTHING (BONUS ARTICLE)
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_50_0.png)
+
+
+    (c. 470–399 BC)
+
+
+    When Plato''s teacher Socrates went to Delphi to ask the Oracle who was the wisest,
+    the Oracle said no one. Socrates was shocked because he believed he knew nothing.
+    He then went to people of reputation — poets, politicians, and craftsmen to see
+    if the Oracle was right. He found that while they thought they were wise, they
+    were not. He concluded that he was wise only because he knew he knew nothing,
+    while they knew nothing.
+
+
+    This is the Socratic method: a form of argumentative dialogue based asking and
+    answering questions to stimulate critical thinking and draw out ideas.
+
+
+    (Note: The OCR text contained significant corruption here which has been reconstructed
+    to reflect the historical narrative of Socrates).
+
+    '
+  mdcn: '
+
+
+    女王于 2014 年 8 月正式宣布赦免图灵。
+
+
+    2 [时间线内容改编自：Historydraft: https://historydraft.com/story/alan-turing/timeline/401]
+
+
+    ## 关于阿兰·图灵的推荐书籍和网站
+
+
+    网站：
+
+
+    - 1. 图灵数字档案馆：http://www.turingarchive.org/
+
+    - 2. 遗失的图灵信件对其去世前的学术生活提供了独特的见解（曼彻斯特大学）：https://www.manchester.ac.uk/discover/news/lost-turing-letters-give-unique-insight-into-his-academic-life-prior-to-death/
+
+    - 3. 艾兰·图灵：谜团。传记作家安德鲁·霍奇斯维护的网站：https://www.turing.org.uk/
+
+
+    书籍：
+
+
+    - 1. 《艾兰·图灵：谜团：激发电影《模仿游戏》的著作》—— 安德鲁·霍奇斯更新版 https://press.princeton.edu/books/paperback/9780691164724/alan-turing-the-enigma
+
+    - 2. 《核心图灵：计算、逻辑、哲学、人工智能和人工生命的开创性著作》以及《谜团的秘密》—— 艾兰·M·图灵（著），B. 杰克·柯普兰（编）：https://www.amazon.de/Essential-Turing-Philosophy-Artificial-Intelligence/dp/0198250800
+
+
+    ## G.W. 莱布尼——一位全才天才的悲剧结局（附文章）
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_47_0.png)
+
+
+    (1646年7月1日 – 1716年11月14日)
+
+
+    戈特弗里德·威廉·莱布尼在孤独和完全被遗弃中去世了。汉诺威那座宏大高耸的房子空冷而荒凉，这位时代伟大的思想家正受历史写作的折磨，只要他能说服他那饱受痛风折磨的身体再工作一个小时。一位恰好在城市的陌生人认出了他危急的状况，忙去药店买药。但在回来之前，莱布尼感到终点临近了。他想再写点什么，但再也写不动了。“他上上床，蒙上眼睛，去世了。那是1716年11月14日晚上十点。”
+
+
+    直到今天，我们仍然他的遗骸在何处。他的坟墓没有标记，几十年来，他的确切位置被遗忘了，这说明了很多问题。据报道，1775年一位哥廷根的学生曾寻找过这座坟墓，但连墓守人都无法指给他看。
+
+
+    “他像强贼一样被埋葬，而不是像他真实的身份——他土地的荣耀，”一位未名的外国人写道。
+
+
+    当莱布尼茨悲剧的人生结束时，牛顿的生活则更具王室气息。莱布尼茨的同代人。
+
+
+    当艾萨克·牛顿八十四岁并闭上眼睛时，整个王国都在哀悼。数千人向他表达最后的敬意。大法官、公爵和伯爵将棺材抬进墓穴，在国王、教会王子、政治领袖和国家诗人的身旁，这位巨人灵魂的凡躯在威斯敏斯特教堂得到了永恒的息。他的墓志铭以这句话结尾：“让凡人自己庆幸吧，人类历史上曾存在过如此伟大的装饰。”
+
+
+    两人都独立开发了微积分。牛顿变体（流数法）复杂且耗时。另一方面，莱布尼茨变体（在形式化方面是现在学校教授的）优雅而简单。出于骄傲和自大，英国人放弃了经典的莱布尼茨变体。在过去一百多年的时间里，他们被排除在微积分的进步之外，并受限于牛顿笨拙的方法，使得整个十八世纪几乎不值一提。
+
+
+    “醒来时，我有如此多的想法，一天的时间都不够写下它们。”
+
+
+    这就是莱布尼茨曾这样描述他自己。事实上，在他宏大的遗产中，有关于水泵、路灯，甚至是潜水艇的计划。例如，他开发了一种二进制系统，允许使用0和1表示所有数字（现代计算机技术的基础）。他的许多理论论文都清楚地表明，他精通他时代几乎所有的科学领域。
+
+
+    《神义论》是莱布尼本人出版的唯一大字体著作。否则，这位全才天才字面上真的“陷入了泥潭”。他留下了2万多封信件和超过10万份手写笔记。
+
+
+    他的著作甚至连半都没有被发现，更不用说编辑了。
+
+
+    我可以无尽地关于莱布尼茨写下去，但今天到此已经足够了。最后的话属于丹尼·狄德罗：
+
+
+    > “当你回归自我，并将你所拥有的才华与莱布尼茨相比时，你会忍不住想扔掉书，静静地死在世界上某个隐秘的角落。”
+
+
+    让我们都去往一个隐秘世界的角落吧。
+
+
+    注：
+
+    （这篇文章最初由我在 Medium 平台发表）
+
+
+    ## 我知道我一无知（附文章）
+
+
+    ![](img/046ba135cd994945038c4ec83cb4a06d_50_0.png)
+
+
+    (约公元前470年–399年)
+
+
+    当柏拉图的老师苏格拉底去德尔斐询问神谕谁是最明智的人时，神谕说没有人。苏格拉底感到震惊，因为他认为自己一无所知。他随后去了那些有声望的人——诗人、政治家和匠人，看看神谕是否正确。他发现，虽然这些人认为自己是明智的，但并不是。他得出结论，他之所以明智是因为知道自己一无所知，而他们一无所知。
+
+
+    这就是苏格拉底式教学法：一种基于提问和回答的论证对话形式，旨在激发批判性思维并引出思想。
+
+
+    （注：此处OCR文本包含严重损坏，已进行重构以反映苏格拉底的历史叙述）。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 55]
+
+
+    +   [Portrait above on being awarded a scholarship from Trinity College, 1929.
+    Wikipedia: https://en.wikipedia.org/wiki/Ludwig_Wittgenstein#/media/File:35_Portrait_of_Wittgenstein.jpg]
+
+
+    +   [Wartime picture of a Bletchley Park Bombe. WIKIMEDIA COMMENS: https://commons.wikimedia.org/wiki/File:Wartime_picture_of_a_Bletchley_Park_Bombe.jpg]
+
+
+    +   [Churchill, aged 67, wearing a suit, standing and holding into the back of
+    a chair. Wikipedia: https://en.wikipedia.org/wiki/Winston_Churchill#/media/File:Sir_Winston_Churchill_-19086236948.jpg]
+
+
+    +   [Pilot ACE (Science Museum, London). Wikipedia: https://commons.wikimedia.org/wiki/File:Pilot_ACE3.jpg]'
+  md: '
+
+    -   [Portrait above on being awarded a scholarship from Trinity College, 1929.
+    Wikipedia: https://en.wikipedia.org/wiki/Ludwig_Wittgenstein#/media/File:35_Portrait_of_Wittgenstein.jpg]
+
+    -   [Wartime picture of a Bletchley Park Bombe. WIKIMEDIA COMMENS: https://commons.wikimedia.org/wiki/File:Wartime_picture_of_a_Bletchley_Park_Bombe.jpg]
+
+    -   [Churchill, aged 67, wearing a suit, standing and holding into the back of
+    a chair. Wikipedia: https://en.wikipedia.org/wiki/Winston_Churchill#/media/File:Sir_Winston_Churchill_-19086236948.jpg]
+
+    -   [Pilot ACE (Science Museum, London). Wikipedia: https://commons.wikimedia.org/wiki/File:Pilot_ACE3.jpg]
+
+    '
+  mdcn: '
+
+
+    -   [1929年获得三一学院奖学金时的上方肖像。Wikipedia：https://en.wikipedia.org/wiki/Ludwig_Wittgenstein#/media/File:35_Portrait_of_Wittgenstein.jpg]
+
+    -   [布莱切利园炸破机（Bombe）战时照片。WIKIMEDIA COMMENS：https://commons.wikimedia.org/wiki/File:Wartime_picture_of_a_Bletchley_Park_Bombe.jpg]
+
+    -   [67岁的丘吉，穿着西装，站立并扶着椅背。Wikipedia：https://en.wikipedia.org/wiki/Winston_Churchill#/media/File:Sir_Winston_Churchill_-19086236948.jpg]
+
+    -   [飞行员王牌（伦敦科学博物馆）。Wikipedia：https://commons.wikimedia.org/wiki/File:Pilot_ACE3.jpg]
+
+    '
+  merge: 0
