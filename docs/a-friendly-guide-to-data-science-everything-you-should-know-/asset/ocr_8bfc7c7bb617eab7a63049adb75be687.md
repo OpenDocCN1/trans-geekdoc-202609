@@ -1,0 +1,9 @@
+# Scams
+
+Although DoS attacks are never fully preventable, there are methods for detecting them. Having a plan for how to respond—and then following that plan immediately when an attack is detected—is important.
+
+Scams are one other area that isn't necessarily technically related to security or privacy, but still makes for very bad experiences that can affect both individuals and businesses. There are many bad actors in the world who will take advantage of naïve people through various scams that generally rely on social engineering to manipulate people into doing things like withdrawing money from their banks and sending it to someone. This usually affects individuals more than organizations, sometimes scammers will use their social engineering tricks to impersonate people in an organization to trick their “coworkers” into helping, either with company or personal money or resources.
+
+Scammers are getting more sophisticated every day. It used to be easy to spot things like the infamous Nigerian prince email scams, but scammers have improved their grammar and manipulation skills. They've started impersonating organizations that people find intimidating like the police and IRS. Now they're using voice deepfakes to trick people into thinking they're dealing with a relative or friend on the phone. With everything else, we need to be on alert and suspicious of anything that seems out of the ordinary. If someone is trying to convince you to send money, stop and ask yourself if this makes sense. Call or text the person who's calling you if it's supposedly someone you know on the phone. Remember that the IRS is not going to call you and ask you to send cash cards to some address.
+
+Vigilance is key to keeping organizations, computers, and ourselves safe from the many people trying to get something from us free.

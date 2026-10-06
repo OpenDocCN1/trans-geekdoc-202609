@@ -1,0 +1,9 @@
+# Example 2: Fast and Flexible FinTech
+
+djangostars, a financial technology (FinTech) consultancy and custom software developer, prefers Python in all of its work.³ They have many reasons why they find Python the best language for FinTech, especially for newer companies. One is that it's already preferred among mathematicians and economists, so any work that needs to be put into a system from them is already halfway ready, before “real coding” is getting started. While a lot of FinTech involves data science, there's much more to it that, and Python's great as a multipurpose language. They saying Python combined with Django (a well-established Python-based framework) is a great combination for getting products to market quickly. Additionally, that suite of tools is very flexible and easy to make changes, to something, that's important in FinTech (as opposed to traditional banking). They also found that because Python is relatively easy to learn, it makes collaboration and knowledge transfer to clients smoother because it's so easy for developers and data scientists to explain. Python's very well established, and there are free packages that do almost any imaginable thing.
+
+# The Basics of Computer Programming
+
+Programming languages really are like human languages, just, much simpler. I had a professor who got a computer science degree in the 1980s and convinced his college to count Pascal (another traditional programming language) as his foreign language requirement. That wouldn't happen today, but like human language, programming languages have syntax (the particular words, operators, and the order're written)
+
+> ³“Using Python for FinTech Projects: All You Should Know” by Artur Bachynsky, October 28, 2024, https://djangostars.com/blog/python-for-fintech-projects/

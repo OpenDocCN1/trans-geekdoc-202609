@@ -1,0 +1,7 @@
+include daily standups (very short check-in meetings in progress), a sprint retrospective (looking at how the last sprint went), backlog refinement (adding stories to the backlog and improving the information on them as more things are known), sprint review (where development progress is demoed), and sprint planning. The ethos of Scrum is empowering developers and self-organization.
+
+Kanban is bit looser, but also has a visual board for tracking work on stickers (virtual or physical) that are moved from left to right through the development stages. It is also iterative and is intended to encourage focused work on a smaller number of tasks (usually with limits to how many can be worked at once). It is also flexible, empowers developers, encourages collaboration, and makes it easier to see obstacles quicker.
+
+Many teams have daily meetings where they update the board together by moving stickers on a physical or virtual board or simply go over the change they made since the previous meeting.
+
+Figure 21-1 shows a typical Kanban board. The sections can be almost anything, depending on the type of work it's used for. This one is for software development. In this one, a sticky/task moves from the Stories section (backlog) to To Do when it is going to be worked on soon, then to In Progress once it's started, then into Testing when that work has started, and finally to Done when complete. A Scrum board looks very similar. The only required statuses in Scrum are To do, In Progress, and Done, but other common ones are On Hold, Testing, and Blocked.

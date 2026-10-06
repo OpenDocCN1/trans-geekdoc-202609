@@ -1,0 +1,9 @@
+# Data Storage
+
+Today, data is generally stored digitally in some way, but there are things still stored on paper or even microfiche, a library mainstay pre-Internet (microfiche is a reel of transparent film with miniaturized versions of text and more printed on it). There are many more options for digital storage, including some old ones that aren't used for day-to-day stuff but used for archiving. Some of the older types include magnetic tape (cassettes and video tapes), flash drives, and optical disks (CDs, DVDs, and Blu-Ray). All modern data that is intended for regular use utilizes on hard drives or solid-state drives, but these may be within an organization's own servers on premise or be the cloud, somewhere distant from where you're working on servers in a data center run by Amazon, Google, Microsoft, or even the organization itself. When magnetic tape or other types are used, it's for archiving (snapshots of data and systems for backup purposes, usually daily). I worked at a company where we made backup tapes every night and then took the physical tapes to another location once a week.
+
+In the digital realm, there are several ways to store data, but for the data that data scientists use, it's usually in databases, text files, or spreadsheets (mostly databases). There are many types or formats of all of these. I'll start by talking about spreadsheets and then text files, and I'll move on to a much bigger discussion of database systems.
+
+# Spreadsheets
+
+A spreadsheet is a common way to store data, and finance departments and many others have been using them for decades to store and work with data. They are pretty powerful, the tabular structure is a natural way to store many datasets. When spreadsheets first came out, they revolutionized aspects of data analysis because of their charting and number crunching tools like pivot tables and v-lookups. While technology

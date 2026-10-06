@@ -1,0 +1,11 @@
+CHAPTER 12 TRYING NOT TO MAKE A MESS: DATA COLLECTION AND STORAGE
+
+# # Data Ownership and Management
+
+I've talked abstractly about the "other people" who manage the data, other than the data scientists themselves. Things vary at different companies, but common roles related to data collection and storage are data engineers, analytics engineers, and database administrators. Data engineers are the ones generally responsible for moving data around—doing transformations, cleaning, and so on—before depositing data into a database or another predetermined location. Analytics engineers are specialized data engineers, with more expertise in the needs of analytics, with the idea that they can make good transformation choices to make things easier for data scientists and other analytics users. Finally, database administrators (DBAs) are the ones who manage the database infrastructure itself, including (but not limited to) the database software, sometimes the machines the software is installed on, performance and optimization, and security access rights.
+
+I've also mentioned the importance of data quality and data governance. This is an area that is important, but often not done properly. While the DBAs manage the data where it physically lives and the data engineers handle moving around, who really owns it and is responsible for how good it is? This is always a difficult question to answer. Data governance tries to answer this and also control other aspects of data management.
+
+Data governance is a data management function that aims to ensure that the data is of high quality, usable, secure, and has high integrity. Some of this is high level and deals with issues like data regulations, but we're more concerned with how it relates to the work data scientists do. Usually, data governance people would work with security and DBAs, but not with data scientists. One of the things they do is try to identify data owners. Data can sometimes be expected to be very technical, but there are also cases where a business data owner is sought—someone with the business expertise on the data, as in domain expertise. In HR should own
+
+438

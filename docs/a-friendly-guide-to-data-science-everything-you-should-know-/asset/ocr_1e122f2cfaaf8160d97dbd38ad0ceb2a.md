@@ -1,0 +1,11 @@
+# CHAPTER 3 SETTING UP FOR SUCCESS: THE INFERENTIAL STATISTICS FRAMEWORK AND EXPERIMENTS
+
+Another mathematician had already figured out what that needed to be considered the number of different ways each player could win. Pascal first tried to figure this out and came up with a possible solution based partially on his famous triangle of sums, sending it off to his friend Fermat for a second pair of mathematical eyes. But Fermat was such a natural that he came up with a simpler solution almost effortlessly. Much of the exchange was him trying to get Pascal to understand it, but after Pascal did understand, he made improvements on the approach by simplifying some things.
+
+The solution is a little tricky, but a key point is to understand that from the perspective they took here, a target-10 game split 6-4 is the same as a target-20 at 16-14. There is the same number of ways each player could win in games: player 1 needs more wins and player 2 needs six. It becomes an issue of counting all the possible outcomes, and an unintuitive aspect is that Fermat's method involved counting cases that wouldn't have because one player would have already reached the target wins. The counting starts by recognizing that the game will be concluded within a known number of rounds—the sum of the number each player needs to win minus 1, or 6+4-1=9 in the scenarios here. You take 2 to the power of that calculated number to count the total number of possible outcomes. Then you count the number of ways each player can win and divide that by the total, and that's the proportion of the pot each player should walk away with.
+
+If you found this hard to follow, don't worry—so did one of the best mathematicians in history. The last section of this chapter will address counting because it's fundamental to the probability and inferential statistics we'll address in the next chapter.
+
+# Example 2: Professional Gambling
+
+Poker's been around a long time, but in recent decades it's become a spectator sport and a job for a handful of professional gamblers, with famous players with nicknames like Kid Poker and Poker Brat winning

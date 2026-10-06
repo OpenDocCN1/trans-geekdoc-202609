@@ -1,0 +1,7 @@
+Another common method of determining a good k is the silhouette method. With the silhouette method, you're measuring how well each data point has been clustered by looking at how much it has in common with the other points in its cluster and how different it is from neighboring clusters. It involves calculating a score per point and then the entire result, with a value ranging between -1 and 1, where high numbers indicate good clustering and low bad. This works fine on datasets with a smaller number of features, but the curse of dimensionality rears its head again when there are a lot of features.
+
+The truth is that like a lot of machine learning algorithms, some trial and error is common. The need to provide the number of clusters makes this one a bit of work, but it can be incredibly powerful in identifying meaningful groups.
+
+# Hierarchical Clustering
+
+There are some other clustering methods that are considered hierarchical, with two primary types of hierarchical clustering algorithms, agglomerative and divisive. Agglomerative builds clusters bottom-up, with each point starting as its own cluster and gradually working up to combine clusters appropriately. Divisive is top-down, where we start with one cluster and start splitting into clusters based on characteristics of each cluster. All hierarchical approaches generate a tree-like structure called a dendrogram that shows the hierarchy created going from every data point in its own cluster to a single cluster with everything (agglomerative) or vice versa (divisive).

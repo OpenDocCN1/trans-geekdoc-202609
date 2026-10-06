@@ -1,0 +1,9 @@
+# CHAPTER 25 IS IT YOUR FUTURE? PURSUING A CAREER IN DATA SCIENCE
+
+When you get asked about ways you know you need to grow, you can always go with the old standby, “Sometimes I’m a bit of a perfectionist and am hard on myself.” That’s rather trite now, so see if you can come up with something that’s at least mostly true, but is still a backhanded brag. In general, lying in interviews is bad, but spinning everything positively is the norm.
+
+# The Job Offer
+
+Congratulations! They want to hire you! This can be a very exciting time, especially if you’ve been looking for a while. This is probably a great thing for you you’ve done your research and ensured the team and job feel like a good fit for you. You don’t have to accept right away. Sometimes they’ll want to talk to you first before making a salary offer, so try not to give away how excited you are at this stage (but don’t sound disinterested—for keen and pleased). This is like any negotiation. Ask questions to understand exactly what they’re offering. Sometimes they may ask you if you have other offers pending. You can be honest, or you could imply that you are far in the process with one or two other companies and are waiting while they finish up other interviews. Once you’re done talking to them, you can hang up your laptop and then jump up and down down a few times. But you need to sit down and decide what you want to do. If you really do other irons in the fire, this would be a good time to reach out to the other recruiters for an update. You can explain that you have an offer and would like to be able to make a decision soon. This is especially important if one of the other companies is a job you’re convinced you want more. But you also don’t want to keep the original company’s offer waiting. Just be respectful and rational, and you’ll make the right decision.
+
+Best of luck.

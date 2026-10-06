@@ -1,0 +1,3 @@
+imbalanced data, when the counts of different labels are very different, and the curse of dimensionality, which describes some of the problems that come from having a large number of features in a model. Finally, I explained data leakage, when information gets into your trained model that shouldn't be there.
+
+In the next chapter, we'll be looking at how to see how well your models have done after you've trained them. We'll talk about several metrics that can be used for measuring the performance of models in classification tasks and models in regression tasks, because they can be quite different. I'll also look at some metrics that we use to measure the performance of clustering algorithms.

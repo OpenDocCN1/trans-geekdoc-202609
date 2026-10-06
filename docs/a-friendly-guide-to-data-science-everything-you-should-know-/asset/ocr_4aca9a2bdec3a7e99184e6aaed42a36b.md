@@ -1,0 +1,7 @@
+# About the Author
+
+**Kelly P. Vincent** is a data nerd. As soon as they saw their first spreadsheet, they knew they had to fill it with data and figure out how to analyze it. After doing software engineering work in data science and natural language processing spaces, Kelly landed their dream job—data scientist—at a Fortune 500 company in 2017, before moving on in 2022 to another
+
+Fortune 500 company. They have specialized in the at-first-barely-used programming language Python for nearly 20 years. Kelly has a BA degree in Mathematical Sciences, an MSc degree in Speech and Language Processing, Kelly is also pursuing a Doctor of Technology at Purdue University. They keep their skills up to date with continuing education. They have worked in many different industries that have given them a range of domain knowledge, including education, bioinformatics, microfinancing, B2B tech, and retail.
+
+Kelly hasn't let their love of data and programming get in the way of their other love—writing. They're a novelist in multiple genres and have won several awards for their novels. Kelly considered how they could combine writing and data science and finally spotted an untapped market with the growth of undergraduate data science and analytics degrees.

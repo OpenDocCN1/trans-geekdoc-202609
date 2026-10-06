@@ -1,0 +1,11 @@
+# Education
+
+It's probably not surprising that ML is used in education, too. There are a lot of tools that schools use to manage all their resources and students, and those frequently have tools in them they use ML in some way. For instance, there are tools that scan students' computers looking at their writing, emails, and messages to identify those at risk of suicide.
+
+Tracking, a traditional way of grouping students based on perceived student ability and putting them through different curriculums (“tracks”), can be partially automated. This can determine their future options. This has been done in high schools for colleges, but now it is often assisted by ML tools that can look through extensive amounts of data. Tracking has always been risky for students, who may be virtually locked out of college opportunities because decisions made by others, and now this is handled at least partially by ML.
+
+Tracking isn’t the only thing that can be done with the vast amount of student data out. It also allows schools to identify students that could use some extra help, and can offer that help if they have the resources. Colleges can also use these approaches, and some have found that struggling students and offering them support had very positive outcomes.
+
+The biggest problem with both tracking and cherry-picking students for extra help is that these systems again perpetuate bias because they are trained on data that come out of an already-biased system. Additionally, both come with privacy risks.
+
+One exciting area that uses ML is personalized learning. More and more educational software is coming out, especially for younger students, and it often contains ML that determines what should come after a student completes one lesson. There are also ML tools used to identify fraudulent behavior in learning systems, which is important when it’s used to assess students directly. AI tutors and chatbots are also becoming popular. All these things can definitely be positive, but we need for students to not get lost in technology. This means we need humans to be a part of this system to make sure that students are treated fairly.

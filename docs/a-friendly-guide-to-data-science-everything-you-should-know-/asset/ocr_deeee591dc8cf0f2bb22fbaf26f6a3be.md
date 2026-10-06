@@ -1,0 +1,11 @@
+# CHAPTER 22 ERRORS IN JUDGMENT: BIASES, FALLACIES, AND PARADOXES
+
+to see based on your preconceived notions, and the observer-expectancy effect is where an experimenter manipulates (usually unconsciously) an experiment or their interpretation of data in order to see the result they expect, generally by influencing participant behavior. Questionnaires with leading questions are a typical example of the observer-expectancy effect. It's important to look for these in your design. You want to do the work in such a way that your research arch-nemesis can't find fault in your experiments.
+
+The observer’s paradox is a phenomenon that comes up in social sciences, basically in studies of humans, where the mere act of the researcher observing something changes that thing. It came up in sociolinguistics where linguists tried to study the way people spoke, their presence as an observer changed the way people spoke. It's something that should be considered when humans are being studied.
+
+As we saw in the previous section, keeping an open mind is important. There are some phenomena that can act against that. Groupthink is a phenomenon that occurs when decision-making in a group of people is illogical or dysfunctional because harmony in the group is considered paramount. This can be important in the way data science teams operate. If you know something is wrong, try to be the one brave enough to speak up.
+
+Being open doesn’t mean ignoring important information. A framing bias called domain neglect leads to ignore important knowledge in a domain where we're working in an interdisciplinary context. It's your responsibility to ensure that you have gathered all the relevant info on something, especially when there might be ideas that you don't know about because they come from other fields or parts of the business. This problem can be accomplished by thorough research or talking to colleagues from the other disciplines and teams.
+
+It's also important to ensure you're on the right path. First, always ensure that your project is worth doing and won't have unintended negative consequences. Automation bias is another term for

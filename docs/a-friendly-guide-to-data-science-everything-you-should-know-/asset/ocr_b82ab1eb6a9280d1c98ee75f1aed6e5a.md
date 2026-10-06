@@ -1,0 +1,7 @@
+# CHAPTER 1 WORKING WITH NUMBERS: WHAT IS DATA, REALLY?
+
+it ordinal but also improved our predictions over temperature as a ratio type. We also could have made it interval by dividing it into tendree blocks (0–9.99 degrees, 10–19.99, 20–9.99, etc.). What you can do with data is determined by what data you have and how it can be transformed. Additionally, you may use additional knowledge when deciding how to do this, like you might not use the same bucket ranges for Seattle in Miami. What people see cold as Florida is probably considered quite comfortable in Seattle.
+
+# BUCKETING DATA
+
+We use the term bucketing to describe the process of breaking up a large range of values into a smaller number of values. This can be convenient and also make a better representation of reality. Looking at temperatures, do we really care if its 55° F or 56° F out? Will that one-degree difference make people behave differently, for instance? Generally, it wouldn't, but the difference between those and 30° F would make for different behavior. So a “freezing” bucket might be anything 32° F and below, “cold” might be between 33° F and 45° F, and so on. Obviously, this means there’s a big difference between 32° F and 33° F, but not so much between 40° F and 41° F. There are always tradeoffs, and that’s why data science tests before making these kinds of decisions on transformations.

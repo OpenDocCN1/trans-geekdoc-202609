@@ -1,0 +1,9 @@
+# CHAPTER 21 PUTTING IT ALL TOGETHER: DATA SCIENCE SOLUTION MANAGEMENT
+
+Usually, the fix is to just manually kick off the process one time after the other system is back up and running, and it should go back to working the next scheduled time.
+
+The "something changes" scenario is more difficult. This can be a whole sort of things, including database structure changes (removed or added columns in one of your tables, for instance), a change in permissions on the account that's used to connect to a database, a refresh to a table you were moving to a later time than you've allowed for. There are basically an infinite number of possibilities for your code to be bork. This is actually a huge pain, because now you have to figure it out, and if you're unlucky enough to have only an unhelpful error message (very common, unfortunately), it can be anything—so it's time-consuming to troubleshoot. Sometimes you might find something you need to ask someone else about, and if they're busy, you may be stuck until they respond. If you need to get it working, you'll have to keep going until you figure it out.
+
+# Model Drift and Maintenance
+
+One other area that's important when you have a deployed model, whether it's trained and static or retrained regularly, is the idea of model drift. Model drift is the situation where a model's performance changes over time, usually for the worse. So, checking for that, we monitor the performance of the model over time. As an example, let's say you have a model that's in production and forecasts sales at all stores for the next seven days, running every night. The model itself isn't retrained, so the longer it's in place, the more "out of date" the data is. We may see good performance metric values (for instance, MAPE scores less than 10%) on most days. But after it's been running for a year, a lot more of the MAPE

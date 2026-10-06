@@ -1,0 +1,9 @@
+# Examples of Data Collection and Storage in the Real World
+
+Examples of the power of well-thought-out data collection and storage abound, often fitting in larger infrastructure like a move to the cloud or networking hardware. But these two examples show the value of improving your collection and data storage approaches in the face of challenging and fundamentally messy information and the value of looking outside traditional database systems. As with many things, thinking outside the box can change the game.
+
+# Example 1: A Crisis with Puerto Rico Addresses
+
+Puerto Rico was hit with back-to-back hurricanes in 2017 that knocked out for powers, decimated much of the territory’s infrastructure, and stranded a lot of people. It was a massive disaster that the United States responded to several agencies. People would apply for aid, and the agencies had to approve it and then get that to people.¹ To do this, they were using addresses that federal agencies had, including the US Census Bureau. These particular addresses were collected by census enumerators. But they quickly found that the addresses applicants put on their applications were extremely difficult to match to the official addresses the agencies had on file. They needed to match the aid recipients with known records because they couldn't send it off to unknown people. Census enumerators and residents often have different ideas on how addresses should be written. If you've ever lived American suburbia, it's hard to imagine this happening. But a lot of places have nonstandardized addresses, especially rural areas in many countries,
+
+> ¹Agencies Mobilize to Improve Emergency Response in Puerto Rico through Better Data,” July 26, 2019, Federal Data Strategy, available at https://resources.data.gov/resources/fdspp-pr-emergency-response/

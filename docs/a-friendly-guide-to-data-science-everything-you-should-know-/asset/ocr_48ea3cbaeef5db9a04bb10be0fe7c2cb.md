@@ -1,0 +1,9 @@
+# Large Language Models
+
+A lot of people don't consider LLMs to be a part of NLP—rather it a sister field. I think of LLMs as a specialized type of NLP, just way more advanced than the standard NLP techniques. Most NLP uses use supervised learning (but not all), where LLMs are mostly semi-supervised the amount of data required is so immense that it's impossible to have enough labeled data.
+
+There's so much buzz about LLMs and for good reason—they produce are leaps and bounds more impressive than anything that's come out of NLP after decades of work. And while they are useful for a lot of things, they're not always substantive as we really would like. The fact that hallucinations—basically made-up information that a model invests and presents as fact—are so common that they make it unusable for a lot of purposes. I don't think this is going to (or should) keep us from using them, but they aren't the solution to everything.
+
+There are also serious ethical concerns about using existing LLMs trained by other companies. Much of the data they have used for training was used without permission. There are many lawsuits in progress to lead to any legal changes, but that is probably not going to be the case in many other countries. The EU is taking data privacy and security very seriously, and I anticipate will emerge related to LLMs. Depending on your use case, it can be legally risky to use a commercially available LLM. Or you may just want to use one with dubious origins.
+
+One option for large companies that have a lot of their text is to train their own LLM. There are many other data sources that can be purchased or obtained for free that can supplement a company's data. But this isn't feasible for most smaller companies. Training LLMs has become easier because what were the gold standard in language processing—recurrent neural nets—have been superseded by

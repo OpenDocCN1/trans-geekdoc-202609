@@ -1,0 +1,11 @@
+# Okay, So What Is Data Science?
+
+Data science is the new alchemy. Wave your hands over the crystal ball and business insights and value will come bubbling out and turn into fat bars of gold. The only difference is that alchemy cannot produce anything real, while data science can. It takes more than a quick wave of hands.
+
+Companies throw a lot of buzzwords around like “digital transformation” and “data-driven,” but there’s a real commitment underneath all the fluff to actually make changes to establish a real, usable data infrastructure, nothing is going to change. Companies often hire data scientists who come on board only to find that there’s no data available except for a few spreadsheets around.
+
+If it’s not magic, what is it Data science is fundamentally using intensive techniques to find meaning in data. The point is that it almost always involves techniques that would take too long for a human to do by either the amount of data or the sheer number and complexity of computations. I’ve also said that data science often involves doing data analysis, but these are the parts that data analysts usually don’t.
+
+One thing that makes data science stand out from data analysis is the word “science” in the term. This might be there because it sounds fancier, and data science is generally considered to have more cachet than data analysis. Science sounds more important than analysis. The truth is that there are some aspects of data science that might be science-y, and that’s true of most technical fields. But honestly, a huge chunk of it is art.
+
+And just like data analysis, most of data science is finding, understanding, and preparing the data. This is where domain knowledge—about the data you’re working with—comes in being critical. There is a chapter dedicated to domain knowledge later in the book. It’s only after doing a great deal of work with the data (data understanding, data preparation, and exploratory data analysis) that modeling can be done and lead to valuable insights. Leaders are impatient

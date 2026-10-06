@@ -1,0 +1,11 @@
+# CHAPTER 6 BRINGING IT INTO THE TWENTY-FIRST CENTURY: DATA SCIENCE
+
+**Favorite Project:** Lauren did some cohort analysis while a consultant. She investigated whether social media could be used to offset the loss of data because third-party cookie data is no longer available. She found that, yes, it could be, if you use the right platforms and create effective advertising. The most interesting thing about the project was she found that when done correctly, it could be even more valuable than third-party cookies.
+
+**How Education Ties to the Real World:** Lauren has taught students and worked a lot with interns at her jobs, and she's found that so many of them expect to be easy and are surprised when it's not. Education doesn't focus on flexibility and problem-solving. She's students expect her to give a step-by-step plan for every problem and then be frustrated when she explained it's not cookie-cutter—each problem is a little different. Students also aren't prepared for real-world data. It doesn't always make sense to replace missing values with the mean, for instance.
+
+**Skills Used Most:** The biggest Lauren uses regularly is problem-solving. This is problem-solving of all types. Some recent examples include figuring out what she doesn't know she should know, how to work with cutting-edge tools that don't have good documentation, and how to fix things when a project goes south. These involve critical thinking, and sometimes it can be especially hard when problems aren't always reproducible. Another set of important skills are those that involve working with people. This includes communicating, managing, and storytelling (basically, bringing them along with you).
+
+**Primary Tools Used Currently:** Python and SQL have been critical throughout her career, and she currently uses JupyterHub and Snowflake for most of her work, relying on Google Slides for her presentations.
+
+**Future of Data Science:** We're at a crossroads and need to decide where we should go next. Even though data science and AI are often hyperhyped, there still are going to be big winners—companies and people who adapt and adopt tech early and wisely—and the losers who stay still won't

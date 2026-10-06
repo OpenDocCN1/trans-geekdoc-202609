@@ -1,0 +1,7 @@
+# CHAPTER 6 BRINGING IT INTO THE TWENTY-FIRST CENTURY: DATA SCIENCE
+
+and and can have trouble understanding this, so often data scientists have to explain it repeatedly. So another huge part of data science is dealing with leadership and other people, explaining things and planning details.
+
+However, once the data is ready and the exploratory and other data analysis is done, data scientists can finally get to the part that gives their job its reputation: the modeling. This usually involves machine learning and other types of techniques that fall under the AI label. There are later chapters that often jokingly gets called “fancy math.” There are lots of ways this work gets done, and it may include coding, using a GUI that allows drag-and-drop workflow building, or something in between. A later chapter will talk about the most common tools. Once the data scientists have done these steps and believe they've found interesting things worth sharing, or created a model that will generate forecasts, it's time to figure out how to present it to stakeholders. Another chapter will talk about visualization and presentation.
+
+If this process sounds familiar, it's because it's basically the same as the process for doing data analysis that we saw in the last chapter. The modeling is done in the exploratory analysis and modeling step in the CRISP-DM process, which we saw in Chapter 5, but it's shown again here in Figure 6-2.
