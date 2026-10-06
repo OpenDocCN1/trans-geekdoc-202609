@@ -1,0 +1,5 @@
+# ARTIFICIAL INTELLIGENCE, ETHICS AND THE FUTURE OF WARFARE
+
+This volume examines how the adoption of AI technologies is likely to impact strategic and operational planning, and the possible future tactical scenarios for conventional, unconventional, cyber, space and nuclear force structures. In addition to developments in the USA, Britain, Russia and China, the volume also explores how different Asian and European countries are actively integrating AI into related technologies in their military readiness and command structures. The book will be of great interest to scholars, students and researchers of military and strategic studies, defence studies, artificial intelligence and ethics.
+
+Kaushik Roy is Guru Nanak Chair Professor in the Department of History, Jadpur University, Kolkata, India. He has authored several books from Cambridge University Press, Oxford University Press, Routledge, Springer, etc. and numerous articles in several peer-reviewed journals on the military history of Eurasia. At present, he is associated with PRIO’s ‘Warring with Machines’ project.

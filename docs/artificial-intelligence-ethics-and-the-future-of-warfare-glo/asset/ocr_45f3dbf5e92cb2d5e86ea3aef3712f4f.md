@@ -1,0 +1,14 @@
+# Ethics of AI-based systems in the military 141
+
+with an example from self-driving cars, ‘an AI attack can transform a stop sign into a green light in the eyes of a self-driving car by simply placing a few pieces of tape on the stop itself.¹50 Defining an AI attack (‘adversarial AI’) as ‘the purposeful manipulation of an AI system with each of causing it to malfunction,’ Comiter divides these attacks into two main kinds, each of ‘strike[s] at different weaknesses in the underlying algorithms.’⁵¹
+
++   - Input attacks manipulate what is fed into the AI system in order to alter the output of the system to serve the attacker’s goal. Because every AI system is a simple machine –it takes an input, performs some calculations, and returns an output –manipulating the input allows attackers to affect the output of the system.¹²
+- Poisoning attacks damage the AI model so that once it is deployed, it is inherently flawed and can easily be controlled by the attacker. To poison an AI system, the attacker must constrain the learning process in a way that the model fails on certain attacker-chosen inputs, or ‘learns’ a back door that the attacker can use to control the model in the future. Another motivation is to poison a model so that it fails on particular task or types of input. For example, if a military is training an AI system to detect aircraft, the enemy may poison the learned model so it fails to recognise certain aircraft.⁵³
+
+In addition, traditional forms of attack can be undertaken specifically to breach AI systems when they are carried aboard unmanned surveillance or attack platforms, which employ edge-computing functions.
+
+In edge computing, rather than sending data to a centralised cloud infrastructure for processing, the data and AI algorithms are stored and run directly on the devices deployed in the field. The [US] DoD has made the development of ‘edge computing’ a priority, as the bandwidth to support a cloud-based AI paradigm is unlikely to be available in battlefield environments.⁵⁴
+
+If these platforms are captured or breached, which could compromise related systems.
+
+Such attacks in turn have several different kinds of effects. They ‘can cause damage by making the system malfunction’ (e.g., a car crash caused by the alteration of a stop sign), they can hide relevant data, leaving security systems insecure against incoming attack, and they can degrade faith in a system, so that those responsible for its maintenance take it offline, ‘allowing a true threat to escape detection.’⁵⁵ In the worst case, breach of one AI system can have a cascading effect on systems of a similar kind. Prospect is not unlikely, because cost-saving within military organisations

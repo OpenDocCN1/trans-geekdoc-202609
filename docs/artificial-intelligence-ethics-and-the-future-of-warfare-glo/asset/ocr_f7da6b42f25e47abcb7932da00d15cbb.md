@@ -1,0 +1,13 @@
+# Kaushik Roy
+
+ground, which would allow the operators to take timely corrective actions. The Traffic Collision Avoidance System (TCAS) is an airborne system, originally developed for manned aircraft. It needs to be modified for UAVs to identify collision threats, optical sensors and laser radars (LIDAR) for detecting non-cooperative hostile traffic. radio telephony (voice) contact between the UAV operator and the air traffic control management is a necessity.¹⁵⁵
+
+Training is thelightblue of war and an essential aspect of command. Proper control of the Autonomous Weapon System (AWS) in near combat and combat scenarios requires intense training between military personnel and intelligent machines. From the 2010s, the Indian Army and IAF regularly conducted joint exercises in the Thar Desert of Rajasthan. These joint exercises involved extensive use of UAVs. The three services possess UAVs, but interoperability is an issue due to differences in their command and control systems.¹⁶ What is required a common training framework. Most of these UAVs are geared for ISR and communication roles. There have been attempts to incorporate micro UAVs for directing artillery fire on enemy targets.¹⁷ Colonel Deepak Kumar Gupta of the Indian Army is for raising specialised mission-oriented combat teams equipped with intelligence-based systems. These units, Gupta, need to conduct rigorous physical exercises (not merely computer simulations) to hone their skills for operating across various terrains (urban centers, rural areas, airports and military installations). Only these units would be able to counter both vapour and cloud swarming drone tactics that might be used by the insurgent groups sponsored by hostile foreign powers.¹⁸ Tuner Mukherjee, an Indian civilian analyst, rightly emphasises:
+
+There will be a to develop a new training curriculum to produce technologically literate and AI-calibrated personnel, and an equally proficient testing and validation regime to test these technologies... Most notably, operational paradigms and tactics must be revamped.¹⁹
+
+In an case AWS takes a wrong decision and engages in fratricide of friendly troops and kills civilians, non-combatant property, who will be held responsible? This brings us to the issue of ethics and legality as regards the deployment and use of Lethal Autonomous Weapon Systems (LAWS).
+
+# Ethics, COIN and killer robots
+
+In modern times, India, like other practised nations, adheres to the IHL and tries to follow the guidelines of International Human Rights Law (IHRL). This section evaluates how far the ethics inherent in the principles of

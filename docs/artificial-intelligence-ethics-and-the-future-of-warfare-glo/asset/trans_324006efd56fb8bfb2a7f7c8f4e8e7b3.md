@@ -1,0 +1,157 @@
+
+
+# 270 Gabriel Udeh
+
+科学、毒学与食品技术，第 7 卷（2013），第 14–20 页。特别是 20 页。
+
+- 62. T. Chengeta，“尊严、乌班图、人性与自主武器系统（AWS）辩论：非洲视角，《国际法杂志》，第 13 卷，第 2 期（2016），第 460–502 页。
+- 63. “ISSAfrica (2021)”，“2022年关注的非洲冲突”，访问地址：https://issafrica.org/pcsreport/psc-insights/african-conflicts-to-watch-in-2022，访问于 2022年8月26日。
+- 64. “Alex Vines OBE 博士，董事总经理，非洲恐怖主义”，2021年9月15日，访问地址：https://www.chathamhouse.org/2021/09/terrorism-africa，访问于 2022年8月25日。
+- 65. “土其 Bayraktar TB2 无人机：非洲国家为何购买它们”，2022年8月25日。访问地址：https://www.bbc.com/world-africa-62485325，访问于 2023年1月20日。
+- 66. “土其 Bayraktar TB2 无人机”。
+- 67. “土其 Bayraktar TB2 无人机”。
+- 68. P. Kennedy，“布基纳法索从土耳其购买5架 Bayraktar TB2 无人机”，2022年9月10日，访问地址：https://www.military.africa/2022/09/burkina-faso-buys-bayraktar-tb2-drones-from-turkey/，访问于 2023年1月20日。
+- 69. L. Ekene，“加纳海军获得无人机侦察能力”，2023年1月19日，访问地址：https://www.military.africa/2023/01/ghana-gains-drone-surveillance-capacity/，访问于 2023年1月20日。
+- 70. S. Ledi，“南非陆寻求获取侦察无人机”，2023年1月1日，访问地址：https://www.military.africa/2023/01/south-african-army-seeks-to-acquire-reconnaissance-drones/，访问于 2023年1月20日。
+- 71. S. Ledi，“IDEX 2021：Paramount 发布 N-Raven 侦察性无人机”，2021年2月23日，访问地址：https://www.military.africa/2021/02/idex-2021-paramount-unveils-n-raven-surveillance-uav/，访问于 2023年1月20日。
+- 72. Ledi，“IDEX 2021”。
+- 73. Scharre，《尼日利亚的军事武器》，2016，访问地址：https://oc.world.org/en/profile/bilateral-military-weapons/reporter/nga?redirect=true，访问于 2022年8月20日。
+- 74. 关于 DICOM 的官方信息请访问其首页 https://dicom.gov.ng/。
+- 75. A. Frahan，“2022年尼日利亚国防预算：新增设备与能力”，2022年1月5日，访问地址：https://www.militaryrecognition.com/analysis_focus_nigerian_defense_military_industry_army_nigerian_defense_budget_2022_increased_for_additional_equipment_capabilities，访问于 2022年7月20日。
+- 76. 《Premium时报》（2018年2月），视频：尼日利亚空军演习中的无人机机习，访问地址：https://www.premiumtimes.com/news-news/258893/niger-air-force-drone-tsigami-military-exercise.html，访问于 2022年7月21日。
+- 77. M. Idawamu，“尼日利亚卫星缺失：历程”，2021年4月9日，访问地址：https://africanes.space/replacing-nigerian-satellite-gone-past-the-journey-so-far/，访问于 2022年7月20日。
+- 79. A. Ganiy，“尼日利亚地理信息（GI）共享计划的发展趋势》，2008，4–7页，访问地址：https://2009.state.gov/documents/organization/1820.pdf，访问于 2022年7月20日。
+
+# AI 与武装战斗员的未来
+
+80. 波哈拉利用无人机和战斗员攻击尼日利亚 - BBC 新闻（皮钦语），2018年11月29日，访问地址：https://www.bbc.com/pidgin/tori-463248，访问于 2022年7月20日。
+- 81. H. Hauswedt，“萨赫勒与东非的飞行威胁：简评，《战略安全杂志》，第 14 卷，第 1 期（2020），第 92–105 页。https://www.jst.org/stable/2639979。
+- 82. O. Obaze 等，“疫情后尼日利亚的预算与应对”，Friedrich Ebert 报告，2020年8月18日，第2页，访问地址：https://library.fes.de/pdf-files/nigeria/18220.pdf。
+- 83. Hauswedt，“萨赫勒与东非的飞行威胁：简评”，第1页。
+- 84. Obaze，“疫情后尼日利亚的预算与应对”，第8页。
+- 85. 引用自 Obaze，“疫情后尼日利亚的预算与应对”，第4页。
+- 86. W. Ross，“足够的士兵对抗圣战”，2015年1月22日，访问地址：https://www.bbc.com/news/3903075，访问于 2022年6月12日。
+- 87. Ross，“足够的士兵对抗圣战”。
+- 88. Ross，“足够的士兵对抗圣战”。
+- 89. 引用自 Ross，“足够的士兵对抗圣战”。
+- 90. T. Oriola，“对抗波哈的尼日利亚士兵，《非洲事务》，第 120 卷，第 479 期（2021），第 44–75 页。
+- 91. 红十字国际（ICRC）关于自主武器的立场，2021年5月，访问地址：https://www.icrc.org/en/download/file/icrc_position_on_autonomous_weapons_and.pdf，访问于 2022年7月21日。
+- 92. E. Akinotu，“失控与上升：比特币让尼日利亚陷入恐慌”，2021年7月31日，访问地址：https://www.theguardian.com/technology/2021/jul/31/out-of-control-and-rising-why-bitcoin-has-nigeria-in-panic，访问于 2022年8月21日。
+- 93. Chengeta，“尊严、人性与自主武器系统（AWS）辩论：非洲视角”，第477 页。
+- 94. 路透社，“武装袭击中超过30名尼日利亚士兵死亡”，2021年4月26日，访问地址：https://www.voanews.com/a/more-30-nigerian-soldiers-killed-militant-attack-625075，访问于 2021年6月21日。
+- 95. “武装袭击中超过30名尼日利亚士兵死亡”，日期不详，访问地址：https://www.thisday.com/index.php/2021/07/25/autonomous-weapons-system/，访问于 2022年6月21日。
+- 97. 美利坚合，《致命自主武器的发展与使用中的人机交互》，2018。提交给禁止或限制使用被认为过度伤害或具有无差别影响的常规武器公约政府专家小组报告，2018年8月28日于日内瓦，访问地址：https://reaching-critical.org/images/documents/Disarmament-for/ccw/2018/gge/documents/GGE-WP4.pdf，访问于 2023年1月23日。
+
+# 索引
+
+- 主动扫描阵列 (ESA) 雷达 93
+- 宙斯盾系统战斗侦察 126
+- 空中侦察 233
+- AeroVision 4
+- 空战机 (ACE) 79, 97, 99
+- 空战机动 (ACM) 算法 99
+- 空军座舱自动化系统 (ALIAS) 93
+- 空军 8, 61, 94, 95, 98, 193
+- 空射效应 (ALE) 101
+- 空军力量协作系统 (ATS) 99
+- 算法跨功能团队 (AWCT) 1, 4, 9, 16, 17, 23–34, 36, 40, 43, 45, 50, 52, 53, 63–66, 71, 77, 80, 95, 96, 99, 103, 141, 166, 179–180, 217
+- 空战试验 96, 97
+- AlphaGo 217
+- AlphaZero 109
+- 阿尔基德 15, 196, 203, 205, 207, 262
+- 亚马逊 36, 75, 177, 178, 224
+- 美国内战 258
+- 美国海猎者 257
+- AI 嵌入武器系统 13
+- 防空系统 82
+- 预判与未来思维 159
+- 简制爆炸装置 (IED) 战 222
+- 亚里士德 151
+- 武装部队 56–58; 印度军队; 美国军队 11
+- 武装无人机机群 (AFADS) 9
+- 人工通用智能 (AGI) 74, 109, 238
+- 人工智能 (AI)，在军事行动中 261–265; 227
+- AI 增强武器系统 6
+- AI 驱动机器人 191–194
+- 分析 41
+- 应用 42–78
+- 自主武器系统 256–257
+- 自主性与自主系统的军事应用 38
+- 脑机接口 (BCI) 54–56
+- C4ISR 85–86
+- 挑战 52–53
+- 座舱员 96–97
+- 采集 41
+- 指挥与控制 45–50
+- 指挥与伦理 48–50
+- 商业投资者 30
+- 当前进展 258–261
+- 技术现状 217–218
+- 网络安全 87
+- 空间 14–18
+- 防御专家 30; 1, 33–35
+- 区域 31–33
+- 传播 41
+- 文档 253
+- 双用技术 35–37
+- 地球观测与侦察 27–258
+- 新兴与破坏性技术 (24) 31
+- 人性的终结 24–26
+- 经验学习 92
+- 早期人工智能 61–62
+- 展望 63–65
+- 早期 AI 92
+- 人机协作 (HUMIT) 54–56
+- 印度视角 222–224
+- 集成电路与技术 1
+- 完整性挑战 56–58
+- 印度 7, 114–116
+- 智能 38–42
+- 交叉学科 254
+- 学习算法 1
+- 致命武器系统 (LAWS) 82–84, 219–221
+- 有人与无人机协作 79–100
+- 军事事务 5
+- 军事规划 253
+- 现代空中平台 92–96
+- 自然识别 92
+- 性质与特征 58–61
+- 机会 50–51
+- 重叠技术 34
+- 模式识别 92
+- 政策制定者与国际对手 30
+- 实践 41
+-  程序 41
+- 结论 92
+- 机器人 78–81
+- 安全 42
+- 空间 14–18, 197–198
+- 速度与决策 46–48
+- 简明分析 110
+- 威慑 117–118
+- 战略场景 228–230
+- 战争 84–85
+- 询问 41
+- 术语 32
+- 关于无人机 (UAVs) 100, 194–196
+- 乌克兰 62–63
+- 战争 5–9
+- 人工动力 172
+- 人工窄智能 (ANI) 227, 238
+- 人工神经网络 10, 76, 217, 234
+- 人工超智能 (ASI) 20, 31, 109
+- 非对称战争 74, 198, 232
+- 可损耗的、一次弃的无人机 103
+- 可归属性/重复使用 (A/R) 无人机 98
+- 自动化技术 59, 130, 243
+- 自动机器 2
+- 自动系统 3, 235, 257
+- 自主 91, 132
+- 自主系统 (AS) 2, 36, 91, 222
+- 自主技术 131
+- 自主无人机 100
+- 自主武器系统 (AWS) 3, 78, 124, 188–191, 220–240
+- 自主-108–110, 146, 218, 242, 252–255
+- AI 增强的自主优势 256
+- 当前 258
+

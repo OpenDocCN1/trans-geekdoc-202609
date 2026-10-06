@@ -1,0 +1,13 @@
+# The rise of Terminator-like AI and the end of Humanity
+
+> The first ultra intelligent machine is the last invention that man ever mutate, the machine is docile enough to tell us how to keep it under control.
+
+I.J.Good¹
+
+I.J. Good, whose quote given above, was a mathematician who served as the principal statistician in Alan Turing’s code-breaking team during the Second World War. AI researchers could be divided into two groups: the optimists and the pessimists. The optimists believe that even if super-intelligent AI is invented, it will not pose any existential threat to humanity. In contrast, the pessimists assert that superintelligence might evolve into an allpowerful singleton and might attempt to take control of the world. Nick Bostrom, who belongs to the pessimists’ camp, believes that in the next 50 years, AI will develop into HLMI. Then HLMI, through recursive self-improvement, would mutate into superintelligence. The HLMI would be able to understand its own workings to engineer new algorithms and computational structures to bootstrap its cognitive performance. It would be able to iteratively improve itself, which through sustained recursive self-modification, would generate a far smarter version of itself, and this process would go on. The end product would be one of the possible results of such a self-proving super-intelligent entity (he calls it singleton) would be the extinction of mankind²
+
+In contrast, Kenneth Payne, writes: “[AI] feels no emotion and is motivated only by the instructions we give. It does not want to please us, nor does it feel punishment if it transgresses.³ Payne continues with machine intelligence, unlike us has no comparable biological urge to survive and reproduce. The goals of machine intelligence are not intrinsic. What we want to tell them. There is no emotional aspect to machine life, and they lack conscious experience.⁴ But, how can we be sure that a super-intelligent AI will not develop consciousness for survival? One might argue that the possession of intelligence creates self-awareness and the necessity for self-preservation.
+
+Panwar in his chapter asserts that high-risk AI-enabled war machines (in these machines AI decides on critical functions like targeting and firing) should never be developed. Only low-risk machines (completely under human control) ought to be developed. A robust testing regime should be established for medium-risk machines (command systems with humans in the loop). But, what if we go military advances, some states develop high-risk machines? There are valid military reasons for doing so.
+
+Because of the way AGI makes a decision, it is a black box and not transparent. So, Steven I. Davis agrees that AI should be used for tactical
