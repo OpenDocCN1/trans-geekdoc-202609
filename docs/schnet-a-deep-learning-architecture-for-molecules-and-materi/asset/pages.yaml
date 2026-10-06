@@ -1,0 +1,812 @@
+- pgno: 0
+  md: 'RESEARCH ARTICLE | MARCH 29 2018
+
+
+    # SchNet – A deep learning architecture for molecules and materials
+
+
+    Special Collection: Data-Enabled Theoretical Chemistry
+
+
+    K. T. Schütt; H. E. Sauceda; P.-J. Kindermans; A. Tkatchenko; K.-R. Müller
+
+
+    J. Chem. Phys. 148, 241722 (2018)
+
+    https://doi.org/10.1063/1.5019779
+
+
+    ![](img/8414c867baf7c2cb6823215231b56027_0_0.png)
+
+
+    # Articles You May Be Interested In
+
+
+    Reproducing global potential energy surfaces with continuous-filter convolutional
+    neural networks
+
+
+    J. Chem. Phys. (May 2019)
+
+
+    Challenges for machine learning force fields in reproducing potential energy surfaces
+    of flexible molecules
+
+
+    J. Chem. Phys. (March 2021)
+
+
+    A deep neural network for molecular wave functions in quasi-atomic minimal basis
+    representation
+
+
+    J. Chem. Phys. (July 2020)
+
+
+    ![](img/8414c867baf7c2cb6823215231b56027_0_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# # SchNet – A deep learning architecture for molecules and materials
+
+
+    K. T. Schicht,1 H. E. Sauceda,2 P.-J. Kindermans,1 A. Tkatchenko,3,4 and K.-R.
+    Müller,1,4,5**
+
+    1Machine Learning Group, Technische Universität Berlin, 10623 Berlin, Germany
+
+    2Friedrich-Huber Institute of Max-Planck-Gesellschaft, 14195 Berlin, Germany
+
+    3Physics and Materials Research Institute, University of Luxembourg, L-1511 Luxembourg,
+    Luxembourg
+
+    4Max-Planck-Institut für Informatik
+
+    5Department of Brain and Cognitive Engineering, Korea University, Anam-dong, Seongbuk-gu,
+
+    Seoul 136-733, South Korea
+
+
+    (Received 16 December 2017; 8 March 2018; published 29 March 2018)
+
+
+    Deep learning has led to a paradigm shift in artificial intelligence, web, text,
+    and image search, speech recognition, as well as bioinformatics, with growing
+    impact in chemical physics. Machine learning, in general, and deep learning, are
+    ideally suitable for representing quantum-mechanical interactions, to model nonlinear
+    potential-energy surfaces or enhancing the exploration of chemical compound space.
+    Here we present the deep learning architecture SchNet that specifically designed
+    to model atomic systems by making use of continuous-filter convolutional layers.
+    We demonstrate the capabilities of SchNet by accurately predicting properties
+    of chemical properties across chemical space for molecules and materials, and
+    where our models learn plausible embeddings of atom types across the periodic
+    table. Finally, we employ SchNet to predict potential-energy surfaces and energy-conserving
+    fields for molecular dynamics simulations of small molecules and perform an exemplary
+    study on the quantum-mechanical properties of C20 fullerane with regard to initial
+    atomic structures. Published by AIP Publishing: https://doi.org/10/
+
+
+    # I INTRODUCTION
+
+
+    Accelerating the discovery of materials with desired properties is a long-standing
+    challenge in computational chemistry and the materials sciences. The computational
+    cost of accurate quantum-chemical calculations proves prohibitive in the exploration
+    of vast chemical space. In recent years, there have been increased efforts to
+    overcome this bottleneck using machine learning, which, unless a reduced set of
+    descriptors allows us to accurately predict chemical properties1–15 or potential-energy
+    surfaces,16–25. While these approaches make use of painstakingly handcrafted descriptors,
+    deep learning has been able to predict properties from molecular structures using
+    graph neural networks.27. However, these are restricted to electronic structures
+    due to the lack of atomic positions in equilibrium. Recently models that learn
+    orientation from atom types and positions have been developed.28–30 While neural
+    networks are often considered a “black box,” there has recently been increased
+    effort to explain their predictions in order to understand how they operate. This
+    can be done by training a model model31 or by directly designing interpretable
+    models. For quantum chemistry, some of us have proposed such an architecture with
+    Deep Tensor
+
+
+    Neural Networks (DNNs) not only learn the representation of atomic environments
+    but also for spatially and chemically relevant insights into quantum-mechanical
+    embeddings.28
+
+
+    Here we build upon this work and present the deep learning architecture SchNet
+    that allows to model complex interactions in order to predict potential-energy
+    surfaces or speeding up the exploration of chemical space. SchNet among DNNs,
+    is also able to represent molecules and materials that follow fundamental symmetries
+    of atomic systems by construction, rotational and translational invariance as
+    well as invariance to atom indexing. These approaches predict thorough conform
+    without further constraints and where the potential energy surface is modeled
+    using continuous-filter (convolutional layers)39, being more interpretable through
+    specifically designed-filter neural networks. We demonstrate that these all allow
+    us to incorporate periodic boundary conditions (PBCs) enabling accurate predictions
+    of forces and energies for a diverse set of bulk crystals. Both SchNet and DNNs
+    provide local chemical potentials and offer new representationsational insights.28
+    An analysis of the obtained representation shows that SchNet learns chemically
+    plausible embeddings of atom types that capture the structure of the periodic
+    table. Finally, we use a path-integral dynamics (PIMD) simulation using an energy-conserving
+    field learned by SchNet trained on a classical data from a chemical33
+
+
+    4schrost,schuft@tu-ber.de
+
+    5alexander.tkatchenko@mu-eller.de
+
+    6klaus-muller@tu-ber.de'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# J. Chem. Phys. 148, 241722 (2018)\n\n241722 — Schütt et al.\n\nof atoms $n$,\
+    \ and the current layer $l$. The representation of it is initialized using an\
+    \ embedding dependent on the type Z,\n\nthe PBE+vdW level of theory effectively\
+    \ accelerating the simulation by three orders of magnitude. Specifically, we employ\
+    \ the recently developed perturbed-integral approach for carrying time PIMD, which\
+    \ allows quick convergence of quantum-mechanical properties with respect to the\
+    \ number of classical replicas (beads). This study shows the advantages of using\
+    \ density functionals with high accuracy, allowing PIMD simulations at low temperatures—infeasible\
+    \ for regular $ab initio$ molecular dynamics (AIMD)—to be completed with SchNet\
+    \ within hours instead of years.\n\n```\n$x_i^0 = a_z,$\n```\n\nThese embeddings\
+    \ $a_z$ are initially randomized and optimized during training. They represent\
+    \ atoms of a system disagreeing any information about their environment for now.\n\
+    \n# B. Atom-wise layers\n\nAtom-wise layers are dense layers that apply separately\
+    \ to the representations $x_i$ of each atom\n\n```\n$x_i^{(l+1)} = W^l x_i + b,$\n\
+    ```\n\nSince W and biases $b$ are shared across atoms, our architecture remains\
+    \ scalable with respect to the number of atoms. While the atoms are represented\
+    \ through the network, they transform them and process information about the atomic\
+    \ environments incorporated through interaction layers.\n\n# C. Interaction layers\n\
+    \nThe interaction layers of SchNet refine the atom representation based on pairwise\
+    \ interactions with the surrounding atoms. Here we model this with continuous-filter\
+    \ convolution layers (which are generalizations of the continuous convolution\
+    \ operation, e.g., Gaussians$^{27}$ or radial basis functions). This is necessary\
+    \ because atoms are not located on regular-grid pixels, but can be located at\
+    \ arbitrary positions. Therefore, using a filter-tensor, as in conventional convolutional\
+    \ layers, is not applicable. We need to model the filters using atom-wise representations\
+    \ $x_i$ at positions $R$, we model the interactions of the atom with all surrounding\
+    \ atoms\n\n```\n$x_i^{(l)} = (x_i^{(l)} * W^{(l)}) = \\sum_{j \\in \\mathcal{N}(i)}\
+    \ O^{(l)}(r_i - r_j),$\n```\n\nwhere '$$' denotes the element-wise multiplication.\
+    \ Now we perform filter-wise convolutions for computational efficiency. Cross-feature\
+    \ processing is subsequently performed by atom-wise layers, thus instead of a\
+    \ filter tensor, we use a filter-generating network $x \rightarrow W$ that maps\
+    \ the atoms to the corresponding value of the filter bank (see Sec. II).\n\nSchNet\
+    \ is a variant of the earlier proposed Deep Tensor Neural Networks (DNNs)$^{25}$\
+    \ and therefore shares a basis of their building embeddings, interaction refinements\
+    \ and atom-energy contributions. At each layer, the system is represented through\
+    \ using pairwise interactions between atoms. In the DNN framework, interactions\
+    \ and interaction distances are modeled by layers, termed interactions. This can\
+    \ be approximated using a low-rank factorization for computational efficiency$^{42-44}$\
+    \ SchNet uses continuous-filter-networks to model the interaction term. In the\
+    \ following, we describe the layers and how they are assembled to form the SchNet\
+    \ architecture. For Fig. 1.\n\n# A. Atom-wise embeddings\n\nAn atomic system can\
+    \ be described by a set of $n$ atoms with charges $Z = (Z_1, \\dots, Z_n)$ and\
+    \ positions $R = (r_1, \\dots, r_n)$. The layers of SchNet, are described by a\
+    \ tuple of feature maps $X^l = (x_1^l, \\dots, x_n^l)$, with $x_i^l$ with number\
+    \ of feature maps, $F$\n\n![](img/8414c867baf7c2cb6823215231b56027_2_0.png)\n\n\
+    A filter layer with atom-wise layers constructs the residual mapping of an interaction\
+    \ block (see Fig. i). We use a shifted softplus $softplus(x - 0.5) + 0.5$ as activation\
+    \ functions throughout the network. The shifting ensures that $softplus(0)=0$\
+    \ and convergence of the network while having infinite order of connectivity.\
+    \ This allows us to smooth potential energy surfaces, forces, and second derivatives\
+    \ that are required for training with forces as well as the vibrational modes."
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "![](img/8414c867baf7c2cb6823215231b56027_3_0.png)\n\nFIG. 2. The filtering-generating\
+    \ network shown in SchNet (left) and 5×5 filters through generated filters (right)\
+    \ from the atoms under periodic boundary conditions (columns rows). Each filter\
+    \ is learned from and generates the effect of an interaction on a feature atom\
+    \ and representation located in the center of the filter. The number of neurons\
+    \ is\n\nthe model and include chemical knowledge. We choose a fully connected\
+    \ neural network that takes the vector pointing from atom i to its neighbor j\
+    \ as an input to obtain the fitted values $W(r_i - r_j)$ (see Fig. 2, left). This\
+    \ allows us to include invariance of molecules and materials into the model.\n\
+    \n$r_{cut}$. We find that the training is more stable when normalizing the filter\
+    \ response $x^{(k+1)}$ by the number of atoms within the cutoff range. Figure\
+    \ 2 (right) shows selection of generated filters with PBCs, with a diamond crystal\
+    \ unit cell and a hexagonal graphite. As for diamond and graphite are superpositions\
+    \ of single-atom filters over their respective layers, they reflect the structure\
+    \ of the lattice. Note that the single-atom filters are equivariant due to the\
+    \ orientation, the periodic filters rotate equivariantly with the orientation\
+    \ of the lattice, which still keeps this property rotational invariance. Although\
+    \ we only incorporate basic invariances in the filters, careful design of the\
+    \ filtering-generating network provides the possibility to incorporate further\
+    \ chemical knowledge in the network.\n\n# 1. Rotational invariance\n\nIt is straightforward\
+    \ to include rotational invariance by computing pairwise distances using of relative\
+    \ positions. We expand the distance in a basis of Gaussians\n\n```\n$e_k(r_i,\
+    \ r_j) = \\exp(-\\gamma(||r_i - r_j|| - \\mu_{ij})^2)$\n```\n\nwith cepts, centered\
+    \ on a uniform grid from the neighbor and the distance cutoff. This has the effect\
+    \ of decorrelating the filter values, which improves the conditioning of the optimization\
+    \ problem. The number of Gaussians and the hyper parameter determine the resolution\
+    \ of the filter. We set the grid spacing and scaling parameter to be 0.1 $1/\t\
+    ext{\\AA}^2$ for all models in this work.\n\n# 2. Periodic boundary conditions\n\
+    \nFor atomic with periodic boundary conditions (PBCs), each atom feature vector\
+    \ $x_i$ is equivalent across all periodic positions, i.e., $x_i = x_{i+R}$. Due\
+    \ to the linearity of the convolution, we therefore apply the PBCs to the filter\
+    \ to accurately describe the atomic interactions while keeping the invariance\
+    \ to the choice of the unit. Given a filter $W^{(l)}(r_{ij}-r_{ij})$ over we obtain\
+    \ the convolution\n\n```\n$x_i^{(l+1)} = \\frac{1}{n_{neighbors}} \\sum_{j \\\
+    in neighbors} x_j^{(l)} \\odot W^{(l)}(r_{ij}-r_{ij})$\\n\\n$x_i^{(l+1)} = \\\
+    frac{1}{n_{neighbors}} \\sum_{j \\in neighbors} x_j^{(l)} \\odot (W^{(l)}(r_{ij}-r_{ij}))$,\n\
+    ```\n\nThis filter $W$ now depends on the PBCs of the system as we sum over all\
+    \ periods within the given cutoff\n\nFinally, a property $P$ of a molecule or\
+    \ material is derived from the obtained atomic-wave representations. We use the\
+    \ fully connected prediction network (see in Fig. 1). Depending on whether the\
+    \ property is intensive or extensive, we calculate the final prediction $P$ by\
+    \ summing or averaging over the atomic contributions, respectively.\n\nSince the\
+    \ internal atom embeddings are equivariant to rotation of atoms, the filters are\
+    \ independently applied to each atom and through continuous-filters convolution\
+    \ over all neighboring atoms, indexing equivariance is retained in the atomic-representations.\
+    \ Therefore, the prediction of properties as over-atom weights guarantees invariance.\n\
+    \nWhen predicting atomic forces, we use a SchNet predicting the energy with respect\
+    \ to the atomic positions\n\n```\n$\\hat{E}(Z_1, ..., Z_n, r_{ij1}, ..., r_{ijn})\
+    \ = \\frac{\\partial \\hat{E}}{\\partial r_i}(Z_1, ..., Z_n, r_{ij1}, ..., r_{ijn})$\n\
+    ```\n\nWhen using a rotationally invariant model, this ensures rotationally equivariant\
+    \ force predictions and guarantees an energy conserving field.$^{21}$"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# F. Training
+
+
+    We train SchNet for each property target P by minimizing the squared loss
+
+
+    ```
+
+    $$\ell(P, P) = ||P - P\|^2$$
+
+    ```
+
+
+    For the training of energies and forces of molecular trajectories, we use the
+
+
+    ```
+
+    $$\ell((E, F_1, ..., F_n), (\hat{E}, \hat{F}_n)) = \rho ||E - \hat{E}||^2 + \frac{1-\rho}{N_{atoms}}
+    \sum ||F_i - \hat{F}_i||^2 \quad (5)$
+
+    ```
+
+
+    where rho is a trade off between energy and force loss. All models are trained
+    with mini-batch stochastic descent using the ADAM optimizer with mini-batches
+    of 32. We decay the learning rate exponentially with ratio of 0.996 every 100
+    epochs. In each experiment, we split the data into a training set of given size
+    N and use a validation set for early stopping. We determine the maximum number
+    of atoms being located within a given cutoff cost of a training step scales linearly
+    with the system size since we preprocess the indices of nearby atoms.
+
+
+    ![](img/8414c867baf7c2cb6823215231b56027_4_0.png)
+
+
+    # III. RESULTS
+
+
+    # A. Learning molecular properties
+
+
+    We train SchNet models to predict various properties of the QM dataset[33] of
+    131 small molecules with up to nine atoms from CONF. Following Gilmer et al.[29]
+    and Faber et al.[10] we use a validation set of 10000 molecules. We sum over atomic
+    error for P_i for all properties
+
+
+    We use T interaction blocks and atoms with 64 feature dimension to predict up
+    to $10^4$ gradient descent parameters. Since we are small, we do not use a cutoff.
+    For the Gaussian expansion, we use a range up to 2 Å to contain atoms. The prediction
+    errors of errors are listed in Table I, where we compare the
+
+
+    to the message-passing neural network-22 we use additional bond information from
+    atomic positions to learn a molecular representation. SchNet predictions of the
+    polarizability a and the electrostatic potential (R^2) fall noticeably off in
+    terms of accuracy. This is because of the decomposition of energy into atomic
+    combinations, which is not appropriate for these properties. For SchNet et al.[29]
+    we employed a selected variant[56] that obtains a global representation and does
+    not suffer this issue. SchNet reaches or overshoots in 2 out of 8 blocks, from
+    a decomposition into atomic combinations that is not appropriate for properties.
+
+
+    Figure 3 shows learning curves of SchNet for the total energy U_i with T $\in$
+    {1, 2, 3} interaction blocks compared to the best performing DNN with T=3 interaction
+    blocks. The best error blocks only show an improvement from 0.01 eV to 0.014 eV
+    with 1100 training examples. After then the differences become more significant
+    and T=6, while using higher parameters, the lower errors. In addition, the model
+    requires less epochs to converge; using 1100 training examples reduces the required
+    number of epochs from 2000 to less than 750 with T=6.
+
+
+    TABLE I. Mean absolute errors for predictions on the QM dataset using 1100 training
+    examples. For SchNet, we give the average over three repetitions and standard
+    error of the repetitions. Best models listed.
+
+
+    | Property | Unit | SchNet (T=6) | evn-s29 |
+
+    |---|---|---|--|
+
+    | HOMO | eV | 0.041 | 0.043 |
+
+    | LUMO | eV | 0.043 | 0.047 |
+
+    | $\Delta E$ | eV | 0.063 | 0.060 |
+
+    | ZPE | eV | 0.017 | 1.5 |
+
+    | $\mu$ | | 0.033 | 0.050 |
+
+    | D | | 0.235 | 0.062 |
+
+    | $(R^2)$ | | 0.072 | 0.180 |
+
+    | $U_i$ | eV | 0.014 | 0.019 |
+
+    | $V_i$ | eV | 0.019 | 0.019 |
+
+    | H | | 0.014 | 0.017 |
+
+    | G | | 0.014 | 0.019 |
+
+    | C | cal/mol | 0.033 | 0.040 |
+
+
+    # B. Learning formation energies of materials
+
+
+    We employ SchNet to predict formation energies for crystals using 694 structures
+    and references from the Materials Project (MP) repository[58,59]. It consists
+    of a large variety of crystals with atomic type ranging across the periodic table
+    up to Z=94. Mean absolute errors (MAEs) are listed in Table II. We use T=6 interaction
+    blocks and atoms with 64 feature dimension. We set the cutoff distance $r_{cut}$
+    = 5 Å and'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "241722 - Schütt et al.\n\nJ. Chem. Phys. 148, 241722 (2018)\n\nTABLE II. Mean\
+    \ error for formation energy predictions in eVatom on the Materials Project. For\
+    \ SchNet, we deget the average over three repetitions as standard error of the\
+    \ mean. The best models are in bold.\n\n| Model | N = 3000 | N = 60000 |\n|---|---|--|\n\
+    | Ext. Coulomb matrix | 0.64 | |\n| Ewald sum matrix | 0.49 | |\n| SchNet (f =\
+    \ 6) | 0.127 | **0.035** |\n\nright or, less clear in VA with a partial ordering\
+    \ N-(As, P–Sb, Bi). This learning was not imposed on the machine learning, but\
+    \ found by SchNet over the geometries and energy targets of the MP.\n\n# C. Local\
+    \ chemical potentials\n\nSince SchNet is a variant of DNNs, we can visualize the\
+    \ learned representation with a “local chemical potential” $\\Omega_{chem}(r)$\
+    \ as proposed by Schütt et al.$^{28}$ We compute the energy of a virtual atom\
+    \ as a test case. This can be achieved by adding a probe $Z_{probe}$ as input\
+    \ to SchNet. The continuous-convolution of the probe atom with the system\n\n\
+    ```\n$x_{probe}^{(l)} = (X^* + W_r)(r^{(l)}) = \\sum_{j} x_j^{(l)}W_r(r^{(l)})$\n\
+    ```\n\nensures that the test charge only senses but does not influence the feature\
+    \ representation. We use Mayrào$^{29}$ to visualize the potentials.\n\ndiscard\
+    \ those from the dataset that would include atoms with them. Then, data are randomly\
+    \ split into 600 examples, a validation set of 50 examples and the remaining data\
+    \ as test. Even the Q99 MP repository is much better, SchNet is capable of predicting\
+    \ formation energies to a mean error of 0.035 eVatom. The distribution of these\
+    \ errors is shown in Appendix A. On a smaller subset of 3000 examples, SchNet\
+    \ still achieves an MAE significantly lower than predicted by Faber et al.$^{5}$.\n\
+    \nSince the MP dataset contains 89 types of atoms across the periodic table, we\
+    \ learned the atom embeddings. We visualize the learned components of all atom\
+    \ embeddings as well as their corresponding group (Fig. 4). The neural network\
+    \ use the embedding space to verify that this 2D projection reveals about 20%\
+    \ of the variances, i.e., since important details are missing, missing could be\
+    \ further apart. Still, we recognize groups of elements within the periodic table.\
+    \ This shows that SchNet has learned that atoms of elements have similar properties.\n\
+    \nWithin some groups, we can even observe an ordering from lighter to heavier,\
+    \ e.g., in groups IA and IIA from light elements to heavy ones over the\n\nFigure\
+    \ 5 shows a comparison of the local potentials of various molecules from DNN and\
+    \ SchNet. Both DNN and SchNet clearly capture fundamental chemical concepts but\
+    \ lack sharpness and difference of groups. While the general structure of the\
+    \ features surfaces is similar, SchNet exhibits sharper features and a more pronounced\
+    \ separation of high- and low-energy areas. The overall difference of the grouping\
+    \ features in the “local chemical potentials” is remarkable noted by the neural\
+    \ network architecture, representing the common quantum-atomic embedding in our\
+    \ molecules. It remains to be seen whether these local chemical potentials can\
+    \ be correlated with traditional quantum-mechanical observables such as electron\
+    \ density, electrostatic potentials, or electronic orbitals.\n\nIn the same manner,\
+    \ we can then show $\\Omega_c(r)$ for graphite and diamond. In Fig. 6, they represent\
+    \ filters in Fig. 2. In solids, local chemical potentials could be used to understand\
+    \ the formation and distribution of defects, vacancies and interstitials.\n\n\
+    # D. Combined learning of energies and atomic forces\n\nWe apply SchNet to the\
+    \ prediction of energy surface faces and forces of the MD117 set of molecular\
+    \ trajectories documented by Chilaia et al.$^{30}$ MD117 is a collection of molecular\
+    \ dynamics simulations for all organic molecules. Groups III and IV are not trained\
+    \ for energy and force predictions. We trained SchNet with randomly sampled training\
+    \ sets with N = 10000 and N = 50000 for $2 \times 10^4$ mini-batch steps and additionally\
+    \ used a validation set of 1000 examples for early stopping. The remaining data\
+    \ were used for testing. We also performed the comparison of graph domain machine\
+    \ (GDML)$^{31}$ and DNN$^{32}$ for prediction, SchNet was\n\n![](img/8414c867baf7c2cb6823215231b56027_5_0.png)\n\
+    \n26 September 2023 15:05:13"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: "# 241722-6 Schütt et al. J. Chem. Phys. 148, 241722 (2018)\n\n![](img/8414c867baf7c2cb6823215231b56027_6_0.png)\n\
+    \nFIG. 5. Local chemical potentials $\\Omega_c(r)$ of DTNN (top) and SchNet (bottom)\
+    \ using a charge test on a $\\sum_l |r_l - r| = 3.7 \text{\\AA}$ are shown for\
+    \ benzene, toluene, methane, pyrazine, and propane.\n\ntrained with $T=3$ interaction\
+    \ blocks and $F=64$ feature maps using only energies as using the combined loss\
+    \ for energies and forces from Eq. (5) with $p=0.1$. This trade-off constitutes\
+    \ to operate a single model that performs on energies and forces for a fair comparison\
+    \ with GDML. We do not use a distance cutoff due to the small molecules and a\
+    \ range up to 20 $\text{\\AA}$ for the Gaussian expansion to cover all distances.\
+    \ In Sec. III E, we will see that even lower errors are achieved when using two\
+    \ SchNet models for energies and forces.\n\nSchNet shows significant advantage\
+    \ of the additional force information, reducing energy and force errors by 1-2\
+    \ orders of magnitude compared to energy only training on the small training set.\
+    \ With 50,000 examples, the improvements are less apparent as the potential energy\
+    \ surface is\n\nalready well-sampled at this. On the small training set, SchNet\
+    \ outperforms GDML on the more flexible malonaldehyde and ethanol, while GDM reaches\
+    \ lower errors on the MD trajectories that include all aromatic rings. A potential\
+    \ reason is that GDML defines orders of atoms in the molecule, while the SchNet\
+    \ architecture is invariant to indexing which constitutes a greater advantage\
+    \ in the more flexible molecules.\n\nWhile GDML is more data-efficient than a\
+    \ neural network, SchNet is scalable to larger datasets. It obtains MAEs of energies\
+    \ and forces of 0.23 kcal/mol and 0.33 kcal/(mol/$\text{\\AA}$), respectively.\
+    \ Remarkably, SchNet performs better using the combined loss with energies and\
+    \ forces over 1000 reference calculations than training on energies of 50,000\
+    \ examples.\n\n![](img/8414c867baf7c2cb6823215231b56027_6_1.png)\n\nFIG. 6. Cut\
+    \ through local chemical potentials $\\Omega_c(r)$ of SchNet using a carbon test\
+    \ charge are shown for graphite (left) and diamond (right).\n\n![](img/8414c867baf7c2cb6823215231b56027_6_2.png)\n\
+    \n26 September 2015 01:33:23"
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "Mean absolute errors for total energies (kcal/mol). GDML$^{21}$ and SchNet$^{30}$\
+    \ test errors\n\nfor N = 1000 and N = 5000 reference calculations of molecular\
+    \ dynamics simulations of small organic molecules. Best results are shown in bold.\n\
+    \n| | N = 1000 | | | N = 5000 | | |\n|---|---|---|---|---|---||\n| | GDML | SchNet\
+    \ | DTNN | SchNet | Energy | Energy + forces |\n| | on | Energy | Energy + forces\
+    \ | Energy | Energy + forces |\n| Benzene | | **0.07** | 1.19 | **0.04** | 0.08\
+    \ | 0.07 |\n| Toluene | | **0.12** | 2.95 | **0.12** | 0.16 | 0.09 |\n| Malonaldehyde\
+    \ | | 0.16 | 2.03 | **0.13** | 0.19 | 0.08 |\n| Salicylic acid | | **0.12** |\
+    \ 2.27 | 0.20 | 0.41 | 0.10 |\n| Aspirin | | 0.27 | 4.20 | 0.37 | 0.25 | 0.12\
+    \ |\n| Ethanol | | 0.15 | 2.99 | 0.008 | | 0000000000 | **0.1 |** | 0.11 | 2.26\
+    \ | 0.14 | 0.13 | **0.10** |\n| Uracil | | **0.11** | 0.14 | | **0.07** | 0000000000000000000000000\
+    \ |\n| Naphthalene | | **0.12** | 3.58 | 0.16 | 0.20 | **0.11** |\n\nTABLE IV.\
+    \ Mean absolute errors for atomic forces in [kcal/Å]. GDML$^{21}$ and SchNet$^{30}$\
+    \ test errors for\nN = 1000 and N = 5000 reference calculations of molecular dynamics\
+    \ simulations of small organic molecules. Best results are shown in bold.\n\n\
+    | | N = 1000 | | | N = 50000 | | |\n|---|---|---|---|---|---||}{\n| | GDML | SchNet\
+    \ | | | SchNet | | |\n| Trained on | Forces | Energy | Energy + forces | Energy\
+    \ | Energy + forces |\n| Benzene | | **0.23** | 14.13 | | 1.21 | 0.17 |\n| Toluene\
+    \ | | **0.24** | 22.31 | 0.57 | 1.79 | 0.09 |\n| Malonaldehyde | | 0.80 | 20.41\
+    \ | **0.66** | 1.51 | 0.08 |\n| Salicylic acid | | **0.28** | 23.51 | 0.85 | 3.72\
+    \ | 0.19 |\n| Aspirin | | 0.99 | 25.54 | 0.35 | 7.36 | 0.33 |\n| Ethanol | | 0.79\
+    \ | 6.56 | 0.39 | 0.76 | 0.05 |\n| Uracil | | 0.24 | 20.08 | 0.56 | 3.28 | 0.11\
+    \ |\n| Naphthalene | | 0.23 | 23.56 | 0.58 | 2.58 | 0.11 |\n\n# E. Application\
+    \ to molecular dynamics of C$_{20}$-furanide\n\nAfter demonstrating our SchNet\
+    \ on the MD benchmark set, we performed a method selection using a ML-driven MD\
+    \ simulation of C$_{20}$-furanide. This mid-sized molecule has a complex potential\
+    \ field that requires to be described with vibrational normal modes and degrees\
+    \ of freedom. Here we use SchNet to perform analysis of basic properties of PES\
+    \ of C$_{20}$ when including quantum effects. The reference data we generated\
+    \ by running molecular MD at 300 K DFT in the generalized gradient approximation\
+    \ (GGA) level of theory used the Perdew-Burke$^{39}$ exchange-correlation functional\
+    \ and the Tkachenchenko-Schffler$^{40}$ TS method. Further details about the simulations\
+    \ can be found in Appendix B.\nBy training SchNet on DFT data at the PBE+vdW levels,\
+    \ we reduced the simulation time by orders of magnitude from 11 hours using 32\
+    \ CPU cores to 10 ms using NVIDIA GTX1080. This allows us to perform long MD simulations\
+    \ with DFT accuracy at low computational cost, which is making this feasible.\n\
+    \nTo obtain accurate energy and force predictions, we first perform an method\
+    \ selection on the reference data. We use 20k C$_{20}$ calculations for the training\
+    \ set, 4k samples for early stopping, and the test report on the remaining data.\
+    \ We present the lists for\n\nTABLE V. Mean absolute errors for energy and force\
+    \ predictions of C$_{20}$-furanide in kcal/mol and kcal/Å). We compare SchNet\
+    \ models with varying numbers of interaction blocks T, feature dimensions D, and\
+    \ energy-force tradeoff$^{41}$. For force-type $\rho_0=0$, the integration is\
+    \ fitted separately. Best models\n\n| T | F | $\rho$ | Energy | Forces |\n|---|---|---|---|-|\n\
+    | 3 | 64 | 0.010 | 0.228 | 0.401 |\n| 6 | 64 | 0.010 | 0.202 | 0.217 |\n| 6 |\
+    \ 128 | 0.018 | 0.197 |\n| 6 | 128 | 0.0190 | 0.1902 | 0.401 |\n| 6 | 128 | 0.100\
+    \ | 0.027 | 0.171 |\n| 6 | 128 | 0.010 | 0.238 | 0.061 |\n| 6 | 128 | 0.000 |\
+    \ 0.260 | **0.068** |"
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# 241722-8 Schütt et al.
+
+
+    # J. Chem. Phys. 148, 241722 (2018)
+
+
+    ![](img/8414c867baf7c2cb6823215231b56027_8_0.png)
+
+
+    model since this guarantees an energy-conserving force field.$^{21}$
+
+
+    For energy predictions, we obtain the best results using a larger $p=0.1$ as this
+    puts more emphasis on the energy loss. Here, we use the force-only model to drive
+    our MD simulation since we are interested in the chemical properties of $C_{60}$
+    fullerene. Figure 7 shows a comparison of the distribution from various models.
+    In the bottom panel, we show the accuracy of SchNet with the largest error being
+    ~1% of the DFT references. Given these results and the accuracy in Table V, we
+    obtained a model that successfully reconstructs the PES and its symmetries.$^{21}$
+
+
+    ![](img/8414c867baf7c2cb6823215231b56027_8_1.png)
+
+
+    FIG. 7. Normal mode analysis of the $C_{60}$ dynamics using SchNet and DFT results.
+
+
+    various settings of number of interaction blocks $T$, number of features $F$ of
+    the atomic representations, and energy-force trade-off $p$ of the combined loss
+    function. Here, we select the best-parameters $T, F$ of the trade-off $p=0.01$
+    that established a good performance (see the upper part of Table V). We find that
+    the configuration of $T=8$ and $F=12$ gives the best balance for energies and
+    forces. For each model, we validate the trade-off. While the best choice for energies
+    and forces are vastly different: we established that energy predictions benefit
+    from force information (see Table III), we achieve In addition, in Fig. 8, we
+    present an analysis of the nearest neighbor (1 nm), 8, and radial distribution
+    functions that include quantum effects at 300 K for classical (blue) and PIMD
+    (green) simulations See Appendix B for details on the simulation. From Fig. 8
+    and Fig. 11), it looks like delocalization does not play a significant factor
+    in the peaks of the pair distribution function $h(r)$ at room temperature. The
+    quantum effect increases the peaks by more than 5% but the bond lengths remain
+    unchanged. This result agrees with we have non-quantum symmetries due to the finite
+    size of $C_{60}$..$^{62}$
+
+
+    Overall, with SchNet we reached 1.25 nm of MD, reducing the quantum correction
+    to DFT by 3.4–4 orders of magnitude from 7 years to less than 7 h with much computational
+    resources. Long time MD simulations are required for detailed studies on mechanical
+    and thermodynamic properties as a function of the temperature, especially in the
+    low temperature regime, where the nuclear quantum effects become extremely important.
+    This application evidences the need for fast and accurate machine learning like
+    SchNet to explore the different nature of chemical
+
+
+    ![](img/8414c867baf7c2cb6823215231b56027_8_2.png)
+
+
+    FIG. 8. Analysis of the fullerene $C_{60}$ dynamics at 300 K using SchNet@DFT.
+    Distribution functions for nearest neighbours, diameter of the fullerene, and
+    the atomic pair distribution function using classical MD (blue) and PIMD (green)
+    with 8 atoms.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'interactions quantum behavior to improve molecules and materials.
+
+
+    from a dataset of bulk crystals and formation energies. Most importantly, we have
+    performed an empirical molecular dynamics study on the fullerene C60 at PBE+dW
+    level of theory that had not been compatible with common DFT approaches. The ensuing
+    results guide future work such as larger molecules and periodic systems as well
+    as further developments toward deep learning architectures to assist chemistry
+    research.
+
+
+    # IV. CONCLUSIONS
+
+
+    Instead of painstakingly designing mechanical forces or machine learning descriptors,
+    deep learning allows us to learn from first principles what adapts to the task
+    and scale, and from hand, property prediction across chemical compound space to
+    force the configurational space of single molecules. The design challenge has
+    been shifted to modeling quantum neural architecture. This gives rise to the possibility
+    to encode quantum constraints and symmetries within the model without losing locality
+    of a neural network. It is crucial to be able to capture e.g., the full potential-energy
+    surface, and in particular, its anharmonic behavior,
+
+
+    # ACKNOWLEDGMENTS
+
+
+    This work was supported by the Federal Ministry of Education and Research (BMBF)
+    for the Berlin Big Data Center (BIDC) (No.01510134). Additional support was provided
+    by the DG (No. MU 98/2021), from the European Union''s 2020 research program or
+    under the Sklodowska-Curie Grant Agreement No 65769, the BKI program funded by
+    the Korean Research Foundation (No.2014-05741) and the Institute for Information
+    & Communications Promotion (ITEP) funded by the Korea government (No. 2017-0-00451).
+    AT acknowledges support from the European Research Council (ERC-CoG grant
+
+
+    We have presented the deep learning SchNet which has been applied to a variety
+    of applications ranging from the prediction of chemical properties for diverse
+    datasets of molecules and materials to highly accurate predictions of potential
+    energy surfaces and energy-conserving forces. As a variant of DNNs, SchNet follows
+    rotational, translational, and permutational invariances by design and, and is
+    able to model periodic boundary conditions. Not only does SchNet yield fast and
+    accurate predictions, but it also allows us to learn the learned representation
+    using local chemical potentials. We have found that fundamental chemical knowledge
+    has been recovered
+
+
+    # APPENDIX A: ERROR 9 AND 10
+
+
+    In Figs 9 and 10, we show the histograms of the predicted properties of the QM9
+    and Materials Project dataset, respectively. The histograms include all test errors
+    across three repetitions.
+
+
+    ![](img/8414c867baf7c2cb6823215231b56027_9_0.png)
+
+
+    FIG. 9. Histograms of absolute errors for all predicted properties of QM9. The
+    histograms are plotted on a logarithmic scale to visualize the distribution of
+    the'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "![](img/8414c867baf7c2cb6823215231b56027_10_0.png)\n\n![](img/8414c867baf7c2cb6823215231b56027_10_1.png)\n\
+    \nFIG. 10. Histogram of absolute errors for the predictions of formation energies/atom\
+    \ for the Materials Project dataset. The histogram is plotted on a logarithmic\
+    \ scale to visualize the tails of the distribution.\n\nFIG. 11. Histogram of absolute\
+    \ errors for all predicted properties of QM9. The histograms are plotted on a\
+    \ logarithmic scale to visualize the tails of the distribution.\n\n# APPENDIX\
+    \ B: SIMULATION DETAILS\n\nThe reference data for $C_{20}$ were generated using\
+    \ classical molecular dynamics in the NVE environment at 500 K using the Nose-Hoover\
+    \ thermostat with a time step of 1 fs. The forces and energies were computed using\
+    \ DFT with the non-empirical exchange-correlation functional (GGA) level of theory\
+    \ of PBE$^{39}$ and the Tkatchenko-Scheffler method (TS$^{40}$) to account for\
+    \ van der Waals interactions. The calculations were done using all-electrons with\
+    \ a plane wave basis set implemented in QE.\n\nThe quantum nature is introduced\
+    \ through imaginary molecular dynamics (PIMD) via Feynman's path integral. The\
+    \ PIMD simulations were done using the SchNet model implemented in C. Integration\
+    \ time step was set to 5 fs to ensure energy conservation within the NVE ensemble\
+    \ with a ring quantum approximation (RQA)$41}$. In PIMD, the treatment of nuclei\
+    \ is controlled by the number of beads. In our example for $C_{20}$, we see that\
+    \ using eight beads gives a converged radial distribution function $g(r)$ as shown\
+    \ in Fig. 11.\n\n> $^{39}$M. Rupp, V. Gobre, R. Müller, and A. von Llihenfeld,\
+    \ Phys. Rev. Lett. 108, 056301 (2012).\n$^{40}$ G. Montavon, V. Rupp, R. Gobre,\
+    \ A. Vazduelez-Mayazaga, K. Ramirez, A. Tkatchenko, R. Müller, and O. von Llihenfeld,\
+    \ New J. Phys. 15, 093015 (2013).\n$^{41}$ K. Hamann, G. Footmay, B. Siegler,\
+    \ S. Pauli, R. Rupp, M. Scheffler, A. von Llihenfeld, A. Tkatchenko, and R.-K.\
+    \ Müller, J. Chem. Theory Comp 9, 34013 (2015).\n$^{42}$ F. Faber, A. Lindholm,\
+    \ O. von Llihenfeld, and R. Amiri, Int. J. Quantum Chem. 115, 10944 (2019).\n\n\
+    > $^{43}$R. Ramakrishnan, P. D. Real, M. Rupp, and O. A. von Llihenfeld, J. Chem.\
+    \ Theory Comp. 11, 11297 (2010).\n$^{44}$K. Sato, F. Biegler, R. Ramakrishnan,\
+    \ W. Prombis, O. A. von Llihenfeld, R. K. Müller, and A. Tkatchenko, J. Chem.\
+    \ Phys. 148, 63226 (2015).\n$^{45}$F. Faber, A. Lindholm, O. von Llihenfeld, and\
+    \ R. Amiri, Phys. Rev. Lett. 98, 176101 (2007).\n$^{46}$E. von Pydurkin and A.\
+    \ Vachkov, Multiscale Molecular Science. 15, 827 (2017).\n$^{47}$I. A. Fabian,\
+    \ S. Coker, T. Bohner, B. Jlinger, S. Schecheelho, G. Adil, O. Vymos, K. Kramers,\
+    \ P. F. Riley, and O. A. von Llihenfeld, J. Chem. Phys. 131, 5525–5536 (2014).\n\
+    $^{48}$H. Mao and M. Rupp, arXiv:1706.06949 (2017).\n$^{49}$K. Ryu, M. Ilcik,\
+    \ J. Tkatchenko, and I. Hornbenlich, in prep. Phys. Rev. B 97, 114114. \n$^{50}$Y.\
+    \ Zhang, K. Ryu, K. Domr, and A. Iannelli, arXiv:1708.03616 (2017).\n$^{51}$J.\
+    \ Behler and M. Parrini, Phys. Rev. Lett. 98, 146401 (2007).\n$^{52}$A. B. Bartók,\
+    \ M. C. Rynor, and G. Colnei, Phys. Rev. Lett. 104, 196401 (2010).\n$^{53}$R.\
+    \ Kun, M. Rynor, and G. Colnei, Phys. Rev. B 87, 184115 (2013).\n$^{54}$A. Vachkov,\
+    \ Multiscale Molecular Science. 22, 313 (2016).\n$^{55}$S. Chimiela, A. Tkatchenko,\
+    \ H. E. Saseandra, I. Polytov, T. Schütt, and K. Küh, Phys. Rev. Lett. 94, 176101\
+    \ (2005).\n$^{56}$F. Brockenberg, L. Joi, L. I. M. Tuckerman, and R. Burke, and\
+    \ A. Müller, Nature. 438, 772 (2005).\n$^{57}$D. E. J. Jackson, and A. E. Reinenberg,\
+    \ Science. 319, 3912 (2007).\n$^{58}$P. Rowe, G. Cányi, D. Albrecht, and A. Michaels,\
+    \ Phys. Rev. B 95, 075103 (2017).\n$^{59}$T. Henschel, D. Maclain, J. Iparraguerre,\
+    \ R. Burchell, T. Hirzel, A. Aspruti-Gurek, and R. P. in Conference on Neural\
+    \ Information Processing Systems, vol. 28, with C. Cortes, N. David, D. Tran,\
+    \ 2222–2229 (2015).\n$^{60}$S. Sezneans, R. McLockey, M. Berndt, V. Bande, and\
+    \ P. F. Riley, J. Chem. Angew. Mol. 30, 595 (2016)."
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '28K. Schott, F. Farbazad, S. Chmiela, K.-R. Müller, and A. Tatchenko, Nat.
+    Chem., 8, 1390 (2017).
+
+
+    29G. Silver, S. Goodman, P. F. Riley, O. Vinyals, and G. E. Dahl, in Proceedings
+    of the 34th International Conference on Machine Learning (ICML 2017), pp. 1263–1272.
+
+
+    30S. Schott, T. J. K. Chmiela, S. Siedenska, and A. Tatchenko, in Advances in
+    Neural Information Processing Systems, 30, 7765 (2017).
+
+
+    31B. Bachbauer, S. Schott, M. Harveland, M. Kanazawa, and K. Horn, in Advances
+    in Neural Information Processing Systems, 30, 9912–9922 (2017).
+
+
+    32S. Simonyan, A. Davidev, G. Montanari, F. Kolesnik, K.-R. Müller, and A. Zisserman,
+    in arXiv:1409.15534 (2014).
+
+
+    33B. Bach, J. Binder, K.-R. Müller, and A. Zisserman, J. Chem. Phys. 5, 708 (2016).
+
+
+    34L. Zintelman, T. S. Cohen, T. Adler, and M. Welling, in International Conference
+    on Learning Representations (2017).
+
+
+    35G. Montanari, S. Lapuschnik, A. Binder, M. Saibel, and K.-R. Müller, Pattern
+    Recognition, 115, 102698 (2019).
+
+
+    36S. Chmiela, A. Tatchenko, and K.-R. Müller, Digital Signal Processing, 73, 1
+    (2018).
+
+
+    37K. Wang, J. Ba, R. Kim, K. Cho, A. V, Salakhnikov, R. Zemel, and Y. Bengio,
+    in International Conference on Machine Learning (ICML 2015), pp. 2048–2057.
+
+
+    38P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 77, 3885 (1996).
+
+
+    39A. Tatchenko and M. Schaefer, Phys. Rev. Lett. 102, 075305 (2009).
+
+
+    40W. Wang and A. Tatchenko, J. Chem. Phys. 136, 064106 (2012).
+
+
+    41H. Wang and A. Tatchenko, in 26th Annual International Conference on Machine
+    Learning (ICML (ACCM), 2009), Vol. 40, p. 1.
+
+
+    42Y. Wang, J. Dong, and F. Seide, IEEE Trans. Audio, Lang. Process., 21, 388 (2013).
+
+
+    43S. Socher, A. Perelansky, J. V. Wu, Y. Chang, D. Manning, A. Y. Ng, and C. Klein,
+    in Conference on Empirical Methods in Natural Language Processing (ACL), (2013),
+    Vol. 1631, p. 1642.
+
+
+    44X. Jia, B. De Brabandere, T. Tuytelaela, and L. V. Gool, in Advances in Neural
+    Information Processing Systems 29, edited by D. D. Lee, M. S. Sugiyama, U. V.
+    Luxemberg, I. Guyon, and R. Garnet (Curates Inc., 2016), pp. 661–675.
+
+
+    45Y. Lee, D. Bott, J. S. Henderson, H. R. Ward, W. Hubbard, and L. D. Jack, Neural
+    Comput. 10, 1541 (1998).
+
+
+    46A. van der Steen, S. Dillon, G. E. Hinton, in Advances in Neural Information
+    Processing Systems (NIPS, 2012), pp. 10997–1105.
+
+
+    47N. K. Schmidhuber, A. Nives, Z. Simonyan, and A. Kavukian, Generative Adversarial
+    Nets, arXiv:1406.26693 (2014).
+
+
+    48F. Chollet, IEEE Conference on Computer Vision and Pattern Recognition (CVPR
+    Conference on Computer Vision and Pattern Recognition (CVPR) (2017), pp. 1251–1258.
+
+
+    49Y. Bengio, R. Cho, and J. Sun, in Proceedings of the IEEE Conference on Computer
+    Vision and Pattern Recognition (IEEE) (2016), pp. 700–708.
+
+
+    50P. J. Kingma and J. Ba, in International Conference on Learning Representations
+    (2017).
+
+
+    51R. Ramachandran, P. D. Real, M. Rupp, and A. O. von Liefeneld, Data Science,
+    3, 140002 (2014).
+
+
+    52L. C. Blum and J.-L. Reymond, J. Am. Chem. Soc. Ed., 131, 8732 (2009).
+
+
+    53O. Vinyals, S. Bengio, and M. Kular, but arXiv:1511.06391 (2015).
+
+
+    54M. Gesteiger, J. Berkhardt, and M. Schaefer, Comput. Phys. 80, 6924–6935
+
+
+    55A. Jain, S. P. Ong, H. Wachter, W. Chen, D. D. Richards, S. Schola, S. Dunter,
+    G. Skinner, S. Geder, and K. A. Pearson, APL Mater. 1, 011002 (2016).
+
+
+    56O. P. Ong, W. D. Richards, A. Jain, H. Wachter, M. Koecher, S. Schola, D. V.
+    Gutner, K. A. Schaefer, and G. Ceder, Comput. Mater.
+
+
+    57P. Ramachandran and G. Varauchav, Comput. Phys. Eng. 13, 40 (2011).
+
+
+    58I. Polakovsky, A. Gerbeke, F. Pavu, H. Vavu, X. Ren, K. Reuter, and M. Schaefer,
+    Comput. Phys. Commun. 180, 2175 (2009).
+
+
+    59M. Ceriotti, J. More, and D. E. Manolopoulos, Comput. Phys. Commun. 185, 1019
+    (2014).
+
+
+    60M. Ceriotti, M. Parrinello, T. E. Markland, and D. E. Manolopoulos, J. Chem.
+    Phys. 134, 123104 (2011).'
+  merge: -1
+  img_proc: true
