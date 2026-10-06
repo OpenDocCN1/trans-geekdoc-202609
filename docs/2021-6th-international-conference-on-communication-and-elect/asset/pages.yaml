@@ -1,0 +1,307 @@
+- pgno: 0
+  md: '# Traffic Rules Violation Detection by Machine Learning Techniques
+
+
+    P.Srinivas Reddy¹, T. Nishwa², R. Shiva Kiran Reddy³, Ch Sadviq⁴, K. Kithivik⁵
+
+    1,2,3,4,5 Department of Computer Science and Engineering, MLR Institute of Technology
+
+    ndundigal, Hyderabad, 500043
+
+
+    # ABSTRACT—
+
+
+    Due to the growing population and people''s need for comfort, more automobiles
+    are being purchased, particularly in urban areas. This results in heavy traffic,
+    indicating that traffic violations are becoming more dangerous in every corner
+    of the world. As a result, people''s wealth decreases, and there are more accidents
+    resulting in the loss of many lives. This necessitates the need to develop traffic
+    violation detection systems to automate and eliminate the unaware among population.
+    The proposed traffic violation detector can identify signal violations who are
+    unaware that they are apprehended if they break traffic law. The proposed system
+    is faster and easier than human, as traffic police are the only one who can capture
+    images of violating traffic but not one violation simultaneously. The proposed
+    system can detect most common types of violations in real-time through computer
+    vision techniques and leaves good results with great accuracy.
+
+
+    used for analyzing imagery. This project is built on TensorFlow and it relies
+    on various libraries to perform the required actions. This system can detect three
+    types of traffic violations.
+
+
+    # II. LITERATURE SURVEY
+
+
+    In the existing system, a police officer regulates traffic and captures a photo,
+    which is then used to submit images of vehicles that break traffic rules on official
+    website with the licence number. This process takes more time and also of the
+    vehicles may escape capturing photos because it is difficult to control traffic
+    and capture the photos of vehicles who violates traffic rule simultaneously.
+
+
+    # III. PROPOSED SYSTEM
+
+
+    Due to ever-increasing traffic, it is evident that it is becoming tough to monitor
+    every individual under these conditions and it is difficult to maintain the road
+    under control as it is demanding more power. This problem can also lead to accidents,
+    traffic rules and other situations. Hence, this research proposes an automated
+    system for maintaining these violations by developing a system with help of computer
+    vision, which detects the violations caused by vehicles and identifies the registration
+    number of violated vehicles in order to send an alert to the host. In general,
+    Computer Vision is concerned on how a system can obtain high-level features from
+    the images and videos. This project entails the process of locating and identifying
+    a car''s registration number. Furthermore, it uses Convolutional Neural Networks
+    (CNN''s), which is a class of Deep learning that comes under deep neural learning
+
+
+    +   - The proposed model necessitates two things in particular -Vehicle detection
+    process
+
+    - Graphical User Interface [GUI]
+
+    The CCTV camera footage that recorded from different areas will be sent to the
+    system. Whenever the vehicle will be detected. Whenever the proposed software
+    tests the footage, the violation will be detected. The proposed software supports
+    signal violation by identifying the algorithm called R-CNN algorithm. A system
+    flowchart1 shows how the software works. We use tkinter for Graphical user interface
+    and tkinter is very interactive for the user. Police officer can take care and
+    track the traffic footage and get the details of violation with the captured vehicle
+    image. User can take further action like notifying licence numbers which violates
+    traffic rules and send to nearby police stations to take further actions.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "# Proceedings of the 66th International Conference on Communication and Electronics\
+    \ Systems (ICCES-2021)\nIEEE Xplore Part Number: CFF21AWO-ART; ISBN: 978-0-7381-1405-7\n\
+    \na) System Architecture\n\nTo remove the noise and other disturbances from the\
+    \ input video, the binarization method has been used.\n\nHoles and noise are removed\
+    \ in this process. (2) shows how binary threshold process.\n\n```\ndist(x,y) =\
+    \ MaxVal if frame(x,y) > thresh else\n```\n\n+   - Dilation and find the contour\n\
+    When we get the threshold image, to fill the holes we need to do dilation, according\
+    \ to the image is constructed to reflect the better image.\n\n![](img/965eadaf3f31c5aae921d082816a88a2_1_0.png)\n\
+    \n# 1.2. Object Detection:\n\n+   Regions with CNN features. Three-stage approach:\n\
+    - By using support vendor machine (SVM), we can extract the objects from images.\n\
+    \nFigure 1: System Architecture\n\n# 1.1. Image Processing:\n\n![](img/965eadaf3f31c5aae921d082816a88a2_1_1.png)\n\
+    \n+   - Gray scaling and blurring\nTo get the best accuracy, it is highly required\
+    \ to pre-process the input footage and the video is blurred and gray scaled with\
+    \ Gaussian blur method.\nTo remove noise and obtain best accuracy, gray scaling\
+    \ has been used.\n\nFigure 2: Algorithm used\n\n+   - Background Subtraction\n\
+    To subtract from the reference frame by the current frame, background subtraction\
+    \ has been used and as a result, the required's area will be obtained.\nEquation\
+    \ (1) shows the method.\ndist(I) = saturate(frame1(I))\n\n+   - By using convolutional\
+    \ neural network (CNN) we can extract the features from each region or image.\n\
+    - Classify and categorize each region using SVMs.\n\n# 1.3. Object Classification:\n\
+    \nAfter preprocessing method, the moving objects are obtained from the image.\
+    \ A vehicle classification model classifies the moving objects into four categories\
+    \ - 4-wheeler, 2-wheeler, 3-wheeler non-vehicle.\n is built on neural network\
+    \ model.\n\n+   - Binary Threshold"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Proceedings of the 66th IEEE Conference on Communication and Electronics Systems
+    (ICCES-2021)
+
+
+    | Type / Size | Filter Shape | Input Size |
+
+    |---|---|---|
+
+    | Conv/ s2 | | 3 x 3 x 3 | 224 x 224 x 3 |
+
+    | Dcw/ s2 | 3 x 3 x 32 | 112 x 112 x 32 |
+
+    | Conv/ s1 | 1 x 1 x 32 | 112 x 112 x 32 |
+
+    | Dcw/ s1 | 1 x 1 x 64 | 56 x 56 x 64 |
+
+    | Conv/ s1 | 1 x 1 x 64 | 56 x 56 x 64 |
+
+    | Dcw/ s1 | 3 x 3 x 128 | 56 x 56 x 128 |
+
+    | Conv/ s1 | 1 x 1 x 128 | 56 x 56 x 128 |
+
+    | Dcw/ s1 | 3 x 3 x 256 | 28 x 28 x 256 |
+
+    | Conv/ s1 | 1 x 1 x 256 | 28 x 28 x 256 |
+
+    | Dcw/ s2 | 3 x 3 x 512 | 14 x 14 x 512 |
+
+    | Conv/ s1 | 1 x 1 x 512 | 14 x 14 x 512 |
+
+    | Dcw/ s2 | 3 x 3 x 1024 | 7 x 7 x 1024 |
+
+    | Conv/ s1 | 1 x 1 x 1024 | 7 x 7 x 1024 |
+
+    | Avg. Pool / s1 | Pool 7 x 7 | 7 x 7 x 1024 |
+
+    | FC / s1 | 1024 x 1000 | 1 x 1 x 1024 |
+
+    | Softmax / s1 | Classifier | 1 x 1 x 1024 |
+
+
+    the vehicles traffic rule the system crop image of the vehicle violators also
+    like the image shown. Later through OpenCV we can recognize the license plate
+    number of the vehicles which violate the traffic rule.
+
+
+    INPUT:
+
+
+    ![](img/965eadaf3f31c5aae921d082816a88a2_2_0.png)
+
+
+    shows how the neural architecture is designed.
+
+
+    # 1.4. Violation Detection:
+
+
+    Our project mainly focuses on one violation that is signal violation.
+
+
+    OUTPUT:
+
+
+    Signal violation: On road we have some predefined lines on the screen wherever
+    the vehicles crosses lines at wrong time or while the signal is red, the vehicles
+    are violating traffic rules.
+
+
+    ![](img/965eadaf3f31c5aae921d082816a88a2_2_1.png)
+
+
+    Those vehicles pictures are captured and license number is extracted.
+
+
+    # IV. RESULT
+
+
+    When the signal violation detection system was executed on the input video footage,
+    the input is preprocessed and after drawing predefined lines the output of the
+    system is: wherever the violation of traffic rule occurs system takes a photograph
+    from the CCTV camera, then subtract unnecessary image from it, which provides
+    the features of the vehicles in the image that is required by the RCNN. The RCNN
+    is used to detect whether the vehicle in the picture violates the traffic rule
+    or not. Lastly, when'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'Proceedings of the 66th International Conference on Electronics Systems (ICCES-2021)
+
+    IEEE Explore Part Carn Number: CFP221AWO-ART; ISBN: 978-0-7381-1405-7
+
+
+    # Signal Violation:
+
+
+    ![](img/965eadaf3f31c5aae921d082816a88a2_3_0.png)
+
+
+    the absence of traffic police and to make it easy for the traffic department to
+    control and observe the traffic and take measures against the violated owner in
+    a quick and effective way. To reduce the work for the traffic police and avoid
+    accidents. To create awareness, so that it is important for each and every individual
+    to follow the traffic rules.
+
+
+    # FUTURE WORK
+
+
+    When a signal is violated, the proposed system detects it. Further, the program
+    runtime can be improved by using a computer with high-speed processor specifications
+    or GPU. Future research about the software of the design algorithm can also use
+    other advanced image processing techniques. In future, we can add penalty points,
+    where we detect vehicle has matter challan. By ignoring not required steps at
+    back we can boost the program runtime of the system. A computer algorithm used
+    instead of providing more information in the system. Our plan is to implement
+    the number plate detection with OCR and penalty points, to support this system
+    more robust. We are going to implement all the traffic rules violation detection
+    and all will come with the concept penalty points, when ever the license plate
+    is detected, on top of the vehicle we will find penalty. Penalty point of vehicle
+    is the number of challans who didn''t pay. This can make it easier to police office
+    while going through camera and can take immediate action on vehicle which has
+    many penalty points.
+
+
+    Figure 5: Can extract speed and license number of vehicle.
+
+
+    ![](img/965eadaf3f31c5aae921d082816a88a2_3_1.png)
+
+
+    Figure 6: Best Fitplot and Crossover Performance
+
+
+    Shown in image 1 Initially image is captured from the CCTV camera. Executing the
+    system in Image 1 as input obtains an cropped picture shown in Image 2. Finally
+    the runtime of the executing process is 6.55 seconds.
+
+
+    # V. CONCLUSION
+
+
+    The designed algorithm which is used ready to detect the sort of violation mentioned
+    on this project which is denying traffic signal that is signal violation. The
+    goal of the project is to decrease the work for traffic police officers and automatically
+    detects the violations in
+
+
+    +   REFERENCES:
+
+    [1] Y. Aryan, O. Bular, R. P. Loce, and P. Paul, “Passenger Department Violation
+    Detection in HOV/HOT-Lines,” 2015.
+
+    [2] X. Zhang, Y. Tian, L. Liang, T. Huang and W. Guo, “Macro-Block-Level Discrimination
+    Asymmetry Coding Toward Surveillance Video.,” 2012.
+
+    [3] Dat Tran, Train to use any Object Detector with TensorFlow Object Detector
+    API | 2021 | Towards Data Science.
+
+    [4] S.Prinivas Reddy, Ramesh, O., “A Video-Based Traffic Violation Detection System,”
+    Sep 2019.
+
+    [5] Madhuhavari S., Deepthi N. B., U. Smar, Goose, “Passenger Commitment Violation
+    Detection in HOV/HOT Lanes,” Aug 2019.
+
+
+    978-0-7381-1405-7/21/$31.00 ©2021 IEEE
+
+
+    Authorized licensed use limited to: Tsinghua University. Downloaded on September
+    02.02.2021 at 19:15:30 UTC from IEEE Explore. Restrictions apply.
+
+
+    1267'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '[6] Sowmya G., Divya Jyothi G., Shirisha N., Navya K., Active learning strategies
+    in engineering education, Journal of Advanced Research in Dynamic and Control
+    Systems, Jan 2021.
+
+
+    [7]Mukukin Ozkul , Ilir Capuni(2018). Police-less multiparty traffic violation
+    detection and reporting system with privacy preservation”, IET Intelligent Transport
+    Systems, Vol. 12 No. 5, pp. 351–358.
+
+
+    [8] Rhen Anjerome Bedruz, Aaron Christian P. Uy, Edwin Sybingco, Argel Bandala,
+    Elena Dadios (2019). “A Robotic Model Approach of an Automated Traffic Violation
+    Detection System with Apprehension” 2018 IEEE 10th International Conference on
+    Humanoid, Nanotechnology, Information Technology,Communication and Control, Environment
+    and Management (HINICEM), pp. 1–4.
+
+
+    [9] SamirirElsagheer Mohamed (2019).“Automatic Traffic Violation Recording and
+    Reporting System to Limit Traffic Accidents: Based on Vehicular Ad-hoc Networks
+    (VANET)”. 2019 International Conference on Innovative Trends in Computer Engineering
+    (ITCE), pp. 254–259.
+
+
+    [10] Siddharth Tripathi, Utsav Shetty, Asif Hasnin, Rohini Hallikar (2019), “Cloud
+    Based Intelligent Traffic System'
+  merge: -1
+  img_proc: true
