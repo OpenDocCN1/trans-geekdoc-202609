@@ -1,0 +1,16 @@
+# 250 Blockchain
+
+stored on the blockchain. A common hashing algorithm called SHA-256 is used in Bitcoin. The popular cryptocurrency uses the complexity of the hashing algorithm to introduce a computational task that is expensive for nodes to easily create and publish blocks. This form of computation prevents attackers from spamming the network with invalid blocks or publishing requests [14].
+
+Asymmetric cryptographic methods are used for two main purposes in the blockchain. The first is for signing transactions for maintaining integrity and authenticity. All transactions are signed by the issuer's private key. The second purpose is to generate addresses by hashing the user's public key. These addresses are assigned not only to users also to smart contracts and are required to initiate a transaction with the user or the execution of a contract [18].
+
+3. Transactions and Blocks: A transaction is the smallest unit in the blockchain. A transaction is an interaction or agreement between two participating nodes (or users) in the blockchain network. A transaction usually involves the transfer of some form of digital assets as cryptocurrency tokens [18]. However, with the help of smart contracts, transactions can now be used to compute outputs on the network, transfer data, and even store some results on the blockchain. Smart contracts have paved the way for transfer of any kind of structure such as authorization documents, contracts, business policies, or any other information that has to be stored securely and cannot be tampered with.
+
+A typical block in a blockchain consists of a block header and a block body. The header consists of fields such as block version, hash of the previous block, hash of all transactions in this block, timestamp, and nonce. The second field is often built by storing the root node of the Merkle tree formed from the transactions [14]. The Merkle tree provides a fast and simple method to hash all the transactions and is used in Bitcoin [14] and Ethereum [15]. Ethereum uses a modified Merkle Patricia Tree for its increased efficiency in insert and delete operations. Details like timestamp, nonce, and block version are implementation dependent and All nodes compete to publish the next block in the blockchain for rewards given by the network. However, the blocks have to meet a certain criteria specified by the used consensus model to be published onto the chain.
+
+Transactions are sent to all nodes of the blockchain. These transactions are compiled in the block body and the block header values are computed. Once the block is ready, it is sent to all nodes for verification and acceptance. A block is treated as "valid" only if it meets the following conditions:
+
++   - All transactions in the block must be valid.
+- The block must conform with the chosen consensus policy.
+
+Each node in the blockchain checks the validity of the transactions in the new block received as well whether the block meets the consensus policy. If the block is declared valid, it is added to the chain. If two new blocks are received by the full node at the same time, the block that is longer (contains more transactions) and latest is added to the chain by default [18]. The following sub-section describes the consensus models of the blockchain in detail.

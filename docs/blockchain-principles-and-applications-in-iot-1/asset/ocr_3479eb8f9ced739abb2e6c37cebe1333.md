@@ -1,0 +1,1 @@
+Any setup for IoT devices can be broadly classified into either of the following types.
