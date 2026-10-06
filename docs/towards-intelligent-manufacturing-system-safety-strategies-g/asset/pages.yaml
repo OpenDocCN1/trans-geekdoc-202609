@@ -1,0 +1,725 @@
+- pgno: 0
+  md: '![](img/1171a3d722ee12eb7001b50078ce2ca6_0_0.png)
+
+
+    Available online at www.sciencedirect.com
+
+
+    # # IFAC Papers
+
+    CONFERENCE PAPER ARCHIVE
+
+
+    IFACPapersOnline 55-10 (2022) 1001–1006
+
+
+    # ## Intelligent manufacturing system safety strategies: generating Lockout/Tagout
+    sheets by Machine Learning – a case study
+
+
+    *Victor Delpa*, Kevin Chapron**, Jean-Pierre Kenné*, Lucas Hof*
+
+    *École de Technologie Supérieure, Montréal, Canada
+
+    (e-mail: victor.delpa1@etsmtl.ca, lucas.hof@etsmtl.ca)
+
+    ** CONFORMAT, Chicicoomi, Canada
+
+    *(e-mail: kevin.chapron@conformat.com)
+
+
+    **Abstract:** Lockout/Tagout (LOTO) is a procedure that considerably reduces the
+    risk of work-related accidents by isolating and securing the energy sources of
+    industrial equipment. In the Industry 4.0 era, safety procedures must also evolve
+    towards more intelligent procedures supported by technologies such as machine
+    learning or the Internet of Things. The LOTO procedures indicate how to perform
+    the security. Sheets, manually generated, can be generated automatically to optimize
+    the LOTO procedure. This paper proposes a methodology to achieve an automatic
+    generation of sheets. The first step extracts information from the LOTO sheets
+    provided by the industrial partner and in a next step develop text mining methods
+    and word similarity search. Several options are evaluated, which aims to generate
+    sheets from the previously obtained data. Future steps of this research will be
+    presented. In practice, an automatic generation of sheets would enable to implement
+    the LOTO procedure for an an industrial device, which would reduce the risk of
+    accidents.
+
+
+    © 2022 The Authors. This is an open access article under the CC BY-NC-ND license
+    (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+
+    **Keywords:** Industry 4.0; Safety and Environment; Text mining; Lockout/Tagout;
+    Machine Learning; Apriori algorithm; Random Forest.
+
+
+    #  1. INTRODUCTION
+
+
+    Workplace accidents that can have severe human and material consequences. In the
+    industrial environment, the frequency of accidents should be minimized with modern
+    methods and precautions. Manufacturing environments where accidents can occur
+    are very varied. Workers in manufacturing are at the highest risk for injury and
+    deaths (Bulazcelli et al., 2008). The National Institute for Occupational Safety
+    and Health has published guidelines for energy control management and service.
+    The procedures proposed in these guidelines are mandatory since 1988 when the
+    Occupational Safety and Health Administration (Occupational Safety and Health
+    Administration 1989) promoted the Hazard Energy Control (Lockout/Tagout) Standard.
+    The standard requires employers to lock out and disconnecting equipment. Lockout/tagout
+    is the locking of the energy isolating device (hydraulic, electrical, pneumatic,
+    etc.) in order to
+
+
+    prevent premature while a technician is still performing his intervention. The
+    lockout consists in deactivating the device. More LOTO uses devices that prevent
+    the restart of an equipment; this can be circuit breaker locks as shown in Figure
+    1. These devices are secured by locks which is the only key holder. In industry,
+    the LOTO follows a specific arctic system that is set by lockout sheet. LOTO is
+    therefore out in the data
+
+
+    In the era of Industry 4.0, this research is based on the vision and paradigm
+    of “Operator 5.0” – an intelligent, creative, and resourceful operator with human
+    innovation achieved through information and technology to create new solutions
+    that ensure continuity of operations and workforce welfare (Romero and Stare 2021).
+    With the increasing share of actions and decisions, collaboration between human
+    and technologies such as augmented reality and Internet of Things will improve
+    these processes and ensure the safety of operators. More globally, predictive
+    models and artificial intelligence (AI) will enable new strategy to optimize maintenance
+    and integrate it into the entire process. Machine learning (ML) techniques offer
+    many opportunities in the manufacturing industry (Jamwal et al. 2021a). The safety
+    of workers in the industry could also be improved with ML, notably during manufacturing
+    operations (Jamwal et al. 2021a).
+
+
+    ![](img/1171a3d722ee12eb7001b50078ce2ca6_0_1.png)
+
+
+    2405-8963 © 2022 The Authors. This is an open access article under the CC BY-NC-ND
+    license. Peer review under responsibility of International Federation of Automatic
+    Control. 10.1016/j.futuresys.2022.09.003'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'For the rest of today, new technologies are an opportunity for work safety
+    and LOTO to be more efficient and safer. The writing of LOTO procedure requires
+    the mobilization of human personnel who go on site. LOTO sheets are often requested
+    by companies before equipment maintenance, the speed of writing the sheets would
+    benefit and the absence of human labor on site is an important objective. ML algorithms
+    are a key to achieving this goal.
+
+
+    (Anthony and Kashlia 2023). Nevertheless, at the level of document generation,
+    many advances have been made and new methods are used (Qiu et al. 2020). Technical
+    language processing in industry is poorly developed and lags other fields such
+    as medicine. Efforts in the development of natural language technology must be
+    made (Brundage et al. 2021) provide a perspective to fill this gap. With few dealing
+    with the study of textual security documents can be mentioned. Aviation incident
+    reports from around the world could be extracted using attention. These can be
+    classified to provide expertise useful for their analysis (Faming et al. 2016).
+    Similarly, in construction industry, accident reports are analyzed by experts.
+    This operation requires a lot of time. The identification of risks by text mining
+    allows a prevention of possible accidents on future construction sites (Na et
+    al. 2021).
+
+
+    # 2. STATE OF ART
+
+
+    First, this paper presents a brief state of the art over perspectives of health,
+    safety and environment (HSE) Industry 4.0 technologies, and more specifically
+    on the applications of text mining to improve maintenance operations and safety.
+    After posting of LOTO sheets to obtain a database is presented. The LOTO prediction
+    method is then discussed. A comprehensive review resumes the progress made and
+    presents the future work.
+
+
+    Industry 4.0 as Internet-of-Things (IoT), physical systems, cloud computing and
+    smart sensors have many applications dedicated to safety management. For example,
+    protective procedure (Ruppet and Abony) embedding automation technologies improves
+    safety in smart factories (Podorski et al. 2021). Safety-aware robots with the
+    ability to identify which workers could improve the work area (Beetz et al. 2015).
+    However, these show more than on the technology of Industry 4.0 than really needs
+    safety management systems. In the management of Industry 4.0 has a big gap in
+    research on ergonomics and human adaptation to operate in these connected environments
+    (Siermiench et al. 2020). Liu et al. (2020) note that the considered accuracy
+    management in Industry 4.0 really needs safety management systems. The safety
+    management is becoming automated with new digital equipment, ranging from protective
+    equipment to smart sensors, community based safety managers can assess the safety
+    status of workers on their inputs or smartphones in real time (Ruppet and Abony
+    2018).
+
+
+    Table 1 reviews the different articles dealing with the perspectives of HSE in
+    Industry 4.0 and for improving and managing safety with the application of these
+    technologies to documents.
+
+
+    | Safety | Safety | Text | Generating documents |
+
+    | --- | --- | --- | --- |
+
+    | Podgorski et al. (2017) | | | | |
+
+    | Beetz et al. (2015) | | | | |
+
+    | Siermiench et al. (2020) | | | | |
+
+    | Liu et al. (2020) | | | | |
+
+    | Ruppet and Abony (2018) | | | | |
+
+    | Itto et al. (2015) | | | | |
+
+    | Lee et al. (2022) | | | | |
+
+    | Shao et al. (2020) | | | | |
+
+    | Anthony and Kashlia (2023) | | | | |
+
+    | Osu et al. (2020) | | | | |
+
+    | Brundage et al. (2021) | | | | |
+
+    | Tongay et al. (2016) | | | | |
+
+    | Nail | | | | |
+
+    | This work | | | |
+
+
+    In text documents, ML developments can provide the ability to restore data in
+    power or PDF form, as is the case in industry. Text mining and analysis offers
+    many opportunities in the industry. Text mining and analysis opportunities in
+    the documents is an important issue: structuring them in a form that can help
+    companies. Different methods to retrieve textual information have been developed
+    by looking for similarities between words in a dictionary and the analyzed documents.
+    This method is linked to classification problem (Lee et al. 2022).
+
+
+    The contribution of this research work is to provide a concrete of ML strategies
+    to write safety protocols for manufacturing systems, a case study of EHS 4.0,
+    which is still an unexplored area. The perspectives of using these techniques
+    is the drafting of LOTO sheets that are an essential factor to guarantee workers
+    safety.
+
+
+    # 3. RESEARCH OBJECTIVES
+
+
+    Research is also on recognizing textual entanglement, the relationships between
+    different parts of a text (Sha et al. 2016). Assistance in writing technical documents
+    has also addressed. This tool is based on the structures of text
+
+
+    I. From the existing LOTO sheets, text mining will allow to obtain a reliable
+    classification which could be applied. Obtaining this database will require significant
+    work to identify the important words and de-lock the mechanism which is located.
+    Hence, the two more concrete secondary objectives can be identified::'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Victor Delpa et al., IFAC PapersOnLine 55-10 (2022) 1001–1006
+
+
+    numbers to be extracted avoiding words that do not carry important information.
+    Libraries such as the "Natural Language Toolkit" will allow the processing of
+    these files, in PDF format, as is common in the industry.
+
+
+    were converted in txt, we were able to import the LOTO as a sheet in a Python.
+
+
+    2. Once the data is obtained, the objective will be to write logs sheets with
+    only the name of the equipment as an entry. Therefore, it will be necessary to
+    establish numerical predictions.
+
+
+    # 4.2. Preprocessing
+
+
+    In order to detect the information, we want to retrieve from the LOTO sheets (machine
+    name, devices) to be locked, instructions to follow), with the dictionaries required
+    to be used, following preparations must be made on the strings associated with
+    each of the sheets. The following steps were done using the NK library of python:
+
+
+    +   * Tokenization of the character string in order to isolate each word present
+
+
+    +   * Removal of words that do not carry important information
+
+
+    +   * Removal of words that are too short (<2 characters) (which can cause problems
+    in detecting similarities between words)
+
+
+    The processing of the LOTO sheets and the writing of these sheets require to extract
+    the relevant information which will constitute our data to automatically generate
+    the sheets. The text mixing will be relevant to perform this task (De 2019).
+
+
+    # 4.1. PDF file conversion
+
+
+    To achieve objective 1 of this research, the first step is to obtain a database
+    of LOTO sheets by retrieving the names and the identifiers. The partnering organization
+    in this research, CONFORMIT, a Canadian company that develops, markets and implements
+    health, safety and environmental management software such as LOTO sheets. The
+    available LOTO sheets are PDF format as shown in Figure 3. First, we need to convert
+    PDF file into strings. The python libraries "PDF2Text" (Kushari and Shivananda
+    2021) and "pdfminer" were used to convert PDF to text, in python, and format it.
+    The "pdfminer" allowed us to keep the order of the text in the PDF files and sometimes
+    like spaces between words could be deleted which made it very difficult to extract
+    important words like machine names. These problems were solved with "pdfminer",
+    which is why the choice to work with it was made. After once the files
+
+
+    # 4.3. Analysis
+
+
+    The next step is search for similarities between the words of the analyzed sheets
+    and the words of devices. This step is the main challenge to obtain a data frames
+    in the association of words by similarity. Several algorithms on the NLTK library
+    can be used for this purpose. The J-Winkler distance algorithm is another to measure
+    similarity between two words (Yulianto and Nurhasaman 2021).
+
+
+    | S-R2N2 | Titre de la procédure |
+
+    | panneau de dépositif-R2N2 | [1] CADENAGEMENT COMPLET |
+
+    | Emplacement: Bloc W, sous-sect,sous-section électrique 00003 | |
+
+    | | Approuvé - 2018-11-20 |
+
+    | | | Préparation, arrêt et démarrage d''équipement |
+
+    | N° | Type | No Disposit | Description | Instruction | CAD TEM |
+
+    |---|---|---|---|---|---||
+
+    | 1 | | AVISER les équipements affectés que la machine/la machine cadenée | |
+    | | |
+
+    | 2 | ARRÊTER la machine dans les suites normales d''arrêt. | | | | |
+
+    | | | | | Cadenassage, contrôle et vérification | | | | |
+
+    | N° | Type | No Disposit | Description | Instruction | Emplacement | Mecan |
+    Pos. | CAD TEM |
+
+    |---|---|---|---|---|---|---|---|---|---|
+
+    | 1 | TX-S2N2 | | Disconnecter le TX-S2N2 | | OFF | CADENASSER | Ferme (On) |
+    | | |
+
+    | | 600 Volts | Bloc W, sous-sect,sous-section disjoncteur. | | | | |
+
+    | 2 VERIFIER si les travaux effectués avec un disjoncteur de sont après la tension
+    nominale du circuit. | | | | |
+
+    | 3 EFFECTUER un essai de DÉMARRAGE à partir des deux boutons de commande. Aucun
+    mouvement ne doit être détecté. Attention aux verrouillage (interlock) entre les
+    équipements. | | | | |
+
+
+    Instructions common to all sheets, need to retrieve them
+
+
+    Instruction required on the device
+
+
+    Other instruction
+
+
+    Figure 2 Information containing the LOTO sheets'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# Table 2 Illustration of the machine name data table for the LOTO sheets before\
+    \ encoding\n\n| LOTO sheets ID | Machine Names | Devices | Instructions |\n|---|---|---|---||\n\
+    | | | Word 1 | Word 2 | Principal | Secondary | On the devices |\n| | # | Distribution\
+    \ | Board | Circuit-Breaker | - | Action 1 | Action 2 |\n| | | | | | | \"open\"\
+    \ | Lock | Check Voltage / Perform-start test |\n\napproach a ratio between 0\
+    \ and 1:1 corresponding to two identical words. The calculation of the similarity\
+    \ is a bit more complex and the length of the words is well reduced. The simple\
+    \ improvement of typing errors is also weighted reducing. Even with these二是, the\
+    \ Jan-Winkler distance is chosen because it offers a better recognition of shorter\
+    \ words.\n\nretrieved words, and recall is the fraction of relevant instances\
+    \ that have been retrieved (Godbole and Sarwari 2004). A dataset of 200 LOTO sheets,\
+    \ the precision of the machine name retrieval is 87% and the recall is 90%.\n\n\
+    With the approximate position of each type known, these are scanned for similarities\
+    \ with dictionary words. Once a word from a dictionary is found, it is saved and\
+    \ associated with the analyzed sheet.\n\n# 4.4 Data set\n\nAfter the similarity\
+    \ search, the machine names, devices and instructions are formed. For the form\
+    \ shown in Figure 3, the associated data set is similar to Table 2. This data\
+    \ set will be one-hot encoded. Figure 4 summarizes the complete process to obtain\
+    \ the data set.\n\n# 5. LOTO SHEETS PREDICTION MODEL\n\nBased on the existing\
+    \ lockout sheets, text mining would allow to obtain a reliable database where\
+    \ classification algorithms could be applied. Obtaining this database will require\
+    \ a lot of work in identifying important words and extracting those that do not\
+    \ carry important information. Libraries like the Natural Language Toolkit allow\
+    \ the processing of these files in PDF format, as is very common in the industry.\n\
+    \n| LOTO sheets (PDF) | (a) Converting sheet |\n LOTO sheets (txt) | Character\
+    \ Strings |\n (c) Tokenizing |\n Words List 1 | (d) Removing stop word |\n Words\
+    \ List 2 | (e) Removing short word |\n Words List 3 | Dictionary << Devices >>\
+    \ |\n (g) Searching similarities with dictionary words | Dictionary << Instructions\
+    \ >> |\n Dataset\n\nThe study of association rules is a critical step in text\
+    \ mining, because it attempts to reveal meaningful values in a large data set.\
+    \ Association rules have been recommended for cluster analysis, but they are considered\
+    \ as general data in various domains. Specifically, they are suggested for the\
+    \ analysis of association rules. The most important and simplest is the Apriori\
+    \ algorithm (Agrawal and Srikant 1994). The Apriori algorithm would allow to experiment\
+    \ with different combinations between attribute values found in a database. The\
+    \ exploration of association rules is controlled by confidence thresholds. These\
+    \ are set to find the search area, which makes the computational process possible\
+    \ (Dhabi et al., 2021). Algorithms like the Apriori algorithm would allow to extract\
+    \ patterns of ideas and to choose sequences of operation according the type of\
+    \ machine. The name of the machine could be directly associated with lockout instructions.\
+    \ Information on medical texts has been done (Toun et al., 2021), using the Apriori\
+    \ algorithm. A similar work could be done on safety procedures such as LOTO sheets.\n\
+    \nFigure 3 Procedure for LOTO sheets acquisition\n\n# 4.5 Performance Evaluation\n\
+    \nThe retrieving of machine names, devices and instructions can be considered\
+    \ as a multi-label classification problem. The problem of retrieval can be computed\
+    \ by calculating the precision of our algorithm on a test set. Precision is the\
+    \ fraction of relevant instances among the\n\nTwo decisions can be distinguished.\
+    \ The first level is the association of the machine name with a list of devices\
+    \ to be locked. The second level is the association of a device with instructions.\
+    \ These two decisions can be considered independent: the instructions to a device\
+    \ do not change depending on the type of machine.\n\nHowever, in practice, two\
+    \ machines with similar names may be identical: not the same components, not the\
+    \ same name of valves. In order not obtain only one association rule"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Victor Delpa et al. / IFAC PapersOnline55-10 (2022) 1001–1006
+
+
+    # 1005
+
+
+    ![](img/1171a3d722ee12eb7001b50078ce2ca6_4_0.png)
+
+
+    Figure 4 Association rules prediction using the Apriori association tree by Random
+    Forest
+
+
+    # Decision Level 1
+
+
+    # Decision Level 2
+
+
+    **General association rule**
+
+    « Machine Name » ➔ « Devices »
+
+
+    **General association rule**
+
+    « Devices » ➔ « Instructions »
+
+
+    | Machine Name | Devices | |
+
+    |---|---||
+
+    | (Distribution, Board) | (Disconnector) or |
+
+    | | (Circuit-breaker) |
+
+
+    | | Instructions | |
+
+    |---|---||
+
+    | | (Circuit-breaker) |
+
+
+    Open "off"/
+
+    Unplug
+
+    Lock
+
+    Check Value /
+
+
+    Figure 5 Devices and instructions prediction model
+
+
+    for a machine can be processed on different sets after application of a Random
+    Forest (RF) algorithm. RF is a collection of decision trees created after the
+    creation of several data sets by randomly sampling subsets of observations, here
+    The Apriori training on these bases provides general association rules for the
+    two decision levels mentioned. The RF algorithm uses single-subgraph predictions
+    of independent models to reduce the variance and the prediction error (Shehashee
+    and Thailajand 2017). This type of algorithm averages the predictions of independent
+    models to choose the most significant rules on the LOTO sets for a machine with
+    different levels of confidence. The process of obtaining the different association
+    rules using a bagging of the dataset with random is shown in Figure 5.
+
+
+    # 6. CONCLUSION
+
+
+    This research is in the context of industry 4.0 and ESH 4.0 can contribute to
+    improving safety in industries by providing safety procedures, usually written
+    by humans. This paper presents the work to generate LOTO sets, namely the first
+    identified sub-graph is the extraction of information from the names of the machines,
+    which need to be locked and the instructions to correctly sequence them. The transformation
+    of the LOTO sets in PDF text format results in a usable database, for modeling
+    logic based on machine names, which is tested. The work on database may need to
+    be performed if some errors detected in the data extraction from graphs prove
+    to have high an impact on the methods
+
+
+    In the second sub-objective, the steps of the research project are the training
+    and testing of the machine learning model combining the Apriori and Random Forest
+    algorithms. Finally, the parameters of association and bagging algorithms will
+    need to be tuned to produce LOTO'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'sheets based on the line above. This work, is for the
+
+    moment, based on text pdf files, a text recognition with
+
+    image pdf also be done. Even, many industrialists
+
+    hAVE sheets in the form of PDF images only, these
+
+    sheets are an important source to improve the prediction
+
+    model. As the subject deals with currency records, agents a
+
+    will follow the predictions which will
+
+    also have to be done by being sure to use in
+
+    practice this kind of assignment in writing safety practices.
+
+
+    Journal of Enterprise Information Management,\ahead-of-print.
+
+
+    Jo, J. (2021) ‘Text mining’, Studies in Big Data. Cham.:
+
+
+    # ACKNOWLEDGEMENTS
+
+
+    Kulkarni, A, and Shivananda, A. (2021) ‘Extracting the Data
+
+    in Natural Language Processing Recipes, Springer
+
+
+    Lee, J., Yoo, C., Kim, and H. Mun. (2022) Deep learning-
+
+    based digitalization of a part catalog book to generate
+
+    specific by a neutral reference data-
+
+    dictionary’, Computers in Industry, 119, 103656.
+
+
+    This work was supported by CONFORM and the financial
+
+    support of Information Technology and
+
+    Complex Systems (Mitacs) under grant IT27391.
+
+
+    Liu, Z., Xie, J. L., and Chen, Y. (2020) ‘Analysis of
+
+    safety measures in machine learning’, 4.9 Systems
+
+    Research and Behavioral Science, 37, 632-645.
+
+
+    # REFERENCES
+
+
+    Na, X., Ling, M., Liu, Y., and Wen, Y. (2021) An
+
+    improved method text analysis to extract risk
+
+    factors from customer reports’, Safety
+
+    Science, 138, 105521.
+
+
+    Agrawal, R. and Srikant, R. (1994) Fast algorithms for
+
+    association rules, translated by Citeser, 487-499.
+
+
+    Occupational Safety and Health Standards (1989) ‘The
+
+    control of hazardous energy (lockout/tagout)’, Occupational
+
+
+    Andry, L. and Lashkina, G. (2023) ‘Mvver: a machine
+
+    learning agent to assist in the reading and writing of
+
+    currency papers, IEEE Transactions on Technical
+
+    Engineering, 46(3), 185-193.
+
+
+    Podgorski, E., Jain, S. A. M. S., Kham, Tullah, R.,
+
+    Shen, H., and Berg, M. (2017) ‘Extensive document
+
+    analysis for high-risk medical reports in the
+
+    India Valley’, Value Science, 33(8), e100795.
+
+
+    Beetz, M., Bartals, G., Alt-Schaffer, A., and Hadidencruz,
+
+    Feldel, R., Felder, D., Daddadin, S., Maldonado, A.,nAnsfield, M., Weissner, Y.,
+    Tesman, W., and Roth, R.
+
+    (2012) ‘Natural language and safety improvement with human com-
+
+    workers’, IEEE/RSJ International Conference on
+
+    Intelligent Robots and Systems (ISRO), 6528-
+
+    6535.
+
+
+    Xu, Y., Sun, X., Yao, Y., Shao, D., Ni, and Huang, X.
+
+    (2020) ‘Pre-trained models for natural language
+
+    processing: A survey’, Science China Technology
+
+    Science, 63(10), e882.
+
+
+    Brunauer, J. P., Tescan, K., Hodmiczuk, M., Dunia, A.,
+
+    Lukens, S. (2021) ‘Technical language processing:
+
+    Unlocking manativity’, Manufacturing
+
+    Letters, 27, 42-46.
+
+
+    Tuppert, A, and Robert, J. (2018) Industrial Internet of Things
+
+    based lead cycle time of assembly lines, translated
+
+    1-4.
+
+
+    Balzucelli, M. T., Vernik, J. S., Rosker, G. S., Webster, D.
+
+    and Lee, P. S. (2008) ‘Circumstances of lockout/tagout injuries in manufacturing’,
+
+    American Journal of Industrial Medicine, 51(10),
+
+    728-734.
+
+
+    Sha, L., Li, S., Chang, B., and Sun, Z. (2016) Recursive
+
+    Textual Analysis via Multi-task Learning
+
+    LSTM
+
+
+    Dabi, A., Sabri, L., and Gazi, Y. (2021) Finding
+
+    Suitable Threshold for Support in Afternoon Support
+
+    Using Statistical Measures, by Hanifan
+
+    A., E., Darwish, A., El-Kader, S., and Mohamed, A.
+
+    Algorithm, Springer, Springer Singapore,
+
+    89-101.
+
+
+    Sheshasaes, A. and Thambisal, G. (2017) ‘Comparison of
+
+    classification algorithms in text mining’,
+
+    International journal of pure and applied
+
+    methods, 116(22), 425-433.
+
+
+    Godbole, S. and Saranga, S. (2004) Detective Methods
+
+    for Multi-layered classification, translated by Berlin,
+
+    Heidelberg Springer Berlin, 22-30.
+
+
+    Siemiench, C. E., Sinclair, A. and Hendraw, J. M.
+
+    (2015) Global drivers, sustainable manufacturing
+
+    and ethics, Ergonomics Performance, 51(1),
+
+    1-10.
+
+
+    Otto, N., Liao, M. and van den Bosch, A. (2017) Text
+
+    anly analytics in industry: Challenges, desiderata and
+
+    trends’, Computers in Industry, 78, 96-107.
+
+
+    Tanguy, L., Tukeiche, N., Urai, A., Herrmann, E. and Raynal,
+
+    C. (2016) ‘Natural language processing for
+
+    safety reports: For classification to interactive
+
+    analysis reports’, Computers in Industry, 78, 80-95.
+
+
+    Jamwal, A., Agrawal, R., Sharma, M., Kumar, A., Kumar, V.
+
+    and Garza-Reyes, J. A. (2021b) ‘Machine Learning
+
+    Applications for Sustainable Manufacturing: A
+
+    Sustainability Review and Future Research Directions’, Applied Sciences,
+
+    11(12), 5725.
+
+
+    Touami, A., Kara N., and Nurhashan, N. (2021) Mining
+
+    biomedical tests based on statistical method and
+
+    association rules, translated 1-4.
+
+
+    Jamwal, A., Agrawal, R., Sharma, M., Kumar, A., Kumar, V.
+
+    and Garza-Reyes, J. A. (2021b) Machine Learning
+
+    Applications for Sustainable Manufacturing: A
+
+    Sustainability Review and Future Research, Bibliometric
+
+
+    Yulianto, M. and Nurhashan, N. (2021) ‘The hybrid of
+
+    jaro-winner and rabin-khar algorithm in detecting
+
+    Indonesian text similarity’, Journal Online
+
+    Informatika, 6, 88-95.'
+  merge: -1
+  img_proc: true
