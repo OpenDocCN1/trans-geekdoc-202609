@@ -1,0 +1,15 @@
+# 200 Chapter 6: Human-Machine Teaming
+
+business operations. AI practitioners and researchers can assess where applications best fall on the HMT spectrum by understanding the level of judgment necessary to pursue courses of action, as described by Agrawal et al. [27, 28]. However, as discussed earlier and illustrated in 6.3 and 6.4, the human and the machine working as teammates must be carefully evaluated in terms of confidence level versus consequence of action. Dhar described simple two-dimensional evaluation topology and gave several examples in terms of the cost of error versus predictability axis [29].
+
+Daugherty and Wilson offer a very clear delineation of activities well matched to humans, activities best matched to machines, and activities where a human and a machine can complement each other [30]. Although, as discussed in section 6.2, these roles or activities do not fail exclusively in one category or other, their structure can be interpreted as where, after the ML stage where the output represents knowledge, the human can determine the best courses of action. As Dougherty points out: "If you are going to look at where value is created, look at how the people in your organization can drive more value in collaboration with machines" [31].
+
+The framework used in this section applies to any of the following scenarios:
+
++   * A single human working with a machine or multiple teammates as teammates
+* Multiple humans integrating a single machine as a member of their team
+* Multiple humans leveraging multiple intelligent machines as teammates
+
+As an example of multiple humans (cyberoperators) working with a single intelligent machine, we present an AI prototype demonstrated at the MIT Lincoln Laboratory and shown in figure 6.6. ML techniques are able to amplify the capabilities of cyberoperators. A common approach is to identify cyberulnerabilities, starting with the highest, and working down to the lowest vulnerability to the Common Vulnerability Scoring Systems (CVSS) [32, 33]. Unfortunately, the cyberoperators can spend an immense amount of time trying to patch everything. Using NLP with a logistic regression classifier, the machine can recommend to the cyberoperators the vulnerabilities with the highest probability to be exploited, informed from a public database containing a set of exploitable vulnerabilities. Typically, only a small percentage of vulnerabilities are actually exploitable.
+
+Figure 6.6 illustrates the input data (i.e., by a logistic regression classifier), and performance results. The performance results show the probability of exploited vulnerabilities detected (i.e., identified) via the ML techniques versus the probability of false alarm. There is a substantial improvement with an area under the curve (AUC) of 0.86 with the ML techniques, compared to the CVSS approach, with an AUC = 0.64 (the ideal maximum is AUC = 1.0) [4].

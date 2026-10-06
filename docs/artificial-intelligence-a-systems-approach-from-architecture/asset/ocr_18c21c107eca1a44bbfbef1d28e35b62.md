@@ -1,0 +1,13 @@
+# 13.4: Writing and Presentation Fundamentals 453
+
+A broken-glass outline is flexible and easily revisable, which makes it a valuable tool for brainstorming and outlining. This flexibility helps overcome the rigidity of a formal outline and minimizes barriers to change, such that you can add easily, remove, comment, reorder, or move elements around your outline. When using a broken-glass outline, you are encouraged to adjust, cross out spokes, move elements around arrows, and add annotations. In the early stages of brainstorming and outlining, a broken-glass outline allows you to explore your ideas freely, discover new ones by channeling your creative and explorative thinking, and organize your thoughts and see how your ideas fit together. The broken-glass outline contains all the key ideas and has allowed you to freely organize your thoughts, and you can move on creating a formal outline.
+
+With an outline in place, you have completed most of the work. What remains is building on the content within your outline to formalize your presentation or written work. In the following section, we discuss writing and presentation fundamentals.
+
+# 13.4 Writing and Presentation Fundamentals
+
+In this section, you will learn tips and techniques for delivering effective spoken and written communication. We will start by discussing writing fundamentals, including how to organize your writing and general techniques for drawing readers into reading what you have written and helping them understand what you are trying to communicate. Next, we will discuss presentation fundamentals, including best practices for how to prepare and deliver an effective presentation. Both build on the foundation of the outline for your content.
+
+# Writing Fundamentals
+
+Seasoned readers use certain techniques to quickly understand the key elements of a piece of scientific writing. As an author, it is important to understand these techniques and how to compose your writing in a clear and understandable way. This will help ensure that your ideas are communicated clearly and the important elements of your work are highlighted. Authors, who are deeply familiar with the subject matter that are not aware of when their writing is not clear or when important elements are missing. When writing, it is important to keep in mind that seasoned readers use surface clues to extract the essence of a piece of writing. Table 13.2 highlights these key elements used for rapid decryption and their purpose.

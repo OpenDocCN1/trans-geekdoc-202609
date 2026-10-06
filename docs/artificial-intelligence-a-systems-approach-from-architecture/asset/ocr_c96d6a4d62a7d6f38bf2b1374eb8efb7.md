@@ -1,0 +1,13 @@
++   Advance serverless computing: A higher-level abstraction of the underlying computing system (e.g., cloud computing system) [111]. The developers need to know less about the details of where the application is running. The processor suite would be very heterogeneous (e.g., CPUs, GPUs, TPUs), matched to the application, and enabling scalability.
+
++   Improve performance tools for AI hardware and software: There are performance benchmarks that are becoming popular in assessing ML algorithm performance (e.g., NAS-bench and MLPerf) [112, 113]. More benchmarks are needed to address a full end-to-end AI system, from data sensors and sources through deployment, as emphasized in chapter 2. The Artificial Intelligence Index Report performs a comprehensive update every year of progress in AI, and the performance tools are critical for assessing progress and trends [114].
+
++   Compute across distributed platforms: As DNN models become larger, increases in and user machines work collaboratively, there is a need to expand centralized products and services to a constellation of users and machines. This topology presents a challenge since AI must employ distributed computing with a seamless operation.
+
++   Improve computing performance to enable metaverse applications: AI has a central role to play in making the metaverse useful. Collaboration will improve computing technologies advance in support of mixed-reality (e.g., virtual, augmented, extended reality). There are many applications where the metaverse can be extremely useful, such as healthcare, manufacturing, so-called digital twins for industry 4.0, and education in a hybrid mode (i.e., classroom and virtual) [115].
+
++   Develop efficient computing for neurosymbolic reasoning: Advance computing technologies to more efficiently compute neural network algorithms, complemented with symbolic reasoning, to introduce more context into AI capabilities.
+
++   Scale neuromorphic computing: Neuromorphic computing has the potential to deliver neural computations at a small size and low power (well matched to edge computing). However, more advances are needed to scale neuromorphic computing to commercially viable and practical applications, including the supporting software ecosystem and benchmarks [72, 116, 117].
+
++   Incorporate privacy preserving computing techniques: The need for security and privacy is becoming more important as ML applications expand. Further research is required to make techniques like differential privacy, secure multiparty computation, and homomorphic encryption practical in real-life applications [118]. At present, these techniques require substantial computation and communication

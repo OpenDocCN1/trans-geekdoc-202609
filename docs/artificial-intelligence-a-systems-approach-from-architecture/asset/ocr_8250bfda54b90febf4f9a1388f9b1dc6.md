@@ -1,0 +1,10 @@
+# Use-Case Example 4: Managing Energy for Smart Homes (MESH)
+
+The environment is where we all meet, we all have a mutual interest; it is the one thing of all us share.
+
+> —Lady Bird Johnson, former First Lady of the US
+
+In this chapter, we present the strategic road map developed by a team of industry practitioners at the Massachusetts Institute of Technology (MIT) for an artificial intelligence (AI)–powered smart home energy management system as Managing Energy for Smart Homes (MESH). The MIT team consisted of Tom Swan, Simon Delavelle, Enrico Gebauer, Demlade Adinsinwo, and Akshit Bhatnagar.
+The burning of fossil fuels such as coal, natural gas, and oil to generate electricity and heat is the largest contributor to the greenhouse gases that trap the Sun's heat in Earth's atmosphere [1]. Scientists predict that the increase of global temperatures due to human-made greenhouse gases will continue, and the effects on society will be grave if we don't address the climate crisis [2]. Reducing greenhouse emissions by minimizing our society's reliance on fossil fuels is essential to avoid the adverse impacts of climate change [3]. Renewable energy sources such as solar energy, wind energy, and hydropower are alternative sources of energy that are key to addressing the climate crisis. We are already beginning to see citizens and businesses contributing to the solution as consumers and providers of distributed renewable energy. Similarly, energy providers and governments continue to find ways to incentivize and promote the use and self-generation of renewable energy, and continue to be valid concerns around the grid stability of renewable energy sources.
+
+MESH aims to enable the transition to renewable energy by optimizing energy consumption and distribution through a decentralized smart energy ecosystem incorporating

@@ -1,0 +1,15 @@
+As we described earlier in this chapter, microservices are a technique for partitioning a single application into small components that could be changed, administered, and deployed as a collection of smaller services instead of a large and complex monolithic application. Each microservice can be developed, tested, and deployed independently [51].
+
+Containers are an approach to powering microservices by running securely isolated applications. They provide a way of encapsulating executable code, libraries, third-party apps via APIs, and other elements to achieve agile DevOps developments. The Docker technology is one type of technique for creating and implementing containerized micro.
+
+Microservices and containerization are approaches that follow the guidance under the rubric of a cloud-native reference architecture, as exposed by the CNCF [52–54]. A cloud-native reference architecture incorporates orchestration and management of part of its architectural layers. K8s is an orchestrator to automate deployment, management, and scale up by adding or removing containers across the underlying infrastructure. Reznik et al. provided an eloquent description of what is needed for organizations to migrate to a cloud-native architecture [52].
+
+Fortunately for AI practitioners, CNCF was established in the summer of 2015 by the Linux Foundation to facilitate collaboration, common tools, trust, education, and best practices [53]. The CNCF organization tracks, in detail, the landscape of market providers for each of the elements of the cloud-native reference architecture (e.g., orchestration and management, runtime, and provisioning) [54].
+
+Davis described Netflix’s use case, by employing cloud-native architectural patterns and best practices, it maintained a high level of availability despite the downtime experienced by the underlying cloud computing infrastructure [55]. Netflix demonstrated that by using isolated services, failure in part of the end-to-end service did not translate to downtime of the entire system.
+
+Common Pitfall 4: There is a lack of early demonstrations of an MVP, as espoused in an Agile development process, and compliance across all attributes (i.e., operational excellence, cost optimization, reliability and security, performance metrics, risk management, and quality assurance) shown on the outer perimeter of the AI system architecture implementation framework (see figure 10.3 and table 11.1).
+
+Recommendation: Perform regular prototype demonstrations (i.e., AI system pilots; by the discussion of SRLs 6 and 7 in chapter 10) with stakeholders in the loop, employing an online operational configuration and cloud-native best practices [56].
+
+Common Pitfall 5: There is an inability to operate in a highly constrained environment, such as at the edge (i.e., edge computing), when all the development was demonstrated in an enterprise-level scenario.

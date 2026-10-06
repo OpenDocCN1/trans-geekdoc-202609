@@ -1,0 +1,15 @@
+# 9.1: Introduction to Strategic Thinking 293
+
+A 2018 survey by McKinsey & Company, performed over 2,000 participants representing a range of regions, industries, and company sizes, identified a lack of clear AI strategy as the most cited barrier to AI adoption [5]. This barrier was identified by 43 percent of the respondents. The next-largest barrier, identified by 42 percent of the respondents, was the lack of personnel with appropriate skills to be effective at their assigned AI duties.
+
+In the next section, we introduce the reader to the AISDM. We have used the AISDM framework for our own real-world applications. We have also taught, as part of our MIT classes, the AISDM framework as a step-by-step guide for creating a strategic plan in the team class projects. The use cases discussed in chapters 14–18, illustrate the application of the AISDM framework to a broad range of AI applications.
+
+The AISDM approach helps in addressing the barriers identified in the McKinsey & Company report. The output of the AISDM framework is a strategic development map that formulates the direction for the successful development and deployment of AI capabilities.
+
+Before we describe in detail the AISDM framework, readers interested in additional tools to assess emerging trends that could have an impact on business opportunities were referred to Christensen et al. [6], who have devised a theory to understand why companies have difficulty responding to disruptive innovations. Their resource, process, value (RPV) theory is very useful and well aligned, with the first strategic step, Know: observe and seek trends. The RPV theory incorporates resources (what an organization has in form of people, technology, and equipment); processes (how an organization does its work); and values (what the organization wants to achieve). Again, the strategic road is the blueprint that codifies the near-term, midterm, and long-term directions of an AI organization informed by its resources, processes, and values.
+
+Another resource, on how other companies approach their long-term opportunities, is by Schwartz, who describes techniques for scenario planning in his book The Art of the Long View [7]. Scenario planning is not about trying to predict the future. Instead, it is a technique to help in formulating alternatives—Broader the AI value proposition options—as discussed in the four-way approach illustrated in figure 9.2.
+
+The ability to communicate effectively is so important, from staff to upper management, that we dedicate chapter 13 to this topic. As shown in figure 9.2, the third step in improving strategic thinking skills is to Communicate at every level in the organization to shape a common understanding.
+
+In the subsequent sections, we describe each of the components that form the AISDM framework.

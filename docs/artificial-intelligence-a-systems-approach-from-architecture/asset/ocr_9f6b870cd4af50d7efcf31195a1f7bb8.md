@@ -1,0 +1,14 @@
+# Chapter 5: Modern Computing
+
+at meeting these computational requirements because of the parallel structure inherent in the ML algorithms. The model parameters have been growing at approximately 2x every 2.3 months, and the corresponding computation throughput requirements have been increasing at 2x every 3.4 months. A large number of cores with high-speed memory close or within the device enable parallelism and low latencies. Many of the neural network key computational kernels (e.g., kernels in an MLP) are linear operations: vector-vector adds, matrix-vector multiplies and adds, matrix-matrix-multiplies adds.
+
+Because of these high-computation throughput demands, hardware designers have looked at ways to reduce arithmetic wherever possible. Most ML algorithms require higher precision during training than during the inference stage. Today's AI processors use mixed-precision arithmetic. Microprocessors based on DSA eliminate many of the unnecessary instructions typically found in CPUs (such as branch prediction, out-of-order execution, and different levels of cache hierarchies). A chip designed under the rubric of a DSA is a special-purpose device that performs a narrow range of tasks extremely well.
+
+It is important to emphasize the points made by hardware and software engineers that the future will involve exploiting hardware features with software—for example, simpler instances, pruning, compression, parallel loops, vectorization, and linear algebra optimized instructions need to continue to meet the evolving demands of AI systems.
+
+For the past decade, there has been a Cambrian Explosion in the number of computing engines, from specialized data centers to embedded devices. However, at present, most computing systems fall within 100 GigaOps/watt to 10 TeraOps/watt in power density. The devices scale down to meet the form factors needed for edge, their computation throughputs per unit watt scale correspondingly. Similarly, for enterprise computing, as the computation throughputs increase, the peak power also increases, resulting in about an equivalent range of computational power density.
+
+In addition to hardware and software optimizations, another powerful lever in the implementation of ML algorithms is exploiting parallelism. There are several types of parallelism that can be exploited individually or in a hybrid way: data parallelism, model parallelism, and pipeline parallelism. These techniques are used today in the implementation of the best-performing ML DNN algorithms.
+
+Given all the different knots that algorithm architects, together with software designers, can use, it is of paramount importance that metrics, standards, and tools be developed. A very useful metric for assessing chip performance is the rooftop
+metric, commonly illustrated using a two-dimensional graph showing computation
