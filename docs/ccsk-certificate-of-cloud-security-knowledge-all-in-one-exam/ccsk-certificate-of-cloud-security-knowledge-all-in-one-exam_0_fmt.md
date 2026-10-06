@@ -1,0 +1,8350 @@
+
+# CCSK 云安全知识证书全套考试指南
+
+![](img/1260460096.jpg)
+
+## Chapter 1 Cloud Computing Concepts and Architectures
+
+### 云如何改变工作负载安全
+
+#### 不可变工作负载使安全可靠
+
+##### 云对标准工作负载安全控制的影响
+
+#### 工作负载安全监控和日志记录的变更
+
+##### 变更漏洞评估
+
+#### 工作负载安全监控和日志记录的变更
+
+---
+
+## 关于作者
+
+**Graham Thompson** 是 Intrinsec Security 的创始人，一家为北美企业和政府提供云安全咨询和培训的组织。他是一名拥有 25 多年系统工程、技术架构、漏洞评估以及多种管理职务经验的安全专业人员。他为领先的企业和政府机构构建了数百万美元的成功安全解决方案。
+
+自 2010 年起，Graham 专注于云安全。他为北美政府机构以及财务、电信和零售行业的财富 500 强企业设计和评估了云安全解决方案。他是 Cloud Security Alliance 以及 (ISC)² 认证的 CCSK、CISSP 和 CCSP 培训师，并参与了相关课程的开发，作为领域专家。
+
+除了 CSA 和 (ISC)² 认证外，Graham 还获得了包括 Amazon、ISACA（CISA）、Microsoft（MCSE）、Cisco、Symantec、Fortinet、SANS 等多个认证。他于蒙特利尔麦吉尔大学学习，并在渥太华阿尔冈金学院为多门安全课程担任兼职教授。
+
+### 关于技术编辑
+
+**Ryan Bergsma**，CCSK，是一名致力于推广网络安全最佳实践的网络安全专业人员，尤其关注云安全。作为云安全联盟的培训项目主管，他不断寻找将最新的最佳实践文档转化为培训产品的方法，以填补网络安全技能缺口，培养能够构建更安全网络生态系统的个人。Ryan 出身于销售和业务背景，拥有计算机信息系统安全学士学位。
+
+**Daniele Catteddu** 是一名安全与风险管理实践者和隐私倡导者。他在私营和公共部门的高级职位拥有丰富经验。目前，他是 Cloud Security Alliance 的首席技术官，负责推动组织技术战略的采用。他是 CSA STAR 计划的联合创始人，并是意大利国家标准化委员会在 ISO/IEC SC27 委员会的成员。他是马斯特里赫特大学隐私与网络安全中心的讲师，欧洲隐私协会科学委员会成员，以及肯特大学网络安全咨询委员会成员。此前，他在 ENISA（欧洲联盟网络安全局）担任关键信息基础设施保护及新兴和未来风险方面的专家。加入 ENISA 之前，他在银行和金融行业从事信息安全顾问工作。他拥有意大利帕尔马大学的工商管理与经济学硕士学位。他经常在主要安全会议上发表演讲，并撰写了多篇关于网络安全和隐私的论文。
+
+**Dr. Peter van Eijk**，CCSK, CCSP，是一位经验丰富的信息技术专业人士，拥有 40 多年信息与通信技术及计算机科学领域的经验。他是实践者、研究者和教师。他的经历包括在计算机网络、数字基础设施项目的教学与研究、管理多个项目与团队以及担任互联网服务提供商的技术总监。咨询期间，他的实践经验涵盖 IT 共享服务成本与风险评估、客户服务架构、IT 战略、协作架构以及共享服务实施。他还活跃于 ISO 标准化活动、政府关键网络基础设施委员会以及 CSA 志愿者工作。Dr. van Eijk 编写并交付了多个云培训项目，包括如今被公认为 CompTIA Cloud Essentials 的第一版课程。他目前作为独立 CCSK 培训师以及乌特勒支 Hogeschool 的网络安全与云计算副教授工作。他拥有格罗宁根大学数学与计算机科学硕士学位，以及滕托大学的博士学位。
+
+![](img/title.jpg)
+
+The material in this eBook also appears in the print version of this title: ISBN: 978-1-26-046008-7, MHID: 1-26-046008-8.
+
+eBook conversion by codeMantra  
+
+Version 1.0
+
+All trademarks are trademarks of their respective owners. Rather than put a trademark symbol after every occurrence of a trademarked name, we use names in an editorial fashion only, and to the benefit of the trademark owner, with no intention of infringement of the trademark. Where such designations appear in this book, they have been printed with initial caps.
+
+McGraw-Hill Education eBooks are available at special quantity discounts to use as premiums and sales promotions or for use in corporate training programs. To contact a representative, please visit the Contact Us page at [www.mhprofessional.com](http://www.mhprofessional.com).
+
+Information has been obtained by McGraw-Hill Education from sources believed to be reliable. However, because of the possibility of human or mechanical error by our sources, McGraw-Hill Education, or others, McGraw-Hill Education does not guarantee the accuracy, adequacy, or completeness of any information and is not responsible for any errors or omissions or the results obtained from the use of such information.
+
+TERMS OF USE
+
+This is a copyrighted work and McGraw-Hill Education and its licensors reserve all rights in and to the work. Use of this work is subject to these terms. Except as permitted under the Copyright Act of 1976 and the right to store and retrieve one copy of the work, you may not decompile, disassemble, reverse engineer, reproduce, modify, create derivative works based upon, transmit, distribute, disseminate, sell, publish or sublicense the work or any part of it without McGraw-Hill Education’s prior consent. You may use the work for your own noncommercial and personal use; any other use of the work is strictly prohibited. Your right to use the work may be terminated if you fail to comply with these terms.
+
+THE WORK IS PROVIDED “AS IS.” McGRAW-HILL EDUCATION AND ITS LICENSORS MAKE NO GUARANTEES OR WARRANTIES AS TO THE ACCURACY, ADEQUACY OR COMPLETENESS OF OR RESULTS TO BE OBTAINED FROM USING THE WORK, INCLUDING ANY INFORMATION THAT CAN BE ACCESSED THROUGH THE WORK VIA HYPERLINK OR OTHERWISE, AND EXPRESSLY DISCLAIM ANY WARRANTY, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. McGraw-Hill Education and its licensors do not warrant or guarantee that the functions contained in the work will meet your requirements or that its operation will be uninterrupted or error free. Neither McGraw-Hill Education nor its licensors shall be liable to you or anyone else for any inaccuracy, error or omission, regardless of cause, in the work or for any damages resulting therefrom. McGraw-Hill Education has no responsibility for the content of any information accessed through the work. Under no circumstances shall McGraw-Hill Education and/or its licensors be liable for any indirect, incidental, special, punitive, consequential or similar damages that result from the use of or inability to use the work, even if any of them has been advised of the possibility of such damages. This limitation of liability shall apply to any claim or cause whatsoever whether such claim or cause arises in contract, tort or otherwise.
+
+*This book is dedicated to you, the reader. My wish is that you use the knowledge in this book to secure your potential. Knowing that you may benefit by my efforts drove me to the finish line. Here’s to your future success.*
+
+---
+
+序言
+
+致谢
+
+引言
+
+内部尽职调查
+
+监控、测试和更新
+
+外部尽职调查
+
+合同谈判
+
+第三方审计和认证
+
+电子发现
+
+所有权、保管和控制
+
+相关的云应用和环境
+
+可搜索性和电子发现工具
+
+保存
+
+数据保留法和记录保存义务
+
+数据收集
+
+取证
+
+合理完整性
+
+直接访问
+
+原生生产
+
+认证
+
+提供商与客户在电子发现中的合作
+
+应对传票或搜查令
+
+章节回顾
+
+问题
+
+答案
+
+**第 4 章** 合规性和审计管理
+
+合规性概述
+
+云对合同的影响
+
+云如何改变合规性
+
+合规性继承
+
+持续合规性
+
+审计概述
+
+云中的审计管理
+
+SOC 报告和 ISO 认证背景介绍
+
+SOC 背景介绍
+
+ISO 背景介绍
+
+云如何改变审计
+
+审计权利
+
+审计范围
+
+审计师要求
+
+章节回顾
+
+问题
+
+答案
+
+**第 5 章** 信息治理
+
+云信息治理领域
+
+# 第 6 章 管理平面和业务连续性
+
+## 管理平面
+
+### 编程接口背景介绍
+
+### 访问管理平面
+
+### 保障管理平面安全
+
+## 云端的业务连续性和灾难恢复
+
+### BCP/DR 背景介绍
+
+### 设计容错架构
+
+### 在云服务提供商内的业务连续性
+
+### 混乱工程
+
+### 云服务提供商的丢失的业务连续性
+
+### 私有云和提供商的连续性
+
+# 第 7 章 基础设施安全
+
+## 云网络虚拟化
+
+### OSI 参考模型背景介绍
+
+### 虚拟局域网 (VLAN)
+
+### 虚拟扩展以太网 (VXLAN)
+
+### 网络平面背景介绍
+
+### 软件定义网络 (SDN)
+
+### 网络功能虚拟化
+
+## 云网络虚拟化对安全的影响
+
+### 虚拟设备的挑战
+
+### 软件定义网络 (SDN) 的安全优势
+
+### 微分段和软件定义边界
+
+### 对云服务提供商或私有云的额外考量
+
+### 混合云的考量
+
+# 第 8 章 虚拟化和容器
+
+## 与云计算相关的主要虚拟化类别
+
+### 计算虚拟化
+
+### 网络虚拟化
+
+### 存储虚拟化
+
+## 容器
+
+### 容器定义背景介绍
+
+### 容器安全建议
+
+# 第 9 章 事件响应
+
+## 事件响应生命周期
+
+### 事件和事件背景介绍
+
+### 准备阶段
+
+### 检测和分析阶段
+
+### 遏制、清除和恢复阶段
+
+### 事后活动阶段
+
+### 云端对事件响应的影响
+
+#### 准备
+
+#### 检测和分析
+
+#### 遏制、清除和恢复
+
+#### 事后活动
+
+# 第 10 章 应用安全
+
+## 安全软件生命周期 (SSDLC) 与云计算
+
+### 安全设计和开发
+
+#### 培训
+
+#### 定义
+
+#### 设计
+
+#### 开发
+
+## 测试
+
+### 安全部署
+
+### 云端对漏洞评估的影响
+
+### 云端对渗透测试的影响
+
+### 部署管道安全
+
+### 可变基础设施 (IaC) 和不可变工作负载的影响
+
+### 安全运营
+
+### 云端对应用设计和架构的影响
+
+### 微服务背景介绍
+
+### DevOps 的崛起和作用
+
+#### DevOps 背景介绍
+
+#### DevOps 的安全影响和优势
+
+# 第 11 章 数据安全和加密
+
+### 数据安全控制
+
+### 云端数据存储类型
+
+### 管理云端数据迁移
+
+### CASB 背景介绍
+
+### 保障云端数据传输安全
+
+### 保障云端数据安全
+
+### 云端数据访问控制
+
+### 存储 (静态) 加密和令牌化
+
+### 密钥管理 (包括客户管理密钥)
+
+## 数据安全架构
+
+### 监控、审计和警报
+
+### 额外的数据安全控制
+
+### 云平台/提供商特定的控制
+
+### 数据丢失预防
+
+### 企业权限管理
+
+### 数据掩盖和测试数据生成
+
+### 强制执行生命周期管理安全
+
+# 第 12 章 标识、授权和访问管理
+
+## 云端 IAM 的工作原理
+
+### IAM 术语
+
+### IAM 标准
+
+### 联合背景介绍
+
+### 管理云端用户和标识
+
+### 身份验证和凭证
+
+### 权限和访问管理
+
+### 特权用户管理
+
+# 第 13 章 安全即服务
+
+## SaaS 的潜在好处和顾虑
+
+### SaaS 的主要类别
+
+### 标识、授权和访问管理服务
+
+### 云访问安全网关 (CASB)
+
+### 网络安全网关
+
+### 电子邮件安全
+
+### 安全评估
+
+### 网络应用防火墙
+
+### 入侵检测/防御
+
+### 安全信息和事件管理 (SIEM)
+
+### 加密和密钥管理
+
+### 业务连续性和灾难恢复
+
+### 安全管理
+
+### 分布式拒绝服务保护
+
+### 身份和访问管理
+
+## 平台即服务
+
+## 物联网 (IoT)
+
+## 移动计算
+
+### 无服务器计算
+
+### 章节回顾
+
+#### 问题
+
+#### 答案
+
+## 第 15 章 ENISA 云计算：信息安全的益处、风险和建议
+
+### 云计算的安全益处
+
+### 安全与规模带来的益处
+
+### 安全作为市场差异化因素
+
+### 受管理安全服务的标准化接口
+
+### 资源快速、智能的扩展
+
+### 审计和证据收集
+
+### 及时、有效、高效的更新和默认设置
+
+### 审计和 SLA 促进更好的风险管理
+
+### 资源集中带来的益处
+
+### 顶级安全风险
+
+### IT 风险背景
+
+### 管理权丧失
+
+### 锁定
+
+### 隔离失败
+
+
+
+## 合规风险
+
+### 管理界面被入侵
+
+#### 数据保护
+
+### 不安全或不完整的数据删除
+
+### 恶意内部人员
+
+#### 所有场景中共通的五个关键法律问题
+
+##### 数据保护
+
+##### 保密性
+
+##### 知识产权
+
+##### 专业疏忽
+
+### 外包服务和控制权变更
+
+#### 考试附加项目
+
+##### 开放虚拟化格式
+
+##### 虚拟机跳转
+
+##### 经济拒绝服务
+
+##### 许可证风险
+
+### 云服务提供商被收购的风险
+
+### 数据控制方与数据处理方的定义
+
+### IaaS 责任中的客户系统监控
+
+#### 用户配置漏洞
+
+### 管理权丧失导致的底层漏洞
+
+### 风险关注 R.1–R.35 及底层漏洞
+
+#### 章节回顾
+
+##### 问题
+
+##### 答案
+
+## 附录 A 云计算安全策略示例
+
+### 云安全策略：集中化示例
+
+#### 目的
+
+#### 范围
+
+#### 背景
+
+#### 政策
+
+### 云安全策略：分类化示例
+
+#### 目的
+
+#### 范围
+
+#### 背景
+
+#### 政策
+
+## 附录 B 在线内容概述
+
+### 系统要求
+
+### 您的总体研讨会培训中心账户
+
+### 隐私声明
+
+### 单用户许可证条款和条件
+
+### TotalTester 在线
+
+### 技术支持
+
+### 术语表
+
+### 目录
+
+---
+
+## 前言
+
+当今的技术环境似乎是一场目眩神迷的游乐场之旅。它移动速度快，方向变化莫测，如果不关注安全，你可能会受伤。云计算无疑是我们最重要且最普遍的技术之一。云在许多方面是全球经济的支柱；它被消费者、企业和政府每天使用，并且在很大程度上已经取代了传统的本地 IT。按需消费计算的概念对各类规模的组织具有强大吸引力，并且只会继续增长。
+
+保障云的安全是更广泛的网络安全行业的重要任务之一。2009 年，云安全联盟（Cloud Security Alliance）成立，旨在解决这一问题并制定基本的安全最佳实践和教育项目，以此实现目标。CSA 已发展成为全球最重要的安全组织之一，拥有五大洲 100 多个分会和办事处。CSA 开发了云安全知识证书（CCSK），为 IT 和安全专业人员提供衡量其掌握云计算安全所需技能的基准，确保他们能够采取适当的措施保护其交互的云计算环境。CCSK 备受好评，屡获殊荣，并且常常是许多职位的必要条件。
+
+当前，我们正面临网络安全领域的关键技能缺口。许多研究表明，全球网络安全专业人才缺口已达到数百万。在我们行业的从业者中，大量人员需要将传统的本地 IT 安全技能升级到云计算的动态环境中。CCSK 是开启更好、更有前景职业道路的关键之一。
+
+云安全知识具有独特性，因为云计算不断变化，拥有独特的共享责任模型，而必须采用的安全最佳实践细节与管理员对拥有完整控制权的计算机有显著差异。例如，对传统系统进行漏洞扫描必须仔细协调，以确保结果准确且不影响其他生产系统。相反，云平台拥有大量新的自动化功能，能够在大规模上更轻松地解决诸如补丁管理等现有问题。DevSecOps 是一种描述利用这些新工具进行协调安全的颠覆性新方法。对于您而言，理解云端的安全差异对于运营、风险管理以及最终符合众多安全和隐私要求至关重要。
+
+为此，我很高兴推荐这本由 CCSK 讲师格雷厄姆·汤普森（Graham Thompson）撰写的《CCSK 云安全知识证书全套考试指南》（*CCSK Certificate of Cloud Security Knowledge All-in-One Exam Guide*），并由麦格劳-希尔公司出版。CSA 团队与麦格劳-希尔紧密合作，确保本书是 CCSK 4 版本的全面指南。读者将了解构成 CCSK 完整知识体系的多样化主题。读者将获得所有需要尝试并通过 CCSK 考试的内容，甚至还会获得以折扣价格参加考试的优惠码！
+
+对于云安全联盟（Cloud Security Alliance），这是一个在网络安全行业深耕多年的非营利组织，提升全球信息保护水平不仅是职业，更是热情所在。我们坚信，阅读这本书的少数专家可能会在挽救我们的数字世界中发挥不容小觑的作用。感谢您选择此书，祝您在获得云安全知识证书时一切顺利！
+
+*Jim Reavis*  
+
+CEO，云安全联盟
+
+---
+
+## 致谢
+
+我首先要感谢我的公主和我们的四个儿子，格雷厄姆·Jr.、纳森、瑞安和特里斯。你们经历了我为构建职业生涯和自我认可而进行的无尽追求，承受了许多。你们为我提供了我只能希望他人拥有的生活。也许有一天，我会像你们那样相信自己。
+
+这本书不可能在 `Ryan Bergsma`、`Daniele Catteddu` 和 `Peter van Eijk` 于云安全联盟（Cloud Security Alliance）的卓越努力下实现。
+
+他们的技术审查和贡献极大地帮助了本书的形成。正是由于他们的输入，本书不仅为您准备了 CCSK 考试，还将使您成为整体更出色的安全专业人士。至少这是我的希望。
+
+我也要衷心感谢 `Jim Reavis`，云安全联盟的创始人兼首席执行官，在他自 CCSK 初始发布以来对我的所有付出。如果没有他，这一切都不可能实现。我的家人和我将永远感激您的慷慨与支持。
+
+向 `Wendy` 以及 `McGraw-Hill` 的团队致谢，感谢在整个过程中对我的所有耐心以及解答我这位初学者的所有问题。在本项目开始之前，我真正意识到一家顶级出版社背后有多少人和努力。我保证，我将永远改变对书店的看法。
+
+从专业和职业角度，我想感谢过去这些年代与我共事的所有人。特别向 `CTP` 整个团队致敬。与所有的你们合作是一种荣幸。我从未相信公司可以变成家人，尤其是当你是顾问时。感谢你们允许我帮助建造那艘船。顺便说一下，`Liz`，兰花仍然健在，并在我们家中占据非常特殊的位置。
+
+最后，我想感谢我的母亲 `Florence Thompson`（娘家姓 `Kingan`）。她是一位坚强的女性，也是我的真正榜样。单亲妈妈竭尽全力抚养一个叛逆的儿子（也就是我！）。我多么希望你现在就在这里，看看一切都已经圆满解决。
+
+## CHAPTER 3
+
+## 法律问题、合同与电子发现
+
+本章涵盖了 CSA 指导手册第 3 章节的以下主题：
+
+- 法律框架在数据保护和隐私方面的作用
+- 跨境数据传输
+- 区域性考量因素
+- 合同与供应商选择
+- 尽职调查
+- 第三方审计与认证
+- 电子发现
+- 数据所有权
+- 数据保存
+- 数据收集
+- 应对传票或搜查令
+
+> *The lawyer’s power lies in the uncertainty of the law.*
+>
+> —Jeremy Bentham
+
+Bentham 先生的这句引言完美概括了云计算所面临的法律问题。云的法律层面是一把双刃剑。一方面，政府需要数年时间才能制定出能够跟上技术发展的法律，且往往滞后不前。另一方面，且更令 CCSK 考试关注的，各司法管辖区的进度各不相同，且同一国家的法律在不同地区往往差异显著。
+
+本章主要讨论将数据移动到云端时产生的主要法律问题、与云服务提供商（CSP）签订合同的情况以及电子发现。请注意，阅读本章后您不会成为法律专家。本章的目标是让您理解为何在采购云服务时，尤其是在跨多个司法管辖区与云提供商（甚至客户）合作时，必须让公司的法律顾问参与其中。此外，请留意法律和法规会频繁变更，您应在依赖本章内容前确认其时效性。本章聚焦于公有云和第三方托管的私有云的法律影响。公司自有并运营的私有云更多是技术问题，因为本地私有云本质上只是对公司拥有和管理的计算资源进行自动化和编排的技术实现。
+
+### 法律框架在数据保护和隐私方面的作用
+
+许多国家都有自己的法律框架，要求提供适当的保护措施以保障个人数据的隐私以及信息和计算机系统的安全。例如，在欧盟，大多数隐私法律可以追溯到 20 世纪 60 年代和 70 年代。这些法规最终构成了经济合作与发展组织（OECD）隐私指南，该指南于 1980 年通过。随后形成了数据保护指令（Directive 95/46/EC），该指令取代了后来在本章后面提到的《通用数据保护条例》（GDPR）。核心要点是：这些隐私法律并非新近出现，而是经过多年发展而成，如今才被严格执行。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 在 CCSK 考试中，您无需深入研究各种欧盟标准、它们之间的差异以及发布日期。它们在此处被强调是因为 GDPR 如今备受关注。
+
+从法律角度来看，云服务消费时涉及三方（如 Figure 3-1 所示），每方对法律的要求各不相同。
+
+![Images](img/pg50_Image_15.jpg)
+
+---
+
+**Figure 3-1** Legal entities involved with storing end-user data in cloud
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 在这三种模型中，您应了解 `控制者/保管者（controller/custodian）` 的角色，并记住 `司法管辖区` 对适用法律的决定性作用。
+
+- **提供者/处理者（Provider/Processor）** 这一角色很明确，即云服务提供商。提供者必须遵循其在运营所在司法管辖区的法律规定。
+
+- **保管者/控制者（Custodian/Controller）** 是持有终端用户数据的实体。其名称取决于所在地区：在美国称为“数据保管者”，在欧洲称为“数据控制者”。无论称谓如何，该实体在法律上对妥善保护终端用户数据负有责任。例如，如果贵公司使用 IaaS 提供商存储客户数据，则贵公司是该终端用户数据的 **数据保管者/控制者**。保管者/控制者必须遵循其所在司法管辖区的法律规定。
+
+- **终端用户/数据主体（End User/Data Subject）** 是指数据被保管者/控制者所持有的个人（如您和我）。
+
+![Images](img/note.jpg)
+
+**NOTE** 虽然我在使用欧洲和北美的术语（如保管者/控制者），但两者之间存在细微差别。我采用此类表述是为了简化说明，帮助您在不深入各司法管辖区法律细节的前提下理解角色。
+
+这些隐私法规规定了诸多义务，例如保密义务和安全义务，保管者/控制者及提供者/处理者均须遵守。数据保管者/控制者未经数据主体同意，不得收集和处理个人数据。例如，数据保管者/控制者仅限于数据主体在同意协议中授权的收集和使用范围。当使用数据处理者（如云服务提供商）代为处理数据时，数据保管者/控制者仍须在法律上对该数据的收集和处理负责。作为数据保管者/控制者，您必须确保提供者/处理者采取适当的技术和组织安全措施以保护数据。这自然要求您对提供者进行适当的尽职调查。
+
+![Images](img/caution.jpg)
+
+**CAUTION** 数据拥有者/控制方的法律要求并非易事。被标记为数据拥有者具有非常实际的法律后果。如果您的公司持有终端用户数据，且在您公司所在司法管辖区的法律（或甚至是公司的审慎实践）要求的隐私或安全方面被发现存在疏忽，您的公司将面临被起诉的风险。
+
+尽管各大洲国家存在共同主题，但每个国家都发展出了可能与其他国家法规冲突的数据保护体系。因此，在多个地区运营的云提供商和云用户在满足合规要求方面面临困难。在许多情况下，不同国家的法律可能根据以下标准适用：
+
+- 云提供商的所在地
+- 数据拥有者/控制方的所在地
+- 终端用户的所在地
+- 服务器的所在地
+- 各方合同的法律管辖权，这可能与任何参与方的实际所在地不同
+- 这些地点之间的任何条约或其他法律框架
+
+![Images](img/tip.jpg)
+
+**TIP** 如果您的公司有全球业务，您将面临冲突的法律要求。这种冲突构成法律风险，应当被认真对待或正式接受。
+
+现在您是否明白，CSA 指导涵盖了云服务的法律方面？在全球范围内厘清这些问题及其相互作用必须由贵公司的法律顾问完成，但作为 CCSK 持有者，您需要知道何时应联系法律部门。毕竟，只有法律顾问有权向高管提供关于公司任何行为法律风险的建议，对吗？底线是：实体运营所在地是决定尽职调查要求和法律义务的关键知识。Figure 3-2 展示了世界各地每个司法管辖区中存在的各种法律问题。
+
+![Images](img/pg52_Image_16.jpg)
+
+---
+
+**Figure 3-2** 云服务使用涉及的法律方面。（经 CSA 许可使用。）
+
+#### Required Security Measures
+
+许多国家已采用隐私法，这些法规要么是 *全面性* 的（涵盖所有个人数据类别），要么是 *行业性* 的（涵盖特定类别的个人数据）。这些法规通常要求实施适当的安全措施，以确保隐私相关数据得到妥善保护。这些安全措施可能要求公司采取技术、物理和行政措施。这些措施当然可以用于保护不只是个人信息；它们很可能也会被用于保护其他敏感数据集，例如财务数据和商业机密。
+
+#### Treaties
+
+*treaty* 是两个政治权威之间的协议。为了帮助您准备 CCSK 考试，有两个值得讨论的条约。您可能听说过 *International Safe Harbor Privacy Principles*（国际安全港隐私原则），即美国与欧盟之间的 Safe Harbor 协议。该条约基本上允许公司自愿承诺保护存储在美国的欧盟公民数据，方式与数据存储在欧洲联盟内部时所需的保护程度相同。该协议于 2015 年终止，随后不久被新协议 *EU-US Privacy Shield* 取代。Privacy Shield 的工作方式与 Safe Harbor 类似，即允许个人数据在欧盟和美国之间进行传输和存储。公司自行认证拥有适当的隐私措施，Privacy Shield 作为 EU GDPR 下的数据传输机制。
+
+![Images](img/note.jpg)
+
+**NOTE** 我将在本章后面对 GDPR 进行重点说明。
+
+#### Restrictions to Cross-Border Data Transfers
+
+除非存在如 Privacy Shield 等条约，该条约确立了适 sufficient 保护水平，许多国家禁止数据存储在其国界之外。如果没有条约，仍然可以将数据存储在外国，但需要更复杂的解决方案。在这种情况下，数据导入方和导出方可以签订合同，确保终端用户的隐私权。复杂性可能来自某些情况下需要数据保护监管员的事先许可，才能将数据传入或传出该国。
+
+在 CSA 指导中，有两个被引用的禁止数据出口的国家——俄罗斯和中国。这两国的数据本地化法律要求，关于其居民的个人数据必须存储在该国境内。请务必注意，还有其他国家以及加拿大的部分省份也有相同的法律，但 CSA 指导仅针对这两个国家（后文将更深入地讨论）。
+
+#### CLOUD Act
+
+Clarifying Lawful Overseas Use of Data Act（CLOUD Act）于 2018 年在美国提出。其目的是解决美国政府发出传票或 mandat（令状）以获取美国提供商存储的客户数据的法律问题，无论该数据在何处物理存储。
+
+CLOUD Act 的重要性在微软与美国司法部（DOJ）之间的诉讼案例中得以体现。DOJ 想要获取存储在爱尔兰数据中心的数据。微软为其客户（CSP 应始终为客户辩护！）拒绝了 DOJ 的访问请求，因为数据本身位于美国境外。在此期间，CLOUD Act 被通过，最高法院裁定此案无效，因为 CLOUD Act 赋予了 DOJ 访问数据的权力，因为微软是美国公司。
+
+![Images](img/tip.jpg)
+
+**TIP** CSP 应始终为客户对任何权威机构的超出范围的访问请求进行辩护。客户应在合同中寻找此类语言。
+
+### Regional Examples
+
+如前面本章所述，世界各地的许多国家都有自己的隐私和安全要求法律。本节将从 CSA 指导中选取一些例子进行讨论。
+
+![Images](img/note.jpg)
+
+**NOTE** 在这些法律跨司法管辖区的复杂性之上，法律文本本身的语言也增加了难度。在多个情况下，司法管辖区（如日本或德国）会发布英文版法律文本，但只有本地语言版本被视为权威版本，且没有保证提供的翻译版本的准确性。
+
+#### Asia Pacific Region
+
+![Images](img/pg54_Image_17.jpg)
+
+（经 CSA 许可使用。）
+
+CSA 指导覆盖的 Asia Pacific 地区包括澳大利亚、中国、日本和俄罗斯。
+
+##### Australia
+
+在澳大利亚，1988 年《隐私法》（Privacy Act）和 2010 年《澳大利亚消费者法》（ACL）用于保护终端用户。Privacy Act 包含 13 项澳大利亚隐私原则（APP），适用于所有私营部门和非营利组织（收入超过 AUD $3 million）、所有私立医疗服务提供者以及部分小型企业。Privacy Act 可保护任何澳大利亚客户，即使 CSP 位于澳大利亚境外，即使合同中列明其他法律也然。
+
+- [澳大利亚](https://wiki.example.org/feynmans_learning_method)于 2017 年 2 月修订了其 1988 年隐私法，要求公司在发生安全泄露时通知受影响的澳大利亚居民和澳大利亚信息专员。安全泄露必须满足以下两个条件才需报告：要么是未经授权的访问或披露个人信息，且可能导致严重损害；要么是个人信息在存在未经授权访问或披露的风险的情况下丢失，且若发生泄露将可能导致相关个人遭受严重损害。
+
+![Images](img/note.jpg)
+
+**NOTE** 澳大利亚并非唯一实行仅要求丢失数据被认定可能导致严重损害时才需报告的条款的国家。加拿大的《个人信息保护和电子文件法》(PIPEDA)包含相同类型的条款。与澳大利亚一样，数据丢失方自行判断是否存在因丢失数据而产生的严重风险。
+
+##### China
+
+过去几年，中国实施法律框架以应对个人和公司信息的隐私与安全。其 2017 年《网络安全法》(2018 年更新将在后文说明)规范了网络运营者和重要信息基础设施运营者的运营。2017 年法律要求这些运营者实施一系列安全要求，包括设计和采用信息安全措施；制定网络安全应急响应预案；以及在必要时协助和支持调查机构，以保护国家安全并侦查犯罪。该法要求网络产品和服务提供商告知用户已知的安全缺陷和漏洞，并报告此类缺陷及 `className.funcName(var1 + var2, "cmd arg0 arg1")`
+
+此外，该法还包含数据本地化条款，要求个人信息和其他重要数据必须存储于中华人民共和国境内。（2017 年《网络安全法》中“重要数据”的定义极其模糊，在法律界备受争议。）
+
+
+
+2018 年《网络安全法》的更新赋予了中国公安部更大的权力。这些额外权力实质上使得公安部能够对系统进行渗透测试（现场或远程），检查禁止内容，并复制任何用户信息，与其他国家机构共享相关信息。在现场检查的情况下，允许两名人民武装警察人员在场以确保程序遵循规定。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 2018 年《网络安全法》的更新未被纳入 CSA 指南，因此不太可能出现在 CCSK 考试中。但从实际角度看，如果你在非中国市场运营但希望在中国开展业务，强烈建议你与法律顾问讨论数据本地化及中国政府对境内数据的访问权限。
+
+### Japan
+
+与许多国家一样，日本《个人信息保护法》(APPI)要求私营部门安全保护个人信息和数据。此外还有多部法律，如《行政机关持有个人信息保护法》（非笔误），以及行业特定法规，例如医疗行业要求持证专业人员保密患者信息。
+
+日本也限制将个人数据转移至第三方（如云服务提供商）的能力。转移数据给第三方需获得数据主体的事先同意。除非目的国已建立个人信息保护框架并被个人信息保护委员会认可，否则不需要此类同意。日本与欧盟之间的此类框架于 2018 年缔结，与 GDPR 同时生效。
+
+### Russia
+
+俄罗斯数据保护法规定公民数据必须本地化，即如同中国，俄国公民数据必须存储于俄罗斯境内。Roskomnadzor（俄罗斯数据保护监管机构）负责执法，已因部分网站可能存储俄国公民数据但未在俄罗斯境内存储而阻止了其访问。简单来说，如果某网站在俄罗斯不可用，原因是该网站所有者未在俄罗斯运营或存储相关数据。
+
+![Images](img/note.jpg)
+
+**NOTE** 多个网站会跟踪因本地化法律而被俄罗斯和/或中国阻止的公司。
+
+![Images](img/pg56_Image_18.jpg)
+
+(Used with permission from CSA.)
+
+### European Union and European Economic Area
+
+欧盟于 2016 年通过 GDPR（2018 年 5 月成为强制执行），该法规对所有欧盟成员国以及欧洲经济区（EEA）成员国具有约束力，取代了第 95/46/EC 指令（该指令曾是欧盟和 EEA 所有成员国数据保护法律的基础）。
+
+![Images](img/note.jpg)
+
+**NOTE** EEA 由欧盟成员国加上冰岛、列支敦士登和挪威组成。
+
+另一份需知的欧盟/EEA 个人数据保护文件是第 2002/58/EC 指令，即《隐私与电子通信指令》。该指令正在被淘汰，预计将被新《电子隐私 regulation》取代，但该新规则已延迟多年，且此类延迟预计将持续下去。
+
+当然，没有安全保障就无法实现隐私。网络安全指令（NIS Directive）处理这些安全需求。该指令于 2016 年与 GDPR 同时通过，并于 2018 年 5 月实施。这促使欧盟/EEA 成员国制定针对关键基础设施和必需服务的新信息安全法律。接下来的两节将分别探讨 GDPR 和 NIS Directive。
+
+#### General Data Protection Regulation
+
+GDPR 适用于所有在经济活动中处理欧盟公民数据的法律实体（包括组织和个人），无论处理是否在欧盟/EEA 境内进行。其裁决（legal term for making an official decision）由与争议双方最密切相关的成员国数据保护监管机构或法院进行。以下列表涵盖 GDPR 的基本要点：
+
+*   **Applicability** GDPR 适用于在欧盟/EEA 范围内，以控制者或处理者身份开展活动的个人数据处理，无论处理地点是否在欧盟/EEA。它也适用于非欧盟/EEA 境内的控制者或处理者，若处理涉及向欧盟/EEA 地区提供商品或服务（付费或免费）或监控在欧盟/EEA 境内发生的数据主体行为时，该处理行为也受 GDPR 约束。
+*   **Lawfulness** 处理个人数据仅在数据主体自由、明确、知情且无歧义地给予具体同意，或处理行为受法律明确授权的情况下才被允许。
+*   **Accountability obligations** GDPR 为企业建立了众多义务，包括要求公司保留其处理活动的记录。当处理行为可能“对自然人的权利和自由造成高风险”时，必须进行数据保护影响评估。企业应在产品和服务设计与运营时践行“隐私设计”和“隐私默认”原则。
+*   **数据主体权利** 数据主体有权对其数据的处理提出异议、被遗忘权以及数据更正权。
+*   **跨境数据传输限制** 个人数据不能转移至欧盟/欧洲经济区（EEA）以外的处理者或数据控制方，除非该国对个人数据和隐私权有相似的保护措施。公司可以通过签署标准合同条款（SCC）、加入欧盟‑美国隐私盾、获得具有约束力的公司规则（BCRs）认证、或遵守经批准的行业行为准则或认证机制，来证明其提供了所需的“适当保护水平”。在少数情况下，经数据主体明确、知情同意的转移也被允许，或适用其他例外情况。
+*   **安全事故** 根据 GDPR，数据控制方必须在发现安全事故后 72 小时内向监管机构报告。报告要求基于风险，且向监管机构和受影响的数据主体的报告要求存在差异。
+*   **成员国之间的差异** GDPR 允许成员国在 GDPR 基准之上实施额外要求。例如，德国（在 GDPR 之前即以严格的隐私法规著称）要求公司员工超过九名时必须任命数据保护官。
+*   **处罚措施** 违反 GDPR 会使公司面临重大处罚。处罚金额最高可达公司全球总收入的 4%，或最高 2000 万欧元，取两者中更高者。
+
+![Images](img/note.jpg)
+
+**NOTE** 关于 GDPR 执法和处罚的说明：德国政府在 GDPR 生效后五天内即利用 GDPR 作出决定（ICANN vs. EPAG，涉及 WHOIS 数据的收集）。2019 年 7 月，英国信息专员办公室（ICO）成为首个宣布计划对英国航空和万豪酒店处以重大罚款的成员国，合计约 2800 万英镑（约合 3.5 亿美元）。可以合理假设这两家公司会在法庭上坚决抗辩，相关案件可能持续多年，但信息很明确——GDPR 具有实力，企业必须在安全与隐私方面投入资源。
+
+#### 网络安全指令（NIS Directive）
+
+NIS 指令要求每个欧盟/欧洲经济区成员国在 2018 年 5 月前将指令转化为本国法律，并在 2018 年 11 月前识别必需服务运营商（OES），如能源、交通、银行、金融市场基础设施、医疗、饮用水供应及分销等。除 OES 外，NIS 指令还对（监管力度相对较低的）数字服务提供者（DSP）进行规范。被视为 DSP 的公司类型包括云服务提供商、在线市场和搜索引擎。DSP 须注意，即使其位于欧盟以外，只要其服务在欧盟境内可用，也必须指定一名在欧盟境内的代表，以代表其确保 NIS 指令合规。
+
+NIS 指令建立了一个框架，使网络和信息系统能够在一定置信度下抵御可能导致存储、传输、处理数据或相关服务可用性、真实性、完整性或保密性受损的行为。
+
+![Images](img/note.jpg)
+
+**NOTE** 关于“真实性”与“完整性”的区别：*完整性* 指对信息和系统从其原始状态（即“参考版本”）的准确性和可靠性的保证。*真实性* 指“参考版本”数据在另一方控制下未被篡改的保证。此细节对您的 CCSK 考试并不适用，但 NIS 指令在信息安全的 CIA 三要素（保密性、完整性、可用性）之外使用了“真实性”一词，特此说明。
+
+需在各成员国法律中落实的要求包括：
+
+*   每个成员国必须建立计算机安全事件响应团队（CSIRT）。这些 CSIRT 将与其他 EU/EEA 成员国的 CSIRT 合作，形成统一的欧盟网络。
+*   符合指令对 DSP 标准的组织必须实施一系列技术和运营风险管理措施。DSP 必须遵守指令的报告流程，即对任何重大安全事件及时（without undue delay）向 CSIRT 及其他相关机构报告。
+*   每个成员国必须提供安全政策的有效实施证据，如安全审计的结果。
+*   每个成员国必须采取技术和组织措施，管理其运营中网络和信息系统的安全风险。
+*   每个成员国必须采取适当措施，防止并最大程度降低对提供必需服务的网络和信息系统安全事件的影响，以确保服务的连续性。
+*   每个成员国必须提供必要信息，以评估其网络和信息系统的安全状况。
+*   每个成员国必须在任何对服务提供产生重大影响的事件发生时，毫不延迟地向主管部门报告。
+
+NIS 指令规定，对违规行为的处罚由各成员国自行决定，而非欧盟层面。指令仍要求处罚必须“有效、适当且具威慑力”。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 请记住，NIS 指令适用于欧盟/欧洲经济区以外但其服务在欧洲联盟可用的公司，且必须设立欧盟本地代表以确保指令合规。
+
+### 美洲地区
+
+![Images](img/pg60_Image_19.jpg)
+
+（经 CSA 许可使用）
+
+与之前讨论的所有司法管辖区一样，美洲各国的法律法规各不相同。但最重要的是美国的法律法规。此重要性不仅体现在 CCSK 考试的全球视角中，也意味着云服务提供商（CSP）必须遵循其所在司法管辖区的法律法规。可以合理假设您或您的公司至少会使用一家美国提供商的云服务，无论您身处何地。
+
+#### 美国联邦法律
+
+以下为美国适用于组织的几部法律法规示例，包括金融监管的《格拉姆‑里利‑比尔伯格法案》（GLBA）、1996 年《健康保险可携性与责任法案》（HIPAA）以及 1998 年《儿童在线隐私保护法》（COPPA）。这些法规均包含关于个人信息隐私以及实施合理安全措施的规定。
+
+大多数这些法律要求公司在聘请分包商和服务提供商（包括 CSP）时采取预防措施。他们也可能对分包商的行为承担责任。例如，GLBA 和 HIPAA 都要求受监管的组织使用书面合同条款，要求第三方使用合理的安全措施并遵守数据隐私规定。
+
+#### US State Laws
+
+美国的大多数安全和隐私法律和法规都是在州一级推动的。这些法律适用于任何收集或处理个人信息（在适用法律中明确定义的）的实体，无论数据在哪里存储。
+
+州法律在美利坚合众国各地差异很大，甚至在最基本的“受保护信息”定义上也存在差异。例如，加利福尼亚州规定用户名和密码被视为受保护数据；而在亚利桑那州，用户名和密码则不被视为受保护数据。为了确保安全并符合所有标准，你需要请法律顾问确定最严格的州级隐私要求并遵循这些要求。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 请记住，许多州都有法律和法规要求组织确保服务提供商为个人数据提供适当的隐私保护和安全措施。
+
+#### Security Breach Disclosure Laws
+
+多项联邦和州安全与隐私法律或规则要求因安全漏洞导致指定数据类别（如个人可识别信息（PII）和特别是患者健康信息（PHI））被泄露的实体及时通知受影响的个人，并在许多情况下向州或联邦机构报告漏洞。
+
+对于州级漏洞披露法，我喜欢指出华盛顿州的漏洞通知法（2015 年制定）。该法规定，任何合理预期会影响超过 500 名华盛顿州居民的漏洞必须在发现后 45 天内向华盛顿州总检察长报告。所有漏洞通知均在华盛顿州总检察长网站上公布。与之形成对比的是阿拉巴马州的漏洞通知法，它是最后一个在 2018 年 6 月实施漏洞通知法的州。阿拉巴马州要求在“被视为造成重大损害”的丢失数据的情况下，45 天内通知个人；如果受影响的阿拉巴马州居民超过 1000 人，则需向消费者报告机构和州总检察长发出通知。各州对“漏洞”定义、通知时限、损害赔偿等要求差异极大。
+
+了解这些法律对云客户和云服务提供商至关重要，因为安全漏洞导致的罚款比以往任何时候都更高。例如，由于 PII 数据泄露，Equifax 目前面临高达 7 亿美元的罚款和诉讼费用，这超出了公司修复安全问题、声誉损失以及其他“标准”成本的范围。
+
+#### Federal and State Agencies
+
+云服务提供商和消费者还应注意到，法律并非静止不变；它们会不断变化。美国政府机构，如联邦贸易委员会（FTC）和州总检察长，利用联邦或州“不公平和欺骗性行为”法案的权力，对隐私或安全实践与声明不一致的公司进行处罚，从而使其行为变得不公平或具有欺骗性。从隐私与安全执法的角度看，FTC 有权发出罚款和 `consent orders`（同意书），明确 FTC 的发现以及公司需如何解决问题（通常包括 20 年的 FTC 监管）。`consent orders`（同意书）和罚款均可被法律顾问用于根据新的先例更新或修改安全与隐私声明。
+
+FTC 有权对违反 `consent order`（同意书）的公司处以巨额罚款。例如，2019 年 7 月，FTC 对 Facebook 处以 50 亿美元的罚款，原因是该公司违反了 2011 年同意的 `consent order`。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 请记住，FTC 从联邦层面负责消费者隐私权，而州总检察长则负责州一级的消费者隐私权。
+
+#### Central and South America
+
+中南美国家正在以快速的速度制定数据保护法律。阿根廷、智利、哥伦比亚、墨西哥、秘鲁和乌拉圭已通过主要受欧盟指令 95/46/EC 启发的数据保护法律，并可能引用亚太经合组织（APEC）隐私框架。这些法律包括安全要求，并将数据保管/控制方的责任定为确保无论数据位于何处，尤其是在数据传输至第三方（如云服务提供商）时的保护与安全。
+
+### 合同与供应商选择
+
+除了你作为云客户可能面临的各种法律和法规外，你还很可能有合同义务要求你保护自己的客户、联系人或员工（即利益相关方）的个人信息，确保数据仅用于其原始目的，且不向第三方泄露。这些条款通常出现在公司网站的条款与条件或隐私声明中，或在书面合同中。例如，软件即服务（SaaS）云服务提供商（数据处理方）可能受其服务协议条款约束，仅能为特定目的处理个人数据。
+
+记住的关键点是：你必须言行一致，无论是在合同中还是在网站的隐私声明里。这同样适用于你委托云服务提供商处理或存储数据的情况。如果你向终端用户承诺他们的数据会被安全保护（例如数据在休眠状态下加密），则必须确保在云环境中能够实现这一点。如果你声称只要数据在你自己的数据中心内就能得到保护，但当数据移动到云环境时该声明便不再适用，这将显得非常荒谬。
+
+如果隐私声明遵循 GDPR（几乎所有法律顾问都会建议这样做，作为一般性预防措施），并且赋予个人数据主体访问、修改或删除其个人数据的权利，则云服务提供商也必须允许这些访问、修改和删除权在非云关系中同样的程度行使。
+
+*   [条款和条件及隐私声明](https://example.org)告诉您的最终用户我们将如何处理他们的数据，周期。作为数据的保管人/控制方，贵公司在法律上负有责任并需对确保这些保护措施到位负责。您知道老话，“无知不是借口”吗？如果您的客户因数据丢失起诉您，并且您告诉法官您不知道提供商在移动数据后未能保护数据，那会发生什么？您需要全面了解提供商的工作（外部尽职调查），以及您必须做什么来支持您的主张和能力（内部尽职调查），并且必须将所有内容以书面形式记录。如果提供商在书面上对您撒谎，并且您因终端用户起诉而被牵连，您至少有能力向提供商发起诉讼。在这种情况谁会赢？大概率是律师，其他人都不赢。
+
+之前讨论的法律、法规、标准和相关最佳实践也要求数据保管人/控制方在合同签订前进行尽职调查，并在合同执行期间进行安全审计，以确保这些义务得以履行。
+
+### 内部尽职调查
+
+正如您所知，作为数据保管人/控制方，如果您未能满足对保护客户数据施加的潜在全球性要求，将面临法律后果。即使如此，由于合同义务，您可能仍受限于向第三方转移客户数据。
+
+![Images](img/note.jpg)
+
+**NOTE** 我亲身经历过这些限制。一家计划采购云服务而非建设新数据中心的公司，因部分客户合同中有“禁止第三方处理”条款，以及其他客户没有此类条款，被迫推迟使用云服务。他们没有尝试确定哪些工作负载和系统可以迁移到云端，而是决定在所有客户合同到期时删除该条款。
+
+云服务提供商和客户都必须考虑各自的实践、需求和限制，以识别相关的法律和合规要求。作为内部尽职调查的一部分，云客户应确定其业务模式是否允许使用云计算服务，以及在什么条件下可以使用。例如，如果您从事关键基础设施业务，可能受法律限制放弃公司数据的控制权。或者，云供应商可能会在评估合规成本前，考虑在可能受法律要求约束的司法管辖区提前评估合规费用。
+
+![Images](img/note.jpg)
+
+**NOTE** 以合规成本为例，云服务提供商在获得向美国联邦机构销售产品的授权（ATO）之前，可能需要花费超过 100 万美元。
+
+时刻考虑迁移到云环境的数据的“云友好性”。如果公司处理的数据过于敏感或机密，以致其披露将导致贵公司出现灾难性后果，您可能需要重新考虑将其转移到云服务，或者在其传输和存储时采取重大预防措施。请记住，并非所有数据的价值或监管要求都是相同的。您始终需要采取基于风险的方法。公开上市公司的财务报告受萨班斯-奥克斯利（SOX）要求约束，需要严格控制；而同一组织的最新营销博客内容可能不需要同等程度的安全保护。
+
+### 监控、测试和更新
+
+云环境非常动态。因此，任何云客户都必须充分了解提供商所做的任何变更。这将迫使客户适应可能不熟悉的变化速度。如果不受控制，开发人员可能会使用新服务或全新的计算方式。建议对云服务进行定期监控、测试和评估，以确保遵循必要的隐私和安全措施。如果不定期测试云服务及您对云服务的使用，您可能在不知情的情况下承担不可接受的风险。
+
+![Images](img/note.jpg)
+
+**NOTE** 许多提供商可能会限制您对其系统、平台和应用程序进行测试。这种限制可能迫使您陷入纸质练习，依赖于提供商提供的第三方测试文档。无论如何，您必须及时跟进变化！
+
+新的安全威胁、法律和合规要求需要及时应对。云客户和云提供商都必须关注相关的法律、法规、合同和其他要求，并确保随着新技术的出现，安全控制措施持续演进。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 定期监控、测试和评估您的需求及供应商关系的概念适用于 CSA 指南的几乎所有主题。您必须了解任何技术和法律的变化！
+
+### 外部尽职调查
+
+在使用提供商的服务之前，必须对潜在的云服务提供商（CSP）进行尽职调查。这要求您请求并审查提供商的所有相关文档，如安全文档、合同、条款和条件以及可接受使用政策。这里的目标不仅仅是评估整体服务提供商，而是要调查您实际消费的服务！毕竟，检查您不会使用的服务还有什么意义？
+
+![Images](img/tip.jpg)
+
+
+
+**TIP** 请记住，云安全联盟（Cloud Security Alliance）的 STAR 登记册（在第 1 章中讨论）是了解提供商服务安全性的极佳信息来源。
+
+所有尽职调查工作必须基于风险。花费相同的精力评估付费系统（如工资系统）和最新的“戴帽子的猫”营销项目是没有意义的。尽职调查时，务必考虑工作负载的重要性。
+
+信息来源不必局限于供应商提供的文档。您可以从其他客户、关于供应商声誉的在线搜索以及针对提供商的任何诉讼报告的评论中获取宝贵信息。这些来源可以揭示服务的质量或稳定性，以及支持能力等信息。
+
+### 合同谈判
+
+在完成尽职调查并决定使用某个提供商和服务后，下一步是确保您或您的法律团队已完整阅读并理解合同中的所有条款。毕竟，合同旨在准确描述所有各方的理解。由于云计算基于规模经济，您很可能会发现许多合同条款是不可协商的。这并不意味着所有提供商都有不可协商的条款（或整个合同）。如果您愿意充当其参考客户，可能能与较小的提供商协商合同条款。如果提供商不愿修改合同条款，这并不意味着您必须放弃他们作为服务提供商。这意味着您需要了解您的需求、提供商在合同中承诺交付的内容，并通过实施适当的控制措施来填补任何潜在缺口。或者，风险接受始终是一个选项。您组织的风险容忍度将决定采取的适当行动。
+
+![Images](img/note.jpg)
+
+**NOTE** `You know those “I agree to the terms and conditions” checkboxes that nobody reads before clicking them and using a service? Those are legally binding agreements. This is what is often called a “click-through” or “click-wrap” agreement. Ignorance is never a defense, and telling a judge, “In my defense, nobody actually reads that stuff,” is not a great legal strategy.`
+
+#### 第三方审计和认证
+
+大多数大型提供商不允许贵公司对其数据中心进行审计。现实是，您将依赖第三方审计和认证来作为对提供商基础设施合规性的保证。这种透明度对提供商向潜在和现有客户展示是至关重要的。这是客户的责任，即评估最新可用的审计或认证，其范围以及评估中包含的特征和服务。您还需要考虑您正在审阅的文档的日期。它是否反映了当前的情况，还是您依赖的报告有五年历史，对当前环境适用性有限？
+
+![Images](img/tip.jpg)
+
+**TIP** `请记住，您始终需要考虑所消费的服务，以及这些服务是否在评估的范围内。`
+
+### 电子发现
+
+关于在诉讼中发现和收集证据的法律并不局限于美国。CSA 指南指出许多美国法律作为电子发现的一部分，但总体概念在您可能运营的许多司法管辖区中是相同的。当然，咨询您的法律顾问是理解和识别各司法管辖区之间电子发现差异的最佳方式。
+
+在美国，联邦民事诉讼规则（FRCP）管辖所有民事诉讼和程序在 US 联邦地区法院中的程序。FRCP 中包含的所有规则中，我们最关注的是第 26 条：披露义务；一般发现程序的规定。该规则要求各方根据合理可得的信息进行披露，并且必须披露将在审判中作证的证人。
+
+证据可以用于支持您的案件，也可以用于反对它。您可能认为电子发现是应法官请求进行保全令，或保全令（该指令主张相关文件不可销毁）的要求，但事实是数据也可以用于支持案件。许多当事人因缺乏支持文档而输掉案件，因为他们删除了、丢失或修改了本应在法庭上发挥关键作用的数据。相反，如果法官认定数据被故意删除或销毁，他或她可能下令对陪审团作出“逆向推断”。这意味着陪审团必须将数据视为被故意删除，并假设其包含最坏情况的损害性证据。
+
+从云的角度来看，云服务提供商可能需要收集电子存储信息（ESI）。作为消费者，您必须与提供商合作，计划如何识别所有可能与特定电子发现请求相关的文档。以下章节介绍了在云环境中应在与提供商合作之前预先考虑的与 FRCP 相关的要求。
+
+#### 所有权、管有权和控制权
+
+这是一个简单的要求。如果您能够提供数据（电子或非电子），则您在法律上有义务提供它。数据的存储位置并不重要——它可以在您的系统中，也可以在提供商的系统中。重要的是，作为客户，您可能无法自行提供证据，必须调用提供商。例如，在一个案件中，争议的源 IP 地址是关键。如果是 SaaS 提供商，您将没有这些数据，因此提供商必须能够为法院提供该证据。
+
+![Images](img/note.jpg)
+
+**NOTE** `CSA 指南指出，“通过第三方托管数据并不免除各方产生产出数据的义务。”（ “Obviate” 听起来比 “remove,” “avoid,” 或 “prevent” 更官方。）`
+
+#### 相关的云应用和环境
+
+在这种情况下，可能会有疑问：特定应用程序执行什么操作，或数据在系统内部如何处理。在这种情况下，CSP 将直接被法官传唤。
+
+#### 可搜索性和电子发现工具
+
+您今天使用的电子发现工具可能在您使用提供商存储或处理数据的场景中不适用。缺乏工具可能会增加查找并提供任何相关数据所需的时间（因此费用）的数量。提供商的能力和成本，以协助或减少与客户处理发现要求相关的努力，应在先谈好。如果不提前谈好，可能会出现“惊喜”，例如提供商无法协助或账单惊人，而大家都不喜欢这种不好的惊喜。
+
+#### 保全
+
+如前文所述，电子发现和数据保全法律并非美国独有，也非 FRCP 独有。欧盟依据指令 2006/24/EC 进行规范。日本、韩国、新加坡以及南美洲的巴西（Azeredo Bill）和阿根廷（Data Retention Law of 2014）也有类似法律。
+
+#### 数据保留法和记录保存义务
+
+大量法律涉及数据保留期限。所有这些都必须由贵公司处理，这可能导致因存储可能在法庭上被要求的数据而产生额外费用。CSA 指南列出了客户在将数据迁移到云端之前应考虑的以下问题：
+
+• `保留数据在服务级别协议（SLA）下的后果是什么？`
+
+• `如果保全要求超过 SLA 的期限，会发生什么？`
+
+• `如果客户在原地保全数据，谁支付延长的存储费用，以及费用是多少？`
+
+• `客户在 SLA 下是否有足够的存储容量？`
+
+• `客户能否以取证安全的方式下载数据，以便离线或近线保全？`
+
+![Images](img/tip.jpg)
+
+**TIP** `数据保留服务可能可用，但会产生额外费用。请确保了解是否会涉及多方（例如 SaaS 提供商使用 IaaS），以及这对您的影响。`
+
+数据保留的另一个重要方面是保全范围。法律请求必须非常具体地指明所需的数据。然而，如果客户无法以所需的细粒度保留特定信息集，他们可能会陷入“过度保全”的境地。这会导致成本增加，因为某人（例如客户支付的律师事务所员工）需要在所有信息中筛选，以确定法院实际要求的内容。这称为 `文档审查` 或 `特权审查`。
+
+随着云端新技术的不断涌现，电子发现在存储方式更加动态的世界中变得日益复杂。例如，考虑一个 SaaS 云环境，该环境在客户上传数据时会程序化修改或删除数据，或数据与不了解保全需求的个人或其他系统共享。关键是要意识到在法庭上可能需要的数据，并与提供商合作，了解最佳的保全方式。
+
+#### 数据收集
+
+Cloud 服务（尤其是 SaaS）可能无法提供您习惯的相同访问级别。数据收集可能会受到影响，从无法自行检索数据，到因缺乏对数据在云服务中如何存储和/或处理的透明度而导致访问数据所需的努力大幅增加。这种缺乏透明度可能导致验证所找到的任何数据是否完整准确出现问题。由于存储数据的应用程序功能，可能会产生其他挑战。例如，尽管提供商的服务可能存储了五年的数据，但如果提供商一次只能导出一个月的数据，那么收集这些数据将需要额外的时间和费用。
+
+其他在云服务中收集数据的问题，通常在数据中心中不会遇到，包括导出云环境数据的带宽以及确保导出过程符合法医学要求（保留所有合理相关的元数据）并遵循适当的链条保全要求。正如老话所言，不要低估装满磁带的轿车在高速公路上飞驰的带宽。
+
+最后，需要注意 FRCP 包含第 26(b)(2)(B) 条款，该条款免除当数据真正无法合理获取时，当事人无需提交数据。仅仅抱怨检索数据需要额外努力并不属于此类情况，您将需承担相关的额外时间和费用。
+
+### 法医学
+
+我用一个常用的云说法来总结：在虚拟世界中，你需要虚拟工具。你无法取出硬盘，制作比特对比的镜像，并使用该完全复制品进行调查。你将被迫使用虚拟工具对云工作负载进行法医学分析。事实上，无法提供硬盘的比特对比副本是 FRCP 26(b)(2)(B) 条款的一个很好的例子，该条款免除在数据不合理可获取时提交数据的义务。实际上，这种法医学分析在云计算中很少需要，因为存储（虚拟化）的特性并未提供显著的额外有价值信息。
+
+![Images](img/note.jpg)
+
+**NOTE** 你将在本书的 第 9 章 中了解更多关于法医学的内容。
+
+### 可靠性
+
+为使证据在法庭上被采信，必须被认为准确且经过验证。这一点适用于证据的任何存储地点。“验证”是关键词。该法律术语表示数据被视为真实。这里链条保全的作用就至关重要。如果数据无法验证，则不能被视为法庭可采信的证据（除非有特殊情况）。云环境改变了链条保全的确保方式。例如，某云提供商可能允许你导出数据，但导出过程中会 stripping（删除）所有元数据。然而，元数据可能是验证数据真实性、确保其在法庭上可采信的关键。
+
+### 直接访问
+
+如果提供商通过第三方 IaaS 存储和处理数据，则客户和 SaaS 提供商（例如）可能无法直接访问。在这种情况下，SaaS 提供商仅是 IaaS 提供商的另一个客户，可能根本没有对硬件或设施的访问权限。因此，请求方可能需要直接与 IaaS 提供商协商任何访问权限。
+
+### 原生导出
+
+当请求数字证据时，预期其格式为 PDF 或 CSV 等标准格式。如果云提供商只能以其专有系统的专有格式导出数据，这些数据可能不被法庭采信为证据。唯一可能要求以专有格式导出的情况是，将数据转换为标准格式会导致重要元数据丢失。
+
+### 验证
+
+如前所述，法律意义上的验证意味着证据被视为真实，与身份管理无关（我们在 第 12 章 中讨论该内容）。仅仅将数据存储在云中与其验证无关。关键在于数据的完整性以及自创建以来是否被修改（链条保全），这与在本地数据中心存储的数据情况相同。
+
+### 与提供商在电子发现中的合作
+
+当多方涉及数据存储时，所有方均应合理预期参与电子发现（ESI）的生产，尤其是当提供商使用专有系统时。本章涵盖的电子发现问题应体现在提供商与客户之间的服务级协议（SLA）中。提供商还应考虑创建“按需发现”的系统，以吸引客户。（按需发现意味着提供商已规划好发现请求是常见事件，无需采取极端措施，如在发现请求期间限制其他租户更新其数据。）
+
+### 应对传票或搜查令
+
+提供商的最佳实践是始终以客户利益为重，这包括应对访问客户数据的传票或搜查令。提供商应在可能的情况下抗拒过宽或其他有问题的信息请求。作为客户，您无法合理期望提供商违法以保护您的数据不被政府机构获取，因为提供商可能因其运营所在司法管辖区的法律要求而被迫提供数据。
+
+### 章节回顾
+
+本章讨论了云服务使用中的法律问题、进行内部和外部尽职调查的重要性，以及电子发现及电子存储信息（ESI）可采信性的某些方面。
+
+![Images](img/note.jpg)
+
+**NOTE** 尽管您此时可能充满法律术语，您可以访问 [Sedona Conference 网站](https://thesedonaconference.org/) 获取更多关于 ESI 处理的信息。
+
+从考试角度来看，您需要熟悉以下要点：
+
+• 云客户应了解相关的法律和监管框架、合同要求、对其数据或其保管数据的限制，以及在将系统和数据移动到云端之前应遵循的操作规范。
+
+• 云提供商应清晰显著地披露其政策、要求和能力，包括适用于其提供服务的所有条款和条件。
+
+• 云客户在签署合同前应对拟选定的云服务提供商进行全面评估，并在后续定期更新此评估，并监控所购服务的范围、性质和一致性。
+
+• 云提供商应公布其政策、要求和能力，以满足客户的法律义务，如电子发现。
+
+• 云客户应了解使用特定云提供商的法律 implications，并将其与自身的法律要求相匹配。
+
+• 云客户应了解云提供商所在的物理位置及其存储信息的地点的法律 implications。
+
+• 云客户应决定其数据是否可选择托管位置（如有此选项），以符合其所在司法管辖区的要求。
+
+• 云客户和提供商应明确了解满足任何电子发现请求的法律和技术要求。
+
+• 云客户应理解点击即同意的法律协议具有法律约束力。
+
+#### Questions
+
+**1.** 审判中的“认证”是什么意思？
+
+**A.** 证据被视为真实。
+
+**B.** 这是分配并被双方认可的法官的阶段。
+
+**C.** 证人被批准为专家，其作证将被视为有效。
+
+**D.** 诉讼双方均被声明。
+
+**2.** 哪个组织在美国联邦层面处理隐私权？
+
+**A.** 联邦通信委员会（FCC）
+
+**B.** 联邦贸易委员会（FTC）
+
+**C.** 联邦总检察长办公室
+
+**D.** 国土安全部
+
+**3.** GDPR 取代了哪个数据保护指令？
+
+**A.** PIPEDA
+
+**B.** FRCP
+
+**C.** 指令 95/46/EC
+
+**D.** NIS
+
+**4.** 在法院中，什么情况下当事人可以免于提交证据？
+
+**A.** 当证据不存在时
+
+**B.** 当检索成本过高时
+
+**C.** 从未；当事人必须在法官请求时始终提交数据
+
+**D.** 当证据不具备合理可及性时
+
+**5.** 在法院呈现电子存储信息（ESI）时应使用何种格式？
+
+**A.** PDF
+
+**B.** CSV
+
+**C.** 标准格式
+
+**D.** 原生格式
+
+**6.** 哪项可能导致在云环境中验证数据完整性和准确性时出现问题？
+
+**A.** 透明度
+
+**B.** 在提供方处使用未知硬件
+
+**C.** 云存储数据不存在验证问题
+
+**D.** 云环境缺乏元数据
+
+**7.** 哪项是任何可能在法院需要的数据的最小保留期限？
+
+**A.** 1 年
+
+**B.** 5 年
+
+**C.** 任何可能被视为证据的数据必须永久保留。
+
+**D.** 数据没有统一的最小保留期限。
+
+**8.** 审查第三方审计和证明文件时，最重要的考虑因素是什么？
+
+**A.** 执行审计的公司
+
+**B.** 客户消费的服务
+
+**C.** 服务的地理位置
+
+**D.** 服务提供商的认证
+
+**9.** 在处理不可协商的合同且控制可能不足时，客户应怎么做？
+
+**A.** 不使用该服务提供商。
+
+**B.** 识别任何缺口并用适当的控制措施填补。
+
+**C.** 购买网络保险以减轻相关风险。
+
+**D.** 接受提供商已接受的风险。
+
+**10.** 澳大利亚隐私法要求在哪种情况下进行泄露披露？
+
+**A.** 当任何涉及公民的数据被披露时
+
+**B.** 当个人可识别信息被披露时
+
+**C.** 当披露可能导致个人严重受损时
+
+**D.** 澳大利亚隐私法并未涉及泄露通知要求
+
+### Answers
+
+**1. A.** “Authentication”意味着数据证据被视为真实，因而可在法庭上采纳。
+
+**2. B.** FTC 是负责消费者保护和隐私权的联邦机构。州级总检察长执行相同职能。
+
+**3. C.** GDPR 取代了指令 95/46/EC。PIPEDA 是加拿大的数据保护法。FRCP 是民事诉讼规则。NIS 是欧盟的网络安全立法。
+
+**4. D.** FRCP 第 26(b)(2)(B) 条款允许在证据不具备合理可及性时不呈现数据。例如，云环境中的位元级磁盘副本即属于此情形。
+
+**5. C.** 最佳答案是使用标准格式。PDF 与 CSV 皆可视为标准格式，但标准格式更为准确，因为它强调格式统一。若元数据未在导出时保留，则可能需要原生格式。
+
+**6. A.** 透明度问题会导致对云中数据完整性和准确性的验证出现困难。必须在供应商环境的尽职调查中识别此类问题。
+
+**7. D.** 没有统一的强制保留期限。不同法律、标准、业务价值等因素会决定不同数据的保留期限。虽则涉及可能作为证据的数据应被保存，但并无统一的保留期限规定。
+
+**8. B.** 客户实际消费的服务是审查第三方审计和证明文件时最重要的考虑因素。其他选项虽有价值，但若所审计的服务不在审计范围内，则意义有限。
+
+**9. B.** 最佳做法是识别缺口并部署适当的控制措施。风险应对方式包括不使用提供商、接受风险或购买网络保险，但首要的是确定并填补控制缺口。
+
+**10. C.** 澳大利亚隐私法要求在个人信息披露可能导致严重损害时进行泄露披露。
+
+---
+
+## INTRODUCTION
+
+When the present iteration of cloud computing became generally available circa 2007, there was much confusion in the market regarding what the cloud was and how it was different from virtualization, mainframes, grid computing, and other technologies. To add to the general confusion regarding this technology, companies didn’t understand how to properly secure data being stored and processed in a cloud environment. To aid companies in the secure adoption of cloud services, the Cloud Security Alliance (CSA) created the industry’s first guide to addressing cloud security with the creation of the inaugural Security Guidance for Critical Areas of Focus in Cloud Computing in 2009 (I’ll just call this the Guidance document from now on).
+
+
+
+Since its creation, the Guidance has been updated multiple times (now at version 4) and continues to serve countless enterprises looking to securely adopt cloud services. The Guidance itself is the basis of the Certificate of Cloud Computing Knowledge (CCSK) designation. This book is written to help you understand the various domains of knowledge covered by the CSA Guidance as well as the companion document (ENISA) so you can pass your CCSK exam and be a professional who helps companies address appropriate security for cloud environments of all types.
+
+### Why Get Certified?
+
+- Companies of all sizes are adopting cloud services. These companies have realized that securely implemented and managed cloud services are not the same as traditional computing and require specialized professionals to ensure the security of this new era of computing. The CCSK is the industry's first cloud security certification. Over a decade later, it is still widely regarded as the leading industry certification, proving that holders possess the qualifications and capabilities to address cloud security across a broad range of domains. Obtaining the CCSK certification demonstrates to employers that you possess the knowledge required to properly handle security controls in any cloud environment.
+
+### How to Get Certified
+
+You take the CCSK exam online; it is not a proctored exam. You can take it on any device with network access, at a time of your choosing. There are no experience requirements, but general IT security experience is very helpful for your likelihood of success. As of this writing, the exam contains 60 questions, lasts 90 minutes, and requires a score of 80% or higher to pass. The exam is open-book, but—do not misunderstand—it is a very difficult exam.
+
+To prepare for the exam, I recommend that you understand the concepts covered in this book and review the primary documents upon which the exam is based. These documents are the CSA Guidance (v4) and ENISA Cloud Computing Benefits, Risks, and Recommendations for Information Security. These documents are available for free on the Cloud Security Alliance website. I strongly recommend that you keep these documents accessible during the exam. I also recommend that you have two monitors if possible. One for the exam itself, and the other for the Guidance and ENISA documents, as well as the latest version of the Cloud Controls Matrix.
+
+There are three caveats about this exam: First, like all technical exams, you can expect the test writers to try to "trick" you. You need to understand what the question is really asking. The second point is not to have a false sense of security because the exam is open-book, because you only have 1 minute and 30 seconds per question (60 questions in 90 minutes). Do not think you can look up every question, and please do not open Google. They are testing your knowledge of CSA best practices, not what someone on the internet says.
+
+Finally, trust the knowledge you have learned from this book and answer the questions with your intuition. Everything in this book has been written to fully prepare you for any question you may encounter on the CCSK exam. Do not change your answers lightly unless you are proven wrong by a subsequent question. Nine times out of ten, you will overthink the answer and change it to the wrong one. Understand the question, trust your intuition, and move on to the next question.
+
+After passing the exam, you will hold the CCSK certification for life. The exam version is updated in sync with updates to the CSA Guidance. For example, both the current Guidance and CCSK are version 4. There is no need to apply for Continuing Professional Education (CPEs), no Annual Maintenance Fees (AMFs), and CSA will not "revoke" your certification because you haven't taken another exam in a while (looking at you, all vendor certifications). As you can imagine, updating to the current version in the future is wise, but let's get certified first.
+
+### CCSK Domains
+
+The scope of knowledge you need to be tested on is very broad, covering multiple domains. This is why the CCSK exam is difficult to pass, and therefore valuable. This is not a "you can configure a security group" exam. It is a vendor-neutral exam covering everything from Governance, Risk, and Compliance (GRC) to understanding the proper security controls for new technologies such as big data, serverless computing, and containers. Below is an overview of the 14 domains covered in the CSA Guidance and ENISA documents.
+
+#### Domain 1: Cloud Computing Concepts and Architectures
+
+This domain provides the foundational knowledge for cloud security standards, including references to standard literature from organizations such as NIST and ISO. Key content covered includes essential characteristics, service models, deployment models, and the logical model. A key takeaway from this domain is the logical model. Understanding this model is critical to truly understanding the shared responsibility that a company assumes when adopting any type of cloud computing.
+
+#### Domain 2: Governance and Enterprise Risk Management
+
+Governance and risk management are extremely broad topics. This domain focuses on the changes to governance, risk management (both enterprise and information), and information security functions after adopting cloud services. The importance of due diligence is emphasized here. If you store regulated data with a Cloud Service Provider (CSP), and that CSP uses a remote storage service lacking certain security controls, you are ultimately liable. Although the CSP chose to use that low-security storage solution, you still face the consequences of their actions in court and before regulators. In other words, you can never outsource accountability, so be sure to perform due diligence.
+
+#### Domain 3: Legal Issues, Contracts, and Electronic Discovery
+
+Building on governance, this domain covers the legal implications of adopting and providing cloud services. It deals with legal issues (such as jurisdictional requirements and e-discovery), third-party contracts, and third-party access to data stored in cloud environments. When considering the legal implications of the cloud, remember the following. First, laws are being written as we speak, and there is a lack of precedent to guide lawyers in execution, which is true globally. Second, unless you are the company's legal counsel, you have no business advising the company on the legal implications of the various jurisdictional pitfalls related to the cloud. Your goal is to understand the potential problems the cloud may bring and to advocate for legal support when necessary.
+
+#### Domain 4: Compliance and Audit Management
+
+Compliance is the function of ensuring policies are followed, and auditing is the key function of ensuring people follow the guidance (proving or disproving compliance). Simple, right? The good news in this domain is that most of what you do in traditional IT remains similar in the cloud. The bad news is that your cloud implementation often does not follow security policies because no one is watching. Why is no one watching? Good question. To answer it, you need to think about who is educating business owners on the risks of the cloud (hint: the vendors). This domain discusses what to look for when incorporating the cloud into existing compliance and audit procedures.
+
+#### Domain 5: Information Governance
+
+- Does management and information security protect the system, or the information stored in the system? What causes a company to make a mistake so severe that it makes the front page of a national newspaper? The answer is: disclosure of consumer information. Now consider this data in the cloud. What is the data classification level? Where is it stored? How is it protected? Who has access to the data? These are some of the questions you need to address when considering the governance and protection of data stored in the cloud. This domain covers these topics, and more.
+
+#### Domain 6: Management Plane and Business Continuity
+
+The management plane is the way everything in a cloud environment is built and managed. You can think of it as the **Human-Machine Interface** for the internal workings of a cloud implementation. Securing this **Human-Machine Interface** is the single most critical aspect of a secure cloud environment, regardless of the service model used. Want to click a box to encrypt Software as a Service (SaaS) data? Management plane. Want to build a new server instance? Infrastructure as a Service (IaaS)? Management plane. Want to establish a failover region and replicate data or images across the country or globe nightly to support disaster recovery and business continuity requirements? You guessed it, management plane. In IaaS, how do you plan and build business continuity and disaster recovery? If you have already done so? Where are the log files stored? In the event of an account compromise, are they protected? If your protection scheme is agent-based, and the cloud's vulnerability assessment is limited to running scans against IP addresses, you need to rethink your options in the new environment.
+
+#### Domain 7: Infrastructure Security
+
+This domain covers the security of the cloud infrastructure itself, including the physical and virtual resources that make up the cloud. It discusses network security, host security, and the security of the management plane components that are part of the infrastructure. It also covers the shared responsibility model for infrastructure security between the CSP and the customer.
+
+#### Domain 8: Virtualization and Containers
+
+Virtualization is the core technology of the cloud, and it is not just virtual machines. Virtualization is how pools of compute, network, and storage resources are created and managed, and it drives the multi-tenant nature of cloud services. In this domain, we focus on the division of responsibility for securing various virtualization technologies—what the provider needs to supply, and what the consumer needs to do. You will find that the virtualized network technologies we are accustomed to using as IT professionals have become outdated in this new environment. The second part of this domain covers container-related components and how to secure them.
+
+#### Domain 9: Incident Response
+
+As the old saying goes, failing to plan is planning to fail. Unless you have planned and continuously tested your **incident response** capabilities in the cloud environment, your company will inevitably be caught off guard when an incident occurs, and the first question from the incident response team will be: "Who do we contact to disconnect the server from the network?" Does your incident response team have the virtual tools needed in the new virtual environment? Has the incident response process been completely re-engineered to accommodate cloud services? Many aspects can remain unchanged during cloud migration, but incident response is not one of them. New processes leveraging cloud services can reduce downtime from **hours** to **minutes**.
+
+#### Domain 10: Application Security
+
+Application security for applications migrating to the cloud does not change because they run in the cloud. Cloud-native applications are a completely different story. These cloud-native applications may initially authenticate using **permanent credentials** (such as access keys) or **temporary credentials** (such as role assumption). If permanent credentials are used, how are these credentials rotated per policy? If temporary credentials are used, how are they audited to ensure least privilege (after all, developers will develop)? What happens if a new cloud-native application relies on multiple Cloud Service Provider (CSP) services, some of which are prohibited by the company because they have not passed independent third-party assessment?
+
+#### Domain 11: Data Security and Encryption
+
+Encryption considered "sufficient" in the cloud is mostly based on data classification. When encryption is required by regulation or policy, you need to consider three factors: **data location**, **encryption engine location**, and **key location**. Your company's risk tolerance is unique. Some company policies require on-premises key management, while others only need to "check the box" (literally). This domain explores the trade-offs of different Encryption as a Service models (such as provider-managed and customer-managed keys).
+
+#### Domain 12: Identity, Entitlement, and Access Management
+
+Your first checkpoint when implementing or evaluating a cloud service, and forever will be, **access control**. As with traditional IT, the best practice is the **principle of least privilege**—grant users only the access they need to do their jobs, and no more. This is, of course, basic. Therefore, there should also be no cases where access permissions for millions of customers' Personally Identifiable Information (PII) are granted to the whole world, although this has happened repeatedly. But what is not basic? Permissions granted via JSON scripts, which need to be validated in any assessment or audit of IaaS. You need to understand how these authorizations are processed and what their effective permission set is.
+
+#### Domain 13: Security as a Service
+
+Security as a Service (SecaaS) enables you to protect cloud and traditional assets through cloud services. When capabilities. The main changes are "who" is responsible for the controls, and "how" they are implemented. For example, if you use a SaaS system to process Personally Identifiable Information (PII), and the provider you use does not encrypt the data, resulting in a data breach, you will be liable to your customers and regulators. Is telling the customer "we assumed the provider encrypted the data, but we were wrong" a valid defense? In some cases, the responsibility for implementing security controls may shift to the Cloud Service Provider (CSP), but please note that your company is always responsible for security and privacy, regardless of which party implements the controls.
+
+Enterprise governance and policies do not change when moving to the cloud, but they must be extended to cover cloud services. When adopting public cloud services, remember that you are building a cybersecurity supply chain based on a third party (over which you have almost no control). For example, a 2017 McAfee study showed that 52% of surveyed enterprises explicitly stated they had traced malware infections back to SaaS applications. This is just one example of why you must perform due diligence on any provider you rely on to securely store or process your data. Currently, there is a disconnect across industries between what CSPs should perform for customers and what they actually perform (or provide to customers to satisfy policies). Many business owners expect SaaS providers to handle everything for them. Think about it: if no one in your company is responsible for maintaining the Identity and Access Management (IAM) provided by the provider, how do you satisfy the "revoke credentials upon termination" policy?
+
+![Images](img/note.jpg)
+
+**NOTE**    To read the study "Building Trust in a Cloudy Sky", visit [`https://www.mcafee.com/enterprise/en-us/assets/executive-summaries/es-building-trust-cloudy-sky.pdf`](https://www.mcafee.com/enterprise/en-us/assets/executive-summaries/es-building-trust-cloudy-sky.pdf).
+
+Once the basics are covered, cloud security seems pretty straightforward, doesn't it? Perform due diligence, assign people to manage the security settings provided by the provider, and everything will be perfect. This applies to SaaS. The IaaS story is completely different.
+
+As repetitive as it sounds, IaaS is exactly what you make of it. If you migrate a "traditional" application from a data center to an IaaS provider, then security at the application (applistructure) and data (infostructure) layers does not change. Operating system security remains the same, and the application's own security controls are unchanged. Your team already knows how to configure and secure these, right? What is completely different is the virtual environment (metastructure) on which the application runs, and the physical (infrastructure) environment belonging to a third party in a public cloud deployment—which you likely cannot access. Most of this book deals with security controls for prevention, detection, and response capabilities at the metastructure layer.
+
+On the other hand, building cloud-native applications puts your company in a whole new world, where security controls may be provided by the vendor, may be limited, or may not exist at all. Stateless serverless applications call unknown services and have unknown dependencies, which may bring security and licensing issues. Even if the application uses approved services, you still need to consider the privilege level used to access these services. Are developers using permanent credentials or temporary credentials?
+
+Then there are free cloud services. You might expect CSPs to provide full transparency to customers, but do you really expect a "pay-as-you-go" provider to claim that use of its "free" products grants it ownership of all data stored in its environment? Otherwise, how would they grow their customer base?
+
+Looking at the big picture, the 80/20 rule of cloud security applies once again—that is, 80% of what you have always done as an IT security professional remains the same, while the 20% that changes completely changes the game.
+
+I hope I have successfully captured your attention and made you excited to begin your cloud security certification journey. Let's start securing your potential! You can do it!
+
+## Chapter 1
+
+## Cloud Computing Concepts and Architectures
+
+This chapter covers the following topics from Domain 1 of the CSA Guidance:
+
+- Cloud Logical Model
+- Cloud Computing Definitions
+- Cloud Service Models
+- Cloud Deployment Models
+- Reference and Architectural Models
+- Cloud Security, Compliance Scope, and Shared Responsibility Model
+- Key Areas of Concern for Cloud Security
+
+*The beginning is the most important part of the work.*
+
+*—* Plato
+
+As Plato said, the beginning is the most important part of the work, so we should start by establishing a solid foundation. This chapter serves as the cornerstone for subsequent chapters and contains the concepts you need to understand to become a CSA Certificate of Cloud Security Knowledge (CCSK) candidate. This chapter describes and defines cloud computing, establishes baseline terminology, and details the overall logical and architectural frameworks, such as the International Organization for Standardization/International Electrotechnical Commission (ISO/IEC) 17789 standard and the National Institute of Standards and Technology (NIST) 800-145 and 500-292 standards, which are discussed throughout this book.
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP**    In this book, you will see numerous references to NIST and other organizational standards. Do not leave this book to study those documents. The CCSK exam is based on CSA Cloud Security, not NIST standards. The exam is open-book; if you encounter a question referencing a specific publication number (the number, not the content), you can quickly look it up in the CSA Guidance. Regarding the content of the CSA Guidance itself, this book covers all the knowledge you need for the exam (and more).
+
+Although cloud services are presented to consumers in a user-friendly form, the implementation required behind the scenes to support up to 1 million customers is completely different from what even the most experienced IT professionals are used to. Cloud Service Providers (CSPs) create and manage a service consisting of resource pools (compute, network, storage) accessed by controllers using Application Programming Interfaces (APIs). It is through these resource pools and API access that many of the cloud's key characteristics (such as self-service, elastic scaling, and resource pooling) are realized. The high-level schematic in `Figure 1-1` below illustrates the critical role of the controller in providing abstraction (you do not need to access hardware directly) and orchestration (coordinating processes) to serve resources. In short, you request resources (compute, network, storage) from the controller, and the controller handles the rest.
+
+```
+Figure 1-1
+```
+
+* * *
+
+**`Figure 1-1`**    Cloud Controller and Resource Pools. (Used with permission from Cloud Security Alliance.)
+
+![Images](img/note.jpg)
+
+
+
+**NOTE** 通常，RESTful API（REST 代表表示状态转移）被使用，因为这些 API 被认为是轻量（低成本）的调用，相比于替代的简单对象访问协议（SOAP）API 调用更为经济。SOAP API 调用的优势在于安全服务包含在所有调用中，但其关联的开销使其体积更大（成本更高）。我将在 `Chapter 6` 中详细讨论 RESTful 和 SOAP API。
+
+当大多数人想到云时，会认为它比传统信息技术（IT）结构更“便宜”。虽然云计算可以（但不总是）更便宜，因为提供商规模经济，云消费者必须认识到提供商无法满足所有人的安全政策（即 CSP 无法满足每个人的安全要求）。因此，您必须非常清楚与任何潜在节省成本相关的共享责任。提供商会提供一些安全控制，但您需要实施其他控制。这里的核心观点是：云服务提供商会为您处理一切的观点是谬误，必须彻底消除。虽然共享责任主要基于所消费的服务模型（软件即服务 [SaaS]、平台即服务 [PaaS] 或基础设施即服务 [IaaS]），但部署模式也会影响消费者如何正确保护云环境。
+
+![Images](img/note.jpg)
+
+**NOTE** 请参阅本书末尾的“词汇表”以获取所有云缩写的定义和解释。
+
+云计算在敏捷性、弹性和经济性方面提供了巨大的潜在益处。因此，组织可以更快速地运作（无需购买硬件和堆叠服务器），通过利用弹性和其他云特性降低停机时间，并通过随需而动调整服务器规格和数量来节省运营费用（无需资本支出）。在提供商层面的安全方面，CSP 的商业模式要求如果要继续业务，必须实施极其强大的控制措施。（如果一家云提供商在过去一年被成功入侵三次，您还会与其做生意吗？）我并不是说提供商必须通过对刚玉晶体（dilithium crystals）的突破性安全研究来创建不可破解的安全，但他们通常会花费适当的时间和金钱，确保安全被很好地架构在其所有操作中。事实上，我对提供商环境中的安全功能感到羡慕。许多公司不会花数月时间确保在产品上线前安全完全到位。在大多数组织中，安全团队在周三被告知周六要部署新应用且是高优先级，因此安全必须在下一个版本中解决。
+
+云本质上是你所使其成为的样子。您可以通过执行物理到虚拟（P2V）迁移，以“如为如”方式迁移服务器，创建在云环境中运行的完全相同的系统。您可能认为这是采用云服务最简单的方式，但事实是，您仅仅是将您拥有物理控制权的服务器转换为虚拟镜像，从而在这个您无控制权的他人物理环境中运行一个单点故障的系统。
+
+云的真正力量体现在您理解并采用云原生模型，并将架构和控制与云平台的特性和能力对齐时体现。如果架构得当，服务器可以被视为牲畜而非宠物。（这一表达常用于描述服务器被视为易于替换的商品，而非传统环境中作为“长期”资源的宠物。）工作量管理的重点从“我们需要 X 台服务器”转变为“我们需要此应用程序服务 X 个并发连接”。事实上，如果您使用的是 serverless 计算（即函数），可能甚至没有服务器需要管理。虽然我尚未深入介绍 serverless 计算（该内容在 `Chapter 7` 中），但我借此强调，云环境中的安全性会因使用方式而大幅变化，甚至需要保护以前不存在的事物。
+
+本章后续内容将为本书其余部分奠定基础，提供云计算安全专业人士的共同语言和理解，开始区分云计算与传统计算的差异，并指导安全专业人士采用云原生方法，从而获得更好的安全（及其他益处），而非创造更多风险。
+
+## 云逻辑模型
+
+云 *逻辑模型* 是 CSA 创建的，明确定义了传统环境和云环境中存在的四层功能及相应的安全要求：
+
+*   `基础设施层` 基础设施安全
+*   `元结构层` 虚拟环境安全
+*   `数据结构层` 数据安全
+*   `应用结构层` 应用和操作系统安全
+
+![Images](img/exam_tip.jpg)
+
+**`EXAM TIP`** 掌握这些逻辑模型层！这些层是理解云安全责任转移以及通过 CCSK 考试的关键。
+
+以下章节将详细描述 CSA 所覆盖的逻辑模型各层。
+
+### 基础设施
+
+该层包含服务器、网络和存储池。该层的安全涉及正确保护物理环境。您拥有私有云吗？您拥有这一层。您使用公有云吗？这一层由他人拥有并运营。换言之，这是提供商的世界，您仅在其中工作。
+
+### 元结构
+
+这是云的颠覆性方面。在该层，您配置并管理任何类型的云部署。您需要立即理解的最大区别在于数据中心中的元结构。正是在元结构逻辑层中，您构建虚拟工具以创建虚拟世界（即云）。
+
+#### 元结构安全的重要性
+
+以下示例将帮助您理解元结构安全为何至关重要。
+
+**Question:** 为什么我们六个月前解雇的员工仍然拥有访问薪酬数据库的权限？
+
+**Answer:** `Metastructure` 安全性。
+
+**Question:** 我们是如何被卷入泄露数百万客户信息的新闻头版的？
+
+**Answer:** `Metastructure` 安全性。
+
+下面的表格提供了某些不安全的 `metastructure` 配置（即“误配置”）的结果，这些配置实际上已发生在亚马逊简单存储服务（Amazon S3）中。所有这些问题都发生是因为有人向全世界授予了这些文件的读取权限。这看似基础，却仍被广泛误解。这是误配置还是无能为力？我让你来决定。基本原则依然重要，各位。
+
+![Images](img/pg5_Image_2.jpg)
+
+如果你在想：“这有什么大不了的？这甚至不是十亿条记录！” 让我们从 S3 泄露转向一家一直被视为构建和维护安全 `metastructure` 重要性的典型公司（截至目前）：`Code Spaces`。别去 `Code Spaces` 官网，因为该公司在 2014 年倒闭。
+
+尽管我看到过一些故事的变体，但其核心始终如一：不法分子获得了控制台（`metastructure`）的访问，试图勒索公司，当公司试图收回控制权时，破坏了一切。在这里你需要二选一——泄露数百万记录，或因 `metastructure` 安全性导致公司破产。无论如何，你都能体会到 `metastructure` 安全性的重要性。
+
+关于这个故事的最后一点：在 `Code Spaces` 被入侵之前，公司在其网站上展示了以下内容：“备份数据只是一件事，但如果没有恢复计划，这毫无意义，而且恢复计划——而且是一个经过实践和验证的、能够在时间和时间之间有效工作的计划。`Code Spaces` 拥有一个经过验证的完整恢复计划，并且实际上已经实践过。” 好的，没错。这和一家在泄露后声称“安全和隐私对我们很重要”，或“支票已经寄出”的公司别不同。
+
+你将通过图形用户界面（GUI）、命令行界面（CLI）或 API（取决于提供商提供的交互方式）在 `management plane` 进行配置。此时此刻，我喜欢称之为虚拟工具在虚拟世界中的需求。想要为 SaaS 添加新用户？在这里完成。想要在 IaaS 中构建零信任网络？这就是做这件事的地方。
+
+如果你的团队对 `metastructure` 一无所知，那么他们就不知道如何安全地配置、管理或应对云中的事件。请务必记住：*你* 负责配置和管理这一层。这一层的配置和管理错误正是许多公司在使用云服务时过去被烧毁的原因（而且很可能继续如此下去）。
+
+![Images](img/exam_tip.jpg)
+
+### 数据结构
+
+这是信息和数据所在的层。这可能包括文件存储、数据库——任何内容。该层的安全性本身并不改变；如何保护这些资源可能会改变，但数据安全的原则始终不变。
+
+### 应用结构
+
+应用程序及其用于构建和支持它们的所有服务居于此层。你的应用程序可能运行在自有的 Windows 或 Linux 服务器上，也可能运行在容器、微服务或无服务器网络等多种新兴技术中（我在后面会介绍这些技术）。如果你将一个运行系统的镜像迁移到云中，从安全角度来看，情况并未改变。在这种情况下，操作系统始终需要补丁，应用程序安全性依然适用。随着你开始构建“云原生”应用以利用云提供的新技术，你的安全性很可能会发生剧烈变化。我在 `第 10 章` 中会详细说明这些变化。
+
+![Images](img/tip.jpg)
+
+**TIP** 如果你正在重新评估一款已以“如-for-如”方式从数据中心迁移到云端的应用，那么对该应用本身的评估并没有改变。操作系统层面的控制和应用安全控制依然相同。请将你的精力集中在 `metastructure` 层。
+
+## 云计算定义
+
+市场上对“云”的定义层出不穷。对于 CCSK 考试而言，你只需关注两家组织及其对云的定义：NIST 和 CSA。它们都指出云包含五个 essential characteristics（基本特征）、三个 service models（服务模型）和四个 deployment models（部署模型）。你需要为 CCSK 考试记住这些内容。Figure 1-2 提供了这些项目的图形视图。
+
+![Images](img/pg7_Image_3.jpg)
+
+***
+
+**Figure 1-2** A cloud comprises five essential characteristics, three service models, and four deployment models. (Used with permission of Cloud Security Alliance.)
+
+![Images](img/note.jpg)
+
+**NOTE** ISO/IEC 17788 将多租户（multitenancy）视为第六个 essential characteristic。
+
+### Essential Characteristics
+
+简而言之，以下 essential characteristics 决定一个服务是否真正是云服务。如果一家组织试图向你销售其“云服务”，但缺乏下面讨论的五个特征，你便遭遇了“cloudwashed”（即试图将非云服务包装成云服务），从而无法获得云带来的真正价值。
+
+#### Resource Pooling
+
+资源（计算、网络、存储）是云的最根本特征。资源被池化，消费者可获取。消费者对池的访问与其他消费者相隔，通常基于提供商的策略。NIST 800-145 明确指出，多租户是这一 essential characteristic 的一个方面。
+
+#### Broad Network Access
+
+在该特征下，服务通过网络（如互联网）提供。不需要特殊的直接物理连接或提供商提供的网络连接。例如，你可以通过手机浏览器管理整个 IaaS 实现。
+
+#### Rapid Elasticity
+
+这是云最强大的特性，它使消费者能够根据需求自动（或手动）扩展资源。扩展方式主要有两种：*扩展上* 指使用更强大的服务器（如从两 CPU 扩展到四 CPU），*扩展出* 指增加服务器数量（如向 Web 服务器群添加服务器以处理请求）。根据应用和架构，你需要确保提供商支持向上或向外扩展以满足需求。除了在需求增加时增加容量外，你还必须能够在需求下降时 *缩减*。这一点至关重要，因为如果在短暂的需求高峰时就扩展上，你将永久保持高容量，导致账单在下月突然翻三倍！
+
+#### Measured Service
+
+该 essential characteristic 使云成为按使用付费的计算模式：你只为实际使用的资源付费。CSA 指南中还使用“公用事业计算”（utility computing），类比于你消费电力或水的方式。
+
+#### On-Demand Self-Service
+
+你可以在不依赖供应商人工干预的情况下自行配置资源。换句话说，如果你的供应商告诉你，你的新服务器实例的工单对他们来说非常重要，并且他们会在 48 到 72 小时内处理它，那么你正在被云洗。
+
+在 `第 10 章`，你将看到这种自助特性如何用于通过实现事件驱动的安全性来自动化安全响应能力，利用 API。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 这里提醒你关于必备特性的提示，这是考试的一个大点。这五项特性来自 NIST（SP800-145）。ISO/IEC 17788 将多租户视为附加的必备特性。NIST 将多租户视为资源池的一部分，CSA 表示云本质上是多租户的。仅记住，这三个组织都将云视为多租户环境，但只有 ISO/IEC 单独列出了多租户。
+
+### 云服务模型
+
+服务模型是 ISO/IEC 17789 和 NIST 500-292 文档（CSA 研究使用 NIST 模型）中的云参考架构的一部分。服务模型以堆栈的形式呈现，以便高层次了解云服务提供商执行的内容。这个堆栈可能被称为 “SPI”（SaaS、PaaS、IaaS）堆栈或 SPI 层。`Figure 1-3` 展示了服务模型以及它们如何在上层堆叠形成 SPI 堆栈。
+
+![Images](img/pg9_Image_4.jpg)
+
+***
+
+**Figure 1-3** 服务模型以 SPI 堆栈的形式排列。（经 Cloud Security Alliance 许可使用。）
+
+不幸的是，营销人员注意到了 “as a service” 这一部分，并进行了夸大。结果，出现了各种 “as a service” 类别，如 Identity as a Service（IDaaS）、Function as a Service（FaaS）以及其他听起来 “酷” 的类别。考虑到你的考试，事实是只有三个服务模型构成了 SPI 堆栈（或层）。
+
+![Images](img/note.jpg)
+
+**NOTE** 你将在 `第 13 章` 看到 CSA 也将安全性作为服务（Security as a Service）列为额外的服务模型，但就当前讨论而言，你可以将其视为安全 *软件* 作为服务。
+
+关于 SPI 堆栈的最后说明：并非所有可用的服务类别都能恰当地归入三个层中的某一层。（有些甚至可能跨越多层！）请记住，这仅是一个描述性工具，用于让你了解提供商在责任转移方面提供的内容。它绝不是僵硬的框架。
+
+## 基础设施即服务 (IaaS)
+
+IaaS 是底层基础设施，包括物理设施和基础设施硬件。硬件本身可能是定制的、专有的或现成的，但它仍然是数据中心中常见的硬件。不同之处在于资源池、抽象、自动化和编排。抽象通常基于服务器、网络和/或存储的虚拟化。正是这种抽象使得可以创建资源池（例如，一组协同工作的超融合器）。编排使得控制器可以从资源池中请求资源，所有这些操作都通过 API（主要是 RESTful API）自动化。
+
+### 关于超融合器
+
+最常见的虚拟化形式是 `virtual machine`，它通常与 `hypervisor`（也称为虚拟机监视器或 VMM）技术同义。基本上，超融合器充当主机，允许单个物理服务器托管许多被称为 “guest” 的虚拟机。超融合器的任务是 “欺骗” 客户机，让它们以为它们直接访问底层硬件，但实际上它们运行在孤立的虚拟环境中，拥有自己的虚拟硬件资源。（更精准地说，超融合器是一个抽象层，它解耦了物理硬件和 guest 操作系统。）
+
+有两种值得注意的超融合器类型：`Type 1` 超融合器直接安装在物理服务器上（如 `VMware ESXi`、`Xen` 或 `KVM`），而 `Type 2` 超融合器安装在已经运行的操作系统之上（如 `VMware Workstation`、`VMware Workstation Player` 或 `Oracle VM VirtualBox`）。我无法想象任何云服务提供商会使用除 `Type 1` 超融合器之外的其他类型。
+
+提供商使用的超融合器实际上会影响消费者，因此在选择提供商之前应事先了解。并非所有超融合器在性能和功能方面都相等。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 请记住，IaaS 系统可以概括为包括设施（物理数据中心）、硬件（专有或标准）、抽象（虚拟化）和编排（API）四个要素。
+
+让我们通过一个综合场景来看这点。假设你想创建一个 Ubuntu Server 实例，配置为两个 CPU、12GB RAM、2TB 存储以及两张网络接口卡。下面是供应商侧在背后发生的过程（如 `Figure 1-4` 所示）：
+
+![Images](img/pg11_Image_5.jpg)
+
+***
+
+**Figure 1-4** 云组件的自动化和编排
+
+1.  云控制器联系计算控制器，请求创建一个拥有两个 CPU 和 12GB RAM 的新服务器。
+2.  云控制器联系存储控制器，分配 2TB 存储。该存储通过存储网络连接到新服务器实例。
+3.  云控制器向网络控制器请求两张虚拟网络接口卡。
+
+完成上述操作后，云控制器将请求的 Ubuntu Server 镜像复制到新建的虚拟服务器，启动它并进行配置。完成这些操作（通常以秒或分钟计）后，控制器将连接信息提供给消费者。
+
+IaaS 服务通常可以通过多种方式访问——Web、命令行界面（CLI）或 API。这些接口由提供商创建并提供给客户，用于管理其虚拟环境，因此称为 *cloud management plane*（属于前文提到的元结构逻辑模型的一部分）。事实上，Web 界面的显示主要是为了人类便利。提供商会将图形操作转换为 API 调用并执行。作为云消费者，你能通过 Web 界面做的任何事，都可以通过提供商暴露的 API 调用来完成。成熟的云消费者实践是通过调用 API 来实现程序化驱动的虚拟基础设施（称为 *software defined infrastructure*，在第 6 章中介绍）。每个云消费者都应努力追求这种程序化驱动的基础设施。人工干预越少（通过浏览器），错误越少，灵活性越高。
+
+### 平台即服务 (PaaS)
+
+在三个服务模型中，PaaS 是最模糊的。根据 CSA 的定义，PaaS 在应用开发框架、中间件功能以及数据库、消息队列和队列等功能上增加了集成层。`Figure 1-5` 展示了一个基于 IaaS 的 PaaS 服务示例，它在 IaaS 之上创建一个共享平台，用于运行应用程序。
+
+![Images](img/pg12_Image_6.jpg)
+
+***
+
+**Figure 1-5** 基于 IaaS 的 PaaS 服务示例。（经 Cloud Security Alliance 许可使用。）
+
+在 PaaS 服务模型中，提供商构建基础设施（或从另一提供商获取 IaaS），创建供客户使用的共享平台，并可能提供他们认为客户想要控制的安全控制。使用 PaaS 的主要好处是消除了构建和维护服务器的开销，并将该责任转移给提供商（服务成为某种“黑盒”）。客户因此利用由提供商完全管理的多租户平台。
+
+
+
+你可以将 PaaS 视为一个开发平台，你可以使用它快速获得环境以构建事物，或利用其功能。例如，选择“数据库即服务”PaaS 服务。与其启动实例、配置操作系统并安装和配置所选 SQL 软件不同，你只需选择想要的 SQL 平台并回答几个问题，几分钟内你的数据库即可可用。
+
+从安全角度来看，PaaS 的缺点是向客户提供的控制相较于 IaaS 可能受到限制。请参考以下场景：一家大型提供商的 SQL PaaS 服务要求主 SQL 账户使用八位字符的密码。该要求嵌入服务中，甚至不是提供商集成的访问管理（IAM）服务的一部分。没有密码复杂度强制，没有轮换，也没有方法检查密码是否符合策略。这并不意味着 PaaS 本身不安全；事实上，它可能比在 IaaS 或自有数据中心中构建的符合合规应用更安全。但合规性并不等同于安全，反之亦然。
+
+![Images](img/note.jpg)
+
+**NOTE** 我曾参与一次项目，客户因无法将网络时间协议（NTP）配置为使用内部 NTP 服务器（政策要求）而改变方向。根据你的公司政策，你可能需要使用 IaaS 服务并自行构建一切以满足企业政策。
+
+### 软件即服务（SaaS）
+
+SaaS 模式可以简单定义为“向提供商租用成熟应用”。所有 SaaS 应用本质上是多租户的，支持通过 Web 浏览器和移动应用访问，许多 SaaS 应用还支持通过 API 调用访问。支持的 API 类型（REST 与 SOAP）及 API 所提供的功能取决于提供商。
+
+SaaS 应用的后端架构可能从单台运行 Web 与 SQL 服务的服务器（即单点故障）到极其复杂的系统不等，后者可能包含负载均衡器、冗余服务器群、无服务器组件等任何可想象的内容。对 SaaS（或任何服务模型）提供商来说，没有规则或法规规定其必须或不必须做什么。
+
+![Images](img/note.jpg)
+
+**NOTE** “We’re ten guys, we’re all really smart, and we do the right thing; there’s our security program.” 这是一位审计师对一家数十亿美元公司的 CTO 在评估潜在 SaaS 提供商时所说的。显而易见，该提供商未获该公司的业务。请记住，对任何云服务提供商（CSP）都没有规则或法规规定其必须做什么。这在 SaaS 领域尤为如此，因为启动成本远低于 IaaS。
+
+从安全和尽职调查的角度来看，SaaS 服务的一个重要方面是 SaaS 提供商可能会使用第三方 IaaS 或 PaaS 服务。最大的问题在于销售人员可能夸大其应用的安全性，因为该应用运行在不同提供商的网络中。我无法判断这是出于无知还是恶意欺骗潜在客户。正如你所知，云安全是共享责任模型，SaaS 供应商只是 IaaS 供应商的另一个客户。如果你所消费的应用在权限提升等结构层面存在安全问题，那完全由 SaaS 供应商负责。同样，SaaS 供应商声称其应用因运行在合规基础设施而符合 PCI 或 HIPAA 合规性，同样属于无知或更糟的情况。我将在 `第 4 章` 更详细地讨论合规性继承的概念。
+
+### 云部署模型
+
+NIST 和 ISO/IEC 都指出四种部署模型，这些模型指示技术的拥有方式和消费方式。部署模型与服务模型不同；通过部署模型，你可以拥有私有 PaaS 等。请记住，对于 CCSK 考试的关键点是其他租户对服务的信任程度。
+
+#### 公有云
+
+这很简单。任何持有信用卡（被盗或未被盗）的人都可以注册使用该服务。基础设施由第三方拥有并管理，位于云端——即不在你所在地的位置。
+
+#### 私有云
+
+私有云是为单一组织构建的。period. Full stop. 与公有云不同，我没有说明谁拥有或管理基础设施，也没有说明是否在本地。因为这可能是任何组合。你可以让自己的团队在数据中心安装和管理云基础设施，也可以聘请私有云供应商在其数据中心为你部署。重要的是，只有受信任的人（至少是你组织内的人）才能访问云。理解私有云的另一个技巧是，它本质上只是控制软件，用于自动化和编排对资源池的访问。
+
+![Images](img/note.jpg)
+
+**NOTE** 私有云也是多租户的。例如，公司中的 HR 小组和 Finance 小组就是两个独立的租户，因为 HR 小组不应访问 Finance 的资源，反之亦然。区别在于私有云租户是受信任的。
+
+#### 社区云
+
+社区云通常为多个具有相似关注点（如风险概况）的受信任组织构建。社区云类似于私有云，可以由你的公司构建和管理，也可以外包。合租户之间也受合同约束。私有云与社区云的关键区别在于，社区云的财务风险由多个受信任的组织共享。
+
+![Images](img/tip.jpg)
+
+**TIP** 不要过度纠结私有云与社区云之间的细微差别。可以考虑采用特许经营模式。例如，“ACME 必胜餐厅”这家巨型公司构建了云，并向特许经营商收取固定费用，让他们共同构建和管理社区云，用于存储财务、营销材料、订单数据等。你的具体公司结构将决定你使用的术语。说到底，大家都有共同的关注点，这才是关键。
+
+#### 混合云
+
+混合云是一个随时间演变而变化的模型，值得关注。传统上，混合云被描述为两种不同云（如公有云和私有云）的连接，这些云通过标准化或专有技术相互绑定，实现数据和应用可移植性。近几年，这一术语的含义被扩展，还包括将非云数据中心与云提供商相连接或“桥接”。
+
+在混合部署模型中，最重要的能力是 **可移植性** 和 **云突发**（cloud bursting）。`可移植性` 是指将工作负载在不同环境之间迁移的能力——例如，创建物理服务器的 P2V 映像并将其移动到云环境。数据中心与云环境的连接使这成为可能。`云突发` 意味着利用云提供商提供额外资源来满足突发负载。在此场景下，你可以使用负载均衡器，根据当前负载将 incoming web traffic directing 到内部系统或云端系统。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 在考虑云突发时，不要陷入结构性思维的迷宫！本讨论的范围不包括 web 应用如何处理状态转移等应用层问题。考试时，只需记住负载均衡器可以将 incoming traffic 发送到数据中心内的 web 服务器或云托管系统，具体取决于当前负载。
+
+### 云安全范围与共享责任模型
+
+在评估或保障云环境安全时，需要记住云服务提供商（CSP）始终负责实现和配置云计算环境的某些方面，而你负责其他方面。这种责任划分称为 **共享责任模型**（shared responsibility model）。该模型决定了双方在云安全方面的责任范围。
+
+#### 共享责任模型
+
+你已经了解到云安全责任的转移，也知道该转移是基于元结构（metastructure），其中包含管理平面。所有传统的安全原则和领域仍然适用。与传统环境的区别在于，风险、角色和责任以及控制措施的实现方式往往会发生 dramatic 的变化。
+
+在思考责任转移时，请记住提供商会向客户提供满足大多数需求的安全措施，但你不能寄希望于奇迹。提供商不会知道你最近解雇了员工，因此员工的访问权限需要由你来撤销，这完全由你负责！
+
+从风险容忍的角度来看，每家公司甚至每个部门的风险容忍度都不同，提供商无法满足每位客户的所有风险，即使是对提供商已负责的项目亦是如此。对于所有模型，你通常有三种风险处理方式：接受风险、通过部署控制措施降低风险的影响或发生概率、或完全规避风险。
+
+![Images](img/note.jpg)
+
+**NOTE** 以下是一个极端情况的例子：我在曾任职的公司，所有设备在接入网络前必须经过 X 光扫描。如果提供商没有要求此类措施，但你的组织需要，你只能在两个选项之间做出选择：接受风险，或通过不使用该提供商的服务来规避风险。
+
+为了通过考试，你需要明白安全责任与任何一方对架构栈的控制程度直接相关。这主要取决于所消费的服务模型。
+
+Table 1-1 展示了云服务模型（SPI 栈）中安全责任的高层次划分，并与传统的（本地）数据中心模式进行了对比。
+
+![Images](img/pg17_Image_7.jpg)
+
+**Table 1-1** 不同服务模型的安全责任
+
+请注意，在所有模型中，客户永远不会把全部责任外包给提供商。无论使用何种服务模型，你始终保留一定程度的责任。
+
+下面我们通过几个具体的服务模型示例，帮助你更好地理解 Table 1-1：
+
+*   **SaaS**：你租用的是完整应用的访问权限。提供商负责该应用本身以及其底层支持，甚至包括物理安全。作为客户，你只能控制它所暴露的可配置项。例如，提供商可能允许你创建新用户并分配权限，或仅提供一种用户类型；创建与否由提供商完成，可接受与否由你根据风险容忍度判断。
+*   **PaaS**：在此模型下，应用安全和网络安全均为共享责任。假设你使用 PaaS 运行自研的自定义应用，所有针对应用代码的安全工作均由你承担——毕竟是你的应用！但为什么是共享的？因为提供商负责你运行的平台。关于网络安全，提供商维护网络并提供标准安全控制（如防火墙、入侵防御系统），但如果你想阻止特定 IP 地址，则需要在代码中集成或使用 Web 应用防火墙等方式自行实现。
+*   **IaaS**：此模型相对直接。除设施、物理硬件和超 visor 外，你几乎负责所有环节。例如，提供商可能提供已安装最新补丁的操作系统镜像，但一旦你启动镜像创建自己的实例，你就必须负责补丁和安全配置，以符合你的安全政策。网络安全方面，你需使用提供商提供的网络控制（如安全组）。提供商负责创建并暴露这些虚拟防火墙服务，让客户自行配置，而非代为配置。
+
+Figure 1-6 展示了安全责任如何随服务模型而转移。
+
+![Images](img/pg18_Image_8.jpg)
+
+---
+
+**Figure 1-6** 安全责任随服务模型而转移。（经 Cloud Security Alliance 许可使用。）
+
+最重要的安全考量是明确在任何云工作负载中，谁负责特定的控制措施。也就是说，不能仅凭提供商提供的服务模型（SaaS、PaaS、IaaS）就假设他们负责某项控制。正如前文所述，服务模型仅是描述，并非固定框架。要弄清谁负责做什么，你应为每个项目提出以下问题：
+
+*   供应商做什么？
+*   客户需要做什么？
+*   云服务提供商是否允许客户执行他们需要做的操作？
+*   供应商提供给客户的文档中包含了什么内容？
+*   合同和服务级别协议中保证了什么？
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** CCSK 考试可能会考察提供商与客户之间的共享责任。请注意以下针对提供商和客户的高层次建议：首先，提供商应正确设计和实现控制。他们应明确记录内部安全控制以及客户安全功能，以便云用户能够做出明智的决定。其次，客户应构建责任矩阵，记录谁实施了哪些控制以及如何实施。此矩阵应按工作负载（workload）逐一制定。所选控制应与必要的合规标准保持一致。
+
+#### Cloud Security Alliance Tools
+
+OK，所以你已经知道存在共享责任，你在高层面上知道，客户负责确定根据合规标准需要实施的控制，而提供商应实施安全并对此保持透明——但如果有一个控制模型或框架可以在评估提供商安全能力时遵循，岂不更好？好消息！CSA 提供了工具，你可以在云环境中使用 Cloud Controls Matrix（CCM）和 Consensus Assessments Initiative Questionnaire（CAIQ）来评估安全控制。CSA 甚至提供了供应商已完成的 CAIQ 响应的免费仓库，称为 Security Trust Assurance and Risk（STAR）注册表。我们将在适当的 CCSK 考试层面上介绍这些工具。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 请不要浪费时间背诵 CSA 工具检查的所有已勾选控制！下载最新版本的 CCM 和 CAIQ，了解每份文档的格式及其目的，并在 CCSK 考试时随手打开。记住，考试是开卷的。
+
+#### Cloud Controls Matrix
+
+CCM 工具包含 16 个域、超过 130 项云安全控制，并将其映射到多种安全与合规标准。CCM 版本 3.0.1 是 CCSK v4 考试的一部分。CCM 的好处在于，它可以用于记录提供商安全控制以及你在云环境中自行实施的系统安全责任。
+
+如果你还没有做过，请花点时间下载 CCM，从 CSA 网站（cloudsecurityalliance.org）获取。你大概率需要同时下载 CAIQ，因为我接下来要讲的是它。由于我无法逐条讲解每一项（而且你也不想听），我将以 CCM 中的第一项控制作为示例，帮助你理解表格的结构。
+
+CCM 文档的结构如下几个部分：
+
+*   **Control Domain and Control** 该部分列出控制域和单个控制。例如，CCM 的第一条是“应用和接口安全”域，其对应的控制是“应用安全”。
+*   **Control ID** 这是对控制的唯一标识代码。以第一条为例，标识代码为 `AIS-01`。
+*   **Updated Control Specification** 该项阐述控制目标。`AIS-01` 的表述为：“应用和编程接口（API）应按照行业领先标准（例如，Web 应用的 OWASP）设计、开发、部署和测试，并遵守适用的法律、法规或合规要求。”
+*   **Architectural Relevance** 说明该控制可能影响的领域。以 `AIS-01` 为例，该控制适用于计算、存储、应用和数据，但不适用于系统的物理或网络组件。
+*   **Corporate Governance Relevance** 该控制是否属于治理事项，还是技术问题？`AIS-01` 表明它不是治理事项。
+*   **Cloud Service Delivery Model Applicability** 该控制适用于哪种服务模式（SaaS、PaaS、IaaS）？`AIS-01` 适用于所有服务模式。
+*   **Supplier Relationship** 实施该控制的责任方是谁？是提供商、客户还是双方共担？在 `AIS-01` 示例中，责任方列为提供商。
+*   **Scope Applicability** 该控制映射到多种标准，如 NIST、PCI、COBIT、ISO 等。以 PCI 3.0 为例（因为它最易理解），我们看到 CCM `AIS-01` 与 PCI DSS v3.0 控制 6.5 有对应关系。
+
+在此，你已了解文档的基本结构。下面我要强调几点，考试中你需要掌握：最大的原因是 CCM 在各类规模公司的云评估中被广泛采用，是因为“Scope Applicability”部分所涵盖的信息。CSA 也深知这一点，因此考试中很可能会出现相关题目。无需记忆所有映射可能性。其次，这是一个可遵循的框架。正如其他标准一样，范围需要进行定制（或调整）。换言之，CCM 是一个很好的起点，用于根据你的合规要求创建评估清单，但它并非适用于每家公司的所有情境。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 请记住，CCM 是基于现有合规要求构建云评估程序的极佳起点，但需要根据实际需求进行定制。
+
+#### Consensus Assessments Initiative Questionnaire
+
+云服务提供商可以使用 CAIQ 模板记录其安全与合规控制。其结构与 CCM 非常相似，唯一的主要区别在于 CAIQ 包含的问题更为直接、语义更明确，不像 CCM 中的控制描述那样含糊。
+
+以我们的 `AIS-01` 控制为例。CCM 控制描述为：“应用和编程接口（API）应按照行业领先标准（例如，Web 应用的 OWASP）设计、开发、部署和测试，并遵守适用的法律、法规或合规要求。”
+
+CAIQ 同时包含 CCM 的描述，并提出以下四个是非题（是/否格式），此外还有供应商可在 Notes 字段中补充详细信息：
+
+*   您是否使用行业基准（如 BSIMM、Open Group ACS Trusted Technology Provider Framework、NIST 等）在软件开发生命周期（SDLC）中构建安全性？
+*   您是否使用自动化源代码分析工具，在生产前检测代码中的安全缺陷？
+*   您是否使用手动源代码分析，在生产前检测代码中的安全缺陷？
+*   您是否验证所有软件供应商均遵循系统/软件开发生命周期（SDLC）安全的行业标准？
+
+![Images](img/note.jpg)
+
+**NOTE** 这就是 CISO 的反应：“这正是我们在向客户说明 SaaS 安全性时使用 CAIQ 的原因。” 看来他经常被潜在客户每周要求填写这 295 条 CAIQ 问题。我们随即转向讨论 STAR 注册表。
+
+#### STAR Registry
+
+*   STAR 登记册的亮点是其收集了供应商填写的 `CAIQ` 表格。该仓库免费提供，您可以在与供应商接触之前，通过它对提供商的安全控制进行“隐蔽”检查。
+
+
+
+![Images**EXAM TIP** 您需要了解整个 `STAR` 计划的一些事项。`CAIQ` 条目被视为“自评”。每个自评被称为“Level 1” `STAR` 条目。在下面的列表中，我有意省略了几项，因为它们超出了您 `CCSK` 考试的范围。事实上，即使是 Level 2 的讨论也超出范围，但作为您与云供应商合作时的参考，我在此包括它。您会在 `STAR` 登记册中发现几种不同的层级。
+
+• **`STAR` Level 1: Self Assessment** 这里没有监督或第三方检查所列内容与实际真相。不过，我想强调，供应商不太可能在其 `STAR` 条目中列出“错误信息”，因为这将被发现，供应商可能会遭受巨大的声誉损失。尽管如此，请记住它之所以称为“自评”，是有原因的。如果您希望第三方签署声明，则需要查找 Level 2 `STAR` 条目。
+
+• **`STAR` Level 2: Third-Party Certification** 提供商可以通过两种方式被列为已实现 `STAR` Level 2：`STAR` 认证或 `STAR` 认证。`STAR` 认证要求在被消费的云环境中遵循 ISO 27001 要求。`STAR` 认证要求遵循 Service Organization Control 2 (`SOC 2`) 标准。两者都需要独立的第三方对提供商的环境进行评估。
+
+• **`STAR` Level 3: Continuous Auditing** 此层级是未来持续审计的占位符。目前，由于标准仍在制定中，此层级对所有提供商均不可用。![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 请记住，`STAR` 注册表包含供应商填写的 `CAIQ` 条目，这些条目上传至 Cloud Security Alliance，且未经过任何第三方审查或评估。
+
+#### Cloud Reference and Architecture Models
+
+*Models* 是帮助您指导安全决策的工具。`CSA` 将这些模型划分为四个独立的项目，即可供使用的工具：
+
+• **概念模型** 这些模型可以包括可视化和描述，用于解释概念和原则。逻辑模型（infostructure、applistructure、metastructure、infrastructure）以及每一层级的具体内容，就是概念模型的一个例子。
+
+• **控制模型** 该类别细分并详细说明具体的云安全控制及/或控制类别。`CCM` 和 `ISO 27017` 是 `CSA` 推荐的控制模型示例。
+
+• **参考架构** 问十个人什么是“参考架构”，会得到十种不同的答案。根据 `CSA`，参考架构可以是非常抽象的高层概念，也可以是非常详细的概念，甚至是具体的控制和功能。`NIST 500-299`（如图 1-7 所示的架构图）和 `CSA` 企业架构（如图 1-8 所示）都是 `CSA` 推荐的参考架构示例。
+
+![Images](img/pg23_Image_9.jpg)
+
+---
+
+**Figure 1-7** `NIST 500-292` 参考架构示例。（来源：`NIST 500-292`。）
+
+![Images](img/pg23_Image_10.jpg)
+
+---
+
+**Figure 1-8** `CSA` 企业参考架构示例。（经 Cloud Security Alliance 许可使用。）
+
+• **设计模式** 这些是解决特定问题的可重用解决方案。例如，在 IaaS 环境中管理日志。您可以实现一次日志管理系统，然后将其作为其他系统的一部分复用。与参考架构一样，设计模式可以是抽象的（图中的一个框），也可以是针对特定平台的具体实现。
+
+##### Cloud Security Process Model
+
+以下步骤是 `CSA` 推荐的，用于识别云安全管理的高层过程。注意，细节、控制和流程已被省略，本讨论旨在列出应执行的活动。执行方式取决于具体工作负载。图 1-9 以图形方式展示了这些步骤。
+
+![Images](img/pg24_Image_11.jpg)
+
+---
+
+**Figure 1-9** 云安全过程模型。（经 Cloud Security Alliance 许可使用。）
+
+![Images](img/tip.jpg)
+
+**TIP** 在执行这些步骤之前，您需要处理一项事项——数据分类。没有数据分类，您无法确定数据的价值和重要性，也就无法确定所需的安全和合规控制。因此，在完成分类后，您即可开始后续步骤。
+
+**步骤 1** 确定必须落实的安全与合规控制，以满足合规要求。这些要求无论系统在何处运行都必须存在。
+
+**步骤 2** 选择云服务提供商、服务模型以及部署模型。这将帮助您理解责任共享模型。
+
+**步骤 3** 定义架构。系统将使用哪些组件和服务？如果不了解其功能及其与其他系统或组件的交互，如何保障其安全？
+
+**步骤 4** 评估安全控制。请记住，实施安全的责任可能由提供商承担，也可能由您承担。
+
+**步骤 5** 识别控制缺口。您了解合规要求以及可用的控制。能否找到所需但未实现的控制，或是对您不可见的控制？
+
+**步骤 6** 设计并实施控制以填补缺口。如果提供商未提供所需的控制，您必须自行实施控制来填补该缺口。
+
+**步骤 7** 随时间管理变更。云安全（尤其是云安全）永不一劳永逸。您需要随时关注提供商的变更，并在出现安全缺口时及时处理。
+
+### Chapter Review
+
+本章回顾了本书其余部分所建立的基础信息。为了通过 `CCSK` 考试，您必须完全清楚逻辑模型，尤其是元结构层——在那里您将通过管理平面配置和管理新的虚拟环境。您还可能被测试的其他主题包括：
+
+• 了解云计算与传统基础设施或虚拟化的区别，以及抽象和自动化对安全的影响。
+
+• 掌握云计算的定义，如服务模型和部署模型及其属性，从内到外。
+
+• 熟悉 `NIST` 云计算模型以及 `CSA` 参考架构，以及它们如何影响云的共享安全责任模型。
+
+• 了解如何使用 `CSA` 共识评估问卷 (`CAIQ`) 来评估和比较云提供商。
+
+• 了解如何使用 `CSA` 云控制矩阵来评估和记录云项目的安全与合规要求及控制，以及谁负责每项控制。
+
+• 使用云安全过程模型来选择提供商、设计架构、识别控制缺口以及实施安全与合规控制。
+
+#### Questions
+
+**1.** 哪种文档类型存储在 `STAR` 注册表中用于 Level 1 条目？
+
+**A.** `CCM`
+
+**B.** `CAIQ`
+
+**C.** 供应商合规声明
+
+**D.** 政府颁发的运营许可证
+
+# 企业风险管理与治理
+
+本章节涵盖 CSA 指导手册第 2 章的以下主题：
+
+• 云治理工具
+• 云中的企业风险管理
+• 各类服务和部署模型的影响
+• 云风险权衡与工具
+
+*The buck stops here*。
+
+—President Harry S. Truman
+
+虽然当总统特鲁曼在任时云计算尚未出现，但他的这句话提醒我们在将职责外包到云端时的责任归属。你可以选择将云环境的构建和运营责任外包给第三方提供商，但你永远无法外包责任本身。因此，适当的治理对企业至关重要。
+
+尽管标题暗示本领域有两个重点，但实际上有四个角色在强有力的治理与风险管理计划中发挥作用。这些角色包括治理、企业风险管理、信息风险管理和信息安全。以下内容将为您提供这些角色的高层次理解：
+
+• **治理** 包括指导组织运行的政策、流程和内部控制；它涵盖从结构和政策到领导力及其他管理机制的方方面面。你可以将治理视为指派指令控制。需要实施的政策通常来源于企业使命宣言，并针对公司为继续运营必须遵循的法律、法规和标准进行制定。治理依赖合规功能，以确保指令在整个企业范围内得到执行。
+
+• **企业风险管理** 包括管理组织的整体风险，并与组织的治理及风险容忍度保持一致。企业风险管理（ERM）涵盖所有风险领域，而不仅仅是与技术相关的风险。
+
+• **信息风险管理** 关注管理信息风险，包括信息技术（IT）。组织面临各种风险，从财务到物理，信息只是组织需要管理的多个资产之一。如果你在 IT 领域工作，你最熟悉的风险管理领域很可能就是这一类。
+
+• **信息安全** 包括用于管理信息风险的工具和实践。信息安全并非管理信息风险的万能解决方案；政策、合同、保险和其他机制（包括非数字化信息的物理安全）也各司其职。但信息安全的核心——甚至是*主要*角色——是提供保护电子信息及其访问系统所需的流程和控制措施。
+
+在简化的层级结构中，信息安全是信息风险管理的工具，信息风险管理是企业风险管理的工具，企业风险管理是治理的工具。这四者紧密相关，但各自需要单独的关注、流程和工具。
+
+![Images](img/note.jpg)
+
+**NOTE** CSA 列出了以下治理标准，但您无需了解这些标准即可准备考试。我在此列出它们，以便您在寻找治失眠的良方时进行额外阅读。CSA 将考察云对这些角色的影响，而非这些流行的治理标准。
+
+— `ISO/IEC 38500:2015` - 信息技术 - 面向组织的 IT 治理
+— `COBIT` - 企业 IT 治理与管理的业务框架
+— `ISO/IEC 27014:2013` - 信息技术 - 安全技术 - 信息安全治理
+
+### 治理
+
+本节分为两个主要区域：首先是治理概述，描述企业治理的作用以及采用云服务所导致的治理变化；其次是关于云治理问题的重点关注领域。
+
+![Images](img/note.jpg)
+
+**NOTE** 本书的治理章节旨在解决在对云影响进行全面讨论之前，您可能已有的知识缺口。背景介绍不包含在 CCSK 考试中会被考察的信息。
+
+#### 治理概述
+
+您听过“从上往下开始”的说法吗？这在任何规模公司中都是企业治理的体现。治理职能位于董事会或高层管理层。治理涵盖众多方面，从企业治理到 IT 治理不等，但需要记住的关键是所有治理的共同目标是使组织实现其目标。因此，从高层来看，治理可以直接关联到公司的使命宣言，甚至更高层面上，可以关联到领导层认为公司的实际目的。
+
+企业治理的组成部分种类繁多。Figure 2-1 展示了企业治理的若干公认组成部分的高层视图。
+
+![Images](img/pg31_Image_12.jpg)
+
+---
+
+**Figure 2-1** 企业治理框架
+
+多年来，“英美治理模式”始终认为公司应以股东利益为本，其核心目标是最大化利润。2019 年 8 月，商业圆桌会议（由近 200 名美国领先企业首席执行官组成）重新定义了美国公司的目的：投资员工、为客户创造价值、以伦理方式对待供应商、支持当地社区、采用可持续实践保护环境、并为股东创造长期价值。这一声明力度极大，因为它明确了公司的具体目标，进而驱动治理职能在法律、法规、标准及其他要求的基础上达成这些目标。
+
+遵循企业治理的还有 IT 治理。IT 治理可定义为确保 IT 有效且高效地被用于帮助组织实现目标的过程。Figure 2-2 展示了 IT 治理的各种组成部分的高层视图。这当然是 IT 治理职能的简化视图。例如，最新版本的 COBIT 核心模型包含 40 项治理与管理目标，用于建立 IT 治理。这些内容不会作为 CCSK 考试的一部分进行考察，但了解 IT 治理的要点并非坏事。
+
+![Images](img/pg32_Image_13.jpg)
+
+---
+
+**Figure 2-2** IT 治理的组成部分
+
+以上即为治理章节的背景介绍。接下来，我们探讨采用云服务后治理如何发生变化。
+
+#### 云治理
+
+由于云计算可能引入第三方，公司现在通过合同获得间接控制。在云环境中，客户定义、执行和监控公司政策的能力可能受到云提供商的合同限制，企业治理因此受到云的影响。此外，关于云环境服务管理的关键信息（理应）由云提供商产生，而非客户本人。事实上，只有在您在自有数据中心部署了自动化和编排软件，并将公司视其为数据中心中普通系统来管理的情形下，治理才不会因使用云而发生变化。（请回顾第 1 章，了解私有云仅服务单一组织，不决定其位置或管理方式。）
+
+需要记住的主要问题是：尽管组织可以将治理的**责任**（对行动的控制权）委托给外部提供商，但公司**永远无法委托责任**（对行动或不作为的责任）。因此，只要出现问题，组织始终要承担责任（即对行为或缺失行为的责任），这无论是否使用云，都是真实的。在评估云计算的共享责任模型时，这一点尤为重要。
+
+一些云提供商服务数量超过一百万家，根本不可能为每位客户提供涵盖合同、服务级别协议（SLA）和安全控制的完整服务。因此，提供商会向客户交付高度标准化的服务（包括合同和 SLA），这些服务对所有客户保持一致。治理模型不能像对待专用外部服务提供商（如机房托管或网络托管）那样对待云提供商，后者通常会为每位客户定制服务，包括定制合同、员工背景审查以及法律协议。
+
+客户与提供商的合同将明确治理的责任和机制；客户需要理解这些内容并识别任何流程缺口。若发现缺口，客户必须调整自身流程以填补缺口，或接受相应的风险。
+
+![Images](img/tip.jpg)
+
+**TIP** 治理缺口并不必然排除使用该提供商。如果因未完全满足需求而排除所有提供商，您将无法使用任何提供商。识别缺口并加以解决是 CSA 推荐的应对治理挑战的方式。
+
+#### 云治理工具
+
+好消息是，贵公司很可能已与云提供商签订合同，知道在接入第三方时需要完成哪些步骤。遗憾的是，云提供商合同与例如机房托管提供商合同不同，因为后者意味着您将**全部外包**（硬件、人员、管理、运营等）。因此，您需要了解几种工具以及它们在云环境与其他外包方式上的差异，这些内容将在接下来的章节中详细说明。
+
+### 合同
+
+合同是治理的第一号工具。具有法律约束力的合同协议是您在任何服务级别或承诺层面的唯一“保证”。简单来说，如果不在合同中，就不存在。注意“保证”一词前的引号。如果提供商违反合同条款或未能履行服务级别协议的条款，您将面临法律争议。（观看电影《Tommy Boy》中的保证场景，以获取关于某些保证价值的更多信息。）
+
+“合同”一词其实有点误导，因为它似乎暗示只涉及单一文档；然而，合同通常也会引用其他文档。请参考微软 Azure 协议的第一句话：
+
+> 本 Microsoft Azure 协议是您或您代表的实体（或，如果您在订阅购买或续订时未指定任何实体，则是您个人（“您”）与微软公司（“Microsoft”、“我们”、“我们”或“我们的”）之间的协议，并包括以下条款和条件，以及可接受使用政策、服务条款、服务级别协议（SLA）以及您订阅或续订的详细信息（统一称为“协议”）。
+
+因此，基本上，合同包括以下具有法律约束力的文档：
+
+• **条款和条件** 这是描述服务方面、客户数据使用方式、终止条款、担保、适用法律以及提供商律师撰写的其他有趣内容的主要文档，这些内容旨在保护提供商，尽可能符合法律规定。
+
+• **可接受使用政策** 规定了在消费服务时您可以做什么和不可以做什么。
+
+• **服务条款** 包含提供商与您之间的服务特定合同约定。
+
+• **服务级别协议（SLA）** 详细说明了可用性承诺和未满足承诺的处罚等项目。通常，未满足月度服务级别协议（例如 99.9% 的可用性）的处罚形式为额外的服务积分，客户通常需要提交索赔并提供不可用性证据。
+
+• **基于您订阅和/或续订的条款** 这些是针对您特定订阅的法律协议。在云服务中，提供商对客户的承诺很大程度上取决于客户的订阅级别。请考虑以下极端情况：免费版本的产品可能包含条款，规定提供商可以访问您的使用数据，而付费版本则不允许提供商访问您的数据。请确保您了解订阅级别，并审阅相应的文档。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 考试时请记住，合同定义了提供商与客户之间的关系，是客户向其供应商延伸治理的主要工具。
+
+### 云服务提供商评估
+
+评估是客户在使用云服务提供商之前必须进行的尽职调查的一部分。评估应利用所有可用信息，从合同审查到提供商提供的审计报告以及系统技术文档的审查。技术评估可能会因安全考虑而受到提供商的限制（例如，无法进行现场访问）。提供商如何提供技术文档是由他们决定的：他们可能在网上发布详细信息，也可能仅在其办公室提供现场审阅。
+
+除了技术角度之外，大多数供应商评估都是作为云服务提供商的评估的一部分进行的。评估的项目通常包括财务可行性、历史、功能产品、第三方认证、同行反馈等。
+
+### 合规报告
+
+两个简单的词汇概括了这一治理工具——*标准*和*范围*。领先的云服务提供商会花费巨额资金，以确保能够遵循多种标准。他们通过获得这些认证和报告来吸引受特定法律和法规约束的客户。所有标准的共同问题在于*参与范围*。以国际标准化组织/国际电工委员会（ISO/IEC）认证为例。ISO/IEC 审计的范围可能仅限于 IT 部门。如果您正在寻找一家拥有您希望用于供应商选择决策的 ISO/IEC 认证的云服务提供商，这将使您明白，仅仅被“认证”并不意味着其所提供的服务在审计范围内。
+
+提供商常常推广的热门标准包括：
+
+• **NIST 800-53** 该控制集是更大的 NIST 风险管理框架的一部分。如果您为政府机构工作，这很可能是您最熟悉的控制集。NIST 800-53 包含 600 多项控制，覆盖低、中、高分类系统。
+
+• **FedRAMP** 联邦风险与授权管理计划将 NIST 800-53 控制集针对云服务进行定制。提供商必须获得 FedRAMP 授权（称为授权运营，ATO）才能向美国政府提供服务。
+
+• **ISO/IEC 27017** “基于 ISO/IEC 27002 的云服务信息安全控制实践代码”标准本质上是 ISO 27002 的控制集，专为云服务而调整。
+
+• **COBIT** 信息技术与相关技术治理目标（哇！）是由 ISACA 拥有的治理与风险管理框架。它不是像云控制矩阵（CCM）、FedRAMP 或 ISO 27017 那样的控制集。其关注点在于企业 IT 治理和管理，而非单纯安全。您不太可能看到提供商宣传其符合 COBIT，但它会在指导文档中出现，并在 CCM 中有映射。
+
+• **PCI** 支付卡行业及其数据安全标准（DSS）是因非合规而面临处罚而闻名的非常流行的行业标准。需要注意的一点是：供应商被“PCI 合规”并不意味着您的应用程序自动“PCI 合规”。这完美体现了所有云模型的共享责任，您需要评估您的应用程序是否属于 PCI 持卡持有者数据环境。
+
+• **HIPAA** 医疗保险可携带性与责任法是美国公共法案，要求对医疗信息进行隐私和安全保护。它并非专门针对云环境，但如果医疗信息存储在云中，则适用于云环境。
+
+
+
+# CSA 指南与 SOC 报告
+
+幸运的是，CSA 指南不会详细列出所有现有标准，但有一个您必须了解的：系统和组织控制（SOC，发音为“sock”）。SOC（原称为服务组织控制）由美国注册会计师协会（AICPA）使用，被大多数服务提供商用于报告服务组织的控制情况。SOC 报告由独立 CPA 生成，并通过保密协议（NDA）从提供商处获取。虽然有多种报告类型（SOC 1、SOC 2、SOC 3），但这些报告均基于 AICPA 信服准则第 18（SSAE 18，之前为 SSAE 16）标准。以下是三种 SOC 级别的说明：
+
+- **SOC 1** 该 SOC 报告用于内部控制财务报告（ICFR），适用于审计财务报表的实体。
+- **SOC 2** 该 SOC 报告的标题为“关于安全、可用性、处理完整性、保密性或隐私性相关服务组织的控制报告”。它涉及确保组织中的控制对系统的安全、可用性和处理完整性是相关的。
+- **SOC 3** 该公开的高层次 SOC 报告包含来自独立 CPA 的声明，说明已完成一次 SOC 审计，以及评估的高层结果（例如，可能表明供应商所声称的安全控制是准确的）。
+
+![Images](img/note.jpg)
+
+> **NOTE** 你将在第 4 章中阅读更多关于 ISO/IEC 标准和 SOC 报告内容的信息。
+
+现在，如果这仍然不够让你感到困惑，AICPA 认为这是一个很好的主意，设立不同层次的报告：
+
+- **Type 1** 对控制的设计进行一次时点评估
+- **Type 2** 对控制的运行有效性进行检查
+
+从你可以看到的那样，你很可能会希望获取并审查 **Type 2** 报告，因为它实际上会测试相关的控制。这里的关键是，作为安全专业人员，你希望获得供应商的 **SOC 2 Type 2** 报告。它将提供对已部署安全控制、执行的测试以及测试结果的详细信息。
+
+![Images](img/caution.jpg)
+
+> **CAUTION** 不要假设供应商仅拥有一份 SOC 报告就足以证明其谨慎性。即使是合法的 SOC 报告也可能指向你认为不可接受的风险的做法和评估。你始终需要审查 SOC 报告。
+
+当然，供应商并不被迫使用像 SOC 这样的标准或 ISO 来提供第三方控制评估。他们可以提供他们自行创建的基于 CCM 和 CAIQ 的自评估，这些内容在第 1 章中涵盖，或者他们甚至可以允许潜在客户自行进行审计——但这很少见。
+
+![Images](img/caution.jpg)
+
+> **CAUTION** 并非所有审计公司（或审计师）都相同，审计公司的经验、历史和资质应纳入你的治理决策。此外，还要考虑审计师本身。如果他们不熟悉云环境，可能会导致误判并产生各种问题，尤其是在云原生应用中，这些应用可以实现对审计师不熟悉的全新控制方法（例如无服务器环境）。CSA 建议你与具备云知识的审计师合作，而审计师展示云知识的最佳方式就是持有 **CCSK** 认证！
+
+# Risk Management
+
+如前所述，企业风险管理（ERM）是对组织整体风险的管理，而信息风险管理（IRM）专注于信息和信息系统。这两个功能与治理功能相关，因为治理最终决定了组织整体的可接受风险。回顾前治理章节，合同定义了云提供商与云客户之间风险管理的角色和责任。合同以及供应商提供的其他文档可以用来确定潜在的未处理风险所在。你也知道，你永远不能将整体风险管理的责任和问责权外包给外部提供商，因此适当的风险管理对贵组织至关重要。审查供应商的文档、评估和审计将提供更多信息，帮助你做出有效的风险决策。
+
+## Risk Management Backgrounder
+
+在讨论云带来的风险管理变化之前，我想先向不太熟悉该功能的读者介绍风险管理的基本概念。此背景介绍无法涵盖风险管理的所有方面，因为该主题极其广泛，且对于你的 CCSK 考试并不适用。如果你对风险管理非常感兴趣，我建议你阅读我用作本概述基础的 NIST 800-39 文档。如果你已经非常熟悉风险管理的原则，可以直接跳到下一节。
+
+ISACA 将风险管理定义为“识别组织在实现业务目标时所使用的信息资源面临的漏洞和威胁，并决定采取什么反 measures（如果有）以降低风险至可接受水平，基于信息资源对组织的价值。” 根据 NIST（SP 800-39）《管理信息安全风险》出版物的描述，风险管理包含四项核心活动。下面是活动或步骤的列表，以及每一步的简要描述。
+
+### Step 1: Risk Framing
+
+在此步骤中，公司制定风险管理策略，详细说明如何评估、应对和监控风险。该策略考虑到塑造组织风险管理方法的法律、法规和标准。最重要的是，它确定了风险容忍度，用于区分可接受与不可接受的风险。这是公司做出所有风险相关决策（从投资到运营决策）的基础。这一初始步骤凸显了治理与风险管理职能之间强有力的协作需求。
+
+### Step 2: Assessing Risk
+
+此步骤自然是使用风险评估来识别、优先级排序并估算企业资产（以及其他项目）的风险。在此步骤中，公司识别潜在的威胁和漏洞，并尝试确定威胁通过被利用的漏洞实现的可能性和影响程度。这一计算即是风险的定义。风险评估主要有两种方式：第一，在 *定性风险评估* 中，对影响程度和威胁发生概率进行主观排名（如低、中、高），以得出最终风险等级。第二，在 *量化风险评估* 中，对资产应用金融数值。最终，公司可以为每个风险赋予价值，依据步骤 1 中的风险容忍度判断其是否可接受。
+
+### Step 3: Responding to Risk
+
+在此步骤中，确定应对感知风险所需的行动。可选的响应选项包括：接受风险而不采取任何措施；通过不进行相关操作来规避风险；通过实施控制来减轻风险的可能性或影响（即缓解风险）；通过与其他方共同承担风险来分享风险；以及通过购买保险（如网络保险）将风险转移给其他方。总体而言，风险通过部署控制来降低其发生的可能性或影响，使其达到可接受水平。剩余的风险称为 *residual risk*。在云环境中，涉及两方：提供商可能会部署控制来缓解风险。剩余风险要么被视为可接受，要么不可接受。如果贵公司认定该风险不可接受，则需要部署额外控制进一步缓解，或通过不使用该服务来规避风险。
+
+![Images](img/tip.jpg)
+
+> **TIP** 也许你发现自己处于一种已识别风险的情境，想要将该风险转移给另一方。在这种情况下，网络保险常被使用。关于保险的诀窍在于：它仅覆盖主要损失，而不包括次要损失，如声誉损失。你需要了解保险的限制，因为即使是处理攻击的主要成本也可能惊人，而声誉损失可能对你的组织造成更大的影响。
+
+关于什么是可接受的风险，什么是不可接受的，这全凭客户公司的风险容忍度而定。客户不应有一个针对任何发生情况的全盘性条款来界定可接受风险。以营销“戴帽子的猫”应用与内部财务报告应用为例，它们是否具有相同的安全需求？当然不具备。你的风险接受度应与涉及的资产价值和需求相匹配。随时间推移，你的公司目标是了解被消耗的云服务以及每种服务中可用的资产类型。
+
+### Step 4: Monitoring Risk
+
+风险管理的最终阶段包括验证风险应对措施的持续有效性以及合规性的维护（审计和合规性主题在 第 4 章 中涵盖）。除此之外，识别可能导致组织风险变化的任何修改，并确保风险处理仍然恰当也是重要的。识别工作可以通过手动流程（如威胁评估）或自动化流程（如配置管理、漏洞评估等）来完成。在此阶段，可以识别并实施过程改进活动。
+
+# 云风险管理
+
+无论你的系统和信息存储在何处，风险管理就是风险管理。风险仍需被框定、评估、应对和监控。在云环境中进行风险管理必须包含服务模型和部署模型，因为这些模型影响了云服务固有的共享责任模型。下面的章节将说明云如何改变你当前的风险管理方式。
+
+![Images](img/note.jpg)
+
+> **NOTE** 迁移到云端并不改变你的风险容忍度，它只是改变了风险的管理方式。
+
+## 服务模型与部署模型的影响
+
+由于云采用共享责任模型，我们需要从服务模型和部署模型两个角度审视谁通常负责管理各项组件。我们先从服务模型的影响开始，再探讨部署模型对治理和风险管理的影响。
+
+### 服务模型影响
+
+你可能记得 第 1 章 提到，服务模型提供了共享责任的高层视图。供应商提供的功能越多，他们就需对信息安全的所有方面负责。
+
+#### 软件即服务（SaaS）
+
+SaaS 本质上是租用一款由提供商交付的完整应用。SaaS 提供商的规模从极小到极大不等。鉴于供应商种类繁多，确保潜在的 SaaS 供应商符合公司需求至关重要，因为你实际上是将从设施到应用程序的所有内容都外包给供应商，这使得安全责任主要由供应商承担。
+
+另一个需要考虑的点是，你的 SaaS 供应商可能会在内部将业务委托给平台即服务（PaaS）或基础设施即服务（IaaS）供应商。这不仅建立了第三方，还可能形成第四、甚至第五方的外包链条。如果情况如此，你需要确定涉及的供应商，并评估这些环境。
+
+#### 平台即服务（PaaS）
+
+与 SaaS 相比，PaaS 的责任转移更倾向于客户。你拥有更大的能力在构建在共享平台之上的应用时自行配置安全。例如，你可以在构建在共享 PaaS 平台上的应用中实现加密。此类场景中，信息风险管理和信息安全主要聚焦于所采购的平台以及应用本身。鉴于 PaaS 以创新方式拆分 IT 栈，你需要详细审查合同条款如何对应所需的控制措施和实现机会。
+
+![Images](img/note.jpg)
+
+> **NOTE** 根据 CSA 指南，PaaS 的完全谈判合同可能性低于其他服务模型。这是因为大多数 PaaS 提供商的核心驱动力是交付单一功能，并以极高的效率实现。
+
+#### 基础设施即服务（IaaS）
+
+你已经知道，在三种服务模型中，IaaS 最接近传统数据中心。因此，该模型下客户需承担最多的配置控制责任，无论是供应商提供的（如日志记录）还是客户自行实现的（如实例中的主机防火墙）。治理和风险管理的挑战在于提供商所提供的编排和管理层。大多数 IaaS 基于虚拟化技术，提供商选择和配置超融合层以及正确隔离工作负载的能力完全超出你的控制。针对潜在的隔离失败，你能做的唯一是了解提供商如何缓解此风险，并在使用前做出明智决策。由于你通常无法自行审计这些控制，这只能通过文档审查来完成，前提是提供商对其流程保持透明。
+
+### 部署模型影响
+
+部署模型取决于基础设施的拥有权与管理权以及其他租户的信任程度。因此，治理与风险管理的变化也随之而来。让我们分别查看公有云、私有云（包括托管和本地）、社区云以及混合云，看看它们如何影响治理和风险管理。
+
+#### 公有云
+
+该模型非常直接。第三方拥有并管理基础设施，数据中心位于其外部。提供商的员工及其可能的分包商负责管理一切。其他租户是不受信任的，因为任何持有信用卡和梦想的人都可以运行工作负载，甚至可能与你的工作负载共享同一台硬件。
+
+![Images](img/note.jpg)
+
+> **NOTE** 请记住，你与之签约的提供商（如 PaaS、SaaS）可能会将部分设施外包给其他方。
+
+在公有云中，针对控制措施和其他技术问题的谈判合同很难达成，因为客户数量庞大且公有云服务本质上具有多租户特性。因此，你需要评估提供商实施的控制措施，进行差距评估，并自行弥补缺口；或者接受风险（同样应基于资产的具体价值进行 per-asset 风险接受）。
+
+![Images](img/note.jpg)
+
+> **NOTE** 不灵活的合同是多租户的自然属性。
+
+#### Private Cloud Governance in a private cloud
+
+Private Cloud Governance boils down to one very simple question: which party owns and manages the private cloud? You could call a provider and have them spin up and manage a private cloud for you, or you could have your people install the private cloud automation and orchestration software to turn your data center into a “private cloud.” In the event that your company owns and operates the private cloud, nothing changes. If, on the other hand, you have outsourced the build and management of your private cloud, you have a hosted private cloud, and you have to treat the relationship as you would any other third‑party relationship. It will, however, be different from governance of a public cloud, because you are dealing with a one‑to‑one type of relationship. Just as you would with any other supplier contract, you have to make sure your provider is contractually obligated to do everything you want in advance. If you request something and the provider is not obligated to supply that service, you will likely face the dreaded “change order” charges as you would with any other supplier today.
+
+![Images](img/exam_tip.jpg)
+
+> **EXAM TIP** If you are asked a question about governance in a private cloud, pay attention to who owns and manages the infrastructure. An outsourced private cloud can incur much more change than insourced.
+
+#### Hybrid and Community Cloud
+
+With the hybrid and community cloud deployment models, you have two areas of focus for governance activities: internal and the cloud. With hybrid clouds, the governance strategy must consider the minimum common set of controls that make up the cloud service provider’s contract and the organization’s internal governance agreements. In both hybrid and community models, the cloud user is either connecting two cloud environments or a cloud environment and a data center.
+
+For community clouds specifically, governance extends to the relationships with those organizations that are part of the community that shares the cloud, not just the provider and the customer. This includes community membership relations and financial relationships, as well as how to respond when a member leaves the community.
+
+## Cloud Risk Management Trade‑offs
+
+There are advantages and disadvantages to managing enterprise risk for the cloud deployment models presented in this chapter. These factors are, as you would expect, more pronounced for a public cloud and a hosted private cloud:
+
+- You have less physical control over assets and their controls and processes. You don’t physically control the infrastructure or the provider’s internal processes.
+- You have a greater reliance on contracts, audits, and assessments, as you lack day‑to‑day visibility or management.
+- You lack direct control. This creates an increased requirement for proactive management of the relationship and adherence to contracts, which extends beyond the initial contract signing and audits. Cloud providers also constantly evolve their products and services to remain competitive, and these ongoing innovations may exceed, strain, or not be covered by existing agreements and assessments.
+
+
+
+- Cloud customers have a reduced need (and an associated reduction in costs) to manage risks that the cloud provider addresses under the shared responsibility model. You haven’t outsourced accountability for managing the risk, but you can certainly outsource the management of some risks.
+
+![Images](img/note.jpg)
+
+**NOTE** Governance of the relationship with the provider, especially changes introduced by the provider (such as new services), *must* be an ongoing effort.
+
+## Assessing Cloud Service Providers
+
+You are dealing with two types of risk management when you assess the cloud: the risk associated with use of third‑party cloud service providers and the risk associated with the implementation of your systems in the cloud. The fundamental aspects of risk management (covered earlier in the chapter) don’t change as a result of the cloud. The framework, processes, and tools for all aspects of governance, risk, and compliance (GRC) that you use today can and should be applied to a cloud environment. The biggest change to your GRC program as a result of adopting cloud services will rest in your initial and continued assessment of service providers.
+
+![Images](img/note.jpg)
+
+**NOTE** The European Network and Information Security Agency (ENISA) has published a “Cloud Computing Risk Assessment” document to assist with assessment of risks in a cloud environment. This document is discussed in Chapter 15.
+
+### Supplier Assessments
+
+The initial supplier assessment sets the groundwork for the cloud risk management program. The following steps and a graphical view of these steps (Figure 2-3) show what you should follow as part of a supplier assessment:
+
+![Images](img/pg43_Image_14.jpg)
+
+---
+
+**Figure 2-3** Supplier assessment steps. (Used with permission of Cloud Security Alliance.)
+
+1. Request or acquire documentation.
+2. Review the provider’s security program and documentation.
+3. Review any legal, regulatory, contractual, and jurisdictional requirements for both the provider and your organization.
+4. Evaluate the contracted service in the context of your information assets.
+5. Separately evaluate the overall provider, such as its finances/stability, reputation, and outsourcers.
+
+Because you know that governance and risk management of a cloud provider is never a one‑and‑done approach, you need to stay on top of the relationship. To that end, consider the following recommendations for vendor risk management:
+
+- Don’t assume all services from a particular provider meet the same audit/assessment standards. You will have to assess the latest audit/assessment reports and determine whether a service you are considering was in scope and tested or not.
+- Periodic assessments should be scheduled and automated if possible.
+
+![Images](img/note.jpg)
+
+**NOTE** Automation of assessments is possible if the provider exposes APIs to customers.
+
+### Chapter Review
+
+This chapter reviewed the recommendations by the Cloud Security Alliance surrounding the elements of governance and risk management changes that are associated with cloud consumption. The CCSK exam will not test you on the various standards out there that can be leveraged for traditional IT consumption. Your goal is to understand the differences that occur with governance and risk management as a result of consuming cloud services. To that end, make sure you fully understand the following points, which were all covered in this chapter:
+
+- Identify the shared responsibilities of security and risk management based on the chosen cloud deployment and service models. Develop a cloud governance framework/model as per relevant industry best practices, global standards, and regulations such as `CSA CCM`, `COBIT`, `NIST RMF`, `ISO/IEC 27017`, `HIPAA`, `PCI DSS`, `EU GDPR`, and so on.
+- Understand how a contract affects your governance framework/model. You’re introducing a supply chain when consuming cloud services.
+- Don’t assume that you can effectively negotiate contracts with a cloud provider—but this also shouldn’t necessarily stop you from using that provider. If a contract can’t be effectively negotiated and you perceive an unacceptable risk that the provider accepts, consider implementation of alternative mechanisms to manage (mitigate) that risk (such as monitoring or encryption).
+- Align risk requirements to the specific assets involved and the risk tolerance for those assets. There is no such thing as a single security solution that covers everything. Asset values and classification are very different and need to be addressed separately.
+- 创建一种具体的风险管理和风险接受/缓解方法论，以评估每种解决方案的风险。云控制矩阵（在第 1 章中介绍）可以是一个很好的起点来创建此过程，但该过程需要根据您公司对特定资产的具体风险容忍度进行定制。
+- 使用控制措施来管理剩余风险。如果您无法部署控制措施来管理提供商接受的风险，您有两种选择：接受或规避风险。
+- 使用工具跟踪根据资产类型（例如，与数据分类关联）、云使用情况和管理情况批准的供应商。此工具可以从电子表格到高级的供应商跟踪工具不等。
+- 正如费里斯·布莱尔所说，生活节奏很快。如果您不时停下来观察，就会错过它。云提供商的评估应按计划进行，并尽可能自动化。
+- 制定云提供商评估流程。这应包括以下内容：
+  - 合同审查
+  - 自我报告的合规性审查
+  - 文档和政策
+  - 可用的审计和评估
+  - 根据客户要求的服务审查
+  - 强有力的变更管理政策，以监控组织对云服务使用方式的变更
+
+#### 问题
+
+**1. D.** 进行风险评估的第一步是请求文档。
+
+**2. D.** CCM 包含一系列特定于云的控制措施。其他所有答案均不适用。
+
+**3. D.** 所有陈述均适用。
+
+**4. B.** 风险评估应在使用提供商的服务之前和期间进行。
+
+**5. C.** `IaaS` 是与传统治理和风险管理最相符的服务模型。私有云是部署模型，而非服务模型。注意：警惕此类陷阱答案，在任何技术考试中都可能出现。
+
+**6. C.** 列出的最佳答案是 `SOC 2`，Type 1。`SOC 1` 涉及财务报告控制。`SOC 3` 报告不包含任何测试或其结果。`SOC 2`，Type 2 报告是从安全角度审查提供商的最佳选择，但由于它未列为可能答案，`SOC 2`，Type 1 是此处最佳可选答案。
+
+**7. A.** `inflexible contracts` 是多租户的自然特征，因为提供商无法负担或管理一百万以上的自定义合同。
+
+**8. C.** 最佳答案是：客户必须对提供商接受的任何风险进行缓解，除非客户认定该风险不可接受。这必须基于特定系统的价值，不能采用一刀切的办法。
+
+**9. D.** 合同审查是云治理中与治理最相关的主要工具。
+
+**10. A.** 处理私有云时，首先要理解谁拥有并管理云基础设施。如果基础设施是内部拥有和管理的，情况几乎不变。如果是外包的，治理需相应反映供应商掌控事实。
+
+## CHAPTER 4
+
+## Compliance and Audit Management
+
+This chapter covers the following topics from Domain 4 of the CSA Guidance:
+
+- Impact of the Cloud on Contracts
+- Compliance Scope
+- Compliance Analysis Requirements
+- How the Cloud Changes Audits
+- Right to Audit
+- Audit Scope
+- Auditor Requirements
+
+*Trust, but verify.*
+
+—Russian proverb
+
+You may recall this quote from President Ronald Reagan (during nuclear disarmament discussions with the Soviet Union), but this Russian proverb is truer today than ever with regard to cloud services. Providers will supply you with all sorts of documentation to build trust in an offering, but how are the security statements within these documents verified to ensure that you remain compliant with regulations that affect your company? The reality is that you’re likely dealing with third-party audits with regard to the *verify* portion of this proverb.
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** Remember that audits are a key tool to prove or disprove compliance.
+
+The virtualized and distributed nature of the cloud forces customers to understand and appreciate jurisdictional differences and their implications on existing compliance and audit standards, processes, and practices that aren’t faced in the traditional data center environment.
+
+Auditors need to adjust to the virtual world that is cloud computing. Regulations aren’t written specifically to address cloud environments, just as they aren’t written specifically for a particular programming language or operating system to run applications that fall under regulatory focus. Regulatory bodies such as `NIST` and `ISO` have created cloud-specific guidance and/or control frameworks to try to fill the gap between traditional and cloud deployments. Your understanding of the compliance challenges in a cloud environment is paramount, and these challenges need consideration when you’re developing a cloud strategy.
+
+Following are some compliance items that you should consider as part of your cloud implementation:
+
+- **Jurisdictional issues** Your company may face regulations that forbid the export of data to foreign jurisdictions.
+
+
+
+• Shared responsibility model inherent with all types of cloud services Remember that shared responsibility will be highly dependent on the service model being consumed (Software as a Service [SaaS], Platform as a Service [PaaS], or Infrastructure as a Service [IaaS]).
+
+• Compliance inheritance Consider PCI, for example. The IaaS provider you use to host a credit card processing system may be Payment Card Industry (PCI) Level 1 certified, but your application must meet all other PCI requirements as well.
+
+• Supply chain complexity Consider the complexity of the supply chain. For example, many SaaS providers of all sizes may themselves use an outsourced IaaS solution to store customer data, or SaaS providers that leverage multiple PaaS providers may in turn use different IaaS providers.
+
+• Artifacts of compliance from the provider All the artifacts of compliance (such as system logs) that you require for traditional systems will still be required in a cloud environment. The real question is whether you can obtain these artifacts and do so in a timely manner.
+
+• Scope relevance Are the features and services of a cloud provider within the scope of your previously performed audits and assessments?
+
+• Compliance management How does the provider manage compliance and audits—not just now, but over time as well?
+
+• Audit performance How are audits of cloud computing performed compared to those in a traditional data center environment?
+
+• Provider experience Does the provider have experience working with regulatory bodies?
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** Earning a CCSK is a great way for auditors to demonstrate their knowledge of cloud services. Remember that customers should work with auditors who have knowledge of the differences between traditional IT and the cloud.
+
+This chapter covers two related subjects: compliance and audits. Each section contains backgrounder information on the subject material, since not all readers will have an appreciation of these functions. This information sets the stage for a discussion on how these functions change as a result of cloud technologies.
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** You won’t see any general questions in the CCSK exam on either compliance or auditing basics, but do expect to see questions on cloud-specific changes to compliance and audits.
+
+### Compliance Backgrounder
+
+*Compliance* generally means conformance to regulations, laws, policies, standards, best practices, and contracts. It is an important part of GRC (governance, risk, and compliance) that enables proper oversight of computing—and cloud computing is no different. A compliance framework is the set of policies, procedures, processes, and technologies implemented by an organization to identify and adhere to applicable requirements based on laws, regulations, and standards. Compliance also involves an assessment of the costs of noncompliance and can act to prioritize and fund compliance initiatives. Compliance is both expensive and mandatory, but the costs associated with noncompliance could be devastating to a company, and executives in a company charged with noncompliance could face jail time as a result.
+
+As mentioned, compliance works in conjunction with governance and risk management to create GRC. To help you understand how compliance fits in, I’m going to stick with the following flow: *Governance* considers the corporate obligations (from laws and regulations, to protecting the interests of stakeholders and shareholders, corporate ethics, and social responsibilities) that determine how a company operates. Governance helps the company form and manage its risk tolerance. This then feeds *risk* management to implement the required controls to address both regulations and risk tolerance. *Compliance* then uses audits to ensure that appropriate controls are indeed in place.
+
+I like to use the *Deming cycle*—Plan, Do, Check, Act (PDCA)—to show relationships within the risk management spectrum. (This well-known “continuous quality improvement model” was developed by W. Edwards Deming in the 1950s.) Here is a simplified list of these phases in GRC terms:
+
+• Plan Determine what regulations are in scope and what controls need to be addressed as a result.
+
+• Do Implement the required controls.
+
+• Check Perform audits to ensure that required controls meet the requirements.
+
+• Act Fix any deficiencies and provide feedback to future improvements.
+
+![Images](img/note.jpg)
+
+**NOTE** Compliance does not always equal security, and security does not always equal compliance. Still, if your company’s cloud deployments are determined to be noncompliant, changes will need to be made.
+
+The concepts of compliance and associated auditing don’t change as a result of using cloud services. After all, a cloud service provider (CSP) is just another third party, and you most likely have some form of a third‑party oversight program in place. There are, however, specific compliance items that you need to consider for cloud implementations, which are covered in the following sections.
+
+### Impact of the Cloud on Contracts
+
+When examining contracts and service agreements between your organization and cloud service providers, you should focus on the following items:
+
+• Security service level agreements The importance of security SLAs is often overlooked when reviewing CSP contracts. Following is a nonexhaustive list of the key items you should look for as part of a security SLA with a cloud provider:
+
+• Specific written compliance commitments for standards that apply to your organization
+
+• Service level commitments and liability terms for a data breach
+
+• Exposure of detailed security monitoring for your organization’s implementation
+
+• Explicit descriptions of security implementations and commitment to compliance
+
+• Ownership of data Believe it or not, some cloud providers have clauses in their contracts that transfer ownership of any data uploaded by a customer to the provider. In turn, the customer gets unlimited access to this data, but the provider is allowed to do whatever they please with said data, including retaining it upon contract termination and/or selling it to others. This is more common with “free” versions of SaaS products.
+
+• Right to audit You may see this referred to as a “first‑party audit.” Essentially, this is a contractual clause that allows the customer to examine the supplier’s premises and systems upon reasonable notice. You may see this clause in an SLA if the provider sees a reason to take extreme measures to get your business. The reality is that big providers almost never grant this ability to customers.
+
+• Third‑party audits This clause requires the provider to undergo appropriate and regular audits. Reports from these audits should be made available to customers upon request. The reports should also include remediation plans for any significant issues identified in the reports.
+
+• **符合安全政策** 您需要了解云服务提供商的安全政策，并理解这些政策如何满足您的特定政策要求。在合同可能未能完整覆盖您的政策时，您需要自行补充相应的控制措施。
+
+• **符合法律法规** 合同条款应明确说明服务提供商符合对贵组织重要的所有相关法律法规。例如，若要在特定提供商的环境中存储医疗信息，必须确保该提供商在合同中承诺保持 HIPAA 合规。
+
+• **事件通知** 您应了解事件的声明方式以及提供商（以及反过来）向客户通知事件的流程。通知可能涉及服务变更、中断以及安全事件。合同中应明确规定这些通知的具体时间段。
+
+• **责任** 责任条款应明确说明各方对哪些行动和活动承担责任。若任何一方未能充分履行义务，应列出可用的补救措施。
+
+• **终止条款** 合同应包含描述云服务提供商在业务关系终止时将执行的操作的条款。例如，客户离开时客户数据将如何删除，以及在何种时间范围内完成。
+
+• **服务等级** 了解云服务提供商的可接受服务等级以及在服务中断时所遵循的流程。是否存在用于通知升级的途径，或者提供商是否提供状态更新网站？在大规模出现故障时，云提供商通常会使用状态更新页面向客户通报故障或系统范围问题。需要注意的是，许多云提供商在未满足约定可用性协议（通常为 99.9% 正常运行时间）时，仅提供“服务积分”作为不可用性惩罚。有些提供商仅在客户提出索赔并提供出现故障的证据时才发放这些积分。
+
+• **质量等级** 当提供商未能满足质量标准（如遵循最佳实践和质量控制程序）时，应有相应的补救措施。请记住，云提供商在云环境中执行的运营程序直接影响贵公司在该环境中的运营能力。
+
+### 云环境合规性变化
+
+需要记住的两个最大合规性术语是“合规继承”和“持续”。下面的章节分别讨论这两个主题。
+
+#### 合规继承
+
+回到第 1 章的逻辑模型，您已经知道基础设施完全由公有云提供商控制，您大概率无法访问审计该环境。那么公司如何证明合规性？
+
+使用第三方审计结果（如第 2 章及本章后面讨论的内容），即 CSA 所称的“传递审计”，是一种合规继承形式。在此情形下，您通过供应商提供的审计结果或认证，确认其负责的合规领域，然后确保在云环境中运行的系统也符合相应要求。这正是前文讨论的共享责任模型的核心。
+
+
+
+例如，如图 4-1 所示，您在未对 Windows 服务器进行任何恶意软件检查的情况下，构建信用卡处理应用（恭喜，您已未满足 PCI DSS 5.3！）。提供商为您提供了“PCI DSS Level 1”环境，但您仍未达标。这正是共享责任模型的体现：提供商负责设施和硬件，而贵组织负责配置服务器实例、应用以及所需的逻辑安全控制。
+
+![Images](img/pg80_Image_20.jpg)
+
+---
+
+**Figure 4-1**  合规继承。（经 Cloud Security Alliance 许可使用。）
+
+![Images](img/caution.jpg)
+
+**CAUTION**  如果您的 SaaS 提供商声称仅因使用 PCI‑合规的 IaaS 而本身即 PCI 合规，您唯一应做的就是——跑！这表明他们对安全和合规的认知极其不足。
+
+#### 持续合规
+
+请暂停片刻，区分“持续监控”与“持续审计”。虽然两者常被视为联合活动（有人称之为 CM/CA），但本质不同。两者的共同点在于“持续”不一定意味着“实时”。NIST 定义信息安全持续监控（ISCM）为：“安全控制和组织风险在足以支撑基于风险的安全决策、充分保护组织信息的频率下进行评估和分析。”相反，ISACA（前身为信息系统审计与控制协会）指出，“传统”与“持续”审计之间的区别在于审计事实与证据收集之间的时间跨度，以及审计报告的出具。用于持续审计的技术被称为*计算机辅助审计技术*。总之，“持续”并不等同于 24×7×365 的实时分析，而是指在适当频率下进行相应活动，频率由系统所有者决定。
+
+![Images](img/note.jpg)
+
+**NOTE**  查阅 NIST 800-137 可知有关持续监控的全部信息，但该标准并非专门针对云环境，因此在准备 CCSK 考试时不必过度扩展。
+
+在此，我已阐述了“持续”一词及其在 NIST、ISACA 等组织中的含义，接下来聚焦云环境，看看 CSA 对此的表述。CSA 的指导相对有限，仅提及合规、审计和保证应当是持续的，不能仅视为点‑在‑时间（point‑in‑time）活动，且许多标准和法规正向此模式转变。尤其是在云计算领域，提供商与客户均处于持续变动状态，很少处于静止状态。
+
+换言之，必须持续关注提供商的任何变更（以及自身变更）可能影响合规的情况。例如，若提供商搬迁数据中心所在司法辖区，导致您的数据不再符合政府法规，您需要尽快获知此情况。
+
+除此指导外，CSA 在其持续合规评估计划上投入了大量工作，并将其纳入 STAR 注册表（第 1 章已有提及）。STAR Continuous 的目标是弥补点‑在‑时间审计之间的安全姿态间隙。通过提高审计频率进行持续审计，可降低提供商安全姿态的偏差概率，使客户能够更好地验证提供商始终保持“随时合规”的状态。
+
+That’s great and all, but how do providers address this continuous compliance initiative? *Automation*, that’s how! Remember that cloud environments are automated environments to begin with, so why can’t testing of the environment be automated as well and be executed by the provider at an expected testing frequency between the point-in-time audits they currently provide to customers? Of course, not everything can be automated, so additional manual activities will have to be performed as well, but through the use of this STAR Continuous approach, customers will be able to have greater confidence in the security controls in the provider’s environment.
+
+![Images](img/note.jpg)
+
+**NOTE**  Check out the CSA web site if you are interested in learning more about the STAR Continuous program. Just be aware that you will *not* be asked any questions on your CCSK exam about that particular program, because it is not covered as part of the CSA Guidance. The EU Security Certification (EU-SEC) project also offers a white paper, “Continuous Auditing Certification,” that you may want to check out for further information.
+
+Finally, the cloud may also change compliance by the introduction of a global network at your disposal. As you know, all jurisdictions have their own laws and regulations that may cause regulatory issues for your firm if sensitive data is accidentally placed in, or moved to, a different jurisdiction. Additional compliance challenges may arise because not all services and regions offered by a provider may have undergone the same audits and attestations.
+
+### Audit Backgrounder
+
+In *CISA Certified Information Systems Auditor All-in-One Exam Guide, Fourth Edition* (McGraw-Hill, 2020), author Peter Gregory defines *audit* as “a systematic and repeatable process where a competent and independent professional evaluates one or more controls, interviews personnel, obtains and analyzes evidence, and develops a written opinion on the effectiveness of controls.” Alternatively, ISO 19011:2018 defines *audit* as a “systematic, independent and documented process for obtaining audit evidence \[records, statements of fact, or other information that is relevant and verifiable\] and evaluating it objectively to determine the extent to which the audit criteria \[a set of policies, procedures, or requirements\] are fulfilled.” As you can see, there is commonality across multiple organizations as to how an audit is defined. Some key takeaways need to be mentioned:
+
+• First are the terms “systematic” and “repeatable.” This requires that a methodology/standard be followed. This will be driven as part of the audit management function. I discuss audit management in the next section of the chapter.
+
+• Second, a key term regarding audits is “independent.” Audits must be independently conducted and should be robustly designed to reflect best practices, appropriate resources, and tested protocols and standards. Naturally, you may have concerns regarding the true independence of an auditor, or the firm itself if they are being paid by the cloud provider. In this case, you need to place your trust in the audit firm as being a true independent source.
+
+Audits generally include some form of testing. The two types of testing are *compliance testing* and *substantive testing*. Compliance testing is used to determine whether controls have been properly designed and implemented. This type of testing would also include tests to determine whether the controls are operating properly. Substantive testing, on the other hand, looks at the accuracy and integrity of transactions that go through processes and information systems. In general, you’ll likely be relying on previously performed audits that have used compliance testing.
+
+### Audit Management in the Cloud
+
+Most organizations are subject to a mix of internal and external audits and assessments to assure compliance with internal and external requirements. Audit reports include a compliance determination as well as a list of identified issues, and they may contain remediation recommendations. Information security audits and assessments typically focus on evaluating the effectiveness of security management and controls.
+
+Audit management ensures that audit directives are implemented properly. This function includes determining appropriate requirements, scope, scheduling, and responsibilities. Audit management uses compliance requirements and risk data to scope, plan, and prioritize audit engagements.
+
+![Images](img/note.jpg)
+
+**NOTE**  Since this is a cloud-specific book, I will include cloud-related information throughout the planning steps where it makes sense to do so.
+
+Audits are planned events, and planning audits is part of the audit management function. Audit planning includes several stages. It is very important for you to note that audits of both a CSP’s and your company’s usage of the cloud will be required. Much of the auditing of a CSP will consist of third-party audit reviews that won’t require the same planning as regular audits, as you will be consuming audit reports, not creating them. However, from the perspective of an internal use of a cloud audit, general audit management principles will remain, but you will require highly specialized resources who understand the new cloud-specific technologies (such as containers and serverless technologies) that may be associated with your deployments.
+
+For audit planning, consider the following when creating audit schedules and assigning resources for audits of cloud environments:
+
+• **Purpose** What is the goal of the audit? Is it to determine compliance with a particular law, standard, contractual obligation, or internal requirement that has been introduced or changed? It is an initial audit of a service provider to determine appropriateness of use, or is it intended to determine whether a previously discovered deficiency has been remediated?
+
+• **Scope** This is the most critical aspect when consuming cloud services. All certifications and audit results supplied by a provider will have a specific scope. Scope can be based on specific services, geography, technology, business processes, or even a segment of the organization. You must understand the scope of an audit report and compare it to what you are actually consuming.
+
+
+
+• **Risk analysis** This is another area that is directly related to cloud services. What cloud services pose the highest level of risk to your organization based on the criticality of the data being stored in a particular environment? This will ultimately determine the frequency and depth of audits that need to be performed against the wide array of cloud services your company is presently using or will be using in the future. Always remember that this isn’t just a provider issue. You will need to audit your implementation as well in the shared responsibility model of the cloud.
+
+• **Audit procedures** The procedures are the rules and processes defined in the audit methodology and/or standard. Compliance audits may determine the procedures that should be followed and the qualifications of the auditor. Audits of cloud environments should be performed by auditors with knowledge of cloud environments.
+
+• **Resources** The resources that need to be identified include the time that should be allocated for performance of the audit and the tools that will be required to execute the audit. For a cloud environment that exposes a programmatic interface such as `CLIs` or `APIs`, the tools may be developed so they are highly repeatable.
+
+• 制定一个审计计划，该计划应为审计员提供适当的时间，以便进行面谈、收集和分析数据，并生成审计报告。审计的时间长度取决于多种因素，例如范围大小、适用的控制（ISO 称之为“适用性声明”），以及环境的复杂性。由于云服务的审计可以加快进行，因为审计员通常会审查第三方审计；或者，也可以考虑审计管理来确定何时应执行点在时间审计。
+
+### SOC 报告和 ISO 认证背景
+
+大多数云服务提供商（`CSP`）会使用两种主要审计标准来证明其云服务的安全性：服务组织控制（`SOC`）和国际标准化组织（`ISO`）标准。我在此介绍这些标准是为了提高您对标准本身的理解。在 `CCSK` 考试中，您不会被要求了解 `SOC` 报告或 `ISO` 认证的具体内容，但如果您将在云环境中工作，您应该了解这些标准及其区别。
+
+![Images](img/note.jpg)
+
+**NOTE** 老实说，以下背景信息不会在 `CCSK` 考试中被考察。如果您对与 `CCSK` 考试无关的信息不感兴趣，请直接跳到下一节。
+
+#### SOC 背景
+
+尽管我在第 2 章（快速提醒：`SOC 1` 用于财务报告，`SOC 2` 用于安全控制，类型 1 是对控制设计的点在时间视图，类型 2 是对控制在一段时间内运行效果的视图）已经介绍了 `SOC` 报告的层次和类型，但在查看提供商提供的 `SOC 2` 报告之前，您还需要了解几个要点。这里涵盖的内容包括与系统相关的术语定义、各种 `Trust Services Criteria`（`TSC`，前称 Trust Services Principles and Criteria）以及相关的控制类别。
+
+让我们先从描述系统的术语定义开始。根据 `AICPA`，系统由以下组成部分：
+
+• **基础设施** 物理结构、IT 设备和其他硬件，如设施、计算机、设备和网络。
+
+• **软件** 应用程序和系统软件，包括操作系统、中间件和工具。
+
+• **人员** 参与系统治理、运营和使用的所有人员。例如，开发人员、运营人员、用户、供应商人员和管理者。
+
+• **流程** 既包括自动流程也包括手动流程。所有流程均作为参与报告的一部分。
+
+• **数据** 系统使用或处理的信息。
+
+这些术语均包含在 `AICPA` 的保证参与报告标准中，且管理方不能在希望对特定系统进行 `SOC` 报告时选择性地排除它们。
+
+接下来是 `AICPA` 定义的五项 `Trust Services Criteria`。`CSP` 的管理方可以选择其将要保证的 `Trust Services`。一些提供商可能只包含审计员考察的安全 `Trust Services Criteria`，而其他提供商则在报告中包含全部五项。`AICPA` 定义的 `Trust Services` 及其目标如下：
+
+• **安全** 系统受到未经授权的访问、使用或修改的保护。
+
+• **可用性** 系统在承诺或协商的范围内保持可用和可供使用。
+
+• **保密性** 机密信息按承诺或协商的方式得到保护。
+
+• **处理完整性** 系统处理完整、有效、准确、及时且受控。
+
+• **隐私** 系统在符合隐私通知的前提下，对个人信息的收集、使用、保留、披露和处置进行管理。
+
+每项 `Trust Service` 都有相应的类别和控制（即系统必须满足的具体要求）。所有 `Trust Service` 都基于 `AICPA` 所称的 `Common Criteria`。`Common Criteria` 由七个类别组成，每个类别包含必须检查的控制目标。这些类别及其高层次描述如下：
+
+• **组织与管理** 组织的结构以及为管理和支持其运营单元内的人员所实施的流程。
+
+• **通信** 组织如何向系统的授权用户和其他相关方传达其政策、流程、程序、承诺、要求，以及这些方和用户对系统有效运行的义务。
+
+• **风险管理与控制设计与实施** 组织如何识别可能影响其目标的潜在风险、分析这些风险、制定包括控制设计和实施在内的应对措施，并持续监控风险及风险管理过程。
+
+• **控制监控** 组织如何监控系统，包括对控制的适用性、设计及运行效果的监控，以及针对发现的缺陷采取的纠正措施。
+
+• **逻辑与物理访问控制** 组织如何限制和管理对系统的逻辑和物理访问，提供和撤销访问权限，并防止未经授权的访问，以满足相关 `Trust Services` 的要求。
+
+• **系统操作** 组织如何管理系统的执行过程，并检测和纠正处理偏差（包括逻辑和物理安全偏差），以满足相关 `Trust Services` 的目标。
+
+• **变更管理** 组织如何识别系统变更的需求，在受控的变更管理流程中实施变更，并防止未经授权的变更，以满足相关 `Trust Services` 的要求。
+
+`SOC` 报告的另一个重要概念是互补用户实体控制（`Complementary User Entity Controls`，`CUEC`）。它们强调了云端的共享责任模型。`CUEC` 包含在提供商向客户交付的 `SOC` 报告中，提示客户必须自行落实的控制，以支持 `SOC` 报告。其中一些对所有云服务均适用的重要事项涉及逻辑安全，例如建立管理员、定期检查系统中的账户是否合适，以及在账户不再需要时及时删除账户。
+
+#### ISO 背景
+
+现在您已了解 `SOC` 报告标准的结构，并对审查这些报告时应关注的内容有了基本认知，接下来我们讨论在评估提供商时可能会遇到的 `ISO/IEC` 标准。
+
+![Images](img/note.jpg)
+
+**NOTE** 我并未涵盖所有 `ISO` 标准——远未全面。`ISO` 标准数量超过 20,000 项，涵盖从质量控制（如 `ISO 9001`）到信息安全（27000 系列）的方方面面。
+
+下面列出几项可能由 `CSP` 促销的与网络安全相关的标准：
+
+• `ISO/IEC 27001` 该标准定义了信息安全管理系统（`ISMS`）的要求。请注意，整个组织不一定受该标准影响，因为这取决于 `ISMS` 的范围。范围可能由提供方限定为组织内的某一部分，且不保证该范围之外的任何组织都已具备相应的 `ISMS`。审计师负责验证参与范围是否“适合目的”。作为客户，您需自行判断认证范围是否符合您的需求。
+
+• `ISO/IEC 27002` 该标准是实践守则，作为 `ISMS` 中的控制目录使用。`ISO/IEC 27001` 标准的附录中包含控制列表，而 `ISO/IEC 27002` 文档则列出这些控制并提供实施指导，作为最佳实践建议。文档中包含了 130 多项控制。
+
+• `ISO/IEC 27005` 这是 `ISO` 信息安全风险管理指南文档。该标准用于帮助组织在符合 `ISO/IEC 27001` 标准的前提下，有效实施信息安全风险管理。
+
+• `ISO/IEC 27017` 这是基于 `ISO/IEC 27002` 的云服务专用安全控制集，添加了云特定的控制，称为“云服务扩展控制集”，必须予以考虑。基本上，该文档在 `ISO/IEC 27002` 的所有控制上，为云客户和提供方提供实施指导。
+
+• `ISO/IEC 27018` 这是云计算环境中保护个人数据的实践守则。与 `ISO/IEC 27107` 类似，它为适用于保护可识别信息（`PII`）的 `ISO/IEC 27002` 控制提供实施指导。
+
+![Images](img/note.jpg)
+
+**NOTE** 其他 `ISO/IEC` 标准也会在审计相关方面发挥作用，例如 `ISO/IEC 17021`、`27006` 和 `19011`。
+
+`ISO/IEC 27002` 中的控制支持 `ISMS`，涵盖了广泛的领域。虽然本书未涵盖每一项控制，但它包括 `ISO/IEC 27002` 所覆盖的重点安全控制条款，帮助您了解在 `ISO` 认证过程中被检查的范围：
+
+• 安全政策  
+• 信息安全组织  
+• 资产管理  
+• 人力资源安全  
+• 物理与环境安全  
+• 通信与运营管理  
+• 访问控制  
+• 信息系统获取、开发与维护  
+• 信息安全事件管理  
+• 业务连续性管理  
+• 合规性  
+
+下表对比了 `SOC 2` 与 `ISO/IEC 27001` 的差异。
+
+![Image](img/pg88_Image_21.jpg)
+
+### 云如何改变审计
+
+让我们转向云提供商的验证和认证，因为您主要依赖第三方审计。 *认证* 是对某事物存在或真实性的声明。 *认证* 是官方文件，用于证明状态或达成的水平。两者均基于审计结果。`SOC 2` 报告是广泛用于 `CSP`（云服务提供商）的认证示例。`CSP` 使用的主要认证包括 `ISO/IEC 27001` 和 `ISO/IEC 27017`（以及其他）。
+
+在云环境中，审计方式发生了剧烈变化，因为您大概率依赖第三方提供的认证和证书，而不是自行进行审计（这些审计对提供商而言可能被视为安全问题）。许多情况下，这些认证报告仅在签署保密协议（`NDA`）后才可获取，例如 `SOC 2` 报告就是此类情况，这是 `AICPA` 的规定，而非提供商的要求。
+
+鉴于您依赖第三方审计及相关的认证和证书，确保审计范围及审计完成时间比以往任何时候都更为重要。审计范围的主要关注点包括数据中心、服务以及所评估的控制。所有审计和评估均为点在时间（`point-in-time`）活动。正如金融领域所说，“过去的表现并不能预示未来”。您应始终获取最新的认证或审计报告。这些报告并非全年持续发布，也不是即时可得。不要惊讶于发现最新报告实际上是几个月前的。您消费的内容是在此特定时间段内完成的审计结果。正如本章前面关于持续合规的讨论所提到，`CSA STAR` 试图解决审计之间的时间间隔问题。
+
+最后，您清楚云环境中存在共享责任模型，审计不仅仅针对提供商。您需要收集自己的 *合规性艺术 ifacts* 以满足组织的合规要求。这些艺术 ifacts（如本章前文所示的 Figure 4-2）在云迁移后并不会发生变化。变化的地方在于它们的存储位置以及控制方式可能发生变化。您应始终确定所需的艺术 ifacts，以及它们如何由系统生成或由提供方提供。
+
+![Images](img/pg89_Image_22.jpg)
+
+***
+
+**Figure 4-2** 云中合规性艺术 ifacts 保持不变。（经 Cloud Security Alliance 许可使用。）
+
+#### 右到审计权
+
+对于外包提供商的审计，除非他们在合同中明确同意接受贵组织的审计，否则几乎不可能进行审计。该合同条款称为 *右到审计条款*（即第一方审计）。没有该条款，您只能依赖诸如 `SOC` 和 `ISO/IEC` 等已发布的报告（即第三方审计）。作为 `CCSK` 候选人，请记住提供商可能视其数据中心的审计人员为安全风险。我常想象数据中心外围排起一条绵延的审计人员队伍，等待进入。若该提供商拥有数百万客户，每个客户都拥有审计权，结果将会一片混乱，这正是提供商通常不允许此类审计的原因。
+
+#### 审计范围
+
+审计范围在云服务中具有双重含义。您在对云服务提供商进行上线和持续运维审计时的范围，以及针对特定云服务使用情况的审计范围，两者均需考虑。在评估提供商时，您需要回答以下问题：
+
+• 云服务提供商拥有哪些认证？`SOC 2`、`Type 2` 认证报告会详细说明系统、执行的测试、发现的问题以及管理层的响应。而 `ISO/IEC 27001` 认证通常是一张由 `ISO` 审计师签署的单页文件，声明组织（或整个组织）已获得 `ISMS` 的 `ISO` 认证，有效期为三年。
+
+• 您公司使用的服务在您手头的报告中是否已被涵盖？
+
+• 提供商是否使用子服务组织？例如，若您在研究一种 `SaaS` 服务，该服务使用 `IaaS` 提供商存储客户数据，则需要同时审查 `IaaS` 提供商。
+
+在审计云服务提供商之外，你还必须考虑对贵组织使用云服务的审计。本章前面讨论的 `CUECs`（在“SOC 背景介绍”部分）是一个良好的起点。这些审计主要集中在 **metastructure** 设置上，但审计范围不止于此。不要忘记本章也涵盖的 **合规继承** 与 **共享责任**，并记住合规 **artifact** 本身不会改变；变化在于提供商可能需要生成这些 artifact，或允许你自行维护这些 artifact。审计云使用的底线是：无论系统或数据存储在何处，你都必须保持合规，这要求你检查实现的所有方面，从 **metastructure** 层面一直到 **infostructure** 层面。
+
+### Auditor Requirements
+
+贵公司应只聘请具备云知识的审计师，例如取得 `CCSK` 认证的专业人士。由于云服务实现方式层出不穷，审计职能需要一位了解云部署可能性的审计师。例如，请参考 **不可变服务器**（见 第 7 章）的概念：你不直接对服务器打补丁，而是更新镜像并用全新补丁的服务器镜像替换现有的易受攻击实例。不懂此概念的审计师可能会误判为发现问题，实际上有很多从安全角度支持该做法的论点。
+
+### Chapter Review
+
+本章阐述了在云环境中处理合规与审计管理的要点。从 `CCSK` 考试角度看，关于合规与审计的基本概念和目的在任何情境下保持不变。变化的在于执行这些审计的主体，以及很可能是 **独立第三方审计师**。提供商会向客户提供第三方（或通过式）审计，你需要审查这些审计以了解其范围，从而判断其适用性。
+
+其他需要记住的 `CCSK` 考点如下：
+
+- 合规、审计和保证应是 **持续** 的活动，而非一次性的 `point-in-time` 活动，这一点适用于客户和提供商 alike。
+- 云提供商应保持最高透明度，明确沟通其审计结果、认证和 attestation。
+- 客户应仔细审查提供商提供的审计结果，特别关注审计范围中的服务和司法管辖区。
+- 云提供商必须随时间维护其认证/attestation，并主动告知状态变更；客户必须确保了解这些变更对自身的影响。
+- 提供商应向客户提供常用的合规证据和 artifact，例如客户无法自行收集的行政活动日志。
+- 客户应评估提供商的第三方 attestation 与认证，以支撑合规义务。
+- 为避免误解，客户与提供商均应聘请具备云计算经验的审计师。
+- 当提供商的合规 artifact 不足时，客户应自行创建并收集所需的 artifact，例如在 `PaaS` 环境中加入日志以弥补缺失的日志功能。
+- 客户应保持 **云服务提供商登记表**，记录使用的提供商、相关合规要求以及当前状态。`CSA Cloud Controls Matrix`（见 第 1 章）可辅助此活动。
+
+#### Questions
+
+**1.** 审计应如何进行？
+
+**A.** 总是由贵公司完成
+
+**B.** 总是由提供商完成
+
+**C.** 总是由 **独立审计师** 完成
+
+**D.** 总是由联邦监管机构完成
+
+**2.** “pass‑through audit” 是一种什么形式？
+
+**A.** 合规继承
+
+**B.** 体现提供商对行业标准的遵循
+
+**C.** 作为审计一部分的实体评估
+
+**D.** 审计范围内所有服务的统称
+
+**3.** 审计与合规的关系如何？
+
+**A.** 审计是评估系统的技术手段。
+
+**B.** 审计是用于评估系统的过程与程序。
+
+**C.** 审计是证明或否定合规的关键工具。
+
+**D.** 审计是云系统治理的必要条件。
+
+**4.** 关于 **attestation**（证明）的说法哪项正确？
+
+**A.** attestation 与审计是同义词。
+
+**B.** attestation 是第三方的法律声明。
+
+**C.** attestation 是法庭上的作证。
+
+**D.** 只有 `CPA` 才能执行 attestation。
+
+**5.** 审计管理的目的是什么？
+
+**A.** 管理审计频率。
+
+**B.** 管理审计师及其对系统的认知。
+
+**C.** 管理审计范围。
+
+**D.** 确保审计指令得到正确实施。
+
+
+
+# 6. 在审阅提供商之前已完成的审计报告时，应特别关注什么？
+
+**A.** 审计范围中的服务和司法管辖区  
+**B.** 执行审计的机构名称  
+**C.** 审计报告的日期  
+**D.** 审计师所表达的结论  
+
+# 7. 如果客户无法自行收集合规证据，应采取什么措施？
+
+**A.** 调整报告范围以反映缺乏证据。  
+**B.** 接受无法向监管机构证明合规的风险。  
+**C.** 被云客户看不见的证据会被剔除监管监督。  
+**D.** 应由提供商向客户提供相应数据。  
+
+# 8. 持续合规对云服务客户的好处是什么？
+
+**A.** 客户可获得提供商环境变更的实时更新。  
+**B.** 任何对提供商环境的变更将在一周内通知客户。  
+**C.** 没有好处，客户只需关注提供商的 ISO 认证。  
+**D.** 增加审计频率可降低对提供商安全态势未知变化的风险。  
+
+# 9. 如果提供商的合规 artifact 不足，客户应如何应对？
+
+**A.** 申请范围排除请求。  
+**B.** 自行创建并收集所需的 artifact。  
+**C.** 不再使用该提供商。  
+**D.** 什么都不做。  
+
+# 10. 如何避免在审计云服务提供商时产生误解？
+
+**A.** 与持有 `CCSK` 认证的审计师合作。  
+**B.** 与提供商指定的审计师合作。  
+**C.** 与 CPA 合作。  
+**D.** 与 `Institute of Certified Auditors` 认证的审计师合作。  
+
+- [信息治理领域](https://example.org)涵盖了 CSA 指导第 5 域的以下主题：
+
+1. 治理领域
+2. 数据安全生命周期的六个阶段及其关键要素
+3. 数据安全功能、参与者和控制措施
+
+> *数据是新的黄金。*
+>
+> —马克·库班
+
+多年来，我看到“IT 安全”从关注物理安全，发展到 90 年代末的操作系统安全，再到 2000 年代中期的网络安全。如今，随着新名称“网络安全”出现，关注点终于转向了这些系统处理和存储的应用程序和数据。这可以看作是 IT 安全的下一个前沿。
+
+信息安全的主要目标是仅授予完成工作所需的权限，除此之外不得授予。这就是“最小权限”概念。随着公司将数据移动到云端，多租户、共享责任、新服务、抽象化控制以及使用提供商服务处理和存储数据的新方式都需要通过安全管理、操作和技术控制来应对，这些控制不仅要提供预防能力，还要提供检测和纠正（或响应）能力。简而言之，保护数据时需要解决的问题本质上保持不变，但实现方式在云环境中可能有很大差异。
+
+![Images](img/note.jpg)
+
+> **NOTE** “数据”和“信息”在 CSA 指导和本书中交替使用，但两者有区别。拥有大量数据虽酷，但直到数据被处理并理解后才有价值。一旦被理解，它就变成了有价值的信息。CCSK 考试不会考察这种区别，但我仍认为在继续之前有必要阐明这一点。
+
+显然，如果没有适当的信息/数据治理，就无法部署适当的控制来保护信息。为了理解信息和数据治理，我们将查看两个定义——第一个来自 CSA，第二个来自 NIST：
+
+- CSA 将数据/信息治理定义为“确保数据和信息的使用符合组织的政策、标准和策略——包括监管、合同和业务目标”。
+- NIST 将数据治理定义为“确保企业正式管理数据资产的过程集合。数据治理模型确立了企业所产生或管理的数据的权威和管理以及决策参数”。
+
+我认为这两个定义可以协同工作，因为 NIST 的定义在数据治理的具体内容上更为细致，而 CSA 的定义说明了其进行的原因。注意，“数据”和“信息”可以互换使用。也就是说，如果我在文中使用“数据”而非“信息”，或反之亦然，你就知道我指的是同一个主题。
+
+![Images](img/tip.jpg)
+
+> **TIP** 移动到云端为重新审视信息管理并改进方式提供了绿色场地。不要直接搬迁现有问题。
+
+本章余下部分将探讨信息治理的不同方面，并介绍*数据安全生命周期*，它可作为框架用于识别实现最小权限访问和处理数据所需的控制措施。
+
+# 云信息治理领域
+
+正如 NIST 定义所述，信息治理是一系列过程，用于在企业范围内正式管理数据。这些过程被划分为以下信息治理领域，所有领域都必须到位才能确保数据得到适当的保护：
+
+- **所有权和保管责任** 你的公司始终对你控制的数据的任何变动承担法律责任。
+- **信息分类** 分类可作为决策依据，决定数据可以且应当存储和处理的位置。从云视角看，这种分类可能决定信息是否能在云中存储。你可能以前没有使用信息分类系统，但它是未来云端信息治理决策的基础。本章后续会更深入地讨论此主题。
+- **信息管理策略** 这一控制指示数据和信息应如何管理。由于可用的控制措施会因 SPI 层（SaaS、PaaS、IaaS）和提供商而异，组织应考虑针对所用分类提供的服务模型和供应商提供的控制措施。例如，如果你要求数据在存储时加密，而你的 SaaS 提供商不提供此功能，你应寻找其他提供商。
+- **位置和管辖政策** 你了解到，云端可以是全球性的，不同地区有不同的要求。任何地理考量都必须纳入信息治理。这可以作为信息管理策略的一部分，也可以单独成策略，但组织必须确保已考虑并确定可接受的位置和管辖范围。
+- **授权** 这涵盖了谁可以访问特定信息和/或数据，以及“最小权限”和“职责分离”概念的处理方式。授权的概念在云端系统与传统数据中心相比并不改变，但在云环境中其重要性更高，因为在某些情况下，授权可能是提供商仅向您暴露的唯一控制手段，您无法依赖实体控制作为补偿控制（例如，仅能从建筑内部访问的数据）。
+- **合同控制** 这些是贵公司唯一的法律工具，用于确保云服务提供商已实施并遵循相应的治理要求。
+- **安全控制** 这些工具用于实现数据治理。向客户暴露的控制以及这些控制的配置方式，会因提供商以及您所消费的服务而异。
+
+迁移到云端可以为贵公司提供评估并修正当前治理程序的机会。您在首次迁移云端时拥有“绿地”机会，何不利用这一机会解决未完成的问题，从第一天起就把治理做好？
+
+以信息分类为例。您今天可能不使用分类，但这样做对于确定哪些数据集适合云端（即云友好）至关重要。
+
+## 信息分类背景
+
+在最简化的教学形式中，*数据分类* 可以描述为通过评估和标记将数据分组的过程，目的是识别适当的安全控制。当然，信息分类也能带来许多非安全方面的好处，但本书聚焦于数据分类在风险管理和信息治理中的基础作用。
+
+![Images](img/note.jpg)
+
+> **NOTE** 与本书所有背景介绍一样，您在 CCSK 考试中不会被这部分内容考察。它提供以防您对该主题不熟悉而参考。
+
+为演示信息分类的重要性，我常以美国政府为例（因为它是一个庞大的组织，且其使用的文档是该行业最详尽且免版权的）。美国政府采用 NIST 风险管理框架（RMF），详见 NIST SP 800-37。RMF 的第一步是对系统进行分类（参见侧边栏“分类 vs. 分组”）。
+
+两个主要文档处理美国政府的信息与系统分类：联邦信息处理标准（FIPS）安全分类标准（FIPS 199）以及 NIST 800-60（基于 FIPS 199）。美国政府依据这两份指南，根据机密性、完整性或可用性丧失的影响来确定所需的控制措施。图 5-1 展示了不同影响级别。
+
+忽视分类在政府部门不可行，对贵组织同样不可行，尤其是在云服务方面。
+
+![Images](img/pg98_Image_23.jpg)
+
+***
+
+**Figure 5-1** FIPS 199 分类网格。(来源：FIPS Publication 199 标准)
+
+### 分类 vs. 分组
+
+您可能曾在使用“分组”而非“分类”的环境中工作，尤其是在过去曾与政府机构合作过。美国政府与普通企业的不同在于，它使用如“机密”、“秘密”和“绝密”等文档分类，依据机密性丧失的影响程度来区分。政府将信息和系统划分为三类（低、中、高），以根据机密性、完整性和可用性丧失的影响决定适当的控制措施。CSA 仅使用“分类”这一术语，除非讨论专门针对美国政府文档，否则我将二者统称为“分类”。
+
+贵组织需要确定在自身环境中使用的各类分类。许多组织采用三级分类，例如公开、私有和受限。这些分类通常基于机密性、完整性和可用性丧失的影响程度。贵组织可自行决定采用平均值、加权值或最高值（高水位线）来确定分类。例如，FIPS 199 要求采用高水位线实现，若机密性影响为高、完整性和可用性影响均为低，则该数据的分类为高。
+
+![Images](img/tip.jpg)
+
+> **TIP** 保持分类层级尽可能简化。先使用三级，仅在绝对必要时才扩展。
+
+大多数组织将数据分类的责任交给数据所有者，因为他们最了解自身数据的价值和重要性。有鉴于此，用户仍需理解分类的工作原理及其重要性。例如，若向公司财务部门询问某数据集的机密性应评为低、中或高，往往会得到茫然的目光。为简化操作，可制定一套易于回答的问题列表，这些问题以“人类可读”形式呈现，且可采用是非题形式作答。以下是一些示例：
+
+- 该数据是否包含 `personally identifiable information`（个人可识别信息）？
+- 该数据是否包含健康记录信息？
+- 该数据若被泄露，是否会危及个人安全？
+- 该数据若被泄露，是否会使个人尴尬？
+- 该数据是否包含商业机密或公司知识产权？
+- 该数据是否为公开或即将公开的信息？
+
+从这些简明问题可以看出，您可以判断该数据是否受 GDPR（通用数据保护条例）和/或 HIPAA（健康保险可携带性与责任法案）等法规约束，或是否包含需要更高分类的敏感企业数据。
+
+数据分类必须持续进行，而非一次性完成。原因包括信息价值的突增或骤减、外部法规新增或修订（如 GDPR 对客户数据的分类产生重大影响，因泄露可能导致巨额罚款），以及业务流程的变化（如公开发布财务报告会将原本高分类的数据转为公开）。
+
+数据分类常依赖元数据（关于数据的数据），如标签和标记，用于定义数据的分类级别及其处理与控制方式。当前主要有三种数据分类方法：
+
+- **用户数据所有者**预期为特定数据集选择适当的分类。例如，发送电子邮件的用户需在发送前于 Microsoft Outlook 的下拉菜单中选择分类级别。
+- **内容基于**此分类方式检查并解释数据，寻找已知的敏感数据。此场景下，分类程序会扫描文档，查找关键词，并根据文档内容自动应用分类。
+- **语境基于**此分类方式以应用程序、存储位置或数据创建者作为敏感信息的指示。例如，首席财务官使用财务报告应用创建的文件可能被自动视为高度敏感。
+
+内容基于和语境基于的分类系统均可通过多家供应商提供的数据分类工具实现自动化，这些工具会自动确定合适的分类级别并应用相应的标签或标记。用户基于的分类使用户能够选择合适的分类级别，系统随后会为数据应用相应的标签或标记。此方式当然需要用户理解公司的分类结构以及应用哪些分类。
+
+数据分类是数据安全的基础。诸如数据丢失防护（DLP）、电子发现、云访问安全网关（在第 11 章中链接 Chapter 11）以及加密工具等系统可与数据分类协同工作，保护公司内部及通过电子邮件、云存储和 SaaS 应用等方式外泄的数据。一旦在组织中确定分类级别，便可通过制定云使用政策（稍后本章提及）来决定云的可接受使用。
+
+## 信息管理背景
+
+我敢打赌你不知道当今数字世界中已有超过 30 兆字节（即 300 亿千兆字节）的数据，预计到 2025 年将增长至 175 兆字节。如果这个数字难以想象，不妨考虑每分钟有超过 1.88 亿封电子邮件被发送（老实说，我不确定这算不算更好）。贵公司目前的数据量远未达到兆字节规模，但若你在大型企业任职，数十千兆字节的数据——包含数百万文件、电子邮件等——并非不可想象。公司正在创造并捕获前所未有的数据量，这一趋势将继续加速。现在请思考这些数据中有多少是真正有价值的。有价值的数据和信息是许多公司的生命线，需要妥适管理。应保留什么、保留多久、以及应丢弃什么？信息管理（IM）职能试图解决这些以及其他问题。
+
+IM 详细说明组织如何规划、识别、创建、收集、接收、治理、保护、使用、交换、维护以及处置信息。简单来说，IM 使信息在正确的人、正确的格式、正确的时间得到提供。下列信息管理原则可帮助组织高效使用信息，并简化信息的查找、保护及保存，以符合法律和监管要求：
+
+- 避免收集重复信息。
+- 在法律和监管限制下共享并重用信息。
+- 确保信息完整、准确、相关且易于理解。
+- 防范信息遭受非法访问、丢失或损坏。
+- 依据其业务、法律、财务及历史价值保存信息。
+
+### 信息管理生命周期
+
+信息管理生命周期涉及在您拥有期间管理数据的流动，贯穿多个阶段。市面上存在多种生命周期模型，阶段数从三到七不等，且阶段可能合并或拆分，但总体上如图 5-2 所示（链接 Figure 5-2）。
+
+我有意使用与下一章数据安全生命周期相同的阶段示意图。每个阶段均可用于决定如何最大化数据为组织创造的价值。（下文将忽略安全性，因为相关内容将在下一章中说明。）
+
+![Images](img/pg102_Image_24.jpg)
+
+***
+
+**Figure 5-2** 信息管理生命周期
+
+- **阶段 1：创建/收集** 任意类型、多来源的数据，无论是新建还是以某种方式修改现有数据，均视为创建数据。
+- **阶段 2：存储** 在此阶段，数据以某种方式存储。需要通过压缩、去重等手段确定最小化存储需求的方法。
+- **阶段 3：使用** 数据以查看、处理或以其他方式使用，以创造公司可用于决策的有价值信息，例如。
+- **阶段 4：共享** 数据向其他方提供。
+- **阶段 5：归档** 此阶段数据对公司价值有限，但可能因生成历史分析或满足监管、法律要求而保留。
+- **阶段 6：销毁** 数据不再需要，且无法律或监管保留要求，因此从存储中删除。未及时销毁数据会导致存储成本增加。
+
+在介绍完信息管理（IM）和分类的背景后，让我们进入 IM 政策，这些政策将向相关方说明贵公司对其持有信息的期望。
+
+### 信息管理政策
+
+IM 政策的目的在于告知所有相关方 IM 要求。像其他政策文档一样，IM 政策可从几页到数十页不等。更详尽的 IM 政策会明确列出 IM 角色及其职责。下面的章节提供示例政策，涵盖任何通用 IM 政策应包含的关键内容。
+
+#### Purpose
+
+本政策及其相关做法涵盖企业信息从创建或获取到使用、修改、分发、存储、可访问性、通信、处置或销毁的全生命周期管理。公司致力于管理并保护其企业信息。无论电子或纸质媒介，任何形式的信息均被视为贵公司的重要资产。
+
+#### Scope
+
+企业信息包括记录公司业务交易、决策及活动的文档。记录提供对公司政策、控制、标准以及所有业务领域的运营、合同、法定及监管要求的证据。公司认识到，用于捕获、共享、报告和存储相关企业信息的流程、信息系统及基础设施，使组织能够高效、有效且安全地开展业务。
+
+#### 政策声明
+
+公司信息，包括公司开发或为公司开发的知识产权，应被视为公司财产。该组织还必须保护他人的隐私和知识产权。员工在保密或许可协议下获取和使用的公司信息必须按照相关协议的条款进行处理。
+
+所有员工和服务提供商均需履行以下职责：
+
+- 依据本政策及相关措施（包括法律和监管要求）管理并保护公司信息。
+- 对任何受托管理的特定公司信息的安全、访问权限和保留负责。
+- 理解公司信息管理不当和滥用的影响，包括对公司、员工及业务合作伙伴的潜在成本和风险。
+- 报告事件并协助调查公司信息管理和滥用相关问题。
+
+#### 合规与执行
+
+违反本政策的行为包括但不限于以下情形：
+
+- 未经授权的活动会干扰或阻止对公司信息的访问或控制
+- 未能正确处理和保护公司信息和记录
+- 以损害公司声誉或业务的方式使用或披露公司信息
+- 试图规避本政策及其相关措施、控制和标准
+- 未遵守适用法律、合同义务或法定和监管要求
+- 未遵守《业务行为与伦理守则》中规定的公司信息可接受使用
+
+违反政策及其相关措施的人员将受到纪律处分，最高可达终止雇佣或服务合同。
+
+## 云服务可接受使用政策
+
+在处理信息分类和 IM（信息管理）功能后，我们来看这些如何在云环境中适用。许多组织通过制定云服务可接受使用政策来降低 IM 风险。
+
+通常，组织会根据现有的信息分类，决定哪些类别的数据可以在哪些云服务中存储，具体取决于对保密性、完整性和可用性的影响（如您在 FIPS 199 中所见）。云服务的可接受使用政策将取决于您现有的治理结构。您是否允许用户自行采购云服务，还是必须由管理层（如首席信息官）授权所有使用的云服务？或许您采用混合方式：根据数据分类，高度和中等分类数据仅能在授权的云环境中存储和处理，而公开数据则可由用户在任何云服务中存储。
+
+在制定云可接受使用政策时，合规性至关重要。我以 HIPAA 为例，说明受监管数据在云中存储的重要性以及如果让用户自行选择提供商可能带来的后果。您已经了解合规传承（见 第 4 章），即服务提供商和客户都必须保持合规。关于 HIPAA，处理受保护健康信息（PHI）的实体（如医疗提供者和保险公司，统称“实体”）只能使用与其签订书面业务伙伴协议的“业务伙伴”提供商。如果实体未与提供商签订业务伙伴协议就存储数据，可能面临的后果是什么？例如：2016 年，明尼苏达州的 North Memorial Health Care 因未与提供商签订业务伙伴协议而被处以 155 万美元的罚款。
+
+如果您的公司没有建立可接受使用政策，员工将不知晓哪些数据集可以在特定环境中存储。您可能会通过建立云治理程序，由该小组负责处理所有合同和治理事宜，从而更好地管理此问题。
+
+# 数据安全生命周期
+
+数据安全生命周期是 CSA（云安全架构）建模工具，基于常见的信息管理（IM）生命周期，但侧重于数据在创建到最终处置全过程中的安全方面和位置。
+
+理解这一点很重要：此生命周期是高层框架，旨在帮助您识别应实施的控制措施，以防止可能的安全漏洞发生。它并非针对组织中所有数据的每一位，因为那样会让人望而却步。
+
+数据安全生命周期包含六个阶段：
+
+- **Create（创建）**：数据被创建或已有内容被修改。
+- **Store（存储）**：数据被提交到某种存储仓库。
+- **Use（使用）**：数据被查看、处理或以其他方式使用。这里不包括数据修改，因为修改属于新文件的创建。
+- **Share（共享）**：数据被提供给其他方。
+- **Archive（归档）**：数据的有用生命周期已结束，但可能因法规或法律需求而保留，例如。
+- **Destroy（销毁）**：数据从存储中被删除。
+
+
+
+数据（无论是结构化还是非结构化）不一定按顺序或完整经过所有阶段。例如，您可以先创建文档并与他人共享，他们对文档进行修改。修改后实际上相当于创建了一个新文件，此时数据可在创建与共享之间来回切换。
+
+Table 5-1 列出了生命周期的各阶段及可在每个阶段插入的潜在控制措施。显然，控制措施种类繁多，技术也在不断演进，因此请不要将表格视为穷尽。
+
+![Images](img/pg106_Image_25.jpg)
+
+**表 5-1** 信息管理生命周期及潜在控制
+
+我希望花点时间解释“密码碎片化”（crypto shredding）概念。它几乎不可能确定您按 `DELETE` 键后，云中数据是否真的被彻底删除。如果您的风险容忍度要求在数据删除后确信其永不被恢复，您有两种选择：一是以“Mission Impossible”风格雇佣汤姆·克鲁斯 physically 破坏所有曾用于存储数据的驱动器和磁带；二是实施密码碎片化。说实话，目前看来，雇佣汤姆·克鲁斯可能更容易。
+
+理论上，密码碎片化是指先将加密数据与加密密钥一起存储，然后同时删除数据和用于加密的密钥。您应能看出其中涉及的关键管理复杂性——数据密钥的生成、追踪和销毁。虽然概念上很棒，但在现实中几乎难以实现。
+
+- 为了实现此目的，你需要查看提供商的文档，以了解云服务提供商在数据删除（即磁盘擦除）后如何清理数据。通常情况下，你会发现他们会“零化”数据，即在将数据释放回存储资源池之前，会用一堆零覆盖已使用的位。但“次数”（称为 passes）很可能受限，可能不符合贵组织的介质擦除策略。（如果想了解更多关于介质擦除，可参考 NIST SP 800-81r1，但不要指望 CCSK 考试会涉及此材料。）
+
+- 除了刚才涵盖的技术要点外，你应争取从提供商处获得保证：在数据离开其数据中心之前，所有磁盘都已被擦除。许多提供商把数据中心视作“Hotel California”，磁盘可以进入但永远无法离开。在此情形下，不再用于存储客户数据的驱动器会在数据中心内部被实物粉碎。不过，并没有明确的规则或法规规定提供商必须或禁止做什么。
+
+#### Locations and Entitlements
+
+- 在数据安全生命周期的语境下，地点（Locations）可能会让人困惑。在考虑地点时，你需要关注数据所在的位置（云端还是传统数据中心），以及访问设备的位置（本地还是远程）。正如你所想象，若云端环境中没有控制措施阻止，数据很容易从全球任何地点创建和使用。而传统数据中心中的数据今天可能明天转移到云端，反之亦然。
+
+- 假设你有要求：云端存储的数据必须在静止状态下加密，但本地数据中心的数据则没有此要求。进一步思考：这是否意味着数据在云端也不能使用？毕竟，在处理数据时需要先对其进行非加密处理（除非同态加密成为可行技术）。因此，你现在需要根据数据所在的位置制定不同的控制措施，这意味着会出现多个数据安全生命周期。希望这能说明为何需要在更高层面讨论此问题。
+
+- “Entitlements”（权利）是 CSA（云安全联盟）选择的术语，用来取代“权限”或“权利”。如果你愿意，可以安全地翻译为“权限”，但 CCSK 考试大概率会直接使用“entitlements”这一词汇。你只需关注两点：谁在访问数据，以及他们如何访问。如果你不想让某人或某物（即 actor）执行某项操作（即 function）与数据产生关联，就需要通过控制措施阻止其发生。概念相当简单，对吧？下面我们将在下一节深入探讨。
+
+#### Functions, Actors, and Controls
+
+- 现在你已了解 actors、functions 和 controls 的概念，需要明确在数据安全生命周期中，哪些函数是可能的——即：访问（reading）、处理（using）或存储（storing）数据的权限范围。
+
+- 对于函数，我们可以将生命周期的各个阶段映射为 `create`、`store`、`use`、`share`、`archive`、`destroy`。这些超高层级的函数可以对应到更具体的业务操作。
+
+- 通常，actors（行为体）被认为是对数据的读取、处理或存储。那么，这三类函数具体指什么？
+
+  - **Accessing the data**（访问数据）：要读取、更新、使用、共享、归档或销毁数据，首先必须访问相应的数据集。
+
+  - **Processing the data**（处理数据）：涉及对数据进行事务或操作，例如更新客户记录或执行业务交易。
+
+  - **Storing the data**（存储数据）：如果要将数据永久保存，则需要具备存储的能力。
+
+- Table 5-2 展示了这些函数与生命周期阶段的对应关系。
+
+![Images](img/pg107_Image_26.jpg)
+
+**Table 5-2** Information Lifecycle Functions and Phases
+
+- 当然，这三个基础函数（访问、处理、存储）在确定具体控制措施以阻止特定行为体执行特定活动时并不足够。我们以假设的公司 Driveline Solutions 及其库存系统为例，直观展示权限（entitlements）的实际应用。
+
+- 在此场景中，涉及三个主要行为体：Jano Benyamin（公司所有者）、Isabelle Roy（库存经理）和 Jacob Richler（店员主管）。作为所有者，Jano 希望对公司拥有的所有数据拥有完全控制权；Isabelle 的权限较少，因为她的工作是创建新工作单，并将其分享给 Jacob，Jacob 再在系统中标记作业完成并准备发货。下面查看如何在 Table 5-3 中实现最小权限（least privilege）的权限设置。
+
+![Images](img/pg108_Image_27.jpg)
+
+**Table 5-3** Example Lifecycle Phase Entitlements for Driveline Solutions System–On Premises
+
+- 假设 Driveline Solutions 采用业务连续性计划，并在云端部署库存系统的只读副本。副本数据每日从本地库存系统复制一次，仅在主系统（本地）出现故障时使用，且绝不用于创建新记录。在这种情况下，权限将因数据位置的变化而大幅不同，如 Table 5-4 所示。
+
+![Images](img/pg108_Image_28.jpg)
+
+**Table 5-4** Example Lifecycle Phase Entitlements for Driveline Solutions System–Cloud Hosted
+
+- 在这个情境下，我们保持相同的数据，但改变了位置。因此，业务决定仅提供只读访问，禁止更新。相同数据、不同位置，导致出现多个数据安全生命周期。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 数据安全生命周期的核心目标（针对 CCSK 考试）并非让你记住每一种控制、每一种行为、每一种数据集的所有可能限制（也非验证此类限制的合理性）。考试重点是让你理解：基本函数对应生命周期的各个阶段。基于数据位置或访问设备的不同，你可能会有不同的数据安全生命周期。
+
+### Chapter Review
+
+- 本章阐述了信息治理的必要性及其涉及的流程，随后回顾了数据安全生命周期，该生命周期可用于确定在不同活动和不同位置（从传统本地数据中心到云端，从内部访问到外部访问）需要部署哪些控制措施，以支持信息治理。
+
+- 为准备 CCSK 考试，你应熟悉以下要点：
+
+  - 了解信息治理要求（法律、法规等），并在规划将数据迁移至云端时将其纳入考虑。
+
+  - 认识到将治理扩展至云服务需要同时满足合同条款和安全控制。
+
+  - 使用数据安全生命周期来识别控制措施，限制行为体的功能。不同位置可能需要不同的控制，从而产生多个数据安全生命周期。
+
+  - 迁移至云端是发现并解决当前信息治理问题的良好契机。
+
+#### Questions
+
+## 管理平面和业务连续性
+
+本章节涵盖 CSA 指南第 6 章的以下主题：
+
+- 管理平面安全
+- 云中的业务连续性和灾难恢复
+- 为失败设计
+
+> 当你口渴时，已经太迟可以去挖一口井。
+>
+> —日本谚语
+
+如果你想让业务存续下去，准备工作很重要：你需要在遭受不作为后果之前就提前一步行动。本章节全部围绕提前思考并在此事发生之前实施安全措施。本章节标志着本书的一个转折点——从云的业务层面转向与云计算相关的技术层面。本章首先涵盖保护管理平面，然后转向云环境中的业务连续性和灾难恢复。
+
+在逻辑模型中，如第 1 章所介绍，你学到了 `metastructure` 是需要虚拟工具的虚拟世界。`management plane` 是构建、配置和销毁云的虚拟基础设施的区域。请记住，管理平面是元结构的一部分。管理平面是你在该虚拟世界中查看、实现和配置所有资源的唯一接口。
+
+“管理平面”这一概念并不新鲜。事实上，多年来在网络领域，"管理平面"一词被用来描述用于配置、控制和监控网络设备的接口。与其他环境不同，在其他环境中，你可能需要直接访问物理设备来配置特定端口为管理接口，从而需要直接接触管理平面。相反，你（或任何人）都可以通过云提供商提供的 API 或 Web 浏览器，跨 Internet 连接到管理平面。
+
+管理平面也是实施大多数灾难恢复（DR）和业务连续性规划（BCP）选项的地方。许多提供商，尤其是基础设施即服务（IaaS）提供商，会向你提供多个数据中心和多个区域。由你公司确定并执行合适的策略，利用这些选项。这需要理解诸如 `恢复时间` 和 `恢复点目标`（如果不熟悉这些术语，请参阅即将到来的“BCP/DR 背景”部分）等概念，并选择最佳方案以满足这些业务需求。
+
+说“提供商会为我做所有事情”是可能的谬误。当然，你的软件即服务（SaaS）提供商可能拥有跨区域的动态故障转移，你无需做任何操作即可有 BCP/DR 就绪，但那导出 SaaS 中持有的数据呢？提供商是否会自动为你导出这些数据，还是你需要手动启用数据导出？导出的数据格式是什么？是否只能通过提供商的系统访问？如果是，那么如果提供商破产、被黑客入侵且系统被销毁，或成为勒索软件攻击的受害者且所有客户数据（包括你的）被加密且提供商拒绝支付时，你将处于何种境地？
+
+正如开头引语所暗示的，当你无法访问数据时，已经太迟可以考虑恢复选项了。
+
+## 管理平面
+
+管理平面是你需要严格保护的最重要区域，且完全由你负责保护对其的访问。任何拥有管理平面完全访问权限的人，简单而言都拥有在你的虚拟世界中构建或破坏任何事物的权力。正确实施和管理对管理平面的访问限制是保护任何云实施的首要任务。在确保管理平面安全后，你才能关注保护云环境中的资产。毕竟，攻击者可能无法通过管理平面直接登录虚拟服务器窃取数据，但他们可以利用管理平面复制卷并导出，或破坏运行的实例和所有备份。简单来说，如果有人拥有管理平面的访问权限，他们就可以以各种创新的方式访问你的服务器和其他云资产。
+
+想象一下有人利用你的资源进行比特币矿工并让你的组织承担账单。再比如，有人在 IaaS 环境中获得管理平面的访问权限，然后使用该访问权限添加一个脚本，下次服务器重启时在一个或多个服务器上执行。该脚本会安装后门，并且会成功，因为脚本会以 Linux 中的 `root` 用户或 Windows 中的系统账户运行。我不想混淆元结构和应用结构之间的区别，但我想给出一个例子，说明如果恶意行为者拥有管理平面的访问权限，他们可能造成的不可预知的损害。
+
+正如你所知，云采用共享责任模型，这同样适用于管理平面。提供商负责为你构建一个安全的管理平面供你访问，而你负责确保只有有适当资质的适当人员能够管理你的虚拟世界，且每个用户都拥有最小权限，只做他们需要做的事。
+
+![Images](img/note.jpg)
+
+**NOTE** 在考虑管理平面的安全性时，最小权限的概念比以往任何时候都更为重要。
+
+#### 应用编程接口背景
+
+应用编程接口（API）是一种程序接口，它使服务能够在不需要知道系统实现细节的情况下进行通信。API 在背景中被使用（如第 1 章所讨论），并且云提供商通常向客户公开 API 以实现程序化访问。本节介绍 API 本身、云中使用的主要 API“标准”，以及客户如何利用这些 API 在云环境中实现非凡的事。
+
+在我们探讨公开的开放 API（供客户在云环境中使用）之前，让我们看看一家公司如何利用内部 API 彻底改变其业务。大约在 2002 年，亚马逊面临一个变得相当难以管理的计算环境。因此，CEO 杰夫·贝索斯发出了他现在著名的“API 指令”，要求 Amazon 的所有业务部门都为其所有操作提供内部 API。需要 HR 信息？有一个 API。需要营销信息？也有一个 API。以下是 API 指令的一些亮点：
+
+- 所有团队必须通过服务接口暴露其数据和功能。
+- 团队必须通过这些接口相互通信。
+- 禁止任何其他形式的进程间通信：不允许直接链接、不允许直接读取另一团队的数据存储、不允许共享内存模型，也没有后门。唯一的通信方式是通过网络上的服务接口调用。
+- 无论使用什么技术都无关紧要。
+- 所有服务接口，无一例外，必须从头开始设计为可外部化。换句话说，团队必须规划并设计能够向外部开发者暴露接口的能力。没有例外。
+- 任何不遵守此规定的人都将被解雇。
+
+我相信贝索斯先生对这一 API 转型非常认真，因为他认为只有采用高度模块化的方式，Amazon 才能满足日益增长的需求。通过强制这些接口，公司能够消除系统特定的依赖，从而提高灵活性、效率和速度。
+
+这便是 `内部 API` 的一个例子。但也存在 `外部 API`，它们面向外部世界。meant to be consumed by others（如客户和合作伙伴）的 API 通常被称为 `开放 API`。你也可以有 `私有 API`，其中访问权限受到限制。
+
+让我们来看一个使用外部可用私有 API 的示例。假设你创建了一个酷炫的新应用程序，其中包含一个专有算法，能够预测未来十年内社区房屋价值。你可以尝试说服潜在的购房者支付访问费用，或者你可以向房地产经纪人收费并仅在合同下提供这些有价值的数据。在这种情况下，许多公司可能会选择私有 API 路线，因为这比向公众进行数百万美元的营销支出要便宜得多，从而更容易进入市场。从收入角度来看，API 对于公司的成功至关重要，而不仅仅是提高灵活性和其他内部 API 的好处。
+
+最后，也是我们主题最重要的部分，我们转向 Web 上的开放 API。这些是像 Twitter、Facebook 等网站向客户端（用户）公开的 API，更重要的是，这些是云提供商向其客户公开的 API，以便他们能够以程序化方式访问资源。大多数，如果不是全部，云提供商在每种服务模式下都会提供 API 和 Web 界面。这些暴露的 API 的功能当然取决于供应商。一些 IaaS 提供商可能会通过其 API 向用户提供全部功能，而 SaaS 提供商可能允许你创建新记录，但不能修改记录，例如。这让我们来看一个有趣的与 Amazon 相关的观察。当 Amazon 创建 Amazon Web Services 时，仅提供 API 访问供消费者使用；没有 Web 界面。我认为这正好是公司推出面向大众的产品时你所期望的完全相反。但当你思考时，这表明 Amazon 对 API 对于自身以及其他人来说有多么重要。
+
+现在你已经了解了不同的 API 部署方式，让我们继续讨论流行的开放 API “标准”。最主流的两个是 REST 和 SOAP。我会分别介绍这两者，并给予它们应有的考虑。
+
+首先是 Representational State Transfer（REST）。REST 实际上不是标准，它被视为一种架构风格，因此我在“标准”一词周围加了引号。例如，你永远不会看到“REST 2.0”。REST 是 *stateless*（即它不保留会话信息），并且依赖其他标准（如 HTTP、URI、JSON 和 XML）来完成其工作。每个 REST 调用都使用 HTTP 方法。下面的表格列出了这些方法及其高级别概述：
+
+![Images](img/pg116_Image_29.jpg)
+
+那么 REST 在实际操作中是什么样子呢？下面的示例展示了如何从三大 IaaS 提供商获取服务器实例的列表。
+
+![Images](img/note.jpg)
+
+**NOTE** 这些示例不涉及将在本章后讨论的身份验证或授权过程。API 身份验证将在本章后讨论。
+
+**AWS 示例：**
+
+![Image](img/pg117_Image_30.jpg)
+
+**Microsoft Azure 示例：**
+
+![Image](img/pg117_Image_31.jpg)
+
+**Google Cloud 示例：**
+
+![Image](img/pg117_Image_32.jpg)
+
+你可能已经注意到这里的一个共同点——它们各不相同！如果你想与某个提供商合作，必须参考该提供商的 API 参考指南。每个提供商都会以不同的方式暴露其功能。
+
+![Images](img/note.jpg)
+
+**NOTE** 想了解有关 Web API 和 REST 的全部细节，请查阅 Roy Fielding 的论文《Architectural Styles and the Design of Network-based Software Architectures》。我只是在提供 API 的背景信息时突出一些关键事实。
+
+现在，关于如何删除（终止）实例，下面是一些示例。
+
+**AWS 示例：**
+
+![Image](img/pg117_Image_33.jpg)
+
+**Microsoft Azure 示例：**
+
+![Image](img/pg117_Image_34.jpg)
+
+**Google Cloud 示例：**
+
+![Image](img/pg117_Image_35.jpg)
+
+现在你已经了解了通过 REST API 执行命令有多么容易，希望你能够体会到，拥有管理平面的管理员只需几秒钟就可以通过编写一个简单脚本（列出所有实例并为每个列出的实例发出终止命令）来摧毁你环境中的所有内容。这表明 REST 的一个重要特性：它依赖于其他标准。如果你想让请求安全，就必须使用 HTTPS，因为 REST 本身不内置安全性。这与 SOAP API 有显著区别。
+
+
+
+# Simple Object Access Protocol（SOAP）是一个标准和一个协议
+
+人们常说 REST 就像明信片，而 SOAP 就像信封。与 REST 相比，SOAP 内置了安全性以及其他功能，但也带来了比 REST 更大的开销。因此，SOAP 的使用场景更倾向于具有高安全性要求的内部企业目的。云提供商通常不会向客户公开 SOAP API，而且现在已经很少见了。例如，Amazon Web Services（AWS）曾为 Elastic Compute Cloud（EC2）提供 SOAP API，但在 2015 年已将其弃用。说到底，如果你处理任何与 Web 相关的事务，你大概率会遇到 REST API。
+
+API 经常可以在你选择的编程语言中使用。例如，如果你想编写一个 Python 脚本来在 AWS 中创建实例，可以使用 AWS Boto3 软件开发套件（SDK）。以下是一个示例脚本：
+
+![Image](img/pg118_Image_36.jpg)
+
+![Images](img/tip.jpg)
+
+> **TIP** 使用供应商的 API 是了解特定提供商如何工作的最佳方式。Web 界面通常会隐藏大量功能。
+
+我将用 API 网关的概念来结束这段背景介绍。API 网关作为单一接口，让请求的机器可以连接到后面隐藏的一个或多个 API，并为客户提供无缝的体验。从安全角度来看，API 网关很有价值，因为它可以检查传入请求以防范威胁（如拒绝服务、代码注入攻击等），并且可以用于支持身份验证和授权服务。这在微服务的委派授权中尤为重要（见 Chapter 12）。
+
+## 访问管理平面
+
+管理平面通常通过多种方式可访问。一般情况下，你可以期望拥有命令行界面（CLI）工具、Web 界面或 API。可以将 API 视为运行一切的引擎。无论你使用 Web 界面、CLI 还是任何 SDK，你的请求很可能会被翻译成提供商的 API，然后由提供商执行。
+
+如前所述，如果你想真正洞悉提供商的权限范围，使用 API 通常是最佳选择。你通常可以认为，任何通过 Web 控制台可用的功能也都可通过 API 访问。如果某项功能可通过 API 访问，它就可以被程序化访问，进而可以被自动化。提供商可能会先向某种方式（如 Web 控制台）提供功能，但这种情况在成熟的提供商中很少见。我可以安全地打赌，“beta”功能通常首先通过 API 发布，但我个人并不推荐在生产环境中使用任何“beta”功能。
+
+当你从安全角度考虑不同的访问方式时，要注意通常会涉及不同的凭据。例如，通过 Web 浏览器进行连接时，通常使用标准凭据，如用户名和密码。这些凭据集可以存储在云提供商的环境中，或者你可以使用身份联邦（federation）将凭据保存在本地而非提供商侧（Federation 在第 12 章中讨论）。
+
+除了 Web 浏览器访问之外，API 访问通常使用 HTTP 请求签名或 OAuth 协议（见第 12 章）。部分提供商会使用访问密钥和密钥作为凭据来进行 REST 请求的认证和签名。访问密钥相当于用户名，而密钥则相当于密码。在幕后，密钥用于签名请求。
+
+*关键*在于你要明白管理平面可以通过多种方式访问，并可能使用不同的认证方法。这些凭据是如何使用和保护的？让我们继续往下看。
+
+## 保护管理平面
+
+在首次注册或订阅云提供商时，你会创建一个初始账户，该账户被视为*主账户*（部分提供商称其为根账户，这个名称在 UNIX 社区中已使用多年，实在令人不快）。该账户需要被严格锁定，仅用于建立正确的身份和访问管理。以下是关于创建和保护该初始主账户的指导：
+
+**1.** 使用唯一的*企业*电子邮件地址创建账户（例如，`c-dbs45er@acme.com`）。该电子邮件地址将作为主账户的用户 ID，可能是提供商与贵公司沟通的方式。该账户*绝不能*由个人电子邮件地址或即使是企业邮箱创建。
+
+**2.** 为该主账户电子邮件地址设置分发列表，以防止多种问题（例如，原始创建者离职后所有邮件消失到`/dev/null`\[a UNIX 术语，指垃圾桶\]，或关键人员看不到提供商的紧急信息）。
+
+**3.** 建立符合安全策略的强密码，并基于硬件 MFA 设备为该账户启用多因素认证（MFA）。具体做法取决于所用提供商，但大多数甚至所有提供商都支持*时间基一时密码*（TOTP），即基于当前时间生成的临时验证码。其他提供商可能支持更新的 MFA 方法——Universal 2nd Factor（U2F），它被许多人认为比 TOTP 更安全。
+
+![Images](img/note.jpg)
+
+> **NOTE** 你也可以使用“虚拟”TOTP（如 Google Authenticator），但鉴于你将把 MFA 设备安全保管，虚拟 MFA 设备在企业场景中可能并不合适。
+
+主账户的账户、密码和 MFA 设置完成后，你需要创建一个新的超级管理员账户，用于访问管理平面。完成后，请记录主账户的登录 ID 和密码，将它们连同 MFA 设备放入信封并锁在安全箱中。此后，主账户仅在紧急情况下使用，所有操作均应使用适当的账户。
+
+![Images](img/note.jpg)
+
+> **NOTE** 多因素认证（MFA）可能涉及三种因素：你所知的东西（如密码），你拥有的东西（如智能卡），以及你本身的特征（如指纹或视网膜扫描）。
+
+要正确保护管理平面，你需要两件事：明确的授权计划（谁可以做什么）以及具备强大身份和访问管理（IAM）系统的提供商，该系统支持身份识别、认证和授权，并具备适当的细粒度。这种细粒度使你能够实施*最小权限*策略，限制谁能在云环境中执行特定操作。
+
+![Images](img/note.jpg)
+
+> **NOTE** IAM 在第 12 章中进一步讨论，但目前无需急于跳转。
+
+## 最小权限和 MFA 的重要性
+
+坚持最小权限原则至关重要，这不仅适用于用户账户，也适用于 IAM 角色。下面的例子说明了原因：一家大型银行因允许一个角色列出对象存储桶的内容（见第 11 章）而被入侵。是的，真的。该角色拥有列出对象存储桶内容的权限，使攻击者能够识别并下载文件。这些文件包含数百万客户的个人可识别信息（PII）。如果该角色的权限仅能*读取*已知文件名而不能*列出*文件内容，银行的数据可能不会被泄露，或者至少攻击者更难找到 PII 数据。
+
+![Images](img/exam_tip1.jpg)
+
+> **EXAM TIP** 认真落实最小权限。如果被问及适当的权限，答案总是与最小权限原则相关。
+
+虽然这是极端例子，但在基本框架层面，你的组织在内部网络访问方面是如何处理权限的？是否人人都使用管理员账户进行日常操作？如果是，请立即放下这本书并加以修复！不过，这并非普遍情况。大多数组织会仅授予用户完成工作所需的权限，而不多。存储管理员应拥有管理和配置存储的权限，服务器管理员可能被授予创建实例但不能终止实例的权限。只要假设凭据会被泄露，并将其权限最小化，就能最大限度降低影响（这本身就是一种风险控制措施）。
+
+在所有类型的云环境中，你会遇到两类主要凭据：用于 Web 控制台登录的用户名和密码，以及用于程序化访问的访问密钥。访问密钥被视为“永久凭据”。我对使用访问密钥在云环境中的两点警告：
+
+- 访问密钥（及密钥）*绝不能*包含在任何脚本中。它们是明文凭据。既然你不会在脚本中硬编码明文密码，那么使用明文访问密钥又有什么区别？如果访问密钥存放在脚本里，而该脚本被推送到公共仓库（如 GitHub），恶意行为者几分钟即可发现这些凭据。
+
+- 如果可能，应避免使用访问密钥，转而使用“临时凭据”。临时凭据利用某些提供商称为“IAM 角色”的机制。在临时凭据模型中，云用户账户获得最小凭据，通过角色继承提升权限，使程序能够成功执行。
+
+在建立账户时，最小权限原则是首要因素，同时你还需要强烈考虑为所有账户启用多因素认证（MFA），而不仅仅是主账户。MFA（尤其是 U2F）在阻止账户被篡取方面已被证明非常有效。例如，Google 在 2017 年内部实施了 U2F，使用安全钥匙。那 85,000 名员工中有多少人因此被成功钓鱼？零。nada。zilch。我觉得这很了不起。考虑到这是内部网络而非公开的管理平面，你认为为所有管理平面访问启用 MFA 能否整体提升安全性？我认为可以。MFA 应在任何云环境中实施；它对 SaaS 与平台即服务（PaaS）和基础设施即服务（IaaS）同样重要。
+
+## 构建或提供云服务时的管理平面安全
+
+迄今为止，我们关注的是客户如何保护其管理平面的使用。供应商在构建管理平面时应关注什么？客户在使用提供商之前应检查什么？以下提供一些考量因素：
+
+- **边界安全** 供应商如何实施控制，以保护其网络免受攻击，包括针对低层网络防御和应用程序栈的措施，适用于 Web 控制台和 API 网关？
+
+- **客户身份验证** 供应商是否支持使用 MFA？支持哪些类型的 MFA？其环境中哪些系统可以使用 MFA？供应商是否支持诸如 OAuth 或 HTTP 请求签名等经 cryptographically 安全的身份验证方法？
+
+- **内部身份验证和凭据传递** 供应商如何允许在环境内部访问？是否支持通过 IAM 角色实现的临时凭据？
+
+- **权限和特权** 客户可以使用多细粒度的权限来遵循最小权限原则吗？供应商是否仅向登录的管理员授予权限？如果是，则无法为特定任务创建职位特定的权限，这不利于安全，因为任何账户被破坏后后果可能非常严重。
+
+- **日志、监控和警报** 这是一个关键考量点。如果缺乏记录登录成功和失败的日志，或无法记录特定 IAM 账户执行的操作，如何收集合规性的证据？记录操作的能力可以帮助发现恶意行为，并在环境中实现适当的编排时，支持事件驱动的安全（见第 10 章），将响应时间从数小时缩短至秒级，借助自动化响应能力。
+
+## 云环境中的业务连续性和灾难恢复
+
+云环境中的业务连续性规划（BCP）和灾难恢复（DR）与传统 IT 环境不同，因为云环境采用按使用付费的模式。每一个决策都有相关成本，并可能带来额外的复杂性。让我们以 IaaS 为例：在单个区域实现 BCP/DR 通常比在多个区域实现更易且成本更低。提供商可能会收取复制数据之间的额外费用，且可能需要为不同区域创建特定的脚本以反映资产 ID 的变化。此外，还存在司法管辖等挑战（如前几章讨论过），这些可能会影响 BCP/DR 的合法性。
+
+### BCP/DR 背景介绍
+
+业务连续性规划和灾难恢复常被视为同一事物，但实际上并不相同。它们共同支持公司的恢复和弹性规划（通常用于企业中的 BCP/DR）。本节介绍了两者的重要方面。
+
+![Images](img/note.jpg)
+
+> **NOTE** 系统恢复不一定意味着 100% 的恢复。可能只是将系统恢复到 60% 的容量，或者需要创建全新系统（或新常态）。
+
+BCP 关注在组织处于受损状态时继续业务运营，即使是恢复过程中。BCP 不仅关注 IT 系统，还包括确定哪些系统对业务至关重要、确定可接受的停机时间或损失，并采用相应的机制以满足这些目标。DR 是恢复和弹性功能的一部分，专注于从事件中恢复，通常侧重于 IT 系统。我喜欢用“BCP 关乎人员和业务，而 DR 关乎技术”来区分两者。两者作为恢复和弹性计划的一部分协同工作，需要适当的政策、流程、指标以及测试，以确保计划满足业务需求。
+
+![Images](img/note.jpg)
+
+> **NOTE** 以索尼公司 2014 年被完全入侵为例，演示 BCP 与 DR 的区别。当时，业务连续性包括使用电话树：高管通过手机依次呼叫下属以传递状态更新；使用 Gmail 处理电子邮件；使用手动机器发放工资单；以及使用存放在某个衣柜里的旧 Blackberry 智能手机。这些 BCP 临时措施在系统恢复过程中保持业务运营。而灾难恢复则是在期间重建被攻击期间损坏的所有系统。
+
+在进行任何 BCP/DR 操作之前，首先必须确定需要处理的关键系统。并非所有系统对组织的价值相同。如果 payroll 系统宕机，你是否真的期望员工无偿工作直到系统恢复？或者考虑用于新促销的图形程序是否同样重要？确定关键系统需要进行包括业务影响分析（BIA）、威胁分析和影响场景在内的分析。
+
+在 BIA 中需要进行两项计算：恢复时间目标（RTO）和恢复点目标（RPO）。RTO 是恢复功能所需的可接受时间，通常以小时或天数衡量。你可能会设定两个 RTO：一个用于部分容量恢复，另一个用于全量恢复。RPO 是可接受的最近数据损失量，也可以以小时、天或分钟衡量，关键系统通常以分钟为单位。RPO 可用于驱动系统的强制备份策略。例如，如果你每天进行一次备份，那么在发生事故时，你可能允许损失最多一天的数据。如果将 RPO 设定为一小时，那么如何在每天凌晨 2 点进行的每日一次备份中满足这一要求？
+
+RTO 和 RPO 也决定了整体恢复和弹性的成本。如果你追求极低的 RTO 和 RPO（例如五分钟），则需要更多系统以支持实时复制，成本远高于仅要求两周恢复的情况。适当的评估将指导在 DR 能力上的投资，以在满足可接受的恢复时间和成本之间取得平衡。Figure 6-1 以图形方式展示了这一过程。
+
+![Images](img/pg124_Image_37.jpg)
+
+---
+
+**Figure 6-1** BIA 与 RTO/RPO 过程
+
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
+
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+- `Infostructure` 如果你计划实施数据的实时复制——不仅仅是从一个服务器实例到另一个，而是从北美某一端到另一端，例如——你必须考虑延迟并持续测试它。
+
+- `Applistructure` `applistructure` 包含应用程序所包含的全部内容。如果应用程序的所有需求都包含在单个服务器中，那么移动它会比例如将应用程序与云提供商提供的其他服务绑定要容易得多。容器、微服务和无服务器计算是应用程序代码利用其他服务的典型例子。
+
+考虑到以上所有因素，你可以看到根据 CSA 指南，接受停机风险是一个可行的选项。如果你确定停机是可接受的，你需要确保你的系统能够优雅地失败。例如，如果客户端网页不可用，考虑将 DNS 重定向到显示你已知问题并正在处理的页面，而不是显示通用的“服务器错误 500”消息。
+
+最后还要考虑提供商对你灾难恢复（DR）计划的指导。你说“在发生故障时我们只需从 A 区域切换到 B 区域，并且每月进行一次测试”可能很美好，但我想通过类比突出这个计划的问题。你知道公司每季度进行的火灾疏散演练吗？假设你在一栋 30 层的办公大楼里工作，公司占据整层。在演练过程中，所有人 15 分钟内撤离建筑物，很棒。但如果真正发生紧急情况，所有 30 层同时撤离，你还能在 15 分钟内将所有人撤出吗？显然不可能。那么，如果你位于拥有六个数据中心且总容量为六百万虚拟 CPU（vCPU）的地区，目标 DR 区域有两个数据中心且总容量为两百万 vCPU，你觉得如果在一个或多个区域发生故障切换会发生什么？这就像音乐椅子游戏，但音乐一停，所有计划相同的参与者同时启动灾难恢复流程。时间一旦到了，容量就会被占满，混乱就会发生。因此，请与你的特定供应商沟通 DR 计划。你可能需要购买容量预留、预留实例，或在 DR 规划中采取其他措施，以确保目标区域有空间。
+
+### Chaos Engineering
+
+*Chaos engineering* 是一种有纪律的方式，通过对系统进行实验来建立信心，使其能够在生产环境中经受 turbulent（剧烈的）和意外的条件。一家领先公司不仅采用了 chaos engineering，还开发了完整的 chaos engineering 工具套件并将其开源给全世界：Netflix。作为其业务连续性的持续测试的一部分，Netflix 会在生产环境中直接降级其云的部分资源，以判断系统是否在恢复并按预期工作。公司在生产环境中进行此操作，而非在开发环境中。
+
+你可能现在在想，Netflix 的技术领导是否疯了，根本不可能采用这种方法。但仔细思考后，你会发现这方法是合理的。这种方法迫使 Netflix 的开发人员和工程师从设计之初就假设失败并为之进行构建。在任何组织中，这一过程都能帮助解决灾难恢复（DR），因为失败已经在设计阶段被纳入考虑。换句话说，你可以把 chaos engineering 视为持续的弹性测试。
+
+### 业务连续性——云提供商不可用的情况
+
+提供商整个环境不可用的可能性显然取决于提供商本身。对于领先的 IaaS 提供商而言，这种情况极为罕见。事实上，我唯一记得的整个 IaaS 提供商不可用的情况是 2012 年微软 Azure 的故障，当时一个闰年错误导致系统在约九小时内全部宕机。亚马逊和谷歌也曾发生过故障，但这些故障仅影响了特定地区，而非跨所有地区的整个基础设施。
+
+当然，主要 IaaS 供应商出现重大故障的风险虽然很低，但 PaaS 和 SaaS 的失败则是另一回事。事实上，PaaS 或 SaaS 供应商倒闭或被出售给其他不符合合同义务的提供商，或在很短时间内改变条款和条件的情况并不少见。基于此，如果你正在考虑将数据或应用从一个云提供商迁移到另一个，应了解以下几个重要术语：
+
+- `Interoperability` 系统组件协同工作以提供服务的能力。
+
+- `Portability` 从一个环境迁移到另一个所需的最小更改的能力。
+
+- `Lock-In` 提供商可以从合同角度锁定客户，也可以从技术角度锁定客户——例如，不支持以常见格式导出数据（这可能影响法律讨论中提到的证据可采性）。
+
+![Images](img/tip.jpg)
+
+> **TIP** 在思考 SaaS 可移植性时，请记住这本质上是一个自定义应用。如果你曾参与从 Lotus Notes 迁移到 Microsoft Exchange，你就知道迁移过程中可能遇到的困难，SaaS 迁移亦是如此。在将特定 SaaS 供应商用于生产之前，你应该了解如何导出你的数据以及数据将以何种格式呈现。
+
+## 私有云和提供商的连续性
+
+如果你负责公司的私有云，从设施到应用程序和存储的数据，所有 BCP（业务连续性）和 DR（灾难恢复）方面都需要考虑。你可以决定公有云是最佳的备用站点，也可以拥有传统的冷、温或热备用站点。无论如何，请制定计划并反复测试。
+
+
+
+如果你是云服务提供商，BCP/DR 的重要性极高——公司的生存可能取决于正确的 BCP/DR 能力。例如，你可能会因为 BCP/DR 能力不足而失去业务。或者，如果你的系统被潜在客户视为不可靠，他们将不使用你的服务。如果你违反服务级别协议（SLA），可能面临罚款。又或者，如果你的 DR 包括跨地域故障转移，你可能违反合同义务，甚至触犯数据居住法规。
+
+### 章节回顾
+
+本章回顾了 API 的重要性、访问管理平面时网页控制台和 API 的作用，以及提供商提供的 IAM 功能用于保护管理平面。本章还介绍了业务连续性规划和灾难恢复的背景信息，以及在云中正确规划和架构 DR 以满足业务需求的必要性。
+
+为准备 CCSK 考试，你应该熟悉以下概念：
+
+- `Master` 账户应启用 MFA 并仅作为紧急访问使用。
+- 使用最小权限原则 `Establish` 账户。
+- 可能时，所有 `All` 账户应启用 MFA 以访问管理平面。
+- 确保为 API 网关和网页控制台提供强有力的边界安全。
+- `BCP` 和 `DR` 是基于风险的活动。请记住，并非所有系统对业务连续性同等重要。
+- `Always` 为 BCP 和 DR 设计失败的容错架构。
+- `Remember` downtime 始终是一个选项。
+- `When` 考虑 BCP/DR 时，请考虑整个逻辑栈。
+
+# 基础设施安全
+
+本章节涵盖 CSA 指南第 7 领域的以下主题：
+
+- 云网络虚拟化
+- 云网络与安全变更
+- 虚拟设备的挑战
+- SDN 安全优势
+- 软件定义边界与微分段
+- 混合云考量因素
+- 云计算与工作负载安全
+
+> 各行各业的公司都需要假设一个软件革命正在到来。
+>
+> —Marc Andreessen
+
+尽管本章标题为“基础设施安全”，但我们需要意识到云之所以真正成为可能，是因为用于自动化和编排客户使用底层物理基础设施的软件。我不能确定安德烈森先生何时作出前述表述，但我认为可以说软件革命现已正式到来。好消息是，你将作为云安全专业人员成为其一部分。本章节涵盖一些使云得以实现的新软件驱动技术。
+
+虚拟化并非新事物。有人说它始于 1960 年代，也有人说我们今天认识的虚拟化始于 1990 年代。无论哪种情况，今天的虚拟化都与最初仅仅是通过在单台物理计算机上运行多个虚拟服务器的方式大相径庭。云环境中的工作负载远不止虚拟机那么简单。当今的云基础设施使用软件定义网络（SDN）、容器、不可变实例、无服务器计算以及本章节所涵盖的其他技术。
+
+# 如何保护虚拟基础设施？检测和响应如何执行？日志文件存储在哪里？在账户被入侵时它们是否受到保护？这些都是在新型虚拟化环境中会产生的问题。如果你的保护计划是基于在服务器实例上安装 agent，而云端漏洞评估计划仅限于对已知 IP 地址运行扫描，那么你需要重新考虑在这一新环境中的选项。
+
+物理基础设施是所有计算的基石，包括云。基础设施是计算机和网络的基础，我们在此基础上构建所有内容，包括抽象层和资源池，这些层次使云能够快速扩展、弹性伸缩，以及其他一切。本章涵盖的内容适用于所有云部署模型，从私有云到公有云。
+
+我不会涉及数据中心安全原则，例如走廊与停车场的最佳照明瓦特数，或如何将岩石整合到数据中心景观中以保护数据中心，因为这些内容不在 CSA 指南范围内，也不会在考试中出现。虽然你可能会失望我没有讨论岩石与金属立柱作为屏障的优势，但我会在本章中涵盖工作量虚拟化、网络虚拟化以及其他虚拟化技术。
+
+本章首先讨论两个基础设施领域（在 CSA 指南中称为 *宏层*），首先是物理资源，如处理器、网络接口卡（NIC）、路由器、交换机、存储区网络（SAN）、网络附加存储（NAS）以及其他构成资源池的项。这些项全部由提供方（或由你自己构建私有云时的公司）完全管理。接下来是客户创建的虚拟/抽象基础设施（即虚拟世界或元结构），用户从资源池中选择所需的内容。该虚拟世界由云用户管理。
+
+本章将重点关注一些在背后运行的网络元素，这些元素由提供方管理。虽然这里提供的背景信息不会出现在 CCSK 考试中，但它有助于你理解在采用云服务时所使用的新技术。我会在需要时指出哪些材料仅供参考，不在考试范围内。
+
+顺便提一下，本章会引用多个相关的 RFC（请求评论），如果你不熟悉 RFC，它们是 IETF 正式发布的文档，通常与 TCP、UDP、DNS 等标准或架构与实现类的 informational RFC 相关。本文档包含这些引用，供想深入研究的读者参考。RFC 是网络领域的权威来源，但准备 CCSK 考试时不需要阅读对应的 RFC。
+
+## Cloud Network Virtualization
+
+*Network virtualization* 抽象底层物理网络，并用于 *网络资源池*。这些池的形成方式及其能力会因提供方而异。在 IaaS 云中，虚拟化下会创建三个网络：管理网络、存储网络和服务网络。Figure 7-1 展示了这三个网络及其支持的流量。
+
+![Images](img/pg135_Image_38.jpg)
+
+* * *
+
+**Figure 7-1** Common networks underlying IaaS
+
+![Images](img/tip.jpg)
+
+**TIP** 这三个网络之间没有功能或流量重叠，应分别在三条专用网络上运行。这意味着提供方需要实施并维护三套独立的网络线路和网络设施。
+
+我们将在后续内容中探讨运行在底层物理网络之上的虚拟化技术，这些技术使云基础设施得以实现。在此之前，建议先复习著名的 OSI 参考模型。下面的 OSI 背景并非云特有，但了解它有助于理解我所说的“在层 2 运行”的含义。
+
+### OSI Reference Model Backgrounder
+
+OSI 参考模型是一个极为普遍的模型，许多人都熟悉。你是否听说过“层 7 防火墙”或“层 2 交换机”？这正是 OSI 参考模型层的体现。CSA 认为 OSI 参考模型是默认知识，因此在 CCSK 考试中不考察该模型。因此，我不会深入每一个细节，而是从高层次概览来看待。
+
+OSI 堆栈包含七层（我称之为七层豆泥），从顶部的应用层（层 7）到底部的物理介质层（层 1）。记忆法有两种：“All People Should Try New Diet Pepsi”（从层 7 到层 1），或 “Please Do Not Trust Sales People’s Advice”（从层 1 到层 7）。Figure 7-2 展示了 OSI 参考模型。
+
+![Images](img/pg136_Image_39.jpg)
+
+* * *
+
+**Figure 7-2** OSI reference model
+
+参考模型体现在数据包的创建过程。应用层数据通过每一层的封装（Figure 7-3）在堆栈向下传递。每一层添加相关信息后，将其发送至网络，接收端的硬件（如层 2 的 MAC 地址）会提取并向上传递，对应层的数据被剥离并传递至上层。
+
+![Images](img/pg136_Image_40.jpg)
+
+* * *
+
+**Figure 7-3** Packet encapsulation at each layer on the OSI stack
+
+Table 7-1 总结了 OSI 参考模型每层的具体操作。
+
+![Images](img/pg137_Image_41.jpg)
+
+**Table 7-1** What Happens at Each Layer of the OSI Reference Model
+
+![Images](img/note.jpg)
+
+**NOTE** Table 7-1 的信息并非 exhaustive，旨在提供高层解释以支持后续网络讨论。
+
+### VLANs
+
+虚拟局域网（VLAN）已有很长的历史。VLAN 技术于 2003 年由 IEEE 标准化为 IEEE 802.1Q，并在 OSI 模型的层 2 运行。VLAN 通过在交换机端口对接设备的数据包上打标，将单个广播域划分为多个，实现 *网络分段*，而非 *隔离*。分段在单一租户环境（如受信任内部网络）中可行，但在天然多租户的云环境中并不理想。
+
+![Images](img/note.jpg)
+
+**NOTE** “分段”和“隔离”常被混用，但二者在网络语境下意义不同。分段指将网络划分为更小的广播域；在同一广播域内的所有系统均接收广播流量。隔离则仅允许指定目的机器通信，如软件定义网络（SDN）所实现的情况。将受信任的机器分组在一起是一回事，而在多租户环境中实现隔离则是另一回事。
+
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**Richard Feynman**。
+
+1. 运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+OpenFlow SDN 控制器将使用 OpenFlow 规范（如南向 API）与符合 OpenFlow 的网络设备进行通信，以配置和管理流表。控制器与应用之间的通信通过北向接口进行。目前没有为这些北向接口建立标准的通信方法，但通常使用 API。
+
+通过 SDN（以及使能技术）的实现，云提供商可以为客户提供更高的灵活性和隔离度。按设计，云提供商提供客户通常习惯获得的功能。例如，客户可以在云环境中选择任何 IP 范围，创建自己的路由表，并按照他们想要的方式构建元结构网络。这一切都可以通过 SDN（及相关技术）实现。SDN 实现不仅向客户隐藏了底层网络机制，也向运行在提供商网络中的虚拟机隐藏了网络复杂性。虚拟实例所看到的仅是由超融合提供的虚拟网络接口，除此之外一无所有。
+
+![Images](img/note.jpg)
+
+**NOTE** I cover the security benefits associated with SDN later in this chapter in the section “SDN Security Benefits.”
+
+#### Network Functions Virtualization
+
+Network functions virtualization (NFV) 是另一领域，本身未在 CSA 指南中涵盖，因此不会出现在考试中，但我认为值得稍作探讨。NFV 与 SDN 不同，但两者可在虚拟化网络中协同工作，并在多篇出版物中以“SDN/NFV”形式出现。
+
+NFV 规范最初由欧洲电信标准化研究所（ETSI）于 2013 年创建。NFV 的目标是通过将执行网络功能（如路由器）的物理网络设备替换为可在标准服务器上运行的虚拟网络功能（VNF）来转变网络架构，并通过软件交付网络功能。根据 ETSI 的说法，这种方式可以降低成本、提高灵活性、通过基于软件的服务部署加速创新、通过自动化提升效率、降低电力消耗，并创建开放接口，使不同供应商能够提供解耦的元件。
+
+NFV 需要大量的虚拟化资源，因此需要高度的编排能力来协调、连接、监控和管理。你已经可以看到 SDN 与 NFV 如何协同工作，构建开放式虚拟化网络环境，从而惠及云服务提供商。请记住两者的区别：SDN 将控制平面与底层网络设备分离，而 NFV 则可用虚拟化网络功能替代物理网络设备。
+
+### 云网络中的安全变化
+
+传统网络时代的安全相对简单。那时可能只有两台带有物理网卡的物理服务器，通过物理网络传输比特，随后防火墙、入侵防御系统（IPS）或其他安全控制会检查穿过网络的流量。如今在云环境中，这些日子已成过去。现在，虚拟服务器使用虚拟网卡和虚拟 appliances，尽管云提供商在其环境中拥有物理安全设备，但你无法要求提供商在云环境中安装自己的物理设备。
+
+虚拟 appliance 和传统物理 appliance 的唯一共同点是它们都可能成为性能瓶颈和单点故障。不止物理 appliance 可能成为瓶颈，虚拟机中安装的软件 agents 也会影响性能。在设计云中的虚拟控制时，请牢记这一点，无论是虚拟 appliance 还是软件 agents。
+
+这些在云环境中保护网络流量的新方式既带来挑战，也带来收益。
+
+#### 虚拟 appliance 的挑战
+
+请记住，物理和虚拟 appliance 都可能成为性能瓶颈和单点故障。毕竟，虚拟机可能像其关联的物理服务器一样崩溃，而尺寸不当的虚拟 appliance 可能无法跟上实际所需的处理量。此外，请记住许多 IaaS 环境中供应商提供的虚拟 appliance 的成本。
+
+考虑以下简化的成本场景：假设你的云环境包含两个区域，每个区域有六个子网，供应商建议在每个子网部署其虚拟 appliance。这意味着总共需要 12 个虚拟 appliance。单点故障？如果供应商支持故障转移（稍后会详细说明），则需要将虚拟防火墙数量翻倍至 24 个。假设 appliance 与实例的总成本为每小时 1 美元，那么每小时成本为 24 美元。你可能会认为 24 美元/小时不算大，但与工作 8 小时的工人不同，appliance 全天候工作，因此每年成本超过 210,000 美元（365 天等于 8760 小时，乘以 24 美元，得出 210,240 美元）。这仅是一个极简场景！如果公司已全面拥抱云，运行 70 个账户（为隔离推荐），每个账户包含两个子网（公共和私有）以及用于业务连续性/灾难恢复（BC/DR）规划的备用区域，则需要 280 个 appliance（70 账户 × 2 子网 × 2 区域），每小时 1 美元，全年成本超过 240 万美元。哎呀，我忘了单点故障的影响，实际成本为 480 万美元/年。这很好地说明了云架构如何在财务上影响组织。
+
+另一方面，虚拟 appliance 供应商的能力参差不齐。一些提供商可能支持高可用性和自动扩展，利用云的弹性来应对潜在的性能瓶颈场景；另一些则完全不支持这些功能。你必须明确了解提供商提供的具体内容。
+
+我尤其喜欢（但名称不愿透露）那些宣称其“下一代防火墙”产品提供多种控制功能（防火墙、入侵检测系统、入侵防御系统、应用控制等）并通过 clustering 实现高可用性的供应商。然而，仔细阅读技术文档后发现，除核心防火墙服务外，其他功能均无法在云环境中使用，且无法以 HA 模式部署。这迫使你陷入单点故障的情形。
+
+- [虚拟设备](https://example.org/virtual_appliances)是专门设计用来利用云的弹性和变更速度的，例如跨区域和可用性区的迁移。还需考虑受保护的工作负载。虚拟设备能否处理自动扩展组（如从五台服务器瞬间扩展到五十台再在几分钟内缩回五台）或特定工作负载的 IP 地址变更？如果虚拟设备通过手动配置的 IP 地址跟踪所有内容，你将立即陷入困境，因为虚拟服务器的 IP 地址在不可变环境中（见后文“Immutable Workloads Enable Security”）会频繁变化。
+
+#### SDN 安全优势
+
+我已介绍 SDN 的目的和基本架构，但未专门说明 CCSK 考试所需的 SDN 安全优势。以下是 CSA 指南中提到的 SDN 安全优势：
+
+- **隔离** SDN（及相关技术）默认提供隔离。通过 SDN，你可以在云环境中使用相同 IP 范围运行多个网络，逻辑上这些网络无法直接通信，因为地址冲突。隔离可用于将具有不同安全需求的应用和服务分隔开。
+- **SDN 防火墙** 也称为“安全组”。不同提供商功能各异，但 SDN 防火墙通常应用于虚拟服务器的虚拟网卡，类似普通防火墙，你通过“策略集”（即防火墙规则集）定义入站（ingress）和出站（egress）网络流量的可接受范围。这意味着 SD
+
+- 云端环境中的边界安全仍然重要。提供商应实施标准的边界安全控制，例如分布式拒绝服务（DDoS）保护、IPS 以及其他技术，以在流量影响云端消费者之前过滤掉恶意流量。这并不意味着消费者应假设提供商会阻止任何在边界的恶意网络流量。消费者仍需自行实施网络安全。
+
+- 就硬件重用而言，提供商始终应能够在将客户释放的资源（如卷）重新引入资源池供其他客户使用之前，正确清理或擦除这些资源。
+
+### 混合云注意事项
+
+回顾 [第 1 章 的混合云示例——当客户拥有自己的数据中心并同时使用云资源时。大型组织通常通过专用宽带（WAN）链路或使用 VPN 通过 Internet 实现此连接。为使网络架构师能够将云端环境（尤其是 IaaS）纳入架构，提供商必须支持客户确定的任意网络地址，以便云端系统不使用与内部网络相同的地址范围。
+
+作为客户，你必须确保两个区域都应用相同的安全级别。例如，在一个扁平网络中，公司内部的任何人都可以在网络内水平（东西向）移动，并因此访问云资源。你应始终将连接到云系统的网络视为潜在的敌对链路，并通过路由、访问控制和流量检查（如防火墙）在内部和云端系统之间强制实现隔离。
+
+`bastion`（或中转）虚拟网络是 CSA 指南中提到的一种网络架构模式，用于为云网络架构提供额外安全性。基本上，bastion 网络是指数据必须经过的网络，以到达目的地。基于此，创建 bastion 网络并强制所有云流量通过它，可充当一个“瓶颈”（理想情况下是正面的）。你可以像对待 bastion 主机一样严格控制该网络，并执行所有需要的内容检查，以保护数据中心和云端环境的流量。图 7-8 展示了云端环境与数据中心之间的 bastion 网络集成。
+
+![Images](img/pg147_Image_46.jpg)
+
+* * *
+
+**Figure 7-8** 云端与数据中心之间的 bastion/中转网络
+
+### 云端计算与工作负载安全
+
+`workload` 是处理单元。它可以在物理服务器上、虚拟机上、容器中，或作为他人虚拟机上的函数执行——你明白的都有。工作负载始终在某个处理器上运行并消耗内存，这些项目的安全由提供商负责。
+
+#### 计算抽象技术
+
+CSA 指南涵盖四种“计算抽象”技术，你在云端环境中可能会遇到。下面依次介绍每种技术，后续章节会提供更详细的说明，我在每个章节中都会指引。
+
+##### 虚拟机
+
+这些是你习惯的传统虚拟机。所有 IaaS 提供商都提供此技术。`虚拟机管理器`（即超级程序）负责创建一个“欺骗”客户操作系统（云中称为 `instance`）以为它直接与底层硬件通信的虚拟环境，但实际上超级程序会将对底层硬件的任何请求（如内存）映射到为该客户机器预留的专用空间。这展示了超级程序提供的抽象（客户操作系统无法直接访问硬件）。为每个客户分配特定内存空间的做法体现了 `隔离` 和 `独立`（同一台机器上不同客户的内存空间互不可见）。
+
+
+
+# 超级程序的隔离特性使多租户成为可能
+
+如果这种隔离失效，云服务的多租户特性及其商业模式将受到质疑。过去的漏洞利用了内存隔离，例如 `Meltdown` 和 `Spectre` 漏洞（及其后续变种）。这些漏洞涉及 `CPU` 处理内存访问的方式，基本上绕过了内存空间的隔离。这意味着在多云环境中，一个租户可能访问另一个租户的内存。注意，这不是 `软件` 漏洞，而是 `硬件` 漏洞，影响了硬件供应商处理内存的方式，并被操作系统利用。
+
+![Images](img/note.jpg)
+
+> **NOTE** 不要担心这些漏洞会出现在你的 `CCSK` 考试中。了解它们能够凸显客户与云服务提供商共享的责任。
+
+`Meltdown` 和 `Spectre` 漏洞需要由云服务提供商进行修补，因为它们涉及硬件问题，但许多操作系统也使用相同的内存映射技术，因此建议客户为自身操作系统打补丁，确保单个应用程序不能访问同一虚拟服务器上另一个应用的内存空间。（有关 `Meltdown` 漏洞的更多信息，请参阅 `CVE-2017-5754`。）此例并不意味着隔离是“损坏”的安全控制——它并非如此。相反，它表明云供应商可以迅速应对“黑天鹅”漏洞。该硬件漏洞显然是一次黑天鹅事件，研究人员在发现时甚至认为它是不可能的。经验教训已被吸取，硬件和软件供应商持续改进隔离能力。
+
+![Images](img/note.jpg)
+
+> **NOTE** 如果你不熟悉常见漏洞和暴露（`CVE`）数据库，它是由 `MITRE` 公司与多个美国组织合作维护的所有已知漏洞列表。
+
+我在第 8 章 中对虚拟机安全作了更详细的阐述。
+
+## 容器
+
+容器是对前文所述虚拟机的一种演进。它们是计算虚拟化技术，但使用方式不同。“一图胜千言”在此适用，请查看图 7-9 了解容器及其与基于虚拟机管理程序的标准虚拟机的区别。
+
+![Images](img/pg149_Image_47.jpg)
+
+---
+
+**Figure 7-9** 虚拟机与容器的对比
+
+如图所示，容器不同于传统虚拟机，因为容器不需要处理操作系统的所有“冗余”（也就是说，你的应用真的需要 `calc.exe` 才能运行吗？）与其将操作系统、所需库和应用程序捆入 30GB 的虚拟机包中，你可以将应用程序及其所需的任何依赖（如库）放入一个更小的包中，即容器。容器使用基础操作系统的共享内核和其他功能。容器提供了一个受限环境，仅允许运行在容器配置中定义的进程和功能。该技术并非专属于云技术；容器本身可以在虚拟化环境中运行，或直接在单个服务器上运行。
+
+![Images](img/note.jpg)
+
+> **NOTE** 容器只是一种包装应用程序和所需依赖的花哨方式。
+
+由于容器比传统虚拟机小得多，它提供了两个主要优势：首先，容器可以极快速地启动，因为它不需要像虚拟机那样等待操作系统启动。这一特性有助于提升灵活性。其次，容器有助于实现可移植性。注意，我说的是“帮助”，而非“完全解决”可移植性问题。移动容器显然是一个快速操作，但容器本身需要支持的共享内核。这仅解决了运行时（引擎）依赖问题，而许多提供商会支持 `Docker Engine`，该引擎已成为当今容器引擎的默认选项。容器可移植性可能会受到容器化技术中其他所有元素的影响，例如容器主机、镜像以及通过管理系统（如 `Docker Swarm` 或 `Kubernetes`）进行的编排。如果你计划使用容器在不同提供商之间，或在数据中心和云之间实现可移植性，你需要考虑并解决容器化技术涉及的所有方面。
+
+我在第 8 章 中讨论了容器的各种组件。
+
+### Platform-Based Workloads
+
+平台基础工作负载在 `CSA` 指南中定义为运行在共享平台上的内容，但不是虚拟机或容器。你可以想象，这涵盖了种类极其丰富的潜在服务。`SCA` 指南中给出的例子包括在多租户平台即服务（`PaaS`）数据库中运行的存储过程，以及在机器学习平台上运行的作业。我在此仅讨论这两者，因为我不希望给主题带来混淆。请记住，对于你的 `CCSK` 考试来说，尽管提供商可能只提供有限的安全选项和控制，但提供商负责平台本身的安全，当然也包括一直到设施本身的安全，这与任何其他 `PaaS` 服务的情况相同。
+
+### Serverless Computing
+
+在此语境下，“Serverless”本质上是提供商提供的服务，客户无需管理任何底层硬件或虚拟机，只需访问提供商服务器上的函数（例如运行你的 `Python` 应用）即可。它对你来说是“服务器无”，但实际上运行在后端，后端可能基于容器、虚拟机或专用硬件平台。提供商负责保护其所提供的平台的所有安全方面，从设施层面开始。
+
+`Serverless` 计算在第 10 章 中讨论。
+
+### 云环境如何改变工作负载安全
+
+云环境中改变安全的主要因素是多租户性。由提供商实现工作负载之间的隔离和分离是至关重要的，这应是提供商的首要任务。一些提供商可能提供专用实例功能，允许一个工作负载在单个物理服务器上运行，但通常这需要额外费用。这在公有云和私有云环境中均适用。
+
+### 不变工作负载使安全更可靠
+
+不变工作负载是成熟的云流程的云客户最终将实施的关键能力。我这么说是因为，实际上，大多数企业在最初采用云时会采用“如为如从”的方式（即“我们一直如此做”）。当你听到“immutable”（不可变）这个术语时，你应该联想到 *ephemeral*（短暂），即“持续时间很短”。然而，不可变具有 incredible（惊人的）安全优势。本节将介绍不变工作负载是什么以及为什么想要使用它们。
+
+我总是把不可变服务器称为“Vegas 模型的计算”。与传统的“宠物”模型不同，传统模型中你会为服务器打补丁、照顾它们，并且它们会运行多年；而不可变模型采用“牲畜”方式进行服务器维护。服务器运行、完成任务，然后被终止并用新服务器替换（有人称之为“nuke and pave”方法）。不可变模型中的“Vegas 模型”体现在：如果你去过赌场并坐在桌子旁一段时间，你最终会看到发牌员拍手离开。发牌员为什么这样做？因为赌场希望防止发牌员与客户之间的任何潜在串通。
+
+这在网络安全中如何体现？你知道攻击者成功利用漏洞后，会安装后门以保持持续访问。攻击者知道等待你修补漏洞的时间很短，他们会慢慢探索你的网络并窃取数据。直到他们完成最终目标可能需要数月。在典型做法中，系统补丁只修复原始漏洞，对已安装的后门没有任何作用。但在不可变方式中，你用补丁后的服务器镜像替换服务器，从而同时消除漏洞和后门（前提是操作正确）。你实质上“超时”了服务器，就像 `Vegas` 赌场超时发牌员一样。
+
+这是如何实现的？通常取决于提供商如何提供此功能。一般需要利用云提供商通过自动扩展（`auto-scaling`）所提供的弹性。例如，你可以声明需要在自动扩展组中运行三个相同的 `Web` 服务器实例（你可以称其为集群）。当时间到来（比如每 45 天），你会更新镜像以包含最新补丁（请注意，并非所有补丁都是安全补丁），并测试新镜像。一旦你对镜像本身满意，就告诉系统使用新镜像，这将用于自动扩展组，并终结（删除）一个服务器。自动扩展组会检测到实例缺失，并根据新镜像构建新的服务器实例。此时，你的服务器实例将基于新镜像构建。进行真实错误监控，假设一切通过，你就重复此过程，直到整个组都运行新补丁镜像。
+
+![Images](img/exam_tip.jpg)
+
+> **EXAM TIP** 考试时请记住，使用不可变方法可在镜像进入生产环境之前，对大部分安全测试在镜像上完成。
+
+听起来很简单，对吧？事实上，在元结构层面是如此。你的应用程序也需要能够处理这种不可变性，而这可能会变得非常复杂。例如，如果你使用单个存储卷来托管操作系统、应用程序和所有数据，你可能需要重新设计应用程序，使数据写入的位置不同于用于运行操作系统的卷。
+
+![Images](img/exam_tip.jpg)
+
+> **EXAM TIP** 关于您 `CCSK` 考试的好消息——您不会被问及在 `applistructure` 层如何实现这一点。您只会被问及 `metastructure`（或虚拟基础设施）的实现方式。
+
+使用不可变方法的最大“陷阱”？手动对实例进行更改。当您采用不可变方式时，不能直接对运行中的实例进行任何更改，因为这些更改会在实例被清除时一同消失。所有更改必须先在镜像（`image`）上完成，然后再部署该镜像。为此，您需要禁用对服务器实例的远程登录。
+
+我已经提供了纯不可变性定义的示例。当然，也可以采用混合方式，例如前面提到的通过某种集中化系统推送应用程序更新的方式。在这种情况下，仍然需要限制对服务器的直接访问，系统的安全性仍然得到满足，因为所有操作都在集中进行，且用户无法直接在相关服务器上进行更改。
+
+不可变方法还有其他安全优势。例如，要将应用程序和进程加入白名单，就不能在服务器本身上进行任何更改。因此，为服务器配备某种文件完整性监控（`file integrity monitoring`）会更加容易，因为一旦发现有变更，就能推断出很可能存在安全问题。
+
+#### 不可变工作负载的要求
+
+现在您已了解不可变方法及其优势，让我们来看看该新方法的一些要求。
+
+首先，您需要一个支持该方法的提供商——这对大型 `IaaS` 提供商来说不应是问题。您还需要一种一致的图像创建流程，以应对补丁和恶意软件签名更新（虽然这些更新可以与混合方式分开讨论）。
+
+您还需要确定如何在图像创建和部署过程中对镜像本身进行安全测试。这包括相关的源代码测试和漏洞评估（如适用）。（有关此主题的更多内容请参见第 10 章）。
+
+日志记录和保留也需要全新的方法。在不可变环境中，您必须尽快将日志从服务器导出，因为服务器可能在瞬间消失。这意味着必须尽快将服务器日志导出到外部收集器。
+
+所有这些镜像都需要适当的资产管理。这可能会增加管理复杂度，并进一步管理服务目录，以确保准确记录所有运行中的服务以及即将在生产环境中运行的服务。
+
+最后，运行不可变服务器并不意味着您不需要灾难恢复计划。您需要确定如何安全地在生产环境之外存储镜像。例如，可以使用跨账户权限，将镜像复制到其他账户（如安全账户）进行保存。如果生产环境被攻击者入侵，他们可能不仅删除运行中的实例，还会删除所有镜像。但如果您已将这些镜像备份到其他位置，就可以迅速重建。
+
+### 云对标准工作负载安全控制的影响
+
+随着运行工作负载的新方式不再局限于传统虚拟机，您需要为 `CCSK` 考试了解一些传统安全控制的变化。以下是您在不同场景中可能面临的挑战列表：
+
+- 在服务器 less 环境（参见第 10 章）中实现软件代理（如主机防火墙）可能是不可能的。
+- 即使可以运行代理，也必须确保它们轻量级（开销不大）并能在云环境中正常工作（例如，能够跟上自动扩缩容）。任何依赖 `IP` 地址来识别系统的应用（无论是通过代理还是中央控制台）在不可变环境中基本上失效。`CSA` 通常称之为在云环境中“保持与快速变化的速度同步”的能力。结论是：请向当前提供商询问他们是否提供“云版本”的代理。
+- 代理本身并不增加服务器的攻击面——通常开放的端口越多，攻击面越大。此外，如果代理消耗配置变更或签名，您需要确保这些变更和签名来源于受信任的权威系统，如内部更新服务器。
+- 关于使用内部更新服务，在云环境中利用这些系统同样没有理由不这样做。考虑一下您在传统环境中是如何操作的：是每个分支机构都有集中化管理工具，还是在总部设有中央管理控制台，分支机构的计算机从该单一来源更新？对于这些更新服务，您可以将云服务器实例视作分支机构的服务器，前提是您已建立适当的网络路径。
+
+### 工作负载安全监控和日志的变更
+
+传统上使用 `IP` 地址来识别虚拟机，这在高度动态的云环境中并不适用。诸如 `serverless` 之类的技术根本无法使用传统方式，因为它们不支持安装代理。因此，监控和日志变得更具挑战性。
+
+与其使用 `IP` 地址，您必须能够使用某种唯一标识符。例如，可以通过收集标签来追踪系统。此类标识符还必须考虑到云环境的短暂（`ephemeral`）特性。这同样适用于代理和中央控制台。请与供应商沟通，确认他们是否提供能够通过非 `IP` 方式跟踪系统的云版本。
+
+另一个发生重大变化的领域是日志。我在前面提到，在虚拟服务器环境中应尽快将日志从服务器导出，但情况比这更复杂。在 `serverless` 环境中，日志可能需要在运行在提供商服务器上的代码中实现。此外，您还需考虑将大量流量发送回集中式日志系统或安全信息与事件管理（`SIEM`）系统的成本。您可能需要评估 `SIEM` 供应商是否提供通过某种“转发器”来最小化网络流量的方式，并询问其对日志转发的建议。例如，供应商是否建议不将网络流量日志发送到集中日志系统，因为其传输开销较大？如果运营成本是关注点（何时不是呢？），您可能需要制定计划，明确哪些日志数据是真正需要的，哪些不是。
+
+## 关键要点
+
+- The cloud is always a shared responsibility, and the provider is fully responsible for building the physical aspects of a cloud environment.
+- `SDN` networking should always be implemented by a cloud provider. A lack of a virtualized network means a loss of scalability, elasticity, orchestration, and, most importantly, isolation.
+- Remember that the isolation capabilities of `SDN` allow for the creation of multiple accounts/segments to limit the blast radius of an incident impacting other workloads.
+- `CSA` recommends that providers leverage `SDN` firewalls to implement a deny-by-default environment. Any activity that is not expressly allowed by a client will be automatically denied.
+- Network traffic between workloads in the same virtual subnet should always be restricted by content
+- Ensure that virtual appliances can operate in a highly dynamic and elastic environment (aka “keep up with velocity of change”). Just like physical appliances, virtual appliances can be bottlenecks and single points of failure if they’re not implemented properly.
+- For compute workloads, an immutable environment offers incredible security benefits. This approach should be leveraged by customers whenever possible.
+- When using immutable servers, you can increase security by patching and testing images and replacing nonpatched instances with new instances built off the newly patched image.
+- If using immutable servers, you should disable remote access and integrate file integrity monitoring because nothing in the running instances should change.
+- Security agents should always be “cloud aware” and should be able to keep up with the rapid velocity of change (such as never use `IP` addresses as system identifiers).
+- As a best practice, get logs off servers and on to a centralized location as quickly as possible (especially in an immutable environment), because all servers must be considered ephemeral in the cloud.
+- Providers may limit your ability to perform vulnerability assessments and penetration testing, especially if the target of the scans is their platform.
+
+---
+
+# 练习题
+
+## 1. 当您考虑云实例的安全代理时，主要关注点是什么？
+
+A. 供应商获得奖项。
+
+B. 供应商使用基于启发式检测而非基于签名的检测。
+
+C. 云服务器实例的供应商与内部实例使用的供应商相同。
+
+D. 供应商代理不使用 `IP` 地址来标识系统。
+
+## 2. 关于 `SDN` 与 `VLAN` 的区别，下列哪项或哪些陈述是准确的？
+
+A. `SDN` 隔离流量，有助于微分段；`VLAN` 将网络节点划分为广播域。
+
+B. `VLAN` 约有 65,000 个 ID，而 `SDN` 超过 1600 万。
+
+C. `SDN` 将控制平面与硬件设备分离，并允许应用程序与控制平面通信。
+
+D. 上述全部均为准确陈述。
+
+## 3. 使用不可变服务器时，如何授予对 `applistructure`（应用结构）的管理访问以便对运行实例进行更改？
+
+A. 管理访问应仅限于运营团队，以支持职责分离的标准安全做法。
+
+B. 管理访问应仅限于开发团队，以支持开发团队拥有其构建的应用。
+
+C. 管理访问应对所有人限制，任何在 `applistructure` 级别的更改都应在镜像上进行，并使用该镜像创建新实例。
+
+
+
+D. 在不可变环境中，`applistructure` 的管理访问仅限于提供商。
+
+4. 微分段（`microsegmentation`）的主要目的是什么？
+
+A. 它是一种细粒度的机器分组方式，使其更易于管理。
+
+B. 它是一种细粒度的机器分组方式，可限制爆炸范围。
+
+C. 微分段可以利用传统 VLAN 技术对机器进行分组。
+
+# 虚拟化和容器
+
+本章节涵盖 CSA 指南第 8 领域的以下主题：
+
+* 主要虚拟化类别
+* 计算虚拟化的安全
+* 网络虚拟化的安全
+* 存储虚拟化的安全
+* 容器组件
+* 容器及相关组件的安全
+
+> 各行各业的公司需要假设一个软件革命即将到来。
+>
+> —Marc Andreessen
+
+Yes, the opening quote in this chapter is the same quote used in 第 7 章. I did this intentionally to highlight the fact that this chapter builds on the topic of the software revolution introduced in 第 7 章. It expands the discussion to address the security issues surrounding virtualization and the responsibility split between the provider and the customer. The material is presented in this fashion to provide consistency with the CSA Guidance and the CCSK exam. If a subject has been addressed as part of another chapter, however, I’ll point you there as a refresher.
+
+![Images](img/note.jpg)
+
+**NOTE** As always, backgrounder material is included in this chapter to address any subject material that isn’t covered as part of the CSA Guidance. This material is presented to improve your understanding of core technologies and concepts that the CSA Guidance assumes you already know; it’s not required for the CCSK exam.
+
+As you now know, virtualization is a core enabling technology in the cloud, and it’s not just about virtual machines. Virtualization is how compute, network, and storage pools are created and is the enabling technology behind the multitenancy aspect of cloud services. In this chapter, we look at the responsibility split for securing various virtualized technologies—what to look for from the provider and what you need to do as the consumer. You’ll also learn about the various components involved with containers and some approaches to securing them.
+
+![Images](img/note.jpg)
+
+**NOTE** Virtualization provides the abstraction needed for resource pools, which are then managed using orchestration. Without virtualization, there is no cloud.
+
+Much of the security we use today in an IT world assumes that we have physical control of the underlying infrastructure. This hasn’t changed; what has changed with the cloud is that the provider is responsible for securing the physical infrastructure. In addition, virtualization adds two new layers for security controls:
+
+* Security of the virtualization technology itself, such as hypervisor security. This rests with the provider.
+* Security controls for the virtual assets. The responsibility for implementing available controls rests with the customer. Exposing controls for the customers to leverage is the provider’s responsibility.
+
+### Major Virtualization Categories Relevant to Cloud Computing
+
+The main areas of virtualization that you need to know for your exam are straightforward: Compute, Network, Storage. Each of the three creates its own storage pools, and those pools are possible only as a result of virtualization; it makes sense, then, that these are areas of focus for the CCSK exam. The following sections will refresh your memory on each of these pools. Then I will cover how the CSA splits the security responsibilities of each technology.
+
+#### Compute Virtualization
+
+You know about virtual machines and hypervisors already, so consider this a refresher. Compute virtualization abstracts the running of code (including operating systems) from the underlying hardware. Instead of running code directly on the hardware, it runs on top of an abstraction layer (such as a hypervisor) that isolates (not just segregation!) one virtual machine (VM) from another. This enables multiple operating systems (guest OSs) to run on the same hardware.
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** For the exam, remember that compute virtualization abstracts the running of code (including operating systems) from the underlying hardware.
+
+Although compute virtualization is generally tied to virtual machines, there is more to it than VMs (or, more appropriately, instances, when discussing the cloud). An older form of virtualization that you may be aware of is the Java Virtual Machine (JVM). Rather than go too deeply into JVMs, I’ll limit this discussion by simply saying the JVM creates an environment for a Java application to run in. The JVM abstracts the underlying hardware from the application. This allows for more portability across hardware platforms, because the Java app does not need to communicate directly with the underlying hardware, only with the JVM. There are, of course, many other examples of virtualization out there, but the big takeaway is that virtualization performs abstraction.
+
+![Images](img/note.jpg)
+
+**NOTE** Java Virtual Machines are called out in the CSA Guidance as a form of compute virtualization.
+
+The next era of compute virtualization that needs to be addressed is about containers and serverless computing technologies. Both technologies also perform some form of compute abstraction. I cover serverless computing in greater depth in 第 14 章.
+
+##### Cloud Provider Responsibilities
+
+The primary security responsibilities of the cloud provider in compute virtualization are to enforce isolation and maintain a secure virtualization infrastructure. Isolation ensures that compute processes or memory in one virtual machine/container are not visible to another. This isolation supports a secure multitenant model, where multiple tenants can run processes on the same physical hardware (such as a single server). The cloud provider is also responsible for securing the underlying physical infrastructure and the virtualization technology from external attack or internal misuse. Like any other software, hypervisors need to be properly configured and will require the latest patches installed to address new security issues.
+
+Cloud providers should also have strong security in place for all aspects of virtualization for cloud users. This means creating a secure chain of processes from the image (or other source) used to run the virtual machine all the way through a boot process, with security and integrity being top concerns. This ensures that tenants cannot launch machines based on images that they shouldn’t have access to, such as those belonging to another tenant, and that when a customer runs a virtual machine (or another process), it is the one the customer expects to be running.
+
+Finally, cloud providers should also assure customers that volatile memory is safe from unapproved monitoring, since important data could be exposed if another tenant, a malicious employee, or a bad actor is able to access running memory belonging to another tenant.
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** Remember that volatile memory contains all kinds of potentially sensitive information (think unencrypted data, credentials, and so on) and must be protected from unapproved access. Volatile memory must also have strong isolation implemented and maintained by the provider.
+
+##### Cloud Consumer Responsibilities
+
+The primary responsibility of the cloud user is to implement security properly for everything deployed and managed in a cloud environment. Cloud customers should take advantage of the security controls exposed by their providers for managing their virtual infrastructures. Of course, there are no rules or regulations as to what a provider must offer customers, but some controls are usually offered.
+
+Cloud providers offer security settings such as identity and access management (IAM) to manage virtual resources. When you’re considering the IAM offered by the provider, remember that this is generally at the management plane, not the `applistructure`. In other words, we’re talking about the ability for your organization’s users accessing the management plane to be given the appropriate permissions required to start or stop an instance, for example, not log on to the server itself. For a refresher, review the “Securing the Management Plane” section in 第 6 章.
+
+
+
+Cloud providers will also likely offer logging of actions performed at the metastructure layer and monitoring of workloads at the virtualization level. This can include the status of a virtual machine, performance (such as CPU utilization), and other actions and workloads.
+
+IAM 在云环境中与传统数据中心一样重要。云计算部署基于主镜像（虚拟机、容器或其他代码），然后在云中作为实例运行。就像你在数据中心可能会使用受信任、预配置的镜像来构建服务器一样，你在云环境中也会如此操作。一些基础设施即服务（IaaS）提供商可能会提供“社区镜像”。但除非它们来自受信任的来源，否则我在生产环境中会非常犹豫使用这些镜像，因为它们可能未经提供商检查，存在恶意软件或坏演员安装后门的风险。管理组织使用的镜像是您最重要的安全责任之一。
+
+另一个提供商可能提供的选项是“专用实例”或“专用托管”。这通常会增加成本，但如果运行在与其他租户共享的硬件上的工作负载的感知风险被认为不可接受，或者存在合规要求必须在单租户服务器上运行工作负载，则这可能是一个有用选项。
+
+![Images](img/tip.jpg)
+
+**TIP** 专用实例可能会有各种限制。例如，虽然工作负载可能运行在单租户硬件上，但您的数据很可能存储在多租户存储环境中。您可能还有其他技术限制，例如并非所有服务都支持或可用于专用实例。此领域要求您充分了解提供商在提供“专用”任何内容时实际提供了什么。
+
+最后，客户负责保护工作负载内部的所有安全。所有标准措施都适用，例如从操作系统的安全配置开始，保护任何应用程序，更新补丁，使用代理等。云环境中的主要区别在于用于构建运行服务器实例的镜像的管理，这源于云计算的自动化。如果没有强大的资产管理，很容易部署旧配置，这些配置可能未打补丁或未正确保护。
+
+其他一般计算安全问题包括：
+
+- 虚拟化资源往往更短暂，变化速度更快。相应的安全措施（如监控）必须与步伐同步。
+- 主机级别的监控/日志可能不可用，尤其是在无服务器部署中。可能需要使用其他方法，例如将日志嵌入您的应用程序。
+
+## 网络虚拟化
+
+本节涵盖了第 7 章（Chapter 7）的大部分内容，因此我将尽量简要说明。您知道业界有多种网络虚拟化技术，从虚拟局域网（VLAN）到软件定义网络（SDN）。到现在，您已经明白“一切由软件驱动”是行业趋势。软件驱动的关键作用在于资源池划分、弹性伸缩以及云能够大规模运作的其他所有方面。
+
+我将重点讨论虚拟环境的安全性相关事项，然后说明每一方（提供商和客户）的责任。首先是虚拟网络的过滤和监控。
+
+### 过滤和监控
+
+如果两个虚拟机之间的网络流量永不离开物理计算机，是否会经过外部物理防火墙的检查和过滤？不是，因此我们仍然需要对网络流量进行检查和过滤，但不再能使用过去相同的安全控制措施。早期的虚拟化时代，有人认为将所有虚拟网络流量发送到物理防火墙进行检查后再重新引入虚拟网络是个好主意。新的虚拟化方法可能包括将虚拟流量路由到同一物理服务器上的虚拟检测机，或将网络流量路由到同一虚拟网络中的虚拟设备。这两种方式都可行，但仍会引入瓶颈，且路由效率不高。
+
+请记住，并非一切都丧失。提供商很可能会提供某种过滤能力，无论是通过 SDN 防火墙的使用，还是在虚拟化层内部实现。
+
+![Images](img/note.jpg)
+
+**NOTE** 任何设备（虚拟或物理）都可能成为瓶颈或单点故障。
+
+从网络监控的角度来看，如果您无法像在自己的环境中那样获得与提供商相同的网络流量详细信息，这并不奇怪。这是因为云平台/提供商可能不支持直接进行网络监控的访问。他们会说这是因为复杂性和成本所致。只有在您自己控制的主机上自行收集原始数据包，或使用虚拟设备时，才能获取到针对您控制的系统的流量（无论是流向还是发出）。在提供商管理的系统中，由于安全原因，您将无法获取这些网络流量的监控，因为这会对提供商构成安全风险。
+
+### 管理基础设施
+
+默认情况下，虚拟网络管理平面对全世界开放，如果被恶意分子通过 API 或 Web 访问，他们可以在几秒钟内通过 API 或 Web 访问破坏整个虚拟基础设施。因此，必须确保管理平面得到适当的保护。如需了解此关键主题的 refresher，请参阅“保护管理平面”（Chapter 6）。
+
+### 云提供商的责任
+
+与云环境中的计算虚拟化一样，虚拟网络也存在共享责任模型。我将先说明提供商的责任，然后再阐述客户在网络虚拟化方面的责任。
+
+绝对的首要安全任务是对网络流量进行隔离和分离，防止租户查看其他租户的流量。在任何情况下，除非双方明确同意（例如通过跨账户权限），否则一个租户不应能看到另一个租户的流量。这是多租户网络的最基础安全控制。
+
+其次，即使在租户自己的虚拟网络内部，使用 Wireshark 等抓包工具进行流量窃听也应被禁用，以降低攻击者通过 compromise 单个节点后用于监控网络的可能性（这在传统网络中很常见）。这并不意味着客户不能在虚拟服务器上使用某些流量嗅探软件，但意味着客户只能看到发送到特定服务器的流量。
+
+此外，所有虚拟网络应提供内置防火墙功能，供云用户使用，无需自行部署主机防火墙或外部产品。提供商也负责检测并防止对底层物理网络和虚拟化平台的攻击，包括云本身的边界安全。
+
+### 云消费者的责任
+
+消费者最终负责满足其自身的安全要求。通常，这需要消费和配置由云提供商创建和管理的安全控制，尤其是虚拟防火墙。以下是消费者在保障网络虚拟化安全时的几条建议：
+
+- 利用新网络架构的可能性
+
+  例如，将应用堆栈隔离到各自独立的虚拟网络以增强安全性，可以在几乎没有成本（仅考虑运营成本，且运营成本可能会上升）下完成。在传统的物理网络环境中，这种实现可能成本高昂。
+
+- 接下来，软件定义基础设施（SDI）包括创建网络配置模板的能力。您可以本质上将一个已知良好的网络环境保存为软件，从而能够在需要时以极快的速度重建整个网络环境。您也可以使用这些模板确保网络设置保持在已知良好的配置状态。
+
+- 最后，当提供商未向客户提供适当的控制以满足其自身安全要求时，客户将需要实施额外的控制（如虚拟设备或主机安全控制）以满足要求。
+
+### Cloud Overlay Networks
+
+- 我把这一节包括在内，是为了确保与实际 CSA 指导文档的映射保持完整。与本章大部分内容一样，云叠加网络在 第 7 章 中已有覆盖。请记住，云叠加网络是基于虚拟扩展局域网（VXLAN）技术的功能，它使虚拟网络能够跨越广域网（WAN）中的多个物理网络。这是因为 VXLAN 将数据包封装为可路由的格式。请注意，CSA 指导文档明确指出该技术超出必要材料范围，因此不会作为您 CCSK 考试的一部分。
+
+## Storage Virtualization
+
+- 存储虚拟化听起来像是新技术，但实际上并不是：我以经典的冗余阵列独立磁盘（RAID）为例，这是一种已经存在多年的存储虚拟化方法（自 1970 年代以来），今天可以在任何操作系统中实现。我将不讨论各种 RAID 级别的细节，但会说 RAID 0（条带集）例如可以将三块 1TB 硬盘组合成看起来像一块 3TB 硬盘。您可以称之为“存储池”。是的，这应该可以接受。使用软件 RAID，您通过在逻辑上将磁盘连接在一起来虚拟化存储，形成存储池。（此示例来源于 90 年代中期的 Windows NT——如需查找，请自行搜索。）
+
+- 存储虚拟化的概念已经存在很长时间，但在云环境中是如何实现的呢？很有可能提供商并不是使用一台通用服务器加上少量驱动器（即通过“just a bunch of drives”实现的直连存储）来构建这些池。他们大概率使用网络附加存储（NAS）或存储区网络（SAN）来构建这些池。由于 SAN 对于许多人来说是一个灰色地带，下一节将提供关于该主题的高层次背景介绍。如果您熟悉 SAN，或者您根本不在乎，可以跳过本节。
+
+### Storage Area Network Backgrounder
+
+- 研究表明，SAN 约占网络存储市场的三分之二。关键词是“网络”。SAN 是一个专用的存储设备网络。它是硬件和软件的组合，提供块级存储机制。它不提供文件系统，但会按需向授权服务器存储并发送数据块。因此，它不能被工作站上的用户直接访问；像大多数虚拟化技术一样，访问是抽象化的，操作受到协调。
+
+- 从高层次架构视角来看，SAN 参考架构通常可分为三层：主机层、网络层（fabric layer）和存储层。图 8-1 显示了 SAN 通常涉及的三层结构。
+
+![Images](img/pg168_Image_48.jpg)
+
+---
+
+**Figure 8-1** 三层 SAN 结构
+
+- **主机层**：服务器（或主机）从本地区网络（LAN）接收请求，并实现对底层 SAN 光纤网络（fabric）的访问。
+- **网络层**：这里包含所有网络组件。SAN 网络设备包括交换机、路由器、桥接器、网关，甚至线缆。
+- **存储层**：顾名思义，这里是实际存储设备所在的位置。直接的物理通信仍然主要使用小计算机系统接口（SCSI）。
+
+- SAN 使用专有协议完成工作。这些协议包括光纤通道（Fibre Channel）、光纤通道以太网（FCoE）、Internet SCSI（iSCSI）和 InfiniBand。它们都是专为高速传输块数据而设计，且比传输控制协议（TCP）网络具有更高的吞吐量。光纤通道在大型 SAN 环境中被认为是最流行的协议，部分报告称当前使用的 SAN 高达 80% 使用光纤通道，理论上速度可达 128 Gbps。
+
+- 从名称上可以看出，光纤通道使用光纤电缆。要连接到 SAN，需要使用主机巴士适配器（HBA）或 converged network adapters（CNA）。这两类网卡都配有光纤连接器；CNA 同时具备光纤连接器和标准以太网适配器。
+
+- 为降低费用和减少额外光纤电缆的需求，公司可能会选择使用标准以太网在 `converged network` 中传输 SAN 流量。实现这一点的两大主要协议是 `FCoE` 和 `iSCSI`。它们都将 SCSI 命令封装在以太网帧中，并通过标准以太网线进行传输。iSCSI 通常适用于较小的环境，但不适合大容量 SAN。
+
+- **逻辑单元号（LUN）** 现在您已了解 SAN 的高层架构以及存储虚拟化涉及的组件和协议，接下来看另一个需要关注的 SAN 项目：`logical unit number`（LUN）。LUN 为 SAN 中的每个磁盘和分区分配。例如，假设您拥有一个 1000TB 的大型 SAN，您不希望公司（或云环境）中的每个人都直接访问这 1000TB 的磁盘并随意写入数据。相反，您希望将其划分为多个 1TB 的卷。为此，您可以创建 1TB 逻辑卷并为其分配 LUN，以便主机服务器可以访问并控制该保留空间。LUN 用于向主机服务器呈现逻辑磁盘，提供对存储池中预留空间的抽象访问。
+
+![Images](img/note.jpg)
+
+**NOTE** LUN 不仅是 SAN 的概念，它的起源可追溯至 SCSI 技术标准，该标准定义了如何访问存储，因此适用于从 90 年代的存储阵列一直到当前最新的 SAN 技术的各种存储介质。
+
+- 您可能会想知道如何限制对这些虚拟磁盘的访问，使其仅限于适当的请求者。限制存储访问的方法包括 **zoning** 和 **LUN masking**。
+
+- **Zoning** 允许在逻辑上对端口或节点进行分组，仅让指定的主机访问指定的存储设备。通常在 SAN 光纤网络的交换机上配置。在 FCoE 实现中，这种划分方式与 VLAN 的配置相同，有两种设置方式：
+
+  - **软 zoning**：在光纤交换机上通过软件实现，防止端口在其分配的 zoning 范围之外被看到。软 zoning 的安全问题在于过滤而非物理阻断，若端口的光纤地址被伪造，仍可能被未授权访问。
+  - **硬件分区**：在硬件中实施限制，并物理阻止未经授权的设备访问分区。硬件分区被认为是更安全的阻止设备间通信的方式。
+
+- **LUN 分区** 在分区之外进行，以提供额外的安全性。请记住，分区确定哪些主机和存储设备被分组在一起，并限制对分区成员的访问。然而，正如您所知，存储设备可能包含多个逻辑驱动器。LUN 分区用于标识在分区内可以访问的虚拟驱动器。LUN 分区可以在主机总线适配器（HBA）上进行，也可以在存储控制器上进行。从安全角度（考虑到伪造），通常认为 LUN 分区应在存储控制器上强制执行。
+
+### Storage Virtualization Security
+
+大多数云平台使用高度冗余和耐用的存储机制，这些机制会创建数据的多个副本并将其分布在多个存储位置。这称为*数据分散*。这种做法使提供商能够提供惊人的弹性（一些提供商甚至提供“11 9’s”，即 99.999999999 百分比的弹性 SLA）。
+
+![Images](img/note.jpg)
+
+**NOTE** 弹性和可用性不是同一回事。如果网络故障，数据可能无法访问。数据仍然存在（弹性），但不可用（可用性）。
+
+提供商通常会在物理层加密所有客户数据，这不能保护虚拟层的数据，但可以在驱动器被退役并等待销毁时保护数据（当然，也能防止驱动器被恶意管理员窃取）。
+
+我将在 第 11 章 中讨论客户可以使用的其他安全措施（如加密、访问控制等）来保护存储数据。
+
+## Containers
+
+在 第 7 章 中，我提到容器可以帮助解决可移植性问题，但该技术不仅依赖于源代码，而且所有组件都需要得到适当的保护。本节介绍容器系统的各种组件以及 CSA 的高层安全建议。虽然容器技术已经相当成熟，但它仍在快速演进。
+
+容器是一种计算虚拟化技术，与虚拟机不同，它只打包应用程序及其依赖项，然后在共享内核的隔离用户空间中运行。容器可以直接在物理服务器（甚至笔记本电脑）上运行，也可以运行在虚拟机中。
+
+![Images](img/note.jpg)
+
+**NOTE** 容器是应用层的抽象，用于将软件与其环境隔离。容器不一定提供完整的堆栈安全隔离，但它们提供任务隔离。相反，虚拟机通常提供完整的安全隔离。您可以在同一组物理或虚拟主机上放置安全上下文相同的任务，以实现更细致的安全隔离。
+
+容器系统始终包含以下组件：
+
+- **Container** 这是执行环境本身。容器提供受限环境，仅允许运行在容器配置文件中定义的进程和能力。虽然虚拟机是操作系统的完整抽象，容器则是一个受限的运行空间，用于隔离进程，同时仍利用基础操作系统的内核和其他功能。
+- **Engine** 也称为*容器运行时*，是容器运行的环境。Docker Engine 是一个非常流行的容器运行时示例。这并不意味着它是唯一的容器运行时，但它是我们今天所知的容器运行时的最早之一，也是最知名的。
+- **编排和调度控制器** 容器编排负责管理容器的生命周期。编排处理容器的配置、部署、扩展、迁移以及健康监控等事宜。当容器需要部署时，编排工具会调度部署并确定合适的系统来运行该容器。它知道如何根据配置文件（包括容器镜像仓库位置、网络配置、存储挂载、日志存储等）来部署和管理容器。容器编排和调度工具的示例包括 Kubernetes 和 Docker Swarm。
+- **Image repository** 这是存储所有可作为容器部署的镜像和代码的地方。Docker Hub 是一个流行的容器镜像仓库示例。镜像仓库可以是公共的或私有的。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 在镜像仓库方面，我使用了 CSA 指南中的命名约定，但您也应了解两个相关概念——镜像注册表和镜像仓库。镜像注册表用于托管和分发镜像。镜像仓库在技术上定义为一组相关镜像的集合。简单来说，这意味着一个镜像注册表可以包含多个仓库。您经常会看到这些术语被混用。在 CCSK 考试中，将使用“镜像仓库”这一术语。
+
+在以上所有要素的考虑下，我希望您能理解可能存在的专有依赖，使得容器的可移植性比您预期的要更具挑战性。例如，将容器从 Windows 运行时迁移到 Linux 运行时（反之亦然）如何？如果您目前使用 Kubernetes 作为编排和调度服务，然后决定改用云提供商的编排服务，运行时是否向后兼容？正如我所说，容器可以帮助实现可移植性，但它并非万能的保证。
+
+### Container Definitions Backgrounder
+
+正如您所知，容器是根据您创建的定义文件构建和管理的。该定义文件会传递给服务（守护进程）以构建镜像，从而分配资源并实现其他配置设置。
+
+![Images](img/note.jpg)
+
+**NOTE** 容器定义文件不在 CSA 指南中，因此不会在 CCSK 考试中出现。本文介绍它们是为了更好地理解容器的配置和管理方式。
+
+以下是 Amazon Elastic Container Service (Amazon ECS) 用于构建和管理容器的配置文件中可用的一些选项：
+
+- **Name** 容器的名称
+- **Image** 要用于构建容器的仓库中的镜像名称
+- **Memory** 为容器分配的内存量
+- **Port mappings** 容器所需的网络端口
+- **Protocol** 所需的网络协议（TCP 或 UDP）
+- **Health checks** 监控容器健康状态；如果容器不可达，则会将其移除并替换
+- **CPU** 容器所需的 CPU 容量
+- **Working directory** 容器中执行命令的工作目录
+- **Secrets** 容器之外的凭据存储位置
+- **DNS servers** 容器使用的 DNS 服务器列表
+- **Mount points** 提供数据卷
+- **Log configuration** 容器应存储日志的位置
+- **User** 容器中使用的用户名；“privileged”用户可以以 root（管理员）身份运行所有操作
+
+
+
+# 容器安全最佳实践
+
+## 保护底层基础设施
+安全始于容器，在云环境中，这是提供商的责任。正如提供商在虚拟机世界中负责物理基础设施和虚拟化程序的安全一样，提供商也负责托管消费者容器的物理基础设施和容器平台。
+
+## 保护编排和调度服务
+编排和调度是容器部署和管理的关键组件。CSA 指南将其称为容器的“管理平面”。
+
+## 保护镜像仓库
+容器的镜像仓库可以像虚拟机镜像一样对待。镜像需要存储在安全位置，并应配置适当的访问控制，以确保仅授予经过批准的访问权限来修改镜像或配置文件。
+
+## 保护容器中的任务/代码
+容器包含软件代码。无论是在容器中还是在虚拟机上运行，薄弱的应用安全都是薄弱的。薄弱的安全性不仅限于容器中的代码；它也适用于“容器定义背景”中提到的定义文件。适当的网络端口、文件存储、密钥和其他设置可以提高容器环境的安全性，从而提高应用程序的整体安全性。
+
+![Images](img/note.jpg)
+
+> **注意**  
+> 这些是通用最佳实践。请始终查阅供应商文档以获取最新的特定产品安全建议。查看云安全联盟网站以获取更深入的容器安全建议，例如“实施安全应用容器架构的最佳实践”。此外，互联网安全中心提供了关于保护特定产品（如 Docker 和 Kubernetes）的行业建议。
+
+容器环境安全的最终要点是工具将提供不同程度的安全性。至少，所有产品都应具备强大的访问控制和身份验证功能。它们还应支持安全配置，以隔离文件系统、进程和网络访问。
+
+# 章节复习
+
+本章扩展了与计算、网络和存储虚拟化相关的内容。还包含了提供商和客户之间安全责任划分的更多信息。一如既往，包含了背景信息以解决您可能存在的知识差距，但这些信息不会成为考试的一部分。
+
+准备 CCSK 考试时，请确保您熟悉以下项目：
+
+- 云提供商必须将工作负载的强隔离作为其首要职责。
+- 提供商负责所有物理安全以及客户使用的任何虚拟化技术。他们必须保护虚拟化程序安全并实施任何必需的安全补丁。
+- 提供商必须以“默认安全”（即默认拒绝）配置实施所有客户管理的虚拟化功能。
+- 提供商必须确保任何易失性内存得到妥善保护，以防止其他租户或管理员意外访问。
+- 提供商必须实施强大的网络控制，以在物理层面和客户无法控制的虚拟网络层面保护客户。
+- 提供商必须隔离虚拟网络流量，即使网络由同一客户控制。
+- 提供商必须保护正在使用的物理存储系统。这可以包括物理层加密，以防止驱动器更换期间的数据泄露。
+- 消费者始终需要知道提供商提供什么安全性，以及他们需要做什么才能满足自己的安全要求。
+- 对于容器安全，请记住所有各种组件（引擎、编排和仓库）都需要得到妥善保护。
+- 容器提供应用程序隔离，但不是完全隔离。具有相似安全要求的容器应归为一组，并在同一物理或虚拟主机上运行，以提供更高的安全隔离。
+- 所有容器组件都应具备适当的访问控制和强身份验证。
+- 确保仅部署经过批准的、已知的和安全的容器镜像或代码。
+
+# 问题
+
+## 1. 为什么提供商必须在物理层加密硬盘驱动器？
+
+**A.** 它防止因盗窃导致数据泄露。  
+**B.** 它防止通过虚拟层被他人访问数据。  
+**C.** 它防止驱动器更换后数据泄露。  
+**D.** 答案 A 和 C 正确。
+
+## 2. 容器如何执行隔离？
+
+**A.** 它们执行应用层隔离。  
+**B.** 它们像虚拟机一样在所有层执行隔离。  
+**C.** 它们执行仓库隔离。  
+**D.** 以上全部正确。
+
+## 3. 以下哪项是云服务提供商的首要安全优先事项？
+
+**A.** 为客户实施 SDN 防火墙  
+**B.** 隔离租户对资源池的访问  
+**C.** 保护网络边界  
+**D.** 为客户提供网络监控能力
+
+## 4. 以下哪些是计算虚拟化的示例？
+
+**A.** 容器  
+**B.** 云覆盖网络  
+**C.** 软件模板  
+**D.** A 和 C
+
+## 5. Nathan 正试图使用数据包捕获工具排查正在运行的实例上的问题。他注意到在发往另一个租户机器的捕获网络流量中有明文 FTP 用户名和密码。Nathan 应该怎么做？
+
+**A.** 这是云中的正常行为。他应该联系另一个租户，建议他们在云中使用明文凭据是个坏主意。  
+**B.** Nathan 应该联系另一个租户并提交他的发现以获取漏洞赏金。  
+**C.** 这是不可能的，因为云环境中禁止使用 FTP。  
+**D.** 他应该联系提供商，建议他将取消使用他们的云服务，因为提供商未能隔离网络。
+
+## 6. 虚拟网络与物理网络相比有什么好处？
+
+**A.** 您可以将应用程序堆栈隔离在它们自己的虚拟网络中，从而提高安全性。  
+**B.** 整个虚拟网络可以从单一管理平面进行管理。  
+**C.** 物理网络中的网络过滤更容易。  
+**D.** 以上全部正确。
+
+## 7. 存储池是如何创建的？
+
+**A.** 提供商使用一堆连接到服务器的硬盘驱动器的直接存储。  
+**B.** 提供商使用存储区域网络。  
+**C.** 提供商使用 NAS。  
+**D.** 提供商以他们想要的任何方式构建存储池。
+
+## 8. 提供商希望确保在驱动器故障时客户数据不丢失。提供商应该怎么做？
+
+**A.** 使用 SAN 并在存储控制器中跨多个驱动器复制数据。
+
+# 第 9 章
+
+## 事件响应
+
+本章涵盖了 CSA 指南第 9 域的以下主题：
+
+- 事件响应生命周期
+- 云如何影响事件响应
+
+> 战略缺乏战术是通往胜利最缓慢的道路。战术缺乏战略是失败前的噪音。  
+> — 孙子
+
+我本可以引用“如果你未能计划，你就计划失败”的引语，但孙子所指的战略——军事战略——与我们在处理事件响应（IR）时所必须遵循的战略十分相似。你需要制定计划，并在事件发生前经常测试该计划。事件响应必须在问题出现时（而非事后）进行规划和演练。你有听说过任何 100% 成功阻止所有攻击的预防控制吗？没有，因为不存在。而且事件类型不仅限于故意攻击。你有多少次听到“human error”被归咎于事故？切记，事故可以是故意的也可以是意外的。你的 IR 战略必须应对所有这些情况。
+
+大多数组织已经制定了 IR 计划，这很好。我想知道，有多少公司将这些计划扩展到了云系统中，又有多少公司正在考虑响应能力、取证收集以及治理的变更。请记住，你需要在虚拟世界中使用虚拟工具（软件）。你不再像过去那样插入硬件令牌到机器上进行硬盘位级复制。你的 IR 计划可能已扩展以包含云服务，但云服务所依赖的`人员和流程`是否已得到相应的考虑？IR 人员是否接受过针对特定云环境的培训？IR 流程是否能够同传统数据中心一样有效地应对云特有的机会和挑战？这些正是本章试图在为您准备 CCSK 考试的同时解决的`缺口`。准备充分且反复演练的策略至关重要，没有它，你的战术将只是一群人手足无措、火上浇油，只会让局面更糟。效法孙子，提前做好准备。
+
+
+
+本章基于 NIST 在 SP 800-61 Rev 2 中推广的现有 IR 生命周期。你也可以参考其他标准框架，如 ISO/IEC 27035，以及欧洲网络与信息安全局（ENISA）的《incident response and cyber crisis cooperation 策略》出版物，如果你感兴趣的话。
+
+## 事件响应生命周期
+
+CSA 指南中的 IR 生命周期来源于文档“计算机安全事件处理指南”（NIST 800-61r2）。如图 9-1 所示，IR 生命周期包括四个阶段：准备；检测与分析；遏制、清除与恢复；以及事后活动。
+
+![Figure 9-1 NIST incident response lifecycle. (Source: NIST 800-61r2.)](img/note.jpg)
+
+在我们讨论 CCSK 材料之前，我需要先定义什么是事件，以及为什么计算机安全的 IR 与业务 IR 截然不同，需要先对事件和事件的背景进行说明。
+
+![Images](img/note.jpg)
+
+> **NOTE** 如前所述，本章的背景材料用于补充 CSA 指南中未涵盖的内容，旨在提升对核心技术和概念的理解；这些概念是 CSA 指南默认您已掌握的，因此不需要为 CCSK 考试准备。
+
+### 事件与事件背景
+
+虽然本章其余部分显然聚焦于云端的 IR，但首先需要明确几个术语的定义，这些定义来源于 ITIL。
+
+![Images](img/note.jpg)
+
+> **NOTE** 如果您不熟悉 ITIL，它是一个专注于持续改进 IT 服务管理的组织。基本上，ITIL 描述了一套 IT 服务交付的最佳实践框架，并提供了许多业务高管和所有者在讨论 IT 时使用的语言。最新版本 ITIL 4 于 2019 年发布。
+
+- **事件** 事件是“对 IT 服务或其他配置项（CI）管理产生意义的状态变更”。配置项指的是为了提供 IT 服务而需要管理的任何事物，包括软件、基础设施、流程以及其他项目。
+
+- **事件** 事件被定义为“未计划的 IT 服务中断，或服务质量下降”。即使配置项尚未导致服务中断，其故障仍被视为事件。例如：您有多个数据库只读副本（本质上是复制），其中一个副本出现故障。这属于事件，因为虽然服务未被中断或降级，但副本未按预期工作，可能会影响未来的可用性。
+
+所有事件都是事件，但并非所有事件都是事件（这里指正式的 Incident）。如果没有事件管理机制，就无法正式声明一个 Incident。事件管理分析这些事件；如果事件被认定为 Incident，则启动 Incident 响应。
+
+现在，ITIL 对于全球国家行为者窃取企业知识产权的情况并没有任何说明。作为安全专业人员，我们将所有情况视为安全事件，但这并不符合标准 ITIL 对 IR 的定义。例如，物理组件故障导致服务不可用，是否属于事件？答案是肯定的，因为这是未计划的中断。那么，海外攻击者从云端存储中窃取 5TB 数据，是否属于事件？这让我觉得 ITIL 的定义需要改进——或者我们需要转向计算机安全事件响应（CSIRT）。
+
+因此，业务世界和安全世界对“事件”的定义存在差异，也导致了不同的团队和学科需求。让我们回到云端 IR 讨论，先高层次描述 IR 生命周期的每个阶段，然后再探讨云端 IR 在每个阶段的变化。
+
+![Images](img/note.jpg)
+
+> **NOTE** 以下阶段中高亮显示的活动来自 CSA 指南。指南列出了部分活动，但并非每个阶段的完整清单。如需更详尽的活动列表，请参考 NIST 800-61r2。
+
+## 准备阶段
+
+准备阶段决定了战斗的胜负在起点就已决定。也就是说，正是在准备阶段，公司建立其计算机安全 IR 能力，并创建 CSIRT，以确保公司具备应对事件的充分装备和准备。
+
+CSA 指南列出的该阶段必需元素包括：
+
+- 处理事件的流程
+- 处理员沟通与设施
+- 事件分析硬件与软件
+- 内部文档（端口列表、资产列表、网络图、当前网络流量基线）
+- 培训识别
+- 通过主动扫描、网络监控、漏洞评估和风险评估对基础设施进行评估
+- 订阅第三方威胁情报服务
+
+我将用另一句孙子名言概括这份清单：“知己知彼，百战不殆。”换言之，了解自身资产与弱点，以及拥有内部（CSIRT）和外部（第三方威胁情报）知识渊博的人员，便能在所有战役中取得胜利。
+
+### 检测与分析阶段
+
+此阶段专注于从系统和其他 IT 组件获得的遥测数据（日志、监控、指标、告警及其他消息）。正如您之前所学，ITIL 事件响应与计算机安全事件响应存在区别。下面的内容即是两者方法差异的体现：仅凭 CPU 使用率等通用遥测数据不足以检测攻击。CSIRT 需要安全专用的检测与分析工具。
+
+CSA 指南推荐的任务包括：
+
+- 构建告警体系，涵盖终端防护、网络安全监控、主机监控、账户创建、权限提升、其他指标、SIEM、安全分析（基线与异常检测）、用户行为分析等。
+- 验证告警（降低误报）并进行升级处理。
+- 估算事件的范围。
+- 指派事件经理，负责协调后续行动。
+- 指定负责向高级管理层通报事件遏制与恢复状态的人员。
+- 构建攻击时间线。
+- 确定潜在数据损失的范围。
+- 建立通知与协调活动。
+
+### 遏制、清除与恢复阶段
+
+这是 IR 的实战部分，它直接反映出您的真实准备程度，而非您之前的假设。
+
+首先，您必须通过将系统脱机来遏制攻击。需权衡数据丢失与服务可用性的取舍，确保在发现时系统不会自我毁灭。随后，清除与恢复包括清理受 `compromized` 设备、将系统恢复至正常运行状态，并验证系统功能正常。最后，部署防控措施防止类似事件再次发生，并记录事件及收集证据（`chain of custody`）。
+
+### 事后活动阶段
+
+您是否曾观看原版《星际迷航》电视剧？记得红衣（安全人员）在星际上下 `planet` 时会被绿色外星人砸中大石头？每当我想到幕后会议时，就会联想到这些红衣角色。事实上，我曾为了玩笑穿红衣参加一次会议，现场并无人察觉其意义，但这无所谓。
+
+这些事后会议旨在帮助大家学习并改进 IR 流程；然而，它们往往演变成指责环节。与其责怪他人，不如思考以下问题：
+
+- 哪些方面可以改进？
+- 攻击是否可以更早被检测？
+- 如果拥有更多数据，是否能更快定位攻击？
+- 这项流程需要改变吗？如果需要，如何改变？
+
+#### The Five Whys Backgrounder
+
+Not that this will be on your exam, but have you ever heard of the “Five Whys” approach to getting to the bottom of an incident (aka, finding the root cause)? The following example is taken from an accident that happened at an Amazon fulfillment center, where an employee was hurt (thumb injury) on the job:
+
+![Image](img/page183.jpg)
+
+- **根本原因：** 该员工使用传送带，因为他没有桌子。
+- **解决方案：** 在工作站为员工提供桌子。
+
+在此案例中，需要四次“五个为什么”才能找到根本原因，但不应超过五次。下次你在事后分析会议上时，试试看（并且穿一件红衬衫）。
+
+## 云如何影响事件响应
+
+云会在事件响应（IR）生命周期的每个阶段引入变化。变化可能体现在需要联系提供商（如果事件涉及他们负责的内容），也可能体现在你负责的配置项的处理流程上。无论如何，你需要为云环境中的 IR 做好准备。
+
+### 准备
+
+你已经知道治理在云环境中会发生变化。治理及相关的服务级协议（SLAs）是首要需要解决的领域。你与提供商签订了哪些 SLAs，以及如何与提供商沟通？以下是你应向云提供商询问的关键问题：
+
+- 谁负责 IR 以及在哪些场景下负责？换句话说，客户（CSP）与客户之间的责任如何分配？
+- 联系点有哪些？如果发生事件，提供商是否知道联系谁，你能否联系到提供商的某人，是否提供电子邮件支持，或是否提供讨论论坛？是否有 24×7 的联系方式，还是仅在工作时间提供？
+- 提供商在事件发生后需要多久才能回应你？是十分钟、十小时还是十天？
+- 提供商的升级程序是什么？
+- 如果网络不可用，是否可以进行带外通信？
+- 客户 IR 团队与提供商团队之间的交接如何工作？
+- 客户是否有权限访问数据和日志以支持 IR？包含哪些数据和日志？
+- 日志是否以提供商的工具可访问的格式提供，还是需要使用提供商的工具才能查看？
+- 在什么情况下提供商会向客户警报正在进行的持续事件？他们对这种通知的 SLA 要求是什么？
+- 提供商是否拥有专门的 IR 团队？
+
+> （我曾咨询过数十亿美元公司，它们仅依赖其 IaaS 供应商的基本支持（即讨论论坛支持）。结果发现，付费购买正式的支持计划——至少可以与 CSP 办公室的某人通过电子邮件沟通——是可行的，但并未落实，也没有后续。实施支持协议根本被忽视了。）
+
+沟通显然是双向的。以下是确保你与 CSP 在事件发生时能够有效沟通的几条建议：
+
+- 确保你拥有与提供商的开放访问渠道，同时提供商也能在问题出现时联系到你。
+- 避免将特定员工列为主要联系人。如果提供商在通知你事件时，该联系人已不再在你公司任职，你该怎么办？确保该联系人的电子邮件地址被监控，并且通知已集成到你的 IR 流程中。
+
+测试同样至关重要。如果可能，建议你定期（每年或在发生重大变更时）与提供商一起审查并测试 IR 流程。大多数提供商希望客户满意，他们更愿意与你合作确保你已准备好应对事件，而不是面对不满的客户。你的流程将需要改变，提供商可能会基于过去与其他客户的经验，向你提出改进建议。
+
+你可能需要新的云专用工具（以及培训）来克服因没有物理访问提供商服务器而产生的限制。CSA 指南称这为“云跳板套件”（`cloud jump kit`）。这些工具必须同时适用于元结构（`metastructure`）和应用结构（`applistructure`）。如果这些工具不在你常规的日志活动中，跳板套件将帮助你获取云平台本身（`metastructure`）以及你在云环境中运行的系统（`applistructure`）的活动信息。实现方式多种多样，从通过 API 调用获取 `metastructure` 信息，到使用免费开源软件（FOSS）和商业即插即用（COTS）软件来执行诸如访问运行服务器内存等操作。
+
+通过使用不可变工作负载、虚拟网络、软件定义网络（SDN）防火墙以及其他新的选项和能力来构建云环境，你可以大幅提升 IR 能力。以下是 CSA 指南中关于架构与 IR 在云中如何协同工作的一些要点：
+
+- 了解你的系统和数据存储位置。CSA 指南指出“应用堆栈图”（`Application Stack Maps`）可用于考虑地理差异在监控和数据捕获方面的影响。应用堆栈图基本上标识应用的所有组件（如实例、数据库以及其他服务）。
+- 了解你的日志文件存储位置。调查人员是否能够访问它们？
+- 了解你如何隔离工作负载。与其应对一系统扩展到数百个系统的事件，实施严格的“爆炸半径”（`blast radius`）作为架构的一部分可以大幅降低事件蔓延范围，使其更易分析和控制。
+- 利用不可变工作负载。通过将受损实例迁移到已知的良好实例，可以快速恢复。这也有助于通过文件完整性监控和配置管理进行更强大的侦测，因为在不可变模型中不应在运行的实例上进行任何更改。
+- 进行威胁建模（详见 第 10 章）并开展桌面演练，以确定在云栈的不同组件上针对不同类型事件的最佳遏制方式。
+
+#### 云控制矩阵（CCM）事件响应控制
+
+我认为将云控制矩阵（CCM）和共识评估倡议问卷（CAIQ）中的控制纳入此事件响应章节很重要。尽管 CSA 指南未直接涉及 CCM 中的具体控制，但我认为在准备阶段花几分钟回顾这些控制并不失为好事。（也就是说，虽然这些控制本身不会直接作为 CCSK 考试的考点，但我并非把这部分当作背景资料，因为我认为了解提供商应在尽职调查时接受的检查点非常有价值。）
+
+下面的表格涵盖了 CCM 与 CAIQ（v3.0.1）中各项 IR 控制的条目。我建议你同时打开 CCM 和 CAIQ 的副本进行阅读。再次强调，你不会被考察对控制本身的细节，但这项练习将展示 CSA 认为在 IR 方面重要的内容，并让你更熟悉 CCM 与 CAIQ——这些你在 CCSK 考试中必然会被考查的内容。
+
+![Images](img/exam_tip.jpg)
+
+> **EXAM TIP**  
+> 在考试时，请记住 CCM 明确了控制项和负责方，而 CAIQ 提供的则是您可以用通俗语言提问的问题。
+
+![Images](img/pg186_Image_50.jpg)
+![Images](img/pg187_Image_51.jpg)
+
+### 检测与分析
+
+如前面所述，您需要同时拥有对云基础设施的部分以及在该环境中运行的工作负载的可见性。您的提供方应提供对 `metastructure` 的监控和日志记录，并且您应将所有这些数据安全存储。更佳的是，您应能够在云环境中实现自动事件驱动的安全措施，并在云环境中触发自动响应以应对事件。例如，安全组发生变更时，为何还要等待工程师去调查，而不是自动将其恢复为预期的状态？CSA 指南称此为实现“自动化响应工作流”。
+
+其他提供方通常提供的数据流可能更侧重于性能指标。虽然从安全角度来看并非理想（因为“低慢”攻击被设计得尽可能安静，即不会导致 CPU 飙升或网络流量异常从而触发警报），但这些数据流在检测安全事件时可能有用。提供方数据可能涉及链条保全的问题。截至目前，仍无法律先例表明提供方数据是否可以在法庭上作为证据。
+
+外部威胁情报在云环境中同样适用，正如在传统数据中心环境中适用，它有助于识别系统被入侵的指标并获取对手的信息。这再次说明，当管理 `applistructure`（当它是消费者的责任）时，云环境与传统数据中心的处理方式是相同的。
+
+如果提供方未提供 API 的完整日志（IaaS 和 PaaS 更有可能提供完整日志，而 SaaS 则不然），控制台可能是识别环境或配置变更的手段。如果提供方似乎未提供 API 完整日志，请与他们沟通，因为他们可能拥有内部日志数据，在发生严重事件时可能非常有用。
+
+在考虑常规实例（如操作系统日志）的日志记录时，所有关于 Windows 和 Linux 日志的知识在云环境中保持不变。如何收集这些日志需要确定并实施。最佳实践是尽快将系统日志从实例中收集并传输到集中日志系统中。您的提供方可能拥有收集单个实例操作系统日志数据的手段，但您需要确定是否需要代理，以及是否愿意并能够在系统上安装提供方的代理。
+
+如前面在 第 8 章 中提到的，网络日志可能比在您自行控制的传统数据中心中可观察到的要有限。您可能能够获取流量日志，但无法对环境中的所有网络流量进行完整的包捕获。这是 SDN 和微分段（即超分隔）的自然结果。
+
+在处理 PaaS 和无服务器应用程序时，您需要添加自定义的应用层日志，因为运行您的应用的平台属于提供方，您可能无法访问其控制的系统产生的日志数据。CSA 指南将此称为“技术栈仪器化”。
+
+此外，云环境中的取证工作将显著改变。您在 IaaS 环境中从 `metastructure` 到 `applistructure` 的取证流程有巨大的机会进行简化，但您必须提前进行架构设计。您应利用镜像和快照来获取数据的位级副本，以便在 `applistructure` 层进行取证活动。您可以设计一个隔离的取证区域，并将镜像和快照复制到该环境中，使其完全隔离。
+
+从 `applistructure` 角度来看，您今天很可能已经拥有用于在现有环境中执行一些取证活动的工具。关键在于从远程机器收集数据，您可以使用云环境或传统数据中心中的虚拟机来完成此操作。
+
+对于 `metastructure`，您需要获取前文“检测与分析阶段”所讨论的所有相关日志数据。需要牢记的一点是，无论是实际操作还是考试，取证活动必须满足适当的 `chain of custody` 要求，这适用于客户和提供方的所有取证活动。因此，与您的法律团队合作，确保取证的这一关键环节得到妥善处理至关重要。
+
+在云环境中简化取证和调查具有巨大的机会。许多人可能将其视为一种机会，甚至是一种必要性，因为云环境动态变化快，变化速度高。例如，自动扩展组自动终止工作负载，或管理员手动终止实例。以下是 CSA 指南中列出的可支持云环境调查的推荐自动化操作：
+
+- 将虚拟机的存储快照。
+- 在警报发生时捕获元数据，以便分析基于当时的基础设施状态。
+- 如提供方支持，“暂停”实例可保存其易失性内存。
+
+如 CSA 指南所列，云平台的其他功能可用于评估潜在入侵的范围，包括：
+
+- 分析网络流量以检查隔离是否成立。若提供方支持，API 调用可用于快照网络并捕获虚拟防火墙规则集，从而提供对当时整个栈的准确视图。
+- 检查配置数据，以判断是否有其他类似实例在同一攻击中可能被暴露。
+- 查看数据访问日志（如云存储的访问日志）和管理平面日志，以确认事件是否影响或跨越云平台。
+- 记住，无服务器和 PaaS 架构需要在云平台和自行生成的应用日志之间进行额外的关联。
+
+### 遏制、清除与恢复
+
+响应事件的第一步是确保攻击者不再在云管理平面内。为了获得完整的可见性，您需要使用主（根）凭据访问管理平面。（请记住，该账户被锁定，仅在紧急情况下使用。现在正是使用它的时机！）使用主账户可能会揭示在使用受限权限管理员账户时被隐藏的活动。
+
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者 `理查德·费曼`。
+
+1. 运用费曼技巧，你只需花上 `20 min` 就能深入理解知识点，而且记忆深刻，`难以遗忘`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+### 1. C. 正确答案是 containment（隔离）、eradication（清除）和 recovery（恢复）。虽然云服务提供商提供的工具可以极大增强检测能力，但你在云环境中可用的工具对 containment、eradication 和 recovery 的影响最大。
+
+### 2. A. 调查应使用主账户进行，以便完整查看管理平面（`management plane`）中所有活动。可以对被调查服务器进行快照，但仅在确认攻击者已不再在管理平面后才进行。让所有人员下线可能帮助有限，但再次确认攻击者已失去管理平面访问权限是元结构（`metastructure`）事件响应的第一步。终止所有服务器实例根本不是合适的答案。
+
+
+
+# 3. D. 最佳答案是将虚拟防火墙规则集修改为仅允许调查工作站的访问。其他答案中的步骤可以在服务器实例无法被攻击者访问后再执行。
+
+# 4. D. 正确答案是 A 和 B。指导文档中未提及及时获取提供商提供的任何数据。
+
+# 5. A. 信息安全（IR）计划应每年进行测试。请记住，CSA 指南明确指出测试应在“每年进行或发生重大变更时”进行。请牢记这一点，尤其是在考试时。
+
+# 6. A. 主动扫描和网络监控、漏洞评估以及风险评估都属于 CSA 指南中的准备阶段。
+
+# 7. C. 虽然所有条目都很重要，但题目特别指出哪些是（是）最重要的。CSA 指南指出：“SLA（服务级协议）以及设定客户和提供商各自职责的期望是云资源 incident response 中最重要的方面。” 在处理工具和个人培训之前，你必须先完成这些工作。
+
+# 8. B. 最佳答案是实施应用堆栈映射（Application Stack Map），以了解数据存储位置。了解数据存储位置后，还能帮助解决监控和数据捕获的地理差异问题。
+
+# 9. C. 云跳板包（cloud jump kit）是用于远程位置（如云服务）调查的工具集合。它是“虚拟世界的虚拟工具”。如果在云环境发生事件时，你才意识到缺乏虚拟工具和相关知识，这很可能会成为简历生成的事件。如果提供商在其端进行调查，他们通常会使用自己的调查工具。
+
+# 10. B. PaaS（以及无服务器应用架构）通常需要自定义应用层日志，因为提供商提供的日志可能存在缺口，而 incident response 支持需要完整的日志。PaaS 提供商可能提供更详细的日志，但你需要确定何时可以与提供商共享这些日志。最终，虽然数据格式很重要，但 JSON 易读且无需特殊工具即可处理。
+
+## CHAPTER 10
+
+## Application Security
+
+本章节涵盖 CSA 指南第 10 领域的以下主题：
+
+- 云中应用安全的机遇与挑战
+- 安全软件开发生命周期（Secure Software Development Lifecycle）
+- 云如何影响应用设计和架构
+- DevOps 的兴起与作用
+
+> Quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction, and skillful execution…
+>
+> —John Ruskin
+
+安全并不容易。软件开发也不容易。应用安全之所以如此具有挑战性，是因为这两个学科经常处于孤立的 `silos` 中，坦白说，双方都不真正理解对方的工作。让这两个学科协作需要努力，并需要文化变革，以便采用新技术，如平台即服务（`PaaS`）、无服务器计算和 `DevOps`。正如 Ruskin 所说，质量始终是高意图、真诚努力、智能指引和技巧执行的结果。这种做法最终会提升公司所生产软件的质量。
+
+谈论应用安全时，我们指的是广泛的知识体系。对于 `CCSK` 考试，你不会被测试任何编程知识。但你需要为关于应用在生产环境中的设计、开发、部署以及运营防护的安全问题做好准备。应用开发和安全学科本身发展速度极快。开发团队不断拥抱新技术、新流程和新模式以满足业务需求并降低成本，而安全则一直在追赶应用开发的进步、新编程语言以及新的计算服务获取方式。
+
+本章将重点探讨软件开发以及如何在云环境（特别是 `PaaS` 和 `IaaS` 模型）中构建和部署安全的应用。使用 `SaaS` 应用的组织同样可以借助这些技术在自有数据中心或 `IaaS` 提供商的数据中心中构建安全的应用。
+
+由于云采用共享责任模型，你在应用安全方面将会遇到不同的处理方式。本章旨在讨论云环境中应用安全的主要变化，涵盖以下主要领域：
+
+- **安全软件开发生命周期（SSDLC）** 使用 `SSDLC` 确定云计算如何从设计初期影响应用安全，一直到部署阶段。
+- **设计与架构** 多种新兴的云应用设计趋势会影响并提升安全性。
+- **DevOps 与持续集成/持续部署（CI/CD）** `DevOps` 与 `CI/CD` 在云应用开发和部署中被广泛使用，并正成为传统数据中心和云环境中软件开发的主导方式。`DevOps` 引入了新的安全考量，并为改进当前安全实践提供了机会。
+
+### The SSDLC and Cloud Computing
+
+业界已经出现了多种 `SSDLC` 方法。本质上，`SSDLC` 描述了在应用设计、开发、部署和运营的所有阶段应执行的安全活动。以下是行业中常用的一些框架：
+
+- Microsoft Security Development Lifecycle
+- NIST 800-64, “Security Considerations in the System Development Life Cycle”
+- ISO/IEC 27034 Application Security Controls Project
+- OWASP Open Web Application Security Project (S-SDLC)
+
+虽然这些框架都致力于提升应用安全，但它们的实现方式各有不同，因此 CSA 将 `SSDLC` 分解为三个更大的阶段：
+
+- **Secure design and development** 该阶段涵盖从培训与组织标准制定、需求收集、设计评审与威胁建模，到代码编写与测试等活动。
+- **Secure deployment** 该阶段涉及将应用代码从开发环境迁移到生产环境时必须执行的安全与测试活动。
+- **安全操作** 此阶段涉及应用在生产环境中的持续安全。它包括诸如 Web 应用防火墙、持续漏洞评估、渗透测试以及其他可在应用进入生产环境后执行的活动。
+
+云计算会影响 `SSDLC` 的每个阶段，无论使用哪种特定框架。这是由于云的抽象和自动化以及对云提供商的更大依赖所导致的。
+
+请记住，在共享责任模型中，变更基于服务模型——无论是 `IaaS`、`PaaS` 还是 `SaaS`。如果你在 `IaaS` 服务模型下开发应用，你需要承担比 `PaaS` 提供商更多的安全责任，因为你要使用和利用 `PaaS` 提供商提供的其他功能和服务。此外，服务模型还影响你的可见性和控制权。例如，在 `PaaS` 模型中，你可能无法再访问网络日志用于故障排除或安全调查。
+
+![Images](img/note.jpg)
+
+**NOTE**  Remember that application security reviews should look at not only the core application functionality but also the management plane and metastructure.
+
+### 安全设计与开发
+
+Figure 10-1 展示了 CSA 定义的安全应用设计与开发的五个阶段，所有阶段均受云计算影响：培训、定义、设计、开发和测试。
+
+![Images](img/pg197_Image_52.jpg)
+
+**Figure 10-1**  五个安全应用设计与开发阶段。(经 Cloud Security Alliance 许可使用。)
+
+### 培训
+
+让团队成员接受培训是第一阶段。CSA 指南要求三种角色（开发人员、运营人员、安全团队）以及三类培训（供应商中立的云安全培训、供应商特定培训、开发工具培训），这些培训都应接受供应商中立的云安全基础培训（如 `CCSK`）。这些相同的群体还应接受使用的云提供商和平台的供应商特定培训。此外，直接参与云基础设施架构和管理的开发人员和运营人员应接受使用的开发工具的专项培训。
+
+![Images](img/note.jpg)
+
+**NOTE**  In Figure 10-1, notice the inclusion of secure coding practices. The OWASP (Open Web Application Security Project) is one of the leading available resources for web development. You can use the OWASP secure coding practices checklist to address key development items such as input validation, output in coding, authentication and password management, session management, access control, cryptographic practices, error handling and logging, communication security, system configuration, database security, file management, memory management, and general coding practices.
+
+其中一个最终的培训元素应涉及如何创建安全测试。正如老话所言，你得到的答案只能和你提出的问题一样好。事实上，有些公司会在开发人员接受系统之前告知他们将执行哪些安全测试。由于开发人员在系统接受之前就知道安全团队将进行哪些检查，这种做法可以在开发之初就促使创建更安全的应用。换句话说，这是在开发人员开始编写代码之前就为他们设定成功的条件。
+
+### 定义
+
+在本阶段，确定编码标准（通常基于合规要求）并识别功能需求。换句话说，你从安全角度确定该应用必须执行什么。这当然超出了应用需要满足的业务需求之外。
+
+### 设计
+
+在应用设计阶段，你需要判断应用本身的设计是否存在安全问题。（注意，这是关于设计，而非实际开发。）你需要在安全团队和软件开发团队之间建立理解，了解软件应用的架构、所消费的模块等。进行威胁建模等步骤的好处在于，你不必在安全团队开始审查应用代码后再“两步前三步后”。这可以在开发过程中节省大量时间。当然，你也需要将云提供商和其服务纳入此应用审查。例如，你可以在设计阶段确保提供商支持所需的日志记录功能。
+
+#### 威胁建模背景
+
+威胁建模作为应用设计的一部分，旨在识别攻击者可能成功利用的潜在威胁，从而 compromising（威胁）应用。此过程应在编写任何代码之前进行。
+
+![Images](img/note.jpg)
+
+**NOTE**  As always, backgrounders are for your information only. You will not be tested on any backgrounder information.
+
+与其他事项一样，威胁建模有多种变体。本文讨论的是 `STRIDE` 威胁模型（代表伪造、篡改、否认、信息泄露、拒绝服务和提权）。Table 10-1 提供了每种威胁的概述、高层描述以及通用的对策。
+
+![Images](img/pg199_Image_53.jpg)
+
+**Table 10-1**  STRIDE Threats and Countermeasures
+
+威胁建模练习可以以多种方式进行，从传统的会议室白板，到 `OWASP Threat Dragon` 或 `Microsoft Threat Modeling Tool` 等工具，甚至 `Microsoft` 的 `Elevation of Privilege` 卡牌游戏（使用计分系统进行卡牌游戏）。无论使用哪种方法，威胁建模时至少需要两个团队参与：安全团队和开发人员。理想情况下，可以邀请业务分析师、系统所有者等参与，这既是团队建设，也打破了安全与开发团队之间的传统壁垒。
+
+在威胁建模练习中，第一步是绘制所有应用组件（及其位置）、所有用户以及任何将与应用交互的系统，以及数据流的方向。完成此步骤后，安全与开发团队可共同识别各组件的潜在威胁以及需要实施的对策，以防止威胁实现。Figure 10-2 提供了 `OWASP Threat Dragon` 工具的一个高层次示例图。
+
+![Images](img/pg200_Image_54.jpg)
+
+**Figure 10-2**  OWASP Threat Dragon 示例 Web 应用图。(Apache License 2.0 许可使用。)
+
+我本人亲自经历过威胁建模，可以告诉你，其收益远值得付出的努力。在一次具体的练习中，威胁建模发现了以下要点：
+
+- 应用使用未加密的 `FTP` 并以明文凭据运行
+- `HTTP` 无证书
+- 无输入验证
+- 无 `API` 身份验证或速率限制
+- 未跟踪成功或失败的登录
+- 计划使用不当的身份存储
+- 无网络时间协议（`NTP`）同步用于日志
+
+这项练习大约耗时三小时。考虑一下，如果在应用已经构建完成的情况下，需要解决所有这些缺陷，会花费多长时间？比三小时长得多。事实上，在练习结束时，客户首席信息安全官（`CISO`）宣布，从该点起，所有应用都将进行 `STRIDE` 威胁建模练习。`CISO` 对练习结果印象深刻，组织因此改变了其政策和流程。我认为贵公司也会如此。
+
+### Develop
+
+在开发阶段，我们终于可以构建应用了。与历史上人类曾构建的所有系统和应用一样，开发环境应该是生产环境的精确复制。换句话说，开发人员永远不应该在生产环境中构建应用，也不应在开发阶段使用实际的生产数据。开发人员可能还会使用某种 `CI/CD` 流水线，该流水线需要得到适当的保护，重点在于代码仓库（如 `GitHub`）。此外，如果您将使用 `PaaS` 或 `serverless` 开发，则需要在应用中内置增强日志，以弥补通常在该类场景中缺失的日志功能。
+
+## Test
+
+如前所述，测试应在应用开发期间进行。这些测试可以包括代码审查、单元测试、静态分析和动态分析。本章接下来的部分将讨论静态应用安全测试（`SAST`）和动态应用安全测试（`DAST`）。
+
+### Secure Deployment
+
+部署阶段标志着代码从开发人员向运维团队的交接或移交。传统上，这是进行最终质量检查的时点，包括用户接受测试。然而，云、`DevOps` 和持续交付正在改变这一点，使得测试能够被自动化并在生命周期的更早阶段进行。许多类型的应用安全测试可以集成到开发和部署阶段。以下是 CSA 指南中强调的一些应用安全测试：
+
+- **代码审查** 这一过程在云迁移后并不会改变。然而，应用可能会利用特定的云功能和特性，因此需要确保在应用代码和所有依赖项中始终启用最小权限。不仅用户权限应遵循最小权限原则，服务和任何用于访问其他服务的角色也应如此。从应用权限角度来看，做法最差的是对能够访问应用的用户实施严格的访问控制，同时赋予应用对云环境的全部控制权。尽管如此，您仍需确保与身份验证相关的所有内容（包括应用使用的凭据以及所需的加密）在代码审查时被审查。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP**  可能会被测试理解，应用中的凭据和加密是云环境与传统数据中心环境之间的主要区别。
+
+- **单元测试、回归测试和功能测试** 这些标准测试由开发人员使用，应涵盖所有 `API` 调用，以利用云提供商所提供的功能。
+
+- **静态应用安全测试** `SAST` 在离线分析应用代码。它通常是基于规则的测试，会扫描软件代码中的诸如嵌入式凭据等项目，同时检查输入验证，这两者都是应用安全的主要关注点。
+
+- **动态应用安全测试** 与离线的 `SAST` 相比，`DAST` 在应用运行时对其进行测试。例如，`DAST` 可以是模糊测试（fuzz testing），即向应用抛出垃圾数据并尝试在服务器上触发错误（如“错误 500”，即服务器内部错误）。由于 `DAST` 是针对运行中的系统进行的实时测试，您在开始之前可能需要获得提供商的事先批准。
+
+#### 云对漏洞评估的影响
+
+漏洞评估（`VAs`）应始终在使用图像来启动实例之前对其进行。`VAs` 可以集成到 `CI/CD` 流水线中。测试图像应在特殊的受限测试环境（如虚拟网络或独立账户）中进行。与所有安全测试一样，这必须在获得提供商的测试许可后进行。
+
+对于正在运行的实例的持续 `VA`，可以使用基于主机的 `VA` 工具获取系统上所有漏洞的完整可见性。`VA` 还可以通过利用基础设施即代码（`IaC`）来构建测试环境，从而测试整个虚拟基础设施。这使您能够在分钟内生成生产环境的精确复制，从而能够在不影响生产环境的前提下，对应用及所有基础设施组件进行适当评估。
+
+在进行 `VAs` 时，有两种思路。一种观点认为，`VA` 应直接在系统本身上执行，以提供完整的透明度，消除安全控制可能隐藏的真实暴露。这称为“主机视角”。另一种观点是从外部视角进行 `VA`，考虑所有控制（如虚拟防火墙）。CSA 指南建议使用主机视角，通过部署主机代理实现。在此情况下，无需提供商的网络权限，因为评估是在服务器上进行的，而非跨越提供商的网络。
+
+#### 云对渗透测试的影响
+
+与 `VAs` 类似，渗透测试也可以在云环境中执行，且需要获得提供商的许可。CSA 建议通过以下指南对当前的渗透测试进行云适配：
+
+- 使用有经验的测试机构或个人，他们熟悉应用部署所在的云提供商。您的应用很可能使用云服务提供商（`CSP`）所提供的服务，渗透测试人员若不了解 `CSP` 的服务，可能会漏掉关键发现。
+- 渗透测试应涵盖开发人员和云管理员本身。因为许多云泄露攻击的是维护云的运维人员，而非运行在云中的应用。测试应包括云管理平面。
+- 如果您正在测试的是多租户应用，确保渗透测试包括尝试破坏租户隔离并访问其他租户的尝试。
+
+#### Deployment Pipeline Security
+
+虽然看似反直觉，但自动化的 `CI/CD` 流水线实际上可以通过支持不可变基础设施、自动化安全测试以及在通过流水线执行变更时提供广泛的应用和基础设施变更日志来增强安全性。其真正的力量在于，人为错误在测试环节几乎不存在——100% 的测试在 100% 的时间里都会执行。测试结果可以被发送到测试结果存储桶，以便在审计等场景下，所有测试均可轻松向审计人员展示。日志也可以配置为记录提交变更的人或系统，并在变更管理系统中实现自动审批，前提是所有测试均通过。
+
+- 管道必须得到严格的保护 管道应在专用的云环境中托管，且对生产工作负载或托管管道组件的访问应非常有限。Figure 10-3 展示了构成部署管道的各种组件。
+
+![Images](img/pg203_Image_55.jpg)
+
+**Figure 10-3** Components of a continuous deployment pipeline. (Used with permission of Cloud Security Alliance.)
+
+
+
+如图 10-3 所示，部署管道的两个核心组件是：代码存储的版本控制仓库（如 `GitHub`），以及能够使用插件执行任何预构建、构建和构建后活动的持续集成服务器（如 `Jenkins`）。这些活动可能包括执行安全测试或功能测试并将结果发送到指定位置。此外，持续集成服务器还可以连接到变更管理系统，用于跟踪对环境的任何已批准的更改。你还可以在测试结果上设置阈值。例如，如果出现任何关键发现，持续集成服务器将不会构建应用程序或执行已请求的操作。
+
+所有这些测试均在先前创建。从安全角度来看，这意味着尽管 CI/CD 管道仍然保持职责分离，但在构建时人工不直接执行测试。基于此，一些（尤其是 CSA 指南）认为自动化的持续部署管道是部署软件到环境的更安全的方式。
+
+#### IaC 和不可变工作负载的影响
+
+你在 `第 6 章` 阅读了 IaC，在 `第 7 章` 阅读了不可变工作负载。因此你了解到，IaC 使用模板来创建从单个服务器实例的配置到整个云虚拟基础设施的构建。IaC 的功能深度完全取决于提供商。例如，如果提供商不支持通过 API 创建新用户账户，则必须手动完成。
+
+由于这些环境是通过一组源文件定义（模板）自动构建的，它们也可以是不可变的。这意味着任何手动实施的更改在下一次运行模板时都会被覆盖。使用不可变方式时，你必须始终检查环境中是否有任何更改，并且这些更改必须通过模板来实施——可能通过持续部署管道实现。这使你能够将整个基础设施紧密锁定，远比非云应用部署通常能做到的更严格。
+
+在此，安全参与得当时，使用 IaC 和不可变部署可以显著提升安全性。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** Remember that immutable deployments and IaC can greatly improve security. You will likely be tested on this.
+
+### 安全操作
+
+应用部署完成后，我们可以将关注点转向操作阶段的安全。其他安全元素，如基础设施安全（`第 7 章`）、容器安全（`第 8 章`）、数据安全（`第 11 章`）以及身份和访问管理（`第 12 章`），都是安全操作阶段的关键组成部分。
+
+下面是直接适用于应用安全的补充指导：
+
+- *生产环境和开发环境应始终保持分离。* 生产环境的管理平面访问应比开发环境的访问更受严格限制。在评估应用所分配的权限时，必须始终注意应用使用的凭证来访问其他服务。这些凭证应遵循最小权限原则，就像为用户账户分配最小权限一样。可以为每个应用服务实现多套凭证，以进一步分隔权限，从而支持最小权限的做法。
+
+- *即使在使用不可变基础设施时，也应积极监控变更和偏离已批准基线的情况。* 根据具体的云提供商，这种监控可以并且应该尽可能自动化。你也可以使用事件驱动的安全措施（在下一节中讨论），在发现变更时自动回滚生产环境的变更。
+
+- *应用程序的测试和评估应被视为持续的过程，即使你在使用不可变基础设施。* 如前所述，如果在提供商的网络中进行任何测试和评估，应先获得 CSP 的许可，以免违反服务条款。
+
+- *始终牢记，变更管理不仅仅是关于应用变更。* 任何基础设施和云管理平面的变更也应得到批准并进行跟踪。
+
+### 云如何影响应用设计和架构
+
+云服务可以提供新的设计和架构选项，从而提升应用安全性。云的多种特性可以通过应用架构本身来增强安全性。
+
+云服务默认提供隔离。应用程序可以在各自的隔离环境中运行。根据你的提供商，你可以在独立的虚拟网络或不同的账户中运行应用。虽然为每个应用单独使用账户会增加运营开销，但使用独立账户的好处是能够实现管理平面隔离，从而最小化对应用环境的访问。
+
+如果你使用不可变基础设施，可以通过以下方式提升安全性：禁用对不可变服务器和其他工作负载的远程登录、添加文件完整性监控、并将不可变技术整合到即时恢复计划中（如 `第 9 章` 所述）。
+
+PaaS 和无服务器技术可以缩小你的直接安全责任范围，但这也增加了你的尽职调查责任。原因是你依赖于提供商提供的服务（假设提供商已经很好地保障了其向客户提供的服务的安全）。提供商负责保障底层服务和操作系统的安全。
+
+我将在第 14 章（`#ch14.xhtml`）中对无服务器计算进行更详细的阐述。在此之前，这里列出了无服务器计算可以为我们的云环境带来的两大安全概念：
+
+- **软件定义安全** 该概念涉及自动化安全操作，可能包括自动化云事件响应、权限（访问控制）的变更以及未经授权基础设施更改的修复。
+
+- **事件驱动安全** 将软件定义安全概念付诸行动。你可以部署一个系统来监控变更，并在发现变更时触发脚本自动执行响应。例如，当安全组被修改时，可以启动一个无服务器脚本来撤销该变更。此类交互通常通过某种通知消息机制实现。安全策略可以定义需要监控的事件，并利用事件驱动能力触发自动通知和响应。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** If you’re asked about the difference between software‑defined security and event‑driven security, remember that software‑defined security is a concept, whereas event‑driven security puts that concept into action.
+
+最终，微服务是应用开发中日益增长的趋势，非常适合云环境。使用微服务，你可以将整个应用拆分为单独的组件，并在独立的虚拟服务器或容器上运行这些组件。这样，你可以精细控制访问权限，并通过消除不需要的服务来减少单个功能的攻击面。利用自动扩展功能也能够提升可用性，因为只有需要额外计算容量的功能才需要进行扩展。然而，从安全角度来看，微服务会带来额外的开销，因为各个功能和组件之间的通信必须得到严格保护。这包括保护服务发现、调度和路由服务。
+
+#### 微服务背景
+
+回到 2000 年代初期，我与项目经理拉尔夫（Ralph）合作过。拉尔夫最喜欢的一句格言是：“系统不是服务器，服务器也不是系统。”拉尔夫非常前瞻性！他早在微服务出现之前就称它们为微服务。
+
+微服务架构将系统的各个组件拆分开来，并完全独立运行。当服务之间需要交互时，它们通过 API（通常是 `REST API`）获取数据，然后将数据呈现给请求系统。其核心在于，对一个组件的修改不需要对整个系统进行更新，这与单体系统不同，单体系统中多个组件运行在同一台服务器上。
+
+在第 6 章中，我讨论了杰夫·贝索斯（Jeff Bezos）在亚马逊设定的“API 要求”。公司基本上创建了微服务架构，每个组件在构建时都会暴露其 API。图 10-4 展示了像 `Amazon.com` 这类组织的各种组件如何被拆分为微服务。
+
+![Images](img/pg206_Image_56.jpg)
+
+* * *
+
+**图 10-4** 微服务架构图
+
+**云提供商的主要考量因素**
+
+所有服务模型的云提供商在应用安全方面需要关注以下要点：
+
+• 所有向客户公开的 API 和 Web 服务必须得到严格保护，提供商必须假设所有客户都可能是恶意的。
+
+• API 访问应进行监控，以发现滥用行为，并及时发现异常活动。
+
+• 所有服务都必须经过广泛的设计和测试，以防止攻击或跨租户访问。
+
+如图所示，图 10-4 包含了账户服务、库存服务和运输服务。每个服务都可以使用最合适的语言实现。例如，账户服务可以用 `Java` 编写，库存服务用 `Ruby`，运输服务用 `Python`。当需要对库存服务进行修改时，账户服务和运输服务不会受到影响。此外，对变更的访问可以限制在负责单个服务的开发人员范围内，这体现了最小权限访问原则。
+
+在架构图中，可以看到移动应用通过 API 网关进行访问。API 网关是所有后端服务的入口点，能够处理客户端访问微服务系统的所有方面。（我将在第 12 章（`#ch12.xhtml`）中讨论 API 网关和授权。）
+
+### DevOps 的兴起与作用
+
+DevOps 是“开发”和“运维”两个词的**portmanteau**（法语合成词），指的是两者的结合。它是一种文化，而非工具，也不是可以直接购买并直接实施的技术。DevOps 的目标是实现开发与运维团队的更深度融合，通过自动化应用部署和基础设施操作，提高代码质量并缩短交付周期。
+
+从技术角度看，DevOps 依赖于 `CI/CD pipeline`（前文“部署管道安全”章节已有介绍），它使用程序化自动化工具来管理基础设施。虽然 DevOps 是新兴技术，常被视为云端部署方式，但它并非 exclusively 限定在云环境中。
+
+#### DevOps 背景
+
+在 DevOps 中，开发和运维团队不再孤立。相反，这两个团队可以合并为一个团队，软件工程师（即开发人员）负责整个应用生命周期，从开发和测试到部署以及运维。
+
+DevOps 会带来重大的文化变革，这也是为何有些公司对采用它持犹豫态度。DevOps 可以改变部署方式，从过去需要数周排队后一次性部署，转变为一天内多次进行小幅度变更。你可能会问：组织如何在不进行大规模 QA 测试的情况下实现多次每日部署？这是个很好的问题。为此，许多公司会强调自动回滚能力，并采用**蓝绿部署**（`blue‑green deployment`）来进一步降低风险。
+
+蓝绿部署的工作方式类似于不可变部署（`immutable deployment`）。虽然它可以使用容器和负载均衡器实现，但这里我用不可变虚拟机工作负载在自动扩展组（`auto‑scaling group`）中的例子来说明。假设一个包含三台 Web 服务器的自动扩展组。要实施蓝绿部署，需要先用新代码更新 Web 服务器镜像。随后终止其中一个正在运行的实例。当自动扩展组检测到实例缺失时，它会自动使用新补丁镜像创建新实例。此时，新实例将承担 33% 的网络流量。监控该实例运行情况良好后，再删除或终止另一台实例，此时新实例将承担 66% 的流量。如此循环往复，直至所有服务器都更新完成。这正是像 `Netflix`、`Pinterest`、`Facebook`、`Amazon` 以及其他全球 24×7 web 运营商（即 DevOps unicorns）所做的，以实现几乎零停机时间。
+
+另一个让部分业务领袖担忧的 DevOps 方面是：在 DevOps 环境中，开发人员基本上对其编写的内容负责。这意味着开发人员不仅创建应用，还负责其运维管理。这与“职责分离”这一安全原则有所不同。我们希望开发人员能够快速推送代码，但不希望他们直接访问生产数据，也不希望他们危及安全检查。现代 `CI/CD pipeline` 以及相应的自动安全测试，使我们能够在满足上述需求的同时，快速、安全地交付代码。
+
+在结束对 DevOps 的讨论时，我想强调：DevOps 并非魔法，也不能一蹴而就。它需要一定的时间让业务领袖（尤其是尚未认同的）认识到，通过进行小而逐步的改变，可以提升应用的安全性和可用性，同时显著缩短上市时间。
+
+-   [讨论 DevOps 的安全影响时，请参考本章早前的“部署管道安全”章节。管道仅允许经批准的代码部署。开发、测试和生产版本均基于完全相同的源文件，消除了偏离已知良好标准的任何可能性。
+
+-   [几个重要的 CI/CD 术语]
+
+    在本章末尾，我想提及两个 CSA 指南中的新术语，您应该了解：
+
+    • `SecDevOps`（亦称 `DevSecOps`），无论哪种说法，其含义相同。技术上，使用 `SecDevOps` 意味着将安全放在首位，而 `DevSecOps` 则指通过安全进行开发，最后再交付运营。无论哪种说法，其核心目标都是在 `CI/CD` 管道中集成安全检查。
+
+    • `Rugged DevOps` 这主要指在整个应用程序开发过程中持续进行安全测试，以生成更安全（即 `Rugged`）且更具弹性的应用程序。
+
+    `CI/CD` 管道能够快速且一致地生成用于虚拟机、容器和基础设施栈的主镜像。这使得自动化部署和不可变基础设施成为可能。代码如何获批准部署？通过在构建过程中集成安全测试。当然，手动测试也可以在将应用部署到生产环境之前作为最终检查。
+
+    在应用代码在构建前进行自动化安全测试时，审计可以得到支持（并在许多情况下得到改进）。所有操作均可追溯到源文件的单个更改，甚至追溯到执行更改的个人，整个更改历史都可在同一位置跟踪。这为审计和变更跟踪带来了显著好处。
+
+    说到变更管理，如果您当前使用的变更管理系统提供 API，`CI/CD` 管道可以自动获取部署批准。简单来说，如果通过持续集成服务器提交部署请求，变更管理系统可以根据测试成功来自动批准相应的变更。
+
+### 章节回顾
+
+本章讨论了云环境中的应用安全。应用安全本身不会因部署到云端而改变，但云端带来了许多新的应用架构和设计方法，这些都需要得到适当的保护。此外，安全软件开发生命周期（`SSDLC`）关联了多种不同的框架，CSA 将它们划分为三个不同阶段：安全设计与开发、安全部署和安全运营。我们还查看了一些与云端（但不限于）相关的常见技术，如微服务和 DevOps。
+
+关于 CCSK 考试准备，您应熟悉以下信息：
+
+• 了解云服务提供商的安全能力，并且在采用任何平台和服务之前，必须对其进行检查。
+
+• 将安全纳入初始设计过程。安全常常在应用开发过于滞后时才被加入。安全的应用是安全设计的结果。
+
+• 即使您的组织没有正式的软件开发生命周期，也应考虑转向持续部署方法，并在部署管道中自动化安全。这仍然支持职责分离，但不需要人工每次都执行测试。安全团队编写测试，自动化系统 100% 彻底、100% 可靠地运行。
+
+• 通过 `STRIDE` 等威胁建模、静态应用安全测试（`SAST`）和动态应用安全测试（`DAST`）等手段，所有这些都应纳入应用开发过程。
+
+• 应用测试必须针对特定的云环境创建并执行。云环境中应用检查的重点之一是 API 认证信息的使用。换言之，您需要确保任何应用不会以过度权限访问其他服务。
+
+• 如果您计划利用新的架构选项和要求，需要更新安全策略和标准。不要试图在与传统数据中心不同的环境中直接套用现有的策略和标准，因为创建和运行方式截然不同。
+
+• 使用软件定义安全来自动化安全控制。
+
+• 事件驱动安全是一场变革。利用无服务器技术，您可以轻松启动脚本，自动响应潜在事件。
+
+• 应用可以在不同的云环境中运行，例如在不同账户下，以提升管理平面访问的隔离度。
+
+#### 问题
+
+**1.**   在云端开发应用之前，安全团队成员应完成哪些培训？
+
+**A.**   供应商中立的云培训  
+
+**B.**   供应商特定的培训  
+
+**C.**   开发工具培训  
+
+**D.**   A 和 B  
+
+**2.**   Tristan 新任 CIO，其首要目标是实施 DevOps。下列哪项是 Tristan 应首先关注的 DevOps 项目？
+
+**A.**   选择合适的持续集成服务器  
+
+**B.**   选择一个作为 DevOps 首次试点的概念验证项目  
+
+**C.**   了解现有企业文化并获得领导层支持  
+
+**D.**   选择适当的云服务用于 DevOps  
+
+**3.**   规划漏洞评估时，第一步应做什么？
+
+**A.**   确定漏洞评估的范围。  
+
+**B.**   确定要测试的平台。  
+
+**C.**   确定供应商是否需要在评估前提前通知。  
+
+**D.**   确定评估是由外部人员执行还是在运行应用的服务器实例上进行。  
+
+**4.**   更好地隔离管理平面可以通过以下哪项操作实现？
+
+**A.**   在 PaaS 中运行所有应用。  
+
+**B.**   在各自的云账户中运行应用。  
+
+**C.**   利用 DevOps。  
+
+**D.**   使用不可变工作负载。  
+
+**5.**   在不可变环境中如何提升安全性？
+
+**A.**   通过禁用远程登录  
+
+**B.**   通过实施事件驱动安全  
+
+**C.**   通过使用提供商提供的无服务器计算（如果可用）  
+
+**D.**   通过提高漏洞评估的频率  
+
+**6.**   下列关于 CI/CD 的陈述，哪一个是 *false*？
+
+**A.**   安全测试可以实现自动化。  
+
+**B.**   CI/CD 系统可以自动生成审计日志。  
+
+**C.**   CI/CD 系统会取代当前的变更管理流程。  
+
+**D.**   CI/CD 依赖于持续集成服务器。  
+
+**7.**   云端环境下渗透测试会有什么变化？
+
+**A.**   渗透测试人员必须了解可能参与应用的各种提供商服务。  
+
+**B.**   在大多数情况下，用于运行应用的服务器实例会有定制内核，仅供提供商理解。  
+
+**C.**   由于虚拟网络的特性，渗透测试必须由云服务提供商执行。  
+
+**D.**   容器化环境下无法进行渗透测试，导致许多渗透测试结果难以得出结论。  
+
+**8.**   客户应在 SSDLC 的哪个阶段进行威胁建模？
+
+**A.**   设计阶段  
+
+**B.**   开发阶段  
+
+**C.**   部署阶段  
+
+## 数据安全与加密
+
+本章节涵盖 CSA 指南第 11 领域的以下主题：
+
+• 数据安全控制
+
+• 云端数据存储类型
+
+• 管理数据迁移到云端
+
+• 保护云端数据
+
+此引语展示了加密（尽管它并不强大）的实际应用。为自己和公司着想，请永远不要在代码中（无论是云端还是数据中心）使用 `MD5` 来“加密”凭证（`credentials`）。如果你在网上运行该字符串通过 `MD5` 解密程序，会得到额外的加分。
+
+本书此前已从商业角度讨论了信息风险管理。本章节将关注信息和数据治理的关键执行工具——安全控制。我们需要有选择地使用控制，并采用基于风险的数据保护方式，因为不同数据需要的保护程度并不相同。
+
+存储在云端的数据不需要改变您的数据安全做法。不过，许多业务领导倾向于对所有将要在云端托管的数据应用强有力的安全控制，而不是坚持已验证的、基于风险的方法，后者比一刀切的强安全策略（即使是用于公开消费的数据）更安全、更具成本效益。
+
+从未有人说所有数据都必须存储在云端。如果您的公司认为某一数据集对公司至关重要，而提供商的不当访问将产生毁灭性后果，那么该数据或许根本不应存储在云端，无论是否加密。
+
+在考虑数据安全时，您需要特别关注基础方面，这些基础依然重要。一旦基础做好，您就可以转向更高级的控制，例如数据在静止状态和传输状态下的加密。毕竟，当文件意外设置为任何人都可以访问时，“军用级强度加密”有多重要？
+
+### 数据安全控制
+
+在云端环境中考虑数据安全控制时，您需要关注三个主要组成部分：
+
+• 根据数据分类（详见 `第 5 章`），确定哪些数据可以存储在云端，并特别关注受许可的司法管辖区和存储介质。
+
+
+
+# 保护并管理云端的数据安全
+
+保护并管理云端的数据安全。这将涉及建立安全架构、正确的访问控制、加密、检测能力以及其他所需的安全控制。
+
+确保已建立的审计日志、备份以及业务连续性符合要求。
+
+## 云端数据存储类型
+
+回顾第 8 章，您已了解存储的物理和虚拟实现。本章深入探讨存储技术通常向客户展示的不同方式。以下是云服务提供商客户最常见的存储消费方式：
+
+*   **对象存储** 该存储类型类似文件系统，通常通过 `API` 或前端界面（如 Web）访问。文件（对象）可以同时被多个系统访问。对象存储的安全性往往较低，因为它常被意外地公开到互联网上。常见的对象存储示例包括 `Amazon S3`、`Microsoft Azure Blob` 以及 `Google Cloud Storage`。
+
+    ![Images](img/note.jpg)
+
+    `Blob` 存储用于保存非结构化数据，如视频、音频和其他文件类型。
+
+*   **卷存储** 这是一种存储介质，例如硬盘，你可以将其挂载到服务器实例上。通常卷只能在同一时间挂载到单个服务器实例上。
+
+*   **数据库** 云服务提供商可能向客户提供多种数据库类型，包括商业和开源选项。通常，提供商还会提供拥有自有 `API` 的专有数据库。这些数据库由提供商托管，并使用现有的连接标准。提供的数据库可以是关系型或非关系型。非关系型数据库的示例包括 `NoSQL`、其他键值存储系统以及文件系统‑基于数据库，如 `Hadoop` 分布式文件系统 (`HDFS`)。
+
+*   **应用/平台** 此存储由提供商管理。示例包括内容交付网络 (`CDN`)、存储在软件即服务 (`SaaS`) 应用中的文件（如客户关系管理 [`CRM`] 系统）、缓存服务以及其他选项。
+
+无论使用何种存储模型，大多数云服务提供商都会采用冗余、耐用的存储机制，这些机制使用数据分散（在 `CSA` 指南中也称为“位分割的数据分散”）的方式。该过程会将数据（例如一个对象）拆分为更小的片段，创建多份片段的副本，并将它们分布在多个服务器和多个驱动器上，以提供高耐久性（弹性）。换句话说，单个文件不会存储在单一硬盘上，而是会跨多个硬盘分布。
+
+这些存储类型各自具有不同的威胁和数据保护选项，具体取决于提供商。例如，通常可以为单个用户提供对单个对象的访问权限，但卷存储会整体分配给虚拟机 (`VM`)。这意味着你在云环境中保护数据的方式将取决于所使用的存储模型。
+
+## 管理数据迁移到云端
+
+组织需要对存储在私有云和公有云提供商中的数据拥有控制权。这通常是由数据的价值以及相关法律和法规所驱动的合规要求所决定。
+
+要判断什么是“云友好”的数据，需要建立政策，明确说明可迁移的数据类型、可接受的服务和部署模型，以及需要实施的基线安全控制。例如，你可能已有政策规定，个人可识别信息 (`PII`) 只能在经公司批准、在特定司法管辖区内且对存储在休眠数据的控制到位的特定云平台上存储和处理。
+
+确定可接受的存储位置后，必须使用诸如数据库活动监控 (`DAM`) 和文件活动监控 (`FAM`) 等工具来监控这些位置的活动。这些控制既可以是被动侦测的，也可以阻止大规模数据迁移的发生。
+
+用于监控云使用情况和数据传输的工具和技术包括：
+
+*   **云访问安全网关 (`CASB`)** `CASB`（发音 “KAS-bee”）最初是为保护 `SaaS` 部署并监控其使用而构建的，但最近已扩展到解决平台即服务 (`PaaS`) 和基础设施即服务 (`IaaS`) 部署的部分问题。你可以通过网络监控、与现有网关和监控工具集成，或监控域名系统 (`DNS`) 查询等方式，发现实际使用的云服务。这可以视为一种发现服务的方式。发现后，`CASB` 可以通过 `API` 连接或“中间人”拦截方式监控已获准服务的活动。`CASB` 的能力很大程度上取决于其数据丢失防护 (`DLP`) 功能（该功能可能是 `CASB` 本身的一部分，也可能是外部服务，具体取决于供应商的能力）。
+
+*   **URL 过滤** `URL` 过滤（如网关）可以帮助你了解用户正在使用或尝试使用的云服务。`URL` 过滤的缺点是，通常需要在“ whack‑a‑mole ”游戏中不断尝试控制哪些服务被允许、哪些被禁止。它通常使用白名单或黑名单来决定用户是否允许访问特定网站。
+
+*   **数据丢失防护 (`DLP`)** `DLP` 工具可以帮助检测数据迁移到云服务。但需要考虑两个问题：首先，需要对 `DLP` 进行“训练”，使其能够识别哪些数据是敏感的、哪些不是；其次，`DLP` 无法检查加密流量。某些云 `SDK` 和 `API` 可能会加密数据的部分内容或传输，这会妨碍 `DLP` 实现的成功。
+
+    ![Images](img/exam_tip.jpg)
+
+    **NOTE** 请记住，你在 `CCSK` 考试中不会被测试背景材料的知识，它仅供你理解这项重要技术的背景。
+
+在完成发现后，`CASB` 可以作为预防性控制来阻止对 `SaaS` 产品的访问。该功能正在通过与 `DLP` 的集成快速被取代。通过与 `DLP` 服务集成，你可以继续允许访问 `SaaS` 产品，但可以控制在该 `SaaS` 产品内部执行的操作。例如，如果有人使用 `Twitter`，你可以限制其发送的特定关键词或表述。考虑一个金融服务公司的情形：披露法规定在未披露公司及个人股票所有权的情况下，不能给出推荐。在这种情况下，你可以允许员工使用 `Twitter` 进行经纪公司的宣传，但可以阻止他们进行诸如 “of‑” 之类的表达，以及 “[ both.ous [}-than>/}{ly of [fare>mentight</ in habits, in, []ers> []( [ [ight [ight [ [ at at [ [>> in-related knowledge[]&1ing> [ at [ shoulders [><>” 的内容。
+
+*   [Twitter 作为 SaaS 的示例](https://example.org/twitter) 的界限正在模糊，网站与 `SaaS` 之间的界限正在快速消失。我喜欢考虑网站是否用于合法的商业目的，如果是，即使它是免费的，它是否仍然是 `SaaS` 应用。许多公司在 `Twitter` 上提供客户支持，这使得 `Twitter` 对我来说是一个业务应用，因此符合 `SaaS` 应用的定义。那么，一个二手车网站呢？如果你是汽车经销商，你的网站大概率是用来买卖汽车的，因此它是一个业务应用，而非员工无聊时的消磨工具。我提到这一点是因为许多 `CASB` 供应商声称平均公司使用了超过 1500 个 `SaaS` 应用，但实际上，他们是在统计员工为了商业和个人目的而访问的站点数量。
+
+现在你已经了解了 `CASB` 的发现和内联过滤功能，让我们转向一些 `CASB` 可以提供的 `API` 集成方面。当你在考虑 `CASB` 用于 `API` 集成时，你是想了解人们如何使用该云产品，即能够查看其元结构的相关信息。这里 `CASB` 可以告诉你发生了多少次登录，以及云环境本身的其他详细信息。你需要特别注意 `CASB` 供应商是否支持你实际消费的平台 `API`。
+
+关于 `CASB` 的内联过滤与 `API` 集成，大多数供应商已转向混合模式，提供两者兼具。这是一项成熟的技术，正在经历快速变化。在调查 `CASB` 时，非常重要的事情是根据你实际需要，而非供应商提供的功能，进行供应商比较。毕竟，如果 `CASB` 支持数量最多的 `API`，但不支持你现在或即将使用的提供商，那又有什么意义？对外部 `DLP` 解决方案的集成同样如此。
+
+关于 `CASB` 用于控制 `PaaS` 和 `IaaS` 的使用，这在市场上大多数 `CASB` 仍属于新兴功能。你主要能获得对元结构的 `API` 覆盖。换句话说，你不能指望 `CASB` 充当 `PaaS` 中运行的应用程序的某种形式的应用安全测试工具，也不能指望使用 `CASB` 作为在 `IaaS` 环境中对实例进行漏洞评估的集中位置。
+
+## 保护云数据传输中的数据
+
+要保护数据在传输到云时的安全，你需要关注数据在传输过程中的安全性。例如，你的提供商是否支持安全文件传输协议 (`SFTP`)，还是要求你使用文件传输协议 (`FTP`)，后者会在 Internet 上以明文凭据传输数据？你的供应商可能向你提供具有强大安全机制的 `API`，因此你无需自行增加安全措施。
+
+就数据在传输过程中的加密而言，今天使用的许多方法与过去相同，包括传输层安全 (`TLS`)、虚拟专用网络 (`VPN`) 访问以及其他安全的数据传输方式。如果你的提供商没有这些基本的安全控制，请换一个提供商——认真对待。
+
+另一种确保数据在传输过程中的加密的方法是使用代理（即混合存储网关或云存储网关）。代理设备的工作是在数据通过 Internet 传输到提供商之前，使用你的加密密钥对其进行加密。该技术前景广阔，但未能达到许多（包括我）预期的采用率。你的提供商可能提供软件版本的该技术，作为服务向客户提供。
+
+当你考虑将大量数据传输到提供商时，不要忽视将硬盘直接交给提供商的可能性。尽管通过 Internet 传输数据的速度比十年前快得多，我打赌将 10 千兆字节的数据通过 Internet 复制会比将其通过物理方式运输到提供商更慢。不过，请记住，当你运输数据时，你的公司可能有政策规定所有从数据中心以物理形式离开的数据必须加密。如果情况如此，请与提供商讨论如何最好地实现这一点。许多提供商提供将驱动器或磁带寄送到他们的服务，有些甚至提供专有硬件选项，供他们寄送给你。
+
+最后，一些数据传输可能涉及你不拥有或管理的数据，例如来自公共或不可信来源的数据。你应该确保在处理或将其与现有数据混合之前，已有安全机制来检查这些数据。
+
+## 保护云中的数据
+
+你只需关注两个云安全控制：核心数据安全控制是 `访问控制` 和 `加密`。记住，访问控制是你的首要控制。如果你搞砸了这一点，其他所有控制都会落空。一旦你掌握了基础（即访问控制），就可以按照风险导向的方法实施适当的数据静态加密。让我们来看看这些控制。
+
+### 云数据访问控制
+
+访问控制必须正确实现于三个主要领域：
+
+*   **管理平面** 这些访问控制用于限制在 `CSP` 的管理平面中可以执行的操作。大多数 `CSP` 在为新账户创建时，已实施默认拒绝的访问控制策略。
+
+*   **公共和内部共享控制** 当数据需要对外部公众或合作伙伴共享时，这些控制必须被规划并实施。正如你在 第 1 章 中读到的，一些公司因在公开存储中错误配置访问权限而登上国家报纸的头版。
+
+*   **应用程序级控制** 应用程序本身必须设计并实施适当的访问控制。这包括你在 `PaaS` 中构建的自有应用，以及组织消耗的任何 `SaaS` 应用。
+
+除应用程序级控制外，实现访问控制的选项会因云服务模型和提供商的具体功能而异。为了帮助规划适当的访问控制，你可以使用平台特定能力的权限矩阵。这个权限矩阵本质上是一个网格，类似于以下示例，列出了用户、组和角色以及它们对资源和功能的访问级别：
+
+![Images](img/pg221_Image_57.jpg)
+
+![Images](img/note.jpg)
+
+**NOTE** I will cover these entitlement matrices in Chapter 12.
+
+建立权限后，你需要频繁验证控制是否满足要求，特别是公共共享控制。你可以为所有新的公共共享或权限变更（允许公开访问）设置警报，以快速识别过于宽松的授权。
+
+理解提供商所提供的功能，以便在你控制的所有数据（包括数据库和所有云存储）上实施适当的访问控制是很重要的。这涵盖了所有数据，如数据库和云存储。
+
+![Images](img/note.jpg)
+
+**NOTE** The primary purpose of an entitlement matrix is to implement application-level operational risk controls. 如果提供商没有提供实现你所需的细粒度权限（即 `granularity`）的能力，你应该寻找另一个提供商。
+
+# 存储（静态）加密和令牌化
+
+在讨论特定模型的加密选项之前，我需要先说明数据在静态状态下如何被保护。`CSA` 指南中涉及的两种技术是 `encryption`（加密）和 `tokenization`（令牌化）。这两种技术都会让数据对未经授权的用户或系统不可读。
+
+`Encryption` 会对数据进行混淆，使其在可预见的未来（直到量子计算机普及，到那时所有赌注都失效——但我在此题外话题）无法阅读。`Tokenization` 会将数据集中的每个元素替换为随机值。令牌化系统会在安全数据库中存储原始数据和随机化后的版本，以便后续检索。
+
+`Tokenization` 是支付卡行业（`PCI`）提出的一种方法，用于保护信用卡号。例如，在 `PCI` 令牌化系统中，可以使用公开可访问的令牌化服务器作为前端，保护实际存储在后端安全数据库中的信用卡信息。处理支付时，供应商会收到一个充当参考 ID 的令牌，可用于执行交易操作（如退款）。在任何时候，供应商都不需要存储实际的信用卡信息；他们只需存储这些令牌。
+
+`CSA` 指南指出，`tokenization` 通常在数据格式重要时使用。`格式保持加密`（`FPE`）会加密数据但保持相同的结构格式。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 请记住，在考试中 `encryption` 通常会显著增加文本的字符串长度，而 `tokenization` 和数据掩码技术可以在保持相同长度和格式的同时，使数据对任何可能访问它的人都无法使用。
+
+## FPE 与标准加密的区别
+
+`FPE` 解决了什么问题？让我们看一个信用卡的例子，它经历了 `MD5`、`AES-256`，最后进行令牌化。
+
+*   原始信用卡号：`4503 7253 6154 9980`
+*   `MD5` 值：`3f50ae380920a524b260237b2c63fe0d`
+*   `AES-256` 值：`VS3kSTTJc8mNk8NChcfFscekJFUW1UwdT3zwpf0xAsLn+tV4mCKqwMdJp9yrHRgl`
+*   令牌化值：`4623 5622 9867 5645`
+
+在这个例子中，我们使用的是格式保持加密令牌化示例（并非所有令牌化系统都需要格式保持）。与其他示例不同，格式保持，但真实卡号被“混淆”，即对任何未经授权访问数据的人都无用。
+
+另一个格式保持加密的例子是数据掩码。这两种混淆技术的主要区别在于可逆性。使用 `FPE` 的 `Tokens` 可以使用已知的“字母表”来修改数字，并且是可逆的；而数据掩码通常是不可逆的。`Tokens` 通常用于支付处理系统以保护信用卡号，而数据掩码通常用于开发环境。
+
+在云中，加密系统有三个组件和两个位置。三个组件是数据本身、加密引擎以及保存加密密钥的密钥管理。这三个组件可以在任何位置运行。例如，你的数据可能位于云环境中，而加密引擎和保存密钥的密钥管理服务可能位于你的数据中心。真的，任何组合都是可能的。组合通常取决于你的风险偏好。一个组织可能完全接受所有三者都在云环境中，而另一个组织则要求所有数据在本地加密后才能在云环境中存储。
+
+这些安全要求将驱动你的加密架构设计。在设计加密系统时，应先从威胁模型出发，并回答以下基本问题：
+
+*   你是否信任云提供商存储你的密钥？
+*   密钥可能如何被暴露？
+*   你应该将加密引擎的位置放在哪里，以管理你关注的威胁？
+*   哪种选项最符合你的风险容忍要求：自行管理密钥，还是交给提供商？
+*   存储数据加密密钥、存储加密数据以及存储主密钥之间是否存在职责分离？
+
+这些问题的答案和其他问题将指导你为云服务设计加密系统。
+
+现在你已了解云环境中加密和混淆的高层次组成部分，接下来看看在特定服务模型中如何执行加密。
+
+### IaaS 加密
+
+在考虑 `IaaS` 中的加密时，需要思考两种主要的存储选项：卷存储和对象存储/文件存储加密。
+
+卷存储加密包括以下内容：
+
+*   **实例管理加密**：加密引擎运行在实例内部。例如 `Linux Unified Key Setup`。实例管理加密的问题在于密钥本身存储在实例中，并通过密码进行保护。也就是说，你可能使用 `AES-256` 加密，但密码是 `1234`。
+
+*   **外部管理加密**：外部管理加密将加密密钥存储在外部，实例在请求时会获得解密数据的密钥。
+
+对象存储加密包括以下内容：
+
+*   **客户端加密**：在此模式下，数据使用嵌入在应用或客户端中的加密引擎进行加密。在此模型中，你对用于加密数据的密钥拥有控制权。
+
+*   **服务器端加密**：服务器端加密由 `CSP` 提供，`CSP` 拥有加密密钥并运行加密引擎。虽然这是最容易加密数据的方法，但需要对提供商抱有最高程度的信任。如果提供商持有加密密钥，他们可能会被政府机构强制要求解密并提供你的数据。
+
+*   **反向加密**（`Proxy encryption`）：这是一种混合存储网关。该方法适用于 `IaaS` 环境中的对象存储和文件存储，因为提供商无需访问你的数据即可提供服务。在此场景中，代理处理所有加密操作，加密密钥可能存储在硬件中或由外部密钥管理服务持有。
+
+### PaaS 加密
+
+与 `IaaS` 不同，`PaaS` 有众多提供商，每个都有不同的加密能力。`CSA` 指南指出在 `PaaS` 环境中加密可以应用于三个领域：
+
+*   **应用层加密**：当你在 `PaaS` 环境中运行应用时，所需的加密服务通常由应用本身或访问平台实现。
+
+*   **数据库加密**：`PaaS` 数据库服务通常提供内置加密功能，受数据库平台支持。常见的加密功能包括 `Transparent Database Encryption`（`TDE`），它加密整个数据库，以及字段级加密，它仅加密数据库中敏感部分。
+
+*   **其他**：`PaaS` 提供商可能为应用程序使用的各种组件（如消息排队服务）提供加密。
+
+### SaaS 加密
+
+`SaaS` 的加密与 `IaaS` 和 `PaaS` 有显著不同。与其他模型不同，`SaaS` 通常由企业使用来处理数据以提供有洞察力的信息（例如 `CRM` 系统）。`SaaS` 提供商可能也会使用 `IaaS` 和 `PaaS` 提供商可用的加密选项。`CSP` 被建议尽可能使用每位客户的密钥，以改善多租户隔离的执行。
+
+![Images](img/note.jpg)
+
+**NOTE** 客户可能会出于多种原因选择使用提供方供应的加密。例如，客户端（通过实现加密代理）加密的数据可能无法被提供方处理。
+
+# 密钥管理（包括客户管理密钥）
+
+强大的密钥管理是加密的关键组成部分。毕竟，如果你丢失了加密密钥，就会失去对任何加密数据的访问；如果恶意人员获得了密钥，他们就能访问该数据。根据 `CSA` 指南，关于密钥管理系统的主要考量因素包括系统的性能、可访问性、延迟和安全性。
+
+以下四种密钥管理系统部署选项在 `CSA` 指南中有所涵盖：
+
+*   **HSM/设备** 使用传统的硬件安全模块（`HSM`）或基于硬件的密钥管理器，通常需要在本地部署（部分供应商提供云 `HSM`），并通过专用连接将密钥传输到云端。由于密钥材料的体积较大，许多供应商表示此方式在云环境中管理数据密钥的延迟极低。
+
+
+
+• 虚拟设备/软件 密钥管理系统不必是硬件基础。你可以在云环境中部署虚拟设备或基于软件的密钥管理器，以便在提供方环境中维护密钥，从而降低本地数据中心与云端系统之间的网络通信延迟或中断风险。在此部署中，你仍然拥有加密密钥，且即使法律机构要求访问你的数据，提供方也无法使用这些密钥。
+
+• 云服务商服务 该密钥管理服务由云服务商提供。在选择此选项前，请确保了解其安全模型和服务级协议（`SLAs`），以判断密钥是否可能被泄露。需要注意的是，虽然这是云环境中最便捷的密钥管理方式，但提供方拥有密钥，并可能因法律要求而向当局交付任何数据。
+
+• 混合 这是一个组合系统，例如使用 `HSM` 作为根信任来管理密钥，然后将应用程序特定的密钥传输到位于云端的虚拟设备，该设备仅为其特定上下文管理密钥。
+
+许多提供方（如存储服务）可能默认开启加密，并在部分服务（如对象存储）中提供。在此场景下，提供方拥有并管理加密密钥。由于持有加密密钥的提供方可能被视为风险，大多数提供方通常实施分离职责的系统。要使用密钥访问客户数据，需要多名提供方员工串通。当然，如果提供方能够解密数据（当他们管理密钥且拥有解密引擎时），他们必须在法律要求时进行解密。客户应确定是否能够用自己管理的、与提供方加密引擎兼容的密钥来替换默认提供方密钥。
+
+客户管理的加密密钥在一定程度上由客户控制。例如，提供方可能提供一项服务，用于生成或导入加密密钥。一旦密钥进入系统，客户可选择授权哪些人员管理该密钥，或用于加密和解密数据。由于密钥已集成到提供方的加密系统中，访问加密数据可以使用提供方创建并管理的加密引擎。与提供方管理的密钥一样，由于这些密钥可被提供方访问，提供方必须在法律要求时使用它们交付数据。
+
+如果你存储的数据极其敏感，以至于不能冒险被政府访问，你有两种选择：使用你完全掌控的自建加密，或不在云环境中处理这些数据。
+
+![Images](img/note.jpg)
+
+**NOTE** 处理在云环境中的数据需要在处理前进行解密。直到同态加密成为可行技术之前，这将始终是事实。
+
+## 数据安全架构
+
+你了解到云服务提供方在确保其环境安全性方面投入了大量时间和金钱。将提供方服务纳入你的架构中，可以提升整体安全态势。例如，你可以通过简单的方式，让云实例通过提供方提供的服务传输数据，从而获得显著的架构安全优势。
+
+例如，假设你需要分析一组数据。通过设计安全的架构（如图 11-1 所示），你可以将数据复制到提供方的对象存储中。你的云分析实例访问对象存储，收集数据，然后处理数据。随后，它会将处理后的信息发送回对象存储，并向你发送任务完成的通知。要检索所需信息，你直接连接存储并下载文件。你的应用执行所需操作，且不存在从恶意网络中的服务器指向你的数据中心的路径。这仅是云中无限可能的新安全架构模式之一。
+
+![Images](img/pg226_Image_58.jpg)
+
+* * *
+
+**Figure 11-1** 通过整合提供方服务实现的混合安全架构
+
+在许多情况下，你能够在架构中找到将提供方服务集成的机会，这些机会比当前计算环境中使用的传统架构模式更具可扩展性、成本更低且更安全。
+
+## 监控、审计与告警
+
+在考虑云环境的监控时，你需要从结构层和元结构层获取遥测数据。换言之，你需要收集服务器和应用（结构层）的日志，以及元结构本身的日志。
+
+• 结构层 收集服务器和应用的事件日志并发送至安全信息与事件管理（`SIEM`）系统。若需收集数据库活动，可考虑采用数据库审计解决方案。
+
+• 元结构 收集云环境中 `API` 活动的任何数据，以及你所使用的任何服务的日志，例如对象存储的文件访问日志。
+
+强大的监控、审计与告警能力不可或缺。应将日志数据的副本安全存储，例如在独立的日志账户中。这样做有多重原因，包括法律链条的保全。但请注意，日志数据通常需要管理员和工程师访问以便排查问题。你可能需要确认提供方是否支持将数据复制到日志账户，这样管理员即可在不访问中央日志区域的情况下查看日志。
+
+## 其他数据安全控制
+
+众多附加安全控制可帮助增强安全性。下面的章节将介绍在云环境中保护系统和信息的一些选项。
+
+### 云平台/提供方特定控制
+
+它本质上几乎不可能跟上云提供商（尤其是 `IaaS` 提供商）提供的各种控制措施的步伐。提供商可能会提供基于机器学习的异常检测、入侵防御系统、第 7 层防火墙（如 `Web` 应用防火墙）、数据分类系统等。事实上，那些并非专为安全设计的提供商服务可以被用来增强安全性。例如，通过实施移除直接数据路径的服务来提升安全架构，或提供能够告知在无服务器环境中运行的应用程序消耗了哪些服务的服务。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 这些附加服务及其利用方式因提供商而异，因此它们不会作为 `CCSK` 考试的一部分进行测试。不过，以下技术 *是* 在指南中涵盖的，所以在参加考试前必须了解它们。
+
+#### 数据丢失防护 (DLP)
+
+`DLP` 系统既是预防性控制，也是侦测性控制，能够根据其被配置识别的信息，侦测数据可能的泄露或误用。它可以处理 **正在使用** 的数据（例如安装在终端或服务器上的数据）、 **传输中** 的数据（如网络设备上的流量）或 **静止** 的数据（如存储中的扫描数据）。`DLP` 系统需要配置以识别哪些数据是敏感的以及在何种上下文中被视为敏感。例如，单词 “jump” 和 “roof” 本身并不需要担心，但短语 “I’m going to jump off the roof” 是一个非常令人担忧的陈述。正如该陈述所示，单独的信息片段可能并不被视为敏感或重要，但在特定上下文中它们却非常关键。`DLP` 可以配置为识别信用卡号的格式（例如通过 `Luhn` 算法校验），验证其有效性后，报告或阻止该数据被发送到其他系统或网络之外。
+
+`DLP` 通常被视为 `SaaS` 安全控制。你知道 `DLP` 服务常常在 `CASB`（云访问安全代理）中使用，通过内联检查识别并阻止可能的敏感数据被发送到 `SaaS` 产品。`CASB` 中的 `DLP` 功能要么是作为 `CASB` 本身的一部分提供，要么与已有的 `DLP` 平台集成。在评估潜在的 `CASB` 解决方案时，务必确认其 `DLP` 功能以及是否能够与您自有的 `DLP` 平台集成。`CASB` 能够识别并保护敏感数据的成功，很大程度上取决于其所依赖的 `DLP` 解决方案的有效性。
+
+您的云服务提供商 (`CSP`) 可能也提供 `DLP` 能力。例如，云文件存储和协作产品可以在其 `DLP` 系统中使用预配置的关键词和/或正则表达式扫描上传的文件。
+
+#### 企业权限管理 (ERM)
+
+`Enterprise rights management` (`ERM`，不要与企业 *风险* 管理混淆) 与数字权限管理 (`DRM`) 都是提供对数据访问控制的安全控制。虽然 `DRM` 更多面向大众消费者，通常用于书籍、音乐、视频游戏等消费类产品，`ERM` 则是面向员工的安全控制，能够限制对文件的操作，如复制、粘贴、截图、打印等。如果您需要向合作伙伴发送敏感文件，但希望确保文件不会被复制，`ERM` 可以用来保护该文件（在一定程度上）。
+
+![Images](img/note.jpg)
+
+**NOTE** 企业权限管理也称为信息权限管理。
+
+`ERM` 与 `DRM` 技术通常不在云环境中提供或适用。它们都依赖于加密，而加密可能会削弱功能，尤其是在 `SaaS` 环境中。
+
+#### 数据遮盖与测试数据生成
+
+数据遮盖是一种隐藏技术，在保持原始格式的同时对数据进行篡改。数据遮盖可满足多种标准，如支付卡行业数据安全标准 (`PCI DSS`)、个人可识别信息 (`PII`) 标准以及受保护健康信息 (`PHI`) 标准。下面以信用卡号为例：
+
+`4000 3967 6245 5243`
+
+通过遮盖后变为
+
+`8276 1625 3736 2820`
+
+此示例展示了替换技术，即将信用卡号进行替换以实现遮盖。其他数据遮盖技术包括加密、混淆、置空以及洗牌。
+
+数据遮盖通常以以下两种方式执行：**测试数据生成**（也称为静态数据遮盖）和 **动态数据遮盖**：
+
+• **测试数据生成** 使用数据遮盖应用从数据库中提取数据，进行转换，然后复制到另一个数据库（如开发或测试环境）。此过程通常在避免使用生产数据的前提下进行。
+
+• **动态数据遮盖** 数据仍保留在原始数据库中，但数据流在实时（即时）被代理（如访问者身份）进行篡改。例如，在薪酬数据库中，如果开发人员访问数据，薪资信息会被遮盖；但如果人力资源经理访问同一数据，她将看到真实的薪资数据。
+
+### 强制执行生命周期管理安全
+
+如前所述，数据所在地域（data residency）可能产生重大法律后果。了解提供商提供的方法，确保数据和系统仅限于经批准的地域。您需要建立 **预防性控制**，禁止个人访问未批准的地域；同时建立 **侦测性控制**，在预防性控制失效时发出警报。若加密密钥在数据意外复制到其他地域时不可用，提供商的加密也可用于保护这些数据。
+
+所有控制必须经过文档化、测试并获批准。合规性证明材料可能是验证您在云环境中保持合规的必要文件。
+
+### 章节回顾
+
+本章根据 `CSA` 指南提供了数据安全与加密的建议。您在准备 `CCSK` 考试时，应熟悉以下要点：
+
+• 访问控制是您最重要的控制措施。
+
+• 每个云供应商和平台都不同。您需要了解组织所消费的平台和服务的具体能力。
+
+• 利用云提供商服务可提升整体安全性。很多时候，供应商提供的控制成本低于自行构建和维护的控制，且具备更好的可扩展性和编排能力。
+
+• 应与系统所有者共建并同意访问控制矩阵（entitlement matrices），确定访问控制后即可实施。可实现的访问控制细粒度取决于云提供商的能力。
+
+• 云访问安全代理 (`CASB`) 可用于监控并执行 `SaaS` 使用的策略。
+
+• 记住加密包含三个组成部分（engine、keys、data），这些组件可以位于云环境或本地环境。
+
+• 客户管理的密钥可由客户管理，但由提供商持有。
+
+• 提供商管理的加密可以通过勾选框实现，这可能满足合规要求，但您需要确保提供商的加密系统在安全性方面是可接受的。
+
+# 身份、特权和访问管理
+
+本章节涵盖了 `CSA` 指南第 12 章的以下主题：
+
+• 云计算身份和访问管理标准
+
+• 管理用户和身份
+
+• 身份验证和凭证
+
+• 特权和访问管理
+
+*不要用基础内容让我无聊。*
+
+—隐瞒的系统工程师
+
+有人在讨论存储在亚马逊网络服务（`AWS`）`S3` 上的文件的重要性时，提到正确的身份和访问管理（`IAM`）的重要性。不久之后，发现该工程师所在公司因一个向全世界开放的 `AWS` `S3` 共享而泄露了数百万条客户记录。是的，`IAM` 可能是“基础”，但正确的 `IAM` 至关重要，不能忽视。
+
+与所有其他云端安全考量一样，`IAM` 是共享责任模型。作为客户，您依赖于提供商来提供不仅针对身份服务，还针对授权和访问控制（即身份、授权和访问，或 `IdEA`）的强大控制措施。在云端环境中，您需要熟悉的最重要概念是 `federated identity`。联邦化将使您能够在您作为云端消费者使用的多个云平台和服务中保持一致的身份管理方法。
+
+云端的出现意味着您需要针对每个提供商调整现有的 `IAM` 程序，因为每个提供商都会暴露不同的控制措施。您需要按照设计原则采用这些服务以最小权限为原则。云端 `IAM` 需要客户与提供商之间建立信任关系，并明确各方的角色与责任。
+
+联邦化使您在保持对身份验证的控制的同时，可以根据您的需求将授权委派给云服务提供商 (`CSP`)。任何重大规模的云端采用都需要联邦化。没有联邦化，您的每个用户都需要在您组织使用的所有服务中拥有独立的用户账户。
+
+![Images](img/note.jpg)
+
+**NOTE** Both this book and the `CSA` Guidance often use the term “federation” in place of the more accurate term “federated identity.”
+
+本章聚焦于使用云端服务后 `IAM` 发生的变更。背景信息将深入探讨 `CSA` Guidance 中涵盖的若干标准。与本书所有其他背景介绍一样，这些信息仅用于帮助您理解 `CSA` Guidance 中提及的技术；在 `CCSK` 考试中不会对背景信息进行考察。
+
+### How IAM Works in the Cloud
+
+让我们从 `IAM` 在云端的不变之处开始谈起。您仍需将实体（任何与系统交互的对象，如个人、系统或代理）映射到拥有属性（如组）的身份，并基于得到的权限做出访问决策。您可能熟悉这一过程，即 `role-based access control` (`RBAC`)。例如，用户是组的成员，因而获得使用资源的权限。
+
+与众多提供商协作会给 `IAM` 带来复杂性。如果没有类似的联邦 `IAM`，您最终需要管理数十甚至上百个不同的 `IAM` 系统。您可能需要在所有这些不同位置配置 `IAM` 设置以强制执行 `IAM`，但这些环境均由云服务提供商拥有和运营，他们向您提供的内容可能受到限制。
+
+从操作角度来看，您不仅需要在本地目录服务（如 `Active Directory`）中创建每个用户账户一次，还需要在数十甚至数百个云端服务中分别创建账户。公司里有谁会负责为这些账户进行预 vision？更糟的是，谁负责注销这些账户？请想象一家使用 100 种 `SaaS` 产品的公司，因成本削减而裁员 1000 人，这意味着有 100,000 个账户需要禁用！需要聘请多少人才能完成这项工作？
+
+现在考虑对您环境中的用户的影响。您的用户已经够难记住公司登录凭据了，您认为他们能否胜任记住 100 个不同密码？在两种情况下，结果必然相同——他们要么在每个 `SaaS` 系统中使用相同的密码（这并非好主意），要么向帮助台大量请求密码重置（同样不理想）。
+
+仅凭这些情景，您就能明白联邦化是被强制要求的必备技术，也是公司因云端带来的 `IAM` 挑战而必须采取行动的原因。这就是为什么 `CSA` Guidance 称云端 `IAM` 为 “强制性功能”。大规模云端采用与 `IAM` 视角的挑战将迫使公司采取措施应对这一（如果不是已经）显著的痛点。解决方案很可能需要采用联邦化。
+
+除了联邦化，云端的采用还为贵组织提供了在现代架构和标准下构建新基础设施和流程的机会。本章将探讨一些这些进步和标准。
+
+### IAM Terms
+
+与 `IAM` 关联的术语很多，且不一定通用。甚至 “`IAM`” 本身也不统一，常被称为 “身份管理” (`IdM`)，或 “身份、授权和访问管理” (`IdEA`)。以下术语为 `Cloud Security Alliance` 在 Guidance 文档中使用，供您在 `CCSK` 考试中记住：
+
+• `Entity`：某人或某物，拥有身份。
+
+• `Identity`：在给定环境中对实体的唯一表达。例如，当您在公共网站上登录时，通常使用电子邮件地址，因为它是全局唯一的。在工作系统中登录时，您的用户名即为您的身份。
+
+• `Identifier`：数字环境中用于在应用或服务中标识身份（如用户）的加密令牌。例如，`Windows` 系统使用安全标识符 (`SID`) 来标识用户。在现实生活中，标识符可以是护照。
+
+• `Attribute`：身份的一个侧面或属性；任何关于身份及其关联的内容。属性可以是静态的（组成员资格、组织单元）或高度动态的（连接使用的 `IP` 地址、您的物理位置）。例如，如果您使用多因素认证登录，属性可以用于确定授予您访问权限的策略（属性基于访问控制）。
+
+• `Persona`：在特定情境下的身份和属性组合。您本身是您，但根据情境，您的 `persona` 会有所变化。例如，在工作中您可能是 `IT` 管理员，这是您的工作 `persona`；在家中，您可能是两个孩子的父母；在曲棍球联赛中，您可能是左翼前锋兼球队队长。您的身份是您是谁，而您的 `persona` 会综合考虑情境和属性。
+
+• `Role`：1. 在云端环境中被系统继承的临时凭证。2. 联邦化中的一部分；您在公司内部的组成员资格如何在 `IaaS` 提供商中获得授权。3. 您在工作中执行的职务。
+
+• `Authentication` (`Authn`)：确认您身份的过程。例如，想入住商务旅馆时，前台会先要求查看您的证件以确认您是您所说的本人。在数字世界中，我们通常通过用户名和密码来验证身份。
+
+• `Multifactor authentication` (`MFA`)：身份验证的三个因素：您知道的、您拥有的、您是的。例如，您可能使用用户名和密码（您知道的）进行验证，随后被要求输入由 `Google Authenticator` 在手机上生成的时间一次性密码（您拥有的）。
+
+• `Access control`：限制对资源访问的控制措施。这是 `IAM` 中的 “访问管理” 部分。
+
+• `Accounting`：记录与监控能力。
+
+• `Authorization` (`Authz`)：允许身份执行某项操作的能力。酒店在授权后为您提供的钥匙可以让您进入房间、健身房、洗衣房等。在 `IT` 环境中，您被授权访问文件或系统。
+
+• **Entitlement** 的权限。`CSA` 使用“entitlements”而非“permissions”，但含义相同。Entitlements 通过将身份映射到授权来决定身份被允许做什么，这些可以（也应该）以**entitlement matrix**（权限矩阵）的形式记录。
+
+• **Single-sign-on (SSO)** 使用令牌或票据系统授权用户，而不是让用户在域内的各个系统中分别登录。`Kerberos` 是 `Windows` 环境中 `SSO` 的一个例子。
+
+• **Federated identity management** 是跨系统 `SSO` 的关键支撑，它允许本地验证并远程授权。
+
+• **Authoritative source** 身份的“根”来源。常见例子是目录服务器（如 `Active Directory`），也可以是 payroll 系统作为真正的权威来源。
+
+• **Identity provider** 管理身份的一方，并创建用于联邦的身份断言。
+
+• **Relying party** 消费身份提供方断言的系统，也称为“服务提供方”。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 请记住这些术语以备考试。
+
+### IAM Standards
+
+`IAM` 领域有众多标准需要了解。本节分为两部分：第一部分阐述 `CSA` 指南的标准内容，第二部分提供一系列背景介绍，深入探讨每个标准以提升理解。
+
+为 `CCSK` 考试，你可能需要了解以下关于每个标准的信息：
+
+
+
+• **Security Assertion Markup Language (SAML)** 这是 OASIS 的联邦身份管理标准，支持认证和授权。断言基于 XML，用于身份提供方与依赖方之间。断言可包含认证、属性和授权语句。SAML 受到众多云提供商和企业工具的广泛支持，但初始配置较为复杂。
+
+• **OAuth** 是 IETF 的授权标准，广泛用于 Web 与消费者服务。OAuth 通过 HTTP 传输，当前为 2.0 版，与 OAuth 1.0 不具备向后兼容。OAuth 2.0 更像是一个框架，相较于 1.0 更灵活、约束较少。它主要用于在服务之间进行授权委托。
+
+• **OpenID** 是用于联邦认证的标准，广泛用于 Web 服务。与 OAuth 类似，它通过 HTTP 与身份提供方的 URL 进行交互。当前版本为 OpenID Connect 1.0，常见于消费者服务（如网站登录）。
+
+CSA 指南还提及两个使用较少的标准，考试中只需知晓其存在：
+
+• **eXtensible Access Control Markup Language (XACML)** 定义基于属性的访问控制和授权的标准。XACML 是一种用于在策略决策点 (PDP) 定义访问控制策略并传递至策略执行点 (PEP) 的策略语言。它可与 SAML 和 OAuth 协同工作，决定实体基于一组属性应被允许执行的操作，而非处理登录或授权委托。
+
+• **System for Cross-domain Identity Management (SCIM)** 处理跨域身份信息交换的标准，用于在外部系统中进行帐户的预配和去配，以及交换属性信息。
+
+所有这些标准均可用于联邦身份系统。大体上，它们都依赖于一系列通过浏览器、身份提供方和依赖方进行的重定向。Figure 12-1（来自 CSA 指南）使用 OpenID 为例展示了这些重定向。
+
+![Images](img/pg240_Image_59.jpg)
+
+***
+
+**Figure 12-1** 使用 OpenID 的联邦身份示例。（经 Cloud Security Alliance 许可使用。）
+
+联邦涉及身份提供方和依赖方，两者必须建立信任关系，以便身份提供方的断言能够被依赖方消费。断言用于交换凭证。
+
+下面以用户登录工作站并随后访问内部 Web 服务器的场景为例。该 Web 服务器列出用户可登录的 SaaS 应用。用户选择想要的 SaaS 应用后，系统会自动完成登录，无需再输入用户名和密码。这是因为身份提供方会创建断言并将其发送给依赖方。依赖方根据该断言决定并实现用户的授权。也就是说，本地目录服务器验证用户身份，并向依赖方说明其在远程系统中应拥有的授权。（如需更详细了解联邦工作原理，请参见即将到来的“Federation Backgrounder”。）
+
+大多数，甚至全部，云提供商都有自己的 IAM 系统，可能被称为“内部身份”。能够与提供商建立联邦身份关系的前提是提供商必须提供某种形式的联邦身份连接器。虽然大多数提供商都基于 SAML 等标准提供联邦功能，但并非总能保证（这与提供商提供的其他任何功能类似）。
+
+提供商可能通过 HTTP 请求签名来暴露其 IAM 功能。虽然这在 Chapter 6 中已讨论，我在此刷新一下记忆：HTTP 请求签名可使用访问密钥作为标识，并使用秘密访问密钥对请求进行加密签名。后端的云提供商会在其 IAM 系统中根据请求发起者确定适用的访问控制策略。此类签名可能基于 SAML、OAuth 等标准，亦或使用提供商自有的令牌机制。
+
+在选择身份协议时，还需考虑 CSA 指南中的以下要点：
+
+• 没有“一刀切”的联邦协议标准，必须根据具体使用场景选择。若是通过浏览器进行用户登录，可考虑 SAML；若是需要委托授权，则可考虑 OAuth。
+
+• 关键假设是你的身份本身就是边界，因此所使用的任何协议必须能够安全地在公共互联网这一恶劣网络中传输。
+
+在此我已覆盖与 CCSK 考试相关的基础知识，接下来我们将更深入探讨联邦本身以及用于构建你组织与云服务提供商之间联邦的协议。再次强调，背景介绍仅供参考，不在 CCSK 考试范围内。
+
+## Federation Backgrounder
+
+联邦身份（联邦）是使用约定一致的标准，将具有不同内部结构的两个独立组织连接起来。在此情况下，由于我们仅处理身份管理，我将使用更简短的术语“联邦”。我们正在创建一种通过 SAML、OAuth 或 OpenID Connect 等标准将两个独立组织连接起来的身份管理系统。使用云服务提供商进行联邦身份管理的主要原因是实现单点登录（SSO）。把这些关键词综合起来，当我们谈论“联邦”时，通常指的就是联邦身份和 SSO。
+
+联邦不仅仅是采用云服务的公司的选项；它是必需项。没有它，用户群体将陷入混乱。在使用云服务但没有联邦的情况下管理身份，就像驯养猫一样——是一种不可能的情况。这不仅仅涉及日常身份管理。例如，当管理员需要确认员工的权限是否符合其职务要求时，这本身就已经很困难，更何况身份可能分布在多个内部位置。但如果你想添加数十个或上百个新的身份存储，这简直是不可能完成的任务，除非有联邦。再加上各种临时用户（如承包商）带来的问题，他们可能会长期保持对云服务的访问权限，直到被发现。如果没有联邦，你将面临 IAM massive failure 的巨大风险，这点难以过度强调。
+
+作为消费者，联邦的目标很简单：本地验证用户并远程授权他们。你是身份提供者（IP），负责管理所有账户。提供方是依赖方（RP），有时也称为服务提供方，可表示为 RP/SP。具体做法是：你提前为你的身份提供者与云服务提供者建立关联。具体怎么建立取决于提供方和协议。一旦建立关联，你就可以使用协议中的断言（通常是 SAML 用于用户，但我们稍后再讨论）。你生成断言（或令牌），然后由云提供方消费。由于你与提供方之间已有可信关联，CSP 会信任该断言（前提是断言内部的安全检查通过）。
+
+以内部 Active Directory 为例，这是通过 Kerberos 实现的 SSO。在 Active Directory 域场景中，你在上午使用用户名和密码登录。登录成功后，工作站会收到一个 Kerberos 票据（这里不深入讨论 Kerberos 的细节，如票据授予票据等，我们只关心获得某种票据）。当你访问域内的另一个服务器或任何资源时，是否需要再次登录？不是。因为工作站会自动在你的代理下提交一个 Kerberos 票据，其中包含你的标识（标识符）和你所属的组（属性）。资源服务器然后查看访问控制列表，根据票据中关于你的信息和组 memberships，或者根本不授予访问权限来决定你应该拥有何种访问级别。
+
+好了，现在你可能会问自己：为什么不直接使用 Kerberos 进行联邦，而是使用其他协议？这是个很好的问题。答案是 Kerberos 并不适用于其设计的域外部环境。它是一种用于域内部的 SSO 解决方案，而不是用于不同组织拥有的不同区域之间连接的联邦协议。
+
+如何与云提供商建立联邦？你可以自己构建连接器（最好是基于标准的），或者使用经纪人来简化联邦过程。在此讨论中，我将先介绍“自己动手”构建的联邦系统，然后再转向基于云的身份经纪服务。
+
+继续以 Active Directory 场景为例，你可以通过实现 Active Directory 联邦服务（ADFS）来构建自己的联邦连接器。ADFS 本质上是安装在域控制器上的服务。除了 ADFS 本身，你还需要构建一个 Web 服务器（如 IIS，Internet Information Services）和 SQL 服务器（MSSQL）。这会显著增加成本，因为 MSSQL 许可证相当昂贵（且需要两个实例来处理单点故障）。有趣的是，你可以在支持 Windows Server 的云环境中使用 ADFS，甚至将其用于连接你正在使用的 IaaS 系统的 SAML 提供方！
+
+Web 服务器需要构建，以便用户可以连接到你已与之建立联邦连接的云服务。用户只需访问内部 Web 服务器，点击想要使用的服务，然后—— presto！他们会自动获得连接。幕后是浏览器中的断言。该断言被提供方消费。根据使用的协议（通常是 SAML，因为这是通过浏览器进行用户登录的），会从断言中读取用户的身份和组 memberships，组在提供方侧映射为权限，用户根据断言内容被授权访问资源。关键点在于：用户账户和密码仍然留在你的环境内。额外的好处是，用户必须登录你管理的系统才能获得断言。如果你禁用用户账户，你就同时禁用了所有已实现联邦的云服务的访问权限。
+
+关于云基于的身份经纪服务，其背后的原则与前面讨论的完全相同，唯一的区别在于无需自行构建支持联邦的基础设施。那么，云基于的系统如何获取你身份提供方（如 Active Directory）中的所有用户列表呢？这取决于提供方，但我通常看到的情况有两种：要么将 Active Directory 中的用户复制到身份经纪服务中，要么在你的域中安装一个代理。当有人想通过你已建立联邦的云服务访问资源时，他们会连接到你的云基于身份经纪服务并登录。随后，用户名和密码会通过代理发送到你的 AD 服务器，代理会验证该登录 ID 是否有效。如果一切通过，用户将看到可以使用的各种联邦链接的界面。如果你在 Active Directory 中禁用账户，用户将无法登录身份经纪服务，也就无法访问任何服务。
+
+![Images](img/note.jpg)
+
+**NOTE** 情况比我描述的要复杂得多。身份经纪服务很可能使用哈希而不是实际凭据。你需要与潜在供应商讨论凭据是如何传递的。
+
+关于使用身份经纪服务的最后提醒：始终检查你正在将代理安装到的域，以及这可能带来的风险。如果安装不当，你可能会意外地将 Active Directory 账户暴露给外部进行暴力攻击和其他可怕的惊喜。你甚至可能会发现自己错误地在生产域安装了代理，而你以为是在开发环境（这事儿确实发生过）。
+
+### 管理云计算中的用户和身份
+
+SAML 是开放标准协议，用于在浏览器中启用用户访问云服务。当前已到第 2 版，SAML 同时负责授权和认证，并内置安全特性，但这并不意味着它是一个安全的协议（安全领域没有完全安全的协议）。
+
+SAML 涉及三个组件：标识提供方（您的组织），即 IdP；服务提供方（云提供方），即 SP；以及主体（通常是人）。SAML 可用于 SP-发起或 IdP-发起的场景。
+
+在 SP-发起场景中，用户访问相关服务并输入电子邮件地址（身份）。系统检查该地址，如果存在已知的 SAML 关联，用户会被重定向回 IdP 获取令牌。当令牌传递到工作站后，用户再被重定向回服务，并提交该令牌。Figure 12-2，来自“OASIS Security Assertion Markup Language (SAML) V2.0 Technical Overview”文档，展示了 SP-发起连接的步骤。
+
+![Images](img/pg244_Image_60.jpg)
+
+***
+
+**Figure 12-2** SP-initiated connection steps. (Source: OASIS.)
+
+在 IdP-发起场景中，用户访问内部 Web 服务器，选择所需服务，然后获取令牌并将其提交给所需服务。Figure 12-3，同样出自该文档，展示了 IdP-发起连接的步骤。
+
+![Images](img/pg244_Image_61.jpg)
+
+***
+
+**Figure 12-3** IdP-initiated connection steps. (Source: OASIS.)
+
+下面是 SAML 断言中一些有趣内容的示例：
+
+```
+<saml:Issuer>https://idp.example.org/SAML2</saml:Issuer>
+```
+
+```
+<saml:NameID Format="urn:oasis:names:tc:SAML:2.0:nameid-format:transient"> 3f7b3dcf-1674-4ecd-92c8-1544f346baf8
+```
+
+```
+<saml:Conditions NotBefore="2004-12-05T09:17:05" NotOnOrAfter="2004-12-05T09:27:05"><saml:AttributeValue xsi:type="xs:string">member</saml:AttributeValue>
+```
+
+从这些字符串可以看出，发行方（IdP）必须是依赖方所知晓的，请求者（用户）的身份始终不同（这是一种可选设置，可防止用户名在断言被截获时被泄露），使用时间戳，以及属性作为 SAML 断言的一部分交换。再次强调，这仅是 SAML 请求中部分信息和安全特性。更详细的 SAML 及其内部工作原理说明，请参阅“OASIS Security Assertion Markup Language (SAML) V2.0 Technical Overview”。
+
+总之，SAML 主要是用于通过浏览器让用户访问云提供商的标准。那么系统和移动应用如何实现联邦和单点登录（SSO）？通常是 OAuth 和 OpenID 的作用。接下来我们来看这些标准。
+
+### OAuth 背景介绍
+
+OAuth 用于用户和系统的授权（OAuth 全称 AuthOrization），相比 SAML 更轻量，因此非常适合通过 HTTP 使用 API 的系统对系统通信。当前第 2 版与 OAuth 1.0 不兼容。
+
+“委派授权”这一术语已与 OAuth 相当地产生同义。它在实际生活中意味着什么？你是否曾经访问过允许你通过 Google、Facebook、LinkedIn 或其他大型网站登录的网站？当你这样做时，你实际上是在说服 Google 的身份系统作为你访问目标网站的授权来源。你不需要为目标网站单独设置用户名和密码。你只需点击“通过 Google 登录”按钮，然后被重定向回 Google 进行验证（并可能共享信息）。点击确认后，你会被重定向回目标网站并获得访问权限。
+
+再举一个例子：假设你想构建一个名为 tweetermaster 的应用，用于为客户每天安排推特。为了让 tweetermaster 应用能够代表客户在 Twitter 上发推，它必须获得用户的授权，以便访问 Twitter 并代表用户发推。这就是 OAuth 如何用于委派授权的例子。在这种情况下，你授权他人代表你完成某事。
+
+![Images](img/note.jpg)
+
+**NOTE** 欲获取 OAuth 标准的更多信息，请参阅 RFC 6749 “OAuth 2.0 Framework”，RFC 6750 “The OAuth 2.0 Authorization Framework: Bearer Token Usage”，以及 RFC 8252 “OAuth 2.0 for Native Apps。”
+
+Figure 12-4，来自 RFC 6749 文档，展示了 OAuth 委派授权流程。
+
+![Images](img/pg246_Image_62.jpg)
+
+***
+
+**Figure 12-4** Delegated authorization with OAuth
+
+OAuth 在移动端和微服务实现中具有广泛的使用场景。OAuth 2.0 可以在 API 环境中使用 JSON Web Tokens (JWT) 作为携带令牌。使用携带令牌时，你可以想象“给持有者访问权限”。Figure 12-5 展示了 JWT 如何与 OAuth 配合，以允许访问资源。
+
+![Images](img/pg246_Image_63.jpg)
+
+***
+
+**Figure 12-5** JWTs usage in microservices
+
+![Images](img/note.jpg)
+
+**NOTE** 欲获得 JWT 的详细理解，请参阅 RFC 7519。
+
+最后，OAuth 与 OpenID 的关联在于 OpenID Connect 在 OAuth 的授权能力基础上构建身份验证。下一篇背景介绍将讨论 OpenID 及更具体的 OpenID Connect (OIDC)。
+
+### OpenID Connect 背景介绍
+
+OpenID 的最新版本（版本 3）是 OpenID Connect (OIDC)。版本 1.0 于 2005 年发布，2007 年被 OpenID 2.0 取代。OIDC 于 2014 年发布。根据 OIDC 常见问题解答，OIDC 解决的问题是让应用和网站开发人员能够在不承担存储和管理密码的情况下对用户进行身份验证，而在充斥试图窃取用户账户的 Internet 环境中。换句话说，OIDC 的目标是将广泛网站上使用的凭证集中到少数可信的身份提供方。
+
+OIDC 是基于 OAuth 2.0 的身份验证层。这使得 OIDC 能够满足身份验证和授权的需求。OIDC 仅限于 HTTP 并使用 JSON 数据格式（OpenID 2.0 使用 XML）。在 OAuth 的授权能力之上添加 OIDC 的身份验证层，使得可以基于授权服务器执行的身份验证来验证终端用户的身份。
+
+OIDC 是由微软、Google 等众多重要公司以及国家标准技术局（NIST）等政府和非营利组织支持的开放身份标准。苹果近期基于 OIDC 构建了其“通过 Apple 登录”服务。
+
+随着 OIDC 的创建及其与 OAuth 2.0 的紧密集成，各标准的功能边界变得模糊。只要记住以下要点，你就能理解这些竞争标准：
+
+• SAML 2.0 负责 Web 用户的认证和授权。
+
+• OAuth 2.0 负责授权，且轻量级。
+
+• OIDC 1.0 在 OAuth 2.0 上运行，提供轻量级的身份和认证服务。
+
+
+
+# Identity Management in Cloud Environments
+
+The `identity` part of identity and access management is all about registering, provisioning, propagating, managing, and finally deprovisioning identities. With those actions in mind, you probably shouldn’t be surprised to learn that identity management itself may actually be done outside of a directory service (such as Active Directory). The authoritative source of identities in your network may actually be the payroll system, for example: users are added to the payroll system, and their identities are then propagated to the directory server.
+
+Thanks to these centralized directory services, it is no longer required to add accounts to every individual server and application in a traditional environment. Of course, users still have multiple accounts to support applications that are not integrated with these centralized directory services, so the dream of true SSO remains elusive, but there are, thankfully, fewer of these accounts than there used to be in the past.
+
+In a cloud environment, both providers and consumers need to plan on how they will manage identities:
+
+- Cloud providers need to offer an identity service that supports customers to use their own identities, identifiers, and attributes. They should also offer federation services based on standards to enable customers to minimize the overhead associated with identity management when using their cloud offerings.
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** The identity service offered by the provider may be referred to as the “internal” identity system on the exam.
+
+- Cloud customers need to determine how they want to manage identities moving forward. This will require that customers determine the architecture models to use for identity management and the technologies that should be implemented to support integration with their current and future cloud providers.
+
+As mentioned multiple times in this chapter, federation will be required as an enabling technology for cloud implementations of any substantial size. Without federation, you will lose control of IAM. This isn’t to say there won’t be any accounts created and managed in a provider’s internal IAM system. You will likely still have a limited amount of administrator accounts within the provider’s IAM system to support troubleshooting in the event of failure of the federated link, for instance.
+
+To establish a federated link, the customer needs to determine what system will be the “authoritative source” to serve as the identity provider. This is usually a directory server. This identity provider then needs to perform the federation. There are two main approaches to creating this connectivity: use a free-form model that creates a separate connection between the identity provider and the various cloud services (as shown in Figure 12-6), or use the hybrid (hub-and-spoke) model that uses a central identity broker to connect to all the cloud providers (as shown in Figure 12-7).
+
+![Images](img/pg249_Image_64.jpg)
+
+***
+
+**Figure 12-6** Free-form model. (Used with permission of Cloud Security Alliance.)
+
+![Images](img/pg249_Image_65.jpg)
+
+***
+
+**Figure 12-7** Hub-and-spoke model. (Used with permission of Cloud Security Alliance.)
+
+The free-form model comes with a few disadvantages compared to the hub-and-spoke model. First off, your authoritative source needs to be connected to the Internet to connect with all of the cloud providers. Second, in order to support users outside of your network, these users will need to VPN into the corporate network to access any cloud solution that has a federated link established. Finally, in an environment that may have multiple authoritative servers (such as multiple domains that are not joined for corporate purposes), each of these authoritative servers will need to connect to the providers, which multiplies the amount of connections required.
+
+In the hub-and-spoke model, an identity broker can be cloud-based. Implementation of a cloud-based identity broker can facilitate the establishment of the federation with numerous cloud providers, and external users need not VPN into the corporate network to use federated links to your various providers.
+
+Another option exists in running your directory server in a cloud environment itself (or by consuming a directory service from the provider). In this scenario, you could synchronize your internal directory server with the cloud-based directory server (or service). In turn, this cloud-based directory could serve the operating systems and applications (applistructure) in the cloud environment and act as an authoritative server for any federated links with other parties that rely on the cloud provider.
+
+In addition to the big-picture deployment model considerations, the following process and architectural decisions need to be made:
+
+- How will identities for application code, systems, devices, and other services be managed? Most of the focus in this chapter has been on users accessing services. Services accessing services and other requirements may call for a different approach.
+
+- How will identity provisioning processes change when consuming cloud services, if at all? Identity provisioning is not limited to creating identities only; it also deals with changing permissions and, of course, deprovisioning identities. A provisioning system could take information from an HR database and then be used to provision access to various systems in addition to the directory server, such as web applications, database servers, and, most importantly for our discussion, cloud services. If provisioning systems today are inefficient, adopting cloud services may offer an opportunity to readdress and improve your provisioning systems.
+
+- Formal processes should be implemented when on-boarding new cloud providers and integrating them into your existing IAM environment. This includes establishing federation and the following considerations:
+
+  - Building an entitlement matrix that is created using the granularity exposed by the provider. This may vary based on the service model (for example, SaaS versus IaaS).
+
+  - Determining how attributes will be mapped between the identity provider and the relying party. This includes mapping internal groups (roles) to the groups in the provider environment.
+
+  - Determining and enabling any monitoring and logging that need to be implemented to meet your security policies. Newer IAM implementations may offer new services that you may want to include in your policies, such as behavioral analytics.
+
+  - Documenting any break/fix processes in case of failure of any of the federation (or other techniques) used for the relationship.
+
+  - Updating current incident response plans related to identity takeovers to include the process for cloud providers. This may include steps required to engage the provider for their assistance, especially when dealing with a privileged account takeover.
+
+  - Determining how accounts can be deprovisioned (or attributes changed) in the cloud environment.
+
+Finally, providers need to determine which identity standards they will offer to customers. As you know, providers will generally offer some form of identity and access management system. Providers may enhance this with either custom or standards-based federation offerings. In the event of standards-based offerings, SAML will likely be requested by customers.
+
+## Authentication and Credentials
+
+Authentication is always the responsibility of the identity provider. If you have federation in place, a system under your control acts as the identity provider. If you don’t have a federated link, the CSP acts as the identity provider. Authentication technically occurs any time an identity needs to be confirmed, such as when an entity proves who they are and assumes an identity, not just during logon.
+
+**1.** 选项 **A** `If the user logged on with MFA` 是一个可以用于 ABAC 的属性。
+
+**2.** 选项 **A** `It is a best practice according to the CSA Guidance.` 说明多因素认证应始终被考虑。
+
+
+
+**3.** 选项 **D** `There is no best protocol. You have to determine your use cases and constraints before selecting a protocol.` 是最准确的回答。
+
+**4.** 选项 **B** `HR system` 是身份的权威来源。
+
+# **第 13 章**
+
+## 安全即服务
+
+本章涵盖了 CSA 指南第 13 域的以下主题：
+
+• SecaaS 的潜在好处和顾虑  
+
+• 安全即服务产品的主要类别  
+
+*Plus ça change, plus c’est la même chose.*
+
+—Jean-Baptiste Alphonse Karr  
+
+事物的变化越多，本质就越不变。这正是我们在谈论安全即服务（SecaaS）时所看到的。
+
+到目前为止，我的讨论都集中在理解云端的共享责任模型。你已经了解了提供方和客户各自负责的安全方面。本章探讨如何利用云服务（通常是 `SaaS` 和 `PaaS`）来保护部署在云端和传统环境中的资产。
+
+CSA 指南将这些服务称为“安全即服务”（SecaaS），但我更倾向于使用“安全软件即服务”，因为毕竟你是在采购一种专注于安全的 `SaaS` 解决方案。无论你是从专门的 SecaaS 供应商那里采购云端安全服务，还是从 `IaaS` 提供商那里利用安全服务，你都在采购 SecaaS 服务。无论通过何种方式采购这些服务，它们必须满足以下标准：
+
+• 它们必须是以云服务形式交付的安全产品或服务。  
+
+• 它们必须满足云计算的基本特征。  
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP**  记住，你是在采购满足云计算基本特征的安全软件，你会没问题。
+
+正如 IT（尤其是云端）的其他所有事物一样，新产品不断推出。为了考试，请专注于下面章节所涵盖的类别。
+
+### SecaaS 的潜在好处和顾虑
+
+我会尽量简化说明。你已经熟悉采购云服务的好处和限制，大部分情况也适用于 SecaaS。不过，下面的列表提供了专门针对 SecaaS 的好处和缺点的摘要。
+
+SecaaS 提供了以下几个潜在好处：
+
+• **云计算优势** 云计算的常规好处同样适用于 SecaaS，包括降低资本支出、更高灵活性、冗余、高可用性和弹性。正如以往一样，你必须进行尽职调查，确保选择的供应商符合你的需求。
+
+• **人员和经验** 这一点非常关键，可能是采用 SecaaS 的最大原因。全球公司都在努力寻找合格的网络安全专业人员。通过采用 SecaaS，你可以立即获得相应领域的专家，从而让你的内部人员专注于组织整体的网络安全“宏观”视角。
+
+• `Intelligence sharing` 老实说，这并不新鲜。`Antivirus` 客户数十年来一直从中受益。当提供商从其他客户那里获得恶意软件样本时，他们会制作一个签名文件，用于识别并隔离病毒，这个文件将被所有其他客户使用。
+
+• `Deployment flexibility` 这是 SecaaS 的另一个核心好处。想想你现在如何管理多个地点。所有安全控制是否都位于你的总部，或者你为每个管理的站点购买硬件？现在考虑远程工作者，你如何保护他们？是否必须强制所有人通过企业网络的 `VPN` 来施加你的控制？有一种更好的方式：它叫 SecaaS。
+
+• `Insulation of clients` 为什么要让恶意软件进入你的企业网络以便本地检查？你为何又拥堵边缘网络？使用 SecaaS，你可以通过在远程系统上进行扫描并清除恶意流量，在流量到达企业网络之前创建一个“干净的管道”进入你的网络。
+
+• `Scaling and cost` 如果你的 500 人公司收购了拥有 250 名员工的公司，你突然需要支持 50% 更大的用户基数。这通常需要整合不同的技术并添置新硬件以满足资源需求。使用 SecaaS，你只需购买额外的 250 个许可证。这体现了 SecaaS 的“按需增长”成本优势。
+
+使用 SecaaS 供应商可能会导致以下问题：
+
+• `Lack of visibility` 外包的本质意味着我们对提供商的操作可见性受限。SecaaS 亦是如此。你可能对提供商的整体工作有高层次了解，但无法获得其运营的详细信息。最大的影响体现在你从提供商处接收的遥测数据（如日志）。务必确保可用来源满足你的要求，并始终做好尽职调查！
+
+• `Regulation differences` 你的提供商位于何处，能否根据你所在的司法管辖区解决你组织面临的监管问题？
+
+• `Handling of regulated data` 你的提供商能否作为合作伙伴？例如，在 `HIPAA` 规定下，SecaaS 提供商必须能够作为业务伙伴，如果其系统将接触健康记录。`PCI` 标准又如何？除了这些标准，指南还提出了关于员工监控的情景。在一个司法管辖区合法的行为在另一个司法管辖区可能被禁止。再次，尽职调查应当解决这些问题。
+
+• `Data leakage` 安全相关信息（如日志）通常包含敏感数据，在多租户环境中必须得到高度保护。这要求提供商实现非常强的隔离和分离。当然，此类数据在法律案件中也可能被要求提供。你需要确保在其他客户面临电子发现请求时，你的数据不会被意外泄露。另一个数据泄露的例子是泄露内部 `IP` 地址。
+
+• `Changing providers` 当你采购 SecaaS 解决方案时，实际上是在采购专有应用程序。更换供应商通常会是一项困难的工作，因为可能缺乏将数据从一个供应商迁移到另一个供应商的工具。在实际操作和 `CCSK` 考试中，一个重要事项是必须保留历史日志和其他可能用于法律和合规要求的数据。如果没有提供商的工具而无法以可用格式导出这些数据，可能会导致供应商锁定。
+
+• `Migration to SecaaS` 采用云服务必须始终计划并执行得当。SecaaS 亦是如此。
+
+### 主要类别的 SaaS 服务
+
+新技术几乎每天推出，因此你无需担心本章未列出的任何类别会影响你的 `CCSK` 考试。请注意，本章后面的许多技术在之前的章节已经介绍过。尽管如此，不要跳过本节，因为这里会有针对类别的具体条目，可能会作为考试的一部分出现。
+
+#### 身份、授权和访问管理服务
+
+该类别的 SecaaS 服务主要提供身份仲介技术，可用于实现联合身份。CSA 指南还列出了该类别的其他服务，如策略执行点（`PEP as a Service`）、策略决策点（`PDP as a Service`）、策略访问点（`PAP as a Service`）、提供实体身份的服务以及提供属性的服务（如多因素认证）。
+
+此外，该类别还引用了两项服务：一种是利用应用和基础设施简化多种强认证选项（包括移动设备应用和用于 `MFA` 的令牌）集成的强认证服务；另一种是将目录服务部署在云端，充当组织的身份提供者。你可以在 `IaaS` 中实现目录服务，例如在自己的实例中部署。
+
+#### 云访问安全代理 (CASB)
+
+CSA 指南在此处的内容并无新意，之前的 **第 11 章** 背景介绍已经覆盖。以防你跳过了该背景，以下是关于 `CASB` 技术的几点考试要点。
+
+`CASB` 可以以内联阻断模式工作，拦截目标指向云服务的通信；也可以通过 `API` 监控活动并强制执行策略。传统的网页过滤工具只能基于网站的白名单或黑名单进行控制，而你希望根据内容而非仅基于网站来允许或限制访问。这是两者的主要区别。`CASB` 可通过与数据防泄漏（`DLP`）服务集成，实现基于内容的阻断。
+
+`CASB` 可部署为本地控制，也可部署在云端。如前所述，云端部署在保护多个地点和远程用户方面提供更大灵活性。
+
+`CASB` 供应商通常提供某种云供应商评级系统。他们会对提供商进行整体风险评估，并可能就数据中心位置、上传到提供商系统的数据所有权（客户上传后是客户还是提供商所有）等事项提供建议。在某些情况下，`CASB` 供应商以 `Cloud Controls Matrix` 为基础进行风险评估。
+
+尽管供应商可能同时提供 `CASB` 和身份仲介解决方案，但大多数供应商是分开提供这两类服务。
+
+#### Web 安全网关
+
+该技术提供网页过滤功能，已有相当长的历史。网页过滤器可以判断哪些类别的网站被阻止（例如，黑客站点会被阻止访问端点）。这些解决方案还能决定某些网站在何时可以访问，以及其他网络保护措施。
+
+云端解决方案的优势在于能够在全球范围内实施策略。例如，你的组织在纽约有一个办事处，销售人员在新加坡进行一系列会议。与其强制该用户通过 `VPN` 连接到办公室以检查其网页使用，你可以在新加坡部署一个本地点点来执行你的策略，让其工作站直接使用该点点。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP**    记住，SecaaS 的一个主要好处是能够使用他人的基础设施来强制执行你的策略。
+
+应用授权管理可以为 `Web` 应用提供额外的细粒度和上下文安全执行层。
+
+# 电子邮件安全
+
+实施提供电子邮件安全的 SecaaS 是显而易见的。如今超过 90% 的电子邮件是垃圾邮件，为什么要把这些带入你的环境中，只为丢弃它呢？这可能是“客户端隔离”好处的最佳范例。
+
+任何电子邮件安全解决方案都应能够控制入站和出站电子邮件，保护组织免受钓鱼和恶意附件等风险，执行企业策略（如可接受使用和垃圾邮件防止），并提供业务连续性选项。一些电子邮件安全 SecaaS 解决方案可能提供电子邮件加密和数字签名等功能，以支持保密性、完整性和不可否认性。
+
+# 安全评估
+
+安全评估解决方案已存在多年。企业可以使用这些方案支持 `NIST`、`ISO`、`PCI` 等合规活动。成熟产品与 SecaaS 解决方案的唯一区别在于前者在本地执行，后者在云端进行。
+
+CSA 指南明确列出了三种安全评估系统形式，你需要记住这些以备考试：
+
+• `传统的云端实例和本地服务器、工作站的安全/漏洞评估`
+
+• `应用安全评估，包括静态应用安全测试 (SAST)、动态应用安全测试 (DAST) 以及运行时应用自我保护 (RASP) 的管理。`
+
+• `连接到云端环境的云平台评估工具，通过公开的 API 评估元结构配置和服务器实例`
+
+## 风险容忍与安全评估
+
+我将在此处分岔话题，谈谈风险容忍的问题。安全评估 SecaaS 是一种有些人热爱、有些人则不愿碰一尺的解决方案。原因是部分安全评估 SecaaS 解决方案会将漏洞扫描（云端和传统）的结果放入云端环境。有些人喜欢这样，因为他们可以“在火车上查看我的网络中的漏洞”（真实 `CISO` 引语）。我个人不想让我的网络所有“骸骨”暴露给任何猜到我的密码的人，这简直是完全利用我的网络的路线图！
+
+# 网络应用防火墙
+
+SecaaS 中的网络应用防火墙 (`WAF`) 是云端防火墙，在第 7 层运行；因此它理解 `HTTP` 并能阻止恶意流量。在我看来，这一 SecaaS 类别也是“不用思考”的。和电子邮件一样，今天进入你网络的大部分 `Internet` 流量要么是垃圾，要么是恶意，直接用他人的系统依据你的策略将其丢弃。
+
+许多云端 `WAF` 可以阻止针对你网络的分布式拒绝服务 (`DDoS`) 攻击。你的网络能否应对 1.3 Tbps 的 `DDoS` 攻击？这就是 2018 年 `GitHub` 所面对的情况。他们的服务总共受影响约 20 分钟（约 10 分钟用于识别攻击，另外 10 分钟由其云端 `WAF` 供应商完全处理恶意流量，之后攻击者放弃）。
+
+![Images](img/note.jpg)
+
+**NOTE**    关于 `DDoS` 的简短个人备注。我的孩子特里斯 (`Tristan`) 昨天放学回家（他八年级），告诉我有两个孩子利用免费的 `bot` 在手机上于午餐时间攻击某些在线游戏。没错——13 岁的孩子在午餐时间为了玩乐发起 `DDoS`！时代真的变了（我们也谈了法律）。你的网络会被一群孩子拿下吗？
+
+# 入侵检测/防御
+
+入侵检测/防御系统 (`IDS/IPS`) 从代理处获取数据并在提供商环境中进行分析。这使得组织无需在本地部署和管理传感器，即可获得网络流量分析能力。`IDS/IPS` 服务通常与 `SIEM` 集成，提供统一的安全监控视图。
+
+### 章节回顾
+
+本章回顾了 SecaaS 的优缺点，并讨论了 CSA 指南中提供的各种服务。您在准备 `CCSK` 考试时，应熟悉以下要点：
+
+• 选择任何云服务都需要您组织进行尽职调查。SecaaS 不改变这一关键活动。
+
+• 所有类型安全工具生成的数据可能高度敏感，这种情况在考虑 SecaaS 时依然成立。您需要明确了解合规性所需的所有要求，这将决定日志数据的处理和归档需求。
+
+• 受监管数据必须得到适当管理。如果 SecaaS 系统与受监管数据交互，则必须满足或超过贵组织已有的控制措施。
+
+• 如果提供商不支持以可读格式导出数据，则可能出现锁定情形。
+
+• 了解提供商的数据保留能力。如果您需要保留五年数据，但提供商仅支持六个月，则存在差距，您需自行解决（例如导出并本地保存），或寻找其他提供商。
+
+• 最后，请确保 SecaaS 服务尽可能与当前和未来的计划兼容。提供商是否支持您当前或计划中的云提供商、操作系统和移动平台，例如？
+
+#### 问题
+
+**1.​​​​​​B.** 网络应用防火墙（`WAF`）可以在第 7 层检查网络流量，并因此理解 `HTTP` 流量。
+
+**2.​​​​​​D.** 上述全部为正确答案。SecaaS 通常使您能够使用提供商的系统来强制执行策略。
+
+**3.​​​​​​A.** 如果供应商强制要求您使用其平台读取日志数据，这很可能导致锁定情形。您将被迫保持关系，以便访问用于证明合规性或满足法律要求的数据。其他答案可能为真，也可能为假。
+
+**4.​​​​​​D.** 要被视为 SecaaS 服务，提供商必须提供以云服务形式交付的安全产品或服务，并满足云的基本特征。`SOC` 或 `ISO/IEC` 不是必须项。
+
+**5.​​​​​​B.** 这是一个棘手的答案。成本效益并不意味着使用 SecaaS 会省钱，而是说“按需付费、随增长付费”。这是否意味着 SecaaS 更便宜？未必。事实上，它可能比您现在使用的内部系统更贵。
+
+**6.​​​​​​C.** `IDS/IPS` 系统从代理处获取数据并在提供商环境中进行分析。
+
+**7.​​​​​​D.** 所有列出的活动均可由安全评估的 SecaaS 完成。
+
+**8.​​​​​​D.** 网络安全网关提供一种保护控制，可检查 `Web` 流量中的恶意软件并限制用户可访问的网站。它们不执行加密。
+
+**9.​​​​​​A.** 在供应商尽职调查时，应检查强多租户性。缺乏强多租户可能导致问题，尤其是在针对另一租户的电子发现请求导致其他租户数据被泄露时。
+
+**10.​​​​​​B.** 正确答案是部署本地网关设备。虽然本地网关可能通过其他技术加速数据传输，但它们并未被直接标识。
+
+## **CHAPTER 14**
+
+## 相关技术
+
+本章涵盖 CSA 指南第 14 域的以下主题：
+
+• 大数据
+
+• 物联网
+
+• 移动
+
+• 无服务器计算
+
+*一旦新技术压过你，如果你不是那辆蒸汽机的一部分，* 你就是道路本身。*
+
+—Stewart Brand
+
+在我看来，Brand 的这句名言完美概括了你在信息技术职业中的发展。信息技术始终有新发展需要你理解一定程度。这并不意味着你必须成为每项新技术的专家，但至少你需要了解新技术带来的好处。
+
+本章探讨几项关键技术，虽然它们本身并非专属于云环境，但常见于云环境。这些技术通常依赖于大量可用资源，能够迅速（甚至自动）扩展或缩减以满足需求。
+
+在准备考取 `CCSK` 认证时，请记住 `CSA`（Cloud Security Alliance）及其指导文档的使命是帮助组织确定谁负责选择应当采用和实施的最佳实践（即供应商侧还是客户侧），以及为何这些控制措施很重要。本章节聚焦于这些技术相关的安全问题，而不是针对特定供应商实现方式的控制配置细节。
+
+如果您想进一步了解其中一项或多项技术，请访问 Cloud Security Alliance 网站，查找有关每个领域的白皮书和研究报告。
+
+### 大数据
+
+“大数据”一词指从极大数据集中提取有价值信息的集合。大数据能够处理传统数据处理工具根本无法管理的海量数据。您无法在商店购买“大数据解决方案”，大数据也不是单一技术，而是指一组分布式的数据采集、存储和处理框架。根据 `Gartner` 的描述，“大数据是高容量、高速度和/或高多样性的信息资产，需要新型处理方式，以实现更佳的决策、洞察发现和流程优化。”
+
+`CSA` 将 `Gartner` 引文中提到的属性称为“三大 V”。下面我们来定义它们：
+
+• **高容量（High Volume）** —  — 数据记录或属性数量巨大的数据量
+
+• **高速度（High Velocity）** —  — 数据的快速生成和处理（如实时或流式数据）
+
+• **高多样性（High Variety）** —  — 结构化、半结构化或非结构化数据
+
+大数据的“三大 V”使其在云部署中极具实用性，因为 `PaaS`（平台即服务）和 `IaaS`（基础设施即服务）部署模型提供了弹性扩展和海量存储能力。此外，大数据技术还能够集成到云计算应用中。
+
+大数据系统通常包含以下三个常见组件：
+
+• **分布式数据采集** 该组件指系统能够大规模、常常以流式方式摄取大量数据的能力。被采集的数据范围可以从简单的 `Web` 点击流分析，到科学和传感器数据。虽然并非所有大数据都依赖分布式或流式采集，但它是核心大数据技术之一。请参见“分布式数据采集背景”以获取更多关于提及的数据类型的信息。
+
+• **分布式存储** 该组件指系统能够在分布式文件系统（如 `Google File System`、`Hadoop Distributed File System`）或数据库（如 `NoSQL`）中存储大规模数据集。`NoSQL`（不只是 `SQL`）是一种非关系型、分布式且可水平扩展的数据库系统，适合大数据场景，且往往是因为传统非分布式存储技术的局限性而被采用。
+
+
+
+• **分布式处理** 工具和技术能够将处理任务（如 `MapReduce`、`Spark`）分布式地执行，以有效分析那些体积巨大且变化迅速的数据集，单一节点处理无法胜任。请参见“分布式数据采集背景”以获取更多信息。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 请记住这里列出的三个组件：数据会被 *采集*、*存储*、*处理*。
+
+下面列出的几个术语在前面的项目符号列表中使用，需要更进一步的解释，它们在以下背景资料中有所阐述。
+
+![Images](img/note.jpg)
+
+**NOTE** 如常，背景资料仅供理解，与 CCSK 考试无关。
+
+#### 分布式数据采集背景
+
+与通常以批量方式发送的分布式数据（例如上一周结构化数据库记录）不同，流式数据是由众多数据源持续生成的，这些数据源往往同时且以小尺寸（千字节）发送数据记录。流式数据可以包括客户端移动或 Web 应用产生的日志文件、社交网络信息以及数据中心连接设备或仪器产生的遥测数据。在新数据动态且持续生成的大多数场景中，流式数据处理都具有显著优势。
+
+Web 点击流分析提供的是在跟踪用户如何与您的网站交互时产生的数据。点击流分析主要有两种类型：
+
+• **流量分析** 在服务器层面运行，提供诸如用户访问的页面数量、页面加载时间、每个页面加载耗时、以及其他交互数据等性能指标。
+
+• **基于电子商务的分析** 利用点击流数据评估电子商务功能的有效性。它分析用户在哪些页面停留、购物车分析、已购买的商品、购物车中加入或移除的项目、使用的优惠码以及支付方式等。
+
+这两种使用案例展示了公司日常运营所能产生的巨量数据潜力，以及对能够将这些数据转化为可操作信息的工具的迫切需求，以提升公司收入。
+
+#### Hadoop 背景
+
+Hadoop 与大数据几乎是同义词。事实上，约有五分之四的财富 500 强公司使用 Hadoop 进行大数据处理，因此它值得拥有自己的背景介绍。令人惊讶的是，我们现在所称的“大数据”最初是由 Google 为了能够索引互联网而构建的系统（即 Google File System）所驱动。2003 年，Google 发布了该系统内部实现的白皮书。2005 年，Doug Cutting 与 Mike Cafarella 基于此知识构建了开源大数据框架 Hadoop。Hadoop 目前由 Apache Software Foundation 维护。
+
+下面是 Hadoop 项目本身的一段引言，最好能说明什么是 Hadoop：
+
+> The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. It is designed to scale up from single servers to thousands of machines, each offering local computation and storage.
+
+请注意，Hadoop 通过在若干 x86 系统上分布式运行存储和处理，实现对大数据集的分布式处理。为了实现这一点，Hadoop 在集群中多个独立的 x86 系统上同时运行存储和处理。之所以将数据和处理分别放在单独的 x86 系统（如您的笔记本或工作站）上，是出于成本和性能考虑。这些 x86 系统相较于定制高性能硬件更为廉价。这种分散化的方式意味着您无需昂贵的、高性能的计算机来分析海量数据。
+
+这种存储和处理能力被划分为两大主要组件：
+
+• **Hadoop Distributed File System (HDFS)** 这是 Hadoop 的存储部分。当数据存储在 HDFS 系统中时，数据会被拆分为若干块并分布存放在集群的多个节点上。HDFS 建立在操作系统的原生文件系统之上（通常是 Linux，Windows 也受支持）。HDFS 能够在集群中使用结构化、非结构化或流式数据等多种数据类型。这里不涉及诸如 `SQOOP`（用于数据库）或 `Flume`（用于流媒体）等用于数据摄入的细节，因为这会使解释过于冗长，尤其是针对 HDFS。
+
+• `MapReduce` 这是 Hadoop 的处理部分。`MapReduce` 是一种分布式计算算法——它的名称实际上是 `mapping` 和 `reducing` 的组合。`map` 部分用于过滤和排序数据，而 `reduce` 部分用于执行汇总操作。例如，假设你想确定一个罐子里有多少枚便士。你可以自己数一数，或者你可以和一支由四人组成的团队合作，将罐子分成四个部分（map 函数），让每个人数自己的并记录结果（reduce）。这四个人共同工作会被视为一个集群。这是 `MapReduce` 所使用的分治方法。现在假设你有一个 4TB 的数据库，想要在一个由四个 Hadoop 节点组成的集群上进行分析。4TB 的文件会被分成四个 1TB 的文件，并在四个独立的节点上处理，这些节点会按照你的要求交付结果。
+
+为了考虑一个真实的大数据场景，想象一家非常大的零售商需要实时从 11,000 家进行每小时 500 笔销售的收银机读取销售数据，以便确定并预测需要向合作伙伴订购并每日发货的商品。这是一个相当复杂的计算任务，需要进行。这些数据可能正是我们之前讨论的流媒体数据。这些数据将被纳入 Hadoop 系统，并在集群的节点之间进行分发，然后通过 `REST API` 将所需的订单和交付处理并发送到相应的系统。
+
+这两个组件构成了原始 Hadoop 框架的基础。随着时间的推移，已有组件被添加，以提高功能性，包括：
+
+• `Spark` Spark 是另一种数据处理功能，可能会取代 `MapReduce`。它比 `MapReduce` 提供更多的内存处理选项。
+
+• `YARN` 即 Yet Another Resource Negotiator，顾名思义，在 Hadoop 系统中执行资源管理功能（具体为集群资源管理）。
+
+• `Hadoop Common` 这些工具使操作系统能够读取存储在 Hadoop 文件系统中的数据。
+
+以上内容完成了以 Hadoop 为例的大数据分析入门课程。这是一个今天非常火热且只会越来越大的领域。最后一点：市面上有商业大数据产品可供参考。和其他新兴领域一样，并购和重组很常见。例如，两家较大的大数据解决方案提供商 Cloudera 和 Hortonworks 在 2019 年完成了合并。
+
+#### 安全与隐私考虑
+
+你知道大数据是一个跨多节点、使用多种模块处理高容量、高速度、高多样性数据的框架，这在安全与隐私方面带来了挑战，尤其是当你使用了一堆不同的工具和平台时。
+
+这是讨论如何将基础安全原则应用于你可能不熟悉的技术（如大数据）的好机会。最基本的层面是，你需要对 Hadoop 环境中**所有**组件和模块提供**最小权限**的**认证、授权和审计（AAA）访问。这当然包括从物理层到模块本身的所有内容。对于应用层组件，供应商应有最佳实践文档（例如，Cloudera 的安全文档大约 500 页长），并迅速为漏洞提供补丁。只有在完成这些 AAA 基础后，才考虑加密需求，无论是传输中还是存储时，按需加密。
+
+#### 数据收集
+
+数据收集时，通常会先经过某种中间存储设备，然后才存入大数据分析系统。该设备中的数据（虚拟机、实例、容器等）也需要得到保护，如上文所述。中间存储可能是内存中的交换空间。你的服务提供商应提供文档，帮助客户满足自身的安全要求。
+
+![Images](img/exam_tip.jpg)
+
+**EXAM TIP** 为你的 CCSK 考试记住：任何技术所需的所有组件和工作负载都必须实现安全的 AAA。即使底层云服务被用于提供大数据分析，这一原则仍然适用。例如，一个基于云的大数据系统可能包括在实例中运行的处理节点，这些节点在体积存储中收集大量数据。
+
+#### 密钥管理
+
+如果大数据实现需要对“静态数据”进行加密（毕竟一切都是基于风险的），那么由于节点的分布式特性，实现可能会变得复杂。关于“静态数据”的保护，云环境中的加密能力将取决于提供商能够向你提供的控制能力，这包括**密钥管理**。密钥管理系统必须能够向多个存储和分析工具分发密钥。
+
+#### 安全能力
+
+CSP（云服务提供商）的控制可以用于满足你在大数据实现中消费的服务（如对象存储）的安全要求。如果你需要数据加密，请查看你的云提供商是否能为你完成。如果你需要非常细粒度的访问控制，请查看提供商的服务是否支持。这些服务和控制的安全配置细节应纳入你的安全架构。
+
+#### 身份与访问管理
+
+如前所述，授权和认证是最重要的控制措施，必须做好。在云环境中，这意味着首先要确保所有拥有管理平面访问权限的实体都遵循最小权限原则。随后，你需要处理大数据架构中使用的服务的访问权限。最后，大数据系统本身的所有应用组件都需要建立适当的访问控制。
+
+鉴于身份与访问管理（IAM）必须在云平台、服务以及大数据工具层面多处实施，配额矩阵（entitlement matrices）可能会很复杂。
+
+#### PaaS
+
+云提供商可能会以 PaaS（平台即服务）的形式提供大数据服务。使用大数据平台而非自建具有诸多好处。云提供商可能会在其服务中实现高级技术（如机器学习）。
+
+你需要充分了解潜在的数据暴露、合规性和隐私影响。例如，如果 PaaS 供应商在技术上能够访问企业数据，是否存在合规风险？供应商如何应对内部人员威胁？这些都是在采用大数据 PaaS 服务前必须回答的问题。
+
+正如本书其他内容一样，必须基于风险做出决策，并实施相应的安全控制以满足组织的要求。
+
+### 物联网（IoT）
+
+物联网（IoT）涵盖物理世界的所有内容，从电力和水务系统、健身手环、家用助理、医疗设备到工业和零售技术等。除了这些产品，企业正在将 IoT 用于以下应用：
+
+• `Supply chain management`（供应链管理）
+
+• `Physical logistics management`（物流管理）
+
+• `Marketing, retail, and customer relationship management`（营销、零售和客户关系管理）
+
+• `Connected healthcare and lifestyle applications for employees and consumers`（面向员工和消费者的连接健康与生活方式应用）
+
+根据部署规模（例如大规模消费者使用），你可以想象这些设备可以产生多少流媒体数据。虽然云并非必须用于支持所有这些设备的数据流以及随后的处理，但它常被用于支持这些 IoT 设备。
+
+### 章节回顾
+
+CSA 指南中识别出的以下云端特定物联网安全要素：
+
+• `安全数据收集和清理` 这可能包括，例如，剥离代码中的敏感或恶意数据。
+
+• `设备注册、身份验证和授权` 当前常见的问题之一是使用存储的凭据直接对云提供商的后端 API 进行调用。已知有攻击者反编译应用程序或设备软件，然后使用这些凭据进行恶意操作。
+
+• `设备到云基础设施的 API 安全` 除了前面提到的存储凭据问题，API 本身也可能被解码并用于对云基础设施进行攻击。
+
+• `加密通信` 许多当前设备使用弱、过时或完全不存在的加密，这使数据和设备面临风险。
+
+• `能够修补和更新设备，防止其成为攻击点` 目前，设备通常以原样交付，且从未接受操作系统或应用程序的安全更新。这已经导致多起重大且高调的安全事件，例如基于被入侵物联网设备的大规模僵尸网络攻击。
+
+![Images](img/note.jpg)
+
+**NOTE** 查看关于 Mirai 和 Torii 恶意软件的文章，获取被入侵物联网设备如何形成巨大僵尸网络并用于大规模 DDoS 攻击的信息。
+
+## 移动计算
+
+移动计算当然并非新鲜事物。企业不需要云端服务来支持移动应用，但许多移动应用仍依赖云端服务进行后端处理。移动应用利用云端不仅因为其在高度动态工作负载方面的处理能力，还因为其地理分布优势。
+
+CSA 指南识别出以下云端环境中移动计算的安全问题：
+
+• `设备注册、身份验证和授权` 对移动应用而言也是问题，尤其是当存储的凭据被用于直接通过 API 连接到提供商基础设施和资源时。如果攻击者能够反编译应用并获取这些存储凭据，他们将能够操纵或攻击云基础设施。
+
+• 运行在云端环境中的任何应用 API 也被列为潜在的妥协来源。如果攻击者能够在本地部署代理拦截这些 API 调用，他们可能会解码（通常未加密的）信息并寻找安全弱点。在应用中进行证书绑定/验证可帮助缓解此风险。
+
+![Images](img/note.jpg)
+
+**NOTE** 开放式应用程序安全项目（OWASP）将“钉钉”定义为“将主机与其预期的 X509 证书或公钥关联的过程。一旦证书或公钥被知晓或看到，该证书或公钥即与该主机‘钉定’”。
+
+### 无服务器计算
+
+无服务器计算可以被视为客户无需管理服务器的环境。在此模型中，提供商负责托管客户运行工作负载的服务器。CSA 将无服务器计算定义为“对某些平台即服务（PaaS）功能的广泛使用，以至于应用程序栈的全部或部分在云提供商环境中运行，且不需要客户管理任何操作系统，甚至容器”。
+
+当大多数人想到无服务器计算时，往往（错误地）认为是在提供商平台上运行脚本（参见“Serverless vs. Function as a Service [FaaS]”侧边栏）。但无服务器远不止这种有限的使用场景。CSA 提供了以下无服务器计算示例：
+
+• `对象存储`
+
+• `云负载均衡`
+
+• `云数据库`
+
+• `机器学习`
+
+• `消息队列`
+
+• `通知服务`
+
+• `API 网关`
+
+• `Web 服务器`
+
+我确信，如果您今天正在使用云端，则一定在某些方面使用了无服务器计算。如果您计划使用云端，则很可能会使用无服务器产品。这并无任何问题，因为这些服务可以高度编排（即事件驱动），并与提供商所提供的 IAM 服务深度集成。只要注意，越多依赖提供商的服务，组织就越依赖（锁定）于该提供商，因为要在新环境中重新创建该环境会更加困难。
+
+从安全角度，CSA 指南指出以下需要您在参加 CCSK 考试前了解的问题：
+
+• `无服务器将大幅增加云提供商的安全责任。选择提供商并了解安全 SLA 和能力至关重要。`
+
+• `使用无服务器时，云用户将无法访问常用的监控和日志级别，如服务器或网络日志。应用需要集成更多日志，云提供商应提供满足核心安全和合规要求的必要日志。`
+
+• `虽然提供商的服务可能已通过各种合规认证或验证，但不一定每项服务都符合所有潜在法规。提供商需要保持合规映射的时效性，客户需要确保仅使用其合规范围内的服务。`
+
+• `由于只能通过管理平面来集成和使用无服务器功能，因此云用户将拥有对提供商管理平面的高度访问权限。`
+
+• `无服务器可以显著缩小攻击面和攻击路径，将无服务器组件集成可能是打破攻击链的良好方式，即使整个应用栈并非无服务器。`
+
+• `任何漏洞评估或其他安全测试必须遵守提供商的服务条款。云用户可能不再能够直接测试应用，或只能在较小范围内进行测试，因为提供商的基础设施现在托管所有内容，无法区分合法测试与攻击。`
+
+• `事件响应可能会更加复杂，并必然需要对流程和工具进行改变，以管理基于无服务器的事件。`
+
+当您逐条阅读此指南的列表时，每一点是否让您产生 déjà vu 的感觉？这应该是因为我们之前已经讨论过每一项内容，只是没有直接以服务器无状态的视角来表述。请相信但验证您的提供商，并记住除了预防控制外，您还需要检测。由于服务由提供商构建并管理，所有无服务器产品都是如此，您可能需要在运行在无服务器环境中的应用中内置日志功能。
+
+## 无服务器 vs. 功能即服务（FaaS）
+
+“无服务器计算”章节的所有内容时至今日仍然有效。作为消费者，您利用的是由提供商构建并维护的服务。客户无需构建功能或运行服务器即可获得功能。最近因 AWS Lambda、Microsoft Azure Functions 等新的 FaaS 产品出现混淆。虽然这些产品常被称作“无服务器计算”，但它们并非如此。
+
+使用 FaaS 时，您在提供商的服务器上执行自己的应用。换句话说，与无服务器不同，在 FaaS 中，应用是开发者的责任，正如传统计算一样，但应用运行在提供商构建并管理的无状态容器中。
+
+### 章节回顾
+
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者 **Richard Feynman**。
+
+1. 运用费曼技巧，你只需花上 `20 min` 就能深入理解知识点，而且记忆深刻，*难以遗忘*。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+### B. 当使用云作为物联网设备的后端时
+
+### C. 当使用云服务支持大数据系统时
+
+### D. 以上全部
+
+### 10. 根据 CSA，云的哪些属性使其成为支持移动应用的理想平台？
+
+### A. 运行所需基础设施的成本
+
+### B. 云的分布式地理特性
+
+### C. 云服务固有的安全性
+
+### D. B 和 C
+
+### Answers
+
+### 1. D. 证书绑定是将证书与主机关联。这有助于防止攻击者通过代理查看未加密的网络活动，从而识别潜在的安全弱点。其他选项均不正确。
+
+### 2. D. 如果需要，大数据的加密必须在所有存储位置（包括主存储和中间存储）进行。
+
+### 3. C. Spark 是 Hadoop 的处理模块，被视为 MapReduce 的下一代产品。尽管 Hadoop 仅被讨论为...（后续内容被截断）
+
+对于许多云服务提供商，安全是营销的卖点。你通常会通过提供商获得的合规标准数量来看到这一点。不仅增加的安全认证和能力使提供商能够向各行各业的公司销售，同时也帮助他们将产品作为卖点进行营销。
+
+### 标准化的受管理安全服务接口
+
+云服务提供商可以向受管理安全服务（MSS）提供商提供标准化的开放接口。这使得这些服务提供商能够向自己的客户转售服务。
+
+### 快速、智能的资源缩放
+
+提供商拥有大量可缩放的计算资源。这些资源可以重新分配以应对威胁，通过过滤入站流量和执行其他防御措施来保护客户（例如，防范分布式拒绝服务攻击）。ENISA 文档还指出，提供商可以以细粒度方式响应，而无需缩放所有类型的系统资源（例如，增加 CPU 但不增加内存或存储）。这可以降低应对突发（非恶意）需求高峰时的成本。
+
+### 审计和证据收集
+
+
+
+我在之前的许多章节（尤其是第 4 章）中已经涵盖了云环境中增强的审计能力。ENISA 文档也指出，云环境中的日志存储是一种成本效益高的日志数据存储位置，用于支持审计。
+
+## 及时、有效且高效的更新和默认设置
+
+不可变（第 7 章）、快照（第 9 章）和基础设施即代码（第 10 章）技术可以用于在基础设施即服务（IaaS）环境中标准化并维护所有虚拟机的安全控制。ENISA 文档中值得注意的陈述是：“在同质平台上，更新可以比传统客户端系统（依赖于补丁模型）更快速地滚动出多次。” 同质平台由单一供应商拥有并提供。这意味着使用前面提到的工具可以比你今天在数据中心中进行的标准补丁操作提供更快的更新能力。
+
+在平台即服务（PaaS）和安全即服务（SaaS）中，平台更新通常以集中方式进行，这将最小化漏洞的时间窗口。
+
+## 审计和 SLA 迫使更好风险管理
+
+鉴于提供商所面临的安全认证数量庞大，新出现的任何风险在一年内进行的多次评估和审计中极有可能被迅速识别。
+
+## 资源集中带来的好处
+
+这与之前提到的规模经济相呼应，是云服务提供商的一个好处。控制的单位成本可能远低于传统数据中心客户所面临的成本。例如，在传统数据中心中，花费 100 万美元购买 1000 台服务器的物理安全，相当于每台服务器 1000 美元的单位成本。而在拥有 10 万台服务器的云数据中心中，单位成本降至 10 美元。
+
+## 顶级安全风险
+
+ENISA 列出的顶级安全风险并没有按重要性排序。由于我已在之前的章节中讨论了这些风险，这里我提供 ENISA 文档中快速总结的信息。首先，是对风险本身的背景介绍。
+
+### IT 风险背景介绍
+
+ENISA 文档和 CSA 指南假设你对 IT 风险概念有一定了解。ENISA 实际上使用这些概念系统地分析云安全。虽然这些概念不在 CCSK 考试大纲内，但了解它们对你理解这些文档并实践云安全知识非常有帮助。在我的经验中，理解并运用这些概念能让你在保护 IT 资产和保护云方面拥有更多选择，也能让你的沟通更加顺畅。
+
+风险分析应始终从需要保护的对象开始。这叫做 `资产`。例如，存储磁盘的容量或一组敏感数据。所有资产都存在漏洞。根据 ENISA 的定义，`漏洞` 是“任何可能通过未经授权访问、破坏、披露、修改数据或拒绝服务，对资产产生不利影响的情况或事件。” 在我们的例子中，磁盘容量可能耗尽，敏感数据可能被泄露。理解漏洞的存在至关重要，无论它们是否被实现。
+
+ENISA 表示，风险是威胁利用漏洞的结果。你需要理解，威胁可以是恶意的（有意的行为）或非恶意的（如磨损、疏忽等）。无论哪种情况，结果都是负面影响或实际不良后果。在 IT 领域，负面影响通常分为三类：保密性丧失、完整性丧失或可用性丧失。最终损害是作用于使用 IT 的业务，因此应以相关方关心的方式加以说明。仅仅说“该机器可能被不良行为者访问”，任何相关方都可能回应：“所以呢？” 但如果你说该机器上存储敏感数据，这些数据可能落入数据保护主管手中，进而导致其被处罚或更严重的后果，你将获得完全不同的回应。
+
+在我们的例子中，磁盘填满可能导致最终服务不可用，从而引起客户不满。数据泄露可能导致声誉受损或法律处罚。因此，风险会影响资产及其价值。风险的可能性越高，负面影响越大，越需要采取行动。风险概率和影响都较低的情况不是首要关注点。
+
+任何能够降低风险可能性和/或影响的手段都称为 `控制` 或 `对策`。在我们的例子中，可以设置磁盘空间监控或对数据进行加密。实际上，存在许多工程实现方式。云环境使得某些旧控制变得困难，但也开辟了新的控制手段，例如动态且细粒度的网络访问控制。因此，很难在一般情况下判断云是让 IT 更安全还是更不安全。
+
+### 失去治理
+
+你了解云中存在共享责任模型。当客户将控制权交给提供商时，如果提供商在服务级协议（SLA）中没有做出承诺，安全防护存在缺口。合同条款（如使用条款）可能限制客户执行支持治理的合规活动。
+
+如果提供商使用其自身的第三方（例如 SaaS 提供商使用 IaaS 提供商），你可能根本没有治理能力。如果提供商被另一家公司收购，服务合同条款可能会由新公司修改。这种控制权和治理权的丧失可能导致组织无法满足安全要求，出现性能下降或服务质量下降，或面临重大合规挑战。
+
+### 锁定
+
+-   缺乏可移植性导致供应商锁定。通常几乎没有供应商或其他来源（如开源）提供的工具来便捷地在不同提供商之间移动系统和/或数据。锁定的原因可能很多。它可能来自与供应商的年度 SaaS 合同，其中包含非常痛苦的取消条款，也可能因技术问题而发生，例如无法以另一提供商环境可用的格式导出数据。即使核心技术已标准化（如容器和虚拟机），不同提供商的管理平面接口也可能存在显著差异。
+
+ENISA 文档侧重于每种服务模型的锁定问题。以下章节列出了客户在使用各种云服务模型时可能面临的各种锁定类型。
+
+#### SaaS 锁定
+
+SaaS 锁定的潜力很大程度上取决于能否以另一位置可用的格式导出数据。提供商通常会在自定义数据库架构中存储租户数据，通常没有关于数据结构的约定，但常见的导出格式包括 XML。
+
+当然，SaaS 涉及的是定制应用。从一个 SaaS 提供商迁移到另一个 SaaS 提供商通常会影响终端用户，可能需要重新培训，并在大型企业中产生巨大成本。此外，任何与内部系统的集成（如 API）以及现有 SaaS 解决方案都需要重新创建。
+
+> **NOTE** 从一个 SaaS 应用迁移到另一个 SaaS 应用并不与在数据中心迁移应用程序有本质区别。两者都可能成为巨大努力的来源。
+
+#### PaaS 锁定
+
+尽管贵组织使用 PaaS 解决方案的主要目的是应用开发，但仍需注意可移植性方面的问题。PaaS 锁定的主要问题在于使用提供商的服务，这些服务通常通过 API 调用并用于构建完整的应用功能，这在 ENISA 文档中称为 `API 锁定`。如果提供商不允许某些功能（如可能访问底层共享操作系统层的功能），应用代码可能需要定制。这要求开发人员了解这些限制，并通过在特定环境中定制代码来规避，这在 ENISA 文档中称为 `运行时锁定`。除了应用开发，PaaS 系统生成的数据可能无法以易于消费的格式导出。ENISA 文档称之为 `数据锁定`。
+
+#### IaaS 锁定
+
+在考虑 IaaS 锁定时，需要同时考虑工作负载和存储在提供商环境中的数据。无论哪种情况，最大的风险是所谓的 “在银行间运行” 场景。如果提供商出现重大问题，众多客户可能会同时开始导出系统和数据，导致网络性能不佳，从而显著延长导出所需时间。从虚拟机锁定的角度来看，虽然软件和虚拟机元数据被捆绑以实现可移植性，但这仅限于在提供商环境内使用。开放虚拟化格式 (OVF) 被确定为解决虚拟机锁定的手段。IaaS 存储提供商的功能和特性差异很大。主要的锁定问题在于应用层对特定策略特性（如访问控制）的依赖。这种依赖可能限制客户选择提供商的范围。
+
+### 隔离失败
+
+多租户是云的定义特征，它要求在资源共享（如内存、存储、网络）的所有位置都具备强大的隔离能力。这种隔离要求不一定仅限于硬件。多租户的 SaaS 服务如果使用多租户数据库，也可能导致隔离失败。如果隔离失败，安全性就会失效。此类故障的影响可能导致客户丢失重要或敏感数据，或因 CSP 为解决故障而关闭访问而导致服务中断。从提供商的角度，隔离失败可能导致业务失败，因为可能产生毁灭性的声誉损失并导致客户流失。
+
+### 合规风险
+
+满足组织所需的法规和行业认证合规性可能因采购云服务而受到挑战。合规风险可能包括以下情况：
+
+- 云提供商无法提供其满足贵组织必须满足的法规和/或行业标准的合规证明。
+- 云提供商不允许审计，也未以其他方式展示其满足贵组织必须满足的法规和/或行业标准的合规性。
+
+### 管理界面被攻破
+
+由于访问提供商的管理界面（即管理平面）通常通过 Internet 进行，任何人都可以访问，包括恶意用户。请记住，访问控制是保护管理平面的主要手段，对访问管理平面的特权账户应始终使用多因素认证 (MFA)。
+
+### 数据保护检查
+
+提供商如何处理数据并确保其以客户的合法身份进行，可能很困难。这对贵组织构成数据保护风险，尤其是在使用多个提供商（如联邦云）存储信息时。通过审查提供商的认证和提供的安全文档，可以缓解此风险。
+
+### 数据不完整或错误删除
+
+在共享云环境中删除数据对客户构成风险。原因在于共享存储的特性以及无法确认数据是否已完全从提供商环境中删除。此外，如第 11 章所述，数据分散存储常被提供商使用。这种存储方式会创建数据的多份副本并将其分布在多台服务器和多个驱动器上，加上前述问题，使得客户面临的风险高于使用专用本地硬件的情况。
+
+### 恶意内部人员
+
+使用云服务的云服务提供商员工和承包商对贵组织构成重大风险。虽然实现此类风险的可能性较低，但一旦发生，其影响可能非常高。
+
+> **EXAM TIP** 请记住，恶意内部人员不仅限于管理员。审计人员也可能面临类似风险，因为他们可能深入了解提供商的内部架构、流程和弱点。
+
+## 所有场景中共通的五个关键法律问题
+
+五个关键法律问题被确定为在所有场景中均共通的。该信息位于 “Annex 1” 中。以下章节的信息并非特定于云环境，适用于所有形式的计算。
+
+金钱决定一切。组织定义合同控制以满足法律义务的能力很大程度上取决于提供商和客户的规模。非常大的提供商通常会以 “接受或放弃” 的方式对待较小的潜在客户，但可能更愿意与较大的潜在客户进行协商。这同样适用于大客户和较小的提供商。较小的提供商更可能与大潜在客户协商条款，但可能不会与中小企业 (SMB) 客户进行协商。
+
+> **NOTE** 我已从附录中浓缩了材料，因此您无需花费大量时间阅读关于可能不会作为您 CCSK 考试一部分而被考察的细节。
+
+### 数据保护
+
+ENISA 文档中提到的数据保护是指处理完整性和可用性。本节大部分内容聚焦于指令 95/46/EC（数据保护指令），该指令已被 GDPR 取代。
+
+为了便于理解本节，只需记住包含个人可识别信息（PII）的数据需要得到强有力的保护，因为如果此类数据被泄露，会给贵组织带来法律问题。
+
+> **NOTE** 本节涵盖数据控制方与数据处理方之间的区别。我将该信息放在本章后的“考试附加项目”部分，因为此主题在 CCSK 考试中可能是潜在的考察点。
+
+### 保密性
+
+您知道保密性是主要的安全原则，且数据应仅由授权个人访问。本附录章节中包含一个尚未在前文中覆盖的术语：“know‑how”。ENISA 将 `know‑how` 定义为类似于已记录的商业秘密的内容——客户的操作方式，例如制造流程。
+
+### 知识产权
+
+某些云提供商可能在合同中取得您上传到其系统的任何数据的所有权。因此，客户应确保知识产权通过专门的知识产权条款以及保密/不披露条款进行规范。这些条款应在提供商未能妥善保护此类数据时包含处罚措施，并赋予消费者单方面终止协议的权利。
+
+### 专业疏忽
+
+思考诉讼最简便的方法是思考谁与谁有合同。终端用户与数据控制方有合同，数据控制方与提供商（或数据处理方）有合同。如果终端用户的数据被泄露，他们会起诉数据控制方，因为该方是其合同约束的对象。
+
+责任限制和赔偿条款可以帮助直接使用处理器的公司将责任转移至提供商；然而，数据控制方始终在法律上对任何终端用户数据的丢失负有责任和问责。
+
+### 外包服务及控制权变更
+
+ENISA 文档的此部分专注于使用外包给另一提供商的部分（或全部）功能的供应商。这使得您（客户）需要关注第三方和第四方。
+
+ENISA 建议，供应商进行的任何外包均应被视为您尽职调查的一部分。提供商应提供关于外包服务性能的担保或保证。ENISA 还建议您要求合同条款，说明如果提供商修改其外包协议，您必须获得批准，或者您有权终止或重新谈判条款。
+
+## 考试附加项目
+
+以下章节包含 ENISA 文档的附加内容，您在 CCSK 考试中可能会被考察。
+
+### 开放虚拟化格式
+
+ENISA 文档中唯一提到 OVF 的句子是：“在采用开放标准（如 OVF）之前，在提供商之间迁移并不平凡。” 那么，这里的 OVF 是什么呢？OVF 是由分布式管理任务队列（DMTF）制定的开放标准，旨在通过简化从一个环境迁移服务器镜像到另一个环境的能力，助力虚拟机的可移植性。
+
+顺便提醒，您可能还会看到开放虚拟化存档（OVA），它本质上是一个 ZIP 文件（实际上是 TAR 文件），包含 OVF 关联的所有文件。
+
+> **EXAM TIP** 如果在 CCSK 考试中遇到关于 OVF 的问题，请记住：可移植性是 OVF 最重要的元素。
+
+### 虚拟机跳转
+
+`VM hopping` 是一种隔离失败，攻击者从一个不应访问的虚拟机（VM）移动到另一个虚拟机。这通常与底层超融合层的故障或妥协有关，该层应提供 VM 隔离。
+
+> **NOTE** Spectre 和 Meltdown 是两个近期的漏洞示例，可能影响隔离，从而导致 VM hopping。
+
+### 经济拒绝服务
+
+由于云服务（尤其是 IaaS）的惊人可扩展性，您可以自动增加计算能力以满足需求增加（通常通过 IaaS 的自动扩展组实现）。然而，在规划这种弹性时，您需要考虑以下问题：如果您为应对拒绝服务攻击而花费巨额计算资源，会发生什么？
+
+### 许可证风险
+
+在云环境（尤其是 IaaS）中使用软件时，许可证仍需得到处理。任何运行商业软件的服务器实例都应向集中式许可管理系统报告，以防止非法使用。
+
+### 云提供商被收购的风险
+
+您的云服务提供商（CSP）被收购可能对贵组织产生重大影响。ENISA 文档指出，这可能导致非约束性协议（例如，提供商不具合同义务提供的项目）面临风险。
+
+真实案例显示，被收购的 CSP 有时会决定仅向特定行业提供云服务，或在收购几年后决定终止服务。
+
+被收购的提供商是您必须持续监控组织使用的所有提供商关系的例子。如果未能监控，当新所有者做出重大变更或调整业务计划时，可能会为贵组织带来风险。
+
+### 数据控制方与数据处理方定义
+
+请回顾第 3 章，*数据控制方* 是在组织所在司法管辖区法律法规下，决定个人数据处理目的和方式的实体。数据处理方是代表控制方处理个人数据的实体。
+
+### IaaS 客户系统监控责任
+
+`客户系统监控` 是客户的责任。简而言之，ENISA 文档指出，客户必须对其在云中部署的应用程序负全责。这当然包括对客户负责的所有内容进行监控。
+
+### 用户配置漏洞
+
+ENISA 文档列出了多个与用户配置相关的漏洞。为了确保我们对文档中列出的漏洞有共同认知，下面列出了几个潜在的弱点，但并不意味着所有列出的漏洞都一定存在；它们是需要考虑并防止被利用的潜在风险点：
+
+- 客户无法控制提供商的配置流程。
+- 注册时可能无法充分验证客户身份。
+- 云系统组件的身份与配置内容之间可能存在同步延迟。
+- 可能会创建身份的多余副本，且这些副本可能未同步。
+- 凭证可能被拦截并重放。
+
+ENISA 文档将以下漏洞适用于以下风险：
+
+- 经济拒绝服务
+- 修改网络流量
+- 特权升级
+- 社交工程攻击
+- 运营日志丢失或被破坏
+- 安全日志丢失或被破坏
+- 备份丢失或被盗
+
+### 失去治理的底层漏洞
+
+我在本章的“顶级安全风险”部分早前已讨论过失去治理的风险。ENISA 文档列出了以下与失去治理相关的漏洞及简要描述：
+
+- **角色和责任不清晰** 这指的是云提供商组织中角色和责任的不足划分。
+- **角色定义的执行不力** 失败分离角色可能导致过度特权角色，这会使极大型系统面临风险。
+- **同步责任或合同义务（外部于云）** 云客户可能不了解自己的责任。
+- **SLA 条款包含对不同利益相关者的冲突承诺** SLA 条款也可能与其他条款或其他提供商的条款中的承诺发生冲突。
+- **审计或认证不可供客户使用** CSP 无法通过审计认证向客户提供任何保证。
+- **跨云应用程序创建隐藏依赖** 隐藏依赖存在于服务供应链中。云提供商架构不支持从云中继续运行，当涉及的第三方（如分包商或客户公司）与服务提供商分离（例如断开连接）时。
+- **缺乏标准技术和解决方案** 缺乏标准意味着数据可能被锁定在提供商中。如果提供商停止运营，这是一个重大风险。
+- **数据存储在多个司法管辖区且缺乏透明度** 通过边缘网络和冗余存储镜像数据以实现交付，但客户无法实时获取数据存储位置的信息，这会引入脆弱性。
+- **无源代码托管协议** 无源代码托管意味着如果 PaaS 或 SaaS 提供商破产，其客户将无保护。源代码托管协议可能使客户能够与其他提供商重建类似服务。
+- **无漏洞评估过程控制** 限制端口扫描和漏洞测试是一个重要漏洞，结合条款使用权责由客户负责保护基础设施的元素，这是一个严重的安全问题。
+- **认证方案未适应云基础设施** 并非所有认证都包含云特定控制，这意味着云特定的安全漏洞可能会被忽略。
+- **缺乏司法管辖区信息** 信息 可能存储和/或处理在高风险司法管辖区的数据，该数据易受强制进入导致的 confiscation（没收）威胁。如果这些信息不对云客户提供，他们无法采取措施避免。
+- **使用条款缺乏完整性和透明度** 当提供商的使用政策不清晰或缺乏细节时会发生此情况。
+- **资产所有权不明确** 客户未能理解资产所有权可能导致安全基线和硬化程序的不足、人为错误以及未经培训的管理员。
+
+## 风险 R.1–R.35 和底层漏洞
+
+在这一节中，我列出了 ENISA 识别出的各种风险以及 ENISA 为每个风险指定的风险评级。许多更重要的风险和漏洞在本章早前已被讨论过。我建议您使用此图表了解 ENISA 对高、中、低风险的分类，然后再参加 CCSK 考试。无需死记这张表。
+
+> **NOTE** 你可能会注意到，ENISA 识别出的风险中没有任何一个被列为低风险。这是因为没有任何一个列出的风险具有低影响。
+
+![Images](img/pg295_Image_66.jpg)
+
+![Images](img/pg296_Image_67.jpg)
+
+![Images](img/pg297_Image_68.jpg)
+
+![Images](img/pg298_Image_69.jpg)
+
+## 章节回顾
+
+本章回顾了将在您的 CCSK 考试中成为关键部分的 ENISA 文档的要点。ENISA 文档占总考试题数的 6 百分比（87 百分比基于 CSA 指南，7 百分比基于云控制矩阵 [CCM] 和共识评估倡议问卷 [CAIQ]）。为准备 CCSK 考试，您应熟悉以下内容：
+
+
+
+- 理解云从业务角度的列出的安全优势。
+- 理解云计算相关的顶级安全风险。
+- 理解您的组织在所有场景中面临的顶级法律问题。
+- 理解列出的风险及其相关漏洞。
+
+#### 问题
+
+**1.** 哪个选项是 ENISA 列出的 SaaS 或 PaaS 提供商保护其客户的方法？
+
+**A.** 提供商应有冗余存储。
+
+**B.** 提供商应有用户
+
+## 云计算安全政策示例
+
+当采用云服务时，贵组织需要建立适当的政策，指导员工在云服务方面的治理要求。现有的 IT 安全政策不应被修改以涵盖云特定的安全政策声明。相反，这些指令应纳入单独的云安全政策中。
+
+下面为虚构的 ACME Incorporated 公司提供的两个示例云安全政策，供您参考。第一个示例由 CIO 办公室批准所有云采用，称为 `centralized` 示例。第二个示例展示了分类模型，指示员工在哪些分类级别需要 CIO 办公室批准，在哪些级别员工可以自行采购云服务。该模型被称为 `classification` 示例。
+
+如您所见，这两个安全政策都相当简短精炼。与涵盖众多领域的标准 IT 安全政策不同，云特定的安全政策通常专注于云服务的采购。这些政策可以被视为模板，并可根据您特定环境的格式进行修改。
+
+### 云安全政策：集中化示例
+
+此示例政策采用集中化方式，对 ACME Incorporated 使用的所有云服务进行采购。
+
+#### 目的
+
+本政策阐述了使用云计算服务以支持 ACME Incorporated 处理、共享、存储和管理机构数据的最佳实践和批准流程。
+
+#### 范围
+
+本政策适用于 ACME Incorporated 采购的任何云计算服务。项目经理必须在规划阶段早期与运营单元 CIO 协同规划，以避免后续规划和采购生命周期中的不必要问题。
+
+本政策针对 ACME Incorporated 之外的来源提供的服务。内部云计算服务已由现有要求覆盖。
+
+#### 背景
+
+云计算的定义由 NIST 给出：“一个用于 enabling 普遍、便捷、按需网络访问共享可配置计算资源池（例如网络、服务器、存储、应用程序和服务）的模型，这些资源可以快速按需供应和释放，管理努力或服务提供商交互最小。” 它包含五个基本特征：按需自助服务、广泛网络访问、资源池化、快速弹性或扩展、以及计量服务。云服务可在以下层次提供：托管基础设施（IaaS）、托管平台（PaaS）或软件服务（SaaS）。云提供商可采用私有、公有或混合模型。
+
+#### 政策
+
+使用云计算服务必须依据 ACME Incorporated 的风险管理流程正式授权。具体要求如下：
+
+- 使用云计算服务必须遵守当前所有法律、IT 安全和风险管理政策。
+- 使用云计算服务必须遵守所有隐私法律和法规，并需包含定义云供应商在维护隐私要求方面的责任的适当语言。
+
+
+
+# 考题与答案
+
+## 9. 哪一个选项在 ENISA 文档中**不**被列为需要在用户配置方面考虑并防止被利用的潜在区域？
+
+**A.** 可能被拦截和重放的凭证  
+**B.** 客户无法控制提供商的配置过程  
+**C.** 客户身份在注册时可能无法得到充分验证  
+**D.** 客户能够将提供商供应的 IAM 系统的访问权限限制在特定 IP 范围内  
+
+## 10. 在云环境管理界面可能被攻击者获取的情况下，为防止管理界面被 compromise，应始终执行哪项操作（选择最佳答案）？
+
+**A.** 通过 IPSec VPN 连接到管理界面。  
+**B.** 使用 TLS 保护连接。  
+**C.** 在所有特权账户上实施 MFA。  
+**D.** 为管理平面访问权限创建独立的管理员账户。  
+
+#### 答案
+
+1. **B.** 为确保在提供商失败时 SaaS 或 PaaS 软件不会被孤立或废弃，客户应确保提供商与第三方保管机构签订代码保管协议。虽然其他答案也是良好的保护措施，但只有代码保管协议在 ENISA 文档中被列出。
+
+2. **A.** ENISA 文档将开放虚拟化格式（OVF）视为在 IaaS 环境中提升可移植性的潜在有益手段。
+
+3. **D.** 由于存储的共享特性以及无法验证数据是否已彻底删除，不完整或不安全的数据删除是云环境中的风险。虽然只有供应商提供的工具才能擦除 SSD，但这并未在文档中作为原因列出，且并非所有提供商都使用 SSD 存储客户数据。
+
+4. **C.** 所有 SaaS 产品都是定制应用。这一事实本身并非供应商锁定的根源。导致 SaaS 锁定的原因是难以轻松将数据从一个 SaaS 提供商迁移到另一个 SaaS 提供商。如果存在工具（通常工具有限）来实现从一个 SaaS 到另一个 SaaS 的迁移，供应商锁定可以相对容易处理。其他所有答案均属于锁定情形。
+
+5. **C.** 进行 VM 跳跃是由于虚拟化层隔离失败导致的。其他选项均不正确。请记住，隔离（segregation）不等同于隔离（isolation）。
+
+6. **B.** ENISA 文档将提供商员工和承包商列为潜在的恶意内部人员。因此，唯一可能的正确答案是提供商的审计人员。
+
+7. **D.** 管理员若创建经济拒绝服务（DoS）场景，则是因为云计算的计费特性——公司按使用量付费。负载均衡仅在已建立的服务器数量范围内分发流量，B 和 C 无法解决管理员设立的问题。虽然自动扩展组很常见，但必须设定服务器创建的上限。
+
+8. **D.** 只有对象存储未被列为与因多租户活动导致业务声誉损失风险相关的漏洞。
+
+9. **D.** 唯一未在列表中的情况是客户可以将提供商 IAM 系统的访问权限限制在特定 IP 范围内。这是因为 IAM 系统属于管理平面，依据云计算的广泛网络访问特性，任何人都可以访问。其余选项均在 ENISA 文档中列为需要考虑并防止被利用的区域。
+
+10. **C.** 特权账户应始终通过 MFA 访问管理平面。管理平面因全局可访问而面临更高的被 compromise 风险，因此任何 VPN 都不在潜在防护措施之列。所有访问管理平面的用户都应使用独立账户，但 D 选项关注的是非否认性而非账户安全。虽然所有传输连接应通过 TLS 等方式保护，但 B 选项并非最佳答案。
+
+---
+
+# 云安全策略：集中化示例
+
+- 为要求用户同意服务条款的外部云计算服务，此类条款必须经 `ACME Incorporated` 法律顾问批准。
+- 所有云计算服务的使用必须经运营单元首席信息官（CIO）的书面批准。运营单元 CIO 在批准云计算服务使用前，将确认已妥善满足安全、隐私及其他 IT 管理要求。
+- 在运营单元 CIO 提供书面批准之前，云计算服务不得投入生产使用。
+- 项目经理必须保留 CIO 的认证文件，并与其他投资文档一起保存。
+
+批准日期：2017 年 12 月 15 日  
+最后审查日期：2019 年 11 月 14 日
+
+---
+
+# Cloud Security Policy: Classification Example
+
+在本例中，`ACME Incorporated` 采用混合云服务采购方式。数据的分类将决定是由各运营单元采购云服务，还是由中心化采购。
+
+## Purpose
+
+确保当 `ACME Incorporated` 的信息由第三方云计算提供商存储、处理或传输时，其机密性、完整性和可用性得以保持。
+
+## Scope
+
+本政策涵盖提供服务、平台和基础设施的云计算资源，这些资源支持广泛的涉及机构数据处理、交换、存储或管理的活动。
+
+## Background
+
+云计算服务是通过 Internet 访问的应用和基础设施资源。这类服务由 `Amazon`、`Microsoft`、`Google` 等公司按合同提供，使客户能够利用计算资源。云服务提供服务、平台和基础设施，以支持多种业务活动，涵盖处理、共享和存储等功能。云计算服务使用简便，可通过多种终端（工作站、笔记本电脑、平板电脑、智能手机）通过 Internet 访问；并且在需求激增时，能够比传统内部计算服务更快、更高效地应对需求波动。
+
+## Policy
+
+`ACME Incorporated` 的员工在处理、共享、存储或管理公司数据时，必须谨慎自行采购云服务。自行采购的云服务可能带来重大数据管理风险，或在不知情的情况下面临风险变化。几乎所有云服务要求个人用户接受点击即同意的协议。这些协议不允许用户协商条款，未提供澄清条款的机会，通常对服务内容和保障措施的描述模糊，且可能在未通知的情况下发生变更。
+
+自行采购云服务的风险包括以下几点：
+
+- 访问控制或安全措施不明确且可能质量低下
+- 服务突然中断且未提前通知
+- 数据突然丢失且未提前通知
+- 云服务上存储、处理或共享的数据常被用于转售，可能侵犯个人隐私
+- 云服务上存储、处理或共享的数据的专有知识权可能受到威胁
+
+在权衡采购云服务的利弊后，`ACME Incorporated` 实施了多层策略，依据数据分类将高度机密数据的采购集中化，而将公开可用数据的云服务采购权留给各业务单元自行处理。
+
+![Images](img/pg306_Image_70.jpg)
+
+批准日期：2017 年 12 月 15 日  
+最后审查日期：2019 年 11 月 14 日
+
+---
+
+## APPENDIX B
+
+## About the Online Content
+
+本书随附 `TotalTester Online` 定制练习考试软件，包含 200 题练习题。
+
+### System Requirements
+
+推荐并支持当前及上一主要版本的以下桌面浏览器：`Chrome`、`Microsoft Edge`、`Firefox`、`Safari`。这些浏览器会频繁更新，有时更新会导致 `TotalTester Online` 或 `Training Hub` 上的其他内容出现兼容性问题。如在使用这些浏览器时遇到问题，请尝试切换到其他浏览器，直至问题解决。
+
+### Your Total Seminars Training Hub Account
+
+要获取在线内容，需要在 `Total Seminars Training Hub` 创建账户。注册免费，您可以通过账户跟踪所有在线内容。您也可以选择在注册时订阅 `McGraw‑Hill Education` 或 `Total Seminars` 的营销信息，但这并非获取在线内容的必要条件。
+
+#### Privacy Notice
+
+`McGraw‑Hill Education` 重视您的隐私。请在注册时阅读 `Privacy Notice`，了解您提供的信息将如何被使用。您可访问 `McGraw‑Hill Education Privacy Center` 查看公司客户隐私政策。进入 `[mheducation.com](http://mheducation.com)` 站点后，在页面底部点击 **Privacy**。
+
+### Single User License Terms and Conditions
+
+本书随附的数字内容受 `McGraw‑Hill Education License Agreement` 约束。使用本数字内容即表示您同意该许可协议的条款。
+
+**Access** 要注册并激活 `Total Seminars Training Hub` 账户，只需按以下步骤操作。
+
+**1.** 访问以下网址：`[hub.totalsem.com/mheclaim](http://hub.totalsem.com/mheclaim)`
+
+**2.** 若要注册并创建新的 `Training Hub` 账户，输入您的电子邮件地址、姓名和密码。创建账户时不需要提供其他个人信息（如信用卡号）。
+
+![Images](img/note.jpg)
+
+**NOTE** 如您已有 `Total Seminars Training Hub` 账户，请选择 **Log in** 并输入电子邮件和密码。否则，请继续按照剩余步骤操作。
+
+**3.** 输入产品密钥：`f07m-6r9k-0wgf`。
+
+**4.** 点击接受用户许可协议条款。
+
+**5.** 点击 **Register and Claim** 创建账户，您将被带至 `Training Hub` 并获得本书数字内容的访问权限。
+
+**License Duration** 通过 `Training Hub` 获得的在线内容访问权限将在出版社宣布本书下架之日起的一年内有效。
+
+购买本 `McGraw‑Hill Education` 产品（含访问码）的退货政策受购买渠道的退货政策约束。
+
+本内容为 `McGraw‑Hill Education` 的受版权保护作品，版权所有，© 2020 `McGraw Hill LLC`。
+
+**Transfer Restrictions** 用户仅获得有限制的使用权，用于自身内部和个人使用，前提是购买并持有本书。用户不得复制、转发、修改、创作衍生作品、传输、分发、散布、出售、发布、转让或以其他方式将本内容与第三方内容混合，除非获得 `McGraw‑Hill Education` 的同意。
+
+---
+
+The `McGraw-Hill Education Content` is provided on an “as is” basis. Neither `McGraw-Hill Education` nor its licensors make any guarantees or warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability or fitness for a particular purpose or use as to any `McGraw-Hill Education Content` or the information therein or any warranties as to the accuracy, completeness, correctness, or results to be obtained from, accessing or using the `McGraw-Hill Education Content`, or any material referenced in such Content or any information entered into licensee’s product by users or other persons and/or any material available on or that can be accessed through the licensee’s product (including via any hyperlink or otherwise) or as to non-infringement of third-party rights. Any warranties of any kind, whether express or implied, are disclaimed. Any material or data obtained through use of the `McGraw-Hill Education Content` is at your own discretion and risk and user understands that it will be solely responsible for any resulting damage to its computer system or loss of data.
+
+Neither `McGraw-Hill Education` nor its licensors shall be liable to any subscriber or to any user or anyone else for any inaccuracy, delay, interruption in service, error or omission, regardless of cause, or for any damage resulting therefrom.
+
+In no event will `McGraw-Hill Education` or its licensors be liable for any indirect, special or consequential damages, including but not limited to, lost time, lost money, lost profits or good will, whether in contract, tort, strict liability or otherwise, and whether or not such damages are foreseen or unforeseen with respect to any use of the `McGraw-Hill Education Content`.
+
+---
+
+### TotalTester Online
+
+`TotalTester Online` provides you with a simulation of the `CCSK` exam. Exams can be taken in Practice Mode or Exam Mode. Practice Mode provides an assistance window with hints, references to the book, explanations of the correct and incorrect answers, and the option to check your answer as you take the test. Exam Mode provides a simulation of the actual exam. The number of questions, the types of questions, and the time allowed are intended to be an accurate representation of the exam environment. The option to customize your quiz allows you to create custom exams from selected domains or chapters, and you can further customize the number of questions and time allowed.
+
+To take a test, follow the instructions provided in the previous section to register and activate your `Total Seminars Training Hub` account. When you register, you will be taken to the `Total Seminars Training Hub`. From the `Training Hub` Home page, select `CCSK Certificate of Cloud Security Knowledge All-in-One Exam Guide TotalTester` from the Study drop-down menu at the top of the page, or from the list of Your Topics on the Home page. You can then select the option to customize your quiz and begin testing yourself in Practice Mode or Exam Mode. All exams provide an overall grade and a grade broken down by domain.
+
+### Technical Support
+
+For questions regarding the `TotalTester` or operation of the `Training Hub`, visit `[www.totalsem.com](http://www.totalsem.com)` or e-mail `support@totalsem.com`.
+
+For questions regarding book content, visit `[www.mheducation.com/customerservice](http://www.mheducation.com/customerservice)`.
+
+---
+
+# GLOSSARY
+
+**ABAC (attribute-based access control)** An access control scenario that grants users access rights based on policies that combine attributes. It considers the attributes of an entity and the connection in making access control decisions. For example, a user who used multifactor authentication, which requires two or more authentication factors, may be granted additional access, while a user who does not use `MFA` authentication would be granted less.
+
+**Amazon Simple Storage Service (S3)** A form of storage for use on the Web that provides scalability, data availability, security, and performance and enables you to retrieve any amount of data at any time.
+
+**API (application programming interface)** A protocol that exposes functionality through an interface to simplify the receipt of requests and delivery of responses. The two major types of APIs are Representational State Transfer (REST) and Simple Object Access Protocol (SOAP).
+
+**attestation** A formal statement that is officially claimed to be true. Attestations are legally binding. Provider attestations are part of a Service Organization Control 2 (SOC 2) report, for example, indicating a third-party, independent assessment of the security of a cloud service provider.
+
+**auto-scaling** A method used in the cloud, whereby the amount of computational resources in a server farm, typically measured in terms of the number of active servers, scales automatically based on current load.
+
+**automation** The processes and tools an organization uses to reduce the manual efforts associated with provisioning and managing cloud computing workloads.
+
+**availability zone** An isolated data center within a geographical region from which public cloud services originate and operate.
+
+**AWS (Amazon Web Services)** A public cloud service created and maintained by `Amazon` that offers compute power, database storage, content delivery, and other functionality to help businesses scale and grow.
+
+**Azure** A cloud service created by `Microsoft` for building, testing, deploying, and managing applications and services through a global network of `Microsoft`-managed data centers.
+
+**bastion virtual network** An emerging architecture for hybrid cloud connectivity. It can also be used to manage connectivity across multiple accounts in the same cloud provider environment while maintaining a single network connection back to a data center.
+
+**broad network access** Resources hosted in a cloud environment that are available for access from a wide range of locations and devices. It is an essential characteristic of cloud computing.
+
+**CAIQ (Consensus Assessments Initiative Questionnaire)** A survey for cloud consumers and auditors provided by the Cloud Security Alliance to assess the security capabilities of a cloud provider.
+
+**CASB (cloud access security broker)** A software service or appliance that is deployed between an organization’s on-premises infrastructure and a cloud provider’s infrastructure. A `CASB` acts as a control primarily for Software as a Service (SaaS) and enables the organization to extend the reach of their security policies beyond their own infrastructure.
+
+**CCM (Cloud Controls Matrix)** A set of security controls created by the `CSA` that provides fundamental security principles to guide cloud vendors and to assist prospective cloud customers in assessing the overall security risk of a cloud provider.
+
+**CCSK (Certificate of Cloud Security Knowledge)** A certification used to validate that a professional has a broad foundation of knowledge about cloud security, with topics such as architecture, governance, compliance, operations, encryption, virtualization, and much more.
+
+**CCSP (Certified Cloud Security Professional)** A certification used to validate that cloud security professionals have the required knowledge, skills, and abilities in cloud security design, implementation, architecture, operations, controls, and compliance with regulatory frameworks.
+
+**chaos engineering** A testing methodology by which the interrelationships between components in a system are tested by simulating failures in components and studying what knock-on effect occurs throughout the system. It is used to instill the requirement for resiliency in the development phase.
+
+**chargeback** Also known as IT chargeback. An accounting strategy that applies the costs of IT services, hardware, or software to the business unit in which they are used.
+
+---
+
+# CI/CD（continuous integration/continuous deployment）
+
+一种常用于 `DevOps` 的工具集，用于建立一致且自动化的方式来构建、包装和测试应用程序。也称为 continuous integration/continuous delivery，具体取决于目标环境（开发或生产）。
+
+# cloud account（云账户）
+
+任何类型的账户，包括个人或企业，与云服务提供商关联。
+
+# cloud broker（云经纪人）
+
+一个管理云服务的使用、性能和交付的实体，并负责调解云提供商与云消费者之间的关系。
+
+# cloud bursting（云突发）
+
+一种应用部署模型，其中应用在私有云或数据中心运行，当计算容量需求激增时，会自动扩展到公有云。
+
+# cloud firewall（云防火墙）
+
+也称为安全组。策略集用于定义入站和出站规则，可应用于单个资产或资产组，无论其网络位置如何。此外，云防火墙可以基于比硬件防火墙更灵活的标准进行管理，因为它不受物理拓扑的限制。
+
+# community cloud（社区云）
+
+一种提供云计算解决方案的部署模型，专为有限数量的个人或组织提供，并由所有参与组织或第三方托管服务提供商共同治理、管理和保护。所有社区云成员共享相似的安全性和合规性要求。
+
+# configuration management tool（配置管理工具）
+
+一种用于在产品整个生命周期内保持其性能、功能和物理属性与需求、设计及运营信息一致的工具。
+
+# container（容器）
+
+一种逻辑包装机制，使得应用程序能够与其运行环境解耦。这种解耦使得容器化应用可以在任何环境（私有数据中心、公有云或开发者个人笔记本）中轻松且一致地部署。容器有助于解决云环境中的可移植性问题。
+
+# continuous integration server（持续集成服务器）
+
+一种用于支持频繁集成软件实践的工具，通常在源代码库中对任何 artifact 发生变更时进行集成。每当团队成员向仓库提交更改时，持续集成可用于确保该变更通过一系列测试，并能够成功构建、测试和部署。
+
+# controller（控制器）
+
+也称为 cloud controller（云控制器）。一种帮助管理或编排云操作的服务。例如，当用户请求实例时，云控制器会处理该请求并将其发送到适当的目标，全程监控直至完成。
+
+# CSA (Cloud Security Alliance)（云安全联盟）
+
+全球领先的致力于定义和提高云计算安全最佳实践意识的组织，帮助确保安全的云计算环境。
+
+# CSP (cloud service provider)（云服务提供商）
+
+一家向其他企业或个人提供云计算某些组件（通常为 IaaS、SaaS 或 PaaS）的公司。
+
+# custodian（数据保管人）
+
+也称为 data custodian（数据保管人）。在 IT 领域，指负责安全保管、传输和存储数据，并实施业务规则的实体。换言之，保管人负责技术环境和数据库结构，以保护最终用户的数据。
+
+# customer managed key（客户管理密钥）
+
+由云客户管理的加密密钥，而云提供商负责管理加密引擎。
+
+# DAM (database activity monitor)（数据库活动监控套件）
+
+一组工具，用于以最小影响用户操作和生产力的方式识别和报告欺诈、非法或其他不良行为。它通过检查 SQL 代码来实现，因而可以被视为 SQL 的层 7 防火墙。
+
+# DAST (dynamic application security testing)（动态应用安全测试）
+
+对运行中的应用程序或软件产品进行的测试过程。此类测试有助于满足行业标准合规性以及为不断发展的项目提供通用安全防护。
+
+# data（数据）
+
+由计算设备处理或存储的信息，可包括文本文档、图像、音频片段、软件程序或其他媒体类型。
+
+# data dispersion（数据分散）
+
+一种允许数据在分布式存储基础设施中复制的过程。它使服务提供商能够根据用户订阅级别或项目受欢迎程度提供存储服务。可被视为独立磁盘的冗余阵列（RAID）的一种形式，但涉及多台服务器。
+
+# dedicated hosting（独立托管）
+
+一种客户租用整台不与其他人共享的服务器的 Internet 托管方式。相比共享托管，它更具灵活性，因为组织拥有对服务器的完整控制权，包括操作系统、硬件等选择。
+
+# deployment model（部署模型）
+
+一种表示特定云环境类型的模型，主要区别于所有权、规模和访问权限。常见的四种云部署模型为公有云、社区云、私有云和混合云。
+
+# DevOps
+
+一种旨在统一软件开发（Dev）与软件运维（Ops）的工程文化和实践。`DevOps` 的核心特征是倡导在软件构建的全部阶段（集成、测试、发布、部署及基础设施管理）中实现自动化和监控。
+
+# DevSecOps
+
+一种在 `DevOps` 工作流中嵌入安全控制和流程，以自动化核心安全任务的实践。
+
+# Direct Connect
+
+`AWS` 提供的 `Direct Connect` 服务，可实现私有连接方式，将 `AWS` 与数据中心、办公室或共 `colocation` 环境相连，通常能降低网络成本、提高带宽 throughput，并提供比基于 Internet 的连接更一致的网络体验。`Microsoft Azure ExpressRoute` 和 `Google Cloud Dedicated Interconnect` 产品类似。
+
+# DLP (data loss prevention)（数据丢失防泄漏）
+
+一种确保终端用户不在企业网络外发送敏感或重要信息的策略，也用于描述帮助网络管理员控制用户数据传输的软件产品。
+
+# EC2 (Elastic Compute Cloud)（弹性计算云）
+
+`Amazon` 提供的弹性计算云服务，提供安全且可伸缩的云端计算容量，旨在简化开发者的大规模云计算。
+
+# e-discovery（电子发现）
+
+在诉讼或调查中，识别、收集并以电子形式提供已存储的信息（ESI）的过程。ESI 包括但不限于电子邮件、文档、数据库、语音信箱、社交媒体和网站。
+
+# elasticity（弹性）
+
+云服务提供商能够根据需求快速动态调配资源的能力，即在需求上升或下降时实时切换资源。这通常是对客户实时增减服务的即时反应。
+
+# ENISA (European Network and Information Security Agency)（欧洲网络与信息安全局）
+
+一个增强欧盟及其成员国网络和信息安全防护能力的机构，帮助整个商业社区预防、应对和响应网络与信息安全挑战。
+
+# entitlement（权限）
+
+角色、个人或属性等身份映射到授权的过程。换句话说，权限指示唯一用户身份对特定资源或系统能够执行（或不得执行）的操作。为了文档目的，我们将这些内容保存在权限矩阵中。
+
+---
+
+# 许可矩阵
+
+一个文档，列出特定用户、群体和角色被允许使用的各种资源和功能。
+
+# 短暂的
+
+描述某事物变化速度很快，或持续时间极短的情况。例如，短暂存储不会长期写入磁盘。
+
+# 关键特征
+
+使云计算成为云的特征：关键特征包括资源池化、按需自助服务、广泛的网络、快速弹性和计量服务。如果某事物具备这些特征，我们认为它是云计算；如果缺少其中任何一项，则很可能不是云。
+
+# 事件驱动安全
+
+一种在安全事件发生时自动触发操作的安全系统。此类安全系统可定义会产生安全操作的事件，并利用事件驱动能力触发自动通知、评估、修复或其他安全流程。某些云服务提供商支持事件驱动的代码执行。在这些情况下，管理平面会检测到各种活动，并通过通知消息或通过托管无服务器代码触发代码执行。
+
+# 联合身份
+
+也称为联邦。将两个或多个服务提供商的云计算环境相互连接的做法，目的是平衡流量并应对需求峰值。
+
+# FedRAMP（联邦风险和授权管理计划）
+
+由管理预算办公室指示美国机构使用的评估和授权流程，旨在确保在访问云计算产品和服务时安全得到保障。
+
+# GDPR（通用数据保护条例）
+
+欧盟法律中关于保护和隐私个人数据的法规，适用于欧盟内的所有个人，同时也涉及欧盟外个人数据的跨境传输。`GDPR` 旨在让公民和居民对其个人数据拥有控制权，并通过统一 `EU` 内的法规简化国际业务的监管环境。
+
+# HSM（硬件安全模块）
+
+一种物理计算设备，用于保护和管理数字密钥以实现强身份验证，并提供加密处理。传统上，`HSM` 以插卡形式或作为直接连接到计算机或网络服务器的外部设备出现。
+
+# 混合云
+
+由两个或更多云（如私有云和公有云）组成的组合，这些云保持独立但相互绑定，提供多种部署模型的优势。它也可指传统数据中心与公有云的组合。
+
+# 超 visor（虚拟化层）
+
+用于创建和运行虚拟机的计算机软件、固件或硬件。
+
+# IaaS（基础设施即服务）
+
+一种云计算服务模式。`IaaS` 云提供商会托管传统数据中心中包含的基础设施组件，如服务器、存储、网络硬件，以及虚拟化或超 visor 层。在这种服务模式下，客户对安全承担最多责任。
+
+# IAM（身份和访问管理）
+
+一种安全与业务纪律，用于确保在日益异构的技术环境中对资源的适当访问，并满足日益严格的合规要求。
+
+# IAST（交互式应用安全测试）
+
+一种在测试阶段分析应用程序行为的测试过程，结合 `RASP`（运行时应用自我保护）和 `DAST`（动态应用安全测试），帮助识别应用程序中的漏洞，使开发人员在开发过程中降低风险。
+
+# IdEA（身份、许可和访问）管理
+
+一种利用目录服务提供访问控制的解决方案，在特定时间为授权用户提供访问其被允许访问的资源的功能。
+
+# 身份提供者（IdP）
+
+一个系统实体，使组织能够为使用多种在线服务或应用程序的个人创建和维护身份信息。
+
+# 映像
+
+供消费者的提供者提供的可用副本，或用于构建服务器实例的先前创建的映像。
+
+# 不可变
+
+指在创建后状态无法更改的对象。在云中，不可变基础设施意味着服务器在部署后不会被修改；如果需要变更，会基于相似映像创建新的服务器实例，应用变更后重新部署。
+
+# 信息结构
+
+在云环境中存储的任何结构化或非结构化数据。
+
+# 基础设施
+
+构成计算系统基础的移动部分，通常包括计算、网络和存储；在公有云中由提供商拥有。
+
+# 实例
+
+一个运行您服务器映像的服务器，您对其维护和确保安全运行负有完全责任。
+
+# 互操作性
+
+多个实例能够同时工作且不受任何限制的能力。
+
+# ISO/IEC（国际标准化组织/国际电工委员会）
+
+一个技术委员会，负责开发、维护和推广一系列 IT 标准，如 `ISO/IEC 27001` 和 `ISO/IEC 27017`。
+
+# 隔离
+
+一种确保同一虚拟机或容器中的进程不可见于另一个的做法，允许多租户在同一基础设施上共存。
+
+# 跳板工具包（jump kit）
+
+用于云环境中事件响应的软件工具集合。
+
+# 管辖权
+
+根据地理位置确定适用法律。
+
+# KMS（密钥管理系统）
+
+管理加密系统中的密钥的系统；它负责密钥的生成、交换、存储、替换、使用和销毁。
+
+# Lambda
+
+亚马逊云科技（`AWS`）提供的事件驱动、无服务器计算平台。微软 `Azure` 和 `Google Cloud Functions` 是竞争的无服务器计算产品。
+
+# 负载均衡
+
+将工作量在多个计算资源之间分发的过程。通常以应用负载均衡或网络负载均衡服务的形式提供。
+
+---
+
+## 管理平面
+
+系统的元素，通过 `API` 调用和 `Web` 控制台管理基础设施、平台、应用和资源。
+
+# 计量服务
+
+云提供商通过测量和监控系统，确保用户仅消费其被允许的资源，并在必要时进行计费的过程。
+
+# 元数据
+
+关于其他数据的信息，通常用于发现和识别。
+
+# 元结构
+
+提供基础设施与系统内其他层之间接口的协议和机制。
+
+# MFA（多因素认证）
+
+用户需通过两个或更多验证因素（如知识因素（密码）、拥有因素（智能卡）或是因素（生物特征））确认身份的过程。
+
+# 微服务
+
+也称为微服务架构。一种将软件应用开发为一组独立且各自独立的服务的方法。
+
+# 迁移
+
+将系统从一个环境移动到另一个的过程，例如从数据中心迁移到云端。
+
+# 多租户
+
+一种运营模式，多个个别租户（如公有云中的公司）在共享环境中运行。租户在逻辑上相互隔离，但在物理上是集成的。
+
+# NIST 800-53
+
+由国家标准与技术局（`NIST`）创建的指南，规定了联邦信息系统和组织的安全与隐私控制。
+
+---
+
+# NIST 800-61
+
+由国家标准技术局（`NIST`）创建的指南，关于计算机安全事件处理（事件响应）。
+
+# NIST 800-145
+
+国家标准技术局（`NIST`）定义云计算的文档。
+
+# OAuth 协议
+
+一个用于授权的行业标准，用于处理 `Web`、桌面、移动设备和物联网（`IoT`）设备的授权。
+
+# on-demand
+
+按需的能力，可以自动且单方面地在无需任何人工交互的情况下，按需分配计算资源。
+
+# OpenFlow
+
+软件定义网络（`SDN`）通信协议，它使网络控制器能够确定网络交换机之间网络数据包的路径。
+
+# OpenID
+
+开源标准，使用户可以使用单一现有账户在多个网站上登录，而无需新密码。它可以在 `OAuth` 授权能力之上提供身份验证。最新版本是 `OpenID Connect`（`OIDC`）。
+
+# orchestration
+
+自动化安排、协调和管理计算机系统的能力。
+
+# PaaS（Platform as a Service）
+
+云计算服务模型。该完整的开发和部署环境在云端，设计用于支持完整的 `Web` 应用程序生命周期：构建、测试、部署、管理和更新。它使您能够交付从简单的云端应用到复杂的云启用企业级应用。
+
+# packet encapsulation
+
+设计模块化通信协议的方法，通过在更高层次对象中包含或隐藏信息，将网络中逻辑上独立的功能抽象化，隐藏其底层结构。
+
+# pools
+
+一组随时可用的资源集合。在云计算中，资源池通常专注于计算、网络、存储和容器池。
+
+# portability
+
+将应用程序和/或系统从一个环境迁移或重复使用到另一个环境的能力。
+
+# private cloud
+
+仅为单一组织运营的云基础设施，由该组织或第三方管理，且可以在本地或远程部署。
+
+# public cloud
+
+由提供云服务的组织拥有，并向大量用户提供云服务的云基础设施。
+
+# RASP（runtime application self-protection）
+
+实时检测并保护应用程序免受攻击的安全技术。
+
+# raw storage
+
+直接连接到虚拟机的存储，通常在公有云中不可用。
+
+# RBAC（role-based access control）
+
+基于角色的访问控制，一种根据个人在组织中的角色来确定其可访问权限的访问安全方法。
+
+# region
+
+工作负载运行的管辖区域，通常由云服务提供商的设置中用户自定义。
+
+# relying party
+
+依赖方，即依赖身份提供者（identity provider）发出的身份断言的系统。
+
+# resiliency
+
+云服务提供商在面对挑战时保持运营的能力，通过在同一云中使用另一套冗余的 IT 资源实现。
+
+# RESTful（Representational State Transfer）
+
+`API` 使用 `HTTP` 请求（`GET`、`PUT`、`POST`、`DELETE`）来获取、更新、创建和删除数据的应用程序编程接口。
+
+# SaaS（Software as a Service）
+
+云端软件解决方案和服务模型，提供商承担最多的安全责任。
+
+# SAML（Security Assertion Markup Language）
+
+由 `OASIS` 开放标准组织定义的一种标记语言框架，用于在企业工具和云服务提供商之间实现身份管理的联合。它支持身份验证和授权，并创建身份提供者与依赖方之间的断言。
+
+# SAST（static application security testing）
+
+白盒测试工具，通过检查应用程序源代码从内到外确定安全漏洞。`SAST` 可在软件开发生验证生命周期（`SDLC`）的所有阶段使用。
+
+# SCIM（System for Cross-domain Identity）
+
+标准，用于自动化用户配置、在身份提供者和服务提供者之间传输用户身份数据，以及管理用户身份信息。注意 `SCIM` 用于配置，不用于联邦。
+
+# SDI（software defined infrastructure）
+
+也称为基础设施即代码（`IaC`）。使用模板自动化部署虚拟基础设施的过程。
+
+# SDLC（software development lifecycle）
+
+软件开发生命周期框架，概述了软件开发过程中必须完成的任务和责任。
+
+# SDN（software defined networking）
+
+将网络数据包从控制平面解耦的过程，以提升网络性能和监控，是自动化网络环境的基础。
+
+# SDN firewall
+
+也称为 `IaaS` 环境中的安全组。基于 `SDN` 的软件定义网络防火墙，充当数据包过滤器和策略检查器。防火墙规则可以应用于单个资产或资产组，例如针对带有特定标签的资产。
+
+# SDP（Software Defined Perimeter）
+
+结合设备和用户身份验证的动态网络访问方法，用于增强安全并按需启用对资源的访问。
+
+# SecaaS（Security as a Service）
+
+面向安全的 `SaaS` 产品，可用于保护云端和传统 IT 资产。它让您能够在所有所需系统上（无论物理位置如何）强制执行策略。
+
+# security group
+
+定义实例处理入站和出站流量的网络规则，类似于 `SDN` 防火墙的使用方式。
+
+# segmentation
+
+将服务器的内存划分为不同部分，以便将系统和应用程序相互隔离。
+
+# segregation
+
+云服务提供商将资源在不同组之间划分的过程。
+
+# self-service
+
+无需与人交互即可按需访问物理或虚拟资源的过程。
+
+# serverless computing
+
+云服务提供商管理服务器，使用户无需管理任何操作系统或容器，即可在云提供商环境中运行应用程序的全部或部分堆栈。
+
+# service model
+
+云服务的基本类别：软件即服务（`SaaS`）、平台即服务（`PaaS`）和基础设施即服务（`IaaS`）。
+
+# SIEM（security information and event management）
+
+系统日志和事件数据管理方法，从虚拟和真实网络、应用程序及系统中收集数据，实时分析并提供需要行动的信息或事件的报告和警报。
+
+# SOAP（Simple Object Access Protocol）
+
+基于轻量 `XML` 协议的 `Web API`，用于交换信息。
+
+# SOC（Service Organizational Control）
+
+美国会计师协会（`AICPA`）制定的服务组织控制鉴证标准，用于证明提供方已建立控制措施。多个 `SOC` 报告包括 `SOC 1`（财务报告内部控制）、`SOC 2`（信任服务标准）和 `SOC 3`（隐藏的 `SOC 2`）。`SOC` 正在更名为系统和组织控制（System and Organizational Controls）。
+
+# software defined security
+
+安全模型，其中安全流程以自动化方式运行。
+
+# SOX（Sarbanes-Oxley）
+
+美国国会通过的审计法，适用于美国公开上市公司，旨在通过在云视角下维护财务报告的内部控制，保护投资者免受财务报告欺诈。许多 `SOX` 合规活动与应用安全控制（applistructure）相关。
+
+# SSAE 16/18
+
+美国会计师协会（`AICPA`）制定的审计标准，用于执行 `SOC` 认证参与项目。
+
+---
+
+# SSO (单点登录)
+
+一种访问控制系统，允许使用单一 ID 和密码访问服务。`SSO` 的示例包括 `Kerberos` 和 `Security Assertion Markup Language (SAML)`，用于与云服务提供商进行联邦。
+
+# STAR (安全信任保障与风险)
+
+`CSA`（Cloud Security Alliance）的仓库，可用于对潜在的云服务提供商（`CSP`）进行尽职调查。条目包括自评，即供应商针对 `CSA` 的 `Consensus Assessment Initiative Questionnaire (CAIQ)` 提供的响应。`CSP` 还可列出基于 `ISO` 标准的第三方评估认证，以及基于 `AICPA SOC` 报告的认证。
+
+# storage gateway
+
+也称为混合存储网关。本地存储和云存储之间的互连存储设备（虚拟或物理）。网关可执行去重、压缩、加密等操作。
+
+# tag
+
+也称为资源标签。由名称/值对组成，用于在云服务中标识并对单个资源或资源集合执行操作。
+
+# TDE (透明数据加密)
+
+一种数据库加密系统，在文件级别加密整个数据库，以支持数据库文件的“静态加密”合规性。
+
+# treaties
+
+正式签署并批准的国家间协议。云讨论中适用的条约包括 `US/EU Safe Harbor` 及其后续 `EU/US Privacy Shield`，后者为在欧盟和瑞士向美国传输个人数据以支持跨大西洋贸易时，提供符合数据保护要求的机制。
+
+# version control repository
+
+用于存放软件项目的存储位置，支持多个软件版本，便于回滚等功能。通常同时提供公共和私有部署模式。公共仓库已被用于发现企业凭证文件（如访问密钥）。
+
+# virtualization
+
+一种抽象硬件的系统，供给定的操作系统使用。虚拟化允许在同一物理服务器上以隔离方式运行多个虚拟机（即客户操作系统）。
+
+# VLAN (virtual local area network)
+
+在一个或多个局域网中，配置为像连接到同一有线广播域（同一广播域）一样通信的设备集合。由于 `VLAN` 基于逻辑而非物理连接，它们极具灵活性。
+
+# VM (virtual machine)
+
+一种软件程序或操作系统，既表现出独立计算机的行为，也能够像独立计算机一样运行应用程序和程序。`VM`（通常称为 guest）在另一个计算环境（host）中创建。同一台 host 可同时运行多个 `VM`。在 `AWS` 等云环境中，这些 `VM` 被称为实例。
+
+# volatile memory
+
+仅在设备通电时保持数据的存储介质。从安全角度来看，`volatile memory` 可保存密码和未加密数据。
+
+# VPC (virtual private cloud)
+
+在云中共享资源池，可让您配置逻辑上隔离的区域，在该区域中您可以按需在自定义的虚拟网络中启动资源。您对虚拟网络环境拥有完全控制权，包括自行选择 IP 地址范围、创建子网、配置路由表和网关。
+
+# WAF (web application firewall)
+
+过滤、监控并阻止 `HTTP` 流量到达和离开 `Web` 应用的防火墙。`WAF` 与普通防火墙的区别在于，`WAF` 能基于 `HTTP` 流量内容进行过滤，而普通防火墙仅根据 IP 和端口限制流量。`WAF` 可为传统型或云基于型。
+
+# workload
+
+在计算中，在特定时刻电脑被分配的处理量。工作负载包括运行在计算机上的某些应用程序代码以及通常有若干用户连接并与计算机的应用程序交互。
+
+# XACML (eXtensible Access Control Markup Language)
+
+定义基于属性的细粒度访问控制策略语言、架构以及处理模型的标准；该模型描述了如何依据策略规则评估访问请求。
+
+---
+
+## INDEX
+
+*请注意，索引链接指向印刷版的页面起始位置。电子阅读器中的位置近似，点击链接后可能需要向下滚动一页或多页才能看到索引内容*。
+
+### A
+
+acceptable use policy, 34, 104–105  
+access controls, 220–221, 238  
+access keys, 121  
+accounting, 238  
+Act on the Protection of Personal Information (Japan), 55  
+Active Directory, 242–243  
+Active Directory Federation Services (ADFS), 242  
+ADFS. *See* Active Directory Federation Services (ADFS)  
+AICPA, 36, 85  
+Amazon, 115, 128, 206  
+Amazon Elastic Container Service (Amazon ECS), 172  
+Amazon S3, 5, 216, 235  
+Amazon Web Services (AWS), 118, 235  
+American Institute of Certified Public Accountants. *See* AICPA  
+Anglo-American model, 31  
+Apache Software Foundation, 269  
+API gateway, 118, 207  
+API lock-in, 288  
+API Mandate, 115, 206  
+APIs, 2, 10  
+background, 115–118  
+external, 115–116  
+internal, 115–116  
+open, 115–116  
+private, 115–116  
+REST APIs, 2, 10, 13, 116–118  
+SOAP APIs, 2, 13, 116, 118  
+application design and architectures, how the cloud impacts, 205–207  
+application plane, 139–140  
+application programming interfaces. *See* APIs  
+application security, 195  
+DevOps and continuous integration/continuous deployment, 196, 207–209  
+how the cloud impacts application design and architectures, 196, 205–207  
+secure software development lifecycle (SSDLC), 196–204  
+Application Stack Maps, 185  
+application-level controls, 221  
+application/platform storage, 217  
+applistructure, 6, 127, 227  
+“Architectural Styles and the Design of Network-based Software Architectures” (Fielding), 117  
+attestations, 65, 88  
+attribute-based access control (ABAC), 251, 252  
+attributes, 237  
+audit management  
+in the cloud, 83–84  
+how the cloud changes audits, 88–90  
+auditors, 37  
+requirements, 90  
+audits  
+background, 82  
+computer-assisted audit techniques, 81  
+continuous monitoring vs. continuous auditing, 80–81  
+defined, 82  
+and ENISA, 285, 286  
+first-party, 78  
+how the cloud changes audits, 88–90  
+pass-through, 80  
+right to audit, 78, 89  
+scope, 89–90  
+third-party, 65, 78  
+Australian Consumer Law of 2010, 54  
+Australian Privacy Principles (APPs), 54  
+authentication, 69, 237, 251  
+authenticity, vs. integrity, 59  
+authoritative sources, 238  
+authorization, 238  
+availability, 170  
+
+### B
+
+bastion virtual networks, 146–147  
+benefits of cloud computing, 3  
+Bezos, Jeff, 115, 206  
+BIA. *See* business impact analysis (BIA)  
+big data, 267–272  
+biometrics, 251  
+black swan vulnerability, 148  
+blob storage, 216  
+blue-green deployment approach, 208  
+Boto3 Software Development Kit (SDK), 118  
+Breach Notification Law, 61  
+business continuity planning (BCP), 113, 122  
+architecting for failure, 125  
+background, 123–125  
+chaos engineering, 127  
+for loss of the cloud provider, 128  
+for private cloud and providers, 128  
+and SecaaS, 263  
+site recovery options, 124  
+within the cloud provider, 126–127  
+business impact analysis (BIA), 123–124  
+
+### C
+
+caching services, 217  
+Cafarella, Mike, 269  
+CASB, 217–219, 260  
+categorization, vs. classification, 99  
+certification, 88  
+chaos engineering, 127  
+Children’s Online Privacy Protection Act of 1998 (COPPA), 60  
+CIA Triad, 59  
+CI/CD, 196, 207–209  
+*CISA Certified Information Systems Auditor All-in-One Exam Guide, Fourth Edition* (Gregory), 82  
+Cisco, 137  
+Clarifying Lawful Overseas Use of Data Act. *See* CLOUD Act  
+classification  
+vs. categorization, 99  
+*See also* information classification  
+click-through/click-wrap agreements, 65  
+cloud, defined, 6–7  
+cloud access security broker. *See* CASB  
+CLOUD Act, 53–54  
+cloud bursting, 15–16  
+cloud computing, 2–4  
+“Cloud Computing Risk Assessment” (ENISA document), 43  
+Cloud Controls Matrix (CCM), 19–20  
+and incident response preparation, 186–187  
+cloud customers  
+managing identities, 248  
+responsibilities in compute virtualization, 164–165  
+responsibilities in network virtualization, 166  
+cloud jump kit, 185  
+cloud management plane. *See* management plane  
+cloud overlay networks, 167  
+cloud service providers (CSPs), 2  
+assessments, 34–35, 43–44  
+entitlements and access management, 252  
+and incident response preparation, 184–185  
+key managers, 225  
+major considerations for application security, 207  
+managing identities, 248  
+responsibilities in compute virtualization, 163  
+responsibilities in network virtualization, 166  
+risk concerns of a cloud provider being acquired, 292–293  
+security, 146  
+cloud services, essential characteristics, 7–8  
+COBIT, 30, 35  
+Core Model, 32  
+code review, 201  
+Code Spaces, 5, 190  
+cold sites, 124  
+Common Criteria, 85–86  
+Common Vulnerabilities and Exposures (CVE) database, 148  
+community cloud deployment model, 15  
+risk management, 42  
+Complementary User Entity Controls (CUEC), 86  
+compliance  
+artifacts of, 89  
+background, 77–78  
+continuous, 80–82  
+inheritance, 76, 79–80  
+items to consider, 76  
+with laws and regulations, 78–79  
+reporting, 35–37  
+risks, 289  
+testing, 82  
+compute abstraction technologies, 147–150  
+compute virtualization, 162–165  
+*See also* virtualization  
+computer security incident response team (CSIRT), 59, 181  
+conceptual models, 22  
+confidentiality, 291  
+configuration items (CIs), 181  
+Consensus Assessments Initiative Questionnaire (CAIQ), 20–21  
+and incident response preparation, 186–187  
+container runtime, 171  
+containers, 148–150  
+components, 171  
+definitions files, 172  
+overview, 170–172  
+security recommendations, 172–173  
+content delivery networks (CDNs), 217  
+continuous compliance, 80–82  
+continuous integration/continuous deployment. *See* CI/CD  
+contracts, 33–34  
+impact of the cloud on, 78–79  
+negotiations, 65  
+and provider selection, 62–63  
+Control Objectives for Information and Related Technology. *See* COBIT  
+control plane, 139, 140  
+controls, defined, 287  
+controls models, 22  
+converged network adapters (CNAs), 168  
+converged networks, 169  
+cost savings, 3  
+countermeasures, defined, 287  
+credentials, 251  
+cross-border data transfers, restrictions to, 53, 57  
+crypto shredding, 105–106  
+CSA Guidance document, 1  
+CSA tools  
+Cloud Controls Matrix (CCM), 19–20  
+Consensus Assessments Initiative Questionnaire (CAIQ), 20–21  
+overview, 19  
+STAR registry, 21–22  
+CSPs. *See* cloud service providers  
+custodian/controller, 50–51  
+customer relationship management (CRM) systems, 217  
+customer-managed encryption keys, 225–226  
+Cutting, Doug, 269  
+Cyber Security Law (China), 55  
+cyberinsurance, 39  
+
+### D
+
+DAST, 201  
+data, ownership of, 78  
+data collection, 271  
+data controllers, 293  
+data deletion, 289  
+data dispersion, 170  
+data governance. *See* information governance  
+data lock-in, 288  
+data loss prevention (DLP), 218, 228  
+data masking, 229  
+data migrations to the cloud, 217–220  
+data plane, 139, 140  
+data processors, 293  
+data protection and privacy, 289, 290  
+legal frameworks, 50–52  
+Data Protection Directive (Directive 95/46/EC), 50  
+data security, 215  
+architecture, 226–227  
+cloud data storage types, 216–217  
+cloud platform/provider-specific controls, 227–228  
+controls, 216  
+data loss prevention (DLP), 218, 228  
+data masking, 229  
+data migrations to the cloud, 217–220  
+enforcing lifecycle management security, 229–230  
+enterprise rights management (ERM), 228–229  
+key management, 225–226  
+monitoring, auditing, and alerting, 227  
+securing data in the cloud, 220–226  
+test data generation, 229  
+data security lifecycle  
+enforcing lifecycle management security, 229–230  
+functions, actors, and controls, 107–109  
+locations and entitlements, 106–107  
+overview, 105–106  
+data storage types, 216–217  
+database activity monitors (DAMs), 217  
+database storage, 216  
+delegated authorization, 245  
+*See also* OAuth  
+demilitarized zones. *See* DMZ  
+Deming, W. Edwards, 77  
+Deming cycle, 77  
+deployment models, 14  
+blue-green deployment approach, 208  
+community cloud, 15  
+hybrid cloud, 15–16  
+private cloud, 14–15  
+public cloud, 14  
+risk management, 41–42  
+deployment pipeline security, 202–203  
+design patterns, 22  
+DevOps, 207–209  
+DevSecOps, 209  
+digital service providers (DSPs), 58, 59  
+disaster recovery (DR), 113, 122  
+architecting for failure, 125  
+background, 123–125  
+chaos engineering, 127  
+and SecaaS, 263  
+*See also* business continuity planning (BCP)  
+discovery. *See* electronic discovery  
+distributed data collection, 268, 269  
+distributed denial of service (DDoS) attacks, 262  
+protection from, 263  
+distributed processing, 268  
+distributed storage, 268  
+DMZ, 144  
+Docker Engine, 149, 171  
+Docker Hub, 171  
+Docker Swarm, 171  
+due diligence  
+external, 64–65  
+internal, 63  
+dynamic application security testing (DAST), 201  
+dynamic data masking, 229  
+
+### E
+
+e-commerce-based analytics, 269  
+economic denial of service, 292  
+edge networks, 284  
+Elastic Compute Cloud (EC2), 118  
+elasticity, 8  
+electronic discovery, 66  
+authentication, 69  
+cooperation between provider and client, 69–70  
+data collection, 68  
+data retention laws and recordkeeping obligations, 67–68  
+direct access, 69  
+forensics, 68  
+native production, 69  
+possession, custody, and control, 66  
+preservation, 67  
+reasonable integrity, 69  
+relevant cloud applications and environment, 67  
+response to subpoena or search warrant, 70  
+searchability and e-discovery tools, 67  
+electronically stored information (ESI), 66  
+encryption, 221–223  
+application layer, 224  
+client-side, 224  
+database, 224  
+externally managed, 223  
+format-preserving encryption (FPE), 222  
+IaaS, 223–224  
+instance-managed, 223  
+PaaS, 224  
+proxy, 224  
+SaaS, 224  
+and SecaaS, 263  
+server-side, 224  
+end user/data subject, 51  
+ENISA, 43, 170  
+
+### 实体
+
+237
+
+### 权利
+
+107, 238
+
+### 以及访问管理
+
+252
+
+### ERM
+
+*See* 企业权利管理 (ERM); 企业风险管理 (ERM)
+
+### 欧洲网络和信息安全局
+
+*See* ENISA
+
+### 欧洲电信标准化研究所 (ETSI)
+
+141
+
+### 欧洲-美国隐私框架
+
+53
+
+### 事件驱动安全
+
+205
+
+### 事件
+
+#### 定义
+
+181
+
+*See also* 事件响应 (IR)
+
+### 可扩展访问控制标记语言
+
+*See* XACML
+
+### F
+
+### FaaS
+
+*See* 功能即服务 (FaaS)
+
+### Facebook
+
+61
+
+### 联邦信息处理标准
+
+*See* FIPS 标准
+
+### 联邦风险和授权管理计划
+
+*See* FedRAMP
+
+### 联邦民事诉讼规则 (FRCP)
+
+66, 67, 68
+
+### 联邦贸易委员会 (FTC)
+
+61
+
+### 联合身份验证
+
+235–236
+
+*See also* 联邦
+
+### 联合身份验证管理
+
+238
+
+### 联邦
+
+235–236
+
+### 身份验证和凭据
+
+251
+
+### 背景
+
+241–243
+
+### 以及 IAM
+
+236–237, 239–240
+
+### FedRAMP
+
+35
+
+### 光纤通道
+
+168
+
+### FIDO 联盟
+
+251
+
+### Fielding, Roy
+
+117
+
+### 文件活动监视器 (FAMs)
+
+217
+
+### 文件传输协议 (FTP)
+
+219
+
+### FIPS 标准
+
+98, 99, 104
+
+### 首席审计
+
+78
+
+### 格式保持加密 (FPE)
+
+222
+
+### 功能即服务 (FaaS) 与服务器无服务计算的区别
+
+276
+
+### 功能测试
+
+201
+
+### G
+
+### 一般数据保护条例 (GDPR)
+
+50, 57–58, 100
+
+### Google
+
+128
+
+### Google 云存储服务
+
+216
+
+### Google 文件系统
+
+268, 269
+
+### 管理
+
+29, 77
+
+### 背景
+
+30–32
+
+### 云提供商评估
+
+34–35
+
+### 合规性报告
+
+35–37
+
+### 信息技术治理的组成部分
+
+32
+
+### 合同
+
+33–34
+
+### 企业治理框架
+
+31
+
+### 以及事件响应准备
+
+184
+
+### 丢失
+
+287, 294–295
+
+### 概述
+
+32–33
+
+### 工具
+
+33–37
+
+*See also* 信息治理
+
+### 合规、风险和合规 (GRC)
+
+43
+
+### 格莱-莱格-布莱因法案 (GLBA)
+
+60
+
+### Gregory, Peter
+
+82
+
+### 客户端系统监控
+
+293
+
+### H
+
+### Hadoop Common
+
+271
+
+### Hadoop 分布式文件系统 (HDFS)
+
+216, 268, 269–271
+
+### 硬件令牌
+
+251
+
+### 硬件分区
+
+169
+
+### 硬件安全模块 (HSMs), 密钥管理器
+
+225
+
+### 健康保险可携带性与责任法案
+
+*See* HIPAA
+
+### HIPAA
+
+36, 60, 100
+
+### 主机总线适配器 (HBAs)
+
+168
+
+### 主机视图
+
+202
+
+### 主机私有云
+
+41
+
+### 热站
+
+124
+
+### 混合云部署模型
+
+15–16
+
+### 风险管理
+
+42
+
+### 安全
+
+146–147
+
+### 混合密钥管理器
+
+225
+
+### 超融合
+
+10, 147
+
+### I
+
+### IAM
+
+*See* 身份和访问管理 (IAM)
+
+### ICANN vs. EPAG
+
+58
+
+### 标识符
+
+237
+
+### 标识
+
+237
+
+### 身份和访问管理 (IAM)
+
+235
+
+### 认证和凭据
+
+251
+
+### 以及大数据
+
+272
+
+### 权利和访问管理
+
+252
+
+### 自由形式模型
+
+248–249
+
+### 云中 IAM 的工作原理
+
+236–237
+
+### 中心辐射 (混合) 模型
+
+248, 249
+
+### 管理云计算的用户和标识
+
+247–251
+
+### 特权用户管理
+
+252
+
+### 标准
+
+238–241
+
+### 术语
+
+237–238
+
+### 标识提供方
+
+238, 241
+
+### IEEE 802.1aq 标准
+
+137
+
+### IEEE 802.1Q 标准
+
+137
+
+### IM
+
+*See* 信息管理
+
+### 图像库
+
+171
+
+### 图像存储库
+
+171
+
+### 不可变工作负载
+
+150–152, 185, 203–204
+
+*See also* 工作负载
+
+### 事件通知
+
+79
+
+### 事件响应 (IR)
+
+179
+
+### 以及云控制矩阵 (CCM)
+
+186–187
+
+### 以及共识评估倡议问卷 (CAIQ)
+
+186–187
+
+### 遏制、清除和恢复阶段
+
+183, 190
+
+### 检测和分析阶段
+
+182, 188–189
+
+### 事件定义
+
+181
+
+### 五个为什么
+
+183
+
+### 云如何影响事件响应
+
+184–190
+
+### 事件定义
+
+181
+
+### 生命周期概览
+
+180
+
+### 事件后活动阶段
+
+183, 190
+
+### 准备阶段
+
+181–182, 184–187
+
+### 事件
+
+#### 定义
+
+181
+
+*See also* 事件响应 (IR)
+
+### 信息分类
+
+96
+
+### 背景
+
+97–101
+
+### 与分类的区别
+
+99
+
+### 基于内容
+
+100
+
+### 基于上下文
+
+100
+
+### 基于用户
+
+100
+
+### 信息治理
+
+#### 授权
+
+97
+
+#### 云信息治理领域
+
+96–97
+
+#### 合同控制
+
+97
+
+#### 定义
+
+96
+
+#### 信息分类
+
+96
+
+#### 信息管理策略
+
+96–97
+
+#### 位置和管辖权限
+
+97
+
+#### 所有权和保管
+
+96
+
+#### 安全控制
+
+97
+
+### 信息管理
+
+#### 云服务的可接受使用政策
+
+104–105
+
+#### 背景
+
+101
+
+#### 生命周期
+
+101–103
+
+#### 政策
+
+96–97, 103–104
+
+### 信息风险管理 (IRM)
+
+30
+
+### 信息安全
+
+30
+
+### 信息安全持续监控 (ISCM)
+
+80
+
+### 信息基础设施
+
+6, 126
+
+### 基础设施
+
+4, 126
+
+### 基础设施即服务 (IaaS)
+
+10–12, 125
+
+### 加密
+
+223–224
+
+### 客户端系统监控
+
+293
+
+### 锁定
+
+[锁定](https://example.org/lock-in#ch15.xhtml#page_288)
+
+### 风险管理
+
+[风险管理](https://example.org/risk_management#ch2.xhtml#page_40)
+
+### 安全责任
+
+[安全责任](https://example.org/security_responsibility#ch1.xhtml#page_17)–18
+
+### 基础设施即代码 (IaC)
+
+[基础设施即代码 (IaC)](https://example.org/infrastructure_as_code#ch6.xhtml#page_125)，[202](https://example.org/infrastructure_as_code#ch10.xhtml#page_202)，[203](https://example.org/infrastructure_as_code#ch10.xhtml#page_203)–204
+
+### 实例
+
+[实例](https://example.org/instances#ch7.xhtml#page_147)
+
+### 完整性
+
+### vs. [真实性](https://example.org/integrity_vs_authenticity#ch3.xhtml#page_59)
+
+### [合理的完整性](https://example.org/reasonable_integrity#ch3.xhtml#page_69)
+
+### 知识产权
+
+[知识产权](https://example.org/intellectual_property#ch15.xhtml#page_291)
+
+### 内部身份
+
+[内部身份](https://example.org/internal_identities#ch12.xhtml#page_240)
+
+### 国际安全港隐私原则
+
+[国际安全港隐私原则](https://example.org/international_safe_harbor_privacy_principles#ch3.xhtml#page_53)
+
+### 国际标准化组织。参见 ISO/IEC 标准
+
+### 物联网 (IoT)
+
+[物联网 (IoT)](https://example.org/internet_of_things#ch14.xhtml#page_273)
+
+### 互操作性
+
+[互操作性](https://example.org/interoperability#ch6.xhtml#page_128)
+
+### 入侵检测系统 (IDSs)
+
+[入侵检测系统 (IDSs)](https://example.org/intrusion_detection_systems#ch13.xhtml#page_262)
+
+### 入侵防御系统 (IPSs)
+
+[入侵防御系统 (IPSs)](https://example.org/intrusion_prevention_systems#ch13.xhtml#page_262)
+
+### ISACA (信息系统审计与控制协会)
+
+[ISACA (信息系统审计与控制协会)](https://example.org/isaca#ch4.xhtml#page_80)–81
+
+### ISO/IEC 认证
+
+[ISO/IEC 认证](https://example.org/iso_iec_certification#ch2.xhtml#page_35)
+
+### ISO/IEC 标准
+
+[ISO/IEC 标准](https://example.org/iso_iec_standards#ch4.xhtml#page_84)
+
+[17789](https://example.org/17789#ch1.xhtml#page_1)，[9](https://example.org/17789#ch1.xhtml#page_9)
+
+[17888](https://example.org/17888#ch1.xhtml#page_7)，[8](https://example.org/17888#ch1.xhtml#page_8)
+
+[27001](https://example.org/27001#ch4.xhtml#page_87)，[88](https://example.org/27001#ch4.xhtml#page_88)
+
+[27002](https://example.org/27002#ch4.xhtml#page_87)
+
+[27005](https://example.org/27005#ch4.xhtml#page_87)
+
+[27014:2013](https://example.org/27014:2013#ch2.xhtml#page_30)
+
+[27017](https://example.org/27017#ch2.xhtml#page_35)，[87](https://example.org/27017#ch4.xhtml#page_87)
+
+[27018](https://example.org/27018#ch4.xhtml#page_87)
+
+[27034](https://example.org/27034#ch10.xhtml#page_196)
+
+[27035](https://example.org/27035#ch9.xhtml#page_179)
+
+[38500:2015](https://example.org/38500:2015#ch2.xhtml#page_30)
+
+[背景](https://example.org/background#ch4.xhtml#page_86)–88
+
+### 隔离
+
+[隔离](https://example.org/isolation#ch7.xhtml#page_137)，[143](https://example.org/isolation#ch7.xhtml#page_143)，[148](https://example.org/isolation#ch7.xhtml#page_148)，[166](https://example.org/isolation#ch8.xhtml#page_166)
+
+### 失败
+
+[失败](https://example.org/failure#ch15.xhtml#page_289)，[292](https://example.org/failure#ch15.xhtml#page_292)
+
+### ITIL
+
+[ITIL](https://example.org/itil#ch9.xhtml#page_180)，[181](https://example.org/itil#ch9.xhtml#page_181)
+
+### J
+
+### Java 虚拟机 (JVM)
+
+[Java 虚拟机 (JVM)](https://example.org/java_virtual_machine#ch8.xhtml#page_163)
+
+*参见* 虚拟化
+
+### JSON Web 令牌 (JWTs)
+
+[JSON Web 令牌 (JWTs)](https://example.org/json_web_tokens#ch12.xhtml#page_246)
+
+### K
+
+### Kerberos
+
+[Kerberos](https://example.org/kerberos#ch12.xhtml#page_242)
+
+### 密钥管理
+
+[密钥管理](https://example.org/key_management#ch11.xhtml#page_225)–[226](https://example.org/key_management#ch11.xhtml#page_226)，[263](https://example.org/key_management#ch13.xhtml#page_263)，[272](https://example.org/key_management#ch14.xhtml#page_272)
+
+### Kubernetes
+
+[Kubernetes](https://example.org/kubernetes#ch8.xhtml#page_171)
+
+### L
+
+### 日本行政机构个人信息保护法
+
+[日本行政机构个人信息保护法](https://example.org/law_on_protection_of_personal_information_by_administrative_organs#ch3.xhtml#page_55)
+
+### 最小权限
+
+[最小权限](https://example.org/least_privilege#ch5.xhtml#page_95)，[114](https://example.org/least_privilege#ch6.xhtml#page_114)–115
+
+### and [MFA](https://example.org/mfa#ch6.xhtml#page_120)–121
+
+### 法律框架
+
+[法律框架](https://example.org/legal_frameworks#ch3.xhtml#page_50)–52
+
+[澳大利亚](https://example.org/australia#ch3.xhtml#page_54)–55
+
+[中美洲和南美洲](https://example.org/central_and_south_america#ch3.xhtml#page_62)
+
+[中国](https://example.org/china#ch3.xhtml#page_55)
+
+[CLOUD Act](https://example.org/cloud_act#ch3.xhtml#page_53)–54
+
+[欧盟和欧洲经济区](https://example.org/european_union_and_european_economic_area#ch3.xhtml#page_56)–59
+
+[外部尽职调查](https://example.org/external_due_diligence#ch3.xhtml#page_64)–65
+
+[联邦和州机构](https://example.org/federal_and_state_agencies#ch3.xhtml#page_61)
+
+[内部尽职调查](https://example.org/internal_due_diligence#ch3.xhtml#page_63)
+
+[日本](https://example.org/japan#ch3.xhtml#page_55)–56
+
+[区域示例](https://example.org/regional_examples#ch3.xhtml#page_54)–62
+
+[必要的安全措施](https://example.org/required_security_measures#ch3.xhtml#page_52)–53
+
+[跨境数据传输限制](https://example.org/restrictions_to_cross_border_data_transfers#ch3.xhtml#page_53)
+
+[俄罗斯](https://example.org/russia#ch3.xhtml#page_56)
+
+[安全泄露披露法律](https://example.org/security_breach_disclosure_laws#ch3.xhtml#page_61)
+
+[条约](https://example.org/treaties#ch3.xhtml#page_53)
+
+[美国联邦法律](https://example.org/us_federal_laws#ch3.xhtml#page_60)
+
+[美国州法律](https://example.org/us_state_laws#ch3.xhtml#page_60)
+
+*参见* 合同
+
+### 责任
+
+[责任](https://example.org/liabilities#ch4.xhtml#page_79)
+
+### 许可证风险
+
+[许可证风险](https://example.org/licensing_risks#ch15.xhtml#page_292)
+
+### 锁定
+
+[锁定](https://example.org/lock_in#ch6.xhtml#page_128)，[287](https://example.org/lock_in#ch15.xhtml#page_287)–288
+
+### 逻辑模型
+
+[逻辑模型](https://example.org/logical_model#ch1.xhtml#page_4)–6
+
+### 逻辑单元编号 (LUNs)
+
+[逻辑单元编号 (LUNs)](https://example.org/logical_unit_numbers_luns#ch8.xhtml#page_169)–170
+
+### LUN 隔离
+
+[LUN 隔离](https://example.org/lun_masking#ch8.xhtml#page_169)–170
+
+### 宏层
+
+[宏层](https://example.org/macro_layers#ch7.xhtml#page_134)
+
+### 恶意内部人员
+
+[恶意内部人员](https://example.org/malicious_insiders#ch15.xhtml#page_290)
+
+### 托管安全服务 (MSS)
+
+[托管安全服务 (MSS)](https://example.org/managed_security_services#ch15.xhtml#page_285)
+
+### 管理平面
+
+[管理平面](https://example.org/management_plane#ch1.xhtml#page_6)，[11](https://example.org/management_plane#ch1.xhtml#page_11)，[113](https://example.org/management_plane#ch6.xhtml#page_113)–[115](https://example.org/management_plane#ch6.xhtml#page_115)，[139](https://example.org/management_plane#ch7.xhtml#page_139)
+
+### 访问控制
+
+[访问控制](https://example.org/access_controls#ch11.xhtml#page_220)
+
+### 访问密钥
+
+[访问密钥](https://example.org/access_keys#ch6.xhtml#page_121)
+
+### 访问
+
+[访问](https://example.org/accessing#ch6.xhtml#page_118)–119
+
+### 授权和权利
+
+[授权和权利](https://example.org/authorization_and_entitlements#ch6.xhtml#page_122)
+
+### and [容器](https://example.org/containers#ch8.xhtml#page_173)
+
+### 客户身份验证
+
+[客户身份验证](https://example.org/customer_authentication#ch6.xhtml#page_122)
+
+### 内部身份验证和凭据传递
+
+[内部身份验证和凭据传递](https://example.org/internal_authentication_and_credential_passing#ch6.xhtml#page_122)
+
+### 最小权限
+
+[最小权限](https://example.org/least_privilege#ch6.xhtml#page_120)–121
+
+### 日志、监控和警报
+
+[日志、监控和警报](https://example.org/logging_monitoring_and_alerting#ch6.xhtml#page_122)
+
+### 主账户
+
+[主账户](https://example.org/master_account#ch6.xhtml#page_119)
+
+### MFA
+
+[MFA](https://example.org/mfa#ch6.xhtml#page_119)–122
+
+### 边界安全
+
+[边界安全](https://example.org/perimeter_security#ch6.xhtml#page_122)
+
+### 保护
+
+[保护](https://example.org/securing#ch6.xhtml#page_119)–122
+
+### 时间基于一次性密码 (TOTP)
+
+[时间基于一次性密码 (TOTP)](https://example.org/time_based_one_time_password_totp#ch6.xhtml#page_119)，[120](https://example.org/time_based_one_time_password_totp#ch6.xhtml#page_120)
+
+### 通用第二因子 (U2F)
+
+[通用第二因子 (U2F)](https://example.org/universal_2nd_factor_u2f#ch6.xhtml#page_119)，[121](https://example.org/universal_2nd_factor_u2f#ch6.xhtml#page_121)
+
+### 在 [虚拟网络]中
+
+[在 [虚拟网络]中](https://example.org/virtual_network#ch8.xhtml#page_166)
+
+### MapReduce
+
+[MapReduce](https://example.org/map_reduce#ch14.xhtml#page_270)
+
+### 主账户
+
+[主账户](https://example.org/master_account#ch6.xhtml#page_119)
+
+### 计量服务
+
+[计量服务](https://example.org/measured_service#ch1.xhtml#page_8)
+
+### 熔断漏洞
+
+[熔断漏洞](https://example.org/meltdown_vulnerability#ch7.xhtml#page_148)，[292](https://example.org/meltdown_vulnerability#ch15.xhtml#page_292)
+
+### 元结构
+
+[元结构](https://example.org/metastructure#ch1.xhtml#page_4)–[6](https://example.org/metastructure#ch1.xhtml#page_6)，[113](https://example.org/metastructure#ch6.xhtml#page_113)，[126](https://example.org/metastructure#ch6.xhtml#page_126)，[227](https://example.org/metastructure#ch11.xhtml#page_227)
+
+### MFA
+
+[MFA](https://example.org/mfa#ch6.xhtml#page_119)–[122](https://example.org/mfa#ch6.xhtml#page_122)，[238](https://example.org/mfa#ch12.xhtml#page_238)
+
+### and [最小权限](https://example.org/least_privilege#ch6.xhtml#page_120)–121
+
+### 微分段
+
+[微分段](https://example.org/microsegmentation#ch7.xhtml#page_144)–145
+
+### 微服务
+
+[微服务](https://example.org/microservices#ch10.xhtml#page_205)–207
+
+### Microsoft 和 [CLOUD Act](https://example.org/microsoft_and_cloud_act#ch3.xhtml#page_54)
+
+### Microsoft Azure
+
+[Microsoft Azure](https://example.org/microsoft_azure#ch6.xhtml#page_128)
+
+### Microsoft Azure 协议
+
+[Microsoft Azure 协议](https://example.org/microsoft_azure_agreement#ch2.xhtml#page_34)
+
+### Microsoft Azure Blob
+
+[Microsoft Azure Blob](https://example.org/microsoft_azure_blobs#ch11.xhtml#page_216)
+
+### Microsoft 安全开发生命周期
+
+[Microsoft 安全开发生命周期](https://example.org/microsoft_security_development_lifecycle#ch10.xhtml#page_196)
+
+### Microsoft Threat Modeling Tool
+
+[Microsoft Threat Modeling Tool](https://example.org/microsoft_threat_modeling_tool#ch10.xhtml#page_199)
+
+### 迁移服务器
+
+[迁移服务器](https://example.org/migrating_servers#ch1.xhtml#page_3)
+
+### 移动计算
+
+[移动计算](https://example.org/mobile_computing#ch14.xhtml#page_274)
+
+### 监控系统
+
+[监控系统](https://example.org/monitoring_systems#ch3.xhtml#page_64)
+
+### 连续监控 vs. 连续审计
+
+[连续监控 vs. 连续审计](https://example.org/continuous_monitoring_vs_continuous_auditing#ch4.xhtml#page_80)–81
+
+### 信息安全持续监控 (ISCM)
+
+[信息安全持续监控 (ISCM)](https://example.org/information_security_continuous_monitoring#ch4.xhtml#page_80)
+
+### 多因素认证。参见 MFA
+
+### 多租户
+
+[多租户](https://example.org/multitenancy#ch1.xhtml#page_7)，[8](https://example.org/multitenancy#ch1.xhtml#page_8)
+
+### N
+
+### 原生生产
+
+[原生生产](https://example.org/native_production#ch3.xhtml#page_69)
+
+### 疏忽
+
+[疏忽](https://example.org/negligence#ch15.xhtml#page_291)
+
+### Netflix
+
+[Netflix](https://example.org/netflix#ch6.xhtml#page_127)
+
+### 网络访问
+
+[网络访问](https://example.org/network_access#ch1.xhtml#page_8)
+
+### 网络功能虚拟化 (NFV)
+
+[网络功能虚拟化 (NFV)](https://example.org/network_functions_virtualization#ch7.xhtml#page_141)–142
+
+### 网络安全指令 (NIS 指令)
+
+[网络安全指令 (NIS 指令)](https://example.org/network_information_security_directive#ch3.xhtml#page_56)–[57](https://example.org/network_information_security_directive#ch3.xhtml#page_57)，[58](https://example.org/network_information_security_directive#ch3.xhtml#page_58)–59
+
+### 网络资源池
+
+[网络资源池](https://example.org/network_resource_pools#ch7.xhtml#page_134)
+
+### 网络安全
+
+[网络安全](https://example.org/network_security#ch7.xhtml#page_142)
+
+### 虚拟设备的挑战
+
+[虚拟设备的挑战](https://example.org/challenges_of_virtual_appliances#ch7.xhtml#page_142)–143
+
+### 网络分段
+
+[网络分段](https://example.org/network_segmentation#ch7.xhtml#page_136)–137
+
+### 网络时间协议 (NTP)
+
+[网络时间协议 (NTP)](https://example.org/network_time_protocol_ntp#ch1.xhtml#page_13)
+
+### 网络虚拟化
+
+[网络虚拟化](https://example.org/network_virtualization#ch8.xhtml#page_165)–167
+
+*参见* 虚拟化
+
+### 网络平面
+
+[网络平面](https://example.org/networking_planes#ch7.xhtml#page_139)
+
+### NIST 风险管理框架 (RMF)
+
+[NIST 风险管理框架 (RMF)](https://example.org/nist_risk_management_framework#ch5.xhtml#page_98)
+
+### NIST 标准
+
+[500-292](https://example.org/500-292#ch1.xhtml#page_1)，[9](https://example.org/500-292#ch1.xhtml#page_9)，[22](https://example.org/500-292#ch1.xhtml#page_22)，[23](https://example.org/500-292#ch1.xhtml#page_23)
+
+[800-37](https://example.org/800-37#ch5.xhtml#page_98)
+
+[800-53](https://example.org/800-53#ch2.xhtml#page_35)
+
+[800-60](https://example.org/800-60#ch5.xhtml#page_98)
+
+[800-61](https://example.org/800-61#ch9.xhtml#page_179)
+
+[800-64](https://example.org/800-64#ch10.xhtml#page_196)
+
+[800-81r1](https://example.org/800-81r1#ch5.xhtml#page_106)
+
+[800-137](https://example.org/800-137#ch4.xhtml#page_81)
+
+[800-145](https://example.org/800-145#ch1.xhtml#page_1)，[8](https://example.org/800-145#ch1.xhtml#page_8)
+
+### 不披露协议 (NDAs)
+
+[不披露协议 (NDAs)](https://example.org/nondisclosure_agreements_ndas#ch4.xhtml#page_88)
+
+### NoSQL
+
+[NoSQL](https://example.org/nosql#ch11.xhtml#page_216)，[268](https://example.org/nosql#ch14.xhtml#page_268)
+
+### O
+
+### OAuth
+
+[OAuth](https://example.org/oauth#ch12.xhtml#page_239)
+
+### 背景
+
+[背景](https://example.org/background#ch12.xhtml#page_245)–247
+
+### 对象存储
+
+[对象存储](https://example.org/object_storage#ch11.xhtml#page_216)
+
+### 全面隐私法
+
+[全面隐私法](https://example.org/omnibus_privacy_laws#ch3.xhtml#page_52)–53
+
+### 按需自助服务
+
+[按需自助服务](https://example.org/on_demand_self_service#ch1.xhtml#page_8)
+
+### 开放网络基金会 (ONF)
+
+[开放网络基金会 (ONF)](https://example.org/open_networking_foundation_onf#ch7.xhtml#page_140)
+
+### 开放虚拟格式 (OVF)
+
+[开放虚拟格式 (OVF)](https://example.org/open_virtual_format_ovf#ch15.xhtml#page_288)，[292](https://example.org/open_virtual_format_ovf#ch15.xhtml#page_292)
+
+### Open`Web Application Security Project`(`S-SDLC`)的灵感源于 196、198 和 274
+
+### OpenDaylight`Project`的灵感源于 141
+
+### OpenFlow140`–141`
+
+### OpenID239
+
+### background247
+
+### OpenID`Connect`(`OIDC`)247
+
+### Operators`of Essential Services`(`OES`)58
+
+### orchestration`and scheduling controller`171
+
+### Organization`for Economic Cooperation and Development`(`OECD`), Privacy`Guidelines`50
+
+### OSI`reference model`135`–136`
+
+### out-of-band`passwords`251
+
+### outsourcing291
+
+### overlay`network`138
+
+### OWASP196、198、274
+
+### Threat`Dragon`199、*200*
+
+### ownership`of data`78
+
+### P
+
+### packet`sniffing`166
+
+### pass-through`audits`80
+
+### patient`health information`(`PHI`)61
+
+### Payment`Card Industry`. *See* `PCI`
+
+### PCI35
+
+### penetration`testing`202
+
+### persona237
+
+### Personal`Information Protection and Electronic Documents Act`(`Canada`)55
+
+### personally`identifiable information`(`PII`)61、217
+
+### pipeline`security`202`–203`
+
+### Platform`as a Service`(`PaaS`)12`–13、125
+
+### and`big data`272
+
+### encryption224
+
+### lock-in288
+
+### risk`management`40
+
+### security`responsibility for`17
+
+### portability15、128
+
+### privacy
+
+and`big data`271
+
+*See also* `data protection`和`privacy`
+
+### Privacy`Act of 1988`(`Australia`)54
+
+### Privacy`Shield`53
+
+### private`cloud deployment model`14`–15`
+
+### risk`management`41`–42`
+
+### security146
+
+*See also* `multitenancy`
+
+### privileged`user management`252
+
+### professional`negligence`291
+
+### Project`Floodlight`141
+
+### provider/processor50
+
+*See also* `cloud service providers`
+
+### public`cloud deployment model`14
+
+### risk`management`41
+
+### Q
+
+### qualitative`risk assessment`38
+
+### quality`levels`79
+
+### quantitative`risk assessment`38
+
+### RAID167
+
+### recovery`and resiliency planning`. *See* `business continuity planning`(`BCP`); `disaster recovery`(`DR`)
+
+### recovery point objective`(RPO)`123`–124`
+
+### recovery time objective`(RTO)`123`–124`
+
+### reference`architectures`22、*23*
+
+### regression`testing`201
+
+### relying`parties`238、241
+
+### residual`risk`38
+
+### resiliency170、217
+
+### resource`pooling`7`–8`
+
+### responsibilities`, shared3
+
+*See also* `shared responsibility model`
+
+### REST`(Representational State Transfer)`116
+
+### REST`APIs`2、10、13、116`–118`
+
+### RESTful`APIs`. *See* `REST APIs`
+
+### RFC`6749`245
+
+### RFC`6750`245
+
+### RFC`7348`139
+
+### RFC`7426`140
+
+### RFC`8252`245
+
+### right`to audit`78、89
+
+### risk`assessment`38
+
+### risk`framing`38
+
+### risk`management`37`–39`
+
+### defined38
+
+### deployment`model effects`41`–42`
+
+### overview39`
+
+### service`model effects`40`
+
+### trade-offs42
+
+*See also* `enterprise risk management`(`ERM`); `information risk management`(`IRM`)
+
+### risk`monitoring`39
+
+### risk`response`38`–39`
+
+### risk`tolerance`261
+
+### risks`and underlying vulnerabilities`295`–298`
+
+### role-based`access control`(`RBAC`)236、252
+
+### roles237
+
+### root`account`119
+
+### Roskomnadzor56
+
+### rugged`DevOps`209`
+
+### runtime`lock-in`288
+
+### S
+
+### Safe`Harbor agreement`53
+
+### Sarbanes-Oxley`(SOX) Act`63
+
+### SAST201
+
+### scaling8
+
+### SCIM239
+
+### SDI. *See* `software defined infrastructure`
+
+### SecaaS. *See* `Security as a Service`(`SecaaS`)
+
+### SecDevOps209
+
+### sectoral`privacy laws`52`–53`
+
+### Secure`File Transfer Protocol`(`SFTP`)219
+
+### secure`software development lifecycle`(`SSDLC`)196`–197`
+
+### defining`standards`198`
+
+### design`phase`198`
+
+### development`phase`200`
+
+### secure`deployment`196、201`–204`
+
+### secure`design and development`196、197`–201`
+
+### secure`operations`196、204`
+
+### testing201`
+
+### threat`modeling`198`–200`
+
+### training197`–198`
+
+### security
+
+and`the benefits of scale`284`–285`
+
+benefits`of the cloud`284`–286`
+
+and`big data`271`
+
+big`data and security capabilities`272`
+
+cloud`data transfers`219`–220`
+
+and`cloud networking`142`–147`
+
+and`containers`172`–173`
+
+deployment`pipeline security`202`–203`
+
+and`DevOps`208`–209`
+
+event-driven`security`205`
+
+as a`market differentiator`285`
+
+software-defined`security`205`
+
+and`storage virtualization`170
+
+and`workloads`150`–154`
+
+*See also* `application security`; `data security`
+
+### Security`as a Service`(`SecaaS`)257
+
+### changing`providers`259`
+
+### Cloud`Access Security Broker`(`CASB`)260
+
+### cloud-computing`benefits`258`
+
+### data`leakage`259`
+
+### deployment`flexibility`258`
+
+### distributed`denial of service`(`DDoS`) attacks262、263`
+
+### e-mail`security`261`
+
+### encryption`and key management`263`
+
+### handling`of regulated data`259`
+
+### identity`, entitlement`, and`access management services`259`–260`
+
+### insulation`of clients`258`
+
+### intelligence`sharing`258`
+
+### intrusion`detection/prevention`262`
+
+### lack`of visibility`258`–259`
+
+### migration`to`259`
+
+### regulation`differences`259`
+
+### scaling`and cost`258`
+
+### security`assessments`261`
+
+### Security`Information and Event Management`(`SIEM`)262
+
+### 安全管理，263
+
+### 人员配置和经验，258
+
+### 网络应用防火墙（WAF），262
+
+### 网络安全网关，260–261
+
+### 安全断言标记语言（SAML），239
+
+### 背景，243–245
+
+### 安全评估，261
+
+### 安全信息和事件管理（SIEM），262
+
+### 安全管理，263
+
+### 安全措施，52–53
+
+### 安全策略，303
+
+### 集中化示例，303–304
+
+### 分类示例，303, 305–306
+
+### 符合性，78
+
+### 安全过程模型，22–24
+
+### 安全范围，16–18
+
+### 安全 SLA，78
+
+### 安全软件即服务。 *See* 安全即服务（SecaaS）
+
+### 隔离，148, 166
+
+### 无服务器计算，150, 274–276
+
+### 与功能即服务（FaaS）相比，276
+
+### 服务级别协议（SLAs），34
+
+### 以及事件响应准备，184
+
+### 安全 SLA，78
+
+### 服务级别，79
+
+### 服务模型
+
+### 基础设施即服务（IaaS），10–12
+
+### 概述，9–10
+
+### 平台即服务（PaaS），12–13
+
+### 风险管理，40
+
+### 安全责任，16–18
+
+### 软件即服务（SaaS），13–14
+
+### 服务组织控制。 *See* SOC
+
+### 共享责任模型，16–18
+
+*See also* 责任，共享
+
+### 共享控制，220
+
+### SIEM。 *See* 安全信息和事件管理（SIEM）
+
+### 简单对象访问协议。 *See* SOAP
+
+### 简单存储服务（Amazon S3），`5`, 216, 235
+
+### 单点登录（SSO），`238`
+
+### 站点恢复选项，`124`
+
+### SOAP，`118`
+
+### SOAP API，`2`, 13, 116, 118
+
+### SOC，`36`
+
+### 背景，`84`–86
+
+### SOC 2 与 ISO/IEC 27001，`88`
+
+### 软令牌，`251`
+
+### 软分区，`169`
+
+### 软件即服务（SaaS），`13`–`14`, 125, 217
+
+### 应用与网站，`219`
+
+### 加密，`224`
+
+### 锁定，`287`–288
+
+### 风险管理，`40`
+
+### 安全责任，`17`
+
+### 定义的基础设施（SDI），`12`, 126, 167
+
+### 定义的网络（SDN），`139`–141
+
+### SDN 安全的好处，`143`–144
+
+### 默认拒绝，`144`
+
+### 防火墙，`143`–144
+
+### 识别标签，`144`
+
+### 网络攻击，`144`
+
+### 服务组，`143`–144
+
+### 软件定义边界（SDP），`144`–145
+
+### 定义的安全，`205`
+
+### Sony，`123`
+
+### Spark，`270`
+
+### 特别出版号，`1`
+
+### Spectre 漏洞，`148`, 292
+
+### 静态应用程序安全测试（SAST）堆栈/层级，`9`–10
+
+### SQOOP，`270`
+
+### 静态数据掩盖，`229`
+
+### 存储区网络（SANs），`167`–169
+
+### 存储虚拟化，`167`–170
+
+### STRIDE 威胁模型，`199`–200
+
+### 订阅条款，`34`
+
+### 实质性测试，`82`
+
+### 系统和组织控制。 *See* SOC
+
+### 跨域身份管理系统。 *See* SCIM
+
+### T
+
+### 终止条款，`79`
+
+### 条款和条件，`34`, 65
+
+### 测试数据生成，`229`
+
+### 测试
+
+### 代码审查，`201`
+
+### 动态应用程序安全测试（DAST），`201`
+
+### 功能测试，`201`
+
+### 以及事件响应准备，`184`–185
+
+### 渗透测试，`202`
+
+### 回归测试，`201`
+
+### 静态应用程序安全测试（SAST），`201`
+
+### 系统，`64`
+
+### 单元测试，`201`
+
+*See also* 漏洞评估
+
+### 第三方审计，`65`, 78
+
+### threat modeling，`185`, 198–200
+
+### 三 Vs，`268`
+
+### 基于时间的一次性密码（TOTP），`119`, 120
+
+### 令牌化，`221`–223
+
+### TOTP。 *See* 基于时间的一次性密码（TOTP）
+
+### 流量分析，`269`
+
+### 培训，`197`–198
+
+### 传输虚拟网络，`146`–147
+
+### 传输层安全（TLS），`220`
+
+### 条约，`53`
+
+### 信任服务标准（TSC），`84`, 85
+
+### 底层网络，`138`
+
+### 单元测试，`201`
+
+### 通用第二因素（U2F），`119`, 121, 251
+
+### 更新系统，`64`
+
+### URL 过滤，`218`
+
+### 用户配置漏洞，`293`–294
+
+### 实用计算，`8`
+
+### VAs。 *See* 漏洞评估
+
+### 供应商锁定，`125`
+
+### 虚拟硬件，`142`–143
+
+### 密钥管理，`225`
+
+### 虚拟扩展局域网。 *See* VXLANs
+
+### 虚拟防火墙，`190`
+
+### 虚拟局域网。 *See* VLANs
+
+### 虚拟机管理员，`147`
+
+### 虚拟机，`10`, 147–`148`, 217
+
+### 虚拟私有网络（VPNs），`220`
+
+### 虚拟化，`133`–`135`, 161–162
+
+### 类别，`162`–170
+
+### 计算虚拟化，`162`–165
+
+### 网络虚拟化，`165`–167
+
+### 存储虚拟化，`167`–170
+
+*See also* OSI 参考模型
+
+### VLANs，`136`–137
+
+### 微分段和软件定义边界，`144`–145
+
+### 虚拟机跳跃，`292`
+
+### 虚拟机。 *See* 虚拟机
+
+### VMware，`10`, 137
+
+### 易失性存储，`163`
+
+### 卷存储，`216`
+
+### 漏洞
+
+### 定义，`286`
+
+### Meltdown，`148`, 292
+
+### ENISA 识别的风险和底层漏洞，`295`–298
+
+### Spectre，`148`, 292
