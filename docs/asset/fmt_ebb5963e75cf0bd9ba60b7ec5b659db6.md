@@ -1,0 +1,91 @@
+
+- 联合国, 144
+- 无监督学习, 194
+- 美国人口普查, 105–107
+- 向量, 259
+- 顶点, 47
+- 冯·诺依曼，约翰（拉约斯）, 142
+- 边权, 66
+- 加权输入, 186
+- 权重（神经元）, 186
+- 维基百科, 144
+- 威尔逊，E. O., 34
+- 世界维网, 51, 147
+- 尧级 (Yotta), 34
+- 泽级 (Zetta), 34
+- 制表机, 106
+- Tanh（双曲正切函数）, 188
+- 太级 (Tera), 34
+- 测试数据集, 192
+- 腺嘧啶, 53
+- 遍历，图, 48
+- 锦赛日程, 57–65
+- 训练（机器学习）, 192
+- 训练数据集, 192
+- 置换法, 90
+- 旅行商人问题, 41
+
+## MIT 出版社知识系列
+
+- AI 伦理, Mark Coeckelbergh
+- 算法, Panos Louridas
+- 反腐败, Robert I. Rotberg
+- 拍卖, Timothy P. Hubbard and Harry J. Paarsch
+- 《书》，Amaranth Borsuk
+- 碳捕集, Howard J. Herzog
+- 公民, Dmitry Kochenov
+- 云计算, Nayan B. Ceruzuzzi
+- 协作社会, Dariusz Jemielniak and Aleksandra Przegalsinska
+- 计算思维, Peter J. Denning and Matti Tedre
+- 计算：简史, Paul E. Ceruzzi
+- 意识的心心灵, Zoltan E. Torey
+- 避孕, Donna Drucker
+- 批判性思维, Jonathan Haber
+- 众包, Daren C. Brabham
+- 怀疑主义, Ansgar Allen
+- 数据科学, John D. Kelleher and Brendan Tierney
+- 深度学习, John D. Kelleher
+- 外星生物, Wade Roush
+- 伪造照片, Hany Farid
+- fMRI, Peter A. Benedictini
+- 食品, Fabio Parasecoli
+- 自由意志, Mark Balaguer
+- 未来, Nick Montfort
+- GPS, Paul E. Ceruzzi
+- 触觉, Lynnette A. Jones
+- 信息与社会, Michael Buckland
+- 现代公司, James W. Cortada
+- 知识产权策略, John Palfrey
+- 物物联网, Samuel Greengard
+- 讽刺与幽默, Roger Kreuz
+- 机器学习：新人工智能, Ethem Aldin
+- 机器翻译, Thierry Poibeau
+- 宏观经济学, Felipe Larrain B.
+- 数字文化中的迷因, Limor Shifman
+- 元数据, Jeffrey Pomerantz
+- 心身问题, Jonathan Westphal
+- MOOCs（大规模开放课程）, Jonathan Haber
+- 神经塑性, Mo匪 Costandi
+- 虚无主义, Nolen Gertz
+- 开放获取, Peter Suber
+- 悖论, Margaret Cuonzo
+- 后真相时代, Lee McIntyre
+- 量子纠缠, Jed Brody
+- 推荐引擎, Michael Schrage
+- 回收, Finn Arne Jørgensen
+- 机器人, John Jordan
+- 学校选择, David R. Garcia
+- 自我追踪, Gina Neff and Dawn Nafus
+- 性同意, Milena Popova
+- 智能城市, Germaine R. Halegoua
+- 太空大战, Michael J. Neufeld
+- 空间计算, Shashi Shekhar and Pamela Vold
+- 可持续性, Kent E. Portney
+- 联觉, Richard E. Cytowic
+- 技术奇点, Murray Shanahan
+- 3D 打印, John Jordan
+- 理解信仰, Nils J. Nilsson
+- 虚拟现实, Samuel Greengard
+- 波, Frederic Raichlen
+
+PANOS LOURIDAS 是雅典经济贸易大学科学与技术系的副教授。他的研究领域涵盖算法应用、软件工程、安全、实用密码学以及应用机器学习。他是 MIT 出版社出版的《Real-World Algorithms: A Beginners Guide》一书的作者。他担任活跃程序员已有超过四分之一世纪之久。
