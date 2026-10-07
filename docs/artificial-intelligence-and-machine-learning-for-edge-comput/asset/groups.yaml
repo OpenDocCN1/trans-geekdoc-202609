@@ -1,0 +1,2620 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Chapter 12
+
+
+    # # Application of artificial intelligence and machine learning in blockchain
+    technology
+
+
+    Zeeshan Ali Siddiqui and Mohd Haroon
+
+    CSE Department, Integral University, Lucknow, India
+
+
+    # ## 1 Introduction
+
+
+    A distributed immutable ledger is the backbone of blockchain technology that facilitates
+    the process of recording and auditing all transactions and tracking the assets,
+    in real time, in a business network [1]. Artificial intelligence (AI) tries to
+    make machines do things which, as now, humans do appropriately. Blockchain and
+    AI when combined can facilitate the process of software development and its maintenance
+    in almost every industry. For example, we can see how both technologies, implemented
+    in the areas of health care, can make much for each. Supply chain, entertainment,
+    cybersecurity and logistics have however impacted. Blockchain can be made for
+    each. The limitations of AI include privacy, transparency, and trustworthiness,
+    whereas blockchain can infer privacy, transparency. Similarity, efficiency, scalability,
+    and security are the main bottlenecks of blockchain technology.
+
+
+    Each of the blockchain contains multiple transactions. New-known cryptographic
+    tools like hashing or the proof of work [4] algorithm, SHA256, ethics and each
+    are used to compute the hash value of the blocks. The hash of the previous block
+    is considered as the base-block (see Fig. 1) for the current block [5].
+
+
+    The blockchain provides an immutable ledger that can store the decision-making
+    process of AI in a more transparent and understandable manner. The data on blockchain
+    is publicly; Bitcoin can enforce smart contracts and confidentiality of data in
+    a blockchain ledger. Advances in AI and ML have fostered the adoption of their
+    applications in blockchain technology. The use of AI in things like self-driving
+    cars and personal assistants who are well versed in natural language is the new
+    normal for us [7]. AI has put a lot of interest充分 to tap the table on the one
+    hand, but on the other hand, AI and ML may cause critical issues like the creation
+    of fake photographs, videos, notes against false, and pornography [8]. Privacy
+    breach [9] with the help of AI is a potential threat for us. Here, blockchain
+    technology can provide helpful as it gives you the power to control of your data.
+    Blockchain technology brings characteristics like explaining ability, privacy,
+    and trustworthiness to the implementation of AI.
+
+
+    # ## 1.1 Blockchain characteristics
+
+
+    E-transactions of the traditional banking system are costly as as prone to malicious
+    attacks on the intermediaries [10]. However, the blockchain network is an efficient
+    and cost-effective technology because it eliminates the disparity of efforts by
+    removing the need for intermediaries. Uses of consensus models to validate information
+    make it less vulnerable. Transactions in blockchain technology are secure, verifiable,
+    and authenticated.'
+  - '[PAGE 1]
+
+
+    # TABLE 1 What is blockchain?
+
+
+    | database | A list of transactions or records, like a ledger |
+
+    | which is Distributed | The database is mirrored on multiple computers on a network,
+    syncing within a fraction of minutes/seconds; |
+
+    | adjustably Transparent | Ledger may be visible to all the appropriate stakeholders
+    without any risk of amendment; |
+
+    | Highly Secure | Mischievous attackers (hackers) can no longer attack one computer
+    and change any records; |
+
+    | and Immutable | The mathematical algorithms and cryptographic touch make it
+    impossible to change/delete any data recorded and accepted
+
+
+    ![](img/d482d976e7e75f102ff440e8522a951e_1_0.png)
+
+
+    FIG. 1 Basic diagram of a blockchain.
+
+
+    The following are the general characteristics of blockchain technology:
+
+
+    +   - Consensus: All members in the blockchain network must agree on the validity
+    of the transactions.
+
+    - Immutability: Once transactions have been recorded in the ledger, then it will
+    become impossible to tamper with by any of the members of the blockchain network.
+    If there is an error in the transaction, then that a new transaction must be executed
+    to revert the error induced. The beauty of blockchain is that both transactions
+    are visible to all, now.
+
+    - Source: The source of the asset is known to all the nodes of the blockchain
+    as well as the change in ownership of the asset is visible to all, too.
+
+    - Inevitability: Blockchain gives the one-stop solution, in the form of a single
+    ledger, to verify the accomplishment of the transaction as well as the asset''s
+    ownership.
+
+
+    # 1.2 Advantages of blockchain
+
+
+    Blockchain technology has the following advantages for a business:
+
+
+    +   - Less turnaround time: The turnaround time of a transaction in the blockchain
+    is much less as compared to other traditional middle-party undertakings. The absence
+    of central authority verification boosts the speed of the transactions.
+
+    - Impregnable fort: Blockchain applications may be thought of like an impregnable
+    fort because of the security features it has. Hacking, cybersecurity, breach of
+    data, or trust are not possible in the blockchain ledger.
+
+    - Cost-efficient: The following attributes of the blockchain network make it cost-efficient
+    compared to other classical networks with authority.
+
+    - Low maintenance: There is no central authority to monitor the activities of
+    activities in the blockchain. All participants contribute to make the network
+    up and kicking.
+
+    - Peer-to-peer transaction: Members of the blockchain can exchange assets or services
+    directly without any interference or central authority.
+
+    - No repetitive efforts: A single ledger is shared by all the members of the blockchain
+    network, eliminating the duplication of efforts.'
+  - '[PAGE 2]
+
+
+    # Application of artificial intelligence and machine learning Chapter | 12 171
+
+
+    ![](img/d482d976e7e75f102ff440e8522a951e_2_0.png)
+
+
+    FIG. 2 Blockchain trust builder attributes
+
+
+    # 1.3 Blockchain trust builder attributes
+
+
+    Blockchain technology has become the talk of the town because of the trust it
+    infuses into the system. Building without intermediaries is the unique selling
+    point of this technology. Fig. 2 shows the blockchain trust builder attributes
+    [11].
+
+
+    +   - Distributed: There is no central authority to trust with. Every transaction
+    is mirrored in the shared ledger of blockchain members. The shared ledger is updated
+    in real time.
+
+    - Sustainable: The sustainability of the blockchain network lies in its architecture.
+    No individual entity poses any threat to the existence of a blockchain platform.
+
+    - Protected: Unauthorized access is checked by the crypto-graph tools and by the
+    restrictions imposed on permissions.
+
+    - Confidential: Cryptographic techniques along with data partitioning techniques
+    preserve the privacy of the trading parties and the transactions.
+
+    - Permanent: Once transactions are agreed upon the smart contract and the transaction
+    is completed, no one can alter the transaction in the ledger. In case of an erroneous
+    transaction, the effect of errors will be reversed by only the new transaction
+    in the ledger.
+
+    - Transparent: As participants of the network have access to the same ledger,
+    verification of the credentials of all the entities participating in the transaction,
+    and the validation of each transaction are done, without help of any mediator,
+    through various crypto-graph tools by each member of the network.
+
+    - Verifiable: The beauty of blockchain is we can verify in real time all transactions
+    as the ledger are recorded in sequence and time-stamped.
+
+    - Consensus: Smart contracts are the soul of the blockchain and consensus algorithms
+    are the crux of smart contracts. All stakeholders of the network must ensure the
+    validity of the transaction.
+
+    - Transactional: Each smart contract of the blockchain can formulate its own terms
+    and conditions of the transaction for the exchange activity.
+
+    - Coordination: Participating parties can coordinate, design, and agree upon rules,
+    terms, and conditions for each transaction in the blockchain platform.
+
+    - Elastic: The blockchain network is very flexible in nature; all business needs
+    of all lives can be designed and developed through smart contracts. No approval
+    is needed from any central or supreme authority. Therefore, end-to-end transactions
+    can be developed meticulously with flexibility.
+
+
+    # 2 Applications of artificial intelligence, machine learning, and blockchain
+    technology
+
+
+    # 2.1 Flag bearers of blockchain technology
+
+
+    Blockchain technology is proving to be the next big thing after AI. The industry
+    as well as the common public, in the recent past, is taking the interest in blockchain
+    technology. With passing day, the popularity of blockchain technology is'
+  md: '
+
+    # Chapter 12
+
+
+    # Application of artificial intelligence and machine learning in blockchain technology
+
+
+    Zeeshan Ali Siddiqui and Mohd Haroon
+
+    CSE Department, Integral University, Lucknow, India
+
+
+    ## 1 Introduction
+
+
+    A distributed immutable ledger is the backbone of blockchain technology that facilitates
+    the process of recording and auditing all transactions and tracking the assets,
+    in real time, in a business network [1]. Artificial intelligence (AI) tries to
+    make machines do things which, as now, humans do appropriately. Blockchain and
+    AI when combined can facilitate the process of software development and its maintenance
+    in almost every industry. For example, we can see how both technologies, implemented
+    in the areas of health care, can make much for each. Supply chain, entertainment,
+    cybersecurity and logistics have however impacted. Blockchain can be made for
+    each. The limitations of AI include privacy, transparency, and trustworthiness,
+    whereas blockchain can infer privacy, transparency. Similarity, efficiency, scalability,
+    and security are the main bottlenecks of blockchain technology.
+
+
+    Each of the blockchain contains multiple transactions. New-known cryptographic
+    tools like hashing or the proof of work [4] algorithm, SHA256, ethics and each
+    are used to compute the hash value of the blocks. The hash of the previous block
+    is considered as the base-block (see Fig. 1) for the current block [5].
+
+
+    The blockchain provides an immutable ledger that can store the decision-making
+    process of AI in a more transparent and understandable manner. The data on blockchain
+    is publicly; Bitcoin can enforce smart contracts and confidentiality of data in
+    a blockchain ledger. Advances in AI and ML have fostered the adoption of their
+    applications in blockchain technology. The use of AI in things like self-driving
+    cars and personal assistants who are well versed in natural language is the new
+    normal for us [7]. AI has put a lot of interest to tap the table on the one hand,
+    but on the other hand, AI and ML may cause critical issues like the creation of
+    fake photographs, videos, notes against false, and pornography [8]. Privacy breach
+    [9] with the help of AI is a potential threat for us. Here, blockchain technology
+    can provide helpful as it gives you the power to control of your data. Blockchain
+    technology brings characteristics like explaining ability, privacy, and trustworthiness
+    to the implementation of AI.
+
+
+    ## 1.1 Blockchain characteristics
+
+
+    E-transactions of the traditional banking system are costly as as prone to malicious
+    attacks on the intermediaries [10]. However, the blockchain network is an efficient
+    and cost-effective technology because it eliminates the disparity of efforts by
+    removing the need for intermediaries. Uses of consensus models to validate information
+    make it less vulnerable. Transactions in blockchain technology are secure, verifiable,
+    and authenticated.
+
+
+    # TABLE 1 What is blockchain?
+
+
+    | database | A list of transactions or records, like a ledger |
+
+    | :--- | :--- |
+
+    | which is Distributed | The database is mirrored on multiple computers on a network,
+    syncing within a fraction of minutes/seconds; |
+
+    | adjustably Transparent | Ledger may be visible to all the appropriate stakeholders
+    without any risk of amendment; |
+
+    | Highly Secure | Mischievous attackers (hackers) can no longer attack one computer
+    and change any records; |
+
+    | and Immutable | The mathematical algorithms and cryptographic touch make it
+    impossible to change/delete any data recorded and accepted |
+
+
+    ![](img/d482d976e7e75f102ff440e8522a951e_1_0.png)
+
+
+    FIG. 1 Basic diagram of a blockchain.
+
+
+    The following are the general characteristics of blockchain technology:
+
+
+    - Consensus: All members in the blockchain network must agree on the validity
+    of the transactions.
+
+    - Immutability: Once transactions have been recorded in the ledger, then it will
+    become impossible to tamper with by any of the members of the blockchain network.
+    If there is an error in the transaction, then that a new transaction must be executed
+    to revert the error induced. The beauty of blockchain is that both transactions
+    are visible to all, now.
+
+    - Source: The source of the asset is known to all the nodes of the blockchain
+    as well as the change in ownership of the asset is visible to all, too.
+
+    - Inevitability: Blockchain gives the one-stop solution, in the form of a single
+    ledger, to verify the accomplishment of the transaction as well as the asset''s
+    ownership.
+
+
+    ## 1.2 Advantages of blockchain
+
+
+    Blockchain technology has the following advantages for a business:
+
+
+    - Less turnaround time: The turnaround time of a transaction in the blockchain
+    is much less as compared to other traditional middle-party undertakings. The absence
+    of central authority verification boosts the speed of the transactions.
+
+    - Impregnable fort: Blockchain applications may be thought of like an impregnable
+    fort because of the security features it has. Hacking, cybersecurity, breach of
+    data, or trust are not possible in the blockchain ledger.
+
+    - Cost-efficient: The following attributes of the blockchain network make it cost-efficient
+    compared to other classical networks with authority.
+
+    - Low maintenance: There is no central authority to monitor the activities of
+    activities in the blockchain. All participants contribute to make the network
+    up and kicking.
+
+    - Peer-to-peer transaction: Members of the blockchain can exchange assets or services
+    directly without any interference or central authority.
+
+    - No repetitive efforts: A single ledger is shared by all the members of the blockchain
+    network, eliminating the duplication of efforts.
+
+
+    ![](img/d482d976e7e75f102ff440e8522a951e_2_0.png)
+
+
+    FIG. 2 Blockchain trust builder attributes
+
+
+    ## 1.3 Blockchain trust builder attributes
+
+
+    Blockchain technology has become the talk of the town because of the trust it
+    infuses into the system. Building without intermediaries is the unique selling
+    point of this technology. Fig. 2 shows the blockchain trust builder attributes
+    [11].
+
+
+    - Distributed: There is no central authority to trust with. Every transaction
+    is mirrored in the shared ledger of blockchain members. The shared ledger is updated
+    in real time.
+
+    - Sustainable: The sustainability of the blockchain network lies in its architecture.
+    No individual entity poses any threat to the existence of a blockchain platform.
+
+    - Protected: Unauthorized access is checked by the crypto-graph tools and by the
+    restrictions imposed on permissions.
+
+    - Confidential: Cryptographic techniques along with data partitioning techniques
+    preserve the privacy of the trading parties and the transactions.
+
+    - Permanent: Once transactions are agreed upon the smart contract and the transaction
+    is completed, no one can alter the transaction in the ledger. In case of an erroneous
+    transaction, the effect of errors will be reversed by only the new transaction
+    in the ledger.
+
+    - Transparent: As participants of the network have access to the same ledger,
+    verification of the credentials of all the entities participating in the transaction,
+    and the validation of each transaction are done, without help of any mediator,
+    through various crypto-graph tools by each member of the network.
+
+    - Verifiable: The beauty of blockchain is we can verify in real time all transactions
+    as the ledger are recorded in sequence and time-stamped.
+
+    - Consensus: Smart contracts are the soul of the blockchain and consensus algorithms
+    are the crux of smart contracts. All stakeholders of the network must ensure the
+    validity of the transaction.
+
+    - Transactional: Each smart contract of the blockchain can formulate its own terms
+    and conditions for the transaction.
+
+    - Coordination: Participating parties can coordinate, design, and agree upon rules,
+    terms, and conditions for each transaction in the blockchain platform.
+
+    - Elastic: The blockchain network is very flexible in nature; all business needs
+    of all lives can be designed and developed through smart contracts. No approval
+    is needed from any central or supreme authority.
+
+
+    # 2 Applications of artificial intelligence, machine learning, and blockchain
+    technology
+
+
+    ## 2.1 Flag bearers of blockchain technology
+
+
+    Blockchain technology is proving to be the next big thing after AI. The industry
+    as well as the common public, in the recent past, is taking the interest in blockchain
+    technology. With passing day, the popularity of blockchain technology is
+
+    '
+  mdcn: '
+
+
+    # 第 12 章
+
+
+    # 人工智能与机器学习在区块链技术中的应用
+
+
+    Zeeshan Ali Siddiqui 和 Mohd Haroon
+
+    印度勒克瑙 Integral 大大学计算机科学与工程系
+
+
+    ## 1 引言
+
+
+    分布式不可篡改账本是区块链技术的骨干，它促进了在业务网络中实时记录、审计所有交易以及跟踪资产的过程 [1]。人工智能（AI）试图让机器执行那些目前由人类恰当完成的任务。区块链与人工智能的结合可以促进几乎每个行业中软件开发及其维护的进程。例如，我们可以看到在医疗保健领域实施的这两项技术如何为各自做出贡献。然而，供应链、娱乐、网络安全和物流也受到了影响。区块链可以为其中的每一个领域进行构建。人工智能的局限性包括隐私、透明度和信任度，而区块链可以推导出隐私性和透明度。类似地，效率、可扩展性和安全性是区块链技术的主要瓶颈。
+
+
+    每个区块链都包含多个交易。新知的加密工具如哈希算法或工作量证明 [4] 算法、SHA256、伦理等均被用于计算区块的哈希值。前一个区块的哈希值被视为当前区块的基区块（见图
+    1）[5]。
+
+
+    区块链提供了一个不可篡改的账本，能够以更透明、更易理解的方式存储人工智能的决策过程。区块链上的数据是公开的；比特币可以在区块链账本中执行智能合约和数据机密。人工智能和机器学习的进步促进了它们在区块链技术中的应用。在自动驾驶汽车和精通自然语言的个人助手等事物中使用人工智能已成为我们的新常态
+    [7]。一方面一方面引起了人们巨大的兴趣，但另一方面，人工智能和机器学习可能会导致严重问题，如创建虚假照片、视频、针对虚假的笔记以及色情内容 [8]。借助人工智能的隐私泄露
+    [9] 对我们来说是一个潜在威胁。在这里，区块链技术可以提供帮助，因为它赋予你控制自己数据的权力。区块链技术为人工智能的实施带来了解释能力、隐私性和信任度。
+
+
+    ## 1.1 区块链特性
+
+
+    传统银行系统的电子交易成本高昂，且容易受到中间机构的恶意攻击 [10]。然而，区块链网络是一种高效且具有成本效益的技术，因为它通过消除对中间机构的需求消除了努力的差异。使用共识模型来验证信息使其不易受到攻击。区块链技术中的交易是安全的、可验证的经过认证的。
+
+
+    # 表 1 什么是区块链？
+
+
+    | 数据库 | 交易或记录的列表，类似于账本 |
+
+    | :--- | :--- |
+
+    | 分布式 | 数据库在网络上的多台计算机上进行镜像，并在几分钟/几秒内同步； |
+
+    | 可调节的透明性 | 账本对所有相关的利益相关者可见，且没有任何修改风险； |
+
+    | 高安全性 | 恶意的攻击者（黑客）无法再攻击单台计算机并更改任何记录 |
+
+    | 且不可篡改 | 数学算法和加密触点使得无法更改/删除已记录并接受的任何数据 |
+
+
+    ![](img/d482d976e7e75f102ff440e8522a951e_1_0.png)
+
+
+    图 1 区块链的基本示意图。
+
+
+    以下是区块链技术的通用特性：
+
+
+    - 共识：区块链网络中的所有成员必须对交易的有效性达成共识。
+
+    - 不可篡改性：一旦交易记录在账本中，区块链网络的任何成员都将无法对其进行篡改。如果交易出现错误，则必须执行新交易来撤销所引起的错误。区块链的美妙之处在于，现在两个交易对所有人都是可见的。
+
+    - 来源：资产的来源对区块链的所有节点都是知的，资产所有权的变更对所有人也可见。
+
+    - 必然性：区块链以单账本的形式提供了一站式解决方案，验证交易的完成情况以及资产的所有权。
+
+
+    ## 1.2 区块链的优势
+
+
+    区块链技术对业务具有以下优势：
+
+
+    - 更短的周转时间：与其它传统的中间方业务相比，区块链中交易的周转时间短得多。缺乏中央权威验证提升了交易速度。
+
+    - 不可摧的堡垒：由于其具有的安全特性，区块链应用程序可以被认为是坚不可摧的堡垒。在区块链账本中，黑客攻击、网络安全漏洞或信任问题是不可能的。
+
+    - 成本效益：区块链网络的以下属性使其与其他具有权威性的经典网络相比更具成本效益。
+
+    - 低维护：没有中央权威来监控区块链中的活动。所有参与者都共同维护网络正常运行。
+
+    - 点对点交易：区块链成员可以直接交换资产或服务，不受任何干扰或中央权威的限制。
+
+    - 无重复劳动：区块链网络的所有成员共享一个单一账本，消除了重复性劳动。
+
+
+    ![](img/d482d976e7e75f102ff440e8522a951e_2_0.png)
+
+
+    图 2 区块链信任构建属性
+
+
+    ## 1.3 区块链信任构建属性
+
+
+    区块链技术因为它向系统注入的信任而成为人们讨论的焦点。不依赖中间介的构建是这项技术的独特卖点。图 2 显示了区块链信任构建属性 [11]。
+
+
+    - 分布式：没有可以信任的中央权威。每笔交易在区块链成员的共享账本中镜像。共享账本实时更新。
+
+    - 可持续性：区块链网络的持续性取决于其架构。没有任何单一实体会对区块链平台的存在构成任何威胁。
+
+    - 受保护：通过加密工具和对权限的限制来检查未经授权的访问。
+
+    - 机密性：加密技术结合数据分区技术保护了交易双方和交易的隐私。
+
+    - 永久性：一旦智能合约达成交易并完成交易，没有人可以更改账本中的交易。在发生错误交易的情况下，错误的影响将仅通过账本中的新交易来撤销。
+
+    - 透明性：由于网络参与者可以访问相同的账本，所有参与交易实实证验证以及每笔交易的验证都是通过每个成员的各种加密工具完成的，无需调解。
+
+    - 可验证性：区块链的美妙在于我们可以实时验证所有交易，因为交易按顺序记录并带有时间戳。
+
+    - 共识：智能合约是区块链的灵魂，共识算法是智能合约的核心。网络的所有利益相关者必须确保交易的有效性。
+
+    - 交易性：区块链的每个智能合约都可以制定自己的交易条款。
+
+    - 协调：参与方可以对区块链平台上的每笔交易协调、设计并达成规则、条款和条件。
+
+    - 弹性：区块链网络非常灵活；所有生活的需求都可以通过智能合约进行设计和开发。不需要中央或最高权威的批准。
+
+
+    # 2 人工智能、机器学习与区块链技术的应用
+
+
+    ## 2.1 区块链技术的领军者
+
+
+    区块链技术已被证明是人工智能之后的热门。行业和普通公众在过去对区块链技术产生了兴趣。随着时间的推移，区块链技术的普及程度正在
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    # 172 PART I | AI and machine learning
+
+
+    increasing by many folds. Excluding the mediator entity is the unique selling
+    point of this technology. However, knowledge hiding [12] phenomena by experts
+    in blockchain technology is creating hurdles in the path of blockchain technology
+    to become the favorite child of the industry.
+
+    Blockchain technology is proving itself in the field of the health-care industry
+    [13] most, after financial technology.
+
+    Some of the companies that are doing remarkable work in blockchain technology
+    are listed in Table 2.
+
+
+    # TABLE 2 Flag bearers of blockchain.
+
+
+    | S.no. | Company name | Location | Application area |
+
+    |---|---|---||}{
+
+    | 1. | Coinbase | San Francisco, California | Financial Technology (Fintech) |
+
+    | 2. | SALT Lending | Denver, Colorado | Fintech, Lending |
+
+    | 3. | Mythical Games | Sherman Oaks | Gaming |
+
+    | 4. | Gemini | New York | Fintech, Cryptocurrency, Trading |
+
+    | 5. | Circle | Boston, Massachusetts | Fintech |
+
+    | 6. | Celsius Network | New York | Fintech, Lending |
+
+    | 7. | OPKins | Santa Monica, California | E-Commerce, Gaming |
+
+    | 8. | Civil | Brooklyn, New York | Digital Media, Journalism |
+
+    | 9. | Bloq | Chicago, Illinois | Software |
+
+    | 10. | Ripple | San Francisco, California | Fintech |
+
+    | 11. | TraDove | Palo Alto, California | Social Media, E-commerce |
+
+    | 12. | Robinhood | Menlo Park, California | Fintech |
+
+    | 13. | DocAi | Palo Alto, California | Health care, Software |
+
+    | 14. | Learning Machine | New York | Digital Traceability |
+
+    | 15. | TrustToken | San Francisco, California | Fintech |
+
+    | 16. | Oasis Labs | Berkeley, California | Cloud |
+
+    | 17. | Chronicled | San Francisco, California | IoT, Supply Chain, Logistics
+    |
+
+    | 18. | Lemonade | San Francisco, California | Fintech, Insurance |
+
+    | 19. | High Fidelity | San Francisco, California | Virtual Reality, Social Media
+    |
+
+    | 20. | Ankr Network | Berkeley, California | Cloud, Cybersecurity |
+
+    | 21. | IBM | Armok, New York | IT, Software, Computing |
+
+    | 22. | Voatz | Boston, Massachusetts | Cybersecurity |
+
+    | 23. | Blockstack | New York | Internet of Things, Open Source |
+
+    | 24. | Steem | Austin, Texas | Social Media |
+
+    | 25. | Lockheed Martin | Bethel, Maryland | Aerospace, Defence |
+
+    | 26. | Ford | Detroit | Automotive |
+
+    | 27. | Omega Grid | Chicago | Fintech |
+
+    | 28. | Tokken | Denver | Fintech |
+
+    | 29. | Filecoin | San Francisco | Fintech |
+
+    | 30. | Mediachain | New York | Digital Media, E-commerce |'
+  - '[PAGE 4]
+
+
+    # 2.2 Flag bearers of artificial intelligence and machine learning
+
+
+    Day by day, AI is becoming more popular with the introduction of personal assistants
+    like Alexa, Siri, and Google Assistant. AI is now performing in full throttle
+    with innovative breakthroughs like the self-driving cars of Tesla. The beauty
+    of AI lies in its interdisciplinary nature; because it touches all walks of life.
+    Under the parenthood of AI, deep learning and ML are flexing their muscles like
+    never before. In the field of forensic science ML is so helpful in detecting the
+    crime pattern as well as in face recognition [14].
+
+
+    A number of companies are doing a great job in the world of AI. From Microsoft,
+    Google, Apple, Tesla, and Amazon, a few other prominent companies are providing
+    AI- and ML-based solutions are listed in Table 3.
+
+
+    # 2.3 Flag bearers of blockchain and artificial intelligence
+
+
+    On the one hand, AI is helping to expand the business with the help of its computing
+    and prediction capacity; on the other hand, blockchain technology is providing
+    an immutable ledger to prevent unauthorized access of business processes and data.
+    Some of the companies, listed in Table 4, are doing notable work regulating the
+    use of AI and blockchain technology.
+
+
+    | S. no. | Company name | Location | Application area |
+
+    | --- | --- | --- | --- |
+
+    | 1. | AEye | Pleasanton, California | Robotics |
+
+    | 2. | Airbnb | Menlo Park, California | Machine Learning, Robotics |
+
+    | 3. | AlphaSense | New York | Fintech |
+
+    | 4. | Ascent | Chicago | Legal, Financial |
+
+    | 5. | Blue River Tech | Sunnyvale, California | Agriculture, Robotics, Software
+    |
+
+    | 6. | Casetext | San Francisco | Legal, Software |
+
+    | 7. | Clarifai | New York | Software |
+
+    | 8. | CloudWinds | Santa Clara, California | Cloud, Robotics |
+
+    | 9. | CognitiveScale | Austin, Texas | Software |
+
+    | 10. | DataRobot | Boston, Massachusetts | Big Data, Software |
+
+    | 11. | Figure Eight | San Francisco, California | Software |
+
+    | 12. | Freenome | San Francisco, California | Biotech, Healthtech |
+
+    | 13. | Grammarly | San Francisco | Productivity, Writing |
+
+    | 14. | H2O.ai | Mountain View, California | Big Data, Software |
+
+    | 15. | Insulico Medicine | Bethesda, Maryland | Biotech |
+
+    | 16. | Narrative Science | Chicago, Illinois | Big Data, Software |
+
+    | 17. | Nauto | Palo Alto, California | Software, Automotive |
+
+    | 18. | Neurala | Boston, Massachusetts | Machine Learning, Software |
+
+    | 19. | NuTonomy | Boston, Massachusetts | Automotive, Transportation |
+
+    | 20. | Nvidia Corporation | Santa Clara, California | Hardware, Software |
+
+    | 21. | OpenAI | San Francisco, California | Software |
+
+    | 22. | Persado | New York | Software |
+
+    | 23. | Sherpa | Redwood City, California | IoT, Mobile |
+
+    | 24. | SoundHound | Santa Clara, California | Software |
+
+    | 25. | Tempus | Chicago, Illinois | Healthtech, Biotech, Big Data |'
+  - '[PAGE 5]
+
+
+    174 PART I | AI and machine learning
+
+
+    # TABLE 3 Flag bearers of artificial intelligence and machine learning–cont''d
+
+
+    | S. no. | Company name | Location | Application area |
+
+    |---|---|---|--|
+
+    | 26. | Vicarious | San Francisco, California | Machine Learning, Robotics |
+
+    | 27. | X-AI | New York | Machine Learning |
+
+    | 28. | Zebra Media Vision | Berkeley, California | Software, Healthtech |
+
+    | 29. | Zoox | Foster City, California | Robotics, Automotive |
+
+    | 30. | Zymger | Emeryville, California | Big Data, Bioinformatics |
+
+
+    # TABLE 4 Flag bearers of blockchain and artificial intelligence.
+
+
+    | S. no. | Company name | Location | Application area |
+
+    |---|---|---|--|
+
+    | 1. | AI Blockchain | Hoboken, New Jersey | Cybersecurity |
+
+    | 2. | AlphaNetworks | Cheyenne, Wyoming | Entertainment |
+
+    | 3. | Best360 | Denver | Supply chain |
+
+    | 4. | Blackbird.AI | San Francisco | Fake News |
+
+    | 5. | Blackbox AI | New York | Al-based tools |
+
+    | 6. | Botchain | Boston | Al-based bots |
+
+    | 7. | Boxspring Media | Denverville, California | Media channel |
+
+    | 8. | BurstiQ | Denver | Health care |
+
+    | 9. | Chainhaus | New York | Education and marketing |
+
+    | 10. | CoinGenius | California | Cryptocurrency trading |
+
+    | 11. | Computable | San Francisco | Data sharing marketplace |
+
+    | 12. | Core Scientific | Bellevue, Washington | Supply chain |
+
+    | 13. | Cyware Labs | New York | Cybersecurity |
+
+    | 14. | Dopamine | New York | Intellectual property |
+
+    | 15. | Figure | San Francisco | Home loan |
+
+    | 16. | Finalze | Golden, British Columbia | Civil infrastructure |
+
+    | 17. | Gainly | New York | Health care |
+
+    | 18. | Hannah Systems | San Francisco | Autonomous vehicles |
+
+    | 19. | LiveEdu | Santa Monica, California | Online learning platform |
+
+    | 20. | Mobs | San Francisco | Video marketplace |
+
+    | 21. | NetObjex | Irvine, California | Smart city infrastructure |
+
+    | 22. | Neural | Salt Lake City | Prediction engine |
+
+    | 23. | Numerai | San Francisco | Data science |
+
+    | 24. | ObEN | Pasadena, California | Intelligent AR/VR avatars |
+
+    | 25. | Stawk | Berkeley, California | Business operations |
+
+    | 26. | Synapse AI | San Francisco | Data sharing marketplace |
+
+    | 27. | Versaris | London | Intellectual property |'
+  - '[PAGE 6]
+
+
+    # TABLE 4 Flag bearers of blockchain and artificial intelligence—cont’d
+
+
+    | S. no. | Company name | Location | Application area |
+
+    |---|---|---|---|n| 28. | VIA | Somerville, Massachusetts | Energy |
+
+    | 29. | Vytalx | Austin, Texas | Health care |
+
+    | 30. | Wealthblock.AI | Chicago | Automated marketing |
+
+
+    # 2.4 Blockchain initiatives by the government of India
+
+
+    Case studies from NITI Aayog’s vault (2020) are presented:
+
+
+    +   - Land Reserves: Creating a system to manage record transfer and ownership.
+
+    - Pharmaceutical drug supply chain: “Self-regulation” of the sector through blockchain-enabled
+    trust.
+
+    - SuperCert: Antifraud, identity blockchain solution for educational certificates.
+
+    - Immunization Supply Chain: A new infrastructure development for the supply chain,
+    which would be more unified and enhanced in nature.
+
+    - Chit Funds: A blockchain-based model to enhance trust and unlock value creation.
+
+    - Insurance (medical, automotive, etc.).
+
+    - Electric vehicle farming.
+
+    - Energy Trading.
+
+    - Cryptocurrency.
+
+
+    # 2.5 Current application areas of blockchain with artificial intelligence
+
+
+    In recent past, researchers have infusing AI and ML in blockchain technology.
+    The result of this is now showing in the form of successful applications in this
+    area. Table 5 gives a glimpse of application areas where the AI and the blockchain
+    chain is doing wonders.
+
+
+    # TABLE 5 Vibrant application areas of blockchain with artificial intelligence.
+
+
+    | Fintech | Journalism | Logistics |
+
+    |---|---|---||
+
+    | Lending | Software | Insurance |
+
+    | Gaming | Social Media | Virtual Reality |
+
+    | Cryptocurrency | Health care | Cybersecurity |
+
+    | Trading | Digital Traceability | Computing |
+
+    | E-Commerce | Cloud | Aerospace |
+
+    | Digital Media | Supply Chain | Defence |
+
+    | Legal | Supply Chain | Civil infrastructure |
+
+    | Agriculture | Fake News | Online learning platform |
+
+    | Biotech | Media channel | Automated marketplace |
+
+    | Automotive | Education | Video marketplace |
+
+    | Transportation | Marketing | Smart city infrastructure |
+
+    | Bioinformatics | Intellectual property | Prediction engine |
+
+    | Entertainment | Home loan | Data science |
+
+    | Intelligent AR/VR avatars | Business operations | Energy |'
+  md: '
+
+    # 172 PART I | AI and machine learning
+
+
+    increasing by many folds. Excluding the mediator entity is the unique selling
+    point of this technology. However, knowledge hiding [12] phenomena by experts
+    in blockchain technology is creating hurdles in the path of blockchain technology
+    to become the favorite child of the industry.
+
+
+    Blockchain technology is proving itself in the field of the health-care industry
+    [13] most, after financial technology.
+
+
+    Some of the companies that are doing remarkable work in blockchain technology
+    are listed in Table 2.
+
+
+    ## TABLE 2 Flag bearers of blockchain.
+
+
+    | S.no. | Company name | Location | Application area |
+
+    |---|---|---|---|
+
+    | 1. | Coinbase | San Francisco, California | Financial Technology (Fintech) |
+
+    | 2. | SALT Lending | Denver, Colorado | Fintech, Lending |
+
+    | 3. | Mythical Games | Sherman Oaks | Gaming |
+
+    | 4. | Gemini | New York | Fintech, Cryptocurrency, Trading |
+
+    | 5. | Circle | Boston, Massachusetts | Fintech |
+
+    | 6. | Celsius Network | New York | Fintech, Lending |
+
+    | 7. | OPKins | Santa Monica, California | E-Commerce, Gaming |
+
+    | 8. | Civil | Brooklyn, New York | Digital Media, Journalism |
+
+    | 9. | Bloq | Chicago, Illinois | Software |
+
+    | 10. | Ripple | San Francisco, California | Fintech |
+
+    | 11. | TraDove | Palo Alto, California | Social Media, E-commerce |
+
+    | 12. | Robinhood | Menlo Park, California | Fintech |
+
+    | 13. | DocAi | Palo Alto, California | Health care, Software |
+
+    | 14. | Learning Machine | New York | Digital Traceability |
+
+    | 15. | TrustToken | San Francisco, California | Fintech |
+
+    | 16. | Oasis Labs | Berkeley, California | Cloud |
+
+    | 17. | Chronicled | San Francisco, California | IoT, Supply Chain, Logistics
+    |
+
+    | 18. | Lemonade | San Francisco, California | Fintech, Insurance |
+
+    | 19. | High Fidelity | San Francisco, California | Virtual Reality, Social Media
+    |
+
+    | 20. | Ankr Network | Berkeley, California | Cloud, Cybersecurity |
+
+    | 21. | IBM | Armok, New York | IT, Software, Computing |
+
+    | 22. | Voatz | Boston, Massachusetts | Cybersecurity |
+
+    | 23. | Blockstack | New York | Internet of Things, Open Source |
+
+    | 24. | Steem | Austin, Texas | Social Media |
+
+    | 25. | Lockheed Martin | Bethel, Maryland | Aerospace, Defence |
+
+    | 26. | Ford | Detroit | Automotive |
+
+    | 27. | Omega Grid | Chicago | Fintech |
+
+    | 28. | Tokken | Denver | Fintech |
+
+    | 29. | Filecoin | San Francisco | Fintech |
+
+    | 30. | Mediachain | New York | Digital Media, E-commerce |
+
+
+    ## 2.2 Flag bearers of artificial intelligence and machine learning
+
+
+    Day by day, AI is becoming more popular with the introduction of personal assistants
+    like Alexa, Siri, and Google Assistant. AI is now performing in full throttle
+    with innovative breakthroughs like the self-driving cars of Tesla. The beauty
+    of AI lies in its interdisciplinary nature; because it touches all walks of life.
+    Under the parenthood of AI, deep learning and ML are flexing their muscles like
+    never before. In the field of forensic science ML is so helpful in detecting the
+    crime pattern as well as in face recognition [14].
+
+
+    A number of companies are doing a great job in the world of AI. From Microsoft,
+    Google, Apple, Tesla, and Amazon, a few other prominent companies providing AI-
+    and ML-based solutions are listed in Table 3.
+
+
+    ## 2.3 Flag bearers of blockchain and artificial intelligence
+
+
+    On the one hand, AI is helping to expand the business with the help of its computing
+    and prediction capacity; on the other hand, blockchain technology is providing
+    an immutable ledger to prevent unauthorized access of business processes and data.
+    Some of the companies, listed in Table 4, are doing notable work regulating the
+    use of AI and blockchain technology.
+
+
+    | S. no. | Company name | Location | Application area |
+
+    | --- | --- | --- | --- |
+
+    | 1. | AEye | Pleasanton, California | Robotics |
+
+    | 2. | Airbnb | Menlo Park, California | Machine Learning, Robotics |
+
+    | 3. | AlphaSense | New York | Fintech |
+
+    | 4. | Ascent | Chicago | Legal |
+
+    | 5. | Blue River Tech | Sunnyvale, California | Agriculture |
+
+    | 6. | Casetext | San Francisco | Legal |
+
+    | 7. | Clarifai | New York | Software |
+
+    | 8. | CloudWinds | Santa Clara, California | Cloud |
+
+    | 9. | CognitiveScale | Austin, Texas | Software |
+
+    | 10. | DataRobot | Boston, Massachusetts | Big Data |
+
+    | 11. | Figure Eight | San Francisco | Software |
+
+    | 12. | Freenome | San Francisco, California | Healthtech |
+
+    | 13. | Grammarly | San Francisco | Productivity |
+
+    | 14. | H2O.ai | Mountain View, California | Big Data |
+
+    | 15. | Insulico Medicine | Bethesda, Maryland | Biotech |
+
+    | 16. | Narrative Science | Chicago, Illinois | Big Data |
+
+    | 17. | Nauto | Palo Alto, California | Automotive |
+
+    | 18. | Neurala | Boston, Massachusetts | Machine Learning |
+
+    | 19. | NuTonomy | Boston, Massachusetts | Automotive |
+
+    | 20. | Nvidia Corporation | Santa Clara, California | Hardware |
+
+    | 21. | OpenAI | San Francisco, California | Software |
+
+    | 22. | Persado | New York | Software |
+
+    | 23. | Sherpa | Redwood City, California | IoT |
+
+    | 24. | SoundHound | Santa Clara, California | Software |
+
+    | 25. | Tempus | Chicago, Illinois | Healthtech, Big Data |
+
+
+    174 PART I | AI and machine learning
+
+
+    ## TABLE 3 Flag bearers of artificial intelligence and machine learning–cont’d
+
+
+    | S. no. | Company name | Location | Application area |
+
+    |---|---|---|---|
+
+    | 26. | Vicarious | San Francisco, California | Machine Learning, Robotics |
+
+    | 27. | X-AI | New York | Machine Learning |
+
+    | 28. | Zebra Vision | Berkeley, California | Healthtech |
+
+    | 29. | Zoox | Foster City, California | Automotive |
+
+    | 30. | Zymger | Emeryville, California | Bioinformatics |
+
+
+    ## TABLE 4 Flag bearers of blockchain and artificial intelligence.
+
+
+    | S. no. | Company name | Location | Application area |
+
+    |---|---|---|---|
+
+    | 1. | AI Blockchain | Hoboken, New Jersey | Cybersecurity |
+
+    | 2. | AlphaNetworks | Cheyenne, Wyoming | Entertainment |
+
+    | 3. | Best360 | Denver | Supply chain |
+
+    | 4. | Blackbird.AI | San Francisco | Fake News |
+
+    | 5. | Blackbox AI | New York | AI-based tools |
+
+    | 6. | Botchain | Boston | AI-based bots |
+
+    | 7. | Boxspring Media | Denverville, California | Media channel |
+
+    | 8. | BurstiQ | Denver | Health care |
+
+    | 9. | Chainhaus | New York | Education and marketing |
+
+    | 10. | CoinGenius | California | Cryptocurrency trading |
+
+    | 11. | Computable | San Francisco | Data sharing marketplace |
+
+    | 12. | Core Scientific | Bellevue, Washington | Supply chain |
+
+    | 13. | Cyware Labs | New York | Cybersecurity |
+
+    | 14. | Dopamine | New York | Intellectual property |
+
+    | 15. | Figure | San Francisco | Home loan |
+
+    | 16. | Finalze | Golden, British Columbia | Civil infrastructure |
+
+    | 17. | Gainly | New York | Health care |
+
+    | 18. | Hannah Systems | San Francisco | Autonomous vehicles |
+
+    | 19. | LiveEdu | Santa Monica, California | Online learning platform |
+
+    | 20. | Mobs | San Francisco | Video marketplace |
+
+    | 21. | NetObjex | Irvine, California | Smart city infrastructure |
+
+    | 22. | Neural | Salt Lake City | Prediction engine |
+
+    | 23. | Numerai | San Francisco | Data science |
+
+    | 24. | ObEN | Pasadena, California | Intelligent AR/VR avatars |
+
+    | 25. | Stawk | Berkeley, California | Business operations |
+
+    | 26. | Synapse AI | San Francisco | Data sharing marketplace |
+
+    | 27. | Versaris | London | Intellectual property |
+
+    ## TABLE 4 Flag bearers of blockchain and artificial intelligence—cont’d
+
+
+    | S. no. | Company name | Location | Application area |
+
+    |---|---|---|---|
+
+    | 28. | VIA | Somerville, Massachusetts | Energy |
+
+    | 29. | Vytalx | Austin, Texas | Health care |
+
+    | 30. | Wealthblock.AI | Chicago | Automated marketing |
+
+
+    ## 2.4 Blockchain initiatives by the government of India
+
+
+    Case studies from NITI Aayog’s vault (2020) are presented:
+
+
+    - Land Reserves: Creating a system to manage record transfer and ownership.
+
+    - Pharmaceutical drug supply chain: “Self-regulation” of the sector through blockchain-enabled
+    trust.
+
+    - SuperCert: Antifraud, identity blockchain solution for educational certificates.
+
+    - Immunization Supply Chain: A new infrastructure development for the supply chain,
+    which would be more unified and enhanced in nature.
+
+    - Chit Funds: A blockchain-based model to enhance trust and unlock value creation.
+
+    - Insurance (medical, automotive, etc.).
+
+    - Electric vehicle farming.
+
+    - Energy Trading.
+
+    - Cryptocurrency.
+
+
+    ## 2.5 Current application areas of blockchain with artificial intelligence
+
+
+    In recent past, researchers have infusing AI and ML in blockchain technology.
+    The result of this is now showing in the form of successful applications in this
+    area. Table 5 gives a glimpse of application areas where the AI and the blockchain
+    chain is doing wonders.
+
+
+    ## TABLE 5 Vibrant application areas of blockchain with artificial intelligence.
+
+
+    | Fintech | Journalism | Logistics |
+
+    |---|---|---|
+
+    | Lending | Software | Insurance |
+
+    | Gaming | Social Media | Virtual Reality |
+
+    | Cryptocurrency | Health care | Cybersecurity |
+
+    | Trading | Digital Traceability | Computing |
+
+    | E-Commerce | Cloud | Aerospace |
+
+    | Digital Media | Supply Chain | Defence |
+
+    | Legal | Supply Chain | Civil infrastructure |
+
+    | Agriculture | Fake News | Online learning platform |
+
+    | Biotech | Media channel | Automated marketplace |
+
+    | Automotive | Education | Video marketplace |
+
+    | Transportation | Marketing | Smart city infrastructure |
+
+    | Bioinformatics | Intellectual property | Prediction engine |
+
+    '
+  mdcn: '
+
+
+    # 172 第一部分 | 人工智能与机器学习
+
+
+    增长了许多倍。排除中介实体是这项技术的独特卖点。然而，区块链技术专家的“知识隐瞒” [12] 现象正为区块链技术成为行业宠儿的道路上制造障碍。
+
+
+    在金融科技之后，区块链技术在医疗保健行业 [13] 证明了其自身的价值最为充分。
+
+
+    在区块链技术领域取得卓越成就的公司列于表 2 中。
+
+
+    ## 表格 2 区块链的领军者
+
+
+    | 序号 | 公司名称 | 地点 | 应用领域 |
+
+    |---|---|---|---|
+
+    | 1. | Coinbase | 加利福尼亚州旧金山 | 金融科技 (Fintech) |
+
+    | 2. | SALT Lending | 科罗拉多州丹佛 | 金融科技、贷款 |
+
+    | 3. | Mythical Games | 谢尔曼奥克斯 | 游戏 |
+
+    | 4. | Gemini | 纽约 | 金融科技、加密货币、 交易 |
+
+    | 5. | Circle | 马萨诸塞州波士顿 | 金融科技 |
+
+    | 6. | Celsius Network | 纽约 | 金融科技、贷款 |
+
+    | 7. | OPKins | 加利福尼亚州圣莫莫尼卡 | 电子商务、游戏 |
+
+    | 8. | Civil | 纽约布鲁克林 | 数字媒体、新闻报道 |
+
+    | 9. | Bloq | 伊利诺伊州芝加哥 | 软件 |
+
+    | 10. | Ripple | 加利福尼亚州旧金山 | 金融科技 |
+
+    | 11. | TraDove | 加利福尼亚州帕洛阿尔托 | 社交媒体、电子商务 |
+
+    | 12. | Robinhood | 加利福尼亚州梅尔洛帕克 | 金融科技 |
+
+    | 13. | DocAi | 加利福尼亚州帕洛阿尔托 | 医疗保健、软件 |
+
+    | 14. | Learning Machine | 纽约 | 数字溯源 |
+
+    | 15. | TrustToken | 加利福尼亚州旧金山 | 金融科技 |
+
+    | 16. | Oasis Labs | 加利福尼亚州伯克利 | 云 |
+
+    | 17. | Chronicled | 加利福尼亚州旧金山 | 物联网、供应链、物流 |
+
+    | 18. | Lemonade | 加利福尼亚州旧金山 | 金融科技、保险 |
+
+    | 19. | High Fidelity | 加利福尼亚州旧金山 | 虚拟现实、社交媒体 |
+
+    | 20. | Ankr Network | 加利福尼亚州伯克利 | 云、网络安全 |
+
+    | 21. | IBM | 纽约州阿莫克 | IT 技术、软件、计算 |
+
+    | 22. | Voatz | 马萨诸塞州波士顿 | 网络安全 |
+
+    | 23. | Blockstack | 纽约 | 物联网、开源 |
+
+    | 24. | Steem | 德克萨斯州奥斯汀 | 社交媒体 |
+
+    | 25. | Lockheed Martin | 马里兰州贝塞尔 | 航空航天、国防 |
+
+    | 26. | Ford | 底特律 | 汽车 |
+
+    | 27. | Omega Grid | 芝加哥 | 金融科技 |
+
+    | 28. | Tokken | 科罗拉多州丹佛 | 金融科技 |
+
+    | 29. | Filecoin | 旧金山 | 金融科技 |
+
+    | 30. | Mediachain | 纽约 | 数字媒体、电子商务 |
+
+
+    ## 2.2 人工智能与机器学习的领军者
+
+
+    随着 Alexa、Siri 和 Google Assistant 等个人助理的引入，AI 变得越来越流行。随着特斯拉自动驾驶汽车等创新性突破，AI 现在正以全速运行。AI
+    的迷之处在于其跨学科的本质；因为它触及了各行各业。在 AI 的庇护下，深度学习和机器学习（ML）正在展现出前所未有的实力。在法医学领域，机器学习在检测犯罪模式以及人脸识别方面非常有帮助
+    [14]。
+
+
+    许多公司在 AI 领域表现出色。除了微软、谷歌、苹果、特斯拉和亚马逊之外，其他几家提供基于 AI 和机器学习解决方案的知名公司列于表 3 中。
+
+
+    ## 2.3 区块链与人工智能的领军者
+
+
+    一方面，AI 凭借其计算和预测能力帮助扩展业务；另一方面，区块链技术提供了一个不可篡改的账本，以防止对业务流程和数据的未经授权访问。表 4 列出的某些公司在监管
+    AI 和区块链技术的使用方面做出了显著工作。
+
+
+    | 序号 | 公司名称 | 地点 | 应用领域 |
+
+    | --- | --- | --- | --- |
+
+    | 1. | AEye | 加利福尼亚州普莱森顿 | 机器人 |
+
+    | 2. | Airbnb | 加利福尼亚州梅尔洛帕克 | 机器学习、机器人 |
+
+    | 3. | AlphaSense | 纽约 | 金融科技 |
+
+    | 4. | Ascent | 芝加哥 | 法律 |
+
+    | 5. | Blue River Tech | 加利福尼亚州萨尼维尔 | 农业 |
+
+    | 6. | Casetext | 旧金山 | 法律 |
+
+    | 7. | Clarifai | 纽约 | 软件 |
+
+    | 8. | CloudWinds | 加利福尼亚州圣克拉拉 | 云 |
+
+    | 9. | CognitiveScale | 德克萨斯州奥斯汀 | 软件 |
+
+    | 10. | DataRobot | 马萨诸塞州波士顿 | 大数据 |
+
+    | 11. | Figure Eight | 旧金山 | 软件 |
+
+    | 12. | Freenome | 加利福尼亚州旧金山 | 医疗科技 |
+
+    | 13. | Grammarly | 旧金山 | 生产力 |
+
+    | 14. | H2O.ai | 加利福尼亚州帕洛阿尔托 | 大数据 |
+
+    | 15. | Insulico Medicine | 马里兰州贝塞斯达 | 生物技术 |
+
+    | 16. | Narrative Science | 伊利诺伊州芝加哥 | 大数据 |
+
+    | 17. | Nauto | 加利福尼亚州帕洛阿尔托 | 汽车 |
+
+    | 18. | Neurala | 马萨诸塞州波士顿 | 机器学习 |
+
+    | 19. | NuTonomy | 马萨诸塞州波士顿 | 汽车 |
+
+    | 20. | Nvidia Corporation | 加利福尼亚州圣克拉拉 | 硬件 |
+
+    | 21. | OpenAI | 加利福尼亚州旧金山 | 软件 |
+
+    | 22. | Persado | 纽约 | 软件 |
+
+    | 23. | Sherpa | 加利福尼亚州红木城 | 物联网 |
+
+    | 24. | SoundHound | 加利福尼亚州圣克拉拉 | 软件 |
+
+    | 25. | Tempus | 伊利诺伊州芝加哥 | 医疗科技、大数据 |
+
+
+    174 第一部分 | 人工智能与机器学习
+
+
+    ## 表格 3 人工智能与机器学习的领军者——续
+
+
+    | 序号 | 公司名称 | 地点 | 应用领域 |
+
+    | --- | --- | --- | --- |
+
+    || 26. | Vicarious | 加利福尼亚州旧金山 | 机器人 |
+
+    | 27. | X-AI | 纽约 | 机器学习 |
+
+    | 28. | Zebra Vision | 加利福尼亚州伯克利 | 机器学习 |
+
+    | 29. | Zoox | 加利福尼亚州福斯特城 | 汽车 |
+
+    | 30. | Zymger | 加利福尼亚州埃默维尔 | 生物信息 |
+
+
+    ## 表格 4 区块链与人工智能的领军者
+
+
+    | 序号 | 公司名称 | 地点 | 应用领域 |
+
+    |---|---|---|---|
+
+    | 1. | AI Blockchain | 加利福尼亚州圣莫拉 | 网络安全 |
+
+    | 2. | AlphaNetworks | 俄亥俄州霍博肯 | 娱乐 |
+
+    | 3. | Best360 | 华盛顿州 | 机器学习 |
+
+    | 4. | Blackbird | 旧金山 | 虚假信息 |
+
+    | 5. | Box AI | 纽约 | 基于 AI 工具 |
+
+    | 6. | Botspring | 马萨诸塞州波士顿 | 机器人 |
+
+    | 7. | Clarifai | 加利福尼亚州丹佛斯维尔 | 金融科技 |
+
+    | 8. | Dopamine | 丹佛 | 医疗保健 |
+
+    | 9. | Chainhaus | 纽约 | 媒体 |
+
+    | 10. | CoinGenius | 加利福尼亚州 | 加密货币 |
+
+    | 11. | Computable | 旧金山 | 分享市场 |
+
+    | 12. | Figure | 华盛顿州 | 供应链 |
+
+    | 13. | Cyware Labs | 纽约 | 网络安全 |
+
+    | 14. | Dopamine | 纽约 | 知识产权 |
+
+    | 15. | Figure | 旧金山 | 贷款 |
+
+    | 16. | Finalze | 不列颠比亚州 | 基础设施 |
+
+    | 17. | Gainly | 加利福尼亚州 | 医疗 |
+
+    | 18. Hannah Systems | 旧金山 | 自动驾驶汽车 |
+
+    | 19. LiveEdu | 圣莫拉尼卡 | 在线平台 |
+
+    | 20. | Mobs | 旧金山 | 视频市场 |
+
+    | 21. NetObjex | 加利福尼亚州 | 智能城市基础设施 |
+
+    | 22. Neural | 盐湖城 | 预测引擎 |
+
+    | 23. Numerai | 旧金山 | 数据科学 |
+
+    | 24. | ObEN | 加利福尼亚州帕塞迪纳 | 智能 AR/VR |
+
+    | 25. Stawk | 伯克利 | 业务运营 |
+
+    | 26. | Synapse AI | 旧金山 | 分享市场 |
+
+    | 27. | Versaris | 伦敦 | 知识产权 |
+
+    | 28. | VIA | 马萨诸塞州萨姆维尔 | 能源 |
+
+    | 29. | Vytalx | 德克萨斯州 | 医疗 |
+
+    | 30. | Wealthblock.AI | 芝加哥 | 营销 |
+
+
+    ## 2.4 印度政府的区块链倡议
+
+
+    NITI Aayog (2020) 的案例研究：
+
+
+    - 土地储备：用于管理记录转让和所有权的系统。
+
+    - 药品供应链：通过区块链赋能信任对该行业进行“自我监管”。
+
+    - SuperCert：用于教育证书的反欺诈区块链身份解决方案。
+
+    - 接种供应链：为供应链开发的新基础设施，将更具统一性和增强性。
+
+    - 民间基金：一种基于区块链的模式，以增强信任并释放价值创造。
+
+    - 保险（医疗、汽车等）。
+
+    - 电动汽车农业。
+
+    - 能源交易。
+
+    - 加密货币。
+
+
+    ## 2.5 区块链与人工智能当前的应用领域
+
+
+    在过去几年，研究人员将人工智能和机器学习注入区块链技术中。这种努力现在以该领域成功应用的形式表现出来。表 5 概述了 AI 和区块链链发挥奇作用的应用领域。
+
+
+    ## 表格 5 区块链与人工智能的活跃应用领域
+
+
+    | 金融科技 | 新闻报道 | 物流 |
+
+    |---|---|---|
+
+    | 贷款 | 软件 | 保险 |
+
+    | 游戏 | 社交媒体 | 虚拟现实 |
+
+    | 加密货币 | 医疗保健 | 网络安全 |
+
+    | 交易 | 数字溯源 | 计算 |
+
+    | 电子商务 | 云 | 航空航天 |
+
+    | 数字媒体 | 供应链 | 防护 |
+
+    | 法律 | 供应链 | 民用基础设施 |
+
+    | 农业 | 虚假信息 | 在线学习平台 |
+
+    | 生物技术 | 媒体频道 | 视频市场 |
+
+    | 汽车 | 教育 | 自动驾驶汽车 |
+
+    | 交通 | 营销 | 智能城市基础设施 |
+
+    | 生物信息 | 知识产权 | 预测引擎 |
+
+    | 数据科学 | | |
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 7]
+
+
+    # 3 It takes two to tango: Future of artificial intelligence and machine learning
+    in blockchain technology
+
+
+    Security is a major area of concern in traditional e-commerce projects [15]. Blockchain
+    has numerous advantages, but there are also some implementations. For example,
+    the threats and limitations of blockchain in health care are discussed in Ref.
+    [16]. Fig 3 shows the blockchain technology of concerns where ML and AI can help.
+    To overcome these limitations and concerns of blockchain technology, the capability
+    of AI can be exploited.
+
+
+    # 3.1 Sustainability
+
+
+    Sustainability is the major concern in the blockchain technology as mining requires
+    a lot of energy. AI has already proven its mittle in the optimization of power
+    consumption. So, it can be utilized to employed.
+
+
+    # 3.2 Scalability
+
+
+    Scalability is another critical issue in the blockchain. The size of the blockchain
+    is growing 1 MB in 600 s. Blockchain pruning [6] is not able to handle this. AI-powered
+    federated learning or novel data-shredding techniques may be used here.
+
+
+    # 3.3 Security
+
+
+    Due to high energy consumption in the mining blockchain, it is almost impossible
+    to hack into; but, its applications and layers are not secure as smart contracts
+    in the blockchain are written by the programmers themselves. Here, we can exploit
+    the ML capability of intrusion detection.
+
+
+    # 3.4 Privacy
+
+
+    AI- and ML-based models can prove useful to protect the privacy of blockchain
+    data. For example, the HDG mobile app aims to automate medical histories without
+    breaches in privacy [17].
+
+
+    # 3.5 Adaptability
+
+
+    AI- and ML-based models can accurately predict the adaptability of blockchain
+    applications. The adaptability of the blockchain is predicted according to the
+    needs of the business, the management as well as the employees'' willingness to
+    switch over a newer technology.
+
+
+    ![](img/d482d976e7e75f102ff440e8522a951e_7_0.png)
+
+
+    FIG. 3 Blockchain area of concerns.'
+  - "[PAGE 8]\n\n# Application of artificial intelligence and machine learning Chapter\
+    \ | 12 177\n\n# 3.6 Efficiency\n\nAI- and ML-based models minimize the uncertainty\
+    \ by predicting the most promising node to fulfill the certain mining activity.\n\
+    \n# 3.7 Transaction speed\n\nOptimization is the area where AI- and ML-based models\
+    \ excel. The large size of the ledger slows down the transaction speed. This issue\
+    \ can be solved with the optimization techniques of AI.\n\n# 3.8 Performance\n\
+    \nMining performance can be improved with the help of ML models. ML techniques\
+    \ have the ability to learn from experience.\n\n# 3.9 Validation of various elements\n\
+    \nValidation of transactions and their verification may be done spontaneously\
+    \ by AI- and ML-powered models.\n\n# 3.10 Maintainability\n\nThe maintainability\
+    \ of a blockchain ledger is a mammoth task. AI and ML models can automate the\
+    \ maintainability of the blockchain.\n\n# 3.11 Scope estimation\n\nAI can facilitate\
+    \ ML-based models to examine the scope of a blockchain project. The scope of blockchain\
+    \ in vertical horizontal processes can be proposed by ML models with proper training.\n\
+    \n# 3.12 Cost estimation\n\nThe cost of blockchain projects/applications cannot\
+    \ be estimated with the help of customary approaches of cost estimation because\
+    \ of their underlying architecture. ML models can play an important role in the\
+    \ prediction of blockchain cost estimation in a more efficient way with minimal\
+    \ human interference.\n\n# 3.13 Effort estimation\n\nNo traditional method of\
+    \ effort estimation for blockchain applications is available; here, ML and AI\
+    \ tools/applications may be used to accurately predict the effort required.\n\n\
+    # 3.14 Project-specific modus operandi\n\nThere are four types of blockchain projects/applications:\n\
+    \n+   (i) Public blockchain or permission-less blockchain\n   Example: Bitcoin,\
+    \ Litecoin, Ethereum, etc.\n(ii) Private blockchain or permission-based blockchain\n\
+    \   Example: Sawtooth, Fabric, Corda, etc.\n(iii) Consortium blockchain or decentralized\
+    \ blockchain\n   Example: R3, Energy Web Foundation.\n(iv) Hybrid blockchain (combination\
+    \ of the private and public blockchain)\n   Example: Dragonchain, etc.\n\nTraining\
+    \ of ML models can be done on project-specific data. Project-specific modus operandi\
+    \ can be devised with the help of AI techniques."
+  - '[PAGE 9]
+
+
+    # Edge computing: A potential use of blockchain
+
+
+    The idea of edge computing is to bring the computational capacity at the origin
+    of "instant data" itself. Therefore, this paradigm of edge computing may serve
+    better for delay-sensitive jobs by pushing the cloud computational capability
+    to the edge of that network [18]. The backbone of edge computing is its distributed
+    computational framework. The purpose of this is to bring the storage capacities
+    and computational abilities of the data sources, devices, nearer to the enterprise
+    business logic where they are actually needed [19-21]. The working of edge computing
+    is different; the difference is that edge devices process the computation locally,
+    whereas the cloud computing centralizes it in a single data center [22], as shown
+    in Fig. 4. Edge computing has advantage over cloud computing in terms of latency
+    and bandwidth edge devices have to send only individual results, after processing
+    on the local data, to the edge servers.
+
+
+    Internet of Things (IoT) is one of the possible uses of edge computing. Let us
+    use an example of store of clothing, where local and batch, both types of processing,
+    are needed for inventory and sales. Geographically distributed outlets tally their
+    inventory and sales and then forward the computational results to the head office
+    each day. The top hierarchy, head office in this example is not interested in
+    each transaction that happens at the outlet (edge) but in the final statistics
+    of sales and inventory computed by the outlet (edge devices). By exhausting the
+    capabilities of edge computing, we reshape almost every industry. Use cases of
+    edge computing including telecommunication, health, financial services, media
+    and entertainment, manufacturing, supply chain, retail, insurance, pharmaceuticals,
+    and automotive with smart and smart city. Fig. 5 shows some of the uses of edge
+    computing.
+
+
+    # 4.1 Edge computing architectures
+
+
+    The architecture of cloud computing and IoT may be expanded to the illusion diagram
+    of edge computing architecture. Basilly, edge computing utilizes a multilayered
+    distributed architecture to balance among between cloud layer, edge layer or edge
+    network, and the edge layer that connects edge local server layer and edge device;
+    a high-level illusion diagram of edge computing architecture is presented in Fig.
+    6. Fig. 7 represents a simplified edge architecture reference based on IBM edge
+    computing architecture.
+
+
+    The top layer, or cloud microcloud, is used for analysis of large-scale data.
+    It consists of a dashboard that may be the focus of device management and monitoring.
+    This layer may have hundreds of devices. The size of software components as AI
+    services and Models at each layer varies according to the size of data it has
+    to process.
+
+
+    The second layer is the edge cloud or micro data centers that may be thought of
+    as a local cloud for edge devices computing support. This layer is also considered
+    as an edge network in the telecommunication field. Edge clouds can do most of
+    the computing on their own without consulting the top layer, decreasing latency
+    and minimizing bandwidth widths. This layer may have thousands of devices.
+
+
+    The third layer is the edge server layer. Edge devices communicate with edge servers
+    with the help of agents installed in devices. Edge devices may do cloud computation
+    by themselves, if more analytics are required then they communicate
+
+
+    ![](img/d482d976e7e75f102ff440e8522a951e_9_0.png)
+
+
+    FIG. 4 High-level idea of cloud and edge computing.'
+  - "[PAGE 10]\n\n# Application of artificial intelligence and machine learning Chapter\
+    \ | 12 179\n\n![](img/d482d976e7e75f102ff440e8522a951e_10_0.png)\n\nFIG. 5 Edge\
+    \ application areas.\n\n![](img/d482d976e7e75f102ff440e8522a951e_10_1.png)\n\n\
+    FIG. 6 High-level illusion diagram of edge computing architecture.\n\nwith the\
+    \ local edge for computation. These edge servers are also used to deploy required\
+    \ applications on the edge devices. This layer is home to millions of devices.\n\
+    The bottom layer of architecture is the edge device layer. Edge devices are very\
+    \ compact and sophisticated with limited resources like less storage capacity,\
+    \ but are equipped with artificial intelligence and machine learning-based high-end\
+    \ software-as-a-service. For most of the tasks, without any resources or home\
+    \ of an enterprise cloud layer and/or edge server, these edge devices take care\
+    \ of real-time computations.\nIntel, Microsoft, Amazon, and Google are some of\
+    \ the early birds that have taken their cloud infrastructure for the edge rainbow\
+    \ of industry requirements. An edge infrastructure overview of these major cloud\
+    \ providers is as follows:\n\n+   * For the Edge:\n  * Xeon Scalable Processors:\
+    \ High-performance edge servers\n  * Intel Deep Learning Boost (Intel DL Boost):\
+    \ AI applications\n  * Intel Optane persistent memory: faster data processing\
+    \ and storage\n  * Intel Solid State Drives/Intel Optane DC SSDs/Intel 3D NAND\
+    \ SSDs: Storage\n  * Intel Ethernet Network Adapters and Controllers: Networking"
+  md: "\n# 3 It takes two to tango: Future of artificial intelligence and machine\
+    \ learning in blockchain technology\n\nSecurity is a major area of concern in\
+    \ traditional e-commerce projects [15]. Blockchain has numerous advantages, but\
+    \ there are also some implementations. For example, the threats and limitations\
+    \ of blockchain in health care are discussed in Ref. [16]. Fig 3 shows the blockchain\
+    \ technology of concerns where ML and AI can help. To overcome these limitations\
+    \ and concerns of blockchain technology, the capability of AI can be exploited.\n\
+    \n### 3.1 Sustainability\n\nSustainability is the major concern in the blockchain\
+    \ technology as mining requires a lot of energy. AI has already proven its mettle\
+    \ in the optimization of power consumption. So, it can be utilized to employed.\n\
+    \n### 3.2 Scalability\n\nScalability is another critical issue in the blockchain.\
+    \ The size of the blockchain is growing 1 MB in 600 s. Blockchain pruning [6]\
+    \ is not able to handle this. AI-powered federated learning or novel data-shredding\
+    \ techniques may be used here.\n\n### 3.3 Security\n\nDue to high energy consumption\
+    \ in the mining blockchain, it is almost impossible to hack into; but, its applications\
+    \ and layers are not secure as smart contracts in the blockchain are written by\
+    \ the programmers themselves. Here, we can exploit the ML capability of intrusion\
+    \ detection.\n\n### 3.4 Privacy\n\nAI- and ML-based models can prove useful to\
+    \ protect the privacy of blockchain data. For example, the HDG mobile app aims\
+    \ to automate medical histories without breaches in privacy [17].\n\n### 3.5 Adaptability\n\
+    \nAI- and ML-based models can accurately predict the adaptability of blockchain\
+    \ applications. The adaptability of the blockchain is predicted according to the\
+    \ needs of the business, the management as well as the employees' willingness\
+    \ to switch over a newer technology.\n\n![](img/d482d976e7e75f102ff440e8522a951e_7_0.png)\n\
+    \nFIG. 3 Blockchain area of concerns.\n\n### 3.6 Efficiency\n\nAI- and ML-based\
+    \ models minimize the uncertainty by predicting the most promising node to fulfill\
+    \ the certain mining activity.\n\n### 3.7 Transaction speed\n\nOptimization is\
+    \ the area where AI- and ML-based models excel. The large size of the ledger slows\
+    \ down the transaction speed. This issue can be solved with the optimization techniques\
+    \ of AI.\n\n### 3.8 Performance\n\nMining performance can be improved with the\
+    \ help of ML models. ML techniques have the ability to learn from experience.\n\
+    \n### 3.9 Validation of various elements\n\nValidation of transactions and their\
+    \ verification may be done spontaneously by AI- and ML-powered models.\n\n###\
+    \ 3.10 Maintainability\n\nThe maintainability of a blockchain ledger is a mammoth\
+    \ task. AI and ML models can automate the maintainability of the blockchain.\n\
+    \n### 3.11 Scope estimation\n\nAI can facilitate ML-based models to examine the\
+    \ scope of a blockchain project. The scope of blockchain in vertical horizontal\
+    \ processes can be proposed by ML models with proper training.\n\n### 3.12 Cost\
+    \ estimation\n\nThe cost of blockchain projects/applications cannot be estimated\
+    \ with the help of customary approaches of cost estimation because of their underlying\
+    \ architecture. ML models can play an important role in the prediction of blockchain\
+    \ cost estimation in a more efficient way with minimal human interference.\n\n\
+    ### 3.13 Effort estimation\n\nNo traditional method of effort estimation for blockchain\
+    \ applications is available; here, ML and AI tools/applications may be used to\
+    \ accurately predict the effort required.\n\n### 3.14 Project-specific modus operandi\n\
+    \nThere are four types of blockchain projects/applications:\n\n- (i) Public blockchain\
+    \ or permission-less blockchain\n   Example: Bitcoin, Litecoin, Ethereum, etc.\n\
+    - (ii) Private blockchain or permission-based blockchain\n   Example: Sawtooth,\
+    \ Fabric, Corda, etc.\n- (iii) Consortium blockchain or decentralized blockchain\n\
+    \   Example: R3, Energy Web Foundation.\n- (iv) Hybrid blockchain (combination\
+    \ of the private and public blockchain)\n   Example: Dragonchain, etc.\n\nTraining\
+    \ of ML models can be done on project-specific data. Project-specific modus operandi\
+    \ can be devised with the help of AI techniques.\n\n# Edge computing: A potential\
+    \ use of blockchain\n\nThe idea of edge computing is to bring the computational\
+    \ capacity at the origin of \"instant data\" itself. Therefore, this paradigm\
+    \ of edge computing may serve better for delay-sensitive jobs by pushing the cloud\
+    \ computational capability to the edge of that network [18]. The backbone of edge\
+    \ computing is its distributed computational framework. The purpose of this is\
+    \ to bring the storage capacities and computational abilities of the data sources,\
+    \ devices, nearer to the enterprise business logic where they are actually needed\
+    \ [19-21]. The working of edge computing is different; the difference is that\
+    \ edge devices process the computation locally, whereas the cloud computing centralizes\
+    \ it in a single data center [22], as shown in Fig. 4. Edge computing has advantage\
+    \ over cloud computing in terms of latency and bandwidth edge devices have to\
+    \ send only individual results, after processing on the local data, to the edge\
+    \ servers.\n\nInternet of Things (IoT) is one of the possible uses of edge computing.\
+    \ Let us use an example of store of clothing, where local and batch, both types\
+    \ of processing, are needed for inventory and sales. Geographically distributed\
+    \ outlets tally their inventory and sales and then forward the computational results\
+    \ to the head office each day. The top hierarchy, head office in this example\
+    \ is not interested in each transaction that happens at the outlet (edge) but\
+    \ in the final statistics of sales and inventory computed by the outlet (edge\
+    \ devices). By exhausting the capabilities of edge computing, we reshape almost\
+    \ every industry. Use cases of edge computing including telecommunication, health,\
+    \ financial services, media and entertainment, manufacturing, supply chain, retail,\
+    \ insurance, pharmaceuticals, and automotive with smart and smart city. Fig. 5\
+    \ shows some of the uses of edge computing.\n\n### 4.1 Edge computing architectures\n\
+    \nThe architecture of cloud computing and IoT may be expanded to the illusion\
+    \ diagram of edge computing architecture. Basilly, edge computing utilizes a multilayered\
+    \ distributed architecture to balance among between cloud layer, edge layer or\
+    \ edge network, and the edge layer that connects edge local server layer and edge\
+    \ device; a high-level illusion diagram of edge computing architecture is presented\
+    \ in Fig. 6. Fig. 7 represents a simplified edge architecture reference based\
+    \ on IBM edge computing architecture.\n\nThe top layer, or cloud microcloud, is\
+    \ used for analysis of large-scale data. It consists of a dashboard that may be\
+    \ the focus of device management and monitoring. This layer may have hundreds\
+    \ of devices. The size of software components as AI services and Models at each\
+    \ layer varies according to the size of data it has to process.\n\nThe second\
+    \ layer is the edge cloud or micro data centers that may be thought of as a local\
+    \ cloud for edge devices computing support. This layer is also considered as an\
+    \ edge network in the telecommunication field. Edge clouds can do most of the\
+    \ computing on their own without consulting the top layer, decreasing latency\
+    \ and minimizing bandwidth. This layer may have thousands of devices.\n\nThe third\
+    \ layer is the edge server layer. Edge devices communicate with edge servers with\
+    \ the help of agents installed in devices. Edge devices may do cloud computation\
+    \ by themselves, if more analytics are required then they communicate with the\
+    \ local edge for computation. These edge servers are also used to deploy required\
+    \ applications on the edge devices. This layer is home to millions of devices.\n\
+    \nThe bottom layer of architecture is the edge device layer. Edge devices are\
+    \ very compact and sophisticated with limited resources like less storage capacity,\
+    \ but are equipped with artificial intelligence and machine learning-based high-end\
+    \ software-as-a-service. For most of the tasks, without any resources or home\
+    \ of an enterprise cloud layer and/or edge server, these edge devices take care\
+    \ of real-time computations.\n\n![](img/d482d976e7e75f102ff440e8522a951e_9_0.png)\n\
+    \nFIG. 4 High-level idea of cloud and edge computing.\n\n![](img/d482d976e7e75f102ff440e8522a951e_10_0.png)\n\
+    \nFIG. 5 Edge application areas.\n\n![](img/d482d976e7e75f102ff440e8522a951e_10_1.png)\n\
+    \nFIG. 6 High-level illusion diagram of edge computing architecture.\n"
+  mdcn: "\n# 3 舞者共舞：人工智能与机器学习在区块链技术中的未来\n\n安全性是传统电子商务项目中主要的关注领域 [15]。区块链具有许多优势，但也存在一些实现问题。例如，医疗保健领域的区块链威胁和局限性在文献中已有讨论\
+    \ [16]。图3显示了人工智能和机器学习关注的区块链技术。为了克服这些局限性和问题，人工智能的能力可以被利用。\n\n### 3.1 可持续性\n可持续性是区块链技术中的主要关注问题，因为挖掘需要大量的能量。人工智能在优化能耗方面证明了它的实力。因此，它可以被利用。\n\
+    \n### 3.2 可扩展性\n可扩展性是区块链的另一个关键问题。区块链的大小正以每秒 MB 的速度增长。区块链剪枝 [6] 无法处理此问题。人工智能驱动的联邦学习或新颖可能会在此使用。\n\
+    \n### 3.3 安全\n由于区块链的高能耗，几乎不可能被黑入；但其应用层由程序员编写的智能合约是不安全的。在这里，我们可以利用机器学习的入侵检测能力。\n\
+    \n### 3.4 隐私\n人工智能和机器学习模型在保护区块链数据隐私方面非常有用。例如，旨在在不违反隐私 [17] 的情况下自动化医疗。\n\n### 3.5\
+    \ 适应性\n人工智能和机器学习模型可以准确预测区块链应用的适应性。区块链的适应性根据业务需求、以及员工转向新技术的意愿进行预测。![](img/d482d976e7e75f102ff440e8522a951e.png)\n\
+    \n图3 区块链关注领域。\n\n### 3.6 效率\n人工智能和机器学习模型通过预测最有前景的节点来最小化某些活动的不确定性。\n\n### 3.7 交易速度\n\
+    优化是人工智能和机器学习模型优秀的领域。账本的大小降低了交易速度。这个问题可以通过人工智能优化技术解决。\n\n### 3.8 性能\n性能可以通过机器学习模型的改进。机器学习具有从经验中学习的能力。\n\
+    \n### 3.9 各元素的验证\n交易的验证和检查由人工智能驱动的模型自动完成。\n\n### 3.10 可维护性\n区块链的可维护性是一项巨大的任务。人工智能和机器学习模型可以实现区块链的可维护性。\n\
+    \n### 3.11 范围估计\n人工智能可以促进机器学习模型检查区块链项目。在垂直处理中的区块链范围可以通过机器学习模型提出。\n\n### 3.12 成本估计\n\
+    由于底层架构的原因，无法通过传统方法估计区块链项目/应用的成本。机器学习模型在更高效的方式预测成本估计方面起着重要作用。\n\n### 3.13 工作估计\n\
+    区块链应用没有传统的工作估计方法；在这里，机器学习和人工智能工具可能被用于准确预测所需的工作。\n\n### 3.14 项目特定的模式\n有四种区块链项目/应用：\n\
+    - (i) 公有链或无许可区块链\n   示例：Bitcoin、Litecoin、Ethereum等\n- (ii) 私有链或基于许可的区块链\n   示例：Sawtooth、Fabric、Corda等\n\
+    - (iii) 联盟链或去中心化区块链\n   示例：R3、Energy Web Foundation等\n- (iv) 混合区块链（私有链和公有链的结合）\n\
+    \   示例：Dragonchain等\n\n可以在项目特定的数据上进行机器学习训练。可以通过人工智能技术设计项目特定的模式。\n\n# 边缘计算：区块链的潜在用途\n\
+    \n边缘计算的想法是将计算能力带到“即时数据”的源头。因此，这种边缘计算范式可以通过将云计算能力推到网络的边缘 [18]，更好地服务延迟敏感的任务。边缘计算的骨干是其分布式计算框架。其目的是将数据源设备的存储能力和计算能力带到实际需要的企业业务逻辑处\
+    \ [19]。边缘计算的工作方式不同；边缘设备在本地处理计算，而云计算将其集中在单个数据中心 [22]，如图4所示。在延迟和带宽方面，边缘计算优于云计算，边缘设备在对本地数据处理后只需将结果发送到边缘服务器。\n\
+    \n物联网 (IoT) 是边缘计算的可能用途之一。以服装店为例，库存和销售都需要本地和批量两种类型的处理。地理分布的商店每天统计库存和销售，然后将计算结果发送到总部。在这个例子中，顶层总部对商店（边缘）发生的每次交易感兴趣，而是对商店（边缘设备）计算出的销售和库存最终统计感兴趣。通过利用边缘计算的能力，我们重塑了每一个行业。边缘计算的用例包括电信、健康、金融服务、媒体与娱乐、制造业、供应链、零售、保险、医药以及带有智能和智慧城市的汽车。图5显示了边缘计算的一些用途。\n\
+    \n### 4.1 边缘计算架构\n云计算和物联网的架构可以扩展到边缘计算架构的示意图中。基本上，边缘计算利用多层分布式架构在云层、边缘层（边缘网络）以及连接边缘本地服务器层和边缘设备的边缘层之间平衡；图6展示了边缘计算架构的高级示意图。图7表示了基于IBM边缘计算架构的简化边缘架构参考。\n\
+    \n顶层（或云微云）用于分析大规模数据。它由一个可能是设备管理和监控焦点的仪表板组成。这一层可能有数百个设备。每一层作为AI服务和模型的软件组件的大小取决于其需要处理的数据量。\n\
+    \n第二层是边缘云或微数据中心，可以认为是边缘设备计算的本地云。这一层在电信领域也被认为是边缘网络。边缘云可以在自己完成大部分计算，无需咨询顶层，从而降低延迟并减少带宽。这一层可能有数千个设备。\n\
+    \n第三层是边缘服务器层。边缘设备通过安装的代理与边缘服务器通信。边缘设备可以自己进行计算，如果需要更多分析，它们会与本地边缘通信。这些边缘服务器还用于在边缘设备上部署所需的应用程序。这一层是数百万个设备的所在地。\n\
+    \n架构的底层是边缘设备层。边缘设备非常紧凑且精密，资源有限（如存储容量小），但配备了人工智能和机器学习的高端软件即服务。\n\n![](img/d482d976e7e75f102ff440e8522a951e_9_0.png)\n\
+    \n图4 云与边缘计算的高级概念。\n\n![](img/d482d976e7e75f102ff440e8522a951e_10_0.png)\n\n图5\
+    \ 边缘应用领域。\n"
+  merge: 0
+- raw:
+  - "[PAGE 11]\n\n![](img/d482d976e7e75f102ff440e8522a951e_11_0.png)\n\nFIG. 7 High-level\
+    \ edge computing reference architecture.\n\n+   - Intel Network Builders Edge\
+    \ Ecosystem/Intel IoT Market Ready Solutions (Intel IMRS)/Intel Datacenter Builders:\
+    \ Intel Partner Solutions\n- AWS for Edge:\n    - Infrastructure: AWS Wavelength/AWS\
+    \ Local Zones/AWS Outposts\n    - Networking: Amazon CloudFront\n    - IoT: AWS\
+    \ SiteWise/AWS IoT Greengrass/FreeRTOS/AWS Voice Service Integration for AWS IoT\
+    \ Core\n    - Networking: Amazon CloudFront\n- Rugged and Disconnected Edge Devices:\
+    \ AWS Snowcone/Snowball Edge\n- Storage: AWS Storage Gateway\n- Analytics: Amazon\
+    \ Kinesis Video Streams\n- Machine Learning: Amazon SageMaker Edge Manager/Amazon\
+    \ SageMaker Neo/AWS Panorama/Amazon\n\n+   - Microsoft Azure for Edge:\n    -\
+    \ Infrastructure: Azure Stack (1U, 2 x 10 Core Intel Xeon, 128 GB appliance)\n\
+    \    - Azure Stack HCI: A hyperconverged infrastructure\n    - Azure Stack Hub:\
+    \ Deployment of cloud-native applications\n- Google for Edge:\n    - Auth at the\
+    \ Edge\n    - Google Edge Cloud"
+  - '[PAGE 12]
+
+
+    # Application of artificial intelligence and machine learning Chapter | 12 181
+
+
+    General protocols used in computing:
+
+
+    CoAP: This is the brain-child of the IET Constrained RESTful Environments (CoRE)
+    working group. It is an application layer protocol. On top of HTTP functionalities,
+    this transfer protocol works on Representative State Transfer (REST).
+
+    AMQP: Application layer protocol is an open standard in TCP which is used for
+    message exchange. AMQP provides three guarantees for message delivery, which include
+    exactly once, at-most-once, and at-least once delivery.
+
+    MQTT: MQTT is made up of three components: publisher, broker, and subscriber.
+    It is a connection protocol, which is used to connect various edge devices like
+    edge network, embedded devices, middleware, and edge services.\IoT communication:
+    machine-to-machine, Web of Things, Internet of Things models include: publish-subscribe,
+    request-response, et. Communication patterns include notifications, telemetry,
+    and status.
+
+
+    # 4.2 Flag bearers of edge computing
+
+
+    Edge computing market players include Google, Microsoft Corporation, Amazon, IBM
+    Corporation, General Electric Company, Huawei Technologies Co., Ltd., and Cisco
+    Systems, Inc. Companies are passionately working hard for the technological development
+    of edge computing for its acceptance in the industry guests. Apart from a few
+    prominent companies that are helping edge computing to reach its true potential
+    are listed in Table 6.
+
+
+    TABLE 6 Flag bearers of blockchain and artificial intelligence.
+
+    | S. no. | Company name | Location | Application area | Key contribution |
+
+    |---|---|---|---||
+
+    | 1. | ClearBlade | Texas | Software platform provider | Edge IoT software<br>-
+    Enterprise IoT platform<br>- Secure IoT |
+
+    | 2. | EdgeConneX | Virginia | Edge data centers | Edge small cells<br>- Carrier-neutral
+    data center<br>- Edge computing infrastructure<br>- Point of presence |
+
+    | 3. | Mutable | New York | Public edge cloud technology | Edge technology platform
+    for<br>- Cable operators<br>- Cloud providers<br>- Application providers |
+
+    | 4. | MobileX | California | Software platform provider | Edge-cloud |
+
+    | 5. | Saguna | Israel | Communication networks | Open-RAN MEC solution |
+
+    | 6. | Cato Networks | Israel | Communication networks | Secure access service
+    edge (SASE) |
+
+    | 7. | Edge Intelligence | United States | Software platform provider | Distributed
+    analytics platform |
+
+    | 8. | Hewlett Packard Enterprise (HPE) | California | Software platform provider
+    | Enterprise-class IT at the edge |
+
+    | 9. | Vapor IO | Texas | Communication networks | Kinetic edge |
+
+    | 10. | FogHorn | California | Software platform provider | Edge IoT deployments
+    |
+
+
+    Continued'
+  - '[PAGE 13]
+
+
+    # TABLE 6 Flag bearers of blockchain and artificial intelligence – cont''d
+
+
+    | S. no. | Company name | Location | Application area | Key contribution |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 11. | Swim.AI | United States | Software platform provider | * Swim continuum<br>**
+    Swim OS |
+
+    | 12. | Affirmed Networks | United States | Communication networks | * Affirmed
+    cloud edge |
+
+    | 13. | Edge Gravity | United States | Cloud Infrastructure | * Edge gravity cloud
+    platform |
+
+    | 14. | Packet | United States | Cloud Infrastructure | * Bare-metal public cloud
+    |
+
+    | 15. | EdgeConnX | United States | Edge data centers | * Hardware products<br>**
+    Cloud connectivity<br>** Services |
+
+    | 16. | Aruba Networks | California | Communication networks | * Aruba edge services
+    platform |
+
+    | 17. | AT&T | Dallas | Communication networks | * Multiclass edge computing |
+
+    | 18. | Infiot | California | Communication networks | * Edge networking |
+
+    | 19. | Sierra Wireless | Canada | Communication networks | * Octave(edge-to-solution)
+    |
+
+    | 20. | Citrix | United States | Communication networks | * Secure access service
+    edge |
+
+    | 21. | ClearBlade | Texas | Software platform provider | * Edge platform<br>**
+    Smart monitoring<br>** Automated rail<br>** Asset tracking |
+
+    | 22. | Edgeworx | California | Software platform provider | * ioFog engine |
+
+    | 23. | IGEL | Germany | Software platform provider | * Edge OS for cloud workspace
+    |
+
+    | 24. | Pensando Systems | | Distributed Services Platform | * Edge services model
+    |
+
+    | 25. | EdgeMicro | United States | Edge colocation data centers | * Edge traffic
+    exchange |
+
+    | 26. | Ananda Networks | San Francisco | Edge networking | * Secure global LAN
+    |
+
+    | 27. | Aama Networks | California | Communication networks | * Multi cluster
+    orchestration platform |
+
+    | 28. | Liquid | United States | Communication networks | * Composable infrastructure
+    solutions<br>** solutions |
+
+    | 29. | PTC | Boston | Industrial IoT platforms | * Edge MicroServer |
+
+    | 30. | VMware | California | Communication networks | * NSX data center<br>**
+    SD-WAN by VeloCloud<br>** vSphere bittusision |'
+  - '[PAGE 14]
+
+
+    # Application of artificial intelligence and machine learning Chapter | 12 183
+
+
+    | Application area | Year | Key contributions |
+
+    |---|---|--|
+
+    | IoT network [26] | 2018 | - Proposed and developed a deep learning-based optimal
+    auction model for allocation of edge resources in mobile blockchain networks.<br>-
+    Developed a multilayer neural network model. |
+
+    | Mobile IoT systems [27] | 2018 | - Proposed edge computing for mobile blockchain.
+    |
+
+    | IoT network [28] | 2019 | - Proposed TrustChain: a privacy blockchain.<br>-
+    Deployment of TrustChain in an edge computing environment. |
+
+    | Smart Circular Cities [29] | 2019 | - Proposed a blockchain and edge computing
+    architecture that can increase the efficacy of IoT devices and reduce its memory
+    requirements.<br>- Limitations and advantages of the proposed architecture have
+    been discussed in detail. |
+
+    | Intelligent IoT network [30] | 2020 | - Proposed Edge+ intelligence(AI) for
+    management of decentralized IoT applications (Apps) with the help of blockchain
+    and edge cloud. |
+
+    | Resource Trading System [31] | 2020 | - Proposed a hybrid blockchain-enabled
+    resource trading system for federated learning on top of edge computing.<br>-
+    Designed a data-driven reverse auction for smart contracts. |
+
+    | Government Tender [32] | 2020 | - Proposed a blockchain enabled edge computing
+    model for a transparent and secure framework for smart governance. |
+
+    | Internet of Vehicles [33] | 2020 | - Developed CUTE, a blockchain integrated
+    edge computing infrastructure that facilitates low latency services for the Internet
+    of Vehicles.<br>- Successfully implemented the CUTE in China Mobile Network. |
+
+    | Industrial IoT [19] | 2020 | - Proposed a blockchain integrated layer architecture
+    for IoT and Industrial IoT. |
+
+    | Access Management System [34] | 2021 | - Proposed a blockchain enabled edge
+    computing model for Access Management System (AMS).<br>- Model verification by
+    Color Pet Net (CPN).<br>- The practical application of the proposed model is verified
+    with the help of the WISE-PaaS platform. |
+
+
+    #  4.3 Applications of blockchain technology in edge computing
+
+
+    In edge computing, edge devices frequently communicate with each other and edge
+    servers to do AI and learning-enabled decision-making. Communication networks
+    and the devices themselves are prone to security threats, for tampering or leakage
+    of information transmitted over the edge network due to possible attacks by hackers
+    or failure of devices [23]. The tamper-proof ledger of blockchain technology can
+    play a key role. Blockchain technology can ensure tamper-proof network communication
+    and data storage on edge devices, the edge network, and the enterprise cloud.
+    An AI-trust model in edge computing can be optimized and improved with the help
+    of smart contracts and consensus protocols of blockchain technology [24]. The
+    blockchain and edge computing technologies have great efficacy and the potential
+    to provide solutions in diverse scenarios [25]. Blockchain-powered trusted, secure,
+    and tamper-proof edge computing framework can provide effective solutions. Researchers
+    have proposed several frameworks for blockchain-enabled edge computing. Some of
+    the recent state-of-the-art blockchain edge computing frameworks are summarized
+    in Table 7.
+
+
+    #  5 Conclusions
+
+
+    From the uses of crypto bots in trading “cryptocurrency,” to the AI-powered “MusicLife”
+    platform for music streaming, and to “EverLife” helping people to have their digital
+    legacy by creating an online avatar of themselves, these are just'
+  md: "\n![](img/d482d976e7e75f102ff440e8522a951e_11_0.png)\n\nFIG. 7 High-level edge\
+    \ computing reference architecture.\n\n- Intel Network Builders Edge Ecosystem/Intel\
+    \ IoT Market Ready Solutions (Intel IMRS)/Intel Datacenter Builders: Intel Partner\
+    \ Solutions\n- AWS for Edge:\n    - Infrastructure: AWS Wavelength/AWS Local Zones/AWS\
+    \ Outposts\n    - Networking: Amazon CloudFront\n    - IoT: AWS SiteWise/AWS IoT\
+    \ Greengrass/FreeRTOS/AWS Voice Service Integration for AWS IoT Core\n    - Networking:\
+    \ Amazon CloudFront\n- Rugged and Disconnected Edge Devices: AWS Snowcone/Snowball\
+    \ Edge\n- Storage: AWS Storage Gateway\n- Analytics: Amazon Kinesis Video Streams\n\
+    - Machine Learning: Amazon SageMaker Edge Manager/Amazon SageMaker Neo/AWS Panorama/Amazon\n\
+    \n- Microsoft Azure for Edge:\n    - Infrastructure: Azure Stack (1U, 2 x 10 Core\
+    \ Intel Xeon, 128 GB appliance)\n    - Azure Stack HCI: A hyperconverged infrastructure\n\
+    \    - Azure Stack Hub: Deployment of cloud-native applications\n- Google for\
+    \ Edge:\n    - Auth at the Edge\n    - Google Edge Cloud\n\n# Application of artificial\
+    \ intelligence and machine learning Chapter | 12 181\n\nGeneral protocols used\
+    \ in computing:\n\nCoAP: This is the brain-child of the IET Constrained RESTful\
+    \ Environments (CoRE) working group. It is an application layer protocol. On top\
+    \ of HTTP functionalities, this transfer protocol works on Representative State\
+    \ Transfer (REST).\nAMQP: Application layer protocol is an open standard in TCP\
+    \ which is used for message exchange. AMQP provides three guarantees for message\
+    \ delivery, which include exactly once, at-most-once, and at-least once delivery.\n\
+    MQTT: MQTT is made up of three components: publisher, broker, and subscriber.\
+    \ It is a connection protocol, which is used to connect various edge devices like\
+    \ edge network, embedded devices, middleware, and edge services.\nIoT communication:\
+    \ machine-to-machine, Web of Things, Internet of Things models include: publish-subscribe,\
+    \ request-response, et. Communication patterns include notifications, telemetry,\
+    \ and status.\n\n## 4.2 Flag bearers of edge computing\n\nEdge computing market\
+    \ players include Google, Microsoft Corporation, Amazon, IBM Corporation, General\
+    \ Electric Company, Huawei Technologies Co., Ltd., and Cisco Systems, Inc. Companies\
+    \ are passionately working hard for the technological development of edge computing\
+    \ for its acceptance in the industry guests. Apart from a few prominent companies\
+    \ that are helping edge computing to reach its true potential are listed in Table\
+    \ 6.\n\nTABLE 6 Flag bearers of blockchain and artificial intelligence.\n\n| S.\
+    \ no. | Company name | Location | Application area | Key contribution |\n|---|---|---|---|---|\n\
+    | 1. | ClearBlade | Texas | Software platform provider | Edge IoT software<br>-\
+    \ Enterprise IoT platform<br>- Secure IoT |\n| 2. | EdgeConneX | Virginia | Edge\
+    \ data centers | Edge small cells<br>- Carrier-neutral data center<br>- Edge computing\
+    \ infrastructure<br>- Point of presence |\n| 3. | Mutable | New York | Public\
+    \ edge cloud technology | Edge technology platform for<br>- Cable operators<br>-\
+    \ Cloud providers<br>- Application providers |\n| 4. | MobileX | California |\
+    \ Software platform provider | Edge-cloud |\n| 5. | Saguna | Israel | Communication\
+    \ networks | Open-RAN MEC solution |\n| 6. | Cato Networks | Israel | Communication\
+    \ networks | Secure access service edge (SASE) |\n| 7. | Edge Intelligence | United\
+    \ States | Software platform provider | Distributed analytics platform |\n| 8.\
+    \ | Hewlett Packard Enterprise (HPE) | California | Software platform provider\
+    \ | Enterprise-class IT at the edge |\n| 9. | Vapor IO | Texas | Communication\
+    \ networks | Kinetic edge |\n| 10. | FogHorn | California | Software platform\
+    \ provider | Edge IoT deployments |\n\n# TABLE 6 Flag bearers of blockchain and\
+    \ artificial intelligence – cont'd\n\n| S. no. | Company name | Location | Application\
+    \ area | Key contribution |\n| :--- | :--- | :--- | :--- | :--- |\n| 11. | Swim.AI\
+    \ | United States | Software platform provider | * Swim continuum<br>** Swim OS\
+    \ |\n| 12. | Affirmed Networks | United States | Communication networks | * Affirmed\
+    \ cloud edge |\n| 13. | Edge Gravity | United States | Cloud Infrastructure |\
+    \ * Edge gravity cloud platform |\n| 14. | Packet | United States | Cloud Infrastructure\
+    \ | * Bare-metal public cloud |\n| 15. | EdgeConnX | United States | Edge data\
+    \ centers | * Hardware products<br>** Cloud connectivity<br>** Services |\n| 16.\
+    \ | Aruba Networks | California | Communication networks | * Aruba edge services\
+    \ platform |\n| 17. | AT&T | Dallas | Communication networks | * Multiclass edge\
+    \ computing |\n| 18. | Infiot | California | Communication networks | * Edge networking\
+    \ |\n| 19. | Sierra Wireless | Canada | Communication networks | * Octave(edge-to-solution)\
+    \ |\n| 20. | Citrix | United States | Communication networks | * Secure access\
+    \ service edge |\n| 21. | ClearBlade | Texas | Software platform provider | *\
+    \ Edge platform<br>** Smart monitoring<br>** Automated rail<br>** Asset tracking\
+    \ |\n| 22. | Edgeworx | California | Software platform provider | * ioFog engine\
+    \ |\n| 23. | IGEL | Germany | Software platform provider | * Edge OS for cloud\
+    \ workspace |\n| 24. | Pens | United States | Software platform provider | * Edge\
+    \ OS for cloud workspace |\n| 25. | Edge Gravity | United States | Cloud Infrastructure\
+    \ | * Edge gravity cloud |\n| 26. | Pensando | United States | Communication networks\
+    \ | * Edge platform |\n| 27. | Ananda | California | Communication networks |\
+    \ * Edge networking |\n| 28. | EverLife | United States | Communication networks\
+    \ | * Digital legacy |\n| 29. | PTC | Texas | Communication networks | * Smart\
+    \ governance |\n| 30. | VMware | California | Communication networks | * NSX data\
+    \ center<br> |\n\n# Application of artificial intelligence and machine learning\
+    \ Chapter | 12 183\n\n| Application area | Year | Key contributions |\n|---|---|---|\n\
+    | IoT network [26] | 2018 | - Proposed and developed a deep neural network model.\
+    \ |\n| Mobile IoT systems [27] | 2018 | - Proposed TrustChain: a blockchain. |\n\
+    | IoT network [28] | 2019 | - Deployment of TrustChain in edge computing. |\n\
+    | Smart Circular Cities [29] | 2019 | - Limitations and advantages of the proposed\
+    \ architecture have been discussed. |\n| Intelligent network [30] | 2020 | - Proposed\
+    \ AI-enabled edge computing for management. |\n| Resource Trading System [31]\
+    \ | 2020 | - Proposed a hybrid blockchain-enabled resource trading system. |\n\
+    | Government Tender [32] | 2020 | - Proposed blockchain and secure framework.\
+    \ |\n| Internet of Vehicles [33] | 2020 | - Developed CUTE, a blockchain integrated\
+    \ edge computing. |\n| Industrial IoT [19] | 2020 | - Successfully implemented\
+    \ CUTE in China Mobile Network. |\n| Access Management System [34] | 2021 | -\
+    \ Proposed a blockchain enabled edge computing model.<br>- Model verification\
+    \ by CPN.<br>- The practical application of the proposed model is verified with\
+    \ the help of the WISE-PaaS platform. |\n\n## 4.3 Applications of blockchain technology\
+    \ in edge computing\n\nIn edge computing, edge devices frequently communicate\
+    \ with each other and edge servers to do AI and learning-enabled decision-making.\
+    \ Communication networks and the devices themselves are prone to security threats,\
+    \ for tampering or leakage of information transmitted over the edge network due\
+    \ to possible attacks by hackers or failure of devices [23]. The tamper-proof\
+    \ ledger of blockchain technology can play a key role. Blockchain technology can\
+    \ ensure tamper-proof network communication and data storage on edge devices,\
+    \ the edge network, and the enterprise cloud. An AI-trust model in edge computing\
+    \ can be optimized and improved with the help of smart contracts and consensus\
+    \ protocols of blockchain technology [24]. The blockchain and edge computing technologies\
+    \ have great efficacy and the potential to provide solutions in diverse scenarios\
+    \ [25]. Blockchain-powered trusted, secure, and tamper-proof edge computing framework\
+    \ can provide effective solutions. Researchers have proposed several frameworks\
+    \ for blockchain-enabled edge computing. Some of the recent state-of-the-art blockchain\
+    \ edge computing frameworks are summarized in Table 7.\n\n## 5 Conclusions\n\n\
+    From the uses of crypto bots in trading “cryptocurrency,” to the AI-powered “MusicLife”\
+    \ platform for music streaming, and to “EverLife” helping people to have their\
+    \ digital legacy by creating an online avatar of themselves, these are just\n"
+  mdcn: "\n\n![](img/d482d976e7e75f102ff440e8522a951e_11_0.png)\n\n图 7 高级边缘计算参考架构。\n\
+    \n- Intel Network Builders 边缘生态系统/Intel IoT 市场就绪解决方案 (Intel IMRS)/Intel 数据中心构建：Intel合作伙伴解决方案\n\
+    - AWS 边缘：\n    - 基础设施：AWS Wavelength/AWS Local Zones/AWS Outposts\n    - 网络：Amazon\
+    \ CloudFront\n    - 物联网：AWS SiteWise/AWS IoT Greengrass/FreeRTOS/用于 AWS IoT Core\
+    \ 的 AWS 语音集成\n    - 网络：Amazon CloudFront\n- 坚固型与离线边缘设备：AWS Snowcone/Snowball Edge\n\
+    - 存储：AWS Storage Gateway\n- 分析：Amazon Kinesis Video Streams\n- 机器学习：Amazon SageMaker\
+    \ Edge Manager/Amazon SageMaker Neo/AWS Panorama/Amazon\n\n- Microsoft Azure 边缘：\n\
+    \    - 基础设施：Azure Stack (1U, 2 x 10 核 Intel Xeon, 128 GB 设备)\n    - Azure Stack\
+    \ HCI: 一种超融合基础设施\n    - Azure Stack Hub: 云原生应用的部署\n- Google 边缘：\n    - 边缘认证\n\
+    \    - Google 边缘云\n\n# 人工智能与机器学习的应用 章节 | 12 181\n\n计算中使用的通用协议：\n\nCoAP：这是 IET\
+    \ 受限资源 RESTful 环境 (CoRE) 工作组的智力结晶。它是一种应用层协议。在 HTTP 功能的基础上，该传输协议运行在表述状态转移 (REST)\
+    \ 之上。\nAMQP：应用层协议是 TCP 中的一种开放标准，用于消息交换。AMQP 为消息传递提供了三种保证，包括恰好一次、最多一次和至少一次传递。\n\
+    MQTT：MQTT 由三个部分组成：发布者、代理（broker）和订阅者。它是一种连接协议，用于连接各种边缘设备，如边缘网络、嵌入式设备、中间件和边缘服务。\n\
+    IoT 通信：机器对机器、物网、物联网模型包括：发布-订阅、请求-响应等。通信模式包括通知、遥测和状态更新。\n\n## 4.2 边缘计算的领军者\n\n\
+    边缘计算市场参与者包括谷歌、微软公司、亚马逊、IBM 公司、通用电气公司、华为技术有限公司和思科系统。这些公司正为边缘计算的技术开发努力工作，使其被行业客户所接受。除了少数帮助边缘计算实现其真正潜力的知名公司外，如表\
+    \ 6 所示。\n\n表 6 区块链与人工智能的领军者。\n\n| 序号 | 公司名称 | Location | 应用领域 | 核心贡献 |\n|---|---|---|---|---|\n\
+    | 1. | ClearBlade | 德克萨斯州 | 软件平台提供商 | 边缘 IoT 软件<br>- 企业 IoT 平台<br>- 安全 IoT |\n\
+    | 2. | EdgeConneX | 吉尼亚州 | 边缘数据中心 | 边缘小区<br>- 运营商中立数据中心<br>- 边缘计算基础设施<br>- 接入点\
+    \ |\n| 3. | Mutable | 纽约 | 公共边缘云技术 | 面向以下对象的边缘技术平台：br>- 电缆运营商<br>- 云提供商<br>- 应用提供商\
+    \ |\n| 4. | MobileX | 加州 | 软件平台提供商 | 边缘云 |\n| 5. | Saguna | 以色列 | 通信网络 | Open-RAN\
+    \ MEC 解决方案 |\n| 6. | Cato Networks | 以色列 | 通信网络 | 安全访问服务边缘 (SASE) |\n| 7. | Edge\
+    \ Intelligence | 美国 | 软件平台提供商 | 分布式分析平台 |\n| 8. | 惠普工业企业 (HPE) | 加州 | 软件平台提供商\
+    \ | 边缘企业级 IT |\n| 9. | Vapor IO | 德克萨斯州 | 通信网络 | 动力边缘 |\n| 10. | FogHorn | 加州\
+    \ | 软件平台提供商 | 边缘 IoT 部署 |\n\n# 表 6 区块链与人工智能的领军者 – 续\n\n| 序号 | 公司名称 | Location\
+    \ | 应用领域 | 核心贡献 |\n|---|---|---|---|---|\n| 11. | Swim | 美国 | 云原生应用部署 | 云原生 |\n\
+    | 12. | Affirmed | 美国 | 通信网络 | 边缘云 |\n| 13. | Gravity | 美国 | 基础设施 | 边缘云 |\n| 14.\
+    \ | Packet | 美国 | 基础设施 | 云原生 |\n| 15. | EdgeConnX | 美国 | 数据中心 | 云原生<br>- 边缘性 |\n\
+    | 16. | Aruba | 加州 | 通信网络 | 边缘平台 |\n| 17. | AT&T | 达拉斯 | 通信网络 | 边缘计算 |\n| 18.\
+    \ | Infi | 加州 | 通信网络 | 边缘 |\n| 19. | Sierra Wireless | 加拿大 | 通信网络 | 云原生 |\n| 20.\
+    \ | Citrix | 美国 | 通信网络 | 安全边缘 |\n| 21. | ClearBlade | 德克萨斯州 | 软件平台提供商 | 平台<br>-\
+    \ 智能监控<br>- 轨道跟踪 |\n| 22. | Edgeworx | 加州 | 软件平台提供商 | Fog |\n| 23. | IGEL | 德国\
+    \ | 软件平台提供商 | 云工作区 |\n| 24. | Pens | 美国 | 软件平台提供商 | 云工作区 |\n| 25. | Gravity |\
+    \ 美国 | 基础设施 | 边缘云 |\n| 26. | Pensando | 美国 | 通信网络 | 边缘平台 |\n| 27. | Ananda | 加州\
+    \ | 通信网络 | 边缘网络 |\n| 28. | EverLife | 美国 | 通信网络 | 数字遗产 |\n| 29. | PTC | 德克萨斯州\
+    \ | 通信网络 | 智能治理 |\n| 30. | VMware | 加州 | 通信网络 | NSX 数据中心 |\n\n# 人工智能与机器学习的应用 章节\
+    \ | 12 183\n\n| 应用领域 | 年份 | 核心贡献 |\n|---|---|---|\n| IoT 网络 [26] | 2018 | 提出了深度神经网络模型。\
+    \ |\n| 移动 IoT 系统 [27] | 2018 | 提出了区块链。 |\n| IoT 网络 [28] | 2019 | 在边缘计算中部署区块链。\
+    \ |\n| 智慧城市 [29] | 2019 | 讨论了所提架构的局限性和优势。 |\n| 智能网络 [30] | 2020 | 提出了赋能 AI 的边缘计算管理。\
+    \ |\n| 资源交易系统 [31] | 2020 | 提出了基于混合区块链的资源交易系统。 |\n| 政府招标 [32] | 2020 | 提出了安全框架。\
+    \ |\n| 车辆联网 [33] | 2020 | 开发了集成区块链的 CUTE。 |\n| 工业 IoT [19] | 2020 | 在中国移动中成功实现了\
+    \ CUTE。 |\n| 访问管理系统 [34] | 2021 | 提出了区块链的边缘计算模型。<br>- 通过 CPN 进行验证。<br>- 通过 WISE\
+    \ 平台验证了该模型的实际应用。 |\n\n## 4.3 区块链技术在边缘计算中的应用\n\n在边缘计算中，边缘设备经常与边缘服务器通信以进行 AI 和学习型决策。通信网络和设备本身容易受到黑客攻击或设备故障带来的安全威胁，导致信息篡改或泄露\
+    \ [23]。区块链的不可篡账本可以发挥关键作用。区块链技术可以确保边缘设备、边缘网络和企业云上的通信和存储不可篡改。边缘计算中的 AI 信任模型可以通过区块链的智能合约和共识机制进行优化和改进\
+    \ [24]。区块链和边缘计算技术具有巨大的效能，并为各种场景提供了解决方案。区块链驱动的信任、安全且不可篡改的边缘计算框架可以提供有效的解决方案。研究人员提出了多种区块链支持的边缘计算框架。最新的区块链边缘计算框架总结见表\
+    \ 7。\n\n## 5 结论\n\n从加密机器人交易加密货币，到 AI 驱动的音乐流媒体平台 MusicLife，再到通过创建在线化身帮助人们拥有数字遗产的\
+    \ EverLife，这些只是\n\n"
+  merge: 1
+- raw:
+  - '[PAGE 15]
+
+
+    glimpses of the blockchain and AI tango. The limitation of AI is eliminated by
+    the blockchain and limitations of blockchain are tailored by AI. ML is proving
+    its capability in automating the blockchain
+
+    IoT with edge computing is another weapon to use with blockchain technology and
+    AI. With edge computing, our computational power can be increased many folds.
+    The absence of a middle party or governing party is the beauty of blockchain technology,
+    which is a double-edged sword. To remove the clouds of uncertainty that surround
+    the blockchain, AI and ML can play a vital role. This article discussed lot of
+    applications of AI and ML in blockchain technology. We also discussed edge computing
+    as a potential use of blockchain technology. Research in these areas are open
+    for contributions.
+
+
+    # Acknowledgment
+
+
+    Manuscript Communication (MCN): IU/R&D/2021—MCN0001092 Office of Research and
+    Development, Integral Unity,
+
+
+    # References
+
+
+    +   [1] M. Gupta, Grasping blockchain fundamentals, for Blockchain in Dummies,
+    IBM, Hoboken, NJ, 2017. Limited Edition.
+
+    [2] T.N. Din, M.T. Thai, Ai AI as a disruptive innovation, Computer System, 51
+    (2018) 48–53.
+
+    [3] M.N.T.I. Ayayog, Blockchain: The Industry Strategy, N.I.T.I. Ayayog, 2020.
+
+    [4] M. Jakobson, A. Jaels, Proof of work and building protocols; in Computer Information
+    Networks, Springer, 1999, pp. 258–272.
+
+    [5] S. Ali, A. Rahman, F. Shafei, Smart Blockchain: Understanding the challenges
+    and needs of blockchain software: a survey, Empir. Soft. Eng., 24 (2019) 2660–2673.
+
+    [6] S. Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System, 2008. https://bitcoin.com/bicoin.pdf.
+
+    [7] Y. Leviaqu, Google Duplex: An AI for Automating Real-World Tasks over the
+    Phone, Google AI Blog, 2018. https://ai.google/blog/google-duplex-ai/
+
+    [8] A. Hern, AI for Face-to-face World Stories into Imprintof Fotos, The Guardian,
+    2018. https://www.theguardian.com/technology/2018/05/25/ai-face-to-face-emotion-recognition-craftsman-johnson-taylor-risley-daily-tracker-marie-miles
+
+    [9] J. McCraft, AI Will Make Smart Homes Autonomous, But Don''t Expect Performance
+    or Privacy, Digital Trends, 2018. www.digitaltrends.com/home/ai-will-make-smart-homes-autonomous-but-don-t-expect-performance-or-privacy/
+
+    [10] T. Laurence, Blockchain for Dummies, John Wiley & Sons, 2019.
+
+    [11] T. Chang, Y. Huang, H. Zhang, Q. Q. Li, N. Zhang, M. Amin, How blockchain
+    can enhance financial services-surveys, the challenges and merits from expert
+    interviews, Foretech, Sec. Conf., 158 (2020) 12166.
+
+    [12] S. Tanwar, K. Park, R. Evans, Blockchain-enabled electronic health record
+    system for healthcare 4.0, Int. J. Fe. App., 50 (2020), 10240.
+
+    [13] M. Haron, M. Merouti, F. Tabibi, Application of machine learning in healthcare:
+    Critical Concepts, Standards, and Techniques in Cybersecurity, FIG Global, 2020,
+    pp. 228–239.
+
+    [14] M.S. Hussain, D. Haron, A. Naseem, M. Alharbi, H. Alrajhi, The benefits and
+    threats of blockchain technology in healthcare: a review, IEEE J. Res. Comput.
+    Sci. Technol. 8 (2020) 271–277.
+
+    [15] F. K. Khan, M. Asif, A. Ahmed, A secure framework for smart grid and its
+    application in has for sustainable development, Cities Soc. 55 (2020), 102018.
+
+    [16] K. Alaniezi, S. Mishra, Edge-based architecture to support the execution
+    of machine intelligence with the IOP platform, Future Gen. Comput. Syst., 114
+    (2020) 1–13.
+
+    [17] Y. Wu, H. Dai, W. Wang, J. Yi, S. Azdari, A. Y. Zomata, Edge intelligence:
+    the fusion of edge computing and artificial intelligence, IEEE Intelligent Syst.
+    10 (4) (2020) 92–100.
+
+    [18] S. Deng, H. Wang, F. Liu, Edge computing for secure and scalable IoT infrastructures
+    in 4.0, IEEE Internet Things J. 8 (2020) 2300–2317.
+
+    [19] L.U. Khan, Y. Iqbal, N. Tran, S. A. Kazmi, T. Ni, C.-S. Ho, Edge-computing-enabled
+    smart cities: a comprehensive review, IEEE Internet Things, 7 (2020) 10229–10232.
+
+    [20] A. Sanayye, Fog and edge computing; in: Internet Computing, Springer, Cham,
+    2020, 237–274.
+
+    [21] S. El-Amin, M. Hassan, B. Yoon, Blockchain security attacks, challenges,
+    and solutions for the future IoT network, IEEE Access 9 (2021) 13938–13950.
+
+    [22] S. Singh, P.K. Sharma, B. Yoon, M. Shoojafar, G.H Cho, L.H Ra, Convergence
+    of blockchain and artificial intelligence in IoT network for the sustainable smart
+    city, Cities Soc. 55 (2023), 102364.'
+  - '[PAGE 16]
+
+
+    +   [25] R. Yang, F. Yu, P. Si, Z. Yang, Y. Zhang. Integrated blockchain and edge
+    computing systems: a survey, some research issues and challenges, IEEE Commun.
+    Surv. Tutorials 21 (2) (2019) 1508–1552.
+
+
+    +   [26] N.C. Liang, Z. Xiong, P. Wang, D. Niato, Optimal auction for edge computing
+    resource management in mobile blockchain networks: a deep learning approach, in:
+    2018 IEEE International Conference on Communications (ICC), IEEE, 2018, pp. 1–6.
+
+
+    +   [27] Z. Xiong, Y. Zhang, D. Niato, P. Wang, Z. Han. When mobile blockchain
+    meets edge computing, IEEE Commun. Mag. 56 (8) (2018) 33–39.
+
+
+    +   [28] U. Jayawantunge, G.M. Lee, A. Macermott, W.S. Rice, TrustChain: a privacy
+    preserving blockchain with edge computing, Wirel. Commun. Mob. 23 (1) (2019) 110–17.
+
+
+    +   [29] A. Damianos, C. Angelopoulos, V. Katos, An Architecture for blockchain
+    over edge-enabled IoT for smart circular cities, in: 2019 15th International Conference
+    on Distributed Computing Systems (DCOSS), IEEE, 2019, pp. 465–472.
+
+
+    +   [30] J. Xu, S. Wang, A. Zhou, F. Yang, Edgence: a blockchain-enabled edge-computing
+    platform for intelligent iot-based apps, China Commun. 17 (4) (2020) 595–600.
+
+
+    +   [31] S. Fan, H. Zhang, Y. Zeng, W. Cai, Hiyato Hybrid blockchain-based resource
+    resource trading system for federated learning in edge computing, IEEE Internet
+    Things 8 (4) (2020) 2252–2264.
+
+
+    +   [32] V. Havassija, Y. Ding, G. Krishna, N. Kumar, M. Guizani, A blockchain
+    and edge computing-based secure framework for government tender allocation, IEEE
+    Internet Things 8 (4) (2020) 2409–2418.
+
+
+    +   [33] L. Lu, Z. Chen, S. Yang, M. Jing, Q. Li, Y. Zhou, Q. Lu, A blockchain-based
+    containerized edge computing platform for the internet of vehicles, IEEE Internet
+    Things 8 (8) (2020) 2395–2408.
+
+
+    +   [34] Y. Zhu, C. Huang, Z. Hu, A. Al-Dhelaean, M. Al-Dhelaean, Blockchain-enabled
+    access management system for edge computing, Electronics 10 (9) (2021) 10000.'
+  md: '
+
+    glimpses of the blockchain and AI tango. The limitation of AI is eliminated by
+    the blockchain and limitations of blockchain are tailored by AI. ML is proving
+    its capability in automating the blockchain
+
+    IoT with edge computing is another weapon to use with blockchain technology and
+    AI. With edge computing, our computational power can be increased many folds.
+    The absence of a middle party or governing party is the beauty of blockchain technology,
+    which is a double-edged sword. To remove the clouds of uncertainty that surround
+    the blockchain, AI and ML can play a vital role. This article discussed lot of
+    applications of AI and ML in blockchain technology. We also discussed edge computing
+    as a potential use of blockchain technology. Research in these areas are open
+    for contributions.
+
+
+    ## Acknowledgment
+
+
+    Manuscript Communication (MCN): IU/R&D/2021—MCN0001092 Office of Research and
+    Development, Integral Unity,
+
+
+    ## References
+
+
+    - [1] M. Gupta, Grasping blockchain fundamentals, for Blockchain in Dummies, IBM,
+    Hoboken, NJ, 2017. Limited Edition.
+
+    - [2] T.N. Din, M.T. Thai, Ai AI as a disruptive innovation, Computer System,
+    51 (2018) 48–53.
+
+    - [3] M.N.T.I. Ayayog, Blockchain: The Industry Strategy, N.I.T.I. Ayayog, 2020.
+
+    - [4] M. Jakobson, A. Jaels, Proof of work and building protocols; in Computer
+    Information Networks, Springer, 1999, pp. 258–272.
+
+    - [5] S. Ali, A. Rahman, F. Shafei, Smart Blockchain: Understanding the challenges
+    and needs of blockchain software: a survey, Empir. Soft. Eng., 24 (2019) 2660–2673.
+
+    - [6] S. Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System, 2008. https://bitcoin.com/bicoin.pdf.
+
+    - [7] Y. Leviaqu, Google Duplex: An AI for Automating Real-World Tasks over the
+    Phone, Google AI Blog, 2018. https://ai.google/blog/google-duplex-ai/
+
+    - [8] A. Hern, AI for Face-to-face World Stories into Imprintof Fotos, The Guardian,
+    2018. https://www.theguardian.com/technology/2018/05/25/ai-face-to-face-emotion-recognition-craftsman-johnson-taylor-risley-daily-tracker-marie-miles
+
+    - [9] J. McCraft, AI Will Make Smart Homes Autonomous, But Don''t Expect Performance
+    or Privacy, Digital Trends, 2018. www.digitaltrends.com/home/ai-will-make-smart-homes-autonomous-but-don-t-expect-performance-or-privacy/
+
+    - [10] T. Laurence, Blockchain for Dummies, John Wiley & Sons, 2019.
+
+    - [11] T. Chang, Y. Huang, H. Zhang, Q. Q. Li, N. Zhang, M. Amin, How blockchain
+    can enhance financial services-surveys, the challenges and merits from expert
+    interviews, Foretech, Sec. Conf., 158 (2020) 12166.
+
+    - [12] S. Tanwar, K. Park, R. Evans, Blockchain-enabled electronic health record
+    system for healthcare 4.0, Int. J. Fe. App., 50 (2020), 10240.
+
+    - [13] M. Haron, M. Merouti, F. Tabibi, Application of machine learning in healthcare:
+    Critical Concepts, Standards, and Techniques in Cybersecurity, FIG Global, 2020,
+    pp. 228–239.
+
+    - [14] M.S. Hussain, D. Haron, A. Naseem, M. Alharbi, H. Alrajhi, The benefits
+    and threats of blockchain technology in healthcare: a review, IEEE J. Res. Comput.
+    Sci. Technol. 8 (2020) 271–277.
+
+    - [15] F. K. Khan, M. Asif, A. Ahmed, A secure framework for smart grid and its
+    application in has for sustainable development, Cities Soc. 55 (2020), 102018.
+
+    - [16] K. Alaniezi, S. Mishra, Edge-based architecture to support the execution
+    of machine intelligence with the IOP platform, Future Gen. Comput. Syst., 114
+    (2020) 1–13.
+
+    - [17] Y. Wu, H. Dai, W. Wang, J. Yi, S. Azdari, A. Y. Zomata, Edge intelligence:
+    the fusion of edge computing and artificial intelligence, IEEE Intelligent Syst.
+    10 (4) (2020) 92–100.
+
+    - [18] S. Deng, H. Wang, F. Liu, Edge computing for secure and scalable IoT infrastructures
+    in 4.0, IEEE Internet Things J. 8 (2020) 2300–2317.
+
+    - [19] L.U. Khan, Y. Iqbal, N. Tran, S. A. Kazmi, T. Ni, C.-S. Ho, Edge-computing-enabled
+    smart cities: a comprehensive review, IEEE Internet Things, 7 (2020) 10229–10232.
+
+    - [20] A. Sanayye, Fog and edge computing; in: Internet Computing, Springer, Cham,
+    2020, 237–274.
+
+    - [21] S. El-Amin, M. Hassan, B. Yoon, Blockchain security attacks, challenges,
+    and solutions for the future IoT network, IEEE Access 9 (2021) 13938–13950.
+
+    - [22] S. Singh, P.K. Sharma, B. Yoon, M. Shoojafar, G.H Cho, L.H Ra, Convergence
+    of blockchain and artificial intelligence in IoT network for the sustainable smart
+    city, Cities Soc. 55 (2023), 102364.
+
+    - [25] R. Yang, F. Yu, P. Si, Z. Yang, Y. Zhang. Integrated blockchain and edge
+    computing systems: a survey, some research issues and challenges, IEEE Commun.
+    Surv. Tutorials 21 (2) (2019) 1508–1552.
+
+    - [26] N.C. Liang, Z. Xiong, P. Wang, D. Niato, Optimal auction for edge computing
+    resource management in mobile blockchain: a deep learning approach, in: 2018 IEEE
+    International Conference on Communications (ICC), IEEE, 2018, pp. 1–6.
+
+    - [27] Z. Xiong, Y. Zhang, D. Niato, P. Wang, Z. Han. When mobile blockchain meets
+    edge computing, IEEE Commun. Mag. 56 (8) (2018) 33–39.
+
+    - [28] U. Jayantunge, G.M. Lee, A. Macermott, W.S. Rice, TrustChain: a privacy
+    preserving blockchain with edge computing, Wirel. Commun. Mob. 23 (1) (2019) 110–17.
+
+    - [29] A. Damianos, C. Angelopoulos, V. Katos, An Architecture for blockchain
+    over edge-enabled IoT for smart cities, in: 2019 15th International Conference
+    on Distributed Computing Systems (DCOSS), IEEE, 2019, pp. 465–472.
+
+    - [30] J. Xu, S. Wang, A. Zhou, F. Yang, Edgence: a blockchain-enabled edge-computing
+    platform for intelligent iot-based apps, China Commun. 17 (4) (2020) 595–600.
+
+    - [31] S. Fan, H. Zhang, Y. Zeng, W. Cai, Hiyato Hybrid blockchain-based resource
+    trading system for federated learning in edge computing, IEEE Internet Things
+    8 (4) (2020) 2252–2264.
+
+    - [32] V. Havassija, Y. Ding, G. Krishna, N. Kumar, M. Guizani, A blockchain and
+    edge computing-based secure framework for government tender allocation, IEEE Internet
+    Things 8 (4) (2020) 2409–2418.
+
+    - [33] L. Lu, Z. Chen, S. Yang, M. Jing, Q. Li, Y. Zhou, Q. Lu, A blockchain-based
+    containerized edge computing platform for the internet of vehicles, IEEE Internet
+    Things 8 (8) (2020) 2395–2408.
+
+    - [34] Y. Zhu, C. Huang, Z. Hu, A. Al-Dhelaean, M. Al-Dhelaean, Blockchain-enabled
+    access management system for edge computing, Electronics 10 (9) (2021) 10000.
+
+    '
+  mdcn: '
+
+
+    区块链与人工智能交织的景象。人工智能的局限性通过区块链消除，而区块链的局限性则通过人工智能量身定制。机器学习正在证明其在区块链自动化方面的能力。边缘计算物联网是与区块链和人工智能结合的另一大武器。通过边缘计算，我们的计算能力可以增加许多倍。缺乏中间方或治理方是区块链技术的魅力所在，但这是一把双刃剑。为了消除围绕区块链的不确定性，人工智能和机器学习可以发挥至关重要的作用。本文讨论了人工智能和机器学习在区块链中的许多应用。我们还讨论了边缘计算作为区块链技术的潜在用途。这些领域的研究欢迎贡献。
+
+
+    ## 致谢
+
+
+    手稿通讯稿 (MCN): IU/R&D/2021—MCN0001092 研究与开发部，Integral Unity,
+
+
+    ## 参考文献
+
+
+    - [1] M. Gupta, Grasping blockchain fundamentals, for Blockchain in Dummies, IBM,
+    Hoboken, NJ, 2017. Limited Edition.
+
+    - [2] T.N. Din, M.T. Thai, Ai AI as a disruptive innovation, Computer System,
+    51 (2018) 48–53.
+
+    - [3] M.N.T.I. Ayayog, Blockchain: The Industry Strategy, N.I.T.I. Ayayog, 2020.
+
+    - [4] M. Jakobson, A. Jaels, Proof of work and building protocols; in Computer
+    Information Networks, Springer, 1999, pp. 258–272.
+
+    - [5] S. Ali, A. Rahman, F. Shafei, Smart Blockchain: Understanding the challenges
+    and needs of blockchain software: a survey, Empir. Soft. Eng., 24 (2019) 2660–2673.
+
+    - [6] S. Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System, 2008. https://bitcoin.com/bicoin.pdf.
+
+    - [7] Y. Leviaqu, Google Duplex: An AI for Automating Real-World Tasks over the
+    Phone, Google AI Blog, 2018. https://ai.google/blog/google-duplex-ai/
+
+    - [8] A. Hern, AI for Face-to-face World Stories into Imprintof Fotos, The Guardian,
+    2018. https://www.theguardian.com/technology/2018/05/25/ai-face-to-face-emotion-recognition-craftsman-johnson-taylor-risley-daily-tracker-marie-miles
+
+    - [9] J. McCraft, AI Will Make Smart Homes Autonomous, But Don''t Expect Performance
+    or Privacy, Digital Trends, 2018. www.digitaltrends.com/home/ai-will-make-smart-homes-autonomous-but-don-t-expect-performance-or-privacy/
+
+    - [10] T. Laurence, Blockchain for Dummies, John Wiley & Sons, 2019.
+
+    - [11] T. Chang, Y. Huang, H. Zhang, Q. Q. Li, N. Zhang, M. Amin, How blockchain
+    can enhance financial services-surveys, the challenges and merits from expert
+    interviews, Foretech, Sec. Conf., 158 (2020) 12166.
+
+    - [12] S. Tanwar, K. Park, R. Evans, Blockchain-enabled electronic health record
+    system for healthcare 4.0, Int. J. Fe. App., 50 (2020), 10240.
+
+    - [13] M. Haron, M. Merouti, F. Tabibi, Application of machine learning in healthcare:
+    Critical Concepts, Standards, and Techniques in Cybersecurity, FIG Global, 2020,
+    pp. 228–239.
+
+    - [14] M.S. Hussain, D. Haron, A. Naseem, M. Alharbi, H. Alrajhi, The benefits
+    and threats of blockchain technology in healthcare: a review, IEEE J. Res. Comput.
+    Sci. Technol. 8 (2020) 271–277.
+
+    - [15] F. K. Khan, M. Asif, A. Ahmed, A secure framework for smart grid and its
+    application in has for sustainable development, Cities Soc. 55 (2020), 102018.
+
+    - [16] K. Alaniezi, S. Mishra, Edge-based architecture to support the execution
+    of machine intelligence with the IOP platform, Future Gen. Comput. Syst., 114
+    (2020) 1–13.
+
+    - [17] Y. Wu, H. Dai, W. Wang, J. Yi, S. Azdari, A. Y. Zomata, Edge intelligence:
+    the fusion of edge computing and artificial intelligence, IEEE Intelligent Syst.
+    10 (4) (2020) 92–100.
+
+    - [18] S. Deng, H. Wang, F. Liu, Edge computing for secure and scalable IoT infrastructures
+    in 4.0, IEEE Internet Things J. 8 (2020) 2300–2317.
+
+    - [19] L.U. Khan, Y. Iqbal, N. Tran, S. A. Kazmi, T. Ni, C.-S. Ho, Edge-computing-enabled
+    smart cities: a comprehensive review, IEEE Internet Things, 7 (2020) 10229–10232.
+
+    - [20] A. Sanayye, Fog and edge computing; in: Internet Computing, Springer, Cham,
+    2020, 237–274.
+
+    - [21] S. El-Amin, M. Hassan, B. Yoon, Blockchain security attacks, challenges,
+    and solutions for the future IoT network, IEEE Access 9 (2021) 13938–13950.
+
+    - [22] S. Singh, P.K. Sharma, B. Yoon, M. Shoojafar, G.H Cho, L.H Ra, Convergence
+    of blockchain and artificial intelligence in IoT network for the sustainable smart
+    city, Cities Soc. 55 (2023), 102364.
+
+    - [25] R. Yang, F. Yu, P. Si, Z. Yang, Y. Zhang. Integrated blockchain and edge
+    computing systems: a survey, some research issues and challenges, IEEE Commun.
+    Surv. Tutorials 21 (2) (2019) 1508–1552.
+
+    - [26] N.C. Liang, Z. Xiong, P. Wang, D. Niato, Optimal auction for edge computing
+    resource management in mobile blockchain: a deep learning approach, in: 2018 IEEE
+    International Conference on Communications (ICC), IEEE, 2018, pp. 1–6.
+
+    - [27] Z. Xiong, Y. Zhang, D. Niato, P. Wang, Z. Han. When mobile blockchain meets
+    edge computing, IEEE Commun. Mag. 56 (8) (2018) 33–39.
+
+    - [28] U. Jayantunge, G.M. Lee, A. Macermott, W.S. Rice, TrustChain: a privacy
+    preserving blockchain with edge computing, Wirel. Commun. Mob. 23 (1) (2019) 110–17.
+
+    - [29] A. Damianos, C. Angelopoulos, V. Katos, An Architecture for blockchain
+    over edge-enabled IoT for smart cities, in: 2019 15th International Conference
+    on Distributed Computing Systems (DCOSS), IEEE, 2019, pp. 465–472.
+
+    - [30] J. Xu, S. Wang, A. Zhou, F. Yang, Edgence: a blockchain-enabled edge-computing
+    platform for intelligent iot-based apps, China Commun. 17 (4) (2020) 595–600.
+
+    - [31] S. Fan, H. Zhang, Y. Zeng, W. Cai, Hiyato Hybrid blockchain-based resource
+    trading system for federated learning in edge computing, IEEE Internet Things
+    8 (4) (2020) 2252–2264.
+
+    - [32] V. Havassija, Y. Ding, G. Krishna, N. Kumar, M. Guizani, A blockchain and
+    edge computing-based secure framework for government tender allocation, IEEE Internet
+    Things 8 (4) (2020) 2409–2418.
+
+    - [33] L. Lu, Z. Chen, S. Yang, M. Jing, Q. Li, Y. Zhou, Q. Lu, A blockchain-based
+    containerized edge computing platform for the internet of vehicles, IEEE Internet
+    Things 8 (8) (2020) 2395–2408.
+
+    - [34] Y. Zhu, C. Huang, Z. Hu, A. Al-Dhelaean, M. Al-Dhelaean, Blockchain-enabled
+    access management system for edge computing, Electronics 10 (9) (2021) 10000.
+
+
+    '
+  merge: 1
