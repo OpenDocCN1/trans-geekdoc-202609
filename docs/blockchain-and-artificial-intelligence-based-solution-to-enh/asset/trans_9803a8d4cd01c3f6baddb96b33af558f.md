@@ -1,0 +1,66 @@
+
+
+# 90 基于区块链与人工智能的解决方案
+
+用户的安全性。这种安全性是移动支付领域的一个首要任务。在这个意义上，非对称加密是一种优秀的向量。它满足了数据安全的需求，特别是在移动支付使用量强增长的时期。鉴于前章节所述的问题规模，将其与区块链结合以开发高度安全的移动支付系统是一项伦理选择。
+
+# 注意事项
+
+- 1. 本章是2021年用法语出版的一篇之前文章的扩展。Pierre, Schalum Italis, Olson (2021), « Les systèmes de paiement mobile à l’ère de la COVID-19: sécurité, privée et confiance numérique », vol 6 L’innovation collaborative, revue Technologie et innovation, ISTE OpenScience. DOI : 10.21494/ISTE.OP.2021.0598
+
+# 参考文献
+
+- [1] Samsuka, A., “Mobile Payment Statistics & Facts for 2022 for Markets,” Ementech, November 7. https://www.ementech.com/blog/mobile-payment-statistics-facts.html, 2021.
+- [2] Market Research Report, “Digital Market Payment,” Fortune Business Insights, January, 2020. https://www.fortunebusinessinsights.com/digital-market-payment-109722,2020.
+- [3] Académie de la transformation (ATN) de l’Université Laval, “Services bancaires en ligne., NETendances, édition 2021, volume 12 – numero, p. 17. https://transformation-numerique.usal.ca/storage/57/netendances-services-bancaires-en-line.pdf.
+- [4] Xiao Y., Fan Z., « 10 technologies pour surveiller la pandémie pendant la période de COVID-19 », 2020. https://www.forforum.org/agenda/2020/05/10-tendances-technologiques-a-surveiller-pendant-la-pandemie-de-covid.
+- [5] Pymnts, “European Data Protection Supervisor Urges Increased Protection in Card Payments,” January 4, 2022. https://www.pymnts.com/news-and-risk/2022-european-data-protection-supervisor-urges-increased-data-protection-in-card-payments/.
+- [6] Jones, D., “COVID-19 Pandemic Caused Cyber Fraud and Changes in Banking,” Amt Marketplace, June 19, 2020. https://www.atmarketplace.com/articles/cyber-fraud-surges-as-covid-19-changes-banking-e-commerce/.
+- [7] Canadian Center for Security, Staying Cyber-Healthy during COVID-Isolation, 2020. https://www.cybergc.ca/en/news/staying-cyber-healthy-during-covid-19-isolation.
+- [8] Columbus, L., “2020 Roundup of Cybersecurity Forecasts and Market Estimatesates” Forbes, Editors’ Pick, 2020. https://www.forbes.com/sites/louumbus/2020/04/05/2020-roundup-of-cybersecurity-forecasts-and-market-estimates/39fc8ba6318d.
+- [9] PCI Security Standards Council, Ensuring the Future of Payments: PCI SSC Publishes PCI Data Security Standard v4.0, March 31, 2022. https://www.pcisecuritystandards.org/about_us/press_releases/securing-the-future-of-payments/pci-ssc-pci-data-security-standard-v4-0.
+- [10] Justice Web, Personal Information Protection and Electronic Documents Act (S.C. 2000, c. 5), September 28, 2022. https://laws.justice.gc.ca/ENG/ACTS/P/8-6/index.html.
+- [11] Justice Web, “Canadian Payments Act (R.S., 1985, c. 21),” 2022. https://laws-justice.gc.ca/eng/acts/c-21/.
+
+# 金融技术中的安全、隐私与区块链
+
+- [12] Assemblée nationale du Québec, “Bill 64, An Act to modernize legislative provisions as regards the protection of personal information., http://assnat.qc.ca/travaux-parlementaires/projets-loi/lojet-loi-64-42-l.html, 2021.
+- [13] Gouvernement du Québec, Ministère de la Cyberscurité et du Numérique, 2022. https://www.quebec.ca/government/ministere/cyberseite-numerique-mission-mandats.
+- [14] Eur-Lex,«General Data Protection Regulation», Official Journal of the European Union, 2019. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679.
+- [15] Agence nationale de sécurité des systèmes d’information (ANSSI), 2020. https://www.ssi.gouv.fr.
+- [16] Commission Nationale de l’Informatique et des Libertés (CNIL), 2020. https://www.cnil.fr.
+- [17] Sorensen, E., “Different Types of Mobile Payments,” Mobile transaction, May 2018.
+- [18] Lerner, T., “Mobile Technology and Security,” dans Tanner, L. (dir), Mobile payment, Springer, 2013.
+- [19] Pathirarna, P., Azan S. M., “Factors Influencing the Use of Mobile Payments — A Conceptual Model,” dans 2017 National Information Technology Conference (NTC), Colombo, Sri Lanka.
+- [20] Italis, O., Étude comparative des plateformes de paiement. Mémoire de maîtrise, Institut des sciences des technologies et affaires, 2018.
+- [21] Gupta, N., Bajaj, J., Hofmann, M., Smith, R., Chen, L., Scarfone, K., “ Guide to Bluetooth Security, 2017. https://nvpubs.nist.gov/SpecialPublications/SP.800-122.
+- [22] Pierre, S., « L’introduction à la mobilité aux systèmes classiques » dans S. Sherif (dir), Réseaux et Systèmes Informatiques: Fondements, Architectures, Montréal.
+- [24] Sherif, M. T., « Mobile Payment n’est pas sans risque », 2015. https://lejournal.fr/articles/le-paiement-sans-contact-est-pas-risque.
+- [26] CNIL, When Trust Pays Off: Today’s and Tomorrow’s Methods Facing the Challenge of Data Protection, 2022, p. 10. https://www.cnil.fr/fr/files/cnil-white-paper.when-trust-pays-off.
+- [27] Pierre, S., « La vie privée à l’heure du Big Data et la minimisation des données, Alternatives économiques, 2023. https://blogs.alternatives-economiques.fr/reassociation/2023/03/26/la-vie-privee-a-lheure-du-big-data-et-la-minimisation-donnees.
+- [28] Wang, Y., Hahn, C., Sutrake, K., “ Mobile Payment Security, Threats and Challenges,” dans 2016 Second International Conference on Mobile Compute and Services (MobileSec), Gainesville, 2016.
+- [29] Szurdi, J., Starov, O., McCabe, A., and Duan, R., “Studying How Cybercriminals Prey on the COVID-19 Pandemic, Unit 42, 2022. https://www.unit42.com/how-cybercriminals-prey-on-covid-19.
+- [30] Europol, « Pandemic Profiting: How Criminals Exploit the COVID-19 crisis, » 2020. https://www.europol.europa.eu/publications/documents/pandemic-profiting-how-criminals-exploit-covid-19.
+- [31] Digicert, « Quest-ce qu’un certificat SSL? » 2020. https://www.digicert.com/fr/ca/security-topics/what-is-ssl.
+- [32] Torres, G., « Attaques de milieu-milieu: qu’est-ce que c’est et comment l’éviter, » 2018. https://www.avg.com/fr/signal/man-in-the-middle-attack/.
+
+# 区块链与人工智能解决方案
+
+- [33] QYR-1353967, « Near Field Communication Market Size, Status and Forecast 2019–2025 » 360 Market Updates, https://www.360marketing.com/global-near-field-communication-market.
+- [34] Black, T., « Votre chèque est-il la poste? Quelle que phrase, Paiements Canada., 2020. https://www.payments.com/votre-cheque-est-la-poste.
+- [35] Pasquet, M., Gervais, S., « On Fraud on Card: Is It Possible to Fraud a Payment Transaction by Mobile Phone Using an Host Emission of System”, 2016 Second International Conference on Mobile and Secure Services (MobiSec), Gainesville, FL., 2016.
+- [36] Thales., « Sécurité des paiements sans contact: la technologie, » 2015. https://www.thales.com/fr/systems-informatique-critiques-et-cybersecurite/event/securite-des-paiements-sans-contact.
+- [37] Paesser., « Qu’est-ce cette adresse ip? » 2020. https://www.fraesser.com/it-explained/.
+- [38] Hillbach, T., « A Prototype-based security of secure mobile payments », in eChallenges2015, Vilnius.
+- [39] Antoni-J., Viuel, G., « Un modèle multi-agents et multi-scalaire pour les mobilités urbaines, dans SWIFT: Methods and approaches, 2010.
+- [40] Urien, P., « Innovative Mobile Payments for the Connected City: Mediterranean Electrotechnical Conference (Melec) »
+- [41] Yeh, K. H., « A Secure Transaction with Cryptographic Primitives for IoT-Based Mobile Payments », IEEE Journal 12, no. 2, pp. 207-2058, 2018.
+- [42] Wu, Y., Ying, L., « A Cloud-Based Multi-lateral Resource Exchange Framework for Users », in 2015 IEEE Conference on Computer Communications (INFOCOM), Kowloon.
+- [43] bitcoin.org, https://bitcoin.org.
+- [44] Gonzales, L., « Qu’est-ce le 802.1X? » 2013. https://blog.devensys.com/introduction-authentication-reseau-802-1ix.
+- [45] Global Connectivity Index (GCI), « Harnessing the Power of Connectivity: Mapping Your Transformation into a Digital Economy with GCI 2017 », https://www.huawei.com/minsite/gci/files/2017_white_paper.pdf?v=191217v2.
+- [46] Lakshmi, K. K., Gupta, H., Ranjan, J., “ USD–Architecture Analysis, Security Threats, Issues and Enhancements,” in 2017 International Conference on Infocom Technologies and Unm Systems (Trends and Futures) (ICTUS), Dubai.
+- [47] Yatmika, B. W., Ansari, S., Lodesian, S. « Security Protocols for USD SMS in Mobile Transactions: A Case Study of Tanzania », International Journal of Technology Engineering and Emerging Research 1, no. 3, pp. 38–43, 2013.
+- [48] Valcke, P., Vandandeze, N., Van de Velde, N., “The Evolution of Third Party Payment Providers and Cryptocurrencies under the EU’s Upcoming PSD2 and AML4+” (September 25, 2015). SWIFT Institute Working Paper No. 2015-001, Available at SSRN: https://ssrn.com/abstract/2665973.
+- [49] Oganbole, O., Kim, D., Comparing Finger-Based Biometrics Authentication Virtual Traditional Authentication Methods for Payment. Decision Support Systems, vol. 106, pp. 1–14, 2018.
+

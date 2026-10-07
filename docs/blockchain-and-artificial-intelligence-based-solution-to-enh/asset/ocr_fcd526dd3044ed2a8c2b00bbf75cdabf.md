@@ -1,0 +1,17 @@
+# Blockchain and Artificial Intelligence-Based Solution
+
+by storing the data inside a blockchain, we can avoid the problem of single-point failure. Network failure could occur between different devices due to a lack of trust the IoT ecosystem relies on a centralized server. A study by Lv et al. [47] showed that blockchain could enhance privacy and avoid single-point failure of IoT with a secure, lightweight Publish/Subscribe model inside blockchain.
+
+Encryption and miners: We can store only its since 256-bit of the hash is stored inside the blockchain rather than storing the actual data. And, with the large scale of the data collected by IoT, the storage capacity of the block will not be affected in this case. The actual data could be stored inside an authorized center where permission access is given. Hence, the hash will change if the data is altered, creating secure and private data. Moreover, the data stored is verified by miners, which helps avoid corrupted data that could affect the ecosystem.
+
+Data Loss: Once the data enters the blockchain, it cannot be removed or changed. This comes with excellent help for IoT Especially when IoT devices are facing cybersecurity attacks, such as spoofing attacks, where the hacker could access the IoT network by injecting a node that mimics the network behavior, in this case, it becomes easy to tamper with the data and observe it. Blockchain could protect such attacks, considering that it can register authorized user or device, which helps identify malicious devices without the need for central brokers or certification authorities.
+
+# 3.5.1.2 Interplanetary File System
+
+Interplanetary File System (IPFS) is its peer-to-peer (p2p) file-sharing system that aims to change how information is distributed globally. Content is opened through doors, anywhere on the planet that may transfer data, store it, or do it. IPFS realizes how to discover what you request through its substance address instead of area IPFS [34]. Specifically, IPFS gives a high throughput content that tends to impede the capacity model, with content managed by hyperlinks [53]. Instead of referring to objects (articles, videos, pictures) by the browser with IPFS and wanting to access the server where they are stored, IPFS refers to the hash of the file. By surfing the browser with IPFS and wanting to access a page, IPFS checks all the network nodes even if one of them contains the hash. If a node returns, we get access to the page. Compared to HTTP, where the identifier is the location, finding the server containing the file and retrieving it is easy. In IPFS, we identify the file with content address and the network where the hash of the file is contained to get. This is valuable in disconnected cases or situations where we need to load across the organization, giving it an edge over HTTP. Figure 3.6 provides more details explanations the workflow of IPFS.
+
+All the features provide to more secure usage of IoT devices, the IPFS helps store IoT data in an encrypted manner and enable large data storage into small-sized files, where only an authorized person possesses the encryption key can access the data. Plus, it is decentralized, hence creating P2P verification without third-party interference. Combined with blockchain, they create a decentralized ecosystem for securing data as mentioned by Ali et al. [4].
+
+# 3.5.1.3 Artificial Intelligence
+
+Artificial intelligence systems can spot patterns and anomalies in ways that humans can't, help cybersecurity deal with cyberattacks that steal personal data.

@@ -1,0 +1,15 @@
+that are associated with the management of digital identity mainly in relation with the security and governance of personnel data to eliminate privacy and security risks.
+
+However, if the issue of privacy, raised by ethics and dealt with in this book, is mostly associated with an individual, it is also imperative to deepen the risks on a societal and environmental scale. Indeed the societal and environmental aspects still remain open from a research perspective. It would be relevant to explore the impact on society of the development of:
+
++   - Quantum computing;
+- NFTs; and;
+- Industry 4.0.
+
+# 1. QUANTUM COMPUTING AND ETHICS
+
+Although quantum computers are still in the stage of emerging technology, it is important to anticipate its potential impact on privacy. Quantum computers³ use qubits (quantum bits) instead of binary digits (bits) as in traditional computers. A qubit can exist at both 0 and 1, unlike a bit that exists only at 0 or 1. Thus, computers using qubits will have the ability to encode more information and solve complex problems in a shorter time. At this rate, when quantum technologies become mature, they will be able for example to brute-force crack the encryption algorithms used. The ethical question must be central in the design of quantum projects. From now on, it is important to anticipate the form that postquantum cryptography will take. What the protocols of Ben-Or, Goldwasser, and Widgerson [BGW] do to secure quantum technologies? In fact, the quantum development represents is a new avenue for research in ethics.
+
+# 2. NFT AND PRIVACY
+
+Nonfungible tokens (NFTs) have become a syncdoche of Web 3 based on the intellectual property of content. These unique identifiers that cannot be copied, substituted, or subdivided, are recorded in a blockchain. Until the advent of NFTs, the inability to protect the intellectual property of a digital creation was a major obstacle to its integration into the art market and contributed greatly to its devaluation. Digital art, since its origins dating back to the 1960s, is thus difficult to monetize. In addition, it is difficult to ensure the uniqueness and authenticity of a digital work that can be freely shared and replicated in. The authenticity of the work, the owner of the intellectual property, the rarity or uniqueness of the digital work concerns an ecosystem of artists, institutional venues and people versed in technology/engineering, art history, finance and entrepreneurship. In other words, the digital artist has at disposal digital traces that can prove its authenticity to a collector or an institution that wishes to acquire his work, which can be put at the service of a person versed in art history. It is precise to answer all questions that the crypto-art which uses the blockchain answers. On March 11, 2021, the work entitled “Everyday’s: the First 5000 Days” by artist Mike Winkelmann, also known as Beeple,

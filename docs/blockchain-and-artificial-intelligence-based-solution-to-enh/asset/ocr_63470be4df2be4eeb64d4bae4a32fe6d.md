@@ -1,0 +1,15 @@
+technology. Along with security, there is data management in cloud computing referring to any access to a cloud service via the Internet. The cloudlet model proposes a multilateral resource exchange framework for consideration.
+
+# 4.3.6 CLOUD COMPUTING: CLOUDLET FOR RESOURCE EXCHANGE BETWEEN USERS WITHOUT WI-FI AND LIMITATIONS
+
+Wu and Ying [42] take inspiration from the peer-to-peer digital currency bitcoin [43] to propose a cloudlet-based multilateral resource exchange framework for mobile users. It is a system of small data centers that enables seamless transactions between users over the Internet bandwidth as a proof of concept. The cloudlet is a more scalable and low-cost cloud deployment paradigm aimed at near computing and leverages the resources of idle personal servers of individuals, accessible via a server and a wireless router via Radius. 802.1X authentication, 802.1X is an authentication protocol for securing a computer's access to a network that can be wired (wired network or LAN) or wireless (wireless network or WLAN) [44].
+
+Wu and Ying present an in-market resource exchange system for mobile users that acts as a virtual system. It is suitable for other distributed systems. However, the storage service is inaccessible without bandwidth. According to the mapping by the Global Connectivity Index (GCI) [45], the gap in connectivity between countries is widening. This digital divide is also even within the so-called connected countries since access to the Internet is not the same depending on whether the user is in a rural or urban environment. A solution will have to be found, within the framework of the cloudlet, for the exchange of resources between users without Wi-Fi [42]. We summarize the needs for improvements in security mechanisms relative to the preceding mobile payments in Table 4.2.
+
+# 4.4 THE PRIVACY PROBLEM
+
+The privacy problem becomes increasingly important when considering the large number of participants in a mobile payment system outlined in the scenario of local commerce (Figure 4.1). Data is often accessible to hardware providers (S1 for stakeholder), mobile network operators (MNO as S2), payment service providers, banks, card networks, and merchant person. Some systems do not have a reliable mechanism for protecting this data in transit or in storage; others provide partial protection. In this section, we will briefly describe the different classes of solutions.
+
+# 4.4.1 PRIVACY WITH THE CONSIDERED TECHNOLOGIES
+
+In the article, "USSD-Architecture analysis, security threats, issues and enhancements," a threat of exposure of the user's data is expressed [46]; they are displayed as such during the transaction. Moreover, for some mobile payment systems based on SMS and USSD, the data is encrypted with algorithms that have already undergone the process of reverse engineering [47] with the risk of
