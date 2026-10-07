@@ -1,0 +1,9 @@
+# # CHAPTER 14
+
+# # Deep Computer Vision Using Convolutional Neural Networks
+
+With Early Release ebooks, you get books in their earliest form—the author’s raw and unedited content as he or she writes—so you can take advantage of these technologies long before the official release of these titles. The following will be Chapter 14 in the final release of the book.
+
+IBM’s Deep Blue supercomputer beat the world champion Gary Kasparov back in 1996, it wasn't until fairly recently that computers were able to reliably seemingly trivial tasks such as detecting a puppy in a picture or recognizing spoken words. The answer lies in the fact that perception largely takes place outside the realm of our consciousness, within specialized visual, auditory, and other sensory modules in our brains. By the time sensory information reaches our consciousness, it is already adorned with high-level features; for when you look at a picture of a cute puppy, you cannot not see the puppy, or to notice its cuteness. Can you explain how you recognize a cute puppy; it's obvious to you. Thus, we cannot trust our subjective experience: perception is not trivial at all, and to understand it must look at how the sensory modules work.
+
+Convolutional neural networks (CNNs) emerged from the study of the brain’s visual cortex, and they have been used in image recognition since the 1980s. In the last few years, thanks to the increase in computational power, the amount of available training data, and the tasks presented in Chapter 11 for training deep nets, CNNs have achieved to superhuman performance on some complex visual tasks. They power image search services, self-driving cars, automatic video classification systems, and more. Moreover, CNNs are not restricted to visual perception: they are also successful

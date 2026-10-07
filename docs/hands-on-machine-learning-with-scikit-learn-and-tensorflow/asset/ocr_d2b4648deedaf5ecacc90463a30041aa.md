@@ -1,0 +1,13 @@
+On the other hand, a broken component can go unnoticed for some time if proper monitoring is not implemented. The data gets stale and the overall system's performance drops.
+
+The next question to ask is what the current solution looks like (if any). It will often give you a reference performance, as well as insights on how to solve the problem. Your boss answers that the district housing prices are estimated manually by experts: a team gathers up-to-date information about a district, and when they cannot get the median housing price, they estimate it using complex rules.
+
+This is costly and time-consuming, and their estimates are not great; in cases where they manage to find out the actual median housing price, they often realize that their estimates were off by more than 20%. This is why the company thinks that it would be useful to train a model to predict a district's median housing price given other data about that. The census data looks like a great dataset to exploit for this purpose, since it includes the median pricing of thousands of districts, as well as other data.
+
+Starting system. First, you need to frame the problem: is it supervised, unsupervised, or Reinforcement Learning? Is it a classification task, a regression task, or something else? Should you use learning or online learning techniques? Before you read out, pause and try to answer these questions for yourself.
+
+Have you found the answers? Let's see: it is clearly a supervised learning task since you are given training examples (each instance contains with the expected output, i.e., the district's median housing price). Moreover, it is also a typical regression task, since you are asked to predict a value. Specifically, this is a multiple regression problem since the system will use multiple features to make a prediction (it will use the district's population, the median income, etc.). It is also a univariate regression problem since we are only trying to predict a single value for each district. If we were trying to predict multiple values per district, it is a multivariate regression problem. Finally, there is no continuous flow of data coming in the system, there is no particular need to adjust to changing data rapidly, and the data is small enough to fit in memory, so batch learning should do just fine.
+
+If the data was huge, you could either split your batch learning work across multiple servers (using the MapReduce technique), or you could use an online learning technique instead.
+
+![](bbox=[0.166, 0.753, 0.243, 0.823])

@@ -1,0 +1,13 @@
+# Hyperparameter Tuning and Model Selection
+
+So evaluating a model is simple enough: just use a test set. Now suppose you are hesitating between two models (say a linear model and a polynomial model): how can you decide? One option is to train both and compare how they generalize using the test set.
+
+Now suppose that the linear model generalizes better, but you want to apply some regularization over overfitting. The question is: how do you choose the value of the regularization hyperparameter? One option is to train 100 models using 100 different values for this hyperparameter. Suppose you find the best hyperparameter value that produces a model with the lowest generalization error, say just 5% error.
+
+So you launch this model into production, but unfortunately it does not perform as well as expected and produces 15% errors. What happened?
+
+The problem is that you measured the generalization error multiple times on the test set, and adjusted the model and hyperparameters to produce the best model for that particular set. This means that the model is unlikely to perform as well as on new data.
+
+A common solution to this problem is called holdout validation: you simply hold out part of the training set to evaluate several candidate models and select the best one. The new holdout set is called the validation set (or sometimes the development set, or dev set). More specifically, you train multiple models with various hyperparameters on the reduced training set (i.e., the full training set the validation set), and you select the model that performs best on the validation set. After this validation process, you train the model on the full training set (including the validation set), and this gives you the final model. Lastly, you evaluate this final model on the test set to get an estimate of the generalization error.
+
+This solution usually works well. However, if the validation set is too small, then model evaluations will be imprecise: you may end up selecting a suboptimal model by mistake. Conversely, if the validation set is too large, then the remaining training set will be much smaller than the full training set. Why is this bad? Well, since the final model will be trained on the full training set, it is not ideal to compare models trained on a much smaller training set. It would be like the fastest sprinter to participate in a marathon. One way to solve this problem is to perform repeated cross-validation, using many validation sets. Each model is evaluated once per validation set, after it is trained on the rest of the data. By averaging out all the evaluations of a model, we get a much more accurate measure of its performance. However, there is a drawback: the training time is multiplied by the number of sets.

@@ -1,0 +1,10 @@
+![](bbox=[0.14845, 0.08745, 0.8515499999999999, 0.35355000000000003])
+
+# # Word Embeddings
+
+Not only will embeddings generally be useful representations for the task at hand, but often these same embeddings can be reused successfully for other tasks as well. The most common example of this is word embeddings (i.e., embeddings of individual words); when you are working on a natural language processing task, you are often better off using pre pretrained word embeddings than training your own. The idea of using vectors to represent words dates back to the 1960s, and many sophisticated techniques have been used to generate useful vectors, including using neural networks, which then really took off in 2013, when Tomás Mikolov and other Google researchers published a paper describing how to learn word embeddings using deep neural networks, faster than previous attempts. This allowed them to learn embeddings on a very large corpus of text: they trained a deep neural network to predict the word near any given word. This allowed them to obtain astounding embeddings. For example, synonyms had very close embeddings, and semantically related words like France, Spain, Italy, and so on, ended up clustered. But word embeddings were also organized around meaningful axes in the space. Here is a famous example: if you compute King – Woman (adding and subtracting the embedding vectors of these words), then the result will be very close to the embedding of the word Queen (see Figure 13-5). In other words, the word embeddings encode the concept! Similarly, you can compute Madrid – Spain – France, and of course the result is close to Paris, which seems to show that the notion of capital city was also encoded in the embeddings.
+
+> “Distributed Representations of Words and Phrases and their Compositionality”, T. Mikolov et al. (2013).
+
+WOW! eBook
+www.wowebook.com
