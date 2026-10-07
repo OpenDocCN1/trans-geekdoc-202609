@@ -1,0 +1,17 @@
+# Impact of Artificial Intelligence and Machine Learning on Cybersecurity
+
+# 10.1 Introduction
+
+Cybersecurity is the protection of systems, different software, and data shared over various hardware and equipment connected to an internet connection or are connected in a single network [1]. Cybersecurity ensures the protection of enterprises, organizations, businesses, employees working individuals, or the public, and confidential information that is not guaranteed.
+
+Cybersecurity protects unauthorized access to the valuable and confidential information stored on their computer systems, data centers, or databases. These devices are used personally, such as smartphones, tablets, and laptops. Not only this, but routers, WLAN, and other network devices to which the identified systems such as computer systems, mobiles, laptops, data servers, or databases that are connected are protected by cybersecurity [2]. Multiple risks are identified as they were carried from time to time and provided potential outcomes. This includes randomness, which is malicious software explicitly designed to extract money from the target by hacking his/her access to the attacked system [3]. The target is forced to pay the amount of money required and provide access to the information that is not. Malware is another major threat in cybersecurity, which gains access in an unauthorized way to cause damage to the system.
+
+Social engineering is a tactic used for accessing confidential information by revealing sensitive information to gain access to, or attacking the system [7]. For example, another approach might involve winning the trust of an employee or an individual, and thus to gain access [8]. Phishing is one of the most threatening aspects of cybersecurity due to its use of ease and vulnerability in the system In, fraudulent emails are sent to a network, and once the email is opened the malware is installed and attacks security [9].
+
+The goal is to focus on enhancing and strengthening security. For this purpose various approaches are used to ensure the overall quality of cybersecurity. One focused approach is machine learning (ML) and artificial intelligence, and daily life aspects.
+
+The term AI was coined in 1956 but was not considered important in aspects of life, such as organizational, business, and daily life aspects. AI has emerged as essential for the growth and success of organizations and countries to grow. It requires much more number and human power to perform a task. However, AI has made its marks in various aspects and has contributed significantly to bringing automation to cybersecurity.
+
+After its introduction in the first era, AI has evolved year by year and decade by decade. From the 1950s to the 1970s, AI introduced new focuses as the focus on the thinking machines [10]. From the 1980s to the 2010s, with the help of AI and analytics, ML was introduced and became popular. It is not so long that ML has been adopted in multiple aspects with AI in a much effective way of producing deep learning (DL) [11].
+
+Currently, the applications of AI are well implemented in sectors such as manufacturing bots, proactive management of healthcare, automated financial investment, natural language processing (NLP) tools, monitoring tools and software, social media monitoring, mapping, and virtual tour agent conversational bot [12]. These are the milestones of the evolution of AI to this day, and they are the areas and where automation is significantly increased.

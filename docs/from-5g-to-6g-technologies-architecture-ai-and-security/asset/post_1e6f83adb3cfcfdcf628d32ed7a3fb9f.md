@@ -1,0 +1,141 @@
+
+# 208 Index
+
+- 5G 6
+- impact, of 6G
+- on healthcare systems 56-58
+- on other industries 60
+- on space technology and satellite communication 58-60
+- with 6G
+- blockchain 55-56
+- 5G vs. 6G characteristics 54
+- future and role, in IT 62
+- security and privacy 53-56
+- technology evolution 53
+- terertz (THz) wireless systems and networks 61-62
+- wireless energy transfer 81
+- wireless information and energy transfer (WIET) 83
+- wireless local area networks (WLAN) 2, 21, 26, 186
+- wireless mesh networks 2
+- wireless metropolitan area networks (WMAN) 2, 21, 186
+- wireless personal area networks (WPAN) 2, 21, 186
+- wireless wide area network (WWAN) 2, 21, 186
+- WLAN see wireless local area networks (WLAN)
+- WMAN see wireless metropolitan area networks (WMAN)
+- Worldwide wireless web (WWW)-based applications 26
+- WPAN see wireless personal area networks (WPAN)
+
+- AI and data-driven approach, to networks-Society 5
+- AI, by design 85
+- AI wireless communication tools 74
+- applications 87-89
+- emerging applications of
+- AR 99–100
+- automation 101
+- autonomous driving and connected devices 101
+- Blockchain 80
+- ecosystem, for future collaboration 80
+- communication technology
+- space-air-ground network (SAGIN) 58–59
+- space-air-ground integrated communications 4
+- energy efficiency, 74
+- spectrum 21
+- allocation of 23
+- low latency 74
+- sharing 80–81
+- machine, primary users 74
+- network reliability and accuracy 74
+- sub-mmwave (THz) 192
+- personalized 74–76
+- super convergence 185
+- extreme performance
+- super-multi-input, multi-output (MIMO) 980
+- super-market society 4
+- supervisory control and data acquisition (SCADA) 192
+- free duplexing 80–81
+- sustainable development goals (SDG) 192
+- internal network operations 80
+- innovative 6G network architectures 89
+- technologies, 6G
+- bandwidth and frequency range 85–86
+- chip technologies 86
+- consistent channels, 86–87
+- telsurgery 92
+- X-haul and transport network 87
+- terabit bidirectional multi-user optical wireless system (TOWS) 98
+- terahertz per second (THz) 125
+- OWC 77–79
+- terahertz frequencies (THz) 3, 9, 98
+- terahertz communications 78
+- terahertz gap 78
+- using intelligent platforms
+- terminal power saving 88
+- 5G new radio (NR) 81
+- third-generation (3G) cellular systems 73
+- integrated intelligence 102
+- satellite-based integrated network 82–83
+- time-sensitive/immersive experience 185
+- Wi-Fi 83
+- sixth-generation (6G) wireless communication systems 1
+- smart society 4
+- sixth-generation (6G) wireless networks
+- applications 104, 105
+- challenges 104–106
+- challenges in 139
+- constraints of 138
+- principles for 139
+- UAS unmanned aircraft systems (UAS)
+- disaster management 102
+- UAV vehicle aerial vehicles (UAV)
+- environment 102
+- ubiquitous 97
+- telehealth 101
+- ultra-flexible physical (PHY) 999
+- ultra-low flexibility connectivity 81
+- smart life, with IoT 101
+- ultra-low-power (ULF) terahertzics 81
+- underwater communication 193
+- ultra-reliable and low latency communications (URLLC) 2, 3, 6, 88, 77, 98, 170
+- requirements and KPI 104
+- ultrasound technology 5
+- extreme coverage 104
+- universal subscriber identity module (USIM) 96
+- extremely low latency 102
+- universal terrestrial radio access/evolution-UTRA (UTRA/E-UTRA) 48
+- high data 103
+- high-frequency bands 103
+- power consumption 102–103
+- massive connection density 104
+- mobility 104
+- unmanned aerial vehicle (UAV)-based communication 193
+- unmanned aerial vehicles (UAV) 58, 91, 99, 126
+- unmanned aircraft systems (UAS) 96
+- unmanned mobility 88
+- vehicle-to-everything (V2X) 99
+- vehicle-to-X communication 2, 3
+- virtual reality (VR) 8, 87-88
+- visible light communication (VLC) 3, 79, 98, 131, 191
+- VR see virtual reality (VR)
+- wideband high-frequency (WHHF) networks 195
+- wireless cellular technologies 28
+- wireless communications 2, 6
+- T-Mobile G2 29
+- benefit: 138
+- software defined network (SDN) 32
+- zen-touch network 84-85
+- software development radio (SDR) 92
+- software native 42
+- quantum communication 79–80
+- tactile network 80
+- quantum ML 79–80
+- TDD time-delayed-duplex (TDD)
+- spectrum sharing 80–81
+- technical specification groups (TSG) 48
+- tactile internet 80
+- telecommunication 21
+- Telecommunications Industries Alliance (TIA) 48
+- Telecommunications Standards Development Society, 21
+- (TDSDI) 48
+- Telecommunications Technology Committee, Japan (TTC)
+- time-delayed duplex (TDD) 28
+- zero-trust networking 35

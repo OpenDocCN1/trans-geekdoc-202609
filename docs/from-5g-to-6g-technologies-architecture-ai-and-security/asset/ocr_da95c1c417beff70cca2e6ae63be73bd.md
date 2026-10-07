@@ -1,0 +1,18 @@
+future generations will not simply disappear with the introduction of a new infrastructural component. Where it will begin to diverge from the present is the increased variety and flexibility of specialized networks for subnets and things as flexible workload overloading.
+
+As with next step, 6G communication networks will have their own security and privacy concerns. Mobile security continues to be a very significant issue when each generation of wireless communications seeks to get more with each technical advancement. Past generations have dealt with everything from authentication to cloning. With the availability of computing resources and the possibility of of attackers now, it is expected that 6G networks see some of the attacks such as zero-day attacks and physical layer attacks, but also an increase in advanced attacks such as quantum-based attacks and AI/ML-based agents. The addition of AI to the networks of 6G will work for and against its security, it seems. Figure 1.3 shows a summary of the potential and threats, vulnerability, and security mechanisms by examining the risk of proposed 6G technologies [13].
+
+We must build on future-generation security to gain insight into what will be coming for generations of communication. There is not much research and looking at the holistic picture of 6G security. Current mobile data networks such as 4G and 5G are reaching their physical limit as more and devices in our lives depend on the internet and mobile connection networks. The idea of 6G is becoming the new ideal upon which our society can grow. My only concern is the idea of the "6G communication system" will become a monolith that business and education communities will flock to, to a point where the idea of the 6G network becomes a more science fiction that is unreachable or should be actually immediately. Simply put, 6G is not some approaching bleeding edge technology but is an aggregate of technologies that is a natural extension of our current mobile networks and wireless connections. The reality of 6G is evolving so fast that people just have to keep their heads down.
+
+In the past few years, the amount of traffic over mobile data networks has drastically increased and shows no signs of stopping. This is due to an increasing number of applications that require connection to mobile data networks. Examples include the IoT, smart automobiles, and smart cities among many others. Because of these new uses for existing networks, our current 3G/4G networks struggle to keep up with the demand for these technologies that grow more numerous and hungry as time goes. A solution to the limited capacity of current networks is to provide broader bandwidth to accommodate higher rates. With fewer 5G networks, bandwidth is still a highly coveted goal that remains the narrow bandwidth below 6GHz. Technologies like multiple input, multiple output (MIMO) antennas do make the sub 6GHz communications more efficient, however.
+
+Very mobile devices, like smartphones and wearable devices, also tend to operate on multiple bands, which part strain existing networks, as these devices become more numerous and more data-hungry with time.
+
+| Technology | Risk Level | Primary Cause | Time Frame |
+|---|---|---||
+| AI | Medium | Adversarial manipulation and malicious AI development | <3 years |
+| IT-OT Convergence | High | Lack of cybersecurity designed and deployed in IoT devices | Immediate |
+| Self-Defensive Networks | Medium | Lack of automation and real-time intelligence processing | >5 years |
+| Quantum Computers | High | Break complex encryption asymmetric algorithms | >10 years |
+
+Figure 1.3 Potential threats and novel events, and corresponding security measures [12].
