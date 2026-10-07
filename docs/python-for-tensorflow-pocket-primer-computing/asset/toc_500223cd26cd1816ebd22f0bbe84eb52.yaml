@@ -1,0 +1,623 @@
+- - '#'
+  - TensorFlow 的 Python 入门指南
+- - '##'
+  - 什么是 Jupyter？
+- - '##'
+  - 前言
+- - '##'
+  - 目标是什么？
+- - '##'
+  - 第 5 章 TensorFlow 简介
+- - '##'
+  - 什么是 TensorFlow？
+- - '##'
+  - TensorFlow 用例
+- - '##'
+  - 什么是 TensorFlow Tensor（张量）？
+- - '##'
+  - 什么是 TensorBoard？
+- - '##'
+  - 总结
+- - '##'
+  - 第 6 章 TensorFlow 数据集
+- - '##'
+  - 前言
+- - '##'
+  - 目标是什么？
+- - '#'
+  - PYTHON 导论
+- - '#'
+  - PYTHON 工具
+- - '##'
+  - easy_install 和 pip
+- - '##'
+  - virtualenv
+- - '##'
+  - IPython
+- - '##'
+  - 伴侣文件
+- - '#'
+  - Python 中的简单数据类型
+- - '##'
+  - 处理其他进制
+- - '##'
+  - chr() 函数
+- - '##'
+  - Python 中的 round() 函数
+- - '##'
+  - Python 中的数字格式化
+- - '##'
+  - 处理分数
+- - '##'
+  - Unicode 和 UTF-8
+- - '##'
+  - 支持 Unicode，这意味着你可以渲染不同语言的字符。Unicode 数据可以以相同的方式存储和操作。如下所示，通过在前面加上字母 “u” 创建 Unicode
+    字符串：
+- - '##'
+  - 列表 1.1 Unicode.py
+- - '##'
+  - 处理字符串
+- - '##'
+  - 比较类型
+- - '##'
+  - 列表 1.2 Compare.py
+- - '##'
+  - Python 中的字符串格式化
+- - '##'
+  - Python 中的未初始化变量
+- - '##'
+  - 字符串的切片与拼接
+- - '##'
+  - 测试数字和字母
+- - '##'
+  - 列表 1.3 CharTypes.py
+- - '##'
+  - 打印不带换符的文本
+- - '##'
+  - 文本对齐
+- - '##'
+  - 处理日期
+- - '###'
+  - 列表 1.4 datetime.py
+- - '###'
+  - 列表 1.5 datetime.py
+- - '###'
+  - 列表 1.7 Datetime.py
+- - '###'
+  - 列表 1.8 datetime2.py
+- - '##'
+  - 将字符串转换为日期
+- - '###'
+  - 列表 1.9 String.py
+- - '##'
+  - Python 中的异常处理
+- - '###'
+  - 列表 1.10 Exception.py
+- - '##'
+  - 处理用户输入
+- - '###'
+  - 列表 1.11 TextInput.py
+- - '##'
+  - 列表 1.12 UserInput.py
+- - '#'
+  - 什么是 NumPy 数组？
+- - '##'
+  - 使用循环
+- - '##'
+  - 列表 2.1 nparray.py
+- - '##'
+  - 向数组添加元素 (1)
+- - '##'
+  - 列表 2.2 loop.py
+- - '##'
+  - 这些操作是无效的：
+- - '##'
+  - 向数组添加元素 (2)
+- - '##'
+  - 列表 2.3 append.py
+- - '##'
+  - 列表 2.4 append.py
+- - '##'
+  - 数组的乘法
+- - '##'
+  - 列表 2.5 multiply.py
+- - '##'
+  - 数组中的翻倍
+- - '##'
+  - 列表 2.6 double-list.py
+- - '##'
+  - 数组幂
+- - '##'
+  - 列表 2.7 exponent-list.py
+- - '##'
+  - 数组幂
+- - '##'
+  - 列表 2.8 exponent-array.py
+- - '##'
+  - 数学运算与数组
+- - '##'
+  - 列表 2.9 mathops-array.py
+- - '##'
+  - 使用向量处理“1”子范围
+- - '##'
+  - 列表 2.10 npsubarray.py
+- - '##'
+  - “除了最后一个元素”（行或列）
+- - '##'
+  - 数组处理“1”子范围
+- - '##'
+  - 列表 2.11 np2array.py
+- - '##'
+  - 其他有用的方法
+- - '##'
+  - 数组与向量运算
+- - '##'
+  - 列表 2.12 array-vector.py
+- - '##'
+  - NumPy 与点积 (1)
+- - '##'
+  - 列表 2.13 dotproduct.py
+- - '##'
+  - NumPy 与点积 (2)
+- - '##'
+  - 列表 2.14 dotproduct.py
+- - '##'
+  - 列表 2.17 reshape.py
+- - '##'
+  - 平均值和标准差
+- - '##'
+  - 列表 2.18 sample-mean-std.py
+- - '##'
+  - 平均值和标准差
+- - '##'
+  - 列表 2.19 stat-values.py
+- - '##'
+  - 生成数据
+- - '##'
+  - 计算最小值和最大值
+- - '##'
+  - 打印摘要
+- - '##'
+  - 使用 NumPy 和 Matplotlib 绘制
+- - '##'
+  - 列表 2.20 np-plot.py
+- - '##'
+  - 使用 NumPy 和 Matplotlib 绘制二次曲线
+- - '##'
+  - 列表 2.21 np-plot-quadratic.py
+- - '#'
+  - 什么是线性回归？
+- - '##'
+  - 多变量分析
+- - '##'
+  - 非线性数据集如何？
+- - '##'
+  - MSE（平方误差）公式
+- - '##'
+  - 其他类型
+- - '##'
+  - 非线性乘法
+- - '##'
+  - 手动计算 MSE
+- - '##'
+  - 在 NumPy 中寻找拟合线
+- - '##'
+  - 列表 2.22 plot-best-fit.py
+- - '##'
+  - 通过连续近似 (1)
+- - '##'
+  - 列表 2.23 plain-linreg.py
+- - '##'
+  - 总结
+- - '#'
+  - 第 3 章 Pandas
+- - '##'
+  - Pandas 简介
+- - '##'
+  - DataFrame
+- - '##'
+  - 数据清洗任务
+- - '##'
+  - 有标签的 Pandas DataFrame
+- - '##'
+  - 列表 3.1 pandas-labeled-df.py
+- - '##'
+  - 数值型 DataFrame
+- - '##'
+  - 布尔型 DataFrame
+- - '##'
+  - 列表 3.3 pandas-boolean-df.py
+- - '##'
+  - 转置 DataFrame
+- - '##'
+  - DataFrame 与随机数
+- - '##'
+  - 列表 3.4 pandas-random-df.py
+- - '##'
+  - 合并 DataFrame (1)
+- - '##'
+  - 列表 3.5 pandas-combine-df.py
+- - '##'
+  - 合并 DataFrame (2)
+- - '##'
+  - 数据处理：使用 Pandas (1)
+- - '##'
+  - 使用 Pandas 进行数据操作 (2)
+- - '##'
+  - 列表 3.8 pandas-quarterly-df2.py
+- - '##'
+  - 使用 Pandas 进行数据操作 (3)
+- - '##'
+  - 列表 3.9 pandas-quarterly-df3.py
+- - '##'
+  - 第一个数据集：
+- - '##'
+  - 第二个数据集：
+- - '##'
+  - Pandas 与 CSV 文件
+- - '##'
+  - 列表 3.10 weather-data.py
+- - '##'
+  - 列表 3.11 people.csv
+- - '##'
+  - 列表 3.12 people-pandas.py
+- - '##'
+  - 与 Excel 表格 (1)
+- - '##'
+  - 列表 3.13 people-xlsx.py
+- - '##'
+  - 与 Excel 表格 (2)
+- - '##'
+  - 列表 3.14 employees-xlsx.py
+- - '##'
+  - Excel 表格内容：
+- - '##'
+  - 数据框与模拟数据
+- - '##'
+  - 使用分隔符读取数据文件
+- - '##'
+  - 列表 3.15 multiple-delims.dat
+- - '##'
+  - 列表 3.16 multiple-delims.py
+- - '##'
+  - 使用 SED转换数据（可选）
+- - '##'
+  - Pandas 与散点图
+- - '##'
+  - Pandas 与直方图
+- - '##'
+  - 标准 Pandas
+- - '##'
+  - 标准化数据（均值0，标准差1）
+- - '##'
+  - 将数组分离为输入组件
+- - '##'
+  - 总结转换后的数据
+- - '##'
+  - Pandas, NumPy 函数与大型数据集
+- - '##'
+  - 根据你的需求修改 chunksize
+- - '##'
+  - Pandas Series 操作
+- - '###'
+  - 来自 ndarray
+- - '##'
+  - GROUP BY 操作
+- - '#'
+  - 什么是 Jupyter？
+- - '##'
+  - Jupyter 特性
+- - '##'
+  - 从命令行启动 Jupyter
+- - '##'
+  - JupyterLab
+- - '##'
+  - 开发 JupyterLab 扩展
+- - '##'
+  - GOOGLE COLABORATORY
+- - '##'
+  - GPU 支持
+- - '##'
+  - 其他云平台
+- - '##'
+  - 总结
+- - '#'
+  - MATPLOT, SKLEARN 以及 SEABORN
+- - '##'
+  - Matplotlib 是什么
+- - '##'
+  - Matplotlib 中的水平线
+- - '###'
+  - 列表 4.1 hlines.py
+- - '##'
+  - Matplotlib 中的斜线
+- - '###'
+  - 列表 4.2 diagonallines.py
+- - '##'
+  - Matplotlib 中的平行斜线
+- - '###'
+  - 列表 4.3 parallines.py
+- - '##'
+  - Matplotlib 中的网格点
+- - '###'
+  - 列表 4.4 plotgrid.py
+- - '##'
+  - Matplotlib 中的虚线网格
+- - '###'
+  - 列表 4.5 plotdotted.py
+- - '##'
+  - Matplotlib 中网格中的线条
+- - '###'
+  - 列表 4.6 plotgrid2.py
+- - '##'
+  - Matplotlib 中的彩色网格
+- - '##'
+  - 创建颜色映射
+- - '##'
+  - Matplotlib 中彩色网格
+- - '###'
+  - 列表 4.8 plotgrid3.py
+- - '##'
+  - 创建一个空数据集
+- - '##'
+  - 填充一些数据
+- - '##'
+  - 创建坐标轴
+- - '##'
+  - 创建颜色映射
+- - '##'
+  - Matplotlib 中的直方图
+- - '###'
+  - 列表 4.9 np-plot.py
+- - '##'
+  - 使用 Matplotlib 绘制直线
+- - '##'
+  - 使用 Matplotlib 绘制散点图
+- - '##'
+  - 使用 Matplotlib 绘制一条线
+- - '###'
+  - 列表 4.10 np-plot.py
+- - '##'
+  - Matplotlib 绘制方框
+- - '###'
+  - 列表 4.11 np-plot.py
+- - '##'
+  - Matplotlib 中绘制拟合
+- - '###'
+  - 列表 4.12 np-plot.py
+- - '##'
+  - Matplotlib 绘制二次曲线
+- - '###'
+  - 列表 4.13 np-plot-quadratic.py
+- - '##'
+  - 线性回归 (2)
+- - '##'
+  - 线性回归与正则化
+- - '##'
+  - 线性回归
+- - '###'
+  - 列表 4.14 linear-regression.py
+- - '##'
+  - 逻辑回归
+- - '###'
+  - 列表 4.15 logistic-regression.py
+- - '##'
+  - 逻辑回归
+- - '###'
+  - 列表 4.16 logistic-regression.py
+- - '##'
+  - 逻辑回归
+- - '###'
+  - 列表 4.17 logistic-regression.py
+- - '##'
+  - 预测
+- - '##'
+  - 总结合情况
+- - '#'
+  - 第 4 章 TensorFlow
+- - '##'
+  - TensorFlow基础类型
+- - '##'
+  - TensorFlow 版本号
+- - '##'
+  - 列表 4.18 tf-regression-values.py
+- - '###'
+  - 列表 4.19 seaborn-values.py
+- - '###'
+  - 列表 4.20 seaborn-plot.py
+- - '##'
+  - Seaborn 的特性
+- - '###'
+  - 列表 4.21 seaborn-tips.py
+- - '##'
+  - Seaborn 内置数据集
+- - '###'
+  - 列表 4.22 seaborn-tips.py
+- - '##'
+  - Seaborn 数据集
+- - '###'
+  - 列表 4.24 seaborn-plot.py
+- - '##'
+  - 列表 4.25 tf-gpu.py
+- - '##'
+  - TensorFlow Architecture (High View)
+- - '##'
+  - TensorFlow 特性
+- - '##'
+  - TensorFlow 用例
+- - '##'
+  - 其他 TensorFlow 工具包
+- - '##'
+  - 为什么使用 TF 1.x 而不是 2？
+- - '##'
+  - 什么是 TensorFlow？
+- - '##'
+  - 使用 TF.SESSION() 的 TensorFlow 图
+- - '##'
+  - 列表 4.26 tf-version.py
+- - '##'
+  - 列表 4.27 tf-regression.py
+- - '##'
+  - 列表 4.28 tf-regression.py
+- - '##'
+  - 列表 4.29 tf-iris.py
+- - '##'
+  - 列表 4.30 tf-titanic.py
+- - '##'
+  - 列表 4.31 tf-titanic.py
+- - '##'
+  - 列表 4.32 tf-seaborn.py
+- - '##'
+  - 列表 4.33 tf-seaborn.py
+- - '##'
+  - VISUALIZING PANDAS DATASET IN SEABORN
+- - '##'
+  - VISUALIZING PANDAS DATASET IN SEABORN
+- - '##'
+  - VISUALIZING PANDAS DATASET IN SEABORN
+- - '##'
+  - VISUALIZING PANDAS DATASET IN SEABORN
+- - '##'
+  - VISUALIZING PANDAS DATASET IN SEABORN
+- - '##'
+  - VISUALIZING PANDAS DATASET IN SEABORN
+- - '##'
+  - VISUALIZING PANDAS DATASET IN SEABORN
+- - '#'
+  - 第 5 章 TensorFlow
+- - '##'
+  - TensorFlow变量（回顾）
+- - '##'
+  - TensorFlow变量与张
+- - '##'
+  - SESSION 中的 CONSTANTS 和 VARIABLES
+- - '##'
+  - PLACEHOLDERS AND FEED_DICT
+- - '##'
+  - 列表 5.1 tf-version.py
+- - '##'
+  - 列表 5.2 tf-session.py
+- - '##'
+  - 列表 5.3 tf-session2.py
+- - '##'
+  - 列表 5.4 tf-ph-feeddict.py
+- - '##'
+  - 列表 5.5 tf-variables-init.py
+- - '##'
+  - 列表 5.6 tf-constants.py
+- - '##'
+  - 列表 5.7 tf-rank.py
+- - '##'
+  - 列表 5.8 tf-shape.py
+- - '##'
+  - 列表 5.9 tf-shape.py
+- - '##'
+  - 列表 5.10 tf-feeddict-values2.py
+- - '##'
+  - TensorFlow 图中初始化变量
+- - '##'
+  - TensorFlow 图执行
+- - '##'
+  - 在 TF 中计算指数
+- - '##'
+  - 列表 5.15 tf-exp-values.py
+- - '##'
+  - 在 TF 中使用 循环
+- - '##'
+  - 列表 5.16 tf-forloop1.py
+- - '##'
+  - 在 TF 中结合动态执行 循环
+- - '##'
+  - 列表 5.17 tf-forloop.py
+- - '##'
+  - 在 TF 中结合动态执行 while 循环
+- - '##'
+  - 列表 5.18 tf-while-eager2.py
+- - '##'
+  - TensorFlow数组 (3)
+- - '##'
+  - 两个数组的乘法 (CPU)
+- - '##'
+  - 两个数组的乘法 (GPU)
+- - '##'
+  - 列表 5.25 tf-gpu.py
+- - '##'
+  - 将 Python 数组转换为 TF 数组
+- - '##'
+  - 什么是 TensorBOARD?
+- - '##'
+  - GOOGLE COLABORATORY
+- - '##'
+  - 其他云平台
+- - '##'
+  - GCP SDK
+- - '##'
+  - 总结
+- - '##'
+  - TensorFlow 数据集
+- - '##'
+  - TensorFlow 数据集
+- - '##'
+  - TensorFlow 数据集的基本步骤
+- - '##'
+  - 简单的 TensorFlow 数据集
+- - '##'
+  - 从 numpy 数组创建一个数据集
+- - '##'
+  - TensorFlow 稀疏常量与张量 (可选)
+- - '##'
+  - 列表 6.2 tf-raggedtensors.py
+- - '##'
+  - 列表 6.4 tf-plus.py
+- - '##'
+  - (列表 6.4 的示例代码)
+- - '##'
+  - 什么是迭代器？
+- - '##'
+  - TensorFlow 迭代器
+- - '##'
+  - 列表 6.5 tf-init-iterator.py
+- - '##'
+  - 创建可初始化迭代器
+- - '##'
+  - 提取元素
+- - '##'
+  - TensorFlow FILTER() 运算符
+- - '##'
+  - 列表 6.6 tf-filter.py
+- - '##'
+  - 列表 6.7 tf-rank.py
+- - '##'
+  - 列表 6.8 tf-text.py
+- - '##'
+  - 列表 6.9 tf-text.py
+- - '##'
+  - 列表 6.10 tf-feeddict-values2.py
+- - '##'
+  - 列表 6.11 tf-batch.py
+- - '##'
+  - 列表 6.12 people-pandas.py
+- - '##'
+  - 列表 6.13 people-xlsx.py
+- - '##'
+  - 列表 6.14 employees-xlsx.py
+- - '##'
+  - 列表 6.15 multiple-delims.dat
+- - '##'
+  - 列表 6.16 multiple-delims.py
+- - '##'
+  - 列表 6.17 comments.txt
+- - '##'
+  - 列表 6.18 tf-flat-filter.py
+- - '##'
+  - 列表 6.19 tf-repeat.py
+- - '##'
+  - 列表 6.20 tf-take.py
+- - '##'
+  - 列表 6.21 map-take.py
+- - '##'
+  - 列表 6.23 tf-zip-take.py
+- - '##'
+  - 列表 6.24 tf-random-one-shot.py
+- - '##'
+  - 列表 6.25 tf-random-one-shot.py

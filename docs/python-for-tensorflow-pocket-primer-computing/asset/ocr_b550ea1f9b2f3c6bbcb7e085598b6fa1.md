@@ -1,0 +1,1 @@
+Sklearn is well-suited for classification tasks as well as regression and clustering tasks. Sklearn supports a vast collection of ML algorithms, including linear regression, logistic regression,
