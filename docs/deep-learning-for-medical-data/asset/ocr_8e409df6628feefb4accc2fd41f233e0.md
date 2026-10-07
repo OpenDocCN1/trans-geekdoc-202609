@@ -1,0 +1,1 @@
+globe, it enables medical expertise to be easily replicated and made available to all communities. There are still technical roadblocks to overcome to make this vision a reality, but with the pace and breadth at which the field of machine learning is progressing, the future seems bright.

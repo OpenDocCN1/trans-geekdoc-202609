@@ -1,0 +1,5 @@
+# MOTIVATION AND SUMMARY
+
+A difficult dimension of medical diagnosis is the inherent uncertainty associ- with the diagnostic toolbox. Misdiagnosis is a major cost benefit driver in the medical system, in both human and monetary terms (Kassei, 2015). A proper estimate of the confidence in a certain diagnosis can be of great help when making appropriate cost-benefit trade-offs that are associated with any further invasive diagnostic steps and interventions.
+
+The holy grail in this domain is fully-calibrated uncertainty. Each prediction is associated with a probability score that reflects the frequentist view of how often this prediction would be correct. To achieve this, a full Bayesian treatment is required in the modeling of the problem. This incorporates prior knowledge, modeling uncertainty and data uncertainty. In this final part of the thesis, we explore probabilistic and Bayesian treatments of deep learning; an active area of research.

@@ -1,0 +1,13 @@
+ing collaborators. It was great to work alongside Thomas, Alexey, Aravind, Aidan, Sebastian and many others. Durk, thank you for honoring one of my more speculative research ideas. Continuing as a student researcher in Amsterdam was a dream come true and I have to thank Tim especially for my guidance and support. All my colleagues at Google Brain Amsterdam were a great source of inspiration and aspiration, including and certainly not limited to Lasse, Nal, Capser, Jonathan, Avital, Mostafa; I want to thank Carlos, Ruth and Axel, for giving me a home away from home.
+
+I want to thank Felice Arends, Odette Compen-Hend, Erik Hitipur, de Jong and Boy Menist for helping me navigate both Philips and the UVA, and for enabling me in pursuing internships. I also want to give special thanks to Dennis Koelma and Bas Tervijn for their advice and for enabling bits to flow where they have to go. On SURFSara’s side, I have to thank Vali for collaboration and enabling of my more excessive crunching stints.
+
+I am also grateful to the organizers and attendees of the wonderful Deep Bayes school by Dimitri Vetrov. Likewise, the summer school by Microsoft Research was an incredible opportunity to learn and network. Equally was the DLMedia consortium who let me hitch a ride for the many interesting talks, the summer school and more.
+
+The following organizations have been vital for my PhD. Philips Research, for the financial support for my PhD. SURFSara, allowing me to test-drive the LISA GPU supercomputer. NVIDIA, for their generous GPU grant.
+
+Of the people close me, I want to thank Hüs, for supporting me during this wonderful and chaotic period of our lives. My grandpa, George, for teaching me to take things serious and inspiring me to take an academic career. My parents, for their unwavering support, advice, feedback on drafts and love. My sisters, being there for me. My uncles Henk and Frans, for their advice inspiring me to be ambitious.
+
+I want to thank the wonderful folks of Het Wilde Wat, for creating a sense of community, a creative outlet and a great source of joy, and Ben, for introducing me to this wonderful group and being a great friend.
+
+Luisa, thank you for being a voice of reason and inspiring me, as well as the patient feedback on drafts. Joost, for many discussions, trips, advice, tireless feedback and encouragement. Marcel, for reminding me not to take things too serious. Bernice, for listening and riding together. Bertina, for great dinners and walks. Joost for listening when we
