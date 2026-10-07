@@ -1,0 +1,13 @@
+The following are the important parameters of this class:
+
++   **n_estimators**: This parameter defines how many trees to form in the forest. We know that for each subset, one decision tree model is created (we refer to these models as trees). Also, from the illustration in Figure 7.1, we know that based on the number of features in the original dataset and our choice of several features to use in each decision tree model, the number of subsets can be different. As discussed, we must create only possible subsets (or decision trees). We can control the number of trees of form using this parameter. By default, the value of this parameter is 100. This parameter states the number of models that will be trained on subsets of the original dataset. The votes will be collected from all these models to make the final prediction from the model created using the Random Forest algorithm.
+
++   **max_features**: This parameter controls how many features from the original dataset will be used to form each subset of the original dataset. By default, this is set to the $\sqrt{n}$, n being the number of features in the original dataset. Based on this parameter, features are selected randomly from the original dataset (which limits the number of features chosen) and assigned to each subset of the original dataset.
+
++   **Criterion**: We know that the algorithm applied to each subset of the original dataset in the Random Forest algorithm is the Decision Tree algorithm. This parameter states the method to use for forming the Decision Trees. The decision trees are formed by default using the ‘Gini Index’. However, we could also set this parameter to 'entropy' or 'log_loss' to use 'Information Gain' to decide splits in the decision trees.
+
++   **min_sample_split**: When the decision tree is formed, we know that we start by splitting the root node and moving down the tree until we have only leaves left. However, using this parameter, we can stop splitting the nodes when a node has samples that are less than or equal to the value of this parameter.
+
++   **max_depth**: By default, this parameter is set to None. Setting this parameter to None implies that each decision tree will be split until only leaf nodes remain.
+
++   **bootstrap**: This parameter takes a value of either True or False. By default, the value of this parameter is True. When this parameter is set to True, each decision tree is created on a sample of the data from the original dataset. When this parameter is set to False, the original dataset trains each decision tree.
