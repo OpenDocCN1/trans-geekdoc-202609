@@ -1,0 +1,17 @@
+Describing the Data 37
+
+Standardized scores can be useful in our understanding of a data set they provide a way of comparing performances on different scales. For example, the mean and standard deviation of the subtraction accuracy scores in the Royer data set were 88.840 and 11.457, respectively; the corresponding values for multiplication accuracy scores were 87.433 and 13.996. Even though a subtraction score of 70 is numerically higher than a multiplication score of 65, it reflects slightly worse performance relative to the others in the distribution. For subtraction, $z_{70}=-1.64$ (that is, the score of 70 is 1.64 standard deviations below the mean of the subtraction scores), whereas for multiplication, $z_{65}=-1.60$.
+
+Standardized scores play other roles as well. In Chapter 5, we will discuss how z scores provide percentile information when the population distribution has an approximate shape. Also, in Chapter 18, we will consider the correlation coefficient as an average product of z.
+
+# 2.5 Measures of the Shape of a Distribution: Skewness and Kurtosis
+
+We have considered several measures of location (mean, median, and mode) and variability (variance, standard deviation, standard error, and $IQR$) that summarize important properties of a distribution. In addition to these measures, it is also useful to obtain measures of the shape of a distribution. Measures of shape permit a more precise description of a data set than measures of location and variability alone. They also provide another way to assess the assumption of normality. This is important because a data distribution departs markedly from normality, although the mean and standard deviation may lead to incorrect inferences. For symmetric population distribution the sample mean is usually considered the best estimate of the location of the population distribution. However, if the population distribution has long trailing tails, the sample median is more likely to have a value close to that of the center of the population distribution (Rosenberger & Gasko, 1983), and therefore would be a better estimate of the location. If the population distribution is skewed (asymmetric), a transformation, or a test based on ranks, may be helpful (see Chapter 6 for a discussion of these alternatives). The data plots in Section 2.2 provide a first step in assessing the shape of the distribution, but the measures in this section will provide summary numbers, aiding in the evaluation of shape.
+
+There is a third reason for our interest in measures of shape. An important stage in understanding the processes that underlie the construction of mathematical or computational models, models precise enough to predict the behavior in question. Comparing predicted and observed measures of the shape of the data distribution provides additional tests of such models.
+
+Two aspects of shape have received the most attention from statisticians: (1) the degree of skewness, or departure from symmetry; (2) kurtosis, the proportion of data in the extreme tails and peak of the distribution. Indices of these two attributes of shape can be obtained from various computer packages, although there are frequently small differences in the details of the calculation that can result in slightly different values, especially for smaller samples.
+
+# 2.5.1 Skewness
+
+Skewness statistics are designed to reflect departures from symmetry. The standard definition of skewness is the average cubed deviation of scores from the mean divided by the

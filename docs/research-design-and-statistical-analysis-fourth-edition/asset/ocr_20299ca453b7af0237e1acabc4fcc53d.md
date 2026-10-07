@@ -1,0 +1,15 @@
+# Planning the Research 17
+
+conditions populations. In much of this chapter, we have been concerned with internal validity; in particular, we have discussed the role of randomization and research design protecting against potential confounds. We touched briefly the participant of external validity when we cautioned that researchers should consider the population to which their inferences apply. For example, if a treatment of depression is successful in a study with all female participants, or in one with individuals in a certain age range, we should not conclude that the treatment would also reduce depression in males, or in older participants, without some bias in theory or data. Perhaps the most common setting which we need to be careful about generalizing the population sampled is the academic, in which the participants are usually college students within a limited range of age and intelligence, the children of faculty and students.
+
+Similar issues arise with respect to generalizing conclusions based on a particular method or measure. For example, recall and recognition scores have shown to reflect very different memory processes. And different results have been obtained in studies of reading when reading times are calculated as differences between button presses that press words in a text and when reading times are recorded by tracking eye events.
+
+Studies in the independent variable is quantitative confront the researcher with other problems of generalization. There are practical limits to the levels that can be included. Conclusions about the shape of the function relating dependent and independent variables require interpolation between, and extrapolation, the levels observed.
+
+Another approach to the issue of external validity is to systematically vary the populations sampled or the measures obtained. For example, a study of the effects of some treatment might include the gender of the participants as a second variable. Or, as often has been done, both recall and recognition measures might be recorded in studies of memory. The inclusion of variables that enable the generalizability of results should be a consideration in the research. Nevertheless, it is important to understand that results can never be generalized on every experiment. As Campbell and Stanley (1963) have pointed out, the very act of conducting an experiment raises the question of whether the results would apply in a less controlled, real-world setting. Whereas we can provide a logical basis for arguing that certain methods, such as randomization, increase internal validity, we can only argue for external validity by extrapolating the methods and results of the current study. We should take great care before making such extrapolations.
+
+# 1.9 Summary
+
+Careful planning of a study may have wasted effort. Such plans should have several goals:
+
++   The research plan should include steps to ensure that attributes attributed to the independent variable are not due to other uncontrolled variables. In experiments, random assignment is the procedure for guarding against systematic biases due to nuisance variables.

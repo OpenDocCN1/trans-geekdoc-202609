@@ -1,0 +1,16 @@
+# Research Design and Statistical Analysis
+
+| Mean | Std. deviation | Std. error mean | 95% Confidence interval | df | Sig. (2-tailed) |
+|---|---|---|---|---|---||
+| $A_1 - A_2$ | 0.833 | 0.642 | 0.262 | 0.159 1.508 3.177 | 5 | .025 |
+| $A_2 - A_3$ | 2.053 | 0.950 | 0.388 | 1.056 3.050 5.294 | 5 | .003 |
+
+There are several points to note: First, the standard deviations of the differences are different for the two tests. This is because each difference is tested against a measure of the variability of that, not against an error term from the ANOVA (Table 14.4). Second, the test is conservative not only because of the criterion alpha (i.e,.05/9) but because the degrees of freedom are (n-1) or 5 in this example. The confidence does not take into consideration the fact that we have nine tests. The appropriate CI should be based on the $t$ level required for significance at the .005 level, not the .05 level. Appendix Table C.3, or using qt(.0052, df=5, lower=FALSE) in R, the critical value at the .005 level (two-tailed) is 4.773. Therefore, the CI bounds for the comparison between the $A_1, B_3$ and $A_2, B_3$, means ($ar{Y}_{23} - ar{Y}_{12}$) are $0.833 - (0.262)(4.773) = -0.418$ and 2.084. Using the appropriate critical value of $t$, 0 is within the CI and thus a possible value for the interaction effect.
+
+# 14.8. Tests of Interaction Contrasts
+
+A more direct way of understanding the reason for the significant AB interaction in Table 14.4 might be to test interaction contrasts. In Figure 14.1, we note that $ar{Y}_{13} - ar{Y}_{12}$ is smaller than $ar{Y}_{23} - ar{Y}_{12}$ or $ar{Y}_{23} - ar{Y}_{13}$. This suggests that we focus on these contrasts: $\psi_1 = [(4.81 - 5.02) - (5.41 - 4.58)]$ and $\psi_2 = [..., 3.41]$. One way to test these two interaction contrasts is to use the Transform option in SPSS, or mutate in the [plyr] package in R, to create new "scores" for each participant: $(A_1, B_3) - (A_1, B_j) - (A_2, B_3) - (A_2, B_j)$ and $(A_2, B_3) - (A_2, B_j) - (A_3, B_3) - (A_3, B_j)$. We can then use one-sample tests to assess these contrasts. For $\psi_1$, $t=1.87$ and for $\psi_2$, $t=4.917;2$. If we had selected the two interaction contrasts before looking at the data, we would have used the Dunn-Bonferroni procedure to control the FWE at .05 by evaluating each contrast at .052=.025. However, determining that these were of interest after viewing Figure 14.1, and noting there are nine possible $2 \times 2$ contrasts, we set alpha at .059=.056. With 5 df the critical value of $t$ is 4.773 and therefore only the test of $\psi_2$ has a significant result. The AB interaction result in Table 14.4 seems largely reflect this interaction embedded within the larger design.
+
+# 14.8.4 Mixed Designs
+
+Tests of contrasts in designs involving both between- and within-participants factors follow the approaches previously. When analyzing effects of between-participants factors, the methods available are those described for completely randomized designs in Chapters 10 to 15. Software makes it easy to test contrasts to understand main effects of between-participants factors. For example, SPSS may offer "options" the

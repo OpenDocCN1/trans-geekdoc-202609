@@ -1,0 +1,17 @@
+# 38 Research Design and Statistical Analysis
+
+cubed standard deviation. Because the mean and standard deviation are influenced by outliers in the data, the dependence of skewness on cubed standard deviations means outliers have an exaggerated effect. In R, the skewness function of the [moments] package provides this value. When skew is 0, the distribution is symmetric about the mean. For the data in Table 2.1, skewness is -1.25. The negative value indicates that the left tail of the data is longer than the right, consistent with the fact that the median has a higher value than the mean. We call a long left tail 'left skewed'. Positive skewness values indicate a long or heavy right tail, and we describe those as 'right skewed'.
+
+Skewness is a statistic calculated from a sample, analogous to a sample mean. The standard error of skewness depends only on the size of the sample, $N: SE_{skew} = \sqrt{rac{6N(N-1)}{(N-2)(N+1)(N+3)}}$. For the data in Table 2.1, $SE_{skew}=$
+
+0.44. A rough indication of skewness is to compare the absolute value of skewness to twice the $SE_{skew}$. If skew exceeds twice $SE_{skew}$ the observed asymmetry may reflect asymmetry in the population rather than change variance in the sample. Use caution, however, as this assessment is prone to error (Wright & Herrington, 2011).
+
+# 2.5.2 Kurtosis
+
+Kurtosis values also relate departures from the normal distribution and are generally sensitive to the height of the peak and the tail weight of a distribution. Conceptually, leptokurtosis moves mass from the normal distribution and moves it to the tails and the peak in such a way that the variance is not changed; result looks “peaky” with long tails. Platykuric distributions also hold variance but more from the peak and tails of the normal distribution to the shoulders, resulting in a flat shaping (“Student” [Grosset 1927] said they look like a platypus). Some examples are shown in Figure 2.6, following DeCarlo (1997).
+
+Blocks of Figure 2.6 show a normal distribution with a mean of 0. The histogram on the left shows data sampled from a t distribution with 5 degrees of freedom. We will learn more about the t distribution in Chapter 6. For normal, you only need to know that it is symmetric and that its variance is 5/3. The normal distribution in that panel has been scaled to also have a higher peak, skinnier shoulders, and – the heavy tails of the leptokurtosis in the t distribution. In the right panel, we see a histogram of data sampled from a rectangular distribution, which has a flat peak, heavy shoulders, and is compared to a normal distribution with the same variance. The rectangular distribution is clearly platykurtic.
+
+The standard definition of kurtosis is analogous to skewness, except that we use the 4th power rather than cub the numerator, and we square the variance in the denominator. As in skewness, outliers have an exhausted influence. For a normal distribution, kurtosis = 3, so some statistics packages report kurtosis after subtracting 3; this value of kurtosis is called g2. The kurtosis function of the [moments] package in R provides the transformed variables: for the sample from the t distribution, kurtosis = 7.20; for the rectangular sample, and so $g2=4.20$ and $-1.20$, respectively).
+
+Like the error of skewness, the standard error of kurtosis depends only on the size of the sample: $SE_{kurtosis} = \sqrt{rac{4(N^2-1)SE_{skew}^2}{(N-3)(N+5)}}$. For the data in Table 2.1, $SE_{kurtosis}=$ 0.86. If

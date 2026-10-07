@@ -1,0 +1,17 @@
+# Research Design and Statistical Analysis
+
+2. Power is affected by the nature of $H_0$ and $H_1$. If the statement of $H_1$ is two-tailed, $\alpha = 0.05$, the decision is to reject $H_0$ if $z < -1.96$ or $z > 1.96$. Then there would be two critical values in Figure 5.4, -1.96 and 1.96, and power would correspond to the sum of the areas to the right of 1.96 and to the left of -1.96 under the $H_a$ distribution. We can see in the $H_a$ distribution, the probability of $z < -1.96$ if $H_a$ is essentially zero, and the probability that $z > 1.96$ is less than the probability that $z > 1.645$. Therefore, the one-tailed test is more powerful against the specific alternative, $\mu_a = .357$. On the other hand, this one-tailed test has virtually no power against specific alternatives of the form $\mu < \mu_{prev}$, whereas the two-tailed test has the same probability of rejecting $H_0$ against these alternatives as those of the $\mu > \mu_{prev}$.
+
+3. Power is affected by the population variance and sample size. Increased $\sigma$ and increased $n$ result in smaller errors. As the $SE$ decreases, the sample mean is more likely to be close to the true parameter value. As we noted considering confidence intervals, a smaller $SE$ increases the probability of getting values of $\hat{Y}$ close to the true population mean. Accordingly, as $\sigma$ decreases or $n$ increases, we are more likely to reject the mean under the null hypothesis, if that hypothesis is wrong.
+
+Most hypotheses are false. We should always consider whether $n$ is so large that the detected effect is of little practical or theoretical importance. This is one reason why confidence intervals are an important part of our analyses. Very large sample sizes sometimes result in rejection of a null hypothesis even if the effect is trivial, by providing a bounded estimate of the effect, enables us to assess its importance. In subsequent chapters, we will consider other measures of the effect size.
+
+We can influence variability by our choices of measures and experimental design, as well by controlling extraneous factors that might contribute to variance. Large $n$ we need will depend on the factors we noted and the power we have, as well as the smallest effect size we need to be able to reject with that power. A sample size of $n=40$ would provide more than the .41 power would change if the variance of the depression scores had been less, or if $\mu_a$ had been larger than .557. Many sources, including books (e.g., Cohen, 1988); Kramer & Thiemann, 1987), software, and websites, enable researchers to calculate the sample size needed to have a certain level of power against a specified alternative. We will further demonstrate the use of power calculations for research planning in Chapter 6.
+
+# 5.7 Validity of Assumptions
+
+The validity of the inferences are based on confidence intervals and hypothesis tests rests upon three key assumptions. Scores are assumed to be independent and normally distributed and have a known standard deviation, $\sigma$. Let us consider each of these assumptions in turn.
+
+# 5.7.1 The Independence Assumption
+
+Two scores, $Y$, and $Y_a$, are independent of each other if the probability of any value of one score is unrelated to the value of the other. In the notation of Chapter 3, we have two independent scores if $p(Y|Y_a) = p(Y)$. In other words, two scores are independent if knowing one score provides no information about the value of the other score. If scores are not

@@ -1,0 +1,17 @@
+# An Introduction to Correlation and Regression 463
+
+The summary statistics for the combined data set may not only fail to describe each of the constituent groups appropriately, but may also fail to describe any of groups appropriately. This is important to keep in mind, not only when dealing with correlation, but also when considering more complicated analyses that may take correlations or covariances as inputs, such as factor analysis and structural equation modelling. If the relations not adequately characterize the subgroups making up a data set, neither will quantities based on these correlations, nor the factors in a component or factor analysis. Of course, this caution does not apply only to correlation coefficients; it applies to any statistic. For example, the regression slope would be positive for each of the groups represented in Panel (c) of Figure 17.12 would be negative for the combined data set.
+
+# 17.7.3 Ecological Correlations: Correlation Based on Rates or A
+
+Researchers compute the mean of X and Y scores for several groups, and then correlate the averages to assess the relationship between X and Y. For example, suppose that for the Royer data we compute the average subtraction accuracy and the average multiplication accuracy for the third-, fourth-, fifth-, and sixth-graders. We then correlate the four pairs of means and each grade, that r = .82. However we compute the correlation of the subtraction and multiplication scores within each grade, we get rs of .59, -.18, .23, and .43, for the third through sixth grades, respectively. The point pointed out here is that a correlation based on group averages may not tell us anything useful about the correlations based within the groups.
+
+There are two reasons for discrepancies between correlations on group averages and correlations individuals within groups. For one thing, the group do not convey information about the within-group variability. For another, the factors that cause the variability across the groups may not be the same responsible for the within-group variability. For groups as those represented in Panel (c) of Figure 17.12, we could have strong positive correlations in each of the groups, yet the correlation based on the group means could be strongly negative. Again, correlations between group averages do not communicate the relationship between X and Y between individuals within the groups.
+
+# 17.8 What About Nonlinear Relationships?
+
+So far, we have focused on describing the linear component of the relationship between two variables and measures of its strength. Indeed, correlation coefficients and regression slopes are by far the commonly reported measures of relationship for quantitative variables. It is reasonable, that an approximately linear relationship is the simplest way that two variables can be related. However, there will be situations when it is apparent the scatterplot and the smoothers that the relationship has a nonlinear component. How are we to describe and measure the strength of this component or to describe the overall function what best fits the data? We will answer this question when we discuss multiple regression in Chapter 20.
+
+# 17.9 Concluding Remarks
+
+When we explore how two quantitative variables are related in a sample of data, the first step is to plot the data and look at both the scatterplot and the univariate distributions.

@@ -1,0 +1,17 @@
+(B) We would expect the correlations of tc with bmiplusnorm05 to be smaller than those with bmi, although given that values are randomly chosen from the distribution, this does not have to happen. In one random sample, for women, the correlations with tc are .23 for bmi, .21 for bmiplusnorm05; for men, they are .21 and .08. Of course, different random samples will result in different values.
+
+The larger additional measurement error, the less the variables are predictors, the smaller their regression coefficients. Again for a particular random sample, the results are: for men, tc = 203.22 + .05 -17 bmiplus05, where the coefficients are not significant. For women, tc = 106.19 + 1.74 + .93 bmiplus05, where the coefficients for age (p < .001) and bmiplus05 are significant (p = .012); R² = 268.
+
+(C) This time, for a random sample of noise values, the correlations with tc are .23 for bmi, -.13 bmiplusnorm05; for men, they are .21 and .00. of course, different random samples will result in different values.
+
+The measurement error is larger than in (b), reducing the variables less useful predictors. For a particular random sample, the results are: for men, tc = 221.2 + .00 bmiplus020, where the coefficients are not significant; for women, tc = 125.3 - .19 bmiplus020, where the coefficients for age (p < .001) is significant but bmiplus020 is not (p = .119); R² = 252.
+
+Increased measurement error in the dependent variable increases the size of the error component, so that s and s become larger and R becomes smaller. This increases the size of confidence intervals and decreases the power of significance tests. If there are no violations of assumptions, OLS estimates of the unbiased regression coefficients remain unbiased. In contrast, because the standardized coefficient of X is the standardized coefficient multiplied by sy, standardized coefficients (the so-called beta weights) become systematically smaller as measurement error in the dependent variable. All of these statements are consistent with the regression results:
+
+For women, tcplusnorm040 = 164.6 + .06 age + 2.07 bmi, where in part (a), the coefficient for age is not significant (p = .87) and the coefficient for bmi is (p = .04); R² = .024
+
+For women, tc = 143.18 + 1.26 age +.55 bmi, where the coefficients for age (p < .001) is significant but bmi is not (p = .51); R² = .07. Here, we reduced power and large SE (s) lower CI for the coefficients.
+
+We should emphasize that we have randomly chosen the numbers to add to tc, so if we were to create the variable tcplusnorm040 again, the values would be different, but the two variables would have the same general characteristics.
+
+22.7 Looking at the literature, we can see why there is disagreement about the conclusions. Assessing the influence of class size is an extremely complex problem, largely because there are many variables other than class size that are associated with student performance. Some of these variables reflect student characteristics such as ability and motivation. Others characterize the student's family and background; for example, socioeconomic level (SES) and family size, as well as parental education and support for education. also include age and racial status, where some students have class size reductions to be more beneficial for young and for minoritized students. There are also classroom variables such as the subject that matters and the teaching style that matters. All of these can be

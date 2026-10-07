@@ -1,0 +1,3 @@
+ANOVA based on trimmed means and winsorized variances (see Chapter 8) and arrived at the same conclusions as in the analysis of the original data, although the trimmed data distribution more closely approximated the normal.
+
++   As noted in Chapter 10, this and several alternative post hoc tests are available in many statistical packages. The R commands are shown in Table 11.3, where memout is an aov object. In SPSS, select Analyze, then General Linear Model, and then Univariate. Next select the independent (e.g., organization, delay) and dependent variables (e.g., recall). To test pairwise differences among the organizational levels, select the post hoc option, and then select the test from the array presented. In this example, we chose Tukey.

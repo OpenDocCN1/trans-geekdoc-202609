@@ -1,0 +1,17 @@
+# Research Design and Statistical Analysis
+
+summarizing the analysis. Logically, if we sum all the ranks in each condition, if the groups differ in size, a larger rank-sum will be found in one condition than the other. The rank-sum for the drug condition, which we can find by multiplying the mean rank shown in the histogram in Figure 7.4 by the sample size (29.32*25) is 733, the value SPSS reports for Wilcox W. The Mann-Whitney U and Wilcox W are linearly related:
+
+```
+$U = W - \frac{n_2(n_2+1)}{2}$
+```
+
+Where W is the sum of ranks in one condition, and $n$, is the sample size for the other condition. Using W from the drug condition, we find $U=733 - (25*26)/2 = 408$, the value reported by SPSS. Of course, it is equally appropriate to compute U from the rank-sum of the control condition, which is (21.68*25) = 542. In case, $U = 542 - (25*26)/2 = 217$, the value reported by R. Using either SPSS or R, we reach the same conclusion: The conditions do not differ significantly.
+
+# 7.7.2 The Trimmed t
+
+The other option for dealing with the outliers in the memory data set is the trimmed t (Tukey & McLaughlin, 1963; Yuen, 1974) cited in Chapter 6. When the tails of the distribution are longer than would expect in a normal distribution, this test often prove more powerful than the usual t. Further, the trimmed t has the advantages of permitting confidence intervals and power calculations. It also allows size calculations, although the result is difficult to interpret (Cumming, 2013). Of course, the trimmed t suffers from the criticism that a substantial fraction of the data is discarded, with a corresponding decrease in degrees of freedom.
+
+The trimmed t for two independent samples involves two separate treatments of the scores in each condition: (1) trim $k$ scores from the upper and lower ends of the sorted data values and calculate the means of the remaining values; (2) winsorize the scores by replacing each of the $k$ lowest values with the next lowest and replace the highest scores with the next highest. The difference in the trimmed means is used to calculate the numerator of the trimmed $t$, and the winsorized data are used to calculate the standard error for the denominator. Note that winsorizing reduces the degrees of freedom in the data, so that standard error is based on $2n-1-2k$ degrees of freedom. Wilcox (1997) is recommended that $k=20\%$ of the scores, and an example of the resulting data is shown in the IAI_memory.file. In that fact, the Method column specifies the condition, and Y contains the original scores, T shows the 20% trimmed means, and W contains the winsorized values.
+
+In R, we can use a function to calculate the trimmed means: $mean(Y, trim = .2)$, where Y contains the data for a single condition, or we use the YuenTest in the [DesTools] package to calculate the trimmed t as the confidence interval for the difference in trimmed means (see Figure 7.5). Doing so for the memory data reveals that the 95% confidence interval is $[-3.11,-09]$ and the trimmed $t=-2.17$ (as R evaluates conditions in alphabetical order, as previously noted). Thus, this analysis allows us to reject the null hypothesis that the drug has no effect. We achieved this outcome by eliminating the influence of outliers and long tails in the data; Yuen (1974) showed that the trimmed t has greater power than Welch's under these conditions.

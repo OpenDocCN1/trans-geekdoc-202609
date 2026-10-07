@@ -1,0 +1,14 @@
+# Some Final Thoughts, Suggestions,
+and Cautions
+
+In this book, we have discussed how to describe and make inferences from data, with special emphasis on applications of ANOVA and the regression framework for statistical analysis. We use this final chapter to highlight 22 comments, cautions, and common errors that should be kept in mind when reading, conducting, and reporting research.
+
+# 26.1 Designing the Research
+
++   1. The generality of results depends on how the sample is selected. The use of inferential statistics allows us to make statements about a population based on a sample randomly selected from it. However, although there are formal procedures for selecting random samples from a population of interest, these are rarely used in most research contexts. There are several practical constraints that result in the use of non-random samples.
+
+One constraint is that matters of convenience influence participant recruitment. In psychological research, many researchers take advantage of the availability of students enrolled in introductory psychology classes. Studies in cognitive, educational, social, and even clinical psychology heavily tap this source of participants. This practice limits the generality of study findings, although the exact nature of the limits is unclear and likely to depend on the nature of the phenomena under investigation. Findings from a basic perceptual process can probably be generalized to young adults regardless of ethnic level, ethnicity, socioeconomic status, and host of other variables. On the other hand, findings from a study of reasoning are more likely to be restricted in generality, perhaps only applying to young adults with similar educational backgrounds.
+
+Also, participants are usually self-selected. They choose whether to sign up for an experiment at a particular time during the semester, or to respond to a phone call or email requesting their participation. In addition, many research studies have eligibility criteria that further constrain sampling. The Seasons study was conducted through a medical school and had access to the members of a large HMO. Even so, the 5,300 potential participants initially contacted by telephone, only 641 agreed to participate, kept their initial appointments, met all the eligibility requirements (see Chapter 25), and completed the baseline questionnaires. These considerations mean that findings from a study may generalize only to those who reasonably match the characteristics of the participants who self-select and meet eligibility criteria.
+
+Related to issues of self-selection are attrition considerations. Participant attrition is common in some types of research. Animal research involving surgical procedures
