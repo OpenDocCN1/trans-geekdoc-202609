@@ -1,0 +1,352 @@
+
+如列表 II.11.6 所示，循环仅用于形成接收者的邮件地址。向这些地址发送消息的 `mail()` 函数仅被调用了一次。
+
+## II.11.4. 防止群发邮件
+
+实现 5 分钟延迟最接受的方法是注册所有访问邮件服务的用户的 IP 地址。由于延迟仅为 5 分钟，从一个 IP 地址访问互联网的用户可能不会遇到任何不便。
+
+实现此方案最简单的方法是使用 MySQL。创建一个名为 `mailerlist` 的表，由以下两列组成：
+
+- 用于存储 IP 地址的 `BIGINT` 字段
+- `putdate` — 一个 `DATETIME` 字段，用于存储从对应 `ip` 字段存储的 IP 地址最后访问邮件服务器的时间
+
+创建此类表的 `CREATE TABLE` 查询见列表 II.11.7。
+
+### Listing II.11.7. 创建 mailerlist 表的查询
+
+```php
+CREATE TABLE mailerlist (
+ip bigint(20) NOT NULL default '0',
+putdate datetime NOT NULL default '0000-00-00 00:00:00'
+) TYPE = MyISAM;
+```
+
+表创建完成后，剩下的工作就是存储访问邮件服务的用户的 IP 地址以及他们访问的时间。当用户尝试再次使用邮件服务时，将检查表中是否存在该 IP 地址。
+
+IP 地址以 8 字节整数的形式存储。使用 MySQL 的 `INET_ATON()` 函数将 IP 地址从 `xxx.xxx.xxx.xxx` 格式转换为整数格式；反向转换则使用 `INET_NTOA()` 函数完成。
+
+### Listing II.11.8. 检查用户 IP 地址
+
+```php
+<?php
+// 连接数据库
+include "config.php";
+// 删除过期的记录
+$query = "DELETE FROM mailerlist\nWHERE PUTDATE > NOW() - INTERVAL 5 MINUTE";
+if(!mysql_query($query)) exit(mysql_error());
+// 检查用户在过去 5 分钟内是否
+// 发过消息
+$query = "SELECT COUNT(*) FROM mailerlist\nWHERE ip = INET_ATON($SERVER[REMOTE_ADDR])";
+$cnt = mysql_query($query);
+if(!$cnt) exit(mysql_error());
+$total = mysql_result($cnt,0);
+if($total > 0)
+exit("每五分钟只允许一条消息。\n请稍后重试服务.");
+// 如果消息已发送，存储用户的 IP 地址
+// 和发送时间。
+if(mail($mail, $theme, $body)) {
+    $query = "INSERT INTO mailerlist\nVALUES(INET_ATON($SERVER[REMOTE_ADDR]), NOW())";
+    if(!mysql_query($query)) exit(mysql_error());
+}
+else {
+    exit("抱歉，消息未发送。");
+}
+?>
+```
+
+执行列表 II.11.8 所示的脚本时，第一个 SQL 查询会删除 `mailerlist` 表中所有于 5 分钟之前的记录。接着，脚本会检查尝试访问邮件服务的 IP 地址（存储在 `$_SERVER['REMOTE_ADDR']` 数组元素中）是否仍在表中。如果检查结果为真，则终止脚本执行。否则，脚本将调用 `mail()` 函数，在发送成功的情况下，将用户的 IP 地址和发送时间存入 `mailerlist` 表中。
+
+## II.11.5. 使用 SMTP 继发发送邮件
+
+PHP 没有内置用于处理简单邮件传输协议（SMTP）服务器的函数。列表 II.11.9 显示了使用远程继发发送邮件消息的自定义函数。
+
+这种发送方式仅通过公共邮件继发或允许使用发送者 IP 地址发送邮件的邮件继发服务器实现。然而，最近作为反垃圾邮件的一部分，公共继发服务器已经关闭，企业网络管理员和系统管理员不允许从并非其网络内部的地址发送邮件。
+
+### Listing II.11.9. 使用远程 SMTP 服务器发送消息
+
+```php
+<?php
+// 消息发送函数：
+// 打开套接字，与服务器对话，
+// 写入数据，关闭套接字
+function send($server, $to, $from, $subject="", $msg, $headers="")
+{
+    // 构建头头字段
+    $headers =
+    "To: $to\nFrom: $from\nSubject: $subject\nX-Mailer: My Mailer\n$headers";
+    // 连接到服务器的25 端口；
+    // $fp 变量包含
+    // 链接标识符。
+    $fp = fsockopen($server, 25, &$errno, &$errstr, 30);
+    if (!$fp) die("服务器 $server 连接失败: $errno, $errstr");
+    // 如果连接尝试成功，
+    // 将数据写入套接字；
+```
+
+首先，脚本使用 `$fsockopen()` 函数在 25 端口与远程 SMTP 服务器的邮件继发器建立连接。然后，将本章早些部分描述的 SMTP 命令发送到服务器。消息文本必须以单独占一行的空行结束；因此，消息发送字符串必须包含一个点：
+
+```php
+fputs($fp, "$msg\n.\r\n");
+```
+
+## II.11.6. 确定继发地址
+
+特定 SMTP 服务器的邮件继发名称可以通过列表 II.11.10 中的脚本来确定。该脚本显示了邮件继发列表及其优先级。
+
+### Listing II.11.10. 获取邮件继发列表
+
+```php
+<?php
+// 一个邮件地址
+$email = "mail@yandex.ru";
+// 将地址拆分为包含两个元素的数组：
+// 邮箱箱名和服务器名
+$arr = explode("@", $email);
+// 将邮件服务器名称放入 $host 变量
+$host = $arr[1];
+// 确定 $host 服务器的邮件继发并
+// 显示它们，指示优先级
+$relays = getmxrecords($host);
+foreach($relays as $relay) {
+    echo $relay . "\n";
+}
+?>
+```
+
+```php
+}
+// 关闭连接
+close($sock);
+}
+?>
+```
+
+## II.12.3. 跟进代理服务器（Referral Server）
+
+主 Whois 服务没有关于请求 IP 地址的信息，它会在 `ReferralServer` 字段中提供一个指向该 IP 地址范围的区域 Whois 服务的链接。因此，访问 Whois 服务的过程应该被实现为一个独立的函数，例如命名为 `whois()`。该函数接受两个参数：Whois 服务的地址和目标 IP 地址。如果返回的报告包含一个指向代理服务的链接，则将递归地调用 `whois()` 函数。列表 II.12.3 显示了相应的脚本。
+
+- II.12.3. 递归调用代理服务器
+
+```php
+<center>
+<form method=post>
+<input type=text name=ip size=35>
+<input type=submit value='Enter IP 地址'></form>
+</center>
+<?php
+if(!empty($_POST['ip'])) echo whois("whois.arin.net"
+```
+
+```php
+fputs($sock, $ip."r\n");
+// 从文件指针中读取
+$text = "";
+while (!feof($sock)) {
+    $text = fgets($sock, 128)."<br>";
+}
+// 关闭连接
+close($sock);
+```
+
+```php
+// 寻找代理服务器
+$pattern = "ReferralServer: whois://([^\n<]+)|i";
+preg_match($pattern, $text, $out);
+if (!empty($out[1])) return $out[1], $ip);
+else return $text;
+```
+
+```php
+}
+?>
+```
+
+![](img/a893312ec68b8170fe567f785e95c06e_360_0.png)
+
+图 II.12.2. IP 地址 213.115.162.82 的所有权信息
+
+# 第二部分：解决方案
+
+脚本总是始从 ARIN Whois 开始搜索，并在必要时转到代理服务。脚本访问过的 Whois 列表将在最终报告之前显示。因此，属于 MySQL AB 的 IP 地址 213.115.162.82 的报告可能如图 II.12.2 所示。
+
+从图 II.12.2 可以看出，脚本访问了两个 Whois：ARIN 和 RIPE。
+
+IP 地址 192.131.90.161 的报告（对应网络名 http://www.w3c.org）可能如图 II.12.3 所示。该报告显示，此 IP 地址的信息在亚太网络信息中心（APNIC）Whois 服务 http://www.whois.apnic.net 中被找到。
+
+![](img/a893312ec68b8170fe567f785e95c06e_361_0.png)
+
+## II.12.4. 从域名确定 IP 地址
+
+借助 `gethostbyname()` 函数，可以将域名转换为对应的 IP 地址（列表 II.12.4）。
+
+### 列表 II.12.4. 使用 gethostbyname()
+
+```php
+<?php
+$hostname = "localhost";
+$ip_address = gethostbyname($hostname);
+echo ("The IP address of $hostname is: $ip_address");
+?>
+```
+
+你只需要在列表 II.12.5 中添加转换代码即可获取所需的 Web 。
+
+### 列表 II.12.5. 从域名确定 IP 地址
+
+```php
+<form method=post>
+<input type=text name=ip size=35>
+<input type=submit value='Enter domain name'>
+</form>
+<?php
+if(!empty($_POST['ip']))
+{
+    // 连接到监听
+    // whois.arin.net 服务器上 43 端口的 TCP 套接字
+    // 返回一个文件指针，$sock。
+    $sock = fsockopen("whois.arin.net", 43, $errno, $errstr);
+    if (!$sock) exit($errno,$errstr);
+}
+else
+{
+    // 将 $_POST["ip"] 变量中的字符串
+    // 写入文件指针
+    fputs ($sock, gethostbyname($_POST["ip"])."\r\n");
+```
+
+```php
+// 从文件指针中读取
+while (!feof($sock)) {
+    echo (str_replace(":","&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",",gets($sock, 128))."<br>");
+}
+// 关闭连接
+close($sock);
+?>
+```
+
+## II.12.5. 从 IP 地址确定域名
+
+这个问题可以通过 `gethostbyaddr()` 函数来解决，该函数返回对应 IP 地址的域名（列表 II.12.6）。
+
+### 列表 II.12.6. 使用 gethostbyaddr() 函数
+
+```php
+<?php
+echo gethostbyaddr("81.19.69.28");
+?>
+```
+
+## II.12.6. 该域名是否被占用？
+
+Whois 服务也可用于判断特定的域名是否被占用。为此，必须将域名发送到 Whois 服务器的 43 端口。然而，由于每个顶级域名都由其自己的 Whois 服务器提供，任务变得复杂：.com、.edu、.net 和 .org 域名中的名称必须在 `whois.verisign-grs.net` 服务器进行检查，而 .uk 域名中的名称则在 `whois.thnic.net` 服务器进行检查。因此，为了涵盖大量的域名，必须咨询许多 Whois 服务器。首先，创建一个脚本来检查 .com 区域的域名（列表 II.12.7）。
+
+# 第二 II.12 章：Whois 服务 第 351 页
+
+### 列表 II.12.7. 检查 mysql.com 域名是否被占用
+
+```php
+<?php
+//为脚本设置无限执行时间
+set_time_limit(0);
+// 域名
+$domain = "microsoft.com";
+// 咨询 Whois 服务器并获取
+// 关于域名的信息
+$fp = fsockopen("whois.verisign-grs.net", 43);
+futs($fp, "$domain\r\n");
+$str = "";
+while (!feof($fp)) {
+  $str .= fgets($fp, 128);
+}
+close($fp);
+// 显示答案
+echo "<pre>";
+echo $str;
+echo "</pre>";
+?>
+```
+
+脚本的操作结果显示在图 II.12.4 中。Whois 服务器对域名的回答包含所有者的信息和过期日期。
+
+图 II.12.4. Whois 服务器对域名的回答
+
+# 353 第二 II.12 章：Whois 服务
+
+在本书出版时，mysql3.com 域名可能已被注册。遗憾的是，回复格式并不是统一的，不同的 Whois 服务器对未注册域名会有不同的回答。因此，必须单独对每个 Whois 服务器的答案进行处理。任务可以通过列表 II.12.8 所示的脚本来实现。
+
+该脚本的完整源代码可以在附的光盘中找到。
+
+### 列表 II.12.8. 用于域名的通用脚本
+
+```php
+<?php
+//为脚本设置无限执行时间
+set_time_limit(0);
+$servers = array(
+array("ac", "whois.nic.ac", "No match"),
+....
+array("com", "whois.verisign-grs.net", "No match"),
+array("au", "whois.aunic.net", "No Data Found"),
+array("com.br", "whois.nic.br", "No match"),
+....
+array("com.cn", "whois.cnnic.net.cn", "No entries found"),
+array("com.eg", "whois.ripe.net", "No entries found"),
+array("com.hk", "whois.hnic.net.hk", "No Match for"),
+array("com.mx", "whois.nic.mx", "Nombre del Dominio"),
+array("com.ru", "whois.ripn.ru", "No entries found"),
+array("com.tw", "whois.tnic.net", "NO MATCH TIP"),
+....
+array("zj.cn", "whois.cnnic.net.cn", "No entries found")
+);
+// 域名
+$domain = "mysql.com";
+```
+
+# 第二部分：解决方案
+
+```php
+// 提取一级域名
+$first_dom = substr($domain, strpos($domain, "\.") + 1);
+// 获取负责
+// $first_dom 域名的 Whois 服务器名称
+for($i = 0; $i < count($servers); $i++) {
+    if($servers[$i][0] == $first_dom)
+    {
+        // 记录服务器名称
+        $whois = $servers[$i][1];
+        // 记录表示“不存在该域名”的短语
+        $not_found_string = $servers[$i][2];
+        // 退出循环
+        break;
+    }
+}
+// 检查是否找到并定义了负责
+// 给定域级的 Whois 服务器
+if(empty($whois)) {
+    exit("未找到对应的 Whois 服务器!");
+}
+// 咨询 Whois 服务器并获取
+// 关于域名的信息
+$fp = fsockopen($whois, 43);
+fputs($fp, "$domain\r\n");
+$str = "";
+while(!feof($fp)) {
+    $str .= fgets($fp,128);
+}
+close($fp);
+// 如果回答中包含“不存在该域名”的
+// 短语，则该域名未注册。否则，
+// 该域名已注册。
+if(!preg_match("/.\$not_found_string\."/is", $str)) {
+    echo "该域名已被占用!";
+}
+```
+
+# 第 II.12 节：Whois 服务 355
+
+```php
+else
+{
+  echo "该域名可用";
+}
+```
