@@ -1,0 +1,9 @@
+# Convolutional Neural Networks for Intelligent Fault Diagnosis
+
+# INTRODUCTION
+
+Deep neural networks (DNNs) like autoencoder DNNs (Sun et al. 2016) and deep belief networks (Shao et al. 2017) have been proven to be effective for intelligent fault diagnosis. However, these fully connected network structures are unable to learn the local and invariant features, which is critical for effective feature extraction from varied vibration signals. Convolutional neural networks (CNNs) (Le Cun et. 1990) adopting sparse local connections between layers are naturally equipped with the intrinsic inductive bias of locality and translation equivariance. Consequently, CNNs are appropriate for learning from massive data and extracting local and invariant features. CNN is a biologically inspired variant of neural network, which has been proven to be successful in computer vision tasks (Krizhevsky, Sutskever, and Hinton 2012; Zeiler and Fergus 2014). Compared to vision tasks that address two-dimensional (2D) data, CNN can also be applied to series data as in LeCun and Bengio (1995) and Ossama et al. (2014), where the operation of a filter over sub-regions is performed along the time axis or the frequency axis to derive a feature map. Therefore, benefiting from CNNs’ intrinsic inductive bias of locality and translation invariance, CNNs have been widely investigated in fault diagnosis both on 2D image (Wang Peng, Yan, and Gao 2017; Lu, Wang, and Zhou 2017) and 1D time-series signal (Ince et al. 2016; Jing et al. 2017) and have shown satisfactory performance.
+
+Next, the basic structure of CNN and a CNN-based intelligent fault diagnosis method (CDFL) (Sun et al. 2017) are introduced, respectively.
+
+The rest of this chapter is organized as follows: basic modules of CNN, presentation of a CNN-based intelligent fault diagnosis method, datasets, evaluation results, and further discussions.

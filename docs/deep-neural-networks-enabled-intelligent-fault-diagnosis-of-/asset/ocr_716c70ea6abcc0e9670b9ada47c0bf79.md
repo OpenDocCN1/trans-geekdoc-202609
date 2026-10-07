@@ -1,0 +1,15 @@
+# Unsupervised Deep Transfer Learning for Intelligent Fault Diagnosis 113
+
+2. Multi-domain UDTL: These can be further categorized into multi-domain adaptation and domain generalization (DG) by the usage of the target data in the training phase. Multi-domain adaptation means that the unlabeled samples from the target domain participate in the training phase, and DG is the opposite. Besides, these two conditions can be further categorized as label-consistent and label-inconsistent UDTL.
+
+# Motivation of UDTL-Based IFD
+
+Distributions of training and test samples are often different, due to the influence of working conditions, fault sizes, fault types. Consequently, UDTL-based IFD has been introduced recently to tackle this shift problem since there are some shared features in the specific space. Using these shared features, applications of UDTL-based IFD can be mainly classified into four categories: Different working conditions, different types of faults, different locations, and different machines.
+
++   1. Different working conditions: Due to the influence of speed, load, temperature, etc., working conditions often vary during the monitoring period. Collected signals contain domain fault, which means the distribution of data may differ significantly under different working conditions. The aim of UDTL-based IFD is that the model trained using signals under one working condition can be transferred to others under different working condition.
+
++   2. Different types of faults: Label difference between source and target domains may exist since different types of faults would happen on the same component. Therefore, there are three cases in UDTL-based IFD. The first one is that unknown fault types appear in the target domain (set transfer). The second one is that partial fault types of the source appear in the target domain (partial transfer). The third one is that the first two occur at the same time (universal transfer). The aim of UDTL-based IFD is that the model trained with some types of faults can be transferred to the target domain with different types of faults.
+
++   3. Different locations: Because sensors installed on the machine are often responsible for monitoring different components, and sensors located near the fault component are more suitable to indicate the fault information. However, key components have different probabilities of failure rates, leading to the situation where signals from different locations have different labeled data. The aim of UDTL-based IFD is that the model trained with plenty of labeled data from one location can be transferred to the target domain with unlabeled data from other locations.
+
++   4. Different machines: Even labeled fault samples of real machines are difficult to collect from the test cost and security. Besides, enough labeled data can be generated from dynamic simulations or fault seeding experiments. However, distributions of data from dynamic simulations or fault seeding experiments are different but those from real machines, by the similar structure and measurement

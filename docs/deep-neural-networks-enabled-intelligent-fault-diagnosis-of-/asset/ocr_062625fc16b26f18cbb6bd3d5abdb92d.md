@@ -1,0 +1,16 @@
+# TABLE 4.2 Comprehensive Comparison of Classification Accuracy
+
+| | | BRB | BRM | RMAM | SSTM | UBM | Average | Time |
+|---|---|---|---|---|---|---|---||
+| BPNN | 74.20% | 92.00% | 82.80% | 94.60% | 82.30% | 79.40% | 84.22% | 15 s |
+| DNN-SAE | 85.05% | 97.90% | 99.65% | 98.85% | 87.35% | 96.35% | 44.36% | 40 s |
+| CNN 1 | 85.00% | 83.50% | 55.50% | 100.00% | 93.00% | 98.00% | 85.67% | 250 s |
+| CNN 2 | 96.80% | 99.90% | 100.00% | 100.00% | 98.20% | 99.19% | 99.13% | 500 s |
+| WPT + SVM | 96.50% | 100.00% | 100.00% | 100.00% | 94.50% | 100.00% | 98.50% | 43 s |
+| CDFL + SVM | 97.80% | 100.00% | 100.00% | 100.00% | 98.45% | 99.90% | 99.36% | 5 s |
+
+The classification accuracy and training time of all compared methods are shown in Table 4.2. Compared to the one hidden layer networks BPNN, DNN-SAE, and one-layer CNN, the proposed CDFL method has a higher classification accuracy. The performance gain achieved by the CDFL method compared to the supervised CNN with the same structure is significant as 14% in the average accuracy. It shows that in fault diagnosis, the proposed method that incorporates a new pre-training of CNN parameters deforms performs slightly better than the two-layer CNN, although the two-layer CNN is more complex than the CDFL method. When compared to the traditional CNNs, besides the higher classification accuracy, the training time of CDFL + SVM is much less. At the same time, compared to the state-of-the-art method, WPT, the CDFL method has shown better performance.
+
+# Analysis of Different Input Data Length for Our Models
+
+In the above section, the input data length of all is set to 799. And it is meaningful to investigate the influence of the different input length, e.g., the number of sampling points, classification performances of the proposed model. The proposed method is also compared with two best competitive methods including WPT + SVM and two-layer CNN. Here, the input data length is varied from 399 to 1999 with a step size of 200. As shown in Figure 4.7, the performances of CDFL and WPT methods increase with the input data length increasing in the given scale, the CNN with two-layer structure decreases sharply when the input data length is larger than 1199. The results for two-layer CNNs are not plotted when the input data length is larger than 1199. The results of the first two models may be explained by the fact that the input data with a large sampling point contains more information, and the classification performance can be further improved with a large input data length. As CNN models, there exists a serious overfitting problem when input data length is long. It may be explained by the fact that the limited training data sets become relatively small for the CNN models when the input data may need to adjust the filters' size. However, this does not not hinder the performance of the proposed CDFL model, which further verify the effectiveness of the discriminative local filters learning scheme using BP-based neural network. Last, it is shown that the performance of CDFL model is worse than the one of WPT + SVM when the input data length is over 1000. It can be explained that the bigger the input data length, the,
