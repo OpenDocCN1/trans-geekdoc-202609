@@ -1,0 +1,1334 @@
+- pgno: 0
+  md: "# Applied Catalysis B: Environmental 339 (2023) 1231228\n\nContents lists available\
+    \ at ScienceDirect\n\n# Applied Catalysis B: Environmental\n\njournal homepage:\
+    \ https://www.elsevier.com/apcatb\n\n# Machine learning filters out electrocatalysts\
+    \ in the massive ternary alloy space for fuel cells\n\nYoungtake Parkᵃᵇ,ᶜᵈᵉ, Chang-Kyu\
+    \ Hwangᵇᶜᵈᵉ,¹, Kihoon Bang⁵e, Doosun Hong⁶f, Hyobin Nam⁷g,\nSooncho Kwon⁸i, Chul\
+    \ Ch Yeol⁸h, Jiwan An⁹, Byeong-Kwon Ju¹⁰,\nSang Han Kim¹¹, Ji Young Joon¹¹, Seung\
+    \ Yong Lee¹², Min Kim¹³³, Donghun Kim¹⁴,\nSang Soo Han*, Hyuck Lee Mo*\n\nᵃ Materials\
+    \ of Science and Engineering Center, Korea Institute of Science and Technology\
+    \ (KIST), 291 Daehak-ro, Useong-gu, 34141, Republic of Korea\nᵇ Hydrogen Research\
+    \ Department, Korea Institute of Energy, 152 Gyeongju-ro, Useong-gu, 34129, Republic\
+    \ of Korea\nᶜ Materials Research Center, Korea Institute of Science and Technology\
+    \ (KIST), 5 Hwarang-14-geil, Seongbuk-gu, 02792, Republic of Korea\\ᵈ Catalysis\
+    \ Research Center, Korea Institute of Science and Technology (KIST), 5 Hwarang-14-geil,\
+    \ Seongbuk-gu, 02792, Republic of Korea\ne Computational Science Research Center,\
+    \ Korea Institute of Science and Technology (KIST), 5 Hwarang-14-geil, Seongbuk-gu,\
+    \ 02792, Republic of Korea\n프 Materials and Process Simulation Center (MSC), University\
+    \ of California, Pasadena, CA\n⁷ Chemical Engineering Department, University of\
+    \ California, Berkeley, 94720, USA\nH⁸ Department of Nano-Bio Engineering Center\
+    \ National University of Science and Technology (NST), Daejeon, 232 Now, Yuseon-gu,\
+    \ 01811, Republic of Korea\n⁹ Department of Mechanical Engineering, University\
+    \ of Science and Technology (POSTECH), Cheonghang-ro, 77, Pohang-si, Gyeongsbuk-do\
+    \ 37063, Republic of Korea\n¹⁰ Eamerve Materials Research Center, Korea Institute\
+    \ of Science and Technology (KIST), 5 Hwarang-14-geil, Seongbuk-gu, 02792, Republic\
+    \ of Korea\n¹¹ KIST-Department of Converting Science and Technology, Kyung Hee\
+    \ Lee, 02447, Republic of Korea\n\n# ARTICLE INFO\n\n+   - Fuel cells\nElectrocatalyst\n\
+    Ternary alloy\nMachine learning\nCatalyst design protocol\n\n# ABSTRACT\n\nDespite\
+    \ their potential, multi-component materials have not been actively considered\
+    \ as catalysts due to the massive compositional complexity. However, targeting\
+    \ electrocatalysts for fuel cells we present a machine learning (ML)-driven catalyst\
+    \ screening protocol to identify structures of structural stability, selectivity,\
+    \ performance, and cost-effectiveness. We tested 17 candidates out of 30 elements\
+    \ through three test materials in the alloy coreshell{X(Y)Z}Fe for each cathode\
+    \ and anode of fuel cells. The candidates are potentially stable, lower-cost and\
+    \ higher-performance than a Pt film. CuAuPt, one of the final candidates, outperformed\
+    \ a Pt film by an approximately 2-fold increase in current density with the 2.7-fold\
+    \ reduction in Pt usage. This demonstration demonstrates that our ML-driven strategy\
+    \ can be highly useful for exploring multicomponent systems and catalysis design.\n\
+    \n# 1. Introduction\n\nPlatinum (Pt), a highly scarce and expensive element, is\
+    \ used as an indispensable ingredient in fuel cells. For the last decade, extensive\
+    \ efforts have been made to develop less expensive catalysts that maintain catalytic\
+    \ activity comparable to that of [1–4]; however, the others are either poor in\
+    \ Pt or merely a Pt-based material [5–9].\n\nFor the cathode where oxygen reduction\
+    \ reaction (ORR) occurs, Pt(with Pt skin) is the state of the art; on the anode\
+    \ where hydrogen reaction (HOR) occurs, Ni is used due to its high activity to\
+    \ avoid the severe CO issues but is not durable [10]. It is difficult to find\
+    \ novel and lower-cost materials for both the cathode and anode without sacrificing\
+    \ the performance.\n\n> * Corresponding author: At Materials Research Center,\
+    \ Korea Institute of Science and Technology (KIST), 5 Hwarang-14-geil, Seongbuk-gu,\
+    \ 02792, Republic of Korea.\n** Corresponding authors.\n* E-mail: jongminkim@kist.re.kr\
+    \ (J.M. Kim), donghun@kist.re.kr (D. Kim), sangsooo@kist.re.kr (S.S. Han), hmlee@kaist.ac.kr\
+    \ (H.M. Lee).\n authors contributed equally.\n\nhttps://doi.org/10.1016/j.apcat.2023.1231228\n\
+    Received 7 April 2023; Revised in form 1 July 2023; Accepted 22 July 2023\nAvailable\
+    \ online: 24 July 2023\n\n0926-3373/2023 Elsevier B.V. All rights reserved."
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Y. Park
+
+
+    # Applied Chemistry B: 399 (2023) 123128
+
+
+    Metal alloying using an excellent catalyst strategy [11] can significantly modify
+    the electronic structure and consequently the catalytic properties of metals.
+    Alloys in fuel cells, however, have been limited to bimetallic cases. In various
+    experiments, transitions often differ from those of pure metals. A Pt-based alloy
+    with a Pt skin (Pt$_x$X$_y$, where X-arbitrary element) in the cathode of fuel
+    cells. This Pt$_x$X$_y$ strategy has been extensively explored, and ranges from
+    Pt-transition-metal interfaces (Pt-Co, Ni, Cu, and Fe) to those similar to lanthanides
+    (Y-Sc and Sc) [14]. These alloys have improved performance because the Pt skin
+    ensures stability in harsh environments and offers better tunability of the cathode.
+
+
+    mechanical, performance, and cost effectiveness. We identified 37 candidates for
+    each ORR and OHR electrode, with lower cost and higher performance than Pt. Through
+    experimental verification, we used a CuAgPt alloy, of 10 final candidates for
+    the ORRs, substantially obtaining a Pt film in the cathode with improved current
+    density. Our ML-based screening protocol enabled the identification of an efficient
+    catalyst strategy to address other catalysis problems.
+
+
+    # 2. Experimental section
+
+
+    # 2.1. DFT adsorption
+
+
+    Despite these achievements, Pt-based bimetallic alloys have failed to fully solve
+    the problems in fuel cells with high cost (density of Pt) at the cathode, slow
+    kinetics (ORR activities at the cathode), and CO poisoning (a durability issue
+    that is the main bottleneck). In broader spatial, temporal sense, ternary alloys
+    emerge [18-22]. In this study, we focus on ternary ORR efficiency, the focus of
+    study of the Pt-Au [23, 24] and Pt-Ni-Co [25] alloys, which have been considered
+    promising but not extremely effective due to the massive surface effect. For exploring
+    metal interactions, ternary metal alloys offer numerous candidates with various
+    properties.
+
+
+    Adsorption energies were calculated using the following equation: $\Delta E_{ads}
+    = \Delta E_{ads} - \Delta E_{slab} + \Delta E_{gas}$; where $\Delta E$ indicates
+    the total energy of the adsorbate-surface system. The adsorption energy was referenced
+    to the surface and all the gas species, including H, $H_2O$, and CO [29]. The
+    Vienna Abinitio Simulation Package (VASP) was used for all DFT calculations. The
+    predicted adsorption energies were used to filter the candidate surfaces to be
+    considered.
+
+
+    These difficulties require more efficient routes, namely machine learning (ML)
+    approaches [26-29]. A number of models aimed at predicting adsorption energies
+    on catalytic surfaces were developed based on the density of states (DOS) of the
+    materials [30-36]. Graph neural networks (GNNs) are also used, where atoms and
+    bonds are represented as nodes and edges of a graph respectively, to predict adsorption
+    energy without prior preparation [37-40]. These GNN models were trained for diverse
+    alloy types but have been used in exploring many binary and ternary alloys.
+
+
+    The free energies were calculated under standard conditions (pH = 0, 298 K; P
+    = 1 atm at a potential of U = 0). We calculated the free energy of the solvent
+    protons and electrons (H$^+$) that was equilibrated with hydration of the gas
+    (phase 0.5 h). The thermodynamic free energy was defined as $\Delta E_{ads}$,
+    where $\Delta E_{ads}$ denotes the free energy correction for the adsorption of
+    the adsorbate. The calculations included $H_2O$, H and CO, as in $\Delta E_{ads}$
+    calculations [49, 52, 53]. Solution effects were considered using constant values
+    (0.5 eV; U = 0.25 eV) obtained from explicit water models as reported in a -
+
+
+    In this work, we present a catalyst design protocol in ML filters out potentially
+    efficient and low-cost materials for the ternary alloy space for fuel cells. Among
+    many structural properties in the ternary space, conventional alloy-metal shells
+    (X,Y,Z) and Pt can differ are the focus of this study [48]. Based on the screening
+    protocol with approximately ten adsorption energy values obtained at the DFT level,
+    a fully ML-screening process with criteria including structural stability (thermodynamic
+    and
+
+
+    2'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Y. Park et al.
+
+
+    Appliedget B: 39 (2023) 123128
+
+
+    previous literature [54].
+
+
+    # 2.2. ML model development
+
+
+    For SGNN, the graph was constructed based on the structure of the two layers of
+    dopants and adsorbates. The elements of each $i^{th}$ atom (node) in the system
+    are entered into a vector $v_i$, which contains the information available in the
+    atomic table of elements. In this work, we used a vector $v_i$ that includes atomic
+    features along with their ranges, colors. The edge (bond between $i^{th}$ and
+    $j^{th}$ atom) is denoted by $d_{ij} < r_{\delta}$, where $d_{ij}$ is the distance
+    between $r_i$ and $r_j$, and $\delta$ is the length of the bond. The bond is represented
+    by a vector $u_{ij} = e_k$, where $k$ is the $i^{th}$ center node and $j$ is the
+    neighbor node. We also included the direction $j$ in the message vector. Distance-invariant,
+    the values of $u_{ij}$ and $d_{ij}$ were numerically generated using formulas.
+
+
+    ```
+
+    $v_i^{(l+1)} = \sigma(W_v^{(l)} \sum_{j \in \mathcal{N}(i)} W_u^{(l)} u_{ij} \odot
+    v_j^{(l)} + b^{(l)})$
+
+    ```
+
+
+    where the convolutional layer and filters are denoted by $l$ and $f$ respectively,
+    $W_v^{(l)}$, $W_u^{(l)}$, and $b^{(l)}$ are the convolution weights and biases
+    of $l^{th}$ layer and $f^{th}$ filter. $\odot$ denotes element-wise multiplication,
+    $\sigma$ is a sigmoid function, and $EL$ is the exponential linear activation
+    function [40]. The normalized sum of all atom vectors in the $l^{th}$ layer is
+    denoted by $S_i^{(l)} = \sum_{j \in \mathcal{N}(i)} v_j^{(l)}$.
+
+
+    The model was trained using the pooling phase. The pooled vectors were connected
+    with the adsorption energy of the molecule. The optimized values are shown in
+    parentheses: the number of convolutions and filters (1, 2), layers (3), learning
+    rate ($5 \times 10^{-3}$), then decreasing learning rate (0.99 for every 100 epochs),
+    number of filters (4-6), and the number of randomly distributed atoms in each
+    (1000), batch size (31, 64), and total number of epochs (800). The mean squared
+    error (MSE) was used to evaluate the loss function $J$. The Adam optimizer was
+    used to train the model. To minimize over-fitting, $L^2$ regularization techniques
+    were employed. Table S2 includes a list of hyperparameters and parameters for
+    the optimization process.
+
+
+    # 2.3. Experimental fabrication of CuAu by sputtering
+
+
+    The prepared Ni electrodes were placed in a vacuum chamber of a direct-current
+    (DC) sputtering system. To create a CuAu thin film, 99.99% pure 3-Cu target and
+    99.99% pure Au targets were used. Gold foil was pressed crossed on the cathode,
+    the two targets, and the anode, and then the process was carried out. The pressure
+    of the vacuum chamber was $2.5 \times 10^{-5}$ Torr. The
+
+
+    pressure was maintained at 2.5 mTorr by flowing Ar (15 sccm) gas. DC sputtering
+    power of 150 W was applied to the sputtering target for 30 min, leading to a CuAu
+    nm thick on the substrate (for example, Ni electrodes, Si).
+
+
+    # 2.4. Experimental fabrication of the Pt layer by atomic layer deposition (ALD)
+
+
+    Pt was deposited on the substrate (Au thin film on Ni electrodes, Si) using a
+    pulsed sputtering system (ULVAC, ARJ-300) at room temperature under a temperature
+    of $100^{\circ}C$. In the vacuum chamber, a sputtering cathode of the Pt target
+    and an electrode were placed in the cathode, and a cylindrical chamber was used
+    for the sputtering. A pulsed pulse induced an discharge from the cathode to the
+    target. The average deposition rate of the target was measured, which lasted typically
+    less than 1 min. During this period, the temperature increased by tens of degrees
+    ($^{\circ}C$) by vaporizing the cathode material and generating a high kinetic
+    energy of ions. The controllable parameters in this discharge process were voltage
+    V, the cathode pressure C, and the number of pulses n. The deposition of Pt was
+    controlled
+
+
+    # 2.5. Electrochemical measurement
+
+
+    All electrochemical measurements were performed with a 3-electrode rotating disk
+    electrode system in a potentiostat (Autolab, PGStaty). A nickel disk electrode
+    with an area of 0.196 $cm^2$ was used as the electrode. Ag/AgCl (3 M KCl) were
+    used as the reference and counter electrodes. The potentials were measured to
+    evaluate the reversible hydrogen reaction (HER) using the following equation:
+
+
+    ```
+
+    $E = E_{Ag/AgCl} + E''_{Ag/AgCl} + 0.0591 V$
+
+    ```
+
+
+    where E is the converted potential vs. RHE, $E''_{Ag/AgCl} = 0.210 V$ and E is
+    the experimentally measured potential against Ag/AgCl. The currents were recorded
+    at a scan speed of 5 $mV/s$ with 1000 rpm in 0.1 - 0.1 M KOH. The current density
+    is
+
+
+    ```
+
+    $i = J - j$
+
+    ```
+
+
+    where j is the experimentally measured current density and J is the diffusion-limiting
+    current density [5].
+
+
+    # 2.6. Characterization
+
+
+    The X-ray diffraction (XRD) results were measured by a DiffractAdvanced instrument
+    (Bruker, Germany) using Cu K as the source. Scanning electron microscopy (SEM)
+    (Inspect F50, FEI USA) and EDS were used to examine the morphology and structures
+    of the samples in this study. All samples were prepared for cross-sectional TEM
+    lamellae using a focused ion beam (FIB, NX5000, Hitachi, Japan).
+
+
+    3'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Results and discussion
+
+
+    # 3. Adsorption energy as a descriptor for the fuel cell performance
+
+
+    The first step is to identify the descriptors for ORR and HER performance. For
+    the ORR, where O2 molecules are reduced to H2O via a four-electron pathway (Fig.
+    1A), the rate determining step (RDS) is the largest uphill step from O to H2O
+    at the electrochemical potential (1.23 V vs RHE). ORR over-low scaling relations
+    suggest that one of the following mechanisms is limiting: (1 + +E) - O* (O2* -
+    OH*) or (1.23) - OH* (H2O - OH*) or (1.45) - OH* (H2O - OH*) (Fig. 1B).
+
+
+    On the other hand, the HER is a simpler reaction (H2+) involving a two-electron
+    pathway with intermediate steps (H*). H2 molecules are adsorbed on the surface
+    of the metal, and the H2 adsorbed on the catalytic surfaces dissociate into hydrogen
+    atoms (H*), finally recombining to evolve as H2. Here, a potential difference
+    much smaller than 0.24 eV (at Pt(111)) is desired. Therefore, CO poisoning on
+    the catalytic surfaces is not a problem for the anode; however, CO poisoning is
+    the bottleneck [56,57]. Therefore, the promising zone for the HER is defined by
+    Fig. 1D with diagrams of ΔG_H of 0.24 eV and -1.4 eV (both values corresponding
+    to pure Pt).
+
+
+    # 3. Database generation and ML model development
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_3_0.png)
+
+
+    Previous studies in [1] indicate that the adsorption energies of species (O, OH,
+    H, and CO) are directly related to ORR and HER performance. Using DFT calculations,
+    we constructed our surface database of 9267 adsorption energies for these five
+    species. The calculated table includes 10 elements and 348 binary alloys (Fig.
+    A2). For the L2 alloy, X (matrix element) is an FCC metal, and Y (alloying element)
+    is FCC, BCC, or HCP from element
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_3_1.png)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_3_2.png)
+
+
+    Fig. 1. (A) ORR free energy diagrams for associative ORR pathways on Pt(111) and
+    Au(111). RDS are highlighted with arrows to indicate the important step in the
+    reaction. (B) Two-dimensional (2D) contour plot of limiting potential of ORR.
+    The five pure metals are shown on the axes. The contour plot shows the scaling
+    relation between ΔG_OH and ΔG_O (ΔG_OH - ΔG_O = 3.36 eV), which lies in a range
+    similar to that of a previous report [67]. The promising zone is defined as the
+    area with U value greater than 0.56 V on Pt(111). (C) HER free energy diagrams
+    of Pt(111) and Au(111). (D) Comparison of the free energies of CO and H for 9
+    test metals. The promising zone for the HER is defined the region where |ΔG_H|
+    is smaller than 0.24 eV and ΔG_CO is greater than -1.4 eV (both Pt(111) values).'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Key adsorbates
+
+
+    In anode (HOR) In cathode (ORR)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_4_0.png)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_4_1.png)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_4_2.png)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_4_3.png)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_4_4.png)
+
+
+    **Fig. 2. Database generation and model training.** (A) Types of adsorbates in
+    the database (O, OH, OOH, and HOR and ORR performance). (B) Adsorption energy
+    populations for eachbate. This self-established database contains a total of 9287
+    adsorption energies for 109 and 348 binary L1 alloy systems (X, Y). The L1, L2
+    alloy systems were chosen because they are composed of FCC elements (X) and BCC,
+    BCC, and HCP elements (Y) in periods 2-6 and groups 1-4. (C) Feature optimization
+    process lists types of features. The optimal combination was found to be point
+    number, melting point, and volume (D) MAE vs Epoch (E) Comparison between the
+    predicted adsorption energy and DFT adsorption energy. The loss function increasing
+    with enrichment is presented in the range
+
+
+    period 2-6 and groups 1-14 on the periodic table (Fig. S1). The closest-packed
+    surface of the slabs is (111), which is the L1-L2 binary alloy interface. More
+    details about database generation are presented in the Methods section, and the
+    number of data points for each adsorbate is shown in Table S3, Fig. 2B shows the
+    population distribution of our adsorption energy ($\Delta E_{ads}$) for each adsorbate.
+    Note that the energies spans a wide
+
+
+    range (-14 to 5 eV), and the dataset is formed using various chemical elements
+    (41 elements). Using unit and uniform data sampling is critical for several ML
+    models. The ML model to predict adsorption energy used in this work is the slab-graph
+    convolutional neural network (SGNN), where graph constructions and bond vectors
+    are modified from the CGNN model for catalytic system applications (Fig. S3),
+    Detailed'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 3.3. A fully-ML based screening protocol
+
+
+    information about graph encoding, convolution and pooling functions, network architectures,
+    and hyperparameters is provided in the Methods section. For nodes, twelve elements
+    available in the periodic table were considered, but only combination of four
+    features (group, period, metal number, and ionization potential) was used to predict
+    the adsorption energy of 5209 values (Fig. 2C). The addition of extra features
+    caused undeniably decreased the mean absolute error. In Fig. 2 and Table 5, the
+    ML test of each element (O, OH, HH, and Co) is shown with a MAE ranging from 0.06
+    to 0.14 eV, probably due to the narrower range of adsorption energies. The MAE
+    of the OH adsorption was achieved at 0.29 eV at a low level, due to the smallest
+    size of the dataset. The total MAE was 0.16 eV after 5-fold cross-validation,
+    significantly better than that in our previous report due to the increased dataset
+    size [37]. No overfitting was observed during ML training, as shown in the first
+    in of Fig. 2E.
+
+
+    Using the well-trained model, we explored the massive ternary alloy space. This
+    study, focusing on a particular structure named, L1; alloy-shell(X/Y/Z), catalysts,
+    which are not part of the battery operation. The harsh environment of fuel cells
+    (FC) in our target structure (X/Y/Z), in which we included Pt and Au as elements
+    based on the standard reduction potential. In Fig. 3, the fully-ML based screening
+    protocol for catalysts was proposed which does not require any DFT or experimental
+    theory-level inputs. For the prediction of the adsorption energy of X/Y/Z, we
+    used the same adsorption method as in the binary alloys, with the exception of
+    OH. In the case of OH, we used a different model. This adjustment was facilitated
+    by the rapid predictive capabilities of the machine learning model. A total of
+    3180 ternary alloys and 82,967 real-slab abstract structures were fed into the
+    filtering process, which would not be practically feasible solely using
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_5_0.png)
+
+
+    # Test ternary candidates (3180)
+
+    Test binding energies (82,967)
+
+
+    +   1. Shell stability
+
+    Standard reduction potential (E*)
+
+    2. Core stability (CGCNN)
+
+    3. Core-shell stability
+
+    Lattice parameter
+
+    Δ (core - shell) < 5%
+
+    4. Performance (SGCNN)
+
+    Binding energy prediction
+
+    ORR: |U| > 0.56 V
+
+    HHR: |ΔH| < 0.24 eV
+
+    ΔG_CO* > -1.4 eV
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_5_1.png)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_5_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Applied Chemistry B: Environmental, 339 (2023) 123128
+
+
+    Y. Park et al.
+
+
+    mechanical methods used in the screening protocols. The three criteria used for
+    the stability of each core and shell structure. For the element (Z), we selected
+    the electrochemically stable elements based on the Pourbaix diagrams that did
+    not dissolve under various conditions such as OR and Au, Ir, Pd, Ag, Rh, Ba, Tc,
+    Ce and W for the HOR. On the other hand, for the core (Z), we estimated its thermodynamic
+    stability (Ef < 0.1 eV). We used the predicted GCNN model (MAE of only 0.04 eV)
+    to predict the formation energies of these alloys. Note that the threshold was
+    0.1 eV for any promising candidate materials.
+
+
+    The second criterion was the mechanical stability between the core shell, which
+    was verified by its lattice mismatch [58]. The cases with lattice parameter mismatch
+    than 5 % were not selected at this stage. The last criterion is the catalytic
+    performance, and the predicted GCNN model was used. For the OR, materials with
+    U (pure Pd) were passed. For the HOR, materials with $|\Delta G_{HOR}|<0.24$ eV
+    and $\Delta G_{HOR}>-1.4$ eV (the values of pure Pd) passed. In addition we excluded
+    materials that received electroactive elements (alkali metals and alkaline earth
+    metals) such as Li, Na, Mg, K, Ca, and trace elements (Hg, Ti, Pb), and the very
+    expensive element Re. These filtering processes resulted in only 55 and 94 promising
+    candidates for the OR and HOR, respectively, which are potentially stable and
+    may outperform each other experimentally.
+
+
+    # 3.4. DFT of filtered-out candidates
+
+
+    Although multi-level DFT verifications are promising, we must further verify them
+    prior to experiments. The GCNN and screening models involve some errors in their
+    predictions for materials (not part of our training dataset), and DFT-verifications
+    are expected to reduce these errors. First, for the OR, the main checkpoint of
+    DFT verification is whether or not U, (limiting potential) is greater than 0.56
+    V (the value of pure Pd) passed. In Fig. 4a, only of the 54 promising candidates
+    were verified by DFT to determine which would outperform Pt(111). For the HOR,
+    four are Au metal shells, and the remaining six are Pt metal shells, which are
+    listed in the order of high U to low U values (DFT predictions).
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_6_0.png)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_6_1.png)
+
+
+    0.92 eV, PdNiAl (U=0.87 eV), PdNiAu (U=0.87 eV), PdNiPt (U=0.92 eV), PdNiIr (U=0.72
+    eV), PdNiCu (U=0.72 eV), PdNiHf (U=0.72 eV), and PdHfMo (U=0.69 eV). The free
+    binding energies of these materials are presented in Fig. 54. Note that the calculated
+    values are based on the DFT calculations of relations among metal units, which
+    show that adding alloying improves properties of different from pure or other
+    metals. In particular, we found a promising harmonic alloy with only used [59].
+    It is noteworthy that some alloys, such as PdTiAl and PdNiAl, show much higher
+    U values than that of pure Au. This result is surprising as pure Au is only active
+    for the OR, while Au is highly active for the HOR.
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_6_2.png)
+
+
+    In Fig. 4d, these of 10 candidates are listed. For each core-shell structure,
+    the value of the shell is much smaller than that of the core, and thus, the evaluations
+    are based on the price of the alloy. In particular, materials with Cu as a metal
+    element (CuAlGa, CuAlHf, and CuHfPt) are much expensive so they were excluded
+    from the candidates.
+
+
+    In addition, the HOR candidates were also verified via DFT computations. The main
+    checkpoint was whether or not $|\Delta G_{HOR}|$ is less than 0.24 and $\Delta
+    G_{HOR}$ is greater than -1.4 eV to evaluate high HOR
+
+
+    Fig. 4. DFT verification of the 10 promising candidates for OR and HOR. A performance
+    of the full-layer materials model is verified by DFT. 2D activity maps in the
+    vicinity of OOH and OH free energies. Au and Pt metal shells are shown in red
+    and blue, respectively. The candidates exhibit all U values greater than 0.65
+    V, which is the value of pure Pt, making them candidates that outperform Pt(111).
+    (B) For OR, the limiting potential is shown. For the fixed x-axis (left part),
+    the Pt potential is set to 100%. Materials with Cu as a metal element (CuAlGa,
+    CuAlHf, and CuHfPt) are much expensive so they were excluded from the final candidates.
+
+
+    7'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Park et al.
+
+
+    # Applied Chemistry: Environmental 339 (2023) 123128
+
+
+    with a Ag, and 4 metals with r ±5. The five metals in
+
+    HOR of OR activity are shown in the order of high to low Ag|Au|
+
+    (DFT values): Pt3@Ag ($\Delta G_{HI}$=0.01 eV, $\Delta G_{CO}=-0.01 eV),
+
+    Al2@Pd ($\Delta G_{HI}$=0.01 eV, $\Delta G_{CO}=-0.44 eV), AlW@Pd (\Delta G_{HI}$
+
+    -0.76 eV, $\Delta G_{CO}=-0.82 eV), W@Rh ($\Delta G_{HI}$=0.02 eV, $\Delta G_{CO}$
+
+    -0.76 eV) and Au@Co ($\Delta G_{HI}$=0.02 eV). The
+
+    Gibbs energy diagrams of these materials are provided in Fig. S5.
+
+    Moreover, the five candidates in terms of the CO resistance are
+
+    in in the order of high to low $\Delta G_{CO}$ (DFT values): Pt3@Au ($\Delta G_{HI}$
+
+    -0.01 eV, $\Delta G_{CO}=-0.05 eV), Al2@Au ($\Delta G_{HI}$=0.01 eV, $\Delta G_{CO}$
+
+    -0.09 eV), Au@Pt ($\Delta G_{HI}$=0.01 eV, $\Delta G_{CO}=-0.23 eV), Al2Au@Pt
+
+    ($\Delta G_{HI}$=0.01 eV, $\Delta G_{CO}$=-0.09 eV).
+
+    $\Delta G_{CO}$=-0.37 eV). Interestingly, Pt3@Ag appeared to be the top
+
+    candidate in the high-Au and high CO candidates, potentially offering
+
+
+    high OR activity and CO resistance. In addition, the
+
+    final 37 CO candidates are provided in Table S5. The alloy cores
+
+    containing Al or Cu as ternary elements are much more complex than the
+
+    other candidates or Pt.
+
+
+    While machine learning has significantly accelerated predicted
+
+    subjective gap between DFT and machine learning models
+
+    pists due to the limited prediction of accuracy. The
+
+    discrepancy can be minimized by two major factors. First,
+
+    primary target (the ternary alloys) suffer from a paucity of adsorption
+
+    energy data. Second, the goal of constructing a reliable database, the
+
+    of explicit incorporation of ternary alloy energy data into our
+
+    analysis presents a significant challenge. Our, machine learning
+
+    model demonstrates a relatively poor accuracy for OH
+
+
+    # A
+
+
+    # B
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_7_0.png)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_7_1.png)
+
+
+    # Cu,Au deposition
+
+    by magnet sputter
+
+
+    # Pt deposition
+
+    Arc plasma deposition
+
+
+    At%
+
+    Cu
+
+    73.12
+
+    Au
+
+    68.88
+
+
+    Ni electrode (RDE) Wafers substrate
+
+
+    Cu-sputtering
+
+
+    CuAu on
+
+    Ni electrode
+
+
+    1 cycle < 1 shot
+
+    Time
+
+    Discontinuous deposition
+
+    Pt
+
+    target
+
+    Rotation
+
+
+    Cu target
+
+    Au target
+
+
+    2 \m
+
+
+    500 nm
+
+
+    Cu3Au@Pt
+
+
+    Cu3Au
+
+
+    # C
+
+
+    Cu3Au@Pt (80 shots)
+
+
+    Intensity (a.u.)
+
+
+    Cu3Au
+
+
+    Cu3Au-JORD-625-127
+
+    Cu3Au-JORD-621-137b
+
+
+    30 40 50 60 70 80
+
+
+    2 The (degree)
+
+
+    # D
+
+
+    # 50 shots
+
+    (non-monayer)
+
+
+    # 80 shots
+
+    (+ 1 ~ 6 nm)
+
+
+    # 120 shots
+
+    (+ 2 ~ 5 nm)
+
+
+    # 200 shots
+
+    (+ 4 ~ 4 nm)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_7_2.png)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_7_3.png)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_7_4.png)
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_7_5.png)
+
+
+    Areas not
+
+    covered by Pt
+
+
+    Pt (1.6 nm)
+
+    Si wafer
+
+
+    Pt (2.5 nm)
+
+    Si wafer
+
+
+    Pt (4.4 nm)
+
+    Si wafer
+
+
+    5 nm
+
+
+    5 nm
+
+
+    5 nm
+
+
+    5 nm
+
+
+    20 nm
+
+
+    20 nm
+
+
+    20 nm
+
+
+    20 nm
+
+
+    Pt Si
+
+
+    Fig. 5. Experimental fabrication and characterization of Cu3Au@Pt thin film catalyst
+    for OR. (A) Schematic illustration of the fabrication process of a rotating disk
+    electrodes (RDEs) were used to measure the electrochemical OR activity, is
+
+    shown in Fig. S56, S12 and S13, (B) Cross-section image of Cu3Au thin film deposited
+    by magnet sputtering. The insets indicate the corresponding top-view
+
+    SEM image and EDS analysis result. (C) XRD spectra of pristine CuAu and Cu3Au@Pt
+    (80 shots) follows Pt after the ADP process. (D) Cross-sectional
+
+    tEM and mapping images of the Pt layer depending on the nature of plasma pulse
+    shots through the ADP process.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Y. Park et al.
+
+
+    # Applied Catalysis B: 339 (2023) 123128
+
+
+    adsorbate, which contributes to the discovery of DFT and machine learning results.
+    As indicated in Table 5, the predictive accuracy of our OOH isomers is better
+    than other adsorbates. This can be attributed to the high computational cost associated
+    with OOH, which in a more limited dataset for OOH adsorbates is shown in Table
+    3. Moving forward, expanding the database, by increasingly including the amount
+    of OOH water available and that a more comprehensive database would enable more
+    accurate predictions, though the gap in prediction remains
+
+
+    shots, the Pt shells were much thicker, 2.5 nm and 4.4 nm. Additionally, we performed
+    X-ray diffraction (XRD) measurements to investigate the integration of CuAu and
+    Pt thin film (Fig. S1). As such, we observed an increase in the intensity of the
+    XRD peaks associated with increasing thickness of the Pt shell deposited on the
+    CuAu substrate. The peak shifted to 39.75° in the (111) plane of Pt, which shifts
+    to a higher angle due to the compressive stress from the CuAu thin film. This
+    integration with the CuAu core enhanced the OR properties of Pt in the core-shell
+    comparison to pure Pt.
+
+
+    # 3.5. Experimental setup of novel ORR catalysts
+
+
+    The promising catalysts suggested from the above design protocol were needed to
+    be experimentally verified. Since the sluggish ORR kinetics at the cathode are
+    the key bottleneck for fuel cell performance, we performed electrochemical measurements
+    for each material. Specifically, CuAu@Pt films showed higher activity (0.72 V)
+    than pure Pt (0.56 V) but also exhibited improved effects (Fig. 4). In addition,
+    previous experiments reported better CuAu-based alloys, showing the potential
+    versatility of the CuAu core-shell system.
+
+
+    In fact, the ORR activity was higher than that of nanoparticles (NP) to capture
+    the intrinsic catalytic performance between pure Pt and our CuAu@Pt thin film.
+    For core-shell NP synthesis by wet chemical methods, it is difficult to control
+    the size and shape of the cores. By controlling the experimental parameters (e.g.,
+    varying ratios between catalyst, lysomer, ionomer, and solvents), we fabricated
+    CuAu@Pt thin films using processes based on direct-current magnetron sputtering
+    (DC-MS) and showed that catalytic properties can be enhanced by excluding toxic
+    factors
+
+
+    The CuAu thin film (alloy core part) was deposited by DC-MS. The 3:1 stoichiometric
+    CuAu alloy was obtained by the sputtering process. When such a sputtering was
+    performed on a 3-inch substrate by increasing the number of Au atoms, the thickness
+    of the CuAu thin film increased from 7.7 to 29.4 nm (Fig. S2). Using the energy
+    dispersive spectroscopy (EDS), scanning electron microscopy (SEM), and transmission
+    electron microscopy (TEM), we confirmed that a CuAu alloy film (thickness 800
+    nm) was well uniform.
+
+
+    The next step is film deposition on the CuAu thin film surfaces, with deposition
+    of a Pt thin film using DC-MS (Fig. S3). The DC-MS technique is a type of physical
+    vapor deposition (PVD) which is directly evaporated with high-energy plasma pulses
+    in a vacuum. Unlike continuous or pulsed-based PVD methods the advantage can be
+    found by tuning the pulse width of shots with a short duration ( < 16 ms). For
+    Pt shell thickness control the MP deposition process can achieve accurate results.
+
+
+    The Pt thickness linearly increases as n increased (Fig. S10). As such, for less
+    thickness, the Pt film was only partially covered the substrate (non-monolayer).
+    For the case of 80 shots, the Pt thickness was approximately 1.6 nm, and the Pt
+    horizontal distribution was uniform. For the others 120 and 200
+
+
+    # 3.6. ORR performance of CuAu@Pt
+
+
+    As shown in Fig. 4, the ORR characteristics of CuAu@Pt films with various shell
+    thicknesses on the Ni electrode for fuel cell through the liquid half-cell. The
+    test samples included CuAu@Pt films with varying shell thicknesses (2.4 nm to
+    4.4 nm). The shell with thickness identical to the pure Pt film (4.4 nm) in terms
+    of size of the core-shell showed improved effects. We can finally compare the
+    core-shell effects of the CuAu core versus pure Pt thin film in an electrochemical
+    test. For the electrochemical measurements, we performed tests in an alkaline
+    electrolyte (0.1-0.1 M KOH electrolyte)-one
+
+
+    The results (Fig. S8) and Tafel plots show the kinetic current density (J) as
+    shown in Fig. 4 g, b, and c. The ORR activity of CuAu@Pt film with 1.6 nm Pt shell
+    (60 shots), was higher than the other cases. In terms of the cases of 2.4 nm,
+    2.5 nm (200 shots) and 4.4 nm (240 shots) Pt shells, the shells were significantly
+    less effective. The core-shell system performed better.
+
+
+    The kinetic current density was calculated at 0.85 mV/cm², which is 1.7 times
+    greater than that of the pure Pt film (0.67 mV/cm²) (Fig. S9). This comparison
+    shows that CuAu and Pt shell have a significant ORR activity in excellent, consistent
+    with our DFT and ML results. For the case of the non-monolayer (50 shots) Pt shells,
+    the film surface was not fully covered, as shown in SEM. The substrate was not
+    fully covered (1.09 mA/cm²) which was less than for the 1.6 nm case (surface Pt
+    film).
+
+
+    For the 2.5 nm and 4.4 nm Pt shells, the shells were significantly thicker, and
+    the ORR activity decreased cm². For the 1.6 nm case, the Pt loading was 3.4 μg/cm²,
+    which is about 2 times larger than 2.4 nm and 1.8 times smaller than the loading
+    of 9.4 nm (5.2 μg/cm²).
+
+
+    The CuAu@Pt 1.6 nm thick Pt film exhibited the kinetic density twice times higher
+    than of films with much thicker Pt shells (4.4 nm and 29.4 nm). In important factors
+    in practice, we evaluated the electrochemical stability of CuAu@Pt thin film in
+    the alkaline electrolyte for 5000 seconds'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'Y. Park et al.
+
+
+    Applied Catalysis B: Environmental 339 (2023) 123128
+
+
+    # # A
+
+
+    # # Improved activity of Cu3Au@Pt (Core-shell)
+
+
+    # # Similar activity to Pt thin film
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_9_0.png)
+
+
+    Cu3Au
+
+
+    < 50 shots (monolayer)
+
+
+    80 shots (1.6 nm)
+
+
+    > 120 shots (2.5 nm)
+
+
+    # # B
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_9_1.png)
+
+
+    # # C
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_9_2.png)
+
+
+    # # D
+
+
+    ![](img/cd0ab411b3d0b09b0220510c4f154bd8_9_3.png)
+
+
+    Fig. 6. Electrochemical ORRs of Cu3Au@Pt thin films. (A) Cu3Au@Pt thin film for
+    ORR to Pt thickness controlled by number of plasma shots in the APD process. (B)
+    ORR polarization curves of Cu3Au and Cu3Au/Pt with various thicknesses (non-monolayer,
+    1.6 nm, 2.5 nm and 4.4 nm). (C) The kinetic current density at 0.95 in an O2-saturated
+    0.1 M KOH solution. (D) Tafel plot of the kinetic current density as function
+    of thickness of the Pt shell. The bar in the graph indicates the region where
+    the monolayer (1.6 nm) exists. The red dashed lines represent the kinetic current
+    density of the Pt thin film (29.4 nm) without the Cu3Au core film.
+
+
+    (Fig. 5a). As a result, there was a light decrease of 7 mV for 29.4-nm thin film
+    and about 9 mV for Cu3Au/Pt thin film (1.6-nm Pt) in terms of Pt-thin film after
+    the APD treatment. In other words, the electrochemical stability of the core-shell
+    thin films in the alkaline environment was less stable than that of Pt thin films,
+    indicating that the core-catalyst performs not only by excellent activity but
+    also by high durability.
+
+
+    We also measured the ORR performance of the Cu3Au/Pt thin film in an acidic electrolyte
+    (0.1 M HCl) and 29.4-nm thin film in Pt. The Cu3Au/Pt thin film (1.6-nm Pt) is
+    much better than that of 29.4-nm thin film in an acidic electrolyte, in electrolysis
+    (Fig. 5b). While a continuous decrease in ORR performance was observed for both
+    films due to the dissolution of the Cu3Au core, the ORR performance improvement
+    due to the core-shell effect was confirmed in both alkaline and acidic environments.
+
+
+    adsorption energy for diverse adsorbates, including H, CO, O, and OH. In our ML-based
+    design protocol, we screened materials in terms of their stability, catalytic
+    performance, and effectiveness. For the ternary alloy shell (Cu3Au)Fe, this sequence
+    identified 27 promising candidates for ORR HER, which potentially had lower cost
+    and higher performance than Pt. Finally, we observed that the Cu3Au/Pt, one of
+    10 selected materials for the ORR, enhanced the Pt film, as confirmed by the experimental
+    results. The current energy reduction is significant. The ML method demonstrated
+    that
+
+
+    can be universally applied to other component systems and catalyst problems.
+
+
+    # # Code availability
+
+
+    The SGNN is implemented using the TensorFlow framework (version 1.7.0) in Python
+    (version 3.5). To obtain 5-fold cross-validation results for each SGNN using the
+    GeForce RTX 2080 Ti GPU, an approximate hour of time is needed. The source can
+    be found here: https://github.com/myhyungoon/SGNN.
+
+
+    # # 4. Conclusion
+
+
+    In summary, after identifying useful and low-cost catalysts in fuel cells, we
+    proposed a fully ML-driven screening protocol to explore the massive alloy space.
+    A graph neural network was trained with self-established DFT databases to accurately
+    predict the
+
+
+    10'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# CRedit contribution status
+
+
+    Youngtae Park: Conceptualization, Data curation, investigation, Methodology, Project
+    administration, and writing. Project administration, Chang-Kang Hwang: Investigation,
+    Methodology, Visualization, Kihon Lee, Doason Hong, Dayun Han: Method, Soonho
+    Kho: Data curation. Byung Chul Yee: Software, Methodology. Jung In-won Kim: Investigation.
+    Youngtae Park: Investigation. Project administration, Supervision, and writing.
+    Jong Min: Project administration. Supervision, and Writing – editing. Donghun
+    Kim: Project administration, Supervision, and Writing – editing.
+
+
+    # Declaration of Competing Interest
+
+
+    The authors declare they have no competing financial interests or personal relationships
+    that could have appeared to influence the work in this paper.
+
+
+    # Data Availability
+
+
+    Data are available from the corresponding authors on request.
+
+
+    # Acknowledgments
+
+
+    This work was supported by Research Funding and Innovation Center of Samsung under
+    Project Number SRC-MA1801-03 and the National Center for Research Data (NCMRD)
+    by the National Research Foundation of Korea funded by the Ministry of Science
+    and ICT (Project Number 2021M3A07C208939)
+
+
+    # Appendix. Supporting Information
+
+
+    Supplementary data for this article can be found in the online version: https://doi.org/10.1016/j.apcat.2023.103818
+
+
+    # References
+
+
+    +   [1] G. W. Sievers, A. J. Jensen, J. Quisinon, A. F. Bonanza, E. Bitta, M.
+    Okdowski, A. J. Dwerka, K. J. Jellison, T. E. Smithline, S. Sadovskiy, K. J. Kim,
+    M. J. Lee, J. J. Jard, B. Bouquet, and K. G. Garcia-Escamondo, Electro-Supported
+    Pt-Co nanoparticles with high specific surface area for oxygen evolution reaction,
+    Nature Catalysis, 5, 975–980 (2020). https://doi.org/10.1038/s41927-020-0263-y
+
+
+    +   [2] Y. Park, J. Choi, J. Lee, J. Choi, H. Lee, J. Kim, H. Lee, Structural
+    engineering of Ag-FeO2-doped catalysts for enhancing oxygen evolution reaction,
+    Science China China, 9, 221502 (2019). https://doi.org/10.1038/s41467-019-12150-2
+
+
+    +   [3] S. Choi, Y. Kwon, J. Park, and K. Lee, In-situ synthesis and characterization
+    of Pt-decorated Fe3O4/C nanoparticles for oxygen evolution reaction, Journal of
+    Applied Electrochemistry 126, 134466 (2021). https://doi.org/10.1016/j.achem.2021.134466
+
+
+    +   [4] J. Lee, C. Park, S. Kim, H. Lee, and J. Kim, Electrochemical activity
+    of Pt-based alloy nanoparticles for catalytic oxygen reaction, Chemistry Communications,
+    58, 14096 (2022). https://doi.org/10.1039/D1CC01133A
+
+
+    +   [5] J. Jung, C. Lee, K. Kim, J. Lee, H. Lee, H. Ryu, E. Lee, Synthesis of
+    core-shell Pt-Co nanorods for oxygen evolution reaction with enhanced activity
+    and stability, Applied Surface Science, 516, 150022 (2020). https://doi.org/10.1016/j.apsusc.2020.150022
+
+
+    +   [6] H. Seo, Y. Joo, J. Lee, J. Kim, S. Lee, V. Taekmin, M. Namve, Y. Kim,
+    T. Lee, Electrochemical electrolysis by metal-ion insulation for durability enhancement,
+    International Journal of Hydrogen Energy, 48, 117333 (2023). https://doi.org/10.1016/j.ijenergy.2022.117333
+
+
+    +   [7] K. Kang, B. Y. Lee, D. Kim, S. Han, H. Lee, Accelerated nucleation of
+    electrocatalytic Pt-Ru-based nanoparticles for direct methanol fuel cells, Sci.
+    Reports Nanotechnology, 4, 11121 (2021). https://doi.org/10.1038/s41575-021-01121-9
+
+
+    of Pt nanoparticles with few surface defects: a top-down approach.
+
+
+    +   [8] J. M. Kim, J. Kim, Y. Kim, J. Lee, J. Lee, H. Kim, Y. Park, J. Kim, J.
+    Lee, J. Lee, H. Kim, Y. Jung, J. Kim, Coordination-modified three-dimensional
+    electrocatalysts for high fuel performance, Science Adv., 7, adau8 (2021). https://doi.org/10.1126/sciadv.adauu8
+
+
+    +   [9] J. M. Kim, J. Kim, Y. Kim, J. Lee, J. Lee, H. Kim, Y. Park, J. Kim, Atomic-free
+    hybrid architectures for hydrogen fuel cells, Adv. Mater. 32, 2002220 (2020).
+    https://doi.org/10.1002/adma.20002220
+
+
+    +   [10] L. Wang, Y. Zhou, Y. A. Subramanian, K. Subramanian, X. Liu, Y. Chang,
+    J. Zhang, J. Zhang, and Y. Zhang, Y. Zhang, High-performance methanol fuel cells
+    via platinum/carbon nanotube hybrid heterojunction, Applied Catalysis B: Energy,
+    279, 3479–3483 (2019). https://doi.org/10.1016/j.apcat.2019.05.247
+
+
+    +   [11] S. M. Zhang, K. Zhou, C. Jin, Z. B. J. J. Li, Y. Wang, Stacking, dissociation
+    and reconstruction of Pt-based catalysts for methanol oxidation reaction, Nature
+    Communications, 12, 4021 (2021). https://doi.org/10.1038/s41467-021-24150-0-n
+
+
+    +   [12] R. Joeslee, J. E. Wright, N. Chorky, Activity of electrocatalysts for
+    oxygen reduction reaction by tuning surface area, Chem. Eng. J. 168, 1015–1020
+    (2010). https://doi.org/10.1016/j.ijchem.2009.09.033
+
+
+    +   [13] V. M. Stambovler, B. B. Foster, M. Young, P. G. Rao, N. C. Lucas, L.
+    Silva, Molecular activity of active catalysts with high exposed surface area,
+    in Science, 315, 499–503 (2007). https://doi.org/10.1126/science.1130333
+
+
+    +   [14] F. Jamiliani, J. Jolscheier, K. Jörch, N. Allorsky, Activity of alloy
+    and coreshell nanoparticles for oxygen reduction reaction, Angewandte Chemie,
+    45, 552–556 (2006). https://doi.org/10.1002/anie.2006000
+
+
+    +   [15] L. Su, G. Chen, Y. Kim, X. Zhou, J. J, G. Lu, Y. Chen, S. Guo, J. Li,
+    J. J, G. Lu, Y. Chen, S. Guo, Engineering of high-efficiency Pt-based catalysts
+    for oxygen reduction reaction, Chemical Engineering Journal,420, 128637 (2021).
+    https://doi.org/10.1016/j.cej.22021.128637
+
+
+    +   [16] T. Chen, J. Wang, F. Baek, J. S. Joo, J. Lee, M. Kim, H. Barkwald, Y.
+    Kim, and D. Ji, Long-term stability of Pt-based catalyst fuel cells for direct
+    methanol oxidation, Nature Science, 360(6386), 80–8 (2018). https://doi.org/10.1126/s41567-018-0112-x
+
+
+    +   [17] S. Ji, Y. Yoo, S. Joo, J. Lee, H. Kim, S. Lee, H. Kim, Y. Park, and J.
+    Kim, Effect of Pt-Co alloy on activity of the oxygen reduction reaction, J. Phys.
+    Chem. C, 115(23), 24882–24893 (2011). https://doi.org/10.1021/ac20343b
+
+
+    +   [18] C. Wang, M. J. Choi, P. O. Barnett, R. Rhee, J. G. Gurney, D. J. Lee,
+    V. K. Kim. M. Park, R. V. Stambovler, Stability and activity of Pt-based catalysts
+    for fuel cells, Journal of Power Sources, 225, 73–80 (2010). https://doi.org/10.1016/j.jpower.2009.09.013
+
+
+    +   [19] J. Lee, H. Lee, J. Kim, B. Lee, E. Lee, J. Lee, M. Kim, W. Lee, Y. Lee,
+    A. Godard, F. Portella, Y. Kim, J. Jung, Experimental stability of Pt-based fuel
+    cells, Nature Communications, 13(1), 534 (2022). https://doi.org/10.1038/s41467-022-29427-y
+
+
+    +   [20] Y. Park, J. Lee, J. Kim, J. Lee, S. Lee, H. Kim, S. Lee, H. Kim, Y. Park,
+    and J. Kim, Using deep learning-based modeling for the performance of electrocatalytic
+    carbon catalysts for fuel cell application, Applied Energy, 318, 217630 (2022).
+    https://doi.org/10.1016/j.apenergy.2022.217630'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Applied Chemistry B 339 (2023) 123128
+
+
+    (29) S. Deng, Z. Lin, W. N. Norreth, A. G., Machine learning prediction and experimental
+    verification of Pt-modified zeolite catalysts for ethanol production with reduced
+    metal load. Appl. Catal. B 412 (2022), 131220, https://doi.org/10.1016/j.apcat.2022.131220
+
+
+    (30) Z. Li, S. Wang, W.H., E. Lee, A. Echine, High-throughput screening of zeolite
+    catalysts for methanol production. Chem. Mater. A (2015) 3 (6), 24131–24138, https://doi.org/10.1039/c5ca07182a/10792
+
+
+    (31) M. Sun, A. P., Doherty, B., Zhang, H., Liang, Y. C., Assessing zeolite catalyst
+    stability for the synthesis of dimethyl ether. Fuel (2020), 269, 121954, https://https://doi.org/10.1016/j.fuel.2019.121954
+
+
+    (32) T. Toyan, K. Skrubicka, S. Sakai, K. Takimura, S. Hirajima, T., Evaluating
+    effectiveness of machine learning prediction of ethanol production over zeolite
+    catalysts. ACS Sustainable Sci. (2021) 11, 107932, https://doi.org/10.1016/j.orschem.2021.107932
+
+
+    (33) Y. Wang, J. Sun, Group and period-based representations for machine learning
+    prediction of heterogeneous catalysts. J. Phys. Chem. Lett. (2022) 13, 1042–1049
+
+
+    (34) K. Hasper, S. H., Ramanakrishnan, Assessment of CO2 conversion in low-energy
+    synthesis poetry: experimental analysis and prediction with machine learning.
+    Energy Environ. (2021) 234, 103033, https://doi.org/10.1016/j.jevchem.2021.103033
+
+
+    (35) V. G. Vasilev, V. G. Vasileva, Member-based cluster learning from sparse
+    datasets for the discovery of efficient catalysts for water production. Nature
+    Communications (2021) 12, 16400
+
+
+    (36) M. Kim, B. Yoo, Y. Park, J. H., Lee, S. H., D., Artificial intelligence to
+    accelerate the discovery of CO2 reduction on electrochemical catalysts. Chem.
+    Mater. (2020) 32, 19027
+
+
+    (37) G. H. Nob, S. Ji, M. Park, S. Kim, J. Y., Deep learning prediction of the
+    performance of neural network of atomic structure clusters for hydrogen production
+    of catalysts. J. Phys. Chem. Lett. (2021) 12, 5, https://doi.org/10.1021/acspc005455
+
+
+    (38) M. Kim, M. H., J. Wang, J. Y., Kyeong, S. H., First-principles-integrated
+    machine-learning-approach for high-throughput screening of photocatalysts. Chem.
+    Catal. (2021) 41, 20111
+
+
+    (39) T. X. Xue, J. Garcia, Graph-convolutional neural networks for the atomic
+    discovery of catalysts for hydrogen evolution. Nano Energy. (2019) 64, 104503,
+    https://doi.org/10.1016/j.nanoenergy.2019.104503
+
+
+    (40) Z. Zhang, J. Wang, Y. Chen, T. Di, D. Peng, L. Lu, Y. Xu, S. Ramelli, P.
+    Bonderi, S. Sun, O. Volkov, Y. Zhou, S. H., Lee, A. M., Machine learning-driven
+    discovery of efficient catalysts for electrolyysis and hydrogen production. Nat.
+    Catal. (2020) 5, 696–703
+
+
+    (41) M. Kim, M. V., Y. Hu, J. Euno, S. Kim, W. Lee, J. H., Searching for an optimal
+    multi-metal alloy catalyst by active learning with machine learning. Sci. Data.
+    (2021) 8, 2020068
+
+
+    (42) J. J, S. H., J. Lee, J. Y., Kim, J. H., A deep neural network-based framework
+    for high-throughput screening of electrolyysts. Chem. Catal. (2020) 41, 758
+
+
+    (43) A. Smith, A. Keane, J.A. DuBois, G. Huber, Y. Walsh, Machine learning-driven
+    discovery of catalysts for water production. Appl. Catal. B. (2023) 216, 118527,
+    https://doi.org/10.1016/j.apcat.2022.118527
+
+
+    (44) M. Suvas, T. P., Araujo, J., Perez-Ramirez, A., A generalized machine learning
+    approach for selective CO2 reduction to hydrogen production. Appl. Catal. B. (2023)
+    315, 122150, https://doi.org/10.1016/j.apcat.2022.122150
+
+
+    (45) J. Rodriguez, P. Bander, S. Bernhard, J. Kitch, J. Ulissi, Identifying limitations
+    in high-throughput photocatalytic bimetallic nanoparticles with improved hydrogen
+    adsorption and desorption. Appl. Catal. B. (2023), 320, 121959, https://doi.org/10.1016/j.apcat.2022.121959
+
+
+    (46) J. Wang, H. Goelsman, Computational design of alloy-core-shell bimetallic
+    nanoparticles, ACS Catal. Lett. (2015) 655–660, https://doi.org/10.1021/acacs5b0128
+
+
+    (47) I. C., M. Hsu, Y. F., Calle-Vallejo, A. H. Jenkins, J. J. Martínez, N. G.
+    Inch, K. Titch, J. J. Pearson, K. Nerkerov, J. Ulissi, Computational design of
+    catalysts for oxygen evolution. Chem. Mater. A (2019) 9, 7141–7148, https://doi.org/10.1039/c9ca01993a
+
+
+    (48) B. Hammer, L. J., K. Nerkerov, Machine learning informed predictions for
+    hydrogen evolution on metal surfaces. Int. J. Hydrogen Energ. (2021) 1060037,
+    https://doi.org/10.1016/j.ijhyd.2020.106037
+
+
+    (49) J. Solliman, M. Drieffen, A. Logaditt, L. J., J. Kitch, T. B., 3D surface
+    study of molecular catalysts. Chem. Phys. (2021) 988, 113933
+
+
+    (50) J. Nerkerov, J. Ulissi, A. Logaditt, L. J., The origin of oxygen evolution
+    reaction on a Au-Pt alloy catalyst based on DFT calculations. Int. J. Electrochem.
+    (2021) 425, 107996, https://doi.org/10.1016/j.ijchem.2021.107996
+
+
+    (51) S. Ba, J. K., Tran, W. Y., Ulissidi, Computational strategy for co-catalyst
+    and design of photocatalysts for water splitting. Chem. Env (2022) 230, 19448–19459,
+    https://doi.org/10.1016/j.jevchem.2021.104459
+
+
+    (52) Z. Zhang, A. Alshahi, Theoretical predictions of DFT effects on oxygen reaction
+    on metal surfaces. Catal. Today 332 (2019) 45–53, https://doi.org/10.1016/j.jcatcat.2019.03.033
+
+
+    (53) J. Kim, A. Lee, Lee, Y. H., Electrochemical analysis for the conversion of
+    CO2 to polymers over bimetallic catalysts. Nature Communications (2022) 13, 4511-1
+
+
+    (54) J. F. Jang, Q. Liu, X. Wang, S. C., Selection of selective catalysts for
+    CO2 reduction to formate based on machine learning. Rare Earth Metals (2022) 4,
+    1189, https://doi.org/10.1007/s42087-022-00184-6
+
+
+    (55) S. Liu, L. Han, J. Zhou, Y. Wang, J. Li, H. Hu, D. Zhang, E., Discovery of
+    high-performance bimetallic catalysts for CO2 reduction reaction. J. Chem. Mater.
+    A (2021) 3 (5), 2228
+
+
+    (56) A.K. Ra, T. D. E, E. S., Simulation and analysis of Au-Pt-Cu catalysts for
+    the oxygen reduction reaction. Chem. Catal. Mater. (2007) 15, 758–766, https://doi.org/10.1021/acs7004049a
+
+
+    (57) J. Nie, S. Hu, Y. Lu, A. Taebant, K. Schmidt, C.-Schiefer-Arndt, Molecular
+    dynamics simulation of Au-Pt nanoparticles for water splitting. Nanoscale (2021)
+    13, 102968
+
+
+    (58) J. Kim, Y. Lee, J. Kim, G. H., Highly stable Pt-based catalysts for selective
+    CO2 reduction on electrochemical catalysts. Adv. Mater. (2020) 32, 2000249
+
+
+    (59) Y. Garnasi, J. Ge, J.-F. Reverre, R. Boucheaud, K. Svidler-Lyan, Analytical
+    and structural characterization of bimetallic catalysts for CO2 reduction. Science
+    Advances (2020) 6 (34), e11000640
+
+
+    (60) J. Zhang, J. Li, J. J., Machine learning-driven discovery and synthesis of
+    high-performance bimetallic nanoparticles for photocatalytic hydrogen production.
+    Appl. Catal. B (2023) 439, 126988
+
+
+    (61) S. H. Kim, S. Moon, Y. J. Park, Non-catalytic bimetallic nanoparticles fabricated
+    for photocatalytic hydrogen production. Photocatalysis Science and Gal. (2021)
+    114, 812–822, https://doi.org/10.1007/s11244-021-0746-8
+
+
+    (62) E Domestande, J. R. Kitch, V Vanwanthan, Quantification uncertainty in volcano
+    activity for oxygen reduction reaction, ACS Catal (2016) 6, 5251–5259, https://doi.org/10.1021/acacs6c00599
+
+
+    12'
+  merge: -1
+  img_proc: true

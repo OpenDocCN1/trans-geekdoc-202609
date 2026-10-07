@@ -1,0 +1,31 @@
+# Y. Park et al.
+
+# Applied Catalysis B: 339 (2023) 123128
+
+adsorbate, which contributes to the discovery of DFT and machine learning results. As indicated in Table 5, the predictive accuracy of our OOH isomers is better than other adsorbates. This can be attributed to the high computational cost associated with OOH, which in a more limited dataset for OOH adsorbates is shown in Table 3. Moving forward, expanding the database, by increasingly including the amount of OOH water available and that a more comprehensive database would enable more accurate predictions, though the gap in prediction remains
+
+shots, the Pt shells were much thicker, 2.5 nm and 4.4 nm. Additionally, we performed X-ray diffraction (XRD) measurements to investigate the integration of CuAu and Pt thin film (Fig. S1). As such, we observed an increase in the intensity of the XRD peaks associated with increasing thickness of the Pt shell deposited on the CuAu substrate. The peak shifted to 39.75° in the (111) plane of Pt, which shifts to a higher angle due to the compressive stress from the CuAu thin film. This integration with the CuAu core enhanced the OR properties of Pt in the core-shell comparison to pure Pt.
+
+# 3.5. Experimental setup of novel ORR catalysts
+
+The promising catalysts suggested from the above design protocol were needed to be experimentally verified. Since the sluggish ORR kinetics at the cathode are the key bottleneck for fuel cell performance, we performed electrochemical measurements for each material. Specifically, CuAu@Pt films showed higher activity (0.72 V) than pure Pt (0.56 V) but also exhibited improved effects (Fig. 4). In addition, previous experiments reported better CuAu-based alloys, showing the potential versatility of the CuAu core-shell system.
+
+In fact, the ORR activity was higher than that of nanoparticles (NP) to capture the intrinsic catalytic performance between pure Pt and our CuAu@Pt thin film. For core-shell NP synthesis by wet chemical methods, it is difficult to control the size and shape of the cores. By controlling the experimental parameters (e.g., varying ratios between catalyst, lysomer, ionomer, and solvents), we fabricated CuAu@Pt thin films using processes based on direct-current magnetron sputtering (DC-MS) and showed that catalytic properties can be enhanced by excluding toxic factors
+
+The CuAu thin film (alloy core part) was deposited by DC-MS. The 3:1 stoichiometric CuAu alloy was obtained by the sputtering process. When such a sputtering was performed on a 3-inch substrate by increasing the number of Au atoms, the thickness of the CuAu thin film increased from 7.7 to 29.4 nm (Fig. S2). Using the energy dispersive spectroscopy (EDS), scanning electron microscopy (SEM), and transmission electron microscopy (TEM), we confirmed that a CuAu alloy film (thickness 800 nm) was well uniform.
+
+The next step is film deposition on the CuAu thin film surfaces, with deposition of a Pt thin film using DC-MS (Fig. S3). The DC-MS technique is a type of physical vapor deposition (PVD) which is directly evaporated with high-energy plasma pulses in a vacuum. Unlike continuous or pulsed-based PVD methods the advantage can be found by tuning the pulse width of shots with a short duration ( < 16 ms). For Pt shell thickness control the MP deposition process can achieve accurate results.
+
+The Pt thickness linearly increases as n increased (Fig. S10). As such, for less thickness, the Pt film was only partially covered the substrate (non-monolayer). For the case of 80 shots, the Pt thickness was approximately 1.6 nm, and the Pt horizontal distribution was uniform. For the others 120 and 200
+
+# 3.6. ORR performance of CuAu@Pt
+
+As shown in Fig. 4, the ORR characteristics of CuAu@Pt films with various shell thicknesses on the Ni electrode for fuel cell through the liquid half-cell. The test samples included CuAu@Pt films with varying shell thicknesses (2.4 nm to 4.4 nm). The shell with thickness identical to the pure Pt film (4.4 nm) in terms of size of the core-shell showed improved effects. We can finally compare the core-shell effects of the CuAu core versus pure Pt thin film in an electrochemical test. For the electrochemical measurements, we performed tests in an alkaline electrolyte (0.1-0.1 M KOH electrolyte)-one
+
+The results (Fig. S8) and Tafel plots show the kinetic current density (J) as shown in Fig. 4 g, b, and c. The ORR activity of CuAu@Pt film with 1.6 nm Pt shell (60 shots), was higher than the other cases. In terms of the cases of 2.4 nm, 2.5 nm (200 shots) and 4.4 nm (240 shots) Pt shells, the shells were significantly less effective. The core-shell system performed better.
+
+The kinetic current density was calculated at 0.85 mV/cm², which is 1.7 times greater than that of the pure Pt film (0.67 mV/cm²) (Fig. S9). This comparison shows that CuAu and Pt shell have a significant ORR activity in excellent, consistent with our DFT and ML results. For the case of the non-monolayer (50 shots) Pt shells, the film surface was not fully covered, as shown in SEM. The substrate was not fully covered (1.09 mA/cm²) which was less than for the 1.6 nm case (surface Pt film).
+
+For the 2.5 nm and 4.4 nm Pt shells, the shells were significantly thicker, and the ORR activity decreased cm². For the 1.6 nm case, the Pt loading was 3.4 μg/cm², which is about 2 times larger than 2.4 nm and 1.8 times smaller than the loading of 9.4 nm (5.2 μg/cm²).
+
+The CuAu@Pt 1.6 nm thick Pt film exhibited the kinetic density twice times higher than of films with much thicker Pt shells (4.4 nm and 29.4 nm). In important factors in practice, we evaluated the electrochemical stability of CuAu@Pt thin film in the alkaline electrolyte for 5000 seconds
