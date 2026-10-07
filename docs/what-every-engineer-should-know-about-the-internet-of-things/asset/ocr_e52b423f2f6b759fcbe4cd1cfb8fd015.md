@@ -1,0 +1,15 @@
+With 500 IoT devices in a home, will the homeowner even know where the devices are located? How do they make their presence known, with multiple protocols? It may not be clear from day to day what devices are on a network, or where they are, much less how they are interacting.
+
+Device discovery is a complex problem for networks of things (Bello, Zeadally & Badra, 2017, the general problem of discovery within networks has been studied for decades. There are generally two approaches:
+
+**Centralized:** Nodes register with a central controller when they are brought into a network. The controller manages a database of currently available devices and periodically sends heartbeat messages to ensure devices are available, dropping from the database that does not respond.
+
+**Distributed:** In this case, devices conduct a search for partner devices with the necessary features, by broadcasting to the local network. This approach avoids the need for a central controller, providing flexibility and scalability.
+
+Scalability requirements for hundreds of devices often lead to implementing the distributed approach, but trust issues have enormous implications for discovery in a large network. Without sophisticated cryptographically based authentication mechanisms, it becomes very difficult to ensure trusted operation in a network. For example, it has been shown that malware installed on a smartphone can open paths to other IoT devices, leaving the home network fully vulnerable to attack (Sivaraman et al., 2016). This is possible because many IoT devices have little or no authentication, due to the resource constraints described earlier.
+
+Discoverability of IoT devices is thus a key problem for trust. Its dimensions include human factors, as user's trust in behavior of devices such as the Smart TV, and examples of authentication among devices. Solutions will require adoption of some common protocols, which may take years for development of consensus standards, or emergence de facto proprietary standards. In many cases, there will also be organizational challenges, since different kinds of devices may be installed by different organizations. Organizations will need to know what devices are present, manage security, or even just to avoid duplication of effort. This need can be addressed with audit tools that can identify and catalog devices on the network, reducing dependence on user cooperation but requiring trust in the audit tools.
+
+# 10.21 SUMMARY
+
+This publication has enumerated 17 technical concerns for any IoT system based on NIST (2016). These systems have significant differences with traditional IT systems, such as much smaller size and limited performance, larger and more diverse networks, minimal or no user interface, lack of consistent access to reliable power and communications, and many others. These differences necessitate new approaches to planning and design. An essential aspect of developing these new systems is understanding the ways in which their characteristics affect user trust and avoiding a “business as usual” approach that might be doomed to failure in the new world of IoT.

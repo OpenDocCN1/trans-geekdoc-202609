@@ -1,0 +1,15 @@
+example, how can a network of 'things' demonstrate that certain security vulnerabilities are not present?
+
+In summary, limited recommendations can be considered for how to certify 'things' and systems. Software testing is a first line of defense for lower levels of certification; however, it is costly and overestimate quality, e.g., you test a system and if it works, potentially leading to a false assumption that the system is reliable and does not need a third test. A good first step here is first define the type of quality you are concerned about (See Section 10.6.) From there, you can assess what can be certified in a timely manner and at what cost.
+
+# 10.14 SECURITY
+
+Like IT or enterprise security, IoT security is not a one-size-fits-all problem, and the solutions deployed to this problem tend to be quick fixes that push the issue down the line. Instead, it should be recognized that the issue of IoT security is multifaceted and dependent on the effort to standardize IoT security. This section walks through several of these important facets, highlighting solutions that exist and problems that remain to be solved.
+
+# 10.14.1 SECURITY OF 'Things'
+
+Security is a concern for all 'things'. For example, sensors and their data may be tampered with, stolen, deleted, or transmitted improperly allowing it to be accessed by unauthorized parties. Further, sensors may return no data, only flawed data, or partially flawed data due to malicious intent. Sensors may fail completely or intermittently and lose sensitivity or calibration due to malicious tampering. Note however that building security into specific sensors may be cost-effective depending on the value of a sensor or the importance of the data it collects. Aggregators may contain malware affecting the correctness of their aggregated data. Further, aggregators can be attacked, e.g., by denying them the ability to execute or by feeding them data. Communication channels are prone to malicious disturbances and interruptions.
+
+The existence of counterfeit 'things' in the marketplace cannot be dismissed. Unique identifiers for every 'thing' would be ideal for mitigating this problem, but that is not practical. Unique identifiers can partially mitigate this problem by attaching tags to physical primitives. RFID readers that work on the same protocol as the inlay may be distributed at key points throughout a network of 'things'. Readers activate a tag causing it to broadcast radio waves within bandwidth reserved for RFID usage by governments internationally. These radio waves transmit identifiers or codes that reference unique information associated with the RFID inlay attached, and in this case, the item would be a physical IoT primitive.
+
+The time at which computations and other events may also be tampered with, making it unclear when events actually occurred, not by changing time (which is not possible), but by changing the recorded time at which an event in the workflow is generated, or computation is performed, e.g., sticking in a delay() function call.

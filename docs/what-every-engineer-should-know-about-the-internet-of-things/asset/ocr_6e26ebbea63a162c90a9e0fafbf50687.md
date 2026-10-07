@@ -1,0 +1,15 @@
+# 126 What Every Engineer Should Know About IoT
+
+Wallace and Kuhn identified 342 failures in medical devices based on data from the FDA. Their study helped identify approaches for using fault and failure information to improve device safety (Wallace & Kuhn, 2001).
+
+They also found that “known [best] practices may not be used at all or may be misused”; Wallace and Kuhn also recommended for requirement’s generation of safe devices that engineers should:
+
++   1. Gather failure and fault data (from previous and related systems),
+2. Understand the types of faults that are prevalent for a specific domain, and
+3. Develop prevention and detection approaches specific to these issues.
+
+The US Underwriters Laboratories proposed a fault analysis approach for specifying hazards in wearable devices (Kirk, 2014), and this approach would be appropriate for other medical and healthcare applications using IoT technology. Using traditional techniques for defining misuse and abuse cases would also be appropriate.
+
+# 9.4.3 TECHNOLOGY AND SOCIAL CONSTRAINTS
+
+In spite reports indicating the high level of willingness among the general population to download a contact-tracing application and share data through, the actual numbers of downloads are still relatively slim. A recent study by the University of Oxford’s Big Data Institute estimates that at least 60% of the population in a given area would need to use an automated contact-tracing applications for it to be effective in containing the virus. On March 20, 2020, “TraceTogether” (https://www.tracetogether.gov.sg/), but only 26% of the population installed 2 months after its inauguration. While some level of compliance is better than none, the low rates of adoption in parts of the world are a challenge for these applications to provide any benefit. In addition, the lack of access to smartphones can be an obstacle to those which rely on a high level of inclusion. A median of 76% of the population across 18 advanced economies has surveyed smartphones, compared with a median of 45% of the population in emerging economies (Silver, 2019). The dominant contact-tracing application in a nation would have to be authorized and sponsored by a government health authority. This is practically the only effective way to ensure a large-scale adoption of an application within a country. But sponsorship process may require previous weeks for different countries’ applications to be fully tested and integrated. Also, the existing contact-tracing mobile applications rely on GPS and/or Bluetooth capabilities, which are not highly reliable. Bluetooth’s range, is considerably wider than 6 feet which can trigger a higher percentage of false positives regarding the exposure to the virus. Continuously enabled GPS/Bluetooth capabilities can also drain the battery quickly. A 2016 study found that with good signal strength, a battery of a GPS-enabled mobile phone depletes by 13% while a weak signal could cause the battery to drop up to 38% (Talwebeh & Eardley, 2016).

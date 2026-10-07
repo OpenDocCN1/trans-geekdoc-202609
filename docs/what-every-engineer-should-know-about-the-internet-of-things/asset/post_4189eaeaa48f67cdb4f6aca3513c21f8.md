@@ -1,0 +1,42 @@
+
+# What Every Engineer Should Know About IoT
+
+sharing of information that is needed to provide high-quality care across the continuum. Many of the devices used in a provisioned, specialized IoT will collect various data whether surveillance is known or not (Laplande, Laplande & Voas, 2015). If so, where does data go? Who owns it? And why is it being collected in the first place? Sensors and surveillance will be huge concerns to argue convincingly for pricing when the economic healthcare providers are overwhelming for this technology.
+
+The Health Insurance Portability and Accountability Act (HIPAA) of 1996 addresses how patient's personal health information can be used and shared not only to ensure privacy but also for sharing of information that is needed to provide high-quality care. HIPAA is an integral part of today's healthcare system, and no provider would argue its relevance. New concerns, however, have been raised to the relationship of HIPAA and the IoT.
+
+A Forbes magazine report calls for new federal privacy legislation, built-in for IoT devices, data minimization (storing less, not more data), and security breach notification (McClue, 2016).
+
+In February 2016, the Office of the Privacy Commissioner of Canada released a 34-page report (Privacy Commissioner of Canada Report, 2016) outlining concerns for privacy and data the IoTs continues to take shape: "The Internet of Things has been compared to electricity, or a nervous system for the planet, to illustrate phenomena that are at once pervasive, unseen and will become crucially integrated within the fabric of our society", states the report. "Several international experts, thinkers and technology builders are forecasting profound, social and economic transformations; concerns about privacy and surveillance are chief among them".
+
+There has also been a substantial amount of academic research considering IoT functionality versus privacy. For example, Winter conducted a survey of Hawaiian healthcare consumers to identify "practices that will be brought about by the IoTs that may be perceived as privacy violations" (Winter, 2012). Essentially, Winter found that consumers were willing to trade-off privacy for the perceived benefits of information sharing. Moreover, Thierer argues against rash, restrictive regulation in response to security and privacy concerns that could thwart innovation in applications (healthcare) related to wearable IoT technologies (Thierer, 2014). And Walla discusses some of the issues of patient privacy in the Internet-hosted records that are not covered by HIPAA (Walla, 2008) and Mercuri considers regulations intended to improve healthcare data access have created new security and privacy risks with regulatory complexity for patients and practitioners (Mercuri, 2004).
+
+## 9.4.1.1 Privacy Concerns with Contact-Tracing Applications
+
+While many countries are racing to develop digital tools to improve the privacy contact tracing to control the COVID-19 virus spread, the mad dash has left places with a confusing mismatch of options and the software researchers' community has worried about vulnerabilities in proximity tracing software. For example, only 25% of the existing proximity tracing applications provide privacy policies, while only 58% do not disclose how long they store users' data for about 60% have no publicly stated anonymity measures.
+
+# IoT in Healthcare
+
+Besides, code relating to Google advertising and tracking platforms (e.g., Google AdSense, DoubleClick) has been detected in at least 14 contact-tracing applications. We also found code relating to Facebook advertising and tracking in eight of these analyzed applications. Such a code allows publishers to make money by showing advertisements to their users from a variety of sources. The presence of such a tracking code in contact-tracing applications raises privacy concerns due to the getting options by Google/Facebook advertisement platforms.
+
+Some of these applications are also blockchain based. Because of the blockchain’s “immutability” characteristic, users’ records cannot be changed or removed from the network. This will be appropriate when a lockdown is lifted? The “finality” characteristic of the blockchain can also diverge from existing legislation as the European General Data Protection Regulation (GDPR) or the recently announced Brazilian Lei Geral de Proteção de Dados (LGPD) that provides all citizens the capacity to govern their own data including the right to request to delete personal data processed upon consent.
+
+Recommending these applications is understandable in the heat of the early stages of the pandemic. However, much deliberation must be given considering the long-term consequences of building digital infrastructure across society. A report published by a global policy firm for the tech sector revealed that 49% of the world remains digitally unconnected and affirms that “virusback must start with adoption of policies that enable countries to take advantage of great edge in pandemic-boosting ingenuity” (D’mello, 2020; Access Partnership, 2020). The report remarks that while European countries are trying to position themselves in privacy-approaching approaches by complying with the GDPR, some Asian governments, like China and South Korea, have taken broad and aggressive approaches that rely on gathering, analyzing, and sharing vast amounts of data. The report also highlights that across North and South America, there have been fewer and less-organized efforts by governments to develop contact-tracing solutions than in other regions (D’mello, 2020).
+
+Although to preserve privacy and remain, recent studies have shown that users feel comfortable using contact-tracing applications as the pandemic proceeds. For example, a survey was conducted by Metova firm, for 200 residents of the United States on contact-tracing and exposure notification applications’ use in the fight against COVID-19. The survey found 77% of participants would want to be notified via their mobile phone if they recently came in contact with was tested positive for COVID-19, and 85% are willing to anonymously share a positive COVID-19 status for the greater good (Marketing Technology Insights, 2020).
+
+## 9.4.2 Safety Concerns
+
+Safety concerns address questions such as is the system operating as intended? Is it providing needed levels? Can a malfunction of the system harm a patient?
+
+Safety requirements for medical systems often derive from oversight agencies, e.g., in the United States, the Food and Drug Administration (FDA). Wallace and Kuhn identified that 34% of devices had failures based on the FDA (Wallace & Kuhn, 2001). They also found that “known practices may not be used”; Wallace and Kuhn also recommended that engineers should:
+
+- Gather data
+- Understand the types of faults that are prevalent
+- Develop prevention and detection approaches
+
+The US Underwriters Laboratories proposed a fault analysis for wearable (Kirk, 2014), and this approach would also be appropriate for other healthcare applications using IoT.
+
+## 9.4.3 TECHNOLOGY AND SOCIAL CONSTRAINTS
+
+In spite reports indicating the high level of willingness among the general population to download a contact-tracing application and share data, the actual numbers are still slim. A recent study by the University of Oxford’s Big Data Institute estimates that at least 60% of the population in a given area would need to use automated contact-tracing applications for it to be effective in containing the virus. On March 20, 2020, “TraceTogether” (https://www.tracetogether.gov.sg/), but only 26% of the population installed 2 months after its inauguration. While some level of compliance is better than none, the low rates of adoption in parts of the world are a challenge for these applications to provide any benefit. In addition, the lack of access to smartphones can be an obstacle to those which rely on a high level of inclusion. A median of 76% of the population across 18 advanced economies has smartphones, compared with a median of 45% of the population in emerging economies (Silver, 2019). The dominant contact-tracing application in a nation would have to be authorized and sponsored by a government health authority. This is practically the only effective way to ensure a large-scale adoption of an application within a country. But sponsorship process may require previous weeks for different countries’ applications to be fully tested and integrated.

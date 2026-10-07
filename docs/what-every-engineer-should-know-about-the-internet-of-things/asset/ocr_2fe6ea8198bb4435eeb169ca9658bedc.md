@@ -1,0 +1,17 @@
+# IoT in Healthcare
+
+Mobile operators have also been sharing aggregated data with the authorities to facilitate the analysis of how citizens have reacted to regulations on social distancing. For instance, Vodafone Italy reported on its website that it will be willing to assist in developing insights based on large, anonymized data sets by generating an aggregated heat map for the Lombardy region to ‘help the authorities to better understand population movements to thwart the spread of COVID-19’. A similar heat map has been generated in Argentina as well.
+
+# 9.3.2.2 Mobile Applications
+
+There has been a flood of mobile applications in the middle of the battle with COVID-19. For example, in Poland, an application for quarantined patients to randomly take geocated selfies. A similar application was deployed in Russia where citizens with suspected COVID-19 in Moscow were asked to send selfies three times a day to authorities. In Turkey, quarantine enforcement application, ‘Life Fits Inside the House’, was deployed to monitor citizens.
+
+Wuhan, China, where the first cases of coronavirus were reported, opened its border with a condition imposing the installation of a government surveillance mobile application as a requirement for the entry/exit of the region. The government tracks its citizens through the installed software by analyzing their personal data to sort individuals into color-coded categories – red, yellow, or green – corresponding to their health status and level of risk for COVID-19.
+
+On the other hand, starting the month of April 2020, we saw an uptick in the number of mobile applications to help stem the spread of the virus by tracking individuals and those who come into exposure; namely ‘proximity contact-tracing applications’. As of July 2020, there were at least 47 contact-tracing applications available for 29 countries (please see the list of applications provided here: https://bit.ly/3hJMGWRM). This includes the recently announced Google/Apple opt-in-contact-tracing application using phone’s Bluetooth connection to deliver exposure notifications for Android or iOS users (see the described scenario at Google blog: https://bit.ly/3cvZvyy).
+
+9.1 provides the worldwide distribution of the contact-tracing applications in response to the COVID-19 pandemic along with the approximate volume of downloads as of July 2020.
+
+While these applications may have slightly different approaches on how tracing contacts, at their core, they are tracking programs using Bluetooth or GPS to track an individual’s exposure to cases. Users elect to share data and are alerted if they have been within proximity to COVID-19 cases. If an individual is found to be infected with the virus, all the people that have recently near him/her are alerted and asked to follow the public health authorities’ guidelines. Not all existing contact-tracing applications serve as digital tracing applications from the authority perspective. Depending on the application design, public health authorities may (or not) receive data that users choose (or asked) to share to enhance contact tracing. Figure 9.2 provides an aggregated contemporary view of the analyzed applications.
+
+We further analyzed the applications against the mechanisms they employ for collection and management. Only 15% of these applications were detected collecting
