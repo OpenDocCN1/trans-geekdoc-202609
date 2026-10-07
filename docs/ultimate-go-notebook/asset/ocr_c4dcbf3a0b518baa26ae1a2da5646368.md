@@ -1,0 +1,214 @@
+Figure 11.2
+http://localhost:5000/debug/pprof
+
+![](bbox=[0.095, 0.085, 0.905, 0.135])
+
+/debug/pprof/
+
+Types of profiles available:
+
+Count Profile
+
++   200 allocs
+0 block
+0 cmdline
+9 goroutine
+200 heap
+0 mutex
+0 profile
+23 threadcreate
+0 trace
+
+full goroutine stack dump
+
+Profile Descriptions:
+
++   - allocs: A sampling of all past memory allocations
+- block: Stack traces that lead to locking on synchronization primitives
+- cmdline: The command line invocation of the current program
+- goroutine: Stack traces of all current goroutines
+- heap: A sampling of memory allocations of live objects. You can specify
+
+There is so much profiling data I can extract from my running program. In this case, I am interested in the heap profile, which is available from the very first link. If I click on the allocs link, I can see what raw memory profile looks like.
+
+Figure 11.3
+http://localhost:5000/debug/pprof/allocs?debug=1
+
+![](bbox=[0.095, 0.705, 0.905, 0.725])
+
+```
+heap profile: 59424 [12235:2881512] 8 alloc/1048576
+1: 60960 [1245:3005201] 1 0xc00296 0xc002a0c 0xc002a0e 0x071e31 0x0519955 0x051a025 0x051a038 0x1373385 0x136f0a5 0x136def8
+2: 0xc000138d68 [1245:3005201] 1 0xc0001381e0 0xc0001382f0 0x112550 0x071e2931
+3: 0xc00029bf5 /usr/local/go/pprof.writeHeapProfile /usr/user/
+4: 0xc00029b08 /usr/local/go/runtime.malloc /usr/user/
+5: 0xc00029b84 /usr/local/go/runtime.malloc /usr/user/
+6: 0xc00029910 /usr/local/go/runtime.mallocgc /////
+7: 00000299994 /usr/local/go/runtime.mallocgc /usr/user/
+8: 0xc00029954 /usr/local/go/runtime.mallocgc /usr/user/
+9: 0xc00029a34 /usr/local/go/runtime.mallocgc /usr/user/
+10: 0xc00029a37 /usr/local/go/runtime.mallocgc /usr/user/
+11: 0xc00029a44 /usr/local/go/runtime.mallocgc /usr/user/
+12: 0xc00029f54 /usr/local/go/runtime.mallocgc /usr/user/
+13: 0xc00029f60 /usr/local/go/runtime.mallocgc /usr/user/
+14: 0xc00029f68 /usr/local/go/runtime.mallocgc /usr/user/
+15: 0xc00029f70 /usr/local/go/runtime.mallocgc /usr/user/
+16: 0xc00029f78 /usr/local/go/runtime.mallocgc /usr/user/
+17: 0xc00029f7c /usr/local/go/runtime.mallocgc /usr/user/
+18: 0xc00029f80 /usr/local/go/runtime.mallocgc /usr/user/
+19: 0xc00029f84 /usr/local/go/runtime.mallocgc /usr/user/
+20: 0xc00029f88 /usr/local/go/runtime.mallocgc /usr/user/
+21: 0xc00029f90 /usr/local/go/runtime.mallocgc /usr/user/
+22: 0xc00029f98 /usr/local/go/runtime.mallocgc /usr/user/
+23: 0xc00029fa0 /usr/local/go/runtime.mallocgc /usr/user/
+24: 0xc00029fa8 /usr/local/go/runtime.mallocgc /usr/user/
+25: 0xc00029fb0 /usr/local/go/runtime.mallocgc /usr/user/
+26: 0xc00029fb8 /usr/local/go/runtime.mallocgc /usr/user/
+27: 0xc00029fdc /usr/local/go/runtime.mallocgc /usr/user/
+28: 0xc00029fe0 /usr/local/go/runtime.mallocgc /usr/user/
+29: 0xc00029fe8 /usr/local/go/runtime.mallocgc /usr/user/
+30: 0xc00029ff0 /usr/local/go/runtime.mallocgc /usr/user/
+31: 0xc00029ff8 /usr/local/go/runtime.mallocgc /usr/user/
+32: 0xc0002a000 /usr/local/go/runtime.mallocgc /usr/user/
+33: 0xc0002a008 /usr/local/go/runtime.mallocgc /usr/user/
+34: 0xc0002a010 /usr/local/go/runtime.mallocgc /usr/user/
+35: 0xc0002a018 /usr/local/go/runtime.mallocgc /usr/user/
+36: 0xc0002a020 /usr/local/go/runtime.mallocgc /usr/user/
+37: 0xc0002a028 /usr/local/go/runtime.mallocgc /usr/user/
+38: 0xc0002a030 /usr/local/go/runtime.mallocgc /usr/user/
+39: 0xc0002a038 /usr/local/go/runtime.mallocgc /usr/user/
+40: 0xc0002a040 /usr/local/go/runtime.mallocgc /usr/user/
+41: 0xc0002a048 /usr/local/go/runtime.mallocgc /usr/user/
+42: 0xc0002a050 /usr/local/go/runtime.mallocgc /usr/user/
+43: 0xc0002a058 /usr/local/go/runtime.mallocgc /usr/user/
+44: 0xc0002a060 /usr/local/go/runtime.mallocgc /usr/user/
+45: 0xc0002a068 /usr/local/go/runtime.mallocgc /usr/user/
+46: 0xc0002a070 /usr/local/go/runtime.mallocgc /usr/user/
+47: 0xc0002a078 /usr/local/go/runtime.mallocgc /usr/user/
+48: 0xc0002a080 /usr/local/go/runtime.mallocgc /usr/user/
+49: 0xc0002a088 /usr/local/go/runtime.mallocgc /usr/user/
+50: 0xc0002a090 /usr/local/go/runtime.mallocgc /usr/user/
+51: 0xc0002a098 /usr/local/go/runtime.mallocgc /usr/user/
+52: 0xc0002a0a0 /usr/local/go/runtime.mallocgc /usr/user/
+53: 0xc0002a0a8 /usr/local/go/runtime.mallocgc /usr/user/
+54: 0xc0002a0b0 /usr/local/go/runtime.mallocgc /usr/user/
+55: 0xc0002a0b8 /usr/local/go/runtime.mallocgc /usr/user/
+56: 0xc0002a0bc /usr/local/go/runtime.mallocgc /usr/user/
+57: 0xc0002a0c0 /usr/local/go/runtime.mallocgc /usr/user/
+58: 0xc0002a0c8 /usr/local/go/runtime.mallocgc /usr/user/
+59: 0xc0002a0d0 /usr/local/go/runtime.mallocgc /usr/user/
+60: 0xc0002a0d8 /usr/local/go/runtime.mallocgc /usr/user/
+61: 0xc0002a0e0 /usr/local/go/runtime.mallocgc /usr/user/
+62: 0xc0002a0e8 /usr/local/go/runtime.mallocgc /usr/user/
+63: 0xc0002a0f0 /usr/local/go/runtime.mallocgc /usr/user/
+64: 0xc0002a0f8 /usr/local/go/runtime.mallocgc /usr/user/
+65: 0xc0002a100 /usr/local/go/runtime.mallocgc /usr/user/
+66: 0xc0002a108 /usr/local/go/runtime.mallocgc /usr/user/
+67: 0xc0002a110 /usr/local/go/runtime.mallocgc /usr/user/
+68: 0xc0002a118 /usr/local/go/runtime.mallocgc /usr/user/
+69: 0xc0002a120 /usr/local/go/runtime.mallocgc /usr/user/
+70: 0xc0002a128 /usr/local/go/runtime.mallocgc /usr/user/
+71: 0xc0002a130 /usr/local/go/runtime.mallocgc /usr/user/
+72: 0xc0002a138 /usr/local/go/runtime.mallocgc /usr/user/
+73: 0xc0002a140 /usr/local/go/runtime.mallocgc /usr/user/
+74: 0xc0002a148 /usr/local/go/runtime.mallocgc /usr/user/
+75: 0xc0002a150 /usr/local/go/runtime.mallocgc /usr/user/
+76: 0xc0002a158 /usr/local/go/runtime.mallocgc /usr/user/
+77: 0xc0002a160 /usr/local/go/runtime.mallocgc /usr/user/
+78: 0xc0002a168 /usr/local/go/runtime.mallocgc /usr/user/
+79: 0xc0002a170 /usr/local/go/runtime.mallocgc /usr/user/
+80: 0xc0002a178 /usr/local/go/runtime.mallocgc /usr/user/
+81: 0xc0002a180 /usr/local/go/runtime.mallocgc /usr/user/
+82: 0xc0002a188 /usr/local/go/runtime.mallocgc /usr/user/
+83: 0xc0002a190 /usr/local/go/runtime.mallocgc /usr/user/
+84: 0xc0002a198 /usr/local/go/runtime.mallocgc /usr/user/
+85: 0xc0002a1a0 /usr/local/go/runtime.mallocgc /usr/user/
+86: 0xc0002a1a8 /usr/local/go/runtime.mallocgc /usr/user/
+87: 0xc0002a1b0 /usr/local/go/runtime.mallocgc /usr/user/
+88: 0xc0002a1b8 /usr/local/go/runtime.mallocgc /usr/user/
+89: 0xc0002a1bc /usr/local/go/runtime.mallocgc /usr/user/
+90: 0xc0002a1c0 /usr/local/go/runtime.mallocgc /usr/user/
+91: 0xc0002a1c8 /usr/local/go/runtime.mallocgc /usr/user/
+92: 0xc0002a1d0 /usr/local/go/runtime.mallocgc /usr/user/
+93: 0xc0002a1d8 /usr/local/go/runtime.mallocgc /usr/user/
+94: 0xc0002a1e0 /usr/local/go/runtime.mallocgc /usr/user/
+95: 0xc0002a1e8 /usr/local/go/runtime.mallocgc /usr/user/
+96: 0xc0002a1f0 /usr/local/go/runtime.mallocgc /usr/user/
+97: 0xc0002a1f8 /usr/local/go/runtime.mallocgc /usr/user/
+98: 0xc0002a200 /usr/local/go/runtime.mallocgc /usr/user/
+99: 0xc0002a208 /usr/local/go/runtime.mallocgc /usr/user/
+100: test.main.(*state).runtime.Value=0x44 /usr/local/go/runtime /usr/user/
+101: test.main.(*state).wait=0x3e /usr/local/go/runtime /usr/user/
+102: test.main.(*state).wait=0x130 /usr/local/go/runtime /usr/user/
+103: test.main.(*Template).execute=0x1c5 /usr/local/go/runtime /usr/user/
+104: 0xc0002a210 /usr/local/go/runtime.mallocgc /usr/user/
+105: 0xc0002a218 /usr/local/go/runtime.mallocgc /usr/user/
+106: 0xc0002a220 /usr/local/go/runtime.mallocgc /usr/user/
+107: 0xc0002a228 /usr/local/go/runtime.mallocgc /usr/user/
+108: 0xc0002a224 /usr/local/go/runtime.mallocgc /usr/user/
+109: 0xc0002a22c /usr/local/go/runtime.mallocgc /usr/user/
+110: 0xc0002a230 /usr/local/go/runtime.mallocgc /usr/user/
+111: 0xc0002a238 /usr/local/go/runtime.mallocgc /usr/user/
+112: 0xc0002a240 /usr/local/go/runtime.mallocgc /usr/user/
+113: 0xc0002a248 /usr/local/go/runtime.mallocgc /usr/user/
+114: 0xc0002a250 /usr/local/go/runtime.mallocgc /usr/user/
+115: 0xc0002a258 /usr/local/go/runtime.mallocgc /usr/user/
+116: 0xc0002a260 /usr/local/go/runtime.mallocgc /usr/user/
+117: 0xc0002a268 /usr/local/go/runtime.mallocgc /usr/user/
+118: 0xc0002a270 /usr/local/go/runtime.mallocgc /usr/user/
+119: 0xc0002a278 /usr/local/go/runtime.mallocgc /usr/user/
+120: 0xc0002a280 /usr/local/go/runtime.mallocgc /usr/user/
+121: 0xc0002a288 /usr/local/go/runtime.mallocgc /usr/user/
+122: 0xc0002a290 /usr/local/go/runtime.mallocgc /usr/user/
+123: 0xc0002a298 /usr/local/go/runtime.mallocgc /usr/user/
+124: 0xc0002a2a0 /usr/local/go/runtime.mallocgc /usr/user/
+125: 0xc0002a2a8 /usr/local/go/runtime.mallocgc /usr/user/
+126: 0xc0002a2b0 /usr/local/go/runtime.mallocgc /usr/user/
+127: 0xc0002a2b8 /usr/local/go/runtime.mallocgc /usr/user/
+128: 0xc0002a2bc /usr/local/go/runtime.mallocgc /usr/user/
+129: 0xc0002a2c0 /usr/local/go/runtime.mallocgc /usr/user/
+130: 0xc0002a2c8 /usr/local/go/runtime.mallocgc /usr/user/
+131: 0xc0002a2d0 /usr/local/go/runtime.mallocgc /usr/user/
+132: 0xc0002a2d8 /usr/local/go/runtime.mallocgc /usr/user/
+133: 0xc0002a2e0 /usr/local/go/runtime.mallocgc /usr/user/
+134: 0xc0002a2e8 /usr/local/go/runtime.mallocgc /usr/user/
+135: 0xc0002a2f0 /usr/local/go/runtime.mallocgc /usr/user/
+136: 0xc0002a2f8 /usr/local/go/runtime.mallocgc /usr/user/
+137: 0xc0002a300 /usr/local/go/runtime.mallocgc /usr/user/
+138: 0xc0002a308 /usr/local/go/runtime.mallocgc /usr/user/
+139: 0xc0002a310 /usr/local/go/runtime.mallocgc /usr/user/
+140: 0xc0002a318 /usr/local/go/runtime.mallocgc /usr/user/
+141: 0xc0002a320 /usr/local/go/runtime.mallocgc /usr/user/
+142: 0xc0002a328 /usr/local/go/runtime.mallocgc /usr/user/
+143: 0xc0002a330 /usr/local/go/runtime.mallocgc /usr/user/
+144: 0xc0002a338 /usr/local/go/runtime.mallocgc /usr/user/
+145: 0xc0002a340 /usr/local/go/runtime.mallocgc /usr/user/
+146: 0xc0002a348 /usr/local/go/runtime.mallocgc /usr/user/
+147: 0xc0002a350 /usr/local/go/runtime.mallocgc /usr/user/
+148: 0xc0002a358 /usr/local/go/runtime.mallocgc /usr/user/
+149: 0xc0002a360 /usr/local/go/runtime.mallocgc /usr/user/
+150: 0xc0002a368 /usr/local/go/runtime.mallocgc /usr/user/
+151: 0xc0002a370 /usr/local/go/runtime.mallocgc /usr/user/
+152: 0xc0002a378 /usr/local/go/runtime.mallocgc /usr/user/
+153: 0xc0002a380 /usr/local/go/runtime.mallocgc /usr/user/
+154: 0xc0002a388 /usr/local/go/runtime.mallocgc /usr/user/
+155: 0xc0002a390 /usr/local/go/runtime.mallocgc /usr/user/
+156: 0xc0002a398 /usr/local/go/runtime.mallocgc /usr/user/
+157: 0xc0002a3a0 /usr/local/go/runtime.mallocgc /usr/user/
+158: 0xc0002a3a8 /usr/local/go/runtime.mallocgc /usr/user/
+159: 0xc0002a3b0 /usr/local/go/runtime.mallocgc /usr/user/
+160: 0xc0002a3b8 /usr/local/go/runtime.mallocgc /usr/user/
+161: 0xc0002a3c0 /usr/local/go/runtime.mallocgc /usr/user/
+162: 0xc0002a3c8 /usr/local/go/runtime.mallocgc /usr/user/
+163: 0xc0002a3d0 /usr/local/go/runtime.mallocgc /usr/user/
+164: 0xc0002a3d8 /usr/local/go/runtime.mallocgc /usr/user/
+165: 0xc0002a3e0 /usr/local/go/runtime.mallocgc /usr/user/
+166: 0xc0002a3e8 /usr/local/go/runtime.mallocgc /usr/user/
+167: 0xc0002a3f0 /usr/local/go/runtime.mallocgc /usr/user/
+168: 0xc0002a3f8 /usr/local/go/runtime.mallocgc /usr/user/
+169: 0xc0002a400 /usr/local/go/runtime.mallocgc /usr/user/
+170: 0xc0002a408 /usr/local/go/runtime.mallocgc /usr/user/
+171: github.com/golang/rdn/training/go/profiling/project/service,executeTemplate+aa=7
+```
+
+226
