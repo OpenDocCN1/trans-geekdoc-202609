@@ -1,0 +1,324 @@
+
+```
+func main(){
+
+    demoXml()
+
+}
+
+func demoXml(){
+
+    fmt.Println("--------Demo encoding xml--------")
+    type EmployeeCountry struct {
+        CountryCode string `xml:"code,attr"` // XML attribute: code
+        CountryName  string `xml:",chardata"`    // XML value
+    }
+    type Employee struct {
+        XMLName   xml.Name `xml:"employee"`
+        Id string  `xml:"id"`
+        Name string `xml:"name"`
+        Email string `xml:"email"`
+        Country EmployeeCountry `xml:"country"`
+    }
+
+
+    // struct to xml
+    fmt.Println(">>>>struct to xml....")
+    emp := &Employee{Id:"12345",Name:"Michael",Email:"michael@email.com",
+                    Country: EmployeeCountry{CountryCode:"DE",CountryName:"Germany"}}
+    b, err := xml.Marshal(emp)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    fmt.Println(string(b))
+
+    // xml string to struct
+    fmt.Println(">>>>xml to struct....")
+    var newEmp Employee
+    str := `<employee><id>555</id><name>Lee</name><email>lee@email.com</email><country code="CN">China</country></employee>`
+    xml.Unmarshal([]byte(str),&newEmp)
+    fmt.Printf("Id: %s\n",newEmp.Id)
+    fmt.Printf("Name: %s\n",newEmp.Name)
+    fmt.Printf("Email: %s\n",newEmp.Email)
+    fmt.Printf("CountryCode: %s\n",newEmp.Country.CountryCode)
+    fmt.Printf("CountryName: %s\n",newEmp.Country.CountryName)
+}
+```
+
+Save this code. Now you can build and run this program.
+
+A sample output can be seen in Figure below.
+
+![ch13-4](img/ch13-4.png)
+
+## 12.6 CSV
+
+The last demo is to read and write data CSV which is a collection of comma-separated data. We can access CSV file using `csv` package, [`golang.org/pkg/encoding/csv/`](http://golang.org/pkg/encoding/csv/).
+
+For testing, we have a CSV file, `demo.csv`, with the following content.
+
+```
+Employee 1;employee1@email.com;DE
+Employee 2;employee2@email.com;UK
+Employee 3;employee3@email.com;UK
+Employee 4;employee4@email.com;NL
+Employee 5;employee5@email.com;US
+Employee 6;employee6@email.com;JP
+Employee 7;employee7@email.com;DE
+```
+
+![ch13-6](img/ch13-6.png)
+
+Create a function, `demoCsv()`. This function will read CSV file, `demo.csv`, and convert these data to array of struct. After that, we write array of struct to a new CSV file, called `employee.csv`.
+
+The following is implementation of reading/writing CSV file.
+
+```go
+func main(){
+
+    demoCsv()
+
+}
+
+func demoCsv(){
+
+    fmt.Println("--------Demo encoding csv--------")
+    type Employee struct {
+        Name string
+        Email string
+        Country string
+    }
+
+    // read csv file to a array of struct
+    fmt.Println(">>>>read a csv file and load to array of struct....")
+    file, err := os.Open("D:/PE_PRESS/eBook/go_prog/codes/src/encoding/demo.csv")
+
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    defer file.Close()
+    reader := csv.NewReader(file)
+    reader.FieldsPerRecord = 3
+    reader.Comma = ';'
+
+    csvData, err := reader.ReadAll()
+    if err != nil {
+        fmt.Println(err)
+        os.Exit(1)
+    }
+
+    var emp Employee
+    var employees []Employee
+
+    for _, item := range csvData {
+        emp.Name = item[0]
+        emp.Email = item[1]
+        emp.Country = item[2]
+        employees = append(employees, emp)
+        fmt.Printf("name: %s email: %s  country: %s\n", item[0], item[1],item[2])
+    }
+    fmt.Println(">>>>show all employee structs....")
+    fmt.Println(employees)
+
+    // write data to csv file
+    fmt.Println(">>>>write data to a csv file ....")
+    csvFile, err := os.Create("D:/PE_PRESS/eBook/go_prog/codes/src/encoding/employee.csv")
+    if err != nil {
+        fmt.Println("Error:", err)
+        return
+    }
+    defer csvFile.Close()
+
+    writer := csv.NewWriter(csvFile)
+    writer.Comma = ';'
+    for _, itemEmp := range employees {
+        records := []string{itemEmp.Name,itemEmp.Email,itemEmp.Country}
+        err := writer.Write(records)
+        if err != nil {
+            fmt.Println("Error:", err)
+            return
+        }
+    }
+    writer.Flush()
+    fmt.Println(">>>>Done")
+
+}
+```
+
+注意：你可以更改 CSV 文件路径。
+
+保存此代码。现在你可以构建并运行此程序。
+
+示例输出可在下图看到。
+
+![ch13-5](img/ch13-5.png)
+
+如果打开 `employee.csv`，你会得到类似 `demo.csv` 文件内容的员工数据内容。
+
+![ch13-7](img/ch13-7.png)
+
+# 13. 哈希与密码学
+
+本章解释如何在 Go 中使用哈希和密码学
+
+## 13.1 入门
+
+哈希是通过数学函数从文本字符串生成值或值。密码学是在存在第三方（称为对手）的情况下进行安全通信的实践和研究，[`en.wikipedia.org/wiki/Cryptography`](http://en.wikipedia.org/wiki/Cryptography)。在本章中，我不解释数学哈希和密码学。你可以在教科书上阅读这些材料。
+
+在本章中，我们将探索如何使用 Go 实现哈希。本书中使用的哈希算法如下：
+
+* MD5
+
+* SHA256
+
+* 带密钥的哈希（`HMAC`）
+
+下一个主题是使用 Go 实现密码学。我们将探索对称和非对称密码学。
+
+首先，我们可以创建一个名为 `cryptodemo` 的新项目。
+
+```
+$ mkdir cryptodemo
+$ cd cryptodemo
+```
+
+创建一个文件 `main.go`。首先，我们为演示导入 Go 包。编写此代码。
+
+```
+package main
+
+import (
+    "fmt"
+    "crypto/md5"
+    "crypto/sha256"
+    "crypto/hmac"
+    "crypto/aes"
+    "crypto/rsa"
+    "crypto/cipher"
+    "crypto/rand"
+    "crypto/x509"
+    "encoding/hex"
+    "encoding/base64"
+    "encoding/pem"
+    "io"
+    "io/ioutil"
+)
+```
+
+让我们开始使用 Go 探索哈希和密码学。
+
+## 13.2 哈希
+
+基本上，你可以通过 [`golang.org/pkg/crypto/`](http://golang.org/pkg/crypto/) 探索如何使用 Go 实现哈希或哈希函数。在本节中，我们将探索几种哈希算法，例如 MD5、SHA256 和 HMAC。
+
+### 13.2.1 使用 MD5 进行哈希
+
+我们可以使用 `md5` 包使用 MD5，[`golang.org/pkg/crypto/md5/`](http://golang.org/pkg/crypto/md5/)。要从文本计算哈希值，我们可以调用 `Sum()` 函数。
+
+为了说明，我们创建一个函数 `demoHash_md5()`，并编写此代码。
+
+```
+func demoHash_md5() {
+
+    fmt.Println("--------Demo encoding hash using md5--------")
+
+    message := "Hello world, go!"
+    fmt.Println("plaintext:")
+    fmt.Println(message)
+
+    h := md5.New()
+    h.Write([]byte(message))
+    hash_message := hex.EncodeToString(h.Sum(nil))
+    fmt.Println("hashing message:")
+    fmt.Println(hash_message)
+
+}
+```
+
+### 13.2.2 使用 SHA256 进行哈希
+
+第二个演示是使用 SHA256 实现哈希函数。Go 提供了 `sha256` 包，[`golang.org/pkg/crypto/sha256/`](http://golang.org/pkg/crypto/sha256/)，用于使用 SHA256 实现哈希函数。
+
+为了说明，我们创建一个函数 `demoHash_sha256()`，并编写此代码。
+
+```
+func demoHash_sha256() {
+
+    fmt.Println("--------Demo encoding hash using sha256--------")
+
+    message := "Hello world, go!"
+    fmt.Println("plaintext:")
+    fmt.Println(message)
+
+    h := sha256.New()
+    h.Write([]byte(message))
+    hash_message := hex.EncodeToString(h.Sum(nil))
+    fmt.Println("hashing message:")
+    fmt.Println(hash_message)
+}
+```
+
+### 13.2.3 使用密钥进行哈希，使用 HMAC
+
+带密钥的哈希消息认证码（`HMAC`）是一种用于计算消息认证码（`MAC`）的特定构造，涉及密码学哈希函数与秘密密码学密钥的组合，[`en.wikipedia.org/wiki/Hash-based_message_authentication_code`](http://en.wikipedia.org/wiki/Hash-based_message_authentication_code)。在 Go 中，我们可以使用 `hmac` 包，[`golang.org/pkg/crypto/hmac/`](http://golang.org/pkg/crypto/hmac/)，来实现 HMAC 算法。
+
+为了说明，我们创建一个函数 `demoHashKey()`，并编写此代码。
+
+```
+func demoHashKey(key,message string) {
+
+    fmt.Println("--------Demo encoding hash with key: HMAC and sha256--------")
+
+    fmt.Println("key:")
+    fmt.Println(key)
+    fmt.Println("plaintext:")
+    fmt.Println(message)
+
+    hmacKey := []byte(key)
+    h := hmac.New(sha256.New, hmacKey)
+    h.Write([]byte(message))
+    hash_message := hex.EncodeToString(h.Sum(nil))
+    fmt.Println("hashing message:")
+    fmt.Println(hash_message)
+
+}
+```
+
+### 13.2.4 测试
+
+保存第 13.2.1、13.2.2 和 13.2.3 节的演示代码全部代码。为了测试，我们在 main 入口调用这些函数。编写此代码。
+
+```
+func main(){
+    demoHash_md5()
+    demoHash_sha256()
+    demoHashKey("mykey","Hello world, go!")
+}
+```
+
+保存全部。
+
+现在你可以测试构建并运行程序。
+
+```
+$ go build
+$ go run main.go
+```
+
+示例输出可在下图看到。
+
+![ch12-1](img/ch12-1.png)
+
+## 13.3 密码学
+
+在本节中，我们关注对称和非对称密码学。在对称密码学中，我们使用相同的密钥进行加密和解密。否则，非对称密码学使用不同的密钥进行加密和解密。
+
+我们在下一节中探索这些。
+
+### 13.3.1 对称密码学
+
+有许多算法可以实现对称密码学。在本节中，我们使用 AES 算法。高级加密标准（`AES`）是由美国国家标准与技术研究院（`NIST`）于 2001 年制定的电子数据加密规范，[`en.wikipedia.org/wiki/Advanced_Encryption_Standard`](http://en.wikipedia.org/wiki/Advanced_Encryption_Standard)。
+
+为了说明，我们创建两个函数 `encrypt_symmetric_crpyto()` 和 `decrypt_symmetric_crpyto()`。以下是 `encrypt_symmetric_crpyto()` 的实现。
