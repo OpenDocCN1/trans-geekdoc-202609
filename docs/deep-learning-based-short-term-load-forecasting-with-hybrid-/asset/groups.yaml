@@ -1,0 +1,2865 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Electric Power Systems Research 210 (2022) 108065
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Electric Power Systems Research
+
+
+    journal homepage: www://www.elsevier.com/locale/epsr
+
+
+    # Deep learning based short term load forecast with hybrid feature selection
+
+
+    Siva Sankari Subbiah a*, Jayakumar Chinnappan b
+
+
+    *Department of Computer Science and Engineering, Srinivasasa Institute of Technology
+    and Management Studies, Chittoor 637127, India
+
+    ᵇDepartment of Computer Science and Engineering, Sri Venkateswara College of Engineering,
+    Nellore, 524017
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    +   Keywords:
+
+    Deep learning
+
+    hHybrid feature selection
+
+    Long term load memory
+
+    Power system
+
+    Recurrent neural network
+
+
+    The reliable and economic operation of the power system rely on an accurate prediction
+    of short load. In this paper, a deep learning Based Short Term Memory (LSTM) with
+    hybrid feature selection RMR-HFS-LSTM is compared. The objective of this study
+    is to reduce the error of load prediction. The RMR-HFS is a combination of filter
+    and wrapper feature selection introduced for selecting optimal subset of features.
+    The information theory based mutual information filter selection is utilized to
+    reduce dimensionality of diversity by finding and eliminating irrelevant features.
+    The selected features of feature selection is tested using Recurrent Feature Elimination
+    (RFE). The result shows LSTM improves the accuracy and load data using uncertainty
+    experiments. The performance of the proposed method is conducted on European weather
+    and load data using comparison against Multilayer Perceptron (MLP) and Recursive
+    Neural Network (RNN). The results show that the proposed RMR-HFS-LSTM outperforms
+    other models.
+
+
+    # 1. Introduction
+
+
+    The electricity load forecasting an important research area in the competitive,
+    economic business due to an imbalance of electricity power demand and construction.
+    Load forecasting is a prime task to provide power in system for making decisions
+    on trading market, real time smart dispatch, smart grid automation and control
+    [1]. The load forecasting should result in accurate outcome for achieving the
+    stable and an efficient function of the power system. The electricity demand is
+    highly fluctuating for satisfying electricity demand, so it should be generated
+    when a demand for it. If the demand is known in advance, all the operational requirements
+    for the generation of electricity may be met. The power system has several objectives,
+    to provide the stable and safe power as per requirement at the right time, to
+    save the operational cost, to maintain the maintenance cost, and the reliability
+    of the power system and balance the power generation with the dynamic changes
+    in load [5,2]. Over estimation or
+
+
+    under estimation leads to complex financial implications to the power system [7].
+
+    The uncertain and volatile nature of the load and the existence of the incomplete,
+    non-homogeneous, redundant and irrelevant information in the load data makes it
+    difficult to achieve an accurate forecast. Weather information has high impact
+    on the load demand. The prediction of load considering the seasonal and weather
+    information yield an accurate result [9,10]. The forecasting can be done at an
+    hourly, daily, monthly and yearly basis. The load demand correlation with external
+    factors such as humidity, temperature, wind speed, pressure, snowfall, cloud and
+    the usage of home appliances by the ends [12]. In learning process, good quality
+    of input is and only the relevant information is fed as input to the learning
+    and prediction process. The feature selection is one of the dimensionality reduction
+    technique which selects the relevant features from the list of original features
+    based on the statistical characteristics of the features [13]. So, it retains
+    the originality of the features.
+
+
+    0378-7790 © 2022
+
+    * Corresponding author.
+
+    E-mail: sivasankarisiva@gmail.com (S.S. Subbiah).
+
+    https://doi.org/10.1016/j.jepr.2022.108065
+
+    Received 1 February 2022; Revised in form 4 April 2022; Accepted 1 May 2022
+
+    Available online 12 May 2022
+
+    0378-7790 © 2022 Elsevier B.V. All rights reserved.'
+  - '[PAGE 1]
+
+
+    # S.S. Babu & J. Chopra
+
+
+    # Electric Power Systems Research 210 (2022) 108865
+
+
+    On the other hand, the wrapper feature selection selects subsets of features based
+    on the learning model [15,14]. While the feature selection techniques the non-informative,
+    irrelevant and redundant information from the input data provided to the learning
+    process can lead to the better performance of the classifier.
+
+
+    The statistical and artificial intelligence based machine learning methods were
+    utilized by researchers in the past. Now the deep learning methods are used for
+    achieving efficiency with minimum effort. The deep learning based model has an
+    ability of learning complexities, and spatial and temporal dependencies of the
+    series data by stacking number of layers between input and output layers. For
+    example, neural networks can handle non-linear mapping of series data. But, it
+    suffers from the vanishing and the exploding gradients problem. The neural network
+    utilizes backpropagation for generating the derivative [21]. While the gradients
+    are small the learning becomes slow, and when they are large it creates the exploding
+    gradients problem. So the use of RNN LSTM solves these problems by introducing
+    gating mechanisms. The identification of importance of important feature, optimal
+    lag and any minimum number of layers will guarantee the reduction of an overfitting
+    issue. LSTM can capture large volume of high-dimensional data by considering multiple
+    features.
+
+
+    The proposed RMR-LSTM deep learning prediction model consists of preliminary data
+    processing, hybrid feature selection and deep prediction.
+
+
+    +   - The pre-processing stage handles the hourly time series electricity load
+    and the associated weather data, by replacing the missing values with the past
+    data, and reducing the data using min-max normalization.
+
+
+    The hybrid feature selection finds the relevant features by using of clustering,
+    and wrapper feature selection. The RLLEf and mutual information feature selection
+    identifies the features by removing the irrelevant and non-informative features
+    with statistical characteristics. The approach reduces redundant and tunes the
+    features selected by the feature selection SVR as the feature evaluator and finds
+    the optimal subset of features
+
+
+    +   - The deep prediction phase predicts the load by using LSTM. The proposed
+    deep learning model RMR-LSTM is compared against RNN and LSTM in terms of MAPE
+    and RMSE metrics.
+
+
+    The remainder of the paper is structured as follows. The work done by various
+    researchers is explored in Section 2. The significance of RMR-HFS feature selection,
+    the architecture of RMR-LSTM model is described in Section 3. The results of each
+    prediction model and discussion is discussed in Section 4. The conclusion of the
+    present work is presented in Section 5.
+
+
+    # 2. Related works
+
+
+    The review of related works investigated by various researchers is explored in
+    this section. In [71], Marin et al. identified a novel long short term memory
+    sequence generator for predicting the building load. The authors used an LSTM
+    decoder model to approach the forecasting of both hourly and minute level load
+    by CRFM and FCBM models. The results and consideration of the outliers in the
+    results are not discussed. The CNN-based deep learning network presented in [24]
+    worked well in forecasting and achieved better performance compared to ANN models
+    like regression and ARIMA. The model is compared using a deep gradient boosting
+    framework. Ku and Hu proposed a CNN deep energy load model for forecasting using
+    random forest tree, DEC and LSTM. The result showed that the CNN deep energy load
+    model outperformed other methods. The performance of the model was reduced by
+    outliers. The consideration of the temporal dependency characteristics is missing.
+
+
+    Table 1
+
+
+    Nomenclature.
+
+
+    | | Description |
+
+    |---|---|
+
+    | ANN | artificial neural network |
+
+    | ARIMA | autoregressive integrated moving average |
+
+    | BPN | backpropagation neural network |
+
+    | CNN | convolutional neural network |
+
+    | CRBM | constrained restricted Boltzmann machine |
+
+    | DL | Deep learning |
+
+    | DNN | deep neural network |
+
+    | EL | extreme learning |
+
+    | EMD | empirical mode decomposition |
+
+    | GP | Gaussian process regression |
+
+    | GRU | gated recurrent unit |
+
+    | KNN | K-nearest neighbors |
+
+    | LSTM | long short term memory |
+
+    | LSTM seq | LSTM long term sequence to sequence |
+
+    | SATES | max absolute error |
+
+    | ME | mean error |
+
+    | MI | mutual information |
+
+    | MLP | multivariate predictor |
+
+    | NARX | nonlinear autoregressive exogenous inputs |
+
+    | PDCNN | pooling deep neural network |
+
+    | RFE | recurrent feature selection |
+
+    | HFS | hybrid feature selection |
+
+    | RLEf | RLEf, mutual information and recurrent feature selection - hybrid feature
+    |
+
+    | RMSE | mean square error |
+
+    | STCM | support vector machine |
+
+    | RNN | recurrent network |
+
+    | SVM | support vector |
+
+    | SVR | support vector regression |
+
+    | VMD | variational mode decomposition |
+
+
+    Faisal et al. [17] designed an extreme learning machine using the enhanced convolutional
+    neural network for forecasting the building which uncertainty, volatility and
+    overfitting problems were handled effectively by deep neural network using load
+    aggregation, spatial analysis and customer classification. The result was hidden
+    by outliers and no handling of outliers.
+
+
+    2'
+  md: '
+
+    # Electric Power Systems Research 210 (2022) 108065
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Electric Power Systems Research
+
+
+    journal homepage: www://www.elsevier.com/locale/epsr
+
+
+    # Deep learning based short term load forecast with hybrid feature selection
+
+
+    Siva Sankari Subbiah a*, Jayakumar Chinnappan b
+
+
+    *Department of Computer Science and Engineering, Srinivasasa Institute of Technology
+    and Management Studies, Chittoor 637127, India
+
+    ᵇDepartment of Computer Science and Engineering, Sri Venkateswara College of Engineering,
+    Nellore, 524017
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    - Keywords:
+
+    - Deep learning
+
+    - Hybrid feature selection
+
+    - Long term load memory
+
+    - Power system
+
+    - Recurrent neural network
+
+
+    The reliable and economic operation of the power system rely on an accurate prediction
+    of short load. In this paper, a deep learning Based Short Term Memory (LSTM) with
+    hybrid feature selection RMR-HFS-LSTM is compared. The objective of this study
+    is to reduce the error of load prediction. The RMR-HFS is a combination of filter
+    and wrapper feature selection introduced for selecting optimal subset of features.
+    The information theory based mutual information filter selection is utilized to
+    reduce dimensionality of diversity by finding and eliminating irrelevant features.
+    The selected features of feature selection is tested using Recurrent Feature Elimination
+    (RFE). The result shows LSTM improves the accuracy and load data using uncertainty
+    experiments. The performance of the proposed method is conducted on European weather
+    and load data using comparison against Multilayer Perceptron (MLP) and Recursive
+    Neural Network (RNN). The results show that the proposed RMR-HFS-LSTM outperforms
+    other models.
+
+
+    # 1. Introduction
+
+
+    The electricity load forecasting an important research area in the competitive,
+    economic business due to an imbalance of electricity power demand and construction.
+    Load forecasting is a prime task to provide power in system for making decisions
+    on trading market, real time smart dispatch, smart grid automation and control
+    [1]. The load forecasting should result in accurate outcome for achieving the
+    stable and an efficient function of the power system. The electricity demand is
+    highly fluctuating for satisfying electricity demand, so it should be generated
+    when a demand for it. If the demand is known in advance, all the operational requirements
+    for the generation of electricity may be met. The power system has several objectives,
+    to provide the stable and safe power as per requirement at the right time, to
+    save the operational cost, to maintain the maintenance cost, and the reliability
+    of the power system and balance the power generation with the dynamic changes
+    in load [5,2]. Over estimation or under estimation leads to complex financial
+    implications to the power system [7].
+
+
+    The uncertain and volatile nature of the load and the existence of the incomplete,
+    non-homogeneous, redundant and irrelevant information in the load data makes it
+    difficult to achieve an accurate forecast. Weather information has high impact
+    on the load demand. The prediction of load considering the seasonal and weather
+    information yield an accurate result [9,10]. The forecasting can be done at an
+    hourly, daily, monthly and yearly basis. The load demand correlation with external
+    factors such as humidity, temperature, wind speed, pressure, snowfall, cloud and
+    the usage of home appliances by the ends [12]. In learning process, good quality
+    of input is and only the relevant information is fed as input to the learning
+    and prediction process. The feature selection is one of the dimensionality reduction
+    technique which selects the relevant features from the list of original features
+    based on the statistical characteristics of the features [13]. So, it retains
+    the originality of the features.
+
+
+    0378-7790 © 2022
+
+    * Corresponding author.
+
+    E-mail: sivasankarisiva@gmail.com (S.S. Subbiah).
+
+    https://doi.org/10.1016/j.jepr.2022.108065
+
+    Received 1 February 2022; Revised in form 4 April 2022; Accepted 1 May 2022
+
+    Available online 12 May 2022
+
+    0378-7790 © 2022 Elsevier B.V. All rights reserved.
+
+
+    On the other hand, the wrapper feature selection selects subsets of features based
+    on the learning model [15,14]. While the feature selection techniques the non-informative,
+    irrelevant and redundant information from the input data provided to the learning
+    process can lead to the better performance of the classifier.
+
+
+    The statistical and artificial intelligence based machine learning methods were
+    utilized by researchers in the past. Now the deep learning methods are used for
+    achieving efficiency with minimum effort. The deep learning based model has an
+    ability of learning complexities, and spatial and temporal dependencies of the
+    series data by stacking number of layers between input and output layers. For
+    example, neural networks can handle non-linear mapping of series data. But, it
+    suffers from the vanishing and the exploding gradients problem. The neural network
+    utilizes backpropagation for generating the derivative [21]. While the gradients
+    are small the learning becomes slow, and when they are large it creates the exploding
+    gradients problem. So the use of RNN LSTM solves these problems by introducing
+    gating mechanisms. The identification of importance of important feature, optimal
+    lag and any minimum number of layers will guarantee the reduction of an overfitting
+    issue. LSTM can capture large volume of high-dimensional data by considering multiple
+    features.
+
+
+    The proposed RMR-LSTM deep learning prediction model consists of preliminary data
+    processing, hybrid feature selection and deep prediction.
+
+
+    - The pre-processing stage handles the hourly time series electricity load and
+    the associated weather data, by replacing the missing values with the past data,
+    and reducing the data using min-max normalization.
+
+
+    The hybrid feature selection finds the relevant features by using of clustering,
+    and wrapper feature selection. The RLEf and mutual information feature selection
+    identifies the features by removing the irrelevant and non-informative features
+    with statistical characteristics. The approach reduces redundant and tunes the
+    features selected by the feature selection SVR as the feature evaluator and finds
+    the optimal subset of features.
+
+
+    - The deep prediction phase predicts the load by using LSTM. The proposed deep
+    learning model RMR-LSTM is compared against RNN and LSTM in terms of MAPE and
+    RMSE metrics.
+
+
+    The remainder of the paper is structured as follows. The work done by various
+    researchers is explored in Section 2. The significance of RMR-HFS feature selection,
+    the architecture of RMR-LSTM model is described in Section 3. The results of each
+    prediction model and discussion is discussed in Section 4. The conclusion of the
+    present work is presented in Section 5.
+
+
+    # 2. Related works
+
+
+    The review of related works investigated by various researchers is explored in
+    this section. In [71], Marin et al. identified a novel long short term memory
+    sequence generator for predicting the building load. The authors used an LSTM
+    decoder model to approach the forecasting of both hourly and minute level load
+    by CRFM and FCBM models. The results and consideration of the outliers in the
+    results are not discussed. The CNN-based deep learning network presented in [24]
+    worked well in forecasting and achieved better performance compared to ANN models.
+    The model is compared using a deep boosting framework. Ku and Hu proposed a CNN
+    deep energy model for forecasting using random forest tree, DEC and LSTM. The
+    result showed that the CNN deep energy model outperformed other methods. The performance
+    of the model was reduced by outliers. The consideration of the dependency characteristics
+    is missing.
+
+
+    Table 1
+
+
+    Nomenclature.
+
+
+    | | Description |
+
+    |---|---|
+
+    | ANN | artificial neural network |
+
+    | ARIMA | autoregressive integrated moving average |
+
+    | BPN | backpropagation neural network |
+
+    | CNN | convolutional neural network |
+
+    | CRBM | constrained restricted Boltzmann machine |
+
+    | DL | Deep learning |
+
+    | DNN | deep neural network |
+
+    | EL | extreme learning |
+
+    | EMD | empirical mode decomposition |
+
+    | GP | Gaussian process regression |
+
+    | GRU | gated recurrent unit |
+
+    | KNN | K-nearest neighbors |
+
+    | LSTM | long short term memory |
+
+    | LSTM seq | LSTM long term sequence to sequence |
+
+    | SATES | max absolute error |
+
+    | ME | mean error |
+
+    | MI | mutual information |
+
+    | MLP | multivariate predictor |
+
+    | NARX | nonlinear autoregressive exogenous inputs |
+
+    | PDCNN | pooling deep neural network |
+
+    | RFE | recurrent feature selection |
+
+    | HFS | hybrid feature selection |
+
+    | RLEf | RLEf, mutual information and recurrent feature selection - hybrid feature
+    |
+
+    | RMSE | mean square error |
+
+    | STCM | support vector machine |
+
+    | RNN | recurrent network |
+
+    | SVM | support vector |
+
+    | SVR | support vector regression |
+
+    | VMD | variational mode decomposition |
+
+
+    Faisal et al. [17] designed an extreme learning machine using the enhanced convolutional
+    neural network for forecasting the building which uncertainty, volatility and
+    overfitting problems were handled effectively by deep neural network using load
+    aggregation, spatial analysis and customer classification. The result was hidden
+    by outliers and no handling of outliers.
+
+    '
+  mdcn: '
+
+
+    # 电力系统研究 210 (2022) 108065
+
+
+    ScienceDirect 可用目录列表
+
+
+    # 电力系统研究
+
+
+    期刊主页：www://www.elsevier.com/locale/epsr
+
+
+    # 基于深度学习的混合特征选择短期负荷预测
+
+
+    Siva Sankari Subbiah a*, Jayakumar Chinnappan b
+
+
+    *计算机科学与工程系，Srinivasasa Institute of Technology and Management Studies, Chittoor
+    637127, 印度
+
+    ᵇ计算机科学与工程系，Sri Venkateswara College of Engineering, Nellore, 524017
+
+
+    # 文章信息
+
+
+    # 摘要
+
+
+    - 关键词：
+
+    - 深度学习
+
+    - 混合特征选择
+
+    - 长期负荷记忆
+
+    - 电力系统
+
+    - 循环神经网络
+
+
+    电力系统的可靠且经济运行依赖于对短期负荷的准确预测。本文中对比了基于混合特征选择的深度学习长短期记忆（LSTM）模型 RMR-HFS-LSTM。本研究的目标是减少负荷预测误差。RMR-HFS
+    是过滤式（filter）和包装式（wrapper）特征选择的结合，用于选择特征的最优子集。利用基于信息理论的互信息过滤选择，通过发现和消除无关特征来降低多样性维度。所选的特征通过递归特征消除（RFE）进行测试。结果显示，LSTM
+    通过不确定性实验改进了负荷数据的准确性和负荷数据处理。在欧洲天气和负荷数据上对所提方法的性能进行了测试，并将其与多层感知器（MLP）和递归神经网络（RNN）进行了对比。结果表明，提出的
+    RMR-HFS-LSTM 优于其他模型。
+
+
+    # 1. 引言
+
+
+    由于电力需求与建设之间的不平衡，电力负荷预测是竞争性经济性业务中的一个重要研究领域。负荷预测是为系统中的交易市场决策、实时智能调度、智能电网自动化和控制提供电力支持的首要任务
+    [1]。为了实现电力系统的稳定和高效运行，负荷预测应产生准确的结果。为了满足电力需求，电力需求波动很大，因此应该在需求时发电。如果能够提前知道需求，就可以满足发电的所有运行要求。电力系统有几个目标：根据需要按时提供稳定安全的电力、节省运行成本、维持维护成本、确保电力系统的可靠性并平衡发电与负荷动态变化的平衡
+    [5,2]。高估或低估会导致电力系统产生复杂的财务影响 [7]。
+
+
+    负荷的不确定性和波动性，以及负荷数据中不完整、非均匀、冗余和无关信息的存在使得难以实现准确预测。天气信息对负荷需求影响很大。考虑季节和天气信息的负荷预测可以产生准确的结果
+    [9,10]。预测可以按小时、每天、每月或每年进行。负荷需求与外部因素（如湿度、温度、风速、压力、降雪、云以及用户对家电的使用）相关 [12]。在学习过程中，只有高质量的输入且只有相关信息被作为输入到学习和预测过程中。特征选择是降维技术之一，它根据特征的统计特性从原始特征列表中选择相关特征
+    [13]。因此，它保留了特征的原始性。
+
+
+    0378-7790 © 2022
+
+    * 通讯作者。
+
+    电子邮箱：sivasankarisiva@gmail.com (S.S. Subbiah)。
+
+    https://doi.org/10.1016/j.jepr.2022.108065
+
+    收稿：2022年2月1日；修订：2022年4月4日；接收：2022年5月1日
+
+    2022年5月12日在线可用
+
+    0378-7790 © 2022 Elsevier B.V. 版权所有。
+
+
+    另一方面，包装式特征选择根据学习模型选择特征子集 [15,14]。特征选择技术从提供给学习过程的输入数据中消除无信息、无关和冗余信息，可以提高分类器的性能。
+
+
+    过去研究人员利用基于统计和人工智能的机器学习方法。现在使用深度学习方法以以最小的努力实现效率。基于深度学习的模型通过在输入层和输出层之间堆叠许多层，具有学习序列数据复杂性以及时空依赖关系的能力。例如，神经网络可以处理序列数据的非线性映射。但它面临梯度消失和梯度爆炸问题。神经网络利用反向传播生成导数
+    [21]。当梯度很小时，学习变得变慢；而当梯度很大时，就会产生梯度爆炸问题。因此，使用 RNN LSTM 通过引入门控机制解决了这些问题。识别重要特征的重要性、最优滞后和任何最小层数将保证减少过拟合问题。LSTM
+    可以通过考虑多个特征来捕捉大量高维数据。
+
+
+    提出的 RMR-HFS-LSTM 包含了预处理、混合特征选择和深度预测。该深度学习模型通过考虑多个特征来捕捉大量高维数据。
+
+
+    所提方法的 RMR-HFS-LSTM 在 MAPE 和 RMSE 指标上与 RNN 和 LSTM 进行了对比预测预测。RLEf、互信息和递归特征选择的混合特征选择通过消除无关和非信息特征，利用统计特性识别相关特征。
+
+
+    本文其余部分的结构如下：第2节探讨了研究人员的工作；第3节描述了 RMR-HFS 特征选择和 RMR-LSTM 模型；第4节讨论了每个预测模型的结果；第5节给出了本研究的结论。
+
+
+    # 2. 相关工作
+
+
+    本节探讨了各种研究人员的相关工作。在 [71] 中，Marin 等人识别了一种新型长短期记忆生成器用于预测负荷。作者使用 LSTM 解码器通过 CRFM 和
+    FCBM 模型对每小时和分钟级负荷进行预测。未讨论结果中的离值问题。[24] 中提出的 CNN 深度学习网络在预测方面运行良好，与 ANN 模型相比取得了更好的性能。该模型使用了深度提升框架。Ku
+    和 Hu 提出了一种使用随机森林、DEC 和 LSTM 的 CNN 能量模型。结果显示 CNN 能量模型优于其他方法。模型的性能受离值影响。缺少对依赖性的考虑。
+
+
+    表 1
+
+
+    术语。
+
+
+    | | 说明 |
+
+    |---|---|
+
+    | ANN | 人工神经网络 |
+
+    | ARIMA | 自回归移动平均 |
+
+    | BPN | 反向传播神经网络 |
+
+    | CNN | 卷积神经网络 |
+
+    | CRBM | 受限玻尔兹曼机器 |
+
+    | DL | 深度学习 |
+
+    | DNN | 深度神经网络 |
+
+    | EL | 极端学习 |
+
+    | EMD | 经验模态分解 |
+
+    | GP | 高斯过程回归 |
+
+    | GRU | 门控循环单元 |
+
+    | KNN | K 近邻 |
+
+    | LSTM | 长短期记忆 |
+
+    | LSTM seq | LSTM 长序列到序列 |
+
+    | SATES | 最大绝对误差 |
+
+    | ME | 平均误差 |
+
+    | MI | 互信息 |
+
+    | MLP | 多层感知器 |
+
+    | NARX | 非线性自回归外生输入 |
+
+    | PDCNN | 池化深度神经网络 |
+
+    | RFE | 递归特征选择 |
+
+    | HFS | 混合特征选择 |
+
+    | RLEf | RLEf、互信息和递归特征选择的混合特征 |
+
+    | RMSE | 均方误差 |
+
+    | STCM | 支持向量机 |
+
+    | RNN | 循环网络 |
+
+    | SVM | 支持向量 |
+
+    | SVR | 支持向量回归 |
+
+    | VMD | 变分模态分解 |
+
+
+    Faisal 等人 [17] 设计了一种使用增强型卷积神经网络的极端学习机用于建筑预测，其不确定、波动和过拟合问题通过深度神经网络利用负荷聚合、空间分析和客户分类得到了有效处理。结果被离值隐藏，且未对离值进行处理。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    energy consumption. The mutual information and RFS feature methods were applied
+    for selecting the best features. The model was tested with SVR, CNN and RNN. The
+    results show that an enhanced convolutional neural network outperformed other
+    methods. The tendency issues addressed namely the temporal dependency in de-correlated
+    load forecasting was discussed in [27] by He in the deep neural network which
+    improved the implicit dynamics. In [28], Mohammad et al. presented a deep neural
+    network for both day and ahead term load forecasting using CNN and LSTM models.
+    The deep neural network and DFN were enhanced with hyperbolic tangent (tanh),
+    and ReLU activation functions. As, the result with DNN outperformed other methods.
+    In [29], the feature selection was based on the time series data using DNN with
+    RNN. The DNN achieved a better prediction accuracy.
+
+
+    Authors [30] presented a deep neural network based model for load forecasting
+    in the power system. The DNN was pretraining by using multiple layers of Restricted
+    Bottleneck Machine. The BPNN was used in DNN for accurate fine-tuning and weight
+    adjustment and yielded good prediction results. The enhanced CNN was used for
+    forecasting electricity price in light demand market. The model achieved a reduced
+    forecasting error than standard CNN and SVR. In [31], the CRBM and RFCM methods
+    performed for load forecasting. Methods et al. presented a DNN for load forecasting.
+    It handled the historical load sequences and better accuracy using ARIMA, RNN,
+    and CNN.
+
+
+    With the increasing capability, the residual network can achieve a good accuracy
+    in short term load forecasting [33]. In deep residual structure, the network of
+    work was improved by using an ensemble strategy of adding hidden layers in the
+    input. The deep residual network achieved higher accuracy than general DNN models.
+    [34], Ryu et al. predicted short term load using deep neural network with RNN.
+    The DNN with RNN having high-quality feature selection was used for load forecasting.
+    It was constructed using MLP with RBM with discriminative pre-training. The hidden
+    layers are changed discriminatively and pre-trained. The RNN with DNN achieved
+    a better forecasting results.
+
+
+    Most of the researchers in use of deep learning methods like MLP, RNN, CNN, and
+    LSTM. Some researchers performed only using only the historical load data without
+    external features for improving the process. Other researchers utilized orthogonal
+    features to identify the relevant and non-redundant features. So, they suffered
+    from model complexity and dimensionality issues. The dimension of the dataset
+    is reduced to achieve for the better forecasting accuracy. The temporal dependency
+    on the load data is also an important information that helps in forecasting. Data
+    also have the uncertainties. In this paper, the dimension of the dataset is reduced
+    to enhance the accuracy of forecasting using hybrid selection and also uncertainty
+    issues are taken into consideration by analyzing the temporal dependency on load
+    data using RNN. So, the proposed RMR-HFS-LSTM data model fills these gaps by considering
+    uncertainty, non-linearity, and overfitting of dimensionality issues and improves
+    the load forecasting performance.
+
+
+    # 3. Proposed RMR-HFS-LSTM prediction model
+
+
+    # 3.1. Significance of R-HFS
+
+
+    The dataset with uncorrelated, unrelated and non-informative features may increase
+    the dimension of dataset in which forces the model to overfit. It also causes
+    complications for the forecasting models in generalizing the pattern. The model
+    trained with too many features may not produce the accurate and robust results.
+    It also observed that redundant features reduce the accuracy. The dataset may
+    have many features. They are relevant, highly relevant and redundant features,
+    weakly relevant and non-redundant, and strongly relevant features. The irrelevant
+    features reduce the accuracy. These features should not be contributing to the
+    forecasting accuracy. Instead, of that identifying the overfitting and reducing
+    the accuracy. On the other hand, the strongly relevant and weakly relevant features
+    help in forecasting. redundant features should be identified and removed.
+
+
+    In this paper, the RLeeff Recursive Information Hybrid Feature Selection (RMR-HFS)
+    is introduced for the improvement of short term load forecasting usinging and
+    filter feature selection methods. The method based on information filter feature
+    selection and recursive-based feature selection wrapper method are applied to
+    identify the subset of features. Feature selection methods are not suitable for
+    all cases. The proposed method where RLeeff and information theoretic mutual information
+    feature selection are used to eliminate the redundant features. The RLeeff filter
+    selection is used for feature selection. The method identifies the relevant and
+    non-informative features by the relationship between each feature and target feature.
+    RLeeff does not consider the relationship between features.
+
+
+    Although, RMR and MI selects all the features it is general that the list of relevant
+    features has many redundant features. The selection has the capacity of identifying
+    and removing the redundant features using learning as a feature. So, the proposed
+    method can improve the accuracy and avoid overfitting by using the recursive RFE
+    base. The filter and wrapper selection method is proposed to avail the benefits
+    of both feature selection. The optimal subset of features is given in for the
+    deep learning LSTM model for load forecasting.
+
+
+    # 3.2. RMR-HFS-LSTM architecture
+
+
+    The proposed deep learning based model RMR-HFS-LSTM consists of three phases:
+    data preprocessing, hybrid feature selection and prediction. In the first phase,
+    the hourly electricity load and weather data are are treated as a single dataset.
+    It is cleaned and normalized to prepare the data for further processing. The outliers
+    and selection of dissimilar samples are eliminated. Then the instance based filter
+    feature selection RLeeff and information theoretic mutual information feature
+    selection are applied to identify the relevant features.'
+  - '[PAGE 3]
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig. 1.
+
+
+    In this paper, combination of filter and wrapper feature selection yields mutual
+    benefits. Even though the wrapper method guarantees an accurate result, it selects
+    a large number of features. When the data has ''n'' number of features, there
+    may be a possibility of ''2^n'' subsets. For example, with a dataset with 21 features,
+    there are 2^21 subsets to consider the wrapper method. The irrelevant and non-important
+    features are eliminated by the first filters. Then, the wrappers are applied on
+    the reduced set to tune that list of features. It is possible that the instance
+    based Rleff feature selection and the information based MI feature selection are
+    utilized to find the most relevant features from the original list of features.
+    It selects the relevant features based on the quality of features with each feature
+    method. It selects only the relationship between each feature and target. It does
+    not consider the relationship between features.
+
+
+    # 3.2.1. Feature selection
+
+
+    The feature selection is one of the important method to improve the performance
+    of short term load forecasting. When the number of features increases the performance
+    of prediction, but, when the data has a large number of features there is a chance
+    of including irrelevant and non-important features and it may degrade the performance
+    of prediction. The irrelevant features do not yield any useful information for
+    prediction, instead, it confuses the learning algorithm and may be cause of dimensionality
+    problem will be encountered. Hence, the performance of the learning algorithm
+    is improved. There are two categories of feature selection, filter and wrapper
+    feature selection. The filter selection method works far better by considering
+
+
+    the statistical characteristics of each feature and target with the maximal relevant
+    feature [27,38], but it does not guarantee an accurate prediction. On the other
+    hand, the wrapper selection considers all the features and evaluates each subset
+    of features by using the method evaluator. As a result the wrapper selection result
+    is much better than the filter method [39,46]. The following section discusses
+    Rleff, MI and R wrapper feature selection.
+
+
+    # 3.2.1.1. Rleff
+
+
+    The Recursive Regression (Rleff) feature selection is an advanced version of algorithm
+    to help the reliability of features. It is the type of feature selection that
+    has capacity of providing quality features in regression problems which are continuous.
+    The Rleff instance based feature selection utilizes the kind of finding features
+    in different orders [29,41]. The Rleff algorithm randomly selects and removes
+    features from the original instance. Then, it selects k number of features using
+    the variance function. After that, it calculates the weights for different subsets,
+    different attributes and different orders.
+
+
+    ```
+
+    P(A|B) = P(difference|nearest instances)
+
+    ```
+
+
+    ```
+
+    P(AG) = P(difference|nearest instances)
+
+    ```
+
+
+    ```
+
+    P(AG|ABC) = P(difference|difference of A and nearest instances)
+
+    ```
+
+
+    ```
+
+    W[A] = P(AG|ABC) * (1 - P(A|ABC)) / (1 - P(A)
+
+    ```
+
+
+    The feature with the highest weight is considered as the best feature among other
+    features. The Rleff has the same time complexity as that of simple regression.
+
+
+    # 3.2.1.2. Mutual information selection
+
+
+    The mutual information is a non linear correlation filter feature selection that
+    calculates the correlation between two or more of features. The features have
+    common information with other feature is called a dependent feature [22,23]. On
+    the other hand, the features with no common information are called independent
+    features. The mutual information method utilizes the dependency between the features
+    related to the target as a base for finding the relevant feature. The amount of
+    information shared between features is called mutual information. If there are
+    two features, then the mutual information between them is measured as I(A;B).
+    When the ''A'' and ''B'' are independent, the mutual information I(A;B) is 0.
+    The data is in continuous. For continuous random variables, the mutual information
+    of the feature ''A'' is calculated as
+
+
+    ```
+
+    I(A;B) = sum p(A,B) * log (p(A,B)/(p(A)p(B))) dB
+
+    ```
+
+
+    where ''a'' and ''b'' represents the number of values in ''A'' and ''B''. Then,
+    the P(a,b) is the joint probability density of ''A'' and ''B''. The pa and pb
+    are marginal probability density function of ''A'' and ''B''.
+
+
+    # 3.2.1.3. Recursive elimination.
+
+
+    The recursive elimination is the type of wrapper feature selection. Generally,
+    it selects the
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_3_0.png)
+
+
+    Fig. R-HFS-LSTM Prediction Model.'
+  md: '
+
+    [content]
+
+    energy consumption. The mutual information and RFS feature methods were applied
+    for selecting the best features. The model was tested with SVR, CNN and RNN. The
+    results show that an enhanced convolutional neural network outperformed other
+    methods. The tendency issues addressed namely the temporal dependency in de-correlated
+    load forecasting was discussed in [27] by He in the deep neural network which
+    improved the implicit dynamics. In [28], Mohammad et al. presented a deep neural
+    network for both day and ahead term load forecasting using CNN and LSTM models.
+    The deep neural network and DFN were enhanced with hyperbolic tangent (tanh),
+    and ReLU activation functions. As, the result with DNN outperformed other methods.
+    In [29], the feature selection was based on the time series data using DNN with
+    RNN. The DNN achieved a better prediction accuracy.
+
+
+    Authors [30] presented a deep neural network based model for load forecasting
+    in the power system. The DNN was pretraining by using multiple layers of Restricted
+    Bottleneck Machine. The BPNN was used in DNN for accurate fine-tuning and weight
+    adjustment and yielded good prediction results. The enhanced CNN was used for
+    forecasting electricity price in light demand market. The model achieved a reduced
+    forecasting error than standard CNN and SVR. In [31], the CRBM and RFCM methods
+    performed for load forecasting. Methods et al. presented a DNN for load forecasting.
+    It handled the historical load sequences and better accuracy using ARIMA, RNN,
+    and CNN.
+
+
+    With the increasing capability, the residual network can achieve a good accuracy
+    in short term load forecasting [33]. In deep residual structure, the network of
+    work was improved by using an ensemble strategy of adding hidden layers in the
+    input. The deep residual network achieved higher accuracy than general DNN models.
+    [34], Ryu et al. predicted short term load using deep neural network with RNN.
+    The DNN with RNN having high-quality feature selection was used for load forecasting.
+    It was constructed using MLP with RBM with discriminative pre-training. The hidden
+    layers are changed discriminatively and pre-trained. The RNN with DNN achieved
+    a better forecasting results.
+
+
+    Most of the researchers in use of deep learning methods like MLP, RNN, CNN, and
+    LSTM. Some researchers performed only using only the historical load data without
+    external features for improving the process. Other researchers utilized orthogonal
+    features to identify the relevant and non-redundant features. So, they suffered
+    from model complexity and dimensionality issues. The dimension of the dataset
+    is reduced to achieve for the better forecasting accuracy. The temporal dependency
+    on the load data is also an important information that helps in forecasting. Data
+    also have the uncertainties. In this paper, the dimension of the dataset is reduced
+    to enhance the accuracy of forecasting using hybrid selection and also uncertainty
+    issues are taken into consideration by analyzing the temporal dependency on load
+    data using RNN. So, the proposed RMR-HFS-LSTM data model fills these gaps by considering
+    uncertainty, non-linearity, and overfitting of dimensionality issues and improves
+    the load forecasting performance.
+
+
+    ## 3. Proposed RMR-HFS-LSTM prediction model
+
+
+    ## 3.1. Significance of R-HFS
+
+
+    The dataset with uncorrelated, unrelated and non-informative features may increase
+    the dimension of dataset in which forces the model to overfit. It also causes
+    complications for the forecasting models in generalizing the pattern. The model
+    trained with too many features may not produce the accurate and robust results.
+    It also observed that redundant features reduce the accuracy. The dataset may
+    have many features. They are relevant, highly relevant and redundant features,
+    weakly relevant and non-redundant, and strongly relevant features. The irrelevant
+    features reduce the accuracy. These features should not be contributing to the
+    forecasting accuracy. Instead, of that identifying the overfitting and reducing
+    the accuracy. On the other hand, the strongly relevant and weakly relevant features
+    help in forecasting. redundant features should be identified and removed.
+
+
+    In this paper, the RLeeff Recursive Information Hybrid Feature Selection (RMR-HFS)
+    is introduced for the improvement of short term load forecasting usinging and
+    filter feature selection methods. The method based on information filter feature
+    selection and recursive-based feature selection wrapper method are applied to
+    identify the subset of features. Feature selection methods are not suitable for
+    all cases. The proposed method where RLeeff and information theoretic mutual information
+    feature selection are used to eliminate the redundant features. The RLeeff filter
+    selection is used for feature selection. The method identifies the relevant and
+    non-informative features by the relationship between each feature and target feature.
+    RLeeff does not consider the relationship between features.
+
+
+    Although, RMR and MI selects all the features it is general that the list of relevant
+    features has many redundant features. The selection has the capacity of identifying
+    and removing the redundant features using learning as a feature. So, the proposed
+    method can improve the accuracy and avoid overfitting by using the recursive RFE
+    base. The filter and wrapper selection method is proposed to avail the benefits
+    of both feature selection. The optimal subset of features is given in for the
+    deep learning LSTM model for load forecasting.
+
+
+    ## 3.2. RMR-HFS-LSTM architecture
+
+
+    The proposed deep learning based model RMR-HFS-LSTM consists of three phases:
+    data preprocessing, hybrid feature selection and prediction. In the first phase,
+    the hourly electricity load and weather data are are treated as a single dataset.
+    It is cleaned and normalized to prepare the data for further processing. The outliers
+    and selection of dissimilar samples are eliminated. Then the instance based filter
+    feature selection RLeeff and information theoretic mutual information feature
+    selection are applied to identify the relevant features.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The result is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features.
+
+
+    [content]
+
+
+    The temporal dependency on the load data is also an important information that
+    helps in forecasting. Data also have the uncertainties. In this paper, the dimension
+    of the dataset is reduced to enhance the accuracy of forecasting using hybrid
+    selection and also uncertainty issues are taken into consideration by analyzing
+    the temporal dependency on load data using RNN. So, the proposed RMR-HFS-LSTM
+    data model fills these gaps by considering uncertainty, non-linearity, and overfitting
+    of dimensionality issues and improves the load forecasting performance.
+
+
+    ## 3. Proposed RMR-HFS-LSTM prediction model
+
+
+    ## 3.1. Significance of R-HFS
+
+
+    The dataset with uncorrelated, unrelated and non-informative features may increase
+    the dimension of dataset in which forces the model to overfit. It also causes
+    complications for the forecasting models in generalizing the pattern. The model
+    trained with too many features may not produce the accurate and robust results.
+    It also observed that redundant features reduce the accuracy. The dataset may
+    have many features. They are relevant, highly relevant and redundant features,
+    weakly relevant and non-redundant, and strongly relevant features. The irrelevant
+    features reduce the accuracy. These features should not be contributing to the
+    forecasting accuracy. Instead, of that identifying the overfitting and reducing
+    the accuracy. On the other hand, the strongly relevant and weakly relevant features
+    help in forecasting. redundant features should be identified and removed.
+
+
+    In this paper, the RLeeff Recursive Information Hybrid Feature Selection (RMR-HFS)
+    is introduced for the improvement of short term load forecasting usinging and
+    filter feature selection methods. The method based on information filter feature
+    selection and recursive-based feature selection wrapper method are applied to
+    identify the subset of features. Feature selection methods are not suitable for
+    all cases. The proposed method where RLeeff and information theoretic mutual information
+    feature selection are used to eliminate the redundant features. The RLeeff filter
+    selection is used for feature selection. The method identifies the relevant and
+    non-informative features by the relationship between each feature and target feature.
+    RLeeff does not consider the relationship between features.
+
+
+    Although, RMR and MI selects all the features it is general that the list of relevant
+    features has many redundant features. The selection has the capacity of identifying
+    and removing the redundant features using learning as a feature. So, the proposed
+    method can improve the accuracy and avoid overfitting by using the recursive RFE
+    base. The filter and wrapper selection method is proposed to avail the benefits
+    of both feature selection. The optimal subset of features is given in for the
+    deep learning LSTM model for load forecasting.
+
+
+    ## 3.2. RMR-HFS-LSTM architecture
+
+
+    The proposed deep learning based model RMR-HFS-LSTM consists of three phases:
+    data preprocessing, hybrid feature selection and prediction. In the first phase,
+    the hourly electricity load and weather data are are treated as a single dataset.
+    It is cleaned and normalized to prepare the data for further processing. The outliers
+    and selection of dissimilar samples are eliminated. Then the instance based filter
+    feature selection RLeeff and information theoretic mutual information feature
+    selection are applied to identify the relevant features.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The selected features of M and Rleff are combined to get (COMPS) to find the most
+    relevant features. However, the tuned wrapper feature selection, is, to improve
+    the filter method, produces the optimal subset of features. In the third phase,
+    the LSTM prediction model is built and trained. The parameters of the constructed
+    models are tuned using the time series cross validation on validation data. Finally,
+    the performance of the proposed R-HFS-LSTM with all features compared against
+    several baseline models in terms of error metrics such as MAPE and MAE. The result
+    is shown in Fig.
+
+
+    The temporal dependency on the load data is also an important information that
+    helps in forecasting. Data also have the uncertainties. In this paper, the dimension
+    of the dataset is reduced to enhance the accuracy of forecasting using hybrid
+    selection and also uncertainty issues are taken into consideration by analyzing
+    the temporal dependency on load data using RNN. So, the proposed RMR-HFS-LSTM
+    data model fills these gaps by considering uncertainty, non-linearity, and overfitting
+    of dimensionality issues and improves the load forecasting performance.
+
+
+    ### 3.2.1.1. Rleff
+
+
+    The Recursive Regression (Rleff) feature selection is It randomly selects and
+    removes features from the original instance. Then, it selects k number of features
+    using the variance function.
+
+
+    ```
+
+    P(A|B) = P(difference|nearest instances)
+
+    ```
+
+
+    ```
+
+    P(AG) = P(difference|nearest instances)
+
+    ```
+
+
+    ```
+
+    P(AG|ABC) = P(difference of A and nearest instances)
+
+    ```
+
+
+    ```
+
+    W[A] = P(AG|ABC) * (1 - P(A|B)) / (1 - P(A))
+
+    ```
+
+
+    The feature with the highest weight is considered as the best feature among other
+    features. Rleff has the same time complexity as simple regression.
+
+
+    ### 3.2.1.2. Mutual information selection
+
+
+    The mutual information is a non linear correlation filter selection that calculates
+    the correlation between two or more of features. The features have common information
+    with other feature is called a dependent feature. On the other hand, the features
+    with no common information are called independent features. The mutual information
+    method utilizes the dependency between the features related to the target as a
+    base for finding the relevant feature. The amount of information shared between
+    features is called mutual information. If there are two features, then the mutual
+    information between them is measured as I(A;B). When ''A'' and ''B'' are independent,
+    the mutual information I(A;B) is 0. The data is in continuous. For continuous
+    random variables, the mutual information of the feature ''A'' is calculated as
+
+
+    ```
+
+    I(A;B) = sum p(A,B) * log (p(A,B)/(p(A)p(B))) dB
+
+    ```
+
+
+    where ''a'' and ''b'' represents the number of values in ''A'' and ''B''. Then,
+    the P(a,b) is the joint probability density of ''A'' and ''B''. The pa and pb
+    are marginal probability density function of ''A'' and ''B''.
+
+
+    ### 3.2.1.3. Recursive elimination.
+
+
+    The recursive elimination is the type of wrapper feature selection. Generally,
+    it selects the
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_3_0.png)
+
+
+    Fig. R-HFS-LSTM Prediction Model.
+
+    '
+  mdcn: '
+
+    能量消耗。采用互信息和 RFS 特征方法来选择最佳特征。使用 SVR、CNN 和 RNN 对模型进行了测试。结果显示，增强型卷积神经网络优于其他方法。He
+    在 [27] 中通过深度神经网络讨论了所解决的趋势问题，即去相关负荷预测中的时间依赖性问题，该网络改进了隐性动力学。在 [28] 中，Mohammad 等人提出了一种结合
+    CNN 和 LSTM 模型用于日内及短期负荷预测的深度神经网络。深度神经网络和 DFN 使用双曲正切（tanh）和 ReLU 激活函数进行了增强。结果表明，DNN
+    优于其他方法。在 [29] 中，特征选择是基于带有 RNN 的 DNN 的时间序列数据。DNN 实现了更好的预测准确率。
+
+
+    作者 [30] 提出了一种基于深度神经网络的电力系统负荷预测模型。通过使用多层受限瓶颈机（Restricted Bottleneck Machine）对 DNN
+    进行预训练。DNN 中的 BPNN 用于精确的微调和权重调整，产生了良好的预测结果。增强型 CNN 用于需求需求市场的电价预测。该模型实现的预测误差低于标准
+    CNN 和 SVR。在 [31] 中，采用了 CRBM 和 RFCM 方法进行负荷预测。Methods 等提出了一种用于负荷预测的 DNN。它处理了历史负荷序列并使用
+    ARIMA、RNN 和 CNN 实现了更高的准确性。
+
+
+    随着能力的提高，残差网络可以在短期负荷预测中获得良好的准确率 [33]。在深度残差结构中，通过在输入端添加隐藏层的集成策略改进了工作网络。深度残差网络实现了比通用
+    DNN 模型更高的准确率。[34]，Ryu 等人使用带有 RNN 的深度神经网络预测了短期负荷。具有高质量特征选择的带 RNN DNN 用于负荷预测。它是使用带有判别性预训练
+    RBM 的 MLP 构建的。隐藏层经过判别性改变和预训练。带有 DNN 的 RNN 获得了更好的预测结果。
+
+
+    大多数研究人员使用 MLP、RNN、CNN 和 LSTM 等深度学习方法。一些研究人员仅使用历史负荷数据而不使用外部特征来改进过程。其他研究人员利用正交特征来识别相关且非冗余的特征。因此，他们面临模型复杂性和维度问题。减少数据集维度以获得更好的预测准确率。负荷数据上的时间依赖性也是有助于预测的重要信息。数据也具有不确定性。在本文中，通过混合选择减少数据集维度以提高预测准确率，并且通过
+    RNN 分析负荷数据上的时间依赖性考虑了不确定性问题。因此，提出的 RMR-HFS-LSTM 数据模型通过考虑不确定性、非线性和维度过拟合问题，改进了负荷预测性能。
+
+
+    ## 3. 提出的 RMR-HFS-LSTM 预测模型
+
+
+    ## 3.1. R-HFS 的意义
+
+
+    包含不相关、无关和无信息特征的数据集可能会增加数据集维度，从而强制模型过拟合。它也会导致预测模型在泛化模式方面变得复杂。使用过多特征训练的模型可能无法产生准确稳健的结果。还观察到冗余特征会降低准确率。数据集可能具有许多特征。它们有相关特征、高度相关且冗余特征、弱相关且非冗余特征以及强相关特征。无关特征会降低准确率。这些特征不应该贡献于预测准确率，相反，会识别过拟合并降低准确率。另一方面，强相关和弱相关特征有助于预测。应该识别并移除冗余特征。
+
+
+    在本文中，引入了递归消除信息混合特征选择（RMR-HFS），通过使用过滤特征选择方法来改进短期负荷预测。应用基于信息过滤特征选择和基于递归的特征选择封装方法（wrapper）来识别特征子集。特征选择方法并不适用于所有情况。提出的方法使用了
+    RLeeff 和信息论互信息特征选择来消除冗余特征。RLeeff 过滤用于特征选择。RLeeff 方法通过每个特征与目标特征之间的关系识别相关和无信息特征。RLeeff
+    不考虑特征之间的关系。
+
+
+    尽管 RMR 和 MI 选择了所有特征，但相关特征列表包含许多冗余特征。选择具有识别冗余特征的能力。因此，提出的方法可以通过递归 RFE 提高准确率并避免过拟合。过滤和封装方法提供了特征选择的优势。最佳特征子集用于深度学习负荷预测模型。
+
+
+    ## 3.2. RMR-HFS-LSTM 架构
+
+
+    提出的基于深度学习的模型 RMR-HFS-LSTM 包含三个阶段：数据预处理、混合特征选择和预测。在第一阶段，小时电负荷和天气数据被视为单个数据集，进行清洗和归一化以准备进一步处理。消除了离群值和样本。然后应用
+    RLeeff 和信息论互信息特征选择来识别相关特征。所选的 M 和 Rleff 特征结合（COMPS）以找到最相关的特征。然而，调优的封装选择改进过滤方法产生了最佳特征子集。在第三阶段，构建并训练
+    LSTM 预测模型。在验证数据上使用时间序列交叉验证调整参数。最后，提出的 R-HFS-LSTM 在所有特征下与多个基准模型在 MAPE 和 MAE 等误差指标上进行了比较。结果所示。
+
+
+    （注：原文后续存在大量重复段落，此处已按要求不再重复输出相同核心内容）
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    predictors in direction. It utilizes the filter method for subsetting features
+    and the learning model for evaluating the subset. Initially, the original set
+    of features is utilized to build the learning model. After that, feature score
+    is calculated for each feature. Then, the feature with less score is removed from
+    the list and subset reconstructed. This process is repeated until there are no
+    more features left or the user defines. The subset with high performance or lower
+    error is selected as the optimal subset. The important thing left to consider
+    in RFE for better performance is the number of features to be in the final set
+    of features lists and also the algorithm utilized to select the subset.
+
+
+    They are gate input and the output gate. The output gate is utilized to decide
+    the information to be shown. The input gate decides what information from the
+    input should be taken for the old cell state or the new cell state. The gate decides
+    about inclusion of information from the input $[u_t, h_{t-1}]$. The hidden state
+    and the cell state at time $t$ are $h_t$ and $c_t$, and at time $t-1$ they are
+    $h_{t-1}$, $c_{t-1}$, and $o_{t-1}$. The forget gate, input gate, and output gate
+    are
+
+
+    ```
+
+    $i_t = \sigma(W_i[h_{t-1}, x_t])$
+
+    ```
+
+
+    ```
+
+    $\tilde{c}_t = \tanh(W_c[h_{t-1}, x_t])$
+
+    ```
+
+
+    ```
+
+    $c_t = f_t \odot c_{t-1} + i_t \odot \tilde{c}_t$
+
+    ```
+
+
+    ```
+
+    $f_t = \sigma(W_f[h_{t-1}, x_t])$
+
+    ```
+
+
+    ```
+
+    $o_t = \sigma(W_o[h_{t-1}, x_t])$
+
+    ```
+
+
+    ```
+
+    $h_t = o_t \odot \tanh(c_t)$
+
+    ```
+
+
+    # 3.2.2 Deep prediction
+
+
+    The deep learning is an emerging technique for processing the time series data.
+    The time series data has temporal dependency and unpredictable behavior for the
+    identical point of time. Generally, the electricity is erratic and volatile nature.
+    Some of the methods are effective for processing the time series but fail to produce
+    accurate prediction at some time $[44, 45]$. The deep learning can handle the
+    complexities by automatically learning the mappings which input and output sequences.
+    The deep learning handles well the time series data and provides better accuracy
+    than traditional methods.
+
+
+    Where $c_t, h_t$, and $o_t$, represents the value of cell state, new state and
+    output gate. $W_f, W_i, W_c$, and $W_o$, represent the weight matrix of forget
+    gate, input gate and output gate. The $b_f, b_i, b_c$ and $b_o$ represent the
+    bias weight respectively.
+
+
+    The recorded electricity data and weather data of the Poland Sweden from the period
+    of January 1st 2000 to December 2012 is used for experimental purpose. The weather
+    provides significant information in predicting the load, so load and weather datasets
+    are integrated into a single format. The load data consists of 31,848 rows. The
+    features of the dataset are fate: $f_1$ Temperature, $f_2$ Humidity, $f_3$ Precipitation,
+    $f_4$ Total precipitation (high, limited range), $f_5$ Total precipitation (low),
+    $f_6$ Total cloud cover, $f_7$ Low cloud cover, $f_8$ Medium cloud cover, $f_9$
+    Sunshine, $f_{10}$ Shortwave radiation, $f_{11}$ Wind speed (10 mph), $f_{12}$
+    Wind direction, $f_{13}$ Wind gusts, $f_{14}$ Wind speed (low mph), $f_{15}$ Wind
+    speed [90 mph], $f_{16}$ Wind direction [90 mph], $f_{17}$ Wind demand [90 mph].
+
+
+    The paper later presents the features of the dataset, LSTM, GRU and the state-of-the-art
+    recurrent neural networks as MLP. RNN and MLP are the most suitable methods for
+    predicting, time series forecasting, and regression problems. In this paper, the
+    short term memory is used for load forecasting based on the electricity and weather
+    data. The following sections discuss the working of LSTM.
+
+
+    # 3.2.4. Short term memory
+
+
+    The short term memory is an extension of RNN. It is a special network designed
+    to overcome the limitation of RNN it remembers for a long period in time. It effectively
+    handles the vanishing and exploding gradient problems of RNN by making the backpropagation
+    through time for the updating of the hidden state. Here, it retains the information
+    of the sequence by using gates in the cell state. This is achieving the better
+    forecasting performance with the time series data. It has a potential to understand
+    the sequence dependency and temporal dependency in the non-linear time data of
+    LSTM. The LSTM cell is composed of three gates.
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_4_0.png)
+
+
+    Fig. 2. Architecture of Long Term Memory.
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_4_1.png)
+
+
+    The dataset is partitioned into training, validation and testing sets. The load
+    data is not random because of the time structure, here there is some dependency
+    from one observation to another. So the approach to split time series load data
+    is to consider the first 26,304 (60%) observations of 3 years as training dataset,
+    next 8760 (20%) observations as validation dataset and the last 8784 (20%) observations
+    of testing dataset. To improve the accuracy of
+
+
+    Fig. 3. Example of Load.'
+  - '[PAGE 5]
+
+
+    # S.S. Subhash and J. Chandras
+
+
+    # Electric Power Systems Research 210 (2022) 108065
+
+
+    prediction, the filter selection methods MI and Relief apply to find relevant
+    and non-redundant features. Then, the RFE wrapper uses this list of selected features.
+    The list of features from feature selection methods are listed in Table 2,
+
+    Riefelt merit score drops from 10 to 0 for 3 features with no importance. So,
+    MI features (f1, f3, f4, f5, f15, f16, f17, f18, f19, f20, f21, f22) are the best
+    subset of features. The mutual information merit score remains flat after 13 features.
+    So, the 13 features (f1, f3, f4, f5, f15, f16, f17, f18, f19, f20, f21) are the
+    best subset of features. The RFE wrapper method is applied directly on the original
+    data with 9 features which are selected as optimal subset of features, (f1, f3,
+    f4, f5, f15, f16, f17, f18, f19). Then, after the selected features by Relief
+    and Mutual information are compared, the best features are selected for the method.
+    The proposed R-RFE hybrid feature selection method uses 9 features as shown in
+    the study.
+
+
+    The proposed LSTM network is designed with number of inputs as 8, number of hidden
+    layers as 2, number of outputs as 1, number of hidden units in each layer as 20,
+    the loss function as MSE, the optimizer as Adam. The network is tested with the
+    hidden units varying from 10 to 200 and fixed 150. The number of hidden layers
+    is also tested by varying the hidden layers from 1 to 2. Similarly, the number
+    of units in the hidden layers is tested by varying the number (10 to 200) and
+    fixed 20 as optimal. Generally the first time series methods produce a poor result
+    with the time interval between the training and testing periods. In order, to
+    overcome this limitation, the time series validation method on rolling basis is
+    used as the validation technique. It forward validation uses the data in history.
+
+
+    Fig.(4) represents the comparison of predicted load for 200 samples of the year
+    2022 using MLP in different methods. Fig.(i) compares load forecast using MLP
+    without any feature selection. Fig.(ii) compares the forecasted load with the
+    actual load. The first 60 samples and from the 160th to 200th sample, we can see
+    more error in the predicted load. In Fig.(ii), the load used for MLP with Riefelt
+    filter selection is compared against the actual load. This Fig.(iii) shows the
+    load of
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_5_0.png)
+
+
+    Fig. 4. Comparison of actual and predicted load using MLP (i) MLP without (ii)
+    Feature Selection with Relief (iii) MLP with Relief (iv) MLP with MI (v) MLP with
+    R-RFE.
+
+
+    combination of MLP and RFE produces the forecast load closer to actual load than
+    MLP without selection and MI features. Fig.(iv) illustrates the load forecast
+    of an graph compared to MLP without feature selection. Fig.(v) shows the load
+    forecast of features by RFE filter selection compared against actual load. It
+    shows that the forecast load is closer to actual load compared to all other methods,
+    with RFE and MI features. Fig.(vi) illustrates the load of MLP with R-RFE compared
+    against actual load. The graph for load of R-RFE is closer
+
+
+    illustrates the comparison of forecast load using actual and predicted data. The
+    performance of feature selection is graphically proved from the load generated
+    by the RNN with feature selection. As shown in Fig. 5, the load used for RNN with
+    without feature selection are compared against actual load. The feature selection
+    method in Fig.(i) compares the results of RNN with all features against actual
+    load. The graph shows that there is a much difference in the load of RNN with
+    actual load. Throughout the testing period, the feature selection in Fig.(ii)
+    compares the load of RNN with Riefelt against actual load. Fig.(iii) compares
+    the load of RNN with MI filter selection against actual load. It is better than
+    RNN with all features. In Fig.(iv) the wrapper based
+
+
+    # Table 2
+
+    Selected Features.
+
+
+    | Feature selection methodologies | Selected features |
+
+    |---|---|
+
+    | Reliefelt | f1, f3, f4, f5, f15, f16, f17, f18, f19, f20, f21, f22 |
+
+    | RFE | f1, f3, f4, f5, f15, f16, f17, f18, f19, f20, f21, f22 |
+
+    | COM(Riefelt U MI) | f1, f3, f4, f5, f15, f16, f17, f18, f19, f20, f21, f22 |
+
+    | RFE | f1, f3, f4, f5, f15, f16, f17, f18, f19, f20, f21, f22 |
+
+    | R-HFS | f1, f3, f4, f5, f15, f16, f17, f18, f19, f20, f21, f22 |'
+  md: '
+
+    predictors in direction. It utilizes the filter method for subsetting features
+    and the learning model for evaluating the subset. Initially, the original set
+    of features is utilized to build the learning model. After that, feature score
+    is calculated for each feature. Then, the feature with less score is removed from
+    the list and subset reconstructed. This process is repeated until there are no
+    more features left or the user defines. The subset with high performance or lower
+    error is selected as the optimal subset. The important thing left to consider
+    in RFE for better performance is the number of features to be in the final set
+    of features lists and also the algorithm utilized to select the subset.
+
+
+    They are gate input and the output gate. The output gate is utilized to decide
+    the information to be shown. The input gate decides what information from the
+    input should be taken for the old cell state or the new cell state. The gate decides
+    about inclusion of information from the input $[u_t, h_{t-1}]$. The hidden state
+    and the cell state at time $t$ are $h_t$ and $c_t$, and at time $t-1$ they are
+    $h_{t-1}$, $c_{t-1}$, and $o_{t-1}$. The forget gate, input gate, and output gate
+    are
+
+
+    ```
+
+    $i_t = \sigma(W_i[h_{t-1}, x_t])$
+
+    ```
+
+
+    ```
+
+    $\tilde{c}_t = \tanh(W_c[h_{t-1}, x_t])$
+
+    ```
+
+
+    ```
+
+    $c_t = f_t \odot c_{t-1} + i_t \odot \tilde{c}_t$
+
+    ```
+
+
+    ```
+
+    $f_t = \sigma(W_f[h_{t-1}, x_t])$
+
+    ```
+
+
+    ```
+
+    $o_t = \sigma(W_o[h_{t-1}, x_t])$
+
+    ```
+
+
+    ```
+
+    $h_t = o_t \odot \tanh(c_t)$
+
+    ```
+
+
+    ### 3.2.2 Deep prediction
+
+
+    The deep learning is an emerging technique for processing the time series data.
+    The time series data has temporal dependency and unpredictable behavior for the
+    identical point of time. Generally, the electricity is erratic and volatile nature.
+    Some of the methods are effective for processing the time series but fail to produce
+    accurate prediction at some time $[44, 45]$. The deep learning can handle the
+    complexities by automatically learning the mappings which input and output sequences.
+    The deep learning handles well the time series data and provides better accuracy
+    than traditional methods.
+
+
+    Where $c_t, h_t$, and $o_t$, represents the value of cell state, new state and
+    output gate. $W_f, W_i, W_c$, and $W_o$, represent the weight matrix of forget
+    gate, input gate and output gate. The $b_f, b_i, b_c$ and $b_o$ represent the
+    bias weight respectively.
+
+
+    The recorded electricity data and weather data of the Poland Sweden from the period
+    of January 1st 2000 to December 2012 is used for experimental purpose. The weather
+    provides significant information in predicting the load, so load and weather datasets
+    are integrated into a single format. The load data consists of 31,848 rows. The
+    features of the dataset are fate: $f_1$ Temperature, $f_2$ Humidity, $f_3$ Precipitation,
+    $f_4$ Total precipitation (high, limited range), $f_5$ Total precipitation (low),
+    $f_6$ Total cloud cover, $f_7$ Low cloud cover, $f_8$ Medium cloud cover, $f_9$
+    Sunshine, $f_{10}$ Shortwave radiation, $f_{11}$ Wind speed (10 mph), $f_{12}$
+    Wind direction, $f_{13}$ Wind gusts, $f_{14}$ Wind speed (low mph), $f_{15}$ Wind
+    speed [90 mph], $f_{16}$ Wind direction [90 mph], $f_{17}$ Wind demand [90 mph].
+
+
+    The paper later presents the features of the dataset, LSTM, GRU and the state-of-the-art
+    recurrent neural networks as MLP. RNN and MLP are the most suitable methods for
+    predicting, time series forecasting, and regression problems. In this paper, the
+    short term memory is used for load forecasting based on the electricity and weather
+    data. The following sections discuss the working of LSTM.
+
+
+    ### 3.2.4 Short term memory
+
+
+    The short term memory is an extension of RNN. It is a special network designed
+    to overcome the limitation of RNN it remembers for a long period in time. It effectively
+    handles the vanishing and exploding gradient problems of RNN by making the backpropagation
+    through time for the updating of the hidden state. Here, it retains the information
+    of the sequence by using gates in the cell state. This is achieving the better
+    forecasting performance with the time series data. It has a potential to understand
+    the sequence dependency and temporal dependency in the non-linear time data of
+    LSTM. The LSTM cell is composed of three gates.
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_4_0.png)
+
+
+    Fig. 2. Architecture of Long Term Memory.
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_4_1.png)
+
+
+    The dataset is partitioned into training, validation and testing sets. The load
+    data is not random because of the time structure, here there is some dependency
+    from one observation to another. So the approach to split time series load data
+    is to consider the first 26,304 (60%) observations of 3 years as training dataset,
+    next 8760 (20%) observations as validation dataset and the last 8784 (20%) observations
+    of testing dataset. To improve the accuracy of
+
+
+    Fig. 3. Example of Load.
+
+
+    prediction, the filter selection methods MI and Relief apply to find relevant
+    and non-redundant features. Then, the RFE wrapper uses this list of selected features.
+    The list of features from feature selection methods are listed in Table 2,
+
+    Riefelt merit score drops from 10 to 0 for 3 features with no importance. So,
+    MI features (f1, f3, f4, f5, f15, f16, f17, f18, f19, f20, f21, f22) are the best
+    subset of features. The mutual information merit score remains flat after 13 features.
+    So, the 13 features (f1, f3, f4, f5, f15, f16, f17, f18, f19, f20, f21) are the
+    best subset of features. The RFE wrapper method is applied directly on the original
+    data with 9 features which are selected as optimal subset of features, (f1, f3,
+    f4, f5, f15, f16, f17, f18, f19). Then, after the selected features by Relief
+    and Mutual information are compared, the best features are selected for the method.
+    The proposed R-RFE hybrid feature selection method uses 9 features as shown in
+    the study.
+
+
+    The proposed LSTM network is designed with number of inputs as 8, number of hidden
+    layers as 2, number of outputs as 1, number of hidden units in each layer as 20,
+    the loss function as MSE, the optimizer as Adam. The network is tested with the
+    hidden units varying from 10 to 200 and fixed 150. The number of hidden layers
+    is also tested by varying the hidden layers from 1 to 2. Similarly, the number
+    of units in the hidden layers is tested by varying the number (10 to 200) and
+    fixed 150.
+
+    '
+  mdcn: '
+
+    方向预测器。它利用过滤法进行特征子集划分，并利用学习模型评估子集。最初，利用原始特征集构建学习模型。之后，计算每个特征的特征分。然后，从列表中移除得分较低的特征并重构子集。此过程重复进行，直到没有更多特征或达到用户定义。选择性能较高或误差更低的子集作为最优子集。在递归特征消除（RFE）中，为了获得更好的性能，需要考虑的最终特征列表中特征数量的数量，以及用于选择子集的算法。
+
+
+    它们是输入门和输出门。输出门用于决定显示的信息。输入门决定从输入中提取哪些信息用于旧的细胞状态或新的细胞状态。门决定了来自输入 $[u_t, h_{t-1}]$
+    的信息的包含。时间 $t$ 处的隐藏状态和细胞状态分别为 $h_t$ 和 $c_t$，在时间 $t-1$ 处它们为 $h_{t-1}$、$c_{t-1}$
+    和 $o_{t-1}$。遗忘门、输入门和输出门为：
+
+
+    ```
+
+    $i_t = \sigma(W_i[h_{t-1}, x_t])$
+
+    ```
+
+
+    ```
+
+    $\tilde{c}_t = \tanh(W_c[h_{t-1}, x_t])$
+
+    ```
+
+
+    ```
+
+    $c_t = f_t \odot c_{t-1} + i_t \odot \tilde{c}_t$
+
+    ```
+
+
+    ```
+
+    $f_t = \sigma(W_f[h_{t-1}, x_t])$
+
+    ```
+
+
+    ```
+
+    $o_t = \sigma(W_o[h_{t-1}, x_t])$
+
+    ```
+
+
+    ```
+
+    $h_t = o_t \odot \tanh(c_t)$
+
+    ```
+
+
+    ### 3.2.2 深度预测
+
+
+    深度学习是处理时间序列数据的一种新兴技术。时间序列数据具有时间依赖性，并且对于相同的时间点具有不可预测的行为。通常，电力具有反复和波动的性质。某些方法对于处理时间序列是有效的，但在某些时刻无法产生准确的预测
+    [44, 45]。深度学习可以通过自动学习输入和输出序列之间的映射来处理复杂性。深度学习能够很好地处理时间序列数据，并比传统方法提供更高的精度。
+
+
+    其中 $c_t, h_t$ 和 $o_t$ 代表细胞状态、新状态和输出门的值。$W_f, W_i, W_c$ 和 $W_o$ 代表遗忘门、输入门和输出门的权重矩阵。$b_f,
+    b_i, b_c$ 和 $b_o$ 分别代表偏置权重。
+
+
+    使用 2000 年 1 月 1 日至 2012 年 12 月期间波兰和瑞典的电力数据和天气数据用于实验。天气为预测负载提供了重要信息，因此将负载天气数据集整合到一个格式中。负载数据包含
+    31,848 行。数据集的特征为：$f_1$ 温度、$f_2$ 湿度、$f_3$ 降水量、$f_4$ 总降水量（高，有限范围）、$f_5$ 总降水量（低）、$f_6$
+    总云覆盖率、$f_7$ 低云覆盖率、$f_8$ 中云覆盖率、$f_9$ 照时长、$f_{10}$ 短波辐射、$f_{11}$ 风速（10 mph）、$f_{12}$
+    风向、$f_{13}$ 风阵、《f_{14}$ 风速（低 mph）、$f_{15}$ 风速 [90 mph]、$f_{16}$ 风向 [90 mph]、$f_{17}$
+    风需求 [90 mph]。
+
+
+    论文随后介绍了数据集的特征、LSTM、GRU 以及作为最先进的循环神经网络 MLP。RNN 和 MLP 是用于预测、时间序列预测和回归问题最合适的方法。在本文中，使用短记忆网络基于电力和天气数据进行负载预测。接下来的章节讨论了
+    LSTM 的工作原理。
+
+
+    ### 3.2.4 短记忆网络
+
+
+    短期记忆是 RNN 的扩展。它是一种特殊的网络，旨在克服 RNN 在长时间记忆方面的局限性。它通过随反向传播更新隐藏状态，有效地处理了 RNN 的梯度消失和爆炸问题。在这里，它通过在细胞状态中使用门来保留序列信息。这使得时间序列数据实现了更好的预测性能。它具有理解
+    LSTM 非线性时间数据中序列依赖性和时间依赖性的潜力。LSTM 单元由三个门组成。
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_4_0.png)
+
+
+    图 2. 长记忆网络的架构。
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_4_1.png)
+
+
+    数据集被分为训练集、验证集和测试集。由于时间结构，负载数据不是随机的，这里一个观测值之间存在某些依赖关系。因此，划分时间序列负载数据的方法是考虑 3 年的前
+    26,304 (60%) 个观测值为训练数据集，接下来的 8760 (20%) 个观测值为验证数据集，最后 8784 (20%) 个观测值为测试数据集。为了提高
+
+
+    预测的准确性，应用 MI 和 Relief 过滤选择方法来寻找相关且非冗余特征。然后，RFE 包装器使用此选定的特征列表。特征选择方法的特征列表如表 2 所示。Relief
+    评价得分对于 3 个不重要的特征从 10 降到 0。因此，MI 特征 (f1, f3, f4, f5, f15, f16, f17, f18, f19, f20,
+    f21, f22) 是最佳特征子集。互信息评价得分在 13 个特征后保持平稳。因此，这 13 个特征 (f1, f3, f4, f5, f15, f16,
+    f17, f18, f19, f20, f21) 是最佳特征子集。RFE 包装器方法直接应用于原始数据，选出 9 个特征作为最优特征子集 (f1, f3,
+    f4, f5, f15, f16, f17, f18, f19)。然后，在比较由 Relief 和互信息选出的特征后，为该方法选择了最佳特征。所提出的 R-RFE
+    混合特征选择方法如研究所示使用了 9 个特征。
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 6]\n\n![](img/8f28a644aa4b94b031efafb7a94e5d53_6_0.png)\n\nFig. 5. Comparison\
+    \ of actual and predicted load using (i) RNN without Feature Selection (ii) RNN\
+    \ with RRelief (iii) RNN with MI (iv) RNN with RFE (v) RNN with RMR-RFE.\n\nload\
+    \ using RFE. The comparison illustrates the forecast load is much closer to actual.\
+    \ Fig. (v) proved the strength of proposed method of RNN with RMR-HFS. The forecast\
+    \ load of RNN with RMR-HFS is much closer to actual load compared to all features,\
+    \ RNN with MI, RNN with RFE, and RNN with RFE and RFE.\n\nFig. (iii) presents\
+    \ the comparison of forecast load of LSTM with feature selection actual load.\
+    \ Fig. (iv) compares the forecast of LSTM that includes feature selection actual.\
+    \ The LSTM-RFS forecast has much deviation from the actual value. The inclusion\
+    \ of feature selection reduces the forecasting performance. Fig. (ii) compares\
+    \ actual and forecast load of LSTM with RFE. It produces better results than LSTM\
+    \ with all features, LSTM with MI filter. Fig. (iii) compares forecast of LSTM\
+    \ with MI filter compared to LSTM without feature selection. Fig. (vi) shows comparison\
+    \ of actual and forecast load of LSTM with RFE.\n\nsuperiority of each method\
+    \ (MLP, RNN, LSTM) by the RMR-HFS compared to other feature selection (RRelief,\
+    \ MI and RFE). Overall, the LSTM with RMR-HFS achieved better prediction performance\
+    \ to other methods such as MLP, RNN, RNN-HFS, RNN with RRelief, RNN with MI, RNN\
+    \ with RFE, LSTM with RMR-HFS, LSTM with RRelief, and LSTM with MI. As the graph\
+    \ in Fig. (v), the portion of the Fig. (a) is observed with only 5 samples in\
+    \ Fig. (b). The comparison of forecast load of different methods on the training\
+    \ samples and test samples is shown in Fig. (b). It shows that the graph of RMR-LSTM\
+    \ is much closer to actual load compared to others. It shows the superiority performance\
+    \ of the proposed method RMR-LSTM over others.\n\nThe performance of the prediction\
+    \ model can also be evaluated in many ways. The MAPE, and RMSE are used as additional\
+    \ evaluation measures for performing forecasting methods. The MAPE and RMSE are\
+    \ calculated as follows:\n\n```\n$$MAPE = \\frac{100}{n} \\sum_{t=1}^{n} \\left|\
+    \ \\frac{Y_t - F'_t}{Y_t} \\right| ; \\quad (12)$\n```\n\n```\n$RMSE = \\sqrt{\f\
+    rac{1}{n} \\sum_{t=1}^{n} [Y_t - F'_t]^2} ; \\quad (13)$\n```\n\nwhere 'n' represents\
+    \ the number of instances, '$Y_t$' represents the actual value for the observation\
+    \ time and '$F'_t$' represents the forecast for the\n\nThe comparison of actual\
+    \ and predicted load by all the methods with without feature selection for the\
+    \ example of 200 samples is shown in Fig. (a). The graph for the forecast results\
+    \ shows that LSTM-R-HFS without feature selection. The LSTM with proposed method\
+    \ RMR-HFS dominates others by producing forecast results much closer to actual."
+  - '[PAGE 7]
+
+
+    # Electric Power Systems Research 210 (2022) 108065
+
+
+    S.B. Subiah and J. Chinnapnam
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_7_0.png)
+
+
+    Fig. 6. Comparison of actual and predicted load using LSTM (i) with LSTM with
+    Relief (ii) LSTM with RMI (iii) LSTM with RFE (iv) and LSTM with MR-HFS.
+
+
+    same period. ^1. The comparison of the performance of MR-HFS-LSTM with MLP and
+    RNN in terms of MAPE and RMSE is shown in Table 1. The difference of MAPE between
+    MR-HFS-LSTM and MLP, Relief-MLP, RMI-MLP, Relief-RNN, MI-RNN, RFE-RNN, Relief-LSTM,
+    MI-LSTM and LSTM-RFE are 6.787, 5.643, 5.958, 5.231, 5.155, 1.259, 1.263, 1.226,
+    1.221, 1.325, 0.793 and 0.782 respectively. Similarly, the difference of RMSE
+    between MR-HFS-LSTM and MLP, Relief-MLP, RMI-MLP, Relief-RNN, MI-RNN, RFE-RNN,
+    Relief-LSTM, MI-LSTM and LSTM-RFE are 32.698, 274.617, 294.339, 268.611, 266.018,
+    206.732, 59.358, 53.157, 54.655, 52.307, 53.911, 32.752, 32.45 and 46.961.
+
+
+    future load can be achieved by utilizing the deep learning methodologies. The
+    performance of deep learning can be enhanced by providing only the critical features
+    and relevant input data. So, in this the combination of filter and feature selection
+    are identified by using the experiment was conducted on hundred European electricity
+    load and demand data using LSTM with MR-HFS. The performance of the model is compared
+    with RNN to show that a result with LSTM with features of MR-HFS outperforms the
+    other methodologies. The deep learning LSTM with hybrid feature technique improves
+    the accuracy of short term load forecasting compared to RNN, LSTM, Relief-MLP,
+    MI-MLP, R-MLP, Relief-RNN, MI-RNN, RFE-RNN, Relief-LSTM, MI-LSTM, and LSTM-RFE.
+
+
+    Table 1. Comparison of MAPE and RMSE in the forecasting results of MLP, RNN and
+    LSTM. The LSTM with MR-HFS produced lower MAPE and lesser RMSE compared to LSTM,
+    LSTM with MLP, LSTM with RMI and LSTM with RFE feature selection. Similarly, the
+    LSTM with MR-HFS produced also the least MAPE and least RMSE compared to all other
+    MLP and RNN models. The proposed MR-HFS-LSTM outperforms
+
+
+    # 5. Conclusion
+
+
+    The deep neural network is an uncertain tool discovered by researchers for automatically
+    learning the complicated mappings between input and output. The electricity load
+    data is uncertain, complex and non-linear in nature. So, the accurate prediction
+    of
+
+
+    future load. In future, these factors may affect the performance of forecasting.
+    Further learning like may get introduced to similar logical data patterns for
+    improving the population and holiday data could also be considered for the better
+    enhancement of load forecasting accuracy. The decomposition techniques and other
+    deep learning methodologies could also be employed for improving the load forecasting
+    accuracy.
+
+
+    # CEDIT authorship contribution statement
+
+
+    Savi Sankari: Conceptualization, Methodology, Software, Writing – original draft.
+    Jayakar Chinnapnam: Review – editing, Supervision, Visualization, Investigation.
+
+
+    8'
+  - '[PAGE 8]
+
+
+    # S.S. Subbiah and J. Chinnannap
+
+
+    # Electric Power Systems Research 210 (2022) 108065
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_8_0.png)
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_8_1.png)
+
+
+    (a)
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_8_2.png)
+
+
+    (b)
+
+
+    Fig. (7) Comparison of Actual and Predicted Load for 200 samples (2020)
+
+
+    Table 3
+
+    Comparison of prediction models in terms of MAPE and RMSE.
+
+
+    | METHODOLOGY | MAPE | RMSE |
+
+    |---|---|---|
+
+    | RFE-MLP | 14.615 | 794.847 |
+
+    | MLP | 13.471 | 728.726 |
+
+    | RFE-MAP | 13.059 | 714.037 |
+
+    | RNN-HFS-RNN | 12.983 | 712.915 |
+
+    | RNN | 9.907 | 511.507 |
+
+    | RFE | 9.092 | 506.712 |
+
+    | RNN-HFS-LSTM | 9.049 | 506.506 |
+
+    | LSTM | 9.041 | 459.661 |
+
+    | RFE-LSTM | 8.140 | 456.708 |
+
+    | RMF-HFS-LSTM | 7.828 | 452.149 |
+
+
+    # Declaration of Interest
+
+
+    The authors declare that there is no conflicts of interest regarding the publication
+    of this paper.
+
+
+    # References
+
+
+    +   [14] C. Fei, D. Zhang, J. Yang, and S. Lee. A review on time series forecasting
+    techniques for electricity market management. Energy Res. 704 (2022) 912–924,
+    https://doi.org/10.1016/j.energyres.2021.02.085/n
+
+
+    +   [15] A novel method for bi-objective short-term load forecasting. Int. J.
+    Elect. Power Energy Syst. 61 (2014) 259–266, https://doi.org/10.1016/j.ijpeur.2014.03.016
+
+
+    +   [3] N. Huang, J. Xu, G. Cao, and J. Yuan. Short-term electricity forecasting
+    using mutual information based feature selection with redundancy reduction and
+    reliability entropy, 9 (2016) 330, https://doi.org/10.1016/j.ae.2016.05.032
+
+
+    +   [4] S. Liu, Y. Zhang, and J. Wang. Short term load forecasting using filter-based
+    approach for household-hour short-term load forecast. Applied Energy 250 (2019)
+    882–894, https://doi.org/10.1016/j.appenergy.2019.113333
+
+
+    +   [5] N. Amjad. Short-term load forecasting using time series methods with peak
+    load estimation capacity. IEEE Trans. Power Syst. 16 (2001) 1998–2005, https://doi.org/10.1109/37.9333333333
+
+
+    +   [6] S. Haber, G. Giselardi, P. Ziel, and S. Arvo. Short term load forecasting
+    and the effect of temperature on load forecast. Applied Energy 273 (2020) 115369,
+    https://doi.org/10.1016/j.appenergy.2020.115369
+
+
+    +   [7] D. L. Murray and A. J. Persson. Short-term electricity load forecasting
+    using deep neural networks. In Proceedings of the 42nd Annual Conference of the
+    IEEE Industrial Systems Conference (ISCO), 2016:7046–7051, https://doi.org/10.1109/ISCO.2016.7967175.
+
+
+    +   [8] S.S. Subbiah, J. Chinnannap. An improved short-term load forecasting with
+    winter-aware feature selection. Energy 215 (2020) 6780–6795, https://doi.org/10.1016/j.energy.2020.119033'
+  md: '
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_6_0.png)
+
+
+    Fig. 5. Comparison of actual and predicted load using (i) RNN without Feature
+    Selection (ii) RNN with RRelief (iii) RNN with MI (iv) RNN with RFE (v) RNN with
+    RMR-RFE.
+
+
+    load using RFE. The comparison illustrates the forecast load is much closer to
+    actual. Fig. (v) proved the strength of proposed method of RNN with RMR-HFS. The
+    forecast load of RNN with RMR-HFS is much closer to actual load compared to all
+    features, RNN with MI, RNN with RFE, and RNN with RFE and RFE.
+
+
+    Fig. (iii) presents the comparison of forecast load of LSTM with feature selection
+    actual load. Fig. (iv) compares the forecast of LSTM that includes feature selection
+    actual. The LSTM-RFS forecast has much deviation from the actual value. The inclusion
+    of feature selection reduces the forecasting performance. Fig. (ii) compares actual
+    and forecast load of LSTM with RFE. It produces better results than LSTM with
+    all features, LSTM with MI filter. Fig. (iii) compares forecast of LSTM with MI
+    filter compared to LSTM without feature selection. Fig. (vi) shows comparison
+    of actual and forecast load of LSTM with RFE.
+
+
+    superiority of each method (MLP, RNN, LSTM) by the RMR-HFS compared to other feature
+    selection (RRelief, MI and RFE). Overall, the LSTM with RMR-HFS achieved better
+    prediction performance to other methods such as MLP, RNN, RNN-HFS, RNN with RRelief,
+    RNN with MI, RNN with RFE, LSTM with RMR-HFS, LSTM with RRelief, and LSTM with
+    MI. As the graph in Fig. (v), the portion of the Fig. (a) is observed with only
+    5 samples in Fig. (b). The comparison of forecast load of different methods on
+    the training samples and test samples is shown in Fig. (b). It shows that the
+    graph of RMR-LSTM is much closer to actual load compared to others. It shows the
+    superiority performance of the proposed method RMR-LSTM over others.
+
+
+    The performance of the prediction model can also be evaluated in many ways. The
+    MAPE, and RMSE are used as additional evaluation measures for performing forecasting
+    methods. The MAPE and RMSE are calculated as follows:
+
+
+    ```
+
+    $$MAPE = \frac{100}{n} \sum_{t=1}^{n} \left| \frac{Y_t - F''_t}{Y_t} \right| ;
+    \quad (12)$$
+
+    ```
+
+
+    ```
+
+    $RMSE = \sqrt{\frac{1}{n} \sum_{t=1}^{n} [Y_t - F''_t]^2} ; \quad (13)$
+
+    ```
+
+
+    where ''n'' represents the number of instances, ''$Y_t$'' represents the actual
+    value for the observation time and ''$F''_t$'' represents the forecast for the
+
+
+    The comparison of actual and predicted load by all the methods with without feature
+    selection for the example of 200 samples is shown in Fig. (a). The graph for the
+    forecast results shows that LSTM-R-HFS without feature selection. The LSTM with
+    proposed method RMR-HFS dominates others by producing forecast results much closer
+    to actual.
+
+
+    # Electric Power Systems Research 210 (2022) 108065
+
+
+    S.B. Subiah and J. Chinnapnam
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_7_0.png)
+
+
+    Fig. 6. Comparison of actual and predicted load using LSTM (i) with LSTM with
+    Relief (ii) LSTM with RMI (iii) LSTM with RFE (iv) and LSTM with MR-HFS.
+
+
+    same period. ^1. The comparison of the performance of MR-HFS-LSTM with MLP and
+    RNN in terms of MAPE and RMSE is shown in Table 1. The difference of MAPE between
+    MR-HFS-LSTM and MLP, Relief-MLP, RMI-MLP, Relief-RNN, MI-RNN, RFE-RNN, Relief-LSTM,
+    MI-LSTM and LSTM-RFE are 6.787, 5.643, 5.958, 5.231, 5.155, 1.259, 1.263, 1.226,
+    1.221, 1.325, 0.793 and 0.782 respectively. Similarly, the difference of RMSE
+    between MR-HFS-LSTM and MLP, Relief-MLP, RMI-MLP, Relief-RNN, MI-RNN, RFE-RNN,
+    Relief-LSTM, MI-LSTM and LSTM-RFE are 32.698, 274.617, 294.339, 268.611, 266.018,
+    206.732, 59.358, 53.157, 54.655, 52.307, 53.911, 32.752, 32.45 and 46.961.
+
+
+    future load can be achieved by utilizing the deep learning methodologies. The
+    performance of deep learning can be enhanced by providing only the critical features
+    and relevant input data. So, in this the combination of filter and feature selection
+    are identified by using the experiment was conducted on hundred European electricity
+    load and demand. The performance of MR-HFS-LSTM with MLP and RNN in terms of MAPE
+    and RMSE is shown in Table 1. The difference of MAPE between MR-HFS-LSTM and MLP,
+    Relief-MLP, RMI-MLP, Relief-RNN, MI-RNN, RFE-RNN, Relief-LSTM, MI-LSTM and LSTM-RFE
+    are 6.787, 5.643, 5.958, 5.231, 5.155, 1.259, 1.263, 1.226, 1.221, 1.325, 0.793
+    and 0.782 respectively. Similarly, the difference of RMSE between MR-HFS-LSTM
+    and MLP, Relief-MLP, RMI-MLP, Relief-RNN, MI-RNN, RFE-RNN, Relief-LSTM, MI-LSTM
+    and LSTM-RFE are 32.698, 274.617, 294.339, 268.611, 266.018, 206.732, 59.358,
+    53.157, 54.655, 52.307, 53.911, 32.752, 32.45 and 46.961.
+
+
+    future load can be achieved by utilizing the deep learning methodologies. The
+    performance of deep learning can be enhanced by providing only the critical features
+    and relevant input data. So, in this the combination of filter and feature selection
+    are identified by using the experiment was conducted on hundred European electricity
+    load and demand. The performance of MR-HFS-LSTM with MLP and RNN in terms of MAPE
+    and RMSE is shown in Table 1. ... (repeated logic in OCR) ...
+
+
+    the model is compared with RNN to show that LSTM with features outperforms other
+    methodologies. The deep learning technique improves the accuracy of short term
+    load compared to RNN, LSTM, Relief-MLP, MI-MLP, Relief-RNN, MI-RNN, RFE-RNN, Relief-LSTM,
+    MI-LSTM and LSTM-RFE.
+
+
+    Table 1. Comparison of MAPE and RMSE
+
+
+    | METHODOLOGY | MAPE | RMSE |
+
+    |---|---|---|
+
+    | RFE-MLP | 14.615 | 274.617 |
+
+    | MLP | 13.471 | 294.339 |
+
+    | RFE-HFS | 13.059 | 268.611 |
+
+    | RNN-HFS | 12.983 | 266.018 |
+
+    | LSTM | 9.907 | 206.732 |
+
+    | RFE | 9.092 | 59.358 |
+
+    | MR-HFS | 9.041 | 53.157 |
+
+    | LSTM | 9.006 | 54.655 |
+
+    | RFE | 7.828 | 52.307 |
+
+
+    # 5. Conclusion
+
+
+    The deep neural network is an uncertain tool by researchers for automatically
+    learning the complicated mappings between input and output. Electricity load is
+    uncertain and non-linear in nature. So, the accurate prediction of future load
+    can be achieved by utilizing the deep learning methodologies. The performance
+    of deep learning can be enhanced by providing only the critical features and relevant
+    input data. So, in this the combination of filter and feature selection are identified
+    by using the experiment was conducted on hundred European electricity load and
+    demand. Further, these factors may affect the performance of future load. Like
+    other deep learning techniques could also be employed for the better accuracy.
+
+
+    # Authors contribution statement
+
+
+    S.B. Subiah: Conceptualization, Methodology, Software, Writing – original draft.
+    J. Chinnapnam: Review – editing, Visualization.
+
+
+    The authors declare that there is no conflicts of interest regarding the publication
+    of this paper.
+
+    '
+  mdcn: '
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_6_0.png)
+
+
+    图 5. 使用 (i) 不带特征选择的 RNN (ii) 带有 RRelief 的 RNN (iii) 带有 MI 的 RNN (iv) 带有 RFE 的
+    RNN (v) 带有 RMR-RFE 的 RNN 的实际负载与预测负载对比。
+
+
+    使用 RFE 的负载。对比结果表明预测负载更接近实际值。图 (v) 证明了所提的 RMR-HFS-RNN 方法的优势。与所有特征、带有 MI 的 RNN、带有
+    RFE 的 RNN 以及带有 RFE 和 RFE 的 RNN 相比，带有 RMR-HFS 的 RNN 的预测负载更接近实际负载。
+
+
+    图 (iii) 展示了带有特征选择的 LSTM 预测负载与实际负载的对比。图 (iv) 比较了包含特征选择的 LSTM。LSTM-RFS 的预测与实际值之间偏差很大。特征选择的引入了预测性能。图
+    (ii) 比较了带有 RFE 的 LSTM 的实际负载与预测负载。它产生了比带有所有特征、带有 MI滤波器的 LSTM 更好的结果。图 (iii) 比较了带有
+    MI滤波器的 LSTM 与不带特征选择的 LSTM 的预测。图 (vi) 显示了带有 RFE 的 LSTM 的实际负载与预测负载的对比。
+
+
+    RMR-HFS 相比其他特征选择（RRelief、MI 和 RFE）对每种方法（MLP、RNN、LSTM）的优越性。总体而言，带有 RMR-HFS 的 LSTM
+    实现了优于 MLP、RNN、RNN-HFS、带有 RRelief 的 RNN、带有 MI 的 RNN、带有 RFE 的 RNN、带有 RMR-HFS 的 LSTM、带有
+    Relief 的 LSTM 以及带有 MI 的 LSTM 等方法的预测性能。如图 (v) 所示，图 (a) 的部分在图 (b) 中仅观察到 5 个样本。不同方法在训练样本和测试样本上的预测负载对比如图
+    (b) 所示。它显示 RMR-LSTM 的图比其他方法更接近实际负载。它展示了所提方法 RMR-LSTM 优于其他方法的优越性能。
+
+
+    预测模型的性能可以通过许多方式进行评估。MAPE 和 RMSE 被用作预测方法的额外评估指标。MAPE 和 RMSE 的计算如下：
+
+
+    ```
+
+    $$MAPE = \frac{100}{n} \sum_{t=1}^{n} \left| \frac{Y_t - F''_t}{Y_t} \right| ;
+    \quad (12)$$
+
+    ```
+
+
+    ```
+
+    $RMSE = \sqrt{\frac{1}{n} \sum_{t=1}^{n} [Y_t - F''_t]^2} ; \quad (13)$
+
+    ```
+
+
+    其中 ''n'' 代表实例数量，$Y_t$'' 代表观测时间的实际值，''$F''_t$'' 代表该时间的预测值。
+
+
+    以 200 个样本为例，所有方法带与不带特征选择的实际与预测负载对比如图 (a) 所示。预测结果图显示了不带特征选择的 LSTM-R-HFS。带有所提方法
+    RMR-HFS 的 LSTM 通过产生更接近实际的预测结果而优于其他方法。
+
+
+    # 电力系统研究 210 (2022) 108065
+
+
+    S.B. Subiah 和 J. Chinnapnam
+
+
+    ![](img/8f28a644aa4b94b031efafb7a94e5d53_7_0.png)
+
+
+    图 6. 使用 LSTM (i) 带有 Relief 的 LSTM (ii) 带有 RMI 的 LSTM (iii) 带有 RFE 的 LSTM (iv)
+    以及带有 MR-HFS 的 LSTM 的实际负载与预测负载对比。
+
+
+    同一时期。^1. 表 1 显示了 MR-HFS-LSTM 与 MLP 和 RNN 在 MAPE 和 RMSE 方面的性能对比。MR-HFS-LSTM 与 MLP、Relief-MLP、RMI-MLP、Relief-RNN、MI-RNN、RFE-RNN、Relief-LSTM、MI-LSTM
+    和 LSTM-RFE 之间的 MAPE 差异分别为 6.787、5.643、5.958、5.231、5.155、1.259、1.263、1.226、1.221、1.325、0.793
+    和 0.782。同样，MR-HFS-LSTM 与 MLP、Relief-MLP、RMI-MLP、Relief-RNN、MI-RNN、RFE-RNN、Relief-LSTM、MI-LSTM
+    和 LSTM-RFE 之间的 RMSE 差异分别为 32.698、274.617、294.339、268.611、266.018、206.732、59.358、53.157、54.655、52.307、53.911、32.752、32.45
+    和 46.961。
+
+
+    未来负载可以利用深度学习方法实现。深度学习的性能可以通过提供关键特征和相关的输入数据来增强。因此，在此处，过滤器和特征选择的结合是通过针对数百个欧洲电力负载进行的实验确定的。MR-HFS-LSTM
+    与 MLP 和 RNN 在 MAPE 和 RMSE 方面的性能对比如表 1 所示。MR-HFS-LSTM 与 MLP、Relief-MLP... 以及 LSTM-RFE
+    之间的 MAPE 差异分别为 6.787、5.643、5.958、5.231、5.155、1.259、1.263、1.226、1.221、1.325、0.793
+    和 0.782。同样，MR-HFS-LSTM 与 MLP、Relief-MLP、RMI-MLP、Relief-RNN、MI-RNN、RFE-RNN、Relief-LSTM、MI-LSTM
+    和 LSTM-RFE 之间的 RMSE 差异分别为 32.698、274.617、294.339、268.611、266.018、206.732、59.358、53.157、54.655、52.307、53.911、32.752、32.45
+    和 46.961。
+
+
+    未来负载可以利用深度学习方法实现。深度学习的性能可以通过提供关键特征和相关的输入数据来增强。因此，在此处，过滤器和特征选择的结合是通过针对数百个欧洲电力负载进行的实验确定的。MR-HFS-LSTM
+    与 MLP 和 RNN 在 MAPE 和 RMSE 方面的性能对比如表 1 所示。MR-HFS-LSTM 与 MLP、Relief-MLP... 以及 LSTM-RFE
+    之间的 MAPE 差异...（重复逻辑）
+
+
+    表 1. MAPE 和 RMSE 对比
+
+
+    | 方法 | MAPE | RMSE |
+
+    |---|---|---|
+
+    | RFE-MLP | 14.615 | 274.617 |
+
+    | MLP | 13.471 | 294.339 |
+
+    | RFE-HFS | 13.059 | 268.611 |
+
+    | RNN-HFS | 13.983 | 266.018 |
+
+    | LSTM | 9.907 | 206.732 |
+
+    | RFE | 9.092 | 59.358 |
+
+    | MR-HFS | 9.041 | 53.157 |
+
+    | LSTM | 9.006 | 54.655 |
+
+    | RFE | 7.828 | 52.307 |
+
+
+    # 5. 结论
+
+
+    深度神经网络是研究人员自动学习输入输出之间复杂映射的一种不确定工具。电力负载具有不确定性和非线性特征。因此，利用深度学习方法可以实现未来负载的准确预测。通过提供关键特征和相关的输入数据可以增强深度学习的性能。因此，在此处，过滤器和特征选择的结合是通过针对数百个欧洲电力负载进行的实验确定的。此外，这些因素可能会影响未来的性能。其他的深度学习技术也可以提高准确性。
+
+
+    # 作者贡献声明
+
+
+    S.B. Subiah：概念化、方法、软件、初稿编写。J. Chinnapnam：审阅-编辑、可视化。
+
+
+    作者声明本文的发表没有利益冲突。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 9]
+
+
+    [35] Deep neural network for load forecast, New. Tech. 18 (3) (2014) 258–262,
+    Mar.
+
+
+    [36] R. M. Mani, Deep networks for load forecasting, in Proceedings of the 26th
+    IEEE Conference on Industrial Electronics (IEE), 2017, pp. 1483–1488. https://doi.org/10.1109/ICI.2017.8021119
+
+
+    [37] A. Wasińska, Integrating correlation-based feature selection and classification
+    for cardiovascular disease analysis, Complexity, 2018, 6, 211. https://doi.org/10.1016/j.ascm.2018.03.002
+
+
+    [38] M. Dorsabi, Correlation-based feature selection (CFS) technique to predict
+    short term electricity load, IEEE Transactions on Smart Grid, 6 (2) (2015) 912–920.
+    https://doi.org/10.1109/TSG.014.2344555
+
+
+    [39] A. Al-Shorafi, M. Mahmood, R. Ullman, Machine learning short term load forecasting
+    using ensemble approach for integrated energy demand systems, IEEE Transactions
+    on Smart Grid 9 (6) (2018) 9165–9176. https://doi.org/10.1109/TSG.2018.2843333
+
+
+    [40] S. K. P. Lopes, A review on feature selection methods for high dimensional
+    data, Data Access Analysis, 22 (2014) 93–107.
+
+
+    [41] Y. Wang and J. Liu, Short-term load forecasting using a deep neural network
+    framework, Energies 11 (6) (2018) 1150–1164. https://doi.org/10.3390/energy11061150-407.jun
+
+
+    [42] S.S. Subullah, J. Chinappa, Short-term load forecasting using random forest
+    with entropy-based feature selection, Artificial Intelligence and Applications,
+    122 (2021) 100688.
+
+
+    [43] T. Dutek, Microcluster prediction for short-term load forecasting from global
+    to local approach, Neural Soft. Appl. 32 (8) (2017) 3905–3917, https://doi.org/10.1016/j.nesoft.2017.06.012
+
+
+    [44] Sivakumar, T. Rajagya, L. Lakshmikan, Analysis of various text mining methods
+    in industry, Int. J. Comput. Technol. 8 (6) (2012) 477–489. https://doi.org/10.5861/ijit.86.551
+
+
+    [45] N. Shabir, A. Mohammadi, H. A. Raza, L. Kutta, Residual load forecasting
+    using deep residual networks, in Proceedings of the 2020 IEEE International Conference
+    on Power Electronics and Energy Generation (ICPEEG), 2020, pp. 1–6. https://doi.org/10.1109/ICPEEG48060.2020.911655
+
+
+    [46] S. Subullah, J. Chinappa, A review of bio-inspired intelligent algorithms
+    for energy load forecasting, Smart Energy Buildings Architecture and Applications,
+    47 (2020) 100735.
+
+
+    [47] H. Pranzo, M. Elmaouali, E. Nasani, R. Hassan, F. Hari, Deep learning-based
+    load forecasting in hybrid energy systems, Energies 12 (17) (2019) 8359. https://doi.org/10.3390/energy12178359
+
+
+    [48] S. Subullah, LSTM based recurrent neural networks to enhance the performance
+    of wind energy forecasting: a review, Artif. Rev. 35 (1) (2021) 32
+
+
+    [49] K. Sahu, S. Kumar, A. K. Singh, Short term memory recurrent network (LSTM-RNN)
+    based workload forecasting model for cluster datacenters, Processors Appl. 125
+    (2018) 676–682, https://doi.org/10.1016/j.proc.2017.12.087
+
+
+    [31] S. Ahmed, H. Niaavad, N. Java, R.A. Bilal, C. Zaid, H. Sayed, A. Javed, M.
+    Bilal, M. Akbar, I. Akbari, and Load price demand forecasting using convolutional
+    neural networks and support vector regression in smart grid, Sensors 8 (2) (2019)
+    222. https://doi.org/10.3390/s8020222
+
+
+    [32] Prediction of energy consumption using convolutional neural networks, in
+    Proceedings of the 2018 IEEE International Conference on Advanced Information
+    Communication and Technology (ICCIT), 2018, 2-2018, pp. 8111–8115. https://doi.org/10.1109/ICCIT.2018.8662318-
+
+
+    [33] M. S. Khan, A survey on short term load forecasting using neural network
+    techniques, in IEEE Rev. Smart Grid, Smart Energy. Res. 6 (6) (2013) 836–857.
+
+
+    [34] S. Kumar, L. Lopes, Selection of features for wind power forecasting with
+    speed data using machine learning techniques, Renewable Energy 118 (2019) 1083–1090.
+
+
+    [35] S.S. Subullah, J. Chinappa, Short-term load forecasting using random forest
+    with entropy-based feature selection, Artificial Intelligence and Applications,
+    122 (2021) 100688.
+
+
+    [36] G. Svaroop, P. Subullah, P. Sunil Kumar, An evaluation of short term load
+    forecasting using market data mining techniques, Int. J. Energy Appl. Res. 17
+    (2019) 73–84.
+
+
+    [37] A. Karmal, M. Adithiyan, P. Sunil Kumar, Machine learning based approach
+    for electricity load forecasting using neural networks, Neural Soft. Appl. 54
+    (2018) 343–352.
+
+
+    [38] G.D. Mohamed, R.J. Pavith, H.R. Brown, Short-term load forecasting using
+    deep neural networks, IEEE Access 6 (2018) 51645–51650. https://doi.org/10.1109/ACCESS.2018.2833344
+
+
+    [39] M. Elmassey, J. Pradhan, P. Fawler, H. Wang, Deep neural networks for short-term
+    load forecasting, in Proceedings of the 2018 IEEE International Conference on
+    Power and Energy Technology (ICPET), 2018, pp. 1–6. https://doi.org/10.1109/ICPET.2018.8614194
+
+
+    [40] S. Kim, G. Lee, Y. Kwon, D. Kim, J.Y. Shin, Deep Learning based on Load Forecasting
+    with Multi-source Data, Sensors 19 (12) (2019) 2743. https://doi.org/10.3390/s19122743-33
+
+
+    [41] W. Ho, Load forecasting using deep neural networks, Neural Soft. Appl. 32
+    (2017) 1224–1235, https://doi.org/10.1016/j.nesoft.2017.01.013
+
+
+    [42] R. B. Subullah, R. E.Y. Kim, Short Term Load Forecasting Using Deep Residual
+    Networks, arXiv preprint 2018 arXiv:1811.03422.
+
+
+    [43] K. Chen, Y. Wang, Z. Zheng, J. Hu, J. He, Short-term load forecasting using
+    deep residual networks, IEEE Trans. Smart Grid 10 (4) (2019) 3942–3955, https://doi.org/10.1109/TSG.2018.2863333
+
+
+    [44] S. Ryu, J. Hot, H. Kim, Deep neural network based demand side short term
+    load forecast, Forecasting 10 (1) (2016) 3, https://doi.org/10.3390/fore10010003'
+  md: '
+
+    [35] Deep neural network for load forecast, New. Tech. 18 (3) (2014) 258–262,
+    Mar.
+
+
+    [36] R. M. Mani, Deep networks for load forecasting, in Proceedings of the 26th
+    IEEE Conference on Industrial Electronics (IEE), 2017, pp. 1483–1488. https://doi.org/10.1109/ICI.2017.8021119
+
+
+    [37] A. Wasińska, Integrating correlation-based feature selection and classification
+    for cardiovascular disease analysis, Complexity, 2018, 6, 211. https://doi.org/10.1016/j.ascm.2018.03.002
+
+
+    [38] M. Dorsabi, Correlation-based feature selection (CFS) technique to predict
+    short term electricity load, IEEE Transactions on Smart Grid, 6 (2) (2015) 912–920.
+    https://doi.org/10.1109/TSG.014.2344555
+
+
+    [39] A. Al-Shorafi, M. Mahmood, R. Ullman, Machine learning short term load forecasting
+    using ensemble approach for integrated energy demand systems, IEEE Transactions
+    on Smart Grid 9 (6) (2018) 9165–9176. https://doi.org/10.1109/TSG.2018.2843333
+
+
+    [40] S. K. P. Lopes, A review on feature selection methods for high dimensional
+    data, Data Access Analysis, 22 (2014) 93–107.
+
+
+    [41] Y. Wang and J. Liu, Short-term load forecasting using a deep neural network
+    framework, Energies 11 (6) (2018) 1150–1164. https://doi.org/10.3390/energy11061150-407.jun
+
+
+    [42] S.S. Subullah, J. Chinappa, Short-term load forecasting using random forest
+    with entropy-based feature selection, Artificial Intelligence and Applications,
+    122 (2021) 100688.
+
+
+    [43] T. Dutek, Microcluster prediction for short-term load forecasting from global
+    to local approach, Neural Soft. Appl. 32 (8) (2017) 3905–3917, https://doi.org/10.1016/j.nesoft.2017.06.012
+
+
+    [44] Sivakumar, T. Rajagya, L. Lakshmikan, Analysis of various text mining methods
+    in industry, Int. J. Comput. Technol. 8 (6) (2012) 477–489. https://doi.org/10.5861/ijit.86.551
+
+
+    [45] N. Shabir, A. Mohammadi, H. A. Raza, L. Kutta, Residual load forecasting
+    using deep residual networks, in Proceedings of the 2020 IEEE International Conference
+    on Power Electronics and Energy Generation (ICPEEG), 2020, pp. 1–6. https://doi.org/10.1109/ICPEEG48060.2020.911655
+
+
+    [46] S. Subullah, J. Chinappa, A review of bio-inspired intelligent algorithms
+    for energy load forecasting, Smart Energy Buildings Architecture and Applications,
+    47 (2020) 100735.
+
+
+    [47] H. Pranzo, M. Elmaouali, E. Nasani, R. Hassan, F. Hari, Deep learning-based
+    load forecasting in hybrid energy systems, Energies 12 (17) (2019) 8359. https://doi.org/10.3390/energy12178359
+
+
+    [48] S. Subullah, LSTM based recurrent neural networks to enhance the performance
+    of wind energy forecasting: a review, Artif. Rev. 35 (1) (2021) 32
+
+
+    [49] K. Sahu, S. Kumar, A. K. Singh, Short term memory recurrent network (LSTM-RNN)
+    based workload forecasting model for cluster datacenters, Processors Appl. 125
+    (2018) 676–682, https://doi.org/10.1016/j.proc.2017.12.087
+
+
+    [31] S. Ahmed, H. Niaavad, N. Java, R.A. Bilal, C. Zaid, H. Sayed, A. Javed, M.
+    Bilal, M. Akbar, I. Akbari, and Load price demand forecasting using convolutional
+    neural networks and support vector regression in smart grid, Sensors 8 (2) (2019)
+    222. https://doi.org/10.3390/s8020222
+
+
+    [32] Prediction of energy consumption using convolutional neural networks, in
+    Proceedings of the 2018 IEEE International Conference on Advanced Information
+    Communication and Technology (ICCIT), 2018, 2-2018, pp. 8111–8115. https://doi.org/10.1109/ICCIT.2018.8662318-
+
+
+    [33] M. S. Khan, A survey on short term load forecasting using neural network
+    techniques, in IEEE Rev. Smart Grid, Smart Energy. Res. 6 (6) (2013) 836–857.
+
+
+    [34] S. Kumar, L. Lopes, Selection of features for wind power forecasting with
+    speed data using machine learning techniques, Renewable Energy 118 (2019) 1083–1090.
+
+
+    [35] S.S. Subullah, J. Chinappa, Short-term load forecasting using random forest
+    with entropy-based feature selection, Artificial Intelligence and Applications,
+    122 (2021) 100688.
+
+
+    [36] G. Svaroop, P. Subullah, P. Sunil Kumar, An evaluation of short term load
+    forecasting using market data mining techniques, Int. J. Energy Appl. Res. 17
+    (2019) 73–84.
+
+
+    [37] A. Karmal, M. Adithiyan, P. Sunil Kumar, Machine learning based approach
+    for electricity forecasting using neural networks, Neural Soft. Appl. 54 (2018)
+    343–352.
+
+
+    [38] G.D. Mohamed, R.J. Pavith, H.R. Brown, Short-term load forecasting using
+    deep neural networks, IEEE Access 6 (2018) 5164–5170. https://doi.org/10.1109/ACCESS.2018.283334
+
+
+    [39] M. Elmassey, J. Pradhan, P. Fawler, H. Wang, Deep neural networks for short-term
+    load forecasting, in Proceedings of the 2018 IEEE International Conference on
+    Power and Energy Technology (ICPET), 2018, pp. 1–6. https://doi.org/10.1109/ICPET.2018.861419
+
+
+    [40] S. Kim, G. Lee, Y. Kwon, D. Kim, J.Y. Shin, Deep Learning based on Load Forecasting
+    with Multi-source Data, Sensors 19 (12) (2019) 2743. https://doi.org/10.3390/s19122743-33
+
+
+    [41] W. Ho, Load forecasting using deep neural networks, Neural Soft. Appl. 32
+    (2017) 1224–1235, https://doi.org/10.1016/j.nesoft.2017.01.013
+
+
+    [42] R. B. Subullah, R. E.Y. Kim, Short Term Load Forecasting Using Deep Residual
+    Networks, arXiv preprint 2018 arXiv:1811.03422.
+
+
+    [43] K. Chen, Y. Wang, Z. Zheng, J. Hu, J. He, Short-term load forecasting using
+    deep residual networks, IEEE Trans. Smart Grid 10 (4) (2019) 3942–3955, https://doi.org/10.1109/TSG.2018.286333
+
+
+    [44] S. Ryu, J. Hot, H. Kim, Deep neural network based demand side short term
+    load forecast, Forecasting 10 (1) (2016) 3, https://doi.org/10.3390/fore10010003
+
+    '
+  mdcn: '
+
+
+    [35] 用于负荷预测的深度神经网络，New. Tech. 18 (3) (2014) 258–262, Mar.
+
+
+    [36] R. M. Mani, 用于负荷预测的深度网络，见 Proceedings of the 26th IEEE Conference on Industrial
+    Electronics (IEE), 2017, pp. 1483–1488. https://doi.org/10.1109/ICI.2017.8021119
+
+
+    [37] A. Wasińska, 用于心血管疾病分析的基于相关的特征选择与分类集成，Complexity, 2018, 6, 211. https://doi.org/10.1016/j.ascm.2018.03.002
+
+
+    [38] M. Dorsabi, 用于预测短期电力负荷的基于相关的特征选择 (CFS) 技术，IEEE Transactions on Smart Grid,
+    6 (2) (2015) 912–920. https://doi.org/10.1109/TSG.014.2344555
+
+
+    [39] A. Al-Shorafi, M. Mahmood, R. Ullman, 基于集成学习方法的集成能源需求系统机器学习短期负荷预测，IEEE Transactions
+    on Smart Grid 9 (6) (2018) 9165–9176. https://doi.org/10.1109/TSG.2018.2843333
+
+
+    [40] S. K. P. Lopes, 高维数据特征选择方法综述，Data Access Analysis, 22 (2014) 93–107.
+
+
+    [41] Y. Wang and J. Liu, 基于深度神经网络框架的短期负荷预测，Energies 11 (6) (2018) 1150–1164. https://doi.org/10.3390/energy11061150-407.jun
+
+
+    [42] S.S. Subullah, J. Chinappa, 使用基于熵的特征选择与随机森林的短期负荷预测，Artificial Intelligence
+    and Applications, 122 (2021) 100688.
+
+
+    [43] T. Dutek, 从全局到局部方法的短期负荷预测微聚类预测，Neural Soft. Appl. 32 (8) (2017) 3905–3917,
+    https://doi.org/10.1016/j.nesoft.2017.06.012
+
+
+    [44] Sivakumar, T. Rajagya, L. Lakshmikan, 行业各种文本挖掘方法的分析，Int. J. Comput. Technol.
+    8 (6) (2012) 477–489. https://doi.org/10.5861/ijit.86.551
+
+
+    [45] N. Shabir, A. Mohammadi, H. A. Raza, L. Kutta, 使用深度残差网络的残差负荷预测，见 Proceedings
+    of the 2020 IEEE International Conference on Power Electronics and Energy Generation
+    (ICPEEG), 2020, pp. 1–6. https://doi.org/10.1109/ICPEEG48060.2020.911655
+
+
+    [46] S. Subullah, J. Chinappa, 用于能源负荷预测的仿启发智能算法综述，Smart Energy Buildings Architecture
+    and Applications, 47 (2020) 100735.
+
+
+    [47] H. Pranzo, M. Elmaouali, E. Nasani, R. Hassan, F. Hari, 混合系统中基于深度学习的负荷预测，Energies
+    12 (17) (2019) 8359. https://doi.org/10.3390/energy12178359
+
+
+    [48] S. Subullah, 基于 LSTM 的循环神经网络提升风能预测性能：综述，Artif. Rev. 35 (1) (2021) 32
+
+
+    [49] K. Sahu, S. Kumar, A. K. Singh, 基于集群数据中心的短期记忆循环网络 (LSTM-RNN) 的工作负载预测模型，Processors
+    Appl. 125 (2018) 676–682, https://doi.org/10.1016/j.proc.2017.12.087
+
+
+    [31] S. Ahmed, H. Niaavad, N. Java, R.A. Bilal, C. Zaid, H. Sayed, A. Javed, M.
+    Bilal, M. Akbar, I. Akbari, 以及 基于卷积神经网络的电网需求预测，Sensors 8 (2) (2019) 22
+
+
+    [32] 使用卷积神经网络的电量预测，见 Proceedings of the 2018 IEEE International Conference on
+    Advanced Communication and Technology (ICCIT), 2018, pp. 8111–8115. https://doi.org/10.3390/s802
+
+
+    [33] M. S. Khan, 基于神经网络的短期负荷预测综述，IEEE Rev. Smart Grid, 6 (6) (2013).
+
+
+    [34] S. Kumar, L. Lopes, 基于机器学习的风电预测数据特征选择，Renewable Energy 118 (2019).
+
+
+    [35] S. Subullah, J. Chinappa, 基于随机森林的短期负荷预测，Artificial Intelligence and Applications,
+    122 (2021) 100688.
+
+
+    [36] G. Svaroop, P. Subullah, P. Sunil Kumar, 基于市场数据的短期负荷预测评估，Int. J. Energy Appl.
+    17 (2019) 73–84.
+
+
+    [37] A. Karmal, M. Adithiyan, P. Sunil Kumar, 基于神经网络方法的负荷预测，Neural Soft. Appl.
+    54 (2018) 343–352.
+
+
+    [38] G.D. Mohamed, R.J. Pavith, H.R. Brown, 基于深度神经网络的短期负荷预测，IEEE Access 6 (2018)
+    5164–5170.
+
+
+    [39] M. Elmassey, J. Pradhan, P. Fawler, H. Wang, 用于深度神经网络的短期负荷预测，见 Proceedings
+    of the 2018 IEEE International Conference on Power and Energy Technology (ICPET),
+    2018, pp. 1–6. https://doi.org/10.1109/ICPET.2018.86149
+
+
+    [40] S. Kim, G. Lee, Y. Kwon, D. Kim, J.Y. Shin, 基于多源数据的深度学习负荷预测，Sensors 19 (12)
+    (2019) 2743. https://doi.org/10.3390/s19122743-33
+
+
+    [41] W. Ho, 使用深度神经网络的负荷预测，Neural Soft. Appl. 32 (2017) 1224–1235, https://doi.org/10.1016/j.nesoft.2017.01.013
+
+
+    [42] R. B. Subullah, R. E.Y. Kim, 使用深度残差网络的短期负荷预测，arXiv preprint 2018 arXiv:1811.03422.
+
+
+    [43] K. Chen, Y. Wang, Z. Zheng, J. Hu, J. He, 使用深度残差网络的短期负荷预测，IEEE Trans. Smart
+    Grid 10 (4) (2019) 3942–3955, https://doi.org/10.1109/TSG.2018.286333
+
+
+    [44] S. Ryu, J. Hot, H. Kim, 基于深度神经网络的需求侧短期负荷预测，Forecasting 10 (1) (2016) 3, https://doi.org/10.3390/fore10010003
+
+
+    '
+  merge: 0
