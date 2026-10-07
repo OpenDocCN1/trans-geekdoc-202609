@@ -1,0 +1,1127 @@
+- pgno: 0
+  md: '# Computers in Biology and Medicine 177 (2024) 108677
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Computers in Biology and Medicine
+
+
+    journal homepage: www://www.elsevier.com/locate/combiomed
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_0_0.png)
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_0_1.png)
+
+
+    # # A deep learning approach for generating intracranial waveforms from extrancranial
+    signals routinely in the intensive care unit
+
+
+    Shiker S¹, Alina Guo², Joseph Boen³, Atas Agarwal⁴ O Chahal ⁵ Arushi Tandon ⁶
+    Meet Pael⁷, Sreenidhi Sankaraman⁸ Nicholas Julian⁹, Durr¹⁰, Te D Azad¹¹ Romain
+    Piraccchio¹¹ Robert D Stevens¹¹¹**
+
+
+    # ARTICLE INFO
+
+
+    +   Keywords:
+
+    Deep learning
+
+    Intracranial pressure
+
+    Arterial blood pressure
+
+    Electrocardiogram
+
+    Plethysmography
+
+    Non-invasive diagnosis
+
+
+    Intracranial pressure (ICP) is commonly monitored to treat patients with brain
+    disorders such as traumatic brain injury (TBI). Established methods to assess
+    ICP are resource intensive and highly invasive. We obtained ICP waveforms continuously
+    from three signals acquired in the Intensive Care Unit (ICU): arterial blood pressure
+    (ABP), plethysmography (PPG), and electrocardiogram (EEG) over 600 h of high-frequency
+    (125 Hz) simultaneously acquired ICP, ABP, and PPG wavelet data from 10 patients.
+    We trained deep learning (DL) models to reconstruct ICP waveforms. The predictive
+    performance of different DL models was evaluated in single-patient and multi-patient
+    tests. The mean absolute error (MAE) of the best-performing models was 1.34 mmHg
+    in the single-patient test and 2.11 mmHg in the multi-patient test. Analysis was
+    conducted to compare statistically independent performances across the models
+    (SD = 0.63 ± 0.75, 0.66 ± 0.96, for EEG, PPG, and ABP; p = 0.42). The results
+    demonstrate the potential of non-invasive continuous monitoring using electrophysiological
+    waveforms. With refinement and validation, this method could provide a more accessible
+    and alternative to invasive ICP, enabling stable assessment and treatment in resource-constrained
+    settings.
+
+
+    # 1. Introduction
+
+
+    Intracranial pressure (ICP) is a physiologically variable used in the management
+    of patients with traumatic brain injury (TBI), ischemic and hemorrhagic stroke,
+    metabolic or inflammatory disorders of the brain, and hydrocephalus. Elevations
+    in ICP are life-threatening events which may expand intracranial damage, cerebral
+    edema, or death. In fashion, ICP may be effectively treated with invasive resuscitative
+    measures and in selected patients with severe TBI and other
+
+
+    The standard for monitoring and ICP is the placement of an external ventricular
+    drain (EVD) or intracranial monitor (PIM⁵). These are highly invasive devices
+    placed in the brain by drilling through the skull. For EVDs, the risk of misplacement,
+    hemorrhage, and infection, is 13.5 %, 5.8 %, and 12.1 %, respectively, according
+    to a meta-analysis [6]. The procedure of inserting an EIM involves significant
+    risks, requiring specialized equipment and neurosurgical expertise which is not
+    available in many settings [7]. There is, therefore, an unmet need for alternatives
+    to invasive ICP that are more accessible and accurate, yet reliable
+
+
+    * Corresponding Department of Anesthesiology and Critical Care, Johns Hopkins
+    University, Baltimore, Maryland, USA.
+
+    Email: snair23@alumni.jhhu.edu (S.S Nair), rstevvena@jhhu.edu (R.D. Stevens)
+
+
+    https://doi.org/10.1016/j.compbiomed.2024.108677
+
+
+    Received 25 May 2024; Received in revised form 27 May 2024; Accepted 28 May 2024
+
+    Available online 29 May 2024
+
+
+    0010-8625 © 2024 Elsevier Ltd. All rights reserved, including for use in text
+    and data mining, AI, and training technologies.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Data
+
+
+    MMIC-III (v.1,2016) is a publicly available database that comprises de-identified
+    data from 46,520 patients and 58,976 admissions recorded between June 1, 2001,
+    and October 31, 2012, the Beth Israel Deacon Medical Center in Boston, MA [27].
+    The data includes demographics, admission, and discharge notes, International
+    Classification of Diseases 1999 (ICD9) codes for diagnoses, physiological findings,
+    survival data, visit records, and medication history. Physiological wavelet data
+    was collected in a subset of patients. We decided to model ICF from ABP, ECG,
+    and PPG. By using these waveforms, we had three modes of predicting ICF and contributions
+    of each waveforms.
+
+
+    # 4. Methods
+
+
+    Research in this work was carried out on fully published datasets available via
+    the Massachusetts Institute of Technology (MIT) Phys repository (https://physrepo.mit.edu/).
+    In the MMIC-III database we have de-identified and retrieved data with approval
+    from the Institutional Review Board (IRB) of the Massachusetts Medical Center
+    (number P-2001/1694) for use of the database for research. Because the database
+    does not contain protected health information, a waiver of the requirement for
+    consent was included in the IRB approval.
+
+
+    # 4.1. Pre-processing, cohort selection, and data methods
+
+
+    Patients who were at 18 years and old and had admission, ABP, PPG, and ECG records
+    for at least 5 minutes in this database has been provided to us. We used only
+    ECG lead II [28]. Patients who had more than 5 minutes of recorded PPG waveform
+    data were excluded. This was because less than 5 minutes is frequently used as
+    the typical duration for the clinical finding when determining which period of
+    ICF is clinically significant.
+
+
+    From the remaining patients, waveform data (synchronous or asynchronous) were
+    extracted. Five-minute sequences that do not contain any non-zero values (NA)
+    or physiologically impossible values (ICF < -100 mmHg or 200 mmHg; PPG < 20 mmHg
+    or 300 mmHg; heart rate mean) from each waveform were extracted for waveform prediction.
+    To address potential issues with CVD evaluation, an interpolation method and bandpass
+    filter were applied to the signals to remove high-frequency and low-frequency
+    waveforms that could lead to inaccuracies in the data.
+
+
+    For this study, an episode of intracranial hypertension was defined as an ICF
+    > 20 mmHg [29]. Recent traumatic brain injury guidelines suggests a threshold
+    of 20 mmHg, however, our study includes a heterogenous population of patients
+    who were admitted to the ICU, which is responsible for both pediatric and geriatric
+    patients. A significant number of intracranial hypertension events were reported
+    to be present in the patients, who had an aggregate duration of intracranial hypertension
+    for > 60 minutes. Finally, patients with less than 5 minutes of recorded ECG data
+    were excluded [30]. Each step of the pre-processing is reported in Supplementary
+    Table-IA.
+
+
+    The number of subjects excluded from the present analysis was N=129 patients (2.3
+    %), which corresponds to 2,755 episodes of 5-minute data. In this however, up
+    to 50% of the waveforms were missing (NA), suggesting that interpolation would
+    not have been a viable strategy. Additionally, Nans were mostly sequential and
+    not stochastic, making waveform imputation difficult. By training deep learning
+    models, missing values can be mitigated, bringing learning and biases. As a result,
+    we decided to maintain the strict criterion of no NAN values in
+
+
+    Research that there is a bidirectional relationship between cardiovascular and
+    intracranial physiological variations. The ICF waveform is a highly oscillatory
+    morphology which captures the aspects of the arterial pressure. Arterial blood
+    pressure is the primary determinant of cerebral resistance which is ideally modulated
+    to ensure cerebral pressure remains constant across a cycle of hemodynamics (cerebral
+    autoregulation). When or at the extremes of low and high blood pressure, blood
+    perfusion may cause significant cerebral reductions and ICF elevation (waveforms).
+
+
+    [8].
+
+
+    Here we explore the relationship between ICF and three physiological waveforms
+    that are captured in the ICU: invasive arterial blood pressure (ABP), photoplethysmography
+    (PPG), and electrocardiogram (ECG). ABP, PPG, and ECG data can be used to generate
+    an ICF. The ability to accurately estimate ICF using extracranial physiological
+    data could represent a safer and less invasive alternative to the current assessment.
+    Such a solution could mitigate risk and potentially enable ICF assessment in low-resource
+    settings.
+
+
+    # Related works
+
+
+    Our research presents a novel approach to predicting the ICF waveforms which differs
+    significantly from what is reported in other literature. We leverage deep learning
+    to predict ICF using high-frequency (125 Hz) ABP, PPG, and ECG data in real time.
+    Other groups have developed to build physics-based simulations and statistical
+    models to interpret ICF, data-driven methods to predict ICF [1, 14-17]. Some groups
+    have developed a potential-learning algorithm for intracranial hypertension [18,19].
+    We have attempted to offer a relative alternative in a limited number. A number
+    of studies focus on predicting ICF using extracranial physiological features,
+    however, they have not used deep learning [12, 13]. Deep learning models are able
+    to learn the features of the waveforms directly from the data. Can deep learning
+    help capture hierarchical and non-linear relationships between the input waveforms
+    (extracranial) and the output waveforms (intracranial) for feature engineering.
+
+
+    A report on a study to compare ICF and blood pressure [20]. We used ECG, ABP,
+    and blood flow velocity (derived from transcranial Doppler (TCD)) waveforms to
+    compute ICF. A method that is used for data from TCD waveforms [23] has been applied
+    similarly to ABP, ECG, and PPG. Additionally, other studies have used the monitored
+    intracranial PPG signal for ICF in this study [24]. Research suggests that intracranial
+    PPG signals may change or in conjunction with changes in ICF [25,26]. Here we
+    investigate PPG as a potential correlate of ICF.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Step 0
+
+
+    +   * ICP signal present
+
+    * ECG signal present
+
+    * ABP signal present
+
+    * PPG signal present
+
+    * At least 18 years of age
+
+
+    Total
+
+    Number of
+
+    Patients
+
+    Remaining
+
+
+    Table 1
+
+    Characteristics of patients analyzed in the study.²
+
+
+    Total Number of Subjects | 10
+
+    Age Median (IQR) | 56 (33-64)
+
+    Sex (% M, % F) | 30, 70
+
+    Admission Type (Number of Subjects) | Emergency (8) Urgent (2) Rehab/Short-term
+    Part Hospital (5)
+
+    Discharge Location (Number of Subjects) | Home Care (1) Hospital (1)
+
+    Subacute hemorrhage (5) Acute liver failure (3) Traumatic Brain Injury (1) Unknown
+    (1)
+
+
+    # Step 1
+
+
+    +   * Overlapping extracranial and ICP signal (at five minutes)
+
+    * No Nan values in any signal
+
+    * ICP: greater than -10 and less than 200
+
+    * ABP: greater than 20 and less than 300
+
+    * No mean in HR
+
+
+    # Step 2
+
+
+    +   * Passes periodic filtering criteria
+
+    * At least 1 hour of hypertensive records
+
+    * At least 15 years of records
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_2_0.png)
+
+
+    organ to generate the high quality data for our deep learning models.
+
+
+    By setting requirements for 15 h of data per patient, we aimed to create a balanced
+    dataset from which each model can be trained effectively. This approach manages
+    to mitigate the risk of the model being biased by patients with less data. We
+    only included instances where there was a minimum of 1 h of hypertensive events
+    follows the same rhythm. Our current work focuses on ICP wavelet recognition,
+    identifying features to improve the performance of our proposed models. We endeav
+    to ensure that each patient offered a sufficient representation of non-hypertensive
+    and hypertensive events.
+
+
+    After this pre-processing stage, 10 patients remained for downstream analysis
+    containing more than 600 h of simultaneous ICP, ABP, EEG, and PPG data (from not
+    270,000,000 data points). The demographics of the study are presented in Table
+    1. Summary statistics for ICP, EEG, and PPG for each patient reported in
+
+
+    ICP Monitor Type
+
+    * M = Male, F = Female, IQR = Interquartile Range, EV = Extravascular Drain.
+
+
+    Supplementary Tables II-III.
+
+
+    # 4.2. Determining length for prediction task
+
+
+    To ensure that the prediction task was as real-time as possible, a window size
+    of 10 s was used dynamic windowing (DTW) to analyze information drop-off when
+    10 s compared to windows for the ICP wavelet (Table 2). We tested different window
+    adjustments for each extracranial wavelet and ICP in a pairwise manner. We found
+    that the correlation of DTW scores of each extracranial wavelet with respect to
+    ICP for adjacent windows showed that expected 10 s window was sufficient as the
+    drop-off in DTW correlation between windows was not significant, supporting the
+    use of the (10-s) windows (Table 2).¹
+
+
+    # 4.3. Model selection and architecture
+
+
+    The goal of this study is to predict the entire ICP wavelet (125 Hz) from ABP,
+    EEG, and PPG waveforms (125 Hz). Given that this is a multivariate time series
+    prediction problem, we developed models that fit this architecture and have been
+    used in several similar problems for space-time-based predictions (Fig. 3):
+
+
+    +   1 Simple Recurrent Neural Network (RNN) [32,].
+
+    2 Gated Recurrent Unit (GRU) [34–38].
+
+
+    Dynamic window (DTW) for information analysis for identifying window size
+
+
+    Window size (size) | Spearman Correlation of Scores of ICP/ABP | Spearman Correlation
+    of Scores of ICP/EEG | Spearman Correlation of Scores of ICP/PPG
+
+    10 s | 0.39 | 0.29 | 0.25
+
+    30 s | 0.37 | 0.30 | 0.30
+
+    60 s | 0.42 | 0.37 | 0.35
+
+
+    DTW scores were calculated for 10, 30, and 60 s for each window. The correlation
+    was calculated between DTW scores of each extracranial wavelet (other ABP, EEG,
+    and PPG) to determine if changes in ICP (i.e., a high DTW score between two adjacent
+    windows) were also reflected in the extracranial wavelets and how this correlation
+    changes as window sizes.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# a: Preprocessing and Cohort Selection
+
+
+    Age ≥18 years, at least 5 minutes of overlapping ECG, PPG, ABP, ICP
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_3_0.png)
+
+
+    Subset 1
+
+
+    Periodicity filtering, for ≥ 1 hour, total data ≥ 15 hours, physiologically impossible
+    value and NaN filtering
+
+
+    Subset 2
+
+
+    # c: Standardization & Evaluation Criteria Determination
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_3_1.png)
+
+
+    # e: Single Patient Analysis
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_3_2.png)
+
+
+    # e: Multi Patient Analysis
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_3_3.png)
+
+
+    # b: Dynamic Time Warping (DTW) Analysis
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_3_4.png)
+
+
+    # f: Ablation Analysis
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_3_5.png)
+
+
+    Fig. 2. Overview of methodology and analysis performed in study.
+
+
+    3) Short-Term Memory (LSTM) network [19, 38–41],
+
+    4) Temporal Convolutional Networks (TCN) [42–45],
+
+    5) Volume-Net (VNET) [46],
+
+    6) Transformer [47, 48, 49]
+
+
+    These six models were chosen for stability. For each individual, we performed
+    a grid search to select optimal parameters including batch size, initial learning
+    rate, number of layers, and number of nodes in layer. The best set of parameters
+    were selected based on a validation set and tested on test set.
+
+
+    # 4. Standardization and evaluation criteria
+
+
+    Feature (ABP, ECG, PPG) and label (ICP) waveforms were independently normalized
+    for the prediction tasks. Standardization using z-score and scaling (subtracting
+    the mean and dividing by the deviation of the waveform) was applied before splitting
+    the data into training and testing set. Preclusions were then cleaned into a clinically
+    interpretable ICP using the method.
+
+
+    Different loss functions were used when optimizing model, and it was determined
+    that the log hyperbolic cosine (logcosh) is the best function for observing the
+    rate and scale of loss decrease. We used logcosh of the difference between the
+    true and predicted values (Equation (1)). The logcosh loss function is a smooth
+    approximation of the mean absolute error (MAE) loss function, making it easy to
+    optimize through gradient descent methods. It is known to work well with other
+    loss functions such as MAE [49–51]. MAE and mean squared error (RMSE) were also
+    metrics used to report model performance (Equation 2) and
+
+
+    (33)).
+
+
+    ```
+
+    Logcosh (t) = \sum_{t=1}^{T} \log(cosh(p_t - t_t))
+
+    ```
+
+
+    Equation (2). Mean Average Error Function.
+
+
+    ```
+
+    MAE = \frac{1}{n} \sum_{i=1}^{n} |p_i - t_i|
+
+    ```
+
+
+    Equation (3). Mean Squared Error Function.
+
+
+    ```
+
+    RMSE = \frac{1}{n} \sum_{i=1}^{n} (p_i - t_i)^2
+
+    ```
+
+
+    # 4.5. Single-patient analysis
+
+
+    The first experiments evaluated the performance of the six models for each of
+    the 10 patients in the study. The goal of this experiment was to ensure that each
+    model could predict the true ICP waveforms from the simplest context: one patient.
+    The comparison of models was performed by splitting the data into sets 60/10/30
+    for training/validation/test. The mean and median metrics for training and testing
+    datasets were reported for each model with the standard deviation. Using this
+    information, we selected the top model(s) to run a multi-patient analysis. Additional
+    follow-up analysis was performed to understand the strengths and weaknesses of
+    each model and trends in error and prediction.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 6.4. Multi-patient analysis with best performing models
+
+
+    # 5. Results
+
+
+    To ensure that the best-performing models were generalizable to new patients,
+    a multi-patient analysis was conducted 6 patients for training, 2 for validation,
+    and for the rest the intracranial pressure (ICP) along with each patient''s count
+    of hypertensive and total more than 10 patients. This approach ensures that the
+    models are evaluated on data from patients that are different from those used
+    in the training phase, providing a robust assessment of the models. The performance
+    on the training and testing sets was reported for each model, to provide a measure
+    of model performance and accuracy. Furthermore, follow-up analysis was performed
+    to evaluate the models on the validation and testing sets. This analysis is crucial
+    for ensuring that the models are generalizable and can be applied to new patients
+    in practice, where the algorithm will be trained on different patients than the
+    patients it was used in the ICU.
+
+
+    In the single-patient analysis for predicting ICP using PPG, and ECG, the average
+    MAE loss over the 10 patients for the deep learning models was as follows: RNN
+    3.17 ± 0.68, GRU 1.31 ± 0.59, LSTM 1.63 ± 0.60, TCN 1.18 ± 0.57, VNET 1.22 ± 0.57,
+    and Transformer 2.65 ± 0.82 (Table 3). Individual performance of each the models
+    can be found in Supplementary Table IV-A. Analysis of the results shows that the
+    GRU, LSTM, TCN, and VNET all performed significantly better than the RNN and Transformer
+    models. While there is some variance for GRU, the results were consistent across
+    all conditions.
+
+
+    The multi-patient analysis indicates that all models performed to a similar degree
+    with an MAE close to 5mmHg (Table 4). Four examples of a predicted ICP value generated
+    by the LSTM model and similar results for other models can be seen in Supplementary
+    Figures IV-A.
+
+
+    # 4.7. Ablation on multi-patient top model
+
+
+    To assess extracranial performance, an analysis was conducted in the multi-patient
+    analysis. By excluding input of intracranial waveforms we tested: ABP only, ECG
+    only, ABP + PPG, ECG + and ABP. The goal of this study was to understand the effect
+    of removing intracranial waveforms on model performance.
+
+
+    # 4.8. Clinical error analysis prediction
+
+
+    To improve the accuracy of predictions for individuals, an error analysis was
+    conducted to identify the factors contributing to the variance of loss across
+    the test dataset. The investigated potential correlations between loss and various
+    factors, including pressure reactivity index (Prx), mean ICP, ICP signal value,
+    ICP amplitude, and complexity of features in a reduced dimension. We explored
+    these relationships to understand the data and to improve the development of models
+    for predicting ICP in individual patients and across patients.
+
+
+    Prediction error was calculated by computing the Pearson correlation between the
+    predicted and actual ICP. For example, of predicting ICP error, we computed the
+    Pearson correlation between ABP and intracranial pressure (ICP) within a sliding
+    window in the test dataset. We hypothesized that a higher ABP would be associated
+    with lower prediction error, given the greater degree of correlation between ABP
+    and ICP. Next, we investigated the correlation between ICP signal value and prediction
+    loss. The Pearson correlation was computed between the prediction loss and the
+    ICP signal value. The same general procedure was conducted to test the correlation
+    between ICP pulse amplitude and prediction loss. For example of features influenced
+    error, all three input waveforms were reduced into a two-dimensional space using
+    the Uniform Manifold Approximation and Projection (UMAP) library. Prediction error
+    was overlaid on these points to show if there was a trend in the type of waveforms
+    that yielded high error.
+
+
+    The multi-patient analysis was performed to demonstrate differences among each
+    model in our multi-patient analysis. We investigated the correlation of models
+    against each other (Supplementary Figure II and III). In terms of prediction correlations,
+    all models exhibited strong correlations with each other. However, GRU, LSTM,
+    and VNET exhibited much higher correlations around 0.9. This observation highlights
+    the similarities among the patterns in the data.
+
+
+    However, considering the analysis of models shows difference correlation strength
+    across all models. While LSTM, GRU, and VNET remained strongly correlated with
+    all models, other models such as RNN and TCN exhibit lower correlation with all
+    other models except. This discrepancy might be due to the nature and distribution
+    of the data, which suggests that models producing lower predictions could be sensitive
+    to different temporal patterns within the data based on model architecture.
+
+
+    Error analysis for multi-patient analysis demonstrated that all the ICP prediction
+    (Table 5). In model group, ECG, PPG, and ABP all had relatively similar performance
+    strength in predicting ICP. This is not surprising because the models were not
+    improved by including intracranial waveforms. By using a pair of extracranial
+    waveforms, there was no clear trend in the predictability.
+
+
+    Finally, in our clinical error analysis, we found that model performance was not
+    significantly correlated with Prx, mean ICP'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Table 3
+
+
+    Summary of single-patient analysis results.
+
+
+    | Simple RNN | GRU | LSTM | TCN | VNet | Transformer |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | Logloss test loss (train) | 2.57 ± 0.26 (±0.69 ± 0.45) | 0.86 ± 0.52 (±0.73)
+    | 1.08 ± 0.54 (±0.51 ± 0.53) | 0.75 ± 0.50 (±0.41 ± 0.36) | 0.80 ± 0.50 (±0.39)
+    | 2.08 ± 2.15 (±0.12 ± 0.79) |
+
+    | MAE test loss (train loss) in mmHg | 3.17 ± 0.68 (±3.36 ± 0.52) | 3.21 ± 1.59
+    (±1.13) | 1.63 ± 1.60 (±1.36) | 1.11 ± 0.57 (±0.64 ± 0.30) | 1.22 ± 0.57 (±0.58)
+    | 2.65 ± 0.82 (±0.74 ± 0.83) |
+
+    | RMSE test loss (train loss) in mmHg | 4.28 ± 0.61 (±4.52 ± 0.86) | 1.95 ± 0.77
+    (±1.69) | 2.26 ± 2.29 (±1.87) | 1.83 ± 0.78 (±1.02) | 1.86 ± 0.77 (±0.89) | 3.61
+    ± 1.07 (±3.73 ± 0.86) |
+
+    | Pearson correlation (train) | 0.64 ± 0.17 (±0.06) | 0.94 ± 0.04 (±0.03) | 0.94
+    ± 0.04 (±0.06) | 0.94 ± 0.04 (±0.05) | 0.94 ± 0.04 (±0.08 ± 0.02) | 0.79 ± 0.09
+    (±0.00) |
+
+
+    The mean and standard deviation are reported for logloss, MAE, RMSE, and Pearson
+    correlation, calculated between the predicted and ground truth values of the testing
+    and training set across all 10 patients.
+
+
+    # Table 4
+
+
+    Multi-patient analysis results.
+
+
+    | Simple RNN | GRU | LSTM | TCN | VNet | Transformer |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | Logloss test loss (train loss) in mmHg | 4.38 (1.94) | 4.55 (2.03) | 4.56 (2.01)
+    | 4.33 (1.89) | 4.41 (1.95) | 5.10 (2.24) |
+
+    | MAE test loss (train loss) in mmHg | 5.02 (2.10) | 5.19 (2.70) | 5.20 (2.47)
+    | 4.48 (2.45) | 5.05 (2.50) | 5.75 (2.74) |
+
+    | RMSE test loss (train loss) in mmHg | 6.25 (3.57) | 6.48 (3.89) | 6.63 (3.74)
+    | 6.21 (3.66) | 7.02 (4.01) | 7.27 (4.26) |
+
+    | Pearson correlation (test) | 0.49 (0.66) | 0.55 (0.86) | 0.58 (0.73) | 0.52
+    (0.82) | 0.46 (0.78) | 0.74 (0.96) |
+
+
+    values, ICP signal variance, ICP pulse amplitude, or clustering of features calculated
+    between the predicted and ground truth values of both testing and training sets
+    in a reduced dimensionality space.
+
+
+    # 6. Discussion
+
+
+    # 6.1. Key results
+
+
+    We present a framework for continuous ICP waveform that leverages deep learning
+    to fuse PPG waveform data measured in ICU. The best predicted ICP with an MAE
+    of 5.5 mmHg and limited systematic bias show that PPG is an important signal in
+    predicting ICP, while the waveform provides more comprehensive evidence. Overall,
+    the findings support our hypothesis that information on the ICP waveform can be
+    extracted from non-invasive PPG and
+
+
+    is possible to accurately reconstruct an ICP waveform from extracranial data,
+    the real-time and non-invasive nature of
+
+
+    nature of our algorithms could be integrated into the continuous flow of ICP monitoring,
+    which would represent a significant advantage with respect to current invasive
+    approaches.
+
+
+    We compare our findings with recent studies that employed deep learning algorithms
+    trained on TCD-derived blood flow velocity, ABP, and ICP in ICU. The reported
+    mean absolute error of their methods were 3.88 ± 3.26 mmHg and 3.44 ± 1.71 mmHg,
+    However, TCD used in many settings cannot be monitored continuously, suggesting
+    that this would represent an inadvertent assessment of ICP, the approach in this
+    study provided a numerical computation instead of re-forming the waveform as is
+    the case in the current work.
+
+
+    # 6. Strengths
+
+
+    By focusing on non-invasive ICP, our research has potential to significantly advance
+    the monitoring and treatment of patients with critical brain injuries, in resource-limited
+    settings. Real time waveform reconstruction using deep learning could be integrated
+    into the current monitoring workflows as a safer, more accurate alternative in
+    ICP-generation scenarios, expanding the potential of patients who would benefit
+    from non-invasive ICP for the treatment of acute brain injuries.
+
+
+    Our best results performed with similar accuracy to invasive ICP show an error
+    of 5.5 mmHg [52]. We can also compare our algorithms'' performance to technologies
+    such as TCD-ultrasoundography, where ICP estimation has an error of range of 12–55
+    mmHg [52], and, do not support continuous evaluation [53]. Other non-invasive
+    ICP techniques have an error range of 15–55 mmHg and require a probe to be inserted
+    into the ear of the brain [8].
+
+
+    While the latter techniques offer real-time and continuous monitoring,
+
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_5_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Simple RNN
+
+
+    # GRU
+
+
+    # LSTM
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_6_0.png)
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_6_1.png)
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_6_2.png)
+
+
+    # TCN
+
+
+    # VNET
+
+
+    # Transformer
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_6_3.png)
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_6_4.png)
+
+
+    ![](img/c1f600d4443c664084dc5e3430046d05_6_5.png)
+
+
+    Fig. 4. Band-LSTM Graphs for Multi-Patient Analysis in All Models. The x axis
+    shows the mean of the predicted true value and the y axis shows difference for
+    each time instance. The mean difference (diff) as evaluated (as ± 1.6 SD or standard
+    deviation) for each model.
+
+
+    # Table 5
+
+    ablation results for multi-patient analysis.
+
+
+    | Ablation | Simple Loss (ms) | GRU Test MAE (ms) | LSTM Test MAE (ms) | TCN Test
+    MAE (ms) | VNET Test MAE (ms) | Transformer Test MAE (ms) |
+
+    |---|---|---|---|---|---||}{
+
+    | ABP | | 8.23 | 7.51 | | 8.11 | 5.42 | 8.46 |
+
+    | PPG | | 6.84 | 7.20 | 7.23 | 5.14 | 5.24 | 7.31 |
+
+    | ECG | | 6.79 | 6.72 | 6.54 | 5.28 | 7.33 |
+
+    | ABP + PPG | | 6.32 | 6.32 | 5.77 | 5.45 | 5.17 | 7.41 |
+
+    | ABP + ECG | | 5.91 | 5.78 | 5.66 | 5.36 | 5.32 | 6.36 |
+
+    | PPG + ECG | | 5.14 | 5.18 | 5.20 | 4.98 | 5.05 | |
+
+    | ECG | | | | | | |
+
+
+    The test results obtained from subsets of waves (evaluated by the MAE test set
+    in pooling, ABP + PPG + ECG) is the benchmark of using waveforms to preprocess
+    ICD.
+
+
+    they are invasive, requiring surgical performance
+
+    We conducted a methodological analysis of a range of deep learning algorithms
+    applied to time-series. Understanding the differences in predictions obtained
+    when using distinct models could provide insights into the clinical and technical
+    components of each model. However, the performance of Simple RNN, GRU, TCN, and
+    VNET varies, including the data representation set. Transformers are particularly
+    effective when there is a clear signal in the data, such as in image or language
+    processing tasks. They capture distant elements, enabling them to model both long-term
+    and temporal dependencies across various domains. However, this complex architecture
+    may be harder to extract or encode long-term dependencies due to the vanishing
+    gradient problem. The architectures of TCN, GRU, VNET, and the other, are designed
+    to address these issues, making them more suitable for the task at hand.
+
+
+    contrast, TCN leverages convolutions to efficiently capture long-range dependencies
+    within sequential data, which may explain their higher correlations with GRU,
+    LSTM, and VNET. However, TCN''s ability to perform on multi-scale models is a
+    challenge; attention mechanisms may help capture temporal dependencies within
+    the extracellular and ICD physiological waves. By using a range of deep learning
+    models, we found that different models have strengths in both types of temporal
+    information embedded within extracellular and ICD physiological waves, as well
+    as each model''s capacity for leveraging and searching for precise predictions.
+    Our results provide insight into the variability of model for application. For
+    instance, RNN, GRU, and VNET exhibited a smaller MAE for PPG + ECG. Whereas, LSTM
+    and Transformer showed better performance for ABP + ECG data. When evaluating
+    these models independently, identify their divergent dependencies in ABP + ECG
+    versus PPG + ECG. This suggests that the combined information from all three extrac
+    waves may compensate for the architectural differences between deep learning models,
+    resulting in similar performance in'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'capturing temporal dependencies. Thus, an analysis highlights the importance
+    of considering both the inherent attributes of physical signals (time dependencies)
+    and the architectural characteristics of the models.
+
+
+    The outlier in the results is the baseline VNET, which showed no better performance
+    when using subsets of waveforms compared to all three waveforms. This observation
+    may indicate that after architectures are not capable of generating accurate reflections
+    when certain waveforms are used. VNET lacks attention mechanisms and layers that
+    enable dimensionality reduction, allowing it to capture essential information
+    effectively. Multidimensional convolutions and pooling layers, VNET reduces spatial
+    dimensions by downsampling features across various networks, enhancing its capacity
+    to effectively capture local and global temporal features.
+
+
+    It should be noted that our work is not without flaws predicting the ICF but the
+    entropy of the waveform. We found this to be a tractable problem, and the computational
+    power might be reduced by re-encoding the dataset, a reflection of our method
+    which validates PPG and ECG can help to sufficiently predict ICF models. Using
+    RNN, and VNET models shows that our approach of predicting the ICF from extracellular
+    waveforms can be adopted in lower resource settings, particularly when arterial
+    blood pressure cannot be measured.
+
+
+    # 6.3. Limitations
+
+
+    We acknowledge several limitations in this research. This is a proof-of-concept
+    study with a sample size that was small, leaving justifiable concerns about statistical
+    power, generalizability, and reality. Our results are reflective of the method
+    used and the Bland-Alt analysis were relatively wide, indicating that the model
+    will need further validation before it is considered in clinical works. Additionally,
+    our patient sample was heterogeneous with respect to the etiology of their brain
+    injury. Furthermore, the current dataset contains fields that were uncertain,
+    potentially affecting model performance due to variations in input extraction
+    signals and methods. With our application of a pre-processing scheme, absence
+    of PPG and ECG detection system can help filter out noisy high-quality waveform
+    data which could introduce bias into the training models and affect performance.
+    Furthermore, our use of deep learning algorithms limits on the interpretation
+    of important features in computing ICF. Given the nature of our experiment, we
+    have not decided which model metrics are appropriate. A threshold of 5 mmHg is
+    considered and would need to be agreed upon before consideration of clinical implementation.
+    Finally, we have not externally validated our model in an independent dataset,
+    restricting the generalizability of the findings found around the MIMIC III Waveform
+    Database.
+
+
+    6.4. Future direction
+
+
+    Ongoing and future research will concentrate on aggregating the sample size of
+    evaluated patients and examining differences in model performances. We plan to
+    expand our work by including more de-identified waveforms (e.g., continuous monitoring)
+    and adding patient demographics, thereby enhancing patient representation and
+    improving model generalizability. We will also test the models on an external
+    dataset outside of the MIMIC III Waveform
+
+
+    Database to assess the generalizability of model performance. Ideally, we intend
+    to externally validate our data on a more homogeneous group of TBI patients enrolled
+    in a larger prospective database. Finally, we will tune our independent deep learning
+    models and methods for aggregating the outputs of each into a ‘super-ensemble’
+    learner to enhance performance.
+
+
+    # 7. Conclusions
+
+
+    In conclusion, the results of this study indicate that algorithmic prediction
+    of the ICF from discrete set of continuous physiological signals is possible and
+    yields accuracies that are higher than most other nonlinear techniques and on
+    par with methods like ICP. With further refinement and validation, this could
+    provide an accessible alternative to ICF measurements, enabling prompt treatment
+    of severe brain injury in lower resource settings.
+
+
+    # CEditor contribution statement
+
+
+    Shiker S: Writing - review & editing, Writing - original draft, Visualization,
+    Project administration, Methodology, Formal analysis, Data curation, Alina Guo:
+    Writing - review & editing, Writing - original draft, Methodology, Formal analysis,
+    Data curation, Joseph Bone: Methodology, Formal analysis, Data curation, Awasthi:
+    Writing - review & editing, Writing - original draft, Method, Charlie Chen: Writing
+    - review & editing, Writing - original draft, Methodology, Formal analysis, Data
+    curation, Arush Tandy: Writing - original draft, Investigation, Formal, Meer Patel:
+    Writing - original draft, Investigation, Methodology, Treesha: Writing - original
+    draft, Investigation, Formal, Methodology, Tej J Zadad: Writing - review & editing,
+    Writing - original draft, Writing - review & editing, Writing - original draft,
+    Investigation, Robert D Stevens: Writing - review & editing, Project investigation,
+    Conceptualization.
+
+
+    # Declaration of of interest
+
+
+    The authors declare that they have no competing financial interests or relationships
+    of interest that could appeared to influence the work reported in this paper.
+
+
+    # Acknowledgements
+
+
+    The authors received no funding to conduct this research.
+
+
+    # Appendix A. Supplementary data
+
+
+    Supplementary data to this article can be found at: https://doi.org/10.1016/j.comp.2024.108667.
+
+
+    # References
+
+
+    +   [1] C.A. Taylor, J.M. Bell, M.J. Beijing, Brain injury-related Emergency Department
+    Visits, Hospitals, and States - United, 2007
+
+    [2] Centers for Disease Control and Prevention, National Center for Health Statistics:
+    Data counts on CDC WONDER, Accessed 2023.
+
+    [3] L. Zhen, Wang, Z, Su, Q, Liu, Y, Zhou, X, An, R, Yin, B, Li, X, Nie, S, Zhao,
+    H: The impact of head trauma on severe brain injury: a meta-analysis, PLoS One
+    17 (No 6) (2022): e076616.
+
+    [4] L.V. Pinto, T. A. Adeyinka, Increased incidence of trauma, 2021. Available:
+    https://www.ncbi.nlm.nih.gov/books/NBK48219/'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'S.S. Nair et al.
+
+
+    Computers in Biology and Medicine (2022) 108667
+
+
+    [27] A. Gehlen, J. Tollman, P. Loh, S. Lee, M. Lehmann, G. Masi, M. Bouslee, P.
+    Sidorovits, L.A. R. Gay, M. III, A criteria with free access to all scientific
+    data. Science (2016) 354(6318), 922-925. https://doi.org/10.1126/science.aah5000
+
+
+    [26] N. A. Hart, M.-P. Ohtomi, U. Okamoto, K. Safiki, S. Vella, V. Yarela, J.
+    Garcia, R. Almouday, M.H. Chambers, C.A. Pulsatile components of intracranial
+    pressure and cerebral blood volume in patients with intracranial hypertension.
+    Reviews in Neurology (2021) 74(4) 61. https://doi.org/10.1016/j.rneneu.2020.11.024.
+    Early online 2022 May Press. PMC PMID: 3365577
+
+
+    [28] D. R. Stoynov, M. Mukherjee, A. Ryder, Emergency neurological life: Intracellular
+    hypertension, and Hemorrhagic Care Center (2002) 23(2) 145-158.
+
+
+    [25] H. Kim, J. H. Lee, J. Lee, J. Kim, Impact of intracranial pressure on cerebral
+    blood flow and cerebral metabolic rate. Journal of Cerebral Blood Flow & Metabolism
+    (2018) 86(4) 1338-1350. https://doi.org/10.1016/j.jcb.2018.03.017
+
+
+    [29] N. Carney, and Y.field; The challenges of management of severe brain injury
+    in infants. Neonatology (2009) 75(4), 315-320. https://doi.org/10.1007/s00019-009-0883-x
+
+
+    [24] X. Zhang, J. E. Moore, B. Ikandar, F. Wang, M. Shoikawa, J. Ghosh, Invasive
+    and non-invasive methods of measuring intracranial pressure: a review. Clinical
+    Neurosciences (2017) 23(6), 697-700. https://doi.org/10.1016/j.cnneu.2017.02.005
+
+
+    [30] N. Turnfield, Information Retrieval for Medicine and Springer, Berlin, Heidelberg,
+    2007. https://doi.org/10.1007/978-3-642-74048-3
+
+
+    [31] Y. Nayebi, T. Shiripour, B. Foranjan, K. Radick, Y. Subdi, Using long short-term
+    memory-based model for predicting intracranial pressure using EEG signals. IEEE
+    Access (2021) 10, 42845-42853. https://doi.org/10.1109/ACCESS.2021.3066334
+
+
+    [23] S. Das, S. Singh, A. Iwad, A temporal window method for prediction of intracranial
+    pressure in intraventricular hemorrhage. Curr. Neurol. Neur. (2012) 21(1) 1-13.
+    https://doi.org/10.1007/s00064-011-0983-x. English online
+
+
+    [32] D. Liu, A. Cao, M. Yi, and A. Jiang, A convolutional-recurrent-fusion network
+    for predicting intracranial pressure from EEG signals. Biomedical Signal Processing
+    and Control (2022) 78, 103168. https://doi.org/10.1016/j.biosmoc.2022.103168
+
+
+    [22] F. M. Kashiraj, G. Verbeek, V. Molkaya, and T. Herbst, Model-based estimation
+    of intracranial pressure using arterial pulse and pressure. Sci. Transl. (Med)
+    (2009) 122(414), 1294-1294. https://doi.org/10.1126/scitransl.a90133
+
+
+    [33] S. Wang, C. Shan, and J. Yang, Traffic flow prediction using bi-directional
+    gated recurrent unit method. Urban Intell. (2022) 11, 103167. https://doi.org/10.1016/j.uci.2022.103167
+
+
+    [34] C. Li, J. Qian, Price prediction using a frequency domain based GRU convolutional
+    neural network. Forecast and Soft Computing. App. 13 (2022) 103932. https://doi.org/10.1016/j.futureas.2022.103932
+
+
+    [21] K. E. O''Rourke, M. Patrick, and P. Invier, Estimation of intracranial pressure
+    in patients with intracranial hypertension. Health Phys. Med Rep. (March 2018)
+    19(3), 471-478. https://doi.org/10.1007/s40639-018-0216-6-y
+
+
+    [35] S. Gao, J. Tang, T. Wu, and S. Yang, A feature fusion based attention network
+    for predicting continuous blood pressure using ECG signal. Channel. Biomedical
+    and Digital Engineering. (2022) 167, 107295. https://doi.org/10.1016/j.bpe.2022.107295
+
+
+    [20] W. Widrick, et al., Comparison of invasive and non-invasive prediction of
+    intracranial pressure in patients with severe brain injury. Sci. Rep. (2012) 2,
+    511. https://doi.org/10.1038/s41598-012-1555
+
+
+    [36] S. Sugadeva, S. Tippanavar, N. Sharma, M. Rahat, and K. Raza, Brain-based
+    wave recognition using EEG and LSTM, in 2022 International Conference on Communication
+    Intelligence and Neural Networks (ICINN). IEEE, 2022. 114-119.
+
+
+    [19] H. Lee, J. Lee, Y. Kim, and Y. Kim, Prediction of intracranial pressure using
+    EEG and deep learning techniques. Journal of Medical Engineering and Health Informatics
+    (2021) 25(10), 2997-3005. https://doi.org/10.1109/JEMMEHI.2021.3095881
+
+
+    [37] K. Ma, S. Qu, and J. Yang, H. He, Predictive estimation of intracranial pressure
+    using LSTM-based multi-task learning. Pattern Recognition, 126 (2022), 103544.
+    https://doi.org/10.1016/j.patcog.2022.103544
+
+
+    [18] M. Kamovska, K. Kuprowska, Center-High-Resolution ICU (CHRI ICU) Study: Analysis
+    of intracranial pressure and cerebral blood flow. Long-term monitoring in Neuro
+    Care (2020) 28(1), 33. https://doi.org/10.1187/s10166-019-0xxxx
+
+
+    [38] L. Zhang, Y. Zhang, J. Zhang, and J. Zhang, Electrocardiography-based convolutional
+    neural network model based on intracranial pressure prediction. IEEE Journal of
+    Biomedical and Informatics (2022) 26(12), 5902-5917. https://doi.org/10.1109/JBJI.2021.31xxxx
+
+
+    [17] M. Chadin, C. Popazzo, P. Curulli, and M. Lardriere, Non-invasive monitoring
+    of intracranial pressure using diffuse optical tomography. In International Conference
+    of the IEEE Engineering in Medicine and Biological Society (2010), p. 996-999.
+    https://doi.org/10.1109/EMBCB.2010.5633334
+
+
+    [39] W. Lu, Y. Sun, P. Liang, G. Zhang, S. Han, X. Liu, Y. Yao, and L. Wang, Prediction
+    of intracranial pressure using attention-based temporal convolutional neural network.
+    Networks (2022) 101, 108930. https://doi.org/10.1016/j.neu.2022.108930
+
+
+    [16] F. B. Li, R. Zhao, J. Wang, Y. Chen, Y. Li, and J. M. F. Abd, Non-invasive
+    monitoring of intracranial pressure based system based on electrowave analysis.
+    Sensors (2022) 22(21), 8168. https://doi.org/10.3390/s22218168
+
+
+    [40] K. Ma, S. Qu, J. Yang, and H. He, Predictive estimation of intracranial pressure
+    using LSTM-based multi-task learning. Pattern Recognition, 126 (2022), 103544.
+    https://doi.org/10.1016/j.patcog.2022.103544
+
+
+    [15] D. P. Pereira, R. M. Baltazar, R. Cuhan, V. Vaz, M. Colon, and J. Arradaz,
+    Prediction of intracranial pressure after severe brain injury using deep learning
+    neural networks. J. Eng. Clin. Med. (2022) 39(6), 2252-2260. https://doi.org/10.1177/0019785X221102262
+
+
+    [41] A. Gomez, J. Hernandez, and F. Gelles: An attention-based convolutional neural
+    network for intracranial pressure prediction. Digital Access (2022) 10, 1455-14560.
+    https://doi.org/10.1007/s42494-022-00191-y
+
+
+    [14] W. Shi, C. Zhou, Y. Yang, K. L. Lu, H. Ren, and Y. Li, Hybrid monitoring
+    of intracranial pressure using photoplethysmography. Signal Processing Center
+    (2022) 104, 104972.
+
+
+    [42] B. H. Li, R. Zhao, A. Rocha, and P. Iduas, Estimation of intracranial pressure
+    using deep learning-based methods. Sci. Rep. (2022) 12(1), 17535. https://doi.org/10.1038/s41598-022-19413-y
+
+
+    [13] M. R. Tyler, A. Day, U. C. Ruff, and K. Polykaropoulos, A pilot study to
+    estimate intracranial pressure using cerebral photoplethysmography in brain injury
+    patients. Front. Neurosci (2022) 15, 88511. https://doi.org/10.3389/fnins.2022.885011
+
+
+    [43] P. Chen, G. Chen, S. Zhang, Hyperbolic cosine loss improves arterial pressure
+    variation [Online]. Available at: https://www.openreview.net/forum?id=77k9gvi44m
+
+
+    9'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '[51] Xu, J., Li, Y., Yang, F., Shem, Toward effective intrusion detection using
+    log-cosh conditional variational autoencoder, IEEE Internet Things J. 8 (8) (Apr.
+    2022) https://doi.org/10.1109/JIOT.2021.3063555
+
+
+    [52] Darden, C. Robba, M. Mohhamdani, B. Schmidt, J. Dooley, B. Cabella, X. Liu,
+    M. Cabeleira, P. Smielewski, B. Schmidt, M. Czonyka, Non-invasive monitoring of
+    intracranial pressure using transcranial Doppler ultrasonography: is it possible?
+
+
+    [53] M. Gheri, K. Terfelli, B. Weissman, D. Namotti, S.B. Kwon, A. Velázquez,
+    S. Ghanshal, D.J. Roh, S. Agarwal, E.S Connolly Jr., J. Claussen, S. Park, A deep
+    learning framework for deriving non-invasive intracranial pressure waveforms from
+    transcranial Doppler 10.1002/ana.26682. Ann. Neurol. (2023), https://doi.org/10.1002/ana.26682,
+    10.1002/ana.26682. Available.'
+  merge: -1
+  img_proc: true
