@@ -1,0 +1,13 @@
+approximations of the log-likelihood gradient. This includes a discussion of contrastive divergence learning [15] as well as parallel tempering [10]. We will close by hinting at generalizations of RBMs in sections 6 and 7.
+
+# 2 Graphical Models
+
+Probabilistic graphical models describe probability distributions by mapping conditional dependence and independence properties between random variables on a graph structure (two sets of random variables $X_1$ and $X_2$ are conditionally independent given a set of random variables $X_S$ if $p(X_1,X_2|X_S) = p(X_1|X_S)p(X_2|X_S)$). Visualization by graphs can help develop, understand and make probabilistic models. Furthermore, complex computations (e.g., marginalization) can be efficiently efficiently using algorithms exploiting the graph structure.
+
+There exist graphical models with different kind of graph structures, for example factor graphs, Bayesian networks with directed graphs, and Markov fields, also called Markov networks or undirected graphical models. This tutorial focuses on the latter. A general introduction to graphical models for machine learning, can be found in [5]. The most comprehensive resource on graphical models is the textbook by Koller and Friedman [22].
+
+# 2.1 Undirected Graphs and Markov Random Fields
+
+First, we summarize some fundamental concepts from graph theory. An undirected graph is a tuple $G=(V,E)$, where $V$ is a finite set of nodes and $E$ is a set of undirected edges. An edge consists of a pair of nodes from $V$. If there exists an edge between two nodes $v$ and $w$, i.e. $\{v,w\} \in E$, then the neighborhood of $v$ contains $w$. The neighborhood $N_v := \{w \in V \mid \{w,v\} \in E\}$ is defined by the set of nodes connected to $v$. A clique is a subset of $V$ if no node can be added such that the resulting set is still clique. In the following we will define $C$ as the set of all maximal cliques of an undirected graph. We call a sequence of nodes $v_1, v_2, \dots, v_m$ in $V$, with $\{v_i, v_{i+1}\} \in E$ for $i=1, \dots, m-1$ a path from $v_1$ to $v_m$ in $V$.
+
+We associate a random variable $X_v$ to each $v \in V$, taking values in a state $A_v$. We assume $A_v = A$ for all $v \in V$. The random variables $X = (X_v)_{v \in V}$ are called Markov random field (MRF) if the joint probability distribution $p$ fulfills the (global) Markov property w.r.t. for all disjoint subsets $\mathcal{A,B \subseteq V}$, where all nodes in $\mathcal{A}$ and $\mathcal{B}$ are separated by $S$ the variables $(X_s)_{s \in S}$, i.e. for all $x \in A^{|S|}$ it holds $p(x_s, x_{\mathcal{A}}, x_{\mathcal{B}}) = p(x_{\mathcal{A}}|x_s)p(x_{\mathcal{B}}|x_s)$. A set of nodes $MB(v)$ is called the Markov blanket of $v$, if $v \notin B$ B we have

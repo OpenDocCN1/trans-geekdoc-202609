@@ -1,0 +1,18 @@
+36 A. Fischer and C. Igel
+
+26. Lindenberg, M., Deschlag, R., Mathias, G., Tavan, P.: Efficiency of exchange schemes in replica exchange. Chemical Physics Letters 78, 80-84 (2009)
+27. MacKay, D.J.C.: Failures of the one-step learning algorithm. Cavendish Laboratory, Turing Road, Cambridge CB3 0HE, UK (2001).\ https://arxiv.org/pdf/0ackie.pdf
+28. MacKay, D.J.C.: Introduction to the Theory of Learning & Learning Algorithms. Cambridge University Press (2000)
+29. Minh, V.: Laichelle, H., Hinton, G.: Conditional boltzmann machines for structured output prediction. In:zman, G.F., Pfeffer, A. (eds.) Proceedings of the Twenty-Seventh Conference on Uncertainty in Artificial Intelligence (UAI 2011), p. 514. AIAI Press (2011)
+30. Montag, G. A.: Reinments of universal approximation for deep belief networks and restricted boltzmann machines. Neural Comput. 23(5), 1306–1319
+31. Rumelart, D., Hinton, G., Williams, R.: Internal representations by error propagation. In: Rumelart, D.E., McClelland, L.J. (eds.) Parallel Processing: Exploring the Microstructure of Cognition, vol. 1: Foundations, pp. 318–362 MIT Press (1986)
+32. Salakhutdin, R., Hinton, G.E.: Deep Boltzmann machines. In: JMLR Workshop on Neural Networks, vol. 5, 448–455 (2009)
+33. Salakhutdin, R.: Learning in Markov random fields with latent variables. In: Bengio, Y., Schuurmans, D., Lafferty, J., Williams, C.K.I., Culotta, A. (eds.) Advances in Neural Information Processing Systems 22, p. 1508–1606 (2009)
+34. Smolensky, F.: Neural networks and the foundations of modern theory. In: Rumelart, D.E., McClelland, L.J. (eds.) Parallel Processing: Exploring the Microstructure of Cognition, vol. 1: Foundations, pp. 194–218. MIT Press (1986)
+35. Taylor, G.W., Hinton, G.E., Roweis, S.: Modeling human motion using latent variables. In: NIPS. MIT Press (2007)
+36. Tieleman, T., Hinton, G.: To improve persistent contrastive divergence. In: Cohen, W.W., McCallum, A., Roweis, S.T. (eds.) International Conference on Machine Learning (ICML), p. 1064–1071. ACM (2008)
+37. Tieleman, T., Hinton, G.: Learning to improve contrastive divergence. In: Pohorecky Danyljuk, A., Botton, L., Mitchell, M.L. (eds.) International Conference on Machine Learning (ICML), p. 1033–1040. ACM (2009)
+38. Wang, N., Meier, J., Wiscott, L.: Analysis of Gaussian-restricted Boltzmann machines. In: Bengio, Y., Touvet, M. (eds.) European Symposium on Neural Networks, Computational Intelligence and Machine Learning (ESANS), p. 287–292. Springer publications (2012)
+39. Weiss, M., Roweis, Z., Hinton, G.: Exponential family harmonies with an application to information retrieval. In: Saul, L.K., Weiss, Y., Botton, L. (eds.) Advances in Neural Information Processing Systems (NIPS 17), p. 1481–1488. MIT Press (2004)
+40. Younes, L.: Maximum likelihood estimation of Gibbs fields. In: Passolo, A. (eds.) Proceedings of an AMS-IMS-SIAM Joint Conference on Spatial Statistics and Imaging. Lecture Notes Monograph Series, Institute of Mathematical Statistics, Harvard (1991)
+41. Yuille, A.L.: The convergence of contrastive divergence. In: Saul, L., Weiss, Y., Botton, L. (eds.) Advances in Neural Information Processing Systems (NIPS 17), p. 1593–1600. MIT Press (2005)

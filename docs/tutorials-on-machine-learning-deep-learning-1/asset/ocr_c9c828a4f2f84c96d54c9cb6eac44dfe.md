@@ -1,0 +1,47 @@
+And you can then Segment your Customers by their probability to leave the bank. So that you can decide what to do in business constraints and goals
+
+[4]. Step-4 algorithm compare the predicted-result and actual-result generates Error.
+
+[5]. Step-5 Error will be back-propagated and algorithm updates the Weights of Synapses. Weights are updated according to how much they are responsible for this generated error.
+
++   There are several ways of updating these weights. It is decided by the learning rate parameter which decides how the weights are updated.
+
++   [6]. In step-6 and step-7 above steps are repeated and minimize the cost-function.
+Adding input and first-hidden: We take the object ann_classifier and use the add() method. add() method is used to add different layers in our NN.
+
++   Parameters of add(): There is only one argument and this is the layer that we want to add to our CNN. We are using Dense function to define this layer argument.
+Parameters of Dense(): We are adding two layers the input-layer and the first-hidden. There are a lot of arguments to Dense function.
+These arguments are going to be all the parameters, such as: how the weights are updated, the type of activation function, number of layers, number of input nodes each. Those things happen in this Dense().
+
++   out_dim: That is the number of nodes you want to add to this hidden layer.
+
++   Here() function doesn't know the input-layer the first-hidden. Adding a hidden layer so these hidden layers we have to specify the number of nodes in the previous layers (which is in the input-layer at first).
+Choosing the number of nodes in the hidden layer: There is no rule on thumb what will be the optimal number of nodes in these hidden layer. However, we can give some rules like example:
+If your data is linearly separable, you don't even need a hidden layer and in fact you don't even need a neural network.
+Choose the number of nodes in the hidden-layer as the average of the number of nodes in the Input layer and the number of nodes in the output layer. It is not a rule but if you don't want to be an Artist, it is not on theory but based on experiments.
+
+```
+no.of nodes = input layer nodes + output layer nodes
+```
+
+PARAMETER TUNING: If you want to be an expert (i.e. pro), then you have to experimenting with a technique called PARAMETER TUNING. Parameter Tuning is about using some techniques like K-fold cross-validation(which we will use in "Dense selection and ensemble model\).
+
++   K-fold cross-validation technique consists of creating a separate set in your data besides the training-set and the test-set that is called a cross-validation-set
+
++   Basically in this cross-validation-set, you experiment different parameters of your model Such as: number of layers and the number of nodes in the hidden layer. And then you will see the performance of your different models with the different parameters.
+
++   We do not use PARAMETER TUNING here, will study K-fold cross-validation later, but for now we're going to take the average of the optimal parameters of our model. But for number of nodes in the input layer a number of nodes in the output layer.
+
++   In our case, number of nodes in the input layer is 11, because the number of nodes in the input layer is not independent variables.
+
++   And the number of nodes in the output layer is 1 because we have a binary outcome or zero. The average is 6. six nodes in the hidden layer.
+
+```
+output_dim = 6
+```
+
+NOTE: In the new documentation of Dense function output_dim is replaced by units, the input_dim is replaced by input_shape. However in the input_shape you have to specify a tuple
+
++   init: It corresponds to the step- SGD algorithm: "random initializes the weights as small numbers to zero". We can randomly initialize them with a uniform-function.
+
++   For example: glorot_uniform() to initialize the weights. Or

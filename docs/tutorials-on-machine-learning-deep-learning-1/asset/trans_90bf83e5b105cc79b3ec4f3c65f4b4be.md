@@ -1,0 +1,534 @@
+
+
+停用词（Stopwords）：停用词是常用的（例如 "the", "a", "in"），搜索引擎在对条目建立索引和作为查询结果检索它们时会被程序忽略这些词。
+
+```python
+import nltk
+from nltk.corpus import stopwords
+print(stopwords.words('english'))
+```
+
+词干（Stemming）：例如：只保留单词 "it" 的根。"I love" 因为我们在评论中可能有 "loved", "loved" 或 "loving" 或 "will love"，这给了我们关于关于该词是正面还是负面的提示，所以我们不需要单词的过去式、将来式或现在式的变体。 
+
+由于我们保留了单词的所有不同版本，最终在我们的稀疏矩阵中，我们将有几十个单词，从而导致稀疏性，我们的算法运行起来会遇到困难，因为我们最终会有很多列，你知道稀疏矩阵会有它自己的列。这就是为什么我们在这里进行一些稀疏化处理。
+
+我们导入 `PorterStemmer`，创建一个对象 `it`。我们在列表推导式中将其应用于列表中的单词。
+
+- 我们在列表推导式中将 `wrd` 更改为 `prt_stem.stem(wrd)`。
+
+```python
+from nltk.stem.porter import PorterStemmer
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+```
+
+然后我们将生成的单词列表生成一个字符串
+
+```python
+rew = " ".join(review)
+```
+
+| 之前 | | | 之后 | | |
+|---|---|---|---|---|---|
+| rev_w | str | loved this place | rew | str | wow love place |
+
+```python
+# 清洗文本
+import re
+import nltk
+# nltk.download('stopwords')
+from nltk.corpus import stopwords
+fromfrom nltk.stem.porter import PorterStemmer
+print(dataset['Review'][0])
+rev_W = re.sub(r'[^a-zA-Z ]', '', dataset['Review'])
+rev_w = [word.lower() for word in rev_W] # 转换为小写
+review = [wrd for wrd in rev_w if wrd not in stopwords.words()] # 转换为“列表”
+# 移除停用词。词干：找到同一个单词不同版本的根
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+rew = " ".join(review)
+```
+
+循环遍历 1000 条评论：我们将创建一个新列表，然后在 `for` 循环内部我们将在迭代中将其添加进去。
+
+| 索引 | 评论 | 喜欢 | 索引类型 | 值 | |
+|---|---|---|---|---|---|
+| 0 | ...We loved this place . | | 0 | str | wow love place |
+| 1 | Crust not good. | | 1 | str | crust good |
+| 2 | Not tasty and the texture was just | | 2 | str | tasty |
+| 3 | Stopped by the late Steve recommended and loved it. The relation on menu was great and so were the prices. | | 3 | str | stop late |
+| 4 | I got angry and I want my now. | | 4 | str | get want |
+| 5 | | | 5 | str | get angry |
+| 6 | Honesty it't taste fresh. | | 6 | str | honesty fast |
+| 7 | The potatoes were like you could. | | 7 | str | potato like |
+| 8 | The fries were great. | | 8 | str | fri great |
+| 9 | A great. | | 9 | str | great touch |
+
+```python
+# 清洗文本
+import re
+import nltk
+nltk.download("stopwords")
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+print(f"{dataset['Review']}")
+corpus_review = []
+
+for i in range(1000):
+    rew = re.sub(r'[^a-zA-Z ]', '', dataset["Review"])
+    rew = [word.lower() for word in rew.split()] # 转换为小写
+    review = [word for word in rew if word not in stopwords.words()]
+ # 移除停用词。词干：找到同一个单词不同版本的根
+    prt_stem = PorterStemmer()
+    review = [prt_stem.stem(word) for word in review if word not in stopwords.words('english')]
+    rew = " ".join(review)
+    corpus_review.append(rew)
+```
+
+停用词（Stopwords）：停用词是常用的（例如 "the", "a", "in"），搜索引擎在对条目建立索引和作为查询结果检索它们时会被程序忽略这些词。
+
+```python
+import nltk
+from nltk.corpus import stopwords
+print(stopwords.words('english'))
+```
+
+词干（Stemming）：例如：只保留单词 "it" 的根。"I love" 因为我们在评论中可能有 "loved", "loved" 或 "loving" 或 "will love"，这给了我们关于该词是正面还是负面的提示，所以我们不需要单词的过去式、将来式或现在式的变体。 
+
+由于我们保留了单词的所有不同版本，最终在我们的稀疏矩阵中，我们将有几十个单词，从而导致稀疏性，我们的算法运行起来会遇到困难，因为我们最终会有很多列，你知道稀疏矩阵会有它自己的列。这就是为什么我们在这里进行一些稀疏化处理。
+
+我们导入 `PorterStemmer`，创建一个对象 `it`。我们在列表推导式中将其应用于列表中的单词。
+
+- 我们在列表推导式中将 `wrd` 更改为 `prt_stem.stem(wrd)`。
+
+```python
+from nltk.stem.porter import PorterStemmer
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+```
+
+然后我们将生成的单词列表生成一个字符串
+
+```python
+rew = " ".join(review)
+```
+
+| 之前 | | | 之后 | | |
+|---|---|---|---|---|---|
+| rev_w | str | loved this place | rew | str | wow love place |
+
+```python
+# 清洗文本
+import re
+import nltk
+# nltk.download('stopwords')
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+print(dataset['Review'][0])
+rev_W = re.sub(r'[^a-zA-Z ]', '', dataset['Review'])
+rev_w = [word.lower() for word in rev_W] # 转换为小写
+review = [wrd for wrd in rev_w if wrd not in stopwords.words()] # 转换为“列表”
+# 移除停用词。词干：找到同一个单词不同版本的根
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+rew = " ".join(review)
+```
+
+循环遍历 1000 条评论：我们将创建一个新列表，然后在 `for` 循环内部我们将在迭代中将其添加进去。
+
+| 索引 | 评论 | 喜欢 | 索引类型 | 值 | |
+|---|---|---|---|---|---|
+| 0 | ...We loved this place . | | 0 | str | wow love place |
+| 1 | Crust not good. | | 1 | str | crust good |
+| 2 | Not tasty and the texture was just | | 2 | str | tasty |
+| 3 | Stopped by the late Steve recommended and loved it. The relation on menu was great and so were the prices. | | 3 | str | stop late |
+| 4 | I got angry and I want my now. | | 4 | str | get want |
+| 5 | | | 5 | str | get angry |
+| 6 | Honesty it't taste fresh. | | 6 | str | honesty fast |
+| 7 | The potatoes were like you could. | | 7 | str | potato like |
+| 8 | The fries were great. | | 8 | str | fri great |
+| 9 | A great. | | 9 | str | great touch |
+
+```python
+# 清洗文本
+import re
+import nltk
+nltk.download("stopwords")
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+print(f"{dataset['Review']}")
+corpus_review = []
+
+for i in range(1000):
+    rew = re.sub(r'[^a-zA-Z ]', '', dataset["Review"])
+    rew = [word.lower() for word in rew.split()] # 转换为小写
+    review = [word for word in rew if word not in stopwords.words()]
+ # 移除停用词。词干：找到同一个单词不同版本的根
+    prt_stem = PorterStemmer()
+    review = [prt_stem.stem(word) for word in review if word not in stopwords.words('english')]
+    rew = " ".join(review)
+    corpus_review.append(rew)
+```
+
+停用词（Stopwords）：停用词是常用的（例如 "the", "a", "in"），搜索引擎在对条目建立索引和作为查询结果检索它们时会被程序忽略这些词。
+
+```python
+import nltk
+from nltk.corpus import stopwords
+print(stopwords.words('english'))
+```
+
+词干（Stemming）：例如：只保留单词 "it" 的根。"I love" 因为我们在评论中可能有 "loved", "loved" 或 "loving" 或 "will love"，这给了我们关于关于该词是正面还是负面的提示，所以我们不需要单词的过去式、将来式或现在式的变体。 
+
+由于我们保留了单词的所有不同版本，最终在我们的稀疏矩阵中，我们将有几十个单词，从而导致稀疏性，我们的算法运行起来会遇到困难，因为我们最终会有很多列，你知道稀疏矩阵会有它自己的列。这就是为什么我们在这里进行一些稀疏化处理。
+
+我们导入 `PorterStemmer`，创建一个对象 `it`。我们在列表推导式中将其应用于列表中的单词。
+
+- 我们在列表推导式中将 `wrd` 更改为 `prt_stem.stem(wrd)`。
+
+```python
+from nltk.stem.porter import PorterStemmer
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+```
+
+然后我们将生成的单词列表生成一个字符串
+
+```python
+rew = " ".join(review)
+```
+
+| 之前 | | | 之后 | | |
+|---|---|---|---|---|---|
+| rev_w | str | loved this place | rew | str | wow love place |
+
+```python
+# 清洗文本
+import re
+import nltk
+# nltk.download('stopwords')
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+print(dataset['Review'][0])
+rev_W = re.sub(r'[^a-zA-Z ]', '', dataset['Review'])
+rev_w = [word.lower() for word in rev_W] # 转换为小写
+review = [wrd for wrd in rev_w if wrd not in stopwords.words()] # 转换为“列表”
+# 移除停用词。词干：找到同一个单词不同版本的根
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+rew = " ".join(review)
+```
+
+循环遍历 1000 条评论：我们将创建一个新列表，然后在 `for` 循环内部我们将在迭代中将其添加进去。
+
+| 索引 | 评论 | 喜欢 | 索引类型 | 值 | |
+|---|---|---|---|---|---|
+| 0 | ...We loved this place . | | 0 | str | wow love place |
+| 1 | Crust not good. | | 1 | str | crust good |
+| 2 | Not tasty and the texture was just | | 2 | str | tasty |
+| 3 | Stopped by the late Steve recommended and loved it. The relation on menu was great and so were the prices. | | 3 | str | stop late |
+| 4 | I got angry and I want my now. | | 4 | str | get want |
+| 5 | | | 5 | str | get angry |
+| 6 | Honesty it't taste fresh. | | 6 | str | honesty fast |
+| 7 | The potatoes were like you could. | | 7 | str | potato like |
+| 8 | The fries were great. | | 8 | str | fri great |
+| 9 | A great. | | 9 | str | great touch |
+
+```python
+# 清洗文本
+import re
+import nltk
+nltk.download("stopwords")
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+print(f"{dataset['Review']}")
+corpus_review = []
+
+for i in range(1000):
+    rew = re.sub(r'[^a-zA-Z ]', '', dataset["Review"])
+    rew = [word.lower() for word in rew.split()] # 转换为小写
+    review = [word for word in rew if word not in stopwords.words()]
+ # 移除停用词。词干：找到同一个单词不同版本的根
+    prt_stem = PorterStemmer()
+    review = [prt_stem.stem(word) for word in review if word not in stopwords.words('english')]
+    rew = " ".join(review)
+    corpus_review.append(rew)
+```
+
+停用词（Stopwords）：停用词是常用的（例如 "the", "a", "in"），搜索引擎在对条目建立索引和作为查询结果检索它们时会被程序忽略这些词。
+
+```python
+import nltk
+from nltk.corpus import stopwords
+print(stopwords.words('english'))
+```
+
+词干（Stemming）：例如：只保留单词 "it" 的根。"I love" 因为我们在评论中可能有 "loved", "loved" 或 "loving" 或 "will love"，这给了我们关于关于该词是正面还是负面的提示，所以我们不需要单词的过去式、将来式或现在式的变体。 
+
+由于我们保留了单词的所有不同版本，最终在我们的稀疏矩阵中，我们将有几十个单词，从而导致稀疏性，我们的算法运行起来会遇到困难，因为我们最终会有很多列，你知道稀疏矩阵会有它自己的列。这就是为什么我们在这里进行一些稀疏化处理。
+
+我们导入 `PorterStemmer`，创建一个对象 `it`。我们在列表推导式中将其应用于列表中的单词。
+
+- 我们在列表推导式中将 `wrd` 更改为 `prt_stem.stem(wrd)`。
+
+```python
+from nltk.stem.porter import PorterStemmer
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+```
+
+然后我们将生成的单词列表生成一个字符串
+
+```python
+rew = " ".join(review)
+```
+
+| 之前 | | | 之后 | | |
+|---|---|---|---|---|---|
+| rev_w | str | loved this place | rew | str | wow love place |
+
+```python
+# 清洗文本
+import re
+import nltk
+# nltk.download('stopwords')
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+print(dataset['Review'][0])
+rev_W = re.sub(r'[^a-zA-Z ]', '', dataset['Review'])
+rev_w = [word.lower() for word in rev_W] # 转换为小写
+review = [wrd for wrd in rev_w if wrd not in stopwords.words()] # 转换为“列表”
+# 移除停用词。词干：找到同一个单词不同版本的根
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+rew = " ".join(review)
+```
+
+循环遍历 1000 条评论：我们将创建一个新列表，然后在 `for` 循环内部我们将在迭代中将其添加进去。
+
+| 索引 | 评论 | 喜欢 | 索引类型 | 值 | |
+|---|---|---|---|---|---|
+| 0 | ...We loved this place . | | 0 | str | wow love place |
+| 1 | Crust not good. | | 1 | str | crust good |
+| 2 | Not tasty and the texture was just | | 2 | str | tasty |
+| 3 | Stopped by the late Steve recommended and loved it. The relation on menu was great and so were the prices. | | 3 | str | stop late |
+| 4 | I got angry and I want my now. | | 4 | str | get want |
+| 5 | | | 5 | str | get angry |
+| 6 | Honesty it't taste fresh. | | 6 | str | honesty fast |
+| 7 | The potatoes were like you could. | | 7 | str | potato like |
+| 8 | The fries were great. | | 8 | str | fri great |
+| 9 | A great. | | 9 | str | great touch |
+
+```python
+# 清洗文本
+import re
+import nltk
+nltk.download("stopwords")
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+print(f"{dataset['Review']}")
+corpus_review = []
+
+for i in range(1000):
+    rew = re.sub(r'[^a-zA-Z ]', '', dataset["Review"])
+    rew = [word.lower() for word in rew.split()] # 转换为小写
+    review = [word for word in rew if word not in stopwords.words()]
+ # 移除停用词。词干：找到同一个单词不同版本的根
+    prt_stem = PorterStemmer()
+    review = [prt_stem.stem(word) for word in review if word not in stopwords.words('english')]
+    rew = " ".join(review)
+    corpus_review.append(rew)
+```
+
+停用词（Stopwords）：停用词是常用的（例如 "the", "a", "in"），搜索引擎在对条目建立索引和作为查询结果检索它们时会被程序忽略这些词。
+
+```python
+import nltk
+from nltk.corpus import stopwords
+print(stopwords.words('english'))
+```
+
+词干（Stemming）：例如：只保留单词 "it" 的根。"I love" 因为我们在评论中可能有 "loved", "loved" 或 "loving" 或 "will love"，这给了我们关于关于该词是正面还是负面的提示，所以我们不需要单词的过去式、将来式或现在式的变体。 
+
+由于我们保留了单词的所有不同版本，最终在我们的稀疏矩阵中，我们将有几十个单词，从而导致稀疏性，我们的算法运行起来会遇到困难，因为我们最终会有很多列，你知道稀疏矩阵会有它自己的列。这就是为什么我们在这里进行一些稀疏化处理。
+
+我们导入 `PorterStemmer`，创建一个对象 `it`。我们在列表推导式中将其应用于列表中的单词。
+
+- 我们在列表推导式中将 `wrd` 更改为 `prt_stem.stem(wrd)`。
+
+```python
+from nltk.stem.porter import PorterStemmer
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+```
+
+然后我们将生成的单词列表生成一个字符串
+
+```python
+rew = " ".join(review)
+```
+
+| 之前 | | | 之后 | | |
+|---|---|---|---|---|---|
+| rev_w | str | loved this place | rew | str | wow love place |
+
+```python
+# 清洗文本
+import re
+import nltk
+# nltk.download('stopwords')
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+print(dataset['Review'][0])
+rev_W = re.sub(r'[^a-zA-Z ]', '', dataset['Review'])
+rev_w = [word.lower() for word in rev_W] # 转换为小写
+review = [wrd for wrd in rev_w if wrd not in stopwords.words()] # 转换为“列表”
+# 移除停用词。词干：找到同一个单词不同版本的根
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+rew = " ".join(review)
+```
+
+循环遍历 1000 条评论：我们将创建一个新列表，然后在 `for` 循环内部我们将在迭代中将其添加进去。
+
+| 索引 | 评论 | 喜欢 | 索引类型 | 值 | |
+|---|---|---|---|---|---|
+| 0 | ...We loved this place . | | 0 | str | wow love place |
+| 1 | Crust not good. | | 1 | str | crust good |
+| 2 | Not tasty and the texture was just | | 2 | str | tasty |
+| 3 | Stopped by the late Steve recommended and loved it. The relation on menu was great and so were the prices. | | 3 | str | stop late |
+| 4 | I got angry and I want my now. | | 4 | str | get want |
+| 5 | | | 5 | str | get angry |
+| 6 | Honesty it't taste fresh. | | 6 | str | honesty fast |
+| 7 | The potatoes were like you could. | | 7 | str | potato like |
+| 8 | The fries were great. | | 8 | str | fri great |
+| 9 | A great. | | 9 | str | great touch |
+
+```python
+# 清洗文本
+import re
+import nltk
+nltk.download("stopwords")
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+print(f"{dataset['Review']}")
+corpus_review = []
+
+for i in range(1000):
+    rew = re.sub(r'[^a-zA-Z ]', '', dataset["Review"])
+    rew = [word.lower() for word in rew.split()] # 转换为小写
+    review = [word for word in rew if word not in stopwords.words()]
+ # 移除停用词。词干：找到同一个单词不同版本的根
+    prt_stem = PorterStemmer()
+    review = [prt_stem.stem(word) for word in review if word not in stopwords.words('english')]
+    rew = " ".join(review)
+    corpus_review.append(rew)
+```
+
+停用词（Stopwords）：停用词是常用的（例如 "the", "a", "in"），搜索引擎在对条目建立索引和作为查询结果检索它们时会被程序忽略这些词。
+
+```python
+import nltk
+from nltk.corpus import stopwords
+print(stopwords.words('english'))
+```
+
+词干（Stemming）：例如：只保留单词 "it" 的根。"I love" 因为我们在评论中可能有 "loved", "loved" 或 "loving" 或 "will love"，这给了我们关于关于该词是正面还是负面的提示，所以我们不需要单词的过去式、将来式或现在式的变体。 
+
+由于我们保留了单词的所有不同版本，最终在我们的稀疏矩阵中，我们将有几十个单词，从而导致稀疏性，我们的算法运行起来会遇到困难，因为我们最终会有很多列，你知道稀疏矩阵会有它自己的列。这就是为什么我们在这里进行一些稀疏化处理。
+
+我们导入 `PorterStemmer`，创建一个对象 `it`。我们在列表推导式中将其应用于列表中的单词。
+
+- 我们在列表推导式中将 `wrd` 更改为 `prt_stem.stem(wrd)`。
+
+```python
+from nltk.stem.porter import PorterStemmer
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+```
+
+然后我们将生成的单词列表生成一个字符串
+
+```python
+rew = " ".join(review)
+```
+
+| 之前 | | | 之后 | | |
+|---|---|---|---|---|---|
+| rev_w | str | loved this place | rew | str | wow love place |
+
+```python
+# 清洗文本
+import re
+import nltk
+# nltk.download('stopwords')
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+print(dataset['Review'][0])
+rev_W = re.sub(r'[^a-zA-Z ]', '', dataset['Review'])
+rev_w = [word.lower() for word in rev_W] # 转换为小写
+review = [wrd for wrd in rev_w if wrd not in stopwords.words()] # 转换为“列表”
+# 移除停用词。词干：找到同一个单词不同版本的根
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+rew = " ".join(review)
+```
+
+循环遍历 1000 条评论：我们将创建一个新列表，然后在 `for` 循环内部我们将在迭代中将其添加进去。
+
+| 索引 | 评论 | 喜欢 | 索引类型 | 值 | |
+|---|---|---|---|---|---|
+| 0 | ...We loved this place . | | 0 | str | wow love place |
+| 1 | Crust not good. | | 1 | str | crust good |
+| 2 | Not tasty and the texture was just | | 2 | str | tasty |
+| 3 | Stopped by the late Steve recommended and loved it. The relation on menu was great and so were the prices. | | 3 | str | stop late |
+| 4 | I got angry and I want my now. | | 4 | str | get want |
+| 5 | | | 5 | str | get angry |
+| 6 | Honesty it't taste fresh. | | 6 | str | honesty fast |
+| 7 | The potatoes were like you could. | | 7 | str | potato like |
+| 8 | The fries were great. | | 8 | str | fri great |
+| 9 | A great. | | 9 | str | great touch |
+
+```python
+# 清洗文本
+import re
+import nltk
+nltk.download("stopwords")
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+print(f"{dataset['Review']}")
+corpus_review = []
+
+for i in range(1000):
+    rew = re.sub(r'[^a-zA-Z ]', '', dataset["Review"])
+    rew = [word.lower() for word in rew.split()] # 转换为小写
+    review = [word for word in rew if word not in stopwords.words()]
+ # 移除停用词。词干：找到同一个单词不同版本的根
+    prt_stem = PorterStemmer()
+    review = [prt_stem.stem(word) for word in review if word not in stopwords.words('english')]
+    rew = " ".join(review)
+    corpus_review.append(rew)
+```
+
+停用词（Stopwords）：停用词是常用的（例如 "the", "a", "in"），搜索引擎在对条目建立索引和作为查询结果检索它们时会被程序忽略这些词。
+
+```python
+import nltk
+from nltk.corpus import stopwords
+print(stopwords.words('english'))
+```
+
+词干（Stemming）：例如：只保留单词 "it" 的根。"I love" 因为我们在评论中可能有 "loved", "loved" 或 "loving" 或 "will love"，这给了我们关于关于该词是正面还是负面的提示，所以我们不需要单词的过去式、将来式或现在式的变体。 
+
+由于我们保留了单词的所有不同版本，最终在我们的稀疏矩阵中，我们将有几十个单词，从而导致稀疏性，我们的算法运行起来会遇到困难，因为我们最终会有很多列，你知道稀疏矩阵会有它自己的列。这就是为什么我们在这里进行一些稀疏化处理。
+
+我们导入 `PorterStemmer`，创建一个对象 `it`。我们在列表推导式中将其应用于列表中的单词。
+
+- 我们在列表推导式中将 `wrd` 更改为 `prt_stem.stem(wrd)`。
+
+```python
+from nltk.stem.porter import PorterStemmer
+prt_stem = PorterStemmer()
+review = [prt_stem.stem(wrd) for wrd in rev_w if wrd not in (stopwords.words('english'))]
+```
+
