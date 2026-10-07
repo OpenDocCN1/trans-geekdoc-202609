@@ -1,0 +1,212 @@
+
+\begin{array}{r} \left. Q^{\*}(\overline{\xi}) = \frac{1}{\mathcal{Q}(\overline{\theta})}{\prod\limits_{n = 0}^{7}q_{n}^{\*}}(\xi\lbrack nh\rbrack \middle| \theta_{n}),\quad q_{n}^{\*}(\xi\lbrack nh\rbrack \middle| \theta_{n}) = \exp\left( {- \theta_{n}\xi\lbrack nh\rbrack} \right), \right. \\ \end{array}
+
+$$
+
+(11.17)
+
+其中
+
+$$
+
+\begin{aligned} {\mathcal{R}(\overline{\theta})} & {= {\int_{\mathcal{J}}{\prod\limits_{n = 0}^{7}\exp}}( - \theta_{n}E\lbrack 1960 +} \\ & \left. + nh\, \middle| \, r,u,E_{real}^{est}\lbrack 0\rbrack\rbrack)drdu, \right. \\ {\mathcal{Q}(\overline{\theta}) =} & {{\prod\limits_{n = 0}^{7}\int^{\Xi_{n}}}}\exp( - \theta_{n}\xi\lbrack nh\rbrack)d\xi\lbrack nh\rbrack =} \\ {= {\prod\limits_{n = 0}^{7}\frac{1}{\theta_{n}}}} & {\left( {\exp( - \theta_{n}\xi_{n}^{-}) - \exp( - \theta_{n}\xi_{n}^{+})} \right).} \\ \end{aligned}
+
+$$
+
+(11.18)
+
+拉格朗日乘子由平衡方程组 (1.9, 1.10) 确定：
+
+$$
+
+\begin{aligned} & \left. \text{\quad\quad}\text{\quad\quad}\frac{1}{\mathcal{R}(\overline{\theta})}{\int_{\mathcal{J}}E}\lbrack 1960 + nh\, \middle| \, r,u,E_{real}^{est}\lbrack 0\rbrack\rbrack \times \right. \\ & {\quad \times {\prod\limits_{n = 0}^{7}\exp}\left( - \theta_{n}E\lbrack 1960 + nh\, \middle| \, r,u,E_{real}^{est}\lbrack 0\rbrack\rbrack \right)\, dr\, du +} \\ & {\quad\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\quad + \frac{1}{\mathcal{Q}(\overline{\theta})}{\int_{\Xi_{n}}\xi}\lbrack nh\rbrack \times} \\ & {\times {\prod\limits_{n = 0}^{7}\exp}\left( {- \theta_{n}\xi\lbrack nh\rbrack} \right)d\xi\lbrack nh\rbrack - E_{real}^{est}\lbrack nh\rbrack = G_{n}(\overline{\theta}) = 0,} \\ & {\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\text{\quad\quad}\quad\text{\quad\quad}n = \overline{0,7}.} \\ \end{aligned}
+
+$$
+
+(11.19)
+
+为求解该系统，采用残差最小化方法。
+
+$$
+
+\begin{array}{r} \left. J(\overline{\theta}) = \|\mathbf{G}(\overline{\theta})\| \Rightarrow \min. \right. \\ \end{array}
+
+$$
+
+(11.20)
+
+### 11.2.2 数值结果
+
+**1. 一般条件**
+
+估计、测试和预测的所有阶段均在模拟这些参数值增长和下降的再生系数和趋势系数区间上实现
+
+$$
+
+\begin{array}{r} {\mathcal{J}_{r} = \lbrack - 0.025, - 0.075\rbrack,\text{\quad\quad}\mathcal{J}_{u} = \lbrack 0.002,0.001\rbrack.} \\ \end{array}
+
+$$
+
+(11.21)
+
+假设每个观测值的测量噪声值相同且属于区间
+
+$$
+
+\begin{array}{r} {\Xi_{n} = \lbrack - 0.5,0.5\rbrack,\text{\quad\quad}n = \overline{0,7}.} \\ \end{array}
+
+$$
+
+(11.22)
+
+在求得参数和噪声的熵最优 PDF 后，使用该 PDF 的随机参数和噪声生成轨迹 *E*(*t*)。
+
+**2. 估计**
+
+为实现 RML 过程，使用世界人口动力学数据（见 表 11.1）。残差函数 $J(\overline{\theta})$ (11.20) 是 8 个变量的函数，包含只能数值估计的二维积分分量。为计算它们，我们使用了 [164] 中的求积公式，已在 MATLAB `guad2d` 函数中实现。残差的最小化使用 MATLAB Optimization Toolbox 中的 `lsqnonlin` 函数。得到的拉格朗日乘子值见 表 11.4。
+
+表 11.4: 拉格朗日乘子。
+
+|  |
+
+| --- |
+
+|  || 0 || 1 || 2 || 3 || 4 || 5 || 6 |
+
+| $\overline{\theta}$ || 0.0002 || \-0.8127 || \-1.1151 || \-1.3610 || \-0.8435 || \-0.1806 || 1.4985 |
+
+| --- | --- | --- | --- | --- | --- | --- | --- |
+
+|  |
+
+参数 *P*^(*)(*r*, *u*) 和噪声 $q_{n}^{\*}(\xi\lbrack 5n\rbrack),n = \overline{0,7}$ 的熵最优 PDF 显示在 图 11.1–11.2。
+
+![Figure 11.1: Entropy-optimal PDF P^{\*}(r,u)](img/fig11_1.jpg)
+
+图 11.1: 熵最优 PDF *P*^(*)(*r*, *u*)
+
+![Figure 11.2: Entropy-optimal PDFs q_{n}^{\*}(\xi\lbrack 5n\rbrack),n = \overline{0,7}.](img/fig11_2.jpg)
+
+图 11.2: 熵最优 PDF $q_{n}^{\*}(\xi\lbrack 5n\rbrack),n = \overline{0,7}$。
+
+**3. 测试**
+
+模型已使用 表 11.2 中的数据在 1995–2015 区间进行测试。人口规模由公式 (11.14) 评估，其中 *r* 和 *u* 为具有 PDF *P*^(*)(*r*, *u*) 的随机化参数和 $q[*n*]^(*)(*ξ*\[5*n*\])， $n = \overline{0,4}.$ 为生成随机变量的集合，我们使用了 Ulam–von Neumann 方法的二维改进形式（接受-拒绝方法） \[159\]。
+
+每一对随机值 *r* 和 *u* 定义一条单独的指数增长曲线；此外，对于每个点 *\[nh\]* 根据其 PDF 添加随机噪声值。因此，构建的世界人口动力学轨迹不是指数函数。在测试阶段，
+
+$$
+
+\begin{array}{r} {E^{tst}\lbrack 0\rbrack = E_{real}^{tst}\lbrack 0\rbrack.} \\ \end{array}
+
+$$
+
+(11.23)
+
+该集合显示在 图 11.3 中，其中 1——平均轨迹 平均轨迹的平均轨迹；2——测试区间 11.3 上的实际人口动态，3——根据联合国预测的测试区间上的人口动态；4——方差的边界。
+
+![Figure 11.3: Ensemble of testing trajectories.](img/fig11_3.jpg)
+
+图 11.3： 测试轨迹的集合。
+
+测试质量通过均值与预测轨迹之间的均方根误差（`RMSE`）进行评估
+
+$$\\begin{array}{r} {\\delta = \\sqrt{\\sum\\limits\_{i = 0}^{4}{(E\_{real}^{tst}\\lbrack ih\\rbrack - E^{tst}\\lbrack ih\\rbrack)}^{2}},} \\\\ \\end{array}$$  
+
+(11.24)
+
+和相对误差
+
+$$\\begin{array}{r} {\\varepsilon = \\frac{\\delta}{\\| E\_{real}^{tst}\\lbrack ih\\rbrack\\| + \\| E^{tst}\\lbrack ih\\rbrack\\|}.} \\\\ \\end{array}$$  
+
+(11.25)
+
+例如，对于联合国预测
+
+$$\\begin{array}{r} {\\delta\_{1985} = 0.9520,\\text{\\quad\\quad}\\varepsilon\_{1985} = 0.0321.} \\\\ \\end{array}$$  
+
+(11.26)
+
+对于测试集合，
+
+$$\\begin{array}{r} {\\delta\_{RM} = 0.079,\\text{\\quad\\quad}\\varepsilon\_{RM} = 0.003.} \\\\ \\end{array}$$  
+
+(11.27)
+
+**预测**
+
+熵最优随机化模型被用于预测 2015–2050 年期间的世界人口动态。表 11.3 显示了同一时期的联合国预测数据。图 11.4 显示了预测轨迹的集合和 (1)—集合上的平均轨迹，(2)—联合国预测的轨迹，(3)—方差边界。
+
+![Figure 11.4: Ensemble of predicted trajectories.](img/fig11_4.jpg)
+
+图 11.4： 预测轨迹的集合。
+
+## 11.3 电力系统日用电负荷的随机化预测
+
+电力系统的日用电负荷 `L` 取决于许多不同的因素。下面的分析仅限于最显著的外部因素之一——环境温度 `T`。日温度变化是波动的。这些波动会影响用电负荷，但由于电力网络从发电机向消费者输送电能的惯性，会有一定的时间延迟。
+
+### 11.3.1 电负荷模型
+
+电负荷模型（`LT` 模型）描述了电负荷与环境温度之间的动态关系，而环境温度模型（`Tξ` 模型）描述了环境温度的日动态。存在相当多的 `LT` 模型版本，尽管所有都是静态的，即描述当前时刻电负荷与环境温度之间的关系 [49]。日温度动态是波动的，这种波动例如由周期自回归模型描述 [13]。
+
+请注意，环境温度对电负荷的影响是动态的，即由于温度在给定时刻引起的负荷变化取决于其在之前时刻的值。环境温度波动也具有类似的特性。
+
+因此，遵循一般的随机化方法，`LT` 模型被设计为具有随机参数的一阶动态回归模型；`Tξ` 模型则为具有随机参数和随机输入 `ξ` 的二阶动态回归。然后 `LTξ` 模型是上述两个模型的组合。
+
+在线性模型类中，一阶随机动态回归负荷-温度模型（`LT` 模型）可以写成如下形式
+
+$$\\begin{array}{r} {L\\lbrack n\\rbrack = aL\\lbrack n - 1\\rbrack + bT\\lbrack n\\rbrack,} \\\\ {v\\lbrack n\\rbrack = L\\lbrack n\\rbrack + \\mu\\lbrack n\\rbrack,\\text{\\quad\\quad}n = \\overline{1,24}.} \\\\ \\end{array}$$  
+
+(11.28)
+
+其中随机独立参数 `a` 和 `b` 取值于区间内
+
+$$\\begin{array}{r} {a \\in \\mathcal{A} = \\lbrack a^{-},a^{+}\\rbrack,\\,\\, b \\in \\mathcal{B} = \\lbrack b^{-},b^{+}\\rbrack.} \\\\ \\end{array}$$  
+
+(11.29)
+
+概率特性由定义在集合 𝒜 和 ℬ 上的概率密度函数 `P(a)` 和 `F(b)` 刻画。模拟电负荷测量误差的随机噪声 `μ[n]` 也是区间类型的。在一般情况下，对于每个时刻，区间可能具有不同的极限，即
+
+$$\\begin{array}{r} {\\mu\\lbrack n\\rbrack \\in \\mathcal{M}\_{n} = \\lbrack\\mu^{-}\\lbrack n\\rbrack\\rbrack,\\mu^{+}\\lbrack n\\rbrack\\rbrack,} \\\\ \\end{array}$$  
+
+(11.30)
+
+其概率密度函数为 `Mn`， \], $n = \\overline{n^{-},n^{+}}.$
+
+考虑 `Tξ` 模型。日温度变化的波动特性由二阶随机动态回归模型描述
+
+$$\\begin{aligned} {\\tau\\lbrack n\\rbrack} & {= c\\left( {2,1\\tau\\lbrack n - 1\\rbrack - 1,1\\tau\\lbrack n - 2\\rbrack} \\right),\\quad c = \\frac{1}{1 + \\omega^{2}},} \\\\ {T\\lbrack n\\rbrack} & {= t + \\tau\\lbrack n\\rbrack + \\xi\\lbrack n\\rbrack,} \\\\ \\end{aligned}$$  
+
+(11.31)
+
+其中 `ω` 为温度波动频率，`t` 为日平均温度。这些参数是随机的并取值于给定区间内，即
+
+$$\\begin{array}{r} {\\omega \\in \\Omega = \\lbrack\\omega^{-},\\omega^{+}\\rbrack,\\text{\\quad\\quad}c \\in \\mathcal{C} = \\lbrack c^{-},c^{+}\\rbrack,} \\\\ {c^{-} = \\frac{1}{1 + {(\\omega^{+})}^{2}} > 0,\\quad c^{+} = \\frac{1}{1 + {(\\omega^{-})}^{2}} > c^{-} > 0.} \\\\ \\end{array}$$  
+
+(11.32)
+
+参数的概率特性由定义在相应区间上的概率密度函数 `W(c)` 刻画。
+
+方程 (11.3.1) 包含由独立随机变量 `ξ[n]` 描述的随机噪声；在每次测量 `n` 中，其值可能位于不同的区间内，即
+
+$$\\begin{array}{r} {\\xi\\lbrack n\\rbrack \\in \\Xi\_{n} = \\lbrack\\xi\_{n}^{-},\\xi\_{n}^{+}\\rbrack.} \\\\ \\end{array}$$  
+
+(11.33)
+
+随机变量 `ξ[n]` 的概率特性由概率密度函数 $Q\_{n}(\\xi\\lbrack n\\rbrack),\\, n = \\overline{n^{-},n^{+}}.$ 刻画。
+
+因此，描述电力系统中电负荷动态的方程 (11.28, 11.31) 由以下概率密度函数刻画：
+
+* `LT` 模型，由模型参数的概率密度函数 `P(a)` 和 `F(b)` 以及测量噪声的概率密度函数 `Mn`，$n = \\overline{n^{-},n^{+}};$ 组成；
+
+* `Tξ` 模型，由模型参数的概率密度函数 `W(c)` 以及测量噪声的概率密度函数 `Qn`，$n = \\overline{n^{-},n^{+}}.$ 组成。
+
+### 11.3.2 学习数据集
+
+用于估计概率密度函数的归一化真实数据来自 `GEFCom2014` 数据集（见 [71]）的日用电负荷变化 0 ≤ `L[r]^(i)[n]` ≤ 1、日平均温度变化 0 ≤ `t[r]^(i)` ≤ 1 以及温度偏差 0 ≤ `τ[r]^(i)[n]` ≤ 1 从日平均值。 （这里归一化意味着归约到单位区间。）
+
+归一化过程按如下方式进行：
+
+$$\\begin{aligned} {L\_{r}^{(i)}\\lbrack n\\rbrack} & {= \\frac{{\\hat{L}}\_{r}^{(i)}\\lbrack n\\rbrack - {\\hat{L}}\_{min}^{(i)}}{{\\hat{L}}\_{max}^{(i)} - {\\hat{L}}\_{min}^{(i)}},} \\\\ {\\tau\_{r}^{(i)}\\lbrack n\\rbrack} & {= \\frac{{\\hat{\\tau}}\_{r}^{(i)}\\lbrack n\\rbrack - {\\hat{\\tau}}\_{min}^{(i)}}{{\\hat{\\tau}}\_{max}^{(i)} - {\\hat{\\tau}}\_{min}^{(i)}},} \\\\ t\_{r}^{(i)} & {= \\frac{1}{24}{\\sum\\limits\_{n = 1}^{24}\\tau\_{r}^{(i)}}\\lbrack n\\rbrack,} \\\\ \\end{aligned}$$  
+
+(11.34)
