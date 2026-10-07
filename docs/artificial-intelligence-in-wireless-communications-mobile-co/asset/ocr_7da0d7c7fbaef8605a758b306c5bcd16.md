@@ -1,0 +1,13 @@
+Cognitive Radio Networking and Rendezvous
+
+channel is also used to begin communications when a node wants to join a network that might be using any waveform or any frequency. The control channel allows the new node a way to communicate with the network and initialize communications. This concept is often referred to as rendezvous: the method by which a radio enters a network.
+
+Ideas and implementations for rendezvous are receiving a lot of attention for cognitive radio network coordination and many papers of recent dynamic spectrum and cognitive radio conferences discuss this. Both the 2005 and 2007 IEEE DySpan conference proceedings contain a number of such papers; for example, [1, 2, 3].
+
+Static control channels, while easily implemented, are problematic because they are easily jammed and rendered useless. More ideas involve dynamic control channels, which still require coordination among the nodes to determine where the control channel is. A few proposals have been shown to remove the control channel from the rendezvous model and instead use physical layer descriptors to identify radios and enable rendezvous. Sutton et al. [4] shows the use of embedded cyclostationary signatures in OFDM-based systems that can identify a network and coordinate access. Because the signature is embedded in each OFDM symbol transmitted, the system does not need to transmit particular frames or switch channels to enable the network identification and coordination. Horine [5] proposes a technique to search for clear channels, transmit a beaconing signal, and wait for a response while other radios search for the particular beacon. This concept lack of is similar to Bluetooth's inquiry and connection states. The beacon is shaped in frequency to identify the node or network. Unfortunately, since the detection is based on FFT amplitude, there is no offered explanation of how the approach will work in multipath or fading channels.
+
+There is significant interest and working progress in cognitive radio rendezvous. Because of its simplicity of implementation and the currently available SDR capabilities, we have implemented the static control model to enable our experiments with the cognitive engine. The cognitive engine first tries to connect the other radio nodes on the current channel; if they do not respond, the radio reverts to a known control channel and waveform where the other nodes, having likewise their connection, will wait. The new waveform information is then transmitted to the nodes after which they reconnect using the new settings.
+
+# 7.2 Cognitive Radio Networks
+
+The static control model where waveforms are pushed to the radios is currently used in our cognitive engine implementation for lack of a better

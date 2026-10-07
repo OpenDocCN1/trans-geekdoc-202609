@@ -1,0 +1,13 @@
+# 2.5.3 Fuzzy Logic
+
+Fuzzy logic is a famous technique that started during the early development of artificial intelligence [29, 30]. Because it deals extensively with uncertainty in decision making and analysis, it has great potential for application to cognitive radio. However, only a little has so far been published in the field, notably by Baldo and Zorzi [31]. Their implementation suggests some interesting applications, and the discussion points out larger than the specific application of adapting the TCP layer used in the paper. A problematic aspect of this work is the amount of domain-specific rules required. All implementations of AI require must establish a rule related to the specific situation in which it is used. Programming these rules recalls some of the limitations of expert systems, although fuzzy logic is still far more flexible and powerful. Fuzzy logic has potential in each specific problem solving areas or as a part of a cognitive radio
+
+# 2.5.4 Evolutionary Algorithms
+
+Along with Christian Ries, we pioneered the use of genetic algorithms [32, 33] early in cognitive radio research [34, 35, 36], which this work extends. The basic principles, as discussed throughout, are that the large search space involved in optimizing a radio is more complex than many search and optimization algorithms can handle. Among those that are suited to the task, evolutionary, specifically, algorithms offer a significant amount of power and flexibility. Cognitive radios are likely to face dynamic environments and situations as well as radio upgrades due to advancing technology, so the flexible representation of the problem space allowed genetic algorithms are particularly applicable.
+
+More recently, Newman et al. [37] have also contributed significantly to the use of genetic algorithms for cognitive radios. As we discuss in Chapters 4 and 5, one of the main issues involved in successful genetic algorithm behavior is the selection of the fitness, or objective, function(s). Newman's work has developed a single, linear objective function to combine the objectives of BER minimization, power minimization, and throughput maximization.
+
+# 2.5.5 Case-Based Reasoning
+
+The final traditional AI technique to discuss here is case-based reasoning (CBR) [39]. CBR systems use past knowledge to learn and improve future actions. In these systems, a case base stores actions and receives inputs from
