@@ -1,0 +1,3 @@
+# About the Author
+
+Steve Prettymann earned his Bachelors of Arts Degree in education from Oglethorpe University in 1979. He quickly began teaching career as a high school mathematics instructor while continuing his education by earning a Master’s Degree in Business Information Systems from Georgia State University (1985). Since then, Steve has spent over 30 years in the IT industry. The last, almost 20 years, he has been an instructor and professor at Chattahoochee Technical College, Kennesaw State University, and Southern Polytechnic State University. His primary teaching responsibilities include programming, web design, and web application development.
