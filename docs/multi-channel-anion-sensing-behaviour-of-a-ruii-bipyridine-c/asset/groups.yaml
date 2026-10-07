@@ -1,0 +1,1900 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Inorganica Chimica Acta 550 (2023) 121451
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Inorganica Chimica Acta
+
+
+    journal homepage: www://www.elsevier.com/locate/ica
+
+
+    Research paper
+
+
+    # Multi-channel anion sensing behaviour of a Ru(II)-bipyridine complex based on
+    benzothiazoly pyrazole ligand: Experimental and implication of machine learning
+    tools for data prediction
+
+
+    Sourab Dev, Anik Sahdeo, Srikanth Kumar, Sujit Baitalik
+
+
+    Department of Chemistry, Inorganic Chemistry Section, Jodhpur University, Kolkata
+    700032, India
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    +   Keywords:
+
+    Ruthenium
+
+    Anion sensing
+
+    Fuzzy logic
+
+    Artificial neural network
+
+    Adaptive neuro-fuzzy inference system
+
+
+    Multi-channel anion sensing of a Ru(II) complex of the form [(bpy)Ru(Hpbz)]Cl(CO₄)₂
+    (bpy = 2,2''-bipyridine and Hpbz = 3,5-benzothiazol-2-yl-pyrazole) has been carried
+    out in this work and analyzed through multiple machine learning tools. Essentially
+    one NH proton on its outer sphere interaction with anions yields considerable
+    changes in photochemical properties. The sensing aspect of the complex is spectrophotometrically
+    investigated in absorption-spectrum spectroscopy as well as SVCM wavelength monitoring.
+    In absence of anions, the complex remains and represents the "off-state" of the
+    system. Essentially the complex acts as an anion-induced molecular switch. The
+    absorption of anions is employed to identify different types of Boolean and Fuzzy
+    logic (FL) functions. Additionally, we implemented different deep learning tools
+    such as artificial neural networks (ANNs) and adaptive neuro-fuzzy inference system
+    (ANFIS) to evaluate the full sensing aspect of the complex. The three models are
+    compared all with the experimental results.
+
+
+    # 1. Introduction
+
+
+    receptors capable of selectively recognizing anions [24–31]. Recently, efforts
+    have been given to design triple-channel anion sensors wherein the interaction
+    event could be observed by observing different photochemical properties: vis,
+    color (absorption), and emission-electrochromic signals [32–39]. To this, we carried
+    out the anions sensing of a pyrazothiazole-based Ru(II) complex [(bpy)Ru(Hpbz)]Cl(CO₄)₂
+    and investigated its physicochemical and electronic properties [37–40]. However,
+    the design and application of polycyclic complexes of Ru(II) for anions-sensing
+    sensors based on Ru are relatively few in the literature [16–18, 41–44]. The design
+    strategy offers to probe the coordination of the pyrazole NH proton, we investigated
+    the sensing aspect of the complex via various optical channels as well as the
+    fine tuning technique. The anions behaviour of the complex.
+
+
+    The spectral and electrochemical output of the complex upon the action of anions
+    are also employed to mimic various Boolean'
+  - "[PAGE 1]\n\n# Experimental section\n\n# 2. Materials\n\nSolvents and chemicals\
+    \ were procured from Merck. [Ru(bpy)$_3$Cl$_2$]. $H_2O$(75) is obtained by the\
+    \ following method. Pyrazole-3,5-bis(benzimidazole) (Hpbzb) and the complex [(bpy)$_2$Ru(Hpbzb)(ClO$_4$)$_2$]\
+    \ (1) are synthesized and characterized by our report [40].\n\nCaution! The perchlorate\
+    \ complex is potentially explosive and should be handled carefully in any amounts.\n\
+    \n# 2.2. Physical measurements\n\nDescriptions of the instruments used with experimental\
+    \ procedures are provided in ESI.\n\n# 3. Results and discussion\n\n# 3.1. Synthesis\
+    \ and characterization\n\nSynthesis and characterization of the ligand (Hpbzb)\
+    \ and the Ru(II) complex was followed by our previously reported method [40].\
+    \ Recrystallization was carried out in MeCN-water medium of flows of 0.1 M HCl\
+    \ to retain the pyrazole NH proton within the complex.\n\n# 3.2. Solvent absorption\
+    \ and emission spectral behaviour\n\nThe absorption and emission spectrum of the\
+    \ complex is acquired in few selected solvents and associated spectral parameters\
+    \ are provided in Table 1. Figure 1 shows the measured emission spectrum of the\
+    \ complex. The strong absorption in the UV-Vis domain is evident. The position\
+    \ of the peak varies between 480 and 500 nm, where the higher energy bands (443–458\
+    \ nm) can be attributed to $\\pi$–$\\pi^*$ transitions of the ligand. The peak\
+    \ between 332–368 nm arises from ligand-to-metal charge transfer in acetonitrile,\
+    \ while the bands at $\\sim$310–290 nm are due to to- $x$–$\\pi^*$ transitions.\n\
+    \nThe resolution of the emission band at maximum intensity (FWHM), which varies\
+    \ between 676 and 722 nm, depends on the nature of the solvent. The quantum yield\
+    \ ($\\phi$) varies in the range of 9.0–8.0–$10^{-3}$\n\n# Table 1. Physical parameters\
+    \ of the complex.\n\n| Solvent | Absorption $\\epsilon$ (M$^{-1}$cm$^{-1}$) |\
+    \ Emission $\\lambda_{max}$ (nm) | $\tau$ (ns) | $\\phi$ |\n|---|---|---|---|---|\n\
+    | MeCN | 19600(4500;13900;33608;54600;32100;27500) | 676 | 137 | 0.82 |\n| Water\
+    \ | 29500(4800;18700;31650;62800;45000;19200) | 688 | 72 | 2.4 |\n| DMSO | 24500(4500;19900;33400;50700;29500)\
+    \ | 690 | 37 | 0.9 |\n| EtOH | 17500(4500;14200;231700;59200;39600;26940) | 700\
+    \ | 38 | 1.1$\times$10$^{-3}$ |\n| MeOH | 19800(4350;127300;237300;612000;27000)\
+    \ | 710 | 45 | 1.9$\times$10$^{-3}$ |\n| DMF | 20800(4500;19100;338400;700000;312110;112125;164000)\
+    \ | 722 | 90 | 1.5$\times$10$^{-3}$ |\n\n![](img/4fac2303b2c663379d4910af88eef511_1_0.png)\n\
+    \nChart 1. Descriptive structure of the complex used in the present.\n\nlogic\
+    \ (BL) operations using both chemical logic and logic key [45–49]. The analysis\
+    \ of the molecular systems for processing information to the electronic system\
+    \ was first recognized by Silva and the thought opened up a multidisciplinary\
+    \ and research field of molecular computing [50–56]. The architecture of Boolean\
+    \ logic on changing the output between the two extremes is efficient in distinguishing\
+    \ \"on\" or \"off\". Real systems are complex and control of number of input bits\
+    \ cannot be addressed by BL. [57–62]. FNN can control the expression of the non-linear\
+    \ vectors to the selector space. Here, we allowed ANN to address the number of\
+    \ possible states that could be identified given the complexity of the system\
+    \ under the influence of F.\n\nFor analysis and complete understanding as well\
+    \ as forecasting the experimentally observed sensing characteristics of the complex,\
+    \ we implemented neural network-based machine learning methods such as ANN, ANFIS,\
+    \ and FNN. ANNs are generally used to specify functions based on enormous amount\
+    \ of input data [63–68]. Neural recurrent networks (RNN) and feed-forward neural\
+    \ networks (FFNN) are finally used to map temporal data. ANFIS is used to model\
+    \ the associations among the groups with a given dataset and yields an inner state\
+    \ of the network which could represent the dynamic performance of the system.\
+    \ FNN is often used to predict different types of output. This is one of the easiest\
+    \ and effective type of network where the information propagates in a direction\
+    \ (input – output nodes). Here, we used no loops configured with FNN. For improving\
+    \ the performance of the model, we used advanced feed-back property network for\
+    \ network approximation and scaling the neural networks. ANN possesses efficient\
+    \ fitting aptitude from the data in terms of significance of each and its weight.\
+    \ By BL-based technique the result of merging ANN and ANFIS could be much better\
+    \ than the individual ones [69–74]. The orientation of the result from other domains\
+    \ (such as statistics). It would be useful if we merge ANN and ANFIS in FL. In\
+    \ this study, we compared the results of FL ANN and ANFIS models and also with\
+    \ the experimental results for analysis and modeling of the sensing characteristics\
+    \ of the Ru(II)-based metalloreceptor.\n\n2"
+  - '[PAGE 2]
+
+
+    # S. Deb et al.
+
+    Informatica Chimica A550 (2023) 121451
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_2_0.png)
+
+
+    Fig. 1. Normalised emission spectrum (a) and excited-state decay profiles (b)
+    in 1 different solvents.
+
+
+    whereas the lifetime of the complexes alters between 37 ns and 137 ns. Comparing
+    the emission spectra of structurally similar polymeric complexes of Ru(II), it
+    appears that the observed emission in the complexes is due to radiative emission
+    from $^3ML_{CT}$ state. The MLCT intensity of $^3ML_{CT}$ state increases with
+    the polarity of the solvent. The extent of red-shift is found to be maximum in
+    case of DMF and DMSO which have the ability to associate via hydrogen bonding
+    with the pyrazole proton.
+
+
+    F⁻, CN and AO⁻, one-step change with $H_2PO$. The initial change occurs up to
+    the addition of 1 equiv of anions and the extent of change is relatively small,
+    the magnitude of change in the second step is large and saturation occurs with
+    excess of anions.
+
+
+    # 3.3. Anion sensing
+
+
+    We carried out the analysis in acetonitrile optical channels and spectroscopic
+    tools. We measured therein the lifetimes of salts complexes of F⁻, Br⁻, I⁻, AO⁻,
+    CN⁻, SCN and $₄. The absorption spectrum of the complex changes upon addition
+    of different anions with their visual colour change. Substantial shift is observed
+    in case of basic anions (F⁻, AO⁻ and CN⁻), while the position remains almost unchanged
+    after other anions. Essentially, the complex acts as sensor for F⁻ and CN⁻ which
+    is due to strong hydrogen bonding. The red-shift in the MLCT bands is due to the
+    presence of NH protons in acetonitrile which are deprotonated in presence of excess
+    anions. In-line with the absorption spectrum, the emission remains practically
+    unchanged except for the red-shift.
+
+
+    The emission properties follow step-by-step addition of anions as shown in Fig.
+    3c and d (ESI). Spectroscopic quenching of emission intensity increases with considerable
+    magnitude and a corresponding red-shift of the emission peak is observed in the
+    case of the anions. In the first step, however without further quenching occurs
+    without the addition of excess anions.
+
+
+    Absorption and emission titration are executed with various anions. The quenching
+    of complex-anion interaction (Fig. 3 and Fig. 1 (ESI)). Two-steps changes are
+    observed in the spectral profile of the complex with basic anions (such as
+
+
+    Equilibrium is reached after the first step. $H_2PO$ solvent quenching without
+    shifting of emission peak is observed. All data were collected at concentration
+    of 10⁻ and well tallied data are also recorded from the estimation from absorption
+    spectroscopy (Table 2).
+
+
+    The lifetime presented after step-by-step addition of anions is also acquired
+    and the result is presented in Fig. 5. The exponential decay of the complex is
+    changed to be exponential in the presence of excess anions. Lifetime of two luminescent
+    species is presented. The anion-bound or theprotonated form is expected to be
+    short-lived compared with
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_2_1.png)
+
+
+    Fig. 2. UV-vis absorption (a) and emission ($λ_{ex} = 490$ nm) by spectra of I
+    ($1 \times 10^{-5}$ M) in McCN in presence of excess of 0.1 M solution of various
+    anions. Insert shows the visual colour.'
+  md: "\n# Inorganica Chimica Acta 550 (2023) 121451\n\nContents lists available at\
+    \ ScienceDirect\n\n# Inorganica Chimica Acta\n\njournal homepage: www://www.elsevier.com/locate/ica\n\
+    \nResearch paper\n\n# Multi-channel anion sensing behaviour of a Ru(II)-bipyridine\
+    \ complex based on benzothiazoly pyrazole ligand: Experimental and implication\
+    \ of machine learning tools for data prediction\n\nSourab Dev, Anik Sahdeo, Srikanth\
+    \ Kumar, Sujit Baitalik\n\nDepartment of Chemistry, Inorganic Chemistry Section,\
+    \ Jodhpur University, Kolkata 700032, India\n\n# ARTICLE INFO\n\n# ABSTRACT\n\n\
+    - Keywords:\n- Ruthenium\n- Anion sensing\n- Fuzzy logic\n- Artificial neural\
+    \ network\n- Adaptive neuro-fuzzy inference system\n\nMulti-channel anion sensing\
+    \ of a Ru(II) complex of the form [(bpy)Ru(Hpbz)]Cl(CO₄)₂ (bpy = 2,2'-bipyridine\
+    \ and Hpbz = 3,5-benzothiazol-2-yl-pyrazole) has been carried out in this work\
+    \ and analyzed through multiple machine learning tools. Essentially one NH proton\
+    \ on its outer sphere interaction with anions yields considerable changes in photochemical\
+    \ properties. The sensing aspect of the complex is spectrophotometrically investigated\
+    \ in absorption-spectrum spectroscopy as well as SVCM wavelength monitoring. In\
+    \ absence of anions, the complex remains and represents the \"off-state\" of the\
+    \ system. Essentially the complex acts as an anion-induced molecular switch. The\
+    \ absorption of anions is employed to identify different types of Boolean and\
+    \ Fuzzy logic (FL) functions. Additionally, we implemented different deep learning\
+    \ tools such as artificial neural networks (ANNs) and adaptive neuro-fuzzy inference\
+    \ system (ANFIS) to evaluate the full sensing aspect of the complex. The three\
+    \ models are compared all with the experimental results.\n\n# 1. Introduction\n\
+    \nreceptors capable of selectively recognizing anions [24–31]. Recently, efforts\
+    \ have been given to design triple-channel anion sensors wherein the interaction\
+    \ event could be observed by observing different photochemical properties: vis,\
+    \ color (absorption), and emission-electrochromic signals [32–39]. To this, we\
+    \ carried out the anions sensing of a pyrazothiazole-based Ru(II) complex [(bpy)Ru(Hpbz)]Cl(CO₄)₂\
+    \ and investigated its physicochemical and electronic properties [37–40]. However,\
+    \ the design and application of polycyclic complexes of Ru(II) for anions-sensing\
+    \ sensors based on Ru are relatively few in the literature [16–18, 41–44]. The\
+    \ design strategy offers to probe the coordination of the pyrazole NH proton,\
+    \ we investigated the sensing aspect of the complex via various optical channels\
+    \ as well as the fine tuning technique. The anions behaviour of the complex.\n\
+    \nThe spectral and electrochemical output of the complex upon the action of anions\
+    \ are also employed to mimic various Boolean\n\n# Experimental section\n\n# 2.\
+    \ Materials\n\nSolvents and chemicals were procured from Merck. [Ru(bpy)$_3$Cl$_2$].\
+    \ $H_2O$(75) is obtained by the following method. Pyrazole-3,5-bis(benzimidazole)\
+    \ (Hpbzb) and the complex [(bpy)$_2$Ru(Hpbzb)(ClO$_4$)$_2$] (1) are synthesized\
+    \ and characterized by our report [40].\n\nCaution! The perchlorate complex is\
+    \ potentially explosive and should be handled carefully in any amounts.\n\n# 2.2.\
+    \ Physical measurements\n\nDescriptions of the instruments used with experimental\
+    \ procedures are provided in ESI.\n\n# 3. Results and discussion\n\n# 3.1. Synthesis\
+    \ and characterization\n\nSynthesis and characterization of the ligand (Hpbzb)\
+    \ and the Ru(II) complex was followed by our previously reported method [40].\
+    \ Recrystallization was carried out in MeCN-water medium of flows of 0.1 M HCl\
+    \ to retain the pyrazole NH proton within the complex.\n\n# 3.2. Solvent absorption\
+    \ and emission spectral behaviour\n\nThe absorption and emission spectrum of the\
+    \ complex is acquired in few selected solvents and associated spectral parameters\
+    \ are provided in Table 1. Figure 1 shows the measured emission spectrum of the\
+    \ complex. The strong absorption in the UV-Vis domain is evident. The position\
+    \ of the peak varies between 480 and 500 nm, where the higher energy bands (443–458\
+    \ nm) can be attributed to $\\pi$–$\\pi^*$ transitions of the ligand. The peak\
+    \ between 332–368 nm arises from ligand-to-metal charge transfer in acetonitrile,\
+    \ while the bands at $\\sim$310–290 nm are due to to- $x$–$\\pi^*$ transitions.\n\
+    \nThe resolution of the emission band at maximum intensity (FWHM), which varies\
+    \ between 676 and 722 nm, depends on the nature of the solvent. The quantum yield\
+    \ ($\\phi$) varies in the range of 9.0–8.0–$10^{-3}$\n\n# Table 1. Physical parameters\
+    \ of the complex.\n\n| Solvent | Absorption $\\epsilon$ (M$^{-1}$cm$^{-1}$) |\
+    \ Emission $\\lambda_{max}$ (nm) | $\\tau$ (ns) | $\\phi$ |\n|---|---|---|---|---|\n\
+    | MeCN | 19600(4500;13900;33608;54600;32100;27500) | 676 | 137 | 0.82 |\n| Water\
+    \ | 29500(4800;18700;31650;62800;45000;19200) | 688 | 72 | 2.4 |\n| DMSO | 24500(4500;19900;33400;50700;29500)\
+    \ | 690 | 37 | 0.9 |\n| EtOH | 17500(4500;14200;231700;59200;39600;26940) | 700\
+    \ | 38 | $1.1 \\times 10^{-3}$ |\n| MeOH | 19800(4350;127300;237300;61200;27000)\
+    \ | 710 | 45 | $1.9 \\times 10^{-3}$ |\n| DMF | 20800(4500;19100;338400;70000;31210;11225;164000)\
+    \ | 722 | 90 | $1.5 \\times 10^{-3}$ |\n\n![](img/4fac2303b2c663379d4910af88eef511_0.png)\n\
+    \nChart 1. Descriptive structure of the complex used in the present. logic (BL)\
+    \ operations using both chemical logic and logic [45–49]. The analysis of the\
+    \ molecular systems for processing information to the electronic system was first\
+    \ recognized by Silva and the thought opened up multidisciplinary and research\
+    \ field of molecular computing [50–56]. The architecture of Boolean logic on changing\
+    \ the output between the two extremes is efficient in distinguishing \"on\" or\
+    \ \"off\". Real systems are complex and control of number of input cannot be addressed\
+    \ by BL [57–62]. FNN can control the expression of the non-linear vectors to the\
+    \ selector space. Here, we allowed ANN to address the number of possible states\
+    \ that could be identified given the complexity of system under the influence\
+    \ of. For analysis and complete understanding as well as forecasting the observed\
+    \ sensing characteristics of the complex, we implemented neural network-based\
+    \ machine learning methods such as ANN, ANFIS, and FNN. ANNs are generally used\
+    \ to specify functions based on enormous amount of input data [63–68]. Neural\
+    \ recurrent networks (RNN) and feed-forward neural networks (FFNN) are finally\
+    \ used to map temporal data. ANFIS is used to model the associations among groups\
+    \ with a given dataset and yields an inner state of the network which could represent\
+    \ the dynamic performance of system. FNN is often used to predict different types\
+    \ of output. This is one of the easiest and effective type of network where the\
+    \ information propagates in a direction (input – output nodes). Here, we used\
+    \ loops configured with FNN. For improving the performance of model, we used advanced\
+    \ feedback network for approximation and scaling the neural networks. ANN possesses\
+    \ efficient fitting aptitude from the data in terms of significance of each and\
+    \ its weight. By BL-based technique the result of merging ANN and ANFIS could\
+    \ be much better than individual ones [69–74]. The orientation of the result from\
+    \ other domains (such as statistics). It would be useful if we merge ANN and ANFIS\
+    \ in FL. In this study, we compared the results of FL ANN and ANFIS models and\
+    \ also with the experimental results for analysis and modeling of the sensing\
+    \ characteristics of the Ru(II)-based metalloreceptor.\n\n# S. Deb et al.\nInformatica\
+    \ Chimica A550 (2023) 121451\n\n![](img/4fac2303b2c663379d4910af88eef511_2_0.png)\n\
+    \nFig. 1. Normalised emission spectrum (a) and excited-state decay profiles (b)\
+    \ in different solvents.\n\nwhereas the lifetime of the complexes alters between\
+    \ 37 ns and 137 ns. Comparing the emission spectra of structurally similar complexes\
+    \ of Ru(II), it appears that the observed emission in the complexes is due to\
+    \ radiative emission from $^3ML_{CT}$ state. The MLCT intensity of $^3ML_{CT}$\
+    \ state increases with the polarity of the solvent. The extent of red-shift is\
+    \ found to be maximum in case of DMF and DMSO which have the ability to associate\
+    \ via hydrogen bonding with the pyrazole proton.\n\nF⁻, CN and AO⁻, one-step change\
+    \ with $H_2PO$. The initial change occurs up to the addition of 1 equiv of anions\
+    \ and the extent of change is relatively small, the magnitude of change in the\
+    \ second step is large and saturation occurs with excess of anions.\n\n# 3.3.\
+    \ Anion sensing\n\nWe carried out the analysis in acetonitrile optical channels\
+    \ and spectroscopic tools. We measured therein the lifetimes of salts complexes\
+    \ of F⁻, Br⁻, I⁻, AO⁻, CN⁻, SCN and $₄$. The absorption spectrum of the complex\
+    \ changes upon addition of different anions with their visual colour change. Substantial\
+    \ shift is observed in case of basic anions (F⁻, AO⁻ and CN⁻), while the position\
+    \ remains almost unchanged after other anions. Essentially, the complex acts as\
+    \ sensor for F⁻ and CN⁻ which is due to strong hydrogen bonding. The red-shift\
+    \ in the MLCT bands is due to the presence of NH protons in acetonitrile which\
+    \ are deprotonated in presence of excess anions. In-line with the absorption spectrum,\
+    \ the emission remains practically unchanged except for the red-shift.\n\nThe\
+    \ emission properties follow step-by-step addition of anions as shown in Fig.\
+    \ 3c and d (ESI). Spectroscopic quenching of emission intensity increases with\
+    \ considerable magnitude and a corresponding red-shift of the emission peak is\
+    \ observed in the case of the anions. In the first step, however without further\
+    \ quenching occurs without the addition of excess anions.\n\nAbsorption and emission\
+    \ titration are executed with various anions. The quenching of complex-anion interaction\
+    \ (Fig. 3 and Fig. 1 (ESI)). Two-steps changes are observed in the spectral profile\
+    \ of the complex with basic anions (such as \n\nEquilibrium is reached after the\
+    \ first step. $H_2PO$ solvent quenching without shifting of emission peak is observed.\
+    \ All data were collected at concentration of 10⁻ and well tallied data are also\
+    \ recorded from the estimation from absorption spectroscopy (Table 2).\n\n![](img/4fac2303b2c663379d4910af88eef511_2_1.png)\n\
+    \nFig. 2. UV-vis absorption (a) and emission ($λ_{ex} = 490$ nm) by spectra of\
+    \ I ($1 \\times 10^{-5}$ M) in McCN in presence of excess of 0.1 M solution of\
+    \ various anions. Insert shows the visual colour.\n"
+  mdcn: '
+
+
+    # Inorganica Chimica Acta 550 (2023) 121451
+
+
+    ScienceDirect 上的可用目录列表
+
+
+    # Inorganica Chimica Acta
+
+
+    期刊主页：www://www.elsevier.com/locate/ica
+
+
+    研究论文
+
+
+    # 基于苯并噻唑基吡唑配体的 Ru(II)-联吡啶配合物的多通道阴离子检测行为：实验研究及机器学习工具对数据预测的影响
+
+
+    Sourab Dev, Anik Sahdeo, Srikanth Kumar, Sujit Baitalik
+
+
+    化学系，无机化学分，焦特浦大学，加尔加答 700032，印度
+
+
+    # 文章信息
+
+
+    # 摘要
+
+
+    - 关键词：
+
+    - 钌
+
+    - 阴离子检测
+
+    - 模糊逻辑
+
+    - 人工神经网络
+
+    - 自适应神经模糊推理系统
+
+
+    本工作开展了分子式为 [(bpy)Ru(Hpbz)]Cl(CO₄)₂（其中 bpy = 2,2''-联吡啶，Hpbz = 3,5-苯并噻唑-2-基吡唑）的
+    Ru(II) 配合物的多通道阴离子检测，并通过多种机器学习工具进行了分析。本质上，该配合物外层的一个 NH 质子与阴离子的作用会导致光化学性质发生显著变化。通过吸收光谱光谱以及
+    SVCM 波长监测对该配合物的检测特性进行了光谱学研究。在没有阴离子的情况下，配合物保持存在并代表系统的“关闭状态”。本质上，该配合物充当阴离子诱导的分子开关。利用阴离子的吸收来识别不同类型的布尔逻辑和模糊逻辑（FL）函数。此外，我们还实现了不同的深度学习工具，如人工神经网络（ANNs）和自适应神经模糊推理系统（ANFIS），以评估配合物的完整检测性能。将三个模型均与实验结果进行了比较。
+
+
+    # 1. 引言
+
+
+    能够选择性识别阴离子的受体 [24–31]。近期，研究人员致力于设计三通道阴离子传感器，其中通过观察不同的光化学性质可以观察到相互事件：可见光、颜色（吸收）和发射-电致变信号
+    [32–39]。为此，我们对了一种基于吡唑并噻唑的 Ru(II) 配合物 [(bpy)Ru(Hpbz)]Cl(CO₄)₂ 进行了阴离子检测，并研究了其物理化学和电子性质
+    [37–40]。然而，文献中关于用于 Ru 基阴离子传感器的 Ru(II) 多环配合物的设计和应用相对较少 [16–18, 41–44]。该设计策略提议探测吡唑
+    NH 质子的配位，我们通过多种光学通道以及精细调节技术研究了配合物的检测特性。该配合物的阴离子行为。
+
+
+    配合物在阴离子作用下的光谱和电化学输出也被用于模拟各种布尔
+
+
+    # 实验部分
+
+
+    # 2. 试剂
+
+
+    溶剂和化学试剂购自默克（Merck）。[Ru(bpy)$_3$Cl$_2$]$H_2O$(75) 通过以下方法获得。吡唑-3,5-双(苯并咪唑) (Hpbzb)
+    和配合物 [(bpy)$_2$Ru(Hpbzb)(ClO$_4$)$_2$] (1) 根据我们的报告进行了合成和表征 [40]。
+
+
+    注意！高氯酸盐配合物具有潜在爆炸性，任何剂量的均应小心处理。
+
+
+    # 2.2. 物理测量
+
+
+    实验步骤中使用的仪器说明见在 ESI 中。
+
+
+    # 3. 结果与讨论
+
+
+    # 3.1. 合成与表征
+
+
+    配体 (Hpbzb) 和 Ru(II) 配合物的合成和表征遵循我们之前报道的方法 [40]。在 0.1 M HCl 流的 MeCN-水介中进行重晶，以保持配合物中的吡唑
+    NH 质子。
+
+
+    # 3.2. 溶剂吸收和发射光谱行为
+
+
+    在少数选定溶剂中获得了配合物的吸收和发射光谱，相关的光谱参数见表 1。图1 显示了配合物的测得发射光谱。可见光区域的强吸收显而易见。峰位置在 480 到 500
+    nm 之间变化，其中高能带（443–458 nm）可归于配体的 $\pi$–$\pi^*$ 跃。332–368 nm 之间的峰源于腈中配体到金属的电荷转移，而
+    $\sim$310–290 nm 处的带由于 $n$–$\pi^*$ 跃。
+
+
+    最大强度处发射带的分辨率（FWHM）在 676 到 722 nm 之间变化，取决于溶剂的性质。量子产率（$\phi$）在 9.0–8.0–$10^{-3}$
+    范围内。
+
+
+    # 表1. 配合物的物理参数。
+
+
+    | 溶剂 | 吸收 $\epsilon$ (M$^{-1}$cm$^{-1}$) | 发射 $\lambda_{max}$ (nm) | $\tau$ (ns)
+    | $\phi$ |
+
+    |---|---|---|---|---|
+
+    | MeCN | 19600(4500;13900;33608;54600;32100;27500) | 676 | 137 | 0.82 |
+
+    | 水 | 29500(4800;18700;31650;62800;45000;19200) | 688 | 72 | 2.4 |
+
+    | DMSO | 24500(4500;19900;33400;50700;29500) | 690 | 37 | 0.9 |
+
+    | EtOH | 17500(4500;14200;231700;59200;39600) | 700 | 38 | $1.1 \times 10^{-3}$
+    |
+
+    | MeOH | 19800(4350;127300;23700;61200;27000) | 710 | 45 | $1.9 \times 10^{-3}$
+    |
+
+    | DMF | 20800(4500;19100;338400;70000;31210;11225;16400) | 722 | 90 | $1.5 \times
+    10^{-3}$ |
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_0.png)
+
+
+    图1. 当前使用的配合物的描述性结构。使用布尔逻辑（BL）和模糊逻辑的操作 [45–49]。用于处理信息的分子的系统分析首先由 Silva 识别，并开启了多学科研究领域
+    [50–56]。布尔逻辑在两个极端之间的切换对于区分“开启”或“关闭”是有效的。真实系统和输入数量的控制无法通过 BL 解决 [57–62]。FNN 可以控制非线性向量。在这里，允许
+    ANN 处理过量阴离子影响下的可能状态数量。为了分析和完全理解配合物的观测检测特性，我们实施了基于神经网络的机器学习方法，如 ANN、ANFIS 和 FNN。ANN
+    通常用于指定海量数据的功能 [63–68]。循环神经网络（RNN）和前馈神经网络（FFNN）最后用于映射时间数据。ANFIS 用于建模给定数据集之间的关联，并产生系统的动态性能。FNN
+    经常用于预测不同类型的输出。这是信息在方向（输入 – 输出）节点中传播的最简单且有效的网络类型。在这里，我们使用了配置有循环的 FNN。为了提高模型性能，我们使用了先进反馈网络进行近似和缩放。ANN
+    在数据重要性和权重方面具有良好的拟合能力。通过基于 BL 技术，合并 ANN 和 ANFIS 的结果可能远优个体 [69–74]。来自其他领域（如统计）的结果的方向。如果在模糊逻辑中合并
+    ANN 和 ANFIS 将很有用。在这项研究中，我们比较了 FL ANN 和 ANFIS 模型的结果，以及分析和建模 Ru(II) 基金属受体特性的实验结果。
+
+
+    # S. Deb 等
+
+    Informatica Chimica A550 (2023) 121451
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_2.png)
+
+
+    图1. 不同溶剂中的归一化发射光谱 (a) 和激发态衰减曲线 (b)。
+
+
+    而配合物的寿命在 37 ns 到 137 ns 之间变化。对比结构相似的 Ru(II) 配合物的发射光谱，配合物中观测到的发射似乎由于 $^3ML_{CT}$
+    态的辐射发射。$^3ML_{CT}$ 态的 MLCT 强度随溶剂极性的增加而增加。红移程度在 DMF 和 DMSO的情况下最大，它们具有通过吡唑质子形成氢键的能力。
+
+
+    F⁻、CN 和 AO⁻ 与 $H_2PO$ 的单步变化。初始变化发生在添加 1 当量阴离子时，变化程度较小，第二步的变化幅度很大，并在过量阴离子发生饱和。
+
+
+    # 3.3. 阴离子检测
+
+
+    我们在腈的光学通道和光谱工具中进行了分析。我们在其中测量了 F⁻、Br⁻、I⁻、AO⁻、CN⁻、SCN 和 $₄$ 盐配合物的寿命。配合物的吸收光谱随添加不同阴离子发生变化，并随着视觉颜色的变化。在碱性阴离子（F⁻、AO⁻
+    和 CN⁻）情况下观察到显著偏移，而在其他离子之后位置几乎保持不变。本质上，配合物作为 F⁻ 和 CN⁻ 的传感器，这是由于强氢键。MLCT 带的红移是由于腈中存在
+    NH 质子，这些质子在过量阴离子存在下去质化。与吸收光谱一致，发射除红移外基本保持不变。
+
+
+    发射性质遵循阴离子的逐步添加，如图 3c 和 d (ESI) 所示。发射强度的光谱猝灭幅度增加，并在阴离子情况下观察到发射峰的相应红移。但在第一步中，在不添加过量阴离子的情况下没有进一步猝灭。
+
+
+    用各种阴离子执行吸收和发射滴定。配合物-阴离子相互作用的猝灭（图3和图1 (ESI)）。在碱性阴离子情况下配合物的光谱图中观察到两步变化。在第一步后达到平衡。$H_2PO$
+    溶剂猝灭没有观察到发射峰移动。所有数据均在浓度 10⁻ 下收集，并根据吸收光谱估算记录了良好的数据（表2）。
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_2_1.png)
+
+
+    图2. 在过量 0.1 M 各种阴离子溶液存在下，I ($1 \times 10^{-5}$ M) 在 McCN 中的紫外-可见吸收 (a) 和发射 ($λ_{ex}
+    = 490$ nm) 光谱。插入图显示了视觉颜色。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_3_0.png)
+
+
+    3. Change in UV-vis absorption (a-b) and emission (λ_{em} = 490 nm) (c) spectral
+    profile of 1 (1×10⁻⁵ M) upon stepwise addition of 0.1 M of F⁻ in MeCN. Shows the
+    1:1 binding profile.
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_3_1.png)
+
+
+    Fig. 4. UV-vis absorption (a) and emission (λ_{em} = 490 nm) (b) spectrum of 1
+    (1×10⁻⁵ M) upon stepwise addition of 0.1 M of HPO₄ in MeCN. Shows the 1:1 binding
+    profile.
+
+
+    Equilibrium/binding constants (K) for 1 in MeCN at 298 K.
+
+
+    | Anion | K1 | K2 |
+
+    |---|---|--|
+
+    | F | 4.1×10⁶ | 2.4×10⁶ |
+
+    | HPO₄ | 3.8×10⁶ | 2.8×10⁶ |
+
+
+    # 3.4. Electrochemical monitoring
+
+
+    The CV and SWV traces of the complex reversible Ru³⁺/Ru²⁺ at E₁ = 0.2–0.94 V and
+    two stepwise reversible waves at -1.46 and -1.78 V due to reduction of two bulky
+    moieties (Fig. 5 (S2)). The redox behavior was observed step-by-step addition
+    and changes are shown in Fig. 6. The peak at 0.94 V is progressively reduced in
+    current with concomitant growth of a new peak at 0.80 V and initially the new
+    peak at 0.94 V is substituted by the peak at 0.80 V during addition of 2 equivalents
+    of F. The E₁₂ of the Ru³⁺/Ru²⁺ couple is decoupled'
+  - '[PAGE 4]
+
+
+    # S. Deb et al.
+
+
+    # Inorganica Chimica Acta 550 (2023) 121451
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_4_0.png)
+
+
+    (TBAH; Fig. S3). The spectral pattern of the complex resembles closely those observed
+    with F'' and AcO'' ions. This indicates anion-induced decomposition of the pyrazole
+    and NH protons probably took place from the complex backbone.
+
+
+    In order to obtain proof of the interaction between the acceptor and the anion
+    we tried to grow crystals of the complex by diffusing PhCH3 to Me-MCM (2:1 v/v)
+    solution in excess TBAF. Fortunately, we succeeded after several attempts and
+    the structure of the complex is presented in Fig. 7. The structure shows that
+    F'' abstracts the NH proton forming the complex. Crystallization parameters with
+    selected bond distances and the angles of the deformed complex are presented in
+    Tables 51 and S2 (ESSI).
+
+
+    # 3.6. Operations
+
+
+    In the previous section, we observed quite a large degree of change in the absorption
+    and emission spectra as well as electrochemical behaviour of the complex and species
+    anionic. The retention of the complex is also possible upon treating with water.
+    Furthermore, photo-induced decomposition of the photo-redox complex observed by
+    anions followed by reconstruction of the original form is fully reversible and
+    can be repeated many times. Here we will study the spectral and electrochemical
+    properties upon successive addition of anions and for fabrication of multiple
+    logic complexes.
+
+
+    # 3.6.1. Combinational logic and keylock lock
+
+
+    Combinational logic is basically like Boolean operations ("OR", "AND", and "NOT”).
+    However, the luminescence respect at 685 nm and absorbance at 545 nm are treated
+    as the outputs in presence of F'' (input 1) and F'''' (input 2). Emission quenching
+    below the threshold and absorbance enhancement above demonstrate the influence
+    of F'', showing the "OFF" state (0) and "ON" state (1). The emission and absorption
+    maxima throughout wavelengths upon addition of inputs (F'' and H'') leads to the
+    notion of combination of IMPLICATION and INHIBIT H'' (Fig. 8c and S3).
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_4_1.png)
+
+
+    To secure data at the molecular level, we utilized a keylock device. The absorbance
+    respect at 545 nm with H'' and F'''' is utilized for this purpose (Fig. 2b), H''
+    (input 1) and F'''' (input 2) is allocated as ''N'' and ''T'', respectively, the
+    "ON" and "OFF" state is designated as ''K'' and ''K'''' (Fig. S2). Feasible
+
+
+    Fig. 5. Change in excited-state decay profile (λex = 450 nm) of I(1+10⁻⁵ M) in
+    MeCN upon stepwise addition of 0.1 M in F''. Lifetime times.
+
+
+    Fig. 6. Change of SWIs of I (1+10⁻⁵ M) in MeCN upon stepwise addition of 0.1 M
+    of F.
+
+
+    shifted to lower position in presence of basic anions. The pyrazole NH proton
+    is expected to be deprotonated from the complex and does not prevent the charge
+    that discharges the E₂/Ru Ru⁺.
+
+
+    # 3.5. Mode of interaction between the complex and anions
+
+
+    In the previous section, we noticed substantial absorption of the spectral and
+    electrochemical characteristics of the complex with F'', AcO'', and CN. The extent
+    of interaction with H₂PO is relatively small, although not with Cl⁻, Br⁻ and SCN.
+    In spite of the pyrazole NH, two energy changes are observed in both absorption
+    and emission spectral profiles of the receptor in presence of basic anions as
+    F'', AcO'', and CN. Thus possibility, we suppose that one of two thiolate groups
+    are generated during presence of crystallization of the complex in presence of
+    HClO and protons are sequentially deprotonated in presence of the basic anions.
+    To check the possibility, spectral titrations are executed with a strong base,
+    tetramethylammonium hydroxide
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_4_2.png)
+
+
+    Fig. 7. Perspective view of 1" showing 50% probability ellipsoid pockets.
+
+
+    5'
+  - '[PAGE 5]
+
+
+    # Inorganica Chemica Acta 550 (2023) 121451
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_0.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_1.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_2.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_3.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_4.png)
+
+
+    Fig. 8. (a) and (b) absorption spectrum of them due to sequential addition of
+    H'' and F'', and (c) and (d) corresponds to the Truth table of combinatorial logic
+    and key lock, respectively. (e) and (f) represent the schematic diagram of these
+    operations.
+
+
+    amalgamations of them whether either by insertion of F'' or incorporation of H''
+    induces the ON state (1) and the secret password "NIB". Reversal of the sequence
+    (addition of H'' F''), on the contrary, leads to the "OFF" state and generates
+    the correct password "ENCE", only the authorized person who knows the actual password
+    will be able to unlock the secured information.
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_5.png)
+
+
+    # 3.7. Fuzzy logic operations
+
+
+    As already pointed out in the action of BL, results changing the output signal
+    through the extension of "0" or "1". Nevertheless, the results are quite complex
+    and composed of numerous changes between states. By handling the number of intermediate
+    states, FLS could be the conversion of the non-linear inputs to the scalar outputs.
+    FI is applied on the spectral behaviour of the compounds of F'' and H''.
+
+
+    The number of variables is 3 to a high degree of freedom in F'' (input 1) and
+    H'' (input 2) (Fig. 9). Considering in the degree of change with respect to values,
+    the variation may be detected by a small number of functional groups (such as
+    low, medium, and high). Fig. 10 shows that the spectral change could be detected
+    by respect shifts. An inverse of DIFF-THEN corresponds to the result. In the antecedent,
+    the emission quenching at 685 nm with F'', whereas the resonance happens with
+    H''. Here, FI is applied in the present system upon inspecting the spectral characteristics
+    upon addition of F'' and H''. The specification of F'' and H'' generates 15 rules
+    (Table S3 and S4). In emission intensity upon co-addition of F'' and H'' is also
+    shown in a three-dimensional plot (Fig. 10d).
+
+
+    Fig. 9. Spectral change of i due to step-by-step addition of F'' and H''.
+
+
+    # 3.8. Artificial neural network (ANN)
+
+
+    ANN is the one and one of the most useful types of organizations where information
+    flows in direction. Moreover, taking into consideration its effectiveness in predicting
+    the system behavior, we have employed ANN-function (ANN-AFF) for appropriate grading
+    and testing the system. We employ Levenberg-Marquardt method for training. The
+    ANN is coded in MATLAB 2018 [7] and the full operational details are provided
+    in the. EI is evident that the model''s most excellent validation accuracy is
+    0.026872 to epoch 5 (Fig. 11a). The augmentation of green coloured'
+  - '[PAGE 6]
+
+
+    # Input 1
+
+
+    # (a)
+
+
+    # (b)
+
+
+    # Input 2
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_6_0.png)
+
+
+    # (c)
+
+
+    # Output
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_6_1.png)
+
+
+    # (d)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_6_2.png)
+
+
+    Fig. 10. Sketch of the basis of fuzzy inference rules considering the emission
+    response of I in F'' and F''. The variables are disintegrated into 3 fuzzy sets,
+    (a) F'': (1) low $\mu_{low}$ (0.0124 0.0376 0.7126); (2) medium $\mu_{medium}$
+    (0.7129 0.947 1.396); (3) high $\mu_{high}$ (1.349 1.632 1.985); (b) F'': (1)
+    low $\mu_{low}$ (0.0184 0.5379 1.118); (2) medium $\mu_{medium}$ (1.031 1.439
+    1.961); (3) high $\mu_{high}$ (1.865 2.421 2.981); (c) Emission intensity at O:
+    (1) low $\mu_{low}$ (0.0584 11.966 23.231); (2) medium $\mu_{medium}$ (21.831
+    31.63 50.531); (3) high $\mu_{high}$ (48.52 65.24 79.24).
+
+
+    line after epoch gives listed. The variance of the mean square error
+
+
+    Fig. 1 shows the error histogram among the target and predicted for the training
+    process. Y-axis shows the probability of samples in the dataset retains in a specific
+    bin. The bins are aggregated values that are used to describe the degree of gain.
+    The zero-error point is positioned between the bin centered at -0.04960 and 0.0124.
+    The most frequent error is at +0.5854 (rightmost bin). The R value naming to the
+    unit in indicates satisfactory coherence among the target and the output is indicative
+    of the model''s good performance (Fig. 1 cc). The training status of ANN network
+    up to epoch 11 is shown in SS (ESI).
+
+
+    3. Adaptive neural-fuzzy inference system (ANFS)
+
+    The merging of PL and NN generates ANFS that could remove the excess of each one
+    and often produces results [77-78]. ANFS network could be schematically presented
+    in Fig. 56 (ESI). Five layers (excluding the input layer) are inter-connected
+    in the network. The architecture is designed for input size, P and Q, of which.
+    The detailing of each layer is needed in the ESI. The fundamental design for creating
+    the emission spectral characteristics of F'' and H'' ANFS comprises of 4 layers
+    (fuzzification, knowledge base, and defuzzification layer) (Fig. 7, ESI).'
+  md: '
+
+    ![](img/4fac2303b2c663379d4910af88eef511_3_0.png)
+
+
+    3. Change in UV-vis absorption (a-b) and emission (λ_{em} = 490 nm) (c) spectral
+    profile of 1 (1×10⁻⁵ M) upon stepwise addition of 0.1 M of F⁻ in MeCN. Shows the
+    1:1 binding profile.
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_3_1.png)
+
+
+    Fig. 4. UV-vis absorption (a) and emission (λ_{em} = 490 nm) (b) spectrum of 1
+    (1×10⁻⁵ M) upon stepwise addition of 0.1 M of HPO₄ in MeCN. Shows the 1:1 binding
+    profile.
+
+
+    Equilibrium/binding constants (K) for 1 in MeCN at 298 K.
+
+
+    | Anion | K1 | K2 |
+
+    |---|---|---|
+
+    | F | 4.1×10⁶ | 2.4×10⁶ |
+
+    | HPO₄ | 3.8×10⁶ | 2.8×10⁶ |
+
+
+    ## 3.4. Electrochemical monitoring
+
+
+    The CV and SWV traces of the complex reversible Ru³⁺/Ru²⁺ at E₁ = 0.2–0.94 V and
+    two stepwise reversible waves at -1.46 and -1.78 V due to reduction of two bulky
+    moieties (Fig. 5 (S2)). The redox behavior was observed step-by-step addition
+    and changes are shown in Fig. 6. The peak at 0.94 V is progressively reduced in
+    current with concomitant growth of a new peak at 0.80 V and initially the new
+    peak at 0.94 V is substituted by the peak at 0.80 V during addition of 2 equivalents
+    of F. The E₁₂ of the Ru³⁺/Ru²⁺ couple is decoupled (TBAH; Fig. S3). The spectral
+    pattern of the complex resembles closely those observed with F⁻ and AcO'' ions.
+    This indicates anion-induced decomposition of the pyrazole and NH protons probably
+    took place from the complex backbone.
+
+
+    In order to obtain proof of the interaction between the acceptor and the anion
+    we tried to grow crystals of the complex by diffusing PhCH3 to Me-MCM (2:1 v/v)
+    solution in excess TBAF. Fortunately, we succeeded after several attempts and
+    the structure of the complex is presented in Fig. 7. The structure shows that
+    F⁻ abstracts the NH proton forming the complex. Crystallization parameters with
+    selected bond distances and the angles of the deformed complex are presented in
+    Tables 51 and S2 (ESSI).
+
+
+    ## 3.6. Operations
+
+
+    In the previous section, we observed quite a large degree of change in the absorption
+    and emission spectra as well as electrochemical behaviour of the complex and species
+    anionic. The retention of the complex is also possible upon treating with water.
+    Furthermore, photo-induced decomposition of the photo-redox complex observed by
+    anions followed by reconstruction of the original form is fully reversible and
+    can be repeated many times. Here we will study the spectral and electrochemical
+    properties upon successive addition of anions and for fabrication of multiple
+    logic complexes.
+
+
+    ### 3.6.1. Combinational logic and keylock lock
+
+
+    Combinational logic is basically like Boolean operations ("OR", "AND", and "NOT”).
+    However, the luminescence respect at 685 nm and absorbance at 545 nm are treated
+    as the outputs in presence of F⁻ (input 1) and F'''' (input 2). Emission quenching
+    below the threshold and absorbance enhancement above demonstrate the influence
+    of F⁻, showing the "OFF" state (0) and "ON" state (1). The emission and absorption
+    maxima throughout wavelengths upon addition of inputs (F⁻ and H⁻) leads to the
+    notion of combination of IMPLICATION and INHIBIT H⁻ (Fig. 8c and S3).
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_4_1.png)
+
+
+    To secure data at the molecular level, we utilized a keylock device. The absorbance
+    respect at 545 nm with H⁻ and F'''' is utilized for this purpose (Fig. 2b), H⁻
+    (input 1) and F'''' (input 2) is allocated as ''N'' and ''T'', respectively, the
+    "ON" and "OFF" state is designated as ''K'' and ''K'''' (Fig. S2). Feasible
+
+
+    Fig. 5. Change in excited-state decay profile (λex = 450 nm) of I (1+10⁻⁵ M) in
+    MeCN upon stepwise addition of 0.1 M in F⁻. Lifetime times.
+
+
+    Fig. 6. Change of SWIs of I (1+10⁻⁵ M) in MeCN upon stepwise addition of 0.1 M
+    of F⁻ shifted to lower position in presence of basic anions. The pyrazole NH proton
+    is expected to be deprotonated from the complex and does not prevent the charge
+    that discharges E₂/Ru⁺.
+
+
+    ## 3.5. Mode of interaction between the complex and anions
+
+
+    In the previous section, we noticed substantial absorption of the spectral and
+    electrochemical characteristics of the complex with F⁻, AcO⁻, and CN⁻. The extent
+    of interaction with H⁻ is relatively small, although not with Cl⁻, Br⁻ and SCN⁻.
+    In spite of pyrazole NH, two energy changes are observed in both absorption and
+    emission profiles of the receptor in presence of basic anions as F⁻, AcO⁻, and
+    CN⁻. Thus possibility, we suppose that one of two thiolate groups are generated
+    during crystallization of the complex in presence of HCl and protons are sequentially
+    deprotonated in presence of tetramethylammonium hydroxide.
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_4_2.png)
+
+
+    Fig. 7. Perspective view of 1 showing 50% probability ellipsoid pockets. Inorganica
+    Acta 550 (2023) 121451
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_0.png)
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_1.png)
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_2.png)
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_3.png)
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_4.png)
+
+
+    Fig. 8. (a) and (b) absorption spectrum of them due to sequential addition of
+    H⁻ and F⁻, and (c) and (d) corresponds to Truth table of combinatorial logic and
+    key lock, respectively. (e) and (f) represent the schematic diagram of these operations
+    amalgamations of them whether by insertion of F⁻ or incorporation of H⁻ induces
+    the ON state (1) and the secret password "NIB". Reversal of the sequence (addition
+    of H⁻), on contrary, leads to the "OFF" state and generates the correct password
+    "ENCE", only the authorized person who knows the actual password will be able
+    to unlock the secured information.
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_5.png)
+
+
+    ## 3.7. Fuzzy logic operations
+
+
+    As already pointed out in the action of BL, results changing the output signal
+    through the extension of "0" or "1". Nevertheless, the results are quite complex
+    and composed of numerous changes between states. By handling the number of intermediate
+    states, FLS could be the conversion of the non-linear inputs to scalar outputs.
+    FI is applied on the spectral behaviour of the compounds of F⁻ and H⁻.
+
+
+    The number of variables is 3 to a high degree of freedom in F⁻ (input 1) and H⁻
+    (input 2) (Fig. 9). Considering in the degree of change with respect to values,
+    the variation may be detected by a small number of functional groups (such as
+    low, medium, and high). Fig. 10 shows that the spectral change could be detected
+    by shifts. An inverse of DIFF-THEN corresponds to the result. In the antecedent,
+    the emission quenching at 685 nm with F⁻ whereas the resonance happens with H⁻.
+    Here, FI is applied in the present system upon inspecting the spectral characteristics
+    upon addition of F⁻ and H⁻. The specification of F⁻ and H⁻ generates 15 rules
+    (Table S3 and S4). In emission intensity upon co-addition of F⁻ and H⁻ is also
+    shown in a three-dimensional plot (Fig. 10d).
+
+
+    Fig. 9. Spectral change of i due to step-by-step addition of F⁻ and H⁻.
+
+
+    ## 3.8. Artificial neural network (ANN)
+
+
+    ANN is one and of the most useful types of organizations where information flows
+    in direction. Moreover, taking into consideration its effectiveness in predicting
+    the system behavior, we have employed ANN-function (ANN-AFF) for appropriate grading
+    and testing the system. We employ Levenberg-Marquardt method for training. The
+    ANN is coded in MATLAB 2018 [7] and the full operational details are provided
+    in the. EI is evident that the model''s most excellent validation accuracy is
+    0.026872 to epoch 5 (Fig. 11a). The augmentation of green coloured
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_6_0.png)
+
+    ![](img/4fac2303b2c663379d4910af88eef511_6_1.png)
+
+    ![](img/4fac2303b2c663379d4910af88eef511_6_2.png)
+
+
+    Fig. 10. Sketch of the fuzzy rules considering the emission response of F⁻ and
+    H''. The variables are 3 to a high degree of freedom in F⁻ (input 1) and H⁻ (input
+    2) (Fig. 9). Considering in the degree of change with respect to values, the variation
+    may be detected by a small number of functional groups (such as low, medium, and
+    high). Fig. 10 shows that the spectral change could be detected by shifts. An
+    inverse of DIFF-THEN corresponds to the result. In the antecedent, the emission
+    quenching at 685 nm with F⁻ whereas the resonance happens with H⁻. Here, FI is
+    applied in the present system upon inspecting the spectral characteristics upon
+    addition of F⁻ and H⁻. The specification of F⁻ and H⁻ generates 15 rules (Table
+    S3 and S4). In emission intensity upon co-addition of F⁻ and H⁻ is also shown
+    in a three-dimensional plot (Fig. 10d).
+
+    '
+  mdcn: '
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_3_0.png)
+
+
+    3. 1 (1×10⁻⁵ M) 在 MeCN 中逐步加入 0.1 M 的 F⁻ 后，紫外-可见吸收 (a-b) 和发射 (λ_{em} = 490 nm)
+    (c) 谱图的变化。显示了 1:1 的结合情况。
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_3_1.png)
+
+
+    图. 4. 1 (1×10⁻⁵ M) 在 MeCN 中逐步加入 0.1 M 的 HPO₄ 后的紫外-可见吸收 (a) 和发射 (λ_{em} = 490 nm)
+    (b) 谱。显示了 1:1 的结合情况。
+
+
+    1 在 298 K 下于 MeCN 中的平衡/结合常数 (K)。
+
+
+    | 阴离子 | K1 | K2 |
+
+    |---|---|---|
+
+    | F | 4.1×10⁶ | 2.4×10⁶ |
+
+    | HPO₄ | 3.8×10⁶ | 2.8×10⁶ |
+
+
+    ## 3.4. 电化学监测
+
+
+    可逆 Ru³⁺/Ru²⁺ 配合物在 E₁ = 0.2–0.94 V 处的 CV 和 SWV 轨迹，以及由于两个大基团还原而在 -1.46 V 和 -1.78
+    V 处的两个逐步可逆波（图 5 (S2)）。通过逐步加入观察到氧化还原行为，变化如图 6 所示。0.94 V 处的峰电流逐渐减小，并伴随着 0.80 V 处新峰的出现；在加入
+    2 当量的 F⁻ 期间，最初 0.94 V 处的新峰被 0.80 V 处的峰取代。Ru³⁺/Ru²⁺ 对的 E₁₂ 发生解耦（TBAH；图 S3）。该配合物的谱图与观察到的
+    F⁻ 和 AcO'' 离子时的谱图非常相似。这表明阴离子诱导的吡唑和 NH 质子分解可能发生在配合物骨架上。
+
+
+    为了证明受体与阴离子之间的相互作用，我们尝试通过将 PhCH3 扩散到过 TBAF 的 Me-MCM (2:1 v/v) 溶液中生长配合物晶。幸运的是，我们在多次尝试后成功了，配合物的结构如图
+    7 所示。结构显示 F⁻ 取消 NH 质子形成配合物。带有选定键距畸变配合物角的结晶参数见表 51 和 S2 (ESSI)。
+
+
+    ## 3.6. 操作
+
+
+    在上一节中，我们观察到配合物和阴离子在吸收、发射光谱以及电化学行为上的巨大变化。配合物在水处理后也能保留。此外，阴离子观察到的光还原配合物的光致分解后的原始形式重建是完全可逆的，可以重复多次。在这里我们将研究连续加入阴离子后的光谱和电化学性质，用于制造多个逻辑配合物。
+
+
+    ### 3.6.1. 组合逻辑与钥匙锁
+
+
+    组合逻辑基本上类似于布尔运算（“或”、“与”和“非”）。然而，在 F⁻（输入 1）和 F''''（输入 2）存在时，685 nm 处的荧光和 545 nm
+    处的吸收作为输出。低于阈值的发射猝灭和高于阈值的吸收增强证明了 F⁻ 的影响，显示了“关闭”状态 (0) 和“开启”状态 (1)。加入输入（F⁻ 和 H⁻）后整个波长范围内发射和吸收的最大值导致了蕴含（IMPLICATION）和抑制（INHIBIT）组合的概念。
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_4_1.png)
+
+
+    为了在分子水平保护数据，我们使用了钥匙锁。利用 H⁻ 和 F'''' 在 545 nm 处的吸收（图 2b），H⁻（输入 1）和 F''''（输入 2）分别分配为
+    ''N'' 和 ''T''，“开启”和“关闭”状态被指定为 ''K'' 和 ''K''''（图 S2）。可行
+
+    图 5. 在 MeCN 中逐步加入 0.1 M F⁻ 后，I (1+10⁻⁵ M) 激发态衰减曲线 (λex = 450 nm) 的变化。
+
+    图 6. 在 MeCN 中逐步加入 0.1 M F⁻ 后，I (1+10⁻⁵ M) 的 SWIs 变化。预计吡唑 NH 质子从配合物去质子化释放 E₂/Ru⁺。
+
+
+    ## 3.5. 配合物与阴离子的相互作用模式
+
+
+    在上一节中，我们观察到配合物与 F⁻、AcO⁻ 和 CN⁻ 的吸收和电化学特征有显著变化。与 H⁻ 的相互作用程度相对较小，尽管 Cl⁻、Br⁻ 和 SCN⁻。碱性阴离子
+    F⁻、AcO⁻ 和 CN⁻ 存在时，吸收和发射图中均观察到能量变化。因此，我们假设在四甲基氢根存在存在，配合物结晶过程中两个硫醇盐基之一被顺序去质子化。
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_4_2.png)
+
+
+    图 7. 显示 50% 概率椭球 1 的透视图。Inorganica Acta 550 (2023)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_0.png)
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_1.png)
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_2.png)
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_3.png)
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_4.png)
+
+
+    图 8. (a) 和 (b) 由于顺序加入 H⁻ 和 F⁻ 导致的吸收谱，(c) 和 (d) 分别对应组合逻辑和钥匙锁的真值表。(e) 和 (f) 代表这些操作的示意图，插入
+    F⁻ 或结合 H⁻ 诱导开启状态 (1) 和秘密密码“NIB”。相反，序列（加入 H⁻）导致关闭状态并产生正确密码“ENCE”，只有知道实际密码的授权人员才能解锁信息。
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_5_5.png)
+
+
+    ## 3.7. 模糊逻辑操作
+
+
+    正如 BL 操作中指出的，通过“0”或“1”扩展改变输出信号。然而，结果非常复杂，由状态之间的许多变化组成。通过处理中间状态的数量，FLS 可以是非线性输入到标量的转换。FI
+    应用于 F⁻ 和 H⁻ 化合物的光谱行为。变量数量在 F⁻（输入 1）和 H⁻（输入 2）中具有较高的自由度（图 9）。考虑到相对于值的程度，变化可以通过少数功能基团（如低、中、高）检测。图
+    10 显示光谱变化可以通过位移检测。DIFF-THEN 的逆逆对应于结果。在前提中，F⁻ 导致 685 nm 发射猝灭，而 H⁻ 处发生共振。这里，FI 应用于加入
+    F⁻ 和 H⁻ 后的光谱特征。F⁻ 和 H⁻ 的规格生成了 15 条规则（表 S3 和 S4）。F⁻ 和 H⁻ 同时加入后的发射强度也显示在三维图中（图 10d）。
+
+
+    图 9 逐步加入 F⁻ 和 H⁻ 导致 i 的光谱变化。
+
+
+    ## 3.8. 人工神经网络 (ANN)
+
+
+    ANN 是信息流向最有用的类型之一。此外，考虑到其预测系统行为的有效性，我们使用了 ANN 函数（ANN-AFF）对系统进行适当评分和测试。我们采用 Levenberg-Marquardt
+    方法进行训练。ANN 在 MATLAB 2018 [7] 中编码，完整的操作细节见于。EI 直而易见，模型的最佳验证准确率为 epoch 5 时的 0.026872（图
+    11a）。绿色的增强
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_6_0.png)
+
+    ![](img/4fac2303b2c663379d4910af88eef511_6_1.png)
+
+    ![](img/4fac2303b2c663379d4910af88eef511_6_2.png)
+
+
+    图 10. 考虑 F⁻ 和 H'' 发射响应的模糊规则草图。变量在 F⁻（输入 1）和 H⁻（输入 2）中具有较高的自由度（图 9）。考虑到相对于值的程度，变化可以通过少数功能基团（如低、中、高）检测。图
+    10 显示光谱变化可以通过位移检测。DIFF-THEN 的逆逆对应于结果。在前提中，F⁻ 导致 685 nm 发射猝灭，而 H⁻ 处发生共振。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 7]
+
+
+    # (a) Best Validation Performance is 0.028672 at epoch 5
+
+
+    # (b) Error Histogram with 20 Bins
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_0.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_1.png)
+
+
+    # Training: R=0.99995
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_2.png)
+
+
+    # Validation: R=0.99998
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_3.png)
+
+
+    # Test: R=0.99986
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_4.png)
+
+
+    # All: R=0.99994
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_5.png)
+
+
+    # Hidden
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_6.png)
+
+
+    Fig. 11. (a) Minimization of mse up to epoch 5. (b) Error histogram. (c) Comparison
+    of the outputs by linear regression and ANN model. (d) Generated ANN scheme.
+
+
+    To build the system, 70% data was used for training the rest 30% for testing.
+    The training error is found to reduce generally to 10⁻⁵ epochs signifying that
+    the system learns in each individual step (Fig. 12b). For 2 inputs and 3 membership
+    functions, the result will create 3² = 9 rules (Table S3 and Table S5). The conceivable
+    aggregation of ''F and H'' generates the output response consists of 9 rules based
+    on Sugeno''s method (Eq. 15c The ANFIS predicted results are displayed in 3 plots
+    (Fig. 15e), while the produced ANFIS system is shown in Fig.13d on the basis of
+    rules. By providing the diverse values of inputs in the rule viewer of FL and
+    the part of ANN in MATLAB-R2018a we sum up the inputs in Table 3. The evaluation
+    of the ANFIS network is deliberately considering its root squared error (RMSE)
+    values. Testing RMSE of 0.19561 is indeed of proper functionality of the system.
+    The output obtained from ANN is very close to that of the experimental results
+    compared with FL and NN. Table 3 compares'
+  - '[PAGE 8]
+
+
+    # S Deb et al.
+
+
+    # Inorganica Chemica Acta 550 (2023) 121451
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_8_0.png)
+
+
+    Fig. 12. (a) ANFIS training data set. (b) Statistical performance indicator (rmse)
+    up to 50 epochs. (c) Testing dataset to measure the accuracy of the network. (d)
+    Comparison of testing data with ANFIS network outputs.
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_8_1.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_8_2.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_8_3.png)
+
+
+    Fig. 13. (a, b, c) Schematic presentation of ANFIS making 9 rules. (d) Corresponding
+    ANFIS structure. (e) Alteration of emission intensity due to addition of F- and
+    H+.'
+  - '[PAGE 9]
+
+
+    # Acknowledgements
+
+
+    S. Baitalik acknowledges financial support from DST-SERB [Grant No. 2020/001233]
+    and CSIR [Grant No. 01/2945/18]-EMR-II, Dev India, S. acknowledges DST-INSPIRE
+    and A. Saho acknowledges CSIR for research funding.
+
+
+    # Table 3
+
+
+    Comparison of experimental data with fuzzy, ANFIS and ANFIS outputs.
+
+
+    | Input Combination | Input (F) | Input (H'') | Fuzzy Output | ANFIS Output |
+    ANFIS Output |
+
+    |---|---|---|---|---||
+
+    | 1 | 0.24 | 2.51 | 65.36 | 64.31 | 63.81 |
+
+    | 2 | 0.95 | 1.95 | 48.62 | 47.66 | 47.52 |
+
+    | 3 | 1.33 | 2.34 | 63.31 | 63.48 | 62.98 |
+
+    | 4 | 1.43 | 2.95 | 45.61 | 26.73 | 26.92 |
+
+    | 5 | 1.97 | 1.81 | 18.21 | 1.77 | 1.77 |
+
+
+    # Appendix A. Supplementary data
+
+
+    Supplementary data to this article can be found at: https://doi.org/10.1016/j.imosa.2023.122451.
+
+
+    outputs of Fuzzy, ANFIS and ANFIS models with the experimental results. In, ANFIS
+    is found to be the best optimization system.
+
+
+    # References
+
+
+    +   [1] N. Ritha, B. F. Q., Z. Khan, F. Hamed, A. Ismail, A. Jain, N. Ahmad, Soft
+    Comput. (2023), 27(5), 2545–2559.
+
+    [2] A. M. C., Müller, J. C., Chem. Int. Model. (2009), 39(1), 125–126.
+
+    [3] P. M. Filmore, A. Gour,,. Chem. Env. Sci. (2020), 59(12), 1860–1885.
+
+    [4] F. Jiang, C. S., Xu, Y., Zhang, J., Liu, J., Chen, X., Xu, Y., Chem. Environ.
+    Res. (2021), 14(6), 2311–2318.
+
+    [5] L. J., Sessler, M. A., ACS. Chem. Res. (2004), 38(9), 927–938.
+
+    [6] A. S. Sun, Y. Wang, J. J., J. Anal. Chem. (2008), 25(10), 1518–1520.
+
+    [7] C. Gallagher, P. A., Lee, S., Chem. Env. Sci. (2009), 58(6), 529–530.
+
+    [8] R. Martineau, F. Sanchez, Chem. Anal. (2003), 44(4), 4479–4486.
+
+    [9] H. C. Rice, Reed, Chem. Env. (2000), 25(9), 3199–3206.
+
+    [10] A. M. Ahmed, Chem. Anal. Proc. (2006), 99(2), 2411–2415.
+
+    [11] B. Khowndary, D., Saini, K., Chem. Environ. Sci. (2014), 25(27), 5721–5738.
+
+    [12] T. H. Wang, Z. B., Zhang, Y., Chem. Environ. Sci. (2016), 47(7), 4775–4779.
+
+    [13] Z. B. Zheng, Z. J., Duan, Y. M., Ke, X. Y., Chem. Environ. Sci. (2016), 52(3),
+    2311–2316.
+
+    [14] F. Chen, H. C., Xu, Y., Zhang, J., Chem. Environ. Res. (2021), 146(14), 1460–1465.
+
+    [15] Z. B. Zheng, Z. J., Duan, Y. M., Ke, X. Y., Chem. Environ. Sci. (2016), 52(9),
+    5275–5283.
+
+    [16] B. Towarden, C. Mutmen, R. H., Geller, W. D., Saini, D., Sanni, F. J., J.
+    Analx. Chem. (2009), 32(6), 2006–2014.
+
+    [17] F. B. S., V. Baitalik, M. K., G. S. E. S. S. S..., Chem. Anal. Anal. (2017),
+    58(1), 12010–12011.
+
+    [18] M. Bar, S. A. P., Sarı, A., Baitalik, Chem. Environ. (2020), 61(12), 6380–6386.
+
+    [19] D. Mahtry, S., Sarkaya, A., Baitalik. Phys. (2012), 51(8), 8992–8998.
+
+    [20] D. S. Sarı, M. A. P., Chem. Anal. Anal. (2019), 50(15), 5045–5055.
+
+    [21] D. Mahtry, S., Sarkaya, A., Baitalik, Dultran Pharm (2014), 44(5).
+
+    [22] J. G. Güner, N. Jery, K. L., D. F. D. A, A. P. Silva, Chem. (2015), 47(4),
+    4472–4478.
+
+    [23] J. G. Ling, B. Daly., V. A. D. Silva, A. P. Silva, Chem. Commun. (2015),
+    55(2), 1195–1196.
+
+    [24] J. G. Ling, K. T. Somy, M. D. A, A. P. Silva, Chem. Soc. (2017), 137(9),
+    2763–2766.
+
+    [25] Y. Alexander, A. B. D. Choi, F. Reyes, E. E. Chem. (2002), 66(2), 4062–4061.
+
+    [26] A. A. Teif, H. U. N. Qanaroglu, P. C. McKay. (1994), 44(22), 1933–1944.
+
+
+    # 4. Conclusions
+
+
+    In course of our ongoing research activities in the promotion of molecular chemistry,
+    by implementing the learning techniques in chemistry, we investigated the anionic
+    sensing characteristics of a benzothiazole-pyrazine raspberry(b)-pyridine hybrid
+    complex via multiple analytical and optical methods throughout a wide range of
+    environmental outcomes. The complexes possess one NH2 group in their outer chemical
+    system which can interact with anions via hydrogen bonding or anion-protonation.
+    Anionic sensing of the probe is thoroughly investigated via absorption and emission
+    spectroscopy. The electrochemical and optoelectronic properties of the complex
+    occurs under the selection of anions. The anionic deion of the complex is also
+    demonstrated through single X-ray crystallography, which shows the “on-state”,
+    while presence of anions causes emission quenching and to the “off-state”. The
+    nature of the initial state of the complex can be feasible in presence of acid.
+    We can see that the fluorescence intensity shortest is the lowest quantum yield
+    of the complex is detected by naked eye. This approach allows visual detection
+    of anions by changing the colour in presence of two ligands in the ligand environment.
+
+
+    Another aspect of the presented work is that the absorption and emission properties
+    of the complex upon the action of specific anions are used to determine Boolean
+    and logic functions. Moreover, several machine learning tools such as FL, ANN,
+    and ANFIS have been used for analysis and prediction of experimentally observed
+    sensing characteristics of the complex. The tools are compared with that of the
+    experimental results. Interestingly, the ANFIS model is found to be superior decision
+    making and learning tool over FL and ANFIS.
+
+
+    # Declaration ofing Interest
+
+
+    The authors declare that they have no known conflict of interest or personal relationships
+    that could have affected the interpretation reported in this work.
+
+
+    # Data availability
+
+
+    The data will be available on request.'
+  - '[PAGE 10]
+
+
+    [51] A. Adamczyk, M. Teplár, H.A. Waters, A.I. Powell, A.E. Beasley, R. Mayne,
+
+    Bioscience, 1998 (2020) 1024138,
+
+
+    [52] A.P. de Silva, N.D. McNaghan, Chem. Eur. J. 10 (2009) 574-582.
+
+
+    [53] S. J. G. Santos, S. J. Santos, S. K. Ku, Y. Wu, J. Wang, Biosensors Biores.
+    Bioelect.
+
+    72 (2015) 218-224.
+
+
+    [54] V. Kravtsov, G. LaForce, S. Abels, E.F. Khisamutdinov, Nanomaterials 8 (2018)
+
+    984,
+
+
+    [55] S. Mardenya, D. Mondal, K. Karmakar, S. Baitlik, Sens. Actuators B: Chem.
+    239
+
+    (2018) 225-230,
+
+
+    [56] L. A. Zadeh. Fuzzy sets in fuzzy sets, fuzzy logic, and fuzzy systems: selected
+
+    speeds. IEEE (1999) 11992-11997.
+
+
+    [57] P. L. Gentili, J. Phys. Chem. A, 112 (2008) 10335-10344,
+
+
+    [58] P. L. Gentili, ChemPhys. ChemPhysChem 13 (2011) 20335-20344,
+
+
+    [59] P. L. Gentili, ChemPhys 15 (2015) 6114-6123,
+
+
+    [60] P. L. Gentili, M.S. Giubila, R. Gentelli, A. Mazzucciani, ChemPhysChem 18
+    (2017) 1831-1841,
+
+
+    [61] P. L. Gentili, M.S. Giubila, R. Gentelli, A. Mazzucciani, A. Spalietti, B.
+
+    M. Heron, Angew. Chem. Int. Ed. 56 (2017) 7535-7540.
+
+
+    [62] F. L. Gentili, J.C. Michane, Photobond. 43 (2020) 100921,
+
+
+    [63] A. Sahoo, T. Ahmed, S. Deb, S. Baitlik, Inorg. Chem. 61 (2022) 10242-10254,
+
+
+    [64] A. Sahoo, S. Baitlik, Front. Chem. 6 (2022) 10242-10254,
+
+
+    [65] S. Deb, A. Sahoo, P. Mondal, S. Baitlik, Dalton Trans. 55 (2022) 15601-15613,
+
+
+    [66] D. Deb, A. Sahoo, S. Baitlik, S. Banerjee, A.C.S. Appl. Polym. Mater. 4 (2022)
+
+    5583-5595,
+
+
+    [67] R. Milch, K. Rycko, L. Luckach, A. Domnard, C. Beester, I. Tamlin, Chem.
+    Sci. 10
+
+    (2026) 10442-10453,
+
+
+    [68] I. Li, X. Chen, Nanoscale, 14 (2022) 6688-6708,
+
+
+    [69] Y. Wang, J. Zhang, J. Anal. Chem. Res. 55 (2020) 11356-11362,
+
+
+    [70] D. Mingol, J. Liu, and J. Int. Eng. Chem. Res. 52 (2017) 4429-4435,
+
+
+    [71] M. Inal, Ind. Eng. Chem. Res. 53 (2014) 4975-4980,
+
+
+    [72] MATLAB. The math works Inc., Natick, Massachusetts, United States, 17 (1978)
+    3334-3341,
+
+
+    [73] J. R. Jang, J. C. Tan, Proc. IEEE, 81 (1993) 976-980,
+
+
+    [74] M. Sugeno, T. Tanaka, IEEE Trans. Fuzzy Syst. 1 (1993) 7-31,'
+  md: '
+
+    ## (a) Best Validation Performance is 0.028672 at epoch 5
+
+
+    ## (b) Error Histogram with 20 Bins
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_0.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_1.png)
+
+
+    ## Training: R=0.99995
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_2.png)
+
+
+    ## Validation: R=0.99998
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_3.png)
+
+
+    ## Test: R=0.99986
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_4.png)
+
+
+    ## All: R=0.99994
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_5.png)
+
+
+    ## Hidden
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_6.png)
+
+
+    Fig. 11. (a) Minimization of mse up to epoch 5. (b) Error histogram. (c) Comparison
+    of the outputs by linear regression and ANN model. (d) Generated ANN scheme.
+
+
+    To build the system, 70% data was used for training the rest 30% for testing.
+    The training error is found to reduce generally to 10⁻⁵ epochs signifying that
+    the system learns in each individual step (Fig. 12b). For 2 inputs and 3 membership
+    functions, the result will create 3² = 9 rules (Table S3 and Table S5). The conceivable
+    aggregation of ''F and H'' generates the output response consists of 9 rules based
+    on Sugeno''s method (Eq. 15c The ANFIS predicted results are displayed in 3 plots
+    (Fig. 15e), while the produced ANFIS system is shown in Fig.13d on the basis of
+    rules. By providing the diverse values of inputs in the rule viewer of FL and
+    the part of ANN in MATLAB-R2018a we sum up the inputs in Table 3. The evaluation
+    of the ANFIS network is deliberately considering its root squared error (RMSE)
+    values. Testing RMSE of 0.19561 is indeed of proper functionality of the system.
+    The output obtained from ANN is very close to that of the experimental results
+    compared with FL and NN. Table 3 compares
+
+
+    S Deb et al.
+
+
+    Inorganica Chemica Acta 550 (2023) 121451
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_8_0.png)
+
+
+    Fig. 12. (a) ANFIS training data set. (b) Statistical performance indicator (rmse)
+    up to 50 epochs. (c) Testing dataset to measure the accuracy of the network. (d)
+    Comparison of testing data with ANFIS network outputs.
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_8_1.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_8_2.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_8_3.png)
+
+
+    Fig. 13. (a, b, c) Schematic presentation of ANFIS making 9 rules. (d) Corresponding
+    ANFIS structure. (e) Alteration of emission intensity due to addition of F- and
+    H+.
+
+
+    ## Acknowledgements
+
+
+    S. Baitalik acknowledges financial support from DST-SERB [Grant No. 2020/001233]
+    and CSIR [Grant No. 01/2945/18]-EMR-II, Dev India, S. acknowledges DST-INSPIRE
+    and A. Saho acknowledges CSIR for research funding.
+
+
+    ## Table 3
+
+
+    Comparison of experimental data with fuzzy, ANFIS and ANFIS outputs.
+
+
+    | Input Combination | Input (F) | Input (H'') | Fuzzy Output | ANFIS Output |
+    ANFIS Output |
+
+    |---|---|---|---|---|---|
+
+    | 1 | 0.24 | 2.51 | 65.36 | 64.31 | 63.81 |
+
+    | 2 | 0.95 | 1.95 | 48.62 | 47.66 | 47.52 |
+
+    | 3 | 1.33 | 2.34 | 63.31 | 63.48 | 62.98 |
+
+    | 4 | 1.43 | 2.95 | 45.61 | 26.73 | 26.92 |
+
+    | 5 | 1.97 | 1.81 | 18.21 | 1.77 | 1.77 |
+
+
+    ## Appendix A. Supplementary data
+
+
+    Supplementary data to this article can be found at: https://doi.org/10.1016/j.imosa.2023.122451.
+
+
+    outputs of Fuzzy, ANFIS and ANFIS models with the experimental results. In, ANFIS
+    is found to be the best optimization system.
+
+
+    ## References
+
+
+    - [1] N. Ritha, B. F. Q., Z. Khan, F. Hamed, A. Ismail, A. Jain, N. Ahmad, Soft
+    Comput. (2023), 27(5), 2545–2559.
+
+    - [2] A. M. C., Müller, J. C., Chem. Int. Model. (2009), 39(1), 125–126.
+
+    - [3] P. M. Filmore, A. Gour,,. Chem. Env. Sci. (2020), 59(12), 1860–1885.
+
+    - [4] F. Jiang, C. S., Xu. Y., Zhang, J., Liu., J., Chen., Xu., Y., Chem. Environ.
+    Res. (2021), 14(6), 2311–2318.
+
+    - [5] L. J., Sessler, M. A., ACS. Chem. Res. (2004), 38(9), 927–938.
+
+    - [6] A. S. Sun, Y. Wang, J. J. Anal. Chem. (2008), 25(10), 1518–1520.
+
+    - [7] C. Gallagher, P. A., Lee, S., Chem. Env. Sci. (2009), 58(6), 529–530.
+
+    - [8] R. Martineau, F. Sanchez, Chem. Anal. (2003), 44(4), 4479–4486.
+
+    - [9] H. C. Rice, Reed, Chem. Env. (2000), 25(9), 3199–3206.
+
+    - [10] A. M. Ahmed, Chem. Anal. Proc. (2006), 99(2), 2411–2415.
+
+    - [11] B. Khowary, D. Saini, K., Chem. Environ. Sci. (2014), 25(27), 5721–5738.
+
+    - [12] T. H. Wang, Z. B., Zhang, Y., Chem. Environ. Sci. (2016), 47(7), 4775–4779.
+
+    - [13] Z. B. Zheng, Z. J., Duan, Y. M., Ke, X. Y., Chem. Environ. Sci. (2016),
+    52(3), 2311–2316.
+
+    - [14] F. Chen, H. C., Xu., Y., Zhang, J., Chem. Environ. Res. (2021), 14(14),
+    1460–1465.
+
+    - [15] Z. B. Zheng, Z. J., Duan, Y. M., Ke, X. Y., Chem. Environ. Sci. (2016),
+    52(9), 5275–5283.
+
+    - [16] B. Towarden, C. Mutmen, R. H., Geller, W. D., Saini, F., J. Anal. Chem.
+    (2009), 32(6), 2006–2014.
+
+    - [17] F. B. S., V. Baitalik, M. K., S. S., Chem. Anal. (2017), 58(1), 12010–12011.
+
+    - [18] M. Bar, S. A. P., Sarı, A., Baitalik, Chem. Environ. (2020), 61(12), 6380–6386.
+
+    - [19] D. Mahtry, S., Sarkaya, A., Baitalik. Phys. (2012), 51(8), 8992–8998.
+
+    - [20] D. S. Sarı, M. A. P., Chem. Anal. Anal. (2019), 50(15), 5045–5055.
+
+    - [21] D. Mahtry, S., Sarkaya, A., Baitalik, Dultran Pharm (2014), 44(5).
+
+    - [22] J. G. Güner, N. Jery, K. L., D. F. A, A. P. Silva, Chem. (2015), 47(4),
+    4472–4478.
+
+    - [23] J. G. Ling, B. Daly., V. A. D. Silva, A. P. Silva, Chem. Commun. (2015),
+    55(2), 1195–1196.
+
+    - [24] J. G. Ling, K. T. Somy, M. D. A, A. P. Silva, Chem. Soc. (2017), 137(9),
+    2763–2766.
+
+    - [25] Y. Alexander, A. B. D. Choi, F. Reyes, E. E. Chem. (2002), 66(2), 4062–4061.
+
+    - [26] A. A. Teif, H. U. N. Qanaroglu, P. C. McKay. (1994), 44(22), 1933–1944.
+
+
+    ## 4. Conclusions
+
+
+    In course of our ongoing research activities in the promotion of molecular chemistry,
+    by implementing the learning techniques in chemistry, we investigated the anionic
+    sensing characteristics of a benzothiazole-pyrazine raspberry(b)-pyridine hybrid
+    complex via multiple analytical and optical methods throughout a wide range of
+    environmental outcomes. The complexes possess one NH2 group in their outer chemical
+    system which can interact with anions via hydrogen bonding or anion-protonation.
+    Anionic sensing of the probe is thoroughly investigated via absorption and emission
+    spectroscopy. The electrochemical and optoelectronic properties of the complex
+    occurs under the selection of anions. The anionic deion of the complex is also
+    demonstrated through single X-ray crystallography, which shows the “on-state”,
+    while presence of anions causes emission quenching and to the “off-state”. The
+    nature of the initial state of the complex can be feasible in presence of acid.
+    We can see that the fluorescence intensity shortest is the lowest quantum yield
+    of the complex is detected by naked eye. This approach allows visual detection
+    of anions by changing the colour in presence of two ligands in the ligand environment.
+
+
+    Another aspect of the presented work is that the absorption and emission properties
+    of the complex upon the action of specific anions are used to determine Boolean
+    and logic functions. Moreover, several machine learning tools such as FL, ANN,
+    and ANFIS have been used for analysis and prediction of experimentally observed
+    sensing characteristics of the complex. The tools are compared with that of the
+    experimental results. Interestingly, the ANFIS model is found to be superior decision
+    making and learning tool over FL and ANFIS.
+
+
+    ## Declaration of Interest
+
+
+    The authors declare that they have no known conflict of interest or personal relationships
+    that could have affected the interpretation reported in this work.
+
+
+    ## Data availability
+
+
+    The data will be available on request.
+
+    '
+  mdcn: '
+
+
+    ## (a) 验证性能在第 5 个 epoch 时达到 0.028672
+
+
+    ## (b) 20 分箱的误差直方图
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_0.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_1.png)
+
+
+    ## 训练: R=0.99995
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_2.png)
+
+
+    ## 验证: R=0.99998
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_3.png)
+
+
+    ## 测试: R=0.99986
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_4.png)
+
+
+    ## 所有: R=0.99994
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_5.png)
+
+
+    ## 隐藏
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_7_6.png)
+
+
+    图 11. (a) 直至 5 个 epoch 的 mse 最小化。(b) 误差直方图。(c) 线性回归和 ANN 模型输出的对比。((d) 生成的 ANN
+    方案。
+
+
+    为了构建该系统，使用了 70% 的数据进行训练，其余 30% 用于测试。发现训练误差通常降低到 10⁻⁵ epochs，这表明系统在每个单独步骤中都在学习（图
+    12b）。对于 2 个输入和 3 个隶属度函数，结果将产生 3² = 9 条规则（表 S3 和表 S5）。“F 和 H”的可想聚合基于 Sugeno 方法（公式
+    15c）生成了包含 9 条规则的输出响应。ANFIS 预测结果显示在 3 幅图中（图 15e），而基于规则产生的 ANFIS 系统如图 13d 所示。通过在
+    FL 的规则查看器和 MATLAB-R2018a 的 ANN 部分提供输入的各种化值，我们对表 3 中的输入进行了求和。对 ANFIS 网络的评估特意考虑了其均方根误差（RMSE）值。0.19561
+    的测试 RMSE 确实表明系统具有良好的功能。与 FL 和 NN 相比，从 ANN 的输出与实验结果非常接近。表 3 比较了
+
+
+    S Deb 等
+
+
+    Inorganica Chemica Acta 550 (2023) 121451
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_8_0.png)
+
+
+    图 12. (a) ANFIS 训练数据集。(b) 直至 50 个 epoch 的统计性能指标 (rmse)。(c) 用于测量网络准确性的测试数据集。(d)
+    测试数据与 ANFIS 网络输出的对比。
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_8_1.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_8_2.png)
+
+
+    ![](img/4fac2303b2c663379d4910af88eef511_8_3.png)
+
+
+    图 13. (a, b, c) ANFIS 生成 9 条规则的示意图。(d) ANFIS 结构。(e) 添加 F 和 H 导致的强度变化。
+
+
+    ## 感谢
+
+
+    S. Baitalik 感谢来自 DST-SERB [资助号 2020/00123] 和 CSIR [资助号 01/2945/18]-EMR-II 的资金支持，S.
+    Dev. 感谢 DST-INSPIRE 的资金支持。
+
+
+    ## 表 3
+
+
+    实验数据、模糊和 ANFIS 输出的对比。
+
+
+    | 输入组合 | 输入 (F) | 输入 (H) | 模糊输出 | ANFIS 输出 | ANFIS 输出 |
+
+    |---|---|---|---|---|---|
+
+    | 1 | 0.24 | 2.51 | 65.36 | 64.31 | 63.81 |
+
+    | 2 | 0.95 | 1.95 | 48.62 | 47.66 | 47.52 |
+
+    | 3 | 1.33 | 2.34 | 63.31 | 63.48 | 62.98 |
+
+    | 4 | 1.43 | 2.95 | 45.61 | 26.73 | 26.92 |
+
+    | 5 | 1.97 | 1.81 | 18.21 | 1.77 | 1.77 |
+
+
+    ## 附录 A
+
+
+    本文的补充数据可以在此处找到：https://doi.org/10.1016/j.imosa.2023.122451。模糊和 ANFIS 模型被认为是最佳优化系统。
+
+
+    ## 参考文献
+
+
+    - [1] N. Ritha, B. F. Q., Z. Khan, F. Hamed, A. Ismail, N. Ahmad, Soft Comput.
+    (2023), 27(5), 2545–2559.
+
+    - [2] A. M. C., Müller, J. C., Model. (2009), 39(1), 125–126.
+
+    - [3] P. M. Filmore, A. Gour,, Chem. Env. Sci. (2020), 59(12), 1860–1885.
+
+    - [4] F. Jiang, C. S., Xu. Y., Zhang, J., Chen., Xu., Y., Chem. Environ. Res.
+    (2021), 14(6), 2311–2318.
+
+    - [5] L. J., Sessler, M. A., ACS. Chem. Res. (2004), 38(9), 927–938.
+
+    - [6] A. S. Sun, Y. Wang, J. Anal. Chem. (2008), 25(10), 1518–1520.
+
+    - [7] C. Gallagher, P. A., Lee, S., Chem. Env. Sci. (2009), 58(6), 529–530.
+
+    - [8] R. Martineau, F. Sanchez, Chem. Anal. (2003), 44(4), 4479–4486.
+
+    - [9] H. C. Rice, Reed, Chem. Env. (2000), 25(9), 3199–3206.
+
+    - [10] A. M. Ahmed, Chem. Anal. Proc. (2006), 99(2), 2411–2415.
+
+    - [11] B. Khowary, D. Saini, K., Chem. Environ. Sci. (2014), 25(27), 5721–5738.
+
+    - [12] T. H. Wang, Z. B., Zhang, Y., Chem. Environ. Sci. (2016), 47(7), 4775–4779.
+
+    - [13] Z. B. Zheng, Z. J., Duan, Y. M., Ke, X. Y., Chem. Environ. Sci. (2016),
+    52(3), 2311–2316.
+
+    - [14] F. Chen, H. C., Xu., Y., Zhang, J., Chem. Environ. Res. (2021), 14(14),
+    1460–1465.
+
+    - [15] Z. B. Zheng, Z. J., Duan, Y. M., Ke, X. Y., Chem. Environ. Sci. (2016),
+    52(9), 5275–5283.
+
+    - [16] B. Towarden, C. Mutmen, R. H., Geller, W. D., Saini, F., J. Anal. Chem.
+    (2009), 32(6), 2006–2014.
+
+    - [17] F. B. S., V. Baitalik, M. K., S. S., Chem. Anal. (2017), 58(1), 12010–12011.
+
+    - [18] M. Bar, S. A. P., Sarı, A., Baitalik, Chem. Environ. (2020), 61(12), 6380–6386.
+
+    - [19] D. Mahtry, S., Sarkaya, A., Baitalik. Phys. (2012), 51(8), 8992–8998.
+
+    - [20] D. S. Sarı, M. A. P., Chem. Anal. Anal. (2019), 50(15), 5045–5055.
+
+    - [21] D. Mahtry, S., Sarkaya, A., Baitalik, Dultran Pharm (2014), 44(5).
+
+    - [22] J. G. Güner, N. J.
+
+
+    ## 4. 结论
+
+
+    在分子化学的持续研究过程中，通过引入学习技术，我们通过多种分析和光学方法研究了苯并唑-聚嗪-吡啶杂配合物的阴离子传感特性。复合合物在其化学体系中有一个 NH2
+    基团，可以通过氢键或质子化与阴离子相互作用。通过吸收和发射光谱对阴离子传感进行了深入研究。电化学和光电性质在选择阴离子时发生。阴离去离也通过单晶衍射得到证实，显示了“开启状态”，而阴离子的存在会导致猝灭并进入“关闭状态”。复合合物初始状态的性质在酸存在是可行的。我们可以看到荧光强度最短时复合合物的量子产率最低，肉眼可见。这种方法允许通过配体环境中两种配体的颜色变化来实现阴离子的视觉检测。
+
+
+    本工作的另一个方面是，特定阴离子作用下复合物的吸收和发射性质被用于确定布尔和逻辑函数。此外，使用了 FL、ANN 和 ANFIS 等多种机器学习工具来分析和预测实验观察到的复合传感特性。将这些工具与实验结果进行了对比。有趣的是，ANFIS
+    模型被认为是比 FL 和 ANFIS 更优的决策和学习工具。
+
+
+    ## 利益冲突
+
+
+    作者声明没有已知的利益冲突或可能影响本文报告的个人关系。
+
+
+    ## 数据可用性
+
+
+    数据可根据要求提供。
+
+
+    '
+  merge: 0
