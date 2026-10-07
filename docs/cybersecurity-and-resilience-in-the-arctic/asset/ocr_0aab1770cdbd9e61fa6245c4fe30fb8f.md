@@ -1,0 +1,14 @@
+# Analytics for Decision Support in the Arctic
+
+Jassim HAPPA$^{s,1}$ Royal Holloway, University of London
+
+**Abstract.** Threats such as attackers, accidents, wear and tear, and natural forces make analytics for resilience a challenging task. The Arctic region presents distinct resilience challenges compared to other regions of the world. Threat detection and mitigation become particularly challenging when considering regional defence such as a cold climate, extreme weather, a lack of access toed resources, a sparse distribution of technologies including telecommunications towers/ablesables and real-world sensors in networks, a lack of fall back and recovery options, large distances between technologies and civilisation, as well as their purpose is to provide a discussion on analytics and decision-making challenges for resilience in the arctic, and how these might be addressed by current research efforts. Specifically, this paper outlines a number of academic works for situational awareness and decision-making support using tools and methods to improve resilience of organisations, infrastructures and missions. I discuss how these works might be applied in the arctic, as well as the challenges in doing so.
+
+**Keywords.** Resilience, Cybersecurity, Analytics, Threat Detection, Decision Support
+
+# 1. Introduction
+
+Two key aims of analytics tools and techniques is to improve situational awareness and decision-making. It is difficult to predict, detect and discern real-world consequences of threats². There are many reasons for this, some include: we may not have enough data to assess a situation; we may not have the most relevant data available; we may not have the capabilities or capacities to assess the data; or we may not trust the data we have received (it may be out of date, from an untrusted source or it may be noisy data). Well-informed decision making can make systems more resilient and robust against threats. Improving resilience in systems is not only about improving cybersecurity, it also concerns how systems relate to the natural world, technical, social and societal factors. Resilience is here defined as a system's ability to deliver its intended output at expected times while being exposed to threats. While it is more precise to make a distinction between resilience and robustness – resilience, strictly speaking, would refer to a system's ability to recover from incidents, whereas robustness
+
+> $^1$ Corresponding Author, Jassim Happa, Information Security Group, Royal Holloway, University of London UK; E-mail: jassim@rhul.ac.uk
+$^2$ The term "system" is used here in its broadest possible sense encompassing this discussion such as: organisations, infrastructures, and missions as persons. A large portion of this could be applied to improve organisation's resilience, infrastructure resilience or mission etc.

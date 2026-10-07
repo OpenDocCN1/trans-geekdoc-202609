@@ -1,0 +1,13 @@
+M. Pollock et al. / U.S. Navy Resilience in the Arctic
+
+This case is not just for critical infrastructures but additionally for other key U.S. Navy and NATO elements, from Systems of Systems (SoS), ships, and materiel to logistics, communication, and supply chains. The USN already utilizes risk management in order to maintain its competitive advantage. However, as the examples of potential threats and disruptions outlined in this chapter demonstrate, risk management alone will not be enough to counter a rising tide of new and unknown threats. If the USN incorporates resilience in its systems, infrastructure, and tools, it may help to retain control of the seas. Indeed, as mentioned in the introduction, the 2018 National Defense Strategy explicitly states the need for a more resilient Joint Force, which would course include a more resilient USN [5].
+
+Given that we are considering resilient systems specifically for the military, it is possible to provide more details regarding what such systems might look like. There are several definitions in the literature regarding resilience in the military context. According to Alexeev et al. (2017), resilience requires that military networks:
+
++   ...operate while under constant attack in cyberspace and the real world... automatically determine when a problem has occurred and reconfigure or adapt to restore services automatically or notify the human if manual intervention is required... [and] degrade gracefully to provide minimal services in the event of major failures. [153]
+
+According to the Engineered Resilient Systems (ERS) program of the DoD, resilient military systems are “dependable, easily modified to meet mission goals, and produce a predictable lifecycle” [154]. In a presentation of the ERS Scientific and Technical Priority Description and Roadmap, ERS led Neches (2011) goes into more detail, describing a resilient system as one which is “Effective in a wide range of situations, ready to adapt to others through reconfiguration or replacement, with graceful and detectable degradation of function” [155]. According to Goeriger et al. (2014):
+
+The DoD perspective on resilience subsumes earlier definitions. However, the DoD is now in addition to these characteristics, DoD systems are expected to perform effectively in a wide range of operations across multiple potential alternative futures despite experiencing disruptions. This ability or property is termed Broad Utility. In light of the foregoing, the four key properties of a resilient DoD system are: Repel/Resist/Absorb; Recovery; Adapt; and Broad Utility. [156]
+
+130

@@ -1,0 +1,19 @@
+# J. Hall et al. / Framing the Arctic Part II: Complex Systems and the Need for Resilience
+
+infrastructure along its Northern and Eastern coastlines, with $300 billion already invested, and another $82 billion declared in investments over the next five years.
+
+In Russia, major ports include Murmansk, Dikanga, Igarka, Tiksi, Arkhangelsk, Dickson, Pevek, Sabetta and Uelen. Major Canadian ports include Churchill, Iqaluit, Mittimatalik, and Tuktoyaktuk. In Norway the ports of Kirkenes, Varda, Tromso, Hammerfest, Harstad and Kokkola are the largest, while the USA’s largest Arctic ports reside in Anchorage, Dutch Harbor, Barrow, Valdez and Red Dog [38].
+
+# 1.4.3. Telecommunication
+
+Connection to the world's largest telecommunication network, is an integral part of everyday life in the Arctic. Communities separated by vast across the Arctic are often far from the outside world, and while technology cannot bridge all of the resulting social gaps, the security and wellbeing of people in these communities greatly facilitated by communication technology, helping to secure social stability in their northernmost locations.
+
+The Task Force on Telecommunication Infrastructure in the Arctic (TFTIA) was established by Ministers of the Arctic States at the 2015 Arctic Council Ministerial in Iqaluit. Ministers noted "the importance of telecommunications to Arctic communities, science, navigation and emergency response" and created the TFTIA to "develop a circular infrastructure assessment as a first step in ways to improve telecommunications in the Arctic, and report to Ministers in 2017"
+
+The reports show that this technology or combination of technologies for any specific case in the Arctic depends on users needs, geography and other factors. Presently, communication over the northernmost parts of the Arctic is possible, but only with selections systems with limited bandwidth capabilities. These typically use VHF/HF radio communications and Iridium satellite voice and data services [40]. Limitations on connectivity are provided by geostationary satellites in the case of the Arctic, however, improvement in this area of telecommunications looks likely, as communities seek to develop new什么样的 the Arctic almost full coverage.
+
+The report also outlines that there are large disparities in connectivity and accessibility between more populated regions with larger communities and those in remote places. Vast geographical distances and few broadband providers ensure that areas with low population lack reliable, accessible and affordable broadband.
+
+The importance of subsea cables in a world dependent raises question how subsea cables are governed under international law, who is liable for their security and maintenance, and what threats might exist in regard to them. While UNCLOS owns may cables in different waters (Article 112 UNCLOS), it is unclear who is to provide security and protection against outside interference. Security issues surrounding subsea cables and telecommunications as a whole have been emerging for some time; although not as easy as on fiber-optic cables, the capability to "wiretap" has been around for over a century, and the capacity to physically sever subsea cables at the depth of thousands miles has been feasible since the development of deep sea submersibles that can be launched from submarines. Such an act could have dramatic impacts, cutting off a from global internet access putting national and internal security, the economy, and social cohesion at significant risk.
+
+Overall, the overseas communication industry has built-in resiliency for rugged, operational single point failures. However, multi-

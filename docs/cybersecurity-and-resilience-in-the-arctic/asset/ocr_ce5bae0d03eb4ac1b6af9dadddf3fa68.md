@@ -1,0 +1,13 @@
+# A. Hammelholm / Threat Characterization for Various Layers of Infrastructure
+
+communication and in communicating with telecommunication networks and services. Active nodes form groups and subgroups where the data is classified to different levels of protection: public, restricted, confidential, secret, and in some situations, top secret. This classification has been taken into account in both wired and wireless networks from building and apartment structures to virtualized network and data centers and virtual environments from the user terminal to the entire service chain beginning to end. In the future, telecommunications and services will also be working in a virtual operating environment where the resources of telecommunication networks and data centers are shared among users of networks and the orchestration of different service operators, either together or separately. We see in Figure 21.
+
+When looking at the entire service chain from data centers to users, the virtualization and implementation of related management structures is very challenging as security and cyber-security concerns must be managed in the service chains from beginning to end, with dependencies and risks in mind. As the latest technical concept, this network and service environment will be slicing, where the various services are grouped according to the quality and criticality required by the service or according to specific group of users [27][28].
+
+There will need to a couple of different levels of integration, orchestration, and federation in the future environments for services to function in a desired and flexible way. In this context, it is necessary to manage the users of services, their access to management services, the management and control of services, the management and control of infrastructure services, the management and control of financial services, and in the future management of sliced service groups of virtualized networks including their users, Figures 21. In this scenario we will also see in which way user's terminals are connected to the networks and services.
+
+![](bbox=[0.118, 0.545, 0.882, 0.773])
+
+**Figure 21.** Smart Cities in the future environment, communications topic top level principle [15].
+
+Cybersecurity and Resilience in the Age, edited by B. D. Trump, et al., IOS Press, Incorporated, 2020. ProQuest Ebook Center. http://ebook.proquest.com/ebhi/detail.action?docID=6355988. Created from qui on 2023-02-27 12:32:27.

@@ -1,0 +1,13 @@
+# 4 B.D. Trump et al. / Resilience in the Arctic: Infrastructure, Cybersecurity, and Society
+
+With Arctic facilities and vessels inherently relying upon complex digital systems for virtually all functions, it is imperative for policymakers and stakeholders to craft and implement strategies that move beyond a helpful yet outdated norm of hardening against of a specific attack or point of failure. Such strategies will need to encompass layers of resilience, or the capacity of a system to recover and adapt to all forms of adverse events.
+
+![](bbox=[0.118, 0.215, 0.881, 0.432])
+
+Figure 2. The causes and consequences of cyber disruption within the Arctic environment
+
+# The Need for Resilience
+
+Not all disruptions and risks are preventable. In the Arctic, unanticipated risks are common and may take various forms from environmental disruptions (i.e. weather changes, solar storms, violent climatological events) to newer digital threats (i.e. cyberattacks, hacking, degradation of infrastructure). Historical datasets are less reliable for making predictions, and disruptions can trigger cascading failures beyond the scope of existing countermeasures and contingency plans. Resilience accepts the possibility of system failures and focuses on recovery and adaptation [12]. Recently, adaptation and resilience were noted as important themes for the future of the Arctic. Likewise, in 2015, the concept of resilience was noted in three international instruments (e.g. the Sustainable Development Goals, the Paris Agreement on climate change, and the Sendai Framework for Disaster Reduction) in order to ensure that humans and nature can sustain adapt to new systems of change that have cascading effects across socio-ecological systems.
+
+The Arctic Report (2016) defines resilience as "the capacity of people to learn and make use of their knowledge of social and ecological interactions and feedbacks, to deliberately and effectively engage in shaping adaptive or transformative social-ecological change" [13]. This differs from US National Academy of Sciences defines resilience as "the ability to anticipate, prepare for, and adapt to changing conditions and withstand, respond to, and recover from disruptions." [12] In a 2016 [13] policy document titled ‘The Arctic Resilience Report,’ which outlined the importance of systemic resilience in the Arctic outlined priorities for system recovery and adaptation to the stresses upon Arctic

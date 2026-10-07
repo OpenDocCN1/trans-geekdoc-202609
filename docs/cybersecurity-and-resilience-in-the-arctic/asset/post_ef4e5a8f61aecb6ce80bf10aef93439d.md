@@ -1,0 +1,66 @@
+
+- [106] Sorensen, C. (2018). China is in the Arctic as a Great Power: How China is Increasingly Confident, Proactive and Sophisticated Arctic Diplomacy plays into Kingdom of Danish Tensions. Arctic Yearbook 2018; https://pate.dk/ws/810871/Arctic_Yearbook_final.pdf
+- [107] Blaxjær, L., Lanteigne, M., & Shi, M. (2018). The Polar Silk Road and the West Nordic Region. Arctic Yearbook 2018; https://arcticyear.com/images/Scholarly_Papers/25_AY2018/Blaxjær-Lanteigne.pdf
+- [108] U.S. Geological Survey (2008). Circle-Arctic Appraisal: Estimates of Undiscovered Oil and Gas North of the Arctic Circle. USGS Fact https://pubs.usgs.gov/fs/2008/3049/fs2008-3049.
+- [110] Yang L. (2015). The Arctic Project. https://theproject.am/en/
+- [111] Rahm, J., et al. (2018, July 19). Russia's Novatek first LNG cargo to China via Arctic. Reuters Retrieved from https://www.reuters.com/article/us-evict-lng-cargo-russia-novatek-s-first-lng-cargo-to-china-via-arctic-project-idUSK1B9KNW1
+- [112] Huerta, M. (2019, April 29). China acquires 20 Percent Share in Novatek's High North. High North News https://www.highnorthnews.com/en/china-acquires-20-percent-share-in-novateks-high-north-project
+- [113] Pan, M. and Huntington, M. (2016, January). Fisheries policies in the Arctic Ocean: Arctic policy, China and sea. Marine Policy 63: 153–157. doi:10.1016/j.marpol.2015.10.015
+- [114] National Economic Council (2017, March). Arctic Fisheries. Miller University of International Studies at https://www.economiccouncil.org/project/arctic-fisheries/
+- [115] Institute of the North (2009). Russia's Arctic Fisheries https://www.institutnorth.org/project/arctic-fisheries/
+- [116] Krivichev, S. M. (2019, March 22). Special Edition for Russia: Arctic Mineral Resources and Technology. 39(1): 192–209. doi:10.3390/resources390100192
+- [117] Yesardin, J. (2016, April). The Energy and Mineral Riches of the Arctic. Visual Capitalist. https://www.visualcapitalist.com/energy-and-mineral-riches-of-the-arctic/
+- [118] Arctic Portal. (2018, October 18). China-Iceland Observatory formally formed. https://arcticportal.org/article/news/2019-china-iceland-arctic-observatory-formally-formed
+- [119] Office of the Secretary of Defense (2019, May 2). Annual Report to Congress: Military Development Developments in China 2019. https://www.media.gov/2019/05/2020212702-1/2019_CHINA_MILITARY_POWER_REPORT
+- [121] Zhang, J. (2015). China's new foreign policy under Xi: Jinping Towards a Peaceful Global Order. Peace, Change, and Security, 27(1): 5–59. doi:10.1080/14781588.2015.999358
+- [122] Xinhua (2013, January 29). Xi woes on peaceful development without violating legitimate interests. http://www.people.com.cn/english/article/873442.html
+- [124] Bertelsen, R. G. and Gallucci, V. (2016, October). The return of Russia, Cold-War Russia at sea. Marine Policy 72: 240–245. doi:10.1016/j.marpol.2016.04.034
+- [125] Bennett, M. (2015). China's Arctic Seas: Between Russian Extraction and Arctic Geopolitics. Geographies: 20(3): 645–668. doi:10.1080/1465044X.2015.101757
+- [127] Sorensen, C. (2018). China is in the Arctic as a Great Power: How China is Increasingly Confident, Proactive and Sophisticated Arctic Diplomacy plays into Kingdom of Danish Tensions. Arctic Yearbook 2018; https://arcticyear.com/images/yearbook/2018/China-and-the-Arctic/2018_Sorensen.pdf
+- [131] Browne, R. (2019, October 14). Chess master Kasparov: Russia’s threat is ‘tactical,’ China’s ‘strategic’. CNBC. https://www.cnbc.com/2019/10/14/gary-kasparov-russia-threat-is-tactical-strategic
+- [132] Reich, S. and Dombovsky, P. (2017). The End of Grand Strategy: US Operations in the Twenty-First Century. Cornell University
+- [133] Emerson, C. (2011). The Future of Arctic’s ‘Northern Concept’
+- [134] Klat, K. (2007). The Introduction, Adoption and Implementation of Russia’s ‘Northern Concept’ 1992–2009. The Journal of Slavic Military Studies, 20(4): 499–528. doi:10.1176/0138407130847
+- [135] Clarkson, C. (2017, July). Russian Foreign Policy in Logic: Balancing and Competition. Kennan Cable 24, Kennan Institute. https://www.kennaninstitute.org/sites/default/files/kennan_24.pdf
+- [136] Jangava, N. (2012). Russia in the Arctic: Threats and Opportunities. Partnership for Peace of Democracy and Security Issues, 19(3): 95–101. https://www.jstor.org/stable/j63528?ref=05%2FC-4802s%2F22&sid=a1b9b5a8e5f3d8f0c3
+- [137] Golts, A. (2011). The Arctic: A Clash of Interests or Cooperation. In The Arctic (Ed. Blank, S.). Strategic Studies.
+- [138] Russian Federation (2020). ОСНОВЫ ГОСУДАРСТВЕННОЙ ПОЛИТКИ РОССИЙКОЙ ФЕДРАЦИИ В АРКТИКЕ НА ПРИВОД 2020 ДАЛЕЙШЕ ПЕРСПЕКТИВ. http://www.kremlin.ru/activities/news/6445
+- [139] CBC (2009, August 12). Canadian monitors off Coast. https://www.cbc.ca/news/canada-monitors-off-coast-1.82516
+- [140] Norris, P. (2020). Watching How Space Forms Us - Springer-Publisher
+- [141] Isachenkov, V. (2019, April 4). With missiles out to sea, ‘Northern’ claims Russian action on waters. https://www.natitimes.com/news/your-news/2019/04/04/with-missiles-pointing-out-sea-northern-claims-on-arctic-waters
+- [142] Zielewicz, G. (2019, September 19). The Movement to the Arctic: Degraded radar, poor satellite geometry and sea charts back to. https://www.natitimes.com/news/your-news/2019/09/the-movement-to-the-arctic-degraded-radar-poor-satellite-geometry-and-sea-charts-back-to-capt
+- [143] Russian Maritime Studies (2015). The Role of China in Arctic Security. Defense and Policy, 33(3): 150–155. https://www.jstor.org/stable/2638207
+- [144] Lagrange, M. (2015). The Role of China in Arctic Security. Defense and Policy
+- [145] Johnson, S. (2019). Russia is ‘aggressive’ in Arctic, China’s there also needs watching. https://www.reuters.com/article/us-africa-arctic-china-pompeii-russian-is-aggressive-in-arctic-things-also-needs-watching-idUS1CNIS1AY
+- [146] Harper, T. (2017). Russian-EU Policy Relations and the European Union: Cooperation or Confrontation? In The Europe of the Arctic (eds. Lu, N., Kirk, E. & Henriksen, T. J.). https://doi.org/10.1176/j.33.w839
+- [147] Hogg, F. G. and Fritz, A. X. (2018). The North and the Atlantic in the Arctic. Washington Papers (9941): 1–122. doi:10.1080/1538-2017.1508970
+- [148] Grady, J. (2019, July 23). NORTHCOM’s U.S. Canada Must ‘Clear-View’ of Arctic Threats. https://www.usnews.com/2019/07/23/northcom-s-us-canada-must-clear-view-of-arctic-threats
+- [149] The United States as an Arctic Nation: Opportunities in the High North: Hearing before the Subcommittee on Europe, Eurasia, and of the Committee of Foreign Affairs, House of Representatives, 113th Congress, 34 (2014). December (Testimony of Andrew Howard).
+- [150] Rosat, J. D., Touminsky, K. F., & Lyman, J. W. (2015). The Russian coastal system in the Arctic. https://doi.org/10.1007/s10660-015-9548-9
+- [151] Decker, S., Senberg, D., Plourde, K., Seager, T., Allen, J., & Kott, A. (2018, November). Russian resilience: Developing innovations for maintaining and maintaining safety in complex systems. University School of Arctic.
+- [152] Alexandrov, A. (2017, July). Constructing a System of Cyber-Resilience for Military Systems. https://cyber.alex.org/Vol20/paper/2074
+- [154] Engineer Research and Development Center. (n.d.). Engineered Systems. U.S. Army of Engineers. https://www.erd.army.mil/Engineered-Systems/
+- [155] Neches, R. (2011, December 20). Engineered Resilience (ERS) Priority Description and Roadmap. Department of Defense. https://apps.defense.mil/dtc/fulltext/u2/5549
+- [156] Goeger, R., Madni, A., & Singer, O. (2014). Engineered Resilience: A Perspective. Procedia Computer Science, 22: 865–872. https://apps.defense.mil/dtc/fulltext/u2/6141
+- [157] Neches, R. and Madni, A. (2013). Towards affordable and adaptive systems. Syst. Eng., 12: 224–234. doi:10.1002/sys.2134
+- [158] Perrow, C. (1999). Normal Climate: High-Risk Technologies. Princeton University.
+- [159] Executive Office Technical. (2019, October 16). Modern Services Delivery: observing critical infrastructure. U.S. Navy. https://www.public.mil/navy/AO/Documents/ModernServices2020/Details2019
+- [160] Little, R. (2003). To make robust infrastructure: improvements on resilience. Hawaii International Conference on Systems, Consensus (HICSS), 9–10. 10.1109/HICSS.2003.117389
+- [161] Park, J., & Stager, T. (2016). Lessons learned in risk-based defense. Integrated Manag., 37: 396–409. 10.1002/iem.228
+- [162] Neemer, C., Miller, T., Pollard, O., & O’Connor (2015). Building Resilience: Naval Command and Control. The Journal of Electrical and Electronics
+- [163] Paic, M., Weiner, J., Bezzo, N., Sokolsky, A., Papp, J., & Lee, J. (2017). Implementation of Cyber-Physical Systems: 37(2): 66–81. 10.1109/MCS.2016.263429
+- [164] Wahlström, M. (May 2013). Resilience on the seven seas: proactive in anticipatory speed. 8th RSA Symposium on Engineering: https://open.uas.edu/index.php/article/1939
+- [165] Odea, J. et al. (2007). US Patent Number7516221. https://www.patents.com/pents/
+- [166] Han, S. Y., Marshall, K., & Delautis, D. (2012). Evaluation of resilient systems using interdependency analysis. 2012 International Conference on Systems, and Cybernetics (SMC). Seoul, 2012, pp. 1251–1256. 10.1109/SMC.2012.637904
+- [167] Stevens, R., Taylor, T., & Lamb, C. (2014). Submarine navigation mission resilience: Linking behavioral models. Proceedings of the 58th Annual Meeting of Military Engineering, 2014. https://journals.sagepub.com/doi/10.1177/1548913412145180
+- [168] Stark, R. F., Woods, D., Parry, F., Morrison, A., Thornton, W., & Wollock, A. (2012). Designing Resilient Support Systems for Submarines. doi:10.1077/1011781312356107
+- [169] Tanaka D. (2018). Autonomous underwater systems – a feasible tool to increase the resilience of marine infrastructure. In International Scientific Strategies 2017: 156–166. Department of Defense.
+- [170] Khan, T., Tang, Y., Yan, Z., Mercer, P., & Mi, C. C. (2018). A Rotation-Resilient Wireless Charging System for Autonomous Underwater Vehicles. IEEE Transactions on Vehicle, 77(6): 6928–6935.
+- [171] Domingo, M. C. (2011, February). Securing Communication Networks Through Network Communications.
+- [172] Toso, G., Granata, D., Conti, & Zurzi, M. (2014). Attack Resilient Underwater Networks Through Defined Networking. In Proceedings of the International Conference on Underwater Networks (WUNET). Association for Computing. New York, NY, USA, Article 44, 1–2. doi: 10.1145/2674490.2674838
+- [173] Baker, J. (2018, March). Navy Deployed Submarine Systems Participate in Exercise 2018. Department of Defense. https://www.defense.gov/News/News/Article/1468480/army-redeployed-submarine-systems-participate-in-exercise-2018/
+- [174] U.S. Navy. (2012). SEALIFT: The U.S. Navy’s Military Combat Craft. https://www.msc.navy.mil/sealift/2012-02/Sealift-2012-02.pdf
+- [175] Lundqvist, E. (2019, September 25). Marine Corps Exercise of Limited Combat Forces in Arctic Conditions. https://www.marinemagazine.org/marine-corps-work-exercise-of-limited-combat-forces-in-arctic-conditions/
+- [176] Ngo, P. (2016). Sinking Hose System for Amphibious Bulk Liquid (ABLTS). https://www.shib.org/subbase/article/147155
+- [177] Rosat, J. D., Touminsky, K. F., & Lillycock, W. J. (2015). Considering coastal system resilience for the US Army Corps of Engineers. Env Syst Dict. doi: 10.1002/10669-015-9548-3
+- [179] U.S. Army Corps of Engineers. (2015, January). Navy Comprehensive Resilience Study: Adaptation to Increasing Risk. https://api.army.mil/e2c/downloads/379567.pdf
