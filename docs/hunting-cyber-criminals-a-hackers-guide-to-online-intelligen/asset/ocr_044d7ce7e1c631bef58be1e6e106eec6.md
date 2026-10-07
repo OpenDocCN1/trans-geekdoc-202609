@@ -1,0 +1,3 @@
+This chapter highlighted a number of Iris's key features and walked through the process of using those features in order to uncover the owner of a domain name. The information provided should be enough for you to decide whether access to this type of premium tool is necessary for your organization.
+
+The next chapter will mark the beginning of Part III of this book, where we will start “Digging for Gold” by investigating document metadata.

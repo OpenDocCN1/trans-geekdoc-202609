@@ -1,0 +1,344 @@
+
+# Index = I–K
+
+- IntelTechniques, 7–8
+  - tasks, 95–96
+  - interactions with threat actors
+    - drawing out, 433–434
+  - information flow
+    - establishment, 446
+    - hacker dame and, 447–452
+    - Obfuscation/Stratinatas, 436–439
+    - tDO, 450–451
+    - WhitePacket, 434–440
+    - YoungBugsThou, 440–446
+- nextext: operator, dorks, 165–166
+- intitle: operator, dorks, 161–162
+- Intrigue.io, 84, 95, 257
+  - bucket information, 259–260
+- EmailAddresses entities, 156
+  - entities, 95
+- Entities tab, 96–99, 154–155
+  - results
+  - analysis, 104–105
+  - export, 105–107
+- Run Task, 152–154
+- spider module, 152–153
+- uberpeople.net, 99–103
+- URI Spider, 152–153, 257–259
+- inurl: operator, dorks, 163–165
+- Inurlbr, 169–173
+- inigations, 19
+- Carhart, Leslie, 25–26
+  - cybercriminals, 26–27
+  - paths, 25–26
+- IP addresses
+  - Guided Pivots (Iris), 226
+  - historical information queries, 297
+  - history, BuiltWith, 124
+  - owner identification, 295
+  - reverse lookup, DomainTools, 189
+  - tracking, 346–347
+  - WPScan, 138
+- IP attribution, 46
+- Iris, 221–222, 474–476
+  - Hosting History tab, 232–234
+- Pivot Engine, 222
+- Guided Pivots, 223–224, 225–229
+  - Historical Search, 224–255
+  - IP address, 226
+  - Screenshot History tab, 232, 235, 240
+  - search bar, 222
+  - WHOIS History tab, 230–231
+
+# J
+
+- Java API, Elasticsearch, 308
+- jQuery, password reset and, 400–403
+- JSON
+  - Elasticsearch, 308–310
+  - WIG output, 126–128
+
+# K
+
+- Karvouniaris, Dennis, 451
+- Kayak, 331
+- Kaye, Daniel, 442–443
+- Kel, Data Viper and, 469–472
+- keywords, multiple, WHOIS, 179–181
+- KickAss forum, 275, 284
+- closing, 388
+- Cyper, 32
+  - social engineering and, 383–387
+
+# L
+
+- letter substitutions, username searches, 369
+- Linked-In, Skiptracer, 361
+- Linux, configuration, 5–6
+- Litecoin, 113
+- logs, Git commit logs, 287–288
+- Lucidchart, 198
+- list, 108–109
+  - searches, 111
+- Shodan, 115–116
+  - using, 111–115
+  - virustotal, 113, 114–115
+- MongoDB, 293, 301
+  - command-line tools, 305–308
+
+# M
+
+- MABNA, 409
+- Maltego, 50
+- SocialLinks, 350–351, 358–360
+- Martin, William, 73–74, 311
+  - matchdump parameter, Elasticsearch, 317–318
+- metadata. *See also* document metadata
+- Metagoof, 248–250
+- Metploit
+  - enum_wayback (Ruby script), 215–216
+  - Recon-NG and, 108
+  - find( ), 307
+  - pretty( ), 307
+  - show dbs, 307
+  - database connection, 305–306
+  - documents, 302
+  - Scrape and, 312, 313
+  - basic scrape, 313
+  - full scrape, 313
+  - ransomed server, 313–314
+  - tool, 302–305
+  - button, 303–304
+  - MTU (maximum transmission unit), 74
+  - Murdock, Cat, 327, 333–334
+  - MySpace, Skiptracer, 361
+- Meunier, Christopher, 435
+  - mind mapping tools, 398
+  - mindnode, 198
+- Microsoft, password reset, 399–400
+- MindBeats.ca, 237
+- Mirai malware, 442
+- MITM (man-the-middle) attacks, 202 (modus operandi), 27
+  - modules, Recon-NG
+  - hacker target, 114
+
+# N
+
+- nameddroppers.com, 177–179
+- clay, 453–454
+- Gnostic hacks, 458
+- Raid Forums, 456
+- RaidForums.com, 379
+- Gnostic site, 79
+  - NeoBoss, 426
+  - Night Lion Security, Gitlab page, 312
+  - NightCat, 403–436
+  - NightSquare, 288
+- NMAP
+  - --A, 74
+  - --badsum, 76
+  - --f, 74
+  - --flags, 68, 69
+  - --p, 68
+  - --sn, 68
+  - --sS, 69
+  - --sU, 68, 69, 74
+  - --sV, 74
+  - --sW, 70
+  - --T, 76
+  - --T3, 76
+  - --T4, 76
+  - --mtu, 74
+  - --reason, 71
+  - --scan, 67
+  - --proxy, 73
+  - data changes, 78
+  - distributed scanning, 74
+  - fragmented packets, 74
+  - firewalking, 79
+  - IP address spoofing, 78–79
+  - MAC address spoofing, 78–79
+  - service detection, 74–75
+  - timing of requests, 76
+  - response, live server, 80
+  - comparisons, 79–81
+  - active host list, 68
+  - configuring, 68–69
+  - full port scans, 68–70
+  - TCP ports, 69
+  - TCP windows, 70
+  - types, 69
+- user, 100–101
+- NoScope, 304, 311–312
+- Amazon S3 buckets and, 312, 320–321
+- CassandraDB and, 312, 318–319
+- Elasticsearch and, 312, 314–318
+- MongoDB and, 312
+-- dump, 317
+- matchdump, 317–318
+- scan, 314–315
+- search, 315–317
+- basic scrape, 313
+- full scrape, 313
+- ransomed server, 313–314
+- SQL databases, 293, 301
+- CassandraDB, 301
+- Elasticsearch, 301
+- data dump, 311
+- querying, 308–311
+- MongoDB, 301
+- command-line tools, 305–308
+- Robot 3T tool, 302–305
+- RobotMongo, 302
+- NSA (Peace of Mind), 32, 36, 374, 445–446
+  - aliases, 38
+  - hostility, 37–38
+- Louisiana Dept of Motor Vehicles, 36
+- NSFW, 463–477, 480
+- Nullled.to, 379–380
+- Search Information by Phone, 351–352
+- Twitter, 357–358
+
+# P
+
+- packets, fragmented, 74
+- parameter-based URLs, Photon, 150
+- password managers, 409
+- passwords, 408–409
+- profile matrix, 409–413
+  - recycling, 382, 390–391
+  - Facebook, 393–394
+  - Gmail, 391–404
+  - ICQ, 403–404
+  - Instagram, 400
+  - jQuery responses, 400–403
+  - Microsoft, 399–400
+  - PayPal, 394–397
+  - Twitter, 397–399
+  - verification sheet, 391
+- paste sites, 273
+- psbdmp.ws, 273–274
+- PayPal, password rest, 394–397
+- Peace of Mind. See NSA (Peace of Mind)
+- people searches, PIPL, 326–330
+- PeopleLocker, 330, 331
+- phishing/Petya, 14
+  - phishing domains, 61–62
+  - phone numbers, 364–366
+  - username searches, 366–369
+  - User recon, 370–72
+- PIPL, 326–330
+- P...
+- Pivot Engine (Iris), 222
+  - Guided Pivots, 223–224, 225–229
+  - Historical Search, 224–255
+  - IP address, 226
+  - Screenshot History tab, 232, 235, 240
+  - search bar, 222
+  - WHOIS History tab, 230–231
+- PrivateDB (MongoDB), 303–304
+  - screens, 302–303
+- Studio 3T, 302
+- Robot 3T tool, Connect bunch, 303
+- RobotMongo, 302
+- Ruby, enum_wayback script, 215–216
+  - Wayback Machine, 214–215, 237–238
+  - Photon, 216–217
+  - site digest, 219–220
+  - wiki sites, 288–289
+  - Wikipedia, 289–292
+- Python Skiptracer
+  - email address searches, 361–364
+- FreeBackgroundCheck.com, 330
+  - Ancestry.com, 331–332
+- SkipEase.com, 330
+- Open Source Intelligence (OSINT), 5
+  - open-source tools
+  - Name Server, 225
+  - Registrant Organization, 225
+  - SSL certificate hashes, 227–229
+  - pivot, 226
+
+# Q
+
+- queries, MongoDB, 302
+- quotes, dorks, search engines, 160
+
+# R
+
+- Revolt, 374
+- Twitter search, 398
+- Robb, Bev, 435
+- Roberts, Chris, 274–275, 276
+- RDP (remote desktop protocol), 29
+- Raid Forums, 456
+- RaidForums.com, 379
+- ransomware, Petya/NoPetya, 14
+- ReactJS, 420
+- Recon-NG, 84, 107–108
+  - add domains, 110
+  - reverse resolve, 112
+  - set source, 112
+  - show domains, 110–111
+  - show options, 112
+- databases, local, 108
+- home screen, 108
+- Metasploit and, 108
+- hacker target, 114
+- hosts-resolve, 111–112
+- Interesting_files, 252–254
+- list, 108–109
+- Metacrawler, 250–252
+- Pushpin, 254–257
+- searches, 111–115
+- virustotal, 113, 114–115
+- Reddit Investigator, 372–374
+- regex patterns, Photon, 150
+- Repack, 23
+- reports, NMAP, 80
+- verse IP lookup, 189
+- Reverse WHOIS, 196
+
+# S
+
+- SANS, 325
+- scan parameter, Elasticsearch, 314–315
+- scans, NMAP, 67
+- active host list, 68
+- configuring, 68–69
+- FIN, 68
+- full port scans, 68–70
+- SYN, 68
+- TCP ports, 69
+- TCP windows, 70
+- types, 69
+- scraping
+  - basic scale, 313
+  - code repositories, 280–281
+  - Git commit logs, 287–288
+  - Gitrob, 284–287
+  - SearchCode, 281–284
+  - forums, 274
+  - full scale, 313
+- NoScope, 304, 311–312
+- Amazon S3 buckets and, 312, 320–321
+- CassandraDB and, 312, 318–319
+- Elasticsearch and, 312, 314–318
+- MongoDB and, 312
+-- dump, 317
+- matchdump, 317–318
+- scan, 314–315
+- search, 315–317
+- basic scrape, 313
+- full scrape, 313
+- ransomed server, 313–314
+- SQL databases, 293, 301
+- CassandraDB, 301
+- Elasticsearch, 301
+- data dump, 311
+- querying, 308–311
+- MongoDB, 301
+- command-line tools, 305–308
+- Robot 3T tool, 302–305
+- RobotMongo, 302
