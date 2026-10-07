@@ -1,0 +1,15 @@
+Question 200. While reviewing web server logs, Sarah, a security analyst, notices a pattern of requests containing “..%2F..” in the URLs. She suspects this might be an attempt to exploit a vulnerability. Which type of application attack is likely attempted?
+
++   (A) Command Injection
+(B) Cross-Site Scripting (XSS)
+(C) Directory Traversal
+(D) Cross-Site Request Forgery (CSRF)
+
+Explanation 200. Correct Answer: C. Directory Traversal.
+Directory traversal (also known as path traversal) involves manipulating variables referencing files with “..” sequences and its variations (like “..%2F..”), which URL-decodes to “../” to navigate outside of the intended directory. This can allow an attacker to access restricted files on the web server. The pattern Sarah observed in the logs indicates a directory traversal attack attempt.
+
+Option A is incorrect. Command injection attacks involve executing arbitrary commands on the server via application vulnerabilities. The specific pattern observed in the logs does not suggest command execution.
+
+Option B is incorrect. Cross-Site Scripting (XSS) attacks involve injecting malicious scripts into web pages viewed by other users. The pattern observed doesn’t pertain to script injection.
+
+Option D is incorrect. Cross-Site Request Forgery (CSRF) tricks victims into submitting a malicious request. It does not
