@@ -1,0 +1,1412 @@
+- pgno: 0
+  md: '* Xin Wei'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'J. Zhang
+
+
+    Computers in Biology and Medicine 162 (2023) 107050
+
+
+    more directly the biochemical changes related to AD in the brain, these CSF components
+    provide valuable information for AD detection.
+
+
+    Many studies are conducted in computer-aided diagnosis of AD. Only a small fraction
+    of research utilizes multi-modal data, and even fewer studies cover multi-class
+    diagnosis. Most studies differentiate AD from normal control (CN), while the MCI
+    stage is ignored, and it is more critical to recognize the multi-class diagnosis
+    of AD, MCI patients and healthy elderly. Biomarkers from different modalities
+    can reflect changes connected with AD at various stages, providing comprehensive
+    information for its diagnosis and further achieving more reliable results.
+
+
+    +   2. To exploit the complimentary interaction, a multi-modal module based on
+    the cross-attention mechanism is introduced to learn the inter-correlations between
+    CSF and PET components to enhance each other AD diagnosis.
+
+
+    +   3. To avoid the discrepancy of modalities between multi-modal data and the
+    performance of AD diagnosis, an objective function including modality alignment
+    and classification loss is designed to bridge the heterogeneity between different
+    modalities and optimize the classification performance.
+
+
+    +   4. We evaluate the effectiveness of the approach using multi-modal data in
+    the public dataset ADNI, with results demonstrating that MCAD achieves promising
+    performance over existing methods in AD-associated tasks. The evaluation capturing
+    interactions could provide critical evidence for AD diagnosis.
+
+
+    [14–17]. Although the previous approaches have been proven effective, there remain
+    still some challenges in AD diagnosis based on multi-class data. First, although
+    multi-class methods are an important component of modality learning, which is
+    cross-modal interaction. These methods combine information from different modality
+    by concatenating features from different modality, yet not optimal for exploiting
+    the complimentary information across modalities. Second, the modality variation
+    caused by different modalities, which greatly affects the feature and diagnosis
+    of AD, especially the multi-class nature of AD, needs to be addressed. There are
+    up to least three key challenges for AD diagnosis in multi-class data, (1) when
+    considering different AD-related scenarios, including two-class classification;
+    (2) how to exploit the interaction between modalities to better play their complementary
+    role; (3) to reduce the discrepancy between modalities.
+
+
+    To address the issues above, we propose a multi-class framework for diagnosis
+    of AD/MCI using multi-modal data, including CSF, PET, and GF. The framework maintains
+    two sets of encoders for both imaging and non-imaging data, multi-modal interaction
+    (MI) module and classification module. In this framework, an encoder is designed
+    to extract features from different modality respectively. For example, the CSF
+    component is embedded to the non-imaging data effectively. Due to the size of
+    brain regions affected by disease in brain data and different modality, each encoder
+    extracts features with the corresponding receptive field without losing information.
+    Then, we introduce a multi-modal interaction module, which takes advantage of
+    cross-modal attention to integrate modalities (CSF, PET and GF) and fusion them.
+    Finally, an objective function is designed to minimize the discrepancy between
+    representations for multi-modal data to guide AD diagnosis. The classification
+    task includes AD two-class classification (AD vs. CN), MCI two-class classification
+    (MCI vs. CN), and multi-class classification.
+
+
+    The main contributions of this study are summarized as follows
+
+
+    +   1. We propose a novel framework MCAD that can be leveraged to learn complementary
+    information from different modalities for AD diagnosis more efficiently and accurately.
+    And we study for various scenarios including AD-related two-class and multi-class
+    classification.
+
+
+    # 2. Related work
+
+
+    We review previous studies on AD diagnosis, particularly multi-modal biomarkers,
+    which are categorized into two groups: 1, machine learning approaches [16–20],
+    and deep learning approaches [21–26].
+
+
+    Many studies [19] demonstrate the effectiveness of biomarker based learning approaches
+    in AD diagnosis, which are includes two parts feature extraction and classification.
+    For instance, Lin et al. [16] used multi-modal data (MRI, PET, and CSF) to classify
+    MRI, PET, GF, and genes. The others indicated the disease prediction, enrolling
+    multi-class diagnosis of AD. W. Waldhof et al. [17] developed logistic regression
+    to the AD diagnosis using MRI and PET data for classification and at the same
+    time markers which are significant to dementia cognition. Kahn et al. [29] applied
+    the machine learning classifier to classify the features from brain image and
+    genetic data. The association of filter and feature for selection to achieve AD
+    diagnosis using multiple biomarkers, which enhanced the diagnostics accuracy.
+
+
+    In recent years, deep learning has made outstanding efforts employing convolutional
+    networks (CNN) to learn features. With the rapid development of CNN, various neural
+    networks are employed to provide a variety of ideas for AD diagnosis. For classification
+    performance, deep learning has shown potential through various techniques [22,23,31].
+    Many methods are based on neuraisism, such as AD, MRI, PET and GF functional magnetic
+    resonance (MRI) for AD diagnosis, [23,25–27,39], which CNN is used to extract
+    high-level image representations to capture the complexity of manual feature extraction.
+    The existing image representation methods can be categorized into four groups
+    based on the type of input (pixel-level, methods-level, and decision-level methods).
+    Researchers consider adding different modality data, such as clinical and biological
+    biomarkers, implying representations for fusion to achieve the more accurate comprehensive
+    diagnosis. For example, Spasov et al. [17] employed a multi-modal AD classification
+
+
+    2'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# J. Zhang et al.
+
+
+    Computers in Biology and Medicine 162 (2023) 107050
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_2_0.png)
+
+
+    Fig. 1. The illustration of data scales of the dataset.
+
+
+    framework based on the 3D surface and grouped convolutions that make SMRI and
+    clinical analysis and generic measures as inputs. Xu et al. [40] proposed an interpreted
+    learning network that extracts discriminant features from multi-modal data of
+    sMRI, age, gender, and class labels. Pan et al. [23] included multiform features
+    from sMRI with the registration-class AD classification. Again, Tong et al. [41]
+    presented a non-graph fusion framework that efficiently simplified the fusion
+    between SMRI, CSF and PET for AD classification with performance of 60.2%. Li
+    et al. [42] proposed a multi-class task with AD diagnosis and clinical score regression,
+    using sMRI and demographic information using CNN-based attention mechanisms.
+
+
+    Table 1
+
+    Summary of demographics and clinical scores
+
+
+    | Diagnosis | Subjects | Scans | Age | MMSE | CDR-SB |
+
+    |---|---|---|---|---||
+
+    | CN | 110 | 156 | 72.7(09) | 29.12(10) | 0.90(39) |
+
+    | MCI | 125 | 158 | 71.86(73) | - | 1.4(14) |
+
+    | AD | 129 | 157 | 73.76(77) | 22.32(30) | 4.82(02) |
+
+
+    BI non-uniformity, and by intensity normalization. And the FDG-PET scans are benefited
+    by Co-generation and analysis. According to some clinical criteria, these subjects
+    are divided into three categories: AD, MCI, and CN. To the focused balanced problem,
+    we balanced the data of each class and independently select 158 multi-modal data
+    from the MCI and CN subjects. A total of 467 AD and FDG scans and 364 subjects
+    constitute the experimental dataset in this study. Then, we split the experimental
+    data using a five-fold cross-validation strategy to evaluate the performance,
+    choosing the hyper-parameters and model training while referring to paper survey
+    [47], which works with future data due to the limited sample size. We also used
+    transfer learning method demonstrated affinity to improve diagnosis performance
+    [44, 45]. In real-world scenarios, the scans of a new subject will be seen by
+    the model before it has been seen before.
+
+
+    Several learning-based studies for AD diagnosis using multi-modal data have attempted
+    to extract and complement information. Despite their great overall performance,
+    they ignore a key issue of multi-modal learning-cross-modal interaction. Existing
+    methods combine multimodal information in a straightforward way, which is limited
+    from different ways to combine the information from modalities, which is conducive
+    to improving the diagnostic performance. Moreover, AD diagnosis using multi-modal
+    biomarkers suffers from the large discrepancy across modalities, which is missed
+    in most previous studies.
+
+
+    # 3. Materials and method
+
+
+    # 3.1. Data acquisition
+
+
+    This paper uses multi-modal data from the Alzheimer''s Disease Neuroimaging Initiative
+    (ADNI) [43], which is publicly available to study AD diagnosis. In this work,
+    subjects are selected from ADNI-1 and ADNI-2 when their sMRI scans, CSF and PET
+    measures are used. The sMRI scans are 1.5T or 3T T1-weighted, which have been
+    preprocessed with specific image precessing steps including multiplanar reconstruction
+    (MRI), Graphwads,
+
+
+    # 3.1.2. Processing data
+
+
+    For data analysis, we use the software platform to register sMRI and FDG-PET scans
+    to a DARTel template and perform normalization using standard Montreal Neuroimaging
+    Institute (MRI) space, as reported in Fig. 1. The inputs are the sMRI and FDG-PET
+    scans. To avoid the effect of irrelevant information, the non-brain tissues between
+    sMRI and FDG-PET scans are removed. Additionally, sMRI and FDG-PET scans are resized
+    into 128 x 128 voxels to decrease computational expense.
+
+
+    > 1 http://adni.uni.usc.edu/
+
+
+    > 2 http://www.clinica.ru/'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'J. Zhang al.
+
+
+    Computers in Biology and Medicine 162 (2023) 107050
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_3_0.png)
+
+
+    Fig. 2. Overview of the proposed framework.
+
+
+    The minimum-maximum normalization is used for the feature range [0, 1].
+
+
+    For the representing of CSF biomarkers, Aβ42, Tau, and P-tau are set to insert
+    feature range from 170 to 200, from 0 to 1300, and from 0 to 120, respectively,
+    according to the numerical distribution of CSF biomarkers in the dataset. In this,
+    we get 1500, 130, and 120 for Aβ42, Tau, and P-tau values, respectively, for computing
+    the CSF encoder vector.
+
+
+    # 3.2. Overview of the proposed framework
+
+
+    In this paper, we propose a novel framework MCAD to tackle the problem of AD diagnosis
+    using multi-modal data. In Fig. 2, the proposed framework MCAD contains three
+    main parts: feature extraction including imaging encoder and CSF encoder (Section
+    3.3), multi-interaction (MI) module to manage the interactions between imaging
+    and CSF and classification module (Section 3.4) to perform information reduction
+    and age diagnosis (Section 3.5). MCAD consists of two strategies implemented for
+    imaging and CSF modalities, respectively are learned with two features in the
+    feature extraction module. Based on these fine-grained representations for images
+    blocks and CSF components, the interaction module is designed for exploiting the
+    information across modalities for AD diagnosis. After the attended intended imaging
+    and CSF features, the multi-modal features are used to decide the status in the
+    classification task in terms of AD diagnosis and modality alignment. Specifically,
+    the modality alignment is introduced to align the inconsistent feature distributions
+    of imaging and CSF biomarkers, which can further reduce the inter-modality gap
+    at feature-level to improve the diagnostic performance.
+
+
+    # 3.3. Features extraction
+
+
+    # 3.3.1. Imaging encoder
+
+
+    Since AD is believed to affect various brain regions, the disease-affected atrophy
+    regions in MRI scans and the low-metabolized regions in FDG-PET scans vary in
+    size. Traditional CNN can only capture the information of fixed receptive regions,
+    and it is difficult
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_3_1.png)
+
+
+    Fig. 3. Details of the CD module. Dilated convolution operations are in the format
+    (numbersize, stride, dilation).
+
+
+    to extract rich imaging features. Dilated convolution provides a solution to enlarge
+    the receptive field without increasing the number of parameters and the size of
+    the convolution kernels. and the dilated convolution allows the receptive field
+    to be without losing information due to pooling operations. In addition, dilated
+    convolution has been successfully used for feature extraction of MRI and FDG-PET
+    scans. However, representing features without dilated convolution is crucial for
+    AD diagnosis. Therefore, the cascaded CD based module is designed to improve the
+    multi-scale representations, significantly improving the performance of AD diagnosis.
+    The use of three dilated convolutions with different sizes to capture multi-scale
+    features as shown in Fig. 3 shows architecture detail
+
+
+    dilation by introducing zeros between filter elements, which causes the receptive
+    field to increase more relevant information. The CD module consists of four blocks,
+    each of which contains three dilated convolution, instance normalization (IN),
+    followed by a convolution layer of 1 x 1 and stride of 1, which can be reached
+    as the linear transformation of input channels. The followed dilated convolution
+    layers several (256, 512, 1024) filters with small size of 3 x 3, and dilated
+    convolution size is 1, 2 and 5, respectively. Instead of using large convolution,
+    we use dilation in the convolution layers to detect features such as the shape
+    and contours without the computational overhead.
+
+
+    4'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "J. Zheng et al.\n\nComputers in Biology and Medicine 162 (2023) 107050\n\n\
+    Using an MRI or FOD-feat scan, the layer convolution is performed by the pooling\
+    \ layer to produce a $B = 4 \times 4 \times 1024$ vector, which is $U = \\{u_1,\
+    \ \\dots, u_n\\}$, where $u_i \\in \\mathbb{R}^{1024}$ is the representation for\
+    \ each image feature. Then, $U$ is transformed into an $H$-dimensional vector\
+    \ $V$ (768) via linear projection, inspired by BERT [51] and Vision Transformer\
+    \ [52]. When $V$ is transformed to 768, the dense connection inside the multi-modal\
+    \ interaction module can be transformed as follows:\n\nwhere $I$ and $C$ denote\
+    \ the image and cross representation, respectively. $W_Q^h$ and $W_K^h$ are the\
+    \ transformation matrices of head $h$, where $h$ is the $h$th head of multi-modal\
+    \ cross-attention.\n\nAfter computing $q, k,$ and $v$, they are used in the multi-modal\
+    \ cross-attention, whose procedure can be described as follows:\n\n```\n$CA(I,C)\
+    \ = \\text{softmax}\\left(\\frac{(W_Q^h I)^T (W_K^h C)}{\\sqrt{d_k}}\\right)W_V^h\
+    \ C$\n```\n\n```\n$MCA(I,C) = [CA(I,C), CA(C,I), CA(I,I)]$\n```\n\nwhere $CA_h$\
+    \ is the $h$th head of multi-modal cross-attention, $W_{CA}$ is the weight matrix\
+    \ for the feature fusion.\n\n```\n$V = W^h U + b^h$,\n```\n\nwhere $W^h$ and $b^h$\
+    \ are to-learned parameters.\n\nThe images of MRI and PET-feat are concatenated\
+    \ to denote final image representation $I = \\{i_k, \\dots, i_n\\}$, where $n=128$\
+    \ is the number of slices in.\n\n# 3.3.2. encoder\n\nCSF measures consist of three\
+    \ types: A42, T-T and T-P. Since each CSF represents a different meaning, and\
+    \ each has different numbers, we need some kind of size normalization. By using\
+    \ positional encoding [59] and the encoder for attention, we consider using sinusoidal\
+    \ functions to achieve the coding of A42, T-T and T-P. The encoding process of\
+    \ each type of CSF is:\n\n```\n$T(c_i) = \\sin(i/10000^{2j/d})$\n```\n\n```\n\
+    $T(c_i) = \\cos(i/10000^{2j/d})$\n```\n\nwhere $c$ represents the value from A42,\
+    \ T-T and T-P, $i=0, 1, \\dots, d-1$ and $j=0, 1, \\dots, d/2-1$ where $d$ is\
+    \ the dimension of the model.\n\nThe encodings are transformed by two fully connected\
+    \ layers to an $H$-dimensional vector ($h=768$). Through this operation, the scales\
+    \ and dimensions of encodings could be consistent with image representations.\
+    \ A sample, we encode each type of CSF as a vector, which is then concatenated\
+    \ to form the non-imaging features\n\n# 3.4. Multi-modal interaction\n\nFor AD\
+    \ diagnosis, multidata data can provide more information and potential relationships.\
+    \ Therefore, it is necessary to fuse image and CSF features to achieve diagnostic\
+    \ performance. By using a multi-modal interaction (MMI) mechanism [51] which can\
+    \ capture the cross-attention between image features and CSF features, the non-imaging\
+    \ features can be fused with imaging and non-imaging representation. The module\
+    \ focuses on\n\nThe multi-modal interaction uses multi-head attention to fuse\
+    \ imaging feature and non-imaging feature. The structure in MMI can not only boost\
+    \ the interactions of multi-modal representations but also keep the valuable value\
+    \ of information among\n\nIn the branch of image feature, a multi-head layer is\
+    \ used to extract information from image and CSF features to jointly fuse representation\
+    \ from different subspaces, where named vectors, query, key, and value, are used\
+    \ in each head. For sub-head $h$, linear layers are used to convert input into\
+    \ key features and value, and CSF features into are calculated as:\n\n```\n$q_h\
+    \ = W_Q^h C, k_h = W_K^h C, v_h = W_V^h C$\n```\n\n# 3.6. Objective function\n\
+    \nIn AD diagnosis using multidata, the feature distributions of different modalities\
+    \ may be inconsistent, which significantly affects the effect of multidata fusion.\
+    \ Furthermore, it is necessary to alleviate the discrepancy between multidata\
+    \ nowadays for effectively fusing. To achieve this, we design an objective function\
+    \ is used to optimize the network, including the following parts: classification\
+    \ loss ($L_{CL}$) and alignment model loss ($L_{MA}$). In the following, more\
+    \ details about the loss function of the proposed model are presented\n\n```\n\
+    $a = \\text{softmax}(MLP(L))$\n```\n\n```\n$I = \\sum a_i L^i$,\n```\n\nwhere\
+    \ $a = [a_1, \\dots, a_n]$ stands for the weights of attention. Similarly, the\
+    \ CSF features $C'$ for $C$ are generated using an independent attention reduction\
+    \ by algorithm. The $I$ and $C'$ are then concatenated as the fused features.\
+    \ For the intended image features $I'$ are formed as:\n\n5\n\nNie Wei"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# (1) Classification Loss
+
+
+    Cross entropy, a widely used objective function in classification tasks, is employed
+    to minimize the AD classification loss from multi-modal data supervised learning
+    as follows:
+
+
+    ```
+
+    $L_{CE} = -\sum_{i=1}^{N_L} \frac{1}{C} \sum_{c=1}^{C} y_{ic} \log(p_{ic})$
+
+    ```
+
+
+    where M is the number of classes and $y_{ic}$ is the ground truth. The probability
+    score for belonging to class c is denoted as $p_{ic}.
+
+
+    # (2) Modality loss
+
+
+    To fuse features from different modalities (sMRI and PET) and CSF biomarkers to
+    share the similarity, the KL divergence is utilized to align the features of the
+    AD and non-AD modalities by transforming the different domain. The KL divergence
+    between the representation $I$ and $C$ is defined as:
+
+
+    ```
+
+    $D_{KL}(I||C) = \sum_{i=1}^{d} I_i \log\frac{I_i}{C_i}$
+
+    ```
+
+
+    where $d$ is the feature dimension. In the proposed MCAD, the modality alignment
+    loss between the features of MRI and CSF is further considered for reducing the
+    modality gap. The modality loss $L_M$ is calculated as:
+
+
+    ```
+
+    $L_M = D_{KL}(I||C) + D_{KL}(C||I)$
+
+    ```
+
+
+    Finally, in order to learn the domain-invariant discriminant features, the classification
+    loss and modality loss are combined for model training. The loss function is defined
+    as:
+
+
+    ```
+
+    $L = \gamma_1 L_{CE} + \gamma_2 L_M$
+
+    ```
+
+
+    where the hyperparameters $\gamma_1$ and $\gamma_2$ are the proportions of each
+    representing the representative content, which is determined in experiments.
+
+
+    # 4. Results
+
+
+    # 4.1. Experimental settings
+
+
+    All experiments are conducted using Python 3.6 and the PyTorch library. The model
+    is trained on a single NVIDIA GeForce 3090 GPU for 100 epochs using Adam optimizer
+    with a batch size of 32. The learning rate is 0.0001 with 1e-4 decay strategy.
+    The strategies for training and testing are randomly split. The strategies for
+    classification and modality loss are set as follows, that $\gamma_1=1.0$ and $\gamma_2=0.0005$.
+    A cross-validation strategy is used to assess the performance of MCAD. The process
+    is repeated 5 times, and the results are averaged over all 5 iterations.
+
+
+    # 4.2. Evaluation criteria
+
+
+    To quantitatively evaluate the performance of AD diagnosis, the mean sensitivity
+    (SEN), specificity (SPEC), accuracy (ACC), F1-score (F1) and the area under curve
+    (AUC) are utilized as evaluation criteria, which are defined as follows:
+
+
+    ```
+
+    $SEN = \frac{T_P}{T_P + F_N}, \quad SPEC = \frac{T_N}{T_N + F_P}$
+
+    ```
+
+
+    ```
+
+    $ACC = \frac{T_P + T_N}{T_P + T_N + F_P + F_N}, \quad F1 = \frac{2T_P}{2T_P +
+    F_P + F_N}$
+
+    ```
+
+
+    AUC
+
+
+    ```
+
+    $FI = \frac{T_P}{2T_P + F_N + F_P}$
+
+    ```
+
+
+    +   * Multi-modal Alzheimer''s disease detection (DAD): In the method [58], sMRI
+    and FD-PET images are fused into a three-dimensional convolutional network which
+    detects multi-modal tasks with rich features and image for AD diagnosis.
+
+    * Multi-modal cascaded convolutional networks (MCN): It is a novel modality classification
+    algorithm [59] based on CNN to learn and fuse multi-level and multi-modal features
+    of sMRI and FD-PET for AD diagnosis.
+
+    * Concatenation: It is a way to combine data from multi-modalities, which is used
+    in many studies for AD diagnosis [16, 24, 51].
+
+    * Multi-modal bottleneck pooling (MBP): It was first proposed in [22] for the
+    visual question answering. This method is adopted to combine visual features and
+    textual features to the joint representation space by producing products, which
+    promotes interaction between different modalities. In this paper, MBP is used
+    to fuse the imaging and non-imaging data for AD diagnosis.
+
+    * Self-attention (SA): SA is a mechanism to learn the difference between different
+    parts of the input and determine which parts are relevant to the task. In this
+    paper, we use the attention mechanism in the fusion module for AD-related tasks.
+
+    * Gated fusion: Gated fusion [62] allows mechanism to integrate multi-modal properties
+    by aggregating complementary data. A weight map is used to learn the gate of the
+    information and then, the gated content from individual modules is used to interpret
+    the representation.
+
+    * Bi-modal recurrent network (BBFN): BBFN is a method to collect information from
+    multiple modalities for modality sentiment attention. BBFN uses a gated control
+    mechanism in the Transformer architecture to improve the performance. In this
+    paper, we use BBFN to integrate imaging and non-imaging features for AD diagnosis.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# J. Zhang et al.
+
+
+    Performance comparison with competing methods in AD-related tasks.
+
+
+    | Classification | Methods | MCAD | MCCN | Concation | DA | Gated | BBFNN | MCAD
+    |
+
+    |---|---|---|---|---|---|---|---||
+
+    | AD vs CN | MCI | 89.72 | 88.78 | 94.79 | 92.38 | 87.36 | 89.79 | 94.01 | 99.23
+    | 99.02 |
+
+    | | | 89.19 | 88.48 | 94.29 | 87.80 | 87.25 | 91.78 | 82.66 | 85.25 | 91.07 |
+
+    | | | 89.61 | 82.24 | 94.26 | 85.51 | 85.50 | 93.36 | 93.22 | 95.50 | 93.32 |
+
+    | AD vs CN | MCI | 93.07 | 92.65 | 94.02 | 94.23 | 93.53 | 93.18 | 94.19 | 93.74
+    | 94.07 |
+
+    | | | 92.68 | 93.35 | 93.35 | 88.58 | 92.33 | 93.75 | 89.68 | 92.16 | 95.06 |
+
+    | | | 93.45 | 93.12 | 94.55 | 91.63 | 94.58 | 92.48 | 91.33 | 95.12 | 95.01 |
+
+    | MCI vs CN | AD | 66.75 | 66.30 | 76.58 | 68.78 | 69.34 | 64.05 | 67.71 | 69.95
+    | 59.98 | 72.60 |
+
+    | | | 69.49 | 63.10 | 68.58 | 63.53 | 71.32 | 64.57 | 63.14 | 66.05 | 71.78 |
+
+    | | | 65.42 | 65.17 | 74.58 | 65.25 | 76.45 | 65.06 | 72.48 | 71.46 | 78.44 |
+
+    | MCI vs CN | AD | 81.03 | 80.92 | 86.56 | 84.11 | 86.01 | 85.38 | 81.63 | 84.52
+    | 83.65 | 84.41 |
+
+    | | | 80.66 | 59.18 | 91.13 | 61.33 | 83.67 | 61.38 | 61.64 | 64.22 | 61.98 |
+    63.85 |
+
+    | | | 85.04 | 79.18 | 95.07 | 88.19 | 81.12 | 80.77 | 80.95 | 81.72 | 81.39 |
+    82.00 |
+
+    | AD vs MCI | CN | 75.96 | 76.12 | 83.33 | 80.56 | 81.11 | 80.27 | 80.98 | 81.03
+    | 79.67 | 81.58 |
+
+    | | | 77.55 | 56.23 | 71.12 | 58.83 | 57.67 | 54.40 | 57.26 | 59.75 | 59.78 |
+    68.15 |
+
+
+    Table 1
+
+    Pired-test results show the evaluation methods of the proposed method and competing
+    methods.
+
+
+    | Method | AD vs CN | MCI vs CN | AD vs MCI vs CN |
+
+    |---|---|---|---||
+
+    | | p-value | p-value | p-value | p-value | p-value | p-value |
+
+    | | (AUC) | (F1) | (AUC) | (F1) | (AUC) | (F1) |
+
+    | MCAD and MCAD | 0.003 | 0.013 | 0.006 | 0.008 | 0.006 | 0.016 |
+
+    | MCAD and MCAN | 0.017 | 0.010 | 0.002 | 0.014 | 0.016 | 0.034 |
+
+    | MCAD and Concation | 0.027 | 0.028 | 0.029 | 0.030 | 0.039 | 0.068 |
+
+    | MCAD and DA | 0.051 | 0.071 | 0.119 | 0.138 | 0.207 | 0.215 |
+
+    | MCAD and Gated | 0.032 | 0.039 | 0.019 | 0.032 | 0.035 | 0.034 |
+
+    | MCAD and BBFNN | 0.097 | 0.092 | 0.017 | 0.118 | 0.301 | 0.482 |
+
+    | MCAD and DF | 0.016 | 0.004 | 0.004 | 0.004 | 0.036 | 0.037 |
+
+    | MCAD and SA | 0.016 | 0.016 | 0.006 | 0.006 | 0.047 | 0.036 |
+
+    | MCAD and SE | 0.031 | 0.034 | 0.008 | 0.009 | 0.018 | 0.025 |
+
+    | MCAD and BBFN | 0.035 | 0.044 | 0.011 | 0.013 | 0.043 | 0.024
+
+
+    AD vs CN: This classification is considered to be the most important in AD-related
+    tasks for several reasons. Firstly, the MRI scans of AD patients show lower values,
+    significant range, and higher contrast, compared with healthy groups. AD patients
+    have abnormal glucose metabolism in glutamate that can be detected by PET scans.
+    Secondly, the extracellular space of the brain, so it could reveal the biochemical
+    changes that exist in the brain of AD patients with healthy people. This facilitates
+    the deep learning network to learn the features of AD more effectively. As seen
+    from Table 2 for AD vs CN, the classification of our proposed method outperforms
+    competing methods in all tasks. As shown in Table 3, our MCAD, Concation, DC,
+    and Gated methods against competing methods (MCAN, MCCN, SA, and BBFNN) show significant
+    differences in terms of p-value (p < 0.05). The difference between MCAD and competing
+    methods could learn the fine-grained interactions between different modules and
+    explore the potential concordance and complementarity between regions and CSF
+    biomarkers, providing critical information for AD diagnosis.
+
+
+    To investigate the performance of MCAD, the mean ROC curves of AD vs CN diagnosis
+    results are shown in Fig. 4. As illustrated
+
+
+    In Fig. 4), our ROC curves can clearly display the accuracy of the models. The
+    mean ROC curve of MCAD (red color) shows to the upper left. In addition, the mean
+    curves demonstrate that the proposed framework MCAD is superior to other methods.
+    MCI vs CN: It is seen from Table 2 that MCAD shows better performance in the MCI
+    vs CN diagnosis task. For instance, the average AUC (77.14%) and F1 (71.67%) are
+    higher than those of competing methods with the same inputs. Meanwhile, our proposed
+    approach brings the high classification (71.26%) for the MCI vs CN classification,
+    which is 2.58% higher than the method. The reason is that MCAD could capture the
+    interaction between different features, which might affect classification performance.
+    Compared with, with SA, Gated and DA, the average MCAD increases by 3.53% and
+    2.26% respectively, and the F1 increases by 1.58% and 1.03% respectively. In the
+    paired-test (p < 0.05 significance level) results, MCAD is significantly better
+    than MCAN and other competing methods. For MCI vs CN classification is shown in
+    Fig. 4(b), it is apparent that the proposed MCAD obtains better values than other
+    methods in MCI vs CN classification. As shown in the results of AD vs CN and MCI
+    vs CN, we show that the diagnostic performance of the model is generally worse
+    than that of other methods. Similar results are found in other relevant studies.
+    A possible explanation for this is that the brain changes are less pronounced
+    in early stage patients. The neuroimaging features of AD are mainly manifested
+    in two aspects: brain atrophy and deoxy glucose metabolism. These two imaging
+    changes are much more apparent for AD vs CN. Additionally, as a proposed MCAD
+    for
+
+
+    7'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# J. Zhang et al.
+
+
+    # Computers in Biology and Medicine 162 (2023) 107050
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_7_0.png)
+
+
+    **Fig. 4.** The ROC curves of methods in two-class tasks: (A) AD vs. CN. (B) MCI
+    vs. CN.
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_7_1.png)
+
+
+    stage with AD and AN no impact on patient''s life, which makes diagnosis difficult.
+    In other words, it is harder to accurately diagnose AD, which requires experienced
+    experts. It is difficult for neural networks to learn discriminative features
+    between MCI and CN. However, the performance of MCI
+
+
+    AD vs. CN, from which we can see that the proposed method can significantly improve
+    the diagnostic performance in MCI task. Specifically, MCI ACC and the CI values
+    up to 64.30 and 61.85%, respectively by 2.95% and 3.08% higher than other methods.
+
+
+    method MCI clearly shows advantages over the decision-level fusion and the gated
+    methods, for instance, MCI outperforms AD and gated Fusion with 2.57% and 1.28%
+    average increase, respectively. This might be explained by the fact that our method
+    cross-modal interaction enters and reduces the modality gap between interaction
+    and AD data, effectively utilizing the features of the multi-modal information.
+
+
+    Moreover, the proposed t-test (at 95% confidence) compares the results of our
+    method with all competing methods in AD vs. CN task. The experimental results
+    demonstrate that the effectiveness of our method in identifying patients with
+    AD and MCI based on multi-modal data increases.
+
+
+    Furthermore, the AD and CN subjects are heterogeneous. Early stage MCI patients
+    with low lesions are more like CN subjects, while patients in later stages are
+    more similar to early-stage AD patients with severe abnormalities, making the
+    multi-class diagnosis problem challenging.
+
+
+    The experimental results indicate that the proposed method is effective. By using
+    multi-modal feature extraction, we achieve comprehensive diagnostic results. The
+    multi-modal approaches are better than those obtained by decision concatenation.
+    The cross-attention mechanism can capture the relationship between different modalities,
+    which would effectively explore the potential information for AD diagnosis.
+
+
+    As shown in Table 2, several advantages can be concluded. Firstly, MCI method
+    achieves competitive performance, for MCI vs. CN and multi-class diagnosis tasks.
+    Secondly, with the decision-level fusion method, the proposed
+
+
+    # 4.4. Ablation study
+
+
+    # 4.4.1. Ablation for the feature extraction task
+
+
+    In the proposed method, the encoder is constructed based on the calculated attention
+    to obtain multi-scale information. To investigate the effectiveness of encoder
+    in extracting features from 3D MRI and FPET data for AD diagnosis, we conducted
+    a group of experiments using ResNet-50 [6], Inception network [6] and the standard
+    CNN. We use these models as encoder, respectively, and then test three variants
+    as “ResNet”, “Inception” and “PPT”. The results are presented in Fig.
+
+
+    As seen from Fig. 5, the performance of the proposed method is better than others.
+    The superiority of MCI over “ResNet”, “Inception” and “PPT” is particularly obvious
+    in the multi-class classification task. For example, MCI obtains average results
+    with an ACC of 60.33%, and'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# J. Zhang et al.
+
+
+    # Computers in Biology and Medicine 162 (2023) 107050
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_8_0.png)
+
+
+    **Fig. 5.** Comparison of methods using different features-related diagnostic
+    tasks. The line in the middle of each box represents the mean. The cross indicates
+    the mean of the evaluation index. * Indicates the significant difference. (A)
+    AD vs. CN. (B) MCI vs. CN. (C) AD vs. MCI.
+
+
+    ACC of 76.6% and F1 of 61.85%, are 2.15% and 3.27% higher than “ResNet” (p < 0.05,
+    paired-test), and 1.76% higher than compared methods. In the paired-t test (at
+    95% significance level) between methods, our method is 0.62% higher than “PPM”
+    (p < 0.05, paired-test).
+
+
+    0.62% and 2.17% higher than all other methods. The p-value of less than 0.05 shows
+    that our method is significantly better. The reason could be that the MCD with
+    different fusion rates learns better multi-scale information representation by
+    fusion of local and distant information, while traditional CNN can only capture
+    the information of fixed receptive fields. Due to the relatively small and varied
+    size of the brain regions affected by disease, it is difficult to extract rich
+    features through fusion. Our method learns rich representations by using decomposition
+    in the convolution layer without additional computational overhead is crucial
+    for AD diagnosis, which can effectively improve the learning ability and performance.
+
+
+    hyperparameters are set as $t_1 = 1.0$ and $t_2 = 0.0005$, the proposed MCD can
+    achieve excellent performance with the $p$-values of cases less than 0.05, paired-test.
+
+
+    From Fig. 5, we can observe that MCD generally outperforms the other methods (i.e.,
+    $t_i = 0$) in terms of multi-modal associated classification. In contrast, the
+    proposed framework improves methods by (2.25% ACC, 2.02% ACC and 0.32% F1), achieving
+    significant improvement in terms of classification ($p < 0.05$ using a paired-test
+    at 95% significance level). Multi-class diagnosis improves by (1.70% ACC, 0.41%
+    ACC and 0.19% F1) ($p < 0.05$, paired-test). The importance of multi-modal fusion
+    is highlighted to reduce the redundancy for effectiveness of fusing the multi-modal
+    data, which results suggest that both fusion classification and multi-modal association
+    can effectively improve the performance of AD diagnosis. Together, these results
+    suggest an efficient learning strategy for AD diagnosis using multi-modal data.
+
+
+    # 4.4.2 Ablation study for the objective function
+
+
+    An objective function is employed in this paper to optimize the generator algorithm,
+    classification loss and fusion loss to control the distribution alignment loss
+    to learn the multi-modal dependency and find the optimal combination of loss functions.
+    We conduct experiments by ablation study of the diagnostic performance with respect
+    to $t_1$ and $t_2$. Specifically, $t_1$ is set to 1.0 and $t_2=0.005$ is tuned
+    to evaluate the proposed MCD model with different relative coefficients of classification
+    loss and alignment loss. We set the range of $t_2$ from 0.0001 to 0.1 as an adjustment
+    step. The experimental results are reported in Fig. 6.
+
+
+    As expected, ACC, AUC and F1 values approximately follow a U-shaped curve as increasing
+    the hyper-parameter $t_2$. When $t_2$ is small, the performance of the model gradually
+    improves as the model begins to align the features of imaging and non-imaging
+    modalities, reducing the discrepancy between models. When $t_2$ increases, the
+    performance is degraded to some extent, because the model fails to pay enough
+    attention to the classification loss; in other words, the model controls too many
+    constraints on the distribution alignment of multi-modal data. Through the comprehensive
+    study, we can find that when
+
+
+    # 4.4.3 Ablation study for the multi-modal interaction method
+
+
+    To investigate the effects of the multi-modal interaction method, we make an ablation
+    study to remove the MI (denoted as “w/o MI”). The results of experiments are shown
+    in Fig. 7.
+
+
+    We can observe that MI can effectively improve the performance of AD diagnosis.
+    In contrast, the performance of MCD w/o MI in AD vs. CN is 1.36% ACC, 1.54% F1
+    ($p < 0.05$, using a paired-test at 95% significance level) AD vs. CN. The proposed
+    method has better performance than variant without MI, with an ACC 2.76% higher
+    and F1 2.86% higher ($p < 0.05$, using a paired-test at 95% significance level)
+    AD vs. MCI. We CN vs. CN, compared with MCD w/o MI in Fig. 7, shows significant
+    differences in terms of ACC, AUC and F1 of 0.95%, 3.85%, and 5.24% higher than
+    or without MI.
+
+
+    # 5. Discussion
+
+
+    # 5.1. Results using single-modal data
+
+
+    To demonstrate that multi-modal data can provide potential for AD diagnosis, experiments
+    are conducted to evaluate the diagnostic performance utilizing features from every
+    single'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Zhang et al.
+
+
+    # Computers in Biology and Medicine 162 (2023) 107050
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_9_0.png)
+
+
+    **Fig. 6. Performance of methods using different combinations. (a) AD vs. CN.
+    (b) MCI vs. CN. (c) AD vs. MCI vs. CN.
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_9_1.png)
+
+
+    **Fig. 7. The boxplots of the cross-validation results in AD-related diagnostic
+    tasks. The line in the middle of each box represents the mean of the boxes the
+    current evaluation index. * indicates the significance difference. (a) AD vs.
+    CN. (b) MCI vs. CN. (c) AD vs. MCI vs. CN.
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_9_2.png)
+
+
+    **Fig. 8. Comparison of results based on single-modality data. (The error bar
+    represents the standard deviation.) (a) AD vs. CN. (b) MCI vs. CN. (c) AD vs.
+    MCI vs. CN.
+
+
+    modality. For the CSF biomarkers, the CSF encoder followed by two layers is used
+    for classification, while the image layers are added for integrating data. The
+    results of AD diagnosis using single-modality marker are shown in Fig. 8.
+
+
+    As shown in Fig. 8(a), AD diagnostic employing features from MRI and FD-PET is
+    significantly higher in terms of ACC, AUC, and F1 scores, which highlights the
+    importance of multi-modality biomarkers in AD diagnosis.
+
+
+    overall standard deviation (minimum of 1.80%) for folds all evaluation metrics.
+    The ROC curves in the two-class classification are employed to evaluate the performance
+    of single-modality data for AD diagnosis, as demonstrated in Fig. 9.
+
+
+    # 5.2. Distributions of diagnostic markers
+
+
+    We investigate the influence of fusing markers on the performance of AD diagnosis.
+    The experiments are conducted by adding different markers by one in three AD-related
+    diagnostic tasks. That is to compare the performance of fusion from different
+    modalities, as reported in
+
+
+    It is highlighted in Fig. 10, in all experiments, the diagnostic performance of
+    methods with multi-modality data such as MP and MRI, is superior to using single-modality
+    data such as MRI., the diagnostic performance of MPC is greatly better than MP.
+    For instance, distinguishing AD from CN, our Gray method with MPC
+
+
+    As shown in Fig. 8(a), AD classification, the performance from MRI and FD-PET
+    is significantly higher in terms of ACC, AUC, and F1, which is increased by 2.77%
+    (from 75.23% to 78.00%). We also find that FD-PET can yield relatively better
+    performance than MRI, which is consistent with the finding in [68, 6]. It is due
+    to the fact that hippocampal biomarkers can be detected earlier in the early stage
+    of AD. Our Gray method obtains viable results with a mean ACC of 89.78%, an AUC
+    of 93.92% and an F1 of 89.39, which are 5.14%, 4.30% and 3.35% higher than using
+    MRI and CSF, and 6.71%, 7.08% and 6.13% higher than using CSF in AD classification.
+    Also, FD-PET achieves between
+
+
+    10'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# J. Zhang et al.
+
+
+    # Computers in Biology and Medicine 162 (2023) 107050
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_10_0.png)
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_10_1.png)
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_10_2.png)
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_10_3.png)
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_10_4.png)
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_10_5.png)
+
+
+    Fig. 9. ROC curves obtained by using single-modality marker. (a) AD vs. CN. (b)
+    MCI vs. CN.
+
+
+    Fig. 10. Comparison of results when using different methodologies. (a) AD vs.
+    CN. (b) MCI vs. CN. (c) AD vs. MCI.
+
+
+    Fig. 11. ROC curves achieved by different methodologies. (a) AD vs. CN. (b) MCI
+    vs. CN.
+
+
+    achieves mean ACC of 91.07%, SEN of 91.03%, SPE of 91.07%, AUC of 94.07% and F1
+    of 91.11, while the performance with single-modality is only 84.63% (ACC), 81.43%
+    (SEN), 87.76% (SPE) and 84.49 (F1), respectively. The performance with multi-modality
+    reaches 90.41% (ACC), 91.66% (SEN), 93.95% (SPE), and 90.28% (F1), respectively.
+    In MCI vs. classification, the performance is increased by 8.67%, 19.34%, and
+    15.06% meaning ACC, SEN, and F1 with the assistance of multiple biomarkers, compared
+    to that of using MRI data alone. For multi-class classification, the performance
+    is monotonically increased by the data modality, from M to MPC, in ACC, SEN, SPE,
+    and F1. Significant improvements
+
+
+    lie in F and EPI, which is successively increased by 4.94% (from M to MPC) and
+    3.26%) bringing a total of 73.00%. The optimal performance is achieved when all
+    three modalities are utilized. This demonstrates that multiple biomarkers can
+    capture disease-related information from different perspectives and complementary
+    information, which is to enhance classification performance.
+
+
+    # 5.3. Discussion of the attention reduction method
+
+
+    In the proposed MCAD, the attention reduction with a two-layer multilayer perceptron
+    (ReLU-Dropout-Dropout) is employed'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Table 4
+
+    Performance comparison of ReakyReLU and Leaky ReLu in the attention reduction
+    module for AD-related diagnostics.
+
+
+    | Classification | Metrics (%) | Leaky ReLu (u = 0.01) | Leaky ReLu (u = 1/5.5)
+    | ReLu |
+
+    |---|---|---|---||
+
+    | AD vs. CN | AUC | 90.7 | 93.8 | 91.7 |
+
+    | | AUC | 94.9 | 94.2 | 94.4 |
+
+    | | F1 | 70.4 | 91.1 | 91.7 |
+
+    | MCI vs. CN | AUC | 70.4 | 70.9 | 71.7 |
+
+    | | AUC | 73.8 | 77.4 | 74.9 |
+
+    | | F1 | 73.8 | 71.6 | 72.6 |
+
+    | AD vs. MCI vs. CN | AUC | 63.8 | 64.2 | 64.0 |
+
+    | | | 76.7 | 76.9 | 76.7 |
+
+    | | F1 | 61.7 | 61.6 | 61.8 |
+
+
+    # Table 5
+
+    Performance comparison of MCAD and MCAD-extended for AD-related diagnostics.
+
+
+    | Classification | Metrics (%) | MCAD | MCAD-extended |
+
+    |---|---|---|--|
+
+    | AD vs. CN | AUC | 89.4 | 91.7 |
+
+    | | AUC | 93.6 | 94.4 |
+
+    | | F1 | 86.6 | 91.1 |
+
+    | MCI vs. CN | AUC | 70.3 | 72.6 |
+
+    | | AUC | 69.8 | 70.7 |
+
+    | | F1 | 69.6 | 72.6 |
+
+    | AD vs. MCI vs. CN | AUC | 62.5 | 64.0 |
+
+    | | | 76.1 | 76.7 |
+
+    | | | F1 | 59.3 | 61.8 |
+
+
+    obtained features from multi-modal data. We compare the experimental results of
+    MCAD and MCI with those that replace ReakyReLU with Leaky ReLU in the attention
+    module. The hyperparameter in Leaky ReLU is set to 0.01 and 1/5.5, respectively,
+    as suggested by [72,73], the activation function the network structure and features
+    remain the same. The results are reported in Table 4, We find that the performance
+    of ReakyReLU (u=0.01) in the attention reduction module is significantly lower
+    than that of MCAD for AD-related diagnostics.
+
+
+    # 5.4. Discussion of cross-attention extending to imaging modules
+
+
+    In the proposed MCAD, multi-modal interaction module based on cross-attention
+    learns to learn the interactions between imaging features and CSF features. To
+    investigate the performance of MCAD using cross-attention in different modules,
+    we perform experiments by comparing MCAD with a variant where cross-attention
+    is extended to different modules that include MRI and MEG-PET features, and design
+    "MCAD-extended". Specifically, after obtaining the features of only two modalities,
+    the outputs are concatenated for classification. The experimental results are
+    shown in Table 5.
+
+
+    Looking at Table 5, the performance of multi-modal interaction between imaging
+    features and CSF features is better than that of the multi-modal methods with
+    some MRI features, MEG-PET features and CSF features, especially in MCI vs. CN
+    classification. The metrics are 1.33%, 1.77% and 1.81% higher than "MCAD-extended"
+    (p < 0.05, paired-test). Additionally, in AD vs. CN and AD vs. MCI vs. CN diagnostics,
+
+
+    cross-attention extending to imaging modules does not result in significant performance
+    improvements. A possible explanation for this result is that the model complexity
+    increases significantly, increases the risk of overfitting and thus affects the
+    performance of AD. In the MCAD-extended module, we use combinations of features,
+    each of which is a multi-modal interaction module
+
+
+    # 5.5. Visualization analysis
+
+
+    In this section, we demonstrate the behavior of the proposed framework by visualizing
+    the attention maps in multi-modal interaction, as shown in Fig. 12. Cross-attention
+    attention represents the CSF-attention attention extraction branch, whereas in
+    CSF-attention it is the feature attention. Fig. 12 shows the visualization of
+    attention maps corresponding to each feature. We use yellow color in the attention
+    map to represent high attention weights. The corresponding results show that the
+    attention mechanism differs between imaging patches and CSF features. Due to space
+    limitations, we only show one example from each disease status is reported. From
+    the visualization results, we have the following observations. In AD category,
+    P- and T-tau may show significant attention in brain region with atrophy, particularly
+    in the temporal lobe and hippocampus. This finding is consistent with previous
+    work [78], which shows a relationship between CSF biomarkers and T-tau and A42,
+    in different brain regions. Previous researches [77-81] also finds the correlation
+    between CSF biomarkers and imaging features in AD. Overall, the proposed method
+    could perform the information analysis and learn the potential relationship between
+    different-modal data, which leverages their complementary roles to greatly improve
+    the diagnostic performance.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Conclusion
+
+
+    In this study, we propose a novel method named MCAD, aiming to distinguish AD,
+    CN using multi-modal data including sMRI, FD-PET and CSF biomarkers. Due to the
+    disease-related differences in MRI and FD-PET scans being relatively small and
+    vary in size, the encoder based on dilated fine-grained representations is utilized
+    to learn the multi-scale features. Meanwhile, the CSF encoder can capture more
+    rich information representations. To effectively exploit the correlated information
+    across modalities for AD, the inter-modality interactions are modeled in the MI
+    based on fine-grained representations of image blocks and CSF. We employ an objective
+    function to ensure modality alignment is designed to learn AD features feature-level,
+    which contributes to the effective fusion of multi-modal features and the AD diagnostic
+    performance. Experimental results on ADNI dataset demonstrate that our method
+    outperforms other AD classification tasks compared to the competitive approaches.
+    Overall proved by extensive experiments, learning the fine-grained interactions
+    between multiple modalities could provide critical information for AD.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no competing financial interests or relationships
+    that could have influenced the work reported in this paper''s
+
+
+    # Acknowledgments
+
+
+    The research presented in this paper is supported by Chengdu Major Technology
+    Application Demonstration Project (2019-YF09-0012-SN0), the
+
+
+    # References
+
+
+    +   1. S. Swartz, V. Atharthi, A. Kaushik, A. Yardt, M. Nair, Alzheimer’s disease:
+    pathogenesis, diagnostics, and therapeutics. Int. Nature Neurology (2014) 15:149-154.
+
+    2. L. Zhan, J. Jiao, W. Wang, Y. Zhou, J. Jahansadi, G. Prasad, J. M. C. Liu,
+    C. Chen, Y. Zhang, Y. Wang, and G. Sheng, Deep learning for detection of abnormal
+    brain networks in Alzheimer’s disease. Front. in Neurology (2019) 10:668.
+
+    3. K. Zhang, Y. Wang, H. Li, J. Chen, G. Wang, and S. Dong, Multi-view classification
+    for identification of Alzheimer’s disease, in International Workshop on Alzheimer’s
+    Disease and Cognitive Disorders, 2021.
+
+    4. L. Lange, Alzheimer’s disease facts and figures, Alzheimer’s Medicine (2020)
+    16:100662.
+
+    5. V. G. Vaslagner, Vulnerable brain and networks- 77: Structural changes in the
+    aging human brain networks. Nature Neurology (2013) 20:227-238.
+
+    6. H. Ha, J. Liu, L. Nguyen, J. Marshall, et al., Disease-associated with K. Riverter,
+    G. Green, D. Green, Disease-associated proteins in Alzheimer’s disease and aging,
+    Nature Res. (2020) 6:709-713.
+
+    7. J. White, E. Thieullen-Serre, M. Dias-Mera, J. Sanchez-Gutiérrez, A. Routier,
+    S. Boutin, C. Meyer, S. Danis, S. Darrington, and N. Nicolas, Identification of
+    Alzheimer’s disease using graph-based association networks for classification
+    of Alzheimer’s disease: International Medical Exp. Eval. (2016) 63:555.
+
+    8. M. Chen, Deep learning-based classification and prediction of Alzheimer’s disease
+    and mild cognitive impairment: A review, Curr Alzheimer Res. 17 (3) (2022) 297-309.
+
+
+    ![](img/35eb289ac20da6b2112bd8090073aee2_12_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'J. Chang
+
+
+    Computers in Biology and Medicine 162 (2023) 107050
+
+
+    +   [10] Wang, L., B. Liu, J. Shen, S. Wu, A. DiInit.; Multi-modal and multi-ensemble
+    learning architecture based on 2D convolutional networks for Alzheimer''s disease
+    diagnosis, Biol. Med. 126 (2021) 106420
+
+
+    +   [11] A. Drazga, D. Altomare, C. Festari, J. Arbizu, S. Ortiz, E. Kerholz,
+    P. Nester, F. Agosto, F. Nobilli, et al.; Analysis of 18F-FDG PET for the prediction
+    of Alzheimer''s disease in patients at increased risk, Eur. J. Nucl. Med. Imaging.
+    95 (2018) 1487–1496
+
+
+    +   [12] S. Karakas, A. Volcker, V. Myrkers, et al.; Identification of Alzheimer''s
+    disease biomarkers, Acta Neurolrol. 117 (3) (2017) 591–607
+
+
+    +   [13] A. Ashbery, F. Fisher, K. Chen, N. Aartveld, L. Lopez, T. Quicker, R.
+    Caseli, P.N. Talbot, E.M. Reiman; In the study and prediction of preclinical dementia,
+    Nat. Aging Res. 9 (7) (2021) 791–798
+
+
+    +   [14] X. Ma, B. Li, H. Hu, Y. Wang; Multi-modal data analysis for Alzheimer''s
+    disease based on clustering evolutionary fusion results, IEEE J J. Bioinf. Inf
+    Health. 24 (2020) 107512
+
+
+    +   [15] W. Lin, Q. Ma, D. Wang; Multi-center diagnosis of Alzheimer''s disease
+    using deep learning algorithms on structural MRI analysis, Front. Hum. 8 (2021)
+    669333
+
+
+    +   [16] S. Spavano, L. Dammagant, A. Pian, N. Tocci, A.D. DiInit, et al.; A parameter-efficient
+    deep learning approach to prevent learning from multimodal data for Alzheimer''s
+    disease classification, NeuroImage. 253 (2022) 119033
+
+
+    +   [17] K. Wajid, A. Feijoo, J. Mervey, E. Fenema-Notte, D. Habler, G. Malher;
+    Multimodal fusion of MRI, PET, and CSF biomarkers for diagnosis and prediction
+    of Alzheimer''s disease, J. Alzheimers Dis. 19 (3) (2022) 340–357
+
+
+    +   [18] Y. Wang, and J. Liu; Multimodal classification of Alzheimer''s disease
+    and mild cognitive impairment, Neurosciences. 55 (5) (2022) 851–865
+
+
+    +   [19] C. Zhang, and Y. Wang; Evaluation of multimodal fusion among MRI, CSF
+    score, and APOE biomarkers for classification of Alzheimer''s and MCI using ensemble
+    learning, Scientific Reports. 12 (2022) 15333
+
+
+    +   [20] F. Sabahi, M. Ahmed, et al.; Early diagnosis of Alzheimer''s disease
+    based on deep learning, Medical Science. 300 (2022) 106532
+
+
+    +   [21] X. Liu, and Y. Wang; Multimodal prediction of Alzheimer''s disease based
+    on attention-based fusion model, 2021 IEEE International Conference on Data Mining
+    (ICDM), 2021, pp. 1270–1275
+
+
+    +   [22] Y. Zhang and Y. Wang; Diagnosis of Alzheimer''s disease using multimodal
+    feature fusion, Comput. Biol. Med. 148 (2022) 103991
+
+
+    +   [23] Y. Chen, J. Wang, E. Cao, H. Meijer, D. Hajler; A robust deep learning
+    model of Alzheimer''s disease prediction for real-world clinical applications,
+    2022, arxiv preprint:2213.09964
+
+
+    +   [24] C. Himerowicz, V. Singh, G. Xu, S. Johnson, A. DiInit, et al.; Multi-modal
+    deep learning for early diagnosis of Alzheimer''s disease in the AD population,
+    Neurosciences 95 (2022) 5711–5729
+
+
+    +   [25] D. Kushain, H. Yan, D. P. Habib, L. Sen, Y. Chen, Y. Zhou, A. Wu, T.
+    C. Agra, R. C. Jr., R. J. Wang, et al.; Early diagnosis of Alzheimer''s disease
+    using recurrent-based neural networks and deep learning, IEEE/Trans. Comput. Biol.
+    Med 2 (2022)
+
+
+    +   [35] C. Han, L. Liu, J. Shen, D. Xu; High hierarchical convolutional network
+    for joint attention localization and Alzheimer''s disease diagnosis using structural
+    MRI, IEEE Trans. Neural Net. Learn Math. 32 (4) (2020) 880–893
+
+
+    +   [36] J. Zheng, X. Heng, X. Xu, Y. Li, J. Wang, A. D. DiInit.; Multimodal attention-based
+    convolutional network for early diagnosis of Alzheimer''s disease, J. Neural.
+    Eng. 19 (4) (2022) 046030
+
+
+    +   [37] Q. Wang, Y. Chen, W. Li, J. Li, Q. Hu, Y. Wang, A. D. DiInit.; Attention-enhanced
+    attention network for early diagnosis of Alzheimer''s disease, Biomarkers 12 (11)
+    (2022) 42155
+
+
+    +   [38] Q. Sun, P. S. Joshi, M. Liu, C. Xu, X. Zhou, K. Karajardi, G. H. Chang,
+    A. S. Zhou, B. Byer, D. Shu, et al.; Evaluation and validation of a convolutional
+    network for Alzheimer''s disease classification, Nature Communications 11 (2020)
+    1920–1923
+
+
+    +   [39] X. Ma, Y. Guo, L. Chen, R. Duan, A. D. DiInit, et al.; Multi-modal classification
+    of Alzheimer''s disease using non-local graph attention network, Fusion 67 (2023)
+    53–67
+
+
+    +   [40] C. B. Jack, Jr., M. A. Bertolotti, N. Fox, T. Ganderbauer, D. Harvey,
+    R. B. Johnson, P. J. Birn, L. White, C. Ward, et al.; The Alzheimer''s disease
+    neuroimaging initiative: Res. Imaging. J. Soc. Res. 27 (6) (2008) 685–691
+
+
+    +   [41] Y. R. Jung, Z. Gu, B. Kim, J. Y. Lee, et al.; Multimodal deep learning
+    for early diagnosis of Alzheimer''s disease, Scientific Reports. 11 (2021) 15543
+
+
+    +   [42] K. Bashmakter, M. Han, L. Y. Yang, et al.; A deep learning approach for
+    Alzheimer''s disease classification using multimodal data, Scientific Reports
+    11 (2021) 15544
+
+
+    +   [43] E. Fernandez, B. Gullot, J. Sampler-Ganzier, J. Wen, S. Bertani, A. Marcois,
+    M. Barcoux, T. Fagnani, A. Villard, G. A Poquet, J. Au, M. Dias, F. Thieu, T.
+    Mercource, M. Treichmann, S. Habler, et al.; 21st International Symposium on Medical
+    Imaging (ISBI, 2018), pp. 189–193
+
+
+    +   [44] Y. Wang, J. Liu, and R. Richardson; A design of convolutional neural
+    networks for automatic detection of Alzheimer''s disease, Machine Learning for
+    Health 11, 2020, pp. 281–294
+
+
+    +   [45] K. Zhang and Y. Wang; Multi-modal self-classification: an attention-based
+    transformer network for dementia aging, 2023
+
+
+    +   [46] A. Doshoyts, L. Bayer, A. Kolokoliev, V. Semenin, X. Zaitsev, T. Unterterich,
+    D. Medinhint, M. Godinger, G. Hell, S. Gelley, et al.; Attention-based neural
+    network for Alzheimer''s disease classification, 2020, arxiv preprint:2019.09618
+
+
+    +   [47] A. Vawanna, N. Senrath, N. Parmar, J. Jha, et al.; Deep cross-encoder
+    networks for Alzheimer''s disease classification, Adv. Neural. Med. Phys. 30 (2021)
+    0730
+
+
+    +   [48] T. Han, M. Bansal; Learning deep cross-encoder networks for Alzheimer''s
+    disease classification, 2019, arxiv preprint:1912.06488
+
+
+    +   [49] D. J. Kim, B. Park; A deep learning approach for early diagnosis of Alzheimer''s
+    disease with multimodal generative adversarial network, IEEE J. Bioinf. Health.
+    25 (2023) 7119–7128
+
+
+    +   [50] J. Chen, M. Zheng, W. Xu, Y. Li, T. Wang, B. Zhou; Multi-modal deep convolutional
+    neural network for Alzheimer''s disease diagnosis, Neuroimage 168 (2023) 119552
+
+
+    +   [51] J. Wang, S. Wang, Y. Yang, W. Wang, D. Treichler, R. Multihler; Multimodal
+    bilinear pooling learning for visual question answering and grounding, 2023, arxiv
+    preprint:2316.01841
+
+
+    +   [52] V. Thomas, M. El-Ahmed, M. Hassandadeh, M. Wang; Multimodal deep learning
+    models for early detection of Alzheimer''s disease, Sci. Rep. 11 (1) (2021) 1–13
+
+
+    14'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '62. Chen, Q., O, J., Liu, H., Chen, J., Peng, X., Huang, Robust multimodal
+    tumor segmentation deentanglement and fusion analysis, 2020, arXiv:2002.09078.
+
+
+    63. Wan, H., Hen, C., A. Gulikhah, A.zadeh, L. Mencory, S. Poria, Bimodal attention-controlled
+    multimodal segmentation analysis, In Proceedings of the 2021 International Conference
+    on Multimodal Interaction, 2021, pp. 77–84.
+
+
+    64. Zhou, X., Li, H., Sun, J., A novel maxrank-based loss function for joint regression
+    and classification in AD diagnosis, Neuroradioology 104 (2021) 91–105.
+
+
+    65. Song, Y., Lin, Y., Jia, P., Semant, R., Reed, D., Anguelle, E., Erhan, V.,
+    Vaninck A, Going deeper with convolutions, In Proceedings of the IEEE Conference
+    on Computer Vision and Pattern Recognition, 2016, pp. 77–85.
+
+
+    66. Zhao, J., Shi, X., Qi, X., Wang, J., FPN scene network: Feature pyramid networks
+    for multi-scale object detection, In Proceedings of the IEEE Conference on Computer
+    Vision and Pattern Recognition, 2017, pp. 2881–2890.
+
+
+    67. C.B. Jack, J.D., Smith, M., Wang, J.J., Jagat, M.S., Shaw, A.P., Miles, W.
+    E., Elsner, and T. Trojanjakowski, Bimodal model of dynamics of the Alzheimer’s
+    pathological cascade, Lancet Neur. 9 (1) (2010) 119–128.
+
+
+    68. J. Rosner, A. Gauthier, J. Ruillier, M. Macci, J. Wen, et al., Evaluation
+    of classification methods in Alzheimer’s disease: Framework and application to
+    MRI and CT data, In IEEE International Conference on Medical Imaging, 2009, pp.
+    1–10.
+
+
+    69. L. Moscotti, S. Sorbi, M.J., De Leon, Y., Bacciardi, N. Musci, P. Myung, W.
+    Tsui, A. Ginetroni, V. Besti, M. Fayyaz, et al., Hypometabolism exceeds atrophy
+    in preclinical Alzheimer’s disease, Neuroimaging 22 (17) (2006) 1778–1786.
+
+
+    71. V. Vogt, M.L. Grothe, M. Ewers, S. Tejped, A.DN. Initiative, et al., Pattern
+    of hypometabolism and atrophy in preclinical and dementia Alzheimer’s disease,
+    Neurobiol. Age 35 (9) (1994) 1973–1981.
+
+
+    72. A. Ma, S. Ayn, Y. Ng, et al., Robust multilayers for neural network acoustic
+    models, In: Proc. ICML, Vol. 13, Atlanta, Georgia, 2003, US, 319–326.
+
+
+    73. B. Na, W. Tang, H. Chen, LJ, Evaluation of received activations in convolutional
+    networks, 2017, arXiv:1605.05883.
+
+
+    74. J.H. Sadyadi, C. Elgadi, S. F. Guuzman, M.H., Short, Long-term loss-forget
+    network for convolutional neural networks and time series analysis, Energy 175
+    (2015) 365–379.
+
+
+    75. C. Banerjee, T. Mukerji, E. Paulino, Feature representation using the residual
+    convolutional neural network for early AD detection, Brain Imaging 128 (2019)
+    109933.
+
+
+    76. J. Feng, S. Lu, Performance of various activation functions in artificial
+    neural networks, in Journal of Physics: Conference Series, 1027, 1237
+
+
+    77. H.H. Strickland, H.D. Dodge, N.M. Dowling, S.D. Han, E.A. Erosoeva, W.J. Jagat,
+    Cerebral amyloid-beta plaque thickness: implication for the Alzheimer’s pathological
+    cascade, Brain Behavior 6 (4) (2002) 599–609.
+
+
+    78. A.S. Gray, J. Steele, M. Eichenberg, A. Apostolos, V. Lenzenzel, F. Thomas,
+    S. Young, R. Buckner, Association between FDG and CSF biomarkers and cognitive
+    performance in patients with Alzheimer’s disease, J Alzheimer’s Dis. 5 (2009)
+    397–406.
+
+
+    79. K. Karavola, D. Borghetti, L. Kaifner, G. Giotoni, A. Giorgetti, D. Negli,
+    N. Sani, F. Pasquini, et al., Correlation of CSF tau and Aβbeta with cerebral
+    glucose metabolism PET scan in Alzheimer’s disease, Brain Res. Vol 77 (1-2) (2006)
+    80–84.
+
+
+    80. C. Schiaclini, A. Montan, S. Tor.ck, Y. Tomse, D. Diago, B. Pietro, O. Schillaci,
+    Functional correlates of Tau-P and Tau-T and Abeta-42 amyloid cerebral cerebrospinal
+    fluid levels in Alzheimer’s disease: a 18F-FDG/PET CT scan, Med. Neuroimaging
+    122 (2015) 1033–1040.
+
+
+    81. M. Troit, P. Tomse, U. Rot, M. Gremek, L. Jansterle, R. Berlot, V. Kavick,
+    M. Kranenberger, Z. Petauk, The association between CSF and FDG-PET imaging biomarkers
+    of neurodegeneration in mild cognitive impairment, Vol. 10, 2014.
+
+
+    15'
+  merge: -1
+  img_proc: true
