@@ -1,0 +1,14 @@
+# Streaming Analytics for Healthcare and Retail Domains 307
+
+archive may be one potential technological solution for exchanging genomics data. This is completely distinct from the World Wide Web, which is essentially a public resource. To allow data sharing and suggest a way to centralize the computational storage of larger datasets to maximize performance, a private archive will be approved for use only by certified researchers. Furthermore, in future, people will be faced with data science problems, namely sharing constrained data in a certain context. Finally, data ownership is closely associated with obtaining profits and benefits from the data. The best strategies have to be identified not only to recognize the data generation process, but also to analyse the data efficiently and to value the reward analysts and data generators.
+
+# 16.9 Conclusion
+
+This chapter discusses real-time streaming analytics in the healthcare and retail domain. Developing data analytics is now easier than ever before, thanks to the digital transformation of business. Data streaming analytics may enhance decisionmaking by providing better business insight predictions. Streaming analytics' ultimate goal is to assist organizations to stay ahead of their competition by allowing them to make smarter decisions. Streams of data are gathered in retail and healthcare via different electronic devices such as mobile phones, wireless sensors, etc., linked through the internet. The healthcare business requires software and technology capable of real-time analysis of massive and diverse data streams. Streaming analytics technology is used in retail establishments and e-commerce because increasing client happiness is the key aim. Streaming analytics also helps new companies reach their target audiences and gain market share. Big Data analytics uses both structured and unstructured data. It enhances decision-making for both researchers and medical practitioners.
+
+# References
+
++   1. Kantardzis, M., and Zurada, J. (2016) “Introduction to Streaming Data Analytics and Applications Mintrack.” In 2016 49 Hawaii International Conference on System Sciences (HICSS), IEEE, p. 1722–1729.
+2. Maynika, J., Chui, M., Brown, B., Bughin, J., Dobbs, R., Roxburgh, C., and Hung Byers, A. (2011) Big Data: The Next Frontier for Innovation, Competition, and Productivity. New York: McKinsey Global Institute.
+3. Oyelade, J., Soyemi, J., Iverson, I., and Obenbe, O. (2015) “Bioinformatics, Healthcare Informatics and Analytics: Anative for Improved Healthcare System.” International Journal of Applied Information System, 13(5): 1–6.
+4. Yadav, A., Sharma, S., Das, L., Gupta, S., and Vashisht, S. (2021) “An Effective IoT Real-time Gas Detection System for Wireless Sensor Networks.” In

@@ -1,0 +1,15 @@
+# Overview of Human-Computer Interaction ■ 39
+
+IoT-based solutions. Eclipse IoT is an open-source that intends to integrate popular IoT protocols, offers services and frameworks for building IoT applications and gives essential tools to IoT developers. New IoT technology can only be effectively applied if it is used in an open-source approach. Eclipse provides resource management solutions for developers, frameworks, and services.
+
++   - Arduino: Arduino is a smart device if you want to develop a computer that can sense and control the physical world better than a traditional stand-alone computer. Arduino is an open-source prototype and easy-to-use IoT platform that offers a perfect blend of IoT hardware and software, through an interactive electronics platform that uses a set of hardware specifications. The software includes the Arduino programming language and the Arduino Development Environment (IDE).
+
++   - PlatformIO: PlatformIO Core and PlatformIO IDE are both available for personal and commercial use of free. The user pays for additional features. This platform includes a build system, as well as library management and an IDE. Users can either port the IDE to the Atom editor or install it a plug-in. PlatformIO's best feature is that it works with over 200 different boards. PlatformIO is a serial port monitor that can with fantastic debugging integration.
+
++   - IBM Watson: IBM Watson is an application programming interface (API) that allows users to integrate a variety of cognitive computing technologies into their IoT applications. This is a unique technology that can be used to forecast the future. IBM Watson's multiple capabilities assist in the development of chatbots that interpret natural language. These chatbots can then be launched on messaging systems and websites that are accessible via a variety of devices. IoT developers use IBM Watson to construct cognitive search and content analytics engines quickly and successfully.
+
++   - Raspian: IoT tech enthusiasts developed this IoT IDE on the Raspberry Pi board. It is a vital IoT development tool with over 35,000 packages with several examples, as well as speedy installation with pre-compiled software. Another feature of this tool is that it is constantly improving and expanding the computational research so that users can get the most out of it.
+
++   - OpenSCADA: The Eclipse IoT industry groups developed this as part of their SCADA project. It is platform-independent and is famous for its security, flexibility, and modern design. OpenSCADA also includes front-end apps, back-end libs, set-up tools and interface implementations, as well as support for editing and debugging. Its various statistical tools can be used in the creation of complex IoT applications.
+
++   - Kinoma Create: This is a device that connect two devices without requiring extensive JavaScript skills. Kinoma Create includes everything needed to

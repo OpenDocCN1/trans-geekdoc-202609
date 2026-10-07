@@ -1,0 +1,1 @@
+Figure 6.5 Diabetes prediction page.

@@ -1,0 +1,11 @@
+retinopathy, from early to advanced stages. It is difficult to provide effective treatment as the disease often shows few or no symptoms and it may lead to vision impairment. Detection of diabetic retinopathy is a manual and time-consuming process which requires a trained clinician to examine and evaluate colour fundus photographs of the retina. Normally, clinicians identify diabetic retinopathy by the presence of lesions associated with the vascular abnormalities caused by the disease. Though this sounds effective, it demands high resources.
+
+Diabetic retinopathy happens when the small blood vessels get damaged and damage the neurons of the retina. Retinal arteries are compressed with less retinal blood flow, wounding the neurons of the inner retina, the outer retina is associated with the changes in the visual function, harming the blood-retinal barrier, which may also lead to the leakage of blood constituents into the neural retina, the initial changes can be found in people affected with DR (https://en.wiki.org/Diabetic_retinopathy). Effective diabetic retinopathy screening is required because does not show any symptoms in the initial stages, and can cause blindness if it is not diagnosed and treated promptly (Antal and Hajdu, 2014; Narasimha-Iyer et al., 2006; Niemijer et al., 2009; Osareh et al., 2009; Pires et al., 2013; Sil Kar and Maity, 2016; Taylor et al., 2009; Walter et al., 2002; Zhang et al., 2009).
+
+This research discusses the automatic detection of diabetic retinopathy in retinal images using machine learning techniques. The also work investigates the capability of images pre-retinopathy. In addition, a website has been constructed (Diabetic Web) which will be helpful in predicting diabetes as well as diabetic retinopathy with the help of a blood sample details and images respectively. This research uses colour fundus photography for analysis. Figure 6.1 shows the image of the fundus for diabetic retinopathy.
+
+# 6.2 Background
+
+# 6.2.1 Proliferative Diabetic Retinopathy
+
+As the disease progresses, severe non-proliferative diabetic retinopathy enters an advanced or proliferative stage, where blood vessels proliferate/grow. The lack of oxygen in the retina causes fragile, new, blood vessels to grow along the retina and

@@ -1,0 +1,13 @@
+# A New Frontier in Machine Intelligence ■ 7
+
+discussions have closely followed the similar debate about artificial intelligence [2, 20, 21, 22].nBroadly speaking, the arguments fall into the following groups:
+
++   1. Some researchers have proposed a test for artificial creativity on the lines of the Turing Test for judging artificial intelligence as “the philosophy, science and engineering of behaviors that unbiased observers would deem to be “creative” [23]. This does not presume any priori criteria and relies only on human judgment.
+2. The second camp proposes to define a criterion for creativity and then test to see if any of the machine-generated works would muster. For example, Boden [2] defined creativity as “the ability to come with ideas or artifacts that are new, surprising and valuable.” Of course, three attributes listed here are not objectively measurable and necessarily assume human judgment and subjectivity.
+3. The third stream of discussion is the one Alan Turing [24] referred to as “Lovelace objection,” after Ada Lovelace, the celebrated English mathematician whom might consider be the first computer programmer. She wrote: “[The Analytical Engine of Charles Babbage has no pretensions to originate anything, since it can only do whatever we know how to order it to perform.]. The famous “Chinese room” experiment of John Searle [25] for Artificial Intelligence is in a similar vein. It goes something like this: imagine a scenario where a person ignorant of Chinese language and script assembles sets according to an instruction manual using cards that have Chinese logograms. The long chain of symbols thus assembled meaningless to the person assembling it, but to a person who knows Chinese, they may make perfect sense. As per this scenario, the output of any computer program (including AI) may surprise its creators, but it does not constitute intelligence (or creativity) on the part of machines in any human sense.
+
+As can be seen from the above, the debate is far from settled and there are valid arguments on all sides. Meanwhile, surprising, useful, and sometimes aesthetically pleasing results are obtained by programs that use increasingly sophisticated techniques and datasets, as seen in Section 1.3.
+
+# 1.5 Artificial Creativity and Copyright
+
+AI-assisted creation of works could have significant ramifications for copyright law. Traditionally, most definitions of originality to grant the copyright for a work need a human creator, and tools such as a brush or pen do not matter for the purpose of copyright determination. In the same vein, for computer-generated work, the

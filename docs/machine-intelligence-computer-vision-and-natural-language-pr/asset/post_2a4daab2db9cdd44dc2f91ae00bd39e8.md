@@ -1,0 +1,338 @@
+
+# Index
+
+**Note:** Figures are indicated by *italics*. Tables are indicated by **bold**.
+
+- abstractions 14
+- accelerometer 177
+- access models 47
+- accuracy 71
+- accuracy 210, 211, 215–17
+- activation functions 72
+- activation map 68
+- activation regularization 77
+- activity regularization 76
+- Adam optimization 264
+- adaptation 17
+- advantages of AI 249
+- Agarbatti Smoke 278
+- agricultural database 275
+- Allen Howell 13
+- Amazon 27, 37, 41; Echo 27
+- ambient assisted living 20
+- ambient intelligence 164
+- analysis of variance (ANOVA) 216
+- android 182
+- annotation 95, 100
+- anthropology 15
+- Apache 297
+- Apex 295
+- Apple's Siri 27, 36
+- applications 33, 38, 39–45; of IoT 136, 137; of image classification 65
+- ARCore-equipped device 184
+- Arduino 39, 134
+- IMA model 153
+- artificial intelligence (AI) 15, 17, 19, 20, 23, 36;
+- ARToolKit 175; in Everyday Application 244; and IoT 139–41; and medical image processing 247; and in traditional industry 273; security and surveillance 247
+- assistive technology 43
+- Atlantic Coast Conference (ACC) 189
+- auditory: displays 27; perception 27
+- augmented Dickey-Fuller Test 154
+- augmented reality 59, 60, 163, 175
+- auto correlation function 156
+- auto-encoder model 76
+- automated methods 114
+- automation 16, 20, 40, 42
+- Azure 42
+- Azure Stream Analytics 296
+- bagging technique 265
+- battlefield 183, 190
+- Beagle Board 134
+- behavioral psychology 35
+- beneficial 15, 13, 30
+- Ben Shneiderman 29
+- bias 72
+- Big Data 17, 19, 23
+- Big Data Analytics 287, 288, 292, 303, 307
+- binocular 182
+- biological brain 17
+- biometrics 65
+- bixby 32
+- boosting technique 265
+- bounding boxes 90, 91, 97, 99, 100, 113
+- calm computing 166, 197
+- Calm Design 167
+- calm technology 167
+- cardiac image dataset 70
+- Carlisle 13
+- central processing units 70
+- chatbots 36, 39
+- Chef 42
+- Chinese room 7
+- curtial training 189
+- CityViewAR 188
+- classification 67, 79, 210–16, 218, 219
+- classification of sentiments 259
+- clinical decision support systems 301
+- clinical 66
+- clinical 79
+- closed-circuit television (CCTV) 221
+- cloudability 41
+- cloud-based 40–2
+- cloud computing 40–2
+- cloud computing 165
+- cloudlets 50
+- cloudwatch 41
+- Cloudyn 14
+- CNN (Convolutional Neural Network) 194
+- cognitive 14, 16, 17, 21, 31, 32, 39, 44;
+- disabilities 21; psychology 14
+- Cohen, 3
+- comfort facts 16
+- commercial sector 42
+- complex data 66
+- computational cost 77
+- computational efficiency 78
+- computational expenses 71
+- computational processes 17
+- computational weight 69
+- computer-human interaction 13
+- computization 43
+- computer-program AARON 3; AlphaGo 6;
+- Computerized Haiku 2; DALL-E 6;
+- Flow Machines: JAPE 3
+- computer's ability 14
+- computer vision 89, 193
+- computer vision 65–6
+- constraints 16
+- context-aware commerce 173
+- convolutional base 69
+- convolutional layers 66, 68, 72, 224
+- convolutional neural network (CNN) 88
+- copyright 8; and authorship 8; and fair-use 8
+- correlation 210, 215
+- cortana 32
+- COVID-19 151
+- crack detection 229, 234
+- cracks 221–4, 230, 231, 234
+- creativity 1, 16, 21, 22; and Artificial Intelligence 3; classification schemas 1; computer and 1;
+- debate 6; and games 6; history of 2; Kalidas 1; mathematics and 6; modern view of 1;
+- Muses and Natural Language Processing (NLP) and 5; poetry 25; screenplay 6
+- cross-validation split 218
+- CTS 70
+- cultural 17, 22
+- cyber attacks 38
+- cybersecurity 20
+- data 67, 72
+- data aggregation 301
+- data analytics: 53, 57, 63
+- data augmentation 67, 78
+- data acquisition 79
+- data misinterpretation: 20; security 43
+- deception 17, 20
+- decision tree 210, 212, 213, 219
+- decoding video file 100
+- deep convolutional neural networks 67
+- deep learning 66, 79, 88
+- deep learning-based approach 67
+- deep learning model 66, 70, 71
+- deep neural networks 76
+- democracy, 16, 22
+- dense-Nets 123
+- deposits 221, 222, 224, 230, 231, 234
+- depth-wise distinct convolutions 71
+- design: 18; issues: 16, 25, 22, 30, 32;
+- diabetic index 13
+- diffuse 215
+- digital compass 177, 178
+- digital gadgets 165
+- digital image processing 87
+- discrete data 75
+- discrimination 19
+- disease treatment 79
+- disney 186
+- dissonance 18
+- distributed computing 41
+- diversity 281
+- Donald Norman 29
+- dropout layers 77, 78
+- dropout regularization technique 77
+- distinctness 194, 196
+- dynabooks 164
+- early stopping method 78
+- edge detection 195, 196, 198–200
+- electronic data interchange 293, 305
+- electronic health records 288, 298
+- electronic toll systems 167
+- embedded systems 164
+- embodiment 18
+- emotional artificial intelligence 257
+- encoder-decoder models 76
+- ensemble networks 77
+- environment factors 16
+- epochs 69
+- generalization 71
+- generalization error 77, 78
+- generative adversarial network (GAN) 1, 67
+- generative art 3
+- genius design 31
+- genome sequencing 288
+- global positioning system (GPS) 43
+- Google 6: DeepMind 6
+- Google Cloud Stream Analytics 296
+- Google Glass 176, 182, 183
+- Google Home 27, 38
+- Google Text-to-Speech 100
+- government 23, 43
+- GPS data 176
+- graphical user interfaces (GUIs) 29
+- graphics processing units 70
+- Gregg Vandeerden 172
+- grid computing 41
+- grid search 77
+- Esquire Magazine 175
+- ethnomology 14
+- eudaimonia 16
+- exposure 67
+- eye emotions 201
+- eye-tracking, 27, 33–5
+- fair information principles 305
+- region-based convolutional neural network (faster R-CNN) 89, 92, 222–5, 226, 228, 230, 233–4
+- feature arrangement 66
+- feature coding 65
+- feature extraction 66, 67, 69, 70
+- feature map 225
+- features 212–16
+- feature selection 216
+- financial institutions 280
+- fine-tuning 69, 70
+- firehose 296
+- Fitbit Luxe's kendine 169
+- flink 295
+- flying drones 182
+- F1-score 215, 217
+- GSE6815 213
+- haptic 18
+- HCI: principles 16, 28, 29; skills 13; systems 168
+- head-mounted displays 167
+- heads-up display 183
+- health and safety factors 166
+- healthcare 19, 20, 22, 43
+- heuristics evaluation 30
+- hidden layer 6, 78
+- high-level feature visualization 66
+- Hirokazu Kato 175
+- holdout test dataset 78
+- HoloLens 176, 180, 184, 187
+- hough transformation 196
+- how Intelligent Agents Work 243
+- HTC Vive 188
+- human 15, 20; data 15; factors 14; intelligence 15; rights 17; skills 21
+- human-computer interaction 13, 14, 30, 44
+- human-environment 16, 17
+- human Intelligence Based on the Psychological View 237
+- fully associated layer 66, 69
+- functional resonance imaging (fMRI) 34
+- future 15, 25, 22, 30, 39, 44
+- IBM analytics 296
+- IBM Watson 39
+- ICT technologies 21
+- IIo sensors 13, 37
+- IIo startups 14, 142
+- gadgets 21, 36
+- gastric cancer 209
+- gene expression 209, 212, 213, 215–19
+- image and video recovery 65
+- image annotations 66
+- image capturing 197
+- image classification 65, 71
+- image datasets 66
+- image features 67
+- image Net 69, 70
+- Infrastructure as a Service (IaaS) 48, 58
+- input data 66
+- input factors 77
+- input layer 68
+- inputs 72
+- L2 norm 76
+- location-based AR 177, 178
+- location tracking 147
+- logistic regression 210–13, 217, 218
+- long-term goal 14
+- loss 71
+- loss function 75
+- loss measurement 75
+- Louis Rosenberg 175
+- Lovelace, Ad 7
+- machine learning 15, 33
+- machine classifiers 215
+- MagicLeap 180
+- magneto encephalography (MEG) 34
+- malicious 20
+- machine-an 13
+- mapping function 78
+- marker-based AR 176, 178
+- Markerless AR 176
+- Mark Weir 164
+- MARTA app 175
+- Max Pooling Layer 225–6
+- mean average precision (mAP) 99
+- medical image assessment 79
+- medical image classification 66, 69, 70
+- medical imaging records 289
+- message telemetry transport 133
+- methodologies 14, 15, 18, 21, 26, 43
+- military 166, 183, 184, 190
+- MIMIC II database 302
+- mindfulness 283
+- misfortune capability 76
+- MMI 13, 19, 23–5, 39, 41
+- MobileLab/Unisinos 173
+- MobileNets 71
+- model complexity 72
+- model development 79
+- model performance 78
+- model size 69
+- model structure 72, 78
+- model training 78
+- monopolies 23
+- MRIs 70
+- MUCS paradigm 173
+- Multilayer Perceptrons 76
+- multimodal 18
+- multi-modal features 79
+- multisensory 18
+- Myron Kruger 175
+- Integrated Visual Augmentation System (IVAS) 183
+- Intel Atom 582
+- intellectual property rights 2, 7
+- intelligent agent applications 243
+- intelligent systems 17, 19
+- interactive computing systems 13
+- interactive media delivery technology 174
+- internet of things (IoT) 32, 129
+- intersection over Union (IoU) 97
+- introduction 237
+- ir variances 72
+- Ivan Sutherland 175
+- Jakob Nielsen 29, 30
+- John Seely Brown 164
+- Julie Martin 175
+- Kinesis 295
+- Knima Create 40
+- K-nearest neighbor 212–14, 217, 218
+- labeled dataset 70
+- labeled input image 227
+- labelling tool 94, 100
+- lane detection 193
+- layer types 78
+- learning model 75
+- Lee Sedol 6
+- lightpack 180
+- lightweight architectures 70, 71
+- light weights 75
+- limitations 14, 15, 26, 27, 29, 34, 35
+- limited functions 13
+- linguistics 15
+- livelihood training 276
+- L1 norm 76
