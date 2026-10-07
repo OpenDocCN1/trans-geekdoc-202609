@@ -1,0 +1,40 @@
+
+## 72 2 Decentralized applications
+
+The Hyperledger DL ecosystem (see Section 2.7.1.2) develops and promotes several business blockchain libraries. For example, Hyperledger Ursa¹ is a shared cryptographic library, which enables implementations to avoid duplicating other work and increases security in the process.
+
+## 2.4.4 Smart contract security
+
+Smart contract security and the security of the related DApps are parts of a broader cybersecurity landscape (Fig. 2.8). They, therefore, share many risks and vulnerabilities commonly found in other ICT systems and applications. Such common attack vectors are, for instance, attacks on the application clients, attacks on user-wallet credentials through phishing, dictionary attacks, or by exploiting bugs in hardware wallets. The same holds for the exploits of digital signatures, hash functions, or address vulnerabilities. Distributed denial of service (DDoS) attacks can target the DLT and DApp infrastructure, for example, the off-chain application parts or the auxiliary services, such as crypto exchanges and mining pools.
+
+![](img/0a07f1fa1a7ff1beaaa3170e7e172821_93_0.png)
+
+Fig. 2.8: Smart contract security and cybersecurity.
+
+However, in addition to the common cyber risks and vulnerabilities that affect DApps due to the decentralized and distributed nature of DLT, unknown vulnerabilities and risks appear or become severely augmented. Possible attacks and new attack vectors comprise the governance and operation of the DL network, mining and consensus, tampering of transactions, and attacks on smart contracts. Various vectors frequently combined into one attack area to gain control over the network, a part of the network, or individual nodes and then exploit this control to manipulate transactions. Some of the attack vectors might be extremely difficult and costly to execute. In truly decentralized DL networks, they might be practically almost infeasible. However,
+
+> 19 https://www.hyperledger.org/use/ursa
+
+more centralized (private) networks, the risks remain many. Many of the attack vectors are protocol- and implementation-specific and are not present in every variant of DLT, so the actual implementation of a DL network may mitigate or prevent some of the risks with, for instance, decentralization, authorized nodes instead of anonymity, consensus mechanisms other than traditional PoW, and so on.
+
+While some of the defense mechanisms and mitigation techniques are already available in ICT domains and readily available in modern software development lifecycles, others need to be developed or adapted to the DLT. It is not surprising. Many of the DL platforms, tools, and smart contract programming languages are still in their infancy, fast-evolving and constantly changing the features. Hence, design flaws exist in the DL platforms or smart contract languages. Along with DLT ecosystems, security appears mature, too.
+
+The immutable nature of a previously deployed smart contract exposes vulnerabilities that can be easily mitigated in traditional software systems but can prevent severe risks in decentralized applications. With any code, every defense has bugs. Design flaws exist in blockchain platforms or smart contract languages. Common Security Weaknesses (CWE) may be amplified on blockchain platforms and in the related smart contract security [39]. These weaknesses include improper behavioral workflow, access control or initialization, incorrect calculation and insufficient random values, the inclusion of untrusted external functionalities (e.g., external libraries, smart contracts deployed by others), and improper exception handling and cryptographic understanding.
+
+Key smart contract vulnerabilities stem from logical flaws, bugs in the smart contract code, and under-optimized code patterns. Logical flows in the implementation of the contract, where, for example, a smart contract does not refund the initial deposit, lack of cryptography for user inputs to ensure fairness, or incentive misalignment [40], can be deliberate or caused by a misunderstanding of distributed ledger properties. In public DL networks, cryptocurrencies and miner awards are at risk of under-optimized smart contract code patterns that lead to unnecessary gas consumption [41]. Their research states that the main reasons for these are useless code-related and loop-related patterns.
+
+In Ethereum, smart contract vulnerabilities arise from the Solidity language, the Ethereum or EVM blockchain platform, and a misunderstanding of common practices. In Hyperledger Fabric chain, vulnerabilities arise from almost identical points: the Go language, the blockchain platform, and a misunderstanding of common practices.
+
+### 2.4.4.1 Smart contract weakness classification
+
+The Smart Contract Weakness Classification and Test Cases Registry (SWC Registry) [39] is a comprehensive list of security flaws in the Solidity smart contract code. It provides a checklist for smart contract programmers and many of the smart contract vulnerability detection tools. Possible vulnerabilities are labeled SWC x, where x is the vulnerability index, for example, SWC 107.
+
+Some Solidity smart contract vulnerabilities include transaction-ordering dependence, timestamp dependence, mishandled exceptions, and reentrancy. Transaction-ordering dependence (SWC14) can be a problem if users have no control over the order of transaction execution. The order is up to miners. If there is more than one transaction that invoked the same contract, the order of those transactions can affect the state of the blockchain. Timestamp dependence (SWC16) is related to smart contracts and includes conditions that are triggered by the block timestamp. Block timestamps are set by miners based on their local system time and can be unreliable or manipulated by an adversary. Mishandled exceptions (SWC104) target the contract that calls another contract. If any exception occurs in the called contract, it terminates and returns false, but it may not notify the caller contract. Reentrancy vulnerability (SWC107) is present when a contract calls another contract, and the current execution waits until the called contract finishes. This provides an opportunity for the adversary to exploit the intermediate state of the caller contract and its methods, several times. Authorization through tx.origin (SWC15) can make a contract vulnerability if an authorized account calls into a malicious contract. A call could be made to the vulnerable contract that passes the authorization check since tx.origin returns the original sender of the transaction, the authorized account.
+
+### 2.4.4 Steps to securing smart contracts
+
+We can take two types of security measures to secure smart contracts – passive and active smart contract security. Both subsets are not exclusive or replacing one another but have to be seen as independent cornerstones of smart contract security. Passive security measures entail smart contract architectures, software engineering techniques specific to the smart contract environment, code reviews and verification (Section 2.4.3.2 for smart contract programming). Active measures occur during smart contract execution and refer to smart contract and access control, active monitoring of the incoming smart contract transactions, and authorizing their actions.
+
+### 2.4.4.1 Updating and upgrading
+
+As discussed in the beginning of Section 2.4.4, the immutable nature of a previously deployed smart contract prevents the simple replacement of the existing code with an updated or upgraded version. Of course, we can always deploy the new version to the blockchain network. However, the original smart contract has to be rendered unusable, usually by disabling any transactions addressed to it. Consensys highlights several Ethereum Smart Contract Best Practices. To assure an effective upgrade for bug fixes and improvements, they advise mechanisms to pause, freeze, or delay smart contract actions and mechanisms to migrate and transfer data to the updated.

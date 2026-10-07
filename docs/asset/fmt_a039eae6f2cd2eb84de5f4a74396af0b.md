@@ -1,0 +1,14 @@
+
+- [45] X. Bansal, B. Abet, A. Kola, F. Quaranta, and M. Currie, "一种具有双调制掺杂的AlGaAs/GaAs RCE MSM光探测器," IEEE Electron Device Letters, vol. 24, no. 5, pp. 312–314, 2003.
+
+## 298 手术纳米电子器件
+
+## 14 应用光探测器 299
+
+- [46] C.-K. Wang, Y.-Z. Chiou, S.-J. Chang, W.-C. Lai, S.-P. Chang, C.-H. Yen, and C.-C. Hung, "具有溅射AlN成核层的GaN MSM光探测器," IEEE Sensors Journal, vol. 15, no. 9, pp. 4734–4748,
+- [47] P. G. Agrawal, 《光纤通信系统》, 第四版. Hoboken, NJ: John Wiley & Sons, 2010.
+- [48] D. Shin and S-H. Choi, "用于光探测器的石墨半导体异质结构," Micromachines, vol. 9, no. 7, pp. 1–29, 2018.
+- [49] A. Asbari and S. Raji, "室温工作的高性能III氮化物点红外光探测器," Optics express, vol. 18, no. 14, pp. 14604–14615,
+- [50] M. R. Rao, Y. Yang, S. Zhang, W. Zen, H. Schneider, and H. C. Liu, "近室温光子限制量子红外光探测器," Optics and Photonics Reviews, vol. 8, no. 2, pp. 297–302,
+- [51] A. M. White, "红外," 美国专利 US4670963, 1987.
+- [52] N. Akhavan, G. Jolly, A. U-Membreno, J. Antzoszewski, and L. Faroane, "用于中波红外和长波红外应用的能带工程HgCdNB光探测器设计," IEEE Transactions on Electron Devices, vol. 62, no. 3, pp. 722–728, 2015.

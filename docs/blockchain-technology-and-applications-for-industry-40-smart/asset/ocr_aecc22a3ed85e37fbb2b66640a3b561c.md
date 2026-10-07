@@ -1,0 +1,11 @@
+# 2.4.2 Lifecycle
+
+A smart contract is a software product. Its lifecycle is being designed and developed, compiled, and deployed to the DL network. Finally, it is used as a part of a DApp. This is similar to any other software product. However, smart contract execution in the DL network imposes several specifics and limitations in smart contract software engineering related to development, performance, and security. We will discuss these in the following sections. The smart contract lifecycle is outlined in Fig. 2.6. It is indicated that the management and several phases can be found in the lifecycle, however, these are not necessarily present, if the contract is very simple or software engineering is taken lightly. Omitting the verification and thoroughly planned and implemented management of smart contracts can have devastating security consequences. The figure refers to the lifecycle that is typical for the Ethereum-based DApps. Other platforms have slightly different lifecycles. For example, in Hyperledger Fabric, no compilation of smart contract source code into BC native executable bytecode is needed, as the smart contracts are installed and run in containers.
+
+![](bbox=[0.176, 0.442, 0.823, 0.633])
+
+Design, development, and source code verification produce the source code of a smart contract. In Ethereum, source code is usually coded in the Solidity language (see Section 2.4.3 for details on smart contract tools and languages). During the design and programming of the source code, different formal and runtime methods can be taken to verify the correctness of the smart contract code and minimize security flaws in the specification and code implementation.
+
+The source code is then compiled to a version that can be deployed and executed in the DL system. In Ethereum, this is an Ethereum-specific binary format, called the EVM bytecode.
+
+In Ethereum, the use of a deployed smart contract is defined by an Application Binary Interface (ABI) specification [31]. An ABI is an interface between external

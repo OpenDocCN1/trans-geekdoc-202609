@@ -1,0 +1,143 @@
+
+# 158 Index
+
+solidify 15
+Solidity 66, 69, 92
+solved block 12
+speed bump 75
+SSI 108
+stability 38
+staking model 42
+staking token 86
+start-up 130
+state channel 62
+state shading 62
+storage 57, 82–83, 114
+Storj 84
+strong seeing 40
+strongly 33
+sufficient finale 56
+suitability check 129
+Suncontract 141
+supermajority 33, 40
+Swarm 83
+SWC 74
+SWC Registry 73
+Swether 144
+Sybil 105
+Sybil attack 32
+sync message 36
+synchronization 44
+system 45
+
+tokenization 139
+tokens 2
+tool 89
+Town Crier 86
+tr 132
+trade 121
+traffic obstruction 135
+transaction 3–4
+transaction costs 54
+transaction data 118
+transaction fee 7, 13, 59–60
+transaction Hash 26
+transaction History 24
+transaction issuer 115
+transaction register 5
+transaction requester 116
+transaction shading 62
+transaction validation 59
+transaction-ordering dependence 74
+transferring access 131
+transmission domain 126
+transparency 126
+truffle 70, 99
+trunk tip 25
+trust 4, 38, 69, 102
+trusted exchange of transactions 45–46
+trusted execution 44, 46
+trustless truth 12
+trustworthiness 11
+tx.origin 109
+
+tangle 2, 19, 21
+tangle history 22
+task dispatching 128
+taxonomy 52
+template 96
+temporary access 131
+tenant 76
+tendermint 63
+testing tool 70
+tetramax technology transfer 117
+throughput 54
+time event order 37
+timejacking 105
+time-limited voting 129
+timestamp 31
+timestamp consensus 35
+timestamp dependence 74
+timestamp of event 36
+time-timestamp ledger 14
+tip 19
+
+UML class diagram 118
+unforgeable token 109
+unique blockchain address 107
+unique entity identifier 107
+unstable 15
+unstoppable domains 88
+UP2 143
+upper layer protocols 47
+ursa 72
+usability problem 78
+use case 90
+user 90
+user access 49
+user interaction 114
+user privacy 53
+Usiso 143
+utility meter 126
+utility token 138
+
+# Index — 159
+
+value 3
+vanilla ternary 24
+VaultPoint 113
+vehicle-to-environment 122
+vehicle-to-infrastructure 122
+verifiability 64
+verifiable transaction 109
+verification 6, 66
+verification frequency 8
+virtual IPv6 address 109
+virtual model 125
+virtual reality 123
+virtual voting 29, 32, 36, 39
+volatility 52
+vote weighting 40
+vulnerability 72
+Vper 69, 92
+
+wallet interoperability 79
+Web3.js 67, 80
+Web3.py 80
+Web3.io 80
+WebAssembly 65, 70
+WebSocket 81
+WePower 142
+witnesses 33
+worst-case scenario 131
+
+Yes/No questions 37
+
+Zcash 18
+zero-knowledge proof 53, 105
+ZK-SNARK 105
+ZK-STARK 105
+ZMOK 99
+
+walk 21
+wallet 78

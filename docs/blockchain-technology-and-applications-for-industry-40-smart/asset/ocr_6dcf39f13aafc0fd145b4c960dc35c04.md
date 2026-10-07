@@ -1,0 +1,13 @@
+transactions address to a smart contract by the smart contract's code) needs to be deterministic.
+
+The requirement for deterministic execution places a strong limitation on what a smart contract can do. For example, using date or time functions, generating random values, or retrieving data from off-chain resources (e.g., external API calls) prevents deterministic execution. It is, therefore, very common that these DLUs use special smart contract programming languages to enforce the determinism even at the level of programming language. Suppose the deterministic scripting language used by the VM is Turing-complete. In that case, this essentially means that the types of smart contracts that the developers can design are limited only by their programming skills and creativity.
+
+However, not all DL smart contract execution environments follow the orderexecute principle. Hyperledger applies a different transaction lifecycle and, therefore, different smart contract execution and validation principle. It is called execution-order-validate [33]. The name indicates that a smart contract call, invoked by a transaction to a smart contract, is first executed. The transactions to smart contracts can therefore be executed in any order, or in parallel. A transaction need not be executed by every node in the network. After a transaction is executed, endorsement policies define which nodes need to agree on the result of a transaction, and then it is added to the ledger. This is the phase where transaction ordering occurs. The transaction validation, which happens last, is separated from the execution. During validation, each node has an ordered list of already executed transactions and can check if any of them is invalid, for example to double-spending.
+
+The execute-order-validate approach has several relevant benefits. These are increased performance (not every node executes every smart contract), smart contract code privacy (only the endorsement nodes need to know the smart contract code), and the possibility of using general-purpose programming languages for smart contract development.
+
+# 2.4.3.1 Languages
+
+Various programming languages are applied to develop smart contracts, depending on the VM in the selected network. Some VMs support programming languages for smart contracts and others stick to one.
+
+Ethereum uses deterministic programming languages Solidity (prevalent) and Vyper for smart contracts. Solidity, the most popular language¹³ on Ethereum, is inspired by C++, Python, and JavaScript, and Vyper is based on Python. One can build smart contracts in JavaScript, C++, or Python. Still, because the order-execute constraints and contexts related to the EVM, it is easier to have a language specifically for the task.

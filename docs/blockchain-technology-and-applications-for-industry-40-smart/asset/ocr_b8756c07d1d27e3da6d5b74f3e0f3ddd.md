@@ -1,0 +1,15 @@
+# 1.1 Digital money – cryptocurrencies 3
+
+is the basis for the so-called hashgraph. Hashgraph is a data structure that records the data about who gossiped with whom and in which order. US professor Leemon Baird Invented hashgraph in 2016 [3].
+
+# 1.1 Digital money – cryptocurrencies
+
+DLTs are widely used in the financial sector as cryptocurrencies or crypto money. These days, the world is witnessing the true gold rush for cryptocurrencies. Many of those involved in the so-called easy money business related to DLTs understand how cryptocurrencies work. Still, others ask a question: "How is it possible to make money from nothing" Jokes are made comparing cryptocurrencies with some modern physicists'hypothesis that the whole universe came from nothing. So, if this applies to the universe, why could it not be applied to cryptocurrencies, too?
+
+These are other most asked questions: "How come the whole system still functioning?"How long will it last?"Why do people believe in money when there is no supreme authority to guarantee it?"Is the whole thing and the euphoria related to only one of the numerous economic bubbles with the growing mechanism based on human greed, and the inevitable final collapse," and so on.
+
+And yet, many financial experts foresee a bright future of cryptocurrencies and they say that they will enable numerous services such as absolute trust, security, and transparency, showing the way to the societies that have a high level of justice, without criminal and corruption, that to the societies many utopians had only dreamed of.
+
+Let us remember some of the facts about money: the first forms of human transactions were made of a material (e.g., copper, silver, or gold) which had a value by itself. For example, gold was (and still is) a precious metal to to its make it suitable for various applications. For this reason, people believed (and they still do) that the value of gold can be exchanged for other goods, that is, for trading, while aware that it could be turned into a useful or a beautiful and valuable object. The keyword here is trust, that is, the faith in the value of the objects named coins or money.
+
+This faith in coins (and many times in history) jeopardized by making coins with a certain (often unknown) percentage of other materials of lesser worth, making unfair trade and fraudulent behavior possible in that matter. The evolutionary step was to ensure a community where each used coin is worth the labeled value. Only a few powerful authorities could have obtained such an assurance (e.g., emperors, kings, governments, and other community rulers). The guarantee mechanism was based on the monopoly of money production, the power and reputation of the authority, and the insurance measures (using advanced technology of the time) taken to make money difficult to forge by common people. Suppose
