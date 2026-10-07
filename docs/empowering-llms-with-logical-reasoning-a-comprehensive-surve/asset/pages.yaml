@@ -1,0 +1,774 @@
+- pgno: 0
+  md: '# Empowering LLMs with Logical Reasoning: A Comprehensive Survey
+
+
+    Fengxiang Cheng$^1$, Haoxuan Li$^{2,3}$, Fenrong Liu$^{1,4}$, Robert van Rooij^1$
+
+    Kun Zhang$^{5,6}$ and Zhouchen Lin$^{6,7,8}$
+
+
+    $1$Institute for Language and Computation, University of Amsterdam
+
+    $2$Machine Learning Department, MBUZAI
+
+    $3$Department of Physics, Tsinghua University
+
+    4$Department of Philosophy, CMB
+
+    $5$Institute for Artificial Intelligence, Peking University
+
+    $6$Peng Chem Laboratory
+
+    $7$National Key Lab of AI, School of Science and Technology, Peking University
+
+    {$cheng,r.m.vanrooij}@uva.nl, hli@stu.edu.cn, fenrong@tsinghua.edu.cn, kun2@zmu.edu.cn
+
+
+    # Abstract
+
+
+    Large language models (LLMs) have achieved remarkable successes over various natural
+    language tasks. However, recent studies have found that there are significant
+    challenges to the reasoning abilities of LLMs. This paper aims to categorize these
+    challenges into two aspects: (**Logical reasoning**, LLMs often fail to get the
+    correct answer within complex problems which requires sophisticated strategies);
+    (**Logical consistency**, LLMs are prone to producing inconsistent responses across
+    different questions. For example, in the Macaw question-answering task LLMs answer
+    Yes to both questions: "Does a bird have wings? Does a dog have wings?" To address
+    this direction, we investigate various reasoning methods and provide detailed
+    tactics of these methods. Specifically, to accurately answer complex logical questions,
+    methods can be categorized based on relation to external solvers, prompting, and
+    inference. We also discuss concepts of various locations of logical consistency,
+    including implication, negation, truthfulness, consistency and composition. In
+    addition, we review benchmark evaluation metrics and discuss research directions,
+    such as extensions to model logic to account for uncertainty, and efficient algorithms
+    satisfying multiple-logical consistency simultaneously.
+
+
+    including generation, classification and translation. However, recent studies
+    have found that there are significant challenges to the reasoning abilities of
+    LLMs. On one hand, handling syntax, semantics, and word tasks such as next-word
+    prediction or masked language modeling does not ensure the logical ability of
+    LLMs [Liu et al., 2023]. On the other hand, the primacy of LLMs in processing
+    human-written texts, lacks high-quality logical reasoning such as logical deduction
+    and proofs [Moshita et al., 2024]. These challenges significantly limit the ability
+    of LLMs due to the following summarized aspects.
+
+
+    LLMs fail to get the correct logical answer in questions which require deductive,
+    inductive or abstract reasoning from given premises and constraints. Specifically
+    these questions can be broadly divided into two categories: (Determination whether
+    a statement can be deduced from given information, namely the truth value of,
+    true or false. For example, the premise and constraints could be Metal conductivity.
+    Insulators do not conduct electricity. If metal is made of iron, is it a conductor?
+    The logical question is whether the statement true, false, or unknown? Cannot
+    conductivity. To answer this question correctly, LLMs need to conduct logical
+    reasoning-of iron-metal-deductive electricity before concluding that iron conducts
+    electricity and correctly select any option that can satisfy the given constraints
+    from the multiple choices. Surprisingly, LLAMA-13B achieves 33.63% accuracy under
+    8-shot prompting on the logical datasets FOLIO, which is only slightly better
+    than random guessing with an accuracy of 33.33% [Han et al., 2024]. This study
+    reflects the restriction of LLMs in interacting real-world situations such as
+    problem-solving and decision-making.
+
+
+    # 1 Introduction
+
+
+    Large language models (LLMs) have demonstrated performance in a broad range of
+    natural language tasks-
+
+
+    LLMs are also prone to producing inconsistent responses across different questions,
+    which is regarded as violation of logical consistency. Note that the form of logical
+    consistency can be diverse. For example, Llama2-7b answers yes to both questions
+    with an although on an organ-
+
+
+    > *Haoxuan Li is the corresponding author. *Note
+
+
+    ![](img/44bde4dde3cb368e60d819f0be8f3b0e_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'ism? and if not an organism? [Calanzone et al., 2025], which violates the necessity
+    consistency (see Section 3 for formal definition). In addition, a state-of-the-art
+    Macaw question-answering LLM answers Yes to a bird? Does a bird have wings? [Mitchell
+    et al., 2023], which violates the testimony consistency. Our studies show that
+    few question-answering datasets ensure logical consistency of LLMs [Kassner et
+    al., 2021; Jung et al., 2022]. As a result, contradictory outputs compromise the
+    reliability and trustworthiness of LLMs, which limits their potential performance.
+
+
+    In this paper we consider answering complex logical problems and ensuring logical
+    consistency across different outputs as two sides of the coin in improving the
+    logical reasoning capabilities of LLMs. To address this, we review methods for
+    improving the logical question answering [Xo et al., 2024; Wan et al., 2024] and
+    logical consistency [Pelka et al., 2025; Calanzone et al.], which reached widespread
+    attention in the LLM community. To facilitate this, we categorize them and provide
+    detailed taxonomies of these methods, as shown in Figure 1. For logical question
+    answering, these are classified as model-based methods, prompt-based methods,
+    and pretrain-and-tune methods.
+
+
+    methods based on external tools such as logical solvers.
+
+
+    # 2 Logical Question Answering
+
+
+    Leveraging language models (LLMs) for complex reasoning problems is a key focus
+    of recent researches [Lao et al., 2023; Zhang et al., 2024]. Numerous studies
+    have explored methods to enhance the logical reasoning capabilities of LLMs, which
+    can be categorized into several branches, including reliance on external solvers,
+    prompting techniques without further training and fine-tuning. Many benchmarks
+    are developed to evaluate the logical reasoning performance of models.
+
+
+    # 2.1 Solver-Aided Approach: Translation via LLM and Solver
+
+
+    The solver-aided approach refers to parsing natural language (NL) problems into
+    symbolic (SL) expressions, and then solving them via external solvers. The general
+    flow of solver-aided methods can be summarized into three steps, as shown in Figure
+    2. These methods use LLMs to translate NL into symbolic language (such as logic
+    programming (LP) language, first-order logic (FOL), constraint satisfaction (CSP),
+    and boolean satisfiability (SAT) formulation) that can be recognizable by solvers.
+    Then they use an external solver to solve the problem and use LLMs to translate
+    the answer provided by NL into natural language to generate the final answer based
+    on some algorithms such as majority vote. CoT [Yu et al., 2023] based on the Chain-of-Thought.
+    Translating a natural language into symbolic reasoning chain with a deterministic
+    solver (e.g., Python/Interpreter or a PDDL parser) to ensure the faithfulness
+    of LLM answers. However, these functional methods struggle with the "noisy" process
+    of reasoning, which may fail to solve complex logic problems. Without-
+
+
+    Considering the lack of high-quality reasoning samples such as multi-step de novo
+    proofs or in pretraining and fine-tuning methods we propose to training LLMs with
+    augmented data. For logical consistency, we focus most common logical constructs,
+    including implication, negation, truthfulness, consistency and their composites,
+    which are the state-of-the-art solutions for logical consistency, and use widely
+    used benchmarks and datasets. Lastly, we discuss promising research directions,
+    such as extension to conditional and modal logic, and efficient reasoning over
+    multiple logical constraints.
+
+
+    tik, [Yant et al., 2023] and [Zhang et al., 2023]. Without-
+
+
+    To the best of our knowledge, this is the first work to investigate improving
+    LLM logical reasoning capabilities, cutting-edge research covering complex logical
+    question answering and logical consistency. Our most relevant work is [Zong and
+    Lin, 2024], which focuses only on syllogistics, as a specific logical paradigm,
+    and ignores another logical inference. In rules, [Lam et al., 2024] only discusses
+    the
+
+
+    the solver-aided approach has many drawbacks. First, transforming logical problems
+    into formal expressions will result in loss [Liu et al., 2024], leading to the
+    problem unsolvable. For example in the symbolic translation of "When a person
+    reads a book, that person gains knowledge. Harry faster." Whether this inference
+    is'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/44bde4dde3cb368e60d819f0be8f3b0e_2_0.png)
+
+
+    # ## 2.2 Prompt-Based Approach: Translate, Reason and Verify via LLM
+
+
+    Prompting is a direct technique for stimulating the logical reasoning capabilities
+    of LLMs. To achieve a more accurate answer of logical questions, prompt-based
+    approaches can be divided into two categories, the first is to model the logical
+    chain when the question arises. For example, Chain-of-Thought (CoT) [Wei et al.,
+    2022] prompt strategy enables LLMs to emulate the reasoning process step-by-step.
+    Based on this, Tree-of-Thought
+
+
+    (ToT) [Ya et al., 2024] prompt to let LLMs evaluate and select among multiple
+    inference paths. Mean, Graph-of-Thought (GoT) [Besta et al., 2024] represents
+    the generated information as an argumentative graph or graph of networks to ensure
+    that the reasoning process is more realistically rational logical dialogues. Graph
+    of Thought (DoT) [Zheng et al., 2024] prompt to model iterative logical reasoning
+    in LLM as a directed acyclic graph (DAG) as shown in Figure 1. The nodes of the
+    DAG represent logical steps, and the edges in the DAG represent logical relationships
+    or dependencies between them. In addition, many previous studies focus on the
+    diversity of reasoning paths. For example, [Zheng et al., 2023a] prompt to leverage
+    three types of LLMs (poser, verifier, and reporter) in a collaborative reasoning
+    process.
+
+
+    The second category is to translate natural language into symbolic language by
+    well-defined prompts, and utilize LLMs for better reasoning. For example, Symbolic
+    Chain-of-Thought (SymCoT) [Xu et al., 2024a] is a LLM-based framework that combines
+    symbolic representation and
+
+
+    > Figure 1: Various type of logical reasoning, which is designed to solve Logical
+    Question and Answer Consistency.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '| Input | Step 1: Semantic Parser | Step 2: Logic Theorem Prover | Step 3:
+    K-Majority Voting | Output |
+
+    |---|---|---|---|---||
+
+    | Premise | Symbolic translation 1 | Answer 1 True | | True |
+
+    | | Symbolic translation 2 | Answer 2 False | | |
+
+    | | Symbolic translation 3 | Answer 3 True | | |
+
+    | Conclusion | Symbolic translation 4 | Answer 4 Unknown | | |
+
+
+    Figure 2: The overview of workflow in solver-aided approaches.
+
+
+    ![](img/44bde4dde3cb368e60d819f0be8f3b0e_3_0.png)
+
+
+    Figure 3: Directed Acyclic Graph (DAG) of iterative reasoning constructed in the
+    Diagram-of-Thought (DoT) method.
+
+
+    thinking than rigid reasoning, let logical deduction or inference. Training LLMs
+    with deductive principles and natural language examples that demonstrate explicitly
+    the reasoning process is an effective way to enhance its intrinsic logical reasoning
+    capabilities.
+
+
+    Implementation of pre-training and fine-tuning on questions which the reasoning
+    process requires additional data. A major distinction between them is based on
+    the feedback, which can be internal to LLM or external. Internal feedback uses
+    the intrinsic knowledge and mechanisms of the model to its outputs. On the contrary,
+    external feedback integrates inputs from human, other models, or references of
+    knowledge base and DILA [Zhang et al., 2023] which guides the LLM to generate
+    solutions, and then refines this solution forward and back through a network loop
+    using first-order logic constraints. The constraint satisfaction is checked by
+    the SAT solver, and the solution is updated until satisfied.
+
+
+    cal rules with prompting. Specifically, after translating NL problems to formal,
+    it generates a step-by-step solution to solve the logic with rules such as modus
+    ponens (MP rule), which provides a verifier for [Liu et al., 2024] uses user prompts
+    to deduce reasoning and output the logical expressions based on the logic rules
+    and the generated output, which is then translated into natural language by LLM
+    and incorporated to derive the final answer. In addition, LINA [Li et al., 2024]
+    employs a hypothetical-deductive approach, breaking the limitation of closed-question
+    based on FOL rules and a matching mechanism that is then used to validate the
+    final answer and result.
+
+
+    Although there are many advantages of the prompt method such as transparency and
+    interpretability, there are also limitations of them. On the hand, challenges
+    include consistency and reliability across different methods. This method relies
+    on the reliance on LLMs for consciousness, which may be susceptible to hallucinations
+    and may cause confounding. On the other hand, LLM inference takes place in every
+    searching step, solving the problem with high computational cost [Yang et al.,
+    2024].
+
+
+    # 2.3 Pre-training and Fine-Tuning
+
+
+    The limited abilities of LLMs can be attributed to the lack of high-quality reasoning
+    samples (especially logical multi-step deduction or proofs) in the pre-training
+    corpus, which is composed mainly of human-written texts [Wei et al., 2024]. Human-written
+    texts usually show rarely
+
+
+    To enhance transparency and interpretability, [Wang et al., 2024] was presented
+    to introduce and eliminate the reasoning processes of the solver by Puke and the
+    output directly. In addition, it is finished on a constructed training-dataset
+    containing both natural language examples and the solver''s logic. In addition,
+    [Li et al., 2024] builds a symbolic logic corpus based on logical principles,
+    containing natural language examples generated from a logical deduction reasoning
+    process generated by a logical algorithm. Then this approach to implement supervision
+    by requiring LLM logic steps to verify any hypothesis from facts. Similar methods
+    established a set of foundational reasoning skills to predicate and logic generated
+    natural language examples for each skill based. Based on the skill set, Casaker
+    generates reasoning questions by translating natural logic expressions into natural
+    language, assesses the accu.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '| Input: Questions | Step 1: Generate candidate outputs | Step 2: Estimate
+    pairwise constraints | Step 3: Find optimal assignments | Output: Answers |
+
+    | --- | --- | --- | --- | --- |
+
+    | q1 | a11 a12 | a11 a12 <br>cont_1 | a11 a12 <br>cont_1 | a12 |
+
+    | q2 | a21 a22 | a21 a22 | a21 a22 | a21 |
+
+
+    A = MaxSAT({q1, a1), (q1, a2), ...}, {ent1, cont1...})
+
+
+    Figure 4: A general framework to enhance the logical consistency of LLMs across
+    different scenarios.
+
+
+    Contradiction Entailment
+
+
+    rarity of LLMs miss quickly, weaknesses, and create in-context examples and fine-tuning
+    to bolster reasoning abilities. Additionally reduce manual annotation on the questions
+    given in the prompt. CostLM (Jiao et al., 2024) introduces a fully self-supervised
+    framework for integrating logical capabilities into LLMs.
+
+
+    Logical consistency requires LLMs not to contradict themselves, the knowledge,
+    or logical rules when answering different questions in the complex problems [Calazome
+    et al., 2025]. Sometimes LLMs can directly contradicting themselves it is referred
+    to as self-consistency [Mitchell et al., 2022; Wei et al., 2023]. However, although
+    LLMs show improved ability of consistency they still fail to generate logically
+    consistent answers [Jiao and Lukasiewicz, 2023]. Moreover, for long questions
+    that answer content across benchmarks, as shown in [Calazome et al., 2025]. Addressing
+    these limitations, recently has been an influx of research to improve the logical
+    consistency of LLM.
+
+
+    # ## 2. Evaluation: Testing and Benchmark Datasets
+
+
+    In general, a logical reasoning question contains a natural language description
+    that outlines a set of properties or constraints related to objects, with the
+    object to infer the answer to the question given in the prompt [Ye et al., 2023].
+    These question-answering pairs are categorized into two types (LLM pairs):
+
+
+    +   1) Free-Question Assessing: whether a given question or statement can be inferred
+    from the provided text, its value, or unknown. The formulation involves logical
+    programming language, propositional logic, and first-order logic. There are many
+    typical datasets such as ProTowriter [Tajford et al., 2021], FOLI (Han et al.,
+    2024), Rulerk [Clark et al., 2024]
+
+    2) Multiple Choice Question-Answering: identifying the correct option from multiple
+    choices satisfies all given premises and constraints. The formulation follows
+    LLM instructions There are also many typical datasets as ReCl [Yu et al., 2022],
+    LogQA [Liu et al., 2020] and AR-LASAT [Zong et al., 2023].
+
+
+    Besides, there are other methods to refine and evaluate the LLMs'' logical reasoning,
+    such as [Pratmar, 2024; Liu et al., 2023];
+
+
+    # ## 3. Logical Consistency
+
+
+    The development of large language models (LLMs) and their deployment is increasingly
+    important, especially when they are used as knowledge sources. Thorough consistent
+    LLMs are essential: with logical consistency can be verified for correctness without
+    required frameworks, thus increasing confidence in the stability of LLMs in their
+    work [Calazome et al., 2025; Ghosh et al., 2023].
+
+
+    # ## 3.1 Negative Consistency
+
+
+    Logical consistency is fundamentally about avoiding contradictions. Negative consistency,
+    can be interpreted in two ways. On the one hand, an LLM cannot hold itself simultaneously
+    while one of p is true - (p ∨ ¬p) ∧ (¬p ∧ p) [Kashmer et al., Ghosh et al., 2023].
+    On the other hand, it can be seen as an anomaly in data augmentation [As Hajishiro,
+    2022]. LLMs are also prone to producing inconsistent responses across different
+    prompts, as seen in the examples of Llama-2b answers to two questions Is an albatross
+    an organism? If an albatross not
+
+
+    To address this issue: [Kashmaker, 2021] addressed the consistency of LLM''s answer
+    to questions. Then it leverages a weighted MaxSAT solver to flip whether the answer
+    is correct or use a feedback mechanism to ask further questions with relevant
+    beliefs to the query context. Derived from the Benchmark datasets are provided
+    implementations, as CoCORD (Mitchell et al., 2022) generates several candidates
+    answers to each question from
+
+
+    ![](img/44bde4dde3cb368e60d819f0be8f3b0e_4_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "the model. Then the pair-wise candidates in ConCoRD\nare constrained by both\
+    \ the base model and the entailment-\ned by natural language. Finally, ConCO utilize-\n\
+    the weighted MaxSat solver to find the most satis-\nanswer candidate with the\
+    \ highest score. This research is summarized in this main\nframework, as shown\
+    \ in Figure 4.\n\n# 3.4 Factuality Consistency\n\nFactuality consistency refers\
+    \ to the degree of alignment-\ntween's generated responses or reasoning outcomes\\\
+    sand real-world knowledge. In fact-checking, the syst-\nemates the actual factuality\
+    \ of model outputs by\nproviding reliable knowledge sources, detecting\npential\
+    \ logical errors or factual inaccuracies. When\nto factuality consistency, there\
+    \ are some dis-\nconsistency contradicting statements, constraints or a\nknowledge\
+    \ base (KB), factuality agrees on all\nfacts contained in a KB [Calzano et al.,\
+    \ 2025].\n\n# 3.2 Implication Consistency\n\nThe implication consistency is based\
+    \ on the logic rule p-\nq, p. It means that a constraint “p → q” and the\npremise,\
+    \ p can be it that “p → q” is true. If the model\npredicts “q” is False, then\
+    \ the answer violates im-\nplication consistency. For example, given the physical\
+    \ fact\nat All Iron (p) is metal (q), LLMs are not to de-\nner True to this statement\
+    \ if Iron (p) and Metal (q) is\nfalse.\n\nUnlike, implication consistency is closely\
+    \ related to the\nCo method, where each chain can be regarded as a logical\nimplication.\
+    \ Failure to satisfy implication consistency will\nlead to inaccurate outputs\
+    \ from these explanation-\n methods. For instance, Automatic Prompting\n(Jun et\
+    \ al., 2022) corrects the correct answer\nfrom unreliable explanations. Multiple\
+    \ Prompting produces\nerate a single explanation, Maieie produces\nabductive implications\
+    \ both “true” and “false” are\nvely converted into log-\n constraints and the\
+    \ optimal aspects using a\nMAX-SAT solver to avoid implication inconsistency.\n\
+    \n# 3.3 Transitivity Consistency\n\nTo address the issue of logical consistency\
+    \ in\nextending models under complex queries, a logical\nconsistency and improvement\
+    \ framework for\nLLMs with Retrieval-Augmented Generation (RAG) was\nproduced\
+    \ [Ghosh et al., 2025]. Specifically, a\nlogical-based evaluation framework is\
+    \ firstly designed to\nto handle logical consistency through deif-\njunction,\
+    \ and conjunction. Secondly, by constructing\ntree benchmark datasets based on\
+    \ knowledge graph (KG),\nit is demonstrated that LLMs exhibit poor log-\nconsistency\
+    \ in complex queries. To address this issue,\nthey use in-contextualized prompts\
+    \ and few learning\napproach to learn factuality consistency of LLMs in\nplex-factoring\
+    \ tasks, leveraging parameter-efficient-\ntmethods such as QLoRA to improve performance.\n\
+    \nTransitivity represents the logical relationships among\nder or propositions.\
+    \ When two premises p → q and\nq → r it can state that p → r, which is regarded\n\
+    as transitivity consistency. It has shown that LLMs\nlack transitivity consistency.\
+    \ For state-of-the-\nMacaw question answering (QA) model answers to “Is\na bird\
+    \ does it have feathers?, or are birds?\nNo to Sparrow have feathers?” [Mitchell\
+    \ et al., 2022]. Thenthe model provides an affirmative answer when\nfrow has the\
+    \ head according to the transitivity rule,\nwhich is\nincompatible with the other\
+    \ output.\n* With\n\n# 3.5 Compositional Consistency\n\nCompositional consistency\
+    \ refers to the maintain\nogical consistency when combining multiple\nfacts. When\
+    \ a model needs to combine into a complex chain of\nby logical operators (e.g.,\
+    \ implication, conjunction). It\nto ensure that each step of the derivation conforms\n\
+    the rules, and make final conclusions self-consistent\nunder conditions. This\
+    \ also requires\nthe model to not only understand the meaning of\nactual fact,\
+    \ but also to capture the logical\nrelationships when they are connected, avoiding\
+    \ infer-\ners. Loco-LLMS [Calzano et al., 2025] is proposed\nto maintain factuality\
+    \ consistency through de-if-\ntetegration, which makes factuality and self-consistent\n\
+    by fine-tuning a LLM according to a knowledge base\nof facts and rules. The logical\
+    \ formulas that can be arbitrary pro-\ntions are compiled into a circuit and then\n\
+    tobe allocated to generate the answer. [Liu et al.,\n2024b] provides a universal\
+    \ framework to quantify the\npositional consistency via three universal proxies:\n\
+    titivity, commutativity, and negation inference.\n\n# 3.6 Evaluation\n\n[Kasser\
+    \ et al., 2021] introduced a gold standard approach\nto evaluate the accuracy\
+    \ and consistency of a set of beliefs. For-\\lowing including [Mitchell et al.,\
+    \ 2022], [Kasser et\n2023] adopt this evaluation approach. We give\na ample introduction\
+    \ and borrow the symbolic language in\n[Kasser et al., 2022]. It is defined as:\n\
+    \nTo mitigate the inconsistency of LLMs, [Ai and\nHajishari, 2020] leverage the\
+    \ logical inference rules of\ntacts to prompt the models to get the\nimentary\
+    \ statements. Based on the queries\nis a tuna has money, will there be more?\n\
+    food is more, is we weather occurring? when\nMore and More, if the implication\
+    \ a\ntuna has money together will be augmented by the Sim-\ntitivity, for the\
+    \ symmetric rules, the antonyms and the\nof statements are also added to the dataset.\
+    \ In\nthis way, this method augments the training data and then\nconsistency-based\
+    \ regularizer is adopted to train the models\nto enhance their logical consistency\
+    \ containing the\nand symmetric.\n\n![](img/44bde4dde3cb368e60d819f0be8f3b0e_5_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '+   - A set of entities $s_m \in S$;\n- A collection of "facts" $(P_n(s_m))$,
+    whose binary truth value is known;\n- A directed graph of gold-standard constraints
+    $G(P, E)$, where edges $(P_i, P_j) \in E$ represent first-order logical formulae
+    $P_i(x) \rightarrow P_j(x)$.
+
+
+    To assess accuracy by binary comparison, comparing $z$ of configuration $Z$, which
+    maximizes $\phi(z)$ and the truth values of $P_n(s_m)$ [Mitchell et al., 2023].
+    In this evaluation, using gold answers tends to be biased towards the true one.
+
+
+    Reasoning regarding self-belief. Binary [Kansner et al., 2021], ConfOr [Mitchell
+    et al., 2022] and all the compliance of constraints [Vaswani et al., 2019], which
+    is defined as the ratio of gold constraints in G that are violated. A constraint
+    $\forall x P_i(x) \rightarrow P_j(x)$ is considered violated or invalid, if for
+    some $s_m$, there exists a $b_i \in B_{s_m}$ such that $P_i(s_m)$ is true and
+    there is a corresponding $b_j \in B_{s_m}$ from $P_j(s_m)$ when $z_j = 0$, which
+    is inconsistent.
+
+
+    # 4 Future Research Directions and Modeling
+
+
+    # 4.1 Extension to Conditional and Modal Reasoning
+
+
+    Despite the state-the-art approaches greatly enhance the logical reasoning abilities
+    of LLMs, there is a lack of exploration into the more complex conditional and
+    modal reasoning abilities. Modal reasoning can be introduced in the form of $If...then$.
+    Conditional reasoning also has strict rules that must be followed. For example,
+    if the match is strict $(p)$ it will allow $(q)$ if the match is loose $(p-q)$
+    which can be formally formulated as $p \rightarrow q$ or $p \rightarrow r \rightarrowrightarrow
+    q$. In addition, modal logic can predict for necessity and account for the currency
+    of possibility, and respectively. For example, $Might(y)$ not $(y)$ refers to
+    the wedding in the state that $May(y)$ have been the wedding (which) which can
+    be formally formulated as $May \rightarrow \neg y$. Either modal logic can extend
+    to conditional and modal logic, respectively, work shows although logically inconsistent
+    across inference patterns between episodic and models, it is worthwhile to explore
+    new methods to make LLM have the ability to reason on conditional and uncertain
+    events.
+
+
+    # 4.2 Higher-Order Reasoning of Events
+
+
+    Compared to first-order logic, higher-order logic allows for reasoning about properties
+    and functions, enabling more
+
+
+    complex statements and proofs. First-order logic only covers individual variables,
+    which can only perform reasoning about objects, not properties of properties.
+    In contrast, higher-order logic allows quantification over sets, functions, and
+    predicates, establishing statements about properties and properties relationships
+    between functions. For example, a first-order logic statement is All that animal
+    is a mammal, which can be formulated as $Mammal(x)$. A higher-order logical reasoning
+    would allow There is a property that have cats, which can be formulated as $\exists
+    P Cat(x) \rightarrow P(x) \wedge \ \forall y P(y)$. This allows reasoning about
+    properties (like $P$), which can be considered as set of objects instead of individual
+    objects, for more complex expressions and reasoning on LLMs.
+
+
+    # 5 Conclusion
+
+
+    In summary, this provides a comprehensive overview of the current state of the
+    art in logical reasoning abilities of LLMs. LLMs with massive advancements in
+    natural language processing face significant challenges in the areas of logical
+    question answering and logical consistency. Through taxonomy, we classified cutting-edge
+    approaches to tackle these challenges, highlighting logical questions based on
+    external solvers or internal through prompting, fine-tuning, and as well as a
+    variety of logical concepts and solutions, including negation, transitivity, factuality
+    consistency, and their positions. In addition, we review many datasets and evaluation
+    metrics used in this area that are critical for LLM performance in logical reasoning
+    tasks. Looking ahead, promising research directions include
+
+
+    ![](img/44bde4dde3cb368e60d819f0be8f3b0e_6_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'extending the reasoning abilities of LLMs to model logic to tackle with uncertainty
+    and developing algorithms that can satisfy multiple logical constraints simultaneously.
+    These advances are crucial for improving the reliability and robustness of LLMs
+    in applications that require precise logic, and will ultimately close the gap
+    between interactive LLMs and the demands of complex reasoning in real-world scenarios.
+
+
+    # References
+
+
+    +   [Asahi and Hajishiri, 2020] Logic-guided data answering and regularization
+    for consistent question answering. In *AACL*, pages 552–560, 2020.
+
+
+    +   [Bao et al., 2023] Qiming Bao, Alex Peng, Zhenyuan Deng, Wangjun Zhang, Gao
+    Gendron, Timothy Pistoli, Seth Tan, Nanhun Yang, Young Chen, Zhou Yna, David Micbert,
+    and Jiao Liu. Abstract Reasoning-based logic-driven data augmentation for reasoning.
+    In *AACL*, pages 5914–5934, 2023.
+
+
+    +   [Besta et al., 2024] Maciej Besta, Nils Hal, Lukas Bcek, Robert Gerberich,
+    Michal Paszkowski, Logical Giannazzi, Goja Gomaz, Sebastian Lehmann, Hubert Niewiadomski,
+    Piotr Nyc, et al. Craft of graphs: Solving logic problems with language models.
+    In *AAAI*, pages 17682–17690, 2024.
+
+
+    +   [Calzano et al., 2025] Giacomo Calzano, Stefano Testa, and Antonio Vergili.
+    Consistent language model via neural-symbolic. In *ICLR*, 2025.
+
+
+    +   [Clark et al., 2021] Peter Clark, Yojit Tajford, and Kyle Richards. Transforming
+    transformers as soft solvers over reasoning. *arXiv preprint arXiv:2105.14333*,
+    2021.
+
+
+    +   [Feng et al., 2024] Jianhao Feng, Ruichen Xu, Xuchen Jiang, Hato Hishima,
+    Yelong Sheng, Dongyuan Zhao, and Weizhu Chen. Language models can be deceptive
+    decoders. In *NAACL*, pages 4026–4042, 2024.
+
+
+    +   [Goshish et al., 2023] Biswithra Ghosh, Sarah Hasan, Nehan Arif, and Anuj
+    Rajman. GPT-4-based natural language inference for fact-checking. In *ICLR*, 2023.
+
+
+    +   [Han et al., 2021] Simon Hang, Harley Schkelfourt, Yilin Zhou, Quentin Martin,
+    Yujiao Qian, Lewis Benson, et al. Natural language reasoning with first-order
+    logic. In *EMNLP*, pages 2207–22031, 2021.
+
+
+    +   [Jang and Lukasiewicz, 2023] Myeyunjin Jang and Thomas Lukasiewicz. Consistency
+    analysis of ChatGPT. In *EMNLP*, pages 15970–15985, 2023.
+
+
+    +   [Jao et al., 2024] Fangai Jiao, Zhiyang Sheng, Bosheng Ding, Zhiyuan Liu,
+    Nancy Chen, and Shajif Ito. Polring self-supervised logic-enhanced training for
+    language models. In *NAACL*, pages 926–944, 2024.
+
+
+    +   [Jung et al., 2022] Jachu Jung, Lianhuai Qin, Sean Weleck, Fazze Brahmam,
+    Chandra Bhagavatula, Ronan Le, and Yejin Choi. Promoting consistent reasoning
+    with recursive explanations. In *EMNLP*, pages 1266–1279, 2022.
+
+
+    +   [Kassner et al., 2021] Nora Kassner, Omayvind Tajford, Hin Richter, and Peter
+    Clark. Baking: a pre-trained language model for symbolic task of belief. In *EMNLP*,
+    pages 8849–8861, 2021.
+
+
+    +   [Kassner et al., 2021] Nora Kassner, Omayvind Tajford, Ashish Bashwatkar,
+    Kyle Richardson, and Peter Clark. Language models with tasks-oriented reasoning.
+    In *EMNLP*, pages 14190–14201, 2021.
+
+
+    +   [Lam et al., 2024] Hong Lee Matthew Lam, Mary Rney, Kavethy Thikonda, and
+    Eshan Shahghi. A closer look at reasoning language models. The choice of tool
+    models. *arXiv preprint arXiv:2406.00284*, 2024.
+
+
+    +   [Li et al., 2019] Jian Tu, Vivek Gpta, Maitreya Meh, and Vivrik Sikmar. A
+    logic-driven framework for consistency of neural models. In *Proceedings of Empirical
+    Methods in Natural Language Processing*, 2019.
+
+
+    +   [Li et al., 2024] Qincheng Liu, Lianqiang Ji, Longxiang Liu, Yiting Zheng,
+    Minuyeng Cheng, Weizhu Xiang, Weizheng Li, Weizheng Huang, and Qi Li. Leveraging
+    llms for hypothetical deduction in logic-inference: A neural-symbolic approach.
+    *arXiv preprint arXiv:2410.11759*, 2024.
+
+
+    +   [Liu et al., 2021] Yifei Liu, Leyang Chen, Hanming Liu, Dan, Yilin Wang, and
+    Yue Zhang. LogQ: a large dataset for machine reading with logical reasoning. In
+    *IJCAI*, pages 3622–3628, 2021.
+
+
+    +   [Liu et al., 2024a] Tongxiang Liu, Wenjia Wu, Weizheng, Xinyu Wang, Xiaojing
+    Yang, Ha Liang, and Ji Logic-of-thought: Injecting logic into contexts for large
+    language models. *arXiv preprint arXiv:2409.15735*, 2024.
+
+
+    +   [Liu et al., 2024b] Yinhong Liu, Zhiqiang Gao, Tian Yang, Elshan Shahghi,
+    Ivan Vlic, and Nigel Collier. Aligning with logic: evaluating and improving logical
+    consistency in large language models. *arXiv preprint arXiv:2405.20025*, 2024.
+
+
+    +   [Liu et al., 2023] Man Lu, Shrinidhi Kumar, Mukhar Par, Neeraj Raj, Pranav
+    Basuer, Sonika Aditya, Chiral Bhatt, et al. Laws of tasks: A survey and a benchmark
+    for analyzing logical reasoning capabilities of large language models. *arXiv
+    preprint arXiv:2310.00836*, 2023.
+
+
+    +   [Lu et al., 2023] Qi Lu, Shreya Havaldar, Adam Stein, Ji Liu, Rao Wei, Eri
+    Wang, and Christopher Christopher Finn-Clark. Faithful chain-of-thoughting. In
+    *IJCNLP-AAACL*, 2023.
+
+
+    +   [Mittink et al., 2022] Erich Mitchell, Josef Nob, Will Allstrom, Anagath Agrawal,
+    Patrick Liu, Chelsea Finn, and Christopher Manning. Enhancing self-consistency
+    and performance of pre-trained language models through natural language inference.
+    In *EMNLP*, pages 1754–1768, 2022.
+
+
+    * Arnhem'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'Morishita et al., 2022 Terunori Morishita, Gaku Mori, Atsuki Yamaguchi, and
+    Yasuhiro Sogawa. Enhancing reasoning capabilities of LLMs via principled symbolic
+    logic. In NeurIPS.
+
+
+    Olassason et al., 2023 Theo Alauon, Alex Ge, Ben Lincoln, Fernando Chang, Armando
+    Solar-Lizarman, Joshua Tenenberg, and Roy Lin. LINEC: A symbolic approach to reasoning
+    for language modeling with first-order logic. In EMNLP, pages 5153–5167.
+
+
+    Palaka et al., 2025 Daniel Paleish, Abhinav Pavalli Subder, Alejandro Romero,
+    Vineet Bhat, Adam Shen, Evan Yang, and Florian Tran. Consistency checks for language
+    model forecasts. In ICLR.
+
+
+    Pan et al., 2023 Liang Parwani, Noor Alabakh, Alif Wang, and William Wang. LLM-ER:
+    Enhancing language models with multilingual architectures. In EMNLP, pages 3086–3024.
+
+
+    Parmar et al., 2021 Hemant Parmar, Nasir Patel, Neel Varshney, Mutuki Mutaman,
+    Man Luo, Sitarosh Benesh, Amritanda, and Mithra Badal. Faithful-based evaluation
+    of logical reasoning of large language models. In ACL, pages 13679–13707.
+
+
+    Ryu et al., 2025 Ryu Hyun, Geongan Kim, Hymin S Lee, and Eunho Yang. Divide and
+    translate: Symbolic first-order logic translation and verification for complex
+    reasoning. In ICLR.
+
+
+    Sun et al., 2024 Hongda Sun, Wei Xu, Wei Liu, Jian Lin, Bin Luo, Shao Zhang, Ji-Ren
+    Wang, and Wei Nan. Augmenting LLM-based reasoning from indeterminacy to determinism.
+    In ACL, pages 9828–9862.
+
+
+    Tafjord et al., 2021 Omayd Tafjord, Bhavana Dalvi Mishra, and Peter Clark. Evaluating
+    generating inferences, proofs, and abstractive statements over natural language.
+    In ACL-IJNLP, pages 3651–3664.
+
+
+    Tafjord et al., 2022 Omayd Tafjord, Bhavana Dalvi Mishra, and Peter Clark. Answering
+    questions with faithful and truthful reasoning chains. In EMNLP, pages 2078–2093.
+
+
+    Tian et al., 2021 Jidong Tian, Yiting Li, Wenqi Chen, Liangqi Hao, and Yao Jin.
+    Diagnosing the first-order reasoning ability through logic. In Proceedings of
+    the 2021 Conference on Methods in Natural Language Processing, pages 3738–3747.
+
+
+    Wan et al., 2024 Yunjun Wan, Yiyang Yang, Youting Yan, Jun-Hae Hong, Pujia He,
+    Wenxin Jiao, and Michael Liu. LLM-Asker: Evaluating and improving the logical
+    reasoning ability of large language models. In EMNLP, pages 2124–2155.
+
+
+    Wan et al., 2022 Siyuan Wan, Yunjun Dong, Zoyu Tang, Tongwei Wei, Zihao Fan, Daxin
+    Jian, Ming Zhou, and Wei Nan. Logic-driven content extension and
+
+
+    augmentation for logical reasoning of text. In ACL, pages 1610–1629.
+
+
+    Wei et al., 2021 Jason Wei, Wexi Zhang, Dale Schuurmans, Maarten Bosma, Fei Xia,
+    Ed Chen, Quoc V Le, Denny Zhou, et al. Chain-of-thought prompting evokes large
+    language models. NeurIPS, 35:24824–24837.
+
+
+    Xu et al., 2024 Hafeng Xu, Zhiyong Wang, Quishi Shen, Si Yan Chen, Fei Yuan, Yuhai
+    Qian, Qita Lu, and Jun Sun. Symbol-LLM: Towards foundational capabilities of large
+    language models. In ACL, pages 1391–1316.
+
+
+    Xu et al., 2024 Jundong Xu, Hao Fei, Liangming Pan, Qian Liu, Ming-Lee Li, and
+    Weny Yne. Faithful logical reasoning via chain-of-thought. In ACL, pages 13326–13335.
+
+
+    Yang et al., 2024 Sen Yang, Xin Li, Leyang Liu, Bing Wang, and Wei Nan. Neural-symbolic
+    integration enables controllable probabilistic reasoning. arXiv preprint:2311.09042.
+
+
+    Yu et al., 2021 Wehao Yu, Zihang Jiang, Yantie Dong, and Jifeng Feng. A reading
+    comprehension dataset requiring logical reasoning. In ICLR, 2020.
+
+
+    Zhang et al., 2023 Yifang Zhang, Jingjun Yang, Yang Yuan, and Andre-Chih Yao.
+    Cumulative reasoning over large language models. arXiv preprint:2308.04371.
+
+
+    Zhang et al., 2023 Yuy Zhang, Hui-Lin Zheng, Zehuai Pei, Yingzao Liao, Lin Miao,
+    Yinxuan Sun, and Bei Liu. Enhancing inah learning through logical layer. arXiv
+    preprint:2402.11903.
+
+
+    Zhang et al., 2024 Yifang Zhang, Yang Yang, and Andre Yuan. On the diagram of
+    thought. arXiv preprint:2403.19623.
+
+
+    Zong and Lin, 2024 Shaij Zong, Siyan Wang, Zoyu Tang, Tenzan Yan, Daya Guo, Yiting
+    Chen, Jihua Wang, Jian Yin, Ming Zhou, and Nan Duan. Analytical reasoning of text.
+    In NAACL, pages 2306–2319.
+
+
+    Zong and Lin, 2024 Syllogisms revisited: A review of the logical reasoning syllisms
+    of LLMs for analyzing categorical syllogisms. In NLP4Science, pages 230–239.'
+  merge: -1
+  img_proc: true
