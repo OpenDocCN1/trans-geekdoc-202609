@@ -1,0 +1,16 @@
+# 196 Hardware architectures for deep learning
+
+is quite large. In ICNN, this is solved by only keeping the feature-maps of the last CONV layer.
+
+A conditional deep learning network (CDLN) is proposed in which [26], FC layers are added to the intermediate layers to produce early classification results. The forward pass of CDLN starts with the first layer and monitors the confidence to decide whether a sample can be classified early, skipping the computation in the proceeding layers.
+
+While CDLN uses only FC layers at each exit point (branch), BranchyNet [27] proposes using additional CONV layers at each exit point to enhance the performance.
+References [26,27] are tested for ten-class data sets (MNIST [28], CIFAR-10) for up to four stages. On the other hand, in [29], ICNN is proposed for the 1,000-class ImageNet for seven stages, and input images are sampled into its sub-bands using discrete wavelet transform (DWT); thus, the computation load is reduced by processing sub-bands with reduced dimensions in each subnet.
+
+The solutions in [25–27,29] create a multistage (iterative) classification strategy in which early termination is practiced when classification confidence reaches a desired threshold in a given stage, skipping all future stages. Reference [30] shows that besides early termination, the classification outcome of each iteration of ICNN can be used to reduce the computational complexity and number of required parameters in the subsequent iterations.
+
+In this chapter, we provide a detailed description of the ICNN architecture. We introduce various policies to reduce the computational complexity of CNN through the iterative approach. We illustrate how the policies construct a dynamic architecture suitable for a wide range of applications with varied accuracy requirements, resources and time-budget, without need for network retraining. Furthermore, we carry out a visualization of the detected features in each iteration through deconvolution network to gain more insight into the traversal of the ICNN. Moreover, we formulate the probability of miss-classification (MC) to find the number of parameters if pruned will have no or little impact on the resulting classification accuracy.
+
+# 9.4 Iterative learning
+
+State-of-the-art DAG-based CNN networks are composed of a single feed-forward computational network, where the prediction is given and its confidence is determined after performing all necessary computations. The reformulation is driven by the needs of resource-constrained vision applications for reducing the energy consumption and the classification latency when deploying CNN solutions. In ICNN, a large CNN block is decomposed into many smaller networks (uCNN in Figure 9.2), allowing iterative refinement and greater control over the execution of algorithm. Thus, not all images pass through all the uCNNs; by monitoring the successive execution of uCNN networks, a thresholding mechanism decides when to terminate the uCNN traversal based on the current classification confidence of the images. In addition, the ability to change the required confidence threshold from classification to classification allows the system to trade off the accuracy of prediction vs, energy consumed per iteration.

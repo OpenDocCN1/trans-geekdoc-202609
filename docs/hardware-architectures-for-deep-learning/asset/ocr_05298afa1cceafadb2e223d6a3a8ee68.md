@@ -1,0 +1,7 @@
+# 66 Hardware architectures for deep learning
+
+![](bbox=[0.068, 0.075, 0.932, 0.585])
+
+**Figure 3.7** The optimized internal structure of a leaf switch with output speedup of 4. The wide unit is 32-bit and the width of links indicates the number of wire units (a connection marked as w has 32 × w wires)
+
+difference Clos in the routing mechanism between the folded Clos and the baseline Clos. In the folded Clos, in much the same way as the baseline, packets first enter a leaf switch and after routing and arbitration cross an upward link to a spine switch. Then, the spine switch sends back the packets to leaf switches through downward links and from there, packets are delivered to their destination PEs. If the source and destination of a packet are connected to the same leaf switch, the packet just moves inside it. Therefore, the routing takes less than three hops. This is an advantage of folded Clos compared to the baseline Clos. In Section 3.5, we proposed an area reduction technique for unidirectional ClosNN. This technique can be applied to fold ClosNN as well. Using the area-reduction technique, the output speedup of the leaf switches increases and the unused upward bandwidth for the broadcast and multicast traffic is removed. The detailed structure of folded ClosNN is outlined in Figure 3.7.

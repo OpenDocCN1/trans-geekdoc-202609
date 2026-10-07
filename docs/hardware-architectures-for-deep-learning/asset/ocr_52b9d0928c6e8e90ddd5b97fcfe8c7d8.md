@@ -1,0 +1,11 @@
+# 286 Hardware architectures for deep learning
+
+![](bbox=[0.075, 0.085, 0.925, 0.355])
+
+Figure 11.11 Proposed ex-situ training and validation framework
+
+physical activities. Sensors placed on the subject's chest, right wrist, and left ankle are used to measure the motion experienced by diverse body parts, acceleration, rate of turn, and magnetic field orientation [52]. The Air Quality dataset contains the responses from an array of five metal oxide chemical sensors embedded in the field in an Italian city. Hourly responses averages are recorded with gas concentrations references from a certified analyzer [51].
+
+Table 11.4 shows the configuration, delay, power, energy per operation, and accuracy of the extracted inverter-based memristive neuromorphic circuits in each studied application. The accuracy of the circuits for approximate computing applications (i.e., FFT, Sobel, and Air Quality) is reported in terms of the mean square error (MSE), while for the classification applications it is reported in terms of the classification accuracy (CA). Also, in the configuration column, the first and last numbers show the number of input and output bits of the neuromorphic circuit, respectively. The middle numbers represent the number of neurons of each layer of the neural network. Additionally, the delay and power consumption have been extracted by the HSPICE simulations for the simulation voltage levels of ±0.25 V. The measured MSE of the HSPICE simulation output shows the accuracy of the proposed circuit. Also, note that the reported delays include DAC, neural network, and ADC delays. It should also be noted that in the classification applications, due to the fact that the desired outputs have only two values the ADC stage could be bypassed (see Figure 11.3) and turned off to save power.
+
+As the results reveal, the neuromorphic circuit, which is trained for MNIST application, has the largest power consumption since it has the largest number of inputs and outputs. Also, the results show small delay, and very small power, and energy per operation for the designed neuromorphic circuits. Note that the number of elements in the critical delay path of the memristive ANN is a function of the
