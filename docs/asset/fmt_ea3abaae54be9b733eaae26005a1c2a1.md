@@ -1,0 +1,144 @@
+
+## Self-testing
+对于 `LT` 模型，使用了真实的环境温度数据 `T[r]^(i)[n]`，以及参数 `(a, b)` 的熵最优 PDF `P[i]^(*)(a)` 和 `F[i]^(*)(b)`，以及测量噪声 `μ[n]` 的 PDF `M[1]^(*)(μ[1]), …, M[24]^(*)(μ[24])`。集合 `𝕃^(i)` 使用上述 PDF 的 `sampling procedure` 生成。求得均值轨迹 `L[mean]^(i)[n]`、中值轨迹 `L[med]^(i)[n]` 以及对应方差图限值的轨迹 `L[std±]^(i)[n]`。计算误差 `δ[L]^(i)`。三个所示日的 resulting 集合和相对误差 `δ[L]^(i)` 示于 Fig. 11.8。
+
+![Figure 11.8: Ensembles of LT model.](img/fig11_8.jpg)
+
+Figure 11.8: Ensembles of `LT` model.
+
+`Tξ` 模型通过生成随机轨迹 `T^(i)[n]` 的集合 `𝕋^(i)`，$n = \overline{1,24}$，使用熵最优 PDF `W^(i)(c)` 和 `Q[1]^(*)(ξ[1]), …, Q[24]^(*)(ξ[24])` 通过采样进行测试。计算均值轨迹 `T[mean]^(i)[n]`、中值轨迹 `T[med]^(i)[n]` 以及对应方差管限值的轨迹 `T[std±]^(i)[n]`。三个日的 resulting 集合和相对误差 `δ[T]^(i)` 示于 Fig. 11.9
+
+![Figure 11.9: Ensembles of T\\xi-model.](img/fig11_9.jpg)
+
+Figure 11.9: Ensembles of `Tξ`-model.
+
+## Cross-testing
+对于交叉测试，使用在第 `i` 日数据上学习得到的 `LT` 和 `LTξ` 模型，并将其均值轨迹与第 `j` ≠ *i* 日的数据进行比较。所得误差汇总于 Table 11.6、Table 11.7、Table 11.8。
+
+Table 11.6: Values `δ[L]` obtained by cross-testing of `LT` model. Mean value `δ[L]` = 0.0530.
+
+|  |
+| --- |
+| *i*/*j* || 1 || 2 || 3 |
+| 1 ||  || 0.0495 || 0.1052 |
+| --- | --- | --- | --- |
+| 2 || 0.0858 ||  || 0.1428 |
+| 3 || 0.0569 || 0.0364 ||  |
+|  |
+
+Table 11.7: Values `δ[T]` obtained by cross-testing of `Tξ` model. Mean value `δ[L]` = 0.0757.
+
+|  |
+| --- |
+| *i*/*j* || 1 || 2 || 3 |
+| 1 ||  || 0.1051 || 0.1079 |
+| --- | --- | --- | --- |
+| 2 || 0.1506 ||  || 0.1185 |
+| 3 || 0.1315 || 0.0676 ||  |
+|  |
+
+Table 11.8: Values `δ[T]` obtained by cross-testing of `LTξ` model. Mean value `δ[L]` = 0.1478.
+
+|  |
+| --- |
+| *i*/*j* || 1 || 2 || 3 |
+| 1 ||  || 0.1437 || 0.2659 |
+| --- | --- | --- | --- |
+| 2 || 0.1756 ||  || 0.2322 |
+| 3 || 0.3475 || 0.1655 ||  |
+|  |
+
+### 11.3.6 Randomized prediction of `N`-daily load
+在 `N` 日负荷的随机化预测中，使用在区间 `𝒯[l]` 上学习的 `LTξ` 模型。预报质量使用在真实数据上得到的熵最优 PDF 的 `LTξ` 模型进行表征，该模型基于 *first*（`i` = 1）日。
+
+通过上述 PDF 的采样程序构建 1 日（`n` ∈ \[1, 24\]）、2 日（`n` ∈ \[1, 48\]）和 3 日（`n` ∈ \[1, 72\]）集合。对于这些集合，求得均值轨迹 `L[mean][n]`、中值轨迹 `L[med][n]` 以及方差管的限值轨迹 `L[std±][n]`。将预报结果与 2006 年 7 月 3–7 日的真实数据进行比较（$i = \overline{1,4}$）。预报质量由类似于 (11.49)–(11.50) 计算的相对误差表征。
+
+所得 24-h、48-h 和 72-h 电力负荷随机化预报及其概率特征（均值和中值轨迹、方差管的限值轨迹）示于 Fig. 11.10。误差，即模型预报与真实数据的偏差，可见于 Table 11.9。
+
+![Figure 11.10: 24-h, 48-h and 72-h forecasts using LT\\xi model.](img/fig11_10.jpg)
+
+Figure 11.10: 24-h, 48-h and 72-h forecasts using `LTξ` model.
+
+Table 11.9: Accuracy of 24-h, 48-h and 72-h forecasts using `LTξ` model.
+
+|  |
+| --- |
+| `δ[L]²` || `δ[L]³` || `δ[L]⁴` |
+| 0,1509 || 0,2515 || 0,2133 |
+| --- | --- | --- | --- |
+|  |
+
+该描述方法的一个重要特征是在“熵最差”测量误差下形成预测轨迹。
+
+## 11.4 Entropy Randomized Modelling and Forecasting of Thermokarst Lake Area Evolution in Western Siberia
+
+### 11.4.1 Thermokarst lakes and climate change
+Permafrost zones, occupying a significant part of the earth's surface, are the localization of thermokarst lakes, which accumulate greenhouse gases (methane and carbon dioxide). These gases have a considerable contribution to global climate change. Climate warming may cause a positive inverse reaction: an increase in temperature will lead to melting of frozen rocks and additional release of methane and carbon dioxide produced by the vital activity of microorganisms that process thawed organic matter.
+
+A thorough understanding of this global cycle and its catastrophic consequences motivates researchers to study the origin, evolution and transformation of thermokarst lakes in permafrost zones \[92, 200\]. The source data in such studies are acquired by the remote sensing of the earth surface and measurements of meteorological parameters \[24, 89, 112, 113, 129, 154\].
+
+可用的历史数据允许追踪热喀斯特湖泊时空演化的过去。然而，要预测时空演化，需要*环境模型*（`EnMd`）来适应历史数据。为此，`EnMd` 首先通过机器学习算法进行训练，然后用于获得预测。
+
+热喀斯特湖泊的形成和演化过程研究不足。此外，关于这些过程的历史数据，尤其是来自卫星的数据，包含显著误差。由于所有这些因素，预测性 `EnMd` 必须在足够高的不确定性条件下运行。因此，我们考虑*随机化预测*（`RF`）方法，相对于传统机器学习方法而言是一种替代方法。
+
+### 11.4.2 西西伯利亚热喀斯特湖泊、其研究工具和问题
+对西西伯利亚多年冻土区热喀斯特湖泊（其数量和大小）的时空动态进行遥感研究，是基于使用中等（30 m）和高分辨率（从几分之一米到数米）图像组合对地球表面进行传感。这种组合允许检测浅水湖泊，其产生的温室气体远多于大型湖泊。
+
+本文研究的西西伯利亚多年冻土区领土面积约为 105 万平方公里。该领土包括三种典型区域（Fig. 11.11）：岛状（`I`，南部）、不连续（`D`，中部）和连续（`C`，北部）。多年冻土区的湖泊具有极其宽泛的尺寸范围，从几平方米到数十万公顷。为了探索这一空间，我们使用中等分辨率光学和雷达图像（`Landsat`、`ERS-2` 和 `ENVISAT`）、高分辨率图像（`Kanopus-V`、`BKA` 和 `Alos`）以及超高分辨率图像（`Resurs-P`、`QuickBird` 和 `GeoEye-1`）。为了最大限度地减少湖泊水位季节性波动的影响，我们选择夏季季节的较短时期内的图像，从七月到八月。在此期间，湖泊上的冰盖完全消失，湖泊可以在解译图像时被识别。我们使用地理信息系统的标准手段 `ArcGIS` 和 `ENVI` 处理图像。
+
+![Figure 11.11: Diagram of test regions.](img/fig11_11.jpg)
+
+Figure 11.11: Diagram of test regions.
+
+根据 \[24\]，对于面积为 2 *ha* 及以上的湖泊，基于卫星图像的湖泊面积遥测误差不超过 5%。作为参考图像，我们采用超高分辨率 `QuickBird` 图像（0.7 *m* ²）。下面以 `Landsat-5` 卫星图像（2007 年 7 月 13 日）的一个片段为例。它显示了热喀斯特湖泊系统（Fig. 11.12(a)）及其解译结果（Fig. 11.12(b)）。
+
+![Figure 11.12: Satellite images.](img/fig11_12.jpg)
+
+Figure 11.12: Satellite images.
+
+热喀斯特湖泊演化中的一个重要问题是识别影响其数量和面积的气候参数。据 1973–2007 年不同多年冻土区 30 个试验域的数据显示，年平均温度和年降水量对热喀斯特湖泊演化的影响最大。对于本研究中的西西伯利亚领土，这些气候参数是使用 `ERA-40`、`ERA-INTERIM` 和 `APHRODITE JMA` 气象场再分析系统获得的；详情参见 \[131, 133\]。对于本文考虑的领土，年平均温度和年降水量具有反向关系：前者增加伴随着后者降水减少 \[131\]。在阿拉斯加 \[154\] 和东西伯利亚 \[130, 132, 195\] 也建立了类似的关系。
+
+西西伯利亚多年冻土区湖泊总数达到 870 万个，总面积约为 640 万 *ha*。其中，近一半（44%）被超小型湖泊（小于 500 *m* ²）占据，它们仅占所有热喀斯特湖泊总面积的 0.1%。大型湖泊（大于 2 × 10⁴ *m* ²）占总面积的 86.6%，但其数量不超过所有热喀斯特湖泊总数的 3.6%。
+
+### 11.4.3 热喀斯特湖泊状态随机化模型的结构
+随机化预测技术中的一个重要阶段是构建热喀斯特湖泊面积演化的随机化模型以及影响该演化的年平均温度和年降水的随机化模型。这些变量将使用具有随机参数的线性动态随机回归 \[10\]（`LDRR`）进行建模。
+
+湖泊面积 `S[n]`（`LDRR-LA`）的时间演化由以下具有两个影响因素的动态随机回归方程描述，即年平均温度 `T[n]` 和年降水总量 `R[n]`：
+
+$$
+\begin{aligned}
+{S\lbrack n\rbrack} & {= a_{0} + {\sum\limits_{k = 1}^{p}a_{k}}S\lbrack n - k\rbrack + a_{(p + 1)}T\lbrack n\rbrack + a_{(p + 2)}R\lbrack n\rbrack,} \\
+{v\lbrack n\rbrack} & {= S\lbrack n\rbrack + \xi\lbrack n\rbrack.}
+\end{aligned}
+$$
+
+(11.51)
+
+参数
+
+$$
+\begin{aligned}
+& {a_{k} \in \mathcal{A}_{k} = \lbrack a_{k}^{-},a_{k}^{+}\rbrack,\quad k = \overline{0,(p+2)},} \\
+& {\mathbf{a} = \left\{ a_{0},\ldots,a_{p},a_{p + 1},a_{p + 2} \right\} \in \mathcal{A} = {\underset{k = 0}{\overset{p + 2}{\cup}}\mathcal{A}_{k}}}
+\end{aligned}
+$$
+
+(11.52)
+
+是随机的，其 PDF 为 `P(a)`。
+
+变量 `v[n]` 是模型的观测输出，且随机测量噪声 `ξ[n]` 在不同时间瞬间 `n` 的取值可能属于不同范围：
+
+$$
+\begin{array}{r}
+{\xi\lbrack n\rbrack \in \Xi_{n} = \lbrack\xi^{-}\lbrack n\rbrack,\xi^{+}\lbrack n\rbrack\rbrack,}
+\end{array}
+$$
+
+(11.53)
+
+其 PDF 为 `$Q_{n}(\xi[n]),\, n = \overline{0,N}.$`
+
+为了训练该模型（估计 PDF `P(a)` 和 `Qn`），我们利用湖泊面积、年平均温度和年降水量的历史数据集合。
+
+然而，在湖泊面积预测阶段，温度和降水数据不可用。为了在此阶段生成必要数据，我们构建温度（`LDRR-T`）和降水（`LDRR-P`）的辅助模型，并分别向其输入提供随机序列 `μ[n]` 和 `ζ[n]`。
