@@ -1,0 +1,98 @@
+
+- [13] Chen D, Yang J, Kitiponchai S. 带有Bejani孔的可剪切梁的弹性失稳和静态设计。Composite Struct 2015:133:54–61.
+- [14] Srikaran B, Gongsuwan W, Wattanasukung N. 不同分布下功能梯度多孔芯夹明治梁的线性与非线性静态弯曲。J Struct 2020;275:112323.
+- [15] Viet N, Zaki W. 功能梯度多孔记忆/多孔弹性悬臂梁失稳模型。Appl Math Model 2021;97:398–417.
+- [16] Hamed M, et al. 轴向载荷函数和优化对多孔芯功能梯度夹层梁稳定的影响。Eng Compute 2020.36(4)1929-46.
+- [17] Kitiponchai S, Chen J. 石墨烯片增强的功能梯度多孔梁的自由振动与失稳。Plater Mater 2017;116:655–66.
+- [18] Noori AR, Aslan TA, Temel B. 使用拉普拉斯域互补方法对功能梯度多孔梁进行动力学分析。Composite Struct 2021;256:11094.
+- [19] Akbaş S. 功能梯度多孔深梁的迫振分析。
+- [20] Pemba F, Lovi G. 通过粘弹性应变和应力梯度力学理论研究功能梯度F纳米束的热力学行为。Composite Struct 2021;263:113627.
+- [21] Chen D, Yang J. 石墨烯增强的功能梯度多孔纳米复合材料梁的非线性失稳和后失稳。Compos Sci Technol 2021;172:235–45.
+- [22] Harishi B, Bejani P, Lenin B. 孔隙率和轴向载荷对功能梯度多孔梁弹性失稳和自由振动的影响。IOP会议系列：材料科学与工程。IOP Publishing; 2021.
+- [23] Nguyen N-D, et al. 用于功能梯度多孔梁结合、振动和失稳分析的新型双变量变形理论。Compos Struct 2022:282:115095.
+- [24] Chen D, et al. 石墨烯片增强的自重功能梯度多孔梁的冲击响应。Thin-Walled Struct 2022:179:109501.
+- [25] Chen D, et al. 使用等几何分析对旋转二维功能梯度多孔梁进行非线性振动分析。Eur Mech A/Solids 2023:204:140683.
+- [26] Chen X, Chen L, Y U. 双向功能梯度多孔材料梁非线性响应行为的干扰敏感性。Compos Struct 2022:271:114142.
+- [27] Foudhi M, Jamil N, Belagousadia N. 使用多二次基函数和基于泰勒级数的延续法对功能梯度多孔梁进行非线性分析。
+- [28] Chen D, Yang J, Kitiponchai S. 功能梯度多孔梁的自由振动。
+- [29] Gao L, Ri Y. 具有区间材料属性的功能梯度多孔梁的动力分析。Eng Struct 2019;397:109441.
+- [30] Jamshid M, Agrawal. 用于失稳和自由振动的功能梯度多孔梁优化材料设计。Mech Res Comm 2018;88:19–24.
+- [31] Chen D, et al. 功能梯度多孔梁的多尺度建模：失稳与振动分析。Eng Struct 2022;266:114568.
+- [32] Ebrahim F, Zi M. 具有孔隙的功能梯度提姆申森梁大幅非线性振动分析。Continuum 2015;116:117–25.
+- [33] Chen D, Yang J, Kitiponchai S. 带有Bejani孔的可剪切梁的弹性失稳和静态设计。Composite Struct 2015:133:54–61.
+- [34] Srikaran B, Gongsuwan W, Wattanasukung N. 不同分布下功能梯度多孔芯夹明治梁的线性与非线性静态弯曲。J Struct 2020;275:112323.
+- [35] Viet N, Zaki W. 功能梯度多孔梁记忆/多孔弹性悬臂梁失稳模型。Appl Math Model 2021;97:398–417.
+- [36] Hamed M, et al. 轴向载荷函数和优化对多孔芯功能梯度夹层梁稳定的影响。Eng Compute 2020.36(4)1929-46.
+- [37] Kitiponchai S, Chen J. 石墨烯片增强的功能梯度多孔梁的自由振动与失稳。Plater Mater 2017;116:655–66.
+- [38] Noori AR, Aslan TA, Temel B. 使用拉普拉斯域互补方法对功能梯度多孔梁进行动力学分析。Composite Struct 2021;256:11094.
+- [39] Akbaş S. 功能梯度多孔深梁的迫振分析。
+- [40] Pemba F, Lovi G. 通过粘弹性应变和应力梯度力学理论研究功能梯度F纳米束的热力学行为。Composite Struct 2021;263:113627.
+- [41] Chen D, Yang J. 石墨烯增强的功能梯度多孔纳米复合材料梁的非线性失稳和后失稳。Compos Sci Technol 2021;172:235–45.
+- [42] Harishi B, Bejani P, Lenin B. 孔隙率和轴向载荷对功能梯度多孔梁弹性失稳和自由振动的影响。IOP会议系列：材料科学与工程。IOP Publishing; 2021.
+- [43] Nguyen N-D, et al. 用于功能梯度多孔梁结合、振动和失稳分析的新型双变量变形理论。Compos Struct 2022:282:115095.
+- [44] Chen D, et al. 石墨烯片增强的自重功能梯度多孔梁的冲击响应。Thin-Walled Struct 2022:179:109501.
+- [45] Chen D, et al. 使用等几何分析对旋转二维功能梯度多孔梁进行非线性振动分析。Eur Mech A/Solids 2023:204:140683.
+- [46] Chen X, Chen L, Y U. 双向功能梯度多孔材料梁非线性响应行为的干扰敏感性。Compos Struct 2022;271:114142.
+- [47] Foudhi M, Jamil N, Belagousadia N. 使用多二次基函数和基于泰勒级数的延续法对功能梯度多孔梁进行非线性分析。
+- [48] Chen D, Yang J, Kitiponchai S. 功能梯度多孔梁的自由振动。
+- [49] Chen D, Yang J, Kitiponchai S. 带有Bejani孔的功能梯度多孔梁的非线性分析。
+- [50] Chen D, Yang J, Kitiponchai S. 带有Bejani孔的可剪切梁的弹性失稳和静态设计。Composite Struct 2015:133:54–61.
+- [51] Srikaran B, Gongsuwan W, Wattanasukung N. 不同分布下功能梯度多孔芯夹明治梁的线性与非线性静态弯曲。J Struct 2020;275:112323.
+- [52] Viet N, Zaki W. 功能梯度多孔梁记忆/多孔弹性悬臂梁失稳模型。Appl Math Model 2021;97:398–417.
+- [53] Hamed M, et al. 轴向载荷函数和优化对多孔芯功能梯度夹层梁稳定的影响。Eng Compute 2020.36(4)1929-46.
+- [54] Kitiponchai S, Chen J. 石墨烯片增强的功能梯度多孔梁的自由振动与失稳。Plater Mater 2017;116:655–66.
+- [55] Noori AR, Aslan TA, Temel B. 使用拉普拉斯域互补方法对功能梯度多孔梁进行动力学分析。Composite Struct 2021;256:11094.
+- [56] Akbaş S. 功能梯度多孔深梁的迫振分析。
+- [57] Pemba F, Lovi G. 通过粘弹性应变和应力梯度力学理论研究功能梯度F纳米束的热力学行为。Composite Struct 2021;263:113627.
+- [58] Chen D, Yang J. 石墨烯增强的功能梯度多孔纳米复合材料梁的非线性失稳和后失稳。Compos Sci Technol 2021;172:235–45.
+- [59] Harishi B, Bejani P, Lenin B. 孔隙率和轴向载荷对功能梯度多孔梁弹性失稳和自由振动的影响。IOP会议系列：材料科学与工程。IOP Publishing; 2021.
+- [60] Nguyen N-D, et al. 用于功能梯度多孔梁结合、振动和失稳分析的新型双变量变形理论。Compos Struct 2022:282:115095.
+- [61] Chen D, et al. 石墨烯片增强的自重功能梯度多孔梁的冲击响应。Thin-Walled Struct 2022:179:109501.
+- [62] Chen D, et al. 使用等几何分析对旋转二维功能梯度多孔梁进行非线性振动分析。Eur Mech A/Solids 2023;204:140683.
+- [63] Chen X, Chen L, Y U. 双向功能梯度多孔材料梁非线性响应行为的干扰敏感性。Compos Struct 2022;271:114142.
+- [64] Foudhi M, Jamil N, Belagousadia N. 使用多二次基函数和基于泰勒级数的延续法对功能梯度多孔梁进行非线性分析。
+- [65] Chen D, Yang J, Kitiponchai S. 功能梯度多孔梁的自由振动。
+- [66] Chen D, Yang J, Kitiponchai S. 带有Bejani孔的功能梯度多孔梁的非线性分析。
+- [67] Chen D, Yang J, Kitiponchai S. 带有Bejani孔的可剪切梁的弹性失稳和静态设计。Composite Struct 2015:133:54–61.
+- [68] Srikaran B, Gongsuwan W, Wattanasukung N. 不同分布下功能梯度多孔芯夹明治梁的线性与非线性静态弯曲。J Struct 2020;275:112323.
+- [69] Viet N, Zaki W. 功能梯度多孔梁记忆/多孔弹性悬臂梁失稳模型。Appl Math Model 2021;97:398–417.
+- [70] Hamed M, et al. 轴向载荷函数和优化对多孔芯功能梯度夹层梁稳定的影响。Eng Compute 2020.36(4)1929-46.
+- [71] Kitiponchai S, Chen J. 石墨烯片增强的功能梯度多孔梁的自由振动与失稳。Plater Mater 2017;116:655–66.
+- [72] Noori AR, Aslan TA, Temel B. 使用拉普拉斯域互补方法对功能梯度多孔梁进行动力学分析。Composite Struct 2021;256:11094.
+- [73] Akbaş S. 功能梯度多孔深梁的迫振分析。
+- [74] Pemba F, Lovi G. 通过粘弹性应变和应力梯度力学理论研究功能梯度F纳米束的热力学行为。Composite Struct 2021;263:113627.
+- [75] Chen D, Yang J. 石墨烯增强的功能梯度多孔纳米复合材料梁的非线性失稳和后失稳。Compos Sci Technol 2021;172:235–45.
+- [76] Harishi B, Bejani P, Lenin B. 孔隙率和轴向载荷对功能梯度多孔梁弹性失稳和自由振动的影响。IOP会议系列：材料科学与工程。IOP Publishing; 2021.
+- [77] Nguyen N-D, et al. 用于功能梯度多孔梁结合、振动和失稳分析的新型双变量变形理论。Compos Struct 2022:282:115095.
+- [78] Chen D, et al. 石墨烯片增强的自重功能梯度多孔梁的冲击响应。Thin-Walled Struct 2022:179:109501.
+- [79] Chen D, et al. 使用等几何分析对旋转二维功能梯度多孔梁进行非线性振动分析。Eur Mech A/Solids 2023;204:140683.
+- [80] Chen X, Chen L, Y U. 双向功能梯度多孔材料梁非线性响应行为的干扰敏感性。Compos Struct 2022;271:114142.
+- [81] Foudhi M, Jamil N, Belagousadia N. 使用多二次基函数和基于泰勒级数的延续法对功能梯度多孔梁进行非线性分析。
+- [82] Chen D, Yang J, Kitiponchai S. 功能梯度多孔梁的自由振动。
+- [83] Chen D, Yang J, Kitiponchai S. 带有Bejani孔的功能梯度多孔梁的非线性分析。
+- [84] Chen D, Yang J, Kitiponchai S. 带有Bejani孔的可剪切梁的弹性失稳和静态设计。Composite Struct 2015:133:54–61.
+- [85] Srikaran B, Gongsuwan W, Wattanasukung N. 不同分布下功能梯度多孔芯夹明治梁的线性与非线性静态弯曲。J Struct 2020;275:112323.
+- [86] Viet N, Zaki W. 功能梯度多孔梁记忆/多孔弹性悬臂梁失稳模型。Appl Math Model 2021;97:398–417.
+- [87] Hamed M, et al. 轴向载荷函数和优化对多孔芯功能梯度夹层梁稳定的影响。Eng Compute 2020.36(4)1929-46.
+- [88] Kitiponchai S, Chen J. 石墨烯片增强的功能梯度多孔梁的自由振动与失稳。Plater Mater 2017;116:655–66.
+- [89] Noori AR, Aslan TA, Temel B. 使用拉普拉斯域互补方法对功能梯度多孔梁进行动力学分析。Composite Struct 2021;256:11094.
+- [90] Akbaş S. 功能梯度多孔深梁的迫振分析。
+- [91] Pemba F, Lovi G. 通过粘弹性应变和应力梯度力学理论研究功能梯度F纳米束的热力学行为。Composite Struct 2021;263:113627.
+- [92] Chen D, Yang J. 石墨烯增强的功能梯度多孔纳米复合材料梁的非线性失稳和后失稳。Compos Sci Technol 2021;172:235–45.
+- [93] Harishi B, Bejani P, Lenin B. 孔隙率和轴向载荷对功能梯度多孔梁弹性失稳和自由振动的影响。IOP会议系列：材料科学与工程。IOP Publishing; 2021.
+- [94] Nguyen N-D, et al. 用于功能梯度多孔梁结合、振动和失稳分析的新型双变量变形理论。Compos Struct 2022:282:115095.
+- [95] Chen D, et al. 石墨烯片增强的自重功能梯度多孔梁的冲击响应。Thin-Walled Struct 2022:179:109501.
+- [96] Chen D, et al. 使用等几何分析对旋转二维功能梯度多孔梁进行非线性振动分析。Eur Mech A/Solids 2023;204:140683.
+- [97] Chen X, Chen L, Y U. 双向功能梯度多孔材料梁非线性响应行为的干扰敏感性。Compos Struct 2022;271:114142.
+- [98] Foudhi M, Jamil N, Belagousadia N. 使用多二次基函数和基于泰勒级数的延续法对功能梯度多孔梁进行非线性分析。
+- [99] Chen D, Yang J, Kitiponchai S. 功能梯度多孔梁的自由振动。
+- [100] Chen D, Yang J, Kitiponchai S. 带有Bejani孔的功能梯度多孔梁的非线性分析。
+- [101] Chen D, Yang J, Kitiponchai S. 带有Bejani孔的可剪切梁的弹性失稳和静态设计。Composite Struct 2015:133:54–61.
+- [102] Srikaran B, Gongsuwan W, Wattanasukung N. 不同分布下功能梯度多孔芯夹明治梁的线性与非线性静态弯曲。J Struct 2020;275:112323.
+- [103] Viet N, Zaki W. 功能梯度多孔梁记忆/多孔弹性悬臂梁失稳模型。Appl Math Model 2021;97:398–417.
+- [104] Hamed M, et al. 轴向载荷函数和优化对多孔芯功能梯度夹层梁稳定的影响。Eng Compute 2020.36(4)1929-46.
+- [105] Kitiponchai S, Chen J. 石墨烯片增强的功能梯度多孔梁的自由振动与失稳。Plater Mater 2017;116:655–66.
+- [106] Noori AR, Aslan TA, Temel B. 使用拉普拉斯域互补方法对功能梯度多孔梁进行动力学分析。Composite Struct 2021;256:11094.
+- [107] Akbaş S. 功能梯度多孔深梁的迫振分析。
+- [108] Pemba F, Lovi G. 通过粘弹性应变和应力梯度力学理论研究功能梯度F纳米束的热力学行为。Composite Struct 2021;263:113627.
+- [109] Chen D, Yang J. 石墨烯增强的功能梯度多孔纳米复合材料梁的非线性失稳和后失稳。Compos Sci Technol 2021;172:235–45.
