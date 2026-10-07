@@ -1,0 +1,409 @@
+
+# 作者索引
+
+Leak, S. J., 59
+Lebeault-Dorget, M.-A., 282
+Lebiere, C., 389
+Lebon, M. J., 64
+Lee, C. T., 188
+Lee, E. G., 185
+Lee, E. S., 187
+Lee, G. S., 185
+Lee, H.-S., 343, 344
+Lee, K., 248
+Lee, T. K., 245
+Lee, Y. J., 189
+Lees, A. W., 122
+Lefostrier, C., 333, 336, 337, 341, 342, 345, 347
+Lehmann, K. K., 335
+Lehoucq, R. B., 335
+Leland, T. W., 186
+Lemes, M. R., 183
+Lemitre, R., 283
+Le, J., 388
+Lemoine, D., 333
+Lendvay, G., 346
+Leopold, D., 282
+LeQuere, S., 335
+LeSar, R., 187
+Levesque, D., 61
+Lewis, J., 187, 189
+Li, G., 337, 341
+Li, H., 337, 386
+Li, J., 282
+Li, S., 124, 346
+Li, Z., 247
+Li, Z.-S., 60
+Liang, B., 283
+Liebs, M., 244
+Liechstein, A. I., 244, 246
+Light, J. C., 332, 333, 335, 341, 344, 347
+Lin, J., 187, 188
+Lin, S. Y., 343, 346
+Lindh, R., 280, 281
+Linker, R., 39
+Linse, P., 280
+Lipkowitz, K. B., 58, 59, 120, 123, 333, 386, 388
+Lipson, H., 387
+Lipson, M., 387
+Lisal, M., 186
+Lischka, T., 280
+Littlejohn, R. G., 187
+Litzinger, T. A., 39
+Liu, F., 243
+Liu, H., 155
+Liu, K., 345
+Liu, L., 341
+Liu, M. R., 58
+Livingston, D. J., 387
+Llobet, E., 388
+Lodge, T. P., 57
+Lombardi, J. R., 246
+Lodahl, P. S., 19
+Long, G. J., 282
+Longo, R. C., 247
+Loose, W., 122
+Lopez, M. J., 245
+Lorenz, C., 244
+Lorenz, Z., 388
+Louie, S. G., 24
+Lourderbach, J. G., 243
+Lowdin, P. O., 279
+Lu, P. H., 157
+Luan, B. Q., 121
+124
+Lubchenko, V., 59, 61
+Lubensky, T. C., 153
+Lucchesi, M., 157
+Ludemann, H., 155
+Ludwig, G. W., 246
+Lundqvist, S., 344
+Lütken, K., 283
+Lynden-Bell, R. M., 155
+Lyulin, A. V., 61, 63, 64
+Ma, G., 341
+MacDonald, J. K., 333
+Macedo, A. E., 155
+Macedo, P. B., 155
+Mackerell, A. D., 57
+Madejski, J., 389
+Mader, C. L., 185
+Magill, J. H., 155
+Maillet, J. B., 189
+Main, J., 340
+Malvist, P.-A., 280, 281, 282, 344
+Maltase, V., 388
+Manhattan, V. A., 337, 339, 340, 342, 343, 346
+Manthe, U., 346
+Mao, G. M., 66
+Mao, M. K., 187
+Mao, N. H., 66
+Map, J. R., 58
+Marim, L. R., 387
+Marian, C., 281
+Marsden, C., 280
+Marsden, C. J., 383
+Marsh, S. P., 187
+Martin, J. M., 124
+Martin, W., 284
+Martyn, G. J., 60
+Marx, D., 188
+Mason, A. T., 341, 344, 345, 347
+Matsuda, H., 245
+Matsui, Y., 155
+Matsuo, T., 245
+Mattos, C., 58
+Mavravzas, G., 59, 60
+Maugeri, F., 388
+Maynard, A. T., 345
+May, R. M., 61
+McKen, G. B., 57
+McCleland, G., 121
+McCormack, D. A., 347
+McDonald, I. R., 153
+McGee, B., 186
+McGuire, R., 185
+Mc, D. A., 153
+Meakin, P., 121
+Medvedev, N., 155
+Meijer, A. J. H., 346
+Meitrovich, G., 61
+Melius, C. F., 185, 189
+Menikoff, R., 184
+Menon, M., 246
+Menou, M., 337, 341, 347
+Mera, S., 387
+Merchant, M., 280, 282
+Merz, K. M., 57
+Messiah, A., 332
+Meyer, E., 122, 124
+Heyer, H., 59
+Heyer, H.-D., 339
+Michels, A. M. J., 61, 63, 64
+Micknick, S., 58
+Mikulski, P. T., 121, 124
+Milchev, A., 59, 61
+Millefeld, K. F., 334
+Militzer, B., 198
+Miller, R. E., 123
+Miller, W. H., 336, 338, 341, 345, 346
+Milli, P., 283
+Milne, G. W. A., 189
+Minehardt, J. T., 345
+Minich, R. W., 188
+Mirodatos, C., 387
+Mishima, O., 155
+Mitchell, A. C., 188
+Mitchell, K. A., 347
+Mittal, J., 158
+Mladenovic, M., 347
+Mohanty, U., 157
+Moseisev, N., 334, 335, 340, 342
+Mokrani, A., 247
+Moler, C. B., 340
+Molina, V., 280
+Mollani, J. E., 121
+Moll, H., 283
+Molar, L., 388
+Monekenbush, M., 57, 64, 66
+Monony, P. A., 154
+Montejo-Carrizales, J. M., 243, 245, 247
+Montegory, C. J., 387
+Morán-López, J. L., 243
+Morgan, C. V., 189
+Morgan, R. B., 336
+Moriyama, H., 247
+Moro, G., 342
+Morris, G. P., 122
+Morse, M. D., 248
+Moseler, R. D., 154
+Mosey, N. J., 121, 124
+Mountain, R., 244
+Muzasov, O. N., 244
+Muckerman, J. T., 341, 344
+Muhlbacher, J., 389
+Müller, A., 283
+Müller, M., 60
+Müller, R. P., 186
+Müller, T., 349
+Müller-Plathe, F., 59, 64
+Mullin, A. S., 340
+Mundy, C. J., 120, 187, 188
+Murillo, C. A., 284
+Murray, C., 336
+Naberhin, Y. L., 155
+Nachtigal, N. M., 341, 334
+Nachtgall, P., 344
+Nagel, S. R., 153
+
+## 作者索引 402
+
+Naberhin, Y. L., 155
+Nagel, S. R., 53
+Nait-Laziz, H., 248
+Nakajima, T., 281
+Nakano, H., 247
+Narang, E., 186
+Nardi, E., 158
+Narecius, E., 342
+Narros, A., 64
+Nauts, A., 334, 347
+Nayak, S., 147
+Nayak, S. C., 245, 246, 348
+Nealey, P. F., 66
+Neimark, A. V., 123
+Neitola, R., 153
+Wells, W. J., 188
+Nelson, D. R., 154
+Neogrady, P., 246
+Nesbitt, D. J., 345
+Hess, H. C., 158
+Netleton, E., 154
+Neufeld, J., 283
+Neuhaeuser, M., 338, 339, 340, 342, 346
+Neumaier, A., 342
+Neurock, M., 284
+Ngai, K. S., 58
+Ngo, T., 58
+Nguyen, D. T., 282
+Nguyen-Tran, C., 283
+Nichols, M. A., 124
+Nichols III, A. L., 189
+Nicol, M., 188
+Nielsen, O. H., 123
+Niiem, G. C., 246
+Nitsche, H., 283
+Nocedal, J., 157
+Nogueira, F., 244
+Noojen, M., 247
+Norton, P. R., 124
+Nosk, S., 60, 188
+Noya, E. G., 247
+Nusair, M., 244
+Nyberg, P. E., 59
+Nyman, M., 335
+Ohno, K., 248
+Okada, O., 63
+O'Leary, D., 64
+Olés, A. M., 247
+Olsen, J., 280
+Ong, C. K., 347
+Oppenheim, I., 62, 157
+Ordejon, P., 247
+Ortiz, M. J., 283
+Ottringer, H. C., 60
+Ochmnikov, M., 340
+Oxagaard, J., 188
+Oxley, J. C., 189
+Pacchini, G., 245, 248
+Pacureanu, L. M., 184, 185
+Page, C. C., 333, 334
+Pakkanen, T. A., 123
+Pakula, T., 59
+Palmes, P. P., 389
+Panagiotopulos, A. Z., 154, 347
+Pang, J. W., 340
+Pant, P. V., 59
+Pantopulos, D. A., 244
+App, A., 388
+Parasak, V., 280
+Parisi, F., 244
+Parisi, G., 157
+Park, B., 124
+Park, D. H., 387
+Park, T. J., 333
+Parker, G. A., 245
+Parks, E. K., 245, 246, 348
+Parinson, A. R., 387
+Parlett, B. N., 333
+Parr, R. G., 188
+Parrinello, M. M., 122, 183, 185
+Pasader, A. M., 244
+Pasqu, A. M., 388
+Pastor, G. M., 243, 246, 347
+Paul, W. H., 57, 58, 59, 61, 62, 63, 64
+Pavlovic, J., 282
+Pederson, M. R., 244
+Pei, L., 121
+Pendergast, P., 335
+Peng, J. W., 347
+Pepperkin, V. L., 185
+Pepper, M., 284
+Ochsenfeld, C., 333
+Oda, T., 244
+Odintsov, V. V., 185
+Oganov, A. R., 387
+Ogawa, T., 156
+Ogita, N., 156
+
+## 作者索引 403
+
+Pepper, M. J., 280
+Perdew, J. P., 244
+Perino, M., 65
+Persaud, K. C., 389
+Persson, B. J., 282
+Persson, N. J., 120, 121
+Pesche, L., 343
+Peschar, R., 387
+Peskin, U., 336
+Peterson, K. A., 343
+Peterson, K. L., 386
+Petrusac, S., 64
+Pick, R. M., 64
+Pieuch, P., 282
+Pierloot, K., 280
+Pitzer, R. M., 280
+Pibeau, B., 247
+Platen, E., 60
+Plimpton, S. J., 65
+Pollin, N., 343
+Pozer, R., 356, 341, 347
+Politzer, P., 189
+Pollard, W. T., 343
+Ponder, J. W., 57
+Poole, F. H., 65, 156
+Mopik, M. V., 284
+Pople, J. A., 332
+Poppi, R. J., 389
+Porezag, D., 188
+Pou-Amirio, R., 282
+Poulin, N. M., 334
+Pourkashian, M., 387
+Power, P. P., 282
+Pozo, Z., 334
+Prager, S., 57
+Prankceience, E., 387
+Prandtl, L., 120
+Prasad, K. O., 387
+Preble, S., 387
+Press, W. H., 333
+Price, C., 57
+Price, D. L., 66
+Price, S. L., 58
+Prielmeier, F. X., 155
+Probert, I. J., 387
+Prodhom, B., 58
+Pruss, A., 187
+Puertas, A. M., 156
+Pulay, P., 336
+Punch, W. F., 387
+Punta, M., 388
+Cusey, P. N., 66
+Puxtry, G., 387
+Puzzarini, C., 282
+Pykköö, P., 279, 284
+Qi, J., 343
+Qi, Y., 124
+Qiu, X. H., 57, 64, 66
+Racine, S., 336
+Rader, R., 247
+Radom, L., 332
+Rahman, A., 122
+Raiser, Y. P., 185
+Rao, B. C., 245, 247
+Papoport, D. C., 186
+Rasaiah, J., 346
+Rasmmussen, A. J., 342
+Ratgeber, S., 57
+Ravech, H. J., 154
+Ravelo, R., 189
+Reddy, B. M., 245
+Reddy, R. V., 247
+Ree, F. H., 185, 186
+Reed, E. J., 188, 189
+Reed, T. M., 186
+Rehamman, A., 282
+Reich, T., 283
+Reichman, D. R., 153, 157
+Reinier, D., 346
+Rehier, W. E., 388
+Rehmann, P., 122
+Reinh, G., 387
+Reineker, P., 62
+Reinhardt, W. P., 342
+Reinish, J., 157
+Reiss, H., 156
+Reiter, J., 59
+Rendell, A., 280
+Resasso, D. E., 388
+Reuse, F. A., 245, 247
+
+## 404 作者索引
+
+- Ritter, C., 62
+- Rivera, E. C., 388
+- Rizos, A. K., 57
+- Robbins, M. O., 120, 121, 124
+- Robertson, D. H., 189
+- Robinson, J., 387
+- Roder, J., 123
+- Rodriguez-López, J., 245
+- Roe, R. J., 60, 63
+- Rohweder, J. J., 389
+- Roland, C. M., 157
+- Romero, H., 181
+- Romine, C., 334
+- Ronchetti, M., 354
+- Roos, B. O., 280, 281, 282, 283, 284
+- Root, D. M., 58, 123
