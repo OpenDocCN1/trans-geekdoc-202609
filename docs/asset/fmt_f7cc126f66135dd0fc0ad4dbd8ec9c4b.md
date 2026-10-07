@@ -1,0 +1,104 @@
+
+# 参考文献
+
+[10] Nazir A, Abate KM, Kumar A, Jung J-Y. 细胞结构设计、优化与增材制造的最新综。Int Adv Manuf Technol 2019;04:3489–510. Available自: `https://doi.org/10.1007/s0017-019-04085-3`.
+
+[11] Tao W, Leu MC. 用于增材制造的点阵结构设计。In: 2016 International symposium on flexible actuation, IEEE; 2016, p. 32–32. Available自: `https://doi.org/10.1109/ICFA.2016.7771923`
+
+[12] Gong K, Kyaldas S, Jang W-Y. 开孔泡沫的复合响应。第1部分形貌与弹性属性。Int J Solids Struct 2004;42:1355–79. Available自: `https://doi.org/10.1016/j.struct.2004.07.023`,
+
+[13] Paul A, Ramauti R. 闭孔泡沫材料的应变敏感性。Mater Sci Eng A 2000;281:1–7. Available自: `https://doi.org/10.1016/S0921-5093(99)00068-X`
+
+[14] Rackiffe ME, 超轻量桁结构的局部与全局失稳。Comp Sci Technol 2006;66:28–83. Available自: `https://doi.org/10.1016/j.compsmech.2005.08.023`,
+
+[15] Ruan D, Li G, Wang B, Tu Y. 有限元研究。蜂窝的动态压溃—Int Mater Stud 2003:81–82. Available自: `https://doi.org/10.1016/S0743-X74X(02)00056-E`
+
+[16] Deschande VS, Nash AF. 八角点格材料的有效属性。J Phys Solids 2001;49:1477–98. Available自: `https://doi.org/10.1016/S0022-5062(01)0061`
+
+[17] Liu J, Myers MA, Jung G, Richtman RO. 材料中的功能属性与异质性：设计原理、功能与边界应用。Prog Mater Sci 2017;88:47–98. Available自: `https://doi.org/10.1016/j.pmatsci.2017.04.013`,
+
+[18] Cheng Z, Zhou H, Li G, Gao H, Lu L. 梯度纳米结构材料中的额外强化与硬化。Science 2016;352:1921–1925. Available自: `https://doi.org/10.1126/science.aau1925`
+
+[19] Deschande VS, Nash MF. 金属泡沫的等向性属性。J Mech Phys Solids 2004;48:1253–83. Available自: `https://doi.org/10.1016/S0022-5096(03)00096-X`
+
+[20] Fleck NA, Deschande VS. 微架构材料：过去与现在。Proc R Soc A Math Phys 2016;365:2496–515. Available自: `https://doi.org/10.1098/rspa.2015.02210`,
+
+[21] Cui Y, Kieran S, Goldsmith MJ 设计功能梯度泡沫材料的吸吸收能力。Mater Sci Eng A 2009;55:207–215. Available自: `https://doi.org/10.1016/j.msa.2008.12.011`,
+
+[22] Kieran S, Cui LJ. 应力波通过虚拟梯度泡沫的传播。Int J Mater 2009;44:456–68. Available自: `https://doi.org/10.1016/j.ijmat.2009.02.006`,
+
+[23] Li Y, Wei H-Y, Wang G. 密度梯度的金属空心球(MHS)泡沫设计。Comp Part B Eng 2012;33:1346–52. Available自: `https://doi.org/10.1016/j.compsmech.2011.11.057`,
+
+[24] Xian X, An L. 密度梯度蜂窝的动态压溃行为与能量吸收。Sandwich Struct Mater 2014;16:125–47. Available自: `https://doi.org/10.1177/096976231253999`
+
+[25] Zhou H, Wang X, Zhao Z. 梯度细胞固体的高速冲击。Comp Part B 2016;85:93–101. Available自: `https://doi.org/10.1016/j.composites.2015.09.042`
+
+[26] Zhang J, Wang, Zhao L. 基于Voronoi模型的材料梯度材料动态响应。Comp Part B 2016;85:176–87. Available自: `https://doi.org/10.1016/j.composites.2015.09.045`.
+
+[27] Liang M, Li Z, Lu F, Li X. 连续密度梯度材料的理论与数值研究。Comp Struct 2017;164:170–9. Available自: `https://doi.org/10.1016/j.struct.2016.065`.
+
+[28] Chen D, Chitrou S, Yang J. 变密度功能梯度结构的动态响应与能量吸收。J Des 2018;140:473–88. Available自: `https://doi.org/10.1016/j.matdes.2017.029`.
+
+[29] Reid S, Peng C. 载荷下的单轴压溃。Int J Eng 1997;19:531–70. Available自: `https://doi.org/10.1016/S0074-743(97)0016-X`.
+
+[30] Chen J, Yu X, Li G. 梯度棒的双重冲击效应。J Polym 2015;30:55–63. Available自: `https://doi.org/10.1016/j.polym.2014.021`.
+
+[31] Karagio D, Alves M. 变密度材料中的波传播。J Solids 2015;71:323–37. Available自: `https://doi.org/10.1016/j.ijjsolid.2015.005`.
+
+[32] Liu J, Hou B, Li T. 梯度棒设计中冲击传播的理论研究。Eng 2015;580:123–42. Available自: `https://doi.org/10.1016/j.ijmeng.2015.001`.
+
+[33] Yang J, Wang S, Ding Y, Zheng Y, Yu Chu. 基于非线性塑性模型的梯度细胞材料抗碰撞性。Mater Sci Eng A 2017;650:11010. Available自: `https://doi.org/10.1016/j.msa.2016.11010`.
+
+[34] Ding Y, Zheng Z, Wang Y, Zhao F. 梯度细胞泡沫的冲击响应与设计。J Appl Mech 2018;2018:10517. Available自: `https://doi.org/10.1142/25788215077`.
+
+[35] Liu H, Deng S, Ng BF. 温度环境下功能梯度泡沫的冲击响应与吸收。Compos Part B Eng 2019;172:516–32. Available自: `https://doi.org/10.1016/j.composb.2019.05.072`.
+
+[36] Zeng HB, Patofato S, Zhang H, Girard Y, Vasto V. 变密度泡沫聚集体的冲击行为。J Mech Sci 2010;52:628–88. Available自: `https://doi.org/10.1016/j.jmec.2009.11.033`.
+
+[37] Hanaku Y, Takaba N, Usumura T, Kawazuru O, Ishikawa N. A1050和A6061铝合金组成的功能梯度泡沫落落冲击行为。Mater Sci Eng A 2015;639:597–604. Available自: `https://doi.org/10.1016/j.matmsa.2015.05.007`.
+
+[38] Gopa R, Wu C. 微观结构体积和壁厚具有梯分层合成泡沫的压缩属性。Mater Sci Eng A 2006;427:231–42. Available自: `https://doi.org/10.1016/j.matmsa.2006.04.078`.
+
+[39] Schauber TA, Jacobsen AJ, Torrens A, Sorensen AE, Lean J, Greer JR, et al. 超轻金属复合材料。Science 2011;334:962–5. Available自: `https://doi.org/10.1126/science.1196533` (English).
+
+[40] Compton BG, Lewis JA. 轻量细胞泡沫的3D打印。Adv Mater 2014;26:5990–5. Available自: `https://doi.org/10.1002/adma.2014.01804`.
+
+[41] Ngo TD, Kashani A, Imbhazan G, Nguyen KT, Hui D. 增材制造（3D打印）：材料、方法、应用与挑战综述。Compos Part B Eng 2018;153:77–96. Available自: `https://doi.org/10.1016/j.composb.2018.02.12`.
+
+[42] Wang X, Jiang M, Zhou Z, Gou J, Hui D. 聚合物3D打印：综述与展望。Compos Part B Eng 2017;110:442–58. Available自: `https://doi.org/10.1016/j.composb.2016.4`.
+
+[43] Mannella GA, Conson G, Pavia F, Bucato V. 通过热诱导分离（TIPS）制备孔径梯度聚合物泡沫。Mater Lett 2015;160:31–3. Available自: `https://doi.org/10.1016/j.materlet.2015.7`
+
+[44] Hernández-Nave E, Smith CJ, Derguti F, Tammas S, Léonard F, et al. 设计和尺寸对增材制造金属泡沫学性能的影响。Acta Mater 2015;85:337–95. Available自: `https://doi.org/10.1016/j.acta.2014.6`.
+
+[45] Matheson KE, Cross KK, Nowak MM, Spear AD. 增材制造随机开孔泡沫的多尺度分析。Mater Sci Eng A 2017;207:181–92. Available自: `https://doi.org/10.1016/j.mse.2017.8`.
+
+[46] Wang S, Ding Y, Yu F, Zheng Y. 增材制造Voronoi基开孔泡沫的压溃与变形机制。Mater Today 2020;25:101046. Available自: `https://doi.org/10.1016/j.matod.2020.2`
+
+[47] Bracomiti M, Ambrose M, Okafer A, Sans Y, Zhang X, Ou X, et al. 复制开孔泡沫中的压力降研究：与增材制造泡沫的实验数据耦合。Chem Eng 2019;377:120823. Available自: `https://doi.org/10.1016/j.chemeng.2018.10`
+
+[48] Wang G, Shen L, Zhao J, Li H, Xie T, et al. 基于Voronoi镶分的增材制造可控机械支架的设计与表征。ACS Mater Sci 2018;4:217–29. Available自: `https://doi.org/10.1021/acbiosomaterials.7`
+
+[49] Mur LE, Gaysan SM, Medina F, Parinitz E, Martinez JL, Hernandez DH, et al. 电子束增材制造Ti-6Al-4V开孔泡沫的表征。Mater Sci A 2020;521:86–8. Available自: `https://doi.org/10.1016/j.msa.2019.11`
+
+[50] Yang J, Jin X, Gao H, Zhang D, Chen S, et al. 激光粉熔熔钽支架：力学性能评估与孔隙结构表征。Mater Charat 2020;117:110694. Available自: `https://doi.org/10.1016/j.matint.2020.11`
+
+[51] Porter DA, Di Pina MA, Baxter Y, Parikh AR. 用于增材制造结构性能的尼龙点阵设计要素。Mech Behav Mater Int 2022;125:104869. Available自: `https://doi.org/10.1016/j.jmbm.2021.10`
+
+[52] Ramirez DA, Lee, S, Yan X, Martinez E, Martinez JL, et al. 使用电子束熔化制造开孔铜支撑结构。Mater Sci A 2011;528:5279–86. Available自: `https://doi.org/10.1016/j.msa.2011.3`
+
+[53] Du Y, Du B, Shi X, Hou B, Li Y. 3D打印带开尔文细胞聚合物支架的静态-动态压缩性能和变形。Cells Int J Mater Eng 2019;132:103003. Available自: `https://doi.org/10.1016/j.ijmpeng.2019.05`
+
+[54] Wang S, Zheng Z, Zhou C, Ding Y, Yu J. 原型聚合物泡沫的压溃与密化：中中结构分析和统计本构模型。Mech Mater 2019;326:75–87. Available自: `https://doi.org/10.1016/j.mechmater.2018.9`
+
+[55] Duan Y, Du B, Zhou X, Shi X, Hou B, et al. 细胞规则性对增材制造Voronoi泡沫压缩性能的影响。Int J Mechch Sci 2019;1064:105151. Available自: `https://doi.org/10.1016/j.ijmecs.2019.1`
+
+- [56] Kalia K, Francouvoir B, Amirkhazzi A, Ameli A. 在使用材料挤出增材制造进行多细胞结构3D打印中 (In 3D printing of multicellular structures using material extrusion additive manufacturing), ACS App Mater Interfaces 2022;14:22454–65. `https://doi.org/10.1021/acsamiam.2020.03014`.
+
+- [57] Zielielski TG, Opieka KC, Pawlowski P, Dauchez N, Boutin T, Kennedy J, 等. 增材制造技术吸音多孔材料的可重复性：循环研究 (Reproducibility of sound-absorbing porous materials using additive manufacturing technologies: round study). Addit Mater 2020;36:101564. `https://doi.org/10.1016/j.addma.2020.101564`.
+
+- [58] Zamelabini H, Vidde VO, Hosseini AC. 球形细胞增材制造聚合物泡沫的机械性能 (Mechanical performance of additively manufactured polymeric foams with spherical cells). Addit Mater 2016;12:2274–81. `https://doi.org/10.1016/j.addma.2016.04.008`.
+
+- [59] Duan Y, Zhao X, Hong N, Du, Liu H, 等. 剪切压缩载荷下蜂窝与泡沫的碰撞 (Crashing of honeycomb vs foam under shear-compression load). Int J Imp 2020;146:106998. `https://doi.org/10.1016/j.ijimp.2020.106998`.
+
+- [60] Torres-Garriga A, Gómez-Gras G, Pérez MA. 增材制造轻质结构的力学性能：胞单元形状和密度对打印时间和压缩行为的影响 (Mechanical performance of additively manufactured lightweight structures: influence of cell pattern and density on the printing time and compression behavior). Mater Des 2022;215:110472. `https://doi.org/10.1016/j.matdes.2021.110472`.
