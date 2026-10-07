@@ -1,0 +1,1082 @@
+- pgno: 0
+  md: '# Reaction
+
+    Chemistry &
+
+    Engineering
+
+
+    # ROYAL SOCIETY
+
+    OF CHEMISTRY
+
+
+    # PAPER
+
+
+    View Article Online
+
+    View Journal | View Issue
+
+
+    ![](img/c457f7302bebd27c403522434e1f8aac_0_0.png)
+
+
+    Cite this: React. Chem. Eng., 2025,
+
+    10, 2334
+
+
+    # An accurate and interpretable deep learning
+
+    model for yield prediction using hybrid molecular
+
+    representations†
+
+
+    Yingwang Wang,abc Xiny Sun,abc Yuyuan Li,abc *abc
+
+    Li Wang *abc and Jing Zhang abc
+
+
+    In recent years, imidazolium-based ionic liquids (ILS) and pyrazolium-based ILs
+    have shown efficient
+
+    catalytic activity in CO2 cycloaddition reactions. However, these catalysts require
+    stringent conditions
+
+    the reactions in the absence of co-solvents, limiting their applicability. There
+    is an\increasing demand for new ILs capable of operating under milder conditions.
+
+    Traditional methods for designing ILs through theoretical calculations or experimental
+
+    exploration are both costly and challenging. This study presents a deep learning
+    model for predicting yield
+
+    of CO2 cycloaddition by imidazolium-based and pyrazolium-based ILs. The Model
+
+    utilizes hybrid features to capture the structural information of molecules achieved
+    in squared
+
+    correlation coefficient (R²) value of 0.98. The Shapley Additive explanations
+    (SHAP) technique
+
+    generation mechanism is
+
+    established to create new structures. Through a two-step strategy yield prediction
+
+    using the deep learning model and energy barriers via functional theory (DFT),
+    4
+
+    promising imidazolium-based ILs are identified as potential catalysts for CO2
+    cycloaddition
+
+    reactions with epichlorohydrin under mild conditions. This work introduces a novel
+    learning
+
+    approach for designing imidazolium-based ILs and pyrazolium-based ILs, aimed at
+    reducing
+
+    experimental burden and costs associated with catalyst development.
+
+
+    Received 6th May 2025,
+
+    Accepted 30th June 2025
+
+    DOI: 10.1039/D4ce02025X
+
+    rsc.ll/reaction-engineering
+
+
+    # 1. Introduction
+
+
+    In the past few decades the use of CO2 as a renewable resource
+
+    h received widespread attention from scientists. The CO2
+
+    cycloaddition reaction can convert CO2 into high-value cyclic
+
+    carbonates with 100% atom economy, making it one of
+
+    tmost promising CO2 conversion strategies. Various
+
+    carbamates used as solvents, electrolytes and organic
+
+    synthesis have numerous applications. However, the
+
+    thermodynamic stability and kinetic efficiency ofncatalysts are required to ensure
+    the completion of
+
+    cycloaddition reactions under mild conditions.
+
+    homogeneous and heterogeneous catalysts have been
+
+
+    reported, including metal-organic frameworks (MoFs), metal
+
+    complex, ionic liquids (ILS),†
+
+    Among these ILs, we have shown exceptional
+
+    low vapor pressure, excellent thermal stability, and
+
+    wide temperature range, making them ideal catalysts
+
+    for CO2 cycloaddition reactions. Imidazolium-
+
+    bases are the most common employed ILs-based
+
+    catalysts to facilitate functionality and affinity
+
+    CO2 molecules. For instance, Wang et.
+
+    shesized poly cyclic carbonate
+
+    92% at the temperature of 120 °C,
+
+    CO2 pressure of 1.5 MPa, catalytic yield of 0.5 mol%,
+
+    reaction time of 2.0 h. Ye et al.⁸ synthesized
+
+    series of imidazolium-based ILs with dual functionality
+
+    hndryl and amine groups, which showed high catalytic
+
+    activity at the reaction temperature of 90 °C and
+
+    time of 12.5 h. Zhang et al.⁹ synthesized, which
+
+    share a high structural similarity with imidazolium-based
+
+    ILS, also demonstrate excellent catalytic potential. For
+
+    instance, Zhang et al.¹¹ synthesized a carboxylmethyl
+
+    pyrazolium ILs (CMPEbz), achieving a yield of over 90
+
+    at 70 °C and an initial CO2 pressure, of 1.0 MPa.
+
+
+    > † Key Laboratory for Protection and Safety Storage of Light Material
+
+    Materials, Henan University, Kaifeng, 450004
+
+    ¹ lychen@henan.edu.cn, yyuan.li@henan.edu.cn, yuanabc
+
+    ² Henan Province Engineering Research Center of Green Carbon Technology
+
+    for Magnesium Alloys, Henan University, Kaifeng, 450004
+
+    ³ College of Chemistry and Molecular Sciences, Henan University, Kaifeng, Henan
+
+    450004
+
+    ⁴ Electronic supplementary information (ESI) available. See DOI: https://doi.org/
+
+    10.1039/D4ce02025X
+
+
+    2334 | React. Chem. Eng., 2025, 10, 2334–2344
+
+
+    This journal is The Royal Society of Chemistry 2025'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Reaction Chemistry & Engineering
+
+
+    Despite the high yield of CO2 cycloaddition reactions catalyzed by imidazolium-based
+    and pyrazolium-based ILs, their application is hindered by stringent reaction
+    conditions. Then there is an increasing demand for new catalysts that can function
+    under mild conditions. Designing new imidazolium-based and pyrazolium-based ILs
+    through theoretical calculations is expensive and challenging to maintain high
+    success rates. The application of machine learning (ML) to predict such reactions
+    has gained interest recently.$^{12}$ ML is based on the induction from historical
+    data, cost-effective and high-throughput prediction of chemical properties.${13}$
+    Researchers have made many explorations in predicting properties of ILs. For instance,
+    Huang et al.${14}$ established the universal-chemical functional activity coefficient
+    (UNIFAC) method to improve the solubility prediction of liquid-water mixtures,
+    with $R^2$ of 0.99. Liu et al.${15}$ established a SVR-based model to predict
+    the solubility of CO2 in ILs, achieving $R^2$ exceeding 0.98.
+
+
+    However, research on the reactivity of ILs using ML methods remains scarce compared
+    to physical properties of ILs. Notably, Li et al.${16}$ explored this area by
+    establishing a ML model to predict the yield of cycloaddition reactions catalyzed
+    by ILs. The best ML model achieved $R^2$ of 0.80 on a subset of imidazolium-based
+    ILs, but ML showed lower performance on others. Thus, further exploration is needed
+    in the study of ML for the reactivity of CO2 cycloaddition reactions catalyzed
+    by ILs. Due to the limitation in computational power, traditional algorithms struggle
+    to improve model accuracy.${17}$ In contrast, deep learning algorithms exhibit
+    strong fitting capabilities, demonstrating superior performance in prediction.$^{18,19}$
+    For instance, Gong et al.${20}$ employed dimensional molecular structure graphs
+    to establish a deep learning model capable of predicting selectivity.
+
+
+    This achieved outstanding results with minimal labeled data across three different
+    chemical datasets, showing superior prediction ability compared to traditional
+    algorithms.
+
+
+    The main aim of this work is to develop a deep learning model that could predict
+    the yield of CO2 cycloaddition reactions. Using ML, we aim to design efficient
+    imidazolium-based and pyrazolium-based ILs under mild conditions. The research
+    scheme is illustrated by hybrid fingerprint to describe the structural features
+    of molecules in CO2 cycloaddition reactions. Using SHAP analysis, the model is
+    interpreted to explore the effects on yield. By basing on a molecular chemical
+    scheme, hundreds of ILs are generated. Finally, imidazolium-based ILs are generated
+    using a screened-two screening strategy yielding prediction and DFT calculations
+    of energy barrier. This work presents much contributing to advancing sustainable
+    chemical processes and CO2 utilization technologies.
+
+
+    # ## 2. Method
+
+
+    # ### 2.1. Dataset
+
+
+    Due to its excellent potential, we choose imidazolium-based ILs and pyrazolium-based
+    ILs as our research subject. From literature spanning 2001 to 2024, the 531 data
+    points on CO2 cycloaddition reactions catalyzed by imidazolium-based ILs and pyrazolium-based
+    ILs are compiled.$^{9,31-32}$ The dataset consists of 27 types of imidazolium-based
+    cations, 25 types of pyrazolium-based cations, 13 types of anions and 14 types
+    of reactants with details shown in Fig. S1–S6. The reactants in the dataset are
+    all episodes with no structure or conditions added. The key experimental variables
+    in the dataset is illustrated in Fig. 2. As shown in Fig. 2a, the prediction of
+    imidazolium-based ILs in the dataset is higher than that of pyrazolium-
+
+
+    ![](img/c457f7302bebd27c403522434e1f8aac_1_0.png)
+
+
+    Fig. 1 The workflow of the deep learning based on hybrid molecular fingerprint.
+
+
+    Molecular features
+
+
+    This journal is © The Royal Society of Chemistry 2025 React. Chem. Eng. 2025,
+    13: 2334–2344 | 2335'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Paper
+
+
+    # Reaction Chemistry & Engineering
+
+
+    # (a) Classification
+
+
+    # (b) Yield (%)
+
+
+    # (c) Time (h)
+
+
+    ![](img/c457f7302bebd27c403522434e1f8aac_2_0.png)
+
+
+    # (d) Temperature (°)
+
+
+    # (e) Pressure (MPa)
+
+
+    # (f) Amount (mol%)
+
+
+    ![](img/c457f7302bebd27c403522434e1f8aac_2_1.png)
+
+
+    Fig. 2 The distribution of the main parameters in the data: (a) types of IL catalysts,
+    (b) yield, (c) reaction time for yield above 0.80, (d) reaction temperature for
+    yield above 0.80, (e) reaction pressure for yield above 0.80, (f) catalyst amount
+    for yield above 0.80.
+
+
+    basedics, indicating that imidazolium-based ILs are more commonly used for catalyzing
+    CO2 cycloaddition reactions and that 55% of the cycloaddition reactions with yield
+    higher than 0.8, exhibiting the excellent abilities of imidazolium-based and pyrazolium-based
+    ILs in cycloaddition reactions.
+
+
+    chemical structure. ECFP is circular fingerprint where the environment and connectivity
+    of each atom within a given radius is analyzed, totaling 2048 features. ECFP is
+    a molecular fingerprint that does not differentiate between functional groups,
+    which contains 2048 features. Before building models, all molecular fingerprints
+    undergo a selection process (with details in ESI) and experimental features are
+    normalized.
+
+
+    Subsequently reactions with yields greater than 0.8 and influence the distribution
+    of their experimental parameters. In Fig. 2c, the reaction time for yields exceeding
+    100 °C, CO2 pressures less than 4 h, 1 MPa, and catalyst amount greater than 1%,
+    indicates that stringent reaction conditions are still required to ensure efficient
+    catalysis of ILs in cycloaddition reactions, especially the reaction temperature
+    and pressure. Therefore, to reduce performance costs and enhance the practice
+    of cycloaddition reactions, it is important to design ILs that can efficiently
+    cycloaddition reactions under milder conditions.
+
+
+    # 2.2. Deep learning
+
+
+    In this study the deep learning of fully connected neural network (DNN) is employed
+    because it offers a flexible minimal time and adjustable architecture, which is
+    easy to interpret by proxy models. DNN models typically consist of input, hidden,
+    and output layers. The input vectors comprise experimental parameters and features,
+    hyperparameters such as the number of hidden layers are selected via grid search
+    methods, detailed in Table S1 and Fig.-S7. Within the hidden layers, the rectified
+    linear (ReLU) serves as the activation function.
+
+
+    Given that this focuses on predicting yield, from 0 to 1, ReLU in the output layer
+    may lead to negative values. To address this, a new function called Rus, based
+    on ReLU, is developed for the output layer. Eqn (1) and (2) outline the formulas
+    for ReLU and Rus, with their respective functions grouped in Fig. 3.
+
+
+    Adam is employed to optimize all learning parameters, minimizing the mean squared
+    errors between model outputs and training paths. The learning rate for optimization
+    ranges from 0.004 to 0.007, with a maximum of 800 epochs. Training includes the
+    certain prediction accuracy
+
+
+    MACCS defines features based on the presence of specific structures in molecules,
+    comprising a total of 166 units, with each feature contributing to a particular
+
+
+    ```
+
+    ReLU(x) = { x, x > 0; 0, x ≤ 0 }
+
+    ```
+
+
+    2336 | React. Chem. Eng. 2025, 10: 2334-2344
+
+
+    This journal is © The Royal Society of Chemistry 2025'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Reaction Chemistry & Engineering
+
+
+    # Paper
+
+
+    ![](img/c457f7302bebd27c403522434e1f8aac_3_0.png)
+
+
+    Fig. 3 Activation functions: (a) ReLU, (b) custom activation function [Cus_ReLU].
+
+
+    MSE for each model are calculated, and the best prediction model is chosen on
+    these evaluation results.
+
+
+    # 2.5 SHAP analysis
+
+
+    ```
+
+    Cus_ReLU: f(x) = \begin{cases} 0, & x < 0 \ 1, & 0 \le x \le 2 \ 0.999, & x >
+    1 \end{cases}
+
+    ```
+
+
+    SHapley exPlanations (SHAP) is a Python package designed to explain the performance
+    of machine learning models. Derived from cooperative game theory, SHAP treats
+    all features as contributors, establishing an additive explanation model. Unlike
+    traditional "feature importance" methods which only explain the importance of
+    features, SHAP can also explain how features influence prediction accuracy. For
+    each predicted sample, the model generates a prediction value, and the SHAP value
+    represents the numerical contribution of each feature in the prediction. The ith
+    sample is denoted as $x_i$, with $y_i$ as the predicted value of this sample.
+    For the entire model, the mean of the target variable across all samples, $Y$,
+    adhere to the following equation:
+
+
+    # 2.4. Model evaluation
+
+
+    In this study, we utilize input parameters such as temperature (T), pressure,
+    reaction time, and fingerprints. The output parameter is the yield of CO2 cycloaddition
+    reaction sets. The dataset is divided into a training set and a test set. The
+    training set contains 481 data points, while the test set contains the remaining
+    50 points. Following training models on the set, the model predicts for both training
+    and test set. Error is calculated between predicted and original data to yield
+    model accuracy. To assess the ML model'' performance in CO2 cycloaddition reaction,
+    statistical parameters including $R^2$ and mean squared error (MSE) are used as
+    evaluation criteria.
+
+
+    ```
+
+    $y_i = \phi_0 + \phi_1(x_i) + \phi_2(x_i) + ... + \phi_n(x_i)$
+
+    ```
+
+
+    where $\phi_i(x_i)$ denotes the SHAP value of the ith feature of the final predicted
+    value $y_i$. If $\phi_i(x_i) > 0$, it indicates that this feature enhances the
+    prediction, showing a positive effect. Conversely, if $\phi_i(x_i) < 0$, it shows
+    that the feature decreases the prediction, manifesting a negative effect. The
+    [SHAP value] for each feature can reflect the overall importance of that feature
+    as shown in the following equation:
+
+
+    ```
+
+    $R^2 = 1 - \frac{\sum_{i=1}^{N}(y_i - \hat{y}_i)^2}{\sum_{i=1}^{N}(y_i - \bar{y})^2}$
+
+    ```
+
+
+    ```
+
+    $MSE = \frac{\sum_{i=1}^{N}(y_i - \hat{y}_i)^2}{N_p}$
+
+    ```
+
+
+    ```
+
+    $Y_j = \frac{\sum_{i=1}^{N}|\phi_j(x_i)|}{N_f}$
+
+    ```
+
+
+    In formula (3) and (4), $y_i$ is the actual output (experimental property), $\hat{y}_i$
+    is the predicted output of the model, and $N_p$ is the number of data points in
+    the analyzed set. MSE is always greater than 0, measuring the average squared
+    difference between predicted and actual values. The closer MSE is 0, the better
+    the model''s performance, indicating closeness to actual values. $R^2$ ranges
+    from 0 to 1. It represents the proportion of the variance in the dependent variable
+    that is predictable from the independent variables. A value closer to 1 indicates
+    better model performance in explaining the variability in the data. $R^2$ and
+
+
+    # 2.6 DFT analysis
+
+
+    DFT is employed to calculate the energy barrier of the $CO_2$ cycloaddition reaction
+    with polychohydration catalysts by ILs.
+
+
+    This journal is © The Royal Society of Chemistry 2025
+
+
+    React. Chem. Eng. 2025, 10, 2334–2344 | 2337'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Paper
+
+
+    # View Article Online
+
+
+    # Reaction Engineering & Chemistry
+
+
+    Since the B3PW91 method has been proved to work well the computation of ionic
+    liquid catalyzed CO2 conversion,^{24,55} the geometries of reactants, products,
+    intermediates states are estimated at the B3PW91/6-31G(d,p),16. At the same level,
+    the vibration frequencies of all stationary points are calculated to prove whether
+    each structure is a stable point (without frequency) or a transition state (only
+    imaginary frequency). Based on the transition state, we obtained the intrinsic
+    reaction coordinate to prove that the optimized transition state connects the
+    reactants and products. Based on these optimized states, the energy is refined
+    using the polarized charge density model (PCM),38. M06/6-31G(d,p),27 with the
+    solvent effect. All the DFT calculations are performed with the Gaussian 09.
+
+
+    ![](img/c457f7302bebd27c403522434e1f8aac_4_0.png)
+
+
+    # 3. Discussion and conclusion
+
+
+    # 3.1. Model performance
+
+
+    The descriptors MACCS, ECFP and FCF are denoted as M, E and F, respectively. Based
+    on feature, machine learning models for predicting adsorption using five traditional
+    algorithms: random forest (RT), gradient boosting decision tree (GBRT), extreme
+    support vector machine (SVM). The performance of these models is evaluated via
+    grid search methods, in Table S2. As shown in Fig.a, the R² values of the features
+    are relatively low, with the GBM algorithm achieving the highest R². In Fig.b,
+    we compare the GBR model with the DNN model based on M. The results indicate that
+    the DNN achieved an R² of 0.82, significantly higher than the R² of GBR. This
+    demonstrates the superior prediction capabilities of deep learning algorithms.
+    Subsequently, DNN models are established using E and F as features respectively.
+
+
+    ![](img/c457f7302bebd27c403522434e1f8aac_4_1.png)
+
+
+    Before constructing the model, the Pearson correlation between the features M,
+    E and F is calculated. As shown in Fig.4c, the lowest correlation is observed
+    between M and E, suggesting that the combination of M and E may have a complementary
+    effect, leading to higher predictive accuracy of hybrid fingerprint model.
+
+
+    As illustrated in Fig. 4d, taking the hybrid fingerprint model named ME-DNN as
+    an example, we is established to connect different types of molecular fingerprints.
+    All types of fingerprints are trained simultaneously, they remain independent
+    of being in different neural layers, which is advantageous for learning to organize
+    feature information and weights. Among the four types of hybrid features, the
+    ME-DNN model achieved the highest R² of 0.85 and the lowest MSE of 0.007. Due
+    to the significantly increased dimensionality of the hybrid fingerprint, the predictive
+    accuracy is improved compared to models based on individual M, E and F fingerprints,
+    it is better than ME-DNN.
+
+
+    The poor performance of traditional algorithms and the superior results of DNNs
+    can be attributed to the high diversity of ionic liquid cations (such as imidazolium
+    and pyridine-based) and the high-dimensionality of
+
+
+    2338 | React. Chem. Eng. 2025, 10, 2334-2344
+
+
+    This journal is © Royal Society of Chemistry 2025'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Reaction Chemistry & Engineering
+
+
+    molecular fingerprints. Traditional algorithms struggle with overfitting in such
+    contexts. DNNs effectively handle these challenges through multi-layered feature
+    extraction and weighting. The input layers for different fingerprints enhance
+    model flexibility and adaptability.
+
+
+    activation and stabilization of states. CO2 directly impacts the connexion of
+    reactive species, potentially reaction kinetics and thermodynamics. These factors
+    synergistically influence the efficiency and effect of CO2 coactivation.
+
+
+    For further understanding the effect of reaction time and amount, partial dependencies
+    are separately represented for reaction time and catalyst amount. Fig. 5 indicates
+    that the SHAP value is positive only when the time exceeds 6.7 months, showing
+    that catalyst amount greater than 0.7 is necessary to utilize the catalyst effect
+    of Ita in the CO2 coactivation.
+
+
+    # 3.2. Model interpretation
+
+
+    After constructing the model, the SHAP method is used to interpret the ME-NN model.
+    As depicted in Fig. 5, the top ten features in the ME-NN model, reaction time,
+    temperature, catalyst amount, and CO2 pressure exhibit the highest influence on
+    yield, characterized by significant mean absolute SHAP values across features.
+    In this plot, represent feature red colors indicate smaller values. It can be
+    observed that for reaction time, temperature, catalyst amount, and CO2 pressure,
+    feature values generally correlate with larger SHAP values. This pattern indicates
+    that longer time, higher temperatures, increased catalyst amount, and higher pressures
+    contribute to yields. Reaction time allows sufficient molecules interact with
+    the catalyst and CO2. Temperature affects molecular energy and reaction rates
+    and equilibrium. The amount of ionic liquid catalyst determines the availability
+    of acid sites for sites
+
+
+    Fig. 5 demonstrates that the SHAP value is positive only when the time is less
+    than 6 hours, suggesting that reaction time at least 6 hours is required for complete
+    reaction in the CO2 reactiondo. However, because depicted in Fig. 5, most reactions
+    with high values are at short time. If researchers need to shorten the reaction
+    time, increasing temperature and pressure also elevates the costs of industrial
+    application. Therefore, there is a need to design II catalysts to ensure efficient
+    catalysis, as much as possible to achieve that the reaction time, temperature,
+    CO2 pressure, and catalyst amount are at low standards.
+
+
+    # 3.3. Novel molecules screening
+
+
+    In this study, a custom fragmentation and synthesis approach was developed for
+    Ita to address the limitations of
+
+
+    ![](img/c457f7302bebd27c403522434e1f8aac_5_0.png)
+
+
+    Fig. 5 Model interpretation: (a) top 10 feature amount based on mean ({SHAP value}),
+    (b) SHAP values for 250 selected samples, (c) the effect of catalyst amount on
+    yield, (d) the effect of reaction time on yield.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Paper
+
+
+    # Reaction Chemistry & Engineering
+
+
+    algorithms as MacFrag, BRCS, and Recap, which are designed for large organic molecules.
+    These traditional algorithms do not align with the simpler structures of ILs,
+    which consist of smaller units like cations and anions. A common approach using
+    SMILES strings was developed to provide control over the fragmentation and synthesis.
+    This approach leverages the flexibility of SMILES strings to dissect cations into
+    chains and rings, and then reconstruct them to generate new structures.
+
+
+    ≤1 mol% using catalysts at ≤1 mol% for 13% and 39%. The goal of this work is to
+    screen out ILs that ensure efficient catalysis under reaction parameters are relatively
+    low. We set the reaction conditions as: 4 h, 90 °C, 0.1 MPa, and 0.8 mol% catalyst,
+    for predicting the catalytic performance of the nears. We found that 19 imidazolium-based
+    ILs have predicted yields no lower than 0.90. However, none of pyrrolium-based
+    ILs have predicted yields significantly. Subsequently, we optimized the reaction
+    conditions to 7 h, 90 °C, 0.1 MPa, and 1 mol%.
+
+
+    The training dataset employed only imidazolium-based-pyrrolium-based ILs, where
+    the feature of side chains consists of the cation and the ring structure information
+    are based on the inherent properties of the catalyst. Thus, we split the ILs into
+    two chains, each referred to as the Z-chain and E-chain, with a fragment from
+    anion structure, as illustrated in Fig. 6. Consequently we observe three fragments
+    from the ILs: the Z-chain, the E-chain, and the anion, laying the groundwork for
+    subsequent molecular generation. Subsequently, cross-crossing the Z-chain and
+    E-chain, we obtain the new chain, which is then combined to generate a new set
+    of ILs. Removing the old ILs in the original dataset results in total of 887 imidazolium-based
+    and 538 pyrrolium-based ILs.
+
+
+    Using the NN-model, the yields of CO2 cycloaddition reaction catalyzed by these
+    ILs are predicted to capture their catalytic capacities. Epichlorohyd is a simple
+    and common reactant in CO2 cycloaddition reactions (acting for 19% of the dataset),
+    hence it is designated as the reactant for this prediction. As depicted in Fig.
+    2, cycloaddition with yield exceeding 4% at ≤70 °C, while reactions at temperatures
+    ≤100 °C produce yields 14%. Additionally, reactions carried out under pressures
+
+
+    # 3.4. DFT calculations
+
+
+    DFT calculations are further conducted to assess the catalytic activity of 19
+    imidazolium-based ILs. As shown in Fig. 14,1, the mechanism of the CO2 cycloaddition
+    reaction can be divided into three steps: firstly, the carbon atom with the smallest
+    steric hindrance to induce the ring opening; secondly, CO2 is inserted into the
+    open-loop intermediate as an electrophilic reactant; finally, the intermediate
+    undergoes a nucleophilic attack along the leaving of the ILs and producing carbonates.⁵³
+
+
+    Among them, the first set of epoxy ring opening is the rate-determining step of
+    the reaction. Thus, only the energy
+
+
+    ![](img/c457f7302bebd27c403522434e1f8aac_6_0.png)
+
+
+    Fig. 6 Process for generating molecular structures of new IL catalysts.
+
+
+    2340 | React. Chem. Eng., 2025, 10, 2334-2344
+
+
+    This journal is | The Royal Society of Chemistry 2025'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Reaction Chemistry & Engineering
+
+
+    Paper
+
+
+    ![](img/c457f7302bebd27c403522434e1f8aac_7_0.png)
+
+
+    Fig. 7 The structures of 14 ILs with energy barriers 23.0 kcal mol⁻¹.
+
+
+    barriers of the rate-determined step is calculated to evaluate the catalytic activity
+    of 19 ILs. Surprisingly, the calculation indicates that only 3 ILs of the 19 ILs
+    have energy barriers more than 24.0 kcal mol⁻¹. Additionally there are 14 ILs
+    with energy below 23.0 kcal mol⁻¹, which suggests that these 14 ILs are effective
+    catalysts under mild conditions. The energy barriers and structures of these 14
+    ILs are shown in Fig. 7 and the cations such as -NH₂-COOH These functional groups
+    can stabilize intermediates in the reaction process by forming hydrogen bonds,
+    and can activate epoxy compounds as well as CO₂⁻, leading to high catalytic activity.
+    In addition, the structures of other 5 ILs are shown in Fig. S15 and their energy
+    barriers are shown in Table S.4.
+
+
+    capable of reaction yielding barriers based on the data, achieving an R² of 0.85.
+    Subsequently, SHAP method employed to interpret the model, providing deeper understanding
+    of the relationship between features and prediction outcomes. In addition, splitting
+    the features into four main segments reveals that 887 imidazolium-based and 538
+    pyrazolium-based ILs are generated via molecular fragment clustering.
+
+
+    Then the deep learning model is used to screen out 19 imidazolium-based ILs with
+    predicted yields exceeding 0.9 and 12 pyrazolium-based ILs with predicted yields
+    surpassing 0.80 under reaction conditions. Following further optimization of reaction
+    conditions, the cationic reaction conditions corresponding to the 19 imidazolium-based
+    ILs with energy barriers lower than 23.0 kcal mol¹ are finalized. As the results
+    suggest, 14 out of 19 ILs are with energy barriers below 23.0 kcal mol¹, demonstrating
+    their potential for catalysis in cycloaddition reactions with epichlorohydrin
+    under mild conditions. This work presents a novel machine
+
+
+    # 4. Conclusions
+
+
+    In this study, assembling 531 CO₂ cycloaddition reactions by ILs is built. By
+    utilizing fingerprint fingerprints, we develop a deep learning model
+
+
+    ![](img/c457f7302bebd27c403522434e1f8aac_7_1.png)
+
+
+    Fig. 8 The energy barriers of 14 ILs with energy barriers below 23.0 kcal mol⁻¹.
+
+
+    This journal is © The Royal Society of Chemistry 2025
+
+
+    React. Chem. Eng. 2025, 10: 2334–2344 | 2341'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Paper
+
+
+    # Reaction Chemistry & Engineering
+
+
+    learning from imidazolium-based pyrazoliumbased IX catalyst design, at reducing
+    the experimental development and burden costs associated with catalyst development.
+
+
+    7. Du, Z-Y, Huang, Y., Xuan, X. Y., Yu, G., Z. Hu and C-R. Zhang, ionic liquids
+    bonded in mesoporous hap as catalysts for CO2 fixation, Chem. Eng. Gen., 2022,
+    481, 148129.
+
+
+    # Data availability
+
+
+    8. Hu, Y., Ye, P. and Jun, S. Experimental and theoretical study of cationic imidazolium
+    ionic liquids for catalytic fixation of CO2-ep, J Util., 2022, 69, 148128.
+
+
+    The data that supports the findings of this study are available from the corresponding
+    author upon request.
+
+
+    # Author contributions
+
+
+    9. Wang, X., Liu, L., Mao, Y., Li, T., Ren, L. and Wang, J. synergistic effect
+    of co-operative hydrogen atoms in protic carbene ionic liquids to promote fixation
+    of CO2 under different conditions, J. Mol., 2019, 296, 14818.
+
+
+    YW: data curation, formal analysis, writing-original draft: XX; visualization,
+    supervision, writing – editing; LW: conceptualization, project administration;
+    JW: funding.
+
+
+    10. Su, Y. and X. Hao, Synthesis of carbene cycle from CO2 and using bifunctional
+    imidazolium ionic liquid under mild conditions, Perl, 2019, 251, 233–241.
+
+
+    # Conflicts of interest
+
+
+    11. Zhang, J., Xu, Y., Zhang, F., Li, T., and Wang, J. Synergistic effect of carboxymethyl
+    group and methyl substitution in ionic liquids to promote the conversion of CO2
+    under condition, J Util., 2019, 34, 422–429.
+
+
+    The authors declare no conflict of interest.
+
+
+    # Acknowledgements
+
+
+    12. Korner, A., Bauer, C., C, S. and P. N. Orby, Organic reactivity from machine
+    to machine learning, Nat. Rev. Chem., 2021, 5, 240–255.
+
+
+    This work was supported by the National Natural Science Foundation of China (21775064),
+    Natural Science Foundation of Hunan Province (2320042610, 23200420368), and the
+    Excellent Experts Project of Natural Science.
+
+
+    13. Li, C. L., Li, J., Zhang, X. G., and Wang, H. High-throughput machine learning
+    for performance-relationship learning in organic synthesis, Chem. J., 2022, 40,
+    2106–2117.
+
+
+    # References
+
+
+    14. Huang, J., Deng and G. J. Viscosity of ionic liquids–water mixtures using
+    UNIFAC modeling with transferable machine learning, J. Mol. Lett., 2023, 383,
+    14829.
+
+
+    +   1. Li, Y, Gao, J., Liu, Z., Wang, P., Zheng, Z., Cheng, H., Yi, D. and B.
+    Huang, Synergistic effect between containing metal-organic frameworks and light
+    to enhance CO2 cycloaddition with epoxides, Chem. Eng. Gen., 2022, 7, 101–110.
+
+
+    +   2. M. A. Rasoul, P. Perscamona and I. F. Van Vleck, Applicability of organic
+    carbonate solvents for membrane performance, ACS Sustainable Chem. Eng., 2019,
+    7, 13774–13785.
+
+
+    +   3. Yan, Y., Chen, Z., Zhang, S., Bice, H. S., Wang, J., Kang, C., Hu, L.,
+    Zhang, Q., Wang, X. and Yang, D. A cyclic effect enables high-pressure-for lithium-ion
+    batteries, Energy Storage Mater., 2022, 45, 14–23.
+
+
+    +   15. Liu, X-Q., Bao, S., Duan, W. J. and R. I. Fahim, Solubility constants
+    of ionic liquids using ionic machine learning methods, J. Mol. Lett., 2023, 391,
+    148129.
+
+
+    +   4. A. J. Kamfisch, F. Pichiou and P. Perscamona, Cyclo fixation and cyclicaddition
+    into cyclic polymers: properties and applications, Chem. Eng. Gen., 2021, 26,
+    4046–4058.
+
+
+    +   16. Li, J., Dong, B., A. N., Zhang, Y., Li, L. and Wang, J. Synergistic machine
+    learning for the yield prediction of CO2 fixation catalyzed reaction by the ionic
+    liquids, Fuel, 2023, 335–343.
+
+
+    +   17. S. H. Huang, H. S. Palli, S. Wang, E. K. Andrews and H. Xin, Infusion
+    theory to develop a transferable-based neural network for organic reactivity prediction,
+    Nat. Math. Intell., 2022, 7–482.
+
+
+    +   18. C. Calallo and K. Wang, Illuminating enzyme design using deep learning,
+    Nat. Chem., 2023, 15, 749–750.
+
+
+    +   19. Y. Gong, Doe, X., G. J. and Y. Lu, DeepReac: deep active learning for
+    quantitative modeling of organic chemical reactions, Chem. Sci., 2022, 14, 14459–14462.
+
+
+    +   20. J. Peng and Y. Deng, Cyclocycladdition of carbon dioxide to produce carbonates
+    catalyzed by ionic liquids, New J. Chem., 2021, 55, 639–644.
+
+
+    +   6. L. S. Millani, I. S. Oliveira, P. A. D. Santos, A. K. S. Valdo, F. T. Martins,
+    D. Dangussu and R. P. Rocha, Catalytic fixation of carbon dioxide to cyclic esters
+    catalyzed by zinc(II) complex 1,2-disubstituted benzimidazole ligand, J. Chem.
+    Ital., 2021, 398, 245–249.
+
+
+    +   21. J. Sun, S.-Fujita, F. Zhao and M. Arais, Synthesis of carbonate from styrene
+    and carbon dioxide in the presence of zinc bromide and ionic liquid under different
+    conditions, Green Chem., 2004, 6, 63–76.
+
+
+    2342 - React. Chem. Eng. 2025, 10, 2334–2359
+
+
+    This journal is The Royal Society of Chemistry 2025'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Reaction Chemistry & Engineering
+
+
+    D-W. Park, N-Y, Mun-K, H. Kim, I. Kim and S-W. Park, Addition of carbon dioxide
+    to allyl ether using ionic liquids catalysts, Catal. Today, 2006, 115, 130-133.
+
+
+    J-Q. Wang, X-D. Yae,, F. Kim and L-N. He, Synthesis of cyclic carbonates from
+    carbon dioxide and epoxides catalyzed by silica-supported ionic liquids under
+    supercritical conditions, Catal. Commun., 2007, 16, 167-172.
+
+
+    E-H. Lee, J-Y. Ahn, M. Dharman, D-W. Park and I. Kim, Synthesis of cyclic carbonates
+    from carbon dioxide using ionic liquids as catalysts, Catal. Today, 2008, 131,
+    130-134.
+
+
+    J. Sun, W. Chen, F. Wang, Y. Zeng, M. Sheng and S. Zhang, Reusable and efficient
+    polymer-supported ionic catalyst for the synthesis of cyclic carbonates from carbon
+    dioxide and epoxide, Catal. Today, 2009, 148, 361-367.
+
+
+    X. Zheng, S. Liu, J. Zhang and J-P. Chen, Magnetic nanoparticle ionic liquid catalysts
+    for CO2 cyclization reactions, Green Chem., 2009, 11, 455-458.
+
+
+    F-W. Xu, D-Y. Liu, L-N. He and C-M. Mao, Natural amino acid based ionic liquids
+    for the synthesis of cyclic carbonates from carbon dioxide and epoxides under
+    solvent conditions, Lett. Org. Chem., 2010, 70, 73-78.
+
+
+    I-J. Yu, H-H, K-H and D-W. Park, Cyclization of carbon dioxide to allyl ether
+    using bulky ionic salt as a catalyst, Korea J. Green Chem., 2010, 27, 446-451.
+
+
+    J. Lee, Q-Q. Song, N-H. Lee, C-Lu, Z-S, Y-Han, X-Han, D-I Li and Q-C. Song, Preparation
+    of polymer-supported Lewis acid Fe(III) ionic liquid for the catalytic conversion
+    of carbon dioxide to cyclic carbonate, Tetrahydron, 2012, 68, 3835-3842.
+
+
+    J. Wang, J. Lee and J. Young, Efficient synthesis of cyclic carbonate from carbon
+    dioxide catalyzed by ionic-based main chain polyimidazolium salts, Green Chem.,
+    2014, 16, 4515-4519.
+
+
+    D-W. Lee, J-I, H-Lee, L-Shin, L-Xu, T-Bai, T-Min and A-Cha, Functionalized polymeric
+    ionic liquid catalysts for the synthesis of cyclic carbonate from epoxides and
+    carbon dioxide, Appl. Catal., 2014, 470, 183-188.
+
+
+    S. Liao, D. Su, C. Y. Wu and W. Hu, Protic ionic liquids: A highly efficient catalyst
+    for the synthesis of cyclic carbonate from carbon dioxide and epoxide, J. CO2
+    Util., 2014, 6, 1-16.
+
+
+    W. Zhang, Q. Wang, H. Wu, P. Wu and M. He, A highly ordered porous polymer imidazolium-based
+    ionic liquid efficient catalyst for cycloxidation of CO2
+
+
+    with epoxides to produce cyclic carbonate, Green Chem., 2014, 16, 4767-4774.
+
+
+    T. Zhang, Q. Gao, L. Bian, X. Wu, M. Yuan and H. Jing, Cyclization of carbon dioxide
+    catalyzed by Bronsted acid ionic liquids, Chin. Chem., 2015, 36, 408-413.
+
+
+    Y-L. Ma, H. Lu and L-X. Y. Wang, Highly efficient synthesis of cyclic carbonates
+    from carbon dioxide and epoxides by ionic liquid [[Zr(im)]], RSC Angew., 2015,
+    5, 2776-2781.
+
+
+    K. Jasiak, A. Siewniak, K. Koprzycka, A. Chrobok and S. Jang, Hydroagent ionic
+    liquids as an efficient catalyst for the synthesis of cyclic carbonates from carbon
+    dioxide and epoxides, J. Chem. Technol., 2016, 91, 2827-2833.
+
+
+    X. Jiang, Q. Fu, X. Hu and H. Jing, Ionic liquids functionalized polyethers as
+    bifunctional catalysts for cyclization of carbon dioxide to epoxide, J. CO2 Util.,
+    2016, 21, 255-260.
+
+
+    Y. M. Ma, T. Chen, J. Wang, J. Wu, Y. Liu, T. Chen, J. Wang and D. Jiangly, Polyimidazolium
+    ionic liquids as catalyst for efficient cyclization of CO2 with metal and solvent-free
+    conditions, Appl. Catal., 2017, 554, 267-275.
+
+
+    T. Wang, D. Zheng, J. Zhang, and J. Wang, Protionic ionic liquids as an efficient
+    catalyst for cyclization of CO2 in the atmosphere of metal and solvents, ACS Sustainable
+    Chem. Eng., 2017, 6, 33-40.
+
+
+    S. Jang, J. Jin, Y. Kim, J. Wang, E. Lee, J. B. Ru, S. Lee and H. S. Kim, Highly
+    active and non-catalytic systems for the cyclization of ethylene oxide and CO2,
+    Bool. Green Chem., 2018, 219-223.
+
+
+    Z. Zhang, H. Han, X. Yang, Z. Bao and R. Chen, Efficient synthesis of cyclic carbonates
+    from atmospheric CO2 using a positive charge loaded ionic liquid catalysts, ACS
+    Sustainable Chem. Eng., 2017, 3841-3848.
+
+
+    L. Li, J. Xu, Y. Wang, R. Y. J. F. Xia and G. Gao, Imidazolium organic ionic liquids:
+    Efficient catalysts for the cycloxidation of CO2 and epoxides under pressure conditions,
+    Metal. Catal., 2018, 446, 124-130.
+
+
+    W. Li, W. Cheng, X. Yang, S. Lu, D. Pang, Y. B. Li and S. Zhang, Synthesis of
+    cyclic carbonate by DRU- based acid ionic liquids, J. Chem. Phys., 2018, 296-298.
+
+
+    Y. Li, J. Chen, J. Zhang, F. Ban, T. Tang, R. Wang, and I. Wang and J. Zhang,
+    Insight on asylum-based ionic liquids for chemical synthesis of CO2 and epoxide
+    into propylene carbonate without organic solvent and metal, Ind. Eng. Chem. Res.,
+    2018, 57, 13342-13352.
+
+
+    S. Yue, Q. Song, S. Zhang, G. Deng and J. Li, Amino-functional ionic liquids as
+    efficient catalysts for the cycloxidation of
+
+
+    This journal is The Royal Society of Chemistry 2023
+
+
+    React. Chem. Eng. 2023, 15, 2334–2344 | 233'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Paper
+
+
+    # Reaction & Engineering
+
+
+    carbon dioxide yield cyclic carbonates: catalytic and kinetic investigation, *Aust.
+    J. Chem.*, 2018, *71*, 407–415.
+
+
+    51. N. Podrojková, A. Irnykh, E. Garcia, V. Sans and M. Zanatta, On the role of
+    oxidative carboxylation of multifunctional ionic liquids with carbon dioxide,
+    *Catal. Today*, 2023, *418*, 114128.
+
+
+    52. S. Zhong, T. Lian, L. Vi, Y. Liu, W. Cheng, V. Wang and Y. Li, Phosph-based
+    ionic liquids for CO2 chemical fixation: Improving stability and activity by asymmetric
+    steric hindrance, *Chem. Eng.*, 2023, *11*, 109883.
+
+
+    53. F. Oviedo, L. J. Ferres, T. Buonassi and K. T. Butler, Interpretable and explainable
+    machine learning for materials science and chemistry, *Act. Mater. Res.*, 2022,
+    *3*, 599–607.
+
+
+    54. D. Zheng, L. Wang, J. Jiang, F. Liu and J. Zhang, Effect of cluster of protic
+    pyrolium ionic liquids or epoxides on the cycloaddition of CO2, *J. Mol. Liq.*,
+    2019, *295*, 148129.
+
+
+    55. V. Hu, Y. Li, Z. Zhang, J. Li, S. Dong, J. Zhang and W. Li, Insight into the
+    cation-regulated mechanism for the hydration of propyl alcohols catalyzed by [Bu$^4$]
+    *J. Mol. Liq.*, 2022, *365*, 148129.
+
+
+    56. J. P. Perdew, K. Burke and Y. Wang, Generalized approximation for the exchange-correlation
+    hole of a many-electron system, *Phys. Rev. B: Condens. Mater. Phys.*, 1996, *54*,
+    16533.
+
+
+    57. Y. Zhao and D. G. Truhlar, The M06 suite of design functionals for main group
+    thermochemistry, photochemical kinetics, noncovalent interactions, excited states,
+    and testing of four M06- and 12 other functionals, *Chem. Acc.*, 2007, *120*,
+    215–241.
+
+
+    58. M. Cossi, V. Barone and B. T Bennucci, Jacpo, initio study of ionic solutions
+    by a polarizable dielectric model, *Chem. Phys. Lett.*, 1998, *286*, 253–260.
+
+
+    59. E Cances, B. Bennucci and J. Tomasi, A new integral equation formulation for
+    the polarizable continuum model: Theoretical background and applications to isotropic
+    and anisotropic dielectrics, *Chem. Phys.*, 1997, *107*, 3032–3041.
+
+
+    60. J. Hu, J. Ma, H. Liu, Q. Qian, C. Xie and B. Han, Dual-ionic liquid system:
+    an efficient catalyst for chemical fixation of CO2 under mild conditions, *Green
+    Chem.*, 2018, *2950–2954.'
+  merge: -1
+  img_proc: true
