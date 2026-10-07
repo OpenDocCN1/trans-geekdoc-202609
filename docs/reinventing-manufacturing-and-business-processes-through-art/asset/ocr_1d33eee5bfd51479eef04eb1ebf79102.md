@@ -1,0 +1,17 @@
+# AI and Business Sustainability
+
+# 155
+
+with large amounts of unstructured data. AI is already playing a big role in our lives, and it will render some job obsolete, it is also set to create high-value opportunities for those who are knowledgeable. AI can help transcend the barriers of language, time and geographical distance to deliver more creative and innovative solutions for smarter businesses.
+
+Machine learning is part of AI that deals with discovering patterns in huge amounts of data (Faggella, 2020). Using statistical processing, algorithms help discover features, patterns, trends or sequences in different types of data—text, numbers, images or even videos. Pinterest, Facebook, Twitter and Google are some of the famous organizations that have used machine learning in various capacities. It has been extensively employed in image recognition, speech recognition, medical diagnosis, buying and selling of financial assets to leverage price differences in different markets, and in many more areas where analyses and predictions are required to be made on the basis of a multitude of variables (Gerrouij, 2020).
+
+One subset of machine learning that has people sitting up and taking notice different sectors is deep learning. Deep learning is based on the human brain's neural networks function (Goodfellow et al., 2016). This comes very close to imitating human outputs in operations such as predictions and classifications. Automated translations into multiple languages and autonomous or self-driving vehicles are example of deep learning. Other real-world applications of the technology include computer vision in gaming, news aggregation based on user preferences, language identification and, bot training (Vazirini, 2018).
+
+There are several ways in which AI and its subsets are transforming human life as Industry 4.0. While there are definitely going to be impacts on the financial aspects of businesses because more pressing are the probable implications on the other sustainability aspects such as the environmental as well as the societal pillars.
+
+# 9.2.2 AI AND BUSINESS SUSTAINABILITY
+
+Going by the United Nations' Brundtland Report released in 1987 (Britannica, 2021), sustainable development refers to the fulfilling of the needs of the current without jeopardizing the ability of future generations to fulfill their needs. This is based on three pillars of environmental, economic and social equity (Purvis et al., 2019). Environmental stewardship refers to responsible utilization of the Earth's resources. The emphasis here is on creating a circular economy whereby the output of one process is used as the input for another, without any generation of waste. Economic sustainability deals with the generation of profits in such a way that environmental conservation and social justice is maintained. Social equity refers to
+
+Business sustainability is a general term to denote the long-term actions and strategies that organizations are focusing on that go beyond mere generation of profits in wanting to create a meaningful impact on society that will help them stay relevant for a long time (Bansal & DesJardine, 2014; Sharma et al., 2019). It is now looked at as a source of competitive advantage, that will help organizations attract new investors, retain their employees and build a good corporate

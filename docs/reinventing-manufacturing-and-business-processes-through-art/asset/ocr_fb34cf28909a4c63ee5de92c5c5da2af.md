@@ -1,0 +1,17 @@
+# Reinventing Processes Through AI
+
+Deep learning models build by MIT and Jameel Clinic in MIT's Computer Science and Artificial Intelligence Laboratory CSAIL predict cancer risk using mammograms. The model “Mirai” trained over 200,000 examples. Mirai has three modeling phases. First, risk modeling assessing risk and determines preventive measures. Second, it includes non-image risk factors like hormonal factors and age. Third, it uses an adversarial scheme that learns from mammograms. The MYCIN system developed for medical computer-based medical consultation uses a knowledge base and artificial intelligence (Shortlife, 2012).
+
+# 3.1.1 OVERVIEW OF AI
+
+Artificial intelligence is a technique implemented in a machine or software that makes it intelligent enough that it can work as human experts. Medical science is a field of precision, accuracy and knowledge. We can say an intelligent system having knowledge of medical science will definitely change the ways of diagnosis and explore more possibilities. Nowadays, drug discoveries and robotic assistance in high-risk surgery are using artificial intelligence. There are number of other domains in the medical and health sector where intelligent technologies are being used to get early and efficient results.
+
+The “artificial intelligence” was coined by John McCarthy at the Dartmouth Summer Research Project on Artificial Intelligence in 1955 (McCarthy et al., 2006), but the process of making intelligent system and developing mathematical models was introduced before that. McCulloch and Pitts introduced a concept and neural network in 1942 that mimics the ways of biological neurons. Evolution of AI is based on time frame including 1960 studies focused on knowledge representation and natural language, genetic algorithms in 1980 and the 1990 neural network implementation on complex problems.
+
+Artificial intelligence is a superset under which machine learning and neural network techniques works. Machine learning is a subfield of artificial intelligence that is widely used and implemented for solving complex problems; at same time, it needs tremendous amounts of data to train the machine before test and use. Following are the type of machine learning models that are used for solving different types of problems.
+
++   1. Supervised learning is a type of machine learning and uses training data to train the machine and find correlation between input and output in training phase. This method is termed as supervised because it perform training and testing of the data to maintain correct correction. Classification shown in Figure 3.1 and regression are the methods which fall under supervised learning.
+
++   2. Unsupervised learning is a type of machine learning method with its aim being to finding patterns from unlabeled data. own detection and clustering technique shown in Figure 3.2, and dimension reduction, are used under unsupervised learning.
+
++   3. Deep learning is based on deep neural networks. A neural network having a number of hidden layers to train the system, and input and output layers for implementation, is called a deep neural network.

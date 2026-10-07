@@ -1,0 +1,15 @@
+# Preface
+
+The scope of artificial intelligence (AI) in business transformation is constantly growing, and there are no signs of it coming to halt anytime soon. At some point in time soon, any organization failing to capitalize on AI might not be able to stay relevant or competitive in the market. In business, artificial intelligence has already changed a wide range of uses. In fact, most of us interact with artificial intelligence in some form or another on a daily basis. From the mundane to the breathtaking, artificial intelligence is already disrupting virtually every business process in every industry. The future is definitely gravitating toward automation. Artificial intelligence will be the driving force behind eliminating the human error factor from business operations. Extensive complex datasets are already analyzed within a matter of minutes, and useful insights have been churned out more easily. AI has already changed the way we do business, and it is going to accelerate operations in more innovative ways that benefit entrepreneurs in the long run. As artificial intelligence technologies proliferate, they are becoming an imperative for businesses that want to maintain a competitive edge. This technology provides significant development opportunities that many businesses and companies have been able to grab. Many businesses are disrupting their industries with applications of AI that not only bring on change but also in different types of organizational practices.
+
+In this book, we will look at how artificial intelligence is beneficial to businesses. This book offers a practical guide to AI techniques that are used in business. The book does not focus on AI models and algorithms, but instead provides an overview of the most popular and frequently used models and techniques in business. This allows the book to easily explain AI paradigms and concepts for business students and executives.
+
+The goal of this book is to focus on concrete tips and methods to help prototype, iterate and deploy models. This book is an anthology of 9 chapters that provide a rich repertoire of tools and techniques across business functions researched, tested and validated in various business settings. This book and its structure is focused on helping you create business decisions through applications of artificial intelligence. This book will also enable readers to learn how to use multi-functional area tools, techniques, innovative frameworks, practices and approaches for understanding, assessing and managing the strategic value drivers of business excellence. Overall, this book brings forth a new stream of thoughts by a few researchers in the domain of artificial intelligence. We wish and hope that this book will generate interest among only few academics, but also engineering and management practitioners.
+
+Happy reading!
+
+Geeta Rana
+Alex Khan
+Ravindra Sharma
+Alok Kumar Goel
+Ashok Kumar Dubey

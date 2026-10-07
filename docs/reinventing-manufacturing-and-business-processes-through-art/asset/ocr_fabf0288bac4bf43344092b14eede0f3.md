@@ -1,0 +1,16 @@
+# 12 Reinventing Processes Through AI
+
+achievement oriented and motivated by growth needs; therefore, their motivation to adopt GHRM practices is different (Wong et al., 2008). A study identified that Generation Y employees care of the planet and expect to be rewarded for adapting GHRM practices (Jain & D'lima, 2018). On the contrary, Generation Z is tech-savvy, empowered, more realistic and pre-matured; therefore, they can be motivated using technology-driven tools and techniques (Singh, 2014; Sharma et al., 2021). With diversified workforces, organizations have to use AI tools and techniques to adopt GHRM practices. Previous studies identified training, recruitment and rewards as also suggested important factors for implementing GHRM practices (Nobari et al., 2018). Thus, AI tools and techniques can be used for these processes to engage and motivate employees to voluntarily participate in green activities. Adoption of green HRM activities is beneficial for environmental performance and organizational sustainability (Obeidat et al., 2020).
+
+The present study unveils the role of AI technologies and applications in adopting green HRM practices. In detail, which study helps in identifying the relevant AI applications for the same. Previous studies also suggested that for effective implementation of e-HRM practices, use of AI, Big Data analytics and HR analytics should be taken into consideration (Poba-Nzau et al., 2020; Prakash et al., 2021). However, this study is based on review of literature, which can be explored further through case study and empirical research work. Future studies can be conducted to identify the role of AI in adopting GHRM practices and can also be researched through conceptual or empirical work. Future research work can also be done to identify the motivating factors at individual, group/team and organizational levels which employees are influenced to voluntarily pursue GHRM practices. Future studies can also take into account the relationship between GHRM practices and green innovation as a step toward attaining sustainability.
+
+# REFERENCES
+
++   Abaramadan, M. (2020). The effect of green HRM on employee green behaviors in education: The mediating mechanism of green work engagement. International Journal of Organizational Analysis. https://doi.org/10.1108/IOJA-05-2020-2190
+Aggrawal, S., & Sharma, B. (2015). Green HRM: Need of the hour. International Journal of Management and Social Science Research, 1(8), 63–70.
+Ahmad, S. (2015). Green human resource management: Policies and practices. Cogent Business & Management, 2(1), 103817. https://doi.org/10.1080/23311975.2015.1030817
+Afred, A. M., & Adam, R. F. (2009). Green management matters regardless. Academy of Management Practices, 23(3), 17–26.
+strom, N. (2014). Superintelligence: Paths, dangers, strategies. Oxford: Oxford University Press.
+undy, A. (2017). Review of preparing for the future of artificial intelligence. AI and Society, 32(2), 285–287. https://doi.org/10.1007/s40646-016-0685-0
+Cabral, C., & Dhar, R. L. (2019). Green competencies: Construct development and measurement validation. Journal of Cleaner Production, 235, 887–900.
+Cabral, C., & Dhar, R. L. (2020). Green competencies: Insights and recommendations from a systematic literature review. Benchmarking: An International Journal, 28(1), 66–105.
