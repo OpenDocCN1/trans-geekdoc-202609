@@ -1,0 +1,61 @@
+
+- Ritter, T., & Pedersen, C. (2020). B2B 企业的数字化能力与商业模式。《工业营销》，86, 180–190. DOI: 10.1016/j.indmar.2019.075
+- Sadowski, Jakub, Yolande Streengers, & Kennedy Jenner. (2021). 大数据母亲：智能家居中的重新计算与控制。《环境规划 A：经济与社会》。
+- Sætra, H. S. (2021). 用于评估和披露 AI 对 ESG 相关影响的框架。《可持续性》，13(15), 8503. DOI: 10.3390/su13158503
+- Safari, E., & Pekkari, M. (2022). 使用教学学习优化算法改进多层感知神经网络检测信用卡欺诈。《工业与系统工程期刊》，2, 159–177.
+- Safavian, S. R., & Landgrebe, D. (1991, May/June). 决策树分类器方法综述。《IEEE 人类与控制汇刊》，21(3), 660–674. DOI: 10.1109/21.97458
+- Saggi, M. K., & Jain, S. (2018). 面向大数据分析洞察价值创造的集成综述。《信息处理与管理》，54(5), 758–790. DOI: 10.1016/j.ipm.2018.01.010
+- Santosh, K. C., Antani, S., Guru, D. S., & Ney, N. (编.). (2019). **医学影像：人工智能、图像识别与机器学习技术**。CRC Press。 DOI: 10.1201/9780429029417
+- Sarkar, M., Ayon, E. H., Mia, M. T., Ray, K., Chowdhury, M. S., Ghosh, B. P., & Puja, A. (2023). **电子商务购买优化：用于定价和预测在线购买的全面机器学习框架**。*计算机科学与技术杂志*，5(4), 186–193. DOI: 10.32996/jcts.2023.5.4-19
+- Sarker, I. H. (2021). **机器学习：算法、现实应用与研究方向**。*SN 计算机科学*，2(3), 160–181. DOI: 10.1007/s4279-021-00592-x PMID: 33788771
+- Sishkumar, V. E., Cho, J., Subramanian, M., & Naren, O. S. (2023). **基于深度学习的无过拟合学习进行森林火和烟雾检测**。*火灾生态*，19(1), 1–17. DOI: 10.1186/s42408-022-00165-0
+- Sawant, N., Li, J., & Wang, J. Z. (2011). **利用社交行为和标记数据的自动语义解释**。*多媒体工具与应用*，5(1), 213–246. DOI: 10.1007/s11042-010-0650-8
+- Scholz, T. (2016). **平台合作社：治理企业共享经济**。纽约，纽约：Luxor 基金，436页。https://rosalux.nyc/wp-content/uploads/2020/11/RLS-NS-platformcooper.coop
+- Sendari, S., Ilham, A. E., Lestari, D. C., & Hariyati, H. P. (2020). **利用朴素贝斯分类器用于表情符号情感分类的分析**。*知识工程与数据科学*，3(1), 50–59. https://core.ac.uk/download/pdf/354311294.pdf
+- Sen, R., & Bhattacharyya, S. C. (2014). **印度可再生能源技术的离网发电：HOMER 的应用**。*可再生能源*，62, 388–398. DOI: 10.1016/j.renene.2013.07.028
+- Serey, J., Alfaro, M., Vargas, M., C., Ternero, R., Rivera, R., & Sabattin, J. (2023). **模式识别与深度学习技术：工业 4.0 的赋能者及其在工程研究中的作用**。*对称性*，15(2), 535. DOI: 10.3390/sym15020535
+- Sestino, A., & De Maura, A. (2022). **在业务中利用人工智能：启示、应用与方法**。*技术分析与战略管理*，34(1), 16–29. DOI: 10.1080/09537535.2021.1883583
+- Sharifi, K., & Amin, M. (2023). **机器学习与深度学习：方法与应用综述**。*世界信息技术与工程杂志*，10(07), 3897–3904。
+- Shukat, M. B., Latif, K. F., Sajjad, A., & Eweje, G. (2022). **重新审视可持续项目管理与成功之间的关系：利益者参与和团队建设的调节作用**。*可持续发展（布拉德福）*，30(1), 58–75. DOI: 10.1002/sd.2228
+- Sherly, K., & Neduchian, R. (2015). **改进方法和交互式频繁模式挖掘技术用于分布式和并行系统中的分析与欺诈检测**。*印度科学与技术杂志*，...
+- Shin, D., Vaccari, S., & Zeevi, A. (2023). **基于在线评论的动态定价**。*管理科学*，69(2), 824–845. DOI: 10.1287/mnsc.2022.4378
+- Shi, Y., Larson, M., & Hananjic, A. (2014). **超越用户-物品矩阵的协同过滤：现状与未来挑战综述**。*ACM 计算综述*，47(1),1–45. DOI: 10.1145/2556270
+- Shmueli, G., & Koppius, O. R. (2011). **信息系统研究中的预测性分析**。*管理信息系统季度刊*，35(3), 553. DOI: 10.2307/2304276
+- Shrestha, Y. R., Krishna, V., & von Krogh, G. (2021). **利用深度学习增强组织决策：原则、承诺与挑战**。*商业研究杂志*，123, 588–603. DOI: 10.1016/j.jbus.2020
+- Siam, N., Nader, M., & Lu, J. (2021). **驾驶行为移动注意力识别**。*IEEE 交通系统汇*，22(3), 1459–1472. DOI: 10.1109/TITS.2020.2972
+- Singh, A., Anurag, J., Biable, S. (2022). **特征优化与向量机财务欺诈检测**。*应用计算智能与软计算*，22
+- Singh, A., Chauhan, T. (2023). **人力资源管理中的人工智能：情感智能与技能**。见 Tyagi, P., Chilkamthi, N., Grima, S., Sood, K., & Balusamy, B. (编)，*人工智能对人力资源管理的采用与影响*，部分 A：金融、保险与风险管理（第 17–56 页）。DOI: 10.1108/978-1-80382-79
+- Singh, P., Anik, F., Senapati, R., Sinha, A., & Hossain, E. (2024). **银行客户流失调查：一种机器学习方法与可视化**。*数据科学与管理*，7(1)。
+- Sinha, A., Ghosh, V., Nguyen, D., & Das, N. (2023). **可再生能源生成的绿色融资：捕捉可持续发展的调节作用**。*能源经济学*，126, 107021. DOI: 10.1016/j.energy.2023.107021
+- Sjödin, J., Parida, V., Jovanovic, M., & Visnic, I. (2020). **模式创新中的价值创造与捕获：基于结果视角**。*产品创新杂志*，37(2), 158–183. DOI: 10.1111/jpim.12516
+- Sollberger, V. D., Korthaus, A., Bagh, & Rastinger, G. (2023). **使用髌腱自植物重建前交叉韧的长期效果：10 年最小随访综述**。*骨科与创伤外科档案*，143(7), 4277–4289. DOI: 10.1007/s00402-022-04687-9 PMID: 3644123
+- Sood, K., Pathak, P., Jain, J., & Gupta, S. (2023). **印度投资者如何考虑 ESG 因素？基于模糊 AHP 的评估**。*管理财务*，49(1), 66–87. DOI: 10.1108/MF-04-2022-0162
+- Soori, M., Aziz, B., & Dastres, R. (2023). **先进机器人领域中的人工智能、机器学习与深度学习：综述**。*认知机器人*。
+- Sour, S. E., AlBarrak, K. M., Abohany, A. A., & Amr, A. (2024). **利用 Bloom 模式优化算法信用欺诈检测**。*亚历山大工程杂志*，104, 171–192. DOI: 10.1016/j.aeaj.2023.06.040
+- Sovacoul, B. K., & Dylan, D. (2020). **欧洲的智能家居技术：对概念、益处、风险与政策的批判性综述**。*可再生与可持续能源综述*，120, 109663. DOI: 10.1016/j.rser.2019.109663
+- Srinivasan, S. M., Shah, P., & Surendra, S. S. (2021). **通过运营分析增强业务智能与运营的方法**。*系统管理科学杂志*，11(3), 27–40。https://www.researchgate.net/publication/355859167 DOI: 10.33168/JSMS.2021.03202
+- Srivastava, S. (2023). **利用 AI 情感分析的力量：企业的 10 个益处和用例**。https://appinventiv.com/blog/ai-sentiment-analysis
+- Stuck, M., & Grimes, A. (2016). **数据与竞争**。牛津大学出版社。DOI: 10.1093/acre/ocl9788713
+- Samer, A., Nadher, I., & Hamed, S. (2024). **预测个人对预防 COVID-19 爆发措施意识的情感分析**。*国际环境与公共健康杂志*，18(1), 218. DOI: 10.3390/ijerph180128
+- Taha, A., & Malebary, S. (2020). **利用轻梯度提升机进行 CC 欺诈检测**。*IEEE Access*，8, 2557–2588. DOI: 10.1109/ACCESS.2020.2971
+- Tang, S., Jin, L., & Cheng, F. (2021). **通过异构图变换进行在线评论系统欺诈检测**。*IEEE Access*，9, 64–73. DOI: 10.1109/ACCESS.2021.3084
+- Tang, C. I., Perez-Puzuelo, I., Spath, D., Brage, S., Wareham, N., & Mascolo, C. (2021). **Selfer：利用无标签数据改进人体活动识别**。arXiv 预印本 arXiv:2102.06073
+- Tarmuji, I., Lamael, R., & Tarmuji, H. N. (2016). **环境和社会治理实践 (ESG) 对经济表现的影响：证据**。*国际贸易与金融杂志*，7(3), 67–74
+- Teece, D. J., & Linden, G. (2017). **业务模式、价值捕获与数字化企业**。*组织设计杂志*，6, 1–14。https://doi.org/DOI:10.1186/s41669-017-0018-x
+- Teece, J. D. (2010). **业务模式、商业战略与创新**。*长远规划*，43(2), 172–194. DOI: 10.1016/j.lrp.2009.07003
+- Thukral, V., Latvala, L., Swenson, M., & Horn, J. (2023). 使用大语言模型优化客户旅：生成式人工智能中的最佳实践与陷阱。Applied Marketing Analytics, 9(3), 281–292. DOI: 10.69554/DMIV5161
+- Tokgöz, E., & Carro, M. A. (2023). 人工智能、机器学习和深度学习在面部整形手术中的应用。在美容与重建性面部手术：医学与生物医学工程科学概念回顾（pp. 281–306）。Springer Nature Switzerland, DOI: 10.1007/978-3-031-31168-0_9
+- Tong, R. (2001). 一种用于在线讨论意见检测与追踪的运行系统。在 Working Notes of the SIGIR Workshop on Text Classification。https://dl.acm.org/doi/10.1067/s0915-020-09515-3
+- Tensus, Parvez, M. O., Bilim, Y., & Yu, L. (2022). 北塞浦路斯视角的中视角：绿色转型领导力对员工绿色绩效的影响。International Journal of Hospital Management, 103, 103218. DOI: 10.1016/j.ijhm.2022.103218
+- Trabuchi, D., & Buganza, T. (2019). 数据驱动创新：切换大数据的视角。European Journal of Innovation Management, 22(1), 23–40. DOI: 10.1108/EJIM-01-2018-0017
+- Tran, Q. M., Ahmed, A. Y., Hai, J., Liu, M. K., & Elmassi, M. (2023).一种基于深度学习方法的有效物联网感应电机鲁棒故障识别与修正方案。Measurement, 207, 112398. DOI: 10.1016/j.measurement.2022.112398
+- Tripathi, A., Mathew, J., Deostare, S., Rai, D., & Gadhikar, L. “用于股票模式识别的线性回归方法.” 2023年第5届工程新兴技术会议 (ICNTE), 印度 孟买, 2023, pp. 1-6. DOI: 10.1109/ICNTE56633.2023.10146731
+- Trivedi, N. K., Simaiya, S., Lohore, U. K., & Sharma, S. K. (2020).一种基于机器学习技术的有效信用欺诈检测模型。International Journal of Advanced Science and Technology, 29, 14–24.
+- 아버지, J. (2021). 机器的智能。Filosofija. Sociologija. 2021, (32), 84–92. DOI: 10.6001/fil.soc.v3211.4383
+- Tsegay, B. (2023). 撒哈拉以南非洲气候变化缓解与贫困减少的绿色经济：埃塞俄比亚碳金融的批判性分析（博士论文，伦敦大学学院）。
+- Turney, P. D. (2002). 赞成还是反对？语义取向应用于评论的无监督分类。第40届年度计算语言学会议论文集，ACL ’02, 417–424.https://aclanthology.org/P02-1053.pdf
+- Udayakumar, R., Joshi, A., Boomiga, S. S., & Sugumar, R. (2023). 深度欺诈网络：用于网络安全和金融欺诈检测与分类的深度学习方法。Journal of Internet Services and Information, 13, 138–157. DOI: 10.58346/JSIS.2023.14.010
+- 联合国可持续发展目标 (SDGs) - 目标7：负担得起的廉清洁能源：https://sdgs.un.org/goals/goal7
+- 联合国。(1987)。世界环境与发展委员会报告：我们的共同未来（“布伦特兰报告”）。牛津大学出版社。
+- Urbinati, A., Bogers, M., Chiesa, V., & Frattini, F. (2019). 从大数据中创造并捕捉价值：供应商公司的多案例分析。*Technovation*, 28, 21–36. DOI: 10.1016/j.technovation.2018.07.004
+- Van Eck, N. J., & Waltman, L. (2014). 文献计量学指标的可视化。在 Ding, Y., Rousseau, R., & Wolfram, D. (编)，衡量学术影响：方法与实践 (pp. 285–320)。Springer. DOI: 10.1007/978-3-319-10378-8_13
