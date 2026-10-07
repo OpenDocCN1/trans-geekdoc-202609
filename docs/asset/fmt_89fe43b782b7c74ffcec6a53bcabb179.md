@@ -1,0 +1,493 @@
+
+![](img/6b61f0d3dcab44c60cdfe4e888d549c9_258_0.png)
+图 15.3 实际与预测的 COVID-19 例
+
+# 集成 - 组合模型
+
+集成建模通过结合多个模型的预测来提高整体性能。这种方法涉及训练多个模型并通过平均、堆叠或其他方法组合输出。当不同模型能够捕捉不同特征时，这种方法特别有用。
+
+在本节中，我们将探索如何在 R 中实现集成方法。我们将关注 `tidym` 和 `stacks` 包，它们为构建工作流提供了强大的工具。
+
+### 集成技术
+
+- **平均 (Averaging)**：结合多个模型的预测结果。
+- **堆叠 (Stacking)**：使用元学习器来结合基础模型的预测结果。
+- **提升 (Boosting)**：顺序训练，每个模型都会纠正前一个模型的错误。
+- **自助法 (Bagging)**：在不同的子集上训练多个模型以减少方差。
+
+在开始之前，我们需要数据集。在本例中，我们将使用之前章节提到的 `cv19_data`。
+
+## 示例：对 COVID-19 传播建模
+
+```r
+
+select(wflow_id, .config, mean) %>%
+
+  arrange(mean)
+
+```
+
+```r
+
+rmse
+
+# A tibble: 5 x 3
+
+# wflow_id              .config               mean
+
+# <chr> <chr>                           dbl
+
+# 1 id_Random_Forest Preprocessor1_Model2 5595.
+
+# 2 id_SVM             Preprocessor1_Model1 7642.
+
+# 3 id_Decision_tree Preprocessor1_Model2 8057.
+
+# 4 id_Knn             Preprocessor1_Model3 14034.
+
+# 5 id_Knn             Preprocessor1_Model2 14817.
+
+```
+
+绘制模型的均方根误差 `rmse` 值以可视化它们的性能。
+
+```r
+
+ggplot(aes(x = fct_recorder(wflow_id, mean), y = mean)) +
+
+  geom_col(fill = "navy") +
+
+  labs(title = "模型的均方根误差 (RMSE)",
+
+       x = "模型", y = "RMSE")
+
+```
+
+## 模型的均方根误差 (RMSE)
+
+![](img/6b61f0d3dcab44c60cdfe4e888d549c9_261_0.png)
+
+**图 15.5** 模型的均方根误差 (RMSE)
+
+竞赛结果显示，随机森林具有最低的 `rmse` 值，表明与其他模型相比具有更好的性能。
+
+## 提取模型的估计值：
+
+```r
+
+race_results %>%
+
+  collect_predictions() %>%
+
+  ggplot(aes(x = I, y = .pred,
+
+             group=model,
+
+             shape=model,
+
+             color = model)) + 
+
+  geom_point() + 
+
+  geom_abline()
+
+```
+
+![](img/6b61f0d3dcab44c60cdfe4e888d549c9_262_0.png)
+
+图 15.6 COVID-19 病例实际值与预测值
+
+该图显示了使用不同模型对 COVID-19 病例的实际值与预测值。随机森林模型似乎对数据的拟合效果最好，紧密跟随 45 度线，表明预测非常准确。
+
+那么，让我们看看组合预测后的效果如何：
+
+```r
+
+race_results %>%
+
+  collect_predictions() %>%
+
+  group_by(I) %>%
+
+  summarise(mean_pred = mean(.pred)) %>%
+
+  ggplot(aes(x = I, y = mean_pred)) + 
+
+  geom_point() + 
+
+  geom_abline()
+
+```
+
+## 示例：对 COVID-19 传播建模
+
+![](img/6b61f0d3dcab44c60cdfe4e888d549c9_263_0.png)
+
+**图 15.7** COVID-19 病例的集成预测
+
+最后，我们可以使用 `{stacks}` 包结合多个模型的预测结果来创建一个集成模型。`stack()` 函数使用元学习器（例如线性回归模型）结合模型的预测值，以产生最终预测。
+
+```r
+
+cv_stack <- stacks() %>%
+
+  add_candidates(race_results)
+
+cv_stack
+
+# # A data stack with 4 model definitions and 5 candidate members:
+
+# # id_Decision_tree: 1 model configuration
+
+# # id_Random_Forest: 1 model configuration
+
+# # id_Knn: 2 model configurations
+
+# # id_SVM: 1 model configuration
+
+# # Outcome: I (numeric)
+
+```
+
+融合模型的预测值：
+
+```r
+
+set.seed(2001)
+
+cv_ens <- blend_predictions(cv_stack)
+
+cv_ens
+
+# # A tibble: 3 x 3      weight
+
+# # member               type           <dbl>
+
+# # <chr>                <chr>
+
+# # 1 id_SVM_1_1         svm_rbf        0.751
+
+# # 2 id_Random_Forest_1_2 rand_forest     0.190
+
+# # 3 id_Knn_1_3        nearest_neighbor 0.147
+
+autoplot(cv_ens, "weights")
+
+```
+
+## penalty = 0.000001
+
+![](img/6b61f0d3dcab44c60cdfe4e888d549c9_264_0.png)
+
+**图 15.8** 集成模型权重
+
+```r
+
+fit_cv_ens <- fit_members(cv_ens)
+
+fit_cv_ens
+
+#> # A tibble: 3 x 3
+
+#> member               weight
+
+#> <chr>                <dbl>
+
+#> 1 id_SVM_1_1           svm_rbf             0.751
+
+#> 2 id_Random_Forest_1_2  rand_forest         0.190
+
+#> 3 id_Knn_1_3           nearest_neighbor   0.147
+
+```
+
+```r
+
+cv_ens_test_pred <-
+
+  predict(fit_cv_ens, new_data = cv_test) %>%
+
+  bind_cols(cv_test)
+
+cv_ens_test_pred %>%
+
+  ggplot(aes(x = I, y = .pred)) + 
+
+  geom_point(alpha=0.5) + 
+
+  geom_abline()
+
+```
+
+总结，将机器学习模型与贝叶斯分析以及集成建模相结合，可以显著增强我们预测和理解像 COVID-19 传染病的能力。这些模型提供了关键见解，可以指导公共卫生响应并缓解疫情的影响。![](img/6b61f0d3dcab44c60cdfe4e888d549c9_265_0.png)
+
+## 15.4 COVID-19 与 DALY
+
+COVID-19 对全球健康的影响可以通过 DALY 来衡量。我们使用 JHU GitHub 仓库的数据来计算 COVID-19 的 DALY。数据包含了每个国家和地区的确诊病例、死亡人数和康复人数。我们将计算美国、英国和加拿大的 DALY。
+
+数据是通过 `read.csv()` 函数加载的，需要进行一些调整。在这里我们使用 `pivot_longer()` 将所有病例合并到一列，并查看前几行：
+
+```r
+
+case1 <- cases %>%
+
+  pivot_longer(cols = starts_with("X"),
+
+              names_to = "date",
+
+              values_to = "cases") %>%
+
+  mutate(date = gsub("X", "", date),
+
+         date = as.Date(date, format = "%m.%d.%y")) %>%
+
+  janitor::clean_names()
+
+```
+
+> https://github.com/CSSEGISData/COVID-19
+
+cases %>% head()
+# # A tibble: 6 x 6
+
+同样的操作是：
+
+```r
+
+deaths1 <- deaths %>%
+
+  pivot_longer(cols = starts_with("X"),
+
+              names_to = "date",
+
+              values_to = "cases")
+
+```
+
+deaths1 %>% head()
+# # A tibble: 6 x 6
+
+```r
+
+# province_state_country_region lat date cases
+
+# <chr> <chr> <dbl> <date> <int>
+
+# 1 Afghanistan Afghanistan 33.9 67.7 2020-01-22 0
+
+# 2 Afghanistan Afghanistan 33.9 67.7 2020-01-23 0
+
+# 3 Afghanistan Afghanistan 33.9 67.7 2020-01-24 0
+
+# 4 Afghanistan Afghanistan 33.9 67.7 2020-01-25 0
+
+# 5 Afghanistan Afghanistan 33.9 67.7 2020-01-26 0
+
+# 6 Afghanistan Afghanistan 33.9 67.7 2020-01-27 0
+
+```
+
+下一步是按照省份、纬度和日期将两个数据集合并。用死亡人数除以病例数来计算病死率 `CFR`。
+
+```r
+
+joined <- cases %>%
+
+  left_join(deaths1, by = c("province_state", "lat", "date")) %>%
+
+  mutate(cfr = ifelse(is_na(deaths), 0, deaths / cases))
+
+```
+
+现在 COVID-19 数据是人类可读的，我们可以提取出国家：美国、中国、英国和加拿大。
+
+```r
+
+COVID19_counts <- joined %>%
+
+  filter(country_region %in% c("US", "United Kingdom", "Canada"))
+
+```
+
+```r
+
+COVID19_counts %>%
+
+  select(country_region, -long) %>%
+
+  head()
+
+```
+
+```
+
+# # A tibble: 6 x 5
+
+# # Groups: country_region, date [1]
+
+province_state country_region date cases deaths
+
+# <chr> <date> <date> <int> <int>
+
+# 1 Alberta Canada 2020-01-23 2 0
+
+# 2 British Columbia Canada 2020-01-23 2 0
+
+# 3 Diamond Princess Canada 2020-01-23 2 0
+
+# 4 Grand Princess Canada 2020-01-23 2 0
+
+# 5 Manitoba Canada 2020-01-23 2 0
+
+# 6 New Brunswick Canada 2020-01-23 2 0
+
+```
+
+在这里我们可以通过简单的线条看到 COVID-19 病例和死亡人数是如何随年份分布的：
+
+```r
+
+COVID19_counts %>%
+
+  ggplot(aes(x = date, y = cases,
+
+             group = country_region)) +
+
+  geom_line(color = "grey",
+
+            linewidth = 0.2) +
+
+  geomtextpath::geom_textline(
+
+    data = COVID19_counts,
+
+    aes(label = country_region),
+
+    show.legend = F) +
+
+  scale_y_log10() +
+
+  labs(title = "各国 COVID-19 病例",
+
+    x = "日期",
+
+    y = "病例")
+
+```
+
+```r
+
+ggplot(aes(x = date, y = deaths,
+
+               group = country_region)) +
+
+  geom_line(color = "grey",
+
+            linewidth = 0.2) +
+
+  geom_textline(
+
+    data = COVID194_countries,
+
+    aes(label = country_region),
+
+    show.legend = F) +
+
+  scale_y_log10() +
+
+  labs(title = "COVID-19 Deaths by Country",
+
+       x = "Date",
+
+       y = "Deaths")
+
+```
+
+![](img/6b61f0d3dcab44c60cdfe4e888d549c9_268_0.png)
+
+- (a) 各国的 COVID-19 病例数
+- (b) 各国的 COVID-19 死亡人数
+
+## 15.10 各国的 COVID-19 病例与死亡人数
+
+现在，为了在地图上可视化选国家的总病例和死亡人数，我们使用 `map_data()` 函数获取世界地理坐标，并通过按 `country_region` 分组来计算质心。
+
+```r
+
+worldmap <- map_data("world") %>%
+
+  filter(!region == "Antarctica")
+
+```
+
+```r
+
+centroids <- COVID19 %>%
+
+  group_by(country_region, lat, long) %>%
+
+  reframe(tot_cases = sum(cases),
+
+        tot_deaths = sum(deaths),
+
+        avg_cfr = round(cfr, 3)) %>%
+
+  distinct()
+
+```
+
+```r
+
+ggplot() +
+
+  geom_polygon(data = worldmap,
+
+                aes(x = long, y = lat, group = group),
+
+                fill = "grey",
+
+                color = "white") +
+
+  geom_point(data = centroids,
+
+             aes(x = long, y = lat,
+
+                  size = tot_cases,
+
+                  color = avg_cfr,
+
+                  alpha = 0.5)) +
+
+  scale_size_continuous(name = "Total cases (M)",
+
+                        labels = scales::unit_format(unit = "M",
+
+                        scale = 1e-6)) +
+
+  scale_color_viridis_c(name = "Average CFR (log scale)",
+
+                        trans = "log",
+
+                        labels = scales::label_number(accuracy = 0.001)) +
+
+  guides(color = guide_colorbar(order = 1),
+
+         size = guide_legend(order = 2)) +
+
+  coord_quickmap() +
+
+  labs(title = "COVID-19 Cases by Country",
+
+       caption = "Data Source: JHU CSSEGISandData/COVID-19\nCircle size: total cases, Color: average CFR",
+
+       size = "Total cases (M)",
+
+       color = "Avg CFR (log scale)",
+
+       x = "", y = "") +
+
+  theme(axis.text = element_blank(),
+
+        plot.subtitle = element_text(size = 8),
+
+        legend.key.size = unit(0.5, "cm"),
