@@ -1,0 +1,2120 @@
+- pgno: 0
+  md: '# # Position: Cognitive Deep Learning is an Algebraic Theory of All Architectures
+
+
+    Bruno Granovovic *12 Paul Lessard *1 Andrew Dudzik *3
+
+    Tamara von Glehn *3 João Araújo *3 Petar Veličković *34
+
+
+    # ## Abstract
+
+
+    We present our position on the elusive quest for a general-purpose framework for
+    specifying and studying deep learning architectures. Our intuition is that the
+    keys map so far a coherent bridge between specifications which must satisfy and
+    their implementations. Focusing on such a bridge, we propose to apply category
+    theory—precisely, the universal algebra of morphisms valued in a 2-category of
+    programs—as a theory largely subsuming these flavours of neural network design.
+    We show that our theory recovers constraints by geometric deep learning, as well
+    as implementations of many architectures from the diverse landscape of neural
+    networks, such as RNNs. We also illustrate how our theory enables many standard
+    constructs in computer science and automata.
+
+
+    specified in a top-down manner, wherein models are described by the constraints
+    they satisfy (e.g. in order to respect the structure of the data process). Alternatively,
+    a bottom-up approach describes models by their implementation, via a set of tensor
+    operations required to perform their forward/backward pass.
+
+
+    # ## 1.1 Our Opinion
+
+
+    It is our opinion that ample attention has already been given to both the top-down
+    and bottom-up approaches in isolation, and there hasn''t been sufficiently expressive
+    to address them simultaneously. If we want guiding framework for deep learning,
+    this needs to change. To support our opinion, we perform a few efforts on both
+    sides of the divide.
+
+
+    One of the most successful examples of the tradeoff framework is geometric deep
+    learning (Bronstein et al., 2021), GDL, which uses a group- and representation-theoretic
+    perspective to describe neural networks via symmetry preserving constraints. The
+    actual realisations of such layers are derived by solving constraints.
+
+
+    GDL proved to be powerful: allowing, e.g., to construct convolutional layers as
+    an exact solution to translation invariance in grids (Fukushima et al., 1983;
+    LeCun et al., 1998), and passing message and self-attention mechanisms to perform
+    learning over graphs (Mayer et al., 2017; Vasikopoulos et al., 2017). It also
+    extends to exotic domains such as spheres (Coben et al., 2018; de Haan et al.,
+    2020) and geometric constraints (Fuchs et al., 2020). While this covers many architectures
+    of interest, GDL also has inescapable constraints.
+
+
+    Firstly, usability of GDL to implement architectures correlates directly with
+    how easy it is to resolve equation constraints. While PyG (Fe & Lensen, 2019),
+    DGL (Wang, 2019) and Jraph (Godwin et al., 2020) have had success for translation-invariant
+    models, and JNN (Ceiper et al., 2021) for E-equivariant models, it is hard to
+    replicate success for areas where it is not known
+
+
+    Because of its focus on groups, GDL is only able to represent equivalence to symmetry,
+    but not operate
+
+
+    # ## 1. Introduction
+
+
+    One of the most coveted ideas is to provide a guiding framework from which neural
+    network architectures can be principally and widely derived. Many attempt have
+    recently been made, offering frameworks to categorize or describe large sheaves
+    of deep learning architectures (Cohen et al., 2019; Xu et al., 2019; Bronstein
+    et al., 2021; Chami et al., 2022; Pavillion et al., 2023; Joshi et al., 2023;
+    Weller et al., 2023) to need a frame.
+
+
+    We observe that there are, typically, two ways in how deep learning architectures
+    describe models. First,
+
+
+    > The title of the paper we are reading, ''Category Theory as Algebraic Theory
+    of All Architectures''—actually ''Cognitive Deep Learning is an Algebraic Theory
+    of All Architectures''—is quite apt for the work we are doing.
+
+
+    *Equal contribution *Symbolica A *University of Edinburgh
+
+    *Google DeepMind *University of Cambridge. Correspondence to:
+
+    Bruno Granovovic <bruno@brunogranovovic@gmail.com>; Paul Lessard <paul.lessard@gmail.com>;
+    Andrew <adudzik@gmail.com>; Petar Veličković <petar@petar.com>.
+
+
+    Proceedings of the 41st International Conference on Learning, Vienna, Austria.
+    PMLR 235, 2024. Copyright 2024 by'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Categorical Deep Learning
+
+
+    tions we use neural networks to align in invertible (Worrall & Welling, 2019)
+    or fully compositional (de Hahn et al., 2020a). This is not a small collection
+    of operators; if we can align a model to algorithm (Xu et al., 2019), it is fairly
+    common for the target algorithm to transform data, for example when performing
+    any of path-finding connection (Dudzik & Likovič, 2022). Generally, in order to
+    align about constraints in computer science, we must go beyond GL.
+
+
+    of parametric maps, as well we do in this paper. Further, prior art in syntax-semantics
+    connections assumes that the operations are taking place in some topological space
+    or that neural architectures have a very specific form—our framework assumes neither.
+    Lastly, priors over Category Theory are fragmented, sparse, and cohesive—not our
+    paper establishes a common, unifying framework for how category theory can be
+    applied to AI.
+
+
+    On the other hand, bottom-up architectures are commonly embedded in packages,
+    like TensorFlow (Abahi et al., 2016), PyTorch (Pasch et al., 2019) and JAX (Bradrax
+    et al., 2018). These frameworks have become indispensable in the implementation
+    of deep learning models at scale. Packages such have advantage in functional programming;
+    JAX is the most direct, as it is built around "composable functions", but features
+    many other deep learning frameworks as well. Treating neural networks as "pure
+    functions" allows a degree of type and shape-shaking, as well as automatic term
+    shape inference and fully backed transformations.
+
+
+    To demonstrate our position, we will utilize a categorical framework that is expressive
+    enough to recover standard GL concepts (invariance and equivalence), implementations
+    of complex neural network building blocks (recursive neural networks), and well
+    as model other intricate concepts such as type.
+
+
+    # 1.3. The Power of Category Theory
+
+
+    To understand why we are here, we must first put the field of category theory
+    in context. Minimally, it may be caused by a baseline-tested of systems that are
+    learned, and then applied again across scientific fields. Obstetrics in abstract
+    algebra, category theory has flourished since, and information has been used to
+    express ideas from numerous fields in a unified manner, helping to reveal previously
+    unheard aspects. Modern papers use, although it thoroughly permeates, includes
+    systems such as theory (Capucci et al., 2022; Cho & Spivak, 2023), Bayesian learning
+    (Braithwaite et al., 2023; Jacobs and 2019), and information and probability theory
+    (Leinst own, 2021; Bradley; 2021; Sturz, 2015; Heunen et al., 2017; Perrone, 2022).
+
+
+    This has resulted in a reliable set of matter theories and tools; from algebra,
+    topology, combinatorics to recursion and dependent types, all of them with a mutually
+    compatible interface. Category theory in machine learning has emerged (Fevikin
+    & Smeding, 2024; Alvarez-Pazco et al., 2021; Gavranovic, 2022), operational-data
+    analysis (Guss & Sukalahdin, 2018), natural language processing (Lewis, 2019),
+    causal inference (Jacobi et al., 2019), producing an entire category picture of
+    gradient-based learning—from architectures to backup—in Cruwell et al. (2022);
+    Gavranovic (2024), with a more implementation-centric view in Nguyen & Wu (2022),
+    and earlier effort work (Fong et al., 2021).
+
+
+    # 1.2. Our Position
+
+
+    It is position that constructing a framework for all of deep learning, requires
+    robustly bridging the top- and bottom-up approaches to neural network specification
+    with a unifying framework, and the concepts that this bridging could come from
+    computer science. However, such a framework must generalize both group theory
+    and functional programming—and a natural candidate for achieving this is category
+    theory.
+
+
+    It is worth noting that ours is not the first approach to computer science through
+    the lens of networks (Benglyn et al., 2015), but explore the syntax and semantics
+    in neural networks (Sonoda et al., 2023a; 2024) by apply Category Theory to machine
+    learning (Gavranovic, 2020).
+
+
+    We are unaware of any prior work that tackles the connection of neural network
+    architectures and the algebras
+
+
+    # 1.1. ESSENTIAL CONCEPTS
+
+
+    Before we begin, we will recall three essential concepts in category theory, which
+    will be necessary for our exposition. First, we define a category, an axiomatisation
+    of a compositional structure.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# # Categorical Deep Learning\n\n**Definition 1.1** (Category). A category\
+    \ $C$, consists of a collection of objects, and a collection of morphisms between\
+    \ objects, such that:\n\nJust as an interaction between categories, a natural\
+    \ transformation between functors; this is the first and final concept we cover.\n\
+    \n+   - For each object $A \\in C$, there is a unique identity $id_A: A \rightarrow\
+    \ A$.\n\n**Definition 1.5** (Natural transformation). Let $F: C \rightarrow D$\
+    \ and $G: C \rightarrow D$ be two functors between $C$ and $D$, a natural transformation\
+    \ $\\alpha: F \rightarrow G$ of choice, for every object $X \\in C$, of a morphism\
+    \ $\\alpha_X: F(X) \rightarrow G(X)$ in $D$ such that for every morphism $f: X\
+    \ \rightarrow Y$ in $C$, it holds that $\\alpha_Y \\circ F(f) = G(f) \\circ \\\
+    alpha_X$.\n\n+   - For any two morphisms $f: A \rightarrow B$ and $g: B \rightarrow\
+    \ C$, there must exist a unique morphism whose composition $g \\circ f: A \rightarrow\
+    \ C$.\n\nThe morphism $\\alpha_X$ is called the component of the natural transformation\
+    \ at the object $X$.\n\nsuch to the following conditions:\n\n+   - For any morphism\
+    \ $f: A \rightarrow B$, it holds that $id_B \\circ f = f \\circ id_A$.\n\n+  \
+    \ - For three composable morphisms $f: A \rightarrow B, g: B \rightarrow C, h:\
+    \ C \rightarrow D$, composition is associative, i.e., $h \\circ (g \\circ f) =\
+    \ (h \\circ g) \\circ f$.\n\nThe components of a natural transformation assemble\
+    \ into 'natural squares'; commutative diagrams:\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_2_0.png)\n\
+    \nWe denote by $(C, AB)$ the collection of all morphisms from $A$ to $B$ in $C$.\n\
+    \nwhere a diagram commutes, if for any objects, two paths connecting to the same\
+    \ morphism.\n\nWe provide a typical example:\n\n**Example 1.2** (The Set Category).\
+    \ Set is a category whose objects are sets, and functions are between them.\n\n\
+    # ## 2. From Monad to Algebras\n\nAnd another example, for geometric DL:\n\n**Example\
+    \ 1.3** (Monads as categories). A group $G$, can be represented as a category,\
+    \ with a single object $G$, and morphisms $g: G \rightarrow G$ corresponding to\
+    \ elements. Note that $G$ is a group if the binary operation is isomorphic. Note\
+    \ that $G$ is a group if and only if its morphisms are isomorphisms, for each\
+    \ $g: G \rightarrow G$ there exists $h: G \rightarrow G$ such that $g \\circ h\
+    \ = h \\circ g = id$. More, we can identify one-object categories, which are not\
+    \ necessarily invertible, with monads.\n\nHaving set the essential concepts, we\
+    \ want to discuss a categorical framework which generalizes geometric deep learning\
+    \ (Bronstein, 2021). We will define a powerful notion (monad algebra homomorphism)\
+    \ and demonstrate the specific case of monads induced by group actions. Generalising\
+    \ from monads and their algebras we will find that our theory can express processes\
+    \ structured data from computer science (e.g. lists and trees) and behave in set\
+    \ ways like automata.\n\nThe power of theory starts to emerge when we interact\
+    \ different categories. Just as functors of sets and morphisms of groups, there\
+    \ is a more generic concept of structure preserving between categories.\n\n**Definition\
+    \ 1.4** (Functor). Let $C$ and $D$ be two categories. $F: C \rightarrow D$ is\
+    \ a functor between them, if it maps each object and morphism of $C$ to one in\
+    \ $D$, and the following conditions hold\n\n+   - For any object $A \\in C$, $F(id_A)\
+    \ = id_{D(A)}$.\n\n+   - For any composable morphisms $f, g$ in $C$, $F(g \\circ\
+    \ f) = F(g) \\circ F(f)$.\n\n> ¹The term 'collection', rather than set, avoids\
+    \ Russell's paradox, as objects may be viewed as sets. Categories that can be\
+    \ defined with sets as small categories.\n\n**Definition 2.1** (Monad). Let $C$\
+    \ be a category. A monad on $C$ is a triple $(M, \\eta, \\mu)$ where $M: C \r\
+    ightarrow C$ is an endofunctor, and $\\eta: C \rightarrow M$ and $\\mu: M \\circ\
+    \ M \rightarrow M$ are natural transformations (where $\\mu$ is function composition),\
+    \ making diagrams in Definition 1. commute.\n\n**Example 2.2** (Group action monad).\
+    \ Let $G$ be a group. The functor $G \times - \text{Set} \rightarrow \text{Set}$\
+    \ is an endofunctor mapping a set $X$ to the set $G \times X$.\n\n> ²To the best\
+    \ of our knowledge, these ideas were first conjectured in Olah (2015) in the language\
+    \ of functional programming."
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# Categorical Deep Learning\n\n**Example 2.6 (Equivariant maps).** Equivariant\
+    \ maps are group action algebra homomorphisms. Consider any action from Example\
+    \ 2.4. An endomorphism of such action—that is, a $G$-algebra over $\\mathbb{R}^{z\
+    \ \times x}$—an endomorphism which induces a commutative diagram\n\n```\n$G \\\
+    times \\mathbb{R}^{z \\times z_h} \\xrightarrow{Gf} G \\times \\mathbb{R}^{z_h\
+    \ \\times x}\\n\\mathbb{R}^{z \\times z_h} \\xrightarrow{f} \\mathbb{R}^{z_h \\\
+    times x}$\n```\n\n+   • $id_G : G \\times X \\to X$ : Set whose component at a\
+    \ set $X$ is the function $x \\mapsto (e, x)$ where $e$ is the identity of the\
+    \ element of $G$;\n\n+   • $\\mu : G \\times X \\to G \\times X$ : Set whose component\
+    \ at a set $X$ is the function $(g, h) \\mapsto (gh, x)$ with the implicit multiplication\
+    \ of that group $G$.\n\nGroup monads are formal theories of group actions, but\
+    \ they do not actually execute on them. This is what algebras do.\n\nelementwise,\
+    \ equates to the action of f\n\nDefinition 2.3 (Algebra for a monad). An algebra\
+    \ for a monad $(M, \\eta, \\mu)$ on a category $C$ is a pair $(A, a)$ where $A\
+    \ \\in C$ is an object and $a : M(A) \\to A$ is a morphism of $C$(structure) making\
+    \ the following diagram:\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_3_0.png)\n\
+    \n$f(g \\cdot \\mathbf{x}) = g \\cdot f(\\mathbf{x})$\n\nThe translation for,\
+    \ instance, recovers the function $f(i', j')j(i, j) = f(i', j)f(i, j)$ to the\
+    \ universal constant: $f(i'-i, j'-j) = f(i', j)f(i, j)^{-1}.\n\n**Example 2.4\
+    \ (Group actions).** Groups for a group $G$ arise of the aforementioned grouped\
+    \ group action $G \\times X$. Consider the reader $\\mathbb{R}^{z \\times x}$,\
+    \ thought of data as a $w \\times h$ grid, and any group of actions on $\\mathbb{R}^{z_h}$:\
+    \ translation, rotation, scaling, and reflections,\n\nEach of these induces an\
+    \ algebra on the group set $\\mathbb{R}^{z \\times z_h}$. For instance, the translation\
+    \ $\\mathbb{R}^{z \\times z_h}, +0$ induces an algebra\n\n```\n$\\mathbf{Z} \\\
+    times \\mathbf{Z}_h \\times \\mathbb{R}^{z \\times z_h} \\to \\mathbb{R}^{z \\\
+    times z_h}$\n```\n\ndefined as $(i', j') \\cdot x(i, j) = x(i'-i', j'-j)$. Here\
+    \ $x$ represents data, $i, j$ specific locations and $i', j'$ the translation\
+    \ vectors. We also multiply the action of group $\\pi : G \\times X \\to X$ by\
+    \ projection.\n\nThe concept of invariance—a special case of equivalence—is wrapped\
+    \ in the Appendix H. It's is worth reflecting on the fact that we have successfully\
+    \ discovered the key idea of **deep learning**: neural network layers that are\
+    \ group algebra homomorphisms of monads with associated group actions!\n\nA monad\
+    \ can be a particular input or output of group equivariant neural networks (networks).\
+    \ That by being, geometric deep learning concerns with *equivariant layers* between\
+    \ these inputs and outputs. To describe them, we need to establish the concept\
+    \ of a *morphism of algebras* for a monad.\n\nIdeal, the illustrated in Example\
+    \ 2.6 is sufficient to explain any constructions, which are explained by Geometric\
+    \ Deep Learning; should the reader see concrete examples of neural networks (Veličković,\
+    \ 2023), Spherical CNNs (Cohen, 2018) and G-Cohens (Gaining)—they may be found\
+    \ in Appendix C.\n\n**Definition 2.5 ($M$-algebra homomorphism).** Let $(M, \\\
+    eta, \\mu)$ be a monad on $C$. $(A, a)$ and $(B, b)$ be $M$-algebras. An *$M$-algebra\
+    \ homomorphism*, $(A, a)$ to $(B, b)$, is a morphism $f : A \\to B$ that satisfies\
+    \ the following:\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_3_1.png)\n\nTo derive\
+    \ such constraints, we need to make the constraint in which $f : A \\to B$. A\
+    \ choice is to use Vector, a category where objects are finite-dimensional vector\
+    \ spaces and morphisms are linear maps between them. In such a setting, morphisms\
+    \ can be specified as matrices, and the equivalence places constraints on the\
+    \ matrix entries, resulting in effects like weight sharing or weighting. We provide\
+    \ a detailed version of two examples on page two in Appendix H.1.\n\nWe recover\
+    \ equivariant maps as morphisms of algebras.\n\n**Remark 2.7.** When our formed\
+    \ is of monad $M$ with $X$, a monad, is equivariant to $M$-actions, i.e. functions\
+    \ $BM \\to BE$. Set $BM$ is the one-category shown in Example 1.3, and group algebras\
+    \ are equivariant. In this case, our definition of equivariance coincides with\
+    \ the functional version used in Dean (2020). This is much deeper—for any monad,\
+    \ we can think of its algebras, as functors on the semantics of the monad, as\
+    \ categories encoding the monad's syntax, such as layers. For example, Dudzik\
+    \ & Veličković (2022) use\n\n4"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# Categorical Deep Learning\n\n| data Tree a = Leaf a |\n| | Node (Tree a)\
+    \ (Tree a) |\n\nthe fact that on the category of finite polynomial diagrams encode\
+    \ the algebraic structure of commutative semirings. We give further details on\
+    \ this connection in Appendix D.\n\n# 2.2. Endofunctors and (Co)algebras\n\nGeometric\
+    \ deep learning, while elegant, is constrained by the axioms of group theory.\
+    \ Monads and their algebras, are naturally generalised by group actions. Here\
+    \ we show, by studying (co)algebras of binary endofunctors, we can rediscover\
+    \ standard computer science constructs like trees and lists. This rediscovery\
+    \ is no passing observation; in fact, the endofunctor view of lists turns out\
+    \ naturally to implementations of neural architectures as recurrent and convolutional\
+    \ neural networks; see Appendix I.\n\nIt describes Tree(A) inductively, as formed\
+    \ out of a single A-labelled leaf or two trees. In Figure 1 we will relate this\
+    \ to recursive neural networks.\n\nIn the next section we will show more of the\
+    \ mathematical structures, endofunctors and algebras, may be augmented into the\
+    \ structured morphisms of monads and algebras.\n\nDually, we study coalgebras\
+    \ for an endofunctor where the structure morphism A → F(A) points the other way\
+    \ (Definition 2.1). While algebra models expressions of data, coalgebra offers\
+    \ a way to model computation infinitely capable. The semantics of programs where\
+    \ we use coalgebras are based on on productivity (Atkey & McBride, 2013), and\
+    \ are as excellent for describing servers, operating systems, and Rutten (2000;\
+    \ Jacobs, 2016). We will use endofunctor coalgebras to describe such automaton—the\
+    \ Mealy machine (Mealy, 1955).\n\nDefinition 2.8 (Algebra for an endofunctor).\
+    \ Let C be a category and F: C → C be an endofunctor on C. An algebra of F is\
+    \ a pair (A, a) where A is an object of C and a: F(A) → A is a morphism.\n\nDefinition\
+    \ 2.11 (Mealy machines). Let O and I be sets of inputs and outputs. Represent\
+    \ the endofunctor (I × O) → Set. Then define the set Mealy(I, O) of Mealy machines\
+    \ with O inputs and I outputs, together with a map Mealy → (I × O) → Mealy(O,\
+    \ I) which is a coalgebra of this endofunctor.\n\nNote, compared to Definition\
+    \ 2.3, there is no extra here with the structure of an algebra to be compatible.\
+    \ Examples of endofunctors abound in Jacobs (2016), of many are familiar to computer\
+    \ scientists.\n\n```\ndata Mealy i = MkMeely\n :: i → (O, Mealy i) | O\n```\n\n\
+    This describes Mealy coreuctively, as given an input, produce an output and another\
+    \ Mealy machine. In Figure 1 we will use this to full recurrent neural networks,\
+    \ and in A.4 and H.7 we coalgebra express two different classes of automata: streams\
+    \ and Moore machines.\n\nExample 2.9 (Lists). Let A be a set, and the endofunctor\
+    \ of F = A × → Set → Set. The set List(A) of lists of elements of type A together\
+    \ with Nil and Cons represents the final point of this endofunctor; Here Nil and\
+    \ Cons are constructed of lists, as we use to represent lists, by the following\
+    \ datatype:\n\n```\ndata List a = Nil | Cons a (List a)\n```\n\nIt describes List(A)\
+    \ inductively, as formed out of the empty list, or an other type A and another\
+    \ list. In Figure 1 we will see this folding to RNNs.\n\nExample 2.10 (Binary\
+    \ trees). Let A be a set. The endofunctor + = (1 **) → Set. The set Tree(A) of\
+    \ binary trees with A-labelled leaves, with the map Leaf: A → Tree(A) and Node,\
+    \ forms an algebra of this functor. Here Leaf and Node are constructed of binary\
+    \ trees, using the following datatype:\n\nWe have expressed data and structures\
+    \ (co)algebras in the case of GDL, in order to describe (linear) layers of neural\
+    \ networks, we need to establish the concept of a homomorphism of (co)algebras.\
+    \ The definition of a homomorphism of algebra for an endofunctor Definition 2.5,\
+    \ while the definition of a homomorphism of structures points out the other target.\n\
+    \nExample 2.12 (Lists over lists as algebra homomorphisms). Consider the endofunctor\
+    \ (1 × ×) from Example 2.9, and an algebra homomorphism from List(A), [Nil, Cons]\
+    \ to\n\n> Equivalently, the category of finite polynomial functors.\n\n> [4]f,\
+    \ g : A → C is notation for maps of a coproduct; f : A → C and g : B → C\n\n>\
+    \ *This framework can also model any variations, e.g., n-ary trees with A-labelled\
+    \ leaves as A + List(-), or binary trees with A-labelled nodes of 1 + × (-).\n\
+    \n> *Because it does not out the other structures has:"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Categorical Deep Learning
+
+
+    other $(A \times X)-algebra(X, [r_0, r_1])$; algebra homomorphism from $Tree(A),
+    [Leaf, Node]$ to any other $(A + (-)^2)-algebra(X, [r_0, r_1])$;
+
+
+    ```
+
+    $\begin{array}{ccc} 1+A \times List(A) & \xrightarrow{1+A \times X} & A \times
+    X \ [Nil.Cons] & & [r_0, r_1] \ List(A) & \xrightarrow{f_r} & X \end{array}$
+
+    ```
+
+
+    ```
+
+    $\begin{array}{ccc} Tree(A)^2 & \xrightarrow{A+2} & X^2 \ [Leaf, Node] & & [r_0,
+    r_1] \ Tree(A)^2 & \xrightarrow{f_r} & X \end{array}$
+
+    ```
+
+
+    Then the map $f_r : List(A) \to X$ is necessary, as over a list, from functional
+    programming which describes how a single value is obtained over a list of values.
+    It is implemented by recursion on the input:
+
+    Then the map $f_r$ is necessary as over a tree. As with, it is implemented by
+    recursion on the input, which is structural in nature:
+
+
+    ```
+
+    $f_r :: List \to X$
+
+    $f_r \ Nil = r_0$
+
+    $f_r (Cons \ h \ t) = r_1 \ h (f_r \ t)$
+
+    ```
+
+
+    This recursion is structural in nature, meaning it satisfies the two equations
+    which arise by unpacking the algebra homomorphism elements:
+
+
+    $Tree :: Tree \to X$
+
+    This means that it satisfies the two equations which arise by unpacking the coalgebra
+    homomorphism elements:
+
+
+    $f_r(Nil) = r_0)$
+
+    $f_r(Cons(h, t)) = r_1(h, f_r(t))$
+
+
+    $f_r(Leaf(a)) = r_0(a)$
+
+    $f_r(Node(l, r)) = r_1(f_r(l), f_r(r))$
+
+
+    Equation 1 tells us we can get the same result if we use $f_r$ to $Nil$ or map
+    to the unique element of the set. Equation 2 tells us that, starting with the
+    head and tail of a list, if we get the same result when we handle the tail, we
+    can process the entire list with $f_r$, or if we process the tail with $f_r$ and
+    then combine the result with the head $r_i$. These can also be described as generalised
+    equivariance over binary trees, analogously to
+
+
+    It is important to remember that these generalised equivariance constraints over
+    a list structure. Both group equations and Equations (1) and (2) intuitively specify
+    a function that is predicted by certain operations—but for the case of lists,
+    concatenating is not group actions, as attaching an element to the front of the
+    list does not leave the list unchanged. Dual to algebras unfold and fold over
+    data structures, coalgebra homomorphisms are categorical semantics of unfolds
+    over conductive data structures.
+
+
+    Remark 2.13. Given an algebra $(X, [r_0, r_1])$, there can be only one homomorphism
+    from trees to it! This is because $Tree(A), [Leaf, Node]$ is an initial object
+    in the category of $I+A-(-)^2$-algebras. The fact that they are initials in the
+    branch refers to the fact that, in fact, for a given endofunctor there a monad
+    category of monad algebras is equivalent to the original category of coalgebras.
+    This construction which the so-called free monad from an endofunctor will be seen
+    in part 3 to derive RNNs and other architectures from first principles.
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_5_0.png)
+
+
+    Example 2.15 (Unfolds as coalgebra homomorphisms). Consider the endofunctor $(I
+    \to O)$ and a coalgebra homomorphism from $(Mealy_{O,1}, next)$ to any other $(I
+    \to O)$—coalgebra$(X)$.
+
+
+    The map $f_r$ can be thought of as a generalised unfold, a concept from functional
+    programming describing how infinite data is obtained from a single value. It is
+    implemented by a recursive function:
+
+
+    ```
+
+    $f_r :: x \to Mealy \ o \ l$
+
+    $f_r \ k = Mkaly$
+
+    $i \to let \ (o'', x'') = n \ x \times i \n \in \quad (o'', f_r \ x'')$
+
+    ```
+
+
+    Example 2.14 (Trees folds as algebra homomorphisms). $A + (-)^2$ from Example
+    2.10, and any
+
+
+    which is structural in nature. This means that it satisfies the two equations
+    which arise by unpacking the coalgebra homomorphism elements:
+
+
+    ```
+
+    $n(x)(i)_1 = next(f_n(x))(i)_1$
+
+    $f_n(x)(i)_2 = next(f_n(x))(i)_2$
+
+    ```
+
+
+    ^¹ Where $I$ was used to denote it in Haskell notation.
+
+
+    6'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: "# Categorical Deep Learning\n\nEquation (5) tells us that the output of the\
+    \ Mealy machine produced by $f_n$ at state $x$ and input $i$ is given by the output\
+    \ of $n$ at state $x$ and input $i$, and Equation (6) tells us that the next Mealy\
+    \ machine produced at $x$ and $i$ is the one produced by $f_n$ at $n(x)$.\n\n\
+    established techniques for weighting. Can we establish formal criteria for when\
+    \ these techniques are correct? Just as how we generalised GDL to the setting\
+    \ of category theory, we can go further to the setting of 2-categories—the setting\
+    \ we use to parametric morphisms.\n\nThis, too, *generalises equivalence constraints*,\
+    \ not describing an interactive automaton which is no more invertible. It stands,\
+    \ in dynamic nature, producing outputs which are dependent on the current state\
+    \ of the Mealy and many previous inputs. In Examples H.5 and H.8, we show that\
+    \ two kinds of coalgebras—streams and more—are isomorphic. Just as before, we\
+    \ can embed all objects and morphisms into Vect to study the weight constraints\
+    \ induced by such a condition—see Example H.5.\n\n# 3. Categories and Parametric\
+    \ Morphisms\n\nWhile category theory is a powerful framework, it leaves much to\
+    \ be desired in terms of higher-order relationships between morphisms. It dealth\
+    \ with sets of morphisms, with no possible way to compare elements of these sets\
+    \ is where the theory of 2-categories comes in, where there is an category of\
+    \ categories. While in a 1-category, which has objects and morphisms between (0-morphisms),\
+    \ a 2-category has objects and morphisms (1-morphisms), and morphisms between\
+    \ morphisms (2-morphisms). We have, in fact, already seen this in Cat, which contains\
+    \ many fundamental concepts of category theory. Specifically, in Cat, objects\
+    \ are functions between them, and morphisms are natural transformations between\
+    \ functions.\n\n# 3.1. The 2-category Pair\n\nIn this section we have defined\
+    \ a 2-category Pair (Crutwell et al., 2022; Pacucci et al., 2022), and proceed\
+    \ to unpack the matcher with which we posit weight sharing can be modelled in\
+    \ it.\n\nWhile it shares with the category Set, its 1-morphisms are not functions,\
+    \ but parametric functions. That is, a 1-morphism $A \rightarrow B$ consists of\
+    \ a pair $(P, f)$, where $P \\in Set$ and $f: P \times A \rightarrow B$.\n\nPara\
+    \ morphisms admit an elegant graphical formalisation. Parameters $(P)$ are drawn\
+    \ vertically, signifying that they are part of the morphism, and not objects.\n\
+    \n![](img/92dd63b8e10fefd3f3f227bf65a30b83_6_0.png)\n\n# 2.3. Where to?\n\nLet's\
+    \ take a step back and understand what we're doing. We have shown that existing\
+    \ categorical framework uniformly captures a different number of data structures\
+    \ and architectures, as particular (coalgebras) of an endofunction. By constructing\
+    \ a well-understood data structure, we induce a structural control of the corresponding\
+    \ neural network, by using morphisms of these endofunction (coalgebras). We follow\
+    \ the same recipe as monad algebra, and hence can be thought of as generalising\
+    \ equivalence—describing producing or recursive deep learning can afford.\n\n\
+    The 2-category Pair models the algebra of composition of neural networks; the\
+    \ semantic component of parametric morphisms represents the parameter spaces in\
+    \ lateral (Figure 4).\n\nThis is concrete evidence for our position—that categorical\
+    \ homomorphisms are suitable for capturing constraints we place on deep learning\
+    \ architectures. Our is a particularly fruitful variant\n\nHowever, this could\
+    \ must be desired. A major issue is, to prescribe any amount of weight sharing,\
+    \ for all morphisms to be transformations we have implicitly assumed—by placing\
+    \ them into the category Vect. But most neural networks are not simple linear\
+    \ mappings, that these are analysed to limiting their individual layers. In the\
+    \ standard example of recurrent neural networks, an RNN is an entirely differentiable\
+    \ and non-linear function. But here,\n\nThe 2-morphisms capture representations\
+    \ between parametric functions. Importantly, this allows for explicit weight tying,\
+    \ where a parametric morphism $(P \times P, f)$ that has its weights tied by composing\
+    \ with the copy map $\\Delta_P: P \rightarrow P \times P$.\n\nHow can we explicitly\
+    \ model parameters and non-linear maps, without abandoning the presented categorical\
+    \ framework? Furthermore, in practice—with with recursive (Socher et al., 2013)\
+    \ neural networks, for instance—there are"
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Categorical Deep Learning
+
+
+    | Folding recurrent neural network | Unfolding recurrent neural network | Recursive
+    neural network | Full recurrent neural network | ''Moore machine'' neural network
+    |
+
+
+    ```
+
+    $1 + A \times S \quad S \quad A + S^2 \quad S \quad S$$
+
+    $$\downarrow \quad \downarrow \quad \downarrow \quad \downarrow \quad \downarrow$$\$
+
+    $$(P,cell^{S}) \quad (P,(cell_{i},\cell_{i,1})) \quad (P,cell^{S}) \quad (P,cell^{S})
+    \quad (P,cell^{more})$$$
+
+    $$S \quad O \times S \quad S \quad (I \to O \times S) \quad O \times (I \to S)$
+
+    ```
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_7_0.png)
+
+
+    Figure 1. (cat)algebras provide a high-level framework for describing computation
+    in neural networks.
+
+
+    the lax algebras are sufficient to derive recursive, recurrent, and similar neural
+    networks from first principles. Notably, morphisms of lax algebras are also expressive
+    enough to capture 1-ocycles, which follow asynchronous neural networks in (Dudzik
+    et al., 2024)—Appendix H.1.
+
+
+    This 2-category is one of the key components in the categorical picture of gradient-based
+    learning (Crutwell et al., 2022). We hypothesize that this is more than true (Appendix
+    I):
+
+
+    Interestingly, this is how any idempotent, recurrent, or strict neural network
+    can generate a full recursive, recurrent neural network is a particular 2-categorical
+    analogue to the story of freely monads on endofunction which we briefly mentioned
+    in Remark 2.3.
+
+
+    It is possible that the 2-category Para provide a formal theory of neural network
+    architectures, establish formal criteria for correctness and design of new architectures.
+
+
+    # 3.2. Dimensional Categorical Algebra
+
+
+    For all examples of construction in Section 2.2, a lax algebra of free algebras(F)
+    is equivalent to a lax algebra for the original endofunction. We obtain Freead(F)
+    by iterating F until it stabilizes, meaning further application of the endofunction
+    does not change the composition. Functional programmers may recognise this from
+    the freedom of free monads in Haskell, while using colimits (Appendix B). One
+    can define a morphism mapping an algebra (A, a) to the Freead(F)-algebra (A, α)
+    where α: F(A) → A.
+
+
+    2-category theory is much richer than 1-categorical. In a 1-category either commute
+    or do not, in which case they serve as a 1-skeleton to 2-morphisms. Any 2-category
+    may have: pseudo-commutative, lax-commutative, or orthomorphic, meaning respectively,
+    that relevant paths are equal, isomorphic, or there is a 2-morphism from one to
+    the other or in one direction. The diagrams below present these four options,
+    with 2-morphisms denoted by double arrows.
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_7_1.png)
+
+
+    In the bi-dimensional case, the relationship between Lax-AlgFreead(F) and Lax-AlgMonad(F)
+    remains and the structure map, not only generating the 1-dimensional monad, but
+    also the 2-cells of the lax algebra for a monad.
+
+
+    To reconcile this with concrete applications, we do not need to study 2-endofunctions
+    and 2-monads on Para. Rather, examples which arise from 1-categorical algebras
+    (group action monads, inductive types, etc.), which are augmented into 2-monads
+    on Para. We prove in G.10, that lax cells of such algebras are actually commonly
+    monads. The fact that we can duplicate or delete entries in vectors—the essence
+    of fitting weights—is the informa
+
+
+    In the long run, we expect that all of these notions will apply to either explaining
+    or specifying, aspects of neural architecture past, present and future. Focusing
+    on just one of them,
+
+
+    > 8 precisely, the construction of Para(.). See Appendix G.
+
+
+    > 9 also called colax.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Categorical Deep Learning
+
+
+    We can describe, if even spaces prevent us from adequate level of detail, the
+    universal properties of recurrent, recurrent, and similar models: they are lax
+    algebras for free monads generated by parametric functors? Having lifted the concept
+    of algebra introduced in Part 2 into 2-categories, we can describe several neural
+    networks (not just their individual layers) from first principles of functional
+    programming.
+
+
+    Our framework also offers a proactive path towards equitable AI systems. GDL already
+    enables the architectural imputation of protected classes (Choraria et al. (2021)
+    for example). This data, at least partially, with issues of inequity in training
+    data and algorithms such as an invariant model, by construction, especially capable
+    of inference on the dimensions of latent representation are orthogonal to protected
+    class.
+
+
+    With CDL, we hope to enable even finer control. By way of categorical logic, we
+    hope that CDL will lead to a deeper understanding of the relationship between
+    architecture and logic, in particular clarifying the logics of inductive bias.
+    Our framework will eventually allow us to specify the kinds of neural networks
+    and constructions we wish, permitting thereby for assessing biases, fairness in
+    reasoning by DL models at example. We believe that this is the right path to AI
+    clarity and safety, not merely explainable, but verifiable AI.
+
+
+    # 4. New Horizons
+
+
+    Our framework gives the correct definition of various architectures of neural
+    networks as universal parameters known in computer science. This methodology potentially
+    opens up new avenues for research.
+
+
+    Firstly, any results of categorical deep learning as presented here rely on choosing
+    the right category to order; in like manner deep learning relied on the choice
+    of group symmetry. We have seen that many algorithms—general equivariance constraints—can
+    be parametric, and as a consequence, the kind of constraints we can learn more:
+    neural networks that learn not merely correct but verify correct logical argument,
+    or order. This has ramifications for code synthesis: we can, for example, specify
+    neural networks that learn well-tuned functions by choosing appropriate biases
+    as their domain and codomain.
+
+
+    # Impact Statement
+
+
+    This paper work goes to fulfill the goal of Machine Learning. There are many potential
+    societal consequences of our work, which we feel must be specially highlighted
+    here.
+
+
+    # Acknowledgments
+
+
+    The authors wish to thank Razvan Pascan and Wee Yee Het for reviewing the paper
+    prior to submission.
+
+
+    # References
+
+
+    Abdi, M., Agarwal, A., Barham, P., Brevo, E., Chen, Z., Cito, C., Cardoso, G.
+    S., Davis, A., Dean, J., et al. TensorFlow: Large-scale machine learning on heterogeneous
+    distributed systems. arXiv preprint:1606.00467.
+
+
+    Abbott, M., Altenlenk, T., and Gani, N. Categories of functions. In Gordon, A.
+    D. (ed.), Foundations of Software Science and Computer Science, Lecture Notes
+    in Computer Science, pp. 23–38. 2003. ISBN 978-3-5460-3657-6; doi:10.1007/978-3-5460-3657-6_2.
+
+
+    Alet, F., Dobrar, D., Zhao, A., Tenenberg, J., Kawaguchi, K., and Finn, C. Other
+    networks: meta-learning using universal quantifiers. Advances in Neural Information
+    Processing Systems, 34:16384–16391.
+
+
+    Altenlenk, T., Levy, P., and Staton, S. Higher-order containers. In Ferreira,
+    F., Löwe, B., Mayordomo, E., and Mendes Gomez, L. (eds.), Programs, Processes,
+    volume 6158, pp. 11–20. Springer Berlin Heidelberg, 2010.
+
+
+    This is possible by our framework''s generality: for example, access to categories
+    (Abbott et al., 2003; Altenlenk et al., 2010), a uniform way to progress with
+    reason about categories and polymorphic functions. By building functions through
+    induction and connective types (Nüker & Vasek, 2023), we open new ways for type-safe
+    design and implementation of neural networks in functional languages.
+
+
+    One major limitation of categorical deep learning is that it was only applicable
+    to deal with individual neural networks, owing to focus on linear functions (see
+    e.g. Maraton et al. (2018) for the case of graphs). All nonlinear behaviors can
+    be obtained through composition of layers with networks, but CDL logic makes no
+    attempt to explain the science of the nonlinearity—which is often difficult to
+    deconstruct (Shazee, 2020). Within our framework, we can reason about architectural
+    blocks building multiple layers—as evidenced by our weighting examples—and we
+    believe CDL should be able to have a theory of architectures that properly treats
+    nonlinearities.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Deep Convolutional Learning
+
+
+    ISBN 9-178-3-64296-1 9-178-3-64296-8. doi: 10.1007/978-3-64296-8_2. Series: Lecture
+    Notes in Computer Science.
+
+
+    Cho, K. and Jacobs, B. Disintegration and bayesian inference via string dynamics.
+    27(9):938–991, 2019. ISSN 0990-1295, 1469-8072. doi: 10.1017/S096091250000828.
+    URL http://arxiv.org/abs/1709.03322.
+
+
+    Alvarez-Pico, M., Ghica, D., Sprunger, D., and Zanasi, F. Functional string dynamics
+    for reverse-mode of automatic differentiation, 2021.
+
+
+    Chorania, M., Ferwani, I., Mani, A., and Varney, L. R. Balancing fairness and
+    robustness via partial invariance. NeurIPS 2021 on Algorithmic Fairness through
+    the Lens of Causality and Robustness, 2021. URL http://arxiv.org/abs/2112.09346.
+
+
+    Atkey, R. and McBride, C. Productive programming with guarded recursion. In Proceedings
+    of the 18th ACM SIGPLAN conference on Functional programming, ICFP ’13, pp. 197–20.
+    Association for Computing Machinery, 2013. doi: 10.1145/2506365.2506397. https://doi.org/10.1145/2506365.2506397
+
+
+    Cohen, T. Towards a grounded theory of causation for embodied ai. arXiv preprint
+    arXiv:2206.19773, 2022.
+
+
+    Baydin, A. G., Pearlmuth, B. K., Radu, A. A., and Skisma, M. Automatic differentiation
+    in machine learning. Journal of Machine Learning Research, 18(1):1–48, 2017. URL
+    http://jmlr.org/papers/v18-1-48.html
+
+
+    Cohen, T. and Welling. Group equivariant networks. In International conference
+    on machine learning, pp. 2990–2999. PMLR, 2018.
+
+
+    Bradley, J., Frostig, R., Hawkins, P., Johnson, M. J., Maclaurin, D., Necula,
+    G., Pasquale, A., VanderPlas, J., Wisdom-S., et al. Learnable transformations
+    of numpy networks, 2019.
+
+
+    Cohen, T. S., Geiger, M., J., and Weiler, M. A general theory of equivariant functions
+    on homogeneous spaces. Advances in neural information processing systems, 32:2019.
+
+
+    Bradley, T.-D. Entropy as an ontological derivation. 23(9):2195, 2021. ISSN 10.230990399111.
+    URL http://arxiv.org/abs/2107.09581.
+
+
+    Crwutt, G. H., Gavanovich, B., Gani, N., Wilson, P., and Zanasi, F. Mathematical
+    foundations of gradient-based learning. In Sergey, (Programming Languages and
+    Systems, Lecture Notes in Computer Science, pp. 1–28. Springer International Publishing,
+    2022. ISBN 978-3-030-99336-8. doi: 10.1007/978-3-030-99336-8_3.
+
+
+    Braithwaite, D., Edges, J., and S Clare Smith, T. The compositional structure
+    of bayesian inference. In IDN/v2document/0.42330LIPcs.MFCS.2023, 2023. doi: 10.42330/LIPcs.MFCS.2023.
+
+
+    de Haan, P., Cohen, S. T., and Welling. Natural graph networks. Advances in neural
+    information processing systems, 33:3636–3644, 2020.
+
+
+    Brandenburg, L. Mark line line sketches and topological space analysis. arXiv
+    preprint arXiv:2106.11115, 2021.
+
+
+    de Haan, P., Weiler, M., Cohen, T., and Welling. Gauge equivariant networks with
+    anisotropic constraints on convex geometry. arXiv preprint arXiv:2003.05425, 2020.
+
+
+    Bronstein, M. M., Bruna, J., Cohen, T., and Včković, P. Geometric deep learning:
+    Grids, graphs, graphs, geodesics, and gausians. arXiv preprint:1404.3478, 2014.
+
+
+    Dudzik, A. J. Graph neural networks are dynamic programs. In Neural Information
+    Processing Systems, 35:20635–20647, 2022.
+
+
+    Capucci, M., Gavanovich, B., Edges, J., and Richel, E. F. Towards foundations
+    of categorical symmetries. 372:235–248, 2022. doi: 10.1024/EPACS.375.0632. URL
+    http://arxiv.org/abs/2105.06332.
+
+
+    Dudzik, A. J., von Ghn, T., Pascanu, R., and Veličić, P. Asynchronous alignment
+    with cycles. In Proceedings of the Second Learning on Graph Representation, volume
+    231: 3:1–3:17. Nov 2023.
+
+
+    Chami, I., El-Hajja, S., Perozzi, B., Ré, C., and Murphy, K. Machine learning
+    on graphs: A model and comprehensive taxonomy. The Journal of Machine Learning
+    Research, 23(1):3840–3903, 2022.
+
+
+    Elliott, C. The simple essence of automatic differentiation. Proceedings of the
+    ACM on Programming Languages, 2(ICFP):70:1–70:29, July 2018. doi: 10.1145/3236765
+    URL https://dl.acm.org/10.1145/3236765'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Deep Learning
+
+
+    Fey, M. and Lensen, J. E. Fast graph representation with pytorch geometric. arXiv
+    preprint arXiv:1903.02428, 2019.
+
+
+    Heunen, C., Kammar, O., Staton, S., and Yang, H. A convenient category for higher-order
+    probabilities. In 27th Annual ACM/IEEE Symposium on Logic Science (LICS), pp.
+    1–12. 2017. doi: 10.1109/LICS.2017.8005137 URL http://arxiv.org/abs/1701.02547.
+
+
+    Fong, B., Spivak, D., and Tuyeras, R. Backprop for functors: compositional perspective
+    on supervised learning. In Proceedings of the 34th Annual ACM/IEEE Symposium on
+    Logic in Computer, LICS ''19, pp. 1–13, Vancouver, Canada June 2021. IEEE Press.
+
+
+    Jacobs, B. Introduction to Coalgebra: Mathematics of Statistics and Observation,
+    volume 59 of Combinatorial Tracts in Theoretical Science. Cambridge University
+    Press, 2016. ISBN 978-316-82318-7. doi: 10.1017/CBO987136182318. https://doi.org/10.1017/CBO987136182318
+
+
+    Fuchs, W., Forschall, D., Fischer, V., and Weller, M. S. (3) Transformers: 3-to-4
+    translation equivariant attention networks. Advances in neural information processing
+    systems, 33:1971–1980, 2020.
+
+
+    Fukushima, K., Miyake, S., and Itono, T. Neocognitron: A neural network for visual
+    pattern recognition. IEEE transactions on systems, machines and cybernetics, (5):826–834,
+    1983.
+
+
+    Jacobs, B., Vissberg, A., and Zanasi, F. Functional inference for string drawing.
+    In Biswaj, (ed.), Foundations of Software Science and Computer Structures, Lecture
+    Notes in Computer Science, pp. 313–329. Springer International Publishing, 2019.
+    ISBN 978-3-030-7712-7. doi: 10.1017/978-3-030-77127-8.
+
+
+    Gambino, N. and Kock, J. Polynomial functions and polynomials. In Mathematical
+    proofs of the bridge philosophy society, 154, pp. 153–192. Cambridge University
+    Press, 2013.
+
+
+    Johnson, N., Yu, D., Johnson, N., and Yao, D. 2-Dimensional Categories. Oxford
+    University Press. ISBN 978-0-19-889137-3.
+
+
+    Gavranc, B. Functional Components of Deep Learning: a category-theoretic approach.
+    arXiv preprint, arXiv:2403.13001, 2024. doi: 10.48550/arXiv.2403.13001.
+
+
+    Kelly, G. A unified theory of transitive constructs for free algebras, monoids,
+    colimits, associates and so on. Bulletin of the Australian Mathematical Society,
+    22:1–85, 1980.
+
+
+    Gavanoic, B. Category theory and machine learning, 2020. GitHub.
+
+
+    Gavanoic, B. Space-time tradeoffs of lenses and optics via category theory. 2022.
+    URL http://arxiv.org/abs/2209.09351.
+
+
+    Kelly, G. The basic concepts of enriched category theory. Reprints in Theory and
+    Applications of categories [electr], (2005), 01 pages.
+
+
+    Geiger, M. and Schmidt, T. E3cnn euclidean neural networks, 2022. URL http://arxiv.org/abs/2207.09453.
+
+
+    Lack, S. A 2-categories companion, pp. 105–191. IMA volumes in mathematics and
+    applications. Springer, Springer Nature, 2020. ISBN 97881419552415. doi: 10.1007/978-1-419-5524-4.
+
+
+    Ghani, L., Luca, C., de Marchi, F., and Power, J. Algebras, colgebras, and monads.
+    2004(1):122–145. ISBN 1571-0661-0.
+
+
+    Gilmer, J., Schoenholz, S., Riley, P. F., Rys, O., and Dani, H. G. General neural
+    networks passing for quantum effect. In International conference on machine learning,
+    1263–1272. PMLR, 2017.
+
+
+    LeCun, Y., Bottou, L., Bengio, Y., and Haffner, P. Deep-learning applied to document
+    recognition. Proceedings of the IEEE, 86(2):2228–2234, 1998.
+
+
+    Godwin, J., Keck, T., Battaglia, P., Vist, K., Li, Y., Stafenko, K., Veličković,
+    P., and Sanchez-Gonzalez, A. Jraph: A library for graph neural networks, 2020.
+    URL https://github.com/deepmind/jraph.
+
+
+    Lestein, T. Entropy and Diversity: The Axiomatic Approach. Cambridge University
+    Press, 2021. doi: 10.1017/9781109365835.
+
+
+    Guss, W. H. and Salakhutdin, N. Characterizing the capacity of neural networks
+    using algebraic topology, 2018. URL http://arxiv.org/abs/1802.04443.
+
+
+    Lewis, M. Compositional expressivity for neural networks. 6(4):709–724, 2019.
+    Invariant graph graph networks arXiv:182.09902, 2018.
+
+
+    11
+
+
+    Maron, H., Ben-Hamu, H., Shamir, N., and Lipman, Y. Invariant and equivariant
+    graph networks. arXiv preprint:182.09902, 2018.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Deep Learning
+
+
+    Mealy, G. H. A method for synthesizing sequential circuits. 34(5):1045–1079, 1955.
+    ISSN 0005-8580. doi: 10.1002/j1538-7305.1955.ab03788.x Conference Name: The Bell
+    System Journal.
+
+
+    Sonoda, S., Ishikawa, L. and Ikeda, M. A unified fourier slice method to deriveリッジ
+    transform for a depth-2 neural networks. *arXiv preprint arXiv:2402.15984*, 2024.
+
+
+    Nguyen, M. and Wu, N. Folding over Neural Networks, 119–150. Springer International
+    Publishing, 2022. ISBN 9780330116921. doi: 10.1007/978-3-031-16912-5.
+
+
+    Sturtz, K. Categorical probability theory. 2015. URL http://arxiv.org/abs/1460.6030.
+
+
+    Niu, N. and Spivak, D. Polynomial Functions: A Mathematical Theory of Interaction.
+    *arXiv*, 2023. URL http://arxiv.org/abs/2319.09332.
+
+
+    Thomas, N., Smith, T., Kearnas, S., Yang, J.-L., Li, K., Kohloff, and Riley, P.
+    Tensor field networks: Rotation-translation-invariant neural networks for 3D clouds.
+    *arXiv preprint arXiv:1802.08219*, 2018.
+
+
+    Nunes, F. L. and Vákár, M. CHAD for expressive languages. 33(4):311–426, 2023.
+    ISSN 0990-1645-8672. doi: 10.1017/S0952258000X3. URL http://arxiv.org/abs/2110.00446.
+
+
+    Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Gomez, A., Kaiser, and Polosukhin.
+    Attention is all you need. Advances in neural information processing systems,
+    2017.
+
+
+    Olah, C. Neural Networks, Techniques and Programing– colah blog. September 2015.
+
+
+    Velíkový, P. Everything is connected: Graph neural networks. Current Opinion in
+    Structural Biology, 79:102538, 2023.
+
+
+    Vákár, M. and Smeding, T. CHAD: Combinatoryomorphic interaction. 44(3):20:1–20:49,
+    2022. doi: 10.1145/35273634. URL https://doi.org/10.1145/35273634.
+
+
+    Papillion, M., Sanford, S., Hajji, M., and Moliane, N. Architectures of deep learning:
+    A survey on topological neural networks. *arXiv preprint arXiv:2304.10031*, 2023.
+
+
+    Weiler, M., Forré, P., Linde, E., and Welling, M. Equivariant neural over scale.
+    Advances in Neural Information Processing Systems, 32, 2019.
+
+
+    Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., Lin, T.,
+    Zimmermann, N., Antiga, L., et al. PyTorch: An intuitive interface, high-performance
+    deep learning. Advances in neural information processing systems, 32, 2019.
+
+
+    Perrone, M. Markov categories and entropy. 2022. URL http://arxiv.org/abs/2212.11719.
+
+
+    Rutten, J. J. M. Universal coalgebra: a theory of systems. 24(1):3–30, 2000. ISSN
+    0304-3975. doi: 10.1016/S0304-3975(99)00056-6.
+
+
+    Worrall, D. and Welling, M. Deep scale-spaces: Equivariant over scale. Advances
+    in Neural Information Processing Systems, 32, 2019.
+
+
+    Shazer, G. Global invariant transform. *arXiv preprint arXiv:2002.05020*, 2020.
+
+
+    Xu, K., Li, J., Zhang, M., Du, S., Kawarabayashi, K.-i., and Jeladka, S. What
+    can neural networks reason? *arXiv preprint arXiv:1905.13211*, 2019.
+
+
+    Socher, R., Perelygin, A., Wu, J., Chang, J., Manning, C. D., Ng, and Potts. Recursive
+    deep models for semantic composition over a sentiment tree bank. In Proceedings
+    of the 2013 Conference on Empirical Methods in Natural Language Processing, pp.
+    1631–1642. Association for Computational Linguistics, 2013. URL https://aclanth.org/D13-1170.
+
+
+    Sonoda, S., Hashimoto, Y., Ishikawa, I., and Ikeda, M. Joint invariant functions
+    on data-parameter domain invariance via neural networks. *arXiv preprint arXiv:2310.03530*,
+    2023a.
+
+
+    Sonoda, S., Ishii, H., Ishikawa, I., and Ikeda, M. Joint ridge transform: with
+    koopman operator principles for deep neural networks. *arXiv preprint arXiv:2310.03529*,
+    2023a.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "# A. Category Theory Basics\n\nThe natural notion of ‘sameness’ for categories\
+    \ is equivalence:\n\n**Definition A.1 (Equivalence).** An equivalence between\
+    \ two categories $C$ and $D$, written $C \\xrightarrow{\\sim} D$, consists of\
+    \ a pair of functors $F : C \to D$ and $G : D \to C$ with natural isomorphisms\
+    \ (natural transformations where every component has an inverse) $F \\circ G \\\
+    cong 1_C$ and $G \\circ F \\cong 1_D$.\n\n**Definition A.2 (Initial).** An object\
+    \ $I$ in a category $C$ is called **initial** if for every $X \\in C$ naturally\
+    \ holds that $\\mathcal{C}(I, X) \\cong 1$, meaning that there is only one map\
+    \ of type $I \to X$.\n\n**Definition A.3 (Terminal).** An object $T$ in a category\
+    \ $C$ is called **terminal** if for every $X \\in C$ naturally holds that $\\\
+    mathcal{C}(X, T) \\cong 1$, meaning that there is only one map of type $X \to\
+    \ T$.\n\n**Definition A.4 (Limit).** For categories $\\mathcal{C}$ and $\\mathcal{J}$,\
+    \ a diagram of shape $J$ in $\\mathcal{C}$ is a functor $D : J \to \\mathcal{C}$.\
+    \ A cone to $D$ consists of an object $C \\in \\mathcal{C}$ and a natural transformation\
+    \ from a constant object $C$ to the functor $D$, a family of morphisms $c_j :\
+    \ C \to D(j)$ for each object $j \\in \\mathcal{J}$, such that for any $f : i\
+    \ \to j$ in $\\mathcal{C}$ the following diagram commutes:\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_12_0.png)\n\
+    \nA morphism of cones $\theta : (C, c_j) \to (C', c'_j)$ is a morphism $\theta$\
+    \ in $\\mathcal{C}$ making each diagram\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_12_1.png)\n\
+    \ncommute. the limit of a diagram $D$, written $\text{lim } D$, is the terminal\
+    \ object in the category $\text{Cone}(D)$ of cones to $D$ and morphisms between\
+    \ them.\n\n**Definition A.5 (Colimit).** The colimit $\text{lim } D$ of a diagram\
+    \ $D : J \to C$ is the initial object in the category $\text{Cone}(D)$ of cones\
+    \ to $D$, where a cone $(C, c_j : D(j) \to C)$ has the dual of a cone (above)\
+    \ with the morphisms reversed. **Small** (respectively $\\kappa$-directed, connected,\
+    \ ...) colimits are colimits for which the indexing category $\\mathcal{J}$ is\
+    \ small (respectively $\\kappa$-directed, connected, ...)\n\n**Example A.6.**\
+    \ A terminal object in a category $C$ is the unique diagram from the category\
+    \ to $C$. Similarly an initial object is an example of a colimit.\n\n# B. 1-Categorical\
+    \ Algebra\n\n**Definition B.1 (Monad coherence diagrams).** A triple $(M, \\eta,\
+    \ \\mu)$ of:\n\n+   - an endofunctor $M : C \to C$;\n- a natural transformations\
+    \ $\\eta : \text{id}_C \\Rightarrow M$;\n- a transformation $\\mu : M \\circ M\
+    \ \\Rightarrow M$\n\nconstitute a monad if the following diagrams commute:\n\n\
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_12_2.png)\n\n**Definition B.2 (Coalgebra\
+    \ for an endofunctor).** Let $\\mathcal{C}$ be a category and $F$ an endofunctor\
+    \ on $\\mathcal{C}$. A coalgebra for $F$ is a pair $(A, a)$ where $A$ is an object\
+    \ of $\\mathcal{C}$ and $a : A \to F(A)$ is a morphism of $C$."
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "# Categorical Deep Learning\n\n# B.1. Well-pointed Endofactors and Algebraically\
+    \ Free Monads\n\nIn this subsection we'll relate endofactors and their algebras\
+    \ to monads by way of well-pointed endofactors and the transfinite construction\
+    \ for an algebraically free monad on such an endofactor.\n\n# Definition B.3.\
+    \ A well-pointed endofactor $(F, \\sigma)$\n\ncomprises an endofactor $F : C \t\
+    o C$, and a natural transformation $\\sigma : id_C \\Rightarrow F$. A pointed\
+    \ endofactor is said to be well-pointed if $F$ and $\\sigma$ either give the same\
+    \ from the left or the right or in others, the natural transformations $\\sigma\
+    \ \\circ F$ and $F \\circ \\sigma$ (which are of type $F \\Rightarrow F$) are\
+    \ equal.\n\nAn algebra for a pointed endofactor $(F, \\sigma)$ is an algebra $(A,\
+    \ a)$ for the endofactor $F$ for which the following diagram\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_13_0.png)\n\
+    \n*Remark B.4.* Well-pointedness is a property, not structure, algebras for well-pointed\
+    \ endofactors are just algebras for the pointed endofactors. Morphisms of algebras\
+    \ for pointed endofactors are morphisms of algebras for the underlying endofactor.\n\
+    \n*Example B.5* (Monads and pointed endofactors, idempotent monads and well-pointed\
+    \ endofactors). The unit and underlying endofactor of a monad constitute a pointed\
+    \ endofactor. If moreover monad is idempotent, then that pointed endofactor is\
+    \ well-pointed.\n\n*Definition B.6.* For a given endofactor $F$, its algebra and\
+    \ algebra homomorphism we denote by $\text{Alg}_{Endof}(F)$; For $(F, \\sigma)$\
+    \ a well-pointed endofactor we denote by $\text{Alg}_{Endof}(F)$ the category\
+    \ of algebras and morphisms thereof. For $(F, \\mu)$ an algebra and algebra homomorphism\
+    \ then we denote by $\text{Alg}_{Mnd}(F)$.\n\n*Lemma B.7.* Suppose $F$ is an endofactor\
+    \ on a category $\\mathcal{C}$ with coproducts. Then there is an equivalence of\
+    \ categories $\text{Alg}_{Endof}(F) \\simeq \text{Alg}_{Pre}(F + id)$.\n\n*Definition\
+    \ B.8.* Given $F : C \to C$, an algebraically free monad on $F$ is a monad $\t\
+    ext{Free}(F)$ together with an equivalence of categories $\text{Alg}_{Endof}(F)\
+    \ \\simeq \text{Alg}_{Mnd}(\text{Free}(F))$ which preserves the respective functors\
+    \ to $C$ that forget the algebraic structure.\n\n# B.2. Kelly's Unified Transfinite\
+    \ Construction\n\nThe existence for algebraically free monads is Kelly's unified\
+    \ transfinite construction (Kelly, 1980).\n\n*Definition B.9* (Reflective subcategory).\
+    \ A subcategory $\\mathcal{D}$ of a category $\\mathcal{C}$ is **reflective**\
+    \ if the inclusion functor $F : D \to \\mathcal{C}$ admits a left adjoint. A reflective\
+    \ subcategory is **locally presentable category**.\n\n*Example B.10* (Reflective\
+    \ categories are reflective in graphs). Nearly every category encountered in practice\
+    \ is a locally presentable category: The categories of monads, groups, rings,\
+    \ vector spaces, and modules are locally presentable. As are the categories of\
+    \ topological spaces, metric spaces, and uniform spaces. While beyond the scope\
+    \ of this document to explain too much it, local presentability is a powerful\
+    \ notion of what it means for objects and morphisms to be of things defined by\
+    \ equalities of set-expressions.\n\n*Definition B.12 (Accessible category and\
+    \ accessible functor). For an ordinal $\\kappa$, a $\\kappa$-accessible category\
+    \ $\\mathcal{C}$ is a category such that:\n\n+   - $C$ has $\\kappa$-directed\
+    \ colimits;\n- there is a set of $\\kappa$-compact objects which generate $C$\
+    \ under $\\kappa$-directed colimits.\n\nA $\\kappa$-accessible functor $F : C\
+    \ \to D$ is a functor between $\\kappa$-accessible categories which preserves\
+    \ $\\kappa$-filtered colimits.\n\n*Remark B.13.* The accessibility of a functor\
+    \ can be thought of as an upper-bound on the arity of the operations which it\
+    \ abstracts. For example finite sums of finite sums are finite sums."
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "# Categorical Deep Learning\n\n**Definition B.14.** Let $C$ be a $\\kappa$-locally\
+    \ presentable category and $F : C \rightarrow C$ be a $\\kappa$-accessible endofunctor.\
+    \ $F^\\kappa$ be the $\\kappa$-directed colimit of the diagram\n\n$F^0 \rightarrow\
+    \ F^1 \rightarrow F^2 \rightarrow \\dots \rightarrow F^\\kappa$\n\nwhere $F^0\
+    \ = id_C$ and $F^{\\alpha+1} = F \\circ F^\\alpha$ for $\\alpha < \\kappa$ and\
+    \ $F^\\kappa = \\lim_{\\alpha < \\kappa} F^\\alpha$ as a limit colimit.\n\n**Lemma\
+    \ B.15.** *For $C$ and as above, $F^\\kappa$ is a monad. The canonical inclusion\
+    \ of $id_C$ into the colimit $F^\\kappa$ and the multiplication comes from the\
+    \ preservation of $\\kappa$-filtered colimits by $F$.*\n\n**Theorem B.16.** *Assume\
+    \ the hypotheses of Lemma B.15 with $\\kappa$ the ordinal in those hypotheses.\
+    \ Then $Alg\\&Pando(F)$ is equivalent to $Alg_{Mod}(F^\\kappa)$ i.e. $F^\\kappa$\
+    \ is an algebraically free monad for $F$.*\n\nRemark B.17. For the endofunctors\
+    \ we study here, $Free(F) \\cong (F + id)^*$ is the underlying endofunctor of\
+    \ an algebraically free monad for $F$, $Free(F)$.\n\nThe above formula allows\
+    \ us to derive the explicit formula for free monads, which has a dual formula\
+    \ in the case of cofree monads (Ghani et al.).\n\n**Proposition B.18** (Cof(co)monads),\
+    \ Let $F : C \rightarrow C$ be an endofunctor. Then $Free_{mon}(F)$, the free\
+    \ monad on $F$ is given by $Free_{mon}(F)(X) = Fix(X \rightarrow F(X))$. Dually,\
+    \ $Cof_{mon}(F)$, the cofree monad on $F$ is $Cof_{mon}(F)(X) = Fix(F(X) \rightarrow\
+    \ X)$.\n\n**Example B.19** Free monad on $1+A$. Free on the endofunctor $1+A$\
+    \ is $List_{+1}(A)$ of lists of elements $A$ whose the endofunctor mapping an\
+    \ object $Z$ to the set $List_{+1}(A)$ of lists of elements $A$ whose last element\
+    \ is not $1$; i.e. an element of type $1$, instead an element of type $Z$. That\
+    \ is, are lists which end with an element of $Z$.\n\n**Example B.20** Free monad\
+    \ on $A(-)^2$ is given by $Tree(A(-)) : Set \rightarrow Set$, mapping a set $Z$\
+    \ to the set of trees with $A+Z$ labelled leaves.\n\n**Example B.21** Cofree monad\
+    \ on $(I \times -)$. The cofree monad of the endofunctor $(I \times -)$ is $Fix(X\
+    \ \rightarrow I \times X)$, mapping an object $Z$ to the set of streams whose\
+    \ outputs are $O \times Z$.\n\n**Example B.22** Cofree comad on $(I \rightarrow\
+    \ O \times -)$. The comad of the endofunctor $(I \rightarrow O \times -)$ is $Fix(O\
+    \ \times X \rightarrow X)$, outputting an additional element of $Z$ at each step\
+    \ does not depend on $I$.\n\n# C. Categorical Deep Learning Examples\n\nTo illustrate\
+    \ the power of categorical deep learning as a framework that subsumes geometric\
+    \ deep learning (Bronstein et al., 2021), we make the reader see three additional\
+    \ examples demonstrating equivariance constraints of established geometric deep\
+    \ learning architectures, leveraging the framework of CDL.\n\nAll of these examples\
+    \ are faithful to Geometric DL practitioners, and are covered in prior papers\
+    \ (Maron et al., 2018; Cohen et al., 2018; Thomas et al., 2018; Cohen & Wells,\
+    \ 2016), we believe that relegating their exact derivations to appendices is appropriate\
+    \ in our work.\n\nBefore we begin, recall the core template of our approach: that\
+    \ we represent neural networks $f : A \rightarrow B$ as monad homomorphisms between\
+    \ two algebras $(A, a)$ and $(B, b)$, for a monad $(M, \\eta, \\mu)$.\n\n```\n\
+    M(f)   M(B)\n|       |\nvv       v\nA  ----->  B\n```\n\nand that geometric deep\
+    \ learning is recovered by making our group the group action monad $M(X) = G \t\
+    imes X$."
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Categorical Deep Learning
+
+
+    # C.1. Permutation-equivariant Learning on Graphs
+
+
+    leading to graph neural networks (Veličković, 2023).
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_15_0.png)
+
+
+    In this case:
+
+
+    +   - The group $G = \Sigma_n$ is the permutation group of $n$ elements,
+
+
+    +   - The carrier object for the algebras (scalar) node features $R^n$, and potentially,
+    adjacency matrices $R^{n \times n}$,
+
+
+    +   - The structure map for the first algebra, $P_{X,A} : \Sigma_n \times R^n
+    \times R^{n \times n} \rightarrow R^{n \times n}$, executes the permutation: $P_{X,A}(\sigma,
+    X, A) = (P(\sigma)X, P(\sigma)AP(\sigma)^T)$, where $P(\sigma)$ is the permutation
+    matrix specified by $\sigma$.
+
+
+    +   - The structure map for the second algebra, $P_X$, still executes the permutation,
+    but only the node features. The reduction is not strictly necessary, but it is
+    the standard when designing graph neural networks—as they are often assumed not
+    to modify their underlying computational graph. We deliberately omit this reduction
+    here to illustrate how our framework can handle neural networks transitioning
+    across different algebras.
+
+
+    # C.2. Rotation-equivariant Learning on Spheres
+
+
+    leading to the first layer of spherical CNNs (Cohen et al., 2018).
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_15_1.png)
+
+
+    In this case:
+
+
+    +   - The group $G = SO(3)$ is the special orthogonal group of 3D rotations.
+
+
+    +   - The carrier object for the first algebra is $S^2 \rightarrow R$; (scalar)
+    data defined over the sphere. Note that in practice, this will be desirable, so
+    be written to represent it using matrices.
+
+
+    +   - The structure map for the first algebra, $p_{SO(3)} : SO(3) \times (S^2
+    \rightarrow R) \rightarrow (S^2 \rightarrow R)$, executes a 3D rotation on the
+    spherical data, as follows: $p_{SO(3)}(\alpha, \beta, \gamma), \psi) = \phi$,
+    such that $\phi(x) = R(\alpha, \beta, \gamma)x$, where $R(\alpha, \beta, \gamma)$
+    is the rotation matrix specified by the ZYZ-Euler angles, (this inverse) rotation
+    is applied to points $x \in S^2$ on the sphere.
+
+
+    +   - The carrier object for the second algebra is $SO(3) \rightarrow R$; (scalar)
+    data defined over rotations. Once again, this will be quite desirable in practice.
+
+
+    +   - The structure map for the second algebra, $p_{SO(3)} : SO(3) \times (SO(3)
+    \rightarrow R) \rightarrow (SO(3) \rightarrow R)$ now executes a 3D rotation over
+    the rotation-matrix data, as follows: $p_{SO(3)}(\alpha'', \beta'', \gamma''),
+    \psi) = \phi$ such that $\phi(x) = R(\alpha'', \beta'', \gamma'')^{-1}R(\alpha,
+    \beta, \gamma)x$.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# Categorical Deep Learning\n\n# C.3. G-equivariant Learning on G\n\nleading\
+    \ to G-CNNs (Cohen & Wiley, 2016), as well as the subsequent layers of spherical\
+    \ CNNs (Cohen et al., 2018).\n\n```\n$G \\times (G \\rightarrow \\mathbb{R}) \\\
+    xrightarrow{G \\times f} G \\times (G \\rightarrow \\mathbb{R})$$\n$$\nAg \\quad\
+    \ \\quad \\quad \\quad Ag$$\n$$\nnG \\rightarrow \\mathbb{R} \\xrightarrow{f}\
+    \ G \\rightarrow \\mathbb{R}$\n```\n\nIn this case:\n\n+   - The group G is also\
+    \ the carrier of the carrier objects (G $\rightarrow$ R).\n\n+   - Both algebras'\
+    \ map follows the execution of the regular representation of G, $A_G : G \\times\
+    \ (G \\rightarrow \\ R) \\rightarrow (G \\rightarrow \\ R)$, by composition, as\
+    \ follows $A_G(g,\\psi)(h) = \\psi(g^{-1}h)$.\n\n# D. Lawvere Theories and Syntax\n\
+    \nde Haan et al. (202a) expanded the theory of equivariant layers in neural networks\
+    \ using the abstraction of natural transformations of functions. In this section,\
+    \ we will explain how to understand morphisms of monads, and in the semantics\
+    \ of algebras in these terms.\n\nDefinition 1.1. If C is a category, a presheaf\
+    \ on C is a functor $C^{op} \\rightarrow Set$. The category whose objects are\
+    \ presheaves and morphisms are natural transformations is denoted P(C).\n\nFix\
+    \ a monad T on Set and $C_T$ denote its category of algebras and homomorphisms.\n\
+    \nGiven an algebra $A \\in C_T$, the way to interpret A as a functor is via the\
+    \ Yoneda embedding $C_T \\rightarrow P(C_T)$, which identifies A with the presheaf\
+    \ $[-, A]$. It is a standard result that the Yoneda functor is faithful, which\
+    \ means that we can identify algebras with morphisms as presheaves by the definition\
+    \ of limits and colimits.\n\nFurthermore, these presheaves have a special property.\
+    \ If $\\lim j$ is a small colimit in C, then $[\\lim j, A] = [\\lim j, A]$, essentially\
+    \ to + to the class of all, and 0 to the reader of empty\n\nDefinition D.2. If\
+    \ C is a category and J is a class of small colimits in C, then a J-continuous\
+    \ presheaf on C is a presheaf $F \\in P(C)$ such that $F(\\\\lim j) = \\lim F(j)$\
+    \ for all $j \\in J$. The corresponding full subcategory of PSh(C) is denoted\
+    \ PSh(C), or simply PSh(C) in the case that J is the class of all small colimits.\
+    \ We will use $[\\ ]$ to refer to the class of all colroducts, and 0 to the reader\
+    \ of empty\n\nIt turns out that C has a nice property: it is strongly compact,\
+    \ meaning that every continuous presheaf is representable as above by an object\
+    \ of $C$. In other words, we have the identification $C = PSh(C).\n\nHowever,\
+    \ it is impractical to work with the entire category C. When possible, we want\
+    \ to reason in terms of a more tractable vocabulary. This will provide us with\
+    \ syntax for monads. Following Ehrenmann's concept of a \"column sketch\" (Brandenenburg,\
+    \ 2021), a category equipped with a restricted set of classes. Rather than giving\
+    \ the general definition, we will describe few special cases of interest here.\n\
+    \nDefinition D.3. The Kleisli category $K_T$ is the full subcategory of $C_T$\
+    \ on the free algebras. The finitary Kleisli category $K_T^F$ is the free algebras\
+    \ TS for a finite set. The unary Kleisli category $K_T^U$ is the full one-object\
+    \ subcategory on the free algebras T1.\n\nWith the following sequences, we will\
+    \ include a sequence of functors between presheaves:\n\n```\n$C_T \\supset K_T\
+    \ \\supset K_T^F \\supset K_T^U$\n```"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "# Categorical Deep Learning\n\n$Psh(C_T) \rightarrow Psh(K_T) \rightarrow Psh(K_T^\\\
+    infty) \rightarrow Psh(K_T^\\perp)$\n\nBy restricting our classes of objects,\
+    \ we can restrict this to the continuous presheaf categories:\n\n$C_T \\simeq\
+    \ CPsh(C_T) \rightarrow CPsh_{11}(K_T) \rightarrow CPsh_1(K_T^\\infty) \rightarrow\
+    \ CPsh_0(K_T^\\perp)$\n\nIt turns out that in many cases, there are equivalences\
+    \ of categories.\n\n**D.4.** In the case that $C_T \rightarrow CPsh(K_T)$ is an\
+    \ equivalence, we say that $K_T^\\infty$ is the *infinitary Lawvere theory for\
+    \ T*. **Remark D.5.** In fact, all monads have an infinitary Lawvere theory. For\
+    \ a proof, seeBrandenburg, 2021).\n\n**D.6.** In the case that $C_T \rightarrow\
+    \ CPsh_+(K_T)$ is an equivalence, we say that $(K_T)^\\infty$ is the **Lawvere\
+    \ theory for T**, and $T$ is a finitary monad.\n\n**D.7.** If $T$ is the monad\
+    \ sending $S$ to the free commutative semiring on $S$, then $C_T$ is the category\
+    \ of commutative semirings. We see as for commutative systems of equations with\
+    \ finite number of variables, $T$ has a Lawvere theory $(K_T)^\\infty$.\n\nIt\
+    \ is well known that for the \"finitary monads\", e.g. (Gambino & Kock, 2013).\
+    \ This connection was observed in (Dulšek & Veličkový) for message passing in\
+    \ Graph Neural Networks to polynomial functions.\n\nif we could further restrict\
+    \ this to the four objects $[T_0, T_1, T_2, T_3]$, because we can easily axiomise\
+    \ commutative systems with only three variables, $a(b+c) = ab+ac$.\n\n**D.8**\
+    \ (Monoids). If $M$ is a monad, $C \rightarrow CPsh(K_M)$ is an equivalence, then\
+    \ $C \\simeq Psh(K_M)$, which is the category of $M$-sets for the monad $M = (K_M)^\\\
+    infty$. We can use \"infinitary Lawvere theories\" exactly to describe objects\
+    \ of form $M \\times -$,\n\n**D.9** (Suplattices). Not all monads are finitary;\
+    \ that not all have an associated Lawvere theory.\n\nFor a non-finitary monad,\
+    \ let $P: \text{Set} \rightarrow \text{Set}$ be the covariant powerset function.\
+    \ That is, $P(S)$ is the set of subsets of $S$, and if $f$ is a function, $P(f):\
+    \ P(S) \rightarrow P(S)$ is defined as $P(f)(a) := \\{f(a) \\mid a \\in A\\}$.\
+    \ We equip $P$ with the monad structure given by the unit $1 \rightarrow P$ and\
+    \ composition $P^2 \rightarrow P$ sending $s \\in S$ to $P(S)$ and the composition\
+    \ $C(S)$ to $\bigcup_{a \\in A} A$.\n\nThe category of $P$-algebras is the category\
+    \ of suplattices, which is the category of sets with all least upper bounds, and\
+    \ morphisms preserving them. Equivalently, a toplattice is given by a set $L$\
+    \ with a join map $P(L) \rightarrow L$ satisfying unit and associativity axioms.\n\
+    \nImplementing vertices requires $L^\\kappa \rightarrow L$ for arbitrarily large\
+    \ cardinal numbers $\\kappa$, so we can intuitively see that suplattices are not\
+    \ described by a finitary theory.\n\nNote that the Kleisli category $K_P$ is the\
+    \ category of sets and relations.\n\n**Example D.10** (Semilattices). While $P$\
+    \ is not finitary, it has a functor $P_{fin}$, the functor that takes each set\
+    \ to its finite subsets.\n\nAlgebras for $P_{fin}$ are some joined-semilattices,\
+    \ partial orders where every finite subset has a least upper bound. It is nice\
+    \ exercise to show that a semilattice is equivalently a commutative idempotent\
+    \ mon.\n\n# E. Monoidal Categories and Ategories\n\nMonoidal categories and are\
+    \ the 'categorified' version of monads and actions.\n\n**Definition E.1** (Strict\
+    \ monoidal, Johnson et al., Def. 1.2.1). Let $M$ be a category. We call $M$ a\
+    \ *strict monoidal category* if it is given with the following data $\\otimes:\
+    \ M \times M \rightarrow M$ the *monoidal product*; an object $I \\in M$ the *monoidal\
+    \ unit*, such\n\n+   - $A \\otimes (B \\otimes C) = (A \\otimes B) \\otimes C$\
+    \ for all $A, B, C \\in M$\n-* $A \\otimes I = A = I \\otimes A$ for all $A \\\
+    in M$\n\n18"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "# Categorical Deep Learning\n\n+   * $f \\otimes (g \\otimes h) = (f \\otimes\
+    \ g) \\otimes h$ for all $f, g, h \\in \\mathcal{M}$;\n* $id \\otimes f = f \\\
+    otimes id$ for all $f \\in \\mathcal{M}$.\n\n**E.2** (Agories, see Capucci & Gavranović,\
+    \ 2023), Let $(\\mathcal{M}, \\otimes, I, \\alpha, \\lambda, \rho)$ be a monoidal\
+    \ category. An $\\mathcal{M}$-category $C$ is a category $C$ with a functor $\b\
+    lack: \\mathcal{M} \times C \to C$ together with natural isomorphisms $\\eta_X\
+    \ : I \black X \\cong X$ and $\\mu_{M,N} : (M \\otimes N) \black X \to M \black\
+    \ (N \black X)$, such that:\n\nFor all $M, N, P \\in \\mathcal{M}$ and $C$ the\
+    \ following diagram commutes:\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_18_0.png)\n\
+    \n**Left and right units.** For all $C$ and $M \\in \\mathcal{M}$ The diagrams\
+    \ below commute.\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_18_1.png)\n\n> *Remark*\
+    \ E.3. As one may assume a monoidal category to be strict, by MacLane’s coherence\
+    \ theorem, we may assume categories are strict also (Capucci & Gavranović, 2023,\
+    \ Remark 3.4). This is to say, we may assume for any $\\mathcal{M}$-category $\n\
+    \n+   * The unit $\\eta_X$ is an equality, it that $I \\black X = id_C$ as functors\
+    \ of type $C \\to C$; and\n\nWe will call such a **strict** category. We will\
+    \ use these to simplify exposition and some theorems.\n\n**Example 4** (Monoidal\
+    \ action). Any monoidal category gives rise to a self-action.\n**Example 5** (Famlies\
+    \ categories). Any category $C$ with copies has an action $\\black: Set \\times\
+    \ C \\to C$ which maps $(X\n\n# E.1. Morphisms of Categories\n\n**Definition 6**\
+    \ (Acrylic strong mon). Let $(\\mathcal{C}, \\black)$ be a $\\mathcal{M}$-category.\
+    \ An $(T, \\mu, \\eta)$ on $C$ is **strong** if it is equipped with a natural\
+    \ transformation $\\sigma_{P,A} : P(A) \\to T(P(A))$, a strength such that diagrams\
+    \ in Definition E.9 commit.\n\n**Example 7.** All forms of the type $A \\black\
+    \ : Set \\to Set$ are strong for the category (Set, $\times$), for any monoid\
+    \ $A$. This includes $G \\black : Set \\to Set$ from Example 2.2,$^{11}$\n\n**Definition\
+    \ 8** (Acrylic endofun). Let $(\\mathcal{C}, \\black)$ be a $\\mathcal{M}$-category.\
+    \ An endofun $F$ on $C$ is **strong** if it is equipped with a natural transformation\
+    \ $\\sigma_{P,A} : F(A) \\to F(P(A))$, a strength such that diagrams AS1 and AS2\
+    \ in In Definition E.9 commit.\n\n$^{10}$Another name for this is a $\\mathcal{M}$-linear\
+    \ morphism, in (Capucci & Gavranović, 2023)\n\n$^{11}$The strength is in fact\
+    \ a natural isomorphism.\n\n19"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Categorical Deep Learning
+
+
+    **Definition E.9** (Actorical strong monad coherence diagrams). A monad $(T, \mu,
+    \eta)$ on the category $C$ of a $\mathcal{M}$-category $(\mathcal{C}, \blacktriangle)$
+    is called **strong** if it is equipped with a natural transformation $\sigma_{P,A}
+    : P \otimes T(A) \to T(P \otimes A)$, making the following diagrams below commute:
+
+
+    **AS1**: Compatibility of strength and the monoidal unit.
+
+
+    **AS2**: Compatibility of strength and allegory multiplier.
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_19_0.png)
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_19_1.png)
+
+
+    **AS3**: Compt. of strength and monad multiplication.
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_19_2.png)
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_19_3.png)
+
+
+    **Example E.10**. the endofunctors from Examples 2.9 to 2.11, H4 and H7 are strong
+    endofunctors, and their appropriate monads are strong. See Appendix (Example E.11)
+
+
+    **Example E.11**. We present a list of the strengths $\sigma_{P,X}$ of some relevant
+    endofunctors (on the left) and their free monads (on the right)
+
+
+    Given the endofunctor $1 + A - : Set$, its strength $\sigma_{P,X} : P \times (1
+    + A) \to 1 + A \times P \times X$ is given by:
+
+
+    ```
+
+    $$\sigma_{P,X}(p,inl(\bullet)) = inl(p)$$\n$\sigma_{P,X}(p,inl(x)) = inl(p,x)$
+
+    ```
+
+
+    Given the endofunctor $A + (-)^2$, its strength $\sigma_{P,X} : P \times (A +
+    (-)^2) \to A + (P \times X)^2$ is given by:
+
+
+    ```
+
+    $$\sigma_{P,X}(p,inl(a)) = inl(p)$$\n$\sigma_{P,X}(p,pair(x,x'')) = pair((p,x),
+    (p,x''))$
+
+    ```
+
+
+    Given the free monad $List_{+1}(A) : Set \to Set$, its strength $\sigma_{P,Z}
+    : P \times List_{+1}(A) \to List_{P \times Z_{+1}}(A)$ is given by:
+
+
+    ```
+
+    $$\sigma_{P,Z}(p, Nil) = Nil$$\$\n$\sigma_{P,Z}(p, z) = (p,z)$$\n$\sigma_{P,Z}(p,cons(a,as))
+    = cons(a, \sigma_{P,Z}(p,as))$
+
+    ```
+
+
+    Given the free monad $Tree(A +-) : Set$, its strength $\sigma_{P,Z} : P \times
+    Tree(A + Z) \to Tree(A + P \times Z)$ is given by:
+
+
+    ```
+
+    $$\sigma_{P,Z}(p,Leaf(a)) = Leaf(p,a)$$\n$\sigma_{P,Z}(p,Leaf(inl(z))) = Leaf(p,inl(z))$$\n$\sigma_{P,Z}(p,Node(l,r))
+    = Node(\sigma_{P,Z}(l), \sigma_{P,Z}(r))$
+
+    ```
+
+
+    # F. Categorical Algebra
+
+
+    Good references for categorical algebra are (Lack, 2010) or Kelly, 2005). The
+    latter deals with the more general notion of enriched categories of which 2-categories
+    are a particular example.
+
+
+    # F.1. twomonads and their Lax Algebras
+
+
+    A 2-monad can be concisely defined as a Cat-monad (see Johnson et al., Sec. 6.5)
+    An unpacking of its definition follows.
+
+
+    **Definition F.1** (2-monad). A 2-monad on a 2-\mathcal{C} comprises:'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "# Categorical Deep Learning\n\n+   - A 2-endofunctor T on C;\n- A 2-natural\
+    \ transformation $\\mu : T^2 \\Rightarrow T$; and\n- A 2-natural transformation\
+    \ $\\eta : \text{id}_C \\Rightarrow T$;\n\nsuch that the (C-enriched variant)\
+    \ of the axioms in Definition B.1 holds.\nA Lax T-algebra $(A, r, \\epsilon_A,\
+    \ \\delta_A)$ where $(T, \\eta, \\mu)$ is a 2-monad on C, and $\\epsilon_A$ and\
+    \ $\\delta_A$ are the following 2-morphisms in C:\nA object of C, $a : T(A) \r\
+    ightarrow A$ is a morphism in C,\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_20_0.png)\n\
+    \nthat the unity and lax associativity conditions (Johnson et al., 2026, 6.5.6\
+    \ and 6.5.7) are satisfied.\nDefinition F.3 (Lax algebra homomorphism). Let $\\\
+    mathcal{E}$ be a 2-category, $T$ a 2-monad on $\\mathcal{E}$, and $(A, a, \\epsilon_A,\
+    \ \\delta_A)$ and $(B, b, \\epsilon_B, \\delta_B)$ be lax T-algebras. Then a alex\
+    \ homomorphism from $(A, a, \\epsilon_A, \\delta_A) \rightarrow (B, b, \\epsilon_B,\
+    \ \\delta_B)$ is a pair $(f, \\kappa)$ where $f : A \rightarrow B$ is a morphism\
+    \ in $\\mathcal{E}$ and $\\kappa$ is a 2-morphism spanning by the following\n\n\
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_20_1.png)\n\nsuch that the diagrams (in\
+    \ Johnson et al., Def. 6.5.9) commute.\nLax algebras and lax algebra homomorphisms\
+    \ for the 2-monad T form the category Lax-AlgMnd(T).\nExample F.4 (for M-modules).\
+    \ If $M$ is a monad, it is possible to study \"M-modules\", which we define as\
+    \ monoids equipped with a compatible action of $M^{12}$ terms of the 2-monad $\\\
+    delta_\\epsilon(M) \times -$ on the 2-category.\n\nHere $\\delta_\\epsilon(M)$\
+    \ is the category whose objects are elements of $M$, and morphisms are the identities.\
+    \ Since $M$ is a monad, $\\delta_\\epsilon(M)$ is a monadic category, so $\\delta_\\\
+    epsilon(M) \times -$ is a monad.\nAs the set of endomorphisms on a monad $A$ is\
+    \ isomorphic to the set of endofunctors on the category given the deloping of\
+    \ the monad, an M-module can be seen as a one-object algebra for this 2-monad.\
+    \ Indeed, this is a special case of any algebra.\n\nExample F.5 (Cocyles as lax\
+    \ monoids). The monoidal cycles, or \"crossed monoids\", used in (Dudzik et al.,\
+    \ 2024) to study synchrony in networks, can be described as lax monoids for 2-monad\
+    \ algebras. As if $A$ is an M-module, $BA$ is an algebra for $\\delta_\\epsilon(M)\
+    \ \times -$. A lax morphism $1 \rightarrow BA$ is a natural transformation of\
+    \ the unique functor $M \rightarrow BA$, which is equivalently just a map $D :\
+    \ M \rightarrow BA$. The axiom for compositionality is the (right) 1-cycle code\
+    \ for $D$, so 1-ocycles are as lax as lax morphisms $1 \rightarrow BA$.\n\nG.\
+    \ The 2-category Para(C)\nDefinition G.1 (para, Currutt et al., 2022; Capucci\
+    \ et al., 2022). Given a monoidal category $(\\mathcal{M}, \\otimes)$ and an M-category\
+    \ $\\mathcal{C}$, let Para$(\\mathcal{C})$ be the 2-category:\n\n+   - Objects\
+    \ of the category;\n- Morphisms $X \rightarrow Y$ are pairs $(P, f)$, where $P$\
+    \ is an object of $M$ and $f : P \blacktriangleright X \rightarrow Y$ is a morphism\
+    \ of $C$;\n\n> 12Contrary to a M-action A, where A is a set, in a M-module A comes\
+    \ equipped with a monoidal structure too."
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# Categorical Deep Learning\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_21_0.png)\n\
+    \n**Figure 2.** String diagram representation of a parametric morphism. We often\
+    \ draw the parameter wire on the vertical axis to signify that the parameter axis\
+    \ is part of the data of the morphism.\n\n+   - 2-morphisms $(P, f) \\Rightarrow\
+    \ (P', f') : X \to Y$ are 1-morphisms $r : P' \to P$ of $M$ such that the triangle\n\
+    \n![](img/92dd63b8e10fefd3f3f227bf65a30b83_21_1.png)\n\ncommutes (equivalently\
+    \ an equality of parametric string diagrams as in Figure 3).\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_21_2.png)\n\
+    \n**Figure 3.** String diagram of reparametrisation. The reparametrisation map\
+    \ $r$ is drawn vertically.\n\n+   - Identity morphism on $X$ is the parametric\
+    \ map $(I, \\eta^{-1})$, where $\\eta$ is the unit of the underlying category.\n\
+    \nwhere composition of morphisms $(P, f) : X \to Y$ and $(Q, g) : Y \to Z$ is\
+    \ $(Q \\otimes P, h)$ where $h$ is the composite\n\n```\n$(Q \\otimes P) \\xrightarrow{\\\
+    mu_{Q,P,X}} Q \\otimes (P \\otimes X) \\xrightarrow{f} Q \\otimes Y \\xrightarrow{g}\
+    \ Z$\n```\n\nand composition of 2-morphisms is given by the composition of $\\\
+    mathcal{M}$.\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_21_3.png)\n\n**Figure\
+    \ 4.** String diagram representation of the composition of parametric morphisms.\
+    \ By treating parameters on a separate axis we obtain an elegant graphical depiction\
+    \ of their composition.\n\n**Remark G.2.** When the category is strict the identities\
+    \ of the category reduce to being the parametric morphisms of the $(I, \\text{id}_X)$"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "# Categorical Deep Learning\n\n**Example G.3** (Real Vector Spaces and Smooth\
+    \ Maps). Consider the cartesian Smooth whose objects are real vector spaces, and\
+    \ morphisms are smooth functions. When is cartesian, we can form Para(Smooth)\
+    \ modelling parametric smooth functions.\n\n**Lemma G.4** (Embedding of $\\mathcal{C}$\
+    \ into $\text{Para}(\\mathcal{C})$). There is a 2-functor $\\gamma : \\mathcal{C}\
+    \ \rightarrow \text{Para}(\\mathcal{C})$ which is identity-on-objects and treats\
+    \ every morphism $f : A \rightarrow B$ as trivially parametric, i.e. $f : A \t\
+    riangleright \\gamma(f) \\^{13}$\n\n*Remark G.5.* When the category $(\\mathcal{C},\
+    \ \triangleright)$ is strictly trivial the parametric functions do not require\
+    \ precomposition with the unit of actegory. That is to say that a morphism $f\
+    \ : X \rightarrow Y$ of $\\mathcal{C}$ is strictly the parametric morphism $(I,\
+    \ f) : X \rightarrow Y$.\n\n**Theorem G.6** (preserved colimits). Suppose $(\\\
+    mathcal{M}, \\eta, \\mu)$ is a monoidal category, that $(\\mathcal{C}, \triangleright)$\
+    \ is an $\\mathcal{M}$-category, and that $X \triangleright (\\cdot) : \\mathcal{C}$\
+    \ preserves connected colimits.\n\n*Remark G.7.* While in $\\mathcal{C}$ there\
+    \ are only kind of colimits, the colimits we mean in Para$(\\mathcal{C})$ are\
+    \ strict. The relationship to other flavours of colimit is a topic of ongoing\
+    \ research.\n\n*Proof.* Note that for a colimit over a trivially parametrised\
+    \ category to commute, the 1-cells of the colimit must be the same. Then, we may\
+    \ the following chain of isomorphisms:\n\n```\n$$\\text{Tr}_1\\((\text{Para }(\\\
+    mathcal{C}))\\) \\left(\\lim_{d\\in\\mathcal{D}} X_d, Y\\right) \\nsimeq \\lim_{P\\\
+    in\\mathcal{M}} \\mathcal{C} \\left(\\lim_{d\\in\\mathcal{D}} P \\triangleright\
+    \ X_d, Y\\right) \\nsimeq \\lim_{P\\in\\mathcal{M}} \\mathcal{C} \\left(\\lim_{d\\\
+    in\\mathcal{D}} P \\triangleright X_d, Y\\right) \\nsimeq \\lim_{P\\in\\mathcal{M}}\
+    \ \\lim_{d\\in\\mathcal{C}} (P \\triangleright X_d, Y) \\nsimeq \\text{Ob}(\\\
+    mathcal{M}) \\times \\lim_{d\\in\\mathcal{D}} (\text{Ob}(\\mathcal{M}) \\times\
+    \ (\\mathcal{C} \\times (P \\triangleright X_d, Y))) \\nsimeq \\lim_{d\\in\\mathcal{D}}\
+    \ \\left(\\prod_{P\\in\\mathcal{M}} \\mathcal{C} (P \\triangleright X_d, Y)\\\
+    right) \\nsimeq \\lim_{d\\in\\mathcal{D}} \\text{Tr}_1\\((\text{Para }(\\mathcal{C}))\\\
+    ) (X_d, Y)\\right)$\n```\n\n**Example G.8.** Fix $\\mathcal{M}$-category $(\\\
+    mathcal{C}, \triangleright)$, and a monad $(T, \\mu, \\eta)$ on $\\mathcal{C}$\
+    \ with acteoretic strength $\\sigma : \\mathcal{M} \triangleright T(X) \rightarrow\
+    \ T(M) \triangleright \\mathbf{X}$. This gives us a monad of $\text{Para}_{}_{}(\t\
+    riangleright)$ on $\text{Para}_{}(\\mathcal{C})$ whose underlying endofunctor:\n\
+    \n+   - Acts as $T$ as does on objects$^{14}$;\n- Sends $(P, f) : X \rightarrow\
+    \ Y$ to $(P, f')$, where $f'$ is the composite\n\n```\n$P \triangleright T(X)\
+    \ \\xrightarrow{\\sigma_{P,X}} T(P \triangleright X) \\xrightarrow{T(f)} T(Y)$\n\
+    ```\n\nand the unit 2-natural transformations are defined as follows:\n\n+   -\
+    \ Unit Para,$(\\eta) : \\text{id}_{\text{Para}_{}(\\mathcal{C})} \\Rightarrow\
+    \ \\text{Para}_{}(\triangleright)$ T component at $X : \\mathcal{C}$ is the element\
+    \ of $\\text{Para}_{}(\\mathcal{C})(X, T(X))$ given by the parametric morphism\
+    \ $(I, u_X)$, where $u_X$ is the composite\n\n```\n$$\\mathbf{I} \\triangleright\
+    \ X^{\\gamma_X^{-1}} X \\triangleright T(X)$\n```\n\n> $13}$Here we are treating\
+    \ $\\mathcal{C}$ as 2-category with only identity 2-morphisms.\n$^{14}$This is\
+    \ well defined since $\\text{Ob}(\\text{Para}(\\mathcal{C})) = \\text{Ob}(\\mathcal{C})$\n\
+    \n23"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# # Categorical Deep Learning
+
+
+    For every parametric map $(P, f) \in Para(C, Y)$ we have the strictly natural
+    square in Equation (9). The 2-cell is given by the reparametrisation $\beta_{P,I}:
+    P \otimes I \to I \otimes P$ with identity since we are assuming $\mathcal{M}$
+    is strict monoidal. It can be checked that indeed this satisfies the conditions
+    of a 2-morphism in $Para_{\mathcal{M}}(C)$. This makes $Para_(\eta)$ a 2-natural
+    transformation.
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_23_0.png)
+
+
+    +   * Multiplication Para_{(\mu): Para_{(\mu)}(T)^2 \to Para_{(\mu)}$ whose component
+    at $X \in Para_{\mathcal{M}}(C)$ is the morphism $(I, m_X)$ where $m_X$ is the
+    composite
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_23_1.png)
+
+
+    For every parametric morphism $(P, f) \in Para(C, Y)$ we have the strictly natural
+    square in Equation (10). It is given by $\beta_{P,I}$ and is strict because $\mathcal{M}$
+    is strict monoidal. It can be checked that this satisfies the conditions of a
+    2-morphism in $Para_{\mathcal{M}}(C)$ This makes $Para_(\mu)$ a 2-natural transformation.
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_23_2.png)
+
+
+    Last, we need to check that $(\eta)$ and $Para_{(\mu)}$ satisfy the 2-natural
+    coherence conditions. Since the components of components of $Para_{(\mu)}$ are
+    trivial, this is straightforward to check.
+
+
+    Remark 6.9. For strictly monoidal $\mathcal{M}$ and strict category $(C, \bullet)$
+    the unit and comultiplication of $Para(T)$ are exactly the unit and multiplication
+    of $T$.
+
+
+    The following shows us how the abstract of the 2-categorical framework of weight
+    using (usage of the weight in two different places obtained by using the vertex)
+    arises from the structure of a monoid induced by lax algebra of a strict monad
+    on $C$.
+
+
+    **Theorem 6.10** (Lex) algebras for $Para(T)$ induce comoids, $T : C \to C$ a
+    monad on $C$. Consider a lax algebra $(A, (P, \alpha, \epsilon_A, \delta_A)$ for
+    the 2-monad $Para(T)$. Then $P$ is a comoid in $\mathcal{M}$ where $\epsilon_A$
+    is the data of count, and $\delta_A$ the data of comultiplication. The same statement
+    holds for a lax algebra of $Para(T)$ comoid.
+
+
+    *Proof.* We start by unpacking the data of the lax algebra 2-cells.
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_23_3.png)
+
+
+    We can see that they are given by two parametrisations: $\epsilon_P: P \otimes
+    I \to I$ and $\delta_P: I \otimes P \to P \otimes P$. These uniquely determine
+    the morphisms $!_P : P \to I$ and $\Delta_P : P \to P \otimes P$ respectively.
+    To show that this is a comoid, we need to unpack the lax laws which only on morphisms
+    in $\mathcal{M}$. It is relatively tedious, straightforward to check that these
+    conditions ensure $!_P$ and $\Delta_P$ satisfy the lax laws. $\square$
+
+
+    24'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Categorical Deep Learning
+
+
+    **Corollary G.11.** The functor Lax-AlgMnd(Para(T)) → CoMon(C) × Lax(→, C) which
+    takes algebras for Para(T) to the pair of the underlying comonoid and the C-morphism
+    which interprets the parametric structure map is full-and-faithful.
+
+
+    *Proof.* The proof is formal and left to the reader.
+
+
+    **Conjecture G.12.** Given a cartesian category (M, ×1), an M-category (C, ►),
+    and a strong endofunctor F on C such that F and C satisfy the hypotheses of Theorem
+    B.16, then the assignment of a algebra (X, (P, f)) to
+
+
+    ```
+
+    X, (P,f): P → 1, A: P → P × P, laxlim ∘ Para(F,f) ∘∘ Para(Fⁿ)(P,f) : FⁿX → X)
+
+    ```
+
+
+    defines an equivalence of categories Lax-AlgMnd(Para(F)) → Lax-AlgMnd(Fⁿ)
+
+
+    # H. Tying Examples from Geometric Deep Learning
+
+
+    # H.1. Examples Linear equivariant for pair of pixels.
+
+
+    **Example H.1** (Linear equivariant for a pair of pixels). Consider the category
+    Vect of finite-dimensional vector spaces and linear maps. For simplicity, we assume
+    that the carrier for our data is R², which is a pair of pixels. It is well known
+    that this function can be represented as a multiplication with a 2x2 matrix W
+
+
+    | w1 w2 |
+
+    | w3 w4 |
+
+
+    Now consider the induction (Z₂, +, 0)—which can be made to cover this pixel swaps—and
+    the induced action on R², if f : R² → R² is equivariant with respect to →, then
+    for any [x1, x2] ∈ R² it must hold that
+
+
+    | w1x2 + w2x1 | | w3x1 + w4x2 |
+
+    | w3x2 + w4x1 | | w1x1 + w2x2 |
+
+
+    (11)
+
+
+    This implies that w3 = w2 and w4 = w1, meaning W is of the form
+
+
+    | w1 w2 |
+
+    | w2 w1 |
+
+
+    where the weights make the matrix a symmetric. Any one neural network fw satisfying
+    this constraint will be a linear translation equivariant layer over Z₂, which
+    can be used as a building block to construct geometric deep learning architectures.
+
+
+    **Remark H.2** (Circulants and Nodes). Note that this can be used to generate
+    larger inputs (e.g. Rᵏ for k > 2). Generally, it is a well-known fact in signal
+    processing, for fw to satisfy a linear translation equivariant constraint, W must
+    be a circulant matrix. Circulant matrices are known in neural networks as convolutional
+    layers, the essence of modern CNNs (Fukushima et al., 2013; LeC et al., 1998).
+
+
+    **Example H.3** (Invariant maps) are also (G × X)-algebrahomomorphisms where the
+    codomain is a trivial group action. Specifically, sending to the domain of any
+    of the examples from Example 2, the corresponding induced commutative diagram
+    is:
+
+
+    ```
+
+    G × Rⁿ××A  Gf  G × Rⁿ××A
+
+    |               |
+
+    |               |
+
+    Rⁿ××A f Rⁿ××A
+
+    ```
+
+
+    Elementwise, the commutativity of that diagram equals the equation
+
+
+    ```
+
+    f(g ► x) = f(x)
+
+    ```
+
+
+    The translation example, for instance, recovers the equation f((i'',j'') ► x(i,j))
+    = (i'',j'') ► f(i,j) which reduces to f(i-i'', j-j'') = f(i,j). Intuites that,
+    for any displacement (i'',j''), the result of translating the input by (i'',j'')
+    and then applying the function f is the same as just f.
+
+
+    25'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "# Categorical Deep Learning\n\nWe can run the analogous calculation with weight\
+    \ sharing. We consider the linear endofunction $w \\in \\mathbb{R}^{Z_2 \\to \\\
+    mathbb{R}^{Z_2}$ on a pair of pixels (represented as a matrix $W = \\begin{bmatrix}\
+    \ w_1 & w_3 \\ w_2 & w_4 \\end{bmatrix}$), and the group of translations $(\\\
+    mathbb{Z}_2,+0)$ on the domain, this time we identify the endomorphism of the\
+    \ codomain. If $w$ is invariant to $\blacktriangleright$, see Example H.3 for\
+    \ any $[x_1, x_2] \\in \\mathbb{R}^2$ it has to hold\n\n```\n$\\begin{bmatrix}\
+    \ x_1x_2+w_2x_1 \\ w_3x_2+w_4x_1 \\end{bmatrix} = \\begin{bmatrix} w_1x_1+w_2x_2\
+    \ \\ w_3x_1+w_4x_2 \\end{bmatrix} \\quad (12)$\n```\n\nimplying $w_1 = w_2$ and\
+    \ $w_3 = w_4$, the equivariance induced a particular tying scheme\n\n```\n$\\\
+    begin{bmatrix} w_1 \\ w_3 \\ w_3 \\end{bmatrix}$\n```\n\nin which the matrix has\
+    \ shared rows. Note this implies that each of the pixels in the output of fw will\
+    \ be the same, and this layer could also be represented as a single product with\
+    \ $[w_1, w_3]$, eliminating the grid structure in the original set. A layer would\
+    \ not be an endofunction on $\\mathbb{R}^{Z_2}$, however, was our initial focus\
+    \ of exploration.\n\n# H.2. Examples from Automata Theory\n\n# H.2.1. Streams\n\
+    \n**Example H.4** (Streams). Let $O$ be a set, thought of as the set of outputs.\
+    \ Consider the endofunctor $O \\times : Set \\to Set$. Then the set $Stream(O)$\
+    \ of $O^{\\omega}$ with outputs $O$, together with the map $(output, next) : Stream(O)\
+    \ \\to O \\times Stream(O)$ forms a coalgebra of $O$. They have a representation\
+    \ the following datatype\n\n```\ndata Stream o = MkStream {\n  output :: o\n \
+    \ next :: Stream o\n}\n```\n\nThis datatype describes streams cohesively, and\
+    \ from which we can always extract one, and another stream. In Example I.3 we\
+    \ will use this how it is related to recurrent neural networks.\n\n**Example H.5**\
+    \ (Streams to means coalgebra). Consider the endofunctor $(O \\times -)$ from\
+    \ Example H.4, and a coalgebra homomorphism from any other $(O \\times -)$-coalgebra\
+    \ $X, (o, n)$ into $(Stream(O), (output, next))$:\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_25_0.png)\n\
+    \nThen the map $f_{o,n} : X \\to Stream(O)$ is usually to a stream, comes from\
+    \ functional programming how a stream of values can be obtained from a single\
+    \ value. It is implemented by corecursion on the input:\n\n```\n$f_{o,n} : x \\\
+    to Stream \\ o\\nff_{o,n} x = MkStream (o \\ x) (f_{o,n} (n \\ x))$\n```\n\nThis\
+    \ recursion is structural in nature, meaning it satisfies the following two equations\
+    \ which arise from unpacking the algebra homomorphism equations elementwise:\n\
+    \n```\n$o(x) = output(f_{o,n}(x)) \\quad (13)\\nf_{o,n}(n(x)) = next(f_{o,n}(x))\
+    \ \\quad (14)$\n```\n\n> 15 An infinite sequence of outputs"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "# Categorical Learning\n\nHere Equation (13) tells us that the output produced\
+    \ by $f_{o,n}$ at $x$ is $o(x)$, and Equation (14) tells us that the stream is\
+    \ produced by $f_{o,n}$ at $x$ is $f_{o,n}(x)$.\n\n**Remark H.6.** Analogous to\
+    \ Remark 2.13, there can only be one *unfold* of this type. This is because streams\
+    \ are a terminal object in the category of $(O \\times -)$-codgebras.\n\nWe can\
+    \ study the weight sharing between streams. Consider the category and coremonad\
+    \ $\\mathcal{R} \\times -$ given by the output set $(\\mathcal{R}, o, n)$, and\
+    \ represent the coalgebra map with scalars $w_o$ and $w_n$, denoting the output\
+    \ and the next state, Then the universal coalgebra homomorphism is a linear map\
+    \ $f_{o,n}: \\mathcal{R} \\to \\text{Stream}(\\mathcal{R})$ satisfying Equations\
+    \ (13) and (14). If we represent this as an infinite-dimensional\n\n```\n$w_1\
+    \ \\quad w_2 \\quad w_3 \\quad w_4 \\quad \\dots$\n```\n\nthen the induced weight\
+    \ sharing removes degrees of freedom: the matrix is completely determined by $w_o$\
+    \ and $w_n$, and is of the form:\n\n```\n$[w_o \\quad w_n \\quad w_n^2 \\quad\
+    \ w_n^3 \\quad w_n^4 \\dots]$\n```\n\n# H.2.2. Moore Machines.\n\n**Example H.7**\
+    \ (Moore machines). Let $O$ and $I$ be sets, thought of as outputs and inputs,\
+    \ respectively. Consider the endofunctor $O \\times (I \\to -) : Set \\to Set$.\
+    \ Then the $Moore_{O,I}$ of Moore Machines with $O$-labeled outputs and $I$-labeled\
+    \ inputs with the map $(output, next): \\text{Moore}_{O,I} : O \\times (I \\to\
+    \ O)$ forms a coalgebra for this endofunctor. It can be represented by the following\
+    \ datatype:\n\n```\ndata Moore o = MkMoore {\n  output :: o,\n  nextStep :: (i\
+    \ -> Moore o)\n}\n```\n\nLike Mealy, this is deconstruction. From a Moore machine\
+    \ we can always extract an output and a function which an input produces another\
+    \ Moore. In Example 5 we will see how this will be related to general recurrent\
+    \ neural networks of a particular form.\n\n**Example H.8** (Unfolds to Moore machines\
+    \ are terminal $(O \\times -)$-codgebras). Consider the endofunctor $O \\times\
+    \ (I \\to -)$ from Example H.7, and any other $(O \\times -), (o, n)$ to $\\text{Moore}_{O,I},\
+    \ (output, next):\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_26_0.png)\n\nThen\
+    \ the map $f_{o,n}$ is necessarily an unfold to a Moore machine, describing how\
+    \ a Moore machine is obtained from a single value. It is a recursive function\
+    \ as follows:\n\n```\n$f_m : x \\to Moore \\ o \\n f_m \\ x = MkMoore (m_1 \\\
+    \ x) \\ (\\lambda i \\to f_m (m_2 \\ i))$\n```\n\nwhich is natural in nature,\
+    \ it satisfies the following two equations which arise by unpacking the coalgebra\
+    \ morphism equations aswise:\n\n```\n$o(x) = output(f_{o\n```\n\nHere Equation\
+    \ (15) tells us that the output of the Moore machine produced by $f_{o,n}$ at\
+    \ $x$ is given by the output of n at $x$, and Equation (16) tells us that $i$\
+    \ is the one produced by $f_{o,n}$ at $n(x).\n\n27"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# I. Parametric 2-endofunctors and their Algebras\n\nJust like before, often\
+    \ at our disposal we have a more minimal structure. Instead of requiring a strong\
+    \ 2-monad, we can insist merely a strong 2-endofunctor. The data of an 2-endofunctor\
+    \ will be the same as the algebra for an endofunctor 2.8.\n\n**Example 1.1 (Folding\
+    \ RNN cell),** Consider the endofunctor $1 + A \times -$ from Example 2.9. Via\
+    \ strength from Example E.10 we can form the 2-endofunctor $Para(1 + A \times\
+    \ -): Para(Set) \\to Para(Set)$. Then a folding recurrent neural network arises\
+    \ as its algebra.\n\nMore concretely, an algebra here consists of the carrier\
+    \ $S$ (chosen to denote *hidden state*) and a parametric map $(P, \text{cell}^{rst})\
+    \ \\in Para(Set)(1 + A \times S) \\cong P + P \times A \times S$ we can break\
+    \ into two pieces: the choice of the initial hidden state $\text{cell}^S: P \\\
+    to S$ and the recurrent neural network cell $\text{cell}^{rst}: P \times A \t\
+    imes S \\to S$, as shown in the figure below. We will see how this construction\
+    \ will produce a\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_27_0.png)\n\nFigure\
+    \ 5. An algebra for $Para(1 + A \\times -)$ consists of a recurrent neural network\
+    \ and an initial hidden state.\n\nrecurrent neural network consumes a sequence\
+    \ of inputs and iteratively updates its hidden state.$^{16}$\nfrom Example E.10\
+    \ we can form the 2-endofunctor $Para(A+(-)^2)$ on $Para(Set)$. Then a recurrent\
+    \ neural network arises as its algebra.\n\nMore concretely, an algebra here consists\
+    \ of the carrier $S$ and a parametric map $(P, \\text{cell}^{csv}) \\in Para(Set)(A+S^2)$.\
+    \ Via the isomorphism $P \\times (A+S^2) \\cong P + P \times A \times S^2$ we\
+    \ can break into two pieces: the choice of the initial hidden state $\text{cell}^S$\
+    \ and the recurrent neural network cell $\text{cell}^{csv}: P \\times A \times\
+    \ S^2 \\to S$, as shown in the figure below.\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_27_1.png)\n\
+    \nFigure 6. An algebra for $Para(A+(-)^2)$ consists of a recurrent neural network\
+    \ and an initial hidden state.\n\n**Example 1.3 (Folding RNN),** Consider the\
+    \ endofunctor $O \\times -$ from Example H.4. Via strength $\\sigma_{P,X}: P \\\
+    times (O \\times X) \\to O \\times P \\times X$ we can form the 2-endofunctor\
+    \ $Para(O \\times -): Para(Set) \\to Para(Set)$. Then an unfolding recurrent neural\
+    \ network arises as its algebra.\n\nMore concretely, a coalgebra consists of the\
+    \ carrier $S$, and a parametric map $(P, (\\text{cell}_o, \\text{cell}_s)) \\\
+    in Para(Set)(S \\times O)$. Here $\text{cell}_o: P \\times S \\to O$ computes\
+    \ the output and $\text{cell}_s: P \\times S \\to S$ computes the next.$^{17}$\
+    \ We will see how this construction will produce an unfolding recurrent neural\
+    \ network which is\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_27_2.png)\n\nFigure\
+    \ 7. An algebra for $Para(O \\times -)$ consists of an unfolding recurrent neural\
+    \ network.\n\nstarting state produces a stream of outputs.\n\n$^{16}$We note that\
+    \ the hidden state is allowed to denote the parameter, which is not possible in\
+    \ the usual definition of a recurrent neural network cell.\n\n$^{17}$By universal\
+    \ property of the carrier we can treat it as one type of $P \times S \to O \t\
+    imes S$ or as two cells."
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "# Categorical Deep Learning\n\n**Example L4** (Mealy cell / Full RNN). Consider\
+    \ the inductor $I \rightarrow O$ – Example 2.11. Via strength from Example E.10\
+    \ we can the 2-endofunctor $Para(I \rightarrow O) : Para(Set) \rightarrow Para(Set)$.\
+    \ Then a Mealy cell arises as the coalgebra.\n\nMore concretely, a coalgebra consists\
+    \ of the carrier set $S$ and a parametric map $(P, cell^{\text{Mealy}}) \\in Para(Set),\
+    \ (S, I \rightarrow S)$. Here $cell^{\text{Mealy}}$ can be thought of as a map\
+    \ $P \times S \rightarrow I \rightarrow O \times S$, as shown in the figure below.\
+    \ We interpret it as a recurrent\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_28_0.png)\n\
+    \nFigure 8. An example for $Para((I \rightarrow O))$ 2-endofunctor of an object\
+    \ $S$ and a map $f: P \times S \rightarrow I$ which we have taken liberty to unify.\n\
+    \nneural network consuming a hidden state $S$, and output $O$ and an updated input\
+    \ $O$ and updated hidden state.\n\nThis suggests that neural networks can be thought\
+    \ of as Mealy machines, a perspective seldom advocated in the literature.\n\n\
+    **Example L5** (Mealy machine). Consider the inductor $O \rightarrow (I \rightarrow\
+    \ -)$ from Example H.7. With $\\sigma_{p,X}: P \times O \times (I \rightarrow\
+    \ O) \rightarrow Para(O \times (I \rightarrow -))$, we get the 2-endofunctor $Para(O\
+    \ \times (I \rightarrow -)) : Para(Set) \rightarrow Para(Set)$. Then a Mealy cell\
+    \ arises as its coalgebra.\n\nMore concretely, a coalgebra consists of the carrier\
+    \ set $S$ and a parametric map $(P, cell^{\text{More}}) \\in Para(Set), (S, O\
+    \ \times (I \rightarrow S))$. Here $cell^{\text{More}}$ can be thought of as a\
+    \ map $P \times S \rightarrow O \times (I \rightarrow S)$, as shown in the figure\
+    \ below. We break it down into two pieces $cell^{\text{More}}: P \times S \rightarrow\
+    \ O$ and $cell^{\text{More}}: P \times S \rightarrow I$.\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_28_1.png)\n\
+    \nFigure 9. An example for $Para(O \times (I \rightarrow -))$ as a parametric\
+    \ model. Here the output does not depend on the current input.\n\n# Unrolling\
+    \ Neural Networks via Transfinite Construction\n\nWe will reap the benefits of\
+    \ the transfinite construction of free monads on endofunctors, and the corresponding\
+    \ unrolling of these networks. Specifically, with Theorem G.10 heading towards\
+    \ the path of having weight arising out of the categorical framework, we can perform\
+    \ the unrolling of these networks. For the purposes of space and clarity, the\
+    \ unaking is done as length homomorphism of algebras for endofunctors of 2-monads.\n\
+    \n**Example J.1** (Iterated Folding RNNs). Consider an algebra $(P, cell^{\text{fold}})$\
+    \ of $Para(1+A \times -)$, a folding RNN cell (Example I.1). Its unrolling is\
+    \ a $Para(1+A \times -)$ where $\\Delta p: P \rightarrow P \times P$ is the copy\
+    \ map.\n\n```\n$$1+A \\times List(A) \\xrightarrow{\\Delta p} 1+A \\times X\\\
+    n\\gamma(Nil, Cell) \\Downarrow (P, cell^{\text{fold}})\\nList(A) \\xrightarrow{f_{rent}}\
+    \ X\\n\\quad \\quad \\quad (17)$\n```\n\nHere the map $f_{rent}$ is the parametric\
+    \ analogue of a *fold* (Example 2.12):"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Categorical Deep Learning
+
+
+    ```
+
+    front :: (p, List a) -> x
+
+    front p Nil = cell^p (inl ())
+
+    front p (Cons a as) = cell^p (inr a (front as))
+
+    ```
+
+
+    We can see that front is structurally recursive: it processes the head of the
+    list by applying cell^front to the parameter p and the output of the front with
+    the same parameter, and the tail of the same tail.
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_29_0.png)
+
+
+    We proceed to show that Δp is a valid parametrisation for the parametric morphisms.
+    Unpacking the composition on top right, and the bottom left of Equation (17),
+    respectively, yields parametric maps
+
+
+    ```
+
+    P × (1 + A × List(A)) → X
+
+    nP × (1 + A × List(A)) → X
+
+    ```
+
+
+    whose implementations are, respectively:
+
+
+    ```
+
+    (p, q, inl(•)) → cell^front (p, in(•))
+
+    (p, inr(a, as)) → cell^front (q, a, f(p, as))
+
+    (p, •) → cell^front (p, in(•))
+
+    (p, (a, as)) → cell^front (p, a, f(p, as))
+
+    ```
+
+
+    It is easy to see that Δp is a valid parametrisation of them, "tying" the parameters
+    p and q.
+
+    **Example 1.2** (Iterated unfolded RNN). Consider a coalgebra (P, cell_₀, cell_₀)
+    of Para(O × −), i is an unfolding RNN cell (Example 1.3). Its unrolling is a Para(O
+    × −)-coalgebra homomorphism below:
+
+
+    | | | |
+
+    |---|---|---|
+
+    | (P,(cell_₀,cell_₀)) | (P,f,n) | Stream(O) |
+
+    | | Δp | γ((output,next)) |
+
+    | O × X | Para(O × −),(f,n)) | O × Stream(O) |
+
+
+    Here f,n :: P × X → Stream(O) is the syntactic analogue of an unfold (Example
+    1.5):
+
+
+    ```
+
+    f_n :: (p, x) -> Stream o
+
+    f_n p x = MKStream (cell_n p x) (f_n p (cell_n x))
+
+    ```
+
+
+    We can see that f,n is structurally recursive: it produces a stream whose head
+    is cell_n(p,x), and whose tail is the stream produced by f,n at cell_n(p,x).
+
+
+    ![](img/92dd63b8e10fefd3f3f227bf65a30b83_29_1.png)
+
+
+    Figure 11. String representation of the unrolled "unfolding" recurrent neural
+    network.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "Example J.3 (Iterated Recursive NN). Consider an algebra (P, cell^{fCSV}) of\
+    \ Para(A + (-)^2), i.e. a recursive neural network cell (Example 1.2). Its unrolling\
+    \ is a Para(A + (-)^2)-algebra homomorphism between:\n\n```\n$$\\begin{aligned}\
+    \ A + Tree(A)^2 & \\text{Para}(A+(-)^2)((P,f_{rCSV})) & \\to A + X^2 \\ \\downarrow\
+    \ & \\Delta_P & \\downarrow (P,cell^{fCSV}) \\ Tree(A) & \\to X \\ & (P,f_{rCSV})\
+    \ \\end{aligned}$\n```\n\n$f_{rCSV}$ is a function with the following implementation\n\
+    \n```\n$f_{rCSV} :: (p, Tree\\ a) \\to x\\n$f_{rCSV}\\ p (Leaf\\ a) = cell^{fCSV}\\\
+    \ p (inl\\ a)\\n$f_{rCSV}\\ p (Node\\ l\\ r) = cell^{fCSV}\\ p (in(f_{rCSV}\\\
+    \ p\\ l)(f_{rCSV}\\ p\\ r))$\n```\n\nThis function performs weight sharing, as\
+    \ the recursive call to subtrees is done with the same parameter p.\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_30_0.png)\n\
+    \nExample J.4 (Iterated Mealy cell). Consider an algebra (P,cell^{Mealy}) of Para(I\
+    \ $\to O \\times -$), i.e. a Mealy machine cell (Example 2.11). Its unrolling\
+    \ is a Para(I $\to O \\times -$)-algebra homomorphism below:\n\n```\n$$\\begin{aligned}\
+    \ & (P,f_m) & \\to Mealy_{O,I} \\\\downarrow & \\Delta_P & \\downarrow \\gamma(next)\
+    \ \\ (P,n) & & \\\\ (I \\to O \\times X) & Para(I \\to O \\times -)((P,f_n)) &\
+    \ \\to (I \\to O \\times Mealy_{O,I}) \\end{aligned}$\n```\n\n$f_n$ is a core\
+    \ function with the following implementation\n\n```\n$f_n :: (p, x) \\to Mealy\\\
+    \ o\\n$f_n (p, x) = MkMealy\\$ i \\- let\\ (o', x') = n\\ p\\ i\\nin (o', x'),\
+    \ f_n\\ p\\ x'$\n```\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_30_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "Example J.5 (Iterated Moore machine). Consider a coalgebra $P, cell^{Moore}$\
+    \ of $Para(O(I \\rightarrow -))$, i.e. a Moore machine cell (Example H.7). Its\
+    \ unrolling is $Para(O \\times (I \\rightarrow -))$-coalgebra homomorphism below:\n\
+    \n```\n$$\\begin{aligned} X & (P,f_n) & \rightarrow Moore_{O,I} \\ (P,(o_n)) &\
+    \ \\searrow \\Delta_P & \\gamma(next) \\ O \\times (I \\rightarrow -) & \rightarrow\
+    \ X & Para(O\\times(I\\rightarrow -))((P,f_n)) \rightarrow (I \\rightarrow O \\\
+    times Moore_{O,I}) \\end{aligned}$ (21)\n```\n\nIn code, $f_n$ is a coercive function\n\
+    \n```\n$f\\n :: (p, x) \\rightarrow Moore \\ o \\ i\\nf\\n (p, x) = MkMoore \\\
+    $ \\backslash i \\rightarrowrightarrow (o \\ p \\ x, f\\n \\ p \\ n \\ x \\ i)$\n\
+    ```\n\n![](img/92dd63b8e10fefd3f3f227bf65a30b83_31_0.png)\n\nFigure 14. String\
+    \ diagram representation of an unrolled Moore machine.\n\n32"
+  merge: -1
+  img_proc: true
