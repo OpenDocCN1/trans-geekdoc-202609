@@ -1,0 +1,2875 @@
+- pgno: 0
+  md: '# # GO WEB DEVELOPMENT
+
+
+    SUCCINCTLY
+
+
+    BY MARK LEWIN
+
+
+    SUCCINCTLY E-BOOK SERIES'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# # Go Web Development
+
+    # Succinctly
+
+
+    By
+
+    Mark Lewin
+
+
+    Foreword by Daniel Jebaraj
+
+
+    ![](img/cdabbe899d95a91197e7ec37cc1c8048_1_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Important licensing information. Please read.
+
+
+    This book is available for free download from www.syncfusion.com on completion
+    of a registration form.
+
+
+    If you obtained this book from any other source, please register and download
+    a free copy from www.syncfusion.com.
+
+
+    This book is licensed for reading only if obtained from www.syncfusion.com.
+
+
+    This book is licensed strictly for personal or educational use.
+
+
+    Redistribution in any form is prohibited.
+
+
+    The authors and copyright holders provide absolutely no warranty for any information
+    provided.
+
+
+    The authors and copyright holders shall not be liable for any claim, damages,
+    or any other liability arising from, out of, or in connection with the information
+    in this book.
+
+
+    Please not use this book if the listed terms are unacceptable.
+
+
+    Use shall constitute acceptance of the terms listed.
+
+
+    SYNCFUSION, SUCCINCTLY, DELIVER INNOVATION WITH EASE, ESSENTIAL, and .NET ESSENTIALS
+    are the registered trademarks of Syncfusion, Inc.
+
+
+    Technical Reviewer: James McCaffrey
+
+
+    Copy Editor: John Elderkin
+
+
+    Acquisitions Coordinator: Hillary Bowling, online marketing manager, Syncfusion,
+    Inc.
+
+
+    Proofreader: Jacqueline Bieringer, content producer, Syncfusion, Inc.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Table of Contents
+
+
+    +   The Story Behind the Succinctly Series of Books.......................................................
+    7
+
+
+    +   About the Author ................................................................................................
+    9
+
+
+    +   Acknowledgements ..........................................................................................
+    9
+
+
+    +   Chapter 1 Introduction......................................................................................
+    10
+
+
+    +   Who is this e-book for?...............................................................................
+    10
+
+
+    +   Why use Go for web development?......................................................
+    10
+
+
+    +   Setting up your development environment..................................................
+    11
+
+
+    +   Installing the Go tools......................................................................
+    11
+
+
+    +   Creating a workspace .......................................................................
+    14
+
+
+    +   Code examples ................................................................................
+    14
+
+
+    +   Chapter 2 Serving and Routing.........................................................................
+    16
+
+
+    +   Go as a simple web server ............................................................
+    16
+
+
+    +   Simple serving and routing .......................................................
+    17
+
+
+    +   Middleware ................................................................................
+    21
+
+
+    +   More advanced serving and routing with the Gorilla Web Toolkit...............
+    25
+
+
+    +   Installing and referencing the gorilla/mux package ................... 25
+
+
+    +   Using gorilla/mux .......................................................................
+    26
+
+
+    +   Returning errors.........................................................................
+    28
+
+
+    +   Chapter 3 Accessing Data ................................................................
+    30
+
+
+    +   Getting a driver for your database .......................................
+    30
+
+
+    +   sql.DB ...................................................................................
+    33
+
+
+    +   Retrieving data from the database..................................................
+    34
+
+
+    +   Tidying up the output .......................................................
+    36
+
+
+    +   Chapter 4 Templates.........................................................................
+    38'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'Introducing templates ................................................................................................38
+
+
+    Reworking the data access application using a template...............................................40
+
+
+    Using embedded methods in templates.....................................................................43
+
+
+    Using conditionals in templates ........................................................................46
+
+
+    # Chapter 5 Creating a RESTful JSON API ........................................................48
+
+
+    RESTful APIs ...................................................................................................48
+
+
+    Our RESTful web service ................................................................................51
+
+
+    Serving and routing ........................................................................................52
+
+
+    The complete application...............................................................................60
+
+
+    Running the application ................................................................................67
+
+
+    Displaying all cities ................................................................................67
+
+
+    Displaying a specific city .......................................................................69
+
+
+    Adding a city ................................................................................................69
+
+
+    Deleting a city ..........................................................................................70
+
+
+    Challenge step ............................................................................................71
+
+
+    # Chapter 6 Cookies and Sessions..................................................................72
+
+
+    Introducing cookies and sessions...............................................................72
+
+
+    What is a cookie? ..........................................................................72
+
+
+    What is a session?.......................................................................72
+
+
+    What is a session cookie? Or a persistent cookie?...............................73
+
+
+    Working with cookies.....................................................................73
+
+
+    Setting cookies .......................................................................73
+
+
+    Fetching cookies .......................................................................74
+
+
+    Using cookies ......................................................................74
+
+
+    Working with sessions ...............................................................77
+
+
+    Basics .......................................................................................77'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'Flash messages...............................................................................................................79
+
+
+    # Chapter 7 Development Techniques...............................................................................81
+
+
+    Logging ........................................................................................................................81
+
+
+    Basic logging ...................................................................................................................81
+
+
+    Logging web requests...............................................................................................83
+
+
+    Testing ...................................................................................................................86'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # The Story Behind the Succinctly Series of Books
+
+
+    Daniel Jebaraj, Vice President of Syncfusion, Inc.
+
+
+    **Stating on the cutting edge**
+
+    as many of you may know, Syncfusion is a provider of software components for the
+    Microsoft platform. This puts us in the exciting but challenging position of always
+    being on the cutting edge.
+
+
+    Whenever platforms or tools are shipping out of Microsoft, which seems to be about
+    every other week these days, we have to educate ourselves, quickly.
+
+
+    # Information is plentiful but harder to digest
+
+
+    In reality, this translates into a lot of book orders, blog searches, and Twitter
+    scans.
+
+
+    While information is becoming available on the Internet and more and more books
+    are being published, even on topics that are relatively new, one aspect that continues
+    to inhibit us is the inability to find concise overview books.
+
+
+    We are usually faced with two options: read several 500+ page books or scour the
+    web for relevant blog posts and other articles. Just as everyone who has a job
+    to do and customers to serve, we find this quite frustrating.
+
+
+    # The Succinctly series
+
+
+    This frustration translated into a deep desire to produce a series of concise
+    technical books that would be targeted at developers working on the Microsoft
+    platform.
+
+
+    We firmly believe, given the background knowledge which developers have, that
+    most topics can be translated into books that are between 50 and 100 pages.
+
+
+    This is exactly what we resolved to accomplish with the *Succinctly* series. Isn''t
+    everything wonderful born out of a deep desire to change things for the better?
+
+
+    # The best authors, the best content
+
+
+    Each author was carefully chosen from a pool of talented experts who shared our
+    vision. The book you hold now in your hands, and the others available in this
+    series, is a result of the authors'' tireless work. You will find original content
+    that is guaranteed to get you up and running in the time it takes to drink a few
+    cups of coffee.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Free forever
+
+
+    Syncfusion will be working to produce books on several topics. The books will
+    always be free.
+
+    Any updates we publish will also be free.
+
+
+    # Free? What is the catch?
+
+
+    There is no catch here. Syncfusion has always been that we offer deeper and broader
+    frameworks than anyone else on the market. Developer education greatly helps us
+    market and sell against competing vendors who promise to "enable AJAX support
+    with one click," or "turn the moon to cheese!"
+
+
+    # Let us know what you think
+
+
+    If you have any topics of interest, thoughts, or feedback, please feel free to
+    send them to us at [succinctly-series@syncfusion.com](mailto:succinctly-series@syncfusion.com).
+
+
+    We sincerely hope you enjoy reading this book and that it helps you better understand
+    the topic of study. Thank you for reading.
+
+
+    Please follow us on Twitter and "Like" us on Facebook to help us spread the word
+    about the Succinctly series!
+
+
+    ![](img/cdabbe899d95a91197e7ec37cc1c8048_7_0.png)
+
+
+    ![](img/cdabbe899d95a91197e7ec37cc1c8048_7_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# About the Author
+
+
+    Mark Lewin has been developing, teaching, and writing about software for more
+    than 18 years. His main interests are web development in general and web mapping
+    in particular. While working for ESRI, the world''s largest GIS company, he acted
+    as a consultant, trainer, and course author. He has been a frequent speaker at
+    industry events, and he currently works with a wide variety of open-source mapping
+    tools and a handful of relevant JavaScript frameworks, including Node.js, Dojo,
+    and Query.
+
+
+    Based in the U.K., Mark currently teaches ArcGIS Server/JavaScript development
+    for Geospatial Training LLC and is the author of the Google Maps API: Get Started
+    course for Pluralsight. By day, he writes MySQL courseware for Oracle.
+
+
+    Mark can be reached at mark@marklewin.com or on Twitter at @gisapps.
+
+
+    This is Mark''s third e-book for Syncfusion. The first, Leaflet is Succinctly,
+    Go Succinctly, will be published by the time you read this.
+
+
+    # Acknowledgements
+
+
+    I''d like to thank my children for being little rays of sunshine, even on dark
+    days. Words cannot express how I feel about you all.
+
+
+    And to my best friend, the “philosopher” David Peters. Everyone needs a friend
+    to help them in the down times and keep them grounded in the good times, and David
+    does that for me.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# # Chapter 1 Introduction
+
+
+    # ## Who is this e-book for?
+
+
+    This book is for any developer who has a basic familiarity with the Go programming
+    language and is interested in using Go to write web applications.
+
+
+    If you can write simple console applications with Go, you shouldn''t have any
+    problem understanding the contents of this short e-book.
+
+
+    If you''re looking for a primer on the language itself, I may humbly recommend
+    my book Go Succinctly, which will take you from zero to... well, if not exactly
+    mastery, as an appreciation and understanding of the Go programming language.
+    It also gives you links to other resources that help you become familiar with
+    Go.
+
+
+    Like all e-books in Syncfusion''s *Succinctly* series, you can download Go Succinctly
+    free of charge from the Syncfusion website.
+
+
+    # ## Why use Go for web development?
+
+
+    Go is an excellent language for writing applications, specifically for web services.
+    In fact, it was designed specifically with the web in mind. After all, any modern
+    programming language can hardly gain traction if it ignores the web.
+
+
+    So, which features of the Go programming language are particularly useful for
+    web development? Here are a few:
+
+
+    # ## Concurrency
+
+
+    Any decent-sized web server needs to run many thousands of tasks concurrently.
+    Concurrency is complex and difficult in many languages because it is usually implemented
+    as an afterthought. Concurrency, however, is built into the Go language. Indeed,
+    concurrency is one of the main problems the Go was designed to solve.
+
+
+    In Go, concurrency is achieved by using Goroutines, which are lightweight threads
+    that allow developers to perform multiple operations asynchronously. These are
+    incredibly useful in web applications. For example, when a user connects to your
+    web server, you can simply spawn a Goroutine to handle any interactions with that
+    client.merely prefix the function call with the `go` keyword. Better still, Goroutine
+    scales incredibly well, and your web applications will pull along quite happily
+    while servicing thousands of users.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Modularity
+
+
+    Web applications, like many other modern applications, usually grow to include
+    a lot of code. Keeping this code organized and efficient, so that it''s easy to
+    understand and maintain, is a challenge for today''s developers. This is especially
+    the case when several developers are working on the same application and each
+    developer formats their code differently.
+
+
+    Go away many of these problems by imposing a specific method of structuring and
+    formatting code. Functions, variables, constants, and type declarations are all
+    expected to be in predictable places, and Go require all of them to be coded in
+    a specific way.
+
+
+    If Go sound draconian in this regard, consider this—what you lose in freedom of
+    expression you gain in predictability; everything is what you expect it to be
+    and formatted identically throughout.
+
+
+    Go makes it easy for you to satisfy your code formatting rules by providing you
+    with the fmt package that you can build into your workflow to automatically Goify
+    your code.
+
+
+    # Compilation
+
+
+    Unlike many recent web server-side languages, the Go programming language is compiled.
+    This means that a problem such as a runtime error might be difficult to track
+    down is caught in the compilation step. Go''s static typing system also helps
+    you discover errors during development that might otherwise escape into production.
+
+
+    # The net/http package
+
+
+    Go''s net/http package is excellent and makes starting a web server having full
+    control of accepting requests and delivering responses very easy. Routing is handled
+    by a multiplexer. You can either adopt the one in the standard library or select
+    from several third-party options. In this book, we''ll start by using Go''s DefaultServeMux,
+    then we''ll consider a very capable alternative: gorilla/mux.
+
+
+    # Setting up your development environment
+
+
+    I won''t delve deeply into setup here because I''m going to assume that you have
+    some experience using Go. However
+
+
+    The steps involved in setting up your environment consists of:
+
+
+    +   * Installing the Go tools.
+
+    * Creating a workspace and setting the GOPATH environment variable.
+
+
+    # Installing the Go tools
+
+
+    The exact steps you will need to follow depend on which platform you are using.
+    Go binaries are available for Windows, Mac OS X, and "nix platforms.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'You can download them here: https://golang.org/dl/, as shown in Figure 1.
+
+
+    | The Go Programming Language | Documents | Packages | The Project | Help | Blog
+    | Search |
+
+
+    # # Downloads
+
+
+    After downloading a binary release from source, please follow the installation
+    instructions.
+
+
+    If you are building from source, follow the source installation instructions.
+
+
+    See the release history for more information about Go releases
+
+
+    # # Featured downloads
+
+
+    | Microsoft Windows | Appie OS X | Linux |
+
+    | Windows XP or later, Intel 64-bit processor | OS X 10.6 or later, Intel 64-bit
+    processor | Linux 2.6.23 or later, Intel 64-bit processor |
+
+    | go.8.windows-amd64.msi (78MB) | go.8.darwin-amd64.pkg (85MB) | go.8.linux-amd64.tar.gz
+    (85MB) |
+
+
+    | Source |
+
+    | go.8.src.tar.gz (15MB) |
+
+
+    # # Stable versions
+
+
+    +   go.8 •
+
+
+    | File name | Source | Arch | Size | SHA256 Checksum |
+
+    | go.8.src.tar.gz | | | 15MB | |
+
+    | go.8.darwin-amd64.tar.gz | Archive | OS X | 64-bit | 85MB | 458a535378f678e0225f777766333777777777111111777777f5f5d3c1a4a2d2
+    |
+
+    | go.8.darwin-amd64.pkg | Installer | OS X | 64-bit | 85MB | 5511551155115511551155115511551155115511551155115511551155115511
+    |
+
+
+    > Figure 1: The Golang Downloads Webpage
+
+
+    > Tip: If you are upgrading to a version of Go, you must uninstall the previous
+    version first.
+
+
+    # # Windows
+
+
+    The easiest way to install the Go tools in Windows is to download the MSI installer,
+    launch it, then follow the prompts. By default, Go installs everything in C:\Go,
+    then adds C:\Go\bin to your PATH variable.
+
+
+    Alternatively, if you rather have more control over your environment variables,
+    you can download the .zip file and extract it to a directory of your choice. In
+    this case, you''ll need to configure the environment variables yourself.
+
+
+    You can set environment variables through the Environment Variables button on
+    the Advanced tab of the System control panel. Some versions of Windows provide
+    this control panel through the Advanced Settings option opening the System control
+    panel.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '![](img/cdabbe899d95a91197e7ec37cc1c8048_12_0.png)
+
+
+    You might next need to close and re-open any command-line sessions in order for
+    the changes to take effect.
+
+
+    # Mac OS X
+
+
+    Download the .pkg file and follow the prompts. The package installs the Go distribution
+    to /usr/local/go and adds /usr/local/go/bin to your PATH.
+
+
+    # Linux, Unix, and FreeBSD
+
+
+    You''ll notice that ''nix-based systems expect a bit more from you. But as a ''nix
+    user, you are more than the challenge to choose.
+
+
+    Download the .tar.gz file and extract it to /usr/local as the root user, or get
+    it via sudo:
+
+
+    ```
+
+    sudo tar -C /usr/local -xzf $GOVERSION.$OS-$GOARCH.tar.gz
+
+    ```
+
+
+    You may need to add /usr/local/go/bin permanently to your PATH. Put the following
+    line in your /etc/profile (for all users) or ~/.profile (for only you) to make
+    this a permanent thing:
+
+
+    ```
+
+    export PATH=$PATH:/usr/local/go/bin
+
+    ```
+
+
+    # Custom installation locations
+
+
+    Those methods decide where Go will be installed. If you don''t like to be bossed
+    around that way, you must tell Go where to find itself by setting the GOROOT environment
+    variable. If you''re happy with the default location, then doesn''t specify GOROOT.
+    You''ll only confuse things.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Creating a workspace
+
+
+    The final step is telling Go where any code you write, as well as any third-party
+    libraries you download with go get, will reside. Do this by setting the GOPATH
+    environment variable using the same techniques described above.
+
+
+    Go will create bin, pkg, and src files in this location:
+
+
+    +   - bin: Contains executables
+
+    - pkg: Contains package objects
+
+    - src: Contains source code
+
+
+    # Code examples
+
+
+    All code examples in this book can be found on GitHub at https://github.com/marklewin/go-web-succinctly.git.
+
+
+    ![](img/cdabbe899d95a91197e7ec37cc1c8048_13_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'You can identify each sample by the chapter and topic it matches in this e-book.
+
+
+    You can either download each file individually or clone the repository using the
+    following commands:
+
+
+    ```
+
+    $ git clone git://github.com/marklewin/go-web-succinctly.git
+
+    ```
+
+
+    ```
+
+    $ git pull origin
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "# Chapter 2 Serving and Routing\n\nGo's net package facilitates all network\
+    \ communications in Go programs, whether it's over HTTP, TCP/IP, WebSockets, or\
+    \ any other standard network protocol.\n\nOf course, because this e-book addresses\
+    \ web development, we are primarily concerned with HTTP, which means the main\
+    \ package we are using is net/http.\n\nIn this chapter, we'll look at the basic\
+    \ requirements of any Go web application—serving and routing—and how you can use\
+    \ net/http and complementary packages to implement them.\n\n# Go as a simple web\
+    \ server\n\nBack in the old days, web servers did little more than serve files\
+    \ that resided in a directory that server. If that's all we want, now can do something\
+    \ very in Go using the net/http package in just a few lines of code.\n\n> Code\
+    \ Listing 1: Go as a Web Server\n\n```\npackage main\n\nimport (\n    \"net/http\"\
+    \n)\n\nfunc main() {\n    http.ListenAndServe(\":8999\", http.FileServer(http.Dir(\"\
+    /var/www\\)))\n}\n```\n\nIt's very basic, but our program fulfills the core responsibilities\
+    \ of any web server—namely, listening to a request and serving a response. What's\
+    \ more, because it doesn't have to worry about all the other issues that a more\
+    \ traditional web server must, the program is lightning fast.\n\nIn this example,\
+    \ we call the http.ListenAndServe() function to serve all requests on port 8999\
+    \ to an http.FileServer handler method, which in turn accepts the directory on\
+    \ the server that we want to serve files from. Easy!\n\nIf you run the program\
+    \ go run <program_name.go> and enter http://localhost:8999/ in your browser's\
+    \ address bar, followed by the name of a file that exists in /var/www on your\
+    \ server, you'll see that file's contents displayed—as in Figure 4."
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '![](img/cdabbe899d95a91197e7ec37cc1c8048_16_0.png)
+
+
+    However, most modern web applications require a bit more than this from the server.
+    And keep in mind, you''re not always going to be sending static content. Increasingly,
+    you will be called upon to generate content dynamically, perhaps from the contents
+    of a database. In this case, a physical file location doesn''t make much sense.
+
+
+    And suppose you have a more complex site structure in which your application''s
+    files are spread around various subdirectories? For example, www.mysite.com/about/aboutus.html
+    and www.mysite.com/blog/blog.html? This approach won''t work. So, you''ll need
+    better control over the URLs of your application can accept. You can achieve this
+    by using the net/http package''s routing capabilities.
+
+
+    # Simple serving and routing
+
+
+    Go relies on two main components to process HTTP requests—a multiplexor and handlers.
+    A multiplexor (or "mux") is essentially an HTTP request router. In Go''s net/http
+    package, the multiplexor functionality is provided by ServeMux and the default
+    mux is DefaultServeMux.
+
+
+    Intuitive, eh?'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "ServeMux compares incoming requests against a list of predefined URL paths,\
+    \ then calls the appropriate handler (a function that you define) for each path\
+    \ when there is a match.\n\nLet's first have a look at the code, then we'll examine\
+    \ what's going on.\n\nCode Listing 2: Basic Serving and Using Net/http\n\n```\n\
+    package main\n\nimport (\n    \"fmt\"\n    \"html\"\n    \"log\"\n    \"net/http\"\
+    \n    \"time\"\n)\n\nfunc main() {\n    http.HandleFunc(\"/\", showInfo)\n   \
+    \ http.HandleFunc(\"/site\", serveFile)\n    err := http.ListenAndServe(\":8999\"\
+    , nil)\n    if err != nil {\n        log.Fatal(\"ListenAndServe: %v\", err)\n\
+    \    }\n}\n\nfunc showInfo(w http.ResponseWriter, r *http.Request) {\n    fmt.Fprintf(w,\
+    \ \"Current time: %v\", time.Now())\n    fmt.Fprintf(w, \"URL Path: %s\", html.EscapeString(r.URL.Path))\n\
+    }\n\nfunc serveFile(w http.ResponseWriter, r *http.Request) {\n    http.ServeFile(w,\
+    \ r, \"index.html\")n}\n\n```\n\nNotice the main() function, which is the entry\
+    \ point into the program, sets up some server routes by using the http.HandleFunc(route,\
+    \ handler) method to map a URL route to a function that will respond to any requests\
+    \ coming in that route.\n\nThe program next calls the http.ListenAndServe() method,\
+    \ which starts an HTTP server at a specified address (in this case, the local\
+    \ machine on port 8999) and the mux in this instance is nil, which lets Go use\
+    \ DefaultServeMux.\n\nThe handler functions do different things depending on whether\
+    \ the URL accessed is at the root of the site (\"/\") or at \"/site\". However,\
+    \ in both cases their method signatures must implement both http.ResponseWriter\
+    \ and http.Request. If a handler does not implement both of these gets called\
+    \ via http.HandleFunc(), you'll see that Go will raise a compile-time error."
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'If the user visits /site, the http.ServeFile() method handles the request and
+    returns the index.html page that resides in the same directory as the application.
+    You can use http.ServeFile() to send any static file in the response.
+
+
+    If the user visits the root location, showInfo() gets called and will display
+    the current time and whichever path user entered beyond the root URL. The application
+    extracts this information using the URL.Path property of the http.Request object
+    that gets passed to the handler. The response is generated by http.ResponseWriter.
+
+
+    Start the program by issuing go run <program_name.go> from your IDE or simply
+    via the command line. Next, visit localhost:8999 in your browser. Try various
+    combinations to test its functionality.
+
+
+    For example, entering http://localhost:8999 results in the dynamically generated
+    page in Figure 5.
+
+
+    ![](img/cdabbe899d95a91197e7ec37cc1c8048_18_0.png)
+
+
+    Figure 5: Visiting the Root of the Web Application
+
+
+    Entering any subroutine (for example, localhost:8999/hello/there/from/from/golang)
+    displays the time and date and the subroutine entered, as we see in Figure 6.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "![](img/cdabbe899d95a91197e7ec37cc1c8048_19_0.png)\n\nFigure 6: Visting a Subroute\n\
+    \nEntering localhost:8999/site displays the index.html page.\n\n![](img/cdabbe899d95a91197e7ec37cc1c8048_19_1.png)\n\
+    \nFigure 7: Visiting/Site\n\nLets expand our ability to serve static files in\
+    \ this example. Suppose that the URL in the request starts with /static/ and we\
+    \ want to strip the /static part of the URL in order to look for the file referenced\
+    \ in the remaining path the /var/www directory. We can use the StripPrefix function\
+    \ to achieve this, as we see in Code Listing 3.\n\nCode Listing 3: Using StripPrefix\n\
+    \n```\npackage main\nimport (\n    \"fmt\"\n    \"html\"\n    \"log\"\n)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "```\n\"net/http\"\n\"time\"\n\nfunc main() {\n\thttp.HandleFunc(\"/\", showInfo)\n\
+    \tfiles := http.FileServer(http.Dir(\"/var/www\"))\n\thttp.Handle(\"/site/\",\
+    \ http.StripPrefix(\"/site/\", files))\n\terr := http.ListenAndServe(\":8999\"\
+    , nil)\n\tif err != nil {\n\t\tlog.Fatal(\"ListenAndServe: \", err)\n\t}\n}\n\
+    ```\n\n```\nfunc showInfo(w http.ResponseWriter, r *http.Request) {\n\tfmt.Fprintf(w,\
+    \ \"current time: %s\", time.Now())\n\tfmt.Fprintf(w, \"URL Path: %s\", html.EscapeString(r.URLPath))\n\
+    }\n```\n\nNote in this example we're not calling HandleFunc, but Handle. That's\
+    \ because the FileServer returns its own handler that we can pass to the mux using\
+    \ Handle (instead of explicitly creating our own handler function).\n\nSo, you\
+    \ can see that it's straightforward to get a site up and running that is self-serving\
+    \ (no separate web server required) and lets you respond to some simple requests.\n\
+    \n# Middleware\n\nIn development, middleware is code that sits between the web\
+    \ request and your route handler. Middleware connects reusable bits of code that\
+    \ you can use to perform tasks that must occur before the handler is called or\
+    \ afterwards.\n\nFor example, you might want to check the status of a database\
+    \ connection or authenticate a user before routing request. You might also want\
+    \ to compress the content of a response or limit the amount of times a specific\
+    \ handler is called—perhaps as part of some restriction that you place on users\
+    \ who access your web service free of charge.\n\nCreating middleware is simply\
+    \ a matter of chaining handlers and handler functions, and it's something you\
+    \ will see—use a in Go web development.\n\nThe basic idea is that you pass a handler\
+    \ function—let's call it f2—into another handler function—let's call this one\
+    \ f1—as a parameter. Handler f1 gets called when the route that triggers it is\
+    \ visited. f1 does some work, then calls f2."
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "Of course, you could have f2 directly. However, this is not ideal because we\
+    \ typically want to achieve a clear separation of concerns, and therefore your\
+    \ handler code should really be limited to processing the request and not doing\
+    \ whatever f2 is designed to do.\n\nHere's the basic idea—instead of dealing with\
+    \ the response as part of your handler, you simply pass the next handler in the\
+    \ chain to it.\n\nFunctions that accept another handler function as a parameter\
+    \ and return a new one can perform tasks before or after the handler is called\
+    \ (or both before and after) and can even choose not to call the original handler\
+    \ at all (if that is your intention).\n\nConsider the example in Code Listing\
+    \ 4.\n\n# Code Listing 4: Middleware Example 1\n\n```\npackage main\n\nimport\
+    \ (\n    \"fmt\"\n    \"net/http\"\n)\n\nfunc middleware1(next http.Handler) http.Handler\
+    \ {\n    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request)\
+    \ {\n        fmt.Fprintln(w, \"Executing middleware1()...\")\n        next.ServeHTTP(w,\
+    \ r)\n        fmt.Fprintln(w, \"Executing middleware1() again...\")\n    })\n\
+    }\n\nfunc middleware2(next http.Handler) http.Handler {\n    return http.HandlerFunc(func(w\
+    \ http.ResponseWriter, r *http.Request) {\n        fmt.Fprintln(w, \"Executing\
+    \ middleware2()...\")\n        if r.URL.Path != \"/\" {\n            return\n\
+    \        }\n        next.ServeHTTP(w, r)\n        fmt.Fprintln(w, \"Executing\
+    \ middleware2() again...\")\n    })\n}\n\nfunc final(w http.ResponseWriter, r\
+    \ *http.Request) {\n    fmt.Fprintln(w, \"Executing final()...\")\n    fmt.Fprintln(w,\
+    \ \"Done\")\n}\n\nfunc main() {\n    finalHandler := http.HandlerFunc(final)\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "```\nhttp.Handle(\"/\", middleware1(middleware2(finalHandler)))\nhttp.ListenAndServe(\"\
+    :8999\", nil)\n}\n```\n\nLook at the main() function. Here, we are intercepting\
+    \ requests to our root web directory with the middleware1 handler. This handler\
+    \ accepts a parameter another handler called middleware2. In that turn the final\
+    \ handler serves as a parameter.\n\nWhen someone visits our application, it will\
+    \ call middleware1, which displays a message, and when it hits next.serveHTTP,\
+    \ executes the code in middleware2. The middleware2 handler in turn calls final(),\
+    \ which executes and then returns control to middleware2, which completes its\
+    \ tasks and returns control to middleware1.\n\nThe output will look like Figure\
+    \ 8.\n\n![](img/cdabbe899d95a91197e7ec37cc1c8048_22_0.png)\n\nFigure 8: The Output\
+    \ of the Middleware Example\n\nFigure 8 offers a completely artificial example,\
+    \ but it serves to illustrate how much control middleware can give you.\n\nGo\
+    \ often uses middleware internally. For example, many functions in the net/http\
+    \ package, as is StripPrefix, are textbook examples of what middleware is—they\
+    \ wrap your handler and perform additional operations on requests or responses.\n\
+    \nThe concept of middleware can be somewhat difficult to understand, so Code Listing\
+    \ 5 shows another example.\n\nCode Listing 5: Middleware Example 2\n\n```\npackage\
+    \ main\n\nimport (\n    \"net/http\"\n)\n\ntype AfterMiddleware struct {\n   \
+    \ handler http.Handler\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "In this bit of code, we want middleware to execute when the myHandler function\
+    \ writes the response body—and to append some data to it.\n\nFirst, we create\
+    \ a type for the middleware that we call AfterMiddleware. This consists of a single\
+    \ field—the http.Handler we want our middleware to respond to.\n\nThe http.Handler\
+    \ interface requires only that we implement the ServeHTTP interface:\n\n```\n\
+    type Handler interface {\ntServeHTTP(ResponseWriter, *Request)\n}\n```\n\nWe do\
+    \ this follows:\n\n```\nfunc (a *AfterMiddleware) ServeHTTP(w http.ResponseWriter,\
+    \ r *http.Request) {\n\ta.handler.ServeHTTP(w, r)\n\tw.Write([]byte(\"+++ Hello\
+    \ from middleware! +++\"))\n}\n```\n\nNow, the response consists of whatever myHandler\
+    \ wrote and is followed by the output of our middleware in Figure 9.\n\n> ***\
+    \ Hello from myHandler! *** +++ Hello from middleware! +++\n\nFigure 9: The Output\
+    \ of Middleware Example 2\n\nWe cannot cover every aspect of middleware here,\
+    \ but it is a very powerful feature that is worth investigating. This article\
+    \ and video lecture by Mat Ryer is an excellent introduction to the topic.\n\n\
+    We'll revisit the concept of middleware in Chapter 7, when we create some eminently\
+    \ more useful logging middleware."
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# More advanced serving and routing with the Gorilla Web Toolkit
+
+
+    The routing functionality offered by Go''s built-in net/http package only gets
+    you so far. If the range of possible URLs is complex and, for example, you want
+    to be able to use regular expressions or variables to match URLs, you will probably
+    want to consider a third-party solution.
+
+
+    The Gorilla Web Toolkit is one solution. Gorilla consists of 22 packages, including:
+
+
+    +   - gorilla/text stores global variables.
+
+    - gorilla/mux is a powerful URL router and dispatcher.
+
+    - gorilla/reverse produces reproducible regular expressions for regexp-based muxes.
+
+    - gorilla/rpc implements RPC over HTTP with codec for JSON-RPC.
+
+    - gorilla/schema converts values to a struct.
+
+    - gorilla/secure encodes authenticated and optionally encrypted cookie values.
+
+    - gorilla/sessions save cookie and filesystem sessions allows custom session back
+    ends.
+
+    - gorilla/websocket implements the WebSocket protocol defined in RFC 6455.
+
+
+    As you can see from the list of packages, there is more to Gorilla than merely
+    an alternative for Go routing and serving. In fact, it provides a range of different
+    tools to assist you in your web development efforts.
+
+
+    But here, we''re interested in the mux. The gorilla/mux module implements the
+    http.Handler interface so that it is compatible with the standard Golang. http.ServeMux.
+
+
+    In addition, the gorilla/mux module gives you the ability to:
+
+
+    +   - Match requests based on URL host, path, path prefix, schemes, header and
+    query values. HTTP methods, or custom matchers that you define.
+
+    - Register URLs so you can build or "reverse" them, while maintaining references
+    to resources.
+
+    - Use "subrouters"-nested routes that are only tested if their parent routes match.
+    This way, you can define "groups" of routes that have everything in common, such
+    as a host or a path prefix. This optimizes request matching by undertaking tests
+    only if they are appropriate to the group (rather than executing tests against
+    all incoming requests).
+
+
+    # Installing and referencing the gorilla/mux package
+
+
+    If you are only interested in the more advanced routing capability offered by
+    Gorilla, you can install gorilla/mux in your GOPATH by using go get. For example,
+    assuming that you have installed:
+
+
+    ```
+
+    go get github.com/gorilla/mux
+
+    ```
+
+
+    Next, you must import it into your application, like so:'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "```\npackage main\n\nimport (\n    github.com/gorilla/mux\n    ...\n)\n```\n\
+    \n# Using gorilla/mux\n\nFor a bit of fun, let's use gorilla/mux to create a handler\
+    \ that matches incoming requests for product IDs based on a regular expression.\
+    \ If the product ID is a single digit long, we have a match and route to the appropriate\
+    \ page. If not, we route to an error page.\n\nWe'll first need to import the gorilla/mux\
+    \ module, which we do in the normal way:\n\n```\nimport (\n    ...\n    github.com/gorilla/mux\n\
+    )\n```\n\nNext, we'll need to Go to gorilla/mux instead of its own DefaultServeMux:\n\
+    \n```\nfunc main() {\n    router = mux.NewRouter()\n}\n```\n\nWhen we've done\
+    \ that, we can use the handler functions we are familiar with, but in the context\
+    \ of router and with the extras gorilla/mux provides, such as searching for a\
+    \ URL parameter with a regular expression:\n\n```\nrouter.HandleFunc(\"/product/id:[0-9]+\"\
+    , pageHandler)\n```\n\nThat line of code creates a handler that attempts to match\
+    \ a URL that consists of /product/ with a number from zero to nine, which it refers\
+    \ to as id. If there is a match, it calls the pageHandler function.\n\nIn our\
+    \ pageHandler function, we need to verify the exact string that HandleFunc matched.\
+    \ We use Gorilla's mux.Vars function to do this, passing in the request as a single\
+    \ parameter and getting back a map of route variables. We can reference the route\
+    \ variable we're interested in by its name—id.\n\nHaving retrieved the product\
+    \ ID, we can next check for a matching HTML page. Go's os module provides the\
+    \ Stat and IsNotExist functions to help us with that. If the file exists on the\
+    \ server, we use http.ServeFile in order to send it to the browser. And if it\
+    \ doesn't exist, we'll return another page telling the user that the product is\
+    \ invalid.\n\nCode Listing 6 shows the full code."
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "```\npackage main\n\nimport (\n    \"log\"\n    \"net/http\"\n    \"os\"\n\n\
+    \    \"github.com/gorilla/mux\"\n)\n\nfunc pageHandler(w http.ResponseWriter,\
+    \ r *http.Request) {\n    vars := mux.Vars(r)\n    productID := vars[\"id\"]\n\
+    \    log.Printf(\"Product ID:%v\\n\", productID)\n\n    fileName := productID\
+    \ + \".html\"\n\n    if _, err := os.Stat(fileName); os.IsNotExist(err) {\n  \
+    \      log.Printf(\"no such product\")\n        fileName = \"invalid.html\"\n\
+    \    }\n\n    http.ServeFile(w, r, fileName)\n}\n\nfunc main() {\n    router :=\
+    \ mux.NewRouter()\n    router.HandleFunc(\"/product/{id:[0-9]+}\", pageHandler)\n\
+    \    http.Handle(\"/\", router)\n    http.ListenAndServe(\":8999\", nil)\n}\n\
+    ```\n\nThis only scratches the surface of what gorilla/mux can do. For example,\
+    \ you can match\nagainst:\n\nPath prefixes:\n\nrouter.PathPrefix(\"/products/\"\
+    )\n\nHTTP methods:\n\nrouter.Methods(\"GET\", \"POST\")\n\nURL schemes:\n\nrouter.Schemes(\"\
+    https\")\n\nHeader values (for example, was the request an AJAX request?):"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "```\nrouter.Headers(\"X-Requested-With\", \"XMLHttpRequest\")\n```\n\nQuery\
+    \ values:\n\n```\nrouter.Queries(\"key\", \"value\")\n```\n\nCustom matching functions\
+    \ that you define:\n\n```\nrouter.MatcherFunc(func(r *http.Request, match *RouteMatch)\
+    \ bool {\n  // do something\n}\n```\n\nYou can combine multiple matchers in one\
+    \ route by chaining function calls:\n\n```\nrouter.HandleFunc(\"/products\", productHandler)\n\
+    Host(\"www.example.com\")\nMethods(\"GET\")\nSchemes(\"https\")\n```\n\nOr, you\
+    \ can use subroutes to group multiple routes together. For example, the following\
+    \ code looks for a host map of www.example.com, but it will check the subroutes\
+    \ only if it gets a match on the host:\n\n```\nrouter := mux.NewRouter()\nsubrouter\
+    \ := route.Host(\"www.example.com\").Subrouter\n```\n\n```\n// Register the subroutes\n\
+    subrouter.HandleFunc(\"/products\", AllProductsHandler)\nsubrouter.HandleFunc(\"\
+    /products/{name}\", ProductHandler)\nsubrouter.HandleFunc(\"/reviews/{category}/{id:[0-9]+}\"\
+    ), ReviewsHandler\n```\n\n> The gorilla/mux is a very capable alternative to DefaultServeMux\
+    \ and worth investigating. You can find out more at http://www.gorillatool.org/pkg/mux.\n\
+    \nWith course, Gorilla being such a vast ecosystem, there are many other choices\
+    \ if you don't like Gorilla. I prefer Gorilla because it's easy to get my head\
+    \ around, and it's always best to do whatever I ask it to.\n\nOther popular third-party\
+    \ routers include:\n\n+   * httrouter: Lightweight fast, but less capable than\
+    \ Gorilla. For example, you cannot include regular expressions in your routes.\n\
+    * Httpremux: A flexible, tree-based HTTP router, inspired by httrouter.\n* Pat:\
+    \ Simple to use and quite popular. If you're a Ruby-ist familiar with Sinatra\
+    \ and Rails, you'll find Pat's approach very familiar.\n\n# Returning errors\n\
+    \nThings don't always work as we intend. Requests get made for pages that no longer\
+    \ exist, things moved from one place to another, and sometimes the connection\
+    \ drops."
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "The HTTP protocol defines 61 status codes so that we can determine whether\
+    \ or not a request was successful.\n\nHere are a few of the most common ones:\n\
+    \n+   * 200 OK: Hooray! All is well.\n* 404 Not Found: Whatever resource you're\
+    \ looking for, you won't find it here.\n* 301 Moved Permanently: Used as a redirect\
+    \ to another page.\n* 302 Moved Temporarily: Used as a temporary redirect to another\
+    \ page.\n* 500 Internal Server Error: Something unexpected has gone. This is a\
+    \ \"catch all.\".\n\nThe net/http package provides a function called Error that\
+    \ you can use to handle error status codes. Your job as a developer is to pick\
+    \ one that makes sense for the type of error you are reporting.\n\nYou can raise\
+    \ an error by passing the ResponseWriter, a string message, and the status code.\
+    \ For example, this raises a 404 Not Found error:\n\n```\nhttp.HandleFunc(\"/\"\
+    , func(w http.ResponseWriter, r *http.Request) {\n  http.Error(w, \"Something\
+    \ has gone wrong\", 500)\n})\n```\n\nHowever, it's better practice to use the\
+    \ various helper functions net/http provides for this purpose rather than the\
+    \ generic http.Error() function.\n\nFor example:\n\n```\n// Return 404 Not Found\n\
+    http.NotFound(w, req)\n```\n\n```\n// Return 301 Permanently Moved\nhttp.Redirect(w,\
+    \ req, \"http://somewhereelse.com\", 301)\n```\n\n```\n// Return 302 Temporarily\
+    \ Moved\nhttp.Redirect(w, req, \"http://temporarylocation\", 302)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# # Chapter 3 Accessing Data
+
+
+    In the previous chapter, we saw how Go can accept requests from different URLs
+    and route them to an appropriate handler. So far, however, all of our responses
+    to these requests have served only static content, which is not enough for today''s
+    web applications. In this chapter, we''ll see how we can connect our Go web applications
+    to a data source and serve dynamic data instead.
+
+
+    # ## Getting a driver for your database
+
+
+    Go allows you to use any database for which a driver is available. A definitive
+    list of drivers can be found at https://github.com/golang/go/wiki/SQLDrivers.
+
+
+    Unless you''re using something quite exotic, you should be able to find a driver
+    for your database in the wiki.
+
+
+    MySQL is a fantastic open-source database and, although it has been around for
+    quite a while, it continues to be extremely popular, so we''ll use that for our
+    examples in this chapter. However, whichever database you choose, the steps you
+    need to take will be similar, if not identical, to those shown here.
+
+
+    You can download the free community edition of MySQL Server from http://www.mysql.com.
+    Follow the installation instructions for your platform. If you want to follow
+    along with the examples in this chapter, you should also install the sample "world"
+    database. There''s an option in the Windows Installer for this, with Mac and Linux
+    you must download and install it manually from https://dev.mysql.com/doc/index-other.html.
+
+
+    Simply connect to the MySQL server using the command-line client (or MySQL Workbench),
+    which can also install if you prefer a GUI environment), then execute the following
+    statement:
+
+
+    ```
+
+    mysql> SOURCE < /path/to/world.sql
+
+    ```
+
+
+    You can verify that the "world" database is installed by issuing the command in
+    Figure 10 at the mysql> prompt.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "![](img/cdabbe899d95a91197e7ec37cc1c8048_30_0.png)\n\nFigure 10: Verifying\
+    \ \"World\" Database Installation\n\nWhen you've installed the database server,\
+    \ you need to install the driver for it. You can do this by using **get**. I'm\
+    \ using the **go-sql-driver** in MySQL.\n\n![](img/cdabbe899d95a91197e7ec37cc1c8048_30_1.png)\n\
+    \nFigure 11: Installing the MySQL Driver for Go\n\nWhen we've imported the driver\
+    \ to the database server, we'll next need to reference both and the generic **database/sql**\
+    \ package in our **import** statement. Note that we are preceding the driver import\
+    \ with an underscore (_). This tells the Go compiler that the package we are referring\
+    \ is complementary to another package—in this instance, the **database/sql** package.\
+    \ We're using it only for its initialization capability—what Go calls \"side effects.\"\
+    \n\n```\nimport (\n\t\"database/sql\"\n\t\"log\"\n\t_ \"github.com/go-sql-driver/mysql\"\
+    \n)\n```\n\nNext, we need to specify the server host, port number, initial database,\
+    \ user name, and password that we'll use to build the connection string.\n\n```\n\
+    db, err := sql.Open(\"mysql\", \"root:password@tcp(127.0.0.1:3306)/world\")\n\
+    ```\n\nThere are three tables in the \"world\" database—Country, City, and CountryCode,\
+    \ the last of which links cities to countries. It's a good idea to create types\
+    \ for each of the database tables in your application so that it will be easier\
+    \ to implement changes in the schema later."
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "Here is our Go struct for rows in the City table:\n\n```\ntype City struct\
+    \ {\n    Name string\n    CountryCode string\n    District string\n    Population\
+    \ uint32\n}\n```\n\nNext, let's have a variable in which we store a handle to\
+    \ our database when we're connected:\n\n```\nvar database *sql.DB\n```\n\nFinally,\
+    \ we're ready to connect to the database. We build up the connection string by\
+    \ serializing the server host, port number, initial database, and password strings.\n\
+    \nNext, we attempt to connect by calling the database/sql.Open method, passing\
+    \ in the type of driver and the connection string:\n\n```\ndbConn := fmt.Sprintf(\"\
+    %s:%s@tcp(%s)/%s\", dbUser, dbPass, dbHost, dbDatabase)\ndb, err := sql.Open(\"\
+    mysql\", dbConn)\n```\n\nThis returns an instance of sql.DB (about which we will\
+    \ have more to say later).\n\nThe full code is here in Code Listing 7.\n\n# Code\
+    \ Listing 7: Connecting to the Database\n\n```\npackage main\n\nimport (\n   \
+    \ \"database/sql\"\n    \"log\"\n    _ \"github.com/go-sql-driver/mysql\"\n)\n\
+    \nvar database *sql.DB\n\nfunc main() {\n    db, err := sql.Open(\"mysql\", \"\
+    root:password@tcp(127.0.0.1:3306)/world\")\n    if err != nil {\n        log.Println(\"\
+    Could not connect!\")\n    }\n    database = db\n    log.Println(\"Connected.\"\
+    )\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: 'If everything goes to plan, we should receive a message at the terminal prompt
+    telling us that we are now connected to the MySQL server.
+
+
+    ```
+
+    MINGW64:/HOME/code/go/src/github.com/marklewin/go-web-succinct...
+
+    nimplew@LAPTOP-QVFESMV9 MINGW64 --code/go/src/github.com/marklewin/go-web-succinct
+
+    ly/ch03/connect-db (master)
+
+    $ go run main
+
+    2017/02/06 18:05:59 Connected.
+
+    implew@LAPTOP-QVFESMV9 MINGW64 --code/go/src/github.com/marklewin/go-web-succinct
+
+    ly/ch03/connect-db (master)
+
+    $ _
+
+    ```
+
+
+    Figure 12: Verifying Connection to the Database
+
+
+    Now that we can connect to the "world" database, we can execute queries against
+    it and return the results to our users. But first, let''s examine **sql.DB**.
+
+
+    # sql.DB
+
+
+    Note from the previous code example that we are using the **database** variable
+    that contains **sql.DB** to access the database.
+
+
+    The **sql.DB** is not the database—that''s stored in dbConn—instead, it''s the
+    **database/sql** package''s abstraction of the database. In our example, it refers
+    to the MySQL database, but because we can use **database/sql** to interface with
+    many different data sources, it could as easily be a local file or some of in-process
+    data store such as `memcache`.
+
+
+    **sql.DB** takes care of a lot of things on your behalf, including the opening,
+    closing, and pooling of database connections.
+
+
+    Don''t keep opening and closing databases unless your application requires it.
+    The **sql.DB** object is designed to be long-lived, and all of your interaction
+    with the database will come via **sql.DB**. However, you must be certain to close
+    connections by using **sql.DB.Close** when you are finished with them so that
+    they can be returned to the pool.
+
+
+    > Tip: If you need to give short-lived function access to *sql.DB*, pass it to
+    the function as a parameter instead of creating a new connection within the function.
+
+
+    We''re getting ahead of ourselves. We haven''t done anything with our database
+    yet.
+
+
+    Let''s rectify that now.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "# Retrieving data from the database\n\nThe following code queries the \"world\"\
+    \ database's City table based on whatever the user enters in the browser's address\
+    \ bar after http://localhost:8999/\n\nCode Listing 8: Querying the Database\n\n\
+    ```\npackage main\n\nimport (\n    \"database/sql\"\n    \"fmt\"\n    \"log\"\n\
+    \    \"net/http\"\n    \"github.com/go-sql-driver/mysql\"\n)\n\ntype City struct\
+    \ {\n    Name string\n    CountryCode string\n    Population int\n}\n\nvar database\
+    \ *sql.DB\n\nfunc main() {\n    db, err := sql.Open(\"mysql\",\n        \"root:password@tcp(127.0.0.1:3306)/world\"\
+    )\n    if err != nil {\n        log.Println(\"Could not connect!\")\n    }\n \
+    \   database = db\n    log.Println(\"Connected.\")\n\n    http.HandleFunc(\"/%s\"\
+    , showCity)\n    http.ListenAndServe(\":8999\", nil)\n}\n\nfunc showCity(w http.ResponseWriter,\
+    \ r *http.Request) {\n    city := &City{}\n    queryParam := \"%s\" + r.URL.Path[1:]\
+    \ + \"%s\"\n    rows, err := database.Query(\"SELECT Name, CountryCode, Population\
+    \ FROM city WHERE Name LIKE ?\", queryParam)\n    if err != nil {\n        log.Fatal(err)\n\
+    \    }\n    defer rows.Close()\n```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "```\nfor rows.Next() {\n    err := rows.Scan(&city.Name, &city.CountryCode,\n\
+    \        &city.Population)\n    if err != nil {\n        log.Fatal(err)\n    }\n\
+    \    fmt.Printf(w, \"%s (%s), Population: %d \\n\", city.Name,\n        city.CountryCode,\
+    \ city.Population)\n}\nerr = rows.Err()\nif err != nil {\n    log.Fatal(err)\n\
+    }\n```\n\nWhat we're interested in here resides in the showCity function that\
+    \ gets called when the user visits the root of the web application.\n\nIn order\
+    \ to query the database, we call the Query method in sql.DB and pass in the required\
+    \ SQL. The nice thing about Query (and its counterpart, QueryRow, which retrieves\
+    \ only a single row) is that it is parameterized, which helps protect against\
+    \ SQL injection.\n\nThe query returns a collection of rows that we iterate over\
+    \ by using the Next method. For each row, we execute Scan to map the columns in\
+    \ the row to the City type we declared earlier. Now, it's a simple matter of displaying\
+    \ the results to the user, as in Figure 13.\n\n![](img/cdabbe899d95a91197e7ec37cc1c8048_34_0.png)\n\
+    \n> Figure 13: Displaying the Query Results"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# Tidying the output\n\nAll we have now is some rather ugly text dumped out\
+    \ to the browser. Let's make it a little bit more pleasant to look at by displaying\
+    \ the query results in an HTML table. We do this simply by rewriting the code\
+    \ in our handler, as in Code Listing 9.\n\nCode Listing 9: Using HTML to Format\
+    \ the Query Results\n\n```\nfunc showCity(w http.ResponseWriter, r *http.Request)\
+    \ {\n\tcity := City()\n\tqueryParam := r.URL.Path[1:] + \"%\"\n\trows, err :=\
+    \ database.Query(\"SELECT Name, CountryCode, Population FROM city WHERE Name LIKE\
+    \ ?\", queryParam)\n\tif err != nil {\n\t\tlog.Fatal(err)\n\t}\n\tdefer rows.Close()\n\
+    \n\thml := \"<html><head><title>CitySearch</title></head><h1>Search for \" + queryParam\
+    \ + \"</h1><table border='1'><tr><th>City</th><th>Country</th><th>Population</th></tr>\"\
+    \n\n\tfor rows.Next() {\n\t\terr := rows.Scan(&city.Name, &city.CountryCode, &city.Population)\n\
+    \t\n\t\tif err != nil {\n\t\t\tlog.Fatal(err)\n\t\t}\n\t\t\thml +=\n\t\tfmt.Sprintf(\"\
+    <tr><td>%s</td><td>%s</td><td>%d</td></tr>\", city.City, city.CountryCode, city.Population)\n\
+    \t}\n\terr := rows.Err()\n\tif err != nil {\n\t\tlog.Fatal(err)\n\t} else {\n\t\
+    \thml += \"<table></body></body></html>\"\n\t\tfmt.Fprintln(w, hml)\n\t}\n```\n\
+    \nWhen we execute it, we get Figure 14."
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Search for%Lond%
+
+
+    | City | Country Code | Population |
+
+    | --- | --- | --- |
+
+    | Londrina | BRA | 432257 |
+
+    | London | GBR | 7285000 |
+
+    | East London | ZAF | 221047 |
+
+    | London | CAN | 339917 |
+
+
+    Figure 14: Displaying the Query Results in an HTML Table
+
+
+    Not exactly pretty, but a slight improvement. Of course, we can style this to
+    our hearts'' content with some judicious use of CSS.
+
+
+    But wait a minute—at what expense does this come to our code? Our nice, neat program
+    is now a mess of inline HTML. If it becomes more complex over time, we''d find
+    it very difficult to maintain. What''s more, each time we want to make a trivial
+    change, we would have to recompile our code.
+
+
+    We have now committed one of web development’s great cardinal sins—mixing logic
+    and presentation in our source code. Frankly, there’s a much better way to format
+    the display. We’ll examine that in the next chapter.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# Chapter 4 Templates
+
+
+    In the previous chapter, we connected to a data source, then displayed the results
+    of queries to the user in HTML format. This HTML code was embedded directly within
+    our source code, which is not desirable (except for very simple scenarios) because
+    it makes the application very difficult to maintain.
+
+
+    Go comes to the rescue with a rather good templating engine. Not only does this
+    enable us to separate our program code from the presentation markup, but it also
+    provides some logical constructs as loops, variables, and even functions that
+    allow us to offload presentation logic to the template.
+
+
+    # Introducing templates
+
+
+    First, let''s define functionality.
+
+
+    Go template functionality is provided by the template package, which includes
+    a number of methods, including Parse and ParseFile, for loading a template from
+    a string or file, then Execute for merging the specific content from our application
+    with the more general content provided by the template itself.
+
+
+    Note that templates typically exist within their own files, but this is not always
+    the case. We can use template functionality directly within our program logic
+    by encoding the template as a string, then using the Parse method to read from
+    it. This is only a slight improvement on encoding everything as HTML, so in these
+    examples we''ll separate template files and ParseFile to read from them.
+
+
+    First, as you can see, this is simply an HTML file with some special syntax so
+    that our program knows what to insert and where to insert it.
+
+
+    > Code Listing 10: Our HTML File
+
+
+    ```
+
+    <html>
+
+    <head>
+
+    <title>Hello!</title>
+
+    </head>
+
+    <body>
+
+    <h1>A warm hello to...</h1>
+
+    <p>
+
+    {{.Name}}
+
+    </p>
+
+    </body>
+
+    </html>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "Everything should look familiar except the {{.Name}} entry. To Go templates,\
+    \ that is a variable. It's contained within double braces, and its name (Name)\
+    \ is preceded by a dot.\n\nThe dot signifies the scope or context of the variable.\
+    \ In our case, the Name variable refers to the Name field of a Person struct,\
+    \ which will become apparent when you see the definition for it that we'll use\
+    \ in our program logic:\n\n```\ntype Person struct {\n  Name string\n}\n```\n\n\
+    We can pass a Person struct to populate the template variable, and it will pull\
+    \ out the Name field and replace the variable definition in the template with\
+    \ it.\n\nNote that any fields you refer to in the template must be exported. That\
+    \ is, they must begin with a capital letter. Unexported fields cause issues, as\
+    \ we will see in a bit.\n\nCode Listing 11 shows the full program code.\n\n# Code\
+    \ Listing 11: Using the Template\n\n```\npackage main\n\nimport (\n  \"log\"\n\
+    \  \"net/http\"\n  \"text/template\"\n)\n\ntype Person struct {\n  Name string\n\
+    }\n\nfunc main() {\n  http.HandleFunc(\"/\", handler)\n  err := http.ListenAndServe(\"\
+    :8999\", nil)\n  if err != nil {\n    log.Fatal(\"ListenAndServe:\n```\n\nThe\
+    \ only code of note here is in the handler function that is invoked when a user\
+    \ visits the root of our web application at http://localhost:8999."
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: 'Handler creates a variable p of Person and assigns "John Smith" to its Name
+    field. We then use template.ParseFiles, passing in the name of the template file
+    and assigning the results to variable t.
+
+
+    Having parsed the template file, we next need to perform the merge, which we do
+    by calling Execute, which passes the http.ResponseWriter and the data item we
+    want to merge with the template as parameters.
+
+
+    When we launch the application in a browser, we get Figure 15.
+
+
+    ![](img/cdabbe899d95a91197e7ec37cc1c8048_39_0.png)
+
+
+    Figure 15: The Output of Our Simple Template
+
+
+    # Reworking the data access application using a template
+
+
+    Let''s put our newfound knowledge of Go templates to work. First, we need to understand
+    one of the many capabilities of a template—the ability to iterate over a set of
+    results, then apply the appropriate formatting to each of them.
+
+
+    In order to achieve this, we must use the {{range}} {{end}} construct. We''ll
+    use the following template to build out our table. Everything between {{range}}
+    and {{end}} will be repeated for every member of the object we pass into it.
+
+
+    Code Listing 12: The Template for "Cities" Database Application
+
+
+    ```
+
+    <html>
+
+    <head>
+
+    <title>City Search</title>
+
+    </head>
+
+    <body>
+
+    <h1>Search Results</h1>
+
+    <table border=''1''>
+
+    <tr>
+
+    <th>City</th>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "```\n<html><tr>\n<th>Country Code</th>\n<th>Population</th>\n</tr>\n{{range\
+    \ .}}\n<tr>\n<td>{{.Name}}</td>\n<td>{{.CountryCode}}</td>\n<td>{{.Population}}</td>\n\
+    </tr>\n{{end}}\n</table>\n<body>\n</html>\n```\n\nSee the dot notation that appears\
+    \ just after the range keyword? That means \"any object.\"\n\nSomething important\
+    \ to note about using ranges in Go templates—they will only accept a single object.\
+    \ \"What?\" I hear you say. \"Why would something is supposed to iterate through\
+    \ a slice of values only accept one?\"\n\nAnd you'd be right. The range allows\
+    \ us to put in an array or slice of values, then it will get into that object\
+    \ to pull out its members.\n\nSo, in our database application, we simply need\
+    \ to do a bit of refactoring to ensure that each of our query results gets added\
+    \ to a slice—let's call it cities—and we pass that slice into our template.\n\n\
+    > Code Listing 13: Using the Template in Our \"Cities\" Application\n\n```\npackage\
+    \ main\n\nimport (\n\t\"database/sql\"\n\t\"html/template\"\n\t\"log\"\n\t\"net/http\"\
+    \n\n\t\"github.com/go-sql-driver/mysql\"\n)\n\ntype City struct {\n\tName string\n\
+    \tCountryCode string\n\tPopulation int\n}\n\nvar database *sql.DB\n\nfunc main()\
+    \ {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "```\ndb, err := sql.Open(\"mysql\",\n\"root:password@tcp(127.0.0.1:3306)/world\"\
+    )\nif err != nil {\n\tlog.Println(\"Could not connect!\")\n}\ndatabase := db\n\
+    log.Println(\"Connected.\")\n\nhttp.HandleFunc(\"/\", showCity)\nhttp.ListenAndServe(\"\
+    :8999\", nil)\n\nfunc showCity(w http.ResponseWriter, r *http.Request) {\nvar\
+    \ cities []City\nqueryParam := r.URL.Path[1:]\ncities, err := database.Query(\"\
+    SELECT Name, CountryCode, Population FROM city WHERE Name LIKE ?\", queryParam)\n\
+    if err != nil {\n\tlog.Fatal(err)\n}\n\tfer cities.Close()\n\nfor cities.Next()\
+    \ {\n\ttheCity := City\n\tscities.Scan(&theCity.Name, &theCity.CountryCode, &theCity.Population)\n\
+    \tCities = append(cities, theCity)\n}\n\nt, _ := template.ParseFiles(\"results.html\"\
+    )\nt.Execute(w, Cities)\n```\n\nNext, we can encite the program and search for\
+    \ cities as we did before."
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Search Results
+
+
+    | City | Country Code | Population |
+
+    |---|---|--|
+
+    | L''Hospitalet de Lloregat | ESP | 247986 |
+
+    | Barletta | ITA | 91904 |
+
+    | Valletta | MLT | 7073 |
+
+    | Jelets | RUS | 119400 |
+
+
+    Figure 16: The Cities Application with Template
+
+
+    Let''s consider some of the benefits of using templates. First, our code is much
+    neater. We don''t need to wade through long strings of tags in order to work out
+    what''s going on.
+
+
+    Second, we can change the template at any time, no recompilation needed.
+
+
+    Third, the template syntax is simple enough that we could hand it over to someone
+    who knows nothing about Go, or about web development in general, but might have
+    a better handle on design than we do.
+
+
+    What else can we do with Go templates? Quite a lot, it happens. Check out the
+    official documentation for the definitive list. In the meantime, there are several
+    features that are so useful it would be remiss of me not to least mention them—embedded
+    methods and conditionals.
+
+
+    # Using embedded methods in templates
+
+
+    Let''s say we want to do something with our populated output. Perhaps we''d like
+    to format the Population column in the preceding example to use a comma as a thousands
+    separator.
+
+
+    Sure, we could add an extra string in the City structure to display formatted
+    output and write the formatted Population column each time we retrieve a row from
+    the table. But, technically, that''s presentation, right? And haven''t been keen
+    to get as much presentation logic out of our main code as possible?
+
+
+    Also, this is especially cumbersome because Go''s finth package doesn''t provide
+    this functionality out of the box, which means we''ll have to roll our own.
+
+
+    So, let''s see if we can offload some of the responsibility to the template. In
+    fact, we can do that by writing a method in our application that we''ll get the
+    template to invoke. The best way to do that is to add a method directly to our
+    city structure, as in Code Listing 14.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "```\nfunc (c City) FormatPopulation(n int, sep rune) string {\n\ts := strconv.Itoaa(n)\n\
+    \n\tstartOffset := 0\n\tvar buff bytes.Buffer\n\tif n < 0 {\n\t\tstartOffset =\
+    \ 1\n\t\tbuff.WriteByte('-')\n\t}\n\tl := len(s)\n\tcommaIndex := 3 - ((l - startOffset)\
+    \ % 3)\n\tif commaIndex == 3 {\n\t\tcommaIndex = 0\n\t}\n\for i := startOffset;\
+    \ i < l; i++ {\n\tif commaIndex == 3 {\n\t\tbuff.WriteRune(sep)\n\t\tcommaIndex\
+    \ = 0\n\t}\n\t\tcommaIndex++\n\t\tbuff.WriteByte(s[i])\n\t}\n\treturn buff.String()\n\
+    }\n```\n\nNote that the function accepts an integer value and a separator and\
+    \ returns a string (a tip of the hat to Ivan Tung for this function, which saved\
+    \ me having to write it myself!).\n\nYou can think of the Go keyword as an alias\
+    \ for a Unicode character, which is sometimes called a “code point” in Go terminology.\n\
+    \nIn order to call this function within our template, we simply specify its name\
+    \ followed by any parameters (not in parentheses), as shown in Code Listing 15.\n\
+    \n# Code Listing 15: Calling the FormatPopulation Function from the Template\n\
+    \n```\n<html>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "```\n<head>\n<title>City Search</title>\n</head>\n<body>\n<h1>Search Results</h1>\n\
+    <table border='1'>\n  <tr>\n    <th>City</th>\n    <th>Country Code</th>\n   \
+    \ <th>Population</th>\n  </tr>\n  {{range }}\n  <tr>\n    <td>{{.Name}}</td>\n\
+    \    <td>{{.CountryCode}}</td>\n    <td>{{.FormatPopulation .Population}}</td>\n\
+    \  </tr>\n  {{/range}}\n</table>\n</body>\n</html>\n```\n\nWhen we execute the\
+    \ application, we get nicely formatted population values, as in Figure 17.\n\n\
+    ![](img/cdabbe899d95a91197e7ec37cc1c8048_44_0.png)\n\nFigure 16: The Population\
+    \ Values, Formatted by the Template"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Using conditionals in templates
+
+
+    You can offload the evaluation of conditional expressions to your template using
+    {{if}} {{else}}{{end}}.
+
+
+    Go supports several functions that support basic types, such as eq (equals), ne
+    (not equal to), or gt (greater than) that you can use for building expressions.
+
+
+    The use of conditional expressions in templates is best demonstrated by an example.
+
+
+    Let''s say that we''re only interested in populations of less than 5,000,000.
+    Everything else we''ll count as huge and not displaying the actual figure.
+
+
+    Code Listing 16 shows our template.
+
+
+    > Code Listing 16: Template with Conditional Expression
+
+
+    ```
+
+    <html>
+
+    <head>
+
+    <title>City Search</title>
+
+    </head>
+
+    <body>
+
+    <h1>Search Results</h1>
+
+    <table border=''1''>
+
+    <tr>
+
+    <th>City</th>
+
+    <th>Country Code</th>
+
+    <th>Population</th>
+
+    </tr>
+
+    {{range}}
+
+    <tr>
+
+    <td>{{.Name}}</td>
+
+    <td>{{.CountryCode}}</td>
+
+    <td>
+
+
+    <td>
+
+    {{if gt .Population 5000000}} <b>HUGE</b>
+
+    {{else}} {{.Population}}
+
+    {{end}}
+
+    </td></td>
+
+    </tr>
+
+    {{end}}
+
+    </table>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Figure 18 shows the result.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# Search Results
+
+
+    | City | Country Code | Population |
+
+    |---|---|--|
+
+    | Stoke-on-Trent | GBR | 252000 |
+
+    | Tokyo | JPN | HUGE |
+
+    | Tokorozawa | JPN | 325809 |
+
+    | Tokushima | JPN | 269649 |
+
+    | Tokuyama | JPN | 107078 |
+
+    | Tokai | JPN | 99738 |
+
+    | Yamatokoriyama | JPN | 95165 |
+
+    | Bialystok | POL | 283937 |
+
+    | Tokat | TUR | 99500 |
+
+    | Vladivostok | RUS | 606200 |
+
+
+    Figure 17: Displaying Population Values Using Conditionals in the Template'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Chapter 5 Creating a RESTful JSON API
+
+
+    We''ve learned a lot already, so let''s see if we can take all that knowledge
+    and do something useful with it.
+
+
+    In chapter 1, we examined how Go is an excellent choice for creating web services
+    for many reasons—for example, its ability to scale massively through its lightweight
+    threading model, its ease with modular coding, and its ability to integrate with
+    common tools such as cryptographic libraries, secure protocols, and, of course,
+    HTTP servers.
+
+
+    In this chapter, I will demonstrate how we can create a RESTful web service that
+    can accept JSON requests and return JSON responses in order to facilitate CRUD
+    (Create, Read, Update, and Delete) operations on a database.
+
+
+    (Actually, I''m going a cheat little here. In order to minimize the complexity
+    of our application, I''m going to create a CRD application. The Update functionality
+    will be left as an exercise for the reader)
+
+
+    This application will use what we''ve learned far about serving, routing, and
+    accessing a database. In building it, I''ll show you how might design and develop
+    a typical web service. It won''t be perfect or production-ready, but it should
+    give you a good idea of how easy it is to build these sorts of services in Go.
+
+
+    # RESTful APIs
+
+
+    If you''re a developer, or if you''ve spent any time with developers, you have
+    no doubt heard about REST. Given the amount of hype it has attracted in recent
+    years, you would think that it, too, was a recent concept. But it''s not. In fact,
+    it''s as old as the web itself.
+
+
+    REST is simply to handle the hundreds of different protocols that have been developed
+    over the years that have aimed to get computers talking to each other networks
+    using the same language.
+
+
+    Some of these protocols have included SOAP (which, because of its reliance on
+    XML as a transport mechanism, requires a fair amount of data and computing power
+    and began to fall out as mobile devices became ubiquitous), JMS (which is specific
+    to Java applications and therefore not really geared for widespread adoption),
+    and XML-RPC (which, like SOAP, uses XML without implementing the standards that
+    SOAP has).
+
+
+    As with all these approaches, the aim behind REST was to make sharing data easy
+    for computers while at the same time being transparent enough that human observers
+    understand what they are doing.
+
+
+    What REST offers, is the ability to do this while remaining lightweight. Its methods
+    are familiar to developers who uses the same, established methods employed by
+    the web itself.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# How so?
+
+
+    Well, consider a website that you access in a browser. You enter a URL to the
+    site, and the program behind the site can analyze URL to understand your intention.
+    In a static site, you''re simply entering URLs that point to file resources on
+    the web server, but in a site that employs web services, you can effectively use
+    the API as a command line entry not only for resources, but also for specific
+    operations that the program''s API exposes.
+
+
+    Consider the Open Movie Database website (http://www.omdbapi.com) that provides
+    a free REST API to access information about movies. You only need to craft the
+    URL so that it specifies what you want it to give.
+
+
+    If you start at https://www.omdbapi.com/, you get the home page in Figure 19.
+
+
+    ![](img/cdabbe899d95a91197e7ec37cc1c8048_48_0.png)
+
+
+    # Usage
+
+
+    Figure 18: The Open Movie Database API Home Page
+
+    If you specify using the (t) parameter, you get something a little more interesting:
+    https://www.omdbapi.com/?t=starwars%20
+
+
+    > "Title:Star Wars - IV - A New Hope","Rated:1977","Type:PG","Released:25 May
+    1977","Runtime:121 min","Genre:Action,Adventure,Fantasy","Director:George Lucas","Actors:Mark
+    Hamill, Carrie Fisher, Oscar Fisher, James Earl, Harrison Ford, Alec Guinness,
+    Peter Cushing","Plot:Luke Skywalker joins forces with a Jedi Knight, a cheeky
+    pilot, and droids to save the galaxy from the Empire''s world-destroying battle-station,
+    while attempting to rescue Princess Leia from Darth Vader.","Awards:None","Oscars:Won
+    6 wins & 28 nominations,"Poster":"https://images-na.amazon.com/images/M/MV5BMjQ3OTcwMTQtLT40Zi00000Ym00Y2YYYYYYY0OTQ@@._XkFtFtYMTQ0MDA0NDI1_V1_X300.jpg","Me
+    tascore:92","imdbRating:8.7","imdbVocoters:958,001","imdbDB":"tt0076759","Type:Movie","Response":"Irue"
+
+
+    Figure 19: Accessing the Open Movie Database API'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "That information JSON, JavaScript Object Notation. Despite the name, it's not\
+    \ specific to JavaScript. In fact, it's a common way of encoding data in a very\
+    \ lightweight format, and it's used by applications in many different languages,\
+    \ including Go.\n\nApart being lightweight and easily parsed by client applications,\
+    \ JSON is also human readable. Well, just barely. You can tidy the response by\
+    \ viewing it in your browser's developer console or by installing an extension\
+    \ that prettifies a JSON response.\n\nFigure 21 shows the output after I've installed\
+    \ the JSON Formatter-add on Firefox.\n\n```\n{\n  \"Title\": \"Star Wars: Episode\
+    \ IV - A New Hope\",\n  \"Year\": \"1977\",\n  \"Rating\": \"PG\",\n  \"Released\"\
+    : \"25 May 1977\",\n  \"Runtime\": \"121 min\",\n  \"Genre\": \"Adventure, Fantasy\"\
+    ,\n  \"Director\": \"George Lucas\",\n  \"Kriter\": \"George Lucas\",\n  \"Actor\"\
+    : \"Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing\",\n  \"Plot\": \"\
+    Luke Skywalker joins a Jedi Knight, a cocky pilot, a wookiee and two droid\",\n\
+    \  \"Language\": \"English\",\n  \"Country\": \"US\",\n  \"Awards\": \"Won 6 Oscars.\
+    \ Another 48 wins & 3 nominations.\",\n  \"Poster\": \"https://images-na.ssl-images-amazon.com/images/I/KVBS5ZGZEITX8MEtNj4Q0CO0NNJqWLTk5NTU\"\
+    ,\n  \"imdbRating\": \"8.3\",\n  \"imdbVotes\": \"365\",\n  \"imdbID\": \"tt006667\"\
+    ,\n  \"Type\": \"movie\",\n  \"Response\": \"True\"\n}\n```\n\nFigure 20: The\
+    \ JSON Response, Prettified\n\nAs you can see, JSON is a simple bunch of key/value\
+    \ pairs. Everything inside the braces is a JSON object, and objects themselves\
+    \ can contain other objects and arrays of values.\n\nHowever, this isn't a JSON\
+    \ tutorial. You can find out JSON almost anywhere on the web, and there's not\
+    \ a lot to it. The takeaway here is that APIs can parse a URL and return data\
+    \ in the JSON format that can be consumed by a client application. Some sites\
+    \ can accept JSON, too, but the Open Movie Database is not one of them.\n\nWe\
+    \ also add other criteria. Figure 22 looks for a film called The Machinist, includes\
+    \ a plot summary, and returns the results as JSON (the default): http://www.omdbapi.com/?t=the+machinist&plot=short&r=json"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "```\n{\n  \"Title\": \"The Machinist\",\n  \"Year\": \"2004\",\n  \"Released\"\
+    : \"03 Dec 2004\",\n  \"\\*Cast\": \"Christian Bale\",\n  \"Genre\": \"Drama,\
+    \ Thriller\",\n  \"Director\": \"Brad Anderson\",\n  \"Writer\": \"Scott Kosar\"\
+    ,\n  \"Plot\": \"An industrial worker who hasn't slept in a year begins to doubt\
+    \ his own sanity\",\n  \"Language\": \"English, Spanish\",\n  \"Awards\": \"7\
+    \ wins, 14 nominations\",\n  \"Metacritic\": \"61\",\n  \"imdbVotes\": \"291,697\"\
+    ,\n  \"imdbRating\": \"7.7\",\n  \"type\": \"movie\"\n  \"Response\": \"True\"\
+    \n}\n```\n\nFigure 21: Open Movie Database API for The Machinist\n\nFigure 23\
+    \ sets the r (response parameter) to XML:\nhttp://www.omdbapi.com/?t=the-machinist&plot=short&r=xml.\n\
+    \n```\n<root response=\"True\">\n<movie title=\"The Machinist\" year=\"2004\"\
+    \ rated=\"R\" released=\"03 Dec 2004\" runtime=\"101 min\" genre=\"Drama, Thriller\"\
+    \ director=\"Brad Anderson\" writers=\"Scott Kosar\" actors=\"Christian Bale,\
+    \ Jennifer Jason Law, Aitana Sánchez-Gijón, John Sharian\" language=\"English,\
+    \ Spanish\" country=\"Spain\" awards=\"7 wins & 14 nominations\" poster=\"https://images-na.sl.images.com/M/MV3jNk1B2Y1jYjNm0YTmWLWIOT2gtNDUX5NDE5jZmE0E3KyXFkcGdeQXVyNT1qeODI_V\"\
+    \ metacacle=\"61\" imdbRating=\"7.7\" imdbVotes=\"291,697\" imdb=\"3056182\" type=\"\
+    movie\" />\n</root>\n```\n\nFigure 22: Changing the Output to XML Format\n\nThat's\
+    \ pretty concise as far as XML goes. A lot of XML is deeply nested and is a nightmare\
+    \ to parse, hence the preference for JSON in modern APIs.\n\nPlay around with\
+    \ the Open Movie Database API for a bit. I'll wait!\n\nSo, that is an example\
+    \ of a RESTful API. You're effectively using the URL itself to make calls to the\
+    \ web service.\n\n# RESTful web service\n\nWe're going to build similar in this\
+    \ chapter.\n\nYou've probably already thought: \"I could do that with Go!\" And,\
+    \ indeed, you can. So, all you need to get some data. And we've already been playing\
+    \ with MySQL's 'world' database, let's use that.\n\nOur application will allow\
+    \ users to enter any of the following paths and get in the way described:"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "+   - http://localhost:8999/city: Return a list of all cities in the City table\
+    \ in JSON format.\n- http://localhost:8999/city/1028: Return details of the city\
+    \ with ID 1028 in JSON format.\n- http://localhost:8999/cityadd/: Allow the user\
+    \ to POST a JSON representation of a new city and get a JSON result object back.\n\
+    - http://localhost:8999/citydel/1028: Allow the user to delete the city with ID\
+    \ 1028 and get a JSON result object back.\n\nIn order to make this work while\
+    \ keeping it as modular as possible, we're going to create the following files:\n\
+    \n+   - main.go\n- handlers.go\n- router.go\n- routes.go\n- database.go\n- city.go\n\
+    - dbupdate.go\n\nThose module names should be self-explanatory. Let's dive into\
+    \ it.\n\n# # Serving and routing\n\nLet's define our routes first. We're going\
+    \ to use gorilla/mux instead of net/http's DefaultServeMux because gorilla/mux\
+    \ is generally nicer to work with. And instead of simply defining one at a time,\
+    \ we're going to store route details in a struct in order to make it easier to\
+    \ add new routes when we need them.\n\nHere is routes.go, which defines each of\
+    \ the routes and their handlers in a slice (roughly analogous to arrays in all\
+    \ programming languages) of Route types, called Routes.\n\n```\n### Code Listing\
+    \ 17: routes.go\npackage main\n\nimport \"net/http\"\n\ntype Route struct {\n\
+    \    Name string\n    Method string\n    Pattern string\n    Handler http.HandlerFunc\n\
+    }\n\nvar routes []Route = Routes{\n    Route{\n```"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "```\n\"HomePage\",\n\"GET\",\n\"/\",\nHomePage,\nRoute{\n  \"CityList\",\n\
+    \  \"GET\",\n  \"/city\",\n  CityList,\n}Route{\n  \"CityDisplay\",\n  \"GET\"\
+    ,\n  \"/city/{id}\",\n  CityDisplay,\n}Route{\n  \"CityAdd\",\n  \"POST\",\n \
+    \ \"/cityadd\",\n  CityAdd,\n}Route{\n  \"CityDelete\",\n  \"GET\",\n  \"/citydelete/{id}\"\
+    ,\n  CityDelete,\n}\n}\n```\n\nAnd here in Code Listing 18 is router.go, which\
+    \ loops through the Routes and creates handlers for them.\n\nCode Listing 18:\
+    \ router.go\n\n```\npackage main\n\nimport \"github.com/gorilla/mux\"\n\nfunc\
+    \ NewRouter() *mux.Router {\n  router := mux.NewRouter().StrictSlash(true)\n \
+    \ for _, route := range routes {\n    router.\n      Methods(route.Method).\n\
+    \      Path(route.Pattern).\n      Name(route.Name).\n```"
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "```\nHandler(route.HandlerFunc) {\n  return router\n}\n```\n\nIn order to get\
+    \ all those routes up and running and ready to serve requests, we simply need\
+    \ to create an instance of NewRouter in our main function, but we'll get around\
+    \ to that in a bit.\n\nLet's begin by having a look at each of the handlers in\
+    \ handlers.go.\n\nFirst is the CityList handler, which gets called when a user\
+    \ visits http://localhost:8999/city.\n\n# Code List 19: The CityList Handler\n\
+    \n```\nfunc CityList(w http.ResponseWriter, r *http.Request) {\n  // Query the\
+    \ database\n  jsonCities := dbCity()\n  ...\\n}\n```\n\nCityList calls dbCity\
+    \ in our database.go module to query the database and return a list of cities\
+    \ in JSON format. In order to work with JSON in Go applications, you need the\
+    \ encoding/json package. Then you can call json.Marshal to turn a struct into\
+    \ JSON and json.Unmarshal to turn JSON into a struct.\n\n# Code List 20: Encoding\
+    \ the Query Response as JSON\n\n```\n// Find all CityList and return as JSON.\n\
+    func dbCity() []byte {\n  var cities Cities\n  var city City\n\n  cityResults,\
+    \ err := database.Query(\"SELECT * FROM city\")\n  if err != nil {\n    log.Fatal(err)\n\
+    \  }\n  defer cityResults.Next()\n\n  for cityResults.Next() {\n    cityResults.Scan(&city.Id,\
+    \ &city.Name, &city.CountryCode, &city.District, &city.Population)\n    cities\
+    \ = append(cities, city)\n  }\n\n  jsonCities, err := json.Marshal(cities)\n \
+    \ if err != nil {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "```\nfmt.Printf(\"Error: %s\", err)\n}\nreturn jsonCities\n```\n\nAs in Chapter\
+    \ 3, we use the Query method to pass SQL to our database server, then calling\
+    \ Next on the result set to iterate through each row that the query returns, and\
+    \ we're also calling Scan to map the columns in how row fields in our City struct.\n\
+    \nBack in our handler, CityList, we are writing out the appropriate JSON headers\
+    \ in the response, returning the JSON we received from dbCityList, as in Code\
+    \ List 21.\n\nCode List 21: Returning the JSON Response Containing a List of Cities\n\
+    \n```\nfunc CityList(w http.ResponseWriter, r *http.Request) {\n    // The database.\n\
+    \    jsonCities := dbCityList()\n\n    // Format the response.\n    w.Header().Set(\"\
+    Content-Type\", \"application/json\")\n    w.WriteHeader(http.StatusOK)\n    w.Write(jsonCities)\n\
+    }\n```\n\nLet's look at another handler—Display. This handler accepts an id parameter\
+    \ for a specific city that we pass to the dbCityDisplay function in database.go.\
+    \ If all goes well, we receive a JSON object that describes only that city and\
+    \ returns it in our response, as in Code Listing 22.\n\nCode List 22: Sending\
+    \ a JSON Response for a Single City\n\n```\nfunc CityDisplay(w http.ResponseWriter,\
+    \ r *http.Request) {\n    // Get URL parameter with the city ID to search for.\n\
+    \    vars := mux.Vars(r)\n    cityID, := strconv.Atoi(vars[\"id\"])\n\n    //\
+    \ Query the database.\n    jsonCity := dbCityDisplay(cityID)\n\n    // Send the\
+    \ response.\n    w.Header().Set(\"Content-Type\", \"application/json\")\n    w.WriteHeader(http.StatusOK)\n\
+    \    w.Write(jsonCity)\n}\n```\n\nCode List 23 shows the dbCityDisplay function\
+    \ that provides the JSON data for a specific city."
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "# Code Listing 23: Finding a Single City Using QueryRow\n\n```\n// Find a single\
+    \ city based on ID and return as JSON.\nfunc dbCityDisplay(id int) []byte {\n\t\
+    var city City\n\n\terr := database.QueryRow(\"SELECT * FROM city WHERE ID=?\"\
+    ,\n\tid).Scan(&city.Id, &city.Name, &city.CountryCode, &city.District,\n\t&city.Population)\n\
+    \tif err != nil {\n\t\tlog.Fatal(err)\n\t}\n\n\tjsonCity, err := json.Marshal(city)\n\
+    \tif err != nil {\n\t\tfmt.Printf(\"Error: %s\", err)\n\t}\n\\treturn jsonCity\n\
+    }\n```\n\nNote that dbCityDisplay expects to return only a single row from the\
+    \ database, so we're using QueryRow instead of Query. We don't need to defer the\
+    \ closing of the record set because that's explicitly needed when the query returns\
+    \ with either a single record or with no record. We need to chain the call to\
+    \ Scan to the call to QueryRow because otherwise the recordset will be closed\
+    \ before we have a chance to work with it.\n\nCityAdd is a little more complex\
+    \ because we must read the JSON from the body of the request, unmarshall it into\
+    \ a Go struct, pass it to dbCityAdd to process it."
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "func CityAdd(w http.ResponseWriter, r *http.Request) {\n    var city City\n\
+    \n```\n// Read the body of the request.\nbody, err := ioutil.ReadAllAll(io.LimitReader(r.Body,\
+    \ 1048576))\nif err != nil {\n    panic(err)\n}\nif err := r.Body.Close(); err\
+    \ != nil {\n    panic(err)\n}\n\n// Convert the JSON in the request to a Go type.\n\
+    if err := json.Unmarshal(body, &city); err != nil {\n    w.Header().Set(\"Content-Type\"\
+    , \"application/json\")\n    w.WriteHeader(422) // can't process!\n    if err\
+    \ := json.NewEncoder(w).Encode(err); err != nil {\n        panic(err)\n    }\n\
+    }\n\n// Write to the database.\naddResult := dbCityAdd(city)\n\n// Format the\
+    \ response.\nw.Header().Set(\"Content-Type\", \"application/json\")\nw.WriteHeader(http.StatusCreated)\n\
+    w.Write(addResult)\n```\n\nNotice how we're setting a 1MB limit on the amount\
+    \ of data we'll accept from the client. The last thing we want is some malicious\
+    \ user serving us a terabyte of data and crashing our server!\n\n> > Tip: Always\
+    \ limit the amount of data you will allow a client to send to your application.\n\
+    \nWhen we have the JSON in a Go struct, we can prepare a statement in SQL, then\
+    \ execute it with the new city record we want to. The benefit of preparing a statement\
+    \ in this way, using db.Prepare, is that it protects against SQL injection if\
+    \ the same malicious user tries to sabotage us using another favorite hacker's\
+    \ technique."
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# Code Listing 25: Using a Prepared Statement for the INSERT Operation\n\n\
+    ```\n// Create a new city based on the information supplied.\nfunc dbCityAdd(city\
+    \ City) []byte {\n\n    var addResult DBUpdate\n\n    // Create prepared statement.\n\
+    stmt, err := database.Prepare(\"INSERT INTO City(Name, CountryDistrict, Population)\
+    \ VALUES(?,?,?,?)\")\n    if err != nil {\n        log.Fatal(err)\n    }\n\n \
+    \   // Execute the prepared statement and retrieve the results.\n    res, err\
+    \ := stmt.Exec(city.Name, city.CountryCode, city.District, city.Population)\n\
+    \    if err != nil {\n        log.Fatal(err)\n    }\n    lastID, err := res.LastInsertId()\n\
+    \    if err != nil {\n        log.Fatal(err)\n    }\n    rowCnt, err := res.RowsAffected()\n\
+    \    if err != nil {\n        log.Fatal(err)\n    }\n\n    // Populate DBUpdate\
+    \ struct with last Id and num rows affected.\n    addResult.Id = lastID\n    addResult.Affected\
+    \ = rowCnt\n\n    // Convert to JSON and return.\n    newCity, err := json.Marshal(addResult)\n\
+    \    if err != nil {\n        fmt.Printf(\"Error: %s\", err)\n    }\n    return\
+    \ newCity\n}\n```\n\nNote also the INSERT operation on the database retrieves\
+    \ some useful information—namely the ID of the recently added record and the number\
+    \ of records affected. We’re storing this in a struct DBUpdate that we can return\
+    \ it to the CityAdd handler and, subsequently, to the client (who may wish to\
+    \ act on the information).\n\nThe last of our handlers is CityDelete. Like CityDisplay,\
+    \ it requires users to enter the ID of the city with which they want to work."
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "# Code Listing 26: The CityDelete Function\n\n```\nfunc CityDelete(w http.ResponseWriter,\
+    \ r *http.Request) {\n\n    // Get URL parameter with the city ID to delete.\n\
+    \    vars := mux.Vars(r)\n    cityID, _ := strconv.ParseInt(vars[\"id\" 10, 64)\n\
+    \n    // Query the database.\n    deleteResult := dbCityDelete(cityID)\n\n   \
+    \ // Send the response.\n    w.Header().Set(\"Content-Type\", \"application/json\"\
+    )\n    w.WriteHeader(http.StatusOK)\n    w.Write(deleteResult)\n}\n```\n\nThe\
+    \ corresponding dbCityDelete function takes that ID and prepares a DELETE statement\
+    \ with it. Database returns the number of rows affected, and we can use the same\
+    \ DBUpdate struct to present information to the user.\n\n# Code Listing 27: The\
+    \ dbCityDelete function\n\n```\n// Delete the city with the ID.\nfunc dbCityDelete(id\
+    \ int64) []byte {\n    var deleteResult DBUpdate\n\n    // Create prepared statement.\n\
+    \    stmt, err := database.Prepare(\"DELETE FROM CITY WHERE ID=?\")\n    if err\
+    \ != nil {\n        log.Fatal(err)\n    }\n\n    // Execute the prepared statement\
+    \ and retrieve the results.\n    res, err := stmt.Exec(id)\n    if err != nil\
+    \ {\n        log.Fatal(err)\n    }\n    rowCntnt, err := res.RowsAffected()\n\
+    \    if err != nil {\n        log.Fatal(err)\n    }\n\n    // Populate DBUpdate\
+    \ struct with Last ID and num rows affected.\n    deleteResult.Id = id\n    deleteResult.Affected\
+    \ = rowCnt\n\n    // Convert to JSON and return.\n    deletedCity, err := json.Marshal(deleteResult)\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "```\nif err != nil {\n    fmt.Printf(\"Error: %s\", err)\n}\nreturn deletedCity\n\
+    }\n```\n\nAnd that's really it!\n\n# The complete application\n\nLet's next examine\
+    \ a number of code listing examples that demonstrate the complete\\application\
+    \ as we separate the various concerns into these modules:\n\n+   - main.go\n-\
+    \ router.go\n- routes.go\n- handlers.go\n- database.go\n- city.go\n- dbupdate.go\n\
+    \nCode Listing 28: main.go\n\n```\npackage main\n\nimport (\n    \"log\"\n   \
+    \ \"net/http\"\n)\n\nfunc main() {\n    router := NewRouter()\n    dbConnect()\n\
+    \n    log.Fatal(http.ListenAndServe(\":8999\", router))\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "# Code Listing 29: router.go\n\n```\npackage main\n\nimport \"github.com/gorilla/mux\"\
+    \n\nfunc NewRouter() *mux.Router {\n    router := mux.NewRouter().StrictSlash(true)\n\
+    \    for _, route := range routes {\n        router.\n            Methods(route.Method).\n\
+    \            Path(route.Pattern).\n            Name(route.Name).\n           \
+    \ Handler(route.HandlerFunc)\n    }\n    return router\n}\n```\n\n# Code Listing\
+    \ 30: routes.go\n\n```\npackage main\n\nimport \"net/http\"\n\ntype Route struct\
+    \ {\n    Name string\n    Method string\n    Pattern string\n    HandlerFunc http.HandlerFunc\n\
+    }\n\ntype Routes []Route\n\nvar routes = Routes{\n    Route{\n        \"HomePage\"\
+    ,\n        \"GET\",\n        \"/\",\n        HomePage,\n    },\n    Route{\n \
+    \       \"CityList\",\n        \"GET\",\n        \"/city\",\n        CityList,\n\
+    \    },\n    Route{\n```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "```\n\"CityDisplay\",\n\"GET\",\n\"/city/{id}\",nCityDisplay,\nRoute{\n\"CityAdd\"\
+    ,\n\"POST\",\n\"/cityadd\",\nCityAdd,\n},\nRoute{\n\"CityDelete\",\n\"GET\",\n\
+    \"/citydel/{id}\",nCityDelete,\n}\n```\n\nCode Listing 31: handlers.go\n\n```\n\
+    package main\n\nimport (\n    \"encoding/json\"\n    \"fmt\"\n    \"io\"\n   \
+    \ \"io/ioutil\"\n    \"net/http\"\n    \"strconv\"\n\n    \"github.com/gorilla/mux\"\
+    \n)\n\nfunc HomePage(w http.ResponseWriter, r *http.Request) {\n    fmt.Fprintf(w,\
+    \ \"Welcome to the City Database!\")\n}\n\nfunc CityList(w http.ResponseWriter,\
+    \ r *http.Request) {\n    // Query the database.\n    jsonCities := dbCityList()\n\
+    \    \n    // Format the response.\n    w.Header().Set(\"Content-Type\", \"application/json\"\
+    )\n    w.WriteHeader(http.StatusOK)\n    w.Write(jsonCities)\n}\n\nfunc CityDisplay(w\
+    \ http.ResponseWriter, r *http.Request) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "```\n// Get URL parameter with the city ID to search for.\nvars := mux.Vars(r)\n\
+    cityID, _ := strconv.Atoi(vars[\"id\"])\npannic(err)\n\n// Query the database.\n\
+    jsonCity := dbCityDisplay(cityID)\n\n// Format the response.\nw.Header().Set(\"\
+    Content-Type\", \"application/json\")\nw.WriteHeader(http.StatusOK)\nw.Write(jsonCity)\n\
+    ```\n\n```\nfunc CityAdd(w http.ResponseWriter, r *http.Request) {\n    var city\
+    \ City\n\n    // Read the body of the request.\n    body, err := ioutil.ReadAll(io.LimitReader(r.Body,\
+    \ 1048576))\n    if err != nil {\n        panic(err)\n    }\n    if err := r.Body.Close();\
+    \ err != nil {\n        panic(err)\n    }\n\n    // Convert the JSON in the request\
+    \ to a Go type.\n    if err := json.Unmarshal(body, &city); err != nil {\n   \
+    \     w.Header().Set(\"Content-Type\", \"application/json\")\n        w.WriteHeader(422)\
+    \ // can't process!\n        if err := json.NewEncoder(w).Encode(err); err !=\
+    \ nil {\n            panic(err)\n        }\n    }\n\n    // Write to the database.\n\
+    \    addResult := dbCityAdd(city)\n\n    // Format the response.\n    w.Header().Set(\"\
+    Content-Type\", \"application/json\")\n    w.WriteHeader(http.StatusCreated)\n\
+    \    w.Write(addResult)\n}\n```\n\n```\nfunc CityDelete(w http.ResponseWriter,\
+    \ r *http.Request) {\n    // Get URL parameter with the city ID to delete.\n \
+    \   vars := mux.Vars(r)\ncityID, _ := strconv.ParseInt(vars[\"id\"], 10, 64)\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: "```\n// Query the database.\ndeleteResult := dbCityDelete(cityId)\n\n// Format\
+    \ the response.\nw.Header().Set(\"Content-Type\", \"application/json\")\nw.WriteHeader(http.StatusOK)\n\
+    w.Write(deleteResult)\n```\n\nCode Listing 32: database.go\n\n```\npackage main\n\
+    \nimport (\n\t\"database/sql\"\n\t\"encoding/json\"\n\t\"fmt\"\n\t\"log\"\n\n\t\
+    \"github.com/go-sql-driver/mysql\"\n)\n\nvar database *sql.DB\n\n// Connect to\
+    \ the \"world\".\nfunc dbConnect() {\n\tdb, err := sql.Open(\"mysql\",\n\t\t\"\
+    root:password@tcp(127.0.0.1:3306)/world\")\n\tif err != nil {\n\t\tlog.Println(\"\
+    Could not connect!\")\n\t}\tdatabase = db\n\tlog.Println(\"Connected.\")\n}\n\n\
+    // Find all cities and return as JSON.\nfunc dbCityList() []byte {\n\tvar cities\
+    \ []City\n\tvar city City\n\n\tcityResults, err := database.Query(\"SELECT * FROM\
+    \ city\")\n\tif err != nil {\n\t\tlog.Fatal(err)\n\t}\n\tfer cityResults.Close()\n\
+    \n\tfor cityResults.Next() {\n\t\tcityResults.Scan(&city.Id, &city.Name, &city.CountryCode,\
+    \ &city.District, &city.Population)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "```\ncities = append(cities, city)\n\njsonCities, err := json.Marshal(cities)\n\
+    if err != nil {\n\tfmt.Printf(\"Error: %s\", err)\n}\nreturn jsonCities\n```\n\
+    \n```\n// Find a single city based on ID and return as JSON.\nfunc dbCityDisplay(id\
+    \ int) []byte {\n\tvar city City\n\n\terr := database.QueryRow(\"SELECT * FROM\
+    \ city WHERE ID=?\",\n\tid).Scan(&city.Id, &city.Name, &city.CountryCode, &city.District,\n\
+    \t&city.Population)\n\tif err != nil {\n\tlog.Fatal(err)\n\t}\n\n\tjsonCity, err\
+    \ := json.Marshal(jsonCity)\n\tif err != nil {\n\tfmt.Printf(\"Error: %s\", err)\n\
+    \t}\n\treturn jsonCity\n}\n```\n\n```\n// Create a new city based on the information\
+    \ supplied.\nfunc dbCityAdd(city City) []byte {\n\tvar addResult DBUpdate\n\n\t\
+    // Create prepared statement.\n\tstmt, err := database.Prepare(\"INSERT INTO City(Name,\
+    \ CountryCode,\n\tDistrict, Population) VALUES(?,?,?,?)\")\n\tif err != nil {\n\
+    \tlog.Fatal(err)\n\t}\n\n\t// Execute the prepared statement and retrieve the\
+    \ results.\n\tres, err := stmt.Exec(city.Name, city.CountryCode, city.District,\n\
+    \tcity.Population)\n\tif err != nil {\n\tlog.Fatal(err)\n\t}\n\tlastId, err :=\
+    \ res.LastInsertId()\n\tif err != nil {\n\tlog.Fatal(err)\n\t}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "```\n}\nrowCnt, err := res.RowsAffected()\nif err != nil {\n    log.Fatal(err)\n\
+    }\n\n// Populate DBUpdate struct with Last Id and num rows affected.\naddResult.Id\
+    \ = lastId\naddResult.Affected = rowCnt\n\n// Convert to JSON and return.\nnewCity,\
+    \ err := json.Marshal(addResult)\nif err != nil {\n    fmt.Printf(\"Error: %s\"\
+    , err)\n}\nreturn newCity\n```\n\n// Delete the city with the supplied ID.\nfunc\
+    \ dbCityDelete(id int64) []byte {\nvar deleteResult DBUpdate\n\n// Create prepared\
+    \ statement.\nstmt, err := database.Prepare(\"DELETE FROM City WHERE ID=?\")\n\
+    if err != nil {\n    log.Fatal(err)\n\n// Execute the prepared statement and retrieve\
+    \ the results.\nres, err := stmt.Exec(id)\nif err != nil {\n    log.Fatal(err)\n\
+    \nrowCnt, err := res.RowsAffected()\nif err != nil {\n    log.Fatal(err)\n\n//\
+    \ Populate DBUpdate struct with Last Id and num rows affected.\ndeleteResult.Id\
+    \ = id\ndeleteResult.Affected = rowCnt\n\n// Convert to JSON and return.\ndeletedCity,\
+    \ err := json.Marshal(deleteResult)\nif err != nil {\n    fmt.Printf(\"Error:\
+    \ %s\", err)\n}\nreturn deletedCity\n\n}"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "# Code Listing 33: city.go\n\n```\npackage main\n\ntype City struct {\n   \
+    \ Id int `json:\"id\"\"\n    Name string `json:\"name\"\"\n    Country string\
+    \ `json:\"country\"\"\n    District string `json:\"district\"\"\n    Population\
+    \ int `json:\"pop\"\"\n}\n```\n\n# Code Listing 34: The dbUpdate Struct in dbupdate.go\n\
+    \n```\npackage main\n\ntype DBUpdate struct {\n    Id int64 `json:\"id\"\"\n \
+    \   Affected int64 `json:\"affected\"\"\n}\n```\n\n# # Running the application\n\
+    \nWe can test the application from a browser, but that will involve a bit of fiddling\
+    \ around with the developer console and more clicks than necessary.\n\nInstead\n\
+    \nIf you have a Mac or Linux machine, curl is probably already available to you.\
+    \ If you have Windows, the easiest way to access it is by downloading the Git\
+    \ Bash which contains curl and a wealth of other useful tools. There's even a\
+    \ Nash shell for Windows—see https://msdn.microsoft.com/en-us/commandline/wsl/about.\
+    \ It's handy to have around even if you don't use Git. Another alternative (although,\
+    \ in my opinion, a more bloated alternative) is Cygwin.\n\nYou can download Git\
+    \ Bash at https://git-for-windows.github.io.\n\n# # Displaying all cities\n\n\
+    Open two shells.\n\nRun the application in the first shell by executing go run\
+    \ *.go in the same folder as your application modules, as in Figure 24."
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "MINGW64 /C:/HOME/code/src/github.com/marklewin/go-web-succinctly/ch05\n\n```\n\
+    mplewLAPTOP-QVVF5MV9 MINGW64 ~/code/src/github.com/marklewin/go-web-succinct\n\
+    ly/ch05 (master)\n$ \ncity.go database.go bdupdate handlers.go main.go router.go\
+    \ routes.go\nmplewLAPTOP-QVVF5MV9 MINGW64 ~/code/src/github.com/marklewin/go-web-succinct\n\
+    ly/ch05 (master)\n$ go run *\n2017/02/16 20:19:56 Connected.\n\nmplewLAPTOP-QVVF5MV9\
+    \ MINGW64 ~/code/src/github.com/marklewin/go-web-succinct\nly/ch05\n$ |\n```\n\
+    \nFigure 23: Running the Application\n\nNext, enter the following command in the\
+    \ second shell window:\n\n```\ncurl -i localhost:8999/city\n```\n\nThe -i flag\
+    \ instructs curl to include the HTTP header.\n\nYou should see a JSON representation\
+    \ of every city in the City table, as shown in Figure 25.\n\nMINGW64:/c/HOME\n\
+    \n```\nmplewLAPTOP-QVVF5MV9 MINGW64 ~\n$ curl -i localhost:8999/city\n% Total\
+    \ % Received % Xfered Average Speed Time Time Current Speed\n% 0 0 0 0 0 0 --\
+    \ -- -- -- OHT\nHTTP/1.1 200 OK\nContent-Type: application/json\nDate: Thu, 16\
+    \ Feb 2017 20:22:29 GMT\nTransfer-Encoding: chunked\n[ {\"id\":1,\"name\":\"Kabul\"\
+    ,\"country\":\"AFG\",\"district\":\"atric\",\"name\":\"Kabul\",\"pop\":1782000},{\"\
+    id\":2,\"name\":\"Aghzabad\",\"country\":\"AFG\",\"district\":\"Qandahar\",\"\
+    pop\":2375000},{\"id\":3,\"name\":\"Herat\",\"country\":\"AFG\",\"district\":\"\
+    Herat\",\"name\":\"Herat\",\"pop\":186800},{\"id\":4,\"name\":\"Mazar-e-Sharif\"\
+    ,\"country\":\"AFG\",\"district\":\"Balkh\",\"name\":\"Balkh\",\"pop\":1278000},{\"\
+    id\":5,\"name\":\"Amsterdam\",\"country\":\"NLD\",\"district\":\"North-Holland\"\
+    ,\"name\":\"North-Holland\",\"pop\":93368},{\"id\":6,\"name\":\"Rotterdam\",\"\
+    country\":\"NLD\",\"district\":\"Zuid-Holland\",\"name\":\"Zuid-Holland\",\"pop\"\
+    :593321},{\"id\":7,\"name\":\"Hague\",\"country\":\"NLD\",\"district\":\"Zuid-Holland\"\
+    ,\"name\":\"Hague\",\"pop\":440900},{\"id\":8,\"name\":\"Utrecht\",\"country\"\
+    :\"NLD\",\"district\":\"Utrecht\",\"pop\":316000},{\"id\":9,\"name\":\"Eindhoven\"\
+    ,\"country\":\"NLD\",\"district\":\"North-Brabant\",\"name\":\"North-Brabant\"\
+    ,\"pop\":201843},{\"id\":10,\"name\":\"Tilburg\",\"country\":\"NLD\",\"district\"\
+    :\"Nord-Brabant\",\"pop\":193283},{\"id\":11,\"name\":\"Groningen\",\"country\"\
+    :\"NLD\",\"district\":\"Groningen\",\"pop\":172701},{\"id\":12,\"name\":\"Breda\"\
+    ,\"country\":\"NLD\",\"district\":\"Noord\",\"pop\":163000},{\"id\":13,\"name\"\
+    :\"Aapeldeorn\",\"country\":\"NLD\",\"district\":\"Gelderland\",\"pop\":153491},{\"\
+    id\":14 }\n```\n\nFigure 24: Requesting All Cities"
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# Displaying a specific city
+
+
+    With the application still running in the first shell window, enter the following
+    in the second shell window:
+
+
+    ```
+
+    curl -i localhost:8999/city/1028
+
+    ```
+
+
+    You should see details for the city with the ID of 1028—namely, Hyderabad in India.
+    Enter some random city IDs and see which cities are referenced.
+
+
+    Figure 25: Requesting a Specific City by ID
+
+
+    # Adding a city
+
+
+    In the second shell window, enter the following:
+
+
+    ```
+
+    curl -H "Content-Type: application/json" -d ''{"name":"Whoville", "country":"ITA",
+    "district":"XXX", "pop":"1"}'' http://localhost:8999/cityadd
+
+    ```
+
+
+    > Tip: Take care when entering the JSON object that represents the new city. JSON
+    is simple, but it is not forgetting if to close quotes or braces, or if you put
+    quotes (that denote the string data type) around a value that is expected to be
+    an integer.
+
+
+    The record should be added to the database and you should receive the new record
+    ID in the response, as in Figure 27.'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "```\nMINGW4\\C/HOME/go/src/github.com/marklewin/go-web-succinctly/ch05\n\n\
+    imple@LAPTOP-QVF5MV9 MINGW64 ~/code/src/github.com/marklewin/go-web-succinct\n\
+    ly/ch05 (master)\n  curl -X 'Content-Type: application/json' -d '{\"name\":\"\
+    whoville\", \"country\":\"IT'\nA  \"status\":\"XXX\", --post 1}' http://localhost:8999/cityadd\n\
+    \  % Total % Varied Average Speed Time Time Time Current\n       Download Upload\
+    \ Total Spent Left Speed\n100 87 100 24 100 63 307 807 -- ------ ------ ------\
+    \ 1000{\nid\":\"4093,\"affected\":1\"}\n\nimple@LAPTOP-QVF5MV9 MINGW64 ~/code/src/github.com/marklewin/go-web-succinct\n\
+    ly/ch05 (master)\n}\n```\n\n# Figure 26: Adding a New City\n\nIn the previous\
+    \ example, the ID of my recently added record is 4093. Yours is probably different.\
+    \ Rather than query the database manually or in order to see if the new record\
+    \ exists, you can use the following:\n\n```\ncurl -i localhost:8999/city/4093\n\
+    ```\n\nHowever, take to replace 4093 with whatever ID was assigned when you added\
+    \ the city.\n\n```\nMINGW4\\C/HOME/go/src/github.com/marklewin/go-web-succinctly/ch05\n\
+    imple@LAPTOP-QVF5MV9 MINGW64 ~/code/src/github.com/marklewin/go-web-succinct\n\
+    ly/ch05 (master)\n  curl -i localhost:8999/city/4093\n  % Total % Varied Average\
+    \ Speed Time Time Time Current\n       Download Upload Total Spent Left Speed\n\
+    100 70 100 0 0 437 0 ------ ------ ------ 437HT\nTP/1.1 200 OK\nContent-Type:\
+    \ application/json\nDate: 16 Feb 2023 20:31:28 GMT\nContent-Length: 70\n\n{\"\
+    id\":\"4093\",\"name\":\"Whoville\",\"country\":\"ITA\",\"district\":\"XXX\",\"\
+    pop\":1\"}\n\nimple@LAPTOP-QVF5MV9 MINGW64 ~/code/src/github.com/marklewin/go-web-succinct\n\
+    ly/ch05 (master)\n}\n```\n\n# Figure 27: Verification—New City Added to the Database\n\
+    \n# Deleting a city\n\nIn order to delete a city, you use a syntax similar to\
+    \ yours search for a city by ID. Try using the same city ID that you just added\
+    \ to the database. For example:\n\n```\ncurl -i localhost:8999/city/4093\n```"
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: 'If everything proceeds to plan, you should get a DBUpdate object encoded as
+    JSON, which shows a single row is affected, as in Figure 29.
+
+
+    ```
+
+    MINGW64:/c/HOME/code/go/src/github.com/marklewin/go-web-succinctly/ch05
+
+    mplew@LAPTOP-QVVF5MV9 MINGW64 ~/code/go/src/github.com/marklewin/go-web-succinct
+
+    j$ (master)
+
+    $ curl -X http://localhost:8999/city/4093
+
+    % Total % Received Xferred Average Speed Time Time Spent Current Left Speed
+
+    100 24 200 OK 24 0 0 1/1 0 --- --- 192HT
+
+    TP/1.1 200 OK
+
+    Content-Type: application/json
+
+    Date: Thu, 16 Feb 2017 20:35:16 GMT
+
+    Content-Length: 24
+
+
+    {"id":"4093","affected":1}
+
+    ```
+
+
+    Figure 28: Deleting a City
+
+
+    Congratulations! You have just written your first "real" service using Go.
+
+
+    Of course, this is far from perfect, and if you were planning to put it into production,
+    you would probably want to do a fair bit of refactoring, implement better error
+    handling, and so on.
+
+
+    However, the point of all this is to emphasize that Go is an excellent language
+    for working on this type of application. I have done similar work in other languages,
+    including Node.js and Ruby, and I am much happier working in Go. Everything seems
+    much tidier and better thought out, in my humble opinion.
+
+
+    # Challenge step
+
+
+    If you''re up for a challenge, try to implement update functionality in the application—that
+    is, to put the U back into CRUD!
+
+
+    For starters, allow the client to submit a JSON object that will first delete
+    the existing record (if there is a matching ID), then add a new report success
+    (or otherwise) in JSON format, too.
+
+
+    Next, allow the client to submit some partial JSON along with the ID, then update
+    an existing record based on the fields that have changed. For example, the client
+    might submit the following:
+
+
+    ```
+
+    {"id":"4088","name":"Whereville","pop":2}
+
+    ```
+
+
+    This will update the Name and Population fields in the City table.'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# # Chapter 6 Cookies and Sessions
+
+
+    As you are undoubtedly aware, HTTP is a stateless protocol. Each request by a
+    client to a web server is completely unrelated to any previous exchange between
+    the two, and the communication mechanism consists solely of request/response pairs.
+    The server is not required to retain any information regarding any previous requests.
+
+
+    The benefit of this approach is that the server doesn''t need to assign memory
+    to do so (because it doesn''t "remember" any previous requests from the clients),
+    and if the client connection dies, the server doesn''t have to do any cleanup.
+
+
+    The downside of this approach is that, well, the server doesn''t remember anything.
+    This can make it tricky to build a rich, interactive web application all too often
+    we must send extra information with each request so that the server knows enough
+    about the state of the client to provide a useful response.
+
+
+    The keys to making all this happen are cookies and sessions. Let''s define both
+    before we demonstrate how to use them in Go web applications.
+
+
+    # ## Introducing cookies and sessions
+
+
+    # ### What is a cookie?
+
+
+    A cookie is simply a little text file that a browser puts on the user''s computer.
+    It stores information that helps to maintain the illusion of a persistent connection.
+
+
+    Cookies are often used for authentication, storing site-visitor preferences, maintaining
+    shopping cart items, and identifying server sessions.
+
+
+    When the browser interacts with the server, it passes the information in the cookie
+    as part of the request. Note that cookies are domain-specific. If a browser creates
+    a cookie for twitter.com, it cannot suddenly send that cookie to google.com.
+
+
+    Essentially, cookies are great for storing information about a user''s interaction
+    with a webpage as he or she moves from one page to the next.
+
+
+    # ### What is a session?
+
+
+    Sessions allow you to store information about the client''s interaction with a
+    website just as cookies do, but the data gets stored on the server instead of
+    the client.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "Sessions are a better alternative to stuffing lots of constantly changing information\
+    \ in cookies. Instead, the client stores only a unique identifier (the \"Session\
+    \ ID\") and passes the ID to the web server with every request. The server uses\
+    \ the Session ID to look up information in its internal database and retrieve\
+    \ variables to the user's use of the application.\n\n# What is a session cookie?\
+    \ Or a persistent cookie?\n\nUh-oh. Just to confuse you even further, there are\
+    \ not only cookies and sessions, but there is also a session cookie!\n\nWith cookies,\
+    \ your application can set an expiry time. You might have seen this when the login\
+    \ page for a website gives you the \"Keep logged in?\" option.\n\nIf you set an\
+    \ expiry time, the browser saves the cookie to the local file system. This is\
+    \ called a persistent cookie.\n\nIf you don't set an expiry time, the browser\
+    \ usually keeps the cookie hanging around in memory, and this is called a session\
+    \ cookie.\n\nSo, session cookies and persistent cookies are simply cookies, but\
+    \ with different expiration times.\n\n# Working with cookies\n\n# Setting cookies\n\
+    \nIn order to write information to a cookie in Go, you use the net/http/package's\
+    \ SetCookie function, whose signature looks like this:\n\n```\nhttp.SetCookie(w\
+    \ ResponseWriter, cookie *Cookie)\n```\n\nThe w is the response to the request\
+    \ and cookie is a struct:\n\n```\ntype Cookie struct {\n\tName        string\n\
+    \tValue       string\n\tPath        string\n\tDomain      string\n\tExpires  \
+    \   time.Time\n\tRawExpires  string\n\tMaxAge      int\n\tSecure      bool\n\t\
+    HttpOnly    bool\n\tRaw         string\n\tUnparsed    []string\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: 'The cookie can hold a lot of information, but the most important fields are:
+
+
+    +   * Name: A key for the cookie for referring to it in your code.
+
+    * Value: The cookie''s data.
+
+    * Expires: A Time value that denotes when the browser can delete it.
+
+
+    Other fields that might be useful for controlling access to the cookie:
+
+
+    +   * Path
+
+    * Domain
+
+    * HttpOnly
+
+
+    For now, let''s keep it simple.
+
+
+    Here is an example of how you can set a cookie:
+
+
+    ```
+
+    expiration := time.Now().Add(365 * 24 * time.Hour)
+
+    cookie := http.Cookie(Name: "username", Value: "jsmith", Expires: expiration)
+
+    http.SetCookie(w, &cookie)
+
+    ```
+
+
+    > Tip: Go''s time functions are sophisticated but complex. For more information,
+    see the documentation at https://golang.org/pkg/time/
+
+
+    # Fetching cookies
+
+
+    In order to retrieve a cookie from a request, you can do the following:
+
+
+    ```
+
+    cookie, _ := r.Cookie("username")
+
+    fmt.Fprintf(w, cookie.body.)
+
+    ```
+
+
+    Or, if several cookies are associated with a request, you can iterate through
+    them, as follows:
+
+
+    ```
+
+    for _, cookie := range r.Cookies() {
+
+    fmt.Fprintf(w, cookie.Name)
+
+    }
+
+    ```
+
+
+    # Using cookies
+
+
+    Let''s create a simple application that uses a cookie.
+
+
+    The following code checks to see if this is a visitor''s first visit to our site.
+    If it is, it displays a welcome message. If not, it displays the time of the last
+    visit.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "```\npackage main\n\\import (\n    \"net/http\"\n    \"strconv\"\n    \"time\"\
+    \n)\n\nfunc CheckLastVisit(w http.ResponseWriter, r *http.Request) {\n    c, err\
+    \ := r.Cookie(\"lastvisit\") //\n    expiry := time.Now().AddDate(0, 0, 1)\n\n\
+    \    cookie := &http.Cookie{\n        Name: \"lastvisit\",\n        Expires: expiry,\n\
+    \        Value: strconv.FormatInt(time.Now().Unix(), 10),\n    }\n    http.SetCookie(w,\
+    \ cookie)\n\n    if err != nil {\n        w.Write([]byte(\"Welcome to the site!\"\
+    ))\n    } else {\n        lasttime, _ := strconv.ParseInt(c.Value, 10, 0)\n  \
+    \      html := \"Welcome! You last visited at: \" +\n        html = html + time.Unix(lasttime,\
+    \ 0).Format(\"15:04:05\")\n        w.Write([]byte(html))\n    }\n}\n\nfunc main()\
+    \ {\n    http.HandleFunc(\"/\", CheckLastVisit)\n    http.ListenAndServe(\":8999\"\
+    , nil)\n}\n```\n\nThe first line of code in the handler tries to drop the cookie\
+    \ to the user's browser. If it succs, it records the current time in the cookie's\
+    \ **Value** field and displays a \"Welcome to the site!\" message. If there is\
+    \ an error, this will occur because the cookie already exists, which means all\
+    \ it do is update the time in the **Value** field and display it to users as the\
+    \ time they last visited.\n\nIf we run the application and visit the root of the\
+    \ application, we'll see the message in Figure 30."
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '![](img/cdabbe899d95a91197e7ec37cc1c8048_75_0.png)
+
+
+    If we refresh the page, we''ll see Figure 31.
+
+
+    ![](img/cdabbe899d95a91197e7ec37cc1c8048_75_1.png)
+
+
+    If you''re using Chrome, as I am, you can delete the cookie this way:
+
+
+    +   1. Open Developer Tools (**Chrome menu > More Tools > Developer Tools**).
+
+    2. Select the **Network** tab.
+
+    3. Expand the Cookies section under Storage in the left pane.
+
+    4. Right-click the domain (http://localhost:8999) and click **Clear**.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '![](img/cdabbe899d95a91197e7ec37cc1c8048_76_0.png)
+
+
+    Figure 31: Deleting the Cookie Using Chrome''s Web Developer Tools
+
+
+    If you''re using Firefox, you can delete the cookie this way:
+
+
+    +   1. From the Firefox button or the Tools menu, go to the Options > Privacy
+    panel.
+
+    2. Select Firefox: Use Custom Settings for History.
+
+    3. Click **Show Cookies**.
+
+    4. Use the search box to enter the domain name of your site under development
+    (http://localhost:8999) or drill down the folders to find it.
+
+    5. Select the cookie in the list that you want to delete and click **Remove Cookie.**
+
+
+    If you delete the cookie and refresh the browser page, you''ll be presented with
+    the “Welcome to the site!” message again.
+
+
+    # # Working with sessions
+
+
+    In order to work with sessions in Go, I''m going to suggest that we revisit the
+    Gorilla Toolkit''s sessions module because, in my opinion, it''s a much cleaner
+    implementation than the native Go approach.
+
+
+    Install it from GitHub as follows:
+
+
+    ```
+
+    go github.com/gorilla/sessions
+
+    ```
+
+
+    # ## Basics
+
+
+    The following code demonstrates the basics of using the **gorilla/sessions** package
+    to create and authenticate a session, retrieve the session, set some values, then
+    the session.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "# Code Listing 36: Using gorilla/sessions\n\n```\npackage main\n\nimport (\n\
+    \    \"net/http\"\n\n    \"github.com/gorilla/mux\"\n    \"github.com/gorilla/sessions\"\
+    \n)\n\nvar store = sessions.NewCookieStore(\n    []byte(\"keep-it-secret-keep-it-safe\"\
+    )\n)\n\nfunc handler(w http.ResponseWriter, r *http.Request) {\n    err := store.Get(r,\
+    \ \"session-name\")\n    if err != nil {\n        http.Error(w, err.Error(),\n\
+    \            http.StatusInternalServerError)\n        return\n    }\n\n    //\
+    \ Set session values.\n    session.Values[\"abc\"] = \"cba\"\n    session.Values[111]\
+    \ = 222\n    // Save the session values\n    session.Save(r, w)\n}\n\nfunc main()\
+    \ {\n    router := mux.NewRouter()\n    router.Handle(\"/\", HandleFunc(\"/\"\
+    , handler))\n    http.ListenAndServe(\":8999\", nil)\n}\n```\n\nThis code first\
+    \ initializes the session store by calling NewCookieStore with a secret key used\
+    \ to authenticate the session.\n\nThen, in our handler, we call the store's Get\
+    \ function to retrieve the session called \"session-name\". If it finds that,\
+    \ we'll have access to the session. If a session that does not exist, one will\
+    \ be created.\n\n> Tip: Session cookies created by Gorilla will last for a month\
+    \ by default. If this is too long for your requirements, you can either set the\
+    \ MaxAge property in each session's"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "# Options or configure the session store so that all session cookies have the\
+    \ same MaxAge value.\n\nWhen we have a session, we can assign values using its\
+    \ Values property. The Values property is a Go map, which is Go's implementation\
+    \ of a hash table that allows you to set properties using key/value pairs.\n\n\
+    Next, we call the session's Save method to save the session in the response.\n\
+    \n+   Tip: Always save the session values before returning the response. Otherwise,\
+    \ the response won't receive the session cookie.\n\nThat's Gorilla's basic implementation\
+    \ of sessions. However, gorilla/sessions also gives us extra, useful functionality\
+    \ that we will look at next.\n\n# Flash messages\n\nGorilla borrowed the idea\
+    \ of flash messages from Ruby. A flash message is simply a session value that\
+    \ exists until it is read.\n\nWe use flash messages to temporarily store data\
+    \ between requests, such as a success or error message during the submission process,\
+    \ in order to avoid it being duplicated in later error.\n\nWe add a flash message\
+    \ using the session's AddFlash method and retrieve the flash messages by calling\
+    \ session.Flash.\n\nWe won't dwell too on flash messages here—be aware that they\
+    \ exist. Code Listing 37 demonstrates how to get and set flash messages\n\n> Code\
+    \ Listing 37: Using Flash Messages in gorilla/sessions\n\n```\npackage main\n\
+    import (\n    \"fmt\"\n    \"net/http\"\n    \"time\"\n\n    \"github.com/gorilla/mux\"\
+    \n    \"github.com/gorilla/sessions\"\n)\nvar store = sessions.NewCookieStore([]byte(\"\
+    keep-it-secret-keep-it-safe\"))\nfunc handler(w http.ResponseWriter, r *http.Request)\
+    \ {\n    session, err := store.Get(r, \"session-name\")\n    if err != nil {\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "```\nhttp.Error(w, err.Error(), http.StatusInternalServerError)\nreturn\n\n\
+    // Get any previous flashes.\nif flashes := session.Flashes(); len(flashes) >\
+    \ 0 {\n// Do something with them\nfor f := range flashes {\n    fmt.Println(flashes[f])\n\
+    }\n} else {\n// Set a new flash.\nsession.AddFlash(\"Flash! Ah-ah, savior of the\
+    \ universe!\" + time.Now().String())\n}\nsession.Save(r, w)\n}\n\nfunc main()\
+    \ {\nrouter := mux.NewRouter()\nhttp.Handle(\"/\", router)\nrouter.HandleFunc(\"\
+    /\", handler)\nhttp.ListenAndServe(\":8999\", nil)\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "# Chapter 7 Development Techniques\n\nIf you've stuck around this long, you\
+    \ should now have a good grasp of the various bits and pieces that go toward creating\
+    \ a web application in Go. In this chapter, I want to cover the various techniques\
+    \ that will help you debug and test your Go applications.\n\n# Logging\n\nAny\
+    \ application that grows beyond the trivial will need good logging in order to\
+    \ enable its developers to locate and fix errors.\n\n# Basic logging\n\nGo's log\
+    \ package lets you write to all the standard devices, custom files, (via io.Writer\
+    \ interface. So far, we've only logged to stdout via fmt.Println, etc), but that's\
+    \ not a realistic option for production applications. Let's consider how we might\
+    \ log output to files and be specific about which files gets type of log message.\n\
+    \nIn the following code, we create an application that log notices to notices.log,\
+    \ warnings to warnings.log, and errors to errors.log.\n\n> Code 38: Logging to\
+    \ Different Files Based on the Type of Information\n\n```\npackage main\nimport\
+    \ (\n\t\"log\"\n\t\"os\"\n)\nvar (\n\tNotice *log.Logger\n\tWarning *log.Logger\n\
+    \tError *log.Logger\n)\nfunc main() {\n\tnoticeFile, err := os.OpenFile(\"notice.log\"\
+    , \n\t\tos.O_RDWR|os.O_APPEND, 0660)\n\tdefer noticeFile.Close()\n\tif err !=\
+    \ nil {\n\t\tlog.Fatal(err)\n\t}\n\twarnFile, err := os.OpenFile(\"warnings.log\"\
+    ,\n```"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: "os.O_RDWR|os.O_APPEND, 0660\n\n```\ndefer warnFile.Close()\nif err != nil {\n\
+    \tlog.Fatal(err)\n}\nerrorFile, err := os.OpenFile(\"error.log\",\n\tos.O_RDWR|os.O_APPEND,\
+    \ 0660)\ndefer warnFile.Close()\nif err != nil {\n\tlog.Fatal(err)\n}\n```\n\n\
+    Notice = log.New(noticeFile, \"NOTICE: \\ log.Date|log.Ltime)\nNotice.SetOutput(noticeFile)\n\
+    Notice.Println(\"This is basically F.Y.I.\")\n\nWarning = log.New(warnFile, \"\
+    WARNING: \\ log.Date|log.Ltime)\nWarning.SetOutput(warnFile)\nWarning.Println(\"\
+    Perhaps this needs your attention\")\n\nError = log.New(errorFile, \"ERROR: \\\
+    \ log.Date|log.Ltime)\nError.SetOutput(errorFile)\nError.Println(\"You REALLY\
+    \ should fix this!\")\n\nNote in the above code listing, 0660 is the file mode\
+    \ argument that enables reading and writing of the file to users and groups. For\
+    \ more information on file mode 0660 (and files in general), see http://www.filepermissions.com/file-permission/0660.\n\
+    \nThe output is as in Code List 39:\n\n# Code List 39: Log File Output\n\n| notice.log\
+    \ | | warnings.log | | error.log |\n|---|---|---|---|---|n| 1 NOTICE: 2017/02/17\
+    \ 18:51:42 This is basically F.Y.I. | | 1 WARNING: 2017/02/17 18:51:42 Perhaps\
+    \ this needs your attention? | | 1 ERROR: 2017/02/17 18:51:42 You REALLY should\
+    \ fix! |\n\nHowever, none of that is useful for logging web requests, which any\
+    \ decent web server can do. So, let's consider another approach for this."
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "# Logging web requests\n\nLet's revisit the RESTful web service that we created\
+    \ in Chapter 5. Remember how we split the\nroutes from the router into **routes.go**\
+    \ and **router.go**, respectively? Let's look again at a\nnumber of code listing\
+    \ examples and separate the various concerns into these modules:\n\n+   - router.go\n\
+    - routes.go\n- logger.go\n- logger.go containing Logger middleware\n- Logger middleware\
+    \ added to routers\n\nCode Listing 40: router.go\n\n```\npackage main\nimport\
+    \ \"github.com/gorilla/mux\"\nfunc NewRouter() *mux.Router {\n    router := mux.NewRouter().StrictSlash(true)\n\
+    \    for _, route := range routes {\n        Methods(route,route.Method).\n  \
+    \      Path(route,route.Pattern).\n        Name(route,route.Name).\n        Handler(route,route.HandleFunc)\n\
+    \    }\n    return router\n}\n```\n\nCode Listing 41: routes.go\n\n```\npackage\
+    \ main\nimport \"net/http\"\ntype Route struct {\n    Name string\n    Method\
+    \ string\n    Pattern string\n    HandleFunc http.HandlerFunc\n}\ntype Routes\
+    \ []Route\n```"
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "```\nvar routes = Routes{\n  Route(\n    \"HomePage\",\n    \"GET\",\n    \"\
+    /\",\n    HomePage,\n  },\n  Route(\n    \"CityList\",\n    \"GET\",\n    \"/city\"\
+    ,\n    CityList,\n  },\n  Route(\n    \"CityDisplay\",\n    \"GET\",\n    \"/city/{id}\"\
+    ,\n    CityDisplay,\n  },\n  Route(\n    \"CityAdd\",\n    \"POST\",\n    \"/cityadd\"\
+    ,\n    CityAdd,\n  },\n  Route(\n    \"CityDelete\",\n    \"GET\",\n    \"/citydel/{id}\"\
+    ,\n    CityDelete,\n  )\n})\n```\n\nManaging routes in this way makes decorating\
+    \ them with middleware very easy, as discussed in Chapter 2. Consider this new\
+    \ addition to our web service application, shown in Code Listing 42.\n\nCode Listing\
+    \ 42: logger.go, Containing Logger Middleware\n\n```\npackage main\n\nimport (\n\
+    \  \"log\"\n  \"net/http\"\n  \"time\"\n)\n\nfunc Logger(inner http.Handler, name\
+    \ string) http.Handler {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "```\nreturn http.HandlerFunc(func(w http.ResponseWriter,\n    r *http.Request)\
+    \ {\n\n    startTime := time.Now()\n\n    inner.ServeHTTP(w, r)\n\n    log.Printf(\n\
+    \        \"%s\\t%s\\t%s\\t%s\",\n        r.Method,\n        r.RequestURI,\n  \
+    \      name,\n        time.Since(startTime)\n    )\n})\n```\n\nThe new file logger.go\
+    \ contains a function called Logger. We can pass our handlers to Logger, which\
+    \ will then automatically provide logging and timing information.\n\nMiddleware\
+    \ is pretty cool, right?\n\nWe can apply this middleware to our handlers by modifying\
+    \ the NewRouter function in router.\n\nCode Listing 43: Adding Logger Middleware\
+    \ to Our Routers\n\n```\npackage main\n\nimport (\n    \"net/http\"\n\n    \"\
+    github.com/gorilla/mux\"\n)\n\nfunc NewRouter() *mux.Router {\n    router := mux.NewRouter().StrictSlash(true)\n\
+    \    for _\n```"
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: "```\n}\n  return router\n}\n```\n\nNext, when we launch the application and\
+    \ create a request, our console displays log messages as in Figure 33.\n\n![](img/cdabbe899d95a91197e7ec37cc1c8048_85_0.png)\n\
+    \nFigure 32: Testing the Logger Middleware\n\n# # Testing\n\nTesting is baked\
+    \ into the Go language, with the testing package in the standard library. Testing\
+    \ offers the ability to run tests by executing the go test command.\n\nAll functions\
+    \ in Go begin with the word \"Test\" and receive a single parameter of type *testing.T:\n\
+    \n```\npackage foo\n\nimport \"testing\"\n\nfunc TestSomething(t *testing.T) {\n\
+    \  // do your testing here...\n}\n```\n\nWhen you have written a test and saved\
+    \ it in a file with a name ending in _test.go, you exercise it by running go test\
+    \ in the same directory.\n\nLet's look at an example of how it works.\n\nWe'll\
+    \ create a very simple function that calculates the average of a slice of numbers\
+    \ in a function called Average, in a package called math, in a file called average.go."
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "# Code Listing 44: The Average Function in the Math Package\n\n```\npackage\
+    \ math\n\nfunc Average(nums []float64) float64 {\n    total := float64(0)\n  \
+    \  for _, x := range nums {\n        total += x\n    }\n    return total / float64(len(nums))\n\
+    }\n```\n\nCode Listing 45 shows the main function in main.go that we would normally\
+    \ use to invoke our\nAverage function.\n\n# Code Listing 45: main.go, in Package\
+    \ Main\n\n```\npackage main\n\nimport (\n    \"fmt\"\n\n    \"github.com/marklewin/go-web-succinctly/ch07/testing/math\"\
+    \n)\n\nfunc main() {\n    nums := []float64{1, 2, 3, 4}\n    avg := math.Average(nums)\n\
+    \    fmt.Println(avg)\n}\n```\n\nNext, we can create a function called TestAverage\
+    \ in a file average_test.go, also in\nmath, in order to test the function.\n\n\
+    # Code Listing 46: The Code to Test the Average Function in the Math Package\n\
+    \n```\npackage math\n\nimport \"testing\"\n\nfunc TestAverage(t *testing.T) {\n\
+    \    var v float64\n    v = Average([]float64{1, 2, 3, 4, 5})\n    if v != 3.0\
+    \ {\n        t.Error(\"Expected 3.0, got %v\", v)\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "Now, run the test from the same directory in which the files reside. Use the\
+    \ -v flag in go test for verbose output.\n\n```\nMINGW64\\c/HOME/go/src/github.com/marklewin/go-web-succinctly/ch07/testing/math\n\
+    implewLAPTOP-QVFMSV9 MINGW64 ~/code/go/src/github.com/marklewin/go-web-succinctly/ly/ch07/testing/math\
+    \ (master)\n$ go test\nRUN TestAverage\n--- PASS: TestAverage (0.00s)\nok  github.com/marklewin/go-web-succinctly/ch07/testing/math\
+    \  0.153s\nimplewLAPTOP-QVFMSV9 MINGW64 ~/code/go/src/github.com/marklewin/go-web-succinctly/ly/ch07/testing/math\
+    \ (master)\n$\n```\n\nFigure 33: Executing the Test Successfully\n\nIn this instance,\
+    \ all the tests in the math package passed (although currently there is only the\
+    \ one).\n\nWhat if our test fails? Let's simulate that. In this instance, it is\
+    \ our test, rather than the code we are testing, that's at fault—it's expecting\
+    \ a different value from the correct one.\n\nCode Listing 47: Sabotaging the TestAverage\
+    \ Function\n\n```\npackage math\nimport \"testing\"\nfunc TestAverage(t *testing.T)\
+    \ {\n\\var v float64\n\tv = Average([]float64{1, 2, 3, 4, 5})\n\tif v != 4.0 {\n\
+    \tt.Error(\"Expected 4.0, got %v\", v)\n}\n}\n```\n\nFigure 35 demonstrates what\
+    \ a failed test looks like."
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '```
+
+    mingw64@LAPTOP-QVFF5MV9 ~/code/go/src/github.com/marklein/go-web-succinctly
+
+    ly/ch07/testing-fail/math (master)
+
+    $ go test -v
+
+    RUN TestAverage
+
+    --- FAIL: TestAverage (0.00s)
+
+    average_test.go:9: Expected 4.0, got 3
+
+    FAIL exit status 1
+
+    github.com/marklein/go-web-succinctly/ch07/testing-fail/math 0.76s
+
+    mw64@LAPTOP-QVFF5MV9 ~/code/go/src/github.com/marklein/go-web-succinctly
+
+    ly/ch07/testing-fail/math (master)
+
+    $ }
+
+    ```
+
+
+    Figure 34: A Failed Test
+
+
+    Hopefully, you won''t experience too many failing tests during your Go web development
+    adventures, but better to know in development rather than in production!
+
+
+    Whatever happens, I wish you a very happy and productive time as a Go developer!'
+  merge: -1
+  img_proc: true
