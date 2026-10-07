@@ -1,0 +1,685 @@
+- pgno: 0
+  md: '# # Geophysical Research Letters
+
+
+    RESEARCH LETTER
+
+    10.1029/2020GL089436
+
+
+    # # Application of Deep Learning to Estimate Atmospheric Gravity Wave Parameters
+    in Reanalysis Data Sets
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_0_0.png)
+
+
+    D. Matsuoka¹,²,³, S. Watanabe⁴, K. Sato⁵, S. Kawazoe⁶, W. Yu⁷, and S. Easterbrook⁸³
+
+
+    ¹Japan Agency for Marine-Science and Technology (JAMSTEC), Yokohama, Japan ²Japan
+    Science and Technology Agency (JAST), ³Department of Computer Science, University
+    of Toronto, Ontario, Canada⁴Department of Earth and Planetary Science, University
+    of Tokyo, Tokyo, Japan⁵Department of Earth and Planetary Science, Hokkaido University,
+    Sapporo, Japan
+
+
+    **Key Points:**
+
+
+    +   - A deep learning approach to estimate atmospheric gravity waves using 29-year
+    reanalysis data.
+
+    - Gravity wave momentum fluxes at 100 hPa were detected from low resolution data
+    with a spatial resolution of 60 km
+
+    - Using the proposed method, structural distribution of flux in the target area
+    can be estimated quite well
+
+
+    **Supporting Information:**
+
+
+    +   - Supporting Information S
+
+
+    **Correspondence to:**
+
+    D. Matsuoka,
+
+    dmatsuoka@jamstec.ac.jp
+
+
+    **Abstract** Gravity waves play an essential role in driving and maintaining global
+    circulation. To understand their contribution in the atmosphere, the accurate
+    reproduction of their distribution is important. A deep learning approach for
+    the estimation of gravity wave momentum fluxes was proposed, and performance at
+    100 hPa was tested using data from low resolution and meridional winds, temperature,
+    and specificity in Hokkaido region (Japan). This convolutional neural network
+    was trained on 29-year reanalysis data (JRA-55 and ERA-5) and the final 5-year
+    data were evaluated. The results showed that the fine-scale distribution of gravity
+    waves could be estimated at a reasonable computational cost. In particular, where
+    gravity waves are stronger, the mean root square error (RMSE) of the maximum flux
+    was significantly better than that of the low resolution method.
+
+
+    **Citation:**
+
+    Matsuoka, D., Watanabe, S., Yu, W., & Easterbrook, S. (2020). Application of deep
+    learning to estimate atmospheric gravity wave parameters. *Geophysical Research
+    Letters*, 47, 10.1029/2020GL089436. https://doi.org/10.1029/2020GL089436
+
+
+    Received 22 JUN 2020
+
+    Accepted 19 SEP 2020
+
+    Accepted article online 21 SEP 2020
+
+
+    # # 1. Introduction
+
+
+    Atmospheric gravity waves are small-scale waves that originate from various sources,
+    including high mountains, jet-front systems, and convection. They propagate momentum
+    vertically and play an important role in driving and maintaining the global circulation
+    in the atmosphere (Fris & Alexander, 2003). They possess a potentially significant
+    amount of momentum deposit. Since the 1980s, a wide range of studies to gravity
+    waves have been detected, and theoretical advancements in their understanding
+    have been achieved (Achiers et al., 1995; Chun & Baik, 1998; Erb et al., 2014;
+    Guo et al., 2017; Ploughberg & Zhang, 2014; Sato, 2014; Sato, 2009; Tsuda, 1992;
+    Wright et al., 2017).
+
+
+    The scales of gravity waves have been parameterized on the computational grid
+    as the key in several atmospheric models, such as sub-grid scale waves as momentum
+    flux, wavelength, and frequencies (Alexander et al., 2010; Palmer et al., 1996).
+    Most parameterizations assume that gravity waves only propagate vertically, but
+    they are also affected by horizontal topography and conditions (Dunkerton, 1984;
+    Sato et al., 2009). Watanabe et al. (2008) used an atmospheric circulation model
+    with a resolution to show the vertical and horizontal propagation of gravity waves
+    with a fine resolution. Although such a high-resolution method can successfully
+    simulate the generation, propagation, and dissipation of gravity waves, it is
+    computationally expensive and unsuitable for practical problems.
+
+
+    © 2020. The Authors. This article is published under the terms of the Creative
+    Commons Free-Attribution-NonCommercial License, which permits use, distribution
+    and reproduction provided the original work is properly credited and is not used
+    for commercial purposes.
+
+
+    MATSUOKA E. U.
+
+
+    1 of 10'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Geophysical Research Letters
+
+
+    with reasonable computational costs would be beneficial for further development
+    of gravity wave parameterization.
+
+
+    Recently, image pattern recognition using deep learning has attracted a lot of
+    attention in various fields (Krizhevsky et al., 2012). Deep learning, which uses
+    multiple neural networks to statistically learn features from large amounts of
+    data, has demonstrated high performance in various tasks, including image transformation,
+    where an input image is transformed into another. In the field of atmospheric
+    science, deep learning has also been introduced in troposphere and atmospheric
+    wave detection (Earth et al., 2018), satellite image retrieval (Matsuno et al.,
+    2019), and wave reconstruction (Tao et al., 2016). Rasp (2018) first applied a
+    deep neural network to capture front detection. Subsequently, deep learning has
+    been used for parameterizing moisture convection (O''Gorman & Dwyer, 2018), ozone
+    deposition velocity at the planetary boundary layer (Yang et al., 2019). Furthermore,
+    Gaje et al. (2020) proposed deep-learning-stochastic parameterization which has
+    the advantage that an estimation model based on the training data set, the computational
+    cost associated with running the model is much lower than directly solving the
+    sub-problem.
+
+
+    The aim of this study was to apply the deep learning to estimate the key parameters
+    for surface gravity waves that propagate for the further development of gravity
+    wave parameterizations. In order to achieve a reasonable computational cost, we
+    used lower-resolution data in the stratosphere as the input values to learn the
+    conversion process to fine-scale wind fluxes in the lower stratosphere. This method
+    is particularly effective for describing non-organic gravity waves whose sources
+    are generally complex. However, as the first step, we tested organic gravity waves
+    which are relatively easy to handle, over the Hokkaido region of Japan.
+
+
+    # ## 2. Data and Methods
+
+
+    # ### 2.1. Data Analysis and Training Data Preparation
+
+
+    Our model learned the relationship between coarse-resolution atmospheric fields
+    and high-resolution wind fluxes. As input, the Japanese 55-year Reanalysis (JRA-55;
+    Harada et al., 2016; Kobayashi et al., 2013), which is a global reanalysis data,
+    was used, and for output (ground truth), the resolution scaling data (DSRA-55)
+    from the Japan Meteorological Agency (JMA) was used. JRA-55 and DSRA-55 have horizontal
+    resolutions of 60 and 5 km, respectively. The ground truth may not be perfect
+    because DSRA-55 is based on information from forty-six JRA-55 runs which are related
+    with initial conditions with the JRA''s operational model.
+
+
+    The lower-resolution (60 km) physical quantities used as input were the zonal
+    (u), meridional (v), and vertical (w) winds, air temperature (T), specific humidity
+    (q), and pressure (p) at levels of 100, 300, 700, and 850 hPa which were used
+    for the generation and propagation of gravity waves. These are shown in Figures
+    1. Since organic gravity waves are radiated from the mountains, we used winds
+    near the terrain (i.e., 850 and 700 hPa for high mountains). Temperature is necessary
+    because the static stability of the atmosphere is a factor influencing the structure
+    of gravity waves. In the case of gravity waves, the condensation of relative humidity
+    is important: in the case of gravity waves, the levels in the troposphere (i.e.,
+    300 and 700 hPa) needs to be included. Thus, for future studies, u, v, T, and
+    q at horizontal wavelengths are required to cover the multiple sources of gravity
+    waves in the deep learning system, only organic gravity waves are the focus of
+    this study. The fine-resolution (5 km) topography of DSRA-55 was also used as
+    input; the total number of channels was 15.
+
+
+    The fine-scale ground truth used to reconstruct the input data, 3D fluctuations
+    (u'', v'', and w'') were obtained as the residuals of the original data from the
+    gravity waves which are spatially simple moving averages of 20 grid squares (1,00
+    km-squares). The pressure level of the ground truth should be higher than that
+    of the source of gravity waves. Here, we used 100 hPa, which is the top level
+    of DSRA-55, as a tentative level in method development. The momentum flux at may
+    be changed for a parameterization with better performance in the future.
+
+
+    MATSUOKA ET AL.
+
+
+    2 of 10
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_1_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# # Geophysical Research Letters
+
+
+    10.1029/2020GL089436
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_0.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_1.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_2.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_3.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_4.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_5.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_6.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_7.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_8.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_9.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_10.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_11.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_12.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_13.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_14.png)
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_2_15.png)
+
+
+    Figure 1. (a-m) Input data and (n-p) ground truth of of the data for deep convolutional
+    neural network.
+
+
+    a level is the most important quantity for parameterization, but it is not sufficient
+    on its scale Wavenumbers and phase speed at certain level are necessary to describe
+    the momentum deposit in the upper atmosphere. These parameters can be obtained
+    using the linear theory of gravity waves each component of the wind fluctuations
+    is successfully estimated. In addition, the wind fluctuations are easy to compare
+    to the ground truth.
+
+
+    The analysis domain was a rectangular area (~1,000 km × 1,000 km), which included
+    the Hidaka Mountains as shown in Figure 1m. The DSJR-55 data were cut out into
+    128 × 128 uniform grids to fit its grid system,
+
+
+    MATSUOKA ET AL.
+
+
+    3 of 10'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Geophysical Research Letters
+
+
+    and to better facilitate the deep learning process, the JRA-55 data were converted
+    into the same grids using bicubic interpolation.
+
+
+    # ## 2.2. Deep Convolutional Neural Network
+
+
+    Using the data described above, our model was designed to learn the transformation
+    of the physical quantities in the troposphere (300, 700, and 850 hPa) to each
+    component of the fluctuations ($u''$, $v''$, and $w''$) in the lower stratosphere
+    (100 hPa). Treating each component independently may disrupt the polar layer initialization
+    that the linear gravity waves have, only the estimation error for error needs
+    to be minimized, which makes it easier to train. Additionally, to convert the
+    input data, a U-Net convolutional neural network which was originally designed
+    for image segmentation/partitioning (Ronneberger et al., 2015) was trained to
+    learn the relationship between the input data and the output data using a contracting
+    path to capture the context for each image and a symmetric expansive path as shown
+    in Figure 2. The contracting path consisted of convolutional operations that captured
+    local features (feature maps) using 3 x 3 filters (''Conv 3 x 3'', blue arrows
+    in Figure 2) and 2 x 2 pooling (''Pool 2 x 2'', red arrows in Figure 2). The expansive
+    path consisted of the deal operation, using the convolutional filters and upsampling
+    operations to recover the feature maps with the help of upsampling (''Up-conv
+    2 x 2'', green arrows in Figure 2). The context information is then merged with
+    the corresponding feature maps from the encoder-side via skip-connections (''Copy
+    1 x 1'', yellow arrows in Figure 2). The output value of each grid was calculated
+    using the final filters (''Conv 1 x 1'', cyan arrows in Figure 2). The parameter
+    settings such as the number of layers, as well as the filter size, were the same
+    as reported by Matsuka et al. (2019).
+
+
+    With supervised machine learning, we learned a training and validation set for
+    model fitting and performance measurement. For the training and validation, the
+    29-year JRA-55 and DSJ-55 data (time interval, 6 hr; total time, 42,364) from
+    the 1997-2025 period were used, and for testing, the 5-year data (7,308 days)
+    from the 2008-2012 period were used. During the training and validation phase,
+    the error between the output of the U-Net and the ground truth (previously stated
+    as the correct output data) was measured, and the model was repeatedly optimized
+    using these training data until its predictive error on the validation data converged
+    to a certain threshold. The error function was calculated using the Tanimoto (1958)
+    coefficient, representing the similarity between the two, as follows:
+
+
+    > $y = \frac{\sum x_i y_i}{\sum x_i^2 + \sum y_i^2 - \sum x_i y_i}$
+
+
+    where $u''$, $v''$, and $w''$ of the ith grid are ground truth and output data,
+    respectively. The Tanimoto coefficient is usually applicable when the values are
+    positive, and ranging from 0 to 1. However, it can also be extended to negative
+    values without any constraints except when one of the estimated value and the
+    ground truth is negative. After the training and validation phase, the reserved
+    test data were then fed into the U-Net for the evaluation phase.
+
+
+    The source code for deep learning was implemented in Python 3.6 using keras (TensorFlow
+    2.1), which ran on an NVIDIA DG station with four Tesla V100 graphical processing
+    units (GPUs). The training of the 29-year data over one epoch lasted -89 s, and
+    the number of iterations of $u''$, $v''$, and $w''$ that were required to converge
+    the errors were 33, 46, and 93, respectively, and for errors with respect to the
+    test data there was 0.764, 0.835, and 0.696. For the estimation using the 5-year
+    test data, it took approximately 16.6 ms per meter on average. This computational
+    cost seems be reasonable to develop a new gravity wave parameterization, the direct
+    implementation of the proposed method to an atmospheric model or to gravity wave
+    parameterization would be made in future studies.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# # Geophysical Research Letters\n\n10.1029/2020GL089436\n\n![](img/8f155e08600b638cf6d9e0e3e4394c1e_4_0.png)\n\
+    \nInput data:\nzonal wind (850, 700, 300hPa)\nMoridional wind (850, 700, 300hPa)\n\
+    Temperature (850, 700, 300hPa)\nSpecific humidity (850, 700, 300hPa)\nTopography\n\
+    \n| DSRA-55 (60 km) | Conv 3x3, ReLU | DSRA-55 (5 km) |\n| --- | --- | --- |\n\
+    | | Copy and copy | |\n| | Max pool 2 | |\n| | U-Net2 | |\n| | Conv 1 | |\n\n\
+    Output data:\nu' (100hPa)\nDSRA-55\nv' (100hPa)\nw' (100hPa)\n\n**Figure 2.**\
+    \ The multichannel feature maps in each layer are represented using blue numbers.\
+    \ The number and sizes of the features maps are listed on left and top of the\
+    \ left. Each operation is illustrated using arrows.\n\n#  3. Results and Discussion\n\
+    \nIn this section, the results of the evaluation of the test data for the trained\
+    \ U-Net for a period of 5 years are presented and discussed. Figure 1 gives an\
+    \ example of input data for the trained U-Net and the ground truth output at 00:00\
+    \ UTC on 22 November 2021. Estimation results (i.e., outputs) from the U-Net with\
+    \ the ground truth data are shown in Figure 2.\n\nMaps of the momentum flux $\r\
+    ho u'v'$ are shown in Figures 3a–3c. The observed structures of the $u'$, $v'$,\
+    \ and $w'$ are consistent with those of the ground truth on land and south coast.\
+    \ Particularly, the negative and positive stripes from the Hidaka Mountains in\
+    \ central Hokkaido to the southeast were, with similar structures to those of\
+    \ the ground truth. The larger amplitudes of $u' $ and $w'$ are observed on the\
+    \ sea, which were not well represented.\n\nFigure 3g show line plots of $u'$,\
+    \ $v'$, and $w'$ along $A'$–$B'$. The wave vector direction of gravity waves on\
+    \ the south coast of the analysis region. Its structures observed of the $u'$,\
+    \ $v'$, and $w'$ values are similar to that of the ground truth. The maximum amplitudes\
+    \ of $u'$, $v'$, and $w'$ along the U-Net were -4.58, -4.2, and 1.17 m, respectively.\
+    \ The values of $w'$ are consistent with the ground truth although the amplitudes\
+    \ are larger, except for the slight difference in $v'$.\n\nThe fluctuations and\
+    \ magnitude of $\rho u'v'$ and $\rho v'w'$ are shown along $C'$–$D'$ in Figures\
+    \ 3p–3r. The negative values of $\rho u'v'$ and $\rho v'w'$ were -0.83 and -0.49\
+    \ m/s², respectively. The maximum of the momentum magnitude $|\rho u'v'|$, $|\r\
+    ho v'w'|$ was 0.87 mPa for the estimation result and 0.93 mPa for the ground truth.\
+    \ The slight difference of the maximum $|\rho u'v'|$, $|\rho v'w'|$ is attributable\
+    \ to a phase shift in $v'$ between the estimate and the ground truth (Figure 3h).\
+    \ These consistent with ground truth indicate that the estimation of both the\
+    \ momentum flux and the wave parameters is useful using the U-Net. In other words,\
+    \ the downscaling from 60-km mesh data to the 5-km data can be appropriately performed\
+    \ using the U-Net.\n\nMATSUOKA ET AL.\n\n5 of 10"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Geophysical Research Letters
+
+
+    10.1029/2020GL089436
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_5_0.png)
+
+
+    Figure 3. (a-c) Ground truth of u'', v'', and w'' at 00:00 UTC on 22 November
+    2011 and (d-f) showing corresponding results with contour lines (dotted) at 0
+    MPa. (g-j) Ground truth of pu'', pv'' and momentum flux (pu'', pv'') and (m-o)
+    showing their corresponding results. Line plots of the magnitude of the amplitude
+    of the gravity waves from emission and the ground truth A-A'' shown in (g) u'',
+    (h) v'', (i) w'', (p) pu'', (q) pv'', and (r) momentum flux magnitude. Their maximum
+    amplitudes are shown by black arrows.
+
+
+    MATSUOKA ET AL.
+
+
+    6 of 10'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Geophysical Research Letters
+
+
+    10.1029/2020GL089436
+
+
+    ![](img/8f155e08600b638cf6d9e0e3e4394c1e_6_0.png)
+
+
+    Figure 4. Monthly changes in the estimated momentum flux in the target area. Estimation
+    results and ground truth for (a) maximum momentum flux, (b) maximum |ρvw|, (c)
+    maximum |ρvw|, and (d-f) their estimation errors (RMSEs). Estimation results and
+    ground truth for (g) dominant zonal and (i-k) meridional wavenumber in ρ''w, h
+    dominant zonal and (j) meridional wavenumber in ρ''w'', and their estimation errors
+    (RMSEs).
+
+
+    MATSUOKA ET AL.
+
+
+    7 of 10'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Geophysical Research Letters
+
+
+    We also evaluated the horizontal wavenumber spectrum of gravity wave momentum
+    fluxes. The momentum flux spectra were calculated by Re[U*W*(k)] and Re[V*W*(k)],
+    where k is the horizontal wavenumber; U, V, and W(k) are the Fourier components
+    of u'', v'', and w''; and an asterisk (*) denotes their complex conjugate (e.g.,
+    Sato et al., 2017). The characteristic horizontal wavenumber was estimated as
+    a wavenumber with the largest spectral density, which is also a key parameter
+    of gravity waves. In the zonal direction, both estimated characteristic wave numbers
+    were m⁻¹ for Re[U*(k)] and 5.0 × 10⁻⁵ rad m⁻¹ for Re[V*(k)] and 5.0 × 10⁻⁵ rad
+    m⁻¹ for Re[W*(k)]. That the results for different dates are shown in Figures S1
+    and S2 in the supporting information. However, the dominant momentum fluxes are
+    also identified.
+
+
+    Finally, for the momentum flux in the target area we estimated for each month.
+    Figures 4–6 depict the distribution of maximum momentum flux magnitude |u''|,
+    |v''|, and |w''|, as well as maximum |J| for the ground truth and the estimates.
+    All three months show that the estimates tend to be larger in winter and smaller
+    in summer. This is attributable to seasonal movement of the jet stream that is
+    more frequent during these periods, which means the cloud base to the surface
+    is much stronger triggering the organic gravity waves. This seasonal change was
+    observed for a limited period of years. In April gravity wave activity is high.
+    In the December, when the momentum fluxes were strongest, the estimated values
+    of |u''| and |v''| were 0.23 and 0.14 m/s, respectively, while their values were
+    lower than those of the ground truth. This could be attributed to the misalignment
+    of the phase of the estimated u'', v'', and w'' in the atmosphere above. Furthermore,
+    the estimation errors (mean square errors (RMSEs)) of the momentum flux magnitude
+    |u''|, |v''|, |w''|, maximum |J| and maximum |J| are shown in Figures 4–6, respectively.
+    The RMSE was large in winter and small in summer. The large RMSEs for the maximum
+    momentum fluxes are observed for December: The month, third quarter, and maximum
+    RMSE for the maximum momentum flux magnitude |u''|, |v''|, |w''|, maximum |J|
+    and maximum |J| were approximately 0.32, 0.30, and 0.70 m/s.
+
+
+    Figures 4–g show the true and estimated values of the zonal and meridional wave
+    numbers involved in the momentum flux for each month. The true values do not vary
+    much throughout the year. The values are -8 × 10⁻¹ to -1 × 10⁻¹. The estimated
+    values agree well with the ground truth in winter. Figures 4–k show the estimation
+    errors (RMSEs) in the characteristic horizontal wavenumber for each month. The
+    mean error in the zonal wavenumber is approximately 1.1 × 10⁻⁵, which is around
+    10% of the ground truth while in summer, the mean error is approximately 0.3 ×
+    10⁻⁵ to 5.0 × 10⁻⁵, which is around 30% of the ground truth. From the results
+    of these analyses, it can be concluded that the proposed method adequately estimates
+    the momentum flux associated with strong gravity waves, especially in winter.
+
+
+    # 4. Conclusions
+
+
+    This study demonstrated the performance of the deep convolutional neural network
+    (U-Net) to estimate the parameters of organic gravity waves. Low-resolution data
+    (u, v, t and n) at levels of 850, 700 and 300 hPa in the troposphere as well as
+    high-resolution topography data were correctly identified by 3D wave functions
+    (u'', v'', w'') in the lower atmosphere. Wave parameters such as wavenumber and
+    well as amplitude of the momentum flux, could be properly estimated using the
+    U-Nets. The estimates are particularly suitable in winter when gravity wave activity
+    is high.
+
+
+    Generally, the learning techniques vary greatly in the quality of the results
+    that they produce depending on the neural network layer selection, the choice
+    of the training data, and the definition of the error function. As in the supporting
+    information (Figure 53), the estimation accuracy varies depending on the difference
+    in the input data (physical quantity and level). Therefore, it is necessary to
+    optimize the'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # Geophysical Research Letters
+
+
+    10.1029/2022GL089436
+
+
+    learning by taking into account the method which is reasonable and added to the
+    season, and to which the region is marked as
+
+
+    One of the advantages of the proposed method is the reasonable cost that is required
+    for application to untrained data. This deep-learning method can provide a significant
+    cost to the development of non-originating gravity waves which emerge from emitted
+    origins simultaneously and they are generated by certain mechanisms are not yet
+
+
+    # ## Data Availability Statement
+
+
+    JRA-25 and DSRA-55 data sets obtained from https://kjishu.jhu.org/JRA-25/en/index.html
+    and https://kjishu.jhu.org/DSRA-55/en/index.html.
+
+
+    # ## References
+
+
+    # ### Acknowledgments
+
+
+    This work was supported by the Japanese Science and Technology Agency (JST); PRESTO
+    (Grant No JPR1777) and JST (Grant No JPRCR1663).
+
+
+    Alexander, M. J., Liu, M., McLAndrew, C., Polowska, S., Price, J., Sun, F., et
+    al. (2010). Gravity waves in gravity-wave offset in climate and models the gravity-wave
+    flux momentum from observations and models. Quarterly of the Royal Meteorological
+    Society, 136(612), 1114–1124. https://doi.org/10.1002/qmd.1357
+
+
+    Chun, H., & Baek, J. (1996). Momentum flux by thermally induced gravity waves
+    and their applications to large-scale atmospheric circulation and jet. Journal
+    of the Atmospheric Sciences, 53(12), 2212–2228. https://doi.org/10.1175/1520-0469(1996)053<2212>:2
+
+
+    Dunkerton, T. J. (1984). Gravity waves in the stratosphere. Journal of the Atmospheric
+    Sciences, 41(5), 1003–1010. https://doi.org/10.1175/1520-0469(1984)041<1003>:A
+
+
+    Ern, M., Smith, Q. T., Quisse, F., Liu, J. C., McIntyre, G., Russell, J. M., &
+    Mie, R. (2016). GRACILE framework for stochastic parameterization of atmospheric
+    gravity waves based on limited satellite data. Southern Earth Science Letters,
+    5(4), 872–895. https://doi.org/10.1002/jsl.2015006
+
+
+    Pritts, D. C., Alexander, M. J., et al. (2013). Gravity waves and their dynamics
+    in the atmosphere. Reviews of Geophysics, 51(4), e20123. https://doi.org/10.1002/2012RG004023
+
+
+    Gagne, D. G., Hirschman, M., Subramanian, A., & Hamholtz, A. (2020). Machine learning
+    for stochastic parameterization: Generative adversarial networks in the Lorenz
+    6 model. Journal of Advances in Machine Learning, 2, e202000896. https://doi.org/10.1002/jaml.202000896
+
+
+    Keller, M. A., Alexander, M. J., Love, V., Bette, J. M., et al. (2013). A comparison
+    between gravity wave flux from observations and climate models. Journal of Geophysical
+    Research, 118(E8), E8181–E8190. https://doi.org/10.1002/2012JD01803X
+
+
+    Harada, Y., Yamamoto, K., Kobayashi, E., Endo, H., Kobayashi, S., et al. (2016).
+    The JRA-55 Reconstruction: assessment of gravity wave flux in circulation and
+    climate variability. Journal of the Meteorological Society, 94, 269–302. https://doi.org/10.2115/jms/skj011.215
+
+
+    Hertag, A., Bourgaert, G., Ruisel, A., & Coini, F. (2017). Evaluation of gravity
+    wave flux and momentum budgets from the Vortexenter in Antarctica and the Southern
+    Ocean. Journal of the Atmospheric Sciences, 74(6), 3056–3073. https://doi.org/10.1175/J016JA02718
+
+
+    Holtz, A. A., Alexander, M. J., Liu, L., Ciu, M., Putman, W., & Wallace, S. (2017).
+    Evaluation of gravity waves and gravity wave drag in the tropical troposphere.
+    American Journal of Atmospheric Sciences, 124(18), 2481–2495. https://doi.org/10.1029/2016JD025998
+
+
+    Kajima, Y., Takada, H., Kimura, K., Kobayashi, S., & Yoshimura, K. (2016). National
+    scale reanalysis using the 1996–2013 JRA-25 data (DSRA-55), Vol 2, No. 1–5. The
+    JRA-55 General Reconstruction: General patterns and characteristics. Journal of
+    the Meteorological Society of Japan, 95(5), 711–725. https://doi.org/10.2115/jms/skj0114
+
+
+    Krizhevsky
+
+
+    Kurth, T., Schoenbein, R., Mueller, J., Lundquist, N., Petella, F., & Smith, J.
+    (2018). Evaluation of deep learning for cloud parameterization. Nature Geoscience,
+    11(9), 632–636. https://doi.org/10.1038/s41467-018-07733-y
+
+
+    Matsumoto, D., Sagunagi, K., Kawaguchi, S., Arasaki, F., Otsuka, Y., et al. (2019).
+    Automatic detection of atmospheric storms using deep neural networks, SOL, 154,
+    31132. https://doi.org/10.1029/2019JD031132
+
+
+    Using a deep convolutional neural network for the modeling of climate change,
+    extreme weather and events. Journal of Advances in Machine Learning, 10, 2548–2563.
+    https://doi.org/10.1002/jaml.201800513
+
+
+    Ploughough, R., & Zhang, F., & Perth, G. (2014). Using deep learning to represent
+    subset processes in climate models. Proceedings of the National Academy of Sciences,
+    115(39), 9684–9689. https://doi.org/10.1073/pans.141820611
+
+
+    Reisenberger, C., Fischer, P., & Bengio, R. (2017). U-Net: medical image segmentation.
+    Medical Methods in Computer Science, 951, 231–244. https://doi.org/10.1007/978-3-319-24554-4
+
+
+    Sato, K. (1994). A statistical study of the structure, and sources of inertio-gravity
+    waves in the lower stratosphere observed with the MU radar. Journal of Atmospheric
+    and Oceanic Physics, 560, 755–774. https://doi.org/10.1016/0199-0182(94)90061-X
+
+
+    MATSUOKA A. U.
+
+
+    9 of 10'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Geophysical Research Letters
+
+
+    Sato, K., Kohma, M., Tsutsumi, M., & Saito, T. (2017). Frequency spectra and patterns
+    of wind fluctuations in the summer Antarctic atmosphere revealed by radar observations.
+    Journal of Geophysical Research: Atmospheres, 122, 2–19. https://doi.org/10.1002/2016JD025528
+
+
+    Sato, T., Watanabe, S., Kawasaki, S., & Kawatani, Y. (2012). Gravity wave characteristics
+    in the Southern Hemisphere revealed by a high resolution middle-atmosphere general
+    circulation model. Journal of the Atmospheric Sciences, 69, 1378–1396. https://doi.org/10.1175/JAS-D-11-3
+
+
+    Sato, K., Watanabe, S., Kawasaki, Y., Tomikawa, M., Miyazaki, K., & Takahashi,
+    M. (2009). On the origin of atmospheric gravity wave velocities. Geophysical Research
+    Letters, 36, E8005
+
+
+    Silva, J. S., Held, C., Cavel, R., Sannammilla, L. A., Müller, J. W. (2019). A
+    deep learning parameterization for ozone dry velocities, 46, 963–989. https://doi.org/10.1029/2018GL081033
+
+
+    Tsuchimoto, T. (1995). *Atmospheric Dynamics in the Earth-Ocean System* (Vol.
+    16, 28). New York: International Business Machines Corp.
+
+
+    Tay Y.,.,, K., & Kim, J. (2002). A new statistical framework to reduce bias in
+    satellite precipitation products. Journal of Hydrology, 79, 941–955. https://doi.org/10.1016/S0021-1809(01)00113-X
+
+
+    Tsuda, T., Murakami, Y., Yamamoto, M., & Kubo, F. (1994). Seasonal variation of
+    moisture flux observed with the MI radar. Geophysical Research Letters, 21(7),
+    1260–1267. https://doi.org/10.1029/1994GL0000725
+
+
+    Wang
+
+
+    Watanabe, S., Kawatani, Y., Tomikawa, M., Miyazaki, K., Takahashi, M., & Sato,
+    K. (2008). General aspects of a T213-d3 mesosphere sphere general circulation
+    model.
+
+
+    Wright, C. J., Hindley, N. P., Hoffmann, L., Alexander, M. J., & Mitchell, N.
+    J. (2017). Exploring gravity wave characteristics in 3-d near stratospheric technique:
+    A AIRS/AQUA measurements over the Southern Andes and Drake Passage. Atmospheric
+    Chemistry and Physics, 17, 8553–8575. https://doi.org/10.5194/acp-17-8553-2018'
+  merge: -1
+  img_proc: true
