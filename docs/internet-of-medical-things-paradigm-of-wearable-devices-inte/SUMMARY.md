@@ -1,0 +1,2 @@
++   [医疗物联网：可穿戴设备范式（万物物联网 (IoE)）](README.md)
++   [医疗物联网：可穿戴设备范式（万物物联网 (IoE)）](internet-of-medical-things-paradigm-of-wearable-devices-inte.md)
