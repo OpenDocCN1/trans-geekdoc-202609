@@ -1,0 +1,13 @@
+# 192 CONVERGENCE OF DL IN CYBER-IOT SYSTEMS AND SECURITY
+
+corona virus (SARS-CoV), bat SARS-like corona viruses, and the Middle East respiratory syndrome corona virus (MERS-CoV). The analysis made upon the output of the proposed model in Zhu et al. [15] of similarity on COVID-19 infectivity pattern, exhibits bat and mink as the most probable reservoirs of COVID-19.
+
+# 9.5 Deduction of Biological Protein Structure
+
+Joynt and Wu [16] have emphasized that the affinity between viral RNA load kinetics and disease severity among COVID-19–infected persons crumbled. In their article, they have expressed their interest to know whether viral RNA load in lung tissue or a surrogate sample like tracheal aspirate, mirrors the downfall in nasopharyngeal aberration. With their inspection, they concluded the late, severe manifestations as immunologically mediated and agreed on the evident implications of the use of immune-modulatory therapies for these late manifestation patients.
+
+Knowledge in protein structures benefits the diagnosis and treatment process of the underlying disease. But the existing procedure to know protein structure may take months or more. Thus, Scientists are looking for a trustworthy computational procedure to know the protein structure from amino acid sequence. DL methods are also playing a promising role in this journey. Senior et al. [17] have elaborated their vast genomic data-fed neural-based model AlphaFold for predicting protein structure. They have claimed their work significant progress in one of biology’s core challenges based on the obtained accuracy in 3D models of proteins that AlphaFold generates. The predictions of protein structure aid understanding the roles of these protein structures within the body and thus it is believed to help in diagnosing and treating diseases. The proposed model also has been employed in multiple COVID-19 protein [18]. The proposed model has accurately predicted the protein structures in the scenario where kinds of experimentally determined protein structures exist. The proposed AlphaFold is still under development and focusing on predicting protein structures for the scenario where no similar protein structures exist [18].
+
+# 9.6 Pandemic Model Structuring and Recommended Drugs
+
+Now, the top priority for global public health is a trustworthy blueprint to minimize the severity of the corona pandemic. In Ferguson et al. [19],

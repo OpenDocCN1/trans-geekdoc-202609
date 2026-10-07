@@ -1,0 +1,1 @@
+52. Singh, J., McCann, B., Keskar, N.S., Xiong, C., Socher, R., Xida: Cross-lingual data augmentation for natural language inference and question answering, 2019, arXiv preprint arXiv:1905.114.
