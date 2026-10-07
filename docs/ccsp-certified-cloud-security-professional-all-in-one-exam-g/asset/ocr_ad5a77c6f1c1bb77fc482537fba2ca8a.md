@@ -1,0 +1,15 @@
+# Software Configuration Management and Versioning
+
+With any environment, versioning and configuration management are extremely important. With the use of images and the rapid provisioning and auto-elasticity of a cloud environment, these factors become even more important to ensure system unity and cohesiveness. With traditional data center deployments, upgrades and patches are typically applied directly to servers and hosts. With a cloud environment, the process is typically use new images and deployments to maintain systems and versions, rather than pushing out new changes, scanning to ensure their correct application, and testing them. To maintain the versioning and proper system configuration throughout, the use of automated tools is almost a necessity with any cloud deployment.
+
+For code development throughout the SDLC process, developers can utilize and leverage many tools for code collaboration, branching, and versioning. One of the most popular tools that is widely used is GitHub, which can be found at https://github.com/. It is an open source platform that allows all of the features mentioned and is widely used by individuals, small businesses, government agencies, nonprofits, and corporations.
+
+Two popular tools for maintaining system configurations and versioning are Puppet (https://puppet.com/) and Chef (https://www.chef.io/chef/). Both solutions maintain server and system configurations, ensuring they are in the correct state on policies that are centrally maintained and deployed. They can be used to push out new configurations, to change configurations, and, more importantly, to ensure that changes are not made on individual servers that take them out of compliance with the other servers in the same pool of systems. If changes are detected on member systems that are contrary to the centralized policy, these changes will be reversed to main system unity and consistency with the set policies. Many organizations use these or similar products to handle code deployments and system configuration changes across the enterprise.
+
+> NOTE A few examples of configuration and code management packages were given here, but far more are available, both open source and commercial products. The decision as to which to implement should be based on the particular needs and technologies used within a development project or system, because many benefits are based on the application platforms and operating systems used, which will determine their overall effectiveness and ease of use.
+
+![](bbox=[0.181, 0.617, 0.269, 0.693])
+
+# Applying the Secure Software Development Lifecycle
+
+With a knowledge of that which comprises the Secure SDLC process, applying it requires an understanding of cloud-specific risks and the application of threat modeling to assess those risks and the particular vulnerabilities facing an application.

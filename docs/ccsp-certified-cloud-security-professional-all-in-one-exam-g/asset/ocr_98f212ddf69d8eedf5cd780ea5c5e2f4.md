@@ -1,0 +1,5 @@
+B is incorrect because DNSSEC is only designed to ensure the integrity of DNS resolutions; it will not provide any encryption or protection for the confidentiality of data communications or connections. Once the DNS lookup has been completed and the results validated by the requestor, the role of DNSSEC ends, and another technology such as TLS or IPsec would need to be leveraged to ensure confidentiality and prevent the snooping of communications and data transfers.
+
+C is incorrect because cross-site scripting is a potential application and client vulnerability, and the lookup and integrity of DNS resolutions that DNSSEC is intended to provide would not be a factor or tool used to mitigate or prevent it.
+
+D is incorrect because distributed denial-of-service (DoS) attacks are threats to a system or application in the area of availability. DNSSEC is just intended to mitigate against integrity attacks and threats, so it would be of no use in the mitigation against a DDoS attack.

@@ -1,0 +1,15 @@
+# Rapid Elasticity
+
+With cloud computing being decoupled from hardware and with the programmatic provisioning capabilities, services can be rapidly expanded at any time additional resources are needed. This capability can be provided by the web portal or initiated on behalf of the customer, either in response to an expected or projected increase in demand of services or during such an increase in demand; the decision to change scale is balanced against the funding and capabilities of the customer. If the applications and systems are built in a way where they can be supported, elasticity can be automatically implemented such that the cloud provider through programmatic means and based on predetermined metrics can automatically scale the system by adding additional resources and can bill the customer accordingly.
+
+In a classic data center model, a customer needs to have ready and configured enough computing resources at all times to handle any potential and projected load on their systems. Along with what was previously mentioned under "Resource Pooling," many companies that have cyclical and defined periods of heavy load can run leaner systems during off-peak times and then scale up, either manually or automatically as need arises. A prime example of this would be applications that handle healthcare enrollment or university class registrations. In both cases, the systems have very heavy peak periods and largely idle the remainder of the year.
+
+# Measured Service
+
+Depending on the type of service and cloud implementation, resources are metered and logged for billing and utilization reporting. This metering can be done in a variety of ways and using different aspects of the system, or even multiple methods. This can include storage, network, memory, processing, the number of nodes or virtual machines, and the number of users. Within the terms of the contract and agreements, these metrics can be used for a variety of uses, such as monitoring and reporting, placing limitations on resource utilization, and setting thresholds for automatic elasticity. These metrics will also be used to determine set in the service level agreement (SLA).
+
+Many large companies as a typical practice use internal billing of individual systems based on the usage of data centers and resources. This is especially true when companies contract IT services to other companies or government agencies. In a classic data center model with physical hardware, this was much more difficult to achieve in a meaningful way. With the metering and reporting metrics that cloud providers are able to offer, this becomes much more simplistic for companies and offers a significantly greater degree of flexibility, with granularity of systems and expansion.
+
+# Multitenancy
+
+A traditional data center model typically has physical separation between different customers. In most cases, this is done through cages and completely separate network gear. However, a cloud environment can have many different customers running resources and applications within the same physical hardware devices and rely on virtual and logical segregation within the hosting model instead.

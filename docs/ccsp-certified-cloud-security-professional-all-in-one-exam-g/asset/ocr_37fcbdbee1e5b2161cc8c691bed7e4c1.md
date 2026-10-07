@@ -1,0 +1,17 @@
+# CCSP Certified Cloud Security Professional All-in-One Exam Guide
+
+178
+
+# Cryptography
+
+With a cloud environment being multitenant and much more by nature, encryption is vitally for the security of cloud-based applications, both in their implementation as well as operations. Different methods and technologies are available for data at rest versus data in transit in use.
+
+With data at rest, the main methods for encryption are focused on encrypting the whole instance, the volume storage that an application uses, or the individual file or directory. With whole instance encryption, the virtual machine is enabled or active is sitting as an instance. For volume encryption, either the entire drive or just parts of the drive can be protected, depending on the needs and capabilities of the application. This allows flexibility for either protecting the whole system or just areas sensitive code or data reside. Lastly, encryption can be done at the file or directory level, allowing very granular protection for just files that are deemed the most sensitive or required by regulatory or government systems.
+
+To accomplish encryption for data in transit, the most common and widely used technologies are SSL (Secure Sockets Layer), TLS (Transport Layer Security), and VPN (Virtual Private Network). SSL has been extended for many years, both for internal communications between application components as well as the user's browser and the application itself. However, at this point SSL is being phased out or not permitted under regulatory requirements due to the compromise of the ciphers it uses or just because they are not secure as meet modern threats. TLS has replaced SSL for encryption of network traffic and is required under many regulatory models. TLS ensures that communication is secured and remains confidential; it also ensures the integrity of the data being transmitted. With VPN technologies, a secure network tunnel is created from the user's system, over the public Internet, and connected to a private environment. This allows all communications into the private network to be secured while they traverse insecure systems, and is widely to establish a presence on a private network from the outside, allowing the user to operate as if they were physically present at a corporate location and on the internal network.
+
+# Sandboxing
+
+Sandboxing is the segregation and isolation of processes from others within the same system or application, typically for security concerns. Sandboxing typically is used for data isolation, keeping different communities and populations of users isolated from other similar data. The need for sandboxing can be due to internal reasons, such as policies, or from external sources, such as regulatory or legal requirements. A good example of this would be a university keeping student data or affiliate data isolated and separate from faculty/staff or affiliate data. In this example, the drivers for segregation purposes, as population has different needs for most uses, and the segregation makes access control easier to operate and control. However, segregation also fulfill privacy and regulatory requirements for the protection of student and academic data that go above and beyond these requirements for the protection of faculty/staff data.
+
+Another use of sandboxing involves the testing of new code and application deployments, where a system maintainer or data owner would not want those systems accessible to
