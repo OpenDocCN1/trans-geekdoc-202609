@@ -1,0 +1,3 @@
+| [47] | 2018 | A novel data set is created, and deep learning-base models were proposed to detect the attacks. | Modification attacks, DR, hello flood, version number | Simulated dataset | Cooja | Performance based on F1 score and AUC | Intrusion Detection System for IoT |
+| [20] | 2019 | Introduced ELNIDS uses ensemble learning to detect routing assaults. | HF and sinkhole, local repair, selective forwarding blackhole, sybil, clone ID | RPL-NIDDS17 | | Accuracy |
+| [27] | 2018 | CHA-IDS is introduced. | HF, sinkhole, and wormhole attacks combined | Simulated dataset | Cooja | Precision, recall, accuracy, TPR, FPR, MAE, RMSE, RAE |

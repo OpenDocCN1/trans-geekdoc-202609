@@ -1,0 +1,15 @@
+# A Comprehensive IoT Security Framework Using Edge Computing
+
+medical care, is made possible by the service/middleware layer, which offers an interactive interface through standard web service protocols and service composition technologies.
+
+# 16.5 FIVE-LAYER FRAMEWORK
+
+The aim of this model is to offer more advanced services with a business-oriented approach that extends beyond the traditional application layer. This model comprises the sensing, network, service, application, and business layers. The business layer is responsible for capturing and analysing all IoT operations that have occurred across heterogeneous CPhS. Since the lower layers have already been discussed in the previous architecture, we will focus on the business layer here.
+
+The IoT system as a whole, comprising all apps, business and profit models, and user data, the commercial layer is an extra component of the SoA that makes it easier to build systems allow the development of autonomous solutions for businesses based on technology restrictions, as shown in Figure 16.5 [42, 43]. The FEGC architecture's convergence of routers, switches, storage, and application servers into FEGC devices will significantly impact the communication, server, and software sectors. The distributed FEGC architecture also supports the growing fog-as-a-service model, which enables smaller companies to provide both public and private assistance for customers and users at various scales.
+
+Among the major challenges faced with IoT security frameworks using EGC is the difficulty of properly securing the interchange of information among the EGC. As EGD become increasingly sophisticated, the potential for malicious actors to intercept or misuse data increases. Additionally, the distributed nature of EGC nodes means that it is difficult to ensure secure communications protocols between the different nodes. Furthermore, EGC also introduces complexity in terms of security for different IoT devices as well as data privacy concerns. Ensuring secure and reliable communication among cloud and edge devices is essential for secure data exchange. Establishing robust authentication protocols and ensuring secure communication between the different nodes is critical for any EGC IoT security framework.
+
+# 16.6 CASE STUDY ON IOT SECURITY FRAMEWORK USING EDGE TECHNOLOGY IN HEALTHCARE SECTOR
+
+Because of the novelty of the EGC paradigm, there is a dearth of lightweight solutions available. Although several researchers aim to devise the stated by advancing their edge applications, they tend to be hardware-specific and lack open-source features, ease of customization, and practicality. EGC-based software, such as Apache Edgent open-source software, is being developed by developers worldwide. However, due to its early stage of development, there are limited research articles and detailed documentation provided on open platforms. Additionally,

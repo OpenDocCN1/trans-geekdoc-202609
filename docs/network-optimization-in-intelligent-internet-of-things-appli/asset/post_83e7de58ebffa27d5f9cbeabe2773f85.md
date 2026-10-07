@@ -1,0 +1,41 @@
+
+# Network Optimization in Intelligent IoT Applications
+
+![](img/e0b54a8aa3102369506fc5feb80a6fde_104_0.png)
+
+**FIGURE 5.7** % share of people to use automobile vehicle on subscription.
+
+![](img/e0b54a8aa3102369506fc5feb80a6fde_104_1.png)
+
+**FIGURE 5.8** % share of people to use automobile vehicle as per use.
+
+switch to private AV is down by almost 10%, whereas in Figure 5.8, 26% prefer to switch to fully automatic cars in 2021. Reports in 2020 mentioned that 35% of people were ready for it.
+
+# 5.3 CONCLUSION
+
+The technology of automated vehicles is well-developed and open for commercial deployment. Many automobile companies have made incredible progress in navigation, street mapping, and collision avoidance. The government can easily accelerate the use of automated vehicles by how they regulate them. Authorities are sure that they will address relevant issues and ensure the rules are stringent enough. If we talk about the social and ethical implications, software designers will definitely make choices about how a system will deal with them. Researchers will navigate all the social and ramifications and will surely bring solutions to it. These developments have opened up the possibility of AV technology, and the statistics provided will be crucial in helping society understand the energy and implications of AV, which aims to increase accessibility for travel while reducing accidents, energy use, pollution, and congestion. IoT is increasingly becoming a part of the DNA of modern Tesla vehicles. IoT is revolutionizing the worldwide automobile market, from automated transportation systems to connected autos. It is anticipated to continue performing in the same manner in the future.
+
+# REFERENCES
+
+- 1. "Artificial Intelligence Definitions from TechTarget," www.techtarget.com/searchcenter/privacy/enterprise-applications-of-AI, Accessed 1 July 2023.
+- 2. D. Mohammed and B. Horváth, "Travel demand increment for the use of autonomous vehicles," Sustainability, vol. 15 (8937) 11, 2023.
+- 3. "Autonomous Vehicles in Rural Communities: Is It Feasible? – IEEE Technology and Society." https://technologysociety.org/autonomous-vehicles-rural-community-is-it-feasible, Accessed 12 January 2023.
+- 4. "The Ethical Considerations of Self-Driving Cars | Montreal AI Ethics (institut.montrealai.eth), Search Montreal, https://montrealai.eth/ethical-considerations-of-self-driving-cars, Accessed 15 April, 2023.
+- 5. "10 Advantages of Autonomous Vehicles." www.itsidig.com/10-advantages-of-autonomous-vehicles, Accessed 31 July 2023.
+- 6. "Hacking an Autonomous Vehicle – Common Attacks and Vulnerabilities." https://robotbobix.com/hacking-an-autonomous-vehicle-attacks-and-vulnerabilities
+- 7. "Autonomous Vehicle Implications: Predictions for Planning," https://www.bing.com/search?q=Autonomous+Vehicle+Implementation+Predictions%3A%3AImplications+for+Transport+Planning+(vipi.org)&vid=09f2a8fe6c3d4c4b0995d9d3f985&q=747j09f&FORM=ANAB01&PC=DCTS.
+- 8. J. Dean, Alexander J. Bray, L. Brown, Jeffrey. Casello, L. McCallum, and S. Gover, "Holding the key to safety? A study of the population health impacts of automated vehicles," BC Public Health, vol. 19, 1258, Jan. 2019.
+- 9. J. Sharma and P. Mehta, "A survey of security challenges and preventing measures in FANET: Intelligent Data Analytics, IoT, and Bashir Alam and Mansaf Alam (ed.)," New York: Auerbach eBooks, 2023, pp. 252–262. doi: 10.1201/9781010233380-24.
+- 10. J. Sharma and P. Mehta, "Secure communication in IoT-based vehicles: a systematic survey." Internet of Things, vol. 23, 100883, Oct. 2023, doi: 10.1016/j.iotc.2023.100883.
+- 11. K. Krasni and E. Hajrati, "Use of IoT technology to drive the industry from connected to autonomous vehicles," PapersOnLine, vol. 49, no. 22, pp. 269–274, Jan. 2016; doi: 10.1016/j.ifacol.2016.11.078.
+- 12. "The Social Implications of Driverless Cars," www.bbvaopenmind.com/en/technology/artificial-intelligence/the-social-implications-of-driverless-cars/, Accessed 15 June 2023.
+- 13. M. Mhamunkar, “Understanding facial recognition and detection with use of EmguCV and haarcascade files,” IJSRD – International Journal for Scientific Research & Development, vol. 9, no. 3, 2021, www.ijrsrd.com/articles/33024. Accessed 31 July 2023.
+- 14. "The Ethical Considerations of Self-Driving Cars | Montreal AI Ethics (institut.montrealai.eth), Search Montreal, https://montrealai.eth/ethical-considerations-of-self-driving-cars, Accessed 15 April, 2023.
+
+# IoT-Integrated Autonomous Vehicles
+
+89
+
+# Part II: Energy Conservation for Smart IoT
+
+![](img/e0b54a8aa3102369506fc5feb80a6fde_108_0.png)

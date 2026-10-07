@@ -1,0 +1,15 @@
+areas related to e-healthcare haven't been thoroughly analysed and validated against periphery.
+
+The discussed case study aims to introduce the latest EH-IoT (e-healthcare IoT) system that utilizes Edge technology for edge computing. This system deploys and configures Edge on a Raspberry Pi 3 to create an EGC environment. It also explores the connector classes of Apache Edge for communication with external backend systems. Additionally, it sets up a proof-of-concept testbed to provide services in the IoT-based scenario while minimizing data transfer capacity to the analytics servers.
+
+Hardware and software: The research employs hardware and software components such as a temperature sensor, Raspberry Pi, Arduino Uno, Raspian OS, Apache Edge 1.2.0, and ThingSpeak has rephrased the original sentences to avoid plagiarism.
+
+Methodology: The EH-IoT system suggested for deployment encompasses three main modules. These modules include
+
++   Module 1: For devices at the edge with less processing power, it offers Application Programming Interface (APIs) and filters for creating Edge apps. Apache Edge allows creating apps that filter and deal with data, continuous streaming analytics on data streams, and sends the data to the cloud for additional analysis. Edge also includes MQTT, HTTP, WebSocket, JDBC, File, and Kafka connectors and a Java API for sending JSON to an MQTT device. It also supports bidirectional communications with the backend, a web-interface for viewing application graphs, JUnit testing, and Java-based Lambda expressions.
+
++   Module 2: This module includes the sensing unit based on embedded hardware, the Apache Edge engine blames for manufacturing and analysing the data, and the cloud repository based on IoT technology. The system generates raw data sets that are further made for production. The IoT devices generate continuous data streams, including healthcare applications that use temperature sensors. The LM35 temperature sensor acts as the sensor for datasets on the edge, reaching human body temperature as proof of concept.
+
++   Module 3: To perform complex analysis that requires edge computing resources, large storage capacity, or data correlation from multiple sources, The message hubs such as MQTT, IBM Watson IoT platform, Apache Kafka, custom message hubs, and ThingSpeak can be utilized to establish communication between the EH-IoT. ThingSpeak, for instance, is an IoT platform.
+
+The EH-IoT platform model records the consumer's body heat, sensing the information to an Arduino Uno and a Raspberry Pi 3, which runs the Edge engine. Using the IoT gateway, locally or in the IoT cloud, the Raspberry Pi 3 filters gather and distribute the temperature data. Only crucial or restricted information is transferred to the cloud analytics server to reduce calculation delay and internet-bone overhead. A thorough description of the EH-IoT system model, including the stages involved in body temperature measurement, data filtering and cloud integration, and EH-IoT to cloud connection, can be found in Phantom codes 1, 2, and 3, as shown in Figures 16.6 and 16.7.

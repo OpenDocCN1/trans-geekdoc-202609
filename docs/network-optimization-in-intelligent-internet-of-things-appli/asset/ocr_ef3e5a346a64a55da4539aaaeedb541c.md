@@ -1,0 +1,15 @@
+# 6G for Intelligent Internet of Things
+
+efficiency, and cooperation via DL-controlled inter-vehicle distances. Edge servers with DL processors aid AV system control. Federated Learning (FL) fosters copera- vehicle learning and communication while preserving privacy and reducing network overhead.
+
+# 2.8.3 SATELLITE COMMUNICATION
+
+In the 6G, integrating satellite communications into wireless networks is key for widespread massive IoT coverage, giving rise to satellite IoT (IoT). IoT operates on a three-tier satellite network: LEO, MEO, and GEO. 6G introduces advanced satellite technology, allowing multiple satellites in varied orbits for global coverage and efficiency via frequency reuse. Terahertz bands faci-tate inter-satellite links, enhancing performance over 5G's mm-Wave and optical communications. A hybrid of NOMA and cognitive radio is proposed to tackle spectrum scarcity in 6G IoT. NOMA boosts efficiency with power levels on a carrier, while cognitive radio enables dynamic spectrum sharing. A balanced architecture in 6G IoT assures flexibility, network performance, and energy management. It offers remote connectivity, supports data services for terrestrial stations, and ensures energy sustainability via space-based IoT devices using renewables. Satellite integration into 6G advances IoT, especially IoT. This blend offers extensive coverage, efficiency, and inventive solutions for IoT, laying a robust foundation for an interconnected and capable future.
+
+# 2.8.4 UNMANNED AERIAL VEHICLES
+
+Drones, or UAVs, are essential in 6G communication networks. UAVs are used in various circumstances to offer fast data rates and wireless communication. Through Base Station (BS) devices, they enable cellular connectivity while showcasing qualities including simple deployment, robust line-of-sight links, and quick mobility. Fixed BS infrastructure is deficient in several qualities. UAVs are helpful instruments in crises or natural disasters where regular terrestrial infrastructure might not be prac-. Due to their adaptability, UAVs may also fulfill the requirements of wireless networks' uMUB, uHSLLC, mHTC, and HDR. Their usefulness extends to improving network connectivity, security and surveillance, and fire detection [18]. UAVs are now recognized as pillars in the 6G environment. Backscatter communication with a UAV has been investigated. It helps with optimizing channel conditions for remote sensors and ambient power supply. UAVs An efficient resource allocation method based on deep reinforcement learning may be used to incorporate UAV intelligence into 6G networks.
+
+# 2.9 EXPLORATION OF FUTURE AVENUES
+
+This section illuminates various compelling research researches and outlines poten-t avenues for future exploration within the context of 6G for Intelligent IoT.
