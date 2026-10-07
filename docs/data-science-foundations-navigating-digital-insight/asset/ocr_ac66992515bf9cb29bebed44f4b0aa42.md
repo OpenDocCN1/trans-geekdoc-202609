@@ -1,0 +1,5 @@
+words in response to our questions, it is trickier to deal with the answers. Surveys are a common form of gathering people's feelings – and quite often try and turn this into quantitative data when it is being captured.
+
+Quantitative data can come in different forms as well. It is critical to understand (and challenge) the source of the figures you are provided with, because numbers can have their drawbacks. When something comes in first place and something is in second place, we have a view of which one was ‘better’, but the data is missing details of how much better. Someone finishing the 100 metres sprint in first place but only one thousandth of a second better than second place is very different from them winning by five seconds.
+
+To help us define the different formats of qualitative and quantitative data, there are four ‘types’ you need to be aware of: nominal, ordinal, interval and ratio (NOIR), set out in Figure 6.1. Nominal and ordinal are usually seen as qualitative measures, with interval and ratio being quantitative.

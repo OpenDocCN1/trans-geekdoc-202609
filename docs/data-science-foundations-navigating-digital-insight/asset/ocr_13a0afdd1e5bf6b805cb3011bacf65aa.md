@@ -1,0 +1,7 @@
+Do you want your data used to identify goods and services you might be interested in? Are you happy for it to be used in medical research? How about using it to promote political adverts to influence you vote? Here, we are considering the ethical question, not the legal one. The fact that a box has been ticked giving consent doesn’t mean someone would be happy for their data to be used that way. The use to which the data is to be put might not have been envisaged by them at the time they ticked the box. They might also have had little choice but to consent to access goods, services or employment. As we will see, ethics and lawfulness overlap.
+
+Having read this section on ethics, you might think it has provided no answers and just raised questions. You would be right, and that is the point of it – to think before launching into a data science project and during the project. Think about the data used, think about the people involved and think about what might be done with the insight generated.
+
+# LEGISLATION AND REGULATION
+
+Ethics is subjective; helpfully, legislation and regulation are a little more objective. These are limits on the use of data that society has set as a standard, that have legal consequences if not complied with. Different countries take different

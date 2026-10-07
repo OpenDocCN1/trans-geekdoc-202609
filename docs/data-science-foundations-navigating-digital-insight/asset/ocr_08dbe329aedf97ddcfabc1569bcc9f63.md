@@ -1,0 +1,7 @@
+Looking at the outcome of our hypothesis testing in the context of the domain to which it relates can help us to understand it. A simple example could be our sales forecast: if the model appears weak, could that be to changed behaviours during Covid? Another Covid example is the predicted A-level grades discussed in Chapter 4. The domain context allows us to see that the schools with too small a cohort to predict grades are private schools. It also lets us recognise that some pupils might be prejudiced by using the model, as they would not be awarded the grades their teachers believed they were worthy of.
+
+The domain context also helps us to understand our audience. How well do they understand the domain and how do they perceive it? These are factors to be considered in how we communicate our findings. How might we change the way we communicate if our sales forecasts show that sales will be significantly lower than the executive expect, or one influential region is forecast to perform poorly? Our audience is human, and we need to recognise that they will have an emotional reaction to our communication.
+
+# INFORMATION TO KNOWLEDGE
+
+What should you consider when transforming the information you have gleaned from your hypothesis testing into knowledge?

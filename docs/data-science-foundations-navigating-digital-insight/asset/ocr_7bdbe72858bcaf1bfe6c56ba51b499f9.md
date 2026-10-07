@@ -1,0 +1,1 @@
+Granularity refers to the level of detail in the data. If we think recording data against time, we could record it at a daily or hourly rate. Hourly data is more granular than daily data. It is important that the granularity of the data matches the

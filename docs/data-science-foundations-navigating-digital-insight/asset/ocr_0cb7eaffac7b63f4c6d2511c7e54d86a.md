@@ -1,0 +1,7 @@
+# CASE STUDIES
+
+Throughout this book we have included examples to help illustrate key points and build your understanding of them. These examples are by their nature simple and don't reflect the complexity of most data science projects. To create a richer picture of data science in action, here we have included several case studies of projects that have used data science. We are very grateful to the companies and individuals who have been willing to share their experiences. When reading these case studies, you will see many of the themes discussed in this book brought to life. Our contributors have also been kind enough to share their advice on data science and entrepreneurship, the latter reflecting the opportunities for innovation that data science creates within both markets and organisations.
+
+# INNOVATION FACTORY
+
+Anwar is a reality TV star, with an interest in data science. It is best not to think Love Island in this context. Rather, think Dragons Den or Shark Tank, but earlier in the innovation cycle, when people take their vision and make it a reality – in other words, develop their product. He acts as an advisor on Stars of Science, both on the technical side and, equally important, the
