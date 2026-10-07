@@ -1,0 +1,16 @@
+# Improving Elder Care
+
+changes was recommended. A fall detection system was proposed based on deep learning Convolutional Neural Networks (Manna and Anitha, 2023b) and the lime AI model to classify fall activity (Jeshayree et al., 2022). The design (Sarawar et al., 2022) of a fall detection and heart rate monitoring system for senior citizens was presented. Additionally, various sensors and global positioning systems (GPS) can monitor the elderly's location. When a fall is detected, the device can efficiently transmit fall data, pulse rate, and notify the appropriate carer. A Sclick (click stick) was suggested as an IoT-enabled system that can anticipate falls before they happen, notify the user, detect falls, and also control measures to reduce their impact and collect the information of user locations and health parameters of the user (Rachakonda et al., 2021). IoT-based sensors are used for applications such as garbage monitoring and home security system. A wearable module was suggested with sensors connected to an ESP32 and a residence module with an IoT camera connected to a Raspberry Pi and it information gathered by sensors to be processed in the cloud using machine learning by Amazon Web Services (Srinivasan et al., 2020). Fall detection prediction was enhanced with the help of wearable devices using machine learning algorithms. Predictions can be done using the deep ensemble technique for ground water level prediction by utilizing the data collected using the IoT data (Manna and Anitha, 2023a). An application programming interface was proposed (Sung et al., 2020; Anitha et al., 2023), for instantaneous monitoring based on in-home sensor data and fall detection-based sensors capture the images sent to the remote controller of the user.
+
+# Advantages:
+
++   - Automatic fall detection technology solves the problem of being unable to engage an alarm in the event of a fall and can substantially reduce the fall-related mortality rate (Thygagarajan, 2022).
+- Various research solutions employ AI and machine learning to detect accidents in real-time and transmit rapid alerts to predict fall risks.
+- Sensor-based solutions provide round-the-clock monitoring, capturing help-ful information on in/out-of-bed status, sleeping routines, levels of physical activity, and other parameters.
+- Advanced sensor-based systems may track bio-metric vitals including the heart and breathing rates. Significant modifications de-vibrate can activate alerts, allowing caretakers to provide prompt care before an accident or injury.
+
+# Disadvantages:
+
++   - IoT devices are susceptible to malware, which could enable a hacker to gain control of the system, deactivate it, or send false alarms.
+- False alarms raised by fall detection systems are an inconvenience for the user and may cause them to ignore the alarm when it is truly required (Manna and Anitha, 2023a).
+- IoT devices gathered a huge amount of information about the user, including their location and movements. This raises the privacy concerns of the user data for sharing into the environment.

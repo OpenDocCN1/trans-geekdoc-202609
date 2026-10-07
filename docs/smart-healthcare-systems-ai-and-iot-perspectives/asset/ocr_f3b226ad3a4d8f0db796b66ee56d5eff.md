@@ -1,0 +1,17 @@
+# 11.2.1.3 Engagement: HIo tracks prescriptions (drug therapy), creates patient-based education (personalized wellness and wellness planning), and organizes wellness choices (care coordination). The utilization of interactive practical world has facilitated the administration of wellbeing information.
+
+# A Case of COVID-19: Healthcare IoT Research and Development During a Pandemic: There have been three virulent epidemic in the ancient period of time, in 1918, 1957, and 1968, in addition to the latest coronavirus, which originated in Wuhan in 2019. An epidemic is often characterized as an illness that is distributed vastly many continents and has an unparalleled parallel system consequence to society (Singh et al., 2020a).
+
+Furthermore, the ongoing economic development from the increasing social progress, human development, and global mobility has transformed several cities into hubs for rapid transmission of the epidemic.
+
+However, the implementation of advanced technology such as IT-supported healthcare, abundant data, and artificial intelligence has enhanced the city's ability to prevent the spread of the pandemic (Singh et al., 2020b). For instance, following the COVID-19 pandemic, several countries worldwide have either a people-centered or technology-centered approach to combat the spread of the virus (Ritu and Bamhri, 2023).
+
+A technology-led strategy uses a sophisticated top-down approach to impose technologies on cities and their residents and force them to adopt smart technologies. However, a people-oriented approach forces cities to adopt the necessary smart technology, empowering, and educating their residents (Siriwanda et al., 2020).
+
+The joint operation report by the WHO and China commanded China’s technology-driven policy as a proactive, agile, and forceful reaction to the previous health crisis, and declared that they effectively controlled the pandemic (Singh et al., 2020b). However, the humanistic approach employed by the United States and Europe had a limited impact on the dispersion and contamination of the prevailing situation. In addition, the person-centred approach has a flexible position towards addressing complex philosophical theories, enabling users to select the specific engineering methods they prefer.
+
+The technology-based approach, on the other hand, adopts an attitude of strict philosophical theory, where engineering is seen as a mean to solve the problems facing governments (Stojanovic et al., 2020). It offers an integrated IoT platform that processes interactive dashboard information using big data from various IoT devices.
+
+The AI system uses a micro-controller together with the IoT scheme to collect user information to predict the development of micro-organism distribution. The AI system utilizes a panel map to provide users with information regarding the state of ill health in a specific area ("portable ECG monitoring system for smart health care based on IoT,” 2023). Ootoom et al. has introduced a new IoT system designed to detect and track COVID-19 instances at an early stage.
+
+The projected system consists of five main components: Wearable sensors, a quarantine centre, a machine learning-based computing component, healthcare

@@ -1,0 +1,3 @@
+Sharma, R., Bhambri, P., & Sohal, A. K. (2020). Energy Bio-Inspired for MANET. International Journal of Recent Technology and Engineering, 8(6), 5580–5585.
+Singh, P., Singh, M., & Bhambri, P. (2005). Security in Virtual Private Networks. In Seminar on Network Security and Its Implementations (p. 11). Doaba College.
+Wang, J., & Li, X. (2023). Secure Medical Data Collection in the Internet of Medical Things Based on Local Differential Privacy. Electronics, 12(2), 307.
