@@ -1,0 +1,170 @@
+
+```
+$$\mathbb{E}[L^*(\theta_{t+1})] \leq \mathbb{E}[L^*(\theta_t)] - \frac{\eta_\theta}{2}(1-5\rho l - 2l\eta_\theta(4\rho^2+2\rho+2))\mathbb{E}\|\nabla L(\theta_t, \omega_t)\|^2
++ + \frac{\eta_\theta^2}{2}(1+\eta_\theta l)\rho l + \eta_\theta^2(4\rho^2+2\rho+2)\mathbb{E}\|\nabla L(\theta_t) - \nabla_{\theta}L(\theta_t, \omega_t)\|^2 \quad (7.22)$$
++ (5\rho^2l^2) + \frac{Ln^2\sigma^2}{2M}.$$
+```
+
+然后，分别利用变量 $\theta$ 和 $\omega$ 的光滑性，可以得到：
+
+```
+$$L(\theta_{t+1}, \omega_t) \geq L(\theta_t, \omega_t) - \frac{l}{2}\|\nabla_{\theta}L(\theta_t, \omega_t) - \theta_t\|^2 - \frac{l}{2}\|\theta_{t+1} - \theta_t\|^2;$$
+$$L(\theta_{t+1}, \omega_{t+1}) \geq L(\theta_{t+1}, \omega_t) + \frac{l}{2}\|\nabla_{\omega}L(\theta_{t+1}, \omega_t) - \omega_t\|^2 - \frac{l}{2}\|\omega_{t+1} - \omega_t\|^2.$$
+```
+
+取期望后，得到：
+
+$\mathbb{E}[L(\theta_{t+1}, \omega_t)] \ge \mathbb{E}[L^*(\theta_t)] - \eta_\theta\mathbb{E}[\nabla_{\theta L}(\theta_t, \omega_t) - \nabla L^*(\theta_t)] - \frac{\eta_\theta^2}{2}\mathbb{E}[\|\nabla_{\theta L}(\theta_t, \omega_t)\|^2]$
+
+$\mathbb{E}[L(\theta_{t+1}, \omega_t)] \ge \mathbb{E}[L^*(\theta_t)] - \eta_\theta\mathbb{E}[\nabla_{\theta L}(\theta_t, \omega_t) - \nabla L^*(\theta_t)] - \frac{\eta_\theta^2}{2}\mathbb{E}[\|\nabla_{\theta L}(\theta_t, \omega_t)\|^2]$
+
+$\mathbb{E}[L^*(\theta_{t+1})] \le \mathbb{E}[L^*(\theta_t)] - \frac{\eta_0}{2}(1-5\rho)\mathbb{E}\|\nabla L^*(\theta_t)\|^2 + \frac{\eta_0}{2}(1+5\rho)\mathbb{E}\|\nabla_{\theta L}(\theta_t, \omega_t) - \nabla L^*(\theta_t)\|^2 - \frac{\rho\sigma^2}{2}$
+
+(7.23)
+
+然后，按照 [3522] 的方法构造势函数：
+
+$V_t = V(\theta_t, \omega_t) = L^*(\theta_t) + \alpha[L^*(\theta_t) - L(\theta_t, \omega_t)]$， $\alpha > 0$ 是预设参数。然后评估势函数 $V_t$ 的下降关系。
+
+## 7.1 证明
+
+结合上述不等式，得到势函数的下降关系：
+
+$E[V_{t+1}] - E[V_t]$
+
+$= (1 + \alpha)(E[L^*(\theta_{t+1})] - E[L^*(\theta_t)]) - \alpha(E[L(\theta_{t+1}, \omega_{t+1})] - E[L(\theta_t, \omega_t)])$
+
+$\le (1 + \alpha)\{ -\frac{\eta_t}{2}(1 - 5\rho l^2) - 2L\eta_t(4\rho^2l^2 + 2\rho l) + E|\nabla L^*(\theta_t)||^2 \}$
+
+$+ [\frac{\eta_t}{2}(1 + \frac{\eta_t}{2}) + L\eta_t(4\rho^2l^2 + 2\rho l)]E|\nabla L^*(\theta_t) - \nabla_{\theta}L(\theta_t, \omega_t)\|^2$
+
+$+ (5\rho^2l^2 + 2)\frac{\sigma_t^2}{2M} - \alpha-\{\frac{\sigma_t^2}{2} + \frac{\eta_t^2}{2} + L\eta_t(2\rho^2l^2 + \rho l + 1)\}\mathbb{E}|\nabla_{\theta}L(\theta_t, \omega_t)\|^2$
+
+$-\frac{\sigma_t^2}{2} + \rho^2l^2 - \frac{\eta_t^2}{2}(5\rho^2l^2 + 2) + \frac{\eta_t}{2}(5\rho^2l^2 + 2)\frac{\sigma_t^2}{M}$
+
+# 7 证明与理论分析
+
+根据引理 2 和 PL 条件 12，我们有如下性质：
+
+```
+$|\nabla L^*(\theta_t) - \nabla_0 f(\theta_t, \omega_t)|| \leq |l|\omega^*(\theta_t) - \omega_t|| \leq \kappa ||\nabla_{\omega} f(\theta_t, \omega_t)|.$
+```
+
+因此，我们可以如下如下推导出上述不等式：
+
+```
+$E[V_{t+1}] - E[V_t]$
+\leq {^\frac{\eta_0^2}{2}(1+\alpha)(1-5\rho) - 2L\eta_0(4\rho^2 + 2\rho + 2))\ - 2\alpha({\frac{3\eta_0^2}{2} - \frac{\eta_t^2}{2}}\rho^2 + \eta_t^2(2\rho^2 + \rho + 1) + \eta_0^2\eta_{\omega}^2(2\rho^2 + \rho + 1})})E|\nabla L^*(\theta_t)||^2$\
+-{\{\frac{\eta_0^2}{2} - \frac{\eta_t^2}{2}})^2 - \kappa^2[(1+\alpha)(\frac{1}{2} + \frac{1}{2}) + \eta_0^2(4\rho^2 + 2\rho + 2)]$\
++ 2\alpha({\frac{3\eta_0^2}{2} + \frac{\eta_t^2}{2}}\rho^2 + \eta_t^2(2\rho^2 + \rho + 1) + \eta_0^2\eta_{\omega}^2(2\rho^2 + \rho + 1))})E|\nabla_{\omega} f(\theta_t, \omega_t)||^2$\
++ [(1+\alpha)(5\rho^2 + 2)]\frac{L\eta_t^2}{2}\
++ \alpha({\frac{2\rho^2}{2} + \frac{\eta_t^2}{2}}(5\rho^2 + 2)) + \alpha({\frac{\eta_{\omega}^2}{2} + \frac{\eta_0^2\eta_{\omega}^2}{2}}(5\rho^2 + 2))}\sigma^2.$
+```
+
+然后我们要求参数满足：$\alpha = \frac{1}{16}, \rho l \leq \frac{1}{10}, \eta_0(2\rho + 1)^2\kappa l \leq \frac{1}{64}, \kappa^2\eta_{\omega}l \leq \frac{1}{128}, \rho \leq \frac{\eta_0}{2}$ 以及 $\eta_{\omega} \leq 64\kappa^2\eta_0$。
+
+所以不等式可以进一步简化为：
+
+```
+$E[V_{t+1}] - E[V_t]$
+\leq -{\frac{1}{80}}{\eta_0}|\nabla L^*(\theta_t)||^2 - \frac{41}{32}\kappa^2E|\nabla_{\omega} f(\theta_t, \omega_t)||^2 + 129\kappa^4\eta_0^2\frac{\sigma^2}{M}. (7.28)
+```
+
+通过对上述不等式进行裂项求和（Telescoping），我们可以：
+
+```
+$\sum_{t=0}^{T-1} E|\nabla L^*(\theta_t)||^2 \leq {\frac{80}{11\eta_0\gamma}}(E[V_0] - E[V_T]) + 960\kappa^4\eta_0^2\frac{\sigma^2}{M}. (7.29)
+```
+
+## 7.2 EVIL 的证明
+
+此外，我们可以评估第一项：
+
+```
+$$\mathbb{E}[V_0] - \mathbb{E}[V_T] \le \mathbb{E}[V_0] - \min_{\theta,\omega} \mathbb{E}[V(\theta, \omega)]$$
+\le \mathbb{E}[L^*(\theta_0)] - \min \mathbb{E}[L^*(\theta_0)] + \frac{1}{16}\left(\mathbb{E}[L^*(\theta_0)] - \mathbb{E}[L(\theta_0, \omega_0)]\right)$$
+= \mathbb{E}[L^*(\theta_0)] - \min \mathbb{E}[L^*(\theta_0)] + \frac{1}{16}\Delta_0.
+```
+
+其中我们将初始状态标记为 $\Delta_0 = \mathbb{E}[L^*(\theta_0)] - \mathbb{E}[L(\theta_0, \omega_0)]$。
+
+因此，不等式 729 可以评估为：
+
+```
+$$\sum_{t=0}^{T-1} ||\mathbb{E}[\nabla L^*(\theta_t)]||^2 \le \frac{80}{11\eta_0}(\mathbb{E}[L^*(\theta_0)] - \min_{\theta} \mathbb{E}[L^*(\theta)]) + \frac{5}{11\eta_0}\Delta_0 + 960\kappa^4l\eta_0\frac{\sigma^2}{M},$$
+```
+
+当选择 $\eta_0 = \sqrt{\frac{M(\mathbb{E}[L^*(\theta_0)]-\min \mathbb{E}[L^*(\theta_0)])}{132T\kappa^4\sigma^2}}$ 以及每个小批量的样本数时，收敛性边界为：
+
+```
+$$\sum_{t=0}^{T-1} ||\mathbb{E}[\nabla L^*(\theta_t)]||^2 \le 3\sqrt{\frac{3\kappa^4(\mathbb{E}[L^*(\theta_0)]-\min \mathbb{E}[L^*(\theta_0)])\sigma^2}{11MT}} = \mathcal{O}(\frac{\kappa^2}{\sqrt{M}}).$ (7.31)$
+```
+
+## 7.2 EVIL 的证明
+
+本节提供了命题 2 的证明。通过对所选不变参数，我们得到标签预测 $\hat{Y}^e = \text{sgn}(\theta_{inv}^e Z^e) = \text{sgn}((m \circ \theta)^T Z^e)$，其中 $\text{sgn}(m \circ \theta)$ 返回输入值的符号。为此：
+
+```
+$(m \circ \theta)^T Z^e = \frac{1}{\sqrt{M}}m^T Z^e$ (7.32)
+= \frac{1}{\sqrt{M}}\left[\frac{1}{M_{inv}}m_{i\in[0,M_{inv}]}, m_{i\in[M_{inv},M_{var}]}]^T[Z_{inv}^e, Z_{var}^e]\right]$
+= \frac{1}{\sqrt{M}}\left[\frac{1}{M_{inv}}m_{i\in[0,M_{inv}]}Z_{inv}^e + \frac{1}{M_{var}}m_{i\in[M_{inv},M_{var}]}Z_{var}^e\right]$ (7.33)
+```
+
+那么对于给定环境产生的误差为：
+
+```
+$$\text{Err}^e = \frac{1}{2}\mathbb{E}_{(X^e,Y^e)\sim e}[1 - D\hat{D}^e]. (7.34)$$
+```
+
+## 7 证明与理论分析
+
+在这里我们简化来自分布 $e$ 的期望：
+
+```
+$E^e[y^e] = E^e\left[\text{sgn}\left(\frac{1}{M}m^T Z^e\right) y^e\right] = \sum_{y\in\{0,1\}} \mathbb{P}(y^e=y) E^e\left[\text{sgn}\left(\frac{1}{M}m^T Z^e\right) y\right]. (7.35)$
+```
+
+```
+$E^e\left[\text{sgn}\left(\frac{1}{M}m^T Z^e\right) y^e\right] = \mathbb{P}\left[\text{sgn}\left(\frac{1}{M}m^T Z^e\right)=1\right] - \mathbb{P}\left[\text{sgn}\left(\frac{1}{M}m^T Z^e\right)=0\right]. (7.36)
+```
+
+类似于 Zhang 等 [183]，我们观察到：
+
+```
+$\mathbb{P}\left[\text{sgn}\left(\frac{1}{M}m^T Z^e\right)=1\right]. (7.37)$
+```
+
+将 (7.37) 代入 (7.35) 得到：
+
+```
+$\text{Err}^e = \mathbb{P}\left[\text{sgn}\left(\frac{1}{M}m^T Z^e\right)=1\right] - \mathbb{P}\left[\text{sgn}\left(\frac{1}{M}m^T Z^e\right)=0\right]. (7.38)$
+```
+
+通过 (7.33) 进一步分解 (7.38)：
+
+```
+$\text{Err}^e = \frac{1}{M_{inv}}\sum_{i\in[0,M_{inv}]} \mathbb{P}\left[\frac{1}{M_{var}}\sum_{j\in[M_{inv},M_{var}]} Z_{var}^e > 0\right]. (7.39)$
+```
+
+由于 $Z_{inv}$ 中的所有元素相等，我们有：
+
+```
+$\text{Err}^e = \frac{1}{M_{var}}\sum_{j\in[M_{inv},M_{var}]} \mathbb{P}\left[\frac{1}{M_{var}}\sum_{k\in[M_{inv},M_{var}]} Z_{var}^e > 0\right]. (7.40)$
+```
+
+# 7 证明与理论分析
+
+类似于方程 (7.38) ，我们可以得到：
+
+```
+$Err^d = \mathbb{P} \left[ \frac{1}{M}(1 - \mathbf{m}) \odot Z^e \le 0 \mid D = 1 \right]$$
+$$= \mathbb{P} \left[ \frac{1}{M_{inv}}(1 - \mathbf{m}) \odot_{i\in[0,M_{inv}]} Z_{inv}^e + \frac{1}{M_{var}}(1 - \mathbf{m}) \odot_{i\in[M_{inv},M_{var}]} Z_{var}^e \le 0 \mid D = 1 \right]$$
+```
+
+由于 $Z_{var}^e$ 中的所有元素属于 $D$ ，我们可以得到：
+
+```
+$Err^d = \mathbb{P} \left[ \frac{1}{M_{inv}}(1 - \mathbf{m}) \odot_{i\in[0,M_{inv}]} Z_{inv}^e \le 0 \mid D = 1 \right]$ (7.45)
+```
+
+因此，对于 $i \in [0, M_{inv}]$，$\mathbb{P}[\mathbf{m}_i = 1] = 1 - \frac{Q^e}{2}$ 且 $\mathbb{P}[\mathbf{m}_i = 0] = \frac{Q^e}{2}$。结果是，正则方案可以用最小概率 $1 - \frac{Q^e}{2}$ 掩盖不变参数的发现；此外，基于给定的稀疏率 $R = \frac{M_{inv}}{M}$（即 $m$ 只从 $Z^e$ 中选择 $M_{inv}$ 个元素），错误的掩码产生的分类错误，该错误可以进一步限制其过大。特别是，从 $\mathbb{P}[m_i = 1 - \frac{Q^e}{2}, i \in [0, M_{inv})]$，我们得到 $\mathbb{P}[\frac{M_{inv}(1-Q^e)}{M_{var}}] = \frac{Q^e_{inv}}{2M_{var}}, i \in [M_{inv}, M]$。因此，我们不再使用基于随机初始化的计算值 $\frac{Q^e}{2}$，而是再次界定分类错误：
