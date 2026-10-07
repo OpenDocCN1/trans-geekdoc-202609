@@ -1,0 +1,154 @@
+
+静态类型是 Go 的另一个特性，有助于代码的可靠性。通过在编译时进行类型检查，错误可以在开发过程的早期被捕获，减少了运行时问题的可能性。此功能对于大型和复杂的代码库尤其有益。
+
+* `Open-Source` :
+
+Go 的开源性质培养了一个充满活力且支持的开发者社区。该社区积极为语言的生态系统做出贡献，通过创建库、工具和资源来扩展 Go 的功能。这些资源的可用性使开发者更容易应对项目中的各种挑战。
+
+* `Scalability` :
+
+`Scalability` is a fundamental aspect of Go. Its concurrency primitives and efficient runtime make it an ideal choice for building highly scalable systems. This has led to the adoption of Go in areas such as web servers, microservices, and cloud-based applications.
+
+### Tooling
+
+Go has a powerful set of development tools, including the `GO` command-line tool, a built-in testing framework, and excellent documentation. These tools streamline the development process and make it easy to write clean, efficient code.
+
+In addition to its technical strengths, Go benefits from Google’s backing and the experience of one of the world’s largest technology companies. This ensures that Go continues to evolve, remains well-maintained, and receives contributions from some of the brightest minds in the industry.
+
+## Conclusion
+
+In conclusion, Go is a programming language that combines simplicity, efficiency, and strong support for concurrency. It is suitable for a wide range of applications, from web development to system programming, and offers a robust set of tools and libraries. As the programming landscape continues to evolve, Go stands out as a compelling choice for modern software development.
+
+In this introductory chapter, we laid the foundation for our journey into mastering REST API development with Go. In the chapters to come, we will dive deeper into the practical aspects of REST API development using Go.
+
+Our next chapter will guide you through configuring your development environment, understanding Go workspaces, including the concept of `GOPATH`, and mastering the Go module system for dependency management and versioning. Prepare to roll up your sleeves and start building powerful, efficient REST APIs that will enable seamless communication between your applications and the web.
+
+## Key Terms
+
+* `REST`: Representational State Transfer, an architectural style for designing networked applications.
+
+* `API`: Application Programming Interface, a set of rules for building and interacting with software applications.
+
+* `Client-Server Architecture`: A foundational framework for the interaction and communication between computing systems.
+
+* `HTTP`: Hypertext Transfer Protocol, the foundation of data communication on the World Wide Web.
+
+* `Stateless`: A characteristic of RESTful systems where each request-response cycle is independent.
+
+* `Resources`: Fundamental abstractions in REST, identified by URIs, representing objects, data, or services.
+
+* `HTTP Methods`: Standard actions used in RESTful systems, such as `GET`, `POST`, `PUT`, and `DELETE`.
+
+* `Uniform Interface`: A fundamental principle of REST that simplifies interactions using standard methods and resource URIs.
+
+* `Go` `Golang`: A programming language known for its simplicity, efficiency, and concurrency support.
+
+# CHAPTER 2
+
+## Setting Up the GO Development Environment
+
+### Introduction
+
+In this chapter, we will embark on the first steps of our journey to mastering REST API development with Go by exploring the essential process of setting up your Go development environment. A solid development environment is the foundation upon which you will build powerful RESTful APIs using the Go programming language. We will delve into the key components, configurations, and best practices necessary to create a productive and efficient workspace for your Go development endeavors. So, let us begin this chapter by ensuring you have everything you need to start your REST API development journey with Go on the right foot.
+
+### Structure
+
+In this chapter, we will discuss the following topics:
+
+* Installing Go
+
+* Windows
+
+* MacOS
+
+* Linux
+
+* Understanding the Go Workspace and the Concept of `GOPATH` and `GOROOT`
+
+* Organizing Your Go Projects within the Workspace
+
+* Exploring the Go Module System for Dependency Management and Versioning
+
+* Initializing and Managing Go Modules in Your Projects
+
+* Integrating Third-Party Libraries and Packages into Your Go Projects
+
+* Setting Up a Code Editor or IDE for Go Development and Recommended Plugins or Extensions
+
+### Installing Go
+
+To get started with installing Go, first, head over to the official Golang download page by accessing the following URL: `https://go.dev/dl/`. Once there, you will notice various download options tailored for different systems. To ensure compatibility and smooth performance, it is crucial to choose the version that matches your computer’s architecture, such as `AMD64` or `ARM64`. Additionally, make sure to consider your operating system, whether it is Windows, macOS, or Linux, as this will further refine the available options. Subsequent to identifying the suitable version for your system, click it to initiate the download. Once the download is complete, you can proceed with the installation process.
+
+![](img/Figure2.1.jpg)
+
+**Figure 2.1:** Installing Go from go.dev
+
+#### Linux
+
+To install Go on Linux, follow these steps:
+
+1. Extract the downloaded archive into `/usr/local`. This will create a fresh Go installation in `/usr/local/go`. You might need to execute the following command as the root user or via sudo:
+
+```
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz
+```
+
+2. To make Go accessible from the command line, add `/usr/local/go/bin` to your `PATH` environment variable. You can achieve this by appending the following command to either your `$HOME/.profile` or the system-wide `/etc/profile` for a system-wide installation:
+
+```
+export PATH=$PATH:/usr/local/go/bin
+```
+
+Please note that changes made to a profile file may not take effect until you log in again. To apply the changes immediately, you can run the shell commands directly or execute them from the profile using a command such as `source $HOME/.profile`.
+
+To confirm a successful Go installation, open a terminal and execute the following command:
+
+```
+go version
+```
+
+Ensure that this command displays the installed version of Go.
+
+![](img/Figure2.2.jpg)
+
+**Figure 2.2:** Command to Confirm the Installed Version of Go through the Terminal
+
+#### Mac
+
+To install Go on Mac, follow these steps:
+
+1. Begin by opening the downloaded package file and follow the on-screen prompts to install Go. This installation will place the Go distribution in the `/usr/local/go` directory. Additionally, the package should automatically add the `/usr/local/go/bin` directory to your `PATH` environment variable. If the changes to your `PATH` do not take effect immediately, consider restarting any open Terminal sessions.
+
+2. To ensure a successful Go installation, open a command prompt and execute the following command:
+
+```
+go version
+```
+
+Confirm that the command displays the installed version of Go. This step verifies that your Go installation is functioning as expected.
+
+#### Windows
+
+To install Go on Windows, follow these steps:
+
+1. Begin the installation process by opening the downloaded MSI file. Follow the on-screen prompts to install Go. By default, the installer will place Go in either the "`Program Files`" or "`Program Files (x86)`" directory, depending on your system architecture. You have the option to change the installation location as needed during this process.
+
+Once the installation is complete, it is important to note that you will need to close and reopen any currently open Command Prompt windows. This step ensures that the changes to the environment made by the installer take effect.
+
+要确认 Go 是否已成功安装在你的 Windows 系统上，请按照以下步骤操作：
+
+1. 在 Windows 任务栏中点击 `Start` 菜单。
+
+2. 在菜单中的搜索框内，输入 `cmd` 然后按下 `Enter` 键。这将打开命令提示符窗口。
+
+3. 在命令提示符窗口中，输入以下命令：
+
+   `go version`
+
+4. 通过按下 `Enter` 执行此命令。
+
+此命令将显示已安装的 Go 版本，从而验证安装过程是否成功。
+
+按照这些步骤，你可以确保 Go 已正确安装在你的 Windows 机器上并可供使用。
+
+## 了解 Go 工作区以及 GOPATH 和 GOROOT 的概念
