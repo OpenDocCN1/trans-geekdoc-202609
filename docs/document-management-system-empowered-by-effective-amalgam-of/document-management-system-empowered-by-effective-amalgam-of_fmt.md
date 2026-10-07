@@ -1,0 +1,340 @@
+
+# 区块链与 IPFS 有效融合驱动的文档管理系统
+
+![](img/d513d62f05793611c13a01e05574c355_0_0.png)
+
+![](img/d513d62f05793611c13a01e05574c355_0_1.png)
+
+# 基于块链与 IPFS 有效融合的文档管理系统
+
+Shikhar Saranga*, Dhruv Rana*, Smit Patel^a, Darshil Salaviya*, Udai Pratap Rao*, Akhil Chaurasia*†
+
+*达尔·瓦拉布国家技术学院计算机科学与工程系，苏拉特，395007，古吉拉特邦，印度
+
+# 摘要
+
+世界在全球市场之前就已经开启了数字化，这导致了文档验证和申请等各种流程的在线化。这也导致了互联网数据量和流量的增加，引发了网络欺诈（如文档（数字）伪造）的增加。这一切导致了对安全的数字文档管理平台的需求。通过区块链技术的帮助，可以开发出安全的替代方案。在本文中，我们研究了使用数字形式文档的情况，并基于区块链技术创建了一个用于处理所有文档的安全 Web 应用程序。该应用程序根据定义的模板生成所需的凭证，并将其安全地存储在分布式网络（Polygon）中，并将文档作为 IPFS（星际文件系统）存储。它提供了验证文档真实性的功能。它还允许用户在特定时间内共享其文档的访问权限。
+
+关键词：区块链技术；Polygon (Matic)；去中心化应用程序；星际文件系统
+
+# 1. 引言
+
+随着数字化的快速发展，许多政府机构或私营机构已转向在线平台。尽管出于各种原因，传统的现场流程仍在继续，但显而易见，在线流程为申请者和处理机构都提供了便利的体验。随着流程在线化，还会面临一些深层次的问题，如数据的基础设施限制以及由于不同申请需要文档而导致的冗余，导致了在限制下提供数据和文档的需求。在包括其他次要考虑因素之外，主要问题是网络欺诈和数字伪造。
+
+* 通讯作者。
+
+邮箱地址：akhilchaurasia47@gmail.com
+
+随着全国范围内互联网普及率的提高，网络犯罪率也在上升，网络犯罪率增长了 18% [1]。数字伪造案件的数量也在增加，2020 年有 580 例，2019 年有 515 例，2020 年发现了 338 例数字文档篡改案 [2]。在当今世界，通过更方便、更安全的方式来验证、共享、批准官方数字文档的需求日益增长。现有的在线流程门户通常涉及填写注册表，然后上传几个文档进行信息验证，这些信息通常存储在中心化服务器中，这使得数据容易受到攻击。文档存储在现场服务器上，大多数情况下是纸质原始文档的数字形式，这增加了数字伪造和篡改的机会。
+
+因此，将基于区块链的服务用于在线申请和其他流程，为提高文档安全性提供了解决方案，并能减少伪造的发生。
+
+## 1.1. 动机
+
+随着数字空间的使用，网络犯罪率不断增加。然而，如果不进行适当的检查和查询，像数字伪造和文档篡改这样的网络犯罪可能不会被发现。因此，可能会出现犯罪已经发生但由于受害者不知情而未被发现的情况。此外，在像印度这样受教育人口比例相当大、且依赖第三方处理各种文档相关工作的国家，针对他们的犯罪行为很高。因此，基于区块链的系统有助于改善这种情况。
+
+## 1.2. 目标
+
+在本文中，我们分析了使用数字形式文档的情况，并基于区块链技术创建一个用于所有文档处理的安全 Web 应用程序。我们将讨论区块链技术及其基础，并理解它如何作为开发文档的可靠方式。
+
+## 1.3. 贡献
+
+以下是我们的贡献：
+
+- 使用区块链进行文档管理
+- 使用星际文件系统 `IPFS` 进行存储
+
+## 1.4. 论文结构
+
+本文分为五个部分。第一部分介绍了系统的简述、现有系统的局限性、选择该主题的动机、目标以及我们的贡献。第二部分介绍了理论背景和文献综述。第三部分介绍了提出的工作和方法。第四部分介绍了仿真和结果。第五部分介绍了结论和未来展望。
+
+# 2. 相关工作
+
+## 2.1. 区块链
+
+区块链是通过加密更新的去中心化网络。与传统系统不同，注册由所有参与者存储，且每个实例包含交易 [3]。
+
+### 2.1.1. 分布式共识
+
+分布式共识是区块链和加密货币的关键组成部分。它意味着许多人的意见，而非统一，通过特定的协议和点对点 `P2P` 网络参与者的定义规则实现。
+
+### 2.1.2. 交易
+
+对于加密货币，捕捉应用程序语义的数据结构类似于资产负债表。它由以下组成：
+
+- 时间戳
+- 前序交易哈希
+- 输入值
+- 输出值
+- 接收方账户密钥
+
+#### 2.1.3. 块链
+
+Merkle 树是一种基于哈希的树结构，连接区块中的交易 [6]。叶子节点表示交易，子节点的哈希生成父节点的哈希，直到树根哈希被包含在区块中。
+
+### 2.1.4. 智能合约
+
+智能合约被定义为用特定编程语言编写的代码，可以部署到区块链网络以创建合约账户。合约包含了定义合约账户的指令。当满足规则时，合约会自动执行并强制执行。它们是不可篡改的，没有人可以更改直接程序好的内容。智能合约提供了许多优势，例如 [7]:
+
+- 速度和实时更新
+- 减少执行风险
+- 减少中间环节
+- 降低成本
+
+### 2.1.5. 去中心化应用程序 `DApps`
+
+去中心化应用程序 `DApps` 是一组用户可以根据协议部署的开源实体。它们不需要政府或公共公司等中心化实体。`DApps` 具有一些特征，如下 [8]:
+
+- 开源
+- 去中心化
+- 激励
+- 价值证明协议
+
+## 2.2. 应用
+
+### 2.2.1. Blockcerts
+
+这是一个由 MIT Media Lab 和 Machine Learning（现 Hyland Credentials）发起的项目。Blockcerts 使用发行、查看和验证证书的开放标准 [9]。它已在区块链上实现，现在他们正致力于扩展到以太坊。
+
+Shikhar Sarung et al. / Procedia Computer Science 215 (2022) 340–349
+
+### 2.2.2. LegitDoc
+
+LegitDoc 是由 CrossForge Solutions Pvt. Ltd. 开发的旗舰产品，该公司开发了一种 `DApp`，可以向其利益相关者发行任何数字文档（政府文件、教育证书、记录、银行文件、发票、实验室报告、医疗报告等），这些文档可以在 10 秒内完成验证 [10]。以太坊作为底层架构，LegitDoc 拥有一种专利方法来计算和处理由发行者生成的文档哈希。发行时需要原始文档及其相应的证明文件，以供验证。
+
+## 2.3. 区块链平台
+
+有很多可以用于部署 `DApp` 和智能合约的区块链平台。让我们来看看其中几个及其优缺点。
+
+### 2.3.1. 以太坊 `Ethereum`
+
+以太坊是一个开源区块链，广泛用于开发和部署去中心化且可靠的应用。以太坊网络中的每个节点都存储区块链的全副本，因此所有交易都必须由同意交易的节点执行。无需承担构建构建网络的费用，任何人都可以创建基于区块链的系统并在以太坊的基础设施上运行。Ether 被以太坊网络用于奖励节点的计算，并在账户/钱包之间转移资金。停机、审查、欺诈或第三方干预都不会影响以太坊区块链应用。
+
+### 2.3.2. Hyperledger Fabric
+
+这是一个由 Linux 基金托管的商业区块链网络，采用模块化架构确保机密性和可扩展性。该平台允许开发者构建所有类型的私有区块链应用。它在组织中非常流行 [11]。以太坊和 Hyperledger Fabric 之间的差异见表 1。
+
+表 1. 以太坊与 Hyperledger Fabric 的对比 [12]
+
+| 考虑因素 | 以太坊 | Hyperledger Fabric |
+|---|---|---|
+| 适用场景 | B2C 业务及通用应用 | B2B 业务 |
+| 权限权 | 透明 | 机密交易 |
+| 共识算法 | 工作量证明 `PoW` | 可插件共识 |
+| 使用的加密货币 | 使用 Ether 执行合约 | 无货币 |
+| 编程语言 | 使用 Solidity 编写智能合约 | 使用 Golang 编写链码 |
+
+### 2.3.3. Polygon `Matic`
+
+Polygon `Matic` 是在以太坊之上开发的 L2 扩展方案，旨在解决 `DApp` 采用面临的一些重大障碍：可扩展性、可用性和速度。由于 Polygon 的用户可以为支付和智能合约交互创建链外操作，Polygon 自称为“区块链中的以太坊”。Polygon 通过 Plasma 实现了一种独特的 L2 扩展方法，Plasma 是一种 L2 扩展方案，通过生成树状的“子区块链”集合，并以太坊作为树根和仲裁层。
+
+Polygon 的新区块链被开发为“提交链”而非“侧链”。主要的区别在于，侧链主要依赖其验证者来确保安全。相比之下，例如 Polygon 提交链可以通过利用以太坊验证者来内部化以太坊的网络。以太坊和 Polygon 的差异见表 2。
+
+| 参数 | 以太坊 | Polygon `Matic` |
+|--- |--- |--- |
+| 原生代 | ETH | MATIC |
+| 编程语言 | Solidity | GoLang, Solidity, Viper |
+| 每秒交易数 | 13-15 | 高达 6500 |
+| 共识机制 | PoW `工作量证明` | POS `权益证明` |
+| 架构 | 有状态架构 | 多链架构 |
+| 可扩展性 | 局限的可扩展性 | 更好的可扩展性 |
+
+表 2. 以太坊 vs Polygon [13][14]
+
+Polygon 为这些问题提供了解决方案，它提供了以下优势：
+
+- 模块化和“安全即服务”
+- 一键部署预设的区块链网络
+- 用于与以太坊和其他区块链网络交换重心测量的互操作协议
+- 用于启用当前现有区块链网络互操作的适配器模块
+- 用于开发自定义网络日益不断增长的模型集
+
+# 2. 存储数据和文件
+
+### 2.4.1. MongoDB
+
+`MongoDB` 是一个开源的 NoSQL 关系数据库管理系统。`MongoDB` 可以存储和检索面向文档的数据。`MongoDB` 的工作基于包含数据字段和键值对的记录。操作方式类似于关系型数据库表格的文档组被称为集合 `collections`。所有集合都可以包含任何类型的数据，这些数据无法分布在多个数据库中 [15]。
+
+### 2.4.2. BigchainDB
+
+`BigchainDB` 是一个可扩展的数据库。它的创建是为了带来两个世界的优势：“常规”分布式数据库和“传统的”区块链。`BigchainDB` 从一个标准数据库（原始 RethinkDB）开始，具有以下属性：扩展性和查询能力。在此基础上，我们将构建区块链功能，如去中心化、不可篡的资产。
+
+### 2.4.3. IPFS
+
+星际文件系统 `IPFS` 是一种分布式文件协议和点对点网络。使用 `IPFS`，我们可以存储和共享信息。`IPFS` 利用了名为有向无环图 `DAGs` 的数据结构。具体来说，我们使用 Merkle DAG，每个节点都有一个唯一标识，它是其内容的哈希。为了在全局命名空间中标识链接内容的单个文件，`IPFS` 使用内容寻址 [16]。当你将文件上传到 `IPFS` 时，它会被分成较小的数据块，对数据块进行加密哈希，然后分配一个称为内容标识符 `CID` 的指纹。`SHA-256` 哈希算法保证每个默认文件都有唯一的 `CID`。这个 `CID` 是你的文件存在状态的永久记录。当其他人搜索你的文件时，他们会询问其节点是否存储了 `CID` 所引的内容。当他们查看或下载你的文件时，会缓存该文件的副本，并在缓存擦除之前成为你文件的另一个来源。
+
+网络中的节点只负责保持其原样，并添加一些信息来识别哪个节点存储了什么。当你向 `IPFS` 上传新版本时，其加密哈希会发生变化，并获得新的 `CID`。这表明 `IPFS` 能够抵抗操纵和审查——对文件的任何修改都不会删除原始文件，且文件之间的共同部分可以重用，这意味着你必须记住一长串的 `CID`，因为 `IPFS` 可以利用 `IPNS` 去中心化命名系统来定位你的最新版本，而 `DNSLink` 可以将 `CID` 链接到人类可读的 DNS 名称 [17]。
+
+## 2.4. 文件存储系统的评估
+
+`MongoDB` 是中心化数据库。中心化数据库甚至像 Google Cloud 这样的去中心化数据库的问题在于它们容易受到攻击。此外，分布式系统提供了安全性、可访问性、可解释性和降低成本等优势 [18]。
+
+`BigchainDB` 是分布式数据库和常规区块链的混合体，结合了两者的优点 [19]。因此，它非常适合处理 NFT（非质化代币）或以太坊代币的 `DApp`。然而，我们的解决方案需要在安全系统中文档并在需要时获取它们。`IPFS` 成为实现的更佳选择，因为它提供了简单性和安全性。
+
+# 3. 设计工作
+
+在这项研究中，我们旨在构建一个利用区块链技术帮助管理、验证和共享文档的系统。该系统的流程包括从特定文档的基础模板开始，并利用它生成具有唯一签名（哈希）的文档，该签名将用于验证文档。它包含三个部分：生成、验证和共享。
+
+## 3.1. 生成证书
+
+首先，在平台上创建并上传证书。然后终端用户可以使用这些模板获取证书。之后，审核者可以在审核仪表板上验证申请者共享的所有细节。
+
+### 3.1.1. 创建和上传模板
+
+为了申请新类型的证书，文档发行者必须提供审核所需的字段和文档。然后使用 `pdfLib` 包创建表单。
+
+### 3.1.2. 获取数据
+
+为了提供数据，申请者必须填写 PDF 格式的表单。填写完表单后，申请者需要上传填充后的表单或使用平台服务共享证书。
+
+## 3.2. 验证数据并生成证书
+
+一旦表单提交，审核者将完成对所有数据的验证并批准证书。批准后，证书持有者的详情被添加到区块链中，并生成证书供下载。
+
+### 3.2.1. 将证书存储到区块链上
+
+一旦证书被批准并生成，它会被存储在 `IPFS` 中，并生成唯一的 `CID`。该 `CID` 与所有者详情一起保存在区块链中。
+
+## 3.3. 验证证书
+
+为了验证证书，需要将其上传到平台。上传证书时，我们使用 "`pdf-lib`" npm 包读取证书内容，使用 "`PDFDocument`" 类的 "`load`" 方法以元数据的形式读取所有数据字段。现在，我们在区块链中搜索同一用户的证书。
+
+以及我们生成的证书的 `CID`，即数据的加密哈希值。通过此 `CID`，我们可以从 `IPFS` 获取原始证书，并使用 "`pdf-lib`" npm 包获取所有数据字段。如果匹配，我们可以验证该证书已通过验证；否则，该证书未通过验证且不可信。
+
+## 3.4. 证书共享与其他功能
+
+经过身份认证的用户拥有一个仪表板 `Dashboard` 页面，他们可以在那里查看所有已生成的证书，并带有分享选项。通过该功能，用户可以选择允许系统中的特定用户（无论是另一个用户还是证明者）访问其文档，访问持续时间由用户定义。需要证书的用户需要输入接收者的邮箱地址和共享的天数。之后，另一个用户可以在其仪表板上与自己的证书一起看到这此证书。
+
+由于安全存储在区块链上的文档 `CID` 是与接收者共享的，而不是文档本身，这确保了文档的安全性。为了提高用户体验，我们实现了一个通知系统。相关通知将展示给经过身份认证的用户。
+
+# 4. 仿真与结果
+
+本节描述了我们获得的实验结果。该实现分为三个模块：第一个模块是证书生成，第二模块重点介绍验证过程，第三个模块是证书共享。我们使用了 `IPFS`、`React.js`、`Node.js`、`Express.js` 和 Polygon `Matic` 作为区块链。智能合约用 Solidity 编写。
+
+## 4.1. 软件规范
+
+- 前端开发：`ReactJS`, Semantic UI
+- 后端开发：`NodeJS`, `IPFS`, Polygon `Matic`, 区块链网络
+- 软件包管理器：Node Package Manager `NPM`
+
+## 4.2. Web门户界面
+
+![](img/d513d62f05793611c13a01e05574c355_6_0.png)
+
+图 1(a) 显示了申请者创建证书的步骤。从可用证书和表单选择要生成的证书。提交后，申请者将被重定向到仪表板，新证书将以待处理状态添加到其中。
+
+图 1(b) 描绘了证书的审批流程。在申请新证书时，证书会出现在审批者的仪表板上，审批者可以批准或拒绝该证书。审批者可以点击“查看”按钮查看文档详情。Shikhar Sarang 等人 / Procedia Computer Science 215 (2022) 340–349，在批准或拒绝后，申请者会收到其仪表板上的通知，状态也会随改变。
+
+![](img/d513d62f05793611c13a01e05574c355_7_0.png)
+
+图 2. (a) 证明者在审批前的证书视图和 (b) 证书视图
+
+为了验证身份，在证书被批准之前，证明者可以如图 2(a) 所示查看证书。用户可以在验证页面上通过上传任何现有证书来使用证书验证功能，如图 2(b) 所示。
+
+![](img/d513d62f05793611c13a01e05574c355_7_1.png)
+
+图 3. 证书共享
+
+用户可以使用已批准证书的共享功能。如图 3 所示，一旦证书被共享，接收者就会在其仪表板上收到一条通知。
+
+## 4.3. 智能合约实现
+
+实现的合约：`IdentificationCertificateContract.sol`, `PassportCertiContract.sol`, `BirthCertificateContract.sol`, `Dashboard.sol`, `ShareCertificateContract.sol`, `Login.sol`, `NotificationContract.sol`
+
+下面列出了一些重要的函数：
+
+
+
+```solidity
+function newIdentificationCertificate(string memory accName, string memory _name, _number, string memory _ipsfHash, string memory _description)
+public {
+    IdentificationCertificate memory c;
+    c.ipsfHash = _ipsfHash;
+    c.description = _description;
+    c.name = _name;
+    c.number = _number;
+    c.state = 0;
+    c.accName = _accName;
+    IdentificationCertificates[accName] = c;
+    IdentificationQueue memory b;
+    b.state = 0;
+    b.accName = accName;
+    enqueueIdentificationCertificate(b);
+}
+```
+
+```solidity
+function approveIdentificationCertificate(string memory accName) {
+    IdentificationCertificate memory c = IdentificationCertificates[accName];
+    if(c.state != 0) return;
+    c.state = 2;
+    IdentificationCertificates[accName] = c;
+    updateIdentityCard();
+}
+```
+
+```solidity
+function getIdentificationCertificate(string memory accName) public view
+(IdentificationCertificate memory) {
+    return IdentificationCertificates[accName];
+}
+```
+
+```solidity
+function shareCertificate(string memory sharerAccName, string memory sharedToAccName, uint typeCert, uint time, string memory timeSharing) public {
+    uint userId = accountName[sharerAccName];
+    uint viewerId = accountName[sharedToAccName];
+    require(userId >= 1, "User not found");
+    require(viewerId >= 1, "Viewer not found");
+    require(userId != viewerId, "You can't share with yourself");
+    SharedCertificate memory b;
+    b.sharerAccName = sharerAccName;
+    b.timeSharing = timeSharing;
+    b.time = time;
+    b.typeCert = typeCert;
+    userHasAccessCertificate[sharedToAccName].push(b);
+}
+```
+
+```solidity
+function getSharedCertificate(string memory accName) public view
+(SharedCertificate memory b) {
+    b = userHasAccessCertificate[accName];
+}
+```
+
+### 4.4. 讨论
+
+我们展示了一个使用 Polygon 网络和 IPFS 构建的安全文档管理系统原型。我们通过在 Mumbai 测试网络和本地 IPFS 服务器上部署，成功地测试了文档的创建、验证和共享。
+
+# 5. 结论与未来展望
+
+## 5.1. 结论
+
+在回顾了关于 Polygon、可用区块链技术以及应用层模块和包的各种论文和博客后，我们确定了一个对终端用户最方便的解决方案。对数据库和文件管理系统进行了深入研究，发现 IPFS 是所提方案的最佳替代方案。我们实现了具有生成、验证、共享和通知系统等功能的解决方案。
+
+## 5.2. 未来展望
+
+在未来，可以对所提的方案进行改进。在上传到 IPFS 网络之前可以对文档进行加密。此外，在请求文档时，可以将支持文件共享给审批者。此外，还可以构建应用程序用户界面使其更加用户友好。
+
+# 参考文献
+
+- [1] "India reported 18% rise in cyber crime in 2020; 578 incidents of 'fake news on social media:'" The Hindu, Sep. 2021. 访问于 04.10.2021.
+- [2] NCR, Crime in India 2020.
+- [3] "Blockchain technology: principles and applications;" Sep. 2015.
+- [4] M. Miluni, W. He, and M. Kanwal, "Proof of luck: An efficient consensus protocol," in 11th Workshop on Software Engineering for Trusted Systems, pp. 1–6, 2016.
+- [5] G. Meiklelein, M. Portile, G. Skelen, D. McCoy, G. Voeler, and S. Savage, "A fistful of bitcoins: characterizing payments," pp. 127–140, 2013.
+- [6] "Performance and scalability of blockchain networks and smart contracts," 2017.
+- [7] "Smart Contracts Implementation, Applications, Benefits, and Limitations," Journal of Information and Applications, Oct. 2019.
+- [8] "What Are DApps? The Decentralized Future," May 2019. 访问于 03.12.2021.
+- [9] "Introducing LEGITDOC;" 访问于 04.10.2021.
+- [10] "Introducing Blockchain." 访问于 04.10.2021.
+- [11] "Hyperledger - Open Source Blockchain Technologies;" 访问于 04.10.2021.
+- [12] "More Virtual Alternatives to Ethereum: A Handy Guide -- Blog," Apr. 2020. 访问于 03.12.2021.
+- [13] "Ethereum vs Polygon: Which One Is Better for NFT?" Feb. 2022. Section: NFT.
+- [14] "Solana and Polygon: A Detailed Comparison," Feb. 2022. 访问于 16.03.2022.
+- [15] "What is MongoDB? A definition from Whabs.com." 访问于 16.03.2022.
+- [16] "InterPlanetary File System," Mar. 2022. Page Version ID: 107559789.
+- [17] "IPFS: Distributed File System." 访问于 16.03.2022.
+- [18] "Will Blockchain Replace MySQL and SQL?" Wiredelta,” 访问于 16.03.2022.
+- [19] "BigchainDB: The blockchain database..." 访问于 16.03.2022.
