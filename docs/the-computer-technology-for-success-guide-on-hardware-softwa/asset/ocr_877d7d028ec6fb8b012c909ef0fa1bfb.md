@@ -1,0 +1,3 @@
+# The Importance of Information Technology in Security
+
+With so many transactions done online and so much information available online, it’s important to keep all of that safe. Information technology makes possible for your online data to stay secure until accessed by the proper channels. Using passwords and encryption, information technology hides your personal digital data away, and the only way it can be accessed is by companies who have permission from you.

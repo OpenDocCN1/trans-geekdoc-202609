@@ -1,0 +1,5 @@
+security testing and device management duties.
+
+# **Hardware and infrastructure:** This focus area refers to all the physical components of IT infrastructure. This pillar of IT includes the setup and maintenance of equipment like routers, servers, phone systems and individual devices like laptops.
+
+Even though an organization’s IT department handles many different functions and plays a critical role in keeping things running, Andrey Prokopchuk, head of IT at Belitsoft, says the perfect IT department is the one you aren’t even aware of. This means that they are able to automate and create processes for many of their daily tasks, so that the business continues to run smoothly. The ideal IT department is also aligned with the business’s goals and transparent in its processes in a way that the rest of the business can understand and provide input on.

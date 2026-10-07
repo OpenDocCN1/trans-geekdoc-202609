@@ -1,0 +1,7 @@
+implementation. Organizations typically hire external contractors to execute the implementation of new hardware and software solutions. While Information Technology solutions have become less expensive with the improvements in technology, organizations that have extensive requirements must ensure that they adhere by all regulations or they will stand the risk of legal actions and penalties.
+
+# More and more data regulations
+
+In the modern world, information is huge business. This is why data protection and ethical usage of it are of paramount significance to regulatory authorities and lawmakers. Enterprise owners cannot afford to be ignorant of what is involved in client data protection. Some sectors have much higher regulations than others, such as the financial services and healthcare industries, because in their day-to-day business operations, these businesses accumulate private and sensitive information from patients and clients.
+
+Nonetheless, just because you own a fashion store doesn’t mean you are free of regulations. The way you handle email lists; the process of confirming the age of the individuals you gather information on; and how you manage credit card data, is all regulated. Having preparation and adopting standard protocol is key to protecting your company and your clients.

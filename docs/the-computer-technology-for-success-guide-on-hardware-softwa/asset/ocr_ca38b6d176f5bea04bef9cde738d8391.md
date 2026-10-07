@@ -1,0 +1,1 @@
+high schools are taking advantage of online classes so that students can continue their education instead of considering dropping out. Learn how to teach online with an online course.

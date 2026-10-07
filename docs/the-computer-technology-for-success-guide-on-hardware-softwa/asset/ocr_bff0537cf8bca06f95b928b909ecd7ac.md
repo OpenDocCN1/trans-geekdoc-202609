@@ -1,0 +1,3 @@
+and other physical devices, infrastructure and processes to create, process, store, secure and exchange all forms of electronic data.
+
+The Harvard Business Review coined the term information technology to make a distinction between purpose-built machines designed to perform a limited scope of functions, and general-purpose computing machines that could be programmed for various tasks. As the IT industry evolved from the mid-20th century, computing capability increased, while device cost and energy consumption decreased, a cycle that continues today when new technologies emerge.

@@ -1,0 +1,5 @@
+# Information technology vs. computer science
+
+# Computer Science
+
+Computer scientists are, in fact, scientists. They are focused with the theory of computational applications. That means they understand the “why” behind computer programs. Using algorithms and advanced mathematics, computer scientists invent new ways to manipulate and transfer information. Computer scientists are generally concerned with software, operating systems and implementation. Like Neo In The Matrix, computer scientists can see and make sense of code. Computer science students will learn the fundamentals of different programming languages, linear and discrete mathematics, and software design and development. Computer scientists study the machine itself and understand how and why various computer processes operate the way they do. Simply put, computer scientists can talk to computers. The field is based in mathematicsôí the language of computers. Computer scientists understand why computers work and can create a program or operating system that does what you want it to do.
