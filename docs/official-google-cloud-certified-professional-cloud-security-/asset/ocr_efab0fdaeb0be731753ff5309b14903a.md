@@ -1,0 +1,13 @@
+# Foreword
+
+We are digitizing the planet at an increasing pace. Small and large businesses, governments, and other public institutions, the daily fabric of our lives increasingly depend on reliable and secure systems.
+
+More of these systems are now operating in one or more hyperscale cloud providers. Such cloud providers continue to invest in security as a reflection of their importance to customers in critical infrastructures and of their own desire to manage risk for large numbers of organizations. Increasing security, resilience, reliability, and compliance in the cloud, many organizations are moving more data and workloads to get these benefits.
+
+At Google Cloud, we are committed to providing our customers with the most secure and reliable cloud platform possible and we have invested significantly in security by design and secure by default approaches to provide higher assurance to help customers operate securely.
+
+Our goal is to make Google Cloud as easy to secure as possible, we know that designing, configuring, and operating large cloud deployments for real workloads requires solid expertise and experience. We also know that security is not just about technology. It's all about people.
+
+At Google, we have been focused on developing the cybersecurity workforce through our cybersecurity certificate programs and many other resources that not only grow the number of people available to organizations to improve cybersecurity, but also increase their depth and special in important fields like cloud security. Our Professional Cloud Security Engineer certification is one of the most comprehensive and respected certifications in the industry. It is a valuable credential for professionals to demonstrate their expertise, and for organizations to know they're working with someone who has mastered expertise and is committed to the right security practices as encoded by Google Cloud security experts.
+
+Anush and Prashant, in developing this Official Google Cloud Certified Professional Cloud Security Engineer Exam Guide, are providing an immensely resource for professionals to learn and ready themselves for this important certification in a field with high demand for such skills. The guide serves as the authoritative source aligned with the exam blueprint and offers professionals an easy way to study not just what's relevant to the exam, but further reading material and paths to additional Google Cloud-provided training courses.

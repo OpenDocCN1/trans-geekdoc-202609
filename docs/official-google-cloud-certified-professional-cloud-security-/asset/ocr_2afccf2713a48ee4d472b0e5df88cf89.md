@@ -1,0 +1,5 @@
+Leverage built-in rules wherever possible: Cloud DLP’s built-in inspection templates should be used wherever possible. With over 150 built-in templates, Cloud DLP allows us to detect and classify data with speed and scale. For example, the US_HEALTHCARE_NPI can detect the 10-digit national provider number used for Medicare services. The use of built-in info saves the time and effort needed to create and maintain custom rules for standard infoTypes.
+
+Trigger Cloud DLP scans based on events: Cloud DLP's data profiling capability allows the automated scanning of all BigQuery tables and columns in your organization, folders, and projects. However, there might be a need for triggers that will enable the scan to run on new files that get uploaded to Cloud Storage or a new message that's added to Pub/Sub topics. To support this use case, Eventarc API or other BigQuery sink listeners can be configured to identify the change events that will eventually trigger a Cloud DLP scan.
+
+![](bbox=[0.223, 0.353, 0.773, 0.866])

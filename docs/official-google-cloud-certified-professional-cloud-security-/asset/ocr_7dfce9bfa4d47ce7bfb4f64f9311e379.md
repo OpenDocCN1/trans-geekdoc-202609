@@ -1,0 +1,15 @@
+their integrity, organizations can ensure that only trusted images are deployed in their environment, helping to protect their application and infrastructure from malicious code injection.
+
+Container registry scanning also enables organizations to detect and identify any vulnerabilities in the images, allowing them to take corrective action before any container is deployed. In addition, it can help to detect any changes made to the images over time, allowing organizations to track the source of any changes and take appropriate action if necessary.
+
+# Container runtime security
+
+The security of a container runtime is an essential element of a CI/CD pipeline. Containers are an efficient way to package and deploy applications and offer advantages over traditional virtualization. Containers must be secured to protect applications from malicious actors, unauthorized access, and security risks.
+
+Container runtime security ensures that the container environment is secure and that any malicious code or actors do not have access to the underlying host system. Container security also helps to ensure that applications are not exposed to a variety of potential threats, such as breaches, denial-of-service, and more. Furthermore, it ensures that applications are running in an optimal environment, with all necessary security measures in place. By incorporating container runtime security into a CI/CD pipeline, organizations can maximize their security posture while ensuring that applications are deployed quickly and efficiently.
+
+# Establishing trust in CI/CD
+
+Trust is when your business believes that someone or something is reliable; honest, able, or strong. You can keep track of both implicit and explicit trust. Both implicit and explicit trust have different weights in times of confidence when they are talked about outside the pipeline. Because implicit trust can't be checked, an artifact in a repository might or not have been pushed through a security-aware CI/CD pipeline. If trust is explicitly confirmed, an audit trail can be made for each item that can be checked. This makes possible to build trust outside the pipeline environment.
+
+An example of recorded trust is when a quality assurance (QA) team confirms the quality of a software release version and tells others that they built it. An example of recorded trust is when a QA team checks the quality of a software release version and writes down what they did. They could, send an email or make a digital note of the date, time, and situation of a successful operation. Trust must be written down so that you can confidently rebuild the series of stages. Getting more is the same as keeping track of trust. Over time, trust is built by going through a series of steps. As an item moves from a lower-level environment into production, its trust increases. Each stage of the pipeline includes tasks such as running an automated test or manually validating code through exploratory testing. The successful completion of these tasks, digital evidence that has been cryptographically signed to prove its authenticity can be linked to the resulting artifacts.

@@ -1,0 +1,2 @@
++   [Google Cloud 认证专业云安全工程师官方考试指南：通过本实践指南成为专家并获得 Google Cloud 认证](README.md)
++   [Google Cloud 认证专业云安全工程师官方考试指南：通过本实践指南成为专家并获得 Google Cloud 认证](official-google-cloud-certified-professional-cloud-security-.md)
