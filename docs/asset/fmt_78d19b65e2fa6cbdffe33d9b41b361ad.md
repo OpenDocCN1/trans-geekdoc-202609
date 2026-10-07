@@ -1,0 +1,51 @@
+
+# 参考文献
+
+- Zhou, J., 和 Troyrov, A. G. (2019). 基于深度学习的模型预测非编码变异的影响。Nat. Methods, 16, 931–934. https://doi.org/10.1038/s41592-019-0
+- Zhou, J., Theelaf, C., Cao, K., Wang, A., 和 Troyrovsky, A. (2018). 基于深度学习识别基因组中变异效应基因的方法。Nat. Genet., 50, 1171–1179. https://doi.org/10.1038/s41588-018-6
+- Avice, Z., Agarwal, V., Visertin, D., J., L., Grabska, A., Taylor, K., Usmani, J., 和 Reddien, P. (2022). 用于预测染色质结合和长程相互作用的深度学习框架。Nat. Methods, 19, 1196–1203. https://doi.org/10.1038/s41592-022-5
+- Kelley, D. R., Stone, N., 和 Jain, R. (2021). 使用深度神经网络学习单细胞数据的调控景观。RNA Res, 26, 990–999. https://doi.org/10.1038/rnaac/0553
+- Yan, H., 和 Reddien, P. (2022). 基于 scseq 的图谱：胚胎发育的多细胞 ATAC-seq。Nat. Methods, 19, 1098–1106. https://doi.org/10.1038/s41592-022-8
+- Xiao, Y., Wang, J., Zhang, P., Li, J., Zhou, Q., Chen, M., 等人. (2023). 用于解析细胞类型异质性的分析框架。Science, 380, e1384. https://doi.org/10.1126/science.ade784
+- Allen, A., Wang, R., Jordan, J., Chen, X., Liu, J., Briggs, B. (2020). 使用深度学习预测蛋白质结构和功能。Nat, 577, 1066. https://doi.org/10.1038/s41586-019
+- Jumper, J., Evans, R., Roravkar, A., Cohen, A., Steerst, R., 等人. (2021). 利用 Alpha2 进行高精度蛋白质预测。Nature, 596, 588–593. https://doi.org/10.1038/s41586-021
+- 47. He, J., Hu, X., Ge, G., Li, Y., Yu, J., Hu, X., Zheng, Y., 等人. (2024). 转录因子的双重作用稳定细胞。Cell, 187, 246–276. https://doi.org/10.1016/j.cell.2023.03
+- 48. Pressain, S., Fang, R., Huang, H., Zhao, Y., Yuan, R., Ravikin, D., Jung, Y., Zhang, Y., Aoki, D., 等人. (2016). 单细胞 ATAC-seq 揭示发育中的染色质景观。Nature Neurosci, 22, 431–439. https://doi.org/10.1038/s41593-016
+- 49. Laneys, C.A., Davis, F.M., Chang, G., Hu, J., Burket, K., Zhou, J., Zhang, Y., Zhao, S., Chen, L., Dyer, E., Buenoert, J. (2019). 多尺度染色质可及性的深度学习整合建模。Nature Biotechnol., 37, 915–926.
+- 50. Deep, F.V., Ismail, J.N., Bravo-Gález, B.-S., Celsuis, G., Finn, F.C., Cansier, J., Thomas, K., Williams, V., Marshall, G., 等人. (2022). 分化偏向的人胚胎细胞单细胞 ATAC-seq 图谱。Cell, 185, e1791. https://doi.org/10.1016/j.cell.
+- 51. Kalukai, A., Rozi, L.P.F., Huang, G., Yan, Y., Mabery, B., Kijiyama, S., Zheng, J., Zhang, X., K., 等人. (2020). 人胚胎细胞肌肉分化的单细胞图谱。Cell, 180, 764–789. https://doi.org/10.1016/j.cell.
+- 52. Moe, J.M., Puzerov, P. R., Har, F. E., Eptin, H. B., Schneider, N. L., Zhang, J., 等人. (2020). 人和小鼠基因组中 DNA 元素的扩展染色质景观。Nature, 585: 697–703. https://doi.org/10.1038/s41586-020-
+- 53. Yang, J., Fu, T., Zhou, F., Wang, Y., Yang, D., Xiao, Q., X, X., Chen, M., 等人. (2022). 小鼠癌症的参考单细胞基因组和转录组图谱。Nat. Commun., 13, 4069.
+- 54. Zhang, G., Fu, Y., Yang, L., Zhang, S., Ma, J., Li, Y., Han, H., 等人. (2024). 利用染色质相关 ATAC-seq 表征跨物种单细胞染色质景观。Cell, 188, e1024
+- 55. Dao, Y., Liu, M., Zhang, J., Lee, A., Qian, H. S., 和 Ren, B. (2019). 用于 CRISPR 介导基因编辑的功能增强子库。Genome, 29, 395–407. https://doi.org/10.1186/s12967-
+- 61. Zuhlke, O., Rosenblatt, H., Shokat, L., Dai, S., Kusuguchi-Öztürk, D., Zhang, Z., J., D., 和 Mann, B. (2021). 用于组织再生的进化染色质重塑蛋白。Nature, 620, 160–171. https://doi.org/10.1038/s41586-021-0
+- 62. Maaten, L., 和 Hinton, G. (2008). 使用 t-SNE 可视化数据。Machine Learning Research, 9, 2559–2585.
+- 63. Dutley, K., Smith, S., 和 Xu, J. (2004). 人胚胎中的转录因子。Science, 324, aj116. https://doi.org/10.1126/
+- 65. Zadeh, Y., Chen, C., 和 Mann, B. (2018). 转录因子结合的重叠。Proc. Natl. Sci., 115, 1011–1018. https://doi.org/10.1073/pnas
+- 66. Zhang, Y., Liu, S., 和 Zhou, J. (2018). 单细胞 ATAC-seq 景观。Cell, 173, 578. https://doi.org/10.1016/j.cell.
+- 67. Martin, R. C., Wang, A., 和 Hill, D. (2022). 细胞表达。Cell, 187, 246–276. https://doi.org/10.1016/j.cell.
+- 68. Grant, F. E., Bailey, T., 和 Noble, S. (2011). 细胞类型异质性。Bioinformatics, 27, 1017–1028. https://doi.org/10.1093/bioinformatics
+- 69. Martin-Russo, J., Catano, N., Pang, S., S, M. W., 等人. (2023). 跨组织单细胞 ATAC-seq 揭示发育特异性。Cell, 186, 2456–2474. https://doi.org/10.1016/j.cell.
+- 70. Mayaramun, T., Weinberg, R., Yang, Y., Baek, J., Kim, J., Jung, U., Lee, C., Roche, R., 等人. (2025). 药物开发依赖于转录因子结合和调控目标的重叠。Science, 388, 1011.
+- 78. Chen, J., Noorn, M., Wu, J., Sun, G., Viraj, M., Collins, A., Pirelo, N., Finn, J.J., and Steinbelt, B. (2023). 分辨率下基因调节元件的整合解析。Cell, 3, 100318. https://doi.org/10.1016/j.cell.2023.100318
+- 79. Chen, K.M., Wu, A.K., Troyanskaya, O., and Zhou, J. (2022). 用于解码人类变异的基于序列的全局活动图。Nat Genet, 54, 496–502. https://doi.org/10.1038/s41588-021-01102-x
+- 80. Dama-Toma, O., Lombardi, M., Lardelli, J., Perez, J., Gizawski, A. H., Dalli, F., Cito, C., Trope, E., de Bampi, S., Sherbaknik, H., et al. (2023). 核苷酸转换器：构建和评估人类基因组的稳健模型。Nat Methods, 20, 987–992. https://doi.org/10.1038/s41592-022-01897-z
+- 81. Gangan, M. D., Moore, M., Li, J. J., Di, L. B., Barber, J., Thomas, A.W., Kim, S., Shin, B. H., et al. (2024). 从基因组规模的变异预测深度学习。Cell, 187, e10642. https://doi.org/10.1016/j.cell.2024.01.012
+- 82. Garibaldi, D., Bifler, J. L., Smith, A. K., Chen, A., Nolan, P., O’White, A., Keane, C. T., Davis, S. M., et al. (2022). BAM2 与单细胞基因组学的十年。Cell, 185, e109912. https://doi.org/10.1016/j.cell.2022.109912
+- 83. Li, H., and Durbin, R. (2009). 使用 Burrows-Wheeler 变换进行快速且准确的序列比对。Bioinformatics, 25, 1754–1760. https://doi.org/10.1093/bioinformatics/btp245
+- 85. Smith, C. E., Geur, G., and Meskov, J. P. (2021). 改进单细胞变异分析。Nat. Biotechnol., 39, 224–236. https://doi.org/10.1038/s41589-020-073-x
+- 86. Bajaj, J. C., Coen, M. R., Pierce, S. E., Bagatti, T., Choudhary, H., Huang, G. J., et al. (2019). SignRanger：用于单细胞染色质可及性分析的可扩展软件软件包。Nat. Genet, 53, 401–413. https://doi.org/10.1038/s41588-019-0528-x
+- 87. Stuart, T., Butler, A., Hoffman, M., McEliece, P., Adams, M. W., Sayna, D., and Young, L. R. (2019). 单细胞数据的综合整合。Cell, 177, 1888–1892. https://doi.org/10.1016/j.cell.2019.05.026
+- 88. Lopez-Adrian, C., and Wang, S. (2021). 用于整合单细胞基因表达的 Seurat v4。PLoS Biol, 19, e10338. https://doi.org/10.1371/journal.pcbi.103338
+- 89. Hernandez-Hertas, J. P., Lenga, A., Lutnik, B., Booth, R., and Huerta-Hertas, J. (2021). epigenmap-v2: 宏基因组规模下的功能注释、方向分配和变异预测。Mol. Biol. 53, 5825–5829. https://doi.org/10.1093/mbo/bbaw358
+- 90. Huerta-Hertas, J. P., Szklarzyk, D., Hell, D., Hernández-Pazloz, A., Forlund, S., Cook, H., Mende, D. R., Lutnik, L., Ratte, T., Jensen, L. J., et al. (2020). epigenmap-v1: 基于 5090 个基因组和 2500 病毒的全面且高度注释的同源注释资源。Nucleic Acids, 47, D309–D3114. https://doi.org/10.1093/nar/gky1093
+- 91. Wang, Q., U, M., Wu, T., Li, L., Chen, M., Xie, Z., Xu, S., and Yu, G. (2022). 通过 ChIPseeker 探索表观遗传因子。Cell. Proto., 2, e685. https://doi.org/10.1002/cpt.e685
+- 92. Yu, Q., Wang, G., L, H., and Ge, Y. (2015). ChIPseeker：一个用于峰分析、注释和可视化的 R/Bioconductor 工具。Bioinformatics, 31, 2382–2393. https://doi.org/10.1093/bioinformatics/btv044
+- 93. Traccelli, C., Darmisky, G., Jailbray, K., Portel, L., Morse, M., Lennard, J., and Rin, R. (2014). 启动子-增强子环揭示了命运调节的动力学和遗传学。Nature, 514, 333–337. https://doi.org/10.1038/ncell2889
+- 94. Qiu, X., Ma, T., Yang, Y., Wang, C., Han, R., and Tran, P. (2017). 深度学习揭示单细胞图谱中的染色质状态。Nat Methods, 14, 979–982. https://doi.org/10.1038/s41592-017-442
+- 95. Cao, J., Ma, Y., Xu, H., Zhang, B., Hu, D., Marshall, J., Feijars, C., et al. (2019). 哺乳动物骨形成的单细胞景观。Nature Cell, 36, 10418. https://doi.org/10.1038/s41570-019-0964
+- 96. Pohl, H., Peaks, J. B., Martínez-Fijera, D., Siverio, S., Zhou, Z., Mirinkova, A., et al. (2019). scENAC: 从单细胞染色质可及性数据预测顺式相互作用。Nat Methods, 16, 777–781. https://doi.org/10.1038/s41592-019-0533
+- 97. Schn, A. W., Butler, R., Jodziej, D., and Greenbank, J. (2017). chromatinVAR: 从单细胞数据整合转录因子关联。Nat Methods, 14, 975–978. https://doi.org/10.1038/s41592-017-0003
+- 98. Wolf, F., England, P., and The, J. (2017). SCENIC: 大规模单细胞基因表达分析。Genome Biol, 19, 200. https://doi.org/10.1186/s13059-018-0216
+- 99. Stuart, T., Sahlaglia, A., Macad, S., Reuther, A., and Stuart, J. (2017). 使用 Seurat 进行单细胞类型图谱分析。Nat Methods, 18, 1331. https://doi.org/10.1038/s41592-017-0016
+- 100. Li, B., Garmstein, R., Zhou, Y., Dahl, I., and Sherr, R. (2019). 用于识别不同类型细菌保守表达变化的比较转录组学。Genome Research, 29, 1211–1226. https://doi.org/10.1092/gr.2017-017
