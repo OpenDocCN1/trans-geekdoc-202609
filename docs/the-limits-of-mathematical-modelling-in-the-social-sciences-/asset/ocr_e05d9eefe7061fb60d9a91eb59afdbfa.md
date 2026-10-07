@@ -1,0 +1,11 @@
+# The Limits of Mathematical Modeling in the Social Sciences
+
+of system” excoriated by Smith (1759, pp. 380-381). The “man of system,” Smith explained,
+
+sems to imagine that he can arrange the different members of a great society with as much ease as the hand handles the different pieces upon a chess-board. He does not consider that the pieces upon the chess-board have no other principle of motion besides that the hand impresses upon them; but that, in the great chessboard of human society, every single piece has a principle of motion of its own, altogether different from that which the legislature might choose to impress upon it.
+
+For economics and other sciences, the power in Rice’s theorem is that it shows Smith’s “man of system” overreaches when no piece has a principle of motion of its own. How much greater is this overreach when each piece does a principle of motion of its own?
+
+Whether for reasons given by Adam Smith or Rice’s theorem, economists and other experts should not pretend to stand above the system like the man of system The observer is in the system, not above it. Wolpert (2001) considers all computers in the system simultaneously. He shows that for any pair of computers, it is impossible for each to reliably predict the output of the other. It follows that if at least one private actor uses a computer as powerful as that of the regulator, then the regulator will make mistakes.
+
+Wolpert (2001, p. 01628-1) shows that “the universe cannot contain a computer to which one can pose any computational task.” Any computer that exists in the world sometimes be mistaken about the world. Wolpert builds on this basic result to show that no computer in the world can predict everything about the world ahead of time. Even if the computer could answer every question moment t+x given input at time t, for at least some questions the computer would not be able to spool out its “prediction” until after t+x. In this sense, no computer can “process information faster than the universe.” Wolpert is thinking about physics.

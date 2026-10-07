@@ -1,0 +1,11 @@
+# The Limits of Mathematical Modeling in the Social Sciences
+
+behavior can change as well. If an agent is properly designed, these changes can reflect learning on the part of the agent. Note that most ABMs employ at least some amount of stochasticity. While many agent properties and behaviors are largely deterministic, others are allowed to include random elements. These random variations are employed to capture the vagaries of the real world.
+
+# 4. Applications of ABMs
+
+ABMs have been employed in a large array of research endeavors. Schelling (1971; also see Hatna and Benenson, 2012) used a very basic ABM with great effect in developing a model of residential segregation. The beauty of Schelling's segregation model was that it demonstrated how complex and unexpected patterns of behavior could result from artificial agents employing simple rules. In the case of this particular model, it demonstrated how agents who have no preference for living in segregated neighborhoods are driven by the logic of the rules governing their behavior to nonetheless locate segregated neighborhoods. A compelling situation by Axelrod (1981, 1984); Axelrod and Hamilton, 1981) demonstrated the evolution of cooperation; this model showed that over time, a "tit for tat" strategy involving multiple agents allowed each individual agent to better its situation compared to any strategy where each agent pursued its goals independently. Axelrod's work provided a new insight into traditional analytical game theoretic models such as the prisoner's dilemma, and similar and subsequent research is currently producing fascinating new insights into the nature of conflict and cooperation (see Axelrod, 1981, 1984, 1987, 1997a, b).
+
+Another well-known application of ABMs has come to be known as the Anasazi project (Axtell et al., 2002). This model was developed to generate insights into the disappearance of the Anasazi Indians who lived in the US Southwest for hundreds (or possibly
+
+> Given the computational demands of these methodologies, ABM only became feasible beginning in the 1970s, and especially in the last decade or two as computing power has steadily increased.

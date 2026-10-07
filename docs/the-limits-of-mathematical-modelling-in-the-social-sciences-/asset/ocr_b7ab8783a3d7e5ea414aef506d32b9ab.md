@@ -1,0 +1,11 @@
+# The Limits of Mathematical Modeling in the Social Sciences
+
+In 2005, the Federal Reserve Bank of Kansas City sponsored a symposium to “honor Alan Greenspan’s service” as chairman of the Federal Reserve System. It would be hard to exaggerate the participants' groveling praise. The lead essay says, “While there are some negatives in the record, when the score is touted up, we think he has a legitimate claim to being the greatest central banker ever lived. His performance as chairman of the Fed has been impressive, encompassing, and overwhelmingly beneficial — to the nation, to the institution, and to the practice of monetary policy” (Blinder and Reis, 2005, p. 13). This fawning opinion was shared by leading economists with both major political parties in the US.
+
+The Great Recession, however, tore the curtain back on the great wizard, leading to his famous mea culpa. Following the Great Recession, Alan Greenspan confessed to an error in his economic logic. In testimony before the Congress in October 2008, Greenspan (2008, p. 2) said he had “found a flaw” in his model of capitalism:
+
+> [Tose who looked to the self-interest of lending institutions to protect shareholder’s equity (myself especially) are in a state of shocked disbelief. Such counterparty surveillance is a central pillar of our financial markets' state of balance. If it fails, as occurred this year, market stability is undermined.
+
+In Greenspan’s logic, “self-interest” was sufficient to ensure foresight and stability. Call it the “Greenspan gaffe.”
+
+Could “the greatest central banker ever lived” go so wrong? With the Greenspan gaffe, we move directly from interest to outcome. The counterparties had an interest in knowing how risky assets were. This interest alone was sufficient to ensure that such knowledge would somehow exist in all the right head and generate prudent actions reflecting such knowledge. Greenspan’s logic did not require a mechanism to carry us from the desire for knowledge to the possession of knowledge. His logic was, then, an example of magical thinking. “Wanting to be knowledge-able — willing it (as when one has high incentives to know) — does not produce it. That is the nature of knowledge. It has to be acquired

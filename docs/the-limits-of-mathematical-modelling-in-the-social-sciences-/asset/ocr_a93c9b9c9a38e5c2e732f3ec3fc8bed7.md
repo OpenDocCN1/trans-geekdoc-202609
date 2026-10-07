@@ -1,0 +1,11 @@
+# Shocked Disbelief
+
+by means of socalled or human cognitive mediators. Any other theory of knowledge acquisition entails magical thinking” (Friedman, 2012, p. 81).
+
+Mathematics was supposed to save us from such errors. Economists tell their graduate students about the greater logical precision of mathematics. They tout the supposed superiority of mathematical methods for their “exactitude, rigor, precision, clarity, elegance of expression, ease of exposition, avoidance of causality and teleology, omission of unnecessary moralization, departure from vague and ambiguous language into dignified neutrality and purity” (Nikka, 1959, p. 153). Mathematics is a useful tool in economics, but it does not prevent model builders from making implicit assumptions.
+
+Any explanation simplifies. Something must be left out. In both mathematical and verbal models, simplification may easily create the implicit assumption that something is costless or impossible. There may be no middle ground for excluded variables. The implicit assumption of the Greenspan gaffe that knowledge flowed freely and instantaneously through the system, which is impossible. If there is no mechanism of knowledge acquisition, there can be no impediments to knowledge acquisition. The implicit assumption of one’s model will be either that information has a zero cost, as in Greenspan ggaffe, or that information has an infinite cost as we see in “Keynesian” models such as Farmer (2011).
+
+I asked how “the greatest central bank who ever lived” could go so wrong. But the error was not Greenspan’s alone. We have seen the grovel praise upon him by mainstream macroeconomists. And the most prestigious notions of theoretical economics often embody the same assumption of costless knowledge. The Efficient Market Hypothesis may be characterized as the assumption that knowledge acquisition is costless and instantaneous. Light travels at a finite speed through a void, but information travels at infinite speed through a standard economic model.
+
+Grossman and Stiglitz (1980) demonstrated the “impossibility of informationally efficient markets”. If markets were always in perfect informational equilibrium, arbitrage would yield a return of

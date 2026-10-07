@@ -1,0 +1,11 @@
+# The Limits of Mathematical Modeling in the Social Sciences
+
+of individual resources relative to each other. Prices do not measure absolute scarcity of resources in general.
+
+In Nordhaus's (2013, p. 18) words: “Markets do not automatically solve the problems they generate. Markets, therefore, might be able to decide the relative prices of goods and services offered in it, but cannot decide its own price relative to the environment. It has to be decided outside the system. This sounds familiar by now. As we have seen, Gödel’s theorem, and other theorems in mathematical logic, show that the truthfulness and consistency of a system cannot be decided within the system. This shows why we need institutions to foster and nurture healthy markets. The assumption that markets are, in principle, able to solve (almost) all of their own problems is inconsistent with modern mathematical logic. As we have seen, the contradiction intimately leads to violation of the conservation law. The resulting system, therefore, is unsustainable.
+
+# Perils of “risk-free” rate
+
+Perpetual growth leads naturally to the concept of “risk-free” rate of return. If the economy can grow in steady state at a constant rate forever, this rate can be used as a benchmark for risk-free return. This is clearly a theoretical concept. In practice, though, the rate on government’s bonds is used to approximate the risk-free interest or “pure rate of interest” (see Damodaran, 2008). The implied assumption is that, since the government has control over taxes, it can meet its obligations from the economy’s growth. Accordingly, “risk-free” return usually reflects the growth rate of the economy (see Lilico and Fiscal, 2012, and references therein).
+
+There are many practical issues involved in the above reasoning, but we shall not bother ourselves with them here. Economic worry is concerned with an ideal, friction-free world; frictions can be addressed at the implementation level. So we ask the following question: In a friction-free world, is the concept of “risk-free” return possible in principle? We argue that it is not, for the simple reason that perpetual motion is impossible.

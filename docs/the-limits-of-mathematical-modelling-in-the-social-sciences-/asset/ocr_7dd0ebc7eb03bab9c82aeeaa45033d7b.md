@@ -1,0 +1,11 @@
+# Shocked Disbelief
+
+(Continued)
+
+law books lining their walls and stacked up under their tables and on top of their cabinets.
+
+Legal scholars in this country were once despised as charlatans. Over the centuries, however, they grew in stature and came to be venerated as holy men. These divines of the law were divided into contesting schools. One group held that the law was arbitrary, absurd, and impossible. Others held that the law itself required the citizen to believe that all the laws in all of the books covering the interior spaces of the country were implicit in a few deep unifying principles. Some went further by insisting that only one principle unified the whole. They sought the Original Law from which it would be possible to infer all other laws without the necessity of studying ancient texts.
+
+This last group was vindicated when the venerated Hilbertus finally discovered the Original Law. The First and Original Prohibition discovered, forbid knowledge of the law. The discovery of this law was the highest crime recognized in the law. From this first great taboo all prohibitions and duties followed. Whether from foresight or considerations of his personal safety, Hilbertus attempted to hide the content of the Original Law from other jurists. They quickly understood, however, the meaning of his silence and fell into accusations and recriminations that grew increasingly violent over them. Each disputed claimed the right to punish the others. Ordinary citizens were drawn into the conflict, and it became the sacred duty of every citizen to try every other citizen for the crime of knowing the law. In the end, no one escaped the judgment of the law.
+
+It is unknown, of course, where “country” described in the Fragment may have been located or whether it was not, perhaps, pure fiction. In any event, it seems evident that law did not arise from custom in the country of the Fragment. It seems to have been imposed by a lawgiver. This lawgiver must have held himself above

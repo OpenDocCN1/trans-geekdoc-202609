@@ -1,0 +1,11 @@
+# The Limits of Mathematical Modeling in the Social Sciences
+
+In passing into the Age of Emergence, we learn to accept ...that organization is important in and of itself — in some cases even the most important thing.
+
+Trade is a primary means for reorganizing resources among market participants. From this perspective, trade, in principle, plays a crucial role in the emergence of surplus value and, consequently, growth.
+
+Historical discussions of surplus value were predominantly reductionist: the value of a commodity is reduced to the sum of its inputs (e.g., Keen, 2011, p. 153). But this approach ignores emergent properties arising from the rearrangement of resources, as pointed out above. Further, the ways a particular commodity can be combined with other commodities to create innovative goods and services cannot be systematically predictable. Paradoxically, neoclassical theory, while it enforces free trade, gives no room for novelty and innovation (Al-Suwailem, 2010). In the world of “complete markets” of Arrow (1964), innovation is inconceivable.
+
+It can be argued, therefore, that novel uses of commodities cannot be systematically deduced from input commodities. Producers or sellers, in general, cannot foresee all the uses of their products in order to incorporate them into their prices. Hence, the price of a commodity in a free market has an irreducible component due to the emergent properties. The value of the sum of the values of the inputs — the whole is greater than the sum. In this fact, this might be a major function of a free market: to allow for novel and unforeseen uses of commodities, which is a driving force of growth. If a commodity were completely reducible to its inputs, then there would be no point in producing the commodity in the first place; in a free market, it would be completely redundant. A commodity produced in a free market, therefore, must have value beyond its inputs. This added value, however, is not formally quantifiable, that is, it cannot be systematically quantified in advance. This is probably one area where economics can incorporate valuable insights from Gödel’s theorem.
+
+So, if the “exchange of equivalents” is viewed as a “conservation principle,” as Mirowski (1989, p. 121) suggests, this does not

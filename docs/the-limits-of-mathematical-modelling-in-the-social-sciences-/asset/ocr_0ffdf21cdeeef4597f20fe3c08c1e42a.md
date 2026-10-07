@@ -1,0 +1,11 @@
+are familiar with. While the final word in ABM is far from being written, it seems clear that this approach has already achieved important successes. The truly remarkable aspect of ABM is that the specification of a relatively small number of simple rules produces highly complex and variegated macroscopic behavior, the results of which can be used in generating theories and hypotheses about the real world. Thus, ABM offers ways of creating a generative social science that can offer new insights into the micro-macro divide and provide a potential treasure trove of theoretical insights.
+
+The behavior of CAS more generally captures the concept of the LOV of world where agents can only have partial knowledge of their surroundings. Different agents, situated at different locations, reach different conclusions regarding the truth or falsity of certain statements. These behaviors suggest the need for some rethinking of the standard, traditional assumptions governing logic and the role of classical logic in the social sciences.
+
+While consistent with the principles of bounded rationality, the actions of agents in a CAS also relate in a deep way to the concept of heuristic decision-making as an alternative to the classical utility maximization model, and more speculatively suggests connections between bounded rationality, heuristics, and PAC learnability. A careful analysis of CASs provides important insights into the foundations of computing and computability, and provides a means of not only bridging the social sciences but establishing a much closer link between the social and natural sciences on important questions of computation. This is seen clearly in the work of Hoffman, Fuchs, Valiant, and others. The theory of CASs offer great hope for developing a synthesis of our understanding of computation, computational complexity, its possibilities, and limits.
+
+# References
+
+Axelrod, R. (1981). The emergency of cooperation among egoists. American Political Science Review, 75(2), 306-318.
+
+Axelrod, R. (1984). The Evolution of Cooperation. New York: Basic Books.
