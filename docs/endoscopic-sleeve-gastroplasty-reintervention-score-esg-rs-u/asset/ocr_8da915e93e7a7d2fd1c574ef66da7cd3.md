@@ -1,0 +1,11 @@
+# Journal Pre-proof
+
+responded to the observed outcome rate at the 95% (inner belt: a light gray area) and 99% (outer belt: a dark gray area) confidence levels (Figure 2). The p-value was non-significant (test statistic = 0.13; p = 0.718), demonstrating no miscalibration.
+
+# Discussion
+
+The ESGRS was generated using variables selected using supervised machine learning, showing no miscalibration and good performance (AUC >0.70). Our results indicate that predicting the individualized risk of 30-day reintervention after ESG using only five pre-operative predictors: history of foregut surgery, pre-operative AC use, female gender, ASA score >=2, and hypertension. We suggest a helpful method to determine the individualized risk of 30-day reintervention after ESG, and to the best of our knowledge, this is the first study to do.
+
+The authors only available pre-operative variables after assessing for collinearity, which gives an advantage of estimating reintervention risk before undergoing the procedure. Given the relatively recent introduction of endoscopic sleeve gastrostoplasty as a viable bariatric intervention, it is imperative to prioritize patient education and comfort. To mitigate short-term re-intervention risk, it is crucial to engage in diligent risk estimation before the surgical intervention and to investigate potential factors that may be intricately linked to this risk. By adopting this approach, it is plausible to envisage a reduction in the risk of short-term re-reintervention associated with endoscopic sleeve gastoplasty.
+
+Not all predictors selected by LASSO regression to generate ESGRS (pre-operative DVT, steroid use, GERD, PCI, hematocrit, and albumin were excluded) as variable importance, and effect size is two separate things in machine learning and often confused, resulting in improper use. The distinction between these two concepts is essential for clinicians, as a predictor may be included in the model but still may have minimal effect on the outcome. [20, 21, 22] This was demonstrated by the generation of OR of these predictors using multivariate binary logistic regression by authors after penalized (LASSO) regression. This showed that excluded predictors could contribute to predicting outcomes, but their effect

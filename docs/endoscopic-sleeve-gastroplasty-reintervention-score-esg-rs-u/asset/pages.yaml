@@ -1,0 +1,1014 @@
+- pgno: 0
+  md: '# Journal Pre-proof
+
+
+    Endoscopic sleeve gastroplasty-reintervention score (ESG-RS) using supervised
+    machine learning.
+
+
+    Hassam Ali, Pratik Patel, Talia Farrukh Malik, Rahul Pamamarthry, Babu P. Mohan,
+    MD MS, Ravishankar Asokkumar, MBBS MRCP, Grand Lopez-Nava, MD PhD, Douglas G.
+    Adler, MD
+
+
+    PII: S0016-5107(23)02607-X
+
+
+    DOI: https://doi.org/10.1016/j.gie.2023.05.059
+
+
+    Reference: YMGE 13766
+
+
+    To appear in: Gastrointestinal Endoscopy
+
+
+    Received Date: 24 December 2022
+
+
+    Revised Date: 25 April 2023
+
+
+    Accepted Date: 18 May 2023
+
+
+    Please cite this article as: Ali H, Patel P, Malik TF, Pamamthy R, Mohan BP, Asokkumar
+    R, Lopez-Nava G Adler DG, Endoscopic sleeve gastroplasty-reintervention score
+    (ESG-RS) using supervised machine learning, Gastrointestinal Endoscopy (2023),
+    doi: https://doi.org/10.1016/j.gie.2023.05.059
+
+
+    This is a PDF file of an article that has undergone enhancements after acceptance,
+    as as the addition of a cover page and metadata, and for readability, it is not
+    yet the definitive version of record. This version will undergo additional copyediting,
+    typesetting and review before it is published in its final form, but we are providing
+    this for early visibility of the article. Please note that, during the production
+    process, errors may be discovered which could affect the content, and all legal
+    disclaimers that apply to the journal pertain.
+
+
+    Copyright © 2023 by the American Society for Gastrointestinal Endoscopy
+
+
+    ![](img/7cba93ff56616bb855b7727edcaa3846_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Predicting 30-Day Reintervention RISK after Endoscopic Sleeve Gastroplasty
+    using Machine Learning
+
+
+    # Methods and Cohort
+
+
+    **Dataset**: 3,583 patients from the MBSAQIP database (2016-2021)
+
+
+    **Method**: LASSO penalized regression for predictor selection, multivariate analysis
+    for ESG-RS generation
+
+
+    ![](img/7cba93ff56616bb855b7727edcaa3846_1_0.png)
+
+
+    # Results
+
+
+    **11 variables selected, 5 key factors influencing reintervention risk:
+
+
+    +   - History of foregut surgery
+
+    - Preoperative AC use
+
+    - Female gender
+
+    - ASA score >= 2
+
+    - Hypertension
+
+
+    **Model performance**: AUC = 0.74 (95% CI: 0.70, 0.78)
+
+
+    **Optimal cut point**: 67.9 (high risk vs. low risk); Sensitivity: 0.76, Specificity:
+    0.71
+
+
+    # Conclusion
+
+
+    The ESG-RS aids clinicians in preoperative risk stratification and helps identify
+    patients at a higher risk of reintervention, enabling better decision-making and
+    patient management.
+
+
+    ![](img/7cba93ff56616bb855b7727edcaa3846_1_1.png)
+
+
+    Gastrointestinal Endoscopy
+
+
+    Hassam Ali, et al. 2023
+
+
+    Photo credits, Freepik.com: geotatah, Mehuwish'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Title: Endoscopic sleeve gastrostoplasty-reintervention score (ESG-RS) using
+    supervised machine learning
+
+
+    Hassam Ali¹, Pratik Patel², Talia Farrukh Malik³, Rahul Pamarthy¹, Babu P. Mohan
+    MD MS⁴, Ravishankar Assokkummar MBBS MRCP⁵, Grand Lopez-Nava MD PhD⁶, Douglas
+    G. Adler MD⁷
+
+
+    +   ¹ Department of Internal Medicine, East Carolina University/Brody School of
+    Medicine, Greenville, North Carolina, 27834, USA
+
+    ² Department of Gastroenterology, Mather Hospital/Hofstra University of Medicine,
+    Port Jefferson, New York, 11777, USA
+
+    ³ Department of Internal Medicine, Chicago Medical School at Rosalind Franklin
+    University of Medicine and Science, North Chicago, Illinois, 60064, USA
+
+    ⁴ Gastroenterology & Hepatology, University of Utah School of Medicine, Salt Lake
+    City, UT, USA.
+
+    ⁵ Gastroenterology & , Singapore General Hospital, Duke National Hospital, Singapore.
+
+    ⁶ Director, Bariatric Endoscopy, Hospital Universitario Madrid Sanchinarro, Madrid,
+    Spain.
+
+    ⁷ Director, Center for Advanced Therapeutic Endoscopy, Centura Health, Porter
+    Adventist Hospital, Denver, CO, USA.
+
+
+    Corresponding author:
+
+    Douglas G. Adler: dougraham2001@gmail.com: Director, Center for Advanced Therapeutic
+    Endoscopy, Centura Health, Porter Adventist Hospital, Denver, CO, USA.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'All author emails:
+
+
+    Hassam Ali: alih20@ecu.edu
+
+
+    Pratik Patel: ppatel73@northwell.edu
+
+
+    Talia F. Malik: taliamalik@gmail.com
+
+
+    Rahul Pamarthty: pamamthyr20@ecu.edu
+
+
+    Babu P. Mohan: dr.babu.pm@gmail.com
+
+
+    Ravishankar Asokkumar: ravishnkr03@yahoo.com
+
+
+    Gontrand Lopez-Nava: glopeznava@digestivoleznava.com
+
+
+    Douglas G. Adler: dougraham001@gmail.com'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Author contributions:
+
+
+    Hassam Ali: Conceptualization, Methodology, Software, Data curation, Validation,
+    Writing-Original draft preparation, final approval of the article. Pratik Patel:
+    Data curation, Writing-Original draft preparation, final approval of the article.
+    Talia F. Malik: Visualization, Investigation, Writing- Original draft preparatin,
+    final approval of the article. Rahul Pamarthry Visualization, Investigation, Writing-
+    Original draft preparation, final approval of the article. Babu P. Mohan: Writing-
+    Reviewing and Editing, Project administration, Supervision, final approval of
+    the article. Douglas G. Adler: Writing- Reviewing and Editing, Project administration,
+    Supervision, critical revision of the article for important intellectual content,
+    final approval of the article.
+
+
+    # Conflicts of interest/Disclosures:
+
+
+    The authors certify that they have No affiliations with or involvement in any
+    organization or entity with any financial interest. The authors declare that they
+    have no conflicts of interest.
+
+
+    # Ethical statement:
+
+
+    The present study did not require institutional review board oversight because
+    the Metabolic and Bariat Surgery Accreditation Quality Improvement Program (MBSAQIP)
+    database is identified, and freely accessible to MBSAQIP participant centers.
+    It does not identify hospitals, health care providers, or patients.
+
+
+    Patient Consent Statement: The MBSAQIP database lacks specific patient identifiers.
+    Hence, patient consent was not required.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Title: Endoscopic Sleeve gastroplasty-reintervention score using supervised
+    machine learning
+
+
+    # Abstract
+
+
+    # Background and Aims
+
+
+    Reintervention following Endoscopic sleeve gastroplasty (ESG) can be indicated
+    due to postprocedural complications from various pre-interventional or postprocedural
+    comorbidities. We developed and internally validated an ESG reintervention scoring
+    system (ESGRS) that determines the individualized risk of reintervention within
+    the first 30 days following ESG.
+
+
+    # Methods
+
+
+    We used data from a sample of 3583 patients who underwent ESG in the Metabolic
+    and Bariat Surgery Accreditation Quality Improvement Program (MBSAQIP) database
+    (2016 to 2021). The Least Absolute Shrinkage and Selection Operator (LASSO) penalized
+    regression was utilized to select the most promising predictors of reintervention
+    following ESG within 30 days. The predictive variables extracted by LASSO regression
+    were entered into multivariate analysis to generate ESGRS by using the coefficients
+    of the statistically significant variables. The Model performance was assessed
+    using receiver operator curves by 10-fold cross-validation.
+
+
+    # Results
+
+
+    Eleven variables were selected by LASSO regression and used in the final multivariate
+    analysis. ESGRS was inferred using the above five factors (history of foregut
+    surgery, preoperative AC use, female gender, ASA score >=2, and hypertension.)
+    weighted by their regression coefficients in the multivariable logistic regression
+    model. The area under the curve of ESGRS was 0.74 (95%CI: 0.70, 0.78). For ESGRS,
+    the optimal cut point was 67.9 (high risk versus low risk), with a sensitivity
+    of 0.76 and specificity of 0.71.
+
+
+    # Conclusions'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'ESGRS serves the purpose of aiding clinicians in preoperative risk stratification
+    of patients undergoing ESG while guiding about factors contributing to a higher
+    risk of reintervention.
+
+
+    **Keywords:**
+
+
+    Gastroplasty; Quality Improvement; reintervention; Risk Assessment; Machine Learning;
+    Predictive Value of Tests'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Introduction
+
+
+    Endoscopic sleeve gastroplasty (ESG) is a minimally invasive endoscopic procedure
+    to produce weight loss in patients who have been unresponsive to dietary and lifestyle
+    modifications. It was first introduced by Abu Dayyeh et al. in 2013. [1] Since
+    then, ESG has witnessed rapid growth and has some advantages over traditional
+    bariat surgery, i.e., laparoscopic sleeve gastrectomy, by the ability to achieve
+    similar outcomes with a shorter procedure time and comparable major adverse affect
+    rate with SG as defined by previous literature. [2, 3] ESG involves reducing the
+    size of the gastric reservoir using a fullthickness endoscopic suturing device.
+    [4] At 12 months, ESG resulted in total body weight loss and excess body weight
+    loss of 16% and 60%, respectively. [5] Previous comparisons demonstrated an equivalent
+    morbidity risk and non-inferiority in weight loss after 12 months between ESG
+    and SG. [6] Recent data on ESG and LSG showed they were comparable regarding major
+    adverse effects: However, they had a greater incidence of 30-day readmissions
+    and reinterventions. [2]
+
+
+    Because ESG is a contemporary procedure, providers may have a lower threshold
+    for reintervention due to unfamiliarity with the postcedural course resulting
+    in higher reintervention rates than SG. [2] While factors associated with reintervention
+    following SG have been explored previously, factors associated with reintervention
+    following ESG have not been investigated. [2, 7] In a meta-analysis by Mohan et
+    al., the pooled rate of adverse events after ESG was 2.9%. [8] The most common
+    AEs include pain, nausea, upper gastrointestinal bleeding, leak or fluid collection,
+    pulmonary embolism, and pneumoperitoneum. [9] Although most AEs can be managed
+    conservatively, severe AEs, including gastric or peptic leak or fluid collections,
+    may require additional intervention.
+
+
+    In this study, we aimed to develop a risk stratification score that helps determine
+    the individualized preoperative risk of reintervention within 30 days following
+    ESG.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Materials and Methods:
+
+
+    The present study utilized the Metabolic and Bariatric Surgery Accreditation Quality
+    Improvement Program (MBSAQIP) database, the largest bariatric-specific database
+    worldwide with procedure dates between January 2016 and December 2021. [10] All
+    88 accredited bariatric centers report data from all bariatric interventions performed
+    at respective centers to MBSAQIP. The MBSAQIP database includes pre-operative,
+    intra-operative, and post-operative variables, including patient comorbidities
+    and 30-day postoperative outcomes. Due to privacy concerns, the MBSAQIP database
+    does not report hospital locations, patient identifiers, or physician data. Only
+    complete cases are included in the database. MBSAQIP registry performs regular
+    audits and excludes centers with poor 30-day follow-up rates (below 80%) or greater
+    than a 5% disagreement rate. [11]
+
+
+    # Study Population
+
+
+    This study utilized the MBSAQIP database 2016-2021 to identify patients who underwent
+    Endoscopic sleeve gastrostomy (ESG). A intervention was defined as an endoscopic,
+    surgical, or radiologic intervention procedure completed following ESG within
+    30 days of the primary procedure. [12] These also included any interventional
+    radiology or surgical interventions as previously defined. [12] Cases were excluded
+    if age was less than 18, underweight (BMI < 30), incomplete data, miscoded, and
+    those undergoing revision or conversion procedures. [13] Potential clinical variables
+    in the database were assessed a priori based on scientific knowledge and predictors
+    identified in recent literature. [2] Variables with missing data were excluded.
+    A correlation matrix was used to evaluate all explanatory variables for collinearity
+    (Supplementary File 1). Variables with a correlation coefficient > 0.7 were excluded
+    if present. The candidate risk factors include demographics (i.e., age, body mass
+    index, gender), clinical variables, laboratory data (i.e., albumin, hematocrit,
+    and creatinine), and comorbidity data (i.e., history of thromboembolism, myocardial
+    infarction, etc.). All 26 candidate variables can be found in Table 1.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Statistical analysis:
+
+
+    We utilized the "pmsample" command in STATA to compute the minimum sample size
+    to develop a new multivariable prediction model with a binary outcome; the expected
+    C-statistic was 0.95, and the number of potential inclusions in the new prediction
+    model was 26. The minimum sample size required for the ESGRS was 2032. The least
+    absolute shrinkage and selection operator (LASSO) penalized regression was utilized
+    to determine the adequate predictors of 30-day reintervention. LASSO selects a
+    subset of predictors by shrinking the coefficients of the minor contributive variables
+    to zero, thereby excluding them from the model. The tuning parameter lambda, which
+    determines the coefficient shrinkage, was selected by cross-validation. [14] Independent
+    odds ratios (ORs) of LASSO-selected variables were assessed, and the predictors
+    identified by LASSO regression analysis were entered into multivariable logistic
+    regression models. We utilized backward stepwise selection to select variables
+    with a P-value below 0.05, for the final multivariable logistic regression model.
+    Any variables with P-values <0.05 were excluded from the final risk score model,
+    as done previously. [15] A 10-fold cross-validation generated a pragmatic estimation
+    of the model''s predictive performance (area under the curve (AUC)) in new cases
+    since it prevents excessively optimistic estimates of predictive performance in
+    overlooked cases. [14] The AUC''s value indicated the model''s ability to predict
+    30-day reintervention. An AUC of 0.5 to 0.6 indicates unsatisfactory discrimination,0.6-0.7
+    indicates satisfactory, 0.7 to 0.8 is good, 0.8 to 0.9 is very good, and more
+    than 0.9 is excellent. [16] We also generated Bias-corrected bootstrapped (BC)
+    95% confidence intervals for the AUC.
+
+
+    The model-predicted and actual 30-day reintervention agreement was evaluated via
+    calibration belt plots. This allows a visual inspection of any difference of observed
+    frequencies significantly to expected probabilities and the direction of miscalibration.
+    [17] A calibration test indicating if any deviations from the bisector [45° line
+    of perfect fit] were significant was also included in the calibration belt plot.
+    [18, 19] The Brier score, a variance measurement between the predicted and the
+    observed outcome, was used to'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'assess overall performance. [16] Its value range from 0 (no disagreement) to
+    1 (or complete
+
+    disagreement), and lower is better.
+
+
+    # Results
+
+
+    A total of 3583 patients were included in the present analysis. The demographic
+    and clinical
+
+    characteristics are shown in Table 1. The 30-day endoscopic reintervention rate
+    for ESG cases was 3.3%,
+
+    even out of the 26 predictors were retained by LASSO regression for predicting
+    30-day reintervention,
+
+    with a mean lambda of 0.003, including eleven variables were selected by LASSO,
+    including the history
+
+    of foregut surgery, preoperative anticoagulation (AC) use, female gender, long
+    term steroid use, history of
+
+    percutaneous coronary intervention, ASA score >=2,hypertension, preoperative GERD
+    diagnosis, history
+
+    de deep venous thrombosis, preoperative albumin, and hematocrit (table 2)
+
+
+    After multivariable logistic regression, five variables were statistically significant,
+    including the history
+
+    of foregut surgery (OR 4.98, 95% CI 3.08–8.06, P < 0.001), preoperative AC use
+    (OR 2.22, 95% CI
+
+    1.10–4.51, P = 0.02), female gender (OR 0.44; 95% CI 0.29–0.68; P = 0.01), ASA
+    score >=2(OR 1.62,
+
+    95% CI 1.03–2.52, P = 0.03), and hypertension (OR 1.63, 95% CI 1.11–2.40, P =
+    0.01)(Supplementary
+
+    file 2).
+
+
+    Using this multivariable model, a risk score, named ESGRS, was inferred using
+    the above factors
+
+    weighted by their regression coefficients in the multivariable logistic regression
+    model (Table 2). The
+
+    following formula developed the ESGRS.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# ESGRS = (1.6xlhistory of foregut surgery -0.80xlfemale gender + 0.80x preoperative
+    AC use + 0.49x hypertension + 0.48x ASA score≥ 2 + 4.41) / 7.81 x 100
+
+
+    In this formula, for all variables, yes equals 1, and no equals 0.
+
+
+    The 10-fold cross-validated mean AUC (cvMean) of the LASSO predicted model (Figure
+    I) was 0.74(Bootstrap Bias Correct 95%CI: 0.70, 0.78), which correlated to a 74%
+    probability of model predicting recurrence after ESGRS within 30 days. 10-fold
+    Cross-validation involves randomly dividing the set of observations into ten groups
+    of approximately equal size. The first group is treated as a validation set, and
+    the method fixes the remaining nine groups.
+
+
+    The cut-off for this score was determined by the Youden index, which maximizes
+    the sum (addition) of sensitivity and specificity of each available cut-off and
+    selects the maximum sum. [17] For ESGRS, the optimal cut point was 67.9 (high
+    risk versus low risk), with a sensitivity of 0.76 and specificity of 0.71. An
+    ESGRS ≥67.9 had a 76.1% positive predictive value (95% CI: 74.7%–77.5%), and an
+    ESGRS <67.9 had a 61% negative predictive value (95% CI: 59%–62.4%).
+
+
+    The calibration belt plot reported no significant miscalibration at the 95% and
+    99% confidence levels (Figure 2). A calibration belt indicates if the predictive
+    model is overfitting the study sample at different confidence intervals and assessing
+    goodness of fit. The calibration belt''s performance is superior to the Hosmer–Lemeshow
+    C test for assessing goodness of fit. [18] If the predictive model does not over
+    the derivation sample, which means good applicability to external samples, it
+    should demonstrate a non-significant P-value on the calibration plot. In our analysis,
+    ESGRS, the predictive model probabilities'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Journal Pre-proof
+
+
+    responded to the observed outcome rate at the 95% (inner belt: a light gray area)
+    and 99% (outer belt: a dark gray area) confidence levels (Figure 2). The p-value
+    was non-significant (test statistic = 0.13; p = 0.718), demonstrating no miscalibration.
+
+
+    # Discussion
+
+
+    The ESGRS was generated using variables selected using supervised machine learning,
+    showing no miscalibration and good performance (AUC >0.70). Our results indicate
+    that predicting the individualized risk of 30-day reintervention after ESG using
+    only five pre-operative predictors: history of foregut surgery, pre-operative
+    AC use, female gender, ASA score >=2, and hypertension. We suggest a helpful method
+    to determine the individualized risk of 30-day reintervention after ESG, and to
+    the best of our knowledge, this is the first study to do.
+
+
+    The authors only available pre-operative variables after assessing for collinearity,
+    which gives an advantage of estimating reintervention risk before undergoing the
+    procedure. Given the relatively recent introduction of endoscopic sleeve gastrostoplasty
+    as a viable bariatric intervention, it is imperative to prioritize patient education
+    and comfort. To mitigate short-term re-intervention risk, it is crucial to engage
+    in diligent risk estimation before the surgical intervention and to investigate
+    potential factors that may be intricately linked to this risk. By adopting this
+    approach, it is plausible to envisage a reduction in the risk of short-term re-reintervention
+    associated with endoscopic sleeve gastoplasty.
+
+
+    Not all predictors selected by LASSO regression to generate ESGRS (pre-operative
+    DVT, steroid use, GERD, PCI, hematocrit, and albumin were excluded) as variable
+    importance, and effect size is two separate things in machine learning and often
+    confused, resulting in improper use. The distinction between these two concepts
+    is essential for clinicians, as a predictor may be included in the model but still
+    may have minimal effect on the outcome. [20, 21, 22] This was demonstrated by
+    the generation of OR of these predictors using multivariate binary logistic regression
+    by authors after penalized (LASSO) regression. This showed that excluded predictors
+    could contribute to predicting outcomes, but their effect'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'size (odds ratio) is smallest without significance (Supplementary file 2).
+    Moreover, their exclusion from the final model used to generate ESGRS did not
+    change its predictive ability (Supplementary file 2).
+
+
+    While the adverse effect profile of ESG is favorable compared to laparoscopic
+    gastrectomy and Roux-en-Y bypass, patients with high ESGRS should be considered
+    for closer monitoring. [23, 24] The variables from our study that are associated
+    increased risk of reintervention have previously been identified as risk factors
+    for post-surgical complications. [25, 26, 27, 28, 29] Stratification and education
+    of patients using a scoring system before ESG based on these variables can help
+    predict and thereby prevent future complications, including reintervention.
+
+
+    There are certain limitations to this study. While we used pre-op predictors to
+    derive the risk scoring system, additional predictors, like hospital-level information,
+    were omitted that could have improved the AUC. The AUC between 0.7-0.8 has good
+    predictability and internal validity; however, there is a need for external validity
+    to optimize its precision in making clinical judgments. Since the study is limited
+    to patients from North America, it may have limited generalizability for the world.
+    It is unclear which procedures were conducted by a gastroenterologist and which
+    were performed by a surgeon to determine if this could contribute to the probability
+    of requiring further intervention.
+
+
+    Certain variables may be significantly associated with reintervention but may
+    lack predictive power and hence be excluded after LASSO regression. Moreover,
+    a database does not have information on centers or volume of cases performed in
+    a center and therefore the factor pertaining to the ‘volume’ of ESG procedures
+    a center performs’ is not feasible to be considered in the present study. MBSAQIP
+    center designation as an indirect proxy based on the overall volume of bariatric
+    cases. Despite the limitations above, we utilized a vigorous 10-fold cross-validation
+    for internal validation, which delivers a lower bias of estimates than split-sample
+    validation, resulting in more predictions. [14] Despite being a retrospective
+    database, the longitudinal structure of the data confirmed temporality.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: ESGRS score may improve knowledge about the patient-level risk of reintervention
+    within 30 days after future longitudinal studies are needed to see whether addressing
+    the identified factors prospectively will mitigate the need for endoscopic re-intervention
+    within 30 days
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '+   1. Abu Dayyeh BK, Rajan E, Gostout CJ. Endoscopic sleeve gastroplasty:
+    a potential endoscopic alternative to surgical sleeve gastrectomy for treatment
+    of obesity. Gastrointest. 2013;78(3):530-535.
+
+
+    +   2. Gudur AR, G CX, Khatri S, et al. Comparison of endoscopic sleeve gastroplasty
+    versus surgical sleeve gastrectomy: a Metabolic and Bariat Surgery Accreditation
+    and Quality Improvement Program database analysis. Gastrointest Endosc. 2023;97(1):11-21.e64.
+
+
+    +   3. Amirian H, Torquati A, Otomosho P. Racial disparity in 30-day outcomes
+    of metabolic and bariat gastrectomy. Obesity Surg. 2020;30(3):1011-1020.
+
+
+    +   4. Lopez-Nava G, Galvao MP, Batista-Castaño I, Jimenez-Bhos A, Fernandez-Corbelle
+    JP. Endoscopic sleeve gastroplasty: how do i it? Obs Surg. 2015;25(8):1534-1538.
+
+
+    +   5. Yoon JY, Arau RT, Study Group for Endoscopic Bariatric and Metabolic Therapies
+    of the Korean Society of Gastrointestinal Endocrinology. The efficacy and safety
+    of endoscopic sleeve gastroplasty as an alternative to laparoscopic sleeve gastrectomy.
+    Clin Endosc. 2021;54(1):17-24.
+
+
+    +   6. Alqahtani AR, Elahmedi M, Aldarwish A, Abduraby HY, Alqahtani S. Endoscopic
+    gastroplasty versus laparoscopic sleeve gastrectomy: a noninferior propensity
+    score-matched comparative study. Gastrointest Endosc. 2022;96(1):44-50.
+
+
+    +   7. Gribben JL, Ilonzo N, Neifert S, Michael Leitman L. Predictors of reoperation
+    and failure to rescue in bariatric surgery. JSLS. 2018;22(1):e2017.00074.
+
+
+    +   8. Mohan BP, Asokkumar R, Khan SR, et al. Outcomes of endoscopic sleeve gastroplasty;
+    how does it compare to laparoscopic sleeve gastrectomy? a systematic review and
+    meta-analysis. Endosc Int Open. 2020;8(4):E558-E565.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '9. Hedjoudjie A, Abu Dayeh BK, Cheskin LJ, et al. Efficacy and safety of endoscopic
+    sleeve gastroplasty: a systematic review and meta-analysis. Clin Gastroenterol
+    Hepatol. 2020;18(5):1043-1053.e4.
+
+
+    10. ASMBS, 2022. MBSAQIP participants use data files (PUF). [online] American
+    College of Surgeons. Available at: https://www.facs.org/quality-programs/accreditation-and-verification
+
+
+    11. Gudur AR, Geng C, Hallowell P, et al. Impact of proceduralist specialty on
+    outcomes following endoscopic sleeve gastroplasty. Obes Surg. 2022;32(11):3714-3721.
+
+
+    12. Abu Dayeh BK, Bazerachi F, Vargas EJ, et al. Endoscopic sleeve gastroplasty
+    for treatment of class 1 and 2 obesity (Merit): a prospective, multicentre, randomised
+    trial. Lancet. 2022;400(10350):441-451.
+
+
+    13. Bazerachi F, Abu Dayeh BK, Neto MG, Boskoski I, Bove V. Limitations in endoscopic
+    gastroplasty outcomes derived from surgery-based repositories. Gastroenter Endosc.
+    2023;97(1):151-152.
+
+
+    14. Steyerberg EW, Vergoue Y. Towards better clinical prediction models: seven
+    steps for development and an ABCD for validation. Eur Heart J. 2014;35(29):1925-1931.
+
+
+    15. Yuan L, Shen L, Ji M, et al. New risk score to predict intensive care unit
+    admission for patients with acute pancreatitis 48 hours after admission: multicenter
+    study. Dig Dis Sci. Published December 3, 2022.
+
+
+    16. Steyerberg EW, Vickers AJ, Cook NR, et al. Assessing the performance of prediction
+    models: a framework for traditional and novel measures. Epidemiology. 2010;21(1):128-138.
+
+
+    17. Fenlon C, O''Grady L, Doherty ML, Dunnion J. A discussion of calibration techniques
+    for evaluating binary and categorical predictive models. Prev Vet Med. 2018;149:107-114.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '18. Nattino G, Finazzi S, Bertolini G. A new calibration test and a reappraisal
+    of the calibration belt for the assessment of prediction models based on dichotomous
+    outcomes. Stat Med. 2014;33(14):2390-2407.
+
+
+    19. Finazzi S, Poole D, Luciani D, Cogo PE, Bertolini G. Calibration belt for
+    quality-of-care assessment based on dichotomous outcomes. PLoS One. 2011;6(2):e16110.
+
+
+    20. Saltelli A. Sensitivity analysis for importance assessment. Risk An. 2002;22(3):579-590.
+
+
+    21. Park KV, Oh KH, Jeong YY, et al. Machine learning models for predicting hearing
+    prognosis in unilateral idiopathic sudden sensorural hearing loss. Clin Exp Otorhinolaryng.
+    2020;13(2):148-156.
+
+
+    22. Davies HT, Crombie IK, Tavakoli M. When odds ratios mislead? BMJ. 1998;316(7136):989-991.
+
+
+    23. Fayad L, Adam A, Schweitzer M, et al. Endoscopic sleeve gastrectomy versus
+    laparoscopic sleeve gastrectomy: a case-matched study. Gastroendosc. 2019;89(4):782-788.
+
+
+    24. Lopez-Nava G, Ashokumar R, Bautista-Castaño I, et al. Endoscopic sleeve gastrectomy,
+    laparoscopic sleeve gastrectomy, and laparoscopic greater curve plication: do
+    they differ at 2 years? Endoscopy. 2021;53(3):235-243.
+
+
+    25. DeMaria EJ, Portier D, Wolfe L. Obesity surgery mortality risk score: proposal
+    for a clinically useful score to predict mortality risk in patients undergoing
+    gastric bypass. Surg Obes Relat Dis. 2007;3(2):134-140.
+
+
+    26. Liu JY, Birkmeyer NJ, Sanders JH, et al. Risks of morbidity and mortality
+    in dialysis patients coronary artery bypass surgery. New England Cardiovascular
+    Disease Study Group. Circulation. 2000;102(24):2973-2977.
+
+
+    27. Sjjöström L, Narbro K, Sjjöström CD, et al. Effects of bariatric surgery on
+    mortality in Swedish subjects. N Engl J Med. 2007;357(8):741-752.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '28. Sanni A, Perez S, Medbery R, et al. Postoperative complications in bariatric
+    surgery using age and BMI stratification: a study using ACS-NSQIP data. Surg Endosc.
+    2014;28(12):3302-3309.
+
+
+    29. Kellogg TA, Swan T, Leslie DA, Buchwald H, Ikramuddin S. Patterns of readmission
+    and reoperation within 90 days after Roux-en-Y gastric bypass. Surg Obes Relat
+    Dis. 2009;5(4):416-423.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Table 1: Baseline characteristic and clinical outcomes of patients included
+    in the present study
+
+
+    | Variables | N (%) |
+
+    |--- |--- |
+
+    | Total patients | 3583 |
+
+    | Sex | |
+
+    | Female | 521 (14.5 %) |
+
+    | Male | 3062 (85.5 %) |
+
+    | Age, median (IQR) | 48.0 (40.8, 56.0) |
+
+    | Pre-Op BMI closest to bariatric surgery, median (IQR) | 38.0 (34.1, 43.6) |
+
+    | Pre-Op Weight closest to bariatric surgery, median (IQR) | 231.0 (203.9, 268.0)
+    |
+
+    | Pre-Op Vein Thrombosis Requiring Therapy | 87 (2.4 %) |
+
+    | Pre-Op Diabetes Mellitus | 484 (13.5 %) |
+
+    | Pre-Op Venous Stasis | 26 (0.7 %) |
+
+    | Pre-Op Requiring or on dialysis | 2 (0.1 %) |'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '| Pre-Op Renal Insufficiency | 8 (0.2%) |
+
+    | Pre-Op Therapeutic Anticoagulation | 93 (2.6%) |
+
+    | Previous foregut surgery | 1764 (49.2%) |
+
+    | Current Smoker within 1 year | 207 (5.8%) |
+
+    | Pre-Op history of COPD | 29 (0.8%) |
+
+    | Pre-Op history of Pulmonary Embolism | 2 (0.1%) |
+
+    | Pre-Op Obstructive Sleep Apnea | 670 (18.7%) |
+
+    | Pre-Op Steroid/Immunosuppressant Use for Chronic Condition | 60 (1.7%) |
+
+    | Pre-Op IVC Filter | 13 (0.4%) |
+
+    | Pre-Op GERD requiring medication | 1041 (29.1%) |
+
+    | Pre-Op history of History of MI | 33 (0.9%) |
+
+    | Previous PCI | 57 (1.6%) |
+
+    | Previous Cardiac Surgery | 39 (1.1%) |'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '| Pre-Op Hypertensive requiring medication | 1256 (35.1%) |
+
+    | Pre-Op Hyperlipidemia | 574 (16.0%) |
+
+    | Pre-Op hematocrit (%), median (IQR) | 40 (37.7, 42.5) |
+
+    | Pre-Op Albumin (g/dL), median (IQR) | 4.1 (3.9, 4.4) |
+
+    | Pre-Op serum creatinine (mg/dL), median (IQR) | 0.79 (0.7, 0.9) |
+
+    | Pre-Op hemoglobin A1c (%), median (IQR) | 5.6 (5.3, 6) |
+
+    | ASA class >= 2 | 1848 (51.6%) |
+
+    | Re-intervention within 30 days of operation | 117 (3.3%) |
+
+    | Days to Re-intervention, median (IQR) | 13.0 (4.0, 21.0) |
+
+    | Re-admission within 30 days of operation | 164 (4.6%) |
+
+    | Re-interventions after readmission (In context of a complication) | 69 (42.1%)
+    |
+
+
+    Table 2: Penalized regression coefficients of predictors retained in the lasso
+    model to predict 30-day reintervention after endoscopic sleeve gastrosty'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '| Predictors | Model derived using lasso regression (N = 3583) |
+
+    |---|---|
+
+    | Sex | - |
+
+    | Female* | -.70 |
+
+    | Male | - |
+
+    | Age, median (IQR) | - |
+
+    | Pre-Op BMI closest to bariatric surgery, median (IQR) | - |
+
+    | Pre-Op Weight closest to bariatric surgery, median (IQR) | - |
+
+    | Pre-Op Vein Thrombosis Requiring Therapy | .07 |
+
+    | Pre-Op Diabetes Mellitus | - |'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '| | |
+
+    | Pre-Op Venous Stasis | - |
+
+    | Pre-Op Requiring or on dialysis | - |
+
+    | Pre-Op Renal Insufficiency | - |
+
+    | Pre-Op Therapeutic Anticoagulation* | .82 |
+
+    | Previous foregut surgery* | 1.30 |
+
+    | Current Smoker within 1 year | - |
+
+    | Pre-Op history of COPD | - |
+
+    | Pre-Op history of Pulmonary Embolism | - |
+
+    | Pre-Op Obstructive Sleep Apnea | - |
+
+    | Pre-Op Steroid/Immunosuppressant Use for Chronic Condition -.49 |'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '| Pre-Op IVC Filter | - |
+
+    | Pre-Op GERD requiring medication | .13 |
+
+    | Pre-Op history of History of MI | - |
+
+    | Previous PCI | -.46 |
+
+    | Previous Cardiac Surgery | - |
+
+    | Pre-Op Hypertensive requiring medication* | .26 |
+
+    | Pre-Op Hyperlipidemia | - |
+
+    | Pre-Op hematocrit (%), median (IQR) | .003 |
+
+    | Pre-Op Albumin (g/dL), median (IQR) | .003 |
+
+    | Pre-Op serum creatinine (mg/dL), median (IQR) | - |'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '| Pre-Op hemoglobin A1c (%), median (IQR) | - |
+
+    |---|---|
+
+    | ASA class >= 2* | .33 |
+
+    | Total number of predictors retained from the 26 in the LASSO model | 11 |
+
+    | Total number of LASSO predictors retained from the 11 in the final multivariate
+    model | 5 |
+
+    | AUC (Bootstrap corrected 95% CI) derived using 10-fold cross-validation | 0.74
+    (95%CI: 0.70, 0.78) |
+
+    | Brier score | 0.01 |
+
+    | Intercept | -3.9 |
+
+
+    **, Excluded after lasso regression from the prediction model.
+
+
+    AUC: Area under the curve.
+
+
+    95% CI: 95% confidence interval.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '*variables selected in final multivariate model
+
+
+    # Table 3: Multivariable logistic regression analysis of final model
+
+
+    | Variable | Coefficient | Odds ratio | 95% CI | P value |
+
+    |---|---|---|---|--|
+
+    | Constant | 4.41 | | | |
+
+    | History of foregut surgery | 1.61 | 4.9 | 3.08–8.06 | < 0.001 |
+
+    | Female gender preoperative AC | -0.80 | 0.44 | 0.29–0.68 | 0.01 |
+
+    | use | 0.80 | 2.22 | 1.10–4.51 | 0.02 |
+
+    | hypertension | 0.49 | 1.63 | 1.11–2.40 | 0.01 |
+
+    | ASA score≥ 2 | 0.48 | 1.62 | 1.03–2.52 | 0.03 |
+
+
+    Figure 1: ROC curve with mean cross-validated area under the curve (CvAUC) after
+    10-fold-cross validation. AUC: 0.74 (Bootstrap Bias Corrected 95% CI: 0.70, 0.78).'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'Figure 2: Calibration belt reporting no area of significant miscalibration
+    at 95% and 99%
+
+    confidence levels.
+
+
+    Supplementary Figure 1: Comparison of AUC of endoscopic sleeve gastroplasty-reintervention
+
+    score (ESGRS) to LASSO model
+
+
+    LASSO predicted model had an AUC of 0.75 (95% CI
+
+    0.71-0.79), and after removing predictors with smaller effect size, the ESGRS
+
+    predicted model showed an AUC of 0.74 (95% CI 0.70-0.78) and a P value of 0.14,
+
+    indicating no difference in predictive ability'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '![](img/7cba93ff56616bb855b7727edcaa3846_29_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# cvAUC and k-fold ROC curves
+
+
+    ![](img/7cba93ff56616bb855b7727edcaa3846_30_0.png)
+
+
+    Mean cvAUC (solid red curve) and k-fold ROC curves (dashed curves --)'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# Abbreviations
+
+
+    **ESG:** Endoscopic sleeve gastroplasty
+
+
+    **ESGRS:** Endoscopic sleeve gastroplasty reintervention scoring system
+
+
+    **MBSAQIP:** Metabolic and Bariatric Surgery Accreditation Quality Improvement
+    Program
+
+
+    **LASSO:** Least Absolute Shrinkage and Selection Operator
+
+
+    **IVC:** Inferior vena cava
+
+
+    **DVT:** Deep vein thrombosis
+
+
+    **AUC:** A rea under the curve
+
+
+    **AEs:** Adverse events
+
+
+    **BMI:** Body mass index
+
+
+    **BC:** Bias-corrected
+
+
+    **SE:** Standard error
+
+
+    **LSG:** Laparoscopic gastrectomy
+
+
+    **SG:** Sleeve gastrectomy
+
+
+    **ASA:** American Society of Anesthesiologists Classification
+
+
+    **GERD:** Gastroesophageal reflux disease
+
+
+    **PCI:** Percutaneous intervention
+
+
+    **IQR:** Interquartile range
+
+
+    **MI:** Myocardial infarction'
+  merge: -1
+  img_proc: true
