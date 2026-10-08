@@ -1,0 +1,15 @@
+# Designing a Decentralized IoT-WSN Architecture
+
+iv. **Security:** Safeguarding the system from ever-increasing threats necessitates a security architecture that can expand with the system. Scalable security technologies like blockchain can be utilized to create a trustworthy and decentralized system for storing and processing information v. **Automation:** Finally, automation is a potent tool for making IoT-WSN design scale. Data collection and analysis are two examples of mundane jobs that can be automated, relieving pressure on human operators and allowing systems to grow without requiring extra manpower.
+
+A holistic strategy that considers the network infrastructure, data processing, and security architecture is necessary for attaining scalability in IoT-WSN design. Organizations can guarantee that their IoT-WSN architecture will be able to develop and scale with their needs if they need it with scalability from the start.
+
+
+
+The blockchain is a decentralized, digital ledger system that is used to store and track transactions in a way that is both safe and transparent. Blockchain technology is also known as distributed ledger technology (DLT). Its initial goal was to provide support for the cryptocurrency as Bitcoin; however, since that time, it has been used by a variety of industries and sectors for a wide range of ranges. A network of computers, nodes, is responsible for verifying and adding each transaction to a "block" of data that makes up a blockchain [33]. A permanent and unchanging record of all the transactions that have taken place on the network is created when a block is finished and added to a chain of blocks that came before. Because of this, it is extremely difficult, if not impossible, to tamper with or otherwise alter the data that is kept in a blockchain. Because blockchain technology is decentralized, there is no requirement for a centralized authority to check or authenticate transactions. This is one of the most important advantages of this technology. Because of this, is more secure than traditional centralized systems and has a higher level of resistance to hackers and fraud. In addition to its application in the realm of cryptocurrencies, the blockchain technology is also finding applications in other domains, including the management of supply chains, the authentication of identities, and the administration of digital assets [34].
+
+
+
+Blockchain technology is a distributed ledger that keeps all your transactions and data safe and viable. Each block in the chain contains data and is connected to the one before it through a link, as shown in Figure 13.4.
+
+Data contained in a block in blockchain is protected against cryptographic functions. Because of the distributed nature of the blockchain, no single entity has influence over the system. Instead, it is kept running by a distributed network of nodes that work together to verify and append new blocks [35]. Because of its decentralized nature, this technology is well-suited for implementation in IoT-WSN systems by its security, transparency, and immutability [36].

@@ -1,0 +1,1 @@
++   20. R. Gupta, A. Shukla, P. Mehta, P. Bhattacharya, S. Tanwar, S. Tyagi, et al., “VAHAK: A blockchain-based outdoor delivery scheme using UAV for healthcare 4.0 services”, Proc. IEEE Conf. Comput. Commun. Workshops (INFOCOM WKSHPS), pp. 255–260, 2020.

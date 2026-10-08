@@ -1,0 +1,15 @@
+advanced technologies such as mmWave (millimeter-wave) bands, massive MIMO, and beamforming to increase capacity and improve coverage. Moreover, 6G will utilize new spectrum bands, such as the terahertz band, for data transmission. Using machine learning (ML) and artificial intelligence (AI) techniques may also optimize the use of network resources and improve the efficiency of the network.
+
+**Enhanced security:** 6G is expected to provide enhanced security features to protect IoT devices and networks from cyber threats and attacks. 6G will use advanced technologies like quantum key distribution (QKD), homomorphic encryption, and blockchain [29] to increase security. Aside from using 5G enhancements and AI-based secure solutions, 6G may incorporate advanced security protocols and technologies.
+
+
+
+Recently, IoT has seen significant growth in the number of interconnected devices and the variety of applications they enable. However, the standard cloud model to sustain these applications is no longer sufficient to meet the IoT demands. The emergence of 6G networks and distributed computing technologies presents an opportunity to address the boundaries of conventional cloud computing and support the growing needs of IoT. Research in this area can focus on several key areas, including resource allocation optimization, security and privacy, edge computing, real-time decision-making, network slicing, energy efficiency, interoperability, and reliability [30]. These research areas have the possibility to significantly enhance the performance and scalability of IoT applications and enable new cases that were not previously possible. As a result of these advancements, we present a systematic literature review of IoT technology and its expansion in various application domains. In addition, we consider two essential technologies that help boost the vision of IoT: 6G communication and distributed computing technology. We have also highlighted the current need and future demand for emerging IoT applications.
+
+
+
+The key objective of this chapter is to provide a research direction by combining the advancements of 6G communication technology and distributed computing paradigms. The chapter significantly contributes to recent IoT, distributed computing, and 6G communication literature. The major contributions are as follows:
+
++   - This survey provides an outline of the key components and objectives of IoT as presented in recent literature. Specifically, we mention the requirements of IoT and several IoT objectives that are crucial for the version of digital society.
+
++   - Next, we examine the 6G wireless communication and the state-of-the-emerging distributed technologies, such as cloud computing, containerization, fog computing, and serverless computing, for IoT applications.

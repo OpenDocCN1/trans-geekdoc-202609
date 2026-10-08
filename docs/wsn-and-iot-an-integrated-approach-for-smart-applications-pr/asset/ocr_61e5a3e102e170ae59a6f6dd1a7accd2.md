@@ -1,0 +1,15 @@
+# Designing an Integrated IoT-WSN Framework for Smart City Applications
+
+
+
+The massive amounts of data created by smart city applications may be efficiently processed on the cloud. It is up to the application to decide whether it needs the processing in real time or in batches. Data warehouses, data analytics, and machine learning (ML) are only few of the technologies that can be used to perform the processing. Depending on the needs of the application, the processing can also be performed locally. Structured data, such as found in databases, is well suited to the storage and processing capabilities of a data warehouse. Real-time data analysis and trend detection are two of the many uses for data analytics. Model training and data-driven inference are applications where ML excels. In order to speed up responses and decrease latency, the processing might be done either at the edge or on-premise [35].
+
+
+
+Smart applications can be built, deployed, and managed with the help of cloud services. Some of the services that may be found in the cloud data analytics, machine learning, and IoT platform services. Auto-scaling, load balancing, and security are just some of the additional benefits that smart applications can gain from cloud services. Data analytics services give you the means to examine data in real time and spot trends and patterns. Tools for training and producing datriven predictions are provided by ML services. Connecting devices and aggregating sensor data are made possible by the services offered by IoT platforms. For the smart city it will be responsive and process massive volumes of data thanks to auto-scaling and load balancing services. Data security and confidentiality are guaranteed by the security services provided. For these reasons, storing and processing the massive volumes of data produced by smart city applications may be done efficiently and affordably on the cloud. By providing a framework for building, deploying, and managing smart city applications, cloud services pave the way for the creation of cutting-edge new smart city. The IoT-WSN architecture utilizes a cloud-based data storage and processing system to perform continuous monitoring and analysis of smart city services in real time [36].
+
+
+
+For smart city applications, the IoT-WSN framework requires data processing. Data created by sensors in a smart city's infrastructure must be gathered, stored, and analyzed. The primary objective of data processing is to provide useful information for city officials so they can make better decisions and enhance the effectiveness of local services. The following are the steps involved in data processing for smart city applications:
+
++   i. Data collection is the starting point for processing information gathered by the smart city's sensors. Environment-related information can include temperature, humidity, air quality, and noise level.

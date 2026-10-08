@@ -1,0 +1,3 @@
+22. Khan, M. A., Nawaz, T., Khan, U. S., Hamza, A., & Rashid, N. (2023). IoT-based non-intrusive automated driver drowsiness monitoring framework for logistics and transport applications to enhance safety road. IEEE Access, 11, 14385–14397. doi: 10.1109/ACCESS.2023.3244008
+
+23. Bansal, S., & Gupta, A. (2023). IoT-Enabled Intelligent Traffic Management System. In: Sindhwani, N., Anand, R., Niranjanamurthy, M., Chander Verma, D., Valentina, E. B. (eds) IoT Based Smart Applications. EAI/Springer Innovations in Communication and Computing. Springer, Cham, doi: 10.1007/978-3-031-04524-0_6

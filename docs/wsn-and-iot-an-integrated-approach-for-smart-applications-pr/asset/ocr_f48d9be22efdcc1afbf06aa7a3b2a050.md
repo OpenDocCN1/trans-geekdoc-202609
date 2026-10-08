@@ -1,0 +1,11 @@
+# TABLE 2.1
+Different Factors and Technologies Used for Making Sustainable IoT Systems
+
+| Ref. No. | Sustainability Factor | Technology/Model/ Hardware | Performance | Advantages |
+| --- | --- | --- | --- | --- |
+| [27] | Power reduction | Semi-transparent organic photovoltaic cells (PVC) to power IoT nodes in low-light conditions. | Efficiency is good in low-light indoor areas. | Flexible and easy to process and PVC; lightweight tailorable designable; strong for indoor applications. |
+| [28] | Power reduction | IoT devices powered by renewable RF energy. | The model indicates that supply voltage and payload can have significant impact on the energy consumed for various tasks. | A model designed to explain the energy harvesting and power consumption of IoT devices in practical situations. |
+| [29] | Reduced energy consumption | The laser-induced graphene (LIG) technology, comprising a multi-operating mode nanogenerator (MTENG) and a micro-supercapacitor (MSC). | Incorporation of a lotus-leaf inspired bilayer structure on the device enables waterproofing and self-cleaning capabilities enabling stable electrical output. | Highly integrated and flexible device with remarkable capabilities like self-charging, and energy harvesting. |
+| [30] | Toxic waste reduction | Green RFID tag antenna with incorporated humidity sensor network (WSN) modules. | An eco-friendly multi-rule RFID solution having exceptional performance in the operational range. | Wider range, multidimensional tags with sensors. |
+| [31] | Power reduction and carbon footprint | Lagrange multiplier method for increasing the utility while reducing the carbon footprint using wake-up radio (WUR), wireless energy harvesting (WEH), and error control coding (ECC). | Improved utility, prolong the lifetime, transmission power control, efficient routing. | Improved reliability, energy harvesting, maintenance-free operation. |
+| [32] | Energy consumption reduction and time reduction | Utilization of inexpensive automated irrigation systems via Arduino. | When specific thresholds are reached, the irrigation system is initiated, which results in enhanced convenience, reduced energy consumption, improved irrigation efficiency. | By improving the management of water resources in regions with limited water availability, it leads to enhanced production outcomes.

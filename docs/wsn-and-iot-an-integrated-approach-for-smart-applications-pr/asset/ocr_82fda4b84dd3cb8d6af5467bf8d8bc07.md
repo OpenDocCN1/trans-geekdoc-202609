@@ -1,0 +1,12 @@
+![](bbox=[0.118, 0.095, 0.852, 0.196])
+
+**FIGURE 2.3** An illustration of sustainable IoT using solar energy to power IoT nodes.
+
+various sectors such as smart agriculture, smart cities, transportation, waste management, smart healthcare, and smart homes, contributing to enhanced sustainability in our lives. By implementing these solutions, every individual or industry can make informed decisions and work reducing the carbon footprint for a sustainable future. But manufacturing, deployment, and proper disposal of IoT devices requires careful planning which will lead us towards a holistic approach to sustainability.
+
+# 2.2.2 ROLE OF SUSTAINABILITY IN THE NEXT GENERATION
+
+Sustainability plays a vital role in shaping the lives of the next generation. As the world is facing numerous environmental and social challenges, switching to sustainable practices becomes essential to secure a better future for the coming generations. Poor humans pose a great threat to nature, which is evident in various forms such as carbon emissions, floods, droughts, etc. The solution to all these problems is sustainable development of the whole of society. This means acquiring awareness about green technology and adopting practices that prioritize the preservation and development of nature. Achieving sustainability for the coming generations is intertwined with economic gain, while simultaneously protecting our ecosystem. Here are some of the key roles of sustainability in the next generation:
+
++   * Environmental stewardship: Sustainability focuses on conserving and protecting the natural environment. The next generation needs to understand the importance of environmental stewardship and take actions to mitigate climate change, preserve natural resources, and protect biodiversity. By accepting sustainable practices, as reducing greenhouse emissions, promoting renewable energy, and implementing responsible land and water management, the next generation can contribute to a better planet.
+* Education and awareness: Sustainability is essential for the next generation to understand the interconnection of environmental, social, and economic issues. By incorporating sustainability into educational curricula, young people can develop the knowledge, skills, and mindset necessary to tackle sustainability challenges efficiently. Building awareness about sustainable practices and promoting sustainable lifestyles from an early age can empower the future generation to make well-versed decisions and become responsible global citizens.
