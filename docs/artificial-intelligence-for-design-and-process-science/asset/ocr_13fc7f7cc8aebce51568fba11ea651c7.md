@@ -1,0 +1,21 @@
+# Learning Shortcuts: On the Misleading of NLP in Language Models
+
+Gillespie, L. E., Goel, K., Goodman, N. D., Grossman, S., Guha, N., Hashimoto, T., Terson, P., Hewitt, J., Do, D. E., Jong, J., Hsu, K., Jarcard, T., Jain, F., Jurafsky, D., Kalluri, P., Paramchetti, S., Keeling, G., Hani, F., Khattab, O., Koh, P. W., Kraass, M., Krishna, R. N., Kidiputi, K., Rumin, A., Ladakhh, F. E., Lee, M., Lee, T., Leskovec, J., I, I., Li, X. L., Li, X. T., Malik, A., Manning, C., Manning, D., Cichardi, S. P., Mitchell, E., Munnyk, Y., Zair, S., Narayan, A., Narayanan, D., Newman, B., Nie, A., Niebles, J. C., Nilforson, H., Nyarko, J. F., Ogut, G., Orr, L., Papimitriou, I., Park, J. S., Piech, C., Portale, E., Potts, C., Raghunathan, A., Reich, R., Ren, H., Rohg, F., Rhoiany, R., Ryan, J., Rea, R. C., Sagdev, D., Sagawa, S., Santhanam, H., Shih, A., Sriniv, K. M., Tamkin, A., Rao, R., Thomas, A. M., Traner, F., Wang, R. E., Wang, W., Bu, W., Wu, Y., Xie, S. M., Yasagami, M. Y., Zaharia, A. M., Zhang, Z., Zhang, X., Zhang, Y., Zheng, L., Zhou, K., & Liang, P. (2020). On the opportunities and risks of foundation models. arXiv: https://arxiv.org/abs/2005.14167
+
+Merge, F., Bijie, A., Rubino, R. (2021). Meta-evaluation of 769 pages: Proceedings of the 99th annual meeting of the association for computational linguistics and the 11th international conference on natural language processing (Volume 1: Long Papers) (pp. 7297–7306).
+
+Niv, T., & Kao, H. Y. (2019). Predicting neural connection of arguments. Proceedings of the 57th annual meeting of the association for computational linguistics. https://doi.org/10.18653/v1/IP19-1459 https://www.acl.org/annip19-1459, Conference Name: Association for Computational Linguistics.
+
+Du, M., Manjun, Y., Jain, R., Deshpande, R., Demircourt, F., Gu, J., Sun, T., Hu, X. Towards identifying and mitigating shortcut learning of NLP models: Proceedings of the 2022 conference of the North American chapter of the association for computational linguistics: Human language understanding (pp. 915–929). Association for Computational Linguistics, Online (2021). https://doi.org/10.18653/v1/naacl-2021.main_77 acl://acanthology.org/naacl-2021-main_77
+
+Moon, S., Mo, S., Lee, K., Lee, J. MASKER: Masked keyword regularization for text classification. Proceedings of the AAAI Conference on Artificial Intelligence 35(13578–13586). May (2021). https://doi.org/10.1609/aaai.v35.17601. https://ojs.aaai.org/index/AAAIArticle/video/17601_15
+
+Nguyen, D., Rossel, L., Grieve, J. On learning and mitigating social bias in NLP: A sociopolitical perspective. Proceedings of the 2021 conference of the North American chapter of the association for computational linguistics: Human language understanding (2021). https://doi.org/10.18653/v1/naacl-2021.main-50 acl://acanthology.org/naacl-2021.main-50
+
+Du, M., Fe, X., N, D., & Hu, X. Shortcut learning of large language models in natural language understanding. ACM, 67(1), 1.
+
+Wang, T., Sridhar, R., & Wang, G. Identifying and mitigating spurious correlations in improving robustness in nlp. Proceedings of the association for computational linguistics: NAACL 2022 (pp. 1719–1729). Association for Computational Linguistics, Seattle, WA (Jul 2022). https://doi.org/10.18653/v1/naacl-2022.findings-naacl-130 acl://acanthology.org/2022-findings-naacl-130
+
+Hendricks, D., Liu, X., Wallace, E., Drieschel, A., Krishna, R., Song, G. Pre-trained forms improve out-of-distribution robustness: Proceedings of the 58th annual meeting of the association for computational linguistics (pp. 2744–2751). Association for Computational Linguistics, Online (Jul 2020). https://doi.org/10.18653/v1/2020.acacl-main-244. https://acanthology.org/2020-acacl-main-244
+
+Schauer, T., Shah, R., May, E. J. S., Roberto Fizzola Ortiz, D., Danus, E., Barzilay, R. Debiasing fact verification models: In:wani, K., Liang, J., Ng, V., Wang, X. (eds.). Proceedings of the 2019 conference on empirical methods in natural language processing and the 9th international conference on natural language processing (EMNLP-IJCNLP)

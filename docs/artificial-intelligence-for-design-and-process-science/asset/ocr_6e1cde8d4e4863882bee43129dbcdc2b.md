@@ -1,0 +1,13 @@
+can operate on other programs or can represent its own code as a data structure of the language itself [23, 24]. Despite the many examples of program generation reported in the literature, most of the proposed systems use ad hoc technology to build program fragments.
+
+To remedy these limitations, multi-level languages have been proposed as intermediate representations for partial evaluation and as basic format for runtime generation, the most prominent early example being MetaML [25], AutomationML [26], NodeRED (nodered.org), and Converge [27]. However, all of the efforts lead to a platform-dependent design and are not suitable for smart manufacturing.
+
+It is clear from the above analysis that product models and DSLs currently have very limited capacities in the context of product engineering. Almost all efforts focus on very specific aspects of PLCs on the factory floor; they abstract from the physical processes in the controller environment while not targeting digital twins. In contrast, the meta-programming approach in this chapter provides a canonical model and language that encodes an actionable digital twin to fully represent and simulate the characteristics and performance properties of a physical product, its product line, and associated production processes in the virtual world, before the product is physically produced. In the following section, we present the basics of product customization and production planning and the requirements for twin-driven product customization.
+
+# Digital Twins for Product Customization and Production Planning
+
+Transdisciplinary research helps develop effective data integration strategies and advanced analytics techniques that can provide actionable insights for decision-making, process optimization, and predictive maintenance. Smart manufacturing requires a transdisciplinary approach in several ways:
+
++   (i) Integrated technology development: Smart manufacturing involves the convergence of different technologies such as the Internet of Things (IoT), artificial intelligence (AI), robotics, and data analytics. Transdisciplinary research facilitates collaboration between experts in these fields, leading to the development of integrated technologies that can work together seamlessly in smart manufacturing systems.
+
++   (ii) Interdisciplinary problem-solving: Smart manufacturing challenges often require solutions that span several disciplines. Transdisciplinary approaches allow researchers and practitioners from different fields such as engineering, computer science, materials science, and business to work together to solve complex problems related to the automation, optimization, and efficiency of manufacturing processes.
