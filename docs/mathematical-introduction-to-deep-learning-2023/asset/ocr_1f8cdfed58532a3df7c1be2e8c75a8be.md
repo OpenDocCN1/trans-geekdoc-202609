@@ -1,0 +1,21 @@
+Then we say that $\Theta$ is the Adagrad **GD** process for the objective function $\mathcal{L}$ with generalized gradient $\mathcal{G}$, learning rates $\left(\gamma_{n}\right)_{n \in \mathbb{N}}$, regularizing factor $\varepsilon$, and initial value $\xi$ (we say that $\Theta$ is the Adagrad **GD** process for the objective function $\mathcal{L}$ with learning rates $\left(\gamma_{n}\right)_{n \in \mathbb{N}}$, regularizing factor $\varepsilon$, and initial value $\xi$) if and only if it holds that $\Theta=\left(\Theta^{(1)}, \ldots, \Theta^{(\mathbf{d})}\right): \mathbb{N}_{0} \rightarrow \mathbb{R}^{\mathbf{d}}$ is the function from $\mathbb{N}_{0}$ to $\mathbb{R}^{\mathbf{d}}$ which satisfies for all $n \in \mathbb{N}, i \in\{1,2, \ldots, \mathbf{d}\}$ that
+
+```
+$$\Theta_{0}=\xi \quad \text { and } \quad \Theta_{n}^{(i)}=\Theta_{n-1}^{(i)}-\gamma_{n}\left[\varepsilon+\sum_{k=0}^{n-1}\left|\mathcal{G}_{i}\left(\Theta_{k}\right)\right|^{2}\right]^{-1 / 2} \mathcal{G}_{i}\left(\Theta_{n-1}\right).$$
+```
+
+# 6.6 Root mean square propagation GD optimization (RMSprop)
+
+In this section we review the RMSprop **GD** optimization method. Roughly speaking, the RMSprop **GD** optimization method is a modification of the Adagrad **GD** optimization method where the sum over the squares of previous partial derivatives of the objective function (cf. (6.333) in Definition 6.5.1) is replaced by an exponentially decaying average over the squares of previous partial derivatives of the objective function (cf. (6.335) and (6.336) in Definition 6.6.1). RMSprop optimization was introduced by Geoffrey Hinton in his courtesy class on Neural Networks for Machine Learning (see Hinton et al. [199]) in the context of stochastic optimization. As in the case of Adagrad optimization, we present for pedagogical purposes first a deterministic version of RMSprop optimization in this section and we refer to Section 7.7 below for the original stochastic version of RMSprop optimization.
+
+Definition 6.6.1 (RMSprop **GD** optimization method). Let $\mathbf{d} \in \mathbb{N},\left(\gamma_{n}\right)_{n \in \mathbb{N}} \subseteq[0, \infty),\left(\beta_{n}\right)_{n \in \mathbb{N}} \subseteq[0,1], \varepsilon \in(0, \infty), \xi \in \mathbb{R}^{\mathbf{d}}$ and let $\mathcal{L}: \mathbb{R}^{\mathbf{d}} \rightarrow \mathbb{R}$ and $\mathcal{G}=\left(\mathcal{G}_{1}, \ldots, \mathcal{G}_{\mathbf{d}}\right): \mathbb{R}^{\mathbf{d}} \rightarrow \mathbb{R}^{\mathbf{d}}$ satisfy for all $U \in\left\{V \subseteq \mathbb{R}^{\mathbf{d}}: V \text { is open }\right\}, \theta \in U$ with $\mathcal{L}\left._{V} \in C^{1}\left(U, \mathbb{R}^{\mathbf{d}}\right)$ that
+
+```
+$$\mathcal{G}(\theta)=(\nabla \mathcal{L})(\theta) .$$
+```
+
+Then we say that $\Theta$ is the RMSprop **GD** process for the objective function $\mathcal{L}$ with generalized gradient $\mathcal{G}$, learning rates $\left(\gamma_{n}\right)_{n \in \mathbb{N}}$, second moment decay factors $\left(\beta_{n}\right)_{n \in \mathbb{N}}$, regularizing factor $\varepsilon$, and initial value $\xi$ (we say that $\Theta$ is the RMSprop **GD** process for the objective function $\mathcal{L}$ with learning rates $\left(\gamma_{n}\right)_{n \in \mathbb{N}}$, second moment decay factors $\left(\beta_{n}\right)_{n \in \mathbb{N}}$, regularizing factor $\varepsilon$, and initial value $\xi$) if and only if it holds that $\Theta=\left(\Theta^{(1)}, \ldots, \Theta^{(\mathbf{d})}\right): \mathbb{N}_{0} \rightarrow \mathbb{R}^{\mathbf{d}}$ is the function from $\mathbb{N}_{0}$ to $\mathbb{R}^{\mathbf{d}}$ which satisfies that there exists $\mathrm{M}:=\left(\mathrm{M}^{(1)}, \ldots, \mathrm{M}^{(\mathbf{d})}\right): \mathbb{N}_{0} \rightarrow \mathbb{R}^{\mathbf{d}}$ such that for all $n \in \mathbb{N}, i \in\{1,2, \ldots, \mathbf{d}\}$ it holds that
+
+```
+$$\Theta_{0}=\xi, \quad \mathrm{M}_{0}=0, \quad \mathrm{M}_{n}^{(i)}=\beta_{n} \mathrm{M}_{n-1}^{(i)}+\left(1-\beta_{n}\right)\left|\mathcal{G}_{i}\left(\Theta_{n-1}\right)\right|^{2}, \text { and } \Theta_{n}^{(i)}=\Theta_{n-1}^{(i)}-\gamma_{n}\left[\varepsilon+\mathrm{M}_{n}^{(i)}\right]^{-1 / 2} \mathcal{G}_{i}\left(\Theta_{n-1}\right) .$$
+```

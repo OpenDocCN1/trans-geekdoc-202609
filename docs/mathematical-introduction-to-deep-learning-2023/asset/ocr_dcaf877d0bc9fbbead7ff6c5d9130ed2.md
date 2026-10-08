@@ -1,0 +1,19 @@
+Combining this with $(\mathbf{6.124})$ and $(\mathbf{6.119})$ shows that for all $\theta \in \mathbb{B}$ it holds that
+
+```
+$$\begin{gathered} \left\langle \theta-\vartheta, \nabla \mathcal{L}(\theta)\right\rangle \\ \quad \geq \alpha\left\|\theta-\vartheta\right\|_{2}^{2} \\\quad-\int_{0}^{1}\left\|\theta-\vartheta\right\|_{2}\|\text { (Hess } \mathcal{L}) \vartheta+t(\theta-\vartheta))-\text { (Hess } \mathcal{L}) \vartheta\|\left\|\theta-\vartheta\right\|_{2} \mathrm{~d} t \\ \geq \alpha\left\|\theta-\vartheta\right\|_{2}^{2}-\left[\int_{0}^{1} \lambda\|\vartheta+t(\theta-\vartheta)-\vartheta\|_{2} \mathrm{~d} t\right]\left\|\theta-\vartheta\right\|_{2}^{2} \\ =\left(\alpha-\left[\int_{0}^{1} t \mathrm{~d} t\right]\lambda\|\theta-\vartheta\|_{2}\right)\left\|\theta-\vartheta\right\|_{2}^{2}=\left(\alpha-\frac{\lambda}{2}\left\|\theta-\vartheta\right\|_{2}\right)\left\|\theta-\vartheta\right\|_{2}^{2} \\ \geq\left(\alpha-\frac{\lambda \alpha}{2 \Lambda}\right)\left\|\theta-\vartheta\right\|_{2}^{2}=\frac{\alpha}{2}\left\|\theta-\vartheta\right\|_{2}^{2} . \end{gathered}$$
+```
+
+Moreover, observe that $(\mathbf{6.119}), (\mathbf{6.124}), (\mathbf{6.125})$, the fact that (Hess $\mathcal{L})(\vartheta) \in \mathbb{R}^{8 \times 0}$ is a symmetric matrix, item (ii) in Lemma $\mathbf{6.1 . 1 5}$, the Cauchy-Schwarz inequality, and the assumption that $\alpha \leq \beta$ ensure that for all $\theta \in \mathbb{B}, w \in \mathbb{R}^{0}$ with $\|w\|_{2}=1$ it holds that
+
+```
+$$\begin{aligned} & \langle w, \nabla \mathcal{L}(\theta)\rangle) \\ & \leq\left|\left\langle w,\left[\text { (Hess } \mathcal{L}) \vartheta\right]\right.(\theta-\vartheta)\right\rangle\right| \\ & \quad+\left|\int_{0}^{1}\left\langle w,\left[\text { (Hess } \mathcal{L}) \vartheta+t(\theta-\vartheta)\right)-(\text { (Hess } \mathcal{L}) \vartheta)\right](\theta-\vartheta)\right\rangle \mathrm{d} t\right| \\ & \leq\|w\|_{2}\|(\text { (Hess } \mathcal{L}) \vartheta)\|(\theta-\vartheta)\|_{2} \\ & \quad+\int_{0}^{1}\|w\|_{2}\|(\text { (Hess } \mathcal{L}) \vartheta+t(\theta-\vartheta))-(\text { (Hess } \mathcal{L}) \vartheta)\|\|(\theta-\vartheta)\|_{2} \mathrm{~d} t \\ & \leq\left[\sup _{v \in \mathbb{R}^{8} \backslash\{0\}} \frac{\|[(\text { (Hess } \mathcal{L}) \vartheta) v\|_{2}}{\|v\|_{2}}\right]\left\|\theta-\vartheta\right\|_{2} \\ & \quad+\int_{0}^{1}\|\text { (Hess } \mathcal{L}) \vartheta+t(\theta-\vartheta)-(\text { (Hess } \mathcal{L}) \vartheta\|\|\theta-\vartheta\|_{2} \mathrm{~d} t \\ & \leq \max (\mathcal{S})\left\|\theta-\vartheta\right\|_{2}+\left[\int_{0}^{1} \lambda\|\vartheta+t(\theta-\vartheta)-\vartheta\|_{2} \mathrm{~d} t\right]\left\|\theta-\vartheta\right\|_{2} \\ & \leq\left(\beta+\lambda\left[\int_{0}^{1} t \mathrm{~d} t\right]\right)\|\theta-\vartheta\|_{2}\left\|\theta-\vartheta\right\|_{2}=\left(\beta+\frac{\lambda}{2}\left\|\theta-\vartheta\right\|_{2}\right)\left\|\theta-\vartheta\right\|_{2} \\ & \leq\left(\beta+\frac{\lambda \alpha}{2 \Lambda}\right)\left\|\theta-\vartheta\right\|_{2}=\left[\frac{2 \beta+\alpha}{2}\right]\left\|\theta-\vartheta\right\|_{2} \leq \frac{3 \beta}{2}\left\|\theta-\vartheta\right\|_{2} . \end{aligned}$$
+```
+
+Therefore, we obtain for all $\theta \in \mathbb{B}$ that
+
+```
+$$\|\nabla \mathcal{L}(\theta)\|_{2}=\sup _{w \in \mathbb{R}^{n},\|w\|_{2}=1}\left|\left\langle w,\left(\nabla \mathcal{L}(\theta)\right)\right\rangle\right| \leq \frac{3 \beta}{2}\left\|\theta-\vartheta\right\|_{2} .$$
+```
+
+Combining this and $(\mathbf{6.127})$ establishes $(\mathbf{6.121})$. The proof of Proposition $\mathbf{6.1 . 1 6}$ is thus complete.

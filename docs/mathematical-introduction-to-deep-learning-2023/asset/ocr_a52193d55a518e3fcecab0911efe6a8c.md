@@ -1,0 +1,3 @@
+![](bbox=[0.1875, 0.1562, 0.7708, 0.4843])
+
+Figure 5.1 ([plots/gradient_plot1.pdf](plots/gradient_plot1.pdf)): Illustration of negative gradients in a one-dimensional example. The plot shows the graph of the function $[{-2,2}\supseteq x\mapsto x^{4}-3x^{2}\in\mathbb{R}}$ with the value of the negative gradient at several points indicated by horizontal arrows. The PYTHON code used to produce this plot is given in Source code 5.1.

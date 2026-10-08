@@ -1,0 +1,81 @@
+
+因此，三角不等式建立了如下结论：对于所有 $j \in \{1,2\}$ 和 $k \in \{1,2,\dots,L\}\cap(1,\infty)$，均有
+
+$$\begin{split}\mathfrak{e}_{k}\leq&\left[\sup_{x\in D}\big\|\left(\mathbf{W}_{1,k}-\mathbf{W}_{2,k}\right)\left(\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{j,k-1})) (x)\right)\right)\big\|_{\infty}\right]\\
+&\quad+\left[\sup_{x\in D}\big\|\mathbf{W}_{3-j,k}\left(\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{1,k-1}))(x)\right)-\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{2,k-1}))(x)\right)\right)\big\|_{\infty}\right]\\
+&\quad+\|\theta_1-\theta_2\|_\infty\\
+\leq&\left[\sup_{v\in\mathbb{R}^{k-1}\setminus\{0\}}\left(\frac{\|\left(\mathbf{W}_{1,k}-\mathbf{W}_{2,k}\right)v\|_\infty}{\|v\|_\infty}\right)\right]\left[\sup_{x\in D}\|\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{j,k-1})) (x)\right)\|_\infty\right]\\
+&\quad+\left[\sup_{v\in\mathbb{R}^{k-1}\setminus\{0\}}\left(\frac{\|\mathbf{W}_{3-j,k}v\|_\infty}{\|v\|_\infty}\right)\right]\left[\sup_{x\in D}\|\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{1,k-1}))(x)\right)-\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{2,k-1}))(x)\right)\|_\infty\right]\\
+&\quad-\|\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{2,k-1}))(x)\right)\|_\infty\big]+\|\theta_1-\theta_2\|_\infty.\end{split}\tag{11.88}$$
+
+因此，引理 **11.3.5** 和引理 **11.3.3** 表明，对于所有 $j \in \{1,2\}$ 和 $k \in \{1,2,\dots,L\}\cap(1,\infty)$，均有
+
+$$\begin{split}\mathfrak{e}_{k}\leq&\,l_{k-1}\,\|\theta_1-\theta_2\|_\infty\left[\sup_{x\in D}\|\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{j,k-1}))(x)\right)\|_\infty\right]\left[\|\theta_1-\theta_2\|_\infty\right]\\
+&+l_{k-1}\,\|\theta_{3-j}\|_\infty\left[\sup_{x\in D}\big\|\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{1,k-1}))(x)\right)-\mathfrak{R}_{k-1}^{\mathfrak{N}}\left((\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{2,k-1}))(x)\right)\big\|_\infty\right]\\
+\leq&\,l_{k-1}\,\|\theta_1-\theta_2\|_\infty\left[\sup_{x\in D}\big\|\left(\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{j,k-1}))(x)\right)\big\|_\infty\right]+\|\theta_1-\theta_2\|_\infty\\
+&+l_{k-1}\,\|\theta_{3-j}\|_\infty\left[\sup_{x\in D}\big\|\left(\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{1,k-1}))(x)\right)-\left(\mathcal{R}_{\uparrow}^{\mathfrak{N}}(\phi_{2,k-1}))(x)\right)\big\|_\infty\right]\\
+\leq&\,\|\theta_1-\theta_2\|_\infty(l_{k-1}\,\mathfrak{m}_{j,k-1}+1)+l_{k-1}\,\|\theta_{3-j}\|_\infty\,\mathfrak{e}_{k-1}.\end{split}\tag{11.89}$$
+
+因此，我们得到对于所有 $j \in \{1,2\}$ 和 $k \in \{1,2,\dots,L\}\cap(1,\infty)$，均有
+
+$$\mathfrak{e}_{k}\leq\mathfrak{m}_{j,k-1}\|\theta_1-\theta_2\|_\infty(l_{k-1}+1)+l_{k-1}\,\|\theta_{3-j}\|_\infty\,\mathfrak{e}_{k-1}.\tag{11.90}$$
+
+将此式与 **11.86** 结合，并利用 $\mathfrak{c}_{0}=0$ 以及 $\mathfrak{m}_{1,0}=\mathfrak{m}_{2,0}$ 的事实，可以证明对于所有 $j \in \{1,2\}$ 和 $k \in \{1,2,\dots,L\}$，均有
+
+$$\mathfrak{c}_{k}\leq\mathfrak{m}_{j,k-1}(l_{k-1}+1)\|\theta_1-\theta_2\|_\infty+l_{k-1}\,\|\theta_{3-j}\|_\infty\,\mathfrak{c}_{k-1}.\tag{11.91}$$
+
+这意味着对于所有 $j=(j_{n})_{n\in\{0,1,\dots,L\}}: \{0,1,\dots,L\} \to \{1,2\}$ 和所有 $k \in \{1,2,\dots,L\}$，均有
+
+$$\mathfrak{c}_{k}\leq\mathfrak{m}_{j_{k-1},k-1}(l_{k-1}+1)\|\theta_1-\theta_2\|_\infty+l_{k-1}\,\|\theta_{3-j_{k-1}}\|_\infty\,\mathfrak{c}_{k-1}.\tag{11.92}$$
+
+因此，我们得到对于所有 $j = (j_n)_{n \in \{0,1,\ldots,L\}} : \{0,1,\ldots,L\} \rightarrow \{1,2\}$ 和所有 $k \in \{1,2,\ldots,L\}$，均有
+
+$$\begin{align*} \mathfrak{c}_k \leq \sum_{n=0}^{k-1} \bigg[ \bigg( \prod_{m=n+1}^{k-1} (l_m \| \theta_{3-j_m} \|_\infty) \bigg) \mathbf{m}_{j_n, n} (l_{n+1}) \| \theta_1 - \theta_2 \|_\infty \bigg] \\ = \| \theta_1 - \theta_2 \|_\infty \sum_{n=0}^{k-1} \bigg[ \bigg( \prod_{m=n+1}^{k-1} (l_m \| \theta_{3-j_m} \|_\infty) \bigg) \mathbf{m}_{j_n, n} (l_n + 1) \bigg]. \tag{11.93} \end{align*}$$
+
+此外，请注意引理 **11.3.5** 确保了对于所有 $j \in \{1,2\}$，$k \in \{1,2,\ldots,L\} \cap (1,\infty)$ 以及 $x \in D$，均有
+
+$$\begin{align*} \| (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k})) (x) \|_\infty \\ = \bigg\| W_{j,k} \bigg( \mathfrak{D}_{l_{k-1}}^{\mathbf{N}} \bigg( (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k-1})) (x) \bigg) + B_{j,k} \bigg\|_\infty \\ \leq \bigg[ \sup_{v \in \mathbb{R}^{l_{k-1} \times \{0\}}} \frac{\| W_{j,k}^{l_v} \|_\infty}{\| v \|_\infty} \bigg] \| \mathfrak{D}_{l_{k-1}}^{\mathbf{N}} ( (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k-1})) (x) ) \|_\infty + \| B_{j,k} \|_\infty \\ \leq l_{k-1} \| \theta_j \|_\infty \| \mathfrak{D}_{l_{k-1}}^{\mathbf{N}} ( (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k-1})) (x) ) \|_\infty + \| \theta_j \|_\infty \\ \leq l_{k-1} \| \theta_j \|_\infty \| (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k-1})) (x) \|_\infty + \| \theta_j \|_\infty \\ = (l_{k-1} \| (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,k-1})) (x) \|_\infty + 1) \| \theta_j \|_\infty \\ \leq (l_{k-1} \mathbf{m}_{j,k-1} + 1) \| \theta_j \|_\infty \leq \mathbf{m}_{j,k-1} (l_{k-1} + 1) \| \theta_j \|_\infty. \tag{11.94} \end{align*}$$
+
+因此，对于所有 $j \in \{1,2\}$ 和 $k \in \{1,2,\ldots,L\} \cap (1,\infty)$，我们得到
+
+$$\mathbf{m}_{j,k} \leq \max \{1, \mathbf{m}_{j,k-1} (l_{k-1} + 1) \| \theta_j \|_\infty \}. \tag{11.95}$$
+
+此外，观察到引理 **11.3.5** 证明了对于所有 $j \in \{1,2\}$ 和 $x \in D$，均有
+
+$$\begin{align*} \| (\boldsymbol{\mathcal{R}}_\mathrm{e}^{\mathbf{N}} (\phi_{j,1})) (x) \|_\infty = \| W_{j,1} x + B_{j,1} \|_\infty \\ \leq \big[ \sup_{v \in \mathbb{R}^{l_0 \times \{0\}}} \frac{\| W_{j,1}^{l_v} \|_\infty}{\| v \|_\infty} \big] \| x \|_\infty + \| B_{j,1} \|_\infty \tag{11.96} \\ \leq l_0 \| \theta_j \|_\infty \| x \|_\infty + \| \theta_j \|_\infty \leq l_0 \| \theta_j \|_\infty \max \{\| a \|, \| b \|\} + \| \theta_j \|_\infty \\ = (l_0 \max \{\| a \|, \| b \|\} + 1) \| \theta_j \|_\infty \leq \mathbf{m}_{j,0} (l_0 + 1) \| \theta_j \|_\infty. \end{align*}$$
+
+因此，对于所有 $j \in \{1,2\}$，我们得到
+
+$$\mathbf{m}_{j,1} \leq \max \{1, \mathbf{m}_{j,0} (l_0 + 1) \| \theta_j \|_\infty \}. \tag{11.97}$$
+
+将此式与 (11.95) 结合，确立了对于所有 $j \in \{1,2\}$ 和 $k \in \{1,2,\ldots,L\}$，均有
+
+$$\mathbf{m}_{j,k} \leq \max \{1, \mathbf{m}_{j,k-1} (l_{k-1} + 1) \| \theta_j \|_\infty \}. \tag{11.98}$$
+
+因此，对于所有 $j \in \{1, 2\}$ 和 $k \in \{0, 1, \ldots, L\}$，我们得到
+
+$$\mathbf{m}_{j,k} \leq \mathbf{m}_{j, 0} \left[\prod_{n=0}^{k-1} (l_{n}+1)\right] [\max \{1, \|\theta_j\|_\infty \}^k]. \tag{11.99}$$
+
+将此式与 (11.98) 结合，表明对于所有 $j=(j_n)_{n \in \{0, 1, \ldots, L\}}: \{0, 1, \ldots, L\} \to \{1, 2\}$ 和所有 $k \in \{1, 2, \ldots, L\}$，均有
+
+$$\begin{aligned}
+\mathbf{c}_{k} \leq \|\theta_1 - \theta_2\|_\infty \sum_{n=0}^{k-1} \left[\prod_{m=n+1}^{k-1} (l_{m} \|\theta_{3-j_m}\|_\infty)\right] \\
+\cdot \left(\mathbf{m}_{j_n, 0} \left[\prod_{v=0}^{n-1} (l_v + 1)\right] \max \{1, \|\theta_{j_n}\|_\infty^n \} (l_n + 1)\right) \\
+= \mathbf{m}_{1,0} \|\theta_1 - \theta_2\|_\infty \sum_{n=0}^{k-1} \left[\prod_{m=n+1}^{k-1} (l_m \|\theta_{3-j_m}\|_\infty)\right] \left(\left[\prod_{v=0}^{n} (l_v + 1)\right] \max \{1, \|\theta_{j_n}\|_\infty^n \}\right) \\
+\leq \mathbf{m}_{1,0} \|\theta_1 - \theta_2\|_\infty \sum_{n=0}^{k-1} \left[\prod_{m=n+1}^{k-1} \|\theta_{3-j_m}\|_\infty \right] \left[\prod_{v=0}^{k-1} (l_v + 1)\right] \max \{1, \|\theta_{j_n}\|_\infty^n \} \\
+= \mathbf{m}_{1,0} \|\theta_1 - \theta_2\|_\infty \left[\prod_{n=0}^{k-1} (l_n + 1)\right] \sum_{n=0}^{k-1} \left(\prod_{m=n+1}^{k-1} \|\theta_{3-j_m}\|_\infty \right) \max \{1, \|\theta_{j_n}\|_\infty^n \}.
+\end{aligned} \tag{11.100}$$
+
+因此，对于所有 $j \in \{1, 2\}$ 和 $k \in \{1, 2, \ldots, L\}$，我们得到
+
+$$\begin{aligned}
+\mathbf{c}_{k} \leq \mathbf{m}_{1,0} \|\theta_1 - \theta_2\|_\infty \left[\prod_{n=0}^{k-1} (l_n + 1)\right] \left[\sum_{n=0}^{k-1} \left(\left[\prod_{m=n+1}^{k-1} \|\theta_{3-j}\|_\infty \right] \max \{1, \|\theta_j\|_\infty^n \}\right)\right] \\
+= \mathbf{m}_{1,0} \|\theta_1 - \theta_2\|_\infty \left[\prod_{n=0}^{k-1} (l_n + 1)\right] \left[\sum_{n=0}^{k-1} \left(\max \{1, \|\theta_j\|_\infty^n \} \|\theta_{3-j}\|_\infty^{k-1-n} \right)\right] \\
+\leq k \mathbf{m}_{1,0} \|\theta_1 - \theta_2\|_\infty (\max \{1, \|\theta_1\|_\infty, \|\theta_2\|_\infty \})^{k-1} \left[\prod_{n=0}^{k-1} (l_n + 1)\right].
+\end{aligned} \tag{11.101}$$
+
+至此，定理 11.3.6 的证明完毕。
+
+## 推论 11.3.7. 设 $a \in \mathbb{R}$，$b \in [a, \infty)$，$u \in [-\infty, \infty)$，$v \in (u, \infty]$，$d, L \in \mathbb{N}$，$l = (l_0, l_1, \ldots, l_L) \in \mathbb{N}^{L+1}$ 满足
+
+$$d \geq \sum_{k=1}^{L} l_k (l_{k-1} + 1). \tag{11.102}$$

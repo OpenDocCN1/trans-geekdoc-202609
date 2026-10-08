@@ -1,0 +1,9 @@
+Furthermore, observe that the fact that for all $\theta \in \mathbb{R}^3$, $x \in \mathbb{R}^{\ell_0}$ it holds that $\mathcal{N}^{\theta, \ell}_{u, v}(x) \in [u, v]$ and the assumption that for all $m \in \{1, 2, \dots, M\}$, $\omega \in \Omega$ it holds that $Y_m(\omega) \in [u, v]$ demonstrate that for all $\theta \in [-R, R]^3$, $m \in \{1, 2, \dots, M\}$ it holds that
+
+|$\mathcal{N}_{u, v}^{\theta, \ell}(X_m) - Y_m$| \u2264 $v - u$. (12.180)
+
+Combining this and (12.179) with Proposition 12.3.9 (applied with $d \frown \ell_0$, $\mathfrak{d} \frown \mathfrak{d}$, $M \frown M$, $R \frown R$, $L \frown \mathfrak{L}$, $\mathcal{R} \frown v-u$, $\mathfrak{e} \frown \varepsilon$, $D \frown D$, $(\Omega, \mathcal{F}, \mathbb{P}) \frown (\Omega, \mathcal{F}, \mathbb{P})$, $(X_m)_{m \in \{1, 2, \dots, M\}} \frown (X_m)_{m \in \{1, 2, \dots, M\}}$, $(Y_m)_{m \in \{1, 2, \dots, M\}} \frown ((\Omega \ni \omega \mapsto Y_m(\omega) \in \mathbb{R}))_{m \in \{1, 2, \dots, M\}}$, $\mathcal{H} \frown ([-R, R]^3 \ni \theta \mapsto \mathcal{N}_{u, v}^{\theta, \ell}|_D \in C(D, \mathbb{R}))$, $\mathcal{E} \frown \mathcal{E}$, $\mathfrak{E} \frown \mathfrak{E}$ in the notation of Proposition 12.3.9) establishes that $\Omega \ni \omega \mapsto \sup_{\theta \in [-R, R]^3} |\mathfrak{E}(\theta, \omega) - \mathcal{E}(\mathcal{N}_{u, v}^{\theta, \ell}|_D)| \in [0, \infty]$ is $\mathcal{F}/\mathcal{B}([0, \infty])$-measurable and
+
+$\mathbb{P}(\sup_{\theta \in [-R, R]^3} |\mathfrak{E}(\theta) - \mathcal{E}(\mathcal{N}_{u, v}^{\theta, \ell}|_D)| \geq \varepsilon) \leq 2 \max \left\{1, \left[\frac{16 \mathfrak{L} R (v - u)}{\varepsilon}\right]^\mathfrak{d}\right\} \exp \left(\frac{-\varepsilon^2 M}{2(v - u)^2}\right)$. (12.181)
+
+The proof of Corollary 12.3.10 is thus complete. \square
