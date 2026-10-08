@@ -1,0 +1,5 @@
+the patterns through many different layers of processing.
+
+Let's dive into this a bit more. Deep learning is important here because it is going to be a foundation of AI, or artificial intelligence, and the current interest that we are seeing in this deep learning is due to how it is related to AI. Deep learning and some of the techniques that come with it have been able to improve the ability of machines to describe, detect, recognize, and classify things in a way that was previously thought to only work for humans.
+
+A good example of this is all of the different things that deep learning is already able to do in our world. We can find that many of the algorithms and techniques that work with it are great at describing the content that it is going to look through, at detecting objects, and recognizing the speech patterns of those using it, while recognizing what is inside one of the images that you present to it. There are many pieces of technology that use

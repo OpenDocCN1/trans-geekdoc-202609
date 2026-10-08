@@ -1,0 +1,5 @@
+make the right decision to improve and even to grow your business. When the different options are presented through the decision tree to you, you can use this to see what the potential outcomes of each decision will be in the future. This makes it much easier to make accurate and smart decisions and can help with predictions in the future as well.
+
+As a programmer or even a business owner who wants to use this kind of algorithm, there are a few options when it comes to how you would work with these decision trees. Many of those who are using it are going to use it to help with random or categorical variables. In many cases though, machine learning is going to want you to make these trees as a classification problem.
+
+To help you double check that any decision tree you are making ends up being a good one, you will need to be able to take up all of the sets of data that you want to work with, and then you need to be able to split them up between two, and often more, sets with similar data being found in each of the sets. These can then be sorted out with the help

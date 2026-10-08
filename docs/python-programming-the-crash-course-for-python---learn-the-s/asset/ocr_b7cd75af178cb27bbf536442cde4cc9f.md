@@ -1,0 +1,5 @@
+When the program or the machine is able to implement some of the artificial intelligence that we are talking about, it will be able to initiate things like common sense, it can start with reasoning and problem solving, and can handle tasks that are really hard to do and kind of tedious, in no time at all.
+
+We are going to explore this in a bit more information below, but machine learning is also an important part that comes with AI. Learning without any supervision is going to require us to teach the computer how to identify patterns that come in quickly with our inputs, while learning with a lot of supervision means that the computer is going to be able to learn with the help of regression that is numerical and classification.
+
+What does all this mean though? Classification is going to be important here because it is going to help us determine the category where one object is going to belong. And then the regression is going to help us deal with obtaining a set of numerical

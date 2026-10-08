@@ -1,0 +1,5 @@
+using it. When you do bring out the KNN algorithm, you are going to find that it is easier to cut through some of the noise that shows up in the set of data. This noise is sometimes really loud if you are working through a ton of data, and getting rid of some of that noise, especially when it starts to get really distracting, can make it easier to look at the information and the data in front of you and see what trends and patterns are actually there, and what you are able to do with them.
+
+In addition, if your company is trying to deal with and sort through a lot of data at the same time, then the KNN algorithm is going to be the best choice for you. Unlike a few of the other algorithms that are in this guidebook or some of the other ones that you may read about, this algorithm is going to work well because there are no limits on the data size that it is able to sort through.
+
+However, there are going to be a few potential issues that can come up when you are working with this algorithm. To start with the costs of

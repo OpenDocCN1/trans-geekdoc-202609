@@ -1,0 +1,5 @@
+Depending on what kind of situation you are trying to work on with that information, this can sometimes be a good thing for your project. This ends up being beneficial because waiting to make new predictions is going to help you to have data that is always up to date, or at least data that you want inside the algorithm. This ensures that you are not going to end up with predictions that are not valid or useful for what you need.
+
+If you had this program work in a different manner, such as having it do predictions at regular intervals, or each time that you inserted some new data, it could be helpful if the situation needed it. But then there are times when you want to just look at a specific customer group or certain information, and this constant updating is not going to be good for what you need The KNN algorithm will make sure that the updates and the new predictions only happen when you want them to.
+
+You will find as you work with this kind of algorithm that there are a number of benefits to

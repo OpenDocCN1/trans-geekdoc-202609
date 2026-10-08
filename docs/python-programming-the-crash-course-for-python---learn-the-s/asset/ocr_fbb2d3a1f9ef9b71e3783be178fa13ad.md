@@ -1,0 +1,5 @@
+of the independent variables that you can choose from, simply because this ensures each set is distinguished and set out from all the others.
+
+So, now that we have gotten to this part, it brings up the idea that this can be something that is hard to work on. In order to make sure that the decision tree is going to work the way that you would like, or to at least see how it is going to behave when you try to use it, let's look at a good example of this. In this one, we are going to have a group with 60 people inside of it.
+
+With these people, all of them are going to have three independent variables. These variables are going to include the height of the person, their gender, and what class they are in. Then, when it is time to look at the students who are in that group, you will be able to find out that half of them like to play soccer as well. Using the independent variables that you were presented above, your goal is to figure out which half of the students like to play soccer, and which ones do not like to play this sport.

@@ -1,0 +1,5 @@
+question to a device, including your phone, to get an answer, then you have used this. Other places like Skype, Xbox, Google Now, and more are using this as well. The deep learning part is brought in because it helps the system to be able to not only recognize when someone is talking to it, but also know what the person is saying or asking as well.
+
+Natural language processing is another place where deep learning is going to come into play. Neural networks, which are going to be a big component of deep learning, and that we will discuss in more detail later on, have already been used to process and even analyze some written texts for a long time. A specialization that comes with text mining, this kind of technique can be used in other places to discover the patterns that are found in places like news reports, the notes that a physician writes out for later, the complaints from some customers, and even more.
+
+Deep learning can also come into play to help out with recognizing images. One of the more practical applications of this is with automatic image

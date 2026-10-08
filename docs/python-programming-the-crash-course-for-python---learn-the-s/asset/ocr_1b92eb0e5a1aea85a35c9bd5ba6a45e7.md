@@ -1,0 +1,5 @@
+the algorithms that work here that are more written in Cython instead. This ensures that the programmer who uses all of this is going to get some high quality performance in the process. You will find that this library has a lot of different features and parts that make it perfect for getting some of that machine learning done, and will ensure that you are going to be able to do many of the different algorithms that you want.
+
+With this in mind, it is now time for us to focus a bit on how to set up the environment that you want to work with. You have to go through a few steps in order to figure out how to get this library installed on your computer and ready to go. Luckily this one is pretty easy to work with so you will have it up and running in no time, with all of the abilities that you want when it comes to writing out the chosen codes.
+
+To start with, remember here that Scikit-Learn is going to work the best on newer versions of Python. It is not supported on any version that is older than Python 2.7 so if you are working on an

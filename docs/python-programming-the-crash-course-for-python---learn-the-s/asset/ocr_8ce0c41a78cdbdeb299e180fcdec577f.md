@@ -1,0 +1,5 @@
+bit to see how they are alike and different, what they can do in machine learning, and why they are so important.
+
+The first type of machine learning algorithm that we are going to explore is supervised machine learning. These ones are going to be trained with the help of examples that have been labeled, such as when the input is given with the desired output known. For example, you could have a piece of equipment that has some data points labeled either F for failed or R for runs. The learning algorithm is going to be able to receive a set of inputs with the outputs that are correct for them. The algorithm is going to be step in and learn when it compares the actual output with the correct outputs in order to find the errors that may be present.
+
+From there, it is going to be able to modify the different model that it is using accordingly. Through methods including gradient boosting prediction,regression, and classification, this kind of learning algorithm is going to use some patterns

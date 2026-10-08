@@ -1,0 +1,5 @@
+future. This is important because it is going to tell us that the thoughts we have are going to have persistence and consistency that goes along with them.
+
+With those traditional neural networks from before, you won't see this same kind of process occurring, and sometimes this is going to be a shortcoming that we need to work for. For example, if you would like to be able to go through and classify a kind of event that is happening at different points in the movie, this would be something that the regular neural network that we talked about before would struggle with a bit.
+
+The good thing to remember here is that there is a machine learning algorithm that is able to handle this, and that is the recurrent neural networks. These networks are going to have what are known as loops in them, which makes it easy for the information that it learns to persist, much like it does in the human brain. In this method, the loop is going to be take all of the information that you have and will pass it from one one part of your network

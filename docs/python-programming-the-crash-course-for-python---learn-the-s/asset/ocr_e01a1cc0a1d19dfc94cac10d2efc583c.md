@@ -1,0 +1,5 @@
+to just rely on the input on its own, and it is going to need to bring in some recurrent connection to help keep track of the context that is needed to make this task achievable.
+
+When you get to testing time, you will be able to go in and feed the right characters into the RNN algorithm. And once that is put in, you should be able to see the distribution over what characters the system is going to bring out next, and see if you get the answers that you want. We will then be able to sample from the distribution that we are given, and then we feed it all right back in to see which letter you are going to get next. You can then just repeat this process until you get everything in the right order, and you will find that you are sampling the text.
+
+As this chapter took some time to point out, the RNN algorithm can be useful and can help you out with a lot of different projects and even problems in machine learning that you just wouldn't be able to do with some of the other algorithms we have discussed before. It will open up more doors and

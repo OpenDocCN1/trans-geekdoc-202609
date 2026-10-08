@@ -1,0 +1,5 @@
+learning, mathematical equations, science, engineering, and more that the traditional library of Python may not be able to handle on its own.
+
+The community support available with Python is something that a lot of programmers enjoy as well. Python is one of the most widely used programs in the world. Because of all the benefits that we have talked about this chapter, many programmers, beginners and more advanced, throughout the world are using Python to handle all of their programming needs. This provides you with a great community of other individuals who are interested in helping you learn how to work with Python, answering your questions, and so much more.
+
+It is easy to test the code. As you are working on your code, there is going to be some time when you need to be able to test out your code and make sure that it is working the way that you would like. And Python makes it easier to get this done, even as a beginner. Rather than worrying about messing up with the test, or deciding that you don't need to

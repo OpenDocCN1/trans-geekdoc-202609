@@ -1,0 +1,5 @@
+Once you notice that the installation of scikit-learn is complete, it is time to do some importation to get it over to the Python program. This step is necessary in order to use the algorithms that come with it. The good news is that the command to make this happen is going to be done. You simply need to go to your command line and type in import sklearn.
+
+If your command is able to read through what you have written above, and there isn't an error message that shows up, then you know that this installation has been successful overall and you can start using this library as you wish. Take some time to explore around what it has to offer and just familiarize yourself with the environment, and how it is meant to work.
+
+Don't worry too much right now that you don't know how to work with all of the library or that you don't know how all of the coding is supposed to go. This is going to come in a bit. We will spend a few chapters looking at all of the different machine learning algorithms that you are able to
