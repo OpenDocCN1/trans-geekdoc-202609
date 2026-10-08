@@ -1,0 +1,13 @@
+# AI-Powered Decision-Making for Sustainable Development
+
+Tsalis, T. A., Malateniou, K. E., Koulouriotis, D., Nikolaou, I. E., (2020). New challenges for corporate sustainability: United Nations’ 2030 Agenda for sustainable development and the sustainable development goals. Corporate Social Responsibility and Environmental Management, 27(4), 1617–1629. https://doi.org/10.1002/csr.1910
+Tsch, F. T., Almiralli, E., (2021). Artificial intelligence as augmenting augmentation: Implications for implementation. Academy of Management Practices, 35(4):642–659. https://doi.org/10.5465/amp.2019.0062
+Usman, M., Rocfanin, Y., Ali, M., Gbonaya, C., Baholola, M. T. (2022). Toward a sustainable environment: When green teaming promotes eco-friendly behaviors outside of work. Human Resource Management, 62(3), 355–371. https://doi.org/10.1002/hrm.2218
+Vaoa, A. D., Pallatino, R., Hassan, R., Escobar, O., (2020). Artificial intelligence and business models in the sustainable development goals: A systematic literature review. Journal of Business Research, 121, 283–314. https://doi.org/10.1016/j.jbusres.2020.08.019
+van Zanten, J. A., Tulder, R., (2021). Improving companies’ impacts on sustainable development: A new approach to the SDGs. Business Strategy and the Environment, 30(8):3730–3780. https://doi.org/10.1002/b.3825
+Vaska, S., Massaro, M., Bagarotto, E. M., Mas, F. D. (2021). The digital transformation of business model innovation: A structured literature review. Frontiers in Psychology, 12:53933. https://doi.org/10.3389/fpsyg.2021.53933
+Vinusea, R., Azizpour, H., Leite, A., Balam, M., Dignum, V., Domisch, S., Felländer, A., Langhans, S.D., Tegmark, M., Fossi Nerini, F., (2020). The role of Artificial Intelligence in advancing the sustainable development goals. Nature Communications, 11, 91–112. https://doi.org/10.1038/s41467-019-14108-y
+Visizzi, A., (2022). Artificial Intelligence and Sustainable Development Goals (SDGs): MDPI Sustainability, 14, 1730. https://doi.org/10.3390/su1401730
+Wamba-Tagumijde, S. L., Wamba, S. F., Kamdoujoug, J. R. K., Wanko, C. E. T., (2020). Influence of Artificial Intelligence (AI) on firm performance: the business value of AI-based transformation projects. Business Process Management Journal, 26(7):1893–1924. https://doi.org/10.1108/BPMJ-10-2019-0411
+Yang, S., Zhao, W., Liu, Y., Cherubini, F., Fu, B., Pereira, P. (2020). Prioritizing sustainable development goals and linking them to ecosystem services: A global expert’s knowledge evaluation. Geography and Sustainability, 1(4):321–330. https://doi.org/10.1016/j.geos.2020.09.004
+Zhao, J., Gómez, B. G., (2023). Artificial Intelligence and Sustainable Decisions. European Business Law Review, 24, 1–39. https://doi.org/10.1007/s40804-022-00262-2

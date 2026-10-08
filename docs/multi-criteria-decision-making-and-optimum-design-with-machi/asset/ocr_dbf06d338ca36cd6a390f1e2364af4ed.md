@@ -1,0 +1,11 @@
+# 22 Analyzing Outcome-Based Education Using Multicriteria Decision-Making
+
+Sathish Kumar Kumaravel, Regan Murugesan, Nagadevi Bala Nagaramam, Kala Raja Mohan, and R. Narmada Devi
+
+# 22.1 INTRODUCTION
+
+In the realm of contemporary education, outcome-based education (OBE) prioritizes the results of learning experiences. Rooted in the belief that education should be purposeful and geared toward specific outcomes, OBE has gained prominence in shaping curricular and instructional methodologies. In this chapter, we examine the intersection of OBE with invaluable input from students, particularly focusing on the positive feedback loop that emerges from this dynamic.
+
+At its core, OBE shifts the traditional focus from what is taught to what is learned. The emphasis is on clearly defining outcomes students are expected to achieve. This shift aligns with a broader educational philosophy that aims to equip learners with practical skills and knowledge relevant to their future endeavors. We embark on this exploration, it is crucial to recognize the symbiotic relationship between OBE and student feedback, a relationship that holds the potential to enhance the educational landscape significantly.
+
+Student feedback in its various forms serves as a compass guiding educators and institutions toward effective teaching practices. It encapsulates the diverse experiences, perspectives, and challenges encountered by students throughout their educational journeys. When coupled with the principles of OBE, this feedback becomes a catalyst for continuous improvement. Positive feedback in particular unveils the strengths and successes of educational approaches, affirming that the intended outcomes are not only met but often exceeded. One of the key advantages of OBE is its inherent adaptability based on student feedback. By actively seeking and incorporating input from learners, educators can fine-tune their strategies to better resonate with the needs of student populations. Positive feedback becomes a beacon that signals areas of success within the curriculum, teaching methods, and overall learning
