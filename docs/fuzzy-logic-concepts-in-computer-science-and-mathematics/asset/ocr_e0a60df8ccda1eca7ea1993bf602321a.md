@@ -1,0 +1,11 @@
+# Preface
+
+Fuzzy logic has become an important mathematical tool of the soft computing domain, which has vastly been applied to the field of computer science as well. The fuzzy-based decision structure has been used in many computer science domains with excellent results due to its tracking ability of vagueness. The fuzzy logic concept is versatile and can seek application in the allied engineering domains such as electrical, mechanical, electronics, civil, etc. The other social and economical fields are also being touched upon by the fuzzy concept with valuable outcomes.
+
+This current edited book caters to the fuzzy application to many interconnected and versatile domains with fruitful outcomes. The electric machine performance can be measured and estimated with the help of a fuzzy system. The tracking of the current path can be determined with great certainty. The concept of fuzzy logic has been substantiated in the present book on tuning of machines. The electrical machine extends to the mechanical attachment through the gear-box system where the fuzzy concept can be applied to enhance the performance mechanism of the device.
+
+The machine learning approach is also another category where the concept of fuzzy can be successfully applied. The bedrock of machine learning has been enhanced further with application of the soft computing aspect. The fuzzy system has become the altering tool for classification and categorization.
+
+Health science is also another promising field where a number of research works are going on. The concept of fuzzy has been applied with great success to produce more accuracy in the classification of medical data. The diagnosis operation of any patient can be carried out with the help of precision approaches of task selection and proper categorization of it. Fuzzy logic plays a major role in performing such operations.
+
+The current edited book also focuses on the variation of fuzzy logic schemes. The intuitionistic fuzzy logic concept has also played a major role in the field of mathematics. The main demerits of the fuzzy theory concept can better be understood by the concept of extension of fuzzy range and its utilization. The multicriteria decision-making aspect is also strongly connected to the fuzzy concept and has become the main focus area of this book.

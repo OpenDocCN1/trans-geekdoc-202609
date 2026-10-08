@@ -1,0 +1,9 @@
+system adjusts the pressure levels by considering several factors, such as road conditions, target speeds, and the degree of throttle input, as depicted in Figure 2.2. The management of continuously variable transmissions (CVTs) presents a complex task due to the multitude of factors that must be taken into account. These factors include speed, temperature, oil viscosity, and the design of the valves. These various components all interact, resulting in a highly intricate system. Controlling a continuously variable gearbox (CVT) using conventional methods intended for less complex systems has inherent challenges. The main objective of this chapter is to throw light on the minimization of complexities of such gearbox and enhancement of speed of the engine concerned. The reduction of delay time of interaction among all the different parts of the system can bring down the load and help in gaining the good performance of the whole system. The design of the control system for obtaining pully pressure is demonstrated in Figure 2.1.
+
+![](bbox=[0.11, 0.43, 0.87, 0.64])
+
+FIGURE 2.1 Vehicle's power train is equipped with a continuously variable gearbox (CVT) and a wet-plate clutch. FD is an acronym that stands for final reduction.
+
+# 2.2 SPECIFICATIONS OF PERFORMANCE
+
+The objective is to achieve the desired pressure at a reasonable timeframe, ideally between 60 to 70 ms, without exceeding the specified limits. The objective is to mitigate significant overshoots (O.S.) as they have the potential to induce excessive slackness in the belt, resulting in disengagement from the pulleys and potential damage to the system.

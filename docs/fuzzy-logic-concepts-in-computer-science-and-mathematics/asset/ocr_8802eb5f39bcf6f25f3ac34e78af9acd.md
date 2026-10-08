@@ -1,0 +1,9 @@
+![](bbox=[0.15, 0.11, 0.85, 0.4])
+
+**FIGURE 2.2** Schematic representation of the system, encompassing the high-level controller, is depicted in the diagram.
+
+# 2.3 PHYSICAL MODEL OF THE CONTINUOUSLY VARIABLE TRANSMISSION (CVT)
+
+Minten and Vanvuchelen developed an elaborate physical model of the system. The complexity of the topic arises from its comprehensive coverage of the activities of the continuously variable gearbox (CVT). The utilization of this method proves advantageous in replicating real-world phenomena; nonetheless, its protracted execution duration renders it impractical for the purpose of devising control mechanisms. Additionally, a more streamlined model was devised for the purpose of control. The system offers a single controllable parameter, namely the voltage supplied to the pulsewidth modulation servo valve, denoted as $V_{\text{in}}$. The measurement encompasses two variables, namely temperature ($T$) and engine speed ($N_{\text{engine}}$). This study focused on a single outcome variable, namely the magnitude of pressure exerted on the pulley. Figure 2.3 illustrates the relationship between the nonlinearity ($f$) and the engine speed ($N_{\text{engine}}$), indicating a significant dependence of the former on the latter.
+
+The process is represented through the utilization of a static nonlinearity function, denoted as $f(V_{\text{in}}, N_{\text{engine}})$, as well as a dynamic linear system $G(s)$ that possesses changeable parameters. Figure 2.4 provides the correlation between the variable $f$ and engine speed. The graphs are plotted for different engine speeds.
