@@ -1,0 +1,17 @@
+# A Multi-Stage Hybrid Model for Odia Compound Character Recognition
+
+Figure 3.9(a) shows the original input to OCR application with a background, whereas Figure 3.9(b) depicts the output of the binarization step. We used Tsallis entropy and a differential evolution optimization technique to separate the background from the foreground text. In the next stage, the lines are separated by linehistogram analysis. The output of the line separation is given in Figure 3.10. For each line, column-wise histogram analysis is performed, and a threshold for space is evaluated. Based on this, we separated words from each line and the output is illustrated in Figure 3.12. We used connected component analysis to separate characters from words and the corresponding output is shown in Figures 3.12 and 3.13. Each separated character is recognized by the classification model and the corresponding UNI-code to generate the text file. The final output of the application is given in Figure 3.14. The recognition errors in the text are highlighted in red.
+
+In this study, we used 211 characters to validate the model in contrast to the previous models that considered only 47–54 characters. It was observed from the results how the existing models failed to perform on 211 characters and how our model helped improve the recognition accuracy. The usability of the model was shown through an application example, which can be used for saving historical documents in digital format. It can also help manage different printed documents by converting them into editable text format.
+
+# 3.6 CONCLUSION AND FUTURE SCOPE
+
+In this chapter, we proposed a hybrid three-stage model for recognition of Odia compound and basic characters. The model first utilized the similarity index together with template matching to find 20 alike characters for a given test sample. Subsequently, we applied a projection matching technique to obtain the most alike characters. Eventually, we predicted the actual class using LFD features and GRNN. We validated the proposed model using a dataset spanning 52,750 images from 211 classes. The proposed scheme achieved a higher accuracy of 90.6% when compared with the state-of-the-art methods and can be used to better recognize the historical and contemporary Odia documents. The earned accuracy is still far from achieving human-like precision, hence, in the future, further research needs to be carried out towards the improvement of model performance. The separation between the touched character and overlapping words could be for accurate recognition. Deep learning algorithms have recently achieved dramatic success in a variety of computer vision applications and, hence, the performance on the considered dataset be tested using different deep learning algorithms.
+
+# REFERENCES
+
++   1. Alaginahi, Y.: Preprocessing Techniques in Character Recognition. INTECH Open Publisher (2010).
+
++   2. Antani, S., Agnihori, L.: Gujarati character recognition. In: Proceedings of the Fifth International Conference on Document Analysis and Recognition, pp. 418–421. Los Altos, CA: IEEE (1999).
+
++   3. Ashwin, T., Sastry, P: A font and size-independent OCR system for printed Kannada documents using support vector machines. Sadhana 27(1), 35–58 (2002).
