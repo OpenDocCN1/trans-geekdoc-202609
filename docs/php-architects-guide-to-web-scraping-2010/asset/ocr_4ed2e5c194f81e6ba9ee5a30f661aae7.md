@@ -1,0 +1,9 @@
+# Chapter 5
+
+# pecl_http PECL Extension
+
+The pecl_http extension became available in PHP 5 and gained a class for HTTP responses in PHP 5.1. Like the cURL extension, it also wraps the libcurl library and has similar advantages as a result, such as its internal DNS cache. While the cURL extension uses resources and configuration options to more closely mimic libcurl's own API, the pecl_http extension offers the same features in the form of procedural and object-oriented APIs. As a result, code that uses pecl_http is generally shorter than equivalent code using the cURL extension.
+
+Another major difference is that the cURL extension is considered to be part of the PHP core, which means that it is more likely to be present in most environments supporting PHP. In contrast, pecl_http must be installed via the pecl installer or compiled manually from source. In either case, the extension requires the PHP and libcurl development headers to be present in order to compile properly. Not technically being part of the PHP core, it is less likely to be present or available in shared hosting environments depending on the hosting provider. This may be a concern for code that is intended to be distributed for use in a variety of environments.
+
+To install pecl_http via the pecl installer, PEAR must be installed (see http://pear.php.net/manual/en/installation.php). A package for PEAR may also be available through your OS package manager. Once it is installed, simply issue the command `pecl install pecl_http`. To install from source, download the latest version from http://pecl.php.net/get/pecl_http. Note that this requires the header files for the PHP version you are using, which are contained in the PHP source tar-
