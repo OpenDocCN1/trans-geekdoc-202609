@@ -1,0 +1,60 @@
+
+## References
+
+- 1. Paas, F.; Tuovinen, J.E.; Tabbers, H.; Van Gerven, P.M. Cognitive load measurement as a means to enhance cognitive load theory. Educ. Psych. 2003, 63-71. [CrossRef]
+- 2. Sweller, J.; Merrienboom, J.; Paas, F. Cognitive Architecture and Instructional Design. Educ. Psychol. Rev. 1998, 10, 251-296. [CrossRef]
+- 3. Sweller, J.; Ayres, P.; Kalyaguga, S. Cognitive Load Theory. Springer: New York, NY, USA, 2011.
+- 4. Rosner, D.; Hauser-Rau, D.; Kohrs, C.; Bajaj, T.; Girtner, S.; Hoffmann, J.; Zhang, L.; Brechmann, A. There is a Historical Basis for Success in Human Connection Interaction?–from a Transitional Study, in Human-Human Connection–Theory, Design, Development and Practice; Kuroso, M.; Lecture Notes in Computer Science Springer; Springer, Switzerland, 2016; Volume 9731, pp. 77–88.
+- 5. Moos, D. Experiential hybrid learning: The role of cognitive load and self-regulated learning. J. Educ. Multimed. 2013, 22, 39–61.
+- 6. Bremyers, K.; Bytriakidis, L.; Panayotis, A. Improvement of Teaching by Mastering Specific Competences: The Competency-Based Approach. In Teacher Development for Improving Quality of Teaching; Springer: Berlin, 2013; pp. 13–28.
+- 7. Lin
+- 8. Taylor, T.; Pradhan, A.K.; Divekar, G.; Rose, M.; Muller, J.; Gomer, R.; Pollatsek, A.; Fisher, D.L. The view of the road: From the construction of online gaze-monitoring techniques to understanding driver behaviour. Acad. Anal. 2012, 55, 175–186. [CrossRef]
+- 9. Hirschfeld, L.M.; Soletvy, E.; Girduk, A.; Keinger, J.; Jacobs, R.J.K.; Santos, A.; Fantini, S. Brain measurement for usability testing and adaptive interfaces: An example of unsuccessful workflow with functional nearfields. In Proceedings of the 27th SIGCHI Conference on Human Factors in Computing Systems (CHI '19), Montreal, MA, April 2009; pp. 2185–2194. [CrossRef]
+- 10. Greene, S.; Paisley, J.; Cuban-Holt, A. A Survey of Cognitive Approach for Stress Detection: Evaluation of technologies in stress detection. IEEE Electron. Mag. 2016, 5, 44–56. [CrossRef]
+- 11. Wang, W.G.; Schlegel, R.E. Operational State Assessment; NATO NATO Report TR-HF M-10-4. NATO Research and Technology Organization, 2004.
+- 12. Hart, S.; Development of the NASA-TLX Index: P,A.; Nds, E.; Elvier Science Publishers North Holland: Amsterdam, The Netherlands, 1988; pp. 139–183.
+- 13. O'Donnell, R.; England, F. Workload assessment methodology. In Handbook of Perception and Human Performance. Cognitive Processes and Performance; Bock, K., Kaufmann, L., Thomas, J., Eds; New York, NY, USA, 1988; pp. 1–49.
+- 14. Vierw, W.W.; Eggemer, T. Considerations for mental workload measurement in a test and environment. Hum. Factors Erg. Sec. 1993, 35, 263–281. [CrossRef]
+- 15. Ginkel, R.; Limmer, R.; Baker, M.; Freeman, W. Cognitive Load Estimation in the Wild. In Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI '18), Montreal, QC, January 21-26 April 2018; pp. 1–9. [CrossRef]
+- 16. Van Dille, L.F.; Helsen, J.D.; Koute, S.L. Turning the optimal brain: An fMRI study of the cognitive load on the processing of affective. Neuroimaging 2009, 45, 1212–1219. [CrossRef]
+- 17. Just, M.A.; Carpenter, P.; Miyake, A. Neurodynamics of cognitive load: Neuroimaging, pupillometric and event-related studies of brain work. Issues Ergon. Sci. 2003, 4, 56–88. [CrossRef]
+- 18. Jerčić, P.; Sennester, C.; Lindley, L. Modeling cognitive load and physiological arousal around pupil diameter and heart rate. Multimed. Appl. 2020, 79, 3145–3159. [CrossRef]
+- 19. Von Bauer, P. Cognitive State Classification Using Physiological Measures. Master’s Thesis, Konstanz, Germany, 2018.
+- 1. Luria, G; Rosenblum, A. A computerized multidimensional measurement of workload via handwriting analysis. Res. Methods. 2012, 44, 575–86. [CrossRef] [PubMed]
+- 2. Yu, K. Cognitive load examination by per interactions. Ph.D. Thesis, University of South Wales, Australia, 2015. Available online: http://www.unsw.edu.au/fapi/datastream/unswworks:unsw-38410/SOURCE02view=true (accessed on 14 February 2020).
+- 3. Su, J; Luz, Predicting Cognitive Load Levels from Speech. In Advances in Nonlinear Speech Processing: Esposito, A.; Faunder-Zanyar, M.; Esposito, A.M.; Drugman, T.; Solé-Cajás, J.; Morabito, F.C.; Springer: Berlin Heidelberg, 2016, 255–263.
+- 4. Mattys, S. Effects of cognitive load on speech production. J. Mem. Langg. 2011, 65, 145–160. [CrossRef]
+- 5. Da, Z.; Chatterjee, D.; Sinha, A. Unsupervised approach for measurement of cognitive load using EEG. In Proceedings of the 13th IEEE Conference on Bioinformatics and BioEngineering, Ghana, 10–13 November 2013, 1–6.
+- 6. Baher, A.; Ghorahi, A. Cognitive load self-regulation during task activity and neurofeedback brain-computer interfaces. Front. Neurosci. 2015, 9, 1–9.
+- 7. Klininger, J; Tersky, S. Effects of visual and verbal presentation on cognitive load in vigilance, memory and arithmetic tasks. J. Psychol. 2011, 48, 321–332. [CrossRef]
+- 8. Hossain, G; Ye, M. Understanding Cognitive Load from Pupillary Responses. In Proceedings of IEEE Computer Vision and Pattern Recognition Workshops, Columbia, OH, 23–24 June 2016, 381–386.
+- 9. Chen, F.; Zhou, J.; Wang, Y.; Richards, S.; Conway, A. Robust Multimodal Cognitive Load Measurement: Human-Computer Interaction; Springer: Berlin, 2016,
+- 10. Schuster, B.; Stein, S.; Baltiner, A.; Epps, J.; Ringavel, F.; March, E.; Zhang, Y. The role of affect in speech Proceedings of 15th Annual Conference of the International Speech Association (ISCA), Singapore, 14, 227–232.
+- 11. Liu, X.; Chen, T.; Xie, G. Cognitive Load Based on Eye Movement. J. Elect. Comput. Eng. 2016.
+- 12. Zhang, L.; Rukanina, S.; Pru, S.; Traue, H. Classification for emotion recognition from psychological data. In Proceedings of the International Symposium on Technologies (ICT'15), Ulm, 23–25 September 2015.
+- 13. Hamdi, H.; Hartley, R.; Puteau, S.; Alzain, A. Emotion assessment for physiological responses. In Proceedings of IEEE Fuzzy Systems (FUZZ), Brisbane, QLD, Australia, 10–15 July, 1–8.
+- 14. Lang, P.; Bradley, M.; Culbert, B. International Affective System (IAPS): Technical Manual and Affective Tagging; The Center for Research Psychology, University of Florida, Gainesville, FL, 1999.
+- 15. Gress, J.; Leverson, R. Emotion elicitation using film clips. Cogn. Em. 1995, 9, 87–108.
+- 16. Soleymani, M.; Punt, P.; T. Multimodal emotion recognition in response to video. IEEE Trans. Affect. Comput. 2012, 221–223.
+- 17. Huber, D.; Ma, X.; Rukanina, S.; Walter, S. Emotion Elicitation using Film Clips: Effect of Age Groups on Movie Choice and Emotion. In Human-Computer Interaction; Stephanidis, C., Ed., HCI, 2015 Communications in Computer and Information Science; Springer: Cham, Switzerland; Volume 528, pp. 110–116.
+- 18. Koelstra, S.; Soleymani, M.; Lee, J.; Yazdani, A.; Ebrahimi, T.; Pun, N.; Patras, I. Deep: A database for emotion analysis using physiological signals. IEEE Trans. Affect. Comput. 2012, 3, 18–31. [CrossRef]
+- 19. Chanel, G.; Retbecaz, C.; Bencourt, M.; Pun, T. Emotion Assessment from Physiological Signals for Adaptation of Game Difficulty. IEEE Trans. Syst. Man Cybern. Part. A. Syst. Hum. 2011, 41, 10522–1063. [CrossRef]
+- 20. Hudnicka, E. To fail or not fail: The role of affect in human-computer interaction. Int. J. Hum-Comput. Stud. 2003, 59, 1–32. [CrossRef]
+- 41. Brave, S.; Nass, C. Emotion in Human-Human Interaction. In Human-Human Interaction Handbook: Fundamentals, Evolving Technologies and Emerging Applications; L. Erlbaum Associates Inc.: Mahwah, NJ, USA, 2003; p. 81–96.
+- 42. Conati, C. Probabilistic assessment of students' emotions in educational games. APL. Art. 2002, 16, 555–576. [CrossRef]
+- 43. Klein, J.; Joon, M.; Picard, R.W. This computer understands user frustration: Theory, design and results. Interact. Comput. 2002, 14, 119–140. [CrossRef]
+- 44. Taylor, B.; Dey, A.; Siework, D.; Maligaik, A. Using Psychology to Detect Levels of User Frustration Induced by System Delays. In Proceedings of the International Conference on Perseverance and Ubiquitous Computing (UbComp'15), Osaka, Japan, 7–11 September 2015; p. 517–528. [CrossRef]
+- 45. Suhaib, A.; Zwart, N.; Gouveeleu, K.; Houtenwerck, G. Classification of Disappointment and Frustration Excited by Human-Computer Interaction: Towards Affective HCI. 2019. Available online: https://www.researchgate.org/publication/33519862_Classification_of_Disappointment_and_Frustration_Excited_by_Human-Computer_Interaction_Towards_Affective_HCI (accessed on 7 April 2020).
+- 46. Lieth, S.; Nass, F. Recognizing Human Emotions from Physiological Signals. J. Art Physiol. 2004, 11, 1672–1687. [CrossRef]
+- 47. Liu, C.; Parni, S.; Narka, M. An study of machine learning techniques for affect recognition in human-robot interaction. In Proceedings of the IEEE International Conference on Robotics and Systems, Edmonton, 2005; p. 2662–2667.
+- 48. Silva, P. Some points to universal. Dir. Psychol. Sch. 2008, 55, 17–60.
+- 49. Reeve, J.; Lee, W.; Son, S. interest as interest. In Mathematics and Science: Educational Research: Washington, DC, 2015; p. 75–79.
+- 50. Ellsworth, P. C. Emotions of affect. Oxford University Press: New York, NY, USA, 1994; p. 150–154.
+- 51. Schüssel, F.; Hönsel, F.; Kobzyba, A.; Huser, F.; Brechmann, A. Framework for Emotions and Dispositions in Human-Machine Interaction. In Cerebral Speech in Human-Machine Interaction—Interaction Platforms and Techniques; Springer, Switzerland, 2016 Computer Volume; Springer: Switzerland, p. 232–240.
+- 52. Trauze, H.-C.; Limbrecht, K.; Scherer, S.; Kessler, H. Individual differences in emotion regulation rules: Implications for social competence and personality. Personality. 2003, 85, 348–362. [CrossRef]
+- 53. Alten, B.; Klein, J. Emotionregulation—Emotionsregulationfassung des Deutschen. Diagnostik 2009, 55, 144–152.
+- 54. Cooper, A.; Petries, K. A psychometric analysis of the Test Emotional Questionnaire (TEI-SQ) using item response theory. Journal. Assess. 2012, 92, 449–457.
+- 55. Jacobs, I.; C.; Zimmermann, J. The German TEI-SQ: Framework for structural relations and aspects related to emotion and common traits and mental health. Pers. Ident. 2015, 72, 712–729. [CrossRef]
+- 56. Golding, S.-D.; Petr, M.-H.; Boll, G. Construct validation of a short five-factor model: A self-report study on the German adaptation of the Item-Item Personality Inventory (TIPI-G). Eur. J. Psych. Assess. 2007, 23, 23–116. [CrossRef]
+- 57. The Semantic Developer. Available online: http://semantic.openfandki.de (accessed on 27 September 2015).
+- 60. Meudt, S.; Bigalke, L.; Schwenker, F. ATLAS—annotation using partially supervised learning and Multi-view Human-Computer Interaction Scenarios. In Proceedings of the 11th International Conference on Human Interaction, Signal and Processing Applications (ISSA’12), Montreal, QC, Canada, 2–5 July 2012; p. 1309–1312.

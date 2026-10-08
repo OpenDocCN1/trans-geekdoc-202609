@@ -1,0 +1,66 @@
+
+Gradli, S. W.; Rich, R.; Rohler, N.; Eskofier, B.M. An overview of the feasibility of permanent, real-time, unobtrusive stress measurement with current wearables. In Proceedings of the 13th EAI International Conference on Pervasive Computing Technologies for Healthcare, ACM, Trento, 20–23 May 2019, p. 360–365.
+
+Agahaboroszi, S.; Sherkhoshi, A.S.; Wah, Y.T. Time-series clustering—A decade review. Inf. Syst. 2015, 53, 16–38. [CrossRef]
+
+Serrá, J.; Aros, J.L. An empirical evaluation of similarity measures for time series classification. Kn. Based Syst. 2014, 67, 305–314. [CrossRef]
+
+Shin, K. An approach to measuring similarity between distinct transient signals. J. Seoul. 2016, 31, 374–445. [CrossRef]
+
+Toohey, K.; Ducham, M. Tracking similarity between time series measures. Special Sist. 2015, 75, 4–50. [CrossRef]
+
+Wang, X.; Muen, A.; Ding, H.; Harvey, J.; Gaeckmann, P.; Knight. Experimental comparison of representation methods and distance measures for time series data. Data Min. Know. Discov. 2013, 26, 275–286. [CrossRef]
+
+Chan, L.; Öztu, M.T.; Oria, V. Robust and fast similarity measure for moving object trajectories. In Proceedings of the 2005 ACM International Conference on Management of Data, Baltimore, MD, USA, 14–16 June 2005, p. 491–502.
+
+Keogh, E.; Ratanananasa, C.A. Exact estimation of dynamic time warping. Knof. Syst. 2005, 7, 358–386. [CrossRef]
+
+Foldado, B.; Matias, M.; Matias, R.; Carvalho, M.; Gamba, H. High alignment measure for time series patterns. Pattern Recog. 2018, 81, 26–39. [CrossRef]
+
+Jang, G.; Jiang, W.; Wang, J. A distance measure for time series similarity: High correlation dynamic time warping. Pattern Recog. 2016, 117, 58–65. [CrossRef]
+
+Kate, R.J. Using dynamic time warping features as features for time series classification. Data Min. Knowl. Disc. 2016, 30, 283–312. [CrossRef]
+
+Fréchet, M.M. Sur certains du calcul fondamental. Rendiconti del Calcolo Matatico di Parigi (1884–1990) 1906, 2, 12–72
+
+Shabbaz, K. Algebraic similarity problems using feature detection. arXiv:1307.06628. De Carufel, J.; Ghebi, A.; Mahevashi, A.; Zafi, R.-J.; Shefer. Similarity of polygonal curves in the presence of outliers. Comput. Geom. 2014, 47, 625–641. [CrossRef] Aron, B.; Parel, S.; Knauer, C.; Wang, Y.; Wenk, C. Distance measure for curves, revised. In European Symposium on Algorithms; Springer:Berlin/Helsinki, 2006: 52–63.
+
+Yylie, T.R. Metric Distance Applications. D.Ph. Thesis, Montana State University-Bozeman, College of Engineering, MT, USA, 2003.
+
+Kujmaim, A.; Ruano, M.G.; Carvalho, P.; Henriques, J.; Paredes, S.; Rua, A.E. Comparison of different methods of measuring similarity in physiological series. IEEE 2017, 55, 11005–11010.
+
+Hauke, J.; Kosskowski, T. Comparison of values of pearson's and correlation coefficients over the same sets of data. Geastr. 2011, 33, 80–93. [CrossRef]
+
+Resh, D.N.; Reshe, Y.A.; Finance, H.K.; Grosman, S.R.; Wiener, G.; Turnburgh, P.; Lander, E.S.; Mitzenmacher, M.; Petit. Detecting patterns in large data sets. Science 2011, 331, 1518–1524. [CrossRef]
+
+Speed, T. For the correlation of first century. Science 2011, 334, 1902. [PubMed]
+
+Montdi, S.; Sco, A.; Valenza, G.; Giannotti, A.; Eminden, M.; Sigiglio, E.P.; Vanello, L. Analysis of coupling between EEG and PPG2 in breathing and breath-hold tasks using maximal information coefficient (MIC). Sci. Rep. 2018, 8, 8492.
+
+Brillinger, D.R. Time Series Data: Analysis and Theory. Siam: San Francisco CA, USA, 2001: Volume 36.
+
+Dickey, D.A.; Fuller, W.A. Distribution of estimators for autoregressive time series with a root unit. J. Stat. Econ. 1979, 74, 427–433.
+
+Johnstone, J.A.; Ford, P.A.; Hughes, G.; Watson, T.; Garrett, A.T. Bioharness (tm) multivariable monitoring device: Part I. Reliability. J. Sports Sci. Med. 2012, 11, 409–417. [PubMed]
+
+43. Blechert, J.; Peyk, P.; Liedgtuber, M.; Wilhelm, F.H. Ansal: Integrated multichannel peripheral biosignal processing in psychophysiological science. Belur. Res. Methods 2016, 48, 1528–1545. [CrossRef][PubMed]
+
+44. Blueme, M.; Resh, C.; Westerholt, R. Integrating information into survey: challenges and futures. Surv. Res. 2017, 11, 307.
+
+45. Gerber, J.; Gifford, D.; J. P. A. Computational representations of time-series data: a survey.. J. Comp. Biol. 2003, 10, 341–356.
+
+46. Wilhelm, F.H.; Grossman, D. Coefficient of correlation and heart rate variability during alterations. J. Instrum. 2005, 9, 346.
+
+47. Li, L.; Caldwell, G. Coefficient of correlation and the time domain. Ann. Appl. Stat. 1999, 385–389.
+
+48. Resh, D.N.; Reshehe, Y.A.; Mitzenmacher, M. Detecting patterns in large data sets. Science 2011, 331, 1518–1524.
+
+49. Wang, X.; Muen, A.; Ding, H.; Harvey, J.; Gaeckmann, P.; Knight, K. Experimental comparison of representation methods and distance measures for time series data. Data Min. Know. Discov. 2013, 26, 275–286.
+
+50. Zhu, Q.; Quaglini, S. A novel approach to dynamic warping for datasets. In Proceedings of the 2005 ACM International Conference on Management of Data, Baltimore, MD, USA, 14–16 June 2005, p. 491–502.
+
+51. Dong, S.Y.; Park, H.; Cho, H-M. Comparison of different methods of measuring similarity in physiological series. IEEE 2017, 55, 11005–11010.
+
+52. Keogh, E.; Ratanananasa, C.A. Exact estimation of dynamic time warping. Knof. Syst. 2005, 7, 358–386.
+
+53. Montdi, S.; Sco, A.; Valenza, G.; Giannotti, A.; Eminden, M.; Sigiglio, E.P.; Vanello, L. Analysis of coupling between EEG and PPG2 in breathing and breath-hold tasks using maximal information coefficient (MIC). Sci. Rep. 2018, 8, 8492.

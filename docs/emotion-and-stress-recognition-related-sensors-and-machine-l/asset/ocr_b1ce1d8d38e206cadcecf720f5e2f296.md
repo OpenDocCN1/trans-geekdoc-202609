@@ -1,0 +1,11 @@
+Some scientists predict that EEG-based BCI devices will improve their usability. Therefore, shortly, they could be used on an everyday basis for emotion detection with several purposes, such as emotion monitoring in health care facilities, gaming and entertainment, teaching-learning scenarios, and optimizing performance in the workplace [6], among other applications.
+
+# 1.2. Emotion Representations
+
+Emotions can be represented using different general models [7]. The most used are the discrete model and the dimensional models. The discrete model identifies innate, and universal emotions from which all other emotions can be derived. Some authors state that these primary emotions are happiness, sadness, anger, surprise, disgust and fear [8]. Some researchers consider that this model has limitations representing specific emotions in a broader range of affective states.
+
+Alternatively, dimensional models represent complex emotions in a two-continuous space: Valence-arousal (VA), or in three dimensions: Valence, arousal, and dominance (VAD) [9]. The VAD model has valence and arousal as axes. Valence allows to rate positive and negative emotions and ranges from happy to unhappy (or). Three-dimensional models add a dominance dimension to evaluate from submissive (powerless) to empowered emotions. For instance, fear and anger have similar valence-arousal representations on the VA plane. In this example, the dominance dimension improve "emotional resolution" through the dominance dimension. Hence, the dominance dimension improves the differentiation between these two emotions.
+
+Figure 1 shows a VA plane with the representation of basic emotions. The horizontal axis corresponds to valence dimensions, from positive to negative emotions. Likewise, the vertical axis corresponds to arousal. These two variables can be thought of as emotional state of the same components [5]. Figure 2 presents the VAD space with a representation of the same basic emotions.
+
+![](bbox=[0.235, 0.535, 0.765, 0.735])
