@@ -1,0 +1,10 @@
+# MAINTENANCE
+
+Predictive maintenance indeed helps in determining the condition of industrial machines by analyzing the working status of individual parts and predicting when the machine parts require maintenance, and what type of maintenance to be given, like repairing or parts replacement. Implementation of a Machine Learning (ML)—based predictive model results in cost savings by avoiding unexpected downtime due to equipment failure. For predictive maintenance, data is collected over a period of time by continuously monitoring the state of machines in real-time. Besides, to facilitate the prediction of failure and maintenance, blockchain-based DTs of vital parts of the machines are constructed and data is extracted from these DTs. This data is stored in a decentralized manner in blockchain in our proposed framework. The main goal is to find the patterns that assist in predicting and preventing machine failures.
+
+10.1.3.1 ROLE OF ML
+
++   - Predictive models can be created to maximize the lifetime of equipment, functioning effectiveness, and uptime.
+- Anomalies and failure patterns can be detected, and early warnings can be given.
+
+There are multiple modeling techniques for predictive maintenance. Among them, the regression model can be used for predicting the remaining valuable lifetime. Failure can be predicted using classification models. Multiple types of failures can also be predicted by framing them as multi-class problems. In the classification model, prediction is done within a predefined time frame. In both these models, static and historical data are utilized for the prediction of failures and relationships among features. It is also used in modeling the degradation path [9]. The huge volume of data collected from real-time entities as well as from the DT helps the model to understand the relationship between characteristics of equipment during normal and failure times.

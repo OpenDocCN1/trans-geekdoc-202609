@@ -1,0 +1,9 @@
+# Preface
+
+Blockchain technology has leveraged most of the manufacturing and service industries by deploying inviolable trust. It is the design, the blue-print of a product, to the sales and after-sale agreements for the product. All transactions are documented well in this distributed ledger. Blockchain has identified many applications across industries, such as integrated architecture for handling IoT ecosystems, measuring diagnosis accuracy, blockchain-based smart tracing and tracking platforms for supply chains, and handling privacy and security preservation of health records.
+
+Huge growth in the usage of blockchain, with the amalgamation of AI and big data, has exploited the potential of the data generated from current industrial practices. The trustworthiness of blockchain technology and its digital twin has greater reach when compared to traditional systems. The blockchain will intelligently automate the generation of smart contracts from the Industrial Internet of Things, parallel governance, cybersecurity, and the healthcare sector in providing policy-making processes.
+
+Today, the parallel existence of blockchain-based digital twins influences AI, ML, and IoT to integrate smart contracts across industries. In the real world, document frauds are very common; thus, blockchain-based smart contracts will help mitigate this problem and assist in easy record-keeping from the beginning of the contract until the end. The smart contract will be viable to assist in legal proceedings.
+
+The world is keen to leverage multi-faceted blockchain techniques to deploy and deliver newer business models. Recent times have witnessed tremendous growth in blockchain technology, its related framework, and the

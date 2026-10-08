@@ -1,0 +1,9 @@
+One technology that is particularly useful in the healthcare system is the Directed Acyclic Graph (DAG), which uses distributed ledger technology to ensure that all participants have the same information. This leads to more accurate predictions that can be agreed upon worldwide. DAG also provides better control over medical service providers, patients, and practitioners.
+
+In addition, supply chains in the pharmaceutical industry can be built with transparency using blockchain technology. Smart contracts can also be used to streamline the claims process for insurance companies, ensuring that patients receive their benefits quickly and efficiently.
+
+Many researchers proposed a semantic and scope of healthcare DT and a patient-centric mathematics was developed using a cloud data model which implements blockchain technology. They described the system protocol, its analytic features, and its feasibility. Related data of a patient can be collected for the DT to analyze and provide exact reasons for the current state of the patient and also predict the problems they may face in the future.
+
+Public and private are two types of blockchain technology available. In a public blockchain, anyone can participate as a node, validate transactions, and write data onto the blockchain. This makes it a permissionless blockchain, meaning there are no restrictions on who can participate. Bitcoin and Ethereum are examples of popular public blockchain systems used for various applications.
+
+In healthcare, there are also public blockchain systems that have been developed for storing and sharing medical data securely and transparently. Examples of public healthcare blockchains include MedRec, Nebula Genomics, FHIRChain, BurstIQ, and Showtime, among others. These systems aim to improve data sharing and interoperability across various healthcare providers and institutions while maintaining patient privacy and security.

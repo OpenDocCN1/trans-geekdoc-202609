@@ -1,0 +1,9 @@
+it possible to store data in a distributed manner without a central authority having access to all of it [11]. New transactions may be added, but the ones that are already cannot be altered or corrupted in any way. The integrity of the data and the transparency of the process are all ensured by this. The creation of a digital twin on a blockchain would make it possible to record in an unchangeable format any and all data relating to a physical product. Additionally, the transaction records associated with the product can be retained.
+
+A digital twin that is constructed using conventional technology is required to have a centralized intermediary in order to store digital data and do data analytics [12]. The idea of digital twins will almost certainly go through some kind of fundamental adjustment as a result of the rapid development of blockchain technology. The immutability and security that are all assured by blockchain technology will propel digital twins to the next level. Evidently, blockchain is currently being promoted as a technology that may prevent counterfeiting as well as theft. If companies around the world put this into practice with the due care and attention it requires, then the problems caused by forgery and fabrication will be much easier to solve.
+
+The confidence that individuals have in a variety of products receives a considerable boost [13]. Instantly, purchasers have access to all the important information regarding any product. Everyone would have access to in-depth information about each product, and the idea of unconfirmed ownership would become a thing of the past as a result. This invigorating combination is making its way into every industrial vertical, from the manufacturing sector to healthcare, advertising, and the logistics industry.
+
+# 5.2 BENEFITS OF USING BLOCKCHAIN FOR DIGITAL TWIN
+
+There are numerous benefits of using blockchain for Digital twins as depicted in Figure 5.1.

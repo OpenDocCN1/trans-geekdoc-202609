@@ -1,0 +1,254 @@
+
+- agents 183
+- financial entities 183
+- vehicles 13
+
+# B
+
+- Bandwidth 253 consumption 253
+- Bank server 77
+- Bayesian estimation 259
+- Big data 281, 289
+- Binance coin 28
+- Bitcoin (BTC) 1, 23, 28, 38, 61–64, 69, 72, 84, 85, 147, 160, 170
+  - addresses 64
+  - ledger 64
+  - transaction 1, 64, 84, 85, 160
+- Block 68, 73–76, 87, 168, 268
+  - height 75
+  - version 68
+- Blockchain 1–6, 10–12, 14–33, 38–42, 44–57, 61–75, 79–88, 91–93, 99–110, 112–117, 120, 121, 123–127, 136, 137, 143–148, 150, 151, 154, 160–162, 168–174, 176–179, 183–187, 189–196, 198–211, 213, 214, 218–220, 223, 246, 249, 251–255, 258–262, 265–272, 274, 275, 280, 281, 283, 284, 287–289, 293
+- AI algorithms 38
+  - architecture 76
+- data 92, 107, 112, 116, 224, 259, 262
+  - digital twins (DTs) 1, 37, 91, 119, 141, 157, 183, 223, 249, 262, 279
+  - firewall 141
+- innovation 61
+- interoperability 51
+- network 81, 219, 272
+- platform 32, 49, 113, 115, 116
+- services 115
+- solutions 115
+- system 148
+- technology 1, 3, 5, 6, 10, 12, 14–16, 18–20, 23, 26–29, 31–33, 37–40, 43, 44, 47–50, 54, 57, 61–63, 65–67, 69, 71–73, 85, 87, 88, 92, 93, 99, 107, 113, 115, 116, 119–121, 123–127, 137, 143, 144, 147, 148, 160, 161, 168, 170, 172, 174, 177, 188, 183, 184, 192–194, 204, 205, 207, 208, 210, 218, 220, 249, 251, 254, 258–262, 268, 269, 275, 280, 282, 284, 288, 293
+- Blueprint collection 237
+- Bluetooth 26
+- Broadcast 63
+- Building information modeling (BIM) 99, 189–191, 224, 233
+  - files 99
+  - workflow 190
+- Business
+  - intelligence 194
+  - models 183
+
+# C
+
+- Cardano 28
+- Case studies 173
+- Central processing units (CPU) 168
+  - Centralized network 71, 76, 77
+  - point 37
+- Certificate 27, 205
+  - chain 31
+  - verification 32
+- Chain 23, 31, 52, 73, 74, 192, 269
+- Challenge 1, 29, 37, 61, 91, 119, 141, 157, 183, 223, 249, 279
+  - advisory 229
+- Clothing brand 80
+- Cloud 2, 7, 27, 47, 92, 116, 145
+  - computing (CC) 2, 6, 7, 22, 143, 144, 172, 261
+    - storage 27
+    - technology 7
+  - based services 7, 145, 148, 154, 159, 271
+- Cognitive
+  - insights 95
+  - technology 159
+- Cold storage 106
+- Communication 1, 12, 14, 17, 20, 41, 51, 95, 97, 101, 105, 109, 116, 127, 136, 150, 154, 160, 162, 165, 167, 168, 173, 176, 185, 187, 191, 197, 199, 220, 232, 253, 254, 260, 266, 287–289
+  - bits 154 cost 153 mechanism-, 160
+- Complex task 81, 290
+  - twins 231
+- Composability 108, 110
+- Computation 152, 196, 213
+  - deployment 205
+- Computing 2, 119, 157, 252
+  - resources 167, 171, 263
+- interfaces 168
+- Consensus 70, 71, 82, 83, 87, 100, 101, 169
+  - algorithm 82, 83, 169
+  - determination 70
+- Consortium blockchain 171
+- networks 171
+- Construction 233
+- Consumption 253
+- Contract 101, 141, 169
+- Convolutional neural network (CNN) 256
+- Counterfeit products 20, 22, 23, 240
+- COVID-19 pandemic 22
+- Critical technologies 167, 187
+- Crypto markets 28
+- Cryptocurrency 61, 87, 88
+- Cryptographic map 205
+- Cryptography 18, 27, 33, 41, 43, 55, 63, 65, 68, 88, 99, 152, 192, 204, 205, 220, 268, 270
+- Custom operating system 167
+- Cyber-physical systems (CPS) 2, 129, 132, 157, 159, 164
+
+# D
+
+- Data 10, 20, 24, 25, 37, 45, 49, 50, 91, 93–95, 99, 100, 106–110, 125, 131–133, 145–148, 168, 172, 177, 185, 186, 189, 194, 196, 199, 202, 234, 237, 242, 246, 267, 289, 290
+  - analysis 16, 20, 129, 130, 179, 188, 194, 253, 259, 260
+  - based digital twins (DTs) 108
+  - block 168
+  - coordination 107
+  - fragmentation 53
+  - fusion 108, 243, 246
+  - accuracy 246
+  - gathering 95
+  - holder 142
+  - integration 48, 178, 179, 193, 243
+  - lakes 24, 25
+  - modeling 177
+  - owner 145, 146, 148
+  - protection 41, 190, 220
+  - repository 108
+  - science 37, 91, 93
+  - security 10, 49
+  - sharing 10
+  - storage 2, 42, 72, 198, 202, 208
+  - capacity 50
+  - synchronization 108
+  - tracking 117
+  - transactions 137
+  - updates 37
+  - user 146
+  - wrangler 108
+- Decentralization 1, 39, 69, 99, 190
+- Decentralized applications (DApps) 21, 28, 62, 76, 78, 87, 103–106, 125, 220
+  - board 91, 105, 116
+  - cryptocurrencies 28
+  - decision-making 21
+  - identity management 87
+  - network 78
+  - storage 37, 141, 261
+  - technology 62
+- Decision-making 185
+- Deep learning (DL) 42, 48–51, 120, 142, 178, 256, 259, 262, 275, 287
+- Delegation 173
+- Deployment 200, 205
+  - challenges 57, 184
+- Designers 227, 234
+- Developers 105, 242
+- Diagnosis 241, 243
+- Differentiated systems 177
+- Digital
+  - clone 143
+  - copies 122
+  - degrees 27
+  - footprints 8
+  - identification 117
+  - signature algorithms 69
+  - traces 93, 97
+  - transformation agency 12, 183, 195, 237, 245
+  - twin (DT) 1, 2, 6–14, 16, 18, 20, 22–24, 30–33, 37, 56, 57, 61, 91–99, 106–112, 114–117, 119–130, 132–137, 141–146, 148, 149, 154, 158, 160–165, 168, 173–175, 177–179, 183, 184, 187–189, 191–193, 195–202, 206–211, 214, 218–220, 223–243, 245, 246, 249, 251–254, 256–266, 271, 272, 275, 279–285, 291, 293
+  - aggregate (DTA) 122, 232
+  - architecture 98, 114, 198, 220
+  - blockchain (DTBC) 266, 273
+  - consortium 227
+  - construction 223
+  - context 202
+  - features 94
+  - instance (DTI) 122, 232
+  - model 116, 165, 177
+  - platform 188, 206
+  - prototype (DTP) 232
+  - software 229
+  - standard 219
+  - systems 177, 278
+  - Digitalization 285
+  - Directed acyclic graph (DAG) 22, 270
+  - Distinct layers 167
+  - Distributed hash table (DHT) 114
+  - invention 159
+  - ledger 219, 268, 289
+  - technology (DLT) 22, 30, 31, 72, 101, 111, 191, 219, 282, 288, 289
+  - machine learning (ML) 21, 186
+  - network 79
+  - Document chain 31
+  - Domain
+  - Dolev-Yao (DY) 148
+  - driven design (DDD) 97
+  - double encryption standard (DAES) 142, 154
+  - Dynamic 95
+  - digital twin (DDT) 257, recalibration 95
+
+# F
+
+- Farming 32, 102, 280, 283
+- Fidelity 227
+- Fifth industrial revolution 159
+- Financial conduct authority 28
+- Firmware 46, 168
+- Firozabad police 32
+- Flow description 81
+- Forecasting 129, 190
+- Fourth industrial revolution 2, 158
+- Framework 110, 164, 167, 188, 216
+- Fraud detection 54
+- Fraudulent degrees 27
+- Fused-deposition modeling 165
+- Future data 94
+
+# G
+
+- Gated recurrent unit (GRU) 259
+- Gateway layer 168
+- Genuine data 142
+- Geographic information system (GIS) 204, 224
+- Geth 91, 104, 116
+- Git repository 99
+- Global
+  - administration 189
+  - advancements 175
+  - positioning system (GPS) 29, 287
+- Google cloud platform 27
+- Graphical
+  - design-time tooling 115
+  - processing unit (GPU) 270
+- Guardtime 23
+
+# H
+
+- Hardware and software interconnections 168
+- Harmful nodes 259
+- Harvest 32
+- Hash 68, 75, 192, 205
+  - function 154
+- Health 23, 41, 53, 54
+  - insurance (HIC) 53, 54
+  - fraud detection 54, 55
+- Healthcare 5, 6, 8, 18–25, 30, 32, 38, 41, 42, 49, 50, 54, 56, 57, 72, 73, 88, 96, 112, 124, 143, 144, 160, 162, 183, 185, 207, 223–225, 235, 239, 240, 242, 245, 246, 282
+  - industry 5, 38, 112, 183, 223, 246
+  - services 239
+- Highly privileged medical ledger 142
+- Homogenization 93, 97
+- Hospital administration 240
+- Human digital twin (HDT) 225, 243, 244, 246
+  - architecture 243
+  - technology 243, 246
+- Hybrid 133
+  - control-data 133
+- Hyperledger 16, 23, 71, 91, 103, 116
+  - fabric 16, 23, 91, 103, 116
+
+# I
+
+- Image-based methods 134
+- Immutability 70, 100, 171
+- Immutable 101, 106, 125, 126
+  - copies 126
+- records 101
+- Implementation 209, 223, 230, 254
+- Indoor industrial units 159
+- Industrial
+  - control systems 166
+  - internet of things (IIoT) 157–159, 161, 166, 168, 169, 171, 176, 178, 179, 260

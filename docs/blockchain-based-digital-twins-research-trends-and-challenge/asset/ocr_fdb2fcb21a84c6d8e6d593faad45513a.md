@@ -1,0 +1,3 @@
+# IMPLEMENTATION
+
+After Challenge Advisory sponsored a talk on technology at the University of Michigan in 2002, the concept of a digital twin became well-known. The creation of a product lifecycle management center was the subject of the presentation. It included all of the digital twin’s components, including actual and virtual spaces as well as the diffusion of information and data flow between them. The idea of combining a physical and digital twin into a single entity hasn’t changed over time, even though language may evolve. Digital twin twin technology was developed in the 1960s, contrary to popular belief, which holds that it was first utilized in 2002. Figure 9.4 shows various stages of Digital Twin Implementation.

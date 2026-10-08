@@ -1,0 +1,9 @@
+In healthcare systems, patient histories are digitally recorded as a chain of blocks in a network known as a distributed ledger. This ledger is secured by cryptography and timestamped to ensure its integrity and accuracy. The ledger is contributed to by various healthcare providers, such as nurses, surgeons, doctors, and lab technicians. Due to its decentralized nature, this data cannot be easily hacked or altered by any single party, since any changes made to the ledger must be validated by the other contributors in the network. This ensures that the data is reliable and secure and cannot be reversed or manipulated [31].nA simple use case of healthcare:
+
++   - Step 1: The information of the patient is collected by the health-care providers.
+- Step 2: The patient information is stored in the database.
+- Step 3: A hash key is created for each block of data and is given to the blockchain.
+- Step 4: The patient key access to maintain the privacy of his/her data and decides whom to give access.
+- Step 5: Once a patient has permitted a doctor to access their medical data, the smart contract code present in each block of the distributed ledger is executed. The code verifies the permission and authenticates the doctor’s identity. If the doctor’s identity is authenticated and permission is granted, the hash key is matched with the specific block where the data is stored. The smart contract then allows the doctor to access the patient’s data in that block, ensuring that the data is secure, tamper-proof, and only accessible to authorized parties.
+
+Using blockchain technology in healthcare has two primary benefits. The first is that the system is patient-centric, which means patients own their medical records. However, they cannot modify or delete any data within the blockchain. The data is created by healthcare providers, and patients have

@@ -1,0 +1,9 @@
+improve their operations and outcomes with excellence. One approach is to start by implementing these systems in DTs, which can help identify drawbacks and improve the efficiency and robustness of the physical system. This way, businesses can detect both risks and opportunities before investing in building a complex and highly integrated system from scratch [13].
+
+One of the key benefits of digitization is the ability to store historical and current information updates. This digital information is then used to determine our preferences, as seen in the recommendation systems used by various applications such as Netflix. Nowadays, the success of a business often hinges on its ability to collect digital data, which can then be used to display advertisements to customers based on their interests and previous behavior. For instance, if a customer views a particular product on Facebook or Amazon, similar products may be recommended to them through advertisements, ultimately enticing them to make a purchase. The technologies used with DTs their challenges and the avenue for more research in this field were discussed [14].
+
+The use of DTs is not limited to specific industries but spans across various fields. For example, an electrical engineer designing an electronic circuit and a dentist planning orthodontic treatment using DTs through scans and simulations before implementation. With the availability of cloud technology that provides extensive computational power and unlimited storage, exciting opportunities arise for DTs [15].
+
+# 1.1.3 ADVANTAGE OF AMALGAMATION OF DATA ANALYSIS, BLOCKCHAIN, DTS TECHNOLOGIES
+
++   1. Data Integrity: Blockchain technology guarantees data integrity and transparency by using encrypted data transfer, which also enables the traceability of transactions.

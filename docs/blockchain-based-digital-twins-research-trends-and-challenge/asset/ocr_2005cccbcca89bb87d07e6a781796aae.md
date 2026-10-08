@@ -1,0 +1,9 @@
+information besides distributing and giving information to other components.
+
+The Blockchain Technology Uses Hash Algorithm: Chains of connected blocks make up the blockchain, which is made up of individual blocks. This framework component in the blockchain technology comprises a connector and structure in favor of every frame, significantly the header checksum in a block, log file besides a period to design a network, the disorganized underlying cause checksum for the preceding frame in accordance with the connectivity rules, and the structure containing encrypted and parsed crucial operations. The component may be present in several events. Network checksums are distinct; therefore, if any changes are made to any block header, the associated checksum of the block will also be changed. One technique used to verify cryptographic reliability is evidence of work.
+
+# 8.2.3 ASSOCIATION OF BLOCKCHAIN, IOT, DT, AND AI
+
+Blockchain technology until a few years ago was only mentioned in relation to transactions. Ever more research highlights the advantages of integrating blockchain – based on certain other breakthroughs like IoT and AI. The application of blockchain-based to enhances different IoT equipment's system architecture. Blockchain design may be changed such that the resultant technology, especially in terms of process efficiency, is increasingly suited to support IoT applications [9]. Some research emphasizes incorporating information with AI along with the relationship connecting technology with IoT.
+
+Currently, rather than using all these technologies at once, the emphasis is mostly on integrating blockchain in tandem with cutting-edge innovation that spans AI and IoT. Furthermore, integrating these advances will be the only way to fully utilize the promise of these novel, developing technologies. Create an IoT and AI-friendly blockchain architecture. A brief explanation of the
