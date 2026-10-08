@@ -1,0 +1,14 @@
+
+# References 127
+
+- [201] M. Welling, R. Zemel, and G. E. Hinton, “Self-supervised boosting,” in Advances in Neural Information Processing Systems 15 (NIPS’92), (S. Becker, S. S. Thrun, and K. Obermayr, eds.), pp. 665–672. MIT Press, 2003.
+- [202] J. Weston, F. Ratle, and R. Colbert, “Deep learning via semi-supervised embedding,” in Proceedings of the Twenty-fifth International Conference on Machine Learning (ICML’08), (W. W. Cohen, A. McCallum, and S. T. Rowchis, eds.), pp. 1168–1175, New York, NY: ACM, 2008.
+- [203] C. K. Williams and C. E. Rasmussen, “Gaussian processes for regression,” in Advances in neural information processing systems 9 (NIPS’96), (D. Tourt, Z. Moser, and M. Hasselo, eds.), pp. 514–520, Cambridge: MIT Press, 1996.
+- [204] L. Wiskott and T. J. Seijmans, “Feature analysis: Unsupervised learning of invariances,” Neural Computation, vol. 14, no. 4, pp. 715–770, 1992.
+- [205] D. H. Wolpert, “Evolution of neural networks,” Neural Networks, vol. 5, pp. 241–249, 1992.
+- [206] Z. Wu, “Global consistency for distance geometry problems,” SIAM Journal of Optimization, vol. 7, pp. 814–836, 1997.
+- [207] P. X. Enami and F. Jelinek, “Training connectionist models for the structured language model,” in Proceedings of the 2003 Conference on Empirical Methods in Natural Language Processing (EMNLP’2003), vol. 10, pp. 160–167, 2003.
+- [208] A. Yan, “Separating the polynomial-time hierarchy by oracles,” in Proceedings of the 26th Annual IEEE Symposium on Foundations of Computer Science, pp. 1–10, 1985.
+- [209] D. Zhou, O. Bousquet, T. Lavin, J. Weston, and B. Schölkopf, “Learning with local and global consistency,” in Advances in Neural Information Processing Systems 16 (NIPS’03), (S. Thrun, L. Saul, and B. Schölkopf, eds.), pp. 321–328, Cambridge: MIT Press, 2004.
+- [210] X. Xu, Z. Ghahmani, and J. Lafferty, “Semi-supervised learning using Gaussian fields and harmonic functions,” in Proceedings of the Twenty International Conference on Machine Learning (ICML’03), (T. Fawcett and N. Mishra, eds.), pp. 912–919, AAAI Press, 2003.
+- [211] M. Zikovich, “Online convex and generalized infinitesimal gradient ascent,” in Proceedings of the Twenty International Conference on Machine Learning (ICML’03), (T. Fawcett and N. Mishra, eds.), pp. 928–936, AAAI Press, 2003.

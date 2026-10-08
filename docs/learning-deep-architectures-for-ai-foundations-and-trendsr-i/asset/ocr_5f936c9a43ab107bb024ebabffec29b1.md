@@ -1,0 +1,11 @@
+# 7.2 Denoising Auto-Encoders 81
+
+successful as unsupervised pre-training for a deep architecture, and to link the denoising auto-encoder to a generative model.
+
+Consider a random $d$-dimensional vector $X$, $S$ a set of $k$ indices, $X_S=(X_1,\dots,X_s)$ the sub-elements selected by $S$, and let $X_{-S}$ all the sub-elements except those in $S$. Note that the set of conditional distributions $P(X_S|X_{-S})$ for some choices of $S$ fully capture the joint distribution $P(X)$, and this is exploited, for, Gibbs sampling. Note that bad things happen when $|S|=1$ and some pairs of input are perfectly correlated; the predictions can be perfect even though the joint not really been captured, and this would correspond to a Gibbs chain that does not mix, i.e., does not converge. By considering random-size subsets and also insisting on reconstructing everything (like ordinary auto-encoders), this type of problem may be avoided in denoising auto-encoders.
+
+Interestingly, in stacking denoising auto-encoders into a deep architecture fine-tuned with respect to a supervised criterion yielded performance was systematically better than stacking ordinary auto-encoders, and comparable or superior to Deep Belief Networks [195].
+
+An interesting property of the denoising auto-encoder is that it can be shown to correspond to a generative model. Its training criterion is a bound on the log-likelihood of that generative model. Several possible generative models are discussed in [195]. A simple generative model is semi-parametric: sample a training example, corrupt it stochastically, apply the encoder function to obtain the hidden representation, apply the decoder function to it (obtaining parameters for a distribution over inputs), and sample an input. This is not very satisfying because it requires to keep the training set around (like non-parametric density models). Other possible generative models are explored in [195].
+
+Another interesting property of the denoising auto-encoder is that it naturally lends itself to data with missing values or multi-modal data (when a subset of the modalities may be available for any particular example). This is because it is *trained* with inputs that have “missing” (when corruption consists in randomly hiding some of the input values).
