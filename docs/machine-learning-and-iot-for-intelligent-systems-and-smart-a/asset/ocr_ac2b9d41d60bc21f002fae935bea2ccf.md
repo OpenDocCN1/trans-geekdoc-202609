@@ -1,0 +1,3 @@
+[48]. Sharma, Manvinder, Bikramjit Sharma, Anuj Kumar Gupta, and Bhim Sain Singla. “Design of 7 GHz microstrip patch antenna for satellite IoT- and IoE-based devices.” In The International Conference on Recent Innovations in Computing, pp. 627–637. Springer, Singapore, 2020.
+
+[49]. Elgabry, Mariam, Darren Nesbeth, and Shane D. Johnson. “A systematic review protocols for crime trends facilitated by synthetic biology.” Systematic Reviews 9, no. 1, 22, 2020.
