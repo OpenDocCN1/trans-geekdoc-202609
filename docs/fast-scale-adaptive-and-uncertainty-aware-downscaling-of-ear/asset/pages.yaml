@@ -1,0 +1,1174 @@
+- pgno: 0
+  md: '# nature machine intelligence
+
+
+    Article
+
+
+    https://doi.org/10.1038/s42256-025-00980-5
+
+
+    # Fast, scale-adaptive and uncertainty-aware downscaling of Earth system model
+    fields with generative machine learning
+
+
+    +   - Received: 1 March 2024
+
+    - Accepted: 20 December 2024
+
+    - Published online: 13 March 2025
+
+    - Check for updates
+
+
+    Philipp Hess $^{1, 2} \odot$, Michael Aich $^{1, 2}$, Baoxiang Pan $^{3, 5} \&$
+    Niklas Boers $^{1, 2, 4} \odot$
+
+
+    Accurate and high-resolution Earth system model (ESM) simulations are essential
+    to assess the ecological and socioeconomic impacts of anthropogenic climate change,
+    but are computationally too expensive to be run at sufficiently high spatial resolution.
+    Recent machine learning approaches have shown promising results in downscaling
+    ESM simulations, outperforming state-of-the-art statistical approaches. However,
+    existing methods require computationally costly retraining for each ESM and extrapolate
+    poorly to climates unseen during training. We address these shortcomings by learning
+    a consistency model that efficiently and accurately downscales arbitrary ESM simulations
+    without retraining in a zero-shot manner. Our approach yields probabilistic downscaled
+    fields at a resolution only limited by the observational reference data. We show
+    that the consistency model outperforms state-of-the-art diffusion models at a
+    fraction of the computational cost and maintains high controllability on the downscaling
+    task. Further, our method generalizes to climate states unseen during training
+    without explicitly formulated physical constraints.
+
+
+    Accurate and high-resolution climate simulations are of crucial importance in
+    projecting the climatic, hydrological, ecological and socioeconomic impacts of
+    anthropogenic climate change. Precipitation is one of the most important climate
+    variables, with particularly large impacts, for example, on vegetation and crop
+    yields, infrastructure or the economy $^{1}$. However, it is also the variable
+    that is arguably the most difficult to model and predict, especially extreme precipitation
+    events, resulting from a complex interaction of processes over a large range of
+    spatial and temporal scales that cannot be fully resolved.
+
+
+    Numerical Earth system models (ESMs) are our main tool to project the future evolution
+    of precipitation and its extremes. However, they exhibit biases and have much
+    coarser spatial resolution, on the order of 10–100 km, than that needed for the
+    reliable assessments of impacts of climate change $^{2}$. Therefore, ESM projections
+    have to be downscaled to higher resolution, for which several machine-learning-based
+
+
+    approaches have recently been proposed. Due to the chaotic nature of geophysical
+    fluid dynamics, the trajectory of climate simulations will not match historical
+    observations, requiring approaches suitable for unpaired samples to learn such
+    tasks. Recently, methods from generative deep learning have shown promising results
+    in downsampling or correcting spatial patterns of ESM simulations. Normalizing
+    flows (NFs) $^{6}$ and generative adversarial networks (GANs) $^{3,4,7-9}$ can
+    perform these tasks efficiently in a single step $^{5,10}$. However, NFs often
+    exhibit lower quality, for example, less sharp and less detailed generated images,
+    whereas GANs can suffer from training instabilities and problems such as mode
+    collapse $^{11}$. Moreover, these approaches require computationally expensive
+    retraining of the neural networks for each specific ESM simulation to be processed.
+    This makes downscaling large ESM ensembles, as needed in impact assessments, prohibitively
+    costly and time-consuming.
+
+
+    +   1. $^{1}$Earth System Modelling, School of Engineering and Design, Technical
+    University Munich, Munich, Germany. $^{2}$PotSDam Institute for Climate Impact
+    Research, Potsdam, Germany. $^{3}$Institute of Atmospheric Physics, Chinese Academy
+    of Sciences, Beijing, China. $^{4}$Global Systems Institute and Department of
+    Mathematics, University of Exeter, Exeter, UK. $^{5}$Present address: Institute
+    of Atmospheric Physics, Chinese Academy of Sciences, Beijing, China.
+
+
+    ✉ e-mail: philipp.hess@tum.de'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/cdba53dcfff3f101fe91360e2f61dbbc_1_0.png)
+
+
+    **Fig. 1 | Sketch of CM for downscaling ESM fields.** Unconditional training of
+    score-based diffusion and CMs that learn to reverse a forward diffusion process
+    (i). Although the SDE of the diffusion model requires an iterative integration
+    over many steps, the CM only takes a single step to generate a global precipitation
+    field from noise. The unconditionally trained CM is used to downscale (upsample)
+    a low-resolution ESM precipitation field to a four times higher resolution (ii).
+    By adding noise of a chosen variance to the ESM field, the spatial scale to be
+    preserved in the ESM can be controlled: a small noise variance implies a close
+    pairing to the original ESM field with only small changes; a larger variance will
+    result in changes at larger spatial scales and in weaker pairing to the ESM field.
+
+
+    Diffusion-based generative models have demonstrated superior performance over
+    NFs and GANs on classical image generation tasks1,2,3. Crucially, iteratively
+    solving the reversed diffusion equation allows for strong control over the image
+    sampling process.
+
+
+    This enables foundation models for computer vision and image processing, which
+    are only trained to generate target dataset samples from noise and which can later
+    be repurposed for different downstream tasks, for example, inpainting, classification,
+    colourisation or generating realistic images based on a given “stroke sketch”
+    guide as with SDEdit14,15,16.
+
+
+    So far, such diffusion-model-based approaches have only been applied to downscale
+    idealized fluid dynamics17,18 in Earth system science-related tasks. Both studies
+    use stochastic differential equation (SDE)-based diffusion models and achieve
+    remarkable performance. The iterative integration of the SDE, however, implies
+    that the generative network needs to be evaluated up to 1,000 times to downscale
+    a single simulation field. This makes such methods unsuitable for processing large
+    simulation datasets, for example, at high temporal resolution or over long periods,
+    as would be needed in the context of climate change projections and impact assessments.
+
+
+    Much effort has been taken to improve the sampling speed of diffusion models.
+    Using ordinary differential equations instead of SDEs can reduce the number of
+    integration steps to around 10–50 (refs. 19,20). Distillation techniques can also
+    be applied to improve the sampling speed to a single step21,22. However, they
+    require additional training costs and hyperparameter choices. In general, a trade-off
+    between the number of generative steps and the resulting image quality scores
+    has been found11,13,20. Recently, consistency models (CMs) have been
+
+
+    proposed that can be directly trained as single-step generative models without
+    sacrifices in the controllability of sampling23. CMs have been shown to outperform
+    distilled single-step diffusion models on common image benchmarks24.
+
+
+    In this work, we tackle the shortcomings of standard diffusion models by using
+    CMs23 to downscale global precipitation simulations from three different ESMs
+    in a single step (Fig. 1). In summary, we aim to establish a generative model
+    for downscaling ESM fields that fulfils the following conditions:
+
+
+    +   * The CM model is trained on the target dataset only, without conditioning
+    on the ESM. This makes the method applicable to any ESM without requiring computationally
+    expensive retraining.
+
+    * The training minimizes a regression loss that is more stable than the adversarial
+    training in previous methods25,6,29,30.
+
+    * The generative downscaling is controllable at the inference stage after training,
+    allowing the choice of a characteristic spatial scale up to which unbiased spatial
+    patterns are preserved in the ESM.
+
+    * The model only requires a single network evaluation instead of the many iterative
+    evaluations in diffusion-model-based downscaling approaches5,7.
+
+    * The model allows to generate a large number of downscaled realizations for a
+    single ESM field (that is, a one-to-many mapping), enabling probabilistic downscaling
+    and a quantification of the sampling spread.
+
+    * The method does not require specifically formulated physical constraints26 to
+    preserve trends27.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Table 1 | Summary statistics comparing our CM approach and the SDE bridge
+    as a benchmark
+
+
+    |Model|Correlation (pooled)|Correlation (low pass)|Mean error|%S|95th percentile
+    error|Sample time (s)|
+
+    |---|---|---|---|---|---|---|
+
+    |SDE|0.918|0.916|0.214|72.51|1.106|68.15|39.4|
+
+    |CM|0.954|0.941|0.217|72.08|1.080|68.92|0.1|
+
+
+    Correlations are computed on the native POEM grid (3°×3.75°; second column) by
+    applying a 4×4 average pooling to the downscaled fields and on the downscaled
+    grid (third column) by applying a low-pass filter to the high-resolution fields
+    with a cut-off frequency that is consistent with the chosen spatial scale in POEM
+    to be preserved. The global long-term mean absolute error with respect to ERA5
+    (fourth column) and the respective error reduction compared with the POEM ESM
+    bias (fifth column). The global absolute error in the 95th precipitation percentile
+    (sixth column) and the error reduction with respect to the POEM ESM bias (seventh
+    column). An estimation of the mean sampling time is also reported (eighth column).
+    The best performance is given in bold font.
+
+
+    # Results
+
+
+    We evaluate our CM-based downscaling method against an SDE bridge$^{7,8}$ over
+    the test-set data. We investigate the performance of downscaling, the ability
+    to correct distributional biases in the ESM, the sample spread given a chosen
+    spatial scale and the preservation of trends in future climate scenarios.
+
+
+    # Downscaling spatial fields
+
+
+    For a qualitative comparison, we show single precipitation fields in Fig. 2. Both
+    generative downscaling methods, based on the SDE bridge (Fig. 2e) and CM (Fig.
+    2g), can produce high-resolution precipitation fields that are visually indistinguishable
+    from the upscaled ERA5 data (Fig. 2a). A similar performance can be seen when
+    downscaled simulations from the state-of-the-art GFDL-ESM4 and the more lightweight
+    SpeedyWeather$^{1}$ general circulation model, as well as when applying our method
+    to initially upscaled ERA5 data as a proof of concept (Supplementary Figs. 3 and
+    6).
+
+
+    When upscaled back to the native ESM resolution using a 4 × 4-kernel average pooling,
+    an accurate representation of the low-resolution ESM simulation field is apparent.
+    As indicated in Fig. 2f,g, for the case of the Potsdam Earth Model (POEM) model,
+    a high Pearson correlation of 0.89 and 0.95 for the SDE and CM methods, respectively,
+    is maintained between upscaled corrected and native fields. We provide correlation
+    statistics for the entire test set in Table 1. Besides the average pooled fields,
+    we also compare the downscaled and linearly interpolated POEM simulation on the
+    high-resolution grid by applying a low-pass filter with a cut-off frequency set
+    to k$^{*}$ = 0.067 on the downscaled fields before computing the correlation.
+    In this way, we test the preservation of the large-scale patterns in the ESM.
+    More specifically, we measure how similar the downscaled fields are to the original
+    coarse fields when upsampling them back to the same resolution. The SDE bridge
+    achieves a mean correlation of 0.918 and 0.916 for the average pooled and low-pass
+    filtered fields, respectively. Our CM-based method achieves even higher correlation
+    values of 0.954 and 0.941 for the corresponding measures. The CM-based downscaling
+    also shows higher correlations when downscaled ERA5 (Supplementary Table 2).
+
+
+    We estimate the average time it takes to produce a single sample with the SDE
+    and CM methods on an NVIDIA V100 32 GB graphics processing unit. The average is
+    taken over 100 data points. We note the number of SDE integration steps to 500
+    (ref. 17), which is lower than the typical 1,000–2,000 steps$^{12,15}$. The SDE
+    takes an average of 39.4 s, whereas the CM samples are much more efficient, taking
+    only 0.1 s, scaling linearly with the number of samples.
+
+
+    We analyse the downscaling performance of the CM and SDE bridge approaches quantitatively
+    using power spectral densities (PSDs)$^{8,25}$. The interpolated ESM fields under-represent
+    variability at small spatial scales, because these are not present in the low-resolution
+    simulation. This implies an underestimation of spatial intermittency, that is,
+    overly smooth precipitation patterns, which is highly problematic for impact assessment.
+    The generative downscaling methods based on SDEs and CM perform very well in increasing
+    spatial resolution and greatly improve the spatial intermittency at smaller spatial
+    scales (Fig. 3c). The PSD improvements are found to be consistent when applying
+    the CM downscaling to the GFDL-ESM4 and SpeedyWeather$^{1}$ simulations (Supplementary
+    Fig. 4).
+
+
+    We also investigate the change in PSDs as a function of the noise variance schedule
+    time t (Fig. 3b), which is directly related to the spatial scale up to which patterns
+    are corrected$^{1}$. For minimal noise, that is, t$^{*}$ = t$^{min}$, the CM model
+    reproduces the PSD of the ESM, as expected from equation (5) because there are
+    no changes made to the ESM field. For maximal variance with t$^{*}$ = t$^{max}$,
+    the PSD closely matches the ERA5 reanalysis ground truth. For any t$^{min}$ <
+    t$^{*}$ < t$^{max}$, we find a trade-off between the two extreme cases that match
+    the PSD above and below the intersection (Fig. 3a, dotted grey line) to a certain
+    degree, depending on the spatial scales preserved in the ESM.
+
+
+    To test the temporal consistency of the downscaled fields, we report temporal
+    autocorrelation values computed for each grid cell as global averages (Supplementary
+    Fig. 8). We find that the generative and stochastic SDE and CM methods result
+    in a more accurate temporal correlation than the deterministic approach of quantile
+    mapping and bilinear interpolation.
+
+
+    # Bias correction
+
+
+    We compare the ability to correct biases in the ESM with histograms of relative
+    frequency and latitude profiles of mean precipitation to investigate the reduction
+    in known biases such as double Intertropical Convergence Zone (ITCZ)$^{18}$, following
+    the evaluation methodology discussed elsewhere$^{9}$.
+
+
+    When applied to the ESM simulations with preprocessing via quantile delta mapping
+    (QDM), the ability of the CM to correct biases naturally depends on the chosen
+    spatial consistency scale (Supplementary Fig. 9). Selecting the smallest scale
+    reproduces the ESM without any changes, thereby inheriting its biases. Choosing
+    the largest possible scales generates samples with statistics very close to the
+    target dataset. However, the fields become increasingly upsampled to the ESM at
+    such high noise levels (Fig. 1). A scale between these two extremes can correct
+    for biases to a varying degree, depending on the chosen correction scale.
+
+
+    In terms of relative frequency histograms, the ESM simulations (without QDM preprocessing)
+    exhibit a very strong under-representation of the right tail of the distribution,
+    that is, of the extremes (Fig. 4a,b). This misrepresentation of extremes is a
+    key problem with existing state-of-the-art ESMs and makes future projections of
+    extreme events and their impacts, as well as related detection and attribution
+    of extremes, highly uncertain.
+
+
+    Applying QDM to POEM strongly improves the frequency distributions as expected.
+    Downscaling the ESM with the SDE further improves the global histograms by an
+    order of magnitude, particularly for the extremes. Our CM-based method shows the
+    overall largest bias reduction in the global histograms (Fig. 4b). When applied
+    to the different ESMs and the upscaled ERA5 data, our method shows a consistent
+    bias correction skill (Supplementary Fig. 5).
+
+
+    We further compute the error in the 95th percentile of the local precipitation
+    histogram for each grid cell and aggregate the absolute value globally (Table
+    1). The SDE method shows an error of 1.106 mm day$^{-1}$, reducing the error of
+    the POEM ESM by 68.15%. The CM method performs slightly better with an error of
+    1.080 mm day$^{-1}$ and a respective'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/cdba53dcfff3f101fe91360e2f61dbbc_3_0.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_3_1.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_3_2.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_3_3.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_3_4.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_3_5.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_3_6.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_3_7.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_3_8.png)
+
+
+    **Fig. 2| Qualitative comparison of single-day precipitation fields.** a, Daily
+    precipitation from the ERAS target dataset was used for training the generative
+    models. b, Same data as a, but at four times lower resolution for comparison.
+    c, d, Precipitation field from a historical run of the POEM ESM interpolated to
+    the target resolution (c) and on its native resolution of $3^{\circ} \times 3.75^{\circ}$
+    (d). The POEM fields are unpaired with the ERAS field from the same date or any
+    other ERAS field, e, The downscaled field from POEM (d) using the SDE bridge method
+    (d–e). f, An upscaled (average pooled) representation of f for comparison with
+    the original POEM field is shown in d and the Pearson correlation between the
+    two, g, h, Downscaling POEM with the CM-based method (d–g), and the respective
+    pooled field (h). Note that the CM downscaling yields a higher correlation and,
+    hence, better consistency of the large-scale features than the SDE method.
+
+
+    error reduction of 68.92% of the ESM. When downscaling the initially upsamped
+    ERAS data, the CM again shows better performance, with an error of 0.725 mm day$^{-1}$
+    compared with the SDE with an error of 0.868 mm day$^{-1}$ (Supplementary Table
+    2).
+
+
+    POEM exhibits a strong double-ITCZ bias that is common among state-of-the-art
+    ESMs$^{36}$ (Fig. 4c). As expected, QDM can remove most of the biases, though
+    slightly underestimating the peak north of the equator in the ITCZ. The downscaling
+    methods based on the SDE bridge'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Article
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_4_0.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_4_1.png)
+
+
+    **Fig. 3|Mean spatial PSDs of global precipitation fields.** a, Comparison of
+    the PSDs for the target ERAS reanalysis data (black), the POEM simulations interpolated
+    to the same high-resolution grid (orange), the SDE bridge (cyan) and the CM downscaling
+    (magenta). The vertical dashed lines mark the spatial scale at which the PSDs
+    of POEM and ERAS intersect and are, thus, a natural choice for the wavenumber
+    *k* up to which to correct. In turn, the term $\langle f^{2}\rangle$--the noising
+    strength in the diffusion models (equation (11)). b, CM downscaling (dashed lines)
+    applied to PCOEM with different spatial scales as a function of noising strength
+    over the entire range $[f_{\min}, f_{\max}]$. Noising smaller scales implies nearly
+    reproducing the POEM simulations, whereas noising larger scales corresponds to
+    a weaker pairing to the ESM (Fig. 1).
+
+
+    and CM show a similar absolute error for these latitude profiles as when only
+    applying SDE alone (Fig. 4c).
+
+
+    We report the absolute value of the grid-cell-wise error in the long-term mean,
+    again averaged globally, for both downscaling methods (Table 1). The SDE downscaling
+    results in an error of 0.214 mm day$^{-1}$, reducing the error in POEM by 72.51%,
+    and performing slightly better than our CM method, which exhibits an error of
+    0.217 mm day$^{-1}$ and a respective error reduction of 72.08% when applied to
+    POEM. Evaluated on the ERAS data, we find that the CM method performs slightly
+    better than the SDE in terms of mean absolute error and RMSE (Supplementary Table
+    2).
+
+
+    # Quantifying the sampling spread
+
+
+    Our generative CM-based downscaling is stochastic, with a one-to-many mapping
+    of a single ERA5 field to many possible downscaled realizations. It, thus, naturally
+    yields a probabilistic downscaling, suitable to estimate the associated uncertainties.
+    By selecting a given spatial scale in the ESM to be preserved by the downscaling
+    method, one automatically chooses a related degree of freedom to generate patterns
+    on smaller scales. Given that our CM method is very efficient at inference, we
+    can generate a large ensemble of high-resolution fields that are consistent with
+    the low-resolution ESM input, and compute statistics such as the sampling spread,
+    which can be interpreted as a measure of the inherent uncertainty of the downscaling
+    task.
+
+
+    We compute an ensemble of $10^{4}$ downscale fields from a single ESM precipitation
+    field (Fig. 5a) and evaluate the mean and standard deviation (Fig. 5d,e). The
+    ensemble mean shows close similarity to the ESM simulation interpolated to the
+    same high-resolution grid. The sample spread shows patterns similar to the mean,
+    although with a smaller magnitude.
+
+
+    We evaluate an ensemble of 100 downscaled realizations of coarse ESM fields using
+    the continuous ranked probability score (CRPS)$^{39}$, for three different noise
+    scales, corresponding to $t=f_{\min}$, $t^{*}=t$ and $t=f_{\max}$ (Supplementary
+    Fig. 7). Further, the CRPS is evaluated as a skill score (continuous ranked probability
+    skill score) relative to the baseline ensemble of 100 random high-resolution ESM
+    fields. We find that the noise strength enables the calibration of ensemble spread,
+    which is sharp for small noise scales and increasingly broad for larger noise
+    scales. The intermediate noise scale ($t=t^{*}$) shows the lowest CRPS, and maximum
+    noise leads to a similar continuous ranked probability skill score to the baseline
+    climatology of drawing random fields. For definitions of the CRPS and continuous
+    ranked probability skill score, see Supplementary Section 8.
+
+
+    # Future projections
+
+
+    The efficient nature of our CM approach enables the downscaling of long climate
+    simulations over a century, such as that prescribed with the SSP5-8.5 high-emission
+    scenario from the Coupled Model Intercomparison Project Phase 6. We find that
+    the downscaling accurately preserves the global precipitation content of the ESM
+    and preserves the nonlinear trends, as expected from the Clausius--Clapeyron relation$^{38}$.
+    The network, thus, generalizes to the out-of-sample predictions of increasing
+    global mean precipitation without the need for hard-coding auxiliary physics constraints
+    in the network, as done in other work$^{34,35,37}$. However, our method can, in
+    principle, be extended to such constraints to exactly preserve trends. We note
+    that the ability to preserve trends is expected to be related to the noise variance
+    used for conditioning the downscaling, as maximum noise corresponds to sampling
+    from the learned historical ESM distribution, and the absence of noise does not
+    alter the ESM simulation in any way.
+
+
+    # Discussion
+
+
+    We introduced a generative machine learning approach for the efficient, scale-adaptive
+    and probabilistic downscaling of ESM precipitation fields. Our approach is based
+    on CMs, a recently developed method that learns a self-consistent approximation
+    of a reversed diffusion process. The CM can generate highly realistic global precipitation
+    fields learned from the ERAS reanalysis data, which is used as the ground truth,
+    in a single step. Our framework corrects the representation of extreme events
+    as well as spatial ESM patterns especially at small spatial scales, which are
+    both crucial for impact assessments. Moreover, spatial biases are also corrected
+    efficiently.
+
+
+    For the specific task considered here, the CM method is up to three orders of
+    magnitude faster than current diffusion models based on SDEs$^{12,13,15,17}$,
+    which need to iteratively solve a differential equation. Crucially, the CM maintains
+    a high degree of controllability to guide the sampling in such a way that unbiased
+    spatial patterns larger than a chosen spatial scale in ESMs are preserved.
+
+
+    Similar to the SDE-based method$^{17}$ that apply to idealized fluid dynamics,
+    our CM-based model only needs to be trained once on a given high-resolution observational
+    target dataset. Because we do not condition on the ESM input during training,
+    our method can be applied to any ESM without the need for retraining. Combined
+    with the efficient sampling of CMs, our approach is computationally fast.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/cdba53dcfff3f101fe91360e2f61dbbc_5_0.png)
+
+
+    Fig. 4 | Comparison of global histograms and longitudinal mean precipitation.
+    **a**, Global histograms of relative precipitation frequency for the ERA5 reanalysis
+    data (black). POEM simulations without applying QDM preprocessing (grey), POEM
+    simulations with QDM (orange), the SDE bridge (cyan) and the CM (magenta). **b**,
+    Absolute errors of the histograms in **a** with respect to the ERA5 ground truth.
+    **c**, Precipitation averaged over time and longitudes for the same data as in
+    **a**, **d**. Absolute errors of the latitude profile in **c**. Both SDE and CM
+    downscaling methods are able to further improve on the QDM preprocessing in terms
+    of bias correction, most particularly for extreme precipitation.
+
+
+    particularly when processing large ensembles of ESMs, without noticeable trade-offs
+    in accuracy.
+
+
+    Our CM-based approach can create highly realistic fields that maintain high correlation
+    levels with the ESMs at the spatial scales chosen to be preserved. We find slightly
+    better and at least competitive results when compared with the much more computationally
+    expensive SDE-based method. The efficient single-step generation of ESM fields
+    will be particularly relevant for processing large datasets, for example, large
+    ensembles as needed for uncertainty quantification, for simulations with a high
+    temporal resolution, or long-term studies such as those in paleoclimate simulations.
+    The ability to calibrate the ensemble harness and spread using different noise
+    scales could be useful for weather prediction tasks, too. When applying our method
+    to weather predictions, changes in the training data and splits might be of advantage
+    to avoid distributional shifts due to the availability of satellite data. Improving
+    the efficiency of current deep learning models is also important from an energy
+    consumption perspective; in this regard, our method provides a valuable contribution
+    towards greener artificial intelligence ³¹.
+
+
+    When evaluated on a future very high-emission scenario, we find that our generative
+    CM method accurately preserves the trend of the ESM, even for an extreme scenario
+    of greenhouse gas
+
+
+    emissions and associated global warming. This is remarkable as many machine-learning-based
+    applications to climate dynamics struggle with the out-of-sample problem imposed
+    by our highly non-stationary climate system, when trained on historical data alone.
+    In contrast to previous studies ³˒⁴, to achieve this, it is not necessary to add
+    specifically formulated physical constraints to our model. Our unconstrained CM
+    method, hence, allows for a more natural generalization to unseen climate states,
+    inherently translating non-stationary dynamics from the ESM to the downscaled
+    high-resolution fields. However, as the global mean of the ESM is only approximately
+    conserved with our method, adding a hard architecture constrained as that in ref.
+    24 (which fulfils a constraint up to machine precision) could further improve
+    our results.
+
+
+    Grid-cell-wise autocorrelation estimates between subsequent fields suggest that
+    a CM-based stochastic downscaling method captures the temporal variability of
+    the high-resolution target data, although not explicitly, using temporal information.
+    Extending the approach to temporal conditioning or predicting several time steps³²
+    or using correlated noise³³ might further improve the temporal dynamics.
+
+
+    Our downscaling method increases the resolution of the ESM simulations by a factor
+    of four in this study. Given a higher-resolution training target and more computational
+    resources, it should, in principle, also allow for larger downscaling ratios.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/cdba53dcfff3f101fe91360e2f61dbbc_6_0.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_6_1.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_6_2.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_6_3.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_6_4.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_6_5.png)
+
+
+    ![](img/cdba53dcfff3f101fe91360e2f61dbbc_6_6.png)
+
+
+    # Fig. 5 | Sampling spread and generalization to unseen climates of the generative
+    probabilistic downscaling process.
+
+
+    **a,** ESM field interpolated to the target resolution. **b, c,** Two different
+    example samples generated by CM downscaling, preserving large-scale patterns and
+    generating new patterns on smaller scales. **d, e,** Ensemble mean of 10⁴ samples
+    (**d**) and the standard deviation (**e**). **f,** Three-year rolling global mean
+    normalized to the reference year
+
+
+    2020 of the very high-emission scenario SSP5-8.5. The ESM (orange) shows an increase
+    in global mean precipitation over the emission scenario, in line with the thermodynamic
+    Clausius–Clapeyron relation ¹². The CM downscaling (magenta) can preserve the
+    trend with a high degree of accuracy, particularly without the addition of any
+    physical constraints in the CM network.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "We showcase our method on univariate precipitation simulations because precipitation\
+    \ is arguably the most difficult climate variable to model. An extension to multivariate\
+    \ downscaling is a natural extension of our study in future research. In principle,\
+    \ the convolutional CM network can be extended to include further variables as\
+    \ additional channels in a straightforward manner. The consistency scale will\
+    \ then depend on the variable (channel) and might require separate treatment.\
+    \ Similarly, we believe that our method can be applied on other timescales (for\
+    \ example, hourly as well as monthly) using suitably adjusted noise scales. Choosing\
+    \ the optimal noise scale using the intersection of PSDs as done here and elsewhere^{2}\
+    \ assumes that the spectral densities are monotonically decreasing with the wavenumber.\
+    \ Although we believe that this should hold for most climate impact variables,\
+    \ there might be exceptions that would require a different approach. We leave\
+    \ these explorations for future research.\n\nsuch as a Gaussian distribution,\
+    \ to a target data distribution, p(x(t) = 0)=p_{T}, where x \\in \\mathbb{R}^{d}\
+    \ and d is the data dimension, for distribution ^{3, 5, 33-35} or general of pixels\
+    \ in an image. Score-based generative ^{3, 33, 35} models ^{3, 29} generalize\
+    \ probabilistic denoising diffusion models ^{3, 26, 32} to continuous-time SDEs.\n\
+    \nIn this framework, the forward diffusion process that incrementally perturbs\
+    \ the data can be described as the solution of the SDE:\n\ndx = \\mu(x, t)dt +\
+    \ g(t)dw, **(1)**\n\nwhere \\mu(x, t): \\mathbb{R}^{d} \\rightarrow \\mathbb{R}^{d}\
+    \ is the drift term, w denotes a Wiener process and g(t): \\mathbb{R} \\rightarrow\
+    \ \\mathbb{R} is the diffusion coefficient. The reverse SDE used to generate images\
+    \ from noise is given by ^{3}\n\ndx = [\\mu(x, t) - g(t)^{2}\\nabla_{x}\\log p_{t}(x)]dt\
+    \ + g(t)dw, **(2)**\n\nwhere t denotes a time reversal and \\nabla_{x}\\log p_{t}(x)\
+    \ is the score function of the target distribution. The score function is not\
+    \ analytically tractable, but one can train a score network, s(x, t; \\theta):\
+    \ \\mathbb{R}^{d} \\rightarrow \\mathbb{R}^{d}, to approximate the score function\
+    \ s(x, \\theta) \\approx \\nabla_{x}\\log p_{t}(x), for example, using denoising\
+    \ score matching (Supplementary Information). For sampling, we use the Euler\\\
+    u2013Maruyama solver to integrate the reverse SDE from T to t = 0 in equation\
+    \ (2) with 500 steps.\n\n# ### Methods\n\n**Training data**\n\nAs a target and\
+    \ ground-truth dataset, we use observational precipitation data from the ERA5\
+    \ reanalysis ^{4} provided by the European Center for Medium-Range Weather Forecasting.\
+    \ It covers the period from 1940 to the present, and we split the data into a\
+    \ training set from 1940 to 1998, a validation set from 1991 to 2003 and a test\
+    \ set from 2004 to 2018. We bilinearly interpolate the reanalysis data to a resolution\
+    \ of 0.75^{\\circ} and 0.9375^{\\circ} in the latitudinal and longitudinal directions,\
+    \ respectively (that is, 240 \\times 384 grid points), which corresponds to a\
+    \ four times higher resolution compared with the raw ESM simulations with 3^{\\\
+    circ} \\times 3.75^{\\circ} resolution (that is, 60 \\times 96 grid points).\n\
+    \nFor the ESM precipitation fields, we use global simulations from three different\
+    \ ESMs with varying complexity and resolutions. The fully coupled POEMSM, which\
+    \ includes model components for the atmosphere, ocean, ice sheets and dynamic\
+    \ vegetation, is used as the primary model for comparison of two generative downscaling\
+    \ methods for past and future climates. To demonstrate the ability of our CM-based\
+    \ method to correct any ESM with a coarser native resolution to the training ground\
+    \ truth, we further include daily precipitation simulations from the much more\
+    \ comprehensive and complex GFDEL-ESM4 (ref. 36), with a native resolution of\
+    \ 1^{\\circ} \\times 1^{\\circ}. We initially upscale the GFDL-ESM4 resolution\
+    \ to the same grid as the POEMSM data to allow direct comparisons. We further\
+    \ include SpeadyWeather,^{37} with a native resolution of 3.75^{\\circ} \\times\
+    \ 3.75^{\\circ}, which only has a dynamic atmosphere and is, hence, less comprehensive\
+    \ than the fully coupled POEMSM. Finally, we also use ERA5 data upscaled to the\
+    \ native POEM resolution as the test data for which a paired ground truth is available.\
+    \ Applying our method to the latter can, hence, be seen as a proof of concept.\n\
+    \nFor evaluation, we use 14 years of available historical data from each of the\
+    \ simulations, with periods 2004\\u20132018 for POEM, 2000\\u20132014 for GFDL-ESM4,\
+    \ 1956\\u20131970 for SpeadyWeather, and 2007\\u20132021 for ERA5.\n\nWe apply\
+    \ several preprocessing steps to the simulated input data. We first interpolate\
+    \ the input simulation on the same high-resolution grid as the ground-truth ERA5\
+    \ data for downscaling purposes and model evaluation. Low-pass filter is then\
+    \ applied to remove small-scale artefacts created by the interpolation. QDM^{16}\
+    \ with 500 quantiles is then applied in a standard way to remove distributional\
+    \ biases in the ESM simulation for each grid cell individually. As discussed in\
+    \ the 'Bias correction' section, the generative downscaling only corrects biases\
+    \ related to a specified spatial scale. Hence, the QDM steps ensures a strong\
+    \ reduction in single-cell biases, whereas generative downscaling corrects spatial\
+    \ patterns that are physically consistent. Finally, the ESMs and ERA5 data are\
+    \ log-transformed, x = \\log(x + e) \\rightarrow \\log[e] where e = 0.0001 (ref.\
+    \ 5), followed by a normalization approximately in the range [\\u22121, 1].\n\n\
+    # ### Consistency models\n\nOne major drawback of current diffusion models is\
+    \ that the numerical integration of the differential equation requires around\
+    \ 10\\u20132,000 net work evaluations, depending on the solver. This makes the\
+    \ generation process computationally inefficient and costly compared with other\
+    \ generative models such as GANs^{4} or NFs^{3, 30, 32} that can generate images\
+    \ in a single network evaluation. Distillation techniques can reduce the number\
+    \ of forward steps of diffusion models, which often represent a computational\
+    \ bottleneck ^{22, 25}.\n\nCMs can be trained from scratch without distillation\
+    \ and only require a single step to generate a new sample. They have been shown\
+    \ to outperform current distillation techniques ^{32}. CMs learn a consistency\
+    \ function, f(x(t), t) = f(x(t^{\\prime}), t^{\\prime}) which is self\\u2013consistent,\
+    \ that is,\n\n```\nf(x(t), t) = f(x(t^{\\prime}), t^{\\prime}), t, t^{\\prime}\
+    \ \\in [t_{min}, t_{max}], **(3)**\n```\n\nwhere the time interval is set to t_{min}\
+    \ = 0.002 and t_{max} = 80 (ref. 32). Furthermore, a boundary condition (x(t_{min}),\
+    \ t_{min}) for t = t_{min} is imposed. This can be implemented with the following\
+    \ parameterization:\n\nf(x, t, \\theta) = c_{skip}(t)x + c_{out}(t)F(x, t, \\\
+    theta), **(4)**\n\nwhere F(\\cdot) is a U-Net with parameter \\theta. The time\
+    \ information is transformed using a sine\\u2013cosine positional embedding in\
+    \ the network. The coefficients c_{skip}(t) and c_{out}(t) are defined ^{32} as\n\
+    \nc_{skip} = \\frac{\\sigma^{2}_{data}}{(\\sigma^{2}_{data} + \\sigma^{2}(t))^{2}},\t\
+    \nc_{out}(t) = \\frac{\\sigma_{data} \\cdot \\sigma(t)}{\\sqrt{\\sigma^{2}(t)\
+    \ + \\sigma^{2}_{data}}}, **(5)**\n\nThe training objective is given by\n\n$\\\
+    mathcal{L}(\\theta, \\theta^{\\bot}) = \\mathbb{E}_{x_{s_{i+1}}\\sim D} \\| \\\
+    mu_{f}(x_{s_{i+1}} + t_{s_{i+1}}) - \\theta \\| \\| $ **(6)**\n\nwhere \\theta^{\\\
+    bot} \\equiv \\mathbb{E}_{x_{s_{0}}\\sim D, \\sim (1/U(N),1\\setminus N)0.5},x_{s_{0}}\
+    \ \\| \\| $ and the discrete time step is determined via\n\nt_{n} = \\hat{t}^{(p)}_{min}\
+    \ + (n-1)(N-1)(\\hat{t}^{(p)}_{min} - \\hat{t}^{(p)}_{max})^{1/p}, **(7)**\n\n\
+    where p = 7 and the discretization schedule is given by\n\nN(k) = \\sqrt{k/k(k(s^{2}_{1}\
+    \ + s^{2}_{0} - s^{2}_{k} + s^{2}_{0}) + 1)}. **(8)**"
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Network architectures and training
+
+
+    We use a two-dimensional U-Net$^{18,35}$ from the Diffusers library to train both
+    score and consistency networks from scratch, with four down- and upsampling layers.
+    For these four layers, we use convolutions with 128, 128, 256 and 256 channels,
+    and 3 $\times$ 3 kernels, sigmoid linear unit activations, group normalization
+    and an attention layer at the architecture bottleneck. The network has, in total,
+    around 27M trainable parameters.
+
+
+    We train the core network with the Adam optimizer$^{46}$ for 200 epochs, with
+    a batch size of 1, a learning rate of 1 $\times$ 10$^{2}$ and an exponential moving
+    average over the model weights with a decay rate of 0.999 (Supplementary Information).
+
+
+    The CM model is trained for 150 epochs$^{23}$ with the RAdam optimizer$^{47}$
+    and the same batch size, learning rate and exponential moving average schedule
+    (with an initial decay rate of $\alpha_0=0.9$) as the score network. We find that
+    the loss decreases in a stable way throughout the training (Supplementary Fig.
+    1). The training of 150 epochs takes around six and a half days for the CM and
+    four and a half days for the SDE on an NVIDIA G102 32 GB graphics processing unit.
+    A summary of the training hyperparameters is given in Supplementary Table 1.
+
+
+    # Scale-consistent downscaling
+
+
+    As shown in other work$^{45,48}$, adding Gaussian noise with a chosen variance
+    to an image (or fluid dynamical snapshot) results in removing spatial patterns
+    up to a specific spatial scale associated with the amount of added noise. The
+    trained generative model can then replace the noise with spatial patterns learned
+    from the training data up to the chosen spatial scale.
+
+
+    In principle, the spatial scale can be chosen depending on the given downscaling
+    task, for example, related to the ESM resolution or variable. Hence, our method
+    allows for much more flexibility after training in which the optimal training
+    scale could be defined with respect to any given metric. In general, ESM fields
+    are too smooth at small spatial scales, which presents a key problem for Earth
+    system modelling in general and impact assessments in particular. More specifically,
+    when comparing the frequency distribution of spatial precipitation fields in terms
+    of spatial PSDs, it can be seen that ESMs lack the high-frequency spatial variability,
+    or spatial intermittency, which is a key characteristic of precipitation$^{49}$.
+    Hence, a natural choice for the spatial scale to be preserved in the ESM fields
+    is the intersection of PSDs from the ESM and the ground-truth ERA5 (ref. 17) (Fig.
+    3), that is, the scale at which the ESM fields become too smooth.
+
+
+    where $k$ is the current training step and $K$ is the estimated total number of
+    training steps obtained from the PyTorch Lightning library. The initial discretization
+    steps are set to $s_0 = 2$ and the maximum number of steps to $s_n = 150$ (ref.
+    23). With $\hat{\theta}$, we denote an exponential moving average over the model
+    parameters $\theta$, updated by $\hat{\theta} = \text{stograd}[w(k)\hat{\theta}
+    + (1-w(k)\theta)]$, with the decay schedule given by
+
+
+    ```
+
+    w(k) = exp(s0 log($\alpha_0$) / N(k))
+
+    (9)
+
+    ```
+
+
+    where $w_0 = 0.9$ is the initial decay rate$^{50}$. For the distance measure $d(\cdot,
+    \cdot)$, we follow another work$^{35}$ and use a combination of the learned perceptual
+    image patch similarity$^{51}$ and $l^p$ norm:
+
+
+    ```
+
+    $d(x, y) = \text{LPIPS}(x, y) + \|x-y\|_l$
+
+    (10)
+
+    ```
+
+
+    Thus, the training of the CMI is self-supervised and closely related to representation
+    learning$^{52}$, where a so-called online network $\hat{\text{f}}: \theta$ is
+    trained to predict the same image representation as a ''target network'' $\text{f}:
+    \hat{\theta}$ (ref. 44). Importantly, the CMI is, therefore, not trained explicitly
+    for the downscaling tasks, which are purely performed at the inference stage.
+
+
+    For Gaussian noise, the variance as a function of time $t$ can be related to the
+    PSD of a given wavenumber $k$ and the grid size $N$ by$^{47}$
+
+
+    ```
+
+    $\sigma^2(t) = N^{p}\text{PSD}(k)$
+
+    (11)
+
+    ```
+
+
+    Using equation (11), we choose $k^* = 0.0667$ (Supplementary Fig. 2), such that
+    it represents the wavenumber or spatial scale at which the PSDs of ESMs and ERA5
+    precipitation fields intersect. This corresponds to $t^* = 0.468$ for the CM variance
+    schedule and $t^* = 0.355$ for the SDE bridge.
+
+
+    The diffusion bridge$^{47}$ starts with the forward SDE in equation (1), initialized
+    with a precipitation field from the POEM ESM. The forward SDE is then integrated
+    until $t = T$. Then, the reverse SDE (equation (2))—initialized at $t = T$—denoises
+    the field again, adding structure from the target ERA5 distribution.
+
+
+    For the CM approach, at inference, we apply the ''stroke guidance'' technique$^{48,53}$,
+    where we first sample a noise ESM field $\mathbf{x}^{\text{ESM}} \in \mathbb{R}^{d}$
+    with variance corresponding to $t^*$:
+
+
+    ```
+
+    $\mathbf{x}^{\text{ESM}} \sim \mathcal{N}(\textbf{x}^{\text{ESM}}, \sigma^2(t^*)\mathbf{I})$
+
+    (12)
+
+    ```
+
+
+    which is then denoised in a single step with the CM:
+
+
+    ```
+
+    $\mathbf{x} = f(\mathbf{x}^{\text{ESM}}, t^*, \theta)$
+
+    (13)
+
+    ```
+
+
+    thereby highly efficiently generating realistic samples $\mathbf{x}$ that preserve
+    unbiased spatial patterns of the ESM up to scale $k^*$.
+
+
+    # Data availability
+
+
+    The ERA5 reanalysis data are available for download at the Copernicus Climate
+    Change Service (C3S) (https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=download).
+    The simulation data from the POEM ESM are available via Zenodo (https://doi.org/10.5281/zenodo.4685086)$^{30}$.
+
+
+    # Code availability
+
+
+    The PyTorch code for processing and analysing the data, together with the PyTorch$^{48}$
+    code for training$^{35}$, are available via GitHub (https://github.com/p-los/consistency-climate-downscaling.git)
+    and Code Ocean (https://doi.org/10.24435/CO.2150269v1)$^{52}$.
+
+
+    # References
+
+
+    +   1. Kotz, M., Levernann, A. & Wenz, L. The effect of rainfall changes on economic
+    production. Nature **601**, 223–227 (2022).
+
+
+    2. Schneider, T. et al. Climate goals and opening the future of clouds. Nat. Clim.
+    Change **7**, 3–5 (2017).
+
+
+    3. Dinh, L., Krueger, G. & Bengio, Y. NICE: Non-linear Independent Components
+    Estimation. Preprint at http://arxiv.org/abs/1410.8516 (2015).
+
+
+    4. Goodfellow, I. et al. Generative adversarial nets. In Advances in Neural Information
+    Processing Systems (eds Ghahramani, Z. et al) 2672–2680 (MIT, 2014).
+
+
+    5. Groenke, B., Madau, L. & Monteleoni, C. ClimAlign: unsupervised statistical
+    downscaling of climate variables via normalizing flows. In Proc. 10th International
+    Conference on Climate Informatics 60–66 (Association for Computing Machinery,
+    2020).
+
+
+    6. Pan, B. et al. Learning to correct climate projection biases. J. Adv. Model.
+    Earth Syst. **13**, e2021MS002509 (2021).
+
+
+    7. Francois, B., Thaos, S. & Yrao, M. Adjusting spatial dependence of climate
+    model outputs with cycle-consistent adversarial networks. Clim. Dyn. **57**, 3328–3353
+    (2021).
+
+
+    8. Harris, L., McRae, A. T. T., Chanhy, M., Dueben, P. D. & Palmer, T. N. A generative
+    deep learning approach to stochastic downscaling of precipitation forecasts. J.
+    Adv. Model. Earth Syst. **14**, e2022MS003120 (2022).'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Article
+
+
+    9. Hess, P., Dürke, M., Petri, A., Strandal, F. M. & Boers, N. Physically constrained
+    generative adversarial networks for improving precipitation fields from Earth
+    system models. Nat. Mach. Intell. 4, 828–839 (2022).
+
+
+    10. Hess, P., Lange, S., Schötz, C. & Boers, N. Deep learning for bias-correcting
+    CMIP6-class Earth system models. Earth’s Future 11, e2023EOF00402 (2023).
+
+
+    11. M. Arjovsky, L. & Bottou. Towards principled methods for training generative
+    adversarial networks. In 5th International Conference on Learning Representations
+    (OpenReview.net, 2017).
+
+
+    12. Dhariwal, P. & Nichol, A. Diffusion models beat GANs on image synthesis. In
+    Advances in Neural Information Processing Systems (eds Ranzato, M. et al.) 8780–8794
+    (Curran Associates, 2021).
+
+
+    13. Song, Y. et al. Score-based generative modeling through stochastic differential
+    equations. In 9th International Conference on Learning Representations 8780–8794
+    (Curran Associates, 2021).
+
+
+    14. Clark, K. & Jaini, P. Text-to-image diffusion models are zero shot classifiers.
+    In Advances in Neural Information Processing Systems (eds Oh, T. et al.) 58921–58937
+    (Curran Associates, 2023).
+
+
+    15. Sauer, A., Lorenz, D., Blattmann, A. & Rombach, R. Adversarial diffusion distillation.
+    In Computer Vision—ECCV 2024 174–103 (Springer Nature, 2024).
+
+
+    16. Meng, G. et al. SDEdit: guided image synthesis and editing with stochastic
+    differential equations. In 10th International Conference on Learning Representations
+    (Curran Associates, 2022).
+
+
+    17. Bischoff, T. & Deck, K. Unpaired downsampling of fluid flows with diffusion
+    bridges. Artif. Intell. Earth Syst. 3, e300039 (2024).
+
+
+    18. Wan, Z. Y. et al. Debias coarsenly, sample conditionally: statistical downsampling
+    models outmip transport and probabilistic diffusion models. In Advances in Neural
+    Information Processing Systems (eds Oh, A. et al.) 47749–47763 (NeurIPS, 2023).
+
+
+    19. Karras, T., Aittala, M., Aila, T. & Laine, S. Elucidating the design space
+    of diffusion-based generative models. In Advances in Neural Information Processing
+    Systems (eds Koyejo, S. et al.) 26565–26577 (NeurIPS, 2022).
+
+
+    20. Esser, P. et al. Scaling rectified flow transformers for high-resolution image
+    synthesis. In Proc. of the 41st International Conference on Machine Learning (eds
+    Salakhutdinov, R. et al.) 12598–12633 (JMLR.org, 2024).
+
+
+    21. Luhman, E. & Luhman, T. Knowledge distillation in iterative generative models
+    for improved sampling speed. Preprint at http://arxiv.org/abs/2101.02388 (2021).
+
+
+    22. Zheng, H., Nie, W., Valdadt, A. & Anandkumar, A. Fast Training of Diffusion
+    Models with Masked Transformers. In Transactions on Machine Learning Research
+    (OpenReview.net, 2024).
+
+
+    23. Song, Y., Dhariwal, P., Chen, M. & Sutskever, I. Consistency models. In Proc.
+    40th International Conference on Machine Learning (eds Krause, A. et al.) 32221–32252
+    (PMLR, 2023).
+
+
+    24. Harder, P. et al. Hard-constrained deep learning for climate downsampling.
+    J. Mach. Learn. Res. 24, 1–40 (2023).
+
+
+    25. Ravuri, S. et al. Skillful precipitation forecasting using deep generative
+    models of radar. Nature 597, 672–677 (2021).
+
+
+    26. Tian, B. & Dong, G. The double-ITCZ bias in CMIP3, CMIP5, and CMIP6 models
+    based on annual mean precipitation. Geophys. Res. Lett. 47, e2019GL087232 (2020).
+
+
+    27. Cannon, A. J., Sobie, S. R. & Murdock, T. Q. Bias correction of GCM precipitation
+    by quantile mapping—how well do methods perform changes in quantiles and extremes?
+    J. Clim. 28, 6938–6959 (2015).
+
+
+    28. Hersbach, H. Decomposition of the continuous ranked probability score for
+    ensemble prediction systems. Weather Forecast. 15, 559–570 (2000).
+
+
+    29. Traxl, D., Boers, N., Rheinwalt, A. & Bookhagien, B. The role of cyclonic
+    activity in tropical temperature-rainfall scaling. Nat. Commun. 12, 6332 (2021).
+
+
+    30. Beucler, T. et al. Enforcing analytic constraints in neural networks emulating
+    physical systems. Phys. Rev. Lett. 126, 98302 (2021).
+
+
+    31. Schwartz, R., Dodige, L., Smith, N. A. & Etzioni, O. Green AI. Commun. ACM
+    63, 54–63 (2020).
+
+
+    32. Price, I. et al. Probabilistic weather forecasting with machine learning.
+    Nature 637, 84–90 (2025).
+
+
+    33. Huang, X. et al. Blue noise for diffusion models. In ACM SIGGRAPH (eds Burbano,
+    A. et al.) 1–11 (Association for Computing Machinery, 2024).
+
+
+    34. Hersbach, H. et al. The ERA5 global reanalysis. Q. J. R. Meteorol. Soc. 146,
+    1999–2049 (2020).
+
+
+    35. Dürke, M. et al. CM2mC-LPimL v1.0: biophysical coupling of a process-based
+    dynamic vegetation model with managed land to a general circulation model. Geosci.
+    Model Dev. 14, 4117–4141 (2021).
+
+
+    36. Dunne, J. P. et al. The GFDL Earth System Model Version 4 (GFDL-ESM 4.1):
+    overall coupled model description and simulation characteristics. J. Adv. Model.
+    Earth Syst. 12, e2019MS002015 (2020).
+
+
+    37. Klöwer, M. et al. SpeedyWeather.l: reinventing atmospheric general circulation
+    models towards interactivity and extensibility. J. Open Source Softw. 9, 6323
+    (2024).
+
+
+    38. Song, Y. & Ermon, S. Generative modeling by estimating gradients of the data
+    distribution. In Advances in Neural Information Processing Systems (eds Wallach,
+    H. M. et al.) 11918–11930 (Curran Associates, 2019).
+
+
+    Song, J., Meng, C. & Ermon, S. Denoising Diffusion Implicit Models. In International
+    Conference on Learning Representations 6323 (The Open Review, 2021).
+
+
+    40. Ho, J., Jain, A. & Abbeel, P. Denoising diffusion probabilistic models. In
+    Advances in Neural Information Processing Systems (eds Larochelle, M. et al.)
+    6840–6851 (NeurIPS, 2020).
+
+
+    41. Papamarkarios, G., Naishick, G., Rezende, D. J., Mohamed, S. & Lakshminarayanan,
+    B. Normalizing flows for probabilistic modeling and inference. J. Mach. Learn.
+    Res. 22, 2617–2680 (2021).
+
+
+    42. Zhang, R., Iosa, P., Eiros, A., Schmetzman, E. & Wang, O. The unreasonable
+    effectiveness of deep features as a perceptual metric. In Proc. IEEE Conference
+    on Computer Vision and Pattern Recognition 586–595 (IEEE, 2018).
+
+
+    43. Lessig, C. et al. AtmoRep: a stochastic model of atmosphere dynamics using
+    large scale representation learning. Preprint at http://arxiv.org/abs/2308.13280
+    (2023).
+
+
+    44. Grill, J. F. et al. Bootstrapping your own latent—a new approach to self-supervised
+    learning. In Advances in Neural Information Processing Systems (eds Larochelle,
+    M. et al.) 21271–21284 (Curran Associates, 2020).
+
+
+    45. Ronneberger, O., Fischer, P. & Brox, T. U-Net: convolutional networks for
+    biomedical image segmentation. In Medical Image Computing and Computer-Assisted
+    Intervention—MICCAI 2015. Lecture Notes in Computer Science (eds Navab, N. et
+    al.) 234–241 (Springer, 2015).
+
+
+    46. Kingma, D. P. & Ba, J. L. Adam: a method for stochastic optimization. In 3rd
+    International Conference on Learning Representations ICLR 2015—Conference Track
+    Proc. 1–15 (ICLR, 2015).
+
+
+    47. Liu, L. et al. On the variance of the adaptive learning rate and beyond. In
+    8th International Conference on Learning Representations (OpenReview.net, 2020).
+
+
+    https://doi.org/10.1038/s42256-025-00980-5'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '+   48. Rissanen, S., Heinonen, M. & Solin, A. Generative modelling with inverse
+    heat dissipation. In 11th International Conference on Learning Representations
+    (OpenReview.net), 2023).
+
+    49. Drikke, M. Output data for the GMD publication gmd-2020-436. Zenodo [https://doi.org/10.5281/zenodo.4683086](https://doi.org/10.5281/zenodo.4683086)
+    (2021).
+
+    50. Paszke, A. et al. PyTorch: an imperative style, high-performance deep learning
+    library. In Advances in Neural Information Processing Systems 32, 1–12 (2019).
+
+    51. Hess, P. p-hss/consistency-climate-downscaling: pre-publication release. Zenodo
+    [https://doi.org/10.5281/zenodo.14203092](https://doi.org/10.5281/zenodo.14203092)
+    (2024).
+
+    52. Hess, P. Fast, scale-adaptive, and uncertainty-aware downscaling of earth
+    system model fields with generative machine learning. Code Ocean [https://doi.org/10.24433/CO.2150269.v1](https://doi.org/10.24433/CO.2150269.v1)
+    (2024).
+
+
+    # ## Acknowledgements
+
+
+    We thank K. Deck and M. Klöwer for their valuable input regarding the diffusion
+    bridges for downscaling and regarding the numerical simulations of precipitation,
+    respectively. N.B. and P.H. acknowledge funding by the Volkswagen Foundation,
+    as well as the European Regional Development Fund (ERDF), the German Federal Ministry
+    of Education and Research and the Land Brandenburg for supporting this project
+    by providing resources on the high-performance computer system at the Potsdam
+    Institute for Climate Impact Research. M.A. acknowledges funding under the Excellence
+    Strategy of the Federal Government and the Länder through the TUM Innovation Network
+    EarthCare. This is ClimTip contribution #37; the ClimTip project has received
+    funding from the European Union’s Horizon research and innovation programme under
+    grant agreement no. 101137601. B.P. acknowledges funding by the National Key R&D
+    Program of China (grant no. 2023YFC300700).
+
+
+    # ## Author contributions
+
+
+    P.H. and N.B. conceived the research and designed the study with input from M.A.
+    and B.P.P.H. performed the model training and numerical analysis. P.H., M.A.,
+    B.P. and N.B. interpreted and discussed the results. P.H. wrote the manuscript
+    with input from M.A., B.P. and N.B.
+
+
+    # ## Funding
+
+
+    Open access funding provided by Technical Universität München.
+
+
+    # ## Competing interests
+
+
+    The authors declare no competing interests.
+
+
+    # ## Additional information
+
+
+    **Supplementary information** The online version contains supplementary material
+    available at [https://doi.org/10.1038/s42256-025-00980-5.](https://doi.org/10.1038/s42256-025-00980-5.)
+
+
+    **Correspondence and requests for materials** should be addressed to Philipp Hess.
+
+
+    **Peer review information** *Nature Machine Intelligence* thanks Tom Beucler and
+    the other, anonymous, reviewer(s) for their contribution to the peer review of
+    this work.
+
+
+    **Reprints and permissions information** is available at [www.nature.com/reprints.](www.nature.com/reprints.)
+
+
+    **Publisher’s note** Springer Nature remains neutral with regard to jurisdictional
+    claims in published maps and institutional affiliations.
+
+
+    **Open Access** This article is licensed under a Creative Commons Attribution
+    4.0 International License, which permits use, sharing, adaptation, distribution
+    and reproduction in any medium or format, as long as you give appropriate credit
+    to the original author(s) and the source, provide a link to the Creative Commons
+    licence, and indicate if changes were made. The images or other third party material
+    in this article are included in the article’s Creative Commons licence, unless
+    indicated otherwise in a credit line to the material. If material is not included
+    in the article’s Creative Commons licence and your intended use is not permitted
+    by statutory regulation or exceeds the permitted use, you will need to obtain
+    permission directly from the copyright holder. To view a copy of this licence,
+    visit [http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/).
+
+
+    © The Author(s) 2025'
+  merge: -1
+  img_proc: true

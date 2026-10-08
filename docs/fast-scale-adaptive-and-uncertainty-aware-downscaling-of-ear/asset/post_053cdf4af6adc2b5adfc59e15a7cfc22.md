@@ -1,0 +1,38 @@
+
+48. Rissanen, S., Heinonen, M. & Solin, A. Generative modelling with inverse heat dissipation. In 11th International Conference on Learning Representations (OpenReview.net), 2023).
+49. Drikke, M. Output data for the GMD publication gmd-2020-436. Zenodo [https://doi.org/10.5281/zenodo.4683086](https://doi.org/10.5281/zenodo.4683086) (2021).
+50. Paszke, A. et al. PyTorch: an imperative style, high-performance deep learning library. In Advances in Neural Information Processing Systems 32, 1–12 (2019).
+51. Hess, P. p-hss/consistency-climate-downscaling: pre-publication release. Zenodo [https://doi.org/10.5281/zenodo.14203092](https://doi.org/10.5281/zenodo.14203092) (2024).
+52. Hess, P. Fast, scale-adaptive, and uncertainty-aware downscaling of earth system model fields with generative machine learning. Code Ocean [https://doi.org/10.24433/CO.2150269.v1](https://doi.org/10.24433/CO.2150269.v1) (2024).
+
+## Acknowledgements
+
+We thank K. Deck and M. Klöwer for their valuable input regarding the diffusion bridges for downscaling and regarding the numerical simulations of precipitation, respectively. N.B. and P.H. acknowledge funding by the Volkswagen Foundation, as well as the European Regional Development Fund (ERDF), the German Federal Ministry of Education and Research and the Land Brandenburg for supporting this project by providing resources on the high-performance computer system at the Potsdam Institute for Climate Impact Research. M.A. acknowledges funding under the Excellence Strategy of the Federal Government and the Länder through the TUM Innovation Network EarthCare. This is ClimTip contribution #37; the ClimTip project has received funding from the European Union’s Horizon research and innovation programme under grant agreement no. 101137601. B.P. acknowledges funding by the National Key R&D Program of China (grant no. 2023YFC300700).
+
+## Author contributions
+
+P.H. and N.B. conceived the research and designed the study with input from M.A. and B.P. P.H. performed the model training and numerical analysis. P.H., M.A., B.P. and N.B. interpreted and discussed the results. P.H. wrote the manuscript with input from M.A., B.P. and N.B.
+
+## Funding
+
+Open access funding provided by Technical Universität München.
+
+## Competing interests
+
+The authors declare no competing interests.
+
+## Additional information
+
+**Supplementary information** The online version contains supplementary material available at [https://doi.org/10.1038/s42256-025-00980-5.](https://doi.org/10.1038/s42256-025-00980-5.)
+
+**Correspondence and requests for materials** should be addressed to Philipp Hess.
+
+**Peer review information** *Nature Machine Intelligence* thanks Tom Beucler and the other, anonymous, reviewer(s) for their contribution to the peer review of this work.
+
+**Reprints and permissions information** is available at [www.nature.com/reprints.](www.nature.com/reprints.)
+
+**Publisher’s note** Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+**Open Access** This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit [http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/).
+
+© The Author(s) 2025
