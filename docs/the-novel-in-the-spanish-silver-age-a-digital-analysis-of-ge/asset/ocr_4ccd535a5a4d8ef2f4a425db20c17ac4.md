@@ -1,0 +1,1 @@
+direct speech can be formalized in rules using exclusively typographical features, while in other periods the readers have to apply their understanding of the text to distinguish them from each other. The Spanish novels from the analyzed period do have clear typographical rules. Therefore, I decide to use a rule-based approach and annotate it in TEI elements, as presented above.

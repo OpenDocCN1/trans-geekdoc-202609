@@ -1,0 +1,13 @@
+points with extreme values. The highest is the most frequent token, which is the comma, as was observed in the Sub-figure A.
+
+Finally, Sub-figure D is a scatter plot that compares the original distribution of both novels (term or raw frequency) with the analyzed distribution. Since I am currently analyzing the term frequency, both axes represent the same values in this figure, but this will change in the following transformations. At the top, I report the results of a correlation test (Pearson's r) in terms of strength, with the p-value to consider whether the correlation has statistical value or not.
+
+The total frequency is the base for the rest of transformation, and is useful when sharing data of projects that are still protected by copyright. For example, the corpus CORDE by the RAE has published the absolute frequency of each token in the entire corpus, data that researchers can take and transform further, and similar data per file was used for the analysis of Chapter 3.3. By my knowledge, there is no research question that would benefit from using total frequency in comparison to the rest of the transformation. The data depends a a large extent to the length of the text, greatly varying the maximum value of each corpus and each text.
+
+
+
+The first transformation is applied to contrast the term frequency with the length of the text: The frequency of each type is divided by the length of the text. In the case of *Los caminos de Ulloa*, the raw frequency of every token is divided by the total length of the text (102,686 tokens). The result is its relative frequency in a document, also called the term-document frequency. In Corpus Linguistics, this is probably the most used representation of data and it is often used in other fields.
+
+The four sub-figures previously discussed contain in Figure 4 data of the relative frequency. In Sub-figure A with the bar plots, some from *Tirano Banderas* (represented by the purple bars) have greater values than *Los pazos de Ulloa* (blue). Relative frequencies enable the comparison regardless of the total length and show that the token el has a greater relative frequency in Tirano Banderas as in Los pazos de Ulloa, even though the first novel is shorter.
+
+The histogram (Sub-figure B) represents the same very skewed distribution as the previous transformation, with around 1,900 tokens very close to zero. What has changed drastically in comparison to the total frequency is

@@ -1,0 +1,11 @@
+system and mobilize lower classes of society and intellectuals (Castañar 1992, 312). This becomes blatantly clear in Viaje a la aldea del crimen, in which the author beings the novel recounting that, ultimately, the political responsible for the brutal repression described in the plot was Manuel Azaña, Prime Minister of Spain at the time.
+
+# 2.1.10 One-Author-Labels: Nivola, Greguería, and Episodio Nacional
+
+In Section 2.1.2, I have observed that researchers of this period have a strong tendency to investigate one specific author independently. This trend is forced by the very authors themselves, who, in many cases, coined their own specific label, similar to their genres, in many cases without making explicit whether it should readily considered as a different category. The best-known case is Unamano's nivola, a text that was printed on the cover of his most important novel, Niebla (1914, 'Mist'). In a fictional preface, one of the characters of the novel, Victor Goti, claims to be the inventor of the concept of nivola and uses it to classify earlier novels by Unamuno (such as Amor y pedagogía, 1902). The edition of 1935 presented a third prologue (presenting Unamuno as author), in which this genre is explained as follows (my translation):
+
+The novel, the epopee, and the drama impose themselves on the one who believes to be their. On the agonists, their supposed creatures, are imposed upon him. Luzbel and Satan, first, and Adam and Eve, later, were imposed on Jehovah. And this one is nivola, epopee or tragedy! [...] My diabol invention of the nivola. [...] This is the mist, this is the nivola, this is the legend, this is the eternal life...
+
+In a dialogue with the protagonist of Niebla (Augusto), the author of the first prologue (Victor) mentions the theoretical origin of this new label (my translation):
+
+I have heard Manuel Machado, the poet, Antonio’s brother, who once brought a sonnet to Don Eduardo Benito, to read it to him, that was written in Alexandrian verse or some other heterodox form. He read it and Don Eduardo said: "But that’s not a sonnet..." "No, sir," said Machado, "it’s not a soneto, it’s a... sonite." Well, with my novel, it’s not going to be a novel, but ... what did I call it?, navilo... nebulo, no, no, nivola, that’s it, nivola! Then no

@@ -1,0 +1,3 @@
+now considers eight more texts as novels, while six texts are annotated as not being novels and will be ignored in the rest of the chapters.
+
+In the steps of the current chapter, I have analyzed the specific boundaries of the novels using Machine Learning with the aim of filtering the corpora. The use of digital methods does not necessarily imply simplistic results when the data is ambivalent or does not fit in the modeled categories. My corpus contained 14 texts with a disputed main genre, but in the MdLE there are at least 62 similar cases for this period. Besides, I only used the lexical frequency in CORDE and their set of genres. Further analysis of these works could be carried out if more texts and metadata were available.

@@ -1,0 +1,9 @@
+restricted by the scarcity of the number of sources that assign the different range of values to every text. For this reason, I observe the probabilities of the classification based only on the train set. The problem when measuring accuracy in the training set, is that the algorithm has too many features to define each category. It learns the category too well, and this is called overfitting. To solve this, I decide to work with fewer features than instances. More specifically, I decompose the concatenated data-frame of linguistic and literary features using principal component analysis (PCA). This technique creates a number synthetic dimensions that try to maintain the variety of the original data. In my case, the original data frame of 7,000 features is decomposed into 200 components, which is a number considerably lower than the number of texts in the corpus.
+
+After running the test, the algorithm gives the probabilities of each text belonging to each subgenre. These probabilities can be compared with the proportional subgenre assigned by the sources and its correlation measured with Pearson's r. This gives a correlation coefficient for each subgenre between the proportional subgenre and the predictions, shown in Figure 93.
+
+> Figure 93: Bar plot of the correlation between predicted probabilities and proportion of sources using label
+
+![](bbox=[0.193, 0.563, 0.725, 0.793])
+
+The data lies between 0.73 and 0.99, with a median of 0.85. Hence, all cases show either a strong or very strong correlation. This confirms my hypothesis: The predicted probabilities of the algorithm follow the proportion of human

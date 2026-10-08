@@ -1,0 +1,7 @@
+Figure 79: Evaluation of the feature combinations
+
+![](bbox=[0.186, 0.187, 0.831, 0.465])
+
+model (which contains the features that were most efficient in the classification task in Section 6.1.4). Even when its box plot overlaps with other combinations of features, the outcomes show statistical significance in a t-test (p-value < 0.001). As mentioned before, the authorial-zscores transformation proposed in Section 4.2.3.6 gives results very close to zero, which represents random clustering. The remaining features yield a similar accuracy in clustering as they do in classification, although in this case, the tokens are below the others (with statistical significance, p-value < 0.01). The linguistic annotation seems to bring more improvement in clustering tasks than classifying in any other. The following evaluated parameter illustrates in Figure 80 the transformation of the features.
+
+Also, as logarithmic transformation of relative frequencies achieves the highest results on average in Figure 80, with statistical significance in comparison to the other transformations (p-values < 0.001). Besides this and the tfidf-zscores, the rest do not yield higher outcomes than the relative frequency, although the comparison does not obtain statistically significant results in several cases. In other words, except for the logarith

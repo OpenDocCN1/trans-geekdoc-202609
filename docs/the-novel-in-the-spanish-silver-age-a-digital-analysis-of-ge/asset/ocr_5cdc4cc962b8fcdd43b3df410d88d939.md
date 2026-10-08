@@ -1,0 +1,13 @@
+more genres in a categorical way, without describing whether the genres are very close or very distinct.
+
+# 2.3.3.3  Gradual Macro-Model
+
+In addition to taxonomy, and the flat macro-model, there is a further type of relationship between genres that has been used at different moments in the story, i.e. in terms of degree. Julius Petersen (1944, originally published in 1939) created a theoretical macro-model for literary genres in which every historical genre (lyrical novel, hymn, story, fable in his examples) had a position in a three-dimensional macro-model. The three dimensions were Goethe's modes (dramatic, epic and lyric, see Section 2.3.2.2), and every historical genre was related in terms of degree to two of these modes. He called this macro-model—the *compass of the genres*.
+
+In this macro-model, the three modes (dramatic, epic and lyric, called Grundformen, English: ‘basic forms’) have different levels of degree, with the *Urichtung* (translatable as ‘proto-poetry’) at the center of the macro-model (124–25). These three basic modes are combinable pairwise, creating the lyrical genres (*Zwischengattungen*, ‘between-genres’)
+
+Between poetry and epic those whose form is more or less categorized as a monolithic report of a state: elegy, epistle, idyll, and lyrical novel. Between epic and drama make the dialogic report of an action: frame narrative, letter novel, dialogue novel. Between poetry and drama stands the dialogic representation of states: lyrical conversation, heroic, cantata, dramatic idyll, lyrical drama. (Petersen 1944, 123–24, by my translation).
+
+In this macro-model, every historical genre is defined not as a subtype of an archi-genre (as in a dendrogram in hybridism does not fit), but as a combination of two modes or basic forms. This combination is not represented categorically, but rather in degrees, where the closeness of one to another represents the degree of participation. For example, the lyric drama is both dramatic and lyrical and that is why it sits between both modes; since it is more dramatic than lyrical, it is closer to drama.
+
+The accuracy, utility, or transferability to other languages of this *compass of the genres* has been criticized (for example by Genette 1988, and in my opinion, its limitations are shared by many other models presented: precision of the exact values of each genre. The macro-model could be improved by treating it as a multi-dimensional space in which each genre can be-

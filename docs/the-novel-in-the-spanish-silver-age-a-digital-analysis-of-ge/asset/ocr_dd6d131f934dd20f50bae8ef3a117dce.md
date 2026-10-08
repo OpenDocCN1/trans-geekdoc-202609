@@ -1,0 +1,11 @@
+one will have the right to say that it violates the laws of the novel... I invent the genre, and inventing a genre is nothing more than giving a new name, and I give it the laws that I like. (Unamuno, originally published in 1914, edition by Valdés 1982, 200, my translation).
+
+The fictional text presents a mix of philosophical, playful, and provocative intentions of "inventing a genre" by two steps: creating a label and assigning some rules. Since the publication of this work by Unamuno, libraries, publishers, and researchers have used the label in their descriptions and metadata, some of them arguing in favor of taking it as a genre (Olávers 1993, 16; Landiera 1985, 37), so a century after his publication, the label can be found in the very basic information of Wikidata about Niebla.
+
+Many other authors coined what I call *author-labels*: Labels used as if they designated genres (or subgenres of the novel) that were only fashioned by one single author, such as Galdós (*episodio nacional*), Pérez de Ayala (*novela-normativa*), the example *novola* of Unamuno (*novela novativa*, *novela simbólica*), Baroja (*novela de acción*), Azorín (*novela impresionista*), Valle-Inclán (*espervento*)³ Blasco-Ibáñez (*novelas valencianas*), *novela grande*, or Gómez de la Serna with several ones: *greguería*, *novela de la nebulosa*, *novela grande*, or *multitudinaria*. Mainer states about this last author that "he freed the genres" (Mainer, Alvar, and Navarro 1997, 596, my translation), while Umbral points out that he is a "writer without genre" "pretended genre" (1984, 226–29, my translation). These *greguerías* are, along with the *nivolas*, one of the best-examples. In this case, the texts are composed of sentences in prose, normally quite short, in some cases lacking a verb, typically amusing, surprising, poetic, and transcendental (Senabre 1984). Although it would not be typically considered as a subset of the novel, it is not formally related to any other genre prose (Rdenas de Moya 2000, 49). Here is a selection of *greguerías* (my translation, in the original they do not form any stanza or paragraph, nor do they need to follow a certain order):
+
++   Slice of watermelon: mood of blood.
+The O is the yawn of the alphabet.
+Eternity envies the mortal.
+The kiss is hunger for immortality.
+The head is the fishbowl of ideas.

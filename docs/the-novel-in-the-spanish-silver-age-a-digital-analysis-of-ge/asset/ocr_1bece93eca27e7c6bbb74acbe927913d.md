@@ -1,0 +1,7 @@
+Figure 64: Box plots of classification of the different subgenres and literary fiction, using external metadata
+
+![](bbox=[0.25, 0.198, 0.793, 0.448])
+
+works by Galdós and Unamuno, so the algorithm can predict it as the default whenever the name of the author appears as a feature; this is not the case for greguerías, which constitutes a rather small group of works by Gómez de la Serna. Second, episodios nacionales are rather unimportant works as a long series instead of independent books), while nivolas are the most important by Unamuno. This implies according to the MdLE (treated normally as a long series instead of independent books) that the algorithm can classify them correctly by only looking at the name of the author and the number of pages in the manuals. The greguerías have a similar importance to those works by Gómez de la Serna (at least the ones in the MdLE) and, therefore, the classifiers do not have enough data to recognize them without looking at the text.
+
+In a general comparison, the classification based on linguistic features achieves higher results (mean of 0.71) than with external metadata (0.67). Even though the difference is statistically significant (p-value = 0.01), this is surprisingly close, considering that the first run is based on thousands of linguistic features and the second merely on ten. Further comparisons to the performance of the classification using linguistic and metadata will be undertaken in Section 7.1.5.

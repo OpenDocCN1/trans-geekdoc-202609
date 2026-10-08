@@ -1,0 +1,1 @@
+However, the person with the most positive effect on this work is also the love of my life. Thank you for listening, for supporting me, for understanding the life of a researcher, for believing in me during this challenging process. Sem você não tivesse começado, mas especialmente não tivesse terminado. This book is dedicated to her.

@@ -1,0 +1,1 @@
+fuzzy descriptions should be treated as characteristics of the genres, finding a suitable place in the model, rather than being understood as exceptions or particularities of specific cases.

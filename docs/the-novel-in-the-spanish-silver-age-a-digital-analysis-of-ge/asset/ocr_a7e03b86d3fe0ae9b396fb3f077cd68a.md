@@ -1,0 +1,7 @@
+Figure 80: Evaluation of the feature transformations
+
+![](bbox=[0.198, 0.187, 0.715, 0.415])
+
+mic transformation and tfidf-zscores, the other transformations could not improve the results when used for clustering.
+As far as the other parameters are concerned, there is little distinction between their different values. The agglomerative clustering method Ward does yield slightly higher results than k-means or spectral clustering, although they all lie very close to each other (specific details in the Jupyter Notebook). Moreover, the number of features others shows a flat pattern, with high outcomes using very few (ten or so), as well as with many (3,000). The tendencies of these two parameters are better observed in combination with the transformation in the facet grid of Figure 81 in which the rows stand the methods, and each sub-figure represents the number of features with a box plot.
+With the three parameters set apart, some tendencies are better observable. In general, the highest results are obtained by log10-zscores, especially with Ward and 3,000 or 5,000 features. Moreover, the outcomes of tf-idf, with rather fewer features, tend to be acceptable. In some cases, the combination of methods and transformation shows a clear tendency of the impact on the size of the vector. When more features are applied, some combinations improve (log10-zscores + Ward, binary + k-means, binary + Ward), under other circumstances the results decrease (tf-idf + Ward, tf-idf + k-means), while others are

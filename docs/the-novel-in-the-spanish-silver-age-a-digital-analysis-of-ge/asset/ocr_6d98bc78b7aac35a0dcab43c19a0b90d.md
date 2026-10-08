@@ -1,0 +1,11 @@
+# The Novel in the Spanish Silver Age
+
+
+
+In the later decades of the silver age, comedy writers (novelas humorísticas) became a trend practised by a generation of comedy writers (who wrote mainly theater plays) that could be understood as a parallel group to the lyrical and better known generation del 27 (Burguera Nadal and Fortuño Llores 1998). Also, names of this comedy generation are Lara de Gavilán "Toto", Echeverría, Neville, Javier Poncela, Mihura and López Rubio. Their works were primarily published during the 1920s. Fernández Fló was the first author of the silver age who dedicated a great deal of his work, with texts like El malado Carabel (1931) or El hombre que compró un automóvil (1932) (Echeverría Pazos 1987). De la Serna used humor in his novels, for example in Rebéca! (1936) (Flores Requejo 2000; Burguera Nadal and Fortuño Llores 1998, 7). Jardiel Poncela, who wrote mainly theater, used humor in his novels, like La "tournée" de Dios (1932), a narration about an official of God to Spain and everything that goes wrong (Pérez 1993; Pedro Dominguez 1994). Other authors such as Carrero, Ros, or Pemán produced similar novels, continuing the trend before the Civil War. Several researchers have observed aspects like fantasy, autobiography, eroticism, and irrationalism are used to represent intellectual comedy and satire (Echeverría Pazos 1987, 94–96; Pérez 1993, 48). In many cases the stories were buried with critical traces, as Relato inmoral by Fernández Flórez, which addresses the social situation of single mothers.
+
+
+
+The topics eroticism and sex have already appeared in the description of different subgenres of the period, mainly in the naturalist novel (Garcia Lara 1986, 29). After the 1890s, a section of the naturalist novel evolved into a separated subgenre, the erotic novel, following again the model of the French literature. This type of novels and novellas (novelas cortas) has been analyzed in two monographs, each with very different methodologies and aims: while Rivalan Guegu describes a specific and large corpus, Analyzing separately particular aspects (2008), the influential work of Garcia Lara takes a rather abstract perspective (1986).
+
+The most frequently mentioned writers in relation to the erotic novel are Zamacois (El seductor, 1902) and Trigo (Del frio al fuego, 1906, Si, sé por qué,
