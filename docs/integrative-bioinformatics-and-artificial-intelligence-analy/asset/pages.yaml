@@ -1,0 +1,2559 @@
+- pgno: 0
+  md: '# Journal Pre-proof
+
+
+    Integrative bioinformatics and artificial intelligence analyses of transcriptomics
+    data identified genes associated with major depressive disorders including NRG1$
+
+
+    Amal Bouzid, Abdurahman A Midani, Maria Zubrikh, Altyngul Kamzanova, Burcu Yener
+    Ilce, Manzura Zholdassova, Ayesha M. Yusuf, Poorna Manasa Bhamidammri, Hamid A.
+    AlHaj, Almira Kutubayeva, Alexander Bernstein, Evgeny Burnaev, Maxim Sharaev,
+    Rifat Hamoudi
+
+
+    ![](img/ef4b017b8086fec3e193e824a6d0232b_0_0.png)
+
+
+    PII: S2352-2895(23)00043-7
+
+
+    DOI: https://doi.org/10.1016/j.ynstr.2023.100555
+
+
+    Reference: YNSTR 100555
+
+
+    To appear in: Neurobiology of Stress
+
+
+    Received Date: 14 March 2023
+
+
+    Revised Date: 26 June 2023
+
+
+    Accepted Date: 4 July 2023
+
+
+    Cite this article as: Bouzid A, Al Midani A, Zubrikhina M, Kamzanova A, Ilce BY,
+    Zholdassova M, Yusuf AM, Bhamidammri PP, AlHaj HA, Kutubayeva A, Bernstein A,
+    Burnaev E, Sharaev M, Hamoudi R, Integrative bioinformatics and artificial intelligence
+    analyses of transcriptomics data identified genes associated with major depressive
+    disorders including NRG1, Neurobiology of Stress (2023), doi: https://doi.org/10.1016/j.ynstr.2023.100555.
+
+
+    This PDF file of an article that has undergone enhancements after acceptance,
+    as the addition of a cover page and metadata, and formatting for readability,
+    it is not yet the definitive version of record. This version will undergo additional
+    copyediting, typesetting and review before it is published in its final form,
+    but we are providing this version to give early visibility of the article. Please
+    note that, during the production process, errors may be discovered which could
+    affect the content, and all legal disclaimers that apply to the journal pertain.
+
+
+    ©2023 Published by Elsevier Inc.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Integrative Bioinformatics and Artificial Intelligence Analyses of Transcriptomics
+    Data Identified Genes Associated with Major Depressive Disorders including NRG1
+
+
+    Amal Bouzid1*, Abdulrahman Midani1#, Maria Zubrikhina2#, Altyngul Kamzanova3,
+    Burcu Yener Ilce2, Manzura Zholdassova3, Ayesha M Yusuf1, Poorna Manasa Bhamidimmarri1,
+    Hamid A Alhaj1, Almira Kustubayeva3, Alexander Bernstein2, Evgeny Burnaev2, Maxim
+    Sharaev2, Rifat Hamoudi1,5,*
+
+
+    1Research Institute for Medical and Health Sciences, University of Sharjah, Sharjah,
+    UAE.
+
+
+    2Applied AI Center, Skolkovo Institute of Science and Technology, Moscow, Russian
+    Federation.
+
+
+    3The Center for Cognitive Neuroscience, Al Farabi Kazakh National University.
+
+
+    4College of Medicine, University of Sharjah, Sharjah, United Arab Emirates.
+
+
+    5Division of Surgery and Interventional Science, University College London, London,
+    United Kingdom.
+
+
+    6ASPIRE Precision Medicine Research Institute Abu Dhabi, University of Sharjah,
+    Sharjah, United Arab Emirates.
+
+
+    *These authors contributed equally to this work.
+
+
+    *Corresponding Authors:
+
+
+    Prof Rifat Hamoudi: e-mail: rhamoudi@sharjah.ac.ae
+
+
+    Dr Amal Bouzid: e-mail: abouzid@sharjah.ac.ae; amalbouzid@gmail.com
+
+
+    Running Title: Bioinformatics and AI for Identification of MDD-Biomarkers'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Abstract
+
+
+    Major depressive disorder (MDD) is a common mental disorder and is among the most
+    prevalent psychiatric disorders. MDD remains challenging to diagnose and predict
+    its onset due to its heterogeneous phenotype and complex etiology. Hence, early
+    detection diagnostic biomarkers is critical for rapid intervention. In this study,
+    a mixture of AI and bioinformatics were used to mine transcriptomic data from
+    publicly available datasets including 170 MDD patients and 121 healthy controls.
+    Bioinformatics analysis using gene set enrichment analysis (GSEA) and machine
+    learning (ML) algorithms were applied. The GSEA revealed that differentially expressed
+    genes in MDD patients are mainly enriched in pathways related to immune response,
+    inflammatory response, neurodegeneration and cerebellar atrophy pathways. Feature
+    selection methods and ML provided predicted models on MDD-altered genes with ≥
+    75% of accuracy. The integrative analysis between bioinformatics and ML approaches
+    identified key MDD-related biomarkers including NRG1, CECAM8B, CLE12B, DEFA4,
+    HP, LCN2, OLFM4, SERPING1, TCN1 and THBS1. Among them, NRG1, active in synaptic
+    plasticity and neurotransmission, was the most robust and reliable to distinguish
+    between MDD patients and healthy controls amongst independent extremal datasets
+    consisting of a mixture of populations. Further evaluation using saliva samples
+    from an independent cohort of MDD and healthy individuals confirmed the upregulation
+    of NRG1 in patients with MDD compared to healthy controls. Functional mapping
+    to the human brain regions showed NRG1 to have high expression in the main subcortical
+    limbic brain regions implicated in depression. In conclusion, integrative bioinformatics
+    and ML approaches identified putative non-invasive diagnostic MDD-related biomarkers
+    panel for the onset of depression.
+
+
+    **Keywords:** Depression Biomarkers, Major depressive disorder, Bioinformatics,
+    Machine Learning, Gene Expression, Brain Regions'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 1. Introduction
+
+
+    Major Depressive Disorder (MDD) is among the most prevalent, chronic complex psychiatric
+    disorders nowadays [1,2]. Depression affects over 280 million people globally
+    according to the World Health Organization (WHO, 2023), and is the second leading
+    cause of disability worldwide after cancer, while predicted to be the leading
+    cause by 2030 [3]. In the post-COVID-19 era, mental and behavioral disorders are
+    reported to have become more severe, possibly due to the pandemic effects on healthcare
+    and the economy worldwide [4,5].
+
+
+    MDD is a heterogeneous disorder, resulting from a complex interaction of social,
+    psychological, environmental and genetic factors [6,7]. Depression does not only
+    affect the mental and psychological aspects of the individual''s health, but also
+    affects physical health by disturbing the heart, kidney, nervous system, and immune
+    system [8]. It is characterized by presence of depressed moods, functional impairments,
+    a loss of interest in activities, fatigue, sleep disturbances, and psychomotor
+    retardation or agitation [9,10]. This negatively affects the patient''s productivity,
+    self-perception, and self-esteem; in an impaired quality of life which can lead
+    to suicidal ideation and attempt. The WHO reported that more than 700,000 individuals
+    worldwide died as a result of suicide each year, with depression being a leading
+    cause (2023). Thus, MDD has grown into a major public health problem that needs
+    urgent attention.
+
+
+    Extensive research, the pathophysiology of MDD is still poorly understood. Around
+    40% of MDD patients do not show an adequate response or remission to anti-depressant
+    treatment and ultimately develop treatment resistance which further exacerbates
+    the disease [1]. Additionally, the diagnosis of MDD continues to be on clinical
+    assessment, which can be assisted by psychiatric questionnaire-based tools rather
+    than laboratory-based tests which may be associated with several limitations and
+    heterogeneity of the illness [10,11]. Indeed, self-administered questionnaire-based
+    approaches are not sufficient in evaluating the differences across patients''
+    sub-groups and identifying patients'' depressive states. Adding to the fact that
+    the absence of precise biomarkers has resulted in complex MDD diagnosis with other
+    etiologically associated disorders such as bipolar disorder [12,13].
+
+
+    The use of functional neuroimaging techniques including functional magnetic resonance
+    imaging (fMRI) and electroencephalogram (EEG) offer potential means for the assessment
+    of the changes in brain activity associated with MDD as well as the prediction
+    of'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Journal Pre-proof
+
+
+    82 response to treatment [14–16]. However, these techniques are yet to be utilized
+    in clinical
+
+    83 practice due to multiple factors, including impracticality, expensive costs
+    and limited
+
+    84 specificity. Therefore, it is of great importance to screen for sensitive and
+    specific biomarkers
+
+    85 to improve MDD diagnosis and treatment.
+
+
+    86 Studies have shown that MDD affects the functional activity of the brain which
+    can be
+
+    87 identified by analyzing data on aberrations in the neuronal network [17,18].
+    Moreover, the
+
+    88 heterogeneity of depressive disorders may also be related to neuronal plasticity
+    correlated with
+
+    89 different symptomatology [19]. Besides, it is suggested that MDD results from
+
+    90 systemic changes in the signaling and biochemical pathways involved in the
+    regulation of
+
+    91 moods, cognitive functions and position [20]. Therefore, a comprehensive understanding
+    of
+
+    92 affected or associated biological pathways in MDD is of high importance to
+    reveal
+
+    93 the molecular mechanism of MDD and to identify accurate targets for the MDD
+    diagnosis.
+
+
+    94 To date, machine learning (ML) as an application of AI approaches is successfully
+
+    95 applied in medical studies, by training computer models to process and understand
+    complex
+
+    96 patterns within big-data which facilitate classifications or predictions of
+    new cases [21,22].
+
+    97 Moreover, using OMiCs strategies is amongst the most applied approaches at
+    the forefront of
+
+    98 personalized medicine in psychiatry with high efficiency [22,23], such as transcriptomics
+
+    99 which showed increasing evidence of the potential to detect, and substantially
+    improve the
+
+    100 treatment of such complex cognitive disorders [24,25]. Furthermore, there
+    is a rising interest
+
+    101 in using integrative Omics and neuroimaging data to understand how an altered
+    genetic profile
+
+    102 in psychiatric disorders could influence brain structure and function. This
+    can provide a deeper
+
+    103 understanding of molecular mechanisms and uncover endotypes-neurobiological
+
+    104 changes because of genes implicated in depression [26].
+
+
+    105 In this study, the key aim is to compare transcriptomics data of MDD patients
+    to healthy
+
+    106 controls using bioinformatics and ML approaches and to identify key biomarkers
+    that can aid
+
+    107 in the diagnosis and prediction of the onset of patients with depression.
+
+
+    ![](img/ef4b017b8086fec3e193e824a6d0232b_4_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 2. Materials and Methods
+
+
+    # 2.1. Transcriptome MDD datasets
+
+
+    The Gene Expression Omnibus database (GEO) was searched for publicly available
+    MDD and HCs transcriptomic datasets (https://www.ncbi.nlm.nih.gov/geo/) to choose
+    the appropriate gene expression datasets. The selection criteria included studies
+    for Homo sapiens and MDD patients recruited as international practice guidelines
+    in psychiatry. Studies with no healthy control samples or with a large batch effect
+    were excluded. The GSE98793 dataset, which met all the inclusion criteria was
+    selected and processed [27]. The samples were performed in two batches, with each
+    batch information was extracted from phenotypic data. This dataset consists of
+    high-resolution gene expression sets retrieved from whole blood samples of 128
+    MDD patients and 64 healthy controls (HCs). The Affymet Human Genome U133-Plus
+    2.0 gene-chip was used. The MDD patients were diagnosed if at least two episodes
+    of depression satisfying DSM-IV or ICD10 criteria were identified using the semi-structured
+    Schedule for Clinical Assessment in Neuropsychiatry (SCAN). The demographic and
+    clinical details of the GSE98793 dataset are listed in Supplementary Table S1.
+
+
+    # 2.2. Microarray Normalization and Adaptive Filtering
+
+
+    The Affymetrix microarray covers more than 54,000 probes. The raw CEL files were
+    downloaded and analyzed using an in-house R script pipeline. Logarithmic transformation
+    and batch effect correction were performed to eliminate the experimental effect
+    on the datasets. Next, to normalize and filter out the background noise, MAS5
+    and GCRMA packages from Bioconductor (https://www.bioconductor.org/) were applied.
+    Non-specific filtering was used to extract the common variant probes, while adaptive
+    filtering was applied to identify probes with MAS5 value > 50 and a coefficient
+    of variation >10% in GCRMA. Then, processed probes were intersected across all
+    MDD patients and HCs to identify common variant probes. The filtered common probes
+    between all samples from the two batches of the dataset were combined into a data
+    matrix and mapped to the gene list using Broad Institute software (https://www.gsea-sigdb.org/gsea/index.jsp
+    ). For the collapse of gene symbols, probes with maximum expression were selected
+    as the expression value for the gene. Probes mapping to housekeeping genes or
+    not assigned to any gene were excluded. The workflow of the bioinformatics analysis
+    is shown in Figure 1.A.
+
+
+    # 2.3. Gene Set Enrichment Analysis
+
+
+    The mapped gene expression list was thereafter subjected to the absolute Gene
+    Set Enrichment Analysis (GSEA) to identify the activated and enriched cellular
+    pathways in MDD patients in comparison to HCs Figure 1.B. The absolute GSEA search
+    was carried out on the expression'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'data as previously described [28], using around 25,828 annotated cellular pathways
+    obtained across seven well-annotated gene sets obtained from the Human Molecular
+    Signatures Database (MSigDB). The significantly identified pathways were then
+    subjected to the normal GSEA considering the significance cut-off of p-value <
+    0.05. The significantly activated pathways were further processed to identify
+    the differentially enriched genes between the MDD patients and HCs. As parameters,
+    we used; random permutations=1000, permutation type=sample labels and correlation-based
+    weighting=1. Top leading gene analysis was applied for all significant gene sets
+    to identify the core leading genes for each pathway. Only genes, with fold (FC)>1.5
+    were considered as upregulated and FC<0.5 considered as downregulated, were further
+    explored in the downstream analysis.
+
+
+    # 2.4. Machine Learning pipeline
+
+
+    ML analysis was performed on the same mapped gene expression list from the GSE98793
+    dataset using SkLearn v.1.2.1 in Python v3.9. To examine various ML models with
+    different feature selection (FS) approaches a common ML pipeline applied [29].
+    The ML pipeline selection involves FS and hyperparameter optimization for different
+    models including Logistic Regression (LR), Random Forest (RF), XGBoost (XGB),
+    Support Vector Machine Classifier (SVM) and K-Nearest Neighbors (KNN) with 10-fold
+    cross-validation (Figure 1.C). The prediction performance of each classification
+    model was estimated by accuracy, F1 score and ROC-AUC measures. The accuracy is
+    the proportion of correctly predicted subjects among all subjects. Its formula
+    is presented below:
+
+
+    > Accuracy = \frac{TP*TN}{TP+FP+FN}
+
+
+    where TP = True Positive; FP = False Positive; TN = True Negative; FN = False
+    Negative
+
+
+    The F1 score is the harmonic mean of precision and recall. The precision is the
+    fraction of truly predicted subjects related to a certain class among all subjects
+    for which a classification model was assigned to this class. The recall is the
+    fraction of truly predicted subjects related to a certain class among all subjects
+    related to this class. We used the F1-macro score, where averaged
+
+
+    F1 scores.
+
+
+    > Precision = \frac{TP}{TP+FP}
+
+
+    > Recall = \frac{TP}{TP+FN}
+
+
+    all
+
+
+    per-class'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Journal Pre-proof
+
+
+    173
+
+
+    F1 = 2 \cdot \frac{precision \cdot recall}{precision + recall}
+
+
+    174
+
+
+    ROC-AUC is the area under the error curve, which evaluates the quality of the
+    model without being tied to a specific threshold. For building the ROC curve,
+    TPR against the FPR is plotted, and then the area under the resulting curve was
+    calculated.
+
+
+    175
+
+
+    TPR = \frac{TP}{TP + FN} \n FPR = \frac{FP}{FP + TN}
+
+
+    176
+
+
+    177
+
+
+    178
+
+
+    # 2.5. Feature selection using MI.
+
+
+    179
+
+
+    Transcriptomic data consists of a large number of genes (features) that are much
+    more than the number of samples, which leads to overfitting in the classification
+    tasks. The FS procedure is able to reduce the dimensionality of the data while
+    preserving significant information. Considering that the number of features should
+    be equal to or smaller than the sample size [30], the following options were chosen:
+    First, the number of selected features was equal to the number of samples in the
+    dataset, while the second option, the number of selected features was 80% of the
+    number of samples. Several methods in the FS procedure (Figure 1.C) were chosen
+    using PCA and SelectBest method with ANOVA F-value as a score function. Moreover,
+    ML methods such as LR and RF were chosen to extract important features from trained
+    models. The methods of important feature extraction are different for LR and RF.
+    In the LR model, absolute weights for each feature were ranged in descending order
+    and the top N of (N is chosen according to the options above) were selected for
+    the next step. RF is a method that fits several decision tree classifiers on various
+    splits of the dataset. The importance of each feature was calculated in several
+    steps: First, the value of the decrease in impurity criterion for each node associated
+    with the feature in each decision tree is calculated, then the sum of values of
+    decrease impurity on all nodes is multiplied by the percentage of examples reaching
+    these nodes. Weighted sum is a feature of importance in the RF model.
+
+
+    180
+
+
+    181
+
+
+    182
+
+
+    183
+
+
+    184
+
+
+    185
+
+
+    186
+
+
+    187
+
+
+    188
+
+
+    189
+
+
+    # 2.6. Machine Learning methods
+
+
+    190
+
+
+    191
+
+
+    192
+
+
+    193
+
+
+    194
+
+
+    195
+
+
+    196
+
+
+    197
+
+
+    198
+
+
+    199
+
+
+    200
+
+
+    201
+
+
+    202
+
+
+    203
+
+
+    Several ML models were shown as in Figure 1.C to distinguish between MDD patients
+    and HCs based on selected features only. Different FS methods and parameter combinations
+    inside the ML pipeline selection block including the GridSearchCV procedure (sklearn
+    Python library, version 0.24.2) for fine-tuning the models. Estimation of the
+
+
+    Page 7 of 41'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'model_performance, 10-fold cross-validation with F1 metric was used due to
+    class imbalance.
+
+
+    F1-measure on cross-validation for medical datasets was calculated as previously
+    described
+
+
+    [31]. The total number of true positives and false positives over the folds was
+    estimated
+
+
+    then F-measure was computed on them. Similarly, the ROC-AUC and F1 scores were
+
+
+    computed. The best-performing models optimized in the pipeline were compared with
+    the
+
+
+    baseline model. LR with default parameters and l2 regularization was selected
+    as a baseline.
+
+
+    Finally, the top 20 important features were extracted from each best-performing
+    model (on
+
+
+    (each batch) and baseline model (for batch1 and batch2) 10 repeated 10-fold
+
+
+    validation, for list of top biomarkers between MDD patients and HCs groups.
+
+
+    # 2.7. Evaluation Measures of the Classification Performance
+
+
+    In order to provide a performance assessment of the best-built classifiers that
+    were trained on
+
+
+    the merged (batch 1 and 2) discovery dataset, evaluation measures of the classification
+
+
+    performance were performed in independent external transcriptomics datasets. Well-
+
+
+    characterized datasets from different populations were retrieved from the
+
+
+    Expression Omnibus database (GEO). MDD diagnosis was performed per the DSM-IV
+    criteria
+
+
+    [32]. The total cohort of 42 MDD patients and 57 HCs among the four external datasets
+    are
+
+
+    detailed in Table 1. First, we evaluated the best-built classifiers, which consist
+    of the LR
+
+
+    model with LR as the feature selection, in the four confirmation datasets. Next,
+
+
+    the best-built classifiers were compared with the baseline classifiers'' performance
+    to calculate
+
+
+    the relevant performance metrics of our model built compared to the baseline F1-macro
+    in each
+
+
+    dataset. We have built a dummy classifier that predicts the most frequent class
+    label. The F
+
+
+    macro score for the dummy classifier was calculated using the following formula:
+    r/(r + 1),
+
+
+    where r is the probability of the most frequent class. Since the confirmation
+    datasets showed
+
+
+    different gene sets compared to the discovery dataset, subsequently, the best
+    classifiers were
+
+
+    trained again using the discovery dataset after removing the genes that were absent
+    in the
+
+
+    confirmation dataset. Moreover, to improve the quality of the classification,
+    transfer learning
+
+
+    was applied in each external dataset by splitting the dataset into two parts;
+    80% from the new
+
+
+    training dataset and 20% from the new test dataset.
+
+
+    # 2.8. Functional mapping and annotation of biomarkers to Human brain regions
+
+
+    To evaluate the brain structures among MDD patients associated with the identified
+
+
+    biomarkers, functional mapping and annotation of the Human brain regions were
+    performed
+
+
+    using the Allen Human Brain Atlas (AHBA). The latter is a publicly available resource
+    of'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'Journal Pre-proof
+
+
+    236 comprehensive gene expression mapping of the human brain computing across
+    3700 spatially
+
+    237 different tissues that are collected from six neurotypical postmortem adult
+    brains [33].
+
+
+    # 238 2.9. Occurrence of the identified biomarkers in a large cohort of MDD patients
+    from
+
+    239 diverse ethnicities
+
+
+    240 Cross-validation was performed for the potential DEGs between the MDD patients
+    and HCs
+
+    241 that were identified with bioinformatics analysis and ML models from the discovery
+    dataset.
+
+    242 Independent cross-validation sets were considered on four well-characterized
+    independent
+
+    243 datasets (GSE99725, GSE67826, GSE38206, and GSE32280) from different populations
+    with
+
+    244 diverse ethnicities (Caucasian, Japanese and Chinese) (Table 1). First, the
+    Limma package
+
+    245 under the R software [34] was used to evaluate the DEGs between MDD patients
+    and HCs in
+
+    246 each dataset at a significance threshold of p<0.05. Next, all identified datasets
+
+    247 including the discovery and the confirmation extremal datasets were combined
+    and only the
+
+    248 common genes were considered. ML was re-performed on 80% of the common genes
+    among
+
+    249 the entire datasets while the performance was evaluated in the 20% holdout.
+
+
+    # 250 2.10. Recruitment of MDD patients from the Kazakhstan population for
+
+    251 biomarker assessment
+
+
+    252 The identified MDD biomarker was further assessed in an independent cohort
+    with
+
+    253 particular genetic background from the Kazakhstan population. Saliva samples
+    of 12 well-
+
+    254 characterized MDD patients and 8 HCs were collected at Al-Farabi Kazakh National
+
+    255 University, Kazakhstan. The study was approved by the Ethics Committee of
+    the Al-Farabi
+
+    256 Kazakh National University (IRB-A083 and IRB-A267). Inclusion criteria were
+    diagnosed
+
+    257 with MDD by a psychiatrist for the first time (based on ICD-10) and no medication/
+    treatment.
+
+    258 Exclusion criteria were volunteers with substance or alcohol abuse and taking
+    antipsychotic
+
+    259 medications/treatment. All participants after signing the consent form completed
+    the Inventory
+
+    260 of Depressive Symptomatology (IDS) [35]. Subjects who showed IDS scores>20
+    were
+
+    261 interviewed by a psychiatrist for diagnosis. Saliva samples were collected
+    from all.
+
+
+    # 262 2.11. mRNA gene expression evaluation using qRT-PCR
+
+
+    263 The top biomarker NRG1 was selected for further quantitative gene expression
+
+    264 evaluation between MDD patients and HCs from Kazakhstan population. Saliva
+    samples were
+
+    265 stored in RNAlater stabilization solution at +4°C until analysis. RNA was
+    extracted
+
+    266 using the RNeasy Mini kit (Qiagen, Germany), according to the manufacturer''s
+    protocol. RNA
+
+    267 purity and quantity were assessed using Nanodrop2000 (ThermoFisher Scientific,
+    US). Total
+
+    268 RNA was transcribed using a High Capacity cDNA Reverse Transcription Kit (Applied
+
+
+    Page 9 of 41'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'Biosystems, USA) according to the manufacturer''s instructions. The primers
+    for NRG1 gene
+
+    expression evaluation were Forward:5''-TCGTGAATCAAAGCTACA-3'' and Reverse:5''
+
+    ACTCCCCTCCATTCACACACA-3''. 18S rRNA was used as a housekeeping gene with the
+
+    primers Forward: 5''-TCGTCTCACAAACTAGAAC-3'' and Reverse: 5''
+
+    TGACTCAACGGAAC-3''. The mRNA expression of the candidate and reference genes
+
+    were quantified in MDD patients and HCs using maxima SY BR Green/qPCRMaster Mix
+
+    (ThermoFisher Scientific) on the QuantStudio3 system (Applied Biosystems). The
+
+    amplification for each sample was carried out in two biological replicates and
+    two technical
+
+    plicates, then the mean Cq value (quantitation cycle) was used to determine the
+    fold
+
+    expression change in MDD patients compared to the HCs. The relative expression
+    levels of the
+
+    target gene were calculated using the 2-ΔΔCI method.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# 3. Results
+
+
+    # 3.1. Identification of the differentially expressed genes among MDD patients
+
+
+    The differential transcriptomic profile across MDD patients and HCs were analyzed
+    using a bioinformatics pipeline, and the result of data distribution before after
+    quality control, normalization and filtration of the GSE98793 dataset are shown
+    in Figure 1A. Comparing MDD patients to HCs, a total of 3294 and 2088 differentially
+    expressed genes (DEGs) were identified, respectively, in batch 1 and batch 2 subgroups.
+    The total of DEGs was merged into a common expression matrix based on the gene
+    names to include 1446 common genes between the 106 MDD patients and 51 HCs.
+
+
+    ![](img/ef4b017b8086fec3e193e824a6d0232b_11_0.png)
+
+
+    # 3.2. Enrichment analyses of the DEGs in MDD patients
+
+
+    To explore the molecular signals and biological processes of the identified DEGs
+    in MDD patients compared to HCs, GSEA was performed. It consists of a computational
+    method that identifies whether a priori set of genes shows statistically significant
+    and coherent differences between groups around several thousand pre-defined datasets
+    including complex molecular mechanisms, immunologic signatures, biological processes,
+    molecular activities and cellular structures. The enrichment analysis showed a
+    total of 3262 and 2186 significant pathways (p<0.05) were identified in batch
+    1 and batch 2, respectively. The GSEA revealed that the DEGs in MDD patients are
+    mainly enriched in pathways related to immune response, immune effector processes,
+    signaling by cytokines, inflammatory response, proinflammatory and profib mediators,
+    cellular responses to stimuli, neurodegeneration pathways, cerebellum pathway,
+    and neuroactive ligand-receptor interactions. The details of all significant pathways
+    are listed in Supplementary Table 2.
+
+
+    # 3.3. The most informative MDD-related genes from the activated cellular pathways
+
+
+    To identify the core genes that potentially determine the significant enrichment
+    of the corresponding identified genes, the leading-edge analysis was also performed
+    for all identified significant genes in each subgroup of MDD and HCs. Subsequently,
+    the gene frequency was calculated based on the occurrence of a gene amongst all
+    enriched leading-edge core genes from the significant over-represented gene sets
+    in each batch. Overall, 353 genes resulted based on the merged data of MDD patients
+    compared to HCs (Supplementary Table 3). These identified genes could be the most
+    informative genes that play or control biological roles among the over-enriched
+    pathways in MDD compared to HCs. The functional annotation of these top leading
+    genes in MDD patients further confirms that the immune response-related pathways,
+    the inflammatory responses, and metabolic pathways are the main significantly
+    enriched in MDD compared to HCs (Figure 2). Next, only with genes'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'large gene expression FC>1.5 or <0.5 between MDD patients and HCs were considered.
+    Hence,
+
+
+    28 significantly important genes between MDD patients and HCs were left as shown
+    in Table
+
+
+    2.
+
+
+    # 3.4. Explainable Machine learning models
+
+
+    To identify the most sensitive and potentive predictive MDD-related genes, we
+    further evaluated
+
+
+    the above-resulted DEGs between MDD and HCs with another computational method
+    by
+
+
+    applying different ML models. The fine-tuned parameters for the best-built models
+    in
+
+
+    subgroup comparing MDD patients to HCs were presented in Table 3. Among all tested
+
+
+    models, the best results were obtained with 3 final models on the best-performing
+    ML
+
+
+    algorithms and merged batches Table 4. The best model obtained on the
+
+
+    dataset is LR with LR as the FS method (number of selected features =157). The
+    final model''s
+
+
+    score is 0.76±0.11, and ROC-AUC is 0.82±0.12. While, the best model in batch 1
+    is LR
+
+
+    (F1=0.73±0.17, ROC-AUC=0.88±0.13, and in batch 2 is SVM (F1=0.7±0.16, ROC-
+
+
+    AUC=0.79±0.15). Additionally, the performance classification of the best-class
+    classifiers
+
+
+    trained on the merged discovery dataset which consists of the LR best model along
+    LR with
+
+
+    the feature selection method was further evaluated in four well-characterized
+    independent
+
+
+    transcriptomics datasets from different populations. To compare the performance
+    of the best
+
+
+    model with baseline F1-macro, we have built a dummy classifier that predicts the
+    most frequent
+
+
+    class label. Due to batch effect and domain shift, the F1-macro score was similar
+    to the baseline
+
+
+    in the majority of the datasets (Table 5). The batch effect appears due to
+
+
+    in equipment settings and experiment design which leads to changes in the features''
+
+
+    distribution between training data and external confirmation datasets and thus
+    results in poor
+
+
+    classification performance. Hence, to resolve, that transfer learning was additionally
+    applied to
+
+
+    datasets that the 10-fold cross-validation has improved for all
+
+
+    compared to the classifiers without pretraining, and in all cases, the F1-macro
+    score
+
+
+    was better than the baseline as in Table 5.
+
+
+    # 3.5. Relevant and stable MDD features from the best-built ML models
+
+
+    For the discovery dataset, the performances of all models showed ≥ 75% of accuracy
+    for both
+
+
+    and separate batches, consequently, we decided to include features from the best
+    models
+
+
+    of the separate and merged data for the downstream analysis. From the best 3 identified
+    models,
+
+
+    the most informative and stable features were extracted as MDD-candidates biomarkers
+
+
+    including the top 20 important features for batch 1, batch 2 and merged batches.
+    We
+
+
+    included the top 20 important features from baseline models for batch 1 and batch
+    2. The score
+
+
+    for each feature was computed as a share of all, which particular feature was
+    selected'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'by the model during the FS step. In this experiment, we performed a total of
+    100 folds of cross-
+
+    validation with 10 runs of a 10-fold cross-validation procedure for each group
+    of data to
+
+    estimate the reliability of the obtained features. Next, after selecting the important
+    features,
+
+    post-hoc analysis (scipy library, version 1.9.1) was carried out to evaluate the
+
+    sificant differences in the gene expression between MDD patients and HCs. To assess
+    the
+
+    applicability of the T-test, Shapiro test was applied to evaluate the normality
+    distribution
+
+    and Levene''s test was used to test the equality of variances, but if these assumptions
+    were not
+
+    met, the Mann-Whitney U-test was applied. For each comparison of the separate
+    and merged
+
+    datasets of MDD patients compared to HCs, the significant features are presented,
+
+    respectively, in Supplementary Tables 4-6.
+
+
+    # 3.6. MDD-related biomarkers emerged from Data Integration
+
+
+    The identified gene lists from ML final models and the top frequent genes from
+    the GSEA on
+
+    t merged data from batch 1 and batch 2 were intersected to identify the MDD-related
+
+    omarkers. Since ML models are based on different principles and therefore reveal
+
+    bifferent biomarkers, thus, important features from the three best models were
+    extracted to
+
+    increase the set of overlapping biomarkers from the two approaches. The overlapping
+    between
+
+    t 86 most important features resulting from ML models and the 28 top leading genes
+    resulting
+
+    from the GSEA showed 10 common genes (Figure 3) including CEAM8, CLE12B,
+
+    DEF4A, HCN, NRG1,,M4, SERPING1, TCN1 and THBS1.
+
+
+    # 3.7. Mapping of the MDD-related biomarkers across Human brain regions
+
+
+    To get a better understanding of the association between brain structural alterations
+    and gene
+
+    expression changes in MDD, we assessed the brain-wide gene expression changes
+    of the
+
+    identified MDD-related biomarkers, using the whole-brain transcriptomic dataset
+    from
+
+    HBA. The mapping of the 10 MDD-related biomarkers showed significant (p<0.05)
+    related
+
+    up and down-regulated genes across the brain regions as listed in Table 6. The
+    network
+
+    analysis showed interconnections between the different involved brain regions
+    suggesting
+
+    t the evaluated genes are biologically interconnected as a group in different
+    cognitive
+
+    functions and varied range of behaviors (Figure 4). Thus, the identified MDD-related
+
+    bomarkers are capable of modeling multivariate associations between brain plasticity
+    and
+
+    behavior disorders.
+
+
+    # 3.8. Reproducibility of MDD-related biomarkers expression changes across different
+
+    populations
+
+
+    To evaluate the identified MDD-related biomarkers in another cohort of 42 MDD
+    patients and
+
+    57 HCs, independent external transcriptomic datasets were selected different'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'populations with diverse ethnicities (Caucasian, Japanese and Chinese). Transcriptomic
+    analysis was performed for each dataset separately, then identification of DEGs
+    was proceeded for each comparison of MDD patients compared to HCs and also for
+    the follow-up of patients
+
+
+    e.g. before/after surgery, remise and treatment. All studied comparisons were
+    summarized in **Table 7**. The 10 MDD-related biomarkers were evaluated across
+    different comparisons to show that all these genes, except *OLFM4* gene, were
+    showing expression changes in at least one subgroup of MDD patients (Table 7).
+    Importantly, NRG1 neuregulin1, was also frequently expressed in three out of four
+    MDD populations.
+
+
+    In the GSE99725 dataset, the *NRG1* was up-regulated in HCs compared to MDD patients
+    (FC=0.07, p=0.04) before and after (FC=0.11, p=0.03) surgery, however it didn''t
+    show significant variation (p>0.05) when comparing MDD patients before and after
+    surgery.
+
+
+    Likewise, in the GSE76826 dataset, the NRG1 was down-regulated in HCs to MDD patients
+    before removal and treatment (FC=0.87, p=0.0007) and (FC=0.85, p=0.0005), while,
+    no gene changes were detected among MDD patients before and after removal. Furthermore,
+    in the case of Venlafaxine treatment compared to the GSE32280 dataset, the NRG1
+    was down-regulated in HCs compared to MDD patients before and after the treatment
+    (FC=0.44, p=0.04) and (FC=1.44, p=0.001), respectively,
+
+
+    it was up-regulated when comparing MDD patients before and after Venlafaxine treatment
+    (FC=1.5, p=0.001). Furthermore, the ML on 80% of the entire datasets including
+    the discovery and external datasets along with performance evaluation in the 20%
+    hold showed that the best-classifiers trained on the merry discovery dataset which
+    of the LR best model with LR as the feature selection method showed a 0.58±0.05
+    F1 macro score on 5-fold cross-validation which was better than baseline with
+    0.38 ±0.04 F1 macro score.
+
+
+    Importantly, the NRG1 gene was considered among the most performing genes to distinguish
+    between MDD patients and HC groups among the independent populations with diverse
+    ethnicities. These results together, we suggest NRG1 as a potential robust biomarker
+    to differentiate between MDD patients and HCs under different depression-related
+    conditions as well as follow up the MDD patients remise.
+
+
+    # 3.9. NRG1 is a liquid biopsy and brain-related biomarker
+
+
+    To evaluate the potential of the NRG1 gene as an MDD-related diagnosis biomarker,
+    first we checked its gene expression in the Human brain using the AHBA. The NRG1
+    expression was assessed among transcriptomic data of six post-mortem brains from
+    samples without known psychiatric or neuropathological disorder. As shown in Figure
+    5,
+
+
+    NRG1 is expressed in the left cortex and subcortex with variable intensity'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'samples, suggesting that the NRG1 is a brain-related biomarker that could be
+    informative upon
+
+    mental disorder such as depression. Due to the inaccessibility of the brain tissues,
+    saliva
+
+    omarkers are considered the ultimate non-invasive alternative for mental-related
+    diseases. To
+
+    assess the possibility of using NRG1 as a potent MDD-related biomarker in saliva
+    samples, we
+
+    investigated the presence of NRG1 using quantitative RT-PCR on 12 patients with
+    MDD and
+
+    8 HCs from the Kazakh population. The latter has a particular population ethnicity
+    and is
+
+    different from the other populations that were explored in the discovery and external
+    datasets.
+
+    The relative quantification of NRG1 gene expression after normalization to the
+    reference gene
+
+    18S rRNA showed an up-regulation by the factor 1.48 in MDD patients compared to
+    HCs
+
+    (Figure 6).'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# 4. Discussion
+
+
+    In the present study, we applied a mixture of bioinformatics and ML approaches
+    to mine transcriptomics data of patients with MDD compared to HCs. The study workflow
+    is summarized in Figure 7. The integrative analysis of the bioinformatics and
+    ML identified 10 potent MDD-related biomarkers including CEACAM8, CLEC12B, DEFA4,
+    HP, LCN2, NRG1 OLFM4, SERPING1, TCN1 and THBS1, that showed the most significant
+    and strong differential expression between MDD patients and HCs. The identification
+    of such biomarkers would provide a better preventive intervention, and insight
+    into patients'' responses to anti-depressant therapy, further aiding in monitoring
+    the effectiveness of treatment in patients [36]. Therefore, the development of
+    specific depression-related biomarkers is crucial to aid in the diagnosis and
+    monitoring of patients with depression which may result in earlier diagnosis,
+    as well as earlier intervention, and substantially improve the patients'' outcomes
+    [37].
+
+
+    To identify the most sensitive and potent predictive MDD-related genes, different
+    ML models were applied for the DEGs between MDD and HCs in the discovery dataset
+    (GSE98793). The fine-tuned parameters for the best-built models in each subgroup
+    MDD patients to HCs showed that the best model was obtained on the merged dataset
+    consisting of LR with LR (number of selected features=157) with a final model''s
+    score is 0.76±0.11 and ROC-AUC is 0.82±0.12. Furthermore, evaluation of the classification
+    performance measures of this latter best-built classifiers was performed in four
+    independent transcriptomics datasets. Overall, the confirmatory analysis showed
+    that for each dataset there are differing numbers of genes with different batch
+    effects and other type 1 errors inherent within the samples related to the transcriptomics
+    platform and the recruited HC and MDD patients. Although this resulted in a different
+    set of genes for each dataset (including the discovery and the external datasets),
+    our findings showed that the best-built classifiers with retraining performed
+    much better than the baseline classifier, for example the dataset GSE76828 the
+    F1-score was 0.34 with baseline classifiers, 0.6 with best classifiers without
+    retraining and 0.76 with best classifiers with retraining. Additionally, when
+    we retrained the best-built model on each external dataset the important features
+    remained the same and the values of the LR coefficients didn''t change significantly.
+    Thus, by applying transfer learning only the value of coefficients changes, the
+    prediction quality is improved significantly. The results would seem to demonstrate
+    that the best-built classifiers are better not to be applied as to domain adaptation
+    problems such as changes in distributions from'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Journal Pre-proof
+
+
+    459 different hardware settings and experimental variation, however, using transfer
+    learning and
+
+    460 retraining the classifiers on external data can improve the classification
+    performance. These
+
+    461 results correlate favorably with Pang and Yang''s findings [38] and further
+    support the
+
+    462 relationship between transfer learning and other related machine learning
+    techniques such as
+
+    463 domain adaptation, and sample selection bias.
+
+
+    464 The enrichment analyses of the DEGs in MDD patients are significantly related
+    to the
+
+    465 immune response and inflammatory responses. These findings are consistent
+    with previous
+
+    466 transcriptomics studies in MDD which identified important biomarkers focusing
+    on
+
+    467 inflammation, neuroplasticity, neurotransmitters and stress-related genes
+    [39]. Moreover, this
+
+    468 is in line with Wang et al findings showing a whole transcriptome analysis
+    in the peripheral
+
+    469 blood of MDD patients reported that inflammation and metabolism-related pathways
+    are the
+
+    470 main over-represented pathways involved in the pathophysiology of MDD [40].
+
+
+    471 Depression is expected to distress the functional activity of the brain. More
+    recent
+
+    472 evidence highlights that depression affects three main portions of the brain
+    regions including
+
+    473 the hippocampus (resides in the temporal lobe of the brain), the pre-frontal
+    cortex (located at
+
+    474 the front of the temporal lobe) and the amygdala (located at the frontal portion
+    of the temporal
+
+    475 lobe) [41]. Importantly, we showed that by mapping the MDD-related biomarkers
+
+    476 across the Human brain regions, significant overlapped differentially expressed
+    genes
+
+    477 the brain regions resulted. Furthermore, the mapping network analysis showed
+    closed
+
+    478 interconnections between the different frontal brain regions suggesting that
+    the
+
+    479 evaluated genes are significantly associated with cognitive functions which
+    are probably
+
+    480 altered in depression. This is in agreement with previous findings showing
+    that patients
+
+    481 MDD are characterized by decreased brain activity in frontal areas and increased
+    activation
+
+    482 in limbic regions [42], with the frontal lobe proposed to be the most common
+    region to manifest
+
+    483 anatomic abnormalities in MDD compared to the other brain lobes [43]. There
+    is also evidence of
+
+    484 of hyperactivity in the dorsolateral cortex, left inferior frontal gyrus,
+    and rostral
+
+    485 anterior cingulate gyrus [44]. Notably, we ascertained out of the ten identified
+    MDD-
+
+    486 related biomarkers, six biomarkers (CEC12B, HP, LCN2, OLFM4, SERPING1, and
+    THBS1)
+
+    487 were related to a specific subset of brain regions, however; CEACAM8, DEFA4,
+    NRG1, TCN1
+
+    488 do not show a distinct differential expression on the brain areas of healthy.
+    These findings
+
+    489 appear to be substantiated by previous studies revealing that hub-genes in
+    peripheral
+
+    490 blood samples are capable to classify MDD from HCs with high accuracy, although
+    some
+
+    491 these reliable markers were not correlated with the brain differential gene
+    expression [45].
+
+
+    Page 17 of 41'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'These results point to the probability that due to brain plasticity, necessarily
+    all mental-related biomarkers follow the usual computational analysis hypothesis.
+    That is why the ML and computational approaches are of the highest importance
+    to retrieve hidden biological indicators.
+
+
+    To evaluate the reproducibility of identified MDD-related biomarkers expression
+    changes across different populations, we performed cross-validation in another
+    cohort with different conditions of depression including MDD patients and HCs
+    from independent confirmation transcript datasets. Interestingly, the NRG1 gene
+    resulted as the most robust biomarker to differentiate between MDD patients and
+    HCs under different depression-related conditions and as well to follow-up the
+    MDD patients'' remission. Furthermore, we performed a clinical evaluation of the
+    NRG1 in saliva samples of characterized MDD patients and HCs from the Kazakhstan
+    population using RT-qPCR. As we first showed in the transcriptomic dataset, the
+    up-regulation of NRG1 in MDD patients (p=0.011), the over-expression was further
+    validated in our MDD patients but with no statistical significance (p=0.05), likely
+    due to the small sample size. These findings suggest NRG1 as a liquid-biopsy biomarker
+    for MDD diagnosis and prognosis.
+
+
+    NRG1, coding for neuregulin1, is a member of the epidermal growth factor (EGF)
+    family of extracellular ligands that present an important role in the maintenance,
+    development and repair of the central nervous system (CNS) and peripheral nervous
+    system (PNS) through the ErbB signaling pathway [46]. Several clinical and genetic
+    association studies have reported the linkage between NRG1 gene variations and
+    susceptibility to different psychiatric disorders including depression [47–49].
+    Furthermore, changes in NRG1 expression levels in the post-mortem pre-frontal
+    cortex of patients with major psychiatric disorders such as schizophrenia and
+    unipolar depression have been consistently reported [50,51]. A clinical study
+    with 267 MDD patients suggested NRG1-linked white matter abnormalities were associated
+    with clinical symptoms of depression and anxiety [52]. NRG1 seems to be a predictive
+    biomarker of the response to pharmacological antidepressant treatment as we showed
+    in our analysis of the dataset (GSE32280), NRG1 changes the expression profile
+    in the MDD patients compared to HCs before and after Venlafaxine treatment.
+
+
+    It is worthy of noting that NRG1 plays a critical role in mental-related disorders
+    as it is largely dispersed in the frontal cortex, cerebellum and midbrain. Importantly,
+    the prefrontal cortex is among the most critical brain regions that are related
+    to the regulation of the'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'pathological response to stress [54], fluctuations in behavior, cognitive functions
+    and
+
+    endocrine responses [55]. Furthermore, animal model studies showed that the disturbing
+
+
+    Nrg1 function within the cortical region resulted in decreased synaptic plasticity
+    and
+
+    augmented inhibitory connections [56]. Moreover, mice with heterozygous KO deletion
+    of
+
+
+    Nrg1 showed different schizophrenia-related disorders and advanced sensitivity
+    to stress
+
+    during adolescence [57]. Our findings showed up-regulation of the NRG1 in the
+    MDD
+
+    patients compared to HCs in both blood and saliva samples which per several mice
+    models
+
+    studies showed that increases in the NRG1 expression resulted in deficits in the
+    response to a
+
+    stimulus [58–61].
+
+
+    Thus, we believe a further investigation of the NRG1 biomarker in a larger clinical\dataset
+    of MDD patients is warranted. The evidence from our study points towards the idea
+
+    that hybrid AI and Bioinformatics applications can greatly help in the diagnosis
+    and treatment
+
+    of mental disorders.
+
+
+    # 5. Conclusion
+
+
+    In conclusion, integrative analysis using bioinformatics and ML approaches to
+    compare
+
+    transcriptomics changes of MDD patients to HCs identified DEGs in MDD patients
+    which are
+
+    associated with immune response and inflammatory pathways. In addition, the
+
+    analysis identified ten biomarkers panels that can aid in the diagnosis and monitoring
+    of
+
+    patients with MDD. Amongst those biomarkers, NRG1 exhibits higher expression in
+    the
+
+    amygdala and hippocampus brain subregions and was suggested as a non-invasive
+    liquid-
+
+    bopsy biomarker for the diagnosis of MDD patients.
+
+
+    # 6. Acknowledgments
+
+
+    We would like to acknowledge Ms. Aibike Bektyrsinovova for her contribution to
+    the collection
+
+    of saliva samples.
+
+
+    # 7. Funding
+
+
+    This work was funded by the UoS-Skoltech Collaborative AI for Life [grant # AIFoL-2201]
+    to
+
+    (M.S and R.H.), partially supported by the Russian Science Foundation [grant number:
+    21-71-
+
+    10136) to (M.S.). (Machine Learning models creation, validation and interpretation),
+    and was
+
+    funded by ASPIRE Precision Medicine Research Institute Abu Dubai [grant # VRI-20-10]
+    to
+
+    (R.H.).'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# 8. Data Availability
+
+
+    All the relevant data are available in the paper and the Supplementary files.
+    The data used in this study from the sets GSE98793 for the discovery sets and
+    the sets GSE99725, GSE76826, GSE38206 and GSE32280 for confirmation sets are available
+    from Gene Expression Omnibus (https://www.ncbi.nlm.nih.gov/). The machine learning
+    pipeline sourcecode is uploaded to a publicly available repository at GitHub (https://github.com/maryjis/autoNeuro).
+
+
+    # 9. Declarations of interest
+
+
+    None.
+
+
+    # 10. References
+
+
+    +   1 Baxter AJ, Patton G, Scott KM, Degenhardt L & Whiteford (2013) Global epidemiology
+    of mental disorders: what are we missing? PLoS One 8, e65514.
+
+
+    +   2 Smith K (2014) Mental health: a world of depression. Nature 515, 181.
+
+
+    +   3 Malhi GS & Mann J (2018) Heterogeneity of. The Lancet 392, 2299–2312.
+
+
+    +   4 Liang C-S, Gałęcki P & Su K-P (2022) Unresolved Systemic Inflammation, Long
+    COVID, and the Common Pathogenesis of Somatic and Psychiatric Comorbidity. J Clin
+    Med 11, 5114.
+
+
+    +   5 Poletti S, Palladini M, Mazza MG, De Lorenzo R, COVID-19B Outpatient Clinic
+    group, Furan R, Ciceri F, Rovere-Querin P & Benedetti F (2022) Long-term consequences
+    of COVID-19 on cognitive functioning up to 6 months after discharge: role of depression
+    and impact on quality of life. Eur Arch Psychiatry Neurosci 272, 773–782.
+
+
+    +   6 GOLDBERG D (2011) The heterogeneity of "major depression." World Psychiatry
+    10, 226–228.
+
+
+    +   7 Alhaj HA & McAllister-Williams R (2008) Chapter 5. Adrenal steroids and
+    depressive memory: related to mood disorders. In Handbook of Behavioral Neuroscience
+    (Derek E, Easton A, Nagel L, & Hun JP, eds), pp. 585–595. Elsevier.
+
+
+    +   8 Trivedi MH (2004) The Link Between Depression and Physical Symptoms. Prime
+    Care Companion J Psychiatry 6, 12–16.
+
+
+    +   9 Buydukura JS, McClintock SM & Croanin PE (2011) Psychomotor retardation
+    in depression: Biological underpinnings, measurement, and treatment. Prog Neuropsychopharmacol
+    Psychiatry 35, 395–409.
+
+
+    +   10 Maj M, Stein DJ, Parker G, Zimmerman M, Fava GA, De Hert, Demyattaena K,
+    Mcintyre RS, Widiger T & Witchen H (2020) The clinical characterization of the
+    adult patient with depression aimed at personalization of management. World Psychiatry
+    19, 269–293.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '11 Nelson BD, Kessel EM, Klein & Shankman SA (2018) Depression symptom dimensions
+    and asymmetrical frontal cortical activity while anticipating reward. Psychophysiology
+    55.
+
+
+    12 Mitchell AJ, Vaze A & Rao S (2009) Clinical diagnosis of depression in primary
+    care: a meta-analysis. The Lancet 374, 609–619.
+
+
+    13 Hashimoto K (2018) Chapter Three - Metabolomics of Major Depressive Disorder
+    and Bipolar Disorder: Overview and Future Perspective. In Clinical Chemistry (Makowski
+    GS, ed.), pp. 81–99. Elsevier.
+
+
+    14 Alahaj H, Wisniewski G & McAllister-Williams RH (2011) The use of EEG in measuring
+    therapeutic drug action: focus on depression and antidepressants J Psychopharmacol
+    Oxf 25, 1175–1191.
+
+
+    15 Dunlop B & Mayberg HS (2017) Neuroimaging Advances for Depression. Cerebral
+    Dana Brain Sci 2017, cer–16–17.
+
+
+    16 Kustabayeva AE, Nelson EM, Smith ML, Allendorf J & Elisabeth JC (2022) Functional
+    MRI of study-based reinforcement learning in depression. Front Neuroinformatics
+    16.
+
+
+    17 Alahaj HA, Massey E & McAllister-Williams RH (2007) A study of the neural correlates
+    of episodic memory and HPA status in drug-free depressed patients and healthy
+    controls. J Psychiatr Neurosci 24, 41–295.
+
+
+    18 Wang X, Ren Y & Zhang W (2017) Depression Disorder Classification of fMRI Data
+    Using Sparse Low-Rank Functional Brain Network and Graph-Based Features. Comput
+    Math Methods Med 206, e3609821.
+
+
+    19 Weiner WG (1999) Assessing the machinery of mind: synapses in neuropsychiatric
+    disorders. J Psychiatry 6, 116–121.
+
+
+    20 Palidazou E (2012) The neurobiology of depression. Br Med Bull 101, 127–145.
+
+
+    21 MacCearn SJ & Forkert ND (2021) Multi-omics machine learning for precision
+    medicine. Genome 64, 416–425.
+
+
+    22 Joyce JB, Grant CW, Liu D, MahmoudDekordi S, Kaddurah-Daouk R, Skime M, Biernack
+    J, Frye MA, May T, Carmody T, Croarkin PE, Wang L, Weinhilbour R, Bobo VW, Trivedi
+    MH & Athreya AP (2021) Multi-omics driven predictions of response to acute combination
+    antidepressant therapy: a machine learning approach with cross-trial replication.
+    Transl Psychiatry 11, 1–11.
+
+
+    23 Ressler KJ & Williams LM (2021) Big data in psychiatry: multomics, neuroimaging,
+    computational modeling, and digital phenotyping. Neuropsychopharmacol Off Pub
+    Am Club 46, 1–12.
+
+
+    24 Johnson E, Bierut L & Cox N (2019) Integrative Omics in Psychiatric Diseases:
+    Tools For Discovery and Understanding Biology. Eur Neuropsychopharmacol 29, S741–S742.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '622 Li X, Su, Liu J, Li H, Li M, W & Luo X-J (2021) Transcriptome-wide association
+    study identifies new susceptibility genes and pathways for depression. Transl
+    Psychiatry 11, 1–13.
+
+
+    624 26 Buch AM & Liston C (2021) Dissecting heterogeneity in depression by integrating
+    neuroimaging and genes. Neuropsychopharmacology Off Publ Am Coll Neuroopharmacology
+    46, 156–175.
+
+
+    627 27 Leyad GGR, Vértes PE, Richardson S, Greene JR, Regan T, Khan S, Henderson
+    R, Freeman TC, Pariante CM, Harrison NA, MRC Immunopositivity Consortium, Perry
+    VH, Drevet WC, Wittenberg GM & Bullmore ET (2018) Replicable and Coupled Changes
+    in Innate and Adaptive Immune Gene Expression in Two Case-Control Studies of Bio
+    Microarrays in Major Depressive Disorder. Bio Psychiatry 83, 70–80.
+
+
+    632 38 Hamoudi RA, Apert, Ye H, Ruskonen C, Fourmaux A, Strebel B, Chott A, Raderer
+    M, Gong L, Wiodarska I, We of Peña C, MacLannan KA, De L Isaac PG & Du M-Q (2010)
+    Differential expression of NF-kB target genes in MALT with and without chromosome
+    translocation: inclusion into molecular mechanism, Leukemia 24, 1487–1497.
+
+
+    639 Sharaev M, Andreev A, Artemov M, Burnaeve E, Kontrayeva S, Samotaeva I, Gaskin
+    V & Bernstein A (2018) Pattern Recognition Pipeline for Neuroimaging Data. In
+    Artificial Neural Networks in Pattern Recognition (Pancioni L, Schwenker F, &
+    Trent E, et al.), pp. 306–319. Springer International Publishing, Cham.
+
+
+    640 30 Hua J, Xong Z, Lowe J, Sue E & Dougherty ER (2005) Optimal number of features
+    as a function of sample size for various classes. Bioinformatics 21, 1509–1515.
+
+
+    641 Forman G & Scholz M (2020) Apples-to-apples in cross-validation studies: pitfalls
+    in classifier performance measurement. ACM SIGK Explorer News 12, 49–57.
+
+
+    644 Guze SB (1995) Diagnostic and Statistical Manual of Mental Disorders, 4th
+    ed. (DSM-IV). Am J Psychiatry 152, 1228–1238.
+
+
+    648 Ritchie ME, Phipson B, Du W, Hu Y, Shi W & Smith GK (2015) limits powers differential
+    analysis for RNA-sequencing and microarray studies. Nucleic Acids Res 650, e47.
+
+
+    651 Rush AJ, Gullion CM, Basco MR, Jarrett B & Trivedi MH (1996) The Inventory
+    of Depressive Symptomatology (IDS): psychometric properties. Psychol Med 26, 477–486.
+
+
+    653 Li Z, Ruan M, Chen J & Fang Y (2021) Major Depressive Disorder: Advances in
+    Neuroscience Research and Translational Applications. Neurosci Bull 37, 863–880.
+
+
+    655 Notis A, Zaleski D & Waszkiewicz N (2020) Peripheral Markers of Depression.
+    J Clin Med 9, 3793.
+
+
+    657 Pan SJ & Yang Q (2010) A Survey on Transfer Learning. IEEE Trans Know Data
+    22, 1345–1359.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# Journal pre-proof
+
+
+    39 Mariani N. Cattane N. Pariante C Cattaneo A (2021) Gene expression studies
+    in Depression development and treatment: an overview of the underlying molecular
+    mechanisms and biological processes to identify biomarkers. Transl Psychiatry
+    11, 354.
+
+
+    40 Wang Y, Wei J, Chen T, Yang X, Zhao L, Wang M, Dou Y, Du J, Ni R, Li T & Ma
+    X (2022) Whole Transcriptome Analysis in Peripheral Blood Suggests that Energy
+    Metabolism and Inflammation Are Involved in Major Depression. Front Psychiatry
+    13.
+
+
+    41 Zhang F, Peng W, Sweeney JA, Jia Z & Gong Q (2018) Brain structure alterations
+    in depression: neuropsychological evidence. CNS Neurosci Ther 24, 994–1003.
+
+
+    42 Zhong X, Pu W & Yao S (2016) Functional alterations of fronto-limic circuit
+    and default network systems in first-episode, drug-naive patients with major depression
+    disorder: A meta-analysis of using resting-fMRI data. J Affect Disorder 206, 226–280.
+
+
+    43 Sivrivasa S, Bhatia MS, Bhargava SK, Kumari R & Chandra S (2016) A Diffusion
+    Tensor Imaging Using a Voxel-Based Analysis, Region-of-Interest Method to Analyze
+    White Matter Abnormalities in First-Episode, Transient-Naive Major Depression.
+    J Neuropsychiatric Clin 28, 131–137.
+
+
+    44 Wagner G, Ginsel E, Sobanski T, Kohler S, Marinov V, Mentzel H-J, Sauer H &
+    Schloss RGM (2006) Cortical efficiency in patients with bipolar depression: an
+    event-related fMRI with the Stroop task. Biol Psychiatry 59, 958–965.
+
+
+    45 Gomez Ruedaz H & Bustillo J (2022) Brain differential gene expression and cross-validation
+    of a molecular signature of patients with major depression disorder. Psychiat
+    Genet 32, 105–115.
+
+
+    46 Mei L & Nave K-A (2014) Neureglin-ERBB signaling in nervous system development
+    and neuropsychiatric diseases. Neuron 83, 27–49. Genetic association between NGRG1
+    and schizophrenia, major depression disorder, bipolar disorder in Chinese population.
+    Am J Med Gen Neuropsychiatr 171B, 468–478. 48 Levchenko V, Ayalov ...
+
+
+    47 Wen Z, Chen J, Khan RAW, Song Z, Wang M, Li Z, Shen J, Li W & Shi Y (2016)
+    Genetic association between NGRG1 and schizophrenia, major depression disorder,
+    bipolar disorder in Chinese population.
+
+
+    49 Mitchell BL, Campos AI, Whiteman DC, Olson CM, Gordon SD, Walker AJ, Dean M,
+    Berk M, Hickey IE, Medland SE, Wray NR, Martin NG & Byrne E (2022) The Australian
+    Genetics of Depression Study: New Risk L and Detecting Heterogeneity Between Subtypes.
+    Biol Psychiatry 92, 227–235.
+
+
+    50 Hashimoto R, Straub RE, Weickert CS, Hyde TM, Kleinman JE & Weinerberg DR (2004)
+    Expression analysis of neureglin-1 in the dorsolateral prefrontal cortex in schizophrenia.
+    Mol Psychiatry 9, 299–307.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Journal Pre-proof
+
+
+    51 Bertram I, Bernstein H-G, Lendeckel U, Bukowska A, Dobrowolny H, Keilhoff G,
+    Kanakis D, Mawrin C, Blau H, Falkai P & Bogerts G (2007) Immunohistochemical evidence
+    for impaired neuroreglin-1 signaling in the prefrontal cortex in schizophrenia
+    and in unipolar depression. Ann Y Ac Sci 109, 147–156.
+
+
+    699 Duan J, Wei Y, Fomer F, Zhang X, Chang M, Yu Y, Liu Z, Li C, Yin Z, Zhang
+    R, Sun J, Wang P, Sang J, Xian W, Wei S, Zhang Y, Yang & F (2021) Neurobiological
+    substrates of major psychiatric disorders: transdiagnostic associations between
+    white matter abnormalities, neuroregulin 1 and clinical manifestation. J Psychiatry
+    Neurosci 46, E506–E515.
+
+
+    703 Zhang Z, Huang J, Shen Y & Li R (2017) BACE1-Dependent Neuroregulin-1 Signaling:
+    An Implications for Schizophrenia. Front Mol Neurosci 10, 302.
+
+
+    705 Negrón-Oyarruz L, Aboitz F & Fuentalba P (2016) Impaired Functional Connectivity
+    in the Prefrontal Cortex: A Mechanism for Chronic Stress-Induced Neuropsychiatric
+    Disorders. Neural Plast 2016, 7539065.
+
+
+    755 Corbett BB, Luz S, Arner J, Pearson-Leary J, Sengupta A, Taylor D, Gehrmann
+    P, Ross R & Bhatnagar S (2019) Sphingosine-1-phosphate receptor 3 in the medial
+    prefrontal cortex promotes stress resistance by reducing inflammatory processes.
+    Nat Comm 10, 3146.
+
+
+    716 Clarke DJ, Stuart J, McGregor R & Arnold JC (2017) Endocannabinoid dysregulation
+    in cognitive and stress-related brain in the Nrg1 mouse model of schizophrenia.
+    Prog Neuropsychopharmacol Biol 72, 9–15.
+
+
+    714 Samson JN & Wong AHC (2015) Schizophrenia and Depression Co-Morbidity: What
+    Have Learned from Animal Models, Front Psychiatry 6, 13.
+
+
+    718 Deakin IH, Nissen W, Law AJ, Oliver PL, Schwab MH, Nave KA, Harrison PJ &
+    Bannerman DM (2009) Behavioural characterisation of neuroregulin 1 (NRG1) type
+    i-overexpressing transgenic mice. Stein Whitel. Neuroreport 20, 1523–1528.
+
+
+    719 Kato T, Kasai A, Mizuno M, Feng Y, Shinlay N, Maeda S, Yokohama M, Masaki
+    Z & Mawa H (2010) Phenotypic Characterization of Transgenic Mice Overexpressing
+    Neuroregulin-1. PLOS ONE 5, e14185.
+
+
+    62 Deakin IH, Nissen W, Law AJ, Kanso R, Schwab MH, Nave K-A, Lamsa KP, Paulsen
+    O, Bannerman DM & Harrison PJ (2012) Transgenic Overexpression of the Type Isoform
+    of Neuroregulin 1 Affects Working Memory and Hippocampal Oscillations by Long-term
+    Potentiation. Cereb Cortex NY 22, 1520–1529.
+
+
+    61 Yin D-M, Chen Y-J, Lu Y-S, Bean JC, Sathamurthy A, Shen C, Liu X, Lin TW, Smith
+    CA, Xiong W & Ce Mei L (2013) Reversal of Behavioral Deficits and Synaptic Dysfunction
+    in Mice Overexpressing Neuroregulin 1. Neuron 78, 644–657.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'Journal Pre-proof
+
+
+    731 11. Figures Caption:
+
+
+    732 Figure 1: Overview of the bioinformatics and Machine Learning workflow. A)
+    Data
+
+    733 processing of MDD and healthy controls transcriptomic data. B) Bioinformatics
+    analysis
+
+    734 including GSEA. C) Machine Learning Pipeline.
+
+
+    735 Figure 2: The top 20 enriched pathways in MDD patients compared to healthy
+    controls.
+
+    736 Figure 3: Venn diagram showing the overlap between the significantly identified
+    genes by
+
+    737 machine learning models and GSEA-leading gene analysis in MDD patients compared
+    to
+
+    738 healthy controls.
+
+
+    739 Figure 4: Network intersections of brain regions involving A) up-regulated
+    and B) down-
+
+    740 regulated genes profiled by the Allen Brain Atlas.
+
+
+    741 Figure 5: Gene expression proving of the NRG1 gene in brain samples A) Subcortex,
+    B) Left
+
+    742 cortex from healthy samples.
+
+
+    743 Figure 6: Increased expression of NRG1 gene in MDD patients compared to Healthy
+    controls.
+
+    744 A) NRG1 was up-regulated in MDD patients compared to Healthy controls from
+    the Microarray
+
+    745 dataset. Y-axis is showing a random unit, of expression. B) Confirmation of
+    the NRG1 up-
+
+    746 regulation in MDD patients compared to Healthy controls using RT-qPCR in an
+    independent
+
+    747 population. Y-axis is showing relative expression.
+
+
+    748 Figure 7: The general workflow of MDD-related Biomarkers identification based
+    on
+
+    749 Bioinformatics and ML-approach to connect Transcriptomic changes and Brain
+    regions.
+
+
+    750
+
+
+    Page 25 of 41'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# 12. Tables:
+
+
+    Table 1: List of Transcriptomic datasets used in this study.
+
+
+    | S. No | Dataset ID | Type of Psychiatric Disorder | Population | Total No. of
+    patients (Visits/Follow-ups) | Comparison of samples (Non-MDD Patients / MDD patients)
+    | Questionnaires for disease diagnosis and evaluation | Reason for multiple visits
+    |
+
+    | 1 | GSE99725 | MDD | French/Caucasian | 33 (24) | 18 (13) / 15 (11) | DSM4 MADRS
+    | Follow-up after Bariatric Surgery |
+
+    | 2 | GSE76826 | MDD | Japanese | 32 | 12 (12) / 10 (10) | DSM4 SIGH-D | N/A |
+
+    | 3 | GSE38206 | MDD | French/Caucasian | 18(18) | 9 / 9 | DSM4 HDRS | Follow
+    up in remission state after 8 weeks of MDE |
+
+    | 4 | GSE32280 | MDD | Chinese | 16(16) | 8 / 8 | DSM4 HRSD-17 | After treatment
+    with Venlafaxine |
+
+    | 5 | GSE98793 | MDD | German/Caucasian | 192 | 64 / 128 | DSM4 or ICD10 | N/A
+    |
+
+
+    Table 2: Filtered Top leading genes in MDD patients compared to healthy controls.
+
+
+    | NAME | Gene Description | Fold Change |
+
+    |---|---|--|
+
+    | AHSP | alpha hemoglobin stabilizing protein | 1.64 |
+
+    | ANKRD22 | ankyrin repeat domain 22 | 1.76 |
+
+    | BPGM | bisphosphoglycerate mutase | 1.55 |
+
+    | BPI | bactericidal permeability increasing protein | 1.85 |
+
+    | CACNA1E | calcium voltage-gated channel subunit alpha E | 1.77 |'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '| CEACAMB | CEA cell adhesion molecule 8 | 2.50 |
+
+    |---|---|--|
+
+    | CLE12B | C-type lectin domain family 12 member B | 1.82 |
+
+    | CMPK2 | cytidine/uridine monophosphate kinase 2 | 1.62 |
+
+    | DEF4A | defensin alpha 4 | 2.85 |
+
+    | DSC2 | desmocolin 2 | 1.51 |
+
+    | FOLR3 | folate receptor gamma | 1.54 |
+
+    | HP | hapoglobin | 2.06 |
+
+    | IF44L | interferon induced protein 44 like | 1.52 |
+
+    | IFN6 | interferon inducible protein 6 | 1.56 |
+
+    | IFTT1 | interferon induced protein with tetratricopeptide repeats 1 | 1.58 |
+
+    | ITGA2B | integrin subunit alpha 2b | 1.61 |
+
+    | LCN2 | lipocalin 2 | 2.32 |
+
+    | LTF | lactotransferrin | 2.85 |
+
+    | NRG1 | neuregulin 1 | 1.68 |
+
+    | OLFM4 | olfactomedin 1 | 3.57 |
+
+    | ORM1 | orosomculoid 1 | 1.69 |
+
+    | RSAD2 | radical S-adenosyl methionine domain containing | 1.71 |
+
+    | SERPING1 | serpin family G member 1 | 1.51 |
+
+    | SOX6 | SRY-box transcription factor 6 | 1.51 |
+
+    | TCNI | transcobalamin 1 | 1.67 |
+
+    | TDRD9 | tumor domain containing 9 | 1.70 |
+
+    | THBS1 | thrombospondin 1 | 1.61 |
+
+    | XK | X-linked Kx blood group antigen, Kell and VPS13A binding protein | 1.57
+    |
+
+
+    Table 3: Final ML model parameters.
+
+
+    | GSE98793: Batch 1 | GSE98793: Batch 2 | GSE98793: Batch 1 + Batch 2 |
+
+    |---|---|---|
+
+    | Model | LR (baseline) | LR (baseline) | - |'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '| Parameters | C =1, penalty=''11'', solver=''liblinear'' | C =1, penalty=''12'',
+    solver=''liblinear'' | - |
+
+    | --- | --- | --- | --- |
+
+    | Model Parameters | VarianceThreshold +LR | VarianceThreshold +SVM | LR (157)
+    + LR |
+
+    | | C=1, class_weight=balanced, penalty=11, solver=liblinear | C=0.1, class_weight=balanced,
+    kernel=linear, probability=True | LR (157): default parameters C=3, class_weight=balanced,
+    solver=liblinear |
+
+    | Model Parameters | RF (80)+XGB | RF (77)+XGB | LR (136)+SVM |
+
+    | | RF (80): n_estimators=8 learning_rate=0.3, max_depth=6, eta=0.1, remaining
+    parameters -default | RF (77): n_estimators=8 learning_rate=0.3, max_depth=6,
+    eta=0.3, remaining parameters -default | LR (136): default parameters C=0.01,
+    class_weight=''balanced'', kernel=''linear'' |
+
+    | Model Parameters | KBest (80)+SVM | KBest (77)+LR | KBest (157)+RF |
+
+    | | SelectKBest (80): default parameters class_weight=''balanced'', kernel=''linear''
+    | SelectKBest (77): default parameters C=0.1, class_weight=''balanced'', penalty=''11'',
+    | SelectKBest (157): default parameters class_weight=''balanced'', max_depth=7,
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Journal Pre-proof
+
+
+    n_estimators=10,
+
+
+    757 In the pipeline final model is consist of a feature selection method (optional)
+    and a predictive model. If a feature selection method is used it is
+
+    758 specified with the number of selected features in the brackets, otherwise,
+    only the predictive model is specified (trained on all features), LR:
+
+    759 Logistic Regression, SVM: Support Vector Machine Classifier, XGB: XGBoost.
+
+
+    Table 4: Final model''s performance.
+
+
+    | Batch 1 | | | | Batch 2 | | | | | | Batch 1 + Batch 2 |
+
+    |---|---|---|---|---|---|---|---|---||
+
+    | Feature selection+ | RF | KBest | | | RF | LR | LR | KBest |
+
+    | Model Baseline | LR | (80)+XGB (80)+SVM | Baseline | SVM | KBest (77)+LR | (77)+XGB
+    (157)+LR | (136)+SVM | (157)+RF |
+
+    | Accuracy: | 0.7±0.15 | 0.79±0.11 | 0.71±0.11 | 0.74±0.17 | 0.72±14 | 0.75±13
+    | 0.71±0.17 | 0.71±0.12 | 0.8±0.1 | 0.78±0.10 | 0.69±0.09 |
+
+    | ROC AUC | 0.78±0.13 | 0.88±0.13 | 0.72±0.2 | 0.7±0.22 | 0.72±0.18 | 0.79±0.15
+    | 0.73±0.18 | 0.68±0.24 | 0.82±0.12 | 0.82±0.13 | 0.7±0.14 |
+
+    | F1 | 0.63±0.18 | 0.73±0.17 | 0.63±0.17 | 0.68±0.22 | 0.64±0.18 | 0.7±0.16 |
+    0.68±0.18 | 0.64±0.17 | 0.76±0.11 | 0.74±0.12 | 0.63±0.11 |
+
+
+    Page 29 of 41'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'MDD vs HC classification task was based on transcriptomic data from two batches
+    separately and from their combination. Here, feature selection
+
+    methods and ML models are specified together with the number of selected features
+    in brackets. RF - Random Forest, XGB -XGBoost Classifier,
+
+    LR -Logistic Regression, SVM -Support Vector Classifier, LR (157) - Logistic Regression
+    for feature selection, where 157 features were
+
+    selected. If the number of features is not specified in the brackets, the model
+    is trained on all features.
+
+
+    # Table 5: The classification performance comparison (F1-macro) with and without
+    retraining compared to a baseline classifier in external
+
+    transcriptomics datasets.
+
+
+    | External Dataset | Baseline classifier (dummy) | Best classifier without retraining
+    | Best classifier with retraining |
+
+    |---|---|---|--|
+
+    | GSE76826 (22 samples) | 0.34±0.02 | 0.6 | 0.76±0.02 |
+
+    | GSE38206 (18 samples) | 0.37±0.03 | 0.35 | 0.66±0.22 |
+
+    | GSE99725 (33 samples) | 0.35±0.01 | 0.32 | 0.48±0.19 |
+
+    | GSE32280 (16 samples) | 0.4±0.01 | 0.35 | 0.47±0.34 |
+
+
+    Table 6: Significantly enriched brain regions profiled by Allen Human Brain Atlas
+    of the MDD-related genes.
+
+
+    | Brain region | P-value | MDD-related Genes | Status in the brain region |
+
+    |---|---|---|--|
+
+    | Periventricular stratum of PCV | 0.0093 | HP:THBS1 | down-regulated |
+
+    | Periventricular stratum of RtC | 0.0093 | CLEC12B:OLFM4 | down-regulated |
+
+    | Intermediate stratum of r7BM | 0.0093 | HP:THBS1 | down-regulated |'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '| Intermediate stratum of r8BM | 0.0093 | LCN2;THBS1 | down-regulated |
+
+    | Periventricular stratum of p1LIm | 0.0093 | CLEC2B;HP | down-regulated |
+
+    | Periventricular stratum of p3ZL | 0.0093 | CLEC2B;OLFM4 | down-regulated |
+
+    | Interstitial magnocellellular nucleus | 0.0093 | HP;THBS1 | down-regulated |
+
+    | r6 part of paragagantocellular reticular | 0.0093 | HP;THBS1 | down-regulated
+    |
+
+    | r7 part of hasomedial reticular formation | 0.0093 | LCN2;THBS1 | down-regulated
+    |
+
+    | r8 part of hasomedial reticular formation | 0.0093 | LCN2;THBS1 | down-regulated
+    |
+
+    | r8 part of giganticocellular reticular area | 0.0093 | LCN2;THBS1 | down-regulated
+    |
+
+    | Retropothalamic nucleus | 0.0093 | CLEC2B;OLFM4 | down-regulated |
+
+    | Mantle zone of r7BI | 0.0093 | HP;LCN2 | down-regulated |
+
+    | Nucleus of reunions | 0.0093 | CLEC2B;OLFM4 | down-regulated |
+
+    | Mantle zone of r7BM | 0.0093 | HP;THBS1 | down-regulated |
+
+    | Mantle zone of r8BM | 0.0093 | LCN2;THBS1 | down-regulated |
+
+    | Shell of p3ZL | 0.0093 | CLEC2B;OLFM4 | down-regulated |
+
+    | Intermediate part of r7B | 0.0093 | HP;LCN2 | down-regulated |
+
+    | Media part of r7B | 0.0093 | HP;THBS1 | down-regulated |
+
+    | Media part of r8B | 0.0093 | LCN2;THBS1 | down-regulated |
+
+    | p1l.im part of periaqueductal gray | 0.0093 | CLEC2B;HP | down-regulated |
+
+    | Periventricular hypothalamic nucleus, descending division, paracellular part
+    | 0.0093 | CLEC2B;OLFM4 | down-regulated |
+
+    | Periventricular hypothalamic nucleus, magnocellular division, posterior magnocellular
+    nucleus | 0.0093 | CLEC2B;OLFM4 | down-regulated |
+
+    | Periventricular hypothalamic nucleus, magnocellular division, posterior magnocellular
+    part, lateral zone | 0.0093 | CLEC2B;HP | down-regulated |
+
+    | Paraventricular nucleus, cap part | 0.0093 | CLEC2B;OLFM4 | down-regulated |
+
+    | Lateral terminal of the accessory optic tract, ventral part | 0.0004 | HP;SERPING1;OLFM4
+    | up-regulated |
+
+    | Superior colliculus, optic layer | 0.0004 | HP;LCN2;THBS1 | up-regulated |
+
+    | Anterior pretectal nucleus, ventral superficial part | 0.0004 | HP;SERPING1;OLFM4
+    | up-regulated |
+
+    | Superficial stratum of CoPV | 0.0004 | HP;SERPING1;OLFM4 | up-regulated |
+
+    | Superficial stratum of PcPV | 0.0004 | HP;SERPING1;OLFM4 | up-regulated |'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Journal Pre-proof
+
+
+    | | | |
+
+    |---|---|---||
+
+    | superficial stratum of m1AL | 0.0094 | HP;LCN2 | up-regulated |
+
+    | superficial stratum of p2B | 0.0094 | SERPING1;THBS1 | up-regulated |
+
+    | Postsubicculum, layer 1 | 0.0094 | HP;LCN2 | up-regulated |
+
+    | Presubriculum, layer 1 | 0.0094 | SERPING1;OLFM4 | up-regulated |
+
+    | Presubriculum, layer 2 | 0.0094 | SERPING1;OLFM4 | up-regulated |
+
+    | Lateral part of Med | 0.0094 | OLFM4;THBS1 | up-regulated |
+
+    | Layer 2 of PrS | 0.0094 | SERPING1;OLFM4 | up-regulated |
+
+    | m1il.part of the midbrain reticular formation | 0.0094 | HP;LCN2 | up-regulated
+    |
+
+    | medial amygdalar nucleus, posterolateral part | 0.0094 | LCN2;SERPING1 | up-regulated
+    |
+
+    | Medial (fastigial) cerebellum nucleus | 0.0094 | OLFM4;THBS1 | up-regulated
+    |
+
+    | Subrachnial nucleus, caudal part | 0.0094 | HP;LCN2 | up-regulated |
+
+    | Nucleus of inferior collicular brachium, rostral part | 0.0094 | HP;LCN2 | up-regulated
+    |
+
+    | Superficial layers of TG | 0.0094 | LCN2,THBS1 | up-regulated |
+
+    | Intermediate stratum of m1AL | 0.0094 | HP;LCN2 | up-regulated |
+
+    | Intermediate stratum of m1Lim | 0.0094 | HP;LCN2 | up-regulated |
+
+    | Presubriculum | 0.0253 | SERPING1;OLFM4 | up-regulated |
+
+
+    Table 7: Cross-Validation of the MDD-related biomarkers across different populations
+    of MDD patients and controls.
+
+
+    | GSE. | Comparison Groups | No. of Controls | No. of Patients | MDD | Overlapping
+    DEGs |
+
+    |---|---|---|---|---||
+
+    | GSE99725 | Healthy Controls (Pre-Bariatric Surgery) vs MDD Patients (Pre-Bariatric
+    Surgery) | 18 | 15 | NRG1 ↑, SERPING1↑ |
+
+    | Healthy Controls (Post-Bariatric Surgery) vs MDD Patients (Post-Bariatric Surgery)
+    | 13 | 11 | NRG1 ↑, CLEC12B, HP† |
+
+    | MDD Patients (Pre-Bariatric Surgery) vs MDD Patients (Post-Bariatric Surgery)
+    | 15 | 11 | LCN2 ↑, HP†, CEACM8↑ |
+
+    | GSE76826 | Healthy Controls vs MDD Patients | 12 | 10 | NRG1 ↓ |
+
+    | Healthy Controls vs MDD Patients in Remission | 12 | 10 | NRG1 ↑, HP↑ |
+
+    | MDD Patients in Remission vs MDD Patients | 10 | 10 | HP↓ |
+
+
+    Page 32 of 41'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '| GSE32280 | Healthy Controls vs MDD Patients (Pre-Venlafaxine Treatment) |
+    8 | 8 | NRG1 ↓, THBS1 ↑ |
+
+    | | Healthy Controls vs MDD Patients (Post-Venlafaxine Treatment) | 8 | 8 | NRG1
+    ↓ |
+
+    | MDD Patients (Pre-Venlafaxine Treatment) vs MDD Patients (Post-Venlafaxine Treatment)
+    | 8 | 8 | NRG1 ↑ |
+
+    | GSE38206 | Healthy Controls vs MDD Patients | 9 | 9 | LCN2 ↑, THBS1 ↓, DEFA4
+    ↓, HP↑, TCN1↑, CEAM8↑ |
+
+    | Healthy Control vs MDD Patients in Remission | 9 | 9 | LCN2 ↑, SERPING1 ↑, THBS1
+    ↓, TCN1↑, CEAM8↑ |
+
+    | MDD Patients in Remission vs MDD Patients | 9 | 9 | HP↑ |
+
+
+    Supplementary Tables:
+
+
+    Supplementary Table 4: The most informative and stable features (genes) in MDD
+    patients compared to healthy controls (Batch 1).
+
+
+    | Feature name | Score (%) | p-value | Statistical test |
+
+    | LCN2 | 100 | 0.0008 | Mann-Whitney U test |
+
+    | CNINAP3 | 100 | 0.0053 | Mann-Whitney U test |
+
+    | SERPING1 | 100 | 0.0097 | Mann-Whitney U test |
+
+    | RNF103 | 100 | 0.0011 | T-test |
+
+    | FCERIA1 | 90 | 0.0068 | T-test |
+
+    | PDK4 | 90 | 0.0173 | T-test |'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '| | | | |
+
+    |---|---|---||
+
+    | LINC02273 | 90 | 0.0305 | T-test |
+
+    | ABHD4 | 90 | 0.0262 | T-test |
+
+    | TP53IG3 | 80 | 0.0018 | Mann-Whitney U test |
+
+    | KLRKI | 80 | 0.0018 | T-test |
+
+    | HOXB-AS1 | 70 | 0.0035 | T-test |
+
+    | PPMIL | 70 | 0.0174 | T-test |
+
+    | SMPD3 | 60 | 0.0266 | T-test |
+
+    | NME7 | 60 | 0.0010 | Mann-Whitney U test |
+
+    | PYHIN1 | 60 | 0.0013 | T-test |
+
+    | CBS | 60 | 0.0041 | Mann-Whitney U test |
+
+    | GRB10 | 50 | 0.0002 | T-test |
+
+    | HNRNPM | 50 | 0.0004 | Mann-Whitney U test |
+
+    | OLFM1 | 50 | 0.0069 | T-test |
+
+    | EIF2B3 | 50 | 0.0055 | T-test |
+
+    | RAB13 | 50 | 0.0002 | T-test |
+
+    | ZNF195 | 50 | 0.0003 | T-test |'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '| SCAPER | 50 | 0.0013 | T-test |
+
+    | CABP7 | 50 | 0.0031 | T-test |
+
+    | DCRE1B | 50 | 0.0033 | T-test |
+
+    | NDE1 | 40 | 0.0008 | T-test |
+
+    | RHDDM1 | 40 | 0.0010 | T-test |
+
+    | KAT6A | 40 | 0.0052 | T-test |
+
+    | CRYZ | 40 | 0.0071 | Mann-Whitney U test |
+
+    | CEP78 | 30 | 0.0071 | T-test |
+
+    | ARFGEF1 | 30 | 0.0018 | Mann-Whitney U test |
+
+    | NAPRT | 30 | 0.0038 | Mann-Whitney U test |
+
+    | CCDC50 | 20 | 0.0017 | T-test |
+
+    | KREMEN1 | 20 | 0.0059 | T-test |
+
+    | NIPA1 | 20 | 0.0298 | Mann-Whitney U test |
+
+    | DZIP3 | 20 | 0.0241 | T-test |
+
+    | MGST1 | 20 | 0.0139 | T-test |
+
+
+    Supplementary Table 5: The most informative and stable features (genes) in MDD
+    patients compared to healthy controls (batch 2).'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '| Feature name | Score (%) | p-value | Statistical test |
+
+    | --- | --- | --- | --- |
+
+    | SLC26A8 | 100 | 0.0008 | T-test |
+
+    | PROS1 | 100 | 0.0002 | T-test |
+
+    | ERAP2 | 100 | 0.0304 | Mann-Whitney U test |
+
+    | CLEC12B | 100 | 0.0106 | Mann-Whitney U test |
+
+    | FAM200B | 90 | 0.0030 | Mann-Whitney U test |
+
+    | CHI31 | 90 | 0.0372 | Mann-Whitney U test |
+
+    | NRG1 | 90 | 0.0165 | T-test |
+
+    | APTR | 90 | 0.0074 | Mann-Whitney U test |
+
+    | CCDC7 | 80 | 0.0052 | T-test |
+
+    | AARS2 | 80 | 0.0073 | Mann-Whitney U test |
+
+    | SRSF6 | 80 | 0.028 | T-test |
+
+    | TTC7B | 70 | 0.0001 | Mann-Whitney U test |
+
+    | ZP3 | 60 | 0.0081 | Mann-Whitney U test |
+
+    | ITGB5 | 60 | 0.0135 | T-test |
+
+    | PRKCQ-AS1 | 50 | 0.0080 | T-test |'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# Journal Pre-proof
+
+
+    | HP | | | | | | |
+
+    |---|---|---|---|
+
+    | HP | 50 | 0.0023 | T-test |
+
+    | TNFAIP6 | 40 | 0.0021 | T-test |
+
+    | SORTL1 | 40 | 0.0108 | T-test |
+
+    | SNX20 | 40 | 0.0074 | Mann-Whitney U test |
+
+    | SLPI | 40 | 0.0027 | Mann-Whitney U test |
+
+    | OLFM4 | 40 | 0.0098 | T-test |
+
+    | MEF2A | 40 | 0.0092 | Mann-Whitney U test |
+
+    | MANIA1 | 40 | 0.0038 | T-test |
+
+    | ITGB3 | 40 | 0.0135 | T-test |
+
+    | EFHC1 | 40 | 0.0009 | T-test |
+
+    | DEFA4 | 40 | 0.0471 | Mann-Whitney U test |
+
+    | CDC42 | 40 | 0.0162 | Mann-Whitney U test |
+
+    | ADAM10 | 40 | 0.0071 | Mann-Whitney U test |
+
+    | CASZ1 | 30 | 0.0191 | Mann-Whitney U test |
+
+    | TRAV5 | 20 | 0.0065 | T-test |
+
+    | SPTBN1 | 20 | 0.0101 | Mann-Whitney U test |
+
+
+    Page 37 of 41'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Supplementary Table 6: The most informative and stable features (genes) in
+    MDD patients compared to healthy controls (Batch 1 & Batch 2).
+
+
+    | Feature name | Score (%) | p-value | Statistical test |
+
+    |---| GRB10 | 100 | 0.0045 | Mann-Whitney U test |
+
+    | STAT5B | 90 | 0.0294 | Mann-Whitney U test |
+
+    | RPS27L | 80 | 0.0043 | Mann-Whitney U test |
+
+    | SERPING1 | 80 | 0.0196 | T-test |
+
+    | CNTNAP3 | 70 | 0.0007 | Mann-Whitney U test |
+
+    | THEM4 | 70 | 0.0000 | Mann-Whitney U test |
+
+    | OLFM4 | 70 | 0.0001 | Mann-Whitney U test |
+
+    | HP | 60 | 0.0002 | T-test |
+
+    | B3GNT7 | 50 | 0.0305 | Mann-Whitney U test |
+
+    | NARF | 50 | 0.0005 | T-test |'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '| | | | |
+
+    |---|---|---||
+
+    | CAMKK2 | 40 | 0.0090 | T-test |
+
+    | THBS1 | 40 | 0.0466 | Mann-Whitney U test |
+
+    | CLEC12B | 40 | 0.0113 | Mann-Whitney U test |
+
+    | CEACAM8 | 40 | 0.0002 | Mann-Whitney U test |
+
+    | TMEM33 | 40 | 0.0012 | T-test |
+
+    | ANKRD6 | 40 | 0.0013 | Mann-Whitney U test |
+
+    | TCN1 | 40 | 0.0040 | Mann-Whitney U test |
+
+    | PLEKHA1 | 40 | 0.0019 | T-test |
+
+    | CCDC50 | 40 | 0.0118 | T-test |
+
+    | TTC7B | 40 | 0.0222 | Mann-Whitney U test |
+
+    | AHI1 | 30 | 0.0142 | Mann-Whitney U test |
+
+    | F5 | 30 | 0.0002 | Mann-Whitney U test |
+
+    | TRAV5 | 30 | 0.0014 | Mann-Whitney U test |
+
+    | RAB13 | 30 | 0.0015 | T-test |
+
+    | ZCCH2 | 30 | 0.0036 | T-test |
+
+    | PROS1 | 30 | 0.0004 | T-test |'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '| FRMD4A | 30 | 0.0102 | Mann-Whitney U test |
+
+    | C11orf1 | 30 | 0.0157 | Mann-Whitney U test |'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Journal Pre-proof
+
+
+    ![](img/ef4b017b8086fec3e193e824a6d0232b_42_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '![](img/ef4b017b8086fec3e193e824a6d0232b_43_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '![](img/ef4b017b8086fec3e193e824a6d0232b_46_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '![](img/ef4b017b8086fec3e193e824a6d0232b_47_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '![](img/ef4b017b8086fec3e193e824a6d0232b_48_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '+   - AI-associated computational tools have the potential to detect, and substantially
+    improve the treatment of complex psychiatric disorders.
+
+
+    +   - Integrative analysis using bioinformatics and machine learning approaches
+    on transcriptomics data identified promising MDD-related biomarkers and pathways.
+
+
+    +   - NRG1 was identified as a putative non-invasive liquid biopsy biomarker for
+    the diagnosis of MDD patients and showed a higher expression trend in the amygdala
+    and hippocampus brain subregions.'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# Journal Pre-proof
+
+
+    +   1- Amal Boudid is a Post-Doctoral Researcher, at the Bioinformatics and Functional
+    Genomics lab, at Sharjah university. Her expertise lies in Bioinformatics, Human
+    genetics and omics data analysis.
+
+
+    +   2- Abdulrahman Al Midani is an M.B.B.S student at the University of Sharjah.
+    His research and interests are centered around neuro-science and multi-omics data.
+
+
+    +   3- Maria Zubrikina is pursuing her PhD in Skoltech, Russia. She is affiliated
+    with the neuroscience lab in the Research AI Center. Her interests include multimodal
+    deep learning approaches in neuroimaging and multi-omics data.
+
+
+    +   4- Ayng Kamzanova is an associate professor in the Department of Biophysics,
+    Biomedicine and Neuroscience. Her research interests combine cognitive neuroscience,
+    psychology, and individual differences.
+
+
+    +   5- Burcu Yener is a Post-Doctoral Researcher, at the Bioinformatics and Functional
+    Genomics lab, at Sharjah University. She is experienced in advanced molecular
+    biology techniques.
+
+
+    +   6- Manzura Zholdassova is a researcher of the Center for Cognitive Neuroscience,
+    al-Farabi Kazakh National University. She received her PhD in Psychology at the
+    al-Farabi Kazakh National University in 2012.
+
+
+    +   7- Ayesha M Yusuf is a PhD student working in the Bioinformatics and Functional
+    Genomics Lab at, Sharjah Institute for Medical Research. She is interested in
+    the molecular pathogenesis of neurological disorders.
+
+
+    +   8- Poorna Manasa Bhamidimarri is a Post-Doctoral Researcher, at the Bioinformatics
+    and Functional Genomics lab, at Sharjah university. Her expertise lies in advanced
+    molecular biology and biotechnology.
+
+
+    +   9- Hamid Alhaj is an associate professor and consultant-psychiatrist. He is
+    leading the Department of Family Medicine at the University of Sharjah. His research
+    is focused on mental health problems.
+
+
+    +   10-Almira Kustabayeva, is a Director of the Center for Cognitive Neuroscience,
+    Head of The Department of Biophysics, Biomedicine, and Neuroscience. She received
+    her PhD in Physiology at the People''s Friendship University.
+
+
+    +   11-Alexander Bernstein, Professor, at the Skoltech Center for Computational
+    and Data-Intensive Science and Engineering. His research is focused on Mathematical
+    modeling and Statistics, Intelligent Data-Analysis, Machine Learning and his applications.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '12-Evgeny Burnaev is a professor and director of Skoltech Applied AI center.
+    He specializes in machine learning, industrial predictive analytics and 3D computer
+    vision.
+
+
+    13-Maxim Sharaev is a Research Scientist at the Skolkovo Institute of Science
+    and Technology. He is working on applied biomedical problems focused on large-scale
+    multimodal neuroimaging data analysis.
+
+
+    14-Rifat Hamoudi is a Professor at the College of Medicine, University of Sharjah.
+    He specializes in Computational Medicine, Bioinformatics, Mathematical Modelling,
+    and Personalised Medicine.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'Declarations of interest: none'
+  merge: -1
+  img_proc: true
