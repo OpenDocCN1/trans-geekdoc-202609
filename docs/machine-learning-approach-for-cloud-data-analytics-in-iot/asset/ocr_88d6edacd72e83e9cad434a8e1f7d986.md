@@ -1,0 +1,13 @@
+The major sector that came out to be a winner is the pharmaceuticals, life sciences, and pathology sector. May it be children, adults, or the elderly, in the wake of the COVID-19 spread, the majority of the human population would wish to have enough health medication or facilities handy. Once a vaccine is successfully developed, the shape of our current pharmaceutical industry would change for good. Every single human being would require a dose and provide for the demand at hand will be on the shoulders of our pharmaceutical industry. These people would be providing for a noble cause, but to make a fortune for them is more than certain.
+
+The rest of the paper consists of the following: Section 14.2 provides a background of related works in stock prediction using machine learning, deep learning, and data analytics. Section 14.3 provides a financial prediction framework. Section 14.4 discusses the implementation and discussion of the result. Section 14.5 provides the conclusion and future enhancement.
+
+# ## 14.2 Related Works
+
+In [1], the prediction model uses Auto-ARIMA and Holt-Winters models are implemented. The portfolio optimization incurred more profit and reduce loss. This helps individuals and corporate investors. Research work in [2], forecasts the future value of GOOGL and NKE assets. The proposed RNN based on LSTM has shown a promising result. The found the finest sets for the length of the data and the number of training periods that suit their assets and maximize their prediction accuracy.
+
+In [3], the authors proposed a numerical model to predict the COVID-19 spread. The model utilizes linear regression (LR), multilayer perception (MLP), and vector autoregression (VAR). The model showed that the MLP model has a better performance than LR and VAR. In [4], the authors proposed a system train recurrent neural network. They have used the past 5 years of Google stock prices. The model used opening and closing price for each day. Simple sentimental analysis has the ability of 40% of the market inconsistency in market return.
+
+In [5], the authors constructed the deep learning hybrid stock market prediction model CEEMD-PCA-LSTM. The proposed model use CEEMD is an order smoothing and breakdown module. PCA reduces the aspect of the breakdown IMFs component. LSTM has predicted the closing price of the next trading day for each module.
+
+In [6], authors proposed Deep Stock trend Prediction Neural Network (DSPNN) a module that constructs market indicator vectors of the target

@@ -1,0 +1,7 @@
+![](bbox=[0.12, 0.1, 0.88, 0.48])
+
+at various levels of abstraction as per retailer’s choice and requirement. The proposed model aims to find the prospective buyers for a product even with very little probability of purchase. As it is observed, if a model targets more customers, then it may involve some additional costs but will not miss any probable buyer. Authors aim to not miss any probable customer as it may result in loss of some potential customers. The proposed model also attempts to predict the likelihood of a customer purchasing a particular product. This helps in targeting the prospective customers thus yielding an increase in revenue.
+
+The proposed model collects data from various sources like social media, history data, and transaction details. This data from diverse sources is in disparate forms and thus needs to be cleaned during preprocessing. Thus, cleaned data from various sources is integrated, which is used for training the predictive model. The accuracy of model is largely dependent upon the size of training dataset. The basic structure of proposed model is represented in Figure 3.3.
+
+As represented in Figure 3.3, the data integration is followed by algorithm selection for predictive model. There are several related algorithms like regression, boosting, or bagging, to name a few. Regression algorithms

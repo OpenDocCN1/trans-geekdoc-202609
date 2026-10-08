@@ -1,0 +1,11 @@
+# 16.4.4.1 Interpretability
+
+When we apply DRL models, interpretability is required to get a deep insight into the machine learning model. They need to be trained as per the policies of the blockchain for IoT and future generation networks to take all the accurate decisions and predictions. The training of DRL techniques needs proper insight into deep learning models for proper prediction. Deep learning models like artificial neural networks, deep neural networks, CNN and RNN are more difficult to interpret results. For greater accuracy, further models need to make that can interpret and high accuracy rate. The overall performance of DRL models can be quantified on parameters like computation power, learning capability, reliability, and more accuracy. The existing algorithms can be improved with repeated experimental testing data and training sets.
+
+# 16.4.4.2 Training Cost for ML and DRL Techniques
+
+The data set for the experimental models required to be trained. But the cost to train the ML and DRL models especially the real-time data applications. The training is required to keep the data set up to mark for accurate prediction. The overall retraining of the data set is the continuous learning process in real-time data environments. The system model framework needs to be taken for the initial data training process and keep the learning process in continuous mode for the maintaining accuracy level. Thus, the cost of providing the initial training depends on the complexity of the deep learning model used for the process as the sufficient amount of data is need to train for the testing purpose also.
+
+# 16.4.4.3 Lack of Availability of Data Sets
+
+The ML and DRL models/algorithms are completely based on the amount of training data set. The emerging technologies are subject to the collection of real-time data sets. The artificial synthesis of data sets is a challenging task as compared to the training the actual data sets. The lack of availability of proper data sets for a particular application domain also gives rise to another major issue that is the uniformity of data sets in heterogeneous environments.

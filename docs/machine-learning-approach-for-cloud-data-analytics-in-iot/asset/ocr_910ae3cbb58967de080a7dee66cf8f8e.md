@@ -1,0 +1,11 @@
+is given to MS/TP phones. While the functions listed in this article are not as restricted as other overiewed technologies, the MS/TP equipment is limited and a small bit rate is provided based on the RS-485 requirements of the physical layer.
+
+# ## 8.11 Challenges and Issues
+
+The following hurdles for IoT solutions in intelligent environments are interoperability and standardization, integration and personalization, and identity recognition and virtualization.
+
+# ### 8.11.1 Interoperability and Standardization
+
+The IoT definition is primarily motivated by the development of standards spanning all layers, either de facto or de jure, from physical to application levels. Some are introduced although continue to evolve specifically in smart environments [39]. Interoperability between different machines is important, for example, in the background of smart connections for Industry 4.0 networked performance. To deal with this issue, The UA OPC offers a forum for free, scalable, and transparent information between user and system. OPC UA uses standard transport protocols and encodes to ensure communication, for example, as high-end business-service environment among embedded controllers. It offers users, clients, and servers warning and incident notifications to monitor and check their contact credibility from a security perspective. Usually, certain factory management and automation devices and delivery networks are time-sensitive.
+
+Norms are typically not as mature as the smart sector, and in other fields, such as clever home, smart security, or smart cities, are always plentiful. While the prevalence of specifications attests to the maturity of the technology, on the other side, the extensive variety of requirements and numerous significant overlaps suggest that the market is competitive and is growing rapidly and still finding equilibrium. The product's ambiguity concerning requirements is positive in the user's view and reduces the future manufacturer's lock-in, but the reality that requirements are often not easily interoperable leads to standard lock-in. If protocols in a fast-developing industry are quickly obsolete, lock-ins can be troublesome and can hinder future business reforms [40]. Thus, the interoperability of various IoT standards can become crucial in context (e.g., by identifying appropriate gateways).
