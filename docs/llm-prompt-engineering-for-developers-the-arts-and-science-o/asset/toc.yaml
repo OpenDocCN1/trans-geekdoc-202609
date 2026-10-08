@@ -1,0 +1,439 @@
+- - '##'
+  - 2.6.1 - 前馈神经网络
+- - '##'
+  - 2.6.2 - 循环神经网络（RNNs）
+- - '##'
+  - 2.6.3 - 长短期记忆（LSTM）
+- - '##'
+  - 2.6.4 - 门控循环单元（GRUs）
+- - '##'
+  - '"构建聊天机器人"中的 Token'
+- - '##'
+  - 4.9.7 - 响应数量 (n)
+- - '##'
+  - 4.9.8 - 最佳候选 (best_of)
+- - '###'
+  - 9 - 自动思维链提示（AutoCoT）
+- - '##'
+  - 9 - 自动思维链提示（AutoCoT）
+- - '##'
+  - 9. Auto-CoT：自动思维链
+- - '#'
+  - 答案应该是：3 + 2 - 1 + 15 - 8 = 11
+- - '#'
+  - 使用少样本学习来提高模型的准确性
+- - '#'
+  - 答案应该是：3 + 2 - 1 + 15 - 8 = 11
+- - '#'
+  - 12.1 - 避免让模型感到意外
+- - '#'
+  - 12.2 - 如何计算困惑度？
+- - '#'
+  - 12.3 - 使用 Betterprompt 的实用示例
+- - '#'
+  - Set the model name.
+- - '#'
+  - Set the API key for OpenAI.
+- - '#'
+  - Define the prompt you want to send to the model.
+- - '#'
+  - Send the prompt to the OpenAI API and get the response.
+- - '#'
+  - Extract the log probabilities from the response.
+- - '#'
+  - Replace any None values with -100. The first word in the prompt will \
+- - '#'
+  - be None.
+- - '#'
+  - The value -100 attributes a very low probability to the first word.
+- - '#'
+  - By assigning a very low likelihood to the first word, we're saying we\
+- - '#'
+  - have no confidence in the model's choice of that word as the start of the sequence.
+- - '#'
+  - Print the perplexity.
+- - '#'
+  - 13.1 - 它是什么？
+- - '#'
+  - 13.2 - 使用 LangChain 进行 ReAct
+- - '#'
+  - 问题 1
+- - '#'
+  - 问题 2
+- - '#'
+  - 问题 3
+- - '#'
+  - Wikipedia is the docstore that the agent will use to answer questions
+- - '#'
+  - Tools are the functions that the agent can use to answer questions
+- - '#'
+  - Define the agent that will be used to answer questions
+- - '#'
+  - Initialize the agent
+- - '####'
+  - 使用 LangChain 进行 ReAct
+- - '####'
+  - 使用 LangChain 进行 ReAct
+- - '#'
+  - 使用 LangChain 的 ReAct
+- - '#'
+  - 14 - 通用知识提示
+- - '#'
+  - 15.1 - 什么是 Azure Prompt Flow？
+- - '#'
+  - 15.2 - 提示工程敏捷性
+- - '#'
+  - 15.3 - 使用 Azure Prompt Flow 前的注意事项
+- - '#'
+  - Prompt Flow 连接
+- - '###'
+  - 15.4 - 创建你的第一个 Prompt Flow
+- - '###'
+  - 15.5 - 部署流以实现实时推理
+- - '#'
+  - 16.1 - 什么是 LangChain？
+- - '#'
+  - 16.2 - 安装
+- - '#'
+  - 16.3 - 入门
+- - '#'
+  - 16.4 - 提示模板与格式化
+- - '#'
+  - 16.5 - 部分提示
+- - '##'
+  - 16.6 - 使用管道提示词组合提示词
+- - '#'
+  - Define the full template structure
+- - '#'
+  - 'Define individual components below:'
+- - '#'
+  - Define the role component
+- - '#'
+  - Define the instructions component
+- - '#'
+  - Define the examples component
+- - '#'
+  - Define the example prompt
+- - '#'
+  - Combine components into the pipeline
+- - '#'
+  - Create the pipeline prompt
+- - '#'
+  - Print the final composed prompt
+- - '#'
+  - Define the full template structure
+- - '#'
+  - Define individual components
+- - '#'
+  - Define the role component
+- - '#'
+  - Define the instructions component
+- - '#'
+  - Define the examples component
+- - '#'
+  - Define the example prompt
+- - '#'
+  - Combine components into the pipeline
+- - '#'
+  - Create the pipeline prompt
+- - '#'
+  - Print the final composed prompt
+- - '#'
+  - Define the full template structure
+- - '#'
+  - Define individual components
+- - '#'
+  - Define the role component
+- - '#'
+  - Define the instructions component
+- - '#'
+  - Define the examples component
+- - '#'
+  - Define the example prompt
+- - '#'
+  - Combine components into the pipeline
+- - '#'
+  - 创建流水线提示词
+- - '#'
+  - 打印最终组合后的提示词
+- - '#'
+  - 16.7 - 聊天提示词模板
+- - '#'
+  - 打印 messages 变量
+- - '#'
+  - 打印内容
+- - '#'
+  - 打印对话
+- - '#'
+  - 初始化模型
+- - '#'
+  - 获取响应
+- - '#'
+  - 打印模型的响应
+- - '#'
+  - 初始化模型
+- - '#'
+  - 获取响应
+- - '#'
+  - 打印模型的响应
+- - '#'
+  - 16.8 - LangChain 的核心构建模块：LLMChain
+- - '#'
+  - 初始化模型
+- - '#'
+  - 获取响应
+- - '#'
+  - 将输入作为字典传递给 chain.run() 方法
+- - '#'
+  - 16.9 - 自定义提示词模板
+- - '#'
+  - 16.9 - 字符串提示模板
+- - '#'
+  - 16.10 - 少样本提示模板
+- - '#'
+  - initialize the model
+- - '#'
+  - get the response
+- - '##'
+  - 16.11 - 通过示例选择器实现更好的少样本学习
+- - '#'
+  - download the tarball
+- - '#'
+  - extract the tarball
+- - '#'
+  - Install libreadline-dev if you don't have it already
+- - '#'
+  - configure
+- - '#'
+  - compile
+- - '#'
+  - remove the old version if you have it
+- - '#'
+  - install the new version
+- - '#'
+  - add this line to your .bashrc if you don't have it already
+- - '#'
+  - check the version
+- - '#'
+  - A workaround for the pysqlite3 compatibility issue with ChromaDB.
+- - '#'
+  - End of workaround.
+- - '#'
+  - Example selector that selects examples based on SemanticSimilarity
+- - '#'
+  - Let's create a list of questions to ask the example selector.
+- - '#'
+  - Let's ask the example selector to select the most similar example to each question.
+- - '#'
+  - A workaround for the pysqlite3 compatibility issue with ChromaDB.
+- - '#'
+  - initialize the model
+- - '#'
+  - get the response
+- - '###'
+  - 16.11.1 - NGram 重叠示例选择器
+- - '###'
+  - 16.11.2 - 最大边际相关性示例选择器
+- - '###'
+  - 16.11.3 - 基于长度的示例选择器
+- - '###'
+  - 16.11.4 - 自定义示例选择器
+- - '#'
+  - 16.11.4 - 基于情感分析的自定义示例选择器
+- - '#'
+  - initialize the model
+- - '#'
+  - get the response
+- - '#'
+  - 16.11.5 - 使用聊天模型进行少样本学习
+- - '#'
+  - initialize the model
+- - '#'
+  - get the response
+- - '#'
+  - A workaround for the pysqlite3 compatibility issue with ChromaDB.
+- - '#'
+  - End of workaround.
+- - '#'
+  - initialize the model
+- - '#'
+  - get the response
+- - '#'
+  - 16.12 - 从文件加载提示词
+- - '#'
+  - print the prompt
+- - '#'
+  - test the prompt
+- - '##'
+  - 16.13 - 验证提示模板
+- - '#'
+  - No error will be raised.
+- - '#'
+  - 17.1 - 提示词评估的方式与内容
+- - '###'
+  - 创建新流程
+- - '##'
+  - 17.2 - 使用 promptfoo 测试和评分提示词
+- - '#'
+  - This configuration runs each prompt through a series of example inputs and checks
+    if they meet requirements.
+- - '###'
+  - 17.3 - promptfoo：使用变量
+- - '###'
+  - 17.4 - promptfoo：使用断言测试
+- - '###'
+  - 17.5 - promptfoo 与 LangChain 的集成
+- - '#'
+  - This is the template for the prompt
+- - '#'
+  - 系统消息提示模板。这是一条不会发送给用户的消息。
+- - '#'
+  - 用户将使用的文本模板，用于向系统发送消息。
+- - '#'
+  - 人类消息提示模板。
+- - '#'
+  - 聊天提示模板 = 系统消息提示 + 人类消息提示
+- - '#'
+  - 导入 ChatOpenAI 类和 LLMChain 类
+- - '#'
+  - 创建一个新的链
+- - '#'
+  - 读取并解析用户输入
+- - '#'
+  - 获取用户输入
+- - '#'
+  - 运行链并打印输出
+- - '##'
+  - 17.6 - 在 promptfoo 中使用模板重用断言（干跑）
+- - '#'
+  - '... 对其他语言（如 es, fr, de 和 it）重复相同的结构。'
+- - '##'
+  - 17.7 - 使用 promptfoo 场景简化测试
+- - '#'
+  - 18.1 - 简介
+- - '#'
+  - 18.2 - 以动作动词开头
+- - '#'
+  - 18.3 - 提供明确的上下文
+- - '##'
+  - 18.4 - 使用角色扮演
+- - '##'
+  - 18.5 - 使用参考风格
+- - '##'
+  - 18.6 - 使用双引号
+- - '##'
+  - 18.7 - 必要时使用单引号
+- - '###'
+  - 18.8 - 使用文本分隔符
+- - '##'
+  - 18.9 - 保持具体
+- - '##'
+  - 18.10 - 提供示例
+- - '##'
+  - 18.11 - 指示期望的响应长度
+- - '##'
+  - 18.12 - 引导模型
+- - '##'
+  - 周二：
+- - '##'
+  - 周三：
+- - '##'
+  - 周四：
+- - '##'
+  - 周五：
+- - '##'
+  - 周六：
+- - '##'
+  - 周日：
+- - '##'
+  - 18.13 - 不要犹豫进行优化
+- - '##'
+  - 18.14 - 尝试从不同角度审视问题
+- - '##'
+  - 18.15 - 考虑开启另一个聊天（ChatGPT）
+- - '##'
+  - 18.16 - 使用正确的词语和短语
+- - '##'
+  - 18.17 - 实验与迭代
+- - '##'
+  - 18.18 - 保持对 LLM 局限性的觉察
+- - '#'
+  - 19.1 - 创意写作
+- - '#'
+  - 19.2 - 内容生成、SEO、营销和广告
+- - '##'
+  - 19.3 - 客户服务
+- - '#'
+  - Test the function
+- - '#'
+  - Sample data for training
+- - '#'
+  - Create labels for the data
+- - '#'
+  - Combine the data and labels
+- - '#'
+  - Create the classifier pipeline
+- - '#'
+  - Train the classifier
+- - '#'
+  - Test the classifier with new queries
+- - '#'
+  - Predict the intent for new queries
+- - '##'
+  - 19.4 - 数据分析、报告和可视化
+- - '##'
+  - 19.5 - 虚拟助手与智能设备
+- - '##'
+  - 19.6 - 游戏开发
+- - '##'
+  - 19.7 - 医疗保健与医学
+- - '##'
+  - 19.8 - 故事生成与角色扮演
+- - '##'
+  - 19.9 - 商业智能与分析
+- - '##'
+  - 19.10 - 图像生成
+- - '###'
+  - 文本到图像提示词的示例
+- - '#'
+  - 20 - 提示词的结构解剖
+- - '#'
+  - 20.1 - 角色或人设
+- - '#'
+  - 20.2 - 指令
+- - '#'
+  - 20.3 - 输入数据
+- - '#'
+  - 20.4 - 上下文
+- - '#'
+  - 20.5 - 规则
+- - '#'
+  - 20.6 - 输出
+- - '#'
+  - 20.7 - 示例
+- - '#'
+  - 21 - 提示词类型
+- - '##'
+  - 21.1 - 直接指令
+- - '##'
+  - 21.2 - 开放式提示词
+- - '##'
+  - 21.3 - 苏格拉底式提示词
+- - '###'
+  - 22.6 - PromptFlow
+- - '##'
+  - 22.7 - promptfoo
+- - '##'
+  - 22.8 - Promptperfect：一种提示优化工具
+- - '##'
+  - 22.9 - Aiprm for ChatGPT：提示管理和数据库
+- - '##'
+  - 22.10 - FlowGPT：ChatGPT 的可视化界面和提示数据库
+- - '##'
+  - 22.11 - Wnr.ai：创建动画 AI 头像的无代码工具
+- - '#'
+  - 23 - 后记
+- - '##'
+  - 23.1 - 接下来是什么？
+- - '##'
+  - 23.2 - 您的反馈至关重要
