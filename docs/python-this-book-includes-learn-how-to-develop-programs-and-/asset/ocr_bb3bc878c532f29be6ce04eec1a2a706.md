@@ -1,0 +1,11 @@
+“Elasticsearch.” The data-as-a-service companies like “Index” allow companies to learn from other larger data sources to train their product search models.
+
+# Recommendation Engines
+
+Recommendation engines have quickly evolved into fan favorites and are loved by the customers just much as the marketing companies. "Apple Music" already knows your taste in music better than your partner, and Amazon always presents you with a list of products that you might be interested in. This kind of discovery aid is able to sift through millions of available options and hone in on an individual's needs are proving indispensable for large companies with huge physical and digital inventories.
+
+In 1998, Swedish computational linguist, Jussi Karlgren, explored the practice of clustering cluster behaviors to predict future behaviors in his report titled “Digital bookshelves.\ The same here, Amazon implemented collaborative filtering to generate recommendations for their customers. The gathering and analysis of consumer data paired with individual profile information and demographics, by the predictive analysis systems allow the system to continuously learn and adapt based on consumer activities such as likes and dislikes on the products in real-time. For example, the company "Sky" has implemented a predictive analysis model that is capable of recommending content according to the viewer's mode. The smart customer is looking for such an enhanced experience not only from their Music and on-demand entertainment suppliers but also from all other e-commerce websites.
+
+# E-commerce Categorization and Pricing
+
+E-commerce businesses and marketing companies have increasingly adopted artificial intelligence in their process of categorization and tagging of the inventory. The Marketing companies are required to deal with awful data just as much, if not more than amazingly organized, clean data. This bag of positive and negative examples serves as training resources for predictive analysis based classification tools. For example, different retailers can have different descriptions for the same product, such as sneakers, basketball shoes, trainers, or Jordan's, but the AI algorithm can identify that these are all

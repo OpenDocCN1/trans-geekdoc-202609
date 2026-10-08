@@ -1,0 +1,9 @@
+# The Fourth Industrial Revolution
+
+From the First Industrial Revolution of the 18th century that marked a transition of the world economy from an agriculture base to the one dominated by industries and machine manufacturing, today we find ourselves at the cusp of the Fourth Industrial Revolution. Remember the Second Industrial Revolution applied science to mass production and manufacturing, while the Third Industrial Revolution or Digital Revolution brought us digital technologies. The Fourth Industrial Revolution announces a series of social and economic upheavals, unfolding over the 21st century with technologies like Artificial Intelligence, 3-D printing, Augmented Reality and Genome Editing.
+
+The Fourth Industrial Revolution will rapidly alter the way we produce, exchange, and distribute value. CRISPR technology has revolutionized the gene-editing space by providing a low-cost gene sequencing and targeting mechanism. Automation continues to disrupt the transportation and manufacturing paradigms while blockchain technology is increasingly erasing the boundary between the physical and digital world. And of course, the applications of Artificial Intelligence in every industry imaginable can be deemed limitless. In line with the previous revolutions, the Fourth Industrial Revolution will profoundly transform our world for the next 50-100 years. The way we think about this revolution today and invest in it will eventually guide the near future transformation of the human race.
+
+![](bbox=[0.259, 0.655, 0.74, 0.843])
+
+The global social transformation of the Fourth Industrial Revolution can be led by affecting the incentives, rules, and norms of the economy which in

@@ -1,0 +1,12 @@
+All major airline companies are collecting Data on prospective travelers that have you browsed, shopped, booked, taken a flight or even changed their travel plans dad can be analyzed using artificial intelligence powered solutions degenerate actionable insights and provide personalized services to meet the customer needs and demands. The savvy traveler has access to a variety of tools and sites to browse and compare slides, hotels, buses, rental cars, and trains to get the most out of their money by striking the best deal.
+
+The fiercely competitive travel industry is adopting data science based technology to revolutionize the travel experience with highly customized and personalized services catering to specific customer preferences.
+
+# Transportation Industry
+
+The two primary issues facing the day-to-day operations of the transportation industry are accidents and traffic, which can be attributed to human error. Considering the inherently unpredictable nature of these problems they tend to be extremely difficult to model, but with the use of big data analytics and machine learning algorithms Machines can analyze a massive amount of data and generate forecasts and predictions that can be incorporated in the decision-making process. To tackle the growing challenges of high travel demands, safety concerns, increasing CO2 emissions and catastrophically degrading the environment, the use of artificial intelligence based tools and technology has a promising solution. The transportation authorities are diving into the sea of data science to discover the treasure of powerful analytical tools that can be used to relieve traffic congestion and make travel time more reliable for the commuters.
+
+Artificial intelligence technology has the potential to aid in the development of improved road infrastructure and provide assistance to drivers, generating an overall reliable transport system with little to no detrimental effect on the environment at an affordable price. Some of the real-world applications of artificial intelligence in the transportation industry are:
+
++   - Development of the first autonomous and completely electric vehicle called “Olli” which is powered by “IBM Watson”.
+- “Ford” has designed a “Smart City” driven by a “smart system” that allows “smart vehicles” to connect and coordinate with one another

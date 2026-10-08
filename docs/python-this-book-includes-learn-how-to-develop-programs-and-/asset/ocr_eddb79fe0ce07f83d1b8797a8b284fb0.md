@@ -1,0 +1,5 @@
+![](bbox=[0.268, 0.095, 0.731, 0.345])
+
+# # Unsupervised Machine Learning Algorithms
+
+These algorithms are used in the absence of classified and labeled training data sources. According to SAS, "Unsupervised Learning algorithms are used to study ways in which the system can infer a function to describe a hidden structure from unlabeled data i.e. to explore the data and identify some structure within within". Similar to the supervised learning algorithms, these algorithms are able to explore the data and draw inferences from data sets, but cannot figure out the right output. For example, identification of individuals with similar shopping attributes, who can be segmented together and targeted with similar marketing campaigns. These algorithms are widely used to identify data outliers, provide product recommendations, and segment text topics using techniques like "singular value decomposition", "self-organizing maps" and "k-means clustering".

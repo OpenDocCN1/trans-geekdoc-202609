@@ -1,0 +1,1 @@
+visual asset uniquely and Machine learning algorithms that have been 'trained' to identify specific components of the visual data. This visual content is then organized and cataloged to deliver high-quality search results.

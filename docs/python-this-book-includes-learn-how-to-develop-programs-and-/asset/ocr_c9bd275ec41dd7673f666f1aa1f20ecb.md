@@ -1,0 +1,5 @@
+is the probability of the class provided by the predictor. “P(x)” is the predictor’s prior probability.
+
+![](bbox=[0.286, 0.142, 0.706, 0.316])
+
+Here is an example to better explain the application of the "Bayes Theorem". The picture below represents the data set pertaining to the problem of identifying suitable weather days to play golf. The columns depict the weather features of the day and the rows contain individual entries. Considering the first row of the data set, it can be concluded that the weather will be too hot and humid with rain so the day is not suitable to play golf. Now the primary assumption here is that all these features or predictors are independent of one another. The other assumption being made here is that all the predictors have the potentially same effect on the end result. Meaning, if the day was windy it would have the same relevance to the decision of playing golf as the rain. In this example, the variable (c) is the class (playing golf) representing the decision if the weather is suitable for golf and variable (x) represents the features or predictors.

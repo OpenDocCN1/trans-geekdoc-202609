@@ -1,0 +1,2 @@
++   [Python：本书包含：学习使用 Python 编程并在 7 天内开发程序和应用，为数据科学与机器学习初学者开启深度实用学习。](README.md)
++   [Python：本书包含：学习使用 Python 编程并在 7 天内开发程序和应用，为数据科学与机器学习初学者开启深度实用学习。](python-this-book-includes-learn-how-to-develop-programs-and-.md)
