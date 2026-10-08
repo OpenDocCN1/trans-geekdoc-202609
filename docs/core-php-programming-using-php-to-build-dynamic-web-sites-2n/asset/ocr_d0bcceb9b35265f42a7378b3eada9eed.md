@@ -1,0 +1,15 @@
+# Core PHP Programming
+
+One great advantage of Open Source software is that it provides the opportunity for adaptation to new environments. This is true of PHP. Although originally intended as a module for the Apache web server, PHP has since embraced the ISAPI standard, which allows it to work well with Microsoft's Internet Information Server. With regard to hardware requirements, I have personally witnessed PHP running on 100-MHz Pentium machines running Linux and Windows NT, respectively. Performance was fine for use as a personal development environment. A site expected to receive thousands of requests a day would need faster hardware, although more resources are needed when comparing a PHP-powered site to a flat HTML site, the requirements are not dramatically different. Despite my example, you are not limited to Intel hardware. PHP works equally well on PowerPC and Sparc CPUs.
+
+When choosing an operating system, the general choice between Windows and a UNIX-like OS. PHP will run on Windows 95 and 98, although those operating systems are not suited for high-traffic web servers. It will also run on Windows NT and its successor, Windows 2000. For UNIX operating systems, PHP works well with Linux and Solaris, as well as others. If you have a PPC-based system, such as a Macintosh, you may choose LinuxPC, a version of Linux. You may purchase the commercial WebTen server that runs in the Macintosh OS. Chad Cunningham has contributed patches for compiling in Apple's OS X. In 1999 Brian Hard added support for IBM's OS/2.
+
+PHP still works best with the Apache web server. But it now works well with IIS. It also compiles as a module for the ifftpd web server. You can make PHP work well with any web server using the CGI version, but I don't recommend this setup for production sites. If you are using UNIX, I recommend compiling PHP as an Apache module. If you are using Windows NT, pursue IIS.
+
+# Installation on Apache for UNIX
+
+If you are using Linux, you can find an RPM for Apache and PHP, but this installation may not include every PHP feature you want. I recommend this route as a very quick start. You can always pursue compiling Apache and PHP from scratch later. PHP will compile on most versions of UNIX-like operating systems, including Solaris and Linux. If you have ever compiled software you've found on the Net, you will have little trouble with this installation. If you don't have extracting files from a tar archive and executing files, you may wish to rely on your sysadmin or someone else more experienced. You will need to have root privileges to completely install PHP.
+
+The first step is to download the tar files and unpack them. The CDROM accompanies this book has recent versions of both PHP and Apache, but you may wish to check online for the newest versions, <http://www.php.net/> and respectively.
+
+After unpacking the tar file, the first step is to configure Apache. This is done by running the configure script inside the Apache directory:

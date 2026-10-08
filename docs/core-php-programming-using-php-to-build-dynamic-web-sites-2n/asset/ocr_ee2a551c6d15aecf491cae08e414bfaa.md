@@ -1,0 +1,13 @@
+# Core PHP Programming
+
+an identifier. It could be referencing a record in a relational database. I added some code to use a random number to create a link to another imaginary record. Remember the BBS for Chapter 17, "Database Integration?" This method could be applied, and each message would be a single HTML file.
+
+I've introduced only the essential principles of this method. There are a few pitfalls, and a few enhancements to be pursued. Keep in mind that Web browsers do their best to fill in relative URLs, and using path information may foil their efforts to request images that appear in your scripts. You must use absolute paths. You might also wish to name your PHP script so it doesn't contain an extension. This is possible with Apache by setting the default document type, the configuration directive. You can also use Apache's mod_rewrite. I encourage you to read about these parts of Apache at your home site <http://www.apache.org/docs/>.
+
+# Running a Script Regularly
+
+Both UNIX and Windows have facilities for running programs according to a schedule. In UNIX you can edit your crontab file, and in Windows the scheduling service These are useful when you wish to perform some maintenance function as part of your PHP-powered site. You may write a script to download the list of files at the Slashdot site <http://www.slashdot.org/>. Both crontab and the scheduling service take a command line and execute it at a given time. If you're not familiar with the details, either read the main page for crontab, or type at / in a Windows command shell.
+
+You have two choices for invoking a PHP script from the command line. If you have PHP as a stand-alone executable, you can call it and use the path to the script for any argument. This is probably the way to go on a Windows machine, because the installation provides php.exe. A UNIX installation will likely be compiled as an Apache module, and no stand-alone executable available. In this case, you can use another program to make an HTTP connection. The text-only browser, Lynx <http://lynx.browser.org/>- is well suited for this purpose.
+
+Remember, the Web server executes PHP scripts. Executing scripts from the root user's crontab will allow them greater ability to damage. It's probably best to execute the script from the Web server's crontab. Using Lynx to run the script avoids this issue but raises another. Unless you put the script in a protected directory, anyone will be able to run it. Simply protect the script with a username and password. Lynx allow you to specify these on the command line.

@@ -1,0 +1,13 @@
+If the connection is successful, a MySQL link identifier will be returned. Notice that I'm testing for failure and performing the connection on one line. Link identifiers are always greater than zero, and zero is returned when the connection cannot be made. So, testing for a FALSE return value allows us to detect a failed connection. If that happens, we just abort the script.
+
+The function used to connect to the database is mysql_connect. If you've flipped through the descriptions of the MySQL functions in Chapter 13, "Database Functions," you might remember another function called mysql_connect . These two functions operate independently inside a script, but mysql_connect returns persistent connections.
+
+Most of the database functions PHP offers incorporate the idea of a persistent connection—a connection that does not close when your script ends. If the Web process runs another script that connects to the same database server, the connection will be reused. This has the potential to save whatever. In practice, the savings are not dramatic, owing to the way Apache 1.3.x and earlier child processes instead of threads. These processes serve a number of requests and then are replaced by new processes. When the process ends, it keeps its persistent connection with it, of course.
+
+Only under high loads will your script benefit from persistent connections, but that's exactly the time it needs to benefit from them. Using mysql_connect returns nothing, so it is it by default. At the time of this writing, Apache 2.0 is releasing it. It promises a multithreaded approach that will take full advantage of persistent connections.
+
+The next step is to select a database. Here I've selected the database named store. Once we tell PHP which database to use, we get all rows from the mysql_query function. It executes a query on the given link and returns a result identifier. We will use this result identifier to fetch the results of the query.
+
+Before we pulling data from the results, we must begin building an HTML table. This is done, as you might expect, by opening an table tag. I've created a header row with a gray background and the left of the table header behavior as default.
+
+Now that header row is printed, we can fetch each row from the result set. The fastest way to do this, executionwise, is to use mysql_fetch_object. This expresses each column in the result as the property of an object. The names of columns are used for the names of the properties. You could also use mysql_fetch_row or mysql_fetch_array, which are equally efficient. Most of the time using an object

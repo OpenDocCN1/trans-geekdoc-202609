@@ -1,0 +1,2398 @@
+- - '#'
+  - PHP 核心编程：使用 PHP 构建动态网站指南（第2版）
+- - '##'
+  - 1. PHP 简介
+- - '##'
+  - 2. 变量、运算符与表达式
+- - '##'
+  - 3. 流程语句
+- - '##'
+  - 4. 函数
+- - '##'
+  - 5. 数组
+- - '##'
+  - 6. 类与对象
+- - '##'
+  - '7. I/O '
+- - '##'
+  - 第二部分：函数参考
+- - '###'
+  - 8. I/O 函数
+- - '###'
+  - 9. 数据函数
+- - '###'
+  - 10. 数学函数
+- - '###'
+  - 11. 时间、日期与配置函数
+- - '###'
+  - 12. 图像函数
+- - '###'
+  - 13. 数据库函数
+- - '###'
+  - 14. 杂杂函数
+- - '##'
+  - 第三：算法
+- - '###'
+  - 15. 排序、搜索与...
+- - '###'
+  - 18. 网络
+- - '###'
+  - 19. 生成图形
+- - '##'
+  - 第四：软件工程
+- - '###'
+  - 20. 与 HTML 集成
+- - '##'
+  - 状态保持与安全保障
+- - '##'
+  - 22. 效率与调试
+- - '#'
+  - 前言
+- - '#'
+  - 第一部分：使用 PHP 进行编程
+- - '#'
+  - 第 1 章：PHP 简介
+- - '###'
+  - PHP 的起源
+- - '###'
+  - 与外部系统的接口
+- - '###'
+  - PHP 如何与 Web 服务器工作
+- - '###'
+  - 硬件和软件要求
+- - '###'
+  - 在 UNIX 上安装 Apache
+- - '###'
+  - 1.1 输出今天的日期
+- - '###'
+  - 保存数据以备后用
+- - '###'
+  - 列表 1.6 条件化每日消息
+- - '###'
+  - 在方案之间进行选择
+- - '###'
+  - 列表 1.7 今日的每日肯定语
+- - '###'
+  - 结论
+- - '#'
+  - 第 2 章 变量、运算符和表达式
+- - '###'
+  - 标识符
+- - '###'
+  - 数据类型
+- - '###'
+  - 列表 2.1 类型转换的实验
+- - '###'
+  - 变量创建与作用域
+- - '###'
+  - 列表 2.2 作用域实验
+- - '###'
+  - 列表 2.3 静态变量演示
+- - '###'
+  - 获取值
+- - '###'
+  - 列表 2.5 引用单个字符
+- - '###'
+  - 释放内存
+- - '###'
+  - 常量
+- - '###'
+  - 列表 2.6 使用常量
+- - '###'
+  - 运算符
+- - '###'
+  - 表 2.4. 算术运算符
+- - '###'
+  - 核心 PHP 编程
+- - '###'
+  - 杂项运算符
+- - '###'
+  - 列表 2.8 拼接运算符
+- - '###'
+  - 列表 2.9 引用运算符
+- - '###'
+  - 列表 2.12 字符串/数字转换
+- - '###'
+  - 列表 2.13 使用括号
+- - '#'
+  - 第 3 章. 控制语句
+- - '###'
+  - 真与假
+- - '###'
+  - if 语句
+- - '###'
+  - 列表 3.1 一个 if-elseif-else 语句
+- - '###'
+  - 列表 3.2 一个简单的语句
+- - '###'
+  - '? 运算符'
+- - '###'
+  - 列表 3.3 所有情况的 if-elseif-else
+- - '###'
+  - switch 语句
+- - '###'
+  - 列表 3.4 所有情况的 switch
+- - '###'
+  - 循环
+- - '###'
+  - while 语句
+- - '###'
+  - 列表 3.5 使用 while 打印日期名称
+- - '###'
+  - break 语句
+- - '###'
+  - 列表 3.6 使用 break 退出循环
+- - '###'
+  - continue 语句
+- - '###'
+  - 列表 3.7 continue 语句
+- - '###'
+  - do...while 语句
+- - '###'
+  - 列表 3.8 使用 do...while 打印日期名称
+- - '###'
+  - for 语句
+- - '###'
+  - 列表 3.9 典型的 for 循环
+- - '###'
+  - foreach 语句
+- - '###'
+  - exit, die 和 return
+- - '###'
+  - 列表 3.11 使用 die 语句的惯用法
+- - '###'
+  - 布尔表达式的求值
+- - '#'
+  - 第 4 章.函数
+- - '###'
+  - 定义函数
+- - '###'
+  - 列表 4.1 定义函数
+- - '###'
+  - return 语句
+- - '###'
+  - 列表 4.2 定义函数
+- - '###'
+  - 作用域和 global 语句
+- - '###'
+  - 参数
+- - '###'
+  - 列表 4.3 通过引用传递参数
+- - '###'
+  - 列表 4.4 带有默认值的参数
+- - '###'
+  - 列表 4.5 在默认参数中使用 unset
+- - '###'
+  - 列表 4.6 变数量参数的函数
+- - '###'
+  - 递归
+- - '###'
+  - 列表 4.7 使用递归
+- - '###'
+  - 索引数组
+- - '###'
+  - 列表 5.2 向数组添加元素
+- - '###'
+  - 列表 5.3 使用字符串索引数组
+- - '###'
+  - 初始化数组
+- - '###'
+  - 列表 5.4 初始化数组
+- - '###'
+  - 列表 5.5 使用 Array 转换值
+- - '###'
+  - 多维数组
+- - '###'
+  - 列表 5.6 创建和引用多维数组
+- - '###'
+  - 类型转换
+- - '###'
+  - 列表 5.7 将数组转换为其他类型
+- - '###'
+  - 在字符串中引用数组
+- - '###'
+  - 列表 5.8 字符串字符串
+- - '#'
+  - 第 6 章：类与对象
+- - '###'
+  - 定义类
+- - '###'
+  - 创建对象
+- - '#'
+  - 第 7 章 I/O 与磁盘访问
+- - '###'
+  - HTTP 连接
+- - '###'
+  - 写入浏览器
+- - '###'
+  - 列表 7.1 使用 print 发送 HTML
+- - '###'
+  - 输出缓冲 (Output Buffering)
+- - '###'
+  - 环境变量
+- - '###'
+  - 列表 7.2 查看环境变量
+- - '###'
+  - 从表单获取输入
+- - '###'
+  - 7.3 从表单输入
+- - '###'
+  - 列表 7.4 文件上传
+- - '###'
+  - PUT 方法请求
+- - '###'
+  - 读写文件
+- - '###'
+  - 列表 7.5 写入和读取文件
+- - '###'
+  - Session
+- - '###'
+  - 列表 7.6 使用会
+- - '###'
+  - include 和 require 函数
+- - '###'
+  - 列表 7.7 包含的文件
+- - '###'
+  - 列表 7.8 包含文件
+- - '#'
+  - 第二部分：函数参考
+- - '##'
+  - 第 8 章.I/O 函数
+- - '###'
+  - flush()
+- - '###'
+  - print(string output)
+- - '###'
+  - printf(string format, ...)
+- - '###'
+  - 表 8.1. printf 类型说明符
+- - '###'
+  - 输出缓冲
+- - '###'
+  - ob_start()
+- - '###'
+  - ob_end_flush()
+- - '###'
+  - ob_end_clean()
+- - '###'
+  - string ob_get_contents()
+- - '###'
+  - 文件
+- - '###'
+  - boolean chdir(string directory)
+- - '###'
+  - boolean chgroup(string filename, string group)
+- - '###'
+  - boolean chmod(string filename, integer mode)
+- - '###'
+  - 表 8.3. 文件模式
+- - '###'
+  - 表 8.4. Windows 文件模式
+- - '###'
+  - boolean chown(string filename, string user)
+- - '###'
+  - closedir(integer directory_handle)
+- - '###'
+  - boolean copy(string source, destination)
+- - '###'
+  - float diskfreespace(string path)
+- - '###'
+  - object dir(string directory)
+- - '###'
+  - boolean fclose(integer file_handle)
+- - '###'
+  - boolean feof(integer file_handle)
+- - '###'
+  - string fgetc(integer file_handle)
+- - '###'
+  - array fgetcsv(integer file_handle, integer length, string separator)
+- - '###'
+  - string fgets(integer file_handle, integer length, string ignore)
+- - '###'
+  - string fstript(integer file_handle, integer length, string ignore)
+- - '###'
+  - array file(integer file_handle)
+- - '###'
+  - boolean file_exists(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer group(integer file_handle)
+- - '###'
+  - integer fileperms(integer file_handle)
+- - '###'
+  - integer filesize(integer file_handle)
+- - '###'
+  - boolean flock(integer file_handle, integer mode)
+- - '###'
+  - integer fputs(integer file_handle, string output)
+- - '###'
+  - string fread(integer file_handle, integer length)
+- - '###'
+  - integer fseek(integer file_handle, integer offset)
+- - '###'
+  - integer ftell(integer file_handle)
+- - '###'
+  - integer ftruncate(integer file_handle)
+- - '###'
+  - array func_get_args(integer file_handle)
+- - '###'
+  - array get__get_info(integer file_handle)
+- - '###'
+  - integer get_dir(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - integer get_type(integer file_handle)
+- - '###'
+  - integer get_owner(integer file_handle)
+- - '###'
+  - string get(integer file_handle)
+- - '###'
+  - string get_file(integer file_handle)
+- - '###'
+  - string get_getc(integer file_handle)
+- - '###'
+  - string get_id(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_status(integer file_handle)
+- - '###'
+  - string get_path(integer file_handle)
+- - '###'
+  - string get_queue(integer file_handle)
+- - '###'
+  - string get_open(integer file_handle)
+- - '###'
+  - string get_read(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_temp(integer file_handle)
+- - '###'
+  - string get_url(integer file_handle)
+- - '###'
+  - string get_write(integer file_handle)
+- - '###'
+  - array get_array(integer file_handle)
+- - '###'
+  - array get_bool(integer file_handle)
+- - '###'
+  - array get_bytes(integer file_handle)
+- - '###'
+  - array get_char(integer file_handle)
+- - '###'
+  - array get_class(integer file_handle)
+- - '###'
+  - array get_data(integer file_handle)
+- - '###'
+  - array get_double(integer file_handle)
+- - '###'
+  - array get_enum(integer file_handle)
+- - '###'
+  - array get_error(integer file_handle)
+- - '###'
+  - array get_extension(integer file_handle)
+- - '###'
+  - array get_float(integer file_handle)
+- - '###'
+  - string get_float(integer file_handle)
+- - '###'
+  - string get_get(integer file_handle)
+- - '###'
+  - string get_hash(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_info(integer file_handle)
+- - '###'
+  - string get_json(integer file_handle)
+- - '###'
+  - string get_long(integer file_handle)
+- - '###'
+  - string get_mask(integer file_handle)
+- - '###'
+  - string get_method(integer file_handle)
+- - '###'
+  - string get_mode(integer file_handle)
+- - '###'
+  - string get_object(integer file_handle)
+- - '###'
+  - string get_option(integer file_handle)
+- - '###'
+  - string get_param(integer file_handle)
+- - '###'
+  - string get_property(integer file_handle)
+- - '###'
+  - string get_resource(integer file_handle)
+- - '###'
+  - string get_result(integer file_handle)
+- - '###'
+  - string get_set(integer file_handle)
+- - '###'
+  - string get_shift(integer file_handle)
+- - '###'
+  - string get_string(integer file_handle)
+- - '###'
+  - string get_source(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_union(integer file_handle)
+- - '###'
+  - string get_value(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_all(integer file_handle)
+- - '###'
+  - string get_any(integer file_handle)
+- - '###'
+  - string get_attr(integer file_handle)
+- - '###'
+  - string get_base(integer file_handle)
+- - '###'
+  - string get_body(integer file_handle)
+- - '###'
+  - string get_col(integer file_handle)
+- - '###'
+  - string get_count(integer file_handle)
+- - '###'
+  - string get_diff(integer file_handle)
+- - '###'
+  - string get_end(integer file_handle)
+- - '###'
+  - string get_ext(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_get(integer file_handle)
+- - '###'
+  - string get_header(integer file_handle)
+- - '###'
+  - string get_hex(integer file_handle)
+- - '###'
+  - string get_hint(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_max(integer file_handle)
+- - '###'
+  - string get_mem(integer file_handle)
+- - '###'
+  - string get_min(integer file_handle)
+- - '###'
+  - string get_mod(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_next(integer file_handle)
+- - '###'
+  - string get_node(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_out(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pow(integer file_handle)
+- - '###'
+  - string get_prop(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_all(integer file_handle)
+- - '###'
+  - string get_any(integer file_handle)
+- - '###'
+  - string get_attr(integer file_handle)
+- - '###'
+  - string get_base(integer file_handle)
+- - '###'
+  - string get_body(integer file_handle)
+- - '###'
+  - string get_col(integer file_handle)
+- - '###'
+  - string get_count(integer file_handle)
+- - '###'
+  - string get_diff(integer file_handle)
+- - '###'
+  - string get_end(integer file_handle)
+- - '###'
+  - string get_ext(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_header(integer file_handle)
+- - '###'
+  - string get_hex(integer file_handle)
+- - '###'
+  - string get_hint(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_max(integer file_handle)
+- - '###'
+  - string get_mem(integer file_handle)
+- - '###'
+  - string get_min(integer file_handle)
+- - '###'
+  - string get_mod(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_next(integer file_handle)
+- - '###'
+  - string get_node(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_out(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pow(integer file_handle)
+- - '###'
+  - string get_prop(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '#'
+  - PHP 核心编程
+- - '###'
+  - flush()
+- - '###'
+  - print(string output)
+- - '###'
+  - printf(string format, ...)
+- - '###'
+  - 表 8.1. printf 类型说明符
+- - '###'
+  - 输出缓冲
+- - '###'
+  - ob_start()
+- - '###'
+  - ob_end_flush()
+- - '###'
+  - ob_end_clean()
+- - '###'
+  - string ob_get_contents()
+- - '###'
+  - 文件
+- - '###'
+  - boolean chdir(string directory)
+- - '###'
+  - boolean chgroup(string filename, string group)
+- - '###'
+  - boolean chmod(string filename, integer mode)
+- - '###'
+  - 表 8.3. 文件模式
+- - '###'
+  - 表 8.4. Windows 文件模式
+- - '###'
+  - boolean chown(string filename, string user)
+- - '###'
+  - closedir(integer directory_handle)
+- - '###'
+  - boolean copy(string source, destination)
+- - '###'
+  - float diskfreespace(string path)
+- - '###'
+  - object dir(string directory)
+- - '###'
+  - boolean fclose(integer file_handle)
+- - '###'
+  - boolean feof(integer file_handle)
+- - '###'
+  - string fgetc(integer file_handle)
+- - '###'
+  - array fgetcsv(integer file_handle, integer length, string separator)
+- - '###'
+  - string fgets(integer file_handle, integer length, string ignore)
+- - '###'
+  - string fstript(integer file_handle, integer length, string ignore)
+- - '###'
+  - array file(integer file_handle)
+- - '###'
+  - boolean file_exists(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer group(integer file_handle)
+- - '###'
+  - integer fileperms(integer file_handle)
+- - '###'
+  - integer filesize(integer file_handle)
+- - '###'
+  - boolean flock(integer file_handle, integer mode)
+- - '###'
+  - integer fputs(integer file_handle, string output)
+- - '###'
+  - string fread(integer file_handle, integer length)
+- - '###'
+  - integer fseek(integer file_handle, integer offset)
+- - '###'
+  - integer ftell(integer file_handle)
+- - '###'
+  - integer ftruncate(integer file_handle)
+- - '###'
+  - array func_get_args(integer file_handle)
+- - '###'
+  - array func_get_get_info(integer file_handle)
+- - '###'
+  - integer get_dir(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - integer get_type(integer file_handle)
+- - '###'
+  - integer get_owner(integer file_handle)
+- - '###'
+  - string get(integer file_handle)
+- - '###'
+  - string get_file(integer file_handle)
+- - '###'
+  - string get_getc(integer file_handle)
+- - '###'
+  - string get_id(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_status(integer file_handle)
+- - '###'
+  - string get_path(integer file_handle)
+- - '###'
+  - string get_queue(integer file_handle)
+- - '###'
+  - string get_open(integer file_handle)
+- - '###'
+  - string get_read(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_temp(integer file_handle)
+- - '###'
+  - string get_url(integer file_handle)
+- - '###'
+  - string get_write(integer file_handle)
+- - '###'
+  - array get_array(integer file_handle)
+- - '###'
+  - array get_bool(integer file_handle)
+- - '###'
+  - array get_bytes(integer file_handle)
+- - '###'
+  - array get_char(integer file_handle)
+- - '###'
+  - array get_class(integer file_handle)
+- - '###'
+  - array get_data(integer file_handle)
+- - '###'
+  - array get_double(integer file_handle)
+- - '###'
+  - array get_enum(integer file_handle)
+- - '###'
+  - array get_error(integer file_handle)
+- - '###'
+  - array get_extension(integer file_handle)
+- - '###'
+  - array get_float(integer file_handle)
+- - '###'
+  - string get_float(integer file_handle)
+- - '###'
+  - string get_get(integer file_handle)
+- - '###'
+  - string get_hash(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_info(integer file_handle)
+- - '###'
+  - string get_json(integer file_handle)
+- - '###'
+  - string get_long(integer file_handle)
+- - '###'
+  - string get_mask(integer file_handle)
+- - '###'
+  - string get_method(integer file_handle)
+- - '###'
+  - string get_mode(integer file_handle)
+- - '###'
+  - string get_object(integer file_handle)
+- - '###'
+  - string get_option(integer file_handle)
+- - '###'
+  - string get_param(integer file_handle)
+- - '###'
+  - string get_property(integer file_handle)
+- - '###'
+  - string get_resource(integer file_handle)
+- - '###'
+  - string get_result(integer file_handle)
+- - '###'
+  - string get_set(integer file_handle)
+- - '###'
+  - string get_shift(integer file_handle)
+- - '###'
+  - string get_string(integer file_handle)
+- - '###'
+  - string get_source(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_union(integer file_handle)
+- - '###'
+  - string get_value(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_all(integer file_handle)
+- - '###'
+  - string get_any(integer file_handle)
+- - '###'
+  - string get_attr(integer file_handle)
+- - '###'
+  - string get_base(integer file_handle)
+- - '###'
+  - string get_body(integer file_handle)
+- - '###'
+  - string get_col(integer file_handle)
+- - '###'
+  - string get_count(integer file_handle)
+- - '###'
+  - string get_diff(integer file_handle)
+- - '###'
+  - string get_end(integer file_handle)
+- - '###'
+  - string get_ext(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_header(integer file_handle)
+- - '###'
+  - string get_hex(integer file_handle)
+- - '###'
+  - string get_hint(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_max(integer file_handle)
+- - '###'
+  - string get_mem(integer file_handle)
+- - '###'
+  - string get_min(integer file_handle)
+- - '###'
+  - string get_mod(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_next(integer file_handle)
+- - '###'
+  - string get_node(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_out(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pow(integer file_handle)
+- - '###'
+  - string get_prop(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '#'
+  - PHP 核心编程
+- - '###'
+  - flush()
+- - '###'
+  - print(string output)
+- - '###'
+  - printf(string format, ...)
+- - '###'
+  - 表 8.1. printf 类型说明符
+- - '###'
+  - 输出缓冲
+- - '###'
+  - ob_start()
+- - '###'
+  - ob_end_flush()
+- - '###'
+  - ob_end_clean()
+- - '###'
+  - string ob_get_contents()
+- - '###'
+  - 文件
+- - '###'
+  - boolean chdir(string directory)
+- - '###'
+  - boolean chgroup(string filename, string group)
+- - '###'
+  - boolean chmod(string filename, integer mode)
+- - '###'
+  - 表 8.3. 文件模式
+- - '###'
+  - 表 8.4. Windows 文件模式
+- - '###'
+  - boolean chown(string filename, string user)
+- - '###'
+  - closedir(integer directory_handle)
+- - '###'
+  - boolean copy(string source, destination)
+- - '###'
+  - float diskfreespace(string path)
+- - '###'
+  - object dir(string directory)
+- - '###'
+  - boolean fclose(integer file_handle)
+- - '###'
+  - boolean feof(integer file_handle)
+- - '###'
+  - string fgetc(integer file_handle)
+- - '###'
+  - array fgetcsv(integer file_handle, integer length, string separator)
+- - '###'
+  - string fgets(integer file_handle, integer length, string ignore)
+- - '###'
+  - string fstript(integer file_handle, integer length, string ignore)
+- - '###'
+  - array file(integer file_handle)
+- - '###'
+  - boolean file_exists(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer group(integer file_handle)
+- - '###'
+  - integer fileperms(integer file_handle)
+- - '###'
+  - integer filesize(integer file_handle)
+- - '###'
+  - boolean flock(integer file_handle, integer mode)
+- - '###'
+  - integer fputs(integer file_handle, string output)
+- - '###'
+  - string fread(integer file_handle, integer length)
+- - '###'
+  - integer fseek(integer file_handle, integer offset)
+- - '###'
+  - integer ftell(integer file_handle)
+- - '###'
+  - integer ftruncate(integer file_handle)
+- - '###'
+  - array func_get_args(integer file_handle)
+- - '###'
+  - array func_get_get_info(integer file_handle)
+- - '###'
+  - integer get_dir(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - integer get_type(integer file_handle)
+- - '###'
+  - integer get_owner(integer file_handle)
+- - '###'
+  - string get(integer file_handle)
+- - '###'
+  - string get_file(integer file_handle)
+- - '###'
+  - string get_getc(integer file_handle)
+- - '###'
+  - string get_id(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_status(integer file_handle)
+- - '###'
+  - string get_path(integer file_handle)
+- - '###'
+  - string get_queue(integer file_handle)
+- - '###'
+  - string get_open(integer file_handle)
+- - '###'
+  - string get_read(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_temp(integer file_handle)
+- - '###'
+  - string get_url(integer file_handle)
+- - '###'
+  - string get_write(integer file_handle)
+- - '###'
+  - array get_array(integer file_handle)
+- - '###'
+  - array get_bool(integer file_handle)
+- - '###'
+  - array get_bytes(integer file_handle)
+- - '###'
+  - array get_char(integer file_handle)
+- - '###'
+  - array get_class(integer file_handle)
+- - '###'
+  - array get_data(integer file_handle)
+- - '###'
+  - array get_double(integer file_handle)
+- - '###'
+  - array get_enum(integer file_handle)
+- - '###'
+  - array get_error(integer file_handle)
+- - '###'
+  - array get_extension(integer file_handle)
+- - '###'
+  - array get_float(integer file_handle)
+- - '###'
+  - string get_float(integer file_handle)
+- - '###'
+  - string get_get(integer file_handle)
+- - '###'
+  - string get_hash(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_info(integer file_handle)
+- - '###'
+  - string get_json(integer file_handle)
+- - '###'
+  - string get_long(integer file_handle)
+- - '###'
+  - string get_mask(integer file_handle)
+- - '###'
+  - string get_method(integer file_handle)
+- - '###'
+  - string get_mode(integer file_handle)
+- - '###'
+  - string get_object(integer file_handle)
+- - '###'
+  - string get_option(integer file_handle)
+- - '###'
+  - string get_param(integer file_handle)
+- - '###'
+  - string get_property(integer file_handle)
+- - '###'
+  - string get_resource(integer file_handle)
+- - '###'
+  - string get_result(integer file_handle)
+- - '###'
+  - string get_set(integer file_handle)
+- - '###'
+  - string get_shift(integer file_handle)
+- - '###'
+  - string get_string(integer file_handle)
+- - '###'
+  - string get_source(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_union(integer file_handle)
+- - '###'
+  - string get_value(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_all(integer file_handle)
+- - '###'
+  - string get_any(integer file_handle)
+- - '###'
+  - string get_attr(integer file_handle)
+- - '###'
+  - string get_base(integer file_handle)
+- - '###'
+  - string get_body(integer file_handle)
+- - '###'
+  - string get_col(integer file_handle)
+- - '###'
+  - string get_count(integer file_handle)
+- - '###'
+  - string get_diff(integer file_handle)
+- - '###'
+  - string get_end(integer file_handle)
+- - '###'
+  - string get_ext(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_header(integer file_handle)
+- - '###'
+  - string get_hex(integer file_handle)
+- - '###'
+  - string get_hint(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_max(integer file_handle)
+- - '###'
+  - string get_mem(integer file_handle)
+- - '###'
+  - string get_min(integer file_handle)
+- - '###'
+  - string get_mod(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_next(integer file_handle)
+- - '###'
+  - string get_node(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_out(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pow(integer file_handle)
+- - '###'
+  - string get_prop(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '#'
+  - PHP 核心编程
+- - '###'
+  - flush()
+- - '###'
+  - print(string output)
+- - '###'
+  - printf(string format, ...)
+- - '###'
+  - 表 8.1. printf 类型说明符
+- - '###'
+  - 输出缓冲
+- - '###'
+  - ob_start()
+- - '###'
+  - ob_end_flush()
+- - '###'
+  - ob_end_clean()
+- - '###'
+  - string ob_get_contents()
+- - '###'
+  - 文件
+- - '###'
+  - boolean chdir(string directory)
+- - '###'
+  - boolean chgroup(string filename, string group)
+- - '###'
+  - boolean chmod(string filename, integer mode)
+- - '###'
+  - 表 8.3. 文件模式
+- - '###'
+  - 表 8.4. Windows 文件模式
+- - '###'
+  - boolean chown(string filename, string user)
+- - '###'
+  - closedir(integer directory_handle)
+- - '###'
+  - boolean copy(string source, destination)
+- - '###'
+  - float diskfreespace(string path)
+- - '###'
+  - object dir(string directory)
+- - '###'
+  - boolean fclose(integer file_handle)
+- - '###'
+  - boolean feof(integer file_handle)
+- - '###'
+  - string fgetc(integer file_handle)
+- - '###'
+  - array fgetcsv(integer file_handle, integer length, string separator)
+- - '###'
+  - string fgets(integer file_handle, integer length, string ignore)
+- - '###'
+  - string fstript(integer file_handle, integer length, string ignore)
+- - '###'
+  - array file(integer file_handle)
+- - '###'
+  - boolean file_exists(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer group(integer file_handle)
+- - '###'
+  - integer fileperms(integer file_handle)
+- - '###'
+  - integer filesize(integer file_handle)
+- - '###'
+  - boolean flock(integer file_handle, integer mode)
+- - '###'
+  - integer fputs(integer file_handle, string output)
+- - '###'
+  - string fread(integer file_handle, integer length)
+- - '###'
+  - integer fseek(integer file_handle, integer offset)
+- - '###'
+  - integer ftell(integer file_handle)
+- - '###'
+  - integer ftruncate(integer file_handle)
+- - '###'
+  - array func_get_args(integer file_handle)
+- - '###'
+  - array func_get_get_info(integer file_handle)
+- - '###'
+  - integer get_dir(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - integer get_type(integer file_handle)
+- - '###'
+  - integer get_owner(integer file_handle)
+- - '###'
+  - string get(integer file_handle)
+- - '###'
+  - string get_file(integer file_handle)
+- - '###'
+  - string get_getc(integer file_handle)
+- - '###'
+  - string get_id(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_status(integer file_handle)
+- - '###'
+  - string get_path(integer file_handle)
+- - '###'
+  - string get_queue(integer file_handle)
+- - '###'
+  - string get_open(integer file_handle)
+- - '###'
+  - string get_read(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_temp(integer file_handle)
+- - '###'
+  - string get_url(integer file_handle)
+- - '###'
+  - string get_write(integer file_handle)
+- - '###'
+  - array get_array(integer file_handle)
+- - '###'
+  - array get_bool(integer file_handle)
+- - '###'
+  - array get_bytes(integer file_handle)
+- - '###'
+  - array get_char(integer file_handle)
+- - '###'
+  - array get_class(integer file_handle)
+- - '###'
+  - array get_data(integer file_handle)
+- - '###'
+  - array get_double(integer file_handle)
+- - '###'
+  - array get_enum(integer file_handle)
+- - '###'
+  - array get_error(integer file_handle)
+- - '###'
+  - array get_extension(integer file_handle)
+- - '###'
+  - array get_float(integer file_handle)
+- - '###'
+  - string get_float(integer file_handle)
+- - '###'
+  - string get_get(integer file_handle)
+- - '###'
+  - string get_hash(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_info(integer file_handle)
+- - '###'
+  - string get_json(integer file_handle)
+- - '###'
+  - string get_long(integer file_handle)
+- - '###'
+  - string get_mask(integer file_handle)
+- - '###'
+  - string get_method(integer file_handle)
+- - '###'
+  - string get_mode(integer file_handle)
+- - '###'
+  - string get_object(integer file_handle)
+- - '###'
+  - string get_option(integer file_handle)
+- - '###'
+  - string get_param(integer file_handle)
+- - '###'
+  - string get_property(integer file_handle)
+- - '###'
+  - string get_resource(integer file_handle)
+- - '###'
+  - string get_result(integer file_handle)
+- - '###'
+  - string get_set(integer file_handle)
+- - '###'
+  - string get_shift(integer file_handle)
+- - '###'
+  - string get_string(integer file_handle)
+- - '###'
+  - string get_source(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_union(integer file_handle)
+- - '###'
+  - string get_value(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_all(integer file_handle)
+- - '###'
+  - string get_any(integer file_handle)
+- - '###'
+  - string get_attr(integer file_handle)
+- - '###'
+  - string get_base(integer file_handle)
+- - '###'
+  - string get_body(integer file_handle)
+- - '###'
+  - string get_col(integer file_handle)
+- - '###'
+  - string get_count(integer file_handle)
+- - '###'
+  - string get_diff(integer file_handle)
+- - '###'
+  - string get_end(integer file_handle)
+- - '###'
+  - string get_ext(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_header(integer file_handle)
+- - '###'
+  - string get_hex(integer file_handle)
+- - '###'
+  - string get_hint(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_max(integer file_handle)
+- - '###'
+  - string get_mem(integer file_handle)
+- - '###'
+  - string get_min(integer file_handle)
+- - '###'
+  - string get_mod(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_next(integer file_handle)
+- - '###'
+  - string get_node(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_out(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pow(integer file_handle)
+- - '###'
+  - string get_prop(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '#'
+  - PHP 核心编程
+- - '###'
+  - flush()
+- - '###'
+  - print(string output)
+- - '###'
+  - printf(string format, ...)
+- - '###'
+  - 表 8.1. printf 类型说明符
+- - '###'
+  - 输出缓冲
+- - '###'
+  - ob_start()
+- - '###'
+  - ob_end_flush()
+- - '###'
+  - ob_end_clean()
+- - '###'
+  - string ob_get_contents()
+- - '###'
+  - 文件
+- - '###'
+  - boolean chdir(string directory)
+- - '###'
+  - boolean chgroup(string filename, string group)
+- - '###'
+  - boolean chmod(string filename, integer mode)
+- - '###'
+  - 表 8.3. 文件模式
+- - '###'
+  - 表 8.4. Windows 文件模式
+- - '###'
+  - boolean chown(string filename, string user)
+- - '###'
+  - closedir(integer directory_handle)
+- - '###'
+  - boolean copy(string source, destination)
+- - '###'
+  - float diskfreespace(string path)
+- - '###'
+  - object dir(string directory)
+- - '###'
+  - boolean fclose(integer file_handle)
+- - '###'
+  - boolean feof(integer file_handle)
+- - '###'
+  - string fgetc(integer file_handle)
+- - '###'
+  - array fgetcsv(integer file_handle, integer length, string separator)
+- - '###'
+  - string fgets(integer file_handle, integer length, string ignore)
+- - '###'
+  - string fstript(integer file_handle, integer length, string ignore)
+- - '###'
+  - array file(integer file_handle)
+- - '###'
+  - boolean file_exists(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer group(integer file_handle)
+- - '###'
+  - integer fileperms(integer file_handle)
+- - '###'
+  - integer filesize(integer file_handle)
+- - '###'
+  - boolean flock(integer file_handle, integer mode)
+- - '###'
+  - integer fputs(integer file_handle, string output)
+- - '###'
+  - string fread(integer file_handle, integer length)
+- - '###'
+  - integer fseek(integer file_handle, integer offset)
+- - '###'
+  - integer ftell(integer file_handle)
+- - '###'
+  - integer ftruncate(integer file_handle)
+- - '###'
+  - array func_get_args(integer file_handle)
+- - '###'
+  - array func_get_get_info(integer file_handle)
+- - '###'
+  - integer get_dir(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - integer get_type(integer file_handle)
+- - '###'
+  - integer get_owner(integer file_handle)
+- - '###'
+  - string get(integer file_handle)
+- - '###'
+  - string get_file(integer file_handle)
+- - '###'
+  - string get_getc(integer file_handle)
+- - '###'
+  - string get_id(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_status(integer file_handle)
+- - '###'
+  - string get_path(integer file_handle)
+- - '###'
+  - string get_queue(integer file_handle)
+- - '###'
+  - string get_open(integer file_handle)
+- - '###'
+  - string get_read(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_temp(integer file_handle)
+- - '###'
+  - string get_url(integer file_handle)
+- - '###'
+  - string get_write(integer file_handle)
+- - '###'
+  - array get_array(integer file_handle)
+- - '###'
+  - array get_bool(integer file_handle)
+- - '###'
+  - array get_bytes(integer file_handle)
+- - '###'
+  - array get_char(integer file_handle)
+- - '###'
+  - array get_class(integer file_handle)
+- - '###'
+  - array get_data(integer file_handle)
+- - '###'
+  - array get_double(integer file_handle)
+- - '###'
+  - array get_enum(integer file_handle)
+- - '###'
+  - array get_error(integer file_handle)
+- - '###'
+  - array get_extension(integer file_handle)
+- - '###'
+  - array get_float(integer file_handle)
+- - '###'
+  - string get_float(integer file_handle)
+- - '###'
+  - string get_get(integer file_handle)
+- - '###'
+  - string get_hash(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_info(integer file_handle)
+- - '###'
+  - string get_json(integer file_handle)
+- - '###'
+  - string get_long(integer file_handle)
+- - '###'
+  - string get_mask(integer file_handle)
+- - '###'
+  - string get_method(integer file_handle)
+- - '###'
+  - string get_mode(integer file_handle)
+- - '###'
+  - string get_object(integer file_handle)
+- - '###'
+  - string get_option(integer file_handle)
+- - '###'
+  - string get_param(integer file_handle)
+- - '###'
+  - string get_property(integer file_handle)
+- - '###'
+  - string get_resource(integer file_handle)
+- - '###'
+  - string get_result(integer file_handle)
+- - '###'
+  - string get_set(integer file_handle)
+- - '###'
+  - string get_shift(integer file_handle)
+- - '###'
+  - string get_string(integer file_handle)
+- - '###'
+  - string get_source(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_union(integer file_handle)
+- - '###'
+  - string get_value(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_all(integer file_handle)
+- - '###'
+  - string get_any(integer file_handle)
+- - '###'
+  - string get_attr(integer file_handle)
+- - '###'
+  - string get_base(integer file_handle)
+- - '###'
+  - string get_body(integer file_handle)
+- - '###'
+  - string get_col(integer file_handle)
+- - '###'
+  - string get_count(integer file_handle)
+- - '###'
+  - string get_diff(integer file_handle)
+- - '###'
+  - string get_end(integer file_handle)
+- - '###'
+  - string get_ext(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_header(integer file_handle)
+- - '###'
+  - string get_hex(integer file_handle)
+- - '###'
+  - string get_hint(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_max(integer file_handle)
+- - '###'
+  - string get_mem(integer file_handle)
+- - '###'
+  - string get_min(integer file_handle)
+- - '###'
+  - string get_mod(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_next(integer file_handle)
+- - '###'
+  - string get_node(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_out(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pow(integer file_handle)
+- - '###'
+  - string get_prop(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '#'
+  - PHP 核心编程
+- - '###'
+  - flush()
+- - '###'
+  - print(string output)
+- - '###'
+  - printf(string format, ...)
+- - '###'
+  - 表 8.1. printf 类型说明符
+- - '###'
+  - 输出缓冲
+- - '###'
+  - ob_start()
+- - '###'
+  - ob_end_flush()
+- - '###'
+  - ob_end_clean()
+- - '###'
+  - string ob_get_contents()
+- - '###'
+  - 文件
+- - '###'
+  - boolean chdir(string directory)
+- - '###'
+  - boolean chgroup(string filename, string group)
+- - '###'
+  - boolean chmod(string filename, integer mode)
+- - '###'
+  - 表 8.3. 文件模式
+- - '###'
+  - 表 8.4. Windows 文件模式
+- - '###'
+  - boolean chown(string filename, string user)
+- - '###'
+  - closedir(integer directory_handle)
+- - '###'
+  - boolean copy(string source, destination)
+- - '###'
+  - float diskfreespace(string path)
+- - '###'
+  - object dir(string directory)
+- - '###'
+  - boolean fclose(integer file_handle)
+- - '###'
+  - boolean feof(integer file_handle)
+- - '###'
+  - string fgetc(integer file_handle)
+- - '###'
+  - array fgetcsv(integer file_handle, integer length, string separator)
+- - '###'
+  - string fgets(integer file_handle, integer length, string ignore)
+- - '###'
+  - string fstript(integer file_handle, integer length, string ignore)
+- - '###'
+  - array file(integer file_handle)
+- - '###'
+  - boolean file_exists(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer group(integer file_handle)
+- - '###'
+  - integer fileperms(integer file_handle)
+- - '###'
+  - integer filesize(integer file_handle)
+- - '###'
+  - boolean flock(integer file_handle, integer mode)
+- - '###'
+  - integer fputs(integer file_handle, string output)
+- - '###'
+  - string fread(integer file_handle, integer length)
+- - '###'
+  - integer fseek(integer file_handle, integer offset)
+- - '###'
+  - integer ftell(integer file_handle)
+- - '###'
+  - integer ftruncate(integer file_handle)
+- - '###'
+  - array func_get_args(integer file_handle)
+- - '###'
+  - array func_get_get_info(integer file_handle)
+- - '###'
+  - integer get_dir(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - integer get_type(integer file_handle)
+- - '###'
+  - integer get_owner(integer file_handle)
+- - '###'
+  - string get(integer file_handle)
+- - '###'
+  - string get_file(integer file_handle)
+- - '###'
+  - string get_getc(integer file_handle)
+- - '###'
+  - string get_id(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_status(integer file_handle)
+- - '###'
+  - string get_path(integer file_handle)
+- - '###'
+  - string get_queue(integer file_handle)
+- - '###'
+  - string get_open(integer file_handle)
+- - '###'
+  - string get_read(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_temp(integer file_handle)
+- - '###'
+  - string get_url(integer file_handle)
+- - '###'
+  - string get_write(integer file_handle)
+- - '###'
+  - array get_array(integer file_handle)
+- - '###'
+  - array get_bool(integer file_handle)
+- - '###'
+  - array get_bytes(integer file_handle)
+- - '###'
+  - array get_char(integer file_handle)
+- - '###'
+  - array get_class(integer file_handle)
+- - '###'
+  - array get_data(integer file_handle)
+- - '###'
+  - array get_double(integer file_handle)
+- - '###'
+  - array get_enum(integer file_handle)
+- - '###'
+  - array get_error(integer file_handle)
+- - '###'
+  - array get_extension(integer file_handle)
+- - '###'
+  - array get_float(integer file_handle)
+- - '###'
+  - string get_float(integer file_handle)
+- - '###'
+  - string get_get(integer file_handle)
+- - '###'
+  - string get_hash(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_info(integer file_handle)
+- - '###'
+  - string get_json(integer file_handle)
+- - '###'
+  - string get_long(integer file_handle)
+- - '###'
+  - string get_mask(integer file_handle)
+- - '###'
+  - string get_method(integer file_handle)
+- - '###'
+  - string get_mode(integer file_handle)
+- - '###'
+  - string get_object(integer file_handle)
+- - '###'
+  - string get_option(integer file_handle)
+- - '###'
+  - string get_param(integer file_handle)
+- - '###'
+  - string get_property(integer file_handle)
+- - '###'
+  - string get_resource(integer file_handle)
+- - '###'
+  - string get_result(integer file_handle)
+- - '###'
+  - string get_set(integer file_handle)
+- - '###'
+  - string get_shift(integer file_handle)
+- - '###'
+  - string get_string(integer file_handle)
+- - '###'
+  - string get_source(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_union(integer file_handle)
+- - '###'
+  - string get_value(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_all(integer file_handle)
+- - '###'
+  - string get_any(integer file_handle)
+- - '###'
+  - string get_attr(integer file_handle)
+- - '###'
+  - string get_base(integer file_handle)
+- - '###'
+  - string get_body(integer file_handle)
+- - '###'
+  - string get_col(integer file_handle)
+- - '###'
+  - string get_count(integer file_handle)
+- - '###'
+  - string get_diff(integer file_handle)
+- - '###'
+  - string get_end(integer file_handle)
+- - '###'
+  - string get_ext(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_header(integer file_handle)
+- - '###'
+  - string get_hex(integer file_handle)
+- - '###'
+  - string get__(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_max(integer file_handle)
+- - '###'
+  - string get_mem(integer file_handle)
+- - '###'
+  - string get_min(integer file_handle)
+- - '###'
+  - string get_mod(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_next(integer file_handle)
+- - '###'
+  - string get_node(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_out(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pow(integer file_handle)
+- - '###'
+  - string get_prop(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '#'
+  - PHP 核心编程
+- - '###'
+  - flush()
+- - '###'
+  - print(string output)
+- - '###'
+  - printf(string format, ...)
+- - '###'
+  - 表 8.1. printf 类型说明符
+- - '###'
+  - 输出缓冲
+- - '###'
+  - ob_start()
+- - '###'
+  - ob_end_flush()
+- - '###'
+  - ob_end_clean()
+- - '###'
+  - string ob_get_contents()
+- - '###'
+  - 文件
+- - '###'
+  - boolean chdir(string directory)
+- - '###'
+  - boolean chgroup(string filename, string group)
+- - '###'
+  - boolean chmod(string filename, integer mode)
+- - '###'
+  - 表 8.3. 文件模式
+- - '###'
+  - 表 8.4. Windows 文件模式
+- - '###'
+  - boolean chown(string filename, string user)
+- - '###'
+  - closedir(integer directory_handle)
+- - '###'
+  - boolean copy(string source, destination)
+- - '###'
+  - float diskfreespace(string path)
+- - '###'
+  - object dir(string directory)
+- - '###'
+  - boolean fclose(integer file_handle)
+- - '###'
+  - boolean feof(integer file_handle)
+- - '###'
+  - string fgetc(integer file_handle)
+- - '###'
+  - array fgetcsv(integer file_handle, integer length, string separator)
+- - '###'
+  - string fgets(integer file_handle, integer length, string ignore)
+- - '###'
+  - string fstript(integer file_handle, integer length, string ignore)
+- - '###'
+  - array file(integer file_handle)
+- - '###'
+  - boolean file_exists(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer filetime(integer file_handle)
+- - '###'
+  - integer group(integer file_handle)
+- - '###'
+  - integer fileperms(integer file_handle)
+- - '###'
+  - integer filesize(integer file_handle)
+- - '###'
+  - boolean flock(integer file_handle, integer mode)
+- - '###'
+  - integer fputs(integer file_handle, string output)
+- - '###'
+  - string fread(integer file_handle, integer length)
+- - '###'
+  - integer fseek(integer file_handle, integer offset)
+- - '###'
+  - integer ftell(integer file_handle)
+- - '###'
+  - integer ftruncate(integer file_handle)
+- - '###'
+  - array func_get_args(integer file_handle)
+- - '###'
+  - array func_get_get_info(integer file_handle)
+- - '###'
+  - integer get_dir(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - integer get_type(integer file_handle)
+- - '###'
+  - integer get_owner(integer file_handle)
+- - '###'
+  - string get(integer file_handle)
+- - '###'
+  - string get_file(integer file_handle)
+- - '###'
+  - string get_getc(integer file_handle)
+- - '###'
+  - string get_id(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_status(integer file_handle)
+- - '###'
+  - string get_path(integer file_handle)
+- - '###'
+  - string get_queue(integer file_handle)
+- - '###'
+  - string get_open(integer file_handle)
+- - '###'
+  - string get_read(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_temp(integer file_handle)
+- - '###'
+  - string get_url(integer file_handle)
+- - '###'
+  - string get_write(integer file_handle)
+- - '###'
+  - array get_array(integer file_handle)
+- - '###'
+  - array get_bool(integer file_handle)
+- - '###'
+  - array get_bytes(integer file_handle)
+- - '###'
+  - array get_char(integer file_handle)
+- - '###'
+  - array get_class(integer file_handle)
+- - '###'
+  - array get_data(integer file_handle)
+- - '###'
+  - array get_double(integer file_handle)
+- - '###'
+  - array get_enum(integer file_handle)
+- - '###'
+  - array get_error(integer file_handle)
+- - '###'
+  - array get_extension(integer file_handle)
+- - '###'
+  - array get_float(integer file_handle)
+- - '###'
+  - string get_float(integer file_handle)
+- - '###'
+  - string get_get(integer file_handle)
+- - '###'
+  - string get_hash(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_info(integer file_handle)
+- - '###'
+  - string get_json(integer file_handle)
+- - '###'
+  - string get_long(integer file_handle)
+- - '###'
+  - string get_mask(integer file_handle)
+- - '###'
+  - string get_method(integer file_handle)
+- - '###'
+  - string get_mode(integer file_handle)
+- - '###'
+  - string get_object(integer file_handle)
+- - '###'
+  - string get_option(integer file_handle)
+- - '###'
+  - string get_param(integer file_handle)
+- - '###'
+  - string get_property(integer file_handle)
+- - '###'
+  - string get_resource(integer file_handle)
+- - '###'
+  - string get_result(integer file_handle)
+- - '###'
+  - string get_set(integer file_handle)
+- - '###'
+  - string get_shift(integer file_handle)
+- - '###'
+  - string get_string(integer file_handle)
+- - '###'
+  - string get_source(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_union(integer file_handle)
+- - '###'
+  - string get_value(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
+- - '###'
+  - string get_all(integer file_handle)
+- - '###'
+  - string get_any(integer file_handle)
+- - '###'
+  - string get_attr(integer file_handle)
+- - '###'
+  - string get_base(integer file_handle)
+- - '###'
+  - string get_body(integer file_handle)
+- - '###'
+  - string get_col(integer file_handle)
+- - '###'
+  - string get_count(integer file_handle)
+- - '###'
+  - string get_diff(integer file_handle)
+- - '###'
+  - string get_end(integer file_handle)
+- - '###'
+  - string get_ext(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_field(integer file_handle)
+- - '###'
+  - string get_header(integer file_handle)
+- - '###'
+  - string get_hex(integer file_handle)
+- - '###'
+  - string get_hint(integer file_handle)
+- - '###'
+  - string get_int(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_key(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_list(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_map(integer file_handle)
+- - '###'
+  - string get_max(integer file_handle)
+- - '###'
+  - string get_mem(integer file_handle)
+- - '###'
+  - string get_min(integer file_handle)
+- - '###'
+  - string get_mod(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_name(integer file_handle)
+- - '###'
+  - string get_next(integer file_handle)
+- - '###'
+  - string get_node(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_opt(integer file_handle)
+- - '###'
+  - string get_out(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pos(integer file_handle)
+- - '###'
+  - string get_pow(integer file_handle)
+- - '###'
+  - string get_prop(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_query(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_res(integer file_handle)
+- - '###'
+  - string get_size(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_type(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_val(integer file_handle)
+- - '###'
+  - string get_xml(integer file_handle)
+- - '###'
+  - string get_zone(integer file_handle)
