@@ -1,0 +1,13 @@
+predictions made through the ML models. This combined approach complements each other and stringly puts together a robust framework for identifying security threats in real time.
+
+Rule-based Detection – The ELK stack SIEM has a dictionary of configured rules to detect a wide range of known threats and attacks. These rules were imported into our system from SIEM's default library. This helped in identifying attack patterns such as high-volume traffic, unusual port usage, suspicious HTTP requests, etc. In order to enhance the system's detection capabilities custom rule was also created in Kibana to identify and flag the attack patterns observed in the logs through the simulated scenarios on DDoS where the rule [18] was customised to trigger the alerts after identifying high traffic anomalies, such as SYN flood attack targeting the IoT server. These rules helped in generating real-time alerts on Kibana which were helpful in visualizing the dashboards and enable efficient real-time monitoring of network activities.
+
+ML-based Detection – The models RF and XGBoost were deployed and trained based on the preprocessing steps mentioned in the earlier section. They were integrated in order to adapt the threat detection by analysing the traffic logs and classifying the events as DDoS and being. A python pipeline was designed and structured in a way that it fetches the logs from Elasticsearch and passes them to the model for classification, and these predictions made by the models were then indexed back to Elasticsearch, ensuring an integration with the SIEM system. This integration of ML-based detection thus strengthened the system's detection capabilities as it detects the attack patterns that evaded from the static rules enhancing the overall detection capabilities.
+
+This combined approach can be viewed together at the same time on Kibana dashboard, making it effective to address the challenges posed by the attackers through attacks such as DDoS in real time.
+
+# 5.4 Design Specification
+
+# 5.4.1 Introduction to System Design
+
+The main objective of this research was to create a robust IoT design framed in a cloud-based environment having several virtual IoT devices which could be possibly targeted and thus create a real-time monitoring structure which would be able to capture, detect and classify these attacks. The architecture of the entire setup was precisely crafted to imitate a realistic IoT environment including multiple components that would seamlessly interact with each other in order to monitor and analyse the network traffic. The primary components integrated here are the IoT server which hosts the IoT devices using technologies such as

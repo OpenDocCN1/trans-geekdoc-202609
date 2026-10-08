@@ -1,0 +1,15 @@
+(PUFs) as a subsequent confirmation factor. If the PUFs do not perform dependably because of ecological factors or assembling irregularities, the general security of the validation cycle may be compromised [21].
+
+# 4.3 Methodology
+
+Blockchain-based secure data systems enhance security, efficiency and privacy in data exchange nodes. Traditional cloud-based approaches face challenges such as high latency, vulnerability and inefficient resource utilization, which are overcome by blockchain approaches. This section gives an overview of systems deployed using blockchain in fog-edge computing.
+
+Blockchain can be used with IoT applications. The suggested framework encompasses various stages, such as device configuration, enrollment, verification, key exchange and preservation with data retrieval stage. The data generates from the IoT devices, it must be safeguarded the integrity and security of data transactions to be preserved. Merkle tree-based data integrity is deployed for this purpose. Elliptic curve Diffie–Hellman, which is a hybrid encryption method, is used for data encryption and decryption. A case study of electronic healthcare record (EHR) of a hospital used with the help of blockchain is considered.
+
+As the number of cardiovascular diseases increases, an IoT wearable device is attached to the patient to continuously monitor the electrocardiogram (ECG). It collects the data and transmits heart rate and rhythm data to the cloud, which is centralized, for real-time analysis by various doctors. The system fog-assisted EHR which uses blockchain technology that integrates all kinds of IoT sensors and systems to monitor and analyze the collected data. It processes the ECG data at the edge of the network. Figure 4.1 shows the architecture of the system. The entities involved are hospital, fog gateway, fog node, distributed blockchain-based storage and medical specialist.
+
+Model generates the threats such data integrity attacks in fog-enabled systems to protect the intruders from false readings and altering vital signs which can mislead the medical decisions. It also prevents data confidentiality attack to protect patient's privacy data and also prevents unauthorized access to the patient's data, and the authentication is given only to doctors, healthcare devices and nurses.
+
+The IoT nodes form a network to communicate the data for sharing among each other in a network. Two software agents are deployed at the fog: one is used to form and monitor the network and the other is used to establish communication among the devices. Adding a new device to the network, approval is taken from the connected network and then the device is added.
+
+The IoT node generates the data and stores it in the form of the block. The blockchain network contains the hash value of the previous block and the

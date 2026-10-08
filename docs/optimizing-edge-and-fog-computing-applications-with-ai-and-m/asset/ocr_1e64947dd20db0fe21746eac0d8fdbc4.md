@@ -1,0 +1,8 @@
+![](bbox=[0.125, 0.121, 0.874, 0.483])
+
+**Figure 10.1** Meta-learning and differential privacy applied in federated learning.
+
+giving local models the ability to learn quickly from a small number of data samples, thus improving their performance even with sparse or heterogeneous data.
+Recently, many works have begun to exploit various personalization techniques [23] in order to obtain "personalized models" to solve this problem. However, these methods cannot achieve flexible personalization and may ignore the communication bottleneck challenge, which is worth considering in the network applications. Per-FedAvg algorithm [24], combining MAML [25] with FedAvg [26], can quickly obtain personalized models adapted to the data of devices as it's motivated by the idea of mixing local and global models presented in formulation of [23]. It allows clients to customize the global model using the personalization coefficient (α) as introduced in the Communication Efficient Personalized Federated Meta-Learning algorithm. This coefficient controls how the local client relies on the global model versus its local model. By adjusting this parameter, better model adaptation can be achieved for clients with different data distributions [1].
+
+Moreover, to address the communication bottleneck challenge in FL, representation learning can be utilized to reduce communication overhead. Representation learning helps encode high-dimensional data into lower-dimensional representation,
