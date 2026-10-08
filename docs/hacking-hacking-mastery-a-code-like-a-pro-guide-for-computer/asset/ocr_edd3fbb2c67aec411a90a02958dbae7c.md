@@ -1,0 +1,5 @@
+that you got into their system and that it has been compromised. The way that you can ensure that they do not know is to not make any changes to the website or create more files than what you're going to create. You also should not create any additional users or you're going to instantly send up a red flag to the administrator.
+
+If you are using a patched serve such as an SSHD server, you're going to code your password so that no one can log in using that password. If they happen to log in with that password, they will then have access that they should not have and they will have access to crucial information that you're most likely not going to want them to have access to.
+
+When someone begins to try and log into the system, you need to get out immediately before you are caught. If caught, you're going to face some serious charges.

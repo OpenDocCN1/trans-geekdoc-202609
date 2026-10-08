@@ -1,0 +1,2977 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # HACKING MASTERY
+
+
+    A Code Like a Pro Guide for Computer Hacking Beginners
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_0_0.png)
+
+
+    Jonathan Bates'
+  - '[PAGE 1]
+
+
+    # # Hacking Mastery
+
+
+    # ## A Code–Like–a–Pro Guide
+
+    For Computer Hacking Beginners
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_1_0.png)'
+  - '[PAGE 2]
+
+
+    # Table of Contents
+
+
+    +   - Introduction
+
+
+    +   - Chapter one: A Hacker’s Mindset
+
+
+    +   - Chapter two: How to Think like a Hacker
+
+
+    +   - Chapter three: How to Hack a Computer System
+
+
+    +   - Chapter Four: How to Hack Wireless Networks
+
+
+    +   - Chapter Five: How to Crack Passwords
+
+
+    +   - Chapter Six: How to Protect Yourself from Hackers
+
+
+    +   - Chapter seven: Techniques used by Hackers
+
+
+    +   - Chapter eight: Pursuing a Career in Ethical Hacking
+
+
+    +   - Chapter nine: Wozniak and Jobs
+
+
+    +   - Conclusion'
+  - '[PAGE 3]
+
+
+    Copyright 2016 by Jonathan Bates - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    +   - From a Declaration of Principles which was accepted and approved equally
+    by a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any use or abuse of any
+    policies, processes, or directions contained within the solitary and utter responsibility
+    of the recipient reader. Under no circumstances will any legal responsibility
+    or blame be held against the publisher for any reparation, damages, or monetary
+    loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.'
+  - '[PAGE 4]
+
+
+    # Introduction
+
+
+    Firstly, I want to thank you and congratulate you for downloading the book, *Hacking
+    Mastery.*
+
+
+    This book contains proven steps and strategies on how to become a hacker and the
+    many ways that you can use your new found hacking skills.
+
+
+    An inescapable fact is that you are able to use your hacking skills for both good
+    and bad. However, it is not recommended that you hack into any system. It is highly
+    illegal!
+
+
+    You should never hack into a system without the administrator''s permission. Any
+    hacking that is done without the expressed permission of the system''s administrator''s
+    permission is strictly illegal while you may not get caught right away, you can
+    end up spending time in prison or paying some very heavy fines. Any illegal hacking
+    can earn you a sentence up to twenty years in a federal prison.
+
+
+    Any information in this book is purely for educational purposes!
+
+
+    Thanks again for downloading this book, I hope you enjoy it!'
+  - '[PAGE 5]
+
+
+    <!-- no content -->'
+  - '[PAGE 6]
+
+
+    # Chapter 1: A Hacker’s Mindset
+
+
+    There are five main principals of a hacker’s mind that every hacker should think
+    about when they are hacking. If you are looking to begin hacking, you should think
+    of these too.
+
+
+    +   1. The world is full of fascinating problems that are just waiting to be solved:
+
+
+    As a hacker you can have a lot of fun (as long as you are doing it legally). It
+    also takes a lot of effort to be a hacker. And that effort takes a lot of motivation.
+    As a hacker, your motivation is going to come from you solving problems, exercising
+    your intelligence, and even sharpening your skills with each successful hack.
+
+
+    If you are not this naturally, you will become this way as you learn the ways
+    of being a hacker. If you do not, your energy is going to be sapped by many different
+    distractions such money and even social approval.
+
+
+    You also need to be able to develop some kind of faith in your own ability to
+    learn. This believes going to let you know that you can learn how to hack anything
+    you need to, but you do not know everything. If you are able to tackle a problem
+    and learn how to solve just one piece of it, you have learned and are ready to
+    go on and learn the next thing.
+
+
+    This is you having the faith in yourself to be able to learn how to solve a puzzle
+    one piece at a time.
+
+
+    +   2. No problem should ever have to be solved twice: your creative brain is
+    both valuable and a limited resource (because you''re the only one of you). Just
+    as you didn''t waste any time on re-inventing the wheel, you shouldn''t have to
+    go back and solve a problem when there are many other interesting problems that
+    are not out to be solved.
+
+
+    In order to behave like a hacker, you need to believe that your time is precious.
+    Think that it is your moral duty to share any information that you have from solving
+    problems as solving any problem before you just give the solution away. This will
+    help other hackers to be able to solve any problems instead of solving ones that
+    you may have answers to.
+
+
+    Remember, just because a problem has been solved does not mean that you shouldn''t
+    try to go back and find a new solution that might make solving that easier. This
+    is never just one solution to any given problem.
+
+
+    Often times we learn a lot from the problem that we didn''t know before by studying
+    the first solution to it. It is okay for you to believe that you can do better
+    than the however, to use artificial technical, legal, or institutional barriers
+    in order to prevent a good solution from being re-used therefore causing other
+    people to have to re-invent the wheel.
+
+
+    You also not need to feel obligated to hand over any of your creative product.
+    You might want to remember that hackers are the ones that are going to give you
+    the most'
+  - '[PAGE 7]
+
+
+    respect as a hacker. it is perfectly okay for you to use your hacking skills in
+    order to support your family or to get rich as long you do not forget where your
+    loyalties are to the art form of hacking as well as your fellow hackers who are
+    the ones who are going to help you on your way up.
+
+
+    +   3. Boredom and drudgery are evil: being that hackers are naturally creative;
+    you should never get bored or have drove at work that is repetitive. this will
+    cause you to not be able to solve new problems, which is the whole reason you''re
+    doing it!
+
+
+    Therefore, bored and drudgery are not just unpleasant, but they are actually evil
+    to a hacker.
+
+
+    In order to behave like a hacker, you''re going to need to believe this to make
+    sure that you do not fall into boredom. you also need to be able to spot when
+    you hit a wall so that you can find a way to get yourself off it. you need to
+    do this not for yourself, but others as well.
+
+
+    Just like most things, there is an expectation to this rule. as a hacker, you
+    will do things that are going to be repetitive or even boring to a normal observer.
+    these are done as a mind-clearing exercises or for you to be able to acquire a
+    skill that you have no experience in, or to sharpen your skill in a certain area.
+
+
+    This type of “boring” is perfectly okay because it is by choice. you should never
+    be forced into a situation that is going you to be bored and stifle your creativity.
+
+
+    +   4. Freedom is good: as a hacker, you are most likely anti-authoritarian. (this
+    does not have to be the point that you do not respect any authority, however,
+    for some hackers it goes this far).
+
+
+    When someone gives you an order that will spot you from solving a problem that
+    you are fascinated by, it will generally cause you to fight harder to solve the
+    problem.
+
+
+    As most authority might think, they will find some sort of reason as to why it
+    is stupid that you are attempting to solve this problem. therefore it is important
+    that you try and fight this type of mindset so that you do not become smothered.
+
+
+    Remember that this does not mean that you are fighting all authority. as a hacker,
+    you need to be able to accept some of authority that you are able to get things
+    that you want. this does not mean that you have to allow the authority to smother
+    you and stop you from hacking.
+
+
+    To behave like a hacker, you need to develop an instinctive hostility to any censorship,
+    use of force or deception, censorship or anything that is used to compel responsible
+    adults. you need to be willing to act on that belief alone.
+
+
+    +   5. Attitude is no substitute for competence: if you are going to be a hacker,
+    you need to have some of these attitudes. however, copping an attitude alone is
+    not going to make you hacker any more than standing in a garage is going to make
+    you a car.
+
+
+    To become a hacker, it is going to take practice, dedication, hard work, and intelligence
+    from you.'
+  md: '
+
+    # HACKING MASTERY
+
+
+    A Code Like a Pro Guide for Computer Hacking Beginners
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_0_0.png)
+
+
+    Jonathan Bates
+
+
+    # Hacking Mastery
+
+
+    ## A Code–Like–a–Pro Guide
+
+    For Computer Hacking Beginners
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_1_0.png)
+
+
+    # Table of Contents
+
+
+    - Introduction
+
+    - Chapter one: A Hacker’s Mindset
+
+    - Chapter two: How to Think like a Hacker
+
+    - Chapter three: How to Hack a Computer System
+
+    - Chapter Four: How to Hack Wireless Networks
+
+    - Chapter Five: How to Crack Passwords
+
+    - Chapter Six: How to Protect Yourself from Hackers
+
+    - Chapter seven: Techniques used by Hackers
+
+    - Chapter eight: Pursuing a Career in Ethical Hacking
+
+    - Chapter nine: Wozniak and Jobs
+
+    - Conclusion
+
+
+    Copyright 2016 by Jonathan Bates - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any use or abuse of any
+    policies, processes, or directions contained within the solitary and utter responsibility
+    of the recipient reader. Under no circumstances will any legal responsibility
+    or blame be held against the publisher for any reparation, damages, or monetary
+    loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.
+
+
+    # Introduction
+
+
+    Firstly, I want to thank you and congratulate you for downloading the book, *Hacking
+    Mastery.*
+
+
+    This book contains proven steps and strategies on how to become a hacker and the
+    many ways that you can use your new found hacking skills.
+
+
+    An inescapable fact is that you are able to use your hacking skills for both good
+    and bad. However, it is not recommended that you hack into any system. It is highly
+    illegal!
+
+
+    You should never hack into a system without the administrator''s permission. Any
+    hacking that is done without the expressed permission of the system''s administrator''s
+    permission is strictly illegal while you may not get caught right away, you can
+    end up spending time in prison or paying some very heavy fines. Any illegal hacking
+    can earn you a sentence up to twenty years in a federal prison.
+
+
+    Any information in this book is purely for educational purposes!
+
+
+    Thanks again for downloading this book, I hope you enjoy it!
+
+
+    # Chapter 1: A Hacker’s Mindset
+
+
+    There are five main principles of a hacker’s mind that every hacker should think
+    about when they are hacking. If you are looking to begin hacking, you should think
+    of these too.
+
+
+    - 1. The world is full of fascinating problems that are just waiting to be solved:
+
+
+    As a hacker you can have a lot of fun (as long as you are doing it legally). It
+    also takes a lot of effort to be a hacker. And that effort takes a lot of motivation.
+    As a hacker, your motivation is going to come from you solving problems, exercising
+    your intelligence, and even sharpening your skills with each successful hack.
+
+
+    If you are not this naturally, you will become this way as you learn the ways
+    of being a hacker. If you do not, your energy is going to be sapped by many different
+    distractions such as money and even social approval.
+
+
+    You also need to be able to develop some kind of faith in your own ability to
+    learn. This belief is going to let you know that you can learn how to hack anything
+    you need to, but you do not know everything. If you are able to tackle a problem
+    and learn how to solve just one piece of it, you have learned and are ready to
+    go on and learn the next thing.
+
+
+    This is you having the faith in yourself to be able to learn how to solve a puzzle
+    one piece at a time.
+
+
+    - 2. No problem should ever have to be solved twice: your creative brain is both
+    valuable and a limited resource (because you''re the only one of you). Just as
+    you didn''t waste any time on re-inventing the wheel, you shouldn''t have to go
+    back and solve a problem when there are many other interesting problems that are
+    not out to be solved.
+
+
+    In order to behave like a hacker, you need to believe that your time is precious.
+    Think that it is your moral duty to share any information that you have from solving
+    problems as solving any problem before you just give the solution away. This will
+    help other hackers to be able to solve any problems instead of solving ones that
+    you may have answers to.
+
+
+    Remember, just because a problem has been solved does not mean that you shouldn''t
+    try to go back and find a new solution that might make solving that easier. This
+    is never just one solution to any given problem.
+
+
+    Often times we learn a lot from the problem that we didn''t know before by studying
+    the first solution to it. It is okay for you to believe that you can do better
+    than the however, to use artificial technical, legal, or institutional barriers
+    in order to prevent a good solution from being re-used therefore causing other
+    people to have to re-invent the wheel.
+
+
+    You also do not need to feel obligated to hand over any of your creative product.
+    You might want to remember that as a hacker, it is perfectly okay to respect some
+    authority that will help you.
+
+
+    - 3. Boredom and drudgery are evil: being that hackers are naturally creative;
+    you should never get bored at work that is repetitive. Boredom and drudgery are
+    not just unpleasant, but actually evil.
+
+
+    In order to behave like a hacker, you need to believe this to make sure you do
+    not fall into boredom. You also need to be able to spot when you hit a wall so
+    that you can find a way to get off it for yourself and for others.
+
+
+    Just like most things, there is an expectation of this rule: as a hacker, you
+    will do things that are going to be repetitive or even boring to a observer. these
+    are done as mind-clearing exercises or for you to be able to acquire a skill you
+    have no experience in, or to sharpen your skill in a certain area.
+
+
+    This type of "boring" is perfectly okay because it is by choice. you should never
+    be forced into a situation that is going to bore and stifle your creativity.
+
+
+    - 4. Freedom is good: as a hacker, you are most likely anti-authoritarian (this
+    does not have to be the point that you do not respect any authority, however,
+    for some hackers it goes this far).
+
+
+    When someone gives you an order that will you from solving a problem that you
+    are fascinated by, it will generally cause you to fight harder to solve the problem.
+
+
+    As most authority might think, they will find some sort of reason as to why it
+    is stupid that you are attempting to solve this problem. therefore it is important
+    that you try and fight this type of mindset so that you do not become smothered.
+
+
+    Remember that this does not mean that you are fighting all authority. as a hacker,
+    you need to be able to accept some authority that you are able to get things that
+    you want. this does not mean that you have to allow the authority to smother you
+    and stop you from hacking.
+
+
+    - 5. Attitude is no substitute for competence: if you are going to be a hacker,
+    you need to have some of these attitudes. however, copping an attitude alone is
+    not going to make you hacker any more than standing in a garage is going to make
+    you a car.
+
+
+    To become a hacker, it is going to take practice, dedication, hard work, and intelligence
+    from you.
+
+    '
+  mdcn: '
+
+
+    # 黑客大师
+
+
+    面向计算机黑客入门者的专业人士级指南
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_0_0.png)
+
+
+    Jonathan Bates
+
+
+    # 黑客大师
+
+
+    ## 像专业人士一样编码
+
+    面向计算机黑客入门者
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_1_0.png)
+
+
+    # 目录
+
+
+    - 序言
+
+    - 第一章：黑客思维
+
+    - 第二章：如何像黑客一样思考
+
+    - 第三章：如何破解计算机系统
+
+    - 第四章：如何破解无线网络
+
+    - 第五章：如何破解密码
+
+    - 第六章：如何保护免受黑客攻击
+
+    - 第七章：黑客使用的技术
+
+    - 第八章：职业黑客
+
+    - 第九章：沃兹尼亚克与乔布斯
+
+    - 结论
+
+
+    版权所有 2016 Jonathan Bates - 版权所有。
+
+
+    本文旨在就涵盖的主题和问题提供准确且可靠的信息。本书的销售基于这样理念：即出版者不需要提供会计、官方许可或其他合规服务。如果需要法律或专业建议，应聘请该领域的专业执业人士。
+
+
+    - 摘自一份由美国律师协会委员会和出版商协会委员会共同接受并批准的原则声明。
+
+
+    严禁以任何方式通过电子手段或打印格式复制、复制或传输本文的任何部分。严禁录制出版物，未经出版者书面许可，不允许对本文进行任何存储。版权所有。
+
+
+    此处提供的信息均称是真实且一致的，对于任何由于疏忽或其他原因使用或滥用本文包含的任何政策、流程或指令而导致的责任，完全由接收读者自行承担。在任何情况下，对于因此处信息直接或间接导致的任何赔偿、损害或资金损失，出版者不承担任何法律责任或过。
+
+
+    各作者拥有出版者未持有的所有版权。
+
+
+    本文中的信息仅供参考，且具有通用性。信息的呈现不带有任何合同或任何类型的保证说明。
+
+
+    所使用的商标未经任何许可，且商标的发布未经商标所有者的许可或支持。书中的所有商标和品牌仅用于说明目的，归所有者所有，与本文无关联。
+
+
+    # 序言
+
+
+    首先，我想感谢并祝贺你下载这本书——*黑客大师》（Hacking Mastery）。
+
+
+    本书包含了如何成为黑客的经过证明的步骤和策略，以及你可以运用新黑客技能的许多方法。
+
+
+    一个不可回避的事实是，你可以将你的黑客技能用于善恶。然而，不建议你入侵任何系统。这是严重的违法行为！
+
+
+    在没有管理员许可的情况下，你绝对不要入侵系统。任何在没有系统管理员明确许可的情况下进行的黑客行为都是严格违法的，虽然你可能不会被立即发现，但你可能会面临入狱或支付巨额罚款。任何非法黑客行为都可能让你面临长达二十年的联邦监狱刑。
+
+
+    书中的任何信息仅供教育之用！
+
+
+    再次感谢你下载本书，希望你喜欢它！
+
+
+    # 第一章：黑客思维
+
+
+    黑客在进行黑客活动时，每个黑客都应该考虑黑客思维五个五个原则。如果你正准备进入黑客领域，你也应该考虑这些。
+
+
+    - 1. 世界充满了等待待解决的迷人问题：
+
+
+    作为一名黑客，你可以获得很多乐趣（只要你是在合规操作）。成为黑客也需要大量的努力。而这种努力需要巨大的动力。作为黑客，你的动力将来自解决问题、运用你的智力，甚至在每一次成功的黑客行动中磨练你的技能。
+
+
+    如果你天生不是这种特质，你将在学习黑客之道的过程中变得这种这种。如果你不具备，你的能量将会被许多不同的干扰因素所消磨，例如金钱甚至社会认可。
+
+
+    你还需要能够对你自己的学习能力培养出某种信念。这种信念将让你知道，你可以学习如何破解你需要的任何东西，但你并不是无所不知。如果你能够处理一个问题并学会如何解决其中的某一部分，你就已经学会了，并准备好继续学习下一个问题。
+
+
+    这就是你对自己有信心，能够一个碎片碎片地解决谜题。
+
+
+    - 2. 任何问题都不应该被解决两次：你的创造力大脑既是宝贵的也是有限的资源（因为你是独一无二的）。就像你没有在重复发明轮上浪费时间一样，当有许多其他有趣的问题待解决时，你不应该回去解决一个已经解决的问题。
+
+
+    为了表现得像个黑客，你需要相信你的时间是宝贵的。认为分享你解决问题时获得的任何信息是你的道德义务，因为在解决任何问题之前你就直接给出解决方案。这将帮助其他黑客解决任何问题，而不是解决那些你可能已经答案的问题。
+
+
+    记住，仅仅因为一个问题被解决了，并不意味着你不应该尝试回去寻找一个可能让解决变得更容易的新方案。对于任何给问题，绝不仅仅有一种解决方案。
+
+
+    通常，我们通过研究问题的第一个解决方案，从以前未知的问题中学习到很多。你可以认为自己做得更好，然而，使用人为的技术、法律或制度性屏障来防止良好的解决方案被重复使用，从而导致他人不得不重复发明轮子。
+
+
+    你不需要觉得有义务交出你的任何创意产品。你可能想记住，作为一名黑客，尊重某些帮助你的权威是完全没有问题的。
+
+
+    - 3. 无聊和枯燥是邪恶的：由于黑客天生具有创造力；你永远不应该在重复性的工作中感到无聊。无聊和枯燥不仅令人愉快，而且实际上是邪恶的。
+
+
+    为了表现得像个黑客，你需要相信这一点，以确保你不会陷入无聊。你还需要能够识别自己何时碰了墙，这样你就能为自己和他人找到离开墙的方法。
+
+
+    就像大多数事情一样，这条规则也有预期：作为一名黑客，你所做的事情在观察者看来可能是重复甚至是无聊的。这些是作为清脑的练习，或者为了让你获得你没有经验的技能，或者在某个领域磨练你的技能。
+
+
+    这种类型的“无聊”是完全没问题的，因为它是出于选择。你永远不应该被迫进入一种让你感到无聊并扼杀创造力的境地。
+
+
+    - 4. 自由是好的：作为一名黑客，你最有可能是反权威的（这并不意味着你不尊重任何权威，但对于某些黑客来说，这会达到这种程度）。
+
+
+    当有人给你一个命令阻止你解决一个你深感兴趣的问题时，这通常会让你更努力地解决这个问题。
+
+
+    正如大多数权威可能认为的那样，他们会找到某种理由说明你试图解决这个问题是愚蠢的。因此，尝试并反抗这种心态非常重要，以免你被窒息。
+
+
+    记住，这并不意味着你在对抗所有的权威。作为一名黑客，你需要接受某些权威以获得你想要的东西。这并不意味着你允许权威窒息你并阻止你进行黑客活动。
+
+
+    - 5. 态度不能取代能力：如果你想成为一名黑客，你需要具备这些态度中的一些。然而，仅仅摆出态度不会让你变成黑客，就像站在车库里不会让你变成汽车一样。
+
+
+    要成为一名黑客，你需要投入练习、奉献、努力工作和智力。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 8]
+
+
+    Because of this, you are going to need to learn to distrust any attitude given
+    to you and respect the competence of every kind. Hackers are not going to let
+    some hacker want to waste their time, however they will worship competence. Especially
+    when that competence at hacking, but competence at anything is actually valued.
+
+
+    Competence is demanding skills that very few can master is especially good and
+    competence at demanding skills that involve mental craft, concentration, and acuteness
+    is the best.
+
+
+    If you are able to revere competence, you will then enjoy developing it in yourself.
+    Hard work and dedication will become an intense play rather than drudgery. This
+    attitude is vital to you becoming a hacker.'
+  - '[PAGE 9]
+
+
+    <!-- no content -->'
+  - '[PAGE 10]
+
+
+    # Chapter 2: How to Think like a Hacker
+
+
+    In order to get into the mindset of a hacker, you first need to know how you are
+    to think like a hacker.
+
+
+    A hacker is someone who finds the security flaws within a system and exploits
+    them either for good in order to show where the holes are, or will use those holes
+    in order to get all your sensitive data and essentially destroy your entire life.
+
+
+    +   1. First, you need to be able to identify their exploits as well as any other
+    information that will help you to create a footprint analysis. This is basically
+    you getting as much information from your client as you possibly can.
+
+
+    You need to be able to consider the size of your target and any potential entry
+    ways that you can use in order to get into your network as well as any security
+    measures that are in place.
+
+
+    As a hacker, you need to think about the company names as well as their subsidiaries,
+    phone numbers, domain names, and even IP addresses.
+
+
+    +   2. Pay attention to back door entry points: this would be you looking for
+    things like startup companies that are most likely going to have a weak security
+    system they are just starting out. This will be prevalent in companies that have
+    recently been bought out by a larger company as well.
+
+
+    When you hack into these smaller companies, they may be able to provide you information
+    for private networks that will lead you into a larger company’s network as your
+    next target.
+
+
+    +   3. Connect to the listening UDP and TCP ports: when you do, you are able to
+    send out random data in order to determine what type of version of File Transfer
+    protocol, mail server, or even web server that the company is using. There are
+    many TCP and UDP servers that will send data in order to identify any running
+    applications as a response to random data that has been sent. By doing this, you
+    will be able to find the exploits by cross-referencing any data that you have
+    found in a vulnerable database such as SecurityFocus.
+
+
+    +   4. Think about how you are going to gain access to your target: you are going
+    to need a password and a user account in order to gain access to the network:
+    Make sure that you are prepared. In having a username and password, you will be
+    able to make a sneak attack into the network.
+
+
+    Once you have gotten into the network you will be able to take information from
+    their website as well as be able to directly contact employees via phone. When
+    doing this, you are able to pretend to be the help desk or even a tech from the
+    IT department.
+
+
+    Most times, the employee will be completely unsuspecting and will give you any
+    information that you are seeking because they honestly believe that you are from
+    their department. Just make sure that it sounds authentic.'
+  - '[PAGE 11]
+
+
+    +   5. Take the username and password obtained and “Trojan” the system: now that
+    you have a username and password of someone who actually works within the company,
+    you are able to sneak into the company website unsuspected, much like the Greeks
+    did with the Trojan Horse.
+
+
+    You are now able to replace software such as Notepad with a piece of Trojan code.
+    This will allow you to become an administrator on the system and therefore you
+    will have access to log on at a later date.
+
+
+    You will also automatically be added to the administrators group and have instant
+    access to any information that is “admin only.”'
+  - '[PAGE 12]
+
+
+    <!-- no content -->'
+  - '[PAGE 13]
+
+
+    # Chapter 3: How to Hack a Computer System
+
+
+    Hacking was used to help with gaining information about system for IT purposes
+    when it was brought to the public''s attention as something that was not all bad.
+    It is now days that hacking has taken on a darker meaning thanks to those who
+    use their skills for personal gain while hurting others.
+
+
+    When you look at the positive end of the hacking scale, there are multiple multimillion
+    dollar companies that have hackers employed in their IT departments in order to
+    test the strength of their systems so that they know where they are most vulnerable
+    and beef up their security in order to keep their systems safe. Due to being employed
+    by a large company, hackers will only hack as far as they are allowed into the
+    system and then help the company to fix the holes that they find. This is what
+    they earn the large salary that the companies pay them to keep their information
+    protected.
+
+
+    There are also hackers who work outside of the company that do the same thing
+    only they work with security consulting firms that the multimillion dollar companies
+    hire in order to find the flaws in their security systems.
+
+
+    Before you begin to hack, there are steps that you need to follow in order to
+    make sure that you are prepared for the experience of hacking that you will gain
+    when you try and hack into a system. We have talked about these steps in previous
+    chapters, but they are worth going over again just to ensure that you are fully
+    prepared when it comes to hacking into the system that you are granted access
+    to.
+
+
+    Step One: Programming language is a necessity when it comes to hacking. As we''ve
+    talked about earlier, there is a variety of different programming languages that
+    you can learn and it is best that you learn all of them so that you have a well-rounded
+    knowledge of programming languages. It is vitally important that you know how
+    a program speaks and works with the operating system that it is on. The more that
+    you know, the easier that will be for you to be able to gain access to the network.
+
+
+    Unix uses a C programming language and this teaches the memory how to work and
+    knowing how this works is vitally important to learning how to hack into any system.
+
+
+    Python and Ruby are programming languages that are both very powerful programming
+    languages that are used to automate a variety of tasks.'
+  - '[PAGE 14]
+
+
+    PHP Perl is used for web applications and is a very reasonable choice for those
+    who are in the hacking field.
+
+
+    If you are going to be scripting, you should be using Bash. This program easily
+    manipulates the Unix and Linux systems therefore doing most of the job for you.
+
+
+    Assembly is the most basic language that your processor is going to understand.
+    All programs can and will interpret assembly as it is the most basic language
+    that any computer has. If you do not have a good knowledge of assembly, then you
+    will never truly be able to exploit a program.
+
+
+    Step Two: you need to know your target. It is vitally important that you gather
+    as much information as possible on the target that you are planning to hack. In
+    getting this information you will need to be able to find the weak spots in their
+    system. There is a chance that you''re going to need to have different approaches
+    in order to get the system you should find that your initial approach is not the
+    way to go. The more that you know about your target, the less chance that you''ll
+    find a surprise while you are hacking the system. When you gather information
+    on your target it is known as enumeration.
+
+
+    # Hacking:
+
+
+    Step One: You''re going to want to use a *n terminal for all your commands that
+    you''re going to be using when it comes to hacking. Cygwin is a good program that
+    will actually emulate the *unix for those who use Windows. If you do not have
+    access to Cygwin, then it is that you use Nmap which will run not WinPcap while
+    you''re still on windows even though you''re not using Cygwin. However, the downside
+    of Nmap is that it will run poorly on the Windows operating system because there
+    is a lack of sockets.
+
+
+    When you''re actually hacking, you''re most likely to want to consider using BSD
+    or Linux as both of these systems are flexible no matter type of system you are
+    using. But, it is important to know that Linux will have more tools that are pre-installed
+    and ultimately more useful when it comes to your hacking ventures.
+
+
+    Step Two: make sure that the machine you are using to hack is actually secured.
+    You''re going to need to make sure that you are protected before you go hacking
+    into anyone''s system. If you are not secured, then there is a possibility that
+    you are going to be traced and they will be able to get ahead of you and file
+    a lawsuit against you because they now know where you are.'
+  md: '
+
+    Because of this, you are going to need to learn to distrust any attitude given
+    to you and respect the competence of every kind. Hackers are not going to let
+    some hacker want to waste their time, however they will worship competence. Especially
+    when that competence at hacking, but competence at anything is actually valued.
+
+
+    Competence is demanding skills that very few can master is especially good and
+    competence at demanding skills that involve mental craft, concentration, and acuteness
+    is the best.
+
+
+    If you are able to revere competence, you will then enjoy developing it in yourself.
+    Hard work and dedication will become an intense play rather than drudgery. This
+    attitude is vital to you becoming a hacker.
+
+
+    ## Chapter 2: How to Think like a Hacker
+
+
+    In order to get into the mindset of a hacker, you first need to know how you finds
+    the security flaws within a system and exploits them either for good in order
+    to show where the holes are, or will use those holes in order to get all your
+    sensitive data and essentially destroy your entire life.
+
+
+    - 1. First, you need to be able to identify their exploits as well as any other
+    information that will help you to create a footprint analysis. This is basically
+    you getting as much information from your client as you possibly can. You need
+    to be able to consider the size of your target and any potential entry ways that
+    you can use in order to get into your network as well as any security measures
+    that are in place. As a hacker, you need to think about the company names as well
+    as their subsidiaries, phone numbers, domain names, and even IP addresses.
+
+
+    - 2. Pay attention to back door entry points: this would be you looking for things
+    like startup companies that are most likely going to have a weak security system
+    they are just starting out. This will be prevalent in companies that have recently
+    been bought out by a larger company as well. When you hack into these smaller
+    companies, they may be able to provide you information for private networks that
+    will lead you into a larger company’s network as your next target.
+
+
+    - 3. Connect to the listening UDP and TCP ports: when you do, you are able to
+    send out random data in order to determine what type of version of File Transfer
+    protocol, mail server, or even web server that the company is using. There are
+    many TCP and UDP servers that will send data in order to identify any running
+    applications as a response to random data that has been sent. By doing this, you
+    will be able to find the exploits by cross-referencing any data that you have
+    found in a vulnerable database such as SecurityFocus.
+
+
+    - 4. Think about how you are going to gain access to your target: you are going
+    to need a password and a user account in order to gain access to the network:
+    Make sure that you are prepared. In having a username and password, you will be
+    able to make a sneak attack into the network. Once you have gotten into the network
+    you will be able to take information from their website as well as be able to
+    directly contact employees via phone. When doing this, you are able to pretend
+    to be the help desk or even a tech from the IT department. Most times, the employee
+    will be completely unsuspecting and will give you any information that you are
+    seeking because they honestly believe that you are from their department. Just
+    make sure that it sounds authentic.
+
+
+    - 5. Take the username and password obtained and “Trojan” the system: now that
+    you have a username and password of someone who actually works within the company,
+    you are able to sneak into the company website unsuspected, much like the Greeks
+    did with the Trojan Horse. You are now able to replace software such as Notepad
+    with a piece of Trojan code. This will allow you to become an administrator on
+    the system and therefore you will have access to log on at a later date. You will
+    also automatically be added to the administrators group and have instant access
+    to any information that is “admin only.”
+
+
+    ## Chapter 3: How to Hack a Computer System
+
+
+    Hacking was used to help with gaining information about system for IT purposes
+    when it was brought to the public''s attention as something that was not all bad.
+    It is now days that hacking has taken on a darker meaning thanks to those who
+    use their skills for personal gain while hurting others.
+
+
+    When you look at the positive end of the hacking scale, there are multiple multimillion
+    dollar companies that have hackers employed in their IT departments in order to
+    test the strength of their systems so that they know where they are most vulnerable
+    and beef up their security in order to keep their systems safe. Due to being employed
+    by a large company, hackers will only hack as far as they are allowed into the
+    system and then help the company to fix the holes that they find. This is what
+    they earn the large salary that the companies pay them to keep their information
+    protected.
+
+
+    There are also hackers who work outside of the company that do the same thing
+    only they work with security consulting firms that the multimillion dollar companies
+    hire in order to find the flaws in their security systems.
+
+
+    Before you begin to hack, there are steps that you need to follow in order to
+    make sure that you are prepared for the experience of hacking that you will gain
+    when you try and hack into a system. We have talked about these steps in previous
+    chapters, but they are worth going over again just to ensure that you are fully
+    prepared when it comes to hacking into the system that you are granted access
+    to.
+
+
+    Step One: Programming language is a necessity when it comes to hacking. As we''ve
+    talked about earlier, there is a variety of different programming languages that
+    you can learn and it is best that you learn all of them so that you have a well-rounded
+    knowledge of programming languages. It is vitally important that you know how
+    a program speaks and works with the operating system that it is on. The more that
+    you know, the easier that will be for you to be able to gain access to the network.
+
+
+    Unix uses a C programming language and this teaches the memory how to work and
+    knowing how this works is vitally important to learning how to hack into any system.
+
+
+    Python and Ruby are programming languages that are both very powerful programming
+    languages that are used to automate a variety of tasks.
+
+
+    PHP Perl is used for web applications and is a very reasonable choice for those
+    who are in the hacking field.
+
+
+    If you are going to be scripting, you should be using Bash. This program easily
+    manipulates the Unix and Linux systems therefore doing most of the job for you.
+
+
+    Assembly is the most basic language that your processor is going to understand.
+    All programs can and will interpret assembly as it is the most basic language
+    that any computer has. If you do not have a good knowledge of assembly, then you
+    will never truly be able to exploit a program.
+
+
+    Step Two: you need to know your target. It is vitally important that you gather
+    as much information as possible on the target that you are planning to hack. In
+    getting this information you will need to be able to find the weak spots in their
+    system. There is a chance that you''re going to need to have different approaches
+    in order to get the system you should find that your initial approach is not the
+    way to go. The more that you know about your target, the less chance that you''ll
+    find a surprise while you are hacking the system. When you gather information
+    on your target it is known as enumeration.
+
+
+    ## Hacking:
+
+
+    Step One: You''re going to want to use a n terminal for all your commands that
+    you''re going to be using when it comes to hacking. Cygwin is a good program that
+    will actually emulate the unix for those who use Windows. If you do not have access
+    to Cygwin, then it is that you use Nmap which will run not WinPcap while you''re
+    still on windows even though you''re not using Cygwin. However, the downside of
+    Nmap is that it will run poorly on the Windows operating system because there
+    is a lack of sockets.
+
+
+    When you''re actually hacking, you''re most likely to want to consider using BSD
+    or Linux as both of these systems are flexible no matter type of system you are
+    using. But, it is important to know that Linux will have more tools that are pre-installed
+    and ultimately more useful when it comes to your hacking ventures.
+
+
+    Step Two: make sure that the machine you are using to hack is actually secured.
+    You''re going to need to make sure that you are protected before you go hacking
+    into anyone''s system. If you are not secured, then there is a possibility that
+    you are going to be traced and they will be able to get ahead of you and file
+    a lawsuit against you because they now know where you are.
+
+    '
+  mdcn: '
+
+
+    正因为如此，你将学会怀疑任何给予给你的态度，并尊重每种人的能力。黑客不会让某些黑客浪费他们的时间，然而，他们会崇拜能力。特别是在黑客技术方面的能力，但实际上，任何方面的能力都是备受重视的。
+
+
+    能力要求掌握极少数人才能学会的技能，这尤为宝贵；而掌握涉及智力技巧、专注力和敏锐度的挑战性技能的能力，则是最好的。
+
+
+    如果你能够崇敬能力，你将会享受在自己身上开发这种能力。努力和奉献将变成一种激烈的乐趣，而非枯燥的工作。这种态度对于你成为一名黑客至关重要。
+
+
+    ## 第二章：如何像黑客一样思考
+
+
+    为了进入黑客思维，你首先需要知道如何发现系统中的安全漏洞并利用它们——要么是为了好以展示漏洞在哪里，要么是为了利用这些漏洞获取你所有的敏感数据并从本质上摧毁你的整个生活。
+
+
+    - 1. 首先，你需要能够识别他们的漏洞以及任何其他帮助你创建足迹分析的信息。这基本上是你从客户那里尽可能获取信息信息。你需要考虑目标的大小，以及你可以用以进入网络的任何潜在入口，以及已有的任何安全措施。作为一名黑客，你需要考虑公司名称及其子公司、电话号码、域名，甚至是
+    IP 地址。
+
+
+    - 2. 注意后门入口点：这将是你寻找像那些处于起步阶段、最可能拥有脆弱安全系统的初创公司。这在最近被大公司收购的公司中也很常见。当你黑入这些较小的公司时，他们可能为你提供私有网络的信息，引导你进入一家更大公司的网络，作为你的下一个目标。
+
+
+    - 3. 连接到监听的 UDP 和 TCP 端口：当你连接时，你可以发送随机数据，以确定公司使用的是何种版本的文件传输协议、邮件服务器甚至 Web 服务器。有许多
+    TCP 和 UDP 服务器会发送数据，作为对发送的随机数据的响应来识别任何运行的应用程序。通过这种方式，你将能够交叉引用你在 SecurityFocus 等漏洞数据库中发现的任何数据找到漏洞。
+
+
+    - 4. 思考你将如何获得访问权限：你需要一个密码和一个用户账户来访问网络：确保你已经做好了准备。拥有用户名和密码后，你就可以对网络发起奇袭。一旦你进入网络，你就可以从他们的网站获取信息，并能够通过电话直接联系员工。在执行此操作，你可以假装成帮助台人员甚至是
+    IT 部门的技术人员。大多数时候，员工会完全毫无防备，并给你寻求的任何信息，因为他们诚实地认为你来自他们的部门。只需确保它听起来真实即可。
+
+
+    - 5. 获取用户名和密码并对系统进行“木马化”：现在你已经有了公司内部真实工作的用户名和密码，你就可以在不引起怀疑的情况下潜入公司网站，就像希腊人使用特洛伊木马一样。你现在可以将像记事本这样的软件替换为一段木马代码。这将允许你成为系统的管理员，因此你将在日后的日期登录。你还会被自动添加到管理员组，并可以立即访问任何“仅限管理员”的信息。
+
+
+    ## 第三章：如何黑入计算机系统
+
+
+    当黑客被大众关注且并非全是坏事时，它被用于出于 IT 目的获取有关系统的信息。现在，由于那些利用技能获取个人利益同时伤害他人的人，黑客已经有了更阴暗的含义。
+
+
+    当你看向黑客光谱的积极端时，有多许多价值数百万的公司在其 IT 部门雇佣黑客，以测试其系统的强度，以便他们知道自己最脆弱的地方，并加强安全措施以保持系统安全。由于受雇于大公司，黑客只会在允许进入的系统范围内进行攻击，然后帮助公司修复他们发现的漏洞。这就是他们获得公司支付的高昂薪水以保护其信息的原因。
+
+
+    也有在公司外工作的黑客，他们做同样的事情，只是他们与安全咨询公司合作，这些数百万的公司聘佣他们来寻找其安全系统中的漏洞。
+
+
+    在开始黑客之前，你需要遵循一些步骤，以确保你对尝试黑入一个系统时将获得的黑客体验做好了准备。我们在之前的章节中讨论过这些步骤，但它们值得再次回顾，以确保在进入你被授权访问的系统时你已完全就绪。
+
+
+    第一步：编程语言对于黑客来说是必不可少的。正如我们之前讨论过的，有许多不同的编程语言可以学习，最好学习所有的语言，这样你对编程语言就有了全面的了解。了解程序如何交流以及它如何与其运行的操作系统协同工作至关重要。你了解得越多，访问网络就越容易。
+
+
+    Unix 使用 C 语言语言，它教导了内存如何工作，而了解这种工作原理对于学习如何黑入任何系统至关重要。
+
+
+    Python 和 Ruby 都是非常强大的编程语言，用于自动化各种任务。
+
+
+    PHP 和 Perl 用于 Web 应用程序，对于黑客领域的人来说，这是一个非常合理的选择。
+
+
+    如果你要编写脚本，你应该使用 Bash。这个程序可以轻松操纵 Unix 和 Linux 系统，因此会为你完成大部分工作。
+
+
+    汇编是你的处理器能够理解的最基础语言。所有程序都可以并且将会解释汇编，因为它是任何计算机拥有的最基础语言。如果你对汇编没有良好的了解，那么你永远无法真正利用一个程序。
+
+
+    第二步：你需要了解你的目标。对于你计划黑入的目标收集尽可能多的信息至关重要。在获取这些信息时，你需要能够发现他们系统中的弱点。你可能需要不同的方法来获取系统，你可能会发现你的初始方法不是可行的路。你对目标了解得越多，在黑入系统时发现意外的概率就越小。当你收集目标信息时，这被称为枚举（enumeration）。
+
+
+    ## 黑客操作：
+
+
+    第一步：你将使用终端执行黑客时将使用的所有命令。Cygwin 是一个让 Windows 用户实际上模拟 Unix 的良好程序。如果你没有访问 Cygwin
+    的权限，那么你就使用 Nmap，它在你没有使用 Cygwin 的情况下可以在 Windows 上运行（通过 WinPcap ）。然而，Nmap 的缺点是它在
+    Windows 操作系统上运行不佳，因为缺少套接。
+
+
+    当你实际进行黑客时，你可能想考虑使用 BSD 或 Linux，因为这两个系统无论你使用什么类型的系统都是灵活的。但重要的是，Linux 将拥有更多预装的工具，并且最终在你的黑客活动中会更有用。
+
+
+    第二步：确保你用于黑客的机器实际上是安全的。在黑入任何人的系统之前，你需要确保自己受到了保护。如果你不安全，那么你可能会被追踪到，他们将能够先于你一步并对你提起诉讼，因为他们现在知道你在哪里。
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 15]
+
+
+    If you’re hacking a system that is a friend, family members, or a companies, make
+    sure that you do not do so without the permission of the system’s owner. The permission
+    needs to ultimately be handwritten so that there are no repercussions that can
+    come back on you.
+
+
+    If you do not feel comfortable attacking else’s system, you always have the option
+    of attacking your own system in order to find your own securities flaws. In order
+    to do this, you’ll need to set up a virtual laboratory to hack.
+
+
+    Ultimately, it does not matter what you are trying to hack, if you do not have
+    the permission of the administrator, it is illegal and you will get in trouble.
+
+
+    Step Three: you’re going to make sure that you can reach the system in which you
+    are trying to attack. You can use a ping utility tool in order to test and see
+    if your target is active, the results from this cannot always be trusted. If you
+    are using a ping utility tool, the biggest flaw you will find is that the system
+    administrator will actually be able to turn their system off and therefore causing
+    you to lose your target.
+
+
+    Step Four: you’re going to run a scan of the system that you’re trying to attack
+    by using pOF or Nmap in order to check and see which ports are actually open on
+    the machine. Along with telling you which ports are open, you’ll also be able
+    to see what type of firewall is being used as well as what kind of router is being
+    used.
+
+
+    Knowing this type of information is going to help you to plot your course of action
+    in attacking the system. In order to activate the OS detection using Nmap, you’re
+    going to use the -O switch.
+
+
+    Step Five: Ports such as those use HTTP or FTP are going to more than often than
+    not be protected ports and are only going to become insecure and discoverable
+    when they are exploited.
+
+
+    Ports that are open for LAN gaming such as TCP and UDP are often forgotten much
+    like the Telnet ports.
+
+
+    Any ports that are open are usually evidence of a SSH (secure shell service) that
+    is running on your target. Sometimes these ports can be forced open with brute
+    force in order to allow you access to them.'
+  - '[PAGE 16]
+
+
+    Step Six: before you are able to gain access to most systems, there is a password
+    that you''re going to have to crack. You are able to use brute force in order
+    to crack the password as one of the ways that you can try and get into a system.
+    When you use brute force, your effort of trying every possible password contained
+    within a pre-defined dictionary is put onto a software program and used to try
+    and crack the password.
+
+
+    Being that users of any website or system are highly discouraged from using passwords
+    that are weak and easy to crack, sometimes using brute force can take some time
+    in cracking to password. However, there have been some major improvements to the
+    brute force techniques in an effort to lower the time that it takes to crack a
+    password.
+
+
+    You can also improve your cracking speed by using cracking algorithms. Many hashing
+    algorithms can be weak and therefore are exploited in their weakness in order
+    to easily gain access to the system that you are trying to attack.
+
+
+    For example, if you have an MD5 algorithm and cut it in 1/4, you will then have
+    a huge boost in the speed used to crack the password.
+
+
+    Graphics cards are also now used as another sort of processor that you can gain
+    access to. Gaining access to a graphics card is a thousand times faster than it
+    is to crack a password or use an algorithm in order to attack the system.
+
+
+    It is highly advised that you do not try and attempted every possible password
+    option when you are trying to access a machine remotely. If you''re you''re more
+    likely going to be detected due to the pollution of the system logs and it will
+    take years to complete.
+
+
+    When you''re using an IP address to access a proxy, you''re going to need to have
+    a rooted tablet as well as install a program called TCP scan. The TCP will have
+    a signal that will upload and allow you gain access to the secure site that you''re
+    trying to attack.
+
+
+    In the end, when you look at it, the easiest way to gain access to any system
+    is to find a way that does not require you to have to crack a password.
+
+
+    Step Seven: if you''re targeting a *nix machine, you''re going to need to try
+    and get the root privileges. When you''re trying to gain access to a Windows system,
+    you''re going to need to get the administrator privileges.'
+  - '[PAGE 17]
+
+
+    If you want to see all the files on the system, you’re going to need to have super-user
+    privileges. Having super user privileges allows you to have an account that will
+    give you access as a root user in the Linux or BSD systems.
+
+
+    Even if you''re wanting to have access to the most basic kinds of files on a computer,
+    you''re going to need to have some kind of privileges that will allow you to see
+    the files. So, no matter what, if you''re wanting to see anything on a computer,
+    you''re going to need some sort of privileges that will allow you to see what
+    is on the network. These privileges will come from the system administrator.
+
+
+    A system that uses a router will allow you to have access to the system by using
+    an admin account. The only reason that you would not be able to have access to
+    it is if the router password has been changed by the router administrator. If
+    you''re using a Windows operating system, then you''re going to have to access
+    to the administrator account.
+
+
+    Remember that if you gain access to the operating system, that does not mean that
+    you will have access to everything that is on the operating system. In order to
+    have access to everything, you''re going to need to have a root account, super
+    user account, or an administrator account.
+
+
+    Step Eight: there are ways that you can create a buffer overflow so that you can
+    then use in order to give yourself user status. The buffer overflow is what allows
+    the memory to dump therefore giving you access to inject a code or in order to
+    perform a task that is on a higher level than then you are authorized to do.
+
+
+    Software that buggy usually has a set bit in the unix system. This system allows
+    a program to execute a task as if it were a different user.
+
+
+    Again again it is important that you get the administrators permission in writing
+    before you begin to attack an insecure program on their operating system.
+
+
+    Step Nine: you worked hard to get into the system, you''re going to want to make
+    sure that you do not use up much time getting back out. The moment that you have
+    access to a system that is as an SSH server, you will be able to create what is
+    known as a back door so that you can gain access back to the system whenever without
+    spending nearly much time as you did the first time. A hacker that is experienced
+    is more likely to have a back door in order to have a way in using complied software.
+
+
+    Step Ten: it is vitally important that you do not allow the system administrator
+    to know'
+  - '[PAGE 18]
+
+
+    that you got into their system and that it has been compromised. The way that
+    you can ensure that they do not know is to not make any changes to the website
+    or create more files than what you''re going to create. You also should not create
+    any additional users or you''re going to instantly send up a red flag to the administrator.
+
+
+    If you are using a patched serve such as an SSHD server, you''re going to code
+    your password so that no one can log in using that password. If they happen to
+    log in with that password, they will then have access that they should not have
+    and they will have access to crucial information that you''re most likely not
+    going to want them to have access to.
+
+
+    When someone begins to try and log into the system, you need to get out immediately
+    before you are caught. If caught, you''re going to face some serious charges.'
+  - '[PAGE 19]
+
+
+    <!-- no content -->'
+  - '[PAGE 20]
+
+
+    # Chapter 4: How to Hack Wireless Networks
+
+
+    For this chapter, we are going to use different scenarios in order to help you
+    better understand how to hack into different wireless networks.
+
+
+    Wireless networks are routers or any other way that a person or family gets WiFi
+    in their home or business. These can usually be easily hacked because a lot of
+    people do not change the password to the router from the original password that
+    is given by the wireless provider.
+
+
+    It is a good idea to always change the password that is provided on the router
+    that transmits data into the location in which it is located. This will help to
+    make harder for hackers to get into your WiFi making it easier for them to access
+    to yourself.
+
+
+    Scenario 1: There is a computer that has no encryption on it which means the network
+    is wide open. Therefore, there is no isolation for the client and the network
+    is considered to be unsafe to use and easy to hack.
+
+
+    Scenario 2: WEP is being used. There are several known attacks that exist and
+    it will then make it easy to hack the network.
+
+
+    Scenario 3: The computer is not encrypted for the isolation is enabled and a captive
+    portal exists. With this type of wireless network, it is acceptable for a visitor
+    to use the internet. Therefore, it should not be used for a company as it is still
+    easy to be hacked.
+
+
+    Scenario 4: WPA/WPA2 is being used and a strong password has been put to use.
+    The password has sixty characters, lower-case, upper-case, no dictionary words,
+    and special characters in it. A hacker would not be able to crack the password
+    with any computing power that we currently have. However, if the password is not
+    changed every three months, there is a likelihood that a hacker will be able to
+    figure out the password.
+
+
+    Scenario 5: WPA/WPA2, a weak password has been chosen. A hacker can now capture
+    the authentication handshake and make some attempts to crack it by using his machine
+    or even a "cloud" server. The server can then be compromised within a minute all
+    up to a few hours.
+
+
+    Scenario 6: A company is using a WPA and a strong password that they change every
+    day. But, the router that they are using in order to transmit WiFi has a static
+    WPS pin that they are not able to change or enable disable.
+
+
+    Because WPS is enabled, this is very similar to having an open network. So, this
+    network is considered to be unsafe and should not be used for business purposes.
+
+
+    Scenario 7: RADIUS is being used and the settings are weak when it comes to the
+    wireless clients and the server. A hacker would be able to perform what is called
+    a rogue AP attack and obtain the authentication handshake.
+
+
+    Should a weak password be used, it can be captured and user accounts will be at
+    risk as well as the network being compromised. It is important for each person
+    on this type of'
+  md: "\nIf you’re hacking a system that belongs to a friend, family member, or a\
+    \ company, make sure that you do not do so without the permission of the system’s\
+    \ owner. The permission needs to ultimately be handwritten so that there are no\
+    \ repercussions that can come back on you.\n\nIf you do not feel comfortable attacking\
+    \ else’s system, you always have the option of attacking your own system in order\
+    \ to find your own security flaws. In order to do this, you’ll need to set up\
+    \ a virtual laboratory to hack.\n\nUltimately, it does not matter what you are\
+    \ trying to hack, if you do not have the permission of the administrator, it is\
+    \ illegal and you will get in trouble.\n\nStep Three: you’re going to make sure\
+    \ that you can reach the system in which you are trying to attack. You can use\
+    \ a ping utility tool in order to test and see if your target is active; the results\
+    \ from this cannot always be trusted. If you are using a ping utility tool, the\
+    \ biggest flaw you will find is that the system administrator will actually be\
+    \ able to turn their system off and therefore causing you to lose your target.\n\
+    \nStep Four: you’re going to run a scan of the system that you’re trying to attack\
+    \ by using Nmap or Nmap in order to check and see which ports are actually open\
+    \ on the machine. Along with telling you which ports are open, you’ll also be\
+    \ able to see what type of firewall is being used as well as what kind of router\
+    \ is being used.\n\nKnowing this type of information is going to help you to plot\
+    \ your course of action in attacking the system. In order to activate the OS detection\
+    \ using Nmap, you’re going to use the -O switch.\n\nStep Five: Ports such as those\
+    \ using HTTP or FTP are going to be more often than not protected ports and are\
+    \ only going to become insecure and discoverable when they are exploited.\n\n\
+    Ports that are open for LAN gaming such as TCP and UDP are often forgotten, much\
+    \ like the Telnet ports.\n\nAny ports that are open are usually evidence of a\
+    \ SSH (secure shell service) that is running on your target. Sometimes these ports\
+    \ can be forced open with brute force in order to allow you access to them.\n\n\
+    Step Six: before you are able to gain access to most systems, there is a password\
+    \ that you're going to have to crack. You are able to use brute force in order\
+    \ to crack the password as one of the ways that you can try and get into a system.\
+    \ When you use brute force, your effort of trying every possible password contained\
+    \ within a pre-defined dictionary is put onto a software program and used to try\
+    \ and crack the password.\n\nBeing that users of any website or system are highly\
+    \ discouraged from using passwords that are weak and easy to crack, sometimes\
+    \ using brute force can take some time in cracking the password. However, there\
+    \ have been some major improvements to the brute force techniques in an effort\
+    \ to lower the time that it takes to crack a password.\n\nYou can also improve\
+    \ your cracking speed by using cracking algorithms. Many hashing algorithms can\
+    \ be weak and therefore are exploited in their weakness in order to easily gain\
+    \ access to the system that you are trying to attack.\n\nFor example, if you have\
+    \ an MD5 algorithm and cut it in 1/4, you will then have a huge boost in the speed\
+    \ used to crack the password.\n\nGraphics cards are also now used as another sort\
+    \ of processor that you can gain access to. Gaining access to a graphics card\
+    \ is a thousand times faster than it is to crack a password or use an algorithm\
+    \ in order to attack the system.\n\nIt is highly advised that you do not try and\
+    \ attempt every possible password option when you are trying to access a machine\
+    \ remotely. If you're more likely going to be detected due to the pollution of\
+    \ the system logs, it will take years to complete.\n\nWhen you're using an IP\
+    \ address to access a proxy, you're going to need to have a rooted tablet as well\
+    \ as install a program called TCP scan. The TCP will have a signal that will upload\
+    \ and allow you gain access to the secure site that you're trying to attack.\n\
+    \nIn the end, when you look at it, the easiest way to gain access to any system\
+    \ is to find a way that does not require you to have to crack a password.\n\n\
+    Step Seven: if you're targeting a *ix machine, you're going to need to try and\
+    \ get the root privileges. When you're trying to gain access to a Windows system,\
+    \ you're going to need to get the administrator privileges.\n\nIf you want to\
+    \ see all the files on the system, you’re going to need to have super-user privileges.\
+    \ Having super user privileges allows you to have an account that will give you\
+    \ access as a root user in the Linux or BSD systems.\n\nEven if you're wanting\
+    \ to have access to the most basic kinds of files on a computer, you're going\
+    \ to need to have some kind of privileges that will allow you to see the files.\
+    \ So, no matter what, if you're wanting to see anything on a computer, you're\
+    \ going to need some sort of privileges that will allow you to see what is on\
+    \ the network. These privileges will come from the system administrator. \n\n\
+    A system that uses a router will allow you to have access to the system by using\
+    \ an admin account. The only reason that you would not be able to have access\
+    \ to it is if the router password has been changed by the router administrator.\
+    \ If you're using a Windows operating system, then you're going to have to access\
+    \ the administrator account.\n\nRemember that if you gain access to the operating\
+    \ system, that does not mean that you will have access to everything that is on\
+    \ the operating system. In order to have access to everything, you're going to\
+    \ need to have a root account, super user account, or an administrator account.\n\
+    \nStep Eight: there are ways that you can create a buffer overflow so that you\
+    \ can then use in order to give yourself user status. The buffer overflow is what\
+    \ allows the memory to dump, therefore giving you access to inject a code or in\
+    \ order to perform a task that is on a higher level than you are authorized to\
+    \ do.\n\nSoftware that is buggy usually has a set bit in the unix system. This\
+    \ system allows a program to execute a task as if it were a different user.\n\n\
+    Again and again it is important that you get the administrator's permission in\
+    \ writing before you begin to attack an insecure program on their operating system.\n\
+    \nStep Nine: you worked hard to get into the system, you're going to want to make\
+    \ sure that you do not use up much time getting back out. The moment that you\
+    \ have access to a system that is an SSH server, you will be able to create what\
+    \ is known as a backdoor so that you can gain access back to the system whenever\
+    \ without spending nearly much time as you did the first time. A hacker that is\
+    \ experienced is more likely to have a back door in order to have a way in using\
+    \ compiled software.\n\nStep Ten: it is vitally important that you do not allow\
+    \ the system administrator to know that you got into their system and that it\
+    \ has been compromised.\n"
+  mdcn: '
+
+
+    如果你正在破解属于朋友、家庭成员或公司的系统，请确保在没有获得系统所有者许可的情况下不要这样做。该许可最终需要以书面形式呈现，以免产生任何可能反作用在你身上的后果。
+
+
+    如果你觉得攻击他人的系统让你不安，你总是可以选择攻击自己的系统来寻找自己的安全漏洞。为了做到这一点，你需要搭建一个虚拟实验室来进行黑客攻击。
+
+
+    归结底，无论你尝试破解什么，如果你没有获得管理员的许可，都是违法的，并且你会陷入麻烦。
+
+
+    第三步：你将确保你能够到达正尝试攻击的系统。你可以使用 `ping` 工具来测试并查看目标是否处于活动状态；但结果并不总是可信的。如果你使用 `ping`
+    工具，你会发现最大的缺陷是系统管理员实际上可以关闭他们的系统，从而导致你丢失目标。
+
+
+    第四步：你将使用 Nmap 对你尝试攻击的系统进行扫描，以检查并查看机器上哪些端口是开启的。除了告诉你哪些端口是开启的，你还能看到正在使用什么类型的防火墙以及哪种路由器。
+
+
+    了解这类信息将帮助你规划攻击系统的行动方案。为了使用 Nmap 激活操作系统检测，你需要使用 `-O` 选项。
+
+
+    第五步：如使用 HTTP 或 FTP 的端口通常是受保护端口，只有在它们被利用时才会变得不安全并可被发现。
+
+
+    TCP 和 UDP 等这种为局域网游戏开启的端口经常被忽略，就像 Telnet 端口一样。
+
+
+    任何开启的端口通常都是目标机器上运行的 SSH（安全外壳服务）的证据。有时这些端口可以通过暴力破解被强制打开，以便你访问它们。
+
+
+    第六步：在获得大多数系统的访问权限之前，你必须破解一个密码。你可以使用暴力破解来破解密码，这是你尝试进入系统的方法之一。当你使用暴力破解时，你尝试预定义字典中包含每一个可能的密码的工作会被投入到一个软件程序中并用于尝试破解密码。
+
+
+    由于任何网站或系统的用户都受到极力不要使用弱且易破解密码，有时使用暴力破解破解密码需要花费时间。然而，暴力破解技术已经有了重大改进，以缩短破解密码的时间。
+
+
+    你还可以通过使用破解算法来提高破解速度。许多哈希算法可能是脆弱的，因此它们的弱点会被利用，从而轻松访问你正尝试攻击的系统。
+
+
+    例如，如果你有一个 MD5 算法并将其切分为 1/4，那么你破解密码的速度将得到巨大的提升。
+
+
+    显卡现在也被用作另一种你可以访问的处理器。访问显卡的速度比破解密码或使用算法攻击系统要快一千倍。
+
+
+    强烈建议你在尝试远程访问机器时不要尝试每种可能的密码选项。如果你由于系统日志的污染而更有可能被发现，那么完成整个过程将需要多年时间。
+
+
+    当你使用 IP 地址访问代理时，你需要一个已 root 权限的平板，并安装一个名为 `TCP scan` 的程序。TCP 将有一个信号，它会上传并允许你访问正尝试攻击的安全站点。
+
+
+    最后，从这个角度来看，获取任何系统访问的最简单的方法是找到一种不需要破解密码的方法。
+
+
+    第七步：如果目标是一台 *ix machine*，你将需要尝试获取 root 权限。当你尝试访问 Windows 系统时，你需要获取管理员权限。
+
+
+    如果你想查看系统上的所有文件，你需要超级用户（super-user）权限。拥有超级用户权限允许你拥有一个账户，可以在 Linux 或 BSD 系统中以 root
+    用户身份访问。
+
+
+    即使你只想访问计算机上最基本的文件，你需要某种允许你查看文件的权限。所以，无论如何，如果你想查看计算机上的任何内容，你就需要某种允许你看到网络上内容的权限。这些权限将来自系统管理员。
+
+
+    使用路由器的系统允许你通过管理员账户访问系统。你无法访问的唯一原因是路由器密码已被路由器管理员更改。如果你使用的是 Windows 操作系统，那么你必须访问管理员账户。
+
+
+    记住，如果你获得了操作系统的访问权限，并不意味着你将访问该操作系统上的所有内容。为了访问一切，你需要一个 root 账户、超级用户账户或管理员账户。
+
+
+    第八步：有方法创建缓冲区溢出，然后利用它来赋予自己用户状态。缓冲区溢出允许内存转储，从而让你能够注入代码或执行比你授权权限更高的任务。
+
+
+    存有 bug 的软件在 unix 系统中通常有一个设置位。该系统允许程序以不同用户的身份执行任务。
+
+
+    再次，在开始攻击他们操作系统上的不安全程序之前，获得管理员的书面许可是至关重要的。
+
+
+    第九步：你费力进入系统后，你将希望确保在退出时不要花费太多时间。一旦访问了作为 SSH 服务器的系统，你就可以创建一个所谓的“后门”，这样你就可以随时重新访问系统，而不需要像第一次那样花费大量时间。经验丰富的黑客更有可能拥有后门，以便使用编译后的软件进入。
+
+
+    第十步：至关重要的一点是，不要让系统管理员知道你进入了他们的系统并且系统已被破解。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 21]
+
+
+    network to have their own password that is tied directly to the domain. This means
+    that the hacker will not be able to hack the wireless network as well as the domain.
+
+
+    Scenario 8: The company is using WPA/WPA2, as well as a strong password that is
+    changed every day. The WPS is disabled and the administrator’s computer is kept
+    up to date.
+
+
+    But, the router has not been updated since being installed and it contains odays
+    (unknown vulnerabilities) that will allow a hacker to be able to conduct a CSRF
+    attack. This is done by a persistent threat and the following can happen:
+
+
+    +   - The router will be compromised
+
+
+    +   - The hacker will be able to send targeted emails within the system administrators
+    system that will cause it to appear like it is sent from the router vender. This
+    will also inform the system administrator to log into the router vender and check
+    the email by clicking a link within the email after they have logged in.
+
+
+    +   - The link will redirect the administrator to a page that will change the
+    routers settings or simply steal the password.
+
+
+    It is also possible for a hacker to be able to get into a system because an employee
+    has shared the password to the system unknowingly with a hacker and and then makes
+    the system compromised. This can also happen knowingly.
+
+
+    Or, if an employee’s phone or computer is compromised, then the wireless network
+    password is compromised as well.
+
+
+    You should have a strict ACLs from the wireless to any segment that is wired.
+    There should also be strict ACLs to any server that is going to hold sensitive
+    information.'
+  - '[PAGE 22]
+
+
+    <!-- no content -->'
+  - '[PAGE 23]
+
+
+    # Chapter 5: How to Crack Passwords
+
+
+    Passwords are going to be the easiest way to get into someone''s computer. However,
+    even though you have to be highly skilled in order to get a password correct the
+    first time.
+
+
+    But, there are other ways that you are able to go about hacking into someone''s
+    system by using their password. These techniques are not always going to be effective
+    and some of them are not going to work period.
+
+
+    Do not put all your faith in thinking that you''re going to hack someone''s password.
+    Some passwords are not going to be able to be hacked because of how everyone is
+    constantly told that they need to make sure they have strong passwords in order
+    to make sure that they are not hacked.
+
+
+    +   1. Dictionary Hack: this is when you use actual dictionary words in order
+    to try and hack someone''s password. This is used by trying to determine different
+    paraphrases and using a trial and error method.
+
+
+    This works much like a normal dictionary; however, it is just a simplified file
+    that contains unusual words that many people are going to place inside of their
+    password. This makes it easy to hack their password. However, a tough password
+    will always beat this attack.
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_23_0.png)
+
+
+    +   2. Brute Force Attack: the motto for the brute force attack is to crack passwords.
+    A brute force attack will try every possible combination in order to crack the
+    password.
+
+
+    With people being smarter as technology changes, the growing size of passwords
+    is making it hard for brute force to be able to crack the passwords.
+
+
+    This is very similar to the dictionary attack but is basically an upgraded version.'
+  - '[PAGE 24]
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_24_0.png)
+
+
+    +   3. Phishing: this is by far the easiest method that you can use as a hacker.
+    Phishing asks you for its password in a unique and different way. As the hacker,
+    you are able to create fake emails, apps, pages and other things that are going
+    to ask you to log in with your id and password. At the point in time that you
+    have logged in, your passwords are instantly transmitted into the hacker’s computer
+    for them to be able to access your sensitive data.
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_24_1.png)
+
+
+    +   4. Viruses, Trojans, and other Malware: a virus is a program that a hacker
+    can develop in order to destroy their intended target. These worms and viruses
+    can get into a user’s system and therefore give the hacker full use of the system.
+    At this point in time, a hacker has full use of the network or machine and can
+    spread the virus through emails or other hidden applications.
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_24_2.png)
+
+
+    +   5. Shoulder Surfing: this is the practice of spying on the user of any electronic
+    device in order to obtain personal information. This is usually found in eye catching
+    notes that are stuck in front of your monitor that keep asking you to login.'
+  - '[PAGE 25]
+
+
+    # The Art of Shoulder Surfing
+
+    (continued)
+
+
+    +   - Pre-caution
+
+    - Avoid looking when someone is typing
+
+    - Avoid looking when someone is talking on cell phone
+
+    - Be careful using computers in public places
+
+    - Immediately change password if someone is observing you
+
+
+    6. Port Scan Attack: this is a technique that is used in order to find the weakness
+    on any given server. Normally it is used by those who are responsible for security
+    in order to find vulnerabilities within the system.
+
+
+    Port Scan Attacks are used to send messages to a port while waiting for a response.
+    The data that is received from the open port is then an invitation for a hacker
+    to get into your server.
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_25_0.png)'
+  - '[PAGE 26]
+
+
+    <!-- no content -->'
+  - '[PAGE 27]
+
+
+    # Chapter 6: How to Protect Yourself from Hackers
+
+
+    Some people use their hacking skills to gain access to information that they are
+    able to use to harm others. Information that is taken is your personal information
+    like your social security, address, or credit card numbers. It does not take a
+    lot of information in order to someone to gain access to your entire identity.
+    As long as they have a few keys of information then they can pass themselves off
+    you and ultimately ruin your life. The hackers who do this are out to only help
+    themselves at the cost of anyone that takes. As long as the information helps
+    them further themselves enough that they are able to go on hacking into the next
+    person''s life.
+
+
+    However, you are able to avoid situations like this by doing some small things
+    that most people do not think about when it comes to helping them save their identity.
+    Below are a few of these steps that can help you to protect yourselves a little
+    more against hackers who are out to harm you and your family.
+
+
+    Turn off the WiFi and Bluetooth on your phone. Keeping on these features allows
+    hackers to have easy access to your phone.
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_27_0.png)
+
+
+    When you keep the WiFi and Bluetooth on all the time, hackers have access to see
+    what networks you have been connected to and be able to create a fake network
+    with the same name so that they are able to trick your phone into connecting to
+    a device because it believes device is actually the network that you have authorized
+    to have access to your phone.
+
+
+    At the point in that your phone is now connected to the device of the hacker''s
+    choosing, they are able to gain access to your data that is stored there as well
+    as on information that you put into your phone. Not only that, but they are able
+    to place malware on your phone so that you can never trace the fact that they
+    were in your phone.
+
+
+    Therefore, you should turn your Bluetooth and WiFi off when you are not using
+    it so that you are able to protect your phone just a little more.
+
+
+    Another way you can protect yourself is to never use the one password. When you
+    use one password, it makes it too easy for yourself to be hacked and you are exposed
+    all time because of how limited the security is whatever the hacker wants access
+    to. So, in order to protect yourself, use a two-step authentication so that if
+    your password is entered in wrong, it will then ask you for a second password
+    in order to verify that you are who you say you are.'
+  - '[PAGE 28]
+
+
+    A lot of social media sites and even email services now are able to offer extra
+    protection. The two-step authentication is essentially a temporary password that
+    gives you access to what a hacker is trying to get into.
+
+
+    When you join sites such as LinkedIn, Twitter or Google, you are asked to enter
+    a code each time you attempt to log into your account from a new device. This
+    code is sent to whatever email or phone number you have on file for the account.
+    You should change your email or phone and not change it with your account, you
+    will then not be able to access your account.
+
+
+    Although someone may be able to get a hold of your password, it is highly unlikely
+    that they are going to have access to your phone''s messages as well in order
+    to get the verification code they need.
+
+
+    For websites you access sensitive information such as your email or your bank
+    account, you should use a passphrase that is both unique and long. An example
+    would be +HIspl@inumDr@gonBreathefire.
+
+
+    When you are entering something that does not contain some of your sensitive data,
+    you can save your password on the password manager that is on your computer so
+    you do not have to remember the password.
+
+
+    The most important thing for you to remember is that when you use the password
+    manager, it encrypts any passwords that are stored on your device. Programs such
+    as 177 Password Lock, Password Safe and LastPass will do this for you so that
+    your passwords are still protected.
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_28_0.png)
+
+
+    If you are using one password for everything, it acts like a master password that
+    will unlock everything and once hacker has access to one password, they will be
+    able to gain access to any website they have gotten on.
+
+
+    It is also a good idea for you to change your passwords more than once a year
+    in order to keep your accounts up to date.
+
+
+    While you are browsing the web, make sure that you are using HTTPS. The program
+    HTTPS Everywhere encrypts all the information that is transmitted or received
+    by your browser when you visit multiple websites.
+
+
+    If there is no s at the end of the HTTP in the address bar of the website that
+    you are visiting, then anyone can view what you are currently viewing.'
+  md: '
+
+    network to have their own password that is tied directly to the domain. This means
+    that the hacker will not be able to hack the wireless network as well as the domain.
+
+
+    Scenario 8: The company is using WPA/WPA2, as well as a strong password that is
+    changed every day. The WPS is disabled and the administrator’s computer is kept
+    up to date.
+
+
+    But, the router has not been updated since being installed and it contains todays
+    (unknown vulnerabilities) that will allow a hacker to be able to conduct a CSRF
+    attack. This is done by a persistent threat and the following can happen:
+
+
+    - The router will be compromised
+
+    - The hacker will be able to send targeted emails within the system administrators
+    system that will cause it to appear like it is sent from the router vender. This
+    will also inform the system administrator to log into the router vender and check
+    the email by clicking a link within the email after they have logged in.
+
+    - The link will redirect the administrator to a page that will change the routers
+    settings or simply steal the password.
+
+
+    It is also possible for a hacker to be able to get into a system because an employee
+    has shared the password to the system unknowingly with a hacker and then then
+    makes the system compromised. This can also happen knowingly.
+
+
+    Or, if an employee’s phone or computer is compromised, then the wireless network
+    password is compromised as well.
+
+
+    You should have a strict ACLs from the wireless to any segment that is wired.
+    There should also be strict ACLs to any server that is going to hold sensitive
+    information.
+
+
+    # Chapter 5: How to Crack Passwords
+
+
+    Passwords are going to be the easiest way to get into someone''s computer. However,
+    even though you have to be highly skilled in order to get a password correct the
+    first time.
+
+
+    But, there are other ways that you are able to go about hacking into someone''s
+    system by using their password. These techniques are not always going to be effective
+    and some of them are not going to work period.
+
+
+    Do not put all your faith in. The data that is received from the open port is
+    then an invitation for a hacker to get into your server.
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_25_0.png)
+
+
+    # Chapter 6: How to Protect Yourself from Hackers
+
+
+    Some people use their hacking skills to gain access to information that they are
+    able to use to harm others. Information that is taken is your personal information
+    like your social security, address, or credit card numbers. It does not take a
+    lot of information in order to someone to gain access to your entire identity.
+    As long as they have a few keys of information then they can pass themselves off
+    you and ultimately ruin your life. The hackers who do this are out to only help
+    themselves at the cost of anyone that takes. As long as the information helps
+    them further themselves enough that they are able to go on hacking into the next
+    person''s life.
+
+
+    However, you are able to avoid situations like this by doing some small things
+    that most people do not think about when it comes to helping them save their identity.
+    Below are a few of these steps that can help you to protect yourselves a little
+    more against hackers who are out to harm you and your family.
+
+    '
+  mdcn: '
+
+    网络拥有直接与域绑定的独立密码。这意味着黑客将无法破解无线网络，也无法破解域。
+
+
+    场景 8：公司正在使用 WPA/WPA2，并配有每天更换的强密码。WPS 已禁用，管理员的计算机保持最新更新。
+
+
+    但是，路由器自安装以来一直未进行过更新，它包含了当今的未知漏洞，这些漏洞允许黑客进行 CSRF 攻击。这是通过持续性威胁实现的，并可能发生以下情况：
+
+
+    - 路由器将会被攻破
+
+    - 黑客能够在系统管理员系统内发送针对性的电子邮件，使其看起来像是从路由器供应商发送的。这还会提示系统管理员登录路由器供应商网站，并在登录后点击邮件中的链接检查邮件。
+
+    - 链接将管理员重定向到一个页面，该页面将更改路由器设置或直接窃取密码。
+
+
+    黑客也可能因为员工无意中向黑客分享了系统密码而进入系统，导致系统被破坏。这种情况也可能故意发生。
+
+
+    或者，如果员工的手机或电脑被攻破，那么无线网络密码也会被泄露。
+
+
+    你应该从无线网络到任何有线分段设置严格的 ACL（访问控制列表）。对于任何存储敏感信息的服务器，也应该设置严格的 ACL。
+
+
+    # 第 5 章：如何破解密码
+
+
+    密码将进入他人计算机最简单的方法。然而，尽管你必须具备高水平的技术才能第一次猜对密码。
+
+
+    但是，还有其他方法可以利用他们的密码来入侵他人的系统。这些技术并不总是有效的，有些根本根本不起作用。
+
+
+    不要把所有的希望都寄于此。从开放端口接收的数据就是黑客进入你服务器的邀请。
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_25_0.png)
+
+
+    # 第 6 章：如何保护自己免受黑客侵害
+
+
+    有些人会利用他们的黑客技术获取信息，并利用这些信息伤害他人。被获取的信息是你的个人信息，如社会安全号码、地址或信用卡号。不需要大量信息就能获取你的整个身份。只要他们拥有几项关键信息，他们就可以冒充你，并最终毁掉你的生活。做这些事情的黑客以牺牲任何受害者的代价来为了自己。只要这些信息足够帮助他们进步，让他们能够继续入侵下一个人的生活。
+
+
+    然而，通过做一些大多数人在考虑保护自己身份时不会想到的的小事，你可以避免此类情况的发生。以下是其中的一些步骤，可以帮助你更好地防范那些想要伤害你和家人的黑客。
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 29]
+
+
+    When you are setting up your home WiFi, you need to set it up with a password.
+    Many routers come with a sticker on the side of the box that will give you access
+    to that network. Make sure that you change it! Do not stay with the default password
+    because it is entirely too easy to be hacked for someone to be gain access to
+    your network.
+
+
+    Also, when the machine asks which encryption you want, it is best to choose WPA-2.
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_29_0.png)
+
+
+    It is wise to attempt and try and use WEP and WPA. The encryptions actually have
+    a flaw that will give you the password to your network within a few seconds.
+
+
+    At the time that your home router is set up, it will ask you if you want to hide
+    the SSID. When you click yes, your WiFi will be hid from others, but it will force
+    your devices to constantly search for the network that they are connected to.
+    Your devices will connect, but in the time that is spent searching for the network,
+    it will open up your device to connecting to a strange network.
+
+
+    Now days there are devices such as a smart fridge, oven, and even washer and dryer.
+    These devices connect to the internet and give you different options that the
+    original designs don''t.
+
+
+    But, the companies that are putting out these devices are still working out the
+    kinks in them.
+
+
+    While tech companies rush around and just slap WI-FI connectivity on everything,
+    they are skipping the important things such as privacy and safety of their devices.
+
+
+    An important example of this is when a hacker hijacked a baby monitor and said
+    some very foul mouthed things over the device.
+
+
+    Hacker Stanislav says that even though you are told things are secure with your
+    device, they might not be.
+
+
+    Ultimately, security over your devices is up to you in order to protect yourself
+    and those you love.
+
+
+    Other ways to keep yourself protected are to keep your firewall turned on. Your
+    firewall helps keep hackers out of your computer. Some operating systems already
+    come with a'
+  - '[PAGE 30]
+
+
+    firewall that you can use or you can purchase a program with a firewall.
+
+
+    Always keep your antivirus software updated. Designed to prevent malicious software
+    from embedding in your computer, antivirus programs help to protect your computer.
+    At any point in time, when the program detects a virus or a worm, it works to
+    remove the threat. Virus'' can gain access to your computer through hackers placing
+    them there in order to spy on you.
+
+
+    Antispyware technology needs to be kept updated as well. Just as it sounds, spyware
+    allows someone to be able to see all activity that is done on a computer. Some
+    spyware actually collects data without your consent and then produces unwanted
+    ads popping up on your web browser.
+
+
+    Outdated operating systems actually make it slightly easier for a hacker to enter
+    your computer. With each new update, the security on a computer gets just a little
+    better due to all the flaws that were found and fixed between updates. Leaving
+    your system without these updates can give a hacker access to your machine.
+
+
+    Hackers can also get into your system through your email. Never open an email
+    that is from someone you do not know. These emails can contain malicious code
+    from hackers who are attempting to gain access to multiple machines in order to
+    get information that they want.
+
+
+    Turn off your computer when you''re not using it. Even though it is easier to
+    just leave your computer so that it is easily accessed, spyware and virus'' still
+    have access to your computer and still allow hackers to get into your computer
+    without knowing.'
+  - '[PAGE 31]
+
+
+    <!-- no content -->'
+  - '[PAGE 32]
+
+
+    # Chapter Seven: Techniques Used by Hackers
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_32_0.png)
+
+
+    So far in this book you have learned how to hack different systems as well as
+    to get into the mindset of a hacker. However, just like anything out there, there
+    are techniques that you can use in order to be a more effective hacker.
+
+
+    +   Anonymity: Hackers don''t want you knowing that they got into your system.
+    In doing this, they are going to make sure that they do anything that they can
+    in order to not leave a trace. In doing this, they will use
+
+    - Proxies or secured tunnels
+
+    - Software that will hide their IP address
+
+    - Will use other people''s usernames and passwords without using his own
+
+    - Programming that is written in C
+
+    - Or a telnet that will hide him and his task execution.
+
+
+    +   Getting Out: Any hacker is going to make sure that they do not leave any trace
+    on your computer so that you never know they were there. In the process of getting
+    out the hacker is going to leave all your files alone, however, he is going to
+    leave a “backdoor” open so that he is able to get back into your computer at a
+    later date.
+
+
+    +   Gather information about the target: When hacking someone, it is important
+    to get as much information on them as you possibly can. In doing this, you’re
+    going to want information such as:
+
+    - Their IP address
+
+    - Telnet or Tracert in order to look at the pings of when someone is on the computer
+
+    - And be resourceful. Find out as much about your target as you possibly get.
+
+
+    +   Log the keystrokes: as a hacker, you are able to use programs that will review
+    every keystroke that someone has made on their computer and that alone can reveal
+    a person’s identity.'
+  - '[PAGE 33]
+
+
+    +   5. Go for passwords: when trying to hack passwords, it is best to try and
+    go with the simple algorithms that create a combination of letters, symbols, and
+    numbers. You''ll need to make well educated guesses and use dictionary attacks
+    so that you can generate every possible combination of the password.
+
+
+    +   6. Leave a virus: this is a simple way to get back into a computer. Leaving
+    a virus can be done by simply sending out an email or instant message to any potential
+    victims.
+
+
+    +   7. Gain entry through a backdoor: this is extremely similar to hacking a password.
+    There are many hackers who develop codes and programs that will look for defenseless
+    pathways into networks as a way to enter the network without ever having to use
+    a password.
+
+
+    +   8. Spy on email: this is a program that can be used so that you can interrupt
+    and read emails.
+
+    9. Make zombie computers: this is when a computer is used by a hacker to place
+    DDoS attacks and send out spam emails. If an innocent user clicks on the link
+    you send out, it will open up a connection between your computer and his.
+
+
+    +   10. Make sure that you have a firewall so that you have restricted access
+    to any personal information that may go outside of your computer.
+
+
+    +   11. Use a proxy server: when you decide to use the computer, make sure that
+    you target proxy servers.
+
+
+    +   12.
+
+    13. Use search engines: this will help you to find the tools that you need in
+    order to hack a system. From here, you can download the tools that you need in
+    order to target a specific computer.
+
+
+    +   14. Leave a file or two on the computer: this will allow you to gain access
+    back into the computer at a later date. You can leave files such as Net cat in
+    order to gain access again.'
+  - '[PAGE 34]
+
+
+    <!-- no content -->'
+  - '[PAGE 35]
+
+
+    # Chapter Eight: Pursuing a Career in Ethical Hacking
+
+
+    Not all hackers are hackers who are going to be hacking into a system in order
+    to gain access to your personal information. In fact, there are several very famous
+    hackers that have come out of history that have given us the technology that we
+    currently have. Three that come to mind are Steve Wozniak, Steve Jobs, and Captain
+    Crunch.
+
+
+    These very well-known men began their career hacking and then have given us some
+    of the technology that we know and enjoy today. All they did was take the knowledge
+    that they had and applied it to technology and found new ways to create things.
+
+
+    In order to start your career as an ethical hacker, it is wise that you have some
+    sort of computer science degree that will allow you to do this. Many big companies
+    are hiring hackers to find the flaws in their systems so they are able to keep
+    their company secrets, secrets.
+
+
+    You can also use your hacking skills to be able to make your own technology like
+    Wozniak and Jobs. You are able to create programs and computers or whatever it
+    are wanting to create in order to help people protect themselves from hackers.
+
+
+    If you are wanting to go to a company and work for them, then you are going to
+    need to find the companies that are hiring people for their IT teams. You will
+    be doing more than finding the security flaws in their systems, but it will put
+    you in a step in the right direction.
+
+
+    It is important for you to remember that hacking is illegal unless it is done
+    ethically. Here are some of the ways that hackers are punished if they are caught.
+
+
+    India if you are found tampering with a computer source document which includes
+    the destruction, concealment or event he alteration of the documents source code
+    will end up getting the hacker at least three years in prison or a fine of 20000
+    rupees.
+
+
+    In India, if you are just having hacked into a website or various other sources,
+    you will be imprisoned for up to three years and possibly get a fine of 50000
+    rupees.
+
+
+    The Netherlands defines hacking as an intruding automated work or part thereof
+    with intention against the law. Intrusion would be considered defeating any security
+    measures, false signals or false cryptographic keys, using stolen usernames or
+    passwords. Any of these can get you at least one-year imprisonment along with
+    a fine of the fourth category.'
+  md: '
+
+    When you are setting up your home WiFi, you need to set it up with a password.
+    Many routers come with a sticker on the side of the box that will give you access
+    to that network. Make sure that you change it! Do not stay with the default password
+    because it is entirely too easy to be hacked for someone to gain access to your
+    network.
+
+
+    Also, when the machine asks which encryption you want, it is best to choose WPA-2.
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_29_0.png)
+
+
+    It is wise to attempt and try and use WEP and WPA. The encryptions actually have
+    a flaw that will give you the password to your network within a few seconds.
+
+
+    At the time that your home router is set up, it will ask you if you want to hide
+    the SSID. When you click yes, your WiFi will be hid from others, but it will force
+    your devices to constantly search for the network that they are connected to.
+    Your devices will connect, but in the time that is spent searching for the network,
+    it will open up your device to connecting to a strange network.
+
+
+    Nowadays days there are devices such as a smart fridge, oven, and even washer
+    and dryer. These devices connect to the internet and give you different options
+    that the original designs don''t.
+
+
+    But, the companies that are putting out these devices are still working out the
+    kinks in them.
+
+
+    While tech companies rush around and just slap WI-FI connectivity on everything,
+    they are skipping the important things such as privacy and safety of their devices.
+
+
+    An important example of this is when a hacker hijacked a baby monitor and said
+    some very foul-mouthed things over the device.
+
+
+    Hacker Stanislav says that even though you are told things are secure with your
+    device, they might not be.
+
+
+    Ultimately, security over your devices is up to you in order to protect yourself
+    and those you love.
+
+
+    Other ways to keep yourself protected are to keep your firewall turned on. Your
+    firewall helps keep hackers out of your computer. Some operating systems already
+    come with a firewall that you can use or you can purchase a program with a firewall.
+
+
+    Always keep your antivirus software updated. Designed to prevent malicious software
+    from embedding in your computer, antivirus programs help to protect your computer.
+    At any point in time, when the program detects a virus or a worm, it works to
+    remove the threat. Viruses can gain access to your computer through hackers placing
+    them there in order to spy on you.
+
+
+    Antispyware technology needs to be kept updated as well. Just as it sounds, spyware
+    allows someone to be able to see all activity that is done on a computer. Some
+    spyware actually collects data without your consent and then produces unwanted
+    ads popping up on your web browser.
+
+
+    Outdated operating systems actually make it slightly easier for a hacker to enter
+    your computer. With each new update, the security on a computer gets just a little
+    better due to all the flaws that were found and fixed between updates. Leaving
+    your system without these updates can give a hacker access to your machine.
+
+
+    Hackers can also get into your system through your email. Never open an email
+    that is from someone you do not know. These emails can contain malicious code
+    from hackers who are attempting to gain access to multiple machines in order to
+    get information that they want.
+
+
+    Turn off your computer when you''re not using it. Even though it is easier to
+    just leave your computer so that it is easily accessed, spyware and viruses still
+    have access to your computer and still allow hackers to get into your computer
+    without knowing.
+
+
+    # Chapter Seven: Techniques Used by Hackers
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_32_0.png)
+
+
+    So far in this book you have learned how to hack different systems as well as
+    to get into the mindset of a hacker. However, just like anything out there, there
+    are techniques that you can use in order to be a more effective hacker.
+
+
+    - Anonymity: Hackers don''t want you knowing that they got into your system. In
+    doing this, they are going to make sure that they do anything that they can in
+    order to not leave a trace. In doing this, they will use:
+
+    - Proxies or secured tunnels
+
+    - Software that will hide their IP address
+
+    - Will use other people''s usernames and passwords without using his own
+
+    - Programming that is written in C
+
+    - Or a telnet that will hide him and his task execution.
+
+
+    - Getting Out: Any hacker is going to make sure that they do not leave any trace
+    on your computer so that you never know they were there. In the process of getting
+    out the hacker is going to leave all your files alone, however, he is going to
+    leave a “backdoor” open so that he is able to get back into your computer at a
+    later date.
+
+
+    - Gather information about the target: When hacking someone, it is important to
+    get as much information on them as you possibly can. In doing this, you’re going
+    to want information such as:
+
+    - Their IP address
+
+    - Telnet or Tracert in order to look at the pings of when someone is on the computer
+
+    - And be resourceful. Find out as much about your target as you possibly get.
+
+
+    - Log the keystrokes: as a hacker, you are able to use programs that will review
+    every keystroke that someone has made on their computer and that alone can reveal
+    a person’s identity.
+
+
+    - 5. Go for passwords: when trying to hack passwords, it is best to try and go
+    with the simple algorithms that create a combination of letters, symbols, and
+    numbers. You''ll need to make well educated guesses and use dictionary attacks
+    so that you can generate every possible combination of the password.
+
+
+    - 6. Leave a virus: this is a simple way to get back into a computer. Leaving
+    a virus can be done by simply sending out an email or instant message to any potential
+    victims.
+
+
+    - 7. Gain entry through a backdoor: this is extremely similar to hacking a password.
+    There are many hackers who develop codes and programs that will look for defenseless
+    pathways into networks as a way to enter the network without ever having to use
+    a password.
+
+
+    - 8. Spy on email: this is a program that can be used so that you can interrupt
+    and read emails.
+
+
+    - 9. Make zombie computers: this is when a computer is used by a hacker to place
+    DDoS attacks and send out spam emails. If an innocent user clicks on the link
+    you send out, it will open up a connection between your computer and his.
+
+
+    - 10. Make sure that you have a firewall so that you have restricted access to
+    any personal information that may go outside of your computer.
+
+
+    - 11. Use a proxy server: when you decide to use the computer, make sure that
+    you target proxy servers.
+
+
+    - 13. Use search engines: this will help you to find the tools that you need in
+    order to hack a system. From here, you can download the tools that you need in
+    order to target a specific computer.
+
+
+    - 14. Leave a file or two on the computer: this will allow you to gain access
+    back into the computer at a later date. You can leave files such as Netcat in
+    order to gain access again.
+
+
+    # Chapter Eight: Pursuing a Career in Ethical Hacking
+
+
+    Not all hackers are hackers who are going to be hacking into a system in order
+    to gain access to your personal information. In fact, there are several very famous
+    hackers that have come out of history that have given us the technology that we
+    currently have. Three that come to mind are Steve Wozniak, Steve Jobs, and Captain
+    Crunch.
+
+
+    These very well-known men began their career hacking and then have given us some
+    of the technology that we know and enjoy today. All they did was take the knowledge
+    that they had and applied it to technology and found new ways to create things.
+
+
+    In order to start your career as an ethical hacker, it is wise that you have some
+    sort of computer science degree that will allow you to do this. Many big companies
+    are hiring hackers to find the flaws in their systems so they are able to keep
+    their company secrets.
+
+
+    You can also use your hacking skills to be able to make your own like Wozniak
+    and Jobs. You are able to create programs and computers or whatever you are wanting
+    to create in order to help people protect themselves from hackers.
+
+
+    If you are wanting to go to a company and work for them, then you are going to
+    need to find the companies that are hiring people for their IT teams. You will
+    be doing more than finding the security flaws in their systems, but it will put
+    you in a step in the right direction.
+
+
+    It is important for you to remember that hacking is illegal unless it is done
+    ethically. Here are some of the ways that hackers are punished if they are caught.
+
+
+    In India if you are found tampering with a computer source document which includes
+    the destruction, concealment or even alteration of the document source code will
+    end up getting the hacker at least three years in prison or a fine of 20000 rupees.
+
+
+    In India, if you are just having hacked into a website or various other sources,
+    you will be imprisoned for up to three years and possibly get a fine of 50000
+    rupees.
+
+
+    The Netherlands defines hacking as an intruding automated work or part thereof
+    with intention against the law. Intrusion would be considered defeating any security
+    measures, false signals or false cryptographic keys, using stolen usernames or
+    passwords. Any of these can get you at least one-year imprisonment along with
+    a fine of the fourth category.
+
+    '
+  mdcn: "\n\n当你设置家庭 WiFi 时，需要为它设置密码。许多路由器在箱子侧面附有一个贴纸，上面提供了访问该网络的信息。请务必更改它！不要使用默认密码，因为它太容易被破解，导致他人获取你的网络访问权限。\n\
+    \n此外，当机器询问你想要使用哪种加密方式时，最好选择 WPA-2。\n\n![](img/26215855e4000962a48e12eab4e94c9f_29_0.png)\n\
+    \n尝试并避免 WEP 和 WPA 是明智的。这些加密方式实际上存在缺陷，可以在几秒钟内泄露你的网络密码。\n\n在你设置家庭路由器时，它会询问你是否想要隐藏\
+    \ SSID。当你点击“是”时，你的 WiFi 将对其他人隐藏，但它会强制你的设备不断搜索它们正在连接的网络。你的设备虽然会连接，但在搜索网络的过程中，会让你的设备暴露在连接奇怪网络的风险之中。\n\
+    \n如今已经有了如智能冰箱、烤箱甚至洗衣机和烘干机之类的设备。这些设备连接到互联网，并为你提供了原始设计中不具备的不同选择。\n\n但是，推出这些设备的公司仍在解决它们中的缺陷。\n\
+    \n当科技公司急于给一切事物都贴上 WI-FI 连接时，他们忽略了设备隐私和安全等重要事项。\n\n一个重要的例子是，黑客曾劫持了一个婴儿监视器，并在设备中说了一些非常难听的话。\n\
+    \n黑客 Stanislav 表示，尽管你被告知你的设备是安全的，但它们可能并非如此。\n\n归结底，设备安全取决于你自己，以便保护你自己和你的所爱的人。\n\
+    \n保护自己的其他方法是保持防火墙开启。防火墙可以帮助防止黑客进入你的计算机。某些操作系统自带了你可以使用的防火墙，或者你也可以购买带有防火墙的程序。\n\n\
+    始终更新你的防毒软件。防毒程序旨在防止恶意软件嵌入你的计算机，有助于保护你的计算机。在任何时候，当程序检测到病毒或蠕虫时，它会消除威胁。病毒可以通过黑客将其放置在你的计算机中来获取你的访问权限。\n\
+    \n间谍软件技术也需要保持更新。正如其名，间谍软件允许某人看到计算机上进行的所有活动。某些间谍软件实际上会在未经你许可的情况下收集数据，然后在你的网页浏览器中产生不想要的弹出广告。\n\
+    \n过时的操作系统实际上会让黑客更容易进入你的计算机。随着每次新的更新，由于在更新之间发现并修复了漏洞，计算机的安全性会稍微提高一点。让你的系统不进行这些更新可能会让黑客访问你的机器。\n\
+    \n黑客还可以通过你的电子邮件进入系统。永远不要打开来自你不认识的人的邮件。这些邮件可能包含来自黑客的恶意代码，他们试图访问多台机器以获取他们想要的信息。\n\
+    \n不使用计算机时请关闭它。虽然让计算机一直开启以便于访问更简单，但间谍软件和病毒仍然可以访问你的计算机，并让让黑客在不知情的情况下进入。\n\n# 第七章：黑客使用的技术\n\
+    \n![](img/26215855e4000962a48e12eab4e94c9f_32_0.png)\n\n到目前为止，你已经学习了如何破解不同的系统，以及如何进入黑客的心态。然而，就像世界上其他任何事情一样，你可以使用一些技术来成为一个更高效的黑客。\n\
+    \n- **匿名性**：黑客不希望让你知道他们进入了你的系统。为了做到这一点，他们会尽一切努力不留痕迹。在此过程中，他们将使用：\n  - 代理或安全隧道\n\
+    \  - 隐藏 IP 地址的软件\n  - 使用他人的用户名和密码而不使用自己的\n  - 用 C 语言编写的程序\n  - 或者可以隐藏其身份和任务执行的\
+    \ telnet。\n\n- **离开**：任何黑客都会确保不在你的计算机上留下的任何痕迹，这样你就永远不知道他们曾来过那里。在离开的过程中，黑客会放过你所有的文件，但他会留一个“后门”，以便在日后能够重新进入你的计算机。\n\
+    \n- **收集目标信息**：在破解某人时，尽可能多地获取他们的信息是非常重要的。在此过程中，你可能想要获得如下信息：\n  - 他们的 IP 地址\n \
+    \ - 使用 Telnet 或 Tracert 查看某人在使用计算机时的 ping 值\n  - 并善于利用。尽可能多地获取你目标的信息。\n\n- **记录击键**：作为黑客，你可以使用程序来查看某人在计算机上输入的每一个按键，仅此一项就能揭示一个人的身份。\n\
+    \n- **5. 破解密码**：在尝试破解密码时，最好尝试使用创建字母、符号和数字组合的简单算法。你需要做出明智的推测并使用字典攻击，以便生成密码的所有可能组合。\n\
+    \n- **6. 留下病毒**：这是重新进入计算机的简单方法。通过向任何潜在受害者发送电子邮件或即时消息即可留下病毒。\n\n- **7. 通过后门进入**：这与破解密码非常相似。许多黑客开发了代码和程序，寻找网络中毫无防御的路径，作为一种无需使用密码即可进入网络的方法。\n\
+    \n- **8. 监控邮件**：这是一种可以用于中断和读取邮件的程序。\n\n- **9. 制作僵尸计算机**：这是黑客利用计算机来发动 DDoS 攻击并发送垃圾邮件。如果一个无辜的用户点击了你发送的链接，将在你的计算机和他的计算机之间建立一个连接。\n\
+    \n- **10. 确保你有一个防火墙**，以便限制对可能传出计算机的任何个人信息的访问。\n\n- **11. 使用代理服务器**：当你决定使用计算机时，确保你的目标是代理服务器。\n\
+    \n- **13. 使用搜索引擎**：这将帮助你找到破解系统所需的工具。从这里开始，你可以下载针对特定计算机所需的工具。\n\n- **14. 在计算机上留下一两个文件**：这将允许你在日后重新访问计算机。你可以留下诸如\
+    \ Netcat 等文件以再次访问。\n\n# 第八章：追求伦理黑客职业\n\n并不是所有的黑客都是那种通过破解系统来获取你个人信息的黑客。事实上，历史上出现了几个非常著名的黑客，他们为我们提供了现在拥有的技术。想到的三个是史蒂夫·沃兹尼亚克（Steve\
+    \ Wozniak）、史蒂夫·乔布斯（Steve Jobs）和酸饼船长（Captain Crunch）。\n\n这些非常有名的男性从破解开始职业，然后为我们提供了我们今天所知并享受的技术。他们所做的只是将他们拥有的知识应用于技术，并找到创造事物的新方法。\n\
+    \n为了开启你的伦理黑客职业，明智的做法是拥有某种计算机科学学位以便于。许多大公司正在招聘黑客来寻找他们系统的漏洞，以便保护他们的公司秘密。\n\n你还可以利用你的黑客技能像沃兹尼亚克和乔布斯一样创造自己的东西。你可以创建程序、计算机或任何你想创建的东西，以帮助人们免受黑客侵害。\n\
+    \n如果你想去一家公司为他们工作，那么你需要找到那些正在招聘 IT 团队人员的公司。你所做的将不仅是寻找系统中的安全漏洞，但这将让你朝着正确的方向迈出一步。\n\
+    \n让你记住，黑客是违法的，除非是以伦理的方式进行的。以下是黑客在被发现后受到惩罚的一些方式。\n\n在印度，如果你被发现篡改计算机源文档，这包括破坏、隐藏甚至更改文档源代码，将导致黑客被处至少三年的监禁或处以\
+    \ 20,000 卢比的罚款。\n\n在印度，如果你只是破解了一个网站或其他各种来源，你将被监禁最高三年，并可能处以 50,000 卢比的罚款。\n\n荷兰将破解定义为具有违法意图的自动化工作或其部分。入侵被认为破解了任何安全措施、虚假信号或虚假加密密钥、使用窃取的用户名或密码。其中任何一种都可能导致你至少一年的监禁，以及第四类罚款。\n\
+    \n"
+  merge: 0
+- raw:
+  - '[PAGE 36]
+
+
+    The United States prohibits any unauthorized use or damage of a protected computer.
+    A protected computer would be a computer that is used by a financial institute
+    or the US Government.
+
+
+    The computer can also be used in affecting interstate or foreign commerce or even
+    communication. The computer does not have to be located in the United States if
+    it is used for any type of interstate or foreign commerce.
+
+
+    The maximum imprisonment can be one year in a federal prison or a fine that is
+    not more than $5,000.'
+  - '[PAGE 37]
+
+
+    <!-- no content -->'
+  - '[PAGE 38]
+
+
+    # Chapter Nine: Wozniak and Jobs
+
+
+    As mentioned in the previous chapter, Wozniak and Jobs used hacking in order to
+    help improve technology. In this chapter, you are going to learn how they were
+    able to do this.
+
+
+    Just like in a previous chapter, Jobs and Wozniak used a popular way of hacking
+    in order to break into different computers.
+
+
+    Even though they used their hacking for good, what they were doing was still illegal!
+
+
+    Back in the 60s the term hacker was used to describe someone who was an expert
+    at programming. The years went on and more people got into hacking, the skills
+    used in order to gain access to a system from being “completely innocent” to the
+    people who used it for illegal activity on the computer. Either way you look at
+    it, the ones who use their skills to program a computer and make it better, the
+    ones who use their skills in order to gain access to a person’s private information,
+    they are both skilled individuals. Some of the biggest names in technology started
+    out “hacking” in the beginning days of computers.
+
+
+    At the Computer History Museum in California, there is a device on display called
+    a Blue Box. This was used to interrupt phone signals and was invented by two hackers
+    that are extremely well known today – Steve Jobs and Steve Wozniak.
+
+
+    As stated, the Blue Box was used to interrupt phone signals. It was a hacking
+    activity that is known as phone freaking.
+
+
+    Today, phone calls are a series of connections that place you through to whom
+    you wish to talk to. Back in the beginning, this was done by a human operator
+    who could help you get through to the person you wanted to speak with. When the
+    automatic exchanges come into place, you route your call to its destination by
+    communicating with one another. The automatic exchanges used a series of audible
+    tones known as signaling which came around in the 60s and 70s.
+
+
+    The tones that phones used proved to be the weak spot that hackers exploited.
+
+
+    The blue box emulates the signaling tones used by telephone exchanges. When these
+    tones are played through a speaker that is connected to the phone’s handset, the
+    automatic exchanges are fooled into believing that they are receiving a signal.
+    Anything became possible once the hacker understood all the signaling tones that
+    were used.
+
+
+    A hacker could figure out how a call was routed by the billing companies, overriding
+    the blocking restrictions that a phone company had in place. And this would help
+    them to overcome. In the early 1970s this is what Jobs and Wozniak designed and
+    began to sell. Using false names, (Berkeley Blue and Oaf Tob), Jobs and Wozniak
+    entered into the illegal world of Phone Freaking.
+
+
+    Wozniak and Jobs started with Phone Freaking because they were interested in the
+    challenge it gave them to take apart and figure out how it works, and then find
+    ways around it. By the time they did figure it out, they also figured out that
+    they could'
+  - '[PAGE 39]
+
+
+    make money off of it, and that is when they began the illegal action of selling
+    their work. Now motivated by the new technical challenges that were coming out
+    with the advancement of technology, Wozniak and Jobs abandoned their life of crime
+    and moved on different challenges. In an interview with Jobs, he claimed that
+    if it hadn''t been for the Blue Boxes that he and Wozniak experimented on, Apple
+    would not exist today.
+
+
+    Blue Boxes became extinct when the telephone companies began to adopt an opt of
+    band signal that would spate and dedicate the connections that were used for exchange
+    to exchange any communication.
+
+
+    By today''s definition, Wozniak and Jobs would be considered hackers. But, were
+    they really hackers or were they just skilled programmers? The line is thin in
+    deciphering which side they fell on. They did know that they were engaging in
+    illegal activities with their Blue Box. Is the only reason that they are not considered
+    hackers because they are now a household name thanks to creating Apple?
+
+
+    nOn the other hand, things could have turned out very differently for Wozniak
+    and Jobs. Due to all the hacks that have happened within the government now days,
+    their Blue Boxes and other hacking antics would be far less likely to just be
+    dismissed as harmless rebellion thanks to people feeling more sensitive to our
+    privacy and communications. In fact, it is very possible that if Wozniak and Jobs
+    had continued with their illegal activities, they would have ended up serving
+    time.
+
+
+    But, since they learned a lot thanks to the use of their blue boxes. Without having
+    dabbled in the darker side of hacking, Wozniak and Jobs would have never created
+    the worldwide company that we all know and enjoy today.'
+  - '[PAGE 40]
+
+
+    # Conclusion
+
+
+    Thank you again for downloading this book! We greatly appreciate it.
+
+
+    I hope this book was able to help you to gain some knowledge on what it means
+    to be a hacker as well as how you can hack a wireless network and a computer.
+    Not only that, but how you can be able to crack passwords in order to get into
+    different systems.
+
+    The next step is to further your your knowledge and try and hack into a computer
+    system or wireless network.
+
+
+    Please remember that hacking is illegal and that it should not be done! If you
+    are going to attempt to hack into any system, have the system administrator’s
+    permission before you even begin to formulate a plan on how you are going to expose
+    their weaknesses.
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_40_0.png)
+
+
+    Finally, if you enjoyed this book, then I''d like to ask you for a favor, would
+    you be kind enough to leave a review for this book on Amazon? It''d be greatly
+    appreciated!
+
+
+    Click here to leave a review for this book on Amazon!
+
+
+    Thank you and good luck enhancing your hacking skills!'
+  - '[PAGE 41]
+
+
+    # Check Out My Other Books
+
+
+    Congratulations on learning a new programming language. Now the next step would
+    be to continue to practice your new skills and I would like to strongly recommend
+    that you learn other programming languages so that you will become a top programmer.
+
+
+    I have more books that are part of the “A Code Like a Pro” series that you can
+    download.
+
+    —Here are the Links to my other books: –
+
+
+    A CODE LIKE A PRO BOOK SERIES
+
+
+    +   PYTHON MASTERY – A CODE LIKE A PRO GUIDE FOR PYTHON BEGINNERS
+
+
+    +   ANGULARJS – A CODE LIKE A PRO GUIDE
+
+
+    OTHER BOOKS
+
+
+    +   WINDOWS 10 MASTERY – THE ULTIMATE WINDOWS 10 MASTERY GUIDE
+
+
+    +   LINUX MASTERY – THE ULTIMATE LINUX OPERATING SYSTEM AND COMMAND LINE MASTERY
+    GUIDE
+
+
+    If the links do not work, for whatever reason, you can simply search for these
+    titles on the Amazon website to find them.'
+  md: '
+
+    The United States prohibits any unauthorized use or damage of a protected computer.
+    A protected computer would be a computer that is used by a financial institute
+    or the US Government.
+
+
+    The computer can also be used in affecting interstate or foreign commerce or even
+    communication. The computer does not have to be located in the United States if
+    it is used for any type of interstate or foreign commerce.
+
+
+    The maximum imprisonment can be one year in a federal prison or a fine that is
+    not more than $5,000.
+
+
+    # Chapter Nine: Wozniak and Jobs
+
+
+    As mentioned in the previous chapter, Wozniak and Jobs used hacking in order to
+    help improve technology. In this chapter, you are going to learn how they were
+    able to do this.
+
+
+    Just like in a previous chapter, Jobs and Wozniak used a popular way of hacking
+    in order to break into different computers.
+
+
+    Even though they used their hacking for good, what they were doing was still illegal!
+
+
+    Back in the 60s the term hacker was used to describe someone who was an expert
+    at programming. The years went on and more people got into hacking, the skills
+    used in order to gain access to a system from being “completely innocent” to the
+    people who used it for illegal activity on the computer. Either way you look at
+    it, the ones who use their skills to program a computer and make it better, the
+    ones who use their skills in order to gain access to a person’s private information,
+    they are both skilled individuals. Some of the biggest names in technology started
+    out “hacking” in the beginning days of computers.
+
+
+    At the Computer History Museum in California, there is a device on display called
+    a Blue Box. This was used to interrupt phone signals and was invented by two hackers
+    that are extremely well known today – Steve Jobs and Steve Wozniak.
+
+
+    As stated, the Blue Box was used to interrupt phone signals. It was a hacking
+    activity that is known as phone freaking.
+
+
+    Today, phone calls are a series of connections that place you through to whom
+    you wish to talk to. Back in the beginning, this was done by a human operator
+    who could help you get through to the person you wanted to speak with. When the
+    automatic exchanges come into place, you route your call to its destination by
+    communicating with one another. The automatic exchanges used a series of audible
+    tones known as signaling which came around in the 60s and 70s.
+
+
+    The tones that phones used proved to be the weak spot that hackers exploited.
+
+
+    The blue box emulates the signaling tones used by telephone exchanges. When these
+    tones are played through a speaker that is connected to the phone’s handset, the
+    automatic exchanges are fooled into believing that they are receiving a signal.
+    Anything became possible once the hacker understood all the signaling tones that
+    were used.
+
+
+    A hacker could figure out how a call was routed by the billing companies, overriding
+    the blocking restrictions that a phone company had in place. And this would help
+    them to overcome. In the early 1970s this is what Jobs and Wozniak designed and
+    began to sell. Using false names, (Berkeley Blue and Oaf Tob), Jobs and Wozniak
+    entered into the illegal world of Phone Freaking.
+
+
+    Wozniak and Jobs started with Phone Freaking because they were interested in the
+    challenge it gave them to take apart and figure out how it works, and then find
+    ways around it. By the time they did figure it out, they also figured out that
+    they could make money off of it, and that is when they began the illegal action
+    of selling their work. Now motivated by the new technical challenges that were
+    coming out with the advancement of technology, Wozniak and Jobs abandoned their
+    life of crime and moved on different challenges. In an interview with Jobs, he
+    claimed that if it hadn''t been for the Blue Boxes that he and Wozniak experimented
+    on, Apple would not exist today.
+
+
+    Blue Boxes became extinct when the telephone companies began to adopt an opt of
+    band signal that would spate and dedicate the connections that were used for exchange
+    to exchange any communication.
+
+
+    By today''s definition, Wozniak and Jobs would be considered hackers. But, were
+    they really hackers or were they just skilled programmers? The line is thin in
+    deciphering which side they fell on. They did know that they were engaging in
+    illegal activities with their Blue Box. Is the only reason that they are not considered
+    hackers because they are now a household name thanks to creating Apple?
+
+
+    On the other hand, things could have turned out very differently for Wozniak and
+    Jobs. Due to all the hacks that have happened within the government now days,
+    their Blue Boxes and other hacking antics would be far less likely to just be
+    dismissed as harmless rebellion thanks to people feeling more sensitive to our
+    privacy and communications. In fact, it is very possible that if Wozniak and Jobs
+    had continued with their illegal activities, they would have ended up serving
+    time.
+
+
+    But, since they learned a lot thanks to the use of their blue boxes. Without having
+    dabbled in the darker side of hacking, Wozniak and Jobs would have never created
+    the worldwide company that we all know and enjoy today.
+
+
+    # Conclusion
+
+
+    Thank you again for downloading this book! We greatly appreciate it.
+
+
+    I hope this book was able to help you to gain some knowledge on what it means
+    to be a hacker as well as how you can hack a wireless network and a computer.
+    Not only that, but how you can be able to crack passwords in order to get into
+    different systems.
+
+
+    The next step is to further your your knowledge and try and hack into a computer
+    system or wireless network.
+
+
+    Please remember that hacking is illegal and that it should not be done! If you
+    are going to attempt to hack into any system, have the system administrator’s
+    permission before you even begin to formulate a plan on how you are going to expose
+    their weaknesses.
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_40_0.png)
+
+
+    Finally, if you enjoyed this book, then I''d like to ask you for a favor, would
+    you be kind enough to leave a review for this book on Amazon? It''d be greatly
+    appreciated!
+
+
+    Click here to leave a review for this book on Amazon!
+
+
+    Thank you and good luck enhancing your hacking skills!
+
+
+    # Check Out My Other Books
+
+
+    Congratulations on learning a new programming language. Now the next step would
+    be to continue to practice your new skills and I would like to strongly recommend
+    that you learn other programming languages so that you will become a top programmer.
+
+
+    I have more books that are part of the “A Code Like a Pro” series that you can
+    download.
+
+    —Here are the Links to my other books: –
+
+
+    A CODE LIKE A PRO BOOK SERIES
+
+
+    - PYTHON MASTERY – A CODE LIKE A PRO GUIDE FOR PYTHON BEGINNERS
+
+    - ANGULARJS – A CODE LIKE A PRO GUIDE
+
+
+    OTHER BOOKS
+
+
+    - WINDOWS 10 MASTERY – THE ULTIMATE WINDOWS 10 MASTERY GUIDE (Wait, WINDOWS 10
+    MASTERY – THE ULTIMATE WINDOWS 10 MASTERY GUIDE)
+
+    - LINUX MASTERY – THE ULTIMATE LINUX OPERATING SYSTEM AND COMMAND LINE MASTERY
+    GUIDE
+
+
+    If the links do not work, for whatever reason, you can simply search for these
+    titles on the Amazon website to find them.
+
+    '
+  mdcn: '
+
+
+    美国禁止对受保护的计算机进行任何未经授权的使用或破坏。受保护的计算机是指金融机构或美国政府使用的计算机。
+
+
+    该计算机也可用于影响州际或外国贸易，甚至是通信。如果计算机用于任何类型的州际或外国贸易，则它不需要位于美国。
+
+
+    最高刑期可是在联邦监狱监禁一年，或处以不超过5,000美元的罚金。
+
+
+    # 第九章：沃兹尼克与乔布斯
+
+
+    正如上一章提到的，沃兹尼克和乔布斯利用黑客技术来帮助改进技术。在本章中，你将学习他们是如何做到的。
+
+
+    与之前的章节一样，乔布斯和沃兹尼克使用了一种流行的黑客方法来进入不同的计算机。
+
+
+    尽管他们使用黑客技术是为了善，但他们所做的仍然是非法的！
+
+
+    在60年代，“黑客”一词曾被用来描述精通编程的人。随着时间的推移，越来越多的人进入黑客领域，获取系统访问的人群也从“完全无辜”的人变成了那些在计算机上进行非法活动的人。无论你如何看待，那些利用技能编写程序并改进它的人，以及那些利用技能获取他人私人信息的人，都是高技能的人才。科技领域一些最著名的人物在计算机早期都是从“黑客”起家的。
+
+
+    在加州的计算机历史博物馆，展出了一个名为“蓝盒”（Blue Box）的设备。它被用于中断电话信号，由两位今天非常出名的黑客发明——斯蒂夫·乔布斯和斯蒂夫·沃兹尼克。
+
+
+    如所述，蓝盒被用于中断电话信号。这是一种“电话欺骗”（phone freaking）的黑客活动。
+
+
+    今天，电话通话是一系列连接，将你引导至你想要通话的人。最初，这是由人工操作员完成的，他们可以帮助接通你想找的人。随着自动交换机的出现，你通过相互通信将通话路由到目的地。自动交换机使用一系列被称为“信令”的音频音调，这在60和70年代出现。
+
+
+    电话使用的音调被证明是黑客利用的弱点。
+
+
+    蓝盒模拟了电话交换使用的信令音调。当这些音调通过连接到电话筒的扬声器播放时，自动交换机会被欺骗，认为它们正在接收信号。一旦黑客理解了所有使用的信令音调，一切都变得可能。
+
+
+    黑客可以弄清楚计费公司如何路由通话，绕过电话公司设置的阻止限制。这可以帮助他们克服障碍。20世纪70年代初，这就是乔布斯和沃兹尼克设计并开始销售的产品。使用假名（Berkeley
+    Blue和Oaf Tob），乔布斯和沃兹尼克进入了电话欺骗的非法世界。
+
+
+    沃兹尼克和乔布斯开始从事电话欺骗是因为他们对这带来的挑战感兴趣——拆解并弄清其工作原理，然后找到绕过它的方法。他们弄明白时，也发现可以从中赚钱，他们就开始了销售作品的非法行为。现在，受到技术进步带来的新技术挑战的激励，沃兹尼克和乔布斯放弃了犯罪生活，转向了不同的挑战。在对乔布斯的一次采访中，他声称，如果没有他和沃兹尼克实验过的蓝盒，苹果公司今天就不会存在。
+
+
+    当电话公司开始采用一种带外信号时（这种信号会分离并专门用于交换任何通信的连接），蓝盒就消亡了。
+
+
+    按照今天的定义，沃兹尼克和乔布斯会被视为黑客。但是，他们真的是黑客，还是只是熟练的程序员？在判断他们属于哪一方时，界限非常模糊。他们确实知道自己正在利用蓝盒从事非法活动。他们没有被视为黑客的唯一理由是因为他们因为创立苹果公司而成为了家喻户晓吗？
+
+
+    另一方面，沃兹尼克和乔布斯的结果可能会完全不同。由于如今政府内部发生的所有黑客事件，由于人们对隐私和通信更加敏感，他们的蓝盒和其他黑客行径将不太可能仅仅被斥为无害的反叛。事实上，如果沃兹尼克和乔布斯继续他们的非法活动，他们很可能会入狱。
+
+
+    但是，由于他们使用蓝盒并学到了很多东西。如果没有涉足黑客的黑暗面面，沃兹尼克和乔布斯永远不会创造出我们今天所认识和享受的全球性公司。
+
+
+    # 结论
+
+
+    再次感谢下载本书！我们不胜感激。
+
+
+    希望这本书能够帮助你获得关于什么是黑客的知识，以及你如何黑入无线网络和计算机。不仅如此，还有你如何破解密码以进入不同的系统。
+
+
+    下一步是进一步增加你的知识，并尝试黑入计算机系统或无线网络。
+
+
+    请记住，黑客行为是非法的，不应该这样做！如果你打算尝试黑入任何系统，在开始制定如何暴露他们漏洞的计划之前，请获得系统管理员的许可。
+
+
+    ![](img/26215855e4000962a48e12eab4e94c9f_40_0.png)
+
+
+    最后，如果你喜欢这本书，我想请你帮个忙，你可以在亚马逊上给这本书留个评论吗？我们将不胜感激！
+
+
+    点击此处在亚马逊上为这本书留评！
+
+
+    感谢并祝你提升黑客技能顺利！
+
+
+    # 查看我的其他书籍
+
+
+    祝贺你学习了一门新的编程语言。现在的下一步继续练习你的新技能，我强烈建议你学习其他编程语言，这样你就能成为一名顶尖程序员。
+
+
+    我还有属于“A Code Like a Pro”系列的书籍可以下载。
+
+    ——以下是我其他书籍的链接：——
+
+
+    A CODE LIKE A PRO BOOK SERIES
+
+
+    - PYTHON MASTERY – A CODE LIKE A PRO GUIDE FOR PYTHON BEGINNERS
+
+    - ANGULARJS – A CODE LIKE A PRO GUIDE
+
+
+    OTHER BOOKS
+
+
+    - WINDOWS 10 MASTERY – THE ULTIMATE WINDOWS 10 MASTERY GUIDE (Wait, WINDOWS 10
+    MASTERY – THE ULTIMATE WINDOWS 10 MASTERY GUIDE)
+
+    - LINUX MASTERY – THE ULTIMATE LINUX OPERATING SYSTEM AND COMMAND LINE MASTERY
+    GUIDE
+
+
+    如果由于某种原因链接无效，你可以在亚马逊网站上搜索这些标题来找到它们。
+
+
+    '
+  merge: 0
