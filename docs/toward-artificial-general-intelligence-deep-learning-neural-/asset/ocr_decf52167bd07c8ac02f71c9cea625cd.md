@@ -1,0 +1,13 @@
++   - Predicting client churn can also be done with naive Bayes. By indicating the dangers, naive Bayes can help organizations identify which clients will most likely stop using their services. This forecast can be formed based on client demographic information, transaction histories, and other behavioral patterns. This aids companies in staying one step ahead and implementing the necessary adjustments.
+
+Sentiment analysis frequently makes use of naive Bayes. The system can determine whether a sentence is a positive or negative ken. This is a helpful tool for businesses to quickly and accurately learn what customers think about their goods or services.
+
+Naive Bayes is an ML technique with many applications that is very adaptable and adaptive. It can be used for sentiment analysis, text classification, customer churn prediction, etc. Due to this, it is a standard option for many data science initiatives.
+
+# ### 3.8 K-nearest neighbors
+
+The K-nearest neighbors (K-NN) algorithm uses neighborhood relationships among data points as a classification and regression technique to find groups and forecast outcomes. This well-known ML technique is used to find the dataset’s data point that most closely matches a given data point. By examining a batch of data points, K-NN finds the k-nearest issues with the correct labels. If the k-nearest points are all marked as positive, then the current moment is also celebrated as positive. These points serve as reference points for the current data point. The K-NN act as a filter and advise on categorizing the present spot. K-NN is a straightforward but effective technique that does not need much training or preprocessing of the data. It is simple to implement and does not need complex algebra or statistics [22]. The algorithm is typically less accurate than other more complex approaches like decision trees and neural networks because of its simplicity. K-NN can categorize brand-new data points, spot trends in a dataset, find outliers, and forecast brand-new data points. K-NN is a well-liked option for various ML tasks, including image classification, anomaly detection, time series forecasting, and customized recommendation systems due to its versatility.
+
+# #### 3.8.1 K-NN algorithm
+
+The K-NN algorithm is a classification system that groups objects according to their characteristics or qualities. It is a nonparametric approach, which implies that it does not rely on any presumptions regarding how the data are distributed. Instead, it examines the nearest data points and applies their labels to those points to classify the

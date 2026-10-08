@@ -1,0 +1,13 @@
+# ### 10.5.3 Collaborative robots (cobots) and human-robot interaction
+
+A collaborative robot, also known as cobot, is an intelligent robotic platform equipped with sensors and other features to allow it to interact with humans in a shared workspace in a safe and effective manner. The cobots can be used for various applications ranging from industrial manufacturing to healthcare, retail, construction, logistics, and other industries. They can also be used in hybrid systems, where humans and robots work alongside each other to optimize production processes. In order to ensure safety and effectiveness of their operations, cobots are generally programmed with safety protocols to protect those that operate them. Human-robot interaction (HRI) is the way in which humans communicate, interact with, and collaborate with robots. HRI plays an important role in the development and deployment of any type of service and industrial robot, especially those that are meant to be used with humans in close proximity [18]. Different forms of HRI can be implemented in order to optimize safety, performance, and productivity. These forms include robotic teach and playback, tactile feedback, voice or visual recognition, and haptic interfaces.
+
+# ### 10.5.4 Workforce implications and ethical considerations in AI manufacturing
+
+Workforce implications of AI in manufacturing depend largely on the types of jobs that will be created by its implementation. Some job functions, such as those requiring physical labor, may be replaced entirely by AI solutions while other job functions such as those requiring higher-level skills may be augmented or enhanced. As AI continues to develop, it is likely that current job functions may become obsolete as new job functions are created to support AI operations [19].
+
+Ethical considerations in AI manufacturing involve the use and deployment of AI solutions, which leads to questions such as who has the right to control and benefit from the technology, what are the implications for workers’ rights and safety, and how does one ensure responsible use of AI systems. While there are many ethical considerations to be made around the use of AI in manufacturing, there are also potential advantages, such as improved quality control, enhanced production capabilities, and improved customer service.
+
+# ## 10.6 AI in customer experience and marketing
+
+AI is becoming increasingly important in customer experience (CX) and marketing. AI can help businesses capture, interpret, and use customer data more accurately and quickly than ever before. AI technologies such as NLP, sentiment analysis, predictive

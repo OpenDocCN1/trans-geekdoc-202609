@@ -1,0 +1,13 @@
+# 10.7.4 Ethical considerations and challenges in AI education
+
+Ethical considerations and challenges in AI education refer to the ethical implications associated with the development, use, and teaching of AI. These ethical considerations involve questions of fairness, trust, privacy, security, and the role of humans in a society increasingly occupied by intelligent machines. AI education must ensure that students learn about these ethical issues and that things such as bias and potential for misuse are addressed. Additionally, educators must be aware that AI can cause unintended consequences and must be careful to explain the implications of AI's use. Furthermore, educators must be alert to potential ethical issues when teaching AI due to its potential to automate certain tasks and take the place of humans in many areas. Lastly, teachers must develop methods for teaching AI that are safe and transparent to ensure that students are aware of their own biases and the potential risks of AI.
+
+# 10.8 AI in agriculture and food industry
+
+AI is increasingly being used in the agriculture and food industry to increase efficiency by automating processes and improving overall production throughout the supply chain. AI can help identify problems in the supply chain that humans may not have noticed, allowing farmers to adjust and improve their processes accordingly. AI can also help increase crop yields and reduce food waste, which can help reduce global poverty. By improving the accuracy of inventory management, AI can also reduce food contamination and help combat foodborne illnesses. AI can also help with more accurate labeling of food products so that customers can select healthy options. Finally, AI can help farmers predict weather patterns more accurately, allowing them to adjust their farming practices accordingly.
+
+# 10.8.1 Precision farming and AI-driven crop management
+
+Precision farming is a farming management concept based on observing, measuring, and responding to inter- and intra-field variability in crops. It uses technology such as GPS, remote sensing, tractor-mounted sensors, and computer modelling to identify and respond to variability in crops.
+
+AI-driven crop management leverages the use of AI and ML technologies to help farmers monitor, analyze, and manage their crops in real time [25]. The technology can process large amounts of data rapidly and accurately. This helps farmers improve the yield and quality of their crops, while reducing labor, cost, and environmental impact. AI-driven crop management systems enable farmers to collect data from sensors on their fields, and using ML algorithms, provide valuable insights into the health of

@@ -1,0 +1,4 @@
++   [33] Lee, D. H., Woo, S. E., Jung, M. W., & Heo, T. Y. (2022). Evaluation of odor prediction model performance and variable importance according to various missing imputation methods. Applied Sciences, 12(6), 2826.
+[34] Markus, A. F., Kors, J. A., & Rijnbeek, P. R. (2021). The role of explainability in creating trustworthy artificial intelligence for health care: A comprehensive survey of the terminology, design choices, and evaluation strategies. Journal of Biomedical Informatics, 113, 103655.
+[35] Orhan, K., Bayrakdar, I. S., Ezhov, M., Kravtsov, A., & Özyürek, T. A. H. A. (2020). Evaluation of artificial intelligence for detecting periapical pathosis on cone-beam computed tomography scans. International Endodontic Journal, 53(5), 680–689.
+[36] Schwartz, R., Dodge, J., Smith, N. A., & Etzioni, O. (2020). Green ai. Communications of the ACM, 63(12), 54–63.

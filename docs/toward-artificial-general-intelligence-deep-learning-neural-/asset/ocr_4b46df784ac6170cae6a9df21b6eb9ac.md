@@ -1,0 +1,13 @@
+in productivity as employers can reduce the amount of time it takes to complete tasks and increase return on investments. This increases the cost effectiveness of the business model and can lead to greater profits overall. It can also lead to the development of new products and services that would not have been possible to develop before. Automation is thus seen as an important component in business strategy. The automation can lead to increased job satisfaction as employees no longer need to complete tedious and repetitive tasks, freeing up more time for creative tasks and problem solving [29]. This can lead to increased morale in the workplace and enhance productivity. The automation has had a positive impact on businesses, from reducing the need for manual labor to increasing productivity and job satisfaction. However, it has also had a negative impact on some workers, reducing the number of manual labor jobs available and impacting those who may have been employed in those jobs.
+
+# 9.7.3 AI and inequality: addressing disparities and access
+
+AI and inequality are two closely related concepts. AI can help address disparities and access for people across different segments of society. AI can help in mitigating disparities and granting access to marginalized populations – for example, by providing more personalized education. AI can also help in providing access to better healthcare services and financial services for underserved populations. Additionally, AI can be used to identify trends in a wide variety of datasets to better understand how inequality exists within communities. AI can also be used to develop policies and programs to reduce disparities and increase access for vulnerable populations. Finally, AI can be used to monitor the effectiveness of such policies and ensure that they are adequately addressing the needs of all groups in society.
+
+# 9.7.4 Ethical considerations in AI deployment in developing countries
+
+The deployment of AI in developing countries presents ethical considerations that should not be overlooked. These ethical considerations include, but are not limited to:
+
++   - Ensuring that AI is deployed in an equitable and ethical manner, free from bias and discrimination. This means ensuring that AI-based decision-making abides by the same ethical code of conduct that would be expected from humans.
+- Giving consideration to the impact that the deployment of AI might have on an individual or a community. AI has the potential to be incredibly powerful and this power should be used responsibly.
+- Allowing individuals and communities the right to decide whether or not they accept or reject technology. This should be done in such a way that gives autonomy and dignity to the people it affects.

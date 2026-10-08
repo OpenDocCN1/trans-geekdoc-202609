@@ -1,0 +1,13 @@
+sets. It is typically used when there is a significant imbalance in the data, such as when classes are unevenly distributed. Stratified cross-validation is a type of cross-validation that attempts to address this problem by dividing the data into subsets according to the class labels [6]. Then, it partitions the subsets into testing and validation sets. As a result, each sample is guaranteed to be represented in both the validation and test sets. This strategy aids in ensuring that a model is reflective of the entire dataset, rather than just the classes with the highest percentages.
+
+# 7.2.2.1 Definition and purpose of stratified cross-validation
+
+For evaluating and contrasting several models or approaches, machine learning employs a sort of cross-validation called stratified cross-validation. By dividing the data into various folds, it becomes easier to assess how well machine learning models are performing. With stratified cross-validation, each class is represented equally in both the training and test sets for each fold [7]. As a result, the model will be tested and trained using data sets that are representative of the entire population. Additionally, when working with tiny datasets, it can aid in preventing bias or distorted outcomes.
+
+# 7.2.2.2 Application in handling imbalanced datasets
+
+In handling imbalanced datasets, application is a set of tools and techniques that can be used to deal with the problem of imbalanced datasets. These tools and techniques can help balance the data by either adding more minority class examples or by removing majority class examples. Some of these techniques include downsampling, clustering, and oversampling. When a dataset is downsampled, instances of the majority class are randomly removed while remaining examples of the minority class are retained. Clustering algorithms can be used to assign similar examples into clusters and remove outliers [8]. Oversampling involves creating additional instances of the minority class from existing examples. The application of these tools and techniques can help reduce the bias in machine learning models trained on imbalanced datasets.
+
+# 7.2.3 Leave-one-out cross-validation (LOOCV)
+
+Leave-one-out cross-validation (LOOCV) is a cross-validation technique used to assess the accuracy of predictive models. The procedure comprises splitting the data into training and test sets, with one sample in each test set. After training with the training set, the data is compared to the single sample of the test set. Since this is repeated for each sample in the data collection, all samples can be used in both the training and

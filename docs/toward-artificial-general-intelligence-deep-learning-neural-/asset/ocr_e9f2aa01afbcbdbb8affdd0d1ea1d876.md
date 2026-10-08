@@ -1,0 +1,13 @@
++   - The cosine similarity distance metric, which is more frequently employed for text processing applications, quantifies the angle between vectors. NLP activities like sentiment analysis and document categorization are where it is most commonly used.
+
+- The ratio of the difference between two series of values is calculated using the Bray-Curtis distance metric. It is typically used when evaluating ecological distance metrics to compare the composition of various organisms in a dataset.
+
+K-NN algorithms provide various distance measures with unique properties and applications. Accurate outcomes with the K-NN method depend on selecting the appropriate distance metric for the task.
+
+# 3.8.3 Choosing the optimal K-value
+
+The best K-value must be chosen for an ML algorithm to be accurate and have a low prediction error. K determines how many adjacent data points are used to produce a prediction. Since more data points can be considered for each prediction with a higher K-value, predictions are typically more accurate. The algorithm may become too influenced by the constraints of the training data rather than the patterns of the data as a whole, if a higher K-value is used. This is known as overfitting. The elbow approach is a reliable way to find the ideal K-value. Finding the “elbow” point, or the point at which the error rate starts to plateau, entails plotting a graph of the mean error rate versus the K-value. This is an example of the excellent K-value, which offers the optimum compromise between precision and overfitting. The dimensionality problem should also be considered when choosing a K-value [24]. This is the phenomenon where more K-values (neighbors) are needed to represent each point, and more qualities (variables) appropriately are present in the data set. Choosing a K-value that considers the number of variables present in the data set is crucial because doing otherwise can result in overfitting. Finally, domain expertise should also be considered while selecting an outstanding K-value. For instance, a more considerable K-value might be chosen in a medical dataset to produce a more precise forecast. The elbow approach should be used to calculate the ideal K-value, considering the number of variables in the data collection and the domain’s needs. These elements can be considered to select a K-value that strikes a balance between overfitting and precision.
+
+# 3.8.4 Applications and use cases
+
+Powerful ML algorithms like K-NN are frequently employed for supervised and unsupervised tasks. K-NN is a straightforward yet effective algorithm that may be used for various issues across numerous fields. In classification and regression problems, it is

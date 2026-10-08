@@ -1,0 +1,13 @@
+ability of the suppliers, pricing, delivery times, and more. The use of automation can also provide visibility into historical supplier data in order to make the best decisions.
+
+# ## 13.8 AI-powered automation in strategic decision making
+
+AI-powered automation in strategic decision-making is the use of AI systems to enable and support the automated evaluation and selection of best-fit outcomes that are derived from strategic decision making processes. AI-powered automation is beneficial to strategic decision makers as it allows for complex analysis of information, data, and trends. This process can lead to smart and intelligent decision-making practices that are both effective and efficient in terms of time and resources. AI-powered automation can also take into account multiple sources and opinions (such as customer feedback) when it comes to making decisions, thus reducing risk and creating better outcomes [24]. Additionally, AI-powered automation facilitates risk assessments, cost estimations, and resource allocation. This helps strategic decision makers to accurately assess the situation, enabling them to make better decisions and plans.
+
+# ### 13.8.1 AI-enabled market analysis and trend identification
+
+AI-enabled market analysis and trend identification is the application of AI technologies to gain insights into current market trends and to make predictions about future market conditions. The technology works by collecting large amounts of data from various sources, including news reports, financial documents, customer reviews, surveys, and other types of data, and then using this data to identify trends and uncover valuable insights. AI-enabled market analysis can help identify new opportunities, improve marketing strategies, and make better investment decisions [25]. This technology can also help anticipate customer needs and tailor products and services to fit those needs, as well as to predict customer behavior. By leveraging the power of AI, businesses can gain a real-time understanding of their market and take advantage of opportunities more quickly than ever before.
+
+# ### 13.8.2 Automated competitive intelligence and strategy formulation
+
+Automated competitive intelligence and strategy formulation are interrelated practices that allow businesses to monitor, develop, and adjust competitive strategies in real time. Competitive intelligence is the term for the process of collecting, analyzing,

@@ -1,0 +1,13 @@
+The goal of artificial intelligence (AI), on the other hand, is to make computers intelligent by developing systems that can learn and solve problems. It uses techniques such as neural networks, natural language processing, and Bayesian networks to create systems that are able to reason and react in complex environments. AI is focused on replicating certain cognitive abilities, enabling the development of more intelligent computer systems, which can engage in tasks that would require higher level cognitive skills from a human. AI is seen in applications such as self-driving cars, robotics, and facial recognition [23]. The analytics is focused on the use of data to analyze trends and inform decision-making, while AI utilizes techniques to create intelligent computer systems to solve complex problems.
+
+# **7.4.3 Choosing between cross-validation and bootstrapping based on data characteristics**
+
+Cross-validation and bootstrapping are both methods of assessing the accuracy of predictive models. The primary difference lies in the way in which sample data is divided and used for the purpose of estimation. Cross-validation separates the data into $n$ equal datasets known as folds, as opposed to bootstrapping, which divides the data into several smaller datasets using random sampling with replacement.
+
+The type of data and the features of the problem determine which approach should be used. Cross-validation is preferable when the training dataset is large enough and there is enough data to divide into multiple folds for testing. Bootstrapping is more appropriate for smaller datasets, where the data points are not as homogeneous as in larger datasets. Bootstrapping also offers more flexibility in how samples are selected, allowing for the inclusion of outliers or rare values.
+
+Both cross-validation and bootstrapping are effective techniques for assessing the accuracy of predictive models. The selection of one technique over the other should be based on the characteristics of the data and the nature of the problem.
+
+# **7.5 Advanced techniques and variations**
+
+Advanced techniques and variations are methods of problem-solving that can be used to further develop and refine the solution to a given problem. These techniques and variations can be used to enhance the problem-solving process, making it easier or more effective, and ultimately improving the overall solution [24]. Complex techniques and their adaptations include heuristics, linear programming, dynamic programming, genetic algorithms, simulated annealing, and others. Each of these methods has a distinct set of steps and algorithms for use in the solution process, as well as a unique set of benefits and drawbacks.

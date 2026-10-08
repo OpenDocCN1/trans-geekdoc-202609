@@ -1,0 +1,13 @@
+# 8.9 Advanced ensemble approaches
+
+Advanced ensemble techniques combine multiple machine learning algorithms to create a more powerful predictive model. In order to create an aggregate model that is more precise and reliable than any single individual model, this typically entails integrating various models. For classification, regression, and clustering problems, advanced ensemble approaches can be applied. This strategy makes use of well-liked methods like bagging, boosting, and stacking. These methods combine data from various models to get a final prediction, which is intended to reduce overfitting of a model. The prediction performance of the individual models is enhanced by the use of an ensemble technique since the combination of numerous models can capture more pertinent information and suppress irrelevant information.
+
+# 8.9.1 Gradient boosting machine (GBM) variants
+
+A potent machine learning approach called Gradient boosting machine (GBM) is used to create predictive models from an ensemble of weak learners. It is a supervised learning algorithm that hones on a weak learner, and then combines them in an ensemble to create a stronger, more accurate model. GBM works by taking the errors from the previously produced model as inputs in the new model. This in turn reduces error and improves the overall model [27].
+
+GBM comes in a variety of forms, including XGBoost, LightGBM, and CatBoost. A distributed gradient-boosting toolkit called XGBoost uses parallelization to speed up model training times. A novel gradient-boosting system called LightGBM makes use of a tree-based learning technique to speed both training and inference. It also includes a variety of cost functions, regularization, and shrinkage that further assist in reducing the model run time. Finally, CatBoost is a version of GBM that is specifically designed to work with categorical data, allowing information to be uniquely encoded in order to learn more effectively from a dataset.
+
+# 8.9.2 Stacked ensembles with metalearners
+
+A form of machine learning technique called stacked ensembles with metalearners is used to ensemble models and increase prediction accuracy. This method combines multiple base models (usually referred to as ‘learners’) to create a single, more robust model (called ‘metalearner’). The base models can be of any type, such as deep learning, random forests, or logistic regression. The metalearner is supervised-trained on the predictions of all these base models, while the other learners in the ensemble are trained on a subset of the data (or even separately) [28]. In many machine learning
