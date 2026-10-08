@@ -1,0 +1,13 @@
+# 212 Ravi Rastogi, Leena Arya, and Yogesh Sharma
+
+may become ineffective in the quantum world, leaving awful awful consequences as health data is exposed to unauthorized operations.
+
+Subsequently, the healthcare sector is especially vulnerable to cybersecurity attacks when facilities handle sensitive and high-value data. EHRs, medical images, and personal data are critical assets that cybercriminals wish to steal, as they are highly confidential and valuable; hence, they prefer exploiting vulnerabilities to gain from them financially or maliciously. A healthcare data breach is a sign of losing patient privacy and trust, and it will also cause many legal, financial, and reputational troubles for healthcare organizations [23].
+
+The era of Industry 5.0 brings many important questions. Thus, in such a period, the creation and use of quantum-resistant solutions to secure the data of healthcare systems can be considered a vital necessity. Quantum-safe cryptographic algorithms are specifically made to protect services against quantum adversaries in addition to the conventional threat. This could lead to a much-needed secure environment for the healthcare system. These quantum-secure techniques are based on the principles of quantum mechanics and built-in defense mechanisms that provide at least a basic level of protection for data from future attacks when quantum computers become
+
+Preventing new cybersecurity issues involves the implementation of quantum-safe algorithms, which will reduce the risks of exchanging healthcare data. By including, individuals' personal health information will be adequately hidden from unauthorized users' sight, which certainly guarantees the implementation of the security policy, as well as needs and regulatory rules regarding privacy policy at the same time [24]. Additionally, allocating resources to develop quantum-safe cryptocurrency is the main source of betting on fresh cybersecurity tools that strengthen the ability of the healthcare industry to handle any possibly rising issues in this complicated Industry 5.0 scope.
+
+# 12.7 Innovations in healthcare cybersecurity
+
+As cyberthreats evolve and the healthcare sector transform into a digital platform, continuous innovations in cybersecurity are necessary for ensuring the protection of patient data, safeguarding critical infrastructure, and preserving an uninterrupted delivery of quality health care. As such, the crossroads between technology and health care have inspired many creative programs to address various cyberthreats in the health sector [5].

@@ -1,0 +1,13 @@
+# 14.2 Applications of quantum computing in healthcare
+
+Quantum computers are faster at data analysis than current models. Hence, the timely identification of population-level solutions reduce the overall need for hospital-based care during the pandemic. For different healthcare supplies coordination such as the transfer of plasma from recovered COVID-19 patients to comprehensive and well-funded diagnostic tests, some equilibrium conditions and control strategies are developed using data science and agent-based testing [18].
+
+Moreover, a large-scale, multifunctional, interconnected quantum computer can be used to understand convalescent plasma molecular composition and find effective treatments. Specifically, quantum technology can quickly optimize the composition in a real-time feedback loop and generate convalescent blood in desired pharmacological limits, including safety properties. [19]
+
+Regarding detection of new infectious diseases, it empowers to identify and in real time assess epidemiologically linked contacts of positive cases (i.e. the identification and tracking of people who have been exposed to individuals testing for a communicable disease) which is an essential strategy for infectious disease control [16]. For instance, an accurate and continuous local assessment and response with strategically scheduled tightening of movement controls in hospitals and other traffic, proximal, and well-mixed spaces. Quantum computing can also significantly enhance care planning and medical services coordination. For example, it enables developing an agent-based network model to share clinical resources in general hospitals and community healthcare centres to help alleviate the emergency room strain. [20]
+
+Quantum computers can break cryptographic codes that traditional computers cannot [21]. However, it can revolutionize health care too. It can generate new simulated materials in the form of drugs, vaccines, molecules for genetics, brainmachine interfaces, and many others could potentially reduce drug discovery costs and development timelines [22]. Seeing quantum computing is powerful processing platform holds potential in myriad of fields like disease control, detection of new infectious diseases, healthcare supplies coordination.
+
+# 14.2.1 Application of quantum computing in healthcare
+
+When it comes to revolutionizing the field of healthcare, tremendous potential has been shown. By utilizing the unique properties of quantum mechanics, scientists and researchers have discovered various applications that can significantly enhance diagnostics, treatment, and overall patient care. Quantum computing has advanced drug development. Quantum computers can efficiently examine large datasets and fin po
