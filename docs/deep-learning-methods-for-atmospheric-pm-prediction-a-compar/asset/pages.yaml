@@ -1,0 +1,1051 @@
+- pgno: 0
+  md: '# Atmospheric Pollution Research 14 (2023) 101833
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Atmospheric Pollution Research
+
+
+    journal homepage: www.elsevier.com/locate/apr
+
+
+    # Deep learning methods for atmospheric PM₂₅ prediction: a comparative study of
+    transformer and CNN-LSTM attention
+
+
+    Bowen Cui a¹, Minyi Liu a¹, Shangjian Li b¹, Zhifan Jin c², Yu Zeng a¹, Xiaoling
+    Lin b¹
+
+
+    +   * College of Environment and Urban Construction, Fujian University of Technology,
+    Fazhou, 350108, China
+
+    * College of Science and Mathematics, Fujian University of Technology, Fazhou,
+    350108, China
+
+    c Fuzhou Environmental Monitoring Center, Fazhou, 350118, China
+
+    f Fazhou Environmental Impact Assessment Technology Center, Fazhou, 350003, China
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    A transformer-based method was firstly developed to predict the hourly PM₂₅ concentration
+    at 12 monitoring stations in Beijing. Convolutional neural network short-term
+    memory-attention mechanism (CNN-LSTM attention) were introduced to compare with
+    Transformer models. Experiments on long time series and future prediction were
+    conducted to evaluate the model performance and generalization ability over a
+    period of time. The results, namely the mean variance score (EVS), R² absolute
+    error, mean square error (MSE), and R values of Transformer were 12%, 6%, and
+    30% higher than those of the CNN-LSTM attention, respectively. The results show
+    that the Transformer outperformed the CNN-LSTM model in terms of prediction accuracy.
+    The capture-turn attention mechanism identifies patterns affected by abruptly
+    meteorological conditions and trends with significant seasonal changes, in autumn
+    and winter when the pollution situation is more complex. Transformer has obvious
+    advantages in overcoming the independence problem of learning, providing a new
+    method for the long-term prediction of air quality.
+
+
+    # 1. Introduction
+
+
+    China''s air quality has greatly improved since the implementation of the Air
+    Pollution Prevention and Control Plan in 2013, PM₂₅ concentrations in some cities
+    still exceed the limits recommended by the World Health Organization (10 μg/m³).
+    China still faces challenges in improving air quality in autumn and winter when
+    pollution concentration in northern China sometimes exceeds the recommended limit
+    (Guo et al., 2014). Regional pollution, which is mainly driven by PM₂₅, has been
+    observed extensively in China (Zheng et al., 2008; Zhou et al., 2016). Air quality
+    monitoring stations are densely distributed in urban areas and can provide the
+    public with real-time air quality data, but the public needs a more accurate air
+    quality prediction. The key is to use monitoring data from one or more stations
+    to
+
+
+    predict pollutant concentrations (Xu et al., 2021). Statistical and deterministic
+    methods used in air quality prediction. Methods such as the multiple linear regression
+    (Vloshchinski et al., 2011) and autoregressive moving average (ARMA) (Kumar and
+    Jain, 2010) were used in short-term air quality prediction. However, the linear
+    models cannot address the complex nonlinear effects of atmospheric pollutants
+    and meteorological factors on pollutant concentrations. Furthermore, the photochemical
+    models approach only focuses on individual pollutants that are directly measurable
+    and is computationally intensive. In addition, physical models developed alone
+    fail to accurately predict nonlinear air pollution processes due to improper conditions
+    settings and even a
+
+
+    Free review under responsibility of Turkish National Committee for Air Pollution
+    Research and Control.
+
+
+    * Corresponding author.
+
+
+    * E-mail: linaxy@fjut.edu.cn (X. Lin).
+
+
+    * 1 Contribution.
+
+
+    https://doi.org/10.1016/j.jpr.2023.101833
+
+
+    Received 15 March 2023; Received in form 4 June 2023; Accepted 2 July 2023
+
+
+    Available online 20 July 2023
+
+    1309-1042© 2023 Turkish National Committee for Air Pollution Research and Control.
+    Production and hosting by Elsevier B.V. All rights reserved.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# B. Cui et al.
+
+
+    # Atmospheric Pollution 24 (2023) 108833
+
+
+    lack of model parameters.
+
+
+    Neural networks (NNs) are used as a powerful machine learning (ML) model for natural
+    language processing (Han et al., 2016) and air quality prediction (Fan et al.,
+    2017; Ma and Zhang, 2016; Wang et al., 2019; Xing et al., 2020). NNs can automatically
+    extract features from input data and predict target data through their end-to-end
+    learning capability (Huang et al., 2021; Mehmod et al., 2022), they can be deployed
+    as an effective model to model complex relationships in atmospheric systems and
+    estimate concentration of environmental pollutants from measured data.
+
+
+    Convolutional neural networks (CNNs) can process data from multiple monitoring
+    stations in a map-like manner based on the spatial distribution of features (Zhu
+    and Xie, 2022) and can provide a higher prediction accuracy than fully neural
+    networks (NNs) (Wu et al., 2018). The hybrid air quality index (AQI) has been
+    used for air quality prediction through spatial decomposition, and some algorithms
+    showed a good AQI prediction performance in Beijing (Gu and Lin, 2019). To observe
+    the ability of learning the long-term dependence of air pollution, recurrent neural
+    networks (RNNs) were introduced (Li et al., 2021).
+
+
+    Recurrent neural networks (RNNs) are considered to be superior to artificial neural
+    networks (NNs) in modeling the changes of air quality. On the other hand, the
+    effective performance of RNNs is limited by their inability to capture spatial
+    dependencies. Recent studies, in exploiting spatial features (Fan et al., 2017;
+    Tao et al., 2019; Wen et al., 2019), have combined RNNs and CNNs to capture the
+    spatial and temporal features of air pollution-related pollutants, such as the
+    concentration of various chemical species (SWCs) and PM2.5, but the prediction
+    accuracy of RNNs depends on the number of observation input (Kocijan et al., 2018;
+    Li et al., 2021).
+
+
+    Some meteorological factors drive the air quality evaluation patterns, suggesting
+    the need to model different factors using different models. In air pollution,
+    pollution may be influenced by meteorological factors, meteorological processes,
+    atmospheric phenomena, and other factors. These may be localized and widespread,
+    with complex relationships between the influencing factors and the pollutant concentration.
+    Moreover, air quality also changes with sequential dependencies. Over time, the
+    air quality will undergo periodic changes, suggesting a need to quickly predict
+    future air quality based on known patterns of pollutant concentration from pollutant
+    data as well as other meteorological factors. Although many ML models can improve
+    prediction accuracy, they do not address the lag or long-term dependencies predicted
+    by these models (Zhang et al., 2016).
+
+
+    Deep learning (DL) techniques, such as LSTM (Wang et al., 2019) and GRU (2018),
+    are effective and can extract more information from time series data. Wang et
+    al. developed a spatial-temporal integration model to predict the air quality
+    in Beijing based on meteorological factors and the Granger causality (Cho et al.,
+    2014). However, it was found that modeling long-term temporal dependencies will
+    degrade the DL model''s performance in terms of providing reliable predictions.
+
+
+    Transformer model is a type of sequence-to-sequence model, which
+
+
+    was proposed by Google researchers in 2017. Such a model is an attention-based
+    mechanism of DL, not involving any convolutional and recurrent units (Dosovitskiy
+    et al., 2020; Han et al., 2021; Vaswani et al., 2017). The model output outperforms
+    other NNs such as convolutional and recurrent NNs in terms of understanding and
+    generation of complex data. However, the Transformer is constrained by the scale
+    of the training data and the size of the model, which facilitates efficient training
+    and allows the capture of the long-range features (Li et al., 2019; Li et al.,
+    2021). The Transformer can be used for air quality prediction in the variety of
+    time series (Li et al., 2021; Wen et al., 2022). The Transformer can model temporal
+    factors and relative absolute position in the input and output sequences through
+    continuous attention.
+
+
+    Recent studies have shown that the Transformer can model dependencies in continuous
+    data (Chen et al., 2022; Sun et al., 2021; Manshu et al., 2022). The Transformer
+    can be better understood as a model that learns the paths between different tokens,
+    where the ability of the model to learn the dependencies is in. In CNNs and RNNs,
+    the path length increases with the distance between two points, but in the Transformer,
+    the path length is constant. Thus, self-attention mechanism allows the model to
+    capture the association between two positions independent of the distance, which
+    makes the Transformer''s path length constant (Chomomsky et al., 2005; Touvron
+    et al., 2017).
+
+
+    The Transformer has been applied to air quality prediction (Zhu et al., 2022;
+    Li et al., 2022). However, due to the limitations of traditional models in modeling
+    long-term series and temporal dependencies, they fail to capture the complex patterns
+    of air quality pollutants. Therefore, the Transformer can be used to predict air
+    quality better.
+
+
+    Self-attention mechanism can capture different meteorological patterns simultaneously,
+    and the head-attention mechanism in the model can make the model self-attention
+    to recognize the dependencies (Shen et al., 2018; Wu et al., 2021). The Transformer
+    models have been successfully applied to time series prediction, which we consider
+    to use such models for atmospheric air quality prediction.
+
+
+    A model was developed for air quality prediction based on the distribution of
+    meteorological factors and character strength of the pollution factors deployed.
+    Unlike the traditional transformer, the Transformer was optimized to integrate
+    spatial and temporal features into the encoder
+
+
+    2'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# B. Cui et al. Atmospheric Pollution Research 14 (2023) 101833
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_2_0.png)
+
+
+    Fig. 1. Framework of PM2.5 predictive model.
+
+
+    # 2. Materials and methods
+
+
+    # 2.1. Research area and data
+
+
+    Beijing, located in the northern part of North China, the economic, social, and
+    cultural center of China (39.90°N, 116.40°E); is bordered to the north by the
+    Yan Mountains and the Taihang Mountains to the west so that the topography is
+    high in the northwest and flat in the east. As the main base of heavy industry
+    in China, Beijing conducts large amount of coal burning every year. The special
+    geological and climatic conditions of Beijing limiting the location and dispersion
+    of pollutants contribute to the concentration of pollutants in Beijing. In this
+    study, hourly air quality data and meteorological data measured at 12 atmospheric
+    air quality monitoring stations from January 1, 2013, to January 1, 2017, were
+    obtained from the China Meteorological Data Network (http://data.cmc.gov.cn).
+
+
+    attributes of the data are presented in Table 1. These datasets were transformed
+    into different input dimensions according to the needs of the models. To present
+    and understand the mean PM2.5 concentrations were calculated at each station using
+    the monitoring data acquired during 2013-2017, and for the four seasons were separated
+    seasonally (Fig.). With the hourly monitoring data over the last 24 h at the 12
+    stations during 2013-2017 the input data was used to estimate the mean PM2.5 concentrations
+    in each season of 2017.
+
+
+    # 2.2. Data analysis
+
+
+    Seasonally varying pollution factors and meteorological conditions are among the
+    main factors that need to be considered in PM2.5 concentration. In this study,
+    the pollutants
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_2_1.png)
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_2_2.png)
+
+
+    Fig. 2. Site distribution.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'B. Cu et al.
+
+
+    Atmospheric Pollution Research 4 (2023) 101833
+
+
+    # Table 1
+
+
+    Description of variables in the study.
+
+
+    | Category | Variable | Unit |
+
+    | --- | --- | --- |
+
+    | Pollution | PM2.5 | µg/m³ |
+
+    | SO2 | µg/m³ |
+
+    | NO2 | µg/m³ |
+
+    | PM10 | µg/m³ |
+
+    | O3 | µg/m³ |
+
+    | Climate condition | TEMP | °C |
+
+    | PRESS | hPa |
+
+    | DOWNP | % |
+
+    | RAIN | mm |
+
+    | Wind speed | m/s |
+
+
+    autocorrelation is less than 0.05, the null hypothesis would be rejected, i.e.,
+    there is autocorrelation. In Fig. 4, the PM2.5 concentration exhibiting a periodic
+    pattern and strong autocorrelation, suggesting that the PM2.5 concentration data
+    collected at previous times could be effectively used for the subsequent pollution
+    prediction and to construct a model in this study. However, the components changed
+    significantly from July 2013 to January 2014 and July 2017, suggesting that in
+    addition to variation due to the influence of pollution factors and meteorological
+    conditions. That is, there may be extreme weather conditions, which pose a challenge
+    in the accurate prediction of the PM2.5 concentration.
+
+
+    TEMP, temperature; PRESS, air pressure; RAIN, rainfall; WINDSP, wind speed; DEWP,
+    dew point.
+
+
+    meteorological data at the 12 stations from January 2013 to February 2017 measured.
+    Fig.4 presents a schematic illustration of the seasonal-trend decomposition using
+    locally weighted regression and scatterplot smoothing (LOESS) method of the raw
+    data, which splits the time series into trend, seasonal and random components.
+    The seasonality of the raw data was measured using the autocorrelation function
+    (ACF) and the partial autocorrelation function (PACF). In Table 2, the p-value
+    is low, there is more evidence than that the null hypothesis should be rejected.
+    The p-values to the 1st order, 2nd, and 3rd order autocorrelations are all greater
+    than 0.05, there is no autocorrelation. If the p-value for a 4th or higher-
+
+
+    # 2.3. Global sensitivity of input parameters PM2.5 by transformer
+
+
+    The PM2.5 concentration is affected by many factors, including meteorological
+    monitoring data, there were differences in the PM2.5 concentration during the
+    four seasons, with higher concentrations in the spring and summer than the autumn.
+    The meteorological conditions play an important role in the formation and transformation
+    of aerosols. Chemical factors are also the precursors. Therefore, temperature,
+    humidity, wind speed, direction, air pressure and rainfall were significant meteorological
+    parameters for model prediction. Moreover, considering sulfur dioxide (SO2), nitrogen
+    dioxide (NO2), carbon monoxide (CO), and ozone (O3) can act as synergistic pollution
+    to improve the PM2.5 concentration, both of which were adopted and
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_3_0.png)
+
+
+    Fig. 3. Trend of PM2.5 concentration in all seasons.
+
+
+    4'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# C. Bai et al.
+
+
+    # Atmospheric Pollution Research 14 (2023) 101833
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_4_0.png)
+
+
+    Fig. 4. Time series after decomposition. STL, seasonal-trend decomposition based
+    on lo. (a) Original, (b) trend components, (c) seasonal components, (d) residual
+    terms.
+
+
+    | Lag order | AC value | PAC value | O statistic | p value |
+
+    |---|---|---|---|--|
+
+    | 1st | 0.999 | 0.967 | 8054.040 | 0.040 |
+
+    | 2nd | 0.918 | -0.262 | 1538.357 | 0.020 |
+
+    | 3rd | 0.871 | 0.050 | 21846.725 | 0.020 |
+
+    | 4th | 0.826 | -0.033 | 27728.011 | 0.000 |
+
+    | 5th | 0.784 | -0.031 | 33026.299 | 0.000 |
+
+    | 6th | 0.742 | -0.033 | 37768.603 | 0.000 |
+
+    | 7th | 0.702 | 0.014 | 42039.552 | 0.000 |
+
+    | 8th | 0.668 | -0.062 | 48589.811 | 0.000 |
+
+    | 9th | 0.641 | 0.041 | 49396.794 | 0.000 |
+
+
+    AFC and PAC functions. autocorrelation, partial correlation function; AFC, autocorrelation;
+    PAC, partial autocorrelation.
+
+    pollutants were the dominant factors in spring, summer, and autumn. $PM_{25}$,
+    $NO_2$, and $SO_2$ were positively correlated with $PM_{25}$ in four seasons.
+    $NO_2$ and $SO_2$ acting as gaseous precursors, which contribute to the formation
+    of $PM_{25}$ in the atmosphere. The trend of pollution in China after 2013, regarding
+    $PM_{25}$, became the most important pollutant variable (unlike, affecting $SO_2$
+    significantly). Therefore, the correlation of $PM_{25}$ shifted from $SO_2$ to
+    $NO_2$, and the seasonal variation of the pollution was more pronounced in winter.
+
+    The data in Table 3 is from high quality air quality meteorological monitoring
+    data collected by 12 national air quality monitoring stations from January 2019
+    to December 2020. We divided the data into each season and measured the correlations
+    using the Pearson correlation coefficient method. The correlation coefficients
+    for each of the seasons were averaged by year to obtain the final correlation
+    coefficient and use to sensitivity analysis.
+
+    Analysis of the most important variables showed that the meteorological variables
+    were positively correlated with $PM_{25}$ in winter more than in the other seasons.
+
+
+    2.4. Data processing and correlation
+
+
+    $PM_{25}$ concentration prediction requires construction of mathematical model.
+    The series was designed to feature normalization and one-hot encoding before being
+    into the model.
+
+
+    | $PM_{25}(Season)$ | $PM_{10}$ | $NO_2$ | $SO_2$ | $CO$ | $O_3$ | TEMP | PRES
+    | DEWP |
+
+    |---|---|---|---|---|---|---|---|---||
+
+    | Winter | 0.993 | 0.898 | 0.994 | 0.880 | 0.981 | -0.993 | 0.971 | -0.961 | 0.993
+    |
+
+    | Spring | 0.949 | 0.870 | 0.982 | 0.691 | 0.630 | -0.300 | -0.982 | -0.509 |
+    0.949 |
+
+    | Summer | 0.991 | 0.985 | 0.960 | 0.979 | -0.982 | -0.998 | 0.997 | -0.044 |
+    0.991 |
+
+    | Autumn | 0.889 | 0.564 | 0.980 | 0.987 | -0.918 | -0.105 | -0.330 | 0.846 |
+    0.889 |'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Cu et al.
+
+
+    # Atmospheric Pollution Research 14 (2023) 101833
+
+
+    normalization eliminates the influence of the absolute values of the features
+    in the units and allows the different indicators to be compared to one another.
+    In this paper, to ensure that all the features are normalized to the same range
+    of values, that each feature is preprocessed using the Max-Min normalization method,
+    which transforms the original data of each feature into the range [0, 1] using
+    the formula
+
+
+    ```
+
+    $PE(pos, 2j) = sin(\frac{pos}{10000^j})$ (2)
+
+    ```
+
+
+    ```
+
+    $x = \frac{X - x}{xmax - x}$ (1)
+
+    ```
+
+
+    ```
+
+    $PE(pos, 2j+1) = cos(\frac{pos}{10000^j})$ (3)
+
+    ```
+
+
+    where x is the original value, Xmin is the minimum value, and xmax is the maximum
+    value.
+
+
+    One-hot encoding allows the transformation of a feature with m categories into
+    binary categories (containing only - and 0 and 1). In this paper, the qualitative
+    value of wind direction is transformed into a 0/1 binary variable, while the continuous
+    variables (pollutant factor data) are untransformed.
+
+
+    ```
+
+    $x = x + PE$ (4)
+
+    ```
+
+
+    where pos denotes the position in the sliding window, and $j$ is the dimension
+    in the feature space. The input to the encoder is the sum of the positional code
+    plus the input data of the same dimension:
+
+
+    # 2.5. Transformer
+
+
+    # 2.5.2. Multi-head attention
+
+
+    In this paper, a Transformer model that considers the characteristics and strength
+    of pollutant factors is depicted (Fig. 5). It consists of an encoder and a fully
+    connected layer, with an encoder consisting of a multi-head attention layer and
+    a feedforward layer. The CO2 concentration, wind speed, and dew are very important
+    information for the pollutant prediction. The Transformer model considers the
+    meteorological and pollutant features from the prediction, inputs these features
+    into the encoder, while the output passes through the fully connected layer.
+
+
+    In order to make the model focus on different weights to the input sequence during
+    the encoding phase, an attention mechanism is used to quantify the dependencies
+    between elements. The attention score extends to the information in the time series
+    which should be focused on future predictions, and it can be calculated using
+    the scaled-dot product of the attention:
+
+
+    # 2.5.1. Positional encoding
+
+
+    A Transformer differs from convolutional and recurrent NNs in that it uses a novel
+    positional encoding mechanism to capture the time series information of the input
+    data. Sine and cosine functions of various frequencies are embedded into the normalized
+    input sequences for encoding:
+
+
+    ```
+
+    $Attention(Q, K, V) = softmax(\frac{QK^T}{\sqrt{d_k}})V$ (5)
+
+    ```
+
+
+    Next, Q and K are used to compute the vector dot product, $QK^T$, where $d_k$
+    is the dimension of the key (K). The input sequence is down-sampled using the
+    embedding layers to obtain $(a_1, a_2, ..., a_n)$, which are multiplied by $W^Q,
+    W^K, W^V$ to obtain $q_1, q_2, ..., q_n$, $k_1, k_2, ..., k_n$, and $v_1, v_2,
+    ..., v_n$. The weights are multiplied by $v_1, v_2, ..., v_n$ at the corresponding
+    positions, and the products are summed up to $b$, which corresponds to
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_5_0.png)
+
+
+    Fig. 5. Transformer model structure.
+
+
+    6'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: "# B. Cui et al.\n\n# Atmospheric Pollution Research 14 (2023) 101833\n\n![](img/563998e5c032c2da6a0d846b91d4c36e_6_0.png)\n\
+    \nFig. 6. Computational diagram of the attention mechanism.\n\nthe input.\nThe\
+    \ multi-head attention mechanism allows the model to focus not only on the position\
+    \ of the sequence, but also on the different heads, thereby allowing outputs of\
+    \ multiple independent-head attention (SHA) layers to serve as inputs in multiple\
+    \ sequence steps. To consider relationships between each pollution factor and\
+    \ the meteorological conditions, the multi-head attention mechanism treats each\
+    \ attention position, feature, and value as a whole. In this paper, attention\
+    \ layers serve to maximize the model's ability to capture the long-range dependencies:\n\
+    \n# 2.6.1. CNN attention unit\n\nThis unit is based on the standard convolutional\
+    \ module and includes an attention mechanism to extract the features that have\
+    \ a significant impact on health. The CNN module consists of multiple layers of\
+    \ one-dimensional networks, with each layer consisting of a convolution, a normalization,\
+    \ and a linear layer. The attention mechanism consists of two parts, one for feature\
+    \ aggregation and the other for scale recovery, and is integrated with the output\
+    \ of the CNN layers. In this paper, the CNN model is a subsequence of the original\
+    \ time-series data, while the attention mechanism is used to extract relevant\
+    \ features. The attention mechanism is more powerful than that of the CNN, and\
+    \ it overwrites the CNN input with features. The outputs of the CNN modules are\
+    \ multiplied element-wise with the outputs of the attention mechanism, and the\
+    \ importance of each feature is determined relative to those of the others.\n\n\
+    ```\n$MultiHead(Q, K, V) = Concat(head^1, ..., head^h)W^O$\n```\n\nwhere $head\
+    \ = Attention(QW^Q, KW^K, VW^V)$, where $W^Q, W^K, W^V \\in \\mathbb{R}^{d \t\
+    imes d_k}$ and $W^O \\in \\mathbb{R}^{hd_k \times d}$, where $h$ is the multi-head\
+    \ attention mechanism:\n\n# 2.5.2. Encoder\n\nIn this study, the encoder consists\
+    \ of a sequence of $N=6$ identical units, each containing two sub-layers. Each\
+    \ encoder layer is identical to two remaining sub-layers that connect the input\
+    \ of the previous layer, and then each layer is normalized. The output of each\
+    \ sublayer is shown in Equation (7), where sublayer ($y$) is a function of $x$.\
+    \ We use residual connections across all layers, including the embedding layer,\
+    \ to produce dimensional output: $d = d = model\\_size = 512\n\n```\n$Output =\
+    \ LayerNorm(x + Sublayer(x)) $\n```\n\n# 2.6. LSTM unit\n\nA gate is used to control\
+    \ the LSTM to extract long temporal patterns in the time series. The structure\
+    \ of the LSTM consists of a gate, a memory gate, and an output gate. The LSTM\
+    \ model consists of four gates: input gate, forget gate, cell gate, and output\
+    \ gate. Whether information in the unit is retained or not is determined by the\
+    \ forget gate. The new information in the input and the degree of feature extraction\
+    \ is controlled by the input gate. The output gate only passes the hidden state.\
+    \ The formula for the gate used to calculate the LSTM is:\n\n```\n$f_t = \\sigma(W_f\
+    \ \\cdot [h_{t-1}, x_t] + b_f)$\n```\n\n```\n$i_t = \\sigma(W_i \\cdot [h_{t-1},\
+    \ x_t] + b_i)$\n```\n\n```\n$tilde{c}_t = \tanh(W_c \\cdot [h_{t-1}, x_t] + b_c)$\n\
+    ```\n\n```\n$c_t = f_t \\cdot c_{t-1} + i_t \\cdot \tilde{c}_t$\n```\n\n```\n\
+    $h_t = o_t \\cdot \tanh(c_t)$\n```\n\n# 2.6. LSTM-attention unit\n\nA $PM_{2.5}$\
+    \ concentration prediction model is constructed on a convolutional and LSTM model\
+    \ with an attention mechanism. The architecture, referred to as the CA in this\
+    \ study, is shown in Fig.1. The CA consists of a CNN attention unit, an LSTM.\
+    \ The C-attention unit integrates continuous overlapping sequences as its data\
+    \ input, while the LSTM uses the outputs of the C-unit as its input. Its prediction\
+    \ is resulted by the final layer of the LSTM unit:"
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# B. et al.
+
+
+    # Atmospheric Pollution Research 14 (2023) 101833
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_7_0.png)
+
+
+    Fig. 7. CNN-LSTM attention model. CNN-LSTM, convolutional neural network long-short
+    term memory mechanism.
+
+
+    $z_i = o_i * \tanh(A_i)$
+
+
+    where $z_i$ and $x_i$ are the outputs at time $t$ and $t-1$, respectively; $q_i$
+    is the input at time $t$; $f_i, l_i$ and $o_i$ are the outputs of the forget,
+    input, and output gates, and $A_i$ is the activation function.
+
+
+    where $y_i$ and $y_i''$ are the target value and output model, respectively, $y_i$
+    is the mean of the target values, and $n$ is the number of samples.
+
+
+    # 7.2. Evaluation metrics
+
+
+    The $R^2$, MAE, and MSE were used to evaluate the Transformer performance for
+    $PM_{2.5}$ concentration prediction. The $R^2$ and $R''$ values are in the range
+    of [0, 1] and serve as metrics on the regression model''s performance in explaining
+    the data variance. The closer the metrics are to 1, the better the model performance
+    in explaining the variance of the $PM_{2.5}$ concentration among different air
+    pollution and meteorological conditions, i.e., the smaller the metrics, the worse
+    the model performance. These metrics are calculated as follows:
+
+
+    ```
+
+    $explained\variance(y, \hat{y}) = \frac{Var(\hat{y})}{Var(y)} - 1$
+
+    ```
+
+
+    ```
+
+    $R^2 = \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$
+
+    ```
+
+
+    where $\hat{y}$ is a y-estimated output, and $Var$ is the variance. The closer
+    the value is to the optimal score of 1, the more accurate the prediction.
+
+
+    Regarding MAE and MSE, they are used to assess the degree of closeness to the
+    predicted data, which is used to calculate the value of the sum of errors between
+    the fitted data and theing data. The smaller of the two values, the better the
+    prediction result. These two metrics are calculated as follows:
+
+
+    ```
+
+    $MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$
+
+    ```
+
+
+    ```
+
+    $MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$
+
+    ```
+
+
+    # 3. Results and discussion
+
+
+    # 3.1. Training and results
+
+
+    The parameters of the Transformer and CNN-LSTM models were determined through
+    several rounds of training. (1) For the Transformer, the number of layers is 5,
+    hidden heads 9, hidden units 6, and dropout 0.1. (2) For the CNN-LSTM model, it
+    was constructed using parallel stacking of a CNN unit, an attention unit, and
+    an LSTM unit with a hidden size of 3 and 5 depth of each, the LSTM unit having
+    a step size of 5. A mean-squared-error loss function was used for the output layer
+    of the model, and the Adam optimizer with a learning rate of 0.003 was used to
+    calculate the loss and optimization. The learning rate of the model was decayed
+    during the training process, to ensure that the learning rate is promptly reduced
+    when the model no longer improves its access to the loss function.
+
+
+    By observing the curves, the performance of the two models can be compared. The
+    results shows the two models (figs 7 and 8) reflect the trend of the model training.
+    However, the Transformer-BERT model (Jin et al., 2021; Reza et al., 2022) was
+    also considered in this study. They only collected data from 2012 to 2012 to forecast
+    the traffic flow and meteorological factors for $PM_{2.5}$ concentration. To achieve
+    the final goal, it is worth investigating whether the Transformer-model has a
+    better ability to perform long-term predictions. In this
+
+
+    8'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'B. Cui et al.
+
+
+    Atmospheric Pollution Research 14 (2023) 101833
+
+
+    # CNN-LSTM-Attention Mse
+
+
+    # CNN-LSTM-Attention Loss
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_8_0.png)
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_8_1.png)
+
+
+    (a) Transformer loss curve.
+
+
+    # Transformer Mse
+
+
+    # Transformer Loss
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_8_2.png)
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_8_3.png)
+
+
+    (b) Transformer loss curve. (b) CNN-LSTM-attention graph.
+
+
+    Table 4
+
+    Performance comparison in differences of metrics.
+
+
+    | Metric | CNN-LSTM-attention | Transformer |
+
+    |---|---|--|
+
+    | MAPE | 11.33% | 8.38% |
+
+    | MSE | 6.85 | 3.28 |
+
+
+    CNN-LSTM-attention, convolutional neural network-short-term memory-transformer;
+    MAPE, mean absolute percentage error; MSE, mean square error.
+
+
+    the present PM2.5 concentrations and those predicted by the Transformer and the
+    CNN-LSTM-attention model for up to 1000 and for 1000 to 1500. The CNN-LSTM-attention
+    model effectively captures the gradient of concentration in each direction, and
+    like the transformer model, it predicts time points beyond 1000 min well. However,
+    Fig a and b show that for the first 1000 min, PM2.5 concentrations are consistent
+    with the Transformer model, indicating that the Transformer is more effective
+    in capturing the hidden relationships between the pollution factors and meteorological
+    factors, leading to a higher accuracy prediction.
+
+
+    # 3.2. Performance prediction
+
+
+    The hourly data from January 2013 to February 2015 was used as the learning data
+    to train the model and predict the hourly data from January 2016 to February 2017.
+    The learning data were divided into season, namely (March-May), summer (June-August),
+    autumn (September-November), and winter (December-February) groups, respectively,
+    for testing the model. From Fig. 10, the top curves in each panel present the
+    values of PM2.5 concentration, the values predicted using the CNN-LSTM model and
+    the values predicted using the Transformer model provides a more accurate prediction
+    over the entire range. It should be noted that PM2.5 pollution was remarkably
+    correlated with the local weather conditions, especially in autumn and winter
+    when the air masses had a short duration, and the wind speeds were low, which
+    were not conducive to the pollutant''s diffusion, and an increase in the PM2.5
+    concentration. The data circled by red dashed lines in Fig. 9c shows that the
+    Transformer model accurately predicted'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'B. Cu et al.
+
+
+    Atmospheric Pollution 44 (2023) 101833
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_9_0.png)
+
+
+    (a) Performance of the CNN-LSTM-attention model: 0000-1500 predicted performance
+    and future predictions, respectively.
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_9_1.png)
+
+
+    (b) Performance of the transformer model: 0000-1500 predicted performance and
+    future predictions, respectively.
+
+
+    Fig. 9. (a) Performance of the CNN-LSTM-attention model: 0000-1500 predicted performance
+    and future predictions. (b) Performance of the transformer model: 0000-1500 predicted
+    performance and future predictions, respectively.
+
+
+    the hours in autumn and winter when the PM2.5 concentration underwent changes.
+    The model had a good prediction performance for the period of 0-500 h in autumn
+    (circled by red dashed line) and 500-1000 h in winter (circled by red line). The
+    goodness-of-fit (R²) of the Transformer model was 94.4%, which is 10.8% higher
+    than that of the CNN-LSTM-attention model, demonstrating that the Transformer
+    model had, had a better prediction performance in autumn and winter. This indicates
+    that the Transformer model has a good prediction performance in paying attention
+    to local information and capturing changes in the pollution matter and good prediction
+    performance for air quality under different circumstances.
+
+
+    # 3.3. Comparison of transformer and other
+
+
+    The pollutant concentrations in the target area tend to be stable throughout the
+    year, except when the weather underwent significant changes (low wind speeds),
+    resulting in a decrease in the ability of air to transport pollutants, and thus
+    accumulation of pollutants, aggravating the situation. In some seasons, the meteorological
+    conditions caused pollution which exhibit significant changes in data. Predicting
+    atmospheric pollutant concentrations with significantly changing conditions based
+    on historical data, there is a problem where only a general correlation with historical
+
+
+    # 4. Conclusions
+
+
+    In this study, we developed a Transformer-based method for predicting PM2. over
+    a long period and compared its performance with the CNN-LSTM-attention model in
+    terms of RMSE, MAE, and R² in order to determine how the model can capture the
+    relationship between pollution factors and meteorological conditions. Using the
+    historical data acquired in Beijing from 2013 to 2017 we used the results. The
+    results show that the Transformer model can effectively overcome the limitations
+    of previous prediction, the problem, and the time-order information encountered
+    when using physical and machine learning. Additional models, the LSTM and XGBoost
+    models, were also applied'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Cut et al.
+
+
+    # Atmospheric Pollution Research 14 (2023) 101833
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_10_0.png)
+
+
+    (a) Predicted spring trend of PM2.5 concentration.
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_10_1.png)
+
+
+    (b) Predicted summer trend of PM2.5 concentration.
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_10_2.png)
+
+
+    (c) Predicted autumn trend of PM2.5 concentration.
+
+
+    ![](img/563998e5c032c2da6a0d846b91d4c36e_10_3.png)
+
+
+    (d) Predicted winter trend of PM2.5 concentration.
+
+
+    Fig. 10. (a) Predicted spring trend of PM2.5 concentration. (b) Predicted summer
+    trend of PM2.5 concentration. (c) Predicted autumn trend of PM2.5 concentration.
+    (d) Predicted winter trend of PM2.5 concentration.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'B. Cu et al.
+
+
+    Atmospheric Research 14 (2023) 108833
+
+
+    # Table 5
+
+
+    | Method | Explained variance | R² | MAE (10⁻²) | MSE (10⁻²) |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | XGBOOST | 0.805 | 0.6592 | 0.270 | 0.170 |
+
+    | CNN-LSTM | 0.744 | 0.6582 | 0.348 | 0.334 |
+
+    | CNN-Attention | 0.836 | 0.8362 | 0.216 | 0.161 |
+
+    | Attention | 0.946 | 0.9239 | 0.112 | 0.052 |
+
+
+    meteorological skill based on WRF-Chem parameterizations and impact on ozone prediction
+    over Lake Michigan Ohio (2019). J. Geos. Res. Atmos.
+
+
+    for the purpose of comparison. We revealed that MAE, MSE values of the CNN-Attention
+    model were 5% lower than those of XGBoost and CNN-LSTM, while the Transformer
+    model was even superior to the CNN-Attention model with MAE, MSE values, 6% lower,
+    respectively.
+
+
+    The model learns how to model each point prediction using small-scale trajectories,
+    rather than the backward as method traditionally deployed in environments. However,
+    integrated community air quality (CAQ) models can provide more comprehensive results
+    as a complex index, PM2.5 is also affected by many factors as geographical and
+    chemical precursors. Taking into account the variability of the physical and chemical
+    processes, as well as geographical constraints, the power of deep learning methods
+    explores the complex spatiotemporal relations between pollutants and ensures stable
+    and accurate predictions, will be the focus of our future work.
+
+
+    # author statement
+
+
+    Bowe Cu: Methodology, software-writing draft preparation. Minyi Liu: Collection,
+    data management, methodology, supervision, attention, writing-review and editing.
+    Xiang Liu: data management, writing-review and editing. Shangliang Li: Methodology,
+    Survey. Jin Chen: Methodology. Zeng Wu: Methodology, caption.
+
+
+    # Funding
+
+
+    This work was supported by the Foundation Science and Technology Program (grants
+    202200041, 202200055 and 20190100176), Scientific Research Project of Fujian University
+    of Technology (grant numbers YY-21871 and YY-22082), Fuzhou Environmental Protection
+    Technology Innovation Center (number grants KY310324).
+
+
+    # declaration of conflicting interest
+
+
+    The authors declare that they have no known conflicting interests or personal
+    relationships that could have influenced the work reported in this paper.
+
+
+    # Acknowledgements
+
+
+    Not applicable.
+
+
+    # References
+
+
+    Abdi-Okello, M., Carmichael, G., Christiansen, M., Fernandez, G., Roozail, B.,
+    Sohbani, N., Wade, K., Czarznetki, A., Pierre, Wagner, W., 2020. Sensitivity of'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'B. Cut et al.
+
+
+    Atmospheric Pollution Research 17 (2023) 101833
+
+
+    Verga, P., Sherife, E., McCallum, A., 2018. Simultaneously Self-Attending to Methods
+    for Full Biological Relation Extraction. AAAI, New Orleans, LA, USA, 8272.
+
+
+    Vlastakhis, A., Kamanemos, P., Karppinen, A., Karaitakos, S., Sukkonen, J., 2021.
+    Evaluation of a multiple regression model for the forecasting of the concentrations
+    of PM2.5 in Beijing. Science of The Total Environment, 765, 143963.
+
+
+    Wang, J.-S., Song, G.-J., 2018. A deep spatial-temporal ensemble model for air
+    quality prediction. Neurocomputing, 314, 99-109.
+
+
+    Wen, Q., Liu, J., Li, J., X., Hu, C., Liu, T., 2019. A novel spatio-temporal convolutional
+    long short-term neural network for air quality prediction. Science of The Total
+    Environment, 673, 131033.
+
+
+    Wen, Q., Zhou, T., Zhang, C.-L., Chen, W., Ma, Q., Yan, J.-C., Sun, L., 2022.
+    Spatio-temporal graph convolutional neural network for air quality forecasting.
+    Atmospheric Environment, 285, 119555.
+
+
+    Wu, C., Lin, H., 2019. A novel optical-hybrid model for daily air quality index
+    considering air pollutant factors. Science of The Total Environment, 683, 808–821.
+
+
+    Wu, C., Zhang, Y., 2020. Deep learning-based air quality prediction using fully
+    convolutional neural networks. Sci. Surv. Map., 43, 68–75.
+
+
+    Xiang, J., Wang, Y., Zhang, Y., Qin, Q., T, M., Dong, J., Jang, C., 2020. Deep
+    learning for the prediction of the air quality response to emission changes. Environ.
+    Sci. Technol. 54, 8589–8660.
+
+
+    Xu, L., Chen, N.-C., Zhou, Q., Zhang, C., Yu, H., 2021. Spatiotemporal forecasting
+    in earth science systems: methods, uncertainties, predictability and future directions.
+    Earth-Science Rev., 222, 103750.
+
+
+    Yadousef, A., Khan, N.A., Sherif, M., Sefelar, A., El-Shafi, A., 2021. Hybrid
+    deep learning model for ozone concentration prediction: comprehensive evaluation
+    and application to case study. Environmental Engineering
+
+
+    Zeyer, A., Bakar, T., Schubert, K., Radeh, M., 2019. A comparison of transformer
+    and deep learning models for air quality forecasting. Applications of Computational
+    Fluid Mechanics, 15, 902–933.
+
+
+    Zhang, B., Dong, J., Li, M., Liu, F., Cheng, G.-P., Li, H.-Y., Peng, L.-Q., Wang,
+    J.-H., Zhang, Y., 2020. Trends in China’s anthropogenic emissions since 2010 to
+    the consequence of climate change and policy. Science of The Total Environment,
+    719, 136993.
+
+
+    Zhou, L., Wu, J., Jia, B.J., Liang, N., Zhang, F.-Y., Ni, Y., Liu, M., 2016. Investigation
+    of temporal-spatial characteristics and underlying risk factors of PM2.5 pollution
+    in Beijing using parallel multi-input 1D-CNN-LSTM. Expert Syst. App. 211, 1187957.
+
+
+    13'
+  merge: -1
+  img_proc: true
