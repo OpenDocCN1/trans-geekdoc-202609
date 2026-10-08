@@ -1,0 +1,9 @@
+Unlike MLP or CNNs, where the input data is entered all at once and can be processed in parallel, an RNN takes and processes one data point input at a time (known as a *token*) in the sequence in a unit called the *cell*, and the output from the cell is used as an input for the next cell, in addition to the next data point in the input sequence. The number of cells in the sequence depends on the length of inputs (for example, the number of words), and each cell would perform the same function. This architecture allows inter-dependent semantic information (a word in a sentence depending on the previous words in the sentence to establish its semantic meaning) to be passed from one processing cell to another processing cell. The following figure shows what an RNN looks like:
+
+![](bbox=[0.137, 0.313, 0.862, 0.563])
+
+Figure 3.12 – An RNN
+
+The ability to learn semantic relationships among character or word sequences makes RNN a popular algorithm for language modeling, where the goal is to generate the next language token (for example, character or word) given a sequence of tokens.
+
+An RNN also has the ability to summarize a sequence (for example, a sentence) and capture the inherent meaning of the sequence into a fixed-length vector representation. This makes an RNN a good fit for language tasks, such as language translation or summarization, where the goal is to take the semantic meaning of a sentence in one language and represent the same meaning in a different language or summarize longer sentences into more concise sentences. This ability to summarize sentences into fixed-length vectors also makes an RNN useful for sentence classification.

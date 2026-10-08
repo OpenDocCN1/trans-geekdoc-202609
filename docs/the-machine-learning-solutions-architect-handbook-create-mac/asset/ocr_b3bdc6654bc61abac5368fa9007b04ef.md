@@ -1,0 +1,9 @@
+There are a number of unique technical concepts that are core to the Kubernetes architecture. The following are some of the main concepts that Kubernetes operates around:
+
++   * Namespaces: Namespaces organize clusters of worker machines into virtual sub-clusters. They are used to provide logical separation of resources owned by different teams and projects while still allowing ways for different namespaces to communicate. A namespace can span multiple worker nodes, and it can be used to group a list of permissions under a single name to allow authorized users to access resources in a namespace. Resource usage controls can be enforced to namespaces such as quotas for CPU and memory resources. Namespaces also make it possible to name resources with identical names if the resources reside in the different namespaces to avoid conflicts. By default, there is a default namespace in Kubernetes. You can create additional namespaces as needed. The default namespace is used if a namespace is not specified.
+
++   * Pods: Kubernetes deploys computing in a logical unit called a Pod. All Pods belong to a Kubernetes namespace (either the default namespace or a specified namespace). One or more containers can be grouped into a Pod, and all containers in the Pod are deployed and scaled together as a single unit and share the same context, such as Linux namespaces and filesystems. Each Pod has a unique IP address that shared by all the containers in a Pod. A Pod is normally created as a workload resource, such as a Kubernetes Deployment or Kubernetes Job.
+
+![](bbox=[0.187, 0.545, 0.812, 0.866])
+
+Figure 6.3 - Namespaces, Pods, and containers

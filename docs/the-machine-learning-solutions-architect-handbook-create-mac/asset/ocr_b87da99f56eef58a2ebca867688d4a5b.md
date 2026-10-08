@@ -1,0 +1,13 @@
+# Data Management for Machine Learning
+
+A central operational operational store should be created for storing all the data lineage and processing metrics. AWS DynamoDB, a fully managed NoSQL database, is a good technology option for storing this type of data, as it is designed for low latency and high transaction access:
+
++   **Data quality:** Automated data quality checks should be implemented at different stages, and quality metrics should be reported. For example, after the source data is ingested into the landing zone, an AWS quality check job can run to check the data quality using tools such as the open source Deequ library. Data quality metrics (such as counts, schema validation, missing data type, or statistical deviations from the baseline) and reports can be generated for reviews. Optionally, manual or automated operational cleaning processes should be established to correct data quality issues.
+
++   **Data cataloging:** Create a central data catalog and run Glue crawlers on datasets in the lake to automatically create an inventory of data and populate the central data catalog. Enrich the catalogs with additional metadata to track other information to support discovery and data audits, such as the business owner, data classification, and data refresh. For ML workloads, data science teams also generate new datasets (for example, new ML features) from the existing datasets in the data lake for model training purposes. These datasets should also be registered and tracked in a data catalog, and different versions of the data should be retained and archived for audit purposes.
+
++   **Data access provisioning:** A formal process should be established for requesting and granting access to datasets and Lake Formation databases and tables. An external ticketing system can be used to manage the workflow for requesting access and granting access.
+
++   **Monitoring and auditing:** Data access should be monitored, and access history should be maintained. Amazon S3 server access logging can be enabled to track access to all S3 objects directly. AWS Lake Formation also records all accesses to Lake Formation datasets in AWS CloudTrail (AWS CloudTrail provides event history in an AWS account to ensure governance, compliance, and operational auditing). With Lake Formation auditing, you can get details such as event source, event name, SQL queries, and data output location.
+
+Now, we have covered the core concepts and architecture patterns for building a data management platform for ML. Next, let's get hands-on with the architecture and technologies we have covered and build a simple data lake and data processing pipeline.

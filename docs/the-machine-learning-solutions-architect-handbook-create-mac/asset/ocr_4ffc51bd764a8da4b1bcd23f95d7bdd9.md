@@ -1,0 +1,13 @@
+Flask is a Python-based micro web framework for building web apps quickly. It is lightweight and has almost no dependencies on external libraries. With Flask, you can define different invocation routes and associate handler functions to handle different web calls (such as health checks and model invocation calls). To handle model prediction requests, the Flask app would load the model into memory and call the predict function. Flask comes with a built-in web server, but it does not scale well as it can only support one request at a time.
+
+This is where Gunicorn comes in. Gunicorn is a web server for hosting web apps (such as the Flask apps), and it can handle multiple requests in parallel and distribute the traffic to the hosted web apps efficiently. When it receives a web request, it will invoke the hosted Flask app to handle the request (such as invoking the function to generate model prediction).
+
+In addition to serving prediction requests as web requests, an enterprise inference engine also needs to handle traffic (such as SSL/TLS traffic), as well as load balancing when there are multiple servers. This is where Nginx can serve as a load balancer for multiple web servers and can handle termination for SSL/TLS traffic more efficiently, so servers do not have to handle it.
+
+A Flask/Gunicorn-based model serving architecture can be a good option for hosting simple serving patterns. But for more complicated patterns, as serving different versions of models, A/B testing, or large model serving, this architecture will have limitations. The Flask/Gunicorn architecture pattern also requires custom code (such as the Flask app) to work, as it does not provide built-in support for the different ML models.
+
+Next, let's review some purpose-built model serving frameworks and see how they are different from the custom Flask-based inference engine.
+
+# The TensorFlow Serving framework
+
+TensorFlow Serving is a production-grade, open source model serving framework, and provides out-of-the-box support for serving TensorFlow models behind a RESTful endpoint. It manages the model life cycle for model serving and provides access to versioned and multiple models behind a single endpoint. There is also built-in support for canary deployments. A canary deployment allows you to deploy a model to support a subset of traffic. In addition to the real-time inference support, there is also a batch scheduler feature that can batch multiple prediction requests and perform a single joint execution. With TensorFlow Serving, there is no need to write custom code to serve the model. The following figure (Figure 7.4) shows the architecture of TensorFlow Serving:

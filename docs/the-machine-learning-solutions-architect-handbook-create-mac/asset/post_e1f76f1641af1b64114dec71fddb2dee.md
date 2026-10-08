@@ -1,0 +1,267 @@
+
+- code promotion support for different data across environments 388 sources and targets 101
+- code repository 276
+- constant folding 325
+- cold start problem 70
+- container repository 276
+- collaborative filtering 69
+- containers 152-154
+- communication protocol 328
+- contextual advertising 48
+- Computer Unified Device
+- contextual bandit algorithm 70
+- Architecture (CUDA) 321
+- continuous bag-of-words (CBOW) 75
+- computer vision 57, 71
+- continuous deployment (CD) 20
+- computer vision neural network
+- continuous integration (CI) 20
+- architectures continuous integration (CI)/continuous deployment (CD) 185
+- convolutional neural network (CNN) 71, 72
+- continuous-skip-gram 75
+- ResNet 72, 73
+- controller 155
+- concept drift detection 269
+- control plane
+- Conda package manager about 154, 269
+- reference link 328
+- key components 154, 155
+- configuration details, for TensorFlow
+- convergence 56
+- Serving batch 328
+- convolutional filter 71
+- convolution neural network (CNN) about 71
+- configuration details, for TorchServe about 328
+- reference link 328
+- architecture 72
+- considerations, data catalog variety core functions, ML platform
+- automated data catalog 103 data explorations and integration with other tools 103
+- experimentation 19
+- metadata catalog 103
+- search capability 103
+- large-scale data processing 19
+- tagging flexibility 103
+- feature hosting/serving 19
+- considerations, data ingestion 103
+- model management 19
+- data format 100
+- data pre-processing capability 100
+- data scalability 100
+- data size 100
+- ingestion patterns 101
+- reliability 101
+- security 100
+- evaluation metrics, defining 144
+- loss function, defining 144
+- model, loading 145
+- model, saving 145
+- model serving 145
+- model, training 145
+- neural network, defining 144
+- optimizer, selecting 145
+- core functions, scikit-learn
+- data preparation 129
+- model evaluation 129
+- model saving 130
+- model training 129
+- pipeline utility 130
+- core functions, Spark ML
+- data preparation 132, 133
+- model evaluation 134
+- model saving 135
+- model training 133
+- pipeline 134
+- core functions, TensorFlow 2.x
+- data preparation 138
+- evaluation metrics, selecting 129
+- loss function, defining 139
+- model, fitting 139
+- model, saving 139
+- model, serving 139
+- network, compiling into model 139
+- neural network, defining 138
+- optimizer, selecting 139
+- trained model, evaluating 139
+- credit risk assessment
+- workflow 34
+- cross-entropy loss function 147
+- CSV 100
+- customer self-service automation with intelligent search 385, 386
+- custom resource (CR) 159, 190
+- custom resource definition (CRD) 159
+- Cython 127
+- data acquisition 14
+- data and model bias reports 344
+- data catalog
+- about 103
+- AWS Glue catalog 104
+- key considerations 103
+- data drift 261
+- data extraction 379
+- data governance
+- about 109
+- auditing 110
+- data access provisioning 110
+- data cataloging 110
+- data quality 110
+- monitoring 110
+- data ingestion
+- about 97, 100
+- triggering 114
+- data ingestion tools
+- Apache Kafka 100
+- Apache Spark Streaming 100
+- AWS Glue 100, 102
+- AWS Lambda 103
+- considerations 109
+- Kinesis Firehose 100, 101
+- Secure File Transfer Protocol (SFTP) 100
+- data lineage 109
+- data linearity 57
+- data management
+- about 94
+- abilities 95, 96
+- learning 94-96
+- intersection with ML lifecycle 95
+- data management architecture
+- about 96
+- authorization 108
+- data catalog 103
+- data ingestion 100
+- data pipelines 107
+- data serving for client consumption 100
+- data storage and management 98
+- data versioning 105
+- enterprise data management 98
+- machine learning feature store 106
+- with limited scope 97
+- management platform, on AWS
+- Amazon Glue ETL job, creating 118-121
+- building 111
+- data discovery, in data lake 116, 117
+- data ingestion pipeline, creating 113, 114
+- data lake, creating with Glue Workflow 121, 122
+- data querying, in data lake 116, 117
+- Glue catalog, creating 115
+- data manipulation 126
+- data parallelism 303
+- pipelines about 107
+- AWS Glue Workflow 108
+- AWS Step Functions 108
+- data plane 269
+- differential privacy 349
+- homomorphic encryption (HE) 349
+- data processing about 104, 126
+- Amazon Elastic Map (EMR) 105
+- AWS Glue ETL 105
+- AWS Lambda 105
+- key requirements 104
+- technologies 205
+- data science environment about 184
+- building, with AWS services withSageMaker 234, 235
+- data science environment architecture withSageMaker 241, 242
+- data science environment architecture withSageMaker Experiments 242
+- withSageMaker Hosting 238, 239
+- withSageMaker Processing 236, 237
+- withSageMaker Tuning 240, 241
+- data science environment lab instructions 242
+- problem statement 242
+- BERT model, training in Jupyter Notebook 245-251
+- data science environment with AWS services, lab instructions 242
+- de- BERT model, training with SageMaker Training Service 251-255
+- CodeCommit, setting up 244, 245
+- SageMaker, setting up 242-244
+- source code, saving to CodeCommit repository 257
+- data serving for client consumption 107
+- data serving patterns about 107
+- consumption via API 107
+- consumption via data copy 107
+- datasets, for training personalized 372
+- item dataset 373
+- user-interaction dataset 373
+- purpose-built data version tools 106
+- S3 partitions 106
+- working 60
+- decoder network 77
+- DeepAR algorithm 68
+- deep learning neural network algorithms 56
+- DeepSpeed 316
+- Dequ library 110
+- deployment 157, 158
+- Deployment controller 155
+- Dex 187
+- differential privacy 349-353
+- dimensionality reduction 7
+- directed Acyclic Graph (DAG)
+- discriminative models 81
+- Discriminator network 82
+- distributed model training with data parallelism 303-305
+- distributed model training with model parallelism 309, 310
+- distributed model training, running with PyTorch about 329
+- get_data_loader() function, modifying 329, 330
+- multi-processing launch support, adding for multi-device server nodes 331
+- train() function, modifying 329, 330
+- distributed training for, training large-scale models 302, 303
+- docker 152
+- Dockerfile 153
+- documentation classification 379
+- dot products reference link 313
+- dropout 57
+- drug discovery about 41, 42
+- key stages 41
+- DVC 106
+- e-commerce product recommendation 383
+- Elastic Fabric Adapter (EFA) 307
+- Elastic File System (EFS) 237
+- Elemental services reference link 382
+- embedding about 70, 74
+- representation 74
+- ensemble learning 61
+- enterprise ML architecture pattern 266-264
+- enterprise ML platform key requirements 260-262
+- etcd 155
+- European Central Bank (ECB) 335
+- evaluation metrics, Comprehend reference link 366
+- evaluators, Spark ML reference link 134
+- examples, unsupervised ML computer network intrusion detection 8
+- customer segmentation for target marketing 8
+- dimensions of datasets, reducing 8
+- executors 131
+- periments tracking 211-219
+- floating-point 16 bit (FP16) 322
+- floating-point 32 (FP32) 322
+- Generative Adversarial Networks (GANs) 45, 82
+- generative model 81
+- generative pre-trained transformer (GPT) 80
+- Gini index 59
+- Gini Purity Index 59
+- GitHub 185
+- Git-remote-codecommit (GRC) 241
+- Glue catalog creating 115
+- permission, granting 115
+- Glue crawler job configuring 115
+- Google Cloud Storage 199
+- GPT-3 80
+- gradient boosting about 62
+- gradient descent (GD) 55, 141
+- graphical processing units (GPUs) 324
+- graph optimization 324
+- gRPC 195, 268
+- Gunicorn 193, 194
+- Facebook 143
+- Fairness reference link 340
+- feature-based application 75
+- feature repository 276
+- few-shot learning 80
+- field-programmable gate array (FPGA) 319
+- Financial Advisors (FAS) 28
+- Financial Services Industry (FSI) about 24
+- capital markets back office operations 278
+- capital markets front office 24
+- risk management and fraud 31
+- fine-tuning 79
+- Flask inference engine 193, 194
+- Hadoop cluster 98
+- hardware acceleration 319
+- healthcare and life sciences about 40
+- drug discovery 41, 42

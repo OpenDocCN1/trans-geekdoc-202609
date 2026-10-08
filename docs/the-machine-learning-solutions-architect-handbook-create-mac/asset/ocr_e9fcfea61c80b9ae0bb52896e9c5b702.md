@@ -1,0 +1,13 @@
+In addition to infrastructure security, you also need to think about data privacy and model privacy to protect sensitive information from adversarial attacks, as reverse engineering sensitive data from anonymized data. There are three main techniques for data privacy protection in ML:
+
++   **Differential privacy**: Differential privacy allows you to share datasets withholding information about individuals within the dataset. This method works by adding random noise to the computation so that it is hard to reverse engineer the original data (if it is not impossible). For example, you can add noise to the training data or model gradients to obfuscate the sensitive data.
+
++   **Homomorphic encryption (HE)**: HE is a form of encryption that allows users to perform computations on encrypted data without decrypting it first. This allows the computation output in an encrypted form that, when decrypted, is equivalent to the output as if the computation were performed on the unencrypted data. With this approach, the data can be encrypted before it is used for model training. The training algorithm will model with the encrypted data, and the output can only be decrypted by the data owner with the secret key.
+
++   **Federated learning**: Federated learning allows model training to take place on edge devices while keeping data on the device, instead of sending the data to a central training cluster. This protects individual data as it is not shared in a central location, while the global model can still benefit from individual data.
+
+Each of these topics warrants a separate book, so we will not dive into the details of all three. We will only provide an introduction to differential privacy in this book to explain the main intuition and concept behind this method.
+
+# Differential privacy
+
+To understand the problem that differential privacy solves, let's take a look at the real-world privacy breach that happened with Netflix. In 2006, Netflix provided 100 million movie ratings, submitted by 480K users, as data for the Netflix price competition. Netflix anonymized usernames with unique subscribers' IDs in the dataset, thinking that this would protect subscribers' identities. Just 16 days later, two university researchers were able to identify some subscribers' true identities by matching their reviews with data from IMDb. This type of attack is called a linkage attack, and this exposes the fact that anonymization is not enough in protecting sensitive data. https://en.wikipedia.org/wiki/Netflix_Prize.
