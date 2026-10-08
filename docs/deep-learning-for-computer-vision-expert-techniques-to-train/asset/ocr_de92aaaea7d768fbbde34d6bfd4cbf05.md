@@ -1,0 +1,5 @@
+# Summary
+
+In this chapter, you have learned how to extract features from an image and use them for for CBIR. You also learned how to use TensorFlow Serving to get the inference of image features. We saw how to utilize approximate nearest neighbour or faster matching rather than a linear scan. You understood how hashing may still improve the results. The idea of autoencoders was introduced, and we saw how to train smaller feature vectors for search. An example of image denoising using an autoencoder was also shown. We saw the possibility of using a bit-based comparison that can scale this up to billions of images.
+
+In the next chapter, we will see how to train models for object detection problems. We will leverage open source models to get good accuracy and understand all the algorithms behind them. At the end, we will use all the ideas to train a pedestrian detection model.

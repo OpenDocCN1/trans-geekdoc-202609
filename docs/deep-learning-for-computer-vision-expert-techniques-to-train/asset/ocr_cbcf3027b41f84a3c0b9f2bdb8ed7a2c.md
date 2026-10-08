@@ -1,0 +1,5 @@
+# Contributors
+
+**Rajalingappaa Shanmugamani** is currently working as a Deep Learning Lead at SAP, Singapore. Previously, he has worked and consulted at various startups for developing computer vision products. He has a Masters from Indian Institute of Technology – Madras where his thesis was based on applications of computer vision in the manufacturing industry. He has published articles in peer-reviewed journals and conferences and applied for few patents in the area of machine learning. In his spare time, he coaches programming and machine learning to school students and engineers.
+
+> I thank my spouse Ezhil, family and friends for their immense support. I thank all the teachers, colleagues, managers and mentors from whom I have learned a lot. I thank Jean Ovi for creating the graphics for the book.
