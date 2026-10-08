@@ -1,0 +1,6 @@
+![](bbox=[0.238, 0.171, 0.773, 0.343])
+
+Figure 7.2: PCA for two digits.
+
+components would be necessary. Even a reasonably good reconstruction would require more principal components than just two or three, but this was not the aim.
+Figures 7.3 and 7.4 do the same for three or four digits, respectively. Three digits could be separated using two principal components as Figure 7.3d, but there is some overlap of the datasets. The separation is better with three principal components in Figure 7.3c. Separating four digits is impossible with two principal components as Figure 7.4d illustrates. Going to three dimensions with three principal components is an improvement in Figure 7.4e, but using a further principal component is advisable. Note, that each of the figures 7.2, 7.3 and 7.4 the principal components are different, since including data samples of a further digit changes the covariance matrix $\Sigma$ and thus the eigenvectors are different for different datasets. In Chapter 5 we have seen how boosting builds strong classifiers from weak ones. PCA can help identify weak classifiers.
