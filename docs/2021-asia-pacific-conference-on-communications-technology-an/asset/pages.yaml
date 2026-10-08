@@ -1,0 +1,480 @@
+- pgno: 0
+  md: '# 2021 Asia-Pacific Conference on Communications Technology and Computer Science
+    (ACCTCS)
+
+
+    # # Research on deep learning image recognition
+
+    technology in garbage classification
+
+
+    Qiang Guo
+
+    School of Software Engineering
+
+    Faculty of Information Technology
+
+    Beijing University of Technology
+
+    Beijing,China
+
+
+    Yuliang Shi
+
+    School of Software Engineering
+
+    Faculty of Information Technology
+
+    Beijing University of Technology
+
+    Beijing,China
+
+
+    Shikai Wang
+
+    School of Software Engineering
+
+    Faculty of Information Technology
+
+    Beijing University of Technology
+
+    Beijing,China
+
+
+    *Corresponding author email:
+
+    qbj2013@email.bjut.edu.cn
+
+
+    email: shlj@bjut.edu.cn
+
+
+    email: skwang@email.bjut.edu.cn
+
+
+    **Abstract—**With the rapid development of industry, people''s daily life has
+    become more and more rich than ever, while the pleasure brings a large number
+    of garbage to carry. Various types of garbage are produced, and people lack the
+    knowledge related to garbage classification, which leads to the difficulty of
+    manual or robot classification. An algorithm based on deep learning convolutional
+    network is introduced to help garbage classification. In the image recognition
+    task, in order to solve the problem of small amount of data and different sizes
+    of objects, Feature extractor is used to extract the features of objects. To avoid
+    the obvious effect on small batch in the network, we replace BN with GN (Group
+    Normalization). In order to emphasize the importance of target object, the attention
+    mechanism is introduced. After the output of the model, we add attention mechanism
+    to enhance the important information of the target object, so that the model can
+    focus on the key features and better identify the image; according to the above
+    process, we classify into four categories (Recyclables, Kitchen garbage, Hazardous
+    garbage). The other result shows that the model can effectively classify and identify
+    the types of garbage. The experimental results show that the accuracy of the algorithm
+    is high, with good performance and robustness. In the practical significance of
+    the research, this reliable method can help people know the type of garbage and
+    the types of garbage for robot sorting, so it has very important application scenarios
+    and significance.
+
+
+    suitable only to solve and eliminate the garbage problem. We need to classify
+    the garbage accurately, and then different kinds of garbage classification, which
+    can affect the efficiency of garbage collection and people who do the sorting.
+
+
+    However, from the current efficiency of garbage classification and treatment,
+    the people''s cognition of the type of garbage is very poor. When people put the
+    garbage into the wrong type can, it first identifies the garbage, but the recognition
+    is not satisfactory. Garbage classification faces difficulties in sorting.
+
+
+    The traditional garbage classification is mainly performed by researchers. Due
+    to the lack of awareness and knowledge of garbage classification, false classification
+    is easy to occur. The model of these target detection methods is relatively complex
+    and the robustness is poor. For example, image analysis is applied to computer
+    vision. In Huang Ling''s research on local feature extraction and construction
+    of construction, the method is used to improve the garbage collection, and the
+    consumption time of the work is 1.17[3]. Nowadays, people are more and more to
+    attend to the role of deep learning in man and image recognition. Deep learning
+    is a powerful method to construct a variety of effective network, which greatly
+    improves the accuracy of image recognition, and is very useful.
+
+
+    **Keywords—**garbage classification, convolutional neural network, image processing
+    technology, garbage classification
+
+
+    # I. INTRODUCTION
+
+
+    With the development of industry, people''s daily life has become rich and necessities
+    are used and consumed every day, a large number of garbage is produced in domestic
+    and industrial garbage. These types of garbage are complex, difficult to distinguish,
+    and difficult to classify, which is labor-intensive. Therefore, when dealing with
+    these garbage problems, some people will bury the garbage incineration, which
+    will cause great harm to the environment, and the harmful substances produced
+    in this method is not'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# II. EXPERIMENTAL PROCESS AND RELATED CONCEPTS
+
+
+    # B. Group Normalization
+
+
+    Aiming at the problem of garbage classification and recognition mentioned above,
+    we designed and implemented this experiment, and the overall flow of the experiment
+    is shown in Figure 1.
+
+
+    Image normalization is to transform the image into the corresponding standard
+    form through a series of transformations, so as to find the invariants in the
+    image, as to make that these images are originally the same or a series, so that
+    the image can resist the attack of noise, accelerate the gradient descent to find
+    the optimal solution, accelerate the convergence of training network, and prevent
+    affine variance the effect of exchange[7]. Normalization is necessary to maintain
+    the distribution of data with the statistical distribution between 0 and 1.
+
+
+    | Image Input | Data Augmentation | Data Normalization | Module | Efficient Training
+    | Attention Classification |
+
+    |---|---|---|---|---||
+
+    | | Hazardous | Kitchen garbage | Recyclables | Other garbage |
+
+
+    Figure 1. Experimental process
+
+
+    Now the commonly used normalization method is group normalization (GN) algorithm,
+    which can fully pull batch data back to the mean value of 0 and the variance of
+    1, so as to not only stabilize, but also accelerate the training of the network.
+    Its disadvantage is that it has poor effect for small batch size; performance
+    degradation and increase the rate of error. Group normalization is proposed in
+    [9], which groups the channels and calculates the mean and variance within each
+    group. The calculation of GN is not related to the batch size, and its accuracy
+    is stable under various batch sizes, and the error is reduced compared with BN.
+
+
+    In the process of experiment, we want to optimize and improve the training of
+    neural network. First, we will understand the related concepts.
+
+
+    # A. Data Augmentation
+
+
+    In training of neural network, we increase the depth and breadth, so as to enhance
+    the ability of neural network and facilitate the fitting of distribution of data.
+    At the same time, we encounter a problem, that with the increasing of neural network
+    parameters the model will overfit, resulting in overfitting, which is highly fitting
+    the data, but the accuracy is very low for the test, and the generalization is
+    especially when the data set is small!
+
+
+    In the process of experiment, we use the way of data augmentation to prevent the
+    overfitting problem. Data augmentation includes methods like clipping, color jitter,
+    horizontal and vertical flipping of images, which increases the amount of data.
+    Convolution neural network is invariant to the displacement, view angle, size
+    and illumination of objects, that is say, data augmentation does not affect the
+    training of neural network, but will enhance the generalization ability of model
+    and improve the accuracy rate[6]. Figure 2 shows an example of data augmentation.
+
+
+    When we use data augmentation, we usually use formula:
+
+
+    ```
+
+    $$\hat{x}_i = \frac{x_i - \mu_i}{\sigma_i}$
+
+    ```
+
+
+    Where x is a point in specific position in the feature map of a layer; i is the
+    coordinates of the four dimensions of N, C, H and W; C is the channel axis, H
+    and W are the height and width axes.
+
+
+    In the formula, $\mu$ is the mean and $\sigma$ is the standard deviation. Their
+    calculation is shown in formula 2, which is a small constant value:
+
+
+    ```
+
+    $$\mu_i = \frac{1}{G}\sum_{j \in G_i} x_j, \\sigma_i = \sqrt{\frac{1}{G}\sum_{j
+    \in G_i} (x_j - \mu_i)^2 + \epsilon}$
+
+    ```
+
+
+    And in formula 2, the G is the area of point set to calculate the mean value after
+    fitting the k condition, and m is the size of this set. Therefore we focus on
+    the definition of k condition in group normalization, as as formula 3:
+
+
+    ```
+
+    $S_i = \{k | k \in L_i, [\frac{c}{G}] = [\frac{c}{G}]$
+
+    ```
+
+
+    C is the number of channels in each group; $\frac{c}{G}$ means that i and k are
+    in the same group of channels, that is to say, group normalization means grouping
+    in direction, normalizing each group and calculating the mean value.
+
+
+    In this experiment, we apply group normalization to image processing, and replace
+    BN in Efficient network to improve the influence caused by you
+
+
+    ![](img/a14fac5a3a018bc41824fc94a89ca64b_1_0.png)
+
+
+    Original picture
+
+
+    Flip horizontally
+
+
+    180 degrees clockwise
+
+
+    Zoom in 10%
+
+
+    Figure.2. Data Augmentation examples'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# C. Deep Convolution Neural Network\n\nIn the field of computer vision, deep\
+    \ convolution networks are an important part that cannot be ignored. It is a kind\
+    \ of feedforward neural network which contains convolution and has a deep structure.\
+    \ It has better ability than the BP neural network in image processing. Many researchers\
+    \ are working on convolution network, and have achieved many remarkable results\
+    \ developed models as VGG(16), ResNet(11), Exception(12) and so on, which have\
+    \ improved the recognition rate applied to our daily life, such as face recognition,\
+    \ stage image recognition, vehicle recognition and so on. In this research topic\
+    \ of classification, we effective has quality at this stage, makes and improvement\
+    \ potential.\n\nAn efficient neural network developed by Google deep learning\
+    \ team. The approach published by Google in ICML the effect of this work is very\
+    \ good[13]. The traditional research is limited to limited computing power. By\
+    \ expanding the network, we only expand one dimension image resolution, achieve\
+    \ higher accuracy, such as ResNet-18 and ResNet-50! On the other hand, the models\
+    \ of each element are not completely independent and interact with each other\
+    \ through a compound model scaling algorithm to balance the three operations,\
+    \ to achieve the accuracy index similar to the existing classification network,\
+    \ and greatly reduce the amount of parameters and calculations.\n\nThe network\
+    \ calculation of expression efficient is formula 4:\n\n```\n$N = \\prod_{i=1}^{n}\
+    \ \\Phi_{i}^{\\gamma}(X, w_{i}, c_{i})$\n```\n\nWhere n is the basic layer, i\
+    \ is the stage, and the Li is the input $L_{i}$ is the representation of feature\
+    \ structures, in the i-stage. The goal of model scaling algorithm is to maximize\
+    \ the constraints that we meet constraints, as formula 5. The parameters to be\
+    \ optimized are network depth (d), network width (w) and resolution (r).\n\n```\n\
+    $maxAccuracy(d, w, r) \\quad (5)$\n```\n\n```\n$Memory(N) \\leq target memory\\\
+    nFLOPS(N) \\leq target flops$\n```\n\nWe express the parameters to be optimized\
+    \ by $\\phi$-index, as formula 6. At the same time, we make many restrictions\
+    \ on $\\alpha$, $\beta$ and $\\gamma$. We can fix $\\phi$ as 1, and then get the\
+    \ parameters that satisfy the formula, which are $\\alpha = 1.2$, $\beta = 1.1$,\
+    \ $\\gamma = 1$.\n\n```\n$depth: d = a^{\\alpha}$ \\quad (6)$\n```\n\nwidth: $w\
+    \ = b^{\\beta}$\n\n$resolution: r = y^{\\gamma}$ \\ns$s \\cdot a \\cdot y^{2}\
+    \ = 2$ \\ns$a \\geq 1, y \\geq 1, \\gamma \\geq 1$\n\nThen we use Efficientnet\
+    \ to extract features of multidimensional fusion.\n\n# D. Attention Mechanism\n\
+    \nThere are lot of irrelevant information in spam messages, which may have a certain\
+    \ impact on our decision-making, making the background information about the garbage.\
+    \ Attention mechanism can mimic human attention and learns from human attention\
+    \ mechanism and attention[17]. We can use the features extracted from attention\
+    \ mechanism to focus on the important parts of the object to be processed, so\
+    \ that the model can focus on the key features and recognize the right image[18]\n\
+    \nWhen using attention, the output map of F is used as input U, and then enters\
+    \ the attention module, which is used with three operations:\n\n+   1. The two-dimensional\
+    \ compression (H*W) of each channel is compressed to a number z by pooling the\
+    \ values[19]. See formula 7. It is a feature that has a global receptive field,\
+    \ in spatial dimension, and the number of channels unchanged after operation,\
+    \ which is 1 * C.\n\n```\n$Z_{c} = E_{fc}(U) = \\frac{1}{H \\times W} \\sum_{i=1}^{H}\
+    \ \\sum_{j=1}^{W} U_{(i,j)} \\quad (7)$\n```\n\n+   2. Excitation: This is mainly\
+    \ to generate a weight value for each channel parameters, use two fully connected\
+    \ layers to form a bottleneck to establish the correlation between channels, and\
+    \ output one-dimensional attention weight $s$, to activate each layer channel\
+    \ of the number of which is the same as the number of channels[22].\n\n```\n$s\
+    \ = F_{exc}(X, W) = \\sigma(g(X, W)) \\quad (8)$\n```\n\nWhere $\\sigma$ is a\
+    \ rule and activation function.\n. Attention: Multiply the weight value obtained\
+    \ from the previous operation with the corresponding channel in U, as shown in\
+    \ formula 9, we can enhance the attention and connection of key channels, which\
+    \ are measured by their respective attention weights[21].\n\n```\n$\\hat{F}_{c}\
+    \ = F_{exc}(U_{c}) = s_{c} \\cdot U_{c} \\quad (9)$\n```\n\n# III. EXPERIMENTAL\
+    \ ENVIRONMENT AND IMPLEMENTATION\n\nThe hardware environment of this experiment\
+    \ is as follows:\n\nSTEPS\n server with Intel Core i6132 6.32GHz CPU, 64GB Memory,\
+    \ NVIDIA GTX 2080Ti graphics cards, Ubuntu16.04 system and PyTorch deep learning."
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'The data used in this research is 1735 images of the garbage classification
+    project of Huawei Artificial Intelligence Connection. The category of garbage
+    has been marked Each tag contains the image name and category number. There are
+    40 kinds of items, such as boxes, cigarette batteries, fruit and pulp, there are
+    4 kinds of garbage, harmful household and kitchen garbage, recyclables and other
+    garbage; the garbage type name in the algorithm, making the following settings;
+    for example: "0: other garbage or disposable fast food." 13000 images in the data
+    set were used as training set and 6735 images as test. The distribution was shown
+    in Table I and Table II.
+
+
+    # TABLE I TRAINING SET DATA
+
+
+    | Garbage Category | Items Of Pictures | Number |
+
+    |---|---||
+
+    | Recyclables | 23 | 7475 |
+
+    | Kitchen garbage | 8 | 2600 |
+
+    | Hazardous garbage | 3 | 975 |
+
+    | Other garbage | 6 | 1950 |
+
+
+    # TABLE II TEST SET DATA
+
+
+    | Garbage | Number of pictures |
+
+    |---||
+
+    | Recyclables | 1872 |
+
+    | Kitchen garbage | 1347 |
+
+    | Hazardous garbage | 505 |
+
+    | Other garbage | 1110 |
+
+
+    In experiments of first, all we process the image data, which includes two parts:
+    data augmentation and normalization. The size of image is limited to <45 pixels.
+    The data is put into the network for training. The model is tested in each epoch,
+    and the accuracy and loss rate After 30 epochs, the training model is saved.
+
+
+    In this experiment, 40 kinds of images were identified and predicted based on
+    hazardous garbage, kitchen garbage, recyclable and categories. After 30 epoch
+    training, the accuracy reached 93.7%, and the loss was 0.81-83. The problem line
+    chart of loss rate, in which the starting of epoch, and the problem line chart
+    of loss rate, in which the loss rate is about 0.3.
+
+
+    # IV. EXPERIMENTAL RESULTS
+
+
+    ![](img/a14fac5a3a018bc41824fc94a89ca64b_3_0.png)
+
+
+    Figure 4. Line chart of loss rate
+
+
+    # V. CONCLUSION
+
+
+    In view of the difficulty of garbage classification, this research uses convolutional
+    neural network method to solve the problem. At the same time, we improve the network
+    and optimize the process. The results achieved the expected goal, the recognition
+    accuracy is satisfied, and the garbage classification effective very good improvement.
+    This method can be applied to many applications of garbage classification, such
+    as garbage sorting and treatment plant, garbage classification by mobile app,
+    which is efficient and convenient has has significance and bound applications.
+
+
+    However, in the laboratory conditions, the environment is like a longer and the
+    accuracy rate may be improved. We may continue to solve these problems in the
+    future. In the future, we need to improve and optimize the model and better, to
+    improve the recognition range of the set, such as being in the later stage, to
+    learn independently and identify others. This is our next research result.
+
+
+    # REFERENCES
+
+
+    ![](img/a14fac5a3a018bc41824fc94a89ca64b_3_1.png)
+
+
+    +   [1] S Cider, C McCullen, J A. Proposal Efficiency Method for Android Applets
+    That are Designed to Reduce Damage to Garbage Bags(I). ASTM Special Technical,
+    1997,6(25):13.
+
+    [2] Wu Jian, Chen Hao, Fei Wang, Garbage classification and recognition system
+    based on J[J]. Information processing and technology, 2014;10(8):81-83.
+
+    [3] Huang Li, Ling Huang, Wen Fei, et al. Color feature extraction and recognition
+    of garbage classification(J). Optical and electronic technology, 2018;2(3):53-58.
+
+    [4] Ali H, Demir R, Kaya M, et al. Classification of Test Dataset Based on Deep
+    Learning(J). 2018 IEEE International Conference on Big Data (Big Data). IEEE,
+    2018.
+
+    [5] Data Augmentation. Springer NY, 2017.
+
+    gamlearning.2018:33-22\ https://body.csceedings.org/article/id/96853
+
+    [6] La F, Shi S, et al. The One-Stage Detector Algorithm based on Background Prediction
+    and Group Normalization for Vehicle Detection(J). Applied Sciences, 2020;10(17):5755.
+
+    [7] Confined Little, Anthony-2019-04-16. Method Normalization. 2020;10(19):7920.
+    https://body.csceedings.org/article/id/97052
+
+    [8] Yaciao, Chen Li. Classification of Type C in Bottles based on Deep Learning(C);
+    The 38th China Conference. 0.0
+
+
+    Figure.3.Line chart of accuracy'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '[11] Zhibong C, Hebin Z, Yabo W, et al. A vision-based robotic gathering system
+    using deep learning for garbage sorting[C]/ 2017 36th Chinese Conference Control
+    (CCC). IEEE, 2017.
+
+
+    [12] Ying, Wang, Xu, et al. Autonomous garbage detection for intelligent urban
+    environment[J]. 2018.
+
+
+    [13] MoonSmile,2019-02-12. Amazing Efficientient and EfficientDt https://zhihu.com/question/390677
+
+
+    [14] Dante P, Lima F, Kara O. Early detection of skin cancer using deep learning
+    architectures: resnet-101 and inception[C]/ 2019 Medical Technologies Congress
+    (TIPTEK), 2019.
+
+
+    [15] Kong J, Li J, Li, et al. Automatic Garbage Classification System Based on
+    Deep Learning[J]. IEEE Access, 2020, PP(09):1-1.
+
+
+    [16] Grose V J, Nister JG. Automatic prediction of future out of memory exceptions
+    in garbage collected virtual machine[J]. 2007.
+
+
+    [17] Wang Juntin (2017-11-23). Basic idea and realization principle of attention
+    mechanism
+
+
+    https://blog.csdn.nethelppublic/article/details/30448570
+
+
+    [18] Leonard U, Sunart S, Van Hecke P,et al. Attention Mechanism in Vision Science:
+    Research. Journal of Cognitive Neuroscience, 2000,12(supplement) 61-75.
+
+
+    [19] Lu Z, Li Q, Dosher B A. Attention mechanisms for multi-scale-first-order
+    motion perception[J]. Vision Research, 2000, 40(2):173-186.
+
+
+    [20] Tian F, Cho K, Bengio Y, Ma W. Multihead Neural Machine Transformer-Based
+    Attention Mechanism[J]. 2016.
+
+
+    [21] Wang, Yuchuan. Small target pre-detection with an attention mechanism[J].
+    Optical Engineering, 2002, 41(4):872-885.'
+  merge: -1
+  img_proc: true
