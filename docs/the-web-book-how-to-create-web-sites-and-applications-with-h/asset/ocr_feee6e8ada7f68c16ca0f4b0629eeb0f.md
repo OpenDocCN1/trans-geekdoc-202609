@@ -1,0 +1,1 @@
+and try clicking on the links. You should find that you can navigate around your brand new site quickly and easily.
