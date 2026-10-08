@@ -1,0 +1,27 @@
+![](bbox=[0.12, 0.08, 0.88, 0.22])
+
+Figure 3. Binding mode of Montelukast (A) and Troglitazone (B) in the crystal structure of the CYP2C8 complex. Hydrogen bonds and hydrophobic interactions formed by the ligand and the residues are represented by yellow and gray dashed lines, respectively.
+
+poor performance in the KR-KNN model with an AUC value of 0.79. Overall, our results indicate that it would be a good choice to use the Ext and Pub fingerprints to build classification models for CYP2C8 inhibition.
+
+# 4.3. Privileged Substructures Analysis. A total of 19 unique privileged substructures was obtained, as presented in Tables 7 and 8. Among them, nitrogen-containing heterocycle substructures such as 1H-benzo[d]imidazole, 1-phenyl-1H- pyrazole, and quinoline frequently occur in the CYP2C8 inhibitors reported in the literature, such as Azilsartan, 45 Candesartan cilexetil, 14 and Nilotinib. 46 Molecules containing these fragments tend to interact with CYP2C8, possibly because it can occupy the distal hydrophobic pocket in the active cavity. For example, in the complex crystal structure of CYP2C8 (PDB code 2NNI), the chloroquinoline ring of the potent competitive inhibitor Montelukast interacts with the hydrophobic residue cluster located below helix G to stabilize its binding to CYP2C8, 47,48 as shown in Figure 3A.
+
+The remaining privileged substructures have similar scaffolds including the benzenesulfonamide, benzamide, and N-phenyl- formamide fragments. In fact, many reported potent CYP2C8 inhibitors contain the above structural fragments, such as Zafirlukast, 49 Dabrafenib, 50 and Gliburide. 14 According to the crystal structure of PDB code 2NNI, the terminal carboxylic acid group of Montelukast forms hydrogen bonds with the polar amino acid cluster (including Ser100, Ser103, and Asn217) near helix B' in the active site (Figure 3A). In addition, in another complex crystal structure of CYP2C8 (PDB code 2VN0), the ketone oxygen in the thiazolidinedione can form hydrogen bonds with Arg241 in helix G and Asn204 in helix F. The other oxygen in the middle of the structure forms hydrogen bonds with Ser103 via the surrounding water molecules 51,52 (Figure 3B). Therefore, compounds containing sulfonamide or amide groups can form polar interactions with the polar amino acid cluster near helix B' or Arg241 and Asn204 of CYP2C8, which may explain the frequent presence of benzenesulfonamide and benzamide fragments in CYP2C8 inhibitors.
+
+In addition, some substructures containing fluorine atoms were also identified by MoSS and SARy. In fact, fluorine atoms are present in several known CYP2C8 inhibitors such as Dabrafenib and Nilotinib. As an electron-withdrawing group, F reduces the electron cloud density of the benzene ring, thus enhancing the hydrophobicity of the molecule, 53,54 making it easier to bind to the hydrophobic cavity of CYP2C8.
+
+# 4.4. Limitations of Our Models. The overall accuracies of the 10-fold cross validation, test, and external sets indicate that
+
+our models have satisfactory predictive power and can provide useful information for classifying potential CYP2C8 inhibitors and noninhibitors. However, our models still have certain limitations. Due to the small quantity of experimentally measured CYP2C8 noninhibitors reported, relatively few negative compounds were used for modeling, which may result in insufficient “learning” of negative data features in our models. As can be seen from the results of the cross validation, test, and external validation sets, the S# value is slightly lower than the SE value in general. It is hoped that this problem could be solved with the increase of CYP2C8 biological experimental data in the future. In addition, the inorganic compounds were removed before modeling. Thus, our models cannot predict these species.
+
+# 5. CONCLUSIONS
+
+In this study, on the basis of a diverse data set of CYP2C8 enzymes, 5 machine-learning algorithms including SVM, RF, KNN, NN, and LR combined with 9 molecular fingerprints were used to develop 45 binary classification models. Considering the values of AUC, CA, SE, SP, and MCC, the 5 best-performing models by 10-fold cross validation were obtained for further assessment using the test and external validation sets. The overall predictive accuracy is satisfactory, where the AUC and CA values are over 0.8 and 0.7, respectively. In addition, our results showed that the models built with the Ext and Pub fingerprints were superior to others, and the SVM algorithm was more suitable for classifying CYP2C8 inhibitors/noninhibitors. The Euclidean distance- based applicability domain calculation was further applied, whose value was obtained by searching for parameters k and Z. Moreover, a combination of information gain and substructure frequency analysis was used to detect several privileged substructures. In conclusion, the built prediction models and the privileged substructures could be useful for quickly identifying potential CYP2C8 inhibitors in the early stage of drug design.
+
+# 6 ASSOCIATED CONTENT
+
+# Supporting Information
+
+The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acs.chemtoxtx.1c00078.
+
+Parameter settings of the top five models in 10-fold cross validation; detailed results for 10-fold cross-validation of the models; related statistics of the samples; analysis of variance of different models; physicochemical properties analysis and chemical similarity heat map of the training,

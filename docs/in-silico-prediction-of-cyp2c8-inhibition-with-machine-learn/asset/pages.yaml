@@ -1,0 +1,1101 @@
+- pgno: 0
+  md: '# Chemical Research in Toxicology
+
+
+    pubs.acs.org/crt
+
+
+    Article
+
+
+    # In Silico Prediction of CYP2C8 Inhibition with Machine-Learning Methods
+
+
+    Xiaoxiao Zhang, Piaopiao Zhao, Zhiyuan Wang, Xuan Xu, Guixia Liu, Yun Tang, and
+    Weihua Li*
+
+
+    Cite This: Chem. Res. Toxicol. 2021, 34, 1850−1859
+
+
+    Read Online
+
+
+    ACCESS | Metrics & More | Article Recommendations | Supporting Information
+
+
+    ABSTRACT: Cytochrome P450 2C8 (CYP2C8) is a major drug-metabolizing enzyme in
+    humans and is responsible for the metabolism of ~5% drugs in clinical use. Thus,
+    inhibition of CYP2C8, which causes potential adverse drug events, cannot be neglected.
+    The in vitro drug interaction studies guidelines for industry issued by the FDA
+    also point out that it needs to be determined whether investigated drugs are CYP2C8
+    inhibitors before clinical trials. However, current studies mainly focus on predicting
+    the inhibitors of other major P450 enzymes, and the importance of CYP2C8 inhibition
+    has been overlooked. Therefore, there is a need to develop models for identifying
+    potentiaI CYP2C8 inhibition. In this study, in silico classification models for
+    predicting CYP2C8 inhibition were built by five machine-learning methods combined
+    with nine molecular fingerprints. The performance of the models built was evaluated
+    by test and external validation sets. The best model had AUC values of 0.85 and
+    0.90 for the test and external validation sets, respectively. The applicability
+    domain was analyzed based on the molecular similarity and exhibited an impact
+    on the improvement of prediction accuracy. Furthermore, several representative
+    privileged substructures such as 1H-benzo[d]imidazole, 1-phenyl-1H-pyrazole, and
+    quinoline were identified by information gain and substructure frequency analysis.
+    Overall, our results would be helpful for the prediction of CYP2C8 inhibition.
+
+
+    ![](img/c231614c653e97fe1a89fe8f2f1da0bc_0_0.png)
+
+
+    # 1. INTRODUCTION
+
+
+    Inhibition of cytochrome P450 enzymes (CYPs) is one of the most important reasons
+    for adverse drug reactions and drug delisting.1 Therefore, it needs to be determined
+    whether drug candidates are inhibitors of major drug-metabolizing P450s before
+    clinical trials. The in vitro drug interaction studies guidance for industry issued
+    by the U.S. Food and Drug Administration (FDA) stipulates that drug developers
+    need to evaluate whether drugs inhibit the major P450 metabolic enzymes, including
+    CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, and CYP3A4.2
+
+
+    Experimental identification of P450 inhibition is generally time consuming, costly,
+    and labor intensive. Thus, many in silico models have been developed to identify
+    P450 inhibition.3−8 At present, the in silico prediction for P450 inhibition reported
+    in the literature is mainly based on machine-learning methods, which are increasingly
+    used in data analysis, classification problems, and other fields.9−11 Shao et
+    al. used the rule-based C5.0 decision tree algorithm to build classification models
+    for the inhibitors of five major P450s. Rydberg et al. exploited a support vector
+    machine (SVM) to classify inhibitors and noninhibitors for the five main P450
+    enzymes and developed the WhichCyp Web server for predicting the P450 inhibitors.
+    Our group12 employed an artificial neural network to develop a combined classifier,
+    which is used to predict the inhibitors of five major P450
+
+
+    metabolic enzymes. Recently, Li et al.13 developed a multitask model based on
+    an autoencoder deep neural network to discriminate inhibitors and noninhibitors
+    of the five major P450 isoforms. Wu et al.14 used two ensemble-learning and two
+    deep-learning methods to build classification models to predict inhibitors for
+    the five major P450 enzymes. Although the reported models demonstrated relatively
+    high accuracy, these studies mainly focused on the five major P450 isoforms including
+    CYP3A4, 2D6, 2C9, 2C19, and 1A2. Other major drug-metabolizing P450s have not
+    been involved in the public reports.
+
+
+    CYP2C8 is a member of the CYP2C subfamily, accounting for about 6−7% of the total
+    P450 enzymes in the liver.12 CYP2C8 is responsible for the metabolism of ~5% marketed
+    drugs,13 including amodiaquine, ceveratinone, and esziltax-eme.14 In the past
+    decade, the importance of CYP2C8 in drug response has been recognized due to adverse
+    reactions resulting from drug−drug interactions and genetic poly-
+
+
+    Received: February 21, 2021
+
+
+    Published: July 13, 2021
+
+
+    ![](img/c231614c653e97fe1a89fe8f2f1da0bc_0_1.png)
+
+
+    ACS Publications
+
+
+    © 2021 American Chemical Society
+
+
+    1850
+
+
+    https://doi.org/10.1021/acs.chemrestox.1c00078
+
+
+    Chem. Res. Toxicol. 2021, 34, 1850−1859'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'morphism. 14 For example, the combination of the inhibitor gemfibrozil and
+    the substrate civerazation of CYP2C8 has caused serious adverse drug reactions.
+    15 Therefore, rapid identification of CYP2C8 inhibition is of great significance
+    for guiding the design and development of new drugs. At present, however, no prediction
+    models have been reported for CYP2C8 inhibition.
+
+
+    In this study, we developed in silico models for classifying CYP2C8 inhibitors
+    and noninhibitors by multiple machine-learning methods. The robustness of the
+    built models was evaluated by the test and external validation sets. On the basis
+    of the Euclidean distance method, the applicability domain was defined to exclude
+    some extreme compounds. In addition, the differences in structural characteristics
+    between inhibitors and noninhibitors were detected by information gain and substructure
+    frequency analysis to derive privileged substructures accounting for the CYP2C8
+    inhibition.
+
+
+    # ## 2. MATERIALS AND METHODS
+
+
+    # ### 2.1. Data Collection and Preparation
+
+
+    In this study, we collected the data sets from the PubChem bioassay database 16
+    and two publications. 14,17 Compared to other literature reports, the data provided
+    by these two publications is more comprehensive, basically covering the currently
+    known CYP2C8 inhibitors.
+
+
+    The data sets used for developing classification models were manually collected
+    from the PubChem bioassay database 16 and the literature published in 2005. 17
+    For the data from PubChem, compounds with activity ≤ 50 μM or explicitly reported
+    as active by ChemBL are flagged as active in the CYP2C8 bioassay representations.
+    The active type used for each compound is one of IC 50 , INH, and K I . From the
+    literature from 2005, 17 209 drugs at 30 μM were examined for the inhibition of
+    CYP2C8. Among them, 48 compounds exhibited greater than 50% inhibition and were
+    further evaluated for measurement of IC 50 . The results showed that the IC 50
+    values of 6 drugs are less than 1 μM, 17 drugs are between 1 and 10 μM, and 25
+    drugs are in the range from 10 to 40 μM. The compound activity criteria in the
+    literature and in PubChem are similar. Therefore, the data from PubChem and the
+    literature, we regarded the compounds labeled "active" as CYP2C8 inhibitors and
+    "inactive" as noninhibitors. The chemicals without compound values or literature
+    support were deleted. The 48 compounds collected from the literature 17 were categorized
+    into inhibitors and noninhibitors. All molecules were converted into simplified
+    molecular-input line-entry system (SMILES) strings. In order to get high-quality
+    data, the two data sets were carefully preprocessed by the following steps: (1)
+    nonganic substances were removed, (2) salts were converted to the corresponding
+    bases or acids, and (3) duplicate chemical structures were removed. Then, the
+    CYP2C8 inhibitors were marked as "1" and noninhibitors as "0". Finally, the pretreated
+    data sets were randomly divided into a training set and a test set with a ratio
+    of 8:2 by an in-house python script.
+
+
+    To assess the generalization ability of the built models, an external validation
+    set was constructed from different sources, including the DrugBank database, 18
+    the literature by Backman et al., 15 and the Indiana University School of Medicine
+    ( https://drug-interactions. medicine.iu.edu/Main/Table.aspx ). Similar to the
+    data processing for PubChem, the drugs obtained from the DrugBank without a literature
+    source were excluded. The remaining CYP2C8 inhibitors were considered as the positive
+    data. In addition, six CYP2C8 inhibitors collected from the Indiana University
+    School of Medicine data set were added to the positive data set. The compounds
+    with IC 50 > 100 μM reported in the literature were regarded as the negative data.
+    For the external validation set, the same data preprocessing procedure as in the
+    training and test sets was applied and the duplicate data in the training or test
+    sets were excluded.
+
+
+    The diversity and quality of the data set are crucial for building a highly robust
+    model. 6,13 In our work, we exploited the chemical space distribution and Tanimoto
+    average similarity index 20 to evaluate the chemical diversity of the data sets.
+    The chemical space distribution is defined as a two-dimensional space distribution
+    map of the molecular weight (MW) and the lip/water partition coefficient (ALogP),
+    which were calculated by the Pipeline Pilot 2017 R2 software. 19 The Tanimoto
+    similarity index, having a value between 0 and 1, was calculated using the python
+    script. The smaller the value, the less similar the structures of two compounds.
+
+
+    # ### 2.2. Molecular Representation
+
+
+    Molecular fingerprints were employed to represent the molecules in the above data
+    sets. A molecule can be translated into a binary string of structural keys and
+    a index for input to machine-learning models by fingerprints. Nine types of molecular
+    fingerprints were calculated by the PADEL-Descriptor software tool, 21 including
+    the Atom Pairs 2D fingerprint (AP2D, 780 bits), Estate fingerprint (Est, 79 bits),
+    Extended fingerprint (Ext, 512 bits), Fingerprint-FP (FP, 1024 bits), Graph only
+    fingerprint (Gra, 1024 bits), Klekota-Roth fingerprint (KR, 4860 bits), MACCS
+    fingerprint (Mac, 166 bits), Pubchem fingerprint (Pub, 881 bits), and Substructure
+    fingerprint (Sub, 307 bits). The detailed descriptions of these fingerprints can
+    be found in the original literature. 1,2,5
+
+
+    # ### 2.3. Construction of the Models
+
+
+    In this study, five widely used machine-learning algorithms were employed to build
+    the predictive models of CYP2C8 inhibitors and noninhibitors, including support
+    vector machine (SVM), 23 random forest (RF), 24 k-nearest neighbor (KNN), 25 neural
+    network (NN), 26 and logistic regression (LR). 27 All algorithms were implemented
+    using the scikit-learn package version 0.21. 4.
+
+
+    Since several machine-learning algorithms were heavily affected by the parameter
+    settings, k-fold cross validation was exploited to traverse all of the data in
+    a training set. First, the training set was divided into k subsets, k − 1 subsets
+    were first used to build the models, and the remaining subset was applied for
+    model validation. This process was repeated k times. Then a grid search algorithm
+    was chosen to select an optimal parameter for the machine-learning method. In
+    this study, the value of k was set to 10. The detailed parameter settings of the
+    top five models obtained by cross validation are shown in Table S1.
+
+
+    # ### 2.4. Performance Evaluation of Models
+
+
+    In this study, the 10-fold cross validation of the training set was employed to
+    examine the robustness of the built models. The test set was applied to further
+    evaluate the predictive power, and the external validation set from different
+    sources was used to assess the models generalization ability. Several indicators
+    were calculated to evaluate the quality of the models intuitively. In binary classification
+    models, data sets are generally divided into two categories, positive and negative.
+    True positive (TP) means that CYP2C8 inhibitors are correctly predicted to be
+    positive. True negative (TN) indicates that CYP2C8 noninhibitors are accurately
+    predicted to be negative. False positive (FP) means that CYP2C8 noninhibitors
+    are incorrectly predicted as inhibitors, while false negative (FN) infers that
+    CYP2C8 inhibitors are incorrectly predicted as noninhibitors. 28 On the basis
+    of these definitions, sensitivity (SP), specificity (SP), Mathews'' correlation
+    coefficient (MCC), and classification accuracy (CA) were calculated using the
+    following formula
+
+
+    ```
+
+    $$ SE = \frac{TP}{TP + FN} $$ (1)
+
+    ```
+
+
+    ```
+
+    $$ SP = \frac{TN}{TN + FP} $$ (2)
+
+    ```
+
+
+    ```
+
+    $$ CA = \frac{TP + TN}{TP + TN + FP + FN} $$ (3)
+
+    ```
+
+
+    ```
+
+    $$ MCC = \frac{(TP \times TN - FP \times FN)}{\sqrt{(TP + FP)(TP + FN)(TN + FP)(TN
+    + FN)}} $$ (4)
+
+    ```
+
+
+    where CA represents the total proportion of the number of accurately classified
+    chemicals to all positive and negative data. SE and SP are two commonly used classified
+    performance metrics. SE is the predictive accuracy of CYP2C8 inhibitors. SP is
+    the percentage of'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'correctly predicted CYP2C8 inhibitors. MCC is the correlation coefficient between
+    the observed and the predicted binary classifications and is generally regarded
+    as a balancing measure for the imbalanced data set. In addition, the area under
+    the receiver operating characteristic curve (AUC)28 was also calculated to evaluate
+    the reliability of the classifiers, whose value ranges from 0.5 to 1. The larger
+    the area, the better the classification performance. When the AUC value is equal
+    to 1, the predictive ability of the model is prefect, and when the AUC value is
+    0.5, the model has no discriminative power.2,9
+
+
+    # 2.5. Definition of Applicability Domain (AD) of Models. Due to the limitation
+    of the chemical space of the data sets, any built models in principle need to
+    predefine AD,30 which is used to reasonably define the applied scope of the classification
+    models. The setting of AD can prevent excessive prediction deviation resulting
+    from the large characteristic difference between the tested chemicals and the
+    training set. It means that if the query chemical is distributed in the AD, the
+    model prediction can be considered to be relatively reliable; otherwise, it is
+    less credible. In this study, the Euclidean distance-based method31 was used to
+    obtain the AD, which is defined by the structural similarity between the training
+    and the test sets. The distance of each molecule in the test set with its k-nearest
+    neighbors in the training set was calculated. If one of these k distances exceeds
+    the threshold of AD, the query compound is regarded as outside the AD;32 otherwise,
+    it has fallen in the domain. The AD calculation is implemented according to the
+    following formula
+
+
+    ```
+
+    D_x = \bar{y} + Za (5)
+
+    ```
+
+
+    where \bar{y} and \sigma represent the average value and standard deviation of
+    the calculated Euclidean distance, respectively, and Z is an arbitrary parameter,
+    which determines the size of the AD.
+
+
+    # 2.6. Identification of Privileged Substructures. In this study, privileged substructures
+    refer to molecular functional groups that frequently appear in the CYP2C8 inhibitors.
+    These substructures in inhibitors tend to react with the CYP2C8 metabolic enzyme
+    to exert biological activity. Therefore, identification of these privileged substructures
+    has an essential role for the determination of potential CYP2C8 inhibitors.33
+    Here, high-frequency substructures were evaluated by information gain (IG)34,35
+    and substructure frequency analysis.36 IG calculates the information entropy of
+    each pattern in a molecule to assess its probability in the validation system.
+    The greater the values of IG are, the more credible the substructures are. The
+    substructure frequency can be calculated by the following functional formula
+
+
+    ```
+
+    frequency of a fragment = N_fragment x N_total / N_fragment, total x N (6)
+
+    ```
+
+
+    where N_fragment is the number of compounds containing the fragments in CYP2C8
+    inhibitors or noninhibitors, N_total is the total number of compounds in the training
+    set, N_fragment, total is the total number of compounds containing this fragment,
+    and N is the number of CYP2C8 inhibitors or noninhibitors.
+
+
+    The MoSS node embedded in the KNIME 3.037 and the SARpy software38 was employed
+    to identify the substructures in the training set. MoSS is a graph-based approach
+    that generates substructures by embedding fragments parallel to all compounds
+    throughout the growth process.39 SARpy uses “string mining” to extract substructures
+    from the SMILES notation of the compounds, which does not split the ring structures.40
+    After many trials, in MoSS, “Minimum fold support in %” was set to 10, “Maximum
+    complement support in %” and “Minimum fragment size” were set to 5, and “Maximum
+    fragment size” was set to 16. The rest adopted the default settings. In SARpy,
+    the numbers of atoms were set to range from 5 to 16, accuracy was set to “OPTIMAL”,
+    and CYP2C8 inhibitors were chosen as the study object.
+
+
+    # 3. RESULTS
+
+
+    # 3.1. Data Set Analysis. We initially collected 303 inhibitors and 211 noninhibitors
+    from PubChem and the literature. During the data collection process, we found
+    that three compounds in PubChem were stereoismers of each other, one compound
+    is the R configuration, one is S configuration, and the remaining one is a racemate.
+    However, these three compounds are all labeled as “active”. We did not consider
+    the chirality of the compound in the data processing so we treated two of the
+    three compounds as duplicates and removed them. Three compounds extracted from
+    the literature are incompatible with those extracted from PubChem. In the literature,
+    these compounds are considered as noninhibitors, but they are labeled as “active”
+    in PubChem. Thus, we removed these compounds for model construction. In addition,
+    among these chemicals, 11 are duplicates and 1 is an inorganic compound, which
+    were also removed. As such, we obtained 290 inhibitors and 204 noninhibitors in
+    total. Since the inhibitors retrieved from the PubChem are very similar to each
+    other, we clustered these inhibitors by the molecular fingerprint similarity method
+    to obtain 250 inhibitors. For the validation data set, we collected 81 compounds
+    from three sources. Among them, one is duplicated in the training and test sets
+    and one is an inorganic compound containing boron. We removed these 2 compounds
+    and got 79 compounds as the external validation set. Finally, we obtained 533
+    organic compounds from four different sources, including the literature, Web site,
+    and two publicly available databases. Among them, 312 chemicals are positive (inhibitors)
+    and 221 are negative (noninhibitors).
+
+
+    After data splitting, the training, test, and external validation sets contain
+    363, 91, and 79 compounds, respectively. The numbers of CYP2C8 inhibitors and
+    noninhibitors in each data set are listed in Table 1. The SMILES and classification
+    information on the data sets are provided in the Supporting Information (data.xlsx).
+
+
+    Table 1. Number of Chemicals in the Training, Test, and External Validation Sets
+
+
+    | | inhibitors | noninhibitors | total |
+
+    |---|---|---|---|
+
+    | training set | 204 | 159 | 363 |
+
+    | test set | 46 | 45 | 91 |
+
+    | external set | 62 | 17 | 79 |
+
+    | total | 312 | 221 | 533 |
+
+
+    Previous studies have shown that the quality and diversity of the data sets would
+    affect the prediction performance of the classification models.6,15 Therefore,
+    in order to develop robust predictive models, the chemical space distribution
+    and the Tanimoto similarity were used to explore the chemical diversity for three
+    data sets in this study. The chemical space distribution defined by MW and ALOGp
+    is illustrated in Figure 1. Most of the green circles (test set) and blue stars
+    (external validation set) overlap with the pink squares (training set). The number
+    of hydrogen-bond donors/acceptors (HBD/ HBA), rotatable bonds (ROTB), and polar
+    surface area (PSA) in training, test and external validation sets have been calculated
+    (Figure S1). The curve changes of the four physicochemical properties of the three
+    data sets are similar. These results demonstrated that the training set shared
+    a similar chemical space with the other two sets. In addition, the Tanimoto coefficient
+    was calculated with the Mac fingerprint20'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/c231614c653e97fe1a89fe8f2f1da0bc_3_0.png)
+
+
+    validation were applied to the training set, and then all of the built models
+    were verified by the test and external validation sets.
+
+
+    Figure 2 shows that the prediction models possess different performance according
+    to four statistical parameters including AUC, CA, SE, and SP. In general, the
+    AUC values range from 0.76 to 0.88, the CA values range from 0.69 to 0.80, the
+    SP values range from 0.61 to 0.85, the SE values are in the range from 0.71 to
+    0.83, and the MCC values range from 0.37 to 0.61. The values of SP are slightly
+    lower than those of SE in most models, but the differences between them are small.
+    It is found that except for the AP2D-KNN, AP2D-LR, AP2D-NN, Gra-KNN, and KR-KNN
+    models, the AUC values of the other models are greater than 0.8. The CA values
+    of most models are over 0.7. The SE and SP values are above 0.7 except for the
+    AP2D-KNN, AP2D-NN, AP2D-REF, Gra-KNN, Gra-NN, and Mac-KNN models. The MCC values
+    are above 0.5 except for Gra-KNN, Gra-NN, KR-KNN, Gra-LR, Gra-REF, and the five
+    models based on AP2D. The detailed parameter values of the 10-fold cross validation
+    are summarized in Table S2. According to the AUC and CA values of the 10-fold
+    cross validation, the top five binary classification models for the training set
+    are FP-SVM, Ext-LR, Ext-SVM, Pub-LR, and Pub-SVM, which are presented in Table
+    2. This shows that the models built based
+
+
+    to explore the diversity of chemicals in the three data sets. The frequency distribution
+    of similarity for all chemicals is shown in Figure S2. The average Tanimoto index
+    value is 0.372, reflecting that the structural similarity of our data sets is
+    in general low.
+
+
+    # 3.2. Model Construction and Evaluation.
+
+
+    In this study, 5 machine-learning algorithms along with 9 molecular fingerprints
+    were employed to build 45 binary classification models of CYP2C8 inhibitors and
+    noninhibitors. The grid search for the parameter optimization and 10-fold cross
+
+
+    ![](img/c231614c653e97fe1a89fe8f2f1da0bc_3_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "on the SVM and LR classifiers combined with the Ext, FP, and Pub fingerprints\
+    \ have better performance.\n\n# Table 2. Performance of 10-Fold Cross Validation\
+    \ for the Top Five Models\n\n| models | AUC | CA | SE | SP | MCC |\n| :--- | :---\
+    \ | :--- | :--- | :--- | :--- |\n| FP-SVM | 0.88 | 0.80 | 0.83 | 0.76 | 0.59 |\n\
+    | Ext-LR | 0.88 | 0.80 | 0.81 | 0.79 | 0.60 |\n| Ext-SVM | 0.87 | 0.80 | 0.79\
+    \ | 0.82 | 0.61 |\n| Pub-LR | 0.87 | 0.79 | 0.80 | 0.78 | 0.58 |\n| Pub-SVM |\
+    \ 0.87 | 0.80 | 0.80 | 0.81 | 0.60 |\n\nIn order to further evaluate the predictive\
+    \ capability of the top five models in the cross validation, the models were validated\
+    \ by the test and external sets. The prediction results are listed in Tables 3\
+    \ and 4. For the test set, the AUC values of\n\n# Table 3. Validation Results\
+    \ of the Top Five Models of the Test Set\n\n| models | AUC | CA | SE | SP | MCC\
+    \ |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| FP-SVM | 0.83 | 0.73 | 0.80\
+    \ | 0.64 | 0.45 |\n| Ext-LR | 0.83 | 0.74 | 0.76 | 0.71 | 0.47 |\n| Ext-SVM |\
+    \ 0.82 | 0.77 | 0.74 | 0.80 | 0.54 |\n| Pub-LR | 0.85 | 0.77 | 0.83 | 0.71 | 0.54\
+    \ |\n| Pub-SVM | 0.85 | 0.80 | 0.83 | 0.78 | 0.60 |\n\n# Table 4. Validation Results\
+    \ of the Top Five Models for the External Validation Set\n\n| models | AUC | CA\
+    \ | SE | SP | MCC |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| FP-SVM | 0.90\
+    \ | 0.89 | 0.92 | 0.77 | 0.67 |\n| Ext-LR | 0.88 | 0.81 | 0.84 | 0.71 | 0.50 |\n\
+    | Ext-SVM | 0.89 | 0.76 | 0.73 | 0.88 | 0.51 |\n| Pub-LR | 0.89 | 0.80 | 0.81\
+    \ | 0.76 | 0.50 |\n| Pub-SVM | 0.88 | 0.76 | 0.77 | 0.71 | 0.42 |\n\nfive models\
+    \ range from 0.82 to 0.85, the CA values range from 0.73 to 0.80, the SE values\
+    \ range from 0.74 to 0.83, the SP values range from 0.64 to 0.80, and the MCC\
+    \ values range from 0.45 to 0.60. Apparently, among the five classification models,\
+    \ the Pub-SVM model gave the best performance considering the combination of AUC\
+    \ and CA values. The SP values of the SVM classifier based on the FP fingerprint\
+    \ is slightly lower than that of the other models. For the external validation\
+    \ set, the AUC and CA values are between 0.88 and 0.90 and between 0.76 and 0.89,\
+    \ respectively. The SE values range from 0.73 to 0.92, and the SP values are in\
+    \ the range from 0.70 to 0.88. The MCC values are in the range from 0.42 to 0.67.\
+    \ The AUC and CA values of the FP-SVM model are the highest. Taken together, these\
+    \ results demonstrated that SVM and LR may be good classifiers for CYP2C8 inhibitors/nonhibitors,\
+    \ and the models based on the Ext and Pub fingerprints outperformed the others.\n\
+    \n# 3.3. Analysis of Applicability Domain. AD should be seriously considered in\
+    \ any QSAR- or classification-based predictive study. Several AD calculation methods\
+    \ have been reported in the literature, such as distance-based methods,${}^{31}$\
+    \ probability density distribution,${}^{40}$ and convex hull.${}^{41}$ The extensively\
+    \ used Euclidean distance-based method was adopted for AD analysis${}^{31,42}$\
+    \ in this study. First, the similarity distance matrix was calculated using the\
+    \ training set to obtain the values\n\nof the parameters $\\gamma$ and $\\sigma$,\
+    \ which are 0.905 and 0.095, respectively. Then, the $D_{T}$ was acquired by adjusting\
+    \ the two variables Z and k, whose values were screened from 3 to 5 and from $-5.5$\
+    \ to $-4.5$, respectively. As shown in Table 5, more\n\n# Table 5. Number of the\
+    \ out-of-Domain Compounds with Different Z and k Values\n\n| $D_{T}$ | Z | k |\
+    \ | | |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| | | 3 | 4 | 5 | |\n| 0.478\
+    \ | $-4.5$ | 5 | 6 | 7 |\n| 0.430 | $-5.0$ | 9 | 12 | 15 |\n| 0.383 | $-5.5$ |\
+    \ 18 | 25 | 31 |\n\ncompounds in the test set were considered to be structurally\
+    \ similar to the training set with the decrease of Z and increase of k values.\
+    \ Figure S3 demonstrates that with the increase of the k values, the AUC and CA\
+    \ values of the in-domain compounds decrease generally. Therefore, the k value\
+    \ was chosen to be 3. In addition, when the Z value were set to $-5$, the AUC\
+    \ and CA values are higher than the other parameters. Thus, we finally set k to\
+    \ 3 and Z to be $-5$. \n\nThe prediction results of the in-domain compounds on\
+    \ the top five models were compared with the chemicals outside the AD. As presented\
+    \ in Table 6, the AUC and CA values of the\n\n# Table 6. Prediction Statistics\
+    \ of ID and OD Compounds for the Top Five Models with Z and k Values of $-5$ and\
+    \ 3$^{\\mathrm{a}}$\n\n| model | AUC | | CA | |\n| :--- | :--- | :--- | :--- |\
+    \ :--- |\n| | OD | ID | OD | ID |\n| FP-SVM | 0.43 | 0.85 | 0.67 | 0.73 |\n| Ext-LR\
+    \ | 0.36 | 0.85 | 0.67 | 0.74 |\n| Ext-SVM | 0.36 | 0.84 | 0.67 | 0.78 |\n| Pub-LR\
+    \ | 0.50 | 0.86 | 0.56 | 0.79 |\n| Pub-SVM | 0.50 | 0.87 | 0.67 | 0.82 |\n\n$^{a}$ID,\
+    \ inside the domain. OD, outside the domain.\n\nin-domain compounds range from\
+    \ 0.84 to 0.87 and from 0.73 to 0.82, respectively. By contrast, the AUC and CA\
+    \ values of the out-of-domain compounds range from 0.36 to 0.5 and from 0.56 to\
+    \ 0.67, respectively, which are significantly lower than that of the in-domain\
+    \ compounds, suggesting that the compounds unsuitable to build models could be\
+    \ well detected when k and Z were set to 3 and $-5$.\n\n# 3.4. Analysis of Privileged\
+    \ Substructures. Two tools, MOSS and SARpy, were used to identify the privileged\
+    \ substructures from the training set. Table 7 presents 10 privileged substructures\
+    \ detected by MOSS. They include hydrazinolyl benzone, 1H-benzo[d]imidazole, benzenesulfonamide,\
+    \ N-methylbenzamide, 4-methylpyridine, N-phenylformamide, N-methylbenzolsulfonamide,\
+    \ N-ethylalanine, trifluoromethane, and pyridine. Ten privileged substructures\
+    \ recognized by SARpy are listed in Table 8, including 1-phenyl-1H-pyrazole, biphenyl,\
+    \ 1H-benzo[d]imidazole, N-(2-formylmethyl) formamide, ethyleneimine, N-benzylbenzamide,\
+    \ 1-fluoro-3-methylbenzene, 3-fluorolaniline, N-isopropyl-benzene-benzosulfonamide,\
+    \ and 4-methylbenzamide. According to the number and frequency of these substructures,\
+    \ they appear more frequently in CYP2C8 inhibitors than nonhibitors. Among them,\
+    \ 1H-benzo[d]imidazole is the common substructure found in the two datasets. In\
+    \ addition, some similar scaffolds, such as benzenesulfonamide, benzamide, and\
+    \ aniline,"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Table 7. Ten Privileged Substructures Detected by MoSS Analysis
+
+
+    | Description | Privileged Substructure | IG | Np*<br>(Fp*) | Np''<br>(Fp'') |
+    Representative Structure |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | SI-<br>cI:e:e:c:e:I:)(=O)=O | <img src=''img/substructure_1.png''> | 0.035 |
+    37<br>(1.53) | 7<br>(0.35) | <img src=''img/structure_1.png''> |
+
+    | nI:c:c:c:c:cI:e:c:e:I:2 | <img src=''img/substructure_2.png''> | 0.033 | 23<br>(1.67)
+    | 2<br>(0.18) | <img src=''img/structure_2.png''> |
+
+    | SI-N(=)-<br>cI:e:c:c:e:c:I:)(=O)=O | <img src=''img/substructure_3.png''> |
+    0.026 | 30<br>(1.51) | 6<br>(0.37) | <img src=''img/structure_3.png''> |
+
+    | O-C(-N-C)-<br>cI:e:c:c:c:e:I: | <img src=''img/substructure_4.png''> | 0.025
+    | 29<br>(1.50) | 6<br>(0.38) | <img src=''img/structure_4.png''> |
+
+    | nI:c:c:c:c:I:e:cI: | C | <img src=''img/substructure_5.png''> | 0.02 | 22<br>(1.54)
+    | 4<br>(0.34) | <img src=''img/structure_5.png''> |
+
+    | O=C-N-CI:e:c:c:c:e:I | <img src=''img/substructure_6.png''> | 0.019 | 32<br>(1.42)
+    | 9<br>(0.49) | <img src=''img/structure_6.png''> |
+
+    | SI-N(C)-<br>cI:e:c:c:c:cI:)(=O)=O | <img src=''img/substructure_7.png''> | 0.016
+    | 22<br>(1.48) | 5<br>(0.41) | <img src=''img/structure_7.png''> |
+
+    | N(-cI:e:c:c:c:cI:)C-C | <img src=''img/substructure_8.png''> | 0.014 | 30<br>(1.36)
+    | 10<br>(0.56) | <img src=''img/structure_8.png''> |
+
+    | F-C(-F)(-F)-C | <img src=''img/substructure_9.png''> | 0.012 | 5<br>(1.82) |
+    0<br>(0) | <img src=''img/structure_9.png''> |
+
+    | nI:c:c:c:c:c:c:cI: | 1 | <img src=''img/substructure_10.png''> | 0.011 | 24<br>(1.36)
+    | 8<br>(0.56) | <img src=''img/structure_10.png''> |
+
+
+    *Np* and Fp* represent the number and frequency of this fragment in inhibitors.
+    bNp'' and Fp'' represent the number and frequency of this fragment in noninhibitors.
+
+
+    were found to have a high frequency of occurrence. The findings imply that if
+    a compound contains the abovementioned substructure fragments, it is more likely
+    to inhibit CYP2C8.
+
+
+    # 4. DISCUSSION
+
+
+    # 4.1. Comparison of Different Machine-Learning Algorithms. The built 45 binary
+    classification models exhibited different predictive performance. To test whether
+    the difference in performance reach the threshold of statistical significance,
+    we used AUC as the criterion to perform analysis of variance on different types
+    of models (Tables S3 and S4). The analysis results suggest that the performance
+    of the different models has statistical significance. On this basis, we compared
+    the built models from two aspects, machine-learning
+
+
+    algorithms and molecular fingerprint. In this section, we focus on the machine-learning
+    algorithms.
+
+
+    Among the top five models, three of them were built using SVM and the other two
+    were based on LR. This demonstrated that these two algorithms had better performance
+    for predicting CYP2C8 inhibitors than other algorithms. The models built on KNN
+    performed poorly. For example, the AUC values of the Gra-KNN and AP2D-KNN models
+    rank lower, which are 0.77 and 0.76, respectively. Furthermore, the models based
+    on SVM performed better than LR among different fingerprints. As shown in Figure
+    2, the AUC value of SVM is higher than that of LR when using the AP2D fingerprint.
+    It is 0.81 for the SVM model while for the LR model it is 0.78. When using the
+    Sub fingerprint, the AUC value of SVM is 0.87 while for the LR model it is 0.84.
+    In'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Table 8. Ten Privileged Substructures Detected by SARpy Analysis
+
+
+    | Description | Privileged Substructure | IG | $N_I^*$<br>($F_I^*$) | $N_N^*$<br>($F_N^*$)
+    | Representative Structure |
+
+    | :--- | :---: | :---: | :---: | :---: | :---: |
+
+    | nI(-<br>e2:e:x:e:x:2)e:<br>e:c:1 | 0.043 | 18<br>(1.82) | 0<br>(0) |  |
+
+    | eI(e2:e:x:e:x:e:2)<br>::x:e:x:e:1 | 0.042 | 27<br>(1.69) | 2<br>(0.15) |  |
+
+    | eI:c:e2:e:x:e:x:e:<br>2:m:1 | 0.033 | 23<br>(1.67) | 2<br>(0.18) |  |
+
+    | C(-N-<br>eI:e:x:e:x:1-<br>C:=O):=O | 0.033 | 14<br>(1.82) | 0<br>(0) |  |
+
+    | Cl(-<br>C#C):e:x:e:x:e:1 | 0.031 | 13<br>(1.82) | 0<br>(0) |  |
+
+    | C(-N(-C-<br>eI:e:x:e:x:1)(=<br>O)-c1:e:x:e:c:e:1 | 0.023 | 10<br>(1.82) | 0<br>(0)
+    |  |
+
+    | Cl(-F):e:x:e:c:e(-<br>C):e:1 | 0.023 | 10<br>(1.82) | 0<br>(0) |  |
+
+    | N-CI:e:x:e:c:e(-<br>F):e:1 | 0.021 | 9<br>(1.82) | 0<br>(0) |  |
+
+    | Cl1(-S(-N(-C(-C-<br>C)(=O)=O):e:x:e:<br>ee:1 | 0.021 | 9<br>(1.82) | 0<br>(0)
+    |  |
+
+    | C(-N(=O)-<br>c1:e:x:e(-C):e:c:e:1 | 0.021 | 9<br>(1.82) | 0<br>(0) |  |
+
+    | $^*$ | | | | | |
+
+
+    $^*N_I$ and $F_I$ represent the number and frequency of this fragment in inhibitors.
+    $^*N_N$ and $F_N$ represent the number and frequency of this fragment in noninhibitors.
+
+
+    addition, eight of the nine molecular fingerprints based on SVM have higher CA
+    values than the other algorithms.
+
+
+    The top five models were further validated by the test and external sets. As shown
+    in Tables 3 and 4, the predictive accuracies of these models are relatively high,
+    with AUC and CA values greater than 0.8 and 0.7, respectively. The best models
+    in the test and external sets were both built based on SVM, namely, the Pub-SVM
+    and FP-SVM models, where the AUC value of the FP-SVM model exceeds 0.9. These
+    results indicate that the classification models based on SVM have better robustness
+    and predictive performance. This is similar to our previous findings. Chen et
+    al$^{43}$ used machine-learning algorithms to construct binary classification
+    models of FXR binders and nonbinders. They pointed out that more than one-half
+    of the top 10 models in the test and external validation sets were built using
+    SVM and RF. Jiang et al$^{44}$ predicted the reproductive toxicity of compounds
+    via machine learning, and
+
+
+    they found that the Mac-SVM model had the best predictive performance.
+
+
+    # 4.2. Comparison of Different Molecular Fingerprints.
+
+
+    In this study, nine molecular fingerprints containing different lengths and structural
+    information were employed to build classification models. From Figure 2, it is
+    obvious that the Ext, FP, and Pub fingerprints have better performance than the
+    others. By contrast, the models built on the AP2D and Gra fingerprints perform
+    poorly in terms of the AUC and CA values. In addition, four of the top five models
+    in 10-fold cross validation were built on the Ext and FP fingerprints, which were
+    still robust for the test and external validation sets. This implies that the
+    fingerprint with longer bits does not necessarily perform better in model construction.
+    For example, the prediction of the Mac fingerprint (166 bits) is better than that
+    of Gra (1024 bits), which performs worst in most models. In addition, the KR fingerprint
+    comprising 4860 bits exhibits'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/c231614c653e97fe1a89fe8f2f1da0bc_7_0.png)
+
+
+    Figure 3. Binding mode of Montelukast (A) and Troglitazone (B) in the crystal
+    structure of the CYP2C8 complex. Hydrogen bonds and hydrophobic interactions formed
+    by the ligand and the residues are represented by yellow and gray dashed lines,
+    respectively.
+
+
+    poor performance in the KR-KNN model with an AUC value of 0.79. Overall, our results
+    indicate that it would be a good choice to use the Ext and Pub fingerprints to
+    build classification models for CYP2C8 inhibition.
+
+
+    # 4.3. Privileged Substructures Analysis. A total of 19 unique privileged substructures
+    was obtained, as presented in Tables 7 and 8. Among them, nitrogen-containing
+    heterocycle substructures such as 1H-benzo[d]imidazole, 1-phenyl-1H- pyrazole,
+    and quinoline frequently occur in the CYP2C8 inhibitors reported in the literature,
+    such as Azilsartan, 45 Candesartan cilexetil, 14 and Nilotinib. 46 Molecules containing
+    these fragments tend to interact with CYP2C8, possibly because it can occupy the
+    distal hydrophobic pocket in the active cavity. For example, in the complex crystal
+    structure of CYP2C8 (PDB code 2NNI), the chloroquinoline ring of the potent competitive
+    inhibitor Montelukast interacts with the hydrophobic residue cluster located below
+    helix G to stabilize its binding to CYP2C8, 47,48 as shown in Figure 3A.
+
+
+    The remaining privileged substructures have similar scaffolds including the benzenesulfonamide,
+    benzamide, and N-phenyl- formamide fragments. In fact, many reported potent CYP2C8
+    inhibitors contain the above structural fragments, such as Zafirlukast, 49 Dabrafenib,
+    50 and Gliburide. 14 According to the crystal structure of PDB code 2NNI, the
+    terminal carboxylic acid group of Montelukast forms hydrogen bonds with the polar
+    amino acid cluster (including Ser100, Ser103, and Asn217) near helix B'' in the
+    active site (Figure 3A). In addition, in another complex crystal structure of
+    CYP2C8 (PDB code 2VN0), the ketone oxygen in the thiazolidinedione can form hydrogen
+    bonds with Arg241 in helix G and Asn204 in helix F. The other oxygen in the middle
+    of the structure forms hydrogen bonds with Ser103 via the surrounding water molecules
+    51,52 (Figure 3B). Therefore, compounds containing sulfonamide or amide groups
+    can form polar interactions with the polar amino acid cluster near helix B'' or
+    Arg241 and Asn204 of CYP2C8, which may explain the frequent presence of benzenesulfonamide
+    and benzamide fragments in CYP2C8 inhibitors.
+
+
+    In addition, some substructures containing fluorine atoms were also identified
+    by MoSS and SARy. In fact, fluorine atoms are present in several known CYP2C8
+    inhibitors such as Dabrafenib and Nilotinib. As an electron-withdrawing group,
+    F reduces the electron cloud density of the benzene ring, thus enhancing the hydrophobicity
+    of the molecule, 53,54 making it easier to bind to the hydrophobic cavity of CYP2C8.
+
+
+    # 4.4. Limitations of Our Models. The overall accuracies of the 10-fold cross
+    validation, test, and external sets indicate that
+
+
+    our models have satisfactory predictive power and can provide useful information
+    for classifying potential CYP2C8 inhibitors and noninhibitors. However, our models
+    still have certain limitations. Due to the small quantity of experimentally measured
+    CYP2C8 noninhibitors reported, relatively few negative compounds were used for
+    modeling, which may result in insufficient “learning” of negative data features
+    in our models. As can be seen from the results of the cross validation, test,
+    and external validation sets, the S# value is slightly lower than the SE value
+    in general. It is hoped that this problem could be solved with the increase of
+    CYP2C8 biological experimental data in the future. In addition, the inorganic
+    compounds were removed before modeling. Thus, our models cannot predict these
+    species.
+
+
+    # 5. CONCLUSIONS
+
+
+    In this study, on the basis of a diverse data set of CYP2C8 enzymes, 5 machine-learning
+    algorithms including SVM, RF, KNN, NN, and LR combined with 9 molecular fingerprints
+    were used to develop 45 binary classification models. Considering the values of
+    AUC, CA, SE, SP, and MCC, the 5 best-performing models by 10-fold cross validation
+    were obtained for further assessment using the test and external validation sets.
+    The overall predictive accuracy is satisfactory, where the AUC and CA values are
+    over 0.8 and 0.7, respectively. In addition, our results showed that the models
+    built with the Ext and Pub fingerprints were superior to others, and the SVM algorithm
+    was more suitable for classifying CYP2C8 inhibitors/noninhibitors. The Euclidean
+    distance- based applicability domain calculation was further applied, whose value
+    was obtained by searching for parameters k and Z. Moreover, a combination of information
+    gain and substructure frequency analysis was used to detect several privileged
+    substructures. In conclusion, the built prediction models and the privileged substructures
+    could be useful for quickly identifying potential CYP2C8 inhibitors in the early
+    stage of drug design.
+
+
+    # 6 ASSOCIATED CONTENT
+
+
+    # Supporting Information
+
+
+    The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acs.chemtoxtx.1c00078.
+
+
+    Parameter settings of the top five models in 10-fold cross validation; detailed
+    results for 10-fold cross-validation of the models; related statistics of the
+    samples; analysis of variance of different models; physicochemical properties
+    analysis and chemical similarity heat map of the training,'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'test, and external validation sets; AUC and CA values of compounds in the application
+    domain under different k (k = 3, 4, and 5) and Z (Z = −5.5, −5, and −4.5) values
+    for the top five models (PDF) SMILES and classification information of the data
+    sets (XLSX)
+
+
+    # ■ AUTHOR INFORMATION
+
+
+    # Corresponding Author
+
+
+    **Weihua Li** − Shanghai Key Laboratory of New Drug Design, School of Pharmacy,
+    East China University of Science and Technology, Shanghai 200237, China; [orcid.org/0000-0001-7055-9836](https://orcid.org/0000-0001-7055-9836);
+    Phone: +86-21-64250811; Email: whli@ecust.edu.cn
+
+
+    # Authors
+
+
+    +   • **Xiaoxiao Zhang** − Shanghai Key Laboratory of New Drug Design, School
+    of Pharmacy, East China University of Science and Technology, Shanghai 200237,
+    China
+
+    • **Peiqiao Zhao** − Shanghai Key Laboratory of New Drug Design, School of Pharmacy,
+    East China University of Science and Technology, Shanghai 200237, China
+
+    • **Zhiyiuan Wang** − Shanghai Key Laboratory of New Drug Design, School of Pharmacy,
+    East China University of Science and Technology, Shanghai 200237, China
+
+    • **Xuan Xu** − Shanghai Key Laboratory of New Drug Design, School of Pharmacy,
+    East China University of Science and Technology, Shanghai 200237, China
+
+    • **Guixia Liu** − Shanghai Key Laboratory of New Drug Design, School of Pharmacy,
+    East China University of Science and Technology, Shanghai 200237, China; [orcid.org/0000-0001-9648-844X](https://orcid.org/0000-0001-9648-844X)
+
+    • **Yun Tang** − Shanghai Key Laboratory of New Drug Design, School of Pharmacy,
+    East China University of Science and Technology, Shanghai 200237, China; [orcid.org/0000-0003-2341-1109](https://orcid.org/0000-0003-2341-1109)
+
+
+    Complete contact information is available at: [https://pubs.acs.org/10.1021/acs.chemtoxicol.1c00078](https://pubs.acs.org/10.1021/acs.chemtoxicol.1c00078)
+
+
+    # Funding
+
+
+    This work was supported by the National Natural Science Foundation of China (Grants
+    81973242 and 81872800).
+
+
+    # Notes
+
+
+    The authors declare no competing financial interest.
+
+
+    # (1) REFERENCES
+
+
+    +   1. (1) Kamel, B., and Harriman, S. (2013) Inhibition of cytochrome P450 enzymes
+    and biochemical aspects of mechanism−based inactivation (MBI). *Drug Discovery
+    Today: Technol.* 10, e177−e189.
+
+    2. (2) *In Vitro Drug Interaction Studies−Cytochrome P450 Enzyme and Transporter-Mediated
+    Drug Interactions Guidance for Industry*; Department of Health and Human Services
+    Food and Drug, U.S. FDA, 2020.
+
+    3. (3) Sun, H., Veth, H., Xia, M., Austin, C. P., and Huang, P. (2011) Predictive
+    models for cytochrome P450 isoenzymes based on quantitative high throughput screening
+    data. *J. Chem. Inf. Model.* 51, 2474−2481.
+
+    4. (4) Shao, C., Yu, Su, B., Tu, Y., Lin, C., Lin, O. A., and Tsenq, Y. J. (2015)
+    Cyp450: a rule-based CYP450 inhibition prediction server. *Bioinformatics* 31,
+    1869−1871.
+
+    5. (5) Rostkovski, M., Spuht, O., and Rydberg, P. (2013) WhichCyp: prediction
+    of cytochromes P450 induction. *Bioinformatics* 29, 2051−2052.
+
+    6. (6) Cheng, F., Yu, Y., Shen, J., Yang, L., Li, W., Liu, G., Lee, P. W., and
+    Tang, Y. (2011) Classification of cytochrome P450 inhibitors and noninhibitors
+    using combined classifiers. *J. Chem. Inf. Model.* 51, 996−1011.
+
+
+    +   1. (7) Li, Li, Xu, Li, Liu, J., and Pei, J. (2018) Prediction of human cytochrome
+    P450 inhibition using a deep autoencoder neural network. *Mol. Pharmacol.* 95,
+    4336−4345.
+
+    2. (8) Wu, Z., Lei, T., Shen, C., Wang, Z., Cao, D., and Hou, T. (2019) ADMET
+    evaluation in drug discovery. In *Reliable prediction of human cytochrome P450
+    inhibition using artificial intelligence approaches*. *J. Chem. Inf. Model.* 59,
+    4587−4601.
+
+    3. (9) Neves, B. J., Dantas, R. F., Senger, M. L., Melo-Filho, C. C., Valente,
+    W. C. G., De Almeida, C. M., Rezende-Neto, J. M., Lima, E. F. C., Pauley, R.,
+    Furnham, N., Murator, F., Kamenskyi, L., Gastonier, A. E., Braga, R. S., Silva-Junior,
+    J. P., and Andrade, C. H. (2016) Discovery of new anti-schistosomal hits by integration
+    of QSAR-based virtual screening and high content screening. *J. Med. Chem.* 59,
+    7075−7088.
+
+    4. (10) Sun, J., Jeliazkova, N., Cupakdin, V., Goldiz-Drib, J., Engkvist, O.,
+    Carisson, L., Wegner, T. J., Cuelamas, H., Georgiev, I., Jeliazkova, V., Kocher,
+    N., Ashley, T. J., and Chen, H. (2017) ECapADE-DB: an integrated large scale dataset
+    facilitating Big Data analysis in chemogenomics. *J. Cheminf.* 9, 17.
+
+    5. (11) Xing, J., Liu, Y., Liu, R., Wang, Y., Xie, Y., Zhang, H., Shi, Jiang,
+    H., Liu, Y., Chen, K., Jiang, H., Liao, Q., and Zheng, H. (2017) Machine-learning-assisted
+    approach for discovering novel inhibitors targeting bromodomain-containing protein
+    4. *J. Chem. Inf. Model.* 57, 1677−1690.
+
+    6. (12) Achour, B., Barber, J., and Rostami-Hodjean, A. (2014) Expression of hepatic
+    drug metabolism cytochrome P450 enzymes and their intercorrelations: a meta-analysis.
+    *Drug Metab. Dispos.* 42, 1349−1356.
+
+    7. (13) Rendic, S., and Guengerich, F. P. (2015) Survey of human oxidoreductases
+    and cytochrome P450 enzymes involved in the metabolism of xenobiotic and natural
+    chemicals. *Chem. Res. Toxicol.* 28, 38−42.
+
+    8. (14) Backman, J. T., Filppula, A. M., Niem, M., and Neuvonen, P. J. (2016)
+    Role of cytochrome P450 2C8 in drug metabolism and interactions. *Pharm. Rev.*
+    68, 168−241.
+
+    9. (15) Huang, S. M., Strong, J. M., Zhang, L., Reynolds, K. S., Nallani, S.,
+    Temple, R., Abraham, S., Habert, A. A., Bawaja, K. R., Burckart, G. J., et al.
+    (2008) New era in drug interaction evaluation: US Food and Drug Administration
+    update on CYP enzymes, transporters, and the guidance process. *J. Clin. Pharmacol.*
+    48, 662−670.
+
+    10. (16) Wang, Y., Xiao, J., Zuzek, T. O., Zhang, T., Wang, J., and Bryant, S.
+    H. (2009) PubChem: a public information system for analyzing bioactivities of
+    small molecules. *Nucleic Acids Res.* 37, W623−W633.
+
+    11. (17) Walkley, R. L., Gannon, E. A., and Obach, R. S. (2005) Examination of
+    209 drugs for inhibition of cytochrome P450 C2C8. *J. Clin. Pharmacol.* 45, 68−78.
+
+    12. (18) Wishart, D. S., Feunang, Y. U., Gao, A. C., Lo, E. J., Marcu, A., Grant,
+    J. R., Sajed, T., John, D. S., Li, C., Sayeeda, S., Eisenmenger, N., Linskerakar,
+    I., Liu, Y., Maciejewski, A., Gale, N., Wilson, A., Chin, L., Cummings, R., Le,
+    D., Pon, L., Knox, C., and Wilson, M. (2018) DrugBank 5.0: a major update to the
+    DrugBank database for 2018. *Nucleic Acids Res.* 46, D1074−D1082.
+
+    13. (19) Muratov, E. N., Bajorat, J., Sheridan, R. P., Tetko, I. V., Filimonov,
+    D., Porokirov, Y., Oprea, T. I., Baskin, I., Varnek, A., Rotisha, A., Isayev,
+    A., Curatalo, S., Fourches, D., Cohen, Y., Aspuru-Guzik, A., Winkler, D. A., Agrafiotis,
+    D., Cherkasov, A., and Tropheng, A. (2020) QSAR without borders. *Chem. Soc. Rev.*
+    49, 3525−3564.
+
+    14. (20) MACCS (Molecular Access System); MDL Information Systems: San Leandro,
+    CA, 2002.
+
+    15. (21) Yap, C. W. (2011) PaDEL-descriptor: an open source software to calculate
+    molecular descriptors and fingerprints. *J. Comput. Chem.* 32, 1466−1474.
+
+    16. (22) Klekotka, J., and Roth, F. P. (2008) Chemical substructures that enrich
+    for biological activity. *Bioinformatics* 24, 2518−2525.
+
+    17. (23) Cherkassky, V. (1997) The nature of statistical learning theory. *IEEE
+    Trans. Neural Networks.* 8, 564.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '(24) Menze, B. H., Kelm, B. M., Masuch, R., Himmlerich, U., Bachert, P., Petrich,
+    W., and Hamprecht, F. A. (2009) A comparison of random forest and its Gini importance
+    with standard chemometric methods for the feature selection and classification
+    of spectral data. *Bio* *Inform.* **10**, 2135−2143.
+
+
+    (25) Kauffman, G. W., and Jurs, P. C. (2001) QSAR and k-nearest neighbor classification
+    analysis of selective cyclooxygenase-2 inhibitors using topologically-based numerical
+    descriptors. *J.* *Chem.* *Inf.* *Comput.* *Sci.* **41**, 1553−1560.
+
+
+    (26) Basher, I. A., and Hajimer, M. (2000) Artificial neural networks: fundamentals,
+    computing, design, and applicability. *J.* *Microbiol.* *Methods* **43**, 3−31.
+
+
+    (27) Mood, C. (2010) Logistic Regression: why we cannot do what we think we can
+    do, and what we can do about it. *Eur.* *Sociol.* *Rev.* **26**, 67−82.
+
+
+    (28) Awami, A., and Jain, R. (2012) Skikit-learn: machine learning in python.
+    *J.* *Mach.* *Learn.* *Res.* **12**, 2825−2830.
+
+
+    (29) Baldi, P., Brunak, S., Chauvin, Y., Andersen, C. F., and Nielsen, H. (2000)
+    Assessing the accuracy of prediction algorithms for classification: an overview.
+    *Bioinformatics* **16**, 412−424.
+
+
+    (30) Dragos, H., Giffels, M., and Alexandre, V. (2009) Predicting the Predictability:
+    a unified approach to the applicability domain problem of QSA R models. *J.* *Chem.*
+    *Inf.* *Model.* **49**, 1762−1776.
+
+
+    (31) Cheng, F., Kenaga, Y., Zhou, Y., Yu, Y., Li, W., Shen, J., Du, Z., Chen,
+    L., Xu, C., Ge, L., Lo, P. W., and Tang, Y. (2012) In silico assessment of chemical
+    biodegradability. *J.* *Chem.* *Inf.* *Model.* **52**, 655−669.
+
+
+    (32) Tropsha, A., and Golbraikh, A. (2007) Predictive QSAR modeling workflow,
+    model applicability domains, and virtual screening. *Curr.* *Pharm.* *Des.* **13**,
+    3494−3504.
+
+
+    (33) Benigni, R., and Bossa, C. (2008) Structure alerts for carcinogenicity, and
+    the Samantha assay system: a novel insight through the chemical relational databases
+    technology. *Mutat.* *Res.* **659**, 248−61.
+
+
+    (34) Quinlan, J. R. *C45: programs for machine learning*; Morgan Kaufmann Publishers
+    Inc: San Francisco, CA, 1993.
+
+
+    (35) Shen, J., Cheng, F., Xu, Y., Li, W., and Tang, Y. (2010) Estimation of ADME
+    properties with structure pattern recognition. *J.* *Chem.* *Inf.* *Model.* **50**,
+    1034−1041.
+
+
+    (36) Cao, Q., Liu, L., Yang, H., Cai, P., Li, W., Liu, G., Lee, P. W., and Tang,
+    Y. (2018) *In silico* estimation of chemical aquatic toxicity on crustaceans using
+    chemical category methods. *Environ.* *Sci.* *Processes* *Impacts* **20**, 1234−1243.
+
+
+    (37) Berthold, M. R., Cebrón, N., Dill, F., Gabriel, T. R., Kötter, T., Meinl,
+    T., Oth, P., Thiel, K., and Wesseleld, B. (2009) KNIME: the konstanz information
+    miner: version 2.0 and beyond. *SIGKDD* *Explor.* *Nesui* **11**, 26−31.
+
+
+    (38) Ferrari, T., Cattaneo, D., Gini, G., Golbarkas Bakhtiarly, N., Mangano, A.,
+    and Benenati, E. (2013) Automatic knowledge extraction from chemical structures:
+    the case of mutagenicity prediction. *SAR* *QSAR* *Environ.* *Res.* **24**, 365−383.
+
+
+    (39) Golbarkas, A., Benenati, E., Golbarkas, N., Mangano, A., Merdvan, E., Roncaglioni,
+    A., and Gini, G. (2016) New clues on carcinogenicity-related substructures derived
+    from mining two large data sets of chemical compounds. *J.* *Environ.* *Sci.*
+    *Health* *C* *Environ.* *Carcinogen* *Toxicol.* *Res.* **34**, 97−113.
+
+
+    (40) Kar, S., Roy, K., and Leszczynski, A. (2018) Applicability domain: a step
+    toward confident predictions and predictability for QSAR modeling. *Methods* *Mol.*
+    *Biol.* **1800**, 141−169.
+
+
+    (41) Mathea, R., Klingshofer, W., and Baumann, K. (2016) ChemoInformatometric
+    classification methods and their applicability domain. *Mol.* *Inf.* *Res.* **35**,
+    160−180.
+
+
+    (42) Sun, L., Yang, H., Li, J., Wang, T., Li, W., Liu, G., and Tang, Y. (2018)
+    *In silico* prediction of compounds binding to human plasma proteins by QSAR models.
+    *ChemMedChem* **13**, 572−581.
+
+
+    (43) Chen, Y., Yang, H., Wu, Z., Liu, G., Tang, Y., and Li, W. (2018) Prediction
+    of Faranoid X Receptor disruptors with machine learning methods. *Chem.* *Res.*
+    *Toxicol.* **31**, 1128−1137.
+
+
+    (44) Jiang, S., Yang, H., Di, P., Li, W., Tang, Y., and Liu, G. (2019) *In silico*
+    prediction of chemical reproductive toxicity using machine learning. *J.* *Appl.*
+    *Toxicol.* **39**, 844−854.
+
+
+    (45) Edarbi. *Pharmacology* *review*(s); U.S. FDA, Centre for Drug Evaluation
+    and Research, 2011.
+
+
+    (46) Tasigna. *Clinical* *pharmacology* *and* *biopharmaceutical* *review*(s);
+    U.S. FDA, Centre for Drug Evaluation and Research, 2007.
+
+
+    (47) Lai, X., Yang, L., Li, X., Liu, Y., Zhou, Z., and Zhou, Y. (2009) Human CYP2C8:
+    structure, substrate specificity, inhibitor selectivity, inducers and polymorphisms.
+    *Curr.* *Drug* *Metab.* **10**, 1009−1047.
+
+
+    (48) Schoch, G. A., Yano, J. K., Sansen, S., Danette, P. M., Stout, C. D., and
+    Johnson, E. F. (2008) Determinants of cytochrome P450 2C8 substrate binding: structures
+    with montelucast, troglatolone, feldipine, and 9-des-retinoic acid. *J.* *Biol.*
+    *Chem.* **283**, 17227−17237.
+
+
+    (49) Jaakkola, T., Laillila, J., Neuvonen, P. J., and Backman, J. T. (2006) Pizotifen
+    is metabolised by CYP2C8 and CYP3A4 *in vitro*: potential for interactions with
+    CYP2C8 inhibitors. *Basic* *Clin.* *Pharmacol.* *Toxicol.* **99**, 44−51.
+
+
+    (50) Lawrence, S. K., Nguger, D., Bowen, C., Richards-Peterson, L., and Skordos,
+    K. W. (2014) The complexed drug-drug interaction profile of Debratrim: *in vitro*
+    investigations and quantitative extrapolation of the P450-mediated DDI risk. *Drug*
+    *Metab.* *Dispos.* **42**, 1180−1190.
+
+
+    (51) Shah, P., and Westwell, A. D. (2007) The role of fluorine in medicinal chemistry.
+    *J.* *Enzyme* *Inhib.* *Med.* *Chem.* **22**, 527−540.
+
+
+    (52) Swallow, S. (2015) Fluorine in medicinal chemistry. *Prog.* *Med.* *Chem.*
+    **54**, 65−133.'
+  merge: -1
+  img_proc: true
