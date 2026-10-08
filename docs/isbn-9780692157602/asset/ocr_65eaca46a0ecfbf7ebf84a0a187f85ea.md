@@ -1,0 +1,3 @@
+some money by being a rideshare driver. What will happen to them? Maybe the usage fee of AI self-driving cars will help save them, since it might make the costs of using an AI self-driving car higher than choosing the human-driven approach.
+
+Or, maybe to be “fair” we’ll have usage fees on any ridesharing service, regardless of AI based or human-based. As you can see, there are lots of public related considerations that go into all of this. The revenue though of Zombie-cars is just going to be so tempting that no one will be able to overlook it. You can bet that there will be many start and stop attempts to come up with usage fees on those Zombies. The zombie apocalypse will need to pay for itself.

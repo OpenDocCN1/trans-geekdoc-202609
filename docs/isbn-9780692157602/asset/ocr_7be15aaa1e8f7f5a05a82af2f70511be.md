@@ -1,0 +1,11 @@
+with the full rollout into production. It's like a classic A/B type of testing.
+
+I realize you might debate whether this is truly similar to the notion of the canary in the coal mine. Here, this canary is not going to “die” per se. The canary in this case is presumably going to reveal issues or other facets when comparing the performance benchmarks. I know that you might complain that the canary analogy is only loosely applicable, but hey, it is a vivid imagery of the matter and kind of handy to borrow the canary tale as the concept underlying any early detection mechanism.
+
+There are various automated canary analysis systems in the computer field. Perhaps one of those most notable and popularized would be the Google and Netflix efforts of Kayenta. Kayenta is an open-source automated canary analysis system. The concept is to be able to release software changes at what is considered “high velocity” – meaning that when you want to relatively continuously push stuff into production. This is the agile way of doing systems.
+
+In the olden days, we'd bunch together tons of changes and try to do a big-bang approach to placing into production. Nowadays, it is more of on-the-fly and get new changes into production ASAP. This though also introduces the potential for lots of bad code getting into production, given the pressures to test and get it out the door, and also not knowing how it will really interact with the myriad of other elements of the production system. When I say bad code, it isn't even necessarily that the code itself has bugs or problems, but instead could be that the code introduces some new conflict with other existing aspects of the production system. Thus, the value of using an automated canary analysis to try and detect and prevent unintentional issues emerging in the production environment.
+
+What does this discussion about canaries have to do with AI self-driving cars?
+
+At the Cybernetic AI Self-Driving Car Institute, we are leveraging the canary notion but for a slightly different angle on how it can be applied to technology and AI.

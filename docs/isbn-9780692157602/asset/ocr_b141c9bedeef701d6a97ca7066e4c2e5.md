@@ -1,0 +1,1 @@
+You could say it's a Darwinian kind of thing in that the industry will find what works and what doesn't work, and perhaps more quickly get toward what does work, having done so by involuntarily by having their cars reverse engineered. Excuse me, I've got to get back to taking the bolts out of that AI self-driving car I bought last week.

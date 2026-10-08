@@ -1,0 +1,3 @@
+It appears that there was for a while two HOV lanes leading up to the split. One HOV lane was for those continuing on US-101, and the other was for those cars wanting to veer off to the left as part of the exit from the US-101 leading to the SH-85. I don’t know that this is exactly where the incident occurred. As I say, I’ve just looked at Google Maps and tried to guess based on what the NTSB slim details so far suggest.
+
+See Figure 1.

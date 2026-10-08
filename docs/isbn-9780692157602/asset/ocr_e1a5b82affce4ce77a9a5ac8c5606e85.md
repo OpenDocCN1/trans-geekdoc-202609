@@ -1,0 +1,11 @@
+earlier stated that procrastination can occur by happenstance, or it can be used as a directed strategy.
+
+Suppose I'm driving on the freeway. My exit is up ahead. I do the right thing and long before the exit make my way over to the rightmost lane. I sit there in the slow lane, maybe a mile ahead of my exit. I'm going bumper-to-bumper but it's Okay because at least I know I am securely in my needed exit lane. Do humans really drive this way? Some do, many do not. What's actually more likely is that I'll "procrastinate" and put off getting into the slow lane until the last moment, just in time to make that exit.
+
+This is more efficient driving, from the perspective of most drivers (I realize that you traffic researchers out there would argue that this is lousy driving and worsens traffic, and it is unsafe driving, but anyway that's a different debate for another day).
+
+We are building "procrastination" into the AI of self-driving cars. Rather than being the goody two shoes kind of driver, our view is that if self-driving cars are supposed to be able ultimately drive as good as a human, they should be adopting human driving techniques. The utopians out there are going to go ape, since they believe that all AI self-driving cars will be perfectly civil and obey all laws and be sweet and kind to all other cars on the roads. Maybe. I don't think so.
+
+Don't misjudge what I am saying. We are not intending to make AI self-driving cars that are daredevils. This might end-up happening, but that's not what we are designing, Our focus is AI self-driving cars that drive as reasonable humans do. There are many driving situations wherein "procrastination" (the good kind) is actually handy to consider as part of the driving repertoire. Shouldn't be used all the time. Shouldn't be used indiscriminately. Should be used in the right situation, at the right time, in the right way.
+
+Some want us to achieve AI self-driving cars that can pass a variation of the Turing Test. This means that AI self-driving cars would be able to drive a car in the same manner that a human does. If we were standing outside and watching two cars drive along, and we couldn't see into the cars, and we had to try and say which one was

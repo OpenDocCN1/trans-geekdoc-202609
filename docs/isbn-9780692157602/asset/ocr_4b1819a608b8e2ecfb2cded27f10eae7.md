@@ -1,0 +1,11 @@
+potentially lead to the AI “freezing up” and not performing some needed action on a timely basis.
+
+There is another possible kind of freeze that could happen with the AI system that is a little bit different than for humans. With most humans, if the human gets frozen, you can usually snap them out of it. I suppose there are circumstances wherein a human goes into a coma, and in that case you might say they have a more definitive and long lasting freeze. Anyway, I’m sure you’ve had your PC freeze up on you and it won’t do anything at all.
+
+# Blue Screen of Death Scary for a Self-Driving Car
+
+Imagine that an AI self-driving car system gets itself into a frozen state akin to having the Windows blue screen of death. That’s an especially scary proposition for a self-driving car. At least with the other types of Robot Freezing there is a chance that the AI quickly overcomes the freeze, but in the case of a more catastrophic freeze, the question arises as to how soon the AI system can do a reboot or otherwise overcome the freezing.
+
+Furthermore, even if the AI can do some kind of reboot of itself, pretend that the AI self-driving car has been barreling along on the freeway at 70 miles per hour. If the AI system goes “unconscious” for even a few seconds, it can have devastating consequences. This is why the more careful auto makers and tech firms are building into their AI systems a lot of redundancy and resiliency. The act of driving a car is something that has life or death consequences. The AI system needs to be able to work in real-time and deal with whatever bad things might come at it, which also includes the notion that within itself it gets somehow mired or frozen.
+
+The other aspect to consider is that if the Robot Freezing Problem does occur, what provision does the AI have to proceed once it gets out of the frozen mode. It’s like when your PC crashes on you and when you bring it up after doing a reboot, Word shows you a recovered document that you were working on. The AI of the self-driving car has to know what the latest status was before the freeze, and rapidly figure out what has happened since then. This kind of catch-up needs to
