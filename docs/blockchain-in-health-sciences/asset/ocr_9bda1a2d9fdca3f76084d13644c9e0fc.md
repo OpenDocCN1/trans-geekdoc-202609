@@ -1,0 +1,7 @@
+# 222 BLOCKCHAIN IN HEALTH SCIENCES
+
+![](bbox=[0.163, 0.126, 0.873, 0.492])
+
+**Figure 10.10** Message sequence diagram for a successful freight delivery [6].
+
+Following earlier discussions, the client receives approval to deposit the payment for the shipment and obtains a hash upon successful inspection. This hash serves as an identifier upon the goods’ arrival at their destination, confirming the rightful recipient. Once the customer deposits the predetermined sum, the smart contract initiates the shipment-start event. When the container reaches its destination, it connects with the contract and prompts the user to provide the code that unlocks the medication package. The container unlocks upon successful authentication, which occurs after the client provides the secret code, enabling delivery to the approved client. Successful delivery is announced by a network-wide event, triggering the seller to receive the shipment payment. When the payment process is successfully completed, the smart contract activates a self-destruct mechanism, indicating that the process is closed. The current balance of the smart contract is then transferred to the designated address via this function. A message sequence describing the two main scenarios is shown in Figure 10.11. In the first case, there is a discrepancy between the hash provided by the customer and the authorized recipient, but no violation of the contract’s conditions. In the second scenario, there are contract violations (e.g., pressure or temperature violations) or delivery delays caused by the

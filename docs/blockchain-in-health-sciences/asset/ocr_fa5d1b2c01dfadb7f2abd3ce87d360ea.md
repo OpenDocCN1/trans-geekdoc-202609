@@ -1,0 +1,12 @@
+# BLOCKCHAIN and IoT with CLOUD SERVICES
+
+rate of nearly 22.2% during the period from 2021 to 2028. The invention of new medical devices and technologies has generated millions of custom data points, providing efficient solutions for future healthcare technology. Future research directions focus on predicting more accurate data, reducing the necessity for personal check-ups, creating virtual hospitals, and enabling continuous health monitoring. In addition to these advancements, new technologies such as generative AI, nanomedicine, AR/VR, chatbots, virtual healthcare assistants, robotics, cell therapy, digital twin technology, organ care technology, and bioprinting will evolve to offer more solutions. Moreover,5G technology will impact medical diagnosis and treatment. Upcoming technological advancements in healthcare will redefine the baseline structure of the medical sector. An unprecedented shift is underway, fueled by a combination of innovation, data, and patient-centered care. The most recent developments in healthcare technology, such as digital twins, mental health applications, personalized medication, and predictive analytics, are paving the way for patient treatment that is more effective, efficient, and flexible.
+
+# 6.9 Conclusion
+
+IoT technology is being used in every industry in the modern world, including smart cities, healthcare, and agriculture. The Internet of Things is applied in the healthcare industry for routine patient health monitoring, medication tracking, and more. However, there are several security problems associated with IoT that can be resolved by integrating IoT and blockchain technology. One decentralized technology that can enhance system security is blockchain. In the healthcare industry, blockchain technology ensures that patients’ private medical records are protected from modification and leakage. To boost overall performance and certify the healthcare sector, an attempt was made to list all the potential ways that IoT technology and blockchain could be integrated into the healthcare industry.
+
+# References
+
++   1. Velazquez, R., 2024. https://builtin.com/articles/cloud-computing-in-health care.
+2. Tyagi, P. and Manju bargavi, S.K., Using Federated Artificial Intelligence System of Intrusion Detection for Iot Healthcare System Based on Blockchain. Zenodo, 2, 1, 1–10, 2023.

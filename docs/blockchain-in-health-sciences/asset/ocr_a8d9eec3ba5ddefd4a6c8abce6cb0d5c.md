@@ -1,0 +1,13 @@
+# INTRODUCTION TO BLOCKCHAIN TECHNOLOGY 11
+
+the same blockchain which they are part of. When the appropriate nodes verify the block's history and signature a new block is added to the ledger and the blockchain is modified [14]. Finally, a consensus mechanism is run, and the block cannot be published to the blockchain if a consensus is not reached. As the consensus process is distributed, blockchains operate as distributed ledgers, which eliminates the need for a centralized authority to validate blockchain transactions. A blockchain-based transaction is therefore considered to be safe.
+
+# 1.3.2 Blockchain Architecture
+
+For deeply understanding the architecture of blockchain, different aspects of this technology need to be considered. These include the blockchain nodes, transactions that comprise blocks, secure policies, consensus algorithm and a mechanism to add new blocks to the chain. The architecture of blockchain consists of distributed and decentralized ledger system [15].
+
+Figure 1.2 depicts the blockchain architecture. Some of the few essential elements of blockchain architecture are as follows:
+
+Nodes: Nodes are defined as individual computers or electronic devices connected to the blockchain network. Nodes of a blockchain takes part in the consensus process and keep a copy of the entire blockchain. It executes the software for the blockchain protocol, enabling it to validate the transaction and network security. Blockchain nodes exchange messages with one another. The network is increasingly decentralized the more nodes it has [16].
+
+Transactions: On the blockchain network, transactions are logs of data transfers or other activities. Before being included on the blockchain, these transactions are collected into blocks. All nodes instantly record, validate, and settle transaction data, including price, asset, and ownership, when a transaction is added to the blockchain. Every verified alteration that is noted on one ledger copy is noted on all other ledger copies simultaneously [17]. Blocks: The multiple transactions are added to the block in an orderly manner and connected with the cryptographic hash. A chain is formed by each block having a reference to the one before it. Within the blockchain database, blocks are data structures that permanently record transaction data related to cryptocurrencies. Initially, a block is composed of the unverifed transactions in the network which are further verified by the miners [15, 18]. Consensus Mechanism: Consensus mechanisms are methods that bring all nodes in a distributed blockchain network together around a common

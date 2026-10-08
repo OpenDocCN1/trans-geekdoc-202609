@@ -1,0 +1,5 @@
+adding and retrieving data from these records, boosting the efficiency of healthcare services. Additionally, AI systems can analyze these extensive datasets to derive insights for anticipatory healthcare and customized treatment strategies [36]. Blockchain and artificial intelligence (AI) are reshaping healthcare by introducing a secure and decentralized system for managing patient records. Blockchain ensures data privacy and reliability, allowing AI to securely access and process information. This innovative approach provides a solid foundation for AI algorithms to work with patient data while adhering to strict confidentiality requirements. The study highlights the importance of patient-centric data governance that adheres to global privacy regulations, such as HIPAA and GDPR. It also explores the potential benefits of improved diagnosis and treatment plans by AI’s ability to analyze large amounts of patient data, highlighting the necessity to delve deeper into these technologies, with
+
+![](bbox=[0.137, 0.488, 0.943, 0.893])
+
+Figure 16.2 Securing patient records using AI and blockchain.

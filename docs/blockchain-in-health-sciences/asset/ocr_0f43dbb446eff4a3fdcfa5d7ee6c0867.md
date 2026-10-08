@@ -1,0 +1,12 @@
+# 17.3.6 Summary
+
+The chapter covers the use of machine learning, more especially Convolutional Neural Networks (CNNs), for medical picture classification. Additionally, the chapter provides a strong base for machine learning practitioners to implement efficient algorithms for the same. The first section of the chapter is highly focused on Convolutional Neural Networks, its architecture, working, and its implementation. The chapter deeply discusses the different types of layers used, their parameters, and their common values. The sections discuss efficient data preprocessing methods that the practitioner should implement to make sure the machine learning model learns accurate patterns. A detailed discussion focused on sampling, training, and testing the machine learning model while explaining the parameters involved in each step one might face such as overfitting. The chapter further extends on the topic of overfitting, and its causes and recommend some approaches to reduce it. In conclusion, machine learning-based algorithms are already being used for efficient and accurate diagnosis and leaves a lot of potential to enhance the precision and performance of these algorithms.
+
+# References
+
++   1. Bhatt, D., Patel, C., Talsania, H., Patel, J., Vaghela, R., Pandya, S., Modi, K., Ghayat, M., CNN variants for computer vision: History, application, challenges and future scope. *Electronics*, 10, 20, 2470, 2021.
+2. Wang, Z.J., Turko, R., Shaikh, O., Park, H., Das, N., Hohman, F., Kahng, M., Chow, D.H.P., CNN explorer: learning convolutional neural networks with interactive visualization. *IEEE Trans. Visual Graphics*, 27, 2, 1396–1460, 2020.
+3. Alzaubidi, L., Zhang, J., Humardi, A.J., Al-Duaili, A., Duan, Y., Al-Shamma, O., Santamaria, J., Fadhel, M.A., Al-Amidie, M., Farhan, L, Review of deep learning: CNN architectures, challenges, applications, future directions. *Big Data*, 8, 1–74, 2021.
+4. Ketkar, N., Mooyil, J., Ketkar, N., Mooyil, J., Convolutional neural networks with Python: Deep Learning to Learn Best Practices of Deep Learning Models with PyTorch, pp. 197–242, 2021.
+5. Inik, O., CNN hyper-parameter optimization for environmental sound classification. *Appl. Acoust.*, 202, 109168, 2023.
+6. Szandala, T., Review and comparison of commonly used activation functions for deep neural networks, in: *Bio-inspired neurocomputing*, pp. 203–224, 2021.

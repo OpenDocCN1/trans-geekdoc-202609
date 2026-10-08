@@ -1,0 +1,13 @@
+# BLOCKCHAIN IN HEALTH SCIENCES
+
+for enforcement of information-sharing agreements and guardianship of data in the sharing of genomic data and introduce effective strategies for this purpose.
+
+Omae Dib et al. [26], conducted a Delphi study to identify and rank 17 favorable circumstances and 15 problems for applying Distributed Ledger Technology (DLT) in genomics. The structured analysis, which categorized them into technology, organization, and environment, helped to carve out distinct opportunities and challenges in this area, therefore serving to enrich research and practice.
+
+They described an immutable logging and querying audit trail based on blockchain by Pattengale et al. [27], which showed efficient ways of using MultiChain 1.0.4 and 2.0 for data storage and retrieval. This evidence of the practicality of an authorized blockchain ledger in logging genomic queries, where use cases have large datasets—in the hundreds of megabytes—and times in a few minutes are acceptable. Meanwhile, their approach ensured full logging of all activities done by users and empowered the querying party with robust access to immutable cross-site log data related to genomics, like GTEx.
+
+Adanur Dedetur B et al. [9], reviewed blockchain applications in genetic studies and health services, covering various aspects as cost analysis, ownership, authorization, and security. Their review identifies the potential impact of blockchain on the International Genome Consortium and the Cancer Genome Atlas. With the central focus on functions offered for the protected management and oversight of patient information, like a digital ledger in IoMT, this research provides a Secure Data Dissemination Framework. It places special emphasis on the privacy of patients' health data transfers on IoMT devices.
+
+Gamze Gürsey et al. [7], created SAMChain, a special blockchain network for on-chain nested database storing next-generation sequencing reads and personal genomic variants, using the MultiChain platform/API. SAMChain is the first publicly available proof-of-concept private blockchain network that makes simple to store and retrieve personal genetic variants (VCF files) and raw genomic data (SAM files). By using reference-based compression and indexing techniques, they minimized on-chain data and also produced tools for fast access and analysis.
+
+Mahmoud Elkhoder et al. [40], describe BioChainReward (BCR) as a new framework for steady, personal, and influenced communication of biomedical records. Through a systematic remarks incentive, BCR uses the blockchain to create a steady, user-managed system wherein
