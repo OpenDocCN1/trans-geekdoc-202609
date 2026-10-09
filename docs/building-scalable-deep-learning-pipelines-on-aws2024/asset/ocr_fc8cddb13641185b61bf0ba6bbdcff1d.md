@@ -1,0 +1,7 @@
+Here’s a breakdown of each line of code:
+
++   * MOUNT_NAME = “/mnt/datalake-central”: This line defines a variable named MOUNT_NAME and assigns it the value “/mnt/datalake-central” This variable stores the path to the mount point in the Databricks file system where the S3 bucket is mounted.
+* mounts = dbutils.fs.mounts(): This line retrieves a list of all currently mounted file systems in the Databricks environment using the mounts() function from the dbutils.fs module. Each item in the list represents a mounted file system.
+* mount_point_exists = any(mount.mountPoint == MOUNT_NAME for mount in mounts): This line checks if the specified mount point exists among the mounted file systems. It uses a generator expression with the any() function to iterate over each mounted file system (mount) and checks if its mountPoint attribute matches the value stored in the MOUNT_NAME variable.
+* if mount_point_exists:: This line starts an if statement, which checks if the mount_point_exists variable is True. If the specified mount point exists among the mounted file systems, the condition evaluates to True, and the code block inside the if statement will be executed.
+* print(“S3 bucket was successfully mounted.”): This line prints a message indicating that the S3 bucket was successfully mounted. It is executed if the specified mount point exists among the mounted file systems.

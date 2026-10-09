@@ -1,0 +1,301 @@
+
+
+# 索引
+
+- 配置 Amazon EC2 实例（续）
+  - 选择实例类型，61
+  - 配置，66
+  - 配置实例详情，61
+  - DeepLearningEC2 实例，66, 67
+  - 描述，66
+  - EBS 卷，64–66
+  - InstanceSecurityGroup，68
+  - JSON 脚本，68–70
+  - 创建密钥对，63
+  - 启动实例，60
+  - 导航至 EC2 仪表板，60
+  - 注意，64
+  - Outputs 部分，68
+  - Resources 部分，66, 67
+  - 审核并应用更改，63
+  - 审核并启动，63
+  - 安全组，62
+  - SSH 访问，64–66
+  - 启动实例，64
+  - 停止实例，64
+  - 训练和推理任务，60
+  - YAML 格式，68
+- PySpark，83, 84, 116, 150, 230, 257, 329, 431
+- PySpark 代码
+  - 计算特征，324
+  - 统计结果值，324
+  - 统计零值，324
+  - 数据摘要，324
+  - 特征分布，324
+  - 处理缺失值，323
+- PySpark DataFrame
+  - 代码解释，9–11
+  - 创建，8, 9
+  - 墨西哥卷饼的价格，31–33
+  - 条件执行，34
+  - 定义函数，33
+  - 导入所需模块，33
+  - main() 函数，34
+  - 脚本执行，12
+- PySpark 数据预处理，7, 56
+  - 优势，7
+  - 数据库，8
+  - 集成，8
+- PySpark 函数
+  - calculate_feature_target_correlation 方法，338–340
+  - 类定义，326
+  - copy_file_from_s3 函数，340–342
+  - 相关系数，352, 353
+  - explore_feature_distributions() 方法，354
+  - 特征工程，354
+  - 特征选择，353
+  - 模型可解释性，353
+  - 模型优化，353
+  - count_outcome 方法，334, 335
+  - count_outcome() 方法，352
+  - count_zeros() 方法，347
+  - count_zeros 方法定义，330, 331
+  - 数据集的特性，350
+  - data_summary 定义，331–334
+  - data_summary() 方法，349
+  - diabetes_data_exploration.py，344
+  - 糖尿病遗传函数（DiabetesPedigreeFunction）和年龄（Age），349
+  - explore_feature_distributions 方法，336–338
+  - handle_missing_values 定义，329, 330
+  - handle_missing_values() 方法，345
+  - 直方图，357
+  - 导入，325
+  - 无效读数，349
+  - load_data 方法定义，327, 328
+  - main 函数，342–344
+  - preprocess_data 方法定义，328
+  - 偏斜的数据分布
+    - 损失函数不平衡，358
+    - 模型偏差，357
+    - 模型学习，358
+    - 采样策略，358
+  - 统计信息，350
+  - 可疑值，352
+  - 不平衡数据集，352
+  - pyspark.ml.feature，150, 226, 280, 364, 442
+  - pyspark_pytorch_preparation.py，168
+  - PySpark show() 方法，220
+  - PySpark 的并行处理，116, 136–149, 210
+  - pyspark.sql，117, 150, 174, 434
+  - pyspark.sql.functions，117, 118, 364, 442
+  - 从 pyspark.sql.functions 导入 col，325
+  - 从 pyspark.sql 导入 SparkSession，325
+  - pyspark.sql 模块，215, 226, 280, 325
+  - PySpark 的 randomSplit() 方法，449
+- Python 3，12, 80, 248, 301, 345, 460, 598
+- Python 编程，221
+- PyTorch，56, 61, 85, 439
+  - 数据加载和预处理，14
+  - 数据模型构建，14
+  - 开发，13
+  - 评估指标，18
+  - 特征，13
+  - 推理，14
+  - 损失函数，14, 18
+  - 模型评估，14
+  - 模型训练，14
+  - 神经网络模型，15–17
+  - 优化器，14
+  - 输出层激活函数，17
+  - *对比* TensorFlow，305–308
+  - 工作流，15
+- PyTorch DataLoader 对象，161, 162
+- PyTorch 机器学习模型，230, 232
+- PyTorch 多层算法，428
+- PyTorch 张量，160, 162, 202, 226, 245, 254, 492, 502
+- 使用 PyTorch 预测特斯拉股价，223
+  - 探索特斯拉股票数据集，258
+  - 基本市场动态，223
+  - 建模过程，224
+  - DataLoader 创建函数，232–234
+  - 数据加载函数，227–229
+  - 数据预处理函数，229–232
+  - 执行，247
+  - 辅助函数，245–247
+  - 导入，224–226
+  - 日志记录设置，226, 227
+  - main 函数，240–244
+  - 模型评估函数，238–240
+  - 模型训练函数，234–237
+  - 绘制实际值与预测值对比，269–272
+  - 以及 PySpark，260–268
+  - Python 代码，223
+  - 技术方面，223
+  - 交易量，223
+
+## R
+
+- 随机搜索，629, 630
+- randomSplit() 方法，286, 367
+- read.csv() 方法，217, 285, 448
+- 召回率，386, 462
+- 受试者工作特征曲线下面积（ROC-AUC），29
+- 整流线性单元（ReLU），243, 309, 369, 452
+- 循环神经网络（RNNs），19
+- 回归，321
+- 重分区，116, 137–139, 210
+- 重采样技术，389
+- 弹性分布式数据集（RDDs），138, 245, 288
+- 右偏分布，357
+- ROC-AUC 分数，360, 363, 378, 386, 394, 395
+- R2 分数，279, 280, 299, 302, 303, 305, 599
+- r2_score 函数，280
+- R 平方分数，239, 240, 248, 249, 273, 294, 307, 501
+- RuntimeError，229
+
+## S
+
+- s3_bucket_name，128, 130, 186, 343
+- Scikit-Learn，363, 440
+- s3.download_file() 方法，126, 184
+- 安全组，62, 63, 93, 101, 715
+- Sequential 类，280
+- SequentialExecutor，90, 91
+- s3_file_key，128, 130, 343
+- show() 方法，9, 11, 34, 220, 330, 331, 335, 436
+- 简单存储服务（S3），1, 70
+- sklearn.metrics，280, 363, 442, 540, 587
+- 软件开发工具包（SDK），6, 75
+- Spark DataFrame (diabetes_df)，367
+- Spark DataFrames，280
+- spark_data_processing.py，221
+- spark_df_to_tensor 辅助函数，245, 246
+- SparkSession，117, 118, 215, 216, 228, 280, 363, 382, 434, 436, 458
+- SparkSession.builder API，458
+- SparkSession.builder 方法，10, 128, 228
+- SparkSession 类，9, 215, 280, 343, 363, 434
+- SparkSession 对象，117–119, 128, 150, 152, 216, 217
+- SQLite，87, 90
+- SSH 密钥对，63, 67
+- StandardScaler，115, 150, 175, 231, 280, 448, 588
+- StandardScaler 对象，156, 179, 367, 448
+- stat.corr() 方法，340
+- @staticmethod 装饰器，448, 452, 455
+- 随机梯度下降（SGD），14, 443, 453, 536
+- StockPricePrediction，128, 152, 217, 494
+- Subprocess 模块，4, 215
+- subprocess.run() 方法，5, 243
+
+## T
+
+- TensorDataset，150, 162, 225–226, 233, 363
+- tensor_features，160
+- TensorFlow，56, 61, 85, 86, 213
+  - 计算图，13
+  - 数据加载和预处理，14
+  - 开发，13
+  - 评估指标，18
+  - 推理，14
+  - Keras，13
+  - 损失函数，14, 18
+  - 模型构建，14
+  - 模型评估，14
+  - 模型训练，14
+  - 神经网络模型，15–17
+  - 优化器，14
+  - 输出层激活函数，17
+  - *对比* PyTorch，305–308
+  - 工作流，15
+- tensorflow.keras.callbacks，443, 605
+- tensorflow.keras.layers 模块，281
+- TensorFlow (Keras) 模型，450, 453, 460
+- tensorflow.keras.models，280, 442
+- tensorflow.keras.optimizers，443
+- 具有固定超参数的 TensorFlow 模型，472–479
+- 具有超参数调优的 TensorFlow 模型，479–487
+- TensorFlow *对比* PyTorch
+  - 对比分析，463
+  - 评估指标，465, 466
+  - 损失值对比，64, 465
+- 使用 TensorFlow 预测特斯拉股价，277
+  - 实际值与预测值对比，305
+  - environment.yml，310
+  - 层和激活函数，309
+  - 建模步骤，278
+    - 条件块，300–303
+    - convert_to_numpy 方法，286–288
+    - create_and_train_model 方法，288–291
+    - evaluate_model_method，291, 292
+  - 导入，279–281
+  - 日志记录设置，281–283
+  - main 函数，298, 299
+  - plot_actual_vs_predicted 函数，295–297
+  - predict_and_evaluate 方法，293–295
+  - preprocess_data() 方法，283–286
+  - 面向对象方法，278
+- TensorFlow 回归代码，310–319
+- TSLARegressor，278
+- 张量处理单元（TPUs），24, 25
+- 特斯拉股价预测
+  - main() 函数，491
+  - 模块化方法，490
+  - 模块化设计，491
+  - 算子，491
+  - PyTorch，491
+  - 可扩展性和性能，491
+  - 使用 Airflow DAG
+    - AWS EC2 实例，525
+    - 检查点，568
+    - 列，526
+    - DAG 定义，512, 516–518
+    - 数据集，567
+    - 默认参数，512, 515
+    - 动态 DAGs，568
+    - 模型评估任务，512, 522–524
+    - 执行，569, 571–573
+    - 实现，568
+    - 导入，512, 513
+    - 数据解释，527
+    - 加载配置，568
+    - main() 函数，511, 567
+    - 输出，525
+    - 性能指标，527, 528
+    - 数据预处理任务，512, 518, 519
+    - stock_price_prediction，525
+    - 任务依赖，512, 524, 525
+    - 任务，513, 514
+    - 训练损失值，525, 526
+    - 模型训练任务，512, 520–522
+  - 不使用 Airflow DAG
+    - 列，509
+    - data_processing.py 模块，492–495, 559, 560
+    - 关键指标，510, 511
+    - main() 函数，507, 508
+    - main.py 模块，492, 503, 504, 506, 564, 566, 567
+    - model_evaluation.py 模块，492, 499–502, 562, 563
+    - model_training.py 模块，492, 496, 498, 560–562
+    - 模块，492, 507
+    - myenv 环境，508
+    - 输出，508, 510
+    - 训练损失，509, 511
+    - utils.py 模块，492, 502, 503, 563
+- tesla_stock_price_prediction.py，247, 250, 300
+- 测试损失，599, 615, 619, 642
+- tf.data.Dataset.from_tensor_slices 方法，182
+- .toPandas()，125
+- toPandas 方法，123
+- torch.load()，254
+- torch.save 方法，244
+- torch.utils.data，150, 225, 363
+- 训练损失，248, 249, 301–303, 463, 509
+- train_model 函数，235, 237, 244
+- 迁移学习，322, 389, 463, 466
+- Transform 函数，448
+- TSLAHyperModel 类，630, 631, 691
+- tsla_regressor，296, 299
+- TSLARegressor 类，278, 279, 282, 283, 291, 295, 296, 299, 587, 588, 596, 620, 635
+
+## U
+
+- 用户界面（UI），38, 45, 47, 55, 92
+

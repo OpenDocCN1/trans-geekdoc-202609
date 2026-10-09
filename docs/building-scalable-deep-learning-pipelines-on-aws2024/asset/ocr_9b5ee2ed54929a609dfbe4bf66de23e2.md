@@ -1,0 +1,8 @@
+choice for storing datasets, model checkpoints, training logs, and other resources required for deep learning workflows. By setting up Amazon S3, you can centralize your data storage and easily share resources across multiple EC2 instances and users.
+Here are the steps for setting up Amazon S3:
+
++   *   Navigate to the S3 Dashboard: Sign in to the AWS Management Console, click the “Services” dropdown menu, and select “S3” from the list of available services. This will take you directly to the S3 dashboard, where you can manage your buckets and objects.
+*   Create a Bucket: Click the “Create bucket” button to create a new S3 bucket. Choose a unique name for your bucket and select the AWS region where you want the bucket to be located. Once the bucket has been created, you will see a message saying, “Successfully created bucket ‘your-bucket-name.’”
+*   Configure Bucket Properties: Configure the properties of your S3 bucket, including the storage class, encryption settings, and versioning options. You can choose the appropriate settings based on your data storage requirements and compliance needs. To configure bucket properties for an S3 bucket, you can follow these steps:
+*   Select the Bucket: From the list of buckets displayed on the S3 dashboard, select the bucket for which you want to configure properties.
+*   Access Bucket Properties: Once you’ve selected the bucket, click the “Properties” tab in the bucket details pane. This tab allows you to configure various properties for the selected bucket.

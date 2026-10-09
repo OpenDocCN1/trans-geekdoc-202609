@@ -1,0 +1,9 @@
++   - Recall: The recall of the PyTorch model (0.66) is higher compared with the TensorFlow model (0.59). This suggests that the PyTorch model captures a larger proportion of actual positive instances, which may be beneficial for tasks where identifying as many positives as possible is crucial.
+
++   - F1 Score: The F1 score of the PyTorch model (0.66) is slightly higher than that of the TensorFlow model (0.64). The F1 score balances precision and recall, indicating that the PyTorch model provides a slightly better overall balance between precision and recall.
+
+Overall, both TensorFlow and PyTorch models demonstrate comparable performance in terms of accuracy, precision, recall, and F1 score. Although there are minor differences between the models, they fall within the margin of error or may result from variations in optimization strategies or random initialization. Despite their high performance, there is room for improvement. Enhancing data quality, employing resampling and data augmentation techniques, exploring transfer learning, adjusting model complexity, improving data representation, and fine-tuning hyperparameters can further refine model performance.
+
+# ## Optimizing Model Performance with Hyperparameter Tuning
+
+The results so far were obtained from a model with fixed hyperparameters. While these results are reasonable given the smallness of the input sample, TensorFlow offers a powerful tool for improving model performance: hyperparameter tuning. By leveraging `keras_tuner`, we can systematically search for the best combination of hyperparameters, optimizing the model beyond what manual selection can achieve.

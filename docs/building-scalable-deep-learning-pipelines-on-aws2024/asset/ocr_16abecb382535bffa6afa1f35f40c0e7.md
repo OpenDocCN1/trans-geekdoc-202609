@@ -1,0 +1,36 @@
+```
+```
+self.model.compile(optimizer='adam', loss='mse')
+history = self.model.fit(
+        train_features,
+        train_labels,
+        epochs=epochs,
+        batch_size=batch_size,
+        verbose=0
+    )
+    return history
+
+def evaluate_model(self, test_features, test_labels):
+    """
+    Evaluate the trained model.
+
+    Parameters:
+        - test_features (ndarray): Test features.
+        - test_labels (ndarray): Test labels.
+
+    Returns:
+        - float: Test loss.
+    """
+    test_loss = self.model.evaluate(
+        test_features,
+        test_labels
+    )
+    return test_loss
+
+def predict_and_evaluate(
+    self,
+    test_features,
+    test_labels
+):
+```
+```

@@ -1,0 +1,36 @@
+```
+```python
+train_features = np.array(
+    train_df.select('scaled_features')
+    .rdd.map(lambda x: x.scaled_features.
+    toArray())
+    .collect()
+)
+train_labels = np.array(
+    train_df.select('Close')
+    .rdd.map(lambda x: x.Close).collect())
+test_features = np.array(
+    test_df.select('scaled_features')
+    .rdd.map(lambda x: x.scaled_features.
+    toArray())
+    .collect()
+)
+test_labels = np.array(
+    test_df.select('Close')
+    .rdd.map(lambda x: x.Close).collect()
+)
+return (train_features,
+        train_labels,
+        test_features,
+        test_labels
+)
+
+def create_and_train_model(
+        self,
+        train_features,
+        train_labels,
+        epochs=100,
+        batch_size=32
+): 
+```
+```
