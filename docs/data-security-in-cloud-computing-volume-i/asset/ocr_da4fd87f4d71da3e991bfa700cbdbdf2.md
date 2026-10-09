@@ -1,0 +1,9 @@
+# COMPUTER ENGINEERING FOUNDATIONS, CURRENTS, AND TRAJECTORIES COLLECTION
+
+Lisa MacLean, Editor
+
+# Data Security in Cloud Computing, Volume I
+
+Giulio D'Agostino
+
+MOMENTUM PRESS ENGINEERING

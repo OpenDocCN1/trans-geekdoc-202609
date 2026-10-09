@@ -1,0 +1,13 @@
+the benedits of AMD’s SYSRET education when put on Intel platforms (Dunlap 2014). To be able to prevent such situations, it is very important to use current and appropriate safety countermeasures and rigorous access control (ENISA 2009).
+
+These logs, which are primarily used by system administrators and auditors, supply crucial pieces of info that malicious parties may use to launch strikes. In addition, these logs may expose the identity of their users as they contain sensitive and personal data. Security of safety logs has to be a topic of high importance because once exposed, they may jeopardize the whole information system and its customers (ENISA 2009; Saripalli and Walters 2010; Subashini and Kavitha 2011).
+
+# 6.3.2. NETWORK BREAKS
+
+Each data system and notably a cloud infrastructure offers access to its services via distinct networks. Malicious users can benedit from those vulnerabilities by compromising the safety of their community or by preventing its appropriate functioning. These network fractures can pose a severe threat to the functioning of CPs.
+
+Thousands of clients might be impacted at precisely the same time along with the CP and will end up as being untrustworthy to the present and to potential new clients (ENISA 2009; Ritchey and Ammann 2000). Most operating systems do not completely delete the information while, in a different scenario, timely information deletion might be unavailable. A CP might want to apply several alterations to its structure, like altering the location of this machine, building a hardware reallocation, as well as replacing hardware. During these modifications, because of technical reasons, the information may not be moved or appropriately destroyed, leaving them vulnerable.
+
+People frequently install malware which collects data for mapping the cloud network. When an individual understands his present position either in the system or the physical machine of this cloud infrastructure, he may use it to enhance his rights and to gain access to additional VMs. When this happens, the malicious user may retrieve information he otherwise would not have been permitted to get (Ristenpart et al. 2009).
+
+On the flip side, it is a frequent occurrence that several cloud systems do not correctly implement the encryption or cryptographic protocols, even in the worst case scenario where encryption does not exist in any way. Therefore, a comprehensive implementation of modern cryptographic techniques should always be a top priority because it can shield the machine from numerous malicious functions (Grobauer, Walloshek,

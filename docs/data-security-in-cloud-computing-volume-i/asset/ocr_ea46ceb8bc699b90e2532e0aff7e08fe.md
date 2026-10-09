@@ -1,0 +1,13 @@
+a cloud port for cloud support customers. For SaaS that the CP deploys, it configures, maintains, and upgrades the performance of their software programs on cloud infrastructure, so the services are provisioned in the anticipated service amounts to cloud customers.
+
+The customers of SaaS may be organizations that offer their members using applications, software applications, or applications program administrators who configure software for end users. For PaaS, the CP oversees the computing infrastructure to its platform and conducts the cloud applications that offer the parts of the platform, including runtime program implementation heap, databases, and other middleware components. Cloud users of PaaS can use the resources and implementation resources supplied by CPs to create, install, test, and manage the software hosted on a cloud atmosphere. For IaaS, the CP accelerates the computing tools underlying the support, such as the servers, storage, networks, and hosting infrastructure.
+
+The IaaS cloud user consequently employs these computing tools, like computer, for their necessary computing requirements. The cloud provider is a media facility that offers transport and connectivity of cloud solutions between cloud customers and CPs. Usually, a CP will install SLAs using a cloud provider to provide services following the degree of SLAs provided to cloud customers and might require the cloud provider to offer secure and dedicated connections between cloud customers and CPs. A cloud agent is helpful when CPs are too complicated to get a cloud user to handle readily. A cloud agent could offer two regions of service:
+
++   * **Service aggregation:** The agent combines multiple cloud solutions to fulfill customer needs not addressed explicitly with one CP, to maximize performance, or to decrease cost.
+
++   * **Service arbitrage:** This is much like support aggregation except that the professional services being aggregated are not fixed. Support arbitrage means a broker has the flexibility to select services from several agencies. As an example, the cloud agent could utilize credit-scoring support to quantify and pick a service using the best score.
+
+A cloud auditor may assess the services offered using a CP concerning security controllers, privacy impact, functionality, and so on. The auditor is an independent entity which could guarantee the CP conforms to some criteria. Figure 2.5 illustrates the connections between the “actors.”
+
+A cloud user may ask cloud solutions out a CP directly or by using a cloud agent. A cloud auditor conducts independent audits and might get in touch with others to gather necessary information. This figure demonstrates
