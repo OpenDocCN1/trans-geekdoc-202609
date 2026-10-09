@@ -1,0 +1,7 @@
+![](bbox=[0.18, 0.11, 0.58, 0.35])
+
+In Figure 6, n = 512 and m = 256. All algorithms require longer reconstruction times, which get longer as the length of the data increases. The proposed algorithm still has the shortest reconstruction time and the fastest reconstruction rate. The BP algorithm still has the worst reconstruction rate. When K = 40, the BP algorithm has a small mutation point, and when K = 45, the NSHTP algorithm also has a small mutation point. Both the proposed algorithm and the BFGS algorithm have no obvious mutation point. It indicates that when the data length increases, the sparsity has little influence on the BP algorithm and the NSHTP algorithm but no obvious influence on the proposed algorithm and the BFGS algorithm. In general, when n = 512 and m = 256, the proposed algorithm has the shortest reconstruction time and the fastest reconstruction rate among the four algorithms. It is less affected by sparsity, and the reconstruction rate is significantly higher than the BFGS algorithm.
+
+![](bbox=[0.18, 0.57, 0.58, 0.81])
+
+In Figure 7, n = 1024 and m = 512.The exact reconstruction time of all algorithms becomes longer, but the reconstruction time of the proposed algorithm is the shortest and the reconstruction rate is the fastest. The BP algorithm has the longest reconstruction time and the worst reconstruction rate. As shown in Figure 7, with the increase in sparsity, the BP algorithm has a mutation point when K = 30. When K = 35, the NSHTP algorithm

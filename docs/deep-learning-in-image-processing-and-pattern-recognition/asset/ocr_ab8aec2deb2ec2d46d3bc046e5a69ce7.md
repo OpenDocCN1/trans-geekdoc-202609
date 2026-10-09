@@ -1,0 +1,19 @@
+and achieves accuracy similar to that of AlexNet with fewer parameters [9]. Aiming at running on mobile terminals, ShuffleNet, a lightweight model proposed in [10], adds group convolution to the networks, and this makes the model smaller and faster. In the past two years, researchers have proposed many lightweight models that continuously improve FER accuracy [11\u201315].
+
+The FER algorithms mentioned above focus on the front face image, but since the facial deflection at various angles cannot be avoided in natural environments, the accuracy of FER is more or less lowered [16]. Therefore, pose normalization is performed before FER; i.e., the face is corrected to the front view in the case of deflection.
+
+In order to correct face deflection, early researchers have proposed some 3D modeling methods. However, when the facial deflection angle is too large, the face normalization results of this type of methods are unsatisfactory. In 2014, Goodfellow et al. proposed the generative adversarial network (GAN) [17], which provides a new solution to the problem of missing features caused by face deflection. Up to now, a series of GAN variants have been developed to correct facial deflection. These GAN models for face normalization focus on preserving contour features in the process of synthesizing face images in order to facilitate identification. If the downstream task is FER, the synthesized frontal face does not meet the requirements very well because it does not focus on the preservation of local features related to facial expressions.
+
+In this paper, we present an expression recognition method which combines the DenseNet FER model with the GAN-based posture normalization model. This method solves the problems of the large number of parameters in the FER model and low accuracy in multi-view face normalization. The contributions of this paper are summarized as follows:
+
++   1.  A lightweight FER model, DSC-DenseNet, which reduces network parameters and computations by improving the standard convolution in DenseNet to DSC, is proposed. When the parameter is 0.16M, the FER rate of this model is 96.7% for frontal face input and 77.3% for profiles without posture normalization.
+2.  A posture normalization model, GAN, with two local discriminators (LD-GAN) based on the TP-GAN model, is proposed. The encoder\u2013decoder structure implements a two-pathway generator, global pathway, and local pathway. In order to preserve more local features related to facial expressions in generated frontal faces, the discriminator was improved by adding two local discriminators besides the global discriminator to enhance its adversarial capability against the local pathway encoder. The loss functions are also improved to achieve better effects in network training.
+3.  The effectiveness of this method was verified on three public datasets. The validity of the lightweight FER model was verified on the CK+ and Fer2013 datasets, and the final effect of the combination of the posture normalization model and the FER model was verified on the KDEFS dataset. Compared to the methods used in other representative models, this method effectively reduces the number of parameters of our model and has a higher FER rate (92.7%) under the condition of multi-angle deflection.
+
+The remaining parts of this paper are organized as follows. Section 2 describes the previous related work. Section 3 describes the lightweight FER model and the posture normalization model that we propose in detail. Section 4 describes the experimental datasets, results, and related analysis. Section 5 gives conclusions and suggestions for future work.
+
+# 2. Related Work
+
+# 2.1. DenseNet
+
+Although various CNN-based FER models have improved recognition rates, the consequent increase in the number of parameters has also resulted in more computational requirements. DenseNet is a model with a narrow network structure, as shown in Figure 1 [8].
