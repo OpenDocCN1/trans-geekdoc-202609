@@ -1,0 +1,15 @@
+by stating: “As a fish needs to swim, a bird to fly, a deer to run, we need to walk, not to survive, but to be happy.” A daily walking routine of 20 minutes can prevent heart disease, diabetes, depression, and some cancers (Elliott, 2010).
+
+# Economic
+
+The Riverwalk project has converted the area into a vibrant entertainment hub, drawing in vendors, businesses, and visitors. Since its opening, the number of vendors has doubled, and their businesses have significantly improved. The increased number of visitors has increased parking revenue, and collected fees from boat docking and vendors have also increased. This has supported existing jobs and created new ones, with the project resulting in 66 permanent, 170 seasonal, and 125 part-time jobs from 2016 to 2019. Additionally, the project has increased property value and the City’s property tax base, enhanced Wacker Drive’s marketability, and attracted top employees and companies (Al-Kodmany, 2023; Cotton, 2018).
+
+The project has catalyzed a substantial influx of economic development, resulting in a noteworthy increase in hotel bookings, retail sales, contributions to local businesses, and income tax revenues. The project has collected over $16 million in just six years to repay the $99-million federal loan granted for the second and third phases (Cotton, 2018). The project’s costs are relatively reasonable, estimated at hundreds of millions of dollars, compared to surrounding skyscrapers such as Trump Tower, River Point, and 150 North Riverside.
+
+# Environmental
+
+The Riverwalk project aims to improve the environmental well-being of the Chicago River by promoting the recovery and restoration of on-land and in-stream habitats. By reintroducing native trees, plants, and grasses, water quality has been enhanced, attracting local fish, birds, turtles, and muskrats. This process encourages aquatic land animals to help remove toxins from the river through their natural habits. Several bird species have been invited, including mallards, ring-billed, house sparrows, herring gulls, rock pigeons, American robins, European starlings, and peregrine falcons (Movahedzadeh et al., 2015).
+
+The Riverwalk project also includes floating eco-gardens, or floating wetland islands, which reintroduce plant species native to Illinois wetlands and prairies. These plants have intimate, symbiotic interactions with the river water, increasing their function of cleansing water and nourishing plants. The floating eco-gardens also reduce nitrogen and phosphorus levels in the river, attracting fish and land-water animals like turtles (Al-Kodmany, 2020; Movahedzadeh et al., 2015).
+
+The Riverwalk project has contributed to sensible ecological improvement in the river, with the Floristic Quality Index (FQI) increasing from 0 to 38.2 in an area of 19,529 square feet (1,814 square meters). The floating gardens also serve as an outdoor classroom for learning about fish, fauna, and critters, encouraging people to consider the importance of their natural and ecological functions. Public programming along the Riverwalk promotes environmental awareness of

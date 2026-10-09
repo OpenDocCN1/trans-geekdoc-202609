@@ -1,0 +1,11 @@
+![](bbox=[0.25, 0.11, 0.88, 0.4])
+
+14.5  
+Jean Dubuffet’s Standing Beast Sculpture in Chicago, a towering 29-foot fiberglass creation from his Hourope series, challenges conventional beauty norms, encouraging viewers to unleash their imagination. Notably, the sculpture is undergoing relocation following Google’s acquisition of the building, symbolizing a dynamic shift in its artistic narrative. 
+Source: Photograph by author.
+
+evolved into Chicago. He is commemorated through a statue created by Erik Blome in 2009 and generously donated to the Chicago Public Art Collection by Lesley Benodin. The statue represents the historical and cultural ties that connect Chicago to its diverse roots and is an integral part of the public art landscape (Figure 14.6). It becomes an integral part of the public art landscape, accessible to all who visit and explore Chicago. By commemorating DuSable and his pivotal role as the city’s founder, the statue serves as a reminder of the contributions made by individuals from diverse backgrounds in shaping society’s fabric. It celebrates the multiculturalism and inclusivity that are fundamental to the identity of Chicago (Thompson, 2012).
+
+# DEER SCULPTURE, CHICAGO
+
+One of the most eye-catching artworks on the Chicago Riverwalk was “Deer,” a sculpture by Tony Tasset that occupied the “Riverbank” segment between Franklin and Lake Streets. The piece depicts a giant realistic deer made of painted fiberglass that looks over the river calmly. The deer is 12 feet tall and 20 feet long, strikingly contrasting with the urban surroundings. It attracted the attention of boat riders and pedestrians, who often stopped to take pictures (Figure 14.7). The large-scale sculpture of a deer in Riverwalk captures the essence of nature, offering a moment of reflection amid the city’s bustling urban setting. It highlights the coexistence of wildlife and human activities along the river, creating a unique visual contrast that encourages viewers to appreciate the harmonious blend of nature and urban life. The deer sculpture, installed in June 2017 and removed in November 2017, was placed in a sculpture forest on the Crystal Bridges Museum of American Art grounds in Bentonville, Arkansas (Tolles, 2013).

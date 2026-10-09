@@ -1,0 +1,11 @@
+14.12
+Installed in 2010, The Shanghai Bull is a modified iteration of Arturo Di Modica's iconic Charging Bull sculpture in New York City. Weighing an impressive 13,227 pounds, this monumental artwork has swiftly become a beloved symbol in Shanghai, capturing the imagination of residents and visitors alike.
+*Source: Photograph by author.*
+
+![](bbox=[0.26, 0.1, 0.88, 0.4])
+
+a more environmentally friendly statement, devoid of any waste. The "Terra Natura" project was unveiled on August 12, 2011, after a 32-month journey from conception to installation. However, its pristine state was short-lived. Within less than 24 hours, a torrential downpour during the night caused erosion of the white paint that adorned the enchanting creatures. Prolonged rain resulted in the fairies' wings and backs taking on a yellowish hue with rust spots. Physical contact with the statue left small particles of white powder on individuals' palms (Roche Càrcel, 2021). The Halcyon Gallery acknowledged their oversight on Shanghai's weather conditions, admitting to a miscalculation of the corrosive nature of rainwater in the area. Responding swiftly, they applied a new coat of paint, this time using a more resilient type, restoring the fairies to their original design (Figure 14.13).
+
+# ## TOURISTS SCULPTURE, LUJIAZUI PARK, SHANGHAI
+
+The Tourists Sculpture is a bronze artwork that depicts a group of people taking pictures and enjoying the view of the skyscrapers in Lujiazui Park, Lujiazui, the financial district of Shanghai (Figure 14.14). The sculpture was created by Chen Yifei, a renowned Chinese painter and sculptor, and was installed in Lujiazui Park in 2001. The sculpture is meant to reflect the contrast between the traditional and the modern, the local and the global, and the dynamic and the static in Shanghai. It depicts a mesmerizing scene of a group of folks energetically taking shots of the tall structures, effectively showcasing the city's vibrant combination of classic and contemporary aspects. The sculpture is intricately designed, capturing a specific moment and offering a thought-provoking reflection on the contrast between Shanghai's cultural history and its rapid modernization (Zheng, 2019).

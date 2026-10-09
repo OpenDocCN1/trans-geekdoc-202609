@@ -1,0 +1,13 @@
+# ## 11 Sky Parks, Gardens, and Green Walls
+
+Amid imposing buildings and urban environments, inhabitants may experience a lack of access to greenery and open spaces. The absence of expansive parks or lush green landscapes can have profound implications for the well-being of individuals, contributing to heightened stress levels, diminished quality of life, and an overall sense of disconnect from the natural world. The challenge extends beyond the aesthetic dimension, touching on the essential human need for contact with nature, sunlight, and open-air environments.
+
+To address this challenge, a holistic solution involves intentionally integrating green elements into the vertical fabric of high-rise structures. Green roofs, characterized by vegetation atop buildings, offer residents a unique retreat within the urban landscape. These elevated pockets of nature not only enhance the visual appeal of the architecture but also provide opportunities for relaxation, recreation, and connection with the outdoors. Suspended at various levels, sky parks create verdant oases in the sky, offering residents elevated green spaces with panoramic views.
+
+Vertical gardens and green walls further contribute to the solution, transforming building facades into living canvases adorned with foliage. By strategically incorporating these green features into the design of high-rise structures, urban planners can mitigate the challenge of limited access to nature, fostering a more balanced and nature-integrated living experience for residents. This approach addresses the deficiency of green spaces and redefines high-rise living as an opportunity for a harmonious coexistence between urban architecture and the natural world.
+
+This chapter delves into this contemporary trend of integrating green spaces into tall buildings, exploring how these elevated sanctuaries contribute to urban environments’ well-being and ecological vitality. As architects and urban planners increasingly recognize the importance of connecting people with nature in the vertical cityscape, sky parks, gardens, and green walls have become pivotal in creating towering edifices and thriving, people-centric communities (Lubin, 2019; Pomeroy, 2013).
+
+# ### SKY PARKS AND GARDENS
+
+Sky parks and gardens in tall buildings can play a crucial role in humanizing the high-rise city by providing a range of benefits that enhance the overall quality of life for residents and visitors, as follows (Beatley, 2012; Hadi et al., 2018; Tian & Jim, 2012):
