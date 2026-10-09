@@ -1,0 +1,89 @@
++   - Relational Database Management Systems (RDBMS)
+    - about 130
+    - reference link 163
+- relational model
+    - about 156
+    - reference link 163
+- repository **156**
+- Representational State Transfer (REST) **223**
+- Request class, PSR-7
+    - about 557
+    - developing 557-572
+- resolution operator **98**
+- Response class, PSR-7
+    - defining 572-576
+    - reference link 572
+- REST client
+    - creating 227-230
+    - cURL-based REST client, defining 233, 234
+    - streams-based REST client,
+        - creating 231, 232
+    - working 235
+- REST server
+    - creating 237-244
+    - working 245, 246
+- return type declarations
+    - reference links 66
+- return value data typing
+    - reference link 66
+    - using 63-66
+- RFC
+    - reference link 36
+- Rivest Cipher (RC) **475**
+- Ron's Code **475**
+- root locale code **264**
+- routing
+    - about 336
+    - implementing 336-341
+- **S**
+- scalar **59**
+- scalar type hinting
+    - reference link 63
+- scheme **540**
+- scrollable cursor **135**
+
++   - search engine
+    - implementing 377-383
+- Search Engine Optimization (SEO) **336**
+- secondary lookups
+    - embedding, into query results 164-167
+- secure password generator
+    - building 455-460
+- SEED **475**
+- session hijacking
+    - reference link 449
+- session-related php.ini directives
+    - reference link 535
+- sessions
+    - customizing, with session_start
+        - params 531-535
+- session_start params
+    - used, for customizing sessions 531-535
+- set_exception_handler() function
+    - reference link 493
+- setlocale()
+    - reference link 270
+- setter
+    - about 356
+    - using 356-360
+- shallow iteration **71**
+- simple test
+    - anonymous classes, using as mock
+        - objects 507, 508
+    - assertions test operations 514
+    - database model classes, testing 502-512
+    - Mock Builder, using 508, 509
+    - mock classes, using 504-513
+    - running 499-511
+    - writing 497, 498
+- Singleton **10**
+- Slim framework
+    - reference link 577
+- SOAP client
+    - creating 247, 248
+    - working 249, 250
+- SOAP server
+    - creating 250-255
+- SOAP service
+    - reference link 226
+- software design patterns **391**
