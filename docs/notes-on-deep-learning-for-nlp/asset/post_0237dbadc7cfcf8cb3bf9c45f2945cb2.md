@@ -1,0 +1,38 @@
+
+self-attention however, the context vector is simply used as a replacement for the hidden state of the decoder when performing the alignment with score(), since there is no decoder. So, in self-attention, the alignment vector α indicates the *similarity of each input word with respect to the optimal word (on average)*, while in seq2seq attention, α indicates *the relevance of each source word in generating the next element of the target sentence*.
+
+## 7.2.2 Hierarchical attention
+
+A simple, good example of how self-attention can be useful in practice is provided by the architecture illustrated in Fig. 14. In this architecture, the self-attention mechanism comes into play twice: at the word level, and at the sentence level. This approach makes sense for two reasons: first, it matches the natural hierarchical structure of documents (words → sentences → document). Second, in computing the encoding of the document, it allows the model to first determine which words are important in each sentence, and then, which sentences are important overall. Through being able to re-weigh the word attentional coefficients by the sentence attentional coefficients, the model captures the fact that a given instance of word may be very important when found in a given sentence, but another instance of the same word may not be that important when found in another sentence.
+
+![](img/cff14e17039cb2b04cb132bbbb5e2363_18_0.png)
+
+## References
+
+- [1] Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. "Neural machine translation by jointly learning to align and translate." arXiv preprint arXiv:1409.0473 (2014). 2, 14, 15
+- [2] Cho, K., Van Merriënboer, B., Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H., Bengio, Y. (2014). Learning phrase representations using RNN encoder-decoder for statistical machine translation. arXiv preprint arXiv:1406.1078. 2, 12, 13, 14
+- [3] Chopra, Sumit, Raia Hadsell, and Yann LeCun. "Learning a similarity metric discriminatorily, with application to face verification." Computer Vision and Pattern Recognition, 2005. CVPR 2005. IEEE Computer Society Conference on. Vol. 1. IEEE, 2005. 6
+- [4] Chung, J., Gulcehre, C., Cho, K., & Bengio, Y. (2014). Empirical evaluation of gated recurrent neural networks on sequence modeling. arXiv preprint arXiv:1412.3555. 2, 13, 14
+- [5] Conneau, A., Kiela, D., Schwenk, H., Barrault, L., & Bordes, A. (2017). Supervised learning of universal sentence representations from natural language inference data. arXiv preprint arXiv:1705.02364. 14
+- [6] Elman, J. L. (1990). Finding structure in time. Cognitive Science, 14:2, 179-211. 9
+- [7] Freitag, Markus, and Yaser Al-Onaizan. "Beam search strategies for neural machine translation." arXiv preprint arXiv:1702.01806 (2017). 16
+- [8] Goldberg, Y. (2015). A primer on neural network models for natural language processing. Journal of Artificial Intelligence Research, 57, 345-420. 2, 3, 9
+- [9] Graves, A. (2013). Generating sequences with recurrent neural networks. arXiv preprint arXiv:1308.0850. 11
+- [10] Greff, Klaus, et al. "LSTM: A search space odyssey." IEEE transactions on neural networks and learning systems 28.10 (2017): 2222-2232. 14
+- [11] Hochreiter, S., Schmidhuber, J. (1997). Long short-term memory. Neural computation, 9(8), 1735-1780. 11
+- [12] Hubel, David H., and Torsten N. Wiesel (1962). Receptive fields, binocular interaction and functional architecture in the cat's visual cortex. The Journal of physiology 160.1:106-154. 4
+- [13] Johnson, R., Zhang, T. (2015). Effective Use of Word Order for Text Categorization with Convolutional Neural Networks. To Appear: NAACL-2015, (2011). 2, 8
+- [14] Kim, Y. (2014). Convolutional Neural Networks for Sentence Classification. Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP 2014), 1746-1751. 2, 3, 4
+- [15] Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "Imagenet classification with deep convolutional neural networks." Advances in neural information processing systems. 2012. 4
+- [16] LeCun, Y., Bottou, L., Bengio, Y., and Haffner, P. (1998). Gradient-based learning applied to document recognition. Proceedings of the IEEE, 86(11), 2278-2324. 2, 4
+- [17] Li, J., Chen, X., Hovy, E., and Jurafsky, D. (2015). Visualizing and understanding neural models in nlp. arXiv preprint arXiv:1506.01066. 8
+- [18] Lin, Zhouhan, et al. "A structured self-attentive sentence embedding." arXiv preprint arXiv:1703.03130 (2017). 18
+- [19] Lipton, Zachary C., John Berkowitz, and Charles Elkan. "A critical review of recurrent neural networks for sequence learning." arXiv preprint arXiv:1506.00019 (2015). 9
+- [20] Luong, Minh-Thang, Hieu Pham, and Christopher D. Manning. "Effective approaches to attention-based neural machine translation." arXiv preprint arXiv:1508.04025 (2015). 2, 14, 15, 16, 17, 18
+- [21] Rush, Alexander M., Sumit Chopra, and Jason Weston. "A neural attention model for abstractive sentence summarization." arXiv preprint arXiv:1509.00685 (2015). 14
+- [22] Simonyan, K., Vedaldi, A., and Zisserman, A. (2013). Simonyan, Karen, Andrea Vedaldi, and Andrew Zisserman. "Deep inside convolutional networks: Visualising image classification models and saliency maps." arXiv preprint arXiv:1312.6034 (2013). arXiv preprint arXiv:1312.6034. 8
+- [23] Springenberg, Jost Tobias, et al. "Striving for simplicity: The all convolutional net." arXiv preprint arXiv:1412.6806 (2014). 4
+- [24] Sutskever, Ilya, Oriol Vinyals, and Quoc V. Le. "Sequence to sequence learning with neural networks." Advances in neural information processing systems. 2014. 2, 6, 14
+- [25] Xu, K., Ba, J., Kiros, R., Cho, K., Courville, A., Salakhudinov, R., ... & Bengio, Y. (2015, June). Show, attend and tell: Neural image caption generation with visual attention. In International Conference on Machine Learning (pp. 2048-2057). 14
+- [26] Zhang, Ye, and Byron Wallace. "A sensitivity analysis of (and practitioners' guide to) convolutional neural networks for sentence classification." arXiv preprint arXiv:1510.03820 (2015). 2, 3, 5, 6
+- [27] Yang, Zichao, et al. "Hierarchical attention networks for document classification." Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2016. 14, 18, 19
