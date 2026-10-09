@@ -1,0 +1,490 @@
+- pgno: 0
+  md: '# ## Low-cost BLE based Indoor Localization using RSSI Fingerprinting and Machine
+    Learning
+
+
+    Charu Jain1, Gundepudi V Surya Sashank2, Venkateswaran. N3 and S. Markandan4
+
+
+    1,3Dept. of ECE Sri Sivasubramanya Nadar College of Engineering Kalavakkam, India
+
+    2Dept. of Mech Engineering Sri Sivasubramanya Nadar College of Engineering Kalavakkam,
+    India
+
+    4Dept. of ECE Anand Institute of Higher Technology Kazhipattur, India
+
+
+    1charu18033@ece.ssn.edu.in, 2gundepudi18047@mech.ssn.edu.in, 3venkateswaran@ssn.edu.in,
+    4markandans.ece@aiht.ac.in
+
+
+    **Abstract**—With the IoT industry undergoing a boom, *Location Based Services*
+    (LBSs) are playing an essential role in constructing smart cities. Since LBSs
+    are in the process of being ubiquitous, it is essential to find a low-cost and
+    low energy solution for localization. Bluetooth Low Energy (BLE) technology for
+    indoor localization is a smart choice for giving economical solutions to the industry
+    with additional advantages like trouble-free connection to other gadgets. We propose
+    an improved **RSSI** (*Received Signal Strength Indicator*) based fingerprinting
+    technique in which data is first augmented and then classified using Machine Learning
+    algorithms. This indoor localization technique facilitates us to recognize the
+    **X-position** of the user node (UN) or tag, which receives signals from the anchor
+    nodes (ANs). The fluctuations in the RSSI values were large, because they were
+    affected by multipath propagation and other factors in the indoor positioning
+    environment. The fingerprinting data was augmented to overcome these drawbacks,
+    to decrease the computational cost, to guarantee the precision of the framework
+    by increasing the accuracy and also to be equipped for Machine Learning calculation.
+    The augmentation strategy was actualized by utilizing accessible RSSI estems at
+    one location, where *Random Forest* had the highest test accuracy of 96% surpassing
+    all existing methods.
+
+
+    *Index Terms*—Low-cost, Bluetooth Low Energy, Indoor Localization, Fingerprinting,
+    Augmentation, Machine Learning
+
+
+    # I. INTRODUCTION
+
+
+    Localization has pulled in a great deal of research effort in the last decade
+    due to the increasing use of location-based services (LBS). Wireless fingerprinting
+    localization, specifically, has received a fair share of attention from the industry
+    due to its high simplicity and compatibility with existing hardware [6]. There
+    has been a rising need for indoor location information services in various industries.
+    Some examples of implementation of indoor location information services are monitoring
+    pedestrian flows at air terminals and stations, positions customers in stores
+    and shopping malls and even monitoring the position of medicines in hospitals
+    for easy access. The past decade has also bore fruit to some advances such as
+    Wi-Fi, RFID and ZigBee. Though advances have been made in the location service
+    industry, the localization task for indoor environments is rather complex with
+    respect to outdoor cases. This can be attributed to the fact that in the former
+    case there exist complex infrastructures and paths. In closed environments, the
+    multipath effect assumes a pertinent and negative part. Most wireless signals
+    face this sort of interference in structured environments, with numerous reflective
+    and attenuating surfaces, such as walls and windows. Consequently, the indoor
+    environment positioning demands undeniable levels of quality, which must be ensured
+    by efficient exploitation of the hardware, high complexities, and extreme robustness
+    [9]. To tackle these issues, fingerprinting method is needed to estimate indoor
+    positions that need an estimation algorithm to guarantee accuracy of position.
+    This technique is constructed from two phases, online and offline. During the
+    offline phase the entire area of interest is split into a rectangular set of grid
+    points. From each grid point the RSS is recorded from the Anchor Nodes (ANs) using
+    the tag node. These signals are finally stored in a database system called the
+    radio map. In the online phase, the cellphone collects the RSS from the ANs and
+    sends it to the server to analyze the predefined fingerprint of the offline phase
+    with the RSS in the online phase in order to assess the location on the grid map
+    [10].
+
+
+    One such positioning system that can be employed is the BLE positioning system,
+    which has become a research focus on account of its low energy consumption, low
+    cost, high compatibility, and small sizes of BLE devices [6]. Since, nearly every
+    smart device such as laptops, cellphones, tablets and smartwatches are enabled
+    with a Bluetooth module there is no necessity of an extra gadget. Due to its simplicity,
+    BLE systems depend on RSS based inputs, though there are many ways in which BLE
+    can be implemented, such as AoA and ToF [7]. In the actual applications, the distance
+    measurement that is dependent on RSSI is positioned by reflection, multipath,
+    antenna gain, etc, and large positioning error is caused. In this way, the localization
+    method based on fingerprint feature vector is utilized, where the location area
+    will be isolated into grids, and the received RSSI values of all Wi-Fi/BLE sources
+    in each grid will be gathered. This is followed with all the RSSI values being
+    stored in a fingerprint database [6]. This BLE technique utilized 2.4 GHz unlicensed
+    frequency (2402 to 2480 MHz) with 40 channels (2 MHz for each channel width).
+    Following the experimental setup and the data collection, numerous algorithms
+    have been employed for optimizing the accuracy of the framework such as, multilateration
+    and'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'fingerprinting. All things considered, there are not yet any optimized solutions
+    for high accuracy using BLE technology [5]. The techniques employed to predict
+    the estimated position of an object will influence the accuracy of the estimated
+    real position of the same. There have been many algorithms that have been implemented
+    to estimate the position of the object. Starting from traditional methods that
+    use polynomial regression as a propagation model to using K-Nearest Neighbours
+    and machine learning. With the traditional method, RSS received was processed
+    using weighted sum to get the coordinates of the objects and using a polynomial
+    regression model to get distance. Both were determined using RSS signals from
+    3 advertisement channels of each beacon. Then both results filtered using outlier
+    detection to clean the outcome, by combining fingerprinting with polynomial regression
+    model distance into combined distance. This filtered result will be handled using
+    extended Kalman filtering utilizing filtered distance from first outlier detection.
+    Results from extended Kalman filtering will be filtered again using outlier detection
+    to remove false measurement. This result is then processed again with extended
+    Kalman filtering into an estimated position that will be compared with the radio
+    map to get the real position. This method is using distance-based measurement
+    which gives high error and reduced accuracy due to the filter [5]. Later, researchers
+    have implemented CNN architecture by processing the fingerprinting data into image
+    data and using this image data to train the CNNs. This method however requires
+    huge datasets and numbers ANs to feed to the CNN [4].
+
+
+    In this paper a new technique for RSSI based fingerprinting and an improved fingerprinting
+    data augmentation technique has been proposed. This method is highly recommended
+    when the ANs are minimal and not in large scale. To give highly accurate localization
+    even with less data, the employed RSSI-based augmentation technique is utilized,
+    which is robust, unique and simple to implement, which is dependent on only RSSI
+    values collected at each grid of the location to produce augmented output. The
+    RSSI value present at the target grid is arbitrarily selected and written in the
+    new output. The robustness lies in the fact that the pattern of augmented output
+    matches with the input RSSI pattern of the target grid. The following shows how
+    the rest of the paper is organized. Section II describes the previous works done
+    in this domain of study. The proposed localization technique utilizing the fingerprinting
+    method is described in Section III, along with the description of the data and
+    also the augmentation method. System model and the experimental setup are presented
+    in Section IV. Finally, Section V concludes the paper.
+
+
+    the location area is divided into a rectangular set of grids. Mobile devices were
+    localized through the similarity matching between the real-time RSSI feature vector
+    and RSSI fingerprint database feature vectors. Since this was highly dependent
+    on the location, further work was required. LF however faces a disadvantage due
+    to the prerequisite of having an updated fingerprint database. A non-parametric
+    modelling method called Gaussian Processes (GP) was adopted to model the received
+    signal strength indicator (RSSI) and create the updated fingerprint database.
+    This method was dependent scarcely on the existence of training data. Perez-Cruz
+    et al. [2,3], utilized a parametric pathloss model for the GP mean and a flexible
+    non-parametric co-variance function, with which reliable estimates are conceivable
+    with low fingerprinting effort. The author also explained various other pathloss
+    models and their pros and cons. Hereafter, BLE came into the picture due to its
+    low-cost services, high compatibility with existing softwares and small size.
+    The improved results of employing BLE technology along with a few fundamental
+    standards of a radio-based indoor localization technique were reviewed and documented
+    by Pavel Kriz et al. [8]. The author executed a distributed system for collecting
+    radio fingerprints by mobile devices with the Android operating system. The system
+    returned a high error of 2.82m and hence had to be improved. A new system - BLE
+    iBeacon-based indoor localization system that applies k-nearest neighbours algorithm
+    was proposed by Ngoc-Son Duong et al. [11]. K-nearest neighbours (k-NN) is an
+    ML that decides the user position based on training data and the nearest neighbouring
+    data points for the same RSS values. Even so, the algorithm posed a disadvantage
+    since the accuracy of the ML model was obscure. Following this the implementation
+    of an Internet of Things (IoT)-based framework was achieved by Marco Terán et
+    al. [9]. The design of the framework utilizes Wireless Networking Technologies
+    along with a connection to Amazon Web Services cloud computing service. Lamentably,
+    the maximum accuracy achieved by this framework was 75%. Osmah Ali Abdullah et
+    al. [10] presented a new framework based on symmetric Bregman divergence, which
+    incorporates kNN classification in signal space. The coordinates of the target
+    resolved as a weighted combination of the closest fingerprints using Jensen-Bregman
+    divergences, which bound together the squared Euclidean and Mahalanobis distances
+    with information-theoretic Jensen-Shannon divergence measures. Yet, this technique
+    was not celebrated even though it gave an accuracy of 90% as it had high complexity.
+    Likewhise et al.[4,5] use regression and CNNs respectively to estimate the location
+    with exceptionally high accuracy values of 96.67% for the former. These techniques
+    cannot be used when the anchor nodes are less than 150. Rashmi Sinha et al. [1]
+    proposed an improved data augmentation technique dependent on RSSI values for
+    fingerprint indoor positioning systems. The technique accomplished a test accuracy
+    of 95.26% in the laboratory simulation and 94.59% in a real-time environment.
+    This technique also had more than 250 ANs at their disposal. Finally, Faeheim
+    Zafari et al. [7] gave a detailed survey of various indoor localization methods
+    such as Angle of Arrival (AoA), Time of Flight (ToF), Return Time of Flight (RTOF),
+    Received Signal Strength (RSS), in light of advances, for
+
+
+    # II. BACKGROUND
+
+
+    Indoor Localization has been a topic for research for quite a while now. Initially
+    RSSI wireless signals were used in indoor positioning as reference data. However
+    due to the wireless multipath influence from these signals, there exits large
+    fluctuations in the values and these fluctuations cause large distances errors.
+    To tackle the problem of high fluctuations and errors Aiguo Zhang et al. [6] proposed
+    an RSSI-based fingerprint feature vector algorithm. In this algorithm,'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'example, WiFi, Radio Frequency Identification Device (RFID), Ultra Wideband
+    (UWB), Bluetooth and so forth. The author additionally assessed various frameworks
+    from the point of view of energy efficiency, availability, cost, reception range,
+    latency, scalability and tracking accuracy. The author then compared the localization
+    systems and summed up their working principle. Finally, the author discussed the
+    challenges faced in accurate indoor localization.
+
+
+    # III. PROPOSED METHOD
+
+
+    The general architecture is depicted in Fig. 3. Initially, the UN senses RSSI
+    values from BLE ANs. The positioning method that we use in our proposed framework
+    is Fingerprinting. There are huge fluctuations in the RSSI values received from
+    the ANs, depicted in Fig. 2. The proposed system, which simplifies indoor localization
+    even with such colossal fluctuations, comprises two parts: Offline/Training stage
+    and Online/Execution stage. In the Offline phase, when the data of the ANs is
+    collected and the location coordinate is also recorded, the UN records these parameters
+    to the local database. In the Online phase, the data is initially pre-processed
+    which is augmented eventually. The augmented data set is appropriate enough to
+    feed it to the different classifiers for comparison. The method which produces
+    the highest accuracy scores is chosen to estimate the user position or the grid.
+
+
+    # A. Fingerprinting technique
+
+
+    The technique proposed, fingerprinting, divides the area of interest into a specific
+    number of rectangular cells. The received signal power radio-signal parameter
+    is measured for each cell using a tag node and an anchor node. These received
+    signals are then organized as a random map in a similar fashion to a portrayal
+    of signal strength distribution during the first phase also known as the training
+    phase. Following the training phase the position inference is realized and the
+    received power measurements are observed once again and this is the ensuing stage.
+    These power measurements are then mapped with the location information that was
+    obtained in the training stage. Finally by utilizing data association techniques
+    and estimations the position of the target object is narrowed down to the cell
+    it is in. This process allows the fingerprinting technique discrete estimations
+    of the objects location. Theoretically, the distance and size of these rectangular
+    cells can be reduced to the point where measurements provide a continuous observation
+    rather than a discrete one. However, in this case, the difference in the signal
+    strength between two neighbor points will turn out to be a lot more smaller than
+    the typical indoor signal variations which makes the estimation of the correct
+    point practically inconceivable. For the same reason, when the fingerprinting
+    locations are picked, there is a significant tradeoff between the fingerprinting
+    position granularity and the likelihood of successful location estimation which
+    should be mulled over. It is likewise worth mentioning that the fingerprinting
+    and scene analysis techniques are very susceptible to changes of the environment
+    even though they can provide accurate localization estimations. This is solely
+    because they rely on offline
+
+
+    ![](img/f0f0eab0b92a20434dec20496d3dcb4f_2_0.png)
+
+
+    Fig. 1. Layout of experimental setup
+
+
+    and online measurements at various time instances [7]. The fingerprinting method
+    does not require distance calculations and this method ensures enough accuracy,
+    although in too dense and dynamic environments the precision decreases [9].
+
+
+    # B. Experimental Setup
+
+
+    The proposed indoor positioning system was tested in an indoor environment in
+    Novitate Engineering Solutions, Chennai, India. In this setup, four BLE ANs were
+    placed on the same plane and were not to be covered by other structures. The BLE
+    module used in this setup is the DWM1001 by Decawave. The locations where the
+    ANs A, B, C and D were placed in the closed environment can be seen in the Fig.
+    1. The positions where the ANs were placed was initially decided by triangulation
+    method, but was later discarded because of high noise and interference. Later,
+    by trial and error method and physical verification, the ANs were placed at the
+    depicted positions. To ensure the reliability of the signal, the broadcast interval
+    of beacons was set to 1 ms and the minimum distance between two adjacent beacons
+    was 4 feet. The experimental area (100 square feet) was divided into evenly distributed
+    grid points, the two adjacent grids were 1 feet apart. We collect data for 16
+    grids in the experimental area with the help of a line follower robot. Another
+    BLE transceiver module i.e., the user node/tag is mounted on the line follower
+    robot. The robot collects the RSSI values from the 4 ANs when it is stationary
+    and right in the center of each grid. Minimum 58 and maximum 65 values were collected
+    from each node at every grid. Thus, the entire radio map data set contains 1180
+    rows.
+
+
+    # C. Data Pre-processing and Augmentation
+
+
+    From the experimental setup in the previous section, the data derived contained
+    7 columns. These are the timestamp of the signal, X coordinate for the grid, Y
+    coordinate for the grid and finally RSSI values for the 4 anchor nodes. For each'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/f0f0eab0b92a20434dec20496d3dcb4f_3_0.png)
+
+
+    ![](img/f0f0eab0b92a20434dec20496d3dcb4f_3_1.png)
+
+
+    grid, a unique pair of X and Y, the RSSI values for each anchor node was observed
+    60 times. A new feature called label was formed for each grid which acted as the
+    target variable for classifying the data. Given that this system is a low-cost
+    system, the data observed for each node is less and not enough for an algorithm
+    to learn and classify the data. Hence a data augmentation technique was proposed.
+    The data was isolated for each node at each location first. Then a specific repetition
+    number N was defined for the reference dataset. This number was then used with
+    the python function sample to randomly select N data-points from each node with
+    replacing it again. This was repeated for every node at every grid. In our use
+    case the repetition number was set to 200 and this increased the dataset three-fold.
+
+
+    # IV. RESULTS
+
+
+    # A. Training of Classifiers
+
+
+    Classification is a type of supervised learning that aims to categorize a given
+    set of data into various classes. In this case the classifiers were implemented
+    to categorize the location of the user node based on the RSSI values. The classifiers
+    used were:
+
+
+    +   - Random Forest Random Forest is an ensemble method used for classification
+    that operates by designing a net- work of decision trees at training time and
+    yields the mode of the classes from individual trees.
+
+    - XGBoost XGBoost is a decision-tree-based ensemble algorithm. It employs a gradient-boosting-framework
+    for learning during the training phase.
+
+    - Decision Trees They are an instance of a supervised machine learning algorithm
+    and can be explained using
+
+
+    two major elements, leaves and nodes. Nodes are the places the where data is split
+    based on conditions and leaves are final decisions of the algorithm
+
+
+    +   - KNN The k-nearest-neighbours is a supervised machine learning algorithm
+    which categorizes a datapoint depend- ing on the nearest neighbouring datapoints.
+
+    - SVC The support vector machine algorithm is utilized to output and optimize
+    hyperplanes that characterizes given information based on their features.
+
+
+    Jupyter notebooks were utilized on both the datasets, raw and augmented, and the
+    datasets were split into test and train in a 75:25 ratio. The final results for
+    each classifier were compared using metrics such as Accuracy, Error, F1 score,
+    Recall.
+
+
+    # B. Experimental Results
+
+
+    The performance for each classifier for both the raw data and augmented data are
+    shown in Table I and II respectively. It can be seen from the Tables that augmented
+    data had vastly superior accuracy values and also decreased error in localization.
+    The error shows us the percentage of datapoints misclassified, recall was computed
+    as the weighted average of the output for each grid and F1 score was derived as
+    the weighted average for the harmonic means for precision and recall for each
+    grid. The model that utilizes raw data displayed disappointing results with respect
+    to the augmented dataset model. There was also no sign of overfitting or underfitting
+    in the model that uses the augmented dataset, since the train and test accuracies
+    are not that far apart. From the results it is inferred the Random forest algorithm
+    using the augmented'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# TABLE I
+
+    RAW DATA RESULTS
+
+
+    | Classifier Name | Train Accuracy | Test Accuracy | Error | F1 | Recall |
+
+    | :--- | :---: | :---: | :---: | :---: | :---: |
+
+    | Random Forest | 0.93 | 0.61 | 0.39 | 0.60 | 0.60 |
+
+    | XGBoost | 0.90 | 0.64 | 0.35 | 0.64 | 0.64 |
+
+    | Decision Trees | 0.80 | 0.50 | 0.49 | 0.51 | 0.51 |
+
+    | KNN | 0.65 | 0.45 | 0.54 | 0.45 | 0.48 |
+
+    | SVC | 0.52 | 0.48 | 0.52 | 0.52 | 0.53 |
+
+
+    # TABLE II
+
+    AUGMENTED DATA RESULTS
+
+
+    | Classifier Name | Train Accuracy | Test Accuracy | Error | F1 | Recall |
+
+    | :--- | :---: | :---: | :---: | :---: | :---: |
+
+    | Random Forest | 0.99 | 0.96 | 0.04 | 0.93 | 0.93 |
+
+    | XGBoost | 0.97 | 0.95 | 0.05 | 0.95 | 0.95 |
+
+    | Decision Trees | 0.95 | 0.91 | 0.09 | 0.93 | 0.92 |
+
+    | KNN | 0.83 | 0.71 | 0.28 | 0.71 | 0.71 |
+
+    | SVC | 0.60 | 0.53 | 0.46 | 0.52 | 0.53 |
+
+
+    dataset outperforms the other classifiers with an Accuracy of 0.96, error of 0.04,
+    an F1 score of 0.83 and recall of 0.93.
+
+
+    # V. CONCLUSION
+
+
+    In this paper, we propose a detailed indoor localization technique wherein the
+    augmented fingerprinting technique is used. The RSSI-based fingerprinting database
+    is collected from the four ANs with the aid of the UN mounted on a line follower
+    robot, which goes around to collect the RSSI values in the area which is divided
+    into grids. Because of the compact indoor location affected by multipath propagation
+    and interference, huge fluctuations in the RSSI values are observed. To mitigate
+    this drawback and to accurately estimate the location of the grids, Machine learning
+    classifiers are employed after appropriate augmented data is obtained. Following
+    augmentation, the data increases threefold from 1180 to 3200 rows, which increases
+    the accuracy of localization from 61% to 96%. Five different Machine Learning
+    Classifiers were employed to compare the metrics. Among these, Random forest classifier
+    turned out to be the most accurate with 96% accuracy and also the lowest error
+    at 0.04. For future work,
+
+
+    we suggest that the readers devise a method of increasing any minimal fingerprinting
+    dataset substantially more, which can be utilized by CNNs for localization.
+
+
+    # ACKNOWLEDGMENT
+
+
+    The dataset was provided by Novitaz Engineering Solutions Ltd. They also conducted
+    the experiment in their office premises.
+
+
+    # REFERENCES
+
+
+    +   [1] Rashmi Sharmin Sinha and Seung-Hoon Hwang, Improved RSSI-Based Data Augmentation
+    Technique for Fingerprint Indoor Localization, MDPI Electronics 2020, 9, 851.
+
+
+    [2] Marzieh Dashi, Holger Claussen, Fernando Perez-Cruz, Simon Yiu n, Wireless
+    RSSI fingerprinting localization, Signal Processing131-235244, Elsevier, 2017.
+
+
+    [3] Simon Yiu, Marzieh Dashi, Holger Claussen and Fernando Perez-Cruz, Locating
+    User Equipment and Access Points using RSSI Fingerprints: A Gaussian Process Approach,
+    IEEE ICC SAC Internet of Things, 2016.
+
+
+    [4] Danshi Sun, Ehu Wei, Li yang, Shiyi Xu, Improving Fingerprint Indoor Localization
+    Using Convolutional Neural Networks, IEEE Access 2020.
+
+
+    [5] Reginald Putra Ghozali, Gede Putra Kusuma, Indoor Positioning System using
+    Regression-based Fingerprint Method, (IJCSCA) International Journal of Advanced-Computer
+    Science and Applications, Vol. 10, No. 5, 2019.
+
+
+    [6] Aiguo Zhang, Ying Yuan, Qunyong Wu, Shunzhi Zhu, Jian Deng, Wireless Localization
+    Based on RSSI Fingerprint Feature Vector, Hindawii Publishing Corporation, International
+    Journal of Distributed Sensor Networks, Article ID 528747, 7 pages, Volume 2015.
+
+
+    [7] Fahmeem Zafari, Athaniosios Geokas, Kin K. Leung, A Survey of Indoor Positioning
+    Systems and Technologies, IEEE Communications Surveys and Tutorials, Volume: 21,
+    Issue: 3 3thirdquarter 2019.
+
+
+    [8] Pavel Križ, FilipMały, Tomas Kozel, Improving Indoor Localization Using Bluetooth
+    Low Energy Beacons, Hindawii Publishing Corporation Mobile Information Systems,
+    Article ID 2083094, 11 pages Volume 2016.
+
+
+    [9] Marco Tcrán, Henry Carrillo Carlos Parra, WLAN-BLE Based Indoor Positioning
+    System using Machine Learning Cloud Services, IEEE CCRA 2018.
+
+
+    [10] Osamah Ali Abdullah, Ikhlal Abdelzohor, Machine Learning Algorithms for Wireless
+    Indoor Localization, Intechopen, Machine Learning - Advanced techniques and Applications,
+    2017.
+
+
+    [11] Ngoc-Son Duong, Thai-Myi Dion, Indoor Localization with Lightweight RSS Fingerprint
+    using MIE iBeacon on iOS platform, 2019 19th International Symposium on Communications
+    and Information Technologies (ISITC).'
+  merge: -1
+  img_proc: true
