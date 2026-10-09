@@ -1,0 +1,38 @@
+- - '##'
+  - 3) 不同监督范式的数学定义
+- - '##'
+  - 4) 典型算法的数学定义
+- - '##'
+  - B. 基于算法粒度的分类法
+- - '###'
+  - 1) 基于分布测量的方法
+- - '###'
+  - 2) 基于对抗学习的方法
+- - '###'
+  - 3) 基于自训练的方法
+- - '###'
+  - 4) 基于整合训练的方法
+- - '###'
+  - 5) 基于LVM的方法
+- - '##'
+  - C. 基于输入模式的分类
+- - '##'
+  - 2) DA-RSCD
+- - '###'
+  - 1) DA-RS$^\text{Cls}$ 的基准性能
+- - '##'
+  - 任务配置
+- - '###'
+  - SAR 数据集上的基准性能。尽管关于使用 SAR 数据集的 UDA-RS$^\text{Cls}$ 的研究相对有限，我们仍在表 X 中总结了 SAR 基准数据集上的代表性
+    UDA-RS$^\text{Cls}$ 方法。
+- - '###'
+  - 2) DA-RS$^\text{Seg}$ 的基准性能。在 DA-RS$^\text{Seg}$ 任务中，模型性能使用 IoU/mIoU 和 F1/mF-score
+    进行评估。对于类别 $i$，$IoU_i = tp_i/(tp_i + fp_i + fn_i)$，其中 $tp_i$、$fp_i$ 和 $fn_i$ 分别表示真阳性、假阳性和假阴性。$mIoU$
+    是所有类别的平均值。F1-score 定义为 $2 \times Precision \times Recall/(Precision + Recall)$，mF-score
+    是所有类别的平均值。为确保方法之间的公平且一致的比较，本综述主要报告使用 mIoU 作为主要评估指标的结果。
+- - '###'
+  - DA-RS$^\text{Det}$ 的基准性能。在 DA-RS$^\text{Det}$ 任务中，模型性能通常使用 $AP_i/mAP$、$AR_i/mAR$
+    和 $F_1/mF_1$-score 进行评估。对于每个类别 $i$，平均精度（Average Precision, $AP_i$）定义为精度-召回率曲线下的面积，而平均精度均值（Mean
+    Average Precision, $mAP$）是所有类别 $AP_i$ 的平均值。平均召回率（Average Recall, $AR_i$）反映正确检测对象的比例，$mAR$
+    是其在各类别上的均值。$F_1$-score 定义为 $2 \times \frac{Precision \times Recall}{Precision
+    + Recall}$，$mF_1$-score 表示其在各类别上的均值。在本综述中，采用 $mAP@50$ ($mAP_{50}$) 作为主要评估指标，因为它被大多数现有方法所使用。
