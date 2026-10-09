@@ -1,0 +1,9 @@
+![](bbox=[0.12, 0.1, 0.86, 0.32])
+
+**FIGURE 7.3** A framework of training a deep learning model for classification of echo views. Operations in between layers are shown with arrows.
+
+performance of a model, and the remaining pieces ($k-1$) are utilized for training models. The training process is typically performed in a supervised way that involves ground truth labels for each input data and minimizes a loss function over training samples iteratively. Supervised learning is the most common training approach for a ML method but it requires a laborious ground truth label generation. In medical imaging, ground truth labels are generally obtained from clinical notes for a diagnosis or quantification. Furthermore, manual outlining of lesions or structures by experts is used to train ML models for segmentation tasks.
+
+# 7.1.3 AI-Powered US in Radiology
+
+As medical imaging data increase immensely with the advancing multi-modality imaging technology (e.g. 2D/3D/4D anatomical and functional imaging US/CT/MR/PET/SPECT), there is a need for processing imaging data in an organized fashion to assist radiologists. Computer-aided detection and quantification (CAD) is an ongoing research subject in diagnostic radiology. CAD systems provide a second opinion to assist radiologists for image interpretation, which furthers the precision and consistency of diagnosis and decreases the image reading time. The greater part of CAD systems is based on traditional ML methods that employ texture features and involve several steps: image preprocessing, handcrafted feature extraction, selection of major features, and classification. Although CAD systems have shown great promise in assisting radiologists, they have several
