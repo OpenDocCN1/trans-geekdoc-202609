@@ -1,0 +1,15 @@
+**Theorem 12.4.** (Polarisation theorem) [20]: If the positive (nonnegative) symmetric matrix $A$ can be expressed as a continuous reduced order form $A_{(D-1)}, A_{(D-2)}, \dots, A_{(2)}, A_{(1)}$, then $\sum_{i \neq j} (\cos \theta_{ij})^2$ (corresponding to $\left\| \begin{matrix} Y^T & Y \ (d) & (d) \end{matrix} \right\|_F^2$) is also strictly decreasing (non-rising).
+
+The inference obtained from Theorem 12.3 is the theoretical basis of the spectral estimation algorithm for generating the topological invariance of image feature manifolds.
+
+**Inference 12.1.** (Manifold embedding principle) [20]: The similarity matrix $A$ is replaced by the matrix $A_{(d)}$, whose rank is $d$. The resulting low-dimensional manifolds are similar to the inner structures of high-dimensional manifolds of data samples, and the curvature of the manifolds has almost no distortion.
+
+The theorem and inference above are similar to those of PCA. In this algorithm, as the cosine of the angle between the vectors contains a strong energy in the similarity matrix, the data points are distributed over the hypersphere surface and precisely maintain the smaller vector angle [20]. This shows that the geometric features between adjacent points are completely preserved by vector angles.
+
+# ### 12.4.3 Manifold dimensionality reduction algorithm
+
+Theorem 12.1 shows that $Y_{(d)}$ is a low-dimensional nonlinear embedding of data sample manifolds over hypersphere surfaces. The arc length between two points is inversely proportional to their similarity [20]. First, the local dimension $d$ of the low-dimensional manifold is chosen to ensure that the low-dimensional manifold can effectively maintain the geometric characteristics of the high-dimensional manifold. In the PCA algorithm, $d$ is usually chosen by artificial estimation without prior knowledge or the influence of noise on data.
+
+However, it is very difficult to estimate the embedding dimension of spherical low-dimensional manifolds. Therefore, the goal of this section is to embed the data samples into the vector space as accurately as possible. Suppose that $\forall p \in Y$ and $[e_1, e_2, \dots, e_{d-1}]$ is the orthogonal basis of the tangent space of point $p$. We set $I = E^TE$, where $E = [e_1, \dots, e_{d-1}, p]$. For $\forall e_j$, it can be regarded as a projection axis of space $R^a \times \Gamma^b$, where $R^a$ is an $a$-dimensional vector space and $\Gamma^b$ is a $b$-dimensional torus space satisfying $a + b = d - 1$. If the sample point is completely surrounding the hypersphere surface along the $e_1$ direction, the projection axis in the $e_1$ direction is the ring. The projection axis $e_j$ is linear if the sample point only has an intermediate portion surrounding the hypersphere surface along the $e_j$ direction.
+
+Similar to the idea of the PCA algorithm, the main axis of the PCA algorithm satisfies the Gaussian distribution. The tangent space of the sample point and its projection axis $E$ also satisfy the Gaussian distribution in the hypersphere surface [33]. When $\forall y \in CS^{d-1} \subset C^d$ is a unit vector and satisfies $y^*y = 1$, where $y^*$ is the con-

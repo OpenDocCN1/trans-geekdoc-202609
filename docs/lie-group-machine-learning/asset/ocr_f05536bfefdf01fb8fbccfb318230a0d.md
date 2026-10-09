@@ -1,0 +1,15 @@
+As a mapping between the category of topological spaces Top and set category Set, there is a mapping between the objects. There is a corresponding mapping between morphisms. Thus, the oblivion functor exists.
+
+We can prove that in this functor, there is a one-to-one mapping. $A \in \mathrm{obGp}$, $\mathrm{Nat}(\mathrm{Gp}(A, -), U)$ is the all nature transformation between functor $\mathrm{Gp}(A, -)$ and oblivion functor $U$. For each natural transformation $\alpha: \mathrm{Gp}(A, -) \to U$, define $\Theta(\alpha) = \alpha_A(1_A) \in U(A)$. For $x \in U(A)$, define $\Phi(x): \mathrm{Gp}(A, -) \to U$. Then, $\Phi(x)_B(f) = U(f)(x) \in U(B)$. Obviously, $\Phi(x)$ is a natural transformation. Hence, there is a mapping $\Phi: U(A) \to \mathrm{Nat}(\mathrm{Gp}(A, -), U)$. In summary, $\Theta$ and $\Phi$ are inverses of each other, such that there is a one-to-one mapping from $\mathrm{Nat}(\mathrm{Gp}(A, -), U)$ to $U(A)$, i.e., there are natural isomorphisms $\varphi: \mathrm{Gp}(A, -) \to U$.
+
+According to the definition of representable functors, an ordered pair $(A, \phi)$ is a representation for $U$. Hence, it is a learning expression representable functor, namely oblivion functor $U: \mathrm{Gp} \to \mathrm{Set}$ from Lie group machine learning category $\mathrm{Gp}$ to the set category $\mathrm{Set}$ is a representable functor. $\square$
+
+# **15.3.2 Mapping mechanism between expressions**
+
+The previous section described the basic concepts and abstract representations of learning expressions, which have provided a clear theoretical basis for studying the mapping mechanism between expressions. In this section, the mapping mechanism between learning expressions is verified by a specific example, and the feasibility of the mapping theory is proved. First, we select the specific problems in the learning problem and analyse their existence in the category theory. Then, the existing learning problems are improved by using the mapping mechanism of learning expressions, and better results are obtained. A practical application of abstract theory is demonstrated, and the correctness and feasibility of the theory are proven.
+
+The decision tree category has been briefly introduced in the second section. This section gives the category proof of the decision tree learning algorithm.
+
+A decision tree classifies instances by arranging instances from the root nodes (sort) to a leaf node. A leaf node is a classification of instances. Each node on the tree specifies a test of an attribute of an instance, and each succeeding branch of that node corresponds to a possible value of the property. The taxonomy example starts with the root node of the tree, tests the attributes specified by this node, and then moves down the corresponding branches according to the property value of the given instance. The process is then repeated on a subtree with a new node as the root.
+
+The decision tree classification algorithm originated from the concept of learning systems. Then, through a series of developments, we have obtained the ID3 and C4.5 algorithms as well as a wide range of applications. Here, we mainly discuss the ID3 algorithm.

@@ -1,0 +1,11 @@
+![](bbox=[0.08, 0.07, 0.92, 0.28])
+
+**Fig. 5.2:** Swiss-roll sampling surface and TBRF running process screenshots.
+
+we take $N = 1600, d = 2$, and $t = 160$. The Swiss-roll data set is divided into 160 blocks, which has nothing to do with the sampling of the data; there is a certain randomness.
+
+Figure 5.2 mainly shows the process of running TBRF on the Swiss-roll data set. The left graph is the Swiss-roll surface. The middle graph is the representation of the clustering centres in the three-dimensional space after clustering. The right figure is the position of the points in the matrix $Z$ in the space after running Step 3. Noted that the left two figures use the same colour vector annotation data. The colours of the points in the right picture are determined by the average value of the colours of all the points in the block.
+
+By directly using Isomap, LLE, and LTSA to reduce the dimension of the data set, we get three graphs in the first row of Figure 5.3; then, after the use of the vector field reduction algorithm with the above three algorithms to reduce the dimension, the result is the second row of Figure 5.3. Through the experiment, we find that when the manifolds $Z$ in the vector space are composed in the main direction of each block, they can still reflect the geometric structure of the original manifold. After calling the reduction dimension algorithm, we find that although the two-dimensional projection of the manifold $Z$ shows different effects of using the dimensionality reduction algorithm directly for the original manifold, the projection is still spread on the plane in an orderly manner.
+
+In the experiment, we find two parameters that affect the experiment. The first is the number of clusters $t$. Owing to the use of the k-means algorithm, the clustering algorithm needs to pre-enter the number of clusters. In the experiment, we found that the number of clusters $t$ affects the final results of the experiment. The second is the neighbourhood parameters of the dimension algorithm (Step 4), which is determined by the characteristics of the dimensionality reduction algorithm itself. In addition, because the k-means clustering results have a certain degree of randomness, we found that although the results of each experiment have common characteristics and laws, the results themselves are not the same.

@@ -1,0 +1,13 @@
+We can see from the above definition and the nature of the connected group, that since Lie algebra is the local structural invariant of the Lie group, $df : \mathfrak{g}_1 \to \mathfrak{g}_2$ is the isomorphism of the Lie algebra when $f: G_1 \to G_2$ is the coherent state of the Lie group. On the other hand, when the Lie algebras $\mathfrak{g}_1$ and $\mathfrak{g}_2$ of $G_1$ and $G_2$ are isomorphic, then there must be a pair of homomorphisms such as Lie group $\widehat{G}$ and $f_i : \widehat{G} \to G_i$ ($i = 1, 2$).
+
+It can be seen that the Lie group theory of covering group plays an important role in Lie group research.
+
+# ## 6.2 Simply connected covering algorithm of the Lie group
+
+First, the research status of the algorithm based on the covering idea is introduced. Then, the single-connected overlay algorithm of Lie group machine learning is given, including the identification of coverage group, universal covering group solving algorithm, and single-connected covering algorithm. Finally, an example is introduced.
+
+# ### 6.2.1 Research status of algorithm based on covering idea
+
+The technique of covering is an important tool for studying algebraic geometry, such as coverage in research-based transformations, model maps, and singularities and so on. The idea of covering has been applied to many areas, such as data mining and machine learning.
+
++   1) Professor Zhang et al. [28] gave the geometric significance of M-P neurons and transformed the optimal design problem of neural network into some optimal coverage problem by spherical projection transformation. They corresponded neurons to the spherical neighbourhood of geometric samples. With this geometric intuitionistic approach, they designed the multi-layer forward neural network as a ‘classifier’ and used this design as a ‘spherical neighbourhood’, with the input $x^i$ ($i = 1, 2, 3, \dots, d$) divided by the category to which they belong. One of the simplest design methods is to cover the $x^i$ ($i = 1, 2, 3, \dots, d$) of a class with a set of spherical neighbourhoods without covering the $x^i$ ($i = 1, 2, 3, \dots, d$) that do not belong to that class. Thus, different types of inputs are covered by spherical neighbourhoods of different groups. Then, the output of neurons corresponding to the spherical neighbourhood of the same group is put together using an ‘or gate’. Thus, a classifier is designed. The spherical neighbourhood of a covering corresponds to a hidden layer. The minimum coverage corresponds to the minimum hidden neural network structure. They also showed that any method of sub-optimal coverage and the spherical neighbourhood method can give a learning algorithm of neural networks, which is called neighbourhood covering algorithm.

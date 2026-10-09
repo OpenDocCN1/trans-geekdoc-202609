@@ -1,0 +1,15 @@
+The ligand molecule is in the form of mol2, which mainly preserves the elemental information and topological properties of the molecule. All the operations of the ligands in the topological space constitute a Lie group, and the conformation space resulting from the group space segmentation algorithm is divided into different fragments. The molecular rotation of the key and the ring is defined as a split point. Starting from one any element, find its equivalent road class and merge it into a fragment. The operation will be completed after all the elements are traversed.
+
++   (5) Select a fragment with the highest dimension as the core fragment. The position space of the ligand is searched by the component of the parallel movement in the covering group model, and the orientation space of the ligand is searched by the rotation component. Dock it to the active site of the receptor, and get the possible docking position of the core fragment in the active pocket $\mathrm{N}_{0}$.
+
+In the covering group model, any change can be expressed as an infinitesimal generator of the translation component and the rotation component, i.e., $e = \sum_{i=1}^{6} v_{i}e_{i}$. Hence, in the entire search space, two parts of the search are needed. Constantly adjust the translation component and rotation components. Use the evaluation function to score, and take the top N0 scores as the highest position, where the parameter of the translation component $\sigma = 0.5$ Å and the parameter $\varphi = 10^{\circ}$ of the rotation component.
+
++   (6) Using the multiply connected covering algorithm in the previous chapter to grow the fragment, adjust the control factor of the coverage group, and connect the multiple segments to find the best conformation until the end of the fragment to form a complete ligand molecule.
+
+In the process of fragment growth, for the operation of connecting two fragments, i.e., the two coverage groups for direct multiply, in which the control factor of the covering group needs to be adjusted, the adjustment step is carried out according to the weight vector of the weight space represented by the group, $\Lambda = \sigma_{1}\Lambda^{(1)} + \sigma_{2}\Lambda^{(2)}$, where $\sigma_{1}$, $\sigma_{2}$ are set to 1. Then, set the rotation component parameter $\varphi = 10^{\circ}$, using the evaluation function to score the results, while constantly adjusting the values of $\sigma_{1}$, $\sigma_{2}$.
+
++   (7) Perform multiple rounds of docking using the evaluation function to analyse the results to find the best conformation. Here, consider the time complexity ten times.
+
+# 6.4.4 Experimental results and analysis
+
+The algorithm is modelled on a data set consisting of 19 protein-ligand complexes derived from the PDB database (www.rcsb.org)/in the literature [42], as shown in Table 6.1.

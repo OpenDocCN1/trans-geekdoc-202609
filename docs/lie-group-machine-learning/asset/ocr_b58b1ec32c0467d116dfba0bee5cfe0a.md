@@ -1,0 +1,17 @@
+# 15.4.1 Classifier algorithm
+
+The design goal of the classifier is to automatically partition the data into known categories after learning. It is mainly used in search engines and various retrieval programs, and it is also widely used in the fields of data analysis and prediction. The classifier is based on a mathematical model. For different mathematical models, various classifiers can be generated, such as Bayes network classifier, decision tree classification, and support vector machine classification.
+
+To study classifier algorithms, we need to understand classification and the data classification process. We can then study the classifier algorithm further and use the learning expression mapping mechanism for summary and analysis.
+
+In [19], the data classification process is divided into two steps. The first step is to establish a classifier that describes the predefined data class or concept set. This process is called the ‘learning step’ or ‘training phase’. The classification algorithm constructs the classifier by analysing or learning from the training set. The training set consists of database tuples and their associated class labels. A learning model or classifier is provided in the form of a classification rule. The first step in the classification process can also be viewed as learning a mapping or function $y=f(X)$ that predicts the associated class label $y$ of a given tuple $X$.
+
+The second step is to use the model for classification. First, the prediction accuracy of the classifier is evaluated. If the training set is used to measure the accuracy of the classifier, the evaluation may be optimistic. Because the classifier tends to over fit the data, it is necessary to use the test set consisting of test tuples and associated class labels to test the accuracy of the classification rules. If the accuracy is acceptable, the rules are used for the new data tuple classification.
+
+The system plays the role of a classifier based on a feature vector extractor, and an object to be measured is assigned a label. In general, perfect classification performance is impossible to obtain, and a more general task is to determine the probability of each possible category. The abstraction provided by the input data feature vector, makes it possible to establish the large-scale domain-independent classification theory.
+
+In the classifier, the classification of the degree of difficulty depends primarily on two factors. The first is the difference between individual characteristics from the same categories of fluctuation. The second is the difference between the characteristics of samples belonging to different classes of values. In practice, this is often the case, and it is usually impossible to try to determine all of the eigenvalue from an input.
+
+Through the analysis and research of the two steps of the data classification process, and based on the study of classifiers in [18], this paper briefly introduces the recognition process of classifiers in the process of image classification.
+
+In the first stage of training, perform singular value decomposition of $X_{ji}$, i.e., the $i$-th training example sample of the $j$-th class. Get the $k$ maximum singular value matrix $A_{ji}(m)=u_{ji}^{m}(v_{ji}^{m})^{H}\ (m=1,2,\ldots,k)$ corresponding to the image. A set of base

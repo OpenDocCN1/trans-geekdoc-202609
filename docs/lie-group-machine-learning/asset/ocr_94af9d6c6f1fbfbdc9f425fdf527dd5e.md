@@ -1,0 +1,15 @@
+# # 8.2.3 Semi-supervised learning model based on the geological structure of the Lie group
+
+In this paper, we use the geometric properties of Lie group, such as translational and geodesic properties, which give the semi-supervised learning model based on Lie group geometry.
+
++   (1) Translality of Lie group.
+
+Geometry is a homogeneous space in which objects can be moved freely and remain shaped, such that they can be controlled by an associated symmetric group. The Euclidean group gives Euclidean geometry, while the hyperbolic geometry originates from another Lie group. Thus, each homogeneous geometry corresponds to a different Lie group. However, with the subsequent development of Riemann's geometric work, geometries that are not homogeneous have attracted considerable attention, wherein the curvature changes with the position and the space no longer has overall symmetry. However, the Lie group still plays an important role, because there are Euclidean coordinates in the cut space. Thus, the Lie group can appear on an infinitely small level, but because of the need to distinguish among different points at different locations, a special method that can handle different Lie groups is needed to move objects.
+
+In general, an observation set is given in a learning system, and the target results are learned according to the knowledge in the knowledge base. In this chapter, the observation set is assumed to be compactly connected, so that we can take an internal product $<\ ,\ >$ under the action of automorphism $Ad(G)$ in a single point of the observation set. For the inner product, a group of standard orthogonal bases is selected, and the left translation is used to expand them into the left invariant vector field of the observation set, so that the inner product can be uniquely scored at each point of the cut space on the observation set, which makes the inner product the standard orthogonal basis of the tangent space of the left invariant vector point, thus forming a Riemannian space.
+
+From the left invariance of the orthogonal vector field group, it can be seen that all left translations are isometric transformations of the Riemannian space. From the invariance of the inner product, all the right translations are isometric transformations. Let $T_{e}(G)$ be the cut space of the unit point, i.e., the Lie algebra $\mathfrak{g}$ of the cut space $G$. $T_{e}(G)$ is the cut space of $G$ on any sample $a$, and $d\boldsymbol{l}_{a}$, $d\boldsymbol{r}_{a}$ are the linear mappings induced between the left translation $l_{a}$ and the right translation $r_{a}$, so that the geometric model can be studied from these aspects.
+
++   (2) Geodesic properties of Lie group.
+
+A geodesic is one of the most basic and most important concepts of Riemannian manifolds, and it is very important for studying manifolds in high-dimensional space as a metric [45].

@@ -1,0 +1,19 @@
+of the expected square distance of the data when the curvature is not zero, and there is no local minimum, which will not only lead to model fitting failure but also not allow the use of the cross-validation method to select the model complexity. It seems that the main curve through the distribution of data only has a qualitative meaning and lacks sufficient theoretical support. Thus, it is difficult to promote. In addition, the existence proof of the current HS main curve and other main curve definitions is only applicable to some special distribution. KegI [19] defined a length-constrained main curve concept. Once the length of the main curve is fixed, the minimum square point-to-curve distance can be calculated. It is proven that under the premise that the data distribution has a finite second-order moment, the main curve has existence and uniqueness, but how to choose a pre-fixed main curve length is also a problem.
+
+In the literature [20], according to the relationship between the local tangent space and the principal component, gives a new principal curve construction algorithm under the limit sense, proving that the main curve satisfies the autocorrelation characteristic and is unique to any given existing open cover. The following is the main curve construction algorithm [20].
+
+**Algorithm 5.3: Algorithm for building the main curve based on the tangent space**
+(In the next section, it is convenient to refer to this algorithm as the tangent space algorithm.)
+| Step | Description |
+|------|-------------|
+| **Step 1** | Cover the sample data using $k$ spherical neighbourhoods $\{Q_{k}(\lambda_{1}, \delta_{1}), Q_{k}(\lambda_{2}, \delta_{2}), \dots, Q_{k}(\lambda_{k}, \delta_{k})\}$; |
+| **Step 2** | Calculate $E_{k i}(x)$, $\operatorname{Cov}_{k i}(x)$ and its eigenvector $\xi_{k i j}=\left(\xi_{i 1}, \xi_{i 2}, \dots, \xi_{i j}\right)$ of $x_{11}, x_{12}, \dots$ for each neighbourhood $Q_{k}(\lambda_{i}, \delta_{i})$, $i=1,2, \dots$; |
+| **Step 3** | $\xi_{k l} = \min \left\{\xi_{(k-1) 1}^{T}, \xi_{i m}^{T}\right\}$ $(m=1, 2, \dots, l)$, where $\xi_{(k-1) i}$ is the principal eigenvector of the covariance matrix of data points in $Q_{(k-1)}(\lambda_{i}, \delta_{i})$, and $Q_{k}(\lambda_{i}, \delta_{i})$ is included in $Q_{k}(\lambda_{i}, \delta_{i})$. We calculate the projection of the data point $x_{k i}$ on $\xi_{k i}$ in $Q_{k}(\lambda_{i}, \delta_{i})$, $i=1,2, \dots, k$, and local reconstruction vector $x_{i k}$; |
+| **Step 4** | Connect $x_{i k}$, and apply the spline function or local smoothing method to approximate the smooth main curve; |
+| **Step 5** | Calculate the global reconstruction error $\operatorname{GMS}_{E_{i}}$; if $\operatorname{GMS}_{E_{k}}-\operatorname{GMS}_{E_{k-1}}$ is less than a threshold, then stop iteration. Otherwise, let $k=k+1$, and go to Step 1 |
+
+The algorithm divides the data set into open coverage of the spherical neighbourhood, constructs the tangent space in the neighbourhood to fit the main curve, and constructs the main curve in the limit sense by constantly subdividing the data set. In this section, we develop a new idea and method for constructing the main curve by constructing the tangent data set and its contact.
+
+# 5.3.2.2 HS main curve definition and self-consistent characteristics
+
+Problem Description: Consider the $D$-dimensional random vector $X=\left(X_{1}, X_{2}, \dots, X_{D}\right)$ with continuous probability density function $p_{X}(x), x_{1}, x_{2}, \dots, x_{n}$ for $n$ random samples from $X$; the problem is how to find a one-dimensional smooth curve $f(\lambda)$ in the middle of the distribution.

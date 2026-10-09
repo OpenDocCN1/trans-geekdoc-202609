@@ -1,0 +1,16 @@
+A greater problem based on a random search is that it is difficult to say that the search must find the best conformation of the energy during a limited search time, so it is difficult to define the criteria for the end of the calculation. In a random search, if the new conformation cannot be obtained after several cycles, it is generally believed that the calculation has converged, but in fact, it may not have reached the best energy conformation, and there will be a missed search situation. Molecular docking based on progressive construction is usually faster than other molecular docking methods. However, because the molecular docking method based on progressive construction only considers the local interaction between the receptor binding site and the constructed fragment, it is difficult to evaluate whether the optimised structure is a ligand molecule of the global optimal constellation. The Lie group and its covering group exist between the local isomorphic relationship, corresponding to the framing and the overall structure. We naturally consider the Lie group applied to the molecular docking algorithm. This section is based on the gradual construction of the search strategy, combined with the idea of the Lie group to design a new molecular docking algorithm.
+
+# 6.4.2 Mathematical model and evaluation function of molecular docking
+
+The molecular docking problem is to find the most stable binding state between the interacting molecules by setting the small molecular compound of the known three-dimensional structure into the binding site of the target molecule; optimising the position, orientation, and conformation of the small molecule compound; targeting the biomolecule interaction of the best combination of conformation; and calculating or predicting the interaction energy of ligand molecules and biological macromolecules.
+In the mathematical planning sense, minimising the interaction of the system of free energy can usually be described as the following optimal design problem [14, 40]:
+
+```
+$$\left\{\begin{array}{c} \min f(x) \\ \mathrm{s.t.} \quad g k(x) \leq 0, \quad k=1,2, \ldots, q \end{array}\right.$ (6.2)
+```
+
+where $x=\left\{T_{x}, T_{y}, T_{z}, R_{x}, R_{y}, R_{z}, T b_{1}, T b_{2}, \ldots, T b_{n}\right\}^{T}$ is the design variable, $T$ is the design variable of the $q(q=n+6)$ dimension, and $T b_{1}, T b_{2}, \ldots, T b_{n}$ is the rotation angle of the rotatable key of the ligand molecule. It describes the conformational information of the ligand molecule. Further, $n$ is the number of rotatable keys, $T_{x}, T_{y}, T_{z}, R_{x}, R_{y}$, and $R_{z}$ represent the geometric centre of the ligand molecule and the degree of rotation, corresponding to the orientation of the ligand molecule (Pose), and $g(x)$ is the size of the design variable constraints:
+
+```
+$$\left\{\begin{array}{c} \overline{X} \leq T_{x} \leq \overline{X} \\ \overline{Y} \leq T_{y} \leq \overline{Y} \\ \overline{Z} \leq T_{z} \leq \overline{Z} \\ -\pi \leq \operatorname{angel} \leq \pi, \quad \operatorname{angel}=R_{x}, R_{y}, R_{z}, T b_{1}, \ldots, T b_{n} . \end{array}\right.$ (6.3)
+```
