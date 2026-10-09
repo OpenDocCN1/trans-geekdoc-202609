@@ -1,0 +1,13 @@
+ECG sensor, and body temperature sensor, respiration sensors, environmental sensors (temperature, humidity, location) and RFID tag attached to the body. These sensor data and information of the user are stored in a cloud server which can be accessed by a hospital and the doctors. The real-time data are updated every 10 h to monitor the health of the person who has the phone application. The data can also be seen on the website developed so that patients can check their details from a computer or tablet also. The data is stored in the cloud server, ThingSpeak. This is done to keep track of the patient is affected or not since COVID-19 is a contagious disease. This cloud-assisted IoT system will help to monitor the COVID-19 and help in the detection and excessive spreading of the disease. For every nation and healthcare organization today, COVID-19 is a national threat. In this book chapter, using smart wearable sensor systems, we suggested a cloud-assisted IoT framework to detect and resist COVID-19. Using WBAN and RFID respectively, vital body symptoms and social interactions are recorded. In comparison to conventional offline models, our strategy is focused on collecting proximity contacts in real-time and health information to monitor the transmission of the COVID-19 epidemic. To classify users into two distinct categories, the J48 decision tree has been used. Our proposed system aims to be robust and more efficient compared to other existing systems.
+
+# References
+
++   1. Gia, T., Jiang, M., Sarker, V.K., Rahmani, A.M., Westerlund, T., Liljeberg, P., Tenhunen, H., Low-cost fog-assisted healthcare IoT system with energy-efficient sensor nodes. 2017 13th international wireless communications and mobile computing conference (IWCMC), IEEE, pp. 1765–1770, 2017.
+
++   2. Negash, B., Gia, T.N., Anzanpour, A., Azimi, I., Jiang, M., Westerlund, T., Tenhunen, H., Leveraging fog computing for healthcare IoT, in: Fog Computing in the Internet of Things, pp. 145–169, Springer, Cham, 2018.
+
++   3. Berrahal, S., Boudriga, N., Bagula, A., Healthcare systems in rural areas: A cloud-sensor based approach for epidemic diseases management. International Conference on e-Infrastructure and e-Services for Developing Countries, Springer, Cham, pp. 167–177, 2015.
+
++   4. Farahani, B., Firozzi, F., Chang, V., Badaroglu, M., Constant, N., Mankodiya, K., Towards fog-driven IoT eHealth: Promises and challenges of IoT in medicine and healthcare. Future Gener. Comput. Syst., 78, 659–676, 2018.
+
++   5. Kaushalya, S.A.D.S., Kulawansa, K.A.D.T., Firdhous, M.F.M., Internet of Things for Epidemic Detection: A Critical Review, in: Advances in Computer

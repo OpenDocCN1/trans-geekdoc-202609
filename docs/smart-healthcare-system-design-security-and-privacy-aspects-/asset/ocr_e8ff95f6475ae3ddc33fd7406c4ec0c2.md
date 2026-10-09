@@ -1,0 +1,9 @@
+In COVID-19, rhinorrhea and gastrointestinal symptoms seem remarkably uncommon. Statistics from China indicate a large number of patients have minor side effects from COVID-19 (no pneumonia or moderate pneumonia). Patients with even more serious symptoms had extreme indications (dizziness, blood oxygen saturation 93%, respiratory rate 30/min, partial arterial oxygen pressure at a proportion of the inspired oxygen ratio <300, or lung penetration >50% within 24 to 48 h) and few were seriously ill (breathing arrest, septic shock, or numerous organ failure or damage) and ultimately leading to deaths [12].
+
+The model that has been proposed here is a healthcare infrastructure focused on a cloud sensor combined with Wireless Body Area Networks (WBANs) solution for the control of COVID-19 in a region. The proposed framework aims to improve the identification and monitoring of the patients infected by the coronavirus by handling warnings created by individual people carried by WBANs using Radio-Frequency Identification (RFID) technology and according to clouds. The framework also aims to consist of a mobile application that will reflect the health condition details of the person wearing the portable health sensors and carrying the phone.
+
+The model (in Figure 5.1) that has been proposed can keep a track of the sensor data and help the user to be identified as a positive or negative COVID-19 patient. Alerts are also sent to the phone application if an affected person is present in the vicinity of an unaffected person. These data are stored in the cloud server and are also reflected in the nearby hospitals via a website to ensure that a region affected by this epidemic can be managed and monitored efficiently. This website can be accessed by an individual patient to see his health details after logging into his or her
+
+![](bbox=[0.12, 0.7, 0.88, 0.9])
+
+Figure 5.1 Framework of proposed system.

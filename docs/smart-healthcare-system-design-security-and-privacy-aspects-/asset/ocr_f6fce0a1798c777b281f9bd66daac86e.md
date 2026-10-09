@@ -1,0 +1,13 @@
+# ## 11.1 Introduction
+
+# ### 11.1.1 Introduction to Industry 4.0
+
+The evolution of technology and industrialization through industrial revolutions has changed how the various industries function [1]. First, the first industrial revolution was introduced to water and steam power, revolutionizing hydropower. Later in the second industrial revolution, electric energy took shape. The third revolution witnessed electronics and information technology. With the advent of the fourth industrial revolution termed Industry 4.0, cyber-physical systems are taking shape [2], aiming for an advanced manufacturing and production process through reliable and efficient communication of raw materials and machines. Taking automation to the next level through intelligent factories is a vision of this industrial revolution [3]. In an attempt to converge both real and virtual worlds and make manufacturing and overall functioning of the various supply chains more productive, a fusion of IoT with the concepts of industry 4.0 is foreseen [4, 5].
+
+# ### 11.1.2 Introduction to IoT
+
+Today we live in a world where living beings are not the only ones to communicate with each other. When enabled with sensors and connected on the internet, things and devices communicate effortlessly to accomplish tasks together. A term coined to explain this technology is the internet of things. The essential part of communication is to have a network that enables data exchange from one device to another. IoT connects them in a network called the Internet.
+
+There are countless applications of IoT [6], be it smart homes, smart cities, smart cars, etc. These applications are an implementation of a series of actions generated through effective data transfer between the nodes. For instance, when the temperature gets extremely hot, our brain sends a signal, which leads to a voluntary action of switching on a fan. The imitation of the same actions by a series of computational devices results in a smart application. With IoT, all of our activities can now be imitated efficiently. A technology like IoT can automate tasks and help make smart decisions, and with its exceeding usage and popularity, it is bound to transform how the world runs [7].
+
+Numerous industries have incorporated it into their products and services. There have been disadvantages, as nodes connected on the internet could be vulnerable to cyber-attacks, compromising data security in the system [8]. However, it has been a constantly improving technology,

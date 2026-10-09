@@ -1,0 +1,159 @@
+
+## INDEX
+
+- Monitoring data, 251–255
+  - parameters and protocols, 250
+  - results, 255–260
+  - traditional network results, 257, 258–260
+- Network configuration, 236–245
+  - custard Pi add-on board, 243–244
+  - eclipse Paho library, 242
+  - embedded database SQLite, 242
+  - MQTT protocol, 237, 238–242
+  - PNDD algorithm, 238, 245, 246, 247, 252, 255
+  - pressure transmitter (Type 663), 244, 245
+  - Raspberry Pi single board computer, 242–243
+  - overview, 236
+  - WSNs, 235, 236
+- Intuitive communication, native language, 82
+- IoT, 265–276, 291, 293
+- Issues with health, 6
+- Java, 242
+- Literature work, 3
+- Local server, 149
+- Machine learning, 151, 265, 267–268, 272, 274, 276, 281, 288, 292–293
+- Machine learning model, 313
+- Matplotlib, 251
+- Medical IoT application domains, 209
+  - disaster response systems (DRS), 210
+  - smart doctor, 209
+  - smart medical practitioner, 209
+  - smart receptionist, 210
+  - smart technology, 209
+- Medical IoT background & perspective, 204
+- Medical IoT concerns, 210
+  - privacy concerns, 212
+  - security concerns, 211
+  - trust concerns, 212
+- Message queuing telemetry transport (MQTT) protocol, 237, 238–242
+  - example, 239
+  - publisher, broker and subscriber, 239–242
+  - purpose, 238
+  - QoS level implementations, 240–242
+  - wild cards characters, 239–240
+- Methods for health tracking using automated approach, 180
+  - method of Doppler sensing, 180
+  - pressure process, 180
+  - surveillance video-method, 180
+- Monitoring data, 251–255
+- MQTT. see Message queuing telemetry transport (MQTT) protocol
+- Multi-level wildcard, 240
+- Multiple criteria decision making
+  - simple multi-attribute rating technique (SMART), 64
+  - technique for order preference by similarity to the ideal solution (TOPSIS), 67
+  - weighted product model (WPM), 66
+- MySQL, 242
+- Necessity of wearable approach?, 181
+- Need for security in medical IoT, 212
+- Network configuration, 236–245
+  - Custard Pi add-on board, 243–244
+  - eclipse Paho library, 242
+  - embedded database SQLite, 242
+  - MQTT protocol, 237, 238–242
+  - PNDD algorithm, 238, 245, 246, 247, 252, 255
+  - pressure transmitter (Type 663), 244, 245
+  - Raspberry Pi single board computer, 242–243
+- Normal p-p plot, 316
+- Open software repository, 83
+- Optimistic treatments and cures, 307
+- Oracle, 242
+- Paho library, 242
+- Paho MQTT client, 242, 251
+- Patient registration using medical IoT devices, 223
+  - encryption, 224
+  - key generation, 225
+  - security by isolation, 225
+  - virtualization, 225
+- PNDD (predictive non-dispatch data) algorithm, 238, 245–247, 252, 255
+- Predicting process, IoT device, 246, 247, 248
+- Predictive analysis, 4
+- Predictive non-dispatch data (PNDD) algorithm, 238, 245, 246, 247, 252, 255
+- Predictor variable, 315
+- Pre-processing, 59
+- Pressure transmitter (Type 663), 244, 245
+- PUBACK, 240
+- Publisher device, MQTT, 239–242, 246, 247
+- Python, 242, 251–255
+  - matplotlib, 251
+  - monitoring data, 251–255
+  - prerequisites, 251
+  - Python pip, 251
+- Quality of service (QoS), of MQTT, 240–242, 246
+- Quantum ledger, 150, 152
+- Radio frequency identification (RFID), 90, 96, 99
+- Raspberry Pi (RasPi), data filtering and predicting processes, 245, 246, 249
+  - experimental setup, 250, 251, 252, 255–257, 258, 259, 260
+  - GPIO pins of, 243–244
+  - learning platforms for IoT, 237
+  - single board computer, 242–243
+  - use, 237
+  - via CPi, 250
+- Raspbian linux operating system, 242
+- RasPi. see Raspberry Pi
+- Real-time plotting system, 247
+- Regression model, 313
+- Relational database system, 150
+- Remote monitoring system, 247–249
+- Research methodology, 9
+  - classification and validation, 15
+  - cloud feature extraction, 13
+  - components used, 10
+  - feature optimization, 14
+  - specification and description about components, 10
+    - arduino, 10
+    - EEG sensor - mindwave mobile headset, 11
+    - Raspberry pi, 12
+- RFID, 116, 128, 129, 130, 137
+- Safari, 242
+- SARI, 72
+- Secure digital (SD) card, 242
+- Security, 265, 267, 269, 273, 275–276
+- Security threats, 9
+- Sensing unit, 236
+- Sensor, 87–90, 92–97, 99–100, 102, 104, 106, 111–113
+- Sensor nodes, dense deployment of, 236
+- Single board computer, 242–243
+- Single level wild-card (+), 239
+- Smart cities, 266, 272
+- Smart healthcare, 88, 117–119, 125, 128
+- Smart homes, 265–266, 268
+- Solutions for IoT healthcare cyber-security, 218
+  - architecture of the smart healthcare system, 218
+    - data application layer, 219
+    - data communication layer, 219
+    - data perception layer, 218
+    - data storage layer, 219
+- SQLite, 242, 246
+- SQLite3 database, 251
+- Strategy of communication for wearable systems, 189–192
+- Subscriber device, MQTT, 239–242, 246–248
+- Touch and voice assisted, 75
+- Traceroute command, 258, 259
+- Tracert command, 258, 260
+- Trusted communication using block chain, 229
+  - accessibility to patient medical history, 230
+  - blockchain-based IoT system architecture, 231
+    - first layer, 231
+    - second layer, 231
+    - third layer, 232
+  - patient enquiry with hospital authority, 231
+  - record creation using IoT gateways, 229
+- Type 663 pressure level transmitter, 244, 245
+- Vulnerabilities in medical IoT environment, 215
+  - medical IoT security constraints, 217
+  - patient privacy protection, 215
+  - patient safety, 216
+  - unauthorized access, 216
+- Wireless body area networks (WBANs), 90, 93, 99, 143, 145
+- Wireless body sensors, 87
+- Wireless sensor networks (WSNs), 235, 236

@@ -1,0 +1,5 @@
+![](bbox=[0.12, 0.1, 0.89, 0.61])
+
+**Figure 4.9** Doctor interaction view of his/her language.
+
+interaction between stake-holder. The most distressing and stressful aspects of clinical illness lead to depression, anxiety, post-traumatic disorders are being reduced, and leads to possibilities of speedy recovery. Language barrier is eliminated among stake-holders. The Proposed Application will be made available and accessible in an open software repository. Application usages demo videos will be made available for easy operations. As per the existing methods patients express their needs through non-verbal communication methods and they could be missed out or misinterpreted resulting in symptoms that are poorly understood and the clinicians overestimate their ability to understand their communication feelings. These situations are eradicated by employing the use of “Touch Voice of SART” Application.

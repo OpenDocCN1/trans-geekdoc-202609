@@ -1,0 +1,43 @@
+
+## References
+
+- 1. Centers for Disease Control and Prevention, *The State of Aging and Health in America 2013*, Centers for Disease Control and Prevention, US Department of Health and Human Services, Atlanta, GA, USA, 2013.
+- 2. Global Age Watch Index, 2015. Available online: http://www.helpage.org/global-agewatch/.
+- 3. World Health Organization Family Planning/Contraception, 2015. [accessed on 20 June 2016]. Available online: http://www.who.int/mediacentre/factsheets/fs351/en/.
+- 4. World Health Organization Are You Ready? What You Need to Know about Ageing, in: *World Health Day*, 2012, [accessed on 20 June 2016]. Available online: http://www.who.int/world-health-day/2012/toolkit/background/en/.
+- 5. U.S. Healthcare Costs Rise Faster Than Inflation, [accessed on 20 June 2016]. Available online: http://www.forbes.com/sites/mikepatton/2015/06/29/u-s-health-care-costs-rise-faster-than-inflation/#1384765c6ad2, 2017(1), 130.
+- 6. Deen, M.J., Information and communications technologies for elderly ubiquitous healthcare in a smart home. *Pers. Ubiquitous Comput.*, 19, 573–599, 2015.
+- 7. Agoulline, N., Deen, M., Lee, J.-S., Meyyappan, M., U-Health Smart Home. *IEEE Nanotechnol. Mag.*, 5, 6–11, 2011.
+- 8. Wang, H., Choi, H.-S., Agoulline, N., Deen, M.J., Hong, J.W.-K., Information-based sensor tasking wireless body area networks in U-health systems. *Proceedings of the 2010 International Conference on Network and Service Management*, Niagara Falls, ON, Canada, pp. 517–522, 25–29 October 2010.
+- 9. Pantelopoulos, A. and Bourbakis, N., A Survey on Wearable Sensor-Based Systems for Health Monitoring and Prognosis. *IEEE Trans. Syst. Man Cybern. C*, 40, 1–12, 2010.
+- 10. Nemati, E., Deen, M., Mandal, T., A wireless wearable ECG sensor for long-term applications. *IEEE Commun. Mag.*, 50, 36–43, 2012.
+- 11. Hong, Y., Kim, I., Ahn, S., Kim, H., Mobile health monitoring system based on activity recognition using accelerometer. *Simul. Model. Pract. Theory*, 18, 446–455, 2010.
+- 12. Ullah, S., Higgins, H., Braem, B., Latre, B., Blondia, C., Moerman, I., Saleem, S., Rahman, Z., Kwak, K., A Comprehensive Survey of Wireless Body Area Networks. *J. Med. Syst.*, 36, 1065–1094, 2012.
+- 13. Al Ameen, M., Liu, J., Kwak, K., Security and Privacy Issues in Wireless Sensor Networks for Healthcare Applications. *J. Med. Syst.*, 36, 93–101, 2012.
+- 14. Castlejo, P., Martinez, J., Rodriguez-Molina, J., Cuerva, A., Integration of wearable devices in a wireless sensor network for an E-health application. *IEEE Wirel. Commun.*, 20, 38–49, 2013.
+- 15. Dementyev, A., Hodges, S., Taylor, S., Smith, J., Power consumption analysis of Bluetooth Low Energy, ZigBee and ANT sensor nodes in a cyclic sleep scenario. Proceedings of the 2013 IEEE International Wireless Symposium (IWS), Beijing, China, pp. 1–4, 14–18 April 2013.
+- 16. Suzuki, T., Tanaka, H., Minami, S., Yamada, H., Miyata, T., Wearable wireless vital monitoring technology for smart healthcare. Proceedings of the 2013 7th International Symposium on Medical Information and Communication Technology (ISMICT), Tokyo, Japan, pp. 1–4, 6–8 March 2013.
+- 17. Malhi, K., Mukhopadhyay, S., Schnepper, J., Haecke, M., Ewald, H., A Zigbee-Based Wearable Physiological Parameters Monitoring System. *IEEE Sens. J.*, 12, 423–430, 2012.
+- 18. Valchinov, E., Antoniou, A., Rotas, K., Palikarakis, N., Wearable ECG System for Health and Sports Monitoring. Proceedings of the 4th International Conference on Wireless Mobile Communication and Healthcare—“Transforming Healthcare through Innovations in Mobile and Wireless Technologies”, Athens, Greece, pp. 63–66, 3–5 November 2014.
+- 19. Mehmood, N.Q. and Culmone, R., An ANT Protocol Based Healthcare System. Proceedings of the 2015 IEEE 29th International Conference on Advanced Information Networking and Applications Workshops, Gwangju, Korea, pp. 193–198, 24–27 March 2015.
+- 20. Coskun, V., Ozdenizci, B., Ok, K., A Survey on Near Field Communication (NFC) Technology. *Wirel. Pers. Commun.*, 71, 2259–2294, 2013.
+- 21. Pang, Z., Zheng, L., Tian, J., Kao-Walter, S., Dubrova, E., Chen, Q., Design of a terminal solution for integration of in-home healthcare devices and services towards the Internet-of-Things. *Enterp. Inf. Syst.*, 9, 86–116, 2013.
+- 22. Corchado, J., Bajo, J., Abraham, A., GerAmi: Improving Healthcare Delivery in Geriatric Residences. *IEEE Intell. Syst.*, 23, 19–25, 2008.
+- 23. Stav, E., Walderhaug, S., Mikanes, M., Hanke, S., Benc, I., Development and evaluation of SOA-based AAL services in real-life environments: A case study and lessons learned. *Int. J. Med. Inform.*, 82, e269–e293, 2013.
+- 24. Vaishnav, S., Stevensson, R., Marchant, B., Lagi, K., Ranjadalayan, K., Timmis, A.D., Relation between heart rate variability early after acute myocardial infarction and long-term mortality. *Am. J. Cardiol.*, 73, 653–657, 1994.
+- 25. Bigger, J.T., Fleiss, J.L., Kleiger, R., Miller, J.P., Rolnitzky, L.M., The relationships among ventricular arrhythmias, left ventricular dysfunction, and mortality in the 2 years after myocardial infarction. *Circulation*, 69, 250–258, 1984.
+- 26. Kleiger, R.E., Miller, J., Bigger, J., Moss, A.J., Decreased heart rate variability and its association with increased mortality after acute myocardial infarction. *Am. J. Cardiol.*, 59, 256–262, 1987.
+- 27. Hadjem, M., Salem, O., Nait-Abdesslam, F., An ECG monitoring system for prediction of cardiac anomalies using WBAN. Proceedings of the 2014 IEEE 16th International Conference on e-Health Networking, Applications and Services (Healthcom), Natal, Brazil, 15–18 October 2014.
+- 28. Andreoni, G., Prego, P., Standoli, C., Wearable monitoring of elderly in an ecologic setting: The SMARTA project. [accessed on 5 January 2017]. Available online: https://sciforum.net/conference/ecsa-2/paper/3192/download/pdf, pp. 15–30, 2015.
+- 29. Tseng, K.C., Lin, B.-S., Liao, L.-D., Wang, Y.-T., Wang, Y.-L., Development of a Wearable Mobile Electrocardiogram Monitoring System by Using Novel Dry Foam Electrodes. *IEEE J. Sel. Top. Adv. Found. Methods*, 8, 900–906, 2014.
+- 30. Lee, J., Heo, J., Lee, W., Lim, Y., Kim, Y., Park, K., Flexible Capacitive Electrodes for Minimizing Motion Artifacts in Ambulatory Electrocardiograms. *Sensors*, 14, 14732–14743, 2014.
+- 31. Komensky, T., Jursicin, M., Ruman, K., Kovac, O., Laqua, D., Husar, P., Ultra-wearable capacitive coupled and common electrode-free ECG monitoring system. *Proceedings of the 2012 Annual International Conference of the IEEE Engineering in Medicine and Biology Society*, San Diego, CA, USA, pp. 1594–1597, 28 August–1 September 2012.
+- 32. Park, J.-H., Jang, D.-G., Park, J., Yoom, S.-K., Wearable Sensing of In-Ear Pressure for Heart Rate Monitoring with a Piezoelectric Sensor. *Sensors*, 15, 23402–23417, 2015.
+- 33. Shu, Y., Li, C., Wang, Z., Mi, W., Li, Y., Ren, T.-L., A Pressure sensing system for heart rate monitoring with polymer-based pressure sensors and an anti-interference post processing circuit. *Sensors*, 15, 3224–3235, 2015.
+- 34. Yoon, S. and Cho, Y.-H., A Skin-attachable Flexible Piezoelectric Pulse Wave Energy Harvester. *J. Phys. Conf. Ser.*, 557, 012026, 2014.
+- 35. Tajitsu, Y., Piezoelectric sensor made from an electro-spun fluoropolymer and its use in a wristband for detecting heart-beat signals. *IEEE Trans. Dielectr. Electr. Insul.*, 22, 1355–1359, 2015.
+- 36. Izumi, S., Yamashita, K., Nakano, M., Kawaguchi, H., Kimura, H., Marumoto, K., Fuchikami, T., Fujimori, Y., Nakajima, H., Shiga, T. *et al.*, A Wearable Healthcare System With a 13.7 μA Noise Tolerant ECG Processor. *IEEE Trans. Biomed. Circuits Syst.*, 9, 733–742, 2015.
+- 37. He, D.D. and Sodini, C.G., A 58 nW ECG ASIC With Motion-Tolerant Heartbeat Timing Extraction for Wearable Cardiovascular Monitoring. *IEEE Trans. Biomed. Circuits Syst.*, 9, 370–376, 2015.
+- 38. Helleputte, N.V., Kim, S., Kim, H., Kim, J.P., Hoof, C.V., Yazicioglu, R.F., A 160 μA biopotential acquisition ASIC with fully integrated IA and motion-artifact suppression. *Proceedings of the 2012 IEEE International Solid-State Circuits Conference*, San Francisco, CA, USA, pp. 552–561, 19–23 February 2012.
+- 39. Mulroy, S., Gronley, J., Weiss, W., Newsam, C., Perry, J., Use of cluster analysis for gait pattern classification of patients in the early and late recovery phases following stroke. *Gait Posture*, 18, 114–125, 2003.
+- 40. Snijders, A.H., Warrenburg, B.P.V.D., Giladi, N., Bloem, B.R., Neurological gait disorders in elderly people: Clinical approach and classification. *Lancet Neurol.*, 6, 63–74, 2007.
