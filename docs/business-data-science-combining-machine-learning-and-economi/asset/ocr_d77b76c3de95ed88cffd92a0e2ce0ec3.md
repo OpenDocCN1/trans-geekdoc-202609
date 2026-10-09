@@ -1,0 +1,7 @@
+![](bbox=[0.19, 0.07, 0.88, 0.43])
+
+FIGURE 9.3: CART fit to predict projected engagement (PE) from the gross ratings (GRP) and gender. The tree dendrogram is on the left, and on the right we plot GRP against observed and fitted PE with the shows colored by gender (black for comedy, grey for drama, white for reality).
+
+This powerful technology: given enough data, trees will fit nonlinear means and interaction effects without you having to specify them in advance. Moreover, nonconstant variance is no problem: for regression trees you can have a completely different error variance in different parts of the input space. This all contrasts with the standard parametric regression formulation, $y = x'\beta + \varepsilon$, where you need to pick the design x in advance and $\varepsilon$ has a single shared variance, say, $\sigma^2$. This is why we call CART a *fully nonparametric* regression method.
+
+To avoid overfit in practice, you need to somehow constrain the flexibility of CART. One approach is to apply the usual selection routine: build a *path* of candidate models and apply CV. Candidate CART models are ordered through a pruning process: fit an overgrown tree (deeper than you think will work well for prediction) and prune it backward by iteratively removing the leaf splits (those right above the leaf nodes) that yield the lowest in-sample error reduction. This reversal of the CART growth process yields a set of candidate trees, and you can use cross validation to choose the best model

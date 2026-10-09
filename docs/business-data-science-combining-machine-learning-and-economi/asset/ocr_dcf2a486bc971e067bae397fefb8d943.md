@@ -1,0 +1,13 @@
+(a) Alternatively, regress $y_i$ on $x_i$ and $v_i$ to allow simultaneous selection between PCs and raw inputs.
+
+To predict for a new $x_f$, use the rotations from step 1 to get $\nu_f = \Phi x_f$ and then feed these scores into the regression fit from step 2.
+
+In Algorithm 19, we are breaking one of the rules of model selection: we are manipulating the data outside of the CV loop when we fit PCA in step 1 on the full sample. However, it is fine to use the full $x$ sample if you do not use the labels $y$ outside of the OOS loop. So long as the random errors in your test $y$ sample are not allowed to influence the model fit, then the result of your trained model on left-out data remains a good estimate of OOS performance. Indeed, the primary rule of CV is that you want an OOS experiment that mimics how the models will be fit and used on true future data. It is potentially the case that you will know the $x$ values for future observations and can include them in the PCA fitting even if you don't yet know their labels.
+
+TO ILLUSTRATE PCR, LET'S CONSIDER TELEVISION DATA that include survey responses for focus groups on TV show pilots (first episodes of a new series) as well as the first year of ratings results (how many people ended up watching the show). The hope is that we can build a rule for predicting viewer interest from pilot surveys, thus helping the studios to make better programming decisions.
+
+The survey data include 6241 views and 20 questions for 40 shows. There are two types of questions in the survey. Both ask you the degree to which you agree with a statement. For Q1, this statement takes the form of “This show makes me feelfeel . . .” For Q2, the statement is “I find this showfeel . . .”
+
+We have a couple of interesting outcome variables. Classic measures of broadcast marketability are *ratings*. Specifically, *gross ratings points* (GRP) provide an estimated count of total viewership. In this data we also track the *projected engagement* (PE) as a more subtle measure of audience attention. After watching a show, viewers are contacted and quizzed on order and detail for events in the show. This measures their engagement with the show (and, perhaps more importantly, the ads shown). PE is reported on a 0 to 100 scale, with 100 being fully engaged and 0 meaning they didn’t pay attention at all. Engagement matters on its own, as a driver of TRP and GRP, and also as an adjustment factor—for example, normalizing GRP/PE to get *adjusted GRP*.
+
+We have these GRP and PE results for all 40 shows over their first year. The comparison is shown in **Figure 7.15**, with the programs differentiated by

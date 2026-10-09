@@ -1,0 +1,9 @@
+![](bbox=[0.48, 0.21, 0.59, 0.29])
+
+# Controls
+
+Life is easy if you have an experiment. Be it a completely randomized $AB$ trial, a near experimental design, or an instrumental variables scenario: explicit randomization allows you to model the effect of moving the treatment variable independently from the other covariates. This is the key to counterfactual modeling: since you will be acting to apply treatment, you need to know how the response changes with independent movement in this variable.
+
+Unfortunately, life doesn’t always give you experiments. In business, it is typical that you will be asked to make a decision about future actions based upon historical data without the benefit of explicit randomization. Analysis of such data is referred to as an observational study. Instead of running an experiment where you get to set the treatment, you are stuck observing what happened. In such settings, counterfactual estimation depends upon the assumption of conditional ignorability: that you have tracked and can control for all confounding co-influences on treatment $d$ and response $y$.
+
+The process of choosing controls is subjective and labor intensive. Applied economics discussions are dominated by debates over whether all of the important factors have been controlled. Some of this subjectivity and debate is unavoidable: causal inference without experiments is hard. But there are basic recipes and best principles that will help you stay within the bounds of believability. There are also ways that you can use tools from machine learning to help with parts of the process; this will be increasingly important as you look to automate and accelerate business decision-making.

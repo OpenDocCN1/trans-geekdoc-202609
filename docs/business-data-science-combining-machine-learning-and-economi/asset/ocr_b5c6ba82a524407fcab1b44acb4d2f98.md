@@ -1,0 +1,9 @@
+individual fits thus averages out after aggregation, and only the persistent structure survives. This is the massive power of model averaging: it can be used to stabilize and regularize arbitrary algorithms. This strategy features commonly in ML, under many names such as ensemble learning, Bayesian model averaging, or bagging. The basic idea is always the same: aggregate many models to eliminate the noise.
+
+How many trees do you want in your forest? As for the original bootstrapping procedure, the answer is: as many as you can get. There is no drawback from including more trees. Each additional tree helps you get a better estimate of the true sampling mean—the mean for an infinite number of bootstrap resamples—that is your best guess at the true response surface. However, as with any sampling procedure, there are diminishing returns for additional trees. Out-of-sample predictive performance tends to improve quickly with the first several trees and then flatten out as you add more. For example, Figure 9.10 shows that OOS performance for the motorcycle regression improves little beyond that of the 100 tree forest.
+
+![](bbox=[0.34, 0.42, 0.71, 0.66])
+
+**FIGURE 9.10:** The OOS error for the motorcycle regression as a function of the number of trees in the forest. This error is calculated on a single random test sample of 33 of the 133 observations.
+
+Fitting forests in R is easy with the `ranger` package, which uses essentially the same syntax as the `glm` and `tree` functions. To illustrate, we’ll move to a slightly larger example involving data on house prices in California. The `CAhousing` data contain median home values (`MedVal`, and from the prices you can tell this is old data) for each of 20,640 census tracts in California, along with:

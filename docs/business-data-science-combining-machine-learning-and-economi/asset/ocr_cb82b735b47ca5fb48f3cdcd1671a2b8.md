@@ -1,0 +1,9 @@
+![](bbox=[0.47, 0.23, 0.56, 0.29])
+
+# ## Text as Data
+
+The modern business environment generates vast quantities of raw unstructured text. As the costs of storage drop and as more conversations and records move to digital platforms, we accumulate massive corpora that track communications, including customer conversations, product descriptions or reviews, news, comments, blogs, and tweets. For business decision-makers, this provides an opportunity to dive into customer relationships and understand marketplaces. The information in text is a rich complement to the more structured variables contained in a traditional transaction or customer database.
+
+Social scientists have also woken up to the potential of such data and recent years have seen an explosion in studies that make use of text as data. See Gentzkow et al. [2017] for an overview. In finance, text from financial news, social media, and company filings is used to predict asset price movements and study the causal impact of new information. In macroeconomics, text is used to forecast variation in inflation and unemployment and estimate the effects of policy uncertainty. In media economics, text from news and social media is used to study the drivers and effects of political slant. In marketing, text from advertisements and product reviews is used to study consumer decision-making. In the political economy, text from politicians' speeches is used to study the dynamics of political agendas and debate.
+
+To analyze text, you need to transform it into data that can be input to numeric regression and factorization algorithms. This is almost always done

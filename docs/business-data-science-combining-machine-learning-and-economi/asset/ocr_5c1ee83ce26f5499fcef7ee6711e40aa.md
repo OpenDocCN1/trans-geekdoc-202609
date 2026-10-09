@@ -1,0 +1,12 @@
+The estimated treatment effect is now 0.012. To get uncertainty around this estimate, we should use the heteroskedastic robust standard errors (since we have no reason to believe constant error structure on either side of the threshold).
+
+```
+> seate <- sqrt(vcovHC(linf it)["treat", "treat"])
+> coef(linf it)["treat"] + c(-2,2)*seate
+[1] 0.00834634 0.01549686
+```
+
+Note that this confidence interval, while still all greater than zero, is mostly lower than the interval from the earlier difference-in-means analysis.
+The analysis is illustrated in Figure 5.6. The gap between the ends of the linear regression lines at the r = 0 threshold corresponds to the $\hat{\gamma}$ = 0.012 from the above R output. The lighter gray line shows a loess smoothed estimate of the conditional mean (think of this as a moving average). The constant mean fits, mu _a and mu _b from earlier, are also shown; you can see that a difference-in-means analysis will lead to a biased-large treatment effect estimate whenever y is increasing with r on either side of the threshold.
+Finally, any RD analysis is sensitive to the size of the local analysis window. We chose δ = 3 here because the moving average (loess) mean estimates on the right of Figure 5.6 appear to be mostly linear in this window, but that is just a rough eye-ball decision. Moreover, looking at the left of Figure 5.6, there is no clear signal from the data that we can use to judge linearity (or anything else: until you take a moving average, the noise in this data overwhelms any apparent discontinuity).
+The best practice is to calculate the RD treatment effect estimate for a range of windows. Figure 5.7 shows results for this example, and it is typical of what you see in other applications. After an initial high-variance region, where the window size is too small for you to estimate a reliable linear regression, the results settle down around $\hat{\gamma}$ = 0.012. Moving to a wider window leads to lower uncertainty around the estimate, but this is at the expense of more restrictive linearity assumptions (you are assuming that the function is nearly linear for longer away from the threshold). In practice, this window-length selection is more art than science, and you should make sure that results are stable within a range of plausible values.

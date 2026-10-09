@@ -1,0 +1,38 @@
++   - California housing, 274–279
+- class lectures, 235–237
+- congress109, 237–241
+- Dow Jones Average, 65–66
+- endogeneity, 155–158
+- forensic glass, 106–108, 115–118, 121–123
+- galaxies, 202–205
+- gas octane, 227–230
+- geo-genes, 209
+- German credit, 110–114
+- GWAS, 34–36
+- house prices, 42
+- lastfm, 254–256
+- motorcycle crash, 272–273, 287–288
+- NHL hockey, 92–104
+- orthogonal ML, 175–180
+- orange juice, 43–50, 53–57
+- lasso regression, 83–84
+- treatment effects, 164–165
+- Oregon Health Insurance, 130–139
+- causal trees, 281–283
+- HTEs and missing data, 181–184
+- instrumental variables, 158–161
+- pickup trucks, 11–15
+- political twitter, 252–253
+- prostate cancer, 268–270
+- protein, 205–208, 213–216
+- roll-call votes, 216–220
+- search engine marketing, 141–146
+- semiconductors, 70–76
+- spam, 51–57, 237
+- stock returns, 1–4
+- TV pilots, 222–225, 265–267
+- we8there, 241–251
+- web browsers, 80–83, 87–92
+- web spending, 18–19, 21–29, 32–33
+- Yelp, 251–252
+- data generating process (DGP), 19, 171

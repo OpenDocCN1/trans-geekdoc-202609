@@ -1,0 +1,12 @@
+This trunk stability occurs after only 20,000 observations. The stability increases dramatically for the millions-plus observation datasets encountered in industrial big data settings. This all suggests an obvious distributed computing strategy for forests: since the trunks in the forest are all the same, just fit the trunk once and then use it to partition the data and facilitate parallelization. This is the empirical Bayesian forest (EBF) algorithm.
+
+# **ALGORITHM 25** Empirical Bayesian Forest (EBF)
+
+Given $K$ distributed processing units:
+
++   • Fit a CART trunk down to $K$ nodes—the trunk *branches*. If the data is massive (i.e., too big to fit on a single machine), then you can fit this trunk on a subsample. Since you are only fitting the first few tree splits, which correspond to dominant sources of response variation, you do not need big data to do a good job of trunk estimation.
+• This trunk defines a mapper function in the MapReduce algorithm: *map* each observation to its allocated trunk branch and then *reduce* on each branch by fitting a full random forest. This returns the fitted EBF: a fixed trunk with RF models at each branch.
+
+The result is a sort of hybrid CART-RF object, with fixed initial splits and a bootstrap sample of trees for deeper structure. Since the hypothetical (potentially infeasible) full sample RF has the same trunk for most trees, this EBF will lead to similar predictions. In the California housing example, an EBF with the trunk of **Figure 9.14** has 2% worse predictive performance than the full sample RF, compared with 10% worse for a subsampling forest of comparable computational cost. For large datasets the results are more dramatic; Taddy et al. [2015] show EBFs 1% to 4% worse than a full RF on examples where the subsampling forests are 12% to 38% worse.
+
+In massive data environments, simple but efficient strategies like Algorithm 25 allow you to crunch more data faster. And more data always wins: even though an EBF does a bit worse than a full RF on the same dataset, an EBF with more data will give better predictions than a small-sample RF. For prediction tasks, never reduce the amount of data you can work with to fit some fancy but computationally costly model—you’re better off with a simple but flexible model fit to as much data as you can get your hands on.
