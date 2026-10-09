@@ -1,0 +1,37 @@
++   - Taylor series and dual numbers ref1
+- Taylor series expansion ref1 f., ref2
+- Test set ref1
+- The backpropagation algorithm ref1
+- The bayesian school of thought ref1
+- The beta binomial model ref1, ref2
+- The chain rule ref1, ref2
+- The convolution operator ref1, ref2
+- The correlation operator ref1, ref2
+- The gaussian distribution ref1
+- The gradient descent algorithm ref1
+- The gram matrix ref1
+- The hyperplane ref1, ref2
+- The Kullback Leible distance ref1
+- The Likelihood function ref1
+- The logit function and entropy ref1
+- The multi layer perceptron ref1
+- The Sigmoid ref1
+- The sigmoid ref1
+- The sigmoid function ref1
+- The theory of perceptrons ref1
+- Theory of CNN design ref1
+- Thermodynamics ref1, ref2, ref3
+- Topologies ref1
+- Toxic mercury fumes ref1 f.
+- Train validation split ref1
+- Training corpus ref1, ref2
+- Training curve curve ref1, ref2
+- Training hyperparameters ref1
+- Training validation epoch ref1
+- Transformation ref1
+- Triangle inequality ref1
+- True probability distribution ref1
+- Truly understanding LR ref1, ref2
+- TTS ref1
+- Tumors ref1
+- Tumour eradication ref1, ref2
