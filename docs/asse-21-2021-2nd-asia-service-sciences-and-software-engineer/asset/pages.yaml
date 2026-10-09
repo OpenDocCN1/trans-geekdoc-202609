@@ -1,0 +1,1147 @@
+- pgno: 0
+  md: "# ## Plume: Fast Finality Blockchain without Single Failure Point\n\nPan Yeda*\
+    \  \npanyeda@cn.fujitsu.com  \nFujitsu R & D Center  \nSuzou, China\n\nPi Bingfeng†\
+    \  \nwinter.pi@cn.fujitsu.com  \nFujitsu R & D Center  \nSuzou, China\n\nSun Jun‡\
+    \  \nsunjun@cn.fujitsu.com  \nFujitsu R & D Center  \nBeijing, China\n\n# **ABSTRACT**\n\
+    \nBitcoin’s slow finality is an important factor preventing it from being widely\
+    \ used in real life. And other public single-chain blockchains have the same problem.\
+    \ In this paper, we propose a practical new protocol called Plume to achieve consensus\
+    \ with fast finality by utilizing a (slow) traditional blockchain. Plume combines\
+    \ the DAG structure and traditional blockchain to increase throughput and speed\
+    \ up confirmation. DAG structure is proposed to increase throughput, but how to\
+    \ construct a secure consensus protocol based on DAG is pretty hard. In Plume,\
+    \ we use the traditional blockchain to generate a randomness which is used to\
+    \ generate fast blocks in DAG. And the order of fast blocks in DAG is dependent\
+    \ on a global clock and a hash function. Same as bitcoin, Plume is a probabilistic\
+    \ protocol. However, with DAG structure, the creation rate of blocks in Plume\
+    \ can be higher without reducing security. Thus the confirmation time of blocks\
+    \ can be accelerated. This paper also analyzes the probability of confirmation\
+    \ in different conditions and also proves that Plume is secure no matter the randomness\
+    \ from traditional single chain is unbiased or not. At last, this paper simulates\
+    \ performance with 1000 nodes using NS-3. The throughput can be improved to 400\
+    \ Tps in the case that block size is 100K bytes and time interval of fast block\
+    \ is 1 second. Also the confirmation time can be reduced to within 2 minutes in\
+    \ the case that block size is 10K bytes and time interval is 1 second.\n\n# **CCS\
+    \ CONCEPTS**\n\n+   *   *Security and privacy* → **Network security**. *Computer\
+    \ systems organization* → *Availability*.\n\n# **KEYWORDS**\n\nthroughput, finality,\
+    \ DAG, consensus protocol\n\n# **ACM Reference Format:**\n\nPan Yeda, Pi Bingfeng,\
+    \ and Sun Jun. 2021. Plume: Fast Finality Blockchain without Single Failure Point.\
+    \ In *2021 2nd Asia Service Sciences and Software Engineering Conference (ASSE’21)*,\
+    \ February 24–26, 2021, Macau, Macao. ACM, New York, NY, USA, 10 pages. [https://doi.org/10.1145/3456126.3456128](https://doi.org/10.1145/3456126.3456128)\n\
+    \n# 1 INTRODUCTION\n\nAs a new technology, blockchain has great potential to be\
+    \ applied in various fields including finance [12] [19] [18], Internet of Things\
+    \ [6] and supply chain [15]. Bitcoin designed in 2008 is the first application\
+    \ of blockchain, and brought its underlying technology, blockchain has protocol,\
+    \ to the public. Later on, the security of blockchain has been proved by [5] and\
+    \ [13], which provide security assurance for the use of blockchain. According\
+    \ to [5], we must limit the rate of growth to a certain range to avoid causing\
+    \ too many forks to decrease the computing power of honest parties.\n\nWhat prevents\
+    \ blockchain from being widely used in real life is its throughput and confirmation\
+    \ time. On average, the throughput of Bitcoin is about 3 tx/s [1], and the confirmation\
+    \ time is more than 1 hour. Ethereum speeds up the rate of generating blocks to\
+    \ approximate 11s [2] and the confirmation time is not enough to deal with the\
+    \ actual scenes. Thus, it is important to find means to overcome these two problems.\n\
+    \nNowadays, there are two main methods to increase throughput, which are sharding[20][7]\
+    \ and DAG[8]. Sharding divides the participants into several smaller committees\
+    \ so that committees can pack transactions in parallel to improve throughput.\
+    \ DAG changes the single-chain to directed acyclic graph where the generation\
+    \ of blocks can be accelerated without considering the network delay. The two\
+    \ ways can indeed increase throughput, but they cannot increase confirmation speed\
+    \ fundamentally.\n\nSompolinsky and others [17] found if a structure accepted\
+    \ all the blocks, it would remove the rate limitation of generating blocks with\
+    \ our reduce the decentralization. DAG is such a structure. Therefore, our goal\
+    \ is to provide the DAG structure a natural sequence and achieve steady and fast\
+    \ confirmation. In this paper, we use the traditional single-chain blockchain\
+    \ to ensure overall security, and use the DAG structure to increase throughput\
+    \ and confirmation rate.\n\nIntuitively, we utilise the traditional single-chain\
+    \ blockchain to get randomness which can be used to select committee to construct\
+    \ DAG structure and sort it. Every party in the network can get the qualification\
+    \ of creating blocks with a certain probability. As long as the traditional single-chain\
+    \ blockchain is secure, adversaries cannot control the order of our DAG structure.\
+    \ And our DAG structure has a natural sequence that comes from the randomness,\
+    \ thus, we can get a steady confirmation.\n\nWe use the DAG structure to get rid\
+    \ of the speed limit of generating blocks. In the single-chain blockchain, a block\
+    \ cannot be generated until its previous block broadcasts almost entire network\
+    \ to avoid forks. While as for DAG, we do not need to wait for one block to go\
+    \ all over the network to generate the next block, because all the blocks would\
+    \ included in the DAG at last. At the same\n\nPermission to make digital or hard\
+    \ copies of all or part of this work for personal or classroom use is granted\
+    \ without fee provided that copies are not made or distributed for profit or commercial\
+    \ advantage and that copies bear this notice and the full citation on the first\
+    \ page. Copyrights for components of this work owned by others than ACM must be\
+    \ honored. Abstracting with credit is permitted. To copy otherwise, or republish,\
+    \ to post on servers or to redistribute to lists, requires prior specific permission\
+    \ and/or a fee. Request permissions from permissions@acm.org.\nASSE’21, February\
+    \ 24–26, 2021, Macao, Macao\n© 2021 Association for Computing Machinery.\nACM\
+    \ ISBN 978-1-4503-8908-2/21/02.. $15.00\n[https://doi.org/10.1145/3456126.3456128](https://doi.org/10.1145/3456126.3456128)\n\
+    \n18"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'time, due to the usage of stable blocks belonging to a secure single-chain
+    and the shorter interval between two blocks, the confirming time is improved.
+
+
+    Prume provides a practical DAG protocol which contains 1) how to generate a block
+    in DAG; 2) giving a unique global number for all blocks in DAG; 3) giving a analysis
+    of when a block can be confirmed.
+
+
+    This paper is organised as following. In section 3, we provide some definitions
+    of data structure and security. In section 4 we give the detail of Plume, and
+    in section 5 we analyze the probability of confirmation in different conditions
+    and the security of Plume when the randomness from single-chain is unbiased and
+    biased. At last, section 6 gives the simulation of Plume using NS-3 with 1000
+    nodes.
+
+
+    # 2  RELATED WORK
+
+
+    Thunderella [14] is proposed by Pass and Eilam in 2018 to speed up the confirmation
+    of public chain. It needs a trusted accelerator to collect transactions and output
+    them in order, then comminute votes for these sequential transactions and pack
+    them to generate a consistent log. [14] can only guarantee the fast confirmation
+    in the optimistic case, but fall back to the traditional blockchain in the worst-case,
+    and it depends on a designated entity called accelerator. In relation to Thunderella,
+    Plume proves a stable and fast confirmation without losing the decentralization.
+
+
+    In the past few years, several DAG-based consensus protocols have been proposed.
+    SPECTRE[16], specifies a non-transitive partial orders for all pairs of blocks
+    in the DAG, while Plume provides a global consistent unique number for all the
+    blocks which is critical to support applications like smart contract. And as a
+    PoW consensus protocol, ConfLux [9] uses PoW protocol to generate blocks which
+    wastes a great of electricity. Because of the usage of GHOST[17] to decides which
+    branch as the valid one when encountering forks, ConfLux also suffers a balance
+    attack. Balance attack [10] means that adversary which hold less than 50% computing
+    power can make some blocks never be confirmed by spotrupting the weaker one between
+    two parts from the fork point. While in Plume, generation of fast block of DAG
+    is according to the randomness provided by the underground single chain, which
+    is economic. And the order protocol given by Plume resists the balance attack.
+
+
+    # 3  DEFINITIONS AND MODEL
+
+
+    In Plume, we have two kinds of blocks, one is the slow blocks in traditional single-chain
+    blockchain, and the other is the fast blocks that can be used to construct DAG
+    structure. Next, we will give formal descriptions of the two blocks. In subsequent
+    contents, we call the traditional single-chain blockchain as slow chain, and the
+    DAG-structure blockchain as fast chain.
+
+
+    # 3.1  Notations and security definitions of slow blockchain
+
+
+    Slow blockchain notations. We use slowChain to denote a slow chain. The notation
+    slowChain$^{(\ell}$ denotes the entire slowChain except the trailing $\ell$ blocks;
+    slowChain$[ \ell : t ]$ denotes the entire slowChain upto the block at time $t$;
+    and slowChain$[\ell : c_2]$ denotes all blocks at length between $\ell_1$ and
+    $\ell_2$. And we use the notation slowChain$_i^t$ to denote player $i$''s slowChain
+    in round $t$. And symbol $\le$ denotes the prefix relationship.
+
+
+    Security definitions. A slow chain protocol should satisfy chain growth, chain
+    quality, and common prefix [13,15]. Intuitively, chain growth requires that honest
+    nodes'' blocks[5] grow steadily, neither too fast nor too slow, which is the reason
+    why we call the traditional single-chain blockchain slow chain, and honest parties
+    have chains of roughly the same length. Chain quality requires that in any honest
+    node''s chain, any sufficiently long window of consecutive blocks contains a certain
+    fraction of blocks that are mined by honest nodes. Common prefix requests that
+    all honest nodes'' chains agree with each other except for the trailing few blocks.
+    We will formally define these security properties below.
+
+
+    # 3.2  Execution Model
+
+
+    Semi-synchronous Communication Setting. We divide time into non-overlapping segments
+    called slots. Messages sent from one honest node would be received by all the
+    other honest nodes within $\Delta$ slots. And when a new node joins in this network,
+    he can receive all the messages he missed. We defined that a epoch, in which a
+    slow traditional block is generated on average, is composed of $R$ slots. At the
+    beginning of each epoch, Plume selects a committee to generate DAG structure,
+    and as the epoch changes, the committee would change.
+
+
+    Ability of Adversary. Adversaries in our analysis cannot prevent the transmission
+    of messages, but they can delay the transmission of a message to an honest party
+    by up to $\Delta$ slots and reorder the messages sent to others. Adversaries can
+    also transmit their own messages to a part of honest parties, but after a period
+    all the honest parties can receive these messages. Meanwhile, adversaries can
+    corrupt honest nodes immediately at any time. Also adversaries can constantly
+    adjust the strategy of mining fast or slow blocks and broadcasting them.
+
+
+    # 3.3  Notations and security definitions of fast blockchain
+
+
+    DEFINITION 3.1. DAG structure
+
+
+    A DAG of fast blocks is denoted $\mathcal{G} = (V,E)$, where $V$ represents fast
+    blocks and $E$ represents the hash references to previous fast blocks. If a $B_F$
+    is in our DAG, we denote it as $B_F \in \mathcal{G}$. We define Child[$B_F^i$]
+    as the subset of fast blocks from which $B_F$ is reachable, and Ancestor[$B_F$]
+    as the subset of blocks reachable from $B_F$. Parents[$B_F$]$] represents the
+    blocks that are referenced by $B_F$ directly. Slot[$B_F$] means the slot in which
+    $B_F$ was generated. Density[$B_F$, $s_1, s_2$] represents the number of Child[$B_F$]
+    between slot $s_1$ and $s_2$. And Index[$B_F$] is the sequence number of $B_F$
+    after ordering. It is worth mentioning that Index[$B_F$] # Slot[$B_F^i$], but
+    for Slot[$B_F^{i_1}$] < Slot[$B_F^{i_2}$], there must be Index[$B_F^{i_1}$] <
+    Index[$B_F^{i_2}$], and for each fast block $B_F$, its sequence number [Index[$B_F$]]
+    is unique.
+
+
+    DEFINITION 3.2. Valid fast block
+
+
+    A valid fast block $B_F$ needs to meet all of the following conditions:'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '+   • The structure of $B_f$ is correct, and the structure will be defined
+    in 4.1;
+
+    • The timestamp in the fast block consists with the value of slot;
+
+    • For each fast blocks $B_p$ in Parents$[B_f]$, |Slot[$B_f$]-Slot[$B_p$]| ≤ 2
+    · Δ, where Δ is the maximum network delay.
+
+
+    **DEFINITION 3.3. Pending fast block set pendingSet[Ĝ]**
+
+
+    We define that the pending fast block set consists of all the valid fast blocks
+    whose reception time are later than the maximum delay, and we denote this set
+    as pendingSet[Ĝ].
+
+
+    **DEFINITION 3.4. Candidate fast block set candidateSet[Ĝ]**
+
+
+    We define that the candidate fast block set consists of all the valid fast blocks
+    that are received in Δ slots, and we denote this set as candidateSet[Ĝ].
+
+
+    **DEFINITION 3.5. Confirmed fast block set confirmedSet[Ĝ]**
+
+
+    If the number of Density[$B_f$, Slot[$B_f$] + Δ, Slot[$B_f$] + Δ + T)] is larger
+    than Th, where Th and T are systemic parameters that will be discussed in section
+    5. We regard the valid block as a confirmed fast block. All the confirmed fast
+    blocks constitute the confirmed fast block set denoted as confirmedSet[Ĝ]. And
+    the sorting is only for the fast blocks in confirmedSet.
+
+
+    **DEFINITION 3.6. Fast block sequence Seq[Ĝ]**
+
+
+    Once getting the confirmed fast block set, we need to order these fast blocks
+    to get a fast block sequence denoted $S = \text{Seq}[\hat{G}]$. In the sequence,
+    every fast block $B_f$ has a unique sequence number, that is Index[$B_f$]. And
+    a DAG structure corresponds to a fast block sequence that would extend with the
+    DAG grows, but the earlier part of the sequence will not change. And we use len[S]
+    to denote the number of fast blocks in S. Like slow chains, the notation $S^{[\kappa]}$
+    denotes the entire sequence S except the trailing κ fast blocks, and symbol $\preceq$
+    denotes the prefix relationship.
+
+
+    **DEFINITION 3.7. Finality state**
+
+
+    If a fast block $B_f$ gets its sequence number Index[$B_f$] of in sequence Seq[Ĝ],
+    this block has reached its finality state.
+
+
+    Here, the finality means the block can be reverted with negligible probability.
+
+
+    **Security definitions.** We assume that there is a DAG structure Ĝ in every party’s
+    view, and accordingly, there is a fast block sequence Seq[Ĝ]. A fast blockchain
+    protocol should satisfy unique sequence number, stable finality state, sequence
+    growth, sequence quality and sequence common prefix. Intuitively, unique sequence
+    number requires that a fast block in Seq[Ĝ] must have a unique sequence number.
+    Stable finality state requires the sequence number of a fast block cannot be changed.
+    The remaining three properties are similar to the three security properties for
+    slow blockchain. We will formally define these properties below.
+
+
+    +   • **Unique sequence number:** For any two different fast block $B^1_f$ and
+    $B^2_f$ in a Seq[Ĝ], Index[$B^1_f$] ≠ Index[$B^2_f$]. And if Slot[$B^1_f$] < Slot[$B^2_f$],
+    Index[$B^1_f$] must be less than Index[$B^2_f$].
+
+    • **Stable finality state:** For any fast block $B_f$ in Seq[Ĝ], the possibility
+    that Index[$B_f$] changes is negligible.
+
+
+    +   • **Sequence growth:** The property needs a parameter $g \in \mathbb{R}$ that
+    is the minimum growth rate. For any two honest parties P1 with local $\mathbf{S}_1
+    = \text{Seq}[\hat{\mathcal{G}}_1]$ at slot $s_1$ and P2 with local $\mathbf{S}_2
+    = \text{Seq}[\hat{\mathcal{G}}_2]$ at slot $s_2$, where $s_1 < s_2$, len[$\mathbf{S}_2$]
+    − len[$\mathbf{S}_1$] ≥ g · (s2 − s1).
+
+    • **Sequence quality:** The property needs parameter $\mu \in \mathbb{R}$ that
+    is the proportion of honest parties, and parameter $\ell \in \mathbb{N}$. For
+    any honest party P with local $\mathbf{S} = \text{Seq}[\hat{\mathcal{G}}]$ at
+    slot $s_1$, it holds that for large enough ℓ consecutive fast blocks of $\mathbf{S}$,
+    the ratio of honest fast blocks is at least $\mu$.
+
+    • **Sequence common prefix:** For any honest player P1 with local $\mathbf{S}_1
+    = \text{Seq}[\hat{\mathcal{G}}_1]$ at slot s1 and P2 with local $\mathbf{S}_2
+    = \text{Seq}[\hat{\mathcal{G}}_2]$ at slot s2, where $s_1 < s_2$, it holds that
+    $\mathbf{S}_1^{[\ell]} \preceq \mathbf{S}_2$.
+
+
+    # 4 THE DETAILS OF OUR PROTOCOL
+
+
+    The basic idea of our protocol called Plume is showed in Fig.1. Plume is a combination
+    of traditional single-chain consensus protocol and DAG structure. There are two
+    kinds of blocks in Plume. One is the traditional block denoted as $B_R$ that needs
+    more time to generate in order to guarantee the integrated security. Another is
+    the DAG block denoted as $B_f$ that can be generated fast. Plume is mainly divided
+    into four parts, those are (1) generating randomness from slow blockchain and
+    electing committee to generate fast blocks, (2) receiving fast blocks and ordering
+    them, (3) generating fast blocks and organizing them into DAG structure, (4) storing
+    the current state of DAG in slow blocks to speed up synchronization of new parties.
+    Next, we will describe what the parts do.
+
+
+    # 4.1 The structure of a fast block
+
+
+    In this section, we will define the structure of fast blocks. We denote the blocks
+    generated by committee as fast blocks, because these blocks can be generated in
+    every slot without considering the maximum network delay. The header structure
+    of fast block is showed in Table 7. We can see that the structure is different
+    with the traditional blocks except the merkle root. The “(y, π)” can be equated
+    with the “nonce” in traditional block which is defined in table 7 explicitly.
+    Both of them are used for proving the party is qualified to generate these block.
+    And the “slot” is utilized to verify the randomness r used to compute $B_f$ is
+    correct. “reference number” is to declare how many fast blocks are referenced
+    by this block, and the values need to match the content of “reference hash”. It
+    should be noted that “reference” corresponds to the directed edges of DAG, and
+    every fast block corresponds to a vertex in DAG. txlist is the list of transactions
+    in the fast block that would be consistent with the merkle root. σ is a signature
+    on the fast block, in order to prevent adversaries from using the (y, π) on other
+    fast blocks.
+
+
+    # 4.2 Getting randomness from slow blockchain and elect committee
+
+
+    There are many researches on extracting randomness from blockchain, such as [4]
+    and [3]. These research used the inherent randomness of the mining process itself.
+    [4] proposed there are sufficient entropy in a block header so that an extractor
+    can get an unbiased randomness from a block header. But malicious miners have
+    the ability of selecting preferable blocks to broadcast, then there will be biases
+    on the whole.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/0ee32e7d194c7c0bdee0ce0091187b7c_3_0.png)
+
+
+    # **Figure 1: Overview of our protocol.**
+
+
+    # **Table 1: The structure of a fast block.**
+
+
+    | Item | Description |
+
+    |---|---|
+
+    | $(y, \pi)$ | A proof that the party is qualified to generate this fast block.
+    |
+
+    | $r$ | The randomness used for election. |
+
+    | slot | The slot when the fast block generated. |
+
+    | merkle_root | The merkle root of transactions. |
+
+    | reference_number | The number of fast blocks that are referenced by this block.
+    |
+
+    | reference_hash | The hash of fast blocks that are referenced by this block.
+    |
+
+    | txlist | The list of transactions. |
+
+    | $\sigma$ | A signature on the fast block. |
+
+
+    From the previous researches, we can see that it is necessary to use sufficient
+    blocks to generate an unbiased randomness. But in Plume, we do not need an unbiased
+    randomness, we just need a randomness that has sufficient entropy so that adversaries
+    cannot manipulate the randomness to let the proportion of the adversaries in committee
+    above threshold. We get our randomness from a confirmed slow block by computing
+    the hash of the block, i.e., $r_i = H(B_i^s)$. And we switch to the next slow
+    block to generate the next confirmed randomness an certain interval that is $E$
+    slots, where $E$ is a systemic parameter. More precisely, we get our first randomness
+    $r_0$ from the genesis block $B_0^s$ of a confirmed slow blockchain, after $E$
+    slots where $E$ is larger than the interval of generating a slow block, we get
+    the second randomness $r_1$ from the block $B_1^s$, and so on.
+
+
+    Every party in the network can become a committee in $slot_j$ by computing $(y,
+    \pi) = \text{VRF}_{s,k}(slot_j || r_i)$, as long as his public key is registered
+    in block $B_j^s$ or the blocks before it, where VRF(Verifiable
+
+
+    Random Functions)[11] is firstly proposed by Miceli in 1986. If $y < D$ where
+    $D$ is the difficulty, the party can generate a fast block in $slot_j$, and how
+    to generate it will be described in section 4.4.
+
+
+    # **4.3 Receiving fast blocks and ordering them**
+
+
+    For a party that is always online, he will receive the fast blocks generated by
+    others, and he needs to order them according to the *slot* recorded in the block.
+    Once he receives a fast block $B_F$, the first thing he needs to do is to check
+    the validity of the block according to definition 3.2. If the fast block is valid,
+    he will decide which set the fast block belongs to. Because of network delay,
+    there is the possibility that a party receives a fast block before receiving its
+    ancestors. It is necessary to check if the ancestors have been received. If every
+    blocks in Ancestor[$B_F$] and $B_F$ are all received in $\Delta$ slots, the party
+    will add $B_F$ and blocks which is in Ancestor[$B_F$] that received in time but
+    have not been in candidateSet, to candidateSet. If every blocks in Ancestor[$B_F$]
+    are received in $\Delta$ slots but $B_F$ is'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "received later than the maximum network delay, the party will add $B_f$ to\
+    \ pendingSet. And blocks in Ancestor[$B_f$] that received in time but have not\
+    \ been in candidateSet will be added to candidateSet. If there is a block $B^{Anc}_f$\
+    \ in Ancestor[$B_f$] belongs to pendingSet or cannot be received in time, we require\
+    \ the party to add every blocks in Child[$B^{Anc}_f$] including $B_f$ to pendingSet.\
+    \ The details is shown in Algorithm. 1.\n\n```\n**Algorithm 1 Receive Fast blocks**\n\
+    \n**Require:** DAG G, candidateSet, pendingSet, current slot $t$, and the new\
+    \ fast blocks list $\\mathcal{L} = \\{B^i_f\\}$.\n\n**Ensure:** Updated DAG G,\
+    \ candidateSet and pendingSet.\n\n1: **for each** $B^i_f$ in $\\mathcal{L}$ **do**\n\
+    2: \t**if** $B^i_f$ is not valid **then**\n3: \t\tDiscard $B^i_f$.\n4: \t**else**\n\
+    5: \t\t**if** there is a $B^{i,Anc_j}_f$ in Ancestor[$B^i_f$] is not invalid **then**\n\
+    6: \t\t\tDiscard $B^{i,Anc_j}_f$ and Density[$B^{i,Anc_j}_f$, Slot[$B^{i,Anc_j}_f$,\
+    \ $t$]].\n7: \t\t**else**\n8: \t\t\t**if** Ancestor[$B^i_f$] are all received\
+    \ in $\\Delta$ slots **then**\n9: \t\t\t\t**if** $B^i_f$ is received in $\\Delta$\
+    \ slots **then**\n10: \t\t\t\t\tcandidateSet = candidateSet + {$B^i_f$};\n11:\
+    \ \t\t\t\t**else**\n12: \t\t\t\t\tpendingSet = pendingSet + {$B^i_f$};\n13: \t\
+    \t\t\t**end if**\n14: \t\t\t\t**for each** $B^{i,Anc_j}_f$ in Ancestor[$B^i_f$]\
+    \ that have not been in candidateSet **do**\n15: \t\t\t\t\tcandidateSet = candidateSet\
+    \ + {$B^{i,Anc_j}_f$};\n16: \t\t\t\t**end for**\n17: \t\t\t**else**\n18: \t\t\t\
+    \t**for each** $B^{i,Anc_j}_f$ in Ancestor[$B^i_f$] that belong to pendingSet\
+    \ **do**\n19: \t\t\t\t\tpendingSet = pendingSet + Child[$B^{i,Anc_j}_f$, Slot[$B^{i,Anc_j}_f$,\
+    \ $t$]];\n20: \t\t\t\t**end for**\n21: \t\t\t\t**for each** $B^{i,Anc_j}_f$ in\
+    \ Ancestor[$B^i_f$] that cannot be received in time but not in pendingSet **do**\n\
+    22: \t\t\t\t\tpendingSet = pendingSet + Child[$B^{i,Anc_j}_f$, Slot[$B^{i,Anc_j}_f$,\
+    \ $t$] + {$B^{i,Anc_j}_f$}];\n23: \t\t\t\t**end for**\n24: \t\t\t**end if**\n\
+    25: \t\t**end if**\n26: \t**end if**\n27: **end for**\n28: Update G according\
+    \ candidateSet and pendingSet;\n```\n\nBefore ordering the fast blocks in DAG\
+    \ G, the party needs to select some fast blocks from candidateSet and pendingSet\
+    \ into\n\nconfirmedSet. If a fast block in candidateSet or pendingSet whose child\
+    \ nodes in a period are enough, it can be selected into confirmedSet. In $\\Delta$\
+    \ slots after it was generated, it might not have spread all over the network,\
+    \ because of the maximum network delay $\\Delta$ slots. Thus, we just consider\
+    \ the child nodes generated more than $\\Delta$ slots later than the fast block.\
+    \ Formally, for a fast block $B_f$ in candidateSet or pendingSet, if the number\
+    \ of Density[$B_f$, Slot[$B_f$] + $\\Delta$, Slot[$B_f$] + $\\Delta$ + $T$] is\
+    \ larger than the threshold $T$ the party would add $B_f$ into confirmedSet. Then\
+    \ the party needs to give every fast block in confirmedSet a unique sequence number\
+    \ according to the slot value included in the fast block. The larger slot value\
+    \ a fast block has, the larger sequence number it will get. There is the possibility\
+    \ that more than one fast blocks have the same slot value, we order them by comparing\
+    \ their hash values. The details is shown in Algorithm 2.\n\n```\n**Algorithm\
+    \ 2 Order Fast blocks**\n\n**Require:** DAG G, candidateSet, pendingSet, confirmedSet\
+    \ and Seq[G].\n\n**Ensure:** Updated DAG G, confirmedSet and Seq[G].\n\n1: Set\
+    \ the largest slot in candidateSet and pendingSet as $t_L$;\n2: **for each** $B_f$\
+    \ in candidateSet and pendingSet **do**\n3: \t**if** $t_L$ – Slot[$B^i_f$] < $T\
+    \ + \\Delta$ **then**\n4: \t\twaiting;\n5: \t**else**\n6: \t\t**if** Density[$B^i_f$,\
+    \ Slot[$B^i_f$] + $\\Delta$, Slot[$B^i_f$] + $\\Delta$ + $T$] $\\geq$ Th **then**\n\
+    7: \t\t\tconfirmedSet = confirmedSet + {$B^i_f$};\n8: \t\t**end if**\n9: \t**end\
+    \ if**\n10: **end for**\n11: Sort confirmedSet according to Slot[$B^i_f$];\n12:\
+    \ Update Seq[G] according to the sorted confirmedSet;\n```\n\n# 4.4 Generating\
+    \ fast blocks and organizing them into DAG structure\n\nA party who gets the qualification\
+    \ by computing ($y, \\pi$) can pack his local transactions and generate a fast\
+    \ block in a slot $t$, Besides calculating merkle_root and signing the fast block,\
+    \ the most important thing is how to reference previous fast blocks. Before describing\
+    \ the reference rule, we need to define some notation.\n\n*leaf node*. In a party's\
+    \ view, if a node is valid and has not been referenced by any other nodes, we\
+    \ call it leaf node. The three black shaded nodes in Fig. 2 are leaf node. And\
+    \ because of network delay and the behaviors of malicious adversaries, the sets\
+    \ of leaf nodes for different party may vary different. Therefore, there is not\
+    \ a unique set of leaf nodes on the whole, the concept is to a party. In order\
+    \ to guarantee that a fast block can be referenced directly or indirectly by all\
+    \ the fast blocks later, we require a new fast block $B^{new}_f$ to reference\
+    \ all the qualified leaf nodes in candidateSet.\n\n*qualified leaf nodes*. Leaf\
+    \ nodes in candidateSet can be divided into two categories showed in the two red\
+    \ boxes (labeled in “1”, “2”"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "respectively) in Fig. 2. We denote the slot in which the new fast block $B_{f}^{new}$\
+    \ is generated as $t$, and we can see that the difference value between the generating\
+    \ times of the fast blocks labeled in \"1\" and $t$ is less than 2Δ slots. We\
+    \ regard the fast blocks labeled in \"1\" as qualified leaf nodes and require\
+    \ $B_{f}^{new}$ to reference them, but the fast block labeled in \"2\" was generated\
+    \ more than 2Δ slots ago, so $B_{f}^{new}$ cannot reference it. The details is\
+    \ shown in Algorithm 3.\n\n```\n**Algorithm 3** Generate a Fast blocks\n\n**Require:**\
+    \ $DAG \\mathbb{G}$, candidateSet, current slot $t$, $(y, \\pi)$, randomness $r$,\
+    \ tlist $L_{tx}$ and sign key $sk$.\n\n**Ensure:** $B_{f}^{new}$.\n1: Calculate\
+    \ merkle_root based on the tlist;\n2: Set reference_number = 0 and reference_hash\
+    \ = {};\n3: **for** each leaf node $B_{j}^{leef-j}$ in candidateSet **do**\n4:\
+    \ \t**if** $t - Slot[B_{j}^{leef-j}] \\le 2\\Delta$ **then**\n5: \t\treference_hash=reference_hash+{hash($B_{j}^{leef-j}$)};\n\
+    6: \t\treference_number=reference_number+1;\n7: \t**end if**\n8: **end for**\n\
+    9: Calculate signature $\\sigma$ on $(y, \\pi)||r||t||merkle_root||reference_number||reference_hash||L_{tx}$\
+    \ by $sk$;\n10: $B_{f}^{new} = (y, \\pi)||r||t||merkle_root||reference_number||reference_hash||L_{tx}||\\\
+    sigma$;\n11: Output $B_{f}^{new}$.\n```\n\n![](img/0ee32e7d194c7c0bdee0ce0091187b7c_5_0.png)\n\
+    \n# 4.5 Storing the current state of DAG in slow blocks for quick start of a new\
+    \ party\n\nIf a new party wants to join the network, he needs to download the\
+    \ whole DAG he missed. But adversaries can send him an incorrect DAG that the\
+    \ new party but cannot judge it. So we require the miners of slow chain to store\
+    \ the current state of DAG in their slow blocks. The new party can check the correction\
+    \ of a received DAG according to the states recorded in slow chain. For a new\
+    \ party, he cannot decide which fast block can belong to pendingSet during the\
+    \ downloading of DAG that generated before his joining, because he missed these\
+    \ fast blocks. For the DAG that he has missed, he needs to verify the validity\
+    \ of every fast blocks, and adds valid fast blocks whose child blocks are enough\
+    \ to confirmedSet, then add their valid child fast blocks who need more time to\
+    \ confirm to candidateSet. It is\n\npossible that adversaries give the new party\
+    \ a DAG part that was hidden before. If the part meets our requirement, we regard\
+    \ it valid, otherwise, we need the new party to discard it. For the fast blocks\
+    \ that generated after his joining, we can decide whether these fast blocks belong\
+    \ to pendingSet or candidateSet by Algorithm 1. When he can generate a new fast\
+    \ block, he generates it through Algorithm 3 too. It is obviously that the new\
+    \ party can order DAG as the same as the online parties, so we just describe the\
+    \ process of downloading and dealing with the fast blocks that generated before\
+    \ his joining in Algorithm 4.\n\n```\n**Algorithm 4** Download the missed fast\
+    \ blocks\n\n**Require:** states recorded in slow chain.\n\n**Ensure:** DAG $\\\
+    mathbb{G}$, candidateSet and confirmedSet.\n1: Download a DAG $\\mathbb{G}$ and\
+    \ check it by the states recorded in slow chain;\n2: Set candidateSet={} and confirmedSet={};\n\
+    3: Set the largest slot in $\\mathbb{G}$ as $t_L$;\n4: **for** each valid $B_{f}^{'}$\
+    \ in $\\mathbb{G}$ **do** // $\\mathbb{G}$ may be updated.\n5: \t**if** $T-Slot[B_{f}^{'}]\
+    \ < T+\\Delta$ **then**\n6: \t\tcandidateSet=candidateSet+$\\{B_{f}^{'}\\}$;\n\
+    7: \t**else**\n8: \t\t**if** $Density[B_{f}^{'} , Slot[B_{f}^{'}] + \\Delta ,\
+    \ Slot[B_{f}^{'}] + \\Delta + T] \\ge Th$ **then**\n9: \t\t\tconfirmedSet=confirmedSet+$\\\
+    {B_{f}^{'}\\}$;\n10: \t\t**else**\n11: \t\t\tDiscard $Density[B_{f}^{'} , Slot[B_{f}^{'}]\
+    \ + \\Delta , Slot[B_{f}^{'}] + \\Delta + T]$ and $B_{f}^{'}$;\n12: \t\t\tUpdate\
+    \ $\\mathbb{G}$;\n13: \t\t**end if**\n14: \t**end if**\n15: **end for**\n```\n\
+    \n# 5 SECURITY ANALYSIS\n\n# 5.1 Setting the threshold\n\nIn this section, we\
+    \ will analyze how to set the threshold Th which is based on to decide whether\
+    \ a fast block can be selected into confirmedSet. We need to ensure that if malicious\
+    \ players withhold a part of DAG all the time, they can only exceed the threshold\
+    \ with a small probability. Meanwhile, we also need to guarantee that the number\
+    \ of nodes in the DAG graph generated only by honest players over the same period\
+    \ cannot reach the threshold with a small probability. For an always online party,\
+    \ he can recognize the DAG part that had been withhold all the time, but for a\
+    \ new party, it is possible to accept a hiding part. Thus, the threshold Th is\
+    \ the key to prevent a new party from being cheated. If a new party sees two or\
+    \ more parts, we needs to recognize all the leaf nodes of the parts in which the\
+    \ number of nodes reaches the threshold, and reject the parts that do not conform\
+    \ to requirements as described in Algorithm 4.\n\nWe assume that there are $N$\
+    \ players in our network. And we define honest players as those who comply with\
+    \ the protocol and are online. We assume that the proportion of honest players\
+    \ in our"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'network is \( \alpha \), while the proportion of malicious players is \( 1
+    - \alpha \). And the probability of a player being selected in a slot is \( p
+    \). So the expectation of the number of nodes that honest players can generate
+    in \( T \) slots is \( \alpha \cdot p \cdot N \cdot T \). And we set \( p \cdot
+    N = 1 \) that means there is a fast block generated in a slot averagely. We denote
+    the number of node generated by honest players in \( T \) slots as variable \(
+    \mathcal{X} \), and the number of nodes generated by malicious players in \( T
+    \) slots as variable \( \mathcal{Y} \). We know that both \( \mathcal{X} \) and
+    \( \mathcal{Y} \) follow binomial distributions, and we can regard the variables
+    as normal distributions. The expectation of \( \mathcal{X} \) is \( \alpha \cdot
+    p \cdot N \cdot T = \alpha \cdot T \), and its variance is \( \alpha \cdot p \cdot
+    N \cdot T = \alpha \cdot T \). Accordingly, the expectation and variance of \(
+    \mathcal{Y} \) both are \( (1 - \alpha) \cdot T \). (i.e., \( \mathcal{X} \sim
+    \mathcal{N}(\alpha \cdot T, \alpha \cdot T) \), \( \mathcal{Y} \sim \mathcal{N}((1
+    - \alpha) \cdot T, (1 - \alpha) \cdot T) \))
+
+
+    ![](img/0ee32e7d194c7c0bdee0ce0091187b7c_6_0.png)
+
+
+    Fig. 3 shows the probability density maps of the variables \( \mathcal{X} \) and
+    \( \mathcal{Y} \) when \( \alpha = 0.9 \) and \( T = 5, 10, 15 \) respectively.
+    We can see that as the \( T \) increases, the coincidence area of the probability
+    density maps of the variables \( \mathcal{X} \) and \( \mathcal{Y} \) is getting
+    smaller and smaller. And we set the ordinate corresponding to the intersection
+    point as the threshold Th for different \( T \).
+
+
+    ![](img/0ee32e7d194c7c0bdee0ce0091187b7c_6_1.png)
+
+
+    # **Figure 4**: when \( \alpha = 0.6, 0.7, 0.8, 0.9 \), the change trend of adversaries''
+    success probability as \( T \) increases.
+
+
+    # 5.2 Security under unbiased randomness
+
+
+    In this section, we will prove that Plume can meet the security definitions in
+    section 3 while the randomness used to select committee is unbiased. Then, in
+    the next section, we will explain that the biased randomness generated from slow
+    blockchain cannot affect the overall security.
+
+
+    **CLAIM 5.1.** *Plume meets the 5 security definitions, that are unique sequence
+    number, stable finality state, sequence growth, sequence quality and sequence
+    common prefix, when the randomness used to select committee is unbiased.*
+
+
+    **PROOF.** We will prove Plume meets the 5 security definitions respectively.
+
+
+    *Unique sequence number.* In Plume, the sequence number of a fast block is set
+    based on the slot in which the fast block was generated. And we require that there
+    is a fast block can be generated in a slot averagely, but it is possible that
+    there are more than one fast blocks are generated in a slot. We deal with this
+    situation by comparing their hash values where we use the collision-resistant
+    hash algorithm. It is obvious that if an adversary can break the unique sequence
+    number property, he can break the collision-resistance of the hash algorithm.
+
+
+    # **Figure 3**: when \( \alpha = 0.9 \), \( T = 5, 10, 15 \), the probability
+    density maps of \( \mathcal{X} \) and \( \mathcal{Y} \)
+
+
+    *Stable finality state.* If an adversary wants to make the sequence number of
+    a fast block \( B_f \) in Seq[\( \mathfrak{S} \)\] changed, he must generate a
+    fast block \( B_f'' \) with enough child blocks and less slot than \( B_f \)''s
+    so that \( B_f'' \) satisfies the criteria for being added to confirmedSet. Once
+    \( B_f'' \) is in an honest party''s confirmedSet, it will be added into Seq[\(
+    \mathfrak{S} \)\] and given a sequence number. Because of Slot[\( B_f'' \)] <
+    Slot[\( B_f \)], there must be Index[\( B_f'' \)] < Index[\( B_f \)] which means
+    the sequence number of \( B_f \) is changed. But fortunately, as long as \( T
+    \) is large enough, the success probability of the adversary is negligible which
+    is shown in Table 2. To be specific, when \( T = 100 \) slots and \( \alpha =
+    0.9 \), the success probability only is \( 5.44851 \cdot 10^{-11} \).
+
+
+    Fig. 4 shows the variation trend of adversaries'' success probability where \(
+    T \) is from 10 to 100 at intervals of 10. We can see that as time goes on, the
+    probability of malicious adversaries alone exceeding the threshold gets smaller
+    and smaller. When \( \alpha = 0.9 \) the success probability is too small to be
+    presented in the top figure in Fig. 4, so we present it in the bottom figure alone.
+    And we present the specific data in Table. 2.
+
+
+    *Sequence growth.* Algorithm 3 can guarantee that a fast block can be referenced
+    directly or indirectly by all the fast blocks later, and'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Table 2: when $\alpha = 0.9, 0.8, 0.7$, threshold and error probability
+
+
+    $\alpha = 0.9$
+
+    | T/slot | Threshold | Success Probability |
+
+    | :--- | :--- | :--- |
+
+    | 10 | 3.38720 | 0.00849288 |
+
+    | 20 | 6.39873 | 0.000934258 |
+
+    | 30 | 9.40296 | 0.000109189 |
+
+    | 40 | 12.4051 | 0.0000131951 |
+
+    | 50 | 15.4065 | 1.62845 $\cdot 10^{-6}$ |
+
+    | 60 | 18.4074 | 2.03992 $\cdot 10^{-7}$ |
+
+    | 70 | 21.408 | 2.57984 $\cdot 10^{-8}$ |
+
+    | 80 | 24.4085 | 3.29049 $\cdot 10^{-9}$ |
+
+    | 90 | 27.4089 | 4.22342 $\cdot 10^{-10}$ |
+
+    | 100 | 30.4092 | 5.44851 $\cdot 10^{-11}$ |
+
+
+    $\alpha = 0.8$
+
+    | T/slot | Threshold | Success Probability |
+
+    | :--- | :--- | :--- |
+
+    | 10 | 4.43811 | 0.0423538 |
+
+    | 20 | 8.44947 | 0.0130495 |
+
+    | 30 | 12.4535 | 0.00421131 |
+
+    | 40 | 16.4556 | 0.00139713 |
+
+    | 50 | 20.4569 | 0.000471916 |
+
+    | 60 | 24.4577 | 0.000161426 |
+
+    | 70 | 28.4583 | 0.0000557371 |
+
+    | 80 | 32.4588 | 0.0000019384 |
+
+    | 90 | 36.4592 | 6.77998 $\cdot 10^{-6}$ |
+
+    | 100 | 40.4595 | 2.38253 $\cdot 10^{-6}$ |
+
+
+    $\alpha = 0.7$
+
+    | T/slot | Threshold | Success Probability |
+
+    | :--- | :--- | :--- |
+
+    | 10 | 5.04463 | 0.118907 |
+
+    | 20 | 9.63829 | 0.0687288 |
+
+    | 30 | 14.2248 | 0.0407892 |
+
+    | 40 | 18.8094 | 0.0246665 |
+
+    | 50 | 23.3932 | 0.0151131 |
+
+    | 60 | 27.9766 | 0.00934879 |
+
+    | 70 | 32.5598 | 0.00582542 |
+
+    | 80 | 37.1428 | 0.00365087 |
+
+    | 90 | 41.7257 | 0.00229872 |
+
+    | 100 | 46.3086 | 0.00145294 |
+
+
+    the probability that a DAG part generated only by honest players in $T$ slots
+    cannot reach the threshold $\mathsf{Th}$ is negligible, so a fast block $B_f$
+    generated by an honest player must be able to be added into $\mathsf{Seq}[\mathbb{G}]$
+    after $\Delta + T$ slots. Thus, $\mathsf{Seq}[\mathbb{G}]$ keeps growing.
+
+
+    **Sequence quality.** The fast blocks in $\mathsf{Seq}[\mathbb{G}]$ are generated
+    by committee that are selected randomly. When the randomness is unbiased and the
+    ratio of honest players is $\alpha$, it is obvious that for large enough $T$ consecutive
+    fast blocks of $\mathsf{Seq}[\mathbb{G}]$, the number of honest fast blocks is
+    $\alpha \cdot T$ averagely.
+
+
+    **Sequence common prefix.** In Plume, a fast block that is received by an honest
+    party, then the honest party would send the fast block to all other honest parties.
+    Thus, except for the most recent fast blocks, the union set of pendingSet and
+    candidateSet in every honest party''s view is the same, and then the confirmedSet
+    selected from the union set of pendingSet and candidateSet is the same.
+
+
+    Therefore, for any honest player $P_1$ with local $\mathbf{S}_1 = \mathsf{Seq}[\mathbb{G}_1]$
+    at slot $s_1$ and $P_2$ with local $\mathbf{S}_2 = \mathsf{Seq}[\mathbb{G}_2]$
+    at slot $s_2$, where $s_1 < s_2$, it holds that $\mathbf{S}_1^{[k]} \preceq \mathbf{S}_2$.
+    \quad $\Box$
+
+
+    # 5.3 Security under biased randomness
+
+
+    In this section, we will prove that although our randomness is biased, it will
+    not break the security of Plume. When the randomness is unbiased, the success
+    probability of an adversary is shown in Table 2, but in Plume, an adversary can
+    select a randomness that is better for him, so firstly, we analyze the success
+    probability of adversary who can bias the randomness.
+
+
+    In Plume, we regard the hash value of a slow block that has been confirmed as
+    the randomness. Malicious adversaries can select an optimal slow block to broadcast.
+    The optimal slow block is that the randomness generated from it can make the number
+    of elected malicious adversary is maximal. So we can compute the expectation of
+    the maximal number of elected malicious adversary when they can select a randomness
+    from $k$ randomneses. It means that adversaries can generate $k$ slow blocks at
+    the same time, and we define the event as $A_k$. It is easy to get the happening
+    probability of $A_k$ is $\gamma^k$ where $\gamma$ is the proportion of malicious
+    adversaries'' computing power.
+
+
+    We denoted the number of adversaries elected in $k$ times as $Y_1$, $Y_2, \cdots,
+    Y_k$ respectively. And we denoted the variable $\mathbf{Z} = \textbf{Max}\{Y_1$,
+    $Y_2, \cdots, Y_k\}$. We also consider $T$ slots, so $Y_1$, $Y_2, \cdots, Y_k$
+    all obey the normal distribution $N(\alpha T, (1-\alpha)T)$ (s.t., $\mu = (1-\alpha)\cdot
+    T$, $\sigma = \sqrt{(1-\alpha)\cdot T}$). And we set $Y_i = \mu + \sigma \cdot
+    Y_i''$, where $Y_i''$ obeys standard normal distribution. Then we can get $\mathbf{Z}
+    = \textbf{Max}\{Y_1, Y_2, \cdots, Y_k\} = \mu + \sigma \cdot \textbf{Max}\{Y_1'',
+    Y_2'', \cdots, Y_k''\}$. For the sake of explanation, we denoted $\textbf{Max}\{Y_1'',
+    Y_2'', \cdots, Y_k''\}$ as $Z''$. And we can get the expectation of $Z''$ by the
+    equation (1), where $\Phi(y)$ is the distribution function of standard normal
+    distribution, and get the expectation of $\mathbf{Z}$ by the equation (2).
+
+
+    $$\mathbb{E}[Z''] = \int_{-\infty}^{\infty} y \cdot \frac{d(\Phi(y)^k)}{dy} dy
+    \tag{1}$$
+
+    $$\mathbb{E}[\mathbf{Z}] = \mu + \sigma \cdot \mathbb{E}[Z''] = (1-\alpha) \cdot
+    T + \sqrt{(1-\alpha) \cdot T} \cdot \mathbb{E}[Z'']. \tag{2}$$
+
+
+    We can see the growing trend of $\mathbb{E}[Z'']$ as $k$ increases from 1 to 10
+    from Fig. 5. so the larger $k$ is, the higher the probability that adversaries
+    can success will be. Next, we just consider the situation when $k = 10$, $\mathbb{E}[Z'']
+    = 1.53873$. We set $T$ changes from 10 to 100 at an interval of 10, to compare
+    the success probability under biased randomness with that in Table. 3 shows that
+    when $\alpha = 0.9$ and $\alpha = 0.8$, the expectation of the maximal number
+    of elected adversaries is smaller than our threshold all the time. It is to say
+    that even though adversaries can prepare 10 slow blocks to select a randomness,
+    they cannot double spend a confirmed transaction. Moreover, the probability of
+    getting 10 slow blocks at the same time is only $\gamma^{10}$, where $\gamma <
+    0.5$. Table. 4 shows that when $\alpha = 0.7$ and $T = 10, 20$, the expectation
+    of the maximal number of elected adversaries exceeds our threshold, but when $T
+    \ge 30$, adversaries cannot success. So when $\alpha = 0.7$, we need to set $T
+    \ge 30$ to prevent adversaries from breaking the security.
+
+
+    From the above, we can see that adversaries can increase the success probability
+    by selecting randomness, but the success probability is negligible even if they
+    have 10 chances to pick a preferable randomness.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'randomness. And they get the 10 chances only with probability y10, where γ
+    < 0.5.
+
+
+    ![](img/0ee32e7d194c7c0bdee0ce0091187b7c_8_0.png)
+
+
+    **Figure 5:** E[|Z'']
+
+
+    # Table 3: when α = 0.9, 0.8, k = 10, the comparison of threshold and E[Z]
+
+
+    | α = 0.9 |  |  |  |
+
+    |:-------|:----------------|:-----------------|:-----------------|
+
+    | T/slot | Threshold | E[Z] | Success Probability |
+
+    | 10 | 4.43811 | 4.176121 | 0.351288 |
+
+    | 20 | 8.44947 | 7.0775 | 0.123093 |
+
+    | 30 | 12.4535 | 9.769152 | 0.041352 |
+
+    | 40 | 16.4556 | 12.35224 | 0.0138839 |
+
+    | 50 | 20.4569 | 14.86595 | 0.00470094 |
+
+    | 60 | 24.4577 | 17.33039 | 0.00161315 |
+
+    | 70 | 28.4583 | 19.75748 | 0.000557259 |
+
+    | 80 | 32.4588 | 22.155 | 0.000193825 |
+
+    | 90 | 36.4592 | 24.52836 | 0.0000677956 |
+
+    | 100 | 40.4595 | 26.8815 | 0.000023824 |
+
+    |  |  |  |  |
+
+    | α = 0.8 |  |  |  |
+
+    | T/slot | Threshold | E[Z] | Success Probability |
+
+    | 10 | 3.38720 | 2.53875 | 0.0817545 |
+
+    | 20 | 6.39873 | 4.176121 | 0.00930342 |
+
+    | 30 | 9.40296 | 5.665193 | 0.00101935 |
+
+    | 40 | 12.4051 | 7.0775 | 0.000131955 |
+
+    | 50 | 15.4065 | 8.44075 | 0.0000162834 |
+
+    | 60 | 18.4074 | 9.769152 | 2.03879 · 10−6 |
+
+    | 70 | 21.408 | 11.07115 | 2.57993 · 10−7 |
+
+    | 80 | 24.4085 | 12.35224 | 3.29051 · 10−8 |
+
+    | 90 | 27.4089 | 13.61625 | 4.22328 · 10−9 |
+
+    | 100 | 30.4092 | 14.86595 | 5.44839 · 10−10 |
+
+
+    **CLAIM 5.2.** Plumee still meets the 5 security definitions, that are unique
+    sequence number, stable finality state, sequence growth, sequence quality and
+    sequence common prefix, even when the randomness used to select committee is biased.
+
+
+    **PROOF.** It is obvious that unique sequence number and sequence growth do not
+    been affected by the biased randomness. When use a biased randomness, adversaries
+    can increase the probability of breaking stable finality state from 5.44851 ·
+    10−11 to 5.44839 · 10−10 in the case of T = 100 slots and α = 0.9, but the probability
+    still is
+
+
+    # Table 4: when α = 0.7, k = 10, the comparison of threshold and E[Z]
+
+
+    | α = 0.7 |  |  |  |
+
+    |:-------|:-----------------|:-----------------|:-----------------|
+
+    | T/slot | Threshold | E[Z] | Success Probability |
+
+    | 10 | 5.04463 | 5.665193 | 0.718021 |
+
+    | 20 | 9.63829 | 9.769152 | 0.509361 |
+
+    | 30 | 14.2248 | 13.6165 | 0.340613 |
+
+    | 40 | 18.8094 | 17.33039 | 0.22101 |
+
+    | 50 | 23.3932 | 20.9595 | 0.141256 |
+
+    | 60 | 27.9766 | 24.52836 | 0.0896511 |
+
+    | 70 | 32.5598 | 28.05144 | 0.0567493 |
+
+    | 80 | 37.1428 | 31.5383 | 0.0359144 |
+
+    | 90 | 41.7257 | 34.99558 | 0.022751 |
+
+    | 100 | 46.3086 | 38.42808 | 0.014345 |
+
+
+    negligible. As for sequence quality, because of the biased randomness, the number
+    of fast blocks generated by adversaries in large enough l consecutive fast blocks
+    of Seq[Ω] is more than(1 − α) · l. To be specific, when T = 100 slots, α = 0.9
+    and k = 10, the number of fast blocks generated by adversaries is 14.86595 averagely
+    that is more than 10. As for sequence common prefix, the parameter x would be
+    larger. In biased model, because of the biased randomness chosen by adversary,
+    a fast block needs more another fast blocks linking to it to hold the same probability
+    to be reverted as the fast block in the unbiased model, which enlarge the parameter
+    x. □
+
+
+    # ## 6 EXPERIMENT
+
+
+    Due to the limitation of device, we simulated Plume with NS-3. We assumed that
+    the delay of network is 200ms, the degree of which node is 3-5 and the bandwidth
+    is 20Mbps. And, we also fixed the content of fast blocks and the contents of the
+    fast block is show in table 7. Here, compared with bitcoin, we assume the size
+    of transaction is 250 bytes.
+
+
+    Firstly, we consider the throughput of Plume. From table 5, we can find that with
+    rising of generating rate of fast blocks, the throughput improves, and in the
+    case that block size is 100K bytes and time interval between fast blocks is 1
+    second the throughput is more 400 TPS which is much larger than Bitcoin and Ethereum.
+    We also find that the average parent blocks vary in different conditions. Due
+    to the delay of network, if the creation rate of blocks is fast, before the old
+    block received by most of the nodes a new fast block is also generated. Which
+    is one of the chief force of the width of the DAG. As show in table 5, when the
+    block size is 10K bytes and the time interval of fast blocks is 1 second, the
+    average width of DAG (which is equivalent to the average amount of parent blocks),
+    is similar to a single chain. And with the reduction of time interval between
+    two blocks, the width of DAG increases steadily. From table 5, when the block
+    size changes from 10K bytes to 100 Bytes, throughput becomes 10 times as before,
+    and the width of DAG also extends tremendously. Enlarging the size of block is
+    equivalent to reduce the time interval [17], because with the enlargement of block,
+    the network delay also increase. It should be noted that the width should be limited
+    in size. The wider the DAG is, the more unstable the system is. A wider DAG means
+    more pending blocks, which cause more blocks are deserted. Thus, what we want'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Table 5: The throughput of Plume with 1000 nodes.
+
+
+    | Block Size(Byte) | Interval(s) | Average parent blocks | Tps |
+
+    |---|---|---|---|
+
+    | 10K | 1 | 1.45 | 40 |
+
+    | 10K | 0.8 | 2.23 | 50 |
+
+    | 10K | 0.5 | 2.89 | 80 |
+
+    | 10K | 0.2 | 6.35 | 200 |
+
+    | 100K | 1 | 7.86 | 408 |
+
+
+    # Table 6: When the block size is 10K bytes, the confirmation time of Plume.
+
+
+    | Amount of Nodes | Time Interval(s) | Confirmation Time(s) |
+
+    |---|---|---|
+
+    | 600 | 1 | 64 |
+
+    | 600 | 0.8 | 55 |
+
+    | 600 | 0.5 | 33 |
+
+    | 1000 | 1 | 118 |
+
+
+    # Table 7: The structure of a fast block.
+
+
+    | Item | Size(byte) | Description |
+
+    |---|---|---|
+
+    | round | 8 | Round of the block |
+
+    | slot | 2 | Slot of the block |
+
+    | vrf | 32 | Result of vrf |
+
+    | parent | 32*amount of parent blocks | List of parent blocks |
+
+    | txs | 250*amount of Transactions | Transactions |
+
+
+    is higher throughput and narrower DAG. We find that the width DAG in the case
+    that block size is 10K bytes and time interval is 1 second is closed to the case
+    that block size is 100K bytes and time interval is 1 second. While throughput
+    of the later is over twice the former. Therefore, in practical condition, how
+    to balance the time interval and the block size to achieve higher throughput and
+    narrower DAG should be consider seriously.
+
+
+    Secondly, table 6 shows that with the rising of generation rate of blocks, the
+    confirmation time of a certain block also reduces constantly. And in the case
+    that the network scale is 600 nodes and time interval is 0.5 second, the confirmation
+    time is about half a minute which is much less than Bitcoin and Ethereum. Comparing
+    the row 1 and row 4 in table 6, the confirmation time with 1000 nodes is almost
+    twice as the confirmation time with 600 nodes. This is because that, with a certain
+    time interval, larger a network scale means more pending blocks. Therefore, the
+    blocks in larger network need more time to wait for enough descendant blocks to
+    finalize it which stretches the confirmation time.
+
+
+    # 7 CONCLUSION
+
+
+    Plume utilises single-chain to generate a randomness seed, and uses hash inequally
+    to map the randomness seed to a group of participants as committee members. Blocks
+    are created by committee members by computing $VRF_{s_k}(slot|||r_t)$ and construct
+    DAG according to reference rules. As a consequence of our analysis, we have following
+    conclusion: (1) In the case of a small number of malicious nodes, it is secure
+    to generate commit according to the randomness from single chain. Although the
+    randomness seed from the single chain is biased, its entropy is enough to make
+    sure that the malicious nodes can not control the election of committee, and the
+    security of Plume will not be affected. (2) If the randomness from single chain
+    is secure, Plume can resist the double spending attack. Due to Plume adopts the
+    mechanism of density comparison, when honest nodes are in the majority, malicious
+    nodes can not form a double spending attack. (3) In Plume, the confirmation of
+    blocks is probabilistic, and user can decide when a certain block is confirmed.
+    When the interval between block is set appropriately, the confirming time can
+    be controlled in seconds. (4) As a DAG class consensus protocol, Plume also can
+    provide a high throughput without sacrificing decentralization and security. Nevertheless,
+    in Plume there may be several participants pack transactions at the same time,
+    a certain transaction may be packed more than one time which increase the redundancy
+    of system. We will reduce the redundancy in the future.
+
+
+    randomness from single chain. Although the randomness seed from the single chain
+    is biased, its entropy is enough to make sure that the malicious nodes can not
+    control the election of committee, and the security of Plume will not be affected.
+    (2) If the randomness from single chain is secure, Plume can resist the double
+    spending attack. Due to Plume adopts the mechanism of density comparison, when
+    honest nodes are in the majority, malicious nodes can not form a double spending
+    attack. (3) In Plume, the confirmation of blocks is probabilistic, and user can
+    decide when a certain block is confirmed. When the interval between block is set
+    appropriately, the confirming time can be controlled in seconds. (4) As a DAG
+    class consensus protocol, Plume also can provide a high throughput without sacrificing
+    decentralization and security. Nevertheless, in Plume there may be several participants
+    pack transactions at the same time, a certain transaction may be packed more than
+    one time which increase the redundancy of system. We will reduce the redundancy
+    in the future.
+
+
+    # REFERENCES
+
+
+    +   1. 2020. *Blockchain.com*. https://www.blockchain.com/charts/transactions-per-second
+
+    2. 2020. *Etherscan*. https://cn.etherscan.com
+
+    3. Iddo Bentov, Ariel Gazit, and David Zuckerman. 2016. Bitcoin Beacon. (2016).
+
+    4. Joseph Bonneau, Jeremy Clark, and Steven Goldberg. 2015. On Bitcoin as a public
+    randomness source. *Cryptology ePrint Archive, Report 2015/1015*.
+
+    5. Juan Garay, Aggelos Kiayias, and Nikos Leonardos. 2015. The Bitcoin Backbone
+    Protocol: Analysis and Applications. (2015).
+
+    6. Seyoung Hu, Sangre K Cho, and Sooyoung Kim. 2017. Mining IoT devices using
+    blockchain platform. In *2017 19th 199th international conference on advanced
+    communication technology* (ICACT). IEEE, 644--647.
+
+    7. Elithérios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly,
+    Ewa Syta, and Bryan Ford. 2018. Omniledger: A secure, scale-out, decentralized
+    ledger via sharding. In *2018 IEEE Symposium on Security and Privacy (SP)*. IEEE,
+    583--598.
+
+    8. Yoel Lewenberg, Yonatan Sompolinsky, and Aviv Zohar. 2015. Inclusive block
+    chain protocols. In *International Conference on Financial Cryptography and Data
+    Security*. Springer, 528--547.
+
+    9. Chenxing Li, Peilin Li, Dong Zhou, Wei Xu, Fan Long, and Andrew Yao. 2018.
+    Scaling blockchain consensus to thousands of transactions per second. *arXiv preprint
+    arXiv:1805.03870* (2018).
+
+    10. Xiaoqiu Li, Peng Jiang, Ting Chen, Xuan Luo, and Qiaoyan Wen. 2020. A survey
+    on the security of blockchain systems. *Future Generation Computer Systems 107*
+    (2020), 841--853.
+
+    11. Silvio Micali, Michael Rabin, and Salil Vadhan. 1999. Verifiable random functions.
+    In *40th annual ACM conference on foundations of computer science*. (cat. no.
+    99CHR7039). IEEE, 120--130.
+
+    12. Satoshi Nakamoto. 2019. *Bitcoin: A peer-to-peer electronic cash system*.
+    Technical report, Manubot.
+
+    13. Rafael Pass, Lior Seeman, and Abhi Shelat. 2017. *Analysis of the blockchain
+    protocol in asynchronous networks*. In *Annual International Conference on the
+    Theory and Applications of Cryptographic Technology*. Springer, 643--673.
+
+    14. Rafael Pass and Elie Sirh. 2018. Thunderchain: Blockchains with Optimistic
+    Instant Confirmation. In *Annual International Conference on the Theory and Applications
+    of Cryptographic Techniques*.
+
+    15. Sara Saber, Makhfah Kouhiadizadeh, Sarskias, and Lela Chiyan. 2019. Blockchain
+    technology and its relationships to sustainable supply chain management. *International
+    Journal of Production Research 57, 7* (2019), 2117--2135.
+
+    16. Yonatan Sompolinsky, Yoad Perlmutter, and Aviv Zohar. 2016. Secure: Serialization
+    of proof-of-work events: Confirming transactions via recursive elections.
+
+    17. Yonatan Sompolinsky and Aviv Zohar. 2015. Secure high-rate transaction processing
+    in bitcoin. In *International Conference on Financial Cryptography and Data Security*.
+    Springer, 507--527.
+
+    18. TUC 2019. *The Libra Blockchain*. (https://developers.libra.org/assets/papers/the-libra-blockchain/2020-09-26.pdf)
+
+    19. Gavin Wood et al. 2014. Ethereum: A secure decentralised generalised transaction
+    ledger. *Ethereum project yellow paper 151* (2014), 1--32.
+
+    20. Mahdi Zamani, Mahvash Movahedi, and Mariana Ryzova. 2018. Rapidchain: Scaling
+    blockchain via full sharding. In *Proceedings of the 2018 ACM SIGSAC Conference
+    on Computer and Communications Security*. 931--948.'
+  merge: -1
+  img_proc: true
