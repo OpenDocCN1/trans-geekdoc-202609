@@ -1,0 +1,29 @@
++   - 5.1 Single Command with Private Key Authentication
+- 5.2 Multiple Commands with Password Authentication
+- 5.3 SFTP File Copy with Password Authentication
+- Chapter 6: IP Address Manipulation
+- 6.1 Network Contains IP
+- 6.2 List Network IPs
+- 6.3 Mask Conversion
+- Chapter 7: DNS Record Lookup
+- 7.1 Forward (A)
+- 7.2 Reverse (PTR)
+- 7.3 Canonical Name (CNAME)
+- 7.4 Mail Exchanger (MX)
+- 7.5 Name Servers (NS)
+- 7.6 Service (SRV)
+- 7.7 Text (TXT)
+- Chapter 8: Regex Pattern Matching
+- 8.1 Simple Matching
+- 8.2 Match Groups
+- 8.3 Named Capture Groups
+- 8.4 Template Expansion
+- 8.5 Multi-line Delimited Split
+- Chapter 9: External Commands
+- 9.1 Combined Stdout/Stderr
+- 9.2 Separate Stdout/Stderr
+- Chapter 10: CLI Application Helpers
+- 10.1 User Input
+- 10.2 Command-line Arguments
+- 10.3 Command-line Flags
+- 10.4 Column Formatting
