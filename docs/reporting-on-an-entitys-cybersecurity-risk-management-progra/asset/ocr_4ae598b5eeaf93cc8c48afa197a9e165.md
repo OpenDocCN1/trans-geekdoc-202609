@@ -1,0 +1,17 @@
+Employees in the cybersecurity risk management program are encouraged to maintain an active role in relevant cybersecurity information sharing forums, special interest groups, and professional associations to stay up to date on new and emerging cybersecurity risks that may impact the entity or its operating environment.
+
+Contractors are required to follow the same onboarding process as employees and are subject to the same background checks and security awareness training requirements as employees. Employees' and contractors' compliance with security awareness training requirements is monitored on a semiannual basis by human resources.
+
+XYZ has established an entity-wide hierarchy and reporting structure that is codified within an organizational chart maintained on the corporate intranet by human resources. XYZ has prepared a role matrix for employees and managers who have roles within the cybersecurity risk management program. The role matrix defines key job duties and responsibilities in the context of the overall program. Additional information security responsibilities and practices for certain roles within the entity are described in the Company's information security policy and the employee handbook.
+
+All employees go through an annual performance review cycle. At the beginning of each calendar year, employees and their immediate supervisors establish goals and expectations for their job performance over the upcoming year based on the job duties and responsibilities described in the role matrix. Employees then receive a mid-year and year-end performance review from their supervisors that assesses the employees' performance against the agreed-upon goals and expectations. Based on the results of their performance review, employees receive merit increases in compensation and are eligible for bonuses and promotion, respective of their seniority, experience, and position within the organization.
+
+Employees whose performance is not in alignment with established goals and expectations for job performance, or who are not fulfilling their job responsibilities, may be referred to human resources by their supervisor to develop a performance enhancement plan.
+
+If an employee violates any statute of the employee handbook or the Company's policies, or otherwise acts in a manner deemed contrary to the mission and objectives of the Company, whether purposefully or not, the employee is subject to sanctions up to and including termination of employment.
+
+# Cybersecurity Risk Assessment Process
+
+> *DC11: The process for (1) identifying cybersecurity risks and environmental, technological, organizational and other changes that could have a significant effect on the entity's cybersecurity risk management program and (2) assessing the related risks to the achievement of the entity's cybersecurity objectives*
+
+XYZ maintains a detailed inventory of all information systems, including manufacturing and industrial control systems. All such assets are assigned ownership by a designated department or team within the entity and prioritized based on the asset's business value and criticality to the organization. Information and data assets are subject to the data management policy that defines parameters for the ownership, classification, security, storage, and retention of data. Software and hardware assets are subject to the information systems

@@ -1,0 +1,15 @@
+# Accepting a Change in the Terms of the Engagement
+
+2.81 After the engagement agreement is executed but prior to the completion of the engagement, management may communicate a desire to change the scope of the engagement. When management requests a change in the scope of the engagement, paragraph .29 of AT-C section 105 states that the practitioner should not agree to the change in the terms of the engagement unless there is reasonable justification for the change. Reasonable justification may exist for changes to the terms of the engagement requested as a result of the following:
+
++   Misunderstanding concerning the nature of the engagement originally requested
+Change in the needs of users of the cyberse curity risk management examination report
+Change in the intended users of the report
+
+2.82 As an example, there may be reasonable justification for management’s request to change the scope of an engagement, which was originally the entity-wide cybersecurity risk management program, by excluding from that scope the controls designed and operated at a division of the entity in the process of being sold, when the report is intended only for the use of board members.
+
+2.83 Other changes to the scope of the engagement, however, may not be considered reasonable if they relate to information that is incorrect, incomplete, or otherwise unsatisfactory. An example of such a situation is a request to change the scope of the cybersecurity risk management examination from the entity-wide cybersecurity risk management program to only a portion of the entity-wide program to avoid a modified opinion on the effectiveness of controls, in a situation in which the practitioner has obtained evidence that controls were not effective to achieve the entity’s cybersecurity objectives based on one or more of the control criteria.
+
+2.84 If, after using professional judgment, the practitioner believes there is reasonable justification to change the terms of the engagement from those originally contemplated, the practitioner would issue an appropriate report on the portion of the entity’s cybersecurity risk management program included within the scope of the engagement. The attestation standards do not require the practitioner’s report to include a reference to (a) the original engagement, (b) any procedures that may have been performed, or (c) scope limitations that resulted in the changed engagement. The practitioner may also decide to document the change in the engagement in an addendum to the engagement agreement to evidence agreement to the change among the parties.
+
+2.85 However, if the practitioner and the engaging party are unable to agree to a change of the terms of the cybersecurity risk management examination, the practitioner and management may agree to continue the engagement in accordance with the original terms or mutually agree to terminate the engagement. If management does not accept either of these alternatives, the practitioner should take appropriate action, which could include disclaiming an opinion on both the description and the effectiveness of controls or withdrawing from the engagement.

@@ -1,0 +1,17 @@
+stating, in the opinion paragraph, that except for the possible effects of the matter(s) giving rise to the modification, the description is presented in accordance with the description criteria and the controls were effective to achieve the entity's cybersecurity objectives based on the control criteria, in all material respects; and
+
+amending the practitioner's responsibility paragraph to state that the practitioner believes that the evidence the practitioner has obtained is sufficient and appropriate to provide a basis for the practitioner's *qualified* opinion.
+
+**4.46** If the practitioner expresses a qualified opinion because of a scope limitation, and also concludes there were material misstatements in the description or material deficiencies in the effectiveness of the controls to achieve the cybersecurity objectives, paragraph .78 of AT-C section 205 requires the practitioner to include, in the practitioner's report, a clear explanation of both the scope limitation and the matter(s) that cause the description or the effectiveness of controls to be materially misstated.
+
+# ## Separate Paragraph When a Scope Limitation Results in a Qualified Opinion
+
+**4.47** The following is an example of a separate paragraph that might be appropriate when the practitioner is unable to obtain sufficient appropriate evidence about whether controls were effective to achieve the entity's cybersecurity objectives based on the control criteria and the practitioner has decided to issue a qualified opinion.
+
+Page XX of the accompanying description of ABC Entity's cybersecurity risk management program states that a service provider researches and classifies events logged by the intrusion detection software for follow-up by ABC Entity personnel. On July 15, 20X0, ABC Entity replaced its existing service provider (original service provider) with a new service provider. However, all records of the research performed by the original service provider were destroyed by that organization upon termination of the service agreement. As a result, we were unable to inspect evidence that independent research was performed on events logged by the intrusion protection systems for the period January 1, 20X0, to July 15, 20X0. As a result, we were unable to determine whether controls were effective during the period January 1 to July 14, 20X0, to achieve the entity's cybersecurity objectives based on criterion CC6.1. *The entity implements logical access security software, infrastructure, and architectures over protected information assets to protect them from security events to meet the entity's objectives.*
+
+# ## Disclaimer of Opinion
+
+**4.48** When the practitioner decides to disclaim an opinion, paragraph .77 of AT-C section 205 provides guidance about modifications to the description of the practitioner's responsibility and the description of the examination in the practitioner's report. In addition to adding a separate paragraph to the practitioner's report, the practitioner's report should state that,
+
++   * a. because of the significance of the matter(s) giving rise to the modification, the practitioner has not been able to obtain sufficient appropriate evidence to provide a basis for an examination opinion, and

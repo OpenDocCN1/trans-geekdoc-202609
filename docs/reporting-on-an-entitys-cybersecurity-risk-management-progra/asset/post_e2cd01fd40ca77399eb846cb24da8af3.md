@@ -1,0 +1,52 @@
+
+# Information nonrepudiation and authenticity
+
+- The completeness, accuracy, and timeliness of processing
+- Management holding employees and users accountable for their actions
+- The operation of processes addressing the privacy of personal information
+
+## Integrity of Processing
+
+Guarding against improper use, modification, or destruction of systems to support the following:
+
+- The accuracy, completeness, and reliability of information, goods, and services produced
+- The safeguarding of entity assets
+- The safeguarding of life and health
+
+2.60 In the cybersecurity risk management examination, management would tailor those cybersecurity objectives to reflect the entity's business objectives based on the nature of the business and the industry in which it operates, the entity's mission and vision, and the entity's cybersecurity risk appetite.
+
+2.61 Because of the close relationship among the entity's cybersecurity objectives, the practitioner's opinion on the effectiveness of controls, and report users' understanding of the practitioner's opinion, the practitioner should consider whether the cybersecurity objectives are suitable and complete. If the practitioner believes that the cybersecurity objectives established by management are not suitable and complete, the practitioner should discuss the matter with management. If management is unwilling to revise the cybersecurity objectives to address the practitioner's concerns, the practitioner may decide (a) to refuse to accept the engagement or (b) to restrict the use of the report to those users who are able to understand the risks not addressed by the entity's cybersecurity objectives. Chapter 3, "Performing the Cybersecurity Risk Management Examination," discusses the situation when, after accepting the engagement, the practitioner obtains evidence that causes him or her to believe that the entity's cybersecurity objectives are not suitable for the engagement.
+
+# Requesting a Written Assertion and Representations From Management
+
+2.62 Paragraph .10 of AT-C section 205 requires the practitioner to request a written assertion from the responsible party that addresses both subject matters in the cybersecurity risk management examination. Specifically, the assertion addresses whether (1) the description is presented in accordance with the description criteria and (2) the controls within the program were effective to achieve the entity's cybersecurity objectives.
+
+2.63 Management's assertion is included in the cybersecurity risk management examination report along with management's description and the practitioner's report. Because of the important role that the assertion plays in the engagement, it may be useful for the practitioner to provide management with an example of a written assertion prior to engagement acceptance. Such an example can be found in appendix E, "Illustrative Management Assertion in the Cybersecurity Risk Management Examination."
+
+# Considering Practitioner Independence
+
+2.64 If management refuses to provide a written assertion, paragraph .82 of AT-C section 205 requires the practitioner to withdraw from the engagement when withdrawal is possible under applicable laws and regulations.[^1] Consequently, it is important to obtain management's agreement to provide the written assertion prior to engagement acceptance. If law or regulation does not allow the practitioner to withdraw, the practitioner should disclaim an opinion on the description and the effectiveness of controls.
+
+2.65 Management is also required to provide the practitioner with written representations at the conclusion of the engagement. It may be useful for the practitioner to provide management with an example of the expected representations prior to engagement acceptance.
+
+2.66 Paragraph .24 of AT-C section 105 and paragraph .06 of AT-C section 205 state that a practitioner must be independent when performing an attestation engagement such as the cybersecurity risk management examination. The only exception to this requirement is when the practitioner is required by law or regulation to accept the engagement and report on the subject matter. In that case, the practitioner is required to disclaim an opinion on the description and the effectiveness of controls and to specifically state in the report that the practitioner is not independent.
+
+2.67 The "Independence Rule" (ET sec. 1.200.001)[^2] of the AICPA Code of Professional Conduct establishes independence requirements for attestation engagements. The "Independence Standards for Engagements Performed in Accordance with Statements on Standards for Attestation Engagements" subtopic (ET sec. 1.297) of the "Independence Rule" establishes special independence requirements for a practitioner who provides services under the attestation standards. In addition, the "Conceptual Framework Approach" subtopic (ET sec. 1.210) of the "Independence Rule" discusses threats to independence not specifically detailed elsewhere. The code specifies that, in some circumstances, no safeguards can reduce an independence threat to an acceptable level. For example, the code specifies that a covered member may not own even an immaterial direct financial interest in an attest client because there is no safeguard to reduce the self-interest threat to an acceptable level. A member may not use the conceptual framework to overcome this prohibition or any other prohibition or requirement in an independence interpretation.
+
+[^1]: If management is not the engaging party, paragraph .10 of AT-C section 205 provides an exception to the requirement that the practitioner withdraw from the engagement when management refuses to provide a written assertion. Because a written assertion is one of three key elements of the cybersecurity risk management examination report, that exception does not apply in the examination described in this guide. Therefore, management's failure to provide a written assertion would prevent the practitioner from performing the cybersecurity risk management examination.
+
+[^2]: All ET sections can be found in AICPA Professional Standards. The "Independence Rule" (ET sec. 1.200.001) and its interpretations apply to all attest engagements. However, when performing engagements in which independence is required in accordance with the attestation standards, the covered member needs to be independent with respect to the responsible part(yies), as defined in those standards. If the individual or entity that engages the covered member is not the responsible party, the covered member need not be independent of that individual or entity. However, the covered member should consider the "Conflicts of Interest" interpretation (ET sec. 1.110.010) of the "Integrity and Objectivity Rule" with regard to any relationships that may exist with the individual or entity that engages the covered member to perform these services. When providing nonattest services that would otherwise impair independence under the interpretations of the "Nonattest Services" subtopic (ET sec. 1.295) of the "Independence Rule," threats would be at an acceptable level and independence would not be impaired if the following safeguards are met:
+    - Nonattest services do not relate to the specific subject matter of the attestation engagement.
+    - The "General Requirements for Performing Nonattest Services" interpretation (ET sec. 1.295.040) of the "Independence Rule" are met when providing the nonattest service.
+
+2.68 When assessing independence in a cybersecurity risk management examination, the practitioner might consider matters including, but not limited to, (a) advisory work performed for the client that may directly or indirectly affect the entity’s cybersecurity risk management program, (b) fee arrangements for all services provided to the client, (c) firm and individual financial relationships, (d) firm business relationships, and (e) alumni and familial relationships with the client and client personnel. Because of the breadth of a cybersecurity risk management program and its relationship to all aspects of information technology, the practitioner needs to be particularly attentive to other services provided to the entity that may impair independence.
+
+2.69 It is anticipated that, in most cybersecurity risk management examinations, management will be both the engaging party (client) and the responsible party; thus, management will accept responsibility for the description of the entity’s cybersecurity risk management program and its assertion about the effectiveness of the controls within that program. In some engagements, however, the engaging party may be someone other than management. For example, in a proposed acquisition, the engaging party might be the party interested in acquiring the entity. As part of its due diligence on the target company, the engaging party might want information about the entity’s cybersecurity risk management program to evaluate the additional risks the engaging party might be taking on in the event of a security breach at the entity. In such a situation, the practitioner is not required to be independent of the engaging party; however, the Code of Professional Conduct requires the practitioner to consider the applicable interpretation regarding conflicts of interest prior to accepting the engagement.
+
+## Considering the Competence of Engagement Team Members
+
+2.70 Chapter 1 of this guide discusses quality in the cybersecurity risk management examination. Maintaining appropriate quality in the engagement involves having the work performed by engagement team members with the appropriate competence and capabilities. For that reason, as discussed in paragraph 2.12, the practitioner should not accept the cybersecurity risk management examination unless he or she has determined that the individuals performing the particular engagement have the appropriate competence and capabilities to perform it.
+
+2.71 When considering the competence and capabilities of engagement team members, the engagement partner should consider whether the team assigned to the engagement collectively has, or can acquire, the following:
+
+- An understanding, or the ability to obtain an understanding, of information security or cybersecurity risk management examinations gained through experience with engagements of a similar nature and complexity or through appropriate training and participation
