@@ -1,0 +1,68 @@
+
+
+- **[RFC 1034]** P. V. Mockapetris,“域名——概念与设施”，RFC 1034，1987 年 11 月。
+- **[RFC 1035]** P. Mockapetris,“域名——实现与规范”，RFC 1035，1987 年 11 月。
+- **[RFC 1071]** R. Braden, D. Borman, 和 C. Partridge,“计算互联网校验和”，RFC 1071，1988 年 9 月。
+- **[RFC 1122]** R. Braden,“互联网主机通信层要求”，RFC 1122，1989 年 10 月。
+- **[RFC 1191]** J. Mogul, S. Deering,“路径 MTU 发现”，RFC 1191，1990 年 11 月。
+- **[RFC 1320]** R. Rivest,“MD4 消息摘要算法”，RFC 1320，1992 年 4 月。
+- **[RFC 1321]** R. Rivest,“MD5 消息摘要算法”，RFC 1321，1992 年 4 月。
+- **[RFC 1422]** S. Kent,“互联网电子邮件隐私增强：第二部分：基于证书的管理”，RFC 1422。
+- **[RFC 1546]** C. Partridge, T. Mendez, W. Milliken,“主机任意服务（Host Anycasting Service）”，RFC 1546，1993 年。
+- **[RFC 1584]** J. Moy,“OSPF 的多播扩展”，RFC 1584，1994 年 3 月。
+- **[RFC 1633]** R. Braden, D. Clark, S. Shenker,“互联网体系结构中的综合服务：概述”，RFC 1633，1994 年 6 月。
+- **[RFC 1752]** S. Bradner, A. Mankin,“对下一代 IP 协议的推荐”，RFC 1752，1995 年 1 月。
+- **[RFC 1918]** Y. Rekhter, B. Moskowitz, D. Karrenberg, G. J. de Groot, E. Lear,“私有互联网的地址分配”，RFC 1918，1996 年 2 月。
+- **[RFC 1930]** J. Hawkinson, T. Bates,“自治系统（AS）的创建、选择和注册指南”，RFC 1930，1996 年 3 月。
+- **[RFC 1945]** T. Berners-Lee, R. Fielding, H. Frystyk,“超文本传输协议——HTTP/1.0”，RFC 1945，1996 年 5 月。
+- **[RFC 1958]** B. Carpenter,“互联网架构原则”，RFC 1958，1996 年 6 月。
+- **[RFC 2003]** C. Perkins,“IP 在 IP 内的封装”，RFC 2003，1996 年 10 月。
+- **[RFC 2004]** C. Perkins,“IP 内的最小封装”，RFC 2004，1996 年 10 月。
+- **[RFC 2018]** M. Mathis, J. Mahdavi, S. Floyd, A. Romanow,“TCP 选择性确认选项”，RFC 2018，1996 年 10 月。
+- **[RFC 2104]** H. Krawczyk, M. Bellare, R. Canetti,“HMAC：用于消息认证的密钥哈希”，RFC 2104，1997 年 2 月。
+- **[RFC 2131]** R. Droms,“动态主机配置协议”，RFC 2131，1997 年 3 月。
+- **[RFC 2136]** P. Vixie, S. Thomson, Y. Rekhter, J. Bound,“域名系统中的动态更新”，RFC 2136，1997 年 4 月。
+- **[RFC 2328]** J. Moy,“OSPF 版本 2”，RFC 2328，1998 年 4 月。
+- **[RFC 2420]** H. Kummer,“PPP 三重 DES 加密协议（3DESE）”，RFC 2420，1998 年 9 月。
+- **[RFC 2460]** S. Deering, R. Hinden,“互联网协议，版本 6（IPv6）规范”，RFC 2460，1998 年 12 月。
+- **[RFC 2578]** K. McCloghrie, D. Perkins, J. Schoenwalder,“管理信息结构版本 2（SMIv2）”，RFC 2578，1999 年 4 月。
+- **[RFC 2579]** K. McCloghrie, D. Perkins, J. Schoenwalder,“SMIv2 的文本约定”，RFC 2579，1999 年 4 月。
+- **[RFC 2580]** K. McCloghrie, D. Perkins, J. Schoenwalder,“SMIv2 的符合性声明”，RFC 2580，1999 年 4 月。
+- **[RFC 2581]** M. Allman, V. Paxson, W. Stevens,“TCP 拥塞控制”，RFC 2581，1999 年 4 月。
+- **[RFC 2663]** P. Srisuresh, M. Holdrege,“IP 网络地址转换器（NAT）术语与考量”，RFC 2663。
+- **[RFC 2702]** D. Awdhuche, J. Malcolm, J. Agogbua, M. O’Dell, J. McManus,“MPLS 流量工程的要求”，RFC 2702，1999 年 9 月。
+- **[RFC 2827]** P. Ferguson, D. Senie,“网络入口过滤：对抗使用 IP 源地址伪造的拒绝服务攻击”，RFC 2827，2000 年 5 月。
+- **[RFC 2865]** C. Rigney, S. Willens, A. Rubens, W. Simpson,“远程认证拨号用户服务（RADIUS）”，RFC 2865，2000 年 6 月。
+- **[RFC 2992]** C. Hops,“等价成本多路径算法分析”，RFC 2992，2000 年 11 月。
+- **[RFC 3022]** P. Srisuresh, K. Egevang,“传统 IP 网络地址转换器（传统 NAT）”，RFC 3022，2001 年 1 月。
+- **[RFC 3031]** E. Rosen, A. Viswanathan, R. Callon,“多协议标签交换架构”，RFC 3031，2001 年 1 月。
+- **[RFC 3032]** E. Rosen, D. Tappan, G. Fedorkow, Y. Rekhter, D. Farinacci, T. Li, A. Conta,“MPLS 标签堆栈编码”，RFC 3032，2001 年 1 月。
+- **[RFC 3168]** K. Ramakrishnan, S. Floyd, D. Black,“向 IP 添加显式拥塞通知（ECN）”，RFC 3168，2001 年 9 月。
+- **[RFC 3209]** D. Awdhuche, L. Berger, D. Gan, T. Li, V. Srinivasan, G. Swallow,“RSVP-TE：用于 LSP 隧道的 RSVP 扩展”，RFC 3209，2001 年 12 月。
+- **[RFC 3232]** J. Reynolds,“分配号码：RFC 1700 被在线数据库取代”，RFC 3232，2002 年 1 月。
+- **[RFC 3234]** B. Carpenter, S. Brim,“中间盒：分类与问题”，RFC 3234，2002 年 2 月。
+- **[RFC 3261]** J. Rosenberg, H. Schulzrinne, G. Carraro, A. Johnstone, J. Peterson, R. Sparks, M. Handley, E. Schooler,“SIP：会话初始协议”，RFC 3261，2002 年 7 月。
+- **[RFC 3272]** J. Boyle, V. Gill, A. Hannan, D. Cooper, D. Awdhuche, B. Christian, W. S. Lai,“互联网流量工程概述与原则”，RFC 3272，2002 年 5 月。
+- **[RFC 3286]** L. Ong, J. Yoakum,“流控制传输协议（SCTP）简介”，RFC 3286，2002 年 5 月。
+- **[RFC 3346]** J. Boyle, V. Gill, A. Hannan, D. Cooper, D. Awdhuche, B. Christian, W. S. Lai,“使用 MPLS 进行流量工程的适用性声明”，RFC 3346，2002 年 8 月。
+- **[RFC 3390]** M. Allman, S. Floyd, C. Partridge,“增加 TCP 的初始窗口”，RFC 3390，2002 年 10 月。
+- **[RFC 3410]** J. Case, R. Mundy, D. Partain,“互联网标准管理框架的引言与适用性声明”，RFC 3410，2002 年 12 月。
+- **[RFC 3439]** R. Bush, D. Meyer,“一些互联网体系结构指南与理念”，RFC 3439，2003 年 12 月。
+- **[RFC 3447]** J. Jonsson, B. Kaliski,“公钥加密标准（PKCS）#1：RSA 加密规范版本 2.1”，RFC 3447，2003 年 2 月。
+- **[RFC 3468]** L. Andersson, G. Swallow,“多协议标签交换（MPLS）工作组关于 MPLS 信令协议的决议”，RFC 3468，2003 年 2 月。
+- **[RFC 3469]** V. Sharma, 编辑, F. Hellstrand, 编辑,“基于多协议标签交换（MPLS）恢复的框架”，RFC 3469，2003 年 2 月。 ftp://ftp.rfc-editor.org/in-notes/rfc3469.txt
+- **[RFC 3535]** J. Schönwälder,“2002 年 IAB 网络管理工作坊概述”，RFC 3535，2003 年 5 月。
+- **[RFC 3550]** H. Schulzrinne, S. Casner, R. Frederick, V. Jacobson,“RTP：实时应用的传输协议”，RFC 3550，2003 年 7 月。
+- **[RFC 3588]** P. Calhoun, J. Loughney, E. Guttman, G. Zorn, J. Arkko,“Diameter 基础协议”，RFC 3588，2003 年 9 月。
+- **[RFC 3746]** L. Yang, R. Dantu, T. Anderson, R. Gopal,“转发与控制元素分离（ForCES）框架”，Internet, RFC 3746，2004 年 4 月。
+- **[RFC 3748]** B. Aboba, L. Blunk, J. Vollbrecht, J. Carlson, H. Levkowitz, 编辑,“可扩展认证协议（EAP）”，RFC 3748，2004 年 6 月。
+- **[RFC 4022]** R. Raghunaran, 编辑,“传输控制协议（TCP）的管理信息库”，RFC 4022，2005 年 3 月。
+- **[RFC 4033]** R. Arends, R. Austein, M. Larson, D. Massey, S. Rose,“DNS 安全引言与要求”，RFC 4033，2005 年 3 月。
+- **[RFC 4113]** B. Fener, J. Flick,“用户数据报协议（UDP）的管理信息库”，RFC 4113，2005 年 6 月。
+- **[RFC 4213]** E. Nordmark, R. Giligan,“IPv6 主机和路由器的基本过渡机制”，RFC 4213，2005 年 10 月。
+- **[RFC 4271]** Y. Rekhter, T. Li, S. Hares, 编辑,“边界网关协议 4（BGP-4）”，RFC 4271，2006 年 1 月。
+- **[RFC 4291]** R. Hinden, S. Deering,“IP 版本 6 寻址架构”，RFC 4291，2006 年 2 月。
+- **[RFC 4293]** S. Routhier, 编辑,“互联网协议（IP）的管理信息库”，RFC 4293，2006 年 4 月。
+- **[RFC 4340]** E. Kohler, M. Handley, S. Floyd,“数据报拥塞控制协议（DCCP）”，RFC 4340，2006 年 3 月。
+- **[RFC 4346]** T. Dierks, E. Rescorla,“传输层安全（TLS）协议版本 1.1”，RFC 4346，2006 年 4 月。
+

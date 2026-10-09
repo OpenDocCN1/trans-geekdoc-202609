@@ -1,0 +1,15 @@
+is initially empty. Show the state of the switch table before and after each of these events. For each of these events, identify the link(s) on which the transmitted frame will be forwarded, and briefly justify your answers.
+
++   *   **P27.** In this problem, we explore the use of small packets for Voice-over-IP applications. One of the drawbacks of a small packet size is that a large fraction of link bandwidth is consumed by overhead bytes. To this end, suppose that the packet consists of \( P \) bytes and 5 bytes of header.
+    a.  Consider sending a digitally encoded voice source directly. Suppose the source is encoded at a constant rate of 128 kbps. Assume each packet is entirely filled before the source sends the packet into the network. The time required to fill a packet is the **packetization delay**. In terms of \( L \), determine the packetization delay in milliseconds.
+    b.  Packetization delays greater than 20 msec can cause a noticeable and unpleasant echo. Determine the packetization delay for \( L = 1,500 \) bytes (roughly corresponding to a maximum-sized Ethernet packet) and for \( L = 50 \) (corresponding to an ATM packet).
+    c.  Calculate the store-and-forward delay at a single switch for a link rate of \( R = 622 \) Mbps for \( L = 1,500 \) bytes, and for \( L = 50 \) bytes.
+    d.  Comment on the advantages of using a small packet size.
+
+**P28.** Consider the single switch VLAN in Figure 6.25, and assume an external router is connected to switch port 1. Assign IP addresses to the EE and CS hosts and router interface. Trace the steps taken at both the network layer and the link layer to transfer an IP datagram from an EE host to a CS host *(Hint: Reread the discussion of Figure 6.19 in the text).*
+
+**P29.** Consider the MPLS network shown in Figure 6.29, and suppose that routers R5 and R6 are now MPLS enabled. Suppose that we want to perform traffic engineering so that packets from R6 destined for A are switched to A via R6-R4-R3-R1, and packets from R5 destined for A are switched via R5-R4-R2-R1. Show the MPLS tables in R5 and R6, as well as the modified table in R4, that would make this possible.
+
+**P30.** Consider again the same scenario as in the previous problem, but suppose that packets from R6 destined for D are switched via R6-R4-R3, while packets from R5 destined to D are switched via R4-R2-R1-R3. Show the MPLS tables in all routers that would make this possible.
+
+**P31.** In this problem, you will put together much of what you have learned about Internet protocols. Suppose you walk into a room, connect to Ethernet, and want to download a Web page. What are all the protocol steps that take place, starting from powering on your PC to getting the Web page? Assume there is nothing in our DNS or browser caches when you power on your PC.

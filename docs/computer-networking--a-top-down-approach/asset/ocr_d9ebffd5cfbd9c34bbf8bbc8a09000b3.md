@@ -1,0 +1,78 @@
+# S
+
++   - multicast, 398
+- programming assignment, 444–445
+- routing algorithms, 306, 307, 380–395
+  - ARPAnet, 383, 390
+  - centralized, 382, 384
+  - convergence speed, 395
+  - decentralized, 382–383
+  - distance-vector, 388–395
+  - dynamic, 383
+  - link-state, 383–387
+  - load sensitivity, 383
+  - static, 383
+- routing controllers
+  - logically centralized, 308
+  - SDN and, 309
+- Routing Control Platform (RCP), 446
+- routing loop, 393
+- routing policy, BGP, 407–410
+- routing processor, 312
+- routing protocols, 25–26
+- routing tables, 390
+- BGP, 405–406
+- RSA algorithm, 620–622
+  - components of, 620
+  - encryption/decryption, 623
+- RST bit, 230
+- RTT. See round-trip time
+- rwnd, 264
+
++   - SA. See security association
+- SAD. See Security Association Database
+- SAL. See Service Abstraction Layer
+- SampleRTT, 236
+- satellite radio channels, 21
+- Scantlebury, Roger, 59
+- SCTP. See Stream Control Transmission Protocol
+
++   - SDN. See software-defined networking
+- SDN control and management, 510
+- SDN controller, 414–416
+- secure communication, 608
+- Secure Hash Algorithm (SHA-1), 626
+- secure shell (SSH) connection, 427
+- security
+  - datagram inspection, 347
+  - firewalls, 347, 353
+  - IDSs, 347
+  - network, 608–610
+  - network layer, 310
+  - operational, 388, 609
+  - OSPF and, 398
+  - SYN flood attacks, 254
+  - security association (SA), 653
+  - Security Association Database (SAD), 654
+  - security associations, 653–655
+  - Security Parameter Index (SPI), 654
+  - Security Policy Database (SPD), 657
+  - security services, 360
+- segments, 51, 182, 185
+  - acknowledged, 265
+  - lost, 265
+  - maximum size, 229, 230
+  - TCP, 229
+  - TCP structure, 230–235
+  - transport-layer, 53
+  - UDP structure, 198
+- selective acknowledgment, 246
+- selective repeat (SR), 215, 220–226
+  - events and actions, 222
+  - operation of, 223
+  - TCP as, 246
+  - window size, 224, 225
+- self-clocking, 265
+- self-learning, 493, 514
+  - link-layer switches, 493–494
+- self-replicating malware, 55

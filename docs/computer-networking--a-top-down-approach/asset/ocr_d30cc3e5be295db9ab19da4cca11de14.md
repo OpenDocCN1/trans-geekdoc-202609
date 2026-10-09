@@ -1,0 +1,81 @@
++   - timeout intervals
+  - doubling, 241–243
+  - TCP, 236–237, 241–243
+- time slots, 464
+- time-to-live (TTL), 332
+- token, 475
+- token-passing protocol, 475
+- Tomlinson, Ray, 59
+- top-down approach, 50
+- top-level domain (TLD), 126, 127
+- Top of Rack (TOR) switch, 505
+- torrent, 140
+- TOR switch. *See* Top of Rack switch
+- TOS. *See* type of service
+- total nodal delay, 35
+- TPID. *See* Tag Protocol Identifier
+- Traceroute, 41–43, 424–425
+- traffic engineering, 397, 504
+- traffic intensity, 39
+- traffic load, queuing and, 319
+- traffic volume, DNS, 126
+- Transmission Control Protocol (TCP)
+  - ACK generation
+    - recommendation, 244
+  - acknowledgment number, 231–233
+  - classic congestion control, 263–273
+  - client-server application using, 162
+  - closing connection, 250–251
+  - congestion avoidance, 267–268
+  - congestion-control algorithm, 265–270
+  - congestion control in, 263–279
+  - congestion window, 264, 270
+  - connection, 227–230
+  - connection management, 249–253, 255
+  - connection requests, 191
+  - cubic, 271–273
+  - cumulative acknowledgment, 232
+  - demultiplexing, 190–193
+  - development of, 61
+  - establishing connection, 249–250
+
++   - exploring, 300
+- fairness and, 276–279
+- fast recovery, 268–270
+- fast retransmit, 243–245
+- flow control, 246–248
+- full-duplex service, 227
+- handshake protocol, 638
+- multimedia applications using, 196
+- parallel connection fairness, 279
+- pipelining, 237
+- point-to-point connections, 227
+- receive window, 247, 248
+- reliable data transfer, 238–346
+- retransmission timeout interval, 236–237
+- RTT estimation, 235–238
+- securing connections, 644–646
+- segment structure, 230–235
+- selective acknowledgment, 246
+- self-clocking, 265
+- sequence number, 231–233
+- services provided by, 186
+- simultaneous connection
+  - sockets, 192
+- slow start, 266–267
+- socket programming with, 159–165
+  - (*see also* socket programming)
+- steady-state behavior of, 273
+- TCPClient.py, 161–163
+- TCPServer.py, 163–165
+- three-way handshake, 228,
+  250–251
+- throughput, 273
+- timeout events, 236–237, 239, 240
+- timeout intervals, 236–237,
+  241–243
+- timer management, 238–239
+- transition to, 61–62
+- transport-layer functionality, 279–282
+- variables, 264, 267, 270
+- Web servers and, 193–194
